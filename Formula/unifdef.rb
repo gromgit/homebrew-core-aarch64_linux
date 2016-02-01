@@ -1,9 +1,9 @@
 class Unifdef < Formula
   desc "Selectively process conditional C preprocessor directives"
   homepage "http://dotat.at/prog/unifdef/"
+  url "http://dotat.at/prog/unifdef/unifdef-2.11.tar.gz"
+  sha256 "e8483c05857a10cf2d5e45b9e8af867d95991fab0f9d3d8984840b810e132d98"
   head "https://github.com/fanf2/unifdef.git"
-  url "http://dotat.at/prog/unifdef/unifdef-2.10.tar.gz"
-  sha256 "1375528c8983de06bbf074b6cfa60fcf0257ea8efcbaec0953b744d2e3dcc5dd"
 
   bottle do
     cellar :any_skip_relocation
@@ -20,6 +20,6 @@ class Unifdef < Formula
   end
 
   test do
-    system "echo '' | #{bin}/unifdef"
+    pipe_output("#{bin}/unifdef", "echo ''")
   end
 end
