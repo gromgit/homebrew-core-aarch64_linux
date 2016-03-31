@@ -5,10 +5,10 @@ class Sfk < Formula
   sha256 "14a5a28903b73d466bfc4c160ca2624df4edb064ea624a94651203247d1f6794"
 
   bottle do
-    cellar :any
-    sha256 "42ced5ac947ad0c40cc4f24ef19415ed349929687b89a41d1f558ccfe7d0f434" => :yosemite
-    sha256 "ad2b87b8118e5c9c5dc6b41207430c29c9a55ca8058e1b8c4210045849398e8e" => :mavericks
-    sha256 "40b99819db133c2b283375d9cd5a6854b962085e69def10e936fc0dff8cd2826" => :mountain_lion
+    cellar :any_skip_relocation
+    sha256 "a6297dac82e1ed14dd9b2d37a90384113bcd526b93053dd03db0f5154063245f" => :el_capitan
+    sha256 "d5be7f90c20799b81c6de1ec6ab2ebdbf8cdad63a551603061a21afde43aab56" => :yosemite
+    sha256 "3c8d89606a20039aa02a45614c877dc6d0d6d2365e13cb4e143f7bc99187ba16" => :mavericks
   end
 
   def install
