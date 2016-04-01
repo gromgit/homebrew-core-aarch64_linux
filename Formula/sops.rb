@@ -4,6 +4,13 @@ class Sops < Formula
   url "https://pypi.python.org/packages/source/s/sops/sops-1.10.tar.gz"
   sha256 "65cf3c4777d389a0f812887e70bbfc36dc6bf3dbb16c18c086ca0b8b63523dfa"
 
+  bottle do
+    cellar :any
+    sha256 "47856b5bb36b3dab1442b97f98104e42c8a07b9649cdb0d9aec65ac457a5399a" => :el_capitan
+    sha256 "f47c3df73d631537a23ce4048b7736f53020c825129530f9cab0b180a0e22313" => :yosemite
+    sha256 "06df924aefb9f43b2fecbb12bd98ff6e6794eed8c07c241c23a700f90202da7a" => :mavericks
+  end
+
   depends_on "libffi"
   depends_on "libyaml"
   depends_on "openssl"
