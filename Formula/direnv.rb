@@ -19,10 +19,6 @@ class Direnv < Formula
     system "make", "install", "DESTDIR=#{prefix}"
   end
 
-  def caveats
-    "Finish setup by following: https://github.com/zimbatm/direnv#setup"
-  end
-
   test do
     system bin/"direnv", "status"
   end
