@@ -21,9 +21,9 @@ before_install:
   - git -C "$(brew --repo)" reset --hard origin/master
   - git -C "$(brew --repo)" clean -qxdff
   - brew update
-  - rsync -az "$TRAVIS_BUILD_DIR" "$(brew --repo homebrew/core)"
-  - export TRAVIS_BUILD_DIR="$(brew --repo homebrew/core)"
-  - cd "$(brew --repo homebrew/core)"
+  - rsync -az "$TRAVIS_BUILD_DIR" "$(brew --repo $TRAVIS_REPO_SLUG)"
+  - export TRAVIS_BUILD_DIR="$(brew --repo $TRAVIS_REPO_SLUG)"
+  - cd "$(brew --repo $TRAVIS_REPO_SLUG)"
   - env | grep TRAVIS_
 
 install:
