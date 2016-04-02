@@ -13,7 +13,6 @@ class PerconaServer < Formula
   option :universal
   option "with-test", "Build with unit tests"
   option "with-embedded", "Build the embedded server"
-  option "with-memcached", "Build with InnoDB Memcached plugin"
   option "with-local-infile", "Build with local infile loading support"
 
   deprecated_option "enable-local-infile" => "with-local-infile"
