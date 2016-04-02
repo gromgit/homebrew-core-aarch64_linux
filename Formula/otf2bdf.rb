@@ -4,6 +4,13 @@ class Otf2bdf < Formula
   url "https://www.math.nmsu.edu/~mleisher/Software/otf2bdf/otf2bdf-3.1.tbz2"
   sha256 "3d63892e81187d5192edb96c0dc6efca2e59577f00e461c28503006681aa5a83"
 
+  bottle do
+    cellar :any
+    sha256 "018d348c6fb0b0a413c85bd575d93837f4bb03c654243f1c6ce9d54e417d77e9" => :el_capitan
+    sha256 "751f5243a8be995963d1b4e20bea3d52823fdcbadb727d0eab20e6715277db40" => :yosemite
+    sha256 "70fb9d592eaa1cbc1f3e2a448c023988ea5e86035633d387c959de8c725a98f8" => :mavericks
+  end
+
   depends_on "freetype"
 
   resource "mkinstalldirs" do
