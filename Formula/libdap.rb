@@ -6,9 +6,9 @@ class Libdap < Formula
   head "https://github.com/OPENDAP/libdap4.git"
 
   bottle do
-    sha256 "1daf95984ed2c1738f6c247efa0f3bb35bb28df71f81d793d850ad9ee7198537" => :yosemite
-    sha256 "fd6a64b4eeaba3b4c04b55a8517c776a6b6d3aa1a993135ca380fc254514594e" => :mavericks
-    sha256 "7862dbc1a6659c640b4ef9b92693f2a4d1116dedf513a4d7b4c392ba5cfb1287" => :mountain_lion
+    sha256 "0ed1a25312873af1797bade7a0f3706df5cf1b2049bd1eec3d0ca0618b38da92" => :el_capitan
+    sha256 "07bba9bf47aa4d7d8c73dad126160f82a9b6dec7c3a9b54d915fcd8524727b23" => :yosemite
+    sha256 "bb4b42776292f6adb3af91fb2a5df61a1e13d1dfcc07a275c0595a470dbddb64" => :mavericks
   end
 
   option "without-test", "Skip build-time tests (Not recommended)"
