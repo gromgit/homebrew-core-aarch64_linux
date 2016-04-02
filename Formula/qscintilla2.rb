@@ -6,10 +6,9 @@ class Qscintilla2 < Formula
 
   bottle do
     cellar :any
-    revision 1
-    sha256 "4f277db7d148508ed19c15deb5be481a259fb9484f8228b8beef8d5deb62e3e8" => :el_capitan
-    sha256 "c671e7416f6cb55f7eaf3fabeed866dc0abefe7921470dc592ff515fb1c90bef" => :yosemite
-    sha256 "372eb0774903e20c4e3bcf67fbebb9ae7b880e5d12729c50e9eca264b2b7c96e" => :mavericks
+    sha256 "6aa9b43e76d86e3ca6b10ff50ff56cfff79c2ef1a9b38f87c1e523c49c7c7f43" => :el_capitan
+    sha256 "e822dc50129362806bfe837ac6061d5ca0bfc8d716bad8cda488d6ab7d640e82" => :yosemite
+    sha256 "bda04aa2ac8e5bb71d03f1dd67c677c09a03c05b107b5cfb120d4657c8b79545" => :mavericks
   end
 
   option "without-plugin", "Skip building the Qt Designer plugin"
