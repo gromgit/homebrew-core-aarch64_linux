@@ -10,10 +10,9 @@ class BashCompletion < Formula
 
   bottle do
     cellar :any_skip_relocation
-    revision 3
-    sha256 "52258306b5c2c04785dd9dd197495cd906815d093bcb4e7d2e580c9b68c23d56" => :el_capitan
-    sha256 "d94667d452b56fff80e554213932e10b8491a305f2750c04f6b958f3ec828e71" => :yosemite
-    sha256 "b17500ede97ac936718d10b3ce4348563fb668c5fa9c460de6a1d85b0c1a9424" => :mavericks
+    sha256 "aaa0801956062f69a0e1c2c5214c110ef86828474508a3b4925f5e1cf11b0ce5" => :el_capitan
+    sha256 "aca381fd5650b1d0ef886d824f1846e4934b6dc7eaf062a6be4bc17251245af3" => :yosemite
+    sha256 "a0d3a54b78334afcc9b5d1aed935a1b87b2398ef4c588f98d6a61dedc8c6fa32" => :mavericks
   end
 
   # Backports the following upstream patch from 2.x:
