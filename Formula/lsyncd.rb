@@ -46,8 +46,8 @@ class Lsyncd < Formula
     "10.11.4"  => ["xnu-3248.20.55.tar.gz",  "10c3acf0da74d6f4684d6a870b425546fc9c9dcb9c39541556f47cba2440a2ab"],
   }
 
-  if xnu_headers.key? MACOS_FULL_VERSION
-    tarball, checksum = xnu_headers.fetch(MACOS_FULL_VERSION)
+  if xnu_headers.key? MacOS.full_version
+    tarball, checksum = xnu_headers.fetch(MacOS.full_version)
     resource "xnu" do
       url "https://opensource.apple.com/tarballs/xnu/#{tarball}"
       sha256 checksum
