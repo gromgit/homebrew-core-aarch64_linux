@@ -4,6 +4,13 @@ class Libguess < Formula
   url "http://rabbit.dereferenced.org/~nenolod/distfiles/libguess-1.2.tar.bz2"
   sha256 "8019a16bdc7ca9d2efbdcc1429d48d033d5053d42e45fccea10abf98074f05f8"
 
+  bottle do
+    cellar :any
+    sha256 "a498514b576d430711723ec36937902a326b29056655cc14e66398419cfd07a9" => :el_capitan
+    sha256 "66e51f426756e9a126bc2267d6c276c5261ef6f02bac5e11c34647b39278a995" => :yosemite
+    sha256 "0aa5eda1a4ba389ef5e17e5a41cd3d076c4a3607b5a354bb80931ad07c918ab2" => :mavericks
+  end
+
   head do
     url "https://github.com/kaniini/libguess.git"
 
