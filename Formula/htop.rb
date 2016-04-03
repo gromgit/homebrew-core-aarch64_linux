@@ -6,9 +6,9 @@ class Htop < Formula
   revision 1
 
   bottle do
-    sha256 "b8afe978bc97ef2d18767c769941b81e0501c20566d2427e2e421bb69ca94e5a" => :el_capitan
-    sha256 "f667485b77c96a1c7fe4923858cb60f1d5700412a1921dd9a12ac4fb50f305f2" => :yosemite
-    sha256 "47fd6612ee8889637c3aa47a6c8cdc5812b8b8f8fa4853f35f2131bb8da43884" => :mavericks
+    sha256 "17e7e101576e5a6ab21c9cb466abb06c9aa9f41bf48a8bafab7b35724be10a22" => :el_capitan
+    sha256 "ae6da1461494e36c71e5ccf77f3b84d89b83eb5edc50b25e170c6021de8d3978" => :yosemite
+    sha256 "0105446a79d2a2d8e559f1e815597dc735efe50cf51d9de27c545f0a1a881d1f" => :mavericks
   end
 
   head do
