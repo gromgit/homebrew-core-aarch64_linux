@@ -8,6 +8,13 @@ class Gx < Formula
     :revision => "b82b91b0cf30023c277903ab1ed6b158e80d5d23"
   head "https://github.com/whyrusleeping/gx.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "2728f6c0132ac57e5489d54edbbe609f0b83338bf73006b7b84490cbae526993" => :el_capitan
+    sha256 "9a61784cd3f38f9a48b85c6f5d39aec9cb1d2fd2e8ea3760d5754329d3811f5c" => :yosemite
+    sha256 "840291aca84a9951cbce5d2994fcd270b91f9d3e2ad746c24ec827c1e5ffd6e3" => :mavericks
+  end
+
   depends_on "go" => :build
   depends_on "godep" => :build
 
