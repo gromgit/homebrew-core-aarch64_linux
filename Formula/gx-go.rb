@@ -8,6 +8,13 @@ class GxGo < Formula
     :revision => "e5258e8126435420207a15d914c895e076177af4"
   head "https://github.com/whyrusleeping/gx-go.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "b5df2166383689356b4eda532694e9e123772200f93bb7838ee52b3921d190bb" => :el_capitan
+    sha256 "9fc0aaaea8f616d13db6c5ee7272c659ddad472467ab45127dbe4ac03ee78294" => :yosemite
+    sha256 "8976772385e0c8e97ac96a113231aef4ed3c3cd5821d5905ef111090c1011856" => :mavericks
+  end
+
   depends_on "go" => :build
   depends_on "godep" => :build
   depends_on "gx"
