@@ -4,6 +4,13 @@ class Nagios < Formula
   url "https://downloads.sourceforge.net/project/nagios/nagios-4.x/nagios-4.0.6/nagios-4.0.6.tar.gz"
   sha256 "d400190c771eb90e0ba16351f6358fa7e22e42a7be986f2066db63518a14397b"
 
+  bottle do
+    cellar :any
+    sha256 "36fd9a8eda1286902fefea97a76e508e27c6cd7fd6cc2156558411f6b3f32709" => :el_capitan
+    sha256 "d577fda33880b29093628affbf7e71d9e1e37220f84b6c83cc7dbb05875fa86a" => :yosemite
+    sha256 "e5a625fae90701cbbfa97fa872c8a694d1365f04d970822e3bc8d81aa37ca667" => :mavericks
+  end
+
   depends_on "gd"
   depends_on "nagios-plugins"
   depends_on "libpng"
