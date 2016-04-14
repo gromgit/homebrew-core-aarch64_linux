@@ -4,6 +4,13 @@ class Ohcount < Formula
   url "https://github.com/blackducksw/ohcount/archive/3.0.0.tar.gz"
   sha256 "46ef92e1bbf9313de507a03decaf8279173584555fb580bb3d46d42c65aa4a6d"
 
+  bottle do
+    cellar :any
+    sha256 "4c6ca73681e204052237392b9c931e46fcdd599c6605bfc7861e3e91dce9ceac" => :el_capitan
+    sha256 "08d9df78da1afb3654e96fa142db9eb1981dbbc14861db522dae6e8cc08791e4" => :yosemite
+    sha256 "055b2eb9460b1723bcb8a0f215ddda35750ce6d9b9c3cd0bce75d4e9584f0b62" => :mavericks
+  end
+
   head do
     url "https://github.com/blackducksw/ohcount.git"
     depends_on "libmagic"
