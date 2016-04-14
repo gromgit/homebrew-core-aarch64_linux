@@ -5,6 +5,13 @@ class Msdl < Formula
   version "1.2.7-r2"
   sha256 "0297e87bafcab885491b44f71476f5d5bfc648557e7d4ef36961d44dd430a3a1"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "34ba320e82d1ce97fb0a106abd2c5ec848ba16857730ba51cadd0a030bee62ab" => :el_capitan
+    sha256 "5b8ac26e3adbb19386398a5500a8d5631d426b2e0e951433134b5383b80bb568" => :yosemite
+    sha256 "a28059bba6256df7233eacbfdadd9eeec2c3c6ec22038cb06ca49745b347a828" => :mavericks
+  end
+
   # Fixes linker error under clang; apparently reported upstream:
   # https://github.com/Homebrew/homebrew/pull/13907
   patch :DATA
