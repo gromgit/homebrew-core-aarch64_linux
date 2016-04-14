@@ -6,6 +6,13 @@ class Opencolorio < Formula
 
   head "https://github.com/imageworks/OpenColorIO.git"
 
+  bottle do
+    cellar :any
+    sha256 "e3a2312a3f21ea15255903f4b030d44fbcceee36e768a070427234d9b80a46fd" => :el_capitan
+    sha256 "49edcb11a59fbcdbea875024a4c2719055fc17cee5e6472fe82d30e79685ae97" => :yosemite
+    sha256 "8aba1648c2c21f1054956c2d0fa7884d3882e30446785419bc429e50022d242c" => :mavericks
+  end
+
   option "with-test", "Verify the build with its unit tests (~1min)"
   option "with-java", "Build ocio with java bindings"
   option "with-docs", "Build the documentation"
