@@ -5,6 +5,13 @@ class Optipng < Formula
   sha256 "74e54b798b012dff8993fb8d90185ca83f18cfa4935f4a93b0bcfc33c849619d"
   head "http://hg.code.sf.net/p/optipng/mercurial", :using => :hg
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "d5f0a362fc4d8821b73be6767b401bced46b897ef36d56881a10070fb3c07d88" => :el_capitan
+    sha256 "2622e60d2f9313b39d2b385e84727e615839d6d531e4c6c7210a53b9cb584f61" => :yosemite
+    sha256 "dd532d23f812dbc28b8f32171423946ee6fcfe87eab28665e7b484c83fc55e0e" => :mavericks
+  end
+
   # Fix compilation on 10.10
   # http://sourceforge.net/p/optipng/bugs/47/
   patch :DATA
