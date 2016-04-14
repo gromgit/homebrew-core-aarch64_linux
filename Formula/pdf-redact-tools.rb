@@ -5,6 +5,13 @@ class PdfRedactTools < Formula
   sha256 "9d5f095e5d056eb527c08c4736b45c99aa6399424dd6ed7155e3d7cd1600c55e"
   head "https://github.com/micahflee/pdf-redact-tools.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "17c2dd805cf6f02dbd9f87c2f8c492abee296f08d0190699179a76eb1caad4e6" => :el_capitan
+    sha256 "4c841b25222983bc322fc1551a0142b34baa5033f560ec06d8a48c3e43dfea7d" => :yosemite
+    sha256 "a18d2048339064b527df22c675c8417fc5c2771d0dfb4176c8bd66ffc3e714c1" => :mavericks
+  end
+
   depends_on :python if MacOS.version <= :snow_leopard
   depends_on "imagemagick"
   depends_on "exiftool"
