@@ -5,6 +5,12 @@ class PangoxCompat < Formula
   sha256 "552092b3b6c23f47f4beee05495d0f9a153781f62a1c4b7ec53857a37dfce046"
   revision 1
 
+  bottle do
+    sha256 "206ca566f90950e25b78b5494328f2d047710f2a79986aa3a8c905f6ef47974b" => :el_capitan
+    sha256 "0436736de80b61ef5f88ef01c82df32a5c9115a82b421fa610efae2fe1f7ab9d" => :yosemite
+    sha256 "e819755afd6ba06780fd14adc5a20f53b3b47c26adbd1219c26a4f0ec9f5abbd" => :mavericks
+  end
+
   depends_on "pkg-config" => :build
   depends_on "pango"
   depends_on :x11
