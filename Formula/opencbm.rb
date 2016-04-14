@@ -5,6 +5,12 @@ class Opencbm < Formula
   sha256 "f67c47470181bec2faea45ad2ac82ae237f30ad54c406b0e7dd1a4ad97b16d87"
   head "git://git.code.sf.net/p/opencbm/code"
 
+  bottle do
+    sha256 "37ba85e14c150298282184e951463d6f144e254552b02989d37fda2b73048bab" => :el_capitan
+    sha256 "ebae0f7ec2738011329779d8bb419838ad11bb6397e687f0ea43ae12ad6df259" => :yosemite
+    sha256 "a717325f45b16e0565167221054589fe37ed9d8c90e5cff63a41ebb2ced343d3" => :mavericks
+  end
+
   # cc65 is only used to build binary blobs included with the programs; it's
   # not necessary in its own right.
   depends_on "cc65" => :build
