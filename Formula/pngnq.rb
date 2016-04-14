@@ -5,6 +5,13 @@ class Pngnq < Formula
   sha256 "c147fe0a94b32d323ef60be9fdcc9b683d1a82cd7513786229ef294310b5b6e2"
   revision 1
 
+  bottle do
+    cellar :any
+    sha256 "dd6970fb9055fb1a6702c820e75a3d7b826e165e61c23c17b0845cca780c3da9" => :el_capitan
+    sha256 "cba40b130f3d16666580be2b572721d0d8d312f60f62e4fdef656ffa825bc65e" => :yosemite
+    sha256 "567b59896332ae5974077a2402eefcf3246942d82599318d95ab6e53faa6a2d7" => :mavericks
+  end
+
   depends_on "pkg-config" => :build
   depends_on "libpng"
 
