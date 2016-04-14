@@ -4,6 +4,10 @@ class Miredo < Formula
   url "http://www.remlab.net/files/miredo/miredo-1.2.6.tar.xz"
   sha256 "fa26d2f4a405415833669e2e2e22677b225d8f83600844645d5683535ea43149"
 
+  bottle do
+    sha256 "766bcbb90ec69fcda0df0bc73bd19c0304a3ca321d9025e715a269162416f478" => :mavericks
+  end
+
   depends_on :tuntap
   depends_on "judy"
 
