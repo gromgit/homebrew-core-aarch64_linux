@@ -4,6 +4,12 @@ class Midgard2 < Formula
   url "https://github.com/downloads/midgardproject/midgard-core/midgard2-core-12.09.tar.gz"
   sha256 "7c1d17e061df8f3b39fd8944ab97ab7220219b470f7874e74471702d2caca2cb"
 
+  bottle do
+    sha256 "b555f5eb0fcc97d313dad782c834663938cea52e64e00bfbf0555d1e74c9b303" => :el_capitan
+    sha256 "92e816d0054901c0ac017e090609149b5252ea735c068d583a54e75e8471bf90" => :yosemite
+    sha256 "ac9ebb309b40032df71e0bd73eef209acc7677e0ea4c30599db8b96559cb5870" => :mavericks
+  end
+
   head do
     url "https://github.com/midgardproject/midgard-core.git", :branch => "ratatoskr"
 
