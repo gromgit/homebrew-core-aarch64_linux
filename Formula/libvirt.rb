@@ -5,9 +5,9 @@ class Libvirt < Formula
   sha256 "99603b8dba574bc592673fdf5c77e96cf5221e21104ab0477efeb8aba133858f"
 
   bottle do
-    sha256 "cda088f24db7ec467c7c57b327272489285b9efdc362e34f92ae9c3a87119d31" => :el_capitan
-    sha256 "2bce8df62700d8982f2d447ce0cf330363f828e0ef3232461d4a9894360066ea" => :yosemite
-    sha256 "3a8ea1878ebe2a331f1941649e22572716a5f2230a8275268c9e05ef0b8d468f" => :mavericks
+    sha256 "613e9a7668d75e90a49e3659209be5c0d7fd387fee8f4fc31f2bf0fa1adcfa75" => :el_capitan
+    sha256 "d0f40e5ff9482a70b40f98a392d506932f2addcd50e08c8a5e82bd935b5ab006" => :yosemite
+    sha256 "324252922c80fa0b4bb850c2f8a958d344efb9375fcb0626595a0d65a4dde7ec" => :mavericks
   end
 
   option "without-libvirtd", "Build only the virsh client and development libraries"
