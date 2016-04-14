@@ -4,6 +4,13 @@ class Mpack < Formula
   url "http://ftp.andrew.cmu.edu/pub/mpack/mpack-1.6.tar.gz"
   sha256 "274108bb3a39982a4efc14fb3a65298e66c8e71367c3dabf49338162d207a94c"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "f0f9bd526ff3c7e8a1abea377e3716fee96916c0c54234d96b46a475b50b8c1e" => :el_capitan
+    sha256 "f5455f95c52ffc59181037ea3fd8151006178dfd6abb9674be65b2996f876766" => :yosemite
+    sha256 "9090f5b1263e27adfdd359ee1a052a71edb681d4305cfd921488b1533f8bfcf8" => :mavericks
+  end
+
   # Fix missing return value; clang refuses to compile otherwise
   patch :p0 do
     url "https://raw.githubusercontent.com/Homebrew/patches/1ad38a9c/mpack/uudecode.c.patch"
