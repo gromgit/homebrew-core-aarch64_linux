@@ -5,6 +5,13 @@ class Jsvc < Formula
   version "1.0.15"
   sha256 "e98d96c7c71e02d1a05ce1c417eedb588678ccecc55ba2e9ae2969e4ea910a90"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "f42f7315d5015da70971e6771fd3fe1b8aebeb6852c48d8a921d37ad5753ed05" => :el_capitan
+    sha256 "ee2cdf6d939f8cbde26edbde512d6afa3c57a144c83f3a11699fe998b3d71815" => :yosemite
+    sha256 "b97d2c0458b7280e197c420af87edd7f798b8ca6d3e0520a458750eaab5fbf68" => :mavericks
+  end
+
   # Enable Java 7 JVMs: https://issues.apache.org/jira/browse/DAEMON-281
   patch :DATA
 
