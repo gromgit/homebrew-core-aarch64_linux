@@ -4,6 +4,13 @@ class Psftools < Formula
   url "http://www.seasip.info/Unix/PSF/psftools-1.0.7.tar.gz"
   sha256 "d6f83e76efddaff86d69392656a5623b54e79cfe7aa74b75684ae3fef1093baf"
 
+  bottle do
+    cellar :any
+    sha256 "66a389177a272c5a03ca11f1cb8f32fdac2899117812ad9206fe6744b4b9118d" => :el_capitan
+    sha256 "7e51a8f4c5605780528091208dfdb018c4a7ca0e56ff81cb75715b95fb8a9e9b" => :yosemite
+    sha256 "eddaf9caf5a4bb2545665c5323821f883e973ee815b87e7286b9a5b7a2fc3c85" => :mavericks
+  end
+
   depends_on "autoconf" => :build
 
   resource "pc8x8font" do
