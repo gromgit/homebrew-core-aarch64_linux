@@ -5,6 +5,12 @@ class Openlitespeed < Formula
   sha256 "703ff1093eae270bb0c380d097e92e39dd102b31f9632ff420b4b0ed423c4159"
   head "https://github.com/litespeedtech/openlitespeed.git"
 
+  bottle do
+    sha256 "94e67dcd4a54a50c080630976731f6a52d84423dd2d8e0b3337d95d904d94170" => :el_capitan
+    sha256 "97dc0e8e814978e6d42997fd092b7ed26e63aca96b8c6f96583bb093d1e895f8" => :yosemite
+    sha256 "aacafddf229c07c76481f3fc86b3295ca06b41e14555b0e8a97050098701a1d2" => :mavericks
+  end
+
   option "with-debug", "Compile with support for debug log"
   option "with-spdy", "Compile with support for SPDY module"
 
