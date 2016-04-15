@@ -30,6 +30,13 @@ class Zpython < Formula
       sha256 "73d6565536abe269cc7715e5200ba63000b7fb830c8975db7e5e6db2222e8f09"
     end
   end
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "aa8efa349bbf477746aee3cb977d1b0c430ec05d1947f2bd33667f054d8692cc" => :el_capitan
+    sha256 "3f469a0820ec250a6875c97fd50626462b94a6d81ea93888d32391ababcf25bf" => :yosemite
+    sha256 "9137eefb79a7a529b016e3c949e24a15d4747e4f35108f91db6ea58441f456a9" => :mavericks
+  end
+
 
   # We prepend `00-` for the first version of the zpython module, which is
   # itself a patch on top of zsh and does not have own version number yet.
