@@ -6,6 +6,13 @@ class Stgit < Formula
 
   head "git://repo.or.cz/stgit.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "f35660d62e8d2e2e22ac12e9d5ed79c2025653e966fc754ab3cebd030108348e" => :el_capitan
+    sha256 "c68c1eec9a26025d42512edaf2ab56e5fb97dfeaf06c8b6a5fbe3f314eafd930" => :yosemite
+    sha256 "018e8cc3fb31adaf97467324f77694f75681b2bdb1299f9007f995fa4bfa9519" => :mavericks
+  end
+
   def install
     ENV["PYTHON"] = "python" # overrides 'python2' built into makefile
     system "make", "prefix=#{prefix}", "all"
