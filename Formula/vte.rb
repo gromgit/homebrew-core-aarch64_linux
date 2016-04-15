@@ -4,6 +4,12 @@ class Vte < Formula
   url "https://download.gnome.org/sources/vte/0.28/vte-0.28.2.tar.xz"
   sha256 "86cf0b81aa023fa93ed415653d51c96767f20b2d7334c893caba71e42654b0ae"
 
+  bottle do
+    sha256 "2d4c27bd624e106946dc839ecab9eea7b0ffd51cf9df82b2bb50673e25f3cb35" => :el_capitan
+    sha256 "bcde7d6b80b907ab67d76429618c1402e194c45dd6082d45f20a12af5c13bb0f" => :yosemite
+    sha256 "773d6ee5399c52d6c2d69061ec2bd7dd74c0138e4eaa307ddae863810efa1640" => :mavericks
+  end
+
   depends_on "pkg-config" => :build
   depends_on "intltool" => :build
   depends_on "gettext"
