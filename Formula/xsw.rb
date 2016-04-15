@@ -4,6 +4,12 @@ class Xsw < Formula
   url "https://xsw.googlecode.com/files/xsw-0.3.5.tar.gz"
   sha256 "d7f86047716d9c4d7b2d98543952d59ce871c7d11c63653f2e21a90bcd7a6085"
 
+  bottle do
+    sha256 "b7a6391cf0df4a4d514a33188dc67a8fac551a3f66e82da626c4d4877cfe5274" => :el_capitan
+    sha256 "8652e603fa053db1bfedeebad3699f6c77158a7133b55b37cea9ac33981aec8f" => :yosemite
+    sha256 "3bd5da94a5c179f2cb40fdb8f385d0baeaed2a88aceb0f7a3839a9c6c605549f" => :mavericks
+  end
+
   depends_on "sdl"
   depends_on "sdl_ttf"
   depends_on "sdl_image"
