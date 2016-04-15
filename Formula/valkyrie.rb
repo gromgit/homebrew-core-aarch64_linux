@@ -6,6 +6,10 @@ class Valkyrie < Formula
 
   head "svn://svn.valgrind.org/valkyrie/trunk"
 
+  bottle do
+    sha256 "7992f813d519d4e70a4f1c140e664f5ffa47fea263433a1af2a0368a22754a24" => :yosemite
+  end
+
   depends_on "qt"
   depends_on "valgrind"
 
