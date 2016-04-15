@@ -4,6 +4,12 @@ class Rsyslog < Formula
   url "http://www.rsyslog.com/files/download/rsyslog/rsyslog-7.4.5.tar.gz"
   sha256 "f5e46e9324e366f20368162b4f561cf7a76fecb4aa0570edcaaa49e9f8c2fe70"
 
+  bottle do
+    sha256 "fe4b4b7732000b54f6bcc09495920fa27d2f09f31b575d424b9f71b73e32ae6e" => :el_capitan
+    sha256 "a3434bafdb1c54eb0ea50fcbabbbf87f241dac07dd68be55c4de344db3daa114" => :yosemite
+    sha256 "2f41f4e354de6cb6cd95630ed396a2099753adef10a63e0304fba550097f6237" => :mavericks
+  end
+
   depends_on "pkg-config" => :build
   depends_on "libestr"
   depends_on "json-c"
