@@ -4,6 +4,13 @@ class Virtualpg < Formula
   url "https://www.gaia-gis.it/gaia-sins/virtualpg-1.0.1.tar.gz"
   sha256 "9e6c4c6c1556b2ea2a1e4deda28909626c3a8b047c81d6b82c042abdb9a99ec8"
 
+  bottle do
+    cellar :any
+    sha256 "e4ef5b53bbe9ee135d5fc2bb4c3a3d48f5f3eabfdb595c4847c65ff280a70032" => :el_capitan
+    sha256 "ff726d86b7c7124bc2af33a47918e7c7bd07932c20d524e7cb60cb611a617ab7" => :yosemite
+    sha256 "7388a7be8131848917364ecc747eff89b8818eb90d6eb13d364753042097d8bf" => :mavericks
+  end
+
   depends_on "libspatialite"
   depends_on "postgis"
 
