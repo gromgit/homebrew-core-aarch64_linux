@@ -4,6 +4,13 @@ class PythonMarkdown < Formula
   url "https://pypi.python.org/packages/source/M/Markdown/Markdown-2.6.5.tar.gz"
   sha256 "8d94cf6273606f76753fcb1324623792b3738c7612c2b180c85cc5e88642e560"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "ed951b7e851bdbf329a9718aea5b71b9ba0c49c1bb2898a81fcf095ccef00d33" => :el_capitan
+    sha256 "629aa5a47ad91c7d43d016129ec5acb20d535840975d606241a38d7fe8961a4b" => :yosemite
+    sha256 "2b0f3ce418e7e695f1e1d00d9b31abb61704b8a41761387bdc290e07202e308e" => :mavericks
+  end
+
   depends_on :python if MacOS.version <= :snow_leopard
 
   def install
