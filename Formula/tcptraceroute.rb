@@ -5,6 +5,13 @@ class Tcptraceroute < Formula
   version "1.5beta7"
   sha256 "57fd2e444935bc5be8682c302994ba218a7c738c3a6cae00593a866cd85be8e7"
 
+  bottle do
+    cellar :any
+    sha256 "e45c866a01dd651b307b0f83798adbd2f53b9fa1ca4be3b0e830adcf3df67e66" => :el_capitan
+    sha256 "e44ef687b867ae96dbce19cdc305eb8561b076758690b300ea97552092de578e" => :yosemite
+    sha256 "1df9e820ccefadd97512902853c9849dfe29598b361be548202a7e32a77a3b35" => :mavericks
+  end
+
   depends_on "libnet"
 
   def install
