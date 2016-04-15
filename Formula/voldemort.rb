@@ -4,6 +4,13 @@ class Voldemort < Formula
   url "https://github.com/voldemort/voldemort/archive/release-1.9.5-cutoff.tar.gz"
   sha256 "d521943873665d863a207c93557dc322c091e22a4293df4e3b86eb298ebbda7c"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "25b74ad329b7ebf6f49220281503081ba374bb136948a1dc1817a03ebef09608" => :el_capitan
+    sha256 "9c1cf115a4fa83bd6d4f3d161b2290ac5416751850dd882ac5b06c21a2d9a884" => :yosemite
+    sha256 "db6c54af16bfb881914e38ef90d2ce906a64c6f210a90ed03279c66c6e396a05" => :mavericks
+  end
+
   depends_on :ant => :build
   depends_on :java => "1.7+"
 
