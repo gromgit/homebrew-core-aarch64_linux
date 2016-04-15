@@ -4,6 +4,13 @@ class Runit < Formula
   url "http://smarden.org/runit/runit-2.1.1.tar.gz"
   sha256 "ffcf2d27b32f59ac14f2d4b0772a3eb80d9342685a2042b7fbbc472c07cf2a2c"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "aad8b537d84c9219b6d836aefe02e549f55f4f55183c6bf668efc3d68070f8f7" => :el_capitan
+    sha256 "6558d24d895cd976cd9f23d7bf76ae2de40040017be2577061d6de9fbd35d1f3" => :yosemite
+    sha256 "1bed0d534c4880367cf119707f17a38bf0cc4fb0b3b15409b7306e3eb4a6b219" => :mavericks
+  end
+
   def install
     # Runit untars to 'admin/runit-VERSION'
     cd "runit-#{version}" do
