@@ -6,6 +6,13 @@ class Sl < Formula
 
   head "https://github.com/mtoyoda/sl.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "f186cb86f4d48929aa671434dbd6be0a861069608098a30dc952697bcca85972" => :el_capitan
+    sha256 "696104243a18e08279d461e66e6a696791e6c36b67df43e361ad6f6de1200440" => :yosemite
+    sha256 "c7d4432bfc169f7338eeb0c8300a975495b229d6e85bfff4fdd6bbd11eb8da17" => :mavericks
+  end
+
   fails_with :clang do
     build 318
   end
