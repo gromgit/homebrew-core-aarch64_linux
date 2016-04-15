@@ -5,6 +5,12 @@ class Visualnetkit < Formula
   version "1.4"
   sha256 "d1b02b253520a337ced5c450a0cd68e76aef289fa9d2777470455c0edfec5ce7"
 
+  bottle do
+    sha256 "760050ed6f502d3e877ca7828aec069feb9736985da78d8b518b5e039b151e9c" => :el_capitan
+    sha256 "2939db963f12497e375dcdf71f782d4c027f7e5cc41fa3f61cd7350d2365a30e" => :yosemite
+    sha256 "acadbe4276d9e38a7b865b206fc0e45b8895023b739579b9ea063d95f3337451" => :mavericks
+  end
+
   depends_on "qt"
 
   # We're maintaining a patch to allow this software to compile against newer
