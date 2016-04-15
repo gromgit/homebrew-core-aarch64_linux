@@ -4,6 +4,13 @@ class Seexpr < Formula
   url "https://github.com/wdas/SeExpr/archive/rel-1.0.1.tar.gz"
   sha256 "971ee8fff7eb195785031dedd7c06cb3fa8649fba8aa45c6ace746a23b8093a9"
 
+  bottle do
+    cellar :any
+    sha256 "a0ab2f6f50d81504f2767c03daf3d99fd9fd433b67a507a7d367b0970f0e01f3" => :el_capitan
+    sha256 "f26765862bfbd77b50fe6613f70cd26db486992615980efbef2a808f0e8a99d3" => :yosemite
+    sha256 "000ddf09be887ce59a805445078b4dd91712b1e6a81bf33d543771eff1298134" => :mavericks
+  end
+
   depends_on "cmake" => :build
   depends_on "doxygen" => :build
   depends_on "libpng"
