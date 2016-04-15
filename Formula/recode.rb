@@ -5,6 +5,11 @@ class Recode < Formula
   sha256 "72c3c0abcfe2887b83a8f27853a9df75d7e94a9ebacb152892cc4f25108e2144"
   version "3.7-beta2"
 
+  bottle do
+    sha256 "e52c773b4472c6a8f23678cbdb69cb2c4a8f4b78a1f1a5a0fdafc97b3ffa30d2" => :yosemite
+    sha256 "c02fc6ad41698d029f251cf6b7218f7e6f9778e97406efade13027860613424d" => :mavericks
+  end
+
   depends_on "gettext"
   depends_on "libtool" => :build
 
