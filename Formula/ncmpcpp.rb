@@ -7,9 +7,9 @@ class Ncmpcpp < Formula
 
   bottle do
     cellar :any
-    sha256 "39665b843ca20d18a587dc7fdfce58be49891d659d3c2321245f97496be53c40" => :el_capitan
-    sha256 "fe37b6c0ecce4bda5dc334d18cdf50feebec058243ad169425cf68d4113d2342" => :yosemite
-    sha256 "4ddc2ca6db56b7fa86c5d80c7236dccc26b5f79efb785a46a8974cc92e69a4cb" => :mavericks
+    sha256 "096b5859646645c04d3e4431b71d4f821df75b651869fd540aa4112b331a8b96" => :el_capitan
+    sha256 "8f995b58ebb292d07b685c39bcc78f8c8f6461eee3691bc5e00760f92f744b80" => :yosemite
+    sha256 "35d4036bdcebb01860cba1deac2e318c80d0803840575c81d0bfe5f0218131e5" => :mavericks
   end
 
   head do
