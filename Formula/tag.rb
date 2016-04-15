@@ -5,6 +5,13 @@ class Tag < Formula
   sha256 "4ac5005dcffff4f03fe3885b2ab321a61d77df2fb862527f4a0d05d1f9280680"
   head "https://github.com/jdberry/tag.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "7406b17715a627677917d75800850bfcf52b5796584dfc90f5e17d67a01cf4a8" => :el_capitan
+    sha256 "ae93b14ff99a6e0827359effbed9ca31f148affbf28f6d212bed39232023e1eb" => :yosemite
+    sha256 "8aa970a198d4c14b310d0f2ba5dcb238699d44585205137061a21d0e7690d629" => :mavericks
+  end
+
   depends_on :macos => :mavericks
 
   def install
