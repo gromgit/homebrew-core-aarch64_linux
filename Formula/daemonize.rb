@@ -1,8 +1,8 @@
 class Daemonize < Formula
   desc "Run a command as a UNIX daemon"
   homepage "http://software.clapper.org/daemonize/"
-  url "https://github.com/bmc/daemonize/archive/release-1.7.6.tar.gz"
-  sha256 "8d5717ae5e5bbd4cd6687abe1310f4d817468c67b851ce95dda73038ab40db1f"
+  url "https://github.com/bmc/daemonize/archive/release-1.7.7.tar.gz"
+  sha256 "b3cafea3244ed5015a3691456644386fc438102adbdc305af553928a185bea05"
 
   bottle do
     cellar :any_skip_relocation
@@ -17,5 +17,21 @@ class Daemonize < Formula
                           "--prefix=#{prefix}"
     system "make"
     system "make", "install"
+  end
+
+  test do
+    dummy_script_file = testpath/"script.sh"
+    output_file = testpath/"outputfile.txt"
+    pid_file = testpath/"pidfile.txt"
+    dummy_script_file.write <<-EOS.undent
+      #!/bin/sh
+      echo "#{version}" >> "#{output_file}"
+    EOS
+    chmod 0700, dummy_script_file
+    system "#{sbin}/daemonize", "-p", pid_file, dummy_script_file
+    assert(File.exist?(pid_file), "The file containing the PID of the child process was not created.")
+    sleep(4) # sleep while waiting for the dummy script to finish
+    assert(File.exist?(output_file), "The file which should have been created by the child process doesn't exist.")
+    assert_match version.to_s, output_file.read
   end
 end
