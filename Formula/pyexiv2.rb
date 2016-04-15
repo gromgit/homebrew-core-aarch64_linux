@@ -5,6 +5,13 @@ class Pyexiv2 < Formula
   sha256 "0abc117c6afa71f54266cb91979a5227f60361db1fcfdb68ae9615398d7a2127"
   revision 1
 
+  bottle do
+    cellar :any
+    sha256 "2ed37d8bcc496b353b99a139209a2665c0e414505eb0ee4c5e36d2acbcb54aa9" => :el_capitan
+    sha256 "26b9f2b36d116de1d5b3e6813dd279436e31324e79fbb605f02779ebc2095fe9" => :yosemite
+    sha256 "fe553c6754fe6676f677e32e9a60b65a36e36d52ac9149a68d511556a4179a98" => :mavericks
+  end
+
   depends_on "scons" => :build
   depends_on "exiv2"
   depends_on "boost"
