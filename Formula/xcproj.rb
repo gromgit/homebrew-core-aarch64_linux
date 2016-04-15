@@ -6,6 +6,13 @@ class Xcproj < Formula
 
   head "https://github.com/0xced/xcproj.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "238eb433842ac6622685054b051e93ba1fef14a587a88b134e4257134931e4af" => :el_capitan
+    sha256 "2aa9ad13307fcaa90ea2c98789764f2441c8610cfdba3266a2e305bb0e00f77d" => :yosemite
+    sha256 "64c9bef0c410c6494f0677e34023b75657be4b35e85e13468e9c0cb20c377c09" => :mavericks
+  end
+
   depends_on :macos => :mountain_lion
   depends_on :xcode
 
