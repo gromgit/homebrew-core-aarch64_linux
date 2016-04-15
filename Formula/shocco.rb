@@ -10,6 +10,13 @@ class Shocco < Formula
   url "https://github.com/rtomayko/shocco/archive/1.0.tar.gz"
   sha256 "b3454ca818329955043b166a9808847368fd48dbe94c4b819a9f0c02cf57ce2e"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "2f372c0e3772a787cfcdf9c707eeb1abe7441aa8c63433959a64357ebeec1345" => :el_capitan
+    sha256 "8ae351f45044b2bced2b2c3192e007d9127c15ddba472c28a5a4a61214d04663" => :yosemite
+    sha256 "b52ada7ff56cf3d34b2c9036f54341ebcc3e713203b53262486cb7ac94bb197b" => :mavericks
+  end
+
   depends_on MarkdownRequirement
 
   resource "pygments" do
