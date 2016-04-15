@@ -7,6 +7,13 @@ class Simh < Formula
 
   head "https://github.com/simh/simh.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "38663141007d531b100b6408f27e1f8c3a43d3ec3cb5dc3b0086ac257077ea3f" => :el_capitan
+    sha256 "0aa3e73267250ed3e466465f78d8bc4f286a7bb825c454dae5587af2023a313b" => :yosemite
+    sha256 "e9043ec0dc68a5660a20fe270488dbfbf8741a77aae8dace61441fc348e74234" => :mavericks
+  end
+
   # After 3.9-0 the project moves to https://github.com/simh/simh
   # It doesn't actually fail, but the makefile queries llvm-gcc -v --help a lot
   # to determine what flags to throw.  It is simply not designed for clang.
