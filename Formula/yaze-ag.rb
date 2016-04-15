@@ -4,6 +4,12 @@ class YazeAg < Formula
   url "http://www.mathematik.uni-ulm.de/users/ag/yaze-ag/devel/yaze-ag-2.30.1.tar.gz"
   sha256 "bd1cbb447365bacdc5a890f7eb1f57cf67a5a48652244f65449557b453b6d446"
 
+  bottle do
+    sha256 "5eb10500804ccc5a303342141d12e7bb0533d47b637910425f4a3401aef9765c" => :el_capitan
+    sha256 "1d4ef021b9c46e67201f36bce3dc40a214c463ecc51bb5d22090a9ee11cd17ce" => :yosemite
+    sha256 "c39f691f2a2e5d01a0490f1772465545959ac4f7836fd2873aec4eac7a6e8ac4" => :mavericks
+  end
+
   # Fix missing sys header include for caddr_t on Mac OS
   # Fix omission of creating bin directory by custom Makefile
   # Upstream author is aware of this issue:
