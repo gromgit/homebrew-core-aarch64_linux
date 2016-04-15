@@ -4,6 +4,13 @@ class Ser2net < Formula
   url "https://downloads.sourceforge.net/project/ser2net/ser2net/ser2net-2.9.1.tar.gz"
   sha256 "fdee1e69903cf409bdc6f32403a566cbc6006aa9e2a4d6f8f12b90dfd5ca0d0e"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "c36f63357c6bd5c31622ec292ccec85f60ab26f93b5d6930ccfd9052114bc041" => :el_capitan
+    sha256 "b9a151626b6634c5c07f1c86371f49911bce18d0d8a9e9e48c5755ad7446a504" => :yosemite
+    sha256 "fdca75e5ae2d5afaa17ba6b8214cf5dfe1a52a09e5e07ec6b51eb9d67c254fd1" => :mavericks
+  end
+
   def install
     ENV.deparallelize
 
