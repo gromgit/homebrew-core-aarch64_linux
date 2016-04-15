@@ -5,6 +5,12 @@ class TinyFugue < Formula
   sha256 "3750a114cf947b1e3d71cecbe258cb830c39f3186c369e368d4662de9c50d989"
   version "5.0b8"
 
+  bottle do
+    sha256 "4ed6867f50a84cea3d90669ca06e8e3b491ed6660c5502b2441a59df6ddc1574" => :el_capitan
+    sha256 "0bbabdbbf0ac42e53275163c1beb337d0a269e23a6f285604e38a57bd592414f" => :yosemite
+    sha256 "c8c7907e4068f38251aedc00aff4cf265720e0f42ec444c8e5d4921031ec3d7a" => :mavericks
+  end
+
   conflicts_with "tee-clc", :because => "both install a `tf` binary"
 
   depends_on "libnet"
