@@ -9,6 +9,13 @@ class XbeeComm < Formula
 
   head "https://github.com/guyzmo/xbee-comm.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "64b15ac79da143e2b092db702fd22c92ef064093be1c4c81cb60fd5b08f44075" => :el_capitan
+    sha256 "805e99d4e700a2e9993f26fbc48cae17c1bf16e6ff9ce63b5c7195358fcb052c" => :yosemite
+    sha256 "06cb9c96c880a55763dbb58c1b1a60cba19ec89be9c6995955e235d10b6cb47d" => :mavericks
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
 
