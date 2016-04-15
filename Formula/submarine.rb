@@ -5,6 +5,13 @@ class Submarine < Formula
   sha256 "c4fbe0786be9aeab95d4df4858f890fae3ca3c06bb28993ae1cd38aa20d1a801"
   head "https://github.com/rastersoft/submarine.git"
 
+  bottle do
+    cellar :any
+    sha256 "36f4b8efc06f041c77315cffc8739bbead67cd501208c93f168893f295a70f94" => :el_capitan
+    sha256 "98e2e4d767aacfb27e6989d1205cb2489b52222ea4f5586e89c0366e4721278b" => :yosemite
+    sha256 "317136a44b158c1881eef04c5942c4868575a0fc46095955beedda56d3e7527e" => :mavericks
+  end
+
   depends_on "pkg-config" => :build
   depends_on "autoconf" => :build
   depends_on "automake" => :build
