@@ -4,6 +4,13 @@ class Cvs2svn < Formula
   url "http://cvs2svn.tigris.org/files/documents/1462/49237/cvs2svn-2.4.0.tar.gz"
   sha256 "a6677fc3e7b4374020185c61c998209d691de0c1b01b53e59341057459f6f116"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "139a3643daa18a5d601b36ae7e46c505a4f3b9eecc5d5e454bb8a070d2a399ca" => :el_capitan
+    sha256 "2077e22472b23ac2ab3ce0db17bd7c91b0a37538df99e0092736bb0ef878f6b5" => :yosemite
+    sha256 "845ab442991ff1eb312a27e0530e54e0e4986c280aa511eb59a626a2fe9c7b30" => :mavericks
+  end
+
   # cvs2svn requires python with gdbm support
   depends_on "python"
 
