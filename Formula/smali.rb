@@ -4,12 +4,7 @@ class Smali < Formula
   url "https://bitbucket.org/JesusFreke/smali/downloads/smali-2.1.2.jar"
   sha256 "9e587778c0329a509c82d8e78ea3e694e17106c788a4f53507920e51e50a8b83"
 
-  bottle do
-    cellar :any_skip_relocation
-    sha256 "83d913e81a4da0bad0d803e40ff3e8ae2f5fc8d174b9f4ea11d76cf6ab6bdcd1" => :el_capitan
-    sha256 "e1bce048795f686efcd868e8c9f120166c89d8586144cc2c3069dc8cc04d8359" => :yosemite
-    sha256 "4b9b1e490a60b0a8845753c20b75432277163a1aa6fc3dd33146490dcdbce05a" => :mavericks
-  end
+  bottle :unneeded
 
   resource "baksmali-jar" do
     url "https://bitbucket.org/JesusFreke/smali/downloads/baksmali-2.1.2.jar"
