@@ -12,6 +12,6 @@ class GitStandup < Formula
   end
 
   test do
-    system "git", "standup", "--help"
+    system "#{bin}/git", "standup", "--help"
   end
 end
