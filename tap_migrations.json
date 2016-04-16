@@ -132,6 +132,7 @@
   "librets": "homebrew/boneyard",
   "libspotify": "homebrew/binary",
   "libtomcrypt": "homebrew/boneyard",
+  "libtorrent": "homebrew/boneyard",
   "lilypond": "homebrew/tex",
   "lmutil": "homebrew/binary",
   "magit": "homebrew/emacs",
