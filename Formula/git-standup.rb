@@ -12,6 +12,10 @@ class GitStandup < Formula
   end
 
   test do
-    system "git", "standup", "--help"
+    system "git", "init"
+    (testpath/"test").write "test"
+    system "git", "add", "#{testpath}/test"
+    system "git", "commit", "--message", "test"
+    system "git", "standup", "HEAD"
   end
 end
