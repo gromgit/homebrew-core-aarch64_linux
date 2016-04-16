@@ -188,6 +188,7 @@
   "rdesktop": "homebrew/x11",
   "rocket": "homebrew/boneyard",
   "rofs-filtered": "homebrew/fuse",
+  "rtorrent": "homebrew/boneyard",
   "rubber": "homebrew/tex",
   "rxvt-unicode": "homebrew/x11",
   "s3-backer": "homebrew/fuse",
