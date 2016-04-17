@@ -17,12 +17,14 @@ class Sslscan < Formula
 
   def install
     system "make"
+    # This regression was fixed upstream, but not in this release.
+    # https://github.com/rbsec/sslscan/commit/6e89c0597ebc779ac82
+    # Remove the below line on next stable release.
     mkdir_p [bin, man1]
     system "make", "install", "PREFIX=#{prefix}"
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/sslscan --version")
     system "#{bin}/sslscan", "google.com"
   end
 end
