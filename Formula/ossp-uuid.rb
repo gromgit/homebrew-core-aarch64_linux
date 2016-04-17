@@ -24,12 +24,14 @@ class OsspUuid < Formula
       ENV.append %w[CFLAGS LDFLAGS], "-arch #{Hardware::CPU.arch_32_bit}"
     end
 
-# upstream ticket: http://cvs.ossp.org/tktview?tn=200
-# pkg-config --cflags uuid returns the wrong directory since we override the
-# default, but uuid.pc.in does not use it
-    inreplace "uuid.pc.in", /^(exec_prefix)=\$\{prefix\}$/, '\1=@\1@'
-    inreplace "uuid.pc.in", /^(includedir)=\$\{prefix\}\/include$/, '\1=@\1@'
-    inreplace "uuid.pc.in", /^(libdir)=\$\{exec_prefix\}\/lib$/, '\1=@\1@'
+    # upstream ticket: http://cvs.ossp.org/tktview?tn=200
+    # pkg-config --cflags uuid returns the wrong directory since we override the
+    # default, but uuid.pc.in does not use it
+    inreplace "uuid.pc.in" do |s|
+      s.gsub! /^(exec_prefix)=\$\{prefix\}$/, '\1=@\1@'
+      s.gsub! /^(includedir)=\$\{prefix\}\/include$/, '\1=@\1@'
+      s.gsub! /^(libdir)=\$\{exec_prefix\}\/lib$/, '\1=@\1@'
+    end
 
     system "./configure", "--prefix=#{prefix}",
                           "--includedir=#{include}/ossp",
