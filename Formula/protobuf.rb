@@ -12,10 +12,10 @@ class Protobuf < Formula
   end
 
   bottle do
-    revision 4
-    sha256 "86b6d300868bb5e8579370e99808faa95303a4cd7878833163e083586d16be90" => :el_capitan
-    sha256 "af85f70b1f44156475d6235192760715484594c108f8d42e0d3dde2a8c38e5ca" => :yosemite
-    sha256 "9e07fe0d49634dbebfb7f55a68573f1ca2bb2cf5f6ab3bffc3fc451323900965" => :mavericks
+    revision 5
+    sha256 "b1a6c4508ec66e706929e3e34a5b57b3c881c5ac1e3d0fc7c4b3598f97902c7f" => :el_capitan
+    sha256 "5c21d50d1d3ca2dc2906bba174bfb4ec0d55c0f16bac5541abf3180e68f885c2" => :yosemite
+    sha256 "6f6a30044450bb3e2d420fea3435d0c84594b197ea0d3a54bca473e3b4c855b5" => :mavericks
   end
 
   devel do
