@@ -7,10 +7,9 @@ class Allegro < Formula
 
   bottle do
     cellar :any
-    revision 2
-    sha256 "920e11cc6cbb00016fdd6626aae4a051b38bf97ce8702ffdc11fc567f192601f" => :el_capitan
-    sha256 "53bd9902195241cdddc873a3c9afa92beab73c234e1e337d376bcb8d4b3fd2c6" => :yosemite
-    sha256 "65a04aa3c0901264e54ca91f8982da085ea90bccabcb885fac054ba5219e19bd" => :mavericks
+    sha256 "73bd8ce63b7d8788973abc736e27bb342dd03c7e9d33be241ae9847d483ee448" => :el_capitan
+    sha256 "00aaa7f60e21646bf62365e4f33b7bba1a24c4386a5410317e0a9b8452b4ac1b" => :yosemite
+    sha256 "eac2ca128fca38ab9b5636808a927ce4941859312592acc1b6b10dd7f8f88af3" => :mavericks
   end
 
 
