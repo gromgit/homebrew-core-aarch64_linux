@@ -6,9 +6,10 @@ class Privoxy < Formula
 
   bottle do
     cellar :any
-    sha256 "edb1d08efa2d25658a2d4d1d2643233529c6228fe6289536e7c48f5829c6e9ad" => :el_capitan
-    sha256 "0764f6e68913ea279c29a84dae2292eadcf542eacda5c21e26addd5497524cd1" => :yosemite
-    sha256 "fd48bf5bee38bbca0124d7e2dc39e52f97f99536f1f04d4fcff1ba3716ebdfa2" => :mavericks
+    revision 1
+    sha256 "574b1d90ef7af5383395176ca64a025f2a3fab360f0fb901b01925a05115194d" => :el_capitan
+    sha256 "860b086ac747488838dbc9596749d4e422dc0a6f59db087325f614db81eb888e" => :yosemite
+    sha256 "0f166b0be44a2bc324e9888598acc9173dcf8beb2fe1dac42955ea2c63732a2a" => :mavericks
   end
 
   depends_on "autoconf" => :build
