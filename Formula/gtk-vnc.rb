@@ -4,6 +4,12 @@ class GtkVnc < Formula
   url "https://download.gnome.org/sources/gtk-vnc/0.5/gtk-vnc-0.5.4.tar.xz"
   sha256 "488aa97a76ce6868160699cd45d4a0ee0fe6f0ad4631737c6ddd84450f6c9ce7"
 
+  bottle do
+    sha256 "3e542006e50dab1ec526b46a4a8f4e7f2cb81028141f511329c7ece9d615bfa2" => :el_capitan
+    sha256 "649dcb517d936e72da2c8e3cff67cd200c51a0b6ebfe60d70bb5f40c03bebf8b" => :yosemite
+    sha256 "9d47fee65e698a59d2f90b53f47937745bdd627e0e7e8877daa65192068de7ee" => :mavericks
+  end
+
   depends_on "gettext" => :build
   depends_on "gnutls"
   depends_on "gtk+3"
