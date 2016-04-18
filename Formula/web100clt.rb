@@ -6,11 +6,9 @@ class Web100clt < Formula
   revision 1
 
   bottle do
-    cellar :any_skip_relocation
-    revision 1
-    sha256 "40905e73d8ec661939ae35fd36d8a147a926a0a915817eb3f60bdef77f2fee60" => :el_capitan
-    sha256 "82b4c044555f75e0ed2e61e6e1a3c7f0817e470c34d4c5dcc4b29fef0106704e" => :yosemite
-    sha256 "3e979b6967e43b8aeff385fa105e39d750056d204ad7f6e231e5cd63079cc7ad" => :mavericks
+    sha256 "d0998cd6fb89d689aeb6f88bcd92039ad88daa3aef8b718bbcb8be6a3c4a7e39" => :el_capitan
+    sha256 "e2acae1966b2897ef89dcec1610e164f4c8bee054369d2012e1619853c6674d0" => :yosemite
+    sha256 "86b6d51af3d9e33db8220d8834d04aeed0241872a28aeac697b4357d2afbcc2e" => :mavericks
   end
 
   depends_on "i2util"
