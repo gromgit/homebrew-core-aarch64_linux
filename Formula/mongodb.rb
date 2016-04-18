@@ -8,10 +8,9 @@ class Mongodb < Formula
   revision 1
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "f62f1106371ef0481b4f6f28c641aa2d082e57f3ef2cff8ee12cc988475b8cfa" => :el_capitan
-    sha256 "4794fbc40163f785d8396d182ad84cd413db7f27238268680c10b350f91cb48c" => :yosemite
-    sha256 "a52733ee4375c047ed7e8cccc10fa469a088ad4334c9170d073f574ef106ac33" => :mavericks
+    sha256 "eb4a0adb94d002ec4eb6c56ea8bf1dbffba1d144c3ae3b547ea554aedfc0b4c1" => :el_capitan
+    sha256 "e0ac6d3071acd87784291740b350edab5c2c76d9108d449a9d798fe31ee53682" => :yosemite
+    sha256 "4248c9e51cb3d34c595cdecca245450128be8ad3cc4db6529469141b18fb4e34" => :mavericks
   end
 
   option "with-boost", "Compile using installed boost, not the version shipped with mongodb"
