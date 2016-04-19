@@ -9,9 +9,9 @@ class Boost < Formula
 
   bottle do
     cellar :any
-    sha256 "2f7a84ca6edf978eef4fc23b6f1d4c540b343f5941f068dfc59eb1c103f01dc7" => :el_capitan
-    sha256 "cdea70d456a842617a9aa59dd297da2e63e95eddd74c1fa302eedfed21a51538" => :yosemite
-    sha256 "1a7feb411f4e89237fc212cab55c0f3acd1abe86a887069236ef6e7c58bdd82a" => :mavericks
+    sha256 "45ec0d72b62123d4b32b55b35a7521f0cf4d3dc899a4591aee2cc4540d528da5" => :el_capitan
+    sha256 "6c48883014f456bd2618f2aa34617cb338dd59b8f9c6e3f76e7984841f7e5461" => :yosemite
+    sha256 "4843813bf115fe8b1fbe24152ecec97c7779896b79c9f0505c9e55a170c3b9be" => :mavericks
   end
 
   # Handle compile failure with boost/graph/adjacency_matrix.hpp
