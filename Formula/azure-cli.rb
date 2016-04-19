@@ -1,9 +1,9 @@
 class AzureCli < Formula
   desc "Official Azure CLI"
   homepage "https://github.com/azure/azure-xplat-cli"
-  url "https://github.com/Azure/azure-xplat-cli/archive/v0.9.19-March2016.tar.gz"
-  version "0.9.19"
-  sha256 "8f0e4093a2a91097a2621f01cad435cc5856dadbe3e343c3538409e2c9386b11"
+  url "https://github.com/Azure/azure-xplat-cli/archive/v0.9.20-April2016.tar.gz"
+  version "0.9.20"
+  sha256 "c2b97a6dba7deac3d7cb030602bc84ac0af355fc95f74901bd6c8fa43d5f5da8"
 
   head "https://github.com/azure/azure-xplat-cli.git", :branch => "dev"
 
@@ -28,6 +28,7 @@ class AzureCli < Formula
   end
 
   test do
+    shell_output("#{bin}/azure telemetry --disable")
     json_text = shell_output("#{bin}/azure account env show AzureCloud --json")
     azure_cloud = Utils::JSON.load(json_text)
     assert_equal azure_cloud["name"], "AzureCloud"
