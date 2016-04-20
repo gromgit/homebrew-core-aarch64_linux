@@ -4,6 +4,13 @@ class Liblzf < Formula
   url "http://dist.schmorp.de/liblzf/liblzf-3.6.tar.gz"
   sha256 "41ed86a1bd3a9485612f7a7c1d3c9962d2fe771e55dc30fcf45bd419c39aab8d"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "1319038c7de754dd38b22ec45b616419b60a0a8c19072374da01f5ee48f9e8c8" => :el_capitan
+    sha256 "1d8f96a8336407a1dd20adb305d6ecd7b1d534c0c2e9015596cb4259ea368eb1" => :yosemite
+    sha256 "025ca90ede89fa17407e1aec34f3a7cf3d91e414c2d629401c3b877e91c56661" => :mavericks
+  end
+
   def install
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
