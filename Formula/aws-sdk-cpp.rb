@@ -5,6 +5,13 @@ class AwsSdkCpp < Formula
   sha256 "01ad50677e2bde3bcd51128a9e043f76371e9642a5bea235637ce8e450eec5de"
   head "https://github.com/aws/aws-sdk-cpp.git"
 
+  bottle do
+    cellar :any
+    sha256 "17b684fba219ee3f1351598945c908552fdc2a956d96fa621c4631aefa69353b" => :el_capitan
+    sha256 "61c4f97e0d6a78a2dc507fba39a128b49c3701639faede617e0f06669525ad87" => :yosemite
+    sha256 "6cfd0e5190bf11d041ca6d8a86bf8495d5a20db36e387ad92a82a6a64bc3d623" => :mavericks
+  end
+
   option "with-static", "Build with static linking"
   option "without-http-client", "Don't include the libcurl HTTP client"
 
