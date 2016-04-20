@@ -8,10 +8,9 @@ class Uncrustify < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0d6c1d92a813e4a27140bf85e5f859749573b715c73c77f1efb381f95b304f47" => :el_capitan
-    sha256 "dbe3a584778aa7139d560abe1400417f7fa4e83e363a414d4f9d9990a066ed73" => :yosemite
-    sha256 "2d6b33c9397482a3b5013563262ea62737dcc4d2a9a77416ffd646e3842f2e15" => :mavericks
-    sha256 "04548fc7f44bd61aadad55e3dc8a69634783e349ca4156d605953779aecaf8b8" => :mountain_lion
+    sha256 "621681a09183609e57ec49b5c881fc1e13869fce159367f7c99bca89bdaa6581" => :el_capitan
+    sha256 "d8f488e654b50139cfa9aa1bdab9eac1d3f052304db89134fdddc32ed882a7e4" => :yosemite
+    sha256 "ef21d9647596c71d162bb35fca669f977420c8dd1d7ad6ee6f7c4aff161d5be4" => :mavericks
   end
 
   def install
