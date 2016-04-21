@@ -1,8 +1,8 @@
 class GitStandup < Formula
   desc "Git extension to generate reports for standup meetings"
   homepage "https://github.com/kamranahmedse/git-standup"
-  url "https://github.com/kamranahmedse/git-standup/archive/1.0.1.tar.gz"
-  sha256 "0c43e7414b308bc29ef6f04e84b02aaf3e0ac4837522d34f84359a54c0a4d54b"
+  url "https://github.com/kamranahmedse/git-standup/archive/2.1.4.tar.gz"
+  sha256 "4481e2eac9d523ceae0d1c0ec13fe78e54b0e1cad8fc7af58026776fcc0d24ea"
   head "https://github.com/kamranahmedse/git-standup.git"
 
   bottle do
@@ -21,6 +21,6 @@ class GitStandup < Formula
     (testpath/"test").write "test"
     system "git", "add", "#{testpath}/test"
     system "git", "commit", "--message", "test"
-    system "git", "standup", "HEAD"
+    system "git", "standup"
   end
 end
