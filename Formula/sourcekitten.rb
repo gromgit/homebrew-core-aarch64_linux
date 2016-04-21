@@ -6,8 +6,7 @@ class Sourcekitten < Formula
 
   bottle do
     cellar :any
-    sha256 "a6f61ad8e196613cca6c78664feb87dddbaeb2d17f20413bf0f987ecf661a74e" => :el_capitan
-    sha256 "3e85b793448ef31bf4c9152db440f84c27e1a08f2ad05a73c94207251ccb43cd" => :yosemite
+    sha256 "eadbbf41150795d777d92834add1c240ef331aa61f158cbd245a993b353c6e0d" => :el_capitan
   end
 
   depends_on :xcode => ["7.3", :build]
