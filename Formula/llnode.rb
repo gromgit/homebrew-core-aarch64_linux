@@ -4,6 +4,12 @@ class Llnode < Formula
   url "https://github.com/indutny/llnode/archive/v1.0.0.tar.gz"
   sha256 "fcf90201930e52b49d0fa1b369aac7b5b74c3bbffe34f423d5aa5b899267f295"
 
+  bottle do
+    cellar :any
+    sha256 "8ef6767b8b4a452fd0a9a74fbc24870175b9364a7b780cf2b3d1104d63b2c70b" => :el_capitan
+    sha256 "b50054f05fc127b3976ad2a5c0cbd4bd19294f7b57cb2a28acf2ae51cd02406c" => :yosemite
+  end
+
   depends_on :macos => :yosemite
   depends_on :python => :build
 
