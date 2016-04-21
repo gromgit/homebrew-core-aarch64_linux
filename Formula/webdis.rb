@@ -4,6 +4,13 @@ class Webdis < Formula
   url "https://github.com/nicolasff/webdis/archive/0.1.2.tar.gz"
   sha256 "8e46093af006e35354f6b3d58a70e3825cd0c074893be318f1858eddbe1cda86"
 
+  bottle do
+    cellar :any
+    sha256 "39585b1ba1b3a8e34c2a2d08e6e347284fd3dceca217c83638dfb9fa8e684550" => :el_capitan
+    sha256 "053f0bf229a602f8fae49b654545826d4c95c5c020f50edd71bfc083a4152d93" => :yosemite
+    sha256 "93d36ebff19cbe0c7d50075a3c3c85d3542c105713728808c84bf0d5fa81828f" => :mavericks
+  end
+
   depends_on "libevent"
 
   def install
