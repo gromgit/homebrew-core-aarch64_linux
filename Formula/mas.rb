@@ -4,6 +4,11 @@ class Mas < Formula
   url "https://github.com/argon/mas/archive/v1.2.0.tar.gz"
   sha256 "79a30d2b8c053a33b69a255da3ad35a96a337f0b9dded5112e6e48cdadddf73a"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "bf2b90e3f95ecc72899656d72b445a149c375695aca7a8416e5d86f25cf08109" => :el_capitan
+  end
+
   depends_on :xcode => ["7.3", :build]
 
   def install
