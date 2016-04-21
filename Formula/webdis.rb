@@ -17,10 +17,7 @@ class Webdis < Formula
     system "make"
     bin.install "webdis"
 
-    inreplace "webdis.prod.json" do |s|
-      s.gsub! "/var/log/webdis.log", "#{var}/log/webdis.log"
-    end
-
+    inreplace "webdis.prod.json", "/var/log/webdis.log", "#{var}/log/webdis.log"
     etc.install "webdis.json", "webdis.prod.json"
   end
 
@@ -35,7 +32,7 @@ class Webdis < Formula
       end
       sleep 0.5
       # Test that the response is from webdis
-      assert_match /Server: Webdis/, shell_output("curl --silent -XGET -I http://localhost:7379/PING")
+      assert_match(/Server: Webdis/, shell_output("curl --silent -XGET -I http://localhost:7379/PING"))
     ensure
       Process.kill "TERM", server
       Process.wait server
