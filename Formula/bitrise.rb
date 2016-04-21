@@ -3,14 +3,14 @@ require "language/go"
 class Bitrise < Formula
   desc "Command-line automation tool"
   homepage "https://github.com/bitrise-io/bitrise"
-  url "https://github.com/bitrise-io/bitrise/archive/1.3.0.tar.gz"
-  sha256 "b95d648cd87f7d5ecc00fe12a3f3b20b2a9b2ed2442851eaf68e88a03e8d0d97"
+  url "https://github.com/bitrise-io/bitrise/archive/1.3.2.tar.gz"
+  sha256 "7954cc88e7be3e57e593e9290cdc77948950cacd5ae832922caa8d4ca7c6d004"
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7e7eb5b7e67178caf3bf7595dcb1fb9714b4ea7cd0f6d5ecf12c8a6e2bbbe593" => :el_capitan
-    sha256 "447b79897dd3dac8efb3c5c7d4e40c1e74f4cc99bcb619f71e3d2829ad3173a2" => :yosemite
-    sha256 "b48907dc00d4db572a8a9558ce4b24a5c0e625b9a0b2b2d643268e2b1b612e3d" => :mavericks
+    sha256 "8cf51e03ba11aa0cffe1c102c9a4e04e49f9ae378dc4ca5373ed1d7d16a571a0" => :el_capitan
+    sha256 "6d5aa06606bc992bfedf5ffd4959fa5d9642cc2e1dedb4fc60fca5f02721fe6e" => :yosemite
+    sha256 "a83c1ae793350b4b9feb630a148d2bc843c796fd20ee6bcedb25701fde98beb4" => :mavericks
   end
 
   depends_on "go" => :build

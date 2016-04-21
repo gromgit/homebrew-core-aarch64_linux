@@ -5,9 +5,10 @@ class Ghc < Formula
   sha256 "b0bb177b8095de6074e5a3538e55fd1fc187dae6eb6ae36b05582c55f7d2db6f"
 
   bottle do
-    sha256 "72c6c729ea385aaebfa22b55fe31b85f46e423a510c83d2f76c8f57336f9bf2c" => :el_capitan
-    sha256 "3914b0875845c0e419c440c1b5833631ea709e6e8d5d9bf546422852c4c96ea8" => :yosemite
-    sha256 "3ca8542ed077871a9da2e7af1a2362eb6ddc52501e6625fa5b06e9fda288e980" => :mavericks
+    revision 1
+    sha256 "35f640eb0f58ef517a829bfdbc046a03c84e179fb2100421b9b0c8dbc1f18e2a" => :el_capitan
+    sha256 "6ac060e495d6373ed9051da8ba55bcab2d51f30ebf9f68a48f842171ee5181a6" => :yosemite
+    sha256 "0f846d17016873ebf740729844286978f9673982fe686a5308ee4cd444de59cb" => :mavericks
   end
 
   option "with-test", "Verify the build using the testsuite"
@@ -48,10 +49,31 @@ class Ghc < Formula
   end
 
   def install
+    # As of Xcode 7.3 (and the corresponding CLT) `nm` is a symlink to `llvm-nm`
+    # and the old `nm` is renamed `nm-classic`. Building with the new `nm`, a
+    # segfault occurs with the following error:
+    #   make[1]: * [compiler/stage2/dll-split.stamp] Segmentation fault: 11
+    # Upstream is aware of the issue and is recommending the use of nm-classic
+    # until Apple and LLVM restore POSIX compliance:
+    # https://ghc.haskell.org/trac/ghc/ticket/11744
+    # https://ghc.haskell.org/trac/ghc/ticket/11823
+    # https://mail.haskell.org/pipermail/ghc-devs/2016-April/011862.html
+    if MacOS.clang_build_version >= 703
+      nm_classic = buildpath/"brewtools/nm"
+
+      nm_classic.write <<-EOS.undent
+        #!/bin/bash
+        exec xcrun nm-classic "$@"
+      EOS
+
+      chmod 0755, nm_classic
+      ENV.prepend_path "PATH", buildpath/"brewtools"
+    end
+
     # Build a static gmp rather than in-tree gmp, otherwise it links to brew's.
     gmp = libexec/"integer-gmp"
 
-    # MPN_PATH: The lowest common denomenator asm paths that work on Darwin,
+    # MPN_PATH: The lowest common denominator asm paths that work on Darwin,
     # corresponding to Yonah and Merom. Obviates --disable-assembly.
     ENV["MPN_PATH"] = "x86_64/fastsse x86_64/core2 x86_64 generic" if build.bottle?
 

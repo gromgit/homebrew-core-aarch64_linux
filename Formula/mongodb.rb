@@ -3,35 +3,32 @@ require "language/go"
 class Mongodb < Formula
   desc "High-performance, schema-free, document-oriented database"
   homepage "https://www.mongodb.org/"
-
-  stable do
-    url "https://fastdl.mongodb.org/src/mongodb-src-r3.2.4.tar.gz"
-    sha256 "b60743cc641de975c38e6e69ebbef60059ee9fe176cdd98bfab8d5c844dab42c"
-
-    go_resource "github.com/mongodb/mongo-tools" do
-      url "https://github.com/mongodb/mongo-tools.git",
-        :tag => "r3.2.4",
-        :revision => "eacbffc3c185686fb572c9efa8fcfaf9e9fb5c32"
-    end
-  end
+  url "https://fastdl.mongodb.org/src/mongodb-src-r3.2.4.tar.gz"
+  sha256 "b60743cc641de975c38e6e69ebbef60059ee9fe176cdd98bfab8d5c844dab42c"
+  revision 1
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "f62f1106371ef0481b4f6f28c641aa2d082e57f3ef2cff8ee12cc988475b8cfa" => :el_capitan
-    sha256 "4794fbc40163f785d8396d182ad84cd413db7f27238268680c10b350f91cb48c" => :yosemite
-    sha256 "a52733ee4375c047ed7e8cccc10fa469a088ad4334c9170d073f574ef106ac33" => :mavericks
+    sha256 "eb4a0adb94d002ec4eb6c56ea8bf1dbffba1d144c3ae3b547ea554aedfc0b4c1" => :el_capitan
+    sha256 "e0ac6d3071acd87784291740b350edab5c2c76d9108d449a9d798fe31ee53682" => :yosemite
+    sha256 "4248c9e51cb3d34c595cdecca245450128be8ad3cc4db6529469141b18fb4e34" => :mavericks
   end
 
   option "with-boost", "Compile using installed boost, not the version shipped with mongodb"
   option "with-sasl", "Compile with SASL support"
 
-  needs :cxx11
-
   depends_on "boost" => :optional
   depends_on "go" => :build
   depends_on :macos => :mountain_lion
   depends_on "scons" => :build
-  depends_on "openssl" => :optional
+  depends_on "openssl" => :recommended
+
+  go_resource "github.com/mongodb/mongo-tools" do
+    url "https://github.com/mongodb/mongo-tools.git",
+      :tag => "r3.2.4",
+      :revision => "eacbffc3c185686fb572c9efa8fcfaf9e9fb5c32"
+  end
+
+  needs :cxx11
 
   def install
     ENV.cxx11 if MacOS.version < :mavericks
@@ -49,8 +46,8 @@ class Mongodb < Formula
 
       if build.with? "openssl"
         args << "ssl"
-        ENV["LIBRARY_PATH"] = "#{Formula["openssl"].opt_lib}"
-        ENV["CPATH"] = "#{Formula["openssl"].opt_include}"
+        ENV["LIBRARY_PATH"] = Formula["openssl"].opt_lib
+        ENV["CPATH"] = Formula["openssl"].opt_include
       end
       system "./build.sh", *args
     end

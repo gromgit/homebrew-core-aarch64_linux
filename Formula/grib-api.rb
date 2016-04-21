@@ -16,6 +16,7 @@ class GribApi < Formula
   depends_on "cmake" => :build
   depends_on "jasper" => :recommended
   depends_on "openjpeg" => :optional
+  depends_on "libpng" => :optional
 
   # Fixes build errors in Lion
   # https://software.ecmwf.int/wiki/plugins/viewsource/viewpagesrc.action?pageId=12648475
@@ -25,6 +26,7 @@ class GribApi < Formula
     mkdir "build" do
       args = std_cmake_args
       args << "-DBUILD_SHARED_LIBS=OFF" if build.with? "static"
+      args << "-DPNG_PNG_INCLUDE_DIR=#{Formula["libpng"].opt_include}" << "-DENABLE_PNG=ON" if build.with? "libpng"
       system "cmake", "..", *args
       system "make", "install"
     end
