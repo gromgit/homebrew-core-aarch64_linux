@@ -5,10 +5,9 @@ class Xplanet < Formula
   sha256 "4380d570a8bf27b81fb629c97a636c1673407f4ac4989ce931720078a90aece7"
 
   bottle do
-    sha256 "c2777262c161a3aaa5dc3595aa51fdbe5fd2c16bc26425793b78d8ea153010dd" => :el_capitan
-    sha256 "401b46887f90818530d5996e11ef2977481c51c85716e8da22e2dbaa454c01ab" => :yosemite
-    sha256 "c0816c18de9ed0af9c7bee4e30498661cef65b0bfbea9901631740ce38edb4db" => :mavericks
-    sha256 "6237bcf19e9337e706cfa80232e48aa5f74d52cdf9c6f092bb77b109352a8889" => :mountain_lion
+    sha256 "ecf69cdfcddd72c2237eb141a045abf062e1d25e89b58732a86c09e868ab66f3" => :el_capitan
+    sha256 "eb4c003f5a3d278afd4dc2498a4e667a0aed4a97df07288c9246ca42002b1b76" => :yosemite
+    sha256 "7cb1c47183147d061ab589073be7ff1b8be4cf78f96b240f27d164cddcb16858" => :mavericks
   end
 
   option "with-x11", "Build for X11 instead of Aqua"
