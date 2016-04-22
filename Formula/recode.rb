@@ -6,8 +6,10 @@ class Recode < Formula
   sha256 "72c3c0abcfe2887b83a8f27853a9df75d7e94a9ebacb152892cc4f25108e2144"
 
   bottle do
-    sha256 "e52c773b4472c6a8f23678cbdb69cb2c4a8f4b78a1f1a5a0fdafc97b3ffa30d2" => :yosemite
-    sha256 "c02fc6ad41698d029f251cf6b7218f7e6f9778e97406efade13027860613424d" => :mavericks
+    revision 1
+    sha256 "1aaa7262ed6614a56e2bc17ac4b518903b62eb582d6aeab45f7845b38dee224e" => :el_capitan
+    sha256 "8518f350264f5cdadfb26c49487f82f9c159307f26d10230daf415d1495607f4" => :yosemite
+    sha256 "81fb3b36d647c6dd83f9fb65bf657b73b65d551a16dcd7e9552ff70f5a1394dc" => :mavericks
   end
 
   depends_on "libtool" => :build
