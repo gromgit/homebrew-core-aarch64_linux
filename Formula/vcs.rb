@@ -4,6 +4,13 @@ class Vcs < Formula
   url "https://p.outlyer.net/vcs/files/vcs-1.13.2.tar.gz"
   sha256 "fc2a2b3994d5ffb5d87fb3dceaa5f6855aca7a89c58533b12fd11b8fb5b623af"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "dc49a592164ea2e3051b344731baf565819f1e63ec71e0a505bddfd0f06bb61d" => :el_capitan
+    sha256 "9722755748810bbb7f75ee2a47161c382fba614845d1407a9825a3b4fb8c0ee6" => :yosemite
+    sha256 "d8c55b780119fa7ab6b2bdc7c9b71a8257a612bea52a2a359fdf289fa937509f" => :mavericks
+  end
+
   depends_on "ffmpeg"
   depends_on "gnu-getopt"
   depends_on "ghostscript"
