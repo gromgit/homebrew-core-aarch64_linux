@@ -1,8 +1,8 @@
 class P0f < Formula
   desc "Versatile passive OS fingerprinting, masquerade detection tool"
   homepage "http://lcamtuf.coredump.cx/p0f3/"
-  url "http://lcamtuf.coredump.cx/p0f3/releases/p0f-3.08b.tgz"
-  sha256 "da89a7fe4ba5db3704207f4bde231643bedd4fe8653ab8111c65766c8c768aec"
+  url "http://lcamtuf.coredump.cx/p0f3/releases/p0f-3.09b.tgz"
+  sha256 "543b68638e739be5c3e818c3958c3b124ac0ccb8be62ba274b4241dbdec00e7f"
 
   bottle do
     cellar :any_skip_relocation
@@ -16,7 +16,7 @@ class P0f < Formula
     inreplace "config.h", "p0f.fp", "#{etc}/p0f/p0f.fp"
     system "./build.sh"
     sbin.install "p0f"
-    (etc+"p0f").install "p0f.fp"
+    (etc/"p0f").install "p0f.fp"
   end
 
   test do
