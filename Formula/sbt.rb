@@ -4,12 +4,7 @@ class Sbt < Formula
   url "https://dl.bintray.com/sbt/native-packages/sbt/0.13.11/sbt-0.13.11.tgz"
   sha256 "a36a6fbf6dd70afd93fb8db16c40e8ac00798fdddfa0b4c678786dc15617afa6"
 
-  bottle do
-    cellar :any_skip_relocation
-    sha256 "fb230c178ae02ea07b175c425905453535466915574f9ef3d850850e4a12094a" => :el_capitan
-    sha256 "56bc9c0db2e8d225cf1218845bacfb7a2439898ac3dc1ca79c94919dd5c6f6fe" => :yosemite
-    sha256 "3559009c0349c7ea597f300477d2a85c1e37eb1e2413f5f794e43e1644f60f28" => :mavericks
-  end
+  bottle :unneeded
 
   depends_on :java => "1.6+"
 
