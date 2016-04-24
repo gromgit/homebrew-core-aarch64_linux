@@ -1,9 +1,8 @@
 class Pacapt < Formula
   desc "Package manager in the style or Arch's pacman"
   homepage "https://github.com/icy/pacapt"
-  url "https://github.com/icy/pacapt.git",
-    :revision => "70cae6c4022696decb6ac1f807a00049e589d9d4",
-    :tag => "v2.0.2"
+  url "https://github.com/icy/pacapt/archive/v2.2.7.tar.gz"
+  sha256 "9cc754c9005a50407412ac8520ba20a7c612553f31059ad47289bc3df2a6b254"
 
   bottle do
     cellar :any_skip_relocation
@@ -15,7 +14,7 @@ class Pacapt < Formula
 
   def install
     bin.mkpath
-    system "make", "install", "BINDIR=#{bin}"
+    system "make", "install", "BINDIR=#{bin}", "VERSION=#{version}"
   end
 
   test do
