@@ -9,9 +9,9 @@ class Kafka < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d0e85fc8e63d70fc580f8fcb30fce5a561a15e16559504da0a24c2b0780e10c8" => :el_capitan
-    sha256 "f19f1d971644fa6ca54d3d5b376b3fe0025534e7f18c3f64d4873008e8ff81fa" => :yosemite
-    sha256 "8bab5dfada48123f88bc299737393ca25dd0205ff8629ae3faf7593f4f113144" => :mavericks
+    sha256 "8808773c5ae7251a75592963271766e969f2faba4feaa0f1259da15c56a30c00" => :el_capitan
+    sha256 "d1cbd5529d005643619bb5832edb6f5c9b4a45f9bac8115c79b0bb63886bbabf" => :yosemite
+    sha256 "0543a3798af77854d36cc640ecebc6067607be1dbcea6dc60de4adb88cd45261" => :mavericks
   end
 
   depends_on "gradle"
