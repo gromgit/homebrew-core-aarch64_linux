@@ -1,12 +1,9 @@
 class Moc < Formula
   desc "Terminal-based music player"
   homepage "https://moc.daper.net"
+  url "http://ftp.daper.net/pub/soft/moc/stable/moc-2.5.1.tar.bz2"
+  sha256 "1b419c75a92a85ff4ee7670c65d660c86fef32032c65e89e868b988f80fac4f2"
   head "svn://daper.net/moc/trunk"
-
-  stable do
-    url "http://ftp.daper.net/pub/soft/moc/stable/moc-2.5.1.tar.bz2"
-    sha256 "1b419c75a92a85ff4ee7670c65d660c86fef32032c65e89e868b988f80fac4f2"
-  end
 
   bottle do
     sha256 "07858cac0bd2b7e6082ee7d3806f245f4278135cfb3f9af5513f5f20bc1f6a0e" => :el_capitan
@@ -18,6 +15,8 @@ class Moc < Formula
     url "http://ftp.daper.net/pub/soft/moc/unstable/moc-2.6-alpha2.tar.xz"
     version "2.6-alpha2"
     sha256 "0a3a4fb11227ec58025f7177a3212aca9c9955226a2983939e8db662af13434b"
+
+    depends_on "popt"
   end
 
   option "with-ncurses", "Build with wide character support."
@@ -40,8 +39,6 @@ class Moc < Formula
   depends_on "timidity" => :optional
   depends_on "libmagic" => :optional
   depends_on "homebrew/dupes/ncurses" => :optional
-
-  depends_on "popt" if build.devel?
 
   def install
     system "autoreconf", "-fvi"
