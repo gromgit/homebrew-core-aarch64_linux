@@ -6,10 +6,9 @@ class P0f < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0cb866d5486e0e8f3583f5acb2d2ce18ad346511caa8f3ecbace50d3ddb601f1" => :el_capitan
-    sha256 "7405d2d0d6070223be3cc0f2ed11c8cd52d886b1480931c1a7e9436d297dbbe7" => :yosemite
-    sha256 "113e04c8f1fba685b42620838cb7fa6907431ff8b4f88ed5ab620f67a7a3aca1" => :mavericks
-    sha256 "cced7b6bab2cdd563d47c6734efb170eb23e3295f25eedaf3294d78ad8812999" => :mountain_lion
+    sha256 "50c2e5d187d3757b325f4df21e5286412a4d5a548d697b4594cc771787223f8f" => :el_capitan
+    sha256 "a67b2bdd45cd05e20990af97876ad793fea64b24c1ecb5fa51d7a717adbd0715" => :yosemite
+    sha256 "646c5afbe2b880d8e882533f19629d0bae3f3a58efc1fde3850345dccf145f39" => :mavericks
   end
 
   def install
