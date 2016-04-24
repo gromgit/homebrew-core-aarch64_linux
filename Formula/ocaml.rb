@@ -21,6 +21,13 @@ class Ocaml < Formula
     sha256 "7fdf280cc6c0a2de4fc9891d0bf4633ea417046ece619f011fd44540fcfc8da2"
   end
 
+  pour_bottle? do
+    # The ocaml compilers embed prefix information in weird ways that the default
+    # brew detection doesn't find, and so needs to be explicitly blacklisted.
+    reason "The bottle needs to be installed into /usr/local."
+    satisfy { HOMEBREW_PREFIX.to_s == "/usr/local" }
+  end
+
   bottle do
     cellar :any_skip_relocation
     sha256 "5a9ad99085350c0ac9a81bb9eb82543580c57069c2e1f6ca85efaf17ad2ab9f6" => :el_capitan
