@@ -6,10 +6,9 @@ class Chadwick < Formula
 
   bottle do
     cellar :any
-    revision 1
-    sha256 "cb7f68f0b7e1c858eb6f33018ab811f6c1a629ca6f59028cd0adb88086addc12" => :el_capitan
-    sha256 "ac3cc02a4bf29fa948483fe6362ac51e475331904b966229da43c98b039f36da" => :yosemite
-    sha256 "0e550047558d9108dc2c01b279ea00fbe68b3c0e103349e24b49bfd1c57d8436" => :mavericks
+    sha256 "9b62dbf5675819d3ba2f770ab04086702d22054133c37096582a744624c41fce" => :el_capitan
+    sha256 "3975fe87dde078bf3fe1bfa23738e81dc2da185f8ea021a536e653749e33f944" => :yosemite
+    sha256 "f1d8a2d60be50146451c1581e536e5f22929c8846d8c6e625ee9ee2910348a35" => :mavericks
   end
 
   def install
