@@ -7,9 +7,9 @@ class Cheat < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9ae7262046f5b657043b2eaf158d7e41171c7328eeb0c9f88c8dbea670bd50a3" => :el_capitan
-    sha256 "da3f145ba253b64a440920f3c1121191d2ddfac4aa5f95c745daae5007f3d11e" => :yosemite
-    sha256 "e0e6288ba060680e0f56a917328af07103e628030e9d11733329f5583b38ffd5" => :mavericks
+    sha256 "c3e7039546197e8747966f52338033d203db340fc3816d2c81588cb87316f622" => :el_capitan
+    sha256 "9dfbfa311c6a57b9071170229c0af543422e68cb6a974e4d630d52b166a4e4eb" => :yosemite
+    sha256 "bf4fbbbff20150fb796dffd28b8038be00fcfe76161dee5b067f64a2fbbf1065" => :mavericks
   end
 
   depends_on :python if MacOS.version <= :snow_leopard
