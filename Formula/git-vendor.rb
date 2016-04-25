@@ -1,8 +1,8 @@
 class GitVendor < Formula
   desc "command for managing git vendored dependencies"
   homepage "https://brettlangdon.github.io/git-vendor"
-  url "https://github.com/brettlangdon/git-vendor/archive/v1.1.1.tar.gz"
-  sha256 "e73a44e06e6576a0147958ef4aa37326dbb85e43981ee54a99a5475a16a3f687"
+  url "https://github.com/brettlangdon/git-vendor/archive/v1.1.2.tar.gz"
+  sha256 "1ae2c12ae535669d0f65d297f5ff79d36d37dabf372feb6bda3f7856cf14ef97"
   head "https://github.com/brettlangdon/git-vendor.git"
 
   bottle do
