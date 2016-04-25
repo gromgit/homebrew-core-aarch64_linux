@@ -7,9 +7,9 @@ class Prips < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9ddb411a412f058c494bb6383e526c5308856ee24155ba287fcc59b3ed8bd6e9" => :el_capitan
-    sha256 "ead7a6597e61fa4aa8a6a64bd1602e6d3450c1b78363ca8d3adf8e723cfe4346" => :yosemite
-    sha256 "db4780094428ee5ae253ff027585514af39d0edbc393157f364d03efc2b0902b" => :mavericks
+    sha256 "95874b20461b96d9ec060ced0f23ad1d22ac30818341ff8fa2380794d5859a08" => :el_capitan
+    sha256 "0787a633740c3b76506e0f10fb38d3864f4d1d47c132026a457103ee7497706a" => :yosemite
+    sha256 "7be9562a3f537dcce9e8ab394f536bad25a9c4d3c5b069f697fb4567a9a60e93" => :mavericks
   end
 
   def install
