@@ -1,8 +1,8 @@
 class Quazip < Formula
   desc "C++ wrapper over Gilles Vollant's ZIP/UNZIP package"
   homepage "http://quazip.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/quazip/quazip/0.7.1/quazip-0.7.1.tar.gz"
-  sha256 "78c984103555c51e6f7ef52e3a2128e2beb9896871b2cc4d4dbd4d64bff132de"
+  url "https://downloads.sourceforge.net/project/quazip/quazip/0.7.2/quazip-0.7.2.tar.gz"
+  sha256 "91d827fbcafd099ae814cc18a8dd3bb709da6b8a27c918ee1c6c03b3f29440f4"
 
   bottle do
     cellar :any
@@ -23,10 +23,10 @@ class Quazip < Formula
     end
 
     args = %W[
-      -config release -spec #{spec}
+      -config release
+      -spec #{spec}
       PREFIX=#{prefix}
-      LIBS+=-L/usr/lib LIBS+=-lz
-      INCLUDEPATH+=/usr/include
+      LIBS+=-lz
     ]
 
     system "qmake", "quazip.pro", *args
