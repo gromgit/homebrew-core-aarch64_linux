@@ -6,10 +6,9 @@ class Quazip < Formula
 
   bottle do
     cellar :any
-    sha256 "7e4cdb5d97b70dd67092965b00de2981adbcee229a7b00788cce11ebc7fb72d6" => :el_capitan
-    sha256 "d15a12c624d377bd818458635ad078782659f313c223836f1689ed89cca32a63" => :yosemite
-    sha256 "d6ea39c00ad991be78e2b6fdd1d69a5c4079fc85ef6dbdbedab7c8becf77d0c7" => :mavericks
-    sha256 "a6a988cb89a12f6e7c2d5bd8ebe180f40b18f586f3bd1e09a6b881350daee637" => :mountain_lion
+    sha256 "24f50a91d05765ba1c92dc2c804060b5143b65de835ec5d236c5ee7ec61d23c5" => :el_capitan
+    sha256 "d2827d0c3f6777487b83331ac78de8849330443a9e9087d31df4cea1abc971c6" => :yosemite
+    sha256 "09deaa6657f2465b631b2f19697806f284c6ce328cdcd26bc23cdc3f21261c2f" => :mavericks
   end
 
   depends_on "qt"
