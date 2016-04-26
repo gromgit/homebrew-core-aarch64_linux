@@ -7,9 +7,9 @@ class Nuxeo < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7bc87c735af9427fa47594123e83a8e8f8b94c4288c714c215df5a69d72be679" => :el_capitan
-    sha256 "501a42d91f4b482e2f40ec7cf37a6e8bf97ec40fa8e32e8e820645bb311f8717" => :yosemite
-    sha256 "32e038c7960f6aefb997bafc4367b878e13aaa6cff1d7a2a75fa8c6bde1d72a0" => :mavericks
+    sha256 "51d9badd3c8578dcf98eb7d23a704f84448b29267f292de47523ff5f048147ec" => :el_capitan
+    sha256 "5ea1a7cbfb060fd7c42cc19cb8518aa54c51484538a330e7b0d94719da036c44" => :yosemite
+    sha256 "221b44c5b6096e2eb394ad6304206f51013b3f34e4bde946b60e75d79413a8d9" => :mavericks
   end
 
   depends_on "poppler" => :recommended
