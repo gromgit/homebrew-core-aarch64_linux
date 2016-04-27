@@ -18,6 +18,14 @@ class Civl < Formula
   end
 
   test do
-    system "#{bin}/civl", "help"
+    # Civl needs to write configuration files to the user's home directory, but
+    # Java has its own logic for determining that path.
+    ENV["_JAVA_OPTIONS"] = "-Duser.home=#{testpath}"
+
+    # Test with example suggested in manual.
+    example = pkgshare/"examples/concurrency/locksBad.cvl"
+    assert_match "The program MAY NOT be correct.",
+                 shell_output("#{bin}/civl verify #{example}")
+    assert File.exist?("CIVLREP/locksBad_log.txt")
   end
 end
