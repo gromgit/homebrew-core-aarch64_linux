@@ -9,9 +9,9 @@ class GnuSmalltalk < Formula
   head "https://github.com/bonzini/smalltalk.git"
 
   bottle do
-    sha256 "06731a07d89cbffdac00bd04e417de8633a8090f5a1083dbc500fc65d7310c5f" => :el_capitan
-    sha256 "bd20234afab424d9e9bdeb4d2088b84e19ffd475bff510a56714cffbffbe0d38" => :yosemite
-    sha256 "ab126ae6c45c5ce3db0d6bfd1bb1689ae1777382a1d19dfeeb432d489f201d04" => :mavericks
+    sha256 "bb6f1d1b564752a8feaf40be0c9dcecf116339b210a583cfd859b7d91950a9a2" => :el_capitan
+    sha256 "994b6c542d0c1a6913d0a30b9ae1429c9067faa85cdf483e8cf10a99a18d00d6" => :yosemite
+    sha256 "4e7a90fc84d973a3b94f63e7b719b48ebe1905a2016d4f8dba5508f5b6d87cb2" => :mavericks
   end
 
   devel do
