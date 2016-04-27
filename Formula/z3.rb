@@ -17,11 +17,11 @@ class Z3 < Formula
   depends_on :python => :recommended if MacOS.version <= :snow_leopard
   depends_on :python3 => :optional
 
-  if build.without?("python3") && build.without?("python")
-    odie "z3: --with-python3 must be specified when using --without-python"
-  end
-
   def install
+    if build.without?("python3") && build.without?("python")
+      odie "z3: --with-python3 must be specified when using --without-python"
+    end
+
     # This `inreplace` can be removed on next stable release.
     inreplace "scripts/mk_util.py", "dist-packages", "site-packages" if build.stable?
 
