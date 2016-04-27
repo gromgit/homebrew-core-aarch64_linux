@@ -6,6 +6,13 @@ class Leaps < Formula
   url "https://github.com/Jeffail/leaps/archive/v0.5.0.tar.gz"
   sha256 "5f3fe0bb1a0ca75616ba2cb6cba7b11c535ac6c732e83c71f708dc074e489b1f"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "3c7a244d9941192d0cfaa0b0f57af5d584c5642376dcf5ea29314c92474b668b" => :el_capitan
+    sha256 "7ce694ecb5e3a526bf1714d5ac85c502753c0b58d2e80e98fd3dee55383a6c47" => :yosemite
+    sha256 "3975e86b263d019d0e298306f6ca560decf03ab88b22164ffeaac9a50bc929aa" => :mavericks
+  end
+
   depends_on "go" => :build
 
   go_resource "github.com/jeffail/gabs" do
