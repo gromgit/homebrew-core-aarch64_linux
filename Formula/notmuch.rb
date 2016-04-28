@@ -6,9 +6,9 @@ class Notmuch < Formula
 
   bottle do
     cellar :any
-    sha256 "a54c75c58070d551d5dc5e4e4cee00ada55c889266eb0217921c233d5a1f2e6b" => :el_capitan
-    sha256 "a9679f7a870e10d12633dab987223d96b50bc6cf40ae705741c7f99413d302bd" => :yosemite
-    sha256 "cf83e129e4624002ca6c3e9942f67cd3acfc40f868d5c0ce2a49b62af1872793" => :mavericks
+    sha256 "0caa82ec8a459275d5386585bdf944a6892b0fe499b2cb7b96243fed91c09b3a" => :el_capitan
+    sha256 "1f7ac589626fd82ce3de8a399f6cd832982ee756c6d4fa618a62de461d200ca1" => :yosemite
+    sha256 "6e5950e4159217dc865277576e3c75875269a286fb26a8e3a3e52987e651717f" => :mavericks
   end
 
   depends_on "pkg-config" => :build
