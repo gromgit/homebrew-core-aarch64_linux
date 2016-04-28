@@ -19,7 +19,7 @@ class Pastebinit < Formula
     inreplace "pastebinit", "/usr/local/etc/pastebin.d", etc + "pastebin.d"
     system "docbook2man", "pastebinit.xml"
     bin.install "pastebinit"
-    etc.install "pastebin.d"
+    cp_r "pastebin.d", etc
     man1.install "PASTEBINIT.1" => "pastebinit.1"
     libexec.install "po", "utils"
   end
