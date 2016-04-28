@@ -5,10 +5,10 @@ class Tippecanoe < Formula
   sha256 "b5fd214cecba32408d56d3c1f2b65538cf16330c25dc015127508656ff48d4d4"
 
   bottle do
-    cellar :any
-    sha256 "0afa03d0a09f178834537301c42f91b9235c7a7e7849e6526633927ff6cf18ef" => :el_capitan
-    sha256 "54505632c32d8bc698c392508d82e68fce3ba249b04da8df5d5ef8f40f793b92" => :yosemite
-    sha256 "0f0253a1d1bb08a368c9f8c95f7b757e9aa7f6b20e8dfa03dcb95cc63ecb8abe" => :mavericks
+    cellar :any_skip_relocation
+    sha256 "6f268c904f5cac72b3f8268129b719903647629369a19d6ed1225d5d2c79d8d7" => :el_capitan
+    sha256 "3be725b74b3017979a2da426b6a228e04be7fe0ebfa2ebb983fa6d740c0ff43c" => :yosemite
+    sha256 "4422d47675f8e6233d09d330cd0ab7c1aa7e73ed37bc2babac2673e707fce660" => :mavericks
   end
 
   def install
