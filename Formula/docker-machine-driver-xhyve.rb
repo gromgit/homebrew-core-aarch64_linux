@@ -9,8 +9,9 @@ class DockerMachineDriverXhyve < Formula
   head "https://github.com/zchee/docker-machine-driver-xhyve.git"
   bottle do
     cellar :any_skip_relocation
-    sha256 "d6550fd4f152d40760e7e2ab008b6a376aeeb05c1e81fb1dc29997c028b10075" => :el_capitan
-    sha256 "8806ff664735c5a5ea06e0ab675d8f47bea87c0e42fcc9219a3e212e1bdc17c8" => :yosemite
+    revision 1
+    sha256 "3ac1390e5fcfc3ff7d02fbabdde3bd16af888157c02dbbb8ba962e803c675506" => :el_capitan
+    sha256 "a3b403bc9345f1a1af306c4fd16516998835b5fc5e625ca39d03f0d1fb004749" => :yosemite
   end
 
   depends_on :macos => :yosemite
