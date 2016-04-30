@@ -8,16 +8,9 @@ class Wine < Formula
   head "git://source.winehq.org/git/wine.git"
 
   stable do
-    url "https://dl.winehq.org/wine/source/1.8/wine-1.8.1.tar.bz2"
-    mirror "https://downloads.sourceforge.net/project/wine/Source/wine-1.8.1.tar.bz2"
-    sha256 "149ad3daaf8593b36c5c061285df0ec2a25e20ea48c61323be91088c4d22ca97"
-
-    # Patch to fix MSI creation issues.
-    # https://bugs.winehq.org/show_bug.cgi?id=40129
-    patch do
-      url "https://bugs.winehq.org/attachment.cgi?id=53632"
-      sha256 "b9f98711cfe62228f5d84ab394394008ee10127bebcea7ef966d24127b466e0a"
-    end
+    url "https://dl.winehq.org/wine/source/1.8/wine-1.8.2.tar.bz2"
+    mirror "https://downloads.sourceforge.net/project/wine/Source/wine-1.8.2.tar.bz2"
+    sha256 "51624fadf0145e87f0c01e7ce8524ea1e8d9d360c3e8a86e78cd26a52ce55a6f"
   end
 
   bottle do
