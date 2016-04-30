@@ -21,7 +21,7 @@ class Gauche < Formula
   end
 
   test do
-    output = shell_output("gosh -V")
-    assert_match /Gauche scheme shell, version #{version}/, output
+    output = shell_output("#{bin}/gosh -V")
+    assert_match "Gauche scheme shell, version #{version}", output
   end
 end
