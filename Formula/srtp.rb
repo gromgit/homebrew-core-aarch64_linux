@@ -1,8 +1,8 @@
 class Srtp < Formula
   desc "Implementation of the Secure Real-time Transport Protocol (SRTP)"
   homepage "https://github.com/cisco/libsrtp"
-  url "https://github.com/cisco/libsrtp/archive/v1.5.2.tar.gz"
-  sha256 "86e1efe353397c0751f6bdd709794143bd1b76494412860f16ff2b6d9c304eda"
+  url "https://github.com/cisco/libsrtp/archive/v2.0.0.tar.gz"
+  sha256 "2296d132fd8cadd691d1fffeabbc1b9c42ec09e9e780a0d9bd8234a98e63a5a1"
   head "https://github.com/cisco/libsrtp.git"
 
   bottle do
@@ -15,11 +15,23 @@ class Srtp < Formula
   end
 
   depends_on "pkg-config" => :build
+  depends_on "openssl" => :optional
 
   def install
-    system "./configure", "--disable-debug",
-                          "--prefix=#{prefix}"
+    args = %W[
+      --disable-debug
+      --prefix=#{prefix}
+    ]
+    args << "--enable-openssl" if build.with? "openssl"
+
+    system "./configure", *args
+    system "make", "test"
     system "make", "shared_library"
     system "make", "install" # Can't go in parallel of building the dylib
+    libexec.install "test/rtpw"
+  end
+
+  test do
+    system libexec/"rtpw", "-l"
   end
 end
