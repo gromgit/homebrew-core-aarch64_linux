@@ -5,11 +5,9 @@ class Libslax < Formula
   sha256 "59f8aace21fb7e02091da3b84de7e231d5d02af26401985b109d2b328ab3f09d"
 
   bottle do
-    revision 1
-    sha256 "d93e089b6a8f9332a0faad4292e55c32db5122bd6b1d14f9d110bae0596c05c7" => :el_capitan
-    sha256 "9faa71033a275aeb2b232543ad61ef09fe069ece4794cc28d2c03b8cd83dc9b5" => :yosemite
-    sha256 "5108fa8d5db98f2a8441bb90c860ea01302afe935089be162f6a5164aa56fedd" => :mavericks
-    sha256 "a29d332d5fd18e9903e891018ed8c3f527efc7fe95029e219b3d5e1e4e4a5c47" => :mountain_lion
+    sha256 "05dc9585d259e452b4ae116f4885a854a17f01b5dad364559f51bd4540456e67" => :el_capitan
+    sha256 "c5d5205c1cf54433d4e3c37cde10488c5b6f3c78cbe00c7b903c7c4f4e42e804" => :yosemite
+    sha256 "6ebe095ba980ce574312cc694c2da90a12bd6e57c3016e0f9ed9f7acc56703b8" => :mavericks
   end
 
   head do
