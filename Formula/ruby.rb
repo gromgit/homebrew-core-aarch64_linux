@@ -18,10 +18,9 @@ class Ruby < Formula
   end
 
   bottle do
-    revision 2
-    sha256 "a6dca59ac0c5f65b0855d556210d1e1ac3458e39a4350793daeadaa6ab83f037" => :el_capitan
-    sha256 "67fc5ce859ff0ee81c802e2a16081fb61af870987958c78a4c9847739e056dba" => :yosemite
-    sha256 "7a22a019656c870c3749f32cece8fe743cf2ecee51979f6a358a026fbc27fa20" => :mavericks
+    sha256 "e40f882e477f0e97c1650d952af368274f4df994ecca66db4b1146b56fbb4f24" => :el_capitan
+    sha256 "f0dfef7b1f179d4a3f39a8bc910938f0c838dc9a7c5399d3a5dbb2367bd8ddbf" => :yosemite
+    sha256 "6825cfee4ed3625d3b2c99d2de7ee22c59a70c0ea1efbf1883de966881ddf68b" => :mavericks
   end
 
   head do
