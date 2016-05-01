@@ -3,6 +3,7 @@ class Fribidi < Formula
   homepage "https://fribidi.org/"
   url "https://fribidi.org/download/fribidi-0.19.7.tar.bz2"
   sha256 "08222a6212bbc2276a2d55c3bf370109ae4a35b689acbc66571ad2a670595a8e"
+  revision 1
 
   bottle do
     cellar :any
@@ -14,10 +15,14 @@ class Fribidi < Formula
 
   option :universal
 
+  depends_on "pkg-config" => :build
+  depends_on "glib"
+  depends_on "pcre"
+
   def install
     ENV.universal_binary if build.universal?
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}"
+                          "--with-glib", "--prefix=#{prefix}"
     system "make", "install"
   end
 
