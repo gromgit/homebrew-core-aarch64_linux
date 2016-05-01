@@ -1,8 +1,8 @@
 class Imlib2 < Formula
   desc "Image loading and rendering library"
   homepage "https://sourceforge.net/projects/enlightenment/"
-  url "https://downloads.sourceforge.net/project/enlightenment/imlib2-src/1.4.7/imlib2-1.4.7.tar.bz2"
-  sha256 "35d733ce23ad7d338cff009095d37e656cb8a7a53717d53793a38320f9924701"
+  url "https://downloads.sourceforge.net/project/enlightenment/imlib2-src/1.4.9/imlib2-1.4.9.tar.bz2"
+  sha256 "7d2864972801823ce44ca8d5584a67a88f0e54e2bf47fa8cf4a514317b4f0021"
 
   bottle do
     revision 1
@@ -13,11 +13,14 @@ class Imlib2 < Formula
 
   deprecated_option "without-x" => "without-x11"
 
+  depends_on "pkg-config" => :build
   depends_on "freetype"
   depends_on "libpng" => :recommended
-  depends_on :x11 => :recommended
-  depends_on "pkg-config" => :build
   depends_on "jpeg" => :recommended
+  depends_on "giflib" => :recommended
+  depends_on "libtiff" => :recommended
+  depends_on "libid3tag" => :optional
+  depends_on :x11 => :recommended
 
   def install
     args = %W[
