@@ -6,9 +6,9 @@ class Xxhash < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "6edf8933719f867a437b3b99eed77ba7e6207676524ff7bbf9b7dbe4b56af31f" => :el_capitan
-    sha256 "70786baab2979107795449762885b97df42b412e475b06d3266046339d93023d" => :yosemite
-    sha256 "c14a9879b1a280788f255714ba2837d605ed00b33c1678f019eaf10007790dd0" => :mavericks
+    sha256 "4c0d900fab5dcbf8230bf8af1fb9f0002e8970fee209e80dd2d3229375e9fbda" => :el_capitan
+    sha256 "9bc1fd241397723df5f4ad01046ca5fd6a2b14e4460e1a1a4c1a0b551f06d5ec" => :yosemite
+    sha256 "ebe49542503582738be69f0a6c3558ab2ee7c60ce89dfa8e66f2da7e8c0bc054" => :mavericks
   end
 
   def install
