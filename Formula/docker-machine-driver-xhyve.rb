@@ -6,7 +6,9 @@ class DockerMachineDriverXhyve < Formula
   url "https://github.com/zchee/docker-machine-driver-xhyve.git",
     :tag => "v0.2.2",
     :revision => "7a7e30b80a9ee444e5e67fd1839422e201a1b328"
+
   head "https://github.com/zchee/docker-machine-driver-xhyve.git"
+
   bottle do
     cellar :any_skip_relocation
     revision 1
@@ -17,15 +19,6 @@ class DockerMachineDriverXhyve < Formula
   depends_on :macos => :yosemite
   depends_on "go" => :build
   depends_on "docker-machine" => :recommended
-  def caveats
-    a = <<-EOS.undent
-        This driver requires superuser privileges to access the hypervisor. To
-        enable, execute
-            sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
-            sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
-      EOS
-    a
-  end
 
   def install
     (buildpath/"gopath/src/github.com/zchee/docker-machine-driver-xhyve").install Dir["{*,.git,.gitignore,.gitmodules}"]
@@ -47,6 +40,14 @@ class DockerMachineDriverXhyve < Formula
       "-X 'github.com/zchee/docker-machine-driver-xhyve/xhyve.GitCommit=Homebrew#{git_hash}'",
       "./main.go"
     end
+  end
+
+  def caveats; <<-EOS.undent
+    This driver requires superuser privileges to access the hypervisor. To
+    enable, execute
+        sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+        sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+    EOS
   end
 
   test do
