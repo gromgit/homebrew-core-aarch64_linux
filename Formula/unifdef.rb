@@ -7,9 +7,9 @@ class Unifdef < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e7654046a27a2385f120430203bdba11a88639a86fd0cddcfa93ab1c9d9fb752" => :el_capitan
-    sha256 "8c4270c42765d2c8f67e8b292ff18004f85102d3c3dc71d4fcf28264ffa6c10d" => :yosemite
-    sha256 "75b272ac80122e94ac9f4adecf94c1358861be52869708fe846cc9ef541214d1" => :mavericks
+    sha256 "a89e5cc9b179fa5135077ad0c27e34cebe13a33dc02adccab4969855ba173357" => :el_capitan
+    sha256 "3277bf0977c385e3cf5ccf3355e11f30b057c58d8539a27d5a23531ce7de9542" => :yosemite
+    sha256 "8533d1ce7b70e51256a3c24d557345b7b7ac0b7e6562de5a0f942c058ae518db" => :mavericks
   end
 
   keg_only :provided_by_osx,
