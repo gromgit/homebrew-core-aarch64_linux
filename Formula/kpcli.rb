@@ -95,6 +95,6 @@ class Kpcli < Formula
   end
 
   test do
-    system "kpcli", "--help"
+    system bin/"kpcli", "--help"
   end
 end
