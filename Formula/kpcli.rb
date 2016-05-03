@@ -4,6 +4,13 @@ class Kpcli < Formula
   url "https://downloads.sourceforge.net/project/kpcli/kpcli-3.0.pl"
   sha256 "947b7b0485215f72e14bb8936c847abb583253c597f58234650922270259049c"
 
+  bottle do
+    cellar :any
+    sha256 "de865483b0c406a9d2791abec379fef639bf7cd3b25ef9712c1695a57ec4b9a7" => :el_capitan
+    sha256 "0810129acf98a2cd92bf9087ff5c035e31ec18d40c4dec57ccb23178f464480b" => :yosemite
+    sha256 "77ede4c769bfc37d3f6c1d876bcd288bd5af918cfe78222cfbd6e0d140b11360" => :mavericks
+  end
+
   depends_on "readline"
 
   resource "File::KeePass" do
