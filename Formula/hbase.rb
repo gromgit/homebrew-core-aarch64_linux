@@ -5,6 +5,12 @@ class Hbase < Formula
   sha256 "2979384e7677f9ea95b8b2753d082b9a79cb9540a22dbcd072b942796363a925"
   revision 1
 
+  bottle do
+    sha256 "aa56392402e8d0014f81012360cf401af690b8b3f53afce9286dfe45c32db26c" => :el_capitan
+    sha256 "df4607af5cf5f0ae15abbd9aa47e7a2f84d1448ccd3b3a2c17c1dc6542ffc5b2" => :yosemite
+    sha256 "ade4391323f49c2d99bee36b808bcd3a4121ac37b1dd3c253967664ab500683a" => :mavericks
+  end
+
   depends_on :java => "1.7+"
   depends_on "hadoop" => :optional
   depends_on "lzo" => :recommended
