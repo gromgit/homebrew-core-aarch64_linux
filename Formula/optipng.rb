@@ -7,9 +7,9 @@ class Optipng < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d5f0a362fc4d8821b73be6767b401bced46b897ef36d56881a10070fb3c07d88" => :el_capitan
-    sha256 "2622e60d2f9313b39d2b385e84727e615839d6d531e4c6c7210a53b9cb584f61" => :yosemite
-    sha256 "dd532d23f812dbc28b8f32171423946ee6fcfe87eab28665e7b484c83fc55e0e" => :mavericks
+    sha256 "b062317980451b8a6a129e87f3a22ae851e42c498775a9c5a0e885d265425450" => :el_capitan
+    sha256 "a8b8c3682ae147ff68f37db1155ecd86c965e6e5c4fc0e20b0da3297060cbea2" => :yosemite
+    sha256 "64e1d9fd2a5dd56a91af23ab2a170f68fa06993b2b1ed539b17ffad086e1e28f" => :mavericks
   end
 
   def install
