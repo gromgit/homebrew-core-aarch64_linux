@@ -8,10 +8,9 @@ class Gost < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b1b473716ce46ea5dc6360b2721df68040c676a53fb9b09b819a480f5620b831" => :el_capitan
-    sha256 "556404ce4c4fd2b7fe78df8d059e1185bbb793343c523b246d08fd21227e0bee" => :yosemite
-    sha256 "85283889c48ec714015969840e83cdbcef0dc8acc9558744ba969ddcb0b7c1bd" => :mavericks
-    sha256 "88c83dde87a0890a85e478ceeffaa0df7865e4761cb99387b0e1367f46618650" => :mountain_lion
+    sha256 "42a60235f9f31d12b59d33867b4f74ac4e4fa979fd92f7066bd5720da2eb607b" => :el_capitan
+    sha256 "7acb5fcbd1230614a630cb4c0fefaef4a40b66dba633e067a641c17a4d444db2" => :yosemite
+    sha256 "7cc1cf98d45f0cfd43e0d822d60430670e58dbd40f221033b2a446f0f03bb681" => :mavericks
   end
 
   depends_on "go" => :build
