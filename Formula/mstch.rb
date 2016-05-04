@@ -6,9 +6,9 @@ class Mstch < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "c5a6f5c4de5a6e1c99b359db64e6ee89244cd1ed6b38872e4f257db00bdaa792" => :el_capitan
-    sha256 "9905c1ff49882abf0a5dca1e609afc10a8e02f4cab010d8bb33d5347388f52b7" => :yosemite
-    sha256 "e55ffb2f8c98dab7fd74fbf58bd71651f945d8d3a0bb6f12eed397386e872860" => :mavericks
+    sha256 "0869a4b14d4b9130852d5556d27e945c20239385d3bd30497c32833352fea1e3" => :el_capitan
+    sha256 "1f727fc24497894247b60ee22a3a6d7139156c0efd69f30d7144fd0d4fbb4a75" => :yosemite
+    sha256 "8cf2369310ef49911455a4071066464f261e78060732539ea7deeb4c4858ce29" => :mavericks
   end
 
   depends_on "cmake" => :build
