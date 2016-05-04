@@ -13,6 +13,13 @@ class Devil < Formula
       sha256 "ce96bc4aad940b80bc918180d6948595ee72624ae925886b1b770f2a7be8a2f9"
     end
   end
+  bottle do
+    cellar :any
+    sha256 "7a06d584329097c3e911681f5075e6cf63c4e4654317f6db2157c5dcb615d2dc" => :el_capitan
+    sha256 "c75d0b1abbbafc8d302c70b9ad2c54018f63ceaa936e233b8781ca9395acd37e" => :yosemite
+    sha256 "ea60067ae64f574fea8cd904e681294ad1c50cde25531bfc75b24c7736c4f367" => :mavericks
+  end
+
 
   head do
     url "https://github.com/DentonW/DevIL.git"
