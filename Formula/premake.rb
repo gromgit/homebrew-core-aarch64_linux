@@ -1,11 +1,10 @@
 class Premake < Formula
   desc "Write once, build anywhere Lua-based build system"
   homepage "https://premake.github.io/"
+  url "https://downloads.sourceforge.net/project/premake/Premake/4.4/premake-4.4-beta5-src.zip"
+  sha256 "0fa1ed02c5229d931e87995123cdb11d44fcc8bd99bba8e8bb1bbc0aaa798161"
+  head "https://github.com/premake/premake-core.git"
 
-  stable do
-    url "https://downloads.sourceforge.net/project/premake/Premake/4.4/premake-4.4-beta5-src.zip"
-    sha256 "0fa1ed02c5229d931e87995123cdb11d44fcc8bd99bba8e8bb1bbc0aaa798161"
-  end
   bottle do
     cellar :any_skip_relocation
     sha256 "68c9aa47ac6de8238a61bcd58609a2fc91c535a66bf7ab7be8aed19a1042e03f" => :el_capitan
@@ -13,14 +12,9 @@ class Premake < Formula
     sha256 "4ca2745c7e5628a8f830a6eccded4f4e768c17648fef673700a7ba322415b0a9" => :mavericks
   end
 
-
   devel do
     url "https://github.com/premake/premake-core/releases/download/v5.0.0-alpha6/premake-5.0.0-alpha6-src.zip"
     sha256 "9c13372699d25824cba1c16a0483507a6a28903e2556ffb148b288c189403aee"
-  end
-
-  head do
-    url "https://github.com/premake/premake-core.git"
   end
 
   def install
@@ -30,12 +24,19 @@ class Premake < Formula
     end
 
     system "make", "-C", "build/gmake.macosx"
-    bin.install "bin/release/premake5" if build.devel? or build.head?
-    bin.install "bin/release/premake4" if build.stable?
+
+    if build.devel? || build.head?
+      bin.install "bin/release/premake5"
+    else
+      bin.install "bin/release/premake4"
+    end
   end
 
   test do
-    system "premake5", "--version" if build.devel? or build.head?
-    system "premake4", "--version" if build.stable?
+    if stable?
+      assert_match version.to_s, shell_output("#{bin}/premake4 --version", 1)
+    else
+      assert_match version.to_s, shell_output("#{bin}/premake5 --version")
+    end
   end
 end
