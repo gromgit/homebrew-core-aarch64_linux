@@ -4,6 +4,12 @@ class PerconaXtrabackup < Formula
   url "https://www.percona.com/downloads/XtraBackup/Percona-XtraBackup-2.4.2/source/tarball/percona-xtrabackup-2.4.2.tar.gz"
   sha256 "faeac6f1db4a1270e5263e48c8a94cc5c81c772fdea36879d1be18dcbcd1926e"
 
+  bottle do
+    sha256 "21f50e161b66679564cd0b9e43a59b74cd46dbfd4d36bd056c0649af3a310766" => :el_capitan
+    sha256 "0748d6439e8305471d76279cb64ddff7c94e0c0921f23dd25b7efcb487b97509" => :yosemite
+    sha256 "368b7274e4b82a98f8dc2998b5741fbb484655a1e075f975d48b4600e7385ade" => :mavericks
+  end
+
   option "without-docs", "Build without man pages (which requires python-sphinx)"
   option "without-mysql", "Build without bundled Perl DBD::mysql module, to use the database of your choice."
 
