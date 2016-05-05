@@ -6,6 +6,13 @@ class GithubMarkdownToc < Formula
   url "https://github.com/ekalinin/github-markdown-toc.go/archive/0.5.0.tar.gz"
   sha256 "78ea87ab18fd213e52b217d7ec0bc4eb56a8dbeb2331b82376e6a741b0121d1d"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "6f74ddef6dc13984186533a00ce3fb5a91b1a12e99715b5f6224047a2d9d28d8" => :el_capitan
+    sha256 "3f80c515b7e70ce59bd583ba3f61dab1e563c4b3032d6220ecda555fd1f3bfb1" => :yosemite
+    sha256 "a46a542a52ce0e758f544e6ab1a5245683bdee7697142ad0159df8d4a74aa32e" => :mavericks
+  end
+
   depends_on "go" => :build
 
   go_resource "github.com/alecthomas/template" do
