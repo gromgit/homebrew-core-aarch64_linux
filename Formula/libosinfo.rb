@@ -4,6 +4,12 @@ class Libosinfo < Formula
   url "https://fedorahosted.org/releases/l/i/libosinfo/libosinfo-0.3.0.tar.gz"
   sha256 "538a3468792e919edf5364fe102d751353ae600a92ad3a24f024424a182cefbc"
 
+  bottle do
+    sha256 "b07a6866bdd322d8598e0c1b5a81c2a43deecf1cc200a2b453f61c03ba88717c" => :el_capitan
+    sha256 "08ca0241c5277d51465ccdbd39776454d24b1b87da88d56f24f9c0d9a59d5a94" => :yosemite
+    sha256 "8b481d5cc2feb6296b698fb85c6e546c7dd51aa5073985dfe76a6ded7af563e1" => :mavericks
+  end
+
   depends_on "check"
   depends_on "glib"
   depends_on "intltool" => :build
