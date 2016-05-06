@@ -10,9 +10,9 @@ class KubernetesCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "3048d47f8f76cf3a7810ddf32fa8033de19e176cc6580517baac0c9cf1cd2f91" => :el_capitan
-    sha256 "efc627b0b7f8ec3a303c12f7c744a865e0f02bb8f566f196ba2a1b6174a81b81" => :yosemite
-    sha256 "fdff09be5f09b4963473687269166ebce01bd738ea90fb65881b8ffced5f6559" => :mavericks
+    sha256 "c2afb7e7b7fcc5f81d8b139c0bb6b6fc19a1269b8e0cf5fb5f956260554e00b3" => :el_capitan
+    sha256 "dbbf24d98fdee97b0675c6be8233ba5795c60508e8a2d02c9d3d254fc08517c5" => :yosemite
+    sha256 "f4178cff5b72929e176095cd4c734b3be6c77525028381da9793b02dcd474ccb" => :mavericks
   end
 
   devel do
