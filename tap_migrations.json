@@ -36,6 +36,7 @@
   "cowpatty": "homebrew/boneyard",
   "csync": "homebrew/boneyard",
   "curlftpfs": "homebrew/x11",
+  "cvc4": "homebrew/boneyard",
   "cwm": "homebrew/x11",
   "dart": "dart-lang/dart",
   "datamash": "homebrew/science",
