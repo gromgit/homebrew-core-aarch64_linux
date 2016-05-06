@@ -4,12 +4,6 @@ class Hspell < Formula
   url "http://hspell.ivrix.org.il/hspell-1.3.tar.gz"
   sha256 "603c25dcbaa65d171d9065da7369cfe0dc21bda8378bade13b42eda69c8b2fe7"
 
-  bottle do
-    sha256 "662c1c3897497deba7f9c7355204c57d7eeddf6c019c0c4bd2f48c4a2ad240c1" => :el_capitan
-    sha256 "47cf9133197a9c4dcaef18fb5a71ae610a5310c1a5d07559179d36f527512114" => :yosemite
-    sha256 "dfe361d05d21ecf5f3588482ddee051f6d95f54bd815ba22196a7b726f07d053" => :mavericks
-  end
-
   depends_on "autoconf" => :build
 
   # hspell was built for linux and compiles a .so shared library, to comply with macOS
