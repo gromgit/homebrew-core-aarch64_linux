@@ -22,9 +22,9 @@ class Libmarisa < Formula
 
   bottle do
     cellar :any
-    revision 2
-    sha256 "8a02695ab5e2d3417f3ca03b7639ef97de7d58aa72a4268c05620b0af681058b" => :yosemite
-    sha256 "b7d7691ab312b816b016a954f2e00106616870d388d2ccef5df68180bcaf30ef" => :mavericks
+    sha256 "3af0c8f7adf4dd630e29c3d604614e09d40e2c8154cc78c7b184a9b37aad26b1" => :el_capitan
+    sha256 "225b53e732cde281f00d281e7e76dcf46243badd448ef84a515b420e84746c48" => :yosemite
+    sha256 "a41201761d4ac0a4659137f7064386dacab6584d8a2c61e1de914fcaaa7daf35" => :mavericks
   end
 
   head do
