@@ -118,8 +118,5 @@ class Pcb2gcode < Formula
     system "#{bin}/pcb2gcode", "--front=front.gbr",
                                "--outline=edge.gbr",
                                "--drill=drill.drl"
-    IO.readlines("front.ngc")[-2..-1].any? { |line| line.include? "M2" } &&
-      IO.readlines("outline.ngc")[-2..-1].any? { |line| line.include? "M2" } &&
-      IO.readlines("drill.ngc")[-2..-1].any? { |line| line.include? "M2" }
   end
 end
