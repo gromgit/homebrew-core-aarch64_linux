@@ -10,11 +10,9 @@ class Umlet < Formula
 
   def install
     rm Dir["*.{desktop,exe}"]
-
     libexec.install Dir["*"]
 
     inreplace "#{libexec}/umlet.sh", " java ", " ${JAVA_HOME}/bin/java "
-
     inreplace "#{libexec}/umlet.sh", /^programDir=.*$/,
       "programDir=#{libexec}"
 
