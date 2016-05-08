@@ -4,6 +4,13 @@ class Pcb2gcode < Formula
   url "https://github.com/pcb2gcode/pcb2gcode/releases/download/v1.2.3/pcb2gcode-1.2.3.tar.gz"
   sha256 "90fbd6c2c353609451e4284fcdcc395359ff582b13c053939f2da2825f081477"
 
+  bottle do
+    cellar :any
+    sha256 "63919bc4899d152f8c61017d765f35c0a17f104c57db06f62d6ffcae10e5b2db" => :el_capitan
+    sha256 "d04fe0a9ed1490499226bfbb656a204df7603d6c523ba1754fd21393d819fc61" => :yosemite
+    sha256 "a7403533e4ea86459bf8e2d5db1d57289e46a65a5fb2775a97dbb521ccf67635" => :mavericks
+  end
+
   head do
     url "https://github.com/pcb2gcode/pcb2gcode.git"
 
