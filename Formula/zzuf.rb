@@ -5,9 +5,9 @@ class Zzuf < Formula
   sha256 "04353d94c68391b3945199f100ab47fc5ff7815db1e92581a600d4175e3a6872"
 
   bottle do
-    sha256 "a713556c18e8b3415bd4b8ee19e501f7764c15a7fc7c907eefeb09afc582ba5b" => :el_capitan
-    sha256 "1a392bd97e6aaf5688d675d45f998d2b49a123c38e0bd4a5bee1f274644fc106" => :yosemite
-    sha256 "a624ccb43655ab0ae5a78721f08a05fb8ffe0d6cecbfae3e07e088cd6a5b8315" => :mavericks
+    sha256 "5f0c55658fba6bbf225b6001b5be75c38f7a375322bd4b23944f3c7239dae0c7" => :el_capitan
+    sha256 "7f260ec41af74aa8b99df4a89f202382c72067e34b4bb3ac0a0e3fb0be6f8ed0" => :yosemite
+    sha256 "52460ee4dcac540298fa8f0e07225bc01d5592fd4ff558f1cfd129b329e87639" => :mavericks
   end
 
   head do
