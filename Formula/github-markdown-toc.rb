@@ -3,8 +3,8 @@ require "language/go"
 class GithubMarkdownToc < Formula
   desc "Easy TOC creation for GitHub README.md (in go)"
   homepage "https://github.com/ekalinin/github-markdown-toc.go"
-  url "https://github.com/ekalinin/github-markdown-toc.go/archive/0.5.0.tar.gz"
-  sha256 "78ea87ab18fd213e52b217d7ec0bc4eb56a8dbeb2331b82376e6a741b0121d1d"
+  url "https://github.com/ekalinin/github-markdown-toc.go/archive/0.6.0.tar.gz"
+  sha256 "fe6995e9f06febca0f3a68d0df5f124726737bcfbcc027dce4aa9d5dfa1ee5ae"
 
   bottle do
     cellar :any_skip_relocation
