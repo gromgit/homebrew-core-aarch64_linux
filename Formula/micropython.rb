@@ -6,9 +6,9 @@ class Micropython < Formula
 
   bottle do
     cellar :any
-    sha256 "811bdee93e7d2c4dfcaed11437b540b3473e6a1e7ccec08b573c2601afb21176" => :el_capitan
-    sha256 "b2c3ccfd452ad15f6840dd3efd7706cd7bd19769920467534e23b0ea2107108a" => :yosemite
-    sha256 "78c2a5e5280c047e0f8aa1e20cb22f0ee31f41aa7287b718d36c10d80c76ae67" => :mavericks
+    sha256 "941151408d8edd3fc9df1029b946c269bbe85ce5517744ea45df734e10210e89" => :el_capitan
+    sha256 "b70712b51d196e23da3c0905a2135b96a22369f3e69cf2f43622b0fe1814fe9e" => :yosemite
+    sha256 "33ba0a96ca228e6790db5eca7dd4af16beff334b94d19332322cdd041d9ea5fe" => :mavericks
   end
 
   depends_on "pkg-config" => :build
