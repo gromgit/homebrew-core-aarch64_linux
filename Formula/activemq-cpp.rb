@@ -6,9 +6,9 @@ class ActivemqCpp < Formula
 
   bottle do
     cellar :any
-    sha256 "5a065ca136501b5f6214f0b1f4779d29bf35cfc3f950c1486bdb324530dfe677" => :el_capitan
-    sha256 "708c717db7170bfa7819882c623ae8f5e1973c603479662b760a539cc2ed5979" => :yosemite
-    sha256 "07d8c3d296a6d9ba23966e035935d97b08016bff53daabbf2da160aea6c984c2" => :mavericks
+    sha256 "ba85affa7a01c8ae45beb27545c841bc4f57f0c2841e4533dc537d6abe3a6486" => :el_capitan
+    sha256 "be16c11110621a32d65a7843f05813cfc7c6861ea589a076699e5f66bf6b2a02" => :yosemite
+    sha256 "0180da693b7e8a478538393e8746c0ffb1dc0904e24cceb4be591230c7004bf2" => :mavericks
   end
 
   depends_on "pkg-config" => :build
