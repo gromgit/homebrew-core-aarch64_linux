@@ -5,9 +5,10 @@ class Soccerwindow2 < Formula
   sha256 "3505f662144d5c97628191c941e84af4d384770733b9ff93ab8b58c2d1b9c22b"
 
   bottle do
-    sha256 "512a8b510d126918d3e9cf156013dac0e769396c965e936dea46c9eb0d923ed7" => :mavericks
-    sha256 "fd8db0e005a931e65068ce15d1147a3bda413a2da67d8ba0e18332dee428052c" => :mountain_lion
-    sha256 "6a6ab2f7a940081710deaf38049a99a392ea223439ee977d3470d975066290c3" => :lion
+    revision 1
+    sha256 "afb734aa63f394df87926af8b4b0652a6af3d00535bca93be10d785c59fa9998" => :el_capitan
+    sha256 "81b15440c8ca713c71d7f3f39c996d0317ab77f7f80c123412411a1ef63e8fe0" => :yosemite
+    sha256 "945033b00dcc8d85aadd97c385b9c2a6d61c62b062819c227dcfc4617e81d486" => :mavericks
   end
 
   depends_on "pkg-config" => :build
