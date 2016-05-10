@@ -6,6 +6,13 @@ class Czmqpp < Formula
 
   head "https://github.com/zeromq/czmqpp.git"
 
+  bottle do
+    cellar :any
+    sha256 "ea0e9813c30e58e8540dd87ed0eb8d462c63eda4b64cef7eab3ac871688fe078" => :el_capitan
+    sha256 "cc0036c702e791542adf7477e9cf054f7eceeb2a1833dad81995babb312185ff" => :yosemite
+    sha256 "107b5e49655e359d5bf3bfc68b24b422902cc13fb1fdb0939387135f2b7d4433" => :mavericks
+  end
+
   option :universal
 
   depends_on "autoconf" => :build
