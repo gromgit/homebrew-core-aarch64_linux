@@ -8,10 +8,9 @@ class Dbus < Formula
   head "https://anongit.freedesktop.org/git/dbus/dbus.git"
 
   bottle do
-    revision 1
-    sha256 "93ff1512d2ee0dfbf25e77822165c2a62439af86d63cd3811d325bc43195445b" => :el_capitan
-    sha256 "54729cfbe8f3f889012aa4cdd8565979c80ad6c8cc896cdbfe15b842e196f9b1" => :yosemite
-    sha256 "e50f1ade0a5871d9c0441fb129e74f45166e928d32fbf50972ada039917155a6" => :mavericks
+    sha256 "c09c506b0f1681a7a02181907125757dcd17f4bf90f552cc9b87092efd101a6c" => :el_capitan
+    sha256 "716e6c3cfed5e66321d639761f0303c84b504fa32793a4611daa302829c9598f" => :yosemite
+    sha256 "5547ab566d1f4d75cafa8757157e31af1153a178dc3a57a0652a47b820cf1fee" => :mavericks
   end
 
   # Patch applies the config templating fixed in https://bugs.freedesktop.org/show_bug.cgi?id=94494
