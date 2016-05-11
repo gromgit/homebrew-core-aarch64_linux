@@ -4,6 +4,13 @@ class Bookloupe < Formula
   url "http://www.juiblex.co.uk/pgdp/bookloupe/bookloupe-2.0.tar.gz"
   sha256 "15b1f5a0fa01e7c0a0752c282f8a354d3dc9edbefc677e6e42044771d5abe3c9"
 
+  bottle do
+    cellar :any
+    sha256 "78a85f95ef2f53a4c6fdba498ab703d8e41273842df43e23b6a8d0d5e043ceed" => :el_capitan
+    sha256 "787513fe860f0c5afd7d7705a10a4f2604a1210e2898f9eff3c46897c7fbefa1" => :yosemite
+    sha256 "a696f92c2cf476cdb6f89d01c3f962dbdd52c48ae8b04f0b34cd4de21f6957eb" => :mavericks
+  end
+
   depends_on "pkg-config" => :build
   depends_on "glib"
 
