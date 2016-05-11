@@ -7,9 +7,9 @@ class Xplanetfx < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0d43356b923e88fca925c4cae243d730835aa8ca00360db2ac483ab116114b20" => :el_capitan
-    sha256 "8a12d9d88771811cd0afd8d6960e7d4460b79d094864bae869f360952868fe90" => :yosemite
-    sha256 "af47289f8c21bcf51fc7c1394a6e575650f13a1f039025b8c268ee9052befb7c" => :mavericks
+    sha256 "8d4b531e39c9dc8a384155129fc23f8d7370c2e32618c774c75f47b44d5b06e7" => :el_capitan
+    sha256 "79421111e8b5ec8ddb4229c374c072a96882aa4b50301613e8c90d4e0a6068c2" => :yosemite
+    sha256 "2471ac12a443dcc6fc75cd0a3fc6587446d916ec33bb42587f04c6c548480199" => :mavericks
   end
 
   option "without-gui", "Build to run xplanetFX from the command-line only"
