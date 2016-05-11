@@ -8,9 +8,9 @@ class Libgcrypt < Formula
 
   bottle do
     cellar :any
-    sha256 "e61063588ed4812db90c99d020aeeb4cb98ab6fc6dfe7eccd49c2751af75fbf3" => :el_capitan
-    sha256 "e84c1128ee720391c65e2c782bd9168b9a0320c486083bbcdc6936549ec0748c" => :yosemite
-    sha256 "761737c736ce469757040dcf6b7a5150390cfd62e0ca21b45f116daa34415655" => :mavericks
+    sha256 "0a413db08292c2963dc76ea5ace51084d6496ea238da65c58329b677f5c4a147" => :el_capitan
+    sha256 "64ab4e6aa2e8bef022ee0884c4f2ec19c36a54fc77072d6f3e9baf1fd1d47c92" => :yosemite
+    sha256 "80ae9b194176f762028bc2a952b2ac11ba06bbf287d12b0f98562bf11b81fbfd" => :mavericks
   end
 
   option :universal
