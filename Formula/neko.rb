@@ -1,10 +1,20 @@
 class Neko < Formula
   desc "High-level, dynamically typed programming language"
   homepage "http://nekovm.org"
-  url "http://nekovm.org/media/neko-2.1.0-src.tar.gz"
-  sha256 "0c93d5fe96240510e2d1975ae0caa9dd8eadf70d916a868684f66a099a4acf96"
 
   head "https://github.com/HaxeFoundation/neko.git"
+
+  stable do
+    url "http://nekovm.org/media/neko-2.1.0-src.tar.gz"
+    sha256 "0c93d5fe96240510e2d1975ae0caa9dd8eadf70d916a868684f66a099a4acf96"
+
+    patch do
+      # To workaround issue https://github.com/HaxeFoundation/neko/issues/130
+      # It is a commit already applied to the upstream.
+      url "https://github.com/HaxeFoundation/neko/commit/a8c71ad97faaccff6c6e9e09eba2d5efd022f8dc.patch"
+      sha256 "7bbdbd38f64220aa11fd1725ae99ea53f2d36563249f1828d5452562e3ca9977"
+    end
+  end
 
   bottle do
     cellar :any
@@ -19,13 +29,6 @@ class Neko < Formula
   depends_on "bdw-gc"
   depends_on "pcre"
   depends_on "openssl"
-
-  patch do
-    # To workaround issue https://github.com/HaxeFoundation/neko/issues/130
-    # It is a commit already applied to the upstream.
-    url "https://github.com/HaxeFoundation/neko/commit/a8c71ad97faaccff6c6e9e09eba2d5efd022f8dc.patch"
-    sha256 "7bbdbd38f64220aa11fd1725ae99ea53f2d36563249f1828d5452562e3ca9977"
-  end
 
   def install
     # Let cmake download its own copy of MariaDBConnector during build and statically link it.
