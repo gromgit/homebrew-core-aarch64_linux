@@ -6,9 +6,10 @@ class Mediatomb < Formula
   revision 2
 
   bottle do
-    sha256 "053bb9e89b98bc5af6ca6eb5c4284a551d7d8a3130d933374a91538a881f14c0" => :el_capitan
-    sha256 "de299b1bb82354e275e19b6690a05d6290ddbf361fb3b48d1c136091d6e80aae" => :yosemite
-    sha256 "9bc0082e21fde91100793c656aeb4017fd9704899d33d17a7e1936c7d47b265a" => :mavericks
+    revision 1
+    sha256 "06cb4aaff088fc91d9500b10640d2b1632f8c88c95277f9cface991a06801ad6" => :el_capitan
+    sha256 "089217abe05ea91a8dc1df796974495f87b8bcde7b4d80a93b1129e12cfc344d" => :yosemite
+    sha256 "7022f700071652e20eb3d93b3d0b0a9d5f4cf1485cd350d85116fcbdea1ac104" => :mavericks
   end
 
   depends_on "libexif" => :recommended
