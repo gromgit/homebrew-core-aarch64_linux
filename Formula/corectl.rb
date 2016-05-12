@@ -7,8 +7,8 @@ class Corectl < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "14038a71082300f74007f76de8fee3b455219f6f63002bc2e694720ad8f42590" => :el_capitan
-    sha256 "f4bafb18c96df67e09d893ab39281247fb5fb27154a97aec11d7460492e4e88c" => :yosemite
+    sha256 "33362faf630a3680740ac2dd5b34bf24958de0a2f9e157605bc9ce199905df49" => :el_capitan
+    sha256 "6f53ededba4f9057e0d0d00a71c1c658aeabfa250d65570beb12bfa2228ced51" => :yosemite
   end
 
   depends_on "go" => :build
