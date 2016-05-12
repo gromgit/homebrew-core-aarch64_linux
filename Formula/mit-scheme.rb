@@ -7,10 +7,9 @@ class MitScheme < Formula
   revision 1
 
   bottle do
-    revision 1
-    sha256 "1a449d9c1f1043c1a557962332c7ee18664f5f15ea9eca8e754c0c3cb3c4aef4" => :el_capitan
-    sha256 "7966d841f92346a68ee088b0e25394e541b690aafbb306e27b352ee35a1e24c7" => :yosemite
-    sha256 "a782017f01f5c385e343c802a33cd634b1cfd89ec7eed94a43d753034eaa15ab" => :mavericks
+    sha256 "566a25ffd25c0448c5ad7eaab8cf958a04c8e36cfa70912faa9d0f9f4b79b43a" => :el_capitan
+    sha256 "d6b52e4225f4bdc7a4c4286b04722f3ac636fe05fbb58990897aa9a803c1a952" => :yosemite
+    sha256 "659e5c2d794c00133a6b3a5403d99b22877642bde0ccedc882155c058018ccc7" => :mavericks
   end
 
   conflicts_with "tinyscheme", :because => "both install a `scheme` binary"
