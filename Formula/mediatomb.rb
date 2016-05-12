@@ -43,9 +43,11 @@ class Mediatomb < Formula
     sha256 "ae07427380e22f7340af28ea8d8d4bd01ec07f1c09bd0e0e50f310b2b4e507e2"
   end
 
+  # Workaround for Samsung TV; upstream has accepted this patch
+  # https://sourceforge.net/p/mediatomb/code/ci/2753e70013636bb5dd4cfc595f9776d368709f04
   patch do
-    url "https://sourceforge.net/p/mediatomb/patches/_discuss/thread/57c47fb9/8ad8/attachment/mediatomb-urifix.patch"
-    sha256 "537373654c1d7fa24e14f2e5a9c78228589411509d46fbd53bb38b87d5ee34fb"
+    url "https://raw.githubusercontent.com/Homebrew/patches/43c51305a0c4a9a78805f45e1cf1ff163847be4a/mediatomb/urifix.patch"
+    sha256 "9cf68bc486eba9ae5f74b59ee2aeebf7e57263b47914136b5d0e24556f0c304f"
   end
 
   # Upstream patch: https://sourceforge.net/p/mediatomb/patches/35/
