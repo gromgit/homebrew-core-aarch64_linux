@@ -5,12 +5,11 @@ class Makedepend < Formula
   sha256 "f7a80575f3724ac3d9b19eaeab802892ece7e4b0061dd6425b4b789353e25425"
 
   bottle do
-    cellar :any
-    sha256 "3f3535296b2232448aa2b7509eee7ef65460ccc913475daf0b30b7ab6277e0e1" => :el_capitan
-    sha256 "0ed4b80471255f5a6170b7adeae03655c73e828dc6e3eeefeedb1a87f14a9142" => :yosemite
-    sha256 "1c7014f27716ce9b8d22423ef0ad79c46eb0a9452f893786a21e018461e0ece1" => :mavericks
-    sha256 "99af6d3fd80033e7197ae4aa16db748f2f1078f2e3985a69a55ff58db2a3177a" => :mountain_lion
-    sha256 "84195584f1c9d0849bb8aa44b3466b24eee589c39f2a0323ba77fc4033e8e1f8" => :lion
+    cellar :any_skip_relocation
+    revision 1
+    sha256 "0f13329fdaa980ab3e4440f352a70e99aa3afdcfba0ad9bc60e9bc2e828f1b3b" => :el_capitan
+    sha256 "18186e2c1dbd9ea5b8107f4987318e9a75c87d2195e98238e216d8554c410138" => :yosemite
+    sha256 "afe9b0203383cd9a180c4f247fbf26c2a4bc75a7324963c95f6e9ebc39f1d806" => :mavericks
   end
 
   depends_on "pkg-config" => :build
