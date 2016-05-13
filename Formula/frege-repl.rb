@@ -5,6 +5,8 @@ class FregeRepl < Formula
   version "1.4-SNAPSHOT"
   sha256 "2cf1c2a8f7b64c9d70b21fbfd25b2af3f5e3bebe3662f724afd435d01bddafec"
 
+  bottle :unneeded
+
   depends_on :java => "1.8+"
 
   def install
