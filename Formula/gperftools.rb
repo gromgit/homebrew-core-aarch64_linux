@@ -7,9 +7,10 @@ class Gperftools < Formula
 
   bottle do
     cellar :any
-    sha256 "b53926eaf6db1fa5ff0e9c3412628db838a070ce57d16581f9d596a9728b47ca" => :el_capitan
-    sha256 "9ce10dbc6d575ce7004ac8fa5e97d188bbd0d5dbb76e1058e5c5069e9a8e4c11" => :yosemite
-    sha256 "6036aafcbbce98242174d9481b14112ec947598452f493878b1394d08e6ca275" => :mavericks
+    revision 1
+    sha256 "35a478cc1f30e79b07099318b24d82fbdcbb53bc52cdd09688c55ba3f8e12d72" => :el_capitan
+    sha256 "86f429aa714330a0b550397e306f691340e4beaa5dd3def7d62a3cb42b5200de" => :yosemite
+    sha256 "8b50e2171af61bf38094d6173d5c39d34c42559440c94ca27fae750e8012cb17" => :mavericks
   end
 
   # Needed for stable due to the patch; otherwise, just head
