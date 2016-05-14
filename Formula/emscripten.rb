@@ -18,9 +18,9 @@ class Emscripten < Formula
   end
 
   bottle do
-    sha256 "fc7d6ba2fb427a0adc34fe99dbda1194ce8a8c0c24b8981f6484d0f6eaf121f2" => :el_capitan
-    sha256 "75843d3145ad14ccdcb946887c6b0cf0b0ea4e23f1782b2b973d95975acc5080" => :yosemite
-    sha256 "228b90320e7a454802ac25ac7f31ad280d1930fb59c00432206b89420dfdb004" => :mavericks
+    sha256 "27127603f260e915598d790c851f1c3f052da67083ef6505f75009844e0366d9" => :el_capitan
+    sha256 "ab1b62f4e192b97ea2164708c8bf46410a3c7121533f17a2a9664690e4297862" => :yosemite
+    sha256 "41d718440a199ffa67789344599e17aaafbfcdf06c811f33348c7d03fb46c7ee" => :mavericks
   end
 
   head do
