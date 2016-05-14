@@ -18,9 +18,10 @@ class Compcert < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "dbde563143839f312c41fa0f456b7ce331a339caebe93946151e0bf5ce52fffd" => :el_capitan
-    sha256 "7db0b1313255cf028b519be86bf56dc0d0d7adc97d23faaf374fc0249f0e98ac" => :yosemite
-    sha256 "ee7839ffed2ccc0ad65550bf7bb8200c8d9738bc47b348c6f424cf4a5d1a8db7" => :mavericks
+    revision 1
+    sha256 "823686809063af67b896557d7a7c4cbbe8fe30b41132b34531608211848bcdd0" => :el_capitan
+    sha256 "db93c4266c2272e960bb3d60e4bada1f90b714a3546e604b9d23c44ee8d0e726" => :yosemite
+    sha256 "533d0c317afd18a3b4e06135e74ae170ef0eb772e7465b2f5d930e640709c409" => :mavericks
   end
 
   depends_on "ocaml" => :build
