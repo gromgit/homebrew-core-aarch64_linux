@@ -12,7 +12,6 @@ class Efl < Formula
   end
 
   conflicts_with "eina", :because => "efl aggregates formerly distinct libs, one of which is eina"
-  conflicts_with "embryo", :because => "efl aggregates formerly distinct libs, one of which is embryo"
 
   option "with-docs", "Install development libraries/headers and HTML docs"
 
