@@ -21,10 +21,9 @@ class Kore < Formula
   end
 
   bottle do
-    sha256 "acdd632ceba6698b1a52292a1f58f7b7adaefa6a677d138c3f16a1fb3ddd19e1" => :el_capitan
-    sha256 "cba37916c300a8c35d9dab23dabdd2de0abb7eef560fa4f8328195f5543854fa" => :yosemite
-    sha256 "42baed336207505fcbd03f95f5e3a842413569b987ef0f5e568350f81e66bfbd" => :mavericks
-    sha256 "dbb9515b193dc3caa5ada4dd048d42ea8794ecab27d1420c051979ebe456276a" => :mountain_lion
+    sha256 "de46884ed40584d4d19654ad6c73ccbc363d8124c4d5146f7f9cb3a88e5bfda2" => :el_capitan
+    sha256 "ce954b26de131904e013468ca9bca6fd87322be46d4698c2a16b6fb948b4ad6f" => :yosemite
+    sha256 "19ad4950c7979c18ec09aef4433ec2ca09269f6669a8505f4ad438691b4252b0" => :mavericks
   end
 
   depends_on "openssl"
