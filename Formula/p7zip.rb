@@ -7,9 +7,9 @@ class P7zip < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "c177274176797277173b13361c5f437721c57a4bf0bcb7c7602a50cf08cc1148" => :el_capitan
-    sha256 "dba5744e40331a8f390af95e0012584ae26fca2190001ee89a9f2a6d6aa2552c" => :yosemite
-    sha256 "f5994168925b3d141a8b91cd85a4f39d395674da19e8774cab1b00c6c1b63048" => :mavericks
+    sha256 "434d44f856b99cb91d764fa7d33381fa99b6dada32414cc389448c43d894d958" => :el_capitan
+    sha256 "9600ee488e04666b807ecbb0df5bafbb36428ca31e649a0a5d754991cc8c41dd" => :yosemite
+    sha256 "f6d30782b659590984cff65fd9bb8e53a7ea32ee3eb0b3c43d623e7eeacdbd12" => :mavericks
   end
 
   # CVE-2016-2334 and CVE-2016-2335
