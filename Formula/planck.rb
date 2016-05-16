@@ -7,9 +7,9 @@ class Planck < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "736294f7feca9b2fde6569e896bdc5b702d0ee74fb7ae5e3a447a333ec096e6f" => :el_capitan
-    sha256 "8d9bf3c8d482e81dc67333f2cc8b223a92e7ef35b040b08f951315616a961ea6" => :yosemite
-    sha256 "d119087ea5bb9fe7d2775ace2f7f3367209032e1cec1fd88ea1103eb03b2c6de" => :mavericks
+    sha256 "9f67d2c3ee615e80dd012b1ee06630b98f2855576155e119256e46155dd36c03" => :el_capitan
+    sha256 "7e962ad87756af06fe3a2fda9d7063c3d6e47dbf247a6b26847a74059edfa3cf" => :yosemite
+    sha256 "8587394cd6daca59c4ab3e7a32566384d6c055c4721967c1798f427835d68262" => :mavericks
   end
 
   depends_on "leiningen" => :build
