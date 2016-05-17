@@ -2,7 +2,7 @@ class Syncthing < Formula
   desc "Open source continuous file synchronization application"
   homepage "https://syncthing.net/"
   url "https://github.com/syncthing/syncthing.git",
-    :tag => "v0.12.24", :revision => "b4f941784f2150cddfd3fd3a7501ee34c1b56777"
+    :tag => "v0.13.1", :revision => "8e060e23e345c8135b149e570444b515607c5205"
 
   head "https://github.com/syncthing/syncthing.git"
 
@@ -17,15 +17,11 @@ class Syncthing < Formula
   depends_on :hg => :build
 
   def install
-    ENV["GOPATH"] = cached_download/".gopath"
+    ENV["GOPATH"] = buildpath/".syncthing-gopath"
+    mkdir_p buildpath/".syncthing-gopath/src/github.com/syncthing"
+    cp_r cached_download, buildpath/".syncthing-gopath/src/github.com/syncthing/syncthing"
     ENV.append_path "PATH", "#{ENV["GOPATH"]}/bin"
-
-    # FIXTHIS: do this without mutating the cache!
-    hack_dir = cached_download/".gopath/src/github.com/syncthing"
-    rm_rf hack_dir
-    mkdir_p hack_dir
-    ln_s cached_download, "#{hack_dir}/syncthing"
-
+    cd buildpath/".syncthing-gopath/src/github.com/syncthing/syncthing"
     system "./build.sh", "noupgrade"
     bin.install "syncthing"
   end
