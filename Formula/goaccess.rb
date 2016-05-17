@@ -5,9 +5,9 @@ class Goaccess < Formula
   sha256 "45bea0a2d87130f23869a26b103eb1b752a2b4a5b0f6f210cb6ffe8d7b2a18f1"
 
   bottle do
-    sha256 "e5df396714dfff7947bb94d2f2c948d21e08330ca8f1722e357b21f70e88167d" => :el_capitan
-    sha256 "e4d052205467c653c2596e5dbec8582559e7da940fa7b611a41b6b157fece804" => :yosemite
-    sha256 "d1bcf0796d143f80ca19a1dc599ef91e1d29e9814e4216dea840f71d30f2c701" => :mavericks
+    sha256 "79c0c79415f5e634afd15c5208bab66eed2e36ad507ad104c508c0885b69c01d" => :el_capitan
+    sha256 "c5a6d0099a913c82217d8e7ea298e2c6b2a059ba7591a1e753ad4ffe9669c4b4" => :yosemite
+    sha256 "fd070338e95c84373b3a70559f35a6afcf89f908af1816235d4b1f6b4ccb5f48" => :mavericks
   end
 
   head do
