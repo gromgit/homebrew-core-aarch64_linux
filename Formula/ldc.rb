@@ -5,9 +5,9 @@ class Ldc < Formula
   sha256 "8f5453e4e0878110ab03190ae9313ebbb323884090e6e7db87b02e5ed6a1c8b0"
 
   bottle do
-    sha256 "c2ff6360645d4deb2ec135b262d257e85228df95e7765adb9e3a625b76250923" => :el_capitan
-    sha256 "551a58a74107f93620af10964ef3128642ae4575ad2be31c618935ced420cd47" => :yosemite
-    sha256 "6d9d60e0a1711a12e03729f273459363873286ce77977801cfbbfc517fc7af1a" => :mavericks
+    sha256 "2de136bd7d32035ab020e2baa8adc4f6bced37aa4a14f721ab7065dd4b572a03" => :el_capitan
+    sha256 "b4753490e35a5698f5f17ead17f12f58ca698a6c27418135692c781efae2b3dd" => :yosemite
+    sha256 "da22d9b923b89baab0ccec0801827d709ed0ddafbc514ac9b0bd87d28b21b1ff" => :mavericks
   end
 
   devel do
