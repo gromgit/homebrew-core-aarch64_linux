@@ -11,9 +11,9 @@ class Ldc < Formula
   end
 
   devel do
-    url "https://github.com/ldc-developers/ldc/releases/download/v1.0.0-alpha1/ldc-1.0.0-alpha1-src.tar.gz"
-    sha256 "b656437d0d7568c5ac4ef4366376184c06013e79f3dd5a512b18ca9f20df4b63"
-    version "1.0.0-alpha1"
+    url "https://github.com/ldc-developers/ldc/releases/download/v1.0.0-beta2/ldc-1.0.0-beta2-src.tar.gz"
+    sha256 "0aa58dd3aba41623218af7bbdaaa3f5dc941c0b157ec612592aac0d52660f71e"
+    version "1.0.0-beta2"
 
     resource "ldc-lts" do
       url "https://github.com/ldc-developers/ldc/releases/download/v0.17.1/ldc-0.17.1-src.tar.gz"
@@ -52,7 +52,7 @@ class Ldc < Formula
         end
       end
       mkdir "build" do
-        system "cmake", "..", "-DINCLUDE_INSTALL_DIR=#{include}/dlang/ldc", "-DD_COMPILER=../ldc-lts/build/bin/ldmd2", *std_cmake_args
+        system "cmake", "..", "-DINCLUDE_INSTALL_DIR=#{include}/dlang/ldc", "-DD_COMPILER=#{buildpath}/ldc-lts/build/bin/ldmd2", *std_cmake_args
         system "make"
         system "make", "install"
       end
