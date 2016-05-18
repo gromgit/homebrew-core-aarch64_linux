@@ -9,8 +9,9 @@ class Unar < Formula
 
   bottle do
     cellar :any
-    sha256 "3f0abeedfdc17860ef6f8f8406b34cc6fb2b334e13c3081d00fb7c2ef98f7cc1" => :el_capitan
-    sha256 "829f81a91ebb65385bb5b39944f40a8a6a3a900e4717ef00cf608fec2884e3d6" => :yosemite
+    sha256 "28e6bc35bad88f8c86e4575ba658d0cb1f56d6818860392c3229a438dbb51c3f" => :el_capitan
+    sha256 "a9693c9b57367ed4d93ad7016d0b224892d7c301513aaf5105482c9379038e02" => :yosemite
+    sha256 "b818b0efc49503cffa80ff7b9f4a22ffdd8d5c612044320dfd9893304d698256" => :mavericks
   end
 
   depends_on :xcode => :build
