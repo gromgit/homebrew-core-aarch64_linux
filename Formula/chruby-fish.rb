@@ -7,9 +7,9 @@ class ChrubyFish < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "c787e0ccf157727bd9013f056484b09bdd698ffbe5e417d9b1b3979844bfb0cf" => :el_capitan
-    sha256 "88ab2a3351b19ae8d7f625de2faa39c261a3c43ba6c8940c61f172e937e62651" => :yosemite
-    sha256 "d56f48b0a49d0c381bffc28ffe320019b89a87a708ec51f24218a0911104bd78" => :mavericks
+    sha256 "f6968a74913010e7d51c596f8f79e5e7607f461304019b956e4288218da18a09" => :el_capitan
+    sha256 "cdaec12a120e36eedc904686d9ce495d859b8abbbbff4df34efea3b0aa885199" => :yosemite
+    sha256 "80273d552d43e9b91fcba3fd4e3e1e44f6761e78e7a75e416df8f7d07f6bcd8a" => :mavericks
   end
 
   depends_on "fish" => :recommended
