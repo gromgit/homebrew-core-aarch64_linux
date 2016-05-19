@@ -6,9 +6,9 @@ class ZshNavigationTools < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "84dc711a5ed88c6a30cee1154444e7a7bb4f9fa6f5fb934ec4cf0e0760fc746f" => :el_capitan
-    sha256 "01a045c21d8f266f101f3dbfc82b9ea51305f1f61e91995ef64772f5cf5db79e" => :yosemite
-    sha256 "3a74796bfc9a21a23421fcd2437b68f6176c0e18b87953ce3e22e3e63d5a37e7" => :mavericks
+    sha256 "f698c058bddd1edc7ad25d8eaacdc532cbd801d4c04ba6c7fc254488f7acde30" => :el_capitan
+    sha256 "7f9d81ac197f734b8f5b86f446c0ac2941c85f65a11fee2d1f5f27f2631fb72a" => :yosemite
+    sha256 "c74f70154dd2301e5cc20e539c72f25db47dfa63387eb7126c0292d836aa7b15" => :mavericks
   end
 
   def install
