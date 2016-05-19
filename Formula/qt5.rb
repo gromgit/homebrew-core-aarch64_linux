@@ -47,7 +47,7 @@ class Qt5 < Formula
 
   option "without-webengine", "Build without QtWebEngine module"
 
-  deprecated_option "qtdbus" => "with-d-bus"
+  deprecated_option "qtdbus" => "with-dbus"
   deprecated_option "with-d-bus" => "with-dbus"
 
   # OS X 10.7 Lion is still supported in Qt 5.5, but is no longer a reference
