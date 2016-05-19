@@ -3,8 +3,8 @@ require "language/go"
 class SyncthingInotify < Formula
   desc "File watcher intended for use with Syncthing"
   homepage "https://github.com/syncthing/syncthing-inotify"
-  url "https://github.com/syncthing/syncthing-inotify/archive/v0.6.8.tar.gz"
-  sha256 "14e0684e51c40d5b62d0faef9a59e3a7c6a2ad97583cfbcdbc1684ffac5e3b7b"
+  url "https://github.com/syncthing/syncthing-inotify/archive/v0.8.tar.gz"
+  sha256 "886f38fa4b62ef58d54cfa379a1de7e9c461a0ff14149497934fa654e73c946a"
 
   head "https://github.com/syncthing/syncthing-inotify.git"
 
@@ -19,12 +19,12 @@ class SyncthingInotify < Formula
 
   go_resource "github.com/cenkalti/backoff" do
     url "https://github.com/cenkalti/backoff.git",
-      :revision => "4dc77674aceaabba2c7e3da25d4c823edfb73f99"
+      :revision => "32cd0c5b3aef12c76ed64aaf678f6c79736be7dc"
   end
 
   go_resource "github.com/zillode/notify" do
     url "https://github.com/Zillode/notify.git",
-      :revision => "7a61ff497e40ce25d1c49bfe8402fdfb3be6a88c"
+      :revision => "2da5cc9881e8f16bab76b63129c7781898f97d16"
   end
 
   def install
@@ -34,6 +34,8 @@ class SyncthingInotify < Formula
     system "go", "build", "-ldflags", "-w -X main.Version #{version}", "-o", bin_name
     bin.install bin_name
   end
+
+  plist_options :manual => "syncthing-inotify"
 
   def plist; <<-EOS.undent
     <?xml version="1.0" encoding="UTF-8"?>
