@@ -34,7 +34,7 @@ class Qt < Formula
   depends_on "mysql" => :optional
   depends_on "postgresql" => :optional
 
-  deprecated_option "qtdbus" => "with-d-bus"
+  deprecated_option "qtdbus" => "with-dbus"
   deprecated_option "with-d-bus" => "with-dbus"
 
   resource "test-project" do
