@@ -5,6 +5,13 @@ class Theharvester < Formula
   sha256 "dc0ff455ac5c41d53709cfc1de65dac7e96d2d9c33f9706789cca106d5a5ee76"
   head "https://github.com/laramies/theHarvester.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "eb8efb01299ff3a4581e733ec1b7d7d27c42d88d10e2b31cf78f109cb61c4031" => :el_capitan
+    sha256 "a3712887bea4ea3586d39672cb0b194588694de050aa7f1bd762df5cba463fba" => :yosemite
+    sha256 "56c3d5b41a821be12fc6f27ac8beb266984f0c245495c9970614ed776107633f" => :mavericks
+  end
+
   depends_on :python if MacOS.version <= :snow_leopard
 
   resource "requests" do
