@@ -7,9 +7,9 @@ class Openvpn < Formula
 
   bottle do
     cellar :any
-    sha256 "0306a9f03cc1dfbb13e7f694cc1212b71d258f792077f1cc44d0b5f8d5ac14ac" => :el_capitan
-    sha256 "6a7849f46f06b0e090f489974cbb474751b14284a25f41b40d1cecd1430833c4" => :yosemite
-    sha256 "35e58ca6072dc8cb48fb9cfe85d9518f9b0530d4578f5f6ccf7d720cef7593da" => :mavericks
+    sha256 "7b909e4d3af4fa2a75a8cb7d0fdae13e54bd4be45818e9402468ab0c2ca65704" => :el_capitan
+    sha256 "3f8d29088cdf0b171b6b7306780b812da4de6bfdf02065d28fd317b327b80401" => :yosemite
+    sha256 "6a64d83068e97d4aa0fb63cacba14630c7c36e5d6e87e8bc5875fbd379d111bf" => :mavericks
   end
 
   depends_on "lzo"
