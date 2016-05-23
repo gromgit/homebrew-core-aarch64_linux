@@ -6,6 +6,13 @@ class ApacheBrooklynCli < Formula
   url "https://github.com/apache/brooklyn-client/archive/rel/apache-brooklyn-0.9.0.tar.gz"
   sha256 "873804a145aed33de86e3928df05bad31a921f73984fed06ecdeb11e799d9c01"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "4252ac91abef5c6c0026a0db2c8afc38b30d9af649620e6bf7b7e84a47e9a402" => :el_capitan
+    sha256 "c9190a11e83e3a9bdc2d200125050c384dcbf1490549bf60059240a2f1882a38" => :yosemite
+    sha256 "5bd6d72b2f1a91699f990bb9e3b09d743595909407a66edfb8f9436847958077" => :mavericks
+  end
+
   depends_on "go" => :build
 
   go_resource "github.com/codegangsta/cli" do
