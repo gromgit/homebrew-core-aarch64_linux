@@ -4,6 +4,8 @@ class Googler < Formula
   url "https://github.com/jarun/googler/archive/v2.4.1.tar.gz"
   sha256 "0346a0e0df1091e16e6504154e7da15a98fa3fb9e76df6497c37ac76acf19924"
 
+  head "https://github.com/jarun/googler.git"
+
   bottle do
     cellar :any_skip_relocation
     sha256 "41e0ec94cc348ee3078a0b29f8e328d05866a74c69261ea8b10c559f2e0fe6d9" => :el_capitan
