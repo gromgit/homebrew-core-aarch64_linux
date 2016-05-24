@@ -7,9 +7,11 @@ class PandocCrossref < Formula
   sha256 "44bdbc38d8d7a743951a2333fb70b33a6497b2d50ccdb5696736fdc5133aef21"
 
   bottle do
-    sha256 "2edd7fe6757e7a3b4599b459940ae77dcb4bfa265d6ef2555b8139d56a2b6750" => :el_capitan
-    sha256 "66d0ccc3d84db7029b841db98c575d457881935377922668e1e1cf631c3a3242" => :yosemite
-    sha256 "35ce5fe43ada3cdadfd1552c0cffbe0032c499f868c951de40789877755f4dcb" => :mavericks
+    cellar :any_skip_relocation
+    revision 1
+    sha256 "993ff90a250e2b8f9449d6821f7950512ec89fee88d6924b4099ff34359b69f9" => :el_capitan
+    sha256 "20edf6334fec421dddba328dde3ded1f1ea259be46ca469a402e64d293afc9b6" => :yosemite
+    sha256 "fa60d9ff3056f423645cab2937f0e9fb8807d6d809ede5ad43d42126125ffcb3" => :mavericks
   end
 
   depends_on "ghc" => :build
