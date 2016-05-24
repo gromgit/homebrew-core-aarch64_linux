@@ -18,6 +18,13 @@ class Opentsdb < Formula
   url "https://github.com/OpenTSDB/opentsdb/releases/download/v2.2.0/opentsdb-2.2.0.tar.gz"
   sha256 "5689d4d83ee21f1ce5892d064d6738bfa9fdef99f106f45d5c38eefb9476dfb5"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "050fc28675d4b62c7143ff6f6748fc6361305c2701e3d3a3babec64a3078130f" => :el_capitan
+    sha256 "b15a3370a281f2a26cb3dbd531d9bf165fe7796d895912aa5caedd6d7ab4b926" => :yosemite
+    sha256 "890ed2fd269e9fd20825e592f2a2d3cc91269669418b93389c56eded33d4b226" => :mavericks
+  end
+
   depends_on "hbase"
   depends_on "lzo" => :recommended
   depends_on HbaseLZORequirement if build.with?("lzo")
