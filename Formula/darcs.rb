@@ -9,9 +9,10 @@ class Darcs < Formula
   sha256 "17318d1b49ca4b1aa00a4bffc2ab30a448e7440ce1945eed9bf382d77582308d"
 
   bottle do
-    sha256 "a65c9d857fd868ff6768c3076511b6bfe5d11f893b58a3d943ae7b0319db73d3" => :el_capitan
-    sha256 "7e76c59e699d4941880fea6986d13d62ceb4d0b60736e54f813f4d79ec4810da" => :yosemite
-    sha256 "c7f60a61ab519b61d7ea229e3e67c9d1c75b1c39d49da5b07dfcdf8fe4e11658" => :mavericks
+    cellar :any_skip_relocation
+    sha256 "34cf772253eef5841ac056f3d71a352d81bc28c480ae5afe3411056799f1ce01" => :el_capitan
+    sha256 "9f5f640b82e3f5d5188cfe3005115fc0ffe43d06bb1e3a3422612a377d0b59af" => :yosemite
+    sha256 "3b8693859e7bbc66745141d9b3d1db01fdc9f2ef3399165bc6263d8a27bdfc08" => :mavericks
   end
 
   depends_on "ghc" => :build
