@@ -125,16 +125,13 @@ class Wireshark < Formula
 
   def caveats; <<-EOS.undent
     If your list of available capture interfaces is empty
-    (default OS X behavior), try the following commands:
+    (default OS X behavior), try installing ChmodBPF from homebrew cask:
 
-      curl https://bugs.wireshark.org/bugzilla/attachment.cgi?id=3373 -o ChmodBPF.tar.gz
-      tar zxvf ChmodBPF.tar.gz
-      open ChmodBPF/Install\\ ChmodBPF.app
+      brew cask install wireshark-chmodbpf
 
-    This adds a launch daemon that changes the permissions of your BPF
-    devices so that all users in the 'admin' group - all users with
-    'Allow user to administer this computer' turned on - have both read
-    and write access to those devices.
+    This creates an 'access_bpf' group and adds a launch daemon that changes the
+    permissions of your BPF devices so that all users in that group have both
+    read and write access to those devices.
 
     See bug report:
       https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=3760
