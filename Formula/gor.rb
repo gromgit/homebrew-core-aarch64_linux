@@ -2,9 +2,9 @@ require "language/go"
 
 class Gor < Formula
   desc "Real-time HTTP traffic replay tool written in Go"
-  homepage "https://github.com/buger/gor/"
-  url "https://github.com/buger/gor/archive/v0.10.1.tar.gz"
-  sha256 "283ca037a782844df42a0352c072efb558ffca3dc76f88a6317eca0d44ab1a5c"
+  homepage "https://gortool.com"
+  url "https://github.com/buger/gor/archive/v0.13.0.tar.gz"
+  sha256 "e4af70afacc162200b63d66927824f64f54e3cf662c50ce37e54912565a31f23"
   head "https://github.com/buger/gor.git"
 
   bottle do
@@ -24,6 +24,11 @@ class Gor < Formula
   go_resource "github.com/buger/elastigo" do
     url "https://github.com/buger/elastigo.git",
       :revision => "23fcfd9db0d8be2189a98fdab77a4c90fcc3a1e9"
+  end
+
+  go_resource "github.com/google/gopacket" do
+    url "https://github.com/google/gopacket.git",
+      :revision => "aa09ced736460d76535444c825932a0742975f7d"
   end
 
   def install
