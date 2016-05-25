@@ -57,7 +57,7 @@ class Artifactory < Formula
         <string>#{libexec}</string>
 
         <key>Program</key>
-        <string>bin/artifactory.sh</string>
+        <string>#{bin}/artifactory.sh</string>
 
         <key>KeepAlive</key>
         <true/>
