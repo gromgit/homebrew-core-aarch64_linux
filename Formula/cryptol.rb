@@ -22,10 +22,9 @@ class Cryptol < Formula
   end
 
   bottle do
-    revision 1
-    sha256 "029b27a757693e94ecc6a5edf73686577dcdb258cfe1e6544a9d6764c0c7e2da" => :el_capitan
-    sha256 "f6189a54a06fb8a7e91b1526cdb1b02cd0b5c0638421a7bcfbbcd12bf6aceb2b" => :yosemite
-    sha256 "f29fb9813f77732f71a1d9e78fc5615f97b15847b894453afe4bd746a17befc5" => :mavericks
+    sha256 "baea71ec45613f8c74f76432cd22a1a45166534e50166d5f6618eea3f14fd61c" => :el_capitan
+    sha256 "cceb554a99d0cbca4d9c1253c7afb3ea31b8f6bf0756324af54ce3bc0fa7e582" => :yosemite
+    sha256 "28ab78ff34479ee6b8f7e8efc7ae948d5fdc7c67efe0a4e8b783e3766351347d" => :mavericks
   end
 
   depends_on "ghc" => :build
