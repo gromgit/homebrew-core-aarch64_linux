@@ -11,9 +11,9 @@ class Saltstack < Formula
 
   bottle do
     cellar :any
-    sha256 "74d5d271c38a7e29c3635bf7d1c31c3d7c52612967e914da81632b4cb65702c6" => :el_capitan
-    sha256 "e1d1b92cb44507aaca341ef5f034eb98b5f71a5fbefad902161f685df3e6bef5" => :yosemite
-    sha256 "e506ef751b9e9cbe9473a1a4e3c2717e1804271bd91bbaa5c2af7edc0c99bf90" => :mavericks
+    sha256 "7c460c09b154f48c8f9f44d4171f5267c8e3281e5c2811311104e3c7e352d28d" => :el_capitan
+    sha256 "6f0dfe45a9dff7d6b44577bbaa735fdc48240f0ec49ac9526acd9b059d178411" => :yosemite
+    sha256 "1ce071f0f14665c9d4d3fee893f498d17977c9228a1e8f723b2e64e846f2442b" => :mavericks
   end
 
   depends_on "swig" => :build
