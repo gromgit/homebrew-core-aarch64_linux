@@ -7,9 +7,9 @@ class Ansible < Formula
   head "https://github.com/ansible/ansible.git", :branch => "devel"
 
   bottle do
-    sha256 "b24e695649a6467d13288e892910b677eb16a5dcb197ecfe09839ff8c536115d" => :el_capitan
-    sha256 "71b8c4e609a97225dbf816ecb8430feb9f27649be9d64ac6045bb63671c01a1a" => :yosemite
-    sha256 "260b5ce5252d6071580e6e14a7147a2642b6fbf54fa7152daea15a0cfddf936b" => :mavericks
+    sha256 "aa64b63dcf3c60f8fc8f3fe9b72730ab57c702ffcd19b0dd8649f95f27f5956b" => :el_capitan
+    sha256 "608ce12bb4311243f4a297acbda8cd67368d613695af6bddae0faf089a34b1a0" => :yosemite
+    sha256 "2d0ae0aa7ab710db5505b81de1b8af696a7d95469820d395c9d898368d2679a4" => :mavericks
   end
 
   depends_on "pkg-config" => :build
