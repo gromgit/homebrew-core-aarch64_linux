@@ -6,6 +6,13 @@ class Cosi < Formula
   url "https://github.com/dedis/cosi/archive/0.8.5.tar.gz"
   sha256 "7dd25c83a838ebadff3c8f6b8a5bd84702cf74e5e6eb545359b7816f89b85e73"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "e73fd1b11e66d3931c91d6504b9958d44059aa4f3bbc547ed6cc8bdbc3717c6e" => :el_capitan
+    sha256 "2953f8c62a93c976bf450d9605cab850d6d442e9e1885f3a455243942e59f6dd" => :yosemite
+    sha256 "73d73bd817f6700c751a9065133ea460115ee5e5dbbff89d0655137bee30ef1f" => :mavericks
+  end
+
   depends_on "go" => :build
 
   go_resource "github.com/BurntSushi/toml" do
