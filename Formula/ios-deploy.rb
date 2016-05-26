@@ -5,6 +5,12 @@ class IosDeploy < Formula
   sha256 "e0c20294e43bc231292cc9f3172113e0da8f728b1ed988fb4fe883ae99b20056"
   head "https://github.com/phonegap/ios-deploy.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "11c48e627e609830c57c230b38716318db165c69cc1a32c8a777e9076334ee37" => :el_capitan
+    sha256 "183f932cc95c3bbfd9fba037761432a01dd85b861aec6cf4b0c7ca9bd7f8485e" => :yosemite
+  end
+
   depends_on :xcode => :build
   depends_on :macos => :yosemite
 
