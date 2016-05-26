@@ -6,11 +6,10 @@ class Kvazaar < Formula
   head "https://github.com/ultravideo/kvazaar.git"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "a50a695243ea971c8ab2cb85358f3095128e52be588df7b609cbf22048fb58ef" => :el_capitan
-    sha256 "1cf96786d4613d94b93a8091027ea9d14ae6c801d11996def7c4b408316032e6" => :yosemite
-    sha256 "aa78c8fa2657ccac25a0c3ac30d7840f281ab8af8a59aafb8058a122090e1b97" => :mavericks
-    sha256 "5fc3c49c10479539474539e1bee928f89a3586f1f44e2f346c3b6484ff6395d2" => :mountain_lion
+    cellar :any
+    sha256 "51cc24538d1978ad0dc4d52056e45a3fcf2960d6d859ec728c4edd44e267dfde" => :el_capitan
+    sha256 "165654dedd6d7bb438ea9215789bf97a8fa426b3e7f09b1f010559c680a6b7b6" => :yosemite
+    sha256 "ae000ea2d5cb4717dce904aa371813e3603c0b05bf333306948457848e22c272" => :mavericks
   end
 
   depends_on "autoconf" => :build
