@@ -69,7 +69,7 @@ class SwiProlog < Formula
     # './prepare' prompts the user to build documentation
     # (which requires other modules). '3' is the option
     # to ignore documentation.
-    system "echo '3' | ./prepare" if build.head?
+    system "echo 3 | ./prepare" if build.head?
     system "./configure", *args
     system "make"
     system "make", "install"
