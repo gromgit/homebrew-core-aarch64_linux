@@ -18,17 +18,17 @@ class Rust < Formula
     end
   end
 
+  bottle do
+    sha256 "b056dfa306e29933415f9d50c6b5a1d76fe84d346f1337754c44c1a961f18409" => :el_capitan
+    sha256 "47bf11c39eee712e1f8276e1a77ebf70d1d87a125ea34e4a7cf00431d9deea45" => :yosemite
+    sha256 "d813ee35ceca6c9e125a5f950d1f7dd60ad79682064b07fa2f48cf2aa16a8dbf" => :mavericks
+  end
+
   head do
     url "https://github.com/rust-lang/rust.git"
     resource "cargo" do
       url "https://github.com/rust-lang/cargo.git"
     end
-  end
-
-  bottle do
-    sha256 "b056dfa306e29933415f9d50c6b5a1d76fe84d346f1337754c44c1a961f18409" => :el_capitan
-    sha256 "47bf11c39eee712e1f8276e1a77ebf70d1d87a125ea34e4a7cf00431d9deea45" => :yosemite
-    sha256 "d813ee35ceca6c9e125a5f950d1f7dd60ad79682064b07fa2f48cf2aa16a8dbf" => :mavericks
   end
 
   option "with-llvm", "Build with brewed LLVM. By default, Rust's LLVM will be used."
