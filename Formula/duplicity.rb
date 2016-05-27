@@ -5,10 +5,9 @@ class Duplicity < Formula
   sha256 "594c6d0e723e56f8a7114d57811c613622d535cafdef4a3643a4d4c89c1904f8"
 
   bottle do
-    revision 2
-    sha256 "cc719afe3ad72a76b9eb7ae4aefae09c6bb3a26f56d6a737344af23ddad39502" => :el_capitan
-    sha256 "1d2ab87d0411e0f701f14f7202407f6800d75148a596ba5d9acdcb78de5ff33e" => :yosemite
-    sha256 "9bbfb2ab584675e4251280c85bcc4bac2f4455fee86d4a9a1f1bd67df43c661f" => :mavericks
+    sha256 "47cdf42038348b3a3e009ccd8d148a05f41a33769bdbbf82b0a59cbc1ab16ed3" => :el_capitan
+    sha256 "76aeaf0e6ce250a6b37eea30e7b8d1b13baf583f525e355d74e9c6ab56f05ab5" => :yosemite
+    sha256 "11a6ddfb129a58293ce2a092207ee3f2123b40be19026e7fe56cc5ffc8a3e62d" => :mavericks
   end
 
   option :universal
