@@ -9,7 +9,7 @@ class Devil < Formula
 
     # fix compilation issue for ilur.c
     patch do
-      url "https://raw.githubusercontent.com/Homebrew/patches/3db2f9727cea4a51fbcfae742518c614020fb8f2/devil/patch-src-ILU-ilur-ilur.c.diff"
+      url "https://raw.githubusercontent.com/Homebrew/formula-patches/3db2f9727cea4a51fbcfae742518c614020fb8f2/devil/patch-src-ILU-ilur-ilur.c.diff"
       sha256 "ce96bc4aad940b80bc918180d6948595ee72624ae925886b1b770f2a7be8a2f9"
     end
   end
@@ -33,7 +33,7 @@ class Devil < Formula
 
     # fix compilation issue for ilur.c
     patch do
-      url "https://raw.githubusercontent.com/Homebrew/patches/3db2f9727cea4a51fbcfae742518c614020fb8f2/devil/patch-DevIL-src-ILU-ilur-ilur.c.diff"
+      url "https://raw.githubusercontent.com/Homebrew/formula-patches/3db2f9727cea4a51fbcfae742518c614020fb8f2/devil/patch-DevIL-src-ILU-ilur-ilur.c.diff"
       sha256 "8021ffcd5c9ea151b991c7cd29b49ecea14afdfe07cb04fa9d25ab07d836f7d0"
     end
   end

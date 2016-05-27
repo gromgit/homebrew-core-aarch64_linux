@@ -44,7 +44,7 @@ class Pulseaudio < Formula
 
   # i386 patch per MacPorts
   patch :p0 do
-    url "https://raw.githubusercontent.com/Homebrew/patches/15fa4f03/pulseaudio/i386.patch"
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/15fa4f03/pulseaudio/i386.patch"
     sha256 "d3a2180600a4fbea538949b6c4e9e70fe7997495663334e50db96d18bfb1da5f"
   end
 

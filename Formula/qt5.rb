@@ -35,7 +35,7 @@ class Qt5 < Formula
   #   * poppler    (with `--with-qt5` option)
   #   * wireshark  (with `--with-qt5` option)
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/patches/e8fe6567/qt5/restore-pc-files.patch"
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/e8fe6567/qt5/restore-pc-files.patch"
     sha256 "48ff18be2f4050de7288bddbae7f47e949512ac4bcd126c2f504be2ac701158b"
   end
 

@@ -21,7 +21,7 @@ class Expat < Formula
 
   # http://seclists.org/oss-sec/2016/q2/360
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/patches/1c9ee45548b75/expat/CVE-2016-0718-v2-2-1.patch"
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/1c9ee45548b75/expat/CVE-2016-0718-v2-2-1.patch"
     sha256 "575f8d45835b917da833106ee4cb92efd98c5c1284f6f437aaf65bbc63edd767"
   end
 

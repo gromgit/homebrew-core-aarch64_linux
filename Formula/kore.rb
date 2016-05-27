@@ -15,7 +15,7 @@ class Kore < Formula
     # Backport of https://github.com/jorisvink/kore/commit/4dff0b57ae6ed113d15b
     # https://github.com/jorisvink/kore/issues/70
     patch do
-      url "https://raw.githubusercontent.com/Homebrew/patches/c86b133e2c137cd/kore/123findssl.diff"
+      url "https://raw.githubusercontent.com/Homebrew/formula-patches/c86b133e2c137cd/kore/123findssl.diff"
       sha256 "70751661705993deab7d47c5505666738477f44f5b5bc1399b0ed9f30ebad6ec"
     end
   end
