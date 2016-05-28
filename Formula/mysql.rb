@@ -25,6 +25,11 @@ class Mysql < Formula
   depends_on "pidof" unless MacOS.version >= :mountain_lion
   depends_on "openssl"
 
+  # https://github.com/Homebrew/homebrew-core/issues/1475
+  # Needs at least Clang 3.3, which shipped alongside Lion.
+  # Note: MySQL themselves don't support anything below Mavericks.
+  depends_on :macos => :lion
+
   conflicts_with "mysql-cluster", "mariadb", "percona-server",
     :because => "mysql, mariadb, and percona install the same binaries."
   conflicts_with "mysql-connector-c",
