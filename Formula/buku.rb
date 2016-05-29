@@ -6,9 +6,9 @@ class Buku < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "dbd8fa932bfa207a4a30c4b3541ab850aa0b003e634651737458f0444cd45775" => :el_capitan
-    sha256 "c463659c95a3fa76ccdfc345cdc105e814bb00a2ad2b104d5a5ed683a72f0a6d" => :yosemite
-    sha256 "24eff66c1db880ec5ce58329d4b7c0b8d2a3c000bbe74cce75209cea2a4f008a" => :mavericks
+    sha256 "be15ff762a030825bd946b2f284efe52739dd16f431af04118a412c11592ebb8" => :el_capitan
+    sha256 "118f95dae5477b26d99cc84e9480c72a60a6d92f26c53368b913abad48e734a7" => :yosemite
+    sha256 "ab1f5bbf4168ea6d0295decbe1b10c4a2bb3da1c85bc2251eeb3e92ff5688df9" => :mavericks
   end
 
   depends_on :python3
