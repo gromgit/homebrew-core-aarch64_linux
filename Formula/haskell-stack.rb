@@ -58,9 +58,9 @@ class HaskellStack < Formula
   end
 
   bottle do
-    sha256 "891fa9dc2ac357980b6140d5771d60b5056d7845ad03b580b1206a5234cb8e76" => :el_capitan
-    sha256 "e1c3e21c829930cad1870bada9a90969bf32ee866bb6379c1bc8004759cb0b54" => :yosemite
-    sha256 "a3ab294bf25d6424ecdc70b7eee2f2928674e51098a73c4eef6ae746fb6f5eb4" => :mavericks
+    sha256 "4ee81138d47a78fb6cd416491d1c6f1f9c610473870dcba8617c6625d82b7d20" => :el_capitan
+    sha256 "a7f3d96de72d4d0c5ce3afcc25a5de0eabccf8ccc803f04c9061ee68158a649e" => :yosemite
+    sha256 "0cb19aded681b0b4a002236f0e0ed992e229c1a5598adf2748a5272328dd5b41" => :mavericks
   end
 
   depends_on "ghc" => :build
