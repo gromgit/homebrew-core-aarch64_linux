@@ -14,6 +14,7 @@ class Tor < Formula
   devel do
     url "https://dist.torproject.org/tor-0.2.8.3-alpha.tar.gz"
     mirror "https://tor.eff.org/dist/tor-0.2.8.3-alpha.tar.gz"
+    version "0.2.8.3-alpha"
     sha256 "88da40c24f0bb19e19b37b8deab1b0d86608798746c81380cf17996d269f9053"
   end
 
