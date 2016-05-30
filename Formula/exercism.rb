@@ -9,9 +9,9 @@ class Exercism < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e96a64457d37643fb74b0f023dd90fa03653762ce90711458c611c1028dfae7e" => :el_capitan
-    sha256 "376c29e2fe2323bed03ce6a7c15fde6b68f09d597fe7251db96573aeb080fb13" => :yosemite
-    sha256 "5c366c4cda2403e3120de6c39bd86631e9a78eccd374efee3a6b841431cb2f20" => :mavericks
+    sha256 "0dbc20e71d07714ba4205407b870a13051817183828e957c0b96bc8c21604b86" => :el_capitan
+    sha256 "147253109b9ef578b4684b83b7ae2c7258a4493b12d70ad83e5f09ea003f3330" => :yosemite
+    sha256 "0ee231c464afff29ddf03a9709707e3087748275170e3a77579a5385f2d2dcf7" => :mavericks
   end
 
   depends_on "go" => :build
