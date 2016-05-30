@@ -6,9 +6,9 @@ class PerconaXtrabackup < Formula
   revision 1
 
   bottle do
-    sha256 "21f50e161b66679564cd0b9e43a59b74cd46dbfd4d36bd056c0649af3a310766" => :el_capitan
-    sha256 "0748d6439e8305471d76279cb64ddff7c94e0c0921f23dd25b7efcb487b97509" => :yosemite
-    sha256 "368b7274e4b82a98f8dc2998b5741fbb484655a1e075f975d48b4600e7385ade" => :mavericks
+    sha256 "26739e53d629d79e960deb381c809eaabf103f0975775b36183380f7bbe9e3e8" => :el_capitan
+    sha256 "94a630fdd11d040a051ddc609cbed3fcdc9497d0d3afda30d44ebffe3e642279" => :yosemite
+    sha256 "de2aa64aa0486565a262ad23d9e9299d176a976709c8638391820db279dd79a0" => :mavericks
   end
 
   option "without-docs", "Build without man pages (which requires python-sphinx)"
