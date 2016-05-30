@@ -8,9 +8,9 @@ class Websocketd < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "fb6272c915a2e11304fda7dcc3082745f15e323dcd75e2b3d0b8894e31e2ba8d" => :el_capitan
-    sha256 "c7dffa33a41c4cd37b6c32b24ef72bcf52a66459940c788fb2ff29d4b6c7d24a" => :yosemite
-    sha256 "b83fd95c900d994654ed40bf9c7f90a3674d4add5a7f8fa6fdcbdddb61fd88c6" => :mavericks
+    sha256 "c1aae82fc721119bea2b9c4eeeffcca73e1b95b35f7ed18aa845bedd0d49217f" => :el_capitan
+    sha256 "ede9acb8e57e5da83bfe01a9ef75aaecfa38ca594eca150c8d885ea9d3a5acd5" => :yosemite
+    sha256 "f362300b0088de2ff7f918d80aa3bcdc3afb65eb3b6e8fe7c96ec815a16a9ba4" => :mavericks
   end
 
   depends_on "go" => :build
