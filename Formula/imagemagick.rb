@@ -11,9 +11,9 @@ class Imagemagick < Formula
   head "http://git.imagemagick.org/repos/ImageMagick.git"
 
   bottle do
-    sha256 "d65e148abe74ad790667bc7a49d932160e0aa4bf7c06e4c1823075c4428ebe6f" => :el_capitan
-    sha256 "06427fab2e2e635cf829c93e7009820712602c0b78bc091bc13218cd39aa75ad" => :yosemite
-    sha256 "8af98be382cef9c87d477bd5b7a265daec6904aba258c95c812c7c779c1b86b5" => :mavericks
+    sha256 "040e871769dbd4f1e699e8df31db7c6949eeeb2ec757a2aee389108a5e436ae9" => :el_capitan
+    sha256 "40a0c04dce8f1facccc7d1b29442f04cf872ef7db101d45a99ccb7a47e1d095b" => :yosemite
+    sha256 "ae5445cf58e6b829cbbd8f1578269abac85d63086896fb931f29ec7dfdb2f49b" => :mavericks
   end
 
   deprecated_option "enable-hdri" => "with-hdri"
