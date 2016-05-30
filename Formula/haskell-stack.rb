@@ -12,9 +12,10 @@ class HaskellStack < Formula
   head "https://github.com/commercialhaskell/stack.git"
 
   bottle do
-    sha256 "4ee81138d47a78fb6cd416491d1c6f1f9c610473870dcba8617c6625d82b7d20" => :el_capitan
-    sha256 "a7f3d96de72d4d0c5ce3afcc25a5de0eabccf8ccc803f04c9061ee68158a649e" => :yosemite
-    sha256 "0cb19aded681b0b4a002236f0e0ed992e229c1a5598adf2748a5272328dd5b41" => :mavericks
+    cellar :any_skip_relocation
+    sha256 "e8e2343689c99d85bb1c930d83cbafc8ca7be4fc64faaeb844771a1511a0ff3d" => :el_capitan
+    sha256 "fe0aa6086ec90d711ebf0cd0169f5a3dc76f6f1a8c81b357ba6c81d0a22a86af" => :yosemite
+    sha256 "06a004b35c817fc17b0496aa06a886d5d1a69e9436bb9e8aa5e039f3148212c2" => :mavericks
   end
 
   option "without-bootstrap", "Don't bootstrap a stage 2 stack"
