@@ -22,9 +22,10 @@ class Onetime < Formula
 
   bottle do
     cellar :any_skip_relocation
-    revision 1
+    revision 2
     sha256 "4d27502d9a4b8d257182dcaf99b05121033352928c3716a1ebe932a24276e73a" => :el_capitan
-    sha256 "4e914d9a8d176f3505ae88d5eff3eb905c1a5f9005cf3d62aadaeae9bb6cbc28" => :mavericks
+    sha256 "561f129baa60ba8aa08f47130a35f531fdd7ddda80c3e0636bd39c96c3d06930" => :yosemite
+    sha256 "31698cc41c95bdb23f340f2641124826f8b5324a69ce338146e7c01800646fa5" => :mavericks
   end
 
   devel do
