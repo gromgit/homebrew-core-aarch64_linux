@@ -1,9 +1,8 @@
 class Giflib < Formula
   desc "Library and utilities for processing GIFs"
   homepage "https://giflib.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/giflib/giflib-5.1.4.tar.bz2"
-  sha256 "df27ec3ff24671f80b29e6ab1c4971059c14ac3db95406884fc26574631ba8d5"
-  revision 1
+  url "https://downloads.sourceforge.net/project/giflib/giflib-5.2.1.tar.gz"
+  sha256 "31da5562f44c5f15d63340a09a4fd62b48c45620cd302f77a6d9acf0077879bd"
 
   bottle do
     cellar :any
@@ -14,18 +13,16 @@ class Giflib < Formula
     sha256 "91161dd227491e058a9ca79ca89bb647d2bac5e368bed5457fc80a30d383ff2d" => :el_capitan
   end
 
-  # CVE-2016-3977
-  # https://sourceforge.net/p/giflib/bugs/102/
-  # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=820526
-  patch do
-    url "https://deb.debian.org/debian/pool/main/g/giflib/giflib_5.1.4-3.debian.tar.xz"
-    sha256 "767ea03c1948fa203626107ead3d8b08687a3478d6fbe4690986d545fb1d60bf"
-    apply "patches/CVE-2016-3977.patch"
+  # Upstream has stripped out the previous autotools-based build system and their
+  # Makefile doesn't work on macOS. See https://sourceforge.net/p/giflib/bugs/133/
+  patch :p0 do
+    url "https://sourceforge.net/p/giflib/bugs/_discuss/thread/4e811ad29b/c323/attachment/Makefile.patch"
+    sha256 "a94e7bdd8840a31cecacc301684dfdbf7b98773ad824aeaab611fabfdc513036"
   end
 
   def install
-    system "./configure", "--prefix=#{prefix}", "--disable-dependency-tracking"
-    system "make", "install"
+    system "make", "all"
+    system "make", "install", "PREFIX=#{prefix}"
   end
 
   test do
