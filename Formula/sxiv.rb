@@ -4,6 +4,7 @@ class Sxiv < Formula
   url "https://github.com/muennich/sxiv/archive/v25.tar.gz"
   mirror "https://deb.debian.org/debian/pool/main/s/sxiv/sxiv_25.orig.tar.gz"
   sha256 "16d1aca1a179e1c0875844efe2e51cfa396a4403467c389f7e9221a733ae5e26"
+  revision 1
   head "https://github.com/muennich/sxiv.git"
 
   bottle do
