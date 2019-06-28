@@ -3,7 +3,7 @@ class Xplanet < Formula
   homepage "https://xplanet.sourceforge.io/"
   url "https://downloads.sourceforge.net/project/xplanet/xplanet/1.3.1/xplanet-1.3.1.tar.gz"
   sha256 "4380d570a8bf27b81fb629c97a636c1673407f4ac4989ce931720078a90aece7"
-  revision 3
+  revision 4
 
   bottle do
     sha256 "aceb0af3fffbec2688b79ed1ae4d9c3c4004d8f6d685fb3156799b416403595a" => :catalina
