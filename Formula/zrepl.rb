@@ -1,8 +1,8 @@
 class Zrepl < Formula
   desc "One-stop ZFS backup & replication solution"
   homepage "https://zrepl.github.io"
-  url "https://github.com/zrepl/zrepl/archive/v0.1.1.tar.gz"
-  sha256 "0c16554e4527d14a390d78cf95bce759da425019a83ec63acfed5b4c50d68c9c"
+  url "https://github.com/zrepl/zrepl/archive/v0.2.0.tar.gz"
+  sha256 "40ceb559059b43e96f61303a43ca0fac80b26f8281a07aa03e235658a6548891"
   head "https://github.com/zrepl/zrepl.git"
 
   bottle do
@@ -29,12 +29,11 @@ class Zrepl < Formula
     ENV["GOPATH"] = gopath
     ENV.prepend_create_path "PATH", gopath/"bin"
     cd gopath/"src/github.com/zrepl/zrepl" do
-      system "dep", "ensure", "-v", "-vendor-only"
-      system "go", "build", "-o", "'$GOPATH/bin/stringer'", "./vendor/golang.org/x/tools/cmd/stringer"
-      system "go", "build", "-o", "'$GOPATH/bin/protoc-gen-go'", "./vendor/github.com/golang/protobuf/protoc-gen-go"
-      system "go", "build", "-o", "'$GOPATH/bin/enumer'", "./vendor/github.com/alvaroloes/enumer"
-      system "go", "build", "-o", "'$GOPATH/bin/goimports'", "./vendor/golang.org/x/tools/cmd/goimports"
-      system "go", "build", "-o", "'$GOPATH/bin/golangci-lint'", "./vendor/github.com/golangci/golangci-lint/cmd/golangci-lint"
+      system "go", "build", "-o", "'$GOPATH/bin/stringer'", "golang.org/x/tools/cmd/stringer"
+      system "go", "build", "-o", "'$GOPATH/bin/protoc-gen-go'", "github.com/golang/protobuf/protoc-gen-go"
+      system "go", "build", "-o", "'$GOPATH/bin/enumer'", "github.com/alvaroloes/enumer"
+      system "go", "build", "-o", "'$GOPATH/bin/goimports'", "golang.org/x/tools/cmd/goimports"
+      system "go", "build", "-o", "'$GOPATH/bin/golangci-lint'", "github.com/golangci/golangci-lint/cmd/golangci-lint"
       system "make", "ZREPL_VERSION=#{version}"
       bin.install "artifacts/zrepl"
     end
