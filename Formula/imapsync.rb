@@ -1,9 +1,9 @@
 class Imapsync < Formula
   desc "Migrate or backup IMAP mail accounts"
   homepage "https://imapsync.lamiral.info/"
-  url "https://imapsync.lamiral.info/dist2/imapsync-1.921.tgz"
+  url "https://imapsync.lamiral.info/dist2/imapsync-1.945.tgz"
   # Note the mirror will return 404 until the version becomes outdated.
-  sha256 "0b3fc87d95bb06f8e28dbe9ac7d87828b80204b2589411886b1a78c83ae8d969"
+  sha256 "38c8bceea28ff9a4f533d67e945ef5c0025d81a1d312239c17f38234971ce529"
   head "https://github.com/imapsync/imapsync.git"
 
   bottle do
@@ -73,6 +73,16 @@ class Imapsync < Formula
     sha256 "0786319d3a3a8bae5d727939244bf17e140b714f52734d5e9f627203e4cf3e3b"
   end
 
+  resource "File::Tail" do
+    url "https://cpan.metacpan.org/authors/id/M/MG/MGRABNAR/File-Tail-1.3.tar.gz"
+    sha256 "26d09f81836e43eae40028d5283fe5620fe6fe6278bf3eb8eb600c48ec34afc7"
+  end
+
+  resource "IO::Socket::IP" do
+    url "https://cpan.metacpan.org/authors/id/P/PE/PEVANS/IO-Socket-IP-0.39.tar.gz"
+    sha256 "11950da7636cb786efd3bfb5891da4c820975276bce43175214391e5c32b7b96"
+  end
+
   def install
     ENV.prepend_create_path "PERL5LIB", libexec/"lib/perl5"
 
@@ -104,12 +114,9 @@ class Imapsync < Formula
   end
 
   test do
-    output = shell_output("#{bin}/imapsync --dry", 255)
-    assert_match version.to_s, output
-    resources.each do |r|
-      next if ["Module::Build::Tiny", "Readonly", "Sys::MemInfo"].include? r.name
-
-      assert_match /#{r.name}\s+#{r.version}/, output
-    end
+    assert_match version.to_s, pipe_output("#{bin}/imapsync --dry")
+    shell_output("#{bin}/imapsync --dry \
+       --host1 test1.lamiral.info --user1 test1 --password1 secret1 \
+       --host2 test2.lamiral.info --user2 test2 --password2 secret2")
   end
 end
