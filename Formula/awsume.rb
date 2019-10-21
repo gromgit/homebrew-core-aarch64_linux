@@ -8,6 +8,13 @@ class Awsume < Formula
   sha256 "8cc7d466beef1c32b3397ed62cba22f7a309ab1650317cef6873cf019be7d25e"
   head "https://github.com/trek10inc/awsume.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "d7627407c05644c59ee3ba36d592e92c8dcec7d663c5eb53ddd52062fa0c61c3" => :catalina
+    sha256 "a26e73a7ad4e464d9dd2bdd027dee7a729f6f28a36800fc22701b1dd729e29d1" => :mojave
+    sha256 "0eba67450540e7d925d166a50dc2051fc4d867cba692a3f2a8d6a7c612065cf5" => :high_sierra
+  end
+
   depends_on "openssl"
   depends_on "python"
   uses_from_macos "sqlite"
