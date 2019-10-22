@@ -3,8 +3,8 @@ require "language/node"
 class Ungit < Formula
   desc "The easiest way to use git. On any platform. Anywhere"
   homepage "https://github.com/FredrikNoren/ungit"
-  url "https://registry.npmjs.org/ungit/-/ungit-1.4.47.tgz"
-  sha256 "be09b1210dbd221e2df1545ba6f3f90607609dcd4f816acd10128f7b97142f24"
+  url "https://registry.npmjs.org/ungit/-/ungit-1.4.48.tgz"
+  sha256 "691447a39ac4729c2b0ee2705cc21b9d239063354b78583853d1c053347758b1"
 
   bottle do
     cellar :any_skip_relocation
@@ -36,7 +36,7 @@ class Ungit < Formula
   ensure
     Process.kill("TERM", ppid)
     # ensure that there are no spawned child processes left
-    child_p = shell_output("ps -o pid,ppid").scan(/^(\d+)\s+#{ppid}\s*$/).map {|p| p[0].to_i}
+    child_p = shell_output("ps -o pid,ppid").scan(/^(\d+)\s+#{ppid}\s*$/).map { |p| p[0].to_i }
     child_p.each { |pid| Process.kill("TERM", pid) }
     Process.wait(ppid)
   end
