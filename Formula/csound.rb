@@ -4,6 +4,7 @@ class Csound < Formula
   url "https://github.com/csound/csound/archive/6.13.0.tar.gz"
   sha256 "183beeb3b720bfeab6cc8af12fbec0bf9fef2727684ac79289fd12d0dfee728b"
   revision 3
+  head "https://github.com/csound/csound.git", :branch => "develop"
 
   bottle do
     sha256 "bc1ee99a636b4bd41f5908437f28dd0d29c5b17a0bdb8738d0abcc46177775a8" => :mojave
@@ -68,14 +69,14 @@ class Csound < Formula
 
     libexec.install "#{buildpath}/interfaces/ctcsound.py"
 
-    version = Language::Python.major_minor_version "python3"
-    (lib/"python#{version}/site-packages/homebrew-csound.pth").write <<~EOS
+    python_version = Language::Python.major_minor_version "python3"
+    (lib/"python#{python_version}/site-packages/homebrew-csound.pth").write <<~EOS
       import site; site.addsitedir('#{libexec}')
     EOS
   end
 
   def caveats; <<~EOS
-    To use the Python bindings, you may need to add to your .bash_profile:
+    To use the Python bindings, you may need to add to #{shell_profile}:
       export DYLD_FRAMEWORK_PATH="$DYLD_FRAMEWORK_PATH:#{opt_prefix}/Frameworks"
   EOS
   end
@@ -89,9 +90,9 @@ class Csound < Formula
       gi_fluidEngineNumber fluidEngine
       gi_realVector la_i_vr_create 1
       pyinit
+      pyruni "print('hello, world')"
       instr 1
           a_, a_, a_ chuap 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-          pyruni "from __future__ import print_function; print('hello, world')"
           a_signal STKPlucked 440, 1
           hdf5write "test.h5", a_signal
           out a_signal
@@ -109,7 +110,7 @@ class Csound < Formula
     require "open3"
     stdout, stderr, status = Open3.capture3("#{bin}/csound test.orc test.sco")
 
-    assert_equal true, status.success?
+    assert status.success?
     assert_equal "hello, world\n", stdout
     assert_match /^rtaudio:/, stderr
     assert_match /^rtmidi:/, stderr
