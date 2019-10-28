@@ -1,9 +1,9 @@
 class Deno < Formula
   desc "Command-line JavaScript / TypeScript engine"
   homepage "https://deno.land/"
-  url "https://github.com/denoland/deno.git",
-    :tag      => "v0.21.0",
-    :revision => "4e88ba9a114279b3969d5ccca1cca0f74c8fc1fd"
+  url "https://github.com/denoland/deno/releases/download/v0.22.0/deno_src.tar.gz"
+  version "0.22.0"
+  sha256 "2f123449442922da50e320bf8f7d41fd0a5524010900490383ec4d2e98581e2a"
 
   bottle do
     cellar :any_skip_relocation
@@ -20,7 +20,7 @@ class Deno < Formula
 
   resource "gn" do
     url "https://gn.googlesource.com/gn.git",
-      :revision => "972ed755f8e6d31cae9ba15fcd08136ae1a7886f"
+      :revision => "152c5144ceed9592c20f0c8fd55769646077569b"
   end
 
   def install
@@ -49,7 +49,7 @@ class Deno < Formula
     ENV["DENO_BUILD_ARGS"] = args.join(" ")
 
     cd "cli" do
-      system "cargo", "install", "-vv", "--root", prefix, "--path", "."
+      system "cargo", "install", "-vv", "--locked", "--root", prefix, "--path", "."
     end
 
     # Install bash and zsh completion
