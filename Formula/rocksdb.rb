@@ -1,8 +1,8 @@
 class Rocksdb < Formula
   desc "Embeddable, persistent key-value store for fast storage"
   homepage "https://rocksdb.org/"
-  url "https://github.com/facebook/rocksdb/archive/v6.1.2.tar.gz"
-  sha256 "df93f3b66caa1cbe1c2862c99c33e18a5c5b24a64fb51dfe8ef805e3c9fd1cad"
+  url "https://github.com/facebook/rocksdb/archive/v6.3.6.tar.gz"
+  sha256 "9878beb4e9b74a5f0d9500772235a39066fd019ba7af9ae6afe483ca713e3c7c"
 
   bottle do
     cellar :any
@@ -15,6 +15,7 @@ class Rocksdb < Formula
   depends_on "gflags"
   depends_on "lz4"
   depends_on "snappy"
+  depends_on "zstd"
 
   def install
     ENV.cxx11
@@ -66,7 +67,8 @@ class Rocksdb < Formula
                                 "-lz", "-lbz2",
                                 "-L#{lib}", "-lrocksdb_lite",
                                 "-L#{Formula["snappy"].opt_lib}", "-lsnappy",
-                                "-L#{Formula["lz4"].opt_lib}", "-llz4"
+                                "-L#{Formula["lz4"].opt_lib}", "-llz4",
+                                "-L#{Formula["zstd"].opt_lib}", "-lzstd"
     system "./db_test"
 
     assert_match "sst_dump --file=", shell_output("#{bin}/rocksdb_sst_dump --help 2>&1", 1)
