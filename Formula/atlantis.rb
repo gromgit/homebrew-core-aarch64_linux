@@ -5,10 +5,9 @@ class Atlantis < Formula
   sha256 "3c3b2ecb80c486ba93daf766b75a8c18f734237d367b6ba78e02eb9c9cd51272"
   bottle do
     cellar :any_skip_relocation
-    sha256 "a3847caa6e3d3ca2e75ea11b3b33768c77a13e16f02ef086ad8dc9e3df1bf0ff" => :catalina
-    sha256 "2ecb14619c287f84755169dc93e717b12821df7ea24fec9a6960361e360c481b" => :mojave
-    sha256 "679f5cd00ccf005c615dac181a872fd4edf07e5bc901116cd2a0fe25fa39ed18" => :high_sierra
-    sha256 "2f23a7d6cc16f93dc87a455da15e297ce490f7df859a49dd04bf855b3519511a" => :sierra
+    sha256 "2fd6477fbbd809c527ddf4d3e3d657357beb58d36d787a6209b5b03185e23ea3" => :catalina
+    sha256 "a290d54b94725f6b13bdf24e1005a276904f04a98aac5327dc6a96f8209aa5c0" => :mojave
+    sha256 "e358a6af53d5879b3e830bc76af9a25a2064740464fa01aa083f5a627960be6e" => :high_sierra
   end
 
   depends_on "go" => :build
