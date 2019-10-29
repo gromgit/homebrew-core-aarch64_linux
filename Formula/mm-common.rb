@@ -1,8 +1,8 @@
 class MmCommon < Formula
   desc "Build utilities for C++ interfaces of GTK+ and GNOME packages"
   homepage "https://www.gtkmm.org/"
-  url "https://download.gnome.org/sources/mm-common/0.9/mm-common-0.9.12.tar.xz"
-  sha256 "ceffdcce1e5b52742884c233ec604bf6fded12eea9da077ce7a62c02c87e7c0b"
+  url "https://download.gnome.org/sources/mm-common/1.0/mm-common-1.0.0.tar.xz"
+  sha256 "b97d9b041e5952486cab620b44ab09f6013a478f43b6699ae899b8a4da189cd4"
 
   bottle do
     cellar :any_skip_relocation
@@ -13,8 +13,15 @@ class MmCommon < Formula
     sha256 "42c9654bebbc472d90bc31d14e0832d55367d8d86d6750ab546a129a48de342b" => :el_capitan
   end
 
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
+  depends_on "python"
+
   def install
-    system "./configure", "--disable-silent-rules", "--prefix=#{prefix}"
-    system "make", "install"
+    mkdir "build" do
+      system "meson", "--prefix=#{prefix}", ".."
+      system "ninja"
+      system "ninja", "install"
+    end
   end
 end
