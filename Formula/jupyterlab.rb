@@ -4,6 +4,13 @@ class Jupyterlab < Formula
   url "https://files.pythonhosted.org/packages/57/a8/9aea7e00e8634f6e73bc2641033fee2d59e5d506784474e5e5d55eb15d55/jupyterlab-1.2.0.tar.gz"
   sha256 "ce945579a6b20628d275efd4debffef96fa66ef83a10a62d7087ca5610b61668"
 
+  bottle do
+    cellar :any
+    sha256 "61c4f955e0df4af3cb810915f318a0b2e6803861d6765d5836cce190eee00de1" => :catalina
+    sha256 "2af4efd99fb6b991212ded9df425f893365c448db8ec12bb17a84f6024789933" => :mojave
+    sha256 "75142752e2f46267cb109986f9ba1872225b61ef463e72327449a392411482d0" => :high_sierra
+  end
+
   depends_on "ipython"
   depends_on "pandoc"
   depends_on "python"
