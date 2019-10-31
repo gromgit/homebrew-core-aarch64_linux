@@ -2,8 +2,8 @@ class KymaCli < Formula
   desc "Kyma command-line interface"
   homepage "https://kyma-project.io"
   url "https://github.com/kyma-project/cli.git",
-      :tag      => "1.6.0",
-      :revision => "1471ec088d7831cd3f461ec4ce710f19b85903c3"
+      :tag      => "1.7.0",
+      :revision => "0e34ef7f27acabce43c3ebdbcf57534ed07fd46c"
   head "https://github.com/kyma-project/cli.git"
 
   bottle do
@@ -13,7 +13,6 @@ class KymaCli < Formula
     sha256 "58723114b1043e44686c6d07bdc241bb1bcd2f1f6e85317017b480acedc52800" => :high_sierra
   end
 
-  depends_on "dep" => :build
   depends_on "go" => :build
 
   def install
@@ -22,7 +21,6 @@ class KymaCli < Formula
     bin_path.install Dir["*"]
 
     cd bin_path do
-      system "dep", "ensure", "-vendor-only"
       system "make", "build-darwin"
       bin.install "bin/kyma-darwin" => "kyma"
     end
