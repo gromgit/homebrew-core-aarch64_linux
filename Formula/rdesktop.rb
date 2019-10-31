@@ -5,10 +5,9 @@ class Rdesktop < Formula
   sha256 "473c2f312391379960efe41caad37852c59312bc8f100f9b5f26609ab5704288"
 
   bottle do
-    sha256 "748c0fe4a854917a3403b084c9ce0843515f7ac9e522619d6f880f3a55c01908" => :catalina
-    sha256 "c319fc2fceca931b83d5b05f6e2d9c1ae4687a277b1c71e4e5cb73e424759ef8" => :mojave
-    sha256 "92a663dd356df68f0b86ec58e1f3f07d242aa6c66fda7c90dc41330b793f2c4d" => :high_sierra
-    sha256 "c3514986d81f0b8c9e4e37e2dc6648ce4978d814dff3c5e187a9ead35fdadf0d" => :sierra
+    sha256 "7c9514c2ed77ff7d2289b1f464ce187b3882cff9c7a0f3fbeb3473d085f7525c" => :catalina
+    sha256 "38d60f4a835c4090ba1528f19cc7b47122ff22f1f85b1be69ae00bedb18da03b" => :mojave
+    sha256 "4f20968750adad4b1d743ff3ee96262a0cb834b8a6ff9c41486479f71542b2e7" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
