@@ -6,10 +6,9 @@ class Scummvm < Formula
   head "https://github.com/scummvm/scummvm.git"
 
   bottle do
-    sha256 "659537c3c08496ae20aee7cb0655ff00a05966c58d108a1ff9f2ce88c19321e9" => :catalina
-    sha256 "7e19e7f58daa0e46c2343871804967fe915c27af7b92bc9d4c1007a3b2d609f3" => :mojave
-    sha256 "83b2bfb31084378352b3a0056d28c23101615bc3fd871e53c25671cdc32ff360" => :high_sierra
-    sha256 "3269c1ce9326d70f62471b4e11a70f513621864c8983013d21129bf54f68e297" => :sierra
+    sha256 "213a7b49024659878d44c874d3d493f348bd7042a63940d62bfa54aed3541224" => :catalina
+    sha256 "a9e8736f6b93bbf3c6c165831a58d944f488a0c4287858b4fbd39f635941f703" => :mojave
+    sha256 "1bcbb3168dbe936067d015f60fa19cd5dca0892e10c25ff18f86e49c0a268129" => :high_sierra
   end
 
   depends_on "a52dec"
