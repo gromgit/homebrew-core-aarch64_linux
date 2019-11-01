@@ -28,7 +28,7 @@ class Go < Formula
     end
   end
 
-  depends_on :macos => :yosemite
+  depends_on :macos => :el_capitan
 
   # Don't update this unless this version cannot bootstrap the new version.
   resource "gobootstrap" do
