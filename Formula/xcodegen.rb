@@ -7,8 +7,8 @@ class Xcodegen < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f560fe1123726c26200160ff330c0ff09afc3e107f5448ddd40db29955a8e818" => :catalina
-    sha256 "96d5e58edea1303bf3c54a8d2d30b500cd8c4a346e10fffa39cf3026c05a696a" => :mojave
+    sha256 "887575b080ad6d0bd97f3eb72bea5c2246558b687f5cdcfeb41fc7d40a69f075" => :catalina
+    sha256 "d943d1454494c09a2e5ded6321305b734faf8137a301d6e94325464254d6ba66" => :mojave
   end
 
   depends_on :xcode => ["10.2", :build]
