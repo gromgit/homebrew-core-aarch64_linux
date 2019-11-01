@@ -6,10 +6,9 @@ class Openvpn < Formula
   sha256 "fb8ca66bb7807fff595fbdf2a0afd085c02a6aa47715c9aa3171002f9f1a3f91"
 
   bottle do
-    sha256 "3cfae9f298ad28601667090d00cff92fc4e5c1ee9fa255046f4cd87d14bb6ee4" => :catalina
-    sha256 "b19cc37d3a60d37e935e517dd7c34dd1c9474be22139835f1c21d2e6c86896eb" => :mojave
-    sha256 "de0cb2e72fc0faaf91aa210e79524648d2e17fc61938ea1c50cb94ad8105b0c2" => :high_sierra
-    sha256 "8f596b79f4c8c21ac2f003a395c8643794f86cdaff517bfed0476364fdbccc38" => :sierra
+    sha256 "5d765e9c0b189897133a930ab956c4a861bf36532a225b7d11a4f19cfba91a26" => :catalina
+    sha256 "c4216f771502095c9ef56440c4c6061d907100ad9530bd4f3e9ac8beb98a743e" => :mojave
+    sha256 "3be2664f28a1df4bd39f4f70b68274efa08d02338572aa857820692a0f50f116" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
