@@ -7,13 +7,9 @@ class Dasm < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "d68b6f9a2a30a76f13fa1c38bb1855174e1f9dd7c9feff0f7336edd8a599e6e0" => :mojave
-    sha256 "8df31a4bcc48b92ee2569994dda6a5bd55335a0e92e1e19903a2c98377b440d1" => :high_sierra
-    sha256 "7425679bdb695c12ca174ca4f17e187a9a9aa5a92e7fe72bf8a561dd83aff4a7" => :sierra
-    sha256 "854a19f232cffdeabb1cb2afef4a5713e55b545519beea8f666f2cc4882d42e6" => :el_capitan
-    sha256 "1897ee7e4d76eeb74bd6aa3c94d73f14f55c44054dd296bbd724addb3ca3b00a" => :yosemite
-    sha256 "3383c91ce64d715a05595e49d38d16ea134e139dc7b87541d8c81bf5a9aeaf15" => :mavericks
+    sha256 "0c3819d2aafb6fd2daf11de8f9981c607f7dea0fc6244d538be3523816e699bf" => :catalina
+    sha256 "73736deba071cce9a0bf233dc4e084a9996a82431334dec3de16770c4630706b" => :mojave
+    sha256 "a0b952e00a3c25bb4eb0f7116804355acc87c60397649a18c090008a3030a566" => :high_sierra
   end
 
   def install
