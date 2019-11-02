@@ -10,10 +10,9 @@ class Goofys < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "6cb2696361a790cc0263e17e9bc95e324b0bae38b15fb28f6cfffaf4d02124f7" => :catalina
-    sha256 "b7aa1290fb0986053b1908307b45d6ceef1a7d7a7e6eb0172f278f45b7c41201" => :mojave
-    sha256 "f894d1b8f776089bcea1a3f581aecd5d540293c82b0f12efcf4db0e5a6925adf" => :high_sierra
-    sha256 "b27ced4e6f998d5574750e3676dd86bd68afd407fd0b8d0b57861db79193275e" => :sierra
+    sha256 "e9137251c445461e3bbea740e6b6f7b00670c5cc52b6a3e99da440fdab1004b2" => :catalina
+    sha256 "7e562985506e5c1fbd86771b11ad0187388642dca7365ff8889706e9b3993eb6" => :mojave
+    sha256 "7b4713a3e45c7e2fdca86f7c945727481324810009ff73a86a646ebdb1ab10bb" => :high_sierra
   end
 
   depends_on "go" => :build
