@@ -7,10 +7,10 @@ class Xsv < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "8d155cc9c61f185849bfa30c52e697ed8544132a39c0f883be6073a7d8b07b12" => :catalina
-    sha256 "d343b54fc05a8bf5fa01c7a0408e742bc145465a414466a6bcb5efb62252eb62" => :mojave
-    sha256 "e38f68fb0141d59deaa25230ab201e05df63fc5d03ec1afdf2443c61943c4a2c" => :high_sierra
+    rebuild 2
+    sha256 "b077e2fd6f968d6a3fa5c22a145e134bcead5cbe50ff20c78495937cbee7ea1d" => :catalina
+    sha256 "ade2c436c1acf011ef7807b01a2783f6c31c0cacf066e51db904adefd99d4a14" => :mojave
+    sha256 "557ef267b773911347df0d1960040f2d28e20c3680637b8af5bd89edc77bcce2" => :high_sierra
   end
 
   depends_on "rust" => :build
