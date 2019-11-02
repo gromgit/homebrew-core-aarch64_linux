@@ -1,9 +1,8 @@
 class Libpeas < Formula
   desc "GObject plugin library"
   homepage "https://developer.gnome.org/libpeas/stable/"
-  url "https://download.gnome.org/sources/libpeas/1.24/libpeas-1.24.0.tar.xz"
-  sha256 "0b9a00138c129a663de3eef5569b00ace03ce31d345f7af783768e9f35c8e6f9"
-  revision 1
+  url "https://download.gnome.org/sources/libpeas/1.24/libpeas-1.24.1.tar.xz"
+  sha256 "9c3acf7a567cbb4f8bf62b096e013f12c3911cc850c3fa9900cbd5aa4f6ec284"
 
   bottle do
     sha256 "aba555630484cb36d38b0615bbe3286c3ec1ac99b3ad29c93e664021c6df4d55" => :catalina
@@ -21,15 +20,10 @@ class Libpeas < Formula
   depends_on "pygobject3"
   depends_on "python"
 
-  # patch submitted upstream as https://gitlab.gnome.org/GNOME/libpeas/merge_requests/15
+  # patch submitted upstream as https://gitlab.gnome.org/GNOME/libpeas/merge_requests/22
   patch do
-    url "https://gitlab.gnome.org/GNOME/libpeas/commit/8500981.diff"
-    sha256 "61650bdca802631a67556edf8306e53e4b6d632fcb614ca9e3b397b02ef36092"
-  end
-
-  patch do
-    url "https://gitlab.gnome.org/GNOME/libpeas/commit/bd80538.diff"
-    sha256 "4c0a7cd4f9147450e4d163493d6ed050056dd4c2dbc666ef30e9fe60d936f0bd"
+    url "https://gitlab.gnome.org/GNOME/libpeas/commit/d5f5749372.diff"
+    sha256 "a46c4229656423de2e277bf5dd96e7f595cee19cc112c10f422c29c960cf4dcc"
   end
 
   def install
