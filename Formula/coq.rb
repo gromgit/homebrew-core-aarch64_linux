@@ -1,8 +1,8 @@
 class Coq < Formula
   desc "Proof assistant for higher-order logic"
   homepage "https://coq.inria.fr/"
-  url "https://github.com/coq/coq/archive/V8.10.0.tar.gz"
-  sha256 "292c64162620c4c4825c323c1c71762d764ebc9ce39bd8eee900851eaca655f5"
+  url "https://github.com/coq/coq/archive/V8.10.1.tar.gz"
+  sha256 "f8eb889c4974b89db1303b22382b2de4116ede1db673afefc67e3abff8955612"
   head "https://github.com/coq/coq.git"
 
   bottle do
@@ -22,11 +22,6 @@ class Coq < Formula
                           "-coqdocdir", "#{pkgshare}/latex",
                           "-coqide", "no",
                           "-with-doc", "no"
-    # building the compiler in parallel fails due to upstream bug:
-    # https://github.com/coq/coq/issues/10864
-    # once fixed, delete this line and the compiler will be built with
-    # parallelism as part of "make world"
-    ENV.deparallelize { system "make", "coqbinaries" }
     system "make", "world"
     ENV.deparallelize { system "make", "install" }
   end
