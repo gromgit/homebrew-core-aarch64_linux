@@ -7,10 +7,10 @@ class Fd < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "a7538af624622d5086b28a6e79878568628350da7fa861c0e7eda6a1d7812add" => :catalina
-    sha256 "6156eca30e29382faddad726acbb85fcc69a2d28ff2c30ab81989d8f6325e059" => :mojave
-    sha256 "22b1b371a445784a308fb7f9e189c0a41d640cbc758595d9d527f55de25296da" => :high_sierra
+    rebuild 2
+    sha256 "4dd2425c04940bc5eb68f21fe3bb0ff71fffeed73f593fccd76adccb31599b44" => :catalina
+    sha256 "2170c093e261e0e859e60af3b319404624410eecd15205443d126b1a648bdb8f" => :mojave
+    sha256 "9e14e7a58466daaaf876c4f6ab84ec3c4c1635a41bd1017f1cc73fdf91350b27" => :high_sierra
   end
 
   depends_on "rust" => :build
