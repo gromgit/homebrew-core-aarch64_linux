@@ -27,7 +27,7 @@ class DarkskyWeather < Formula
   end
 
   test do
-    output = shell_output("#{bin}/weather -location london")
-    assert_match "London in England", output
+    output = shell_output("#{bin}/weather")
+    assert_match "Current weather is", output
   end
 end
