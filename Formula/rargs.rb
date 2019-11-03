@@ -6,10 +6,10 @@ class Rargs < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "61300f0d8d770b58077ef97efdf5f50bf2f5df244cfc1dcd7c75d940948bdb0f" => :catalina
-    sha256 "eb92709c9127872b57c807c5a110329bea94cc43a6c6a030ff6fee6fe8240100" => :mojave
-    sha256 "7d5d38da14e10453dfac30d784f7bf4f7c75e7f188c7b3df556ebd5f2df8e76c" => :high_sierra
+    rebuild 2
+    sha256 "247817d184e94dee19ec60a4455fb706677dac91b0da5ea9f945c00fbd8ef2e0" => :catalina
+    sha256 "860dd78cd787ab1552139c71db5ae901851954a1567ecc41449cf26504e6e272" => :mojave
+    sha256 "7c420943533b30aa0336ff220611a51efa7eb79657499562ee4a223c079ebc71" => :high_sierra
   end
 
   depends_on "rust" => :build
