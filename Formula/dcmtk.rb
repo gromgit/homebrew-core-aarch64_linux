@@ -1,9 +1,8 @@
 class Dcmtk < Formula
   desc "OFFIS DICOM toolkit command-line utilities"
   homepage "https://dicom.offis.de/dcmtk.php.en"
-  url "https://dicom.offis.de/download/dcmtk/dcmtk364/dcmtk-3.6.4.tar.gz"
-  sha256 "a93ff354fae091689a0740a1000cde7d4378fdf733aef9287a70d7091efa42c0"
-  revision 1
+  url "https://dicom.offis.de/download/dcmtk/dcmtk365/dcmtk-3.6.5.tar.gz"
+  sha256 "a05178665f21896dbb0974106dba1ad144975414abd760b4cf8f5cc979f9beb9"
   head "https://git.dcmtk.org/dcmtk.git"
 
   bottle do
