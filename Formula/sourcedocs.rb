@@ -1,8 +1,8 @@
 class Sourcedocs < Formula
   desc "Generate Markdown files from inline source code documentation"
   homepage "https://github.com/eneko/SourceDocs"
-  url "https://github.com/eneko/SourceDocs/archive/0.5.1.tar.gz"
-  sha256 "3c2e2de695d49dbdd5acb49f8876042bdc97e8d6b95584d3ef6b592b8f10affc"
+  url "https://github.com/eneko/sourcedocs/archive/0.6.0.tar.gz"
+  sha256 "38726a965d65caa4bc7e89208fd7f2d2cac7422106302bb23007965e5e1e0ea8"
 
   bottle do
     cellar :any_skip_relocation
@@ -10,10 +10,10 @@ class Sourcedocs < Formula
     sha256 "7a7c4205340af10ab3cb41ea097f3be5fcf134c461c84869216b568aaa86b429" => :high_sierra
   end
 
-  depends_on :xcode => ["9.3", :build, :test]
+  depends_on :xcode => ["10.3", :build, :test]
 
   def install
-    system "swift", "build", "--disable-sandbox", "-c", "release", "-Xswiftc", "-static-stdlib"
+    system "swift", "build", "--disable-sandbox", "-c", "release"
     bin.install ".build/release/sourcedocs"
   end
 
