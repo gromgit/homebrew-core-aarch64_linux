@@ -6,9 +6,9 @@ class MklDnn < Formula
 
   bottle do
     cellar :any
-    sha256 "82af329d009930d7d384d5d58308132e9a589c3398619cd2c0d532114eb1ffb9" => :catalina
-    sha256 "bcdb1b0ab735cecf4d03c4ee7f2c5eed265c4c8383607660e465add3f09d70f4" => :mojave
-    sha256 "46a7d7d0c7a867a74224195994d6fa88024ee783b825ba7bd9eb1dc3e4de82ef" => :high_sierra
+    sha256 "86fa546726d483d7fb1ab4cd48ae3892e387c3ad6314442002ecca6efe738b99" => :catalina
+    sha256 "1ff1b2eea6846102c2b63b80ad28e1bf9edd0acf27ba31da883137c575e80a78" => :mojave
+    sha256 "8973b73f14f9c36a1fe9dc05a0d4820351506d3102a17a2496d1dacb031de83e" => :high_sierra
   end
 
   depends_on "cmake" => :build
