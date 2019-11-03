@@ -6,9 +6,10 @@ class Diffr < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "94d2b07cb13676cf79c9b03ee04c7f8a5052e1db5ae4362d9280ac9ab1684ed6" => :catalina
-    sha256 "c70d4132b9691bc9262a25e6b1aab523098f72db5f92cdcebc7ea911c318b8bd" => :mojave
-    sha256 "62be44ce31921a8ee60cf55bd4235a32a7f6d96de73d2062413db84bafa13b69" => :high_sierra
+    rebuild 1
+    sha256 "7bc3fdeb01f7f6acc385066847790d4fbecfc63aba6500875aaa0dd51fe34d28" => :catalina
+    sha256 "4ff2b883f183c94c5ceb521f066dca3efff1fa5e11f07e0dbd119219eb84530c" => :mojave
+    sha256 "2673e95643de656f2216f54ff37c83462927f192a9bab377f10b29e241618268" => :high_sierra
   end
 
   depends_on "rust" => :build
