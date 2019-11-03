@@ -21,6 +21,6 @@ class RandomizeLines < Formula
   end
 
   test do
-    system system "echo", "-e", "\" ""1\n2\n4\" | \"#{bin}/rl\" -c 1"
+    system "echo", "-e", "\" ""1\n2\n4\" | \"#{bin}/rl\" -c 1"
   end
 end
