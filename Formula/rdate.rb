@@ -25,6 +25,6 @@ class Rdate < Formula
 
   test do
     # note that the server must support RFC 868
-    system "#{bin}/rdate", "-p", "-t", "10", "ptbtime1.ptb.de"
+    system "#{bin}/rdate", "-p", "-t", "10", "time-b-b.nist.gov"
   end
 end
