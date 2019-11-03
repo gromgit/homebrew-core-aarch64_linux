@@ -1,8 +1,8 @@
 class Yq < Formula
   desc "Process YAML documents from the CLI"
   homepage "https://github.com/mikefarah/yq"
-  url "https://github.com/mikefarah/yq/archive/2.4.0.tar.gz"
-  sha256 "5277293b3bcd7c891d8c20c029637ca5064409696b77937a1cba1bfc07164163"
+  url "https://github.com/mikefarah/yq/archive/v2.4.1.tar.gz"
+  sha256 "229afb4d8b5881e7f0c248ea51724fd91335d91b6d3922aaadbf5d6cfadd7648"
 
   bottle do
     cellar :any_skip_relocation
@@ -13,7 +13,6 @@ class Yq < Formula
   end
 
   depends_on "go" => :build
-  depends_on "govendor" => :build
 
   conflicts_with "python-yq", :because => "both install `yq` executables"
 
@@ -22,7 +21,6 @@ class Yq < Formula
     (buildpath/"src/github.com/mikefarah/yq").install buildpath.children
 
     cd "src/github.com/mikefarah/yq" do
-      system "govendor", "sync"
       system "go", "build", "-o", bin/"yq"
       prefix.install_metafiles
     end
