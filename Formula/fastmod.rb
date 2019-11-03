@@ -6,10 +6,10 @@ class Fastmod < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2cda181606bdc1998ccc727dbc2f8f6eaaec5a1fb1b09f186056789ecd96b235" => :catalina
-    sha256 "0c3aab08129fcffdc2f92046da56402337ea35498bc0ce06a5de94c5e0194deb" => :mojave
-    sha256 "f1baa87a1abcee4adbed888b370f0528515ed2db2dd889c98b6a0b1c118fb575" => :high_sierra
-    sha256 "854e92c3a2cb41ae6be702aab770ecf295e86c806e6af6f9baa770ba102d4598" => :sierra
+    rebuild 1
+    sha256 "b8796ef40402ee2f3f1663186cf0c72a0b46e7870bdc38ed36b42797b1d8903e" => :catalina
+    sha256 "3e63d95fed7192044cb1140179d6b0565f69c7187e82efb541b157c91cd27186" => :mojave
+    sha256 "8047f087b7034a595a66daa17b6d5e7fb381ce8a50fe443747f5ce42714b323f" => :high_sierra
   end
 
   depends_on "rust" => :build
