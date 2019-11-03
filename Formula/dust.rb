@@ -7,10 +7,10 @@ class Dust < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "904beff5b0241fdfd9e2b6652b1f8d3cc5ef377de93017e87a9e0424140befef" => :catalina
-    sha256 "caf307790a9330aff377bf16ae36bb252c035fbf1d85d588265960ffac90c3d9" => :mojave
-    sha256 "3c80e045eb935b00192a88e5d00dece572506b23428d795dcc1ed93a3ff01ef5" => :high_sierra
-    sha256 "7e703fb0f7cee5e151432fe9522e3050f90de399dc2502d8618edf9ab58ada86" => :sierra
+    rebuild 1
+    sha256 "3b49364aa67239151c5cf3f133a3fe8f06ad06e8e625545605dba09c1da654f0" => :catalina
+    sha256 "3a5a22375b9dc464a23226667bc4c4e0d3711ceef4ac691fb3de2fd96fa17521" => :mojave
+    sha256 "f0abd07b12a44556813165f4a5266fad616dd62dce055fd4258205751aff2285" => :high_sierra
   end
 
   depends_on "rust" => :build
