@@ -6,8 +6,8 @@ class Sourcedocs < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "256b06c1425620af744d17bac21d993c54f12f1543206ae08b29e09fe28d1fc5" => :mojave
-    sha256 "7a7c4205340af10ab3cb41ea097f3be5fcf134c461c84869216b568aaa86b429" => :high_sierra
+    sha256 "08a7d9f4ec9a51c0bd4830d29fa3c268accb90f3b8243adebfd6000df3429cfb" => :catalina
+    sha256 "c04ff3cb4611ca1c230f5ebc1108977e5d51f1918fe7d1936134c455a7a1a93f" => :mojave
   end
 
   depends_on :xcode => ["10.3", :build, :test]
