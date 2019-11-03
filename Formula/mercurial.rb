@@ -7,10 +7,9 @@ class Mercurial < Formula
   sha256 "15af0b090b23649e0e53621a88dde97b55a734d7cb08b77d3df284db70d44e2e"
 
   bottle do
-    sha256 "515fe5a3c00988d5069a69ccc9d059277156b91683ad0c6c7e86fa568f2c9b0f" => :catalina
-    sha256 "e4fcf22b36669ca85e582121d7365e8d94f4504d7b48dfd518a93e4dbf659646" => :mojave
-    sha256 "127344d5ead0a8fbd4cabbfafd7fca4dd4f85f45f260b76e500538c7fd0d05bc" => :high_sierra
-    sha256 "9b9f8f096a65d37f2899e7133fb76d64a25be52100883ebd3b7805facc18a757" => :sierra
+    sha256 "5d02b93a360c6423c6d357d57486b048e41d32b5314d34b52d0fb53d081cbba9" => :catalina
+    sha256 "145b59c737eb5a332b38029f36e3837cbf88f15f063fb8642ea066a28971f80d" => :mojave
+    sha256 "c28323134e53c09ca43ad1543b034fb54c2558f05ddfead977390899ec2afa70" => :high_sierra
   end
 
   # See discussion at https://github.com/Homebrew/homebrew-core/pull/44095
