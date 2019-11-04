@@ -5,6 +5,12 @@ class Manticoresearch < Formula
   sha256 "df6dbcc4df01065fc3cc6328f043b8cef3eb403a28671455cd3c8fc4217e3391"
   head "https://github.com/manticoresoftware/manticoresearch.git"
 
+  bottle do
+    sha256 "fd744cbff75ab0e153d9c4a0eb1e49fec7222daa49b481363be448ab0fc506c0" => :catalina
+    sha256 "ae594e5ef0c1f5c73b6f08b90249081f0df69879453fa379f3f3b5ae935ed17e" => :mojave
+    sha256 "fad052312cbbe75b5a0a6ca4e2184d9531f8c8bfa606597f0487c75a2339b09c" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "icu4c" => :build
   depends_on "libpq" => :build
