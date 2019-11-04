@@ -6,10 +6,9 @@ class Jmeter < Formula
 
   bottle do
     cellar :any
-    sha256 "4afcc5dfc146762b68797bf13ac505ebdcd68ce4618e08967c14a5c42db99d7c" => :catalina
-    sha256 "75fe29e4b60b96e881c3b64475d4f7fc268cd405e300b31f1aa3ce6cb26c4211" => :mojave
-    sha256 "75fe29e4b60b96e881c3b64475d4f7fc268cd405e300b31f1aa3ce6cb26c4211" => :high_sierra
-    sha256 "274d7e74800d66ef6e40938b0ab956a5cf541e8f11099c4eab08b5b734c0efdb" => :sierra
+    sha256 "e452e3c960df3f60dd1005e3f49687e30bf06a42349eb8167e4905b2c3cd942c" => :catalina
+    sha256 "e452e3c960df3f60dd1005e3f49687e30bf06a42349eb8167e4905b2c3cd942c" => :mojave
+    sha256 "e452e3c960df3f60dd1005e3f49687e30bf06a42349eb8167e4905b2c3cd942c" => :high_sierra
   end
 
   resource "jmeterplugins-standard" do
