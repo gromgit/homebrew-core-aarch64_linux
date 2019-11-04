@@ -1,8 +1,8 @@
 class Di < Formula
   desc "Advanced df-like disk information utility"
   homepage "https://gentoo.com/di/"
-  url "https://gentoo.com/di/di-4.47.1.tar.gz"
-  sha256 "eea8ad94197d9f11790afea0924d8bf29ec001c32eb6209e81c4e13766a2abad"
+  url "https://gentoo.com/di/di-4.47.2.tar.gz"
+  sha256 "2205b86f68e054dbe61806f288d94207eddadef7f71a0a27c553db0fc5bd27bd"
 
   bottle do
     cellar :any_skip_relocation
