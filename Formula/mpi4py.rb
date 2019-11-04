@@ -4,6 +4,13 @@ class Mpi4py < Formula
   url "https://bitbucket.org/mpi4py/mpi4py/downloads/mpi4py-3.0.2.tar.gz"
   sha256 "f8d629d1e3e3b7b89cb99d0e3bc5505e76cc42089829807950d5c56606ed48e0"
 
+  bottle do
+    cellar :any
+    sha256 "e4b9bf0d251aa9c6a23e39eee7fdc476e985734a84ff6228aaddea4e87a10f34" => :catalina
+    sha256 "aab2b09949a0f4984c1ea8969d98f33cada88f23a02e8b6661d616cd641579c9" => :mojave
+    sha256 "c4386874ab89d58514fcabbdf2dd912f7a3f1d5d1d4b3a23487f60b03ee6489d" => :high_sierra
+  end
+
   depends_on "cython" => :build
   depends_on "open-mpi"
   depends_on "python"
