@@ -5,6 +5,13 @@ class Openjdk < Formula
   version "13.0.1+9"
   sha256 "97328e767bc5f47b097ec0e9d88a6a650e60c448dbaba2e835284a2bf5594eb5"
 
+  bottle do
+    cellar :any
+    sha256 "cac85fcc79d435eff83fdb616cebe07ff10d3cbdd525fc61f9e5297072f346fb" => :catalina
+    sha256 "f34c615559bfb80d00c8cc706d2d212e4b61217acf5dd7225946c6708d84a8ea" => :mojave
+    sha256 "7b62e237d3b90fbce0b136e0ddc54224ded9cac74021fa7a7de3a4b39729b833" => :high_sierra
+  end
+
   keg_only :provided_by_macos
 
   depends_on "autoconf" => :build
