@@ -1,9 +1,8 @@
 class Paps < Formula
   desc "Pango to PostScript converter"
   homepage "https://github.com/dov/paps"
-  url "https://github.com/dov/paps/archive/0.7.0.tar.gz"
-  sha256 "7a18e8096944a21e0d9fcfb389770d1e7672ba90569180cb5d45984914cedb13"
-  revision 1
+  url "https://github.com/dov/paps/archive/v0.7.1.tar.gz"
+  sha256 "b8cbd16f8dd5832ecfa9907d31411b35a7f12d81a5ec472a1555d00a8a205e0e"
 
   bottle do
     cellar :any
@@ -16,6 +15,7 @@ class Paps < Formula
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+  depends_on "intltool" => :build
   depends_on "pkg-config" => :build
   depends_on "fontconfig"
   depends_on "freetype"
@@ -32,7 +32,7 @@ class Paps < Formula
   end
 
   test do
-    system bin/"paps", pkgshare/"examples/small-hello.utf8", "-o", "paps.ps"
+    system bin/"paps", pkgshare/"examples/small-hello.utf8", "--encoding=UTF-8", "-o", "paps.ps"
     assert_predicate testpath/"paps.ps", :exist?
     assert_match "%!PS-Adobe-3.0", (testpath/"paps.ps").read
   end
