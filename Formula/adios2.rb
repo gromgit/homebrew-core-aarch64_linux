@@ -5,6 +5,12 @@ class Adios2 < Formula
   sha256 "7c8ff3bf5441dd662806df9650c56a669359cb0185ea232ecb3578de7b065329"
   head "https://github.com/ornladios/ADIOS2.git", :branch => "master"
 
+  bottle do
+    sha256 "a9c783f0c9457e0fc3e71e37b629d05b83e57b0077fd1fea7aeafff34d098aec" => :catalina
+    sha256 "ffa4fee30d8d4fce1129fb91a210525fa0d299560b74780cf5311eac05869944" => :mojave
+    sha256 "ef64afa3db6349347d1bacbd672d3314fc481f57523b2270d88f439a8d8fa6f5" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "gcc" => :build
   depends_on "c-blosc"
