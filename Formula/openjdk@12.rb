@@ -5,6 +5,13 @@ class OpenjdkAT12 < Formula
   version "12.0.2+10"
   sha256 "f7242b56e0292bc7ec5795bbaeb98552ef30d7a686cd7ca0a877fe37b399f384"
 
+  bottle do
+    cellar :any
+    sha256 "3892b99f99b2074c70bbae87b6d17cb26253b4021ea9ca7e032fe7be12b9b972" => :catalina
+    sha256 "846447341bfe7c51ce60db6b3e56b88934ef4266e96386c975cf7e2f50e84ba6" => :mojave
+    sha256 "8967f8909149bc48637dc06da8670380224b1ca3e41c654688d82c1dfd41a77a" => :high_sierra
+  end
+
   keg_only :versioned_formula
 
   depends_on "autoconf" => :build
