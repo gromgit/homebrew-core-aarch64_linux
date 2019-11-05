@@ -1,9 +1,8 @@
 class Mkvtoolnix < Formula
   desc "Matroska media files manipulation tools"
   homepage "https://mkvtoolnix.download/"
-  url "https://mkvtoolnix.download/sources/mkvtoolnix-37.0.0.tar.xz"
-  sha256 "3d421af5307243591b726427a2c1a9c3cb496e8a5003362b5069558fc2488d64"
-  revision 1
+  url "https://mkvtoolnix.download/sources/mkvtoolnix-39.0.0.tar.xz"
+  sha256 "e9b515dec4007400b0f09fdca5bced0df56ca5d88ceccc996a2d68fb09453a15"
 
   bottle do
     cellar :any
