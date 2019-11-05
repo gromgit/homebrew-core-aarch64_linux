@@ -4,6 +4,7 @@ class Ghq < Formula
   url "https://github.com/motemen/ghq.git",
       :tag      => "v0.12.7",
       :revision => "3a4306ec482248f6643a3b3dd6ae0d3ffe8d7a7e"
+  head "https://github.com/motemen/ghq.git"
 
   bottle do
     cellar :any_skip_relocation
