@@ -1,9 +1,9 @@
 class Qhull < Formula
   desc "Computes convex hulls in n dimensions"
   homepage "http://www.qhull.org/"
-  url "http://www.qhull.org/download/qhull-2015-src-7.2.0.tgz"
-  version "2015.2"
-  sha256 "78b010925c3b577adc3d58278787d7df08f7c8fb02c3490e375eab91bb58a436"
+  url "http://www.qhull.org/download/qhull-2019-src-7.3.2.tgz"
+  version "2019.1"
+  sha256 "2b7990558c363076261564f61b74db4d0d73b71869755108a469038c07dc43fb"
 
   bottle do
     cellar :any
@@ -16,6 +16,13 @@ class Qhull < Formula
   end
 
   depends_on "cmake" => :build
+
+  # fixes build on case-insensitive filesystems
+  # see https://github.com/qhull/qhull/issues/48
+  patch do
+    url "https://github.com/qhull/qhull/commit/6052739c827bff64de3f05343e45fd080909759c.patch?full_index=1"
+    sha256 "ed97d5920ad9c09e028a26da1f0e8d9d313f3e757d52c14ea562827d6c865804"
+  end
 
   def install
     system "cmake", ".", *std_cmake_args
