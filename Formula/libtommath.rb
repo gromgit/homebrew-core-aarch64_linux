@@ -7,9 +7,9 @@ class Libtommath < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e69fa7fa3b1ff2e85209b6719ad17192942c9d2954321f30b7e039745e4e9ffb" => :mojave
-    sha256 "291e7d5f7f5ecace41fc8d9a402f8bb630004700f264339ad013df713f9b33eb" => :high_sierra
-    sha256 "fba7bbbc5efe8f09f7a23b93e5d168134703f3ce14bf2a5b8b7473cad0f7826f" => :sierra
+    sha256 "74f8fc0290933dde4d0d8c804707bc4dc421c9f88b09c91f8acb140aafd225a8" => :catalina
+    sha256 "e827065d024c0699ca3672e1d806377833d46a7fde999666b097cfb7a31c625a" => :mojave
+    sha256 "9affad0e48cc7801adcd196813c5d1271fcb2ba94a50169fa633d4ec7804eb2d" => :high_sierra
   end
 
   def install
