@@ -5,10 +5,9 @@ class S6 < Formula
   sha256 "e0cdbaf26e3ba1c41ecc0a8d1f45fb78194f96109b55cabeb849528b7e966c57"
 
   bottle do
-    sha256 "e10f7001d61d1e9effd0c5bceef485301ce37fcf7efb84b77297621df70d31d7" => :catalina
-    sha256 "4c1819aca5030161f69a0e8ff7a1c70ca7056e0226b173e3c7098709c2fb03a9" => :mojave
-    sha256 "8600da62dfe7099ba8526addf7dda2a09d9eeb63e7cbe6e5602b1944967b5ea3" => :high_sierra
-    sha256 "a72070b37a6b2d9ae738f32e7970e748c9d354b921718c2ea8d27b6cc5bdb0fc" => :sierra
+    sha256 "f9b95da1b5dde761446263f5abfc9d278c87fa6f7ad83f809503cc82bdeaa691" => :catalina
+    sha256 "46cb227d5bcfb4e9c17174a76e7138bd896dda52912c6dbf744f7aa40c388ed9" => :mojave
+    sha256 "88345eff5034e9f7b21943b6c6db34204acce6421b85f4ac598d503550f60960" => :high_sierra
   end
 
   resource "skalibs" do
