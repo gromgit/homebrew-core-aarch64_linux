@@ -8,9 +8,9 @@ class Parallel < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "1a58adcb2e33406b57eb7bec48147e04dbe9300f84ae14a6290935669a5c5143" => :catalina
-    sha256 "1a58adcb2e33406b57eb7bec48147e04dbe9300f84ae14a6290935669a5c5143" => :mojave
-    sha256 "1a58adcb2e33406b57eb7bec48147e04dbe9300f84ae14a6290935669a5c5143" => :high_sierra
+    sha256 "6b0953e1de25a1134d5ecc2aba16dfa8ecef6a609984ffaa3614ddd37c966ec3" => :catalina
+    sha256 "6b0953e1de25a1134d5ecc2aba16dfa8ecef6a609984ffaa3614ddd37c966ec3" => :mojave
+    sha256 "6b0953e1de25a1134d5ecc2aba16dfa8ecef6a609984ffaa3614ddd37c966ec3" => :high_sierra
   end
 
   conflicts_with "moreutils",
