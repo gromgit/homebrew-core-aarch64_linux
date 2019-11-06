@@ -7,12 +7,9 @@ class Qhull < Formula
 
   bottle do
     cellar :any
-    sha256 "7205c2c6fc4694ffc46099af316070ec383b99f2af1cde1ca9d9e0f23b7b5428" => :catalina
-    sha256 "33b41bad4871bd781b91ca4c418a1b5c94dc29f676288bd8f41b5ae8c302b329" => :mojave
-    sha256 "91d7e43f955fb4d9513d588e4f56a6b6c6101e9a9e0f6ed73c63a045bd4b8c25" => :high_sierra
-    sha256 "2b0192507bef8e077cae894ee59a2a25b490170cc1be64413caa1ac6e48da86d" => :sierra
-    sha256 "98d3967e46833ff3278b6815b638b5c4b049bb621543b9015124fef83276ab01" => :el_capitan
-    sha256 "00fb087ce5f3d674d22959ea820b4e3605b02ea31694d4f00d2044bc54ca3c02" => :yosemite
+    sha256 "2914810492c9ef6f46606237d8ab3adc84b4cdb5edfdab722dfa4adf58864504" => :catalina
+    sha256 "fcee31c1350555f924e27fc7868c4244fe9e6f3be67dc9a91426c85f27e65306" => :mojave
+    sha256 "9eab455f07e6bc666960235f23919cce155bf630a689cafdf346083dc88925df" => :high_sierra
   end
 
   depends_on "cmake" => :build
