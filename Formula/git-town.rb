@@ -6,10 +6,9 @@ class GitTown < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9d756be0c03322770b3ef08f71a356dcf3b7f9effa3f366d8818547a32d6629e" => :catalina
-    sha256 "acdbaa473264c569f1d2f2cfe6c6486ff02f6af601e800e0cb0a350ef0c32154" => :mojave
-    sha256 "b3be72d926d402afe2ae9b079bd702095729372b7a142d1ade13367a8415cf43" => :high_sierra
-    sha256 "423e9c2afbde04439ce9689942b739806b5ae97941d92d9ae4d2f9c7f4295047" => :sierra
+    sha256 "1b0264cc230c3b3ccc7c45ddc933b6e295edb6ffb3211472da78d1677aa220b2" => :catalina
+    sha256 "69cebc1178ee59ff060e306577396c760320e285e7fcbe3ae2367bea5a90da10" => :mojave
+    sha256 "0e30581afbe2b9ef24fbb0f9ab655d4e8ab0590e0870cf197fa61d9012bc0a51" => :high_sierra
   end
 
   depends_on "go" => :build
