@@ -5,9 +5,9 @@ class PerconaServer < Formula
   sha256 "0a96de68a71acce0c3c57cdd554b63a8f7c3026bd5aec88a384f76ce9ff4fced"
 
   bottle do
-    sha256 "052ee98be920cb88cc9ce2bcd7b25caeca0ae13203d16197f5e25126c20bf1df" => :catalina
-    sha256 "f7075505bd318f9738a4963652eb5dbeca7afd035b4c9dcfab06bb331229b8eb" => :mojave
-    sha256 "6a4565db4a704989ac67120325ff9b9a6ece44af4b8ec20866f9fd0b1003a483" => :high_sierra
+    sha256 "9df258ed7a61017087fd3ba1c4a2968f4fe5732c428a45455b9c4ba3faaa5b70" => :catalina
+    sha256 "d76960aa4262d39beacb460fc47bffb71e31314afd9e57d381bd2a4b319d3425" => :mojave
+    sha256 "2a832324afac70b9895d8b0f6017a7f93b7008f77bfffa16cf184ff505a0a027" => :high_sierra
   end
 
   pour_bottle? do
