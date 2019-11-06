@@ -8,9 +8,9 @@ class Neko < Formula
 
   bottle do
     cellar :any
-    sha256 "290c4bad61fcce09531602bdb7520180f0b4f534aa18198d34d85ac77554d060" => :catalina
-    sha256 "57d9215dc2d4077c372eb290caf8ffa2880f768b0a80d5743e369d9c520434e2" => :mojave
-    sha256 "3bac4aaff119dddac74dd73056ff243ba78a398c2d052aad75d935b5b16cac93" => :high_sierra
+    sha256 "aedc2d1e4ac68af356e4d3d6e1bde0553b737e5734a227dfe2134645d363b788" => :catalina
+    sha256 "7a499e2421564e1b752f658ffd8af89cbd91dd4418fa6b68390a7f55652f7420" => :mojave
+    sha256 "29be87f25d471ad2961b3bcd526eaccd618fa050cab5d3c6e29aaa2953df1178" => :high_sierra
   end
 
   depends_on "cmake" => :build
