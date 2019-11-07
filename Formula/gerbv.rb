@@ -6,11 +6,9 @@ class Gerbv < Formula
   sha256 "c5ee808c4230ce6be3ad10ab63c547098386d43022704de25ddb9378e62053b4"
 
   bottle do
-    rebuild 1
-    sha256 "8cfa87f398800cb2c6cb7810d488e5592eac39cd44c9b50edcd1a99bf1082a96" => :catalina
-    sha256 "5d7737b4a05390618fb4fcf160a5ea5cfd60213d7f50955d308dbce80f9d0078" => :mojave
-    sha256 "0b845b8689b8554177d6074e71857caa81a077a28558be1b39984cd1c9728db6" => :high_sierra
-    sha256 "67f3cdf2addd6a071683e04dbdd6b5d75fc34737bf45cc3f9a8d94a8f590ce3f" => :sierra
+    sha256 "eb27af6bcb6cfc6203297f617d88851e656c5b72fae84b10593429158d1861d6" => :catalina
+    sha256 "5995b2ff9b132c129e9e2ca08eb205c58883f63e22eec11c4c53e24ec6dfd4e3" => :mojave
+    sha256 "246a26e96d930c979db7bdb533807c71418ac0ad5c74bd12749d0c08b903e409" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
