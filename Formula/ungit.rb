@@ -24,13 +24,20 @@ class Ungit < Formula
   test do
     require "nokogiri"
 
-    pid = fork do
-      exec bin/"ungit", "--no-launchBrowser", "--autoShutdownTimeout", "5000" # give it an idle timeout to make it exit
+    server = TCPServer.new(0)
+    port = server.addr[1]
+    server.close
+
+    ppid = fork do
+      exec bin/"ungit", "--no-launchBrowser", "--port=#{port}", "--autoShutdownTimeout=6000"
     end
     sleep 5
-    assert_match "ungit", Nokogiri::HTML(shell_output("curl -s 127.0.0.1:8448/")).at_css("title").text
+    assert_match "ungit", Nokogiri::HTML(shell_output("curl -s 127.0.0.1:#{port}/")).at_css("title").text
   ensure
-    Process.kill("TERM", pid)
-    Process.wait(pid)
+    Process.kill("TERM", ppid)
+    # ensure that there are no spawned child processes left
+    child_p = shell_output("ps -o pid,ppid").scan(/^(\d+)\s+#{ppid}\s*$/).map {|p| p[0].to_i}
+    child_p.each { |pid| Process.kill("TERM", pid) }
+    Process.wait(ppid)
   end
 end
