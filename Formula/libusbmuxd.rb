@@ -13,6 +13,13 @@ class Libusbmuxd < Formula
       sha256 "b28e17c82dc11320741d33cf68fd78e1baec9e4133f5265b944f167839cbe9bb"
     end
   end
+  bottle do
+    cellar :any
+    sha256 "da715ab9973ef748f7edec181f6e4d694a9d36d14bcca279f3734eb307c7782e" => :catalina
+    sha256 "d96ad61ee9e0a3eb547cc80a2423fafa43397f627012a7ea5e9c3ed3b6fe8a3a" => :mojave
+    sha256 "f388c09dd9a8a8d86cba0eff7af3426cb6ffeff127182ba8aabd91a290565873" => :high_sierra
+  end
+
 
   head do
     url "https://git.sukimashita.com/libusbmuxd.git"
