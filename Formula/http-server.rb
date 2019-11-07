@@ -24,11 +24,15 @@ class HttpServer < Formula
   end
 
   test do
+    server = TCPServer.new(0)
+    port = server.addr[1]
+    server.close
+
     pid = fork do
-      exec "#{bin}/http-server"
+      exec "#{bin}/http-server", "-p#{port}"
     end
     sleep 1
-    output = shell_output("curl -sI http://localhost:8080")
+    output = shell_output("curl -sI http://localhost:#{port}")
     assert_match /200 OK/m, output
   ensure
     Process.kill("HUP", pid)
