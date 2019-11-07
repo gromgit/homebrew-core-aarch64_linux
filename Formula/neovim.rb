@@ -5,9 +5,9 @@ class Neovim < Formula
   sha256 "91a0b5d32204a821bf414690e6b48cf69224d1961d37158c2b383f6a6cf854d2"
 
   bottle do
-    sha256 "5436532a1574329e386cf29df04e7d528730a7bd95c073b6ea76a37499ececc0" => :mojave
-    sha256 "7d839a0c108ea2a95b7a61bde2fb08f667938bcad2e4a5d908d51a35d899c85c" => :high_sierra
-    sha256 "73bc96be3bccacb2c6c02e4c3aaf06ad0dc4f3b34569a46adda8ec7b41db2f52" => :sierra
+    sha256 "389ab254794ea04df8a106bf281c227c4fdee27c609d52951f32b9a0239031d6" => :catalina
+    sha256 "fb6cc38c45be4650a4a750a314cec27f6f7643dc7c22a1f5abae347e1b39b388" => :mojave
+    sha256 "b2f7450e005f4eb22bfaf650fe7741fa8629393a947b4dd48c9f91e7fc258113" => :high_sierra
   end
 
   head do
