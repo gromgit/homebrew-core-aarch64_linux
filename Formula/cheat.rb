@@ -7,9 +7,9 @@ class Cheat < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "3e64a9406fedf9e8fbf1f6462985a0734a96a9c50d8822ae1e20faa4f5316063" => :catalina
-    sha256 "c0c823c8c6635be3b0acc54b7149b1a1ead01282ec19ac51414efbc0ae8ddc7e" => :mojave
-    sha256 "67316ce5e4ca0a35743100231d1c63919227d570e6b73c909e851f1000f89981" => :high_sierra
+    sha256 "9484678d131ceff8d993b58be7b426fc4ae01c9d353b2ff8b85022fb3d008f70" => :catalina
+    sha256 "213b1351d0d3416ab9adda329349a737f6cec0885abe16acf98268000c56939a" => :mojave
+    sha256 "ed4d0cabdbfcc0ec90b672463079f27115f63efb08a0f30b73a62aad53e18e41" => :high_sierra
   end
 
   depends_on "go" => :build
