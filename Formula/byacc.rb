@@ -6,10 +6,9 @@ class Byacc < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "55261bcc540c086b4c69437bbf2bc6733829b75cbd5a9fa51ff0eaa64148c7c4" => :catalina
-    sha256 "f5081b555e8e1c282cf5c3218cbaae6bbd69b5f8eef4108d4a6f04e04812f751" => :mojave
-    sha256 "7f9c858f27a7dd7b42c8ba78829f86acd03378c35f48dbe76db1728a65ec3254" => :high_sierra
-    sha256 "420f0b93cba45fc71a1d328787b660eca13b997976ec05d7c868cd1d413724f5" => :sierra
+    sha256 "816b9eca03031cdf0f8e43416e3c4d5979ac880de70eabc53fb1dd6e1ac7752a" => :catalina
+    sha256 "15101b84c05e4bde2bfadd38f38f1dba5ac6723b26f609e61d9744c3599da0a6" => :mojave
+    sha256 "f46bbe00c8f4afc56ea7548763f8e244632eab35d154bb3233e13418c81c92e0" => :high_sierra
   end
 
   def install
