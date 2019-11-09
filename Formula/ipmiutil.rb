@@ -5,12 +5,10 @@ class Ipmiutil < Formula
   sha256 "9938ca13f55d2be157081d49c8c6392391b057c9818e02d5ef231a62e54a8a65"
 
   bottle do
-    cellar :any
-    rebuild 1
-    sha256 "57b2a63f6564de22edd0e314f188a6a6f850298954e7b31a9bcae60c497f9c58" => :catalina
-    sha256 "83d9f7ccbc8950dcc3a653dc3f35ed742129d1eaaf547585bbc76b8d195eda64" => :mojave
-    sha256 "a0119f2e672668e9792c2d6bd6cfedc4797612e4b2b98fa691b74f936b4198ee" => :high_sierra
-    sha256 "8e136064d7075e847c87bc7f7e1e9bc583259f51205dd69ddafb0708fdff3f66" => :sierra
+    cellar :any_skip_relocation
+    sha256 "02ae664c9007d6cea468932d1cc262b18c1bf549c7fb24d9d600437b58fccbae" => :catalina
+    sha256 "83fc42e510001906bfd5d5b18a751f7499f522e36ebeb0eaff84f8bf158df747" => :mojave
+    sha256 "89f8332794bc2c9a9bf15467c4ed1f9ca38ff5588687a569613322af8d185a48" => :high_sierra
   end
 
   depends_on "autoconf" => :build
