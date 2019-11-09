@@ -7,11 +7,9 @@ class Assimp < Formula
 
   bottle do
     cellar :any
-    sha256 "7b1c523586abd22000565be26b2639d2f6c818f101dfd4c78975e59be528fccb" => :catalina
-    sha256 "97457d0943085b11a105b95a4799c73f624db843b9de7e0f81515add33539f6e" => :mojave
-    sha256 "2a3c4f77532717d3cd6b8de75a4cdb033b26fc4d64736f17e90d836e11b90fe4" => :high_sierra
-    sha256 "632ab4d0bd3f3aaa002945ace7e90362b396154ef3c4536b884872f82f3dd30d" => :sierra
-    sha256 "5991caf1877f8193889d0929399aa24790e8eeab96736c3c1d28800966d75169" => :el_capitan
+    sha256 "fe46160da97212c37c91e5798d70c8d0ff25bb551034919f54bfca92eb740eb3" => :catalina
+    sha256 "de688cc4a769519596543c4fcb6c6da9811dc98bd9fe068d358337361d7ad558" => :mojave
+    sha256 "05192d6a70b625792264ceca37da758e1a3ffeab95551968a4df53635eb0d1a3" => :high_sierra
   end
 
   depends_on "boost" => :build
