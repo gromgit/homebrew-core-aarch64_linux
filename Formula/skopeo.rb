@@ -34,7 +34,7 @@ class Skopeo < Formula
       ldflags = [
         "-X main.gitCommit=",
         "-X github.com/containers/image/docker.systemRegistriesDirPath=#{etc/"containers/registries.d"}",
-        "-X github.com/containers/image/internal/tmpdir.unixTempDirForBigFiles=#{ENV["TEMPDIR"]}",
+        "-X github.com/containers/image/internal/tmpdir.unixTempDirForBigFiles=/var/tmp",
         "-X github.com/containers/image/signature.systemDefaultPolicyPath=#{etc/"containers/policy.json"}",
         "-X github.com/containers/image/pkg/sysregistriesv2.systemRegistriesConfPath=#{etc/"containers/registries.conf"}",
       ].join(" ")
