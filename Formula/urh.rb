@@ -7,9 +7,8 @@ class Urh < Formula
   head "https://github.com/jopohl/urh.git"
 
   bottle do
-    sha256 "75f6c9bd0d20973a6dbfffae5cab957d6fa9dabf6edfcd920e2104f13d225e76" => :catalina
-    sha256 "1c7c16a5b6999491ad09035ed52fa6c358157911c8b5bbcc1a06c2bcbf26c573" => :mojave
-    sha256 "d982e78ded4a79c835bc99f267b5ce565c05a527953a3172e8913a3ee05ce263" => :high_sierra
+    sha256 "cdbc94ae25a5068c353b3a83565b7ef6494487e6e15a6fe07c47ca9d7154ddc1" => :mojave
+    sha256 "6f376a04151fdfbc440ebd9f956d8d4abb40099c0761535d9b7c44e282295235" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
