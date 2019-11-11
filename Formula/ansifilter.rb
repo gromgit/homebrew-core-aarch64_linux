@@ -6,10 +6,9 @@ class Ansifilter < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "61f514bb17e9af97717cbce217fe72c3499e7643ee75d0727c98112e9fd42410" => :catalina
-    sha256 "78a752145456f9be0bf7eb0639c0797ee61f262d3305c95ebd3efafd43568176" => :mojave
-    sha256 "0038d6bc9d690591df08c050a63fac325174df8c6cb64264524199f4b0c000c5" => :high_sierra
-    sha256 "3b242df11f164808dcc618830b5ecd0ac85f1ecc14943a6695eec0bd849327ce" => :sierra
+    sha256 "bf8ad3294210b1983e59211b7f0c13d74b21c5ac860de74baace75c433a81efb" => :catalina
+    sha256 "d4c8cb15ab54e31965093a1de8b8cf8a5a2699052e35e17089df0a871ad19c10" => :mojave
+    sha256 "ce2f2ed412dbe3dda7cf57989458f22e07360be622767a578341bf579485be06" => :high_sierra
   end
 
   def install
