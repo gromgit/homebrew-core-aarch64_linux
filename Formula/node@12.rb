@@ -4,6 +4,13 @@ class NodeAT12 < Formula
   url "https://nodejs.org/dist/v12.13.0/node-v12.13.0.tar.gz"
   sha256 "2e5321e095fe673a3ab936cf77faf8c983cba62f27a9fbd00530a7edb739a040"
 
+  bottle do
+    cellar :any
+    sha256 "7f109b9c0aaab24570ffa2d65d091f918a66698cb0a92486e9bdbf91f0e4f769" => :catalina
+    sha256 "29a7ed3f00bfbccaf32e07b274330d3a63fe963582393a01eb5abb6073c180cc" => :mojave
+    sha256 "f83c6c3d0bdeddf642de5983ceaebbbec2df69976b7f4fc04ecd233285a56ed4" => :high_sierra
+  end
+
   keg_only :versioned_formula
 
   depends_on "pkg-config" => :build
