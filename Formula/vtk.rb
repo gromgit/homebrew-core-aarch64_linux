@@ -7,9 +7,7 @@ class Vtk < Formula
   head "https://github.com/Kitware/VTK.git"
 
   bottle do
-    sha256 "b82c5276ce784af50cb6cddc8355b69239a51ea724849375207fff1518990be1" => :mojave
-    sha256 "1e2f7885e7502b654db20733c675d432549aba8d454567ec38fcb7a5975b9f24" => :high_sierra
-    sha256 "416159f7f88c72a0aec2eb5fb8d68feb99053cd025fc5c3b1f8b41e81cb8df1c" => :sierra
+    sha256 "2d84235141105e2917cdb596c101c71144003d290c94f4a8b3247c4d9670228e" => :high_sierra
   end
 
   depends_on "cmake" => :build
