@@ -1,8 +1,8 @@
 class Termshark < Formula
   desc "Terminal UI for tshark, inspired by Wireshark"
   homepage "https://termshark.io"
-  url "https://github.com/gcla/termshark/archive/v1.0.0.tar.gz"
-  sha256 "669bba0e8dd7df54ade6321a5c7d2ec20563ffd777f7b3b0394a11f88da64698"
+  url "https://github.com/gcla/termshark/archive/v2.0.2.tar.gz"
+  sha256 "36e45dfeb97f89379bda5be6bfe69c46e5c4211674120977e7b0033f5d90321a"
 
   bottle do
     cellar :any_skip_relocation
@@ -24,14 +24,13 @@ class Termshark < Formula
 
     cd "termshark" do
       system "go", "build", "-o", bin/"termshark",
-             "-ldflags", "-X github.com/gcla/termshark.Version=#{version}",
              "cmd/termshark/termshark.go"
     end
   end
 
   test do
-    assert_match "termshark v1.0.0",
-                 shell_output("#{bin}/termshark -v --pass-thru=no")
+    assert_match "termshark v2.0.2",
+                 shell_output("#{bin}/termshark -v --pass-thru=false")
 
     # Build a test pcap programmatically. Termshark will read this
     # from a temp file.
