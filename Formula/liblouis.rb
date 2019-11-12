@@ -9,6 +9,12 @@ class Liblouis < Formula
     depends_on "pkg-config" => :build
     depends_on "python"
   end
+  bottle do
+    sha256 "8a1f8644c50e6fae5921e0310f2d947d125fb955620bb5ac43db4ac96d64994c" => :catalina
+    sha256 "f57dd551d0a14fec1052d4427b2c77a685e396ec6d7759941126ccf16921bb3c" => :mojave
+    sha256 "03c686d2a9d9d9f8bea700fe92e1473dc901d8c01fa669f1a7b30d3cad41df0e" => :high_sierra
+  end
+
   head do
     url "https://github.com/liblouis/liblouis.git"
     depends_on "autoconf" => :build
