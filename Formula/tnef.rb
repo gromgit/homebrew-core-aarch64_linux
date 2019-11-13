@@ -6,11 +6,9 @@ class Tnef < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "80c433d6b842003d3f1ba5644b86299f92f5699af96715550bdc167272edaa76" => :catalina
-    sha256 "5ba739818e3a1d567b41b55d7f91b0cba091d72cae8163c81a4ce28580b362a8" => :mojave
-    sha256 "15020412f544e13024591117403ff6db1abe840a225d567c755c1f88652fc84d" => :high_sierra
-    sha256 "f7364607dc960c4b18ff4643cbbb5ebb89a591c36d71a6c2344ab99b725a6f27" => :sierra
-    sha256 "ab8d466c0d78822062f8b5a347cc0f5897e02b7c2754bf18613bad85c911c52b" => :el_capitan
+    sha256 "ff92eb820b2efae9e87e42491a590601f400160f27ea2804b176b02b1648be66" => :catalina
+    sha256 "2700f31ebcc1e2ba9219d6b6ac040846eba21ccc25baca4fea8b7d630b6673d2" => :mojave
+    sha256 "842ba6bbe666302bd39c1cf7d29caa7d5180c20757b8dfe91b99d3fe1d3da841" => :high_sierra
   end
 
   depends_on "autoconf" => :build
