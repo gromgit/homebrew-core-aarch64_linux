@@ -7,11 +7,9 @@ class Leptonica < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "9941fc91bf580e0118af3781faaeb303e888465057fa5cf4184025e9342c04a8" => :catalina
-    sha256 "e986663412d5f3e2e731766c6b90eaf586f343067787602e9a11361d998b4d24" => :mojave
-    sha256 "9d07766fb8cb612838f4bc85801a106b7ba07b76bef30b68d5935aa9485076e4" => :high_sierra
-    sha256 "5200d6f0a132a730aa552c128f8a9abd076f34568a70dc6bea7b042d2fa7b037" => :sierra
+    sha256 "d9e27aab9e580e3f25f3be0c59f18aaa54b644c5886a7a1557d7bd2fda5003ab" => :catalina
+    sha256 "0fc5ee0131143e0abe3b645ca69c23f8701787f0d60b2b28c0a4fdbbd5ce0913" => :mojave
+    sha256 "53334591a3f5f47b0aba1ca1d9529bfd83bb05140784a34b3e4571d160483f06" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
