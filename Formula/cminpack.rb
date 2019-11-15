@@ -3,6 +3,7 @@ class Cminpack < Formula
   homepage "http://devernay.free.fr/hacks/cminpack/cminpack.html"
   url "https://github.com/devernay/cminpack/archive/v1.3.6.tar.gz"
   sha256 "3c07fd21308c96477a2c900032e21d937739c233ee273b4347a0d4a84a32d09f"
+  revision 1
   head "https://github.com/devernay/cminpack.git"
 
   bottle do
@@ -18,7 +19,9 @@ class Cminpack < Formula
   depends_on "cmake" => :build
 
   def install
-    system "cmake", ".", "-DBUILD_SHARED_LIBS=ON", *std_cmake_args
+    system "cmake", ".", "-DBUILD_SHARED_LIBS=ON",
+                         "-DCMAKE_BUILD_WITH_INSTALL_RPATH=ON",
+                         *std_cmake_args
     system "make", "install"
 
     man3.install Dir["doc/*.3"]
