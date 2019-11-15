@@ -3,6 +3,7 @@ class Libgraphqlparser < Formula
   homepage "https://github.com/graphql/libgraphqlparser"
   url "https://github.com/graphql/libgraphqlparser/archive/0.7.0.tar.gz"
   sha256 "63dae018f970dc2bdce431cbafbfa0bd3e6b10bba078bb997a3c1a40894aa35c"
+  revision 1
 
   bottle do
     cellar :any
@@ -16,7 +17,8 @@ class Libgraphqlparser < Formula
   depends_on "cmake" => :build
 
   def install
-    system "cmake", ".", *std_cmake_args
+    system "cmake", ".", "-DCMAKE_BUILD_WITH_INSTALL_RPATH=ON",
+                         *std_cmake_args
     system "make"
     system "make", "install"
     libexec.install "dump_json_ast"
