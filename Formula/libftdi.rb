@@ -20,7 +20,9 @@ class Libftdi < Formula
 
   def install
     mkdir "libftdi-build" do
-      system "cmake", "..", "-DPYTHON_BINDINGS=OFF", *std_cmake_args
+      system "cmake", "..", "-DPYTHON_BINDINGS=OFF",
+                            "-DCMAKE_BUILD_WITH_INSTALL_RPATH=ON",
+                            *std_cmake_args
       system "make", "install"
       pkgshare.install "../examples"
       (pkgshare/"examples/bin").install Dir["examples/*"] \
