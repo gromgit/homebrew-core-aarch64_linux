@@ -7,9 +7,9 @@ class Ispc < Formula
 
   bottle do
     cellar :any
-    sha256 "7e06311ad988893b2f89b95791866a1edea6d3d3f21c3b78a9671363db7275b8" => :mojave
-    sha256 "0597f7a59aa3a549d97f70804c82937383946152f1849162b5e7c4a5527ec3f7" => :high_sierra
-    sha256 "d4db0a4b773d610a63af77fae5c953fd6ea49c3e3080a924c37b345634d48e06" => :sierra
+    sha256 "99109ffe35534e264eea6814b4006a49a1aba2cda154ab2d22d7e0c29da6cfc0" => :catalina
+    sha256 "cc7f31ea15ede43f37e40270643d3fa86722bc4ccf9a1bf4c763ad6985a26ffb" => :mojave
+    sha256 "17439d6f18ba148e5a912f595240ce5c89a9f951059411217c53db59dbab75d2" => :high_sierra
   end
 
   depends_on "bison" => :build
