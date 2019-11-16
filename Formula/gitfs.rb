@@ -9,9 +9,9 @@ class Gitfs < Formula
 
   bottle do
     cellar :any
-    sha256 "672ed08730f673fd497b265c3673ce6c36e00fc7c4b4e2f3f5396af7aa2ff049" => :catalina
-    sha256 "20e5dfcf7b3c802cf39420d7c4b8093381fbe8112d498d936e2e0ce10b85f6da" => :mojave
-    sha256 "10e417686bf747da730f9c08659b4ba4801236a3ed0821e125580e99fbfe27a2" => :high_sierra
+    sha256 "46b9f946ecb8009dc86e20230314c21d17f270f516410094a4efe7e4bd49125b" => :catalina
+    sha256 "b3c0185053026036e2cb08fb9eeacc896a690f3b86a6fb9e319fa72213c215eb" => :mojave
+    sha256 "e15109dbbfebea22a1f90b35ad2a93769cf581eda07d29c7cc7eb8c8b6982b43" => :high_sierra
   end
 
   depends_on "libgit2"
