@@ -8,8 +8,8 @@ class Syncthing < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "81c4bbb7b6c7855a5eee5e41bb4489de4d1d301f968b1c680cb86b95c9f3fb08" => :mojave
-    sha256 "a92ac13dae538d0932c1c4f2af0185ef571f9730df74b522bc569f547211e537" => :high_sierra
+    sha256 "cca242ffe3995d47fa18745db53c6aa2fab7afbc29f24bba465990cb16cb6442" => :mojave
+    sha256 "144fe683b8d74f3e2300f4fd6dfa0904223b255509f42b675fcb50a7a5835902" => :high_sierra
   end
 
   depends_on "go" => :build
