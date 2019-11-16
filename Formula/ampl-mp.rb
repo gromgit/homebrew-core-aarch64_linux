@@ -7,12 +7,9 @@ class AmplMp < Formula
 
   bottle do
     cellar :any
-    sha256 "34d8e286684821717367eed169b4fa7155874e0ce26898cddbd0d2611431ce0d" => :catalina
-    sha256 "c16bb69deb8159e7d23af87e61de36aacba168ececc03ae0f2ba7b063758a3dc" => :mojave
-    sha256 "db013b18d1c1ac615514e2ba8f760cc8b91120218b205d843d536beb3888237e" => :high_sierra
-    sha256 "46d1cf71028cfaa76c3dc7fbc869dfdac4704f97c2963142df41afabe3bbc6f0" => :sierra
-    sha256 "87744fa4f67c6f1d35ed70f17f04d96e19b6ed3312bcea224677d89a6d1c89f4" => :el_capitan
-    sha256 "f9fd64bafa20eebd39425bf8331e0ca1962d47b1deeed589c347b75ced5e193d" => :yosemite
+    sha256 "c111c501330b3ff8e3bde1a7e679f162bea1038df07de96810ea5cbe34775740" => :catalina
+    sha256 "bf329d7a40c3a21cb745d9d86bc0cf4add18397aedd6b36eb8e27feab822f1e3" => :mojave
+    sha256 "835aea5e86e3780681cb38ebe0f0dcd522ed21f80ed4711ad10e66b6c0814d03" => :high_sierra
   end
 
   depends_on "cmake" => :build
