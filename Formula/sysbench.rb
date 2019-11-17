@@ -7,9 +7,9 @@ class Sysbench < Formula
 
   bottle do
     cellar :any
-    sha256 "c3c5e3c681f8ab8d0fa65e0ab35cfeed862c5dd5100f995c898fc09c4586d05e" => :catalina
-    sha256 "5e2feb16bf04b68e8e55d7151f7433ea24d9f9fbcbcd3ea9d069eb6ed47e391b" => :mojave
-    sha256 "ec91591ea8d8f14cfc953dff4467c394b1230c18d96795de9d153e003c25db09" => :high_sierra
+    sha256 "a720824e2b028688b66f6f364d6e45754e3544001c5ab5427d9c0fc0c5e7153f" => :catalina
+    sha256 "8343774a73daa156e839c23c521f5ddce1c4d12c7106028c6b78e3b10193e112" => :mojave
+    sha256 "6a24f2724fd649fc96a0f6829620a46b71d8edbff172fc17d163cbaaf728a3ad" => :high_sierra
   end
 
   depends_on "autoconf" => :build
