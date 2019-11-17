@@ -4,6 +4,12 @@ class MysqlClientAT57 < Formula
   url "https://cdn.mysql.com/Downloads/MySQL-5.7/mysql-boost-5.7.28.tar.gz"
   sha256 "f16399315212117c08f9bdf8a0d682728b2ce82d691bcfbf25a770f413b6f2da"
 
+  bottle do
+    sha256 "8004b19b71ab02e1424f1641744d4b9cce92c2d30149bc6b6b0eb94350e24f32" => :catalina
+    sha256 "8d878f87dcef2a2bbf5c5b6a3dfa9b275dd5473261f7c9c6d5aa15f48f12dee2" => :mojave
+    sha256 "97a2d7da651e0b6fb762a39acc2586783444da6911efec3f858972165f32cda7" => :high_sierra
+  end
+
   keg_only :versioned_formula
 
   depends_on "cmake" => :build
