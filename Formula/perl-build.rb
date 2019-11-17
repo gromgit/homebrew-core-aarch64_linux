@@ -7,9 +7,9 @@ class PerlBuild < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "334d758431276eab85dedb6d85f49ba231cbf6f1403a924ee09bbe036c97778b" => :high_sierra
-    sha256 "db1311750f48a2bd5cb8571f4dc7688c59b510855ca5481f65d57042cbdfc883" => :sierra
-    sha256 "fd55b31409de788975a6118a73786b845a131e944edc8cf41877c5eea21044bf" => :el_capitan
+    sha256 "f1f873c2ff9d0d82dc32342e4a048b0d766242128aa68c92c28b85e8ac7465ce" => :catalina
+    sha256 "77795cc97a4a95805804fd05a9a73c3ee2e2fd807f032365d0bd7ebb57ae9117" => :mojave
+    sha256 "6f32d771c449780efeca88dbb50f841ed15021053932958ce8bd6385a19b9f20" => :high_sierra
   end
 
   resource "Module::Build" do
