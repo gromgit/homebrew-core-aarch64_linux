@@ -7,9 +7,9 @@ class Libzdb < Formula
 
   bottle do
     cellar :any
-    sha256 "8bfea3ea5ccacde36438d2f548a412d7862ac8deac467329e5bb82d9c490435f" => :catalina
-    sha256 "d35ba4a4e51728b8972bc4fd81d36cc705cbd11361da4b79071f6e623d93911f" => :mojave
-    sha256 "55b4039e6d15b5403830d74c40194e2c33644d47e001c143c21af77f0ef02e79" => :high_sierra
+    sha256 "1d523ee67b9eb18d8e4311f722b24d60c3ca35994de9e2cb945f20766e922630" => :catalina
+    sha256 "e33de57009c4bee656f08539b7eb1e982db84e6b2692f8446d1364d1ff5f147b" => :mojave
+    sha256 "ef5be4752f5a6f663841299ee699e9c3e361d9dfa70022d82c4269bcb3707d38" => :high_sierra
   end
 
   depends_on :macos => :high_sierra # C++ 17 is required
