@@ -4,6 +4,12 @@ class Sentencepiece < Formula
   url "https://github.com/google/sentencepiece/archive/v0.1.84.tar.gz"
   sha256 "7f5505bd46aa5103ad235d61c269932c5922e68597eb484a9d27faed6af1419f"
 
+  bottle do
+    sha256 "e30acde8207449bdb9e9ae91725fc70b84cfea35311058fab27040db88e0017b" => :catalina
+    sha256 "7d8a60234fff512aaae93d55457f11296a82a3181151ef41396340124fb33ed4" => :mojave
+    sha256 "ef3666709a067d7ad6e544ee8d03f6fac625e39a6ab2fb23818af516079aaf8b" => :high_sierra
+  end
+
   depends_on "cmake" => :build
 
   def install
