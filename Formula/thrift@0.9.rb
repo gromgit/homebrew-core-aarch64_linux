@@ -6,11 +6,9 @@ class ThriftAT09 < Formula
 
   bottle do
     cellar :any
-    rebuild 2
-    sha256 "e6f84f60c56f6b40daa198244c8cecdd55de15d091dc704ec2040668645c8854" => :catalina
-    sha256 "8f53901fc673714781061e6c78e74cffe4145681d9e0c54b75a6f51e9ad280d7" => :mojave
-    sha256 "512e477e531ba50224ff3dd89cf5029e0bb52637d5dda62a1ace4b7051e3883d" => :high_sierra
-    sha256 "fe51400fc1062beda47105f013d5d98f28dbe061897f630831a52169f5d1b59b" => :sierra
+    sha256 "bebef37eaa3671d2810eaaf9f06b7c6cf73ef56f83b8359de514643cd201b946" => :catalina
+    sha256 "9c4f0de40a613a30dce7b032425a66d0f5392680d6af39f9944e8982bd7d16d4" => :mojave
+    sha256 "a85aabc6f3c1d496f618c41e1ca367d2e8c730d9fd543f5b2a74af2760a1869a" => :high_sierra
   end
 
   keg_only :versioned_formula
