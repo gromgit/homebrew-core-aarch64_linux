@@ -6,10 +6,9 @@ class Rex < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f90fa46cd34912d5c10d9d55fcdddb177db4285f78c50b1406a44379f31b92d5" => :catalina
-    sha256 "e93b313938ed159093fca17d8f3d60269459d83b229232f2b5dffc01c33c0ca6" => :mojave
-    sha256 "09143d27ac5fe140a9ebaaac87ebda438cd15aa95914863a82c9115d581733a0" => :high_sierra
-    sha256 "5626059f4a4a92a96dc0738f9d1673247641ef2414de4b3f830b8103f9fd80c5" => :sierra
+    sha256 "e45e0606298ce52f1d12f5beca218b2537c9580d5f614512a058af3984ee4b75" => :catalina
+    sha256 "68c7c24db6dc45548177f787e4396efa4704a381bd83de5cea2d19073e504db7" => :mojave
+    sha256 "0e9ec1f06db015eff191fd046845ac0f67762406d07ebce29bf3ff9880a99407" => :high_sierra
   end
 
   resource "Module::Build" do
