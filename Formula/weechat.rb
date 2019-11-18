@@ -3,6 +3,7 @@ class Weechat < Formula
   homepage "https://www.weechat.org"
   url "https://weechat.org/files/src/weechat-2.6.tar.xz"
   sha256 "fa9e3130e7afdfb6eff1b7892caac3efdd38a442f9989ca8c061eced2c755148"
+  revision 1
   head "https://github.com/weechat/weechat.git"
 
   bottle do
@@ -36,6 +37,10 @@ class Weechat < Formula
     if MacOS.version >= :sierra
       args << "-DRUBY_EXECUTABLE=/usr/bin/ruby"
       args << "-DRUBY_LIB=/usr/lib/libruby.dylib"
+    end
+
+    if MacOS.version >= :mojave && MacOS::CLT.installed?
+      ENV["SDKROOT"] = ENV["HOMEBREW_SDKROOT"] = MacOS::CLT.sdk_path(MacOS.version)
     end
 
     mkdir "build" do
