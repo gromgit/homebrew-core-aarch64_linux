@@ -11,11 +11,9 @@ class Virtuoso < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "533bdc295f3a0d962fb068a8b85090b532c5ca6417786cbbc6872a2f7e993c7b" => :catalina
-    sha256 "fb4d826c3209738d2398cd471fa6dff632c10c0b64fb667eb948717c8cfbdf19" => :mojave
-    sha256 "d2d89c1cd64a84dec3728c691f1efbd3f0771dfe2fe931fe73bbbbd174343fd6" => :high_sierra
-    sha256 "bb86d15d36d1affafc57ff612ea0a6c88425882bbf5e1bd4cabe5bc1f434a31e" => :sierra
+    sha256 "c4904ae739141d51638c3f33064c85498c20d32169053daa61203ff6706c1fa8" => :catalina
+    sha256 "3a2375ce75d34e6fa2568aeb4bc3ac0239a4052c811eb3afeb7536166b05e67b" => :mojave
+    sha256 "3abcc2f1444324d675af9014ac20555124c875d7e9a4ba9b021fd1ad7c570845" => :high_sierra
   end
 
   depends_on "autoconf" => :build
