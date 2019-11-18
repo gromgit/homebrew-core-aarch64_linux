@@ -5,6 +5,13 @@ class CartridgeCli < Formula
   sha256 "4668f84a779eb8f6ddfcafaf4c727899ef2fe31622e8999317c512b685bd1c31"
   head "https://github.com/tarantool/cartridge-cli.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "a4790082a90287ce8911c60c2dc9fb7a2d60dcddcd4da17f94779332c4028958" => :catalina
+    sha256 "a4790082a90287ce8911c60c2dc9fb7a2d60dcddcd4da17f94779332c4028958" => :mojave
+    sha256 "a4790082a90287ce8911c60c2dc9fb7a2d60dcddcd4da17f94779332c4028958" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "tarantool"
 
