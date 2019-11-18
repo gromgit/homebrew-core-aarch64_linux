@@ -3,7 +3,7 @@ class TemporalTables < Formula
   homepage "https://pgxn.org/dist/temporal_tables/"
   url "https://github.com/arkhipov/temporal_tables/archive/v1.2.0.tar.gz"
   sha256 "e6d1b31a124e8597f61b86f08b6a18168f9cd9da1db77f2a8dd1970b407b7610"
-  revision 1
+  revision 2
 
   bottle do
     cellar :any_skip_relocation
@@ -20,6 +20,13 @@ class TemporalTables < Formula
   patch do
     url "https://github.com/mlt/temporal_tables/commit/24906c44.diff?full_index=1"
     sha256 "9c20bde0bafb9cbf0fee9a4922134069e403c728660f6b9c0d6ee3ae7e48cdfc"
+  end
+
+  # Fix for postgresql 12 compatibility:
+  # https://github.com/arkhipov/temporal_tables/issues/47
+  patch do
+    url "https://github.com/mlt/temporal_tables/commit/a6772d195946f3a14e73b7d3aff200ab872753f4.patch?full_index=1"
+    sha256 "c15d7fa8a4ad7a047304c430e039776f6214a40bcc71f9a9ae627cb5cf73647e"
   end
 
   def install
