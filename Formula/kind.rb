@@ -5,6 +5,13 @@ class Kind < Formula
   sha256 "966b5c9817850f958acf14496349276a8df6d6609adfdc41633a8b7bc73d5e5d"
   head "https://github.com/kubernetes-sigs/kind.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "90b44f5c4b4b11526371b974d86c32cf871e7b9d4042fde8e717befa33c3da07" => :catalina
+    sha256 "81100ccfcfda9542f639e8b0ab55761085e539fbfb86c9d459cc22bec6981fd0" => :mojave
+    sha256 "32d4b9e2e0b243668e10c365c18e85b3f01255d7fb06f5ca317eeb7ee3589d06" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
