@@ -3,7 +3,7 @@ class Libpqxx < Formula
   homepage "http://pqxx.org/development/libpqxx/"
   url "https://github.com/jtv/libpqxx/archive/6.4.5.tar.gz"
   sha256 "86921fdb0fe54495a79d5af2c96f2c771098c31e9b352d0834230fd2799ad362"
-  revision 3
+  revision 4
 
   bottle do
     cellar :any
@@ -15,9 +15,10 @@ class Libpqxx < Formula
 
   depends_on "pkg-config" => :build
   depends_on "xmlto" => :build
-  depends_on "postgresql"
+  depends_on "libpq"
 
   def install
+    ENV["PG_CONFIG"] = Formula["libpq"].opt_bin/"pg_config"
     system "./configure", "--prefix=#{prefix}", "--enable-shared"
     system "make", "install"
   end
@@ -34,10 +35,5 @@ class Libpqxx < Formula
            "-I#{include}", "-o", "test"
     # Running ./test will fail because there is no runnning postgresql server
     # system "./test"
-
-    # `pg_config` uses Cellar paths not opt paths
-    postgresql_include = Formula["postgresql"].opt_include.realpath.to_s
-    assert_match postgresql_include, (lib/"pkgconfig/libpqxx.pc").read,
-                 "Please revision bump libpqxx."
   end
 end
