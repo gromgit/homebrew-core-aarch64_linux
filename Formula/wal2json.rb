@@ -3,6 +3,7 @@ class Wal2json < Formula
   homepage "https://github.com/eulerto/wal2json"
   url "https://github.com/eulerto/wal2json/archive/wal2json_1_0.tar.gz"
   sha256 "d8c1b774bc2d41747ae4266280f798b26e8e72e8ea46a58b71764edb98cf2ef4"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
