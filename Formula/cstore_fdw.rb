@@ -3,6 +3,7 @@ class CstoreFdw < Formula
   homepage "https://github.com/citusdata/cstore_fdw"
   url "https://github.com/citusdata/cstore_fdw/archive/v1.6.2.tar.gz"
   sha256 "35aabbc5a1608024e6aa038d06035e90d587e805eb706eb80652eb8547783491"
+  revision 1
 
   bottle do
     cellar :any
@@ -15,9 +16,18 @@ class CstoreFdw < Formula
   depends_on "postgresql"
   depends_on "protobuf-c"
 
-  def install
-    ENV["PG_CONFIG"] = Formula["postgresql"].opt_bin/"pg_config"
+  # PostgreSQL 12 compatibility patches
+  patch do
+    url "https://github.com/citusdata/cstore_fdw/commit/db6cc99f23d1a4f4eacead60521bd49c0ba3352d.patch?full_index=1"
+    sha256 "2159967206a4604c382e7dbd66f2ddb3ca0a5ae954620c85d5842e2eebffa086"
+  end
 
+  patch do
+    url "https://github.com/citusdata/cstore_fdw/commit/4497b13baed58e2d8d97f0b840579b4503956226.patch?full_index=1"
+    sha256 "89a7aa514741c3a647aafb287b6ddf26625f28421951e70f8d1d74e5fdec3c79"
+  end
+
+  def install
     # workaround for https://github.com/Homebrew/homebrew/issues/49948
     system "make", "libpq=-L#{Formula["postgresql"].opt_lib} -lpq"
 
