@@ -10,9 +10,9 @@ class Libusbmuxd < Formula
 
   bottle do
     cellar :any
-    sha256 "da715ab9973ef748f7edec181f6e4d694a9d36d14bcca279f3734eb307c7782e" => :catalina
-    sha256 "d96ad61ee9e0a3eb547cc80a2423fafa43397f627012a7ea5e9c3ed3b6fe8a3a" => :mojave
-    sha256 "f388c09dd9a8a8d86cba0eff7af3426cb6ffeff127182ba8aabd91a290565873" => :high_sierra
+    sha256 "cd86a52e7d94295f6ddb4f61449f349f22e6ebe0dec876904a0bdde78869035b" => :catalina
+    sha256 "c296286ac58e0afbd167f37b7be5ced50c104252d69878e9a54f33268eb54a54" => :mojave
+    sha256 "c37185be694168115ef33c17794a3a00ef3e917ade673f0a6a7f39fb3a9dd5dd" => :high_sierra
   end
 
   head do
