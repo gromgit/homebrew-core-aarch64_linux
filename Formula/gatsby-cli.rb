@@ -8,9 +8,9 @@ class GatsbyCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9aca92a5495ba5a6487cff3d58638ebd24d58fa39bb51a0c269fbeaa514b1c10" => :catalina
-    sha256 "549708d7c6b38c600d7b272a0c90966f04b3e633180c7e188df9a468ee1b16ab" => :mojave
-    sha256 "82f493d40e86cc412871c7b9b9fb8faf521d1ef958cecc941f5ffcdbaa06f848" => :high_sierra
+    sha256 "8d98fca2260322ee200b2c0e171f3f46d4077641fe348e22fb6629e0e65e5e3f" => :catalina
+    sha256 "125f3e96982a35e191ae3c5773e846a571d1a977387df3b185c95127d53940d5" => :mojave
+    sha256 "45ee046b4db8534b61aa858dc813fb5bd006c6489eadd4118b620beac0a1e3fe" => :high_sierra
   end
 
   depends_on "node"
