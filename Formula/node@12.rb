@@ -14,11 +14,14 @@ class NodeAT12 < Formula
   keg_only :versioned_formula
 
   depends_on "pkg-config" => :build
-  depends_on "python@2" => :build # does not support Python 3
+  depends_on "python" => :build
   depends_on "icu4c"
 
   def install
-    system "./configure", "--prefix=#{prefix}", "--with-intl=system-icu"
+    # make sure subprocesses spawned by make are using our Python 3
+    ENV["PYTHON"] = Formula["python"].opt_bin/"python3"
+
+    system "python3", "configure.py", "--prefix=#{prefix}", "--with-intl=system-icu"
     system "make", "install"
   end
 
