@@ -1,9 +1,8 @@
 class Tepl < Formula
   desc "GNOME Text Editor Product Line"
   homepage "https://wiki.gnome.org/Projects/Tepl"
-  url "https://download.gnome.org/sources/tepl/4.2/tepl-4.2.0.tar.xz"
-  sha256 "8839d4428ecdd87fd5abc657ebbe5a9601a57262e9946845e47dec264e669ccd"
-  revision 3
+  url "https://download.gnome.org/sources/tepl/4.2/tepl-4.2.1.tar.xz"
+  sha256 "f31ce335fa69061e5ab8653842c5d9c763641abbe323cc2374c273fc240d2b6e"
 
   bottle do
     sha256 "f4694d4b2cab35b0b3ae9ab137ca1c7dc5c7204a105adcbc2f1228ebfebbe70e" => :catalina
