@@ -14,9 +14,10 @@ class Luajit < Formula
 
   bottle do
     cellar :any
-    rebuild 2
-    sha256 "859148159c69b09e70d2c46b40c63f86341d309d8ed73d67b41666a8444d0b39" => :mojave
-    sha256 "3ee1eeeca03770a402bc429aef0a09467f5b2efcdcb47c9a7d55355af0815c99" => :high_sierra
+    rebuild 3
+    sha256 "907d7fbbd3be370fac28341bf902a551c1d07dd929b9379bb19e30ccaf0bdef6" => :catalina
+    sha256 "a127723ca4997acaa45e3b548eeb43f06ada464f2f59d518c4d68a89d9cfe6cf" => :mojave
+    sha256 "afd383c796b7d3d7826a6a72acea41ecf57cf183ae84d590a777fb6a71166e80" => :high_sierra
   end
 
   def install
