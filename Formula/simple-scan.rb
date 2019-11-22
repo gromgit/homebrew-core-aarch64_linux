@@ -5,9 +5,9 @@ class SimpleScan < Formula
   sha256 "57f709d6870b1f6d0170ed3fda0087118716b0ccd29c52b9c393519d1c7963ba"
 
   bottle do
-    sha256 "cdc5762ccf853b05ee2e6137fc7659a9f39b07d6bc2928a3fc475451300ce6f3" => :catalina
-    sha256 "2c0c7c6b55375fbc5991696a488c5f6e8e91a8142edc3889d91feb0f5679bb95" => :mojave
-    sha256 "4f504978ec76795f48cbaa7872235e31e60e8b0d17064c8f7322c5249205911f" => :high_sierra
+    sha256 "376fcef4fa82352bcf2d56bd0fb1501a77b2236a30264e326233d0fffbc8703a" => :catalina
+    sha256 "28b87e73a9b0e360785cb10093526440669f8c7404072c15c4be349e22efd1fd" => :mojave
+    sha256 "fc0cfa2b6133bdb9679a7d5d85cb261dcefcc18b4e711f8fa89532443bac82e7" => :high_sierra
   end
 
   depends_on "itstool" => :build
