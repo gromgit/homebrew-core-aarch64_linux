@@ -6,6 +6,13 @@ class GimmeAwsCreds < Formula
   url "https://files.pythonhosted.org/packages/2b/7a/e0e905e6f4e7d90b99fcaa94f56a24f67852c75d38399997073b006487cb/gimme%20aws%20creds-2.1.1.tar.gz"
   sha256 "87ab4a0bd1ce758f24c8302416779c38ca376cf38a58e68fe332512071004c5a"
 
+  bottle do
+    cellar :any
+    sha256 "d01e5dff6237fea761d6f28194aed325e7de37278fe03454073f8a4e4c22f84c" => :catalina
+    sha256 "32081c09f2632be12fd81c320dd1868b42e139bf5c1d5cf5baa1b9a13d6b14c2" => :mojave
+    sha256 "316cff81933b118665b1bda8ec13b8c3f30f344aea5c3956c96d31a34732090c" => :high_sierra
+  end
+
   depends_on "python"
 
   def install
