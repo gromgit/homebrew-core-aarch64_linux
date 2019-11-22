@@ -6,14 +6,9 @@ class Cln < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "052785d04c9558d5768c38556a0ce2fbb60c74048adf4241984f8aa75a354ffb" => :catalina
-    sha256 "fb15fc6efff1c2266f858dc081bb5d2d67e8e2ae2abc50a23883879fab343f22" => :mojave
-    sha256 "8ba5137f3ca736e16650418d4ea075f0e2c85ea87d88824e68f367bf5c4216dd" => :high_sierra
-    sha256 "da1f2677ac3df8180bfebd9fa59804610d4b3e0020adcc47ffe839ad831006e4" => :sierra
-    sha256 "b816f165673f58fb952669c7fa542b2fe52257e6572853785efee0048ea35d6a" => :el_capitan
-    sha256 "95e74408a4b9dca4e7a939d2ff79e9ab16f3193622027d3d741eb6fc9cc7695d" => :yosemite
-    sha256 "048947d9343c8848897be272cae74d98cd869fa3d64fa6f2bfe82cb68ca100b9" => :mavericks
+    sha256 "ff06531dfcb6dfd280f878a737422ac31efd895123e3f965c1f0e3b9047e9e7b" => :catalina
+    sha256 "39ece0072467407beb6c03a51a12d58ea3d544740e49e13a07424df6a65c09ac" => :mojave
+    sha256 "7ebe1b7e5d3f5b4b11125a62933914a4a5abbc8d2d6d43aa9e247b2717ec0c36" => :high_sierra
   end
 
   depends_on "gmp"
