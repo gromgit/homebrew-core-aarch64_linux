@@ -65,65 +65,65 @@ class Wal2json < Formula
       expected_output = <<~EOS
         init
         {
-		"change": [
-			{
-				"kind": "insert",
-				"schema": "public",
-				"table": "table2_with_pk",
-				"columnnames": ["a", "b", "c"],
-				"columntypes": ["integer", "character varying(30)", "timestamp without time zone"],
-				"columnvalues": [1, "Backup and Restore", "2019-10-08 12:00:00"]
-			}
-			,{
-				"kind": "insert",
-				"schema": "public",
-				"table": "table2_with_pk",
-				"columnnames": ["a", "b", "c"],
-				"columntypes": ["integer", "character varying(30)", "timestamp without time zone"],
-				"columnvalues": [2, "Tuning", "2019-10-08 12:00:00"]
-			}
-			,{
-				"kind": "insert",
-				"schema": "public",
-				"table": "table2_with_pk",
-				"columnnames": ["a", "b", "c"],
-				"columntypes": ["integer", "character varying(30)", "timestamp without time zone"],
-				"columnvalues": [3, "Replication", "2019-10-08 12:00:00"]
-			}
-			,{
-				"kind": "delete",
-				"schema": "public",
-				"table": "table2_with_pk",
-				"oldkeys": {
-					"keynames": ["a", "c"],
-					"keytypes": ["integer", "timestamp without time zone"],
-					"keyvalues": [1, "2019-10-08 12:00:00"]
-				}
-			}
-			,{
-				"kind": "delete",
-				"schema": "public",
-				"table": "table2_with_pk",
-				"oldkeys": {
-					"keynames": ["a", "c"],
-					"keytypes": ["integer", "timestamp without time zone"],
-					"keyvalues": [2, "2019-10-08 12:00:00"]
-				}
-			}
-			,{
-				"kind": "insert",
-				"schema": "public",
-				"table": "table2_without_pk",
-				"columnnames": ["a", "b", "c"],
-				"columntypes": ["integer", "numeric(5,2)", "text"],
-				"columnvalues": [1, 2.34, "Tapir"]
-			}
-		]
+          "change": [
+            {
+              "kind": "insert",
+              "schema": "public",
+              "table": "table2_with_pk",
+              "columnnames": ["a", "b", "c"],
+              "columntypes": ["integer", "character varying(30)", "timestamp without time zone"],
+              "columnvalues": [1, "Backup and Restore", "2019-10-08 12:00:00"]
+            }
+            ,{
+              "kind": "insert",
+              "schema": "public",
+              "table": "table2_with_pk",
+              "columnnames": ["a", "b", "c"],
+              "columntypes": ["integer", "character varying(30)", "timestamp without time zone"],
+              "columnvalues": [2, "Tuning", "2019-10-08 12:00:00"]
+            }
+            ,{
+              "kind": "insert",
+              "schema": "public",
+              "table": "table2_with_pk",
+              "columnnames": ["a", "b", "c"],
+              "columntypes": ["integer", "character varying(30)", "timestamp without time zone"],
+              "columnvalues": [3, "Replication", "2019-10-08 12:00:00"]
+            }
+            ,{
+              "kind": "delete",
+              "schema": "public",
+              "table": "table2_with_pk",
+              "oldkeys": {
+                "keynames": ["a", "c"],
+                "keytypes": ["integer", "timestamp without time zone"],
+                "keyvalues": [1, "2019-10-08 12:00:00"]
+              }
+            }
+            ,{
+              "kind": "delete",
+              "schema": "public",
+              "table": "table2_with_pk",
+              "oldkeys": {
+                "keynames": ["a", "c"],
+                "keytypes": ["integer", "timestamp without time zone"],
+                "keyvalues": [2, "2019-10-08 12:00:00"]
+              }
+            }
+            ,{
+              "kind": "insert",
+              "schema": "public",
+              "table": "table2_without_pk",
+              "columnnames": ["a", "b", "c"],
+              "columntypes": ["integer", "numeric(5,2)", "text"],
+              "columnvalues": [1, 2.34, "Tapir"]
+            }
+          ]
         }
         stop
       EOS
 
-      assert_equal(expected_output.strip, actual_output.strip)
+      assert_equal(expected_output.gsub(/\s+/, ""), actual_output.gsub(/\s+/, ""))
     ensure
       Process.kill 9, pid
       Process.wait pid
