@@ -5,10 +5,9 @@ class Nsd < Formula
   sha256 "817d963b39d2af982f6a523f905cfd5b14a3707220a8da8f3013f34cdfe5c498"
 
   bottle do
-    sha256 "ca69db82461ccb04f94857b03715b967f80896539d7abce2b2cebb4dc3124082" => :catalina
-    sha256 "70d66d7396db21ace3541a6be4b556b9f339570e71fa817941df594c1205686a" => :mojave
-    sha256 "9fbd67d1d673c34b06f0f597e45b02121e98d286733e9df1d553daf8292b9b25" => :high_sierra
-    sha256 "9391533efaae88803ac27fc7f450523d7a40ab02b4da422e15f8c6bb925cc6cb" => :sierra
+    sha256 "605b512b4385024dc63faf79f921fb62e0dfe318e601a20c21356558cd4ea9fb" => :catalina
+    sha256 "d28bbf5f89d55a2b82b58dc96fa92742164632258be0c2a26ac6634e9af4273d" => :mojave
+    sha256 "51dc8e3215c18f56d04bb4c5eef68967fced2691fd30c152b7a574375103554d" => :high_sierra
   end
 
   depends_on "libevent"
