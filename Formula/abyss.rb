@@ -1,8 +1,8 @@
 class Abyss < Formula
   desc "Genome sequence assembler for short reads"
-  homepage "http://www.bcgsc.ca/platform/bioinfo/software/abyss"
-  url "https://github.com/bcgsc/abyss/releases/download/2.2.1/abyss-2.2.1.tar.gz"
-  sha256 "838c478b0fb5092e508f0253e213a820cd3faaa45546236f43b87a7194aa2cdf"
+  homepage "https://www.bcgsc.ca/resources/gsc-software-centre"
+  url "https://github.com/bcgsc/abyss/releases/download/2.2.3/abyss-2.2.3.tar.gz"
+  sha256 "ac7679ececbdd89cc050998eae31fa5f8bf7cdab6a0c05eb5eb1e3867c7e75cb"
 
   bottle do
     cellar :any
@@ -28,11 +28,12 @@ class Abyss < Formula
   fails_with :clang # no OpenMP support
 
   resource("testdata") do
-    url "http://www.bcgsc.ca/platform/bioinfo/software/abyss/releases/1.3.4/test-data.tar.gz"
+    url "https://www.bcgsc.ca/sites/default/files/bioinformatics/software/abyss/releases/1.3.4/test-data.tar.gz"
     sha256 "28f8592203daf2d7c3b90887f9344ea54fda39451464a306ef0226224e5f4f0e"
   end
 
   def install
+    ENV.delete("HOMEBREW_SDKROOT") if MacOS.version >= :mojave && MacOS::CLT.installed?
     system "./autogen.sh" if build.head?
     system "./configure", "--enable-maxk=128",
                           "--prefix=#{prefix}",
