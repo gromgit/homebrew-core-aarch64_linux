@@ -6,10 +6,9 @@ class TransmissionCli < Formula
   revision 2
 
   bottle do
-    sha256 "e64cb28206f2592f2b4b922a5953d6cdc806ec1eb0e20ecf16dbfa333268edcb" => :catalina
-    sha256 "83eb7e06a8c621224c883d220ef242127ee4f273cbfa290889118ceb1e4d2cca" => :mojave
-    sha256 "800441903403efd301a0a8fc63771523302c43c8020381b4b19cba5ae51da843" => :high_sierra
-    sha256 "1f518eddc8e93cd916313a16a0e253f9abe744c45d908bfee5fac40a0d6041f1" => :sierra
+    sha256 "9b8fbc3736ab6996736d0d53622f4e05399db8f53d3f8323c8d203d84886e753" => :catalina
+    sha256 "2bba4f2cf7ffde53a658897f3855100ae0e3b795f231ed33a06eb9941b90793b" => :mojave
+    sha256 "2e81c3beb940cf1d8ffe15fcfea9361109ba2538fb176f91a4f51da8824bf24c" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
