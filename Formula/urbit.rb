@@ -5,6 +5,7 @@ class Urbit < Formula
   url "https://github.com/urbit/urbit.git",
       :tag      => "v0.7.4",
       :revision => "e8416596fb7c47e343b49ea5ec12c2a095873c2f"
+  revision 1
 
   bottle do
     rebuild 1
