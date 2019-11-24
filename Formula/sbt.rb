@@ -1,9 +1,9 @@
 class Sbt < Formula
   desc "Build tool for Scala projects"
   homepage "https://www.scala-sbt.org/"
-  url "https://github.com/sbt/sbt/releases/download/v1.3.3/sbt-1.3.3.tgz"
-  mirror "https://sbt-downloads.cdnedge.bluemix.net/releases/v1.3.3/sbt-1.3.3.tgz"
-  sha256 "fe64a24ecd26ae02ac455336f664bbd7db6a040144b3106f1c45ebd42e8a476c"
+  url "https://github.com/sbt/sbt/releases/download/v1.3.4/sbt-1.3.4.tgz"
+  mirror "https://sbt-downloads.cdnedge.bluemix.net/releases/v1.3.4/sbt-1.3.4.tgz"
+  sha256 "55cc71e4f21f2dde9ba928b6c76f12016443505b32d0c47b19adf3288f94e62f"
 
   bottle :unneeded
 
@@ -37,6 +37,7 @@ class Sbt < Formula
 
   test do
     ENV.append "_JAVA_OPTIONS", "-Dsbt.log.noformat=true"
+    system "#{bin}/sbt about"
     assert_match "[info] #{version}", shell_output("#{bin}/sbt sbtVersion")
   end
 end
