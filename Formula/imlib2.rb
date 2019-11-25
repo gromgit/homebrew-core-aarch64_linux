@@ -6,11 +6,9 @@ class Imlib2 < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 "13ce2f21891d83e1c8087f33bdf80a1f703975a21a8ca0927a4385321647813b" => :catalina
-    sha256 "f2bb2e5ca54865edf5808245b54b0b636669e496757989bd4d6a19dc098b152b" => :mojave
-    sha256 "0349423dda370df2ec72d02ff5d818f0f7c34197b9d6661212ae03c14b6dfbb0" => :high_sierra
-    sha256 "1bebf0a2a3e58f6766e32fe6cbafa8f478788eb9aaed64204fa113204981a3f5" => :sierra
+    sha256 "d4b9918e30a1126f1b9a1b6372cdd2c013e17355e917ec283ea0f792df2328c8" => :catalina
+    sha256 "05b8a89744caac23ef9cb95c1e75a19e8ff127023eb786db4c20c146d3e33743" => :mojave
+    sha256 "cbbefadfe4a7d6a8a7df2f66251fccfc2973808d8cbeb48f8cef8c1b1ef9ff1d" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
