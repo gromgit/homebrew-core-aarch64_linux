@@ -7,11 +7,9 @@ class Pachi < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0b415ef29c6636bcdff11cb56dba0d3822d826cf6f2313427337695ba249e47d" => :mojave
-    sha256 "0d32845e7628104c0748c8263c4da549766cfada77adcdb7d02141a72b29c69a" => :high_sierra
-    sha256 "738716a5b3cbb1d23ff52db5a4375a014060ed9d836f938be9200bfd25b83324" => :sierra
-    sha256 "0296a8eab88a76533da8c45630d53bf54c98236b061666ebba72a0065d32ca7c" => :el_capitan
-    sha256 "88480b1583b55e3eb05dd1f3b32617024873465f09d19e5998c2c81afb4d9dba" => :yosemite
+    sha256 "68178d442f276e166ee301a8e92531c9dc13e338af3f1cf7ec645287a015cef1" => :catalina
+    sha256 "eb9d538220d7b2e18242db23ef2ab568d4e139b57c6d4ee1ac1f0b63a2c58f50" => :mojave
+    sha256 "f8e699003d58a6b8da8401ba6ed75228448b7922c0de6f1fc23db655cd61e2f0" => :high_sierra
   end
 
   fails_with :clang if MacOS.version == :mavericks
