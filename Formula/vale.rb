@@ -4,6 +4,13 @@ class Vale < Formula
   url "https://github.com/errata-ai/vale/archive/v1.7.1.tar.gz"
   sha256 "e1fee20d8fed7fc8819de310608b1ed584c0fad096cce95ecef727584ed9790f"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "55d0d445b8a784ed4b3b4a3984607b47a7de9e08f965023eff3b9e4729be3d91" => :catalina
+    sha256 "76f9d344221f5121ac43b32874a303ecd2bb935bcb8d26ef39f8754046c46e3a" => :mojave
+    sha256 "7aef1f869c6f7d757897a106d22416741489f38b108c49e1c2347392b8bac045" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
