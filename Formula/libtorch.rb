@@ -7,6 +7,13 @@ class Libtorch < Formula
       :tag      => "v1.3.1",
       :revision => "ee77ccbb6da4e2efd83673e798acf7081bc03564"
 
+  bottle do
+    cellar :any
+    sha256 "14816a9d82e777689bea036eb0c7345102abef82074bc44a28e38d6ab50b04b6" => :catalina
+    sha256 "aa70c0d4f5a6cb08a856a4440aa94940d0a65a3488b09bf5ad4c4f76f0bc99db" => :mojave
+    sha256 "55286e4c841f25fb8d2e846a2401a87ca70d718941c76ac0992043a105922016" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "python" => :build
   depends_on "eigen"
