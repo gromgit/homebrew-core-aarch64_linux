@@ -4,6 +4,13 @@ class Krew < Formula
   url "https://github.com/kubernetes-sigs/krew/archive/v0.3.2.tar.gz"
   sha256 "c1807bdf1f504061a75cce67874529533f511aa02a09e313684f2e507f1dd195"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "12e9c700fe97d7dd9f1915e3580546fda931d3cdaee92933fc5c15911b7e8e06" => :catalina
+    sha256 "847c972d50416a282fed6decb2197fd90c5b6c10b13ecfaa17f64f718710d8b1" => :mojave
+    sha256 "befe73340dabe8740284be78a1282957c94d29a6d845a0f3766e99eab543be5d" => :high_sierra
+  end
+
   depends_on "go" => :build
   depends_on "kubernetes-cli"
 
