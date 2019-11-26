@@ -1,11 +1,10 @@
 class Libusbmuxd < Formula
   desc "USB multiplexor library for iOS devices"
   homepage "https://www.libimobiledevice.org/"
-  revision 1
 
   stable do
-    url "https://github.com/libimobiledevice/libusbmuxd/archive/2.0.0.tar.gz"
-    sha256 "ecf287b9d5fa28645a6b5ed640b6bd174134227c4fd8fde28d0678df2be0e97a"
+    url "https://github.com/libimobiledevice/libusbmuxd/archive/2.0.1.tar.gz"
+    sha256 "f93faf3b3a73e283646f4d62b3421aeccf58142266b0eb22b2b13dd4b2362eb8"
   end
 
   bottle do
