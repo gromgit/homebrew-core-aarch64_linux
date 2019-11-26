@@ -7,9 +7,9 @@ class Kepubify < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "4b6c99b8a4bd18131c01a2cfd4cc855140f28bb828f586c98d98b18bf686b1a7" => :catalina
-    sha256 "4ac2a6391a16528f35127f88a52476086d8b62833be8afe2234fb99d23c151ad" => :mojave
-    sha256 "0856de98e48b3ceedc567399cf08871f51ecb4df9e091e4e9aebb6437ff9c98a" => :high_sierra
+    sha256 "401be729baa7fc2f9bb829269f1ee04494a17c3bcbb22f51ce6fa22de5689b0c" => :catalina
+    sha256 "c12e0cc0d0d83a815475bd3c1abf0639f719b6f2736ec03adb60663bf07edc40" => :mojave
+    sha256 "54fba93cf355c8a1ef099dca00219eefa171bfe0b6efa93a95e24490ec420541" => :high_sierra
   end
 
   depends_on "go" => :build
