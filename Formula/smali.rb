@@ -5,6 +5,13 @@ class Smali < Formula
   sha256 "d364ebb60ac954cac7c974d72def897a373430fcd4e3349816743147fbaba375"
   revision 1
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "0e9ddb33964040e89a7f044064b21ccdb30d47ed4901ac6d00ee963352ee48d4" => :catalina
+    sha256 "9883912d849479221c68ba6cba6a25f4fd89c20e80b44ac67e5e7341265cdf49" => :mojave
+    sha256 "7989f3aadb1f980d2c40addf62418ff03a0abd1e1e55262d3d2b96ad4e366cb6" => :high_sierra
+  end
+
   depends_on "gradle" => :build
   depends_on :java => "1.8+"
 
