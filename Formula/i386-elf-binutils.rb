@@ -6,10 +6,9 @@ class I386ElfBinutils < Formula
   sha256 "98aba5f673280451a09df3a8d8eddb3aa0c505ac183f1e2f9d00c67aa04c6f7d"
 
   bottle do
-    sha256 "3a3d88a8b8d33ae13854cae4ccb7120b277862ae42e863acee9926744294ed0c" => :catalina
-    sha256 "deef284fbb0b50aeafdaf9312c56bed4f3ca9571374f4174ab6f877bcfdab3e0" => :mojave
-    sha256 "f382f13d45f7d71ca9471d78aae6d03af5f1622ede5346cb27014cf36abf7b29" => :high_sierra
-    sha256 "992fa92fb007f81e25469a479730b560d84d06c6eedaac1b989b929ee6609c57" => :sierra
+    sha256 "d079ddd99730c921a818fcc4a81066170dd22f23896e218d84b4491362b30032" => :catalina
+    sha256 "e510d350f717f7bd32523f51d7f3c5860ce501f029882515c8c7c7e530b7325f" => :mojave
+    sha256 "101befd59a8c93c45213df8f2b8166f3804dc10fa16af7f79d6af3892028fc05" => :high_sierra
   end
 
   def install
