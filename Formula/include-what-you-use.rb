@@ -5,10 +5,9 @@ class IncludeWhatYouUse < Formula
   sha256 "49294270aa64e8c04182369212cd919f3b3e0e47601b1f935f038c761c265bc9"
 
   bottle do
-    sha256 "a27076eb4615c5d58a838a2afcb037565a863bc24df30074fdb65785819bdf0f" => :catalina
-    sha256 "e5ce12e2d2b7056d8ece7ceb99d4763af538f1c4890135f47979e5cf38306c5d" => :mojave
-    sha256 "4bf150841df194cf4b56ca9e014b6f2f4bf6ff934d884f33847621094ee5a995" => :high_sierra
-    sha256 "eb35442872740e747b0e526097cac632fec3fadcaa94ba1ecfd5396d10671acc" => :sierra
+    sha256 "94a1fa82e1a198f0e7548cb7b4895303b52432eb83836ce84896cc5af6bd3340" => :catalina
+    sha256 "0f91606b7d834d1969dea394674eafdd87c6ecbffb327a77c0d63c16574e89af" => :mojave
+    sha256 "b7dbc7e9f3504f1902b9f63de1c802812729c2ae395c4d85b0dab5a10835bd60" => :high_sierra
   end
 
   depends_on "cmake" => :build
