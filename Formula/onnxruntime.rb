@@ -5,6 +5,13 @@ class Onnxruntime < Formula
       :revision => "7963e775ca5e57a236925fad98c8055245e183be"
   version "0.5.1"
 
+  bottle do
+    cellar :any
+    sha256 "69ffc1316e0b4fce904bc5acf5e23fa39de324c5701dfd0cf0424950c62550fc" => :catalina
+    sha256 "6c6bf1cc7f0a9f3409426830c6fb4d7cbf8647335874f1ceccf50c5997687e7e" => :mojave
+    sha256 "46d0fbaab6f4a01e31ac8ea751128fbf6b68ce96133de6acf5ae02e18d33554a" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "python" => :build
 
