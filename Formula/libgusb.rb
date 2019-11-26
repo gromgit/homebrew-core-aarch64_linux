@@ -1,8 +1,8 @@
 class Libgusb < Formula
   desc "GObject wrappers for libusb1"
   homepage "https://github.com/hughsie/libgusb"
-  url "https://people.freedesktop.org/~hughsient/releases/libgusb-0.3.0.tar.xz"
-  sha256 "d8e7950f99b6ae4c3e9b8c65f3692b9635289e6cff8de40c4af41b2e9b348edc"
+  url "https://people.freedesktop.org/~hughsient/releases/libgusb-0.3.1.tar.xz"
+  sha256 "4b677a372e97748970b1bb3dac076da2d051e4376c5960e77b7159701c851fed"
 
   bottle do
     sha256 "927a593b24dcfaab507c818afeeebbfe55e66f7bee593a12ec334b1a29577114" => :catalina
