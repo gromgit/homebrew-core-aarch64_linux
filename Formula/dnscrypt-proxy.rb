@@ -7,9 +7,9 @@ class DnscryptProxy < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "c07dc9b78806adcf918c9e274cea6bcfa46e1b9c00ded4fb6ef8690d863fb253" => :catalina
-    sha256 "944eb8006f31a06abc217a96a3ff275aea8c679b7775dd59e49d3a9975081e80" => :mojave
-    sha256 "b0ed5087a4bbc86a935f6c11b02bc721c12dd89c1bbefe2dd8e6df47fe365ce3" => :high_sierra
+    sha256 "376a6c3a78a3d2a09b279294e2b1aaca2e4c4ff2bca95756b77618f78ef70850" => :catalina
+    sha256 "5471b4ba1f5678430898b8ac10bd6081a7e82b3e80b5d72f9887d158e8dbe283" => :mojave
+    sha256 "cbe1587ee16e3d953918f9dd806b223ccc4df534d37314c620c5d0aa8e64f23e" => :high_sierra
   end
 
   depends_on "go" => :build
