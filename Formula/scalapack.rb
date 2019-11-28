@@ -6,10 +6,9 @@ class Scalapack < Formula
 
   bottle do
     cellar :any
-    sha256 "2bd0eb0eaa9b0fc85a98fa7785dcd243503961f2711b6dd86cc93d80f84bbe3d" => :catalina
-    sha256 "0d0975114692d302afb2caa38f3e12cc64b37fdad13ce7b41cbbdc6002567d26" => :mojave
-    sha256 "773a7fc4d19e9a9329637d8849bf21b93423b790bb5f0fbe90166ff2d8c19ad2" => :high_sierra
-    sha256 "b52679f06f9f2de153139426ccd949ad5cf6d65814f82a8e2a16dc7bfcf480f6" => :sierra
+    sha256 "de9051ce3d04005ff03dc2e2456ae61c3cf25365fcd4bbbfab929ec0e9f87e0d" => :catalina
+    sha256 "9d75fcf6f2b2baaa23375b0d6b274a82babab465781a6f38ed234dabc4c0fb4f" => :mojave
+    sha256 "3a7f6ff05140808a592237a2d0637302e152c84e47574b9830e81039916e8ef2" => :high_sierra
   end
 
   depends_on "cmake" => :build
