@@ -4,6 +4,12 @@ class PhpAT73 < Formula
   url "https://www.php.net/distributions/php-7.3.12.tar.xz"
   sha256 "aafe5e9861ad828860c6af8c88cdc1488314785962328eb1783607c1fdd855df"
 
+  bottle do
+    sha256 "661bef105829e0aace4886f7a99d178bd4c0056a83ea5b3167245f0afba4551f" => :catalina
+    sha256 "64f85c84e32cb3ff478abb8c87b6f48b10fd6201c11682d213eac1b30c1772d4" => :mojave
+    sha256 "a665d6c234b80cf6c9792a3d41b504d2e529f1b091e7d38bb936449b76b9340c" => :high_sierra
+  end
+
   keg_only :versioned_formula
 
   depends_on "httpd" => [:build, :test]
