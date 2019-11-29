@@ -2,8 +2,8 @@ class Kustomize < Formula
   desc "Template-free customization of Kubernetes YAML manifests"
   homepage "https://github.com/kubernetes-sigs/kustomize"
   url "https://github.com/kubernetes-sigs/kustomize.git",
-      :tag      => "kustomize/v3.2.1",
-      :revision => "d89b448c745937f0cf1936162f26a5aac688f840"
+      :tag      => "kustomize/v3.4.0",
+      :revision => "2c9635967a2b1469d605a91a1d040bd27c73ca7d"
   head "https://github.com/kubernetes-sigs/kustomize.git"
 
   bottle do
@@ -15,20 +15,15 @@ class Kustomize < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-
     revision = Utils.popen_read("git", "rev-parse", "HEAD").strip
 
-    dir = buildpath/"src/kubernetes-sigs/kustomize"
-    dir.install buildpath.children
-    cd dir/"kustomize" do
+    cd "kustomize" do
       ldflags = %W[
-        -s -X sigs.k8s.io/kustomize/kustomize/v3/provenance.version=#{version}
-        -X sigs.k8s.io/kustomize/kustomize/v3/provenance.gitCommit=#{revision}
-        -X sigs.k8s.io/kustomize/kustomize/v3/provenance.buildDate=#{Time.now.iso8601}
+        -s -X sigs.k8s.io/kustomize/api/provenance.version=#{version}
+        -X sigs.k8s.io/kustomize/api/provenance.gitCommit=#{revision}
+        -X sigs.k8s.io/kustomize/api/provenance.buildDate=#{Time.now.iso8601}
       ]
       system "go", "build", "-ldflags", ldflags.join(" "), "-o", bin/"kustomize"
-      prefix.install_metafiles
     end
   end
 
