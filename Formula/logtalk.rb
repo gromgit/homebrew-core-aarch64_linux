@@ -7,9 +7,9 @@ class Logtalk < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d675f7b89f03ac2cac91f607a07e3f9c5e858d91eb100cd617be6f696f7d8e38" => :catalina
-    sha256 "b153a8948db77431ccde41cb6f9171f2ec526902de80b34da1ed8706d8398280" => :mojave
-    sha256 "fd7bcba054328baa5d52f3d3910dabcda07587b5c0ef1bb8d30eefc18bffe6f9" => :high_sierra
+    sha256 "5aa3c4940b8aeb417828a0df299ee1d348d359e4df4fecdc42125a5ebe8c4f27" => :catalina
+    sha256 "fadf3316d92e093050361eed661917858043524e8d6af7699133bef13c285fc4" => :mojave
+    sha256 "a10fff7b14554c2de43fe163e320a6d206f3f1204308b3b0d4e40c786d1c5a46" => :high_sierra
   end
 
   depends_on "gnu-prolog"
