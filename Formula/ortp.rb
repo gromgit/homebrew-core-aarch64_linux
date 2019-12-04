@@ -5,11 +5,9 @@ class Ortp < Formula
   sha256 "a51551194332ac62b47865dc1e60893ece4922c489a7b0a780b8be562978d804"
 
   bottle do
-    sha256 "6df0d199df16298cf0ec21e7d235ad6ea6702c4bab49cf736d84578afbb74df4" => :catalina
-    sha256 "2858534d05cd9dd89af063341124f715aa200d74d893c81c7ee8f7e32bebe6e2" => :mojave
-    sha256 "3e65235d8bf6ec1035762ab045259c154e650e737a925bd7d766cc3e52a7d0ec" => :high_sierra
-    sha256 "1d762f2592d6e578d8e2cb68f5694daba1309c80f6be3124980356b526a12c0d" => :sierra
-    sha256 "0c28ba67b9740081bf591b3cff97ca22fc9a6d5999c1a14f0cb9e3a0b19dfb43" => :el_capitan
+    sha256 "f49949830b4e6f09bb69c81ff2e2f8f3653bae1d648bc57db393bb92195fc260" => :catalina
+    sha256 "1659170fed5ce087fe92e8bca8f8666ce1a2573220897df535a035582b8bd45b" => :mojave
+    sha256 "183386b78f9bb94670265af5b717b604d678b399517e7ee9848b6999209755e6" => :high_sierra
   end
 
   depends_on "cmake" => :build
