@@ -7,9 +7,9 @@ class Opencascade < Formula
 
   bottle do
     cellar :any
-    sha256 "8427b4f13e30e4bf455b769b42375a50ff338a73b5d9b392bc054793ec3f2a16" => :mojave
-    sha256 "ce9ba0fab8d9356eeb89b2cadfbdf0e00fcfb0fc4b03e08dc2c9a8e32e77e319" => :high_sierra
-    sha256 "42fb6d39f4c069543762c68dbeb49c1114c123b716b9504cb333bd23308497c4" => :sierra
+    sha256 "898bcef9febe46552afbae44b7ecb368d55dca623554ffb514b3c6c3f4ec18f5" => :catalina
+    sha256 "b8d97444db998b3ba99c457d79574337261369645ab98d1f413f05e30440f619" => :mojave
+    sha256 "deb791a34aa0bde90fea8690cac771a1245f224ed69836bbdd30779a69569f1c" => :high_sierra
   end
 
   depends_on "cmake" => :build
