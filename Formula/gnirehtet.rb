@@ -5,6 +5,13 @@ class Gnirehtet < Formula
   sha256 "bb2cea28975071b8bdf7bb5dc9536e8119eb0ab113e911cdef7b057bb1ad2582"
   head "https://github.com/Genymobile/gnirehtet.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "b47ebed9d79db8ff4fbed38cbc25a4b28b0be5bec08f1f7b03946bdbd1028f0d" => :catalina
+    sha256 "d54efea0397fbd3e4f53dcc74a3293904ccc9193a800b518adb7f83fec7a6075" => :mojave
+    sha256 "244fe5e434a71091eb558a2140771138da657aa84034d2b4795dd5ab44c2e20b" => :high_sierra
+  end
+
   depends_on "rust" => :build
   depends_on "socat" => :test
 
