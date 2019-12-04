@@ -6,6 +6,13 @@ class Diesel < Formula
 
   head "https://github.com/diesel-rs/diesel.git"
 
+  bottle do
+    cellar :any
+    sha256 "214ec8bbdbb80d992a10cab12223b7c288c629b0d6683fd096a3dcb8d7097832" => :catalina
+    sha256 "e505f21815ff044a269f377dd79a79f2f1a11390637ae45cc6561625fc575c57" => :mojave
+    sha256 "c4d113930238a802a007a767068766b388b987374b79a188619a2b36f9f4ca13" => :high_sierra
+  end
+
   depends_on "rust" => [:build, :test]
   depends_on "libpq"
   depends_on "mysql-client"
