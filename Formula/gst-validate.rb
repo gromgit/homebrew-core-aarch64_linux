@@ -3,8 +3,8 @@ class GstValidate < Formula
   homepage "https://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-validate/html/"
 
   stable do
-    url "https://gstreamer.freedesktop.org/src/gst-validate/gst-validate-1.16.1.tar.xz"
-    sha256 "7f079b9b2a127604b98e297037dc8847ef50f4ce2b508aa2df0cac5b77562899"
+    url "https://gstreamer.freedesktop.org/src/gst-validate/gst-validate-1.16.2.tar.xz"
+    sha256 "4861ccb9326200e74d98007e316b387d48dd49f072e0b78cb9d3303fdecfeeca"
   end
 
   bottle do
