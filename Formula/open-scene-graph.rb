@@ -6,9 +6,9 @@ class OpenSceneGraph < Formula
   head "https://github.com/openscenegraph/OpenSceneGraph.git"
 
   bottle do
-    sha256 "153c47045ba21b94581aed7375218a38534077fc8920090dc541627d09ef36c5" => :mojave
-    sha256 "adabb1b668bdfec8e6ccc1e05a91577bbe0c58487d345b662c3acaae2298e8a9" => :high_sierra
-    sha256 "8f69c72133ca7100385f49d104f33517c66aefe7c76bb22e08b28c8aaa4c6385" => :sierra
+    sha256 "37cc7954c600e2fe0f65f572b688de6baaf412a7953cf3c53960fa3033a849a1" => :catalina
+    sha256 "9eb6303b01ad351b61d80b93e2448065820592042954dfa13bc8177943863b6c" => :mojave
+    sha256 "fb185cfd6505823c2f6fd7c4832c16eec1ae075a9173a24ff5c21aebb86bd537" => :high_sierra
   end
 
   depends_on "cmake" => :build
