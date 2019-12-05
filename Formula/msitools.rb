@@ -1,8 +1,8 @@
 class Msitools < Formula
   desc "Windows installer (.MSI) tool"
   homepage "https://wiki.gnome.org/msitools"
-  url "https://download.gnome.org/sources/msitools/0.99/msitools-0.99.tar.xz"
-  sha256 "d475939a5e336b205eb3137bac733de8099bc74829040e065b01b15f6c8b3635"
+  url "https://download.gnome.org/sources/msitools/0.100/msitools-0.100.tar.xz"
+  sha256 "bbf1a6e3a9c2323b860a3227ac176736a3eafc4a44a67346c6844591f10978ea"
 
   bottle do
     sha256 "919a699e30ed3416a101c9b6488691a5a6ad64a1dd1565579a3c4345fd8d456a" => :catalina
@@ -19,6 +19,21 @@ class Msitools < Formula
   depends_on "glib"
   depends_on "libgsf"
   depends_on "vala"
+
+  # Workaround for https://gitlab.gnome.org/GNOME/msitools/issues/15
+  # Merged upstream in the following commits:
+  # https://gitlab.gnome.org/GNOME/msitools/commit/248450a2f2a23df59428fa816865a26f7e2496e0
+  # https://gitlab.gnome.org/GNOME/msitools/commit/9bbcc6da06ccf6144258c26ddcaab3262538d3ce
+  # Remove in next release.
+  patch do
+    url "https://gitlab.gnome.org/GNOME/msitools/commit/248450a2f2a23df59428fa816865a26f7e2496e0.diff"
+    sha256 "5046316e61af8af32a2b7d4ed2579a88fe0618e56d0aca32fea2c8a64b747f06"
+  end
+
+  patch do
+    url "https://gitlab.gnome.org/GNOME/msitools/commit/9bbcc6da06ccf6144258c26ddcaab3262538d3ce.diff"
+    sha256 "fadc1c5ade1afd8add5f5a4997a10098efa9f24a5788230a16af89965551c1c7"
+  end
 
   def install
     system "./configure", "--disable-dependency-tracking",
