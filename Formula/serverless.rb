@@ -8,9 +8,9 @@ class Serverless < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "384e268a59eaa8eb5c00da84867bfd67ae1426e0c83ca5c5450496ce5ca8f48e" => :catalina
-    sha256 "08681caa7c609853f46e13f97053d0ff7049d52549e5720aff18227d76031807" => :mojave
-    sha256 "963fed95c8194dd4c09e1fb1e0922d894b01ee26403ec66a258feb618add6bde" => :high_sierra
+    sha256 "2b46d8ab058ef555d74f577aeba75d7f720275eb1d66653a178aa206a0f31eff" => :catalina
+    sha256 "4ea4623092b00917b237061f6df1a397cc6a41091aab40d41b52c7134e31e248" => :mojave
+    sha256 "177d6c18fef0164e94f1f871b10827569058d900d5c2662f2ce7b1fdf82ef2c2" => :high_sierra
   end
 
   depends_on "node"
