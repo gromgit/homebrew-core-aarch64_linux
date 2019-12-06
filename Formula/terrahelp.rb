@@ -5,6 +5,13 @@ class Terrahelp < Formula
   sha256 "e0d281092e399804e7fcb7636c45af2709e5b69609af07c6b8929ac793afe7d9"
   head "https://github.com/opencredo/terrahelp.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "27b3df54ff8a7eadd2d0eefaae0036da26e0c0c5cdeb917b9b278c1d5346e1c6" => :catalina
+    sha256 "9277377d2e0970ff628d0a0bfd8d67d701c588b0357c5b38bca24d70d0b102de" => :mojave
+    sha256 "5c44b6ad3f3616681ed6408eb2c28f8e4e2e3e7a81a1694f464ea6507b5a531f" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
