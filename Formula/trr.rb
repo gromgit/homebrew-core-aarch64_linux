@@ -17,6 +17,7 @@ class Trr < Formula
 
   depends_on "nkf" => :build
   depends_on "apel"
+  depends_on "emacs" if MacOS.version >= :catalina
 
   def install
     system "make", "clean"
