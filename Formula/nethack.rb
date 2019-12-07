@@ -9,10 +9,9 @@ class Nethack < Formula
   head "https://git.code.sf.net/p/nethack/NetHack.git", :branch => "NetHack-3.6.3"
 
   bottle do
-    sha256 "6d2a20d495af1566735b5a54a366169c20da893c15c74fe0e9a7e89bf1b3e58a" => :catalina
-    sha256 "029b30c74691c4e207f0dbd0dcfb7643dfac8cfacc29d2aabaa9b3a728946c95" => :mojave
-    sha256 "15b49603100056b2b81fd90eae869934aeacc197e26cf97937fbaf1d446c9ba9" => :high_sierra
-    sha256 "4afdeae7f562cbcbab4d1ac7f68cd1d534a987b3521e2507bb4a81ccd44fc6bc" => :sierra
+    sha256 "97681ae93eebecc753330c8337bccfac8485927bd4a59d091e3afe41e2575674" => :catalina
+    sha256 "f0cc750101ae9d758655a1662b313edc29c5ffc3118f5c925dc4a35885b591a9" => :mojave
+    sha256 "338ec64c471bc1992bcf768052af2d0383a5fc053426d34281c74b8ff0ec7f4b" => :high_sierra
   end
 
   uses_from_macos "ncurses"
