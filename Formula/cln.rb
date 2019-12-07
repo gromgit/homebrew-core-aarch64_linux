@@ -1,8 +1,8 @@
 class Cln < Formula
   desc "Class Library for Numbers"
   homepage "https://www.ginac.de/CLN/"
-  url "https://www.ginac.de/CLN/cln-1.3.5.tar.bz2"
-  sha256 "78810064a50b4299a0a3c16cade54a7d2e72ac92a8ee295f9a9177efc81e842d"
+  url "https://www.ginac.de/CLN/cln-1.3.6.tar.bz2"
+  sha256 "f492530e8879bda529009b6033e1923c8f4aae843149fc28c667c20b094d984a"
 
   bottle do
     cellar :any
