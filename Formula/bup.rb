@@ -8,9 +8,9 @@ class Bup < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "03113e1218de2523b0234d8ac10a18151f684c46c689e027e253e9db43e1cf4a" => :catalina
-    sha256 "2de7026bdda615a5cf7715d0ded2c40cddb19336ec354bc03bfc87a88c604afc" => :mojave
-    sha256 "87858ab9d63413366fd0fcda74bd74e0d206206157b87202783c75bb2fc7476e" => :high_sierra
+    sha256 "adbfc42873e138509a8aea5f79dd9a983d6436965f72768778e257885b45efd0" => :catalina
+    sha256 "cdf1d01a823625ebbf364e5c40570dfa710a457824a17a6cf661fa85331f2e63" => :mojave
+    sha256 "38422b58cf36f8769783612149f2aef56ca11cc80fb368086b07fecc9959b6a7" => :high_sierra
   end
 
   depends_on "pandoc" => :build
