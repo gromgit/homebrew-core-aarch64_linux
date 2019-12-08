@@ -18,7 +18,11 @@ class MongoCDriver < Formula
   depends_on "sphinx-doc" => :build
 
   def install
-    system "cmake", ".", *std_cmake_args
+    cmake_args = std_cmake_args
+    if build.head?
+      cmake_args << "-DBUILD_VERSION=1.16.0-pre"
+    end
+    system "cmake", ".", *cmake_args
     system "make", "install"
     (pkgshare/"libbson").install "src/libbson/examples"
     (pkgshare/"libmongoc").install "src/libmongoc/examples"
