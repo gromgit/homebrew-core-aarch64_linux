@@ -5,9 +5,10 @@ class GlibNetworking < Formula
   sha256 "0644b8dc042bab8c9d2892aee5716513280c8773dbef43a038149f24cae15544"
 
   bottle do
-    sha256 "f6a09b8032078f0485791a51ca632336212ee26685a507b9a26a4b2c99d17ac6" => :catalina
-    sha256 "7b61b9309af4d0d36d9c0eed39036d012954be77426101eaa737e1fa6fb241dd" => :mojave
-    sha256 "06fb6d19fbfdb79d37ccade73e9741be30305b782e8d2ff989609ed495b1a29b" => :high_sierra
+    cellar :any
+    sha256 "81ecbaeb6d3fff3839280d691de59b8aac6bcd5ec4d8d3fbf7bc3cdbc40cb9ef" => :catalina
+    sha256 "c47a90d947d6e4ca48ccfe468107aa454bb1b80ab3047711abe0ff1be913b345" => :mojave
+    sha256 "b13917cc21b6ceb0d867ace7ffd1cd568f31bdf71471665d0da1683cf3ac2375" => :high_sierra
   end
 
   depends_on "meson" => :build
