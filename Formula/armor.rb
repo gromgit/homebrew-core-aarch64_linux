@@ -16,14 +16,8 @@ class Armor < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    armorpath = buildpath/"src/github.com/labstack/armor"
-    armorpath.install buildpath.children
-
-    cd armorpath do
-      system "go", "build", "-o", bin/"armor", "cmd/armor/main.go"
-      prefix.install_metafiles
-    end
+    system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", bin/"armor", "cmd/armor/main.go"
+    prefix.install_metafiles
   end
 
   test do
