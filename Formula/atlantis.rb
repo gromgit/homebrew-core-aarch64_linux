@@ -14,15 +14,7 @@ class Atlantis < Formula
   depends_on "terraform"
 
   def install
-    ENV["GOPATH"] = buildpath
-    dir = "src/github.com/runatlantis/atlantis"
-    build_dir = buildpath/dir
-    build_dir.install buildpath.children
-
-    cd dir do
-      system "go", "build", "-o", "atlantis"
-      bin.install "atlantis"
-    end
+    system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", bin/"atlantis"
   end
 
   test do
