@@ -16,14 +16,8 @@ class Aurora < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    aurorapath = buildpath/"src/github.com/xuri/aurora"
-    aurorapath.install buildpath.children
-
-    cd aurorapath do
-      system "go", "build", "-o", bin/"aurora"
-      prefix.install_metafiles
-    end
+    system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", bin/"aurora"
+    prefix.install_metafiles
   end
 
   test do
