@@ -12,20 +12,11 @@ class Alp < Formula
     sha256 "f102f90a4e05ea5c651d9cddc3ea987767bb792b4385a6669283f7678f5fdbbc" => :high_sierra
   end
 
-  depends_on "dep" => :build
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-
-    srcpath = buildpath/"src/github.com/tkuchiki/alp"
-    srcpath.install buildpath.children
-
-    cd srcpath do
-      system "dep", "ensure", "-vendor-only"
-      system "go", "build", "-o", bin/"alp", "cli/alp/main.go"
-      prefix.install_metafiles
-    end
+    system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", bin/"alp", "cli/alp/main.go"
+    prefix.install_metafiles
   end
 
   test do
