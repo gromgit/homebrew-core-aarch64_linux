@@ -6,9 +6,10 @@ class Tcsh < Formula
   sha256 "ed287158ca1b00ba477e8ea57bac53609838ebcfd05fcb05ca95021b7ebe885b"
 
   bottle do
-    sha256 "6c5cd56d3e25c096ab2488b74a0772bfc24fb7e5b05b44323e850c96d3ca6324" => :catalina
-    sha256 "36e8a812e6bd9175cf45a13e65aa2f7ef6291228d89ab0d47d274e9c205c079f" => :mojave
-    sha256 "c22bfc5464b098433c9335ce61bd3b1817f58419e00245df266aa66d4a9c899b" => :high_sierra
+    rebuild 1
+    sha256 "d885eaa1411e8fc46cb39e4a11254d37c8dc90aded6684631bfc312d7115c9fa" => :catalina
+    sha256 "a070c8c6b4f2ce38be5a84109d307078545911f2a731b0e5e140856a6711bce4" => :mojave
+    sha256 "2f81edc8ce902ce12e722003aec60d62d21ca7be7a944b3b2f571b9e9d7d1282" => :high_sierra
   end
 
   def install
