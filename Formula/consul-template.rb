@@ -16,22 +16,14 @@ class ConsulTemplate < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    ENV["XC_OS"] = "darwin"
-    ENV["XC_ARCH"] = "amd64"
-
-    dir = buildpath/"src/github.com/hashicorp/consul-template"
-    dir.install buildpath.children - [buildpath/".brew_home"]
-
-    cd dir do
-      project = "github.com/hashicorp/consul-template"
-      commit = Utils.popen_read("git rev-parse --short HEAD").chomp
-      ldflags = ["-X #{project}/version.Name=consul-template",
-                 "-X #{project}/version.GitCommit=#{commit}"]
-      system "go", "build", "-o", bin/"consul-template", "-ldflags",
-             ldflags.join(" ")
-      prefix.install_metafiles
-    end
+    project = "github.com/hashicorp/consul-template"
+    commit = Utils.popen_read("git rev-parse --short HEAD").chomp
+    ldflags = ["-s", "-w",
+               "-X #{project}/version.Name=consul-template",
+               "-X #{project}/version.GitCommit=#{commit}"]
+    system "go", "build", "-ldflags", ldflags.join(" "), "-trimpath",
+           "-o", bin/"consul-template"
+    prefix.install_metafiles
   end
 
   test do
