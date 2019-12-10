@@ -2,8 +2,8 @@ class Devspace < Formula
   desc "CLI helps develop/deploy/debug apps with Docker and k8s"
   homepage "https://devspace.cloud/docs"
   url "https://github.com/devspace-cloud/devspace.git",
-    :tag      => "v4.3.1",
-    :revision => "ce8745f1f65a2a8d2efa4791b0be15e081f60337"
+    :tag      => "v4.3.4",
+    :revision => "434896a7030b7ea030064e6d5f7599022db50f83"
 
   bottle do
     cellar :any_skip_relocation
@@ -16,15 +16,8 @@ class Devspace < Formula
   depends_on "kubernetes-cli"
 
   def install
-    ENV["GOPATH"] = buildpath
-
-    dir = buildpath/"src/github.com/devspace-cloud/devspace"
-    dir.install buildpath.children
-
-    cd dir do
-      system "go", "build", "-o", bin/"devspace"
-      prefix.install_metafiles
-    end
+    system "go", "build", "-trimpath", "-o", bin/"devspace"
+    prefix.install_metafiles
   end
 
   test do
