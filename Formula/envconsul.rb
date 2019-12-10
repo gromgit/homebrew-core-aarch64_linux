@@ -16,15 +16,8 @@ class Envconsul < Formula
   depends_on "consul" => :test
 
   def install
-    ENV["GOPATH"] = buildpath
-
-    dir = buildpath/"src/github.com/hashicorp/envconsul"
-    dir.install buildpath.children
-
-    cd dir do
-      system "go", "build", "-o", bin/"envconsul"
-      prefix.install_metafiles
-    end
+    system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", bin/"envconsul"
+    prefix.install_metafiles
   end
 
   test do
