@@ -15,9 +15,7 @@ class Clipper < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    system "go", "build", "clipper.go"
-    bin.install "clipper"
+    system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", bin/"clipper", "clipper.go"
   end
 
   plist_options :manual => "clipper"
