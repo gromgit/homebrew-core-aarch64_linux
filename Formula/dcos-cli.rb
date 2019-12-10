@@ -14,22 +14,15 @@ class DcosCli < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
     ENV["NO_DOCKER"] = "1"
+    ENV["VERSION"] = version.to_s
 
-    ENV["VERSION"] = "1.1.0"
-
-    bin_path = buildpath/"src/github.com/dcos/dcos-cli"
-
-    bin_path.install Dir["*"]
-    cd bin_path do
-      system "make", "darwin"
-      bin.install "build/darwin/dcos"
-    end
+    system "make", "darwin"
+    bin.install "build/darwin/dcos"
   end
 
   test do
     run_output = shell_output("#{bin}/dcos --version 2>&1")
-    assert_match "dcoscli.version=1.1.0", run_output
+    assert_match "dcoscli.version=#{version}", run_output
   end
 end
