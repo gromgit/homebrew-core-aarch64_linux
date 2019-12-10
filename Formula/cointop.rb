@@ -14,13 +14,8 @@ class Cointop < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    src = buildpath/"src/github.com/miguelmota/cointop"
-    src.install buildpath.children
-    src.cd do
-      system "go", "build", "-o", bin/"cointop"
-      prefix.install_metafiles
-    end
+    system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", bin/"cointop"
+    prefix.install_metafiles
   end
 
   test do
