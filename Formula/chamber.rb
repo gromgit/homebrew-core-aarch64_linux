@@ -13,23 +13,10 @@ class Chamber < Formula
   end
 
   depends_on "go" => :build
-  depends_on "govendor" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    ENV["GOOS"] = "darwin"
-    ENV["GOARCH"] = "amd64"
-    ENV["CGO_ENABLED"] = "0"
-
-    path = buildpath/"src/github.com/segmentio/chamber"
-    path.install Dir["{*,.git}"]
-
-    cd "src/github.com/segmentio/chamber" do
-      system "govendor", "sync"
-      system "go", "build", "-o", bin/"chamber",
-                   "-ldflags", "-X main.Version=#{version}"
-      prefix.install_metafiles
-    end
+    system "go", "build", "-ldflags", "-s -w -X main.Version=#{version}", "-trimpath", "-o", bin/"chamber"
+    prefix.install_metafiles
   end
 
   test do
