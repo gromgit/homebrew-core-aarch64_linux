@@ -14,15 +14,8 @@ class Cli53 < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-
-    dir = buildpath/"src/github.com/barnybug/cli53"
-    dir.install buildpath.children
-
-    cd dir do
-      system "go", "build", "-o", bin/"cli53", "./cmd/cli53"
-      prefix.install_metafiles
-    end
+    system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", bin/"cli53", "./cmd/cli53"
+    prefix.install_metafiles
   end
 
   test do
