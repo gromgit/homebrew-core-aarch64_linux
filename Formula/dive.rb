@@ -15,15 +15,8 @@ class Dive < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-
-    dir = buildpath/"src/github.com/wagoodman/dive"
-    dir.install buildpath.children
-
-    cd dir do
-      system "go", "build", "-ldflags", "-s -w -X main.version=#{version}", "-o", bin/"dive"
-      prefix.install_metafiles
-    end
+    system "go", "build", "-ldflags", "-s -w -X main.version=#{version}", "-trimpath", "-o", bin/"dive"
+    prefix.install_metafiles
   end
 
   test do
