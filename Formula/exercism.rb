@@ -15,15 +15,8 @@ class Exercism < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-
-    dir = buildpath/"src/github.com/exercism/cli"
-    dir.install buildpath.children
-
-    cd dir do
-      system "go", "build", "-ldflags", "-s", "-o", bin/"exercism", "exercism/main.go"
-      prefix.install_metafiles
-    end
+    system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", bin/"exercism", "exercism/main.go"
+    prefix.install_metafiles
   end
 
   test do
