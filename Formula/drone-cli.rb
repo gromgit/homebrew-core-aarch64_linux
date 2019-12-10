@@ -15,16 +15,8 @@ class DroneCli < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GO111MODULE"] = "on"
-    ENV["GOPATH"] = buildpath
-
-    dir = buildpath/"src/github.com/drone/drone-cli"
-    dir.install buildpath.children
-
-    cd dir do
-      system "go", "build", "-ldflags", "-X main.version=#{version}", "-o", bin/"drone", "drone/main.go"
-      prefix.install_metafiles
-    end
+    system "go", "build", "-ldflags", "-s -w -X main.version=#{version}", "-trimpath", "-o", bin/"drone", "drone/main.go"
+    prefix.install_metafiles
   end
 
   test do
