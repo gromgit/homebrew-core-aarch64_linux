@@ -6,9 +6,9 @@ class Pdftoipe < Formula
 
   bottle do
     cellar :any
-    sha256 "e87321bdee82edb49c6a206f13cce4ab335c704ef7630bc164aa4bd083da5a3b" => :catalina
-    sha256 "2b98872436e2df29e37cae41552f635c645d18062747df7c46e246fc18a89498" => :mojave
-    sha256 "c82150d32b8492a75ac882f03e41da84ea01073091886d30162281bc12a1910c" => :high_sierra
+    sha256 "229953eff061f63b1051478c487c0cba54fc2e4eb65ceec3827debe8bf173026" => :catalina
+    sha256 "3eb9a755e677baff669f6c70312124db65f110c612332880a5b9572e0e8e60a5" => :mojave
+    sha256 "c011183f12bd935484379638b7ac93ac5142567d15711a2b13d8391b6224a035" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
