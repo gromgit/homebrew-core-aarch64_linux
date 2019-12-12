@@ -14,14 +14,8 @@ class Fn < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-
-    src = buildpath/"src/github.com/fnproject/cli"
-    src.install buildpath.children
-    src.cd do
-      system "go", "build", "-o", "#{bin}/fn"
-      prefix.install_metafiles
-    end
+    system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", "#{bin}/fn"
+    prefix.install_metafiles
   end
 
   test do
