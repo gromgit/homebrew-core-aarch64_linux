@@ -15,17 +15,12 @@ class Geoipupdate < Formula
   depends_on "pandoc" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    (buildpath/"src/github.com/maxmind/geoipupdate").install buildpath.children
+    system "make", "CONFFILE=#{etc}/GeoIP.conf", "DATADIR=#{var}/GeoIP", "VERSION=#{version} (homebrew)"
 
-    cd "src/github.com/maxmind/geoipupdate" do
-      system "make", "CONFFILE=#{etc}/GeoIP.conf", "DATADIR=#{var}/GeoIP", "VERSION=#{version} (homebrew)"
-
-      bin.install  "build/geoipupdate"
-      etc.install  "build/GeoIP.conf"
-      man1.install "build/geoipupdate.1"
-      man5.install "build/GeoIP.conf.5"
-    end
+    bin.install  "build/geoipupdate"
+    etc.install  "build/GeoIP.conf"
+    man1.install "build/geoipupdate.1"
+    man5.install "build/GeoIP.conf.5"
   end
 
   def post_install
