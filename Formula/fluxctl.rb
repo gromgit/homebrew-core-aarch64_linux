@@ -15,13 +15,8 @@ class Fluxctl < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-
-    dir = buildpath/"src/github.com/weaveworks/flux"
-    dir.install buildpath.children
-
-    cd dir/"cmd/fluxctl" do
-      system "go", "build", "-ldflags", "-X main.version=#{version}", "-o", bin/"fluxctl"
+    cd buildpath/"cmd/fluxctl" do
+      system "go", "build", "-ldflags", "-s -w -X main.version=#{version}", "-trimpath", "-o", bin/"fluxctl"
       prefix.install_metafiles
     end
   end
