@@ -14,16 +14,9 @@ class ForkCleaner < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-
-    dir = buildpath/"src/github.com/caarlos0/fork-cleaner"
-    dir.install buildpath.children
-
-    cd dir do
-      system "make"
-      bin.install "fork-cleaner"
-      prefix.install_metafiles
-    end
+    system "make"
+    bin.install "fork-cleaner"
+    prefix.install_metafiles
   end
 
   test do
