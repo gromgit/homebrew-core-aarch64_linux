@@ -5,6 +5,13 @@ class Fastlane < Formula
   sha256 "ff3813d75bbced1030b5d7e3e714e75f358788f74d951be796515e8ec4e7ec79"
   head "https://github.com/fastlane/fastlane.git"
 
+  bottle do
+    cellar :any
+    sha256 "c414c82e8ef8faea360ce8c11d2fe1825be5ccf1375a1ad02cfb752a71df760b" => :catalina
+    sha256 "c27022677aa9e1699267d33de5bdcc1e3ba293a2b2b17efb7a35bfabf8f37f26" => :mojave
+    sha256 "c3828a4af9506b930cfb99765581474cbbc858cc132d9900a771fd2b80ca1fb7" => :high_sierra
+  end
+
   depends_on "ruby@2.5"
 
   def install
