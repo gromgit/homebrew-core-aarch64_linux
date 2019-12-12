@@ -12,21 +12,15 @@ class Ghr < Formula
     sha256 "3d96e05a7cc1bb89e910845db0f6ed80175f8f77c31adc0938a5716414296fad" => :sierra
   end
 
-  depends_on "dep" => :build
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    dir = buildpath/"src/github.com/tcnksm/ghr"
-    dir.install Dir["*"]
-    cd dir do
-      # Avoid running `go get`
-      inreplace "Makefile", "go get ${u} -d", ""
+    # Avoid running `go get`
+    inreplace "Makefile", "go get ${u} -d", ""
 
-      system "make", "build"
-      bin.install "bin/ghr" => "ghr"
-      prefix.install_metafiles
-    end
+    system "make", "build"
+    bin.install "bin/ghr" => "ghr"
+    prefix.install_metafiles
   end
 
   test do
