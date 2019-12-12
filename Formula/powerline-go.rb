@@ -6,9 +6,9 @@ class PowerlineGo < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "a9b6be73fc466b480d6f4fdeb318dec5ce57e5a9d693a57674ca5aa5cd04a7fb" => :catalina
-    sha256 "cd2f20c1bd8504a5eb449c482b9d34ada5a5d59c1ffb17173e18c7afbebb3be8" => :mojave
-    sha256 "d67e92a591c74edc03a01158672801a8844256c3a078de7c93c317fadcd16d39" => :high_sierra
+    sha256 "765011e80c868376faeba4cbba86085a66e2165cac4931013acd4c0ba63c46d5" => :catalina
+    sha256 "3360d1be2880b36dccac481f62f4bb9034d30f0ca2c77d9d75dcdb4f9ce9f1c2" => :mojave
+    sha256 "f14489bb9af622dbe2cbd3c05fa4f5523dba74a619ea8875a455dd4c5ced07d0" => :high_sierra
   end
 
   depends_on "go" => :build
