@@ -16,13 +16,9 @@ class Gomplate < Formula
   depends_on "upx" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    (buildpath/"src/github.com/hairyhenderson/gomplate").install buildpath.children
-    cd "src/github.com/hairyhenderson/gomplate" do
-      system "make", "compress", "VERSION=#{version}"
-      bin.install "bin/gomplate-slim" => "gomplate"
-      prefix.install_metafiles
-    end
+    system "make", "compress", "VERSION=#{version}"
+    bin.install "bin/gomplate-slim" => "gomplate"
+    prefix.install_metafiles
   end
 
   test do
