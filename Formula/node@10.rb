@@ -3,6 +3,7 @@ class NodeAT10 < Formula
   homepage "https://nodejs.org/"
   url "https://nodejs.org/dist/v10.17.0/node-v10.17.0.tar.gz"
   sha256 "5204249d135176b547737d3eed2ca8a9d7f731fef6e545f741129cfa21f90573"
+  revision 1
 
   bottle do
     cellar :any
@@ -14,8 +15,8 @@ class NodeAT10 < Formula
   keg_only :versioned_formula
 
   depends_on "pkg-config" => :build
-  depends_on "python@2" => :build # does not support Python 3
   depends_on "icu4c"
+  uses_from_macos "python@2" => :build
 
   # Fixes detecting Apple clang 11.
   patch do
