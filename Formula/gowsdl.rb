@@ -17,14 +17,8 @@ class Gowsdl < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-
-    srcpath = buildpath/"src/github.com/hooklift/gowsdl"
-    srcpath.install buildpath.children
-    srcpath.cd do
-      system "make", "build"
-      bin.install "build/gowsdl"
-    end
+    system "make", "build"
+    bin.install "build/gowsdl"
   end
 
   test do
