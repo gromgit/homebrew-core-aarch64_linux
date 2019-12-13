@@ -18,10 +18,8 @@ class Gotags < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-
-    system "go", "build", "-o", "gotags"
-    bin.install "gotags"
+    system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", bin/"gotags"
+    prefix.install_metafiles
   end
 
   test do
