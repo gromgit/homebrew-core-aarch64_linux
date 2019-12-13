@@ -16,15 +16,8 @@ class Gobuster < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-
-    dir = buildpath/"src/github.com/OJ/gobuster"
-    dir.install buildpath.children
-
-    cd dir do
-      system "go", "build", "-o", bin/"gobuster"
-      prefix.install_metafiles
-    end
+    system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", bin/"gobuster"
+    prefix.install_metafiles
   end
 
   test do
