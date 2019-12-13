@@ -5,10 +5,9 @@ class R < Formula
   sha256 "bd65a45cddfb88f37370fbcee4ac8dd3f1aebeebe47c2f968fd9770ba2bbc954"
 
   bottle do
-    sha256 "daa26a653216abd86a51e09ce4e3ebedacbabb40f91aaec932dbe956d6f66909" => :catalina
-    sha256 "84d387b39408df62be83884fe70f4a6b40eb6f0154de1ab1d20398c1e2af2407" => :mojave
-    sha256 "910931f2feed30e33b8dd0044bf38e42bc85b57ea161d29ca25e80cfd22c4249" => :high_sierra
-    sha256 "5bcfa36f3be460d11af215712e3a9b00237d8fc6d4f963a1ef7b85091d465ba7" => :sierra
+    sha256 "d1d1c643d70a82eae3d702af54502b1446584d560c0e9f59d4814e5598245069" => :catalina
+    sha256 "fcd1dc2749a1b8af36f2fb71ced861ae29edaba1b5924ec3944e25b1227ad142" => :mojave
+    sha256 "b062cbf25e5ed5ea0f27e8b9b7a967ed087876d7b220261e5b152c230aab949a" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
