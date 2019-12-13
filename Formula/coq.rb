@@ -3,6 +3,7 @@ class Coq < Formula
   homepage "https://coq.inria.fr/"
   url "https://github.com/coq/coq/archive/V8.10.2.tar.gz"
   sha256 "693c188f045d21f83114239dbb8af8def01b42a157c7d828087d055c32ec6e86"
+  revision 1
   head "https://github.com/coq/coq.git"
 
   bottle do
@@ -12,7 +13,6 @@ class Coq < Formula
   end
 
   depends_on "ocaml-findlib" => :build
-  depends_on "camlp5"
   depends_on "ocaml"
   depends_on "ocaml-num"
 
