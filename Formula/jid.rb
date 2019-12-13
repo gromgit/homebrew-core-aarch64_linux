@@ -15,14 +15,8 @@ class Jid < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-
-    src = buildpath/"src/github.com/simeji/jid"
-    src.install buildpath.children
-    src.cd do
-      system "go", "build", "-o", bin/"jid", "cmd/jid/jid.go"
-      prefix.install_metafiles
-    end
+    system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", bin/"jid", "cmd/jid/jid.go"
+    prefix.install_metafiles
   end
 
   test do
