@@ -16,15 +16,8 @@ class Hey < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-
-    dir = buildpath/"src/github.com/rakyll/hey"
-    dir.install buildpath.children
-
-    cd dir do
-      system "go", "build", "-o", bin/"hey"
-      prefix.install_metafiles
-    end
+    system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", bin/"hey"
+    prefix.install_metafiles
   end
 
   test do
