@@ -14,15 +14,9 @@ class JfrogCliGo < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-
-    src = buildpath/"src/github.com/jfrog/jfrog-cli"
-    src.install buildpath.children
-    src.cd do
-      system "go", "run", "./python/addresources.go"
-      system "go", "build", "-o", bin/"jfrog", "-ldflags", "-s -w -extldflags '-static'"
-      prefix.install_metafiles
-    end
+    system "go", "run", "./python/addresources.go"
+    system "go", "build", "-ldflags", "-s -w -extldflags '-static'", "-trimpath", "-o", bin/"jfrog"
+    prefix.install_metafiles
   end
 
   test do
