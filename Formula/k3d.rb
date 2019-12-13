@@ -14,20 +14,11 @@ class K3d < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GO111MODULE"] = "on"
-    ENV["GOPATH"] = buildpath
-    ENV["CGO_ENABLED"] = "0"
-
-    dir = buildpath/"src/github.com/rancher/k3d"
-    dir.install buildpath.children
-
-    cd dir do
-      system "go", "build", \
-          "-mod", "vendor", \
-          "-ldflags", "-s -w -X github.com/rancher/k3d/version.Version=v#{version} -X github.com/rancher/k3d/version.K3sVersion=v0.10.0", \
-          "-o", bin/"k3d"
-      prefix.install_metafiles
-    end
+    system "go", "build", \
+        "-mod", "vendor", \
+        "-ldflags", "-s -w -X github.com/rancher/k3d/version.Version=v#{version} -X github.com/rancher/k3d/version.K3sVersion=v0.10.0", \
+        "-trimpath", "-o", bin/"k3d"
+    prefix.install_metafiles
   end
 
   test do
