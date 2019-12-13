@@ -14,14 +14,8 @@ class GoJira < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    dir = buildpath/"src/gopkg.in/Netflix-Skunkworks/go-jira.v1"
-    dir.install buildpath.children
-
-    cd dir do
-      system "go", "build", "-o", bin/"jira", "-ldflags", "-w -s", "cmd/jira/main.go"
-      prefix.install_metafiles
-    end
+    system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", bin/"jira", "cmd/jira/main.go"
+    prefix.install_metafiles
   end
 
   test do
