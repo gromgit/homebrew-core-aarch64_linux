@@ -16,21 +16,10 @@ class GoMd2man < Formula
   depends_on "go" => :build
 
   def install
-    contents = Dir["*"]
-    gopath = buildpath/"gopath"
-    (gopath/"src/github.com/cpuguy83/go-md2man").install contents
-
-    ENV["GOPATH"] = buildpath
-    ENV["GO111MODULES"] = "enabled"
-
-    cd gopath/"src/github.com/cpuguy83/go-md2man" do
-      system "go", "build", "-o", "go-md2man"
-      system "./go-md2man", "-in=go-md2man.1.md", "-out=go-md2man.1"
-
-      bin.install "go-md2man"
-      man1.install "go-md2man.1"
-      prefix.install_metafiles
-    end
+    system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", bin/"go-md2man"
+    system bin/"go-md2man", "-in=go-md2man.1.md", "-out=go-md2man.1"
+    man1.install "go-md2man.1"
+    prefix.install_metafiles
   end
 
   test do
