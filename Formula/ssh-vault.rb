@@ -2,8 +2,8 @@ class SshVault < Formula
   desc "Encrypt/decrypt using SSH keys"
   homepage "https://ssh-vault.com/"
   url "https://github.com/ssh-vault/ssh-vault.git",
-      :tag      => "0.12.4",
-      :revision => "cc0eb0daebad1144583a943f486e086d300142b0"
+      :tag      => "0.12.5",
+      :revision => "a72db6da6b949f6adbfd82e1f44c4e12e17d0970"
   head "https://github.com/ssh-vault/ssh-vault.git"
 
   bottle do
@@ -31,7 +31,7 @@ class SshVault < Formula
   test do
     output = shell_output("echo hi | #{bin}/ssh-vault -u new create")
     fingerprint = output.split("\n").first.split(";").last
-    cmd = "#{bin}/ssh-vault -k https://ssh-keys.online/#{fingerprint} view"
+    cmd = "#{bin}/ssh-vault -k https://ssh-keys.online/key/#{fingerprint} view"
     output = pipe_output(cmd, output, 0)
     assert_equal "hi", output.chomp
   end
