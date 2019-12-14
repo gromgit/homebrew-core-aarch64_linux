@@ -7,10 +7,9 @@ class Asio < Formula
 
   bottle do
     cellar :any
-    sha256 "8b5d9bd61bbcab5bfb24399ac03c8be667b227cfb32671d9a6bc7c748f0ee1d9" => :catalina
-    sha256 "552c0f07fa8a9d1a867d23d06c3ef197a24cb06c1943a3c6965ef0b34a87abbd" => :mojave
-    sha256 "dd68dc384f46920aa4ec4ad189fd5683810f27558a3217c4ec2080ecc575919c" => :high_sierra
-    sha256 "b564abe29a03a745d5c0c3033fb17b7d1031382147c8818bf6d0bb034480d996" => :sierra
+    sha256 "3f2c8ab0aadadda4d4707b834787d0c02841a31cec763b4c4d32ca3f859bd314" => :catalina
+    sha256 "7be9a1e39bbd3fa59059fc9d8d98f7f43520da052cf245f195bbdd325ec1a8ec" => :mojave
+    sha256 "ea18bc6cca19d15ff019a98be7a9c31c34e477b5daac54ce7379f02a6635247f" => :high_sierra
   end
 
   depends_on "autoconf" => :build
