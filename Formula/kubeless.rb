@@ -15,16 +15,12 @@ class Kubeless < Formula
   depends_on "kubernetes-cli"
 
   def install
-    ENV["GOPATH"] = buildpath
-    (buildpath/"src/github.com/kubeless/kubeless").install buildpath.children
-    cd "src/github.com/kubeless/kubeless" do
-      ldflags = %W[
-        -w -X github.com/kubeless/kubeless/pkg/version.Version=v#{version}
-      ]
-      system "go", "build", "-o", bin/"kubeless", "-ldflags",
-             ldflags.join(" "), "./cmd/kubeless"
-      prefix.install_metafiles
-    end
+    ldflags = %W[
+      -s -w -X github.com/kubeless/kubeless/pkg/version.Version=v#{version}
+    ]
+    system "go", "build", "-ldflags", ldflags.join(" "), "-trimpath",
+           "-o", bin/"kubeless", "./cmd/kubeless"
+    prefix.install_metafiles
   end
 
   test do
