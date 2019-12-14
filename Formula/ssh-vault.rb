@@ -8,10 +8,9 @@ class SshVault < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0626c48246281ef41d5153ed6b50349adef603a944b5b24e0575bb40b3712785" => :mojave
-    sha256 "178173c00bedfa7a48c5381d03596e8164caeb7c3ccb4447579fcdf66149192f" => :high_sierra
-    sha256 "886172cdae4a8cbbb7ab4caef859cc397c39de3b216044d920153e11d01cc828" => :sierra
-    sha256 "74a103aab77feb90dede16015dfefac1cb27483630658fa6c0f5a93aeb7fefb9" => :el_capitan
+    sha256 "12e3e14671d317e1e337a81348962dd1abcad4994eb36d3d088f367cba4174b9" => :catalina
+    sha256 "a77d9ec9d764fec99d165746b07282934357081d313be6dd43f85de40534299a" => :mojave
+    sha256 "8670837a09a5eb5fccef4f7f6393b25ef208fcb332fcde26ecbe0fee66f04e5b" => :high_sierra
   end
 
   depends_on "dep" => :build
