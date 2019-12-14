@@ -17,16 +17,9 @@ class Kubebuilder < Formula
   depends_on "go"
 
   def install
-    ENV["GOPATH"] = buildpath
-    dir = buildpath/"src/sigs.k8s.io/kubebuilder"
-    dir.install buildpath.children - [buildpath/".brew_home"]
-
-    cd dir do
-      # Make binary
-      system "make", "build"
-      bin.install "bin/kubebuilder"
-      prefix.install_metafiles
-    end
+    system "make", "build"
+    bin.install "bin/kubebuilder"
+    prefix.install_metafiles
   end
 
   test do
