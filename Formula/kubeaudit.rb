@@ -15,10 +15,8 @@ class Kubeaudit < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath/"src"
-
-    system "go", "build", "-o", "kubeaudit"
-    bin.install "kubeaudit"
+    system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", bin/"kubeaudit"
+    prefix.install_metafiles
   end
 
   test do
