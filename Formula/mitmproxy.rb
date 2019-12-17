@@ -9,9 +9,9 @@ class Mitmproxy < Formula
 
   bottle do
     cellar :any
-    sha256 "67a63cedf54af5e2cf26289144335e769075b38dad3bad71c761b2d1425f1eff" => :catalina
-    sha256 "7d6eb3b85bbab030dd305f8df023df97b15eab5dbb176ee9868ca56a26531c50" => :mojave
-    sha256 "d2a1bece180c75e949f3bb316c413c6ad8a672bf1200356462bdfaf03f1ac817" => :high_sierra
+    sha256 "c690b19e657ff07a87b6a6da87b35012d8a8acf748263f23426ef1bb166df672" => :catalina
+    sha256 "b8f60f05ceb6df4e12f2aa70c83d560e4ed1cc7b2cebda1d463a5b5dc470e1d5" => :mojave
+    sha256 "106b9d2cbcdc07b67476a41ec052d30b4268d139917a53d7163ace433b611c31" => :high_sierra
   end
 
   depends_on "openssl@1.1"
