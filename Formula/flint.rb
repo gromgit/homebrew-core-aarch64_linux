@@ -5,6 +5,13 @@ class Flint < Formula
   sha256 "cbf1fe0034533c53c5c41761017065f85207a1b770483e98b2392315f6575e87"
   head "https://github.com/wbhart/flint2.git", :branch => "trunk"
 
+  bottle do
+    cellar :any
+    sha256 "f6df4b3a018320efc58b97580af06979ade00007812c6deb83ba150911f1bff9" => :catalina
+    sha256 "464d909acc9801c865e85023ab33db1abea9e9a28f81808979d7650370d67417" => :mojave
+    sha256 "952ffcbee931dc8554a69b2828b6ac0293e3981223762eeff0dabab42e365d0a" => :high_sierra
+  end
+
   depends_on "gmp"
   depends_on "mpfr"
 
