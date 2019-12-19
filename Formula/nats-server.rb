@@ -15,12 +15,8 @@ class NatsServer < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    ENV["GO111MODULE"] = "off"
-    mkdir_p "src/github.com/nats-io"
-    ln_s buildpath, "src/github.com/nats-io/nats-server"
-    buildfile = buildpath/"src/github.com/nats-io/nats-server/main.go"
-    system "go", "build", "-v", "-o", bin/"nats-server", buildfile
+    system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", bin/"nats-server"
+    prefix.install_metafiles
   end
 
   plist_options :manual => "nats-server"
