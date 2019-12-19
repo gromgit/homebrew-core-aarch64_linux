@@ -16,12 +16,8 @@ class NatsStreamingServer < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    ENV["GO111MODULE"] = "off"
-    mkdir_p "src/github.com/nats-io"
-    ln_s buildpath, "src/github.com/nats-io/nats-streaming-server"
-    buildfile = buildpath/"src/github.com/nats-io/nats-streaming-server/nats-streaming-server.go"
-    system "go", "build", "-v", "-o", bin/"nats-streaming-server", buildfile
+    system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", bin/"nats-streaming-server"
+    prefix.install_metafiles
   end
 
   plist_options :manual => "nats-streaming-server"
