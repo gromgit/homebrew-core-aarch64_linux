@@ -15,19 +15,13 @@ class NodeExporter < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-
-    (buildpath/"src/github.com/prometheus/node_exporter").install buildpath.children
-    cd "src/github.com/prometheus/node_exporter" do
-      ldflags = %W[
-        -X github.com/prometheus/common/version.Version=#{version}
-        -X github.com/prometheus/common/version.BuildUser=Homebrew
-      ]
-      system "go", "build", "-o", bin/"node_exporter",
-           "-ldflags", ldflags.join(" "),
-           "github.com/prometheus/node_exporter"
-      prefix.install_metafiles
-    end
+    ldflags = %W[
+      -X github.com/prometheus/common/version.Version=#{version}
+      -X github.com/prometheus/common/version.BuildUser=Homebrew
+    ]
+    system "go", "build", "-ldflags", ldflags.join(" "), "-trimpath",
+           "-o", bin/"node_exporter"
+    prefix.install_metafiles
   end
 
   def caveats; <<~EOS
