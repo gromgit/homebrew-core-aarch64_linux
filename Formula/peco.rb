@@ -1,8 +1,8 @@
 class Peco < Formula
   desc "Simplistic interactive filtering tool"
   homepage "https://github.com/peco/peco"
-  url "https://github.com/peco/peco/archive/v0.5.3.tar.gz"
-  sha256 "ac7d12a1f960ef04afea0c54c5ee754301fb4d85b0e65746826b142de13c843a"
+  url "https://github.com/peco/peco/archive/v0.5.4.tar.gz"
+  sha256 "06636082070634256b5adc4c24955ad2c520b24fec528131d0ce203c31aa209d"
   head "https://github.com/peco/peco.git"
 
   bottle do
@@ -14,15 +14,13 @@ class Peco < Formula
     sha256 "80596ba0cbd75b50f01c31c406bb3fab28b7f0cffc9bb3e465a3dc6be1e56697" => :el_capitan
   end
 
-  depends_on "glide" => :build
   depends_on "go" => :build
 
   def install
     ENV["GOPATH"] = buildpath
-    ENV["GLIDE_HOME"] = HOMEBREW_CACHE/"glide_home/#{name}"
     (buildpath/"src/github.com/peco/peco").install buildpath.children
     cd "src/github.com/peco/peco" do
-      system "glide", "install"
+      system "make", "build"
       system "go", "build", "-o", bin/"peco", "cmd/peco/peco.go"
       prefix.install_metafiles
     end
