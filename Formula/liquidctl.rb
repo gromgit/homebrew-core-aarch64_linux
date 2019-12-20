@@ -8,6 +8,13 @@ class Liquidctl < Formula
 
   head "https://github.com/jonasmalacofilho/liquidctl.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "0e3fc1c2aa8b9afa50f27023117ff9d9ec6db663047747995213f1ce790279e5" => :catalina
+    sha256 "446e9b6d26a47ba1ae251f6b6223a68f431f31c09cebe15a5e03917aa3687733" => :mojave
+    sha256 "b98fb1a4ccac80207a325844aa8c10c0bf0dde749157dcf4663ad17c1b73693b" => :high_sierra
+  end
+
   depends_on "libusb"
   depends_on "python"
 
