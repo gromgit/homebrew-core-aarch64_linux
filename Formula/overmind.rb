@@ -16,9 +16,8 @@ class Overmind < Formula
   depends_on "tmux"
 
   def install
-    ENV["GOPATH"] = buildpath
-    (buildpath/"src/github.com/DarthSim/overmind").install buildpath.children
-    system "go", "build", "-o", "#{bin}/overmind", "-v", "github.com/DarthSim/overmind"
+    system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", bin/"overmind"
+    prefix.install_metafiles
   end
 
   test do
