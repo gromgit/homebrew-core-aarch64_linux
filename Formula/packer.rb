@@ -2,8 +2,8 @@ class Packer < Formula
   desc "Tool for creating identical machine images for multiple platforms"
   homepage "https://packer.io"
   url "https://github.com/hashicorp/packer.git",
-      :tag      => "v1.4.5",
-      :revision => "5ddd02d1c0e5d8b1b0e2171d2d40c7d7b5641e68"
+      :tag      => "v1.5.1",
+      :revision => "324581ac9ce8d1e0558b33eea9d4f9d6d5a16002"
   head "https://github.com/hashicorp/packer.git"
 
   bottle do
@@ -17,24 +17,15 @@ class Packer < Formula
   depends_on "go" => :build
 
   def install
-    ENV["XC_OS"] = "darwin"
-    ENV["XC_ARCH"] = "amd64"
-    ENV["GOPATH"] = buildpath
-
-    packerpath = buildpath/"src/github.com/hashicorp/packer"
-    packerpath.install Dir["{*,.git}"]
-
-    cd packerpath do
-      (buildpath/"bin").mkpath
-      if build.head?
-        system "make", "bin"
-      else
-        system "make", "releasebin"
-      end
-      bin.install buildpath/"bin/packer"
-      zsh_completion.install "contrib/zsh-completion/_packer"
-      prefix.install_metafiles
+    (buildpath/"bin").mkpath
+    if build.head?
+      system "make", "bin"
+    else
+      system "make", "releasebin"
     end
+    bin.install buildpath/"bin/packer"
+    zsh_completion.install "contrib/zsh-completion/_packer"
+    prefix.install_metafiles
   end
 
   test do
