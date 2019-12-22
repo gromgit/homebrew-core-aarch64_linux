@@ -15,6 +15,8 @@ class Xrootd < Formula
   depends_on "cmake" => :build
   depends_on "openssl@1.1"
   depends_on "readline"
+  uses_from_macos "libxml2"
+  uses_from_macos "zlib"
 
   def install
     mkdir "build" do
