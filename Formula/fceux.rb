@@ -3,7 +3,7 @@ class Fceux < Formula
   homepage "http://fceux.com"
   url "https://downloads.sourceforge.net/project/fceultra/Source%20Code/2.2.3%20src/fceux-2.2.3.src.tar.gz"
   sha256 "4be6dda9a347f941809a3c4a90d21815b502384adfdd596adaa7b2daf088823e"
-  revision 2
+  revision 3
 
   bottle do
     cellar :any
@@ -14,6 +14,7 @@ class Fceux < Formula
 
   depends_on "pkg-config" => :build
   depends_on "scons" => :build
+  depends_on "gd"
   depends_on "gtk+3"
   depends_on "sdl"
 
