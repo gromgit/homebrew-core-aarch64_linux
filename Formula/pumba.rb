@@ -15,15 +15,9 @@ class Pumba < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-
-    src = buildpath/"src/github.com/alexei-led/pumba"
-    src.install buildpath.children
-    src.cd do
-      system "go", "build", "-o", bin/"pumba", "-ldflags",
-             "-X main.Version=#{version}", "./cmd"
-      prefix.install_metafiles
-    end
+    system "go", "build", "-ldflags", "-s -w -X main.Version=#{version}",
+           "-trimpath", "-o", bin/"pumba", "./cmd"
+    prefix.install_metafiles
   end
 
   test do
