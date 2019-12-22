@@ -1,8 +1,8 @@
 class Macosvpn < Formula
   desc "Create Mac OS VPNs programmatically"
   homepage "https://github.com/halo/macosvpn"
-  url "https://github.com/halo/macosvpn/archive/0.3.5.tar.gz"
-  sha256 "a1ab4276d22d42430ae8696420a9e0641609bad442036e4e2403d722a1d919a4"
+  url "https://github.com/halo/macosvpn/archive/1.0.1.tar.gz"
+  sha256 "85f5051512e7b403980e40eea96cc4dc21205379ea89a2dfd4e5aed19f5f25ca"
 
   bottle do
     cellar :any_skip_relocation
@@ -12,7 +12,7 @@ class Macosvpn < Formula
     sha256 "4cf716851d7a1fda3ed5387504d01d8832b53f54fd7b683267af29fc5d18f7a1" => :el_capitan
   end
 
-  depends_on :xcode => ["7.3", :build]
+  depends_on :xcode => ["11.1", :build]
 
   def install
     xcodebuild "SYMROOT=build"
@@ -20,6 +20,6 @@ class Macosvpn < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/macosvpn version", 10)
+    assert_match version.to_s, shell_output("#{bin}/macosvpn version", 2)
   end
 end
