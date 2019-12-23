@@ -5,6 +5,13 @@ class Blis < Formula
   sha256 "ad5765cc3f492d0c663f494850dafc4d72f901c332eb442f404814ff2995e5a9"
   head "https://github.com/flame/blis.git"
 
+  bottle do
+    cellar :any
+    sha256 "7d992963cd513a7a08e934f078698c145d3778a97abefff7744e497926d8ce98" => :catalina
+    sha256 "9bd7f60d824d7b291dac639b5af609066593a8afa3a64d62ece5bdd4f12bba92" => :mojave
+    sha256 "80050a00c1bbf25a6f7fc31ec7cacf0d911adb4c68d68e57afe60f607082261b" => :high_sierra
+  end
+
   def install
     system "./configure", "--prefix=#{prefix}", "--enable-cblas", "auto"
     system "make"
