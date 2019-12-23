@@ -5,9 +5,9 @@ class Libgr < Formula
   sha256 "43979bee9f9bffd145e9e076d1ee24e6ecf3866eb6c0e34631da922bfb4dc0b5"
 
   bottle do
-    sha256 "cf43f68b60d8c2084f84e35fc66daa8d88b66b13b2380bee6b7807d622f440ef" => :mojave
-    sha256 "66e7569c1ab5112a958b7d986ce0aae23ca939d40d6967707d0806bd64d479e8" => :high_sierra
-    sha256 "00a6481d88b6c4dc5d1557ae8b249521009234410e2d546d5d39e0013acd4645" => :sierra
+    sha256 "6e63cad1e7182a29eeab76efbc9775dea73faf2301a0c2a88e14d9e24ce1bb0d" => :catalina
+    sha256 "0b5a7338a81efe60dd9af00b5e912a60ed0e8dcc9476c84b35af1e789cd8d572" => :mojave
+    sha256 "d021bd902988273d097af9ffd949a50752611003a2a7591a3a482a96edaf651d" => :high_sierra
   end
 
   depends_on :xcode => :build
