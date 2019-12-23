@@ -3,6 +3,7 @@ class Gmic < Formula
   homepage "https://gmic.eu/"
   url "https://gmic.eu/files/source/gmic_2.8.1.tar.gz"
   sha256 "1a2b4c75c428201e52e920bd07e6c04118ae294cb89fce3c1c4ef386421b2a7a"
+  revision 1
   head "https://github.com/dtschump/gmic.git"
 
   bottle do
@@ -31,5 +32,8 @@ class Gmic < Formula
     %w[test.jpg test.png].each do |file|
       system bin/"gmic", test_fixtures(file)
     end
+    system bin/"gmic", "-input", test_fixtures("test.jpg"), "rodilius", "10,4,400,16",
+           "smooth", "60,0,1,1,4", "normalize_local", "10,16", "-output", testpath/"test_rodilius.jpg"
+    assert_predicate testpath/"test_rodilius.jpg", :exist?
   end
 end
