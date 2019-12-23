@@ -3,6 +3,7 @@ class PythonAT2 < Formula
   homepage "https://www.python.org/"
   url "https://www.python.org/ftp/python/2.7.17/Python-2.7.17.tar.xz"
   sha256 "4d43f033cdbd0aa7b7023c81b0e986fd11e653b5248dac9144d508f11812ba41"
+  revision 1
   head "https://github.com/python/cpython.git", :branch => "2.7"
 
   bottle do
@@ -158,6 +159,12 @@ class PythonAT2 < Formula
 
     # Remove 2to3 because Python 3 also installs it
     rm bin/"2to3"
+
+    # A fix, because python and python@2 both want to install Python.framework
+    # and therefore we can't link both into HOMEBREW_PREFIX/Frameworks
+    # https://github.com/Homebrew/homebrew/issues/15943
+    ["Headers", "Python", "Resources"].each { |f| rm(prefix/"Frameworks/Python.framework/#{f}") }
+    rm prefix/"Frameworks/Python.framework/Versions/Current"
 
     # Remove the site-packages that Python created in its Cellar.
     site_packages_cellar.rmtree
