@@ -1,8 +1,8 @@
 class Libebml < Formula
   desc "Sort of a sbinary version of XML"
   homepage "https://www.matroska.org/"
-  url "https://dl.matroska.org/downloads/libebml/libebml-1.3.9.tar.xz"
-  sha256 "c6b6c6cd8b20a46203cb5dce636883aef68beb2846f1e4103b660a7da2c9c548"
+  url "https://dl.matroska.org/downloads/libebml/libebml-1.3.10.tar.xz"
+  sha256 "c6a792f4127b8059bc446fb32391e6633811f45748d7d7ba873d7028362f5e3e"
   head "https://github.com/Matroska-Org/libebml.git"
 
   bottle do
