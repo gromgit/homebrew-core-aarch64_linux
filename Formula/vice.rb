@@ -6,9 +6,10 @@ class Vice < Formula
   head "https://svn.code.sf.net/p/vice-emu/code/trunk/vice"
 
   bottle do
-    sha256 "ab60f8d6ed6e48190ae40464b449578141326e56006e422e46b85525f0876fec" => :catalina
-    sha256 "8774f17d04f9f3967886123347151705b1e53d0d3d55328ba553d60f1a73747b" => :mojave
-    sha256 "009af174f99daedad8b319cef9668f07d7c513fa8a859a687ef731a3e2a1abf7" => :high_sierra
+    cellar :any
+    sha256 "2482ee0bd13df1eb97fb420443b9bdeb7926e625c83a96404791fdcd8ab99f56" => :catalina
+    sha256 "00f63203afc84abacd468d5a012fd308a8adbca29ba87b01a2a8d0ac2ac3ad91" => :mojave
+    sha256 "236aacd38e7edec5cace94942ccb31ba77f64a6b062dfa35585a5bb87a6206ec" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
