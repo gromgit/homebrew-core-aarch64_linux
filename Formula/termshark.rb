@@ -1,8 +1,8 @@
 class Termshark < Formula
   desc "Terminal UI for tshark, inspired by Wireshark"
   homepage "https://termshark.io"
-  url "https://github.com/gcla/termshark/archive/v2.0.2.tar.gz"
-  sha256 "36e45dfeb97f89379bda5be6bfe69c46e5c4211674120977e7b0033f5d90321a"
+  url "https://github.com/gcla/termshark/archive/v2.0.3.tar.gz"
+  sha256 "c05a64f1e502d406cc149c6e8b92720ad6310aecd1dd206e05713fd8a2247a84"
 
   bottle do
     cellar :any_skip_relocation
@@ -28,7 +28,7 @@ class Termshark < Formula
   end
 
   test do
-    assert_match "termshark v2.0.2",
+    assert_match "termshark v#{version}",
                  shell_output("#{bin}/termshark -v --pass-thru=false")
 
     # Build a test pcap programmatically. Termshark will read this
