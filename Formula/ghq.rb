@@ -2,8 +2,8 @@ class Ghq < Formula
   desc "Remote repository management made easy"
   homepage "https://github.com/motemen/ghq"
   url "https://github.com/motemen/ghq.git",
-      :tag      => "v0.17.0",
-      :revision => "bb059e45e72c30b28e38fbadbda29dca71f8d04a"
+      :tag      => "v0.17.1",
+      :revision => "5add27b66cbb918e28f195a9065f6875b1a33392"
   head "https://github.com/motemen/ghq.git"
 
   bottle do
@@ -18,7 +18,7 @@ class Ghq < Formula
   def install
     system "make", "build"
     bin.install "ghq"
-    zsh_completion.install "zsh/_ghq"
+    zsh_completion.install "misc/zsh/_ghq"
     prefix.install_metafiles
   end
 
