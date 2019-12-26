@@ -6,6 +6,13 @@ class Talisman < Formula
       :tag      => "v1.0.0",
       :revision => "dd7b5898f7c4d9013d23d4dbd34685611524ac20"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "344233881bf3a42e7ce547852bd9e96c88dc3c5aadbb0c05de4fe1766cb2b64b" => :catalina
+    sha256 "d59d5b2cf4d8ab5aa5dfd03f5be19ed9fefdf0440b8d8fecf4f4b76f8bb37e8f" => :mojave
+    sha256 "172d14b6bdf44cba89030586816a74c4f5b6646ef546d02fa06202b7d85572cf" => :high_sierra
+  end
+
   depends_on "go" => :build
   depends_on "gox" => :build
 
