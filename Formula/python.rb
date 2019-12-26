@@ -139,12 +139,6 @@ class Python < Formula
               %r{('LINKFORSHARED': .*?)'(Python.framework/Versions/3.\d+/Python)'}m,
               "\\1'#{opt_prefix}/Frameworks/\\2'"
 
-    # A fix, because python and python3 both want to install Python.framework
-    # and therefore we can't link both into HOMEBREW_PREFIX/Frameworks
-    # https://github.com/Homebrew/homebrew/issues/15943
-    ["Headers", "Python", "Resources"].each { |f| rm(prefix/"Frameworks/Python.framework/#{f}") }
-    rm prefix/"Frameworks/Python.framework/Versions/Current"
-
     # Symlink the pkgconfig files into HOMEBREW_PREFIX so they're accessible.
     (lib/"pkgconfig").install_symlink Dir["#{frameworks}/Python.framework/Versions/#{xy}/lib/pkgconfig/*"]
 
