@@ -1,11 +1,9 @@
 class WireguardTools < Formula
   desc "Tools for the WireGuard secure network tunnel"
   homepage "https://www.wireguard.com/"
-  # Please only update version when the tools have been modified/updated,
-  # since the Linux module aspect isn't of utility for us.
-  url "https://git.zx2c4.com/WireGuard/snapshot/WireGuard-0.0.20191219.tar.xz"
-  sha256 "5aba6f0c38e97faa0b155623ba594bb0e4bd5e29deacd8d5ed8bda8d8283b0e7"
-  head "https://git.zx2c4.com/WireGuard", :using => :git
+  url "https://git.zx2c4.com/wireguard-tools/snapshot/wireguard-tools-1.0.20191226.tar.xz"
+  sha256 "aa8af0fdc9872d369d8c890a84dbc2a2466b55795dccd5b47721b2d97644b04f"
+  head "https://git.zx2c4.com/wireguard-tools", :using => :git
 
   bottle do
     cellar :any_skip_relocation
@@ -20,7 +18,7 @@ class WireguardTools < Formula
   def install
     system "make", "BASHCOMPDIR=#{bash_completion}", "WITH_BASHCOMPLETION=yes", "WITH_WGQUICK=yes",
                    "WITH_SYSTEMDUNITS=no", "PREFIX=#{prefix}", "SYSCONFDIR=#{prefix}/etc",
-                   "-C", "src/tools", "install"
+                   "-C", "src", "install"
   end
 
   test do
