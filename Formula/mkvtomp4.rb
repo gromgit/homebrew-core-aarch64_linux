@@ -6,13 +6,9 @@ class Mkvtomp4 < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "feaa87d33fe714461c556ddb00b1dfdcab714abd57b04b500eb49e04cbf7f8fa" => :catalina
-    sha256 "06b96194e09c4e952de56492047f83a6af1a173aba059ba9edd3ac2664e2cbf4" => :mojave
-    sha256 "2efab72b382b03ac47c70b1878587afafdd8de2b7361d96f98e837692d5b4ca4" => :high_sierra
-    sha256 "4c085a7e2cbfada2a722dc1d676fab80dacc1f490c14d2a2aff10a4fa60f5225" => :sierra
-    sha256 "f7610334538d3e3df8cfeab0a5cd7d9a44acfb141212b4852e340064657e50a8" => :el_capitan
-    sha256 "7ae6b5351e551f6f04811cc5b963fd67adc18132f9b4dc91fc07886f05b0d10f" => :yosemite
-    sha256 "3346ab8be87d01200616db3887ed05d0d6693d2003ca4c3d5530c439ef732544" => :mavericks
+    sha256 "5d191cf2f5a132c6783cf35a8fb74cb4a8c1c787d07149181f81b2f258172198" => :catalina
+    sha256 "5d191cf2f5a132c6783cf35a8fb74cb4a8c1c787d07149181f81b2f258172198" => :mojave
+    sha256 "5d191cf2f5a132c6783cf35a8fb74cb4a8c1c787d07149181f81b2f258172198" => :high_sierra
   end
 
   depends_on "ffmpeg"
