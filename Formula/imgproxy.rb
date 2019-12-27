@@ -1,8 +1,8 @@
 class Imgproxy < Formula
   desc "Fast and secure server for resizing and converting remote images"
   homepage "https://imgproxy.net"
-  url "https://github.com/imgproxy/imgproxy/archive/v2.7.0.tar.gz"
-  sha256 "9a97a4b184f67718f97a4b3d16cd98b61a825ba418e6e04139ed3a3a9d787fad"
+  url "https://github.com/imgproxy/imgproxy/archive/v2.8.0.tar.gz"
+  sha256 "ce5d5317e4db0fe5ca611458ab417943f6054bbc04dab93f61fc0071f6500996"
   head "https://github.com/imgproxy/imgproxy.git"
 
   bottle do
