@@ -7,10 +7,9 @@ class Tesseract < Formula
 
   bottle do
     cellar :any
-    sha256 "e28683663b237b02037c5e54d452e54cc881029ed0f5e25a885ba6bb804440e2" => :catalina
-    sha256 "774212dc0edf27447e1d5ba46ae9d3dfb989a90b529e49d15df99b9bb16e73d7" => :mojave
-    sha256 "eb9d24e2550bc7f13826306de27ceec45c2ddbde3440976a695c33daefbb204d" => :high_sierra
-    sha256 "d118c493ae35173a0eb966dc7641887dc9670772561b7e6ba25bccf4bdaab384" => :sierra
+    sha256 "81ff467946d9c85151c86819034cd183a983b4a3fa10374c7f039a5ec3ef0d82" => :catalina
+    sha256 "34eee505fccec07eaab30f14c46f9688db9f3aa578306d47bbcd31801b0b849d" => :mojave
+    sha256 "6b64585454bcca9b62945b284000723d76afad15b5e80109ca6cdc699ae50e25" => :high_sierra
   end
 
   depends_on "autoconf" => :build
