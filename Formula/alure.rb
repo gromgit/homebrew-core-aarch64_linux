@@ -7,11 +7,9 @@ class Alure < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "4b0683abfa113c033e779e61583dd9d8ced53e5a11a982da15e6ce13bcee742d" => :mojave
-    sha256 "0e11aef02b6fe4ba7f47030ab2329d16766951f1aab15ea38fbff49119f9c946" => :high_sierra
-    sha256 "ca92f4baba46fb0d6f33aca69e04215e7a867ebde1aa371938c3b81a34f9f2db" => :sierra
-    sha256 "6dc7f359b7cdb67e741a48c276ba57e22d5b9c5d55d4881fcb798f52356c1a10" => :el_capitan
+    sha256 "e8572f815728f9d0c50fdfabd5aa072a4afe4ef5c4b0452b9ecbecc5717c40b6" => :catalina
+    sha256 "0d8c46b3835606ad6e74448f626fbb3102e3227fbeffbee3e5eb8d808b41d39a" => :mojave
+    sha256 "3c36a1097d7e9924aaad1455b7509f9390564f39b0c91e3eebf36aca92417323" => :high_sierra
   end
 
   depends_on "cmake" => :build
