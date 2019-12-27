@@ -23,9 +23,8 @@ class Dmd < Formula
   end
 
   bottle do
-    sha256 "63dd323fd5b68377b86336a3a388ed8e629bb748e601467917e3bae396005f5c" => :catalina
-    sha256 "f7db8bcca1c5ce784461b5eaca167d14e43a6d37ed7a1a49885fed1a1fe64dc0" => :mojave
-    sha256 "087179a51d1f58703a9231d653dd9f87f49bfb80d787ef2c8ec8cfae1c41d469" => :high_sierra
+    sha256 "06e90ecc24a0dfa7bc86d57d1651249cd89802b9fd160dd575aa3be2b5db5fdf" => :mojave
+    sha256 "7435fd8bd1cf8f4c665749d189e0ce0773463c80b30b170e9942e3890a692c18" => :high_sierra
   end
 
   head do
