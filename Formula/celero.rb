@@ -4,6 +4,13 @@ class Celero < Formula
   url "https://github.com/DigitalInBlue/Celero/archive/v2.6.0.tar.gz"
   sha256 "a5b72da254f81d42369382ba3157229b6b32ebbb670a22b185f80db95535e66e"
 
+  bottle do
+    cellar :any
+    sha256 "50180fabca883914fd2b120cee3258ef4a58015287babb1883274c03d5be0fa6" => :catalina
+    sha256 "2ae8505c1415e5a9ca3b9d2d80a4f28516f311c755a0cbe809bc45b521a0169b" => :mojave
+    sha256 "c73b3bcf8fc8dfcb1df8367febe579c11b60067550500a5e94ec1ef7f279882c" => :high_sierra
+  end
+
   depends_on "cmake" => :build
 
   def install
