@@ -16,6 +16,11 @@ class Cedille < Formula
     end
   end
 
+  bottle do
+    sha256 "252f230e6168e64ac2832307427c11019dee14a14367aa551d3e8932c8d81661" => :mojave
+    sha256 "dcc55582c930e81fbefeda86831834f3d0f2d1b785343f32ade15a2d63efb7f9" => :high_sierra
+  end
+
   head do
     url "https://github.com/cedille/cedille.git"
 
