@@ -5,10 +5,10 @@ class Libchamplain < Formula
   sha256 "0232b4bfcd130a1c5bda7b6aec266bf2d06e701e8093df1886f1e26bc1ba3066"
 
   bottle do
-    sha256 "5340f49b75b21cb28ded727ccfae167191a4e2538f0751035691d8d2339082db" => :catalina
-    sha256 "55012badee88799ca3a3f15a297dfd4475dacb86471ef1fb40d7d9004036bf75" => :mojave
-    sha256 "14aa610600d1116ce0fb91a0ab5a191fc5dc826442a086e29429e8479c48d214" => :high_sierra
-    sha256 "ac423cb379fb5c21e2055d158b91db4abcbac3f6b259d3bfaab7818ec3f252c5" => :sierra
+    cellar :any
+    sha256 "b6be73601f13ea2e273909b9946071e1904ef379d1b001366f347d78b5a8643c" => :catalina
+    sha256 "9722cf78615bca8249d01e0df046ac75cfa056afe66fdf88eadbb4cc442a9665" => :mojave
+    sha256 "0ab75bc1d716f572c0eeef649f8bbdd390e87debb519faa6e350d02646139b09" => :high_sierra
   end
 
   depends_on "gnome-common" => :build
