@@ -9,9 +9,9 @@ class Nbdime < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5a1e551db5a59c295b886182751879cfd93460a53fa4c0c8716cc4f107635194" => :catalina
-    sha256 "d0f0f80a7bdf536f0f64666164168d9f03a3cab28e2fecdd2a878cca24fec511" => :mojave
-    sha256 "87c8cd36eaa6632b2c35f27e210cfea8867da1cafb333f85c3afb73850495921" => :high_sierra
+    sha256 "76bd49bd43d155497fdff3f443add92f515ecc64551b9aedeae7e7ad215455ad" => :catalina
+    sha256 "10fa3c2b2837e1ce129b0a870ae4033f46518f1098df66a32ca41ba97c5a61be" => :mojave
+    sha256 "ed8ddb9629b85848a9d8c9732c8ee6858a47b2de38c1c8c13bd2d749180ab4f6" => :high_sierra
   end
 
   depends_on "python@3.8"
