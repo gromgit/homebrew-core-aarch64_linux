@@ -5,9 +5,10 @@ class Libofx < Formula
   sha256 "b82757bfa15b27c02fb39dfd017cdfe5af51a063ba15afe495dd1b7367ff290a"
 
   bottle do
-    sha256 "a9dfe2ec7099410f4bd59c1add916c0f08af6e40ca87f7bfed779fb5215036bb" => :mojave
-    sha256 "03468f12a56e1d6d7ca8d2a3b1826d41a173363431e4ecc6ae0aa684fd2f6d56" => :high_sierra
-    sha256 "eaee8c1c4986358a0b15b801d76e0b976b351ffdf230e32e5fff98606b65284f" => :sierra
+    rebuild 1
+    sha256 "95cee3bf5da4fcb5eaeb73a4970632d2786b0f12b3b97a0e919c4d29336d8c08" => :catalina
+    sha256 "f04974342f8b883cb1248e27ff12dfd347d5e6c201852ed0d816ed4852c5be86" => :mojave
+    sha256 "591595de707127624906cafcb8d1271a6d907f4a3cbe2311c93bff53a969937a" => :high_sierra
   end
 
   depends_on "open-sp"
