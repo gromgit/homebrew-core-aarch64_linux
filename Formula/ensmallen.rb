@@ -6,9 +6,9 @@ class Ensmallen < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "aa864a73b33f5e886480e75327398f0a742d9cf0dc4001bf7d00500a0db463bb" => :catalina
-    sha256 "aa864a73b33f5e886480e75327398f0a742d9cf0dc4001bf7d00500a0db463bb" => :mojave
-    sha256 "aa864a73b33f5e886480e75327398f0a742d9cf0dc4001bf7d00500a0db463bb" => :high_sierra
+    sha256 "d23b32d396820798a0a059a1d9f5272256619360dd71fad53023450b373e322d" => :catalina
+    sha256 "44b5b437fa4e990f5a0a9b707cb6052b4ca1656e063df638a5408fbfa26a0295" => :mojave
+    sha256 "44b5b437fa4e990f5a0a9b707cb6052b4ca1656e063df638a5408fbfa26a0295" => :high_sierra
   end
 
   depends_on "cmake" => :build
