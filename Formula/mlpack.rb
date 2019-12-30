@@ -4,6 +4,13 @@ class Mlpack < Formula
   url "https://mlpack.org/files/mlpack-3.2.2.tar.gz"
   sha256 "7aef8c27645c9358262fec9ebba380720a086789d6519d5d1034346412a52ad6"
 
+  bottle do
+    cellar :any
+    sha256 "2201fc32de0214fc53c86c33e8bb63636039851d739641d2fc6ca8d73ead0156" => :catalina
+    sha256 "dcbc5b2581a049a323c36dc606e1176bf8a911ca923ba7becaff0414b09241d6" => :mojave
+    sha256 "3ff451d07eba97aeaa2846deef445a63816d867b32933925ad0d49638475a97d" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "doxygen" => :build
   depends_on "pkg-config" => :build
