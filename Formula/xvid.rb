@@ -6,9 +6,9 @@ class Xvid < Formula
 
   bottle do
     cellar :any
-    sha256 "7512de9c603f43159e8336358b52285ee74aa545f5dd7822cacdfa9158507b3a" => :catalina
-    sha256 "aaa30d8e5033d88082da91d780699df848d095dafff39ee5c5cfa1f6a46c86ff" => :mojave
-    sha256 "000de46bb386497c9d11a005825606e813034f8b819adaa09de12f15761de742" => :high_sierra
+    sha256 "ace5fea6272f3594b5c8fca6f1fe03c41c50a14af8599751571c5e44a49a5a53" => :catalina
+    sha256 "4e119534a1351c85799944eb35f6f5675192e67e077fb3452f73f210a57eabe3" => :mojave
+    sha256 "79ea46af3061561427ab0af36b09d61e057084c76f655ec21074fba375a36b01" => :high_sierra
   end
 
   def install
