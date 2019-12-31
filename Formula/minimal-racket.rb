@@ -6,9 +6,9 @@ class MinimalRacket < Formula
 
   bottle do
     cellar :any
-    sha256 "54682774edc9d7818bb3f13b24b782c351876c2f44573a1d5c0b042d1b17c5c9" => :mojave
-    sha256 "b88127d2552cf2d11ade45f6e7deffd871cd27c1bf5937dae571dc8ba931c98b" => :high_sierra
-    sha256 "e76979bfea6f2c0549e4393af622a6d73b174b6323320d253873022643bab4c2" => :sierra
+    sha256 "70ea8d21e62a5843b6c07cf46269ea9458001f6111b4a6c07aa5ba777ccfa87e" => :catalina
+    sha256 "68d761a6679fddaf422e0fbec5897116ca409e50f12aafb3589a06586403caaa" => :mojave
+    sha256 "938471c9139a10efa9c4b6f7a5d4955f7e53a1f43578662f366102086a9ed33c" => :high_sierra
   end
 
   # these two files are amended when (un)installing packages
