@@ -7,10 +7,9 @@ class Elvish < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "481e7d245074b9bdfa76254df634392e6c1473c4d8b2325f75689940d76c09ea" => :catalina
-    sha256 "6696ede0ecdd827b0c2e16fc0b728049741f49eb804a65159d940cdc5c536ac5" => :mojave
-    sha256 "d05b6eb72c80e1f30e0cccd529d60ae8521abdbaeea3b4aa3a7e75eedac8a9ff" => :high_sierra
+    sha256 "aba852bad9771ad72205d9413f8757fc35e80c00ba6e1a85762a4df7a6a266fb" => :catalina
+    sha256 "cc191e51b72846bab901f86e9cf2bc53b30f236b8ec3caeddbe47ecf59b3d719" => :mojave
+    sha256 "c97482bbd26a3f0daadea9a9e87d1370d8f3e3712bd6361bcf217fa020da9a47" => :high_sierra
   end
 
   depends_on "go" => :build
