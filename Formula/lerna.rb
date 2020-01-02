@@ -8,9 +8,9 @@ class Lerna < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "4b1d7c2d558ad3e28c403d08067994d266a3d248d0f001a3ecb254dd6eb68348" => :catalina
-    sha256 "ba394c7ce7021030bd3a675ead648ec11bcb2328ac1ebbca084ebb6e03b7efa9" => :mojave
-    sha256 "b092a704f0621c2ccbb6457db5b9a6ed1d6603fce974564069475bf993d2d35f" => :high_sierra
+    sha256 "f5f88793dcba112448f2c6d0dcdfaecb650087d723e488b3c0d41e72af8a3535" => :catalina
+    sha256 "54dd71344356b49404549ebcb468c7c072e586b5c6cd3f90300f094545a6c540" => :mojave
+    sha256 "f52b2b0cd334a513e33ba70feb1a7e50ec36aa178ad350b199fab156d4960747" => :high_sierra
   end
 
   depends_on "node"
