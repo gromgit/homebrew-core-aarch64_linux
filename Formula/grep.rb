@@ -7,11 +7,9 @@ class Grep < Formula
 
   bottle do
     cellar :any
-    rebuild 2
-    sha256 "18cfdeab08ab5b1cef0bb1cc750636109e7a7733a9219a67430cd47bfbd4f34f" => :catalina
-    sha256 "ca4b36489d4767f809516edaed8e4f869834dfca40e7ccfa2c697e1ffa771717" => :mojave
-    sha256 "3d31c9e997b832a9035394e51191d4f26357b51412d78e0029e19d5a6fc7efdb" => :high_sierra
-    sha256 "830c7d077c489b9276a314c631a32d539c476efa7fa3857e9ed5913aa92c9c06" => :sierra
+    sha256 "52fb744dfc1f2766b41d90bc4126bc6101663d12c3e31446719ef723b7883266" => :catalina
+    sha256 "cbce0c10ed3edc352347287ec36a8a199bb7649892943a6948e4dbe4127e83ac" => :mojave
+    sha256 "bcc9802f916e1db94b2879ff66b058d42142b391bfbc2002fd1fb13fd9e4c8ca" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
