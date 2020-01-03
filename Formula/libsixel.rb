@@ -6,9 +6,9 @@ class Libsixel < Formula
 
   bottle do
     cellar :any
-    sha256 "d43f66810d1c75968b51fd99578882b10fa759c9d9f02379ff2dfd400adf02b0" => :catalina
-    sha256 "99eba79e3705955854ec6586bb2b8aa5708e2f58672c2e9168074cf90cb9b45d" => :mojave
-    sha256 "90db47e866f4ce33685cec28abdb1dcafba4354cbc294f8a4109182833ba29d8" => :high_sierra
+    sha256 "ebc6eedece1e35507982ff22fc8b7ef0276f299ce8baea9454a11dd7277b958b" => :catalina
+    sha256 "e3cfac40fcc994b9288030fafb9a54786db54c554d01e5c0752d1503edf7557c" => :mojave
+    sha256 "a2f8006bcc498f77684aeefacd939796df48839c9a174fec3ba2f0747a943886" => :high_sierra
   end
 
   depends_on "jpeg"
