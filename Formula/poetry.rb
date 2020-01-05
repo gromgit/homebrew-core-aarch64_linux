@@ -6,6 +6,13 @@ class Poetry < Formula
   url "https://files.pythonhosted.org/packages/59/b9/79e078a303b6b813aa16c1f9cffe22e048c6edfef9a31574670193d09fc4/poetry-1.0.0.tar.gz"
   sha256 "f52930910371a748aa2ae62bc7dbe503e50f17532fb037486644db8a2c75f13f"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "b63645e108ecd753736f1cb7f44d560c832df7f537fcf5b743bb3802b5a392d0" => :catalina
+    sha256 "aee4ec12b1c94067868a88815687b222ec6c37eac10a69f2c9a51f193f998825" => :mojave
+    sha256 "048cf6682c24fa6299262acbac9b3bd30a1be5a77d77f51919e7b227c8d0eaae" => :high_sierra
+  end
+
   depends_on "python"
 
   resource "attrs" do
