@@ -5,11 +5,9 @@ class Openexr < Formula
   sha256 "4904c5ea7914a58f60a5e2fbc397be67e7a25c380d7d07c1c31a3eefff1c92f1"
 
   bottle do
-    cellar :any
-    sha256 "253c51ec98e9bd038d47d8482ea15e85183cc8dd718e5cf41facdfe9555f3717" => :catalina
-    sha256 "111658d105dc894ea67e1fdc98597c73c1bf1fa64ac52f1287372ded53a1cdab" => :mojave
-    sha256 "5673dfdc40bfc3f3495ec2fcff9ea5d5b65b244940f5bf686f79b838b97fdf3d" => :high_sierra
-    sha256 "1418b449d38fbe7f37071ab6bf8f383d53d3540d41597be97eefdcc08749b7e3" => :sierra
+    sha256 "8d0035149642480ce6f2cf7ef7e41505ceee657a39f57e3393c6c7a0faa29b2e" => :catalina
+    sha256 "f0503503f7f34a3dba50983fc284f920407b7c4a83de36326157cf7b6fcd8660" => :mojave
+    sha256 "f2c91954b76f5fd043195cae4ee117fe2d6e0563ebed99a7eefd82af5ea385a5" => :high_sierra
   end
 
   depends_on "cmake" => :build
