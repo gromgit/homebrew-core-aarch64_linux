@@ -6,9 +6,10 @@ class Freedink < Formula
   revision 1
 
   bottle do
-    sha256 "088aec509cd68e17a4a591f6d010fc297d7b3e6d9a60244984ba99da6e6a7051" => :mojave
-    sha256 "319225a173f440b80b4956035a146b778cb373c65da3ea2cbd4b616a8e33a58e" => :high_sierra
-    sha256 "2e76b5e2ac8037e07b879dc2f24549ba09f8bc12c873bfd896f8e7b3222d04e3" => :sierra
+    rebuild 1
+    sha256 "b971d9badc94cb0075963c341ed11c1872e3157b279def6d91fd088743b5e5e4" => :catalina
+    sha256 "d44bcab516f79beec47a1ebdc8ec68b66071a34e17abb8556407a3656946d454" => :mojave
+    sha256 "d022642338ba2979982088f1b65d6230ab71478fdaadfe4966372aa15b909182" => :high_sierra
   end
 
   depends_on "glm" => :build
