@@ -1,9 +1,8 @@
 class Pcb < Formula
   desc "Interactive printed circuit board editor"
   homepage "http://pcb.geda-project.org/"
-  url "https://downloads.sourceforge.net/project/pcb/pcb/pcb-4.2.0/pcb-4.2.0.tar.gz"
-  sha256 "cd4b36df6747789775812fb433f246d6bd5a27f3a16357d78d9c4c9b59c59a43"
-  revision 1
+  url "https://downloads.sourceforge.net/project/pcb/pcb/pcb-4.2.1/pcb-4.2.1.tar.gz"
+  sha256 "981532c0a1efd09e3ab6aa690992a4338d0970736ad709c51397bf0d24db3fc5"
   version_scheme 1
 
   bottle do
