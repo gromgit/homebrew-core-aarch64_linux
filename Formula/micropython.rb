@@ -2,8 +2,8 @@ class Micropython < Formula
   desc "Python implementation for microcontrollers and constrained systems"
   homepage "https://www.micropython.org/"
   url "https://github.com/micropython/micropython.git",
-      :tag      => "v1.11",
-      :revision => "6f75c4f3cd393131579db70cdf0b35d1fe5b95ab"
+      :tag      => "v1.12",
+      :revision => "1f371947309c5ea6023b6d9065415697cbc75578"
 
   bottle do
     cellar :any
@@ -18,15 +18,18 @@ class Micropython < Formula
   depends_on "python" # Requires python3 executable
 
   def install
+    # Build mpy-cross before building the rest of micropython. Build process expects executable at
+    # path buildpath/"mpy-cross/mpy-cross", so build it and leave it here for now, install later.
+    cd "mpy-cross" do
+      system "make"
+    end
+
     cd "ports/unix" do
       system "make", "axtls"
       system "make", "install", "PREFIX=#{prefix}"
     end
 
-    cd "mpy-cross" do
-      system "make"
-      bin.install "mpy-cross"
-    end
+    bin.install "mpy-cross/mpy-cross"
   end
 
   test do
