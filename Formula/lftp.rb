@@ -1,9 +1,8 @@
 class Lftp < Formula
   desc "Sophisticated file transfer program"
   homepage "https://lftp.yar.ru/"
-  url "https://lftp.yar.ru/ftp/lftp-4.8.4.tar.xz"
-  sha256 "4ebc271e9e5cea84a683375a0f7e91086e5dac90c5d51bb3f169f75386107a62"
-  revision 2
+  url "https://lftp.yar.ru/ftp/lftp-4.9.0.tar.xz"
+  sha256 "0b3b659e1969a31827a25861c01ccf71ac6d3f20ee256bdf6999d653e031a24e"
 
   bottle do
     sha256 "ae15b85b1e7cd7d8f42eacb78f9a231427a4374371c62d5a82ac899b72eeee0e" => :catalina
@@ -16,6 +15,12 @@ class Lftp < Formula
   depends_on "readline"
 
   def install
+    # Work around "error: no member named 'fpclassify' in the global namespace"
+    if MacOS.version == :high_sierra
+      ENV.delete("HOMEBREW_SDKROOT")
+      ENV.delete("SDKROOT")
+    end
+
     system "./configure", "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
                           "--with-openssl=#{Formula["openssl@1.1"].opt_prefix}",
