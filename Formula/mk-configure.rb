@@ -1,8 +1,8 @@
 class MkConfigure < Formula
   desc "Lightweight replacement for GNU autotools"
   homepage "https://github.com/cheusov/mk-configure"
-  url "https://downloads.sourceforge.net/project/mk-configure/mk-configure/mk-configure-0.32.0/mk-configure-0.32.0.tar.gz"
-  sha256 "43e5a8ffd68bca510cabc07c10e8d45223859ca34c7dffd29deab5046c7aa2d5"
+  url "https://downloads.sourceforge.net/project/mk-configure/mk-configure/mk-configure-0.32.1/mk-configure-0.32.1.tar.gz"
+  sha256 "0b9d9b409e6eb7d3820c64a972078f4380697c68abafee7ec16a7eb74cf2eb9e"
 
   bottle do
     cellar :any_skip_relocation
