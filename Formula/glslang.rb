@@ -7,9 +7,9 @@ class Glslang < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e2bb03a1dd08c2224c4e95a2fd9507ea905ba6a66bb4a388ce565f72c54abd84" => :catalina
-    sha256 "9a5bc1c2cf5585d552053b5a33b82d1dae2770c816e534ad82428a4a352b70df" => :mojave
-    sha256 "2c610e28bdf6a2292c3294326dae076909c2f219f09c793418cf31976388f980" => :high_sierra
+    sha256 "d4a3461d76f138a80ce27d657ed97cfd3522fbec9ff154230ca82278274f0a97" => :catalina
+    sha256 "f3cb27ac91ec3f5d53e40f83629592ca21b3f44c1b3ff836d829761838b60da1" => :mojave
+    sha256 "e113abb11c68625c53549852f9c59a205c0eaca994dc6bd09e94dc23cc5fcf5d" => :high_sierra
   end
 
   depends_on "cmake" => :build
