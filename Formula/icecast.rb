@@ -1,9 +1,8 @@
 class Icecast < Formula
   desc "Streaming MP3 audio server"
   homepage "https://icecast.org/"
-  url "https://downloads.xiph.org/releases/icecast/icecast-2.4.3.tar.gz"
-  sha256 "c85ca48c765d61007573ee1406a797ae6cb31fb5961a42e7f1c87adb45ddc592"
-  revision 1
+  url "https://downloads.xiph.org/releases/icecast/icecast-2.4.4.tar.gz"
+  sha256 "49b5979f9f614140b6a38046154203ee28218d8fc549888596a683ad604e4d44"
 
   bottle do
     cellar :any
@@ -20,10 +19,26 @@ class Icecast < Formula
 
   def install
     system "./configure", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}"
+                          "--prefix=#{prefix}",
+                          "--localstatedir=#{var}"
     system "make", "install"
 
-    (prefix+"var/log/icecast").mkpath
-    touch prefix+"var/log/icecast/error.log"
+    (var/"log/icecast").mkpath
+    touch var/"log/icecast/access.log"
+    touch var/"log/icecast/error.log"
+  end
+
+  test do
+    pid = fork do
+      exec "icecast", "-c", prefix/"etc/icecast.xml", "2>", "/dev/null"
+    end
+    sleep 3
+
+    begin
+      assert_match "icestats", shell_output("curl localhost:8000/status-json.xsl")
+    ensure
+      Process.kill "TERM", pid
+      Process.wait pid
+    end
   end
 end
