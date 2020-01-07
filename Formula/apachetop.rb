@@ -1,8 +1,8 @@
 class Apachetop < Formula
   desc "Top-like display of Apache log"
   homepage "https://web.archive.org/web/20170809160553/freecode.com/projects/apachetop"
-  url "https://deb.debian.org/debian/pool/main/a/apachetop/apachetop_0.18.4.orig.tar.gz"
-  sha256 "1cbbfd1bf12275fb21e0cb6068b9050b2fee8c276887054a015bf103a1ae9cc6"
+  url "https://deb.debian.org/debian/pool/main/a/apachetop/apachetop_0.19.7.orig.tar.gz"
+  sha256 "88abf58ee5d7882e4cc3fa2462865ebbf0e8f872fdcec5186abe16e7bff3d4a5"
 
   bottle do
     cellar :any_skip_relocation
@@ -14,6 +14,10 @@ class Apachetop < Formula
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+  depends_on "pkg-config" => :build
+  depends_on "adns"
+  depends_on "ncurses"
+  depends_on "pcre"
 
   def install
     system "./autogen.sh"
@@ -21,7 +25,9 @@ class Apachetop < Formula
                           "--mandir=#{man}",
                           "--disable-debug",
                           "--disable-dependency-tracking",
-                          "--with-logfile=/var/log/apache2/access_log"
+                          "--with-logfile=/var/log/apache2/access_log",
+                          "--with-adns=#{Formula["adns"].opt_prefix}",
+                          "--with-pcre=#{Formula["pcre"].opt_prefix}"
     system "make", "install"
   end
 
