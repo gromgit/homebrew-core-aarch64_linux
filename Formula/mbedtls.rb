@@ -1,8 +1,8 @@
 class Mbedtls < Formula
   desc "Cryptographic & SSL/TLS library"
   homepage "https://tls.mbed.org/"
-  url "https://tls.mbed.org/download/mbedtls-2.16.2-apache.tgz"
-  sha256 "a6834fcd7b7e64b83dfaaa6ee695198cb5019a929b2806cb0162e049f98206a4"
+  url "https://tls.mbed.org/download/mbedtls-2.16.3-apache.tgz"
+  sha256 "ec1bee6d82090ed6ea2690784ea4b294ab576a65d428da9fe8750f932d2da661"
   head "https://github.com/ARMmbed/mbedtls.git", :branch => "development"
 
   bottle do
