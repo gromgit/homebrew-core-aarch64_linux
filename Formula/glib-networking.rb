@@ -1,8 +1,8 @@
 class GlibNetworking < Formula
   desc "Network related modules for glib"
   homepage "https://launchpad.net/glib-networking"
-  url "https://download.gnome.org/sources/glib-networking/2.62/glib-networking-2.62.2.tar.xz"
-  sha256 "0644b8dc042bab8c9d2892aee5716513280c8773dbef43a038149f24cae15544"
+  url "https://download.gnome.org/sources/glib-networking/2.62/glib-networking-2.62.3.tar.xz"
+  sha256 "8ca1f86f23a76b5c7640624f7d5490705c78e81375e1741c9a1c41ce7f8f7ff7"
 
   bottle do
     cellar :any
