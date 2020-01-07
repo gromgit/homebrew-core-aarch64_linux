@@ -1,8 +1,8 @@
 class Spin < Formula
   desc "The efficient verification tool of multi-threaded software"
   homepage "https://spinroot.com/spin/whatispin.html"
-  url "https://github.com/nimble-code/Spin/archive/version-6.5.1.tar.gz"
-  sha256 "39a244763ee5dec8789f5461773249da82f05c53cc221636283366149284d14f"
+  url "https://github.com/nimble-code/Spin/archive/version-6.5.2.tar.gz"
+  sha256 "e46a3bd308c4cd213cc466a8aaecfd5cedc02241190f3cb9a1d1b87e5f37080a"
 
   bottle do
     cellar :any_skip_relocation
