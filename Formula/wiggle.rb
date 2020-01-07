@@ -1,8 +1,8 @@
 class Wiggle < Formula
   desc "Program for applying patches with conflicting changes"
   homepage "https://neil.brown.name/blog/20100324064620"
-  url "https://neil.brown.name/wiggle/wiggle-1.1.tar.gz"
-  sha256 "3da3cf6a456dd1415d2644e345f9831eb2912c6fa8dfa5d63d9bf49d744abff3"
+  url "https://neil.brown.name/wiggle/wiggle-1.2.tar.gz"
+  sha256 "31375badb76a4a586f2113e49d13486dbc64844962ae80976a81c6542e901622"
 
   bottle do
     cellar :any_skip_relocation
