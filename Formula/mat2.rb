@@ -1,8 +1,8 @@
 class Mat2 < Formula
   desc "Metadata anonymization toolkit"
   homepage "https://0xacab.org/jvoisin/mat2"
-  url "https://0xacab.org/jvoisin/mat2/-/archive/0.9.0/mat2-0.9.0.tar.gz"
-  sha256 "cc2265458dda0b65f488d4d97c4e1b9f99feda88398fc146e844cbd3a357d2af"
+  url "https://0xacab.org/jvoisin/mat2/-/archive/0.10.0/mat2-0.10.0.tar.gz"
+  sha256 "1c4b649500a9b05f0c21c5bfbbcef530f9811b70d913ab6b5fd8b011047a725b"
 
   bottle do
     cellar :any_skip_relocation
@@ -15,6 +15,7 @@ class Mat2 < Formula
   depends_on "exiftool"
   depends_on "ffmpeg"
   depends_on "gdk-pixbuf"
+  depends_on "librsvg"
   depends_on "poppler"
   depends_on "py3cairo"
   depends_on "pygobject3"
