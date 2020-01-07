@@ -4,6 +4,13 @@ class Nauty < Formula
   url "http://pallini.di.uniroma1.it/nauty26r12.tar.gz"
   version "26r12"
   sha256 "862ae0dc3656db34ede6fafdb0999f7b875b14c7ab4fedbb3da4f28291eb95dc"
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "e8a50e7c738926c887d8b460d2fcd4c2f888e21f8f6f5c3d42315d69c3781853" => :catalina
+    sha256 "e2adc9f094ff8a25d44f23f7772ccea4b229729869f646e4d7af2aacf090e8fd" => :mojave
+    sha256 "b2faeacdb5b39f262d7e444ea7bb63ba8ff752e55ee83cd75311b212bfbb5ba5" => :high_sierra
+  end
+
   # doi "10.1016/j.jsc.2013.09.003"
   # tag "math"
 
