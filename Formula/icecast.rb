@@ -3,6 +3,7 @@ class Icecast < Formula
   homepage "https://icecast.org/"
   url "https://downloads.xiph.org/releases/icecast/icecast-2.4.4.tar.gz"
   sha256 "49b5979f9f614140b6a38046154203ee28218d8fc549888596a683ad604e4d44"
+  revision 1
 
   bottle do
     cellar :any
@@ -20,9 +21,12 @@ class Icecast < Formula
   def install
     system "./configure", "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
+                          "--sysconfdir=#{etc}",
                           "--localstatedir=#{var}"
     system "make", "install"
+  end
 
+  def post_install
     (var/"log/icecast").mkpath
     touch var/"log/icecast/access.log"
     touch var/"log/icecast/error.log"
@@ -30,7 +34,7 @@ class Icecast < Formula
 
   test do
     pid = fork do
-      exec "icecast", "-c", prefix/"etc/icecast.xml", "2>", "/dev/null"
+      exec "icecast", "-c", etc/"icecast.xml", "2>", "/dev/null"
     end
     sleep 3
 
