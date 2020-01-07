@@ -1,8 +1,8 @@
 class Libvirt < Formula
   desc "C virtualization API"
   homepage "https://www.libvirt.org"
-  url "https://libvirt.org/sources/libvirt-5.9.0.tar.xz"
-  sha256 "3496d2e1d988185de013b2a9d2e8824458afd85aa7cd050283a59b3d78978939"
+  url "https://libvirt.org/sources/libvirt-5.10.0.tar.xz"
+  sha256 "9aaa889dccdc16e39eaa53dae36375413619561896920419fb1351bee8a2fc87"
   head "https://github.com/libvirt/libvirt.git"
 
   bottle do
@@ -46,16 +46,18 @@ class Libvirt < Formula
     args << "gl_cv_func_ftello_works=yes"
 
     system "./autogen.sh" if build.head?
-    system "./configure", *args
+    mkdir "build" do
+      system "../configure", *args
 
-    # Compilation of docs doesn't get done if we jump straight to "make install"
-    system "make"
-    system "make", "install"
+      # Compilation of docs doesn't get done if we jump straight to "make install"
+      system "make"
+      system "make", "install"
+    end
 
     # Update the libvirt daemon config file to reflect the Homebrew prefix
     inreplace "#{etc}/libvirt/libvirtd.conf" do |s|
-      s.gsub! "/etc/", "#{HOMEBREW_PREFIX}/etc/"
-      s.gsub! "/var/", "#{HOMEBREW_PREFIX}/var/"
+      s.gsub! "/etc/", "#{etc}/"
+      s.gsub! "/var/", "#{var}/"
     end
   end
 
