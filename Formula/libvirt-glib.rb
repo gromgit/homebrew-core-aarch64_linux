@@ -1,9 +1,8 @@
 class LibvirtGlib < Formula
   desc "Libvirt API for glib-based programs"
   homepage "https://libvirt.org/"
-  url "https://libvirt.org/sources/glib/libvirt-glib-2.0.0.tar.gz"
-  sha256 "94e8c410c67501303d3b32ca8ce2c36edf898511ec4de9b7f29cd35d274b3d6a"
-  revision 1
+  url "https://libvirt.org/sources/glib/libvirt-glib-3.0.0.tar.gz"
+  sha256 "7fff8ca9a2b723dbfd04223b1c7624251c8bf79eb57ec27362a7301b2dd9ebfe"
 
   bottle do
     sha256 "d4e218497763f25fa19d8c23f4e36a4538d4281d4f015d583305650ccd879873" => :catalina
