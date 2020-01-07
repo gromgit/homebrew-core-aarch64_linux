@@ -1,8 +1,8 @@
 class Cereal < Formula
   desc "C++11 library for serialization"
   homepage "https://uscilab.github.io/cereal/"
-  url "https://github.com/USCiLab/cereal/archive/v1.2.2.tar.gz"
-  sha256 "1921f26d2e1daf9132da3c432e2fd02093ecaedf846e65d7679ddf868c7289c4"
+  url "https://github.com/USCiLab/cereal/archive/v1.3.0.tar.gz"
+  sha256 "329ea3e3130b026c03a4acc50e168e7daff4e6e661bc6a7dfec0d77b570851d5"
   head "https://github.com/USCiLab/cereal.git", :branch => "develop"
 
   bottle do
@@ -16,10 +16,6 @@ class Cereal < Formula
   end
 
   depends_on "cmake" => :build
-
-  # error: chosen constructor is explicit in copy-initialization
-  # Reported 3 Sep 2016: https://github.com/USCiLab/cereal/issues/339
-  depends_on :macos => :yosemite
 
   def install
     system "cmake", ".", "-DJUST_INSTALL_CEREAL=ON", *std_cmake_args
