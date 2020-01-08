@@ -5,9 +5,9 @@ class Vips < Formula
   sha256 "97334a5e70aff343d2587f23cb8068fc846a58cd937c89a446142ccf00ea0349"
 
   bottle do
-    sha256 "bc081a7d00a0447ffc0a6033eabeef9462e9f2206d0138963293d12f78408efd" => :catalina
-    sha256 "11eb8e9e6f5700951c2d4137d22e4a94a711359bb4fc18321860be17cec947fb" => :mojave
-    sha256 "d8e1a410d9f85bbda7c8aa878541f1637d215c07ed177c199857b5fc256e31c4" => :high_sierra
+    sha256 "f047299393fc25223296dfea2a2119de83bcaeee12407ca901477a575c2b1058" => :catalina
+    sha256 "1f61d78abaee8214946aec3149268684de06de1fcdd8eb1e6d1405ed29ab90b7" => :mojave
+    sha256 "a47c7a76cff8c45f4623ce35f408b40a82df73e4daf573bb49189a4757c35d19" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
