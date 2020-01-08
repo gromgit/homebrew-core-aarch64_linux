@@ -1,8 +1,8 @@
 class Gjs < Formula
   desc "JavaScript Bindings for GNOME"
   homepage "https://gitlab.gnome.org/GNOME/gjs/wikis/Home"
-  url "https://download.gnome.org/sources/gjs/1.58/gjs-1.58.3.tar.xz"
-  sha256 "ca9fcd47b95ab0fc445301b2595e51fcea24d6f3cd87c190fe07006146d773ae"
+  url "https://download.gnome.org/sources/gjs/1.58/gjs-1.58.4.tar.xz"
+  sha256 "261a3f666c771d7744965fe71b804fc2c3a3d46a8e3e8d4f7ed5ef97967ebd5f"
 
   bottle do
     sha256 "12a95c5f332a4a62928149c7c3d6015ff8e584f4a81acce29dfb81a51ead93ab" => :catalina
@@ -44,7 +44,8 @@ class Gjs < Formula
                               "--enable-pie",
                               "--enable-release",
                               "--with-intl-api",
-                              "--disable-jemalloc"
+                              "--disable-jemalloc",
+                              "--disable-xcode-checks"
         system "make"
         system "make", "install"
         rm Dir["#{bin}/*"]
