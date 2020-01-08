@@ -4,6 +4,13 @@ class GitFilterRepo < Formula
   url "https://github.com/newren/git-filter-repo/releases/download/v2.24.0/git-filter-repo-2.24.0.tar.xz"
   sha256 "92188d3c44b9ff0dd40dfeed72859e0a088f775c12fb24c4e3e27a8064cfcc84"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "c47ad881f6c545f5ef1ba71b0c847f5a3575a8ff626b76412362813c0fc503a5" => :catalina
+    sha256 "336c9a9cf76ad1f46f47f74ad4015a905f8690612e2e02072db2300790e89895" => :mojave
+    sha256 "336c9a9cf76ad1f46f47f74ad4015a905f8690612e2e02072db2300790e89895" => :high_sierra
+  end
+
   # ignore git dependency audit:
   #  * Don't use git as a dependency (it's always available)
   # But we require Git 2.22.0+
