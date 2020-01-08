@@ -7,7 +7,6 @@ class Teleport < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "a33d926efce6c084f0e956e4ea9b9b64e95a62aba2756c60e41744abd585f5b9" => :catalina
     sha256 "cf3819dd816dc52b1095ae0c1f885b46dd4905bfe4bef6a982e50ef412820387" => :mojave
     sha256 "2b26a15fd9ce95cfbace1d017490aa725bdac82b1861c55b4798dcfb46592b0b" => :high_sierra
   end
