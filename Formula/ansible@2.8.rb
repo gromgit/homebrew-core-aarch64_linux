@@ -6,6 +6,13 @@ class AnsibleAT28 < Formula
   url "https://releases.ansible.com/ansible/ansible-2.8.7.tar.gz"
   sha256 "828239ca2b4d92865a00ab415caa932700f7c93f3e4838ddd55614ddf104c947"
 
+  bottle do
+    cellar :any
+    sha256 "53971b1f36c0b422556da7ecb5644a7c56966bc3c4803101f197a3e77c358bf8" => :catalina
+    sha256 "0a1240c8db82128c8fd059b28b6ca82362441ed669e1a6bc24de35b8924c239c" => :mojave
+    sha256 "1fbb770b0477bbe39def41503f2d791a8dea6e508012a48325a53c3cb1d29b48" => :high_sierra
+  end
+
   keg_only :versioned_formula
 
   depends_on "pkg-config" => :build
