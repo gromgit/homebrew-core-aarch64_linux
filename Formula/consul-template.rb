@@ -8,10 +8,9 @@ class ConsulTemplate < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "a2dde0ecc076871dbdc3a776757d66bf0bc93f7355cc19626f63564a9b3aafbc" => :catalina
-    sha256 "c2562a2cad6e348b7627204a9ac5eb93ae14b04c03f1d7ef82006db2c06cbeb5" => :mojave
-    sha256 "e651674c59039ed989f07461b4d6953410b373d40d3a7c1cb5fbbb51b6671ab8" => :high_sierra
+    sha256 "7d6ba218b40585bfec50e321a39fcd184f54b3934896e7b8740e906f7211b321" => :catalina
+    sha256 "bb877b6b83d183aa38f96354404464374ce6dd9be589781924c8840f8d8c401f" => :mojave
+    sha256 "977f793446ae540866fd515e4d696622ffb65b6a14ae59ad0ddccb306d3467ce" => :high_sierra
   end
 
   depends_on "go" => :build
