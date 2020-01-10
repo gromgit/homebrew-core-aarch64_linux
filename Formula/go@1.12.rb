@@ -6,9 +6,9 @@ class GoAT112 < Formula
   sha256 "8aba74417e527524ad5724e6e6c21016795d1017692db76d1b0851c6bdec84c3"
 
   bottle do
-    sha256 "c60db01a6810400103380418d7ae2b6838e7393a500bef9bcec160137b9ff34a" => :catalina
-    sha256 "d45abd6325b9f4449eebfa4594728e1f885a1b0e81be684dced9d474125b2693" => :mojave
-    sha256 "db0b608109b9e6a30760bd8fab61c554f458ca0e44a0c6b1347882f30ba24e60" => :high_sierra
+    sha256 "14c755159594bc581f7478a6bcb18c4b6c2bbe4fc797af5949cb8c9bddee385a" => :catalina
+    sha256 "2a4d144915c55b3323a93d10190bf6668ad32c9439696e903dd96630ebbd920b" => :mojave
+    sha256 "1bed1548f1c6e001a1e0cf8010c4862acb7c851602158201d6a16595d1d4c1ac" => :high_sierra
   end
 
   keg_only :versioned_formula
