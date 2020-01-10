@@ -5,6 +5,7 @@ class Conan < Formula
   homepage "https://github.com/conan-io/conan"
   url "https://github.com/conan-io/conan/archive/1.21.0.tar.gz"
   sha256 "c820ed81dc07b7373b5a5a9537d85896435037fe9b35d43052f35ef05a69f411"
+  revision 1
   head "https://github.com/conan-io/conan.git"
 
   bottle do
@@ -17,7 +18,7 @@ class Conan < Formula
   depends_on "pkg-config" => :build
   depends_on "libffi"
   depends_on "openssl@1.1"
-  depends_on "python"
+  depends_on "python@3.8"
 
   def install
     venv = virtualenv_create(libexec, "python3")
