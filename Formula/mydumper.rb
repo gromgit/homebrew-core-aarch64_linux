@@ -6,9 +6,9 @@ class Mydumper < Formula
 
   bottle do
     cellar :any
-    sha256 "1ad797094a34d26b1318e6c163e1101bf6476344e2a1323cb49b92245b24fc23" => :catalina
-    sha256 "513f5969ca02f512bc7733928ed903781d6c6e9ece655b0d287de9d23f3a8b3d" => :mojave
-    sha256 "0066ef9e9a957e31fe089f11b2afc2626d3cc4b2ec0b05ba2179467401850624" => :high_sierra
+    sha256 "157bb28e44f0033093c6dc1e46ad6f72e72fb0ae39c9d480e4cff4d90b0a4384" => :catalina
+    sha256 "d4a3a359cd266b24313e64204a8c99d8c1bfe0ec71fece2a31b8551bbb904eaa" => :mojave
+    sha256 "2f3f2f488038ee040fe619c6f3c35efc414c97a18bfb04885a245528645f8ade" => :high_sierra
   end
 
   depends_on "cmake" => :build
