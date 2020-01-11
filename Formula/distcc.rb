@@ -3,6 +3,7 @@ class Distcc < Formula
   homepage "https://github.com/distcc/distcc/"
   url "https://github.com/distcc/distcc/releases/download/v3.3.3/distcc-3.3.3.tar.gz"
   sha256 "bead25471d5a53ecfdf8f065a6fe48901c14d5008956c318c700e56bc87bf0bc"
+  revision 1
   head "https://github.com/distcc/distcc.git"
 
   bottle do
@@ -14,11 +15,11 @@ class Distcc < Formula
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
-  depends_on "python"
+  depends_on "python@3.8"
 
   resource "libiberty" do
-    url "https://deb.debian.org/debian/pool/main/libi/libiberty/libiberty_20190122.orig.tar.xz"
-    sha256 "45bd422ace29f124c068ad44edf41f845b2061ee043275ef3e233a3f647ab509"
+    url "https://deb.debian.org/debian/pool/main/libi/libiberty/libiberty_20190907.orig.tar.xz"
+    sha256 "4c649c2cee918399dd5c4051bbac8d4ca4bbfb8c8e83215c00143f413578f236"
   end
 
   def install
