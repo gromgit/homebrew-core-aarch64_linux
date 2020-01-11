@@ -5,7 +5,7 @@ class Statik < Formula
   homepage "https://getstatik.com"
   url "https://github.com/thanethomson/statik/archive/v0.22.2.tar.gz"
   sha256 "27aeda86c40ba2a489d2d8e85b7b38200e8f5763310003294c135ab2cf09975b"
-  revision 2
+  revision 3
   head "https://github.com/thanethomson/statik.git"
 
   bottle do
@@ -15,7 +15,7 @@ class Statik < Formula
     sha256 "7fb8a4394f54916bd6d9f9770be85a9da4a6f9c35ffb1c692fa4306a430062b1" => :high_sierra
   end
 
-  depends_on "python"
+  depends_on "python@3.8"
 
   conflicts_with "go-statik", :because => "both install `statik` binaries"
 
