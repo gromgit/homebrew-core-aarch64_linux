@@ -11,9 +11,9 @@ class Liblouis < Formula
     depends_on "python@3.8"
   end
   bottle do
-    sha256 "90c614058cf9c41fff51ad7b37077b21719657eb516fefe5aa25903ca318fbe1" => :catalina
-    sha256 "cc17c437f3250401f16dfe0c3121202fb38aea0db899ba1cef0fe08138a962a8" => :mojave
-    sha256 "9cc3903c672c3939d50363093c4db8e64ccbab88b03f689c154dfaabc94ae161" => :high_sierra
+    sha256 "878205190dfe42d286b32c9d5a3427c902c2ba8236ff8c189493da3b6f131fe0" => :catalina
+    sha256 "84c7e03f748a9cec9c40bca8298a26ed880e6981673d328f78c375d8c55c2c66" => :mojave
+    sha256 "b985d064857cd05df36bebda78a13e105230907fe7380167edf572f5d62a7756" => :high_sierra
   end
 
   head do
