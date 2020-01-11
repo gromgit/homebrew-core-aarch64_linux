@@ -6,10 +6,9 @@ class Pdsh < Formula
   head "https://github.com/chaos/pdsh.git"
 
   bottle do
-    rebuild 1
-    sha256 "c80f133bb94886b26100cde7e5a5d4d803484b13bbef75baa7c5040cac81c266" => :catalina
-    sha256 "42ec9fa52d542798255edf1caf31918a8d2691fb93e686d124e1eaf858f0f697" => :mojave
-    sha256 "e7d4e21f707f4cce26467f056daae591bfaa8fb9d6f373580ce4ab0b0db1e38d" => :high_sierra
+    sha256 "db103afd01523d00761df3c077b309ffeaa7e816a538ab9b739fac7b58a8171b" => :catalina
+    sha256 "d5ce164360edacbda30b059e8964fc6e4c886adc5f63218a37667756419ef51a" => :mojave
+    sha256 "4063ea4d575eef74e2af6993a74658df6c48e42b81df8a77a49aee745c7527a0" => :high_sierra
   end
 
   depends_on "readline"
