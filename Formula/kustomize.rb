@@ -8,8 +8,8 @@ class Kustomize < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "8de433297f8f42d0a9089526edadff9e7ae3da0bdb67089436aa3c650b54e99f" => :mojave
-    sha256 "fe4599a80bde640958c1c05347f8e1d6d0d7c4003e7e778e01803d5dfcb97c3e" => :high_sierra
+    sha256 "dd6c861f6693aa282a011f8ca83564317bb8c6b391387de30d1f409fe0079b09" => :mojave
+    sha256 "de22d3a03a654f6e240173519113565140a3f2ed135abcf6e01bb4bea4e905d9" => :high_sierra
   end
 
   depends_on "go" => :build
