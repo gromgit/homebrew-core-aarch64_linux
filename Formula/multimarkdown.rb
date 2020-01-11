@@ -1,8 +1,8 @@
 class Multimarkdown < Formula
   desc "Turn marked-up plain text into well-formatted documents"
   homepage "https://fletcher.github.io/MultiMarkdown-6/"
-  url "https://github.com/fletcher/MultiMarkdown-6/archive/6.4.0.tar.gz"
-  sha256 "fa9daa089bc0f8bc1f69fd7365778d59210b446ce7008d03b87fb572df8ff5d3"
+  url "https://github.com/fletcher/MultiMarkdown-6/archive/6.5.1.tar.gz"
+  sha256 "e8710777566d7710100b44e829a15d0ec2fce20271477aebea7caac319e1b20f"
   head "https://github.com/fletcher/MultiMarkdown-6.git"
 
   bottle do
@@ -21,11 +21,6 @@ class Multimarkdown < Formula
   conflicts_with "discount", :because => "both install `markdown` binaries"
 
   def install
-    # Reported upstream 2 Sep 2018 https://github.com/fletcher/MultiMarkdown-6/issues/142
-    inreplace "CMakeLists.txt",
-              "SET(CMAKE_OSX_DEPLOYMENT_TARGET \"10.4\"",
-              "SET(CMAKE_OSX_DEPLOYMENT_TARGET \"#{MacOS.version}\""
-
     system "make", "release"
 
     cd "build" do
