@@ -3,6 +3,7 @@ class PythonYq < Formula
   homepage "https://kislyuk.github.io/yq/"
   url "https://files.pythonhosted.org/packages/c7/3d/79eef9b78f2245a28446196c43d3744163b5e1783904f6bad2adb6cb4154/yq-2.10.0.tar.gz"
   sha256 "abaf2c0728f1c38dee852e976b0a6def5ab660d67430ee5af76b7a37072eba46"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
@@ -12,7 +13,7 @@ class PythonYq < Formula
   end
 
   depends_on "jq"
-  depends_on "python"
+  depends_on "python@3.8"
 
   conflicts_with "yq", :because => "both install `yq` executables"
 
@@ -22,8 +23,8 @@ class PythonYq < Formula
   end
 
   resource "importlib-metadata" do
-    url "https://files.pythonhosted.org/packages/cb/bb/7a935a48bf751af244090a7bd558769942cf13a7eba874b8b25538f3db01/importlib_metadata-1.3.0.tar.gz"
-    sha256 "073a852570f92da5f744a3472af1b61e28e9f78ccf0c9117658dc32b15de7b45"
+    url "https://files.pythonhosted.org/packages/8c/0e/10e247f40c89ba72b7f2a2104ccf1b65de18f79562ffe11bfb837b711acf/importlib_metadata-1.4.0.tar.gz"
+    sha256 "f17c015735e1a88296994c0697ecea7e11db24290941983b08c9feb30921e6d8"
   end
 
   resource "more-itertools" do
@@ -32,8 +33,8 @@ class PythonYq < Formula
   end
 
   resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/8d/c9/e5be955a117a1ac548cdd31e37e8fd7b02ce987f9655f5c7563c656d5dcb/PyYAML-5.2.tar.gz"
-    sha256 "c0ee8eca2c582d29c3c2ec6e2c4f703d1b7f1fb10bc72317355a746057e7346c"
+    url "https://files.pythonhosted.org/packages/3d/d9/ea9816aea31beeadccd03f1f8b625ecf8f645bd66744484d162d84803ce5/PyYAML-5.3.tar.gz"
+    sha256 "e9f45bd5b92c7974e59bcd2dcc8631a6b6cc380a904725fce7bc08872e691615"
   end
 
   resource "xmltodict" do
