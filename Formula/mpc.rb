@@ -6,10 +6,9 @@ class Mpc < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "4453dae7764d8c2f94fe581f1f35646e159c6483c2db7b0aa79b862ca6c8d627" => :catalina
-    sha256 "d7f43be3ae391ec5987cc2b49653b202dfa1798481b32209109b340adf309b29" => :mojave
-    sha256 "cf0a89f4b0e4d419cae88a989daa3ff015cf11d82904817c6fe1a3c08ca287db" => :high_sierra
+    sha256 "341a4c3cef23004a47f37fa299047e63baedceb07405813d6fc112c9ad7d4ff2" => :catalina
+    sha256 "29742180fafe0fffeba3fc09c3d355395084ef3d063004347a96bc37c72682db" => :mojave
+    sha256 "84bd2c475a7880bf1f36c560a5696c12c27ff6cdb5cd907082d14ffd094b1081" => :high_sierra
   end
 
   depends_on "meson" => :build
