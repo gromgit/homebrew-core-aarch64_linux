@@ -6,9 +6,9 @@ class Gitleaks < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9d60b3ebc7973af2d0e4ab770ddf7bdf75a85ec4dfe79af51a2f50d5c89ac611" => :catalina
-    sha256 "74d03153fa0a4ca5b55d5f5cb95b894c7c40adfffb545d7fade402494279218e" => :mojave
-    sha256 "8889814db9493ffbc4ad21b96002ebb5a3adb0b4d9a963f4b52ccb90e9aa16dc" => :high_sierra
+    sha256 "e09f54b47fc6ba5cf7acac50d8dcf0f02a32c1586a1f14ae1a0882dfd040c6c1" => :catalina
+    sha256 "71dddb77399f32ee00b0cc5dc37e777dbe84aa3506d655281dc148c49d6fdff2" => :mojave
+    sha256 "0ef4358a423555e207abf757db4c991a7e5a1aca1451dd07ee4040c364291d10" => :high_sierra
   end
 
   depends_on "go" => :build
