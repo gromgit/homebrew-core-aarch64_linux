@@ -3,6 +3,7 @@ class Xdotool < Formula
   homepage "https://www.semicomplete.com/projects/xdotool/"
   url "https://github.com/jordansissel/xdotool/archive/v3.20160805.1.tar.gz"
   sha256 "ddafca1239075c203769c17a5a184587731e56fbe0438c09d08f8af1704e117a"
+  revision 1
 
   bottle do
     sha256 "bd900636739173b1da41c392f04145905263c458844cd248f2bf00f3ccdc0d2b" => :catalina
