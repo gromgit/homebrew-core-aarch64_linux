@@ -6,9 +6,9 @@ class Perltidy < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "05a1114d7b8f4aaee26b81970da067c80bd774554eca35d62388a19d7e190961" => :catalina
-    sha256 "2bccd9c57ade5e50754a418a512fa1f31b9625b2437db0f530aca4260f1b1622" => :mojave
-    sha256 "78412fec8de42607432153744cd9a6d8345b4d749fca9ec1ac1ff51b6c96209b" => :high_sierra
+    sha256 "5cef99a6ef86d9fa2c9ea2a19fdbe9e65c75fbb78238ec152d5ec3e63c897264" => :catalina
+    sha256 "061afebc4d81e55cef82947d634039dabe72496d1974df35e473595c27cddd80" => :mojave
+    sha256 "723099b8029e18ab21b64f063b46fb809b256d697e41ebcc1b6a02c0fef0e158" => :high_sierra
   end
 
   def install
