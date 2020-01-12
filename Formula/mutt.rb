@@ -14,9 +14,9 @@ class Mutt < Formula
   sha256 "78423016b5f2fcb31bfd156999ff6638177be4459230d2ee61a81e5641d07378"
 
   bottle do
-    sha256 "73bad0d7485bdf406c6db18a0e1f7b92bba801de58fee3f818a601048bf70214" => :catalina
-    sha256 "2533d58dc983b73fefc9715f4a689e868c7c5cc8ab7e63f73c6b0400ff534889" => :mojave
-    sha256 "a8a8b235b51161a8984390c51f19bc9c0e0b30b6a90df74eb96a3716ccf51bef" => :high_sierra
+    sha256 "82980339fe8eb7d78fd12cdb2655cecb79b5457214db986447fc700f51de9245" => :catalina
+    sha256 "2c4e5e1dc40d70985a3cad659fce0aa6d3f23f0cd5fb5a92a5a24f1cc78c64e5" => :mojave
+    sha256 "f517c62b5ab322595cc4ffb6d9be7aca121d37bd0a2db5e43883a803ff22e0de" => :high_sierra
   end
 
   head do
