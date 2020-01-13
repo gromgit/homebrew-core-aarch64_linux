@@ -3,10 +3,9 @@ class AzureCli < Formula
 
   desc "Microsoft Azure CLI 2.0"
   homepage "https://docs.microsoft.com/cli/azure/overview"
-  url "https://codeload.github.com/Azure/azure-cli/legacy.tar.gz/f68fedd91e6fc84ed4a0d3b670bd8b9a50319838"
-  version "2.0.79"
-  sha256 "46fa9be6ee185147400327bdb112ae0c924d9b9aa1f650d65c73a203bb4fe06e"
-  revision 2
+  url "https://codeload.github.com/Azure/azure-cli/legacy.tar.gz/5180e47ca35708e120a570d26ef49e42aeacab82"
+  version "2.0.80"
+  sha256 "8ce885ad951268801bd045748ec5c7b530cfaf5391fb0150c46c8d7256383d30"
   head "https://github.com/Azure/azure-cli.git"
 
   bottle do
@@ -150,8 +149,8 @@ class AzureCli < Formula
   end
 
   resource "azure-mgmt-containerregistry" do
-    url "https://files.pythonhosted.org/packages/4a/f5/1113c8f9f8d23f9e59e5c3ee0831607698371185e52e405cc9cfabc87ed9/azure-mgmt-containerregistry-3.0.0rc7.zip"
-    sha256 "b79ff461c22b901cdc58c26a8ff27cc74cdb3b10f9d1056cb7b01914febaeeaf"
+    url "https://files.pythonhosted.org/packages/db/a7/c92c57ba6e4171e48cf33d1d991c5ead27817e0009dadb19ecbacadf7417/azure-mgmt-containerregistry-3.0.0rc8.zip"
+    sha256 "618384da0e294f66bb1cc01e4414a8a8bd938128e86bce3d2de961d0a2f35dc8"
   end
 
   resource "azure-mgmt-containerservice" do
@@ -380,8 +379,8 @@ class AzureCli < Formula
   end
 
   resource "azure-mgmt-storage" do
-    url "https://files.pythonhosted.org/packages/7c/6c/911e67affe780a506cf62660226149c7ce276a70bbde83f33c669fd6206e/azure-mgmt-storage-7.0.0.zip"
-    sha256 "7f5e6b18dee267c99f08f6a716a93173bbae433c8665f5c59153fb1a963bc105"
+    url "https://files.pythonhosted.org/packages/65/b6/589310965345f0eb152073a07b837f6cd476eb13a25c1d5ba4c221ade936/azure-mgmt-storage-7.1.0.zip"
+    sha256 "b4dc00bf960d98e7d03d70737fbccfedfe946b112602b375539a4fde02dfd20f"
   end
 
   resource "azure-mgmt-trafficmanager" do
@@ -460,13 +459,13 @@ class AzureCli < Formula
   end
 
   resource "importlib-metadata" do
-    url "https://files.pythonhosted.org/packages/cb/bb/7a935a48bf751af244090a7bd558769942cf13a7eba874b8b25538f3db01/importlib_metadata-1.3.0.tar.gz"
-    sha256 "073a852570f92da5f744a3472af1b61e28e9f78ccf0c9117658dc32b15de7b45"
+    url "https://files.pythonhosted.org/packages/8c/0e/10e247f40c89ba72b7f2a2104ccf1b65de18f79562ffe11bfb837b711acf/importlib_metadata-1.4.0.tar.gz"
+    sha256 "f17c015735e1a88296994c0697ecea7e11db24290941983b08c9feb30921e6d8"
   end
 
   resource "invoke" do
-    url "https://files.pythonhosted.org/packages/bc/c6/2b1d2ec1b30e570c548fa841ab729ddb83bddf08100082d263c080faa5c3/invoke-1.3.0.tar.gz"
-    sha256 "c52274d2e8a6d64ef0d61093e1983268ea1fc0cd13facb9448c4ef0c9a7ac7da"
+    url "https://files.pythonhosted.org/packages/d7/2a/7a0a89a1b8e3e74a198e2614bc8afdb58347bdf1d036eaa96fe73b02b667/invoke-1.4.0.tar.gz"
+    sha256 "ae7b4513638bde9afcda0825e9535599637a3f65bd819a27098356027bb17c8a"
   end
 
   resource "isodate" do
@@ -521,8 +520,8 @@ class AzureCli < Formula
   end
 
   resource "more-itertools" do
-    url "https://files.pythonhosted.org/packages/4e/b2/e9e512cccde6c54bf66a8e5820a2af779eb8235028627002ca90d4f75bea/more-itertools-8.0.2.tar.gz"
-    sha256 "b84b238cce0d9adad5ed87e745778d20a3f8487d0f0cb8b8a586816c7496458d"
+    url "https://files.pythonhosted.org/packages/df/8c/c278395367a46c00d28036143fdc6583db8f98622b83875403f16473509b/more-itertools-8.1.0.tar.gz"
+    sha256 "c468adec578380b6281a114cb8a5db34eb1116277da92d7c46f904f0b52d3288"
   end
 
   resource "msrest" do
@@ -601,8 +600,8 @@ class AzureCli < Formula
   end
 
   resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/8d/c9/e5be955a117a1ac548cdd31e37e8fd7b02ce987f9655f5c7563c656d5dcb/PyYAML-5.2.tar.gz"
-    sha256 "c0ee8eca2c582d29c3c2ec6e2c4f703d1b7f1fb10bc72317355a746057e7346c"
+    url "https://files.pythonhosted.org/packages/3d/d9/ea9816aea31beeadccd03f1f8b625ecf8f645bd66744484d162d84803ce5/PyYAML-5.3.tar.gz"
+    sha256 "e9f45bd5b92c7974e59bcd2dcc8631a6b6cc380a904725fce7bc08872e691615"
   end
 
   resource "requests" do
