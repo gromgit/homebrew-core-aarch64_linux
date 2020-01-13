@@ -6,6 +6,13 @@ class Mmctl < Formula
       :revision => "c330b36f679b69ac33fa1e561190ad2eb3466777"
   head "https://github.com/mattermost/mmctl.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "044c2188813a4bc19f805f0d1bcf94f43cc622031b80e20393246136163c5a8d" => :catalina
+    sha256 "b712c23311199bc8ec0a7dcf242844c2eaa38fd8e1919f76f38b7ce6312fa869" => :mojave
+    sha256 "ef52e7801b8a906d182010aa04a134bac57627d0594049c067f759a98ef82b14" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
