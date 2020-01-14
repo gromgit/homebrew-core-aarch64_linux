@@ -1,8 +1,8 @@
 class Assimp < Formula
   desc "Portable library for importing many well-known 3D model formats"
   homepage "http://www.assimp.org"
-  url "https://github.com/assimp/assimp/archive/v5.0.0.tar.gz"
-  sha256 "b0110a91650d6bb4000e3d5c2185bf77b0ff0a2e7a284bc2c4af81b33988b63c"
+  url "https://github.com/assimp/assimp/archive/v5.0.1.tar.gz"
+  sha256 "11310ec1f2ad2cd46b95ba88faca8f7aaa1efe9aa12605c55e3de2b977b3dbfc"
   head "https://github.com/assimp/assimp.git"
 
   bottle do
@@ -23,14 +23,6 @@ class Assimp < Formula
       url "https://github.com/assimp/assimp/pull/1634.patch?full_index=1"
       sha256 "79b93f785ee141dc2f56d557b2b8ee290eed0afc7dd373ad84715c6c9aa23460"
     end
-  end
-
-  # Fix CMake error "The imported target "assimp::assimp" references the file
-  # "/usr/local/lib/libassimp.dylib.5""
-  # Upstream PR from 11 Nov 2019 "Fix shared lib name on macOS"
-  patch do
-    url "https://github.com/assimp/assimp/pull/2765.patch?full_index=1"
-    sha256 "4c8102fea4af720f65d420aa883d60e6ed0f9eb8309938793e82de69d11a23dc"
   end
 
   def install
