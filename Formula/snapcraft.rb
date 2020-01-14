@@ -8,9 +8,9 @@ class Snapcraft < Formula
 
   bottle do
     cellar :any
-    sha256 "08735e22e1ff728ae698c53157b847b8a2ca51b92d3c63a2d8fa359b6fdc6fba" => :catalina
-    sha256 "0be23fa4ce461a7959166e9d71037c9aba2a1e6bad7cd554a7f4c77e06947730" => :mojave
-    sha256 "643b2f2170318c856e98e7f9502153583a6c47b2b72b3c8e41e7e72f4fcc526b" => :high_sierra
+    sha256 "f9625bff904bcd9ea0a0895b2cf2215533c7d6290fcee5e4e6d28500aadf8a98" => :catalina
+    sha256 "0102979dcc2dcccaf4e497c6f8e309ee96cbbf5eff60892c9e3d826d5df6dc9a" => :mojave
+    sha256 "797fb9560c6cdb091d750e11af9f0e2b8b064203a8a430c479d490c77f2481ca" => :high_sierra
   end
 
   depends_on "libsodium"
