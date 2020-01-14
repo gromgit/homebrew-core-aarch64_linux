@@ -8,9 +8,9 @@ class AskCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d96d1bb8496f0e52aba1978483afd60b0c8836e6c51f9579481d932b73cdbd24" => :catalina
-    sha256 "8ef070dc7beb4b05211f2a4a6a7977070266835c81f04f0c46cada91d1d53a61" => :mojave
-    sha256 "6a77fd79d72134f3e31eb45120748ca2b6af2fff6ff6f6e9bd7598646198ca5b" => :high_sierra
+    sha256 "bafee83ccee4c71a54085ca699bdd21b5764e3b9fba39d9d1690874e8deeddea" => :catalina
+    sha256 "4e7c3b1ef8e844d8a63968acb4bb53199dc6685e243190334b63d0e9e0f3e9f6" => :mojave
+    sha256 "1bc26d3853118ea9b15785663a29862df57887d64d64d1e80c06a6b024deed3e" => :high_sierra
   end
 
   depends_on "node"
