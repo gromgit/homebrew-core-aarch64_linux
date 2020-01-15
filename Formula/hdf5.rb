@@ -1,9 +1,8 @@
 class Hdf5 < Formula
   desc "File format designed to store large amounts of data"
   homepage "https://www.hdfgroup.org/HDF5"
-  url "https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.5/src/hdf5-1.10.5.tar.bz2"
-  sha256 "68d6ea8843d2a106ec6a7828564c1689c7a85714a35d8efafa2fee20ca366f44"
-  revision 1
+  url "https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.6/src/hdf5-1.10.6.tar.bz2"
+  sha256 "09d6301901685201bb272a73e21c98f2bf7e044765107200b01089104a47c3bd"
 
   bottle do
     cellar :any
@@ -21,7 +20,7 @@ class Hdf5 < Formula
   uses_from_macos "zlib"
 
   def install
-    inreplace %w[c++/src/h5c++.in fortran/src/h5fc.in tools/src/misc/h5cc.in],
+    inreplace %w[c++/src/h5c++.in fortran/src/h5fc.in bin/h5cc.in],
       "${libdir}/libhdf5.settings",
       "#{pkgshare}/libhdf5.settings"
 
