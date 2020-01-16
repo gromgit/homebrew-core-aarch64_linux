@@ -5,10 +5,9 @@ class Netcdf < Formula
   sha256 "8e8c9f4ee15531debcf83788594744bd6553b8489c06a43485a15c93b4e0448b"
 
   bottle do
-    sha256 "5952a7a1b2b4872b6e3dcf50ab7d76148120706209b9e11fd246bf17bd684cb2" => :catalina
-    sha256 "d798cbc16c2e6c312d921abf4cef0d74f094c9f6496114c06219baabaa962974" => :mojave
-    sha256 "0307831230fe41037beb09e9434d587497dc246ad4c0eb083e603efa4d5fbbec" => :high_sierra
-    sha256 "272ebe803e2c331d4839387d644261281315486413d581e460c1fef91455df6b" => :sierra
+    sha256 "7064ac71a3c01f819993473b181ca390b1ce4d25f8087ceb66dd210e9cecc358" => :catalina
+    sha256 "4e4333dc3c1250236b0242d9bf044ca2eaca4c50ac68d42d0865cb34b9a3d7d5" => :mojave
+    sha256 "9f59cd7b0610e2b834eabd128f13b4bd0f89812672867e1843f474059d0a709c" => :high_sierra
   end
 
   depends_on "cmake" => :build
