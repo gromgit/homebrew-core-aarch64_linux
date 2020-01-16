@@ -7,9 +7,9 @@ class Wireshark < Formula
   head "https://code.wireshark.org/review/wireshark", :using => :git
 
   bottle do
-    sha256 "34dc6140fd7f9daee5807871cda824cc2a17fa3e25dcb411bdb4fcc811733646" => :catalina
-    sha256 "6de820c1ea99ac1669dccfec1f7fbcd3e6d1559cdd11873822e11cc53871ea87" => :mojave
-    sha256 "b9a183ed3507b5ad14a52425294f4a06b9c566b693646275d2583755e7cb6f67" => :high_sierra
+    sha256 "f7d3d2d2005f3a9743f1ccc1ae7e44c8e807937ea36a1c7aa444d669e7d2c1d9" => :catalina
+    sha256 "c3a0ce1c14ca834377b2d44ffb23350d1fb810286c0ae0bcea77908a0299defd" => :mojave
+    sha256 "f7a804ee3bdb7275d0a73de028f76f77ca05d393950efaca98b9b933166913b2" => :high_sierra
   end
 
   depends_on "cmake" => :build
