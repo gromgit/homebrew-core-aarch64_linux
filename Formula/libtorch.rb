@@ -9,9 +9,9 @@ class Libtorch < Formula
 
   bottle do
     cellar :any
-    sha256 "b6d4961d7c1baaff41dd09ec6a37c1a4bc991886b2c24155572eaa693f687a3f" => :catalina
-    sha256 "d75117d358cdc75fdd03caff3fc77b3a0ef91bf3d457d4eccf6c77d1b9332eee" => :mojave
-    sha256 "4f4e8bff70d04eeef62e99411cc9bafedfb14082e50f500911c809bd20433b5d" => :high_sierra
+    sha256 "8c02e1a2194a2c1136191b3a0420c02fcd9e7a8acda470ad8e2f6cc150c9b746" => :catalina
+    sha256 "b8ea8eadabed75532d97ce7ae05e63e163d18e37ae419d7a23338e8caf5fd728" => :mojave
+    sha256 "edbce157ec347c339e333cfd195f8a2e7ffbea598eb8fe4c00546762989d3e55" => :high_sierra
   end
 
   depends_on "cmake" => :build
