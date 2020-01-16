@@ -4,9 +4,8 @@ class Libtorch < Formula
   desc "Tensors and dynamic neural networks"
   homepage "https://pytorch.org/"
   url "https://github.com/pytorch/pytorch.git",
-      :tag      => "v1.3.1",
-      :revision => "ee77ccbb6da4e2efd83673e798acf7081bc03564"
-  revision 1
+      :tag      => "v1.4.0",
+      :revision => "7f73f1d591afba823daa4a99a939217fb54d7688"
 
   bottle do
     cellar :any
@@ -22,8 +21,8 @@ class Libtorch < Formula
   depends_on "protobuf"
 
   resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/e3/e8/b3212641ee2718d556df0f23f78de8303f068fe29cdaa7a91018849582fe/PyYAML-5.1.2.tar.gz"
-    sha256 "01adf0b6c6f61bd11af6e10ca52b7d4057dd0be0343eb9283c878cf3af56aee4"
+    url "https://files.pythonhosted.org/packages/3d/d9/ea9816aea31beeadccd03f1f8b625ecf8f645bd66744484d162d84803ce5/PyYAML-5.3.tar.gz"
+    sha256 "e9f45bd5b92c7974e59bcd2dcc8631a6b6cc380a904725fce7bc08872e691615"
   end
 
   resource "typing" do
