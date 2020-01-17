@@ -7,8 +7,10 @@ class Wtfutil < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "a68a5f3dfe0cab3ed3097b3fe236760496a5615b35ac7d5dcc1fd4c4a0d600ee" => :mojave
-    sha256 "5750ceac539222b235943f796a89c6da90836cf767f332e7db7fc2da3a942d60" => :high_sierra
+    rebuild 1
+    sha256 "3530fb68726b77c8b208658935a292d5a1113334849f7d44e4eef573dafc9005" => :catalina
+    sha256 "9cfb4c489cab85f60004101e33a285ac563e1559d5f154165420bca0d6e8906a" => :mojave
+    sha256 "370a636a347fe12f069764168c9a73cc5b1e7dd11efe4eaccc3eb70a2eab4db8" => :high_sierra
   end
 
   depends_on "go" => :build
