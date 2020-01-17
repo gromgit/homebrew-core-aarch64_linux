@@ -1,8 +1,8 @@
 class DependencyCheck < Formula
   desc "OWASP dependency-check"
   homepage "https://www.owasp.org/index.php/OWASP_Dependency_Check"
-  url "https://dl.bintray.com/jeremy-long/owasp/dependency-check-5.2.4-release.zip"
-  sha256 "2968616fef4f4b85820ba7a05777fc2eab189eddc97eecc695962b0e2cc60c4c"
+  url "https://dl.bintray.com/jeremy-long/owasp/dependency-check-5.3.0-release.zip"
+  sha256 "1af524b02cb6bb8a03ea57f6ae2880bf8db67479b92a0815b70b03051bf20743"
 
   bottle :unneeded
 
