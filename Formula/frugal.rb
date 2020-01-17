@@ -6,9 +6,9 @@ class Frugal < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "6469b19ad93fcb1cde96ba8f3718562ba879a4bf435c2365a8b7b1cb08739636" => :catalina
-    sha256 "adbd61619eea85ecb9c7629a895164599cc506b9e4038d6544063bca551e2299" => :mojave
-    sha256 "3e8b4e589835cbcb8b488761e41afbf00ec91c1a6d6d111dbe77f3de77ad3608" => :high_sierra
+    sha256 "e3f050449545fd988e562b8299a8798c01899feea8b1e5cbc3e42c4fcb9306a8" => :catalina
+    sha256 "abf5c9c30888f09d93b36680478d9fb4fdd3c4ee7c89f76216231da7a71ef797" => :mojave
+    sha256 "7535fbd70e6c54c43d5d5d8a0f9e5c94ffd3d72ec74070d070a193edb397b989" => :high_sierra
   end
 
   depends_on "glide" => :build
