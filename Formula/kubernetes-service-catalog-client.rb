@@ -7,9 +7,10 @@ class KubernetesServiceCatalogClient < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2e45d39e10ea6755692a2a8726ea318375319a558957401b36e725acf03dc9c3" => :mojave
-    sha256 "875af8928b5818e3951b25e1d6d05c6b491163f11036770c1cc290e8bbe82fe2" => :high_sierra
-    sha256 "7d06fe9962debc87dbf3112b17c18d81002ef0c4b71ecc8844df53b827210500" => :sierra
+    rebuild 1
+    sha256 "c449e0cae42f826c443fb72d6e09297f622ca5637205366e9749089c375110eb" => :catalina
+    sha256 "7dbf67eeb6b82c0c75b4efa8ceb82dd764260c1c6081ae808699f82593ea6111" => :mojave
+    sha256 "f1744ab04a203c8ad1ce9d1a924ccc523fa5218d444348d542fffc2d462254c7" => :high_sierra
   end
 
   depends_on "go" => :build
