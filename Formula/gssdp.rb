@@ -1,8 +1,8 @@
 class Gssdp < Formula
   desc "GUPnP library for resource discovery and announcement over SSDP"
   homepage "https://wiki.gnome.org/GUPnP/"
-  url "https://download.gnome.org/sources/gssdp/1.2/gssdp-1.2.1.tar.xz"
-  sha256 "6b57b79a96e229367981b6f00474e4bbc795909a2d3160c748cba3395b3556d3"
+  url "https://download.gnome.org/sources/gssdp/1.2/gssdp-1.2.2.tar.xz"
+  sha256 "cabb9e3b456b8354a55e23eb0207545d974643cda6d623523470ebbc4188b0a4"
 
   bottle do
     cellar :any
@@ -19,9 +19,6 @@ class Gssdp < Formula
   depends_on "gettext"
   depends_on "glib"
   depends_on "libsoup"
-
-  # submitted upstream as https://gitlab.gnome.org/GNOME/gssdp/merge_requests/2
-  patch :DATA
 
   def install
     mkdir "build" do
@@ -55,37 +52,3 @@ class Gssdp < Formula
     system "./test"
   end
 end
-__END__
-diff --git a/libgssdp/meson.build b/libgssdp/meson.build
-index aa66def..a022609 100644
---- a/libgssdp/meson.build
-+++ b/libgssdp/meson.build
-@@ -48,8 +48,18 @@ if generic_unix
-   sources += 'gssdp-net-posix.c'
- endif
-
-+version = '0.0.0'
-+version_arr = version.split('.')
-+major_version = version_arr[0].to_int()
-+minor_version = version_arr[1].to_int()
-+micro_version = version_arr[2].to_int()
-+current = major_version + minor_version + 1
-+interface_age = micro_version
-+darwin_versions = [current, '@0@.@1@'.format(current, interface_age)]
-+
- libgssdp = library('gssdp-1.2', sources + enums,
--    version : '0.0.0',
-+    version : version,
-+    darwin_versions : darwin_versions,
-     dependencies : dependencies + system_deps,
-     include_directories : include_directories('..'),
-     install : true)
-diff --git a/meson.build b/meson.build
-index 7e898eb..3d75cc9 100644
---- a/meson.build
-+++ b/meson.build
-@@ -1,4 +1,4 @@
--project('gssdp', 'c', version: '1.2.1')
-+project('gssdp', 'c', version: '1.2.1', meson_version : '>= 0.48.0')
- gnome = import('gnome')
- pkg = import('pkgconfig')
