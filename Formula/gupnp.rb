@@ -1,8 +1,8 @@
 class Gupnp < Formula
   desc "Framework for creating UPnP devices and control points"
   homepage "https://wiki.gnome.org/Projects/GUPnP"
-  url "https://download.gnome.org/sources/gupnp/1.2/gupnp-1.2.1.tar.xz"
-  sha256 "a9aa557eff415598e05999d0ab122f202a978ff827688d3f951023117a315f5e"
+  url "https://download.gnome.org/sources/gupnp/1.2/gupnp-1.2.2.tar.xz"
+  sha256 "9a80bd953e5c8772ad26b72f8da01cbe7241a113edd6084903f413ce751c9989"
 
   bottle do
     cellar :any
@@ -20,9 +20,6 @@ class Gupnp < Formula
   depends_on "glib"
   depends_on "gssdp"
   depends_on "libsoup"
-
-  # submitted upstream as https://gitlab.gnome.org/GNOME/gupnp/merge_requests/3
-  patch :DATA
 
   def install
     mkdir "build" do
@@ -69,40 +66,3 @@ class Gupnp < Formula
     system "./test"
   end
 end
-
-__END__
-diff --git a/libgupnp/meson.build b/libgupnp/meson.build
-index b832acb..561b3cd 100644
---- a/libgupnp/meson.build
-+++ b/libgupnp/meson.build
-@@ -90,10 +90,20 @@ sources = files(
-     'xml-util.c'
- )
-
-+version = '0.0.0'
-+version_arr = version.split('.')
-+major_version = version_arr[0].to_int()
-+minor_version = version_arr[1].to_int()
-+micro_version = version_arr[2].to_int()
-+current = major_version + minor_version + 1
-+interface_age = micro_version
-+darwin_versions = [current, '@0@.@1@'.format(current, interface_age)]
-+
- libgupnp = library(
-     'gupnp-1.2',
-     sources + context_manager_impl + enums,
--    version : '0.0.0',
-+    version : version,
-+    darwin_versions : darwin_versions,
-     dependencies : dependencies + system_deps,
-     c_args : context_manager_args,
-     include_directories: include_directories('..'),
-diff --git a/meson.build b/meson.build
-index 9cf4697..45fb0dc 100644
---- a/meson.build
-+++ b/meson.build
-@@ -1,4 +1,4 @@
--project('gupnp', 'c', version : '1.2.1')
-+project('gupnp', 'c', version : '1.2.1', meson_version : '>= 0.48.0')
- gnome = import('gnome')
- pkg = import('pkgconfig')
