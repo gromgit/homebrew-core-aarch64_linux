@@ -8,10 +8,10 @@ class Libwbxml < Formula
 
   bottle do
     cellar :any
-    sha256 "8f29b62739e25768b3a2fd76e975c4121528d01ad5d41bc105a4bf109c52a9dd" => :mojave
-    sha256 "fe118d9f756018a53381df94681db25bf2d761b47fde308716bca017b61029ff" => :high_sierra
-    sha256 "753215897d0b041e488352e66daa4a807973705bb356fbf52e8c9d5dfbad443e" => :sierra
-    sha256 "1b510f8b6def29d207916e63a2b63ca44097e0568d432b2e9525deb2e849cc08" => :el_capitan
+    rebuild 1
+    sha256 "2c363ea6c4504c817ba8d2c5b5cd8da9e261dff223bb2c0c5356c05013f55a46" => :catalina
+    sha256 "90fce3d25a436373feee3fd99b19596c00bab30cdf89303018a111190896aab0" => :mojave
+    sha256 "026c871094433f113060870998649acdd8dd8b863a1d21e79e1fd100d45cc287" => :high_sierra
   end
 
   depends_on "cmake" => :build
