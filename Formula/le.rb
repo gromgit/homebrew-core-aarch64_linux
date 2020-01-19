@@ -12,8 +12,6 @@ class Le < Formula
     sha256 "82e83a7c1f1a030429b013d4fd138327003605193e683e092924e80b5e02bf8e" => :yosemite
   end
 
-  conflicts_with "logentries", :because => "both install a le binary"
-
   def install
     ENV.deparallelize
     system "./configure", "--disable-dependency-tracking",
