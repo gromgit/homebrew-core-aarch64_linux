@@ -5,9 +5,9 @@ class MidnightCommander < Formula
   sha256 "859f1cc070450bf6eb4d319ffcb6a5ac29deb0ac0d81559fb2e71242b1176d46"
 
   bottle do
-    sha256 "5c97885f5afc7eeeb4cf0cafc805f551dcd05ef88d918b401619eda36f0e5d2b" => :catalina
-    sha256 "e76360b03ae28f84ee962e1e15a7bd4506a7bb7dc0811f88647beed8a21beae4" => :mojave
-    sha256 "cac5b58750645de5fb74112a5ba5e640593500fc3b78d45d33432d448e962d61" => :high_sierra
+    sha256 "c6adcb70e949c89ba12ba91fffb89ad00c55e8c3a063ae6d01954a02a84512f2" => :catalina
+    sha256 "2e3e95bd852f0edd7069b09ff24e897e94bb495f3b852230f7cc3400acfc2d9a" => :mojave
+    sha256 "2e888d8d8cec7a0c881d0df09f5662080494f89e1871fbcccf30e9a0cc18aa1b" => :high_sierra
   end
 
   head do
