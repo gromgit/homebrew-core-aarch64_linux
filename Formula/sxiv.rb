@@ -7,9 +7,9 @@ class Sxiv < Formula
 
   bottle do
     cellar :any
-    sha256 "4fc8ef0f71f9cc26c8d685915c12f34147941f57a0d5cef118d0bc681907b5a4" => :catalina
-    sha256 "14d41d161fe07716d411db619a508bbdf6ba8f679dbcedbe349545a2e199bc5e" => :mojave
-    sha256 "f34e137e297f708018be69bdb6c355a9f86ff9fc0cf630560a7922c2224e71b4" => :high_sierra
+    sha256 "76166fe7a568a675abf485137b4df514f4f0c187edc0502f298d0f482aa7ac80" => :catalina
+    sha256 "1dc370bc45941faf5aeb36014160748df67446f4b51010c73a1ecc3851aed811" => :mojave
+    sha256 "544f9660a23d0370a6cd3b5fe6ff207bf21a12dcac6aaea5dc35735b09fc258c" => :high_sierra
   end
 
   depends_on "giflib"
