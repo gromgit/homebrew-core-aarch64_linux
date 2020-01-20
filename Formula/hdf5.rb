@@ -6,10 +6,9 @@ class Hdf5 < Formula
 
   bottle do
     cellar :any
-    sha256 "afdce21a9b29d29b4da6462822e50a4c4b775506c9682d93f3b4fed346f6abde" => :catalina
-    sha256 "28ee1944f9b17a50bddbfbc1730d06373efaf2f188930fa1624370bb895626df" => :mojave
-    sha256 "38fd7f6b101842d2fb103d45f3cbd927b7698795ec622495a9fc6052454eb011" => :high_sierra
-    sha256 "211b460cc14787591fdcc90c4aed3d643b5bab780269a1f2c775adf4d1ed8399" => :sierra
+    sha256 "9ece0ebb705a669c6c74b1305631077d9bbbd625c7ed67c0bb4d3b2b3a31dc88" => :catalina
+    sha256 "ae200d2122b45c5a08c3f1b8d2d141eac3fbe362c3f330f81003146e81c0fef5" => :mojave
+    sha256 "1b9703ab1422ac13493673ea56d9d7fce8ed678751a666f3e0384b9ba786d028" => :high_sierra
   end
 
   depends_on "autoconf" => :build
