@@ -8,9 +8,9 @@ class Termtosvg < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0c339642ddd4e2c5308bda1df5002afcb102045e926c85804ec9adb28949b230" => :catalina
-    sha256 "761e3f4bbf4cef28a2e4fa6ffa629e42d608edeccd1954ad163a873204bcb9ab" => :mojave
-    sha256 "3ca383905ac6bb41d58ed6f1f868e803ca8804354cafa5321bf820db4d5f4d3a" => :high_sierra
+    sha256 "98353f1a6df1675441bd9fbd7f7015905b654cdce008582072d6b7e8c8fdde42" => :catalina
+    sha256 "94ec2cd77e154ba2314aeff68ce68ad7614c9a5c8be8bcf0830bc02b3f5b37a5" => :mojave
+    sha256 "24b342f95d1700df9485dba70ef456a7f8bb64391a3b58502ca4c651e330f494" => :high_sierra
   end
 
   depends_on "python"
