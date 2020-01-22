@@ -6,9 +6,9 @@ class Radare2 < Formula
   head "https://github.com/radare/radare2.git"
 
   bottle do
-    sha256 "b29b45ef814bb0366a485a6a592978ca7c3ca2831b4aee7a118fcc36dd8ee401" => :catalina
-    sha256 "4efc3612640857a3b5bb2b04aad16a586f43b1ec40bc7660824fac51cddc7fc6" => :mojave
-    sha256 "845264fd22164541914cbc22fbccd2cc416afc2b0c230784d073b0f00b33a477" => :high_sierra
+    sha256 "0e3b51ce92c61563752a1ae890036c44dbdd96819276bfea4e08a13068dc0118" => :catalina
+    sha256 "d2bf3be2eaa107816dab43df40697a5e397fca05cb0fd79cf3ce61c6f1e512e7" => :mojave
+    sha256 "d1f61654868be1c04c33f283f12843e3c4eee328474beb9167129015f3a1add3" => :high_sierra
   end
 
   def install
