@@ -7,9 +7,9 @@ class OperatorSdk < Formula
   head "https://github.com/operator-framework/operator-sdk.git"
 
   bottle do
-    sha256 "2521c8ae94108180ecfe6207830fdf206424999c2389b7dba0653c42a6c4c377" => :catalina
-    sha256 "eac069d16b59a154e23dd023a91b594c520a6352981676e941fae1b861a80ddd" => :mojave
-    sha256 "35dac9d1a4006130831fba701072b813dada705589731d2c49b4e3b6687bca5c" => :high_sierra
+    sha256 "36bd29be1646d2e2691296528fe3fedce0d8f742befc1ed427dee8a984b05e84" => :catalina
+    sha256 "af025fa4d9fe09c97f4b20cb97aa51015fbd3bc72b120b484a7ae0f225740327" => :mojave
+    sha256 "0270e820c9dd9a9f9d110feb6ab412330582c36f93b7f9152101c6d86a173ef9" => :high_sierra
   end
 
   depends_on "go"
