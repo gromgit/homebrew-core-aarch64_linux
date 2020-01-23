@@ -10,9 +10,9 @@ class Taskell < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0317e4516b7e24fa06db422f2a59f43a4827f816e9e827e6ad33d1a907fa88b9" => :catalina
-    sha256 "c43e3ae3d3e74751e196eb56478d86c654c4f0ae51e6cfcf961c4e81ee24537d" => :mojave
-    sha256 "2ccab5e5a1e9bf8e1899a59e953aa7d4adc2a72162267029a3061c4aea170d88" => :high_sierra
+    sha256 "f54b52233d7843b4d2f4ce6c2187a266bbc78129c31968054c97c3dde25a087d" => :catalina
+    sha256 "3b088dbd935d07efecc919ea0a6154c5f1c146e7c8ed23569f32d7351af35067" => :mojave
+    sha256 "49078ae4e663deac24cef2b5d780d44535b131145695f82cc4b1f05e9e8a4e4c" => :high_sierra
   end
 
   depends_on "cabal-install" => :build
