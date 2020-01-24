@@ -17,6 +17,9 @@ class JfrogCliGo < Formula
     system "go", "run", "./python/addresources.go"
     system "go", "build", "-ldflags", "-s -w -extldflags '-static'", "-trimpath", "-o", bin/"jfrog"
     prefix.install_metafiles
+    system "go", "generate", "./completion/shells/..."
+    bash_completion.install "completion/shells/bash/jfrog"
+    zsh_completion.install "completion/shells/zsh/jfrog" => "_jfrog"
   end
 
   test do
