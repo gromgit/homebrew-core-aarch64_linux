@@ -1,9 +1,8 @@
 class Amtk < Formula
   desc "Actions, Menus and Toolbars Kit for GNOME"
   homepage "https://wiki.gnome.org/Projects/Amtk"
-  url "https://download.gnome.org/sources/amtk/5.0/amtk-5.0.1.tar.xz"
-  sha256 "2d1cf4a4468655f93c90a2dde2e08b1ea0b3960c0aee04eb206c201d7849de27"
-  revision 1
+  url "https://download.gnome.org/sources/amtk/5.0/amtk-5.0.2.tar.xz"
+  sha256 "71cc891fbaaa3d0cb87eeef9a2f7e1a2acab62f738d09ea922fb4b9ea2f84f86"
 
   bottle do
     sha256 "4da9a0f86b3e577452a283a366c9a09463be362bd720e968514d3e7b569ff8a5" => :catalina
