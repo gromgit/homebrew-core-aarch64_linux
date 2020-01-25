@@ -7,9 +7,9 @@ class Kcov < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f5a315633b03a413537445adaa8d7792d8e371c61e14898624846c68710d6fd6" => :catalina
-    sha256 "a229154a02e28f524e8c0e2d7af39dfa1a9f4b9f37717634f8179edb7bd327ff" => :mojave
-    sha256 "53f0444710122b2bb9e15fabad7688a0c4fe1a7e336a23777c2dc124f4c3c81c" => :high_sierra
+    sha256 "7a3af28e85c85c6f1dc684086884c724dfdbcf72efca48add536c5dd08bda4c0" => :catalina
+    sha256 "833750a5d75e99a392010b305841daca6d0007e5a9b2ccd2ab5d54f18c01b6ad" => :mojave
+    sha256 "e5c6cc5b5ed21b5609107cb80ac67dec4ffc9b9227e272464b9eeade66932bd3" => :high_sierra
   end
 
   depends_on "cmake" => :build
