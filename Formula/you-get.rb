@@ -5,7 +5,7 @@ class YouGet < Formula
   homepage "https://you-get.org/"
   url "https://github.com/soimort/you-get/archive/v0.4.1388.tar.gz"
   sha256 "17bbb545efbd0898fe48311df33d6288049dcae5f4a2132da70a1072f019b96b"
-  revision 1
+  revision 2
   head "https://github.com/soimort/you-get.git", :branch => "develop"
 
   bottle do
@@ -17,6 +17,11 @@ class YouGet < Formula
 
   depends_on "python@3.8"
   depends_on "rtmpdump"
+
+  resource "PySocks" do
+    url "https://files.pythonhosted.org/packages/bd/11/293dd436aea955d45fc4e8a35b6ae7270f5b8e00b53cf6c024c83b657a11/PySocks-1.7.1.tar.gz"
+    sha256 "3f8804571ebe159c380ac6de37643bb4685970655d3bba243530d6558b799aa0"
+  end
 
   def install
     virtualenv_install_with_resources
