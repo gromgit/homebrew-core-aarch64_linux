@@ -8,6 +8,13 @@ class PscPackage < Formula
   url "https://github.com/purescript/psc-package/archive/v0.6.0.tar.gz"
   sha256 "71815aedaac2d27267e5ec235805583a774c09aaf9e00ef5add74475587b3ef6"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "9a75a27be86752582bcac4e48106c988a58eb3646c19c5d23f5263953fb2a0e4" => :catalina
+    sha256 "d079267dd53b3d701017cca093a79a21bd4dd1bc10ea8c99bd470e98dbcae85e" => :mojave
+    sha256 "18f98b6491efe2dde9bfd15fad74f6c04f247202e090f99efa7eb8a04fc1bc7f" => :high_sierra
+  end
+
   depends_on "cabal-install" => :build
   depends_on "ghc@8.6" => :build
   depends_on "purescript"
