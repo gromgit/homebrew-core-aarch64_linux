@@ -8,9 +8,9 @@ class Minio < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e584671c27c83343eccce696bd4275e977a7cfbad4b9d7e4187d87f8582644f3" => :catalina
-    sha256 "24db78a94f2912ab8a52ac52749bb768dc5bf31e2617ba55980358a8dde07627" => :mojave
-    sha256 "8b93cbaf9c3f9f985453af6da0b9c7384c1ec6965474894d451f924b8804ce60" => :high_sierra
+    sha256 "f68bb1913c494928a3b7edf642e91814d46dadeee977b79c1eced2e172842d65" => :catalina
+    sha256 "8af84a95bc79cb7f5737c1d8ff266bc52dd1c572861c125ae473b88efdb588fd" => :mojave
+    sha256 "f6b5ed1e1f89c325cab0bc54c282c76f6494f3641369fbc8bad1d2a45682b2aa" => :high_sierra
   end
 
   depends_on "go" => :build
