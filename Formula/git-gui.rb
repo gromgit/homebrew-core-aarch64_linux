@@ -6,6 +6,13 @@ class GitGui < Formula
   sha256 "c060291a3ffb43d7c99f4aa5c4d37d3751cf6bca683e7344ea407ea504d9a8d0"
   head "https://github.com/git/git.git", :shallow => false
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "861ac3a97825ee6a044dd62f012b418b117d84d6dc5cb826dc2c1cf9407c665d" => :catalina
+    sha256 "861ac3a97825ee6a044dd62f012b418b117d84d6dc5cb826dc2c1cf9407c665d" => :mojave
+    sha256 "861ac3a97825ee6a044dd62f012b418b117d84d6dc5cb826dc2c1cf9407c665d" => :high_sierra
+  end
+
   depends_on "tcl-tk"
 
   def install
