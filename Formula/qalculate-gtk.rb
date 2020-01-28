@@ -6,9 +6,9 @@ class QalculateGtk < Formula
 
   bottle do
     cellar :any
-    sha256 "e9d7201a04dd15878df1d2085b96741960bf606d12419d5585c5f643eb2196f1" => :catalina
-    sha256 "01f95e1b67aec661706877e07e6eca429e142275ce8f676e4011c875de030777" => :mojave
-    sha256 "928e5e48953583366db0ef5308aa999fcc0985ed7ae6a17c8fecd3a071a6b55c" => :high_sierra
+    sha256 "bf48deba205450fdfbf1ed37cc592f39d86e312f7b31d48a15c9d895a6dcc818" => :catalina
+    sha256 "f98903cc87ff3c4959b05b0f515480f1e04fb161d68c7b7ae9337cf19e177863" => :mojave
+    sha256 "84ae3fbe793f117ac47856a0c65fee19ce07981d7ad5592de36a0bd75afb0b5c" => :high_sierra
   end
 
   depends_on "intltool" => :build
