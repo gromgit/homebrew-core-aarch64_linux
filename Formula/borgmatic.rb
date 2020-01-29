@@ -8,9 +8,9 @@ class Borgmatic < Formula
 
   bottle do
     cellar :any
-    sha256 "e727a5f46c78b066ceb0b5f038368061f509f6953b4acd7294138b63ef7f0d34" => :catalina
-    sha256 "d7ec33269ed85eeaec19316294830db35cfeeafa9eeb0b79c23db26a76303594" => :mojave
-    sha256 "eb166ac542925e3da94cc6c82fe99eea61ffbb16455678d1be6ea833cc6dcc35" => :high_sierra
+    sha256 "ac78208907bb6d2fd6b6eea09bc491654c3363a6bad0537d20fca4f9ada8af24" => :catalina
+    sha256 "e6e0f7d7eb3d8844e8bafcba68e25d126fb507e7fcf8176f7a4115384e0be778" => :mojave
+    sha256 "af46cddc79f27e84ad47e36b77e15cd7d8d220e16e04a76ea9292b4aac173bdf" => :high_sierra
   end
 
   depends_on "libyaml"
