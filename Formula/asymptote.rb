@@ -23,13 +23,16 @@ class Asymptote < Formula
 
   def install
     system "./configure", "--prefix=#{prefix}"
-    # Avoid use of MacTeX with the below sequence, instead of 'make all && make install'
+
+    # Avoid use of MacTeX with these commands
+    # (instead of `make all && make install`)
     touch buildpath/"doc/asy-latex.pdf"
     system "make", "asy"
     system "make", "asy-keywords.el"
     system "make", "install-asy"
+
     doc.install resource("manual")
-    (share/"emacs/site-lisp").install_symlink pkgshare # package emacs lisp files
+    (share/"emacs/site-lisp").install_symlink pkgshare
   end
 
   test do
