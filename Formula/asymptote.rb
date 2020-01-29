@@ -4,6 +4,12 @@ class Asymptote < Formula
   url "https://downloads.sourceforge.net/project/asymptote/2.61/asymptote-2.61.src.tgz"
   sha256 "f3ccaa6fde02a2d37fca771563597828530f94821e1c3fe3a5c7d81e7d398d3d"
 
+  bottle do
+    sha256 "d1c5cca626e41ea4c04d5b1e8e04baf6d4cf79202e6327bb27fa9e6569b3b63c" => :catalina
+    sha256 "ac4d02d92dde24f3fb1e402dbb42ab477c903aed005c3a6fa0b675fb758b8f90" => :mojave
+    sha256 "4afce4c3e36e038e9a241338300dec90955faefbc3e77828f860d28537b06999" => :high_sierra
+  end
+
   depends_on "fftw"
   depends_on "ghostscript"
   depends_on "glm"
