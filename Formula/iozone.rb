@@ -6,9 +6,9 @@ class Iozone < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "427c5f658ea923ff3ad2fc78285d833019ec97f17acd4c7d390014fa80fc2968" => :catalina
-    sha256 "d912590bbafdfbcfdf6d353fd21adece2362e4107db91178efbf8a647e068c6f" => :mojave
-    sha256 "8eb647b295cabacbd9cc698e74354f0c82a8205c35d5ba48bbbfbecb590b50bc" => :high_sierra
+    sha256 "01780007c0b535d058e5431c6cc42fc89f9c7caeb08b2a930e37618e3dacae30" => :catalina
+    sha256 "2f1b2aa83dc4844aea07d2317da1e10c8649b1e654ef2a01e668f754db4ea0e0" => :mojave
+    sha256 "665363653cd2fcee68332a8f872c4aa94bbe1a3b2b131a95a23f49833727dde6" => :high_sierra
   end
 
   def install
