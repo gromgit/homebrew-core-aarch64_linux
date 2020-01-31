@@ -6,11 +6,9 @@ class Gtkdatabox < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "c7cbf6fdd92c3786d4731794d6d7f4ca9dbabcadddfe07c23a79e81df6bf0d35" => :catalina
-    sha256 "dd61a889f9b89bdf1756194af4924bee87c9e9e31a6e660d48148e9bb0864290" => :mojave
-    sha256 "b1a8bf39f02c44e674f412adf2699b06ca2c08159ae64559114ab2f6a077ed6e" => :high_sierra
-    sha256 "747c977d20ccb3a0ba7bb16c8921595139e9b6163f99d7aa02b4a8a00b29c3e8" => :sierra
+    sha256 "e85124ef7180c8803f8700e9269a47d3b5841c1cdace25e6914a50a0b7389dd1" => :catalina
+    sha256 "bfb185bdad65010d94e7ec0d343f11dafb0135adecf0480a43b705a54b062ff1" => :mojave
+    sha256 "f0b09b52354b68f4bc4e2d01dcd970f5f5f6f549141dd75af3734a9b3c1f0b2f" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
