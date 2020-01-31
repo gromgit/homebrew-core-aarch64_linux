@@ -6,6 +6,13 @@ class Cppman < Formula
   url "https://files.pythonhosted.org/packages/53/9a/4908e1de68541c43961bea068c7062e91f8c8b656ea5fcf6ce0d7138a702/cppman-0.5.0.tar.gz"
   sha256 "0041943ca756c4736e5b1daca56f1e07f0953bbd438464ee3b8322c95a9f4cff"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "63448446323c8ea20143657aea0c247257c26b53db415461fbc35d469bc62238" => :catalina
+    sha256 "9d0ebc84c9b1f7b9981c641373b3996869fb6fb876fc8659d3629a861cc375c5" => :mojave
+    sha256 "cea1ac63fb20dd66938bb023d4bad51c2fc704baf0ef5233fcc6bcb036decf64" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   resource "six" do
