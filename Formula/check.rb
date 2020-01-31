@@ -6,9 +6,9 @@ class Check < Formula
 
   bottle do
     cellar :any
-    sha256 "7e43575b92dbfe052ea8eee6f488799faa6c9e0a411040b10b0734cc3f50e375" => :catalina
-    sha256 "7ceb61ee5e716184068334f62a40c708270f88e7e0709e7d464eefd71366d272" => :mojave
-    sha256 "12147cd97f24af6c18fa393200f063e1d24ea95ffbd1b29cb2dd1f2a4f8ef24b" => :high_sierra
+    sha256 "c6adc313137a97331bebce862758d1235f590c37bfc855920f953edf858c8d85" => :catalina
+    sha256 "244b4b72dfed2d2950e3f3183e8d3a1207fef62470643097402dbf34b5223303" => :mojave
+    sha256 "b61bb914f053c31a8dcb86394d10d3e3b77b2d71ebe2c4f21585f05f15594d8e" => :high_sierra
   end
 
   def install
