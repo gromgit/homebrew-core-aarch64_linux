@@ -8,9 +8,9 @@ class Poetry < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "10df063f03a450392883f562621a240ba062de70f9db917c383c87bf9d901c18" => :catalina
-    sha256 "7bc40a1e86946cf60a046a869129c9772cbc46030bfdf3f46ad37601ea0e8816" => :mojave
-    sha256 "8881f7d7a38addfaf0abd337f8b958ac3018dbae1cb01af0b91c30c0b4cd3a82" => :high_sierra
+    sha256 "8d98261dfde4e086b5ed1f100fc20a8b39fee57081e6da83d3671feb275c0481" => :catalina
+    sha256 "42967228661abe70625b5e0af526e709db85de16439ecd8f2861a84c44021520" => :mojave
+    sha256 "8ce2ac8630626710d9917fa18698ea0d44a5b2cce8f6ea46dc0774943ea8f0d2" => :high_sierra
   end
 
   depends_on "python"
