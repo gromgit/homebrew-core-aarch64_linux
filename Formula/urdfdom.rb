@@ -1,8 +1,8 @@
 class Urdfdom < Formula
   desc "Unified Robot Description Format (URDF) parser"
   homepage "https://wiki.ros.org/urdf/"
-  url "https://github.com/ros/urdfdom/archive/1.0.3.tar.gz"
-  sha256 "839d939fbd91d115f928a6e02334638829c58d9c8ea2f81bfa3faffd233c154c"
+  url "https://github.com/ros/urdfdom/archive/1.0.4.tar.gz"
+  sha256 "8f3d56b0cbc4b84436d8baf4c8346cd2ee7ffb257bba5ddd9892c41bf516edc4"
 
   bottle do
     cellar :any
