@@ -1,7 +1,7 @@
 class Redex < Formula
   desc "Bytecode optimizer for Android apps"
   homepage "https://fbredex.com"
-  revision 4
+  revision 5
   head "https://github.com/facebook/redex.git"
 
   stable do
@@ -34,6 +34,9 @@ class Redex < Formula
   end
 
   def install
+    # https://github.com/facebook/redex/issues/457
+    inreplace "Makefile.am", "/usr/include/jsoncpp", Formula["jsoncpp"].opt_include
+
     system "autoreconf", "-ivf"
     system "./configure", "--prefix=#{prefix}"
     system "make"
