@@ -1,8 +1,8 @@
 class Jsoncpp < Formula
   desc "Library for interacting with JSON"
   homepage "https://github.com/open-source-parsers/jsoncpp"
-  url "https://github.com/open-source-parsers/jsoncpp/archive/1.9.1.tar.gz"
-  sha256 "c7b40f5605dd972108f503f031b20186f5e5bca2b65cd4b8bd6c3e4ba8126697"
+  url "https://github.com/open-source-parsers/jsoncpp/archive/v1.9.3.tar.gz"
+  sha256 "8593c1d69e703563d94d8c12244e2e18893eeb9a8a9f8aa3d09a327aa45c8f7d"
   head "https://github.com/open-source-parsers/jsoncpp.git"
 
   bottle do
@@ -15,10 +15,11 @@ class Jsoncpp < Formula
 
   depends_on "meson" => :build
   depends_on "ninja" => :build
+  depends_on "python@3.8" => :build
 
   def install
     mkdir "build" do
-      system "meson", *std_meson_args, ".."
+      system "meson", *std_meson_args, "-Dpython=#{Formula["python@3.8"].opt_bin}/python3", ".."
       system "ninja", "-v"
       system "ninja", "install", "-v"
     end
