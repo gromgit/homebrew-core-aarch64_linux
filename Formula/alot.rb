@@ -9,10 +9,9 @@ class Alot < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "b65c69851ded777bfbe680bd680b840fde7a9869f55d885854b2b3a3971d3fa7" => :catalina
-    sha256 "bf584301024f443de3cbeafab621e85c0113c37f72d6eab3a516122c3acd4d01" => :mojave
-    sha256 "f0d202bb397b92d0e744e38d20410bfe72f64bc709bece7b63580d30e67deb80" => :high_sierra
+    sha256 "b1f5acb12aa83910718353a750f6054de3e55b3fcb45fd1dec39c2d2d3731318" => :catalina
+    sha256 "d2e3a95111e7d768b15916f996fb29a356e46d37c1921ee71473a9f1db8801dc" => :mojave
+    sha256 "4bd27e704c084440d4151c02a9650c04c7ef235add26cf3510dd32066032959e" => :high_sierra
   end
 
   depends_on "sphinx-doc" => :build
