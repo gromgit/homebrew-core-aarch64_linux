@@ -6,9 +6,9 @@ class Clp < Formula
 
   bottle do
     cellar :any
-    sha256 "aec21dce0e4f3971e9faa18a70fba7392086c6bada4824bda9a11bda368bef16" => :catalina
-    sha256 "aa1175a45c885f3e5a5b33a6f45efcc5aa3c256d9b0b9a8e19b3f950afb65c19" => :mojave
-    sha256 "4e2f34f8b83d7f0819516349deac011895a545a7768f941b7b31a03277f0b8db" => :high_sierra
+    sha256 "d1a33cab0f8dcf831ac90298ed32f654c421c050cdd896ae1fb668b918c3a2de" => :catalina
+    sha256 "289e8a0a562e795ef4c88395ea41098d62965f474249839bd53c8aa7f14f4ef8" => :mojave
+    sha256 "26e2a26ff6c1212ca867fd41bfb827969e414e540b5bbe2f28a034ea9e32293b" => :high_sierra
   end
 
   depends_on "pkg-config" => [:build, :test]
