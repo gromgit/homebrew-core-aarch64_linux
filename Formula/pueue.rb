@@ -5,6 +5,13 @@ class Pueue < Formula
   sha256 "b4d4ced6caab23193c566c34488cc9adf2da0e92777616af579f59a5e52bd7a4"
   head "https://github.com/Nukesor/pueue.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "b02de965258e899238cdf690bce26c963bc09197ddd57485e0fb74effb8fab21" => :catalina
+    sha256 "3b7c58b065ff2b6f338c0f1b89e569773ff0581daa16508fd48342e18818b44c" => :mojave
+    sha256 "c62f2726c080f74de7440f66d1ec80518ccf5ddbf23bfd307c3e594f0ca8297d" => :high_sierra
+  end
+
   depends_on "rust" => :build
 
   def install
