@@ -2,8 +2,8 @@ class Bazelisk < Formula
   desc "User-friendly launcher for Bazel"
   homepage "https://github.com/bazelbuild/bazelisk/"
   url "https://github.com/bazelbuild/bazelisk.git",
-      :tag      => "v1.2.1",
-      :revision => "56a03d98104be7cfa57d4bbdc03b4c7cea29a6c9"
+      :tag      => "v1.3.0",
+      :revision => "24b8784d71096f3dfa38d6533a770f45a49cda43"
   head "https://github.com/bazelbuild/bazelisk.git"
 
   bottle do
@@ -16,12 +16,10 @@ class Bazelisk < Formula
   depends_on "bazel" => :build
 
   def install
-    system "bazel", "build", "--stamp",
-      "--workspace_status_command=#{buildpath}/stamp.sh",
-      "--platforms=@io_bazel_rules_go//go/toolchain:darwin_amd64",
-      "//:bazelisk"
+    rm_f ".bazelversion" # Homebrew uses the latest bazel
+    system "bazel", "build", "--config=release", "//:bazelisk-darwin"
 
-    bin.install "bazel-bin/darwin_amd64_pure_stripped/bazelisk" => "bazelisk"
+    bin.install "bazel-bin/bazelisk-darwin_amd64" => "bazelisk"
   end
 
   test do
