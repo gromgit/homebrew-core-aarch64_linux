@@ -4,6 +4,13 @@ class Wasm3 < Formula
   url "https://github.com/wasm3/wasm3/archive/v0.4.6.tar.gz"
   sha256 "e6b3cd44c6e4d3ba6d7ada7d10b0c5b87e0592dbb994bcec1e02bedbc5b6250a"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "42e440fbce683dcaa195d378c8055c6c64b249059b36482f4563c04f95887133" => :catalina
+    sha256 "10c4261bfa7dace1846c8da883f641df23f223ae84f6516a407ea5170fa6847e" => :mojave
+    sha256 "422987721304957a1af0fff5bcc1a5628f8624809510568790e8aabe51561132" => :high_sierra
+  end
+
   depends_on "cmake" => :build
 
   def install
