@@ -8,9 +8,10 @@ class Krew < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "49372e20f44396c3e59fbe23d38c57666c16ceb2eb0944cf2db86f8e338d36be" => :catalina
-    sha256 "be7a0ce7b5a7c7912b43372fe17e7875e360eff33c906864190e04d816a1b5a8" => :mojave
-    sha256 "afc98259de2d35aa3cfb633b0e4bcb63b050f6a11179857439950e241e69cb40" => :high_sierra
+    rebuild 1
+    sha256 "02f59277639b23de8638d475eb541a825fd0ed3f13abcd451598f012266a9ec7" => :catalina
+    sha256 "cea370c93a43aa395003cf87430460746c29504c6b9bd8d8545ff9db31fa3fcf" => :mojave
+    sha256 "69856b8926a34eac58aee438f52638553fda02d6ccbde22a09fbc2bded4b2cc1" => :high_sierra
   end
 
   depends_on "go" => :build
