@@ -1,8 +1,8 @@
 class Pdfcpu < Formula
   desc "PDF processor written in Go"
   homepage "https://pdfcpu.io"
-  url "https://github.com/pdfcpu/pdfcpu/archive/v0.2.5.tar.gz"
-  sha256 "bf2920cc595dd34f4297e851063fb095eea23575db43c53547910749c703261a"
+  url "https://github.com/pdfcpu/pdfcpu/archive/v0.3.2.tar.gz"
+  sha256 "4258d6a86d48d18da89ac9f307e8b6c6c93d5de59403dfc563db256317a7f576"
 
   bottle do
     cellar :any_skip_relocation
@@ -14,12 +14,8 @@ class Pdfcpu < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = HOMEBREW_CACHE/"go_cache"
-    (buildpath/"src/github.com/pdfcpu/pdfcpu").install buildpath.children
-    cd "src/github.com/pdfcpu/pdfcpu/cmd/pdfcpu" do
-      system "go", "build", "-o", bin/"pdfcpu", "-ldflags",
-             "-X github.com/pdfcpu/pdfcpu/pkg/pdfcpu.VersionStr=#{version}"
-    end
+    system "go", "build", "-trimpath", "-o", bin/"pdfcpu", "-ldflags",
+           "-X github.com/pdfcpu/pdfcpu/pkg/pdfcpu.VersionStr=#{version}", "./cmd/pdfcpu"
   end
 
   test do
