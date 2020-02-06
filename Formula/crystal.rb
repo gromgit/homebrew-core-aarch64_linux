@@ -3,8 +3,8 @@ class Crystal < Formula
   homepage "https://crystal-lang.org/"
 
   stable do
-    url "https://github.com/crystal-lang/crystal/archive/0.32.1.tar.gz"
-    sha256 "66b62d0fb5bfa6547f285eb520f7fd0bc57bc994babf54cb8e7a61e613c79399"
+    url "https://github.com/crystal-lang/crystal/archive/0.33.0.tar.gz"
+    sha256 "88f08685f172e98f01f93f1a83fc3548c6d28df19a39c91859b167a796730289"
 
     resource "shards" do
       url "https://github.com/crystal-lang/shards/archive/v0.8.1.tar.gz"
@@ -52,9 +52,9 @@ class Crystal < Formula
   end
 
   resource "boot" do
-    url "https://github.com/crystal-lang/crystal/releases/download/0.31.1/crystal-0.31.1-1-darwin-x86_64.tar.gz"
-    version "0.31.1-1"
-    sha256 "ffc655df0efe8004058f87750949b7a2b165d8baef73c5596193eba1c17efdb5"
+    url "https://github.com/crystal-lang/crystal/releases/download/0.32.1/crystal-0.32.1-1-darwin-x86_64.tar.gz"
+    version "0.32.1-1"
+    sha256 "2901e8709da36a12ce0a94464741c1db8e5b5080f216fb8c1f7016667370bc94"
   end
 
   def install
@@ -64,7 +64,7 @@ class Crystal < Formula
       ENV["CRYSTAL_CONFIG_BUILD_COMMIT"] = Utils.popen_read("git rev-parse --short HEAD").strip
     end
 
-    ENV["CRYSTAL_CONFIG_PATH"] = prefix/"src:lib"
+    ENV["CRYSTAL_CONFIG_PATH"] = "lib:#{prefix/"src"}"
     ENV["CRYSTAL_CONFIG_LIBRARY_PATH"] = prefix/"embedded/lib"
     ENV.append_path "PATH", "boot/bin"
 
