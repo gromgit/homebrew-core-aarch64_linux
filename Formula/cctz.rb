@@ -4,6 +4,13 @@ class Cctz < Formula
   url "https://github.com/google/cctz/archive/v2.3.tar.gz"
   sha256 "8615b20d4e33e02a271c3b93a3b208e3d7d5d66880f5f6208b03426e448f32db"
 
+  bottle do
+    cellar :any
+    sha256 "3a73ab9d2f67020d95657e8c5b32a26d7eb81987cee2eace2b9d26eab2621bbb" => :catalina
+    sha256 "439ce8e6d464aa64aadd117e3effba68379883c3013de4944dda1def4127ff7d" => :mojave
+    sha256 "2d61f3555630f98a572971867d5da46212712eb30a18bb6545f9067369865c33" => :high_sierra
+  end
+
   depends_on "cmake" => :build
 
   def install
