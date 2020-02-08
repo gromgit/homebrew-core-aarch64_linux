@@ -17,6 +17,7 @@ class Mimic < Formula
   depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
+  depends_on "pcre2" => :build
 
   depends_on "icu4c"
   depends_on "portaudio"
