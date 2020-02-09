@@ -7,9 +7,9 @@ class Movgrab < Formula
 
   bottle do
     cellar :any
-    sha256 "3256dfc0f04850842d1ed0580d56ed6ef2929b51bde9dab3b7ddded980e8c527" => :catalina
-    sha256 "790aca486dbbff6d41ae8d61b99a1de73085b837625736dee323bf251ebd6609" => :mojave
-    sha256 "465f017e9d4c849aefa02d1471e12625b4a98e8f425323f6966e0b81cd286a27" => :high_sierra
+    sha256 "957654b8124f982a4cb8001f1ade80de1f145af16b49982267e2867573633cbd" => :catalina
+    sha256 "4ee0f911dfa7c740de7299ec27f3015bb8543a70bba6cc2ebe5bc8a500b5932b" => :mojave
+    sha256 "b93b158f7774abed4d3ba760afb185798782bf10b257ffbf09954f131387137b" => :high_sierra
   end
 
   depends_on "libressl"
