@@ -27,6 +27,7 @@ class Movgrab < Formula
   def install
     # Can you believe this? A forgotten semicolon! Probably got missed because it's
     # behind a conditional #ifdef.
+    # Fixed upstream: https://github.com/ColumPaget/libUseful/commit/6c71f8b123fd45caf747828a9685929ab63794d7
     inreplace "libUseful-2.8/FileSystem.c", "result=-1", "result=-1;"
 
     # Later versions of libUseful handle the fact that setresuid is Linux-only, but
