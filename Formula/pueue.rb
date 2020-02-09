@@ -7,9 +7,9 @@ class Pueue < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b02de965258e899238cdf690bce26c963bc09197ddd57485e0fb74effb8fab21" => :catalina
-    sha256 "3b7c58b065ff2b6f338c0f1b89e569773ff0581daa16508fd48342e18818b44c" => :mojave
-    sha256 "c62f2726c080f74de7440f66d1ec80518ccf5ddbf23bfd307c3e594f0ca8297d" => :high_sierra
+    sha256 "ba1a92b9e140d929233dad0f10a5a2687fb022967017ad78847588ed9d377ed0" => :catalina
+    sha256 "6c3f3b24e1d6a36e4cdb79e045f6662d83f5961f30b21620cfa8c704bf78b43a" => :mojave
+    sha256 "387038f36ce71a0f3fdb4fe15192db99b3be770c939623566dd85180d2ee4aed" => :high_sierra
   end
 
   depends_on "rust" => :build
