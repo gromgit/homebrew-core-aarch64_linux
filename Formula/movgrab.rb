@@ -3,6 +3,7 @@ class Movgrab < Formula
   homepage "https://sites.google.com/site/columscode/home/movgrab"
   url "https://github.com/ColumPaget/Movgrab/archive/3.1.2.tar.gz"
   sha256 "30be6057ddbd9ac32f6e3d5456145b09526cc6bd5e3f3fb3999cc05283457529"
+  revision 1
 
   bottle do
     cellar :any
@@ -13,12 +14,17 @@ class Movgrab < Formula
 
   depends_on "libressl"
 
-  def install
-    # libUseful's configure script incorrectly detects macOS's getxattr functions,
-    # expecting them to be functionally equivalent to Linux's. They're not!
-    ENV["ac_cv_lib_c_getxattr"] = "no"
-    ENV["ac_cv_lib_c_setxattr"] = "no"
+  # Fixes an incompatibility between Linux's getxattr and macOS's.
+  # Reported upstream; half of this is already committed, and there's
+  # a PR for the other half.
+  # https://github.com/ColumPaget/libUseful/issues/1
+  # https://github.com/ColumPaget/libUseful/pull/2
+  patch do
+    url "https://github.com/Homebrew/formula-patches/raw/936597e74d22ab8cf421bcc9c3a936cdae0f0d96/movgrab/libUseful_xattr_backport.diff"
+    sha256 "d77c6661386f1a6d361c32f375b05bfdb4ac42804076922a4c0748da891367c2"
+  end
 
+  def install
     # Can you believe this? A forgotten semicolon! Probably got missed because it's
     # behind a conditional #ifdef.
     inreplace "libUseful-2.8/FileSystem.c", "result=-1", "result=-1;"
