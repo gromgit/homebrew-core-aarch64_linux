@@ -5,10 +5,9 @@ class LibgpgError < Formula
   sha256 "b32d6ff72a73cf79797f7f2d039e95e9c6f92f0c1450215410840ab62aea9763"
 
   bottle do
-    sha256 "36dbd30d1702f91f9197b0987587767838a118f3fd88f579303247b752b15740" => :catalina
-    sha256 "a708445b7304f711ed41bbf95f5cc90e3c6c08339bb9e4d707b2a476971827d3" => :mojave
-    sha256 "b17e8b8e93add16424efb34b5a9f6ab280b3127050c560db5829b4e16de7cabd" => :high_sierra
-    sha256 "bba0dd545de4ce5469ba008009c04fcae21db32ae1cb755b7d57071741de3cfe" => :sierra
+    sha256 "23059fb82c2bd698184b74900bcca5e0623a334a1e91f440eeea800c9b56bb59" => :catalina
+    sha256 "a00980a1b2d0fe037601aa29b18cd4a36fdfbd63724528a665c20527f39b0e4b" => :mojave
+    sha256 "88ca7a9b43458356370ca1d6eb32cef1a57ea79f5275273a68ca3330e55cb67f" => :high_sierra
   end
 
   def install
