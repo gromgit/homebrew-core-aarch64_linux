@@ -1,8 +1,8 @@
 class Asymptote < Formula
   desc "Powerful descriptive vector graphics language"
   homepage "https://asymptote.sourceforge.io"
-  url "https://downloads.sourceforge.net/project/asymptote/2.61/asymptote-2.61.src.tgz"
-  sha256 "f3ccaa6fde02a2d37fca771563597828530f94821e1c3fe3a5c7d81e7d398d3d"
+  url "https://downloads.sourceforge.net/project/asymptote/2.62/asymptote-2.62.src.tgz"
+  sha256 "60b085316b65af6a0e5132a8451c13b642cfe91c9096dc35d43b7b77a9dd2014"
 
   bottle do
     sha256 "d1c5cca626e41ea4c04d5b1e8e04baf6d4cf79202e6327bb27fa9e6569b3b63c" => :catalina
@@ -14,11 +14,10 @@ class Asymptote < Formula
   depends_on "ghostscript"
   depends_on "glm"
   depends_on "gsl"
-  depends_on "readline" # Remove in >2.61 to use macOS editline
 
   resource "manual" do
-    url "https://downloads.sourceforge.net/project/asymptote/2.61/asymptote.pdf"
-    sha256 "b5f5848515b6fd6e6d70cebc1b33c45e9d0f00ab7fcf50f71f95e7748c98f5da"
+    url "https://downloads.sourceforge.net/project/asymptote/2.62/asymptote.pdf"
+    sha256 "afd22e35f984a6187ea4064f217dc167ff897864db23b825d4cbd78cd7114710"
   end
 
   def install
