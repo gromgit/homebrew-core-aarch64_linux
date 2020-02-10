@@ -1,8 +1,8 @@
 class Nng < Formula
   desc "Nanomsg-next-generation -- light-weight brokerless messaging"
   homepage "https://nanomsg.github.io/nng/"
-  url "https://github.com/nanomsg/nng/archive/v1.2.5.tar.gz"
-  sha256 "bcf59c43fde9a7fc84fd214d6db41e719705bb12e300a89e0e161139a39b7527"
+  url "https://github.com/nanomsg/nng/archive/v1.2.6.tar.gz"
+  sha256 "639068e8973fc923d3451e5a81c56e0ce75e6b1f8c21849131be567fe6b39adf"
 
   bottle do
     sha256 "69a1cb10dbefbb9b60a2eb60336a0e87af8f2e5ee259dd132dd42d8418a6a032" => :catalina
