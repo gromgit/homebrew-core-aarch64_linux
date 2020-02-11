@@ -7,10 +7,9 @@ class NatsStreamingServer < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "96891cdad9b8c43b06295e8becc5d8b84d2024b1a2e6f298e7fd80ba354cd89b" => :catalina
-    sha256 "0ab74f6fa1e2147c1b794570a24190468312f99dfd73c1fa28c72cb18121179e" => :mojave
-    sha256 "a23985559dbe2d570712406a571efcd56b84997152ca2b0f85684caf833db368" => :high_sierra
+    sha256 "4abdd8d63284e14e2516b42826c77d70d457b2e9fb67b445fa61295b089e5129" => :catalina
+    sha256 "7171c6e08bb7a23e535fcc6a97eb201ff2468098bcd8734fa63d48043d2fb0b3" => :mojave
+    sha256 "d7f7af1bcb54bee3c7d3b530aa3cb86498a1ff54f04d2599d362bb9969c45c96" => :high_sierra
   end
 
   depends_on "go" => :build
