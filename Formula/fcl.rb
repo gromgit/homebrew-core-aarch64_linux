@@ -5,11 +5,9 @@ class Fcl < Formula
   sha256 "6891abac5cc26d64f5ef8894bc6c2a30174558c5c83a3ed63cf65a21cb619b2b"
 
   bottle do
-    sha256 "07ef96db4ac5806832c2e6bd28eba505c98c1bb55ed1f86d6d1793752b9265c4" => :catalina
-    sha256 "392131d9e9aea1fdd2e727161a7c4909dbe5efad7742e88ccc1afbc9090725bd" => :mojave
-    sha256 "72a5ca040739722599576b579a6f864ca3307bf01ad8403765d739813a3e1fd0" => :high_sierra
-    sha256 "8fd76b19ab4408397f161947d7da47f619ec710ddcdc2c012579440a6885f192" => :sierra
-    sha256 "a2bc2115c9cc18a7f155583e6209ade38e73b80a10704e4d26e44ed177bcf5a5" => :el_capitan
+    sha256 "20a679e735c69b58c4a97da7c03beac0f45ad80fa9230fcb25cf2f0c4a191f1d" => :catalina
+    sha256 "7bd24120f684a275154b6275cb9668e3447c2607cbb51c5ca40e6878171a6626" => :mojave
+    sha256 "9e4e2abcf7c2ce96c2208e097d27845041788b1a66e3a209756ea0d78ed45389" => :high_sierra
   end
 
   depends_on "cmake" => :build
