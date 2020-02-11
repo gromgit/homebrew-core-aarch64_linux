@@ -6,9 +6,9 @@ class Run < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f4a0ef6fe43ee3a9af1d526ddb07f977b257d6ba6ac544efdc789c4f50dc213c" => :catalina
-    sha256 "f4a0ef6fe43ee3a9af1d526ddb07f977b257d6ba6ac544efdc789c4f50dc213c" => :mojave
-    sha256 "f4a0ef6fe43ee3a9af1d526ddb07f977b257d6ba6ac544efdc789c4f50dc213c" => :high_sierra
+    sha256 "e39cdccf5d5d0e52ab33843265d1e5b8b7b92fce57ad6386fea105b95fd0ac7d" => :catalina
+    sha256 "e39cdccf5d5d0e52ab33843265d1e5b8b7b92fce57ad6386fea105b95fd0ac7d" => :mojave
+    sha256 "e39cdccf5d5d0e52ab33843265d1e5b8b7b92fce57ad6386fea105b95fd0ac7d" => :high_sierra
   end
 
   depends_on "go" => :build
