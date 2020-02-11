@@ -6,9 +6,9 @@ class Proteinortho < Formula
 
   bottle do
     cellar :any
-    sha256 "5d79fb2e746542350513d67eaa3d747f6c6e09d86cd2c6dfc3465b38f35e4267" => :catalina
-    sha256 "7a76cfd6bd99fc9dc43251c9a263984699dda21ecef5fbb41e09a33c337118ee" => :mojave
-    sha256 "ce909b9a126d82f41caa268251cbd7f103185dedcc1369d239fd872112eae188" => :high_sierra
+    sha256 "0f3c223913f2bd87bf6ed088f9df0ca9bc6531722de436d994ccf8a0b94d6428" => :catalina
+    sha256 "b512a8da7d2c19aeb7d509c48de28b6997c33666c9f0cb5c6f57518d5827efdd" => :mojave
+    sha256 "01199941ee6c99367583eef697a0aa84e6d780ab6746bc856b9835f1040e79be" => :high_sierra
   end
 
   depends_on "diamond"
