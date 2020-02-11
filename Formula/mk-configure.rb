@@ -6,9 +6,9 @@ class MkConfigure < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "faa0d51e2b96f31bf2562ef9a85f8306f666f9e246c8bfed69e2203b5d232545" => :catalina
-    sha256 "faa0d51e2b96f31bf2562ef9a85f8306f666f9e246c8bfed69e2203b5d232545" => :mojave
-    sha256 "faa0d51e2b96f31bf2562ef9a85f8306f666f9e246c8bfed69e2203b5d232545" => :high_sierra
+    sha256 "c357fa068eb6cdfde64567dc89dd644fb764febc203bdf0c43b804a039d3c86a" => :catalina
+    sha256 "c357fa068eb6cdfde64567dc89dd644fb764febc203bdf0c43b804a039d3c86a" => :mojave
+    sha256 "c357fa068eb6cdfde64567dc89dd644fb764febc203bdf0c43b804a039d3c86a" => :high_sierra
   end
 
   depends_on "bmake"
