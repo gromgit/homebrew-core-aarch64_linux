@@ -4,6 +4,13 @@ class Katago < Formula
   url "https://github.com/lightvector/KataGo/archive/v1.3.2.tar.gz"
   sha256 "75e783cd2db6180f2cc694703df809e5c04ba24c09546a9c24aad575e18ef2d8"
 
+  bottle do
+    cellar :any
+    sha256 "c17f6107f9ea75ccb2f329e8e6a230d58bfe1d20f3ef931b7c5a5449b30df170" => :catalina
+    sha256 "5c24c0330a7f341024359f23ecc0c82c7efddae75b4ad9478c7615af34a5363f" => :mojave
+    sha256 "adeba8185fd536f7394e94686e5721209df8140a6e6784ad71171bc26221e3da" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "boost"
   depends_on "libzip"
