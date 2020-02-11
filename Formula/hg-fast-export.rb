@@ -7,6 +7,13 @@ class HgFastExport < Formula
   sha256 "f1d30976d242f679676d8e6d54eff108ef785edd918b7a3c3195e1d510923bcc"
   revision 1
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "e205898991d6d4befff9295792a2d0e87cde9f24b02ad75ce2b6c43b17619e14" => :catalina
+    sha256 "6a408b86b22768b990daf8d2d55c2767cfd93cc1208e5f1c322aa2d19e310a14" => :mojave
+    sha256 "7ee154d85bb7a2ec5c45cb394296282a55f62b741b6434a68a1e966a7009a69d" => :high_sierra
+  end
+
   uses_from_macos "python@2" # does not support Python 3
 
   # mercurial 5.3 support will be added in the next release
