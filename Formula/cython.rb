@@ -6,9 +6,9 @@ class Cython < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2d2a1514ce57cc7cdec29ce6e470394c787b8d202bef1cc9dd3ae5f13a386df1" => :catalina
-    sha256 "ea89b8f5d7ac15cf0bb9bea4e4dfa8011f6e81e0f32a4469bdfd89f14113a790" => :mojave
-    sha256 "0ffc5add1581ec19b84eb515096f423f8e797a6d0c8de0bb40fd290ad86e0eb6" => :high_sierra
+    sha256 "b8122a49b9f28fa9266472669b728704eff25ac90b547ea4b0c38342e1baebd3" => :catalina
+    sha256 "fc4e6dc6af2d5f2b5633d33c108402db22a0677e92bf43511a2a65b873a8a225" => :mojave
+    sha256 "47a15c4871196bfaa304bac124eac817f7bdc8792fd51819569cbe7fa9c7807c" => :high_sierra
   end
 
   keg_only <<~EOS
