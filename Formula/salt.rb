@@ -9,9 +9,9 @@ class Salt < Formula
 
   bottle do
     cellar :any
-    sha256 "e5a2176d31b4cfdeb5cfe9ef0f212855fd718c9bc77afad6292437fda2da09c0" => :catalina
-    sha256 "523a81dc62fb8bbadc7694bcf82ddeb9f8bbd229195fc1770cc77a5099beedfd" => :mojave
-    sha256 "ae13f7a13e68694a0723c0e97d7bce4dc8ed94f677c30fd0a3b7f3370faf285f" => :high_sierra
+    sha256 "9baef5bb4e5fac10eb0c9de7a91f48182dce287a85e787c65f3e8ef8cd4a2e50" => :catalina
+    sha256 "3c6016a1b9f0d5eb5d49e9eb9f66660dd999e07fdce4a50a9a51ce86d2a3cdb4" => :mojave
+    sha256 "490357f6abd1e5f2e4d0ad68bfadc0bc4171d585a9619cbd700588c458ad7250" => :high_sierra
   end
 
   depends_on "swig" => :build
