@@ -6,9 +6,9 @@ class Libarchive < Formula
 
   bottle do
     cellar :any
-    sha256 "65c37e048db20445439e1615ac94d050e8d6a49a95afbe32a07128e095a5939d" => :catalina
-    sha256 "38215a372c5936c41fea411fb491db067b67564da37dc5c370f259e5da8c8c62" => :mojave
-    sha256 "5896f4cf854c58b0ef44b5820e3e406133e762dce90f72afd9d045d88e898734" => :high_sierra
+    sha256 "4859e98d0ed0469e0449722062fde778d23ee3da9ff0d039af7d2fda7863cf94" => :catalina
+    sha256 "24b84998de86f25e6779a7e9b3d54453acc9104c389632283f3e9c9c22abe8fe" => :mojave
+    sha256 "bfbac54c05bea0f692ff2fabeccd08dd18a8a87d0d9a5afad86496429b7782be" => :high_sierra
   end
 
   keg_only :provided_by_macos
