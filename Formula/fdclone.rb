@@ -5,11 +5,9 @@ class Fdclone < Formula
   sha256 "fe5bb67eb670dcdb1f7368698641c928523e2269b9bee3d13b3b77565d22a121"
 
   bottle do
-    sha256 "84cacf0bc5a76449dc1e0a00999424eed4e580367ff018c26a82a5fd78315896" => :catalina
-    sha256 "d312c649a0a3691eee27febe3c579250fda9851ae7fe800712b28dfcbd8a6beb" => :mojave
-    sha256 "58aa669b9e490b8d744bb22948f1ef37549a35bbff0cbbd216ee76251d4511d9" => :high_sierra
-    sha256 "0fd727178f488ed0c7f32f5b89aa6d38385ebe8377dc2c8abca84ce9777e6cae" => :sierra
-    sha256 "c890b9824129c9a4ac969ff4930532841de0cce4f11274f9631029af290561ba" => :el_capitan
+    sha256 "6272d033132a7a2c355ab19629241021087c606de3114e2ebe4aa301e6bee840" => :catalina
+    sha256 "b3a56f6b62622696f4da6554a487557a57c0875c2aba28705e300b7207f6a8ce" => :mojave
+    sha256 "f894bed33d254c5c48341485e835f945b60e632a0ecbf484c818f12c61350122" => :high_sierra
   end
 
   depends_on "nkf" => :build
