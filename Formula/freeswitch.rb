@@ -8,9 +8,9 @@ class Freeswitch < Formula
   head "https://github.com/signalwire/freeswitch.git"
 
   bottle do
-    sha256 "1cef1a9bd8b435f518ec4af7389601db9d949219f6a1a4aeaeec289b79549381" => :catalina
-    sha256 "511e4742167654d7c137b1a07b9f46d791cd34005014e33af51babfdda817d3f" => :mojave
-    sha256 "0648bc8ab93313a423d66fab93953a254740f949fc31ccf816bf1f49e8e1d7e6" => :high_sierra
+    sha256 "15f93a7e8af7fceb8672f6b4acb59275f4bfe73c5da393c919d7f78042ee0ca9" => :catalina
+    sha256 "c5a35c9f13162d1fd8e59cafad54c9c4e90abdf106a5938d576ed43a6d601e4d" => :mojave
+    sha256 "9b58c46d2d5111230b9e9193fc8f89ea94473bc14eba115d93a9960139e2e9c5" => :high_sierra
   end
 
   depends_on "apr-util" => :build
