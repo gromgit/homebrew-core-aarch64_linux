@@ -5,11 +5,10 @@ class Ats2Postiats < Formula
   sha256 "a749b62d429eda45ec304075f1743e1a2638c4772d37b579839d7797470869c0"
 
   bottle do
-    cellar :any
-    sha256 "4e6f3f3bdc1f4491c1e2dd0955c302f9a375315d924095f5f85a2eafc268381c" => :catalina
-    sha256 "751f4582b45bf5b5f3e319f7cd40d3c02ccdca5024e5700062cb14faf3106888" => :mojave
-    sha256 "1c0c128bf522b6780e1ff36b2ad959e9ccad36198411dbd5d21395baa412bfde" => :high_sierra
-    sha256 "ee94f5c6675016834a7d864d6aa78515589f26a10ad3a650983259f3732e1630" => :sierra
+    cellar :any_skip_relocation
+    sha256 "e4b7bf748d9ad11c38273dd2fc11d273c8f02a1702778ef368307c57f1b4f402" => :catalina
+    sha256 "d86462909117de7a2a09d0816df8909c5d0b6cba14f24932612f4c3c54734453" => :mojave
+    sha256 "c787afdba7391ce0aa745938259f3dc79e8b97d0842daa378de854def8c4a9bd" => :high_sierra
   end
 
   depends_on "gmp"
