@@ -13,8 +13,8 @@ class Ginac < Formula
 
   depends_on "pkg-config" => :build
   depends_on "cln"
+  depends_on "python@3.8"
   depends_on "readline"
-  uses_from_macos "python@2"
 
   def install
     system "./configure", "--disable-dependency-tracking",
