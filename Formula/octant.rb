@@ -8,9 +8,9 @@ class Octant < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "87b13fd410bfa42f937af1f90da746de9d2b775048b088cdb298648fcc0b4159" => :catalina
-    sha256 "fb135b41021478e9085f45e2c3f22c73322e059e125c45d89c84804f019caae4" => :mojave
-    sha256 "cf44942fad3fce95fee0de4c51fcfb338ee9ac819bdb09d733b3e30e05650675" => :high_sierra
+    sha256 "72bf55dc7fa6d63d6238ee3c39323db780e6d3d17fd08894cc6c47a780c25c5f" => :catalina
+    sha256 "1a75661c1bb9feaee2ee0fd38935cfcc0e1902a094b989c4b8bd19021152417b" => :mojave
+    sha256 "1aa20269795bef2884d76beee0a53f5d86411fa352b7747c7e9ddb2ac819b339" => :high_sierra
   end
 
   depends_on "go" => :build
