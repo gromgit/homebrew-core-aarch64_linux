@@ -6,10 +6,9 @@ class Scdoc < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "c3fd13506d4afa01672d14631d209879700377c9db85359ef9a239fac4a03bf7" => :catalina
-    sha256 "f384c7a1c85212402bbfcd8bdd31f56a69d9e4d4b5045fdafa2fc54cf0a9814e" => :mojave
-    sha256 "37360db27c990fe31770b360022cfdcd9601ad2fe863a617b86a079f2ef0bd3c" => :high_sierra
-    sha256 "bb8104493ee03726bba6587859826d35b7081cc550b7a958c6698065f87d8c8f" => :sierra
+    sha256 "d4a577f0a76e9c1d731163daec2596a6fbee94fddbfc94e2a6b07c7be9ae09b6" => :catalina
+    sha256 "752b2cab0f59547dd2abae83399f5e23fa9bae18e27a087e89dc5c0dd80966ea" => :mojave
+    sha256 "dcee18bf4f3d6ffa25fed921cbd71de0d31a097e9ec9d3cd707e1ccd02663e70" => :high_sierra
   end
 
   def install
