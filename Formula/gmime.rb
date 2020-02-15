@@ -5,9 +5,9 @@ class Gmime < Formula
   sha256 "abff194c7c4802fba2e233890d09dde8bf7170c3ad5e13000601c8d5b3c44717"
 
   bottle do
-    sha256 "78965c37b7935797f7f28dc683e99a01262731916bcc36743b5da1a77c2c2af3" => :catalina
-    sha256 "de7743e5f141d1408446fbb5dcb6a91525e7ac5d703aca16fc128c2ba63afe11" => :mojave
-    sha256 "8bf88977ccf85ea5a2d5471f698c8a7954b07caca75c39ccbfa773976e4caccd" => :high_sierra
+    sha256 "a963df8170c33605b98c42ea70f320f14738874c4cc5f4b2190affa7b856f44b" => :catalina
+    sha256 "9e6b3163fe09a1062ac8eea6433f181499b892190209a9a021805331663f067d" => :mojave
+    sha256 "3bb7b7e8b38db886d05e7f46bbb8deb4008379cd39bcc4ac08d1d924ba4b1b49" => :high_sierra
   end
 
   depends_on "gobject-introspection" => :build
