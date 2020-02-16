@@ -5,6 +5,7 @@ class Openssh < Formula
   mirror "https://mirror.vdms.io/pub/OpenBSD/OpenSSH/portable/openssh-8.2p1.tar.gz"
   version "8.2p1"
   sha256 "43925151e6cf6cee1450190c0e9af4dc36b41c12737619edff8bcebdff64e671"
+  revision 1
 
   bottle do
     sha256 "d4881d69f149e5b08f6a77c3320be4b8b5c92fba30cb05eb6e815845689c1413" => :catalina
@@ -17,6 +18,7 @@ class Openssh < Formula
 
   depends_on "pkg-config" => :build
   depends_on "ldns"
+  depends_on "libfido2"
   depends_on "openssl@1.1"
 
   resource "com.openssh.sshd.sb" do
@@ -50,6 +52,7 @@ class Openssh < Formula
       --with-kerberos5
       --with-pam
       --with-ssl-dir=#{Formula["openssl@1.1"].opt_prefix}
+      --with-security-key-builtin
     ]
 
     system "./configure", *args
