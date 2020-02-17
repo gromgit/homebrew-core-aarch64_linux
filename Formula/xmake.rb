@@ -13,10 +13,8 @@ class Xmake < Formula
   end
 
   def install
-    system "./install", "output"
-    pkgshare.install Dir["xmake/*"]
-    bin.install "output/share/xmake/xmake"
-    bin.env_script_all_files(libexec, :XMAKE_PROGRAM_DIR => pkgshare)
+    system "make", "build"
+    system "make", "install", "prefix=#{prefix}"
   end
 
   test do
