@@ -1,9 +1,8 @@
 class Gtkx3 < Formula
   desc "Toolkit for creating graphical user interfaces"
   homepage "https://gtk.org/"
-  url "https://download.gnome.org/sources/gtk+/3.24/gtk+-3.24.12.tar.xz"
-  sha256 "1384eba5614fed160044ae0d32369e3df7b4f517b03f4b1f24d383e528f4be83"
-  revision 1
+  url "https://download.gnome.org/sources/gtk+/3.24/gtk+-3.24.14.tar.xz"
+  sha256 "1c4d69f93ab884fd80c6b95115bfbc12d51ecd029178b6dad3672fdc5ff91e88"
 
   bottle do
     sha256 "4ccac8c178075606f275a258c215d6b805e184335306d9a78cd4b7c7fbf4a13b" => :catalina
@@ -24,11 +23,6 @@ class Gtkx3 < Formula
   depends_on "hicolor-icon-theme"
   depends_on "libepoxy"
   depends_on "pango"
-
-  patch do
-    url "https://gitlab.gnome.org/GNOME/gtk/commit/fa07007389c9662b654680464cf88d8894e4e64d.diff"
-    sha256 "995173a076e6984789e862e81b332fa4b3c5794c113251c66b6d8708a1614d8a"
-  end
 
   def install
     args = %W[
