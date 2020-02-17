@@ -9,10 +9,9 @@ class Bitlbee < Formula
   end
 
   bottle do
-    sha256 "fb83f16110761697d99f8c19fc71b0698909afe952c8528257ebce7d2f36a59d" => :catalina
-    sha256 "d098e0cc8717fd8bdac6b0e4fc358d7414193a16df4e14dfe7ee41699afc1c23" => :mojave
-    sha256 "9a0f8d1791dfbfcbd63c833b756be5552db2c6bf961a852ad1973691eef644d4" => :high_sierra
-    sha256 "4649e401630a5b1ed750d1a9a1806b90e3d57bb6f65133755b77ebf254d58dec" => :sierra
+    sha256 "52da03d26df7e96ae71125343859b754e24146c8ad5e6c58bc33eb634862ef40" => :catalina
+    sha256 "d6f39cdbf633e779a47d625e8c62393d75fe1656d4d1d8cbe342940fb65cba53" => :mojave
+    sha256 "cefcf70546bf4746913b64ee8c282deb9ca15ffb61a0e564f3f1dc8da09fb447" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
