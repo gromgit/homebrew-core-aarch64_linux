@@ -6,9 +6,9 @@ class GnuGetopt < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "cf96a141957a6e1e5cc3c2576f8d8855f01be43a7332299bc5a65ca80a44481f" => :catalina
-    sha256 "615da7a589946f2ae6fa43bd24f9811c1772fcbd2370e976425effdbc29dd32a" => :mojave
-    sha256 "91e11554e74963e38d11fc7483d1ec18ff47eb24154b4119869e451114730539" => :high_sierra
+    sha256 "057a54871793ac9c455872ea65f5dc4a4391d842a0b887f7761c17aa62f3e9b2" => :catalina
+    sha256 "af7e6ff9fce7d0286ca4cb0c0ce01d385ba3ea4cfc6735f97165272f97f18a81" => :mojave
+    sha256 "3114f75086a792b8a40259056a95875f77fefae73e43d8fd39d7818436f6b8bf" => :high_sierra
   end
 
   keg_only :provided_by_macos
