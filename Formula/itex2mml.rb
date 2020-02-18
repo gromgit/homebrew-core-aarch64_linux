@@ -12,11 +12,9 @@ class Itex2mml < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9b81ff0943c636da1c59d2dd2d3e00911e2534e350e015360dc374b2d1fbc2f3" => :catalina
-    sha256 "94806b5914e031608d459ce11c9d0377588b30f66442c1d86e74c915d763dd51" => :mojave
-    sha256 "571c1069b19131d921c7b07ea4a4a055d33e9d5ff861787d5abd794773a2a87d" => :high_sierra
-    sha256 "08b3ab528d7fc4d010cfa95bae7f6c1bb087e4304e0eeedfbdfc44b20cca11fd" => :sierra
-    sha256 "f7a80cfc09e71828c01e5526912e4b49136d31e7134b95928dfb39dc6d6b5259" => :el_capitan
+    sha256 "61a85ab2e9536209e49b3225f98fc55c0fae709683d0f2662be459f99718bbef" => :catalina
+    sha256 "df578788807a4ee50d332c710ad96c174e570362fd8c2dab01f1da328b53ba96" => :mojave
+    sha256 "95e76b0109c7bc8407c32f12ef1d7f43e62c6c09363840e7b8fee35a56520312" => :high_sierra
   end
 
   def install
