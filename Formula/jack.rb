@@ -16,12 +16,9 @@ class Jack < Formula
   head "https://github.com/jackaudio/jack1.git"
 
   bottle do
-    rebuild 1
-    sha256 "ea3f34608e62df9bbafcbed6f4e3dd150370b6d987a344e9999cf0b215edc64e" => :catalina
-    sha256 "0df230c0f3646fb29ed5ff3041c810f92220d6ce012ace2e5c001f3d7eb05298" => :mojave
-    sha256 "fd05eff6fde13c465c68d03bdd1f66f25e6e4b630348ed19cb2966f71a724601" => :high_sierra
-    sha256 "651fef8ee2b8b844006b41c23c89a787664a76fb2614f9c6b47a8827adee091d" => :sierra
-    sha256 "ee93da9885f06dde0f305fca2d5af6d6213c2133466ca93857a87ffb731ce43f" => :el_capitan
+    sha256 "69f9c5215e993b4b6eee2b31b3585d4df92160ec162a433df76a4a66e9f72b71" => :catalina
+    sha256 "fc489e40c89bfe3315b7d9f6dc1f243aeb03e57741faeb7b4b8f8adfc769c0a7" => :mojave
+    sha256 "169ce5413c397a9cea4d346fd33d5120f1411d92105f39722b2ae8c9ebd881df" => :high_sierra
   end
 
   depends_on "autoconf" => :build
