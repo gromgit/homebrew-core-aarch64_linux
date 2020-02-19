@@ -7,10 +7,10 @@ class AwsElasticbeanstalk < Formula
   sha256 "22d235d1d6e5713927c09292dfea3ad7ce23ebda0f32f6ded3091941b802e0be"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "6f7f6f36b40516aa1abe1af4d3a4e957cb01350009895ebf16eb20680bca4109" => :catalina
-    sha256 "e8c49deb3877807bb0ecdaa085d13d6d31bd2d521f50dd3236433fa0aba49ad2" => :mojave
-    sha256 "80d5dc44084995544fcfcbb04f0337aff4f8b96546a24fef7556162267ebb7d6" => :high_sierra
+    cellar :any
+    sha256 "bef9c30ba7bb504282de8c2439837b96023ee3e6fb11523c13c03ae771e9ae91" => :catalina
+    sha256 "32c44baeb6c6afc6c61732180dc608151503ba409d42b4c40c984030c3baf8fe" => :mojave
+    sha256 "bc252ae6e9fbecda68f82429b3a5f1c5729b31cdbe7b23f7aa28dfc238aa293d" => :high_sierra
   end
 
   depends_on "python@3.8"
