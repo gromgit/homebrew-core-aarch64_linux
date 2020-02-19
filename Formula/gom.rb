@@ -5,10 +5,10 @@ class Gom < Formula
   sha256 "68d08006aaa3b58169ce7cf1839498f45686fba8115f09acecb89d77e1018a9d"
 
   bottle do
-    sha256 "9ac0fa6a00e863a79a22304e11ce8acdc506cc7115efde0f139400548e4084ba" => :catalina
-    sha256 "e350f42cc200b16352b511d93e31bd77fe1bafae91bae450e950f9546e109b0b" => :mojave
-    sha256 "218193c3f957ef4c999a446bfa6049e978b69f40a40461afaef965b70aaa190a" => :high_sierra
-    sha256 "17e82d8af22b8db897ccded270b254c84d67cf7d4be699b2cdc0408982febe60" => :sierra
+    cellar :any
+    sha256 "1f88c8df8a310b7b51f71f299b845239e713f8d80bcc65ef092cfb0ffcd827df" => :catalina
+    sha256 "7f8af3c459f54e9ccbe6cadcdddcc949786639eef6ea186f476bc64ea5d50ff7" => :mojave
+    sha256 "eafb8a7c6fcc581ba8fc2f00a45940f0af3b7d28f2f856d961918951a3b9b346" => :high_sierra
   end
 
   depends_on "gobject-introspection" => :build
