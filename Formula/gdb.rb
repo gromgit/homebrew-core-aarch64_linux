@@ -8,9 +8,9 @@ class Gdb < Formula
   head "https://sourceware.org/git/binutils-gdb.git"
 
   bottle do
-    sha256 "efa76a0bc52bef935730afb32ab848446d92d7f8c38f2ef694fdcf3d20b67a44" => :catalina
-    sha256 "e3159449ff06712174dae7c3f513196eb02439e83057e2779531ec94b422c278" => :mojave
-    sha256 "4cde626aa5d32dde54d70bd531a06e65051e7ac7371f1970b6b9c838f565239c" => :high_sierra
+    sha256 "848a06573870a26ca89fe859fe8d2e159b1781db544841a55c0713f00b7c18bc" => :catalina
+    sha256 "24640c71e5cdbb1ccd69e5da454267e3929e0b1d73abf91c162c4658f756d755" => :mojave
+    sha256 "d279ccc0f8eefc8a7b3ac5f182290af201345adf4523b3a2671ab752e821d186" => :high_sierra
   end
 
   depends_on "python@3.8"
