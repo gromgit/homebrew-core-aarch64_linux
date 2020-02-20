@@ -8,9 +8,9 @@ class Jsvc < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "3c40111cba2de0d7dd86e899db6e3e0f4a6bd8c1acfe376a6d7a4334f3ece3ea" => :catalina
-    sha256 "875fd0c3ec60b81e46a09fa7874e16d10431f08b21f5672fe14ffa7cc6a0d174" => :mojave
-    sha256 "40a4f7b1ed3195ff9de7a6aa9842e05614482c1ae9c8f43aad9afd0ebe90e009" => :high_sierra
+    sha256 "48de494acd623ebc41c0bbd998a3bebff6d68f663cfed8d9a341e67f6bf999fa" => :catalina
+    sha256 "a22be457fd60e4dfc160b5fdb53e96fa3cb5f4c37aae21f588a5b764703bb707" => :mojave
+    sha256 "86493fb043bc73a577609c4e1618505ba10a09110678217b9a7b5cf6ffb731d2" => :high_sierra
   end
 
   depends_on "openjdk"
