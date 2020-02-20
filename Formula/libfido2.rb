@@ -3,6 +3,13 @@ class Libfido2 < Formula
   homepage "https://developers.yubico.com/libfido2/"
   url "https://github.com/Yubico/libfido2/archive/1.3.0.tar.gz"
   sha256 "0b2e3671c4c5d42fd5604a08e45f89f49592b97cf66d7d3bfbc7e6a4d5a0fec7"
+  bottle do
+    cellar :any
+    sha256 "b314bca188f5a034d0c6bb48aa941517321a2b4ead2a69e13a5651f2850fc92e" => :catalina
+    sha256 "47faaf7e97b815f310ab62e42a317860f6ec521ebcf49c85fffe891672c6301a" => :mojave
+    sha256 "97776fbb92f11ac8a27fd9a9011964d378099d11c4092bbe3c6dd1efd48d8a7e" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "mandoc" => :build
   depends_on "pkg-config" => :build
