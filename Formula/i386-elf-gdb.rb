@@ -7,9 +7,10 @@ class I386ElfGdb < Formula
   head "https://sourceware.org/git/binutils-gdb.git"
 
   bottle do
-    sha256 "8b58be6c0e44cf7b180e7729c47a726ea4e268115f1a77dc24adee9f6963e482" => :catalina
-    sha256 "92cdbf67b36efd307633153414220dd4dbdc732a26e87a19c05f8dbf72d30b3a" => :mojave
-    sha256 "5a173cea39b163dabfd97db3ea26446344ff82bdc3792b3111414d7f5c9ee6de" => :high_sierra
+    rebuild 1
+    sha256 "43be10af58f9520fcac979bcab1895caa4db95b6421e3446a0384dd1993ebb6f" => :catalina
+    sha256 "1e0f6eadbf426a5d1806745d19a09dfb1afdcdcb9c8979b4812b147287e43ebb" => :mojave
+    sha256 "320e9a47b260f302a8cf44fa012595e9a5404327d8371ab7d2b3b4797d4dbf09" => :high_sierra
   end
 
   depends_on "python@3.8"
