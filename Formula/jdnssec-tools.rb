@@ -8,10 +8,9 @@ class JdnssecTools < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "c6d39ecf019d9b842ac64c57cb8bbecbb5c0b822fdfabcc88e8acfda4c2bc3c4" => :catalina
-    sha256 "205de8199d55a964c7b5ea022831bd9cfeb9270884d7c485ab05f8e6980374dd" => :mojave
-    sha256 "205de8199d55a964c7b5ea022831bd9cfeb9270884d7c485ab05f8e6980374dd" => :high_sierra
-    sha256 "d2aea3d9cdc3379cb6ef21e581d3a92775b0af7d82306a826b106959345b1771" => :sierra
+    sha256 "c12eafadb12264e88ef14fe4e93cdb41f0afccbb24b8cff892e8747d8ad2d73b" => :catalina
+    sha256 "c12eafadb12264e88ef14fe4e93cdb41f0afccbb24b8cff892e8747d8ad2d73b" => :mojave
+    sha256 "c12eafadb12264e88ef14fe4e93cdb41f0afccbb24b8cff892e8747d8ad2d73b" => :high_sierra
   end
 
   depends_on "openjdk"
