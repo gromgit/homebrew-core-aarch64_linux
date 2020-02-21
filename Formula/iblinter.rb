@@ -5,6 +5,12 @@ class Iblinter < Formula
   sha256 "cbf5a0abe08563f7f4151c0ed49fc86381b3ac284b65fc49496e44cae248d451"
   head "https://github.com/IBDecodable/IBLinter.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "90b17522e8612f10cb1960cd3cec58b42f42b415ccc987dc165b697bf264d59d" => :catalina
+    sha256 "7f5d901491f9915ddca6ce3da13f4dd68d1da60f85310b56b78d16e54823f280" => :mojave
+  end
+
   depends_on :xcode => ["10.2", :build]
 
   def install
