@@ -1,8 +1,9 @@
 class Convox < Formula
-  desc "Command-line interface for the Rack PaaS on AWS"
+  desc "Command-line interface for the Convox PaaS"
   homepage "https://convox.com/"
-  url "https://github.com/convox/rack/archive/20200302115619.tar.gz"
-  sha256 "850c2e468273bb2b9b42a144b97477d777e31c1554ab514606072c3cf64b3536"
+  url "https://github.com/convox/convox/archive/3.0.14.tar.gz"
+  sha256 "3721f11628d43e7277bbefe64c91e7aa79b8e97c01c2ce338cf5f99028413562"
+  version_scheme 1
 
   bottle do
     cellar :any_skip_relocation
@@ -19,21 +20,23 @@ class Convox < Formula
   end
 
   def install
-    ENV["GOPATH"] = buildpath
+    ENV["GOPATH"] = buildpath/"go"
 
-    (buildpath/"src/github.com/convox/rack").install Dir["*"]
+    (buildpath/"src").install Dir["*"]
 
     resource("packr").stage { system "go", "install", "./packr" }
-    cd buildpath/"src/github.com/convox/rack" do
-      system buildpath/"bin/packr"
+
+    cd buildpath/"src" do
+      system "../go/bin/packr"
+      system "go", "build", "-mod=vendor", "-ldflags=-X main.version=#{version}",
+             "-o", bin/"convox", "-v", "./cmd/convox"
     end
 
-    system "go", "build", "-ldflags=-X main.version=#{version}",
-           "-o", bin/"convox", "-v", "github.com/convox/rack/cmd/convox"
     prefix.install_metafiles
   end
 
   test do
-    system bin/"convox"
+    assert_equal "Authenticating with localhost... ERROR: invalid login\n",
+      shell_output("#{bin}/convox login -t invalid localhost 2>&1", 1)
   end
 end
