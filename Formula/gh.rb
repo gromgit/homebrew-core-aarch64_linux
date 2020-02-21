@@ -4,6 +4,13 @@ class Gh < Formula
   url "https://github.com/cli/cli/archive/v0.5.7.tar.gz"
   sha256 "a1185de36b27bb9831a172b70e60f741aeaa774682f3ac4bccb9df45734f8b5b"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "d3bda982ec4be71d7f414196b39dd8cb1cd711734033ffe20eda56bcd5e185cb" => :catalina
+    sha256 "bf2969b3310e9a8f679f10f9b983e1c98146b88c453943cfb242e05c0952f0cf" => :mojave
+    sha256 "9f81e80da8f47d7f833481e8ac45c6f2adf3d32f838dbf86c9d271e3bca1a244" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
