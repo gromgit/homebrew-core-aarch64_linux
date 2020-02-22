@@ -6,11 +6,9 @@ class Ucon64 < Formula
   head "https://svn.code.sf.net/p/ucon64/svn/trunk/ucon64"
 
   bottle do
-    sha256 "8b564dffd204edc6ae3f879f52988fe89baf4db14534d8fa59516a07fec9fc20" => :catalina
-    sha256 "84609c8e92dae09a76f12eebe5c19d1769eb22d28029db5d15c14949800c358f" => :mojave
-    sha256 "3fc97894b8edaa28fa90a2cb494976be49fa7a28fb875797bd5f56ddc3b2fd69" => :high_sierra
-    sha256 "6fe6e1cf1db14e4592eb3486c6629bff06813a42c34b9ae8e188a5ad02745344" => :sierra
-    sha256 "015cfd4803ea86f02429fc9a1f5de59d72012c9d0e32a92c9f996922ef422084" => :el_capitan
+    sha256 "f0bf36d7828e138e2fe1068b4b5bf1b9e70f80cef564c186950a30ab2cb1df85" => :catalina
+    sha256 "893570e77b17c3400f391fc0a710958b3599d5ad0c5971897d84c7e4552e2ca6" => :mojave
+    sha256 "30d2d85dba7891d5eb5b43c69c5b6ac0ad0606d279c6a30e254f6ffd819356f8" => :high_sierra
   end
 
   resource "super_bat_puncher_demo" do
