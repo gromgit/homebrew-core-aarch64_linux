@@ -6,6 +6,13 @@ class ProtocGenGrpcWeb < Formula
   url "https://github.com/grpc/grpc-web/archive/1.0.7.tar.gz"
   sha256 "04460e28ffa80bfc797a8758da10ba40107347ef0af8e9cc065ade10398da4bb"
 
+  bottle do
+    cellar :any
+    sha256 "129c684b65cce97cd36729479df8804643de426f5e52e3a0a6654243505dafbe" => :catalina
+    sha256 "ed5f8523ab88b5635d6b827bdd72be2e009cb09a8a45d43b68716f1d62df6200" => :mojave
+    sha256 "f14223921064cfab57262adfd6983a9ce1ce201aeb3da5ba03973d3c65a0ddf3" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "node" => :test
   depends_on "typescript" => :test
