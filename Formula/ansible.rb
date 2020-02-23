@@ -19,6 +19,7 @@ class Ansible < Formula
   depends_on "libyaml"
   depends_on "openssl@1.1"
   depends_on "python@3.8"
+
   uses_from_macos "libffi"
   uses_from_macos "libxslt"
 

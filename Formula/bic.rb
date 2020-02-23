@@ -23,6 +23,7 @@ class Bic < Formula
   end
 
   depends_on "gmp"
+
   uses_from_macos "readline"
 
   def install

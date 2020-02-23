@@ -32,6 +32,7 @@ class Csound < Formula
   depends_on "portmidi"
   depends_on "stk"
   depends_on "wiiuse"
+
   uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
   uses_from_macos "curl"

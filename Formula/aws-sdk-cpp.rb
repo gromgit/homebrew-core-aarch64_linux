@@ -13,6 +13,7 @@ class AwsSdkCpp < Formula
   end
 
   depends_on "cmake" => :build
+
   uses_from_macos "curl"
 
   def install

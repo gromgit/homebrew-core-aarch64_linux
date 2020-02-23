@@ -16,6 +16,8 @@ class Bazel < Formula
   depends_on :java => "1.8"
   depends_on :macos => :yosemite
 
+  uses_from_macos "zip"
+
   def install
     ENV["EMBED_LABEL"] = "#{version}-homebrew"
     # Force Bazel ./compile.sh to put its temporary files in the buildpath
