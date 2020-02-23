@@ -14,6 +14,8 @@ class Krb5 < Formula
 
   depends_on "openssl@1.1"
 
+  uses_from_macos "bison"
+
   def install
     cd "src" do
       system "./configure", "--disable-debug",

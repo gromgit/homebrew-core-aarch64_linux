@@ -12,6 +12,8 @@ class Gmp < Formula
     sha256 "63f220c9ac4ebc386711c8c4c5e1f955cfb0a784bdc41bfd6c701dc789be7fcc" => :high_sierra
   end
 
+  uses_from_macos "m4" => :build
+
   def install
     # Enable --with-pic to avoid linking issues with the static library
     args = %W[--prefix=#{prefix} --enable-cxx --with-pic]

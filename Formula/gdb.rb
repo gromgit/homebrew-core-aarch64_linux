@@ -16,6 +16,9 @@ class Gdb < Formula
   depends_on "python@3.8"
   depends_on "xz" # required for lzma support
 
+  uses_from_macos "expat"
+  uses_from_macos "ncurses"
+
   conflicts_with "i386-elf-gdb", :because => "both install include/gdb, share/gdb and share/info"
 
   fails_with :clang do
