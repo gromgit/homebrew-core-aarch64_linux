@@ -9,9 +9,9 @@ class Bit < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "c195c0ddc40406da2845b474852b286aca6289db96f7f4d57db4079c5476bc9f" => :catalina
-    sha256 "615c4ba81335ca5845520982b9f2cf62759de2d49921fe60cf62d33762567a92" => :mojave
-    sha256 "089438512a0f802501cda9deee8a069aecdc5388c26d109c21dad526f4020739" => :high_sierra
+    sha256 "5e85663860cac5bccddf6ae49f6952e7d026e0e50af24c1d130d964b2c6faae1" => :catalina
+    sha256 "644e22002ebabdabf49e68f6456f4b7a3506f6496fb5c7aa108b442e6889140d" => :mojave
+    sha256 "47b93bc393e53bbde7fdcdbad4bdf927563b5046b22b0588b2a614670c817338" => :high_sierra
   end
 
   depends_on "node"
