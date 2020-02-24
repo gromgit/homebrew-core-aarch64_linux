@@ -6,10 +6,9 @@ class Hmmer < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b7d65153f779a1de7196a6434617eb870a9aa7a8edfd8abc58bc36fecd61da2d" => :catalina
-    sha256 "f31890fbde868fc82a2820f17174eb905144f4dea67d5d91a88363645279341b" => :mojave
-    sha256 "c2343ad2d3c2fc7a1b02bda605096cb3efc895be458eb219a0e8eee3cc805474" => :high_sierra
-    sha256 "81c3660f5c0c9a7ef21dbca50e6f871bf1ea48af8e59de293e988e682dc16e6e" => :sierra
+    sha256 "6cafc97dbddaa66d9e353f161ce402786d887aea8a88f52be3323ffc4cf5733b" => :catalina
+    sha256 "544c93b2fc808d5176ac562689afb59785f24ef29f3198b8ca24adf2c5fab422" => :mojave
+    sha256 "aac6c2a8264ae6192bff7dd02c57cfe5000e830a0991c9e5be8c0fc27b0daded" => :high_sierra
   end
 
   def install
