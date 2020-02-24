@@ -6,10 +6,9 @@ class Shellharden < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "83bd7d67371e37e898dc6c39f9ba17d118b24c974a85a8bfd281ceff63afed0f" => :catalina
-    sha256 "baa7d0b87d9154caea44a01c94da1fa6159ab844c17eccada88ee877a48d0840" => :mojave
-    sha256 "3eb95853dcd0c2eff2c14eec1f7d5c70344319d70bbbe257873601fe8b8e32c6" => :high_sierra
+    sha256 "85dd6255ff5f3410eafff6f5689bbcb7feac3f3f5d291139fc60597e2f46e5a5" => :catalina
+    sha256 "fbe947b5d0596fb32bcbadddd904bf0b0d30c64053e00c13a41cc6ecf89d1e20" => :mojave
+    sha256 "214a9dca5d9d013ada81c97e204c96815fd3376399c960d73973ffe4c7d653cf" => :high_sierra
   end
 
   depends_on "rust" => :build
