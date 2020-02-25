@@ -7,10 +7,9 @@ class Sccache < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "1c3e5b089949f526b863ac6e8e37c644401f2d277986f1a4a6a2e48568eb8f00" => :catalina
-    sha256 "330ac51414125b5b79e004fed1dffc66683905e2ba881d8b78b35200eb8fef71" => :mojave
-    sha256 "db5d3877a9f7956820c468c88a188f3dbfb1e861b5fe1ed8fdf3cce31c9e6c0b" => :high_sierra
+    sha256 "a4e38444e682b90e9cea144347e5f1fc32ab309ba448d495b025bb9bb19906d4" => :catalina
+    sha256 "80f2b3cfa57125f7fd927b8b312483ca91c146dd76702d1a2e0cefdac5ae25f5" => :mojave
+    sha256 "071e45205799343d3f2be7c3779292cbcf32d1bfa1861f70af55e9cca50fe891" => :high_sierra
   end
 
   depends_on "rust" => :build
