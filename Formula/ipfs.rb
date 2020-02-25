@@ -4,6 +4,7 @@ class Ipfs < Formula
   url "https://github.com/ipfs/go-ipfs.git",
       :tag      => "v0.4.23",
       :revision => "6ce9a355f9757a921d1e30f4a702028d5e4fb7eb"
+  revision 1
   head "https://github.com/ipfs/go-ipfs.git"
 
   bottle do
@@ -20,6 +21,8 @@ class Ipfs < Formula
     (buildpath/"src/github.com/ipfs/go-ipfs").install buildpath.children
     cd("src/github.com/ipfs/go-ipfs") { system "make", "install" }
     bin.install "bin/ipfs"
+
+    cd("src/github.com/ipfs/go-ipfs") { bash_completion.install "misc/completion/ipfs-completion.bash" }
   end
 
   plist_options :manual => "ipfs daemon"
