@@ -6,9 +6,9 @@ class Ngt < Formula
 
   bottle do
     cellar :any
-    sha256 "e85832187d9849ecc9c125cd42c1f48c2165358a3bf84f5f67ae1b0fce138eb9" => :catalina
-    sha256 "f03745c7c144e14c0b0caa95b58cd04214b22b4e4bfd986201160d53b27e2d34" => :mojave
-    sha256 "b9c7793735d8a88ef1cfee05353b053b3f48dba0f2d559789e92dc0599fa9752" => :high_sierra
+    sha256 "314ccba1d39c98e6127e382f3c777b664cc2cf5f99f4f6f761da0723af054d47" => :catalina
+    sha256 "ddb2d7b896d39a6c2bd59df8c274d8868f7d9a2bd65e617ca1086c3de14cea11" => :mojave
+    sha256 "b5e83767bcee749b03dfbab48e7a2687021cc4270be0e0c01c4676d9cda20335" => :high_sierra
   end
 
   depends_on "cmake" => :build
