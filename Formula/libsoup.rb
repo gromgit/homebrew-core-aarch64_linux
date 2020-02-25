@@ -19,6 +19,8 @@ class Libsoup < Formula
   depends_on "libpsl"
   depends_on "vala"
 
+  uses_from_macos "libxml2"
+
   def install
     mkdir "build" do
       system "meson", "--prefix=#{prefix}", ".."

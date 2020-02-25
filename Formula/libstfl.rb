@@ -16,6 +16,8 @@ class Libstfl < Formula
   depends_on "python@3.8"
   depends_on "ruby"
 
+  uses_from_macos "perl"
+
   def install
     ENV.prepend_path "PATH", Formula["python@3.8"].opt_libexec/"bin"
 
