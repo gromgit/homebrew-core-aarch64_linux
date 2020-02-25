@@ -7,9 +7,9 @@ class Proftpd < Formula
   sha256 "fa3541c4b34136a7b80cb12a2f6f9a0cab5118a5b0a1653d40af49c6479c35ad"
 
   bottle do
-    sha256 "deb508061dfb34bf77c92a5435cdb42bbb8a9b3084098ba39dcbfc53f013b56b" => :catalina
-    sha256 "9abb9e0ec3f51055f7c2becadc0ba6bc911b886f32228a04c8564c51d36fc055" => :mojave
-    sha256 "82ddf96573296e08144d4418b7aa85dfd1540150fa6c5f732a928c4147099dba" => :high_sierra
+    sha256 "096d6a619238c4077e541a3cd9e2b9f68aaf1d89ce5c6fa5432d31a25f66115f" => :catalina
+    sha256 "4ca5576cb0fa5a34b9497c0f0717014729f06214a41389db42e45264703a7182" => :mojave
+    sha256 "eb14442fb150bcae6314a12df485a705277f8c6cc5ea679347dedea3d065bedf" => :high_sierra
   end
 
   def install
