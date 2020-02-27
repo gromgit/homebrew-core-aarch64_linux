@@ -6,11 +6,9 @@ class Telnet < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "dc7703272c5912ca4c44b79b8969478fc5742eef6740de8af55db189a4d1dbb7" => :catalina
-    sha256 "d63cb3bdfa4f1dce67cf0956b2fa36d15b0a429a71a6e5538df1a9f517b76589" => :mojave
-    sha256 "31ab0f184327fd51fa3273df44bb3f4f2fd78049c15998795fea7e7ee72439d8" => :high_sierra
-    sha256 "fd42af8e2c7670c2554ee11c6443f701f6045b9a89c40d3a8463232a8a9a7f90" => :sierra
-    sha256 "048572040593f5674d28136d7de979e03b276f96e1063c930709b22527b963e2" => :el_capitan
+    sha256 "7435a9fd2515158762a85197a4ad7141e430383e185e002da169dbbb638c952f" => :catalina
+    sha256 "d5009f496dc6cf0c13b936996f98b91b0f12733ea9462843b56a39fc53b20fe0" => :mojave
+    sha256 "af38f3c6dd4ff5eda2248671958e66595b39e74cdeecca52af4efb495bc659a7" => :high_sierra
   end
 
   depends_on :xcode => :build
