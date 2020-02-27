@@ -7,10 +7,10 @@ class Coccinelle < Formula
   head "https://github.com/coccinelle/coccinelle.git"
 
   bottle do
-    rebuild 1
-    sha256 "ee482fedbe053e43b24930b0fd568db3c94f1179b6ce796c6445a75f13dad858" => :high_sierra
-    sha256 "00da6a22f987eb816c239e5852a423fdccf8c077143358eb623d4cf933ce0a7d" => :sierra
-    sha256 "96f2460057f45cc77e03c1980edff643cdc26a2d2cced838567c798d3ee89748" => :el_capitan
+    cellar :any
+    sha256 "cc2f0b1ff9f45f48c91f136b1b88ac6c7d2e34b475d77d1c0e418f1a47e691b2" => :catalina
+    sha256 "6dd3d84d54e00d9d7ce4b27f1693d266120221bd98c99d7988a58c802c26fab3" => :mojave
+    sha256 "c50aae7af14976966f3d3232ac89b4b2fb45753765e07377a39daf9aaeb22960" => :high_sierra
   end
 
   depends_on "autoconf" => :build
