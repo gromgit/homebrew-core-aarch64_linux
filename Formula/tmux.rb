@@ -21,9 +21,9 @@ class Tmux < Formula
   end
 
   depends_on "pkg-config" => :build
-  depends_on "utf8proc"
   depends_on "libevent"
   depends_on "ncurses"
+  depends_on "utf8proc"
 
   resource "completion" do
     url "https://raw.githubusercontent.com/imomaliev/tmux-bash-completion/homebrew_1.0.0/completions/tmux"
