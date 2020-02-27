@@ -1,8 +1,8 @@
 class Rpcgen < Formula
   desc "Protocol Compiler"
   homepage "https://opensource.apple.com/"
-  url "https://opensource.apple.com/tarballs/developer_cmds/developer_cmds-63.tar.gz"
-  sha256 "d4bc4a4b1045377f814da08fba8b7bfcd515ef1faec12bbb694de7defe9a5c0d"
+  url "https://opensource.apple.com/tarballs/developer_cmds/developer_cmds-66.tar.gz"
+  sha256 "99d6c4ef4f32593df937a42d50400c17054247e875ab8cfb3bf0f2de19a90860"
 
   bottle do
     cellar :any_skip_relocation
@@ -16,15 +16,6 @@ class Rpcgen < Formula
   keg_only :provided_by_macos
 
   depends_on :xcode => ["7.3", :build]
-
-  # Add support for parsing 'hyper' and 'quad' types, as per RFC4506.
-  # https://github.com/openbsd/src/commit/26f19e833517620fd866d2ef3b1ea76ece6924c5
-  # https://github.com/freebsd/freebsd/commit/15a1e09c3d41cb01afc70a2ea4d20c5a0d09348a
-  # Reported to Apple 13 Dec 2016 rdar://29644450
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/rpcgen/63.patch"
-    sha256 "d687d74e1780ec512c6dacf5cb767650efa515a556106400294393f5f06cf1db"
-  end
 
   def install
     xcodebuild "-project", "developer_cmds.xcodeproj",
