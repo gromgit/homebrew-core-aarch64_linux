@@ -3,6 +3,7 @@ class Tmux < Formula
   homepage "https://tmux.github.io/"
   url "https://github.com/tmux/tmux/releases/download/3.0a/tmux-3.0a.tar.gz"
   sha256 "4ad1df28b4afa969e59c08061b45082fdc49ff512f30fc8e43217d7b0e5f8db9"
+  revision 1
 
   bottle do
     cellar :any
@@ -20,6 +21,7 @@ class Tmux < Formula
   end
 
   depends_on "pkg-config" => :build
+  depends_on "utf8proc"
   depends_on "libevent"
   depends_on "ncurses"
 
@@ -32,7 +34,8 @@ class Tmux < Formula
     system "sh", "autogen.sh" if build.head?
 
     args = %W[
-      --disable-Dependency-tracking
+      --enable-utf8proc
+      --disable-dependency-tracking
       --prefix=#{prefix}
       --sysconfdir=#{etc}
     ]
