@@ -16,10 +16,10 @@ class Qca < Formula
   end
 
   bottle do
-    sha256 "3994834f24803f2160fef801132008751edf8965b309d727e56cd1d79b97be85" => :catalina
-    sha256 "54df24141f4dfc90d98eee0e8dd6e0f64bccde7eebe25ddd64378c27d2758924" => :mojave
-    sha256 "0d30e0f8da5cff11b81b4591ca7399eef30d2ba0952daf7e5b4541aba3a32ca5" => :high_sierra
-    sha256 "eef1669c0e70e85b0aed09d1bc885287e1d946b46de1068cab6a0b299d65a43f" => :sierra
+    cellar :any
+    sha256 "5af8a815c4534787388cf0d11773e62d8ab906e4b68a52a7e3230bdb0dc97249" => :catalina
+    sha256 "c8b2be92c664d56c6e4bc3ced579181127bf263cffcc900c62dc1943bf40cf69" => :mojave
+    sha256 "3735156d4a76e9f18f01fd7c056698f914f2f932650349dda0bd543942057882" => :high_sierra
   end
 
   depends_on "cmake" => :build
