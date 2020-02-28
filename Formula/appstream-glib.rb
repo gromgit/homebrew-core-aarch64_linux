@@ -1,8 +1,8 @@
 class AppstreamGlib < Formula
   desc "Helper library for reading and writing AppStream metadata"
   homepage "https://github.com/hughsie/appstream-glib"
-  url "https://github.com/hughsie/appstream-glib/archive/appstream_glib_0_7_16.tar.gz"
-  sha256 "71e19fff681eb74795dbcb428f1dc9cf28bf9207378b6c1c9ce55375f0f22b14"
+  url "https://github.com/hughsie/appstream-glib/archive/appstream_glib_0_7_17.tar.gz"
+  sha256 "cb612c9e634275e574fa639737cf63711358cd10b9d0d377f70025653fefdd16"
 
   bottle do
     cellar :any
