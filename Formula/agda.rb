@@ -5,7 +5,7 @@ class Agda < Formula
 
   desc "Dependently typed functional programming language"
   homepage "https://wiki.portal.chalmers.se/agda/"
-  revision 1
+  revision 2
 
   stable do
     url "https://hackage.haskell.org/package/Agda-2.6.0.1/Agda-2.6.0.1.tar.gz"
@@ -13,8 +13,8 @@ class Agda < Formula
 
     resource "stdlib" do
       url "https://github.com/agda/agda-stdlib.git",
-          :tag      => "v1.1",
-          :revision => "dffb8023a63e7e66a90a8664752245971a915e66"
+          :tag      => "v1.2",
+          :revision => "e47adf6ba5aa52ae394a7c60a3b5d3f4790db9d7"
     end
   end
 
@@ -34,7 +34,7 @@ class Agda < Formula
 
   depends_on "cabal-install" => [:build, :test]
   depends_on "emacs"
-  depends_on "ghc"
+  depends_on "ghc@8.6" # 8.8 will be supported in the next release
 
   uses_from_macos "zlib"
 
