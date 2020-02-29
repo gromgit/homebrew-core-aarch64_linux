@@ -6,9 +6,9 @@ class CargoInstruments < Formula
 
   bottle do
     cellar :any
-    sha256 "6f6f7b4d9d88a5c348d951c3b3d892bc8590e2eca6a3e5da6acd029509864cfe" => :catalina
-    sha256 "bddab3f8c96413ad04f2bfc000f8b3228837d10c70a61924efa21cd723d2153e" => :mojave
-    sha256 "9e2ea11924cc755373b8ac2c0b110b67930552009c0430a6a1d47729235b1a65" => :high_sierra
+    sha256 "570ef6a76ad8b73cec931652ce50375dc3a334ed5b9f59a0120d52f4c677b5f8" => :catalina
+    sha256 "fd54b752b6dcacb30b861039f6a16109ca83072966651f0f62a50dc0e45c4360" => :mojave
+    sha256 "7cf3cf504a8ef58922cd115a26d0cda9b922d23f29f53d1a2aece21c855e846a" => :high_sierra
   end
 
   depends_on "rust" => :build
