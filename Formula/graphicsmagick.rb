@@ -1,8 +1,8 @@
 class Graphicsmagick < Formula
   desc "Image processing tools collection"
   homepage "http://www.graphicsmagick.org/"
-  url "https://downloads.sourceforge.net/project/graphicsmagick/graphicsmagick/1.3.34/GraphicsMagick-1.3.34.tar.xz"
-  sha256 "df009d5173ed0d6a0c6457234256c5a8aeaace782afa1cbab015d5a12bd4f7a4"
+  url "https://downloads.sourceforge.net/project/graphicsmagick/graphicsmagick/1.3.35/GraphicsMagick-1.3.35.tar.xz"
+  sha256 "188a8d6108fea87a0208723e8d206ec1d4d7299022be8ce5d0a9720509250250"
   head "http://hg.code.sf.net/p/graphicsmagick/code", :using => :hg
 
   bottle do
