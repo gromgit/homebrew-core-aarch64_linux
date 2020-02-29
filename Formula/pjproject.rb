@@ -7,9 +7,9 @@ class Pjproject < Formula
 
   bottle do
     cellar :any
-    sha256 "784718544f0553b52ffa60aa895d405a95401112164c72962242f4b801b168c4" => :catalina
-    sha256 "ea18f1105154234f2c89b17d5973fd96c4821910a3e902a70d79ba219b655a4b" => :mojave
-    sha256 "05291521fbceb75e3abf7a0c185cce9c491a00afde019a52ccbbc4b91a38710c" => :high_sierra
+    sha256 "e31037429a94ebfae5fa04dd72401621dcd7b7628ba4f3f8dd6c096b13de3e50" => :catalina
+    sha256 "5c8504312c89836f834b61b9f006044e37e76606290965de8a0e8ffd57275303" => :mojave
+    sha256 "bf68bae907d0ee4cc1accfd788e41a8fb8c558acd5fd781b81f5547571e04fa1" => :high_sierra
   end
 
   depends_on :macos => :high_sierra # Uses Security framework API enum cases introduced in 10.13.4
