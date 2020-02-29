@@ -1,10 +1,9 @@
 class Pjproject < Formula
   desc "C library for multimedia protocols such as SIP, SDP, RTP and more"
   homepage "https://www.pjsip.org/"
-  url "https://www.pjsip.org/release/2.9/pjproject-2.9.tar.bz2"
-  sha256 "d185ef7855c8ec07191dde92f54b65a7a4b7a6f7bf8c46f7af35ceeb1da2a636"
-  revision 1
-  head "https://svn.pjsip.org/repos/pjproject/trunk"
+  url "https://github.com/pjsip/pjproject/archive/2.10.tar.gz"
+  sha256 "936a4c5b98601b52325463a397ddf11ab4106c6a7b04f8dc7cdd377efbb597de"
+  head "https://github.com/pjsip/pjproject.git"
 
   bottle do
     cellar :any
