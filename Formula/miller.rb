@@ -16,6 +16,8 @@ class Miller < Formula
   depends_on "automake" => :build
   depends_on "libtool" => :build
 
+  uses_from_macos "flex" => :build
+
   def install
     # Profiling build fails with Xcode 11, remove it
     inreplace "c/Makefile.am", /noinst_PROGRAMS=\s*mlrg\s*\\\n\s*mlrp/, ""

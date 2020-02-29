@@ -18,6 +18,8 @@ class MagicWormhole < Formula
   depends_on "openssl@1.1"
   depends_on "python@3.8"
 
+  uses_from_macos "libffi"
+
   resource "Automat" do
     url "https://files.pythonhosted.org/packages/4c/9a/3052851fa3a888d1ff32f053fba424ed929b47383fb5327855fdf70018cd/Automat-0.8.0.tar.gz"
     sha256 "269a09dfb063a3b078983f4976d83f0a0d3e6e7aaf8e27d8df1095e09dc4a484"

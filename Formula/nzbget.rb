@@ -17,6 +17,9 @@ class Nzbget < Formula
   depends_on "gcc" if MacOS.version == :mavericks
   depends_on "openssl@1.1"
 
+  uses_from_macos "libxml2"
+  uses_from_macos "ncurses"
+
   def install
     ENV.cxx11
 

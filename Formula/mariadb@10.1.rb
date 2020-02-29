@@ -17,6 +17,9 @@ class MariadbAT101 < Formula
   depends_on "groonga"
   depends_on "openssl@1.1"
 
+  uses_from_macos "bzip2"
+  uses_from_macos "ncurses"
+
   def install
     # Set basedir and ldata so that mysql_install_db can find the server
     # without needing an explicit path to be set. This can still

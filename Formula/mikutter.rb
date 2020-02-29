@@ -19,6 +19,8 @@ class Mikutter < Formula
   depends_on "ruby"
   depends_on "terminal-notifier"
 
+  uses_from_macos "xz"
+
   resource "addressable" do
     url "https://rubygems.org/downloads/addressable-2.7.0.gem"
     sha256 "5e9b62fe1239091ea9b2893cd00ffe1bcbdd9371f4e1d35fac595c98c5856cbb"

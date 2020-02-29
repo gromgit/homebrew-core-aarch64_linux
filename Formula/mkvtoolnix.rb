@@ -32,6 +32,9 @@ class Mkvtoolnix < Formula
   depends_on "libogg"
   depends_on "libvorbis"
 
+  uses_from_macos "libxslt" => :build
+  uses_from_macos "ruby" => :build
+
   def install
     ENV.cxx11
 

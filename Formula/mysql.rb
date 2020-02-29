@@ -12,17 +12,16 @@ class Mysql < Formula
   end
 
   depends_on "cmake" => :build
-
   # GCC is not supported either, so exclude for El Capitan.
   depends_on :macos => :sierra if DevelopmentTools.clang_build_version == 800
-
   # https://github.com/Homebrew/homebrew-core/issues/1475
   # Needs at least Clang 3.6, which shipped alongside Yosemite.
   # Note: MySQL themselves don't support anything below Sierra.
   depends_on :macos => :yosemite
-
   depends_on "openssl@1.1"
   depends_on "protobuf"
+
+  uses_from_macos "libedit"
 
   conflicts_with "mariadb", "percona-server",
     :because => "mysql, mariadb, and percona install the same binaries."

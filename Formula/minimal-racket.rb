@@ -11,6 +11,8 @@ class MinimalRacket < Formula
     sha256 "938471c9139a10efa9c4b6f7a5d4955f7e53a1f43578662f366102086a9ed33c" => :high_sierra
   end
 
+  uses_from_macos "libffi"
+
   # these two files are amended when (un)installing packages
   skip_clean "lib/racket/launchers.rktd", "lib/racket/mans.rktd"
 

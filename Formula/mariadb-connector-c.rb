@@ -13,6 +13,8 @@ class MariadbConnectorC < Formula
   depends_on "cmake" => :build
   depends_on "openssl@1.1"
 
+  uses_from_macos "curl"
+
   conflicts_with "mariadb",
                  :because => "both install mariadb_config"
 

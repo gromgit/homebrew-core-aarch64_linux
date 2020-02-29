@@ -16,6 +16,8 @@ class MongoCDriver < Formula
   depends_on "pkg-config" => :build
   depends_on "sphinx-doc" => :build
 
+  uses_from_macos "zlib"
+
   def install
     cmake_args = std_cmake_args
     if build.head?

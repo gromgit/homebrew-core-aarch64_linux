@@ -20,6 +20,10 @@ class Netpbm < Formula
   depends_on "libpng"
   depends_on "libtiff"
 
+  uses_from_macos "flex" => :build
+  uses_from_macos "libxml2"
+  uses_from_macos "zlib"
+
   conflicts_with "jbigkit", :because => "both install `pbm.5` and `pgm.5` files"
 
   def install
