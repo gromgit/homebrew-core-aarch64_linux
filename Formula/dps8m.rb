@@ -7,11 +7,9 @@ class Dps8m < Formula
 
   bottle do
     cellar :any
-    sha256 "32b101a68045897e808ab00e2d963b820bc6ab6acab96bdec6ef5752230eb952" => :catalina
-    sha256 "b238a69a4da50c3b951981e5b3c6e4683aeea100acbd0dacf449e723422c649d" => :mojave
-    sha256 "0c436100ea3f71f5e7fcb2a39ca6d6e08a4981b661117e6e8d18685df3c8d040" => :high_sierra
-    sha256 "eab4df90e0f3573923e9baab97f0685d793a5ae200f167be8f99fc1ec957b60a" => :sierra
-    sha256 "f079087bc567e575f5c7d83890d84cf872a58a3707fb08467b4eda2b6a10ccd7" => :el_capitan
+    sha256 "d9d967a0c7dad0b63ea6327102cb5d83345ff6b0bcdbf754398c1a5cdb0b0916" => :catalina
+    sha256 "2c148e6bcd3a83e91b6b327d285bcfbb6490a3f7d8f08c4d904a6b907fbe61cf" => :mojave
+    sha256 "600be3242396b61b2e807ed850cd65fc30a4676993c44c5171488954be496ce4" => :high_sierra
   end
 
   depends_on "libuv"
