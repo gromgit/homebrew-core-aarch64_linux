@@ -15,6 +15,8 @@ class Rethinkdb < Formula
   depends_on "boost" => :build
   depends_on "openssl@1.1"
 
+  uses_from_macos "curl"
+
   def install
     args = ["--prefix=#{prefix}"]
 

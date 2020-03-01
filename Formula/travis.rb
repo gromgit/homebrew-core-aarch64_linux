@@ -11,6 +11,7 @@ class Travis < Formula
   end
 
   depends_on "ruby" if MacOS.version <= :sierra
+
   uses_from_macos "libffi"
 
   resource "addressable" do

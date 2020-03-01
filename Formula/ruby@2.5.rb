@@ -17,6 +17,8 @@ class RubyAT25 < Formula
   depends_on "openssl@1.1"
   depends_on "readline"
 
+  uses_from_macos "zlib"
+
   def api_version
     "2.5.0"
   end

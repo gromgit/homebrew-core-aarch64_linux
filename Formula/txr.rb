@@ -12,6 +12,9 @@ class Txr < Formula
     sha256 "84544b80f30a8f5d96403a7b6380bdc452adb30634ad1cef29420f28ebf9b867" => :high_sierra
   end
 
+  uses_from_macos "bison" => :build
+  uses_from_macos "flex" => :build
+
   def install
     system "./configure", "--prefix=#{prefix}"
     system "make"

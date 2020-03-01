@@ -23,6 +23,8 @@ class Ruby < Formula
   depends_on "openssl@1.1"
   depends_on "readline"
 
+  uses_from_macos "zlib"
+
   # Should be updated only when Ruby is updated (if an update is available).
   # The exception is Rubygem security fixes, which mandate updating this
   # formula & the versioned equivalents and bumping the revisions.

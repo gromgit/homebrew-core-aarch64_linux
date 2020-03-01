@@ -15,6 +15,8 @@ class Rbenv < Formula
 
   depends_on "ruby-build"
 
+  uses_from_macos "ruby" => :test
+
   def install
     inreplace "libexec/rbenv" do |s|
       s.gsub! '"${BASH_SOURCE%/*}"/../libexec', libexec

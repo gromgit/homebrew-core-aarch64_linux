@@ -19,6 +19,8 @@ class Readline < Formula
     end
   end
 
+  uses_from_macos "ncurses"
+
   bottle do
     cellar :any
     sha256 "6ae1c8e7c783f32bd22c6085caa4d838fed7fb386da7e40ca47b87ec9b1237d6" => :catalina

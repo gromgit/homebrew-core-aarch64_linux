@@ -16,6 +16,8 @@ class Stella < Formula
   depends_on "libpng"
   depends_on "sdl2"
 
+  uses_from_macos "zlib"
+
   def install
     sdl2 = Formula["sdl2"]
     libpng = Formula["libpng"]

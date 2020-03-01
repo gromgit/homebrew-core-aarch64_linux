@@ -8,6 +8,8 @@ class Rabbitmq < Formula
 
   depends_on "erlang"
 
+  uses_from_macos "unzip" => :build
+
   def install
     # Install the base files
     prefix.install Dir["*"]

@@ -17,6 +17,8 @@ class Statik < Formula
 
   depends_on "python@3.8"
 
+  uses_from_macos "libffi"
+
   conflicts_with "go-statik", :because => "both install `statik` binaries"
 
   def install

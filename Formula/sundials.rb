@@ -17,6 +17,9 @@ class Sundials < Formula
   depends_on "openblas"
   depends_on "suite-sparse"
 
+  uses_from_macos "m4"
+  uses_from_macos "libpcap"
+
   def install
     blas = "-L#{Formula["openblas"].opt_lib} -lopenblas"
     args = std_cmake_args + %W[

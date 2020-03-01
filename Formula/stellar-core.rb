@@ -24,6 +24,9 @@ class StellarCore < Formula
   depends_on "libpqxx"
   depends_on "libsodium"
 
+  uses_from_macos "bison" => :build
+  uses_from_macos "flex" => :build
+
   def install
     system "./autogen.sh"
     system "./configure", "--disable-debug",

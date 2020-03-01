@@ -15,6 +15,9 @@ class TransmissionCli < Formula
   depends_on "libevent"
   depends_on "openssl@1.1"
 
+  uses_from_macos "curl"
+  uses_from_macos "zlib"
+
   def install
     ENV.append "LDFLAGS", "-framework Foundation -prebind"
     ENV.append "LDFLAGS", "-liconv"

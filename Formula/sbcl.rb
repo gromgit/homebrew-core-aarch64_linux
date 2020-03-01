@@ -10,6 +10,8 @@ class Sbcl < Formula
     sha256 "cd1bb25d3dd0706d9c7a77c5c89a795f922f05229ff0a17e735f9aaa9c0fe6f9" => :high_sierra
   end
 
+  uses_from_macos "zlib"
+
   # Current binary versions are listed at https://sbcl.sourceforge.io/platform-table.html
   resource "bootstrap64" do
     url "https://downloads.sourceforge.net/project/sbcl/sbcl/1.2.11/sbcl-1.2.11-x86-64-darwin-binary.tar.bz2"

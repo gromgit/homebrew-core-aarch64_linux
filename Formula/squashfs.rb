@@ -18,6 +18,8 @@ class Squashfs < Formula
   depends_on "xz"
   depends_on "zstd"
 
+  uses_from_macos "zlib"
+
   # Patch necessary to emulate the sigtimedwait process otherwise we get build failures.
   # Also clang fixes, extra endianness knowledge and a bundle of other macOS fixes.
   patch do
