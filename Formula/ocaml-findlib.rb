@@ -14,6 +14,8 @@ class OcamlFindlib < Formula
 
   depends_on "ocaml"
 
+  uses_from_macos "m4" => :build
+
   def install
     system "./configure", "-bindir", bin,
                           "-mandir", man,

@@ -14,6 +14,8 @@ class Openexr < Formula
   depends_on "pkg-config" => :build
   depends_on "ilmbase"
 
+  uses_from_macos "zlib"
+
   resource "exr" do
     url "https://github.com/openexr/openexr-images/raw/master/TestImages/AllHalfValues.exr"
     sha256 "eede573a0b59b79f21de15ee9d3b7649d58d8f2a8e7787ea34f192db3b3c84a4"

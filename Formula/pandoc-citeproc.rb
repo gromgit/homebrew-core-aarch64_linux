@@ -19,6 +19,8 @@ class PandocCiteproc < Formula
   depends_on "ghc" => :build
   depends_on "pandoc"
 
+  uses_from_macos "unzip" => :build
+
   def install
     install_cabal_package
   end

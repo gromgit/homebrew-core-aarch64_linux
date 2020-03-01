@@ -14,6 +14,8 @@ class Opam < Formula
 
   depends_on "ocaml" => [:build, :test]
 
+  uses_from_macos "unzip"
+
   def install
     ENV.deparallelize
 

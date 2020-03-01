@@ -15,6 +15,9 @@ class PostgresqlAT94 < Formula
   depends_on "openssl@1.1"
   depends_on "readline"
 
+  uses_from_macos "libxslt"
+  uses_from_macos "perl"
+
   def install
     # Fix "configure: error: readline library not found"
     if MacOS.version == :sierra || MacOS.version == :el_capitan

@@ -54,6 +54,8 @@ class Octave < Formula
   depends_on "sundials"
   depends_on "texinfo"
 
+  uses_from_macos "curl"
+
   # Dependencies use Fortran, leading to spurious messages about GCC
   cxxstdlib_check :skip
 

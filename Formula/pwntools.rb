@@ -16,6 +16,8 @@ class Pwntools < Formula
   depends_on "openssl@1.1"
   depends_on "python@3.8"
 
+  uses_from_macos "libffi"
+
   conflicts_with "moreutils", :because => "Both install `errno` binaries"
 
   resource "appdirs" do

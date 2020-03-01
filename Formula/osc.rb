@@ -18,6 +18,8 @@ class Osc < Formula
   depends_on "openssl@1.1"
   depends_on "python"
 
+  uses_from_macos "curl"
+
   resource "M2Crypto" do
     url "https://files.pythonhosted.org/packages/74/18/3beedd4ac48b52d1a4d12f2a8c5cf0ae342ce974859fba838cbbc1580249/M2Crypto-0.35.2.tar.gz"
     sha256 "4c6ad45ffb88670c590233683074f2440d96aaccb05b831371869fc387cbd127"

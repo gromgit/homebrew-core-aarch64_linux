@@ -11,6 +11,8 @@ class Perl < Formula
     sha256 "73e7650fd86f600e3342cd14491e632c0bae0c541476ab5c30b4409deedf7664" => :high_sierra
   end
 
+  uses_from_macos "expat"
+
   # Prevent site_perl directories from being removed
   skip_clean "lib/perl5/site_perl"
 

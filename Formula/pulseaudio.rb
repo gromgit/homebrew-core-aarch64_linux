@@ -28,6 +28,10 @@ class Pulseaudio < Formula
   depends_on "openssl@1.1"
   depends_on "speexdsp"
 
+  uses_from_macos "perl" => :build
+  uses_from_macos "expat"
+  uses_from_macos "m4"
+
   def install
     args = %W[
       --disable-dependency-tracking

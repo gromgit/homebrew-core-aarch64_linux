@@ -17,6 +17,9 @@ class PostgresqlAT10 < Formula
   depends_on "openssl@1.1"
   depends_on "readline"
 
+  uses_from_macos "libxslt"
+  uses_from_macos "perl"
+
   def install
     # avoid adding the SDK library directory to the linker search path
     ENV["XML2_CONFIG"] = "xml2-config --exec-prefix=/usr"

@@ -23,6 +23,10 @@ class Pypy3 < Formula
   depends_on "tcl-tk"
   depends_on "xz"
 
+  uses_from_macos "expat"
+  uses_from_macos "unzip"
+  uses_from_macos "zlib"
+
   # packaging depends on pyparsing
   resource "pyparsing" do
     url "https://files.pythonhosted.org/packages/a2/56/0404c03c83cfcca229071d3c921d7d79ed385060bbe969fde3fd8f774ebd/pyparsing-2.4.6.tar.gz"

@@ -22,6 +22,10 @@ class Pypy < Formula
   depends_on "sqlite"
   depends_on "tcl-tk"
 
+  uses_from_macos "expat"
+  uses_from_macos "unzip"
+  uses_from_macos "zlib"
+
   resource "bootstrap" do
     url "https://bitbucket.org/pypy/pypy/downloads/pypy2.7-v7.3.0-osx64.tar.bz2"
     version "7.3.0"
