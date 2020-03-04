@@ -3,6 +3,7 @@ class Armadillo < Formula
   homepage "https://arma.sourceforge.io/"
   url "https://downloads.sourceforge.net/project/arma/armadillo-9.850.1.tar.xz"
   sha256 "d4c389b9597a5731500ad7a2656c11a6031757aaaadbcafdea5cc8ac0fd2c01f"
+  revision 1
 
   bottle do
     cellar :any
@@ -18,6 +19,8 @@ class Armadillo < Formula
   depends_on "szip"
 
   def install
+    ENV.prepend "CXXFLAGS", "-DH5_USE_110_API -DH5Ovisit_vers=1"
+
     system "cmake", ".", "-DDETECT_HDF5=ON", *std_cmake_args
     system "make", "install"
   end
