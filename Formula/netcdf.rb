@@ -3,7 +3,7 @@ class Netcdf < Formula
   homepage "https://www.unidata.ucar.edu/software/netcdf"
   url "https://www.unidata.ucar.edu/downloads/netcdf/ftp/netcdf-c-4.7.3.tar.gz"
   sha256 "8e8c9f4ee15531debcf83788594744bd6553b8489c06a43485a15c93b4e0448b"
-  revision 1
+  revision 2
   head "https://github.com/Unidata/netcdf-c.git"
 
   bottle do
