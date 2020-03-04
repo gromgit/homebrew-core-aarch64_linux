@@ -3,6 +3,7 @@ class Kallisto < Formula
   homepage "https://pachterlab.github.io/kallisto/"
   url "https://github.com/pachterlab/kallisto/archive/v0.46.1.tar.gz"
   sha256 "492ef081395e8858fcd9832aceb8b61c79358f00afb45e6709146c0fb51dd231"
+  revision 1
 
   bottle do
     cellar :any
