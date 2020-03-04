@@ -3,7 +3,7 @@ class Csound < Formula
   homepage "https://csound.com"
   url "https://github.com/csound/csound/archive/6.14.0.tar.gz"
   sha256 "bef349c5304b2d3431ef417933b4c9e9469c0a408a4fa4a98acf0070af360a22"
-  revision 1
+  revision 2
   head "https://github.com/csound/csound.git", :branch => "develop"
 
   bottle do
@@ -54,6 +54,7 @@ class Csound < Formula
 
   def install
     ENV["JAVA_HOME"] = Formula["openjdk"].opt_libexec/"openjdk.jdk/Contents/Home"
+    ENV.prepend "CFLAGS", "-DH5_USE_110_API -DH5Oget_info_vers=1"
 
     resource("ableton-link").stage { cp_r "include/ableton", buildpath }
     resource("getfem").stage { cp_r "src/gmm", buildpath }
