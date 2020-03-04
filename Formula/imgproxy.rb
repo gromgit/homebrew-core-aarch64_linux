@@ -3,6 +3,7 @@ class Imgproxy < Formula
   homepage "https://imgproxy.net"
   url "https://github.com/imgproxy/imgproxy/archive/v2.10.1.tar.gz"
   sha256 "3d9458dff70f6ca7dec54996aad7115ffdb0315323814a3a942f773f770b7bc9"
+  revision 1
   head "https://github.com/imgproxy/imgproxy.git"
 
   bottle do
