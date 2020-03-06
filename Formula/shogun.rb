@@ -5,7 +5,7 @@ class Shogun < Formula
       :tag      => "shogun_6.1.4",
       :revision => "ab274e7ab6bf24dd598c1daf1e626cb686d6e1cc"
   sha256 "57169dc8c05b216771c567b2ee2988f14488dd13f7d191ebc9d0703bead4c9e6"
-  revision 4
+  revision 5
 
   bottle do
     sha256 "bd8fab03b4b3f86505ddf35aa9a6e6b050d3ae21f6d674370544aa266354e095" => :catalina
