@@ -8,9 +8,9 @@ class Pipx < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d6c9dab20b253977ac72203b446a09e670d3d7f5dfea95fa12d497b423a92792" => :catalina
-    sha256 "d6c9dab20b253977ac72203b446a09e670d3d7f5dfea95fa12d497b423a92792" => :mojave
-    sha256 "d6c9dab20b253977ac72203b446a09e670d3d7f5dfea95fa12d497b423a92792" => :high_sierra
+    sha256 "f4781a09226e569086181e0be7928bc686309cbc6ef0bef916f829ffe7d71a7a" => :catalina
+    sha256 "f4781a09226e569086181e0be7928bc686309cbc6ef0bef916f829ffe7d71a7a" => :mojave
+    sha256 "f4781a09226e569086181e0be7928bc686309cbc6ef0bef916f829ffe7d71a7a" => :high_sierra
   end
 
   depends_on "python@3.8"
