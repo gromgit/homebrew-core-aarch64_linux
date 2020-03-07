@@ -15,7 +15,7 @@ class Gcovr < Formula
   depends_on "python@3.8"
 
   uses_from_macos "libxml2"
-  uses_From_macos "libxslt"
+  uses_from_macos "libxslt"
 
   resource "Jinja2" do
     url "https://files.pythonhosted.org/packages/d8/03/e491f423379ea14bb3a02a5238507f7d446de639b623187bccc111fbecdf/Jinja2-2.11.1.tar.gz"
