@@ -3,6 +3,7 @@ class Pypy3 < Formula
   homepage "https://pypy.org/"
   url "https://bitbucket.org/pypy/pypy/downloads/pypy3.6-v7.3.0-src.tar.bz2"
   sha256 "48d12c15fbcbcf4a32882a883195e1f922997cde78e7a16d4342b9b521eefcfa"
+  head "https://foss.heptapod.net/pypy/pypy", :using => :hg, :branch => "py3.7"
 
   bottle do
     cellar :any
