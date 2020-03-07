@@ -5,10 +5,10 @@ class Sn0int < Formula
   sha256 "12dfe19d2734a8c8c3bcd4e8e9a43e5ae58cab61cc980b7fe6fe9526e7933074"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "f1c6fee55547c0776a5979f97de99c1da8ac48c36ed842b033914f936eae465f" => :catalina
-    sha256 "b2b0812e1d2c66f8f5f101b2690f424ff9bb3dac5f822d215ba62330392a6e83" => :mojave
-    sha256 "b648960d804ed3f06b6e0f711608ecdd361dc84e867b193d9a30aecb2f294484" => :high_sierra
+    cellar :any
+    sha256 "893af4c7e2bad62e59bfc8ecad812baf7c5630d6b2f9470c620417a9dad8cd06" => :catalina
+    sha256 "57bd8645954f7cc0b391820870cd94d69ecd43d28bae19bcbd8fa7229fefd0a3" => :mojave
+    sha256 "ffab33f71178f5537604f5b1be6fbed0d522d91414ac839e9c63907199d7d979" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
