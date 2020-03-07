@@ -6,9 +6,9 @@ class Libdazzle < Formula
 
   bottle do
     cellar :any
-    sha256 "dabdfe35df5b7ffe01e6e89818fbeee63c4f2dd861e7f0091587480f91614908" => :catalina
-    sha256 "3853e35d4389a5db4ed3f403d8dd161c67935aaf17d524bc2dd878675ea4aaea" => :mojave
-    sha256 "5830058a3a0e84af35143d052dacaf41e04229e5ba31847e31982e2b9fdaed7b" => :high_sierra
+    sha256 "2bfc647ec712a7b949e5356bc9a1d13f28154ca71ca89e5dd020ddb8d2de3182" => :catalina
+    sha256 "c00b9764eaa408bbc4881ff581225cc8a15f51ac568e057c2228315df9c89f00" => :mojave
+    sha256 "f9cbbdc898a2ad09a14664cfddb0775b44fabdc88a06d967a6481a1f27421f41" => :high_sierra
   end
 
   depends_on "gobject-introspection" => :build
