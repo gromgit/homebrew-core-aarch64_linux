@@ -15,6 +15,9 @@ class Vala < Formula
   depends_on "graphviz"
   depends_on "pkg-config"
 
+  uses_from_macos "bison" => :build
+  uses_from_macos "flex" => :build
+
   def install
     system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",

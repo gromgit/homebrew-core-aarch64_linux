@@ -19,6 +19,8 @@ class Ttyd < Formula
   depends_on "libwebsockets"
   depends_on "openssl@1.1"
 
+  uses_from_macos "vim"
+
   def install
     system "cmake", ".",
                     *std_cmake_args,

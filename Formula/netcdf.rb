@@ -16,6 +16,8 @@ class Netcdf < Formula
   depends_on "gcc" # for gfortran
   depends_on "hdf5"
 
+  uses_from_macos "curl"
+
   resource "cxx" do
     url "https://github.com/Unidata/netcdf-cxx4/archive/v4.3.0.tar.gz"
     sha256 "25da1c97d7a01bc4cee34121c32909872edd38404589c0427fefa1301743f18f"

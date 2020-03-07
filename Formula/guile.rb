@@ -18,6 +18,7 @@ class Guile < Formula
     depends_on "autoconf" => :build
     depends_on "automake" => :build
     depends_on "gettext" => :build
+    uses_from_macos "flex" => :build
   end
 
   depends_on "gnu-sed" => :build

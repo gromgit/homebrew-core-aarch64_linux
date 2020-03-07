@@ -14,6 +14,7 @@ class Nss < Formula
   depends_on "nspr"
 
   uses_from_macos "sqlite"
+  uses_from_macos "zlib"
 
   def install
     ENV.deparallelize

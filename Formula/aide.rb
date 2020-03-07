@@ -23,6 +23,7 @@ class Aide < Formula
   depends_on "pcre"
 
   uses_from_macos "bison" => :build
+  uses_from_macos "flex" => :build
   uses_from_macos "curl"
 
   def install
