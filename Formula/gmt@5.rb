@@ -5,7 +5,7 @@ class GmtAT5 < Formula
   mirror "https://mirrors.ustc.edu.cn/gmt/gmt-5.4.5-src.tar.xz"
   mirror "https://fossies.org/linux/misc/GMT/gmt-5.4.5-src.tar.xz"
   sha256 "225629c7869e204d5f9f1a384c4ada43e243f83e1ed28bdca4f7c2896bf39ef6"
-  revision 2
+  revision 3
 
   bottle do
     sha256 "86a610574fd32cf272d0d0a31bdc6524aab2e3152a21a880f5d21ad80e540e50" => :catalina
