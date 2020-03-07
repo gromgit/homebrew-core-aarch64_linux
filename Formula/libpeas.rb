@@ -1,8 +1,8 @@
 class Libpeas < Formula
   desc "GObject plugin library"
   homepage "https://developer.gnome.org/libpeas/stable/"
-  url "https://download.gnome.org/sources/libpeas/1.24/libpeas-1.24.1.tar.xz"
-  sha256 "9c3acf7a567cbb4f8bf62b096e013f12c3911cc850c3fa9900cbd5aa4f6ec284"
+  url "https://download.gnome.org/sources/libpeas/1.26/libpeas-1.26.0.tar.xz"
+  sha256 "a976d77e20496479a8e955e6a38fb0e5c5de89cf64d9f44e75c2213ee14f7376"
 
   bottle do
     sha256 "0b0f838272f0a44cb81c70fffb984a054a12ea63f6b515aab1f1158bc96bad1b" => :catalina
@@ -19,12 +19,6 @@ class Libpeas < Formula
   depends_on "gtk+3"
   depends_on "pygobject3"
   depends_on "python"
-
-  # patch submitted upstream as https://gitlab.gnome.org/GNOME/libpeas/merge_requests/22
-  patch do
-    url "https://gitlab.gnome.org/GNOME/libpeas/commit/d5f5749372.diff"
-    sha256 "a46c4229656423de2e277bf5dd96e7f595cee19cc112c10f422c29c960cf4dcc"
-  end
 
   def install
     args = %W[
