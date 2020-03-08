@@ -1,8 +1,8 @@
 class Gjs < Formula
   desc "JavaScript Bindings for GNOME"
   homepage "https://gitlab.gnome.org/GNOME/gjs/wikis/Home"
-  url "https://download.gnome.org/sources/gjs/1.58/gjs-1.58.5.tar.xz"
-  sha256 "e76d99c09f887438b9883e328710b26b3717f6dcdb4097dc7a9bab06ebd7a13a"
+  url "https://download.gnome.org/sources/gjs/1.64/gjs-1.64.0.tar.xz"
+  sha256 "66384cbc6b849ea67ced0ad559d589bb15b5a664bbacc75c9f128416ee8ed66f"
 
   bottle do
     sha256 "35ad8e26ec16220b9adcc56c69d300e461f60ea6bf9f7fe7f7f7693c400a2e4a" => :catalina
@@ -11,26 +11,34 @@ class Gjs < Formula
   end
 
   depends_on "autoconf@2.13" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
+  depends_on "rust" => :build
   depends_on "gobject-introspection"
   depends_on "gtk+3"
+  depends_on "llvm"
   depends_on "nspr"
   depends_on "readline"
 
-  resource "mozjs60" do
-    url "https://archive.mozilla.org/pub/firefox/releases/60.1.0esr/source/firefox-60.1.0esr.source.tar.xz"
-    sha256 "a4e7bb80e7ebab19769b2b8940966349136a99aabd497034662cffa54ea30e40"
+  resource "mozjs68" do
+    url "https://archive.mozilla.org/pub/firefox/releases/68.5.0esr/source/firefox-68.5.0esr.source.tar.xz"
+    sha256 "52e784f98a37624e8b207f1b23289c2c88f66dd923798cae891a586a6d94a6d1"
   end
 
   def install
     ENV.cxx11
     ENV["_MACOSX_DEPLOYMENT_TARGET"] = ENV["MACOSX_DEPLOYMENT_TARGET"]
 
-    resource("mozjs60").stage do
+    resource("mozjs68").stage do
       inreplace "config/rules.mk",
                 "-install_name $(_LOADER_PATH)/$(SHARED_LIBRARY) ",
                 "-install_name #{lib}/$(SHARED_LIBRARY) "
       inreplace "old-configure", "-Wl,-executable_path,${DIST}/bin", ""
+      inreplace "build/moz.configure/toolchain.configure",
+                "sdk_max_version = Version('10.14')",
+                "sdk_max_version = Version('10.16')"
+
       mkdir("build") do
         ENV["PYTHON"] = "python"
         system "../js/src/configure", "--prefix=#{prefix}",
@@ -39,9 +47,7 @@ class Gjs < Formula
                               "--with-system-icu",
                               "--enable-readline",
                               "--enable-shared-js",
-                              "--with-pthreads",
                               "--enable-optimize",
-                              "--enable-pie",
                               "--enable-release",
                               "--with-intl-api",
                               "--disable-jemalloc",
@@ -62,14 +68,23 @@ class Gjs < Formula
       rm "#{lib}/libjs_static.ajs"
     end
 
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--without-dbus-tests",
-                          "--disable-profiler",
-                          "--disable-schemas-compile",
-                          "--prefix=#{prefix}"
-    system "make", "install"
+    # ensure that we don't run the meson post install script
+    ENV["DESTDIR"] = "/"
+
+    args = %W[
+      --prefix=#{prefix}
+      -Dprofiler=disabled
+      -Dinstalled_tests=false
+      -Dbsymbolic_functions=false
+      -Dskip_dbus_tests=true
+      -Dskip_gtk_tests=true
+    ]
+
+    mkdir "build" do
+      system "meson", *args, ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
   end
 
   def post_install
