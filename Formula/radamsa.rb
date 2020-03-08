@@ -6,11 +6,9 @@ class Radamsa < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "564db494dea6ccbfaf2d8c3d084c14d45932874e5e324f0ecfde1c00414101e5" => :catalina
-    sha256 "0d267d4e20c85e8da62cc4efadb2cf22386ecd9e87c23a0d1c46ff06a483bf4f" => :mojave
-    sha256 "a971e3bf09f3854d724549a31b98854458b8c49cdfd88593fb14c380066d7bc1" => :high_sierra
-    sha256 "d13369632654e12471ff029aa6c08f57e9572df60b9d5b18040ce341ca8b4b09" => :sierra
-    sha256 "3b09d787e73444964136ab042bc458610eb4cf08f4ba015cbe7e1d13ab8509f5" => :el_capitan
+    sha256 "97fe42099e0b4278519ee560af5a38dd0cb5055e7542cd892d4c4f96d93960c5" => :catalina
+    sha256 "a4d9d9e07ff76b8bb51333a04d645ea0213663dc635bdea890b1cffb7f2e6543" => :mojave
+    sha256 "82d2231dcb25adb55f62690bd34d2b4b8978a3d22b956c0f0f2e20640d31c7a0" => :high_sierra
   end
 
   resource "owl" do
