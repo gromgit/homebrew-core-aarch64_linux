@@ -5,6 +5,13 @@ class CfrDecompiler < Formula
   sha256 "6d1883710ed1585cc4b675bc0d56b87351aff14dfc74270790b7bb3ff8f79743"
   head "https://github.com/leibnitz27/cfr.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "35b88d41ddbd0229f956d06a3b98e05dd6ab679bf54de808a9df272a8c2d133b" => :catalina
+    sha256 "f8fb1fa876f5fe62e99cd86d9adbfd618640ff6e1a7018bce7098669f6869802" => :mojave
+    sha256 "74d5486e47c43e6e58c007f6f2f7144b50ece8da29dd259645e9bc021fb433cb" => :high_sierra
+  end
+
   depends_on "maven" => :build
   depends_on "openjdk"
 
