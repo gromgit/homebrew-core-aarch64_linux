@@ -8,9 +8,9 @@ class PreCommit < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "24692c6d05f9e60b6ffb29ea6f110de52ecf6929bd8b3569e72c10d121059093" => :catalina
-    sha256 "fcba832e25006b372b25d92fecafbfbce3fe415d9aa80973c98c3b1645cf23bb" => :mojave
-    sha256 "239b6b495d41b65e5746d3fce4a4866c5c24d04ff67ddd15d9c2bf7a1a0a5828" => :high_sierra
+    sha256 "19edc7767d3773b8d163e9425c1743929fcd13e8225189b269a8233a1f91388c" => :catalina
+    sha256 "71ae720d396e735387c22ff024d224cedb708ef7198cb248c7d065942c03cff2" => :mojave
+    sha256 "06e8911ccc3018eca8b39e624c380313ead9d28fbb79f5d7364a7260a3cb27c5" => :high_sierra
   end
 
   # To avoid breaking existing git hooks when we update Python,
