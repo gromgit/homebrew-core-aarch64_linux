@@ -9,10 +9,9 @@ class Nethack < Formula
   head "https://github.com/NetHack/NetHack.git"
 
   bottle do
-    rebuild 1
-    sha256 "32ce4c30778ee034641e0659aa351b1d8db9ac41fd6bc10bf3de590d600b57ca" => :catalina
-    sha256 "a987ad9df89f765d3d2b8451c4cfbdd6728e64b3fb239d5b2af6da76a706460b" => :mojave
-    sha256 "4ee79f011195859ee87569c6d7080d438d9e7d23e4a096a437187da8479cc126" => :high_sierra
+    sha256 "69418bfcba43b656118140a7e50992772567c4c2ab4827ce0af343892a149945" => :catalina
+    sha256 "4d186d190dcab9cc719a3868aa73a6c311407f8c1510e1d3bfd185a8070177bc" => :mojave
+    sha256 "6b6b5eb3571c69d31ac0c88f42acae3cea5f42ec513bafd03960db8c9f994177" => :high_sierra
   end
 
   uses_from_macos "bison" => :build
