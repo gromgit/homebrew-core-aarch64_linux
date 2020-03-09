@@ -25,6 +25,7 @@ class Pypy3 < Formula
   depends_on "xz"
 
   uses_from_macos "expat"
+  uses_from_macos "libffi"
   uses_from_macos "unzip"
   uses_from_macos "zlib"
 
