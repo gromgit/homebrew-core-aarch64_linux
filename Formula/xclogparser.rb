@@ -4,6 +4,12 @@ class Xclogparser < Formula
   url "https://github.com/spotify/XCLogParser/archive/0.2.8.tar.gz"
   sha256 "d8368a561c8e3d4a7ce049feaa5f6bc6fbda532c8c0cc8bc44feab61c9aab0f9"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "09deffa507cad0f4e5943b6d7ac5c9c4b3885c650c8db847dbd6e35d51e4f68b" => :catalina
+    sha256 "421a24fecdc48fe1c6b3f9b59b59c08ac1e7ca3679c9fa4b221172c2c59a5f48" => :mojave
+  end
+
   depends_on :xcode => "11.0"
 
   resource "test_log" do
