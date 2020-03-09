@@ -5,6 +5,12 @@ class SwiftFormat < Formula
   version "5.1"
   head "https://github.com/apple/swift-format.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "78116d711e3e5b5fc5bc08ee95db22583636a9bb17932a59236e02b1ffa3f3da" => :catalina
+    sha256 "bab43b73e8322b8acf5478f282bc6b8f019632569dfb0f487715c2633ba869c8" => :mojave
+  end
+
   depends_on :xcode => ["11.0", :build]
 
   def install
