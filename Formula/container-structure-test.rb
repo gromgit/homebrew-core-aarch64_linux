@@ -6,6 +6,13 @@ class ContainerStructureTest < Formula
       :revision => "19abf36d1451cb27f8e0f5ec8260815c73184bd4"
   head "https://github.com/GoogleContainerTools/container-structure-test.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "c9b6726618230718c7d0b72ae27b888a5c9581f15835434df67732bcf1f8cf5d" => :catalina
+    sha256 "db5abb38170c2fb7cb003463900d080dfde77e469d6134f7d1b4dcd98c38db2c" => :mojave
+    sha256 "9e5641996fac66e5e9eb85816db964655777f82cff47d332bbaebf5e13c4d62b" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   # Small Docker image to run tests against
