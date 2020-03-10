@@ -5,10 +5,10 @@ class Kallisto < Formula
   sha256 "c447ca8ddc40fcbd7d877d7c868bc8b72807aa8823a8a8d659e19bdd515baaf2"
 
   bottle do
-    cellar :any
-    sha256 "b4607b4f7c8ab90d206737c8373bdb23f30c2324e06312715562b6316aea7740" => :catalina
-    sha256 "e11e83e697ca5c7854b2a8b981f5ab3fb24040b55d4e926aa33051ea792a72ce" => :mojave
-    sha256 "afc1a45d8696b4c134a09098bac7641add23116f824f069e79ea9431f1267a37" => :high_sierra
+    cellar :any_skip_relocation
+    sha256 "7ef1f941663072b0a57597992acf8203ba3664129f305cb8626c0c346e51bf0c" => :catalina
+    sha256 "b2e59c1cc0fc1b07d02bab1cbc1533bcca1edf4bc0b81791d5ac597a7b84cce0" => :mojave
+    sha256 "8491424ec8d4f8e170315e13c5f3bb92895b608c9c7108f260459e06bbbf73f9" => :high_sierra
   end
 
   depends_on "autoconf" => :build
