@@ -6,9 +6,9 @@ class MysqlConnectorCxx < Formula
 
   bottle do
     cellar :any
-    sha256 "96a111e160d5679d219db4a6a6a8814c639fa7fdf90ecd3e4e5a5d9f2a1adbf8" => :catalina
-    sha256 "593b8b076c869e9e7dac19950656d338ee54db5b364186d949ae6c1b7c63ebcb" => :mojave
-    sha256 "c5b39ffed5a049ad6ab5d3e0ab201e5422840c48e648dc74ff57ecbb02702145" => :high_sierra
+    sha256 "fbcc82091507f2c2afa293d37fd4555bad913658bc45cbc918eefdec51fbd851" => :catalina
+    sha256 "dc606f49cbc462260d7b6393516ca83fbc2ef5c27ef0c03eb07e1d1b87ebb410" => :mojave
+    sha256 "f40d21c435aa17de9c63d4759b40cc36fb7fcdd371f01f23f6755aebec6d956b" => :high_sierra
   end
 
   depends_on "boost" => :build
