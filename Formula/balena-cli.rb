@@ -4,8 +4,8 @@ class BalenaCli < Formula
   desc "The official balena CLI tool"
   homepage "https://www.balena.io/docs/reference/cli/"
   # Frequent upstream releases, do not update more than once a week
-  url "https://registry.npmjs.org/balena-cli/-/balena-cli-11.28.11.tgz"
-  sha256 "fdfd92badf5dbd02dd85207edb9239be798b1f2972bf5f04d49357c7ed61199a"
+  url "https://registry.npmjs.org/balena-cli/-/balena-cli-11.28.14.tgz"
+  sha256 "55c8790a36d324bc9fe4b336f49f297e7294fcbdba41f2cbd26631393c415b5e"
 
   bottle do
     sha256 "533765eb2b21606d0b4acf44fb72079919b441f80533570eb2cc54e21fbd4411" => :catalina
