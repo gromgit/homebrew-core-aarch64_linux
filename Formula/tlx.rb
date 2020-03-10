@@ -4,6 +4,13 @@ class Tlx < Formula
   url "https://github.com/tlx/tlx/archive/v0.5.20191212.tar.gz"
   sha256 "5e67d3042a390dbb831b6d46437e3c7fadf738bff362aa7376b210b10ecd532d"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "5feb247e39d672770af736845dcf642619eaef47816252f085a855e61479b258" => :catalina
+    sha256 "d9306942815fa8499df14ad4e5de524acd0fb85ce3055ae344be4bce10720dfb" => :mojave
+    sha256 "37a9d67e4cc9a36137d339bd7ebebcc2a351ff3bff631dd0d358db03cf8a6e2a" => :high_sierra
+  end
+
   depends_on "cmake" => :build
 
   def install
