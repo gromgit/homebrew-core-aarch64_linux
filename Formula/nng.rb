@@ -5,9 +5,9 @@ class Nng < Formula
   sha256 "e8fe50d0f79ec3243733f8b4c25099c88b2597ed1bb0d94a27c4385a2a24ecac"
 
   bottle do
-    sha256 "563fbcedf8519b6fa5c3c328065d068f5f76174030ad8afbb0e499490585300e" => :catalina
-    sha256 "170e88bbd66c2692f665c7e2ec03d6287a0ac5a1d61a4cd40452b2e9d7c78375" => :mojave
-    sha256 "418d463185fef90d0952b7b773c12eae587b75b0438d9154d0cc1564f242465d" => :high_sierra
+    sha256 "feea9c352fd19ca9d625a4b64458a7b7cedd3d027e2c1065dfdede3f4cdd81e7" => :catalina
+    sha256 "832c27a3418c241ec128f93ccb395c21a53de85942bacf91eb110456500c9294" => :mojave
+    sha256 "79f4d2e9a49be6044dde80c90b7ebb0cb781b86ece50bfb2cdab11c401b70244" => :high_sierra
   end
 
   depends_on "asciidoctor" => :build
