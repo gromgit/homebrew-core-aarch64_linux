@@ -6,9 +6,9 @@ class Faiss < Formula
 
   bottle do
     cellar :any
-    sha256 "fd642e2ffd4b59242131707b9fd83eb0b8cd2299e33e9d6d81e6e8627ff4186c" => :catalina
-    sha256 "6520670d92974efc45dad09c56e3348021601154438bed8d40a8b8e86f23493a" => :mojave
-    sha256 "e8cb0c3cdc94b90b59b64c918519d3c657e7bae66af63c99a8f6636b20edc578" => :high_sierra
+    sha256 "2ed35e49a096403ccf38e721a9d76aee9690ecf307bf9279fe56e158933d22bc" => :catalina
+    sha256 "6e4c9e7c66c700cbce22296fb258ec6e779118acef74741e1bfcadab389634a7" => :mojave
+    sha256 "2ca185b2dc508c2d8b7a3f44779a603c199db50000da6aea6ac66c802f3867cc" => :high_sierra
   end
 
   depends_on "libomp"
