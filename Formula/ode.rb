@@ -7,9 +7,9 @@ class Ode < Formula
 
   bottle do
     cellar :any
-    sha256 "794406d650c7ec28b44c593f68079eb4cdf21ccb7b86abec7060bb914b678dad" => :catalina
-    sha256 "b4307a7a46c67cb8b4197dd196c11e497db5d4fc0603082ae19dc7120cd1b539" => :mojave
-    sha256 "d03fd05d9762eaf7373c1502db1a21dc34028c880e713068ae0dc313de0a4b3e" => :high_sierra
+    sha256 "52166ed37f90857e9709d01acf6f3584583ea744572fc3e75edce902515e2575" => :catalina
+    sha256 "709bab4820a1c67a426e89e3fdc2839c04f57350260c783c6ceb05f2af6c23ea" => :mojave
+    sha256 "b5d9873c81f9c5ad4ebae396568dfb4476d688a94df04b7cb53b80646ed07357" => :high_sierra
   end
 
   depends_on "autoconf" => :build
