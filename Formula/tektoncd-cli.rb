@@ -7,9 +7,9 @@ class TektoncdCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d9b6d238321b849c11cd0ce4b498f6f999626c5e93b3bac8ad98d185b2ef7d28" => :catalina
-    sha256 "af674ab002d471996f266faf60585d7c4a5a673dbbf4d44cc0c4dd84e78ea8bb" => :mojave
-    sha256 "f1ef3174a5185d84256c33b8e6b7d1da791e51da53e4f549afd266b66a6bb763" => :high_sierra
+    sha256 "957f2b7fca0ca4dd9771424414d487bf17a99cfec72287ae8ea8f890e7436902" => :catalina
+    sha256 "ae2e0d06f6a7469e8203a0116aa134d2cf6d5061acb7cbda4c4d42fa377a2201" => :mojave
+    sha256 "a4a0f3b056562799e295f4571058f9139af9783fb7d3fb38a1ae93b912d983ee" => :high_sierra
   end
 
   depends_on "go" => :build
