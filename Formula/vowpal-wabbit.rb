@@ -9,9 +9,9 @@ class VowpalWabbit < Formula
 
   bottle do
     cellar :any
-    sha256 "f29120d5ead6004092ef340cd1323a7eeb79f4590d3189a3be1297a2ca4ca241" => :catalina
-    sha256 "93c20c6cef498c1150dcfe4699a91bc546189c23ef9df59f63ffc1bbf64c671f" => :mojave
-    sha256 "faf86d45ebc60e3101619d2ae6523a48dff56b71d996503101eb4690296ea379" => :high_sierra
+    sha256 "14bf560d18a525706b02d772490c872954a32d27e6f2e4f725b2ea59ac208d63" => :catalina
+    sha256 "12060ab224e4e75dbb280261375e9ebf7c36ea076c14ffc350d122e3fa8192f2" => :mojave
+    sha256 "1648aa305c1c1cd2428decae5b1815c5c4aba2ae3b074c03dcc2c7ec1e9e135d" => :high_sierra
   end
 
   depends_on "cmake" => :build
