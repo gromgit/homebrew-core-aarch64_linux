@@ -7,10 +7,9 @@ class SwitchLanPlay < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "a04c4d8d196c9777c5cf03fab67cb5dc94b5f2890396ed38559ff1147182fab6" => :catalina
-    sha256 "be0f9d8661c0c8ce72abcc42dcd67a2e34bcd23fdd3cee01bf2a7f60690d2146" => :mojave
-    sha256 "aed551064a4fca5c96d1059020d0cde04c49f72d5b90ee29280137e8f26f93a7" => :high_sierra
-    sha256 "fa6f336a8bd322bfb4bfe9bf47f0705fdf37658719eb3c03252e5532ed71c554" => :sierra
+    sha256 "c8e615d0b5acbbd3696f283b5824fab39ae8888c283b65bbf2aa7049080061b4" => :catalina
+    sha256 "3dc79868207b00d684f176a84f7539e6cd7fc3ddca9f37ac492dd160b9e5db28" => :mojave
+    sha256 "9db070fc867633a50f08051962f978895f087a9d29efd6b1c9e2879ba8c830a2" => :high_sierra
   end
 
   depends_on "cmake" => :build
