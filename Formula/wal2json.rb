@@ -6,9 +6,9 @@ class Wal2json < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9e0bded8e6dd112a6b7499df6b6896330f6531d4a7672be3034b498dcb645a22" => :catalina
-    sha256 "0477ae37c209fc5f1943d657b369feb5207c4ab025ed938a3a72a5d5d8560906" => :mojave
-    sha256 "f6839489b2a141242fcecf5b8d795ac352670033ca929e036f19e0192632ec78" => :high_sierra
+    sha256 "42b1a5750f76ffbfacea68627b00a3214ea223248a57c4cbe724d6eee29b8a30" => :catalina
+    sha256 "9e78eea7cbd7c41ed6e9951860065d41e931e3e4dcf25fe84b86fa6f3fa0df2a" => :mojave
+    sha256 "b1f7dd1f7fdddad511b41ef6b94f67194edca1f37fdf435a013a3f3065796512" => :high_sierra
   end
 
   depends_on "postgresql"
