@@ -7,9 +7,9 @@ class Terrahelp < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "27b3df54ff8a7eadd2d0eefaae0036da26e0c0c5cdeb917b9b278c1d5346e1c6" => :catalina
-    sha256 "9277377d2e0970ff628d0a0bfd8d67d701c588b0357c5b38bca24d70d0b102de" => :mojave
-    sha256 "5c44b6ad3f3616681ed6408eb2c28f8e4e2e3e7a81a1694f464ea6507b5a531f" => :high_sierra
+    sha256 "515040f845a9eb85328f110610d2bc31837771c79828c6979eeddb5c885aac8b" => :catalina
+    sha256 "f195506118d3fca9b4b0555e9aef67c4e831053a943fade0580793aa5e89139a" => :mojave
+    sha256 "df53d2e287ce9b9b31facff22d50b4181704045e9611ebfb363461025cf1eb8f" => :high_sierra
   end
 
   depends_on "go" => :build
