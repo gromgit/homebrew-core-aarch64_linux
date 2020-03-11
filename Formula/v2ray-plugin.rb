@@ -7,9 +7,9 @@ class V2rayPlugin < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "728d56c34b8137617210a56f02e2736151e98b0b8db88d8f88de98c66549013d" => :catalina
-    sha256 "c21140db9ed1c21fed0290864f4c1403197afc5f297b00fa516f57bdb28583c4" => :mojave
-    sha256 "03c96ba653433c2d38f77b9ae357e2e5018a0bdedd598e09784d395dd51a3b1c" => :high_sierra
+    sha256 "ee3169521266e5bf5140bec4a3bc1ad573d965bb46c23fff22697bc257d9dfb7" => :catalina
+    sha256 "3c74254d3ea548d60bb3f7287ef8109a4cce77434edba3d61ddffa8b43f107a5" => :mojave
+    sha256 "a4f3f9651cba61a169de22cb0e933675baacd7089d8db69f91acf92e3f9e5fab" => :high_sierra
   end
 
   depends_on "go" => :build
