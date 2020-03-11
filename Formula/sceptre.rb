@@ -7,10 +7,10 @@ class Sceptre < Formula
   sha256 "349e51e3bdc96f4f4aea214427f354f738c7658dc9eaa9dd1ffc5120a70a237d"
 
   bottle do
-    cellar :any
-    sha256 "3e9cb526aeb4a6d0bc956d9b29b6cc24fc21cc682381affbac2771e219f05545" => :catalina
-    sha256 "6873fc9abb41027ed7bc53a2b6b3d920790df9df87e29dac5a76e5be183e9dfa" => :mojave
-    sha256 "931cddd4dafe380cb9cd4ac8d13a8e44e1b2a438ac9f39dc7aaf51240fd03d4f" => :high_sierra
+    cellar :any_skip_relocation
+    sha256 "ef4f2e26d77e3bd069878477a87c95f8985b7a736971f46ab7ca65e386df8fa9" => :catalina
+    sha256 "3e22726f0e63bd9425e65ddf4a46a727f8cc63311c048de564e3131ce48e54b2" => :mojave
+    sha256 "1878a124ddbc98577fe7be58ec80c46ed114142abe3082d44a4a59720cf3672a" => :high_sierra
   end
 
   depends_on "python@3.8"
