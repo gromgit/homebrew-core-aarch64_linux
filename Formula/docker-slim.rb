@@ -18,12 +18,14 @@ class DockerSlim < Formula
   def install
     ENV["CGO_ENABLED"] = "0"
     ldflags = "-s -w -X github.com/docker-slim/docker-slim/pkg/version.appVersionTag=#{version}"
-    system "go", "build", "-trimpath", "-ldflags=#{ldflags}", "-o", bin/"docker-slim", "./cmd/docker-slim"
+    system "go", "build", "-trimpath", "-ldflags=#{ldflags}", "-o",
+           bin/"docker-slim", "./cmd/docker-slim"
 
     # docker-slim-sensor is a Linux binary that is used within Docker
     # containers rather than directly on the macOS host.
     ENV["GOOS"] = "linux"
-    system "go", "build", "-trimpath", "-ldflags=#{ldflags}", "-o", bin/"docker-slim-sensor", "./cmd/docker-slim-sensor"
+    system "go", "build", "-trimpath", "-ldflags=#{ldflags}", "-o",
+           bin/"docker-slim-sensor", "./cmd/docker-slim-sensor"
     (bin/"docker-slim-sensor").chmod 0555
   end
 
