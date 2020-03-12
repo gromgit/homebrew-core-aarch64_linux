@@ -4,6 +4,12 @@ class Mockolo < Formula
   url "https://github.com/uber/mockolo/archive/1.1.5.tar.gz"
   sha256 "53c828299311eb315b096e4d687811da49c0a45ab9647535c2879c144b016bbc"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "4eb401eeb9dca2a1067e0c30c05d2ca12158b581cfb778e08659c905d42f0479" => :catalina
+    sha256 "dc848fc644a2830d58bd3eed39706592098b4c4bc52f2d8c740900bcd94846c3" => :mojave
+  end
+
   depends_on :xcode => ["11.0", :build]
 
   def install
