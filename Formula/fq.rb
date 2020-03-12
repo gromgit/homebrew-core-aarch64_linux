@@ -6,9 +6,9 @@ class Fq < Formula
   head "https://github.com/circonus-labs/fq.git"
 
   bottle do
-    sha256 "de903e4f96819780c272902e97e06fa91638746f74a0cca4ac412eead49d0d90" => :mojave
-    sha256 "07321dacbe8386f547c8f7bee1ddcd9551d44268bf77688a1ef353c0c4b5bc87" => :high_sierra
-    sha256 "3c37408415b375b759652ea84f8485f010bbeb84ea84fe4c81c8303b7785e647" => :sierra
+    sha256 "cca321d03043680c3e666e064a22ea8dc68ee65e239160393356f96713b48c47" => :catalina
+    sha256 "d0b2de2159e496bbe939ad72a64ce637551787cb44a4e822372e33c049ee3f6f" => :mojave
+    sha256 "58c430bd24667e0209009d9b3aae0c1fc07e857dc16ec5f19c9b568afeba0d68" => :high_sierra
   end
 
   depends_on "concurrencykit"
