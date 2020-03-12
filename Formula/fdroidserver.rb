@@ -347,7 +347,9 @@ class Fdroidserver < Formula
 
       # avoid triggering "helpful" distutils code that doesn't recognize Xcode 7 .tbd stubs
       ENV.delete "SDKROOT"
-      ENV.append "CFLAGS", "-I#{MacOS.sdk_path}/System/Library/Frameworks/Tk.framework/Versions/8.5/Headers" unless MacOS::CLT.installed?
+      unless MacOS::CLT.installed?
+        ENV.append "CFLAGS", "-I#{MacOS.sdk_path}/System/Library/Frameworks/Tk.framework/Versions/8.5/Headers"
+      end
       venv.pip_install Pathname.pwd
     end
 
