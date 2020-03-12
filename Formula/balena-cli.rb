@@ -21,7 +21,7 @@ class BalenaCli < Formula
   end
 
   test do
-    output = shell_output("#{bin}/balena login --credentials --email johndoe@gmail.com --password secret 2>/dev/null", 1)
-    assert_match "Logging in to balena-cloud.com", output
+    assert_match "Logging in to balena-cloud.com",
+      shell_output("#{bin}/balena login --credentials --email johndoe@gmail.com --password secret 2>/dev/null", 1)
   end
 end
