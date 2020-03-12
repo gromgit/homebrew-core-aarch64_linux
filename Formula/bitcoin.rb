@@ -28,9 +28,7 @@ class Bitcoin < Formula
   depends_on "zeromq"
 
   def install
-    if MacOS.version == :el_capitan && MacOS::Xcode.version >= "8.0"
-      ENV.delete("SDKROOT")
-    end
+    ENV.delete("SDKROOT") if MacOS.version == :el_capitan && MacOS::Xcode.version >= "8.0"
 
     system "./autogen.sh" if build.head?
     system "./configure", "--disable-dependency-tracking",
