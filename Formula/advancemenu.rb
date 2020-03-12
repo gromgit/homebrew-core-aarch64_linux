@@ -5,10 +5,9 @@ class Advancemenu < Formula
   sha256 "3e4628e1577e70a1dbe104f17b1b746745b8eda80837f53fbf7b091c88be8c2b"
 
   bottle do
-    cellar :any
-    sha256 "cddc2110c8f7a94fff740ebb35d9d48fb5b47ccecbf92eedfc5ee28b28bfdd62" => :catalina
-    sha256 "f1f5a182df60bf84339ff741e73dc464b209d87ed50f1b74bc671736eef6e300" => :mojave
-    sha256 "a7e1ea0b085ec97b97bcb8f45ecd4221ad626a530a4d8b6dc1f56a3e85b9cf6a" => :high_sierra
+    sha256 "07f9a82231936429257190078d28ec7313b39dfe9ecf3ed9e82b15fbe1615366" => :catalina
+    sha256 "36ebf0c6727172fa909b933f801986e483892d5cb10c0a2fb27314880d906bd1" => :mojave
+    sha256 "fda952fe67d2c39e57d621b6a1392493a95c8ef62f510f63534f962a97252d26" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
