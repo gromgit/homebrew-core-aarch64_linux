@@ -21,7 +21,8 @@ class AppEngineJava < Formula
 
   test do
     (testpath/"WEB-INF/web.xml").write "<web-app/>"
-    (testpath/"WEB-INF/appengine-web.xml").write "<appengine-web-app><threadsafe>true</threadsafe></appengine-web-app>"
+    (testpath/"WEB-INF/appengine-web.xml").write \
+      "<appengine-web-app><threadsafe>true</threadsafe></appengine-web-app>"
     Process.setsid
     IO.popen("#{bin}/dev_appserver.sh . 2>&1") do |io|
       until $LAST_READ_LINE == "INFO: Dev App Server is now running\n"
