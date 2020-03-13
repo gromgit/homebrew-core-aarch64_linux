@@ -48,7 +48,9 @@ class Tesseract < Formula
     ENV.cxx11
 
     system "./autogen.sh"
-    system "./configure", "--prefix=#{prefix}", "--disable-dependency-tracking", "--datarootdir=#{HOMEBREW_PREFIX}/share"
+    system "./configure", "--prefix=#{prefix}",
+                          "--disable-dependency-tracking",
+                          "--datarootdir=#{HOMEBREW_PREFIX}/share"
 
     system "make"
 
