@@ -25,10 +25,10 @@ class Nethack < Formula
     ENV.O0
 
     cd "sys/unix" do
-      if MacOS.version >= :mojave
-        hintfile = "macosx10.14"
+      hintfile = if MacOS.version >= :mojave
+        "macosx10.14"
       else
-        hintfile = "macosx10.10"
+        "macosx10.10"
       end
 
       # Enable wizard mode for all users
