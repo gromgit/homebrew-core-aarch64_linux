@@ -3,7 +3,7 @@ class Gitg < Formula
   homepage "https://wiki.gnome.org/Apps/Gitg"
   url "https://download.gnome.org/sources/gitg/3.32/gitg-3.32.1.tar.xz"
   sha256 "24a4aabf8a42aa2e783e1fb5996ebb3c2a82a01b9689269f1329517ef124ef5a"
-  revision 1
+  revision 2
 
   bottle do
     sha256 "8bce5e2f13c07040a0e4ac5c1404105f2b8a1b7da26f0d7f136ef130a1a922b3" => :catalina
@@ -29,6 +29,13 @@ class Gitg < Formula
   depends_on "libpeas"
   depends_on "libsecret"
   depends_on "libsoup"
+
+  # Fix libgitg compile on macOS
+  # Remove for next version
+  patch do
+    url "https://gitlab.gnome.org/GNOME/gitg/-/merge_requests/142.patch"
+    sha256 "220314200274e675031b7a5053637f91ff850f0e5a22c1bc442ba12a91b5d6f7"
+  end
 
   def install
     ENV["DESTDIR"] = "/"
