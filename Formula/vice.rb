@@ -41,10 +41,10 @@ class Vice < Formula
       "--enable-external-ffmpeg",
     ]
 
-    if build.head?
-      configure_flags << "--enable-native-gtk3ui"
+    configure_flags << if build.head?
+      "--enable-native-gtk3ui"
     else
-      configure_flags << "--enable-sdlui2"
+      "--enable-sdlui2"
     end
 
     system "./autogen.sh"
