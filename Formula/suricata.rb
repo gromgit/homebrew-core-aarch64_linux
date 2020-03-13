@@ -3,6 +3,7 @@ class Suricata < Formula
   homepage "https://suricata-ids.org/"
   url "https://www.openinfosecfoundation.org/download/suricata-5.0.2.tar.gz"
   sha256 "7f30cac92feeab2a9281b6059b96f9f163dce9aadcc959a6c0b9a2f6d750cee7"
+  revision 1
 
   bottle do
     sha256 "c53984e39929bf1649a63c44ed33ca04d669a9e4214637d4ade862331f004315" => :catalina
