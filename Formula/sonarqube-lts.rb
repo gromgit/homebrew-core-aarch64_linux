@@ -17,7 +17,8 @@ class SonarqubeLts < Formula
 
     libexec.install Dir["*"]
 
-    (bin/"sonar").write_env_script libexec/"bin/macosx-universal-64/sonar.sh", :JAVA_HOME => Formula["openjdk"].opt_prefix
+    (bin/"sonar").write_env_script libexec/"bin/macosx-universal-64/sonar.sh",
+      :JAVA_HOME => Formula["openjdk"].opt_prefix
   end
 
   plist_options :manual => "sonar console"
