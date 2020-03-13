@@ -133,7 +133,8 @@ class Opentsdb < Formula
       begin
         pipe_output("nc localhost 4242 2>&1", "put homebrew.install.test 1356998400 42.5 host=webserver01 cpu=0\n")
 
-        system "#{bin}/tsdb", "query", "1356998000", "1356999000", "sum", "homebrew.install.test", "host=webserver01", "cpu=0"
+        system "#{bin}/tsdb", "query", "1356998000", "1356999000", "sum",
+                              "homebrew.install.test", "host=webserver01", "cpu=0"
       ensure
         Process.kill(9, tsdb_daemon_pid)
       end
