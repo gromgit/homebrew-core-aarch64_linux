@@ -34,11 +34,7 @@ class Ensmallen < Formula
         return 0;
       }
     EOS
-    cxx_with_flags = ENV.cxx.split + ["test.cpp",
-                                      "-std=c++11",
-                                      "-I#{include}",
-                                      "-I#{Formula["armadillo"].opt_lib}/libarmadillo",
-                                      "-o", "test"]
-    system *cxx_with_flags
+    system ENV.cxx, "test.cpp", "-std=c++11", "-I#{include}", "-I#{Formula["armadillo"].opt_lib}/libarmadillo",
+                    "-o", "test"
   end
 end
