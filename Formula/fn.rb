@@ -29,7 +29,9 @@ class Fn < Formula
     pid = fork do
       loop do
         socket = server.accept
-        response = '{"id":"01CQNY9PADNG8G00GZJ000000A","name":"myapp","created_at":"2018-09-18T08:56:08.269Z","updated_at":"2018-09-18T08:56:08.269Z"}'
+        response =
+          '{"id":"01CQNY9PADNG8G00GZJ000000A","name":"myapp",' \
+           '"created_at":"2018-09-18T08:56:08.269Z","updated_at":"2018-09-18T08:56:08.269Z"}'
         socket.print "HTTP/1.1 200 OK\r\n" \
                     "Content-Length: #{response.bytesize}\r\n" \
                     "Connection: close\r\n"
