@@ -44,7 +44,9 @@ class SeleniumServerStandalone < Formula
   end
 
   test do
-    selenium_version = shell_output("unzip -p #{libexec}/selenium-server-standalone-#{version}.jar META-INF/MANIFEST.MF | sed -nEe '/Selenium-Version:/p'")
+    selenium_version =
+      shell_output("unzip -p #{libexec}/selenium-server-standalone-#{version}.jar META-INF/MANIFEST.MF " \
+                   "| sed -nEe '/Selenium-Version:/p'")
     assert_equal "Selenium-Version: #{version}", selenium_version.strip
   end
 end
