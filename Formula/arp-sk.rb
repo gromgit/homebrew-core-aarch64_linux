@@ -4,6 +4,7 @@ class ArpSk < Formula
   url "https://web.archive.org/web/20180223202629/sid.rstack.org/arp-sk/files/arp-sk-0.0.16.tgz"
   mirror "https://pkg.freebsd.org/ports-distfiles/arp-sk-0.0.16.tgz"
   sha256 "6e1c98ff5396dd2d1c95a0d8f08f85e51cf05b1ed85ea7b5bcf73c4ca5d301dd"
+  revision 1
 
   bottle do
     cellar :any
@@ -19,6 +20,10 @@ class ArpSk < Formula
   depends_on "libnet"
 
   def install
+    # libnet 1.2 compatibility - it is API compatible with 1.1.
+    # arp-sk's last update was in 2004.
+    inreplace "configure", "1.1.", "1.2"
+
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
                           "--mandir=#{man}",
