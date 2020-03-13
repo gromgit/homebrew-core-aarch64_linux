@@ -7,9 +7,9 @@ class Gcc < Formula
   head "https://gcc.gnu.org/git/gcc.git"
 
   bottle do
-    sha256 "3d1fed93856370b9857e187c11f8cfe43c0df9a05274a2eaabb1a9e5c7fd9605" => :catalina
-    sha256 "76037262428095ab93360edca037d5b0153cc9a3bde2991d3d09295684c3bd8e" => :mojave
-    sha256 "4a5bad045cdc625c0eddfac21eb90f5c56370aaf186a33612907ca17551d7541" => :high_sierra
+    sha256 "6b84b7dcd0fe04ca70e7cac5dcf35f8a256f5620ddb671a91e10b0bb692f587e" => :catalina
+    sha256 "af7aa4f1aee84374500b1150fe6ce58c381e0f133b4f8cd674955b9d4d22efe8" => :mojave
+    sha256 "75c2a1e504d82b82d0cbbab4be731004077794d4ed7f5f102123001a50909a48" => :high_sierra
   end
 
   # The bottles are built on systems with the CLT installed, and do not work
