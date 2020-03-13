@@ -85,7 +85,9 @@ class Mu < Formula
     find_message_and_related = "#{mu_find} --include-related msgid:2222222222@example.com"
 
     assert_equal 1, shell_output(find_message).lines.count
-    assert_equal 2, shell_output(find_message_and_related).lines.count,
-                 "You tripped over https://github.com/djcb/mu/issues/380\n\t--related doesn't work. Everything else should"
+    assert_equal 2, shell_output(find_message_and_related).lines.count, <<~EOS
+      You tripped over https://github.com/djcb/mu/issues/380
+        --related doesn't work. Everything else should
+    EOS
   end
 end
