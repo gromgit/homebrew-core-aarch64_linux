@@ -5,6 +5,7 @@ class Salt < Formula
   homepage "https://s.saltstack.com/community/"
   url "https://files.pythonhosted.org/packages/28/63/ad60e60c982810d55e23012e2359c96f92694842a476708f44e5d671a9b6/salt-3000.tar.gz"
   sha256 "04fbc64933b375cbbefc9576bcc65167b74d5eec7f58e64d096d67529ea66500"
+  revision 1
   head "https://github.com/saltstack/salt.git", :branch => "develop", :shallow => false
 
   bottle do
@@ -49,6 +50,11 @@ class Salt < Formula
     sha256 "033be54514a03e255df75c5aee8f9e672f663f93abb723444caec8fe43437bde"
   end
 
+  resource "cached-property" do
+    url "https://files.pythonhosted.org/packages/57/8e/0698e10350a57d46b3bcfe8eff1d4181642fd1724073336079cb13c5cf7f/cached-property-1.5.1.tar.gz"
+    sha256 "9217a59f14a5682da7c4b8829deadbfc194ac22e9908ccf7c8820234e80a1504"
+  end
+
   resource "certifi" do
     url "https://files.pythonhosted.org/packages/41/bf/9d214a5af07debc6acf7f3f257265618f1db242a3f8e49a9b516f24523a6/certifi-2019.11.28.tar.gz"
     sha256 "25b64c7da4cd7479594d035c08c2d809eb4aab3a26e5a990ea98cc450c320f1f"
@@ -85,8 +91,8 @@ class Salt < Formula
   end
 
   resource "pygit2" do
-    url "https://files.pythonhosted.org/packages/4c/64/88c2a4eb2d22ca1982b364f41ff5da42d61de791d7eb68140e7f8f7eb721/pygit2-0.28.2.tar.gz"
-    sha256 "4d8c3fbbf2e5793a9984681a94e6ac2f1bc91a92cbac762dbdfbea296b917f86"
+    url "https://files.pythonhosted.org/packages/1d/c4/e0ba65178512a724a86b39565d7f9286c16d7f8e45e2f665973065c4a495/pygit2-1.1.1.tar.gz"
+    sha256 "9255d507d5d87bf22dfd57997a78908010331fc21f9a83eca121a53f657beb3c"
   end
 
   resource "pyzmq" do
