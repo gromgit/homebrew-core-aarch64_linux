@@ -367,10 +367,10 @@ class Php < Formula
         DirectoryIndex index.php
       EOS
 
-      if head?
-        php_module = "LoadModule php_module #{lib}/httpd/modules/libphp.so"
+      php_module = if head?
+        "LoadModule php_module #{lib}/httpd/modules/libphp.so"
       else
-        php_module = "LoadModule php7_module #{lib}/httpd/modules/libphp7.so"
+        "LoadModule php7_module #{lib}/httpd/modules/libphp7.so"
       end
 
       (testpath/"httpd.conf").write <<~EOS
