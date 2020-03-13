@@ -25,15 +25,14 @@ class Broot < Formula
 
     assert_match "BFS", shell_output("#{bin}/broot --help 2>&1")
 
-    (testpath/"test.exp").write <<~EOS
-      spawn #{bin}/broot --cmd :pt --no-style --out #{testpath}/output.txt
-      send "n\r"
-      expect {
-        timeout { exit 1 }
-        eof
-      }
-    EOS
-
-    assert_match "New Configuration file written in", shell_output("expect -f test.exp 2>&1")
+    require "pty"
+    require "io/console"
+    PTY.spawn(bin/"broot", "--cmd", ":pt", "--no-style", "--out", testpath/"output.txt", :err => :out) do |r, w, pid|
+      r.winsize = [20, 80] # broot dependency termimad requires width > 2
+      w.write "n\r"
+      assert_match "New Configuration file written in", r.read
+      Process.wait(pid)
+    end
+    assert_equal 0, $CHILD_STATUS.exitstatus
   end
 end
