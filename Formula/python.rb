@@ -35,7 +35,8 @@ class Python < Formula
   uses_from_macos "zlib"
 
   skip_clean "bin/pip3", "bin/pip-3.4", "bin/pip-3.5", "bin/pip-3.6", "bin/pip-3.7"
-  skip_clean "bin/easy_install3", "bin/easy_install-3.4", "bin/easy_install-3.5", "bin/easy_install-3.6", "bin/easy_install-3.7"
+  skip_clean "bin/easy_install3", "bin/easy_install-3.4", "bin/easy_install-3.5",
+             "bin/easy_install-3.6", "bin/easy_install-3.7"
 
   resource "setuptools" do
     url "https://files.pythonhosted.org/packages/df/ed/bea598a87a8f7e21ac5bbf464102077c7102557c07db9ff4e207bd9f7806/setuptools-46.0.0.zip"
