@@ -46,7 +46,8 @@ class Vapoursynth < Formula
   def post_install
     (HOMEBREW_PREFIX/"lib/vapoursynth").mkpath
     %w[eedi3 miscfilters morpho removegrain vinverse vivtc].each do |filter|
-      (HOMEBREW_PREFIX/"lib/vapoursynth").install_symlink prefix/"vapoursynth/lib#{filter}.dylib" => "lib#{filter}.dylib"
+      (HOMEBREW_PREFIX/"lib/vapoursynth").install_symlink \
+        prefix/"vapoursynth/lib#{filter}.dylib" => "lib#{filter}.dylib"
     end
   end
 
