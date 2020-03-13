@@ -42,7 +42,8 @@ class Imgproxy < Formula
 
     output = testpath/"test-converted.png"
 
-    system("curl", "-s", "-o", output, "http://127.0.0.1:#{port}/insecure/fit/100/100/no/0/plain/local:///test.jpg@png")
+    system "curl", "-s", "-o", output,
+           "http://127.0.0.1:#{port}/insecure/fit/100/100/no/0/plain/local:///test.jpg@png"
     assert_equal 0, $CHILD_STATUS
     assert_predicate output, :exist?
 
