@@ -36,11 +36,12 @@ class Tcptraceroute < Formula
     system "make", "install"
   end
 
-  def caveats; <<~EOS
-    tcptraceroute requires root privileges so you will need to run
-    `sudo tcptraceroute`.
-    You should be certain that you trust any software you grant root privileges.
-  EOS
+  def caveats
+    <<~EOS
+      tcptraceroute requires root privileges so you will need to run
+      `sudo tcptraceroute`.
+      You should be certain that you trust any software you grant root privileges.
+    EOS
   end
 
   test do
