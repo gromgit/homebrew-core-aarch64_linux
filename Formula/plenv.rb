@@ -27,6 +27,6 @@ class Plenv < Formula
   end
 
   test do
-    system "#{bin}/plenv", "--version"
+    assert_match(/\* system \(set by/, shell_output("#{bin}/plenv versions"))
   end
 end
