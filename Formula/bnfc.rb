@@ -54,10 +54,10 @@ class Bnfc < Formula
       comment "(#" "#)" ;
     EOS
     (testpath/"test.calc").write "14 * (# Parsing is fun! #) (3 + 2 / 5 - 8)"
-    if build.head?
-      treespace = " "
+    treespace = if build.head?
+      " "
     else
-      treespace = ""
+      ""
     end
     check_out = <<~EOS
 
