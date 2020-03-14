@@ -74,34 +74,35 @@ class Opentsdb < Formula
 
   plist_options :manual => "#{HOMEBREW_PREFIX}/opt/opentsdb/bin/start-tsdb.sh"
 
-  def plist; <<~EOS
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-    <plist version="1.0">
-    <dict>
-      <key>KeepAlive</key>
+  def plist
+    <<~EOS
+      <?xml version="1.0" encoding="UTF-8"?>
+      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+      <plist version="1.0">
       <dict>
-        <key>OtherJobEnabled</key>
+        <key>KeepAlive</key>
         <dict>
-          <key>#{Formula["hbase"].plist_name}</key>
-          <true/>
+          <key>OtherJobEnabled</key>
+          <dict>
+            <key>#{Formula["hbase"].plist_name}</key>
+            <true/>
+          </dict>
         </dict>
+        <key>Label</key>
+        <string>#{plist_name}</string>
+        <key>ProgramArguments</key>
+        <array>
+          <string>#{opt_bin}/start-tsdb.sh</string>
+        </array>
+        <key>WorkingDirectory</key>
+        <string>#{HOMEBREW_PREFIX}</string>
+        <key>StandardOutPath</key>
+        <string>#{var}/opentsdb/opentsdb.log</string>
+        <key>StandardErrorPath</key>
+        <string>#{var}/opentsdb/opentsdb.err</string>
       </dict>
-      <key>Label</key>
-      <string>#{plist_name}</string>
-      <key>ProgramArguments</key>
-      <array>
-        <string>#{opt_bin}/start-tsdb.sh</string>
-      </array>
-      <key>WorkingDirectory</key>
-      <string>#{HOMEBREW_PREFIX}</string>
-      <key>StandardOutPath</key>
-      <string>#{var}/opentsdb/opentsdb.log</string>
-      <key>StandardErrorPath</key>
-      <string>#{var}/opentsdb/opentsdb.err</string>
-    </dict>
-    </plist>
-  EOS
+      </plist>
+    EOS
   end
 
   test do
