@@ -45,28 +45,29 @@ class I2pd < Formula
 
   plist_options :manual => "i2pd"
 
-  def plist; <<~EOS
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-    <plist version="1.0">
-    <dict>
-      <key>Label</key>
-      <string>#{plist_name}</string>
-      <key>RunAtLoad</key>
-      <true/>
-      <key>ProgramArguments</key>
-      <array>
-        <string>#{opt_bin}/i2pd</string>
-        <string>--datadir=#{var}/lib/i2pd</string>
-        <string>--conf=#{etc}/i2pd/i2pd.conf</string>
-        <string>--tunconf=#{etc}/i2pd/tunnels.conf</string>
-        <string>--log=file</string>
-        <string>--logfile=#{var}/log/i2pd/i2pd.log</string>
-        <string>--pidfile=#{var}/run/i2pd.pid</string>
-      </array>
-    </dict>
-    </plist>
-  EOS
+  def plist
+    <<~EOS
+      <?xml version="1.0" encoding="UTF-8"?>
+      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+      <plist version="1.0">
+      <dict>
+        <key>Label</key>
+        <string>#{plist_name}</string>
+        <key>RunAtLoad</key>
+        <true/>
+        <key>ProgramArguments</key>
+        <array>
+          <string>#{opt_bin}/i2pd</string>
+          <string>--datadir=#{var}/lib/i2pd</string>
+          <string>--conf=#{etc}/i2pd/i2pd.conf</string>
+          <string>--tunconf=#{etc}/i2pd/tunnels.conf</string>
+          <string>--log=file</string>
+          <string>--logfile=#{var}/log/i2pd/i2pd.log</string>
+          <string>--pidfile=#{var}/run/i2pd.pid</string>
+        </array>
+      </dict>
+      </plist>
+    EOS
   end
 
   test do
