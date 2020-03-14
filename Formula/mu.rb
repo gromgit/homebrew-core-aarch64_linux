@@ -42,11 +42,12 @@ class Mu < Formula
     system "make", "install"
   end
 
-  def caveats; <<~EOS
-    Existing mu users are recommended to run the following after upgrading:
+  def caveats
+    <<~EOS
+      Existing mu users are recommended to run the following after upgrading:
 
-      mu index --rebuild
-  EOS
+        mu index --rebuild
+    EOS
   end
 
   # Regression test for:
