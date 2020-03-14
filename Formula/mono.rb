@@ -69,10 +69,11 @@ class Mono < Formula
     end
   end
 
-  def caveats; <<~EOS
-    To use the assemblies from other formulae you need to set:
-      export MONO_GAC_PREFIX="#{HOMEBREW_PREFIX}"
-  EOS
+  def caveats
+    <<~EOS
+      To use the assemblies from other formulae you need to set:
+        export MONO_GAC_PREFIX="#{HOMEBREW_PREFIX}"
+    EOS
   end
 
   test do
