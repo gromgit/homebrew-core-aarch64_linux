@@ -16,14 +16,15 @@ class Plenv < Formula
     system "#{bin}/plenv", "rehash"
   end
 
-  def caveats; <<~EOS
-    To enable shims add to your profile:
-      if which plenv > /dev/null; then eval "$(plenv init -)"; fi
-    With zsh, add to your .zshrc:
-      if which plenv > /dev/null; then eval "$(plenv init - zsh)"; fi
-    With fish, add to your config.fish
-      if plenv > /dev/null; plenv init - | source ; end
-  EOS
+  def caveats
+    <<~EOS
+      To enable shims add to your profile:
+        if which plenv > /dev/null; then eval "$(plenv init -)"; fi
+      With zsh, add to your .zshrc:
+        if which plenv > /dev/null; then eval "$(plenv init - zsh)"; fi
+      With fish, add to your config.fish
+        if plenv > /dev/null; plenv init - | source ; end
+    EOS
   end
 
   test do
