@@ -14,14 +14,16 @@ class Spades < Formula
 
   depends_on "cmake" => :build
   depends_on "libomp"
+  depends_on "python@3.8"
 
   uses_from_macos "bzip2"
   uses_from_macos "ncurses"
-  uses_from_macos "python@2"
   uses_from_macos "readline"
   uses_from_macos "zlib"
 
   def install
+    Language::Python.rewrite_python_shebang(Formula["python@3.8"].opt_bin/"python3")
+
     # Use libomp due to issues with headers in GCC.
     libomp = Formula["libomp"]
     args = std_cmake_args
