@@ -21,6 +21,7 @@ class Bnfc < Formula
   depends_on "sphinx-doc" => :build
   depends_on "antlr" => :test
   depends_on "openjdk" => :test
+
   uses_from_macos "make" => [:build, :test]
   uses_from_macos "bison" => :test
   uses_from_macos "flex" => :test
@@ -74,8 +75,6 @@ class Bnfc < Formula
       system bin/"bnfc", "-m", "-o.", "--c", testpath/"calc.cf"
       system "make", "CC=#{ENV.cc}", "CCFLAGS=#{ENV.cflags}"
       test_out = shell_output("./Testcalc #{testpath}/test.calc")
-      ohai check_out
-      ohai test_out
       assert_equal check_out, test_out
     end
 
@@ -83,8 +82,6 @@ class Bnfc < Formula
       system bin/"bnfc", "-m", "-o.", "--cpp", testpath/"calc.cf"
       system "make", "CC=#{ENV.cxx}", "CCFLAGS=#{ENV.cxxflags}"
       test_out = shell_output("./Testcalc #{testpath}/test.calc")
-      ohai check_out
-      ohai test_out
       assert_equal check_out, test_out
     end
 
@@ -107,8 +104,6 @@ class Bnfc < Formula
 
           14 * (3 + 2 / 5 - 8)
         EOS
-        ohai check_out_hs
-        ohai test_out
         assert_equal check_out_hs, test_out
       end
     end
@@ -135,8 +130,6 @@ class Bnfc < Formula
 
         14 * (3 + 2 / 5 - 8)
       EOS
-      ohai check_out_j
-      ohai test_out
       assert_equal check_out_j, test_out
     end
   end
