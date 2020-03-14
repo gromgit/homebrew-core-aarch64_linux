@@ -63,10 +63,11 @@ class GmtAT5 < Formula
     end
   end
 
-  def caveats; <<~EOS
-    GMT needs Ghostscript for the 'psconvert' command to convert PostScript files
-    to other formats. To use 'psconvert', please 'brew install ghostscript'.
-  EOS
+  def caveats
+    <<~EOS
+      GMT needs Ghostscript for the 'psconvert' command to convert PostScript files
+      to other formats. To use 'psconvert', please 'brew install ghostscript'.
+    EOS
   end
 
   test do
