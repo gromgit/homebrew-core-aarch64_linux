@@ -19,12 +19,13 @@ class TomeeWebprofile < Formula
     bin.install_symlink "#{libexec}/bin/startup.sh" => "tomee-webprofile-startup"
   end
 
-  def caveats; <<~EOS
-    The home of Apache TomEE Web is:
-      #{opt_libexec}
-    To run Apache TomEE:
-      #{opt_libexec}/bin/tomee-webprofile-startup
-  EOS
+  def caveats
+    <<~EOS
+      The home of Apache TomEE Web is:
+        #{opt_libexec}
+      To run Apache TomEE:
+        #{opt_libexec}/bin/tomee-webprofile-startup
+    EOS
   end
 
   test do
