@@ -78,16 +78,17 @@ class Gmt < Formula
     end
   end
 
-  def caveats; <<~EOS
-    GMT needs Ghostscript for the 'psconvert' command to convert PostScript files
-    to other formats. To use 'psconvert', please 'brew install ghostscript'.
+  def caveats
+    <<~EOS
+      GMT needs Ghostscript for the 'psconvert' command to convert PostScript files
+      to other formats. To use 'psconvert', please 'brew install ghostscript'.
 
-    GMT needs FFmpeg for the 'movie' command to make movies in MP4 or WebM format.
-    If you need this feature, please 'brew install ffmpeg'.
+      GMT needs FFmpeg for the 'movie' command to make movies in MP4 or WebM format.
+      If you need this feature, please 'brew install ffmpeg'.
 
-    GMT needs GraphicsMagick for the 'movie' command to make animated GIFs.
-    If you need this feature, please 'brew install graphicsmagick'.
-  EOS
+      GMT needs GraphicsMagick for the 'movie' command to make animated GIFs.
+      If you need this feature, please 'brew install graphicsmagick'.
+    EOS
   end
 
   test do
