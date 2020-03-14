@@ -51,20 +51,21 @@ class Vapoursynth < Formula
     end
   end
 
-  def caveats; <<~EOS
-    This formula does not contain optional filters that require extra dependencies.
-    To use \x1B[3m\x1B[1mvapoursynth.core.sub\x1B[0m, execute:
-      brew install vapoursynth-sub
-    To use \x1B[3m\x1B[1mvapoursynth.core.ocr\x1B[0m, execute:
-      brew install vapoursynth-ocr
-    To use \x1B[3m\x1B[1mvapoursynth.core.imwri\x1B[0m, execute:
-      brew install vapoursynth-imwri
-    To use \x1B[3m\x1B[1mvapoursynth.core.ffms2\x1B[0m, execute the following:
-      brew install ffms2
-      ln -s "../libffms2.dylib" "#{HOMEBREW_PREFIX}/lib/vapoursynth/libffms2.dylib"
-    For more information regarding plugins, please visit:
-      \x1B[4mhttp://www.vapoursynth.com/doc/pluginlist.html\x1B[0m
-  EOS
+  def caveats
+    <<~EOS
+      This formula does not contain optional filters that require extra dependencies.
+      To use \x1B[3m\x1B[1mvapoursynth.core.sub\x1B[0m, execute:
+        brew install vapoursynth-sub
+      To use \x1B[3m\x1B[1mvapoursynth.core.ocr\x1B[0m, execute:
+        brew install vapoursynth-ocr
+      To use \x1B[3m\x1B[1mvapoursynth.core.imwri\x1B[0m, execute:
+        brew install vapoursynth-imwri
+      To use \x1B[3m\x1B[1mvapoursynth.core.ffms2\x1B[0m, execute the following:
+        brew install ffms2
+        ln -s "../libffms2.dylib" "#{HOMEBREW_PREFIX}/lib/vapoursynth/libffms2.dylib"
+      For more information regarding plugins, please visit:
+        \x1B[4mhttp://www.vapoursynth.com/doc/pluginlist.html\x1B[0m
+    EOS
   end
 
   test do
