@@ -63,12 +63,13 @@ class Agda < Formula
     elisp.install_symlink Dir["#{share}/*/Agda-#{version}/emacs-mode/*"]
   end
 
-  def caveats; <<~EOS
-    To use the Agda standard library by default:
-      mkdir -p ~/.agda
-      echo #{HOMEBREW_PREFIX}/lib/agda/standard-library.agda-lib >>~/.agda/libraries
-      echo standard-library >>~/.agda/defaults
-  EOS
+  def caveats
+    <<~EOS
+      To use the Agda standard library by default:
+        mkdir -p ~/.agda
+        echo #{HOMEBREW_PREFIX}/lib/agda/standard-library.agda-lib >>~/.agda/libraries
+        echo standard-library >>~/.agda/defaults
+    EOS
   end
 
   test do
