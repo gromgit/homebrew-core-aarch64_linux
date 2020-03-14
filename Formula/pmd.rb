@@ -14,9 +14,10 @@ class Pmd < Formula
     (bin/"pmd").write_env_script libexec/"bin/run.sh", :JAVA_HOME => "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
   end
 
-  def caveats; <<~EOS
-    Run with `pmd` (instead of `run.sh` as described in the documentation).
-  EOS
+  def caveats
+    <<~EOS
+      Run with `pmd` (instead of `run.sh` as described in the documentation).
+    EOS
   end
 
   test do
