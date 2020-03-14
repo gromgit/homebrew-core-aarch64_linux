@@ -52,10 +52,11 @@ class Vice < Formula
     system "make", "install"
   end
 
-  def caveats; <<~EOS
-    App bundles are no longer built for each emulator. The binaries are
-    available in #{HOMEBREW_PREFIX}/bin directly instead.
-  EOS
+  def caveats
+    <<~EOS
+      App bundles are no longer built for each emulator. The binaries are
+      available in #{HOMEBREW_PREFIX}/bin directly instead.
+    EOS
   end
 
   test do
