@@ -8,9 +8,9 @@ class Vice < Formula
 
   bottle do
     cellar :any
-    sha256 "2482ee0bd13df1eb97fb420443b9bdeb7926e625c83a96404791fdcd8ab99f56" => :catalina
-    sha256 "00f63203afc84abacd468d5a012fd308a8adbca29ba87b01a2a8d0ac2ac3ad91" => :mojave
-    sha256 "236aacd38e7edec5cace94942ccb31ba77f64a6b062dfa35585a5bb87a6206ec" => :high_sierra
+    sha256 "b65fbef8066263ccd42679a2b9ed9f3d438ff75a5d8c097dcf04ffb5fa1b1e43" => :catalina
+    sha256 "65380e5bdb80143cfbd668fe45c385b7715faa6baa8f109707003be3fb410efb" => :mojave
+    sha256 "d2532e0ccc1a84a9896a611c9ac7eac15342f7ebbaedba7c0b29f36c178a0c27" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
