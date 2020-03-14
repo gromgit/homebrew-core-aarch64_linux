@@ -1,9 +1,8 @@
 class Gtranslator < Formula
   desc "GNOME gettext PO file editor"
   homepage "https://wiki.gnome.org/Design/Apps/Translator"
-  url "https://download.gnome.org/sources/gtranslator/3.34/gtranslator-3.34.0.tar.xz"
-  sha256 "b2f25c02bdfd246896803756078c3006ef433c83eb802bc23a33413046bffb17"
-  revision 1
+  url "https://download.gnome.org/sources/gtranslator/3.36/gtranslator-3.36.0.tar.xz"
+  sha256 "2daa1d3b59b4a35ef54df087345b03e1703e725081f9dac543539228a715add3"
 
   bottle do
     sha256 "159e755282296b401507b791b4c4b7121b995a8055b75271aca6c4ff95c7fcf6" => :catalina
@@ -23,6 +22,7 @@ class Gtranslator < Formula
   depends_on "iso-codes"
   depends_on "itstool"
   depends_on "json-glib"
+  depends_on "libdazzle"
   depends_on "libgda"
   depends_on "libsoup"
 
