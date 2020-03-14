@@ -9,6 +9,13 @@ class Bnfc < Formula
   sha256 "ba0b6ab36954a0891b4ad3125cefdd6d441d2c73d174cd8eff344e68ae2fd203"
   head "https://github.com/BNFC/bnfc.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "d08ae18737b1354477b232c833f64e2538d5b27f1c5abfa3166cabb8c5e7790f" => :catalina
+    sha256 "99468b0d324898ded21ffc6d7605009e0735f5d0b3be2804299916c038c3fa8f" => :mojave
+    sha256 "b52608ab271231b3c1ca2aa537793f9988fa4b5a051d5026775a29c1070701d1" => :high_sierra
+  end
+
   depends_on "cabal-install" => [:build, :test]
   depends_on "ghc" => [:build, :test]
   depends_on "sphinx-doc" => :build
