@@ -31,13 +31,14 @@ class BashCompletionAT2 < Formula
     system "make", "install"
   end
 
-  def caveats; <<~EOS
-    Add the following to your ~/.bash_profile:
-      [[ -r "#{etc}/profile.d/bash_completion.sh" ]] && . "#{etc}/profile.d/bash_completion.sh"
+  def caveats
+    <<~EOS
+      Add the following to your ~/.bash_profile:
+        [[ -r "#{etc}/profile.d/bash_completion.sh" ]] && . "#{etc}/profile.d/bash_completion.sh"
 
-    If you'd like to use existing homebrew v1 completions, add the following before the previous line:
-      export BASH_COMPLETION_COMPAT_DIR="#{etc}/bash_completion.d"
-  EOS
+      If you'd like to use existing homebrew v1 completions, add the following before the previous line:
+        export BASH_COMPLETION_COMPAT_DIR="#{etc}/bash_completion.d"
+    EOS
   end
 
   test do
