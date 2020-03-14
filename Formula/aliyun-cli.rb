@@ -6,9 +6,9 @@ class AliyunCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "80c7d7cae4f4bd591a11ccf68ea8e95cfc8bcb43ba3bb1dee77394e37369bb50" => :catalina
-    sha256 "eac1ba62e38c2316f6d8289d246c26febe3a0853feddd8bd133b35d822533985" => :mojave
-    sha256 "d39952c8cda09eaf54e8aff7327444b3a0d35754fb92c3c70087846efc30e06d" => :high_sierra
+    sha256 "9d829dc9bdd6b9ef46b43a6bac7e2de76acd710e520ef5161080472875de1e8b" => :catalina
+    sha256 "99958696c7e48e7a09768823e7d639447fe31e973e88bfd4599e0f65b8cfbafc" => :mojave
+    sha256 "3353d27a5f6bcf0ee868563e89c3747953885af7fb2aa0e23bb2c6a1c2dd5f45" => :high_sierra
   end
 
   depends_on "go" => :build
