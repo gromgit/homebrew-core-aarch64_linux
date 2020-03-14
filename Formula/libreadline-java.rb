@@ -76,10 +76,11 @@ class LibreadlineJava < Formula
     doc.install "api"
   end
 
-  def caveats; <<~EOS
-    You may need to set JAVA_HOME:
-      export JAVA_HOME="$(/usr/libexec/java_home)"
-  EOS
+  def caveats
+    <<~EOS
+      You may need to set JAVA_HOME:
+        export JAVA_HOME="$(/usr/libexec/java_home)"
+    EOS
   end
 
   # Testing libreadline-java (can we execute and exit libreadline without exceptions?)
