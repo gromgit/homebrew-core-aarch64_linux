@@ -45,41 +45,43 @@ class KnotResolver < Formula
   end
 
   # DNSSEC root anchor published by IANA (https://www.iana.org/dnssec/files)
-  def root_keys; <<~EOS
-    . IN DS 20326 8 2 e06d44b80b8f1d39a95c0b0d7c65d08458e880409bbc683457104237c7f8ec8d
-  EOS
+  def root_keys
+    <<~EOS
+      . IN DS 20326 8 2 e06d44b80b8f1d39a95c0b0d7c65d08458e880409bbc683457104237c7f8ec8d
+    EOS
   end
 
   plist_options :startup => true
 
-  def plist; <<~EOS
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-    <plist version="1.0">
-    <dict>
-      <key>Label</key>
-      <string>#{plist_name}</string>
-      <key>WorkingDirectory</key>
-      <string>#{var}/kresd</string>
-      <key>RunAtLoad</key>
-      <true/>
-      <key>ProgramArguments</key>
-      <array>
-        <string>#{sbin}/kresd</string>
-        <string>-c</string>
-        <string>#{etc}/kresd/config</string>
-        <string>-f</string>
-        <string>1</string>
-      </array>
-      <key>StandardInPath</key>
-      <string>/dev/null</string>
-      <key>StandardOutPath</key>
-      <string>/dev/null</string>
-      <key>StandardErrorPath</key>
-      <string>#{var}/log/kresd.log</string>
-    </dict>
-    </plist>
-  EOS
+  def plist
+    <<~EOS
+      <?xml version="1.0" encoding="UTF-8"?>
+      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+      <plist version="1.0">
+      <dict>
+        <key>Label</key>
+        <string>#{plist_name}</string>
+        <key>WorkingDirectory</key>
+        <string>#{var}/kresd</string>
+        <key>RunAtLoad</key>
+        <true/>
+        <key>ProgramArguments</key>
+        <array>
+          <string>#{sbin}/kresd</string>
+          <string>-c</string>
+          <string>#{etc}/kresd/config</string>
+          <string>-f</string>
+          <string>1</string>
+        </array>
+        <key>StandardInPath</key>
+        <string>/dev/null</string>
+        <key>StandardOutPath</key>
+        <string>/dev/null</string>
+        <key>StandardErrorPath</key>
+        <string>#{var}/log/kresd.log</string>
+      </dict>
+      </plist>
+    EOS
   end
 
   test do
