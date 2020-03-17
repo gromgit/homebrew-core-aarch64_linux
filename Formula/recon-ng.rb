@@ -8,9 +8,9 @@ class ReconNg < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "fc2efc5e810a1f34638cfab2130eca793e96f18b56efdcdee15f02ba225e8c54" => :catalina
-    sha256 "7b4c2cd237f8f8ce646a8f7fefd90db3a185d7c84518c822ed27ce675e01d29d" => :mojave
-    sha256 "81451de88a5e4beb277e35d2a80bed0a879db99ffe69280acc57f0c4997d477e" => :high_sierra
+    sha256 "97bece24384f887d6202cbc969b09069360d943b4fbfb60bdd78d8a22dcd1cf3" => :catalina
+    sha256 "8586f3b55873bc3024f77a5bdfa334cdf64c66290719317fde64884f2c24f049" => :mojave
+    sha256 "fcf86a9934bcc8fb7cb5611736361225a0ec4f2141be5ba965bfc79f0b327f38" => :high_sierra
   end
 
   depends_on "python"
