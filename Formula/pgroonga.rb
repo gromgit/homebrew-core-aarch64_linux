@@ -6,9 +6,9 @@ class Pgroonga < Formula
 
   bottle do
     cellar :any
-    sha256 "b44a4ace1580f94346ef0e14a2194ebe47246e023c42e5a7f2571b52ec2b156b" => :catalina
-    sha256 "53a14b9e8754907ebce4b69b3906f49186bebd8c61f1b875ce62e0c5ef987e5b" => :mojave
-    sha256 "4f1bd67d861b575979c957edeb9dc2cbd4a310cdfc9be4cfdf4019737a01cdf9" => :high_sierra
+    sha256 "18e77cc71e81887b33883be924064dabb8f371bfaa59f84e923a09fc98572cc6" => :catalina
+    sha256 "144331087d136416381c924b9e4a3574d1fd33ffed3a73c7864b38f1898e3c00" => :mojave
+    sha256 "e3c90480324f278c3595773e8c4ed1e8183923675e2a1447cc8bae23188a57e0" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
