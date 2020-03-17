@@ -1,8 +1,8 @@
 class Pagmo < Formula
   desc "Scientific library for massively parallel optimization"
   homepage "https://esa.github.io/pagmo2/"
-  url "https://github.com/esa/pagmo2/archive/v2.13.0.tar.gz"
-  sha256 "4431e61cae9f27b692b78b30e2a08362dfd35960c3840dae04ef28af8305e621"
+  url "https://github.com/esa/pagmo2/archive/v2.14.0.tar.gz"
+  sha256 "fdb86118812b3885b0c10cd816ec90590a617b5b009b64f1c64635ad2953592d"
 
   bottle do
     cellar :any
