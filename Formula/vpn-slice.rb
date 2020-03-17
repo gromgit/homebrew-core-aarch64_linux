@@ -7,6 +7,13 @@ class VpnSlice < Formula
   sha256 "08f62c688b8e5f0a1f643593bd6d29c38ab92e3714a5108bfde762a3cdaf33df"
   head "https://github.com/dlenski/vpn-slice.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "d3f73c709b76bf6352d6bc96e1dbff36c9b78e46e55f98919ad0eeda9e09a557" => :catalina
+    sha256 "8f71031401771af299feb50f010a7d8ad1e7baefcdbef7a6b159f52aba2f0c81" => :mojave
+    sha256 "12f88ce821b7c462a6c80d6f72b396251662dfa20df6797b0aae1801665fb277" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   resource "setproctitle" do
