@@ -7,9 +7,9 @@ class Help2man < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d86f9f72873142b817df048f666d62925a028c982d58016448f2a0dc4646b19a" => :catalina
-    sha256 "d86f9f72873142b817df048f666d62925a028c982d58016448f2a0dc4646b19a" => :mojave
-    sha256 "d86f9f72873142b817df048f666d62925a028c982d58016448f2a0dc4646b19a" => :high_sierra
+    sha256 "588a65fb8b07ae7738c043122429901edd8c80b825039335a998aa0f31e167fb" => :catalina
+    sha256 "588a65fb8b07ae7738c043122429901edd8c80b825039335a998aa0f31e167fb" => :mojave
+    sha256 "588a65fb8b07ae7738c043122429901edd8c80b825039335a998aa0f31e167fb" => :high_sierra
   end
 
   def install
