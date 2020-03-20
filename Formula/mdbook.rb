@@ -6,9 +6,9 @@ class Mdbook < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0f164851ce201f257d69d4d55e50fa7707cea1ab268a5b239266a4662845beef" => :catalina
-    sha256 "1a2b15f790541dc456294475b42927a152ea614857dfb49ca5f1a00aec1e9509" => :mojave
-    sha256 "b2305bde8f2f620393c813fc208e9364e0681eff43d6535e7202841fc832ec9c" => :high_sierra
+    sha256 "584fed87972680f93e915df6c46c782a09e4ca13805a7d9eb0d7fc4d3257cad0" => :catalina
+    sha256 "1385865673f05807fa7ce4b038a89cc3f575092923f629e0c1655539dca11ba6" => :mojave
+    sha256 "500a6bd48e49190b200029ddead6b4eda9a0d311fd7de412a96e3be256326c0a" => :high_sierra
   end
 
   depends_on "rust" => :build
