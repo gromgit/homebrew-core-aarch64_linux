@@ -6,11 +6,9 @@ class SqlTranslator < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d1c2de135fe29e2d9093ffd5e943f92e31f26ae02ac018dfd91378c868fca896" => :catalina
-    sha256 "301a5bf24c4091a864526cc9a8db75aba078d09c076557653f488678272df469" => :mojave
-    sha256 "e18c4a3f9b49dfb99675f12ce82a3762ea34970b741a9c1e3a70936234c0048e" => :high_sierra
-    sha256 "ad3e150727e9163fc385a22ff049bac1ab013ec14fc2499be30c558daf5e2078" => :sierra
-    sha256 "e90e93b46d07158b9221c55f3a95dc438a8adc0bf965492438a5dc6e66dad22d" => :el_capitan
+    sha256 "2c32a4d89ab652bf3c56459c9f8c5d73d602aefea3f8e9a9970153cedeca8c5e" => :catalina
+    sha256 "5b56cd85c30deb2c7852d0090c55f2d168ec9420c0c25d9c5513a8fb89aac711" => :mojave
+    sha256 "b3af3df936b1c03d50a9d9209e8aef974e59449179e11a2b5bc78e1f59338114" => :high_sierra
   end
 
   uses_from_macos "perl"
