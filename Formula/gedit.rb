@@ -1,8 +1,8 @@
 class Gedit < Formula
   desc "The GNOME text editor"
   homepage "https://wiki.gnome.org/Apps/Gedit"
-  url "https://download.gnome.org/sources/gedit/3.36/gedit-3.36.0.tar.xz"
-  sha256 "c983dd12a4e9db7af1aaa3062e6f042811ef99a4d6382659096f2ef8fc559435"
+  url "https://download.gnome.org/sources/gedit/3.36/gedit-3.36.1.tar.xz"
+  sha256 "6dc38eda227d1c368e039e9bff485d0bee9a49d5f9560c387ee08f5818a4e387"
 
   bottle do
     sha256 "27300727b546549c379cd116e54fbf4322139d10ab0e661c1c2c5289b7e0afed" => :catalina
@@ -31,9 +31,6 @@ class Gedit < Formula
   depends_on "libxml2"
   depends_on "pango"
   depends_on "tepl"
-
-  # see https://gitlab.gnome.org/GNOME/gedit/-/merge_requests/74
-  patch :DATA
 
   def install
     ENV["DESTDIR"] = "/"
@@ -137,33 +134,3 @@ class Gedit < Formula
     system "./test"
   end
 end
-
-__END__
-diff --git a/gedit/gedit-app-osx.m b/gedit/gedit-app-osx.m
-index 07774cc53..5df1b94da 100644
---- a/gedit/gedit-app-osx.m
-+++ b/gedit/gedit-app-osx.m
-@@ -32,6 +32,10 @@
- #include "gedit-commands.h"
- #include "gedit-commands-private.h"
- #include "gedit-recent.h"
-+#import <AppKit/AppKit.h>
-+
-+NSWindow *gdk_quartz_window_get_nswindow(GdkWindow *window);
-+NSEvent *gdk_quartz_event_get_nsevent(GdkEvent *event);
-
- static GeditWindow *
- ensure_window (GeditAppOSX *app,
-diff --git a/gedit/gedit-file-chooser-dialog-osx.m b/gedit/gedit-file-chooser-dialog-osx.m
-index ecfbee62a..f897c81cd 100644
---- a/gedit/gedit-file-chooser-dialog-osx.m
-+++ b/gedit/gedit-file-chooser-dialog-osx.m
-@@ -29,6 +29,8 @@
- #include "gedit-encodings-dialog.h"
- #include "gedit-utils.h"
-
-+NSWindow *gdk_quartz_window_get_nswindow(GdkWindow *window);
-+
- struct _GeditFileChooserDialogOSX
- {
-	GObject parent_instance;
