@@ -1,9 +1,8 @@
 class Mimic < Formula
   desc "Lightweight text-to-speech engine based on CMU Flite"
   homepage "https://mimic.mycroft.ai"
-  url "https://github.com/MycroftAI/mimic/archive/1.2.0.2.tar.gz"
-  sha256 "619f3864d8ff599c1fa47424b7d87059236fcd51db3c0c311eb3635c80174b5a"
-  revision 6
+  url "https://github.com/MycroftAI/mimic1/archive/1.3.0.1.tar.gz"
+  sha256 "9041f5c7d3720899c90c890ada179c92c3b542b90bb655c247e4a4835df79249"
 
   bottle do
     cellar :any
