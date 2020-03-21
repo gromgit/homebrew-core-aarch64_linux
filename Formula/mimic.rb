@@ -5,12 +5,9 @@ class Mimic < Formula
   sha256 "9041f5c7d3720899c90c890ada179c92c3b542b90bb655c247e4a4835df79249"
 
   bottle do
-    cellar :any
-    rebuild 1
-    sha256 "b61d117b7325e15063e282a223cf9040f8a5b6653cc0d1b2335dbb292e984dca" => :catalina
-    sha256 "5637b3526827e1e32d2010ca9a4b1aa2bea53a5a1c5f8f5a1000e74be96b1884" => :mojave
-    sha256 "6de781e65c88a019639614c87bd38b59227a2d085b136cf8a63e3d62a7cd0437" => :high_sierra
-    sha256 "e10c327921ef68c64fc76915fdec61d3ea210f8874fab2af5ffac14bef8ccdb8" => :sierra
+    sha256 "72b346f8eefbbc70abc0a67bc72265b3bec7f99e53b18418ad6835df52518f1e" => :catalina
+    sha256 "a185641e0d84aae004df33923ca0612b9ba0d59c9a1d4a5fd80ebd6d1de69f58" => :mojave
+    sha256 "98a927ebfffb3a965506102d758fe4a5e76d0c6bd732972e6b113505d28241c8" => :high_sierra
   end
 
   depends_on "autoconf" => :build
