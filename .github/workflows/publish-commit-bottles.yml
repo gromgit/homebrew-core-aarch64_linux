@@ -32,14 +32,21 @@ jobs:
           pr: ${{github.event.client_payload.pull_request}}
           name: bottles
           path: bottles
+      - name: Checkout tap
+        uses: actions/checkout@v2
+      - name: Setup tap
+        run: |
+          rm -rf $(brew --repository ${{github.repository}})
+          ln -s $GITHUB_WORKSPACE $(brew --repository ${{github.repository}})
       - name: Upload bottles
         env:
           HOMEBREW_BINTRAY_USER: brewtestbot
           HOMEBREW_BINTRAY_KEY: ${{ secrets.HOMEBREW_BINTRAY_KEY }}
         run: |
           cd bottles
-          brew update-reset
-          brew test-bot --ci-upload
+          # TODO: Remove once this pull request is merged.
+          git -C $(brew --repo homebrew/test-bot) fetch origin pull/344/merge:pr-334
+          git -C $(brew --repo homebrew/test-bot) checkout pr-334
           brew test-bot --ci-upload --publish
       - name: Push bottle commit
         env:
