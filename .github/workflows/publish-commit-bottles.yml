@@ -53,7 +53,9 @@ jobs:
         env:
           GIT_COMMITTER_NAME: ${{steps.env.outputs.result.name}}
           GIT_COMMITTER_EMAIL: ${{steps.env.outputs.result.email}}
+          STEP_RESULT: ${{toJson(steps.env.outputs)}}
         run: |
+          echo "$STEP_RESULT"
           cd $(brew --repo ${{github.repository}})
           git rebase --force master
           git show --pretty=fuller
