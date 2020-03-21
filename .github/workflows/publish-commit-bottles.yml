@@ -18,12 +18,13 @@ jobs:
         id: env
         with:
           script: |
-            let user = await github.users.getByUsername({
+            const user = await github.users.getByUsername({
               username: context.actor
             })
-            user.data.email = (user.data.email || user.data.id + "+" + user.data.login + "@users.noreply.github.com")
-            console.log("Dispatched by " + user.data.name + " <" + user.data.email + ">")
-            return user.data
+            const email = (user.data.email || user.data.id + "+" + user.data.login + "@users.noreply.github.com")
+            console.log("Dispatched by " + user.data.name + " <" + email + ">")
+            process.stdout.write("::set-output name=name::" + user.data.name + "\n")
+            process.stdout.write("::set-output name=email::" + user.data.email + "\n")
       - name: Checkout tap
         uses: actions/checkout@v2
       - name: Setup tap
@@ -51,8 +52,8 @@ jobs:
           brew test-bot --ci-upload --publish
       - name: Push bottle commit
         env:
-          GIT_COMMITTER_NAME: ${{steps.env.outputs.result.name}}
-          GIT_COMMITTER_EMAIL: ${{steps.env.outputs.result.email}}
+          GIT_COMMITTER_NAME: ${{steps.env.outputs.name}}
+          GIT_COMMITTER_EMAIL: ${{steps.env.outputs.email}}
           STEP_RESULT: ${{toJson(steps.env.outputs)}}
         run: |
           echo "$STEP_RESULT"
