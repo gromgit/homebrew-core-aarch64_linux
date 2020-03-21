@@ -45,6 +45,7 @@ jobs:
         run: |
           cd bottles
           # TODO: Remove once this pull request is merged.
+          brew tap homebrew/test-bot
           git -C $(brew --repo homebrew/test-bot) fetch origin pull/344/merge:pr-334
           git -C $(brew --repo homebrew/test-bot) checkout pr-334
           brew test-bot --ci-upload --publish
