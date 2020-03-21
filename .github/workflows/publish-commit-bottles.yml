@@ -37,7 +37,8 @@ jobs:
           HOMEBREW_BINTRAY_USER: BrewTestBot
           HOMEBREW_BINTRAY_KEY: ${{ secrets.HOMEBREW_BINTRAY_KEY }}
         run: |
-          cd ~/bottles
+          ls -l
+          cd bottles
           brew update-reset
           brew test-bot --ci-upload --publish
       - name: Push bottle commit
