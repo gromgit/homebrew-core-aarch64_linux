@@ -22,8 +22,14 @@ jobs:
               username: context.actor
             })
             user.data.email = (user.data.email || user.data.id + "+" + user.data.login + "@users.noreply.github.com")
-            console.log("Dispatched by " + user.data.name + "<" + user.data.email + ">")
+            console.log("Dispatched by " + user.data.name + " <" + user.data.email + ">")
             return user.data
+      - name: Checkout tap
+        uses: actions/checkout@v2
+      - name: Setup tap
+        run: |
+          rm -rf $(brew --repository ${{github.repository}})
+          ln -s $GITHUB_WORKSPACE $(brew --repository ${{github.repository}})
       - name: Download artifacts
         uses: Homebrew/actions/download-artifact@master
         with:
@@ -32,12 +38,6 @@ jobs:
           pr: ${{github.event.client_payload.pull_request}}
           name: bottles
           path: bottles
-      - name: Checkout tap
-        uses: actions/checkout@v2
-      - name: Setup tap
-        run: |
-          rm -rf $(brew --repository ${{github.repository}})
-          ln -s $GITHUB_WORKSPACE $(brew --repository ${{github.repository}})
       - name: Upload bottles
         env:
           HOMEBREW_BINTRAY_USER: brewtestbot
