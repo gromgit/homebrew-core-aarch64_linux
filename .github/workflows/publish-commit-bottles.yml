@@ -24,7 +24,7 @@ jobs:
             const email = (user.data.email || user.data.id + "+" + user.data.login + "@users.noreply.github.com")
             console.log("Dispatched by " + user.data.name + " <" + email + ">")
             process.stdout.write("::set-output name=name::" + user.data.name + "\n")
-            process.stdout.write("::set-output name=email::" + user.data.email + "\n")
+            process.stdout.write("::set-output name=email::" + email + "\n")
       - name: Checkout tap
         uses: actions/checkout@v2
       - name: Setup tap
