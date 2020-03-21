@@ -48,6 +48,7 @@ jobs:
           cd $(brew --repo ${{github.repository}})
           git rebase --force master
           git show --pretty=fuller
+          exit 0
           for try in $(seq 5); do
             git fetch
             git rebase origin/master
