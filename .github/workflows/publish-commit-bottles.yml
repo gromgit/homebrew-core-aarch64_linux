@@ -34,14 +34,11 @@ jobs:
           path: bottles
       - name: Upload bottles
         env:
-          HOMEBREW_BINTRAY_USER: BrewTestBot
+          HOMEBREW_BINTRAY_USER: brewtestbot
           HOMEBREW_BINTRAY_KEY: ${{ secrets.HOMEBREW_BINTRAY_KEY }}
         run: |
           cd bottles
           brew update-reset
-          # Run this twice to clobber the existing file
-          # TODO: Remove this once we migrate fully to this workflow
-          brew test-bot --ci-upload
           brew test-bot --ci-upload --publish
       - name: Push bottle commit
         env:
