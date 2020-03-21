@@ -22,7 +22,7 @@ jobs:
               username: context.actor
             })
             user.data.email = (user.data.email || user.data.id + "+" + user.data.login + "@users.noreply.github.com")
-            console.log(user.data.email)
+            console.log("Dispatched by " + user.data.name + "<" + user.data.email + ">")
             return user.data
       - name: Download artifacts
         uses: Homebrew/actions/download-artifact@master
@@ -39,14 +39,13 @@ jobs:
         run: |
           cd bottles
           brew update-reset
+          brew test-bot --ci-upload
           brew test-bot --ci-upload --publish
       - name: Push bottle commit
         env:
-          GIT_COMMITTER_NAME: ${{steps.env.outputs.name}}
-          GIT_COMMITTER_EMAIL: ${{steps.env.outputs.email}}
-          STEP_RESULT: ${{toJson(steps.env.outputs)}}
+          GIT_COMMITTER_NAME: ${{steps.env.outputs.result.name}}
+          GIT_COMMITTER_EMAIL: ${{steps.env.outputs.result.email}}
         run: |
-          echo "$STEP_RESULT"
           cd $(brew --repo ${{github.repository}})
           git rebase --force master
           git show --pretty=fuller
