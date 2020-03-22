@@ -5,10 +5,10 @@ class CargoC < Formula
   sha256 "a5b5adce1618596da61221dda06bb1ae780fdcd5a3c231ad1ba7f89758d02c8f"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "e233ac8f1431e372e1774b1ac83d8e2ca4b8e8a9041a032a706c6e066c9b84d9" => :catalina
-    sha256 "fc469c48e26bd15732192540ca3ae269d4be199416cc53fb1b9f08c504507f60" => :mojave
-    sha256 "11900b65b751d322c77428c5f4508cfa47b5e1a7326a4d91ca3ffc8b84541a90" => :high_sierra
+    cellar :any
+    sha256 "0764047a3f1f74e5a1e326d22877c3d5405c7dc290cf1cd8f67b73ab99d647a0" => :catalina
+    sha256 "18c66958772ae8a83f089edf9b5a7c7686b5a568fb6239d0bf82b2b009e192a6" => :mojave
+    sha256 "f3da39b2fc89a234bb15871020bdb510de266e54aa6df2d845dc6c6fed7a9d6a" => :high_sierra
   end
 
   depends_on "rust" => :build
