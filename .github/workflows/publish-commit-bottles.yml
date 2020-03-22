@@ -35,8 +35,12 @@ jobs:
         run: |
           rm -rf $(brew --repository ${{github.repository}})
           ln -s $GITHUB_WORKSPACE $(brew --repository ${{github.repository}})
+          git fetch origin/master
+          git show
           git branch -f master HEAD
+          git show
           git checkout master
+          git show
           git log origin/master..HEAD --oneline
       - name: Download artifacts
         uses: Homebrew/actions/download-artifact@master
