@@ -35,6 +35,7 @@ jobs:
         run: |
           rm -rf $(brew --repository ${{github.repository}})
           ln -s $GITHUB_WORKSPACE $(brew --repository ${{github.repository}})
+          cd $(brew --repository ${{github.repository}})
           git fetch origin/master
           git show
           git branch -f master HEAD
