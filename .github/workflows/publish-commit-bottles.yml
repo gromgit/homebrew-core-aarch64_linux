@@ -29,7 +29,11 @@ jobs:
         uses: actions/checkout@v2
         with:
           token: ${{secrets.HOMEBREW_GITHUB_API_TOKEN}}
+          fetch-depth: 0
       - name: Setup tap
+        env:
+          GIT_COMMITTER_NAME: ${{steps.env.outputs.name}}
+          GIT_COMMITTER_EMAIL: ${{steps.env.outputs.email}}
         run: |
           rm -rf $(brew --repository ${{github.repository}})
           ln -s $GITHUB_WORKSPACE $(brew --repository ${{github.repository}})
