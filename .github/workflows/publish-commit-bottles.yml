@@ -28,6 +28,7 @@ jobs:
       - name: Checkout tap
         uses: actions/checkout@v2
         with:
+          ref: refs/pull/${{ github.event.client_payload.pull_request }}/merge
           token: ${{secrets.HOMEBREW_GITHUB_API_TOKEN}}
       - name: Setup tap
         run: |
