@@ -28,21 +28,15 @@ jobs:
       - name: Checkout tap
         uses: actions/checkout@v2
         with:
-          ref: refs/pull/${{ github.event.client_payload.pull_request }}/head
           token: ${{secrets.HOMEBREW_GITHUB_API_TOKEN}}
-          fetch-depth: 0
       - name: Setup tap
         run: |
           rm -rf $(brew --repository ${{github.repository}})
           ln -s $GITHUB_WORKSPACE $(brew --repository ${{github.repository}})
           cd $(brew --repository ${{github.repository}})
-          git fetch origin/master
+          git fetch +refs/pull/${{ github.event.client_payload.pull_request }}/head:current-pr
+          git rebase current-pr master
           git show
-          git branch -f master HEAD
-          git show
-          git checkout master
-          git show
-          git log origin/master..HEAD --oneline
       - name: Download artifacts
         uses: Homebrew/actions/download-artifact@master
         with:
