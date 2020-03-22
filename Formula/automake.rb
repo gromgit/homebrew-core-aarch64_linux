@@ -7,11 +7,9 @@ class Automake < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5f5e0528293a5f6d2ec5c686d5408f8b48489e8b1cfbcb3ebaab844a241d3565" => :catalina
-    sha256 "0a359c2385d0673ce1ab3cdaf39dd22af191f7b74732105ca5751e08a334e061" => :mojave
-    sha256 "fb32c065aaf91661380af32ed301edcf209ba453635c79ca945353b67e54af10" => :high_sierra
-    sha256 "fb32c065aaf91661380af32ed301edcf209ba453635c79ca945353b67e54af10" => :sierra
-    sha256 "d552844779f0dc4062f27203f7facfbd74c9d1780724ac76a86791e401aa73bd" => :el_capitan
+    sha256 "fe26d4df57481b6a7ca0a6915c37c53648c27ffb41926b3570c45f80fdd8888e" => :catalina
+    sha256 "fe26d4df57481b6a7ca0a6915c37c53648c27ffb41926b3570c45f80fdd8888e" => :mojave
+    sha256 "fe26d4df57481b6a7ca0a6915c37c53648c27ffb41926b3570c45f80fdd8888e" => :high_sierra
   end
 
   depends_on "autoconf"
