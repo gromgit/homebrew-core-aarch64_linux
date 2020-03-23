@@ -3,6 +3,7 @@ class Bat < Formula
   homepage "https://github.com/sharkdp/bat"
   url "https://github.com/sharkdp/bat/archive/v0.13.0.tar.gz"
   sha256 "f4aee370013e2a3bc84c405738ed0ab6e334d3a9f22c18031a7ea008cd5abd2a"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
@@ -20,13 +21,9 @@ class Bat < Formula
     ENV.append_to_cflags "-fno-stack-check" if DevelopmentTools.clang_build_version >= 1010
     system "cargo", "install", "--locked", "--root", prefix, "--path", "."
 
-    # In https://github.com/sharkdp/bat/pull/673,
-    # documentation and fish autocompletion got parameterized
-    inreplace "assets/manual/bat.1.in", "{{PROJECT_EXECUTABLE | upcase}}", "bat"
-    inreplace "assets/manual/bat.1.in", "{{PROJECT_EXECUTABLE}}", "bat"
-    inreplace "assets/completions/bat.fish.in", "{{PROJECT_EXECUTABLE}}", "bat"
-    man1.install "assets/manual/bat.1.in" => "bat.1"
-    fish_completion.install "assets/completions/bat.fish.in" => "bat.fish"
+    assets_dir = Dir["target/release/build/bat-*/out/assets"].first
+    man1.install "#{assets_dir}/manual/bat.1"
+    fish_completion.install "#{assets_dir}/completions/bat.fish"
   end
 
   test do
