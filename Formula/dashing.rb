@@ -7,9 +7,9 @@ class Dashing < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "625182262193e91eea994e43c6f7b6568a29473f920d82c4ede06f007c3d62ed" => :catalina
-    sha256 "1cf3f2332b9ed58fe688a1a3bd69c21641c370a9338f9f0661526434997b852e" => :mojave
-    sha256 "f1a3f3bdd8a8709c8ad5abac6da916455eb957680973131925378d7ceedad2c0" => :high_sierra
+    sha256 "cdfb4329ae48807046deb40bb2adb9969afda47a25502cedb374cf21a6a605ee" => :catalina
+    sha256 "79874bca8f27064c16aa81b398131d7ed3558bd5987913e344d0075859d9f7c7" => :mojave
+    sha256 "8c34e42f44271bfea4aecbb5dedb18deecfc4b8d0d0564344efa861bb816e8d4" => :high_sierra
   end
 
   depends_on "go" => :build
