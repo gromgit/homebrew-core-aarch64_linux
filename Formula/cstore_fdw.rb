@@ -6,9 +6,10 @@ class CstoreFdw < Formula
 
   bottle do
     cellar :any
-    sha256 "e5211784ea6d81722ca564dd8b66771a90b4a3f507ff4ccd951f842d9d57615e" => :catalina
-    sha256 "e6de592f4f6675ebe54cbab9f0c1c999dc478b8a06e1c9c6ac8fd40609aa4c69" => :mojave
-    sha256 "733229f90415188167c33fe9affaca694587a5a533221bef90626b10e4e48e89" => :high_sierra
+    rebuild 1
+    sha256 "bf5bff9fcedd614bb641d3ac2bfe1c0c5d226cffd4bdccdc4ea011cfe307000b" => :catalina
+    sha256 "d2758c2643cebe884e575a44e8f36defb68519326898dccc5dd13e2046235ea5" => :mojave
+    sha256 "c7eb62b441f09798e91098a082b8835184c98292822cf5606a3bc83d0627559e" => :high_sierra
   end
 
   depends_on "postgresql"
