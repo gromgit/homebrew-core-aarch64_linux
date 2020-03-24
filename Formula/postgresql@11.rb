@@ -5,9 +5,10 @@ class PostgresqlAT11 < Formula
   sha256 "324ae93a8846fbb6a25d562d271bc441ffa8794654c5b2839384834de220a313"
 
   bottle do
-    sha256 "d9c41a81b4314a10ba40636a2eddf2c48f15c2563754a6fcfd75a20914c817a4" => :catalina
-    sha256 "22d88398ddb8518e83514bf443b1386b43849fdbec7a3adc8f66de1c215bb4b6" => :mojave
-    sha256 "3afdfea6d5a5af7cf4c4484cddffd8b9e97082e28a9f103c0383195deffb6747" => :high_sierra
+    rebuild 1
+    sha256 "c12eff2a53b44e15ced27e8d63a53a648bd89ba63b52c6893d14c80cb1d2bcea" => :catalina
+    sha256 "290dced7cbf937c3b8fe38ea70857509cb2580044cee9ce687011e44c2a140d4" => :mojave
+    sha256 "e7304315a0c5b591118b6568699cb86fb504db2ff6beeb9bc00c96ed48f85ba6" => :high_sierra
   end
 
   keg_only :versioned_formula
