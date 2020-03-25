@@ -6,9 +6,9 @@ class ApacheBrooklynCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "bc1c638f30c4036519eff703b605de6d22313970e585576bcf16183381f59247" => :high_sierra
-    sha256 "b2ad53984d4e98ef3d37622ff0ff9dd987f4ecc2614e251f3df60de13d96b6c2" => :sierra
-    sha256 "39f56956e1ed81dfae64401caa333f910b70312d6e45950ac5e2bb3c0db59cfe" => :el_capitan
+    sha256 "7769a15fc55f1a6943165e78c0cc3c9677815686b935a888c3db708fbaf2b8dd" => :catalina
+    sha256 "1b73cb46bdd10be0d426298ec972fd37362352b28fadb484374e701619d3a1dc" => :mojave
+    sha256 "b64f20e59f179c2a359d180be65931e06743aea8c62295f58d1afdbd967871d9" => :high_sierra
   end
 
   depends_on "go" => :build
