@@ -3,6 +3,7 @@ class Cmake < Formula
   homepage "https://www.cmake.org/"
   url "https://github.com/Kitware/CMake/releases/download/v3.17.0/cmake-3.17.0.tar.gz"
   sha256 "b74c05b55115eacc4fa2b77a814981dbda05cdc95a53e279fe16b7b272f00847"
+  revision 1
   head "https://gitlab.kitware.com/cmake/cmake.git"
 
   bottle do
@@ -19,6 +20,13 @@ class Cmake < Formula
   # The `with-qt` GUI option was removed due to circular dependencies if
   # CMake is built with Qt support and Qt is built with MySQL support as MySQL uses CMake.
   # For the GUI application please instead use `brew cask install cmake`.
+
+  # Allows CMAKE_FIND_FRAMEWORKS to work with CMAKE_FRAMEWORK_PATH, which brew sets.
+  # Remove with 3.18.0.
+  patch do
+    url "https://gitlab.kitware.com/cmake/cmake/-/commit/c841d43d70036830c9fe16a6dbf1f28acf49d7e3.diff"
+    sha256 "87de737abaf5f8c071abc4a4ae2e9cccced6a9780f4066b32ce08a9bc5d8edd5"
+  end
 
   def install
     args = %W[
