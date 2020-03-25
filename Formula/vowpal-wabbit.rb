@@ -5,6 +5,7 @@ class VowpalWabbit < Formula
   url "https://github.com/VowpalWabbit/vowpal_wabbit.git",
     :tag      => "8.8.1",
     :revision => "5ff219ec0ff28af5d35e452f5f18e6808993e08a"
+  revision 1
   head "https://github.com/VowpalWabbit/vowpal_wabbit.git"
 
   bottle do
@@ -15,7 +16,14 @@ class VowpalWabbit < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "rapidjson" => :build
   depends_on "boost"
+
+  # Support using brewed rapidjson
+  patch do
+    url "https://github.com/VowpalWabbit/vowpal_wabbit/commit/9aea63874e70eee477b9b281ef12515f70f5d1bd.patch?full_index=1"
+    sha256 "e69037901f0027dbcd21204822875efb98c676805d383818483fbe7badc3d6b4"
+  end
 
   def install
     ENV.cxx11
@@ -23,7 +31,9 @@ class VowpalWabbit < Formula
     # that does not accept *std_cmake_args.
     # The following should be equivalent, while supporting Homebrew's standard args.
     mkdir "build" do
-      system "cmake", "..", *std_cmake_args, "-DBUILD_TESTS=OFF"
+      system "cmake", "..", *std_cmake_args,
+                            "-DBUILD_TESTS=OFF",
+                            "-DRAPIDJSON_SYS_DEP=ON"
       system "make", "install"
     end
     bin.install Dir["utl/*"]
