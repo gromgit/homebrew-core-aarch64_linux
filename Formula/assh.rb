@@ -1,10 +1,9 @@
 class Assh < Formula
   desc "Advanced SSH config - Regex, aliases, gateways, includes and dynamic hosts"
-  homepage "https://github.com/moul/advanced-ssh-config"
-  url "https://github.com/moul/advanced-ssh-config/archive/v2.8.0.tar.gz"
-  sha256 "17656a6ac562707d6e85df44c1ccd04276fb1c08f1ff6a002291f4cb88880069"
-  revision 1
-  head "https://github.com/moul/advanced-ssh-config.git"
+  homepage "https://manfred.life/assh"
+  url "https://github.com/moul/assh/archive/v2.9.1.tar.gz"
+  sha256 "fed8876c574061c239a1d159d9c7197e8bda94f6610f6e29e682d8b6dde60852"
+  head "https://github.com/moul/assh.git"
 
   bottle do
     cellar :any_skip_relocation
@@ -16,12 +15,8 @@ class Assh < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    (buildpath/"src/github.com/moul/advanced-ssh-config").install Dir["*"]
-    cd "src/github.com/moul/advanced-ssh-config/cmd/assh" do
-      system "go", "build", "-o", bin/"assh"
-      prefix.install_metafiles
-    end
+    system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", bin/"assh"
+    prefix.install_metafiles
   end
 
   test do
@@ -30,6 +25,7 @@ class Assh < Formula
       hosts:
         hosta:
           Hostname: 127.0.0.1
+      asshknownhostfile: /dev/null
     EOS
 
     output = "hosta assh ping statistics"
