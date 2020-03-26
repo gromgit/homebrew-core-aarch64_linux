@@ -7,11 +7,9 @@ class Oauth2Proxy < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2c73a65a1965ae0d0b25bc8160f6bdabb743461a039415ae350af95cab233bb0" => :mojave
-    sha256 "062e2e65e4a9e233eeb94b711b642eb061f9eee949ef43e10845353b8fbcb9d8" => :high_sierra
-    sha256 "48fde51ae6c8f7c1ea348526117953ced48616c0e9a7678867c31998fdc13612" => :sierra
-    sha256 "56c173bc0afde492037cd5c572ae600562058ae0c9c0dc8b0155d902332bbe37" => :el_capitan
-    sha256 "bf940346696e4c891da94647640886d5aa78c261649730ddb08bc7efc3bea63e" => :yosemite
+    sha256 "fa2c02bd5d715dd0ea01ba9e253ed0909b363d40f7a6d716e0ef5baeae40cb67" => :catalina
+    sha256 "3ce3d33e4db8a89eb3c2e4f78fb6e8964f3a1647ef90facd29cb3c4941c21963" => :mojave
+    sha256 "3e9400a194397e4aeb85bc01d018554a5efcfa613e37096a20464738878f781b" => :high_sierra
   end
 
   depends_on "go" => :build
