@@ -7,9 +7,9 @@ class Click < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d4f0029a38738bd96c34e257ffa4d32a65452354b94c9feee6d12c35af8be770" => :catalina
-    sha256 "57598c45faa3379b4585686fbc6074f9755a01a733f4a6370ca5034756340b8f" => :mojave
-    sha256 "1da2b335adabf93bb8fd8bcfb772721ba6f89bb4d71ee9c8ef99e93afa0a6ca7" => :high_sierra
+    sha256 "890704d50d503be704a4ba42eaf4e00744498018665c387dfdfbb3e8e90821c3" => :catalina
+    sha256 "504036658e9d97db5629fbd60a42fe09c7d173a4d87369eb352db4882d4e40e5" => :mojave
+    sha256 "e42bd20ff9d3f6fd6d0c298e6b9c1692a0fd0535156e9a4e70ff9964d79c3693" => :high_sierra
   end
 
   depends_on "rust" => :build
