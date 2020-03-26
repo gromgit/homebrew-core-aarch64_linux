@@ -3,7 +3,7 @@ class Pulledpork < Formula
   homepage "https://github.com/shirkdog/pulledpork"
   url "https://github.com/shirkdog/pulledpork/archive/v0.7.3.tar.gz"
   sha256 "48c66dc9abb7545186d4fba497263c1d1b247c0ea7f0953db4d515e7898461a2"
-  revision 2
+  revision 3
   head "https://github.com/shirkdog/pulledpork.git"
 
   bottle do
@@ -15,6 +15,8 @@ class Pulledpork < Formula
   end
 
   depends_on "openssl@1.1"
+
+  uses_from_macos "perl"
 
   resource "Switch" do
     url "https://cpan.metacpan.org/authors/id/C/CH/CHORNY/Switch-2.17.tar.gz"
@@ -30,6 +32,8 @@ class Pulledpork < Formula
         system "make", "install"
       end
     end
+
+    inreplace "pulledpork.pl", "#!/usr/bin/env perl", "#!/usr/bin/perl"
 
     chmod 0755, "pulledpork.pl"
     bin.install "pulledpork.pl"
