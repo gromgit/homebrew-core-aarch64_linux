@@ -7,8 +7,8 @@ class GraphTool < Formula
   sha256 "823cf3374b08fbfe8f580d08ae063913d021ff92f8ef1365d317e8ea38ecc8bf"
 
   bottle do
-    sha256 "53ad78ad86d6939a94214c80b57c204c337fa57e97f6ea36a94bff4f329fb193" => :catalina
-    sha256 "aa273480061b9800a0088d06543f75db9769417905841033e5696993869258f4" => :mojave
+    sha256 "4d6feff34ab191012affa5fc88932d348473d38d51398fa2dc123451bb805eaf" => :catalina
+    sha256 "84a8f4a22404762ed079bc5546d99e808bed32aa3e536b73c8435f984b9c3dd3" => :mojave
   end
 
   depends_on "autoconf" => :build
