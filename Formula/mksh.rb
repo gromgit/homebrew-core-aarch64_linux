@@ -1,8 +1,8 @@
 class Mksh < Formula
   desc "MirBSD Korn Shell"
   homepage "https://www.mirbsd.org/mksh.htm"
-  url "https://www.mirbsd.org/MirOS/dist/mir/mksh/mksh-R57.tgz"
-  sha256 "3d101154182d52ae54ef26e1360c95bc89c929d28859d378cc1c84f3439dbe75"
+  url "https://www.mirbsd.org/MirOS/dist/mir/mksh/mksh-R58.tgz"
+  sha256 "608beb7b71870b23309ba1da8ca828da0e4540f2b9bd981eb39e04f8b7fc678c"
 
   bottle do
     cellar :any_skip_relocation
@@ -13,7 +13,7 @@ class Mksh < Formula
   end
 
   def install
-    system "sh", "./Build.sh", "-r", "-c", (ENV.compiler == :clang) ? "lto" : "combine"
+    system "sh", "./Build.sh", "-r"
     bin.install "mksh"
     man1.install "mksh.1"
   end
