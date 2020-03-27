@@ -7,9 +7,9 @@ class Assh < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "152fbbe9914afa34c2261b207075ab6b369e449b861122968e642f3c245d3061" => :catalina
-    sha256 "992f04a214504314d7693517a30044664a877e8ce1708c733048e68aeaf9efe4" => :mojave
-    sha256 "0760e5a1c0f3316155569944d7e71dc61ff02a5e6ce321fdc77fbc5fd90730f1" => :high_sierra
+    sha256 "210b380b1af14b7f4ea11f3c0f9546d7def3694f2adc5fcdaee31ab13112a5e8" => :catalina
+    sha256 "cfa4b2e02ad1806a693f8a2474db2d0ea14c9613f86d961f9c7de3574547af2a" => :mojave
+    sha256 "2564d6cb2cc3d52adc1db3ea4f74c1c73bded0cecfdd1079ac0dd6b88ddbe1c1" => :high_sierra
   end
 
   depends_on "go" => :build
