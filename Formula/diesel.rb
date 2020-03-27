@@ -7,9 +7,9 @@ class Diesel < Formula
 
   bottle do
     cellar :any
-    sha256 "214ec8bbdbb80d992a10cab12223b7c288c629b0d6683fd096a3dcb8d7097832" => :catalina
-    sha256 "e505f21815ff044a269f377dd79a79f2f1a11390637ae45cc6561625fc575c57" => :mojave
-    sha256 "c4d113930238a802a007a767068766b388b987374b79a188619a2b36f9f4ca13" => :high_sierra
+    sha256 "0ec3b3e14f123c80b4ad66ae4ca3f157466816851b888e87b510a9d963eae55c" => :catalina
+    sha256 "3bb69602a4de796c29d7307b9d1ad743bec7b92566d9c5ccab49f625f0c3a45d" => :mojave
+    sha256 "5654e9d9fe8a8fef958f9db3efe93d007dce571cb3a30ee81443c8608e5864c3" => :high_sierra
   end
 
   depends_on "rust" => [:build, :test]
