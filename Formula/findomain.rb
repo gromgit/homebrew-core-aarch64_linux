@@ -6,9 +6,9 @@ class Findomain < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "8d65b5ceb73da079cf8016cdeabee43105771912c0344ee0a556e2cc7e08d7c0" => :catalina
-    sha256 "3e709719e6c444a58602f9dcc8a3dd00527108ba90f74beda04330aaa7aaba94" => :mojave
-    sha256 "8faeacf51886ba54d6175809030de326b835d1deb2d3c256df31f3015ebfee97" => :high_sierra
+    sha256 "21dd3bcf4f6cc2c4079ce1d810e09e85274a2d56767bd5fe4f4c6e343a9e29f4" => :catalina
+    sha256 "977329cf0a52c16d75694d21d742f23e194ccd1da84314522132644b2a6b56ff" => :mojave
+    sha256 "b6c70546d00fa5532eb6fbc659939064c8d0d0505995e499fa88b66bdb1535e9" => :high_sierra
   end
 
   depends_on "rust" => :build
