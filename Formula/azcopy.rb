@@ -18,6 +18,7 @@ class Azcopy < Formula
   end
 
   test do
-    assert_match "failed to obtain credential info", shell_output("#{bin}/azcopy list https://storageaccountname.blob.core.windows.net/containername/", 1)
+    assert_match "failed to obtain credential info",
+                 shell_output("#{bin}/azcopy list https://storageaccountname.blob.core.windows.net/containername/", 1)
   end
 end
