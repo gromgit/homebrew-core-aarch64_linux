@@ -6,9 +6,9 @@ class Viewvc < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9e4e8185a678846f8a70254a737166aca533ccb6604a116f59a2e1ae43ba3176" => :catalina
-    sha256 "5308cdd92703103eb52482215269d3d6df53689908701ecd204120b533e1512b" => :mojave
-    sha256 "5308cdd92703103eb52482215269d3d6df53689908701ecd204120b533e1512b" => :high_sierra
+    sha256 "18ef8237be4eb2ad2578b31e21ad74f226bb7d4c92075474c92619547047a0f2" => :catalina
+    sha256 "709c0f7f7badc7bce0b5e18edf1372a6c1ef3bfb01006d38a51d596a069fd516" => :mojave
+    sha256 "709c0f7f7badc7bce0b5e18edf1372a6c1ef3bfb01006d38a51d596a069fd516" => :high_sierra
   end
 
   depends_on "subversion"
