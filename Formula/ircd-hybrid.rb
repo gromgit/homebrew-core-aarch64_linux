@@ -5,10 +5,9 @@ class IrcdHybrid < Formula
   sha256 "f92d837306b11621b25eb449b341207c80ba634280bd7c29b2b7be3019b259f1"
 
   bottle do
-    sha256 "de9ce625b777bf066d1d0b2933443618b677fe74387f7a3d2f07ff856605f1c0" => :catalina
-    sha256 "478efdf1f24ce2baa47511c4cfa2c451703140c760186a8845fecc765c3b38c4" => :mojave
-    sha256 "36d3e9d28b01f104593703ebe93a230a170247090e78b492cee72eb55c3cedcc" => :high_sierra
-    sha256 "f61894f34fb608a97f4df370f9f466a129f418d8eb48781fe936ff5f145c2c5a" => :sierra
+    sha256 "4f9af65b03a153f6f6ff92f96b6fe7a14784f8dce6852656cc0f130c88b2eebc" => :catalina
+    sha256 "68d2fafdf7448feee3fb0e04ff613205ddbee4e8beb45b179b526e44397d4de7" => :mojave
+    sha256 "c352eba478cec35087af2da77fe3408626c1634621a4be30db75ca48382a9873" => :high_sierra
   end
 
   depends_on "openssl@1.1"
