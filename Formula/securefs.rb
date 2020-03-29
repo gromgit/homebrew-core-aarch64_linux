@@ -2,8 +2,8 @@ class Securefs < Formula
   desc "Filesystem with transparent authenticated encryption"
   homepage "https://github.com/netheril96/securefs"
   url "https://github.com/netheril96/securefs.git",
-    :tag      => "0.9.0",
-    :revision => "cf84306e616f04aa3845db25e446df0f7c21416a"
+    :tag      => "0.11.1",
+    :revision => "dfeebf8406871d020848edde668234715356158c"
   head "https://github.com/netheril96/securefs.git"
 
   bottle do
