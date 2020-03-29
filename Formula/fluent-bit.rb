@@ -1,8 +1,8 @@
 class FluentBit < Formula
   desc "Data Collector for IoT"
   homepage "https://github.com/fluent/fluent-bit"
-  url "https://github.com/fluent/fluent-bit/archive/v1.3.11.tar.gz"
-  sha256 "2d0bdef197ac07f0113f2c293b215cdadec54f83feb3b8dc6d17aecb168fd119"
+  url "https://github.com/fluent/fluent-bit/archive/v1.4.1.tar.gz"
+  sha256 "f5e2e10133d2a266e508db9d95e425108a1a7e43ca713bedd0d9005d962b0cff"
   head "https://github.com/fluent/fluent-bit.git"
 
   bottle do
@@ -20,6 +20,9 @@ class FluentBit < Formula
   conflicts_with "msgpack", :because => "fluent-bit includes msgpack libraries."
 
   def install
+    # Work around Xcode 11 clang bug
+    ENV.append_to_cflags "-fno-stack-check" if DevelopmentTools.clang_build_version >= 1010
+
     # Per https://luajit.org/install.html: If MACOSX_DEPLOYMENT_TARGET
     # is not set then it's forced to 10.4, which breaks compile on Mojave.
     # fluent-bit builds against a vendored Luajit.
