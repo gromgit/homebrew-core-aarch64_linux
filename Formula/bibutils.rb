@@ -6,9 +6,9 @@ class Bibutils < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "dac93b43ca23378a2479b3940ba06711ee75ec20448b8157f9c86e7793fa903e" => :catalina
-    sha256 "581d652841aeef6824b5dbec7bd4d5d7ee6cb8681125d7588d23ebd28ed311df" => :mojave
-    sha256 "6d10e1fe5b235d6b6027512eed4cb196c5a64db785f5df8dd4535a641d1010d8" => :high_sierra
+    sha256 "eeb586f94730c9030e089a45e4360c5cb3171c6e41ba738744fe4e5a30e31cb7" => :catalina
+    sha256 "f420f3882e82a0bf4441c804ed065b5272ce1e5d03812392534d91b29814cd13" => :mojave
+    sha256 "4fb4ed2978195afedc30fff98661e2663120bd956633845b7e41967dd7a28621" => :high_sierra
   end
 
   def install
