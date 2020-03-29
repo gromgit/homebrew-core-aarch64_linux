@@ -7,9 +7,9 @@ class Jython < Formula
   # This isn't accidental; there is actually a compile process here.
   bottle do
     cellar :any_skip_relocation
-    sha256 "fca25829eec71179473b89517038a63cbe6a0da68594b7b63846b0e9a8194b14" => :catalina
-    sha256 "e64dc854f84ba16de19059102aa5c94d01b9ed2a996e3bafa7df1f6f2c19e3ca" => :mojave
-    sha256 "0ff369744b44ef3e03dd405e6c479c93a43770778c4f5f6eaea25e98ca5c7edf" => :high_sierra
+    sha256 "ecac33d533e405e4bd45cdf7023cd334fa655e17446cbfa5231dbf1e580166c5" => :catalina
+    sha256 "3bd7cbb55035525c113c7608b9e18215b1a214c0f21e45203c900029765ba09f" => :mojave
+    sha256 "644da593101c796e9b39e10ad7cd65f96e8e0d9ccf19109c8337a1f262ef005a" => :high_sierra
   end
 
   def install
