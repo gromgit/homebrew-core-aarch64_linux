@@ -7,9 +7,9 @@ class Libgit2 < Formula
 
   bottle do
     cellar :any
-    sha256 "87e6974b3a960f25b05f03f3e5d8e4cdbb280d637c98a9125d70f697e7668284" => :catalina
-    sha256 "50a790265b670987229ef99b4519926631f2faf6350f65fb0eaa8f19a8b40643" => :mojave
-    sha256 "709376382fec08680fae85ba1751ad8a2beb677a1cd24653636a242a3a228056" => :high_sierra
+    sha256 "552d880dbedf2fbf50015664ae9618586e455043c26b2656474d267556122293" => :catalina
+    sha256 "f3157437e1027cf076470c96891930210fca71746eebea354261b98a0cfd4876" => :mojave
+    sha256 "0d22a3a929f3fd82f96ed52813ec0ed3b88c2a266eb233ead6c5241f4df3167c" => :high_sierra
   end
 
   depends_on "cmake" => :build
