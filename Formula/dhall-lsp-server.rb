@@ -11,9 +11,9 @@ class DhallLspServer < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "ef4b5e662f7a1febed2e336ed208e8b5271370dc648fe0ff7eb8d5deeb153ca6" => :catalina
-    sha256 "83dfa0bb1ea1941c8ef3bb25c41470fa1fe6c4eba12258227428db73e8fb2d2b" => :mojave
-    sha256 "3aca7e33e737a7b9f961d2039d066d9585bcbacaf8f9fea2eab5569572f3b3c4" => :high_sierra
+    sha256 "2fd4682805baaf9f0a8092fa07bc2c7beeaaaaf1f9e8a5b9015fcf39bbdcc1f9" => :catalina
+    sha256 "01ffbdb79e2446d1130cc13262ff2c0c147149a6dbbc6b25b5544ecd026eb361" => :mojave
+    sha256 "bb38039b5f1499dda36e8f9dc3631a742756d86dd355d89a70cbcacfd1e48491" => :high_sierra
   end
 
   depends_on "cabal-install" => :build
