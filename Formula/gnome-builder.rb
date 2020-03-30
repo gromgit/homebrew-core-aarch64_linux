@@ -6,9 +6,9 @@ class GnomeBuilder < Formula
   revision 3
 
   bottle do
-    sha256 "15c739949ac36ef9aa8c9c6a07c530a7fcc41d6bc06c91f1522ba8352a7b4b3c" => :catalina
-    sha256 "7e740f8006dcaaa7bc19ed80469fd543c20062dbbe5b3f77fdcad0eea751c94b" => :mojave
-    sha256 "281e91451fdf426267424222cd97131eddbc58a0d39d47e63660eb5a51e586c3" => :high_sierra
+    sha256 "b0cfb15c0b728bf3311b133bca3245dc17ab58439f858f4b1bb49380179b1504" => :catalina
+    sha256 "a2ca627ea2b14071b0baa5cf3de47c4dd21c65d29b226ed1c29a4b35ce591997" => :mojave
+    sha256 "ac6044003a145a5f18864cfc8a1b4ada3b109f8d57c31219a42a862f51f5784a" => :high_sierra
   end
 
   depends_on "gobject-introspection" => :build
