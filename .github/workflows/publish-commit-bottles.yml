@@ -27,7 +27,7 @@ jobs:
             core.setOutput("email", email)
       - name: Update Homebrew
         run: |
-          brew update-reset ${{brew --repository}}
+          brew update-reset $(brew --repository)
       - name: Checkout tap
         uses: actions/checkout@v2
         with:
