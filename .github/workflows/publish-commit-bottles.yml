@@ -41,13 +41,15 @@ jobs:
         run: |
           apt-get update
           apt-get install -yq unzip
+      - name: Setup git
+        run: |
+          git config --global user.name "${{steps.env.outputs.name}}"
+          git config --global user.email "${{steps.env.outputs.email}}"
       - name: Pull bottles
         env:
           HOMEBREW_GITHUB_API_TOKEN: ${{secrets.GITHUB_TOKEN}}
           HOMEBREW_BINTRAY_USER: brewtestbot
           HOMEBREW_BINTRAY_KEY: ${{secrets.HOMEBREW_BINTRAY_KEY}}
-          GIT_COMMITTER_NAME: ${{steps.env.outputs.name}}
-          GIT_COMMITTER_EMAIL: ${{steps.env.outputs.email}}
         run: |
           brew pr-pull --verbose ${{github.event.client_payload.pull_request}}
       - name: Push bottle commit
