@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: homebrew/brew
+      options: -v /usr/bin/unzip:/usr/bin/unzip
     env:
       HOMEBREW_DEVELOPER: 1
       HOMEBREW_FORCE_HOMEBREW_ON_LINUX: 1
@@ -37,10 +38,6 @@ jobs:
         run: |
           rm -rf $(brew --repository ${{github.repository}})
           ln -s $GITHUB_WORKSPACE $(brew --repository ${{github.repository}})
-      - name: Install unzip
-        run: |
-          apt-get update
-          apt-get install -yq unzip
       - name: Setup git
         run: |
           git config --global user.name "${{steps.env.outputs.name}}"
