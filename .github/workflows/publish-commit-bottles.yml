@@ -37,6 +37,10 @@ jobs:
         run: |
           rm -rf $(brew --repository ${{github.repository}})
           ln -s $GITHUB_WORKSPACE $(brew --repository ${{github.repository}})
+      - name: Install unzip
+        run: |
+          apt-get update
+          apt-get install -yq unzip
       - name: Pull bottles
         env:
           HOMEBREW_GITHUB_API_TOKEN: ${{secrets.GITHUB_TOKEN}}
