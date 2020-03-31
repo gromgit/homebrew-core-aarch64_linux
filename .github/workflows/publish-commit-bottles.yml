@@ -49,7 +49,7 @@ jobs:
           GIT_COMMITTER_NAME: ${{steps.env.outputs.name}}
           GIT_COMMITTER_EMAIL: ${{steps.env.outputs.email}}
         run: |
-          brew pr-pull ${{github.event.client_payload.pull_request}}
+          brew pr-pull --verbose ${{github.event.client_payload.pull_request}}
       - name: Push bottle commit
         run: |
           for try in $(seq 5); do
