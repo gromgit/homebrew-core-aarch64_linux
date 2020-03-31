@@ -39,8 +39,9 @@ jobs:
           ln -s $GITHUB_WORKSPACE $(brew --repository ${{github.repository}})
       - name: Pull bottles
         env:
+          HOMEBREW_GITHUB_API_TOKEN: ${{secrets.GITHUB_TOKEN}}
           HOMEBREW_BINTRAY_USER: brewtestbot
-          HOMEBREW_BINTRAY_KEY: ${{ secrets.HOMEBREW_BINTRAY_KEY }}
+          HOMEBREW_BINTRAY_KEY: ${{secrets.HOMEBREW_BINTRAY_KEY}}
           GIT_COMMITTER_NAME: ${{steps.env.outputs.name}}
           GIT_COMMITTER_EMAIL: ${{steps.env.outputs.email}}
         run: |
