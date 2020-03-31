@@ -8,9 +8,9 @@ class Imapsync < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "790bd48d5b6108a257e9453aa3a2c60474805457b40b9794ff7ef97999a59b20" => :catalina
-    sha256 "82488e74500a8fc45342246ce67b65b386e82118a10848409c9baa1058f01210" => :mojave
-    sha256 "ecabb7fc517a6f3b558fba82711c3c00334cebdc2aa120fd634fe46f07f0fe00" => :high_sierra
+    sha256 "6c1a1bed4c3ad926f34a5efe6b6bfe5d2776ed4ee0d000679b21679c47ff81cb" => :catalina
+    sha256 "5b259d1a7096a887af61eef5a379122c8e94e71f912b2670a35031e6c159351c" => :mojave
+    sha256 "fa0a19bf66b24d332f6e0f4f827b2abdff2b904b483c4927f2ed7d6d944ab261" => :high_sierra
   end
 
   uses_from_macos "perl"
