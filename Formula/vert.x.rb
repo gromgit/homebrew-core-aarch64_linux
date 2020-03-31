@@ -1,11 +1,11 @@
 class VertX < Formula
   desc "Toolkit for building reactive applications on the JVM"
   homepage "https://vertx.io/"
-  url "https://bintray.com/vertx/downloads/download_file?file_path=vert.x-3.8.5-full.tar.gz"
-  sha256 "ce21b4846f1ad485cdba76cc65690be9ec254c5db12cd57bab2cc8ee73ab9806"
-  revision 1
+  url "https://bintray.com/vertx/downloads/download_file?file_path=vert.x-3.9.0-full.tar.gz"
+  sha256 "d00c138a1a43c7daf2d4a6a6b747f5c56989018edc4d210bc1b008e87548124c"
 
   bottle :unneeded
+
   depends_on "openjdk"
 
   def install
