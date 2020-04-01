@@ -1,10 +1,9 @@
 class Cataclysm < Formula
   desc "Fork/variant of Cataclysm Roguelike"
   homepage "https://github.com/CleverRaven/Cataclysm-DDA"
-  url "https://github.com/CleverRaven/Cataclysm-DDA/archive/0.D.tar.gz"
-  version "0.D"
-  sha256 "6cc97b3e1e466b8585e8433a6d6010931e9a073f6ec060113161b38052d82882"
-  revision 1
+  url "https://github.com/CleverRaven/Cataclysm-DDA/archive/0.E.tar.gz"
+  version "0.E"
+  sha256 "b0af9a9292929e17332edcea770bca9a91f1d08ea47726d78a47e09281a42fa3"
   head "https://github.com/CleverRaven/Cataclysm-DDA.git"
 
   bottle do
@@ -19,7 +18,6 @@ class Cataclysm < Formula
   depends_on "gettext"
   depends_on "libogg"
   depends_on "libvorbis"
-  depends_on "lua" unless build.head?
   depends_on "sdl2"
   depends_on "sdl2_image"
   depends_on "sdl2_mixer"
@@ -39,13 +37,11 @@ class Cataclysm < Formula
     ]
 
     args << "CLANG=1" if ENV.compiler == :clang
-    args << "LUA=1" if build.stable?
 
     system "make", *args
 
     # no make install, so we have to do it ourselves
     libexec.install "cataclysm-tiles", "data", "gfx"
-    libexec.install "lua" if build.stable?
 
     inreplace "cataclysm-launcher" do |s|
       s.change_make_var! "DIR", libexec
