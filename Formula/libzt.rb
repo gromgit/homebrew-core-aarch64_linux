@@ -1,10 +1,10 @@
 class Libzt < Formula
   desc "Encrypted P2P networking library for applications (GPLv3)"
   homepage "https://www.zerotier.com"
-
   url "https://github.com/zerotier/libzt.git",
     :tag      => "1.3.1-hb1",
     :revision => "d5b064623e1161196fd5bc14668e83bec2c27717"
+  version "1.3.1"
 
   bottle do
     cellar :any
