@@ -6,9 +6,9 @@ class Gobo < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d67feb21d1f3f74238cab0cbc1c42b93deed904251aa10d56565ac4a41ebe987" => :catalina
-    sha256 "0f48978d6d0d4888458c8c077812e14d43144153707911b1a18beb19cb35b2b1" => :mojave
-    sha256 "3f3b0ac62919f4df2b3e954acb92a4ea8667374e7fbd9ae7eadae1bf5930f398" => :high_sierra
+    sha256 "2e9011c06ed56aa56e9fd0a1534a4d318e620c6ada87f1ebaacb0084ee1afd32" => :catalina
+    sha256 "8ae020b615f27b4231433e35124a78df542bbec88878c7f4fc3207d0439fb402" => :mojave
+    sha256 "60b13e5768bc673865ea086c0591830e39142e8b2efca3342f3f35c3506aae1c" => :high_sierra
   end
 
   depends_on "eiffelstudio" => :test
