@@ -29,7 +29,7 @@ class BoostAT160 < Formula
   # https://github.com/boostorg/python/pull/59
   # patch derived from https://github.com/boostorg/python/commit/f2c465f
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/9e56b45/boost/boost1_60_0_python_class_metadata.diff"
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/9e56b450f3f5fd8095540e43184b13ab2824f911/boost/boost1_60_0_python_class_metadata.diff"
     sha256 "1a470c3a2738af409f68e3301eaecd8d07f27a8965824baf8aee0adef463b844"
   end
 
