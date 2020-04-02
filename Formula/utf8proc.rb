@@ -6,10 +6,9 @@ class Utf8proc < Formula
 
   bottle do
     cellar :any
-    sha256 "1f231714b571b71bb44282b94c0ab19c3ad8e7f4c57719bc9f963578011dfe1c" => :catalina
-    sha256 "5cbd1c95723915eda5c5bb0437f49c3aeb50d768cfec87e9ff09507912244589" => :mojave
-    sha256 "b1bbbd93be674c8304888ff5843a63433a5e3b7ccd7d8c8d9ceb450ce71a9c88" => :high_sierra
-    sha256 "447fe55565ddc9e411a78939b829d2a175f608ea0497eae069c86befef471d34" => :sierra
+    sha256 "f215acf62769b7036110950b65285742b6550c631b0606befa12b98f32c53130" => :catalina
+    sha256 "1bd0f29df929fff62b33895ca76162b9d376aefea09115c84a3841793fa7a9a3" => :mojave
+    sha256 "12b05c0477b8f6fd029f3723d74712f267960fb9d212a21520f9a557d3cd516c" => :high_sierra
   end
 
   def install
