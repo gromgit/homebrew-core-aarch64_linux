@@ -21,14 +21,14 @@ class BoostAT159 < Formula
   # formatting_ostream. Fixed https://svn.boost.org/trac/boost/ticket/11549
   # from https://github.com/boostorg/log/commit/7da193f.patch
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/2ccb6715b3/boost/boost159-questionable-operator.patch"
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/2ccb6715b3727a5ec4d2582dc8931cd46cbefbf1/boost/boost159-questionable-operator.patch"
     sha256 "a49fd7461d9f3b478d2bddac19adca93fe0fabab71ee67e8f140cbd7d42d6870"
   end
 
   # Fixed missing symbols in libboost_log_setup (on mac/clang)
   # from https://github.com/boostorg/log/commit/870284ed31792708a6139925d00a0aadf46bf09f
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/2ccb6715b3/boost/boost159-missing-symbols.patch"
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/2ccb6715b3727a5ec4d2582dc8931cd46cbefbf1/boost/boost159-missing-symbols.patch"
     sha256 "2c3a3bae1691df5f8fce8fbd4e5727d57bd4dd813748b70d7471c855c4f19d1c"
   end
 
