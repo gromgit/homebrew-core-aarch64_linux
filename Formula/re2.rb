@@ -8,9 +8,9 @@ class Re2 < Formula
 
   bottle do
     cellar :any
-    sha256 "abb07cfb9def8d6f25a0d5694f0f23ba44b5b500f2d45d25d27515f62802c01b" => :catalina
-    sha256 "92c4603fad274003e71699376b20a40c6e57c13f878774a894e28a9ef73295c1" => :mojave
-    sha256 "58ac31c06c851bc5632c3a0703c0d41e55d8b015229cf03de09ee4a8701d92ef" => :high_sierra
+    sha256 "430e7efee518f5235ea75afc039168ce38c5407b525301199ccbc6c698300bb8" => :catalina
+    sha256 "67eed1f38907d1d7318b5d95f035ca18ff6186d85ee690560b8b1cd387f8afd4" => :mojave
+    sha256 "f111b7c906ab090d9db56e1f183f94d02e8cf5ce521e4ae4ff8e64d974cb5cbb" => :high_sierra
   end
 
   def install
