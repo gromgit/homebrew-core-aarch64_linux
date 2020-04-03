@@ -1,8 +1,8 @@
 class Libzdb < Formula
   desc "Database connection pool library"
   homepage "https://tildeslash.com/libzdb/"
-  url "https://tildeslash.com/libzdb/dist/libzdb-3.2.1.tar.gz"
-  sha256 "b9a7b59a0a9f53dc87ce1b5a919f21b8cd6448c04a9157bccef1e3c1dffd3ff1"
+  url "https://tildeslash.com/libzdb/dist/libzdb-3.2.2.tar.gz"
+  sha256 "d51e4e21ee1ee84ac8763de91bf485360cd76860b951ca998e891824c4f195ae"
 
   bottle do
     cellar :any
