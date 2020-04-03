@@ -2,8 +2,8 @@ class Openrct2 < Formula
   desc "Open source re-implementation of RollerCoaster Tycoon 2"
   homepage "https://openrct2.io/"
   url "https://github.com/OpenRCT2/OpenRCT2.git",
-      :tag      => "v0.2.4",
-      :revision => "d645338752fbda54bed2cf2a4183ae8b44be6e95"
+      :tag      => "v0.2.5",
+      :revision => "4f6e77e30ac8e81fd873f1c4041105395fed1327"
   head "https://github.com/OpenRCT2/OpenRCT2.git", :branch => "develop"
 
   bottle do
@@ -27,13 +27,13 @@ class Openrct2 < Formula
   depends_on "speexdsp"
 
   resource "title-sequences" do
-    url "https://github.com/OpenRCT2/title-sequences/releases/download/v0.1.2a/title-sequence-v0.1.2a.zip"
-    sha256 "7536dbd7c8b91554306e5823128f6bb7e94862175ef09d366d25e4bce573d155"
+    url "https://github.com/OpenRCT2/title-sequences/releases/download/v0.1.2c/title-sequences.zip"
+    sha256 "5284333fa501270835b5f0cf420cb52155742335f5658d7889ea35d136b52517"
   end
 
   resource "objects" do
-    url "https://github.com/OpenRCT2/objects/releases/download/v1.0.10/objects.zip"
-    sha256 "4f261964f1c01a04b7600d3d082fb4d3d9ec0d543c4eb66a819eb2ad01417aa0"
+    url "https://github.com/OpenRCT2/objects/releases/download/v1.0.13/objects.zip"
+    sha256 "0279874ad5a4c07f1fca5c62d2d5c3aa12bd849d7b643e3c7d93cfda88df7c6a"
   end
 
   def install
