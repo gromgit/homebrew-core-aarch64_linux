@@ -6,14 +6,9 @@ class RdiffBackup < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "935ffcd8c7ba9579aaf0c640c30ff6b877ae862e5ca5083619c51200ab6847cc" => :catalina
-    sha256 "76ac2c10776a2dcb230f07b95704c65522cae20865a9bf4e4772c86b94673bda" => :mojave
-    sha256 "899687c88770af610d76f66f02da736a2a62ac4676f0f80796dbbae1d92bc47f" => :high_sierra
-    sha256 "7dcf4c878ccafc113e5742c83214f946dd3a55b472e086a944e918bcee1cf2bd" => :sierra
-    sha256 "f06f79bc1536dbaa990e6005565f18de05e9dc12deb09701a504ab6bfc8b8f11" => :el_capitan
-    sha256 "35f6a0f726a680d639f7a1c83af8e27d046d5a68a334bf19d47eaa363748767c" => :yosemite
-    sha256 "5b0eab2335afe2d298cd51737c744d052536cb0bdbee780819496e1000a3b179" => :mavericks
+    sha256 "227cf94d42d42ef7750368f1571608e4c3bdab841ee22d850bdd1dfa0378a90a" => :catalina
+    sha256 "576744615d68954e2389f3e7aaa36b83e6ded022d8ba57fc955b5e239fd029a4" => :mojave
+    sha256 "dfa0b44633e5aab9797c1c71ee8cf36715178b3607cff0c914145743c402aa82" => :high_sierra
   end
 
   depends_on "librsync"
