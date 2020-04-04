@@ -1,9 +1,8 @@
 class Tflint < Formula
   desc "Linter for Terraform files"
   homepage "https://github.com/wata727/tflint"
-  url "https://github.com/terraform-linters/tflint/archive/v0.15.3.tar.gz"
-  sha256 "878498373f45e6a34a3e1016339309ba973d7f13887430ec9674d745a751e170"
-  revision 1
+  url "https://github.com/terraform-linters/tflint/archive/v0.15.4.tar.gz"
+  sha256 "3378055e8f1591c46d313765b4579d7484612ce88bea5222e5d0d14f4f8e5cef"
   head "https://github.com/wata727/tflint.git"
 
   bottle do
