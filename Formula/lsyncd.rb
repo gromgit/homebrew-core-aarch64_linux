@@ -67,12 +67,12 @@ class Lsyncd < Formula
     "10.14.3" => ["xnu-4903.241.1.tar.gz",  "6de5253718f93401dc752eb69d08b6253c7abcd9a60349f7e0617776eeda1924"],
     "10.14.4" => ["xnu-4903.241.1.tar.gz",  "6de5253718f93401dc752eb69d08b6253c7abcd9a60349f7e0617776eeda1924"],
     "10.14.5" => ["xnu-4903.241.1.tar.gz",  "6de5253718f93401dc752eb69d08b6253c7abcd9a60349f7e0617776eeda1924"],
-    "10.14.6" => ["xnu-4903.241.1.tar.gz",  "6de5253718f93401dc752eb69d08b6253c7abcd9a60349f7e0617776eeda1924"],
+    "10.14.6" => ["xnu-4903.270.47.tar.gz", "126856fa7a1aaa5f5480034855bd58d4c7f60693397b8279aaac2c83a502a552"],
     "10.15"   => ["xnu-6153.11.26.tar.gz",  "ec75b9ec8aaed5619cc81836f09fac9aa2c26d5ffda8444d4ae0edbb10bac574"],
-    "10.15.1" => ["xnu-6153.11.26.tar.gz",  "ec75b9ec8aaed5619cc81836f09fac9aa2c26d5ffda8444d4ae0edbb10bac574"],
-    "10.15.2" => ["xnu-6153.11.26.tar.gz",  "ec75b9ec8aaed5619cc81836f09fac9aa2c26d5ffda8444d4ae0edbb10bac574"],
-    "10.15.3" => ["xnu-6153.11.26.tar.gz",  "ec75b9ec8aaed5619cc81836f09fac9aa2c26d5ffda8444d4ae0edbb10bac574"],
-    "10.15.4" => ["xnu-6153.11.26.tar.gz",  "ec75b9ec8aaed5619cc81836f09fac9aa2c26d5ffda8444d4ae0edbb10bac574"],
+    "10.15.1" => ["xnu-6153.41.3.tar.gz",   "a1a8c57cf26a987760be3fe982a16d32714cc8eb49435704ef16f6160d549762"],
+    "10.15.2" => ["xnu-6153.41.3.tar.gz",   "a1a8c57cf26a987760be3fe982a16d32714cc8eb49435704ef16f6160d549762"],
+    "10.15.3" => ["xnu-6153.41.3.tar.gz",   "a1a8c57cf26a987760be3fe982a16d32714cc8eb49435704ef16f6160d549762"],
+    "10.15.4" => ["xnu-6153.41.3.tar.gz",   "a1a8c57cf26a987760be3fe982a16d32714cc8eb49435704ef16f6160d549762"],
   }
 
   tarball, checksum = if xnu_headers.key? MacOS.full_version
