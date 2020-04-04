@@ -7,9 +7,9 @@ class Hsd < Formula
   sha256 "e53689784d677e4f729dd723e753038b020e030522e7c43b5dd753b7079a05f7"
 
   bottle do
-    sha256 "729378224e1496929dd73b03b7bd9d0365a1132a8702ca4e22555be908de63af" => :catalina
-    sha256 "3fcfa8452139754cab058e8c3c2c5df240fc4379bd6b42989725d4219e872856" => :mojave
-    sha256 "f9f7ce700f51d306e863cd4558ba60ceff775aef4994f83ec8c9ed7476522e12" => :high_sierra
+    sha256 "db98049e6689a72c86b560b8a9bc5926114b1af9271ecfb51e23d591a3f4012a" => :catalina
+    sha256 "91622dc051c25648f5a533cd0c227670800be9718b47bb33b29181fb7151ecaf" => :mojave
+    sha256 "3efaa9f3ab569d428064329dbceff2426c65ffaa939a905a872a8b154c1f6a9f" => :high_sierra
   end
 
   depends_on "python" => :build
