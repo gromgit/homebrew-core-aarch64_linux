@@ -6,6 +6,13 @@ class PassGitHelper < Formula
   url "https://github.com/languitar/pass-git-helper/archive/v1.1.0.tar.gz"
   sha256 "85c9e2f1f544227da9129503d91ce5d502be127c83ad24cbc6dc8ba3ab746b8e"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "1f3954dd243690c880e3feb3a919e6c2778646ec90e56f0b1e285837c8441c20" => :catalina
+    sha256 "e08a67118a8d49dc0d3088dfd239b7f8869eebd1fcfd833aaa26bf799eb12fde" => :mojave
+    sha256 "1e05bbb2761624c80e9eb1c952f70a97ae6d214bc2e9cee9c17949e3eb099933" => :high_sierra
+  end
+
   depends_on "gnupg" => :test
   depends_on "pass"
   depends_on "python@3.8"
