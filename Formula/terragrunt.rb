@@ -2,8 +2,8 @@ class Terragrunt < Formula
   desc "Thin wrapper for Terraform e.g. for locking state"
   homepage "https://github.com/gruntwork-io/terragrunt"
   url "https://github.com/gruntwork-io/terragrunt.git",
-    :tag      => "v0.23.3",
-    :revision => "530f36e32e15889807835a33504ef8288c961241"
+    :tag      => "v0.23.5",
+    :revision => "7cf1056d1acb9fee781312126371c69bf732ab59"
 
   bottle do
     cellar :any_skip_relocation
@@ -12,17 +12,11 @@ class Terragrunt < Formula
     sha256 "d0fea8e490cc94d2075b202565133cb4aff275209fe688f05557e34512e7e7cf" => :high_sierra
   end
 
-  depends_on "dep" => :build
   depends_on "go" => :build
   depends_on "terraform"
 
   def install
-    ENV["GOPATH"] = buildpath
-    (buildpath/"src/github.com/gruntwork-io/terragrunt").install buildpath.children
-    cd "src/github.com/gruntwork-io/terragrunt" do
-      system "dep", "ensure", "-vendor-only"
-      system "go", "build", "-o", bin/"terragrunt", "-ldflags", "-X main.VERSION=v#{version}"
-    end
+    system "go", "build", "-ldflags", "-X main.VERSION=v#{version}", *std_go_args
   end
 
   test do
