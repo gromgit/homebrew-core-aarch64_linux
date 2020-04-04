@@ -8,8 +8,8 @@ class Swiftlint < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5c51f9a46a0ab28229460afd1037825bf1bef6b577113303057602487a898553" => :catalina
-    sha256 "408d3baeeb687da9cb753abf154835d71672eb29f1288538e5fa576f6d8880d1" => :mojave
+    sha256 "32f9e5e37190e81856eff49c2118c04d1995110b509f0a4997e211c9f939919e" => :catalina
+    sha256 "c4fc10277d46c406277491003e5d5bbdfe526890c39b30eb924749696ed56d40" => :mojave
   end
 
   depends_on :xcode => ["10.2", :build]
