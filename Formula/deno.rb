@@ -6,9 +6,9 @@ class Deno < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "4006e817ebad2c841a57690aadcdd1f0d18ad44257ec81656823f96d3d65046b" => :catalina
-    sha256 "e8b528fa2002fbc34385331c3891db8ccac0474c31139930d84f1d0d0c56e903" => :mojave
-    sha256 "d224a3b29b291ccea3fb0a6ed0fda61e0c45049b94f0b6fcd917fb140881ae4a" => :high_sierra
+    sha256 "db63590039606a7259560b7da611fb01f7cf356db942c394958719ade694340a" => :catalina
+    sha256 "a38c87a58364f5c8b778fa732ace8402e846e247cff82711b45881ea1697fd3a" => :mojave
+    sha256 "46f03447bed1d48a99afb3cd1512c97f41842460d6787a5f2e3ecf48d2a79bfc" => :high_sierra
   end
 
   depends_on "llvm" => :build
