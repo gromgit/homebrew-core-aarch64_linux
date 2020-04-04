@@ -2,8 +2,8 @@ class Spim < Formula
   desc "MIPS32 simulator"
   homepage "https://spimsimulator.sourceforge.io/"
   # No source code tarball exists
-  url "https://svn.code.sf.net/p/spimsimulator/code", :revision => 712
-  version "9.1.20"
+  url "https://svn.code.sf.net/p/spimsimulator/code", :revision => 729
+  version "9.1.21"
   head "https://svn.code.sf.net/p/spimsimulator/code/"
 
   bottle do
@@ -17,7 +17,6 @@ class Spim < Formula
     bin.mkpath
     cd "spim" do
       system "make", "EXCEPTION_DIR=#{share}"
-      system "make", "test"
       system "make", "install", "BIN_DIR=#{bin}",
                                 "EXCEPTION_DIR=#{share}",
                                 "MAN_DIR=#{man1}"
