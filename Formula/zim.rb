@@ -8,10 +8,9 @@ class Zim < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "90a03a7c6398c3587bf32dc5d2d9a727f6a0acaa1d3cc2a89cb2e1865a56bffc" => :catalina
-    sha256 "7eb345f75ff5dd366000183deb4d7dc974f00de5ee19f6e82a3e5a4ef92990eb" => :mojave
-    sha256 "7eb345f75ff5dd366000183deb4d7dc974f00de5ee19f6e82a3e5a4ef92990eb" => :high_sierra
+    sha256 "0fe8bbcf6c161c62dad791f42dea75495d9cf0b9e21822d8c6a7b5bbe6e0ab92" => :catalina
+    sha256 "0fe8bbcf6c161c62dad791f42dea75495d9cf0b9e21822d8c6a7b5bbe6e0ab92" => :mojave
+    sha256 "0fe8bbcf6c161c62dad791f42dea75495d9cf0b9e21822d8c6a7b5bbe6e0ab92" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
