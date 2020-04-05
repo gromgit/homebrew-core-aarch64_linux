@@ -9,10 +9,10 @@ class Pympress < Formula
   head "https://github.com/Cimbali/pympress.git"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "7de5bf805963538a6f4b231fdde746355bde224732ea5e4609d8365f66dce6f5" => :catalina
-    sha256 "a4d24dbf2a8c82c770b2f16819cb2608f8a865a27382b4718c9b88d28c4a4cce" => :mojave
-    sha256 "3a0dd078b6b55626c91c59a3e540d391903362561591c8432fdd9fe58234b04e" => :high_sierra
+    cellar :any
+    sha256 "8487b99dfd1f70e1e7704f89a602c5cad17959f4d7df19c718b937a2120527c7" => :catalina
+    sha256 "be26e5f8a140083f387e58269a7da6d54a84f18996adb74af3ed855e9a4a619c" => :mojave
+    sha256 "1b26a67b3c2104c26634f86faf363c893433abc0461962ed785f92dac9c07d37" => :high_sierra
   end
 
   depends_on "gobject-introspection"
