@@ -8,9 +8,8 @@ class Pytouhou < Formula
 
   bottle do
     cellar :any
-    sha256 "da770fbd2301c23ee7a674866d6a7708359f29d4de0691b77f3b83d42ff32584" => :catalina
-    sha256 "137b520306f3c5a3a2070c3c5741f8efcd7b057c91d364d754ad16ddb9e7408c" => :mojave
-    sha256 "4e91f1ee4b708327308e1927f499d137bbb35589ab097743023cf6e0ae2cccb3" => :high_sierra
+    sha256 "e0470e99f10a318e152eeb46e7e555271234e1ee256d26d9115d947bd810beca" => :catalina
+    sha256 "5222b26c38e279f14622baf64a1d2dfab9decf6920533b353eed61b9d9f6b411" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
