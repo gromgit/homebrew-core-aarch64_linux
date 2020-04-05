@@ -22,9 +22,9 @@ class Vtk < Formula
   end
 
   bottle do
-    sha256 "f599579a67dd14daf7021338888a149f8953d4753ee2583993eb31d71bb131d3" => :catalina
-    sha256 "82e6bb1ddd01bcec0487ebe917f8b35504bd5a44f715502b83309115c8a581dc" => :mojave
-    sha256 "3943bb648fbd484dec3a0dea7ba49644336fb957172aa308217af49234c685df" => :high_sierra
+    sha256 "94b4c410f2ec94624607d56f10f8b72c08678a41e5177ea86517a8b37a145be2" => :catalina
+    sha256 "825383fc6ff17588d76d397972fcf84e696827b6ef2fd9c539de240113a1e6cb" => :mojave
+    sha256 "af193dbade0bdf2acdc716e501452c985c8abaf693270f793a2a3189e28159d4" => :high_sierra
   end
 
   depends_on "cmake" => :build
