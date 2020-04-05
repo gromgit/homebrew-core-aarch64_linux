@@ -6,9 +6,9 @@ class Gdcm < Formula
   revision 2
 
   bottle do
-    sha256 "c10202e17aa57c391d38bfe06e6b33eae64f2659f85c88e2be9a0ea1e040dbfd" => :catalina
-    sha256 "3d54af3add1be6cc7c608d403ba626c78542f19fff125cc8db063934cac33fe8" => :mojave
-    sha256 "f72b23f1bcddb9a2824d45543de68175e5664d730047bd4f01841287acbf67e8" => :high_sierra
+    sha256 "eed6fb7267470d371e3f90a37ca27be2c96c03f059c2ba0fd35760a207da41a0" => :catalina
+    sha256 "a91944f3315915baecfd7022331f94f517836723b8466f9e37c0d53d0f0347d7" => :mojave
+    sha256 "d1cc263c81d8e0d0f258d81522065c51c2d6334c4c0129fbddd238425b30dc70" => :high_sierra
   end
 
   depends_on "cmake" => :build
