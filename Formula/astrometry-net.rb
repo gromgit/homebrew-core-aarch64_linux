@@ -9,7 +9,6 @@ class AstrometryNet < Formula
 
   bottle do
     cellar :any
-    sha256 "4152527a196add8840cd58fd7d9d8234b30373e067ec1bae29cf2b9d20289f99" => :catalina
     sha256 "65d9f537810a5a9eb3eabb6bcbe64b9961f313afd0f541550b4eba63160649a0" => :mojave
     sha256 "237224c405cf05b73485b9770ffe84f2ecb8e70a34901d25e588b7280d217d74" => :high_sierra
   end
