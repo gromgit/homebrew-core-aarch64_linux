@@ -7,9 +7,9 @@ class Pcl < Formula
   head "https://github.com/PointCloudLibrary/pcl.git"
 
   bottle do
-    sha256 "fd83edf5799fe877047a8a566bf741e8ada701332845c8efa6f16ec1c3d6020a" => :catalina
-    sha256 "96db828e46c37b2fc1de201db8123c9b2e6712285726a8f9a9a549b01e955fff" => :mojave
-    sha256 "d23eacbc3d2ec17015d0c52218c190f5fc9605cf78366205de2e0d7980e9e565" => :high_sierra
+    sha256 "5b24fe7fd7a08edc05f8f44d7d082337e90616885c156927bf6f152cb016e9a2" => :catalina
+    sha256 "00d593c8e532639ef73186e271918844be960c4f37356e1efc42ea2dd23fa092" => :mojave
+    sha256 "4a335b1f0b4965bc9445072092dd94262ce63d59a75c5c5aea478efb39ff23c3" => :high_sierra
   end
 
   depends_on "cmake" => :build
