@@ -1,8 +1,8 @@
 class Shellcheck < Formula
   desc "Static analysis and lint tool, for (ba)sh scripts"
   homepage "https://www.shellcheck.net/"
-  url "https://github.com/koalaman/shellcheck/archive/v0.7.0.tar.gz"
-  sha256 "946cf3421ffd418f0edc380d1184e4cb08c2ec7f098c79b1c8a2c482fe91d877"
+  url "https://github.com/koalaman/shellcheck/archive/v0.7.1.tar.gz"
+  sha256 "50a219bde5c16fc0a40e2e3725b6c192ff589bc8a2569c32b62dcaece0495896"
   head "https://github.com/koalaman/shellcheck.git"
 
   bottle do
@@ -15,12 +15,6 @@ class Shellcheck < Formula
   depends_on "cabal-install" => :build
   depends_on "ghc" => :build
   depends_on "pandoc" => :build
-
-  # GHC 8.8 compatibility. Remove with the next release.
-  patch do
-    url "https://github.com/koalaman/shellcheck/commit/2c026f1ec7c205c731ff2a0ccd85365f37245758.patch?full_index=1"
-    sha256 "21d76e62f16b12518a2cb30fd1450d1f68bf14e164ec0689732e5ed5b97c656f"
-  end
 
   def install
     system "cabal", "v2-update"
