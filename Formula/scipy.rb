@@ -8,9 +8,9 @@ class Scipy < Formula
 
   bottle do
     cellar :any
-    sha256 "d273e077bd3afeb31c8a8f1537171d45effd5cfbeace38fcddc3f6f48ef6abcc" => :catalina
-    sha256 "f8d80b91aece4696e4ef3d78c12518f76b04a480b1b7a926b92d04d9905b6012" => :mojave
-    sha256 "5cf8f476a5386c653fc2c933678eb588e044d7fe34bd4c6937a195516a4bb583" => :high_sierra
+    sha256 "4289e4b9fb582a3806af95ffab1f3e713929e1c9d0b86d69550e68defd3233b8" => :catalina
+    sha256 "d333f0e89655ced06242cdc0f27713e98d6a2fe6ec26ca2116539ae3b3b589fa" => :mojave
+    sha256 "534033b527c6f2870edc062edbc2832c9e3870cd527c2b38cd8e7689ba2f68d5" => :high_sierra
   end
 
   depends_on "swig" => :build
