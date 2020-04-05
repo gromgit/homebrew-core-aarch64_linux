@@ -5,9 +5,9 @@ class Freetds < Formula
   sha256 "a2134ff1852003c0aeed82bd5f7842233ff287c3a14252b84d2653983aff7da1"
 
   bottle do
-    sha256 "363d44ed3a0ec8f9768987bc6d873913dd30818933ea9bb9c290580dbd6d11ab" => :catalina
-    sha256 "0af97f13a63bcdc54f9f5963e6a935e2779ae76e11cccfa75b8f60f0affe6574" => :mojave
-    sha256 "49347305bf6ae124626f8d74d0660adf73cfee4d36b7cf0b6fbf312041b7aee5" => :high_sierra
+    sha256 "24d60daf6ab7b2ab0bf424def60709e3013bb8eced3b4a0af9fe60287a82d7cb" => :catalina
+    sha256 "ea0ab1838f8acb52d89552c5a8a8c1a8a596f89392a907f21157d5bb2ea96cf6" => :mojave
+    sha256 "08f933ed9f847d11c96d67a1aef0eadb81b80e2d283147b8708a9914c55c8e64" => :high_sierra
   end
 
   head do
