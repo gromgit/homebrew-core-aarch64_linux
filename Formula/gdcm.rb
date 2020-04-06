@@ -3,7 +3,7 @@ class Gdcm < Formula
   homepage "https://sourceforge.net/projects/gdcm/"
   url "https://github.com/malaterre/GDCM/archive/v3.0.5.tar.gz"
   sha256 "5cc175d9b845db91143f972e505680e766ab814a147b16abbb34acd88dacdb5a"
-  revision 2
+  revision 3
 
   bottle do
     sha256 "eed6fb7267470d371e3f90a37ca27be2c96c03f059c2ba0fd35760a207da41a0" => :catalina
