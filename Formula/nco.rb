@@ -3,7 +3,7 @@ class Nco < Formula
   homepage "https://nco.sourceforge.io/"
   url "https://github.com/nco/nco/archive/4.9.2.tar.gz"
   sha256 "1a98c37c946c00232fa7319d00d1d80f77603adda7c9239d10d68a8a3545a4d5"
-  revision 1
+  revision 2
 
   bottle do
     cellar :any
