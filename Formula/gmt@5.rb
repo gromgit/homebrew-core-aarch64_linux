@@ -8,9 +8,9 @@ class GmtAT5 < Formula
   revision 4
 
   bottle do
-    sha256 "3db5cdd631d50e7ef57f6fe6ed15548297a176fe98021bb67b75b293dff95af8" => :catalina
-    sha256 "8f994ac47758453d5cfcb0e6652709eafd48455a0a1d988f315b6122c9a19463" => :mojave
-    sha256 "e6213c1e8425c0b33a8ccac0aeb25f6300edbc2c7d8a9f36424f9e2ecb837484" => :high_sierra
+    sha256 "42047f5797aaec99cd71f4509bdbfa6842d284e0cd5fab09c5e6bed13a136952" => :catalina
+    sha256 "b2b9e02af2e7d18f62c93fdd8e70a876222abe9835cb6d190675fb249226c4d4" => :mojave
+    sha256 "fb5d8cef36d4d56d37e09ddac7fd16b1b03845e347393571571655d84eab3191" => :high_sierra
   end
 
   keg_only :versioned_formula
