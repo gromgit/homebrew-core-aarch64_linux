@@ -6,6 +6,7 @@ class Beancount < Formula
   url "https://files.pythonhosted.org/packages/69/ea/ddf75e1e88aaba807bea3ac101b0e226ddc60832ecfe83ad05cc3a8fff4a/beancount-2.2.3.tar.gz"
   sha256 "1554adfd773d12cb88fd7f4da67fcb608665a9bdedc7e44834e059d1b3a08e5d"
   head "https://bitbucket.org/blais/beancount", :using => :hg
+
   bottle do
     cellar :any_skip_relocation
     sha256 "eab3a7e1d6dad697db305ce49a3df266ec2349b68b552a6591c16efcb0217215" => :catalina
