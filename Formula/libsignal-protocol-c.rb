@@ -1,9 +1,8 @@
 class LibsignalProtocolC < Formula
   desc "Signal Protocol C Library"
   homepage "https://github.com/signalapp/libsignal-protocol-c"
-  url "https://github.com/signalapp/libsignal-protocol-c/archive/v2.3.2.tar.gz"
-  sha256 "f3826f3045352e14027611c95449bfcfe39bfd3d093d578c70f70eee0c85000d"
-  revision 1
+  url "https://github.com/signalapp/libsignal-protocol-c/archive/v2.3.3.tar.gz"
+  sha256 "c22e7690546e24d46210ca92dd808f17c3102e1344cd2f9a370136a96d22319d"
 
   bottle do
     cellar :any
