@@ -1,8 +1,8 @@
 class BaidupcsGo < Formula
   desc "The terminal utility for Baidu Network Disk"
   homepage "https://github.com/iikira/BaiduPCS-Go"
-  url "https://github.com/iikira/BaiduPCS-Go/archive/v3.6.1.tar.gz"
-  sha256 "07e1d802e6b49425a53b883c354d8b753de55f7005ac8c7b27cd8396db0447da"
+  url "https://github.com/iikira/BaiduPCS-Go/archive/v3.6.2.tar.gz"
+  sha256 "27c64733e0d4dd276b6a914f521242fd33e97343da58a8b2de73a72c034c2bc7"
 
   bottle do
     cellar :any_skip_relocation
@@ -14,7 +14,7 @@ class BaidupcsGo < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", "-o", bin/"baidupcs-go"
+    system "go", "build", *std_go_args
   end
 
   test do
