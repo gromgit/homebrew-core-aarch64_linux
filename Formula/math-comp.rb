@@ -8,9 +8,9 @@ class MathComp < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "6a5e3378d663d69eae75fe6b59a0531a00d88e474f8f7f5a3e255cac76b14e63" => :catalina
-    sha256 "127f7df93e47816106aa637d9ee65190d23c3d6829efa648e03bb4e5fda8df8d" => :mojave
-    sha256 "6a5e3378d663d69eae75fe6b59a0531a00d88e474f8f7f5a3e255cac76b14e63" => :high_sierra
+    sha256 "cfdc773639ca287f9c52104effb3e810b2ec6a0d2027811b105a8a2a9cfc7dd3" => :catalina
+    sha256 "67348fa8d8e1e879bb5dcd24afe745d41bf40ede719e93918149343a6655ce70" => :mojave
+    sha256 "cfdc773639ca287f9c52104effb3e810b2ec6a0d2027811b105a8a2a9cfc7dd3" => :high_sierra
   end
 
   depends_on "ocaml" => :build
