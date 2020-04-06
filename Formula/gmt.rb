@@ -5,7 +5,7 @@ class Gmt < Formula
   mirror "https://mirrors.ustc.edu.cn/gmt/gmt-6.0.0-src.tar.xz"
   mirror "https://fossies.org/linux/misc/GMT/gmt-6.0.0-src.tar.xz"
   sha256 "8b91af18775a90968cdf369b659c289ded5b6cb2719c8c58294499ba2799b650"
-  revision 4
+  revision 5
   head "https://github.com/GenericMappingTools/gmt.git"
 
   bottle do
@@ -46,6 +46,13 @@ class Gmt < Formula
     patch do
       url "https://github.com/GenericMappingTools/gmt/commit/daf64655.diff?full_index=1"
       sha256 "f2b5b0d5c4d6f568f453365f857c09429f2e29f9e72b220ca17a81128db75d37"
+    end
+
+    # netcdf 4.7.4 compatibility
+    # Remove with GMT 6.0.1.
+    patch do
+      url "https://github.com/GenericMappingTools/gmt/commit/53800c1f8206e9988dff88a71915cda7e7bff6e3.patch?full_index=1"
+      sha256 "8f9c072a394467853f8a44aa8af436ae9b1db7c7305985cb8018bb061cd5188c"
     end
   end
 
