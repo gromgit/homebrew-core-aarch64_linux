@@ -3,6 +3,7 @@ class Eccodes < Formula
   homepage "https://confluence.ecmwf.int/display/ECC"
   url "https://software.ecmwf.int/wiki/download/attachments/45757960/eccodes-2.17.0-Source.tar.gz"
   sha256 "762d6b71993b54f65369d508f88e4c99e27d2c639c57a5978c284c49133cc335"
+  revision 1
 
   bottle do
     sha256 "bde5f768114c38b8d5e574a8698cd0389ed39353434ee5603baf236c88d8135c" => :catalina
