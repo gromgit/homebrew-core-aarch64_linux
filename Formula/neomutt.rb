@@ -16,6 +16,7 @@ class Neomutt < Formula
   depends_on "gpgme"
   depends_on "libidn"
   depends_on "lmdb"
+  depends_on "lua"
   depends_on "notmuch"
   depends_on "openssl@1.1"
   depends_on "tokyo-cabinet"
@@ -31,7 +32,9 @@ class Neomutt < Formula
                           "--sasl",
                           "--tokyocabinet",
                           "--with-ssl=#{Formula["openssl@1.1"].opt_prefix}",
-                          "--with-ui=ncurses"
+                          "--with-ui=ncurses",
+                          "--lua",
+                          "--with-lua=#{Formula["lua"].prefix}"
     system "make", "install"
   end
 
