@@ -3,12 +3,12 @@ class Crystal < Formula
   homepage "https://crystal-lang.org/"
 
   stable do
-    url "https://github.com/crystal-lang/crystal/archive/0.33.0.tar.gz"
-    sha256 "88f08685f172e98f01f93f1a83fc3548c6d28df19a39c91859b167a796730289"
+    url "https://github.com/crystal-lang/crystal/archive/0.34.0.tar.gz"
+    sha256 "973293ffbcfa4fb073f6a2f833b0ce5b82b72f7899427f39d7e5610ffc9029c8"
 
     resource "shards" do
-      url "https://github.com/crystal-lang/shards/archive/v0.8.1.tar.gz"
-      sha256 "75c74ab6acf2d5c59f61a7efd3bbc3c4b1d65217f910340cb818ebf5233207a5"
+      url "https://github.com/crystal-lang/shards/archive/v0.10.0.tar.gz"
+      sha256 "3aea420df959552d1866d473c878ab1ed0b58489c4c9881ef40a170cfb775459"
     end
   end
 
@@ -52,9 +52,9 @@ class Crystal < Formula
   end
 
   resource "boot" do
-    url "https://github.com/crystal-lang/crystal/releases/download/0.32.1/crystal-0.32.1-1-darwin-x86_64.tar.gz"
-    version "0.32.1-1"
-    sha256 "2901e8709da36a12ce0a94464741c1db8e5b5080f216fb8c1f7016667370bc94"
+    url "https://github.com/crystal-lang/crystal/releases/download/0.33.0/crystal-0.33.0-1-darwin-x86_64.tar.gz"
+    version "0.33.0-1"
+    sha256 "edb48d4d8276fc5e689fb95c5dc669d115ad3d1bf22485dad77d44a370e585fd"
   end
 
   def install
@@ -90,6 +90,9 @@ class Crystal < Formula
 
     # Build shards
     resource("shards").stage do
+      system buildpath/"boot/embedded/bin/shards", "install",
+                                                   "--production"
+
       system buildpath/"bin/crystal", "build",
                                       "-o", buildpath/".build/shards",
                                       "src/shards.cr",
