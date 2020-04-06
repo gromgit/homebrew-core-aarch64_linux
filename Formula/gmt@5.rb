@@ -5,7 +5,7 @@ class GmtAT5 < Formula
   mirror "https://mirrors.ustc.edu.cn/gmt/gmt-5.4.5-src.tar.gz"
   mirror "https://fossies.org/linux/misc/GMT/gmt-5.4.5-src.tar.gz"
   sha256 "225629c7869e204d5f9f1a384c4ada43e243f83e1ed28bdca4f7c2896bf39ef6"
-  revision 3
+  revision 4
 
   bottle do
     sha256 "3db5cdd631d50e7ef57f6fe6ed15548297a176fe98021bb67b75b293dff95af8" => :catalina
@@ -33,6 +33,12 @@ class GmtAT5 < Formula
     mirror "https://mirrors.ustc.edu.cn/gmt/dcw-gmt-1.1.4.tar.gz"
     mirror "https://fossies.org/linux/misc/GMT/dcw-gmt-1.1.4.tar.gz"
     sha256 "8d47402abcd7f54a0f711365cd022e4eaea7da324edac83611ca035ea443aad3"
+  end
+
+  # netcdf 4.7.4 compatibility
+  patch do
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/cdbf0de198531528db908a5d827f3d2e5b9618cc/gmt%405/netcdf-4.7.4.patch"
+    sha256 "d894869830f6e57b0670dc31df6b5c684e079418f8bf5c0cd0f7014b65c1981f"
   end
 
   def install
