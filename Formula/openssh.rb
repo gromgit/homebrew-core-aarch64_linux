@@ -14,7 +14,7 @@ class Openssh < Formula
   end
 
   # Please don't resubmit the keychain patch option. It will never be accepted.
-  # https://github.com/Homebrew/homebrew-dupes/pull/482#issuecomment-118994372
+  # https://archive.is/hSB6d#10%25
 
   depends_on "pkg-config" => :build
   depends_on "ldns"
@@ -28,12 +28,12 @@ class Openssh < Formula
 
   # Both these patches are applied by Apple.
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/patches/1860b0a74/openssh/patch-sandbox-darwin.c-apple-sandbox-named-external.diff"
+    url "https://raw.githubusercontent.com/Homebrew/patches/1860b0a745f1fe726900974845d1b0dd3c3398d6/openssh/patch-sandbox-darwin.c-apple-sandbox-named-external.diff"
     sha256 "d886b98f99fd27e3157b02b5b57f3fb49f43fd33806195970d4567f12be66e71"
   end
 
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/patches/d8b2d8c2/openssh/patch-sshd.c-apple-sandbox-named-external.diff"
+    url "https://raw.githubusercontent.com/Homebrew/patches/d8b2d8c2612fd251ac6de17bf0cc5174c3aab94c/openssh/patch-sshd.c-apple-sandbox-named-external.diff"
     sha256 "3505c58bf1e584c8af92d916fe5f3f1899a6b15cc64a00ddece1dc0874b2f78f"
   end
 
