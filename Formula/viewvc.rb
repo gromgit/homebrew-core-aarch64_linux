@@ -24,17 +24,18 @@ class Viewvc < Formula
   end
 
   test do
-    require "net/http"
-    require "uri"
+    port = free_port
 
     begin
-      pid = fork { exec "#{bin}/viewvc-standalone.py", "--port=9000" }
+      pid = fork do
+        exec "#{bin}/viewvc-standalone.py", "--port=#{port}"
+      end
       sleep 2
-      uri = URI.parse("http://127.0.0.1:9000/viewvc")
-      Net::HTTP.get_response(uri) # First request always returns 400
-      assert_equal "200", Net::HTTP.get_response(uri).code
+
+      output = shell_output("curl -s http://localhost:#{port}/viewvc")
+      assert_match "[ViewVC] Repository Listing", output
     ensure
-      Process.kill "SIGINT", pid
+      Process.kill "SIGTERM", pid
       Process.wait pid
     end
   end
