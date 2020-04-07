@@ -21,8 +21,6 @@ class Expat < Formula
 
   keg_only :provided_by_macos
 
-  uses_from_macos "libbsd"
-
   def install
     cd "expat" if build.head?
     system "autoreconf", "-fiv" if build.head?
