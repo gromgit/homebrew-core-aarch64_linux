@@ -22,7 +22,6 @@ class OpencvAT2 < Formula
   depends_on "libtiff"
   depends_on "numpy@1.16"
   depends_on "openexr"
-  uses_from_macos "python@2"
 
   def install
     ENV.cxx11
