@@ -12,8 +12,7 @@ class Gettext < Formula
     sha256 "85c7bf74ba9b0209a08f2b87d69b54d03ec21985ad0bb7b9aeeda30c195529f8" => :sierra
   end
 
-  keg_only :shadowed_by_macos,
-    "macOS provides the BSD gettext library & some software gets confused if both are in the library path"
+  keg_only :shadowed_by_macos, "macOS provides BSD gettext"
 
   uses_from_macos "ncurses"
 
