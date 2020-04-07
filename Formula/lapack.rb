@@ -11,7 +11,7 @@ class Lapack < Formula
     sha256 "25833d6cbc3e54bb2c055727865ddd3ab74ffb53bf5a7fb285e73f9f5737ad05" => :high_sierra
   end
 
-  keg_only :provided_by_macos
+  keg_only :shadowed_by_macos, "macOS provides LAPACK in Accelerate.framework"
 
   depends_on "cmake" => :build
   depends_on "gcc" # for gfortran
