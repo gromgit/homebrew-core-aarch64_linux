@@ -12,8 +12,7 @@ class Openblas < Formula
     sha256 "b92397b5ddaefbba91b6a40bce8a5afd55529e25f711abc5ed6c3fb501484b50" => :high_sierra
   end
 
-  keg_only :provided_by_macos,
-           "macOS provides BLAS and LAPACK in the Accelerate framework"
+  keg_only :shadowed_by_macos, "macOS provides BLAS in Accelerate.framework"
 
   depends_on "gcc" # for gfortran
   fails_with :clang
