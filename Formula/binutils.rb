@@ -11,8 +11,7 @@ class Binutils < Formula
     sha256 "87bda0c909a5bd2043d35b073f2268cac7aed074a89d903973e4909d68dfdf46" => :high_sierra
   end
 
-  keg_only :provided_by_macos,
-           "because Apple provides the same tools and binutils is poorly supported on macOS"
+  keg_only :shadowed_by_macos, "Apple's CLT provides the same tools"
 
   uses_from_macos "zlib"
 
