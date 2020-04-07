@@ -6,9 +6,9 @@ class Botan < Formula
   head "https://github.com/randombit/botan.git"
 
   bottle do
-    sha256 "287dfed529e8e3318f53f8b7c15bb28d824ce7d37cc9d0efc31359758b816b34" => :catalina
-    sha256 "39b24feecd714f011916d659770f5fbc11cb652b530d6828c066112a4a58283b" => :mojave
-    sha256 "a21833781daf9b3c2f227dd71975b787e6e4047756d24adbe897360a40dc3c87" => :high_sierra
+    sha256 "75f313ac637a72bc4d9bae3da9be62bc77c266f3fbe5802093c65085f1f02dea" => :catalina
+    sha256 "97fbb92e2f170233b142a71cc5781dd0166f802ca87f070b416e746803d9ba3f" => :mojave
+    sha256 "a1476f2cb331dbca755c3edb274cafe50c6d7fd6e5504d1e1990a98905accda1" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
