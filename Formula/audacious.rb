@@ -51,8 +51,6 @@ class Audacious < Formula
   depends_on "sdl2"
   depends_on "wavpack"
 
-  uses_from_macos "python@2"
-
   def install
     args = %W[
       --prefix=#{prefix}
