@@ -17,8 +17,6 @@ class Mesos < Formula
   depends_on :java => "1.8"
   depends_on "subversion"
 
-  uses_from_macos "python@2"
-
   conflicts_with "nanopb-generator", :because => "they depend on an incompatible version of protobuf"
   conflicts_with "rapidjson", :because => "mesos installs a copy of rapidjson headers"
 
