@@ -29,8 +29,6 @@ class Jack < Formula
   depends_on "libsamplerate"
   depends_on "libsndfile"
 
-  uses_from_macos "util-linux"
-
   def install
     sdk = MacOS.sdk_path_if_needed ? MacOS.sdk_path : ""
 
