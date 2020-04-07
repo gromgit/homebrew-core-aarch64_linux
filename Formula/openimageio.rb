@@ -4,7 +4,7 @@ class Openimageio < Formula
   url "https://github.com/OpenImageIO/oiio/archive/Release-2.1.13.0.tar.gz"
   version "2.1.13"
   sha256 "f0653582eaf386db40dc30e2d822f3235592803223079ea3b3e30e46b3dc3acf"
-  revision 1
+  revision 2
   head "https://github.com/OpenImageIO/oiio.git"
 
   bottle do
@@ -22,6 +22,7 @@ class Openimageio < Formula
   depends_on "giflib"
   depends_on "ilmbase"
   depends_on "jpeg"
+  depends_on "libheif"
   depends_on "libpng"
   depends_on "libraw"
   depends_on "libtiff"
