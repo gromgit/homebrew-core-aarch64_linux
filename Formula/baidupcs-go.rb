@@ -6,9 +6,9 @@ class BaidupcsGo < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "07c1610dfb0beb9a3ee4ba68209fef1440dd6a7cac848e5cde41d2cb3379335a" => :catalina
-    sha256 "3b5d79236674f7c222bda94ef560e74414dea2fb219c2e6acc63c66b662c722a" => :mojave
-    sha256 "4965b6a261743ad46b7625803f0f0efba3a80d4af8dd81a66b77dc7c148951f1" => :high_sierra
+    sha256 "d7151a5d1fd737835fdb61759fca16da43e5b016ccb9d40ef980e725b3ac2537" => :catalina
+    sha256 "33405e1303ee57e6cb5bca3ff9672c81352b9b18cc05054175859b1c47535791" => :mojave
+    sha256 "4ca9d8864e8c9029afd0f3777e3c3cbe11bd6a7f25fdefd48ad140d6d50d3324" => :high_sierra
   end
 
   depends_on "go" => :build
