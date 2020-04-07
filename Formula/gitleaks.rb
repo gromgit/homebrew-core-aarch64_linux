@@ -1,8 +1,8 @@
 class Gitleaks < Formula
   desc "Audit git repos for secrets"
   homepage "https://github.com/zricethezav/gitleaks"
-  url "https://github.com/zricethezav/gitleaks/archive/v4.1.0.tar.gz"
-  sha256 "477d02a367f36396b4df97f463b8f81db37160570233d231def52ecabd4a9dd4"
+  url "https://github.com/zricethezav/gitleaks/archive/v4.1.1.tar.gz"
+  sha256 "dd50e5e68813990dcaba23564a0481f09550e3e80402ac0e4689685b7b8c46a4"
 
   bottle do
     cellar :any_skip_relocation
@@ -15,7 +15,7 @@ class Gitleaks < Formula
 
   def install
     system "go", "build", "-ldflags", "-X github.com/zricethezav/gitleaks/version.Version=#{version}",
-                 "-o", bin/"gitleaks"
+                 *std_go_args
   end
 
   test do
