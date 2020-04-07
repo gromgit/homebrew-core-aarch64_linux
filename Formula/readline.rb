@@ -19,8 +19,6 @@ class Readline < Formula
     end
   end
 
-  uses_from_macos "ncurses"
-
   bottle do
     cellar :any
     sha256 "6ae1c8e7c783f32bd22c6085caa4d838fed7fb386da7e40ca47b87ec9b1237d6" => :catalina
@@ -28,11 +26,9 @@ class Readline < Formula
     sha256 "896a3d50ce8962ba56e853bdd590fadeabc00ab36475d143d6c2bea5cc15bb28" => :high_sierra
   end
 
-  keg_only :shadowed_by_macos, <<~EOS
-    macOS provides the BSD libedit library, which shadows libreadline.
-    In order to prevent conflicts when programs look for libreadline we are
-    defaulting this GNU Readline installation to keg-only
-  EOS
+  uses_from_macos "ncurses"
+
+  keg_only :shadowed_by_macos, "macOS provides BSD libedit"
 
   def install
     system "./configure", "--prefix=#{prefix}"
