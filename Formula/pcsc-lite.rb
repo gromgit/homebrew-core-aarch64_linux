@@ -11,8 +11,7 @@ class PcscLite < Formula
     sha256 "60fc7ec0222710dc894afb838e7c63942c5106a88d812dfaac19c112de9e6b0f" => :high_sierra
   end
 
-  keg_only :provided_by_macos,
-    "pcsc-lite interferes with detection of macOS's PCSC.framework"
+  keg_only :shadowed_by_macos, "macOS provides PCSC.framework"
 
   def install
     system "./configure", "--disable-dependency-tracking",
