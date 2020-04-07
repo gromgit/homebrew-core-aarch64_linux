@@ -13,9 +13,6 @@ class Viewvc < Formula
 
   depends_on "subversion"
 
-  # https://github.com/viewvc/viewvc/issues/138
-  uses_from_macos "python@2" # does not support Python 3
-
   def install
     system "python", "./viewvc-install", "--prefix=#{libexec}", "--destdir="
     Pathname.glob(libexec/"bin/*") do |f|
