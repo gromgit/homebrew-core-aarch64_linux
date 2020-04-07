@@ -13,8 +13,7 @@ class OpensslAT11 < Formula
     sha256 "27f26e2442222ac0565193fe0b86d8719559d776bcdd070d6113c16bb13accf6" => :high_sierra
   end
 
-  keg_only :provided_by_macos,
-    "openssl/libressl is provided by macOS so don't link an incompatible version"
+  keg_only :shadowed_by_macos, "macOS provides LibreSSL"
 
   # SSLv2 died with 1.1.0, so no-ssl2 no longer required.
   # SSLv3 & zlib are off by default with 1.1.0 but this may not
