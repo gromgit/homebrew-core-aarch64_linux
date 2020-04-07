@@ -18,8 +18,6 @@ class AppscaleTools < Formula
   depends_on "ssh-copy-id"
 
   uses_from_macos "libffi"
-  # Uses SOAPPy, which does not support Python 3
-  uses_from_macos "python@2" # does not support Python 3
 
   resource "retrying" do
     url "https://files.pythonhosted.org/packages/44/ef/beae4b4ef80902f22e3af073397f079c96969c69b2c7d52a57ea9ae61c9d/retrying-1.3.3.tar.gz"
