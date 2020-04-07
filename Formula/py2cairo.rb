@@ -14,7 +14,6 @@ class Py2cairo < Formula
 
   depends_on "pkg-config" => :build
   depends_on "cairo"
-  uses_from_macos "python@2"
 
   def install
     system "python", *Language::Python.setup_install_args(prefix)
