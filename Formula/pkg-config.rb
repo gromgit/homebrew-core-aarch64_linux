@@ -8,9 +8,9 @@ class PkgConfig < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "fbe94e3d3679334eed84f5ae7c25f39e16c114c8f7fc358f8e5068b3cce042b9" => :catalina
-    sha256 "4c7c34d3b2ec27ed18e8bf8156a75250fd37de1ec6b87cf2f46f198825575ea8" => :mojave
-    sha256 "88c585c0fab24c3c2afc6cbb3a2cd9de12aa3a08459bc0c07a6ad27deb52f383" => :high_sierra
+    sha256 "4a2e91af708c59447cced59a5f2df26570c9534dc89333acf7e3d965858c5718" => :catalina
+    sha256 "f284f811f88f8741b88d7bf607fd6d7791fcfa6559802c81f687bb5852376241" => :mojave
+    sha256 "b41d6ea88bfcacc5ce62bdf2ba97028ecc6864043875cfde9669125ba2af7d13" => :high_sierra
   end
 
   def install
