@@ -15,7 +15,6 @@ class CassandraAT22 < Formula
   keg_only :versioned_formula
 
   depends_on "cython" => :build
-  uses_from_macos "python@2" # does not support Python 3.7
 
   # Only >=Yosemite has new enough setuptools for successful compile of the below deps.
   resource "setuptools" do
