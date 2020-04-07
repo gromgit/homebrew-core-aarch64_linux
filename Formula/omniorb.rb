@@ -6,10 +6,9 @@ class Omniorb < Formula
 
   bottle do
     cellar :any
-    sha256 "dd6f9c9ef1b96969d50b0d3ce88d93f44892a3bc79b68268fef0c4cfceed085d" => :catalina
-    sha256 "e83175a98726c50971b3be9058eff3625987ad318df5a3272c4c6a19df7b401e" => :mojave
-    sha256 "603cee3162a0601304361565b3ee1e23b81770a8bc273f1bacbdbef7c06a19b1" => :high_sierra
-    sha256 "5d005d42b413d7cb693321eab9e5ff7dc8e39b5c731da30c4adabf15138974cf" => :sierra
+    sha256 "a467b416e7657794555b547ee7caf8f0395e67ecf7501b393d29c620598af535" => :catalina
+    sha256 "cb9ddb09f1d53ac587cd9eb83e198757350d8d1432cfa8c3f091a3ab78f0c922" => :mojave
+    sha256 "e7465503bce133c41d4f122107e22559a5e82785f0a3af7747da8ccc44975035" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
