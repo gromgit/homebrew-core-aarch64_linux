@@ -1,10 +1,8 @@
 class Par < Formula
   desc "Paragraph reflow for email"
   homepage "http://www.nicemice.net/par/"
-  url "http://www.nicemice.net/par/Par152.tar.gz"
-  mirror "https://ftp.netbsd.org/pub/pkgsrc/distfiles/Par152.tar.gz"
-  version "1.52"
-  sha256 "33dcdae905f4b4267b4dc1f3efb032d79705ca8d2122e17efdecfd8162067082"
+  url "http://www.nicemice.net/par/Par-1.53.0.tar.gz"
+  sha256 "c809c620eb82b589553ac54b9898c8da55196d262339d13c046f2be44ac47804"
 
   bottle do
     cellar :any_skip_relocation
@@ -18,13 +16,6 @@ class Par < Formula
   end
 
   conflicts_with "rancid", :because => "both install `par` binaries"
-
-  # Patch to add support for multibyte charsets (like UTF-8), plus Debian
-  # packaging.
-  patch do
-    url "http://sysmic.org/dl/par/par-1.52-i18n.4.patch"
-    sha256 "2ab2d6039529aa3e7aff4920c1630003b8c97c722c8adc6d7762aa34e795861e"
-  end
 
   def install
     system "make", "-f", "protoMakefile"
