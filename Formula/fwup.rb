@@ -1,8 +1,8 @@
 class Fwup < Formula
   desc "Configurable embedded Linux firmware update creator and runner"
   homepage "https://github.com/fhunleth/fwup"
-  url "https://github.com/fhunleth/fwup/releases/download/v1.5.1/fwup-1.5.1.tar.gz"
-  sha256 "c30b151b07a464a19a6358c1555aef8447576010bce855dc5f6b1e1516bcac86"
+  url "https://github.com/fhunleth/fwup/releases/download/v1.5.2/fwup-1.5.2.tar.gz"
+  sha256 "d82ce3c70335170bd8f1ebe10940585c8a797521a8c35ad85aa34a52e8d4341e"
 
   bottle do
     cellar :any
@@ -14,7 +14,6 @@ class Fwup < Formula
   depends_on "pkg-config" => :build
   depends_on "confuse"
   depends_on "libarchive"
-  depends_on "libsodium"
 
   def install
     system "./configure", "--prefix=#{prefix}", "--disable-dependency-tracking"
