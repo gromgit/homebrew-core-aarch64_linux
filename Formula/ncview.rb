@@ -2,7 +2,7 @@ class Ncview < Formula
   desc "Visual browser for netCDF format files"
   homepage "https://cirrus.ucsd.edu/ncview/"
   url "ftp://cirrus.ucsd.edu/pub/ncview/ncview-2.1.8.tar.gz"
-  mirror "https://dl.bintray.com/homebrew/mirror/ncview--2.1.8.tar.gz"
+  mirror "https://dl.bintray.com/homebrew/mirror/ncview-2.1.8.tar.gz"
   sha256 "e8badc507b9b774801288d1c2d59eb79ab31b004df4858d0674ed0d87dfc91be"
   revision 3
 
