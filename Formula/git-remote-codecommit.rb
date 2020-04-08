@@ -7,6 +7,13 @@ class GitRemoteCodecommit < Formula
   sha256 "2a8b641c0e8b4bac3162d7877d9eaf0f939fa8eda429c342d51ca33b8494ddad"
   head "https://github.com/aws/git-remote-codecommit.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "42de381b31d9a0a18bf1f2f34428f1a57c90c7c04a0653cbfe7991970a501b69" => :catalina
+    sha256 "28aa72c9c720d190a3efae09cffa2ea79372b60c9952bd223d064139bf7acd0c" => :mojave
+    sha256 "b8172e7b8a01359fdf3992e2de30b95a3a52890da4a985bc44b217490cc8d725" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   resource "awscli" do
