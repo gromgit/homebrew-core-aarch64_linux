@@ -6,12 +6,9 @@ class Gl2ps < Formula
 
   bottle do
     cellar :any
-    sha256 "133504d232a0804e896b831a90a81e9e96cf6f95deabd2f8b0de12a63b271c3e" => :catalina
-    sha256 "7bf3019a9fb17682cbe1c62be79fd48b5e46dd5fdeeb93dab65f10509f0da011" => :mojave
-    sha256 "58ccd9856c162d924115146e1ff050d364e6302d20cb7003645724e9418bedb5" => :high_sierra
-    sha256 "4481d5e37838c2189005dd2eadbc37f45e0a1189ea9565ab8dee60d010b96036" => :sierra
-    sha256 "e3a68d4e95ce16e3e144e42bc7c81282e7e495971cea02b0c8f39663425d2017" => :el_capitan
-    sha256 "c1131b4a3053bff982689fa05c75b97e612f4b1501900187c60481a5e51a382d" => :yosemite
+    sha256 "9892a2bca2e64d36ba64d136aabb4113096c85d986b39c37291c1ad4a54b1cf4" => :catalina
+    sha256 "4975b6204df6681770a50e56ad8c689b1a3f8ba1ab1156054210afe60d1cee68" => :mojave
+    sha256 "e4ce5d49e23926babfc2a0de59d2cefc06ead02408848430be975c51e49fa210" => :high_sierra
   end
 
   depends_on "cmake" => :build
