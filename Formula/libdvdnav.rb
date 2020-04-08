@@ -7,9 +7,9 @@ class Libdvdnav < Formula
 
   bottle do
     cellar :any
-    sha256 "96d4aad1cf2187167e10dc24325351820b69a878e68ca13a642fda429f25c387" => :catalina
-    sha256 "30d529890adc40cd9050badced4da9bc5b1a9ff70b1ef301fa347f22795a8d27" => :mojave
-    sha256 "4f626dcca020c7b478eda79ef151da02673fcf76f2c6a7eea3f68f7d4e40bbf8" => :high_sierra
+    sha256 "e20bd00c923e4e837a1eac6f89933377afd17957be74a175734d7896efceb27a" => :catalina
+    sha256 "6c13d8aa2220232e9a0e5317371bd52909ec55b0bb08ed7b591612b60814dc7a" => :mojave
+    sha256 "a9c90f8109ce908ffc4fc0b6972ff4869638de8f52787bedd2c471ce457e1edf" => :high_sierra
   end
 
   head do
