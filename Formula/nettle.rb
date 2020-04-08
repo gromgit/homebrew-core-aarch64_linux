@@ -1,9 +1,9 @@
 class Nettle < Formula
   desc "Low-level cryptographic library"
   homepage "https://www.lysator.liu.se/~nisse/nettle/"
-  url "https://ftp.gnu.org/gnu/nettle/nettle-3.4.1.tar.gz"
-  mirror "https://ftpmirror.gnu.org/nettle/nettle-3.4.1.tar.gz"
-  sha256 "f941cf1535cd5d1819be5ccae5babef01f6db611f9b5a777bae9c7604b8a92ad"
+  url "https://ftp.gnu.org/gnu/nettle/nettle-3.6.tar.gz"
+  mirror "https://ftpmirror.gnu.org/nettle/nettle-3.6.tar.gz"
+  sha256 "d24c0d0f2abffbc8f4f34dcf114b0f131ec3774895f3555922fe2f40f3d5e3f1"
 
   bottle do
     cellar :any
@@ -18,9 +18,6 @@ class Nettle < Formula
   uses_from_macos "m4" => :build
 
   def install
-    # macOS doesn't use .so libs. Emailed upstream 04/02/2016.
-    inreplace "testsuite/dlopen-test.c", "libnettle.so", "libnettle.dylib"
-
     # The LLVM shipped with Xcode/CLT 10+ compiles binaries/libraries with
     # ___chkstk_darwin, which upsets nettle's expected symbol check.
     # https://github.com/Homebrew/homebrew-core/issues/28817#issuecomment-396762855
