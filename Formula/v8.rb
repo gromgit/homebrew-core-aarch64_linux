@@ -7,9 +7,9 @@ class V8 < Formula
 
   bottle do
     cellar :any
-    sha256 "1bc2bd2ad9751f37b6a147dc6d50c0df75cad06e0cfcd61263052a79b0bdaff6" => :catalina
-    sha256 "c44b9711d8cefdbcbc286d8f50cb81547e3f99ccd3bb7059c547200ec1e4a311" => :mojave
-    sha256 "f398c1d86ed4af0d2ee558d157c01ed448734828d4df05308a60dd95444476f3" => :high_sierra
+    sha256 "9187839914a55710702fa4d95d81ca26edb20db5430e40b7d64b9b64c86e2524" => :catalina
+    sha256 "05562e821143f1197f273e8706ecdee9ab5ecb76fe72555c530545f275e9921f" => :mojave
+    sha256 "9686c45c2ef9fd787faa7414fbf7f2fdd105bf1d4987dbb93231ebecb4a097a4" => :high_sierra
   end
 
   depends_on "llvm" => :build if DevelopmentTools.clang_build_version < 1100
