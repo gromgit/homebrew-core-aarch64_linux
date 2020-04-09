@@ -10,10 +10,9 @@ class Ford < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b41b1ea27a1dc046419dffbee8e6f851be7f4c7fd0d6eda620d70e21d2e05b62" => :catalina
-    sha256 "3ddd7cf499d849e98639de2ffa9685e9ba99680ccec7a9b2d036c29f1d774052" => :mojave
-    sha256 "12211376646fed6327a0f00f7db6c3b6905c8edcd9e0049ed19fb304a5c6b94c" => :high_sierra
-    sha256 "58806e9e273eabbb7de882785be5af3ba464bafac263b9586822853481ad99d2" => :sierra
+    sha256 "3eb76094046483b936f34931c7b93c9d793478c6228579b1c8c456093981befc" => :catalina
+    sha256 "8990b0e28b63d0351570feec384adff4b97bd5cdca722c829a63d45d2a15dd20" => :mojave
+    sha256 "6c9d98f4b9b0716dc0de0f0afd61024e68b073dd6baea816ff65cd838b31e90b" => :high_sierra
   end
 
   depends_on "graphviz"
