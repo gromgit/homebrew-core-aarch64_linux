@@ -7,9 +7,9 @@ class Subversion < Formula
   revision 4
 
   bottle do
-    sha256 "55de698b991fb2736cb7fe0df32f07c4427a5d131a9eceaf12dd0d3cd7675b94" => :catalina
-    sha256 "a9aede95dca0be2ca0c2c27a28fee3775f6b6e294dfbfcf8a428eb4cf09e7433" => :mojave
-    sha256 "87d2b96723350f459e308acfbfedd3cb4ab41a0582b9eb405c5b2cebc8258312" => :high_sierra
+    sha256 "1af68c125bb42f92ba447bb12bf42dee0f5c1d043a26e1967d29f4a360376ed8" => :catalina
+    sha256 "e1ea4e67840c6674db386f61844677e148f5b5fb1adfae5c2f8a5e99b6fc8c90" => :mojave
+    sha256 "709026fd81810af681e30974b2a35d4ab7b884afecf646a0e22b382babff3998" => :high_sierra
   end
 
   head do
