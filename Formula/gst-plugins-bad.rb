@@ -3,6 +3,7 @@ class GstPluginsBad < Formula
   homepage "https://gstreamer.freedesktop.org/"
   url "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.16.2.tar.xz"
   sha256 "f1cb7aa2389569a5343661aae473f0a940a90b872001824bc47fa8072a041e74"
+  revision 1
 
   bottle do
     sha256 "63f81fed651c70e685fcf9c861696d24a0bac6423f5aa3735ea018a32ac6caab" => :catalina
@@ -42,6 +43,9 @@ class GstPluginsBad < Formula
       --disable-dependency-tracking
       --enable-introspection=yes
     ]
+
+    # The apple media plug-in uses API that was added in Mojave
+    args << "--disable-apple_media" if MacOS.version <= :high_sierra
 
     if build.head?
       # autogen is invoked in "stable" build because we patch configure.ac
