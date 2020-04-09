@@ -10,11 +10,9 @@ class Cxxtest < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "35c64fe6d91097fa9aabfc63a145e6e9e6f27411e589b69f0da77895045dc128" => :catalina
-    sha256 "0c97b74f6bc2cee5e0683fcec6bd07da544b5f3e9cd25b9631b6291b86490392" => :mojave
-    sha256 "4ef0fbb78839714da6108883475dce9536df2e59dd9dc7bf42677a86d00f4356" => :high_sierra
-    sha256 "4ef0fbb78839714da6108883475dce9536df2e59dd9dc7bf42677a86d00f4356" => :sierra
+    sha256 "90b9ca9996eb575a2e8665223f38731979a38630f5462fd3c2babf81ce7ceee4" => :catalina
+    sha256 "d6f91fba5743dc04e2c929036f59a34cd7833e5a75a6ebf6785209f8fabca4f1" => :mojave
+    sha256 "99b1ea9c495bf4ee03b88aadb33a5ae964741bcd387d678c6dcc5a18c925ad12" => :high_sierra
   end
 
   depends_on "python@3.8"
