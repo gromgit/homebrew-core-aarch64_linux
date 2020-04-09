@@ -3,6 +3,7 @@ class Rdesktop < Formula
   homepage "https://www.rdesktop.org/"
   url "https://github.com/rdesktop/rdesktop/releases/download/v1.9.0/rdesktop-1.9.0.tar.gz"
   sha256 "473c2f312391379960efe41caad37852c59312bc8f100f9b5f26609ab5704288"
+  revision 1
 
   bottle do
     sha256 "7c9514c2ed77ff7d2289b1f464ce187b3882cff9c7a0f3fbeb3473d085f7525c" => :catalina
