@@ -9,9 +9,9 @@ class Fobis < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f5841f26d4b84d2ca12274152b2c98d2e73922d806d85af64aeefc10aaf8e687" => :catalina
-    sha256 "075466844a85ba69a865e143f646b0d35dcca36ee228464bba70c2ca719aea64" => :mojave
-    sha256 "d34c4c5de9e019f2e37c949dbf008a1002879773fffc3649a75668046e4c7b8a" => :high_sierra
+    sha256 "d782b47781f9cf87fb130fbd992161fff4cc8ecd3af5b58a75de9f6b79f3e31d" => :catalina
+    sha256 "53b1c238046e6a29be31b9ce3628cc045ea34c8c5c5168f64da74557addea5e6" => :mojave
+    sha256 "22119f11db9b1e3759b00fb9ca8516764c3f0e2fdd56549ac2f8f8a7b0a0e25f" => :high_sierra
   end
 
   depends_on "gcc" # for gfortran
