@@ -3,6 +3,7 @@ class Doctl < Formula
   homepage "https://github.com/digitalocean/doctl"
   url "https://github.com/digitalocean/doctl/archive/v1.40.0.tar.gz"
   sha256 "2a1877097183b9a47bad7a0942174b4a98ad6182db29d7d76720ee709fcf4c02"
+  revision 1
   head "https://github.com/digitalocean/doctl.git"
 
   bottle do
@@ -34,6 +35,7 @@ class Doctl < Formula
 
     (bash_completion/"doctl").write `#{bin}/doctl completion bash`
     (zsh_completion/"_doctl").write `#{bin}/doctl completion zsh`
+    (fish_completion/"doctl.fish").write `#{bin}/doctl completion fish`
   end
 
   test do
