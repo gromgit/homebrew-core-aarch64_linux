@@ -6,10 +6,9 @@ class Cryptominisat < Formula
   revision 1
 
   bottle do
-    sha256 "2344fee3bb2a80ec14eb320faabade428e32d1bbb9570b2867b54e9f94c5fe69" => :catalina
-    sha256 "8c68cbd0307ceddc6a3ba70f488ed4ebb43b9d649cf1df3eb75788b3a5c58e3c" => :mojave
-    sha256 "7be2c4e5ace97acdf39f6a4941fd601cb777e1d0c58117f11ab9b2711ba19fae" => :high_sierra
-    sha256 "4633506d240ca8298bf26b6f48985c4e04877091abae50f20413f974fbb2bbbd" => :sierra
+    sha256 "6de78ffbfa1ae394f9e0ce868ae7a49412014d63fcaccb22dfefc8909564a18b" => :catalina
+    sha256 "f1120dbb776e906bfc0773dd4088df95cbc845d5ca5d26d375dfba9187c00656" => :mojave
+    sha256 "5aae642269d3a275db8f77e2ec202884d612ee7f00b406cc892f74c175372486" => :high_sierra
   end
 
   depends_on "cmake" => :build
