@@ -13,6 +13,12 @@ class PkgConfig < Formula
     sha256 "8c6160305abd948b8cf3e0d5c6bb0df192fa765bbb9535dda0b573cb60abbe52" => :high_sierra
   end
 
+  pour_bottle? do
+    # The pc_path is baked into the binary and relocatable detection doesn't pick it up
+    reason "The bottle only works in the default #{Homebrew::DEFAULT_PREFIX} location."
+    satisfy { HOMEBREW_PREFIX.to_s == Homebrew::DEFAULT_PREFIX }
+  end
+
   def install
     pc_path = %W[
       #{HOMEBREW_PREFIX}/lib/pkgconfig
