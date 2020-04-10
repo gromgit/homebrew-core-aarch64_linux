@@ -9,9 +9,9 @@ class DockerCompose < Formula
 
   bottle do
     cellar :any
-    sha256 "463bd4a012d5bed971040db53b737bd4c89ae9ee05a14d4d738cf06e9bebd9f9" => :catalina
-    sha256 "e3572703ef4cf05000d0eac018b0a01d2d82d7a54941667f2581bfd26e12959f" => :mojave
-    sha256 "3c74f2f820c364a88e66667a372fa0c5bf06516e8f0e234b70990cc1cf99fd80" => :high_sierra
+    sha256 "a44fef29184213b0c514a619d08783eb98d0843c64271db970df2cecdd670962" => :catalina
+    sha256 "41389cc6707d1ac99ed3d226951ea165d773c0ebc3c5081a24c54187a9c8c192" => :mojave
+    sha256 "4ef95bb3cf0b36c006e5074f82ad74a63e70f3f400133b1a25f3772bc70f79d7" => :high_sierra
   end
 
   depends_on "libyaml"
