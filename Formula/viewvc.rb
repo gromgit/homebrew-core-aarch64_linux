@@ -12,8 +12,8 @@ class Viewvc < Formula
     sha256 "19c07a79667814ccb1b14b6214a3d5fcca65ec31381e6e46a5db3ac3f72fc2d4" => :high_sierra
   end
 
-  depends_on "subversion"
   depends_on :macos # Due to Python 2 (https://github.com/viewvc/viewvc/issues/138)
+  depends_on "subversion"
 
   def install
     system "python", "./viewvc-install", "--prefix=#{libexec}", "--destdir="
