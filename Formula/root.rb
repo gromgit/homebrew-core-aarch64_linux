@@ -4,7 +4,7 @@ class Root < Formula
   url "https://root.cern.ch/download/root_v6.20.02.source.tar.gz"
   version "6.20.02"
   sha256 "0997586bf097c0afbc6f08edbffcebf5eb6a4237262216114ba3f5c8087dcba6"
-  revision 1
+  revision 2
   head "https://github.com/root-project/root.git"
 
   bottle do
@@ -30,6 +30,7 @@ class Root < Formula
   depends_on "davix"
   depends_on "fftw"
   depends_on "gcc" # for gfortran
+  depends_on "gl2ps"
   depends_on "graphviz"
   depends_on "gsl"
   # Temporarily depend on Homebrew libxml2 to work around a brew issue:
