@@ -4,6 +4,7 @@ class GoAT113 < Formula
   url "https://dl.google.com/go/go1.13.10.src.tar.gz"
   mirror "https://fossies.org/linux/misc/go1.13.10.src.tar.gz"
   sha256 "eb9ccc8bf59ed068e7eff73e154e4f5ee7eec0a47a610fb864e3332a2fdc8b8c"
+  revision 1
 
   bottle do
     sha256 "74c8d92381dba1fe54ec753587de9c6fe51624d3b094d4e4681e01bfc2fbd3b0" => :catalina
