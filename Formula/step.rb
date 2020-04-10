@@ -1,8 +1,8 @@
 class Step < Formula
   desc "Crypto and x509 Swiss-Army-Knife"
   homepage "https://smallstep.com"
-  url "https://github.com/smallstep/cli/releases/download/v0.13.3/step-cli_0.13.3.tar.gz"
-  sha256 "9890cf5143139c4107136caeb2e81901cdad84dc2573fb22bba52d143cbd909e"
+  url "https://github.com/smallstep/cli/releases/download/v0.14.2/step-cli_0.14.2.tar.gz"
+  sha256 "5653a655d6b88acf126bd6eae3a2d1dce1f2d770b95afb17777a7e98ae40a075"
 
   bottle do
     cellar :any_skip_relocation
@@ -15,8 +15,8 @@ class Step < Formula
   depends_on "go" => :build
 
   resource "certificates" do
-    url "https://github.com/smallstep/certificates/releases/download/v0.13.3/step-certificates_0.13.3.tar.gz"
-    sha256 "a198e0853f36c775392fbb37da1e986e66572270800413dd70d76b31a963158c"
+    url "https://github.com/smallstep/certificates/releases/download/v0.14.2/step-certificates_0.14.2.tar.gz"
+    sha256 "86d28a3bf9e282ef8f6ea99516671f6822f29657bb96db8b0ffce46a805bce5a"
   end
 
   def install
@@ -88,15 +88,16 @@ class Step < Formula
 
     begin
       pid = fork do
-        exec "#{bin}/step-ca", "--password-file", "#{testpath}/password.txt", "#{steppath}/config/ca.json"
+        exec "#{bin}/step-ca", "--password-file", "#{testpath}/password.txt",
+          "#{steppath}/config/ca.json"
       end
+
       sleep 2
       shell_output("#{bin}/step ca health > health_response.txt")
       assert_match(/^ok$/, File.read(testpath/"health_response.txt"))
 
-      shell_output(
-        "#{bin}/step ca token --password-file #{testpath}/password.txt homebrew-smallstep-leaf > token.txt",
-      )
+      shell_output("#{bin}/step ca token --password-file #{testpath}/password.txt " \
+"homebrew-smallstep-leaf > token.txt")
       token = File.read(testpath/"token.txt")
       system "#{bin}/step", "ca", "certificate", "--token", token,
           "homebrew-smallstep-leaf", "brew.crt", "brew.key"
