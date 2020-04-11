@@ -6,9 +6,9 @@ class Uni < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "4d9879ec4fb327d59a3b7104afa9bfdd449033f057d7d75ba1c3b7fbd56f731b" => :catalina
-    sha256 "332214062ecf45642b0c4e15a03fd81b413cba778b45426d4a23ac3585e92bf0" => :mojave
-    sha256 "b5aead139e53529995ed5cec83ee38e1146640249dca86e7cf66c293890f9e30" => :high_sierra
+    sha256 "4c318047d1d8348208c60f960564c5f72b46924ec224788ee046d706ccebee6c" => :catalina
+    sha256 "cb7ef66cfcc75de8b90003dbd598bd456b7384c21f587977a48d70fbb0c1073b" => :mojave
+    sha256 "f343d429d9ab048abc7bda0de0acca051d25657276956436d9169fafbdbf78bb" => :high_sierra
   end
 
   depends_on "go" => :build
