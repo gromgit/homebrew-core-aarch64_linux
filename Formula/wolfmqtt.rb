@@ -6,6 +6,13 @@ class Wolfmqtt < Formula
       :revision => "af3d2926773b2c97f5e3a86ea2562e339a91b747"
   head "https://github.com/wolfSSL/wolfMQTT.git"
 
+  bottle do
+    cellar :any
+    sha256 "bd879bda38386592a87d1672c7cb5af944cd6290cff62a1249cfc8ad095a0cd3" => :catalina
+    sha256 "01cf2379343cd396f3bfa3136732a4861cdc7454fe30e0e201153d08453d8c4c" => :mojave
+    sha256 "0ea25c4930469b196fd97e76ef1b4b0e9977dccb9a7147d7f457e1604b7b54d9" => :high_sierra
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
