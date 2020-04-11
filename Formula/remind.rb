@@ -6,9 +6,9 @@ class Remind < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "243175a204fbd75f2be9308ccd786bf8fd19fbbea8a9a61b9d5e9f0b83fdbd53" => :catalina
-    sha256 "713f7bdcc7216e2af7debec1ca21bac61b3f2adccae92c93d16a995a127d77c1" => :mojave
-    sha256 "3196bf41eed1e1bade70a68eb536f60d521144f52b9d28e3cbef821cddae5de3" => :high_sierra
+    sha256 "cb1470b7207336fee89f03b6a7d540ff21720ec27f3a18abb0c938a815efca05" => :catalina
+    sha256 "09c627b85760732ba5a9e52e184458e1ea6be7b69d35cad34fe1c0e2d6189d4c" => :mojave
+    sha256 "2c99a0b697e0b93cd8d43c39fd81f4c220c280ee2c260e573c39ff2f749e01b6" => :high_sierra
   end
 
   conflicts_with "rem", :because => "both install `rem` binaries"
