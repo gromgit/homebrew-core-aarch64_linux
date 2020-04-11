@@ -6,9 +6,9 @@ class Rex < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2c78999f2976390c2cd6724e5c8532b84915fc4e9724abd966c3f5bb4254071c" => :catalina
-    sha256 "bf82c487cb2094ef2dc0085bb379665dbe54328c65aac333490b52428976bc5a" => :mojave
-    sha256 "247a46a1f54e3075807ce405d5bd0e971a59bfeb9d57a651ed6ce458ffa2cd67" => :high_sierra
+    sha256 "012162bdc22ad9b8f3e78060cf82eeade24087e6570eb55addef541b8d39e96f" => :catalina
+    sha256 "43cd0e6967ebd932ac4b476bac7398eaff4116b67a8399d10cefaefff325e435" => :mojave
+    sha256 "c90108f0fb218e56d71a05ed236b8aa2efe1f908a92d2ed8c6f1bb3f043840b6" => :high_sierra
   end
 
   uses_from_macos "perl"
