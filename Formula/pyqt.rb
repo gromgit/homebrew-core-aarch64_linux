@@ -6,9 +6,9 @@ class Pyqt < Formula
 
   bottle do
     cellar :any
-    sha256 "a7041a208bb1f89d35115773103c9900f70f38884f3033947d815f77e600579c" => :catalina
-    sha256 "0c07249e43391e446eac5f904fa3e7d2e270cc1fbd90e8ba71f68c2c2c6999ed" => :mojave
-    sha256 "b620d754178e277935ced75c955d2eaf461c70e51f0de28f3a2b30d8f70a781c" => :high_sierra
+    sha256 "4fc5664001beb9e1d001862656a3d1e3141e500b7395cd44fb822b69b5e5b278" => :catalina
+    sha256 "b5e992fcdfbb8c44f2b47fff4aae4b948260de750dcd618fd6491d17615320fb" => :mojave
+    sha256 "8e34785572c1e29ef48090b6bc939714a48b5c13db92e4a173636810b50b02a5" => :high_sierra
   end
 
   depends_on "python@3.8"
