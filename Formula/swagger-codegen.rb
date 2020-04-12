@@ -7,9 +7,9 @@ class SwaggerCodegen < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b367f0cc5cd2bd2218f91d3a2631631b6d7e9bd941baa88606421628e8a94157" => :catalina
-    sha256 "1e0883f885e0e83e68ef63e6396fa4bc712741fd8b2b3c3cc24f1df8c367f2ea" => :mojave
-    sha256 "ebd5c4ae69699620e7e540ea1998f32134865ee649f6401443636e7f26a499c3" => :high_sierra
+    sha256 "6c46e002e3b4198b125ec3829f5982752f9475c632e391ff10f591bcec27462a" => :catalina
+    sha256 "91864ecc31b9100deec66971684b85538c952e8c1e3eb95b368f272dddccec72" => :mojave
+    sha256 "878e3b147ffadacd19abe9a58e12143583d40e5720244e48de0ea5b70a282dab" => :high_sierra
   end
 
   depends_on "maven" => :build
