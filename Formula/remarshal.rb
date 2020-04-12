@@ -9,9 +9,9 @@ class Remarshal < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2e239a6f7fed381016f36bffa0e287731b5e2bcb61334b8f2d9efa88b88918f1" => :catalina
-    sha256 "eea1d2b51cc88366a1da55464cf58545286f9d26a74c9e93fca775dab47db006" => :mojave
-    sha256 "8fa23a4540ddb0cc04b0f25ce5faa83ca0dc31a456cb6da28a94e8a7365cde2a" => :high_sierra
+    sha256 "ff34ba0168dc79cb1d3c060817d8bd13be31061f3883a2ba5d4ea0098c5a9f76" => :catalina
+    sha256 "5d09769f8c950743b049109c9f375746ead3d943c54eb4448ead95d1c8cbd76c" => :mojave
+    sha256 "6e5ebcde81702cb6616be074402cae0e7609c78e3c3fe2eb7357339d73c7924e" => :high_sierra
   end
 
   depends_on "python@3.8"
