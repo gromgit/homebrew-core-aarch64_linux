@@ -5,9 +5,9 @@ class Octomap < Formula
   sha256 "adf87320c4c830c0fd85fe8d913d8aa174e2f72d0ea64c917599a50a561092b6"
 
   bottle do
-    sha256 "d1c5e967c2074d4d19292553da0cdfb360052c1c8c8b63da13ad06100abcfce5" => :catalina
-    sha256 "c4f130c4a9c0e9d877b5936c38d77a3129949209074f30971a5a6ea044ab0ed6" => :mojave
-    sha256 "c1b06b47e85f000ba6a6c2f3fd745fd9859422b7fc261ec8209a788913fbfe47" => :high_sierra
+    sha256 "dcf938ee253a527143d78cbc39c20046015519b5aff741656016f0a67ff705b9" => :catalina
+    sha256 "878681f950a14d49b47bd69605a12bae4f42f127b4cc7750de14b7a16f6a9930" => :mojave
+    sha256 "92def71d469ce8d5a660d371eded16f8d25f9346e2fc3f34ffd105f3bbd2060c" => :high_sierra
   end
 
   depends_on "cmake" => :build
