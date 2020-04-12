@@ -8,9 +8,9 @@ class Pulp < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "bec16642f812372fa5260f59250a72c13ef363c01ab6aaba1eb5997e27d387df" => :catalina
-    sha256 "d5380db101369a8a71a6e64badd0a30419907a4bba22b0400e8add077dcdaa7b" => :mojave
-    sha256 "e3fc10ded86c2d8ec89efb373ad8af6994ff800904a7808a73b994c42a273dce" => :high_sierra
+    sha256 "8e7aaa1a3e6fc065162b2e535ade71a587c2d8151bd82074ccd4dd36b7aca8cb" => :catalina
+    sha256 "2bf17078a2d30193705626eb8fb8d6dfc936effc6db765cdd3b4ebc7303646d2" => :mojave
+    sha256 "d416ae4cefb7f3b3efd1120927e0286d4384f1bfb5f98317fece4648ace1f6be" => :high_sierra
   end
 
   depends_on "bower"
