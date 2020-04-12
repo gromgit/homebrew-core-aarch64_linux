@@ -1,8 +1,8 @@
 class LinkGrammar < Formula
   desc "Carnegie Mellon University's link grammar parser"
   homepage "https://www.abisource.com/projects/link-grammar/"
-  url "https://www.abisource.com/downloads/link-grammar/5.6.2/link-grammar-5.6.2.tar.gz"
-  sha256 "333c29abdcb6f3b90aff4d24889d11174d45b7cc1960816a257eecd6679186c9"
+  url "https://www.abisource.com/downloads/link-grammar/5.8.0/link-grammar-5.8.0.tar.gz"
+  sha256 "ad65a6b47ca0665b814430a5a8ff4de51f4805f7fb76642ced90297b4e7f16ed"
 
   bottle do
     sha256 "a6271a6564c1ec4ff95d8223e47385aad3b4df314db579f3e68ea43f9a456870" => :catalina
@@ -17,21 +17,19 @@ class LinkGrammar < Formula
   depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
+  depends_on "python@3.8" => :build
 
   def install
     ENV["PYTHON_LIBS"] = "-undefined dynamic_lookup"
     inreplace "bindings/python/Makefile.am",
-      "$(PYTHON2_LDFLAGS) -module -no-undefined",
-      "$(PYTHON2_LDFLAGS) -module"
-    inreplace "bindings/java/build.xml.in",
-      "<property name=\"source\" value=\"1.6\"/>",
-      "<property name=\"source\" value=\"1.7\"/>"
-    inreplace "bindings/java/build.xml.in",
-      "<property name=\"target\" value=\"1.6\"/>",
-      "<property name=\"target\" value=\"1.7\"/>"
+      "$(PYTHON_LDFLAGS) -module -no-undefined",
+      "$(PYTHON_LDFLAGS) -module"
+    inreplace "link-grammar/link-grammar.def", "regex_tokenizer_test\n", ""
     system "autoreconf", "-fiv"
-    system "./configure", "--disable-debug", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}"
+    system "./configure", "--disable-debug",
+                          "--disable-dependency-tracking",
+                          "--prefix=#{prefix}",
+                          "--with-regexlib=c"
     system "make", "install"
   end
 
