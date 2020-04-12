@@ -7,9 +7,9 @@ class Offlineimap < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "a9f7c26d77e5b5f117847fb068a5bdd9c4d691c73fa8c94aae12bec425953816" => :catalina
-    sha256 "843997b39d0b652700a5c6ccb2ce1a7efe76c32577018d792e25690c4166bb12" => :mojave
-    sha256 "843997b39d0b652700a5c6ccb2ce1a7efe76c32577018d792e25690c4166bb12" => :high_sierra
+    sha256 "2d21d8216b9d9ad3197181632dd8583d8bd15f46851365e906d9581ae67ff30e" => :catalina
+    sha256 "ff922fc76e1e5571628d7ecb4bd436180895352768979c2cd9bcfee048b5d0f4" => :mojave
+    sha256 "ff922fc76e1e5571628d7ecb4bd436180895352768979c2cd9bcfee048b5d0f4" => :high_sierra
   end
 
   depends_on :macos # Due to Python 2 (Will never support Python 3)
