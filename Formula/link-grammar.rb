@@ -5,10 +5,9 @@ class LinkGrammar < Formula
   sha256 "ad65a6b47ca0665b814430a5a8ff4de51f4805f7fb76642ced90297b4e7f16ed"
 
   bottle do
-    sha256 "a6271a6564c1ec4ff95d8223e47385aad3b4df314db579f3e68ea43f9a456870" => :catalina
-    sha256 "90b3c98782ea23f109ea0046548c531331f3d07e9645a4d9bd01ae43381c01a0" => :mojave
-    sha256 "f201950217bc053f94351992075900a0d6f6d96a22d5411df6ee54e007838762" => :high_sierra
-    sha256 "e4103b4f47f143886f2bbfaa089a318921ffb297fedfa0174d0403334375d732" => :sierra
+    sha256 "e38c9f157ec985be94ed5e792442f5d81c00b71d0b84164ed146d8ab3fbb46dd" => :catalina
+    sha256 "4e9b86a609145b67983faa850c0918500cdcb1da5ab5f1ecb945cabdc8533b74" => :mojave
+    sha256 "391cc292bef0a6eb3b21add8bf427f0fcc0122ec59b41003387df27a1c51803c" => :high_sierra
   end
 
   depends_on "ant" => :build
