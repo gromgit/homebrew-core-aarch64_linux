@@ -6,9 +6,9 @@ class Nebula < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "1ab56a03259d3eab9fce10c2480a6c4c1331008b8c5336ee91b7ea57910d3ccf" => :catalina
-    sha256 "4455c6cfc00f3da5c546d5ba27e49bcbfb624eebf7700937e2d8d18b6d0186e8" => :mojave
-    sha256 "1b3b0d8fecadaeb8f93ce0a4477c8cda027b45fea6c1dd3786573dedb1976411" => :high_sierra
+    sha256 "5d3c7165792a6af1ca242ad8cb2e1466eb2ed29973f0b0a303cc1b995389a7d8" => :catalina
+    sha256 "3da3e3c250ab1727bff0b22c0d84daa4d6ea52d113b46626d6990bdc046cdfd2" => :mojave
+    sha256 "f82f0b0f5d11c9b5e82ee2719270f9a5260689c75fe4074e499c3891b0a177bd" => :high_sierra
   end
 
   depends_on "go" => :build
