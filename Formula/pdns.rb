@@ -5,9 +5,9 @@ class Pdns < Formula
   sha256 "6be2e70f100df6f32cb431d5f57ca0aabde1fba6c11d947eccc86d44bdf95d08"
 
   bottle do
-    sha256 "f14eb64110b61db1e93716eab2a7bdb22bf77221dc5e07aed6e19cb5c8415fa7" => :catalina
-    sha256 "cf298ee7822ff4a58356693622b4f2ce998b3d144e70c64c6805aa3fcc28fd1f" => :mojave
-    sha256 "f6e5655f7d5a31caa53887b030937cd36d56a2d542357eb2753f674a42e40289" => :high_sierra
+    sha256 "abda262260fff1178494b353f70b32087e48c934001d15eb92418360a4111ea5" => :catalina
+    sha256 "b3dfd65d42e150a2ce1da416507a975f72cd28bbd9092497c933796afa172e04" => :mojave
+    sha256 "2647076a193298b4cd3db2701a027fcb4e583b556400b13e282e81be5538c24c" => :high_sierra
   end
 
   head do
