@@ -6,9 +6,9 @@ class Libcbor < Formula
 
   bottle do
     cellar :any
-    sha256 "59b70681658d5173ec44c8bc6ae56bc714287d599b4df7a8582f2fd62d62d002" => :catalina
-    sha256 "953ac4ba8d331b0689107f085da72083fccbf20420773819bfb6153243c3f195" => :mojave
-    sha256 "1ca2a0383d4281b6a6a52e55459345fdd82d1183eb5c9ad4f5f431de5c079297" => :high_sierra
+    sha256 "9500d9ae8eb7c2048779c7be7c8be643f0f374ca131192c39f6f8ce4c4158173" => :catalina
+    sha256 "8a1800894384b8c4a0a2f2190141754dfbdfb2cd56940ae87a7fb6ed704b06a2" => :mojave
+    sha256 "6b42f6b810aa4e0cb0d5141491fa5b989413e518ed0134fd39677637999365e4" => :high_sierra
   end
 
   depends_on "cmake" => :build
