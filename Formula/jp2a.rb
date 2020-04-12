@@ -12,10 +12,10 @@ class Jp2a < Formula
 
   bottle do
     cellar :any
-    sha256 "1ded015934d8e95c8fa21440973a9f57dfc8b607b46719e0698b61e5daee257b" => :catalina
-    sha256 "97f05a0bb8f9ee5b075e21aff16503284592106cc87d384c1b85936128690345" => :mojave
-    sha256 "36bd941b1b215c93b6934a085b9cf8fdaad2ba2ce47a8fbe096e53a144932201" => :high_sierra
-    sha256 "a45231943df5bffc1589114b20b5b6c9745f909fd1e85db63da40e28bec02709" => :sierra
+    rebuild 1
+    sha256 "a9aa7c8893c63ad5621788af3813ed9758e09e0c79b9ba3a8262d5c17b2272f9" => :catalina
+    sha256 "4e62b310889a384daf9058267ac0b1bdc73d2cb408f05b9e3d3072be52355bfd" => :mojave
+    sha256 "8400fccf2a4459fe37ce0f3856459127f4f66ff002c356f36942462c0c9c3809" => :high_sierra
   end
 
   depends_on "jpeg"
