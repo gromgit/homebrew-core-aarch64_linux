@@ -7,9 +7,9 @@ class Wpscan < Formula
 
   bottle do
     cellar :any
-    sha256 "b19367322d6891e804d1cc721ad63d0df4b2927505949fa84d0f83178bf6d9cc" => :catalina
-    sha256 "3a355cb31c324877da3e2c640a814a9188a00d46991373d4c9cf853186acd6ee" => :mojave
-    sha256 "b3f8f08c232218b9a0c656acfe696fa688e31a326454cd9b0daf4eb96d37afa0" => :high_sierra
+    sha256 "b8a2e657c932514056c7b7e2c221debd24afacfb23fb16ef9c2945c0829d5338" => :catalina
+    sha256 "ce663cdb242251990900aee44418458ad09ed4dafda66801b22ea29f7236a308" => :mojave
+    sha256 "40b791348bd997263372d71c28352e6776e94876ad1d667b35d15f2f3eb3878b" => :high_sierra
   end
 
   depends_on "ruby"
