@@ -3,8 +3,8 @@ class Yamllint < Formula
 
   desc "Linter for YAML files"
   homepage "https://github.com/adrienverge/yamllint"
-  url "https://github.com/adrienverge/yamllint/archive/v1.21.0.tar.gz"
-  sha256 "6ce317f7ee5895b6232a70fb1e9870cfcb15702b19123cfa63cd1b55f4f11ac8"
+  url "https://github.com/adrienverge/yamllint/archive/v1.22.0.tar.gz"
+  sha256 "d200cbce33a1a8eb5df8391dfb48328ebb05c0035647e8c0eb694953fa5d7c2c"
 
   bottle do
     cellar :any
@@ -22,8 +22,8 @@ class Yamllint < Formula
   end
 
   resource "pathspec" do
-    url "https://files.pythonhosted.org/packages/ce/f2/d35c292da8fbff725625a17ae40f48f933070acd5ccddb03d8c09d81758d/pathspec-0.7.0.tar.gz"
-    sha256 "562aa70af2e0d434367d9790ad37aed893de47f1693e4201fd1d3dca15d19b96"
+    url "https://files.pythonhosted.org/packages/93/9c/4bb0a33b0ec07d2076f0b3d7c6aae4dad0a99f9a7a14f7f7ff6f4ed7fa38/pathspec-0.8.0.tar.gz"
+    sha256 "da45173eb3a6f2a5a487efba21f050af2b41948be6ab52b6a1e3ff22bb8b7061"
   end
 
   def install
