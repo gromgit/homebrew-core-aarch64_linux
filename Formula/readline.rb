@@ -26,9 +26,9 @@ class Readline < Formula
     sha256 "896a3d50ce8962ba56e853bdd590fadeabc00ab36475d143d6c2bea5cc15bb28" => :high_sierra
   end
 
-  uses_from_macos "ncurses"
-
   keg_only :shadowed_by_macos, "macOS provides BSD libedit"
+
+  uses_from_macos "ncurses"
 
   def install
     system "./configure", "--prefix=#{prefix}"
