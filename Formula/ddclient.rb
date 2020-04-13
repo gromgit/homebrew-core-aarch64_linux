@@ -7,11 +7,9 @@ class Ddclient < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "84268bc4c022fd095220dcc0faf1b38afb1650a1ee9f2af9ec379aa8dfbfbdc9" => :catalina
-    sha256 "cb9631a6394ad174c9b28da23e66ddd2487aec8288874e0341b28bb5b2a42209" => :mojave
-    sha256 "f53e130d1b87b70e10fc6746ef5270d4e25031c8c6f4ba2e2ffcb3d3799e09ca" => :high_sierra
-    sha256 "3314806cf6fe3e64da60949fb77973ef4c38d56830050a404fcdabf5ba27c777" => :sierra
-    sha256 "d3ef79c5455f31ed75a662be41262c51838a6164fd68b08868ed90c2ee511efc" => :el_capitan
+    sha256 "d4e32d3e5c88ea3d8b77caccd50e1a291e44934542279289f6e8e13203496214" => :catalina
+    sha256 "05482e7ee83ff87306f35898b16748d0c3823d15c8879a4a4f8e6da341d299a5" => :mojave
+    sha256 "45b2b534058896de6f98ab1da92d8a1f4ab71fc952b97129e94ae074cfa80b91" => :high_sierra
   end
 
   resource "Data::Validate::IP" do
