@@ -23,7 +23,7 @@ class Curl < Formula
 
   depends_on "pkg-config" => :build
 
-  uses_from_macos "openssl"
+  uses_from_macos "openssl@1.1"
   uses_from_macos "zlib"
 
   def install
