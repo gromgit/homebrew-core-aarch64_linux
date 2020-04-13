@@ -1,8 +1,8 @@
 class Navi < Formula
   desc "Interactive cheatsheet tool for the command-line"
   homepage "https://github.com/denisidoro/navi"
-  url "https://github.com/denisidoro/navi/archive/v2.5.0.tar.gz"
-  sha256 "36e8a144ec7be5684bb0731c310071b018991a5e327360791e4c849fae2422c3"
+  url "https://github.com/denisidoro/navi/archive/v2.5.1.tar.gz"
+  sha256 "0c6f2b32c27e81cfb43a3f781dbdc7404d1afaf7f1e9a3cb178c2054493d54a1"
 
   bottle do
     cellar :any_skip_relocation
