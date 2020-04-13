@@ -6,9 +6,9 @@ class Tintin < Formula
 
   bottle do
     cellar :any
-    sha256 "4f08321d1f4ad35d1ad4eb635527ecd48321eea3c0346ac639d702ed917f63fe" => :catalina
-    sha256 "884e881629347145c24b34887ead7ecb59d5f82c80d35f5003d3aa8507ed47b7" => :mojave
-    sha256 "07cfe88a3b77d6788ed0afa72ac65dbc3b86db90eac39e6ceaabc1d1b758bb9f" => :high_sierra
+    sha256 "895be37bb90b25cdc58591aa166bd464538715c3104901c7159d3c58906a485b" => :catalina
+    sha256 "ecdd874018dd20cd4d8807a8c2adc5a8955622f8c97277a3a6fdc79e3d8a4198" => :mojave
+    sha256 "29c68a3db90dee5cef629f629629d50469f2dd0ef9426b4bd8aaa374d2b6334e" => :high_sierra
   end
 
   depends_on "gnutls"
