@@ -1,7 +1,7 @@
 class Platformio < Formula
   include Language::Python::Virtualenv
 
-  desc "An open-source ecosystem for embedded development"
+  desc "Open-source ecosystem for embedded development"
   homepage "https://platformio.org/"
   url "https://files.pythonhosted.org/packages/15/58/49a7134412731bd585f996d9c69e70f7eff0bacf795a7a55524dadf412cd/platformio-4.3.1.tar.gz"
   sha256 "fa36a8ba1a321709d0bbc37f76e8c763eee8d5a06f8f01375cd79c7b56f1e919"
