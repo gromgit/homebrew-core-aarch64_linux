@@ -6,8 +6,8 @@ class MoltenVk < Formula
 
   bottle do
     cellar :any
-    sha256 "a4bebfdffac3b756cf7cee2e8a72870ffebb7fb742dc18a1ca707c99c3beab02" => :catalina
-    sha256 "182a30cf86e6b47613e1abd7a958f7ba5bcecc92b9bc7c50ff3cdddb6df7e8fc" => :mojave
+    sha256 "7e481fb8313225649e9e8954d0e22e8b0c131a089ebd9138da986bf3eb92626d" => :catalina
+    sha256 "b349731d662b8f9d2d12159cfc010600cb6cf5645beaea8e884a22ee09d8387f" => :mojave
   end
 
   depends_on "cmake" => :build
