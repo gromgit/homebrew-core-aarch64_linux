@@ -1,5 +1,5 @@
 class Neatvi < Formula
-  desc "ex/vi clone for editing bidirectional utf-8 text"
+  desc "Clone of ex/vi for editing bidirectional utf-8 text"
   homepage "https://repo.or.cz/neatvi.git"
   url "https://repo.or.cz/neatvi.git",
       :tag      => "07",
