@@ -31,6 +31,6 @@ class GitOctopus < Formula
     system "git", "add", "."
     system "git", "commit", "--message", "brewing"
 
-    assert_equal "", shell_output("#{bin}/git-octopus 2>&1", 0).strip
+    assert_equal "", shell_output("#{bin}/git-octopus 2>&1").strip
   end
 end
