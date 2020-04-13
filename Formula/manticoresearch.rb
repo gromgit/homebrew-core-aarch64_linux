@@ -8,9 +8,9 @@ class Manticoresearch < Formula
   head "https://github.com/manticoresoftware/manticoresearch.git"
 
   bottle do
-    sha256 "81caa9e99d521b09413ec8eacb87002bb8fe2aa9c23501fb9b0147febb8a4a70" => :catalina
-    sha256 "dbb618ba4468d7054609964e0323f7796996f0d90614fafd969b4acec5df8d72" => :mojave
-    sha256 "59f3a80dc395813ad3fb74d2a3bcd128ed17353ec35fe28afa3c3ac7e43b8f55" => :high_sierra
+    sha256 "040e35553be1cba6b646bca39b25be32a6ce5cd9e9abcc7be1979d9efcd7649d" => :catalina
+    sha256 "15c3a9697847baf7879269c99f7590fb1ca07afc528cfeca8ef170a783bf1998" => :mojave
+    sha256 "f7a83e56c1392ebea74ef19929c7d3f4f29cfb5f4bbe08a36a55395ca3277d40" => :high_sierra
   end
 
   depends_on "cmake" => :build
