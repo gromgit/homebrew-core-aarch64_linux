@@ -8,9 +8,9 @@ class NowCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "6e0465e8af7455d8609a7d5964dff0a069f1bb93b6360f6d13679ebf52bc18c7" => :catalina
-    sha256 "e1fe0405c975b0ff6b6657f03ade395de13316be20f838ef4d84d7fdc1173dc2" => :mojave
-    sha256 "438d3d398adb378d0180848d19d8dd285b4c5ac375504313e804fc12eec53dd4" => :high_sierra
+    sha256 "13b98b4fb98b0ef2871ce94a580b4d4072a1fcde87297dd3fe926a850776505f" => :catalina
+    sha256 "97c8632f75cf1fef197a9101c640845c2231a11919d98408236afa03777906a6" => :mojave
+    sha256 "f8bde54f4ad1c45ef2c942d7f580ed539b5de33fdaaf8f356e056255c82cd766" => :high_sierra
   end
 
   depends_on "node"
