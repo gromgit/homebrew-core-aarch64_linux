@@ -6,10 +6,9 @@ class BibTool < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "b09a0c04b6fdc9e70b3d83c6eb127ea4db163ee85938f26a4ad77070dc69d335" => :catalina
-    sha256 "bf35f661105cc65adb12ab58a17f722c7152a97bc7e83d2f9b8cc0e969390389" => :mojave
-    sha256 "b6b4a3254167a377d45193b39b3b9e90f678f43f0744b3ff622e5cd7b7ecf694" => :high_sierra
+    sha256 "26f2121d720fa6ffc20547b0bfc6754930f6b8660b51f634c686279dae7e73ce" => :catalina
+    sha256 "d75a1a60204b002cc06acc025cfdc74db76a563b9bb508876d0e45d771f61dc8" => :mojave
+    sha256 "0d92e3fead68380fc84cbf5517d2ed2eecdfcbfc1fc14c6343f51ee60d43f948" => :high_sierra
   end
 
   def install
