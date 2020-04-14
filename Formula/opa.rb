@@ -1,8 +1,9 @@
 class Opa < Formula
   desc "Open source, general-purpose policy engine"
   homepage "https://www.openpolicyagent.org"
-  url "https://github.com/open-policy-agent/opa/archive/v0.18.0.tar.gz"
-  sha256 "07e6eeb2cd2b54df57b40d6cdf4ab11dfc8c6fc4b2e17d56a62a4ce1dc0cec52"
+  url "https://github.com/open-policy-agent/opa/archive/v0.19.1.tar.gz"
+  sha256 "6edbc3d327ce401508b10f4969554cdc1cea73fd00037b42bd21af87a59cdb63"
+  head "https://github.com/open-policy-agent/opa.git"
 
   bottle do
     cellar :any_skip_relocation
@@ -16,6 +17,8 @@ class Opa < Formula
   def install
     system "go", "build", "-o", bin/"opa", "-trimpath", "-ldflags",
                  "-X github.com/open-policy-agent/opa/version.Version=#{version}"
+    system "./build/gen-man.sh", "man1"
+    man.install "man1"
     prefix.install_metafiles
   end
 
