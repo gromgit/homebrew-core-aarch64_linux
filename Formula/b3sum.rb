@@ -6,9 +6,9 @@ class B3sum < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "242cb591b1c1508de78f07837eacfc3cfc998380475a96e2e55e0038ea0fa169" => :catalina
-    sha256 "68f37fc80b6eaa9621f944548f76c43942d4bde6b54489e1b0c7577261d9b3fc" => :mojave
-    sha256 "1bd0a9cddba682167b84e8ea52eaf1a5f3303ca477fd0bbcae75ade764a1acba" => :high_sierra
+    sha256 "96f6ab17edaf5c0bd014e4650da92a1afeee5b19890802ede4638259491cf0d4" => :catalina
+    sha256 "3326d2e6ed59e1601e431e49c4a66551aaf07fb27be9552b77363ed289d7479b" => :mojave
+    sha256 "7a1a71bd06e2a1d245c787b85650eb6be8ef279d1440e4a9323d9bb020850bb8" => :high_sierra
   end
 
   depends_on "rust" => :build
