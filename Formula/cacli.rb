@@ -6,9 +6,9 @@ class Cacli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9b2d628a0cc4ba4e426cbd5afea64c3ec1af0877aeee605e3536ec57817e7924" => :catalina
-    sha256 "ff5f177e8708eeb3567feedf4ff48e5c233b1cc9283153dc6437e6f651da502b" => :mojave
-    sha256 "90127c81c2ae488e493ae7aae91d2a783e790fdb4809d9c620a093289f425cb0" => :high_sierra
+    sha256 "eb3ed4080f932a028dad2ee995d563b224aba8050ce996d081a941fe22277b23" => :catalina
+    sha256 "45221a4f754e577cb36ef5cf4da0f70c84d90020932e72478ffadcd75dc875eb" => :mojave
+    sha256 "931fed5c23af443c9dbc8cce44d31e46d6626201a2a8aaa323addfa5a5e461ae" => :high_sierra
   end
 
   depends_on "go" => :build
