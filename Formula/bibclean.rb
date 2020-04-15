@@ -6,11 +6,9 @@ class Bibclean < Formula
   sha256 "4fa68bfd97611b0bb27b44a82df0984b300267583a313669c1217983b859b258"
 
   bottle do
-    cellar :any_skip_relocation
-    rebuild 1
-    sha256 "635f879a68a634caf12bff8930a27c0427b37bfb8332b7febfce34e62bb892e7" => :catalina
-    sha256 "f095e3e8a61f36dac9bff1687c7c11fddbe75c67f4dded0f82a6a95399d9a8c6" => :mojave
-    sha256 "485c4641efc1716e3de1e7672f5b3a444a0ce7fb3eb516d16fa93292907f931d" => :high_sierra
+    sha256 "15dbbabace79aafd93546976d8a899a393c6489d7951ce2bd2bb148a45f262a3" => :catalina
+    sha256 "82a7919c9d5054012b54d53eacf5a9c0785105071c4c65c83bc2ff428642b3e5" => :mojave
+    sha256 "9a2beadc688b6b12a22359890a6a85f20f3c79af561b5d4268e86069b806f585" => :high_sierra
   end
 
   def install
