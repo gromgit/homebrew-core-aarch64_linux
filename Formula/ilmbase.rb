@@ -17,17 +17,30 @@ class Ilmbase < Formula
 
   def install
     cd "IlmBase" do
-      system "cmake", ".", *std_cmake_args
+      system "cmake", ".", *std_cmake_args, "-DBUILD_TESTING=OFF"
       system "make", "install"
-      pkgshare.install %w[Half HalfTest Iex IexMath IexTest IlmThread Imath ImathTest]
     end
   end
 
   test do
-    cd pkgshare/"IexTest" do
-      system ENV.cxx, "-I#{include}/OpenEXR", "-I./", "-c",
-             "testBaseExc.cpp", "-o", testpath/"test"
-    end
+    (testpath/"test.cpp").write <<~'EOS'
+      #include <ImathRoots.h>
+      #include <algorithm>
+      #include <iostream>
+
+      int main(int argc, char *argv[])
+      {
+        double x[2] = {0.0, 0.0};
+        int n = IMATH_NAMESPACE::solveQuadratic(1.0, 3.0, 2.0, x);
+
+        if (x[0] > x[1])
+          std::swap(x[0], x[1]);
+
+        std::cout << n << ", " << x[0] << ", " << x[1] << "\n";
+      }
+    EOS
+    system ENV.cxx, "-I#{include}/OpenEXR", "-o", testpath/"test", "test.cpp"
+    assert_equal "2, -2, -1\n", shell_output("./test")
   end
 end
 
