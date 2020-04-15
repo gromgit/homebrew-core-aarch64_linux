@@ -1,8 +1,9 @@
 class Irrtoolset < Formula
   desc "Tools to work with Internet routing policies"
   homepage "https://github.com/irrtoolset/irrtoolset"
-  url "https://ftp.isc.org/isc/IRRToolSet/IRRToolSet-5.0.1/irrtoolset-5.0.1.tar.gz"
-  sha256 "c044e4e009bf82db84f6a4f4d5ad563b07357f2d0e9f0bbaaf867e9b33fa5e80"
+  url "https://github.com/irrtoolset/irrtoolset/archive/release-5.1.3.tar.gz"
+  sha256 "a3eff14c2574f21be5b83302549d1582e509222d05f7dd8e5b68032ff6f5874a"
+  head "https://github.com/irrtoolset/irrtoolset.git"
 
   bottle do
     cellar :any_skip_relocation
@@ -15,22 +16,14 @@ class Irrtoolset < Formula
     sha256 "87576959ef0948ec184322a4d6756e62ca6e4695fd708c773317fce8570b2dcf" => :mavericks
   end
 
-  head do
-    url "https://github.com/irrtoolset/irrtoolset.git"
-
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
-  end
-
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "bison" => :build # Uses newer syntax than system Bison supports
+  depends_on "libtool" => :build
   depends_on "pkg-config" => :build
 
   def install
-    if build.head?
-      system "glibtoolize"
-      system "autoreconf", "-i"
-    end
-
+    system "autoreconf", "-iv"
     system "./configure", "--prefix=#{prefix}"
     system "make", "install"
   end
