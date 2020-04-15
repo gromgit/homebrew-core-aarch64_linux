@@ -3,6 +3,7 @@ class Perl < Formula
   homepage "https://www.perl.org/"
   url "https://www.cpan.org/src/5.0/perl-5.30.2.tar.gz"
   sha256 "66db7df8a91979eb576fac91743644da878244cf8ee152f02cd6f5cd7a731689"
+  revision 1
   head "https://github.com/perl/perl5.git", :branch => "blead"
 
   bottle do
@@ -30,6 +31,7 @@ class Perl < Formula
       -Duseshrplib
       -Duselargefiles
       -Dusethreads
+      -Dsed=/usr/bin/sed
     ]
 
     args << "-Dusedevel" if build.head?
