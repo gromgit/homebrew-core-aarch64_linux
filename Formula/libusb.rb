@@ -26,7 +26,7 @@ class Libusb < Formula
     system "./autogen.sh" if build.head?
     system "./configure", *args
     system "make", "install"
-    pkgshare.install "examples"
+    (pkgshare/"examples").install Dir["examples/*"] - Dir["examples/Makefile*"]
   end
 
   test do
