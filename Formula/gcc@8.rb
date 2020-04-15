@@ -4,6 +4,7 @@ class GccAT8 < Formula
   url "https://ftp.gnu.org/gnu/gcc/gcc-8.4.0/gcc-8.4.0.tar.xz"
   mirror "https://ftpmirror.gnu.org/gcc/gcc-8.4.0/gcc-8.4.0.tar.xz"
   sha256 "e30a6e52d10e1f27ed55104ad233c30bd1e99cfb5ff98ab022dc941edd1b2dd4"
+  revision 1
 
   bottle do
     sha256 "897437c92ba302e98a02cc97bea758cf6d8710ea3a95480f8f831d85f402043e" => :catalina
@@ -66,21 +67,21 @@ class GccAT8 < Formula
     # Xcode 10 dropped 32-bit support
     args << "--disable-multilib" if DevelopmentTools.clang_build_version >= 1000
 
+    # System headers may not be in /usr/include
+    sdk = MacOS.sdk_path_if_needed
+    if sdk
+      args << "--with-native-system-header-dir=/usr/include"
+      args << "--with-sysroot=#{sdk}"
+    end
+
+    # Avoid reference to sed shim
+    args << "SED=/usr/bin/sed"
+
     # Ensure correct install names when linking against libgcc_s;
     # see discussion in https://github.com/Homebrew/legacy-homebrew/pull/34303
     inreplace "libgcc/config/t-slibgcc-darwin", "@shlib_slibdir@", "#{HOMEBREW_PREFIX}/lib/gcc/#{version_suffix}"
 
     mkdir "build" do
-      if !MacOS::CLT.installed?
-        # For Xcode-only systems, we need to tell the sysroot path
-        args << "--with-native-system-header-dir=/usr/include"
-        args << "--with-sysroot=#{MacOS.sdk_path}"
-      elsif MacOS.version >= :mojave
-        # System headers are no longer located in /usr/include
-        args << "--with-native-system-header-dir=/usr/include"
-        args << "--with-sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX#{MacOS.version}.sdk"
-      end
-
       system "../configure", *args
 
       # Use -headerpad_max_install_names in the build,
