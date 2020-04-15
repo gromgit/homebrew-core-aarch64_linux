@@ -8,7 +8,7 @@ class GccAT49 < Formula
   url "https://ftp.gnu.org/gnu/gcc/gcc-4.9.4/gcc-4.9.4.tar.bz2"
   mirror "https://ftpmirror.gnu.org/gcc/gcc-4.9.4/gcc-4.9.4.tar.bz2"
   sha256 "6c11d292cd01b294f9f84c9a59c230d80e9e4a47e5c6355f046bb36d4f358092"
-  revision 1
+  revision 2
 
   bottle do
     sha256 "0c4f2650325b060bf72beafd78dabab80973ee4ab330d4de16eb648b88225096" => :high_sierra
@@ -59,7 +59,7 @@ class GccAT49 < Formula
   end
 
   resource "cloog" do
-    url "https://www.bastoul.net/cloog/pages/download/count.php3?url=./cloog-0.18.4.tar.gz"
+    url "http://www.bastoul.net/cloog/pages/download/count.php3?url=./cloog-0.18.4.tar.gz"
     mirror "https://mirrorservice.org/sites/archive.ubuntu.com/ubuntu/pool/main/c/cloog/cloog_0.18.4.orig.tar.gz"
     sha256 "325adf3710ce2229b7eeb9e84d3b539556d093ae860027185e7af8a8b00a750e"
   end
@@ -118,18 +118,21 @@ class GccAT49 < Formula
       "--enable-multilib",
     ]
 
+    # System headers may not be in /usr/include
+    sdk = MacOS.sdk_path_if_needed
+    if sdk
+      args << "--with-native-system-header-dir=/usr/include"
+      args << "--with-sysroot=#{sdk}"
+    end
+
+    # Avoid reference to sed shim
+    args << "SED=/usr/bin/sed"
+
     # Ensure correct install names when linking against libgcc_s;
     # see discussion in https://github.com/Homebrew/homebrew/pull/34303
     inreplace "libgcc/config/t-slibgcc-darwin", "@shlib_slibdir@", "#{HOMEBREW_PREFIX}/lib/gcc/#{version_suffix}"
 
     mkdir "build" do
-      unless MacOS::CLT.installed?
-        # For Xcode-only systems, we need to tell the sysroot path.
-        # "native-system-headers" will be appended
-        args << "--with-native-system-header-dir=/usr/include"
-        args << "--with-sysroot=#{MacOS.sdk_path}"
-      end
-
       system "../configure", *args
       system "make", "bootstrap"
 
