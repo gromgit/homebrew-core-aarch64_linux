@@ -1,9 +1,9 @@
 class Gettext < Formula
   desc "GNU internationalization (i18n) and localization (l10n) library"
   homepage "https://www.gnu.org/software/gettext/"
-  url "https://ftp.gnu.org/gnu/gettext/gettext-0.20.1.tar.xz"
-  mirror "https://ftpmirror.gnu.org/gettext/gettext-0.20.1.tar.xz"
-  sha256 "53f02fbbec9e798b0faaf7c73272f83608e835c6288dd58be6c9bb54624a3800"
+  url "https://ftp.gnu.org/gnu/gettext/gettext-0.20.2.tar.xz"
+  mirror "https://ftpmirror.gnu.org/gettext/gettext-0.20.2.tar.xz"
+  sha256 "b22b818e644c37f6e3d1643a1943c32c3a9bff726d601e53047d2682019ceaba"
 
   bottle do
     sha256 "107d7f386fbeea6979f9376cdbbcf3f60943caaad61bdc754d3019ce625dffe6" => :catalina
