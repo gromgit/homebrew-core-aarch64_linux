@@ -7,9 +7,9 @@ class Perl < Formula
   head "https://github.com/perl/perl5.git", :branch => "blead"
 
   bottle do
-    sha256 "8a9d19e3d6f308b5976318d644ba11ec95b2c2be502cee4c8514060690ddb923" => :catalina
-    sha256 "632cbd8c42fd270ae4e1458e5dbb7927dbf69d5bd6ef36bb0dc981c0b2eb6759" => :mojave
-    sha256 "302bcddce16aa19d9009b63daad9d4e7d128c9df8f0973daa96e7de80a430266" => :high_sierra
+    sha256 "b25dbfa43f3fea68a3acdf7f59e18a0d694ac18070ef60da431c0900baf14ba6" => :catalina
+    sha256 "8a141e61aa0ece017735ac9860d5077921618ea4397a02b42203b6f45507b9ea" => :mojave
+    sha256 "73d96330045dedca4805aac3a69f164935230b77487e20a1e326152f167a4391" => :high_sierra
   end
 
   uses_from_macos "expat"
