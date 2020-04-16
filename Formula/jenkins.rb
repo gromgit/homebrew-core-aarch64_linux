@@ -1,8 +1,8 @@
 class Jenkins < Formula
   desc "Extendable open source continuous integration server"
   homepage "https://jenkins.io/"
-  url "http://mirrors.jenkins.io/war/2.230/jenkins.war"
-  sha256 "5d42e52d44d3c3c1add92e03520cddeecf899b666bdf0f395d63cac8794c91d6"
+  url "http://mirrors.jenkins.io/war/2.231/jenkins.war"
+  sha256 "573b2201a305ec02b751dc57d2a3dffa8441a88d0925a9857a83e9695951c392"
 
   head do
     url "https://github.com/jenkinsci/jenkins.git"
@@ -65,17 +65,12 @@ class Jenkins < Formula
     ENV.prepend "_JAVA_OPTIONS", "-Djava.io.tmpdir=#{testpath}"
 
     port = free_port
-    pid = fork do
+    fork do
       exec "#{bin}/jenkins --httpPort=#{port}"
     end
     sleep 60
 
-    begin
-      output = shell_output("curl localhost:#{port}/")
-      assert_match(/Welcome to Jenkins!|Unlock Jenkins|Authentication required/, output)
-    ensure
-      Process.kill("SIGINT", pid)
-      Process.wait(pid)
-    end
+    output = shell_output("curl localhost:#{port}/")
+    assert_match /Welcome to Jenkins!|Unlock Jenkins|Authentication required/, output
   end
 end
