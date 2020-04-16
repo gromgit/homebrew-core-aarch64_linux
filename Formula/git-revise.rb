@@ -10,9 +10,10 @@ class GitRevise < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2fe7e2bef591f6217c5f3a9a6b3e1f2ff6b3f466c45bf1fdff93eb374a45c4d0" => :catalina
-    sha256 "7bcefb4419a81a205bae28b633718a5bcd3fd0b8c21543159d19e3e2a2684db8" => :mojave
-    sha256 "e59554a284ee4aed9ce5d65b65c998f359af9de928064c6b857befe9551335ba" => :high_sierra
+    rebuild 1
+    sha256 "7e23c15bd16585e0437cecbef947b4deeae17469c184563ca60aa8236e529027" => :catalina
+    sha256 "1af281b6fd52de21f78e269cfc01f869b23093d87730d4eb0d4367eabfd06f24" => :mojave
+    sha256 "19bc350c3e047b8ca4108809341bf425a63ef7b04eaa2a6585fbf1f0eb570bc8" => :high_sierra
   end
 
   depends_on "python@3.8"
