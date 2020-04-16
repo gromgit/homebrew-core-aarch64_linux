@@ -6,10 +6,9 @@ class Libyaml < Formula
 
   bottle do
     cellar :any
-    sha256 "63cf355fb4b9fb7e33cb9d0b9b366252f680d887cb5d7e12de8468381aa5f000" => :catalina
-    sha256 "aa23980d03fe5bd2e60d59424061b7ac91c24f315de84ec33856ab3bf44de0af" => :mojave
-    sha256 "b763aa33bfdf6dca21b3bc16919217939ec28916266bb476ff8f44e777bde176" => :high_sierra
-    sha256 "35d27c9b0709f142d5d30a2d37566d85dafcd023f64016d042282eeaf94102b7" => :sierra
+    sha256 "ef608bb9aca1f1ea62a17b677792756fb4e7d00c58630343f3104f76857bd329" => :catalina
+    sha256 "78f6be95d9fb51354384daa626d9c6b04e018ecad09ba8c4e7f9d245808d38c8" => :mojave
+    sha256 "3b889799f48267e17944f31c73d20baf43a71c4d8901b57ba3401c7c845bf091" => :high_sierra
   end
 
   depends_on "autoconf" => :build
