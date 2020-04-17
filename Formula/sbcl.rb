@@ -5,9 +5,10 @@ class Sbcl < Formula
   sha256 "b5543f123214b2023ff5fc32dfd00b6cfeabd92c8edb33ad208842c4fd642f00"
 
   bottle do
-    sha256 "6a149417139c1362d10c67ae9c2e7d291ceabe34396c0f2c257f8f1835f58124" => :catalina
-    sha256 "19a197ed405cae8f2e960b53bf5de11a36a85dba390788f33d4d07e6b6801ad2" => :mojave
-    sha256 "b75c6c62b12ff6a8daaaee8115ddece7ff5a4c7827ac2688b598b246f1b2c043" => :high_sierra
+    cellar :any_skip_relocation
+    sha256 "f1ca303a88033610fd31abd29a952259865166a8c615a9923f275eb2ff40a71d" => :catalina
+    sha256 "ed15b1693ae5fd5a2f34d7e99ffb289848908d95d153d60b586af09be8aa09ad" => :mojave
+    sha256 "cec4aad1f57b20854804815674165afa6dc76be61b8bfa290c93863d04a6de51" => :high_sierra
   end
 
   uses_from_macos "zlib"
