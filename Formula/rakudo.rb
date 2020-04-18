@@ -6,9 +6,9 @@ class Rakudo < Formula
   revision 1
 
   bottle do
-    sha256 "b9b0c8759f308500fad6d15e7625dfba6735d66e5773b11f00304bac9924f2d3" => :catalina
-    sha256 "2e81f3feff930473ee6b0e36fb33092e72ab7a8e84c250074fbefafdb4db88aa" => :mojave
-    sha256 "89114bb50c2a4699d684fd2671ffd57fe208c8e375eac42e2b3ae055067c3c6f" => :high_sierra
+    sha256 "b8d45b1380bb068e06fc69021d81b4ea496b25d0dc8423a8047b9ac031b83bd3" => :catalina
+    sha256 "dcf334615beae3bd335bb73f9484f2f6982d00dd696cdaed9f5b7f92b8079de6" => :mojave
+    sha256 "bd4089e60c741ea4e65c15bc5ef9c7072fc9b82854bf4bc58ef2b792685f47c8" => :high_sierra
   end
 
   depends_on "nqp"
