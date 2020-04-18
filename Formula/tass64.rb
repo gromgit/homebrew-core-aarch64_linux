@@ -6,10 +6,9 @@ class Tass64 < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7c519f6bca815c5ef0726a59b7c6bef323a3ab9c62af8339e52bec41784d402f" => :catalina
-    sha256 "a50a7694850bb4da92edf5aa79e509935ae16951f1e362c31ffe22f2c15e9858" => :mojave
-    sha256 "db03b63e4f453c52de9b9b22c9596e8f3b45b71c1fcab8a039a71def6186906f" => :high_sierra
-    sha256 "ec0c831022ccc4446820bc73076dbb3c1f17c80cdcb3af8c21a62b801f27561b" => :sierra
+    sha256 "afefda676ae81f3340850d132e17fa408505d79da25fd50c42c3042ca3b4f7f2" => :catalina
+    sha256 "4a1a224e806b0f9827ffe1f4e5e8ce792e616e6b2e829c278fad5c8a5ee958af" => :mojave
+    sha256 "1aa51c3d25cf651f7d4725d89a022ab2510963684dc3b3ebe4845b488b3bb5d7" => :high_sierra
   end
 
   def install
