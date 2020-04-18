@@ -6,9 +6,9 @@ class Gjs < Formula
   revision 1
 
   bottle do
-    sha256 "44435c559ec592e03cb5b29039c5cae9fdf935f3eea10ab4e2c2a60d24e126e0" => :catalina
-    sha256 "35a77106b673b6b615a9d56b48078e11a8e33960326f5a37e9c5fc3ecfdb3659" => :mojave
-    sha256 "62125121215aac4e71de2369723668b8b40e5426522f753ab68235fbe1e9c527" => :high_sierra
+    sha256 "4dd700d7f6f0a22cff99d24efc0b7eb78a1f2c658e200bdf724fae07d845ce95" => :catalina
+    sha256 "578eb1b2a14c23f3e5729d48f346665a037381b3c4aafbb145dd606308b2172b" => :mojave
+    sha256 "fb11ac5bb60529f128dfe9320baa3f7686d2ed68d58daf89106e2e67b15a7f8c" => :high_sierra
   end
 
   depends_on "autoconf@2.13" => :build
