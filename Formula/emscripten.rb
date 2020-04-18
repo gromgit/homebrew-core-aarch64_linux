@@ -1,20 +1,19 @@
 class Emscripten < Formula
   desc "LLVM bytecode to JavaScript compiler"
   homepage "https://emscripten.org/"
-  revision 1
 
   stable do
-    url "https://github.com/emscripten-core/emscripten/archive/1.39.12.tar.gz"
-    sha256 "b7e7c6918055a2a36c75ceeef27b507198ffbf590677cf82b6b3759c4e0c474d"
+    url "https://github.com/emscripten-core/emscripten/archive/1.39.13.tar.gz"
+    sha256 "4126b04d58b466efd61907566303e4a13f029979dc6a50af7257ac74c911cf5a"
 
     resource "fastcomp" do
-      url "https://github.com/emscripten-core/emscripten-fastcomp/archive/1.39.12.tar.gz"
-      sha256 "af2bd0d606e081492c58289742fc29a41d0ea6daabfb80fbc01a804a447b3ef0"
+      url "https://github.com/emscripten-core/emscripten-fastcomp/archive/1.39.13.tar.gz"
+      sha256 "69361d377aa09ae79572de2be34161b344846abeab4f225f90d0c1cde4b9a3e8"
     end
 
     resource "fastcomp-clang" do
-      url "https://github.com/emscripten-core/emscripten-fastcomp-clang/archive/1.39.12.tar.gz"
-      sha256 "c52b2ad9827cb92afe5f7b5d185420aa971b0e91b172fd1966a4f95f10b8a236"
+      url "https://github.com/emscripten-core/emscripten-fastcomp-clang/archive/1.39.13.tar.gz"
+      sha256 "e0c66facd4f0a34741d73053d25449de306aacd8950fa21a34be0659dfe9c2c3"
     end
   end
 
