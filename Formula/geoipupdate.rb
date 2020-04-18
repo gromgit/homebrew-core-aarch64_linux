@@ -1,8 +1,8 @@
 class Geoipupdate < Formula
   desc "Automatic updates of GeoIP2 and GeoIP Legacy databases"
   homepage "https://github.com/maxmind/geoipupdate"
-  url "https://github.com/maxmind/geoipupdate/archive/v4.2.2.tar.gz"
-  sha256 "a9267a1fbbadc4686198002d3de0ef60a65e3b47c4e050bcdccf692aa1791092"
+  url "https://github.com/maxmind/geoipupdate/archive/v4.3.0.tar.gz"
+  sha256 "0c6df6a563203e87e80c9998975c287cd4e3a5eb6c83b90dd5a0597298b098f0"
   head "https://github.com/maxmind/geoipupdate.git"
 
   bottle do
