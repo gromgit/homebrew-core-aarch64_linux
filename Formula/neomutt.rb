@@ -6,9 +6,10 @@ class Neomutt < Formula
   head "https://github.com/neomutt/neomutt.git"
 
   bottle do
-    sha256 "af6a0dfa14c50a67f1b41d9221ac54086574e363fe01337d29708560ac038e43" => :catalina
-    sha256 "106dcf1f1357e7a11bcbcdb0a138c5f263720bdfa8f11a4528c56632c0fc5372" => :mojave
-    sha256 "2199a7a481944e7d5404320d84736318f1577a1d8a0ebefcf7630c6f3ba967f5" => :high_sierra
+    rebuild 1
+    sha256 "d1eeee164ecbaf38af7d38592417498f12e13bdf8c0e300f6c4dea0caa58fcdf" => :catalina
+    sha256 "d9d1e5fee63f622664cc5fc7f863d3beed9bbf9aa38f259d5448609025acf202" => :mojave
+    sha256 "16cd4e655bf901f83cfdf5c91119ffdabaac87e105c41412141b55c56b943dab" => :high_sierra
   end
 
   depends_on "docbook-xsl" => :build
