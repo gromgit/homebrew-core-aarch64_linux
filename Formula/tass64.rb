@@ -1,8 +1,8 @@
 class Tass64 < Formula
   desc "Multi pass optimizing macro assembler for the 65xx series of processors"
   homepage "https://tass64.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/tass64/source/64tass-1.54.1900-src.zip"
-  sha256 "5bf28dfcc7631a20a3ed7e308a50fe219d8a6417ad59d1d1162836ec3a1506ee"
+  url "https://downloads.sourceforge.net/project/tass64/source/64tass-1.55.2200-src.zip"
+  sha256 "067d0a54cb3c473b26aa5d69ea3f1f956be7cccc9044f1117fc20cb84aa63880"
 
   bottle do
     cellar :any_skip_relocation
