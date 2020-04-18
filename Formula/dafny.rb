@@ -3,7 +3,7 @@ class Dafny < Formula
   homepage "https://www.microsoft.com/en-us/research/project/dafny-a-language-and-program-verifier-for-functional-correctness"
   url "https://github.com/dafny-lang/dafny/archive/v2.3.0.tar.gz"
   sha256 "ea7ae310282c922772a46a9a85e2b4213043283038b74d012047b5294687d168"
-  revision 1
+  revision 2
 
   bottle do
     cellar :any_skip_relocation
@@ -31,7 +31,11 @@ class Dafny < Formula
     system "msbuild", "Source/Dafny.sln"
 
     libexec.install Dir["Binaries/*"]
-    (libexec/"z3/bin").install_symlink Formula["z3"].opt_bin/"z3"
+
+    # We don't want to resolve opt_bin here.
+    dst_z3_bin = libexec/"z3/bin"
+    dst_z3_bin.mkpath
+    ln_sf (Formula["z3"].opt_bin/"z3").relative_path_from(dst_z3_bin), dst_z3_bin/"z3"
 
     (bin/"dafny").write <<~EOS
       #!/bin/bash
