@@ -5,9 +5,10 @@ class Proj < Formula
   sha256 "ee0e14c1bd2f9429b1a28999240304c0342ed739ebaea3d4ff44c585b1097be8"
 
   bottle do
-    sha256 "8016d7ac0def06a09f219ad4b567cee8ee96c5f3f5dd9b7ab2a10970aaa9fc85" => :catalina
-    sha256 "9510aa998aeab55db840127a70743322063ac9e95c0ff615410e6c4a048e1b64" => :mojave
-    sha256 "168b8ebbee214dcb84e0bf8f1db600f000d6f95c43daee76b59dc96d65191ad4" => :high_sierra
+    rebuild 1
+    sha256 "3d45e9a534f97ed67183252e41c8d5c713e2f9f9d29df26bd1f31043d4b32731" => :catalina
+    sha256 "de1ce33e57ad23e36c5ad5bc3c902630870b9a63b1b21d819d8853881736bf7f" => :mojave
+    sha256 "719b1670cf4560071cfb64b811ef494b278655f33e00b221eeda6f209d2ba6e7" => :high_sierra
   end
 
   head do
