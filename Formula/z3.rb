@@ -3,6 +3,7 @@ class Z3 < Formula
   homepage "https://github.com/Z3Prover/z3"
   url "https://github.com/Z3Prover/z3/archive/z3-4.8.7.tar.gz"
   sha256 "8c1c49a1eccf5d8b952dadadba3552b0eac67482b8a29eaad62aa7343a0732c3"
+  revision 1
   head "https://github.com/Z3Prover/z3.git"
 
   bottle do
@@ -12,15 +13,18 @@ class Z3 < Formula
     sha256 "4cfd76bc84c1b51b2d1450560eb67f1b467c1ebba516c84e617cc099ff579ee7" => :high_sierra
   end
 
-  depends_on "python"
+  # Has Python bindings but are supplementary to the main library
+  # which does not need Python.
+  depends_on "python@3.8" => :build
 
   def install
-    xy = Language::Python.major_minor_version "python3"
-    system "python3", "scripts/mk_make.py",
-                      "--prefix=#{prefix}",
-                      "--python",
-                      "--pypkgdir=#{lib}/python#{xy}/site-packages",
-                      "--staticlib"
+    python3 = Formula["python@3.8"].opt_bin/"python3"
+    xy = Language::Python.major_minor_version python3
+    system python3, "scripts/mk_make.py",
+                     "--prefix=#{prefix}",
+                     "--python",
+                     "--pypkgdir=#{lib}/python#{xy}/site-packages",
+                     "--staticlib"
 
     cd "build" do
       system "make"
