@@ -34,7 +34,6 @@ class Freeciv < Formula
   depends_on "readline"
   depends_on "sdl2"
   depends_on "sdl2_mixer"
-  depends_on "readline"
 
   uses_from_macos "bzip2"
   uses_from_macos "curl"
