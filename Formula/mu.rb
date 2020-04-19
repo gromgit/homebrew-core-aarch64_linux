@@ -40,14 +40,6 @@ class Mu < Formula
     system "make", "install"
   end
 
-  def caveats
-    <<~EOS
-      Existing mu users are recommended to run the following after upgrading:
-
-        mu index --rebuild
-    EOS
-  end
-
   # Regression test for:
   # https://github.com/djcb/mu/issues/397
   # https://github.com/djcb/mu/issues/380
@@ -74,7 +66,7 @@ class Mu < Formula
       This used to happen outdoors. It was more fun then.
     EOS
 
-    system "#{bin}/mu", "init", "--muhome=#{testpath}", "--maildir=#{testpath}" 
+    system "#{bin}/mu", "init", "--muhome=#{testpath}", "--maildir=#{testpath}"
     system "#{bin}/mu", "index", "--muhome=#{testpath}"
 
     mu_find = "#{bin}/mu find --muhome=#{testpath} "
