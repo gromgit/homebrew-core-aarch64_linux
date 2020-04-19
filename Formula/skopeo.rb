@@ -56,8 +56,7 @@ class Skopeo < Formula
 
     # https://github.com/Homebrew/homebrew-core/pull/47766
     # https://github.com/Homebrew/homebrew-core/pull/45834
-    cmd = "#{bin}/skopeo copy docker://alpine test 2>&1"
-    output = shell_output(cmd, result = 1)
-    assert_match /Invalid destination name test: Invalid image name .+, expected colon-separated transport:reference/, output
+    assert_match /Invalid destination name test: Invalid image name .+, expected colon-separated transport:reference/,
+                 shell_output("#{bin}/skopeo copy docker://alpine test 2>&1", 1)
   end
 end
