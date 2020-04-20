@@ -6,6 +6,13 @@ class Tanka < Formula
     :revsion => "178f4bef263581a8cdf298a11365d412e11b6351"
   head "https://github.com/grafana/tanka.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "d3005e8323875d7daaa31a8c035198bc7c50c7102d82a12058f08d17cdf459de" => :catalina
+    sha256 "856493555f7da9fa5cb04a560a7ec99464b295bc790cb731efb35fe8bb05b988" => :mojave
+    sha256 "2ca310b05a3bca4177f7195db45acf3b685c1a5ef28b9668ff971fb4637236ea" => :high_sierra
+  end
+
   depends_on "go" => :build
   depends_on "kubernetes-cli"
 
