@@ -18,7 +18,7 @@ class CurlOpenssl < Formula
     depends_on "libtool" => :build
   end
 
-  keg_only :provided_by_macos
+  keg_only :shadowed_by_macos, "macOS provides curl"
 
   depends_on "pkg-config" => :build
   depends_on "brotli"
