@@ -6,12 +6,9 @@ class Wumpus < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f99f53b1d8ec9474947be066a7338daf6e8a20409137b7114358dcb3dfe388f0" => :catalina
-    sha256 "e8e59a1fc042fdcaf087f8330b3c7083707892d8bed1f9317f5ab20777461576" => :mojave
-    sha256 "5a1435e4545eea1ab436a0fba4844ac2236ea6e49e045f3b59d19adcff5de97c" => :high_sierra
-    sha256 "fa693e01a17d31e9e5a5b51f27ea18b69e30f5613615c95ddb89c7dbc4bbe75d" => :sierra
-    sha256 "3b6751d8a871e44c033e4a6d83009bb8b499952385d8c1743be3d26bfe37b312" => :el_capitan
-    sha256 "d292048f1869507766d60e6931bffbf402f99d8fe36711ed6d9dbb060407a4a6" => :yosemite
+    sha256 "49bc794562f3b9a0ad5799b5fcd2d63a5f866b9b6dc7a4b0d80988c388ee3726" => :catalina
+    sha256 "e6881d8d217cebdd71e430c4ec8701d369d1ca03bb8724d30977b467d7422d83" => :mojave
+    sha256 "006271b20835150dcf3006041f7053adf26a3ec58f9549029d14c844a53570c4" => :high_sierra
   end
 
   def install
