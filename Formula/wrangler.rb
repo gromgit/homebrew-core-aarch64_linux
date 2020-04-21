@@ -23,10 +23,9 @@ class Wrangler < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "129a7cacfe094491f22d885546ac36dcdd60c601f391b290970fadbc5777ca22" => :catalina
-    sha256 "6ca8b450fc9c98d43c9e6494bd725d2785ed70f010193237bb34c13f54be7303" => :mojave
-    sha256 "7708561c89c92c61b67907ca43fa351e9a39da572c43e1f9d15d4dc0cd4855da" => :high_sierra
+    sha256 "f666670522f930ed3b9412f2301bfaf6514db08c3ce48d1aa86419611dcd6783" => :catalina
+    sha256 "f285e272fd51ca316f073bd5c0bbcaf285b5a0cbd453bc1f945efd67eca7c034" => :mojave
+    sha256 "35f891e2ab69591e3d4bd907197b21fae3b23f9b727278e1c2cc577d10277660" => :high_sierra
   end
 
   depends_on "erlang"
