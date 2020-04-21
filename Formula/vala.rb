@@ -5,9 +5,9 @@ class Vala < Formula
   sha256 "2f28765d1cb1de29de56e6160d8ce0718c49f29294a527abc71556fd4a1d0d73"
 
   bottle do
-    sha256 "294007210ac6f95a2db9764c9d1cb1f488812656232e8ff8829e43584a1dbcda" => :catalina
-    sha256 "1af546d810b179b970c3f83ec51b751f788157fa44a92ee989915c6375c274b8" => :mojave
-    sha256 "6367741b909f4ea176fbd0292aef03ea57ce3543282be9aa074abeb10cb03db4" => :high_sierra
+    sha256 "d2a375f2d8775abd1b73f29453f0090f6116f3d544eabd1f9a8ee0fd837f26cc" => :catalina
+    sha256 "7ec4bcfe2da9414f672421f323f563555412f63b4635e4b22affedcfe7b776ff" => :mojave
+    sha256 "e22376de38bc37cff7fda64df575cfb29743ea1e9bc0bb8a077a2edb87f0ebb4" => :high_sierra
   end
 
   depends_on "gettext"
