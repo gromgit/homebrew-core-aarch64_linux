@@ -5,6 +5,9 @@ on: repository_dispatch
 jobs:
   upload:
     runs-on: ubuntu-latest
+    container:
+      image: homebrew/brew
+      options: -v /usr/bin/unzip:/usr/bin/unzip
     env:
       HOMEBREW_DEVELOPER: 1
       HOMEBREW_FORCE_HOMEBREW_ON_LINUX: 1
@@ -43,9 +46,6 @@ jobs:
               issue_number: pr,
               body: '@' + actor + ' has [triggered a merge](' + url + ').'
             })
-      - name: Set up PATH
-        run: |
-          echo "::add-path::/home/linuxbrew/.linuxbrew/bin"
       - name: Update Homebrew
         run: |
           brew update-reset $(brew --repository)
