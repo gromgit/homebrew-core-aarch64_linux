@@ -6,6 +6,13 @@ class Jc < Formula
   url "https://files.pythonhosted.org/packages/17/7f/5820ca206b8ce79142c5385ff5a4262757a0f568d96beee45945dfbd83db/jc-1.10.6.tar.gz"
   sha256 "b4995a9c2b1e5ba15152d5253089535440ca1c715a0e53267fb61997278f5422"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "71f79a385201786f36f86584ae5a91ec8126ceddfd904ce896f843df8ef9d35d" => :catalina
+    sha256 "f56ea8eb22716909b06cc79325683322cbf891b30b62d198713fe27360ff191b" => :mojave
+    sha256 "09c29bc4985def19211eb214864ddcd6feaccc7687a5ed2985613b01064d3ab6" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   resource "ifconfig-parser" do
