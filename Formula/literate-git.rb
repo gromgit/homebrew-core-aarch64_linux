@@ -9,9 +9,9 @@ class LiterateGit < Formula
 
   bottle do
     cellar :any
-    sha256 "629418d9774247493fb7ab2b6f9d94bfcf4a069de8b8db94dcdde8e6c8bd17e3" => :catalina
-    sha256 "82b42b2678dd4d8df1a9f8f65b747cfe30d48d78d8386b895c84aaa7e5ef9e67" => :mojave
-    sha256 "8752cc843eda2f524b781d972d6cdab1136ac862c5f246dd94fea447c40598e9" => :high_sierra
+    sha256 "b704c927f102c0ce4fac2a02d6e0e3a93569179af257a0922b7b14b326d0bbe1" => :catalina
+    sha256 "6f82567697db68d8ff88fd5c493717cbba18869904252319daa4cfe26cc80b42" => :mojave
+    sha256 "237597cd7d2517d3b34144ba0eacd21a9d50d32e6bbe0ce496eaf8d1b9c9dab7" => :high_sierra
   end
 
   depends_on "libgit2"
