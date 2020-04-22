@@ -6,6 +6,13 @@ class Gdbgui < Formula
   url "https://github.com/cs01/gdbgui/archive/0.13.2.0.tar.gz"
   sha256 "325e4c6dd417d59b95ceb123173eee69d754f6ff3f97110c0cb960670460f858"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "6b4dc81ae5aa3bb3d8758d38b3ab9cd89d14f85c8ada1229b8381dfef87f2777" => :catalina
+    sha256 "d4b788d85f71166160b4e302a751dc78fba34c613b6440a55415b60def0b1fc4" => :mojave
+    sha256 "c8b67848de98e9d29eda6cef4e493afdc40afa4b4301c34b1545add045677c68" => :high_sierra
+  end
+
   depends_on "gdb"
   depends_on "python@3.8"
 
