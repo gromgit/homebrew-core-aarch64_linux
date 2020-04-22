@@ -6,9 +6,9 @@ class Vttest < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e9d893afeefe1997a5419152ce4182bf68f70cdfbc55c3dad5d9b473a06ba906" => :catalina
-    sha256 "237cb61899805abac4a990f714150afa74f4f5a5e7c0d28fd5f01442c275b699" => :mojave
-    sha256 "2c5cc23ef56bcdd29f6168d0759065e4a1eb9738cd263d1bc83500e08c703efa" => :high_sierra
+    sha256 "3203719ed3132e7f57b3e5bab9341640a4626697a8b2c2fb01cccfad004b688d" => :catalina
+    sha256 "ed6fc309514156d4253b0ad03f809c326095f413033a18c38a49c46281396075" => :mojave
+    sha256 "2bfa2183868d51e54212a0d8b71fca79e583b8850547407056e853e3f52b293b" => :high_sierra
   end
 
   def install
