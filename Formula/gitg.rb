@@ -3,7 +3,7 @@ class Gitg < Formula
   homepage "https://wiki.gnome.org/Apps/Gitg"
   url "https://download.gnome.org/sources/gitg/3.32/gitg-3.32.1.tar.xz"
   sha256 "24a4aabf8a42aa2e783e1fb5996ebb3c2a82a01b9689269f1329517ef124ef5a"
-  revision 2
+  revision 3
 
   bottle do
     sha256 "03566477e752917295c51f2b109455c15bc9c090e13ff98cbefd9f2d6901e6b8" => :catalina
@@ -33,8 +33,8 @@ class Gitg < Formula
   # Fix libgitg compile on macOS
   # Remove for next version
   patch do
-    url "https://gitlab.gnome.org/GNOME/gitg/-/merge_requests/142.patch"
-    sha256 "220314200274e675031b7a5053637f91ff850f0e5a22c1bc442ba12a91b5d6f7"
+    url "https://gitlab.gnome.org/GNOME/gitg/-/merge_requests/142.diff"
+    sha256 "b9b842d1be3e435ce14a57d30702138a0e08ba0f9ef95249876fc05aeac2417c"
   end
 
   def install
