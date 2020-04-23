@@ -7,9 +7,9 @@ class Tectonic < Formula
 
   bottle do
     cellar :any
-    sha256 "724623104de46afb7438c933ef55f5afd749672757112dba0783d0e25f725b90" => :catalina
-    sha256 "463857e34de7b19f3b866176e4d93be42cc7c80dde7226023ad226d937816b4e" => :mojave
-    sha256 "a7487f280ffdd80bdca699800db3a9771d51233629d2ff9d11b6c1b53929f0f0" => :high_sierra
+    sha256 "422c0c1dfdc7c16ab45affc902ee755faa0d494276245d636e1695ac2d131dcb" => :catalina
+    sha256 "33615609d3c28ed243573a67f61fba0c425174662e629e48f1913232afbb0735" => :mojave
+    sha256 "4cd8a7098985b7cfe8ee97788ccb36d6e5dd023be2bb29e7aa6f35c5ef017c14" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
