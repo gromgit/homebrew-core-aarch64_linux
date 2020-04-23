@@ -7,9 +7,9 @@ class Opam < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "54e18e947ab5a8d2af76cefeb3707be24ad54d4d475851b372aac766d5350d14" => :catalina
-    sha256 "6c2a6796eead34e1116bd37e0ade8a1ad34ceeef98e396cfc36f26d591a21de6" => :mojave
-    sha256 "941366068ed9c5743d09635128defeecfcf52b3663a1fbff04d2003ded76ae89" => :high_sierra
+    sha256 "f159a779ee6521c95c06b382fbea72bd1cedf6463d9be8bc85f5cfac4ef16b0d" => :catalina
+    sha256 "fec93e54a1a635c7d2b5ca4acfbd051665a606f6760b5336b846b23ca8663e23" => :mojave
+    sha256 "5fef1c5aca812af337373a34b9a97e2f0bd7bf3f22a36c3d184af73a4c2ea7f7" => :high_sierra
   end
 
   depends_on "ocaml" => [:build, :test]
