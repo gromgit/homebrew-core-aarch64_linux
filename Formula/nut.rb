@@ -16,9 +16,9 @@ class Nut < Formula
   end
 
   bottle do
-    sha256 "80c2ed8d7a3b3b56cf7d27ac2e3ce4c76d181ed234479dfb45ca8c997a6fbe63" => :catalina
-    sha256 "4bad8169c9c0750fe3e537d9ad6efa961e7cd0882e133933d0bfcf906be46aeb" => :mojave
-    sha256 "8c82af838412a2be677821aab3ec3f72f8e68bb997e7bcd42b828b5cf9b0dcc5" => :high_sierra
+    sha256 "1586ba300fc949859b2bebb55af99bc634362db7633e91a0db30aad28bef9c09" => :catalina
+    sha256 "dde3a1e3dc4e86f77d01071c0d669ea600569b41f8e9f11bb16a6b19e39286ca" => :mojave
+    sha256 "6fda08463f3e551d255b80e6e467b1f2938c973ab016f81b1585dd73373da562" => :high_sierra
   end
 
   head do
