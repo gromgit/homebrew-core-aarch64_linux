@@ -6,6 +6,13 @@ class GitBug < Formula
     :revision => "2d64b85db71a17ff3277bbbf7ac9d8e81f8e416c"
   head "https://github.com/MichaelMure/git-bug.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "6b22d352d4f7ac655ab3544593cbdbcb1d1ad6e2f87dd0f7066e31a9319aa97b" => :catalina
+    sha256 "c5a308416b902fbd59bd1df0bd17074f5bc9d8de594a07573b8d074889cb45fd" => :mojave
+    sha256 "0617df6821ac81888aa4ba8b38102031b17fb64b6b25b20554a454e3e4a1fd60" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
