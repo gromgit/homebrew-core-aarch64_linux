@@ -5,9 +5,9 @@ class Librsvg < Formula
   sha256 "28b63af85ced557383d3d3ece6e1f6938720dee1ecfa40d926bf1de4747c956e"
 
   bottle do
-    sha256 "a2aab84063a180a0535eedddcb519c8396025f58a28d8496b3e39285e1cb6ae5" => :catalina
-    sha256 "c721c2ddb49726e741282aaeef8814d22b9aae629a7ec32f3dd305031d4976a1" => :mojave
-    sha256 "2d7ecc58a2192a6081578d7e761b09454ee79e835db67b43a42806575572fbf7" => :high_sierra
+    sha256 "c8e5a0f2ad09479b8cee52d47c9fa040702be19971e0cdab0078193944142b39" => :catalina
+    sha256 "fd169a74136443adc6e5f66869abea18d2ae881a009548a60a38ae9892dee2ac" => :mojave
+    sha256 "9403a885723c59eb499b0cad2be97c2745b499b83ef14b674c1c0f646a9e552c" => :high_sierra
   end
 
   depends_on "gobject-introspection" => :build
