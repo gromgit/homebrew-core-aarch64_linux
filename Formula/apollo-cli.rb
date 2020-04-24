@@ -8,9 +8,9 @@ class ApolloCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "3308b4f23353a8e02dfd4b71348f32c7abe0a96104f56d524956fafb33b17a5b" => :catalina
-    sha256 "0c175579350f6b0a9846062d75e7e2c4d4e24485f45d061156281002afc46877" => :mojave
-    sha256 "5bd36a99e0dc384ba786435d65a4d694c13651d9183e5922ae309952aaf4d598" => :high_sierra
+    sha256 "4999014fd1435c9fd8948d85ac6020bc057000a9f5a6fa7f079f12630749b375" => :catalina
+    sha256 "546631e5104a6c2cd91d2156e89d06c3dc088cbbdd291d9b7eefc1ab62fe2388" => :mojave
+    sha256 "1bbbd213371d29bbb05826ccff6da14effcc659ede0c1435a12cde8d02af0607" => :high_sierra
   end
 
   depends_on "node"
