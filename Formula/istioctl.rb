@@ -7,9 +7,9 @@ class Istioctl < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "614b3333aa28d767fdc3b50226c0a7f059b2eb4b9b7ea832008f8df54f34eab9" => :catalina
-    sha256 "a812d92615ab47160842ec7a688eb108210fa2b956ea5407354262998cc72530" => :mojave
-    sha256 "a812d92615ab47160842ec7a688eb108210fa2b956ea5407354262998cc72530" => :high_sierra
+    sha256 "b0f4c6f260007e5c8cb6f7d8842abc429891c5c75ee92cc8f254a965db9480fa" => :catalina
+    sha256 "b0f4c6f260007e5c8cb6f7d8842abc429891c5c75ee92cc8f254a965db9480fa" => :mojave
+    sha256 "b0f4c6f260007e5c8cb6f7d8842abc429891c5c75ee92cc8f254a965db9480fa" => :high_sierra
   end
 
   depends_on "go" => :build
