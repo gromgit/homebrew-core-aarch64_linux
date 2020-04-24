@@ -7,10 +7,9 @@ class Glm < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "94bc3a8dc77a81377802bf9cb21ae9d394847a85f172eb4675f09d34131f544c" => :catalina
-    sha256 "12ad0bff26df5739227bb1f2865c064b46a1e21faa07e77f19c2be4e2abd8182" => :mojave
-    sha256 "534081b8d1624708d52a12d75a31b47372c1711c56057b658c0dbf5fa67306c0" => :high_sierra
-    sha256 "b7185a79a24187a43750f740ac07686ef144182eb8006ca0deadbbf4dc037584" => :sierra
+    sha256 "9b661be1f704c2e946dbd4d4f96d58ae82427824ef88d7dd9f0f0cfc3fae2233" => :catalina
+    sha256 "7210910c6f106de4c22874f3977b1457cea3db6bb03269ea6831ffae861bb80e" => :mojave
+    sha256 "ea41bb7f8f195c22d6f7834c57684412d752e2c72ff795b9056dd90aaebf9d84" => :high_sierra
   end
 
   depends_on "cmake" => :build
