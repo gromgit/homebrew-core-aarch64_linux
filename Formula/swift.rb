@@ -5,10 +5,8 @@ class Swift < Formula
   sha256 "92b0d1225e61a521ea10fe25f2cc35a2ad50ac55d1690d710f675d4db0c13b35"
 
   bottle do
-    cellar :any
-    rebuild 1
-    sha256 "eb739a681ff2f5b585422d3b9408dd817724eb7bc0484a31f38db6f7dc387867" => :mojave
-    sha256 "1a82548cd25a4b6a525b7d8a194393e9853843e952c00c2650792141c17a528d" => :high_sierra
+    sha256 "59f15b07a9f1c3cf4d120d41a264b0ccbeadf720fe9ad6a758c7faa09d6eccfd" => :catalina
+    sha256 "97b6b476fc7a0a538719ecd84c50d310dfb66a5d4c6fa67d79cfaddaf4504d6c" => :mojave
   end
 
   keg_only :provided_by_macos
