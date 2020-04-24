@@ -6,9 +6,9 @@ class Shadowenv < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "6eb21077d08aa62b92b162a40c94f2b68c50deb3c8f0a38b68ce225f1d7af91c" => :catalina
-    sha256 "3e93b9b98ba2dcb84dcf19115c5650bd49241260bec2751e6e2843417024025d" => :mojave
-    sha256 "aff6c727929ab3a9de176a341f55997777318d65e0ef2c547baa981e32455e8d" => :high_sierra
+    sha256 "52b7c4f1fc51de46be4b4aeaea906e0731d2c38588d93b710da4b79db4207253" => :catalina
+    sha256 "a04059c1cad563201760d0972dd22f18906087455120457d766fdab6a9c0310c" => :mojave
+    sha256 "95d6a37741a4c6e75893ae9f2cadad33f29b27ced06f2ae2eabb0572bf00c189" => :high_sierra
   end
 
   depends_on "rust" => :build
