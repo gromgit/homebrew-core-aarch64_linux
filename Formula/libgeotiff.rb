@@ -6,9 +6,9 @@ class Libgeotiff < Formula
 
   bottle do
     cellar :any
-    sha256 "7a51facc7a04ae6c9e032d5b989612044154a84779a17012e211dfaca2ece6e9" => :catalina
-    sha256 "2e19a2384be65ec690bbabefcf68fc9d33b48d48156de269f13a7ffce10518eb" => :mojave
-    sha256 "2eea9fd6e2b9ac89549ba249628824cffad7119aefebd06dd866c042d2002d0c" => :high_sierra
+    sha256 "181da2f2a3860b23ee95eded5a9f5600f34e2ee016e76a7fbede959e565d0ca8" => :catalina
+    sha256 "7311abe41270eb90f91b69e84eab0528be0b76a11cc43ce0e2aca1529da585fe" => :mojave
+    sha256 "b52ce34a76c3510314e840753610d5d423cd0689d5b93d3d41e7c119ba67d09b" => :high_sierra
   end
 
   head do
