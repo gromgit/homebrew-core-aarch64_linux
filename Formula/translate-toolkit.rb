@@ -9,9 +9,9 @@ class TranslateToolkit < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "208b9953ae03816389f657b76987fce9f531a5db82a8e06fbd35822229eea63b" => :catalina
-    sha256 "9c42f38793ab7f4ede212d258b94bcc776482143f283b38f798723e3901dad8a" => :mojave
-    sha256 "5ee42d0176b78e8c2b2093376f9a5043271838b2863724fcdb84897a9d763a5a" => :high_sierra
+    sha256 "07657ae696786eea46051f9361f577506f43351f14bc4843ec765e7a26d0d37f" => :catalina
+    sha256 "b6ba23fed06c92d6748b9d1a79c6e5a09b4bf0af6322a77e01fee9bb403a8d2e" => :mojave
+    sha256 "9b7a35000508d56f50474fc046d083df55f51f88726b6c5d449bff29e9bf1d2a" => :high_sierra
   end
 
   depends_on "python@3.8"
