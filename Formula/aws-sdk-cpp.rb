@@ -7,9 +7,9 @@ class AwsSdkCpp < Formula
   head "https://github.com/aws/aws-sdk-cpp.git"
 
   bottle do
-    sha256 "4ea6016ddc08bf0da986e2acf65323f3397208fc67889277c4d35e8a9c1a5b06" => :catalina
-    sha256 "f6e4749ac640e762093209a0774039ff7343d000c3392fefb73283e9378a0905" => :mojave
-    sha256 "d1834e692c5f781af713106cdf928aef76d685d30eb832a6e3e1c5310889dbd1" => :high_sierra
+    sha256 "a8b3aea666ac8eadd8e7382cf769c97c92fce4ea4417a60fb3ddfa31d60609a0" => :catalina
+    sha256 "c8d04ab9bda0da5a60a38fefae1cf7184a4d413b598208674a3e6eea77497311" => :mojave
+    sha256 "49a1ad8cd5422fcaec67ba28453a9463b8bf66798bb921e33c0663b773c35c12" => :high_sierra
   end
 
   depends_on "cmake" => :build
