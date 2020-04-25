@@ -8,9 +8,9 @@ class Crc < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "bbc8ef9d3568b5a7699b80e840e1f452fed74c8464f58c3b79d3d59e12aaf043" => :catalina
-    sha256 "bf3198a7432c86a22c2bc12620ede993d4c3dc2e15a1ee8e435d1662d8d5c7c9" => :mojave
-    sha256 "fa9c98481bd8cda4a6ee990fc62388304c9ae34ac60c8d3d4ea02ba8b5c7dae5" => :high_sierra
+    sha256 "5d5ea105fcf3eb8eaa51b7406315e75cabae5818a8b1e6ff10c5ad60d3a19e3a" => :catalina
+    sha256 "debc9c3add86f3310e791cbf8845e865aa6873ae8c34db4bd3a07363ba6e2655" => :mojave
+    sha256 "6197d7e12e8bcbed963a73f921feb3ff685be93bde7ce82e3a3ee9b0ac590ce4" => :high_sierra
   end
 
   depends_on "go" => :build
