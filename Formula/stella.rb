@@ -1,8 +1,8 @@
 class Stella < Formula
   desc "Atari 2600 VCS emulator"
   homepage "https://stella-emu.github.io/"
-  url "https://github.com/stella-emu/stella/releases/download/6.1.1/stella-6.1.1-src.tar.xz"
-  sha256 "ddf53bb782c63c97c4e5d0fefa9eb256c62e0d5a328c78cc18f06eea45ba7369"
+  url "https://github.com/stella-emu/stella/releases/download/6.1.2/stella-6.1.2-src.tar.xz"
+  sha256 "8086e57c231625f0b840ca361f493969247d20476cbb53609d778d37bda17c34"
   head "https://github.com/stella-emu/stella.git"
 
   bottle do
