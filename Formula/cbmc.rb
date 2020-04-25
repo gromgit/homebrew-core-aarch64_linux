@@ -7,6 +7,13 @@ class Cbmc < Formula
       :revision => "d51243d346350127ecb269f1e546cbd850ef6955"
   sha256 "1b9d003e1baffc714b36a38087e4ed42b47c04da5ebdb02bbce03262ea3acafd"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "83da818079f4398b8e00d9c0daabf3673e2c1c26a7ecdabd2093fe919605c3df" => :catalina
+    sha256 "5a19ff3395da6fcc3b5d21afd817d6938c3c4d0b3be864bedebc5ca4c843eafc" => :mojave
+    sha256 "fbd3cf7a7bacb069cf93bc8e7c5185a9b96a0bc468ad3c9b65c2f2e4dec8d741" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "maven" => :build
   depends_on "openjdk" => :build
