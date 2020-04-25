@@ -7,9 +7,9 @@ class Quill < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "de0ab9b92b048b414b79fdbba6bcb8e145e3594b523ac057cb016123ed11f6c5" => :catalina
-    sha256 "6fa26085c6f26ecb18b03f7d37cfeab346ad721d567d27ce08a6d5a8a95d31b1" => :mojave
-    sha256 "e94c9f715720651aae036503f40954c05b48470f21820de6d9459858da361e73" => :high_sierra
+    sha256 "bd4ea149d9473fb5bc744ca097cd4770df914f9d979f97862d3da3f8348caa4a" => :catalina
+    sha256 "578baed8aef3ef312b549fd355f5bf1360b838feb0015cf17469faceda9333d7" => :mojave
+    sha256 "84424b32d74b31deaa9542232b154bf7c2368b045125532c3a14e0eb07999e39" => :high_sierra
   end
 
   depends_on "cmake" => :build
