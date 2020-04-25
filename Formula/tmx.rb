@@ -14,6 +14,8 @@ class Tmx < Formula
 
   depends_on "cmake" => :build
 
+  uses_from_macos "libxml2"
+
   def install
     system "cmake", ".", "-DBUILD_SHARED_LIBS=on", *std_cmake_args
     system "make", "install"
