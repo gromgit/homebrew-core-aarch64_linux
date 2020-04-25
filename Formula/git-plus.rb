@@ -9,9 +9,9 @@ class GitPlus < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f4ef55a7a9983b50f263cadc7f11a18225ed7f1736bbeb1077aca7f4f3506362" => :catalina
-    sha256 "c265fd83d70e9b889e14b43cc20cff89b996ce0f81b2a00e235025982914d509" => :mojave
-    sha256 "b5d09be155b8d7bfa239d5030f4e0adfadf91c08d32e3f9900d89d2d0a813870" => :high_sierra
+    sha256 "0875303fc69f8abb59858ac8dacfa7ed077e6b61f3ebd65e4193734aeb0c3e95" => :catalina
+    sha256 "36281a54494043f1ef9df79ce5297b5fd25cd4bc20d0d58b646429e31c1424ce" => :mojave
+    sha256 "6dfe6ac0b463e2bad51c28634dcca9ea9756bfc2037f1ef36339e57bce9a6a53" => :high_sierra
   end
 
   depends_on "python@3.8"
