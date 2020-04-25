@@ -7,9 +7,9 @@ class Yaegi < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e7635e1ab1126153203e48e2f910f29f2d31ad2535ad94bac7f8097fad622b98" => :catalina
-    sha256 "e83d5caa79669587a310a9042ec16cf6e2e2f42a7135aef3307b5906169cba93" => :mojave
-    sha256 "70fae48a069fbfc412b988ca2e80f101ed8eec3c3c49eaf1c6d750c4d80f141f" => :high_sierra
+    sha256 "5f9ae10bbe25c5508401d45c77d6362dcfacbdf499382ee4eb04e7533428a348" => :catalina
+    sha256 "30ed411f9879c90e15a16ec5512f54f6ce67c190f9ce51ee0f00435453ec40bf" => :mojave
+    sha256 "6ee17d3481a3002a329706b5412b8af0f4b2337fa5360a2b51e09af655c014fb" => :high_sierra
   end
 
   depends_on "go" => :build
