@@ -23,7 +23,8 @@ jobs:
               username: context.actor
             })
             const email = (user.data.email || user.data.id + "+" + user.data.login + "@users.noreply.github.com")
-            console.log("Dispatched by " + user.data.name + " <" + email + ">")
+            const name = (user.data.name || user.data.login)
+            console.log("Dispatched by " + name + " <" + email + ">")
             core.setOutput("name", user.data.name)
             core.setOutput("email", email)
       - name: Post comment once started
