@@ -102,3 +102,9 @@ jobs:
               issue_number: pr,
               body: '@' + actor + ' bottle publish [failed](' + url + ').'
             })
+
+            github.issues.removeLabel({
+              ...context.repo,
+              issue_number: pr,
+              name: "ready to merge"
+            }
