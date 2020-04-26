@@ -5,9 +5,9 @@ class Vte3 < Formula
   sha256 "35a0280e3f12feeb3096da05699191373c47a4a20c55cb7081e828e6015f8ca5"
 
   bottle do
-    sha256 "fb533ce41c405b3a1b5640f00bb0f6117fed29223da6fe23bc3c8007647936a1" => :catalina
-    sha256 "6137b2416249bd95b1f6b44a5fbe7a7e2d415582ead24c4ab628341cae8cf579" => :mojave
-    sha256 "28f7021679446c5eb25e8c1225128080b0de411a8cc313a80c629c48a8bb1de0" => :high_sierra
+    sha256 "4caf95ba51eeef13c216bb2b3010d3a62f6f37053b8efd075f8cf6e65f86f222" => :catalina
+    sha256 "9ee948e5ca4d20f0cadb729113cdd05fbca4ce22b593985051f795fec2ef9e89" => :mojave
+    sha256 "40250baac19e8966910c4ac3526fc308dc69b59e310a65f4a57ab45316c2a795" => :high_sierra
   end
 
   depends_on "gobject-introspection" => :build
