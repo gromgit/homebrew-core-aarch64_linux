@@ -3,7 +3,7 @@ class Hashpump < Formula
   homepage "https://github.com/bwall/HashPump"
   url "https://github.com/bwall/HashPump/archive/v1.2.0.tar.gz"
   sha256 "d002e24541c6604e5243e5325ef152e65f9fcd00168a9fa7a06ad130e28b811b"
-  revision 3
+  revision 4
 
   bottle do
     cellar :any
@@ -14,7 +14,7 @@ class Hashpump < Formula
   end
 
   depends_on "openssl@1.1"
-  depends_on "python"
+  depends_on "python@3.8"
 
   # Remove on next release
   patch do
