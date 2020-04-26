@@ -6,9 +6,9 @@ class Triangle < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "4fb744b3878eb0a3b661b939155929dd3e24050b6bdf79a21926309b9e37c030" => :catalina
-    sha256 "e9028dc0560174e50099fdb6efc3dcbb8ed75a8cfc983e2b923a18f54acb1807" => :mojave
-    sha256 "aca7f95503e929a3bc8b585e64177dec4d8625bd3d365b18d8fecc8fa463a859" => :high_sierra
+    sha256 "a90c331e51936a58d69e47b7ce4d9925072b6024ad6b1d1fe9d75b17f2becf15" => :catalina
+    sha256 "6dc2d0aba307e988e2d4205881be47aef561ab3cea7d7bc5c378e23414782ad9" => :mojave
+    sha256 "d8859fc5b05f1faac1db7cd3130e6e8c8359724fc2162e5d6dc97d3e5198651d" => :high_sierra
   end
 
   depends_on "go" => :build
