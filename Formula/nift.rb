@@ -6,9 +6,9 @@ class Nift < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "59c78ce930e5fd55149cd8ad8fe6b2ea57364d6ae038db4e08d4242e49847ff5" => :catalina
-    sha256 "54054a65d96046bde9d901a9f140e96752f0a3c7f14e73e05e90e40cc906283a" => :mojave
-    sha256 "1d314159a7133ab707da24005fb2a9edb81bc05d5b8b9649c8a16909b0fd0ac0" => :high_sierra
+    sha256 "d919ff19a5bfe721ed89d30ec1bf1521e834e94b3bc98de5bce944187333cc12" => :catalina
+    sha256 "c040d4df6645c31259c50d704a3e1e61952abf347d5d60e288ccd83e09eb73ba" => :mojave
+    sha256 "d8981f2b67e1693dc3dc957fe33d21e95881a52be8fab292ab5f079796f86391" => :high_sierra
   end
 
   def install
