@@ -5,6 +5,7 @@ class Heartbeat < Formula
   # See: https://github.com/Homebrew/homebrew-core/pull/28995
   url "https://github.com/elastic/beats/archive/v6.2.4.tar.gz"
   sha256 "87d863cf55863329ca80e76c3d813af2960492f4834d4fea919f1d4b49aaf699"
+  revision 1
   head "https://github.com/elastic/beats.git"
 
   bottle do
@@ -17,7 +18,7 @@ class Heartbeat < Formula
   end
 
   depends_on "go" => :build
-  depends_on "python" => :build
+  depends_on "python@3.8" => :build
 
   resource "virtualenv" do
     url "https://files.pythonhosted.org/packages/b1/72/2d70c5a1de409ceb3a27ff2ec007ecdd5cc52239e7c74990e32af57affe9/virtualenv-15.2.0.tar.gz"
