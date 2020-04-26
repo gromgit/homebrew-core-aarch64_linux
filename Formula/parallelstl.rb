@@ -4,6 +4,13 @@ class Parallelstl < Formula
   url "https://github.com/intel/parallelstl/archive/20200330.tar.gz"
   sha256 "47d78920a7220828cde9b0c0cf808c70774b2db05ab4dd689b8bbd350afb9e6e"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "5b3837f32d57d6d5398da1127eb4bba489a85821ae32e125fc486edb3abbca11" => :catalina
+    sha256 "5b3837f32d57d6d5398da1127eb4bba489a85821ae32e125fc486edb3abbca11" => :mojave
+    sha256 "5b3837f32d57d6d5398da1127eb4bba489a85821ae32e125fc486edb3abbca11" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "tbb"
 
