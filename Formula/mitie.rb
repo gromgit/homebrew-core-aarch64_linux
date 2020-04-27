@@ -3,6 +3,7 @@ class Mitie < Formula
   homepage "https://github.com/mit-nlp/MITIE/"
   url "https://github.com/mit-nlp/MITIE/archive/v0.7.tar.gz"
   sha256 "0830955e64c2a4cceab803884355f090cf8e9086e68ac5df43058f05c34697e8"
+  revision 1
   head "https://github.com/mit-nlp/MITIE.git"
 
   bottle do
@@ -13,7 +14,7 @@ class Mitie < Formula
     sha256 "243d4557bc8f89638bcc45a1cdfe4402d820d3d5d56a0ffb6db3b9a748ca47e5" => :sierra
   end
 
-  depends_on "python"
+  depends_on "python@3.8"
 
   resource "models-english" do
     url "https://downloads.sourceforge.net/project/mitie/binaries/MITIE-models-v0.2.tar.bz2"
