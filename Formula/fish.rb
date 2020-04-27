@@ -5,10 +5,10 @@ class Fish < Formula
   sha256 "07dc78eea3bc4cbd490b2f2a2e19e5771ac9e3b6b1a75893039ad8b34d6122b8"
 
   bottle do
-    cellar :any
-    sha256 "a78f5906eed06e141bc29f9e53a70a7995c51f59fd023e81f711c48a444e65e6" => :catalina
-    sha256 "78db7552dea983ae9ac5720160a012d93546d037d6d4f06bf9857b518b64a903" => :mojave
-    sha256 "b6fd10867ca24e5dbc708e0e8d9ff12fe615e76373e63e999475699dd691edc9" => :high_sierra
+    cellar :any_skip_relocation
+    sha256 "c0fe77f3abf382d4cf1b65677b44ae7283682d7c86f3b194de337b4835d9f6bc" => :catalina
+    sha256 "d1a94c227b7c241d93619c4541195db26167333d6e3dc748422d0bb9cebe0bf2" => :mojave
+    sha256 "5699fdcf95c4c70ec8e7cd7654009fafb3c72c5ac032fa308325831c222e9ad8" => :high_sierra
   end
 
   head do
