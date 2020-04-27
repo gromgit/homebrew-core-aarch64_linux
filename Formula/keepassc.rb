@@ -7,11 +7,9 @@ class Keepassc < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "ce8b905ddd1ec71a35c4288a7d7ea868edbee57a41f833e34f9e7843e1f24a40" => :catalina
-    sha256 "af7729059e564b32a9e09947c2bcbcd439a198a10522983acc04fae72a0ed4dd" => :mojave
-    sha256 "b963fd7217761500437a7a25e6e37a38cdd92da088de4a6de4b0d6e0184217fc" => :high_sierra
-    sha256 "762071bc7437e9ecd1d6b036aedef31556da97bfd097560fd53c407e6d7cfc96" => :sierra
-    sha256 "d476806614a7c45de1c6352e03b0d8a680700f6e97597efce1f927208136bf2e" => :el_capitan
+    sha256 "d45c0751c541f70f630d57b6de4be54c7e404fa447b00c645da081baecf4ef07" => :catalina
+    sha256 "278b472373d6b75a37833a23a7bfe472c4bdd56ee582534a82a28b0a9dcd5248" => :mojave
+    sha256 "6304afecfb788ee22bf327d47ca046fc905db8383b348393eb7907f7b1479ce4" => :high_sierra
   end
 
   depends_on "python@3.8"
