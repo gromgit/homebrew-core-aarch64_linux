@@ -6,10 +6,9 @@ class Lasso < Formula
 
   bottle do
     cellar :any
-    sha256 "2c88e8cd95ae369d367c06345174b9f9503ef9cf45907e9536a6930eeb7ccfbd" => :catalina
-    sha256 "2205d01fc955e79915ec59ba8acfa1221fcac6cd382529fcc08a2db6809e01e8" => :mojave
-    sha256 "e65e3b3b6ce40489b6674c51ccd6266d8a8167e6de99eb237e3a5a8a7473e33a" => :high_sierra
-    sha256 "de394e2052991b6fe749d8f8e00f7999c84241cfa93cb68791f2e2cb1a68381a" => :sierra
+    sha256 "aecca2fc642d36e34cd455c69c22e9218c7189069cfebeeedace812308d3b09c" => :catalina
+    sha256 "aa800d43d4a10ef664f5cfbd323d1417bbafe5a59f6110814b74cd4eecfc51be" => :mojave
+    sha256 "ef80d2303bf630a7c077f404f948eaf0e960afb81b8dced7853cee50ccc2b7dc" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
