@@ -6,10 +6,9 @@ class DatetimeFortran < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "590d12115f8204c0d8de5300ea910bcfc30801645edb7b7fd3502202c85e933e" => :catalina
-    sha256 "160cac6100d26f5e09387daac49d16c40aedd38a44dc5aa0da950a62fc4f601b" => :mojave
-    sha256 "2b3663b87374f2aff2bbe1ddc6436a2e387cb0f158149fcc11f46b73aa530e89" => :high_sierra
-    sha256 "16073e773f18e30155af5805975b085fbd9c715cf0dcfe006cd1091de97c2cc5" => :sierra
+    sha256 "73f230fd02a4dcc810e5dff0b6c91fd652d71d205aabad40b781fb5cc4b85ce3" => :catalina
+    sha256 "53b0711bb7bae0a6ceab81d1c81475ab7d9b4a3faf9293ef5ef425d9f008cd51" => :mojave
+    sha256 "4da37b7d4a520168a526cc63ed413c1bea31f769b02a7a471de1cf854623a379" => :high_sierra
   end
 
   head do
