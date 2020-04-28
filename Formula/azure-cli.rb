@@ -3,9 +3,9 @@ class AzureCli < Formula
 
   desc "Microsoft Azure CLI 2.0"
   homepage "https://docs.microsoft.com/cli/azure/overview"
-  url "https://codeload.github.com/Azure/azure-cli/legacy.tar.gz/b38e150c5d41f80859b329612f8cd70c9d1efc2a"
-  version "2.4.0"
-  sha256 "480d1535660183a9607ab769b91a0b8c5fd1fbf62508a17ba1359159ffe5e9b7"
+  url "https://codeload.github.com/Azure/azure-cli/legacy.tar.gz/69c99339b7b56263eb8167df2eed0c5593963195"
+  version "2.5.0"
+  sha256 "629cec09f936181974d26fdcf32f59401730c3ae81642f7aa5b939ddc21cab08"
   head "https://github.com/Azure/azure-cli.git"
 
   bottle do
@@ -254,8 +254,8 @@ class AzureCli < Formula
   end
 
   resource "azure-mgmt-loganalytics" do
-    url "https://files.pythonhosted.org/packages/93/e2/6b47cc232357b05d0c8c788d6bbece67428ea997ba29d50e5cd90c1bd104/azure-mgmt-loganalytics-0.2.0.zip"
-    sha256 "c7315ff0ee4d618fb38dca68548ef4023a7a20ce00efe27eb2105a5426237d86"
+    url "https://files.pythonhosted.org/packages/87/a2/cc70fb71277d36f0b10c5ed63b70ae0aed7ac659c666d62fe7c098e48da5/azure-mgmt-loganalytics-0.5.0.zip"
+    sha256 "16f4c4f676ea718b7e1c59bd9a516fcfc796f1aff844b183a7ce9afe69fb214d"
   end
 
   resource "azure-mgmt-managedservices" do
@@ -454,8 +454,8 @@ class AzureCli < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/9d/0a/d7060601834b1a0a84845d6ae2cd59be077aafa2133455062e47c9733024/cryptography-2.9.tar.gz"
-    sha256 "0cacd3ef5c604b8e5f59bf2582c076c98a37fe206b31430d0cd08138aff0986e"
+    url "https://files.pythonhosted.org/packages/56/3b/78c6816918fdf2405d62c98e48589112669f36711e50158a0c15d804c30d/cryptography-2.9.2.tar.gz"
+    sha256 "a0c30272fb4ddda5f5ffc1089d7405b7a71b0b0f51993cb4e5dbb4590b2fc229"
   end
 
   resource "fabric" do
@@ -464,8 +464,8 @@ class AzureCli < Formula
   end
 
   resource "humanfriendly" do
-    url "https://files.pythonhosted.org/packages/2e/d1/e0d8db85b71fc6e7d5be7d78bb5db64c63790aec45acef6578190d66c666/humanfriendly-8.1.tar.gz"
-    sha256 "25c2108a45cfd1e8fbe9cdb30b825d34ef5d5675c8e11e4775c9aedbfb0bdee2"
+    url "https://files.pythonhosted.org/packages/6c/19/8e3b4c6fa7cca4788817db398c05274d98ecc6a35e0eaad2846fde90c863/humanfriendly-8.2.tar.gz"
+    sha256 "bf52ec91244819c780341a3438d5d7b09f431d3f113a475147ac9b7b167a3d12"
   end
 
   resource "idna" do
@@ -514,8 +514,8 @@ class AzureCli < Formula
   end
 
   resource "knack" do
-    url "https://files.pythonhosted.org/packages/09/d0/c473471b10fd231f8195256ac75f219a803579c8f7d07cbceeeed7b4ae4b/knack-0.7.0rc3.tar.gz"
-    sha256 "27174c101ffce59c6baf6f71b19f97756d504b810777878cc2bc803254f15fd5"
+    url "https://files.pythonhosted.org/packages/ab/63/8250a8d2f9157fe04e801beac5fd4ec40d1ead6406767ec8efa2e15da850/knack-0.7.0rc4.tar.gz"
+    sha256 "66d1ff609ecfa1da48f731c9258f03d5dd1da324e2cf81732c78e993afc46683"
   end
 
   resource "MarkupSafe" do
@@ -526,6 +526,16 @@ class AzureCli < Formula
   resource "mock" do
     url "https://files.pythonhosted.org/packages/2e/35/594f501b2a0fb3732c8190ca885dfdf60af72d678cd5fa8169c358717567/mock-4.0.2.tar.gz"
     sha256 "dd33eb70232b6118298d516bbcecd26704689c386594f0f3c4f13867b2c56f72"
+  end
+
+  resource "msal-extensions" do
+    url "https://files.pythonhosted.org/packages/7c/9d/a0294d164cdba0098846dcd4d6c2b880d768d0fc013d82378a9f291ff1f9/msal-extensions-0.1.3.tar.gz"
+    sha256 "59e171a9a4baacdbf001c66915efeaef372fb424421f1a4397115a3ddd6205dc"
+  end
+
+  resource "msal" do
+    url "https://files.pythonhosted.org/packages/5c/9e/f34e9823b1dcb8fef1828d52e348761d4d0ac5a0a50b04a1f3e605aea4a4/msal-1.0.0.tar.gz"
+    sha256 "ecbe3f5ac77facad16abf08eb9d8562af3bc7184be5d4d90c9ef4db5bde26340"
   end
 
   resource "msrest" do
