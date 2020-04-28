@@ -1,5 +1,7 @@
 name: GitHub Actions CI
 on:
+  push:
+    branches: master
   pull_request: []
 jobs:
   tap_syntax:
@@ -46,6 +48,7 @@ jobs:
 
   tests:
     needs: tap_syntax
+    if: github.event_name == 'pull_request'
     strategy:
       matrix:
         version: [10.15, 10.14, 10.13]
