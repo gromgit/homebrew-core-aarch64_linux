@@ -7,10 +7,9 @@ class Fasttext < Formula
 
   bottle do
     cellar :any
-    sha256 "be7691124ef573afe2d8cc9ba5cf76fae50a99974bf128bfd4873c272db9a57a" => :catalina
-    sha256 "a4b6d2be804597582fcc3f0be630bdd8c791e2c1d530880e98f54251decac960" => :mojave
-    sha256 "638910cb1f3a73c6cb9ca9ecab9b790e8f2254965ee86eeddc5dd79ee4bd3001" => :high_sierra
-    sha256 "c1775db7dd27a8fac380bcd4944eda4ec1e162b92a9329ff48debf76c3834426" => :sierra
+    sha256 "ec085551ced1f55b863a65aa60ad8f31d796002702b7effaaaafbf1490df867f" => :catalina
+    sha256 "79f08167fb55b478829434be84d919c08c888563e0abbdeb66bc19cd3e82457f" => :mojave
+    sha256 "4602a32c2a373ed97de8fd36bf1e998299682d45e465af39026a32a3a06fe574" => :high_sierra
   end
 
   depends_on "cmake" => :build
