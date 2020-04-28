@@ -3,8 +3,8 @@ class Platformio < Formula
 
   desc "Open-source ecosystem for embedded development"
   homepage "https://platformio.org/"
-  url "https://files.pythonhosted.org/packages/c9/52/4a0a630b8d8c1e82291992cd3176b571c44ca2f5369cee6628ec3462a191/platformio-4.3.2.tar.gz"
-  sha256 "60e5e48afe8eeaf8beeeed1cf53c565db7337ef5cd4cdb29d6d6965ff15f88a8"
+  url "https://files.pythonhosted.org/packages/84/30/fbeab6f6269df25dda9d25c3ab999511c0aedfb30ea76a817b74f36644aa/platformio-4.3.3.tar.gz"
+  sha256 "bf1d945aa5910a902dd21e7d82f4a54114a58b1d10e093394b29251e9536a9c9"
 
   bottle do
     cellar :any_skip_relocation
