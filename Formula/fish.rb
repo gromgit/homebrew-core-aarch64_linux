@@ -6,9 +6,9 @@ class Fish < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "c0fe77f3abf382d4cf1b65677b44ae7283682d7c86f3b194de337b4835d9f6bc" => :catalina
-    sha256 "d1a94c227b7c241d93619c4541195db26167333d6e3dc748422d0bb9cebe0bf2" => :mojave
-    sha256 "5699fdcf95c4c70ec8e7cd7654009fafb3c72c5ac032fa308325831c222e9ad8" => :high_sierra
+    sha256 "b158b7f8640feb7c622ff3ca92b1bd88565f274f3e761499f5926bb124eeff7d" => :catalina
+    sha256 "6797636eaba364d0cbbc0459103a8767598e985f01846cca6cb57c986dfee7b8" => :mojave
+    sha256 "2609577a0d9f6b661331adccf5d1d8e010662ffe128869757e0af9a6760e26fb" => :high_sierra
   end
 
   head do
