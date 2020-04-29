@@ -13,6 +13,8 @@ class PostgresqlAT94 < Formula
 
   keg_only :versioned_formula
 
+  deprecate! :date => "February 13, 2020"
+
   depends_on "openssl@1.1"
   depends_on "readline"
 
