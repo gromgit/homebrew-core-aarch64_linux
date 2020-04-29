@@ -9,9 +9,9 @@ class Inform6 < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "451af7c99925f78d66fff29b745b6607710b3e03282ba498a82277d00cd49d9c" => :catalina
-    sha256 "b423cc4b764b8ffda3d2f95aa2ec0a1f917455ca7fbb2969dd6aecdf818ed3c5" => :mojave
-    sha256 "0755c9d4c5994a6f4ebe4c74f8bb1e93665de66ae65c89c85120396edc85550d" => :high_sierra
+    sha256 "961725b635b0a0bec6c5ee2de80485cc2ae54c6704692095bf73afb45d4934a0" => :catalina
+    sha256 "be06ad010ef37eb03a5ec804cd6547087772350ccc1c03d6854cd4bebd8a5b9d" => :mojave
+    sha256 "087ee415674833ac532a1fe70c30d8d84015d91e1eeab76273707e7754ef8be4" => :high_sierra
   end
 
   resource "Adventureland.inf" do
