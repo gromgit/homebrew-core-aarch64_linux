@@ -5,6 +5,7 @@ class Snapcraft < Formula
   homepage "https://snapcraft.io/"
   url "https://github.com/snapcore/snapcraft/archive/3.11.tar.gz"
   sha256 "aa99eb6bf585eb8fa3b1bf8bf67ec6e5df3e0c045b9c6dab03f2a660634e0311"
+  revision 1
 
   bottle do
     cellar :any
@@ -16,7 +17,7 @@ class Snapcraft < Formula
   depends_on "libsodium"
   depends_on "libyaml"
   depends_on "lxc"
-  depends_on "python"
+  depends_on "python@3.8"
   depends_on "squashfs"
   depends_on "xdelta"
 
@@ -231,8 +232,8 @@ class Snapcraft < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/09/06/3bc5b100fe7e878d3dee8f807a4febff1a40c213d2783e3246edde1f3419/urllib3-1.25.8.tar.gz"
-    sha256 "87716c2d2a7121198ebcb7ce7cccf6ce5e9ba539041cfbaeecfb641dc0bf6acc"
+    url "https://files.pythonhosted.org/packages/05/8c/40cd6949373e23081b3ea20d5594ae523e681b6f472e600fbc95ed046a36/urllib3-1.25.9.tar.gz"
+    sha256 "3018294ebefce6572a474f0604c2021e33b3fd8006ecd11d62107a5d2a963527"
   end
 
   resource "wadllib" do
