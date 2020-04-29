@@ -7,11 +7,9 @@ class Blitz < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "f8eac429778e92f80e83d9f013e4b5ebc162e458a77af592cfe4f2de820b1bfa" => :catalina
-    sha256 "1d88c433d1c5dc863d670358624cc3d733f042cdb052848c673d5eafa8a6dc33" => :mojave
-    sha256 "1fbcdb2453e10ef03721f965050244519743a6161dfc581bda663597ecf44595" => :high_sierra
-    sha256 "b676b24071752779faadf53d71b53b0c632b8ba62d1cd7c1f90d40ee5b13a85b" => :sierra
+    sha256 "2bfa3e5a52f0f51e9e02c84f10f804093b7080c158b3376f330dd51c0f9e3d23" => :catalina
+    sha256 "a06052c039592fe7b41face9c72d715ba0602456a9df07a40a472d3ceba02c00" => :mojave
+    sha256 "79901f790ea3583942a72ababfba3dc6569169f228b0428c047da52f1f99c02d" => :high_sierra
   end
 
   depends_on "cmake" => :build
