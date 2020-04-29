@@ -3,6 +3,7 @@ class YleDl < Formula
   homepage "https://aajanki.github.io/yle-dl/index-en.html"
   url "https://github.com/aajanki/yle-dl/archive/20200419.tar.gz"
   sha256 "2f0952a58579bc94c275cd1982ca24b6fadcd1ddadb3646be2db455bdc2943db"
+  revision 1
   head "https://github.com/aajanki/yle-dl.git"
 
   bottle do
@@ -12,7 +13,7 @@ class YleDl < Formula
     sha256 "0b6bf1402c3c70e907e4becc601e0d511e2ef932183cc235ae0a3dc7da98841c" => :high_sierra
   end
 
-  depends_on "python"
+  depends_on "python@3.8"
   depends_on "rtmpdump"
 
   uses_from_macos "libxslt"
