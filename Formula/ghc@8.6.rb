@@ -10,9 +10,10 @@ class GhcAT86 < Formula
   revision 1
 
   bottle do
-    sha256 "1167f06250256e73d147e8fc0d83e08915f38997792f7afb03a6a292be76b20b" => :catalina
-    sha256 "93501010b8272059bbcf1d3c0c5ca32150466e8756773198d39c3810e9103889" => :mojave
-    sha256 "1a9d50a816fc2c795f4fe2b55540b7c9b04ba3d9b72cf345f7294a044e2b8250" => :high_sierra
+    rebuild 1
+    sha256 "3c2e2f8d8e4661dd7e53ad5af08489e926bec111e0d16a12397bb22a73b12997" => :catalina
+    sha256 "831a6537953f467724c4c3c45b16cc3e5ff944aa02f1e9b3b77e9bdbfcdfb9d2" => :mojave
+    sha256 "945069d9d94b4fb657e6d9c3a2d516ec551aea7535824b029c8c0632329f40cf" => :high_sierra
   end
 
   keg_only :versioned_formula
