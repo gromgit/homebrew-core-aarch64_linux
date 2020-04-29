@@ -13,6 +13,8 @@ class GoAT112 < Formula
 
   keg_only :versioned_formula
 
+  deprecate! :date => "February 25, 2020"
+
   depends_on :macos => :yosemite
 
   resource "gotools" do
