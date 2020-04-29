@@ -5,6 +5,13 @@ class Fcct < Formula
   sha256 "50912f67ecc2da62b45f597522a685350422998d5840a18828fc9505a5dc51db"
   head "https://github.com/coreos/fcct.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "9b500067fe6d756f885caca1674610317b051c676dc1d84d8113577dd70219fc" => :catalina
+    sha256 "e2bc7e8eed8a4644611fdb6434d22d868dbe3f2ec62233f4f9f310219e9cdcc7" => :mojave
+    sha256 "9a5c29f52996817e56f2fee20bccb81d4ad3409b2fa3b9455f84e4394c8af289" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
