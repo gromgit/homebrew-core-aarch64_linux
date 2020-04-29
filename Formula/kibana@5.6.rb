@@ -17,6 +17,8 @@ class KibanaAT56 < Formula
 
   keg_only :versioned_formula
 
+  deprecate! :date => "March 11, 2019"
+
   resource "node" do
     url "https://nodejs.org/dist/v6.17.0/node-v6.17.0.tar.xz"
     sha256 "c1dac78ea71c2e622cea6f94ba97a4be49329a1d36cd05945a1baf1ae8652748"
