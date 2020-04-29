@@ -5,9 +5,9 @@ class Suricata < Formula
   sha256 "34413ecdad2ff2452526dbcd22f1279afd0935151916c0ff9cface4b0b5665db"
 
   bottle do
-    sha256 "03ed0b8b71a417afd9a49baeb3930f2be3a7c1153490751b5fd162ec04aec899" => :catalina
-    sha256 "69f509afc6483ba5de19a8745ad74bc93363db6ea067048712f9dad77de77f09" => :mojave
-    sha256 "8c624326996faab5ded85355dcc739bbacd4b9edfbe13f012a6223acb3267154" => :high_sierra
+    sha256 "ce6e9acf117b139febc73ae854aa279c1bab29981c107524ee3ff7c1b3c780a8" => :catalina
+    sha256 "033c282b979418b4356b4f208781bcea7fd9100c62e4981a8980b396424aefc9" => :mojave
+    sha256 "6943af9391e189cd28c441645aeec26f48782eaf1c7760c30bdd9ef2e5cf3c7d" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
