@@ -1,8 +1,8 @@
 class Fish < Formula
   desc "User-friendly command-line shell for UNIX-like operating systems"
   homepage "https://fishshell.com"
-  url "https://github.com/fish-shell/fish-shell/releases/download/3.1.1/fish-3.1.1.tar.gz"
-  sha256 "07dc78eea3bc4cbd490b2f2a2e19e5771ac9e3b6b1a75893039ad8b34d6122b8"
+  url "https://github.com/fish-shell/fish-shell/releases/download/3.1.2/fish-3.1.2.tar.gz"
+  sha256 "d5b927203b5ca95da16f514969e2a91a537b2f75bec9b21a584c4cd1c7aa74ed"
 
   bottle do
     cellar :any_skip_relocation
