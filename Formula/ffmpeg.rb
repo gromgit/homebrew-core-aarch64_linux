@@ -7,9 +7,9 @@ class Ffmpeg < Formula
   head "https://github.com/FFmpeg/FFmpeg.git"
 
   bottle do
-    sha256 "34e8b4424611acc2f90e27b4e1318fc3972b036231a171faa4e017a9b98b9d1b" => :catalina
-    sha256 "80582f6eac8470182df842a072e074de3624ec3f5c091aa9151c178745a06011" => :mojave
-    sha256 "afb1c2a2c38fa4d39dbd178cf5258bc3b81e805196196d24ab3676f134914cab" => :high_sierra
+    sha256 "7dbea3535cdc5fe2e01aa4e28ff8f0b310460907f561f2919e9947ae09a66281" => :catalina
+    sha256 "9c55fd68f98c7e1ad3421bfc0829ebc0c49448abea1492f0031a7da8f6a9bc80" => :mojave
+    sha256 "94d8764004fd4d871ddd30a104aa17d2c39a74e063e9716518c0fdc404054a6a" => :high_sierra
   end
 
   depends_on "nasm" => :build
