@@ -1,8 +1,8 @@
 class Gotop < Formula
   desc "Terminal based graphical activity monitor inspired by gtop and vtop"
   homepage "https://github.com/cjbassi/gotop"
-  url "https://github.com/cjbassi/gotop/archive/3.0.0.tar.gz"
-  sha256 "d5147080bb6057f0bf0900b38438e89aa066959c845bdd4c84a9c9fe478b176f"
+  url "https://github.com/xxxserxxx/gotop/archive/v3.5.2.tar.gz"
+  sha256 "d175d370491c1d1b98c8cd1015674f5cfc04d3dbe6ea4a528b641698f0fafb34"
 
   bottle do
     cellar :any_skip_relocation
@@ -14,7 +14,7 @@ class Gotop < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", "-mod=vendor", "-ldflags", "-s -w", "-trimpath", "-o", bin/name
+    system "go", "build", *std_go_args, "./cmd/gotop"
   end
 
   test do
