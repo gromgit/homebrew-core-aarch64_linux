@@ -6,8 +6,7 @@ class Nef < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "4dffdd30d80ab45cda870e0e5ebe981f64ab878de8cabaeb13bb33cc5ef6d1a0" => :catalina
-    sha256 "49c50ed996365fa2636500525c5ab74554eb530afde00e94aaf004c2032fcf57" => :mojave
+    sha256 "db1f3b419794b096f913f805f08b56e0f51cb01cfa20d4a8bfd77cc6ae1f236c" => :catalina
   end
 
   depends_on :xcode => "11.4"
