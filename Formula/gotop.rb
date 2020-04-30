@@ -6,9 +6,9 @@ class Gotop < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e92acc3b1327317f9a5a6a09fe841d4cdf116ebeb3b225fa73d28b10a21d0170" => :catalina
-    sha256 "fbf79c06ef6ef84bd3f3f28fba3e49308e295f816facd0f6b7f696d6789e69a9" => :mojave
-    sha256 "58606da95a9fc75bfca7646e32e1f14e90fca4600b2bffddf5a7c14fbe3f3268" => :high_sierra
+    sha256 "64c1dbdac093d37353e400b5ee47a9e2bb2268bf26a11c1853c331da349c230e" => :catalina
+    sha256 "dcca12e1f88c8f8b835257839b38930203fa9d6df475b672ad1a65f99bf34855" => :mojave
+    sha256 "20a37aeed1acf7a6a99c2ec63783a65e1813c92811e042c21ddea3d5dd18b132" => :high_sierra
   end
 
   depends_on "go" => :build
