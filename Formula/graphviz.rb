@@ -16,9 +16,9 @@ class Graphviz < Formula
   end
 
   bottle do
-    sha256 "ad22bb28b684c6fb9c51e32000ada1df8cc2f6f2711f8e85c4599fbb5e213e7e" => :catalina
-    sha256 "7f11871b1618a4e005a38462522b251bda2c97701aaa944b77a82e212d928ba7" => :mojave
-    sha256 "9b7c8b58ae0ab87ab5af31f6d72c61e9840f3fbb24029156a937bb1d3d75310b" => :high_sierra
+    sha256 "b7622910804f75702b6124ed0a376f7d4f1c8aaa8dde38601549bb4c9a84589b" => :catalina
+    sha256 "cadbefa8657abfbc63d66827ca1492226d10fc6fdba9276f41e62be3b9434ba2" => :mojave
+    sha256 "c3b0269db2fb418c0e1b7413f10e0bec2d4f69485cfda484e8acf99cb1b86a54" => :high_sierra
   end
 
   head do
