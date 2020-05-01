@@ -3,6 +3,7 @@ class Gtkx3 < Formula
   homepage "https://gtk.org/"
   url "https://download.gnome.org/sources/gtk+/3.24/gtk+-3.24.18.tar.xz"
   sha256 "f5eaff7f4602e44a9ca7bfad5382d7a73e509a8f00b0bcab91c198d096172ad2"
+  revision 1
 
   bottle do
     sha256 "2842a4263809bfe37c0371374185ca3ab233b60989c93e281c7bf9c3a2ff619c" => :catalina
@@ -25,6 +26,10 @@ class Gtkx3 < Formula
   depends_on "pango"
 
   uses_from_macos "libxslt" => :build # for xsltproc
+
+  # Fixes version in pkg-config file -> remove when gtk+3 is updated
+  # See https://github.com/Homebrew/linuxbrew-core/issues/20221
+  patch :DATA
 
   def install
     args = %W[
@@ -119,5 +124,21 @@ class Gtkx3 < Formula
     ]
     system ENV.cc, "test.c", "-o", "test", *flags
     system "./test"
+    # include a version check for the pkg-config files
+    assert_match version.to_s, shell_output("cat #{lib}/pkgconfig/gtk+-3.0.pc").strip
   end
 end
+
+__END__
+diff --git a/meson.build b/meson.build
+index 0240cc3..7ec6a9e 100644
+--- a/meson.build
++++ b/meson.build
+@@ -1,5 +1,5 @@
+ project('gtk+-3.0', 'c',
+-        version: '3.24.17',
++        version: '3.24.18',
+         default_options: [
+           'buildtype=debugoptimized',
+           'warning_level=1'
+
