@@ -6,6 +6,13 @@ class Redo < Formula
   url "https://github.com/apenwarr/redo/archive/redo-0.42a.tar.gz"
   sha256 "0ff0fd29f2767fe33374cfac97fd13b3dd27207bdacbeb5e02039b992d4fb815"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "6969cbd2833a19d8af5d95e74afdd6cb64998dc27d216989b5b4696965956610" => :catalina
+    sha256 "b9bfebfc669160a22dc5262bb4ab7845ef0774aa9bba82385e8fd58e6fb9726e" => :mojave
+    sha256 "b7308d0a6341f3e70922fffb9dcbcede4ca4257ecb553a28b8ea4da2a869382f" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   resource "Markdown" do
