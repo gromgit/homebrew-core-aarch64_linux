@@ -91,7 +91,7 @@ jobs:
           done
           exit 1
       - name: Post comment on failure
-        if: !success()
+        if: ${{!success()}}
         uses: actions/github-script@0.9.0
         with:
           github-token: ${{secrets.HOMEBREW_GITHUB_API_TOKEN}}
