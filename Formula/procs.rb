@@ -6,9 +6,9 @@ class Procs < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "33a58c80c325abab5bc3d129c295120c7d6fab414b667cb59d6e81a35e5fc927" => :catalina
-    sha256 "517b1e83bdb56497733bc47048990c54c04abd20961aff191f98c462d34b2b41" => :mojave
-    sha256 "aecaba18d6e90ea4d1422ba1424846bf36d246bc862486cceeffa43f8acc3be3" => :high_sierra
+    sha256 "aa3d5fdd125d3f6e9c300af339c46a604769d7dbe5ab17e6fb9585410e55a9a5" => :catalina
+    sha256 "5c91e5a345d3a1e19d2e574c3f9feae9b5a0d4d8912c0f9bff8443909139d75d" => :mojave
+    sha256 "9199cdba65a95ab95eeaf6fb5f4344feec45f7c06f8ef39d460c781869a76fcb" => :high_sierra
   end
 
   depends_on "rust" => :build
