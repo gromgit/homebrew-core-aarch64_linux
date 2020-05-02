@@ -110,7 +110,8 @@ jobs:
             if (actor != 'BrewTestBot') {
                 comment += '@' + actor
             }
-            comment += ' bottle publish [${{job.status}}](' + url + ').'
+            let status = '${{job.status}}'.toLowerCase()
+            comment += ' bottle publish [' + status + '](' + url + ').'
 
             github.issues.createComment({
               ...context.repo,
