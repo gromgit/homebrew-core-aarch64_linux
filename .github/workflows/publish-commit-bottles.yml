@@ -91,7 +91,7 @@ jobs:
           done
           exit 1
       - name: Post comment on failure
-        if: failure()
+        if: !success()
         uses: actions/github-script@0.9.0
         with:
           github-token: ${{secrets.HOMEBREW_GITHUB_API_TOKEN}}
@@ -110,7 +110,7 @@ jobs:
             if (actor != 'BrewTestBot') {
                 comment += '@' + actor
             }
-            comment += ' bottle publish [failed](' + url + ').'
+            comment += ' bottle publish [${{job.status}}](' + url + ').'
 
             github.issues.createComment({
               ...context.repo,
