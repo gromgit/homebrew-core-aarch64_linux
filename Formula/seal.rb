@@ -5,10 +5,10 @@ class Seal < Formula
   sha256 "9dfb1482d0bade6c1c76f2aa06aca6203f98aadc4ad94ca0f316be916b45fbd5"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "b5c7b9610572b1abce840e9cf88e5232771ea76559fb49776c87f3176f3c8815" => :catalina
-    sha256 "9ab6a02da1750fb8deeefdadcab791017aea85b5921747af01c607c4e44e7eca" => :mojave
-    sha256 "ac9e81e17df37c76f9f0db9218235b614a71d52442c961049f727062ace7c5fa" => :high_sierra
+    cellar :any
+    sha256 "52c0c69a916e496c79bf9ecb96b96a4c1f5251b4dc0b882caa75b4797f94ad85" => :catalina
+    sha256 "965bf9e01fd2942ea460463f1d0ba980ed4dcc6c98db2d613ab9e7df4037cf4a" => :mojave
+    sha256 "d8bb4cdf57efa3373547a0cd7b9ed5f259d5e7d96fd8e6754f532bcd78b4421a" => :high_sierra
   end
 
   depends_on "cmake" => [:build, :test]
