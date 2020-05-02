@@ -11,9 +11,9 @@ class GitAnnex < Formula
 
   bottle do
     cellar :any
-    sha256 "edb21f1c5e3c38e5a8b907ce36b17d55033474372b0002c1de634f0d18262f37" => :catalina
-    sha256 "532fe05076844624cb53fc530b0ff9ed2247e37b54459485175744b100553b1d" => :mojave
-    sha256 "fbde6164df122d9c4d1e16c0d7085f089a194a67c2c00aebe7aae4767438896a" => :high_sierra
+    sha256 "6a8fab5036ec341602d8a64c94247ccbc2b8f9afeb67bed5958e71713be06083" => :catalina
+    sha256 "3d4a6e2582d0c6f23269ce8b3e4b18471de75c45bce1f775ae55109841fbff08" => :mojave
+    sha256 "2e12b4d8dbefef73f2c16eb306fd22525d049eff4e2588d7ba95bd9e4c4d56d5" => :high_sierra
   end
 
   depends_on "cabal-install" => :build
