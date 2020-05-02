@@ -7,8 +7,9 @@ class Fibjs < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f733b3255e882d70e948c855e32105c639e64daa52778568e8e85bb0aabc31f8" => :mojave
-    sha256 "ea138f4c4158377036469a8e783d0baeaf28cf8c960baacfc017e5455d9a27b6" => :high_sierra
+    sha256 "5c123ec4d010a5f4912b5dccb3af1d83aed12f1678c9314360c08208aef8655b" => :catalina
+    sha256 "014db4fa7314f35b7ba0ea76a0d77c6d6ca59d00e7ffd9e22cab12f7cad2993b" => :mojave
+    sha256 "8830b25d963bed8bebab3e2be4024ed925c702ef4e28d1c5679ca9304f73f266" => :high_sierra
   end
 
   depends_on "cmake" => :build
