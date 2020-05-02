@@ -1,9 +1,8 @@
 class Ledger < Formula
   desc "Command-line, double-entry accounting tool"
   homepage "https://ledger-cli.org/"
-  url "https://github.com/ledger/ledger/archive/v3.1.3.tar.gz"
-  sha256 "b248c91d65c7a101b9d6226025f2b4bf3dabe94c0c49ab6d51ce84a22a39622b"
-  revision 5
+  url "https://github.com/ledger/ledger/archive/v3.2.0.tar.gz"
+  sha256 "9a2f1886be0181bfa0a8b3ea05207d5c6e55497d7f821af3d7e60a8e53ba11d0"
   head "https://github.com/ledger/ledger.git"
 
   bottle do
