@@ -8,10 +8,10 @@ class PreCommit < Formula
   revision 1
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "fd8fda7082ca7ee05300442c9f2be9830902d7f4c6302f617a99b8e05b9f2ece" => :catalina
-    sha256 "caf26ee29c543067e33d58aaa979e3a63b57b392e748643439766f525fff9622" => :mojave
-    sha256 "89872237307d4e37792531ded63106ffed9cc5c35cb0ca5250bdc66bd461b9d7" => :high_sierra
+    cellar :any
+    sha256 "c46ab414ba7666da2b99e81e9b9ed211f0d7e34e6066567fbc2a17bb51ba2302" => :catalina
+    sha256 "22914d6b165db3cdedfba801781bac776c905333706dc2e0b6ff4c69c8441dc5" => :mojave
+    sha256 "8f625eee08bd94ac1d4c586e4d29bf606b044633a054b38770de157dd88ca967" => :high_sierra
   end
 
   depends_on "libyaml"
