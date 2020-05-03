@@ -5,9 +5,9 @@ class Cfengine < Formula
   sha256 "ab597456f9d44d907bb5a2e82b8ce2af01e9c59641dc828457cd768ef05a831d"
 
   bottle do
-    sha256 "ef667d58ff32efffd138990854dfaaa9a85fb8eb2542a19b9179041def1fa774" => :catalina
-    sha256 "f83a9a2297adaad480425fd77f48c5c1ecabfa5d140c1217353d9f4c8e6e399d" => :mojave
-    sha256 "54b6be6b949cee268524b61ca0e72b687a6823058e9e9a8849c90ee98d75ecf9" => :high_sierra
+    sha256 "783eacd961c402e7565fa15bd46e7efd685d3efaa726b67b39da5b3b45a36f05" => :catalina
+    sha256 "889174df90c768ba5f636e9d5e25a1875de7554de759bdd83db188a6151f0eb8" => :mojave
+    sha256 "df9382ac5c4ed17eea80ec5dd998e3903d061a15afb347534bdbe9eaf0cd0fc5" => :high_sierra
   end
 
   depends_on "lmdb"
