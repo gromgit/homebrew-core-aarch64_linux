@@ -9,9 +9,9 @@ class TrezorAgent < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "eaeb3fd154d0a24aba5b56aeecb9dc01c9769fa609ecc90687311179adb251ce" => :catalina
-    sha256 "bf639a49b216ca3cf717467ce938ab68163d24e43523b9c915d82073682729ef" => :mojave
-    sha256 "fc3a6a0dbe9b4215642a42c0d9f07ac551cc1b5afa47cf1450d40e654d575d67" => :high_sierra
+    sha256 "9482a60c735039a2c62c221e2976680a726e2d5fd3fe703486881a73f4206e3a" => :catalina
+    sha256 "a6d1e6ba68f9e240d3a5577fcdcbf7df3b6e18fe5c2fa78cb587ad905c2a894e" => :mojave
+    sha256 "71454920f5460eb56b1a2c10bb3818967d117a080bab61e8bf8bb1f9eb8e4de2" => :high_sierra
   end
 
   depends_on "libusb"
