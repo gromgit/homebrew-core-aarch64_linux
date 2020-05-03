@@ -9,10 +9,9 @@ class Nyx < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "a92eabd02b2b59ac8f71aa0b6669b8ec6a8123b46a0eca100e20bc9661b90e48" => :catalina
-    sha256 "e45539c22cd0a63392fc06b83824094917c40f6bcbb2d3e05b95dfb2210f8556" => :mojave
-    sha256 "e45539c22cd0a63392fc06b83824094917c40f6bcbb2d3e05b95dfb2210f8556" => :high_sierra
-    sha256 "1becd20ec7f74fe0fb05655320ab0329562fdd119a8f29acfd3c80a3594d1564" => :sierra
+    sha256 "606f92ecc381c9d319537d607305fdaae230de8e426e6d5df41fc0c878f2a0d1" => :catalina
+    sha256 "21ed9b2f6e986b53916eedad3e5d69a8d3c32fedfd61824e78381d68ec7b548d" => :mojave
+    sha256 "61f9d689b22252460f42ec83b59a425f6d3a77d308d741360afa6435c429ed62" => :high_sierra
   end
 
   depends_on "python@3.8"
