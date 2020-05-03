@@ -1,8 +1,8 @@
 class Handbrake < Formula
   desc "Open-source video transcoder available for Linux, Mac, and Windows"
   homepage "https://handbrake.fr/"
-  url "https://download.handbrake.fr/releases/1.3.1/HandBrake-1.3.1-source.tar.bz2"
-  sha256 "c005de993af4123babbb60f7d12f6ff46fb7eea26ff0a3556034683901ce2c27"
+  url "https://github.com/HandBrake/HandBrake/releases/download/1.3.2/HandBrake-1.3.2-source.tar.bz2"
+  sha256 "ec6feba97f426d545ec56cf1472eae5795d768bc1aec56c23bb76fc6b2ecf270"
   head "https://github.com/HandBrake/HandBrake.git"
 
   bottle do
@@ -19,11 +19,12 @@ class Handbrake < Formula
   depends_on "nasm" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
-  depends_on "python" => :build
+  depends_on "python@3.8" => :build
   depends_on :xcode => ["10.3", :build]
   depends_on "yasm" => :build
 
   def install
+    inreplace "contrib/ffmpeg/module.defs", "$(FFMPEG.GCC.gcc)", "cc"
     system "./configure", "--prefix=#{prefix}",
                           "--disable-xcode",
                           "--disable-gtk"
