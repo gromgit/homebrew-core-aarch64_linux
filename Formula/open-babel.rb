@@ -8,9 +8,9 @@ class OpenBabel < Formula
   head "https://github.com/openbabel/openbabel.git"
 
   bottle do
-    sha256 "6ec66d0aaa1e1e16bd551a6a2f9e147a207770f800ff15938a6c9547299bb4c9" => :catalina
-    sha256 "a3c4902398ed67b093d5f88b03872a0fa07eba615a6d51fc998644d09f748486" => :mojave
-    sha256 "f3c05baedaa87da66362fb942d248973728e1336277f885b6aa513e7a8c20b53" => :high_sierra
+    sha256 "7584694b0de308bfb6aa6cebd66e49bb6905942078051441164b2541e6f91b60" => :catalina
+    sha256 "2f410442f5b6e43250b5d89e26bc2ca5d22103dcb74d70bc2b90a1ec568528e7" => :mojave
+    sha256 "84a7ec2b7bf945d7baa10faeecabc627ac089cfef3b8493408012e1d17b0dc39" => :high_sierra
   end
 
   depends_on "cmake" => :build
