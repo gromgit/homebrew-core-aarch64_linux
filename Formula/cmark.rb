@@ -3,6 +3,7 @@ class Cmark < Formula
   homepage "https://commonmark.org/"
   url "https://github.com/commonmark/cmark/archive/0.29.0.tar.gz"
   sha256 "2558ace3cbeff85610de3bda32858f722b359acdadf0c4691851865bb84924a6"
+  revision 1
 
   bottle do
     cellar :any
@@ -13,13 +14,11 @@ class Cmark < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "python" => :build
+  depends_on "python@3.8" => :build
 
   def install
     mkdir "build" do
       system "cmake", "..", "-DCMAKE_INSTALL_LIBDIR=lib", *std_cmake_args
-      system "make"
-      system "make", "test"
       system "make", "install"
     end
   end
