@@ -7,8 +7,7 @@ class Wallpaper < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "08a90adb9ccb0c522b09b801f25d018529d0ec1b40dfcd0bf457a4533e9bcf47" => :mojave
-    sha256 "bdf9b70a15c4060ba202631c2a3e803ff37369d2d3994d913b67dd840c124f1e" => :high_sierra
+    sha256 "ae71c073450b0e48f8213108a763c71e62fa7f7d801499cfe7eae6bc3be3d5c2" => :catalina
   end
 
   depends_on :xcode => ["11.4", :build]
