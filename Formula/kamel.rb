@@ -7,6 +7,13 @@ class Kamel < Formula
     :revision => "c47fb2c85e89852f0fd111d1662f57917030ced5"
   head "https://github.com/apache/camel-k.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "1bca7ed6593fd50b219353b033b76195881576d5edce8154241edb3d249f665e" => :catalina
+    sha256 "349b58bd34eeb004baca62ee0e56746cb1256979c83f87aceb62882003b902a3" => :mojave
+    sha256 "7dc0dd18e8b3fa8ebaf322db37369929909510c65e8b5472a4624ee822771698" => :high_sierra
+  end
+
   depends_on "go" => :build
   depends_on "openjdk" => :build
 
