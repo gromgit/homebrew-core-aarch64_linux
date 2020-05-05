@@ -7,10 +7,10 @@ class Wordgrinder < Formula
   head "https://github.com/davidgiven/wordgrinder.git"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "05750b2dadc537994d4701005d565782d2afdecfbe1bf1f118f76290255a3946" => :catalina
-    sha256 "572bd029f459c15af9a2d27a471e31594d1d9c2387b6ec66f9a890df1db13e55" => :mojave
-    sha256 "19855507ccd289049c30aad466a66de742b9d58a98247b9f9d223e140a81ff69" => :high_sierra
+    cellar :any
+    sha256 "79fa0f89e7e123f7746ab934514834eaaecd35fa228a64e243d620825e508f7d" => :catalina
+    sha256 "daa17cb7ea4b7ad382352a18b359deaa7f1a9cd8b2c7c8949b2f6dca41f0674c" => :mojave
+    sha256 "735f8f1c7d405d11e0fd464d937d3f943c192c939126ca610a388f145da1a7da" => :high_sierra
   end
 
   depends_on "ninja" => :build
