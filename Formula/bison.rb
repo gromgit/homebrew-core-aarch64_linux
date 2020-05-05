@@ -5,13 +5,11 @@ class Bison < Formula
   url "https://ftp.gnu.org/gnu/bison/bison-3.5.4.tar.xz"
   mirror "https://ftpmirror.gnu.org/bison/bison-3.5.4.tar.xz"
   sha256 "4c17e99881978fa32c05933c5262457fa5b2b611668454f8dc2a695cd6b3720c"
-  version_scheme 1
 
   bottle do
-    rebuild 1
-    sha256 "936499e7f3bb0ee0873930232715fd2a17e37cb26c1e520974dc78a969f34adb" => :catalina
-    sha256 "01beb7900fbbe23726079805d1d8527dce8a1dcde51da583cb4b032b560efc03" => :mojave
-    sha256 "e27f3e55044f6adbbe49c634c0dd9c289a72efb32c2d81731e43309b0f2794de" => :high_sierra
+    sha256 "1da0de53472ab236628591350fbe698813346b1d4872b8eeb8d64cfb9bdcfb30" => :catalina
+    sha256 "c5e99518c9de078e871dfb65c69aede23b2461d032bf49b532fd5d070f173b66" => :mojave
+    sha256 "aa6db07664e762971795b1bf255d7991d642ba3b3e5c9db9f135503810176bad" => :high_sierra
   end
 
   keg_only :provided_by_macos
