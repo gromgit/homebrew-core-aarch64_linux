@@ -7,9 +7,9 @@ class Httpflow < Formula
 
   bottle do
     cellar :any
-    sha256 "b9e4d694b806f3a4201ac691b680a9cbd21a465de018ba28aa944e9ca869d848" => :catalina
-    sha256 "7284170097a075c1831a5ae8cf3ad128f4a3352392d57b65ce5b375f2324449b" => :mojave
-    sha256 "4d369eb896c76cd1895e6f363779499387bae50053c36445adafbd23ba5f722a" => :high_sierra
+    sha256 "2b7b63f5d82139b4fc017b8848e3b29608738cd510ef1350710c6224a24079a3" => :catalina
+    sha256 "6d911ff1c720035b0b23cf994fbbb37e7d1372dcd32eb60bc54924b78b444431" => :mojave
+    sha256 "cf54de7d5e6fda49966d75a0c33580bb8e64d3d0fb6c39337a03e21fb20682d5" => :high_sierra
   end
 
   depends_on "pcre"
