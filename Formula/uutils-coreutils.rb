@@ -5,6 +5,13 @@ class UutilsCoreutils < Formula
   sha256 "67b3fafd21e204cef4ffe04b055e148799523bc021a8ae08a399a9c847ce8e7f"
   head "https://github.com/uutils/coreutils.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "bd2d08c082e4249d9d73dcdc251f8a441d6dad6f949547110ecb96a023c7f84e" => :catalina
+    sha256 "421ae0f39ebdea7acf3bfd9f569f376ee9008b4e7bb72340c09628e5b50021d1" => :mojave
+    sha256 "b8eb6f2ff0292941b52d1b1ecafad239844b8447a0bce67792b7d4b61b7aece8" => :high_sierra
+  end
+
   depends_on "make" => :build
   depends_on "rust" => :build
   depends_on "sphinx-doc" => :build
