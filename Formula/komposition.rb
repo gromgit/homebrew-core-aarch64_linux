@@ -12,7 +12,7 @@ class Komposition < Formula
   end
 
   depends_on "cabal-install" => :build
-  depends_on "ghc" => :build
+  depends_on "ghc@8.8" => :build
   depends_on "pkg-config" => :build
   depends_on "ffmpeg"
   depends_on "gobject-introspection"
@@ -25,6 +25,14 @@ class Komposition < Formula
   depends_on "sox"
 
   uses_from_macos "libffi"
+
+  # fix a constraint issue with protolude
+  # remove once new version with
+  # https://github.com/owickstrom/komposition/pull/102 is included
+  patch do
+    url "https://github.com/owickstrom/komposition/pull/102.diff?full_index=1"
+    sha256 "bdf561d07f1b8d41a4c030e121becab3b70882da8ccee53c1e91c6c0931fee0c"
+  end
 
   def install
     system "cabal", "v2-update"
