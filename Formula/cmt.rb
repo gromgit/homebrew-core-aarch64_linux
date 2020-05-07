@@ -10,9 +10,10 @@ class Cmt < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "000379960e116751b0b65db8323729cde8e4b524f2ec956246a494f2c4a1e676" => :catalina
-    sha256 "9119f6838dd3172aae1e145f43dc34f78ab4d8f8e8e6c72927d404211e73ae2b" => :mojave
-    sha256 "abd7fab4e32cdc50f8ec4c84c84bb8cb0001b21a3e4199dcb848fc3270298297" => :high_sierra
+    rebuild 1
+    sha256 "5ef577014cea6d1ca60ece5686461755e83bdb5134e696f0769ab46bafecb740" => :catalina
+    sha256 "de80bda11c02f8abaa16357a8c2d796370b04012d6bbd6af3ac9d6c5e43f14f0" => :mojave
+    sha256 "afef38c021fa48504acb547a5c0006e2a50c59fdd69a88b3eb9d279c8aea496d" => :high_sierra
   end
 
   depends_on "cabal-install" => :build
