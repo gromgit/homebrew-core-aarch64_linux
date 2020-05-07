@@ -10,10 +10,10 @@ class Allureofthestars < Formula
   head "https://github.com/AllureOfTheStars/Allure.git"
 
   bottle do
-    rebuild 1
-    sha256 "d568c44d9f158ac188d690a0366950923b565aebf3c82a6b718c52d8584b29e5" => :catalina
-    sha256 "81f6960b26c310bea1b253768edfc00c8c38b84d2651a6d3b9e0dc3434b7cd04" => :mojave
-    sha256 "893be6de189e97cb416e0e0f8ee8b73ce663a57fa4593a32c76ac69f987f64ab" => :high_sierra
+    rebuild 2
+    sha256 "e8e53b6165ef8de7a92048a5768cbbb17d0901a0c4f3fbb34eb57d79eaa8fe4f" => :catalina
+    sha256 "89d961dd52842e4ec8e44d40fe0f5385845792637f836108dabee5cadc91fe9d" => :mojave
+    sha256 "3f8b9d0a2e203c896ae4a0a1a340f5e794f5ff6d26203195669de31ecd116c53" => :high_sierra
   end
 
   depends_on "cabal-install" => :build
