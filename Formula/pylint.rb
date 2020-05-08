@@ -8,9 +8,9 @@ class Pylint < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b4aa05c3217eafcbc9d0b62309bb4e96f01474fa05617e7c9fa17187b923ffd2" => :catalina
-    sha256 "cb02dea951f077fcd35d4ca4076c6377e5762eb5a0ba24c14d6eb906a9e23704" => :mojave
-    sha256 "e81c3c68c60cbef27e5c8367e6c32d8331c6ead9c8cf2af9c19651deb4328497" => :high_sierra
+    sha256 "92d527a0aafd6763b79d82692440a780660b2964468502ca9966461e74e98139" => :catalina
+    sha256 "0fde58f98f90eb124bd6b700ca3ca968d9cf76550c5e3a3c39ff00f2495e3105" => :mojave
+    sha256 "e8424a8394848a73f29ecb9b90d8149c8bdd1f425e5b248ab57619c422a9d51e" => :high_sierra
   end
 
   depends_on "python@3.8"
