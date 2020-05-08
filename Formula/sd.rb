@@ -3,6 +3,7 @@ class Sd < Formula
   homepage "https://github.com/chmln/sd"
   url "https://github.com/chmln/sd/archive/v0.7.5.tar.gz"
   sha256 "f4731fd6bd992eed06ed9326cdef22093605ff97df1dd856e31c5015f0720c66"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
@@ -15,6 +16,13 @@ class Sd < Formula
 
   def install
     system "cargo", "install", "--locked", "--root", prefix, "--path", "."
+
+    # Completion scripts and manpage are generated in the crate's build
+    # directory, which includes a fingerprint hash. Try to locate it first
+    out_dir = Dir["target/release/build/sd-*/out"].first
+    man1.install "#{out_dir}/sd.1"
+    bash_completion.install "#{out_dir}/sd.bash"
+    zsh_completion.install "#{out_dir}/_sd"
   end
 
   test do
