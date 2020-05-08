@@ -6,6 +6,13 @@ class Lc0 < Formula
       :tag      => "v0.25.1",
       :revision => "69105b4eb0a3cf4fbc76960d18d519a0bdd19838"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "54ea227ae5e072cd33580ad6294ae9e5a1a8ee34bc8322f7d376ddff287e9633" => :catalina
+    sha256 "ef181a97aed047dcf7e2dbb06415e74ef5ce7bf4ca4eb24e96f4a8c5fefb59e8" => :mojave
+    sha256 "151e62a4290105fde099a552d27fae4328bcf65d6617c1e85be24162289c9c2e" => :high_sierra
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "python" => :build
