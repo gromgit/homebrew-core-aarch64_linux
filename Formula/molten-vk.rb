@@ -3,6 +3,7 @@ class MoltenVk < Formula
   homepage "https://github.com/KhronosGroup/MoltenVK"
   url "https://github.com/KhronosGroup/MoltenVK/archive/v1.0.41.tar.gz"
   sha256 "a11208f3bc2eb5cd6cfebbc0bc09ac2af8ecbe5cc3e57cde817bc8bc96d2cc33"
+  revision 1
 
   bottle do
     cellar :any
@@ -11,7 +12,7 @@ class MoltenVk < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "python" => :build
+  depends_on "python@3.8" => :build
   depends_on :xcode => ["11.0", :build]
   # Requires IOSurface/IOSurfaceRef.h.
   depends_on :macos => :sierra
