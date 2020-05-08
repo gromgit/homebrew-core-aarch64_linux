@@ -3,8 +3,8 @@ class Jc < Formula
 
   desc "Serializes the output of command-line tools to structured JSON output"
   homepage "https://github.com/kellyjonbrazil/jc"
-  url "https://files.pythonhosted.org/packages/17/7f/5820ca206b8ce79142c5385ff5a4262757a0f568d96beee45945dfbd83db/jc-1.10.6.tar.gz"
-  sha256 "b4995a9c2b1e5ba15152d5253089535440ca1c715a0e53267fb61997278f5422"
+  url "https://files.pythonhosted.org/packages/29/82/f4dfb9906b396272d9af729890edf12494de574d204b1feecc385219a9a1/jc-1.10.9.tar.gz"
+  sha256 "2cc6dfb0dcc629e120c1b74d6bc6bf4f0213d7d1c6269277707ce4914a8edfc2"
 
   bottle do
     cellar :any_skip_relocation
@@ -14,11 +14,6 @@ class Jc < Formula
   end
 
   depends_on "python@3.8"
-
-  resource "ifconfig-parser" do
-    url "https://files.pythonhosted.org/packages/19/58/887683fe9baa51f307e1fe58d8beea5beb714a210b2ff6e6430a1430bb34/ifconfig-parser-0.0.5.tar.gz"
-    sha256 "6c512f12da0d7f314bb16f883e2d7d89d53198e88f6272a2465330cef117c58a"
-  end
 
   resource "ruamel.yaml" do
     url "https://files.pythonhosted.org/packages/16/8b/54a26c1031595e5edd0e616028b922d78d8ffba8bc775f0a4faeada846cc/ruamel.yaml-0.16.10.tar.gz"
