@@ -8,9 +8,9 @@ class Jrnl < Formula
 
   bottle do
     cellar :any
-    sha256 "66560351ee5ed2909729339bdc23d86d1b6b10d36b31a45eccdf76410f174334" => :catalina
-    sha256 "44f0dad29c60b5cc69e1c6b537d61ca3af1c560159b2ec6ff975b944a24666bc" => :mojave
-    sha256 "5a82ad2e43651f7c0947dc11aa1e155ed5dc5cd1bc27b6e99d651459949df19f" => :high_sierra
+    sha256 "a8798df7e2389ea90934ba4dc6f0364767916ebc82eaa63f6f5d1d767929e24a" => :catalina
+    sha256 "0f485652a861698c7593ff4b5b07b762233445f68ec49216c958582793d5db4f" => :mojave
+    sha256 "4b4575198dbe69ca69b98bd77f20770521e77db31c9590cffc4d33c1d1a8af49" => :high_sierra
   end
 
   depends_on "python@3.8"
