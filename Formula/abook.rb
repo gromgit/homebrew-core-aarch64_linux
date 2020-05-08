@@ -6,10 +6,9 @@ class Abook < Formula
   head "https://git.code.sf.net/p/abook/git.git"
 
   bottle do
-    sha256 "8bd83f518b01cdb21cabd04bb9fd28351d571c3bc3dfb44911a2d39532756967" => :catalina
-    sha256 "c1b909e5047e584971993e46ac28956479f1aca7edd28822df6de649fdb17bce" => :mojave
-    sha256 "6dd4fd8e2f57239376ccbe02bc606829d0b976b18f94ae6e5204a7d546ae9a04" => :high_sierra
-    sha256 "b078b7af5c5fca8c97e693b70a0700ab91d9bed44bdccbf037ed5eb800c32d7b" => :sierra
+    sha256 "09e77aa3db2cf8a702effbebbbf83f7a2f860b0d5db6bcf37549edb7db5438a7" => :catalina
+    sha256 "a6ab99c751a03e11e2ace660ad9325a9fe4262598f284c0fb87626778383e29d" => :mojave
+    sha256 "a0461ecc678e5cb65a901bd39dbd7f0f8015a29ed605e6cf28f1315d5c347ecb" => :high_sierra
   end
 
   depends_on "autoconf" => :build
