@@ -1,9 +1,9 @@
 class Picat < Formula
   desc "Simple, and yet powerful, logic-based multi-paradigm programming language"
   homepage "http://picat-lang.org/"
-  url "http://picat-lang.org/download/picat28_5_src.tar.gz"
-  version "2.8#5"
-  sha256 "3e88f2d2afdda77754e3dde2da50b7a6ee738c98766b03fb9e25cd006ee13652"
+  url "http://picat-lang.org/download/picat28_6_src.tar.gz"
+  version "2.8#6"
+  sha256 "9366a2b42123645dab4617d849fb456bdaa24a0931e13071c3574bb1332cf29c"
 
   bottle do
     cellar :any_skip_relocation
