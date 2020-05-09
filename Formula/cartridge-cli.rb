@@ -7,9 +7,9 @@ class CartridgeCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b5bb89bf54e0405bb8115ab20d10e9e88b24d6ed283e8c780c0e685f1ea3dd79" => :catalina
-    sha256 "b5bb89bf54e0405bb8115ab20d10e9e88b24d6ed283e8c780c0e685f1ea3dd79" => :mojave
-    sha256 "b5bb89bf54e0405bb8115ab20d10e9e88b24d6ed283e8c780c0e685f1ea3dd79" => :high_sierra
+    sha256 "8e6687feeb020f55e95198693ef250a88214a383a3d81d7f548c79cf8d671458" => :catalina
+    sha256 "8e6687feeb020f55e95198693ef250a88214a383a3d81d7f548c79cf8d671458" => :mojave
+    sha256 "8e6687feeb020f55e95198693ef250a88214a383a3d81d7f548c79cf8d671458" => :high_sierra
   end
 
   depends_on "cmake" => :build
