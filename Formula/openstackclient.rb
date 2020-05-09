@@ -6,6 +6,13 @@ class Openstackclient < Formula
   url "https://files.pythonhosted.org/packages/9b/09/c45ba3f9436f5b26691a4b1a309c959903bda6d8a5be04eec14f32db451a/python-openstackclient-5.2.0.tar.gz"
   sha256 "0a36aea3596c201593c4b1f54e6bfd57d1bd2920b124a5751df8d05d80498d6a"
 
+  bottle do
+    cellar :any
+    sha256 "9fda769b8014b56978fed605c930b8b6000fd178f25a7bb76ab2e70d6161869b" => :catalina
+    sha256 "894ccc8c111064765969041571753dc9288babcfaf5d3265df9ca39decbbdef8" => :mojave
+    sha256 "849d915699eb738670d4fbee1a515d6cc6f14bd7783966ff14cc1f9916014828" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   resource "appdirs" do
