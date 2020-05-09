@@ -4,6 +4,12 @@ class Fplll < Formula
   url "https://github.com/fplll/fplll/releases/download/5.3.2/fplll-5.3.2.tar.gz"
   sha256 "4d935d712d11902c60a2a5cb50b696391f4ca4a2de59b0daeca74c29024c21fe"
 
+  bottle do
+    sha256 "3d239ac3aa368ab40decdebaf887ce602bf7bce3c02703a07b4e8cd79e0936b2" => :catalina
+    sha256 "37f5d88700570f7436f14534985f56ee310c381a54ce23bb430ec5c282d1aded" => :mojave
+    sha256 "c585d11326473552873aa819b67c7aad6465d71000df0400d3453789c6e96984" => :high_sierra
+  end
+
   depends_on "automake" => :build
   depends_on "pkg-config" => :test
   depends_on "gmp"
