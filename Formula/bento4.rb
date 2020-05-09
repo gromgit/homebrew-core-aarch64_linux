@@ -8,9 +8,9 @@ class Bento4 < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f90b47d477917e0f567895dd96ce1f08ace1ac04719451f12cabd29f5e38aec8" => :catalina
-    sha256 "8e2127cf58ec07d5c6a735072f875c458c96115b9859161e46e1a632e59547d2" => :mojave
-    sha256 "d874fe1f7f65ff3a48c09b63f0dcbe5eb9a77d182165370772861d219cdbd0d2" => :high_sierra
+    sha256 "c2a563a7f037d33921334541e706a3f98ae0556ff08ba3e33992d4c26342de19" => :catalina
+    sha256 "f74dc8941419a6fffe52606dd40e2f612a8b8713ea6249fc6d20b6f3656e1859" => :mojave
+    sha256 "39cf05c54bc595fa014196b8f0fa0847e2d39d25e720bf9c6b581a578a77631b" => :high_sierra
   end
 
   depends_on :xcode => :build
