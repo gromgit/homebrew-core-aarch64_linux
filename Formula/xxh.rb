@@ -6,6 +6,13 @@ class Xxh < Formula
   url "https://files.pythonhosted.org/packages/6b/c0/148dbdac379ecf0fa33b90e5ef86e70acdaf35341c7688c0bfcce1ed44b9/xxh-xxh-0.8.2.tar.gz"
   sha256 "38aff928df11f72f41fdcb775cd75768db7cb7da063f844261b08f78fbe147a8"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "12a05dc35c936df530fb842f63176788f1cd4e805ff5ad486b5ca59261332b6e" => :catalina
+    sha256 "08f209a6f07af017df65708f88626fa645c7e967eaf6f52703c5399d06d79681" => :mojave
+    sha256 "d064447754df949d4840a43b7f1cfb6b6bb8492077180f910f1513f19b187c70" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   resource "pexpect" do
