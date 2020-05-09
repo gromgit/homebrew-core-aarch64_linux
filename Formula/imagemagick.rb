@@ -7,9 +7,9 @@ class Imagemagick < Formula
   head "https://github.com/ImageMagick/ImageMagick.git"
 
   bottle do
-    sha256 "b72ee171b5264d07303fff160d45ec4e81ec799592e561396051cfb232841d01" => :catalina
-    sha256 "a26168472c30f6849cac01d7bec2a7e97e6f513e37d58797ad5b0a248bc0a1f6" => :mojave
-    sha256 "af93ddd3c6b7114c3416b7f9555bb5bbff1f70af1ff2cdf9fc195fc5b1a4267f" => :high_sierra
+    sha256 "7e29dcc73c3f9cd58d6f147433fc84f93acc908ce83237d747d531f3e951144c" => :catalina
+    sha256 "f2e5ee2693d5b90320bc3b60f727f2125a967a8159f701b2d7d6a3d71f1088d9" => :mojave
+    sha256 "725dc997eef6695b0e29b6539453b8941fed31512fdf77a6bfbf4ae628a1d199" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
