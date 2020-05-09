@@ -10,9 +10,9 @@ class Dhall < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "c0d44f7299241c1e9e8997b66aa4547adacf40bc7e8ae1248eab21535dd7243c" => :catalina
-    sha256 "1d7e51871e99b4294a90a8dd240cd5667b25d0d4ba439a29507ce38995a7fcb7" => :mojave
-    sha256 "6ac2d5cca35d8243fb12977a7f5184594c36d7e16fcbd7fa6ab42ce5977251f1" => :high_sierra
+    sha256 "30d39921c9e31a6a543d724052ec2c7931dbb6c4a76c8cf0435e375be94e50de" => :catalina
+    sha256 "cf34d8d789a1e2aa76e330f5fb9aa8fc74b9fbbcce5e6120efe15ca3caa069e7" => :mojave
+    sha256 "9141868a7ed6bb7a80a61e2082ad1c7f3551a1a3dc3f36d48903bfbda6f889a7" => :high_sierra
   end
 
   depends_on "cabal-install" => :build
