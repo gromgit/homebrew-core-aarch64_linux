@@ -6,9 +6,9 @@ class Libplctag < Formula
 
   bottle do
     cellar :any
-    sha256 "34e385d9ee74fd142bc998c09a386b19e74805e03efc3276c98799cd85267101" => :catalina
-    sha256 "c4b28b272b84040536400ce5a45b13f21ea96be46136015e14d57154506a3c39" => :mojave
-    sha256 "20872df137ecfddfbda5cd9b47249cf1b80cc7f6cf15dd8743d78b1ffebc6660" => :high_sierra
+    sha256 "ada6532b7a4d7795e4076287012f5d7943d6f47a1841ec483c69ccfaf1bb8176" => :catalina
+    sha256 "923714a1e235142d584a71ec9f854d1b7bf73b7e1486257207e11a0f68144f36" => :mojave
+    sha256 "fbfcc0140439b27881dec7e5d2dd10a865b7c72ed0e7ef267e27e40dd38735a7" => :high_sierra
   end
 
   depends_on "cmake" => :build
