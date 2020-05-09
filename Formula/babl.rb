@@ -8,9 +8,9 @@ class Babl < Formula
   head "https://github.com/GNOME/babl.git"
 
   bottle do
-    sha256 "2ef985cee9f141135a50598a283ed465798ffb0385c515a30dab0c25a27dc4c8" => :catalina
-    sha256 "55b7746f0c997a0833ff8fec9d892ac6b81382b1c5d7d80f9c939b4b2f27e733" => :mojave
-    sha256 "460bca8dc9a0dbe38e7c659d746a0b3c0df80237c0dfc8884d8750bad75729d9" => :high_sierra
+    sha256 "f496c852dae8483303d4ee8181e2890d6142fa0c12d521fb9aa8a07876ea5773" => :catalina
+    sha256 "74cb9aafa1e5921b32273d2292ad8f0abc21b514f68369cc1695f41b675c8fde" => :mojave
+    sha256 "41c86544c0ec200a57379e9e9a9fdbbf1bb58c3782c647c83f8cb8d4bf865ded" => :high_sierra
   end
 
   depends_on "glib" => :build # for gobject-introspection
