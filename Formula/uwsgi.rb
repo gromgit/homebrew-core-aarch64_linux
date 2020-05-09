@@ -1,7 +1,7 @@
 class Uwsgi < Formula
   desc "Full stack for building hosting services"
   homepage "https://uwsgi-docs.readthedocs.org/en/latest/"
-  revision 2
+  revision 3
   head "https://github.com/unbit/uwsgi.git"
 
   stable do
@@ -25,7 +25,7 @@ class Uwsgi < Formula
   depends_on "pkg-config" => :build
   depends_on "openssl@1.1"
   depends_on "pcre"
-  depends_on "python"
+  depends_on "python@3.8"
   depends_on "yajl"
 
   uses_from_macos "curl"
