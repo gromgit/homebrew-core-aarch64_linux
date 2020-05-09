@@ -4,6 +4,7 @@ class Bento4 < Formula
   url "https://www.bok.net/Bento4/source/Bento4-SRC-1-6-0-632.zip"
   version "1.6.0-632"
   sha256 "faa3a406dc24c3d34d29661bbbe94b42c7f7deee9a5c624696a055bb9b7da6ad"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
@@ -13,7 +14,7 @@ class Bento4 < Formula
   end
 
   depends_on :xcode => :build
-  depends_on "python"
+  depends_on "python@3.8"
 
   conflicts_with "gpac", :because => "both install `mp42ts` binaries"
   conflicts_with "mp4v2",
