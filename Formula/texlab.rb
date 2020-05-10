@@ -7,9 +7,9 @@ class Texlab < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2b5adb43003d51918dcbbac31f5970a485f3307330ae130fa9135c83c45152da" => :catalina
-    sha256 "3b9562f1ec9437a1fab3f1716a3fa90d6881e76010a0332a5db9166a0fa9e038" => :mojave
-    sha256 "5a0849d1364784424b9e60522ac29b958b3eefba891dfc88cac78e6003d1128b" => :high_sierra
+    sha256 "8a055d44ce4473a13978abaf7274977494ab831245cd31a114ad144f3db4d1f5" => :catalina
+    sha256 "018c6135db719ab45b0b45379c5d67de4d7053a665ce9371c22cb4b61a77ea45" => :mojave
+    sha256 "fb41342174c931311937c24ccebb1c2d5b228a98c21e3ed607e9187088cd80fe" => :high_sierra
   end
 
   depends_on "rust" => :build
