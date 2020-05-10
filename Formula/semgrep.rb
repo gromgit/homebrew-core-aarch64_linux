@@ -6,6 +6,13 @@ class Semgrep < Formula
   url "https://github.com/returntocorp/semgrep/archive/v0.6.1.tar.gz"
   sha256 "77cc3b49da0ccd442d8637d201bad4a1fc4065dd68d15bfe4cf7e52d127c0630"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "a556ded32fe45a7fc6e34450440419378503b1c12f2a5d249100dce2586d7ecb" => :catalina
+    sha256 "651f10dfd128aa7db8498a9b2a7873851a4556b70bef489bd49e090d847c84d1" => :mojave
+    sha256 "aa5d2832fc560404305823491734bb6892a198f429a12d4df45aa50034277fda" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "coreutils"=> :build
   depends_on "ocaml" => :build
