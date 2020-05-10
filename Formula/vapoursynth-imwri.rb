@@ -7,9 +7,9 @@ class VapoursynthImwri < Formula
 
   bottle do
     cellar :any
-    sha256 "a12efdd34a1689a5014784cdff4e2c46bca24d67232e9c4f716fc9195261025b" => :catalina
-    sha256 "022c4662d753c8202c3eb8539011549032b53fd038fef2ccfb4465ea47e0525a" => :mojave
-    sha256 "04cef177aeb56e7a23b864b4217a0fc671517ccdebbadee77ab2c8bfe76b3e30" => :high_sierra
+    sha256 "2fc13589c05a71af92cd1bb8b522f88651bbfcf21b1756cbb0f7133eb4177111" => :catalina
+    sha256 "45e9e716004b4b55da0d49df18d47ac3ccea18c26450d5b9fc71f16b4eacaf79" => :mojave
+    sha256 "5600dda1f2e5bca8bdb4a580eb14dcd691f4f5d3f865d4bdf2c8a91595465ade" => :high_sierra
   end
 
   depends_on "autoconf" => :build
