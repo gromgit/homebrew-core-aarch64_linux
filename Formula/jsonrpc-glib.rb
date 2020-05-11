@@ -7,10 +7,9 @@ class JsonrpcGlib < Formula
 
   bottle do
     cellar :any
-    sha256 "1c302e75c1276b6fac906158727353657f8a6a353ec9a395ecbae99a5025dd18" => :catalina
-    sha256 "42081e5890e3bfe1be1d29bc08d2ca9376d9e2493c0a7f1828497e59ffa8cc54" => :mojave
-    sha256 "7fc3931e31121ca0f83710193591bc1ffe2fed9c9300aedead32db047b39e940" => :high_sierra
-    sha256 "b47f0d67cfe99c39b1d789aabcc4e19384afc7477273687b46e359064f79fa32" => :sierra
+    sha256 "a51dd608adcefb9e3514534e49a5db64ad1e38b407b8d9349df7f3eb08bc5fe7" => :catalina
+    sha256 "b0ef1160532600a75471bb0e4cc3f48e7f092111ffa7d494534e46db43accabc" => :mojave
+    sha256 "298d4a37194ab19bc753bb4f7022ec0d34d12a30dd4860806582cda4406b62ec" => :high_sierra
   end
 
   depends_on "gobject-introspection" => :build
