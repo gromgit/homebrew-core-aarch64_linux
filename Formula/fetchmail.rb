@@ -6,9 +6,9 @@ class Fetchmail < Formula
 
   bottle do
     cellar :any
-    sha256 "66608f324aab592b2d5ab414ae20b9ddb8266663bf1a4cdc7419b66136826146" => :catalina
-    sha256 "ecbf246a70f5c7d5939beb5f21bf2cffa9fdb339f93fb763bb26c20486cbb9df" => :mojave
-    sha256 "f6fafd9d2dfef18062f9168edcd3d32f3e97ef04558fe8936f93ce7afaa664e4" => :high_sierra
+    sha256 "c9a5dfab8c291541e7e1277c7c4309dbbb1e73e8b818e5a653b4b18d62d50bab" => :catalina
+    sha256 "d1c2dc3133e47b621d6b6c60ca384c7fb446020042ec56f38511f23e2fe348a4" => :mojave
+    sha256 "e0753454244c267f79cfe5a2f7ec98ed6e5a5db497432545ca47ae67fce1b62a" => :high_sierra
   end
 
   depends_on "openssl@1.1"
