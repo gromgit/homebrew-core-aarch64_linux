@@ -7,9 +7,9 @@ class Gnutls < Formula
   revision 1
 
   bottle do
-    sha256 "4b704a699428a852a8cab36803440e07d9fe4bb2d699000f7afd50194258ec71" => :catalina
-    sha256 "65e99b90567f727c64139003577fb03093e8c8913040e3cbb4993916fd9e9e87" => :mojave
-    sha256 "522ae568850ff6065e92e38953f7813073ae751fe6dea7a7a1f418945971873b" => :high_sierra
+    sha256 "d1556519600c746ffda9937319134d9209d5e0a573be192b58ff81215add4e16" => :catalina
+    sha256 "81fb9a20a31c8c9e7e368b2bc739c69ef256a2cc9627f8c687f8a1f91cb1a977" => :mojave
+    sha256 "3c25419e74f874ca3d7f608e393031543df4ed6f10dbba9d16287f1434dbc71f" => :high_sierra
   end
 
   depends_on "autoconf" => :build
