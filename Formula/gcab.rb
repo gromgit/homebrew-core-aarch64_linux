@@ -6,9 +6,9 @@ class Gcab < Formula
   revision 1
 
   bottle do
-    sha256 "e570c13861c6c889291e1fc67a12c6f0df05129f2e9e80e52b3dbd1a0c406e94" => :catalina
-    sha256 "e566c9d61568f0b6d22be4b9c0775f5b200c891683f9f31c00dc52305a31334a" => :mojave
-    sha256 "0da87712672a12d33556616f283722e9b5684f929e21f91b011e9381d189eba3" => :high_sierra
+    sha256 "7ed919ea9c7d4ec04f9d5f361f8628936e016318475fec26fdf6ef5ea56491cc" => :catalina
+    sha256 "c9ef02142502a47b006db735b87fe7d55611d46ecc087c697d3142ce8bd9c27a" => :mojave
+    sha256 "ca3d97d649c89be881528e7a7cf42f51c18c3a8e4c4b47c9a5fad29f355afd30" => :high_sierra
   end
 
   depends_on "gobject-introspection" => :build
