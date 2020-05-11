@@ -6,9 +6,9 @@ class Baobab < Formula
   revision 3
 
   bottle do
-    sha256 "3994419a1e326594308a62dc3e051f19c3bd611ad1b6b30b0f2098e2d5d9df6a" => :catalina
-    sha256 "b514904b1cbd48c875f9a3de57a376f8349b70cbda60a20de46948948fab7020" => :mojave
-    sha256 "8bdbbb883b2ea30b0585a168a69e3a6601bc8663076769f4af1f0d6c311e699f" => :high_sierra
+    sha256 "eeef57376a72b9637985b679e96cb3306edc024cc928344a3cefa6db7a45a7f8" => :catalina
+    sha256 "b2bb3cefd3f5f6a69a5ad9daa0fbdac74ae101991aa76f6e2ecd52fc05be31ba" => :mojave
+    sha256 "2bf9843dac3e84667dfe18c02c7537d647c99df84139704b23c55297e6373b95" => :high_sierra
   end
 
   depends_on "itstool" => :build
