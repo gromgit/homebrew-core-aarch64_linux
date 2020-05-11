@@ -1,6 +1,6 @@
 class Netdata < Formula
-  desc "Distributed real-time performance and health monitoring"
-  homepage "https://my-netdata.io/"
+  desc "Diagnose infrastructure problems with metrics, visualizations & alarms"
+  homepage "https://netdata.cloud/"
   url "https://github.com/netdata/netdata/releases/download/v1.22.1/netdata-v1.22.1.tar.gz"
   sha256 "f169c8615a6823448c2f1923c87c286d798132ea29d26f366e96d26e0aec3697"
 
