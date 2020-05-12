@@ -6,6 +6,13 @@ class ReorderPythonImports < Formula
   url "https://github.com/asottile/reorder_python_imports/archive/v2.3.0.tar.gz"
   sha256 "c544b19a2900220e6a8d1a070dd651ce0c6885ca592f4e4af99f7551b6d9807b"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "e2e9009355ccc06372f8ac21000c38de63d468d6f15a99a5c3a948ecf7506fe6" => :catalina
+    sha256 "b5e2632c0620a4e06a92b641faf4db96773db00f17b12995c44cbd455fe7d277" => :mojave
+    sha256 "a9613b97997b4137fe7b8fe56717691711573e320af98a10a4cab03694874f8c" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   resource "aspy.refactor-imports" do
