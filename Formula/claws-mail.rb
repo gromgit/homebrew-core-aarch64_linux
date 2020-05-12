@@ -3,6 +3,7 @@ class ClawsMail < Formula
   homepage "https://www.claws-mail.org/"
   url "https://www.claws-mail.org/releases/claws-mail-3.17.5.tar.gz"
   sha256 "f79e4c7f089d08e6b2b3323a90b6f46991a154ce168ba4a829d593b7a5768c7b"
+  revision 1
 
   bottle do
     sha256 "21715bb6c0a1311197209fc443741d7c75051dc83a7f03ed18a876cd8df95e94" => :catalina
@@ -16,6 +17,7 @@ class ClawsMail < Formula
   depends_on "gnutls"
   depends_on "gtk+"
   depends_on "libetpan"
+  depends_on "nettle"
 
   def install
     system "./configure", "--prefix=#{prefix}",
