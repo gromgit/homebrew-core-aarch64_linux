@@ -6,9 +6,9 @@ class Bindfs < Formula
 
   bottle do
     cellar :any
-    sha256 "337dfe5746991f1a87fc48fca513913fed424ab5fa9315a06d0cdc87861b324f" => :catalina
-    sha256 "bc1a6449cd2ee6bef18dfdf345ae789e3c55c61d61cc23f021ddebaedf193b66" => :mojave
-    sha256 "df05d7fdce285b10df1f62c9f1827e63c2aa49e4d170ce5fe12ae43ec10673fb" => :high_sierra
+    sha256 "5058a244ccff7948afdd5e2e09c9c9b30f0d1f16d832912312a0e50e1b55bdd8" => :catalina
+    sha256 "b7dabe6b50cbfeab3e9d18ea0f29ac55220ac11a2e095b21a0ff0fe857f2e1a0" => :mojave
+    sha256 "c6ab23256f69f3296c2a7b49891fabd665911b6f92b5e67c241040e134f76184" => :high_sierra
   end
 
   head do
