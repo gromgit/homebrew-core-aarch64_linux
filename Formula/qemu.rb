@@ -3,6 +3,7 @@ class Qemu < Formula
   homepage "https://www.qemu.org/"
   url "https://download.qemu.org/qemu-5.0.0.tar.xz"
   sha256 "2f13a92a0fa5c8b69ff0796b59b86b080bbb92ebad5d301a7724dd06b5e78cb6"
+  revision 1
   head "https://git.qemu.org/git/qemu.git"
 
   bottle do
@@ -21,6 +22,7 @@ class Qemu < Formula
   depends_on "libusb"
   depends_on "lzo"
   depends_on "ncurses"
+  depends_on "nettle"
   depends_on "pixman"
   depends_on "vde"
 
