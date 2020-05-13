@@ -6,9 +6,9 @@ class Ffsend < Formula
 
   bottle do
     cellar :any
-    sha256 "7c735529d5526478a1077b6cc8a3a516de8a3a3f701ef00159f99a17a30434c9" => :catalina
-    sha256 "de48fc060b6a5160359b97ddf7e0a8be4c280c2cfc0ffdecce6fe540b56bc94a" => :mojave
-    sha256 "87ed1c7fbfc9d11d8e341d54021dd7241cf00c7606ae1cb049dbf8de8a11ff65" => :high_sierra
+    sha256 "05753174f3538f21642ba0b1749d8f8e69ecafb157aae2fd023aaa6803b8c34b" => :catalina
+    sha256 "43ce51a4bd98f035ecfa55ed4e0fdec9de84512cc74c75b14c216a1605257955" => :mojave
+    sha256 "ac439c2e83f9a84436fd1a6155e249bd82f9b778594914c5c6e02ffe83ad26f3" => :high_sierra
   end
 
   depends_on "rust" => :build
