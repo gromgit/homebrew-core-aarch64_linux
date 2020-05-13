@@ -5,9 +5,9 @@ class Zabbix < Formula
   sha256 "5a1762fd2bb7275d9a28c6dfa9a6d46d84be749f9bf50a36eb8fcd20fb8bb6eb"
 
   bottle do
-    sha256 "77400bbc21ca6a942fc1461915c0435ea70f08fd3df8e8bc3f7a484c847718eb" => :catalina
-    sha256 "65886b1277abf913aafc16346f051a1a731942861ff1e61c8ab50b50deba6c18" => :mojave
-    sha256 "1eceb57e7760d5eae7fac886a5aacf7e98efd9cf87e60bc014eaa84cc0091269" => :high_sierra
+    sha256 "772ca82d64f14572c455b6efdfa7b83435d030ab9e214277142b7ee45be738ab" => :catalina
+    sha256 "e0801987dff6c7c497bb6bfe8daf94bdd04485e5d0ae206f4feed7d50c070768" => :mojave
+    sha256 "e803f1b0669ef7b14bd2f1fa9d829160904da9d1bffa28f5b43a0ee6eda18808" => :high_sierra
   end
 
   depends_on "openssl@1.1"
