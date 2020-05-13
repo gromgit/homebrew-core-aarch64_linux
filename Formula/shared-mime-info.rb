@@ -1,8 +1,8 @@
 class SharedMimeInfo < Formula
   desc "Database of common MIME types"
   homepage "https://wiki.freedesktop.org/www/Software/shared-mime-info"
-  url "https://gitlab.freedesktop.org/xdg/shared-mime-info/uploads/b27eb88e4155d8fccb8bb3cd12025d5b/shared-mime-info-1.15.tar.xz"
-  sha256 "f482b027437c99e53b81037a9843fccd549243fd52145d016e9c7174a4f5db90"
+  url "https://gitlab.freedesktop.org/xdg/shared-mime-info/uploads/0440063a2e6823a4b1a6fb2f2af8350f/shared-mime-info-2.0.tar.xz"
+  sha256 "23c1cb7919f31cf97aeb5225548f75705f706aa5cc7d1c4c503364bcc8681e06"
 
   bottle do
     cellar :any
@@ -20,27 +20,25 @@ class SharedMimeInfo < Formula
 
   depends_on "intltool" => :build
   depends_on "itstool" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "gettext"
   depends_on "glib"
+  depends_on "xmlto"
 
   uses_from_macos "libxml2"
 
   def install
+    ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
     # Disable the post-install update-mimedb due to crash
-    args = %W[
-      --disable-dependency-tracking
-      --prefix=#{prefix}
-      --disable-update-mimedb
-    ]
-    if build.head?
-      system "./autogen.sh", *args
-    else
-      system "./configure", *args
+    mkdir "build" do
+      system "meson", *std_meson_args, ".."
+      system "ninja"
+      system "ninja", "install"
+      pkgshare.install share/"mime/packages"
+      rmdir share/"mime"
     end
-    system "make", "install"
-    pkgshare.install share/"mime/packages"
-    rmdir share/"mime"
   end
 
   def post_install
