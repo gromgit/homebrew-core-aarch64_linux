@@ -7,9 +7,9 @@ class Uncrustify < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "6e67d8d13b9495efd0e59e068a2e2ec2a4b637d60467d84293a001ef6a3ef823" => :catalina
-    sha256 "53d2b599a9f90fe3b7b4535907a98afbe055099bbc79b56bb03421146ff3c6fc" => :mojave
-    sha256 "b034c345925922b9e52b7c83107f8accfd1c1fa1d74ebc9dd269b5296ae13e37" => :high_sierra
+    sha256 "8071c9d74d2ed2fdd69c8b9f665dbbcf364cb961796d014adcee6ad71be37e67" => :catalina
+    sha256 "9ede4664a01943bc10c07e643a2c4af2de8c1d91a534a954c78d92780f235b35" => :mojave
+    sha256 "60ffa3330811d4499f928eb7124d6981c1afb24ec0c86a4325d2804c65189828" => :high_sierra
   end
 
   depends_on "cmake" => :build
