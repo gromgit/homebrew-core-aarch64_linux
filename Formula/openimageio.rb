@@ -7,9 +7,9 @@ class Openimageio < Formula
   head "https://github.com/OpenImageIO/oiio.git"
 
   bottle do
-    sha256 "b2e1eab6c50d7921e13fd272b7dc9df5b830058e01c8f619d3f34a111ef93f5f" => :catalina
-    sha256 "0d6efa35c5817faa62b85537a1656861e25089790eb5d81f3ffe9f2f8a2ad7b3" => :mojave
-    sha256 "f2d703a7660b5e15a09d6850ac89d477f76949a405c74ad1981b06f1a5e1b6b2" => :high_sierra
+    sha256 "5dd95633a7a70445707b4d4fcf086684f667d128cd04b7073ea7fba1388bfd71" => :catalina
+    sha256 "5062ea25cc2cff1c63ff4ab8a1824ccc2c9b1ac07442c23bc7630debf214ba14" => :mojave
+    sha256 "b12554fc2b888a5411e3631ac389e00659865f070d66c670386438eb3c7a6e48" => :high_sierra
   end
 
   depends_on "cmake" => :build
