@@ -7,9 +7,9 @@ class Memcached < Formula
 
   bottle do
     cellar :any
-    sha256 "84142958ca828054ee982b489307d5a66a0c8c5e217683fc21866648badcd98a" => :catalina
-    sha256 "f835f7176d16ffc9860d25a3148d5d5aafee7a102fc66f09d682f20dac5e1edb" => :mojave
-    sha256 "b9d3495d7d67e870679135f0ff5ce44aa7318077d68b7da0932b307819a74e34" => :high_sierra
+    sha256 "e942aa7a5eb09af40e100d242a5f65a7caffa077b7aecd2b94b4e81ce5f9c3ff" => :catalina
+    sha256 "72ea783ac973864336ac1b7652475edeb523ce716e66ae4d6f745956429a66f5" => :mojave
+    sha256 "47b162f67655a7cc95a706d5df0df04408038d82e4a859cd747b28590921c175" => :high_sierra
   end
 
   depends_on "libevent"
