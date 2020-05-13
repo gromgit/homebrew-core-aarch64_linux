@@ -5,9 +5,9 @@ class QalculateGtk < Formula
   sha256 "e4c88a9d0750fdec863f287c82893ecb4349532cfb378d2cc690422b4584d65e"
 
   bottle do
-    sha256 "6d337c1307e5db1d4ffa433eaf06d0b69111919d029ce89eb25620f6a0b2d02a" => :catalina
-    sha256 "7f5144110580eb2e62449df7174803797aba9f14737490799436ad1d8e0be749" => :mojave
-    sha256 "a87203f6139a2ad31ac672bf27459b85a1d841268463b9ff9f3d33b4b87f5b19" => :high_sierra
+    sha256 "3167c17fc2d4d09d0c65f02017af6580303313809a85e2915b860c8b34fc621b" => :catalina
+    sha256 "2f7b251548f680ab1d45d00360f69cf5d0d06cc7887fc1a0bbe85d3d7fba04b6" => :mojave
+    sha256 "c6e80c1062e9028e8076b6038f3485ceabb83aa4c00ec1f10d09829ca6d89eda" => :high_sierra
   end
 
   depends_on "intltool" => :build
