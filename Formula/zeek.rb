@@ -4,6 +4,7 @@ class Zeek < Formula
   url "https://github.com/zeek/zeek.git",
       :tag      => "v3.1.3",
       :revision => "4f695cae3ba720981ab7e38c16d4ab1adf4f01f5"
+  revision 1
   head "https://github.com/zeek/zeek.git"
 
   bottle do
