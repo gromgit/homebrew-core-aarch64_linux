@@ -8,9 +8,9 @@ class S3fs < Formula
 
   bottle do
     cellar :any
-    sha256 "e3b74483ce30b458f31ad9b8954589dd1745d3952b52aca65c59bb8e1e147b3d" => :catalina
-    sha256 "5c5b9eecee40292e57fee4729de3df4d12f3d0a089f0d77d8b275d6115c91bd5" => :mojave
-    sha256 "532ddbe33e92d9e4b83e5459500642169a0e59eb4771e12f20f8df3307e131f8" => :high_sierra
+    sha256 "7bc2ba3372d2e56dcd55ac551ce2e437590b7ce4abd88258a5140decf873ce06" => :catalina
+    sha256 "76341907f7148b478881c1784a9a9d5d02327877155d8c8f93d66eb963d4e4d3" => :mojave
+    sha256 "c26a27153d6fc99f4ea7c7a4c8fc51bd1e9e7109a151b8500e10bc7a129d74bc" => :high_sierra
   end
 
   depends_on "autoconf" => :build
