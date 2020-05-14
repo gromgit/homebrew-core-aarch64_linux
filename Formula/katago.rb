@@ -7,9 +7,9 @@ class Katago < Formula
 
   bottle do
     cellar :any
-    sha256 "74b33afb60945ce4660e74d9f2cc93624fc7c34339dd08ff0452755b0550fc3c" => :catalina
-    sha256 "d4ebb68a0dd14bd3e758ae076f758357b5e1e13774e40b4025f4fbe4ea6b6e38" => :mojave
-    sha256 "6d161c4cfe4821b3d0e3550d475f55ceb74916bc8b1e7fb93e8074270df8ea2b" => :high_sierra
+    sha256 "0efeaf52a9deb1121a62024a8a484761580a74f2f9275ce7bc7c805d17ecd51a" => :catalina
+    sha256 "707438fb87f553a3517998d9c724d348c98a924e790b2ff30113ba32afa967db" => :mojave
+    sha256 "89d251bf618a773362b60c937ed7d30fef9311567a9379b9736d248917d59ec1" => :high_sierra
   end
 
   depends_on "cmake" => :build
