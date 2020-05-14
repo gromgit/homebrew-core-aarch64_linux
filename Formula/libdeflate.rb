@@ -6,9 +6,9 @@ class Libdeflate < Formula
 
   bottle do
     cellar :any
-    sha256 "d953614355c76a7aa75c6517fc60b4e5d4163fb5582690a3b00a3b9e1a4fd712" => :catalina
-    sha256 "99672ee99b6bc41349c08cf4f047f21f780ad9aa9cf9eb7cca0639da4f79bb48" => :mojave
-    sha256 "249ed4a8ee9ba404dd8cce6efff0365158992aecaab4a2923b9b62ad35f1234a" => :high_sierra
+    sha256 "212aed6ec63f047e554de8f3214d7af20bff375032c8702df6f8964a568b072a" => :catalina
+    sha256 "6ac658a25367a45ad9d5a28a98e0f4fd80fd8a40fba01b2655a177a0b6ceafbc" => :mojave
+    sha256 "e61e6da245814b3964750d5db14567c85ed51421ea36e43aeee81906fd04a4d3" => :high_sierra
   end
 
   def install
