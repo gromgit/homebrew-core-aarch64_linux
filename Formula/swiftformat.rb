@@ -7,9 +7,9 @@ class Swiftformat < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "20066e7f5becea0099f05dc510634d5193799c4bb5e0e25d6fc6be318e812964" => :catalina
-    sha256 "ff9622c427d88dadc5b0f6348d47044e85ba45e55449ca506687b3773172e2d1" => :mojave
-    sha256 "2dab824409448a41181ae6e41bd6e6a32f9fe373e104b87891ad4327993a870f" => :high_sierra
+    sha256 "2c64a5a79d32d477a9e5f9bc2720d36c64541d527edea47c7b8dc48111d5f356" => :catalina
+    sha256 "e1f2a970e8ab85e0cb3c8f90b512b3dd4e27c928ba2fdecd66a17d105dccc6c3" => :mojave
+    sha256 "e08586cbbf484269065eb74c2a79674498799ceb1b1c3f34d30492946d5b5efd" => :high_sierra
   end
 
   depends_on :xcode => ["10.1", :build]
