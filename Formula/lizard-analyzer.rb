@@ -6,6 +6,13 @@ class LizardAnalyzer < Formula
   url "https://files.pythonhosted.org/packages/e5/f0/95d5032d687418436a29c7e7a19ecba1256faab21add64df8dd4144256b0/lizard-1.17.3.tar.gz"
   sha256 "21994effc04979e80973ae603f02ada19405a773e3aa55795fa952fbb6c0e894"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "80d41ae6d7116eabd0c66c9f23727724d33bb8fca72eec77aff0a6a7f937ce93" => :catalina
+    sha256 "fa707773514478d7b4fd31c41671b4fff34254f039f6df3760aeb1b77ebb455c" => :mojave
+    sha256 "7c0e57fd3a311b21eddad247a58195c0b518d0291a5a651fb066d4f48a5129a9" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   def install
