@@ -7,6 +7,13 @@ class Rbtools < Formula
   sha256 "ff4cea3ad7b2d1b1666b811021cf5047f1fbe9417428fb5133a40ede81e3e83c"
   head "https://github.com/reviewboard/rbtools.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "5a748911d650da054e85d6c78c208664b64c9c78a22c6a44ad33959317893b2c" => :catalina
+    sha256 "cedc380f26e21667b91379462b7108f231c81a736650412f322c5256bb55a2cb" => :mojave
+    sha256 "6aa5f77cc2368f5e442635294a6878d1e3d738a0ac27083ba3856b255c0b3ba2" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   resource "colorama" do
