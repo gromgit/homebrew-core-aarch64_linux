@@ -5,10 +5,9 @@ class Ilmbase < Formula
   sha256 "11f806bf256453e39fc33bd1cf1fa576a54f144cedcdd3e6935a177e5a89d02e"
 
   bottle do
-    rebuild 1
-    sha256 "77fa3ade193f751b7301feae07da4f801adf693ddba02915778c77d142f03311" => :catalina
-    sha256 "26209d6086178373e08d8ca6f5acf1c3b49e6896e1fa4eff0c06a3bd91f7b550" => :mojave
-    sha256 "9d141246fae66f97b71e864f2c8b7264d5f317380f3872017dc52ea1efd3ea3d" => :high_sierra
+    sha256 "4748d38413303488484f98d5fbb94bb90a3f2e6a7fc9830fe5ce12463ef6812b" => :catalina
+    sha256 "c3645960e26293a38a9ed68996c21f9bdd00bf138c66a187d97b3be9a6f63247" => :mojave
+    sha256 "833b56397ee633635ae29f4b7c5f526590038cdda44bf1250fbee59bbada4013" => :high_sierra
   end
 
   depends_on "cmake" => :build
