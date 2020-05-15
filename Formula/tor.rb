@@ -6,9 +6,9 @@ class Tor < Formula
   sha256 "616a0e4ae688d0e151d46e3e4258565da4d443d1ddbd316db0b90910e2d5d868"
 
   bottle do
-    sha256 "e66d5fd20255c03d532cec0c31e750b81c93e048bf3ae0f88bc787578a2844e4" => :catalina
-    sha256 "fbf0241e0cead767d2b977c43c56e39492ad0159dbe647b119e0dc47eb6a4f91" => :mojave
-    sha256 "2e97cc960eae30d69030b9cb577342eda531350bb65eba35571fb30be7cae6ae" => :high_sierra
+    sha256 "1a358ca1ea1c73cbc52b0a011314954da92fed0fa8e5bffd01b3ed1f97a6fc62" => :catalina
+    sha256 "0f21e143f0d968ab33014e2c5ac101addb3de0cb4299722e0674eb4d29972064" => :mojave
+    sha256 "96465afffe32f2dbb9284406e145297f583cb8c5fdfceec3c133371975f824b0" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
