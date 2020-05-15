@@ -1,12 +1,11 @@
 class Go < Formula
   desc "Open source programming language to build simple/reliable/efficient software"
   homepage "https://golang.org"
-  revision 1
 
   stable do
-    url "https://dl.google.com/go/go1.14.2.src.tar.gz"
-    mirror "https://fossies.org/linux/misc/go1.14.2.src.tar.gz"
-    sha256 "98de84e69726a66da7b4e58eac41b99cbe274d7e8906eeb8a5b7eb0aadee7f7c"
+    url "https://dl.google.com/go/go1.14.3.src.tar.gz"
+    mirror "https://fossies.org/linux/misc/go1.14.3.src.tar.gz"
+    sha256 "93023778d4d1797b7bc6a53e86c3a9b150c923953225f8a48a2d5fabc971af56"
 
     go_version = version.to_s.split(".")[0..1].join(".")
     resource "gotools" do
