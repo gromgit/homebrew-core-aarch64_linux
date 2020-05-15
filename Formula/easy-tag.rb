@@ -6,9 +6,9 @@ class EasyTag < Formula
   revision 3
 
   bottle do
-    sha256 "52f2f77282dba441fac171c123788cb48de619308f4b1726e7e2c68e13b07ee2" => :mojave
-    sha256 "88f0ad1c24e8c4baba55dd760e540b2bc3905e3e6cfb35be23f358b7006cd1a8" => :high_sierra
-    sha256 "82ed5509af9fd9eb2847eecc75ec3c181ac159c8d8efccb9de356dd72d1b8151" => :sierra
+    sha256 "24cb5501265cc7bb90a83d648dfb6f13319b9cfdcd6df378947ee6c0729a58d1" => :catalina
+    sha256 "d8afc8a319869681aebbd12e839dccb9a594477ab5a874907af94c3997220ade" => :mojave
+    sha256 "f61312175726838a562db215aa076c1924aa7c038ec2b90099a9bbeedfb1b94a" => :high_sierra
   end
 
   depends_on "intltool" => :build
