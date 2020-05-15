@@ -7,9 +7,9 @@ class NatsServer < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "fe6c8d4f1071ef269568ddd336ce87841746cf917bc50496c39a8ad7e4d31e51" => :catalina
-    sha256 "b81ec9181615a2118a5a47e823318eec5054e4503825bd43a6ad6ab505a47b4f" => :mojave
-    sha256 "09b715a345599e63e3aa58c10523a27e9639d662753d7cca4b3fba7471432900" => :high_sierra
+    sha256 "75373587ef838b12f3ace83a39e8987496d551c786711ccd46c4f1d3c038d44c" => :catalina
+    sha256 "66a6cb75b86ccc17aebd7d1494de0fdf06b880186a0e1cbac2eb131e870cf461" => :mojave
+    sha256 "2c3f3a8192cc2358a30c0a8d6bccc1bd6faf2f4e49c726dfb8d71606496ea6f1" => :high_sierra
   end
 
   depends_on "go" => :build
