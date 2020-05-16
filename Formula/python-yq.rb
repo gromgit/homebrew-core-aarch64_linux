@@ -6,9 +6,9 @@ class PythonYq < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7a1d00a6c2df1f69d52ba4e5514897cb8499214555e707112f03dd4544d9ab6f" => :catalina
-    sha256 "7a1d00a6c2df1f69d52ba4e5514897cb8499214555e707112f03dd4544d9ab6f" => :mojave
-    sha256 "7a1d00a6c2df1f69d52ba4e5514897cb8499214555e707112f03dd4544d9ab6f" => :high_sierra
+    sha256 "01134f6bc2acd0c2cc57c572e8d17e31f16ec258f442a87c43a86a2e40839bc7" => :catalina
+    sha256 "01134f6bc2acd0c2cc57c572e8d17e31f16ec258f442a87c43a86a2e40839bc7" => :mojave
+    sha256 "01134f6bc2acd0c2cc57c572e8d17e31f16ec258f442a87c43a86a2e40839bc7" => :high_sierra
   end
 
   depends_on "jq"
