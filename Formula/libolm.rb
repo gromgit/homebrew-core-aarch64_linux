@@ -4,6 +4,13 @@ class Libolm < Formula
   url "https://gitlab.matrix.org/matrix-org/olm/-/archive/3.1.4/olm-3.1.4.tar.gz"
   sha256 "1ca9926ce71d778fb7352d1ee77513194db8c7f49c0d69d38ac49ec3bafcea38"
 
+  bottle do
+    cellar :any
+    sha256 "87dc2b50b798509939fe13070a430ce9b272cde84a31dea24096893360cc8742" => :catalina
+    sha256 "58d57753b78ee0a0689251f7db57d941e082bee89016a1eae8491eb7426596f2" => :mojave
+    sha256 "691c24a47f7a376d1e5e6db1e3981561c07d1b82531de4fd7796a0577112def9" => :high_sierra
+  end
+
   depends_on "cmake" => :build
 
   def install
