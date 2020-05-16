@@ -6,9 +6,9 @@ class Oha < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0a95a7d0c74e587c2a22e5f3883d4c4f221457f4b1d3b949eea6c8f69307a237" => :catalina
-    sha256 "64d4b2fcc06b45d01cca70fb2e21f0365420577ea298e12014b6a61f4c2765f2" => :mojave
-    sha256 "87f11b14a7664a7fce576e146bb65d950dfe1d30530cd84d939beb9ce6182530" => :high_sierra
+    sha256 "748634b4dee5550ad9cfbcfc2d0f31fca67126bac60e6d0be32ad40a891525d2" => :catalina
+    sha256 "e22630186be4a6409259c46904779dac011f32d96d48b1d610057dbdfe049420" => :mojave
+    sha256 "f67098ac6246795347f7fe3014bd12249d21a0e9279df4671a1743866be819bb" => :high_sierra
   end
 
   depends_on "rust" => :build
