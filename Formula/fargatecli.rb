@@ -6,9 +6,9 @@ class Fargatecli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "3964c9be2a8489092918ea558c73585ee946e942540b2b3a90e184b80006b232" => :catalina
-    sha256 "7bdf49489c1f9e4ae108e79204c68a3f77145befe1e4584e5f7cf3629ff4f1ec" => :mojave
-    sha256 "f81fed7339f3291da266bd8e2410b1ba336d5580afa779d8018a6312354ec30b" => :high_sierra
+    sha256 "4cf90341de4a444842414de2364ae5ed51283008dfd99739cde4fcd00583f50a" => :catalina
+    sha256 "193a1ca57966d54bc0ebaaa5b28397448f2ecc0276d6f69b4adc20acd8324553" => :mojave
+    sha256 "c5b6d73103fdab97321d13426271177f03bb1240db637f8d252678e376e7f129" => :high_sierra
   end
 
   depends_on "go" => :build
