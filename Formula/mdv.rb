@@ -7,10 +7,10 @@ class Mdv < Formula
   sha256 "1534f477c85d580352c82141436f6fdba79d329af8a5ee7e329fea14424a660d"
 
   bottle do
-    cellar :any
-    sha256 "890a4b74e721fb435e1d4ef0ff0c8f5b6e3571bf36e0d57562d720ef197524ef" => :catalina
-    sha256 "b9570e94bcc659b48b3c3629e16e03f12f484f0d9212108ebae958c5464294ab" => :mojave
-    sha256 "89ca2ef413cebd689db91754227919ebbc28934558fadd81dde681bccabe99a7" => :high_sierra
+    cellar :any_skip_relocation
+    sha256 "ba336eac38af86dd98d74dbba06226d13b0bc8af719e1e40a863f9f394da4de8" => :catalina
+    sha256 "ecb421e63e0278668ae2d570c8095186cb3e4695c5ba9891f20d16c2ba3c6e6c" => :mojave
+    sha256 "3b9847a65d7c9820148cd848687efdb598193cc76abb031c1f71841bad2ec60d" => :high_sierra
   end
 
   depends_on "python@3.8"
