@@ -6,9 +6,9 @@ class Benthos < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "599485f682abaef24955c09190956d58375362f213582961d62f6c60a009eddb" => :catalina
-    sha256 "f62220172d926f6d9b1f11bddf3107f60c2172381ac11386be12fc611b6fc277" => :mojave
-    sha256 "b8c775c3b7e3699f8aa9aac75b30c96cea0a7c8db9417f80cd87a507ffbe0836" => :high_sierra
+    sha256 "7f8152e7ca86b2d93b55ae1020caa646a23f6d8ec447a7c571ba5df73c2a9e62" => :catalina
+    sha256 "de9186a5bcc1c58e9a835d13e66adaad9ac2cab4e30568ff73ada8c7d535284f" => :mojave
+    sha256 "4d6ff298feb1f09e1399c0af1c8532a62e4b161519b91c9080d532215d1801af" => :high_sierra
   end
 
   depends_on "go" => :build
