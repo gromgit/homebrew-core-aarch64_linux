@@ -7,9 +7,9 @@ class Janet < Formula
 
   bottle do
     cellar :any
-    sha256 "fe2367ff467e6083acbdbfc139a71737bfc08cc0227f5178e069b258175559b4" => :catalina
-    sha256 "35fe589e74261385353445044fb32e19583a8bc92dd2b481f1a85f7502cc4f1f" => :mojave
-    sha256 "550b00542de4d10d95bf2644df7af5b334246ec1de5815fce1b83ae4c0f1b57d" => :high_sierra
+    sha256 "b0f87aeaeeb946fbf7182d6e61e05893805a128183c2f284601fe4e26225b907" => :catalina
+    sha256 "49894dbf5bc695d03f34fe3d6a85c7f136146dc41b938f41b63f709ad52e2cbb" => :mojave
+    sha256 "e7deb281b982a08f3db52e945e5f7e16be8893ff8542157fb31d86e9ede70467" => :high_sierra
   end
 
   depends_on "meson" => :build
