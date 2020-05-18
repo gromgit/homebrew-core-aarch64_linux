@@ -12,7 +12,7 @@ class Singular < Formula
   end
 
   head do
-    url "https://github.com/Singular/Sources.git"
+    url "https://github.com/Singular/Sources.git", :branch => "spielwiese"
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
