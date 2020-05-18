@@ -3,6 +3,7 @@ class Cgns < Formula
   homepage "http://cgns.org/"
   url "https://github.com/CGNS/CGNS/archive/v4.1.1.tar.gz"
   sha256 "055d345c3569df3ae832fb2611cd7e0bc61d56da41b2be1533407e949581e226"
+  revision 1
 
   bottle do
     cellar :any
@@ -29,6 +30,9 @@ class Cgns < Formula
       system "make"
       system "make", "install"
     end
+
+    # Avoid references to Homebrew shims
+    inreplace include/"cgnsBuild.defs", HOMEBREW_LIBRARY/"Homebrew/shims/mac/super/clang", "/usr/bin/clang"
   end
 
   test do
