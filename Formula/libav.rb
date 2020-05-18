@@ -8,10 +8,9 @@ class Libav < Formula
 
   bottle do
     cellar :any
-    rebuild 2
-    sha256 "7f3a3cae29f6c8348d57b101865a5904dc0490e8864cd19de6b0a7f9b8524ba1" => :catalina
-    sha256 "d6e35dd5a833e5063badfbc698cde4864ea2d2ac44aa2b2f04024689839977ff" => :mojave
-    sha256 "a6010c03f0c787196e9a0f68b78ccae7d4b0f4cf537cc302d235c0d668dc9791" => :high_sierra
+    sha256 "027335a96cc688407271d4f9ec12523f79ecfb126a926839994e1c9190d71251" => :catalina
+    sha256 "577b974ce939ba95b00694379340abe7a2ee7a063caa3d4191e0300e3b91290b" => :mojave
+    sha256 "950e1c17cd550152bb38d564411b45ae5ef9873d1ce72d6a6f394e2eb7c3c76c" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
