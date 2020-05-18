@@ -6,6 +6,13 @@ class Trailscraper < Formula
   url "https://github.com/flosell/trailscraper/archive/0.5.1.tar.gz"
   sha256 "6793353bef9cf17379d556e7811d225ee852c6c2e975deb7219d684be7b12c5b"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "d86bcf1d9bbb2b3f32c2fd096f79ad92e417ed2defc7b4c3606842ed3dae3fc2" => :catalina
+    sha256 "5bcf661b1dc5be7ba1d3a75f48cf6cbcc23f9130a85918111a3e3b42bcec960e" => :mojave
+    sha256 "dcf453b4faf51fbd81fdc73ad354a119fc4089291b604c02aedd9f29ae1d5248" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   resource "boto3" do
