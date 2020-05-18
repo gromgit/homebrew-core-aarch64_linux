@@ -5,6 +5,13 @@ class Spotifyd < Formula
   sha256 "d3763f4647217a8f98ee938b50e141d67a5f3d33e9378894fde2a92c9845ef80"
   head "https://github.com/Spotifyd/spotifyd.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "3f51d6a45bdb965dcc88e34411949006b21050b7dfde5482e46cc6d74de41fa8" => :catalina
+    sha256 "c8ab59ca503c0cc84a1d684950be2e40db6bffc9f4392a686852fe10f0e3137c" => :mojave
+    sha256 "10b06d3fd2aaab659a75eb67170cd0e54f81830b3ebd4b7a65d1bcf7dce17570" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "rust" => :build
   depends_on "dbus"
