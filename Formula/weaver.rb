@@ -1,8 +1,8 @@
 class Weaver < Formula
   desc "Command-line tool for Weaver"
   homepage "https://github.com/scribd/Weaver"
-  url "https://github.com/scribd/Weaver/archive/1.0.4.tar.gz"
-  sha256 "65c15b0575775b0cc5205f1bf4ebcbf471fc3f048a462e06dca13b93138269fc"
+  url "https://github.com/scribd/Weaver/archive/1.0.5.tar.gz"
+  sha256 "376edd5cb9e839c20d09858993883c42166a932648e623e0a1b1a102a7bcd0f9"
 
   bottle do
     cellar :any_skip_relocation
