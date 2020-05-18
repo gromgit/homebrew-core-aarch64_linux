@@ -18,9 +18,9 @@ class Yaws < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d01998af826e2f88ac63dccef32ad3645e8bcb4669600920c7901170c3f8c41c" => :catalina
-    sha256 "967e1b4304211fb8923d6b03e467b6d851ab90b36901046b7e88e99238c7e758" => :mojave
-    sha256 "425c18805885559508bbdb1e41a3fdde09e57bb5b5e7e7e9d6a9b82cbea6021b" => :high_sierra
+    sha256 "09997293c21d6a547bd35e3c6384eae48376665729e02e9008d3fe59e2436c4d" => :catalina
+    sha256 "bb522ea70a11984cb30b10ad4a0fe6a8140d4a6b55916ded173fb44732d185e4" => :mojave
+    sha256 "627c282c11101b0f7b036e52ddff6e33db668540bb8c94a7ba9e45ab510f46f4" => :high_sierra
   end
 
   depends_on "autoconf" => :build
