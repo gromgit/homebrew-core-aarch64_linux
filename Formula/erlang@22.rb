@@ -5,6 +5,13 @@ class ErlangAT22 < Formula
   url "https://github.com/erlang/otp/archive/OTP-22.3.4.tar.gz"
   sha256 "79657e07aee0cc174f89c1bd7d8d251295f64144cced6ea72b98777ec6a6660d"
 
+  bottle do
+    cellar :any
+    sha256 "2a479a0747b354992d65e6abf4d6bc7b776b460fb9e69b975ec1e5bacc8d21a0" => :catalina
+    sha256 "f3e6720c3ca38669232e46f2ffc9abaea1626ef0286af8fc1fe6cfe34ab3efd3" => :mojave
+    sha256 "c3a070c5f750e1cde904346475ce91dddab621e2ca21e522893b32dd720cef23" => :high_sierra
+  end
+
   keg_only :versioned_formula
 
   depends_on "autoconf" => :build
