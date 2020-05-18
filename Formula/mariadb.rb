@@ -1,8 +1,8 @@
 class Mariadb < Formula
   desc "Drop-in replacement for MySQL"
   homepage "https://mariadb.org/"
-  url "https://downloads.mariadb.com/MariaDB/mariadb-10.4.12/source/mariadb-10.4.12.tar.gz"
-  sha256 "fef1e1d38aa253dd8a51006bd15aad184912fce31c446bb69434fcde735aa208"
+  url "https://downloads.mariadb.com/MariaDB/mariadb-10.4.13/source/mariadb-10.4.13.tar.gz"
+  sha256 "45bbbb12d1de8febd9edf630e940c23cf14efd60570c743b268069516a5d91df"
 
   bottle do
     sha256 "eaaf500f730bfed25cf8015e80ba224b9873be9706e6eca21d9ca53711c0bcd8" => :catalina
@@ -25,12 +25,6 @@ class Mariadb < Formula
   conflicts_with "mytop", :because => "both install `mytop` binaries"
   conflicts_with "mariadb-connector-c",
     :because => "both install plugins"
-
-  # Fix for https://jira.mariadb.org/browse/MDEV-21592
-  patch do
-    url "https://github.com/MariaDB/server/commit/42b29d41335d2f6991b8c9f110fe1e1476764ace.patch?full_index=1"
-    sha256 "7f61bf5dde90a80f6af6f37e27fbce67f853dace98483a030a3dce9b1c1481f0"
-  end
 
   def install
     # Set basedir and ldata so that mysql_install_db can find the server
