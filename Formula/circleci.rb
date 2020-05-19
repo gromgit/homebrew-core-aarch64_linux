@@ -8,9 +8,9 @@ class Circleci < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "686c5f3923808f35d739da7e345a9be76f9b3dd4013c80c91bc44517a259f1cd" => :catalina
-    sha256 "fa607ef01ed3f0228c7295277009ffc86f8cef4eb1587597bb9584ab1e3645ad" => :mojave
-    sha256 "2b3c6042aa01f6ccfa50e4b7107f879b328c5181aebeb44c3b6fa530fb96f370" => :high_sierra
+    sha256 "3c8df2be5efed021c910288fed4d0154d9a6d4722f5c88492efc5624c40b4419" => :catalina
+    sha256 "b71dc40df970b58205c41a89d2f31f9cd0574a47f29dc022134336c709220a8c" => :mojave
+    sha256 "bcd81d9f730a5d27df7de0bdc3c91b737ad9ef69a3d9c2a235c7ca3baf340e5f" => :high_sierra
   end
 
   depends_on "go" => :build
