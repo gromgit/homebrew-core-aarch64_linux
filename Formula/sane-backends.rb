@@ -16,10 +16,9 @@ class SaneBackends < Formula
   end
 
   bottle do
-    sha256 "07216e961a590f3d9a00b43cae10b132ed5008309a410db93d68aa4dca824888" => :catalina
-    sha256 "132822ae224a20672067f3c5017abe7d7b00af43bea92dbe051cc62a94f03a72" => :mojave
-    sha256 "99eabfb87281a6a88c00d9b9c52da3bcbfe430b0f66088c6ea5a5d4e0caad170" => :high_sierra
-    sha256 "1c8dd4cbc1bec193f3bca14d19d79a513b7336f276ce0f373088391d38621173" => :sierra
+    sha256 "4d9b0e82a282fc75379e56de828da1601a63bdc49afe7be8a0e685a1ec5f2f6a" => :catalina
+    sha256 "52405560cb01a2b2cc6afdcc813d2ef57386b09790f36df3126a0764ece0005b" => :mojave
+    sha256 "9911d3ac5aebaa5c7313d2076ddb355b4f9d4475fb94b774373445ef97313297" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
