@@ -1,9 +1,8 @@
 class Libpqxx < Formula
   desc "C++ connector for PostgreSQL"
   homepage "https://pqxx.org/development/libpqxx/"
-  url "https://github.com/jtv/libpqxx/archive/6.4.5.tar.gz"
-  sha256 "86921fdb0fe54495a79d5af2c96f2c771098c31e9b352d0834230fd2799ad362"
-  revision 5
+  url "https://github.com/jtv/libpqxx/archive/7.1.1.tar.gz"
+  sha256 "cdf1efdc77de20e65f3affa0d4d9f819891669feb159eff8893696bf7692c00d"
 
   bottle do
     cellar :any
@@ -33,7 +32,7 @@ class Libpqxx < Formula
         return 0;
       }
     EOS
-    system ENV.cxx, "-std=c++11", "test.cpp", "-L#{lib}", "-lpqxx",
+    system ENV.cxx, "-std=c++17", "test.cpp", "-L#{lib}", "-lpqxx",
            "-I#{include}", "-o", "test"
     # Running ./test will fail because there is no runnning postgresql server
     # system "./test"
