@@ -5,6 +5,7 @@ class Grpc < Formula
     :tag      => "v1.28.1",
     :revision => "cb81fe0dfaa424eb50de26fb7c904a27a78c3f76",
     :shallow  => false
+  revision 1
   head "https://github.com/grpc/grpc.git"
 
   bottle do
