@@ -1,8 +1,8 @@
 class Grafana < Formula
   desc "Gorgeous metric visualizations and dashboards for timeseries databases"
   homepage "https://grafana.com"
-  url "https://github.com/grafana/grafana/archive/v6.7.3.tar.gz"
-  sha256 "2477b70bfc8770ab844ee683f72b5efe8a47324b9779663d8e5259ffb9ddb8d8"
+  url "https://github.com/grafana/grafana/archive/v7.0.0.tar.gz"
+  sha256 "d1c36a3d1c4e701b56459ef00a5ad2bba543ccde83645960bb04269c3c251228"
   head "https://github.com/grafana/grafana.git"
 
   bottle do
@@ -13,7 +13,7 @@ class Grafana < Formula
   end
 
   depends_on "go" => :build
-  depends_on "node@10" => :build
+  depends_on "node" => :build
   depends_on "yarn" => :build
 
   def install
@@ -34,7 +34,7 @@ class Grafana < Formula
       cp("conf/sample.ini", "conf/grafana.ini.example")
       etc.install "conf/sample.ini" => "grafana/grafana.ini"
       etc.install "conf/grafana.ini.example" => "grafana/grafana.ini.example"
-      pkgshare.install "conf", "public", "tools", "vendor"
+      pkgshare.install "conf", "public", "tools"
       prefix.install_metafiles
     end
   end
@@ -119,7 +119,7 @@ class Grafana < Formula
     listening = Timeout.timeout(10) do
       li = false
       r.each do |l|
-        if /Initializing HTTPServer/.match?(l)
+        if /HTTP Server Listen/.match?(l)
           li = true
           break
         end
