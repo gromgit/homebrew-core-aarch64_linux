@@ -7,9 +7,9 @@ class Libuv < Formula
 
   bottle do
     cellar :any
-    sha256 "d4e33db48819f466b6b1391242f95f1e61ccd0e27418693610a5eeec20633350" => :catalina
-    sha256 "57bf25fd1ab863968f9a82edd549b4374af5d0f135fd050c31d26782f5ca7924" => :mojave
-    sha256 "c70a5ebdc2056c76571a82c25e7767ff36ff8f77c4349f641b4f4c841a7d337f" => :high_sierra
+    sha256 "49933a77e2c7022eea4bc13481a22b46b4335abb5202b9815ea81b5b71cfa508" => :catalina
+    sha256 "649cb26495fd52cbfcefc6aedbaa4be5cae50dab66132083cd912b213468bff0" => :mojave
+    sha256 "b4840d8c12a0f5384c0d82e124889cdbe4ca6a5e8dd0c9adb3c3dfdd6539b303" => :high_sierra
   end
 
   depends_on "autoconf" => :build
