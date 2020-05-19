@@ -1,9 +1,8 @@
 class PostgresqlAT11 < Formula
   desc "Object-relational database system"
   homepage "https://www.postgresql.org/"
-  url "https://ftp.postgresql.org/pub/source/v11.7/postgresql-11.7.tar.bz2"
-  sha256 "324ae93a8846fbb6a25d562d271bc441ffa8794654c5b2839384834de220a313"
-  revision 1
+  url "https://ftp.postgresql.org/pub/source/v11.8/postgresql-11.8.tar.bz2"
+  sha256 "eaf2f4329ccc349c89e950761b81daf8c99bb8966abcab5665ccd6ee95c77ae2"
 
   bottle do
     sha256 "679f29325fc0bb5c3c284d80be67910aa5348989bd02a7f067ab9ce1f0f3b9ff" => :catalina
@@ -23,9 +22,6 @@ class PostgresqlAT11 < Formula
   uses_from_macos "perl"
 
   def install
-    # avoid adding the SDK library directory to the linker search path
-    ENV["XML2_CONFIG"] = "xml2-config --exec-prefix=/usr"
-
     ENV.prepend "LDFLAGS", "-L#{Formula["openssl@1.1"].opt_lib} -L#{Formula["readline"].opt_lib}"
     ENV.prepend "CPPFLAGS", "-I#{Formula["openssl@1.1"].opt_include} -I#{Formula["readline"].opt_include}"
 
