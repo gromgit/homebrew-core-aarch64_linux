@@ -5,6 +5,13 @@ class Pfetch < Formula
   sha256 "d1f611e61c1f8ae55bd14f8f6054d06fcb9a2d973095367c1626842db66b3182"
   head "https://github.com/dylanaraps/pfetch.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "f93914feee7f4e3cda77341c3bddf2cf51eb4b2aed01f6ace771db75078da570" => :catalina
+    sha256 "f93914feee7f4e3cda77341c3bddf2cf51eb4b2aed01f6ace771db75078da570" => :mojave
+    sha256 "f93914feee7f4e3cda77341c3bddf2cf51eb4b2aed01f6ace771db75078da570" => :high_sierra
+  end
+
   def install
     if build.head?
       bin.mkdir
