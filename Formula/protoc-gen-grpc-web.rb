@@ -5,6 +5,7 @@ class ProtocGenGrpcWeb < Formula
   homepage "https://github.com/grpc/grpc-web"
   url "https://github.com/grpc/grpc-web/archive/1.0.7.tar.gz"
   sha256 "04460e28ffa80bfc797a8758da10ba40107347ef0af8e9cc065ade10398da4bb"
+  revision 1
 
   bottle do
     cellar :any
