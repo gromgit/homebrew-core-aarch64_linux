@@ -1,9 +1,8 @@
 class PostgresqlAT10 < Formula
   desc "Object-relational database system"
   homepage "https://www.postgresql.org/"
-  url "https://ftp.postgresql.org/pub/source/v10.12/postgresql-10.12.tar.bz2"
-  sha256 "388f7f888c4fbcbdf424ec2bce52535195b426010b720af7bea767e23e594ae7"
-  revision 1
+  url "https://ftp.postgresql.org/pub/source/v10.13/postgresql-10.13.tar.bz2"
+  sha256 "4d701f450cd92ffb123cf6c296e9656abbc2ab7ea6507894ff1e2475ae0754e1"
 
   bottle do
     sha256 "c840ef62b81473eba5aa76ed93105a44e311b0fbc95c3a69398bc116aaf3b3aa" => :catalina
@@ -22,9 +21,6 @@ class PostgresqlAT10 < Formula
   uses_from_macos "perl"
 
   def install
-    # avoid adding the SDK library directory to the linker search path
-    ENV["XML2_CONFIG"] = "xml2-config --exec-prefix=/usr"
-
     ENV.prepend "LDFLAGS", "-L#{Formula["openssl@1.1"].opt_lib} -L#{Formula["readline"].opt_lib}"
     ENV.prepend "CPPFLAGS", "-I#{Formula["openssl@1.1"].opt_include} -I#{Formula["readline"].opt_include}"
 
@@ -59,7 +55,17 @@ class PostgresqlAT10 < Formula
     # to inside the SDK, so we need to use `-iwithsysroot` instead
     # of `-I` to point to the correct location.
     # https://www.postgresql.org/message-id/153558865647.1483.573481613491501077%40wrigleys.postgresql.org
-    ENV.prepend "LDFLAGS", "-R#{lib}/postgresql"
+    if DevelopmentTools.clang_build_version >= 1000
+      inreplace "configure",
+                "-I$perl_archlibexp/CORE",
+                "-iwithsysroot $perl_archlibexp/CORE"
+      inreplace "contrib/hstore_plperl/Makefile",
+                "$(perl_archlibexp)/CORE",
+                "-iwithsysroot $(perl_archlibexp)/CORE"
+      inreplace "src/pl/plperl/GNUmakefile",
+                "$(perl_archlibexp)/CORE",
+                "-iwithsysroot $(perl_archlibexp)/CORE"
+    end
 
     system "./configure", *args
     system "make"
