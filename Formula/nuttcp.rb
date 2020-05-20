@@ -6,12 +6,9 @@ class Nuttcp < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "30f53416222f980f2020a0640a6cd62ca31038ea48b8aea06157b927aee04bae" => :catalina
-    sha256 "82951677c224a70e463033f266791122d7419dd5308bef61da5474738151497b" => :mojave
-    sha256 "bb494c46c81a914bb8eb66ad4476c2503e0345fc8f9dcf82c5cd2576fe005869" => :high_sierra
-    sha256 "9f4ca632e04e072eea5d17a54cd42e22d63ef7902e452d1133d42fea0ca2f829" => :sierra
-    sha256 "c38cac9cdf461d9f44a34dc1c7db83909a38faee07c1f5c43af3a4f816527493" => :el_capitan
+    sha256 "0f5e7a2b61f91360023ef643c0a77fa711855b34006ff07867f1283051aded5c" => :catalina
+    sha256 "de0d1395983d9980dfff73de8282b76bf70c987fb36c68ff5e341f245507100a" => :mojave
+    sha256 "8d9ea3c88d5347b34cc4b3385b6898f942b8e4ff5a4f4a26897e4b66297e2692" => :high_sierra
   end
 
   def install
