@@ -1,9 +1,8 @@
 class Glib < Formula
   desc "Core application library for C"
   homepage "https://developer.gnome.org/glib/"
-  url "https://download.gnome.org/sources/glib/2.64/glib-2.64.2.tar.xz"
-  sha256 "9a2f21ed8f13b9303399de13a0252b7cbcede593d26971378ec6cb90e87f2277"
-  revision 1
+  url "https://download.gnome.org/sources/glib/2.64/glib-2.64.3.tar.xz"
+  sha256 "fe9cbc97925d14c804935f067a3ad77ef55c0bbe9befe68962318f5a767ceb22"
 
   bottle do
     sha256 "b8e8a0f1229f7094233832516f5aad725c1447a74cc1ca342b69da9b7a5aed9f" => :catalina
