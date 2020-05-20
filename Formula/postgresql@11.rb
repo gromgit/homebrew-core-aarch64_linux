@@ -3,6 +3,7 @@ class PostgresqlAT11 < Formula
   homepage "https://www.postgresql.org/"
   url "https://ftp.postgresql.org/pub/source/v11.8/postgresql-11.8.tar.bz2"
   sha256 "eaf2f4329ccc349c89e950761b81daf8c99bb8966abcab5665ccd6ee95c77ae2"
+  revision 1
 
   bottle do
     sha256 "6116cb9a2822f353b15ea4a2829422b4464365b463d0c4b2bd12e91c7524c0fc" => :catalina
@@ -43,15 +44,9 @@ class PostgresqlAT11 < Formula
       --with-openssl
       --with-pam
       --with-perl
+      --with-tcl
       --with-uuid=e2fs
     ]
-
-    # The CLT is required to build Tcl support on 10.7 and 10.8 because
-    # tclConfig.sh is not part of the SDK
-    args << "--with-tcl"
-    if File.exist?("#{MacOS.sdk_path}/System/Library/Frameworks/Tcl.framework/tclConfig.sh")
-      args << "--with-tclconfig=#{MacOS.sdk_path}/System/Library/Frameworks/Tcl.framework"
-    end
 
     system "./configure", *args
     system "make"
