@@ -8,9 +8,9 @@ class Libpulsar < Formula
 
   bottle do
     cellar :any
-    sha256 "da5e0215ca5c0d10c8271575555b225a7b0dc48fef1be73941832cd2002ba97a" => :catalina
-    sha256 "92b3f55782789d455f0bec4b311f9f0c409ff0168c24f588ef34fa8878c218db" => :mojave
-    sha256 "65c1a5c6e15e3b7ab044ff89818d50889421a3c6a24ded1b1ba6a24383c78386" => :high_sierra
+    sha256 "780d9a0a1541ee024bfe219da3436c8dbdd00e4fbf51789160731add419b551a" => :catalina
+    sha256 "28e5d1be4c8b5fdfde5b565d354765a5c07ab0d3b79a8b66d5a249bba9c2923b" => :mojave
+    sha256 "d488ba79662d21832e9d8a6f7b0e246ffd0951f43548bb50554ab6c443815caa" => :high_sierra
   end
 
   depends_on "cmake" => :build
