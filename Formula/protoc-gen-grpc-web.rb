@@ -9,9 +9,9 @@ class ProtocGenGrpcWeb < Formula
 
   bottle do
     cellar :any
-    sha256 "129c684b65cce97cd36729479df8804643de426f5e52e3a0a6654243505dafbe" => :catalina
-    sha256 "ed5f8523ab88b5635d6b827bdd72be2e009cb09a8a45d43b68716f1d62df6200" => :mojave
-    sha256 "f14223921064cfab57262adfd6983a9ce1ce201aeb3da5ba03973d3c65a0ddf3" => :high_sierra
+    sha256 "9ea8d0854a7150369ef456888b09e06a3eccb8000292e32c85a791923b29dae9" => :catalina
+    sha256 "e726aaefde24e772f4063778399f8d12e286361c3413e22d04c642ca89a1acc6" => :mojave
+    sha256 "6804424f4eb74a1a9aa4173c03e33ee471d5b40f32890322faa10d2a914c8160" => :high_sierra
   end
 
   depends_on "cmake" => :build
