@@ -1,9 +1,8 @@
 class Libarchive < Formula
   desc "Multi-format archive and compression library"
   homepage "https://www.libarchive.org"
-  url "https://www.libarchive.org/downloads/libarchive-3.4.2.tar.xz"
-  sha256 "d8e10494b4d3a15ae9d67a130d3ab869200cfd60b2ab533b391b0a0d5500ada1"
-  revision 1
+  url "https://www.libarchive.org/downloads/libarchive-3.4.3.tar.xz"
+  sha256 "0bfc3fd40491768a88af8d9b86bf04a9e95b6d41a94f9292dbc0ec342288c05f"
 
   bottle do
     cellar :any
