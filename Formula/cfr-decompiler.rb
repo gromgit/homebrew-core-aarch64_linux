@@ -1,8 +1,9 @@
 class CfrDecompiler < Formula
   desc "Yet Another Java Decompiler"
   homepage "https://www.benf.org/other/cfr/"
-  url "https://github.com/leibnitz27/cfr/archive/0.149.tar.gz"
-  sha256 "6d1883710ed1585cc4b675bc0d56b87351aff14dfc74270790b7bb3ff8f79743"
+  url "https://github.com/leibnitz27/cfr.git",
+      :tag      => "0.150",
+      :revision => "1361cd7fa74f25f30a6bbf72c825d83647d2cdaf"
   head "https://github.com/leibnitz27/cfr.git"
 
   bottle do
