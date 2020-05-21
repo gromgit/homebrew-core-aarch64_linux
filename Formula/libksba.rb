@@ -6,13 +6,9 @@ class Libksba < Formula
 
   bottle do
     cellar :any
-    sha256 "053305af33914481778072555caae0b3d066c378ac237b8ea1e1e5633c16254d" => :catalina
-    sha256 "40e173dd9633f0178efe61bbc102e22396ccaf8e397a26726491873d043fbefc" => :mojave
-    sha256 "d4fff673a919dd666e81cf857af1b5fbb32b21e1c35df1e05d299401a08d5334" => :high_sierra
-    sha256 "b7b47004aa87a4464b74992bca866d0fe7960597085f99463598d37264ed2a01" => :sierra
-    sha256 "65fbc5b34f507b1bac6d7a3dc926eab3aeb90e028f1e4dad5868039d61dfdf76" => :el_capitan
-    sha256 "113e407c5d04392cedbcf901841508d68a9ce8ad858cbff2edf9b2a56eef787a" => :yosemite
-    sha256 "a3c9609e2dad2939138cb109ed75903b633f84f3e914ecba1b83de91aa2eccd2" => :mavericks
+    sha256 "14b9bc72288c2fc4061ea49261427aa9e00738a383433302ff86ae18095b2f4a" => :catalina
+    sha256 "153e805e508005ebd9c8eca39b4027f35cddcc123583a421664746dda51ddbc9" => :mojave
+    sha256 "ed07783410f48fe767e96ad596b570ccd0d849715af99b84f99918428953a9a5" => :high_sierra
   end
 
   depends_on "libgpg-error"
