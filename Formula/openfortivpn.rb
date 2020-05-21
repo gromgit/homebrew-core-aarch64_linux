@@ -5,9 +5,9 @@ class Openfortivpn < Formula
   sha256 "bc62fc6ecaaa6c6f8f2510e14a067a0cb9762158d9460c04555990bba44b50ca"
 
   bottle do
-    sha256 "0005000f9bb563bfbdccb19c4c65ffd20650d9a01f73e4a209702a6eedce19b6" => :catalina
-    sha256 "0023f59f2bf8671fc626d69fecf1ef672cef39a901cc0a98e75c9a82f6db3759" => :mojave
-    sha256 "6b3a2ba4f60dc36e7e61dd0d5a882ace939b5fdc07e1dbcd9814559a52185456" => :high_sierra
+    sha256 "24503fbd02ac8e4a01375736e1cb969d107e7b8f648f77b499c12ee60107c9dc" => :catalina
+    sha256 "34d19a2a925c131deb5b29a06b03000ef91864c7a2d0ceeb1e19276060089b37" => :mojave
+    sha256 "2a6916f7bc0742cdd3c028c9990790b547b95e971f6786204d3d04ebc631db6b" => :high_sierra
   end
 
   depends_on "autoconf" => :build
