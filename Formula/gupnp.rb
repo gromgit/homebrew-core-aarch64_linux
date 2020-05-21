@@ -19,8 +19,10 @@ class Gupnp < Formula
   depends_on "glib"
   depends_on "gssdp"
   depends_on "libsoup"
+  depends_on "python@3.8"
 
   def install
+    Language::Python.rewrite_python_shebang(Formula["python@3.8"].opt_bin/"python3")
     mkdir "build" do
       system "meson", *std_meson_args, ".."
       system "ninja"
