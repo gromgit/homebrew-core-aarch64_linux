@@ -1,8 +1,8 @@
 class Cloc < Formula
   desc "Statistics utility to count lines of code"
   homepage "https://github.com/AlDanial/cloc/"
-  url "https://github.com/AlDanial/cloc/archive/1.84.tar.gz"
-  sha256 "b88a3adc669c15a9a32975095090708ba4eee5a73b8498369fae14be5b8a37d4"
+  url "https://github.com/AlDanial/cloc/archive/1.86.tar.gz"
+  sha256 "55460851de0a59a770fa9fff45b9d0f40a87d5e7e64834a34a6b2ace4806d4cf"
   head "https://github.com/AlDanial/cloc.git"
 
   bottle do
@@ -34,8 +34,8 @@ class Cloc < Formula
   end
 
   resource "Moo::Role" do
-    url "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Moo-2.003006.tar.gz"
-    sha256 "bcb2092ab18a45005b5e2e84465ebf3a4999d8e82a43a09f5a94d859ae7f2472"
+    url "https://cpan.metacpan.org/authors/id/H/HA/HAARG/Moo-2.004000.tar.gz"
+    sha256 "323240d000394cf38ec42e865b05cb8928f625c82c9391cd2cdc72b33c51b834"
   end
 
   resource "Module::Runtime" do
