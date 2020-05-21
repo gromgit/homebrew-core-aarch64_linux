@@ -18,8 +18,11 @@ class GoJsonnet < Formula
 
   def install
     system "go", "build", "-o", bin/"jsonnet", "./cmd/jsonnet"
-    # jsonnetfmt will only be added with the next release
-    # system "go", "build", "-o", bin/"jsonnetfmt", "./cmd/jsonnetfmt"
+
+    if build.head?
+      # jsonnetfmt will only be added with the next release
+      system "go", "build", "-o", bin/"jsonnetfmt", "./cmd/jsonnetfmt"
+    end
   end
 
   test do
