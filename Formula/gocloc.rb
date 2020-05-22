@@ -5,6 +5,13 @@ class Gocloc < Formula
   sha256 "308461beea124991c1558d8278e3a7cc0c8411c5730d444ebbd54187edeb688d"
   head "https://github.com/hhatto/gocloc.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "a6dc5fa859f29d07e0668c169dfc4d240dbd46a8e79fbc63c31261cdf4f6a79b" => :catalina
+    sha256 "a6dc5fa859f29d07e0668c169dfc4d240dbd46a8e79fbc63c31261cdf4f6a79b" => :mojave
+    sha256 "a6dc5fa859f29d07e0668c169dfc4d240dbd46a8e79fbc63c31261cdf4f6a79b" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
