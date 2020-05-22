@@ -1,10 +1,9 @@
 class MitScheme < Formula
   desc "MIT/GNU Scheme development tools and runtime library"
   homepage "https://www.gnu.org/software/mit-scheme/"
-  url "https://ftp.gnu.org/gnu/mit-scheme/stable.pkg/10.1.10/mit-scheme-10.1.10-svm1.tar.gz"
-  mirror "https://ftpmirror.gnu.org/mit-scheme/stable.pkg/10.1.10/mit-scheme-10.1.10-svm1.tar.gz"
-  version "10.1.10"
-  sha256 "36ad0aba50d60309c21e7f061c46c1aad1dda0ad73d2bb396684e49a268904e4"
+  url "https://ftp.gnu.org/gnu/mit-scheme/stable.pkg/10.1.11/mit-scheme-10.1.11.tar.gz"
+  mirror "https://ftpmirror.gnu.org/gnu/mit-scheme/stable.pkg/10.1.11/mit-scheme-10.1.11.tar.gz"
+  sha256 "03a6df3b9d4c2472b9db7ad92010ea06423d81b018b12d0231d4241b57c80d54"
 
   bottle do
     sha256 "aeec8e0d463f173b7e1bf1aa5840d7d119559379c9c4024f72ccbcc18649ee40" => :catalina
@@ -18,6 +17,11 @@ class MitScheme < Formula
   depends_on :xcode => :build
   depends_on "openssl@1.1"
 
+  resource "bootstrap" do
+    url "https://ftp.gnu.org/gnu/mit-scheme/stable.pkg/10.1.11/mit-scheme-10.1.11-x86-64.tar.gz"
+    sha256 "32c29fe08588ed325774113bac00dce72c2454955c64ba32fc40f30db011c21c"
+  end
+
   def install
     # Setting -march=native, which is what --build-from-source does, can fail
     # with the error "the object ..., passed as the second argument to apply, is
@@ -26,11 +30,12 @@ class MitScheme < Formula
     # Note that `unless build.bottle?` avoids overriding --bottle-arch=[...].
     ENV["HOMEBREW_OPTFLAGS"] = "-march=#{Hardware.oldest_cpu}" unless build.bottle?
 
-    # The build breaks __HORRIBLY__ with parallel make -- one target will
-    # erase something before another target gets it, so it's easier to change
-    # the environment than to change_make_var, because there are Makefiles
-    # littered everywhere
-    ENV.deparallelize
+    resource("bootstrap").stage do
+      cd "src"
+      system "./configure", "--prefix=#{buildpath}/staging", "--without-x"
+      system "make"
+      system "make", "install"
+    end
 
     # Liarc builds must launch within the src dir, not using the top-level
     # Makefile
@@ -58,9 +63,19 @@ class MitScheme < Formula
       s.gsub! "mit-scheme", "#{bin}/mit-scheme"
     end
 
+    ENV.prepend_path "PATH", buildpath/"staging/bin"
+
     system "./configure", "--prefix=#{prefix}", "--mandir=#{man}", "--without-x"
     system "make"
     system "make", "install"
+    # Copy over all.com and runtime.com from the original bootstrap
+    # binaries to avoid shims
+    %w[
+      mit-scheme-x86-64/all.com
+      mit-scheme-x86-64/runtime.com
+    ].each do |f|
+      cp buildpath/"staging/lib/#{f}", lib/f
+    end
   end
 
   test do
