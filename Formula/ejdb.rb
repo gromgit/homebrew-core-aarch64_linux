@@ -7,9 +7,9 @@ class Ejdb < Formula
 
   bottle do
     cellar :any
-    sha256 "caeafa84564af0f632b6ba457806432c615bf98c847169cff2a39e0f6353ba5b" => :catalina
-    sha256 "33f8bca0c4a991b7d68113d9c0e7a318d660b9c136f5fdc33c5077931918ea9a" => :mojave
-    sha256 "ac1bf745c44fd550d65f63db1d8f3ff617381f1dd9d0aa6ea96ede3e8ecf526f" => :high_sierra
+    sha256 "0a799daea926e40f36ae01a1543c5f217c51805e6a9b9663b7298485e74bedb0" => :catalina
+    sha256 "4ca418200de1dedf6fd414a12ca61e60f4addd3ae1590e544728981c5b4e1132" => :mojave
+    sha256 "b1e465d9b7c02c8f21e86b96cac5b6ba21c249f5fabce0fe1e35d1346014bb00" => :high_sierra
   end
 
   depends_on "cmake" => :build
