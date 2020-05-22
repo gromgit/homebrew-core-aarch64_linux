@@ -5,9 +5,9 @@ class Petsc < Formula
   sha256 "74a895e44e2ff1146838aaccb7613e7626d99e0eed64ca032c87c72d084efac3"
 
   bottle do
-    sha256 "f6b9afb3d5ab24dfabf2bacabf184218b89912d741c68966eb116ac139a95cba" => :catalina
-    sha256 "220a1fdfb465da86a875a9dae7a95561b5169250ffd77feea0b76f057d5b0027" => :mojave
-    sha256 "cc3fa4441aa7c56ff94bf70554ecb48970f03bfe6f642513fe957eace5de5d38" => :high_sierra
+    sha256 "108acd68bb4ace327eee14ba47293b2ab6dba5f616638b690633e3989012ad43" => :catalina
+    sha256 "09230fa80044053a8c6a909c5c0951c21fba10d9a1c216674259870de08358f7" => :mojave
+    sha256 "0db88d5dbb6a68c2102cd9aeceaced75a10d68609439455f294257811dd98501" => :high_sierra
   end
 
   depends_on "hdf5"
