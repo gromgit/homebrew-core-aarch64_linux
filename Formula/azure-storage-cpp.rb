@@ -6,9 +6,9 @@ class AzureStorageCpp < Formula
 
   bottle do
     cellar :any
-    sha256 "3100cf8b9861d103660710d65f9a86ea4d60b3bab62e10a9dd681c5a77d0b051" => :catalina
-    sha256 "e18ca01b4e15164604641f683bdedd758d1c1aa3dbcc5c57e12f16fe93d4f67d" => :mojave
-    sha256 "20d1fa174a24263b2eec1e3caca99ca4ebe2ef39c5733bb1bddf24e9b696efdd" => :high_sierra
+    sha256 "0825ba7127ec7f3f20f79d535f6d8724796bb27d920a4a7f6324c331f4eca3e4" => :catalina
+    sha256 "1e27e8ba073d116d6c201d4ca42133bd6b36715013af45fe49ed54eb8d7a217f" => :mojave
+    sha256 "0d3f066f4e47b9701bfe29babbe0e9143672220b3106cbdd14f4f1a3a7831440" => :high_sierra
   end
 
   depends_on "cmake" => :build
