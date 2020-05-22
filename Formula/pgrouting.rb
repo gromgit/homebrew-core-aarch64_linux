@@ -6,11 +6,10 @@ class Pgrouting < Formula
   head "https://github.com/pgRouting/pgrouting.git"
 
   bottle do
-    cellar :any
-    rebuild 1
-    sha256 "e16069bdff854de4c36c78323a486e5a2dad731a4a0f978cceb5cff0c29e24a1" => :catalina
-    sha256 "c6780faaf6730a4e64e066002f07170385552a71b7b4e408b80c8db09be40666" => :mojave
-    sha256 "df9def3ea12a91c30f193a0de2a0c6214de51b27f7621d173d3117db51cb1651" => :high_sierra
+    cellar :any_skip_relocation
+    sha256 "8223d5c056df78d8d6bcf03f1ab94b7708d078f3722d885cfd42b22bc9dfbb6c" => :catalina
+    sha256 "ef46068511f063482b227a1d124eeb003d80dff963e4d6864f0708446f1d1c50" => :mojave
+    sha256 "468a144c221ba21ff2d3dec53a41428448417bc079f5398a090a26a4bcc83e6d" => :high_sierra
   end
 
   depends_on "cmake" => :build
