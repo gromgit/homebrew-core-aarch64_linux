@@ -7,9 +7,9 @@ class GoJsonnet < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "bb17871662de6fcd37242ec9a60782b50840ed5bcfdef15d2051e7d85f58d64e" => :catalina
-    sha256 "c1a8a6dd1935906504fcd72b60cd6291efaea0be467002192a6fbbf9dc0c2f5d" => :mojave
-    sha256 "79e3dd913f59a061ae00bc98dd119791641395b730ebc233b26b583deb4a186a" => :high_sierra
+    sha256 "5c476a536e168be0cf65a7850c05563c5363356774057bd9cfc8aa11cb0e0df6" => :catalina
+    sha256 "6dda575e3b152664a76776a23ceec61a471fc0baedbb4062e784d4f917a76b15" => :mojave
+    sha256 "3f98a99da047fabc9a1fee8b32585c86f2e370a6a278e7d27cef8f7a050006c5" => :high_sierra
   end
 
   depends_on "go" => :build
