@@ -6,9 +6,9 @@ class Csvq < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "a5be89a4ef53805b656ca5a5a320a696349f04e3cebb01c91bf1d7c423346d7f" => :catalina
-    sha256 "66010f8a707a8d791645a654498d3486b2990f698693d98b1b9d348d7ba23bb7" => :mojave
-    sha256 "88bb8a3ff0aba6f931e3cd7adebc5a5c15153deabdf8c7704a83fb55353758b9" => :high_sierra
+    sha256 "a4db8fb4edaccd90f4f5bd31c51c42001909320af56f5c222bd29a3bf18c15ff" => :catalina
+    sha256 "7ffa2296999d643ccdc4e6335325273d8e8fd94872adad143c7e8ba098900260" => :mojave
+    sha256 "10b13d56682fc1f10e2521fd12224326973f2a40108b1050c94b6dbbcfd6cc78" => :high_sierra
   end
 
   depends_on "go" => :build
