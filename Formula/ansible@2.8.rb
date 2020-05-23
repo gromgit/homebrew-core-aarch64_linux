@@ -3,9 +3,8 @@ class AnsibleAT28 < Formula
 
   desc "Automate deployment, configuration, and upgrading"
   homepage "https://www.ansible.com/"
-  url "https://releases.ansible.com/ansible/ansible-2.8.11.tar.gz"
-  sha256 "156caa8b6c60b9f0d5c7d57ee0f4e46d8e226147b58546be6a8ac52925a9c191"
-  revision 1
+  url "https://releases.ansible.com/ansible/ansible-2.8.12.tar.gz"
+  sha256 "2a4ce2a3f387d2595ee3f968c3ea50d6db0ab2d8306f0e81ab96c2a15a683124"
 
   bottle do
     cellar :any
