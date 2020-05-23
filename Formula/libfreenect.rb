@@ -1,8 +1,8 @@
 class Libfreenect < Formula
   desc "Drivers and libraries for the Xbox Kinect device"
   homepage "https://openkinect.org/"
-  url "https://github.com/OpenKinect/libfreenect/archive/v0.6.0.tar.gz"
-  sha256 "5300f29d9fb8bb466efbc34c01f0045ed0f616278907e507ccd8c2afdea331c8"
+  url "https://github.com/OpenKinect/libfreenect/archive/v0.6.1.tar.gz"
+  sha256 "a2e426cf42d9289b054115876ec39502a1144bc782608900363a0c38056b6345"
   head "https://github.com/OpenKinect/libfreenect.git"
 
   bottle do
