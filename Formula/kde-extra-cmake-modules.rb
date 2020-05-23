@@ -6,6 +6,13 @@ class KdeExtraCmakeModules < Formula
 
   head "git://anongit.kde.org/extra-cmake-modules"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "b0ac3bc7030cc890fedc12a009ed6b426ff521bb13281ec9b618b97438eb766f" => :catalina
+    sha256 "13bdd8884d3688c2835e5d1b210ca5706be7ed2a0be096401db25941226ad2ff" => :mojave
+    sha256 "b0ac3bc7030cc890fedc12a009ed6b426ff521bb13281ec9b618b97438eb766f" => :high_sierra
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "qt" => :build
   depends_on "sphinx-doc" => :build
