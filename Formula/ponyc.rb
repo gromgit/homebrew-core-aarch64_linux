@@ -6,10 +6,10 @@ class Ponyc < Formula
       :revision => "579475721b14487e225e57a64ecd44781d244b33"
 
   bottle do
-    cellar :any
-    sha256 "b810571aff7518d81ea773d07f0f8fd1def25f4c795a664b1c770330d07069a8" => :catalina
-    sha256 "2adb6b736e5ed544c6d8535e31f5c7e19b47e6eb57cd34ad6ed3c55b29f619f7" => :mojave
-    sha256 "216889f9856cfb4da8bb46a9aaac3af38e4f1f8f349b5928645ea0d266231b8b" => :high_sierra
+    cellar :any_skip_relocation
+    sha256 "398704cb374f8197b391d1abe79f6937b47907ac79bff429c3c7c5436b7baf82" => :catalina
+    sha256 "32a740aba344f2f864dab4e95ed811ec5274a5dc0f72760bc0dc916b749d0b48" => :mojave
+    sha256 "4bff26ba76aef06e7d0f5aee757729d7494b8c98605fc06f994ea4de0b2f99f2" => :high_sierra
   end
 
   depends_on "cmake" => :build
