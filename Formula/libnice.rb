@@ -6,10 +6,9 @@ class Libnice < Formula
 
   bottle do
     cellar :any
-    sha256 "1acb2fe5a7fd6b337c67a2e4d3543708f01b22c3ee56894aa57e8b72cedb0a63" => :catalina
-    sha256 "a5ef1e08fe29a17e47670e854e946b15c7c4c62bab5638df797fd315863b5bdb" => :mojave
-    sha256 "2c27b6b47ed04298c57ef98e1e639cd29ba98e634a7be954fc7d4ed06c96f82b" => :high_sierra
-    sha256 "d0c005749a7f6c923e1e704a92229c40cae62d3f20ddc60c999557a3c5e09a5a" => :sierra
+    sha256 "1ebb405afa6b66fddbf4c90ab97f3d9e528f1ce3a11c571bc4d5f10c97a812e6" => :catalina
+    sha256 "0d2f05d15e8e188b56758da0c7aaa05109bb85a6c3088e0f9b863d2c10a76961" => :mojave
+    sha256 "7851630de0b1da7adf67c514f4d6df037c05ba4e1a426d22029ac8aa20d38877" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
