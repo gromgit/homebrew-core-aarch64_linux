@@ -7,6 +7,13 @@ class Lanraragi < Formula
   sha256 "e0ba954c80e6c2c16994e52b310234b3ee013c7076797c5d9eaf216bda182af6"
   head "https://github.com/Difegue/LANraragi.git"
 
+  bottle do
+    cellar :any
+    sha256 "2e7c75ff2e56012e0b8ed791adb977847d34d1b9aced790412d5ca855c36faed" => :catalina
+    sha256 "3355d1a7fcf856e2e5bcd3758cd6ed3b9c5835adb3832f3193ab5af560a221bb" => :mojave
+    sha256 "fdd2c820fe0d0405ce7d13767312e7256d31019343fd28c95f91fd8b1c5daad2" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "cpanminus"
   depends_on "ghostscript"
