@@ -7,11 +7,9 @@ class Fastd < Formula
 
   bottle do
     cellar :any
-    sha256 "c9823ed23d53e35f3cbad486867d885e747c6c2e8e4da739cd27522fa3f0ab5b" => :catalina
-    sha256 "81dbae981699f6be12675b2f3506071fd2fcc7928f8f1744ac76abb48a1c1104" => :mojave
-    sha256 "19dc7f2bf518b8f9374fcfbc7e73fa0ca330d6eb23d92be4b6e2e6a5771fdc6d" => :high_sierra
-    sha256 "e209a7908ab196c614fd8a21d76bfbfc8c73a699784834457e0c1da6eed24a43" => :sierra
-    sha256 "e097588f07f37954bbb525e7f08a9d69dd9bb18bff63616aa942329f7fe15dc1" => :el_capitan
+    sha256 "fea38ac2d1095bd0ec97fa55b3cadaea3e80c8f2ab3617f2af4b6e3066fc557e" => :catalina
+    sha256 "abade335b936258e80d713d939b1b0067000cc9b1ae7d3b94be97cd1775bfc19" => :mojave
+    sha256 "d4b19c43e7ad0b84282de0255b7b03ca124f1df7ad7eb1b8b39fb3f87f3dacd0" => :high_sierra
   end
 
   depends_on "bison" => :build # fastd requires bison >= 2.5
