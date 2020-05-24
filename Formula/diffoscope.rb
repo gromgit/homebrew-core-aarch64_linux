@@ -3,8 +3,8 @@ class Diffoscope < Formula
 
   desc "In-depth comparison of files, archives, and directories"
   homepage "https://diffoscope.org"
-  url "https://files.pythonhosted.org/packages/f9/2e/142f710e9b9c159c807611094619589bbb9702fcc90164763659acf417c3/diffoscope-144.tar.gz"
-  sha256 "9a45464b7b7184fa1ad2af9c52ebac8f00b3dd5dcf9e15dfc00c653c26fcc345"
+  url "https://files.pythonhosted.org/packages/c4/a3/ef16b258520fca72fe5d30b65a7cdce01a0fb209e4583679be3651fce55f/diffoscope-145.tar.gz"
+  sha256 "3c4fe21e49f1f3be18dbfc9f6b92d7aefe3e8f0a8aca733a9aaafd6ec95c32f2"
 
   bottle do
     cellar :any_skip_relocation
@@ -29,8 +29,8 @@ class Diffoscope < Formula
   end
 
   resource "python-magic" do
-    url "https://files.pythonhosted.org/packages/84/30/80932401906eaf787f2e9bd86dc458f1d2e75b064b4c187341f29516945c/python-magic-0.4.15.tar.gz"
-    sha256 "f3765c0f582d2dfc72c15f3b5a82aecfae9498bd29ca840d72f37d7bd38bfcd5"
+    url "https://files.pythonhosted.org/packages/e3/85/1aff76b966622868a73717abd8b501a3c91890e23a65e5f574ff6df1970f/python-magic-0.4.18.tar.gz"
+    sha256 "b757db2a5289ea3f1ced9e60f072965243ea43a2221430048fd8cacab17be0ce"
   end
 
   def install
