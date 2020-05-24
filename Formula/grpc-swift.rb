@@ -7,9 +7,9 @@ class GrpcSwift < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e0797863606102081bef338113fe59e92c0dc1e94076b5d2f7d8dc228604ecb9" => :catalina
-    sha256 "41cd40af49f7f7dd68fd65e74f6a6e33cee1bad1bdaa91cb82097b3f88b1f71c" => :mojave
-    sha256 "1b0d72d9130ed12f2cce93a7f7e4be7ad8d36ccc68167d949f4e01f46ee85942" => :high_sierra
+    sha256 "c4b65a7ca86cce5a51c4d361f242f3223db64ada30295215636abe6c5e2e6682" => :catalina
+    sha256 "44d0cea0079f5b8ead3ae00b5ffe0268424c1b9c894d3f84f9b56e9295cfc4d6" => :mojave
+    sha256 "01f53ec401f366d2eedc15b6bf24221443cf3e4728e25891fa87cd89d389efb2" => :high_sierra
   end
 
   depends_on :xcode => ["10.0", :build]
