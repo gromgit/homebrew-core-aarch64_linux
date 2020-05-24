@@ -6,10 +6,9 @@ class Snapraid < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "bcd8a45d4ec8daa99fd20faddf63ec0476239b02deba34755f158cf1e629299d" => :catalina
-    sha256 "44416f365e6c197fe9ba5381ef829d295cf65bbc953c666fb69a84c482c0a793" => :mojave
-    sha256 "2083e11d5d72fee5bc67bb71fca4686e27f49fe7ea837e9aaea0688c53ad7dc1" => :high_sierra
+    sha256 "428afbfefb0bba0949f706e908c9837044b484c4af591525b36ad35121a5e660" => :catalina
+    sha256 "cee9e0baa9510de52e801afb91c003d02493d2dc15f679c1da9aabec05180501" => :mojave
+    sha256 "e50021d135a1ce085093c8d7a50aa559c786919fca20355cb5cda6db213da822" => :high_sierra
   end
 
   head do
