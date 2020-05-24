@@ -4,6 +4,13 @@ class Dgraph < Formula
   url "https://github.com/dgraph-io/dgraph/archive/v20.03.1.tar.gz"
   sha256 "abe217853134d86b9dba2814d5ef521730cc9eb9c6e0825658cc62af2562b363"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "7327188d743a976cd47fc7825f4244151156620696e5dcb44102f2539a2eeac9" => :catalina
+    sha256 "c79c13833f7baa22bb5949a2d6e98387fdec0abb5d2d18dbac8808a25cef0737" => :mojave
+    sha256 "dc1822ecc9337a917b72b525edb8df3129e8917efba969ecd9118f13041b3dc0" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
