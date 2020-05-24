@@ -4,6 +4,13 @@ class Cdo < Formula
   url "https://code.mpimet.mpg.de/attachments/download/20826/cdo-1.9.8.tar.gz"
   sha256 "f2660ac6f8bf3fa071cf2a3a196b3ec75ad007deb3a782455e80f28680c5252a"
 
+  bottle do
+    cellar :any
+    sha256 "7642f67bf1e8b5eb28faa6b31b9c5c8800d971d584a2b8ef5c218fd39f3929c4" => :catalina
+    sha256 "6bee75bcd2637789145bcfb627c6faf7f4eb2a156ada667ddcfa9c97ad374666" => :mojave
+    sha256 "1f7aef8ac91a7f368b6e571537a59d8a83220657b8a051d7a85ac820a67cb853" => :high_sierra
+  end
+
   depends_on "eccodes"
   depends_on "hdf5"
   depends_on "netcdf"
