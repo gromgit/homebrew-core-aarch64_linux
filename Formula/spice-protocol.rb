@@ -11,10 +11,15 @@ class SpiceProtocol < Formula
     sha256 "ac166e2e8a89dfa451a4abe531b31430fb6c3f5b386cf92f39b1a518837ff0ac" => :high_sierra
   end
 
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
+
   def install
-    system "./configure", "--disable-silent-rules",
-                          "--prefix=#{prefix}"
-    system "make", "install"
+    mkdir "build" do
+      system "meson", *std_meson_args, "-Dwith-docs=false", ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
   end
 
   test do
