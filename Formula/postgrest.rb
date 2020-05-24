@@ -7,10 +7,9 @@ class Postgrest < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "2a86b7cf8a3baba0e5116f711c68d81667333e5b6096c858fef88e501879e773" => :catalina
-    sha256 "eb20ddd819e47f75d878c1102438c0083d1a4e7cc0f071acea9af4afaa8ddfef" => :mojave
-    sha256 "87420e38948cde0e71cc87a8001fe382b79bd77c462433939b4dd5adec30735b" => :high_sierra
+    sha256 "691546e89701fd582d47c697dc27551ef3284ee21933a5912f406e6fee4dd272" => :catalina
+    sha256 "34c0413e71a41bc8550b7ea5286e0330aa888990d2e2a8fe6d81b57152c83d61" => :mojave
+    sha256 "6ca3bb9cd14c9ab4ddd028493e4ffd70ddae571be74723997b677c6c67542c87" => :high_sierra
   end
 
   depends_on "cabal-install" => :build
