@@ -3,6 +3,7 @@ class Sundials < Formula
   homepage "https://computation.llnl.gov/casc/sundials/main.html"
   url "https://computation.llnl.gov/projects/sundials/download/sundials-5.3.0.tar.gz"
   sha256 "88dff7e11a366853d8afd5de05bf197a8129a804d9d4461fb64297f1ef89bca7"
+  revision 1
 
   bottle do
     cellar :any
@@ -23,8 +24,6 @@ class Sundials < Formula
   def install
     blas = "-L#{Formula["openblas"].opt_lib} -lopenblas"
     args = std_cmake_args + %W[
-      -DCMAKE_C_COMPILER=/usr/bin/clang
-      -DCMAKE_CXX_COMPILER=/usr/bin/clang++
       -DBUILD_SHARED_LIBS=ON
       -DKLU_ENABLE=ON
       -DKLU_LIBRARY_DIR=#{Formula["suite-sparse"].opt_lib}
@@ -39,10 +38,15 @@ class Sundials < Formula
       system "cmake", "..", *args
       system "make", "install"
     end
+
+    # Only keep one example for testing purposes
+    (pkgshare/"examples").install Dir[prefix/"examples/nvector/serial/*"] \
+                                  - Dir[prefix/"examples/nvector/serial/{CMake*,Makefile}"]
+    rm_rf prefix/"examples"
   end
 
   test do
-    cp Dir[prefix/"examples/nvector/serial/*"], testpath
+    cp Dir[pkgshare/"examples/*"], testpath
     system ENV.cc, "-I#{include}", "test_nvector.c", "sundials_nvector.c",
                    "test_nvector_serial.c", "-L#{lib}", "-lsundials_nvecserial"
     assert_match "SUCCESS: NVector module passed all tests",
