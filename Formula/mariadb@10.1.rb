@@ -1,8 +1,8 @@
 class MariadbAT101 < Formula
   desc "Drop-in replacement for MySQL"
   homepage "https://mariadb.org/"
-  url "https://downloads.mariadb.org/f/mariadb-10.1.44/source/mariadb-10.1.44.tar.gz"
-  sha256 "21f203d361ee8c6e0f5050f3d0c06f3c5a2b87ac28f39e9503b851084a335039"
+  url "https://downloads.mariadb.org/f/mariadb-10.1.45/source/mariadb-10.1.45.tar.gz"
+  sha256 "9d8f0f71f9613b2028ffc5c5be8b98948ec955eb0d89600d18ed7cc04807dad5"
 
   bottle do
     sha256 "e2e7b689e5c699bf6540ed3d4abaeef8e25c6cc48243994a8c047d869ec68ca3" => :catalina
@@ -56,6 +56,9 @@ class MariadbAT101 < Formula
     system "cmake", ".", *std_cmake_args, *args
     system "make"
     system "make", "install"
+
+    # Avoid references to the Homebrew shims directory
+    inreplace bin/"mysqlbug", HOMEBREW_SHIMS_PATH/"mac/super/", ""
 
     # Fix my.cnf to point to #{etc} instead of /etc
     (etc/"my.cnf.d").mkpath
