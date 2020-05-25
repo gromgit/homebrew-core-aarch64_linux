@@ -7,9 +7,9 @@ class Sundials < Formula
 
   bottle do
     cellar :any
-    sha256 "ce7631fff95a27b2a1b3aaae734f787b237e2ae123a3c79ed6c2867c8bd78b0c" => :catalina
-    sha256 "4803df32afafb0aee71c4f1a299541bb09f1da7f7bcd6798274613d03b2e7d0f" => :mojave
-    sha256 "3d2a4408fb64c0ffa3c593556a403edc975364df553335b368e8087ff1aca68e" => :high_sierra
+    sha256 "fff1df3841c80eb3c2a6471e53ad2e8f29f97eb1e8498f8e85dc919616c68d0f" => :catalina
+    sha256 "63e63e0f7f928cd656613dc6344aaaaf11acd25e8c3148d3ac9a5b86dfe6c3df" => :mojave
+    sha256 "04f549daeb21124cfa74aeddb7c7baf58f7f482faec96cd4f5bc96f206414896" => :high_sierra
   end
 
   depends_on "cmake" => :build
