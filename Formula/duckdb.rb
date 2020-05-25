@@ -4,6 +4,13 @@ class Duckdb < Formula
   url "https://github.com/cwida/duckdb/archive/v0.1.7.tar.gz"
   sha256 "07b6db4512cf41647043160dc64dfd919948ca7f96c31c1085ce2c79e2059a1c"
 
+  bottle do
+    cellar :any
+    sha256 "81f1558911cee3b279897c3e37c2a79dcbdfcacfcbfd19867157738a535dabfa" => :catalina
+    sha256 "1af4d9657948fde7ee9b755a17af982c06f7b2c37e2d39ba9473964e94c34d21" => :mojave
+    sha256 "a7f20ab8f65d30f9159a2ac8ab1c48a589a215a406dae81dde737d3df1040acd" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "python@3.8" => :build
 
