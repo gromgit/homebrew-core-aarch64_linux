@@ -1,8 +1,8 @@
 class Debianutils < Formula
   desc "Miscellaneous utilities specific to Debian"
   homepage "https://packages.debian.org/sid/debianutils"
-  url "https://deb.debian.org/debian/pool/main/d/debianutils/debianutils_4.9.3.tar.xz"
-  sha256 "c2b58b5c2f01021e6766a742d58d4a0321fc4a19929209869f853808c336f343"
+  url "https://deb.debian.org/debian/pool/main/d/debianutils/debianutils_4.10.tar.xz"
+  sha256 "bd6e39a563cd8169bad76df80a4782f151f7213a2ebce84940237f54798642d6"
 
   bottle do
     cellar :any_skip_relocation
