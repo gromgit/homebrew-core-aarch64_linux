@@ -3,7 +3,7 @@ class Pdf2htmlex < Formula
   homepage "https://coolwanglu.github.io/pdf2htmlEX/"
   url "https://github.com/coolwanglu/pdf2htmlEX/archive/v0.14.6.tar.gz"
   sha256 "320ac2e1c2ea4a2972970f52809d90073ee00a6c42ef6d9833fb48436222f0e5"
-  revision 23
+  revision 24
   head "https://github.com/coolwanglu/pdf2htmlEX.git"
 
   bottle do
@@ -57,9 +57,6 @@ class Pdf2htmlex < Formula
 
       # Fix linker error; see: https://trac.macports.org/ticket/25012
       ENV.append "LDFLAGS", "-lintl"
-
-      # Reset ARCHFLAGS to match how we build
-      ENV["ARCHFLAGS"] = "-arch #{MacOS.preferred_arch}"
 
       system "./autogen.sh"
       system "./configure", "--prefix=#{libexec}/fontforge",
