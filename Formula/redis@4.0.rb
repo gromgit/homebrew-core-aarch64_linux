@@ -3,6 +3,7 @@ class RedisAT40 < Formula
   homepage "https://redis.io/"
   url "https://github.com/antirez/redis/archive/4.0.14.tar.gz"
   sha256 "3b8c6ea4c9db944fe6ec427c1b11d912ca6c5c5e17ee4cfaea98bbda90724752"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
@@ -17,9 +18,6 @@ class RedisAT40 < Formula
   deprecate!
 
   def install
-    # Architecture isn't detected correctly on 32bit Snow Leopard without help
-    ENV["OBJARCH"] = "-arch #{MacOS.preferred_arch}"
-
     system "make", "install", "PREFIX=#{prefix}", "CC=#{ENV.cc}"
 
     %w[run db/redis log].each { |p| (var/p).mkpath }
