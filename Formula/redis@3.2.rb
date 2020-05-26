@@ -3,6 +3,7 @@ class RedisAT32 < Formula
   homepage "https://redis.io/"
   url "http://download.redis.io/releases/redis-3.2.13.tar.gz"
   sha256 "862979c9853fdb1d275d9eb9077f34621596fec1843e3e7f2e2f09ce09a387ba"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
@@ -17,9 +18,6 @@ class RedisAT32 < Formula
   deprecate!
 
   def install
-    # Architecture isn't detected correctly on 32bit Snow Leopard without help
-    ENV["OBJARCH"] = "-arch #{MacOS.preferred_arch}"
-
     system "make", "install", "PREFIX=#{prefix}", "CC=#{ENV.cc}"
 
     %w[run db/redis log].each { |p| (var/p).mkpath }
