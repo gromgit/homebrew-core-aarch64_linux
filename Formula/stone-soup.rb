@@ -3,7 +3,7 @@ class StoneSoup < Formula
   homepage "https://crawl.develz.org/"
   url "https://crawl.develz.org/release/0.24/stone_soup-0.24.0.tar.xz"
   sha256 "eb069ae421d4246a3332d9081fb6e08b4bfaa71c407ffc17c194c5f9170d7561"
-  revision 1
+  revision 2
 
   bottle do
     sha256 "4e69f1d18080dda379fd029a52d1bbd0847f9233e99cd1197e0d5a3af2004030" => :catalina
@@ -62,10 +62,7 @@ class StoneSoup < Formula
 
       system "make", "install",
         "DEVELOPER_DIR=#{devdir}", "SDKROOT=#{MacOS.sdk_path}",
-        # stone-soup tries to use `uname -m` to determine build -arch,
-        # which is frequently wrong on OS X
-        "SDK_VER=#{MacOS.version}", "MARCH=#{MacOS.preferred_arch}",
-        *args
+        "SDK_VER=#{MacOS.version}", *args
     end
   end
 
