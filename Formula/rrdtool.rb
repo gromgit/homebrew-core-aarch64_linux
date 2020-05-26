@@ -3,6 +3,7 @@ class Rrdtool < Formula
   homepage "https://oss.oetiker.ch/rrdtool/index.en.html"
   url "https://github.com/oetiker/rrdtool-1.x/releases/download/v1.7.2/rrdtool-1.7.2.tar.gz"
   sha256 "a199faeb7eff7cafc46fac253e682d833d08932f3db93a550a4a5af180ca58db"
+  revision 1
 
   bottle do
     sha256 "a4d3e8bf312569dc26aca0b029ffcc297f6db4ebbef7d0317b02cf500d5cce28" => :catalina
@@ -39,11 +40,7 @@ class Rrdtool < Formula
     system "./bootstrap" if build.head?
     system "./configure", *args
 
-    # Needed to build proper Ruby bundle
-    ENV["ARCHFLAGS"] = "-arch #{MacOS.preferred_arch}"
-
     system "make", "CC=#{ENV.cc}", "CXX=#{ENV.cxx}", "install"
-    prefix.install "bindings/ruby/test.rb"
   end
 
   test do
