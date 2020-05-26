@@ -7,9 +7,9 @@ class Grafana < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2f44006d0234ad45f55607749a3668e2cdce047d74bfa53d0b8c0fc5bd9417e9" => :catalina
-    sha256 "70d5b464ff31c53d4a342d92506667880a3560e18fdc531e366e4879d0e946ca" => :mojave
-    sha256 "d027ffa8fef95c2996ff83e15ec5a69347cd866e15391dae9cc91c9f7754d890" => :high_sierra
+    sha256 "10935680cff7e1326eb23aaf962afaa7252504d740de679dd2abfb41651aac98" => :catalina
+    sha256 "2b64b190e824c52ce2f7919ba234230eb15f09787583011817bbfe1f0111c3d7" => :mojave
+    sha256 "d3fdce14baffc763f3cf92f49a24de7614e5433902885fb755500ae92880c25b" => :high_sierra
   end
 
   depends_on "go" => :build
