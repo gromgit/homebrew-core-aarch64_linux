@@ -6,9 +6,9 @@ class Minizip2 < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "eea2dd5c11351eafe018f1cd12dc2a053e4d158950242d311cb68e53868bc1de" => :catalina
-    sha256 "5f0f8b2d128a4bf04746be75c549b877b29a365028c86c8cb2382206796ed73e" => :mojave
-    sha256 "a6fc8a8620a239b63f8321a4fbd291d20be07db71ba327e72d496de2bdbf9979" => :high_sierra
+    sha256 "8ad8ea06edad7b93c33909a43a9f32d218d4d5217177cba2a95b28e275517cc4" => :catalina
+    sha256 "675a3a17bf5fadf993b773cc16a16de7efde64acaa904806ed34d275080b47a8" => :mojave
+    sha256 "4c01af817e7a53737b2dbd3efe2212d2c62951668465ea5279efa24d10ba3da5" => :high_sierra
   end
 
   depends_on "cmake" => :build
