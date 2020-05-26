@@ -3,6 +3,7 @@ class Redis < Formula
   homepage "https://redis.io/"
   url "http://download.redis.io/releases/redis-6.0.3.tar.gz"
   sha256 "bca46dce81fe92f7b2de4cf8ae41fbc4b94fbd5674def7f12c87e7f9165cbb3a"
+  revision 1
   head "https://github.com/antirez/redis.git", :branch => "unstable"
 
   bottle do
@@ -13,9 +14,6 @@ class Redis < Formula
   end
 
   def install
-    # Architecture isn't detected correctly on 32bit Snow Leopard without help
-    ENV["OBJARCH"] = "-arch #{MacOS.preferred_arch}"
-
     system "make", "install", "PREFIX=#{prefix}", "CC=#{ENV.cc}"
 
     %w[run db/redis log].each { |p| (var/p).mkpath }
