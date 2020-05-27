@@ -6,9 +6,9 @@ class Rrdtool < Formula
   revision 1
 
   bottle do
-    sha256 "a4d3e8bf312569dc26aca0b029ffcc297f6db4ebbef7d0317b02cf500d5cce28" => :catalina
-    sha256 "222f77c78f4cf725543038d06d198a4c7c9f3fcfdc84b86b7db6b9d056baf10e" => :mojave
-    sha256 "9c7bfeb5624aa4589c9e0894342e70ff4706b57628a0ed879d4e751146640ca3" => :high_sierra
+    sha256 "ce57cda576f452e7790e091d645887231d4aa5b691e2c33b4ea93b3dd92d7757" => :catalina
+    sha256 "fae6691230b527c93670d1d00b266e43497744fc09df06c9977265e578b529fc" => :mojave
+    sha256 "858013744cfc3d31a47b7e3629198922d1994f20d0d44c11f6c921ce6f2b9942" => :high_sierra
   end
 
   head do
