@@ -8,9 +8,9 @@ class Passenger < Formula
 
   bottle do
     cellar :any
-    sha256 "3b7d32dc0e0c53bf7694ac49ada6ae4a82db6a5323d20651653f42aa4937373a" => :catalina
-    sha256 "7f9e5490b8c5a06f5b89a2e7f8d518221a4c3a797e366396ad708a0b6aa8a8b3" => :mojave
-    sha256 "a90a4283071cc0cc3dbfd247ec65b88eb6d57ab16bcdf6313cc246fe9031cb3f" => :high_sierra
+    sha256 "b43bf5fa841a597dab5efb6ad144b0c45f09461dd6a730a65bb8a611099773a4" => :catalina
+    sha256 "3ecd5d83603e811ebacb01469fbeb4763c693a95f59666ee1bd8a392b1fa7d04" => :mojave
+    sha256 "f6c5a09acc6d18971828cbb58658522115bd71b3b2adf082d2bc3a118bf80b29" => :high_sierra
   end
 
   # to build nginx module
