@@ -6,9 +6,9 @@ class Helmfile < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e0c81f1e6832e14340d96621dc5363f1c0780ccd5bb0d559a74bcf7e9c88c342" => :catalina
-    sha256 "1129739a645bb133fab5ee0087a645f113f7731aa1fc51e340536aee526d5d4f" => :mojave
-    sha256 "d645c61f86cc389b3b4faefa0920445798f8d90c9886ee4586ec473ccbe34286" => :high_sierra
+    sha256 "232a46fa8cee9f5154feea22a16b1529662348569b56910c6df973ecbc1657bb" => :catalina
+    sha256 "8c367c5711438d317eb2c6d7d53dec0dab0b8ee42378fea614f2c8a0dd6b3df1" => :mojave
+    sha256 "16f7cb05ac7d6c184ce05139b0a78f49dbf8342e3e383773ae59a338b497b248" => :high_sierra
   end
 
   depends_on "go" => :build
