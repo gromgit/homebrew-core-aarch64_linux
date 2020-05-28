@@ -4,6 +4,13 @@ class GhzWeb < Formula
   url "https://github.com/bojand/ghz/archive/v0.52.0.tar.gz"
   sha256 "6f7e4e0cd81ad00c2c4e17c93257810e2ea8897f60713352c9d9583231e2739a"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "1eb234719176dae9c96c548031cf0b9620f64d98468bba2506140257af822b59" => :catalina
+    sha256 "2f885d0487a6e27ce932f9020b1d3df50f5ba2ea105402f6539cf94eb225cf81" => :mojave
+    sha256 "80931f9681d55d88b0b011077c8d228bcb27497df1e3e080485b969e730b812a" => :high_sierra
+  end
+
   depends_on "go" => :build
   depends_on :xcode => :build
 
