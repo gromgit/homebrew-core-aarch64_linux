@@ -7,9 +7,10 @@ class ProtobufAT36 < Formula
 
   bottle do
     cellar :any
-    sha256 "04bf52a35938af4d36256f63f6a599410d086e0177114eb4eafbc53fca267fba" => :catalina
-    sha256 "8974c2cadd9b4f583dbd4f1347d63c6f69d7be26c3749ce26a001f1c0d6da84a" => :mojave
-    sha256 "169b21b1202ac61b09333a7f521339460ca0581851ed403bb385198ddd39fc93" => :high_sierra
+    rebuild 1
+    sha256 "6d2da9252d93ab92e216192a91e71445325e82a660580a63867820d013eb849c" => :catalina
+    sha256 "4bf947fba8c49983858b40906e8cb56adca645d645bc3a5f3561c6fc76e9f5eb" => :mojave
+    sha256 "b58011315d7163fcb54491c60f7151cf79eb71bca9c78395d9d2a365ed374626" => :high_sierra
   end
 
   keg_only :versioned_formula
