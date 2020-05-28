@@ -7,9 +7,9 @@ class Libcpuid < Formula
 
   bottle do
     cellar :any
-    sha256 "c0f18e27d65429a6c3056a703e6d3566c1faf83414940b01117710ce9405d702" => :catalina
-    sha256 "dcb237738485dcccca47e2dc95fbf6f55a58e53aac697bcb7ee760453a56477a" => :mojave
-    sha256 "0bc3018fe6b7ff39517cfc630a699d81857c6c667ed6d1a88290c9c2c28504a8" => :high_sierra
+    sha256 "df477785b9f155d2ed62f8d9213301bbfe32235f2337eff3e1d549bec2f92a7a" => :catalina
+    sha256 "cad37d2a433cab21c1776b0815efa0dba907c31444d81c7770f27df296ff9cd9" => :mojave
+    sha256 "e1370567a0f5ea7504d2f254a1b375006a19f6b68a5948fb4d51febfdfd194cc" => :high_sierra
   end
 
   depends_on "autoconf" => :build
