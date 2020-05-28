@@ -4,6 +4,13 @@ class Cddlib < Formula
   url "ftp://ftp.math.ethz.ch/users/fukudak/cdd/cddlib-094h.tar.gz"
   sha256 "fe6d04d494683cd451be5f6fe785e147f24e8ce3ef7387f048e739ceb4565ab5"
 
+  bottle do
+    cellar :any
+    sha256 "4c8be3e933f0a7a78d33848b9b40843567239e32401e363b7d7e66f4cfb73020" => :catalina
+    sha256 "6e72cc778fd81ff97edece0e178a70372e64de6a4b652eded2a61e274e744a5a" => :mojave
+    sha256 "5c859b9940af6ba5f9f14f4d2257285c5d8d67610612a787da8c908ff7da5c46" => :high_sierra
+  end
+
   depends_on "gmp"
 
   def install
