@@ -4,6 +4,13 @@ class Immudb < Formula
   url "https://github.com/codenotary/immudb/archive/v0.6.0.tar.gz"
   sha256 "2bed8d984767c970b8e0dc15a89db5737e909b3052489debd8db47c9ea3906ec"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "846f1978ea3a1cbe033bfb6348e0928bff997f00477b2f17b70c1bdcb8e31b58" => :catalina
+    sha256 "d23f02317c490e9c2cb8cc197e12158f4c62234a2444632bf134b7536f15db55" => :mojave
+    sha256 "418cd7b6e40299176b0659fe8dc81bc12226ada04b315ed07d011eb5a657ab48" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
