@@ -6,9 +6,9 @@ class PostgresqlAT10 < Formula
   revision 3
 
   bottle do
-    sha256 "ecba4a4894f071d4ddd6b7cc943f205208c34eac89838c86721be6df8e8a09d9" => :catalina
-    sha256 "c0174ea020d69a420f7931fbdab92d10ae605d4893047dd3bfdccc0abd9293d8" => :mojave
-    sha256 "663ca45daf777784956f5b991c336c61db7da71490a2a4aeaff16d2fc0faf1bd" => :high_sierra
+    sha256 "c812a9a2c22c61cbf408572a1a038ae5bac1c745eba15df0b0edf93543844813" => :catalina
+    sha256 "e4eb27c6604afda16097707ece291b7e4ce15d55f20e489c3a9d7e7d9bcc14da" => :mojave
+    sha256 "63157238b665f29e47a1a27aab8d707279d0d8dda4a60540c57ff804ec5c7a2f" => :high_sierra
   end
 
   keg_only :versioned_formula
