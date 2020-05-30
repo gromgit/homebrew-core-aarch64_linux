@@ -9,9 +9,9 @@ class Watson < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9c9cd611721cff1d748e7b2bcddf12a0557e6254028633f8b66fa68a4f3ad74e" => :catalina
-    sha256 "218620ce1032be731400fde457475bf115826f0d5ba256151db12f676ca88856" => :mojave
-    sha256 "c1c59a05d2f41111afcd8f9607d200357d14a20eafb6fbfc1c2c056baff0bdb8" => :high_sierra
+    sha256 "29b32a7863743cdf3e4b8b0a7c543b400ca7c05523e3a914ca87115b298b63f0" => :catalina
+    sha256 "031e4c49ed943b9c03c740eb8ed3494511bfd2917e4c4041db9e79d0d00c982f" => :mojave
+    sha256 "969b4eb4d80210c89a06ae935fe066f25e6f9ebfa97dde45fa4c5cabf757ade9" => :high_sierra
   end
 
   depends_on "python@3.8"
