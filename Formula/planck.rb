@@ -8,9 +8,9 @@ class Planck < Formula
 
   bottle do
     cellar :any
-    sha256 "dabaf824617821988990f0bcc0a6936183d979781418a4ebec27dccd2b860337" => :catalina
-    sha256 "bce9b5ee6cb8c2a2c48724748c1320eb430875be1dfb69c8a4a2194e9cefc8e1" => :mojave
-    sha256 "670344b5e5f0fb52f94cb04d8ed8c2d725eb9c80797411b72c36ae426a3f24d4" => :high_sierra
+    sha256 "5b406713770c2829f37ea2a979339d63e25919d843c2bd99b637965415bc0607" => :catalina
+    sha256 "9aa890a053401c91cc47614297141f98c368ffbd10c5bccdcd16dfc44c608926" => :mojave
+    sha256 "a5527c52066b07419fef2617323897d21b90b6ce59a5014637eb4c6f234d8596" => :high_sierra
   end
 
   depends_on "clojure" => :build
