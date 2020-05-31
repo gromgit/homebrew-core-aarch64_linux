@@ -6,9 +6,9 @@ class Sniffglue < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7a622b2d3018dda1d59b13bfcc04a81ddcc917855b229d5dea583a3d77676477" => :catalina
-    sha256 "0efbd0283a8ad1aacedd6256972050054c92757ad9b1b80554b4eed55e13217a" => :mojave
-    sha256 "0130451cd4305cbb61a06158b45caf20e7d3f4a869c0ae53d9d6b064421ac3e9" => :high_sierra
+    sha256 "9eb84327d14362e98f5c28bc8de59d85fb975348206d7d17d2e9ca601743a4b2" => :catalina
+    sha256 "7cf69e349503bc79fd6143df0ade8e5e2afb7bbe08b25374da4507216fd90a3f" => :mojave
+    sha256 "765e71bbc155e4aca03eba31e3827564413114e7812d33769e8b91c3bfc9f761" => :high_sierra
   end
 
   depends_on "rust" => :build
