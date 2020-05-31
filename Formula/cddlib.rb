@@ -1,8 +1,9 @@
 class Cddlib < Formula
   desc "Double description method for general polyhedral cones"
   homepage "https://www.inf.ethz.ch/personal/fukudak/cdd_home/"
-  url "ftp://ftp.math.ethz.ch/users/fukudak/cdd/cddlib-094h.tar.gz"
-  sha256 "fe6d04d494683cd451be5f6fe785e147f24e8ce3ef7387f048e739ceb4565ab5"
+  url "https://github.com/cddlib/cddlib/releases/download/0.94j/cddlib-0.94j.tar.gz"
+  sha256 "27d7fcac2710755a01ef5381010140fc57c95f959c3c5705c58539d8c4d17bfb"
+  version_scheme 1
 
   bottle do
     cellar :any
@@ -17,8 +18,6 @@ class Cddlib < Formula
     system "./configure", "--disable-dependency-tracking",
                           "--prefix=#{prefix}"
     system "make", "install"
-    doc.install Dir["doc/*"]
-    pkgshare.install Dir["examples*"]
   end
 
   test do
@@ -35,7 +34,7 @@ class Cddlib < Formula
 
         dd_ErrorType error=dd_NoError;
         dd_LPSolverType solver;  /* either DualSimplex or CrissCross */
-        dd_LPPtr lp;   
+        dd_LPPtr lp;
 
         dd_rowrange m;
         dd_colrange n;
