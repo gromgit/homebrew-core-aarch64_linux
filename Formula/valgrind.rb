@@ -3,9 +3,8 @@ class Valgrind < Formula
   homepage "https://www.valgrind.org/"
 
   stable do
-    url "https://sourceware.org/pub/valgrind/valgrind-3.15.0.tar.bz2"
-    mirror "https://dl.bintray.com/homebrew/mirror/valgrind-3.15.0.tar.bz2"
-    sha256 "417c7a9da8f60dd05698b3a7bc6002e4ef996f14c13f0ff96679a16873e78ab1"
+    url "https://sourceware.org/pub/valgrind/valgrind-3.16.0.tar.bz2"
+    sha256 "582d5127ba56dfeaab4c6ced92a742b2921148e28a5d55055aedd8f75f1cf633"
 
     depends_on :maximum_macos => :high_sierra
   end
@@ -35,11 +34,6 @@ class Valgrind < Formula
       --build=amd64-darwin
     ]
     system "./autogen.sh" if build.head?
-
-    # Look for headers in the SDK on Xcode-only systems: https://bugs.kde.org/show_bug.cgi?id=295084
-    if build.stable? && !MacOS::CLT.installed?
-      inreplace "coregrind/Makefile.in", %r{(\s)(?=/usr/include/mach/)}, '\1'+MacOS.sdk_path.to_s
-    end
 
     system "./configure", *args
     system "make"
