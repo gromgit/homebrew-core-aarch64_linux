@@ -2,8 +2,8 @@ class Volta < Formula
   desc "JavaScript toolchain manager for reproducible environments"
   homepage "https://volta.sh"
   url "https://github.com/volta-cli/volta.git",
-    :revision => "a8186ceb9c0c015730d81054894a5a3690403d7a",
-    :tag      => "v0.8.0"
+    :revision => "d331899950fcbb08ca48f3ac8d40341f9a437dd7",
+    :tag      => "v0.8.1"
 
   bottle do
     cellar :any_skip_relocation
