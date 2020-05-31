@@ -1,8 +1,8 @@
 class Libosinfo < Formula
   desc "The Operating System information database"
   homepage "https://libosinfo.org/"
-  url "https://releases.pagure.org/libosinfo/libosinfo-1.7.1.tar.xz"
-  sha256 "bb26106ad4a9f8523f81b332d2aedb717cdcb0500b3f68ba7c6ff945c4d627e9"
+  url "https://releases.pagure.org/libosinfo/libosinfo-1.8.0.tar.xz"
+  sha256 "49ff32be0d209f6c99480e28b94340ac3dd0158322ae4303adfbdfe973a108a5"
 
   bottle do
     sha256 "e067499ce7ea69830ea63755751426063e6e1f4b74b09ec9bb35c7ddf825bf25" => :catalina
