@@ -7,9 +7,9 @@ class Cddlib < Formula
 
   bottle do
     cellar :any
-    sha256 "4c8be3e933f0a7a78d33848b9b40843567239e32401e363b7d7e66f4cfb73020" => :catalina
-    sha256 "6e72cc778fd81ff97edece0e178a70372e64de6a4b652eded2a61e274e744a5a" => :mojave
-    sha256 "5c859b9940af6ba5f9f14f4d2257285c5d8d67610612a787da8c908ff7da5c46" => :high_sierra
+    sha256 "06dfe39e32a33bfeecffbdb4dbaa5da38f0f9e49bdd70995d431f71c050c697c" => :catalina
+    sha256 "eae03b8375c1b6c06d3f3b0fa2d420f84ede931fae51b1d2b1158ac65ae2d879" => :mojave
+    sha256 "c11684af685133e3c83ae655ac44fc4b9ca99e97adf22d85100bc762933ac2d6" => :high_sierra
   end
 
   depends_on "gmp"
