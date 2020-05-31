@@ -7,9 +7,9 @@ class Kops < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "838b6aa8ad50514f9191f238920e073976453c4e01d5f350bc1a7ae69b1c1861" => :catalina
-    sha256 "e0b1462795554b28045fa7bd9e00702e6e8b13bd4169e0545feb01da9127b31f" => :mojave
-    sha256 "81ce10e69f44f46f758137c3f154d4faec574e4f34b32327a1962fe8ad8c61de" => :high_sierra
+    sha256 "0457ed1df1fb69159fa793e738e1b5a6098dbf790dc235febcdd14261950ff81" => :catalina
+    sha256 "3a247343d4045e5eb41678920ce7dd9fa9c7e704d542f5e9b19c9f98c253d3ff" => :mojave
+    sha256 "7553a41988d4333a4d845ddc6d780b2e958d297b5ee360e48283647589d3a0d8" => :high_sierra
   end
 
   depends_on "go" => :build
