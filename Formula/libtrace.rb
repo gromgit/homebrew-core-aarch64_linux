@@ -6,9 +6,9 @@ class Libtrace < Formula
 
   bottle do
     cellar :any
-    sha256 "4d272bedd7387e8508983c6263b3d04f8afda4d529d7edf87b80d719ff84d2e5" => :catalina
-    sha256 "3e7788e50fc36a39d8eca58921dd96fcb6571dd43c1ac658398c53686a812b50" => :mojave
-    sha256 "71e3724b27484b38324b196464ea6078a3fe3e66888589ed87bc543938e6c36f" => :high_sierra
+    sha256 "8878693b0cd0ca15e27e41ce570e0bb16cbfec1e8588fcd976c3c3aab619c81f" => :catalina
+    sha256 "f5e44c294752e0f067c852f30ba3b472af2c400279ae4df9247aa5e807991a7b" => :mojave
+    sha256 "64bbb0bb6d8b133720d135c289567fc49b5fdde2f6334a4a49efedc51da1e0e8" => :high_sierra
   end
 
   depends_on "openssl@1.1"
