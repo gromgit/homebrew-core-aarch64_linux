@@ -1,8 +1,8 @@
 class Hypre < Formula
   desc "Library featuring parallel multigrid methods for grid problems"
   homepage "https://computation.llnl.gov/casc/hypre/software.html"
-  url "https://github.com/hypre-space/hypre/archive/v2.18.2.tar.gz"
-  sha256 "28007b5b584eaf9397f933032d8367788707a2d356d78e47b99e551ab10cc76a"
+  url "https://github.com/hypre-space/hypre/archive/v2.19.0.tar.gz"
+  sha256 "466b19d8a86c69989a237f6f03f20d35c0c63a818776d2cd071b0a084cffeba5"
   head "https://github.com/hypre-space/hypre.git"
 
   bottle do
