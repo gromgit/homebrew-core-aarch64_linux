@@ -9,9 +9,9 @@ class VpnSlice < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "914baaa49147f8d501661d64f36149b540c6f41d4aeda50c1f6ece60efa74156" => :catalina
-    sha256 "3952bc6d4d3ebc7f2276d226096880c628a7450dd0164753fa15681a4a713060" => :mojave
-    sha256 "d03feef3cde8d44fa5fe0ec33020127471c5eb1c8e299f41b2b78bbc0d3ecab8" => :high_sierra
+    sha256 "f9f1e9ed1b74162a4de1d50ebe332cc77798684733370f7cf6a0905259252fa5" => :catalina
+    sha256 "e0cc5a67fc5c6d3942710243d44c8ae48274ed881b971ddb76ff80aeb256bc45" => :mojave
+    sha256 "3ad4e5dc295b0cc0c8d489738fc80a55658b1bda71a3e838b75aa4e4b96c2e47" => :high_sierra
   end
 
   depends_on "python@3.8"
