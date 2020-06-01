@@ -6,9 +6,9 @@ class Dar < Formula
 
   bottle do
     cellar :any
-    sha256 "f05679ced5d121523f008a3a2eb9dc0b1da35f09a1443d6233577343d26dfd02" => :catalina
-    sha256 "9f4b02440b3711787ca24c5bf9901654093f7c4364bfd2c9f9c45413c6880cd7" => :mojave
-    sha256 "d372eb12e3b783c910d4fc31d834e4dd61104dadc6e63dd273829951af66fd55" => :high_sierra
+    sha256 "715d4c42deee8466b4c4ca1eb5c1eb0e353531f008162a1caa0ac3cebed80eea" => :catalina
+    sha256 "da4e6447538509a0cf9b67cd126096ff8b4967ea9503681d8a985b557128cd1a" => :mojave
+    sha256 "589731424a6eb153ea8ad9f60e05f18e077194c7ca5d95784bd102bb7781652b" => :high_sierra
   end
 
   depends_on "upx" => :build
