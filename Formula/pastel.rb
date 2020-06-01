@@ -6,9 +6,9 @@ class Pastel < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "a353ed8c114b5a65c2f82bd42d9e0a6e634a416ab852236999ade4e9ede86406" => :catalina
-    sha256 "9e3c04c2ae69fb50826e45ae9249f983390dd8791833c074d6e50f10cd52b3e2" => :mojave
-    sha256 "361a8200e697ca04c2e348264cda9dfd2caa4133c07a2c261e8ef68be472942d" => :high_sierra
+    sha256 "e2478748ed0561c76af8f68b4067f42cd365ad7735a9d44dda159e9bd35a1c1d" => :catalina
+    sha256 "3d9fcb9c4f2e70010681b88f0ceca5795773b849e7bc6f59689e90ad969a673c" => :mojave
+    sha256 "06f87da95e1d1b0f53fbcd9c9ff36e4c8a0d3ea85825ac7bc648b3ab445e61ee" => :high_sierra
   end
 
   depends_on "rust" => :build
