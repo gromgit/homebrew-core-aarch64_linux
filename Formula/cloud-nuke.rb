@@ -5,6 +5,13 @@ class CloudNuke < Formula
   sha256 "ff550fe4814a18d6da3b7eb557e4ad9bec61650ea27bd7fb06c0df5080fdf7ab"
   head "https://github.com/gruntwork-io/cloud-nuke.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "e77748c7476928a62c52ee673e91894ae068ae7a0387f21d6d8522443e21176f" => :catalina
+    sha256 "4e7c9b182abc5cfba18a680758068f5de1a78f70cae6680c32f3380f3177e3bd" => :mojave
+    sha256 "0c8ac7a42ce23baeb715c3d6fd820b0573e553bc3a3e672618def99f8dca966d" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
