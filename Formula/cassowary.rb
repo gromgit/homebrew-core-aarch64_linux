@@ -5,6 +5,13 @@ class Cassowary < Formula
   sha256 "bfbd920479782862ba8ff293cd24f3b043494272e51f2e4de1bc7966fa2d6c29"
   head "https://github.com/rogerwelin/cassowary.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "7a57a592abfb7ed0e997eea55a3478fcde7fe115a2b2281afb33a0f0f55b83bd" => :catalina
+    sha256 "5e28763d9b72a25b8fdfaf913e6dacacc777e82bed399e875e3dda1d882dbba2" => :mojave
+    sha256 "e05b0b8d38265cbb05223f2f4a5433f47991e74185d1a9673c0bac1a3c05600d" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
