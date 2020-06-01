@@ -8,9 +8,9 @@ class DosboxX < Formula
 
   bottle do
     cellar :any
-    sha256 "293d6d8e1f0538280ecc63496f8d0c8c9339173813f2835e9a73651f95ad5100" => :catalina
-    sha256 "6f764b3578c1d536c4a3694addc7e8b620538d48bb9c5043989b2a19b7453ba9" => :mojave
-    sha256 "43f650693a4e1943a4fc9d0d0de8da0e214d4f45b9b40da2a7b8d35d4c66d8ae" => :high_sierra
+    sha256 "188b8c6fea8b9b0a48f9954b5880b5930e5f5a60676ed00b6e737299af0a247e" => :catalina
+    sha256 "a79924c841eb8e32af442c35f2a473261cdbccd69cfed0a0a43cda5871aa76e3" => :mojave
+    sha256 "fcd0e2800565054884857b256096cfd650fb64b7a004bfbc60a5e934f1daa8af" => :high_sierra
   end
 
   depends_on "autoconf" => :build
