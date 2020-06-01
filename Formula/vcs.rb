@@ -7,9 +7,9 @@ class Vcs < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b3531908db412427f55f442a5ddddc79bb23916740a9be8808864ff098283fc7" => :catalina
-    sha256 "b3531908db412427f55f442a5ddddc79bb23916740a9be8808864ff098283fc7" => :mojave
-    sha256 "25e828b307df1eae19bc5bf09e37e23cd7be0951e4934258c0647e2af4e7a4bb" => :high_sierra
+    sha256 "6408fd9b359ac2b01060196beb429d872d5edd1d56c6029fd540704413057c3a" => :catalina
+    sha256 "6408fd9b359ac2b01060196beb429d872d5edd1d56c6029fd540704413057c3a" => :mojave
+    sha256 "282eb2546d59180b1e1a7cf9540f28c34c2fa83001a7073d2063816302e8b16e" => :high_sierra
   end
 
   depends_on "ffmpeg"
