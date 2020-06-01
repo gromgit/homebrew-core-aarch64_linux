@@ -6,12 +6,9 @@ class Gpp < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "8527b9592ca01b7a2890da5e005ab98048ec1d21a2ab1f782a90904095e88ea2" => :catalina
-    sha256 "1321760033d09fb720739a4f261b55873ff68f76241074bd2608c4d9b07cb3c1" => :mojave
-    sha256 "41c9826ea93e97915c36193f637c3835e165fa90aee154d29b708895bbdd73af" => :high_sierra
-    sha256 "ceec5eeca75c3ad3e2192f9fcef09857533de93e92413cc501e23e9b494da0f7" => :sierra
-    sha256 "2a7f2e1371f6bcbff03db5b9b260c47cd41cb25ec1e5726dfb5ef838f3c417e0" => :el_capitan
-    sha256 "2ea663aa6b1be3c2f6f11b99a31663aeab30c9e7de3712886b23b4c7cc114a5b" => :yosemite
+    sha256 "7b18d4755835ab3cad89e5d90b459475dd499695d461a6c8ac4df35f07a11b1b" => :catalina
+    sha256 "d83bbb08210bd763f300a44c9cae8cf8bad7070fcd0e8064e2c81f6c385937b8" => :mojave
+    sha256 "c45c620602411620fa60c1b780a0a9b6172606f9f03c9e7d18e31e9c1276b172" => :high_sierra
   end
 
   def install
