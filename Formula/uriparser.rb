@@ -7,10 +7,9 @@ class Uriparser < Formula
 
   bottle do
     cellar :any
-    sha256 "421b45811861a0ce226e7f4c9647a8b7753d9e7f84b5c84ed6b637f8839d461d" => :catalina
-    sha256 "e54bac5e1cf6a1ed3f87e42f56f0ff2f4602e22cf6113bc03d82a6ae12b13f76" => :mojave
-    sha256 "27649c5b2c692596c9811ab872b1b82e09ccb67dbff0a048de7137134aff81e8" => :high_sierra
-    sha256 "a3ee937d18ead7330f7cf6dfbf5a63ac41dbb5e9d7e68450e3b07ff54c75d80f" => :sierra
+    sha256 "0fac36c34a537dd29050a29003d5e4a1c34ce8d00d964c7e8ebdeaafa99f6268" => :catalina
+    sha256 "5440ffb9d3363007478193e0ed4653d8f5eaf27fd36b5c0968968b73d14af2f9" => :mojave
+    sha256 "b25005697a3acc8cd6921189f41e6f7fa1c6667a9e259a3d85f8f1dea6915460" => :high_sierra
   end
 
   depends_on "cmake" => :build
