@@ -6,9 +6,9 @@ class Menhir < Formula
 
   bottle do
     cellar :any
-    sha256 "7cea53cab9c67efe36ef26f903346b0f7ceac69865583580bef9de50583b1cfc" => :catalina
-    sha256 "bcd74e6ed3a0eaa8017f32aaaa310f40b14fbaaa4f26c42c6a1a6316115f2610" => :mojave
-    sha256 "266d39e5ffeffe92fd04d0e78c404dfdc71cea5ca433c4e62f9c6c79dfac5806" => :high_sierra
+    sha256 "1c4c5bb9dcfc9b9409dc4689e42d3baf31567e05abaf4ef6934a38e030a0b766" => :catalina
+    sha256 "2d4de775a3370a7f3d873c4d452b60041275a9c78cc0f1098f4177092434bf6f" => :mojave
+    sha256 "28bbd37dce6e29ed763b37ada1eea4ce010da2490cce0ea77b91122251e429f8" => :high_sierra
   end
 
   depends_on "dune" => :build
