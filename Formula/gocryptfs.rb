@@ -6,9 +6,9 @@ class Gocryptfs < Formula
 
   bottle do
     cellar :any
-    sha256 "4dc5577b1e78ef922d534275cd5024ec83365a412e9c766f46b5ee4aa6a3bf4c" => :catalina
-    sha256 "c864ef84c22ddd708c54542fa2e52b2a85fb337717edf83e00e45f608ac5e736" => :mojave
-    sha256 "92d21f9d17aa19aa59592549675857f103af7ffe211485ac7c7e900f09a32813" => :high_sierra
+    sha256 "adf2a34cc99f353992e790c856971e9128d55caf5c51a2ae0a50ff5506e63c1c" => :catalina
+    sha256 "3e4cd09514efbd074f41f6636f0df0b01708856446c1da1d6cfe766cd8cae121" => :mojave
+    sha256 "a7e6b3d28c3e3cd78ff4be78adc8d2feeb8061c7459d2c8e6f04e61f0029bb51" => :high_sierra
   end
 
   depends_on "go" => :build
