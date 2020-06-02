@@ -1,8 +1,8 @@
 class Cocoapods < Formula
   desc "Dependency manager for Cocoa projects"
   homepage "https://cocoapods.org/"
-  url "https://github.com/CocoaPods/CocoaPods/archive/1.9.1.tar.gz"
-  sha256 "c5ce17f20f93cba55bde13e9e6e87b1f49b312ab27db4f259226d2c019953bcf"
+  url "https://github.com/CocoaPods/CocoaPods/archive/1.9.3.tar.gz"
+  sha256 "12d8f52dcfbaf0f4b3e52001e072e26aa3c967e1c41e84511e84b587ae434e27"
 
   bottle do
     sha256 "f375095fa465b420d07e30c81ea1ee96d51f3fd7dd5ca2907af9d9171200651c" => :catalina
@@ -10,7 +10,10 @@ class Cocoapods < Formula
     sha256 "51a8782f5d6cae4c7f0a7070a80f0324e5d8377c2c7ea56cbb229831b3401be4" => :high_sierra
   end
 
-  depends_on "ruby" if MacOS.version <= :sierra
+  depends_on "pkg-config" => :build
+
+  uses_from_macos "libffi", :since => :catalina
+  uses_from_macos "ruby", :since => :catalina
 
   def install
     if MacOS.version >= :mojave && MacOS::CLT.installed?
