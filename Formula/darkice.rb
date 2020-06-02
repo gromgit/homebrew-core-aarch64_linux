@@ -6,12 +6,9 @@ class Darkice < Formula
 
   bottle do
     cellar :any
-    sha256 "11c09659a5e54a2c66ef162946d4103b6c9677cdf4c91ff372448d06819692a9" => :catalina
-    sha256 "a35885863f951a6660c82a09158195172df5e8e29b1c02005e8627275a38d080" => :mojave
-    sha256 "e07c9c9beafe2a9fae19ae6570181ef838da42755b9d9677535f8410768c1e7e" => :high_sierra
-    sha256 "f5acac754cda3888160930ff630d33d5a7f134e455b21ad21a40b41150e12f49" => :sierra
-    sha256 "a3a9604162e1dd71c1ec69cfec895e0a92329e57f478a01131a2a00a3c495544" => :el_capitan
-    sha256 "64c3ebd7486589b3e9a216a4be8158ad94b1ceafac15934f97b4b3f3d684ad05" => :yosemite
+    sha256 "c312949cef4bec0b37951d4e9f3b9211a0a0c04d8666cb14bfde0a9f6c85ad5e" => :catalina
+    sha256 "b41dd758dcda3daa8bcde6c5f161fb73d9268bef1bd68940e320fe0374b8272e" => :mojave
+    sha256 "a8b0c02c6b00f614c9eac9d05fa17aee233021879edf7abc8cd81d1de34881e4" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
