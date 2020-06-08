@@ -6,9 +6,9 @@ class Maxima < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "4828f5a5e901c48c225a182d85f8b5c4c3e0f5316e4ca6c7bf49e09710899c7c" => :catalina
-    sha256 "e1154e085eaf5716065a682f0d739b7b3adfbf2697826469b69430a503581c47" => :mojave
-    sha256 "2cc7a70a750ca77527db7664e7e53790cf3cf07f6f090d18e6e1320b0f9bde7e" => :high_sierra
+    sha256 "f873f22d3e0540feb2a696cb2ec18ca7786742ae2a00faafcce968bbda56e5a9" => :catalina
+    sha256 "b6d47595e2d411752408890c331efba31819cc006284b849d8473f80dfa12948" => :mojave
+    sha256 "bb6196d4dafeacd3060782b7d46e32df9281cb8d0c5d4eb5ea280c3531ab0ab3" => :high_sierra
   end
 
   depends_on "gawk" => :build
