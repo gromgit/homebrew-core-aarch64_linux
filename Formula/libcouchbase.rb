@@ -5,6 +5,12 @@ class Libcouchbase < Formula
   sha256 "488cd906450c797b014910f5b9239cf1e14c7e0f94d3b7dc5f9cfb76ce1085b1"
   head "https://github.com/couchbase/libcouchbase.git"
 
+  bottle do
+    sha256 "c429415d4362d9ab789bef88dbfa1fe3806cd2dac163cac40dcad20981347e15" => :catalina
+    sha256 "d1d611e4b4d781b21ba823bf0150dd4b13ef66282f58d70cd8f9eb9df8d8f888" => :mojave
+    sha256 "b7c5ffe16735dcc77adea3e06aba2d59d3497d5f0d897985e15ee0bfec29e36e" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "libev"
   depends_on "libevent"
