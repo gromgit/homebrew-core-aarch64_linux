@@ -1,8 +1,8 @@
 class Bmake < Formula
   desc "Portable version of NetBSD make(1)"
   homepage "http://www.crufty.net/help/sjg/bmake.html"
-  url "http://www.crufty.net/ftp/pub/sjg/bmake-20200524.tar.gz"
-  sha256 "79e72bbab47dad2cfc8e6041a61287fb852109c8e3dc1defc5a2b64e3966dadb"
+  url "http://www.crufty.net/ftp/pub/sjg/bmake-20200606.tar.gz"
+  sha256 "67a3a27b3156e7d07dd5cd3501c64c69d50ed6752a59e616f50820f3d10b7002"
 
   bottle do
     sha256 "3cc65875a38a14e0b6a817b84ea4622af4f249420d2cfbb91883351be55f17ec" => :catalina
