@@ -6,10 +6,9 @@ class HowardHinnantDate < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "7afeb7e1b64e9e78d766be80a2e95c51b404092eeb1e5deb4d84956eeb02aff3" => :catalina
-    sha256 "d1601c1a3c38241472d597a126ed120124995919e42d5a9cc10357c699d1b5e7" => :mojave
-    sha256 "f7600a317e2569e37ac78be36abaff96f8f572cd7650d9c202a5a758f59f46f8" => :high_sierra
+    sha256 "336157e546ea77db5ec3c0360b4e873e8c6ec265aa6dedb2fe19d45a6df207fb" => :catalina
+    sha256 "20a35158d9c478a553baae673544620546db6f31825f9e052a0bbf07086e773e" => :mojave
+    sha256 "f23b72ea88d5c0bc12f2e93dff65ba6a9867d88831294fc5c770f2d0a39762fa" => :high_sierra
   end
 
   depends_on "cmake" => :build
