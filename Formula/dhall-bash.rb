@@ -8,10 +8,9 @@ class DhallBash < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "ee0d4ac6a7620e4081aa517db06bdefa58ec610141658a6dfdaf098a5852c7fb" => :catalina
-    sha256 "7c3bbb085470847b8169528d4284471de884a301757106083036d47d5c782a03" => :mojave
-    sha256 "1eb28dde342827b5e733f1c99f8b19ca516499e6f1eb99218a1b0e7dc19d2f05" => :high_sierra
+    sha256 "7b82ee43dbd713fc74ca614e277045fa75682fa4ab8a08fab44901d2f2bafbbb" => :catalina
+    sha256 "b603fc69730a8a2aed62bba04b0e56e68b3f97ffb95353b44743619e368132b1" => :mojave
+    sha256 "eb1db8a7bf06d612f47e9271c78cafd04e4042ae8131258487e2b1cc67f1846b" => :high_sierra
   end
 
   depends_on "cabal-install" => :build
