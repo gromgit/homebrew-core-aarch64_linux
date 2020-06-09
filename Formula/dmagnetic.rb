@@ -1,8 +1,8 @@
 class Dmagnetic < Formula
   desc "Magnetic Scrolls Interpreter"
   homepage "https://www.dettus.net/dMagnetic/"
-  url "https://www.dettus.net/dMagnetic/dMagnetic_0.22.tar.bz2"
-  sha256 "53905c8a1a69c5c69a7afcac5d0368edc6c214fc603f3d76313e4f33faeb0431"
+  url "https://www.dettus.net/dMagnetic/dMagnetic_0.23.tar.bz2"
+  sha256 "1e555b6a6ef5b3a54d2fe25ac83fbd100e3df6342a95e88354a2528ceaa8ff0f"
 
   bottle do
     cellar :any_skip_relocation
@@ -17,7 +17,7 @@ class Dmagnetic < Formula
   end
 
   test do
-    assert_match "2d90033c199915d2f4d4ecc964121928", \
+    assert_match "0be77b320a608a1778a0714adafaed69", \
       shell_output("echo Hello | #{bin}/dMagnetic -ini "\
         "#{share}/games/dMagnetic/dMagnetic.ini -mag "\
         "#{share}/games/dMagnetic/minitest.mag -gfx "\
