@@ -5,6 +5,13 @@ class Toot < Formula
   url "https://github.com/ihabunek/toot/releases/download/0.26.0/toot-0.26.0.tar.gz"
   sha256 "2bb4c2cc45c9f52c2c813140a9051489ed618a14b8746f6c8a62c48343c51440"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "5b8822979864a7bc75a6237c5b8c4de45061f246c6b172e1060e506b66cc8341" => :catalina
+    sha256 "93c9e6c5028dceee8400ce0a8c642ad9c06b990348279f7bdbdf3d03d1cc6ffc" => :mojave
+    sha256 "41e5203abe27ecd65b85be29ff376260f1ef3851150b6ddc371cd9e8121db77f" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   resource "requests" do
