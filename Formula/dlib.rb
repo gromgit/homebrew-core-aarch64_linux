@@ -1,8 +1,8 @@
 class Dlib < Formula
   desc "C++ library for machine learning"
   homepage "http://dlib.net/"
-  url "http://dlib.net/files/dlib-19.19.tar.bz2"
-  sha256 "1decfe883635ce51acd72869cebe870ab9b85eb094d417adc8f48aa7b8c60cd7"
+  url "http://dlib.net/files/dlib-19.20.tar.bz2"
+  sha256 "df9aa456ed5e190597fa8dafc1471670ced0128d0f115f2be7677c9c42f4328d"
   head "https://github.com/davisking/dlib.git"
 
   bottle do
