@@ -8,10 +8,9 @@ class Cgrep < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "be536847f887c7e81974ee0f2853d35c8432decd34f5be604a41ff37da459012" => :catalina
-    sha256 "39b5aa8e661d3f56f0e7e82bd9d30276ed5a2212a73e7f381070e251f7034e8a" => :mojave
-    sha256 "09ef5c68ea4b09732b75e8aa9859e1b70e54cef0ad963e03b59d32d11a34f3e2" => :high_sierra
+    sha256 "cee7f82d8e3e6b46e2afae649e13cf55202771da2473fbbebc6a712aa2f46496" => :catalina
+    sha256 "0ac8d5bcfc0ce6d295aa617cf0e5c624c61df4fc28a2ddb8c7b21bf753c7e369" => :mojave
+    sha256 "55118e5aa9a1999081105f7b2aa3e00793de45623fa61c0e69c6830e598d045a" => :high_sierra
   end
 
   depends_on "cabal-install" => :build
