@@ -7,11 +7,10 @@ class Pass < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "3f17d80446ffe12a32f8d90bde16550f88e0fe99c43e3fa0cf141a89bba30730" => :catalina
-    sha256 "1a70cc714c9d37c24898d7da1431b5e5af1926abd41915cb546d6979ded1a4cb" => :mojave
-    sha256 "c08575225a6e5aeace358c9c65666e08743814fd66017238e32b8fc3dff812aa" => :high_sierra
-    sha256 "c08575225a6e5aeace358c9c65666e08743814fd66017238e32b8fc3dff812aa" => :sierra
+    rebuild 2
+    sha256 "8130755986b8124ead30b7444bbab1f5b12b5481ddf914a310e221fdda736eb3" => :catalina
+    sha256 "8130755986b8124ead30b7444bbab1f5b12b5481ddf914a310e221fdda736eb3" => :mojave
+    sha256 "8130755986b8124ead30b7444bbab1f5b12b5481ddf914a310e221fdda736eb3" => :high_sierra
   end
 
   depends_on "gnu-getopt"
