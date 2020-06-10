@@ -5,6 +5,12 @@ class I686ElfGcc < Formula
   mirror "https://ftpmirror.gnu.org/gcc/gcc-9.3.0/gcc-9.3.0.tar.xz"
   sha256 "71e197867611f6054aa1119b13a0c0abac12834765fe2d81f35ac57f84f742d1"
 
+  bottle do
+    sha256 "7b1e050e02a95291d9395e3e85b4a6ccf848dadacfba1482df6ceda83a955a03" => :catalina
+    sha256 "6d40d812c70c18f3cfb123ceb57864fe4e906fa1357cffdd128d8ecac1c13fbf" => :mojave
+    sha256 "74273508c7895697f7120301d06c8c5400ebd755cb0a12b4f32843fa15c64daa" => :high_sierra
+  end
+
   depends_on "gmp"
   depends_on "i686-elf-binutils"
   depends_on "libmpc"
