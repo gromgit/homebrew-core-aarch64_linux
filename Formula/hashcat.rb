@@ -15,11 +15,6 @@ class Hashcat < Formula
 
   depends_on "gnu-sed" => :build
 
-  # Upstream could not fix OpenCL issue on Mavericks.
-  # https://github.com/hashcat/hashcat/issues/366
-  # https://github.com/Homebrew/homebrew-core/pull/4395
-  depends_on :macos => :yosemite
-
   def install
     system "make", "CC=#{ENV.cc}", "PREFIX=#{prefix}"
     system "make", "install", "CC=#{ENV.cc}", "PREFIX=#{prefix}"
