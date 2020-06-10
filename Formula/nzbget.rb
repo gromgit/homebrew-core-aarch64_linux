@@ -14,7 +14,6 @@ class Nzbget < Formula
   end
 
   depends_on "pkg-config" => :build
-  depends_on "gcc" if MacOS.version == :mavericks
   depends_on "openssl@1.1"
 
   uses_from_macos "libxml2"
