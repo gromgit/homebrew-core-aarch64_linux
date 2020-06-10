@@ -12,7 +12,6 @@ class Libomp < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on :macos => :yosemite
 
   def install
     # Disable LIBOMP_INSTALL_ALIASES, otherwise the library is installed as
