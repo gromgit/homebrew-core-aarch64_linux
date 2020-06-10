@@ -19,7 +19,6 @@ class Corectl < Formula
   depends_on "opam" => :build
   depends_on :x11 => :build
   depends_on "libev"
-  depends_on :macos => :yosemite
 
   def install
     ENV["GOPATH"] = buildpath
