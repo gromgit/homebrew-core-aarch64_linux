@@ -12,7 +12,6 @@ class Bazel < Formula
   end
 
   depends_on "python@3.8" => :build
-  depends_on :macos => :yosemite
   depends_on "openjdk@11"
 
   uses_from_macos "zip"
