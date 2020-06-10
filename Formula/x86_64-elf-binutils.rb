@@ -7,9 +7,9 @@ class X8664ElfBinutils < Formula
   revision 1
 
   bottle do
-    sha256 "57141264369389b9c50019aac6bb0f6dcf19935f20ea8fab57b56d4c4451066a" => :catalina
-    sha256 "2fa4917e60d82c29d70b90a5a725ecb26a29aa5cf148af16e73af045ee431c59" => :mojave
-    sha256 "ed28927581eb4e2a8bfd10134eec40e1b1055161a5fb26580453943fb3bffe72" => :high_sierra
+    sha256 "1d80291a30992f7d7cdbb8b057fa8dbf945425c89592b2b7ceeb02612269e3f0" => :catalina
+    sha256 "c09647bc99180ed5ee504e7282ba8cb453c85ed9473458d3a4ebcdfe84fd43f8" => :mojave
+    sha256 "68415da4e030aca55b4d077c134d23ca56820fd01b07c4eb9f67ed22decf1e41" => :high_sierra
   end
 
   def install
