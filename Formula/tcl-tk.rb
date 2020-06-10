@@ -39,15 +39,6 @@ class TclTk < Formula
     url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.10/tk8.6.10-src.tar.gz"
     mirror "https://fossies.org/linux/misc/tk8.6.10-src.tar.gz"
     sha256 "63df418a859d0a463347f95ded5cd88a3dd3aaa1ceecaeee362194bc30f3e386"
-
-    # Upstream issue 7 Jan 2018 "Build failure with Aqua support on OS X 10.8 and 10.9"
-    # See https://core.tcl-lang.org/tcl/tktview/95a8293a2936e34cc8d0658c21e5214f1ca9b435
-    if MacOS.version == :mavericks
-      patch :p0 do
-        url "https://raw.githubusercontent.com/macports/macports-ports/0a883ad388b2cbecf14f5ed674bfc9b6d2ce6f23/x11/tk/files/patch-macosx-tkMacOSXXStubs.c.diff"
-        sha256 "2cdba6bbf2503307fe4f4d7200ad57c9926ebf0ff6ed3e65bf551067a30a04a9"
-      end
-    end
   end
 
   resource "itk4" do
