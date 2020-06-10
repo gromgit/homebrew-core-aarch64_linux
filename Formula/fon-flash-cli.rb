@@ -13,9 +13,6 @@ class FonFlashCli < Formula
     sha256 "f60605913533cdc90c6ef163efc7b112af2a61f606b53a715639e08288838dbf" => :high_sierra
   end
 
-  # requires at least the 10.11 SDK
-  depends_on :macos => :yosemite
-
   def install
     cd "fon-flash" do
       system "make", "fon-flash"
