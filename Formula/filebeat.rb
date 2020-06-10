@@ -1,11 +1,9 @@
 class Filebeat < Formula
   desc "File harvester to ship log files to Elasticsearch or Logstash"
   homepage "https://www.elastic.co/products/beats/filebeat"
-  # Pinned at 6.2.x because of a licencing issue
-  # See: https://github.com/Homebrew/homebrew-core/pull/28995
-  url "https://github.com/elastic/beats/archive/v6.2.4.tar.gz"
-  sha256 "87d863cf55863329ca80e76c3d813af2960492f4834d4fea919f1d4b49aaf699"
-  revision 1
+  url "https://github.com/elastic/beats.git",
+      :tag      => "v7.7.1",
+      :revision => "932b273e8940575e15f10390882be205bad29e1f"
   head "https://github.com/elastic/beats.git"
 
   bottle do
@@ -24,6 +22,9 @@ class Filebeat < Formula
   end
 
   def install
+    # remove non open source files
+    rm_rf "x-pack"
+
     ENV["GOPATH"] = buildpath
     (buildpath/"src/github.com/elastic/beats").install Dir["{*,.git,.gitignore}"]
 
@@ -31,22 +32,28 @@ class Filebeat < Formula
     ENV.prepend_create_path "PYTHONPATH", buildpath/"vendor/lib/python#{xy}/site-packages"
 
     resource("virtualenv").stage do
-      system "python3", *Language::Python.setup_install_args(buildpath/"vendor")
+      system Formula["python@3.8"].opt_bin/"python3", *Language::Python.setup_install_args(buildpath/"vendor")
     end
 
-    ENV.prepend_path "PATH", buildpath/"vendor/bin"
+    ENV.prepend_path "PATH", buildpath/"vendor/bin" # for virtualenv
+    ENV.prepend_path "PATH", buildpath/"bin" # for mage (build tool)
 
     cd "src/github.com/elastic/beats/filebeat" do
-      system "make"
+      # don't build docs because it would fail creating the combined OSS/x-pack
+      # docs and we aren't installing them anyway
+      inreplace "magefile.go", "mg.SerialDeps(Fields, Dashboards, Config, includeList, fieldDocs,",
+                               "mg.SerialDeps(Fields, Dashboards, Config, includeList,"
+
+      system "make", "mage"
       # prevent downloading binary wheels during python setup
       system "make", "PIP_INSTALL_COMMANDS=--no-binary :all", "python-env"
-      system "make", "DEV_OS=darwin", "update"
-      system "make", "modules"
+      system "mage", "-v", "build"
+      system "mage", "-v", "update"
 
       (etc/"filebeat").install Dir["filebeat.*", "fields.yml", "modules.d"]
-      (etc/"filebeat"/"module").install Dir["_meta/module.generated/*"]
+      (etc/"filebeat"/"module").install Dir["build/package/modules/*"]
       (libexec/"bin").install "filebeat"
-      prefix.install "_meta/kibana"
+      prefix.install "build/kibana"
     end
 
     prefix.install_metafiles buildpath/"src/github.com/elastic/beats"
@@ -88,7 +95,7 @@ class Filebeat < Formula
 
     (testpath/"filebeat.yml").write <<~EOS
       filebeat:
-        prospectors:
+        inputs:
           -
             paths:
               - #{log_file}
@@ -101,7 +108,7 @@ class Filebeat < Formula
     (testpath/"log").mkpath
     (testpath/"data").mkpath
 
-    filebeat_pid = fork do
+    fork do
       exec "#{bin}/filebeat", "-c", "#{testpath}/filebeat.yml",
            "-path.config", "#{testpath}/filebeat",
            "-path.home=#{testpath}",
@@ -109,14 +116,10 @@ class Filebeat < Formula
            "-path.data", testpath
     end
 
-    begin
-      sleep 1
-      log_file.append_lines "foo bar baz"
-      sleep 5
+    sleep 1
+    log_file.append_lines "foo bar baz"
+    sleep 5
 
-      assert_predicate testpath/"filebeat", :exist?
-    ensure
-      Process.kill("TERM", filebeat_pid)
-    end
+    assert_predicate testpath/"filebeat", :exist?
   end
 end
