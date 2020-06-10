@@ -14,9 +14,6 @@ class Libsoundio < Formula
 
   depends_on "cmake" => :build
 
-  # fatal error: 'stdatomic.h' file not found
-  depends_on :macos => :yosemite
-
   def install
     system "cmake", ".", *std_cmake_args
     system "make", "install"
