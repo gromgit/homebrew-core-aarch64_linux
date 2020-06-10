@@ -15,9 +15,6 @@ class Openvpn < Formula
   depends_on "lz4"
   depends_on "lzo"
 
-  # Requires tuntap for < 10.10
-  depends_on :macos => :yosemite
-
   depends_on "openssl@1.1"
   depends_on "pkcs11-helper"
 
