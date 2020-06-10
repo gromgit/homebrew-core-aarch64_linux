@@ -25,7 +25,6 @@ class Watchman < Formula
   depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
-  depends_on :macos => :yosemite # older versions don't support fstatat(2)
   depends_on "openssl@1.1"
   depends_on "pcre"
   depends_on "python@3.8"
