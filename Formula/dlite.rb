@@ -17,10 +17,6 @@ class Dlite < Formula
 
   depends_on "go" => :build
 
-  # DLite depends on the Hypervisor framework which only works on
-  # OS X versions 10.10 (Yosemite) or newer
-  depends_on :macos => :yosemite
-
   def install
     ENV["GOPATH"] = buildpath
 
