@@ -14,7 +14,6 @@ class IosDeploy < Formula
   end
 
   depends_on :xcode => :build
-  depends_on :macos => :yosemite
 
   def install
     xcodebuild "-configuration", "Release", "SYMROOT=build"
