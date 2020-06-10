@@ -25,8 +25,6 @@ class Openclonk < Formula
   depends_on "libogg"
   depends_on "libpng"
   depends_on "libvorbis"
-  # Requires some C++14 features missing in Mavericks
-  depends_on :macos => :yosemite
 
   def install
     ENV.cxx11
