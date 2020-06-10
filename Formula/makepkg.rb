@@ -24,10 +24,6 @@ class Makepkg < Formula
   depends_on "fakeroot"
   depends_on "gettext"
   depends_on "libarchive"
-  # libalpm now calls fstatat, which is only available for >= 10.10
-  # Regression due to https://git.archlinux.org/pacman.git/commit/?id=16718a21
-  # Reported 19 Jun 2016: https://bugs.archlinux.org/task/49771
-  depends_on :macos => :yosemite
   depends_on "openssl@1.1"
 
   uses_from_macos "m4" => :build
