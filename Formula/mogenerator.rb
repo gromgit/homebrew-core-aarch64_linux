@@ -14,7 +14,6 @@ class Mogenerator < Formula
   end
 
   depends_on :xcode => :build
-  depends_on :macos => :yosemite
 
   def install
     xcodebuild "-target", "mogenerator", "-configuration", "Release", "SYMROOT=symroot", "OBJROOT=objroot"
