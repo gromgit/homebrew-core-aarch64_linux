@@ -16,7 +16,6 @@ class ShibbolethSp < Formula
   depends_on "boost"
   depends_on "httpd" if MacOS.version >= :high_sierra
   depends_on "log4shib"
-  depends_on :macos => :yosemite
   depends_on "opensaml"
   depends_on "openssl@1.1"
   depends_on "unixodbc"
