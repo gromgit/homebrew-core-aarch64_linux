@@ -16,8 +16,6 @@ class GoAT112 < Formula
 
   deprecate! :date => "February 25, 2020"
 
-  depends_on :macos => :yosemite
-
   resource "gotools" do
     url "https://go.googlesource.com/tools.git",
         :branch => "release-branch.go1.12"
