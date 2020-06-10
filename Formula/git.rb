@@ -15,11 +15,6 @@ class Git < Formula
   depends_on "gettext"
   depends_on "pcre2"
 
-  if MacOS.version < :yosemite
-    depends_on "openssl@1.1"
-    depends_on "curl"
-  end
-
   resource "html" do
     url "https://www.kernel.org/pub/software/scm/git/git-htmldocs-2.27.0.tar.xz"
     sha256 "ffa91681b6a8f558745924b1dbb76d604c9e52b27c525c6bd470c0123f7f4af3"
