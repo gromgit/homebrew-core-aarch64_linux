@@ -14,8 +14,6 @@ class Launchdns < Formula
     sha256 "ced5d6c6bdb3074c29dd65b244fc4325cc4799820d7dd38c6dedf04c2555f3cb" => :sierra
   end
 
-  depends_on :macos => :yosemite
-
   def install
     ENV["PREFIX"] = prefix
     system "./configure", "--with-launch-h", "--with-launch-h-activate-socket"
