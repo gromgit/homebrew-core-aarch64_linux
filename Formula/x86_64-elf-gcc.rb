@@ -7,9 +7,9 @@ class X8664ElfGcc < Formula
   revision 1
 
   bottle do
-    sha256 "a18c6acf4979f96244584de989ab47791670bc5404e0eca8626708f9e3375702" => :catalina
-    sha256 "0a08de6bb7983d836f619979c84c15d5acbf4df3d83b7affeb11555285addd16" => :mojave
-    sha256 "fce7ea1027a3925c243cd37d5038b915a57293443acf12758bfc00a6399ff0d0" => :high_sierra
+    sha256 "80fa0ac420b2d2546c1945d76e1862028e8ca6e947749b566366ba06ec13d2e3" => :catalina
+    sha256 "09d040dbcbe9d6a86f38d10608bd3bcf50922fd03d0c4c04c87015528e1d3e73" => :mojave
+    sha256 "fbc05f274baf67649d16a39b77bfaecf971de84863de21c9aa67cf09e808c87a" => :high_sierra
   end
 
   depends_on "gmp"
