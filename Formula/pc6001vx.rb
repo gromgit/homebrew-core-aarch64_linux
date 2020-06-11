@@ -1,8 +1,8 @@
 class Pc6001vx < Formula
   desc "PC-6001 emulator"
   homepage "https://eighttails.seesaa.net/"
-  url "https://eighttails.up.seesaa.net/bin/PC6001VX_3.4.0_src.tar.gz"
-  sha256 "4149b4c4a53d002748b7ad6c06a2e0d967ce8a72c6d14e06672df4eb1d968044"
+  url "https://eighttails.up.seesaa.net/bin/PC6001VX_3.5.0_src.tar.gz"
+  sha256 "b78b4c84ce3870da73ab5e64ee283645b7bfd4fc44ab260471ef000dc6349f04"
   head "https://github.com/eighttails/PC6001VX.git"
 
   bottle do
