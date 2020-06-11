@@ -1,11 +1,9 @@
 class Heartbeat < Formula
   desc "Lightweight Shipper for Uptime Monitoring"
   homepage "https://www.elastic.co/products/beats/heartbeat"
-  # Pinned at 6.2.x because of a licencing issue
-  # See: https://github.com/Homebrew/homebrew-core/pull/28995
-  url "https://github.com/elastic/beats/archive/v6.2.4.tar.gz"
-  sha256 "87d863cf55863329ca80e76c3d813af2960492f4834d4fea919f1d4b49aaf699"
-  revision 1
+  url "https://github.com/elastic/beats.git",
+      :tag      => "v7.7.1",
+      :revision => "932b273e8940575e15f10390882be205bad29e1f"
   head "https://github.com/elastic/beats.git"
 
   bottle do
@@ -24,6 +22,9 @@ class Heartbeat < Formula
   end
 
   def install
+    # remove non open source files
+    rm_rf "x-pack"
+
     ENV["GOPATH"] = buildpath
     (buildpath/"src/github.com/elastic/beats").install buildpath.children
 
@@ -31,20 +32,23 @@ class Heartbeat < Formula
     ENV.prepend_create_path "PYTHONPATH", buildpath/"vendor/lib/python#{xy}/site-packages"
 
     resource("virtualenv").stage do
-      system "python3", *Language::Python.setup_install_args(buildpath/"vendor")
+      system Formula["python@3.8"].opt_bin/"python3", *Language::Python.setup_install_args(buildpath/"vendor")
     end
 
-    ENV.prepend_path "PATH", buildpath/"vendor/bin"
+    ENV.prepend_path "PATH", buildpath/"vendor/bin" # for virtualenv
+    ENV.prepend_path "PATH", buildpath/"bin" # for mage (build tool)
 
     cd "src/github.com/elastic/beats/heartbeat" do
-      system "make"
+      system "make", "mage"
       # prevent downloading binary wheels during python setup
       system "make", "PIP_INSTALL_COMMANDS=--no-binary :all", "python-env"
-      system "make", "DEV_OS=darwin", "update"
+      system "mage", "-v", "build"
+      ENV.deparallelize
+      system "mage", "-v", "update"
 
       (etc/"heartbeat").install Dir["heartbeat.*", "fields.yml"]
       (libexec/"bin").install "heartbeat"
-      prefix.install "_meta/kibana"
+      prefix.install "_meta/kibana.generated"
     end
 
     prefix.install_metafiles buildpath/"src/github.com/elastic/beats"
@@ -101,19 +105,13 @@ class Heartbeat < Formula
         codec.format:
           string: '%{[monitor]}'
     EOS
-    pid = fork do
+    fork do
       exec bin/"heartbeat", "-path.config", testpath/"config", "-path.data",
                             testpath/"data"
     end
     sleep 5
-
-    begin
-      assert_match "hello", pipe_output("nc -c -l #{port}", "goodbye\n", 0)
-      sleep 5
-      assert_match "\"status\":\"up\"", (testpath/"heartbeat/heartbeat").read
-    ensure
-      Process.kill "SIGINT", pid
-      Process.wait pid
-    end
+    assert_match "hello", pipe_output("nc -l #{port}", "goodbye\n", 0)
+    sleep 5
+    assert_match "\"status\":\"up\"", (testpath/"heartbeat/heartbeat").read
   end
 end
