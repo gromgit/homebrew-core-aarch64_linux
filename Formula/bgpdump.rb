@@ -1,8 +1,8 @@
 class Bgpdump < Formula
   desc "C library for analyzing MRT/Zebra/Quagga dump files"
   homepage "https://github.com/RIPE-NCC/bgpdump/wiki"
-  url "https://github.com/RIPE-NCC/bgpdump/archive/v1.6.1.tar.gz"
-  sha256 "abf52f2c50844b61dcac9fae74628e47cf3e854e1e2a62003e814ea8c3882950"
+  url "https://github.com/RIPE-NCC/bgpdump/archive/v1.6.2.tar.gz"
+  sha256 "415692c173a84c48b1e927a6423a4f8fd3e6359bc3008c06b7702fe143a76223"
 
   bottle do
     cellar :any
