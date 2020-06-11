@@ -1,10 +1,9 @@
 class DhallBash < Formula
   desc "Compile Dhall to Bash"
   homepage "https://github.com/dhall-lang/dhall-haskell/tree/master/dhall-bash"
-  url "https://hackage.haskell.org/package/dhall-bash-1.0.29/dhall-bash-1.0.29.tar.gz"
-  sha256 "3ca8c0e6802d7c002d9e1553135fe47431eae91f0acfd065fe3a645ca998b042"
+  url "https://hackage.haskell.org/package/dhall-bash-1.0.30/dhall-bash-1.0.30.tar.gz"
+  sha256 "384476a4fb3bf5cca70104f093faef580764e56fc9998a56eeb9fe8918ca5de4"
   head "https://github.com/dhall-lang/dhall-haskell.git"
-  revision 1
 
   bottle do
     cellar :any_skip_relocation
