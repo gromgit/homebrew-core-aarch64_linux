@@ -1,8 +1,8 @@
 class Jmxtrans < Formula
   desc "Tool to connect to JVMs and query their attributes"
   homepage "https://github.com/jmxtrans/jmxtrans"
-  url "https://github.com/jmxtrans/jmxtrans/archive/jmxtrans-parent-270.tar.gz"
-  sha256 "7261eb083e0ad927d69bc48bd190a0c1c1a340f20812514bd0ee59e4b25f8fd0"
+  url "https://github.com/jmxtrans/jmxtrans/archive/jmxtrans-parent-271.tar.gz"
+  sha256 "4aee400641eaeee7f33e1253043b1e644f8a9ec18f95ddc911ff8d35e2ca6530"
   version_scheme 1
 
   bottle do
@@ -23,12 +23,19 @@ class Jmxtrans < Formula
 
     system "mvn", "package", "-DskipTests=true",
                              "-Dmaven.javadoc.skip=true",
-                             "-Dcobertura.skip=true"
+                             "-Dcobertura.skip=true",
+                             "-Duser.home=#{buildpath}"
 
     cd "jmxtrans" do
-      vers = Formula["jmxtrans"].version.to_s.split("-").last
-      inreplace "jmxtrans.sh", "lib/jmxtrans-all.jar",
-                               libexec/"target/jmxtrans-#{vers}-all.jar"
+      # Point JAR_FILE into Cellar where we've installed the jar file
+      vers = version.to_s.split("-").last
+      inreplace "jmxtrans.sh", "$( cd \"$( dirname \"${BASH_SOURCE[0]}\" )/../lib\" "\
+                ">/dev/null && pwd )/jmxtrans-all.jar",
+                libexec/"target/jmxtrans-#{vers}-all.jar"
+
+      # Exec java to avoid forking the server into a new process
+      inreplace "jmxtrans.sh", "${JAVA} -server", "exec ${JAVA} -server"
+
       chmod 0755, "jmxtrans.sh"
       libexec.install %w[jmxtrans.sh target]
       pkgshare.install %w[bin example.json src tools vagrant]
@@ -39,7 +46,13 @@ class Jmxtrans < Formula
   end
 
   test do
-    output = shell_output("#{bin}/jmxtrans status", 3).chomp
-    assert_equal "jmxtrans is not running.", output
+    jmx_port = free_port
+    fork do
+      ENV["JMX_PORT"] = jmx_port.to_s
+      exec bin/"jmxtrans", pkgshare/"example.json"
+    end
+    sleep 2
+
+    system "nc", "-z", "localhost", jmx_port
   end
 end
