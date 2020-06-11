@@ -1,10 +1,10 @@
 class Openrtsp < Formula
   desc "Command-line RTSP client"
   homepage "http://www.live555.com/openRTSP"
-  url "http://www.live555.com/liveMedia/public/live.2018.10.17.tar.gz"
+  url "http://www.live555.com/liveMedia/public/live.2020.05.15.tar.gz"
   # Keep a mirror as upstream tarballs are removed after each version
-  mirror "https://download.videolan.org/pub/videolan/testing/contrib/live555/live.2018.10.17.tar.gz"
-  sha256 "7c68d9c95b39acd309a2b6a4fc14c3837544a9be3f64062ed38d1ad6f68dc9e8"
+  mirror "https://download.videolan.org/pub/videolan/testing/contrib/live555/live.2020.05.15.tar.gz"
+  sha256 "54bfa9bf10e979d742b687339595968c9b443afbb5f264682daa024c74756cb9"
 
   bottle do
     cellar :any_skip_relocation
@@ -14,9 +14,18 @@ class Openrtsp < Formula
     sha256 "293bd6edd7d7de1ea39517b1809865f120570e3645acbd777b704c5ebed16189" => :sierra
   end
 
+  depends_on "openssl@1.1"
+
   def install
+    # Avoid linkage to system OpenSSL
+    libs = [
+      Formula["openssl@1.1"].opt_lib/"libcrypto.dylib",
+      Formula["openssl@1.1"].opt_lib/"libssl.dylib",
+    ]
+
     system "./genMakefiles", "macosx"
-    system "make", "PREFIX=#{prefix}", "install"
+    system "make", "PREFIX=#{prefix}",
+           "LIBS_FOR_CONSOLE_APPLICATION=#{libs.join(" ")}", "install"
 
     # Move the testing executables out of the main PATH
     libexec.install Dir.glob(bin/"test*")
