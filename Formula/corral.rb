@@ -7,9 +7,9 @@ class Corral < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "19cfd5fbbc9c8af9ebccd9042fe727acca4cd7dfd9af23cc2101c905085f5168" => :catalina
-    sha256 "c000242469b19b4d27cabb97a463491a53b47c5b864629f490da6b4a770121dc" => :mojave
-    sha256 "32d3f76157e135760daf96354f733e3a2e436b3120265db3c635f6da7a8fd3c1" => :high_sierra
+    sha256 "f7d63dcd10594d659d950e8edb23dd189f56a1d887ac26f368c720feb91e674d" => :catalina
+    sha256 "6b9aaf79b508a63fd12311aae7d2631d45c08ab194802997d80832d530391763" => :mojave
+    sha256 "2551762505c66f37a181dbd5133fefb9bb92c6ed4e68a992f54db7e89be8a50f" => :high_sierra
   end
 
   depends_on "ponyc"
