@@ -1,9 +1,8 @@
 class Pidgin < Formula
   desc "Multi-protocol chat client"
   homepage "https://pidgin.im/"
-  url "https://downloads.sourceforge.net/project/pidgin/Pidgin/2.13.0/pidgin-2.13.0.tar.bz2"
-  sha256 "2747150c6f711146bddd333c496870bfd55058bab22ffb7e4eb784018ec46d8f"
-  revision 5
+  url "https://downloads.sourceforge.net/project/pidgin/Pidgin/2.14.1/pidgin-2.14.1.tar.bz2"
+  sha256 "f132e18d551117d9e46acce29ba4f40892a86746c366999166a3862b51060780"
 
   bottle do
     sha256 "f64dc9f3f5a7e4307f13285e7c45ff0528f6b01fe72feb07db188ccae18ce82c" => :catalina
@@ -15,10 +14,10 @@ class Pidgin < Formula
   depends_on "pkg-config" => :build
   depends_on "cairo"
   depends_on "gettext"
-  depends_on "glib"
   depends_on "gnutls"
   depends_on "gtk+"
   depends_on "libgcrypt"
+  depends_on "libgnt"
   depends_on "libidn"
   depends_on "libotr"
   depends_on "pango"
