@@ -1,9 +1,8 @@
 class Xapian < Formula
   desc "C++ search engine library"
   homepage "https://xapian.org/"
-  url "https://oligarchy.co.uk/xapian/1.4.15/xapian-core-1.4.15.tar.xz"
-  sha256 "b168e95918a01e014fb6a6cbce26e535f80da4d4791bfa5a0e0051fcb6f950ea"
-  revision 1
+  url "https://oligarchy.co.uk/xapian/1.4.16/xapian-core-1.4.16.tar.xz"
+  sha256 "4937f2f49ff27e39a42150e928c8b45877b0bf456510f0785f50159a5cb6bf70"
   version_scheme 1
 
   bottle do
@@ -25,8 +24,8 @@ class Xapian < Formula
   skip_clean :la
 
   resource "bindings" do
-    url "https://oligarchy.co.uk/xapian/1.4.15/xapian-bindings-1.4.15.tar.xz"
-    sha256 "68441612d87904a49066e5707a42cde171e4d423bf8ad23f3f6c04b8a9b2c40c"
+    url "https://oligarchy.co.uk/xapian/1.4.16/xapian-bindings-1.4.16.tar.xz"
+    sha256 "8791ec6d15cdd2fa065e414033d0b1cd5cf61916fdb47ae5d36c3dfe69be621b"
   end
 
   def install
