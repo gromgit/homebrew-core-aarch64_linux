@@ -1,8 +1,8 @@
 class Abcl < Formula
   desc "Armed Bear Common Lisp: a full implementation of Common Lisp"
   homepage "https://abcl.org/"
-  url "https://abcl.org/releases/1.6.1/abcl-src-1.6.1.tar.gz"
-  sha256 "0ba1f785957ba6b9c4e5bd8df0a9881388694a00ab3651bd90718367d48abe12"
+  url "https://abcl.org/releases/1.7.0/abcl-src-1.7.0.tar.gz"
+  sha256 "a5537243a0f9110bf23b058c152445c20021cc7989c99fc134f3f92f842e765d"
   head "https://abcl.org/svn/trunk/abcl/", :using => :svn
 
   bottle do
@@ -17,17 +17,14 @@ class Abcl < Formula
   depends_on "rlwrap"
 
   def install
-    cmd = Language::Java.java_home_cmd("1.8")
-    ENV["JAVA_HOME"] = Utils.safe_popen_read(cmd).chomp
+    ENV["JAVA_HOME"] = Language::Java.java_home("1.8")
 
     system "ant"
 
     libexec.install "dist/abcl.jar", "dist/abcl-contrib.jar"
-    (bin/"abcl").write <<~EOS
-      #!/bin/sh
-      export JAVA_HOME=$(#{cmd})
-      rlwrap java -cp #{libexec}/abcl.jar:"$CLASSPATH" org.armedbear.lisp.Main "$@"
-    EOS
+    (bin/"abcl").write_env_script "rlwrap",
+                                  "java -cp #{libexec}/abcl.jar:\"$CLASSPATH\" org.armedbear.lisp.Main \"$@\"",
+                                  Language::Java.overridable_java_home_env("1.8")
   end
 
   test do
