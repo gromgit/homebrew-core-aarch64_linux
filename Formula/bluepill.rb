@@ -2,7 +2,8 @@ class Bluepill < Formula
   desc "Testing tool for iOS that runs UI tests using multiple simulators"
   homepage "https://github.com/linkedin/bluepill"
   url "https://github.com/linkedin/bluepill.git",
-    :tag => "v5.2.2", :revision => "89010caaff60e75e23d612d3d60a1efd7b2e2b99"
+    :tag      => "v5.2.4.1",
+    :revision => "b9e87eff54470fc6dc290cfefe80fc3486a06a1a"
   head "https://github.com/linkedin/bluepill.git"
 
   bottle do
