@@ -1,8 +1,8 @@
 class PetscComplex < Formula
   desc "Portable, Extensible Toolkit for Scientific Computation (complex)"
   homepage "https://www.mcs.anl.gov/petsc/"
-  url "http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-lite-3.13.1.tar.gz"
-  sha256 "74a895e44e2ff1146838aaccb7613e7626d99e0eed64ca032c87c72d084efac3"
+  url "http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-lite-3.13.2.tar.gz"
+  sha256 "6083422a7c5b8e89e5e4ccf64acade9bf8ab70245e25bca3a3da03caf74602f1"
 
   bottle do
     sha256 "75672649113401ed21eb80a19a829b977df1e9b1b05010361bf3bbf37d5a704d" => :catalina
