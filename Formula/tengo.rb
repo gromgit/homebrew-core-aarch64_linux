@@ -6,9 +6,9 @@ class Tengo < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "ff22f2b77ebc837ca71b1159a1737cb55209318fb3154f41aa98b390e2940926" => :catalina
-    sha256 "ff22f2b77ebc837ca71b1159a1737cb55209318fb3154f41aa98b390e2940926" => :mojave
-    sha256 "ff22f2b77ebc837ca71b1159a1737cb55209318fb3154f41aa98b390e2940926" => :high_sierra
+    sha256 "c2c5d13206abe7acff924d0b1d4a93b8c34ed4487e5e26d203579aa4326227b0" => :catalina
+    sha256 "c2c5d13206abe7acff924d0b1d4a93b8c34ed4487e5e26d203579aa4326227b0" => :mojave
+    sha256 "c2c5d13206abe7acff924d0b1d4a93b8c34ed4487e5e26d203579aa4326227b0" => :high_sierra
   end
 
   depends_on "go" => :build
