@@ -3,8 +3,8 @@ class PreCommit < Formula
 
   desc "Framework for managing multi-language pre-commit hooks"
   homepage "https://pre-commit.com/"
-  url "https://github.com/pre-commit/pre-commit/archive/v2.4.0.tar.gz"
-  sha256 "0bfb890aac9a91b7ea232d9a160755c5e9e01bf0e4cbcd7981de56b970b3d624"
+  url "https://github.com/pre-commit/pre-commit/archive/v2.5.1.tar.gz"
+  sha256 "91705d4ba683e707785683d4a0a02d2b6f1678529e49f6b8a5ca0f89e2a42af7"
 
   bottle do
     cellar :any
@@ -17,8 +17,8 @@ class PreCommit < Formula
   depends_on "python@3.8"
 
   resource "appdirs" do
-    url "https://files.pythonhosted.org/packages/48/69/d87c60746b393309ca30761f8e2b49473d43450b150cb08f3c6df5c11be5/appdirs-1.4.3.tar.gz"
-    sha256 "9e5896d1372858f8dd3344faf4e5014d21849c756c8d5701f78f8a103b372d92"
+    url "https://files.pythonhosted.org/packages/d7/d8/05696357e0311f5b5c316d7b95f46c669dd9c15aaeecbb48c7d0aeb88c40/appdirs-1.4.4.tar.gz"
+    sha256 "7d5d0167b2b1ba821647616af46a749d1c653740dd0d2415100fe26e27afdf41"
   end
 
   resource "cfgv" do
@@ -37,8 +37,8 @@ class PreCommit < Formula
   end
 
   resource "identify" do
-    url "https://files.pythonhosted.org/packages/13/1f/b3b54c63b24aea84bc70c4fbab80f61f93384517bb867831e643402d0bbf/identify-1.4.15.tar.gz"
-    sha256 "23c18d97bb50e05be1a54917ee45cc61d57cb96aedc06aabb2b02331edf0dbf0"
+    url "https://files.pythonhosted.org/packages/90/7c/65fc9a31bbd6fed8c6f1f46f023667b8a8ff475b1e8ee0b74af01ed09dd8/identify-1.4.19.tar.gz"
+    sha256 "249ebc7e2066d6393d27c1b1be3b70433f824a120b1d8274d362f1eb419e3b52"
   end
 
   resource "nodeenv" do
@@ -52,18 +52,18 @@ class PreCommit < Formula
   end
 
   resource "six" do
-    url "https://files.pythonhosted.org/packages/21/9f/b251f7f8a76dec1d6651be194dfba8fb8d7781d10ab3987190de8391d08e/six-1.14.0.tar.gz"
-    sha256 "236bdbdce46e6e6a3d61a337c0f8b763ca1e8717c03b369e87a7ec7ce1319c0a"
+    url "https://files.pythonhosted.org/packages/6b/34/415834bfdafca3c5f451532e8a8d9ba89a21c9743a0c59fbd0205c7f9426/six-1.15.0.tar.gz"
+    sha256 "30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"
   end
 
   resource "toml" do
-    url "https://files.pythonhosted.org/packages/b9/19/5cbd78eac8b1783671c40e34bb0fa83133a06d340a38b55c645076d40094/toml-0.10.0.tar.gz"
-    sha256 "229f81c57791a41d65e399fc06bf0848bab550a9dfd5ed66df18ce5f05e73d5c"
+    url "https://files.pythonhosted.org/packages/da/24/84d5c108e818ca294efe7c1ce237b42118643ce58a14d2462b3b2e3800d5/toml-0.10.1.tar.gz"
+    sha256 "926b612be1e5ce0634a2ca03470f95169cf16f939018233a670519cb4ac58b0f"
   end
 
   resource "virtualenv" do
-    url "https://files.pythonhosted.org/packages/54/a2/bbfd87f524096f26b373a3428e56bdcda6661ba38314f1d864a71a6e70ce/virtualenv-20.0.18.tar.gz"
-    sha256 "ac53ade75ca189bc97b6c1d9ec0f1a50efe33cbf178ae09452dcd9fd309013c1"
+    url "https://files.pythonhosted.org/packages/55/67/beb3ecfa973181a52fad76fc959b745631b258c5387348ae1e06c8ca7a81/virtualenv-20.0.21.tar.gz"
+    sha256 "a116629d4e7f4d03433b8afa27f43deba09d48bc48f5ecefa4f015a178efb6cf"
   end
 
   def install
