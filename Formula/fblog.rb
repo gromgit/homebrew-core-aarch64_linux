@@ -5,6 +5,13 @@ class Fblog < Formula
   sha256 "36a0dd58be51dda0dec9a87412010f94e4ada9519727c015ae8449dd91140778"
   head "https://github.com/brocode/fblog.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "fdef753a3f63feb70bcb2a37b14433a65353c83720e3d64131bcaacce17a7590" => :catalina
+    sha256 "99c727fc90cfb248e2d667d8906ee312cdbc34bb79fc35bd0f0fbc94e578e241" => :mojave
+    sha256 "163b953a575ee872f8c5f7f7c599e33274d3562b4e0202d1332baf279a4a3e8c" => :high_sierra
+  end
+
   depends_on "rust" => :build
 
   def install
