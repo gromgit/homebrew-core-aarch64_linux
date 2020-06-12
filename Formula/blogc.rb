@@ -5,6 +5,13 @@ class Blogc < Formula
   sha256 "b409deede82513448fac460c27dbfa96093c6974cf324eaf8e6ab21dc53924ef"
   head "https://github.com/blogc/blogc.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "118c986799974ccef116ab3b0d2cf192c0f7cdef07fceb74e3ab7b90e86b1bea" => :catalina
+    sha256 "415db1c2d7555a0047940c1e7f208f1f2a9a3710bcad8a7500ba4e75b829b7ed" => :mojave
+    sha256 "654dc424fae6c319b824ee1ab7beb95982ce85439ed1a90e267c2ce909aaa290" => :high_sierra
+  end
+
   def install
     system "./configure", "--disable-tests",
                           "--disable-dependency-tracking",
