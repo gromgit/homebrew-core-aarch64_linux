@@ -6,10 +6,9 @@ class TtySolitaire < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f3030c4238887df8b2db6125d15ecbe37dc8b14a1e45c82629eaec756b5108e8" => :catalina
-    sha256 "9433dbbb39b808bfbe06f1b58b1aff782ca2bdeced389aaf0207fee720cfb0ce" => :mojave
-    sha256 "6451237a79182add9dfa4678f54473adfac2a5fc47918d10eb188debcd5d9add" => :high_sierra
-    sha256 "f6df872618485b7e759b8de0d3e890d1e465b0fad7e2f0373227d98ed857ebea" => :sierra
+    sha256 "8a9b3d7d5b62d5a82b3e37920d76bdd02902c4705d81d2b158b8eb605232b91f" => :catalina
+    sha256 "ad68372ed5eb8f98d1175fd9b014fb0881a6615fe05e21811ed4327ded9aa066" => :mojave
+    sha256 "d35722d89335ba81284acdde82cdb5f370860441950f3acd7290a8e821382147" => :high_sierra
   end
 
   def install
