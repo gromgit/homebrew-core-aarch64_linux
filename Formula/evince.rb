@@ -5,9 +5,9 @@ class Evince < Formula
   sha256 "6f0dd6e30639eb620f201a6ae40f21c4b78c030f0d6437f9e309f7240195e97c"
 
   bottle do
-    sha256 "71cb3fec5fea0f1d45a05bd23409064bf2e84fbca39a2aefa99413f454bbdde5" => :catalina
-    sha256 "ec0a82ff4287fe5fb1e54c7583026332ce2b55e0c83c256bc3491ee78be20237" => :mojave
-    sha256 "88d4b18e0524341968271c580e850c4cb56514b2ea004c8437871d4b5eb34c13" => :high_sierra
+    sha256 "0c57c60e98d136ca4805fc5be510babfc2dc87f6a69ce9e74cca74a7913c0a9d" => :catalina
+    sha256 "29025cc4021883b42de19f1b2cdfa9b151ab1236406480e2d455691fa62accd9" => :mojave
+    sha256 "b929ae073d1fa91dd2f2c82bd8c7d7b4c2b21e49bc3b81f8404592cdd44b398b" => :high_sierra
   end
 
   depends_on "gobject-introspection" => :build
