@@ -5,9 +5,9 @@ class X3270 < Formula
   sha256 "32dd89393bc9987e0b1fc397a48509ba99a372f19ba21f4d9444034a5f26a24e"
 
   bottle do
-    sha256 "4a688250d91e04d91aa9c0983f630fe0b682d35769387e4fa490f03f977be7fb" => :catalina
-    sha256 "c5448a7a24aa77b54c9473ea62b4aeac4c87930e79bc7a229dea02427d87c1fe" => :mojave
-    sha256 "962a25eb052b7f3f2a8c01fd1f2d0e90c5e70fd91ac7c63a038a4fd710661557" => :high_sierra
+    sha256 "0a97545f8a95a71631e033a52b15a99c36ba620d5e79a62fb8f4e947ed48b827" => :catalina
+    sha256 "1cb7acd49a6aadfbda744a7bd29a5002b0f521ebe989ee9b866c2e172051e964" => :mojave
+    sha256 "eadc86529406c0c5a2e5b5a3182037b1341eb4ef4326421722faa35edfbdf07a" => :high_sierra
   end
 
   depends_on "readline"
