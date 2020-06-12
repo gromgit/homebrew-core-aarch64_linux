@@ -1,8 +1,8 @@
 class Devdash < Formula
   desc "Highly Configurable Terminal Dashboard for Developers"
   homepage "https://thedevdash.com"
-  url "https://github.com/Phantas0s/devdash/archive/v0.3.0.tar.gz"
-  sha256 "a3198c9c5ae8b45f000fd24b60d4e26f7bd0fe24f8f484259832f70725ff35fb"
+  url "https://github.com/Phantas0s/devdash/archive/v0.4.0.tar.gz"
+  sha256 "2e2eadd5cc5d7f39160de208fd4b98d78adc29365960db3c57c2df814efe6c1b"
 
   bottle do
     cellar :any_skip_relocation
@@ -14,10 +14,10 @@ class Devdash < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", "-o", "#{bin}/devdash", "./cmd/devdash"
+    system "go", "build", *std_go_args
   end
 
   test do
-    system bin/"devdash", "-term"
+    system bin/"devdash", "-h"
   end
 end
