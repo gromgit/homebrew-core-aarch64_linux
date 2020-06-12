@@ -1,9 +1,8 @@
 class Wcslib < Formula
   desc "Library and utilities for the FITS World Coordinate System"
   homepage "https://www.atnf.csiro.au/people/mcalabre/WCS/"
-  url "https://www.atnf.csiro.au/pub/software/wcslib/wcslib-7.2.tar.bz2"
-  sha256 "63959eb4859517a1ecca48c91542318bebeed62e4a1663656de9a983af376e39"
-  revision 1
+  url "https://www.atnf.csiro.au/pub/software/wcslib/wcslib-7.3.tar.bz2"
+  sha256 "4b01cf425382a26ca4f955ed6841a5f50c55952a2994367f8e067e4183992961"
 
   bottle do
     cellar :any
