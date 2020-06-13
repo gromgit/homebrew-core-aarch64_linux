@@ -4,6 +4,13 @@ class Idris2 < Formula
   url "https://github.com/idris-lang/Idris2/archive/v0.2.0.tar.gz"
   sha256 "cc7c48d3fbaa55e536890c9eb4701755081d2b5df9a65f0ecc3e00ee5ccf0a0f"
 
+  bottle do
+    cellar :any
+    sha256 "23d5a50ddc93380262ba3a921ccb6b41fcf83647158d8b4a4042fd76a7fe2496" => :catalina
+    sha256 "67548c580e290130ae9dfb5188fcda51417ff9e94e52ca331daa63252288fd5c" => :mojave
+    sha256 "c91f5057e6803de074590918078092f3dcb2dbf0ed07fb97db5633b03b8405fc" => :high_sierra
+  end
+
   depends_on "coreutils" => :build
   depends_on "chezscheme"
 
