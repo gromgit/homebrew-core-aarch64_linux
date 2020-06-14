@@ -4,6 +4,13 @@ class Vcpkg < Formula
   url "https://github.com/microsoft/vcpkg/archive/2020.04.tar.gz"
   sha256 "51bdc81d074407b760de5950760f43c253da6cd8135e13744967cf7c95e837fd"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "7ba22eee80d89ba5518d0bdd0e38e6e0a2d7656d986467b26177a7cba4e15fe3" => :catalina
+    sha256 "b6648b679288130524034783cc3dada6dc21eba7f850b3fa331eecaa3fc3a7a2" => :mojave
+    sha256 "aa6e77116fbf6aa56f450eaea187639d485a7e91640b87013403bef1411993a0" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "ninja" => :build
 
