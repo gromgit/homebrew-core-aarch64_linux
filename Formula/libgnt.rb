@@ -4,6 +4,13 @@ class Libgnt < Formula
   url "https://downloads.sourceforge.net/project/pidgin/libgnt/2.14.0/libgnt-2.14.0.tar.xz"
   sha256 "6b7ea2030c9755ad9756ab4b1d3396dccaef4a712eccce34d3990042bb4b3abf"
 
+  bottle do
+    cellar :any
+    sha256 "0ddf1b6ebd64e3989ee3e2c1482d3f852a3f44f6c196586d1d9c4e839927087a" => :catalina
+    sha256 "3d0291b16678836908fddc885fa613512e6f3ffbb2d11241a5320dfd48086822" => :mojave
+    sha256 "0b710c423d8895b711d3f658fa6abdffe2b351c2256a429f49363eece64b8928" => :high_sierra
+  end
+
   depends_on "gtk-doc" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
