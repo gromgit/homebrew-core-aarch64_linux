@@ -8,9 +8,9 @@ class Bnfc < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d08ae18737b1354477b232c833f64e2538d5b27f1c5abfa3166cabb8c5e7790f" => :catalina
-    sha256 "99468b0d324898ded21ffc6d7605009e0735f5d0b3be2804299916c038c3fa8f" => :mojave
-    sha256 "b52608ab271231b3c1ca2aa537793f9988fa4b5a051d5026775a29c1070701d1" => :high_sierra
+    sha256 "a56684b9fecdf25ef5c77f9124c8c8c3cdbf5f21405a6135eaf47680c387d231" => :catalina
+    sha256 "47cbd943179d46b54c4ff614d613662a4db766ed6f80ec980060acdf6a1c0812" => :mojave
+    sha256 "a92f1907cedabddf2a10a994de224cb15221786742beeb1cde87ac47dc17ff76" => :high_sierra
   end
 
   depends_on "cabal-install" => [:build, :test]
