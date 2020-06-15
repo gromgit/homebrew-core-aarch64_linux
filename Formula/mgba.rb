@@ -1,10 +1,9 @@
 class Mgba < Formula
   desc "Game Boy Advance emulator"
   homepage "https://mgba.io/"
-  url "https://github.com/mgba-emu/mgba/archive/0.8.1.tar.gz"
-  sha256 "df136ea50c9cca380ab93e00fd8d87811e41a49a804c5b0e018babef0c490f13"
+  url "https://github.com/mgba-emu/mgba/archive/0.8.3.tar.gz"
+  sha256 "63045d0815e15e963d90b15d5a10edf31a5d72d0ddb5e028e42ba38b0d4368c9"
   license "MPL-2.0"
-  revision 2
   head "https://github.com/mgba-emu/mgba.git"
 
   bottle do
