@@ -6,6 +6,13 @@ class Packetbeat < Formula
     :revision => "932b273e8940575e15f10390882be205bad29e1f"
   head "https://github.com/elastic/beats.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "fefdfc48ef6739a9b8737aa552c3db2fd833b17b00bc9cac2bfa1920848a3d63" => :catalina
+    sha256 "dbc37ca6a9a0f0112774fb4583bb8ba6f2231d80994648bc1cd839024cc5b314" => :mojave
+    sha256 "d30a36e215429d8a225e8369d235d2b11362004451ef155dbf9c17628b2d14c7" => :high_sierra
+  end
+
   depends_on "go" => :build
   depends_on "python@3.8" => :build
 
