@@ -1,8 +1,8 @@
 class Katago < Formula
   desc "Neural Network Go engine with no human-provided knowledge"
   homepage "https://github.com/lightvector/KataGo"
-  url "https://github.com/lightvector/KataGo/archive/v1.4.2.tar.gz"
-  sha256 "f63fcbec010d31639a18e5d871713ca06abb8dc1129e4105a3ed947dd6cde29f"
+  url "https://github.com/lightvector/KataGo/archive/v1.4.4.tar.gz"
+  sha256 "f4a2b8e8f50918433b8fd38b2dad2a3bece234017d0df28ec3a6ff01b6125de8"
 
   bottle do
     cellar :any
