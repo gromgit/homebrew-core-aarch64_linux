@@ -3,6 +3,7 @@ class IosWebkitDebugProxy < Formula
   homepage "https://github.com/google/ios-webkit-debug-proxy"
   url "https://github.com/google/ios-webkit-debug-proxy/archive/v1.8.6.tar.gz"
   sha256 "9f0a69fec1216ac947991bb1e506cc97f130ae14cef1fc5bbce08daaea566b63"
+  revision 1
   head "https://github.com/google/ios-webkit-debug-proxy.git"
 
   bottle do
@@ -18,8 +19,14 @@ class IosWebkitDebugProxy < Formula
   depends_on "pkg-config" => :build
   depends_on "libimobiledevice"
   depends_on "libplist"
-  depends_on "libusbmuxd"
   depends_on "openssl@1.1"
+
+  # Allow ios-webkit-debug-proxy to build with latest libplist/libimobiledevice:
+  # https://github.com/google/ios-webkit-debug-proxy/pull/361
+  patch do
+    url "https://github.com/google/ios-webkit-debug-proxy/commit/7195575fc5981c9c92ad337029ee90d997551369.patch?full_index=1"
+    sha256 "fbdf1e593cbfcf5a47007bef4a6f9b9b0209fb4349396b0f994c940d0e9c0dfa"
+  end
 
   def install
     system "./autogen.sh"
@@ -28,6 +35,16 @@ class IosWebkitDebugProxy < Formula
   end
 
   test do
-    system "#{bin}/ios_webkit_debug_proxy", "--help"
+    base_port = free_port
+    (testpath/"config.csv").write <<~EOS
+      null:#{base_port},:#{base_port + 1}-#{base_port + 101}
+    EOS
+
+    fork do
+      exec "#{bin}/ios_webkit_debug_proxy", "-c", testpath/"config.csv"
+    end
+
+    sleep(2)
+    assert_match "iOS Devices:", shell_output("curl localhost:#{base_port}")
   end
 end
