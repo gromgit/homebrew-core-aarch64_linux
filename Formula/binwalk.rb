@@ -10,9 +10,9 @@ class Binwalk < Formula
 
   bottle do
     cellar :any
-    sha256 "80415911a04d2464b53a0000ccf62e8989690bed23277bebc91b83ff3fc13033" => :catalina
-    sha256 "ff30030e127b5f3bc0292665d8d10d0783e6692198e86d05c48fcae1988df157" => :mojave
-    sha256 "b3287fdb9563882a35f6a4bf62f1a5ca10fcdd0ca95614fd9452dbbe594a9f10" => :high_sierra
+    sha256 "d412322a98c5207c19bdf2d0b7d6abcb6133f875fc48d6227c4c69213e761852" => :catalina
+    sha256 "0edd480cef965ccd9d112aa0f2699e53420aab5a9c9d7397856d6dc0c476cae8" => :mojave
+    sha256 "8ce1ff5841406677da86e5b0976dd7230ae814616a3b368eb8020c467b2e4235" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
