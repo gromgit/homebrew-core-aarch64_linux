@@ -1,8 +1,8 @@
 class G3log < Formula
   desc "Asynchronous, 'crash safe', logger that is easy to use"
   homepage "https://github.com/KjellKod/g3log"
-  url "https://github.com/KjellKod/g3log/archive/1.3.2.tar.gz"
-  sha256 "0ed1983654fdd8268e051274904128709c3d9df8234acf7916e9015199b0b247"
+  url "https://github.com/KjellKod/g3log/archive/1.3.3.tar.gz"
+  sha256 "d8cae14e1508490145d710f10178b2da9b86ce03fb2428a684fff35576fe5d5c"
 
   bottle do
     cellar :any
@@ -35,7 +35,7 @@ class G3log < Formula
         return 0;
       }
     EOS
-    system ENV.cxx, "-std=c++11", "test.cpp", "-L#{lib}", "-lg3logger", "-o", "test"
+    system ENV.cxx, "-std=c++14", "test.cpp", "-L#{lib}", "-lg3logger", "-o", "test"
     system "./test"
     Dir.glob(testpath/"test.g3log.*.log").any?
   end
