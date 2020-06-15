@@ -1,9 +1,8 @@
 class Itk < Formula
   desc "Insight Toolkit is a toolkit for performing registration and segmentation"
   homepage "https://itk.org"
-  url "https://github.com/InsightSoftwareConsortium/ITK/releases/download/v5.0.1/InsightToolkit-5.0.1.tar.gz"
-  sha256 "613b125cbf58481e8d1e36bdeacf7e21aba4b129b4e524b112f70c4d4e6d15a6"
-  revision 1
+  url "https://github.com/InsightSoftwareConsortium/ITK/releases/download/v5.1.0/InsightToolkit-5.1.0.tar.gz"
+  sha256 "121020a1611508cec8123eb5226215598cec07be627d843a2e6b6da891e61d13"
   head "https://github.com/InsightSoftwareConsortium/ITK.git"
 
   bottle do
@@ -47,6 +46,19 @@ class Itk < Formula
       -DModule_ITKVtkGlue=ON
       -DITK_USE_GPU=ON
     ]
+
+    # Avoid references to the Homebrew shims directory
+    inreplace "Modules/Core/Common/src/CMakeLists.txt" do |s|
+      s.gsub!(/MAKE_MAP_ENTRY\(\s*\\"CMAKE_C_COMPILER\\",
+              \s*\\"\${CMAKE_C_COMPILER}\\".*\);/x,
+              "MAKE_MAP_ENTRY(\\\"CMAKE_C_COMPILER\\\", " \
+              "\\\"#{ENV.cc}\\\", \\\"The C compiler.\\\");")
+
+      s.gsub!(/MAKE_MAP_ENTRY\(\s*\\"CMAKE_CXX_COMPILER\\",
+              \s*\\"\${CMAKE_CXX_COMPILER}\\".*\);/x,
+              "MAKE_MAP_ENTRY(\\\"CMAKE_CXX_COMPILER\\\", " \
+              "\\\"#{ENV.cxx}\\\", \\\"The CXX compiler.\\\");")
+    end
 
     mkdir "build" do
       system "cmake", "..", *args
