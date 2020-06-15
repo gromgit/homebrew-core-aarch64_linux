@@ -1,8 +1,8 @@
 class Libvncserver < Formula
   desc "VNC server and client libraries"
   homepage "https://libvnc.github.io"
-  url "https://github.com/LibVNC/libvncserver/archive/LibVNCServer-0.9.12.tar.gz"
-  sha256 "33cbbb4e15bb390f723c311b323cef4a43bcf781984f92d92adda3243a116136"
+  url "https://github.com/LibVNC/libvncserver/archive/LibVNCServer-0.9.13.tar.gz"
+  sha256 "0ae5bb9175dc0a602fe85c1cf591ac47ee5247b87f2bf164c16b05f87cbfa81a"
 
   bottle do
     cellar :any
