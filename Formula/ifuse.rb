@@ -1,8 +1,8 @@
 class Ifuse < Formula
   desc "FUSE module for iOS devices"
   homepage "https://www.libimobiledevice.org/"
-  url "https://github.com/libimobiledevice/ifuse/archive/1.1.3.tar.gz"
-  sha256 "9b63afa6f2182da9e8c04b9e5a25c509f16f96f5439a271413956ecb67143089"
+  url "https://github.com/libimobiledevice/ifuse/archive/1.1.4.tar.gz"
+  sha256 "2a00769e8f1d8bad50898b9d00baf12c8ae1cda2d19ff49eaa9bf580e5dbe78c"
   head "https://cgit.sukimashita.com/ifuse.git"
 
   bottle do
@@ -19,6 +19,7 @@ class Ifuse < Formula
   depends_on "pkg-config" => :build
   depends_on "glib"
   depends_on "libimobiledevice"
+  depends_on "libplist"
   depends_on :osxfuse
 
   def install
@@ -26,5 +27,10 @@ class Ifuse < Formula
     system "./configure", "--disable-dependency-tracking",
                           "--prefix=#{prefix}"
     system "make", "install"
+  end
+
+  test do
+    # Actual test of functionality requires osxfuse, so test for expected failure instead
+    assert_match "ERROR: No device found!", shell_output("#{bin}/ifuse --list-apps", 1)
   end
 end
