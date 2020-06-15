@@ -1,8 +1,8 @@
 class Hcxtools < Formula
   desc "Utils for conversion of cap/pcap/pcapng WiFi dump files"
   homepage "https://github.com/ZerBea/hcxtools"
-  url "https://github.com/ZerBea/hcxtools/archive/6.0.2.tar.gz"
-  sha256 "963029bf00d3a98f2caa934d5765a91e29f5d1b0e0036a4c53328b5cf9c3c003"
+  url "https://github.com/ZerBea/hcxtools/archive/6.0.3.tar.gz"
+  sha256 "9a88a8ad609d4259e8892322711e812a5a3731ab1f16d347ae1fd2208d692a3e"
   head "https://github.com/ZerBea/hcxtools.git"
 
   bottle do
@@ -16,6 +16,7 @@ class Hcxtools < Formula
 
   def install
     bin.mkpath
+    man1.mkpath
     system "make", "install", "PREFIX=#{prefix}"
   end
 
