@@ -8,9 +8,9 @@ class FileFormula < Formula
 
   bottle do
     cellar :any
-    sha256 "ac9967d0b7324b900e475ad2341d93deaf24f329cfa5e4df8416a1cdbfa96f67" => :catalina
-    sha256 "609060a6a216e8c11983a5589bb6f56d97adaf333a19bcf524dc7dd73be9e150" => :mojave
-    sha256 "2fb97ca8aad9f6d425907c1fbea460d662d262cc97db31a3915d362b15573434" => :high_sierra
+    sha256 "f2f1368f08ffec7eb4056fef921d34c589315ab84ea99efd5e7694aede331f3c" => :catalina
+    sha256 "b7072798695086db4bf5e931f6b663615bdfa1bab83f87f72ac1c9c0d4e5afb5" => :mojave
+    sha256 "ec92f8fb7f27696078f40a5a28ef12694acad52b55cac406124444b1527adee8" => :high_sierra
   end
 
   keg_only :provided_by_macos
