@@ -1,8 +1,8 @@
 class Flint < Formula
   desc "C library for number theory"
   homepage "http://flintlib.org"
-  url "http://flintlib.org/flint-2.5.2.tar.gz"
-  sha256 "cbf1fe0034533c53c5c41761017065f85207a1b770483e98b2392315f6575e87"
+  url "http://flintlib.org/flint-2.6.0.tar.gz"
+  sha256 "9089edadd12cbbda4533ab6f58efb7565fd973b5b82a89f53f64203bc3510840"
   head "https://github.com/wbhart/flint2.git", :branch => "trunk"
 
   bottle do
