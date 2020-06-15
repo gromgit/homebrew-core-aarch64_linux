@@ -7,9 +7,9 @@ class Eureka < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9dae88d4b997a0e28e4d6fc7df122230f81412092926f5b3853f2602161b458a" => :catalina
-    sha256 "86b898e61753c4619889757477cc1cf0e54fd7db06b01531374ec6af1d33f648" => :mojave
-    sha256 "97db80603a9c9c0bae1993da7c7ca53c0f5ccfefcc10a665b7257ed0cc8ce63a" => :high_sierra
+    sha256 "78923a432ed0b00a266aba6680ad1b1c948e7c31a74b32babad1ffe45bc7dc20" => :catalina
+    sha256 "88b2371865f81cf092a3ab85c757bba880a3e3aef9c379ef880972fb75f80d93" => :mojave
+    sha256 "ef7f1bde80157ad17a9a789028bd0b0fee6e62f93f66b545a15c8bd753a58767" => :high_sierra
   end
 
   depends_on "rust" => :build
