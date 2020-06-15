@@ -8,9 +8,9 @@ class Gitmoji < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7c030356b17ad4be0b31fd9c5ac23caf55caff70090bb10cf09c0aa817011ee4" => :catalina
-    sha256 "14f5a5ff84fcac29d63d1637cf34a2faf26541da273b5472214a999d6ad8db83" => :mojave
-    sha256 "8ce45823d39099bdf652655ae4548471e9a4cc84b48f4a33f31e9ebf25467c38" => :high_sierra
+    sha256 "625e829cad6317c55ba225ad7429bdc44b5f2f0e8542913150fdbcf995f72cda" => :catalina
+    sha256 "0a9e423e8d354c7a1b5dac4cc8aee6455c54081bc5a6f81fdf1d987afc0a1dd1" => :mojave
+    sha256 "61f3bfbad5458f75bbaf554eeca5d6840a0aaa1e27702ef210a6ec3aed81013f" => :high_sierra
   end
 
   depends_on "node"
