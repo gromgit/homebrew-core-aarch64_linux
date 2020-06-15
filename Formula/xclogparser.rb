@@ -6,8 +6,8 @@ class Xclogparser < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f31554366a5b6598f67383c367fab5295d3991daced34a82f1803cd6d7b4ba3d" => :catalina
-    sha256 "dd283fb561abbaa463125db037f911310012a5fce31e0d97e80bd67c000382af" => :mojave
+    sha256 "98529c5425fd844635ae0e6eeb0dcdb1a1421ad777464fc0066cbec7aea6f5e5" => :catalina
+    sha256 "0ba85ee25bfdc21ed85615798feed1cf4bd968ad4d8040b8c6751e32fac9804b" => :mojave
   end
 
   depends_on :xcode => "11.0"
