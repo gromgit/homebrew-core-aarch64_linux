@@ -7,9 +7,9 @@ class Hcxtools < Formula
 
   bottle do
     cellar :any
-    sha256 "2cc7082a49f45dcdbd368044a16cc569ec208fbd4efbf5a419e3adac9cd8c0ca" => :catalina
-    sha256 "1d5c0d72c0780e8cde71e56b841ea6494f053f71f5dad5092f526868c5ae230c" => :mojave
-    sha256 "d53de9bf0fdeb662804bf9bcdfdbd3d6fca89980e3454664acc7106212164fc1" => :high_sierra
+    sha256 "ac97f5bfa367504cea6dae147971e34cc43fce130614804f8a796e7ef8eb1c7c" => :catalina
+    sha256 "190a886d5aa509ec93acbdca3f870d2d44660a3cb595754c6324848cbaf3910c" => :mojave
+    sha256 "c769742aa2e3952651d5c49fdb9cf8ecdfd7bf0575ec4cd8f2c3c6a584d576e7" => :high_sierra
   end
 
   depends_on "openssl@1.1"
