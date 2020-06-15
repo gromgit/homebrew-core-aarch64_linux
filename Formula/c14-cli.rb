@@ -1,8 +1,8 @@
 class C14Cli < Formula
   desc "Manage your Online C14 archives from the command-line"
   homepage "https://github.com/scaleway/c14-cli"
-  url "https://github.com/scaleway/c14-cli/archive/0.3.tar.gz"
-  sha256 "d4a2e839394cb5f169bfb3be0102569a310dd7315aba3cdb1dfcd9d9c6e43543"
+  url "https://github.com/scaleway/c14-cli/archive/v0.5.0.tar.gz"
+  sha256 "b93960ee3ba516a91df9f81cf9b258858f8b5da6238d44a339966a5636643cb2"
   head "https://github.com/scaleway/c14-cli.git"
 
   bottle do
@@ -17,14 +17,9 @@ class C14Cli < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    ENV["GOBIN"] = buildpath
-    (buildpath/"src/github.com/online-net/c14-cli").install buildpath.children
-
-    system "go", "build",
+    system "go", "build", "-trimpath", "-o", bin/"c14",
            "-ldflags", "-X github.com/online-net/c14-cli/pkg/version.GITCOMMIT=homebrew",
-           "-o", bin/"c14",
-           "github.com/online-net/c14-cli/cmd/c14/"
+           "./cmd/c14/"
   end
 
   test do
