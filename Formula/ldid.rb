@@ -4,6 +4,7 @@ class Ldid < Formula
   url "https://git.saurik.com/ldid.git",
       :tag      => "v2.1.2",
       :revision => "c2f8abf013b22c335f44241a6a552a7767e73419"
+  revision 1
   head "https://git.saurik.com/ldid.git"
 
   bottle do
@@ -25,7 +26,7 @@ class Ldid < Formula
                     "-I.",
                     "-framework", "CoreFoundation",
                     "-framework", "Security",
-                    "-lcrypto", "-lplist", "-lxml2"
+                    "-lcrypto", "-lplist-2.0", "-lxml2"
     bin.install "ldid"
     ln_s bin/"ldid", bin/"ldid2"
   end
