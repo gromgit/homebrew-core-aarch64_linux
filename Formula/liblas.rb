@@ -3,8 +3,10 @@ class Liblas < Formula
   homepage "https://liblas.org/"
   url "https://download.osgeo.org/liblas/libLAS-1.8.1.tar.bz2"
   sha256 "9adb4a98c63b461ed2bc82e214ae522cbd809cff578f28511122efe6c7ea4e76"
-  revision 2
+  revision 3
   head "https://github.com/libLAS/libLAS.git"
+
+  deprecate! :date => "2018-01-01"
 
   bottle do
     sha256 "143a626ad7633450d8b70791912eb209af0399f5d8e9a54ecb397b4fecd13f35" => :catalina
@@ -15,7 +17,6 @@ class Liblas < Formula
 
   depends_on "cmake" => :build
   depends_on "boost"
-  depends_on "gdal"
   depends_on "libgeotiff"
 
   # Fix build for Xcode 9 with upstream commit
@@ -43,7 +44,7 @@ class Liblas < Formula
       ENV["Boost_LIBRARY_DIRS"] = "#{HOMEBREW_PREFIX}/lib"
 
       system "cmake", "..", *std_cmake_args,
-                            "-DWITH_GDAL=ON",
+                            "-DWITH_GDAL=OFF",
                             "-DWITH_GEOTIFF=ON"
       system "make"
       system "make", "install"
