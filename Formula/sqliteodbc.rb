@@ -1,8 +1,8 @@
 class Sqliteodbc < Formula
   desc "SQLite ODBC driver"
   homepage "https://ch-werner.homepage.t-online.de/sqliteodbc/"
-  url "https://ch-werner.homepage.t-online.de/sqliteodbc/sqliteodbc-0.9996.tar.gz"
-  sha256 "8afbc9e0826d4ff07257d7881108206ce31b5f719762cbdb4f68201b60b0cb4e"
+  url "https://ch-werner.homepage.t-online.de/sqliteodbc/sqliteodbc-0.9997.tar.gz"
+  sha256 "a50cc328a7def2b3389eebeee43c598322ed338506cbd13d8e9d1892db5e0cfe"
 
   bottle do
     cellar :any
