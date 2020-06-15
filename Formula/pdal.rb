@@ -3,6 +3,7 @@ class Pdal < Formula
   homepage "https://www.pdal.io/"
   url "https://github.com/PDAL/PDAL/releases/download/2.1.0/PDAL-2.1.0-src.tar.gz"
   sha256 "c300de7935d52cb96e24bdaceea5d189b1840e88636e6deca1f6dad51f909571"
+  revision 1
   head "https://github.com/PDAL/PDAL.git"
 
   bottle do
@@ -31,6 +32,7 @@ class Pdal < Formula
                          "-DBUILD_PLUGIN_SQLITE=ON"
 
     system "make", "install"
+    rm_rf "test/unit"
     doc.install "examples", "test"
   end
 
