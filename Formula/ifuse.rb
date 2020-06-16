@@ -7,10 +7,9 @@ class Ifuse < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "8a9233151be9f9d521a6d4be9aa052215b6de0e5d7a1efbe0bedf1ef52e38ebb" => :catalina
-    sha256 "e39c8c8d45a60b65acb5ea39001f67724d90a9cef2d4f99d35f719b933ff15ee" => :mojave
-    sha256 "0f0a95935b2004ea58982f2a095c33365d9ba4e23c75f62c3e38b7bee75c85b6" => :high_sierra
+    sha256 "cdce9fc5dbaf44641743b4a77434d340ae11cb8ed98f17b1a86a5653d2b6e1a2" => :catalina
+    sha256 "e14e4f8e0f73324dc662b47f091261f682eddc73961e3d71a07bfeb62826a1f8" => :mojave
+    sha256 "ff5577f28749cf18671eecd953e96f0c52a06dccf827dcf08e2d64f894dfdd5e" => :high_sierra
   end
 
   depends_on "autoconf" => :build
