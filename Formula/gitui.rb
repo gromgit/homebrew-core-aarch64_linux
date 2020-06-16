@@ -4,6 +4,13 @@ class Gitui < Formula
   url "https://github.com/extrawurst/gitui/archive/v0.7.0.tar.gz"
   sha256 "3491730ddbbc886940f20e6cf419c689de3e196f678127807ef69c4de479742e"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "c7024c52191c49e1cbda891aa747faaed10a3d3f28810ce914d363d1d1203e90" => :catalina
+    sha256 "b85f069e2f076145bc19805069059d8ef7e07dd524a6835db02359837da895c3" => :mojave
+    sha256 "caac1ddfbc743230a3b1ad6610c6637077264f517ea68804d0d15cc8eec89ca0" => :high_sierra
+  end
+
   depends_on "rust" => :build
 
   def install
