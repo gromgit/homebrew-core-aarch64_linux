@@ -1,8 +1,8 @@
 class Latexdiff < Formula
   desc "Compare and mark up LaTeX file differences"
   homepage "https://www.ctan.org/pkg/latexdiff"
-  url "https://github.com/ftilmann/latexdiff/releases/download/1.3.1/latexdiff-1.3.1.tar.gz"
-  sha256 "2643355a4528bf6e4578741ec15af41089be0183dbc2be6799bc418491833a41"
+  url "https://github.com/ftilmann/latexdiff/releases/download/1.3.1.1/latexdiff-1.3.1.1.tar.gz"
+  sha256 "5e55ee205750ccbea8d69cf98791707e7a42ab88e92d3a1101f9de53643aa1d3"
 
   bottle do
     cellar :any_skip_relocation
