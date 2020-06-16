@@ -6,9 +6,9 @@ class Latexdiff < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "cb8350fd28f971f1aaef0835424bc396ab51fc0dafdbaed2bfb59347b231b7e9" => :catalina
-    sha256 "cb8350fd28f971f1aaef0835424bc396ab51fc0dafdbaed2bfb59347b231b7e9" => :mojave
-    sha256 "cb8350fd28f971f1aaef0835424bc396ab51fc0dafdbaed2bfb59347b231b7e9" => :high_sierra
+    sha256 "8eb979b1b52125f102bbc56bbc4611d5b8075f003318307a2205485d95c789aa" => :catalina
+    sha256 "8eb979b1b52125f102bbc56bbc4611d5b8075f003318307a2205485d95c789aa" => :mojave
+    sha256 "8eb979b1b52125f102bbc56bbc4611d5b8075f003318307a2205485d95c789aa" => :high_sierra
   end
 
   # osx default perl cause compilation error
