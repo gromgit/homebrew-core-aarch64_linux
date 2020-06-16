@@ -7,6 +7,13 @@ class Fava < Formula
   sha256 "1eb7638252ba110840a94fca5a88fbd3c35057efb0146dce1258a97305be3ea0"
   head "https://github.com/beancount/fava.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "2b33014d31fd21108c76d973fe9e648553b02faf7c487b13313597596ed7894f" => :catalina
+    sha256 "5039e23bce5e32b25eb31c7808d3e30d2bf7adc3a03cd3c42ea746cd0678ee40" => :mojave
+    sha256 "ff8247cb76f7c67ee325a5d1282e55949ee53a9c5d3f20343466127544147697" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   resource "attrs" do
