@@ -6,9 +6,9 @@ class RustAnalyzer < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "98a426880296092ba657d6cb7515e22e3832cc49099d28ad8fc24f747665dd71" => :catalina
-    sha256 "93dd0d3cd0fdf39c72e433e3858df2eaf2c9b543a32cd8aa29b62943f899bc9a" => :mojave
-    sha256 "1ab0c1598271b6b2fab5e5f865facbe450cb65a02fa5d5a45adeb81953e2da3d" => :high_sierra
+    sha256 "84c4d712170b890a2ae67bfc3ed3e0c6afae12e0b8a65e20a1209f134592e11d" => :catalina
+    sha256 "59fd6cd2d4fed794ed0d635b3f048bfe20a4c6ddb44d3fd4ce7f649e1578bb91" => :mojave
+    sha256 "b16b5d0193d85f89f6249b8063730779e7e039c6635b08392d77c7dddc9d47c7" => :high_sierra
   end
 
   depends_on "rust" => :build
