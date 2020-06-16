@@ -6,10 +6,9 @@ class Ideviceinstaller < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "3fcfe52042361034d6d884268c6e145db6ccae21a65d55fae590b8d3203209e6" => :catalina
-    sha256 "e0df189964f8d77e2ea30e8255b7d5a6fa82710b9b65e1351f086358530f6d84" => :mojave
-    sha256 "d8f6c9528b2737db5453b118e8792533274df7b06968c868ba0096cf62e48079" => :high_sierra
+    sha256 "6ee12db78e8c224c0eb0cf88eb4f43242eb1ba672eb006636273b99b75b02a87" => :catalina
+    sha256 "6ed5e4f7ace33fd5f4d1b4c6b9f0fd519836080e170b981e63942087698351c6" => :mojave
+    sha256 "0dfe944eaa47cad87ad22f70dbbcefdb6b27bbeb83ca1f7a229827c03054c07c" => :high_sierra
   end
 
   head do
