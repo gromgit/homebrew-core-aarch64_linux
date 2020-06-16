@@ -4,6 +4,13 @@ class GitInteractiveRebaseTool < Formula
   url "https://github.com/MitMaro/git-interactive-rebase-tool/archive/1.2.1.tar.gz"
   sha256 "8df32f209d481580c3365a065882e40343ecc42d9e4ed593838092bb6746a197"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "ab2feae40a1c22695f88383fc0d25bd1ce90499cf74004719fbaf7540a673f09" => :catalina
+    sha256 "50a7e6d5e3b6e0cdb75f9dd83fde8c9d473a632c8f22f575591fe4b5469a19bf" => :mojave
+    sha256 "530ae677663e9773d05a17878a1e28e91e8751d9b9ac8cffdb0acaad7a7d1e8b" => :high_sierra
+  end
+
   depends_on "rust" => :build
 
   uses_from_macos "ncurses"
