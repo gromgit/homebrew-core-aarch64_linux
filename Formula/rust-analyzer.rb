@@ -1,8 +1,8 @@
 class RustAnalyzer < Formula
   desc "Experimental Rust compiler front-end for IDEs"
   homepage "https://rust-analyzer.github.io/"
-  url "https://github.com/rust-analyzer/rust-analyzer/archive/2020-06-08.tar.gz"
-  sha256 "fe0317b8dca42955784a443e763c8e86673ef5bd555d3440c1590c89b8a3558b"
+  url "https://github.com/rust-analyzer/rust-analyzer/archive/2020-06-15.tar.gz"
+  sha256 "8d964ba82fd4d34287953f9654c79b5a4b2ed7ca0c710759ecc1d9e7d76bcd40"
 
   bottle do
     cellar :any_skip_relocation
