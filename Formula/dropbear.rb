@@ -1,8 +1,8 @@
 class Dropbear < Formula
   desc "Small SSH server/client for POSIX-based system"
   homepage "https://matt.ucc.asn.au/dropbear/dropbear.html"
-  url "https://matt.ucc.asn.au/dropbear/releases/dropbear-2019.78.tar.bz2"
-  sha256 "525965971272270995364a0eb01f35180d793182e63dd0b0c3eb0292291644a4"
+  url "https://matt.ucc.asn.au/dropbear/releases/dropbear-2020.79.tar.bz2"
+  sha256 "084f00546b1610a3422a0773e2c04cbe1a220d984209e033b548b49f379cc441"
 
   bottle do
     cellar :any_skip_relocation
