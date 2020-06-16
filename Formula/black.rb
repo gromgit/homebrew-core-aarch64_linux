@@ -9,9 +9,9 @@ class Black < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "144397ea511cf3baaf36d229797a6329406c47a0bbdffce10821e6458064f59c" => :catalina
-    sha256 "ce49495988a237b4b1463bca860d3eb778c4c9bb4cae1978828fcbe49e40250c" => :mojave
-    sha256 "1b1ec4e639f666ca3ea506e89ea1fffbcc1c2a21111fd494874cffd6f422643c" => :high_sierra
+    sha256 "868f4480634c6571a0d958fee56dce581a51e491f91b759667b9425033a496dd" => :catalina
+    sha256 "1cb2be65eab785311661e4ad488d4019e15c59ffb5d7495c518118728c72e933" => :mojave
+    sha256 "7ac913822922277b632cbd5b88cac2898a31db3d17745840280e14060fc653b2" => :high_sierra
   end
 
   depends_on "python@3.8"
