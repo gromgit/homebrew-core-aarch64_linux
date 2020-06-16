@@ -5,6 +5,13 @@ class Fpdns < Formula
   sha256 "f6599ebed73c2d87d7c2bafc8c3a63fb76bda52478e9a1912410d481f7536100"
   head "https://github.com/kirei/fpdns.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "fcf157864bccda7f1064856e592acf3b6ef7d46c8dcd48aab66ceae5ef2b394e" => :catalina
+    sha256 "dadfa0adfbca40276bc951e541e3d7867d4550fcb552749dca37c95049830a84" => :mojave
+    sha256 "0de082e3b044641f04bdc018b5a720c89f1ae3f24340c1bc6bfb88fbe0c3f79f" => :high_sierra
+  end
+
   uses_from_macos "perl"
 
   resource "Net::DNS" do
