@@ -7,10 +7,10 @@ class Jabba < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "0774ce652abc4e4a0e57bc8f4bbad5ecdae16b86ce28be04711bc48bba488e3d" => :catalina
-    sha256 "d3bcd841125639c3eb01e5cce60667c2f2c914d61a2f3f21d68e75ec10cf793c" => :mojave
-    sha256 "5d99c5f42d31a63c0019dbb1b16460553c91136ebbf2000f85a299c8aa8d0c15" => :high_sierra
+    rebuild 2
+    sha256 "7eddb409c7bb2784db21756e624a18b19977bb4df53ab547eaedd8abe876651e" => :catalina
+    sha256 "3101ea25ce49c3ed96b3c8595a5441fec3aeb536b56eca21c1dea56f6c1fd86b" => :mojave
+    sha256 "8454f5aa9b8832908b1c889531118ea058b2e675ef7f7f37eeb282f454aeec1e" => :high_sierra
   end
 
   depends_on "glide" => :build
