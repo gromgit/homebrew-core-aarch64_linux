@@ -5,8 +5,8 @@ class Sslyze < Formula
   homepage "https://github.com/nabla-c0d3/sslyze"
 
   stable do
-    url "https://github.com/nabla-c0d3/sslyze/archive/3.0.6.tar.gz"
-    sha256 "a1e770dd2511b19cd677b1915fcaedae5ebf4bde845cf79bed91dc1f88a93ce2"
+    url "https://github.com/nabla-c0d3/sslyze/archive/3.0.7.tar.gz"
+    sha256 "3d979443e6d16edf9f5f6155ae01656ca0f73386591c67053718082e710508c0"
 
     resource "nassl" do
       url "https://github.com/nabla-c0d3/nassl/archive/3.0.0.tar.gz"
