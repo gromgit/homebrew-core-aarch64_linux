@@ -5,9 +5,10 @@ class Skopeo < Formula
   sha256 "df5f38ee72e2fede508d1fd272a48773b86eb6bc6cc4b7b856a99669d22fa5df"
 
   bottle do
-    sha256 "f3dc8e83805ba461b4a090e8976c1f71460cc50d49dcd5bca12398f0b8d03d2a" => :catalina
-    sha256 "89bfa2ed6f0779e63c214393278082589e98e708ab138ce5c71194d38b096e88" => :mojave
-    sha256 "34aae1e77e56d17e0c4050750d1c2aec74c38a57adcbd494d8f557022685dafc" => :high_sierra
+    rebuild 1
+    sha256 "18783ae2382f94c4a3482d5447fb7822154ec8b08796ae120a63544e6ac425ac" => :catalina
+    sha256 "faba47f926a049b0750dcad10ac52539a3b1db230a6fd8d991fdf2f9a6f16947" => :mojave
+    sha256 "9b0499db83219c6a848403e758ff7b05e55cf2c8af66795565871ca365cecba3" => :high_sierra
   end
 
   depends_on "go" => :build
