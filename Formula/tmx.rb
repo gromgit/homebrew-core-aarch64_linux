@@ -1,8 +1,8 @@
 class Tmx < Formula
   desc "Portable C library to load tiled maps in your games"
   homepage "https://github.com/baylej/tmx"
-  url "https://github.com/baylej/tmx/archive/tmx_1.0.0.tar.gz"
-  sha256 "ba184b722a838a97f514fb7822c1243dbb7be8535b006ef1c5b9f928e295519b"
+  url "https://github.com/baylej/tmx/archive/tmx_1.1.0.tar.gz"
+  sha256 "79a9a72fea3c512969e8262a6abbb5886ad39eefe2762b3554f7538c59be6b74"
 
   bottle do
     cellar :any
@@ -40,14 +40,13 @@ class Tmx < Formula
     EOS
     (testpath/"test.c").write <<-EOS
       #include <tmx.h>
-      #include <tsx.h>
 
       int main(void) {
         tmx_map *map = tmx_load("test.tmx");
         tmx_map_free(map);
 
-        tmx_tileset_manager *ts_mgr = tmx_make_tileset_manager();
-        tmx_free_tileset_manager(ts_mgr);
+        tmx_resource_manager *rc_mgr = tmx_make_resource_manager();
+        tmx_free_resource_manager(rc_mgr);
 
         return 0;
       }
