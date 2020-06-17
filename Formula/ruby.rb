@@ -203,6 +203,8 @@ class Ruby < Formula
   end
 
   def caveats
+    return unless latest_version_installed?
+
     <<~EOS
       By default, binaries installed by gem will be placed into:
         #{rubygems_bindir}
