@@ -8,9 +8,9 @@ class Pnpm < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "eb440adb24d4a953e290e40c1b4fa298cd4baec59efa440df348d231e5865889" => :catalina
-    sha256 "21778bd9b004a0f9a0b9157444619d850a7b0b00d30a3be08174eab704a43e4a" => :mojave
-    sha256 "31f0f14ae59c83b0eacdbb46d34e319d744e596c00263e1a00623335c0f58c20" => :high_sierra
+    sha256 "77ec58a093b8634a72ef7828883dfc7ca3bab98802de5068de637706cbc7dd71" => :catalina
+    sha256 "c2f94c9c8c06ca515e53dd7546ea5aae881df5a2d9dd781a10ce3cf618fb460c" => :mojave
+    sha256 "b84c412b038af874596a36e49dbbb887e150fb32f113c768e9ab47591bbf9dac" => :high_sierra
   end
 
   depends_on "node"
