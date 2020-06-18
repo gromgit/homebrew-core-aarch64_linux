@@ -1,8 +1,8 @@
 class Vcpkg < Formula
   desc "C++ Library Manager"
   homepage "https://github.com/microsoft/vcpkg"
-  url "https://github.com/microsoft/vcpkg/archive/2020.04.tar.gz"
-  sha256 "51bdc81d074407b760de5950760f43c253da6cd8135e13744967cf7c95e837fd"
+  url "https://github.com/microsoft/vcpkg/archive/2020.06.tar.gz"
+  sha256 "cfaecee6f18b6e2763f41c4257b6d6a1d2ef536a2018a6c7f579df0b6ad42e56"
 
   bottle do
     cellar :any_skip_relocation
