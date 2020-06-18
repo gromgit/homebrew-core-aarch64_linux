@@ -7,9 +7,9 @@ class Volta < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d6d8f99bba79a84e35d18613882319e461331335b9ba4cd9488e9ed20e2126fa" => :catalina
-    sha256 "d6a3e143d962b4f568b9622212a8adcbf6e37b5ab087c60e4114fdbbac27d512" => :mojave
-    sha256 "e3ac03ef6031010ecd7038e593bcb761e7947edd5b2538080073a75e89b281fc" => :high_sierra
+    sha256 "4ba2c8d9d50b726a5340ecd1ba4d90ed7cebc52f1b719d210e9bf3972d68f88a" => :catalina
+    sha256 "55d1016c0fbd7e9e06907567e80e215847889a7e9bd8bf99a2668d5397fbe4d1" => :mojave
+    sha256 "f24ef90f70371e74a5bd3d5dac5f56c11421c24d42479322acd6fc7c2b462a36" => :high_sierra
   end
 
   depends_on "rust" => :build
