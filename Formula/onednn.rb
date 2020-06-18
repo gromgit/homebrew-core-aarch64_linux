@@ -1,0 +1,30 @@
+class Onednn < Formula
+  desc "Basic building blocks for deep learning applications"
+  homepage "https://01.org/oneDNN"
+  url "https://github.com/oneapi-src/onednn/archive/v1.5.tar.gz"
+  sha256 "2aacc00129418185e0bc1269d3ef82f93f08de2c336932989c0c360279129edb"
+  head "https://github.com/oneapi-src/onednn.git"
+
+  depends_on "cmake" => :build
+  depends_on "doxygen" => :build
+
+  def install
+    system "cmake", ".", *std_cmake_args
+    system "make"
+    system "make", "doc"
+    system "make", "install"
+  end
+
+  test do
+    (testpath/"test.c").write <<~EOS
+      #include <mkldnn.h>
+      int main() {
+        mkldnn_engine_t engine;
+        mkldnn_status_t status = mkldnn_engine_create(&engine, mkldnn_cpu, 0);
+        return !(status == mkldnn_success);
+      }
+    EOS
+    system ENV.cc, "-L#{lib}", "-lmkldnn", "test.c", "-o", "test"
+    system "./test"
+  end
+end

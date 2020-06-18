@@ -73,6 +73,7 @@
   "lua@5.3": "lua",
   "mat": "mat2",
   "maven32": "maven@3.2",
+  "mkl-dnn": "onednn",
   "mobile-shell": "mosh",
   "mongo-c": "mongo-c-driver",
   "mpich2": "mpich",
