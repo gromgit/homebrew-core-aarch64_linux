@@ -5,10 +5,10 @@ class Vcpkg < Formula
   sha256 "cfaecee6f18b6e2763f41c4257b6d6a1d2ef536a2018a6c7f579df0b6ad42e56"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "7ba22eee80d89ba5518d0bdd0e38e6e0a2d7656d986467b26177a7cba4e15fe3" => :catalina
-    sha256 "b6648b679288130524034783cc3dada6dc21eba7f850b3fa331eecaa3fc3a7a2" => :mojave
-    sha256 "aa6e77116fbf6aa56f450eaea187639d485a7e91640b87013403bef1411993a0" => :high_sierra
+    cellar :any
+    sha256 "8a8aa4727a0b8e5c514c0c742c2a88b6fc7c38c9bf8f8ffdfaf3d6ce480cb047" => :catalina
+    sha256 "404677363b87dd1a94ea865082fd56c1798cd71d8234b311c4cea7cfdb3c1b48" => :mojave
+    sha256 "f984abc24e2316833210b1bb313b134baef6855e2b1734cb296b05a9b3237b5e" => :high_sierra
   end
 
   depends_on "cmake" => :build
