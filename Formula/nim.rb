@@ -6,9 +6,9 @@ class Nim < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "dd4e05e5d208a4ec3cc1b7ca3232761f1891c5663fade15015fce3d5f637835b" => :catalina
-    sha256 "f6ad64fdbde925ccb9f72d28e4f419697097142b9d838fddb1d0086c89cc6f45" => :mojave
-    sha256 "ae72dd3da7385276d636295aff9c31d670273c93504d9e65a2da107594256aad" => :high_sierra
+    sha256 "45b64564ce7e714e52b2e2cf56621967da85b7d59cb09d09420d7bf667d2c429" => :catalina
+    sha256 "8fd29b41a91fe6fcb46de74a88bb2de5d476c2b7b135c4505e1036f76ac9ac40" => :mojave
+    sha256 "e6565fc413ce8da966d56c1d80ca55dbff43d92d57e2b2f9d96781d3d10e0a9e" => :high_sierra
   end
 
   head do
