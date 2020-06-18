@@ -8,9 +8,9 @@ class SyncGateway < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "ac5dcfffc0199d3ee6e1971765890f288480177437fec0dab20189ddcba3a5c3" => :catalina
-    sha256 "05ff270d6f387c8251ebb9a121642d350505ca8447914303a786bf8b7eafd166" => :mojave
-    sha256 "82751dbdc0c8efa02c3694f9482d9678539414387427a173b0a85eede93c6c6a" => :high_sierra
+    sha256 "885917ee4f3b7f02070b06fbd5d5eabb6bf87d482c4b53155ddc4f3acddc769f" => :catalina
+    sha256 "a3245e0aeebe1eed105b27c998c8f2de56b5bd54a1d85b2178842a1cff58ac79" => :mojave
+    sha256 "6ed26ea71c7fa4dc4d539caa767ffc46fbaa1166e1746b5569aa4782d003e624" => :high_sierra
   end
 
   depends_on "gnupg" => :build
