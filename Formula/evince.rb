@@ -1,8 +1,8 @@
 class Evince < Formula
   desc "GNOME document viewer"
   homepage "https://wiki.gnome.org/Apps/Evince"
-  url "https://download.gnome.org/sources/evince/3.36/evince-3.36.5.tar.xz"
-  sha256 "6f0dd6e30639eb620f201a6ae40f21c4b78c030f0d6437f9e309f7240195e97c"
+  url "https://download.gnome.org/sources/evince/3.36/evince-3.36.6.tar.xz"
+  sha256 "95ce9b21c6fc7c837e12eb6e88777ea80dcc2ce6d84d000166a24a113a6d8db0"
 
   bottle do
     sha256 "0c57c60e98d136ca4805fc5be510babfc2dc87f6a69ce9e74cca74a7913c0a9d" => :catalina
