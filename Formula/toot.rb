@@ -7,9 +7,9 @@ class Toot < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5b8822979864a7bc75a6237c5b8c4de45061f246c6b172e1060e506b66cc8341" => :catalina
-    sha256 "93c9e6c5028dceee8400ce0a8c642ad9c06b990348279f7bdbdf3d03d1cc6ffc" => :mojave
-    sha256 "41e5203abe27ecd65b85be29ff376260f1ef3851150b6ddc371cd9e8121db77f" => :high_sierra
+    sha256 "96f4f491b9448368e35619e8910420eba8528a61857c8114c238ed279e6cffae" => :catalina
+    sha256 "72ff4aa79f3b3bd508a7c76a906d5dc0901f1206ae6eb417d50638a97a4bf9b2" => :mojave
+    sha256 "f8e4e2f82a44d0c9f054264d2cb9e0cd01f3f25cea91d7c861689bad7814add0" => :high_sierra
   end
 
   depends_on "python@3.8"
