@@ -5,6 +5,13 @@ class Gluon < Formula
   sha256 "39d3615cb3109c1d6745199c078a8db17f9dcbe370297d6bb8fe71b6c65d80ee"
   head "https://github.com/gluon-lang/gluon.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "fee66ca58bc00cf86c28c7ca5e64308ea467e782ee1de93f41234303d09a23a5" => :catalina
+    sha256 "b368877402d60253ce153628d9f39e57793bf65cb41f6fcdbdcae00d5e0253af" => :mojave
+    sha256 "ee786f9331bd41e85d763d59b6a97ff8198919ced0e72fa0ebeaf951bccd3bbb" => :high_sierra
+  end
+
   depends_on "rust" => :build
 
   def install
