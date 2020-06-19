@@ -7,9 +7,9 @@ class Robotfindskitten < Formula
   head "https://github.com/robotfindskitten/robotfindskitten.git", :branch => "main"
 
   bottle do
-    sha256 "439c4c752b9606e645719ca46388b0143a0f3feb6ff248b4fd0d370f3192d506" => :catalina
-    sha256 "4bb958df30f8b4d8a46b24f8126404bfb545040c0cafaed7fb14c8965d46c2fc" => :mojave
-    sha256 "667bd9a9abd587202ccd8519ace649638e3eeeb859021c2b9f2014ec55f69ea9" => :high_sierra
+    sha256 "fa1f963cf39fb320c4b8e0867a05c9e96944d59d6c18222a9d6b33acb4384622" => :catalina
+    sha256 "8b25c148f43ad7c70d43810639b7c812cbd612b347386be3f7e913b4d0cc14b5" => :mojave
+    sha256 "9c6b045c69a6ff5e74f4f184ec109d3bfd293c7dab223e87ba80e7bb150e8dae" => :high_sierra
   end
 
   depends_on "autoconf" => :build
