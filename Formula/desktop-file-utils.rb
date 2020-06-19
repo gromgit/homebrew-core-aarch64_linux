@@ -1,8 +1,8 @@
 class DesktopFileUtils < Formula
   desc "Command-line utilities for working with desktop entries"
   homepage "https://wiki.freedesktop.org/www/Software/desktop-file-utils/"
-  url "https://www.freedesktop.org/software/desktop-file-utils/releases/desktop-file-utils-0.24.tar.xz"
-  sha256 "a1de5da60cbdbe91e5c9c10ac9afee6c3deb019e0cee5fdb9a99dddc245f83d9"
+  url "https://www.freedesktop.org/software/desktop-file-utils/releases/desktop-file-utils-0.25.tar.xz"
+  sha256 "438199400333300fb8a14033d7c2f24ce3cf2e300312da9ff0b3337e35d06b8e"
 
   bottle do
     sha256 "7d96376b59d36fa9a7b7be5a116ec0ebaef113624d0f1b91fdd77bdabfca9286" => :catalina
@@ -11,15 +11,21 @@ class DesktopFileUtils < Formula
     sha256 "16405a7ca997e90c3448d86f291b8d8793cf413ccd95090f64e05bfbb10cb7e9" => :sierra
   end
 
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "glib"
 
   def install
-    system "./configure", "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}",
-                          "--with-lispdir=#{elisp}"
-    system "make", "install"
+    mkdir "build" do
+      system "meson", *std_meson_args, ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+
+      # fix lisp file install location
+      mkdir_p share/"emacs/site-lisp/desktop-file-utils"
+      mv share/"emacs/site-lisp/desktop-entry-mode.el", share/"emacs/site-lisp/desktop-file-utils"
+    end
   end
 
   test do
