@@ -1,8 +1,8 @@
 class Mockolo < Formula
   desc "Efficient Mock Generator for Swift"
   homepage "https://github.com/uber/mockolo"
-  url "https://github.com/uber/mockolo/archive/1.2.3.tar.gz"
-  sha256 "9cf1d2b436b3e4573b448690907862586a7d3db98798b56e510f61d31fec7d01"
+  url "https://github.com/uber/mockolo/archive/1.2.4.tar.gz"
+  sha256 "c2394a4f5e94cd0a6c8d380085b806e0fa4e52586ea3c888148ad9767ad9ef3b"
 
   bottle do
     cellar :any_skip_relocation
