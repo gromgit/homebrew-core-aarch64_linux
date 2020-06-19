@@ -4,9 +4,8 @@ class Libtorch < Formula
   desc "Tensors and dynamic neural networks"
   homepage "https://pytorch.org/"
   url "https://github.com/pytorch/pytorch.git",
-      :tag      => "v1.5.0",
-      :revision => "4ff3872a2099993bf7e8c588f7182f3df777205b"
-  revision 3
+      :tag      => "v1.5.1",
+      :revision => "3c31d73c875d9a4a6ea8a843b9a0d1b19fbe36f3"
 
   bottle do
     cellar :any
