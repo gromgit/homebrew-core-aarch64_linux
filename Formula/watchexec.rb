@@ -6,9 +6,9 @@ class Watchexec < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "68d7edc0ee04c4ca08da96bbb33039343481bfc5cd0bc7a2fe79170477ead26e" => :catalina
-    sha256 "70ba21650ecee850450f952746dde08b1dd9db7efd2ae83803c2e60684263576" => :mojave
-    sha256 "becd5c5c29c12b4f962b416b0428caece88d221ce2086e11faa73318c6ba396b" => :high_sierra
+    sha256 "43c3f38e62625349663cd00cab118153a4140f146dace6a330af33d1d27fc166" => :catalina
+    sha256 "79daa1917e6d83b149ee92827707089e15e43aa09b89d79af39aca63899cd9a7" => :mojave
+    sha256 "9a0593e6b952996d1d6dcab6d83d39218ef0218486e442b5bd1e0e79cee7dbfd" => :high_sierra
   end
 
   depends_on "rust" => :build
