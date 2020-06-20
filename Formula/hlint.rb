@@ -5,8 +5,8 @@ class Hlint < Formula
 
   desc "Haskell source code suggestions"
   homepage "https://github.com/ndmitchell/hlint"
-  url "https://hackage.haskell.org/package/hlint-3.1.4/hlint-3.1.4.tar.gz"
-  sha256 "bbe132ae5e2a7428e6c5a53bbb224809163996d024bb260aebc66d6637b050f3"
+  url "https://hackage.haskell.org/package/hlint-3.1.5/hlint-3.1.5.tar.gz"
+  sha256 "98ced541cf094444ec1a69a48a3bbc67b4bec9ad5e6c006f4004de1502640c56"
   head "https://github.com/ndmitchell/hlint.git"
 
   bottle do
@@ -16,12 +16,13 @@ class Hlint < Formula
   end
 
   depends_on "cabal-install" => :build
-  depends_on "ghc@8.8" => :build
+  depends_on "ghc" => :build
 
   uses_from_macos "ncurses"
 
   def install
-    install_cabal_package :using => ["alex", "happy"]
+    system "cabal", "v2-update"
+    system "cabal", "v2-install", *std_cabal_v2_args
     man1.install "data/hlint.1"
   end
 
