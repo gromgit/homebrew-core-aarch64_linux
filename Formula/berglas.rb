@@ -1,8 +1,8 @@
 class Berglas < Formula
   desc "Tool for managing secrets on Google Cloud"
   homepage "https://github.com/GoogleCloudPlatform/berglas"
-  url "https://github.com/GoogleCloudPlatform/berglas/archive/v0.5.1.tar.gz"
-  sha256 "feafbb1d2515bd5dd80b6408d6611549ea22c4366687883b92f706dfd2df596a"
+  url "https://github.com/GoogleCloudPlatform/berglas/archive/v0.5.2.tar.gz"
+  sha256 "71a6216aad548f7f02b933cd9b95e9ef80e8785da818292a02ab4018231a76e0"
 
   bottle do
     cellar :any_skip_relocation
@@ -14,7 +14,7 @@ class Berglas < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", "-mod=vendor", "-o", bin/"berglas"
+    system "go", "build", "-mod=vendor", *std_go_args
   end
 
   test do
