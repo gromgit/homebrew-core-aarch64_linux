@@ -1,8 +1,8 @@
 class DesktopFileUtils < Formula
   desc "Command-line utilities for working with desktop entries"
   homepage "https://wiki.freedesktop.org/www/Software/desktop-file-utils/"
-  url "https://www.freedesktop.org/software/desktop-file-utils/releases/desktop-file-utils-0.25.tar.xz"
-  sha256 "438199400333300fb8a14033d7c2f24ce3cf2e300312da9ff0b3337e35d06b8e"
+  url "https://www.freedesktop.org/software/desktop-file-utils/releases/desktop-file-utils-0.26.tar.xz"
+  sha256 "b26dbde79ea72c8c84fb7f9d870ffd857381d049a86d25e0038c4cef4c747309"
 
   bottle do
     sha256 "44cf2d14136f1cb8db3f8718c91191d90a3ca0196f7407d69311d08318807268" => :catalina
