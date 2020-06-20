@@ -4,6 +4,13 @@ class HasuraCli < Formula
   url "https://github.com/hasura/graphql-engine/archive/v1.2.2.tar.gz"
   sha256 "59e15fe760794bb0ec69b62d0bf13d7925c2f595d78ee4121fc82fa67c36dbf9"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "77d006e1f89a36169f6f4e8858271d0ad10125902c988f0ae6e82854b2610514" => :catalina
+    sha256 "6907c2b64b830d81ef389f7535436571394205645de47492dd5bba7679b4a93d" => :mojave
+    sha256 "a5e93c26c925bec1c45be398ad5431cd2b9a4f842af308ae0e94728a5b48ecc0" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
