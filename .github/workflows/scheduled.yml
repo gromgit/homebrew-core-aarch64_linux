@@ -3,7 +3,7 @@ name: Scheduled tasks
 on:
   schedule:
     # Once every hour
-    - cron:  '*/60 * * * *'
+    - cron: '*/60 * * * *'
 
 jobs:
   autopublish:
