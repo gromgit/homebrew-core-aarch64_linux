@@ -4,6 +4,13 @@ class Doctest < Formula
   url "https://github.com/onqtam/doctest/archive/2.3.8.tar.gz"
   sha256 "d7232437eceb46ad5de03cacdee770c80f2e53e7b8efc1c8a8ed29539f64efa5"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "783dddbe8389d03fa57cf7f6f2bc73ceb17686a90519418a1a7a22ac052e0bdb" => :catalina
+    sha256 "783dddbe8389d03fa57cf7f6f2bc73ceb17686a90519418a1a7a22ac052e0bdb" => :mojave
+    sha256 "783dddbe8389d03fa57cf7f6f2bc73ceb17686a90519418a1a7a22ac052e0bdb" => :high_sierra
+  end
+
   depends_on "cmake" => :build
 
   def install
