@@ -1,8 +1,8 @@
 class Alpine < Formula
   desc "News and email agent"
   homepage "http://alpine.x10host.com/alpine/release/"
-  url "http://alpine.x10host.com/alpine/release/src/alpine-2.22.tar.xz"
-  sha256 "849567c1b6f71fde3aaa1c97cf0577b12a525d9e22c0ea47797c4bf1cd2bbfdb"
+  url "http://alpine.x10host.com/alpine/release/src/alpine-2.23.tar.xz"
+  sha256 "793a61215c005b5fcffb48f642f125915276b7ec7827508dd9e83d4c4da91f7b"
   head "https://repo.or.cz/alpine.git"
 
   bottle do
