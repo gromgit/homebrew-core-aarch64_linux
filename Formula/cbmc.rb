@@ -8,9 +8,9 @@ class Cbmc < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "83da818079f4398b8e00d9c0daabf3673e2c1c26a7ecdabd2093fe919605c3df" => :catalina
-    sha256 "5a19ff3395da6fcc3b5d21afd817d6938c3c4d0b3be864bedebc5ca4c843eafc" => :mojave
-    sha256 "fbd3cf7a7bacb069cf93bc8e7c5185a9b96a0bc468ad3c9b65c2f2e4dec8d741" => :high_sierra
+    sha256 "52b5ad464f019dcdaf68ee858d6af50c4b9e49118107a5e0c8c9ba9be0e4c9b2" => :catalina
+    sha256 "31137c7bc739c209d0c0095ec89a8bafa3c60fd77c5dac44b5dbba4906986be9" => :mojave
+    sha256 "6465989e477f4c92ae1943a13b3e1f1251300c98d6f1c5e61c97fd1cee451f0f" => :high_sierra
   end
 
   depends_on "cmake" => :build
