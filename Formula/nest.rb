@@ -4,6 +4,12 @@ class Nest < Formula
   url "https://github.com/nest/nest-simulator/archive/v2.20.0.tar.gz"
   sha256 "40e33187c22d6e843d80095b221fa7fd5ebe4dbc0116765a91fc5c425dd0eca4"
 
+  bottle do
+    sha256 "96409c8e4dd306475f10723d2e5f9f4882c77f58a24a8a62181c7bf8991a6d4c" => :catalina
+    sha256 "c2dad03538e0d25df72a6f2e965db3c653f814cdb8275bf8f6147e6de80274c4" => :mojave
+    sha256 "0e2baa07d895f2eff31c207810135c46de813a557439143223ea0ae8a4f5c648" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "cython" => :build
   depends_on "gsl"
