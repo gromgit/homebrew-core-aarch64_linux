@@ -6,10 +6,9 @@ class Sparse < Formula
   head "https://git.kernel.org/pub/scm/devel/sparse/sparse.git"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "e1b3677825bb6ba5e50e6d0da79836fd34d1e1c0249053d11640d88114d3fcbb" => :catalina
-    sha256 "a96ecc9bb289caf14f4dcf9dd5a0b1d04e2336d1c1e79eafd8af6cb3f3a9e5dd" => :mojave
-    sha256 "ec9b7f151a40b278fe062c354cbbdfb47c5a2420b1cf87a04d5813d0221e47f9" => :high_sierra
+    sha256 "d2ef22c9e1333a70053230705caff9baf80075c4039a485e3a778abc0ca3b415" => :catalina
+    sha256 "cbd74528c1f37f44079f866fa8da5e6571929e35afd4102244cbfa103e5f2950" => :mojave
+    sha256 "c81ad2c94b22452119bcf5c6347ef6426ee245afbd750bf0c0f6c35f3c8c6b75" => :high_sierra
   end
 
   depends_on "gcc" if DevelopmentTools.clang_build_version < 1100
