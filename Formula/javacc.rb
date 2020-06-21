@@ -6,9 +6,9 @@ class Javacc < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9761db5815a3cad526876b7385e61c353a287620dbd160a4f8d880dea4ccc573" => :catalina
-    sha256 "7cdce912a379ca72671e0c8590adf35d97931943a7e75d7f15c08a3f2994d832" => :mojave
-    sha256 "f08bee3c211b72483fdb6666a71eff1f0c98f645e21f83c97a1cda78ad99fd9d" => :high_sierra
+    sha256 "437cd3787126ac8a517e0f293396a3c0a1aff532f189872cf8d8729e47aae414" => :catalina
+    sha256 "c24483964d08486d08e3391f1d0229920d22444b93d9ba00665e917446990a0d" => :mojave
+    sha256 "f648f62353a5e42238f7d3422debd34c8c33a529e8b3cee6a9a13f97f68719ce" => :high_sierra
   end
 
   depends_on "ant" => :build
