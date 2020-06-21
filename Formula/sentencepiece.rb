@@ -6,9 +6,9 @@ class Sentencepiece < Formula
   head "https://github.com/google/sentencepiece.git"
 
   bottle do
-    sha256 "d65c679bb760be25ab088947503541a62d4fe3bf73d182bc618702fc29463d45" => :catalina
-    sha256 "64278463f601a298edca2d3c334b8b4e9afefcc6cb3c6d31bf37b09f38f709fe" => :mojave
-    sha256 "a935105f263603af33cb30190e3a324758914b72e82dae1ab31908ee0848aaef" => :high_sierra
+    sha256 "c169b40d2a856514440b4fdfa7f461b9f1b2bc8c7d5e6603c3e42e8e62f90c0f" => :catalina
+    sha256 "c144cb6375e447c1aee9616ab22250830892aa7bfdf230b3edc0c0a41a0bfa96" => :mojave
+    sha256 "eb919fd4dc87993b2f4b6f8a58683831a7c2fb0f3abbcdf4a320f8bf761cdb8e" => :high_sierra
   end
 
   depends_on "cmake" => :build
