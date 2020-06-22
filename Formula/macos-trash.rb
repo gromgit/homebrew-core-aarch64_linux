@@ -5,6 +5,12 @@ class MacosTrash < Formula
   sha256 "31c09d385bb50b0f76818a1fe2c850cf56b9575c9fa27ea963cba38dfaba7d04"
   head "https://github.com/sindresorhus/macos-trash.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "5962bfd5851549b6a251dc4b9632794622af126175faec6a4d97468d45de22c6" => :catalina
+    sha256 "030b17bc67400a3f0873bd6983954fe0b55166b26c764e77b1d8cd1adc1bc1b7" => :mojave
+  end
+
   depends_on :xcode => ["11.0", :build]
   depends_on :macos => :yosemite
 
