@@ -2,8 +2,8 @@ class Cpr < Formula
   desc "C++ Requests, a spiritual port of Python Requests"
   homepage "https://whoshuu.github.io/cpr/"
   url "https://github.com/whoshuu/cpr.git",
-      :tag      => "1.4.0",
-      :revision => "3f76ef3fd6acecc7142cd181c8bd8ce1acb8cd14"
+      :tag      => "1.5.0",
+      :revision => "c8d33915dbd88ad6c92b258869b03aba06587ff9"
   head "https://github.com/whoshuu/cpr.git"
 
   bottle do
@@ -14,6 +14,7 @@ class Cpr < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "openssl@1.1"
 
   uses_from_macos "curl"
 
