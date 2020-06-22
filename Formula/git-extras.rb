@@ -7,9 +7,9 @@ class GitExtras < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f69cac7f7e864f32d29cb62ba6b912eb02dd18ba1bde570172f3c7a2a4b50f79" => :catalina
-    sha256 "f69cac7f7e864f32d29cb62ba6b912eb02dd18ba1bde570172f3c7a2a4b50f79" => :mojave
-    sha256 "f69cac7f7e864f32d29cb62ba6b912eb02dd18ba1bde570172f3c7a2a4b50f79" => :high_sierra
+    sha256 "9c3bdaa055a224b1c01f2800f22c37dc67dcc906e5be8cbd7a545d3e20772992" => :catalina
+    sha256 "9c3bdaa055a224b1c01f2800f22c37dc67dcc906e5be8cbd7a545d3e20772992" => :mojave
+    sha256 "9c3bdaa055a224b1c01f2800f22c37dc67dcc906e5be8cbd7a545d3e20772992" => :high_sierra
   end
 
   conflicts_with "git-utils",
