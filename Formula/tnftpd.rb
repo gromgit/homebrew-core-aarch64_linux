@@ -5,11 +5,10 @@ class Tnftpd < Formula
   sha256 "905519d239745ebec41c91e357af299f3bce04b59f84f2ba5f7654738439ac1c"
 
   bottle do
-    sha256 "b1682283462d7838ce7d4a180cfee8be9ea4db601d3b112f0d50b1e6ad90fd56" => :catalina
-    sha256 "ce27ec83c1e3000355b624f25f8f0f6efbc14bda6436374c74c0ddeb2d67902b" => :mojave
-    sha256 "ee9f7bc91071b5a4c625621593b78cf34cc01ee06b828c942afc6aa30cbee5ff" => :high_sierra
-    sha256 "64d040373d1378a529947ad70460044013716d0e9fb0cbd2b5c81475caead3c7" => :sierra
-    sha256 "4ef4b7c1a35307c4a3e6b70dad1ba193aceda75920da79b0a2bd135446863d5e" => :el_capitan
+    cellar :any_skip_relocation
+    sha256 "978a0f4a68060b3565a38e3dac5cae51970c63380b9d711cc0627fc22fa92e5c" => :catalina
+    sha256 "73c8ee8157c115bdb3460ed5d6e99026eb202ee92eb2b5e0fc8210f38b8cd0e1" => :mojave
+    sha256 "b57aef0f28f51866e63ee22df0c3068377bebb4a36c17e7d0f167e3a97f7591f" => :high_sierra
   end
 
   def install
