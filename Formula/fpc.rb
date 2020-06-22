@@ -5,11 +5,10 @@ class Fpc < Formula
   sha256 "d595b72de7ed9e53299694ee15534e5046a62efa57908314efa02d5cc3b1cf75"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "e00f6652d31268e4a587270199034bb2d0ea73e21b1299fc94ab1177017ffbe7" => :catalina
-    sha256 "91c82c96317247dd7c5992a559b7ead81ad71e58c9be7331364bfd9a16558c32" => :mojave
-    sha256 "adc48d394c224bd91e22e0963156c53323d6647b09a1ef6588a37a9444d29623" => :high_sierra
-    sha256 "9117ae666c6b4f9b9fb63f9993b530c6910084090a1ae7668a06d7d1f9a1170c" => :sierra
+    cellar :any
+    sha256 "67c263ba003c8b7c5632d2417c9431a8ebb4ff5760f3e495f326f1879d2a7670" => :catalina
+    sha256 "614bb9d30094edd2f7704989c890178c19f8b6aab568b59cbe3711788699ba95" => :mojave
+    sha256 "096629c7be18cd01c278f60c6a1ec0530c52c217637e32a6c7ff38405720336c" => :high_sierra
   end
 
   resource "bootstrap" do
