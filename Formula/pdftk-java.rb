@@ -1,8 +1,8 @@
 class PdftkJava < Formula
   desc "Port of pdftk in java"
   homepage "https://gitlab.com/pdftk-java/pdftk"
-  url "https://gitlab.com/pdftk-java/pdftk/-/archive/v3.1.2/pdftk-v3.1.2.tar.gz"
-  sha256 "af858a31730a193ebf7f118359c656a12a4961a811a7bb2b69ba202fe68f5788"
+  url "https://gitlab.com/pdftk-java/pdftk/-/archive/v3.1.3/pdftk-v3.1.3.tar.gz"
+  sha256 "d9145976adf2dd5f8cd70e1e2345262e46790be6bfb2da1728a2ad4f6e4b2021"
   head "https://gitlab.com/pdftk-java/pdftk.git"
 
   bottle do
