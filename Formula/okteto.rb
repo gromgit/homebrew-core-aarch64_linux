@@ -24,10 +24,8 @@ class Okteto < Formula
     system "echo | okteto init --overwrite --file test.yml"
     expected = <<~EOS
       name: #{Pathname.getwd.basename}
-      image: okteto/ruby:2
-      command:
-      - bash
-      workdir: /usr/src/app
+      forward:
+      - 1234:1234
     EOS
     got = File.read("test.yml")
     assert_equal expected, got
