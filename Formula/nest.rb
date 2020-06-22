@@ -6,9 +6,9 @@ class Nest < Formula
   revision 1
 
   bottle do
-    sha256 "96409c8e4dd306475f10723d2e5f9f4882c77f58a24a8a62181c7bf8991a6d4c" => :catalina
-    sha256 "c2dad03538e0d25df72a6f2e965db3c653f814cdb8275bf8f6147e6de80274c4" => :mojave
-    sha256 "0e2baa07d895f2eff31c207810135c46de813a557439143223ea0ae8a4f5c648" => :high_sierra
+    sha256 "38bfd492f381cd059a495122d1c3342e8fb5095501c0422e6c9e04e861cc0d31" => :catalina
+    sha256 "fa62ef7c40613906f8c038d40a8ae0bbda04b070943056829d03c5febaed130f" => :mojave
+    sha256 "c69623f995b427d9ea0a4da78011656a76935d9358f1e9f8470d280670a25aac" => :high_sierra
   end
 
   depends_on "cmake" => :build
