@@ -17,10 +17,11 @@ class Perkeep < Formula
   end
 
   bottle do
-    sha256 "1e51d2d991309cec65b66411ff9dbbd1d93ec40c4c595d1b91a786541c15d738" => :mojave
-    sha256 "4db15262421ce0cefad97fd2df3affba61cba2e1ba1e4153614940cec138ae10" => :high_sierra
-    sha256 "9ab629c218f4af8f769520ec269c81c6499c6c9676c5ae43da8fc7ac8212c0ff" => :sierra
-    sha256 "e4e42c68017500af8a8aa7b542e89905849b09b398a547da818323f08a6e680a" => :el_capitan
+    cellar :any_skip_relocation
+    rebuild 1
+    sha256 "36f18ad54a3e656ac5da55fc438636aac922e107ad1082e0dad7353626f0db84" => :catalina
+    sha256 "51f41c16b3c4ea80d6a77c5badf28dca0ec323bd5aa2f1f90e855ce568b1c8ca" => :mojave
+    sha256 "b188c23945a51d253dc6c4435afaa509a2ddaf151124ef1f08a1186611041c92" => :high_sierra
   end
 
   head do
