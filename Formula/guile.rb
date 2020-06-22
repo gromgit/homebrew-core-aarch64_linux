@@ -6,10 +6,9 @@ class Guile < Formula
   sha256 "b3242d61c5583560cbc9adadf1c8b4333139d9ad129d4481b5c6aa7cfa73e63b"
 
   bottle do
-    rebuild 1
-    sha256 "808df92dc5ff90ec8adb4982b79b15c327c8c4c09f7f4daf604c27b26f8707ee" => :catalina
-    sha256 "964061794cfc8c234b04d006e5d10149dcb3535226d60f35b0d27999e8711eaa" => :mojave
-    sha256 "ee278a2db99ec6421873081c7e0c726f3587f864456276862f01fd17eb94fcee" => :high_sierra
+    sha256 "84f9160c062fe6dfd56cb62bdd985cafb9e3e94943aaa65dbb679865d09f01a7" => :catalina
+    sha256 "9cf1acf32eb7df6b18a70d140d2f0fe3f85c28a98401bc344f251389a7d33453" => :mojave
+    sha256 "32ecfe5e0741b197eb057d1fbe61dd0897eb4e8887e811ce345056e8a13cb7f3" => :high_sierra
   end
 
   head do
