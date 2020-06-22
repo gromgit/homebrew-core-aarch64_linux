@@ -6,9 +6,9 @@ class Hcloud < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "fb706c1cfbc249a8b1cdf8c2c7c3f92d2efd50a575fc0342fe2d03b99ecd7f4c" => :catalina
-    sha256 "bf1d8f2851ddac88a1be71bb5018ae3cbce46747f6d302c3a95f755b23518301" => :mojave
-    sha256 "e3866d38a3fa70ddf5a43876802fa6e227ece4ab5c64457c61ce716d09daabf5" => :high_sierra
+    sha256 "debfe78e08032ec00f3e6148436448ffaa582250403bf5b25187d12cfa089d6b" => :catalina
+    sha256 "1b09fa77e68369fbf6645ca893a17a968a6ae993b1db606a3b5051ba26fcf212" => :mojave
+    sha256 "db71a37915f37e6403b68f2adea77c88f2e5c150e29b544abc8eee2a71a95a4c" => :high_sierra
   end
 
   depends_on "go" => :build
