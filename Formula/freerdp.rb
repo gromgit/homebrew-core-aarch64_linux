@@ -1,8 +1,8 @@
 class Freerdp < Formula
   desc "X11 implementation of the Remote Desktop Protocol (RDP)"
   homepage "https://www.freerdp.com/"
-  url "https://github.com/FreeRDP/FreeRDP/archive/2.1.1.tar.gz"
-  sha256 "ce363a6578530cf508df802bb980a8dd49a874919bfa33b8c61d992ad0882bfb"
+  url "https://github.com/FreeRDP/FreeRDP/archive/2.1.2.tar.gz"
+  sha256 "9b4e49153808fa4ff149221f64957dfe6f2dcecd400e3e29979f8baf6712ed45"
 
   bottle do
     sha256 "9c6d91706f66e424f89403204b4639cb8b0babd8dd221ff9d0267fbed8061250" => :catalina
