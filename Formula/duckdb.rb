@@ -6,9 +6,9 @@ class Duckdb < Formula
 
   bottle do
     cellar :any
-    sha256 "1a617e4f694bef51e44fae866f61f15fd7c3b22d86ed8781575c949a7963ab2e" => :catalina
-    sha256 "360d21bfbd7860aa5f216ccf9dd985a18e40f6af8339f3bdbf4924cdc19fc1fa" => :mojave
-    sha256 "b43327397c06199a6b79c2e6e6fc794b63e5a1372b15ccc10e1a9ec54590c540" => :high_sierra
+    sha256 "622871609dace070f4c6a655cc3e5e99ec329d0715eb786d81d5adcf779fa041" => :catalina
+    sha256 "36ea2f500db65e752921cb0e673c4a50b98eb19647c62c7f440096570391a8e1" => :mojave
+    sha256 "efab87265b3c842ff01a6b5e84a734497f552426ad4479f4a6cae6922c3d0827" => :high_sierra
   end
 
   depends_on "cmake" => :build
