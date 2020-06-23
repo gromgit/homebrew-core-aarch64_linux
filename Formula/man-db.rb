@@ -1,9 +1,9 @@
 class ManDb < Formula
   desc "Unix documentation system"
   homepage "https://www.nongnu.org/man-db/"
-  url "https://download.savannah.gnu.org/releases/man-db/man-db-2.9.2.tar.xz"
-  mirror "https://download-mirror.savannah.gnu.org/releases/man-db/man-db-2.9.2.tar.xz"
-  sha256 "7b383f26c67525205f96a4a3bfb27993396992794adda6fe05ad565f369f047c"
+  url "https://download.savannah.gnu.org/releases/man-db/man-db-2.9.3.tar.xz"
+  mirror "https://download-mirror.savannah.gnu.org/releases/man-db/man-db-2.9.3.tar.xz"
+  sha256 "fa5aa11ab0692daf737e76947f45669225db310b2801a5911bceb7551c5597b8"
 
   bottle do
     sha256 "7e639bfe3df8a33f8ad5cd087699c072a2bb844abca7553292a2d15591399185" => :catalina
