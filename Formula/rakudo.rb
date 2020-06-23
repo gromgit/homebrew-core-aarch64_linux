@@ -5,9 +5,9 @@ class Rakudo < Formula
   sha256 "4cd8fe8afae3a2b561544c8e0dad5b4bc6cabbbfc2fdd17c63f5ea39dd46721a"
 
   bottle do
-    sha256 "3fd37f96d4819ede87e4a104c940a9b275f6afe56185004cdc602c96afdbce91" => :catalina
-    sha256 "6eca8c6adaf5acf45ad95ec3647c08e98170480468272d8c50c6818639e55a6f" => :mojave
-    sha256 "c084e199cb8d766a7f24cf00e2488e1fff604a5c6a7839fa9fceb48011802a03" => :high_sierra
+    sha256 "80870b47549bfbee7413bd31e6027c0f538e52572fa1cf0656371480d34016e7" => :catalina
+    sha256 "973ee2b4de49403c823c1ed47793cbb0ff7114efee3e457876313c4486cc4999" => :mojave
+    sha256 "d44bd6000cf8003aa86d001e374ed113f98b222469b7d421baa4e751f1bfe34e" => :high_sierra
   end
 
   depends_on "nqp"
