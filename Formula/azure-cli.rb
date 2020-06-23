@@ -3,9 +3,9 @@ class AzureCli < Formula
 
   desc "Microsoft Azure CLI 2.0"
   homepage "https://docs.microsoft.com/cli/azure/overview"
-  url "https://codeload.github.com/Azure/azure-cli/legacy.tar.gz/168e50e956111d460c74d6cd596edd7430009240"
-  version "2.7.0"
-  sha256 "b0976458b3fc2006567be84d5601035d1b9e29b4b12dd72a0430c3a80278a764"
+  url "https://codeload.github.com/Azure/azure-cli/legacy.tar.gz/95ebcc9c10b5d27015c9c63810c582dd6769b701"
+  version "2.8.0"
+  sha256 "d57746606ae27a0247bcc93cb1ce4ac6e13136cc9ce533a482db817889a5276d"
   head "https://github.com/Azure/azure-cli.git"
 
   bottle do
@@ -55,8 +55,8 @@ class AzureCli < Formula
   end
 
   resource "azure-core" do
-    url "https://files.pythonhosted.org/packages/b2/99/6522a2c1fb32a6c06a107abceab07f833884127770cf09b214c08e325dad/azure-core-1.5.0.zip"
-    sha256 "afa6a6ae577859392e1ed3acb024bf5bddeb1bbb67f3191c35c587505ff431a0"
+    url "https://files.pythonhosted.org/packages/94/f3/d633865d2b2dd743116e934371d75907e89966f2e5034d3a220c9d220369/azure-core-1.6.0.zip"
+    sha256 "d10b74e783cff90d56360e61162afdd22276d62dc9467e657ae866449eae7648"
   end
 
   resource "azure-cosmos" do
@@ -115,8 +115,8 @@ class AzureCli < Formula
   end
 
   resource "azure-mgmt-batch" do
-    url "https://files.pythonhosted.org/packages/7b/e5/4457999b46dc09512e7920c0f527838afc464f20afee4ea2b4cedf66e25a/azure-mgmt-batch-7.0.0.zip"
-    sha256 "16c5b652b439b1a0a20366558f5c06858a3052d50b16a470bb80cd30f97abca1"
+    url "https://files.pythonhosted.org/packages/a3/f8/a91baa48ef5097d89cf4c7381b76657931fe525fad4d912bd6ac62386ac6/azure-mgmt-batch-9.0.0.zip"
+    sha256 "03417eecfa1fac906e674cb1cb43ed7da27a96277277b091d7c389ba39f6c3fe"
   end
 
   resource "azure-mgmt-batchai" do
@@ -140,8 +140,8 @@ class AzureCli < Formula
   end
 
   resource "azure-mgmt-cognitiveservices" do
-    url "https://files.pythonhosted.org/packages/02/9c/747b7e7f5286a0498d99cc9445a6d96a87d52411db54193fc8703eb0b90c/azure-mgmt-cognitiveservices-5.0.0.zip"
-    sha256 "06245a7200bd1ed8a7a8ad3bce282011d6ba2faaae847f337cafd53d5d1efbd4"
+    url "https://files.pythonhosted.org/packages/e7/60/42010ab991a9e9ae7fb9f8fba883f7f9e0a51549eb4aea2ff757b74a9733/azure-mgmt-cognitiveservices-6.2.0.zip"
+    sha256 "93503507ba87c18fe24cd3dfcd54e6e69a4daf7636f38b7537e09cee9a4c13ce"
   end
 
   resource "azure-mgmt-compute" do
@@ -160,8 +160,8 @@ class AzureCli < Formula
   end
 
   resource "azure-mgmt-containerregistry" do
-    url "https://files.pythonhosted.org/packages/48/5c/0b3a22d81fbc1a938863ead22a1a1aec631eac663c604b1038e6c34125b0/azure-mgmt-containerregistry-3.0.0rc12.zip"
-    sha256 "228a75e570cd9f9fddb7a5e79504a0c07ad012959290a442de14f451ac11fc60"
+    url "https://files.pythonhosted.org/packages/5e/1e/37a7ac4416951c12322713b7c9aff3cf3eed97d93b96250ad2995a7d8ed2/azure-mgmt-containerregistry-3.0.0rc13.zip"
+    sha256 "9ff2e68f93f5772f63a0d3efbe11a4f87d7c3e163cd1b2930ccf6137d293b2c6"
   end
 
   resource "azure-mgmt-containerservice" do
@@ -220,8 +220,8 @@ class AzureCli < Formula
   end
 
   resource "azure-mgmt-eventhub" do
-    url "https://files.pythonhosted.org/packages/4b/f7/0b4f495af2368f4392c0450aa83576e59f6c49ca650cab299b5ddb52f98e/azure-mgmt-eventhub-3.0.0.zip"
-    sha256 "b7e77677d7cd8e075c4b4dd3c2c85d44f6adacd948ec49926e54b7119e8e8615"
+    url "https://files.pythonhosted.org/packages/44/6c/5cfde3068936b2faf584fe57a7ba191b590ab01e9b56321b96dceb1d7ebf/azure-mgmt-eventhub-4.0.0.zip"
+    sha256 "65223196cf132899656c2f9cb71a14c972d99e5ecd815ee050dae1072cb73ae2"
   end
 
   resource "azure-mgmt-hdinsight" do
@@ -230,8 +230,8 @@ class AzureCli < Formula
   end
 
   resource "azure-mgmt-imagebuilder" do
-    url "https://files.pythonhosted.org/packages/0d/b2/d16fe769e12170e01b015bbef16f4a09e32c60dff2ba2818bcd7f02f056b/azure-mgmt-imagebuilder-0.2.1.zip"
-    sha256 "7e5efd9f641764884cbb6e1521c8e7ff67c5ff85ed367ebe8623dbd289df9457"
+    url "https://files.pythonhosted.org/packages/25/37/63e5eca05f58b7d9d9f0525f389f1938afe0f593e4216679fb8af4a5bc6b/azure-mgmt-imagebuilder-0.4.0.zip"
+    sha256 "4c9291bf16b40b043637e5e4f15650f71418ac237393e62219cab478a7951733"
   end
 
   resource "azure-mgmt-iotcentral" do
@@ -360,8 +360,8 @@ class AzureCli < Formula
   end
 
   resource "azure-mgmt-resource" do
-    url "https://files.pythonhosted.org/packages/f7/27/f4ee7662fa0d5ac043d4e9daff5e8b0299a6a4f57d3b572a30da36e1b0e1/azure-mgmt-resource-9.0.0.zip"
-    sha256 "dc12f7998e2c1fd4088a8da5f02936c2985ceb7acbe994571c8b3778f26a7501"
+    url "https://files.pythonhosted.org/packages/cc/1b/bfe8d07b4ae62296aa91fbb828a7e2e0f932026ea7643faa54c680b4cf55/azure-mgmt-resource-10.0.0.zip"
+    sha256 "bd9a3938f5423741329436d2da09693845c2fad96c35fadbd7c5ae5213208345"
   end
 
   resource "azure-mgmt-search" do
@@ -370,8 +370,8 @@ class AzureCli < Formula
   end
 
   resource "azure-mgmt-security" do
-    url "https://files.pythonhosted.org/packages/30/14/191a5a9887eacb94eb314a6b4124e9b4d563c8736061edea8bb32ca158fb/azure-mgmt-security-0.1.0.zip"
-    sha256 "1d42ced0690d10ebe5f83bf20be835e1a424d81463e59857cc402f218e3164b1"
+    url "https://files.pythonhosted.org/packages/17/0b/2cbe5e7acde4d8bd234ebe9dff49dddaeb9a18ba369c6a56b81aabc77c33/azure-mgmt-security-0.4.1.zip"
+    sha256 "391c8df5400485049a6c19d50e536304c186bb64fd569eec0c6d01d20220ee21"
   end
 
   resource "azure-mgmt-servicebus" do
@@ -400,8 +400,8 @@ class AzureCli < Formula
   end
 
   resource "azure-mgmt-storage" do
-    url "https://files.pythonhosted.org/packages/24/46/4066efd8ca21d6bdb7b45540876a5558b8ca4100b770e8d3f69168e7ed71/azure-mgmt-storage-9.0.0.zip"
-    sha256 "74bea608b1e191aa3f1becc65426da8093d0e08a12c98447aea165b1552819a5"
+    url "https://files.pythonhosted.org/packages/c9/5c/be65bfd6ccae0da4fd5331ff3b3058150ddd71410733845d895ab51febf4/azure-mgmt-storage-11.0.0.zip"
+    sha256 "f9791c2a84eee0a55bbf757632a2a4d1e102db958e75422d5e0e7306041129b8"
   end
 
   resource "azure-mgmt-trafficmanager" do
@@ -480,8 +480,8 @@ class AzureCli < Formula
   end
 
   resource "importlib-metadata" do
-    url "https://files.pythonhosted.org/packages/b4/1b/baab42e3cd64c9d5caac25a9d6c054f8324cdc38975a44d600569f1f7158/importlib_metadata-1.6.0.tar.gz"
-    sha256 "34513a8a0c4962bc66d35b359558fd8a5e10cd472d37aec5f66858addef32c1e"
+    url "https://files.pythonhosted.org/packages/aa/9a/8483b77e2decd95963d7e34bc9bc91a26e71fd89b57d8cf978ca24747c7f/importlib_metadata-1.6.1.tar.gz"
+    sha256 "0505dd08068cfec00f53a74a0ad927676d7757da81b7436a6eefe4c7cf75c545"
   end
 
   resource "invoke" do
@@ -545,8 +545,8 @@ class AzureCli < Formula
   end
 
   resource "msrest" do
-    url "https://files.pythonhosted.org/packages/32/5d/d42d519a3943247e65ba48f6fef4c4ace6f336b003c47b14f2b4b6d198c0/msrest-0.6.14.tar.gz"
-    sha256 "f52f880a2145c075f436083ee9a274ddc54c62181e4c41c9ac11520fbae547e5"
+    url "https://files.pythonhosted.org/packages/20/f8/3866540838ddfe1d8e703f1c4fcd0e80e47e78bf79104b060e2b836bc1dc/msrest-0.6.16.tar.gz"
+    sha256 "214c5be98954cb45feb6a6a858a7ae6d41a664e80294b65db225bbaa33d9ca3c"
   end
 
   resource "msrestazure" do
