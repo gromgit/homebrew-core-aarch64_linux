@@ -1,8 +1,8 @@
 class Pdf2json < Formula
   desc "PDF to JSON and XML converter"
   homepage "https://github.com/flexpaper/pdf2json"
-  url "https://github.com/flexpaper/pdf2json/archive/0.70.tar.gz"
-  sha256 "65d7c273c3dc003470ee61a429274b3612a0ee995e75dc32ad8dbdc9d03fbad1"
+  url "https://github.com/flexpaper/pdf2json/archive/0.71.tar.gz"
+  sha256 "54878473a2afb568caf2da11d6804cabe0abe505da77584a3f8f52bcd37d9c55"
 
   bottle do
     cellar :any_skip_relocation
