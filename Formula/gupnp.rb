@@ -3,9 +3,8 @@ class Gupnp < Formula
 
   desc "Framework for creating UPnP devices and control points"
   homepage "https://wiki.gnome.org/Projects/GUPnP"
-  url "https://download.gnome.org/sources/gupnp/1.2/gupnp-1.2.2.tar.xz"
-  sha256 "9a80bd953e5c8772ad26b72f8da01cbe7241a113edd6084903f413ce751c9989"
-  revision 1
+  url "https://download.gnome.org/sources/gupnp/1.2/gupnp-1.2.3.tar.xz"
+  sha256 "d447e54d88e4a8fab84ad1766070e9208e21166fc7e2ce95df6e33e49e8d29b1"
 
   bottle do
     cellar :any
@@ -14,6 +13,7 @@ class Gupnp < Formula
     sha256 "01d9c2e45bbcd2c0c2fb1a1cc630020a87f95aee47226cff9859b561a8aabb57" => :high_sierra
   end
 
+  depends_on "docbook-xsl" => :build
   depends_on "gobject-introspection" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
@@ -26,6 +26,8 @@ class Gupnp < Formula
 
   def install
     mkdir "build" do
+      ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
+
       system "meson", *std_meson_args, ".."
       system "ninja"
       system "ninja", "install"
