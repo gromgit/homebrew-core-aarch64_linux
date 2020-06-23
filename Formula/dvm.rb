@@ -3,6 +3,7 @@ class Dvm < Formula
   homepage "https://github.com/howtowhale/dvm"
   url "https://github.com/howtowhale/dvm/archive/1.0.2.tar.gz"
   sha256 "eb98d15c92762b36748a6f5fc94c0f795bf993340a4923be0eb907a8c17c6acc"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
@@ -19,11 +20,20 @@ class Dvm < Formula
     (buildpath/"src/github.com/howtowhale/dvm").install buildpath.children
 
     cd "src/github.com/howtowhale/dvm" do
+      # Upstream release has a vendored dependency placed in the wrong path,
+      # so adjust its location and relevant import statement.
+      # Upstream acknowledged issue at https://github.com/howtowhale/dvm/issues/193
+      mkdir "vendor/code.cloudfoundry.org"
+      mv "vendor/github.com/pivotal-golang/archiver",
+         "vendor/code.cloudfoundry.org/archiver"
+      inreplace "dvm-helper/internal/downloader/downloader.go",
+                "github.com/pivotal-golang/archiver/extractor",
+                "code.cloudfoundry.org/archiver/extractor"
+
       system "make", "VERSION=#{version}", "UPGRADE_DISABLED=true"
       prefix.install "dvm.sh"
       bash_completion.install "bash_completion" => "dvm"
       (prefix/"dvm-helper").install "dvm-helper/dvm-helper"
-      prefix.install_metafiles
     end
   end
 
