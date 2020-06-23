@@ -6,9 +6,10 @@ class Atlantis < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5b243c7547d8677faf4e3d41c1161e9e9cad98daa9c4e95c2d7b4a89adf3701b" => :catalina
-    sha256 "37995792e2f0b45b7e7689d7708186f3db4d25a990742b8d79f7f3187bdda64b" => :mojave
-    sha256 "219925593413c8337ce48452590d67b302b6ad5da941b263dee69071596a03ae" => :high_sierra
+    rebuild 1
+    sha256 "8c0aefa951b91e25f8f056fff30b6db346a068f00d842fc3071753063156a012" => :catalina
+    sha256 "cf40282b89b9a69798283312bea51f14234b4d9e116780402d766da68c670c95" => :mojave
+    sha256 "6d089fb9b809612d0145a43d7fb8d991b6177c5791714a59764024eca13fe61a" => :high_sierra
   end
 
   depends_on "go" => :build
