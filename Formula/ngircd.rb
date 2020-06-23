@@ -6,10 +6,9 @@ class Ngircd < Formula
   sha256 "128441256c489f67a63c6d8459b97f0106959526ccd70b513eba2508dfbac651"
 
   bottle do
-    sha256 "19f2aae10f51901688ab282af2a5227d82c36ae4a3013661a56d823aae1c3868" => :catalina
-    sha256 "0fd70a8662655bd45398d69f5ea38304baa96b84bc44980ba4ad6eebb6246f24" => :mojave
-    sha256 "a85e43607f7e2a52fed2187508d1dbcf8dae25dae9e4704d58a76f3c751032a0" => :high_sierra
-    sha256 "48e83fcdd8462a77cd8855ff1ca69fe17e4f6796e465dc5a3784e4653f59db54" => :sierra
+    sha256 "ab560382241371099b6dd976be87d317c806ae26373d326e0bb3e3dd3fad0458" => :catalina
+    sha256 "b0cd1030229d21b7c8f7d100e26f83c4c201741f796d6df48c8ba628d2c69b41" => :mojave
+    sha256 "6c3ccfd94aa2ad7a24354ada84b40f34ee1891a3130cd0987f2e7139f0187b84" => :high_sierra
   end
 
   depends_on "libident"
