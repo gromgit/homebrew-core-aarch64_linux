@@ -6,6 +6,13 @@ class Heksa < Formula
       :revision => "54a68a2910a87b8b9cfcda28b8693e18dd9e2463"
   head "https://github.com/raspi/heksa.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "346f10b8cfc84fe37619e925372c27b7787beecd3d240a3f381fdca629da117e" => :catalina
+    sha256 "481e0b181ff88978df7804ff8f657821b7802a9c2fe3937bb949b723e55a4369" => :mojave
+    sha256 "cf17ed8f9f50e1c4c1864b8847e456bf6a93a89bb9bcb76416393effbcf4d441" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
