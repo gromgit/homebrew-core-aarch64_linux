@@ -13,29 +13,16 @@ class Terraform < Formula
   end
 
   depends_on "go@1.13" => :build
-  depends_on "gox" => :build
 
   conflicts_with "tfenv", :because => "tfenv symlinks terraform binaries"
 
   def install
-    ENV["GOPATH"] = buildpath
-    ENV.prepend_create_path "PATH", buildpath/"bin"
+    # v0.6.12 - source contains tests which fail if these environment variables are set locally.
+    ENV.delete "AWS_ACCESS_KEY"
+    ENV.delete "AWS_SECRET_KEY"
 
-    dir = buildpath/"src/github.com/hashicorp/terraform"
-    dir.install buildpath.children - [buildpath/".brew_home"]
-
-    cd dir do
-      # v0.6.12 - source contains tests which fail if these environment variables are set locally.
-      ENV.delete "AWS_ACCESS_KEY"
-      ENV.delete "AWS_SECRET_KEY"
-
-      ENV["XC_OS"] = "darwin"
-      ENV["XC_ARCH"] = "amd64"
-      system "make", "tools", "bin"
-
-      bin.install "pkg/darwin_amd64/terraform"
-      prefix.install_metafiles
-    end
+    ENV["CGO_ENABLED"] = "0"
+    system "go", "build", *std_go_args, "-ldflags", "-s -w", "-mod=vendor"
   end
 
   test do
