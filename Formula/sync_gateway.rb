@@ -1,6 +1,6 @@
 class SyncGateway < Formula
   desc "Make Couchbase Server a replication endpoint for Couchbase Lite"
-  homepage "https://docs.couchbase.com/sync-gateway"
+  homepage "https://docs.couchbase.com/sync-gateway/current/index.html"
   url "https://github.com/couchbase/sync_gateway.git",
       :tag      => "2.7.3",
       :revision => "33d352f97798e45360155b63c022e8a39485134e"
@@ -45,9 +45,14 @@ class SyncGateway < Formula
   end
 
   test do
-    pid = fork { exec "#{bin}/sync_gateway_ce" }
+    interface_port = free_port
+    admin_port = free_port
+    fork do
+      exec "#{bin}/sync_gateway_ce -interface :#{interface_port} -adminInterface 127.0.0.1:#{admin_port}"
+    end
     sleep 1
-    Process.kill("SIGINT", pid)
-    Process.wait(pid)
+
+    system "nc", "-z", "localhost", interface_port
+    system "nc", "-z", "localhost", admin_port
   end
 end
