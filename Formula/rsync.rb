@@ -8,9 +8,9 @@ class Rsync < Formula
 
   bottle do
     cellar :any
-    sha256 "0fe5b44bca80ba7fa3add41a736725a7f86fc60791157de5ec89dc93597dff09" => :catalina
-    sha256 "bba164a8807192941ff3e67e9c85edbe55359a482daa6841d5071dadf353448d" => :mojave
-    sha256 "457f95da0f300bfa4e18727afa6aa5d8487b699aabed8caa73e82c9bdf19e293" => :high_sierra
+    sha256 "21895f23aed9113a620917e2eb1245a0b0391a5ac60c015961244a32d87af9b5" => :catalina
+    sha256 "be472ad40b805c49164e72f8afaf08de36687431879549d107c8e9e8dc550ddc" => :mojave
+    sha256 "6cc76004fca133f99d8eb7818d827ea5ac7fac6485bade98d9b7a3b0e3443fd3" => :high_sierra
   end
 
   depends_on "lz4"
