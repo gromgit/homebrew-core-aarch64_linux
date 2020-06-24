@@ -5,14 +5,10 @@ class Lesstif < Formula
   sha256 "eb4aa38858c29a4a3bcf605cfe7d91ca41f4522d78d770f69721e6e3a4ecf7e3"
 
   bottle do
-    rebuild 1
-    sha256 "7f9c7fcc2d0313e6b9d2c9e73ddc2f6ee4e25f67f1e4dcd56135b8900e369398" => :catalina
-    sha256 "4c7d5c15896694afd346ed12b62b8bfc7a7241d0067238ce546838014fcfdf67" => :mojave
-    sha256 "1691f111917e5dcc96f5cc3faf77743d9ac135c16b4a1c2bf7c4f8e55cd26dbf" => :high_sierra
-    sha256 "d3c4ea1fe9c0e12a88f9a35dbdd4903d93b69bf89b570e9b1a0e15c8d1104275" => :sierra
-    sha256 "bc26ea0e27740c5b3a045b776737ff94ea0bc68b833fc013b92177511271bbcd" => :el_capitan
-    sha256 "a9c9a7fe8261ddbf4830655e6a1a3baa8849669064b990d04338c7bcfb57e6c3" => :yosemite
-    sha256 "b5650ec87b85ac2b36f8e9cb53a452af1ed28f939cf007b209b458773d0634a6" => :mavericks
+    rebuild 2
+    sha256 "c38e2d072aeade356f5bab6e974fbbeb910259c1fe9d2ed8c352f7b67ca5bd0c" => :catalina
+    sha256 "a7b26f9ad83bbca9c88de347bc96c616eee9c6d5f0a68caca19b4cffa1347def" => :mojave
+    sha256 "bb253ab1835a89928a7c9edb904416b75876cedd50f62647e2d6044fcb55f4f4" => :high_sierra
   end
 
   depends_on "freetype"
