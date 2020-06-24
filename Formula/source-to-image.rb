@@ -3,7 +3,8 @@ class SourceToImage < Formula
   homepage "https://github.com/openshift/source-to-image"
   url "https://github.com/openshift/source-to-image.git",
       :tag      => "v1.3.0",
-      :revision => "ecf5524df96eb4def4db8ef0969a9630e59ec890"
+      :revision => "eed2850f2187435ef5d83487e05bf3dc18622ceb"
+  revision 1
   head "https://github.com/openshift/source-to-image.git"
 
   bottle do
@@ -16,10 +17,6 @@ class SourceToImage < Formula
   depends_on "go" => :build
 
   def install
-    # Upstream issue from 28 Feb 2018 "Go 1.10 failure due to version comparison bug"
-    # See https://github.com/openshift/source-to-image/issues/851
-    inreplace "hack/common.sh", "go1.4", "go1.0"
-
     system "hack/build-go.sh"
     bin.install "_output/local/bin/darwin/amd64/s2i"
   end
