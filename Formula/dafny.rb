@@ -1,6 +1,6 @@
 class Dafny < Formula
   desc "Verification-aware programming language"
-  homepage "https://www.microsoft.com/en-us/research/project/dafny-a-language-and-program-verifier-for-functional-correctness"
+  homepage "https://github.com/dafny-lang/dafny/blob/master/README.md"
   url "https://github.com/dafny-lang/dafny/archive/v2.3.0.tar.gz"
   sha256 "ea7ae310282c922772a46a9a85e2b4213043283038b74d012047b5294687d168"
   revision 2
