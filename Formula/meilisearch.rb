@@ -6,9 +6,10 @@ class Meilisearch < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "15a4f4952a166718930be79d03d67ce7a643302265086e607f7dcfa77879f33a" => :catalina
-    sha256 "07226855122847ec49f275b33302b33d6fe1f659ccd948981d06bb0569e11fc6" => :mojave
-    sha256 "19228119252c8877ea55f918ef260296b05322eba02d22d9d21e269586a956cf" => :high_sierra
+    rebuild 1
+    sha256 "b43b2e290999218ff7bfbc079cf622ebe4280d67f182d87bc9830e5d6128b3e5" => :catalina
+    sha256 "8317859601b479c5d23067afadb3f933245d8fc5b67f46026e7a213f48a282de" => :mojave
+    sha256 "9c5923b55a92c6ca53a406b67778316d08dc28fbb0242ed079d2f9addc474acf" => :high_sierra
   end
 
   depends_on "rust" => :build
