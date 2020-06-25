@@ -37,7 +37,7 @@ class Hbase < Formula
     end
 
     resource("hadoop-lzo").stage do
-      # Fixed upstream: https://github.com/cloudera/hadoop-lzo/blob/master/build.xml#L235
+      # Fixed upstream: https://github.com/cloudera/hadoop-lzo/blob/HEAD/build.xml#L235
       inreplace "build.xml",
                 %r{(<class name="com.hadoop.compression.lzo.LzoDecompressor" />)},
                 "\\1\n<classpath refid=\"classpath\"/>"
