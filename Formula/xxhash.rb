@@ -6,9 +6,9 @@ class Xxhash < Formula
 
   bottle do
     cellar :any
-    sha256 "a1107115ab0c9389d8cb3d4a351b6b370ef31516aecf4d6970422ea681e5e163" => :catalina
-    sha256 "7e5c38f95c934c2f3fdd1cc80259289707e12ada5dead9cf834158f06e1408ec" => :mojave
-    sha256 "3a9cc7dcd1ddcb9c1ecc3d953bcaf4617086e3e126b19171c8854cc38c904bad" => :high_sierra
+    sha256 "4d4eddfac07b6120a21d489617ef7c365c116c94e29c51479d6ac4795b678063" => :catalina
+    sha256 "be9807ccd03b690c5dde0ed30fe5bfdc52dfebff05f9997b4a603a0c5173b3c9" => :mojave
+    sha256 "2a373f13868345da95bfa35078e0dc52942bf01bdb6b9d0a1cf84bb8ae001f77" => :high_sierra
   end
 
   def install
