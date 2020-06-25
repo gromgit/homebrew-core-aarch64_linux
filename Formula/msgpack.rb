@@ -19,7 +19,7 @@ class Msgpack < Formula
   end
 
   test do
-    # Reference: https://github.com/msgpack/msgpack-c/blob/master/QUICKSTART-C.md
+    # Reference: https://github.com/msgpack/msgpack-c/blob/HEAD/QUICKSTART-C.md
     (testpath/"test.c").write <<~EOS
       #include <msgpack.h>
       #include <stdio.h>
