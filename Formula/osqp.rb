@@ -49,7 +49,7 @@ class Osqp < Formula
       add_executable(osqp_demo_static osqp_demo.c)
       target_link_libraries(osqp_demo_static PRIVATE osqp::osqpstatic)
     EOS
-    # from https://github.com/oxfordcontrol/osqp/blob/master/tests/demo/test_demo.h
+    # from https://github.com/oxfordcontrol/osqp/blob/HEAD/tests/demo/test_demo.h
     (testpath/"osqp_demo.c").write <<~EOS
       #include <assert.h>
       #include <osqp.h>
