@@ -6,9 +6,9 @@ class Nspr < Formula
 
   bottle do
     cellar :any
-    sha256 "d1b37153ae32255e1c6a851c497f1d6a81b9580403e889d0a2d77266e5aaf54a" => :catalina
-    sha256 "4ea0a985bdca85cc08510a2a8e5f1aa2d295bcd0bc2fc048b174f9432c4eb8bc" => :mojave
-    sha256 "7d66be141d5cfd5bb1e62ebc7c6fef92a40f1cbd1cc596b1d2d014a356016184" => :high_sierra
+    sha256 "70c30f08abf5a0499dcbe9d97061bd2c48d25ffaff0d435e8d7eede589f4c046" => :catalina
+    sha256 "039c4d5ad25a611c6c62bd6542e1faa505a9fb4c4c43ac742b8ecaa947f85dd5" => :mojave
+    sha256 "d94d9687669abfc4f85f2a275c5ab7bbb0f3f49873d6939a2def529910182459" => :high_sierra
   end
 
   def install
