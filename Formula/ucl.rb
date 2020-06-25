@@ -25,7 +25,7 @@ class Ucl < Formula
   test do
     (testpath/"test.c").write <<~EOS
       // simplified version of
-      // https://github.com/korczis/ucl/blob/master/examples/simple.c
+      // https://github.com/korczis/ucl/blob/HEAD/examples/simple.c
       #include <stdio.h>
       #include <ucl/ucl.h>
       #include <ucl/uclconf.h>
