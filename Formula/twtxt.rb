@@ -86,7 +86,7 @@ class Twtxt < Formula
   end
 
   # If the test needs to be updated, more users can be found here:
-  # https://github.com/mdom/we-are-twtxt/blob/master/we-are-twtxt.txt
+  # https://github.com/mdom/we-are-twtxt/blob/HEAD/we-are-twtxt.txt
   test do
     ENV["LC_ALL"] = "en_US.UTF-8"
     ENV["LANG"] = "en_US.UTF-8"
