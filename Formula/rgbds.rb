@@ -20,7 +20,7 @@ class Rgbds < Formula
   end
 
   test do
-    # https://github.com/rednex/rgbds/blob/master/test/asm/assert-const.asm
+    # https://github.com/rednex/rgbds/blob/HEAD/test/asm/assert-const.asm
     (testpath/"source.asm").write <<~EOS
       SECTION "rgbasm passing asserts", ROM0[0]
         db 0
