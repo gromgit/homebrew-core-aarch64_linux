@@ -167,7 +167,7 @@ class Acmetool < Formula
     Language::Go.stage_deps resources, buildpath/"src"
 
     cd "cmd/acmetool" do
-      # https://github.com/hlandau/acme/blob/master/_doc/PACKAGING-PATHS.md
+      # https://github.com/hlandau/acme/blob/HEAD/_doc/PACKAGING-PATHS.md
       ldflags = %W[
         -X github.com/hlandau/acme/storage.RecommendedPath=#{var}/lib/acmetool
         -X github.com/hlandau/acme/hooks.DefaultPath=#{lib}/hooks
