@@ -49,7 +49,7 @@ class Libav < Formula
   end
 
   # Fix for image formats removed from libvpx
-  # https://github.com/shirkdog/hardenedbsd-ports/blob/master/multimedia/libav/files/patch-libavcodec_libvpx.c
+  # https://github.com/shirkdog/hardenedbsd-ports/blob/HEAD/multimedia/libav/files/patch-libavcodec_libvpx.c
   patch :DATA
 
   def install
