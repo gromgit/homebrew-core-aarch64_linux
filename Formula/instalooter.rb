@@ -8,9 +8,9 @@ class Instalooter < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "a705bb0cd6d62ff43a6df135e6ca1f6214ca8d99476cbc8a6bf7d57f6b5d91a6" => :catalina
-    sha256 "c01161a6e08b01f253db5cc49e4fbea576801d3d973b0d62c452a44e65c303d3" => :mojave
-    sha256 "76a8e3e9333e042658cea95eff6c59ddacc7907df3df21669a915a379f4e2d5e" => :high_sierra
+    sha256 "406c7f00325e2c57ea064d5e04356b6297a41576beb9a487c6d221d71d9cb47d" => :catalina
+    sha256 "e0186165b707d32f738f4be750e41b01c15ee5f61de04099c3a7e9ef1354a0ed" => :mojave
+    sha256 "8c3b6d15eb810012c5b14249ed2a04b423e40e1b7637292c2bdd000541da2bc2" => :high_sierra
   end
 
   depends_on "python@3.8"
