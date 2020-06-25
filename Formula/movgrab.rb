@@ -31,7 +31,7 @@ class Movgrab < Formula
     inreplace "libUseful-2.8/FileSystem.c", "result=-1", "result=-1;"
 
     # Later versions of libUseful handle the fact that setresuid is Linux-only, but
-    # this one does not. https://github.com/ColumPaget/Movgrab/blob/master/libUseful/Process.c#L95-L99
+    # this one does not. https://github.com/ColumPaget/Movgrab/blob/HEAD/libUseful/Process.c#L95-L99
     inreplace "libUseful-2.8/Process.c", "setresuid(uid,uid,uid)", "setreuid(uid,uid)"
 
     system "./configure", "--prefix=#{prefix}", "--disable-debug", "--disable-dependency-tracking", "--enable-ssl"
