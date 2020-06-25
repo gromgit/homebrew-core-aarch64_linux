@@ -1,9 +1,8 @@
 class Embree < Formula
   desc "High-performance ray tracing kernels"
   homepage "https://embree.github.io/"
-  url "https://github.com/embree/embree/archive/v3.10.0.tar.gz"
-  sha256 "f1f7237360165fb8859bf71ee5dd8caec1fe02d4d2f49e89c11d250afa067aff"
-  revision 1
+  url "https://github.com/embree/embree/archive/v3.11.0.tar.gz"
+  sha256 "2ccc365c00af4389aecc928135270aba7488e761c09d7ebbf1bf3e62731b147d"
   head "https://github.com/embree/embree.git"
 
   bottle do
