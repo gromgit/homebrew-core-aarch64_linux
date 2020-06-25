@@ -1,8 +1,8 @@
 class Ejdb < Formula
   desc "Embeddable JSON Database engine C11 library"
   homepage "https://ejdb.org"
-  url "https://github.com/Softmotions/ejdb/archive/v2.0.49.tar.gz"
-  sha256 "850ade8319a72caf5e361118e45de8de5fefcea8f7c27badb177e0eee648dcb6"
+  url "https://github.com/Softmotions/ejdb/archive/v2.0.50.tar.gz"
+  sha256 "cface2f4d77545479922177d87e19848530a46b2937527d2e9f68562e4a2cde0"
   head "https://github.com/Softmotions/ejdb.git"
 
   bottle do
