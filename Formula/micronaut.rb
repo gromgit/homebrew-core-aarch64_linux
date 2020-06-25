@@ -1,16 +1,14 @@
 class Micronaut < Formula
   desc "Modern JVM-based framework for building modular microservices"
   homepage "https://micronaut.io/"
-  url "https://github.com/micronaut-projects/micronaut-core/releases/download/v1.3.6/micronaut-1.3.6.zip"
-  sha256 "271a5af14f87e78ec8c72cfd09d04c50c96826532a5496bd9651a2775815693f"
+  url "https://github.com/micronaut-projects/micronaut-starter/archive/v2.0.0.RC1.tar.gz"
+  sha256 "91dc71b200c598a91b95a20792dcc3f3cb160b8e169b581f6b98689dc713acad"
 
-  bottle :unneeded
-
+  depends_on "gradle" => :build
   depends_on "openjdk"
 
   def install
-    rm_f Dir["bin/*.bat"]
-    libexec.install %W[bin media cli-#{version}.jar]
+    system "gradle", "build"
     (bin/"mn").write_env_script libexec/"bin/mn", :JAVA_HOME => "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
   end
 
