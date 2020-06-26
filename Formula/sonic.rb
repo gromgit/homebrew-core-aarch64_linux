@@ -4,6 +4,13 @@ class Sonic < Formula
   url "https://github.com/valeriansaliou/sonic/archive/v1.2.4.tar.gz"
   sha256 "290da969d39260abe5772fc7f084d256a8c0a53c702fe9eb44593d43a179b9d1"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "084a2a6ae18232ddcfdbe2a5a28dee53feff5876f1b5c70513cab74956f5fda0" => :catalina
+    sha256 "c844ce9bf1a10f0483ef03e8a29d853d200ddf605829418c7246832701695322" => :mojave
+    sha256 "72b44c6fd48e1fd331b028a42bb66c030c28f71c09cf9662a987cd021731669a" => :high_sierra
+  end
+
   depends_on "rust" => :build
 
   def install
