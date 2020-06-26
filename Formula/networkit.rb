@@ -7,6 +7,12 @@ class Networkit < Formula
       :tag      => "7.0",
       :revision => "d8e952f1e4d5e2758e4744e7c6ea7429a59c7cdf"
 
+  bottle do
+    sha256 "6c31d49396ef373700c7c852fb9a0df5793fedb882b8b32fb5149bfc8c4bcffe" => :catalina
+    sha256 "53fcb186c2e3b629a6edbe33f9ceff4cb2fefed36f21c721f6273d75e7fb2af2" => :mojave
+    sha256 "fe03e0e1716b223d4a0319a36e39c7391477454203fcc3a0a65f5684fce5cf62" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "cython" => :build
   depends_on "libnetworkit"
