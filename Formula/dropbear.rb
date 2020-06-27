@@ -6,9 +6,9 @@ class Dropbear < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "4d01e165cf0ae95e4cbab848383505099d9170c724572516186415b662e0a0a0" => :catalina
-    sha256 "9722249d984de8c41078036eed5b3b82a4d30a0f232ba5d38c44a535340b45c7" => :mojave
-    sha256 "bcdab71d6cf8b8d9e0ca4d4c09e9468311edb7ae52455909f094ea6e8beebada" => :high_sierra
+    sha256 "50a692b78c1958e54c5d5654cebc76c35df05f85d9b5d214caa1a95547f7a90d" => :catalina
+    sha256 "8586e9012826a288865fab45cc08a0445fdee283680a24e2253f9854051a3510" => :mojave
+    sha256 "371fd2eef7a59d0bf6fb8a35ce0f03f269af567e1ad31d5111be1cb846c93b6a" => :high_sierra
   end
 
   head do
