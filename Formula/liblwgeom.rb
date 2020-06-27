@@ -7,9 +7,9 @@ class Liblwgeom < Formula
 
   bottle do
     cellar :any
-    sha256 "2fa994168e7e6080ad8dfa236379ba87a3e5dcebd9f3870224220277d50a90c3" => :catalina
-    sha256 "2566c5dffdb062c5c44142b1ec0a6e7b076789fde0a8435b059ed7403a6c0c4d" => :mojave
-    sha256 "a09336c7545767fa94e6733acfe07b4473915d5603d4e6a629bb79f6345489a6" => :high_sierra
+    sha256 "f3b78efd42b006412552ed9ee5ba052a6ab830d26f4076ea9dfe8213a267e54f" => :catalina
+    sha256 "a103205f3d0034886edca7d456f56184fb209b2878ff5f31351172d7dae6b77c" => :mojave
+    sha256 "fb2c01c298317d9705c3a81b223ebef6c391351135c66359fe7a97f6868d7fa5" => :high_sierra
   end
 
   keg_only "conflicts with PostGIS, which also installs liblwgeom.dylib"
