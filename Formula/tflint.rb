@@ -7,9 +7,9 @@ class Tflint < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9d5e8efdbb9e0d28d136e4849bee70e53f00e108b2673bc1f41e872ef3b1f678" => :catalina
-    sha256 "ad701d55b533c834fd6804457ed0d46d297e66c32f0c11cd6a4e42183c09b65a" => :mojave
-    sha256 "f72870e3a3f2bc9b05c66700b2311bdf029ebf1ac71200c931661942fef8a170" => :high_sierra
+    sha256 "e8418093a3b01343484b145321c0f88dcea704b4755433a16918b30c37036080" => :catalina
+    sha256 "81e76a5716c6a32316c45496cad502e20bdc7adc77fe7b175057ad0a3b87f2c5" => :mojave
+    sha256 "71703bb43d3a7b2f3e798a07a8494e30cc06b3cb533b41e01c8c6b36781338b2" => :high_sierra
   end
 
   depends_on "go" => :build
