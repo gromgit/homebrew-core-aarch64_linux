@@ -1,8 +1,8 @@
 class Jobber < Formula
   desc "Alternative to cron, with better status-reporting and error-handling"
   homepage "https://dshearer.github.io/jobber/"
-  url "https://github.com/dshearer/jobber/archive/v1.4.3.tar.gz"
-  sha256 "14efd9e088e4b3e1e4018fb8cd3161cc43da7941261b31c3e90d630545b305db"
+  url "https://github.com/dshearer/jobber/archive/v1.4.4.tar.gz"
+  sha256 "fd88a217a413c5218316664fab5510ace941f4fdb68dcb5428385ff09c68dcc2"
   head "https://github.com/dshearer/jobber.git"
 
   bottle do
