@@ -6,11 +6,9 @@ class Confuse < Formula
 
   bottle do
     cellar :any
-    sha256 "349c7123642a12a49e387edaf7b8548d0bfa43a459960bf086e82d5b8b148b98" => :catalina
-    sha256 "24e05e5b2e29feab1222d9087e064349131023b97b3e5b8f847c8babe968cea2" => :mojave
-    sha256 "6e5f40a3ca684e8aeef00fe121a0742214a434d23ed45810d0b7b6c1e5ff65ac" => :high_sierra
-    sha256 "8a34f5dee392fb5c572df1e636821b1b6af62a197aca7a2de0c49b4f55bb2874" => :sierra
-    sha256 "8547a54095de338b895476e8fc2cfabc27ed9039996f37bdcb48040759c67f79" => :el_capitan
+    sha256 "13ad01ca606e746ab7f6bcd42b0da08abdcc29ccaaa9e8106f9d28bfe96bffd7" => :catalina
+    sha256 "d6038fe2a7fcfea4ba6e3c29174cb6201ce7d05e22ef4c76b881b9f12dabcff6" => :mojave
+    sha256 "371f699488d7e4459251c55e4ef4d9087b08e07b4fedfc553476bc30070ca9c1" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
