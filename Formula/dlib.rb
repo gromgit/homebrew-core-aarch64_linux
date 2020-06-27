@@ -7,10 +7,10 @@ class Dlib < Formula
   revision 1
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "09f8fd001b126737e4389e4700cbd2c5954a5f14f1dc3608ef467e5ca89539d8" => :catalina
-    sha256 "9994a81f7d7d595faebd25b57a8864ba50bb7428e01be8e3462670dd26041a72" => :mojave
-    sha256 "509e70a5a60b1752df38f1ebb9d9fc747bcc7c1738c8c8616246c4f22bb65d99" => :high_sierra
+    cellar :any
+    sha256 "72c4cead9806e3416452ec0acb918f36428b97368189a85f3074864dec0f7229" => :catalina
+    sha256 "7f41f22f65075ff180b306d6e34156d3197a3201cbe862d2fa2ad01d0a70db1d" => :mojave
+    sha256 "f7b967654cd3a85d235ca6406f94fa0ee03be8bd8f4e7a77ab306e77c7864ecf" => :high_sierra
   end
 
   depends_on "cmake" => :build
