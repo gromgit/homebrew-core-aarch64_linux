@@ -9,6 +9,13 @@ class Po4a < Formula
   sha256 "a906fd82a6cc3a8898c1fe55d14076f3376fa6879ce9b1828b8b125e2dbe495b"
   head "https://github.com/mquinson/po4a.git"
 
+  bottle do
+    cellar :any
+    sha256 "62cd7a07c3f5bf0560672bafa0727c5b858f1b9ddfc3ee32a3cb72b6abb8a008" => :catalina
+    sha256 "56ddf8fef92fcc1ec039a0cdd2bd5c7b748e11b34fdcc265af0a20094cd99309" => :mojave
+    sha256 "3f77c12ae326c81ad64a5a1cdba22822abc551aaaa3bdc19338e706f7d40224b" => :high_sierra
+  end
+
   depends_on "docbook-xsl" => :build
   depends_on "gettext"
 
