@@ -17,8 +17,8 @@ class Libosmium < Formula
   uses_from_macos "expat"
 
   resource "protozero" do
-    url "https://github.com/mapbox/protozero/archive/v1.6.8.tar.gz"
-    sha256 "019a0f3789ad29d7e717cf2e0a7475b36dc180508867fb47e8c519885b431706"
+    url "https://github.com/mapbox/protozero/archive/v1.7.0.tar.gz"
+    sha256 "beffbdfab060854fd770178a8db9c028b5b6ee4a059a2fed82c46390a85f3f31"
   end
 
   def install
