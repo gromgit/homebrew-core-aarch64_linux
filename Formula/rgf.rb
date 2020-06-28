@@ -4,6 +4,13 @@ class Rgf < Formula
   url "https://github.com/RGF-team/rgf/archive/3.8.0.tar.gz"
   sha256 "f21dce9b877bf802a5699ce58b1b87346337d3be838ddfe78b18cfec45813af7"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "472e412b8f6af779fb7764695a5bc621bc6b9b4c2a2c3cd238944e98e8eb7d41" => :catalina
+    sha256 "768ae58c3d372fdee93dd60893b83fe626be76e25e6ebb099e666e90e1bcfa21" => :mojave
+    sha256 "5091b77f8e7323e7518d42ad0cbe27b0328f24c6931ed3a5e5fd85fa4828d294" => :high_sierra
+  end
+
   depends_on "cmake" => :build
 
   def install
