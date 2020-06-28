@@ -7,10 +7,9 @@ class Muparser < Formula
 
   bottle do
     cellar :any
-    sha256 "2a87b69702d3acb7f1e97cb090c891189465c8dc3692714361057dd8e586c4de" => :catalina
-    sha256 "c0feb51e0b10602b323d46f49d898ebb4cb36e00dcee42963d61b6c7ca27c23a" => :mojave
-    sha256 "611da2016012d77dbe1e5a9c85872cc8f8de23967b019ec039177b49fad2a0d1" => :high_sierra
-    sha256 "d5d3fd87e54d300578836ed61e066ef08b665050d7986e46ed6995eeee819088" => :sierra
+    sha256 "20da2f5a649d58f95eedc5a7aed844a818993efcf2fa9d54d46b2dc8e3822c12" => :catalina
+    sha256 "a6f9fa4ce3f683cc0799887200f1e38db042541a6efe45eaf991ba8b38d8b90e" => :mojave
+    sha256 "bdbf31b17693b892f6be038d84e0b06707d517562d9eac62158612162555aa4e" => :high_sierra
   end
 
   depends_on "cmake" => :build
