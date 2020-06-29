@@ -3,7 +3,7 @@ class Gdl < Formula
   homepage "https://developer.gnome.org/gdl/"
   url "https://download.gnome.org/sources/gdl/3.34/gdl-3.34.0.tar.xz"
   sha256 "858b30f0cdce4c4cb3e8365a7d54ce57c388beff38ea583be5449bc78dda8d02"
-  revision 1
+  revision 2
 
   bottle do
     sha256 "72213f48c641e747ee4e5f57d99f5f6b58281def3979fd9bbd4b10d43fac94f1" => :catalina
