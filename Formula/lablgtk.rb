@@ -6,9 +6,9 @@ class Lablgtk < Formula
 
   bottle do
     cellar :any
-    sha256 "7b434a2c4a888b4dee7e98f6da29c5044cc464bf7be0b34877028cfd1d622c29" => :catalina
-    sha256 "3f24847817551482c9bafb940a313fbb8280c0f8ce2cf9ac5f725ca7b26c6c5c" => :mojave
-    sha256 "44f35afe66045382d61895a198f3353ae7b137430b8dd726e37e1ac6a8a20620" => :high_sierra
+    sha256 "5b78b8453ba24346aa344c059f2fecf115818e84c61d688164d423de5b0351be" => :catalina
+    sha256 "2e0cfbc7bbb653c2f757de7847712a0fb334f404225f1c1836266ae67c253844" => :mojave
+    sha256 "1d8a6f6da14b92e38b4fe9c999c43ae05ee3d355c58d77ef6ad04161004a7880" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
