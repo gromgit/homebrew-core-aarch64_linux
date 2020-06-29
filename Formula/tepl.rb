@@ -3,6 +3,7 @@ class Tepl < Formula
   homepage "https://wiki.gnome.org/Projects/Tepl"
   url "https://download.gnome.org/sources/tepl/4.4/tepl-4.4.0.tar.xz"
   sha256 "e6f6673a8a27e8f280725db8fbacec79b20676ae0558755239d15a9808faa256"
+  revision 1
 
   bottle do
     sha256 "44584ce28b80e483952c57dbde17254e651ee4b4a52ab544d12ff9ae7a0dd8f0" => :catalina
