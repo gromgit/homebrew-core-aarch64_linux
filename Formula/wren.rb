@@ -4,6 +4,13 @@ class Wren < Formula
   url "https://github.com/wren-lang/wren/archive/0.3.0.tar.gz"
   sha256 "c566422b52a18693f57b15ae4c9459604e426ea64eddb5fbf2844d8781aa4eb7"
 
+  bottle do
+    cellar :any
+    sha256 "d1ca917b1d503b80d73e2b2d65d07f658737cfacd4755bd4c7fe7419a4a70520" => :catalina
+    sha256 "c8908d9c6a3f6ec3f80c6f384b3dbff5855639790a850fde4a7eea945ce5411a" => :mojave
+    sha256 "8128fe4bbe34c39e9069ca5b03714361508b1c76c241080f53bef7bb434b4886" => :high_sierra
+  end
+
   def install
     cd "projects/make.mac" do
       system "make"
