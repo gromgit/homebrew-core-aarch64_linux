@@ -3,7 +3,7 @@ class Gtksourceview3 < Formula
   homepage "https://projects.gnome.org/gtksourceview/"
   url "https://download.gnome.org/sources/gtksourceview/3.24/gtksourceview-3.24.11.tar.xz"
   sha256 "691b074a37b2a307f7f48edc5b8c7afa7301709be56378ccf9cc9735909077fd"
-  revision 2
+  revision 3
 
   bottle do
     sha256 "ce6588f731be85d7c5ed37e7289e51b2fb36f11d8a737401e0fcc54467beabc4" => :catalina
