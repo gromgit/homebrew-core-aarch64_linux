@@ -5,6 +5,13 @@ class Uptoc < Formula
       :tag      => "v1.4.3",
       :revision => "30266b490379c816fc08ca3670fd96808214b24c"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "6133ca9ca353edec73753c155c22bfc2757eecf8ae735e178f604fdb6e06a313" => :catalina
+    sha256 "01ebd4051546e2834975cd9ca921695a5deed06407ef4009e3b6e0c59dffc5ea" => :mojave
+    sha256 "8067fc0ce3bc47e786ad0476c477c34cda3dfdf1a10228aae699ee5afd9f3d10" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
