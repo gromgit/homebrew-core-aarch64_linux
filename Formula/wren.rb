@@ -6,9 +6,10 @@ class Wren < Formula
 
   bottle do
     cellar :any
-    sha256 "d1ca917b1d503b80d73e2b2d65d07f658737cfacd4755bd4c7fe7419a4a70520" => :catalina
-    sha256 "c8908d9c6a3f6ec3f80c6f384b3dbff5855639790a850fde4a7eea945ce5411a" => :mojave
-    sha256 "8128fe4bbe34c39e9069ca5b03714361508b1c76c241080f53bef7bb434b4886" => :high_sierra
+    rebuild 1
+    sha256 "21bb30d077f3de93293d6e6f3c41e8f923e6de7d8d04df2f48c7378f76b3d16f" => :catalina
+    sha256 "d3837f28ed556d33753beb658f22b197f0afdb2aac3b30de26b2859397123d51" => :mojave
+    sha256 "529a384d6d1665dd269ef7b6e8ea61f1edccddd5478ce82ec30839346af3d3b5" => :high_sierra
   end
 
   def install
