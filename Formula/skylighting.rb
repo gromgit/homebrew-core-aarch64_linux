@@ -5,6 +5,13 @@ class Skylighting < Formula
   sha256 "c77298809f7301b23bf2e8d479fde6be493bec42c36efce87ef37ac3bc27f112"
   head "https://github.com/jgm/skylighting.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "ad47fed610330a0acdb8c452bae67188e7d6fe7c480bf77d009134767cdda8d2" => :catalina
+    sha256 "5e42120c8f8a483d79f874f34d75173b94589bf202d694551af4ab3579f31524" => :mojave
+    sha256 "d2d99c49b0aaea3c3d4cbfc672bb2ea9de65336b6eb696f59e6edc03cb962184" => :high_sierra
+  end
+
   depends_on "cabal-install" => :build
   depends_on "ghc@8.8" => :build
 
