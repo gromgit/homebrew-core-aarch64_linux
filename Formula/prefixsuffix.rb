@@ -3,7 +3,7 @@ class Prefixsuffix < Formula
   homepage "https://github.com/murraycu/prefixsuffix"
   url "https://download.gnome.org/sources/prefixsuffix/0.6/prefixsuffix-0.6.9.tar.xz"
   sha256 "fc3202bddf2ebbb93ffd31fc2a079cfc05957e4bf219535f26e6d8784d859e9b"
-  revision 4
+  revision 5
 
   bottle do
     sha256 "48603e67c0d43035c166ba203fd9f615ba35280f06f8827b98597da67f4d2c62" => :catalina
