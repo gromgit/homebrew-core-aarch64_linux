@@ -3,6 +3,7 @@ class SimpleScan < Formula
   homepage "https://gitlab.gnome.org/GNOME/simple-scan"
   url "https://download.gnome.org/sources/simple-scan/3.36/simple-scan-3.36.3.tar.xz"
   sha256 "7083beab8cb8640225938cda76190abca91093d6960d555505b23930b13c5f3f"
+  revision 1
 
   bottle do
     sha256 "db3cf85d32cf035c1f7daa678fe13eb15660186393c344e82c465d67a60108b3" => :catalina
