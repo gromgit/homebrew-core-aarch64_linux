@@ -8,6 +8,13 @@ class Bagit < Formula
   version_scheme 1
   head "https://github.com/LibraryOfCongress/bagit-python.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "e0be67c1d5a4b305daacc9589d5230ecebc106ccbd74ad668ce5b10d4a600039" => :catalina
+    sha256 "94a987817d26843f859a1f238b6f943576bc2a2a8f36c0f01c5309c4d2cecf02" => :mojave
+    sha256 "8b4295b73d506186e90b656331c1fc653ae52dd3be666b7f2695259b040b0a0e" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   def install
