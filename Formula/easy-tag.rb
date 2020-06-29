@@ -3,7 +3,7 @@ class EasyTag < Formula
   homepage "https://projects.gnome.org/easytag"
   url "https://download.gnome.org//sources/easytag/2.4/easytag-2.4.3.tar.xz"
   sha256 "fc51ee92a705e3c5979dff1655f7496effb68b98f1ada0547e8cbbc033b67dd5"
-  revision 3
+  revision 4
 
   bottle do
     sha256 "24cb5501265cc7bb90a83d648dfb6f13319b9cfdcd6df378947ee6c0729a58d1" => :catalina
