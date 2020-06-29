@@ -3,7 +3,7 @@ class Gucharmap < Formula
   homepage "https://wiki.gnome.org/Apps/Gucharmap"
   url "https://download.gnome.org/sources/gucharmap/12.0/gucharmap-12.0.1.tar.xz"
   sha256 "39de8aad9d7f0af33c29db1a89f645e76dad2fce00d1a0f7c8a689252a2c2155"
-  revision 2
+  revision 3
 
   bottle do
     sha256 "98e3e4ac2af7d252daffbf1fe3d7636f3aac94b602bca787b33fcf7a6f527324" => :catalina
