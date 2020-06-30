@@ -12,6 +12,8 @@ class PythonAT38 < Formula
     sha256 "d12c7edef5f2ab07ab7b685afb6cc083b42f45b71483311bc1a8198fef16b482" => :high_sierra
   end
 
+  # setuptools remembers the build flags python is built with and uses them to
+  # build packages later. Xcode-only systems need different flags.
   pour_bottle? do
     reason <<~EOS
       The bottle needs the Apple Command Line Tools to be installed.
@@ -59,9 +61,6 @@ class PythonAT38 < Formula
     url "https://github.com/python/cpython/commit/8ea6353.patch?full_index=1"
     sha256 "c47680c85f201f5830bf71741f09ece031b99386040f3c70b20190b4c47fb81d"
   end
-
-  # setuptools remembers the build flags python is built with and uses them to
-  # build packages later. Xcode-only systems need different flags.
 
   def install
     # Unset these so that installing pip and setuptools puts them where we want
