@@ -68,6 +68,7 @@ class Guile < Formula
   def post_install
     # Create directories so installed modules can create links inside.
     (HOMEBREW_PREFIX/"lib/guile/3.0/site-ccache").mkpath
+    (HOMEBREW_PREFIX/"lib/guile/3.0/extensions").mkpath
     (HOMEBREW_PREFIX/"share/guile/site/3.0").mkpath
   end
 
@@ -76,10 +77,12 @@ class Guile < Formula
       Guile libraries can now be installed here:
           Source files: #{HOMEBREW_PREFIX}/share/guile/site/3.0
         Compiled files: #{HOMEBREW_PREFIX}/lib/guile/3.0/site-ccache
+            Extensions: #{HOMEBREW_PREFIX}/lib/guile/3.0/extensions
 
       Add the following to your .bashrc or equivalent:
         export GUILE_LOAD_PATH="#{HOMEBREW_PREFIX}/share/guile/site/3.0"
         export GUILE_LOAD_COMPILED_PATH="#{HOMEBREW_PREFIX}/lib/guile/3.0/site-ccache"
+        export GUILE_SYSTEM_EXTENSIONS_PATH="#{HOMEBREW_PREFIX}/lib/guile/3.0/extensions"
     EOS
   end
 
