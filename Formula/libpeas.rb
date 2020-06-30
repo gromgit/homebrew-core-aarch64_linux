@@ -3,7 +3,7 @@ class Libpeas < Formula
   homepage "https://developer.gnome.org/libpeas/stable/"
   url "https://download.gnome.org/sources/libpeas/1.26/libpeas-1.26.0.tar.xz"
   sha256 "a976d77e20496479a8e955e6a38fb0e5c5de89cf64d9f44e75c2213ee14f7376"
-  revision 1
+  revision 2
 
   bottle do
     sha256 "651336617036378ee99c5c7115a03d3f77c08b8f6bd6d58af3b8ac942663a70f" => :catalina
