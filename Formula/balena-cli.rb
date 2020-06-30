@@ -3,9 +3,9 @@ require "language/node"
 class BalenaCli < Formula
   desc "The official balena CLI tool"
   homepage "https://www.balena.io/docs/reference/cli/"
-  # Frequent upstream releases, do not update more than once a week
-  url "https://registry.npmjs.org/balena-cli/-/balena-cli-12.1.16.tgz"
-  sha256 "9d3819901b58c4dfd2d61095f108a81d72d496cc770de59d1ca67c411a9337cb"
+  # balena-cli should only be updated every 10 releases on multiples of 10
+  url "https://registry.npmjs.org/balena-cli/-/balena-cli-12.3.0.tgz"
+  sha256 "9457e671e3bbeb114b6abfdf4323848a5fd1c4e9616fd8865079dd5bc93594c8"
 
   bottle do
     sha256 "f70852ef533bd566f3c330ac77e971a5898b24952b8233879884c99f0d424770" => :catalina
