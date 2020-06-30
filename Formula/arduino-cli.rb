@@ -4,6 +4,7 @@ class ArduinoCli < Formula
   url "https://github.com/arduino/arduino-cli.git",
      :tag      => "0.11.0",
      :revision => "0296f4df116385f868b67c5ffa7393936c3345c9"
+  revision 1
   head "https://github.com/arduino/arduino-cli.git"
 
   bottle do
@@ -22,7 +23,7 @@ class ArduinoCli < Formula
       -X github.com/arduino/arduino-cli/version.versionString=#{version}
       -X github.com/arduino/arduino-cli/version.commit=#{commit}
     ]
-    system "go", "build", *std_go_args, "-ldflags", ldflags
+    system "go", "build", *std_go_args, "-ldflags", ldflags.join(" ")
   end
 
   test do
