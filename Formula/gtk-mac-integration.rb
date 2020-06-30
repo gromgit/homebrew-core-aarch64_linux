@@ -3,7 +3,7 @@ class GtkMacIntegration < Formula
   homepage "https://wiki.gnome.org/Projects/GTK+/OSX/Integration"
   url "https://download.gnome.org/sources/gtk-mac-integration/2.1/gtk-mac-integration-2.1.3.tar.xz"
   sha256 "d5f72302daad1f517932194d72967a32e72ed8177cfa38aaf64f0a80564ce454"
-  revision 3
+  revision 4
 
   bottle do
     sha256 "45d864e4a3ced0213ddbc6f445d8693e03b4b4e94b3fe265b154bbb10173973e" => :catalina
