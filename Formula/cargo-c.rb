@@ -1,8 +1,8 @@
 class CargoC < Formula
   desc "Helper program to build and install c-like libraries"
   homepage "https://github.com/lu-zero/cargo-c"
-  url "https://github.com/lu-zero/cargo-c/archive/v0.6.7.tar.gz"
-  sha256 "872f5e1eb34e807e57096f5ea20b57c95cc40ab95fe938faa1ca915c68e73cc9"
+  url "https://github.com/lu-zero/cargo-c/archive/v0.6.8.tar.gz"
+  sha256 "ca8cb5e08b0ba5b6eccea1481854829e1b411ebb9885be891a897c27b5a76cba"
 
   bottle do
     cellar :any
