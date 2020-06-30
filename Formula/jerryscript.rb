@@ -5,6 +5,13 @@ class Jerryscript < Formula
   sha256 "75f039f2e7eb55e3ce5d48fd6f9c4e8ec643a94654070125a6d76a906218e0fa"
   head "https://github.com/jerryscript-project/jerryscript.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "30cce6deddb3cd879374dd6e80fc0a7ec7fcf32aa5b940713c60ee520b9b030a" => :catalina
+    sha256 "aecaf8cb9cc69ed2ac8694691f3f8b40b16fe72ce30f1a571244aa9cbe0c0591" => :mojave
+    sha256 "8c9890bfc739d8903d493316d3d1e258f6883d15115d247a8493aa259823cf47" => :high_sierra
+  end
+
   depends_on "cmake" => :build
 
   def install
