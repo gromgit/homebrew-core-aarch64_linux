@@ -6,19 +6,12 @@ class PythonAT38 < Formula
 
   # Remove for > 3.8.3
   # Upstream commit from 2020-06-25 "Support macOS 11 when building"
-  patch do
-    url "https://github.com/python/cpython/commit/8ea6353.patch?full_index=1"
-    sha256 "c47680c85f201f5830bf71741f09ece031b99386040f3c70b20190b4c47fb81d"
-  end
-
   bottle do
     sha256 "67cceb372f3b0f45ff90beb70d6e92ce1416fdd0b3df4df95643fa21451b4fec" => :catalina
     sha256 "6173014910a8902f0601a1b9e1c55bea85d25193bd64180f363e9f37c2d23244" => :mojave
     sha256 "d12c7edef5f2ab07ab7b685afb6cc083b42f45b71483311bc1a8198fef16b482" => :high_sierra
   end
 
-  # setuptools remembers the build flags python is built with and uses them to
-  # build packages later. Xcode-only systems need different flags.
   pour_bottle? do
     reason <<~EOS
       The bottle needs the Apple Command Line Tools to be installed.
@@ -61,6 +54,14 @@ class PythonAT38 < Formula
     url "https://files.pythonhosted.org/packages/75/28/521c6dc7fef23a68368efefdcd682f5b3d1d58c2b90b06dc1d0b805b51ae/wheel-0.34.2.tar.gz"
     sha256 "8788e9155fe14f54164c1b9eb0a319d98ef02c160725587ad60f14ddc57b6f96"
   end
+
+  patch do
+    url "https://github.com/python/cpython/commit/8ea6353.patch?full_index=1"
+    sha256 "c47680c85f201f5830bf71741f09ece031b99386040f3c70b20190b4c47fb81d"
+  end
+
+  # setuptools remembers the build flags python is built with and uses them to
+  # build packages later. Xcode-only systems need different flags.
 
   def install
     # Unset these so that installing pip and setuptools puts them where we want
