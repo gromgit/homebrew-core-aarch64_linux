@@ -7,13 +7,9 @@ class Cdargs < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2f5fdbb4fdbe3d4dfcb5d45368b91d1ce9c8610902f36e6d28e2d185d2b2185d" => :catalina
-    sha256 "d06682d3e4d5ad57b05b00ee2d15f6b34da528e420ea038604b4897c570efd8d" => :mojave
-    sha256 "10a170bfe1b70f6c8909ddb6fb88b7615219d6847576e72ee1e4011aba482e9b" => :high_sierra
-    sha256 "5ba84d6dff14f5743296721a91e6d01ce984bf6e4589ce2128041b1ed9560a3a" => :sierra
-    sha256 "de9d5777eb0179f9ffacb5bcbb0ff0ce7f0c1fb208bb992290eb5a36e1d3f159" => :el_capitan
-    sha256 "cf098fc4187835ef1c970b38ab41719e0900c01d2772572f697e9773a6c632e6" => :yosemite
-    sha256 "2bb555d4cf65f3d11595350135582599fd6ccf988bc7bb76c58155ddcef29223" => :mavericks
+    sha256 "6be0f8aaab5aaed898d0e575422dad6b89ac4bca96969627d723f0f4ac040cfd" => :catalina
+    sha256 "3129dc20e3cf7e5aa4124ea6640ed80674e9111a85f0766d6ffa6b13475cc019" => :mojave
+    sha256 "7eb3efb581cace2e18f9897b7db17bfda9bfce082ea07912c92f5be34bd6d38e" => :high_sierra
   end
 
   depends_on "meson" => :build
