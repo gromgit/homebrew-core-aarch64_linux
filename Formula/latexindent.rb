@@ -4,6 +4,13 @@ class Latexindent < Formula
   url "https://github.com/cmhughes/latexindent.pl/archive/V3.8.2.tar.gz"
   sha256 "a134e27d56b7daee2bea37563424f996fc559bc8019e92213261b25cdb84a688"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "f1fda32a3d8d74e5f6c39bc946bd47c554a293a13ed2c44fbc1c4c3498dd5128" => :catalina
+    sha256 "f8e5d09a084bb0f2b6d79363978963b9be3d3a5c0213208d579eba641fb1be30" => :mojave
+    sha256 "938feab923be39cef8430038b8db9e86f86b37955f812b64a6d8743ce4f63ad9" => :high_sierra
+  end
+
   depends_on "perl"
 
   resource "B::Hooks::EndOfScope" do
