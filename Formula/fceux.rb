@@ -18,6 +18,9 @@ class Fceux < Formula
   depends_on "gtk+3"
   depends_on "sdl"
 
+  # does not build anymore: the Scons buildscripts rely on Python2 syntax.
+  disable!
+
   # Fix "error: ordered comparison between pointer and zero"
   if DevelopmentTools.clang_build_version >= 900
     patch do
