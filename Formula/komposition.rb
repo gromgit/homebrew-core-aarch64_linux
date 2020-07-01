@@ -8,9 +8,9 @@ class Komposition < Formula
 
   bottle do
     cellar :any
-    sha256 "bc09194b16cfb4ceeccf71d32eb358ca3bb1ff8d329c1a6f664e067705327416" => :catalina
-    sha256 "710bd68b1c34e74229f31b866e6df54fea4a2da68eb75fa415a76d86790cf284" => :mojave
-    sha256 "8fbb226d70189489ec0042f70af8e9dce6d96936be907b289e50ac869aa0ee5b" => :high_sierra
+    sha256 "dc76316ff64beb2d4756ba554844a57d546a0bbe8a300ce1879a6cddcb72ebf8" => :catalina
+    sha256 "e78904afced48a6365ec5cec4b9e97ecccf4bf81401c5576a0c3b21fa1078264" => :mojave
+    sha256 "137747b62de4e68164bceccd009beb65606ae6ba2c94fbe9a72b0eee50ae0961" => :high_sierra
   end
 
   depends_on "cabal-install" => :build
