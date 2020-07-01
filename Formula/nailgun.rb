@@ -7,9 +7,9 @@ class Nailgun < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2e76286672ac4dfa511e5b86c60d6dbd7a16aad954f47eea49d41d371e15a0f9" => :mojave
-    sha256 "f72b282a08c6ceb67af42f4f759eb875d283985a614f528a4d7b11a9de722d18" => :high_sierra
-    sha256 "b5a6c2a6c5ae333033b822f89a3b2d242d79179a415452f8561317677205fd1e" => :sierra
+    sha256 "9e4e7836ebcef4beb89f43ba07ff7e1fffb0765b8843cda5338eca8b34bafed3" => :catalina
+    sha256 "4cbbab0f095c5f5890ae326e7b88b82b4eefa877afe91a63fa161ea82999ee5d" => :mojave
+    sha256 "7f5d7051e631b174fd1d7d0c0aea2b957d3b4946e2176828ec687baddaaa4e04" => :high_sierra
   end
 
   depends_on "maven" => :build
