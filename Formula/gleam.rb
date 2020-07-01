@@ -6,9 +6,9 @@ class Gleam < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "70777be1c8558f699d379114b7105b1666855ee95b3fd69b7af439a44038d0bd" => :catalina
-    sha256 "2d8c0593e9f1a7435f126687b16422eb5f1e5edd7d0c4132c332fdd16a6c3108" => :mojave
-    sha256 "e95b247a6e79610200134cdad6754663bedacad6a06efaac808a4d4e22f1e8c1" => :high_sierra
+    sha256 "d6cc30c84004f50f76c4d7501814e5311482619c96b56e7e51f9b706e3490c25" => :catalina
+    sha256 "724d94e8bf2556d9485423de6ed21efbc53326114f245d9ac24d96e20f57a96d" => :mojave
+    sha256 "4735f65ab3a0ae5614feaf1433cd103edc1ea6ee2de59c2383e051047834ff55" => :high_sierra
   end
 
   depends_on "rust" => :build
