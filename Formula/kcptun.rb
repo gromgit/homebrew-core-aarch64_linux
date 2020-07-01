@@ -7,9 +7,9 @@ class Kcptun < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5267f9a75abdb00a6ada00b008818fc66ee3cad4b0659d36bff9e0e7712604ab" => :catalina
-    sha256 "a83769bd3e3dfb00debbe53a9dd8610e7bd87d232a7925a5aaac54c9c3e0a325" => :mojave
-    sha256 "8214eae17ccafb7662c51e7a4b1a812ca3720ed03d9ca94770e63763c84265d8" => :high_sierra
+    sha256 "6b2353c5753b2266b6dc9cbdfe8f4bc9266b299f1bcf2fea100b8276fa2c4074" => :catalina
+    sha256 "e5fb829f053fd71f14b8f290fabd22f87fd6961be01f1feb75df2c43c6753150" => :mojave
+    sha256 "872b2cc7078e268c38a78ed3e98cc7d6b201426584f57f11ee7c231cdcbdfe16" => :high_sierra
   end
 
   depends_on "go" => :build
