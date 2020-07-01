@@ -3,8 +3,8 @@ class Cbmc < Formula
   homepage "https://www.cprover.org/cbmc/"
   url "https://github.com/diffblue/cbmc.git",
       :using    => :git,
-      :tag      => "cbmc-5.12.1",
-      :revision => "91a225785f470df56e1d6663675c3eab958e00a5"
+      :tag      => "cbmc-5.12.2",
+      :revision => "7405bfb6d6971ab53e430e553910b940522213ed"
 
   bottle do
     cellar :any_skip_relocation
@@ -21,25 +21,11 @@ class Cbmc < Formula
     system "git", "submodule", "update", "--init"
 
     # Build CBMC
-    system "cmake", std_cmake_args, "-S.", "-Bbuild"
+    system "cmake", "-S.", "-Bbuild", *std_cmake_args
     system "cmake", "--build", "build"
-
-    # Install CBMC
-    #  CBMC 5.12 does not come with an install target
-    #  Pull request submitted to add install target to CBMC 5.13:
-    #    https://github.com/diffblue/cbmc/pull/5320
-    bin.install "build/bin/cbmc"
-    bin.install "build/bin/goto-analyzer"
-    bin.install "build/bin/goto-cc"
-    bin.install "build/bin/goto-diff"
-    bin.install "build/bin/goto-gcc"
-    bin.install "build/bin/goto-harness"
-    bin.install "build/bin/goto-instrument"
-    bin.install "build/bin/janalyzer"
-    bin.install "build/bin/java-unit"
-    bin.install "build/bin/jbmc"
-    bin.install "build/bin/jdiff"
-    man1.install "doc/man/cbmc.1"
+    cd "build" do
+      system "make", "install"
+    end
   end
 
   test do
