@@ -4,6 +4,13 @@ class Orientdb < Formula
   url "https://s3.us-east-2.amazonaws.com/orientdb3/releases/3.1.0/orientdb-3.1.0.zip"
   sha256 "011170759ad3afb61a0a4a3f1ca3e44e095b42d64500b005208e402d8cb4fddb"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "9855e1f9406b889701a242cbf7a5fc9dcc6d93e1fe7d5d043af591661997d037" => :catalina
+    sha256 "9855e1f9406b889701a242cbf7a5fc9dcc6d93e1fe7d5d043af591661997d037" => :mojave
+    sha256 "9855e1f9406b889701a242cbf7a5fc9dcc6d93e1fe7d5d043af591661997d037" => :high_sierra
+  end
+
   depends_on "maven" => :build
   depends_on "openjdk"
 
