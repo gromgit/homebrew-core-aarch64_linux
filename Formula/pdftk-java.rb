@@ -8,9 +8,9 @@ class PdftkJava < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e53bbd046b64c720eb40087858529a1ca03a34c3b177d9b6f7375368456f8878" => :catalina
-    sha256 "8ad12f6f341128ed0963dd74814342f01afa1f635835f48af33ddba28a55439b" => :mojave
-    sha256 "ae1b26b9ca6f455bc39eb358cdbd01036b7f387d15e0a6f670af54f6d6394b08" => :high_sierra
+    sha256 "3eb4ac53b5e6f4603509e5eb785c3574a050df65252b1f6aeb6f9f7300604fd4" => :catalina
+    sha256 "a269cdfe44ed002b830a5e574f49b9eec4923b0cc3ad791b3cb46773d2952c40" => :mojave
+    sha256 "72e5f070fa22a8f394a6fcdfe1b40a65f95ee945f655377677106a7a369b8c08" => :high_sierra
   end
 
   depends_on "gradle" => :build
