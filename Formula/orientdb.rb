@@ -1,16 +1,14 @@
 class Orientdb < Formula
   desc "Graph database"
   homepage "https://orientdb.com/"
-  url "https://orientdb.com/download.php?file=orientdb-community-importers-2.2.29.tar.gz"
-  sha256 "ed6e65b18fed70ace3afa780a125100a19899e9b18f4d6e9bc1111e7ee88d752"
-  revision 1
+  url "https://s3.us-east-2.amazonaws.com/orientdb3/releases/3.1.0/orientdb-3.1.0.zip"
+  sha256 "011170759ad3afb61a0a4a3f1ca3e44e095b42d64500b005208e402d8cb4fddb"
 
-  bottle :unneeded
-
+  depends_on "maven" => :build
   depends_on "openjdk"
 
   def install
-    rm_rf Dir["{bin,benchmarks}/*.{bat,exe}"]
+    rm_rf Dir["bin/*.bat"]
 
     chmod 0755, Dir["bin/*"]
     libexec.install Dir["*"]
@@ -52,7 +50,7 @@ class Orientdb < Formula
   def caveats
     <<~EOS
       The OrientDB root password was set to 'orientdb'. To reset it:
-        https://orientdb.com/docs/2.2/Server-Security.html#restoring-the-servers-user-root
+        https://orientdb.com/docs/last/security/Server-Security.html#restoring-the-servers-user-root
     EOS
   end
 
