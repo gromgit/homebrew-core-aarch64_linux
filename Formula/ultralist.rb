@@ -3,6 +3,7 @@ class Ultralist < Formula
   homepage "https://ultralist.io"
   url "https://github.com/ultralist/ultralist/archive/0.9.7.tar.gz"
   sha256 "cfc5740c717eca2410cfbd3c77c03ffd33f7e4f828ecef924c2f6c4b6e73dba9"
+  license "MIT"
 
   bottle do
     cellar :any_skip_relocation
