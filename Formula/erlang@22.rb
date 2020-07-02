@@ -4,6 +4,7 @@ class ErlangAT22 < Formula
   # Download tarball from GitHub; it is served faster than the official tarball.
   url "https://github.com/erlang/otp/archive/OTP-22.3.4.2.tar.gz"
   sha256 "722d53e8ae170080a85f25c10bd73dee99a81733ae684ea92a857c91f67deec3"
+  license "Apache-2.0"
 
   bottle do
     cellar :any
