@@ -8,9 +8,9 @@ class GimmeAwsCreds < Formula
 
   bottle do
     cellar :any
-    sha256 "eacd3675525424d7037ba47d81f7b4082cda80d7fefea63f85152a4ea0302530" => :catalina
-    sha256 "373d17d151ae4f43ab99dee2f6b89a20076e85a320fcc1bdbf8ce9aeba929a6c" => :mojave
-    sha256 "6a715fe2a9ac1f4def3bbd19b9d6ccadf0c26a146360992c2d7eeb542f85e88d" => :high_sierra
+    sha256 "736faae3b3e9f48ea386933bc68de1cb64a293e13e5ae4111d437997964386ec" => :catalina
+    sha256 "9f6234bc623c5c32a120b3dfaa7d507e56e92d0b7386b71d768f15bf942e13e9" => :mojave
+    sha256 "d2e420d0a093b64c25f766c8a79bae90d5504324829bea3a0f50add60b7f1839" => :high_sierra
   end
 
   depends_on "python@3.8"
