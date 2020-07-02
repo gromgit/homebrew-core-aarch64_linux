@@ -6,9 +6,9 @@ class GrinWallet < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "ede3e5a86cd979b95be435fa72c976c06572e4aa31ca87d901bffb30f81e944b" => :catalina
-    sha256 "470f5394c7910bbd60c2698f094cc065cefa62a130af4ff9793bdfdaa6718515" => :mojave
-    sha256 "98670476e9de66f97b5bd678964f32b21eaf1361d404d3d2bf0685202917d1de" => :high_sierra
+    sha256 "99c3c710cca324b279b9f53db6687c5f35dceb1a7fab99e6da08734f1f14fb64" => :catalina
+    sha256 "9527840eae34a19dc485a2f13fe0d0422429f08e2352267a637a41b5bf31bf1d" => :mojave
+    sha256 "c9f755928079e4d3073e5f80071b2d7a860b3f0daaf44abd0e0d5c1c1c106cab" => :high_sierra
   end
 
   depends_on "llvm" => :build # for libclang
