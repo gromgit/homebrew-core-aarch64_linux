@@ -3,6 +3,7 @@ class Helib < Formula
   homepage "https://github.com/homenc/HElib"
   url "https://github.com/homenc/HElib/archive/v1.0.2.tar.gz"
   sha256 "b907eaa8381af3d001d7fb8383273f4c652415b3320c11d5be2ad8f19757c998"
+  license "Apache-2.0"
 
   bottle do
     cellar :any
