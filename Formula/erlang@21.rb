@@ -4,6 +4,7 @@ class ErlangAT21 < Formula
   # Download tarball from GitHub; it is served faster than the official tarball.
   url "https://github.com/erlang/otp/archive/OTP-21.3.8.16.tar.gz"
   sha256 "c0a5b680d33d2c58bc16ce10ab9f4c37695b3d5b5a42ca880067e19c26ce4a44"
+  license "Apache-2.0"
 
   bottle do
     cellar :any
