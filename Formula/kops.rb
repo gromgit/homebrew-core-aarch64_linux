@@ -3,6 +3,7 @@ class Kops < Formula
   homepage "https://github.com/kubernetes/kops"
   url "https://github.com/kubernetes/kops/archive/1.17.1.tar.gz"
   sha256 "880414505447ae8ff4b91ea5c75e5de1a532a66f113e51db15b83672c8cb78d2"
+  license "Apache-2.0"
   head "https://github.com/kubernetes/kops.git"
 
   bottle do
