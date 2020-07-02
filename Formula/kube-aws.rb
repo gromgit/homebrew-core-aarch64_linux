@@ -4,6 +4,7 @@ class KubeAws < Formula
   url "https://github.com/kubernetes-incubator/kube-aws.git",
       :tag      => "v0.16.1",
       :revision => "f2781f8f76de408cd7dbc9dd832bb3e364961e30"
+  license "Apache-2.0"
   head "https://github.com/kubernetes-incubator/kube-aws.git"
 
   bottle do
