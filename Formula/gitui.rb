@@ -3,6 +3,7 @@ class Gitui < Formula
   homepage "https://github.com/extrawurst/gitui"
   url "https://github.com/extrawurst/gitui/archive/v0.7.0.tar.gz"
   sha256 "3491730ddbbc886940f20e6cf419c689de3e196f678127807ef69c4de479742e"
+  license "MIT"
 
   bottle do
     cellar :any_skip_relocation
