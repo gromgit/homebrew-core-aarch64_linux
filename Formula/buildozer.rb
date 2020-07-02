@@ -6,6 +6,13 @@ class Buildozer < Formula
     :revision => "ce0cf814cb03dddf546ea92b3d6bafddb0b9eaf8"
   head "https://github.com/bazelbuild/buildtools.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "394ee9a737ae1961fc4a9b64077b34ebbf62ed61466b0445a859e3277b9d3b43" => :catalina
+    sha256 "394ee9a737ae1961fc4a9b64077b34ebbf62ed61466b0445a859e3277b9d3b43" => :mojave
+    sha256 "394ee9a737ae1961fc4a9b64077b34ebbf62ed61466b0445a859e3277b9d3b43" => :high_sierra
+  end
+
   depends_on "bazelisk" => :build
 
   def install
