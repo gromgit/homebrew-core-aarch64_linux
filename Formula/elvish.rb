@@ -3,6 +3,7 @@ class Elvish < Formula
   homepage "https://github.com/elves/elvish"
   url "https://github.com/elves/elvish/archive/v0.14.0.tar.gz"
   sha256 "36ed5e0318d75f7e7d616398e42477cfbd6fd2a1d1f108dee7941621cfb7378a"
+  license "BSD-2-Clause"
   head "https://github.com/elves/elvish.git"
 
   bottle do
