@@ -8,9 +8,9 @@ class Netcdf < Formula
   head "https://github.com/Unidata/netcdf-c.git"
 
   bottle do
-    sha256 "c7510a4fe72e43f11e642e5f08951ff136ab677579d1208c38471902df92b1cc" => :catalina
-    sha256 "3a4da525b304b8ade90ee27d476fff47ff00ed0a9c482e48f6cbc783a915c35e" => :mojave
-    sha256 "4860a333ac67dee3d27e44c1248ccf106e7e7607386c8d66033e0f16237f0c2f" => :high_sierra
+    sha256 "0ae7c27bd0ac68071faecbd09f67fb2ce91d86b030b92488dca64851e6d40de0" => :catalina
+    sha256 "db149e5597eab59a0a908c48efc35df09735ddc8bac006c94b6a02a644822814" => :mojave
+    sha256 "c1704dcf4cd4d59e48b5e71e752c44220cc098810e67d49aaa8985cc09b5724b" => :high_sierra
   end
 
   depends_on "cmake" => :build
