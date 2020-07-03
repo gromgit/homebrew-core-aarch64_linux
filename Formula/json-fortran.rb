@@ -8,9 +8,9 @@ class JsonFortran < Formula
 
   bottle do
     cellar :any
-    sha256 "b75cc1817090b77c80cbd63b4f4c7ce2afd57c96f9e19c0ab7ea5822a62e7f6b" => :catalina
-    sha256 "a68f3a882de03929152856d8797dc6e934b77e3087b0cdb93644157e8d00d2bd" => :mojave
-    sha256 "6775de35be3202c26f4a9b8719791bd4bf8dfb9c349ddf0fa72d0862d71ebeae" => :high_sierra
+    sha256 "6a0de94db085feec3b791b9b154e0608be45dcee56bdebed1a40f1d2b01f6db1" => :catalina
+    sha256 "0eba6baf8fc61081bef4fe113cab288c48b15db82b3bf6046123078092d94d60" => :mojave
+    sha256 "0bfa26c79959e2963fb3a60a95c13e4199c914c5390d438aac1f0e9e1b8e7359" => :high_sierra
   end
 
   depends_on "cmake" => :build
