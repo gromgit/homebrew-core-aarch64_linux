@@ -4,7 +4,7 @@ class ArduinoCli < Formula
   url "https://github.com/arduino/arduino-cli.git",
      :tag      => "0.11.0",
      :revision => "0296f4df116385f868b67c5ffa7393936c3345c9"
-  revision 1
+  revision 2
   head "https://github.com/arduino/arduino-cli.git"
 
   bottle do
@@ -24,10 +24,22 @@ class ArduinoCli < Formula
       -X github.com/arduino/arduino-cli/version.commit=#{commit}
     ]
     system "go", "build", *std_go_args, "-ldflags", ldflags.join(" ")
+
+    output = Utils.safe_popen_read({ "SHELL" => "bash" }, "#{bin}/arduino-cli", "completion", "bash")
+    (bash_completion/"arduino-cli").write output
+
+    output = Utils.safe_popen_read({ "SHELL" => "zsh" }, "#{bin}/arduino-cli", "completion", "zsh")
+    (zsh_completion/"_arduino-cli").write output
+
+    output = Utils.safe_popen_read({ "SHELL" => "fish" }, "#{bin}/arduino-cli", "completion", "fish")
+    (fish_completion/"arduino-cli.fish").write output
   end
 
   test do
     system "#{bin}/arduino-cli", "sketch", "new", "test_sketch"
     assert File.directory?("#{testpath}/test_sketch")
+
+    version_output = shell_output("#{bin}/arduino-cli version 2>&1")
+    assert_match "arduino-cli Version: #{version}", version_output
   end
 end
