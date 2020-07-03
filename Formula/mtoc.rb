@@ -6,9 +6,9 @@ class Mtoc < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9633efa04b078ac1353ec39db86cdfa98e98024f671ac8a46457c8cd27925bbe" => :catalina
-    sha256 "976565f15269c96da91a36c9f5b7e2497741f44f1ca1ec2c2402fe8d430a072d" => :mojave
-    sha256 "883674b5bfc549ef5ce33fc4ca653cd0d5583319d57beb170763d5b331ed6919" => :high_sierra
+    sha256 "2f60b3731066cf662f3d8e9451ce0f94954980100780c9e79b6e8ea066ad8def" => :catalina
+    sha256 "c9cba74c5669816e90ae2fa9110be8c9b6b9d1a90ec7d1f246687a3f512e08ab" => :mojave
+    sha256 "62587e723f38c2a51d3a951dca42df10b9aa1ac67c88d8e286b27e6957edd985" => :high_sierra
   end
 
   depends_on "llvm" => :build
