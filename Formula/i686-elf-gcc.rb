@@ -1,9 +1,9 @@
 class I686ElfGcc < Formula
   desc "The GNU compiler collection for i686-elf"
   homepage "https://gcc.gnu.org"
-  url "https://ftp.gnu.org/gnu/gcc/gcc-9.3.0/gcc-9.3.0.tar.xz"
-  mirror "https://ftpmirror.gnu.org/gcc/gcc-9.3.0/gcc-9.3.0.tar.xz"
-  sha256 "71e197867611f6054aa1119b13a0c0abac12834765fe2d81f35ac57f84f742d1"
+  url "https://ftp.gnu.org/gnu/gcc/gcc-10.1.0/gcc-10.1.0.tar.xz"
+  mirror "https://ftpmirror.gnu.org/gcc/gcc-10.1.0/gcc-10.1.0.tar.xz"
+  sha256 "b6898a23844b656f1b68691c5c012036c2e694ac4b53a8918d4712ad876e7ea2"
 
   bottle do
     sha256 "7b1e050e02a95291d9395e3e85b4a6ccf848dadacfba1482df6ceda83a955a03" => :catalina
