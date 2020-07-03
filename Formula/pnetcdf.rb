@@ -6,9 +6,9 @@ class Pnetcdf < Formula
   revision 1
 
   bottle do
-    sha256 "04ba040b61d2c7a5418b4af93746f42a52133d18879d9a07c770ffd3f8875b91" => :catalina
-    sha256 "29a1ad1b500424446970fab585e2340230b146e004cc1da214cb57af1eaebc0c" => :mojave
-    sha256 "882f998426ba7a0a8723043e3924f349ab1601b66a1f5e8e853816c5de8edb11" => :high_sierra
+    sha256 "89fe221a5cfb46dac697259ace423488721524a62cf9753e2f2b0824a5092316" => :catalina
+    sha256 "ca2024aecf06507fa3f5018773f59aaa2b6be3291107b73565002f19ed0def02" => :mojave
+    sha256 "218b5b009bb564ed50117a0ad5842ee2d20b4b29cc134587fd5e30a3e703412b" => :high_sierra
   end
 
   depends_on "gcc"
