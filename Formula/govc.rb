@@ -6,9 +6,9 @@ class Govc < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0619f67c0287b822ed10ed641519084f814b979841f5c5b2803fe4f179574d22" => :catalina
-    sha256 "bb5b9c0c3ac7b74db7783e0e4ce409f49d6d484df3624fb6bfa874860bbdc01b" => :mojave
-    sha256 "ba609f775f5bb406024cd3f0c73419ea2b73601116c221738a3f125116dadb1f" => :high_sierra
+    sha256 "f87e7522bf5a4d2dfadd33586f362c362373de714f46e08f3417ea228fbbf8ec" => :catalina
+    sha256 "9381ff648dcb11aa393221f3051685a32fec1e08e1e820dac5f6b4c9add33015" => :mojave
+    sha256 "b1004db501274c309e2c1b61c692f38e438ca1742bb59397ce332059259ce813" => :high_sierra
   end
 
   depends_on "go" => :build
