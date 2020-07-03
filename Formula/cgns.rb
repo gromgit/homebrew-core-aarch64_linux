@@ -8,9 +8,9 @@ class Cgns < Formula
 
   bottle do
     cellar :any
-    sha256 "bd68e99330428811196cf3ed189ea61b67d86a2e58af3f0971b6d5f20f1d8ec4" => :catalina
-    sha256 "f2f5d0c81b8adfcd2ef8d1a91c9b29f8e875fe6349badcac81e7e475caa4df89" => :mojave
-    sha256 "d81da89ddc8f36b947f476362e60be07f7b5c81c209b4dfa960a26b007d9d1c8" => :high_sierra
+    sha256 "ac5ed0dcdfd12f7e07c483d355b26d46f8380cfadb069b60d7bee21c12f6d31a" => :catalina
+    sha256 "e9bcc9d1af96b8ebc5ecb0d5ba16165edf750f75e53b6b81997bb5078b718c68" => :mojave
+    sha256 "cd64974956ac61d5574db91ceba7bcf99e17981be478864ef7b368340e993025" => :high_sierra
   end
 
   depends_on "cmake" => :build
