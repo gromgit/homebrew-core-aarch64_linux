@@ -8,10 +8,9 @@ class GraphqlCli < Formula
   license "MIT"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "62783d3c7488a1e1a228fd2e9567d9ff936ad96f16be56c541c486ea625e843a" => :catalina
-    sha256 "15a20fa31664af3c398c15eb8d8f29e2a07f00ae3e81315a541dec3ee7c112c4" => :mojave
-    sha256 "e48b7e202b04240f33743ebfa5171056e9de9cd6d668f2f50e92b324af46f751" => :high_sierra
+    sha256 "5ecb75b7aa2887d2a7e81fe08b3cb18cb62e0dfe38d57eaa2cfa7fd636dab625" => :catalina
+    sha256 "a9c8667aebd1344a6bfb265180054a6e063122da8a567fc62d54f05cd62f5ab9" => :mojave
+    sha256 "be04819e9354a609deb3e075510e324eb5c7520d43eafc1b589ea03da487a3b0" => :high_sierra
   end
 
   depends_on "node"
