@@ -2,7 +2,8 @@ class Ott < Formula
   desc "Tool for writing definitions of programming languages and calculi"
   homepage "https://www.cl.cam.ac.uk/~pes20/ott/"
   url "https://github.com/ott-lang/ott/archive/0.31.tar.gz"
-  sha256 "7723378fdec3a322005b7505d20ec1a6ae7756823426317156d2ebafe26fd930"
+  sha256 "3203f1b3eeb30e6aead9f63f6df22f5ead2407964ac9bb3cd5b0ae78df4568f8"
+  revision 1
   head "https://github.com/ott-lang/ott.git"
 
   bottle do
