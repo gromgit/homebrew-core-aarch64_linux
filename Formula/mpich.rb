@@ -8,9 +8,9 @@ class Mpich < Formula
 
   bottle do
     cellar :any
-    sha256 "7d46386dd93ee397ce6dd9f3198aa16aa9e1390699396f3f3b4135087f6ed216" => :catalina
-    sha256 "865e53a39ea105d5d646986b64a0ad9096cdbf4135d7435448062bc458cb6a64" => :mojave
-    sha256 "9d5dc18a7f5a9283f225e117f6ae879f1205249799287150a0e63ef177682077" => :high_sierra
+    sha256 "3927047d7322310cef941a5e790c43b858a29716bea54d493bd1901b8d0bcb3d" => :catalina
+    sha256 "44511bb2ad213ccc7e47a505895cf6aa4dbdd1a7dbba468095a130e83ca7bff3" => :mojave
+    sha256 "0498e1ee125ed94a3822179663e552ecf29bdca1ae3837520284fadae3782cef" => :high_sierra
   end
 
   head do
