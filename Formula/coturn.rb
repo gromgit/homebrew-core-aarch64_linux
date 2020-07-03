@@ -5,9 +5,9 @@ class Coturn < Formula
   sha256 "408bf7fde455d641bb2a23ba2df992ea0ae87b328de74e66e167ef58d8e9713a"
 
   bottle do
-    sha256 "9f00d9739c200fad1363e0290ea1c07320da8c960fab8c93e1a299c58ba52242" => :catalina
-    sha256 "b8021791ebdd945f3d5aa6c2e31d4a55a24137b5759c6cd64b7da569843a05f3" => :mojave
-    sha256 "35f3504a39e5c58c3cc81c0f1d544f5a2e28c6c651281c54b8a98f096b0332aa" => :high_sierra
+    sha256 "027e54c623df2dca0cb5b281123a01b5ab4625d277d7a1f7ac2bd998df790b01" => :catalina
+    sha256 "f5d4351c3ae9d4b8949012379f6b7cb680f4f0fdb6b01c55ff84bd735bd3a490" => :mojave
+    sha256 "4bfb3e74a8d467f7935ccb316097a70b3b14018b31316bccf7c758e65f2479e8" => :high_sierra
   end
 
   depends_on "hiredis"
