@@ -7,8 +7,7 @@ class Publish < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f943bb9b468c49e2a5e87171d5ee3c11c339a25c74d241915fa8071e794e756c" => :catalina
-    sha256 "30e3520375527044e155ee740e4408b466ab2cac2fbfbbc76fa6a9970041d787" => :mojave
+    sha256 "08f17da7227cb766787838cb6c1d53ac0498cbde6245da0470f8379e84b476aa" => :catalina
   end
 
   # https://github.com/JohnSundell/Publish#system-requirements
