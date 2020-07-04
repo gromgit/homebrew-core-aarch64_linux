@@ -8,10 +8,9 @@ class Gowsdl < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "5fd404e38c1b998c6984f06c4ac9cafe14003d532966b06c089fa6e769d11d67" => :catalina
-    sha256 "b31f125e412680a97253faa4faf56b83f56fc3dc0ceec2eaca6bfdac5d2eb41a" => :mojave
-    sha256 "4d2525b76e187e99b69b11237bd0bb5125559815b4041b177ced99eed0b87a8f" => :high_sierra
+    sha256 "ac79869fae62091277dad289c73f337cee0c9d92a42b38af5dc4d59b53f59885" => :catalina
+    sha256 "650f3a704f6918e069c60d64807ddffe3fd327b6ef2e5688768d08f646ccfa59" => :mojave
+    sha256 "64d483de68fc8f23043ee9652addf1a918e79a3c68c70324652ab5d0ac4b1c64" => :high_sierra
   end
 
   depends_on "go" => :build
