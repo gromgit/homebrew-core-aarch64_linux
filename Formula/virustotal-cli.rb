@@ -6,9 +6,10 @@ class VirustotalCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "03f966e98db8f8a8e9e5ec2b9543b89304f1254905bcfff3cfb813d2e163f9e5" => :catalina
-    sha256 "88f6080a2d05a7445479b171a65e971755b621eb7d315c598c52eba9ce08f8b5" => :mojave
-    sha256 "d00ceb90ed87b57e15c8b4bed8c8d2dcbb2e2e987be68f06abc2e8bee7702536" => :high_sierra
+    rebuild 1
+    sha256 "072fd4acc2fd89c9cc86a6e6b6d00beb7516d827d71cdddb24e4cf1e5bca4af1" => :catalina
+    sha256 "ae56372cafffdfd83a1ac55c917e963882139ca586c069a4d0e7c1f0e303f0fa" => :mojave
+    sha256 "7fc169a764eb94967cd8e88b5420e5202415ae1715e0dde1c1a6a23951f7e23a" => :high_sierra
   end
 
   depends_on "go" => :build
