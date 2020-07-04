@@ -7,9 +7,10 @@ class Docker < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5e76b1ee2d9b079a727d17ffadb111658103f1fc00f18cc2a943d1d6542e60fa" => :catalina
-    sha256 "fb5823bc2477f1fd68e373a5bf5dc97f54a5f2295d77622539a8c604cd7cf692" => :mojave
-    sha256 "02b3b6ea3d7899408807c186742dd60339eaa0cdb80d03d494780924dfefdae3" => :high_sierra
+    rebuild 1
+    sha256 "ce26e2a26692cd22ad6c37edbae304e2349f98682f51fc8e5c1ae074fa9573fc" => :catalina
+    sha256 "be8241ad433dd7c8a5c9b73344f4e24f0bc4b4808f4a33b99811ea403d0d0159" => :mojave
+    sha256 "ac92b86b4f792d61be6c0d90549a3633e071c4a6833d696b8a285b3be90962f7" => :high_sierra
   end
 
   depends_on "go" => :build
