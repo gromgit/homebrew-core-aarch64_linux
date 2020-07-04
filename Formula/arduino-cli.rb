@@ -9,9 +9,9 @@ class ArduinoCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "3dd10065c03827d1cc0a508daaf2787c154eda4bfc5378d671b17d16672bd293" => :catalina
-    sha256 "4d176c41402ad7a3ceb8ad20ef4a621675c20bdb080b543193efddad07e7fc26" => :mojave
-    sha256 "d885f46abbb996e64a47d8566677263bca7ca2cacfe78d8bd825d5a4bba02f38" => :high_sierra
+    sha256 "7d6e6a081632c6cb89e60636c3a7e6989375d10f8ab0f350927f68ea8957ed42" => :catalina
+    sha256 "878390cd1048b3370de84200bf37e718b37252ae9daa437cac543635ba3bf482" => :mojave
+    sha256 "b84292063439746cbaf314a60172e94659f90a6b80eaaab8f138b2ec4c128c43" => :high_sierra
   end
 
   depends_on "go" => :build
