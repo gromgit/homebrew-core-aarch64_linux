@@ -7,9 +7,10 @@ class Cassowary < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b8f7d3def722987e81c22df1ea898ed28973476fc309988756c573f0372b381a" => :catalina
-    sha256 "10de18f2c186dffe62c5407365f5201379b0f3da3bc37eb9e0b60fd465959c19" => :mojave
-    sha256 "2eb13fb3ce1f657d59791152266497761fc5c6a562c49f96ec6b7cf81c3099aa" => :high_sierra
+    rebuild 1
+    sha256 "3a6e5b9679a3c5da70142d98eddb6825cb51ba69581e21a485a16c09f56de5f4" => :catalina
+    sha256 "e8ee2d0e616f89a395ed1e6b881a4c7f29529ebccd1524af9bb3ba2a23364106" => :mojave
+    sha256 "2b723e48851feba06f504d2c5ddd51314c619509df0a380cdd286e439ff35c07" => :high_sierra
   end
 
   depends_on "go" => :build
