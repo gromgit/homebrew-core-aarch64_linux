@@ -7,13 +7,9 @@ class Html2text < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d72fa6fda79a0f2b1b9f832b00105028add37a4dc3213e438683c35f3e7a0864" => :catalina
-    sha256 "c8b7e49edc4b7a234546fa7ae983cefd374b43254fcd197771c6178f4b8522d3" => :mojave
-    sha256 "651c7204ba8de17d552b8ccef6cb381f41bd1ca8f0f3b2577543e0daf4d92899" => :high_sierra
-    sha256 "8f0adab889fb872e10fd26d57d063b9501298e11db2f996d495db0951662596f" => :sierra
-    sha256 "766f16608d01f0fdf581e64e96a92d311cf96589b938cd87957d0543bb7fd1df" => :el_capitan
-    sha256 "103d5c3d14bb0b13b2c6fe20f9889ea1269d276a6d294dd058c7c75ea78bf7ae" => :yosemite
-    sha256 "b691a4fa679e2ae4562afe36d216b13ecaf2355167d4142bdb0f697f753eac19" => :mavericks
+    sha256 "567d2c7e25a24c445ad54074e9ff3ee6edfce3fe7fe960966dcd49a488b2affb" => :catalina
+    sha256 "55a8fe864bc8e05e7e2fa0085e22adb251fdeeee3fd463e326224a3dff78c773" => :mojave
+    sha256 "b0c913f98f9169669395d57c28c45d7d6c1dc68c13fdb82ba52a04fefdb00bc5" => :high_sierra
   end
 
   def install
