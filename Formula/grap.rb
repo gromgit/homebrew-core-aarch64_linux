@@ -1,9 +1,8 @@
 class Grap < Formula
   desc "Language for typesetting graphs"
   homepage "https://www.lunabase.org/~faber/Vault/software/grap/"
-  url "https://www.lunabase.org/~faber/Vault/software/grap/grap-1.45.tar.gz"
-  mirror "https://deb.debian.org/debian/pool/main/g/grap/grap_1.45.orig.tar.gz"
-  sha256 "906743cdccd029eee88a4a81718f9d0777149a3dc548672b3ef0ceaaf36a4ae0"
+  url "https://www.lunabase.org/~faber/Vault/software/grap/grap-1.46.tar.gz"
+  sha256 "7a8ecefdecfee96699913f2a412da68703911fa640bac3b964a413131f848bb4"
 
   bottle do
     sha256 "4a5b7519a60732d2f40b4e973c8792a25b8e0127e51683ecd06a24494c2922e6" => :catalina
