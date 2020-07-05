@@ -6,6 +6,13 @@ class K9s < Formula
       :revision => "977791627860a0febb3c217a5322702da109ecbb"
   license "Apache-2.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "713ce4d49670c5ee47425bed9b9437d3d5fa47ad84691a38e9cdc5f73364aa7b" => :catalina
+    sha256 "71dc6a54bf42b169d4f1001a30fd07008ccd82907101b906af9c9c74eb8b64c1" => :mojave
+    sha256 "d6f54aab8f27a08e4d640e7180e42aa070816b15e82a51e13e6e4d6942fdeab2" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
