@@ -1,8 +1,8 @@
 class Mikutter < Formula
   desc "Extensible Twitter client"
   homepage "https://mikutter.hachune.net/"
-  url "https://mikutter.hachune.net/bin/mikutter-4.0.5.tar.gz"
-  sha256 "abd56904cb39c6d3490bc21cc4e40b2c23e93ef7e2a16d27eea43b09ec20dbf6"
+  url "https://mikutter.hachune.net/bin/mikutter-4.0.6.tar.gz"
+  sha256 "3ac0292aafbbd6a8f978091244ef20f3911ecb1c26a85e8e3c6ef86211f279cd"
   head "git://mikutter.hachune.net/mikutter.git", :branch => "develop"
 
   bottle do
@@ -111,8 +111,8 @@ class Mikutter < Formula
   end
 
   resource "moneta" do
-    url "https://rubygems.org/downloads/moneta-1.2.1.gem"
-    sha256 "a13a7942eef0c8370022305fd009f5ccb4e5af1faf2a85286c0502d6dcd4ee60"
+    url "https://rubygems.org/downloads/moneta-1.3.0.gem"
+    sha256 "38ffd4f10d3a2f48ad8362eaf63f619da89ca2b5d5a0bae2f8447ce4880f9590"
   end
 
   resource "native-package-installer" do
@@ -216,26 +216,18 @@ class Mikutter < Formula
     (lib/"mikutter").install "plugin"
     libexec.install Dir["*"]
 
-    (bin/"mikutter").write(exec_script)
+    ruby_series = Formula["ruby"].version.to_s.split(".")[0..1].join(".")
+    env = {
+      :DISABLE_BUNDLER_SETUP => "1",
+      :GEM_HOME              => HOMEBREW_PREFIX/"lib/mikutter/vendor/ruby/#{ruby_series}.0",
+      :GTK_PATH              => HOMEBREW_PREFIX/"lib/gtk-2.0",
+    }
+
+    (bin/"mikutter").write_env_script Formula["ruby"].opt_bin/"ruby", "#{libexec}/mikutter.rb", env
     pkgshare.install_symlink libexec/"core/skin"
 
     # enable other formulae to install plugins
     libexec.install_symlink HOMEBREW_PREFIX/"lib/mikutter/plugin"
-  end
-
-  def exec_script
-    ruby_series = Formula["ruby"].version.to_s.split(".")[0..1].join(".")
-    <<~EOS
-      #!/bin/bash
-
-      export DISABLE_BUNDLER_SETUP=1
-
-      # also include gems/gtk modules from other formulae
-      export GEM_HOME="#{HOMEBREW_PREFIX}/lib/mikutter/vendor/ruby/#{ruby_series}.0"
-      export GTK_PATH="#{HOMEBREW_PREFIX}/lib/gtk-2.0"
-
-      exec #{which("ruby")} "#{libexec}/mikutter.rb" "$@"
-    EOS
   end
 
   test do
