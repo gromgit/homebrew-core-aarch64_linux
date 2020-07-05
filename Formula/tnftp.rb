@@ -6,9 +6,9 @@ class Tnftp < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "92c012e712577f8241e239849d4b73dd5dba36a74b6bd66db6b834488a8d82cf" => :catalina
-    sha256 "54e3a99702280bcc89879a9f520441113686869981ec534fa74db2df3fa7b774" => :mojave
-    sha256 "ba323276cf1be330ad3fccab6cd4339e11bb67428ead33128b809b7fdfd7bf80" => :high_sierra
+    sha256 "1411f5fe465b0952891ff141431a5d09140c7d53bb3cf689054a2580bd1031fc" => :catalina
+    sha256 "ae4beaa65c5f258152fefeeaa196c9e2d70cf3bda2af4e387ddcf807476c7401" => :mojave
+    sha256 "900f2ece9b7a6a9edd0d96dc6c061ef6380c0fc99177119e73db65e5d8c012e0" => :high_sierra
   end
 
   uses_from_macos "bison" => :build
