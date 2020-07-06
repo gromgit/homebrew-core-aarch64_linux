@@ -6,6 +6,13 @@ class Awsweeper < Formula
   license "MPL-2.0"
   head "https://github.com/jckuester/awsweeper.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "e0b61214e9db15dea9a6a87a7ec434a0ffe3e86c75c80fe6aaa6d436483a5cad" => :catalina
+    sha256 "5f781a42c16de3ce223e02b5e31fc7714970a9528badc86457648e00b14f4ef7" => :mojave
+    sha256 "cbb4f2723713a9c3a0623dd703ce121408ac7470977f691f6fb331f8c99eda64" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
