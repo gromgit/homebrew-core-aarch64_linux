@@ -6,9 +6,9 @@ class Mercury < Formula
 
   bottle do
     cellar :any
-    sha256 "929bf01a6bb21f8eb21049c5f9204f732f8cef4352a9c35bf8a74dfea3ff68db" => :catalina
-    sha256 "c789a13ab24a2d0fe87084611fe2329e69babed231ab71c8f7488dd196d9688b" => :mojave
-    sha256 "6193c6ea63f456f66c9137945a4b333d7c1d4e7370bf2a333d38ac9fff7ebd7a" => :high_sierra
+    sha256 "8a643b7f50072e004089659525f9e08b05fdecbc031db32d591dbd4aa1fa110d" => :catalina
+    sha256 "f343d99ebc86c3eecff969e744fbea6e90400884650781bda85984978dfb6848" => :mojave
+    sha256 "6ec1305a6b2c81e8bc0c8c57aaeeace93a600e01913794d83ac3420c69959456" => :high_sierra
   end
 
   depends_on "openjdk"
