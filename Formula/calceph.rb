@@ -1,8 +1,8 @@
 class Calceph < Formula
   desc "C library to access the binary planetary ephemeris files"
   homepage "https://www.imcce.fr/inpop/calceph"
-  url "https://www.imcce.fr/content/medias/recherche/equipes/asd/calceph/calceph-3.4.4.tar.gz"
-  sha256 "d65d83fbddc9f940ead3d5bb59a15b6e939f040a0eed5c5d36f388f00a4647ba"
+  url "https://www.imcce.fr/content/medias/recherche/equipes/asd/calceph/calceph-3.4.5.tar.gz"
+  sha256 "e1b9076b49fee51f7efda22194c8b66aaeebedbdb41d731c5af2cd0b16b39b56"
 
   bottle do
     cellar :any
