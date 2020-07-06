@@ -1,8 +1,9 @@
 class Pick < Formula
   desc "Utility to choose one option from a set of choices"
-  homepage "https://github.com/calleerlandsson/pick"
-  url "https://github.com/calleerlandsson/pick/releases/download/v3.0.1/pick-3.0.1.tar.gz"
-  sha256 "668c863751f94ad90e295cf861a80b4d94975e06645f401d7f82525e607c0266"
+  homepage "https://github.com/mptre/pick"
+  url "https://github.com/mptre/pick/releases/download/v4.0.0/pick-4.0.0.tar.gz"
+  sha256 "de768fd566fd4c7f7b630144c8120b779a61a8cd35898f0db42ba8af5131edca"
+  head "https://github.com/mptre/pick.git"
 
   bottle do
     cellar :any_skip_relocation
@@ -12,6 +13,8 @@ class Pick < Formula
     sha256 "e91e7c5882344a8d2722c50bad65959aacfdef739206aec833722b6f00a2e8a2" => :sierra
   end
 
+  uses_from_macos "ncurses"
+
   def install
     ENV["PREFIX"] = prefix
     ENV["MANDIR"] = man
@@ -20,6 +23,13 @@ class Pick < Formula
   end
 
   test do
-    system "#{bin}/pick", "-v"
+    require "pty"
+    ENV["TERM"] = "xterm"
+    PTY.spawn(bin/"pick") do |r, w, _pid|
+      w.write "foo\nbar\nbaz\n\x04"
+      sleep 1
+      w.write "\n"
+      assert_match /foo\r\nbar\r\nbaz\r\n\^D.*foo\r\n\z/, r.read
+    end
   end
 end
