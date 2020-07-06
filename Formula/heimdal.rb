@@ -5,10 +5,9 @@ class Heimdal < Formula
   sha256 "f02d3314d634cc55eb9cf04a1eae0d96b293e45a1f837de9d894e800161b7d1b"
 
   bottle do
-    sha256 "31f22d798ecf68a1b8c18dda1956a936faa3e2d647044492093af99dadf89e26" => :catalina
-    sha256 "067b331e7e7122c431c4425eff6ce2a6c4f6e449bb77c17d8da702af271b7af6" => :mojave
-    sha256 "0e224122ed2c8e5621b93acde3378b69d40567ca075c50b3d5c4f6ad3c783a7f" => :high_sierra
-    sha256 "1ac3c2582de7d1562ecfd685893e599bee38f774b52ba568ea8e0925889fb63f" => :sierra
+    sha256 "339287d54592d68d27ad3420f71c02bd0bf988b901116a4609ac05560fe38ca0" => :catalina
+    sha256 "c1d88cd19ae7300789f7423ccbda607a1d08c81881e4eb697686211e9451067a" => :mojave
+    sha256 "05b2d973befd459ec885e88876f6ebe9730c684f004eadb8e13bad31ac2dc1cc" => :high_sierra
   end
 
   keg_only :shadowed_by_macos, "macOS provides Kerberos"
