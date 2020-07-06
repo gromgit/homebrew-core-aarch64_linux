@@ -1,8 +1,8 @@
 class Ltl2ba < Formula
   desc "Translate LTL formulae to Buchi automata"
   homepage "https://www.lsv.ens-cachan.fr/~gastin/ltl2ba/"
-  url "https://www.lsv.fr/~gastin/ltl2ba/ltl2ba-1.2.tar.gz"
-  sha256 "9dfe16c2362e953982407eabf773fff49d69b137b13bd5360b241fb4cf2bfb6f"
+  url "https://www.lsv.fr/~gastin/ltl2ba/ltl2ba-1.3.tar.gz"
+  sha256 "912877cb2929cddeadfd545a467135a2c61c507bbd5ae0edb695f8b5af7ce9af"
 
   bottle do
     cellar :any_skip_relocation
