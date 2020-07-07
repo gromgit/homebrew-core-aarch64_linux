@@ -8,9 +8,9 @@ class Cpio < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9d35514dcf0a28d40c8be8517ef67ebc5b503d77d31d0bb600ab380653f45806" => :catalina
-    sha256 "ae7a8a7d04dcd42e8da62e076153fc9aab0ec736c6607578a09aa716cf08c3e1" => :mojave
-    sha256 "11b5aff617eb9113a92e5eed3ba783d418e5af64d93f04b96536fa48aeb7f090" => :high_sierra
+    sha256 "1e2e8f240d9455593a653d4cc0759ee1a0596fe88641ad6a79d652f6596bb21b" => :catalina
+    sha256 "566b73ec056c1441e84e5be4d8f22ae0e9eec609e340d56d9ba22ebefaa273c6" => :mojave
+    sha256 "35cc00b8c97558822cc49cca1f40ba7a3a65af06be17317721ff471414c6f430" => :high_sierra
   end
 
   keg_only :shadowed_by_macos, "macOS provides cpio"
