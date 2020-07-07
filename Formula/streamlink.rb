@@ -9,9 +9,9 @@ class Streamlink < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "541472aab0629e0b2ad66168a962b985c9a09a6c7ac620aa96ac7c7f2119c3a0" => :catalina
-    sha256 "475434dab231841da0a3f99f8d1a78882f46f6fd697e2c651badfa5bce1b64fa" => :mojave
-    sha256 "ad9c580399f80f4c6dc8869680c3a3c589c9c9b0b5831bd4c69014e2c7e42718" => :high_sierra
+    sha256 "0f649d25527c7ea11086a4c2ad754e9f49109b83115c87505d434d1881d1c4f3" => :catalina
+    sha256 "887938363ce748a588264e58b470e95ef5495341ad650ffe1eab1c4447fa74de" => :mojave
+    sha256 "992eb0c7a3b256a3f34b2fe9a7b9a4d42ef84419a9b864df8b00dd47ec5479de" => :high_sierra
   end
 
   depends_on "python@3.8"
