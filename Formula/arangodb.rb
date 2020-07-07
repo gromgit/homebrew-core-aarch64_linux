@@ -71,12 +71,10 @@ class Arangodb < Formula
   end
 
   def caveats
-    s = <<~EOS
+    <<~EOS
       An empty password has been set. Please change it by executing
         #{opt_sbin}/arango-secure-installation
     EOS
-
-    s
   end
 
   plist_options :manual => "#{HOMEBREW_PREFIX}/opt/arangodb/sbin/arangod"
