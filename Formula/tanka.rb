@@ -9,9 +9,9 @@ class Tanka < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "a54f8f418c6ecdfe47395565087a4cd178e6e1a88e211c9af09ac65088e24125" => :catalina
-    sha256 "e6dea5997e1f3d171eb3ab3dfe3ece611ac47a89b94e46aa679e1ed407a3d475" => :mojave
-    sha256 "c540615f2c51aa62fd70c6b0ca31686c2b24216c5873c0e93520ef349296f8db" => :high_sierra
+    sha256 "f6a510b8eedb26c43c2a9bf45883bf1d4b690861fe65c5949ab8f330a7269aa7" => :catalina
+    sha256 "4aed423fb5e06697f27df4b145498f5d477290845400e43e540faf809c9d82eb" => :mojave
+    sha256 "34e4ec5a9364f12701bdedb164eca8ffc11776cb915d738e572e6679937a868e" => :high_sierra
   end
 
   depends_on "go" => :build
