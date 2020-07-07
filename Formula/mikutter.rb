@@ -188,7 +188,7 @@ class Mikutter < Formula
 
       # If this is the start of the test group, skip writing it and mark
       # this as part of the group.
-      if line.match? /group :test/
+      if line.include?("group :test")
         test_group = true
       else
         gemfile_lines << line
