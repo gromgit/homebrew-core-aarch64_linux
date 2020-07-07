@@ -6,11 +6,10 @@ class Ser2net < Formula
   license "GPL-2.0"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "212684df3012508da810e7cd273f1418debf734aacb39949b54aca7b592b1a76" => :catalina
-    sha256 "83435a03046d3e3db9461ae4dcf9357f6809290bf91560f2f3d722cac22ee6ce" => :mojave
-    sha256 "9be8a962e23275a1400a60f94b5e98fc311cf9c917320b5c03d13edcebe40f67" => :high_sierra
-    sha256 "8b4c2e80e4fd884c9761a18684191f5d508c858330989a492922fdb231e1ea5d" => :sierra
+    cellar :any
+    sha256 "c0133e4f6e044e683024ebf11fc81ceb6b38f19da808dea1b6aaa7219cfdf735" => :catalina
+    sha256 "575504b003d96ed94cc054507cebdb89d8db23a381ff325e308c87fb49187079" => :mojave
+    sha256 "3de3c5f9099400e4d4411c39ec33f959279c3d0c9ef03603f6b0128826070bcd" => :high_sierra
   end
 
   depends_on "libyaml"
