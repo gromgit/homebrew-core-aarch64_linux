@@ -10,9 +10,10 @@ class Lc0 < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "a7f05f31e36d930350972f612b624dd93e39d74d901d85e279475245a91a44c5" => :catalina
-    sha256 "c20fb7e7d5121393369e519083558bdf5aaf57f30fdb7bf6af7d28dd30a9050d" => :mojave
-    sha256 "950c7577abdbcf4d1b4642b3e67abb3ee86c712b60518d5fc9760925b1a43bf3" => :high_sierra
+    rebuild 1
+    sha256 "468c173bd7435f97d516b9b4fb1817402a807de7f918a1683747b03fd8885d8c" => :catalina
+    sha256 "c39b2e6a6c154e7a82c358faa46ff878ef6334e9e58638a550baef78a6fe0db1" => :mojave
+    sha256 "7db068bc2f8104a9fa487e91ff06add704d2c491b1894a343fa6d8bc39a8b0e6" => :high_sierra
   end
 
   depends_on "meson" => :build
