@@ -8,10 +8,9 @@ class Ykpers < Formula
 
   bottle do
     cellar :any
-    sha256 "0b11199f0ee0d96c456d700043073eaea499a2e379ce21ce3fd13fe826f3a667" => :catalina
-    sha256 "5a77e8978ad9cf3ed1d596d5ec209cf94a4eb1f13ec7b7b228847c6d6241e662" => :mojave
-    sha256 "5907731c71ecd35c52caebbda5b1cd2bca595a06d2a1571c3ffeadb745e33054" => :high_sierra
-    sha256 "1f2863cf8132643dc9c3572b649792430d3fc932a5e6d49709a7076b10718d8c" => :sierra
+    sha256 "f5615ed1ad958e10d5908c16feb53bc706fd42f7721d0e8cfd3ea8dd4658a221" => :catalina
+    sha256 "1cd502d61459515ab043d2cd8d2d8df3d97f605578766934312fa53343a619ec" => :mojave
+    sha256 "215538176c67853276fe86e6894d6a19be95323d236175c5e4a84b4ce73b39d6" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
