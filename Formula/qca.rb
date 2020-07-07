@@ -19,9 +19,9 @@ class Qca < Formula
 
   bottle do
     cellar :any
-    sha256 "fd1c57be0df0d989b83b63b6c4a7a209b01836053e96fa8de4d4548bcb716fd9" => :catalina
-    sha256 "5545e3bda522faa06f2ee93d8013bf0558d463562a301cd5f9eb51426ac77f6d" => :mojave
-    sha256 "baef310d539b7638144448b203134aca401a797599ba34f2a8bab0193f6bce6a" => :high_sierra
+    sha256 "2a841d8b078e42054b374449de243111a63a150b90381bd080349952f8335599" => :catalina
+    sha256 "c44e0329bf19868a6b06da56b370e411ee7d5dff8c0532e1a40a0720dc54f30e" => :mojave
+    sha256 "7c5bb96e14843f75764c83eec5a6fde61e5c53cdab6e9ac5f02fce94acff75c6" => :high_sierra
   end
 
   depends_on "cmake" => :build
