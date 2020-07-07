@@ -6,10 +6,9 @@ class Asymptote < Formula
   license "GPL-3.0"
 
   bottle do
-    rebuild 1
-    sha256 "6ca74cb50ce6bc7523fd8a36c14f9732722c0b3e2cb7b32e8b951b9ee0ee1c4e" => :catalina
-    sha256 "b98bacf73a3bc568f492f76e999e598a6a32d53a5830b6e756cb853eaf4ea436" => :mojave
-    sha256 "2404ace2bb76465726c7297a228032c883de1a2ba71aa93557a4ecc93dba0a90" => :high_sierra
+    sha256 "dc6d4f13df8030bb0cd0040cd6372af6f0bd7b94cb369821b73d5cb3d996b91f" => :catalina
+    sha256 "1c2d88dfbe123512db773d1499a8e21d4c759ce72099ce02c30f7f46be8a3b41" => :mojave
+    sha256 "2314a6f120bdeef1e01083c501edc4d5519cf6e0e4ebe805bb3dc6f17bc7c66c" => :high_sierra
   end
 
   depends_on "glm" => :build
