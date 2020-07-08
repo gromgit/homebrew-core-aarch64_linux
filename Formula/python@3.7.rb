@@ -4,6 +4,12 @@ class PythonAT37 < Formula
   url "https://www.python.org/ftp/python/3.7.8/Python-3.7.8.tar.xz"
   sha256 "43a543404b363f0037f89df8478f19db2dbc0d6f3ffee310bc2997fa71854a63"
 
+  bottle do
+    sha256 "ccfeeedbeedc0b75b4a13b38616118dd34da7b0ee1749ff090c4cbe8c3b9a623" => :catalina
+    sha256 "6d6054a4217294c08fda8ec009db417b2398cc152a08f7afa2ec409b85b57d80" => :mojave
+    sha256 "fb88eb19f68bcdd588d5f9b8d69bb558195a68b20e70dc7ad3f07579cc3f779f" => :high_sierra
+  end
+
   # setuptools remembers the build flags python is built with and uses them to
   # build packages later. Xcode-only systems need different flags.
   pour_bottle? do
