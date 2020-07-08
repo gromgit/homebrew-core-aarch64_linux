@@ -10,9 +10,9 @@ class Dpkg < Formula
   license "GPL-2.0"
 
   bottle do
-    sha256 "1ea539c6582dfe53b7ea304bfe7cd35a13ba10bed3e8e8ae5e5811d38ede02a5" => :catalina
-    sha256 "697ae45f87862d0db104c87895a80ff03068ed8a131479a36e461bbfb9c535f6" => :mojave
-    sha256 "a7457962cce9de6a30804597648331f3327e9e1fdd0968e54967c843dc8d2771" => :high_sierra
+    sha256 "cddf4a6bdf3f16665a8933761171a3e8fe27f0e1727e47ac983271e153e0398f" => :catalina
+    sha256 "972ae9269ee1633ed240e06942fba50daab872a8784ceb4f926b5079c6eeed11" => :mojave
+    sha256 "ad80329c93d9465ab3e47665426f2f91a26b4ceeb256a8530c6295f5cd5c7c84" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
