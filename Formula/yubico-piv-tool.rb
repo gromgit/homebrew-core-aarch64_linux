@@ -6,10 +6,9 @@ class YubicoPivTool < Formula
   license "BSD-2-Clause"
 
   bottle do
-    cellar :any
-    sha256 "f85cee9151108f2ca5e6e067d846123c1d55044d26ec8c7c3a29a3b7ba4e81f8" => :catalina
-    sha256 "b4d327cc5524b7cbbbb4bf241b59f5d19556484bd5c3109964d070a7586578a2" => :mojave
-    sha256 "1e5c8cc9a64bdfbae6d16b27029e24d9290d2f449f7ef6e90b7c47ea29cf2b3f" => :high_sierra
+    sha256 "11cdcfe2fe335c75e79d00b3b47e0e7970f491b5b6021dc1e53b99cb799359e9" => :catalina
+    sha256 "aec7c7f3cca7e869700ebc5b9a175b0ee48c76079e1f6d29c81431b4b2f9c17e" => :mojave
+    sha256 "87938ef20245216c4b5abef4142fc160e6ef52551406c39c01e533b6be07ca1d" => :high_sierra
   end
 
   depends_on "check" => :build
