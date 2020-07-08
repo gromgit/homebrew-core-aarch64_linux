@@ -1,8 +1,8 @@
 class Orientdb < Formula
   desc "Graph database"
   homepage "https://orientdb.com/"
-  url "https://s3.us-east-2.amazonaws.com/orientdb3/releases/3.1.0/orientdb-3.1.0.zip"
-  sha256 "011170759ad3afb61a0a4a3f1ca3e44e095b42d64500b005208e402d8cb4fddb"
+  url "https://s3.us-east-2.amazonaws.com/orientdb3/releases/3.1.1/orientdb-3.1.1.zip"
+  sha256 "1538bfcc5d1a83e8a686be37950a69a2466d19eb824f754367a7b254c56b748f"
 
   bottle do
     cellar :any_skip_relocation
