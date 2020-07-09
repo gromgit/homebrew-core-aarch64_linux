@@ -7,9 +7,9 @@ class Onednn < Formula
 
   bottle do
     cellar :any
-    sha256 "6c0397633ae7e439d40026bff8593cdf90385b3f08e2a5286c9dbb1684e16097" => :catalina
-    sha256 "179cc20a24a1181e27ecacbdc2ea43f8ebf4575ab798dca288fa32f842c3fbaf" => :mojave
-    sha256 "6a22a61f6c15c14487513dc882c1f762036131a15cf4b2b743bb1590e3f207f3" => :high_sierra
+    sha256 "bcb6c748b97370fea41fb730f939e5cd33bd2b9d486fe997dd5fcb948786835e" => :catalina
+    sha256 "a23e16f86f51179216af505fcb90915e4052d5b88a2ccbc38d3e28a9049fe967" => :mojave
+    sha256 "f0f53d3f8d772f451cec3c9da678acdc9a0f3f4202e5ebba29a10272cebeafa8" => :high_sierra
   end
 
   depends_on "cmake" => :build
