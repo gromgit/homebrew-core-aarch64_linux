@@ -7,10 +7,9 @@ class Asuka < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "3ff6b3aa52148d1468bf6d59d63302c76069dbad963f8722f7e87e53342c40a4" => :catalina
-    sha256 "0042a8cf343f444996bcd95e6b279e891e360f309bea3901a02b983833f48dc8" => :mojave
-    sha256 "174f726dde72bd1ef2a31a0c4b49728338c60521b4ca2c8c3364ceb6f54a0b4d" => :high_sierra
+    sha256 "6c71e20910385795758563119bf66206b6507fc83a6ed70f39872e45acc47415" => :catalina
+    sha256 "8143fc7187b559648f9c7e1f8c53a6f6c9dcee316ba623480abbe1fa6ccef90d" => :mojave
+    sha256 "1b483ae24e861978bcc9487794ffb27a79edbbcb0a1821b24b9e62b5ee3c9c0e" => :high_sierra
   end
 
   depends_on "rust" => :build
