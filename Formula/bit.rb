@@ -8,9 +8,9 @@ class Bit < Formula
   head "https://github.com/teambit/bit.git"
 
   bottle do
-    sha256 "72702ab140594bae7869ca9c89059e924217420c952efb01c55c96a3cfe77137" => :catalina
-    sha256 "66b877c03cd1fdab05f09f851084ff59ccf5807f15ab5ae99176641c6fdb3af8" => :mojave
-    sha256 "532977b4b35d4e433bb1c53e8bcdea5912d49bdc4ce19a6362d7cdc7b4315f61" => :high_sierra
+    sha256 "cf2becd23de2a545f593d4af6bba25880d862408364a8badb37d90981b854d55" => :catalina
+    sha256 "86942f8c8c0781ab5d36571960bbbff81314e749e6b861fd62ed5365bd4280aa" => :mojave
+    sha256 "6ce2e9e3513bb66d823c893023bd50e4c702c6310edc0b55ee1673bcbaf0b92e" => :high_sierra
   end
 
   depends_on "node"
