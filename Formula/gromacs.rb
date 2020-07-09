@@ -5,9 +5,9 @@ class Gromacs < Formula
   sha256 "903183691132db14e55b011305db4b6f4901cc4912d2c56c131edfef18cc92a9"
 
   bottle do
-    sha256 "58dd207377d3cdaad5a162134e113be0bd2efa225c202089d7ef1863cef8f93b" => :catalina
-    sha256 "d3f15cda513906fd9a57832d15e8fecd0627b31e984b7f15981cb57d8f3e40b2" => :mojave
-    sha256 "3617784ee60e87999f305b2530cd5e83ad89db13049e947c597fa1927ab3eae9" => :high_sierra
+    sha256 "88bd44a6a167f4f2acc57dc9cb9eff739131cd1249da2e390ebbb51e0b28e18d" => :catalina
+    sha256 "d2b0f9fc2b1a360ee1e9786a54ac1815f450479173c497a3993719d4878ca7e8" => :mojave
+    sha256 "b9243cffdace751366a94db0fbee1c19db7c7aa2637268d95dbae8915bd167ff" => :high_sierra
   end
 
   depends_on "cmake" => :build
