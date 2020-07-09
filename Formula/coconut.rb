@@ -7,6 +7,13 @@ class Coconut < Formula
   sha256 "5053e876388faaa792154d3e86c27dcfa721d48a3611a8d9b94e7567e5652c0b"
   license "Apache-2.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "721657bf79238e4b65554edf1ae2559d2455223233af7376f3520cae9db0068d" => :catalina
+    sha256 "0c25d41587f659e14e81828374384dc803ac5ad61077103c597257ece36ac0a2" => :mojave
+    sha256 "80c780f3b9b9d1b07a258008aba03156a2ff4e44bd92850d38320d3d8d90b74d" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   resource "cPyparsing" do
