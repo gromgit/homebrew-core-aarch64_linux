@@ -9,9 +9,9 @@ class Cpr < Formula
 
   bottle do
     cellar :any
-    sha256 "74202966e61defa4ad315d34ebc29d8faad8585f90207b4a881beaf7c65de069" => :catalina
-    sha256 "3c77beee80978eb95c7f56e8ad524b164559f81ca0a3b632f2aee8f90b02925d" => :mojave
-    sha256 "a34a587114287f9cc031b31dc268301334ee145d3acd7adad077194c00576751" => :high_sierra
+    sha256 "3de3156e76c50a9c0177f2f6b7856f83d36a7687d070c467acc9424a986a43b1" => :catalina
+    sha256 "477db140c07296b4fb3969b26d136afd1b7106625082cb57dfd8c274dd53da23" => :mojave
+    sha256 "b0c9560ba7c1fe39dfdb316541526494ea685f7c34944882ed7823f769e1cda9" => :high_sierra
   end
 
   depends_on "cmake" => :build
