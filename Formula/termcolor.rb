@@ -5,6 +5,13 @@ class Termcolor < Formula
   sha256 "612f9ff785c74dcbe081bb82e8c915858572cf97dcf396ea7bd6a7d21cf6026a"
   license "BSD-3-Clause"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "bf8dbd74a3f8661b2dcc5968698dc6d0797d32ad4022744fca1c3c2ac1e7b863" => :catalina
+    sha256 "bf8dbd74a3f8661b2dcc5968698dc6d0797d32ad4022744fca1c3c2ac1e7b863" => :mojave
+    sha256 "bf8dbd74a3f8661b2dcc5968698dc6d0797d32ad4022744fca1c3c2ac1e7b863" => :high_sierra
+  end
+
   depends_on "cmake" => :build
 
   def install
