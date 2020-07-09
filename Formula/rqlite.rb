@@ -5,6 +5,13 @@ class Rqlite < Formula
   sha256 "ec7ddfacc134a64acb7b412708dc2f1f5ccc9a1ea7f371ed97aedc59f385b2be"
   license "MIT"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "ef6d87d517b96f0bd49eed83e52372cc1c96c57b1b9bf4c607cc489fc0af925d" => :catalina
+    sha256 "515eee131820fd1e4b3a9e7f5ec54b0b3d8e764fb9e9d7f86bd348cc726945da" => :mojave
+    sha256 "a5cdf690a35b5e1858285a4bf796d49367b3fc46dbecbd8cfa4cf1e9cc8bcb13" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
