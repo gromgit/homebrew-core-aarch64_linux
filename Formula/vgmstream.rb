@@ -8,9 +8,9 @@ class Vgmstream < Formula
 
   bottle do
     cellar :any
-    sha256 "27cb2df8b0a88d31507695a9b8711bbeca66ac9a09f8e34de399a45b7f2c216a" => :catalina
-    sha256 "8a52d5fdc81f87c709c0f41c90b02cba2788f7429402a327fcf343d331346018" => :mojave
-    sha256 "513761e04c72ecf6300222bd06d662b7ab0ae74b56f37cc586dcd514e5f2ffc3" => :high_sierra
+    sha256 "06b1a2c17d2b02de2d9e3580700245141b8bf8e5501e01a5f943d755fbdd9be3" => :catalina
+    sha256 "c47f6241f20aa7d9d89e7058a3fc56c844f8b0b622312c4c281393dfa86b9da4" => :mojave
+    sha256 "44200141865ea303d35c293028aafb528135e27374a116a63a6b506fa5b60ede" => :high_sierra
   end
 
   depends_on "libao"
