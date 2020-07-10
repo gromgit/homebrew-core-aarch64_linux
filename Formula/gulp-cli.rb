@@ -7,6 +7,13 @@ class GulpCli < Formula
   sha256 "0a5a76e5be9856edf019fb5be0ed8501a8d815da1beeb9c6effca07a93873ba4"
   license "MIT"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "231b635ddf8a704a3be4a6ba34611248ece69ed1de04fb82adfa6a20ac83fddb" => :catalina
+    sha256 "29ec2f9cf132be84c577ff6d6ea02845ee96d995e1affdea8961903f9fec616a" => :mojave
+    sha256 "e4d363c9d5035fc814ca6a6820b9c8c35a320cd507067cad5eb0c0e6c337c36e" => :high_sierra
+  end
+
   depends_on "node"
 
   def install
