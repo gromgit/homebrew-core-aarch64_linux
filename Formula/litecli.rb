@@ -7,6 +7,13 @@ class Litecli < Formula
   sha256 "97261512b53cf572ad2270f18e73ae8b0b1eba07a1ed2e90ea785a69b83bdd2d"
   license "BSD-3-Clause"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "2c79502cd84f73df3dbf201917a3bdc091091d3d0fb0ae2f7cc7ca1c0e055f9b" => :catalina
+    sha256 "b4ea02b71598cbf830cc48daae3478ffb8bcdf045423945bd06805b6e1a0a273" => :mojave
+    sha256 "4ecaf830402a79f5b1f5cb8e3437288978b4c42920764604b370a2476d3f2ab7" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   uses_from_macos "sqlite" => :test
