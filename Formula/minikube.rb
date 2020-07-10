@@ -9,10 +9,9 @@ class Minikube < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "b1725719ff2a2973f20e5583021584302bb29d9dd23448709e016a19c101ba4f" => :catalina
-    sha256 "6d825680b695c127d29ad63a50ad3d8dd1c129d35fa90ce623f878eb7fe7dd32" => :mojave
-    sha256 "7ff75886b7fb884af278652c63e715afadeb940e1a66d491637a59aa95980165" => :high_sierra
+    sha256 "bfa00eb2a001481ecd9439978bc8b7b4bbfa88a5ccc2cdd0f09a3892eae399c9" => :catalina
+    sha256 "ff46c53ba1713f56ffe1c08f779f081e909251d4654baa5cc8c8a147cc60a07c" => :mojave
+    sha256 "6d80ac39b1f914c1b80af637fb839c6767bbe15636ec62df7657bbdd0b797f2e" => :high_sierra
   end
 
   depends_on "go" => :build
