@@ -7,9 +7,9 @@ class Yacas < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "19ab04af9d66b53b2686d7e7f8776751eebcecfc384870bc1f9b64daf140ed9a" => :catalina
-    sha256 "7eddc6ecfe6269e3fe86f1187e091567029595f3cd217c31d4b27f13f40767a0" => :mojave
-    sha256 "09a00e2be0c76797919a7d1d4b621755b2594c7ba01ae974a47d654df43681f7" => :high_sierra
+    sha256 "be746c1eb1e965cb3d87195fd0094eee7987dbd74b5f3945e1cfe3e6df3a73cb" => :catalina
+    sha256 "80089e9a9b1e3d64648af1cc34b1142d79332510c6797ea3a2a922d4bf4ccbc2" => :mojave
+    sha256 "10557868ce4e8aa9d146a15b79e0c13e30d3d73c5fee3edaff8e0475678d31bc" => :high_sierra
   end
 
   depends_on "cmake" => :build
