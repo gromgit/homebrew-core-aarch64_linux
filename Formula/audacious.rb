@@ -3,12 +3,12 @@ class Audacious < Formula
   homepage "https://audacious-media-player.org/"
 
   stable do
-    url "https://distfiles.audacious-media-player.org/audacious-4.0.4.tar.bz2"
-    sha256 "27fae151760cc65193f31224d5ba08fe9f52d2c31b9a688e8a5468b97f7c95bf"
+    url "https://distfiles.audacious-media-player.org/audacious-4.0.5.tar.bz2"
+    sha256 "51aea9e6a3b17f5209d49283a2dee8b9a7cd7ea96028316909da9f0bfe931f09"
 
     resource "plugins" do
-      url "https://distfiles.audacious-media-player.org/audacious-plugins-4.0.3.tar.bz2"
-      sha256 "e2a88f5cac3efe03eedbb8d320ca1bb9300788ce66056d2ceba60eb00f8aef97"
+      url "https://distfiles.audacious-media-player.org/audacious-plugins-4.0.5.tar.bz2"
+      sha256 "9f0251922886934f2aa32739b5a30eadfefa7c70dd7b3e78f94aa6fc54e0c55b"
     end
   end
 
