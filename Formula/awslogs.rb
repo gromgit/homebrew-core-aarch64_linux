@@ -9,9 +9,9 @@ class Awslogs < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "48441ef463940aa4bbfb7bac43d784d0834865a481a09c1bd3e032ce5ef5bd13" => :catalina
-    sha256 "5d42bbd21c4652db155611e42a420ad4ce38ad6136c5007e09692782226a7949" => :mojave
-    sha256 "33180704552a4874c686c9cc1467fec4d9036ed2b6160fb98b4f18df58f0aee6" => :high_sierra
+    sha256 "3439948e27c2759b26d54fc48d556379bb3e0cdd194f7762bc845d58315753bb" => :catalina
+    sha256 "2bb913bab7721cd8baf62fabd30db65c1fb5fe268c96ef63385d8f4e1b19212a" => :mojave
+    sha256 "b58eb7be4a8671da93a2e3a91cd451f9af82f9df0be1c7c29b303490eeda0258" => :high_sierra
   end
 
   depends_on "python@3.8"
