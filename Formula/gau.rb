@@ -7,9 +7,9 @@ class Gau < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "8fbfdf238dd7408adf09c159338c48e67ee9030f80f129a3b20683a960ab4531" => :catalina
-    sha256 "d24c1d256af7be9370ec0d12d5deddabde47885d8d2b387ce5bfb6eb0a36e05c" => :mojave
-    sha256 "67ece09c592ad7cdab9ec296e8fbff86fb23410a149aa9bb8f7a295d55661ab7" => :high_sierra
+    sha256 "8ffc46be5edcc8803051755209a1071f31dac2a48664f617a1a195c4bf321e70" => :catalina
+    sha256 "2d56b62c7697629f246bc71edd4b0d809e8378a31aea8d623f73d2eebd33429c" => :mojave
+    sha256 "144d8075a2a90743bf0c52e94582e68b2d6868d4939a9662048e803d32bd173c" => :high_sierra
   end
 
   depends_on "go" => :build
