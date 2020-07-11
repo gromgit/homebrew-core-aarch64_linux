@@ -8,9 +8,9 @@ class Graphviz < Formula
   head "https://gitlab.com/graphviz/graphviz.git"
 
   bottle do
-    sha256 "b7622910804f75702b6124ed0a376f7d4f1c8aaa8dde38601549bb4c9a84589b" => :catalina
-    sha256 "cadbefa8657abfbc63d66827ca1492226d10fc6fdba9276f41e62be3b9434ba2" => :mojave
-    sha256 "c3b0269db2fb418c0e1b7413f10e0bec2d4f69485cfda484e8acf99cb1b86a54" => :high_sierra
+    sha256 "e1cc69e09c92ac1507e461e374de9a0b2d7b01d15e29bf43808f8f458303c67f" => :catalina
+    sha256 "facbce9f3c97e2ad4b0ebf7344da4937722d6ae03c2091853c0bdd4f0e313e08" => :mojave
+    sha256 "86d0bb5111d0f97f4de3b1542280815f0b11cfda64bdbea09ba6ea2764205b8a" => :high_sierra
   end
 
   depends_on "autoconf" => :build
