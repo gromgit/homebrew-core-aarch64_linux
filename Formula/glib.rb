@@ -8,9 +8,9 @@ class Glib < Formula
   license "LGPL-2.1"
 
   bottle do
-    sha256 "c7259832a3bf3fe8093962473718a2ca030a94c54f21cbdc46369974d6e80be8" => :catalina
-    sha256 "47d4a4666df88be5c56def3cb5d8e7c0e3ee6baf431584c40783d98a063fb943" => :mojave
-    sha256 "1e5fadb54980899f293ea99796c33f25109c72ad745b9bc5583a1f86f02bee06" => :high_sierra
+    sha256 "4ddc126dde12d96499950c64ca5bd38a199ad636573a05b871cd355d7b09a077" => :catalina
+    sha256 "70e9afe4b735e858e15a5f958b572afb1a3811b8f9f70f83acc817b6b95d5f1b" => :mojave
+    sha256 "cf116ff6a983e16de79b4a2837a51d24ebd42b7fb69df191198391a7f7bf0d1c" => :high_sierra
   end
 
   depends_on "meson" => :build
