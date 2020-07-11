@@ -6,9 +6,9 @@ class Dnsdist < Formula
   revision 2
 
   bottle do
-    sha256 "602c852e16dff8212099643fc37627d727178db0d133cc86d090e9ab0d218fda" => :catalina
-    sha256 "0d7838982a1c01e4951117cd8f34432b4eb707e425ebe10631a1b68905e67f85" => :mojave
-    sha256 "6a7bd408e30e104559bd989faab8c3bdde347164b72ec146ae6a025337e9ebfa" => :high_sierra
+    sha256 "55196962851a917ba7d147b1d6905de86d9111705f7cfbe7a3a0c1ade40ad39d" => :catalina
+    sha256 "8b1a94d7749dc411c86a903af005253db68d644493cf53f9e31c936e604a98d3" => :mojave
+    sha256 "3ec1973ec14d2e4251b5521530ba098041bd1c1f264fcb537cafd0443f7da010" => :high_sierra
   end
 
   depends_on "boost" => :build
