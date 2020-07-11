@@ -8,9 +8,9 @@ class Glslviewer < Formula
 
   bottle do
     cellar :any
-    sha256 "4df521fbbc143343c32dd68f743f337954063f0852dcab3aa75a08a8b8be3509" => :catalina
-    sha256 "c15fc78aa3d9ec10dadabac7e2d240c6b05bfee77d0248c7c05f8ffea06ec971" => :mojave
-    sha256 "c1bc3d4aaaba644a4c825c090d0aa2987ae243c78f7e931c99ef6631d6f81cbc" => :high_sierra
+    sha256 "506e7fc2898863823d8b481c4c89e782d6b82624b5fef6284181d502dce2f4a3" => :catalina
+    sha256 "15b623c6dce054c5529940a152c4037b5821a50cee7d66b5b3ea78726294792a" => :mojave
+    sha256 "764379ab8e66240539d5a7c057313887ef56ee26d2625beb44eab481ba9762a2" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
