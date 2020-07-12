@@ -8,11 +8,9 @@ class Ppl < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 "dd7a6ceafb1719f8aa5968cc4b05f18e1fe1ec37256db061776fc3afb2280e6a" => :catalina
-    sha256 "59aa81dbfdc59de055e528724282fb0a1f7c627fc4bbc2f6b2d026e0c623db6c" => :mojave
-    sha256 "c6ff41541033e2c27648dff1c336aa0d4548f80fb355569f1e6677991ae6436f" => :high_sierra
-    sha256 "f9aef2f3cfb6bfd0732b544e836baf59f279efc9830531f104509b11d8964b0d" => :sierra
+    sha256 "65aa31c0201a860d32e874ab34cbdea7132101fc6461510e06641a11ca762e82" => :catalina
+    sha256 "253714635b8718e7822853e1385c546b665450b7059e8067e4008ed865eae261" => :mojave
+    sha256 "7a9b9ceabcf71bf31ed8185caaa6e78c065511ba3e6cf805be13402983c2a7e1" => :high_sierra
   end
 
   depends_on "gmp"
