@@ -5,9 +5,9 @@ class Bmake < Formula
   sha256 "6538fc4319ef79d178dca76d3b869f7aa93a9bb7b510df08a7d872c01a56b76c"
 
   bottle do
-    sha256 "c38faae30ac15a10eb003a9f73b97505b6b05da99e740c09d5d246d88e18581b" => :catalina
-    sha256 "24630b2df6309d587373d73d2f08edc0a63b7d08015eb3a82f1a4b0f9de1bfa9" => :mojave
-    sha256 "da7078544237d564c67a05ce966c0d32adf53532072cfb5e5b224c06b2c942e8" => :high_sierra
+    sha256 "2fa5a8cd06e9fc40e2478133bc6edf197aa360bec442ce2bff281e675fa2c0a5" => :catalina
+    sha256 "d3933ebbaf5ea9e688c7beee9af8052ae959bc484581f011fc14a07de18f0c42" => :mojave
+    sha256 "070ccb28e6a32ce2fcc94126a1e186c697311d374cd254a03628224dab25c15f" => :high_sierra
   end
 
   def install
