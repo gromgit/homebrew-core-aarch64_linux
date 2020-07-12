@@ -9,9 +9,9 @@ class Trailscraper < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9d91cab0673155227938faa11a4eb961bcd13c20ffc96b013ae7873c1a5a2435" => :catalina
-    sha256 "19e452793c27d450ae9b010ae44bab6221e993e86c824883908fcda6007e0d90" => :mojave
-    sha256 "df511d725019e58f9d3e6945fe4cac6c6b54a665028ca64c337fc461397720ff" => :high_sierra
+    sha256 "41aad6155d9d4b2dcba4d53ed476b332bd49bca7a12de90275860aa02a65ad92" => :catalina
+    sha256 "6d4cfca0f6bacecde59b6371e5226ff4b464fcf1995698cf93e64a8fc90e2b7e" => :mojave
+    sha256 "51d3136645481a1692b49bbc3f1c428d55e52e7fc6fe54e1e3006dcdaa821d31" => :high_sierra
   end
 
   depends_on "python@3.8"
