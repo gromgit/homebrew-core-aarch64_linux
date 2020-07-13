@@ -1,8 +1,8 @@
 class Sslh < Formula
   desc "Forward connections based on first data packet sent by client"
   homepage "https://www.rutschle.net/tech/sslh.shtml"
-  url "https://www.rutschle.net/tech/sslh/sslh-v1.20.tar.gz"
-  sha256 "a7f49b0a1cfcb7bb9d97f5ffa932bff11c5f65d9a9bd8fe1812481dee5855116"
+  url "https://www.rutschle.net/tech/sslh/sslh-v1.21.tar.gz"
+  sha256 "a79de489a204b7a33cfd7633f4ad0eef38437f7077ab9eec9a3ded4db51da6aa"
   license "GPL-2.0"
   head "https://github.com/yrutschle/sslh.git"
 
@@ -23,6 +23,14 @@ class Sslh < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{sbin}/sslh -V")
+    listen_port = free_port
+    target_port = free_port
+
+    fork do
+      exec sbin/"sslh", "--http=localhost:#{target_port}", "--listen=localhost:#{listen_port}", "--foreground"
+    end
+
+    sleep 1
+    system "nc", "-z", "localhost", listen_port
   end
 end
