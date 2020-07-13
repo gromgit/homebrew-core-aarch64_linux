@@ -8,9 +8,9 @@ class DhallYaml < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "3561747fc8f2c4f674007bec5edb4b25c94e986cd8fc63f59faaad01aff723e6" => :catalina
-    sha256 "a89f7bf087f4718712b48175340bda6b8c63bb7d526cff3f0fe3605d2a1ece6d" => :mojave
-    sha256 "253aba683a6574aadf3823b66452cb169ed1549b8a83ae0017cde79cb712ca32" => :high_sierra
+    sha256 "6e267f158c3fcb8f5442ab893aae92e2e7051023085b5f207271b4b846e26e4e" => :catalina
+    sha256 "54c3ca079dee8bbabffe6247f55ec30591f0a3facc8a76aeeec841423da63926" => :mojave
+    sha256 "f82cd5dc0c3b8bca94dedfe0a709ea5dab38f7e5ab110df504ead04b8ec7d278" => :high_sierra
   end
 
   depends_on "cabal-install" => :build
