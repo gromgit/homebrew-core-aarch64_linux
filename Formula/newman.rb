@@ -9,9 +9,9 @@ class Newman < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b80e304708dd3d1b68cd402779a62953941b646d5e990ccbfcbd28c8e0e8ae3d" => :catalina
-    sha256 "51e3c6a2cb29d72931820f1a1e52f7c4470ef71c893d3fcb5f792c2dfebf54ed" => :mojave
-    sha256 "a714b5c7d88a374272ebd88e261ed4bb842ae9ba94c61074a6a65a87140ce48b" => :high_sierra
+    sha256 "7dbf99b62e25a9ba6dc779120479340d4ed92892d0543148e513c1458b2cfa61" => :catalina
+    sha256 "6138949598a71507c24a200cec0a4c6892efd4148b99a60836025166d50fcd8b" => :mojave
+    sha256 "bd039293615be7652c6fe012571775ba6482721e71df5388de07035fe0764343" => :high_sierra
   end
 
   depends_on "node"
