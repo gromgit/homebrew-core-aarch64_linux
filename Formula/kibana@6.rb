@@ -5,6 +5,13 @@ class KibanaAT6 < Formula
       :tag      => "v6.8.8",
       :revision => "dc91d17ffcdc72efa4fe5944ac5abd22f9a8620d"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "bbf162fefaa43016ca08d2d10a64c37b05ab6702cc1a80607352c106ed7f088d" => :catalina
+    sha256 "d17a21a4d9da3c4650162e2fa34fb280161774d2c224651d24d541f78cab4309" => :mojave
+    sha256 "2b57034aebfa1941766d0875e97eb37e815e99f67c4596959f749f70e5c8a8e4" => :high_sierra
+  end
+
   keg_only :versioned_formula
 
   depends_on "yarn" => :build
