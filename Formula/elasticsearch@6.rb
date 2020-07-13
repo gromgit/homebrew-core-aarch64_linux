@@ -5,6 +5,13 @@ class ElasticsearchAT6 < Formula
   sha256 "aa2d751ec449d70164338049e9596e77d6f6fed8ab47cd604663605031217364"
   license "Apache-2.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "5c0ede4d4fe23d8d370bc86623637eae600081ebeeb3c25a8582d8dfc976ef96" => :catalina
+    sha256 "5c0ede4d4fe23d8d370bc86623637eae600081ebeeb3c25a8582d8dfc976ef96" => :mojave
+    sha256 "5c0ede4d4fe23d8d370bc86623637eae600081ebeeb3c25a8582d8dfc976ef96" => :high_sierra
+  end
+
   keg_only :versioned_formula
 
   depends_on :java => "1.8"
