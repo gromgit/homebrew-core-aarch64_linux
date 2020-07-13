@@ -8,9 +8,9 @@ class DhallJson < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "30e4dd29ec472fb53ba842fe792e0ed75d82530750621aeddd9ec9e642f12351" => :catalina
-    sha256 "cf806eab9566d74071a545e27dd26a568cbf019d87705f059d98c100fb21c9bc" => :mojave
-    sha256 "953853ab55f1421a6fed8908407593c62b60d20d28a1a3daac47d04f2d366efc" => :high_sierra
+    sha256 "5a83bdc7433f7c86f3bfd84b8b6bc92b41a902306bbc73972dbb8a8245d69f54" => :catalina
+    sha256 "60171764b0f006df86d88b2b0db0e86633e55d002b68353273d2c42a76863beb" => :mojave
+    sha256 "7e69b892113937496bf6a3738261d8473b1e9c29c08ffb52c3acd1673d0f97d9" => :high_sierra
   end
 
   depends_on "cabal-install" => :build
