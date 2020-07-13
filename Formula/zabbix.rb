@@ -6,9 +6,9 @@ class Zabbix < Formula
   license "GPL-2.0"
 
   bottle do
-    sha256 "2ac9eaa79b953244dda80543660b22150d7c6e9ce444386e5448f63cf76df412" => :catalina
-    sha256 "0c52ff483bc2081662b76f0e0c5cfc10b933780a149bc14c29869ee3ea74f424" => :mojave
-    sha256 "b336bc2a9533f0d54e2c6277cd3cd9de3577596049aa44bfbb4ba2791d3bfa9c" => :high_sierra
+    sha256 "c315986435d2fc16410f756c9cadbf4b40d50d9592729bca4b11a33ac8d9eae7" => :catalina
+    sha256 "f27b66332b604c902f6a42ce53b0e8c0b72c47a10e580cc65f9b3fb1fb32da4e" => :mojave
+    sha256 "c6138330823cf52a44a4b8367d8fd318ae4e2f82d97d644c9228539bda73e1c3" => :high_sierra
   end
 
   depends_on "openssl@1.1"
