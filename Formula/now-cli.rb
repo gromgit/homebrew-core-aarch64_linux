@@ -5,6 +5,7 @@ class NowCli < Formula
   homepage "https://zeit.co/now"
   url "https://registry.npmjs.org/now/-/now-19.1.2.tgz"
   sha256 "99c9bdd05b1039a7f128740eaa5cd502c9f764024e083f91a3ffa47352fedc54"
+  license "Apache-2.0"
 
   bottle do
     cellar :any_skip_relocation
