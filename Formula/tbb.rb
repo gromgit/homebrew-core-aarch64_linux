@@ -4,6 +4,7 @@ class Tbb < Formula
   url "https://github.com/intel/tbb/archive/v2020.2.tar.gz"
   version "2020_U2"
   sha256 "4804320e1e6cbe3a5421997b52199e3c1a3829b2ecb6489641da4b8e32faf500"
+  license "Apache-2.0"
 
   bottle do
     cellar :any
