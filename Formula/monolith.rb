@@ -7,9 +7,9 @@ class Monolith < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "dfe598be69f1960dbf3168d1f4f18f385ccc771912196fe903f7850426ef8116" => :catalina
-    sha256 "99ff8d9c27b9d6fa01c45d91307b73bab26c1245803909f0ebe22eadafdb329d" => :mojave
-    sha256 "4f7ecfda2f7bf61a960d53a804a64d89fce3cae3f9c48b1a28e8b75fe435df82" => :high_sierra
+    sha256 "a649875bbcc3d2fecffa1fa5cb9493145897130b1d4b56265d3fe838d76bd052" => :catalina
+    sha256 "32a2ea3a355cd293597bf5e3ff8f90d22d78ffd5eca961d7b11d890bafbef10c" => :mojave
+    sha256 "7b19c2cb961629047ab88c32dbc3752490f3bf87283838104334f812eaf3ae74" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
