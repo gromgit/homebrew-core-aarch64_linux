@@ -3,6 +3,7 @@ class Redis < Formula
   homepage "https://redis.io/"
   url "http://download.redis.io/releases/redis-6.0.5.tar.gz"
   sha256 "42cf86a114d2a451b898fcda96acd4d01062a7dbaaad2801d9164a36f898f596"
+  license "BSD-3-Clause"
   head "https://github.com/redis/redis.git", :branch => "unstable"
 
   bottle do
