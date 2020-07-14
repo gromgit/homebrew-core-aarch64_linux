@@ -3,6 +3,7 @@ class Vapor < Formula
   homepage "https://vapor.codes"
   url "https://github.com/vapor/toolbox/archive/18.0.0.tar.gz"
   sha256 "1d1b72d92dfb4e417dbbfe8486149f64a92cbfcf86db5209686fdd926b43c74c"
+  license "MIT"
   head "https://github.com/vapor/toolbox.git"
 
   bottle do
