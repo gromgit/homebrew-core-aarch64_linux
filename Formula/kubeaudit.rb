@@ -1,8 +1,8 @@
 class Kubeaudit < Formula
   desc "Helps audit your Kubernetes clusters against common security controls"
   homepage "https://github.com/Shopify/kubeaudit"
-  url "https://github.com/Shopify/kubeaudit/archive/v0.8.0.tar.gz"
-  sha256 "0efcbc176803e7a5ebc864b82d4cc6011f85f4d63778f0bae010f1d09b7e4d66"
+  url "https://github.com/Shopify/kubeaudit/archive/v0.9.0.tar.gz"
+  sha256 "fdc7eb7a072e98fcba1470b9d47ce5bc15d7594e50c840272651367734b3470f"
   license "MIT"
   head "https://github.com/Shopify/kubeaudit.git"
 
@@ -22,12 +22,11 @@ class Kubeaudit < Formula
       -X github.com/Shopify/kubeaudit/cmd.BuildDate=#{Date.today}
     ]
 
-    system "go", "build", "-ldflags", ldflags.join(" "), "-trimpath", "-o", bin/"kubeaudit"
-    prefix.install_metafiles
+    system "go", "build", "-ldflags", ldflags.join(" "), *std_go_args, "./cmd"
   end
 
   test do
     output = shell_output(bin/"kubeaudit -c /some-file-that-does-not-exist all 2>&1", 1).chomp
-    assert_match "Unable to load kubeconfig. Could not open file /some-file-that-does-not-exist.", output
+    assert_match "failed to open kubeconfig file /some-file-that-does-not-exist", output
   end
 end
