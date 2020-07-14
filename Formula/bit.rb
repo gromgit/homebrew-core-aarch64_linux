@@ -5,6 +5,7 @@ class Bit < Formula
   homepage "https://bit.dev"
   url "https://registry.npmjs.org/bit-bin/-/bit-bin-14.8.8.tgz"
   sha256 "25d899bacd06d77fad41026a9b19cbe94c8fb986f5fe59ead7ccec9f60fd0ef9"
+  license "Apache-2.0"
   head "https://github.com/teambit/bit.git"
 
   bottle do
