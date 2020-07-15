@@ -8,9 +8,10 @@ class Aom < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "acbd463a00751edc0ce704bd14f493442541f4d5a2207225e9497ba4e1ce87a4" => :catalina
-    sha256 "df98cc962553615767b033086833ef6f004c9b2d47062ae23d75f93013b4fba1" => :mojave
-    sha256 "036d2a82eab972d1111020dddf892f94969fc39eaa0c3a1897e20b6d8b1f535b" => :high_sierra
+    rebuild 1
+    sha256 "c4a83e9bc36bc1fe6633d8a4fef10436e5c79e825352e6562d776dcff6dbcd08" => :catalina
+    sha256 "96537ef620ea5035ffbb643db83edc9fc7e7995fbcd08ebd16fef74d5e17b411" => :mojave
+    sha256 "39d14687b9a45a50f921a19e23b935799d052686854bb247ed59235bcc28c59d" => :high_sierra
   end
 
   depends_on "cmake" => :build
