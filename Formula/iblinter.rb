@@ -8,8 +8,8 @@ class Iblinter < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "317e711f65b4a62562f8d32834cbd1c7c0a20fca44c5d3f9cc34974848a5a1e2" => :catalina
-    sha256 "7bbba8112111c1923eb9a2e0234d0630aa20a0f9fa34944260e4951f291ff9ba" => :mojave
+    sha256 "9c1ef57667d9068b21544871f750357897b123e3d6e329982ad06f96affb2c15" => :catalina
+    sha256 "0a7c93d98d2f992934b88700d3ee0a203d575c65cd58786163fdab9fd209c0a0" => :mojave
   end
 
   depends_on :xcode => ["10.2", :build]
