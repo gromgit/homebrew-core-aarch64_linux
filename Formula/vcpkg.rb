@@ -3,6 +3,7 @@ class Vcpkg < Formula
   homepage "https://github.com/microsoft/vcpkg"
   url "https://github.com/microsoft/vcpkg/archive/2020.06.tar.gz"
   sha256 "cfaecee6f18b6e2763f41c4257b6d6a1d2ef536a2018a6c7f579df0b6ad42e56"
+  revision 1
 
   bottle do
     cellar :any
@@ -15,6 +16,7 @@ class Vcpkg < Formula
   depends_on "ninja" => :build
 
   if MacOS.version <= :mojave
+    depends_on "gcc"
     fails_with :clang do
       cause "'file_status' is unavailable: introduced in macOS 10.15"
     end
