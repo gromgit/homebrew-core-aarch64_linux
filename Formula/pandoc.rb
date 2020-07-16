@@ -11,9 +11,10 @@ class Pandoc < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "be40069cb95d3de8fdf16e311998bb1e6315a635d7e93183ba771a12d3f548cd" => :catalina
-    sha256 "b1f1dea0254517166a8575c5e2b2ee279ccbdb682578d62ba66a91011595fa78" => :mojave
-    sha256 "98bc7e09e12d87d7c0cd372ab658bc767516c841d00502535e4dc05e0607565f" => :high_sierra
+    rebuild 1
+    sha256 "ce29d83ef5cf103c34a3a2339239f9ee1e7f566cd88c218a5cfde0558b237240" => :catalina
+    sha256 "10dedb8ffcffce1410ab12998e2c47b251b442e860afbfb9766c1be6b22a94f8" => :mojave
+    sha256 "3e39b1ce08f07ac89200da2abef10fc5812a8898ba6daee3e5d6c871ff0d9f6b" => :high_sierra
   end
 
   depends_on "cabal-install" => :build
