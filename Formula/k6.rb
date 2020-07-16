@@ -2,8 +2,8 @@ class K6 < Formula
   desc "Modern load testing tool, using Go and JavaScript"
   homepage "https://k6.io"
   url "https://github.com/loadimpact/k6.git",
-    :tag      => "v0.26.2",
-    :revision => "459da79ef51b37e5eaba4575c9065d9e592e5c49"
+    :tag      => "v0.27.0",
+    :revision => "6fa889d0011729fbac4c3365361610d9bf019d4d"
   license "AGPL-3.0"
 
   bottle do
@@ -30,8 +30,13 @@ class K6 < Formula
   end
 
   test do
-    output = "Test finished"
-    assert_match output, shell_output("#{bin}/k6 run github.com/loadimpact/k6/samples/http_get.js 2>&1")
+    (testpath/"whatever.js").write <<~EOS
+      export default function() {
+        console.log("whatever");
+      }
+    EOS
+
+    assert_match "whatever", shell_output("#{bin}/k6 run whatever.js 2>&1")
     assert_match version.to_s, shell_output("#{bin}/k6 version")
   end
 end
