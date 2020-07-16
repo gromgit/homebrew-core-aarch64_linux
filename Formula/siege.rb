@@ -6,9 +6,9 @@ class Siege < Formula
   license "GPL-3.0"
 
   bottle do
-    sha256 "b7de9172ade8285cc5107e598397b6519edee6c1ecf4bb095faa7a1da1346da0" => :catalina
-    sha256 "5a0064c051bbd111b8d8723fce3107e41777b223bedffc4e0d0d9da1967e6703" => :mojave
-    sha256 "7c4381adab349f46db1445936da393a0f6d007b0f47f3d7660686718b5f9db4e" => :high_sierra
+    sha256 "ccc545449c2a0bacb0054078faee630f23e4728d1bf137cba9c5d8aa82e02495" => :catalina
+    sha256 "0704038a2995eec4ffacbb3554230b2825ebb21c3c9c612baae24999a620e183" => :mojave
+    sha256 "d2793b5aee87ffe4c04fca2c807477c3bcc8c5979888d26db995e0e58bece246" => :high_sierra
   end
 
   depends_on "openssl@1.1"
