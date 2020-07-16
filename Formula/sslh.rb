@@ -8,10 +8,9 @@ class Sslh < Formula
 
   bottle do
     cellar :any
-    sha256 "be0c707c6a1216bc06da14003f0af6197ac450a2fe4b6b6ce12b3e614b54fbca" => :catalina
-    sha256 "cee0f6398a940312dd3198dda55d949955aa1374cd15fb5841c0446c67508e4d" => :mojave
-    sha256 "b1d1ea3c654defbd69cc850ecb9b5b97b09e3b8c991faf48cb22d4190e0791b6" => :high_sierra
-    sha256 "8a4b0d4715358a714c8f3ef86496e91416bcfe70067f3d71db30f97616b71080" => :sierra
+    sha256 "4f2c4bfc6b9252f00f42629992debe0953976633f721e03f585997ad085efb39" => :catalina
+    sha256 "4cc621a49194971597f1295b201dcbea188608b646eaa6b3a3cfd3fbfc9f4533" => :mojave
+    sha256 "b632286e7df5075fc5b5d19fad5957647ec0c6b5796b972ac62bd6132521f734" => :high_sierra
   end
 
   depends_on "libconfig"
