@@ -9,9 +9,9 @@ class Tox < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "159f0d497026f10f78c5b9c788a70cb8a2a16739787c05a7522a2c2cd0fbebc0" => :catalina
-    sha256 "cffb08eac3a9400fd7aa042ce5672d5f702a14a8905c15b02a705dc5da34ed70" => :mojave
-    sha256 "cefed375c68be3de324616ddb6f914f97b927105bfb4e6cd543f554d302344d5" => :high_sierra
+    sha256 "357f78a0eb0d47b84da0753958b53ff488758053dc3ddd007e150d76ce8a7c16" => :catalina
+    sha256 "e84418653c3f83d885f978b74f65228a2fae9dde4f33a3e387e20cc56723ca3c" => :mojave
+    sha256 "f6482e18e4229c816d34b4d0844839cd8c85480cfd989e6d8cc3f5d0c545f69e" => :high_sierra
   end
 
   depends_on "python@3.8"
