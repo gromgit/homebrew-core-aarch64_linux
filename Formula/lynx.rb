@@ -18,6 +18,9 @@ class Lynx < Formula
   uses_from_macos "ncurses"
 
   def install
+    # Using --with-screen=ncurses to due to behaviour change in Big Sur
+    # https://github.com/Homebrew/homebrew-core/pull/58019
+
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
                           "--mandir=#{man}",
@@ -26,7 +29,9 @@ class Lynx < Formula
                           "--with-zlib",
                           "--with-bzlib",
                           "--with-ssl=#{Formula["openssl@1.1"].opt_prefix}",
-                          "--enable-ipv6"
+                          "--enable-ipv6",
+                          "--with-screen=ncurses",
+                          "--disable-config-info"
     system "make", "install"
   end
 
