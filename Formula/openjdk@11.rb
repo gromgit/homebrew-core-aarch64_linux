@@ -1,9 +1,8 @@
 class OpenjdkAT11 < Formula
   desc "Development kit for the Java programming language"
   homepage "https://openjdk.java.net/"
-  url "https://hg.openjdk.java.net/jdk-updates/jdk11u/archive/jdk-11.0.7+10.tar.bz2"
-  version "11.0.7+10"
-  sha256 "e86d27cc3119be2178fc20c0115f8863fa86ac3ffd0c825fef7d16683f78b852"
+  url "https://hg.openjdk.java.net/jdk-updates/jdk11u/archive/jdk-11.0.8-ga.tar.bz2"
+  sha256 "0c10838f708a5987d2980aee56c5c50c02637e21387215f3e13358b93d107192"
   license "GPL-2.0"
 
   bottle do
@@ -32,7 +31,7 @@ class OpenjdkAT11 < Formula
     boot_jdk = boot_jdk_dir/"Contents/Home"
     java_options = ENV.delete("_JAVA_OPTIONS")
 
-    short_version, _, build = version.to_s.rpartition("+")
+    _, _, build = version.to_s.rpartition("+")
 
     chmod 0755, "configure"
     system "./configure", "--without-version-pre",
@@ -50,7 +49,7 @@ class OpenjdkAT11 < Formula
     ENV["MAKEFLAGS"] = "JOBS=#{ENV.make_jobs}"
     system "make", "images"
 
-    jdk = "build/macosx-x86_64-normal-server-release/images/jdk-bundle/jdk-#{short_version}.jdk"
+    jdk = Dir["build/*/images/jdk-bundle/*"].first
     libexec.install jdk => "openjdk.jdk"
     bin.install_symlink Dir["#{libexec}/openjdk.jdk/Contents/Home/bin/*"]
     include.install_symlink Dir["#{libexec}/openjdk.jdk/Contents/Home/include/*.h"]
