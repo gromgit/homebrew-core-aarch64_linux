@@ -1,9 +1,9 @@
 class Scw < Formula
-  desc "Manage BareMetal Servers from command-line (as easily as with Docker)"
+  desc "Command-line Interface for Scaleway"
   homepage "https://github.com/scaleway/scaleway-cli"
-  url "https://github.com/scaleway/scaleway-cli/archive/v1.20.tar.gz"
-  sha256 "4c50725be7bebdab17b8ef77acd230525e773631fef4051979f8ff91c86bebf8"
-  head "https://github.com/scaleway/scaleway-cli.git"
+  url "https://github.com/scaleway/scaleway-cli/archive/v2.0.0.tar.gz"
+  sha256 "3f219c83e3766eb253791ac74c6bf92f8b2234e147cf5d268254cf5cc6ab7d03"
+  license "Apache-2.0"
 
   bottle do
     cellar :any_skip_relocation
@@ -16,20 +16,22 @@ class Scw < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    ENV["GOBIN"] = buildpath
-    (buildpath/"src/github.com/scaleway/scaleway-cli").install Dir["*"]
+    system "go", "build", *std_go_args, "./cmd/scw"
 
-    system "go", "build", "-o", "#{bin}/scw", "-v", "-ldflags",
-           "-X github.com/scaleway/scaleway-cli/pkg/scwversion.GITCOMMIT=homebrew",
-           "github.com/scaleway/scaleway-cli/cmd/scw/"
+    zsh_output = Utils.safe_popen_read({ "SHELL" => "zsh" }, bin/"scw", "autocomplete", "script")
+    (zsh_completion/"_scw").write zsh_output
 
-    bash_completion.install "src/github.com/scaleway/scaleway-cli/contrib/completion/bash/scw.bash"
-    zsh_completion.install "src/github.com/scaleway/scaleway-cli/contrib/completion/zsh/_scw"
+    bash_output = Utils.safe_popen_read({ "SHELL" => "bash" }, bin/"scw", "autocomplete", "script")
+    (bash_completion/"scw").write bash_output
+
+    fish_output = Utils.safe_popen_read({ "SHELL" => "fish" }, bin/"scw", "autocomplete", "script")
+    (fish_completion/"scw.fish").write fish_output
   end
 
   test do
-    output = shell_output(bin/"scw version")
-    assert_match "OS/Arch (client): darwin/amd64", output
+    (testpath/"config.yaml").write ""
+    output = shell_output(bin/"scw -c config.yaml config set access-key=SCWXXXXXXXXXXXXXXXXX")
+    assert_match "✅ Successfully update config.", output
+    assert_match "access_key: SCWXXXXXXXXXXXXXXXXX", File.read(testpath/"config.yaml")
   end
 end
