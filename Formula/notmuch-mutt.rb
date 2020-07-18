@@ -6,6 +6,13 @@ class NotmuchMutt < Formula
   license "GPL-3.0"
   head "https://git.notmuchmail.org/git/notmuch", :using => :git
 
+  bottle do
+    cellar :any
+    sha256 "a3f8a11f72c219bcc2f6eb0c6e8a5a1b5656e3364257e45c1716a8bf685fa412" => :catalina
+    sha256 "a31991d286a3d3aaf904c49100c7379ca44c0802fbaa62e222d897a157576ff0" => :mojave
+    sha256 "7774d94c0fae96c5dd3d0ea1a71c0f3f9d230b507f4759756bbb9ddebd25dfa9" => :high_sierra
+  end
+
   depends_on "readline"
 
   uses_from_macos "perl"
