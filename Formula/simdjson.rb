@@ -6,6 +6,13 @@ class Simdjson < Formula
   license "Apache-2.0"
   head "https://github.com/simdjson/simdjson.git"
 
+  bottle do
+    cellar :any
+    sha256 "11da8bfcaa21343a51eff42f2c9f7e87f5387bbbf0e12fd1e36dbad4c8eb040c" => :catalina
+    sha256 "06cd4d16ce496a7f5f3c1ec7e293c0cfa565c80442838248eaadcb9e3da42116" => :mojave
+    sha256 "017145ef48f08c85b7f25a29dac104c48078a070c346397d88a1b472e8db61a8" => :high_sierra
+  end
+
   depends_on "cmake" => :build
 
   def install
