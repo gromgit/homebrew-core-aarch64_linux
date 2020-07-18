@@ -1,8 +1,8 @@
 class Peco < Formula
   desc "Simplistic interactive filtering tool"
   homepage "https://github.com/peco/peco"
-  url "https://github.com/peco/peco/archive/v0.5.7.tar.gz"
-  sha256 "9bf4f10b3587270834380e1ea939625bd47eaa166bfabd050e66fad3ffd8f9b0"
+  url "https://github.com/peco/peco/archive/v0.5.8.tar.gz"
+  sha256 "90d87503265c12f8583f5c6bc19c83eba7a2e15219a6339d5041628aa48c4705"
   license "MIT"
   head "https://github.com/peco/peco.git"
 
@@ -16,13 +16,8 @@ class Peco < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    (buildpath/"src/github.com/peco/peco").install buildpath.children
-    cd "src/github.com/peco/peco" do
-      system "make", "build"
-      system "go", "build", "-o", bin/"peco", "cmd/peco/peco.go"
-      prefix.install_metafiles
-    end
+    system "make", "build"
+    system "go", "build", *std_go_args, "cmd/peco/peco.go"
   end
 
   test do
