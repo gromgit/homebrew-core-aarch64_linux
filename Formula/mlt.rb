@@ -18,9 +18,9 @@ class Mlt < Formula
   end
 
   bottle do
-    sha256 "5703d5533277335653085a3beed96f9df7053865b49d069d2d9fc2106550c8f2" => :catalina
-    sha256 "3b5dbf20d3443b7695977c5b2e9a8dbdbe1aca98e60f79530ec61dcd01c42ca7" => :mojave
-    sha256 "5a16fe520d4e3f3b03178c528dfa2147309af558a3b08bb10f2cc283a59f218c" => :high_sierra
+    sha256 "e81b8558b3d04eabd9d02084cad01278b2f3ae64c37edbbe8c5026983aac829e" => :catalina
+    sha256 "59d187ff682eb6e586f2223c79288b1cb8833a306260539bd12adaeeddab562d" => :mojave
+    sha256 "a376edfbe8b4d526b52da5df322d0bb6c1c0daaf8caefd57c25d8715d218b388" => :high_sierra
   end
 
   head do
