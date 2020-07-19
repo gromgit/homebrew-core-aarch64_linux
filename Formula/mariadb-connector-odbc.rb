@@ -1,8 +1,8 @@
 class MariadbConnectorOdbc < Formula
   desc "Database driver using the industry standard ODBC API"
   homepage "https://downloads.mariadb.org/connector-odbc/"
-  url "https://downloads.mariadb.org/f/connector-odbc-3.1.7/mariadb-connector-odbc-3.1.7-ga-src.tar.gz"
-  sha256 "699c575e169d770ccfae1c1e776aa7725d849046476bf6579d292c89e8c8593e"
+  url "https://downloads.mariadb.org/f/connector-odbc-3.1.9/mariadb-connector-odbc-3.1.9-ga-src.tar.gz"
+  sha256 "5ead3f69ccde539fd7e3de6f4b8f0e6f9f6c32b4b4f082adf0e2ff110971fe1e"
   license "LGPL-2.1"
 
   bottle do
@@ -34,7 +34,7 @@ class MariadbConnectorOdbc < Formula
   end
 
   test do
-    output = shell_output("#{Formula["unixodbc"].opt_bin}/dltest #{lib}/libmaodbc.dylib")
-    assert_equal "SUCCESS: Loaded #{lib}/libmaodbc.dylib", output.chomp
+    output = shell_output("#{Formula["unixodbc"].opt_bin}/dltest #{lib}/mariadb/libmaodbc.dylib")
+    assert_equal "SUCCESS: Loaded #{lib}/mariadb/libmaodbc.dylib", output.chomp
   end
 end
