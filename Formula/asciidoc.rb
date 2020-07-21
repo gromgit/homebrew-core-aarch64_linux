@@ -10,9 +10,9 @@ class Asciidoc < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "273f9046ed7f52aef9e2e858b785b66a79b3bd341c939c3d413d51c39915f66c" => :catalina
-    sha256 "273f9046ed7f52aef9e2e858b785b66a79b3bd341c939c3d413d51c39915f66c" => :mojave
-    sha256 "273f9046ed7f52aef9e2e858b785b66a79b3bd341c939c3d413d51c39915f66c" => :high_sierra
+    sha256 "1a03ae32bc7bdbc1eecca5fa6bbe6dd6ec3e95a62e40943d159b51b790c4d613" => :catalina
+    sha256 "1a03ae32bc7bdbc1eecca5fa6bbe6dd6ec3e95a62e40943d159b51b790c4d613" => :mojave
+    sha256 "1a03ae32bc7bdbc1eecca5fa6bbe6dd6ec3e95a62e40943d159b51b790c4d613" => :high_sierra
   end
 
   depends_on "autoconf" => :build
