@@ -6,9 +6,9 @@ class Librdkafka < Formula
   head "https://github.com/edenhill/librdkafka.git"
 
   bottle do
-    sha256 "5090a19995c88d0ce00d2bced83b33cb6f944cf91d9fd9fa1a8f22dfc470ff29" => :catalina
-    sha256 "31fcd402659b9f89506c920d9fc9ae2d00141af30d80a42ca7818c6a7109a3da" => :mojave
-    sha256 "ae1eb1cbe686c2b9913e87c6068db886c06ff6716a36cccfb49b9226337c89d1" => :high_sierra
+    sha256 "de52443a4f2739cdf63dda80c8baf58bca86a5d836ceea9704d009b7977a3ee4" => :catalina
+    sha256 "00ab941019a34002e2face071b15810aa224b26c1d0322cb02768eb6b937ad42" => :mojave
+    sha256 "80617f9dd06dd50e6c103b4bdbff40957ecae1755c85d7b6cb395b411bb37e2f" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
