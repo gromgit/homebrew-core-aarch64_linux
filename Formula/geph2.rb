@@ -7,9 +7,9 @@ class Geph2 < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "17e96110a9640a444117efe01baae83a724d21508d6d8462e983019eeeba0f2c" => :catalina
-    sha256 "08c896df1e47ab01f442662752031a10a73f6aba82c7e3ed0528b4b7561db2ab" => :mojave
-    sha256 "08c896df1e47ab01f442662752031a10a73f6aba82c7e3ed0528b4b7561db2ab" => :high_sierra
+    sha256 "7c48c5f3498c0baa1aacd187d715e12ef0625eed6012af544e8a10ff3768a2ef" => :catalina
+    sha256 "7c48c5f3498c0baa1aacd187d715e12ef0625eed6012af544e8a10ff3768a2ef" => :mojave
+    sha256 "7c48c5f3498c0baa1aacd187d715e12ef0625eed6012af544e8a10ff3768a2ef" => :high_sierra
   end
 
   depends_on "go" => :build
