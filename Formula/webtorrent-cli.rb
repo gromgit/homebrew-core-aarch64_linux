@@ -8,9 +8,9 @@ class WebtorrentCli < Formula
   license "MIT"
 
   bottle do
-    sha256 "33106a951bca768ff80530e4aad0add3e0837ca780c6af83f08277bee1b14b87" => :catalina
-    sha256 "04d9b89601b80660e69b55e0fd0009652fae8f16bcace18e2f35dacb22bad1f8" => :mojave
-    sha256 "c3f9b2aa7330a8e28830967300468aba27f34a7382c93272fe66e37c0845e8bf" => :high_sierra
+    sha256 "524dc3212204b210358f2c6798820b17f2634919d60335db7a78a9172d64bac2" => :catalina
+    sha256 "75671e025faab37bf9d90fd195b1c6532a3cb0c47c9e01b2e448b8c4d5429cee" => :mojave
+    sha256 "7dd6916db1c79502146e5664ce1c47674259c3cdca06bbbe4e579a332e368c29" => :high_sierra
   end
 
   depends_on "node"
