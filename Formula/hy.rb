@@ -7,6 +7,13 @@ class Hy < Formula
   sha256 "3a5a1d76ddeb2f1d5de71ad1b1167799850db955b5eb0258e351fb182b2e6016"
   license "MIT"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "dde477be6e4a681568b5cbc06e5c3ce042f2043ca2572610df998a851468d131" => :catalina
+    sha256 "f3a62d0d0ac1eff081d28617a970217871fe6b6324dfa95707392c549026c9cd" => :mojave
+    sha256 "7b73de653a54d353ccc18f7e31b34275b6e7931b9f3c21f1b18cfb48a870199c" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   resource "appdirs" do
