@@ -5,6 +5,13 @@ class Loki < Formula
   sha256 "bd32bb96db1f8d90fa8c7f5473fbff4048364b8b8a0c9fdcd21155f6a062689d"
   license "Apache-2.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "7b78d2ef8029eb8e2eab32e64c037117b85e43168e7be63d831d7c8bce3c663f" => :catalina
+    sha256 "42b11227b46d0ca2a063cb661a54f7772f82c9758cb4ce313cc9802db60ed9fc" => :mojave
+    sha256 "794ac7093a0abe7310a49c35f101e407d94433d35b70495a50d8ebee596bfe1c" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
