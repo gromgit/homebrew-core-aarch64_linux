@@ -8,9 +8,9 @@ class Rgbds < Formula
 
   bottle do
     cellar :any
-    sha256 "471290b03b60ce630234ba35fedd6108e77a212e9a87cb81998a7c64c9eeac0e" => :catalina
-    sha256 "23c50475699f8699d083f39bdfc9ca4b60c703f0c818ba22e8112d05b71a70ae" => :mojave
-    sha256 "4c719b61b59c50d80cae21b6ea5bc8d47d54a653d4ecf403650efefa30927c8f" => :high_sierra
+    sha256 "8adee69ec949c97750ea1aa84fb7ccabe219598902744f06cae3b49b4cbe6a08" => :catalina
+    sha256 "22b389095a057f515398cfa7981339fb37f93cf12417c1c9ff3fac9bc31cc71c" => :mojave
+    sha256 "a791dd97949a7aec4d02197bfdd44ee6bd84472c93a50d6b762b5a3a2f2c5117" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
