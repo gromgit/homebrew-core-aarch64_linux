@@ -6,6 +6,13 @@ class Eksctl < Formula
       :revision => "f23f8d7d75943d1a62c87ce2f3d455da7af741fa"
   license "Apache-2.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "03d5850e67d21734234cc1f3f941fa4eae5b854c422e4b11b75f4ccc1a5c8c5d" => :catalina
+    sha256 "ae9a36b5d032c9a96ee0db0f3d977aaf9164561c5601aa6d0842099be20e1d01" => :mojave
+    sha256 "526a06e893de8455abd22ce63556a2866b1ea572bb6e6a33954f3b60cdff52a7" => :high_sierra
+  end
+
   depends_on "go" => :build
   depends_on "go-bindata" => :build
   depends_on "aws-iam-authenticator"
