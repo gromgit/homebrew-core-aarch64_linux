@@ -5,6 +5,13 @@ class Cortex < Formula
   sha256 "24079157bdc8cbf721378e01b79b08998dfb5e40c4d519cd2c8c22a94f67f6fc"
   license "Apache-2.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "6b6d80666cd557e6c3141d7027c699f65a973e15b7459af7f0559518cb4a91f1" => :catalina
+    sha256 "3d0e004c2a9770cbc59f1a5e44bed0b85a33e85130c885f96a9670d1cb8559d2" => :mojave
+    sha256 "9d8061e80d99528c5bb371a2538d3f863ef2fdba5066fe215e551aebc99b6332" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
