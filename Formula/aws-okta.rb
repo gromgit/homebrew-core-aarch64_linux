@@ -7,9 +7,9 @@ class AwsOkta < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "8647c8a1715974a8a1cc46a5b8a09a6075a0d209e6d65615c8b0443df8556010" => :catalina
-    sha256 "8cf8eea3db470ccd75831e98107b0689b40e3f4212f11bea3d038d3e94c9b197" => :mojave
-    sha256 "898f8d08ba4aa093b782fc52d119f02a4e679b1991d97dd0e787e62b3a062d96" => :high_sierra
+    sha256 "b1eec1257c8b1266c8722cb3c1d8f97a59ee0a75cf9c01d77a04be240951d4b3" => :catalina
+    sha256 "d0ba7d676bf58d6702ebc1a6768c9713455e52d9c9ab9580838ce9b4c4eeabde" => :mojave
+    sha256 "249029ff59e964bd1893822480b96e39bee0c305038fcb097166e9792b51c80e" => :high_sierra
   end
 
   depends_on "go" => :build
