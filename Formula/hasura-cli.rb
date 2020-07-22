@@ -6,9 +6,9 @@ class HasuraCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "77d006e1f89a36169f6f4e8858271d0ad10125902c988f0ae6e82854b2610514" => :catalina
-    sha256 "6907c2b64b830d81ef389f7535436571394205645de47492dd5bba7679b4a93d" => :mojave
-    sha256 "a5e93c26c925bec1c45be398ad5431cd2b9a4f842af308ae0e94728a5b48ecc0" => :high_sierra
+    sha256 "7fb7d523140d0bd29a718d0229527c477fe577c99e27e0fc3afc1ac0e86a136a" => :catalina
+    sha256 "37848e6ffb30e4e3d105c86645e4aff00a999fe69004bc20a509b460c1e557c5" => :mojave
+    sha256 "d3b87534950c33e7339ad0b6a4cd4eff5aee368bb36e7777c1f6b5d76200c733" => :high_sierra
   end
 
   depends_on "go" => :build
