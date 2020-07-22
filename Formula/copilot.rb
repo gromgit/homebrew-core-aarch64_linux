@@ -11,9 +11,9 @@ class Copilot < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0ada765170ddf2abfc15ff0751afe0174fb2940924fbb9a374dc6534a10b563c" => :catalina
-    sha256 "2bc7b730751a57919e03013c1d8420c86475032db8f416fc98cc70a1155852cc" => :mojave
-    sha256 "0767b2ac910c5fc7a1169111f6c1d7437e621d11cfc3e63ee441a88b013cce90" => :high_sierra
+    sha256 "8fb903f7a115976ef0ff3e343d9dfa1a656c87947429fee8c34bf959b6e41d44" => :catalina
+    sha256 "d21323111fa73bf5c7c084b80fe7882f8169f379639079bbd532fb4fee19a1cd" => :mojave
+    sha256 "03e761aea46c4029245848caae9188507f5b0a8c403cde2395387a0d0b4e1055" => :high_sierra
   end
 
   depends_on "go" => :build
