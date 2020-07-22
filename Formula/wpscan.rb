@@ -1,8 +1,8 @@
 class Wpscan < Formula
   desc "Black box WordPress vulnerability scanner"
   homepage "https://wpscan.org"
-  url "https://github.com/wpscanteam/wpscan/archive/v3.8.3.tar.gz"
-  sha256 "85d8df33c5aa47ea7b86f806e3b929415d97f589d20af66e9969d923d70e33bf"
+  url "https://github.com/wpscanteam/wpscan/archive/v3.8.4.tar.gz"
+  sha256 "ada1dc202dccc5f20704a6b851564e09d1da601ba73c3e4b932064441df00d54"
   head "https://github.com/wpscanteam/wpscan.git"
 
   bottle do
