@@ -9,9 +9,9 @@ class Pulumi < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "6be1113d0ff91911e4fe42d85cc5a451472b258f949feef044ad601436866e55" => :catalina
-    sha256 "c870712b5405247dbe09b61237471d5ab8cd4f88b6350508acd5ff2a05c12d47" => :mojave
-    sha256 "652b499d8b97cff434003f47dedb035d0a0ddbc485195c7dfc28bca1d40358a2" => :high_sierra
+    sha256 "161555e7aa127a8d49937ad6d22a51ab0f7ef689572be8819bf5d741dbfdfb80" => :catalina
+    sha256 "4a823e18aeed4f023d6b18a5b7b56d021c518c542c13217dc68bcfa06f207dbf" => :mojave
+    sha256 "642f2a37e9489def4d8963afae9c476ad547b77fb88485c0afbbcd3330aac1f4" => :high_sierra
   end
 
   depends_on "go" => :build
