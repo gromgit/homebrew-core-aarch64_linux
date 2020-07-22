@@ -5,6 +5,13 @@ class Promtail < Formula
   sha256 "bd32bb96db1f8d90fa8c7f5473fbff4048364b8b8a0c9fdcd21155f6a062689d"
   license "Apache-2.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "70470c14896c1ed892a274541431b88938532a80982559c698f6e1a932017edf" => :catalina
+    sha256 "47495ee7998dc8f9e6ccd2c8d601153d9e7f4d2ac70afadb44835bbef11ba5f5" => :mojave
+    sha256 "62fa78cc81525e0141bc8dc3d1c3d0f0fead0e9ab0722ccb6566405d9a0abe82" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
