@@ -1,8 +1,8 @@
 class Ospray < Formula
   desc "Ray-tracing-based rendering engine for high-fidelity visualization"
   homepage "https://www.ospray.org/"
-  url "https://github.com/ospray/ospray/archive/v2.1.1.tar.gz"
-  sha256 "342061794dd0851f1580e53256c8e506b4e0950dd67209e1df573694c4d85e6f"
+  url "https://github.com/ospray/ospray/archive/v2.2.0.tar.gz"
+  sha256 "7078cc7c7a6e709589f8cb15a150947bb1b93f00d08f8a2ef3f5e368d57a3797"
   license "Apache-2.0"
   head "https://github.com/ospray/ospray.git"
 
@@ -18,14 +18,14 @@ class Ospray < Formula
   depends_on :macos => :mojave # Needs embree bottle built with SSE4.2.
   depends_on "tbb"
 
-  resource "ospcommon" do
-    url "https://github.com/ospray/ospcommon/archive/v1.3.1.tar.gz"
-    sha256 "1c043c4a09e68fb7319db61f28a5830fc09f1457b24155a42b5f7c6421bcca73"
+  resource "rkcommon" do
+    url "https://github.com/ospray/rkcommon/archive/v1.4.2.tar.gz"
+    sha256 "2d1c0046cf583d3040fc9bb3b8ddcb1a2262d3f48aebd0973e6bd6cabb487f9e"
   end
 
   resource "openvkl" do
-    url "https://github.com/openvkl/openvkl/archive/v0.9.0.tar.gz"
-    sha256 "06aa82c8c3ff68ab93fb8240f4881a1bc238b3de681812e71145f8a1629d3fee"
+    url "https://github.com/openvkl/openvkl/archive/v0.10.0.tar.gz"
+    sha256 "b75caabd5e0211e8c29dd9bd04a74c9ed30a1a72413c486206144c25fd31afff"
   end
 
   def install
