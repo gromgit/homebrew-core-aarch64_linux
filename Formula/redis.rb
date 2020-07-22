@@ -1,8 +1,8 @@
 class Redis < Formula
   desc "Persistent key-value database, with built-in net interface"
   homepage "https://redis.io/"
-  url "http://download.redis.io/releases/redis-6.0.5.tar.gz"
-  sha256 "42cf86a114d2a451b898fcda96acd4d01062a7dbaaad2801d9164a36f898f596"
+  url "http://download.redis.io/releases/redis-6.0.6.tar.gz"
+  sha256 "12ad49b163af5ef39466e8d2f7d212a58172116e5b441eebecb4e6ca22363d94"
   license "BSD-3-Clause"
   head "https://github.com/redis/redis.git", :branch => "unstable"
 
@@ -15,13 +15,6 @@ class Redis < Formula
   end
 
   depends_on "openssl@1.1"
-
-  patch do
-    # Remove when upstream fix is released
-    # https://github.com/redis/redis/pull/7453
-    url "https://github.com/redis/redis/pull/7453.diff?full_index=1"
-    sha256 "e1df0543442b75fea67a43eeddade50097d655fe3fef948840bf9d99bb63c157"
-  end
 
   def install
     system "make", "install", "PREFIX=#{prefix}", "CC=#{ENV.cc}", "BUILD_TLS=yes"
