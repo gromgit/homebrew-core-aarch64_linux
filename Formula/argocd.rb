@@ -6,6 +6,13 @@ class Argocd < Formula
       :revision => "159674ee844a378fb98fe297006bf7b83a6e32d2"
   license "Apache-2.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "c988b2c0db76ae062803b59bd258fe8617700d942802db2e541a19686e46b6e8" => :catalina
+    sha256 "9f02374c7445563bb5212f05e4341e6700a5c392f10bc4a763cdae4d2308b736" => :mojave
+    sha256 "091dd790ed68a02fca4a2b36aa1df68840e190b7ff6f58bc13a732bf584b68f3" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
