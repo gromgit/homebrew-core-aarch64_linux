@@ -8,9 +8,9 @@ class Buildifier < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "05b148b61585416549120d37cc24be33b4852af2baa7a60785ab2a6df62ceb0c" => :catalina
-    sha256 "05b148b61585416549120d37cc24be33b4852af2baa7a60785ab2a6df62ceb0c" => :mojave
-    sha256 "05b148b61585416549120d37cc24be33b4852af2baa7a60785ab2a6df62ceb0c" => :high_sierra
+    sha256 "e9d9ccbbbda5e795a4d4dff20f72bd0ed998bdce69356954f8f2aadc8690e978" => :catalina
+    sha256 "e9d9ccbbbda5e795a4d4dff20f72bd0ed998bdce69356954f8f2aadc8690e978" => :mojave
+    sha256 "e9d9ccbbbda5e795a4d4dff20f72bd0ed998bdce69356954f8f2aadc8690e978" => :high_sierra
   end
 
   depends_on "bazelisk" => :build
