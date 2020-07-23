@@ -5,9 +5,9 @@ class Re2c < Formula
   sha256 "89a9d7ee14be10e3779ea7b2c8ea4a964afce6e76b8dbcd5479940681db46d20"
 
   bottle do
-    sha256 "374376ae451fe0e6ca93f17634e6353e8503cffa16018fbe44007997b865965d" => :catalina
-    sha256 "3cb716f9bcb81ad81cafc6e2e5a5be444caa297cec939213bcf2e805fb65f778" => :mojave
-    sha256 "7d9b2456469379900fc2abddc732710b822241a8a7bd2f734766a18b47b704a9" => :high_sierra
+    sha256 "1f5cba0326bd4e86224cbbfea090b9b492da4d82b680ace1f516a6818b133c3e" => :catalina
+    sha256 "56db2c3832a9321e5edea069ab3bee2121ac3c1c347fd3a7451497405243f065" => :mojave
+    sha256 "1d1a64d03a9307a2ec03d4eb9b3e378c604a3c2bb713fa7869199bfdd291e0ce" => :high_sierra
   end
 
   def install
