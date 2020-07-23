@@ -7,6 +7,13 @@ class Pipgrip < Formula
   sha256 "918936e18cde946244ff4a48c2a48126859f872ae81c3d844249c9365b4c6387"
   license "BSD-3-Clause"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "67843883dc579288cdfb1f9315a47c42db8867f9727b68d5eb8a3b5faef14964" => :catalina
+    sha256 "204660969ee87e7747d04f6dabc3b8fb72a2f8119919d0b94a9ad4e797682ab2" => :mojave
+    sha256 "b09f195f0d794b43e042dd8021429e67a47a6cf3b4751be4bb70650746df7559" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   resource "anytree" do
