@@ -8,13 +8,9 @@ class Slacknimate < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b21fd67e3132848ed429cc51ae5b620083351855384f9e1ff8a4d8612204fc65" => :catalina
-    sha256 "2cae878e05448d6f0a7679319269e7c95fb2b879f4620b84a6b2b35d6ee739f4" => :mojave
-    sha256 "6d93b3bbccb0190be8a2702d7fa3e587fa768110567e76b2a43f167381981707" => :high_sierra
-    sha256 "f546be3bc842ef924e62c2dee561acdf114ee5206253d6e06a848eefd98dcafe" => :sierra
-    sha256 "e07155d74980ed24bf07acce56c890a86668eb359aecae8dae6eb6973c38cfd8" => :el_capitan
-    sha256 "f97ea26560c72c550780b81a124f8c69c8588c27e0f87eef65201676f2666672" => :yosemite
-    sha256 "cf81016bb94d8d2369c98a529b575d3115a263139502294b528197e1ac293ae9" => :mavericks
+    sha256 "52bd6b01115cb8e84d3479ff6dea669a98b17b60cc6090b3384ac44fdcbdd93a" => :catalina
+    sha256 "28f1871e38987c5b06e0666f172d0eefb9e6895ea8207a0ad171d467a2df7f7a" => :mojave
+    sha256 "6849d5acbe802d8fb69007f144bba62a9c259a9093ccc920fb9a200edc9368fa" => :high_sierra
   end
 
   depends_on "go" => :build
