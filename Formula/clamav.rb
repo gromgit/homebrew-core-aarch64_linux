@@ -7,9 +7,9 @@ class Clamav < Formula
   license "GPL-2.0"
 
   bottle do
-    sha256 "2bb5ea7de66e798672e5f9a6bb49bb2d0f3f723a655fe365a5f12322567c6ef3" => :catalina
-    sha256 "c5dc15e28ffab603fea38b1e22fda3023384ae654544554f40d75038b7cb4318" => :mojave
-    sha256 "fd1d05cd3c62e0af9ee1a7b9b875d0f8ce776d4a4022c0fb3b184a806669abb0" => :high_sierra
+    sha256 "6ca687f707713bf0d5bd4898add75c98ba5b7b53067856e368373b309554ae2b" => :catalina
+    sha256 "9f63cb3bbee311cc564fb913ed458210910ebc48c1ef848e8872bc72626c59cb" => :mojave
+    sha256 "845de365f44b2e892fbf14536f3ee496fd527bfdee7be7055dd4234a964e7ca3" => :high_sierra
   end
 
   head do
