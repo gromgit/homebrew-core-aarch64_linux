@@ -2,8 +2,8 @@ class K9s < Formula
   desc "Kubernetes CLI To Manage Your Clusters In Style!"
   homepage "https://k9scli.io/"
   url "https://github.com/derailed/k9s.git",
-      :tag      => "v0.21.2",
-      :revision => "977791627860a0febb3c217a5322702da109ecbb"
+      :tag      => "v0.21.3",
+      :revision => "251221c19b182089c61f8562dc5a024a38e440ee"
   license "Apache-2.0"
 
   bottle do
@@ -23,11 +23,7 @@ class K9s < Formula
   end
 
   test do
-    # k9s consumes the Kubernetes configuration which per default is located at ~/.kube/config
-    # Its location can also be set with the KUBECONFIG environment variable
-    # Setting it to a non-existing location makes sure the test always fails as expected
-    ENV["KUBECONFIG"] = "testpath"
-    assert_equal "\e[31mBoom!! \e[0m\e[37mInvalid kubeconfig context detected.\e[0m",
-                  shell_output("#{bin}/k9s").split("\n").pop
+    assert_match "K9s is a CLI to view and manage your Kubernetes clusters.",
+                 shell_output("#{bin}/k9s --help")
   end
 end
