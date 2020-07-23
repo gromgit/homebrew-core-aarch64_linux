@@ -7,9 +7,9 @@ class Libupnp < Formula
 
   bottle do
     cellar :any
-    sha256 "2343d98fde1cf6ff2cb529f08d609b9685e85e72cdb75916daf5fb21345c5baf" => :catalina
-    sha256 "7d05f24f8bcb7e0edaaa35bce6f94208d05e9157c0b8897205bd0df84e9e845f" => :mojave
-    sha256 "b67bb447214ba6622325b0b0932ae2366a7ea4d6b9342d723ec9c027515cadbc" => :high_sierra
+    sha256 "f687168c37ba09bb0ee06b2d0d373c6de2f8d5511c563191788e45282fd104af" => :catalina
+    sha256 "b7e3d1d7fc0a4011e093f040f71578f549e06b7702d9ec29c9595fb11fa206f6" => :mojave
+    sha256 "70340bed620fd9c537881d58a6b0f720689fbf0ebf9dbfa9acfdb846190e9c69" => :high_sierra
   end
 
   def install
