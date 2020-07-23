@@ -8,9 +8,9 @@ class CassandraCppDriver < Formula
 
   bottle do
     cellar :any
-    sha256 "25abbbd19f8ff6ab026f3ccccd466da53e1daeeb52550c85211e833547e4c4aa" => :catalina
-    sha256 "49b53bff19ed2897ab07d47bb9db03697a659b55e007c0db0b8d2f0ef70dcb78" => :mojave
-    sha256 "0b5b67f7208a2491fa77f5393d993f36e76b23af72d848806b364a2e707c0091" => :high_sierra
+    sha256 "c0eb554b6a640eed85988e787af1cfc8320b2b4920f2e88921dcf3ae67661ce1" => :catalina
+    sha256 "7600578409910afcb3f14146be2eb7f17cc1eb9c862188b10744dd092f6a80b5" => :mojave
+    sha256 "0eb84266667f4b10184e85e74784c000853b0ed4307008bdc8ee93237518a47e" => :high_sierra
   end
 
   depends_on "cmake" => :build
