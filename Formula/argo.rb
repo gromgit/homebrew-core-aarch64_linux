@@ -6,6 +6,13 @@ class Argo < Formula
       :revision => "9407e19b3a1c61ad4043e382484fd0b6b15574f2"
   license "Apache-2.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "605ef7527785d127af197e6479c6ea06f7d18770b420a11b784f9327d750f705" => :catalina
+    sha256 "8a835bb7ce528c56a04b18dc7576e00243b2a0b1ececf1dc7fcf1b8aa9e5bdfb" => :mojave
+    sha256 "659f4eb9b415cef16798604b23152a47e1bd12e222963e8a1af5aa05444e15a2" => :high_sierra
+  end
+
   depends_on "go" => :build
   depends_on "node" => :build
   depends_on "yarn" => :build
