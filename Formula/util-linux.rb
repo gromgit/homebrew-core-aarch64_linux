@@ -1,10 +1,9 @@
 class UtilLinux < Formula
   desc "Collection of Linux utilities"
   homepage "https://github.com/karelzak/util-linux"
-  url "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.35/util-linux-2.35.2.tar.xz"
-  sha256 "21b7431e82f6bcd9441a01beeec3d57ed33ee948f8a5b41da577073c372eb58a"
+  url "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.36/util-linux-2.36.tar.xz"
+  sha256 "9e4b1c67eb13b9b67feb32ae1dc0d50e08ce9e5d82e1cccd0ee771ad2fa9e0b1"
   license "GPL-2.0"
-  revision 1
 
   bottle do
     cellar :any
