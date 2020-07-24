@@ -7,6 +7,13 @@ class Functionalplus < Formula
   license "BSL-1.0"
   head "https://github.com/Dobiasd/FunctionalPlus.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "5db198059a4d3219e1195d179b0b595bd8fc483965ecd6f438fbd3b8c127cec6" => :catalina
+    sha256 "5db198059a4d3219e1195d179b0b595bd8fc483965ecd6f438fbd3b8c127cec6" => :mojave
+    sha256 "5db198059a4d3219e1195d179b0b595bd8fc483965ecd6f438fbd3b8c127cec6" => :high_sierra
+  end
+
   depends_on "cmake" => :build
 
   def install
