@@ -7,9 +7,9 @@ class Ffuf < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "aa49f4d4ecfdeea7175978aa738aa5447505c590171c9002a2abee72eae9a9f6" => :catalina
-    sha256 "0029f7f2024bbc1e0702af2d3616f2a74dc0903bed53c4b0c50cfcec20c899bb" => :mojave
-    sha256 "8c24d59bb3c7c9e8cdc4699c966f4a8a2affe5e88a5f96a7d08754261e6613e9" => :high_sierra
+    sha256 "8fc266926a435bcc1a285c85f3fe567e24e0a78dbb7bc6fd70ac3555389fc98e" => :catalina
+    sha256 "fe1a2ddaed8adfbd0249367faa655f313d1dd472c046d02e4545213ab781d95a" => :mojave
+    sha256 "502c691d471d3416b4b193e8a08c53c8a330f961ee48cf2f4dd887e7522c3e86" => :high_sierra
   end
 
   depends_on "go" => :build
