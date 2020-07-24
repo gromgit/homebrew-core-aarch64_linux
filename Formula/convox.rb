@@ -1,8 +1,8 @@
 class Convox < Formula
   desc "Command-line interface for the Convox PaaS"
   homepage "https://convox.com/"
-  url "https://github.com/convox/convox/archive/3.0.35.tar.gz"
-  sha256 "72ac360ac2e45e1720ee47a871054eb0adb81d5253705eca6b0f9c7a0c000f10"
+  url "https://github.com/convox/convox/archive/3.0.36.tar.gz"
+  sha256 "18087d6e2661abc4c8946a3ed0996145b22631c686cac06e2a3600dad576d59b"
   license "Apache-2.0"
   version_scheme 1
 
@@ -16,9 +16,11 @@ class Convox < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", "-mod=vendor", "-ldflags=-X main.version=#{version}",
-            "-o", bin/"convox", "-v", "./cmd/convox"
-    prefix.install_metafiles
+    ldflags = %W[
+      -X main.version=#{version}
+    ].join(" ")
+
+    system "go", "build", *std_go_args, "-mod=vendor", "-ldflags", ldflags, "./cmd/convox"
   end
 
   test do
