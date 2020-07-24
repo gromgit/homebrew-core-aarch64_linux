@@ -8,9 +8,9 @@ class Proftpd < Formula
   license "GPL-2.0"
 
   bottle do
-    sha256 "64921070d5fec1b23e70f1f94083278005c3075e60064e2bb6842837a5f47f70" => :catalina
-    sha256 "c1152fa9b77042914ba1c3d80cc365058d0c497ff817d5f3028e4b61ee7fd5aa" => :mojave
-    sha256 "1168e663193462a081b1f19cf9813ee007b80ed22187f2b81e3c8eaa84536d42" => :high_sierra
+    sha256 "b30ef0c9ea4f2642cb98e863c51ef8b337605ca5d9a3df8d2d9995ac00c6e9be" => :catalina
+    sha256 "2f529091ef2c1e07ca1db9ec0a974f639530cca275e2f3ebbd910b42a3cb5f12" => :mojave
+    sha256 "af399e07592ed468d356963c8a2b27318476dd422499ba0148d1579e4d80cd69" => :high_sierra
   end
 
   def install
