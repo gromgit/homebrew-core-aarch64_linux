@@ -9,9 +9,9 @@ class Openrtsp < Formula
 
   bottle do
     cellar :any
-    sha256 "1c40add9d23211a486b2b88a31e4bba982bd564abfeeccad9c92f6cf07af1f64" => :catalina
-    sha256 "d3cb3da0a6f5460ebf74b6dd449a637d6ca36315e5fdd5066f85e37f0dfd13fd" => :mojave
-    sha256 "94b3edec399edc25cc8e2c763e10d54bb16cda4d7761bde461591ebb810cb207" => :high_sierra
+    sha256 "4997a49bccb0161fbf338ada1c0a32e15d7bfa3aab05b1574b58288dd3c1afd6" => :catalina
+    sha256 "4d7ec22670e90c24ecee2379942d19fa89ba0f9161f5550d3e2aa99397f7d0c4" => :mojave
+    sha256 "ac28871c5453bd80e40bb6cec4d61c4d38063c696b979819afaa3c302eebf1a6" => :high_sierra
   end
 
   depends_on "openssl@1.1"
