@@ -1,8 +1,8 @@
 class Kubeprod < Formula
   desc "Installer for the Bitnami Kubernetes Production Runtime (BKPR)"
   homepage "https://kubeprod.io"
-  url "https://github.com/bitnami/kube-prod-runtime/archive/v1.5.1.tar.gz"
-  sha256 "247a37f9526bdec49377be4f1eefd1f37e4f8380cc515d73246518f2731ff8fc"
+  url "https://github.com/bitnami/kube-prod-runtime/archive/v1.6.0.tar.gz"
+  sha256 "8422eca01462152aa0d25b081acfc8abdeb4d7b031c6116fcfbfb7487e995e76"
   license "Apache-2.0"
 
   bottle do
@@ -15,14 +15,8 @@ class Kubeprod < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    ENV["TARGETS"] = "darwin/amd64"
-    dir = buildpath/"src/github.com/bitnami/kube-prod-runtime"
-    dir.install buildpath.children
-
-    cd dir do
-      system "make", "-C", "kubeprod", "release", "VERSION=v#{version}"
-      bin.install "kubeprod/_dist/darwin-amd64/bkpr-v#{version}/kubeprod"
+    cd "kubeprod" do
+      system "go", "build", *std_go_args, "-ldflags", "-X main.version=v#{version}", "-mod=vendor"
     end
   end
 
