@@ -8,8 +8,8 @@ class Configen < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "82e930bb4d70ee9a6e5d992369be4752f6fed2ddb24d32e55e1deafb32552f66" => :catalina
-    sha256 "1eba1c4035e8bd429023f782d093cbb98dae2c7d4f6a876640afdddc8aaef9e2" => :mojave
+    sha256 "9bdb2988618d5a1e9291a8579207d9dad1092f377d29d13af68cf6ef5afcb202" => :catalina
+    sha256 "befb8801be997ff110c9ca0b817fed82b4e233842f5afe05e7ae372a10c4007f" => :mojave
   end
 
   depends_on :xcode => ["10.2", :build]
