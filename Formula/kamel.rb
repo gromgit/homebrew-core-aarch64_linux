@@ -10,10 +10,9 @@ class Kamel < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "01164390550da7b036a9cd497ad88586e27d5a3aaffb6fd334e4218316c02ea0" => :catalina
-    sha256 "34c301e095a815674dc5ef55a0c43a5b57b3d3d8d81cb10172c0099eb56a7431" => :mojave
-    sha256 "1c56fdfed7981d65a67690ebc188959b920c17acc31dcbabf484d576937a149c" => :high_sierra
+    sha256 "6569f6598d32c5a0de2174002877cc4c6793bfe63d900195521c6e6239bc51a3" => :catalina
+    sha256 "603c0366a0d29dd0f82735431b74d8c70337a5b295c0afa5aac3b9f3fb7d28c1" => :mojave
+    sha256 "a2540b8fc6d4ff734590af511c84119c5fb9f7dbd4392c193c46ce11561a25bd" => :high_sierra
   end
 
   depends_on "go" => :build
