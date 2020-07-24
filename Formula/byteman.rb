@@ -5,6 +5,7 @@ class Byteman < Formula
   sha256 "7aebafd6877058a1406e725be4246bcafd8efd78fa583b7192e847cb5d6b27a5"
 
   bottle :unneeded
+
   depends_on "openjdk"
 
   def install
