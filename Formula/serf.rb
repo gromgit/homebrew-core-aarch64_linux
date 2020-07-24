@@ -9,9 +9,9 @@ class Serf < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "3bd356983857810d36a2ea7c3ae785a93068a502c3c371ccbf9b5db5b43c7a77" => :catalina
-    sha256 "8fc8a0b90605b7f45e55bbd3334aeedf02feec63f1b1e6d0de0ce473ad575be2" => :mojave
-    sha256 "1b0dbf9abeb34aae2e0b1634f274d46b7bd95a166dfff360fe54599de68415c6" => :high_sierra
+    sha256 "c716a0e85a67699c6c83e3cb178ece969d94ec7aec6f36ec60e4b65e6093258d" => :catalina
+    sha256 "e56b01a8475e3c056233631945ad4d3710dc746c048c09679835f795cbf371f2" => :mojave
+    sha256 "fd50cd7495843099f7895ad8f0ed25537cbc853a03555a4c2bf375b2c1b53df9" => :high_sierra
   end
 
   depends_on "go" => :build
