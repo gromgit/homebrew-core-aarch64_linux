@@ -9,9 +9,9 @@ class Diffoscope < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5e5235d4aec8575aebd2df7e89810b8a0ffb99cd83285df43e2f0ee0c780d87f" => :catalina
-    sha256 "85534cf70b5531a8576f55ad0569e7b117eb2295fed8593fc195184949eb5475" => :mojave
-    sha256 "cb47986cb75b6d9bf7853d401ffa87179630bb3b15b8847d3da9fa3a5a3bc7cd" => :high_sierra
+    sha256 "7d5d938b7790c970170adb655b368053fe8161397d2bc390901712c3b533bb28" => :catalina
+    sha256 "116223786fa8076957a1b73a374b639a232ec39289cbc1f08d76afb4fad9b99c" => :mojave
+    sha256 "b4ab25a669fc239749d2fbc3ae186fc893c9f95d8b6c3e3b174185d7fa591307" => :high_sierra
   end
 
   depends_on "gnu-tar"
