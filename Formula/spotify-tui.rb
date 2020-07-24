@@ -8,9 +8,9 @@ class SpotifyTui < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d66b24cf5897b25d8c8b5efc5d3dd9c7f292e7432c37639653fef1f59dca5cdb" => :catalina
-    sha256 "06780fac000e4ead2a80b7a4df5196fbbc254f092dc8ccbac5d711fc8c0d33e9" => :mojave
-    sha256 "faf0fbfa572f3e8458414c21fddc1bd36156f2330969b4860f044bfc320be665" => :high_sierra
+    sha256 "26e77cf5b03c45e0cb0b934e75d1de29869dacf0dcc59685550e62be2ea18ba6" => :catalina
+    sha256 "ff8df87d5297146c8c7ed37c11c3fc5b36f463d5de442212c00fc48109f46d1d" => :mojave
+    sha256 "a7634db723c15f57c783426b237fa90d478dbc77cf15cfef9efac6e9693a2bcd" => :high_sierra
   end
 
   depends_on "rust" => :build
