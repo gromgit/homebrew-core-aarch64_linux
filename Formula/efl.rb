@@ -3,6 +3,8 @@ class Efl < Formula
   homepage "https://www.enlightenment.org"
   url "https://download.enlightenment.org/rel/libs/efl/efl-1.24.3.tar.xz"
   sha256 "de95c6e673c170c1e21382918b122417c091c643e7dcaced89aa785529625c2a"
+  license all_of: ["GPL-2.0-only", "LGPL-2.1-only", "BSD-2-Clause", "FTL", "zlib-acknowledgement"]
+  revision 1
 
   bottle do
     sha256 "39569bcce1747db9a7d620c439675e63e1a5283934775d0ebf73971029b0062f" => :catalina
