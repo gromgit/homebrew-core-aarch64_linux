@@ -8,9 +8,9 @@ class GatewayGo < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "59911d2de9cb1d9016b9a8479babe1809898e89824c5889f0e83b80b4276c369" => :catalina
-    sha256 "a2e85fa1ceff2b9361f716c177135f6520c5e21b4f51f7f3c04ad18cbb8ee5cf" => :mojave
-    sha256 "698be75a61421c6c205b1d1901fb680e477477448bef0365db0e593cec6426dc" => :high_sierra
+    sha256 "e5bac4bcf5bd28f4c36d9703889cda22a610db6173cf14df84df4ad50c28a349" => :catalina
+    sha256 "fd65ce14d2bd366507e04856d444c53c06e251c58f5efb19b9e9270416ea35d8" => :mojave
+    sha256 "8efa48f8a85545308d5fd49085ab56f9c14734303015226f76e6162339bb58e4" => :high_sierra
   end
 
   depends_on "go" => :build
