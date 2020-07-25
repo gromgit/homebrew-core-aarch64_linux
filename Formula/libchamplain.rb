@@ -4,7 +4,7 @@ class Libchamplain < Formula
   url "https://download.gnome.org/sources/libchamplain/0.12/libchamplain-0.12.20.tar.xz"
   sha256 "0232b4bfcd130a1c5bda7b6aec266bf2d06e701e8093df1886f1e26bc1ba3066"
   license "LGPL-2.1"
-  revision 1
+  revision 2
 
   bottle do
     cellar :any
