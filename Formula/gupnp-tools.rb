@@ -3,7 +3,7 @@ class GupnpTools < Formula
   homepage "https://wiki.gnome.org/GUPnP/"
   url "https://download.gnome.org/sources/gupnp-tools/0.10/gupnp-tools-0.10.0.tar.xz"
   sha256 "41da7ff5ba8e2425adcb64ca5e04c81f57ca20ec6fdb84923939fdad42c6a18d"
-  revision 3
+  revision 4
 
   bottle do
     sha256 "50ea87e51a1ded32ea3aca221e05f0b9812994b36c659069567bc05d30c4355b" => :catalina
