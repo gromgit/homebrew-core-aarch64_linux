@@ -5,6 +5,7 @@ class Gupnp < Formula
   homepage "https://wiki.gnome.org/Projects/GUPnP"
   url "https://download.gnome.org/sources/gupnp/1.2/gupnp-1.2.3.tar.xz"
   sha256 "d447e54d88e4a8fab84ad1766070e9208e21166fc7e2ce95df6e33e49e8d29b1"
+  revision 1
 
   bottle do
     cellar :any
