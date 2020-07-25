@@ -3,7 +3,7 @@ class Libgweather < Formula
   homepage "https://wiki.gnome.org/Projects/LibGWeather"
   url "https://download.gnome.org/sources/libgweather/3.36/libgweather-3.36.1.tar.xz"
   sha256 "de2709f0ee233b20116d5fa9861d406071798c4aa37830ca25f5ef2c0083e450"
-  revision 1
+  revision 2
 
   bottle do
     sha256 "52010805ebdedbc7761a4bb2cc2e33af60c6c788ce6262f47b182aeb4c222e36" => :catalina
