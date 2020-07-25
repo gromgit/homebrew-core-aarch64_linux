@@ -6,6 +6,13 @@ class GolangciLint < Formula
     :revision => "6a689074bf17fd4ae1db779a74dba821a162b6c8"
   license "GPL-3.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "fce5407b3cb659f7d9ad9871c194221e30449384aa436e23611caf9dc2687f98" => :catalina
+    sha256 "aef67d3cad00979c270087a554a9f95367e71989418621f900977fcbfdd1f9a4" => :mojave
+    sha256 "d18ad41206bdf801ea20c88b0d43d1c06d6487804a9cbec8c97f0acf8997a6a3" => :high_sierra
+  end
+
   depends_on "go"
 
   def install
