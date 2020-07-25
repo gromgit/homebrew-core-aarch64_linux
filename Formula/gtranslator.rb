@@ -6,9 +6,9 @@ class Gtranslator < Formula
   revision 4
 
   bottle do
-    sha256 "33dd6fa5518dd793a54e79a1245fa8c339ab396d75e593477f64145d9c2ff877" => :catalina
-    sha256 "2f8aa54a06d06dd3dab570d2031ce66bb92a90c888999dda38126de9aceef859" => :mojave
-    sha256 "801eaf1384023bc5345dee58ae35a07b53d25c8fe69cad1b1a12a5b6158b812d" => :high_sierra
+    sha256 "4ccb72c556347cbfe159eddd9688eab723a632130ae82325b317544e7c87b381" => :catalina
+    sha256 "fc6c448bb1c7be26d4bce14995bb2946d65950445fdd44875790d223aed1d2e7" => :mojave
+    sha256 "06b05625ddbc8f1f610ecf319ef9bb9d896d83780f7cb48ff2c5ca9cdde7c47c" => :high_sierra
   end
 
   depends_on "meson" => :build
