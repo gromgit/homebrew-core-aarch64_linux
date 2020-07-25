@@ -3,6 +3,7 @@ class Libsoup < Formula
   homepage "https://wiki.gnome.org/Projects/libsoup"
   url "https://download.gnome.org/sources/libsoup/2.70/libsoup-2.70.0.tar.xz"
   sha256 "54b020f74aefa438918d8e53cff62e2b1e59efe2de53e06b19a4b07b1f4d5342"
+  revision 1
 
   bottle do
     sha256 "9e6e892abfa0a22b50003cee17dd14cae4c342aa526a0fe96c8e55263b94d98a" => :catalina
