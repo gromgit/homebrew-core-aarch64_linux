@@ -8,9 +8,9 @@ class Libchamplain < Formula
 
   bottle do
     cellar :any
-    sha256 "fedbe30042344858891ce3163a927ff83ae17ee2759d962bf197889cd741ba4e" => :catalina
-    sha256 "030d34bf228b24ad645e21c3145c4c105aeceefd38313b2ef0367f93faf97699" => :mojave
-    sha256 "8e3f324c075a081b82df5235d63386c2dee530606e8f51eb35f5e4d417c45371" => :high_sierra
+    sha256 "cb5f211f8fa37e711a6e8888e4dfc873599defae9bad26f2d4310d798d0df98f" => :catalina
+    sha256 "451b57e103a89cbd80b18fe98012f5ff2a56de6ef0fbca9d0b2e49279c0f06dd" => :mojave
+    sha256 "139ae58e12b28abeeeddedebd802c5183761048c3745f3cb042458f2be3f9602" => :high_sierra
   end
 
   depends_on "gnome-common" => :build
