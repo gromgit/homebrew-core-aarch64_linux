@@ -6,9 +6,9 @@ class Libsoup < Formula
   revision 1
 
   bottle do
-    sha256 "9e6e892abfa0a22b50003cee17dd14cae4c342aa526a0fe96c8e55263b94d98a" => :catalina
-    sha256 "3f2ec087d62e7432327d5992202b8dfd77fe881dd65fbf67a2304ada8b8edefb" => :mojave
-    sha256 "182f411f04a42407f15cdf11ccfe4b32af9ba05243568bd2b7e01c5ab25d8f5f" => :high_sierra
+    sha256 "700a5b47306f17374042b19bae4054938039201202fdbd23055a39ac0657c12a" => :catalina
+    sha256 "c80a1c0a215aaa56e1390291652c24abfbf57ec42f07737269a4735ed7411ba6" => :mojave
+    sha256 "97967cc53fff8e05e33672c56005a0f7dde31cc7c83d960e19cfbd6d41da33e2" => :high_sierra
   end
 
   depends_on "gobject-introspection" => :build
