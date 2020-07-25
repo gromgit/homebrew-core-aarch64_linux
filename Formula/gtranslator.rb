@@ -3,7 +3,7 @@ class Gtranslator < Formula
   homepage "https://wiki.gnome.org/Design/Apps/Translator"
   url "https://download.gnome.org/sources/gtranslator/3.36/gtranslator-3.36.0.tar.xz"
   sha256 "2daa1d3b59b4a35ef54df087345b03e1703e725081f9dac543539228a715add3"
-  revision 3
+  revision 4
 
   bottle do
     sha256 "33dd6fa5518dd793a54e79a1245fa8c339ab396d75e593477f64145d9c2ff877" => :catalina
