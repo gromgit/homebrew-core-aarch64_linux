@@ -6,6 +6,13 @@ class Yj < Formula
   license "Apache-2.0"
   head "https://github.com/sclevine/yj.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "0c90dea4f4b820ec8b19b9d5f853ece65ed308c49e807ef8a11e47136f0e175c" => :catalina
+    sha256 "0c90dea4f4b820ec8b19b9d5f853ece65ed308c49e807ef8a11e47136f0e175c" => :mojave
+    sha256 "0c90dea4f4b820ec8b19b9d5f853ece65ed308c49e807ef8a11e47136f0e175c" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
