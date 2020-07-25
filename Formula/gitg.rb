@@ -3,7 +3,7 @@ class Gitg < Formula
   homepage "https://wiki.gnome.org/Apps/Gitg"
   url "https://download.gnome.org/sources/gitg/3.32/gitg-3.32.1.tar.xz"
   sha256 "24a4aabf8a42aa2e783e1fb5996ebb3c2a82a01b9689269f1329517ef124ef5a"
-  revision 4
+  revision 5
 
   bottle do
     sha256 "5729e6dfac4f8529ded23111c81367aae5fdb56e16cc5770af94d9612817af75" => :catalina
