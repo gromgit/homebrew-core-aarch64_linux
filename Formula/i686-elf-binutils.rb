@@ -7,9 +7,9 @@ class I686ElfBinutils < Formula
   license "GPL-2.0"
 
   bottle do
-    sha256 "c2d082bc08ccb4ce1c870a3e670670eb756f0da433c9a29246277d42814263c1" => :catalina
-    sha256 "eb5d102d5ed4cff2710d084d80a3ecba884d39364b7616df9944788090e517e7" => :mojave
-    sha256 "7b6014e9338df52a85c747915bafe09af2abba4d9688ac19dc3de73958e4bcde" => :high_sierra
+    sha256 "bd767e1db00546bce96d34152ec795c22c2806b85d38a35ead97ff891a61df34" => :catalina
+    sha256 "cb33e5097284b273a810efd58d3acfafb95a50de6237ba0fdc97b270e6395ac0" => :mojave
+    sha256 "183a5bbcad9e513964112ee9b35095dabe0987e65a0252598a15974eb8ab9f74" => :high_sierra
   end
 
   def install
