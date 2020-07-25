@@ -3,6 +3,7 @@ class Gssdp < Formula
   homepage "https://wiki.gnome.org/GUPnP/"
   url "https://download.gnome.org/sources/gssdp/1.2/gssdp-1.2.3.tar.xz"
   sha256 "a263dcb6730e3b3dc4bbbff80cf3fab4cd364021981d419db6dd5a8e148aa7e8"
+  revision 1
 
   bottle do
     cellar :any
