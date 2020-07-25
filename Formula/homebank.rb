@@ -4,7 +4,7 @@ class Homebank < Formula
   url "http://homebank.free.fr/public/homebank-5.4.2.tar.gz"
   sha256 "c6ce84b421e7199ae545ea8b8d981f347af4d67b4cd5912b6789cf1450db722e"
   license "GPL-2.0"
-  revision 1
+  revision 2
 
   bottle do
     sha256 "1ca56de1c4771063323308f34678f4118f8d1c2ffc532dbbd331292bd56f9657" => :catalina
