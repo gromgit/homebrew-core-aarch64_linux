@@ -10,9 +10,9 @@ class Lanraragi < Formula
 
   bottle do
     cellar :any
-    sha256 "5820744c396856a78c7f26330c73bc1455d32784971a4bbf4cd966e5688b2aac" => :catalina
-    sha256 "aafa2c96a96c5d6813456aeee3134dd93324521a812f7b763b19f39c5a0cbe16" => :mojave
-    sha256 "4df4d7abf2302e211ee159010411595594806d7ce0eaa3e2425885a25ea1cdcb" => :high_sierra
+    sha256 "b550c7cdc9ec4dea0bce16a7c42f6821785359d42d4285bd594a34c96284791d" => :catalina
+    sha256 "d37f228923e386db4ba53db17a569c6c1c75678d0fe320b682a358e2f331ffe5" => :mojave
+    sha256 "2e40e8a70c8628ff005a3fccfa0953bd2ad64bdb9e6254d2d98b8e4b5f629c99" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
