@@ -8,9 +8,9 @@ class Saltwater < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "22f162aeaeadee5578237142dc6c1c0c6b59f01c254f43e92c8ef819fbee1482" => :catalina
-    sha256 "f7682593dd59142ee70839a3ea6646761e9cd138e2677e916bb0c5ac80fd9c53" => :mojave
-    sha256 "0c0c79c00b92bf9b9bd1bde3ddd0c3681183122fbe39cf31e2cb4e4a971f2d64" => :high_sierra
+    sha256 "750182bb83130c00ce6a9ea828261aed154c5c9914a1965172575be861985088" => :catalina
+    sha256 "3474f55537373be89128ac84c91a86f52cc10ac8a01934f784ae9ff07797ba43" => :mojave
+    sha256 "da2e7d1937a9e47c96329261c76a3cc3ec445b0826b92115d3c48ab6885ca8a1" => :high_sierra
   end
 
   depends_on "rust" => :build
