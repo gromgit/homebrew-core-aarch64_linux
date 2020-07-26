@@ -8,8 +8,8 @@ class DarkMode < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "731a265bb76b143c30f3b6813973f3cfeee3be84b0020c9a616e3f9da326ec26" => :catalina
-    sha256 "45e08014f007e1e35fe9bd4619f3ec7517f06d5a5b9869412ae629dbc5010085" => :mojave
+    sha256 "b9ce8876210cccd70e87ed5781a313f4b2705330453cd4af7ff2474f659d184e" => :catalina
+    sha256 "bfb3cbcc43a333d6ca8ef8c52c89dc6d0cc23938f4e4fbd6ac13683e4ad63bd6" => :mojave
   end
 
   depends_on :xcode => :build
