@@ -7,9 +7,9 @@ class CBlosc < Formula
 
   bottle do
     cellar :any
-    sha256 "3f0bd48f8086cb7ea76dfca4b61d702b91badee76faf05ceff514f795537c5af" => :catalina
-    sha256 "da10033ade2963d8903182fe9f7b5f98f9064d0fcba9fd1b0ca00bacc23efb8f" => :mojave
-    sha256 "83492ba1473b33ebbd54b0369bc67a904293e345a15f89ad7ba2a59039933b56" => :high_sierra
+    sha256 "00348f59148443e81e625ad88e236d40a57306c49a09bcf8da32205dd61ec23e" => :catalina
+    sha256 "a39d6a45c92a867a8082ddb54c85534c286539d955937b7e61bf0cf417bd2beb" => :mojave
+    sha256 "8ea83dcfe9216f4f6b31fe113090db1d842c35650119348049f70d17ca848719" => :high_sierra
   end
 
   depends_on "cmake" => :build
