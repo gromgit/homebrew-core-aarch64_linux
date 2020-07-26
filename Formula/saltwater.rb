@@ -1,8 +1,8 @@
 class Saltwater < Formula
   desc "C compiler written in Rust, with a focus on good error messages"
   homepage "https://github.com/jyn514/saltwater"
-  url "https://github.com/jyn514/saltwater/archive/0.10.0.tar.gz"
-  sha256 "1aac48c8ff787022238806a6c33dab4cc82553285a247581c10051e966544031"
+  url "https://github.com/jyn514/saltwater/archive/0.11.0.tar.gz"
+  sha256 "a9fedbb53586e045798ba26295b4da28157e4eb9945b5a74bbdaebca830f1316"
   license "BSD-3-Clause"
   head "https://github.com/jyn514/saltwater.git"
 
