@@ -1,8 +1,8 @@
 class Fping < Formula
   desc "Scriptable ping program for checking if multiple hosts are up"
   homepage "https://fping.org/"
-  url "https://fping.org/dist/fping-4.3.tar.gz"
-  sha256 "92040ae842f7b8942d5cf26d8f58702a8d84c40a1fd492b415bd01b622bf372d"
+  url "https://fping.org/dist/fping-4.4.tar.gz"
+  sha256 "9f854b65a52dc7b1749d6743e35d0a6268179d1a724267339fc9a066b2b72d11"
   license "BSD-3-Clause"
 
   bottle do
