@@ -11,6 +11,9 @@ class OpencvAT2 < Formula
     sha256 "b90a2e7e26ef9d18a2f87a954a786a6bc983047fbcae2280b662df66e254e76c" => :high_sierra
   end
 
+  # https://www.slideshare.net/EugeneKhvedchenya/opencv-30-latest-news-and-the-roadmap
+  deprecate! :date => "2015-02-01"
+
   keg_only :versioned_formula
 
   depends_on "cmake" => :build
