@@ -1,10 +1,9 @@
 class Pixz < Formula
   desc "Parallel, indexed, xz compressor"
   homepage "https://github.com/vasi/pixz"
-  url "https://github.com/vasi/pixz/releases/download/v1.0.6/pixz-1.0.6.tar.gz"
-  sha256 "c54a406dddc6c2226779aeb4b5d5b5649c1d3787b39794fbae218f7535a1af63"
+  url "https://github.com/vasi/pixz/releases/download/v1.0.7/pixz-1.0.7.tar.gz"
+  sha256 "d1b6de1c0399e54cbd18321b8091bbffef6d209ec136d4466f398689f62c3b5f"
   license "BSD-2-Clause"
-  revision 1
   head "https://github.com/vasi/pixz.git"
 
   bottle do
