@@ -38,12 +38,12 @@ class Liblouis < Formula
       system "python3", *Language::Python.setup_install_args(prefix)
     end
     mkdir "#{prefix}/tools"
-    mv "#{bin}/lou_maketable", "#{prefix}/tools/", :force => true
-    mv "#{bin}/lou_maketable.d", "#{prefix}/tools/", :force => true
+    mv "#{bin}/lou_maketable", "#{prefix}/tools/", force: true
+    mv "#{bin}/lou_maketable.d", "#{prefix}/tools/", force: true
   end
 
   test do
-    o, = Open3.capture2(bin/"lou_translate", "unicode.dis,en-us-g2.ctb", :stdin_data=>"42")
+    o, = Open3.capture2(bin/"lou_translate", "unicode.dis,en-us-g2.ctb", stdin_data: "42")
     assert_equal o, "⠼⠙⠃"
   end
 end
