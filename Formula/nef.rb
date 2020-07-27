@@ -9,7 +9,7 @@ class Nef < Formula
     sha256 "fae01b5b21abe8205e3e42101804f3c6c16bb04d1c14841846766579ce2885d5" => :catalina
   end
 
-  depends_on :xcode => "11.4"
+  depends_on xcode: "11.4"
 
   def install
     system "make", "install", "prefix=#{prefix}", "version=#{version}"
