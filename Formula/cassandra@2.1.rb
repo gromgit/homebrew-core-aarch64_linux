@@ -103,10 +103,10 @@ class CassandraAT21 < Formula
 
     bin.write_exec_script Dir["#{libexec}/bin/*"]
     rm bin/"cqlsh" # Remove existing exec script
-    (bin/"cqlsh").write_env_script libexec/"bin/cqlsh", :PYTHONPATH => pypath
+    (bin/"cqlsh").write_env_script libexec/"bin/cqlsh", PYTHONPATH: pypath
   end
 
-  plist_options :manual => "#{HOMEBREW_PREFIX}/opt/cassandra@2.1/bin/cassandra -f"
+  plist_options manual: "#{HOMEBREW_PREFIX}/opt/cassandra@2.1/bin/cassandra -f"
 
   def plist
     <<~EOS
