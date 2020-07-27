@@ -17,8 +17,8 @@ class I2p < Formula
 
     wrapper_name = "i2psvc-macosx-universal-64"
     libexec.install_symlink libexec/wrapper_name => "i2psvc"
-    (bin/"eepget").write_env_script libexec/"eepget", :JAVA_HOME => Formula["openjdk@11"].opt_prefix
-    (bin/"i2prouter").write_env_script libexec/"i2prouter", :JAVA_HOME => Formula["openjdk@11"].opt_prefix
+    (bin/"eepget").write_env_script libexec/"eepget", JAVA_HOME: Formula["openjdk@11"].opt_prefix
+    (bin/"i2prouter").write_env_script libexec/"i2prouter", JAVA_HOME: Formula["openjdk@11"].opt_prefix
     man1.install Dir["#{libexec}/man/*"]
   end
 
