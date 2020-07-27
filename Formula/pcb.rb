@@ -27,7 +27,7 @@ class Pcb < Formula
   depends_on "gtk+"
   depends_on "gtkglext"
 
-  conflicts_with "gts", :because => "both install a `gts.h` header"
+  conflicts_with "gts", because: "both install a `gts.h` header"
 
   def install
     system "./autogen.sh" if build.head?
