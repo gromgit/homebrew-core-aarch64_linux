@@ -35,7 +35,7 @@ class Bitcoin < Formula
     pkgshare.install "share/rpcauth"
   end
 
-  plist_options :manual => "bitcoind"
+  plist_options manual: "bitcoind"
 
   def plist
     <<~EOS
