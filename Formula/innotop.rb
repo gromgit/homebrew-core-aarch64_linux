@@ -48,7 +48,7 @@ class Innotop < Formula
     system "perl", "Makefile.PL", "INSTALL_BASE=#{prefix}"
     system "make", "install"
     share.install prefix/"man"
-    bin.env_script_all_files(libexec/"bin", :PERL5LIB => ENV["PERL5LIB"])
+    bin.env_script_all_files(libexec/"bin", PERL5LIB: ENV["PERL5LIB"])
   end
 
   test do
