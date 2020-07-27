@@ -109,7 +109,7 @@ class MysqlAT57 < Formula
     s
   end
 
-  plist_options :manual => "#{HOMEBREW_PREFIX}/opt/mysql@5.7/bin/mysql.server start"
+  plist_options manual: "#{HOMEBREW_PREFIX}/opt/mysql@5.7/bin/mysql.server start"
 
   def plist
     <<~EOS
