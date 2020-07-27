@@ -10,7 +10,7 @@ class Mockserver < Formula
 
   def install
     libexec.install Dir["*"]
-    (bin/"mockserver").write_env_script libexec/"bin/run_mockserver.sh", :JAVA_HOME => Formula["openjdk"].opt_prefix
+    (bin/"mockserver").write_env_script libexec/"bin/run_mockserver.sh", JAVA_HOME: Formula["openjdk"].opt_prefix
 
     lib.install_symlink "#{libexec}/lib" => "mockserver"
 
