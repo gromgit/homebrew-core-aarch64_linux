@@ -37,7 +37,7 @@ class Mahout < Formula
     end
 
     bin.install Dir["#{libexec}/bin/*"]
-    bin.env_script_all_files libexec/"bin", :JAVA_HOME => ENV["JAVA_HOME"]
+    bin.env_script_all_files libexec/"bin", JAVA_HOME: ENV["JAVA_HOME"]
   end
 
   test do
