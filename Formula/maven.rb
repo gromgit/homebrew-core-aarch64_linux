@@ -11,7 +11,7 @@ class Maven < Formula
 
   depends_on "openjdk"
 
-  conflicts_with "mvnvm", :because => "also installs a 'mvn' executable"
+  conflicts_with "mvnvm", because: "also installs a 'mvn' executable"
 
   def install
     # Remove windows files
@@ -30,7 +30,7 @@ class Maven < Formula
       basename = file.basename
       next if basename.to_s == "m2.conf"
 
-      (bin/basename).write_env_script file, :JAVA_HOME => "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
+      (bin/basename).write_env_script file, JAVA_HOME: "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
     end
   end
 
