@@ -22,7 +22,7 @@ class Teleport < Formula
     depends_on "netcat" => :test
   end
 
-  conflicts_with "etsh", :because => "both install `tsh` binaries"
+  conflicts_with "etsh", because: "both install `tsh` binaries"
 
   resource "webassets" do
     url "https://github.com/gravitational/webassets/archive/72412062d6d55ec7faa9707abf500d703e7d09da.tar.gz"
