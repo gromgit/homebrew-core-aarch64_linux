@@ -40,7 +40,7 @@ class NodeExporter < Formula
     EOS
   end
 
-  plist_options :manual => "node_exporter"
+  plist_options manual: "node_exporter"
 
   def plist
     <<~EOS
