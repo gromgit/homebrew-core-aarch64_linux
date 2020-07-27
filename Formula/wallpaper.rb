@@ -12,8 +12,8 @@ class Wallpaper < Formula
     sha256 "2a2ca640dde6aed8dab04983c680d60532eefcadc11f3c0b379e7754d4d9a662" => :catalina
   end
 
-  depends_on :xcode => ["11.4", :build]
-  depends_on :macos => :sierra
+  depends_on xcode: ["11.4", :build]
+  depends_on macos: :sierra
 
   def install
     system "swift", "build", "--disable-sandbox", "-c", "release"
