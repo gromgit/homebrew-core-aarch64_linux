@@ -15,7 +15,7 @@ class Cryptominisat < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on :arch => :x86_64
+  depends_on arch: :x86_64
   depends_on "boost"
   depends_on "python@3.8"
 
