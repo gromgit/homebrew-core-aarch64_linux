@@ -10,7 +10,7 @@ class Hive < Formula
   bottle :unneeded
 
   depends_on "hadoop"
-  depends_on :java => "1.8"
+  depends_on java: "1.8"
 
   def install
     rm_f Dir["bin/*.cmd", "bin/ext/*.cmd", "bin/ext/util/*.cmd"]
@@ -26,7 +26,7 @@ class Hive < Formula
       next if file.directory?
 
       (bin/file.basename).write_env_script file,
-        Language::Java.java_home_env("1.7+").merge(:HIVE_HOME => libexec)
+        Language::Java.java_home_env("1.7+").merge(HIVE_HOME: libexec)
     end
   end
 
