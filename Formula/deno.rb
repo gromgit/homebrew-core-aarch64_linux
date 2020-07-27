@@ -15,14 +15,14 @@ class Deno < Formula
   depends_on "llvm" => :build
   depends_on "ninja" => :build
   depends_on "rust" => :build
-  depends_on :xcode => ["10.0", :build] # required by v8 7.9+
+  depends_on xcode: ["10.0", :build] # required by v8 7.9+
   depends_on :macos # Due to Python 2 (see https://github.com/denoland/deno/issues/2893)
 
   uses_from_macos "xz"
 
   resource "gn" do
     url "https://gn.googlesource.com/gn.git",
-      :revision => "5ed3c9cc67b090d5e311e4bd2aba072173e82db9"
+      revision: "5ed3c9cc67b090d5e311e4bd2aba072173e82db9"
   end
 
   def install
