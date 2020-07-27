@@ -2,8 +2,8 @@ class Minio < Formula
   desc "High Performance, Kubernetes Native Object Storage"
   homepage "https://min.io"
   url "https://github.com/minio/minio.git",
-      :tag      => "RELEASE.2020-07-24T22-43-05Z",
-      :revision => "35212b673e0ffae841f6b870609df6677f96e5a4"
+      tag:      "RELEASE.2020-07-24T22-43-05Z",
+      revision: "35212b673e0ffae841f6b870609df6677f96e5a4"
   version "20200724224305"
   license "Apache-2.0"
   head "https://github.com/minio/minio.git"
@@ -39,7 +39,7 @@ class Minio < Formula
     (etc/"minio").mkpath
   end
 
-  plist_options :manual => "minio server"
+  plist_options manual: "minio server"
 
   def plist
     <<~EOS
