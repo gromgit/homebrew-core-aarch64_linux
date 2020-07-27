@@ -10,7 +10,7 @@ class Libgr < Formula
     sha256 "3ccecef65e33653c4cbc6a9958dd439c996e3aa5c955337df75efcb43d14fdc8" => :high_sierra
   end
 
-  depends_on :xcode => :build
+  depends_on xcode: :build
   depends_on "cairo"
   depends_on "glfw"
   depends_on "libtiff"
