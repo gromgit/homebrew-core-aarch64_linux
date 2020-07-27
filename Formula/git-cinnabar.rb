@@ -18,13 +18,13 @@ class GitCinnabar < Formula
 
   uses_from_macos "curl"
 
-  conflicts_with "git-remote-hg", :because => "both install `git-remote-hg` binaries"
+  conflicts_with "git-remote-hg", because: "both install `git-remote-hg` binaries"
 
   def install
     system "make", "helper"
     prefix.install "cinnabar"
     bin.install "git-cinnabar", "git-cinnabar-helper", "git-remote-hg"
-    bin.env_script_all_files(libexec, :PYTHONPATH => prefix)
+    bin.env_script_all_files(libexec, PYTHONPATH: prefix)
   end
 
   test do
