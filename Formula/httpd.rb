@@ -121,7 +121,7 @@ class Httpd < Formula
     EOS
   end
 
-  plist_options :manual => "apachectl start"
+  plist_options manual: "apachectl start"
 
   def plist
     <<~EOS
