@@ -37,7 +37,7 @@ class Isync < Formula
     system "make", "install"
   end
 
-  plist_options :manual => "isync"
+  plist_options manual: "isync"
 
   def plist
     <<~EOS
