@@ -11,7 +11,7 @@ class SignalCli < Formula
 
   def install
     libexec.install Dir["lib", "bin"]
-    (bin/"signal-cli").write_env_script libexec/"bin/signal-cli", :JAVA_HOME => Formula["openjdk"].opt_prefix
+    (bin/"signal-cli").write_env_script libexec/"bin/signal-cli", JAVA_HOME: Formula["openjdk"].opt_prefix
   end
 
   test do
@@ -21,7 +21,7 @@ class SignalCli < Formula
 
     # test 2: ensure crypto is working
     begin
-      io = IO.popen("#{bin}/signal-cli link", :err => [:child, :out])
+      io = IO.popen("#{bin}/signal-cli link", err: [:child, :out])
       sleep 8
     ensure
       Process.kill("SIGINT", io.pid)
