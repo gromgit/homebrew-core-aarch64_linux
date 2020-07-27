@@ -11,7 +11,7 @@ class Sourcedocs < Formula
     sha256 "3bfe25d253eecef289c822012efddc14d9bd331eba0f3f54fe88e7d0cf2aa924" => :mojave
   end
 
-  depends_on :xcode => ["10.3", :build, :test]
+  depends_on xcode: ["10.3", :build, :test]
 
   def install
     system "swift", "build", "--disable-sandbox", "-c", "release"
