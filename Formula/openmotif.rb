@@ -21,7 +21,7 @@ class Openmotif < Formula
   depends_on :x11
 
   conflicts_with "lesstif",
-    :because => "both Lesstif and Openmotif are complete replacements for each other"
+    because: "both Lesstif and Openmotif are complete replacements for each other"
 
   def install
     system "./configure", "--prefix=#{prefix}",
