@@ -13,7 +13,7 @@ class GradleProfiler < Formula
     rm_f Dir["bin/*.bat"]
     libexec.install %w[bin lib]
     (bin/"gradle-profiler").write_env_script libexec/"bin/gradle-profiler",
-      :JAVA_HOME => "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
+      JAVA_HOME: "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
   end
 
   test do
