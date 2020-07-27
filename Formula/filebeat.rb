@@ -2,8 +2,8 @@ class Filebeat < Formula
   desc "File harvester to ship log files to Elasticsearch or Logstash"
   homepage "https://www.elastic.co/products/beats/filebeat"
   url "https://github.com/elastic/beats.git",
-      :tag      => "v7.8.0",
-      :revision => "f79387d32717d79f689d94fda1ec80b2cf285d30"
+      tag:      "v7.8.0",
+      revision: "f79387d32717d79f689d94fda1ec80b2cf285d30"
   # Outside of the "x-pack" folder, source code in a given file is licensed
   # under the Apache License Version 2.0
   license "Apache-2.0"
@@ -74,7 +74,7 @@ class Filebeat < Formula
     EOS
   end
 
-  plist_options :manual => "filebeat"
+  plist_options manual: "filebeat"
 
   def plist
     <<~EOS
