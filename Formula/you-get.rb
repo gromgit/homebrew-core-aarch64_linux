@@ -5,7 +5,7 @@ class YouGet < Formula
   homepage "https://you-get.org/"
   url "https://github.com/soimort/you-get/archive/v0.4.1456.tar.gz"
   sha256 "619e2f5ae4b801dc196a2fe75d518cedd2f9e811db0fde7433de645a97898318"
-  head "https://github.com/soimort/you-get.git", :branch => "develop"
+  head "https://github.com/soimort/you-get.git", branch: "develop"
 
   bottle do
     cellar :any_skip_relocation
