@@ -37,8 +37,8 @@ class Zim < Formula
     system Formula["python@3.8"].opt_bin/"python3", "./setup.py", "install", "--prefix=#{libexec}"
     bin.install Dir[libexec/"bin/*"]
     bin.env_script_all_files libexec/"bin",
-      :PYTHONPATH    => ENV["PYTHONPATH"],
-      :XDG_DATA_DIRS => ["#{HOMEBREW_PREFIX}/share", libexec/"share"].join(":")
+      PYTHONPATH:    ENV["PYTHONPATH"],
+      XDG_DATA_DIRS: ["#{HOMEBREW_PREFIX}/share", libexec/"share"].join(":")
     pkgshare.install "zim"
   end
 
