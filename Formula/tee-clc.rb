@@ -9,12 +9,12 @@ class TeeClc < Formula
 
   depends_on "openjdk"
 
-  conflicts_with "tiny-fugue", :because => "both install a `tf` binary"
+  conflicts_with "tiny-fugue", because: "both install a `tf` binary"
 
   def install
     libexec.install "tf", "lib"
     (libexec/"native").install "native/macosx"
-    (bin/"tf").write_env_script libexec/"tf", :JAVA_HOME => Formula["openjdk"].opt_prefix
+    (bin/"tf").write_env_script libexec/"tf", JAVA_HOME: Formula["openjdk"].opt_prefix
 
     prefix.install "ThirdPartyNotices.html"
     share.install "help"
