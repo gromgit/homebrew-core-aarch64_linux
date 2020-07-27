@@ -19,7 +19,7 @@ class Normalize < Formula
 
   depends_on "mad"
 
-  conflicts_with "num-utils", :because => "both install `normalize` binaries"
+  conflicts_with "num-utils", because: "both install `normalize` binaries"
 
   def install
     args = %W[
