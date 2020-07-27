@@ -16,7 +16,7 @@ class GitDelta < Formula
   depends_on "rust" => :build
   uses_from_macos "llvm"
 
-  conflicts_with "delta", :because => "both install a `delta` binary"
+  conflicts_with "delta", because: "both install a `delta` binary"
 
   def install
     ENV.append_to_cflags "-fno-stack-check" if DevelopmentTools.clang_build_version >= 1010
