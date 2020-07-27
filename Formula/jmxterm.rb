@@ -7,11 +7,11 @@ class Jmxterm < Formula
 
   bottle :unneeded
 
-  depends_on :java => "1.8"
+  depends_on java: "1.8"
 
   def install
     libexec.install "jmxterm-#{version}-uber.jar"
-    bin.write_jar_script libexec/"jmxterm-#{version}-uber.jar", "jmxterm", "", :java_version => "1.8"
+    bin.write_jar_script libexec/"jmxterm-#{version}-uber.jar", "jmxterm", "", java_version: "1.8"
   end
 
   test do
