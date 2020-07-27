@@ -11,7 +11,7 @@ class Avfs < Formula
   end
 
   depends_on "pkg-config" => :build
-  depends_on :macos => :sierra # needs clock_gettime
+  depends_on macos: :sierra # needs clock_gettime
   depends_on "openssl@1.1"
   depends_on :osxfuse
   depends_on "xz"
