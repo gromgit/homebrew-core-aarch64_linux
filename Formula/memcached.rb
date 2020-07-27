@@ -19,7 +19,7 @@ class Memcached < Formula
     system "make", "install"
   end
 
-  plist_options :manual => "#{HOMEBREW_PREFIX}/opt/memcached/bin/memcached"
+  plist_options manual: "#{HOMEBREW_PREFIX}/opt/memcached/bin/memcached"
 
   def plist
     <<~EOS
