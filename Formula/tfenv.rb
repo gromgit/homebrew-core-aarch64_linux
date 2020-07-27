@@ -10,7 +10,7 @@ class Tfenv < Formula
 
   uses_from_macos "unzip"
 
-  conflicts_with "terraform", :because => "tfenv symlinks terraform binaries"
+  conflicts_with "terraform", because: "tfenv symlinks terraform binaries"
 
   # fix bash 3.x compatibility
   # removed in the next release
