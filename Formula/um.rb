@@ -32,7 +32,7 @@ class Um < Formula
     system "gem", "install", "--ignore-dependencies", "um-#{version}.gem"
 
     bin.install libexec/"bin/um"
-    bin.env_script_all_files(libexec/"bin", :GEM_HOME => ENV["GEM_HOME"])
+    bin.env_script_all_files(libexec/"bin", GEM_HOME: ENV["GEM_HOME"])
 
     bash_completion.install "um-completion.sh"
     man1.install Dir["doc/man1/*"]
