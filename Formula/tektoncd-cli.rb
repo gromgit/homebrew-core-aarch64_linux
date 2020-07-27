@@ -27,7 +27,7 @@ class TektoncdCli < Formula
 
   test do
     cmd = "#{bin}/tkn pipelinerun describe homebrew-formula"
-    io = IO.popen(cmd, :err => [:child, :out])
+    io = IO.popen(cmd, err: [:child, :out])
     assert_match "Error: Couldn't get kubeConfiguration namespace", io.read
   end
 end
