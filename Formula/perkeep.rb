@@ -5,8 +5,8 @@ class Perkeep < Formula
 
   stable do
     url "https://github.com/perkeep/perkeep.git",
-        :tag      => "0.10",
-        :revision => "0cbe4d5e05a40a17efe7441d75ce0ffdf9d6b9f5"
+        tag:      "0.10",
+        revision: "0cbe4d5e05a40a17efe7441d75ce0ffdf9d6b9f5"
 
     # gopherjs doesn't tag releases, so just pick the most recent revision for now
     resource "gopherjs" do
@@ -33,7 +33,7 @@ class Perkeep < Formula
 
   depends_on "pkg-config" => :build
 
-  conflicts_with "hello", :because => "both install `hello` binaries"
+  conflicts_with "hello", because: "both install `hello` binaries"
 
   def install
     if build.stable?
@@ -58,7 +58,7 @@ class Perkeep < Formula
     end
   end
 
-  plist_options :manual => "perkeepd"
+  plist_options manual: "perkeepd"
 
   def plist
     <<~EOS
