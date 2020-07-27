@@ -17,7 +17,7 @@ class Libzip < Formula
   uses_from_macos "zlib"
 
   conflicts_with "libtcod", "minizip2",
-    :because => "libtcod, libzip and minizip2 install a `zip.h` header"
+    because: "libtcod, libzip and minizip2 install a `zip.h` header"
 
   def install
     system "cmake", ".", *std_cmake_args
