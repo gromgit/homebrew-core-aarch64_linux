@@ -22,7 +22,7 @@ class Loki < Formula
     end
   end
 
-  plist_options :manual => "loki -config.file=#{HOMEBREW_PREFIX}/etc/loki-local-config.yaml"
+  plist_options manual: "loki -config.file=#{HOMEBREW_PREFIX}/etc/loki-local-config.yaml"
 
   def plist
     <<~EOS
