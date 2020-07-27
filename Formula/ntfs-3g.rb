@@ -23,7 +23,7 @@ class Ntfs3g < Formula
 
   head do
     url "https://git.code.sf.net/p/ntfs-3g/ntfs-3g.git",
-        :branch => "edge"
+        branch: "edge"
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
