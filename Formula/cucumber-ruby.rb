@@ -13,15 +13,15 @@ class CucumberRuby < Formula
 
   depends_on "pkg-config" => :build
 
-  uses_from_macos "libffi", :since => :catalina
-  uses_from_macos "ruby", :since => :catalina
+  uses_from_macos "libffi", since: :catalina
+  uses_from_macos "ruby", since: :catalina
 
   def install
     ENV["GEM_HOME"] = libexec
     system "gem", "build", "cucumber.gemspec"
     system "gem", "install", "cucumber-#{version}.gem"
     bin.install libexec/"bin/cucumber"
-    bin.env_script_all_files(libexec/"bin", :GEM_HOME => ENV["GEM_HOME"])
+    bin.env_script_all_files(libexec/"bin", GEM_HOME: ENV["GEM_HOME"])
   end
 
   test do
