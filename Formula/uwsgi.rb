@@ -82,7 +82,7 @@ class Uwsgi < Formula
     bin.install "uwsgi"
   end
 
-  plist_options :manual => "uwsgi"
+  plist_options manual: "uwsgi"
 
   def plist
     <<~EOS
