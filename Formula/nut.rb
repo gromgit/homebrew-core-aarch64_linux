@@ -33,7 +33,7 @@ class Nut < Formula
   depends_on "libusb-compat"
   depends_on "openssl@1.1"
 
-  conflicts_with "rhino", :because => "both install `rhino` binaries"
+  conflicts_with "rhino", because: "both install `rhino` binaries"
 
   def install
     if build.head?
@@ -74,7 +74,7 @@ class Nut < Formula
     (var/"run").mkpath
   end
 
-  plist_options :manual => "upsmon -D"
+  plist_options manual: "upsmon -D"
 
   def plist
     <<~EOS
