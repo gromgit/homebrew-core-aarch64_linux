@@ -30,7 +30,7 @@ class Spotifyd < Formula
     EOS
   end
 
-  plist_options :manual => "spotifyd --no-daemon"
+  plist_options manual: "spotifyd --no-daemon"
 
   def plist
     <<~EOS
