@@ -2,8 +2,8 @@ class Tile38 < Formula
   desc "In-memory geolocation data store, spatial index, and realtime geofence"
   homepage "https://tile38.com/"
   url "https://github.com/tidwall/tile38.git",
-    :tag      => "1.21.1",
-    :revision => "c1ba2d86aa5c99532f08c368376077646ec742b0"
+    tag:      "1.21.1",
+    revision: "c1ba2d86aa5c99532f08c368376077646ec742b0"
   license "MIT"
 
   bottle do
@@ -44,7 +44,7 @@ class Tile38 < Formula
     EOS
   end
 
-  plist_options :manual => "tile38-server -d #{HOMEBREW_PREFIX}/var/tile38/data"
+  plist_options manual: "tile38-server -d #{HOMEBREW_PREFIX}/var/tile38/data"
 
   def plist
     <<~EOS
