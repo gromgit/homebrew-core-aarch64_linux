@@ -4,7 +4,7 @@ class Dmenu < Formula
   url "https://dl.suckless.org/tools/dmenu-4.9.tar.gz"
   sha256 "b3971f4f354476a37b2afb498693649009b201550b0c7c88e866af8132b64945"
   license "MIT"
-  head "https://git.suckless.org/dmenu/", :using => :git
+  head "https://git.suckless.org/dmenu/", using: :git
 
   bottle do
     cellar :any_skip_relocation
