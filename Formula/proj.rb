@@ -23,7 +23,7 @@ class Proj < Formula
   uses_from_macos "curl"
   uses_from_macos "sqlite"
 
-  conflicts_with "blast", :because => "both install a `libproj.a` library"
+  conflicts_with "blast", because: "both install a `libproj.a` library"
 
   skip_clean :la
 
