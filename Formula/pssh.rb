@@ -15,7 +15,7 @@ class Pssh < Formula
 
   depends_on "python@3.8"
 
-  conflicts_with "putty", :because => "both install `pscp` binaries"
+  conflicts_with "putty", because: "both install `pscp` binaries"
 
   # Fix for Python 3 compatibility
   # https://bugs.archlinux.org/task/46571
