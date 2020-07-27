@@ -54,7 +54,7 @@ class Pulseaudio < Formula
     system "make", "install"
   end
 
-  plist_options :manual => "pulseaudio"
+  plist_options manual: "pulseaudio"
 
   def plist
     <<~EOS
