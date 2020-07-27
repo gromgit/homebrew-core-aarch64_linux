@@ -32,7 +32,7 @@ class Haproxy < Formula
     bin.install "haproxy"
   end
 
-  plist_options :manual => "haproxy -f #{HOMEBREW_PREFIX}/etc/haproxy.cfg"
+  plist_options manual: "haproxy -f #{HOMEBREW_PREFIX}/etc/haproxy.cfg"
 
   def plist
     <<~EOS
