@@ -19,10 +19,10 @@ class TomcatAT8 < Formula
     # Install files
     prefix.install %w[NOTICE LICENSE RELEASE-NOTES RUNNING.txt]
     libexec.install Dir["*"]
-    (bin/"catalina").write_env_script "#{libexec}/bin/catalina.sh", :JAVA_HOME => Formula["openjdk"].opt_prefix
+    (bin/"catalina").write_env_script "#{libexec}/bin/catalina.sh", JAVA_HOME: Formula["openjdk"].opt_prefix
   end
 
-  plist_options :manual => "catalina run"
+  plist_options manual: "catalina run"
 
   def plist
     <<~EOS
