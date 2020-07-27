@@ -56,8 +56,8 @@ class Sbcl < Formula
 
     # Install sources
     bin.env_script_all_files libexec/"bin",
-                             :SBCL_SOURCE_ROOT => pkgshare/"src",
-                             :SBCL_HOME        => lib/"sbcl"
+                             SBCL_SOURCE_ROOT: pkgshare/"src",
+                             SBCL_HOME:        lib/"sbcl"
     pkgshare.install %w[contrib src]
     (lib/"sbcl/sbclrc").write <<~EOS
       (setf (logical-pathname-translations "SYS")
