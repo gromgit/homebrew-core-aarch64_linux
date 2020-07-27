@@ -49,7 +49,7 @@ class Bup < Formula
     system "make", "install", "DESTDIR=#{prefix}", "PREFIX="
 
     mv bin/"bup", libexec/"bup.py"
-    (bin/"bup").write_env_script libexec/"bup.py", :PYTHONPATH => ENV["PYTHONPATH"]
+    (bin/"bup").write_env_script libexec/"bup.py", PYTHONPATH: ENV["PYTHONPATH"]
   end
 
   test do
