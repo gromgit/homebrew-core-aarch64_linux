@@ -14,7 +14,7 @@ class Parallel < Formula
     sha256 "fde839462cca26fdce64a9f0dc11e50d073234e4c2878838a7434b87c8683095" => :high_sierra
   end
 
-  conflicts_with "moreutils", :because => "both install a `parallel` executable"
+  conflicts_with "moreutils", because: "both install a `parallel` executable"
 
   def install
     system "./configure", "--prefix=#{prefix}"
