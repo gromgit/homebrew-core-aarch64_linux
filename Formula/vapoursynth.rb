@@ -21,7 +21,7 @@ class Vapoursynth < Formula
   depends_on "libtool" => :build
   depends_on "nasm" => :build
   depends_on "pkg-config" => :build
-  depends_on :macos => :el_capitan # due to zimg dependency
+  depends_on macos: :el_capitan # due to zimg dependency
   depends_on "python@3.8"
   depends_on "zimg"
 
