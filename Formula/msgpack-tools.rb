@@ -14,7 +14,7 @@ class MsgpackTools < Formula
 
   depends_on "cmake" => :build
 
-  conflicts_with "remarshal", :because => "both install 'json2msgpack' binary"
+  conflicts_with "remarshal", because: "both install 'json2msgpack' binary"
 
   def install
     system "cmake", ".", *std_cmake_args
