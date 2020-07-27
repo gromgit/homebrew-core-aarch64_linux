@@ -4,7 +4,7 @@ class Libowfat < Formula
   url "https://www.fefe.de/libowfat/libowfat-0.32.tar.xz"
   sha256 "f4b9b3d9922dc25bc93adedf9e9ff8ddbebaf623f14c8e7a5f2301bfef7998c1"
   license "GPL-2.0"
-  head ":pserver:cvs:@cvs.fefe.de:/cvs", :using => :cvs
+  head ":pserver:cvs:@cvs.fefe.de:/cvs", using: :cvs
 
   bottle do
     cellar :any_skip_relocation
