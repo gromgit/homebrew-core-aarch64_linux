@@ -2,8 +2,8 @@ class Ipfs < Formula
   desc "Peer-to-peer hypermedia protocol"
   homepage "https://ipfs.io/"
   url "https://github.com/ipfs/go-ipfs.git",
-      :tag      => "v0.6.0",
-      :revision => "d6e036a888ba95c15ce243a45c0cacb4a5bb8ee4"
+      tag:      "v0.6.0",
+      revision: "d6e036a888ba95c15ce243a45c0cacb4a5bb8ee4"
   # license ["Apache-2.0", "MIT"] - pending https://github.com/Homebrew/brew/pull/7953
   license "Apache-2.0"
   head "https://github.com/ipfs/go-ipfs.git"
@@ -26,7 +26,7 @@ class Ipfs < Formula
     cd("src/github.com/ipfs/go-ipfs") { bash_completion.install "misc/completion/ipfs-completion.bash" }
   end
 
-  plist_options :manual => "ipfs daemon"
+  plist_options manual: "ipfs daemon"
 
   def plist
     <<~EOS
