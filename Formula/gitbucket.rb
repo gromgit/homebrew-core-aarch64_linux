@@ -29,7 +29,7 @@ class Gitbucket < Formula
     EOS
   end
 
-  plist_options :manual => "java -jar #{HOMEBREW_PREFIX}/opt/gitbucket/libexec/gitbucket.war"
+  plist_options manual: "java -jar #{HOMEBREW_PREFIX}/opt/gitbucket/libexec/gitbucket.war"
 
   def plist
     <<~EOS
