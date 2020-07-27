@@ -16,7 +16,7 @@ class B2Tools < Formula
 
   depends_on "python@3.8"
 
-  conflicts_with "boost-build", :because => "both install `b2` binaries"
+  conflicts_with "boost-build", because: "both install `b2` binaries"
 
   def install
     venv = virtualenv_create(libexec, Formula["python@3.8"].opt_bin/"python3")
