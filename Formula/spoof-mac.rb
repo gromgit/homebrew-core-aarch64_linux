@@ -41,7 +41,7 @@ class SpoofMac < Formula
     EOS
   end
 
-  plist_options :startup => true, :manual => "spoof-mac"
+  plist_options startup: true, manual: "spoof-mac"
 
   def plist
     <<~EOS
