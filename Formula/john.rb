@@ -11,7 +11,7 @@ class John < Formula
     sha256 "96fad56c615dad3f07b2c4babf9e03a0dce6533e3e4cc11e7c37e99ef9379253" => :high_sierra
   end
 
-  conflicts_with "john-jumbo", :because => "both install the same binaries"
+  conflicts_with "john-jumbo", because: "both install the same binaries"
 
   # Backport of official patch from jumbo fork (https://www.openwall.com/lists/john-users/2016/01/04/1)
   patch do
