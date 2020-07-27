@@ -12,7 +12,7 @@ class Davmail < Formula
     bin.write_jar_script libexec/"davmail.jar", "davmail", "-Djava.awt.headless=true"
   end
 
-  plist_options :manual => "davmail"
+  plist_options manual: "davmail"
 
   def plist
     <<~EOS
