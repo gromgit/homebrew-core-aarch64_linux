@@ -14,7 +14,7 @@ class Kore < Formula
     sha256 "719bd8b11d2757fec07aa6558c95c500f2a7b6148a0ebbf2563d1012dc4eece2" => :sierra
   end
 
-  depends_on :macos => :sierra # needs clock_gettime
+  depends_on macos: :sierra # needs clock_gettime
 
   depends_on "openssl@1.1"
 
