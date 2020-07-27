@@ -21,7 +21,7 @@ class Lolcode < Formula
 
   depends_on "cmake" => :build
 
-  conflicts_with "lci", :because => "both install `lci` binaries"
+  conflicts_with "lci", because: "both install `lci` binaries"
 
   def install
     system "cmake", ".", *std_cmake_args
