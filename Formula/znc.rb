@@ -39,7 +39,7 @@ class Znc < Formula
     system "make", "install"
   end
 
-  plist_options :manual => "znc --foreground"
+  plist_options manual: "znc --foreground"
 
   def plist
     <<~EOS
