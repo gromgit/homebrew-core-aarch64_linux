@@ -8,7 +8,7 @@ class PerconaToolkit < Formula
   url "https://www.percona.com/downloads/percona-toolkit/3.2.0/source/tarball/percona-toolkit-3.2.0.tar.gz"
   sha256 "e7c7028631d5b1c66ba21841c55919537bd4ed2f3a5975f989fa4abd7d9d753d"
   license "GPL-2.0"
-  head "lp:percona-toolkit", :using => :bzr
+  head "lp:percona-toolkit", using: :bzr
 
   bottle do
     cellar :any
@@ -72,7 +72,7 @@ class PerconaToolkit < Formula
     # https://github.com/Homebrew/homebrew-core/issues/4936
     bin.find { |f| rewrite_shebang detected_perl_shebang, f }
 
-    bin.env_script_all_files(libexec/"bin", :PERL5LIB => ENV["PERL5LIB"])
+    bin.env_script_all_files(libexec/"bin", PERL5LIB: ENV["PERL5LIB"])
   end
 
   test do
