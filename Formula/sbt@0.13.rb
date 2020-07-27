@@ -9,7 +9,7 @@ class SbtAT013 < Formula
 
   keg_only :versioned_formula
 
-  depends_on :java => "1.8"
+  depends_on java: "1.8"
 
   def install
     inreplace "bin/sbt" do |s|
