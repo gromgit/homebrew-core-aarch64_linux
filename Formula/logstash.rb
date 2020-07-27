@@ -7,7 +7,7 @@ class Logstash < Formula
 
   bottle :unneeded
 
-  depends_on :java => "1.8"
+  depends_on java: "1.8"
 
   def install
     if build.head?
@@ -49,7 +49,7 @@ class Logstash < Formula
     EOS
   end
 
-  plist_options :manual => "logstash"
+  plist_options manual: "logstash"
 
   def plist
     <<~EOS
