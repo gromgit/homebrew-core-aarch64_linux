@@ -14,7 +14,7 @@ class Corsixth < Formula
 
   depends_on "cmake" => :build
   depends_on "luarocks" => :build
-  depends_on :xcode => :build
+  depends_on xcode: :build
   depends_on "ffmpeg"
   depends_on "freetype"
   depends_on "lua"
@@ -56,7 +56,7 @@ class Corsixth < Formula
          "CorsixTH/CorsixTH.app/Contents/Resources/"
     prefix.install "CorsixTH/CorsixTH.app"
 
-    env = { :LUA_PATH => ENV["LUA_PATH"], :LUA_CPATH => ENV["LUA_CPATH"] }
+    env = { LUA_PATH: ENV["LUA_PATH"], LUA_CPATH: ENV["LUA_CPATH"] }
     (bin/"CorsixTH").write_env_script(prefix/"CorsixTH.app/Contents/MacOS/CorsixTH", env)
   end
 
