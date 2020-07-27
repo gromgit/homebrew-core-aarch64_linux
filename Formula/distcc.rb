@@ -43,7 +43,7 @@ class Distcc < Formula
     system "make", "install"
   end
 
-  plist_options :manual => "distccd"
+  plist_options manual: "distccd"
 
   def plist
     <<~EOS
