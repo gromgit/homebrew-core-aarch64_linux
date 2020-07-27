@@ -33,7 +33,7 @@ class HgFastExport < Formula
 
     bins = %w[hg-fast-export.py hg-fast-export.sh hg-reset.py hg-reset.sh hg2git.py]
     bins.each do |f|
-      (bin / f).write_env_script(libexec / f, :PYTHONPATH => ENV["PYTHONPATH"])
+      (bin / f).write_env_script(libexec / f, PYTHONPATH: ENV["PYTHONPATH"])
     end
   end
 
