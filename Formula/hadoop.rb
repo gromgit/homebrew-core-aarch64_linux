@@ -10,19 +10,19 @@ class Hadoop < Formula
 
   depends_on "openjdk"
 
-  conflicts_with "yarn", :because => "both install `yarn` binaries"
+  conflicts_with "yarn", because: "both install `yarn` binaries"
 
   def install
     rm_f Dir["bin/*.cmd", "sbin/*.cmd", "libexec/*.cmd", "etc/hadoop/*.cmd"]
     libexec.install %w[bin sbin libexec share etc]
     Dir["#{libexec}/bin/*"].each do |path|
-      (bin/File.basename(path)).write_env_script path, :JAVA_HOME => Formula["openjdk"].opt_prefix
+      (bin/File.basename(path)).write_env_script path, JAVA_HOME: Formula["openjdk"].opt_prefix
     end
     Dir["#{libexec}/sbin/*"].each do |path|
-      (sbin/File.basename(path)).write_env_script path, :JAVA_HOME => Formula["openjdk"].opt_prefix
+      (sbin/File.basename(path)).write_env_script path, JAVA_HOME: Formula["openjdk"].opt_prefix
     end
     Dir["#{libexec}/libexec/*.sh"].each do |path|
-      (libexec/File.basename(path)).write_env_script path, :JAVA_HOME => Formula["openjdk"].opt_prefix
+      (libexec/File.basename(path)).write_env_script path, JAVA_HOME: Formula["openjdk"].opt_prefix
     end
     # Temporary fix until https://github.com/Homebrew/brew/pull/4512 is fixed
     chmod 0755, Dir["#{libexec}/*.sh"]
