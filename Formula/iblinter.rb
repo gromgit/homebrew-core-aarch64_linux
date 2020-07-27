@@ -12,7 +12,7 @@ class Iblinter < Formula
     sha256 "0a7c93d98d2f992934b88700d3ee0a203d575c65cd58786163fdab9fd209c0a0" => :mojave
   end
 
-  depends_on :xcode => ["10.2", :build]
+  depends_on xcode: ["10.2", :build]
 
   def install
     system "make", "install", "PREFIX=#{prefix}"
