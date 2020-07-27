@@ -15,12 +15,12 @@ class Mesos < Formula
 
   depends_on "maven" => :build
   depends_on "apr-util"
-  depends_on :java => "1.8"
+  depends_on java: "1.8"
   depends_on :macos # Due to Python 2
   depends_on "subversion"
 
-  conflicts_with "nanopb-generator", :because => "they depend on an incompatible version of protobuf"
-  conflicts_with "rapidjson", :because => "mesos installs a copy of rapidjson headers"
+  conflicts_with "nanopb-generator", because: "they depend on an incompatible version of protobuf"
+  conflicts_with "rapidjson", because: "mesos installs a copy of rapidjson headers"
 
   resource "protobuf" do
     url "https://files.pythonhosted.org/packages/1b/90/f531329e628ff34aee79b0b9523196eb7b5b6b398f112bb0c03b24ab1973/protobuf-3.6.1.tar.gz"
