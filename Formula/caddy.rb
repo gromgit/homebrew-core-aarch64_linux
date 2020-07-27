@@ -28,7 +28,7 @@ class Caddy < Formula
     end
   end
 
-  plist_options :manual => "caddy run --config #{HOMEBREW_PREFIX}/etc/Caddyfile"
+  plist_options manual: "caddy run --config #{HOMEBREW_PREFIX}/etc/Caddyfile"
 
   def plist
     <<~EOS
