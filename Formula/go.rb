@@ -11,7 +11,7 @@ class Go < Formula
     go_version = version.to_s.split(".")[0..1].join(".")
     resource "gotools" do
       url "https://go.googlesource.com/tools.git",
-          :branch => "release-branch.go#{go_version}"
+          branch: "release-branch.go#{go_version}"
     end
   end
 
@@ -29,7 +29,7 @@ class Go < Formula
     end
   end
 
-  depends_on :macos => :el_capitan
+  depends_on macos: :el_capitan
 
   # Don't update this unless this version cannot bootstrap the new version.
   resource "gobootstrap" do
