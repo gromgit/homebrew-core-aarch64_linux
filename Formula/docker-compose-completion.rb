@@ -10,7 +10,7 @@ class DockerComposeCompletion < Formula
   bottle :unneeded
 
   conflicts_with "docker-compose",
-    :because => "docker-compose already includes completion scripts"
+    because: "docker-compose already includes completion scripts"
 
   def install
     bash_completion.install "contrib/completion/bash/docker-compose"
