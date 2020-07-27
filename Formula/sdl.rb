@@ -37,7 +37,7 @@ class Sdl < Formula
   end
 
   head do
-    url "https://hg.libsdl.org/SDL", :branch => "SDL-1.2", :using => :hg
+    url "https://hg.libsdl.org/SDL", branch: "SDL-1.2", using: :hg
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
