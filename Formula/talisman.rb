@@ -2,9 +2,9 @@ class Talisman < Formula
   desc "Tool to detect and prevent secrets from getting checked in"
   homepage "https://thoughtworks.github.io/talisman/"
   url "https://github.com/thoughtworks/talisman",
-      :using    => :git,
-      :tag      => "v1.3.0",
-      :revision => "01d957c30db6a1db844627b447a96887b53f4032"
+      using:    :git,
+      tag:      "v1.3.0",
+      revision: "01d957c30db6a1db844627b447a96887b53f4032"
   license "MIT"
 
   bottle do
