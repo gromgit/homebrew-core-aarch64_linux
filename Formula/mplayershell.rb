@@ -17,7 +17,7 @@ class Mplayershell < Formula
     sha256 "a95437813704c56c3e52bd1b17974bec24c209e26df8e9dfe07af45d51ecaf49" => :mavericks
   end
 
-  depends_on :xcode => :build
+  depends_on xcode: :build
 
   depends_on "mplayer"
 
