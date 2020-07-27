@@ -7,9 +7,9 @@ class Glassfish < Formula
 
   bottle :unneeded
 
-  depends_on :java => "1.8"
+  depends_on java: "1.8"
 
-  conflicts_with "payara", :because => "both install the same scripts"
+  conflicts_with "payara", because: "both install the same scripts"
 
   def install
     rm_rf Dir["bin/*.bat"]
