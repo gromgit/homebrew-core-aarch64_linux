@@ -152,7 +152,7 @@ class Carton < Formula
     system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
     system "make", "install"
 
-    (bin/"carton").write_env_script("#{libexec}/bin/carton", :PERL5LIB => ENV["PERL5LIB"])
+    (bin/"carton").write_env_script("#{libexec}/bin/carton", PERL5LIB: ENV["PERL5LIB"])
     man1.install_symlink libexec/"man/man1/carton.1"
     man3.install_symlink Dir[libexec/"man/man3/Carton*"]
   end
