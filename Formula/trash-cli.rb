@@ -19,8 +19,8 @@ class TrashCli < Formula
 
   depends_on "python@3.8"
 
-  conflicts_with "macos-trash", :because => "both install a `trash` binary"
-  conflicts_with "trash", :because => "both install a `trash` binary"
+  conflicts_with "macos-trash", because: "both install a `trash` binary"
+  conflicts_with "trash", because: "both install a `trash` binary"
 
   def install
     virtualenv_install_with_resources
