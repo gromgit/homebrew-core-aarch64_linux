@@ -15,14 +15,14 @@ class Macvim < Formula
     sha256 "4b67795ddfcf1018ac1f260231f8a534072edbcb7b4ff060296667fd965a0abb" => :high_sierra
   end
 
-  depends_on :xcode => :build
+  depends_on xcode: :build
   depends_on "cscope"
   depends_on "lua"
   depends_on "python@3.8"
   depends_on "ruby"
 
   conflicts_with "vim",
-    :because => "vim and macvim both install vi* binaries"
+    because: "vim and macvim both install vi* binaries"
 
   def install
     # Avoid issues finding Ruby headers
