@@ -20,7 +20,7 @@ class Jobber < Formula
     system "make", "install"
   end
 
-  plist_options :startup => true
+  plist_options startup: true
 
   def plist
     <<~EOS
