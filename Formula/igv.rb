@@ -13,7 +13,7 @@ class Igv < Formula
     bin.install "igv.sh" => "igv"
     bin.install "igvtools"
     libexec.install "igv.args", "lib"
-    bin.env_script_all_files libexec, :JAVA_HOME => Formula["openjdk"].opt_prefix
+    bin.env_script_all_files libexec, JAVA_HOME: Formula["openjdk"].opt_prefix
   end
 
   test do
