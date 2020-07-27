@@ -14,7 +14,7 @@ class MitScheme < Formula
   # Has a hardcoded compile check for /Applications/Xcode.app
   # Dies on "configure: error: SIZEOF_CHAR is not 1" without Xcode.
   # https://github.com/Homebrew/homebrew-x11/issues/103#issuecomment-125014423
-  depends_on :xcode => :build
+  depends_on xcode: :build
   depends_on "openssl@1.1"
 
   resource "bootstrap" do
