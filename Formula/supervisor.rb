@@ -34,7 +34,7 @@ class Supervisor < Formula
     (var/"log").mkpath
   end
 
-  plist_options :manual => "supervisord -c #{HOMEBREW_PREFIX}/etc/supervisord.ini"
+  plist_options manual: "supervisord -c #{HOMEBREW_PREFIX}/etc/supervisord.ini"
 
   def plist
     <<~EOS
