@@ -12,7 +12,7 @@ class Nqp < Formula
 
   depends_on "moarvm"
 
-  conflicts_with "rakudo-star", :because => "rakudo-star currently ships with nqp included"
+  conflicts_with "rakudo-star", because: "rakudo-star currently ships with nqp included"
 
   def install
     system "perl", "Configure.pl",
