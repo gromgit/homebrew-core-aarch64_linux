@@ -27,7 +27,7 @@ class Proftpd < Formula
     system "make", "INSTALL_USER=#{install_user}", "INSTALL_GROUP=#{install_group}", "install"
   end
 
-  plist_options :manual => "proftpd"
+  plist_options manual: "proftpd"
 
   def plist
     <<~EOS
