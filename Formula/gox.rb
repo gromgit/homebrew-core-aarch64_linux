@@ -18,7 +18,7 @@ class Gox < Formula
 
   resource "iochan" do
     url "https://github.com/mitchellh/iochan.git",
-        :revision => "87b45ffd0e9581375c491fef3d32130bb15c5bd7"
+        revision: "87b45ffd0e9581375c491fef3d32130bb15c5bd7"
   end
 
   # This resource is for the test so doesn't really need to be updated.
