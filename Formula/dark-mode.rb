@@ -12,8 +12,8 @@ class DarkMode < Formula
     sha256 "bfb3cbcc43a333d6ca8ef8c52c89dc6d0cc23938f4e4fbd6ac13683e4ad63bd6" => :mojave
   end
 
-  depends_on :xcode => :build
-  depends_on :macos => :mojave
+  depends_on xcode: :build
+  depends_on macos: :mojave
 
   def install
     system "./build"
