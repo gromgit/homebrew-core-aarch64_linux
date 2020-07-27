@@ -5,7 +5,7 @@ class Nginx < Formula
   # See https://www.nginx.com/blog/nginx-1-12-1-13-released/ for why
   url "https://nginx.org/download/nginx-1.19.1.tar.gz"
   sha256 "a004776c64ed3c5c7bc9b6116ba99efab3265e6b81d49a57ca4471ff90655492"
-  head "https://hg.nginx.org/nginx/", :using => :hg
+  head "https://hg.nginx.org/nginx/", using: :hg
 
   bottle do
     sha256 "0c70950aa5eb51b432ecd5bc9f5d13cb9b4e583b946b8068b1250fe7205831e6" => :catalina
@@ -131,7 +131,7 @@ class Nginx < Formula
     EOS
   end
 
-  plist_options :manual => "nginx"
+  plist_options manual: "nginx"
 
   def plist
     <<~EOS
