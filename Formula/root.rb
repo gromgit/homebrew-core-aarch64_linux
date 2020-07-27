@@ -46,7 +46,7 @@ class Root < Formula
   depends_on "xz" # for LZMA
   depends_on "zstd"
 
-  conflicts_with "glew", :because => "root ships its own copy of glew"
+  conflicts_with "glew", because: "root ships its own copy of glew"
 
   skip_clean "bin"
 
