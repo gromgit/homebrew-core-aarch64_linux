@@ -22,7 +22,7 @@ class Cortex < Formula
     end
   end
 
-  plist_options :manual => "cortex -config.file=#{HOMEBREW_PREFIX}/etc/cortex.yaml"
+  plist_options manual: "cortex -config.file=#{HOMEBREW_PREFIX}/etc/cortex.yaml"
 
   def plist
     <<~EOS
