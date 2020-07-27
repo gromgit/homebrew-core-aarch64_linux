@@ -12,7 +12,7 @@ class Libzdb < Formula
     sha256 "123039235efee305797c3252e0e4b07c93989785165c044eefa9f86eae73f9b0" => :high_sierra
   end
 
-  depends_on :macos => :high_sierra # C++ 17 is required
+  depends_on macos: :high_sierra # C++ 17 is required
   depends_on "mysql-client"
   depends_on "openssl@1.1"
   depends_on "postgresql"
