@@ -24,7 +24,7 @@ class Mmseqs2 < Formula
 
   resource "documentation" do
     url "https://github.com/soedinglab/MMseqs2.wiki.git",
-        :revision => "c77918c9cebb24075f3c102a73fb1d413017a1a5"
+        revision: "c77918c9cebb24075f3c102a73fb1d413017a1a5"
   end
 
   def install
