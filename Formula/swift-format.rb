@@ -2,8 +2,8 @@ class SwiftFormat < Formula
   desc "Formatting technology for Swift source code"
   homepage "https://github.com/apple/swift-format"
   url "https://github.com/apple/swift-format.git",
-    :tag      => "0.50200.1",
-    :revision => "f22aade8a6ee061b4a7041601ededd8ad7bc2122"
+    tag:      "0.50200.1",
+    revision: "f22aade8a6ee061b4a7041601ededd8ad7bc2122"
   license "Apache-2.0"
   version_scheme 1
   head "https://github.com/apple/swift-format.git"
@@ -13,7 +13,7 @@ class SwiftFormat < Formula
     sha256 "d8f72c33efc125e2904e1bec2c8942cca75d75cf81dcab7fcf08ba124af16170" => :catalina
   end
 
-  depends_on :xcode => ["11.4", :build]
+  depends_on xcode: ["11.4", :build]
 
   def install
     system "swift", "build", "--disable-sandbox", "-c", "release"
