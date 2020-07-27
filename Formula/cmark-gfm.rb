@@ -17,7 +17,7 @@ class CmarkGfm < Formula
   depends_on "cmake" => :build
   depends_on "python@3.8" => :build
 
-  conflicts_with "cmark", :because => "both install a `cmark.h` header"
+  conflicts_with "cmark", because: "both install a `cmark.h` header"
 
   def install
     mkdir "build" do
