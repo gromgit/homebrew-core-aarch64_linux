@@ -19,7 +19,7 @@ class Tealdeer < Formula
     depends_on "openssl@1.1"
   end
 
-  conflicts_with "tldr", :because => "both install `tldr` binaries"
+  conflicts_with "tldr", because: "both install `tldr` binaries"
 
   def install
     system "cargo", "install", *std_cargo_args
