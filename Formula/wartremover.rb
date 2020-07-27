@@ -14,13 +14,13 @@ class Wartremover < Formula
   end
 
   depends_on "sbt" => :build
-  depends_on :java => "1.8"
+  depends_on java: "1.8"
 
   def install
     system "./sbt", "-sbt-jar", Formula["sbt"].opt_libexec/"bin/sbt-launch.jar",
                     "core/assembly"
     libexec.install "wartremover-assembly.jar"
-    bin.write_jar_script libexec/"wartremover-assembly.jar", "wartremover", :java_version => "1.8"
+    bin.write_jar_script libexec/"wartremover-assembly.jar", "wartremover", java_version: "1.8"
   end
 
   test do
