@@ -3,7 +3,7 @@ class ScIm < Formula
   homepage "https://github.com/andmarti1424/sc-im"
   url "https://github.com/andmarti1424/sc-im/archive/v0.7.0.tar.gz"
   sha256 "87225918cb6f52bbc068ee6b12eaf176c7c55ba9739b29ca08cb9b6699141cad"
-  head "https://github.com/andmarti1424/sc-im.git", :branch => "freeze"
+  head "https://github.com/andmarti1424/sc-im.git", branch: "freeze"
 
   bottle do
     sha256 "24cb0ad706b03a9933cdb24dba862b38a3fcb59f96f9942227d8f9f79ff93ea5" => :catalina
