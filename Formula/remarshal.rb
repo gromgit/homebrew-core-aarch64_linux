@@ -17,7 +17,7 @@ class Remarshal < Formula
 
   depends_on "python@3.8"
 
-  conflicts_with "msgpack-tools", :because => "both install 'json2msgpack' binary"
+  conflicts_with "msgpack-tools", because: "both install 'json2msgpack' binary"
 
   resource "cbor2" do
     url "https://files.pythonhosted.org/packages/ee/80/bc617b7fd89855649e48eb8242e09535e1b75371ec8389313fa0f97e2a70/cbor2-5.1.0.tar.gz"
