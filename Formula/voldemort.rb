@@ -14,7 +14,7 @@ class Voldemort < Formula
   end
 
   depends_on "gradle" => :build
-  depends_on :java => "1.8"
+  depends_on java: "1.8"
 
   def install
     system "./gradlew", "build", "-x", "test"
@@ -24,8 +24,8 @@ class Voldemort < Formula
     pkgshare.install "config" => "config-examples"
     (etc/"voldemort").mkpath
     env = {
-      :VOLDEMORT_HOME       => libexec,
-      :VOLDEMORT_CONFIG_DIR => etc/"voldemort",
+      VOLDEMORT_HOME:       libexec,
+      VOLDEMORT_CONFIG_DIR: etc/"voldemort",
     }
     bin.env_script_all_files(libexec/"bin", env)
   end
