@@ -44,7 +44,7 @@ class I2pd < Formula
     (var/"log/i2pd").mkpath
   end
 
-  plist_options :manual => "i2pd"
+  plist_options manual: "i2pd"
 
   def plist
     <<~EOS
