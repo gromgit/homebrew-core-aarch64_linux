@@ -2,8 +2,8 @@ class MinioMc < Formula
   desc "Replacement for ls, cp and other commands for object storage"
   homepage "https://github.com/minio/mc"
   url "https://github.com/minio/mc.git",
-      :tag      => "RELEASE.2020-07-11T05-18-52Z",
-      :revision => "1513d76ca9d3a2cddda40d0e6e50be164b894889"
+      tag:      "RELEASE.2020-07-11T05-18-52Z",
+      revision: "1513d76ca9d3a2cddda40d0e6e50be164b894889"
   version "20200711051852"
   license "Apache-2.0"
 
@@ -16,7 +16,7 @@ class MinioMc < Formula
 
   depends_on "go" => :build
 
-  conflicts_with "midnight-commander", :because => "both install an `mc` binary"
+  conflicts_with "midnight-commander", because: "both install an `mc` binary"
 
   def install
     if build.head?
