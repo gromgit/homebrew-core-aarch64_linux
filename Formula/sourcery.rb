@@ -12,7 +12,7 @@ class Sourcery < Formula
     sha256 "debaf5a493f59bb3860806ffc3c9a9fb7e52805f1fc9c84d2c4b42e447670473" => :mojave
   end
 
-  depends_on :xcode => "10.2"
+  depends_on xcode: "10.2"
 
   def install
     system "swift", "build", "--disable-sandbox", "-c", "release", "-Xswiftc",
