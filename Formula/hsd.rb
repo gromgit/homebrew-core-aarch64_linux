@@ -20,7 +20,7 @@ class Hsd < Formula
 
   def install
     system "#{Formula["node@10"].bin}/npm", "install", *Language::Node.std_npm_install_args(libexec)
-    (bin/"hsd").write_env_script libexec/"bin/hsd", :PATH => "#{Formula["node@10"].opt_bin}:$PATH"
+    (bin/"hsd").write_env_script libexec/"bin/hsd", PATH: "#{Formula["node@10"].opt_bin}:$PATH"
     bin.install_symlink libexec/"bin/hsd-cli"
     bin.install_symlink libexec/"bin/hsw-cli"
   end
