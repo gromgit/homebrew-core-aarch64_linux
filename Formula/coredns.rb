@@ -20,7 +20,7 @@ class Coredns < Formula
     bin.install "coredns"
   end
 
-  plist_options :startup => true
+  plist_options startup: true
 
   def plist
     <<~EOS
