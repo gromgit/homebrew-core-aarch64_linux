@@ -4,7 +4,7 @@ class Redis < Formula
   url "http://download.redis.io/releases/redis-6.0.6.tar.gz"
   sha256 "12ad49b163af5ef39466e8d2f7d212a58172116e5b441eebecb4e6ca22363d94"
   license "BSD-3-Clause"
-  head "https://github.com/redis/redis.git", :branch => "unstable"
+  head "https://github.com/redis/redis.git", branch: "unstable"
 
   bottle do
     cellar :any
@@ -31,7 +31,7 @@ class Redis < Formula
     etc.install "sentinel.conf" => "redis-sentinel.conf"
   end
 
-  plist_options :manual => "redis-server #{HOMEBREW_PREFIX}/etc/redis.conf"
+  plist_options manual: "redis-server #{HOMEBREW_PREFIX}/etc/redis.conf"
 
   def plist
     <<~EOS
