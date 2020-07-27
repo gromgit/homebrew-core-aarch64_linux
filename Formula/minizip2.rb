@@ -19,9 +19,9 @@ class Minizip2 < Formula
   uses_from_macos "zlib"
 
   conflicts_with "minizip",
-    :because => "both install a `libminizip.a` library"
+    because: "both install a `libminizip.a` library"
   conflicts_with "libtcod", "libzip",
-    :because => "libtcod, libzip and minizip2 install a `zip.h` header"
+    because: "libtcod, libzip and minizip2 install a `zip.h` header"
 
   def install
     system "cmake", ".", *std_cmake_args, "-DIconv_IS_BUILT_IN=on"
