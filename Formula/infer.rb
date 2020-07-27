@@ -3,8 +3,8 @@ class Infer < Formula
   homepage "https://fbinfer.com/"
   # pull from git tag to get submodules
   url "https://github.com/facebook/infer.git",
-      :tag      => "v0.17.0",
-      :revision => "99464c01da5809e7159ed1a75ef10f60d34506a4"
+      tag:      "v0.17.0",
+      revision: "99464c01da5809e7159ed1a75ef10f60d34506a4"
   license "MIT"
 
   bottle do
@@ -18,7 +18,7 @@ class Infer < Formula
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "cmake" => :build
-  depends_on :java => ["1.8", :build, :test]
+  depends_on java: ["1.8", :build, :test]
   depends_on "libtool" => :build
   depends_on "ocaml" => :build
   depends_on "ocaml-findlib" => :build
