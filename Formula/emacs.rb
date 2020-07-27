@@ -62,7 +62,7 @@ class Emacs < Formula
     (man1/"ctags.1.gz").unlink
   end
 
-  plist_options :manual => "emacs"
+  plist_options manual: "emacs"
 
   def plist
     <<~EOS
