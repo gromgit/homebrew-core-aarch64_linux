@@ -15,7 +15,7 @@ class Ccze < Formula
   end
 
   # query via the last repo status change `https://api.github.com/repos/madhouse/ccze`
-  deprecate! :date => "2020-05-24"
+  deprecate! date: "2020-05-24"
 
   depends_on "pcre"
 
