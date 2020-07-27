@@ -24,7 +24,7 @@ class Byobu < Formula
   depends_on "newt"
   depends_on "tmux"
 
-  conflicts_with "ctail", :because => "both install `ctail` binaries"
+  conflicts_with "ctail", because: "both install `ctail` binaries"
 
   def install
     if build.head?
