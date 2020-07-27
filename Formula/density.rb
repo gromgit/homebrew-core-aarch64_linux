@@ -16,7 +16,7 @@ class Density < Formula
 
   resource "cputime" do
     url "https://github.com/centaurean/cputime.git",
-        :revision => "d435d91b872a4824fb507a02d0d1814ed3e791b0"
+        revision: "d435d91b872a4824fb507a02d0d1814ed3e791b0"
   end
 
   resource "spookyhash" do
