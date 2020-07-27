@@ -2,10 +2,10 @@ class Dcd < Formula
   desc "Auto-complete program for the D programming language"
   homepage "https://github.com/dlang-community/DCD"
   url "https://github.com/dlang-community/DCD.git",
-      :tag      => "v0.13.0",
-      :revision => "808460a678d9c993d393c36e7eb06601a157efcf"
+      tag:      "v0.13.0",
+      revision: "808460a678d9c993d393c36e7eb06601a157efcf"
   license "GPL-3.0"
-  head "https://github.com/dlang-community/dcd.git", :shallow => false
+  head "https://github.com/dlang-community/dcd.git", shallow: false
 
   bottle do
     cellar :any_skip_relocation
