@@ -7,7 +7,7 @@ class GitRecent < Formula
 
   bottle :unneeded
 
-  depends_on :macos => :sierra
+  depends_on macos: :sierra
 
   def install
     bin.install "git-recent"
