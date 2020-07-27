@@ -14,7 +14,7 @@ class Opentsdb < Formula
 
   depends_on "gnuplot"
   depends_on "hbase"
-  depends_on :java => "1.8"
+  depends_on java: "1.8"
   depends_on "lzo"
 
   def install
@@ -30,8 +30,8 @@ class Opentsdb < Formula
     system "make", "install"
 
     env = {
-      :HBASE_HOME  => Formula["hbase"].opt_libexec,
-      :COMPRESSION => "LZO",
+      HBASE_HOME:  Formula["hbase"].opt_libexec,
+      COMPRESSION: "LZO",
     }
     env = Language::Java.java_home_env("1.8").merge(env)
     create_table = pkgshare/"tools/create_table_with_env.sh"
@@ -71,7 +71,7 @@ class Opentsdb < Formula
     end
   end
 
-  plist_options :manual => "#{HOMEBREW_PREFIX}/opt/opentsdb/bin/start-tsdb.sh"
+  plist_options manual: "#{HOMEBREW_PREFIX}/opt/opentsdb/bin/start-tsdb.sh"
 
   def plist
     <<~EOS
