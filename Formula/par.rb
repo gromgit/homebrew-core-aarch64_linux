@@ -11,7 +11,7 @@ class Par < Formula
     sha256 "344dd1109a03e8c6017c2ca26a17c9f07c700c743b89b42786efce956bac70e1" => :high_sierra
   end
 
-  conflicts_with "rancid", :because => "both install `par` binaries"
+  conflicts_with "rancid", because: "both install `par` binaries"
 
   def install
     system "make", "-f", "protoMakefile"
