@@ -92,7 +92,7 @@ class Dnstwist < Formula
     venv.pip_install resources
 
     (libexec/"bin").install "dnstwist.py" => "dnstwist"
-    (bin/"dnstwist").write_env_script libexec/"bin/dnstwist", :PATH => "#{libexec}/bin:$PATH"
+    (bin/"dnstwist").write_env_script libexec/"bin/dnstwist", PATH: "#{libexec}/bin:$PATH"
   end
 
   test do
