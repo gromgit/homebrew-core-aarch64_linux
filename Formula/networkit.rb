@@ -4,8 +4,8 @@ class Networkit < Formula
   desc "Performance toolkit for large-scale network analysis"
   homepage "https://networkit.github.io"
   url "https://github.com/networkit/networkit.git",
-      :tag      => "7.0",
-      :revision => "d8e952f1e4d5e2758e4744e7c6ea7429a59c7cdf"
+      tag:      "7.0",
+      revision: "d8e952f1e4d5e2758e4744e7c6ea7429a59c7cdf"
   license "MIT"
 
   bottle do
