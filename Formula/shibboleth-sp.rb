@@ -49,7 +49,7 @@ class ShibbolethSp < Formula
     (var/"cache/shibboleth").mkpath
   end
 
-  plist_options :startup => true, :manual => "shibd"
+  plist_options startup: true, manual: "shibd"
 
   def plist
     <<~EOS
