@@ -2,8 +2,8 @@ class Kibana < Formula
   desc "Analytics and search dashboard for Elasticsearch"
   homepage "https://www.elastic.co/products/kibana"
   url "https://github.com/elastic/kibana.git",
-      :tag      => "v7.8.0",
-      :revision => "1244c9fa76dccc0c8123a47aca33bddb66e298af"
+      tag:      "v7.8.0",
+      revision: "1244c9fa76dccc0c8123a47aca33bddb66e298af"
   license "Apache-2.0"
   head "https://github.com/elastic/kibana.git"
 
@@ -53,7 +53,7 @@ class Kibana < Formula
     EOS
   end
 
-  plist_options :manual => "kibana"
+  plist_options manual: "kibana"
 
   def plist
     <<~EOS
