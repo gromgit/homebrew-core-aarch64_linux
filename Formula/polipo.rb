@@ -15,7 +15,7 @@ class Polipo < Formula
   end
 
   # https://github.com/jech/polipo/commit/4d42ca1b5849518762d110f34b6ce2e03d6df9ec
-  deprecate! :date => "2016-11-06"
+  deprecate! date: "2016-11-06"
 
   def install
     cache_root = (var + "cache/polipo")
@@ -34,7 +34,7 @@ class Polipo < Formula
     system "make", "install", *args
   end
 
-  plist_options :manual => "polipo"
+  plist_options manual: "polipo"
 
   def plist
     <<~EOS
