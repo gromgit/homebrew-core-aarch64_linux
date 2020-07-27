@@ -21,7 +21,7 @@ class GccAT5 < Formula
     satisfy { MacOS::CLT.installed? }
   end
 
-  depends_on :maximum_macos => [:high_sierra, :build]
+  depends_on maximum_macos: [:high_sierra, :build]
 
   depends_on "gmp"
   depends_on "libmpc"
