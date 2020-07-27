@@ -12,9 +12,9 @@ class Pngpaste < Formula
   end
 
   # Sierra's CLT is sufficient, but El Capitain's isn't
-  depends_on :xcode => ["8.0", :build] if MacOS.version < :sierra
+  depends_on xcode: ["8.0", :build] if MacOS.version < :sierra
 
-  depends_on :macos => :el_capitan # needs NSBitmapImageFileTypePNG, etc.
+  depends_on macos: :el_capitan # needs NSBitmapImageFileTypePNG, etc.
 
   def install
     system "make", "all"
