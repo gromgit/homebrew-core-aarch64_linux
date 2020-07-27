@@ -21,7 +21,7 @@ class Shelltestrunner < Formula
   depends_on "ghc@8.8" => :build
 
   def install
-    install_cabal_package :using => ["happy"]
+    install_cabal_package using: ["happy"]
   end
 
   test do
