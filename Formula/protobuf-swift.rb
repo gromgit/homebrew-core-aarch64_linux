@@ -22,7 +22,7 @@ class ProtobufSwift < Formula
   depends_on "protobuf@3.7"
 
   conflicts_with "swift-protobuf",
-    :because => "both install `protoc-gen-swift` binaries"
+    because: "both install `protoc-gen-swift` binaries"
 
   def install
     ENV.cxx11
