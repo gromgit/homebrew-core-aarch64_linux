@@ -22,10 +22,10 @@ class Vim < Formula
   uses_from_macos "ncurses"
 
   conflicts_with "ex-vi",
-    :because => "vim and ex-vi both install bin/ex and bin/view"
+    because: "vim and ex-vi both install bin/ex and bin/view"
 
   conflicts_with "macvim",
-    :because => "vim and macvim both install vi* binaries"
+    because: "vim and macvim both install vi* binaries"
 
   def install
     ENV.prepend_path "PATH", Formula["python@3.8"].opt_libexec/"bin"
