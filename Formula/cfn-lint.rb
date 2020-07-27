@@ -70,7 +70,7 @@ class CfnLint < Formula
   # only doing this because junit-xml source is not available in PyPI for v1.9
   resource "junit-xml" do
     url "https://github.com/kyrus/python-junit-xml.git",
-        :revision => "4bd08a272f059998cedf9b7779f944d49eba13a6"
+        revision: "4bd08a272f059998cedf9b7779f944d49eba13a6"
   end
 
   resource "networkx" do
