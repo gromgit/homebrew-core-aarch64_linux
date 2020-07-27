@@ -39,7 +39,7 @@ class Bazel < Formula
       ln_s libexec/"bin/bazel-real", bin/"bazel-#{version}"
       (libexec/"bin").install "output/bazel" => "bazel-real"
       bin.env_script_all_files(libexec/"bin",
-        :JAVA_HOME => Formula["openjdk@11"].opt_libexec/"openjdk.jdk/Contents/Home")
+        JAVA_HOME: Formula["openjdk@11"].opt_libexec/"openjdk.jdk/Contents/Home")
 
       bash_completion.install "bazel-bin/scripts/bazel-complete.bash"
       zsh_completion.install "scripts/zsh_completion/_bazel"
