@@ -32,7 +32,7 @@ class Tor < Formula
     system "make", "install"
   end
 
-  plist_options :manual => "tor"
+  plist_options manual: "tor"
 
   def plist
     <<~EOS
