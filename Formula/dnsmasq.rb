@@ -51,7 +51,7 @@ class Dnsmasq < Formula
     touch etc/"dnsmasq.d/dhcpc/.keepme"
   end
 
-  plist_options :startup => true
+  plist_options startup: true
 
   def plist
     <<~EOS
