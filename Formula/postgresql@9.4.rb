@@ -14,7 +14,7 @@ class PostgresqlAT94 < Formula
 
   keg_only :versioned_formula
 
-  deprecate! :date => "2020-02-13"
+  deprecate! date: "2020-02-13"
 
   depends_on "openssl@1.1"
   depends_on "readline"
@@ -87,7 +87,7 @@ class PostgresqlAT94 < Formula
     EOS
   end
 
-  plist_options :manual => "pg_ctl -D #{HOMEBREW_PREFIX}/var/postgresql@9.4 start"
+  plist_options manual: "pg_ctl -D #{HOMEBREW_PREFIX}/var/postgresql@9.4 start"
 
   def plist
     <<~EOS
