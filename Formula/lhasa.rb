@@ -22,7 +22,7 @@ class Lhasa < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
 
-  conflicts_with "lha", :because => "both install a `lha` binary"
+  conflicts_with "lha", because: "both install a `lha` binary"
 
   def install
     system "./autogen.sh", "--prefix=#{prefix}"
