@@ -14,7 +14,7 @@ class Metabase < Formula
 
   bottle :unneeded
 
-  depends_on :java => "1.8"
+  depends_on java: "1.8"
 
   def install
     if build.head?
@@ -31,7 +31,7 @@ class Metabase < Formula
     EOS
   end
 
-  plist_options :startup => true, :manual => "metabase"
+  plist_options startup: true, manual: "metabase"
 
   def plist
     <<~EOS
