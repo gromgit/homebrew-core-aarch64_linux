@@ -4,7 +4,7 @@ class GitFtp < Formula
   url "https://github.com/git-ftp/git-ftp/archive/1.6.0.tar.gz"
   sha256 "088b58d66c420e5eddc51327caec8dcbe8bddae557c308aa739231ed0490db01"
   license "GPL-3.0"
-  head "https://github.com/git-ftp/git-ftp.git", :branch => "develop"
+  head "https://github.com/git-ftp/git-ftp.git", branch: "develop"
 
   bottle do
     cellar :any
@@ -46,7 +46,7 @@ class GitFtp < Formula
     system "make", "-C", "man", "man"
     man1.install "man/git-ftp.1"
     (libexec/"bin").install bin/"git-ftp"
-    (bin/"git-ftp").write_env_script(libexec/"bin/git-ftp", :PATH => "#{libexec}/bin:$PATH")
+    (bin/"git-ftp").write_env_script(libexec/"bin/git-ftp", PATH: "#{libexec}/bin:$PATH")
   end
 
   test do
