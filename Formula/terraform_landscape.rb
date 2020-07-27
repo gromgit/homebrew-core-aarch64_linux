@@ -54,7 +54,7 @@ class TerraformLandscape < Formula
     system "gem", "build", "terraform_landscape.gemspec"
     system "gem", "install", "--ignore-dependencies", "terraform_landscape-#{version}.gem"
     bin.install libexec/"bin/landscape"
-    bin.env_script_all_files(libexec/"bin", :GEM_HOME => ENV["GEM_HOME"])
+    bin.env_script_all_files(libexec/"bin", GEM_HOME: ENV["GEM_HOME"])
   end
 
   test do
