@@ -34,7 +34,7 @@ class Chronograf < Formula
     bin.install "chronograf"
   end
 
-  plist_options :manual => "chronograf"
+  plist_options manual: "chronograf"
 
   def plist
     <<~EOS
