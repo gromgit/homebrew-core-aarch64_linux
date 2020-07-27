@@ -14,7 +14,7 @@ class Ser2net < Formula
   end
 
   depends_on "libyaml"
-  depends_on :macos => :sierra # needs clock_gettime
+  depends_on macos: :sierra # needs clock_gettime
 
   resource "gensio" do
     url "https://downloads.sourceforge.net/project/ser2net/ser2net/gensio-2.1.2.tar.gz"
@@ -48,7 +48,7 @@ class Ser2net < Formula
     EOS
   end
 
-  plist_options :manual => "ser2net -p 12345"
+  plist_options manual: "ser2net -p 12345"
 
   def plist
     <<~EOS
