@@ -37,7 +37,7 @@ class Apollo < Formula
     (libexec/"lib").install resource("bdb-je")
     (libexec/"lib").install resource("mqtt")
 
-    (bin/"apollo").write_env_script libexec/"bin/apollo", :JAVA_HOME => Formula["openjdk"].opt_prefix
+    (bin/"apollo").write_env_script libexec/"bin/apollo", JAVA_HOME: Formula["openjdk"].opt_prefix
   end
 
   def caveats
@@ -47,7 +47,7 @@ class Apollo < Formula
     EOS
   end
 
-  plist_options :manual => "#{HOMEBREW_PREFIX}/var/apollo/bin/apollo-broker run"
+  plist_options manual: "#{HOMEBREW_PREFIX}/var/apollo/bin/apollo-broker run"
 
   def plist
     <<~EOS
