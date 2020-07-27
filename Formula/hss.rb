@@ -31,7 +31,7 @@ class Hss < Formula
       hss_read, hss_write = IO.pipe
       hss_pid = fork do
         exec "#{bin}/hss", "-H", "-p #{port} 127.0.0.1", "-u", "root", "true",
-          :out => hss_write
+          out: hss_write
       end
       server.close
       msg = hss_read.gets
