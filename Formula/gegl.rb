@@ -32,7 +32,7 @@ class Gegl < Formula
     depends_on "cairo"
   end
 
-  conflicts_with "coreutils", :because => "both install `gcut` binaries"
+  conflicts_with "coreutils", because: "both install `gcut` binaries"
 
   def install
     args = std_meson_args + %w[
