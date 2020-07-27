@@ -33,7 +33,7 @@ class Coturn < Formula
     man1.install Dir["man/man1/*"]
   end
 
-  plist_options :manual => "turnserver -c #{HOMEBREW_PREFIX}/etc/turnserver.conf --userdb=#{HOMEBREW_PREFIX}/opt/coturn/var/db/turndb --daemon"
+  plist_options manual: "turnserver -c #{HOMEBREW_PREFIX}/etc/turnserver.conf --userdb=#{HOMEBREW_PREFIX}/opt/coturn/var/db/turndb --daemon"
 
   def plist
     <<~EOS
