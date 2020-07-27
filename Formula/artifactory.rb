@@ -25,7 +25,7 @@ class Artifactory < Formula
     # Memory Options
     bin.install libexec/"bin/artifactory.default"
 
-    bin.env_script_all_files libexec/"bin", :JAVA_HOME => Formula["openjdk"].opt_prefix
+    bin.env_script_all_files libexec/"bin", JAVA_HOME: Formula["openjdk"].opt_prefix
   end
 
   def post_install
@@ -38,7 +38,7 @@ class Artifactory < Formula
     libexec.install_symlink data => "data"
   end
 
-  plist_options :manual => "#{HOMEBREW_PREFIX}/opt/artifactory/libexec/bin/artifactory.sh"
+  plist_options manual: "#{HOMEBREW_PREFIX}/opt/artifactory/libexec/bin/artifactory.sh"
 
   def plist
     <<~EOS
