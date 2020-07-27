@@ -186,7 +186,7 @@ class Certbot < Formula
     pkgshare.install buildpath/"certbot/examples"
 
     bin.install Dir[libexec/"bin/certbot"]
-    bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
+    bin.env_script_all_files(libexec/"bin", PYTHONPATH: ENV["PYTHONPATH"])
   end
 
   test do
