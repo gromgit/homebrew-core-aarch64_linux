@@ -2,11 +2,11 @@ class Carthage < Formula
   desc "Decentralized dependency manager for Cocoa"
   homepage "https://github.com/Carthage/Carthage"
   url "https://github.com/Carthage/Carthage.git",
-      :tag      => "0.35.0",
-      :revision => "c7550f832f23d2c00bf0c014351719839593c641",
-      :shallow  => false
+      tag:      "0.35.0",
+      revision: "c7550f832f23d2c00bf0c014351719839593c641",
+      shallow:  false
   license "MIT"
-  head "https://github.com/Carthage/Carthage.git", :shallow => false
+  head "https://github.com/Carthage/Carthage.git", shallow: false
 
   bottle do
     cellar :any_skip_relocation
@@ -15,7 +15,7 @@ class Carthage < Formula
     sha256 "130fcb9bc06ef8e7f1c5ac9af0d155bd347db039b2cf80fa0fef764b3627ffbf" => :high_sierra
   end
 
-  depends_on :xcode => ["10.0", :build]
+  depends_on xcode: ["10.0", :build]
 
   patch do
     # Fix erroneously re-throwing reduce (on Swift 5.3 pre-release)
