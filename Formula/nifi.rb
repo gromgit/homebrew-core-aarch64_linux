@@ -14,8 +14,8 @@ class Nifi < Formula
     libexec.install Dir["*"]
 
     (bin/"nifi").write_env_script libexec/"bin/nifi.sh",
-                                  :NIFI_HOME => libexec,
-                                  :JAVA_HOME => Formula["openjdk"].opt_prefix
+                                  NIFI_HOME: libexec,
+                                  JAVA_HOME: Formula["openjdk"].opt_prefix
   end
 
   test do
