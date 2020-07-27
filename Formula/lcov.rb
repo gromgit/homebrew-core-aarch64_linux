@@ -61,7 +61,7 @@ class Lcov < Formula
     perl_files = Dir["#{bin}/*"]
     inreplace perl_files, "#!/usr/bin/env perl", "#!/usr/bin/perl"
 
-    bin.env_script_all_files(libexec/"bin", :PERL5LIB => ENV["PERL5LIB"])
+    bin.env_script_all_files(libexec/"bin", PERL5LIB: ENV["PERL5LIB"])
   end
 
   test do
