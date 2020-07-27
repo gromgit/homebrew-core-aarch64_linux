@@ -8,7 +8,7 @@ class Groovy < Formula
 
   depends_on "openjdk"
 
-  conflicts_with "groovysdk", :because => "both install the same binaries"
+  conflicts_with "groovysdk", because: "both install the same binaries"
 
   def install
     # Don't need Windows files.
@@ -16,7 +16,7 @@ class Groovy < Formula
 
     libexec.install "bin", "conf", "lib"
     bin.install Dir["#{libexec}/bin/*"] - ["#{libexec}/bin/groovy.ico"]
-    bin.env_script_all_files libexec/"bin", :JAVA_HOME => "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
+    bin.env_script_all_files libexec/"bin", JAVA_HOME: "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
   end
 
   def caveats
