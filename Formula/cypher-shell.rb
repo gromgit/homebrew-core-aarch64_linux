@@ -8,7 +8,7 @@ class CypherShell < Formula
 
   bottle :unneeded
 
-  depends_on :java => "1.8"
+  depends_on java: "1.8"
 
   def install
     rm_f Dir["bin/*.bat"]
@@ -18,7 +18,7 @@ class CypherShell < Formula
 
     # Copy the bin
     bin.install ["cypher-shell"]
-    bin.env_script_all_files(share, :NEO4J_HOME => ENV["NEO4J_HOME"])
+    bin.env_script_all_files(share, NEO4J_HOME: ENV["NEO4J_HOME"])
   end
 
   test do
