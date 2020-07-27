@@ -8,7 +8,7 @@ class TmuxinatorCompletion < Formula
 
   bottle :unneeded
 
-  conflicts_with "tmuxinator", :because => "the tmuxinator formula includes completion"
+  conflicts_with "tmuxinator", because: "the tmuxinator formula includes completion"
 
   def install
     bash_completion.install "completion/tmuxinator.bash" => "tmuxinator"
