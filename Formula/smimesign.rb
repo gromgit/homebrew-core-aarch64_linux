@@ -14,7 +14,7 @@ class Smimesign < Formula
   end
 
   depends_on "go" => :build
-  depends_on :macos => :sierra
+  depends_on macos: :sierra
 
   def install
     ENV["GOPATH"] = buildpath
