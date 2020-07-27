@@ -242,7 +242,7 @@ class Glances < Formula
     system "python3", *Language::Python.setup_install_args(libexec)
 
     bin.install Dir[libexec/"bin/*"]
-    bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
+    bin.env_script_all_files(libexec/"bin", PYTHONPATH: ENV["PYTHONPATH"])
 
     prefix.install libexec/"share"
   end
@@ -250,7 +250,7 @@ class Glances < Formula
   test do
     read, write = IO.pipe
     pid = fork do
-      exec bin/"glances", "-q", "--export", "csv", "--export-csv-file", "/dev/stdout", :out => write
+      exec bin/"glances", "-q", "--export", "csv", "--export-csv-file", "/dev/stdout", out: write
     end
     header = read.gets
     assert_match "timestamp", header
