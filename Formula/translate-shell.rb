@@ -4,7 +4,7 @@ class TranslateShell < Formula
   url "https://github.com/soimort/translate-shell/archive/v0.9.6.12.tar.gz"
   sha256 "4c4843a8c66276190535b8435775ecb5d9c8286083a33cdbe2db608eba93ca97"
   license "Unlicense"
-  head "https://github.com/soimort/translate-shell.git", :branch => "develop"
+  head "https://github.com/soimort/translate-shell.git", branch: "develop"
 
   bottle do
     cellar :any_skip_relocation
