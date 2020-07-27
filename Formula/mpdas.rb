@@ -21,7 +21,7 @@ class Mpdas < Formula
     etc.install "mpdasrc.example"
   end
 
-  plist_options :manual => "mpdas"
+  plist_options manual: "mpdas"
 
   def plist
     <<~EOS
