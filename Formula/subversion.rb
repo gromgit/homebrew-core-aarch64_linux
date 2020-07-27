@@ -15,7 +15,7 @@ class Subversion < Formula
   end
 
   head do
-    url "https://github.com/apache/subversion.git", :branch => "trunk"
+    url "https://github.com/apache/subversion.git", branch: "trunk"
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
