@@ -17,8 +17,8 @@ class Flume < Formula
     libexec.install %w[conf docs lib tools]
     bin.install Dir["bin/*"]
     bin.env_script_all_files libexec/"bin",
-                             :JAVA_HOME  => Formula["openjdk"].opt_prefix,
-                             :FLUME_HOME => libexec
+                             JAVA_HOME:  Formula["openjdk"].opt_prefix,
+                             FLUME_HOME: libexec
   end
 
   test do
