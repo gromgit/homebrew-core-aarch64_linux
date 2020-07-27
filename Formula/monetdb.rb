@@ -12,7 +12,7 @@ class Monetdb < Formula
   end
 
   head do
-    url "https://dev.monetdb.org/hg/MonetDB", :using => :hg
+    url "https://dev.monetdb.org/hg/MonetDB", using: :hg
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
