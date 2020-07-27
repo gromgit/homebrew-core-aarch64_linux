@@ -17,7 +17,7 @@ class Coffeescript < Formula
 
   depends_on "node"
 
-  conflicts_with "cake", :because => "both install `cake` binaries"
+  conflicts_with "cake", because: "both install `cake` binaries"
 
   def install
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
