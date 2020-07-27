@@ -20,7 +20,7 @@ class Libslax < Formula
   depends_on "libtool" => :build
   depends_on "openssl@1.1"
 
-  conflicts_with "genometools", :because => "both install `bin/gt`"
+  conflicts_with "genometools", because: "both install `bin/gt`"
 
   def install
     # configure remembers "-lcrypto" but not the link path.
