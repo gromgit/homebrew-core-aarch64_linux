@@ -11,7 +11,7 @@ class Vapor < Formula
     sha256 "b34e9ef3f43cfaa725a60798e6a32997233b56479b0889161dc8dcf026a86779" => :catalina
   end
 
-  depends_on :xcode => "11.4"
+  depends_on xcode: "11.4"
 
   def install
     system "swift", "build", "--disable-sandbox", "-c", "release", "-Xswiftc", \
