@@ -20,13 +20,13 @@ class Inko < Formula
   depends_on "make" => :build
   depends_on "rust" => :build
 
-  uses_from_macos "ruby", :since => :sierra
+  uses_from_macos "ruby", since: :sierra
 
   def install
     make = Formula["make"].opt_bin/"gmake"
     system make, "install", "PREFIX=#{libexec}"
     bin.install Dir[libexec/"bin/*"]
-    bin.env_script_all_files libexec/"bin", :INKOC_HOME => libexec/"lib/inko"
+    bin.env_script_all_files libexec/"bin", INKOC_HOME: libexec/"lib/inko"
   end
 
   test do
