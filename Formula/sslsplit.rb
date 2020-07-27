@@ -4,7 +4,7 @@ class Sslsplit < Formula
   url "https://github.com/droe/sslsplit/archive/0.5.5.tar.gz"
   sha256 "3a6b9caa3552c9139ea5c9841d4bf24d47764f14b1b04b7aae7fa2697641080b"
   revision 1
-  head "https://github.com/droe/sslsplit.git", :branch => "develop"
+  head "https://github.com/droe/sslsplit.git", branch: "develop"
 
   bottle do
     cellar :any
