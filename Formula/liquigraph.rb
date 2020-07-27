@@ -22,7 +22,7 @@ class Liquigraph < Formula
     system "tar", "xzf", "liquigraph-cli/target/liquigraph-cli-bin.tar.gz", "-C", "binaries"
     libexec.install "binaries/liquigraph-cli/liquigraph.sh"
     libexec.install "binaries/liquigraph-cli/liquigraph-cli.jar"
-    (bin/"liquigraph").write_env_script libexec/"liquigraph.sh", :JAVA_HOME => "${JAVA_HOME:-#{ENV["JAVA_HOME"]}}"
+    (bin/"liquigraph").write_env_script libexec/"liquigraph.sh", JAVA_HOME: "${JAVA_HOME:-#{ENV["JAVA_HOME"]}}"
   end
 
   test do
