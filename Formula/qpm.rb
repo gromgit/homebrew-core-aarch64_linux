@@ -2,8 +2,8 @@ class Qpm < Formula
   desc "Package manager for Qt applications"
   homepage "https://www.qpm.io"
   url "https://github.com/Cutehacks/qpm.git",
-      :tag      => "v0.11.0",
-      :revision => "fc340f20ddcfe7e09f046fd22d2af582ff0cd4ef"
+      tag:      "v0.11.0",
+      revision: "fc340f20ddcfe7e09f046fd22d2af582ff0cd4ef"
 
   bottle do
     cellar :any_skip_relocation
