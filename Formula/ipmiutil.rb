@@ -16,7 +16,7 @@ class Ipmiutil < Formula
   depends_on "libtool" => :build
   depends_on "openssl@1.1"
 
-  conflicts_with "renameutils", :because => "both install `icmd` binaries"
+  conflicts_with "renameutils", because: "both install `icmd` binaries"
 
   def install
     # Darwin does not exist only on PowerPC
