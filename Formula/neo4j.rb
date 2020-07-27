@@ -13,7 +13,7 @@ class Neo4j < Formula
   # https://github.com/Homebrew/homebrew-core/issues/31090
   # As of v4.1.0, neo4j still needs to build with java 1.8
   # https://github.com/neo4j/neo4j/issues/12516
-  depends_on :java => "1.8"
+  depends_on java: "1.8"
 
   def install
     ENV["NEO4J_HOME"] = libexec
@@ -25,7 +25,7 @@ class Neo4j < Formula
 
     # Symlink binaries
     bin.install Dir["#{libexec}/bin/neo4j{,-shell,-import,-shared.sh,-admin}", "#{libexec}/bin/cypher-shell"]
-    bin.env_script_all_files(libexec/"bin", :NEO4J_HOME => ENV["NEO4J_HOME"])
+    bin.env_script_all_files(libexec/"bin", NEO4J_HOME: ENV["NEO4J_HOME"])
 
     # Adjust UDC props
     # Suppress the empty, focus-stealing java gui.
@@ -42,7 +42,7 @@ class Neo4j < Formula
     (var/"neo4j").mkpath
   end
 
-  plist_options :manual => "neo4j start"
+  plist_options manual: "neo4j start"
 
   def plist
     <<~EOS
