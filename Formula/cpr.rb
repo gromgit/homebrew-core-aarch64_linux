@@ -2,8 +2,8 @@ class Cpr < Formula
   desc "C++ Requests, a spiritual port of Python Requests"
   homepage "https://whoshuu.github.io/cpr/"
   url "https://github.com/whoshuu/cpr.git",
-      :tag      => "v1.5.1",
-      :revision => "5e87cb5f45ac99858f0286dc1c35a6cd27c3bcb9"
+      tag:      "v1.5.1",
+      revision: "5e87cb5f45ac99858f0286dc1c35a6cd27c3bcb9"
   license "MIT"
   head "https://github.com/whoshuu/cpr.git"
 
