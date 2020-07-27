@@ -74,7 +74,7 @@ class Netdata < Formula
     (var/"netdata").mkpath
   end
 
-  plist_options :manual => "#{HOMEBREW_PREFIX}/sbin/netdata -D"
+  plist_options manual: "#{HOMEBREW_PREFIX}/sbin/netdata -D"
 
   def plist
     <<~EOS
