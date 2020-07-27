@@ -4,7 +4,7 @@ class Swiftformat < Formula
   url "https://github.com/nicklockwood/SwiftFormat/archive/0.44.17.tar.gz"
   sha256 "71cf14ae08415aabaa92349ee3accfc23077972c78f481819cb706092e2f4780"
   license "MIT"
-  head "https://github.com/nicklockwood/SwiftFormat.git", :shallow => false
+  head "https://github.com/nicklockwood/SwiftFormat.git", shallow: false
 
   bottle do
     cellar :any_skip_relocation
@@ -13,7 +13,7 @@ class Swiftformat < Formula
     sha256 "3ad0bcd008b2d1efd28af92ab3bd76194880cb0c04c0f68a6f3ad77efcfc42b0" => :high_sierra
   end
 
-  depends_on :xcode => ["10.1", :build]
+  depends_on xcode: ["10.1", :build]
 
   def install
     xcodebuild "-project",
