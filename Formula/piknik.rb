@@ -41,7 +41,7 @@ class Piknik < Formula
     EOS
   end
 
-  plist_options :manual => "piknik -server"
+  plist_options manual: "piknik -server"
 
   def plist
     <<~EOS
