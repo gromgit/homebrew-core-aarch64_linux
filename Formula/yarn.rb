@@ -9,16 +9,16 @@ class Yarn < Formula
 
   depends_on "node"
 
-  conflicts_with "hadoop", :because => "both install `yarn` binaries"
+  conflicts_with "hadoop", because: "both install `yarn` binaries"
 
   def install
     libexec.install Dir["*"]
     (bin/"yarn").write_env_script "#{libexec}/bin/yarn.js",
-      :PREFIX            => HOMEBREW_PREFIX,
-      :NPM_CONFIG_PYTHON => "/usr/bin/python"
+      PREFIX:            HOMEBREW_PREFIX,
+      NPM_CONFIG_PYTHON: "/usr/bin/python"
     (bin/"yarnpkg").write_env_script "#{libexec}/bin/yarn.js",
-      :PREFIX            => HOMEBREW_PREFIX,
-      :NPM_CONFIG_PYTHON => "/usr/bin/python"
+      PREFIX:            HOMEBREW_PREFIX,
+      NPM_CONFIG_PYTHON: "/usr/bin/python"
     inreplace "#{libexec}/package.json", '"installationMethod": "tar"', '"installationMethod": "homebrew"'
   end
 
