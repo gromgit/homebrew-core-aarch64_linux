@@ -64,17 +64,17 @@ class Pipenv < Formula
     # wrapper script for `pipenv` which adds `#{libexec}/tools` to PATH.
     (libexec/"tools").install_symlink libexec/"bin/pip", libexec/"bin/virtualenv"
     env = {
-      :PATH => "#{libexec}/tools:$PATH",
+      PATH: "#{libexec}/tools:$PATH",
     }
     (bin/"pipenv").write_env_script(libexec/"bin/pipenv", env)
 
     output = Utils.safe_popen_read(
-      { "PIPENV_SHELL" => "bash" }, libexec/"bin/pipenv", "--completion", { :err => :err }
+      { "PIPENV_SHELL" => "bash" }, libexec/"bin/pipenv", "--completion", { err: :err }
     )
     (bash_completion/"pipenv").write output
 
     output = Utils.safe_popen_read(
-      { "PIPENV_SHELL" => "zsh" }, libexec/"bin/pipenv", "--completion", { :err => :err }
+      { "PIPENV_SHELL" => "zsh" }, libexec/"bin/pipenv", "--completion", { err: :err }
     )
     (zsh_completion/"_pipenv").write output
   end
