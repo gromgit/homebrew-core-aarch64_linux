@@ -13,7 +13,7 @@ class Grc < Formula
 
   depends_on "python@3.8"
 
-  conflicts_with "cc65", :because => "both install `grc` binaries"
+  conflicts_with "cc65", because: "both install `grc` binaries"
 
   def install
     # fix non-standard prefix installs
