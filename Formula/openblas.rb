@@ -5,7 +5,7 @@ class Openblas < Formula
   sha256 "0484d275f87e9b8641ff2eecaa9df2830cbe276ac79ad80494822721de6e1693"
   license "BSD-3-Clause"
   revision 1
-  head "https://github.com/xianyi/OpenBLAS.git", :branch => "develop"
+  head "https://github.com/xianyi/OpenBLAS.git", branch: "develop"
 
   bottle do
     cellar :any
