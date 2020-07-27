@@ -12,14 +12,14 @@ class Mysql < Formula
 
   depends_on "cmake" => :build
   # GCC is not supported either, so exclude for El Capitan.
-  depends_on :macos => :sierra if DevelopmentTools.clang_build_version == 800
+  depends_on macos: :sierra if DevelopmentTools.clang_build_version == 800
   depends_on "openssl@1.1"
   depends_on "protobuf"
 
   uses_from_macos "libedit"
 
   conflicts_with "mariadb", "percona-server",
-    :because => "mysql, mariadb, and percona install the same binaries"
+    because: "mysql, mariadb, and percona install the same binaries"
 
   # https://bugs.mysql.com/bug.php?id=86711
   # https://github.com/Homebrew/homebrew-core/pull/20538
@@ -124,7 +124,7 @@ class Mysql < Formula
     s
   end
 
-  plist_options :manual => "mysql.server start"
+  plist_options manual: "mysql.server start"
 
   def plist
     <<~EOS
