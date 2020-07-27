@@ -20,7 +20,7 @@ class Meilisearch < Formula
     end
   end
 
-  plist_options :manual => "meilisearch"
+  plist_options manual: "meilisearch"
 
   def plist
     <<~EOS
