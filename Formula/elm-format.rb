@@ -2,8 +2,8 @@ class ElmFormat < Formula
   desc "Elm source code formatter, inspired by gofmt"
   homepage "https://github.com/avh4/elm-format"
   url "https://github.com/avh4/elm-format.git",
-      :tag      => "0.8.3",
-      :revision => "b97e3593d564a1e069c0a022da8cbd98ca2c5a4b"
+      tag:      "0.8.3",
+      revision: "b97e3593d564a1e069c0a022da8cbd98ca2c5a4b"
   license "BSD-3-Clause"
   head "https://github.com/avh4/elm-format.git"
 
