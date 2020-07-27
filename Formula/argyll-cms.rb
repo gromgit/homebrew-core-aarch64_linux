@@ -17,7 +17,7 @@ class ArgyllCms < Formula
   depends_on "libpng"
   depends_on "libtiff"
 
-  conflicts_with "num-utils", :because => "both install `average` binaries"
+  conflicts_with "num-utils", because: "both install `average` binaries"
 
   # Fixes calls to obj_msgSend, whose signature changed in macOS 10.15.
   # Follows the advice in this blog post, which should be compatible
