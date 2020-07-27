@@ -11,7 +11,7 @@ class Jam < Formula
     sha256 "2927cebface8a3cbc00a23e7badb9e1676fda9bae282e78a1772b99aafba5014" => :high_sierra
   end
 
-  conflicts_with "ftjam", :because => "both install a `jam` binary"
+  conflicts_with "ftjam", because: "both install a `jam` binary"
 
   def install
     system "make", "CC=#{ENV.cc}", "CFLAGS=#{ENV.cflags}", "LOCATE_TARGET=bin"
