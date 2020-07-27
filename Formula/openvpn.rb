@@ -42,7 +42,7 @@ class Openvpn < Formula
     (var/"run/openvpn").mkpath
   end
 
-  plist_options :startup => true
+  plist_options startup: true
 
   def plist
     <<~EOS
