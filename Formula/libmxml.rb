@@ -14,7 +14,7 @@ class Libmxml < Formula
     sha256 "044434b96bcf9a3097e28c4e85fa5e1e558f2b2dc62c7e8eba6363c664924b68" => :sierra
   end
 
-  depends_on :xcode => :build # for docsetutil
+  depends_on xcode: :build # for docsetutil
 
   def install
     system "./configure", "--disable-debug",
