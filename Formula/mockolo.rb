@@ -10,7 +10,7 @@ class Mockolo < Formula
     sha256 "1177ebf6dd5b6507305913a9738c54c842291a2956658fbc73ca682e04a50b21" => :catalina
   end
 
-  depends_on :xcode => ["11.4", :build]
+  depends_on xcode: ["11.4", :build]
 
   def install
     system "swift", "build", "-c", "release", "--disable-sandbox"
