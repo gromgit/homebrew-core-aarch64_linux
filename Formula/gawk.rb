@@ -17,7 +17,7 @@ class Gawk < Formula
   depends_on "readline"
 
   conflicts_with "awk",
-    :because => "both install an `awk` executable"
+    because: "both install an `awk` executable"
 
   def install
     system "./configure", "--disable-debug",
