@@ -6,7 +6,7 @@ class Aspectj < Formula
 
   bottle :unneeded
 
-  depends_on :java => "1.8"
+  depends_on java: "1.8"
 
   def install
     mkdir_p "#{libexec}/#{name}"
