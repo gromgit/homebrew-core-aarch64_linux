@@ -9,7 +9,7 @@ class BatsCore < Formula
 
   depends_on "coreutils"
 
-  conflicts_with "bats", :because => "both install `bats` executables"
+  conflicts_with "bats", because: "both install `bats` executables"
 
   def install
     system "./install.sh", prefix
