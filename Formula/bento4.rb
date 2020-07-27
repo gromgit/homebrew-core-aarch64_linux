@@ -13,12 +13,12 @@ class Bento4 < Formula
     sha256 "39cf05c54bc595fa014196b8f0fa0847e2d39d25e720bf9c6b581a578a77631b" => :high_sierra
   end
 
-  depends_on :xcode => :build
+  depends_on xcode: :build
   depends_on "python@3.8"
 
-  conflicts_with "gpac", :because => "both install `mp42ts` binaries"
+  conflicts_with "gpac", because: "both install `mp42ts` binaries"
   conflicts_with "mp4v2",
-    :because => "both install `mp4extract` and `mp4info` binaries"
+    because: "both install `mp4extract` and `mp4info` binaries"
 
   def install
     cd "Build/Targets/universal-apple-macosx" do
