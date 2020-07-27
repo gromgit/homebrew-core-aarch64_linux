@@ -13,8 +13,8 @@ class Trash < Formula
     sha256 "0ef5ea924ba8d01398686657a839ad270796f3f10eee86d6522980d32038df9a" => :high_sierra
   end
 
-  conflicts_with "macos-trash", :because => "both install a `trash` binary"
-  conflicts_with "trash-cli", :because => "both install a `trash` binary"
+  conflicts_with "macos-trash", because: "both install a `trash` binary"
+  conflicts_with "trash-cli", because: "both install a `trash` binary"
 
   def install
     system "make"
