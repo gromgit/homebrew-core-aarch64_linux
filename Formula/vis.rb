@@ -33,7 +33,7 @@ class Vis < Formula
     system "./configure", "--prefix=#{prefix}"
     system "make", "install"
 
-    env = { :LUA_PATH => ENV["LUA_PATH"], :LUA_CPATH => ENV["LUA_CPATH"] }
+    env = { LUA_PATH: ENV["LUA_PATH"], LUA_CPATH: ENV["LUA_CPATH"] }
     bin.env_script_all_files(libexec/"bin", env)
     # Rename vis & the matching manpage to avoid clashing with the system.
     mv bin/"vis", bin/"vise"
