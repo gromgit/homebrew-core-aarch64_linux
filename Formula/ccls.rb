@@ -15,7 +15,7 @@ class Ccls < Formula
   depends_on "cmake" => :build
   depends_on "rapidjson" => :build
   depends_on "llvm"
-  depends_on :macos => :high_sierra # C++ 17 is required
+  depends_on macos: :high_sierra # C++ 17 is required
 
   def install
     system "cmake", *std_cmake_args
