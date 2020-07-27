@@ -9,12 +9,12 @@ class Mvnvm < Formula
 
   depends_on "openjdk"
 
-  conflicts_with "maven", :because => "also installs a 'mvn' executable"
+  conflicts_with "maven", because: "also installs a 'mvn' executable"
 
   def install
     bin.install "mvn"
     bin.install "mvnDebug"
-    bin.env_script_all_files libexec/"bin", :JAVA_HOME => "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
+    bin.env_script_all_files libexec/"bin", JAVA_HOME: "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
   end
 
   test do
