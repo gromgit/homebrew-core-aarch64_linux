@@ -14,7 +14,7 @@ class Redpen < Formula
     libexec.install %w[conf lib sample-doc js]
 
     prefix.install "bin"
-    bin.env_script_all_files libexec/"bin", :JAVA_HOME => Formula["openjdk"].opt_prefix
+    bin.env_script_all_files libexec/"bin", JAVA_HOME: Formula["openjdk"].opt_prefix
   end
 
   test do
