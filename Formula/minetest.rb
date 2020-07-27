@@ -22,7 +22,7 @@ class Minetest < Formula
     url "https://github.com/minetest/minetest.git"
 
     resource "minetest_game" do
-      url "https://github.com/minetest/minetest_game.git", :branch => "master"
+      url "https://github.com/minetest/minetest_game.git", branch: "master"
     end
   end
 
