@@ -108,7 +108,7 @@ class Nagios < Formula
     EOS
   end
 
-  plist_options :startup => true, :manual => "nagios #{HOMEBREW_PREFIX}/etc/nagios/nagios.cfg"
+  plist_options startup: true, manual: "nagios #{HOMEBREW_PREFIX}/etc/nagios/nagios.cfg"
 
   def plist
     <<~EOS
