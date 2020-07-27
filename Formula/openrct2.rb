@@ -2,11 +2,11 @@ class Openrct2 < Formula
   desc "Open source re-implementation of RollerCoaster Tycoon 2"
   homepage "https://openrct2.io/"
   url "https://github.com/OpenRCT2/OpenRCT2.git",
-      :tag      => "v0.2.6",
-      :revision => "6c3c857dfa5cd0d267b89a9d70930fbacdfbaea4"
+      tag:      "v0.2.6",
+      revision: "6c3c857dfa5cd0d267b89a9d70930fbacdfbaea4"
   license "GPL-3.0"
   revision 2
-  head "https://github.com/OpenRCT2/OpenRCT2.git", :branch => "develop"
+  head "https://github.com/OpenRCT2/OpenRCT2.git", branch: "develop"
 
   bottle do
     cellar :any
@@ -22,7 +22,7 @@ class Openrct2 < Formula
   depends_on "jansson"
   depends_on "libpng"
   depends_on "libzip"
-  depends_on :macos => :high_sierra # "missing: Threads_FOUND" on Sierra
+  depends_on macos: :high_sierra # "missing: Threads_FOUND" on Sierra
   depends_on "openssl@1.1"
   depends_on "sdl2"
   depends_on "sdl2_ttf"
