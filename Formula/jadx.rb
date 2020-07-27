@@ -29,7 +29,7 @@ class Jadx < Formula
     end
     bin.install libexec/"bin/jadx"
     bin.install libexec/"bin/jadx-gui"
-    bin.env_script_all_files libexec/"bin", :JAVA_HOME => "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
+    bin.env_script_all_files libexec/"bin", JAVA_HOME: "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
   end
 
   test do
