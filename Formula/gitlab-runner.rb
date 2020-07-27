@@ -2,8 +2,8 @@ class GitlabRunner < Formula
   desc "The official GitLab CI runner written in Go"
   homepage "https://gitlab.com/gitlab-org/gitlab-runner"
   url "https://gitlab.com/gitlab-org/gitlab-runner.git",
-      :tag      => "v13.2.1",
-      :revision => "efa30e331dafc6619935c7c2ae102ebc53501090"
+      tag:      "v13.2.1",
+      revision: "efa30e331dafc6619935c7c2ae102ebc53501090"
   license "MIT"
   head "https://gitlab.com/gitlab-org/gitlab-runner.git"
 
@@ -38,7 +38,7 @@ class GitlabRunner < Formula
     end
   end
 
-  plist_options :manual => "gitlab-runner start"
+  plist_options manual: "gitlab-runner start"
 
   def plist
     <<~EOS
