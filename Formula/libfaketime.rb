@@ -18,7 +18,7 @@ class Libfaketime < Formula
   # https://github.com/Homebrew/homebrew-core/issues/26568
   depends_on "coreutils"
 
-  depends_on :macos => :sierra
+  depends_on macos: :sierra
 
   def install
     system "make", "-C", "src", "-f", "Makefile.OSX", "PREFIX=#{prefix}"
