@@ -2,8 +2,8 @@ class Frps < Formula
   desc "Server app of fast reverse proxy to expose a local server to the internet"
   homepage "https://github.com/fatedier/frp"
   url "https://github.com/fatedier/frp.git",
-      :tag      => "v0.33.0",
-      :revision => "2406ecdfea62567a576bdb71e38adbafa3b4814a"
+      tag:      "v0.33.0",
+      revision: "2406ecdfea62567a576bdb71e38adbafa3b4814a"
   license "Apache-2.0"
 
   bottle do
@@ -26,7 +26,7 @@ class Frps < Formula
     etc.install "conf/frps_full.ini" => "frp/frps_full.ini"
   end
 
-  plist_options :manual => "frps -c #{HOMEBREW_PREFIX}/etc/frp/frps.ini"
+  plist_options manual: "frps -c #{HOMEBREW_PREFIX}/etc/frp/frps.ini"
 
   def plist
     <<~EOS
@@ -59,7 +59,7 @@ class Frps < Formula
 
     read, write = IO.pipe
     fork do
-      exec bin/"frps", :out => write
+      exec bin/"frps", out: write
     end
     sleep 3
 
