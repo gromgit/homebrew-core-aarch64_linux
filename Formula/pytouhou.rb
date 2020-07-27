@@ -1,10 +1,10 @@
 class Pytouhou < Formula
   desc "Libre implementation of Touhou 6 engine"
   homepage "https://pytouhou.linkmauve.fr/"
-  url "https://hg.linkmauve.fr/touhou", :revision => "5270c34b4c00", :using => :hg
+  url "https://hg.linkmauve.fr/touhou", revision: "5270c34b4c00", using: :hg
   version "634"
   revision 7
-  head "https://hg.linkmauve.fr/touhou", :using => :hg
+  head "https://hg.linkmauve.fr/touhou", using: :hg
 
   bottle do
     cellar :any
@@ -50,7 +50,7 @@ class Pytouhou < Formula
     inreplace "#{libexec}/bin/pytouhou", /('path'): '\.'/, "\\1: '#{pkgshare}/game'"
 
     bin.install Dir[libexec/"bin/*"]
-    bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
+    bin.env_script_all_files(libexec/"bin", PYTHONPATH: ENV["PYTHONPATH"])
   end
 
   def caveats
