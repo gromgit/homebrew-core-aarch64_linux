@@ -4,7 +4,7 @@ class Unison < Formula
   url "https://github.com/bcpierce00/unison/archive/v2.51.2.tar.gz"
   sha256 "a2efcbeab651be6df69cc9b253011a07955ecb91fb407a219719451197849d5e"
   license "GPL-3.0"
-  head "https://github.com/bcpierce00/unison.git", :branch => "master"
+  head "https://github.com/bcpierce00/unison.git", branch: "master"
 
   bottle do
     cellar :any_skip_relocation
