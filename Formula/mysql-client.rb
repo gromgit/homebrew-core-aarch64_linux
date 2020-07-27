@@ -14,7 +14,7 @@ class MysqlClient < Formula
 
   depends_on "cmake" => :build
   # GCC is not supported either, so exclude for El Capitan.
-  depends_on :macos => :sierra if DevelopmentTools.clang_build_version < 900
+  depends_on macos: :sierra if DevelopmentTools.clang_build_version < 900
   depends_on "openssl@1.1"
 
   uses_from_macos "libedit"
