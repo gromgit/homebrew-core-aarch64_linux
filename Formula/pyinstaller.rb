@@ -7,7 +7,7 @@ class Pyinstaller < Formula
   sha256 "3730fa80d088f8bb7084d32480eb87cbb4ddb64123363763cf8f2a1378c1c4b7"
   revision 1
 
-  head "https://github.com/pyinstaller/pyinstaller.git", :branch => "develop"
+  head "https://github.com/pyinstaller/pyinstaller.git", branch: "develop"
 
   bottle do
     cellar :any_skip_relocation
