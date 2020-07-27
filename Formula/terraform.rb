@@ -15,7 +15,7 @@ class Terraform < Formula
 
   depends_on "go@1.13" => :build
 
-  conflicts_with "tfenv", :because => "tfenv symlinks terraform binaries"
+  conflicts_with "tfenv", because: "tfenv symlinks terraform binaries"
 
   def install
     # v0.6.12 - source contains tests which fail if these environment variables are set locally.
