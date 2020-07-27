@@ -15,7 +15,7 @@ class GoJsonnet < Formula
 
   depends_on "go" => :build
 
-  conflicts_with "jsonnet", :because => "both install binaries with the same name"
+  conflicts_with "jsonnet", because: "both install binaries with the same name"
 
   def install
     system "go", "build", "-o", bin/"jsonnet", "./cmd/jsonnet"
