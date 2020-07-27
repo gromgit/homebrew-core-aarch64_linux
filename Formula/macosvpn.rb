@@ -10,7 +10,7 @@ class Macosvpn < Formula
     sha256 "e31d705b812175220fef63839c6310ae3ee28e2e8d61dc04bdb2972dd970f513" => :mojave
   end
 
-  depends_on :xcode => ["11.1", :build]
+  depends_on xcode: ["11.1", :build]
 
   def install
     xcodebuild "SYMROOT=build"
