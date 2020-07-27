@@ -13,7 +13,7 @@ class Ghostscript < Formula
 
   head do
     # Can't use shallow clone. Doing so = fatal errors.
-    url "https://git.ghostscript.com/ghostpdl.git", :shallow => false
+    url "https://git.ghostscript.com/ghostpdl.git", shallow: false
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
