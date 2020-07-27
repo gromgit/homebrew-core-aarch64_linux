@@ -21,10 +21,10 @@ class Kafka < Formula
     satisfy { quiet_system("/usr/libexec/java_home --version 1.8 --failfast") }
   end
 
-  depends_on :java => "1.8"
+  depends_on java: "1.8"
   depends_on "zookeeper"
 
-  conflicts_with "confluent-platform", :because => "both install identically named Kafka related executables"
+  conflicts_with "confluent-platform", because: "both install identically named Kafka related executables"
 
   def install
     data = var/"lib"
@@ -51,7 +51,7 @@ class Kafka < Formula
     (var+"log/kafka").mkpath
   end
 
-  plist_options :manual => "zookeeper-server-start #{HOMEBREW_PREFIX}/etc/kafka/zookeeper.properties & kafka-server-start #{HOMEBREW_PREFIX}/etc/kafka/server.properties"
+  plist_options manual: "zookeeper-server-start #{HOMEBREW_PREFIX}/etc/kafka/zookeeper.properties & kafka-server-start #{HOMEBREW_PREFIX}/etc/kafka/server.properties"
 
   def plist
     <<~EOS
