@@ -4,7 +4,7 @@ class Asimov < Formula
   url "https://github.com/stevegrunwell/asimov/archive/v0.3.0.tar.gz"
   sha256 "77a0ef09c86d9d6ff146547902c749c43bc054f331a12ecb9992db9673469fab"
   license "MIT"
-  head "https://github.com/stevegrunwell/asimov.git", :branch => "develop"
+  head "https://github.com/stevegrunwell/asimov.git", branch: "develop"
 
   bottle :unneeded
 
@@ -12,7 +12,7 @@ class Asimov < Formula
     bin.install buildpath/"asimov"
   end
 
-  plist_options :startup => true, :manual => "asimov"
+  plist_options startup: true, manual: "asimov"
 
   # Asimov will run in the background on a daily basis
   def plist
