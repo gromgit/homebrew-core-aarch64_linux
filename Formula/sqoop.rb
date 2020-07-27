@@ -32,7 +32,7 @@ class Sqoop < Formula
     libexec.install Dir["*.jar"]
 
     bin.install Dir["#{libexec}/bin/*"]
-    bin.env_script_all_files(libexec/"bin", :JAVA_HOME => Formula["openjdk"].opt_prefix)
+    bin.env_script_all_files(libexec/"bin", JAVA_HOME: Formula["openjdk"].opt_prefix)
 
     # Install a sqoop-env.sh file
     envs = libexec/"conf/sqoop-env.sh"
