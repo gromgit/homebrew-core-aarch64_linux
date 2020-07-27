@@ -7,9 +7,9 @@ class ConfluentPlatform < Formula
 
   bottle :unneeded
 
-  depends_on :java => "1.8"
+  depends_on java: "1.8"
 
-  conflicts_with "kafka", :because => "kafka also ships with identically named Kafka related executables"
+  conflicts_with "kafka", because: "kafka also ships with identically named Kafka related executables"
 
   def install
     libexec.install %w[bin etc libexec share]
