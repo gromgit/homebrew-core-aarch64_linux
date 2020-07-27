@@ -15,8 +15,8 @@ class Inetutils < Formula
 
   depends_on "libidn"
 
-  conflicts_with "telnet", :because => "both install `telnet` binaries"
-  conflicts_with "tnftp", :because => "both install `ftp` binaries"
+  conflicts_with "telnet", because: "both install `telnet` binaries"
+  conflicts_with "tnftp", because: "both install `ftp` binaries"
 
   def noshadow
     # List of binaries that do not shadow macOS utils
