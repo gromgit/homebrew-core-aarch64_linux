@@ -30,14 +30,14 @@ class Emscripten < Formula
   end
 
   head do
-    url "https://github.com/emscripten-core/emscripten.git", :branch => "incoming"
+    url "https://github.com/emscripten-core/emscripten.git", branch: "incoming"
 
     resource "fastcomp" do
-      url "https://github.com/emscripten-core/emscripten-fastcomp.git", :branch => "incoming"
+      url "https://github.com/emscripten-core/emscripten-fastcomp.git", branch: "incoming"
     end
 
     resource "fastcomp-clang" do
-      url "https://github.com/emscripten-core/emscripten-fastcomp-clang.git", :branch => "incoming"
+      url "https://github.com/emscripten-core/emscripten-fastcomp-clang.git", branch: "incoming"
     end
   end
 
@@ -83,7 +83,7 @@ class Emscripten < Formula
 
     %w[em++ em-config emar emcc emcmake emconfigure emlink.py emmake
        emranlib emrun emscons].each do |emscript|
-      (bin/emscript).write_env_script libexec/emscript, :PYTHON => Formula["python@3.8"].opt_bin/"python3"
+      (bin/emscript).write_env_script libexec/emscript, PYTHON: Formula["python@3.8"].opt_bin/"python3"
     end
   end
 
