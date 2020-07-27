@@ -9,6 +9,13 @@ class OciCli < Formula
   # https://github.com/Homebrew/homebrew-core/pull/57974 license: "UPL-1.0", "Apache-2.0"
   head "https://github.com/oracle/oci-cli.git"
 
+  bottle do
+    cellar :any
+    sha256 "c333412a45ca2859fbc4aa43be40030e9b7e0a49024451b1c92291763076101e" => :catalina
+    sha256 "4d960eeb999952bc9a2c76e4aac9c99f116646dc8fe33affd52cb3b7e0added1" => :mojave
+    sha256 "d3e988b62c863a1360f5a1a0f086d61df26fafd1dc9efd2129732747e8482ef2" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   def install
