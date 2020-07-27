@@ -47,7 +47,7 @@ class Diffoscope < Formula
 
     bin.install libexec/"bin/diffoscope"
     libarchive = Formula["libarchive"].opt_lib/"libarchive.dylib"
-    bin.env_script_all_files(libexec/"bin", :LIBARCHIVE => libarchive)
+    bin.env_script_all_files(libexec/"bin", LIBARCHIVE: libarchive)
   end
 
   test do
