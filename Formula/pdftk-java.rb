@@ -15,12 +15,12 @@ class PdftkJava < Formula
   end
 
   depends_on "gradle" => :build
-  depends_on :java => "1.8"
+  depends_on java: "1.8"
 
   def install
     system "gradle", "shadowJar", "--no-daemon"
     libexec.install "build/libs/pdftk-all.jar"
-    bin.write_jar_script libexec/"pdftk-all.jar", "pdftk", :java_version => "1.8"
+    bin.write_jar_script libexec/"pdftk-all.jar", "pdftk", java_version: "1.8"
   end
 
   test do
