@@ -140,7 +140,7 @@ class Theharvester < Formula
 
     libexec.install Dir["*"]
     (libexec/"theHarvester.py").chmod 0755
-    (bin/"theharvester").write_env_script("#{libexec}/theHarvester.py", :PATH => "#{libexec}/venv/bin:$PATH")
+    (bin/"theharvester").write_env_script("#{libexec}/theHarvester.py", PATH: "#{libexec}/venv/bin:$PATH")
   end
 
   test do
