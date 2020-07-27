@@ -24,7 +24,7 @@ class ApacheForrest < Formula
 
   def install
     libexec.install Dir["*"]
-    (bin/"forrest").write_env_script libexec/"bin/forrest", :JAVA_HOME => Formula["openjdk"].opt_prefix
+    (bin/"forrest").write_env_script libexec/"bin/forrest", JAVA_HOME: Formula["openjdk"].opt_prefix
 
     resource("deps").stage do
       # To avoid conflicts with directory names already installed from the
