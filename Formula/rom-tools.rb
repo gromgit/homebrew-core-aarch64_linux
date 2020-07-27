@@ -18,7 +18,7 @@ class RomTools < Formula
   # Need C++ compiler and standard library support C++14.
   # Build failure on Sierra, see:
   # https://github.com/Homebrew/homebrew-core/pull/39388
-  depends_on :macos => :high_sierra
+  depends_on macos: :high_sierra
   depends_on "sdl2"
   depends_on "utf8proc"
 
