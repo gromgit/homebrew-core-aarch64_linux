@@ -24,7 +24,7 @@ class Mpich < Formula
 
   depends_on "gcc" # for gfortran
 
-  conflicts_with "open-mpi", :because => "both install MPI compiler wrappers"
+  conflicts_with "open-mpi", because: "both install MPI compiler wrappers"
 
   def install
     if build.head?
