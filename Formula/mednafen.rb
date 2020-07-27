@@ -14,7 +14,7 @@ class Mednafen < Formula
   depends_on "pkg-config" => :build
   depends_on "gettext"
   depends_on "libsndfile"
-  depends_on :macos => :sierra # needs clock_gettime
+  depends_on macos: :sierra # needs clock_gettime
   depends_on "sdl2"
 
   def install
