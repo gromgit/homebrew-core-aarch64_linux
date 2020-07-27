@@ -88,7 +88,7 @@ class Zookeeper < Formula
     (etc/"zookeeper").install ["conf/zoo.cfg", "conf/zoo_sample.cfg"]
   end
 
-  plist_options :manual => "zkServer start"
+  plist_options manual: "zkServer start"
 
   def plist
     <<~EOS
