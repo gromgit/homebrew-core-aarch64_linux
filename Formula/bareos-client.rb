@@ -17,7 +17,7 @@ class BareosClient < Formula
   depends_on "readline"
 
   conflicts_with "bacula-fd",
-    :because => "both install a `bconsole` executable"
+    because: "both install a `bconsole` executable"
 
   def install
     mkdir "build" do
@@ -49,7 +49,7 @@ class BareosClient < Formula
     end
   end
 
-  plist_options :startup => true
+  plist_options startup: true
 
   def plist
     <<~EOS
