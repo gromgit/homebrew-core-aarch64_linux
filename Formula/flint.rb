@@ -4,7 +4,7 @@ class Flint < Formula
   url "http://flintlib.org/flint-2.6.1.tar.gz"
   sha256 "0d9dc2f3264e0c1d7c9b30fa058a14a3ac4d4ab01e95674c62966ea5aaafbf99"
   license "LGPL-2.1"
-  head "https://github.com/wbhart/flint2.git", :branch => "trunk"
+  head "https://github.com/wbhart/flint2.git", branch: "trunk"
 
   bottle do
     cellar :any
