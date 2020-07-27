@@ -2,8 +2,8 @@ class Auditbeat < Formula
   desc "Lightweight Shipper for Audit Data"
   homepage "https://www.elastic.co/products/beats/auditbeat"
   url "https://github.com/elastic/beats.git",
-      :tag      => "v7.8.0",
-      :revision => "f79387d32717d79f689d94fda1ec80b2cf285d30"
+      tag:      "v7.8.0",
+      revision: "f79387d32717d79f689d94fda1ec80b2cf285d30"
   license "Apache-2.0"
   head "https://github.com/elastic/beats.git"
 
@@ -74,7 +74,7 @@ class Auditbeat < Formula
     (var/"log/auditbeat").mkpath
   end
 
-  plist_options :manual => "auditbeat"
+  plist_options manual: "auditbeat"
 
   def plist
     <<~EOS
