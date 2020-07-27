@@ -39,9 +39,9 @@ class Gitui < Formula
     screenlog = (testpath/"screenlog.ansi").read
     # remove ANSI colors
     screenlog.encode!("UTF-8", "binary",
-      :invalid => :replace,
-      :undef   => :replace,
-      :replace => "")
+      invalid: :replace,
+      undef:   :replace,
+      replace: "")
     screenlog.gsub! /\e\[([;\d]+)?m/, ""
     assert_match "Author: Stephan Dilly", screenlog
     assert_match "Date: 2020-06-15", screenlog
