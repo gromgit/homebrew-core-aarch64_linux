@@ -4,7 +4,7 @@ class Liquidprompt < Formula
   url "https://github.com/nojhan/liquidprompt/archive/v1.12.0.tar.gz"
   sha256 "966a4de66f55747b6b0660f6d7d335b4896098df2ff81d08f1c662070e573942"
   license "AGPL-3.0"
-  head "https://github.com/nojhan/liquidprompt.git", :branch => "master"
+  head "https://github.com/nojhan/liquidprompt.git", branch: "master"
 
   bottle :unneeded
 
