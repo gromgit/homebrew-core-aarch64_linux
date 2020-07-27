@@ -13,7 +13,7 @@ class Leiningen < Formula
   end
 
   resource "jar" do
-    url "https://github.com/technomancy/leiningen/releases/download/2.9.4/leiningen-2.9.4-standalone.zip", :using => :nounzip
+    url "https://github.com/technomancy/leiningen/releases/download/2.9.4/leiningen-2.9.4-standalone.zip", using: :nounzip
     sha256 "0e3c339480347df0445317d329accbd4a578ebbd8d91e568e661feb1b388706c"
   end
 
