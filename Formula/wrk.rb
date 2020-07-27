@@ -20,7 +20,7 @@ class Wrk < Formula
     depends_on "pkg-config" => :build
   end
 
-  conflicts_with "wrk-trello", :because => "both install `wrk` binaries"
+  conflicts_with "wrk-trello", because: "both install `wrk` binaries"
 
   def install
     ENV.deparallelize
