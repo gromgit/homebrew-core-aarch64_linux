@@ -5,7 +5,7 @@ class Adios2 < Formula
   sha256 "45b41889065f8b840725928db092848b8a8b8d1bfae1b92e72f8868d1c76216c"
   license "Apache-2.0"
   revision 1
-  head "https://github.com/ornladios/ADIOS2.git", :branch => "master"
+  head "https://github.com/ornladios/ADIOS2.git", branch: "master"
 
   bottle do
     sha256 "52714e697f707e1292d16d0ab1a2454d0e2ddb5640856fa717b2494cbaaedfc1" => :catalina
