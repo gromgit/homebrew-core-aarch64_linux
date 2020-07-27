@@ -12,7 +12,7 @@ class Jbake < Formula
     rm_f Dir["bin/*.bat"]
     libexec.install Dir["*"]
     bin.install libexec/"bin/jbake"
-    bin.env_script_all_files libexec/"bin", :JAVA_HOME => Formula["openjdk"].opt_prefix
+    bin.env_script_all_files libexec/"bin", JAVA_HOME: Formula["openjdk"].opt_prefix
   end
 
   test do
