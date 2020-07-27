@@ -16,7 +16,7 @@ class OpenImageDenoise < Formula
   depends_on "ispc" => :build
   # clang: error: unknown argument: '-fopenmp-simd'
   # https://github.com/OpenImageDenoise/oidn/issues/35
-  depends_on :macos => :high_sierra
+  depends_on macos: :high_sierra
   depends_on "tbb"
 
   def install
