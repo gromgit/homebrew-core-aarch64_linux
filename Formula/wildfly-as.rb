@@ -28,7 +28,7 @@ class WildflyAs < Formula
     EOS
   end
 
-  plist_options :manual => "#{HOMEBREW_PREFIX}/opt/wildfly-as/libexec/bin/standalone.sh --server-config=standalone.xml"
+  plist_options manual: "#{HOMEBREW_PREFIX}/opt/wildfly-as/libexec/bin/standalone.sh --server-config=standalone.xml"
 
   def plist
     <<~EOS
