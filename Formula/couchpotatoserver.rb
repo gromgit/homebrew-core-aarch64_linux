@@ -18,7 +18,7 @@ class Couchpotatoserver < Formula
     "CouchPotatoServer defaults to port 5050."
   end
 
-  plist_options :manual => "couchpotatoserver"
+  plist_options manual: "couchpotatoserver"
 
   def plist
     <<~EOS
