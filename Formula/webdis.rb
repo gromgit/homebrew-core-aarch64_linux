@@ -30,7 +30,7 @@ class Webdis < Formula
     (var/"log").mkpath
   end
 
-  plist_options :manual => "webdis #{HOMEBREW_PREFIX}/etc/webdis.json"
+  plist_options manual: "webdis #{HOMEBREW_PREFIX}/etc/webdis.json"
 
   def plist
     <<~EOS
