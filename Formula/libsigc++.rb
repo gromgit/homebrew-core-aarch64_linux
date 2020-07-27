@@ -12,7 +12,7 @@ class Libsigcxx < Formula
     sha256 "e2c75abf2675c7830fd19aa268472aeee8b5c42cd9355147585bad9be7c3059a" => :high_sierra
   end
 
-  depends_on :macos => :high_sierra # needs C++17
+  depends_on macos: :high_sierra # needs C++17
 
   def install
     ENV.cxx11
