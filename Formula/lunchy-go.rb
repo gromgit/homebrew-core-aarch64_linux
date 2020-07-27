@@ -14,7 +14,7 @@ class LunchyGo < Formula
 
   depends_on "go" => :build
 
-  conflicts_with "lunchy", :because => "both install a `lunchy` binary"
+  conflicts_with "lunchy", because: "both install a `lunchy` binary"
 
   def install
     system "go", "build", *std_go_args
