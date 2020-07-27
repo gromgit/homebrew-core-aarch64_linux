@@ -16,16 +16,16 @@ class Derby < Formula
                        KEYS docs javadoc demo]
     bin.install Dir["bin/*"]
     bin.env_script_all_files libexec/"bin",
-                             :JAVA_HOME     => Formula["openjdk"].opt_prefix,
-                             :DERBY_INSTALL => libexec,
-                             :DERBY_HOME    => libexec
+                             JAVA_HOME:     Formula["openjdk"].opt_prefix,
+                             DERBY_INSTALL: libexec,
+                             DERBY_HOME:    libexec
   end
 
   def post_install
     (var/"derby").mkpath
   end
 
-  plist_options :manual => "DERBY_OPTS=-Dsystem.derby.home=#{HOMEBREW_PREFIX}/var/derby #{HOMEBREW_PREFIX}/bin/startNetworkServer"
+  plist_options manual: "DERBY_OPTS=-Dsystem.derby.home=#{HOMEBREW_PREFIX}/var/derby #{HOMEBREW_PREFIX}/bin/startNetworkServer"
 
   def plist
     <<~EOS
