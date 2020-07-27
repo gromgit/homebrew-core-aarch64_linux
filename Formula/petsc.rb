@@ -19,7 +19,7 @@ class Petsc < Formula
   depends_on "scalapack"
   depends_on "suite-sparse"
 
-  conflicts_with "petsc-complex", :because => "petsc must be installed with either real or complex support, not both"
+  conflicts_with "petsc-complex", because: "petsc must be installed with either real or complex support, not both"
 
   def install
     system "./configure", "--prefix=#{prefix}",
