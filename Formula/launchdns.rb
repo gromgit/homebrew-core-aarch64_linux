@@ -23,7 +23,7 @@ class Launchdns < Formula
     (prefix/"etc/resolver/localhost").write("nameserver 127.0.0.1\nport 55353\n")
   end
 
-  plist_options :manual => "launchdns"
+  plist_options manual: "launchdns"
 
   def plist
     <<~EOS
