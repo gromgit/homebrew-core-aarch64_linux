@@ -18,7 +18,7 @@ class DosboxX < Formula
   depends_on "automake" => :build
   depends_on "pkg-config" => :build
   depends_on "fluid-synth"
-  depends_on :macos => :high_sierra # needs futimens
+  depends_on macos: :high_sierra # needs futimens
 
   # Remove with upstream release > 0.83.3
   # https://github.com/joncampbell123/dosbox-x/pull/1715
