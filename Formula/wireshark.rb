@@ -4,7 +4,7 @@ class Wireshark < Formula
   url "https://www.wireshark.org/download/src/all-versions/wireshark-3.2.5.tar.xz"
   mirror "https://1.eu.dl.wireshark.org/src/all-versions/wireshark-3.2.5.tar.xz"
   sha256 "bd89052a5766cce08b1090df49628567e48cdd24bbaa47667c851bac6aaac940"
-  head "https://code.wireshark.org/review/wireshark", :using => :git
+  head "https://code.wireshark.org/review/wireshark", using: :git
 
   bottle do
     sha256 "27ac1313478b321ece59273e73ff0ef3dbfc8f3bb5e804f84d1647e9c3493f02" => :catalina
