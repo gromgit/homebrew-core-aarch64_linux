@@ -102,7 +102,7 @@ class PostgresqlAT96 < Formula
     EOS
   end
 
-  plist_options :manual => "pg_ctl -D #{HOMEBREW_PREFIX}/var/postgresql@9.6 start"
+  plist_options manual: "pg_ctl -D #{HOMEBREW_PREFIX}/var/postgresql@9.6 start"
 
   def plist
     <<~EOS
