@@ -14,7 +14,7 @@ class Byteman < Formula
     libexec.install ["bin", "lib", "contrib"]
     pkgshare.install ["sample"]
 
-    env = { :JAVA_HOME => "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}", :BYTEMAN_HOME => libexec }
+    env = { JAVA_HOME: "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}", BYTEMAN_HOME: libexec }
     Pathname.glob("#{libexec}/bin/*") do |file|
       target = bin/File.basename(file, File.extname(file))
       # Drop the .sh from the scripts
