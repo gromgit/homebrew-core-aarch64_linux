@@ -19,7 +19,7 @@ class PerconaXtrabackup < Formula
   depends_on "openssl@1.1"
 
   conflicts_with "protobuf",
-    :because => "both install libprotobuf(-lite) libraries"
+    because: "both install libprotobuf(-lite) libraries"
 
   resource "DBI" do
     url "https://cpan.metacpan.org/authors/id/T/TI/TIMB/DBI-1.641.tar.gz"
@@ -80,7 +80,7 @@ class PerconaXtrabackup < Formula
       system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
       system "make", "install"
     end
-    bin.env_script_all_files(libexec/"bin", :PERL5LIB => ENV["PERL5LIB"])
+    bin.env_script_all_files(libexec/"bin", PERL5LIB: ENV["PERL5LIB"])
   end
 
   test do
