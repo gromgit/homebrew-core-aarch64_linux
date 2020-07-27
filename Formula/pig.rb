@@ -16,8 +16,8 @@ class Pig < Formula
     libexec.install Dir["pig-#{version}-core-h*.jar"]
     libexec.install "lib"
     (bin/"pig").write_env_script libexec/"bin/pig",
-                                 :PIG_HOME  => libexec,
-                                 :JAVA_HOME => Formula["openjdk"].opt_prefix
+                                 PIG_HOME:  libexec,
+                                 JAVA_HOME: Formula["openjdk"].opt_prefix
   end
 
   test do
