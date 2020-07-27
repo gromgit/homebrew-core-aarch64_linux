@@ -18,7 +18,7 @@ class SeleniumServerStandalone < Formula
     EOS
   end
 
-  plist_options :manual => "selenium-server -port 4444"
+  plist_options manual: "selenium-server -port 4444"
 
   def plist
     <<~EOS
