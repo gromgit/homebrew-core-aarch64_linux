@@ -5,7 +5,7 @@ class Robotfindskitten < Formula
   sha256 "020172e4f4630f7c4f62c03b6ffe2eeeba5637b60374d3e6952ae5816a9f99af"
   license "GPL-2.0"
   revision 1
-  head "https://github.com/robotfindskitten/robotfindskitten.git", :branch => "main"
+  head "https://github.com/robotfindskitten/robotfindskitten.git", branch: "main"
 
   bottle do
     sha256 "fa1f963cf39fb320c4b8e0867a05c9e96944d59d6c18222a9d6b33acb4384622" => :catalina
