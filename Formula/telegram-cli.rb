@@ -2,8 +2,8 @@ class TelegramCli < Formula
   desc "Command-line interface for Telegram"
   homepage "https://github.com/vysheng/tg"
   url "https://github.com/vysheng/tg.git",
-      :tag      => "1.3.1",
-      :revision => "5935c97ed05b90015418b5208b7beeca15a6043c"
+      tag:      "1.3.1",
+      revision: "5935c97ed05b90015418b5208b7beeca15a6043c"
   revision 4
   head "https://github.com/vysheng/tg.git"
 
