@@ -2,8 +2,8 @@ class Fluxctl < Formula
   desc "Command-line tool to access Weave Flux, the Kubernetes GitOps operator"
   homepage "https://github.com/fluxcd/flux"
   url "https://github.com/fluxcd/flux.git",
-      :tag      => "1.20.0",
-      :revision => "04e9e50311c3bf407629b0a9d75996ead187e952"
+      tag:      "1.20.0",
+      revision: "04e9e50311c3bf407629b0a9d75996ead187e952"
   license "Apache-2.0"
 
   bottle do
@@ -34,7 +34,7 @@ class Fluxctl < Formula
     # about a missing .kube/config file.
     require "pty"
     require "timeout"
-    r, _w, pid = PTY.spawn("#{bin}/fluxctl sync", :err=>:out)
+    r, _w, pid = PTY.spawn("#{bin}/fluxctl sync", err: :out)
     begin
       Timeout.timeout(5) do
         assert_match "Error: Could not load kubernetes configuration file", r.gets.chomp
