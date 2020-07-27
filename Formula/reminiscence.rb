@@ -24,7 +24,7 @@ class Reminiscence < Formula
 
   resource "tremor" do
     url "https://gitlab.xiph.org/xiph/tremor.git",
-        :revision => "7c30a66346199f3f09017a09567c6c8a3a0eedc8"
+        revision: "7c30a66346199f3f09017a09567c6c8a3a0eedc8"
   end
 
   def install
