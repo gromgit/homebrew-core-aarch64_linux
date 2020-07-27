@@ -21,7 +21,7 @@ class Manticoresearch < Formula
   depends_on "unixodbc" => :build
   depends_on "openssl@1.1"
 
-  conflicts_with "sphinx", :because => "manticoresearch is a fork of sphinx"
+  conflicts_with "sphinx", because: "manticoresearch is a fork of sphinx"
 
   def install
     args = %W[
@@ -40,7 +40,7 @@ class Manticoresearch < Formula
     (var/"manticore/data").mkpath
   end
 
-  plist_options :manual => "searchd --config #{HOMEBREW_PREFIX}/etc/manticore/manticore.conf"
+  plist_options manual: "searchd --config #{HOMEBREW_PREFIX}/etc/manticore/manticore.conf"
 
   def plist
     <<~EOS
