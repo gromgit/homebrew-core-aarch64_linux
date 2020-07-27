@@ -194,7 +194,7 @@ class Latexindent < Formula
     (libexec/"lib/perl5").install "LatexIndent"
     (libexec/"bin").install "latexindent.pl"
     (libexec/"bin").install "defaultSettings.yaml"
-    (bin/"latexindent").write_env_script("#{libexec}/bin/latexindent.pl", :PERL5LIB => ENV["PERL5LIB"])
+    (bin/"latexindent").write_env_script("#{libexec}/bin/latexindent.pl", PERL5LIB: ENV["PERL5LIB"])
   end
 
   test do
