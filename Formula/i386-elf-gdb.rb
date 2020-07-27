@@ -16,7 +16,7 @@ class I386ElfGdb < Formula
   depends_on "python@3.8"
   depends_on "xz" # required for lzma support
 
-  conflicts_with "gdb", :because => "both install include/gdb, share/gdb and share/info"
+  conflicts_with "gdb", because: "both install include/gdb, share/gdb and share/info"
 
   def install
     args = %W[
