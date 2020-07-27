@@ -3,8 +3,8 @@ class ClojureLsp < Formula
   homepage "https://github.com/snoe/clojure-lsp"
   # Switch to use git tag/revision as needed by `lein-git-version`
   url "https://github.com/snoe/clojure-lsp.git",
-    :tag      => "release-20200706T152722",
-    :revision => "2ced4b1f218223e4bcf534866021be5574fcf3cd"
+    tag:      "release-20200706T152722",
+    revision: "2ced4b1f218223e4bcf534866021be5574fcf3cd"
   version "20200706T152722"
   license "MIT"
   head "https://github.com/snoe/clojure-lsp.git"
@@ -18,7 +18,7 @@ class ClojureLsp < Formula
 
   depends_on "leiningen" => :build
   # The Java Runtime version only recognizes class file versions up to 52.0
-  depends_on :java => "1.8"
+  depends_on java: "1.8"
 
   def install
     system "lein", "uberjar"
