@@ -38,7 +38,7 @@ class Sslmate < Formula
     system "make", "PREFIX=#{prefix}"
     system "make", "install", "PREFIX=#{prefix}"
 
-    env = { :PERL5LIB => ENV["PERL5LIB"] }
+    env = { PERL5LIB: ENV["PERL5LIB"] }
     env[:PYTHONPATH] = ENV["PYTHONPATH"]
     bin.env_script_all_files(libexec/"bin", env)
 
