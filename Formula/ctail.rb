@@ -22,7 +22,7 @@ class Ctail < Formula
   depends_on "apr"
   depends_on "apr-util"
 
-  conflicts_with "byobu", :because => "both install `ctail` binaries"
+  conflicts_with "byobu", because: "both install `ctail` binaries"
 
   def install
     system "./configure",
