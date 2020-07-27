@@ -44,7 +44,7 @@ class Vlmcsd < Formula
     EOS
   end
 
-  plist_options :manual => "vlmcsd"
+  plist_options manual: "vlmcsd"
 
   def plist
     <<~EOS
