@@ -14,7 +14,7 @@ class ElasticsearchAT6 < Formula
 
   keg_only :versioned_formula
 
-  depends_on :java => "1.8"
+  depends_on java: "1.8"
 
   def cluster_name
     "elasticsearch_#{ENV["USER"]}"
@@ -83,7 +83,7 @@ class ElasticsearchAT6 < Formula
     EOS
   end
 
-  plist_options :manual => "elasticsearch"
+  plist_options manual: "elasticsearch"
 
   def plist
     <<~EOS
