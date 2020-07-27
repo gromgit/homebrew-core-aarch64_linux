@@ -14,7 +14,7 @@ class Idutils < Formula
     sha256 "95f118aa56026de98d148bccc5a807d609a2bfc54749e1d9051a5dce80f603ef" => :high_sierra
   end
 
-  conflicts_with "coreutils", :because => "both install `gid` and `gid.1`"
+  conflicts_with "coreutils", because: "both install `gid` and `gid.1`"
 
   if MacOS.version >= :high_sierra
     patch :p0 do
