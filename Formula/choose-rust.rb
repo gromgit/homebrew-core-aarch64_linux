@@ -14,8 +14,8 @@ class ChooseRust < Formula
 
   depends_on "rust" => :build
 
-  conflicts_with "choose", :because => "both install a `choose` binary"
-  conflicts_with "choose-gui", :because => "both install a `choose` binary"
+  conflicts_with "choose", because: "both install a `choose` binary"
+  conflicts_with "choose-gui", because: "both install a `choose` binary"
 
   def install
     system "cargo", "install", *std_cargo_args
