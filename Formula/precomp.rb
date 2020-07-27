@@ -27,7 +27,7 @@ class Precomp < Formula
     system "gzip", "-1", testpath/"precomp"
 
     system "#{bin}/precomp", testpath/"precomp.gz"
-    rm testpath/"precomp.gz", :force => true
+    rm testpath/"precomp.gz", force: true
     system "#{bin}/precomp", "-r", testpath/"precomp.pcf"
     system "gzip", "-d", testpath/"precomp.gz"
   end
