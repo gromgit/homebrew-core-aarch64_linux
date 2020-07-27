@@ -20,7 +20,7 @@ class Texmath < Formula
   depends_on "ghc" => :build
 
   def install
-    install_cabal_package "--enable-tests", :flags => ["executable"] do
+    install_cabal_package "--enable-tests", flags: ["executable"] do
       system "cabal", "test"
     end
   end
