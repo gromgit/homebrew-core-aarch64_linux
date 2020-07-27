@@ -9,7 +9,7 @@ class DockerMachineCompletion < Formula
   bottle :unneeded
 
   conflicts_with "docker-machine",
-    :because => "docker-machine already includes completion scripts"
+    because: "docker-machine already includes completion scripts"
 
   def install
     bash_completion.install Dir["contrib/completion/bash/*.bash"]
