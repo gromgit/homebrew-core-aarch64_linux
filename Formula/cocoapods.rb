@@ -13,8 +13,8 @@ class Cocoapods < Formula
 
   depends_on "pkg-config" => :build
 
-  uses_from_macos "libffi", :since => :catalina
-  uses_from_macos "ruby", :since => :catalina
+  uses_from_macos "libffi", since: :catalina
+  uses_from_macos "ruby", since: :catalina
 
   def install
     if MacOS.version >= :mojave && MacOS::CLT.installed?
@@ -26,7 +26,7 @@ class Cocoapods < Formula
     system "gem", "install", "cocoapods-#{version}.gem"
     # Other executables don't work currently.
     bin.install libexec/"bin/pod", libexec/"bin/xcodeproj"
-    bin.env_script_all_files(libexec/"bin", :GEM_HOME => ENV["GEM_HOME"])
+    bin.env_script_all_files(libexec/"bin", GEM_HOME: ENV["GEM_HOME"])
   end
 
   test do
