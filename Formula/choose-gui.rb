@@ -13,10 +13,10 @@ class ChooseGui < Formula
     sha256 "7b5031da703f0297a387fc3f8220e28070b120c91ae4989327164955eedc56d6" => :high_sierra
   end
 
-  depends_on :xcode => :build
+  depends_on xcode: :build
 
-  conflicts_with "choose", :because => "both install a `choose` binary"
-  conflicts_with "choose-rust", :because => "both install a `choose` binary"
+  conflicts_with "choose", because: "both install a `choose` binary"
+  conflicts_with "choose-rust", because: "both install a `choose` binary"
 
   def install
     xcodebuild "SDKROOT=", "SYMROOT=build"
