@@ -12,7 +12,7 @@ class GitlabGem < Formula
     sha256 "d0a85575ea14b6d88a0be7e540026b8415bca7032d8685e9fb56f270b4226cb9" => :high_sierra
   end
 
-  uses_from_macos "ruby", :since => :catalina
+  uses_from_macos "ruby", since: :catalina
 
   resource "httparty" do
     url "https://rubygems.org/gems/httparty-0.18.1.gem"
@@ -53,7 +53,7 @@ class GitlabGem < Formula
     end
     system "gem", "build", "gitlab.gemspec"
     system "gem", "install", "--ignore-dependencies", "gitlab-#{version}.gem"
-    (bin/"gitlab").write_env_script libexec/"bin/gitlab", :GEM_HOME => ENV["GEM_HOME"]
+    (bin/"gitlab").write_env_script libexec/"bin/gitlab", GEM_HOME: ENV["GEM_HOME"]
   end
 
   test do
