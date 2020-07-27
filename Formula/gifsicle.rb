@@ -21,7 +21,7 @@ class Gifsicle < Formula
   end
 
   conflicts_with "giflossy",
-    :because => "both install an `gifsicle` binary"
+    because: "both install an `gifsicle` binary"
 
   def install
     args = %W[
