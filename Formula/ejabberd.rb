@@ -25,7 +25,7 @@ class Ejabberd < Formula
   depends_on "libyaml"
   depends_on "openssl@1.1"
 
-  conflicts_with "couchdb", :because => "both install `jiffy` lib"
+  conflicts_with "couchdb", because: "both install `jiffy` lib"
 
   def install
     ENV["TARGET_DIR"] = ENV["DESTDIR"] = "#{lib}/ejabberd/erlang/lib/ejabberd-#{version}"
@@ -66,7 +66,7 @@ class Ejabberd < Formula
     EOS
   end
 
-  plist_options :manual => "#{HOMEBREW_PREFIX}/sbin/ejabberdctl start"
+  plist_options manual: "#{HOMEBREW_PREFIX}/sbin/ejabberdctl start"
 
   def plist
     <<~EOS
