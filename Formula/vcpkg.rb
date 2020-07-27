@@ -33,7 +33,7 @@ class Vcpkg < Formula
     system "./bootstrap-vcpkg.sh", *args
 
     bin.install "vcpkg"
-    bin.env_script_all_files(libexec/"bin", :VCPKG_ROOT => libexec)
+    bin.env_script_all_files(libexec/"bin", VCPKG_ROOT: libexec)
     libexec.install Dir["*.txt", ".vcpkg-root", "{ports,scripts,triplets}"]
   end
 
