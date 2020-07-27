@@ -13,7 +13,7 @@ class Vroom < Formula
 
   depends_on "pkg-config" => :build
   depends_on "asio"
-  depends_on :macos => :mojave # std::optional C++17 support
+  depends_on macos: :mojave # std::optional C++17 support
   depends_on "openssl@1.1"
 
   def install
