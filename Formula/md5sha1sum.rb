@@ -16,7 +16,7 @@ class Md5sha1sum < Formula
 
   depends_on "openssl@1.1"
 
-  conflicts_with "coreutils", :because => "both install `md5sum` and `sha1sum` binaries"
+  conflicts_with "coreutils", because: "both install `md5sum` and `sha1sum` binaries"
 
   def install
     openssl = Formula["openssl@1.1"]
