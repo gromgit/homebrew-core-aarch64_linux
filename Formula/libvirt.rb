@@ -57,7 +57,7 @@ class Libvirt < Formula
     end
   end
 
-  plist_options :manual => "libvirtd"
+  plist_options manual: "libvirtd"
 
   def plist
     <<~EOS
