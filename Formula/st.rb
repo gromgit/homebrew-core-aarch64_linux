@@ -22,7 +22,7 @@ class St < Formula
     system "make", "install"
 
     bin.install Dir[libexec/"bin/*"]
-    bin.env_script_all_files libexec/"bin", :PERL5LIB => ENV["PERL5LIB"]
+    bin.env_script_all_files libexec/"bin", PERL5LIB: ENV["PERL5LIB"]
 
     man1.install_symlink Dir[libexec/"share/man/man1/*.1"]
   end
