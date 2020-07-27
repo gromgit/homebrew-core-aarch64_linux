@@ -12,7 +12,7 @@ class ApacheArchiva < Formula
 
   def install
     libexec.install Dir["*"]
-    (bin/"archiva").write_env_script libexec/"bin/archiva", :JAVA_HOME => Formula["openjdk"].opt_prefix
+    (bin/"archiva").write_env_script libexec/"bin/archiva", JAVA_HOME: Formula["openjdk"].opt_prefix
   end
 
   def post_install
@@ -23,7 +23,7 @@ class ApacheArchiva < Formula
     cp_r libexec/"conf", var/"archiva"
   end
 
-  plist_options :manual => "ARCHIVA_BASE=#{HOMEBREW_PREFIX}/var/archiva #{HOMEBREW_PREFIX}/opt/apache-archiva/bin/archiva console"
+  plist_options manual: "ARCHIVA_BASE=#{HOMEBREW_PREFIX}/var/archiva #{HOMEBREW_PREFIX}/opt/apache-archiva/bin/archiva console"
 
   def plist
     <<~EOS
