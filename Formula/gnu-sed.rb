@@ -13,7 +13,7 @@ class GnuSed < Formula
     sha256 "865abe618c67037a4a419a05e0df2c6814fb3abdd6f631ea546aeba0aaf8eb78" => :high_sierra
   end
 
-  conflicts_with "ssed", :because => "both install share/info/sed.info"
+  conflicts_with "ssed", because: "both install share/info/sed.info"
 
   def install
     args = %W[
