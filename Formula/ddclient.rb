@@ -36,7 +36,7 @@ class Ddclient < Formula
     end
 
     sbin.install "ddclient"
-    sbin.env_script_all_files(libexec/"sbin", :PERL5LIB => ENV["PERL5LIB"])
+    sbin.env_script_all_files(libexec/"sbin", PERL5LIB: ENV["PERL5LIB"])
 
     # Install sample files
     inreplace "sample-ddclient-wrapper.sh",
@@ -76,7 +76,7 @@ class Ddclient < Formula
     EOS
   end
 
-  plist_options :startup => true
+  plist_options startup: true
 
   def plist
     <<~EOS
