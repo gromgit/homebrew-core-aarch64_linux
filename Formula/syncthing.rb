@@ -2,8 +2,8 @@ class Syncthing < Formula
   desc "Open source continuous file synchronization application"
   homepage "https://syncthing.net/"
   url "https://github.com/syncthing/syncthing.git",
-      :tag      => "v1.7.1",
-      :revision => "d57694dc042ee24d7f76a3ed9743ea02f01e456d"
+      tag:      "v1.7.1",
+      revision: "d57694dc042ee24d7f76a3ed9743ea02f01e456d"
   license "MPL-2.0"
   head "https://github.com/syncthing/syncthing.git"
 
@@ -31,7 +31,7 @@ class Syncthing < Formula
     end
   end
 
-  plist_options :manual => "syncthing"
+  plist_options manual: "syncthing"
 
   def plist
     <<~EOS
