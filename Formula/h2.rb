@@ -34,7 +34,7 @@ class H2 < Formula
     (bin+"h2").write script
   end
 
-  plist_options :manual => "h2"
+  plist_options manual: "h2"
 
   def plist
     <<~EOS
