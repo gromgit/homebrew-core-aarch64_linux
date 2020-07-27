@@ -18,7 +18,7 @@ class Ccat < Formula
 
   depends_on "go" => :build
 
-  conflicts_with "ccrypt", :because => "both install `ccat` binaries"
+  conflicts_with "ccrypt", because: "both install `ccat` binaries"
 
   def install
     system "./script/build"
