@@ -41,7 +41,7 @@ class Fpdns < Formula
     system "make"
     system "make", "install"
     (bin/"fpdns").write_env_script libexec/"bin/fpdns",
-      :PERL5LIB => ENV["PERL5LIB"]
+      PERL5LIB: ENV["PERL5LIB"]
   end
 
   test do
