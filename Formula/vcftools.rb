@@ -24,7 +24,7 @@ class Vcftools < Formula
                           "--with-pmdir=lib/perl5/site_perl"
     system "make", "install"
 
-    bin.env_script_all_files(libexec/"bin", :PERL5LIB => lib/"perl5/site_perl")
+    bin.env_script_all_files(libexec/"bin", PERL5LIB: lib/"perl5/site_perl")
   end
 
   test do
