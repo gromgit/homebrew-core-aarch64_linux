@@ -27,10 +27,10 @@ class Ntopng < Formula
   end
 
   head do
-    url "https://github.com/ntop/ntopng.git", :branch => "dev"
+    url "https://github.com/ntop/ntopng.git", branch: "dev"
 
     resource "nDPI" do
-      url "https://github.com/ntop/nDPI.git", :branch => "dev"
+      url "https://github.com/ntop/nDPI.git", branch: "dev"
     end
   end
 
