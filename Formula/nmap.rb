@@ -19,7 +19,7 @@ class Nmap < Formula
   uses_from_macos "flex" => :build
   uses_from_macos "zlib"
 
-  conflicts_with "ndiff", :because => "both install `ndiff` binaries"
+  conflicts_with "ndiff", because: "both install `ndiff` binaries"
 
   # Remove for > 7.80
   # Big Sur fix; see also: https://github.com/nmap/nmap/pull/2085
