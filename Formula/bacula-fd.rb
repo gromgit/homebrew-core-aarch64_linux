@@ -16,7 +16,7 @@ class BaculaFd < Formula
   uses_from_macos "zlib"
 
   conflicts_with "bareos-client",
-    :because => "both install a `bconsole` executable"
+    because: "both install a `bconsole` executable"
 
   def install
     # CoreFoundation is also used alongside IOKit
@@ -50,7 +50,7 @@ class BaculaFd < Formula
     (var/"run").mkpath
   end
 
-  plist_options :startup => true, :manual => "bacula-fd"
+  plist_options startup: true, manual: "bacula-fd"
 
   def plist
     <<~EOS
