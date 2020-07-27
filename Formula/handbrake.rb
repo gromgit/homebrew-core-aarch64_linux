@@ -21,7 +21,7 @@ class Handbrake < Formula
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "python@3.8" => :build
-  depends_on :xcode => ["10.3", :build]
+  depends_on xcode: ["10.3", :build]
   depends_on "yasm" => :build
 
   def install
