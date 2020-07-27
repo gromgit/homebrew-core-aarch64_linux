@@ -5,8 +5,8 @@ class Vault < Formula
   desc "Secures, stores, and tightly controls access to secrets"
   homepage "https://vaultproject.io/"
   url "https://github.com/hashicorp/vault.git",
-      :tag      => "v1.4.3",
-      :revision => "491533b63ec9c1343eac3a24d8a7558185a0acb7"
+      tag:      "v1.4.3",
+      revision: "491533b63ec9c1343eac3a24d8a7558185a0acb7"
   license "MPL-2.0"
   head "https://github.com/hashicorp/vault.git"
 
@@ -39,7 +39,7 @@ class Vault < Formula
     end
   end
 
-  plist_options :manual => "vault server -dev"
+  plist_options manual: "vault server -dev"
 
   def plist
     <<~EOS
