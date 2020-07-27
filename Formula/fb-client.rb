@@ -4,7 +4,7 @@ class FbClient < Formula
   url "https://paste.xinu.at/data/client/fb-2.0.4.tar.gz"
   sha256 "330c9593afd2b2480162786992d0bfb71be25faf105f3c24c71d514b58ee0cd3"
   revision 2
-  head "https://git.server-speed.net/users/flo/fb", :using => :git
+  head "https://git.server-speed.net/users/flo/fb", using: :git
 
   bottle do
     cellar :any
@@ -17,7 +17,7 @@ class FbClient < Formula
   depends_on "curl-openssl"
   depends_on "python@3.8"
 
-  conflicts_with "findbugs", :because => "findbugs and fb-client both install a `fb` binary"
+  conflicts_with "findbugs", because: "findbugs and fb-client both install a `fb` binary"
 
   resource "pycurl" do
     url "https://files.pythonhosted.org/packages/ef/05/4b773f74f830a90a326b06f9b24e65506302ab049e825a3c0b60b1a6e26a/pycurl-7.43.0.5.tar.gz"
@@ -51,7 +51,7 @@ class FbClient < Formula
     inreplace "fb", "#!/usr/bin/env python", "#!#{Formula["python@3.8"].opt_bin}/python3"
 
     system "make", "PREFIX=#{prefix}", "install"
-    bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
+    bin.env_script_all_files(libexec/"bin", PYTHONPATH: ENV["PYTHONPATH"])
   end
 
   test do
