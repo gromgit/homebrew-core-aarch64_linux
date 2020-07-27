@@ -24,7 +24,7 @@ class OsrmBackend < Formula
 
   # "invalid use of non-static data member 'offset'"
   # https://github.com/Project-OSRM/osrm-backend/issues/3719
-  depends_on :macos => :el_capitan
+  depends_on macos: :el_capitan
 
   depends_on "tbb"
 
