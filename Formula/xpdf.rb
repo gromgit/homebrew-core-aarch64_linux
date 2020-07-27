@@ -18,7 +18,7 @@ class Xpdf < Formula
   depends_on "qt"
 
   conflicts_with "pdf2image", "pdftohtml", "poppler",
-    :because => "poppler, pdftohtml, pdf2image, and xpdf install conflicting executables"
+    because: "poppler, pdftohtml, pdf2image, and xpdf install conflicting executables"
 
   def install
     system "cmake", ".", *std_cmake_args
