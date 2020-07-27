@@ -15,7 +15,7 @@ class Dar < Formula
   depends_on "upx" => :build
   depends_on "libgcrypt"
   depends_on "lzo"
-  depends_on :macos => :el_capitan # needs thread-local storage
+  depends_on macos: :el_capitan # needs thread-local storage
 
   def install
     ENV.cxx11
