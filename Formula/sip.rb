@@ -3,7 +3,7 @@ class Sip < Formula
   homepage "https://www.riverbankcomputing.com/software/sip/intro"
   url "https://www.riverbankcomputing.com/static/Downloads/sip/4.19.23/sip-4.19.23.tar.gz"
   sha256 "22ca9bcec5388114e40d4aafd7ccd0c4fe072297b628d0c5cdfa2f010c0bc7e7"
-  head "https://www.riverbankcomputing.com/hg/sip", :using => :hg
+  head "https://www.riverbankcomputing.com/hg/sip", using: :hg
 
   bottle do
     cellar :any_skip_relocation
