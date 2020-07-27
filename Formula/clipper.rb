@@ -19,7 +19,7 @@ class Clipper < Formula
     system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", bin/"clipper", "clipper.go"
   end
 
-  plist_options :manual => "clipper"
+  plist_options manual: "clipper"
 
   def plist
     <<~EOS
