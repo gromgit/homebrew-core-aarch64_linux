@@ -2,8 +2,8 @@ class Kapacitor < Formula
   desc "Open source time series data processor"
   homepage "https://github.com/influxdata/kapacitor"
   url "https://github.com/influxdata/kapacitor.git",
-      :tag      => "v1.5.5",
-      :revision => "71a67c40348a8dfdad3f76d4c699ff8ef938da2b"
+      tag:      "v1.5.5",
+      revision: "71a67c40348a8dfdad3f76d4c699ff8ef938da2b"
   head "https://github.com/influxdata/kapacitor.git"
 
   bottle do
@@ -42,7 +42,7 @@ class Kapacitor < Formula
     (var/"kapacitor/tasks").mkpath
   end
 
-  plist_options :manual => "kapacitord -config #{HOMEBREW_PREFIX}/etc/kapacitor.conf"
+  plist_options manual: "kapacitord -config #{HOMEBREW_PREFIX}/etc/kapacitor.conf"
 
   def plist
     <<~EOS
