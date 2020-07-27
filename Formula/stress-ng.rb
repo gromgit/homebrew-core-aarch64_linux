@@ -12,7 +12,7 @@ class StressNg < Formula
     sha256 "2beb7847394f25cd382da5ede362eaa50d961c1534c25cded2ce07e7ab25ba7c" => :high_sierra
   end
 
-  depends_on :macos => :sierra
+  depends_on macos: :sierra
 
   uses_from_macos "zlib"
 
