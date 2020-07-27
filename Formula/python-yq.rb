@@ -15,7 +15,7 @@ class PythonYq < Formula
   depends_on "jq"
   depends_on "python@3.8"
 
-  conflicts_with "yq", :because => "both install `yq` executables"
+  conflicts_with "yq", because: "both install `yq` executables"
 
   resource "argcomplete" do
     url "https://files.pythonhosted.org/packages/84/44/ad7f3fc9483b776dcee11d0a1dcadb6e55c456e06ae611073b82bc8d63d2/argcomplete-1.11.0.tar.gz"
@@ -63,8 +63,8 @@ class PythonYq < Formula
 
     bin.install Dir[libexec/"bin/*"]
     env = {
-      :PATH       => "#{Formula["jq"].opt_bin}:$PATH",
-      :PYTHONPATH => ENV["PYTHONPATH"],
+      PATH:       "#{Formula["jq"].opt_bin}:$PATH",
+      PYTHONPATH: ENV["PYTHONPATH"],
     }
     bin.env_script_all_files(libexec/"bin", env)
   end
