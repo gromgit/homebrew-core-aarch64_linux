@@ -24,7 +24,7 @@ class Beast < Formula
     libexec.install Dir["release/Linux/BEASTv*/*"]
     pkgshare.install_symlink libexec/"examples"
     bin.install Dir[libexec/"bin/*"]
-    bin.env_script_all_files libexec/"bin", :JAVA_HOME => ENV["JAVA_HOME"]
+    bin.env_script_all_files libexec/"bin", JAVA_HOME: ENV["JAVA_HOME"]
   end
 
   test do
