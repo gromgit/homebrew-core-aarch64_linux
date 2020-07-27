@@ -24,7 +24,7 @@ class Kcptun < Formula
     etc.install "examples/local.json" => "kcptun_client.json"
   end
 
-  plist_options :manual => "#{HOMEBREW_PREFIX}/opt/kcptun/bin/kcptun_client -c #{HOMEBREW_PREFIX}/etc/kcptun_client.json"
+  plist_options manual: "#{HOMEBREW_PREFIX}/opt/kcptun/bin/kcptun_client -c #{HOMEBREW_PREFIX}/etc/kcptun_client.json"
 
   def plist
     <<~EOS
