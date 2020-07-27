@@ -22,7 +22,7 @@ class Stormssh < Formula
     depends_on "pkg-config" => :build
   end
 
-  conflicts_with "storm", :because => "both install 'storm' binary"
+  conflicts_with "storm", because: "both install 'storm' binary"
 
   resource "click" do
     url "https://files.pythonhosted.org/packages/f8/5c/f60e9d8a1e77005f664b76ff8aeaee5bc05d0a91798afd7f53fc998dbc47/Click-7.0.tar.gz"
@@ -130,7 +130,7 @@ class Stormssh < Formula
     system "python3", *Language::Python.setup_install_args(libexec)
 
     bin.install Dir[libexec/"bin/*"]
-    bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
+    bin.env_script_all_files(libexec/"bin", PYTHONPATH: ENV["PYTHONPATH"])
   end
 
   test do
