@@ -18,7 +18,7 @@ class HapiFhirCli < Formula
     inreplace "hapi-fhir-cli", /SCRIPTDIR=(.*)/, "SCRIPTDIR=#{libexec}"
     libexec.install "hapi-fhir-cli.jar"
     bin.install "hapi-fhir-cli"
-    bin.env_script_all_files libexec/"bin", :JAVA_HOME => Formula["openjdk"].opt_prefix
+    bin.env_script_all_files libexec/"bin", JAVA_HOME: Formula["openjdk"].opt_prefix
   end
 
   test do
