@@ -3,8 +3,8 @@ class Lc0 < Formula
   homepage "https://lczero.org/"
 
   url "https://github.com/LeelaChessZero/lc0.git",
-      :tag      => "v0.26.1",
-      :revision => "2520eb375d459c67e59edb11ca7be1726efef9c6"
+      tag:      "v0.26.1",
+      revision: "2520eb375d459c67e59edb11ca7be1726efef9c6"
   license "GPL-3.0"
 
   bottle do
@@ -19,7 +19,7 @@ class Lc0 < Formula
   depends_on "python@3.8" => :build # required to compile .pb files
 
   resource "network" do
-    url "https://training.lczero.org/get_network?sha=00af53b081e80147172e6f281c01daf5ca19ada173321438914c730370aa4267", :using => :nounzip
+    url "https://training.lczero.org/get_network?sha=00af53b081e80147172e6f281c01daf5ca19ada173321438914c730370aa4267", using: :nounzip
     sha256 "12df03a12919e6392f3efbe6f461fc0ff5451b4105f755503da151adc7ab6d67"
   end
 
