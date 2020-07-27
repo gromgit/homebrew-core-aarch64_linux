@@ -15,7 +15,7 @@ class PhpAT72 < Formula
 
   keg_only :versioned_formula
 
-  deprecate! :date => "2020-11-30"
+  deprecate! date: "2020-11-30"
 
   depends_on "httpd" => [:build, :test]
   depends_on "pkg-config" => :build
@@ -295,7 +295,7 @@ class PhpAT72 < Formula
     version.to_s.split(".")[0..1].join(".")
   end
 
-  plist_options :manual => "php-fpm"
+  plist_options manual: "php-fpm"
 
   def plist
     <<~EOS
