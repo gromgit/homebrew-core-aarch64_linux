@@ -21,7 +21,7 @@ class Wellington < Formula
 
   go_resource "golang.org/x/net" do
     url "https://github.com/golang/net.git",
-        :revision => "f09c4662a0bd6bd8943ac7b4931e185df9471da4"
+        revision: "f09c4662a0bd6bd8943ac7b4931e185df9471da4"
   end
 
   def install
