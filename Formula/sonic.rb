@@ -20,7 +20,7 @@ class Sonic < Formula
     etc.install "config.cfg" => "sonic.cfg"
   end
 
-  plist_options :manual => "sonic -c #{HOMEBREW_PREFIX}/etc/sonic.cfg"
+  plist_options manual: "sonic -c #{HOMEBREW_PREFIX}/etc/sonic.cfg"
 
   def plist
     <<~EOS
