@@ -18,25 +18,25 @@ class Llnode < Formula
     if DevelopmentTools.clang_build_version >= 1000
       # lldb release_60 branch tip of tree commit from 10 Apr 2018
       url "https://github.com/llvm-mirror/lldb.git",
-          :revision => "b6df24ff1b258b18041161b8f32ac316a3b5d8d9"
+          revision: "b6df24ff1b258b18041161b8f32ac316a3b5d8d9"
     elsif DevelopmentTools.clang_build_version >= 900
       # lldb release_40 branch tip of tree commit from 12 Jan 2017
       url "https://github.com/llvm-mirror/lldb.git",
-          :revision => "fcd2aac9f179b968a20cf0231c3386dcef8a6659"
+          revision: "fcd2aac9f179b968a20cf0231c3386dcef8a6659"
     elsif DevelopmentTools.clang_build_version >= 802
       # lldb 390
       url "https://github.com/llvm-mirror/lldb.git",
-          :revision => "d556e60f02a7404b291d07cac2f27512c73bc743"
+          revision: "d556e60f02a7404b291d07cac2f27512c73bc743"
     elsif DevelopmentTools.clang_build_version >= 800
       # lldb 360.1
       url "https://github.com/llvm-mirror/lldb.git",
-          :revision => "839b868e2993dcffc7fea898a1167f1cec097a82"
+          revision: "839b868e2993dcffc7fea898a1167f1cec097a82"
     else
       # It claims it to be lldb 350.0 for Xcode 7.3, but in fact it is based
       # of 34.
       # Xcode < 7.3 uses 340.4, so I assume we should be safe to go with this.
       url "https://llvm.org/svn/llvm-project/lldb/tags/RELEASE_34/final/",
-          :using => :svn
+          using: :svn
     end
   end
 
