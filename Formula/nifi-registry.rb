@@ -13,7 +13,7 @@ class NifiRegistry < Formula
     rm Dir[libexec/"bin/*.bat"]
 
     bin.install libexec/"bin/nifi-registry.sh" => "nifi-registry"
-    bin.env_script_all_files libexec/"bin/", :NIFI_REGISTRY_HOME => libexec
+    bin.env_script_all_files libexec/"bin/", NIFI_REGISTRY_HOME: libexec
   end
 
   test do
