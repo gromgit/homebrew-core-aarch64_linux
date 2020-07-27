@@ -21,8 +21,8 @@ class Jolie < Formula
     "--jolie-launchers", libexec/"bin"
     bin.install Dir["#{libexec}/bin/*"]
     bin.env_script_all_files libexec/"bin",
-      :JOLIE_HOME => "${JOLIE_HOME:-#{libexec}}",
-      :JAVA_HOME  => "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
+      JOLIE_HOME: "${JOLIE_HOME:-#{libexec}}",
+      JAVA_HOME:  "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
   end
 
   test do
