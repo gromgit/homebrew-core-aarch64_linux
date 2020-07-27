@@ -2,10 +2,10 @@ class Swiftgen < Formula
   desc "Swift code generator for assets, storyboards, Localizable.strings, …"
   homepage "https://github.com/SwiftGen/SwiftGen"
   url "https://github.com/SwiftGen/SwiftGen.git",
-      :tag      => "6.2.1",
-      :revision => "74ec417bfb39ed3191b385d3cafecfbbcc0fad72"
+      tag:      "6.2.1",
+      revision: "74ec417bfb39ed3191b385d3cafecfbbcc0fad72"
   license "MIT"
-  head "https://github.com/SwiftGen/SwiftGen.git", :branch => "develop"
+  head "https://github.com/SwiftGen/SwiftGen.git", branch: "develop"
 
   bottle do
     cellar :any
@@ -13,7 +13,7 @@ class Swiftgen < Formula
   end
 
   depends_on "ruby" => :build if MacOS.version <= :sierra
-  depends_on :xcode => ["11.4", :build]
+  depends_on xcode: ["11.4", :build]
 
   def install
     # Disable swiftlint build phase to avoid build errors if versions mismatch
