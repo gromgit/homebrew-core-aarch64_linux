@@ -4,7 +4,7 @@ class Pypy3 < Formula
   url "https://bitbucket.org/pypy/pypy/downloads/pypy3.6-v7.3.1-src.tar.bz2"
   sha256 "0c2cc3229da36c6984baee128c8ff8bb4516d69df1d73275dc4622bf249afa83"
   revision 1
-  head "https://foss.heptapod.net/pypy/pypy", :using => :hg, :branch => "py3.7"
+  head "https://foss.heptapod.net/pypy/pypy", using: :hg, branch: "py3.7"
 
   bottle do
     cellar :any
@@ -15,7 +15,7 @@ class Pypy3 < Formula
 
   depends_on "pkg-config" => :build
   depends_on "pypy" => :build
-  depends_on :arch => :x86_64
+  depends_on arch: :x86_64
   depends_on "gdbm"
   # pypy does not find system libffi, and its location cannot be given
   # as a build option
