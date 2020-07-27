@@ -13,7 +13,7 @@ class GhzWeb < Formula
   end
 
   depends_on "go" => :build
-  depends_on :xcode => :build
+  depends_on xcode: :build
 
   def install
     ENV["CGO_ENABLED"] = "1"
