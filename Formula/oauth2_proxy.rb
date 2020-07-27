@@ -29,7 +29,7 @@ class Oauth2Proxy < Formula
     EOS
   end
 
-  plist_options :manual => "oauth2-proxy"
+  plist_options manual: "oauth2-proxy"
 
   def plist
     <<~EOS
