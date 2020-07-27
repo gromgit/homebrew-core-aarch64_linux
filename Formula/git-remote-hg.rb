@@ -22,7 +22,7 @@ class GitRemoteHg < Formula
   uses_from_macos "libxml2"
   uses_from_macos "libxslt"
 
-  conflicts_with "git-cinnabar", :because => "both install `git-remote-hg` binaries"
+  conflicts_with "git-cinnabar", because: "both install `git-remote-hg` binaries"
 
   resource "hg" do
     url "https://www.mercurial-scm.org/release/mercurial-5.2.2.tar.gz"
