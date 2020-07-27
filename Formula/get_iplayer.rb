@@ -4,7 +4,7 @@ class GetIplayer < Formula
   url "https://github.com/get-iplayer/get_iplayer/archive/v3.26.tar.gz"
   sha256 "2ec105ccb47910d7f3ff7124ecaa839a8778837c12881358e627a132ba027b06"
   license "GPL-3.0"
-  head "https://github.com/get-iplayer/get_iplayer.git", :branch => "develop"
+  head "https://github.com/get-iplayer/get_iplayer.git", branch: "develop"
 
   bottle do
     cellar :any_skip_relocation
@@ -56,7 +56,7 @@ class GetIplayer < Formula
     end
 
     bin.install "get_iplayer", "get_iplayer.cgi"
-    bin.env_script_all_files(libexec/"bin", :PERL5LIB => ENV["PERL5LIB"])
+    bin.env_script_all_files(libexec/"bin", PERL5LIB: ENV["PERL5LIB"])
     man1.install "get_iplayer.1"
   end
 
