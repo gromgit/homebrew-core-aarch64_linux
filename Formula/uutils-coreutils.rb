@@ -17,9 +17,9 @@ class UutilsCoreutils < Formula
   depends_on "rust" => :build
   depends_on "sphinx-doc" => :build
 
-  conflicts_with "coreutils", :because => "uutils-coreutils and coreutils install the same binaries"
-  conflicts_with "aardvark_shell_utils", :because => "both install `realpath` binaries"
-  conflicts_with "truncate", :because => "both install `truncate` binaries"
+  conflicts_with "coreutils", because: "uutils-coreutils and coreutils install the same binaries"
+  conflicts_with "aardvark_shell_utils", because: "both install `realpath` binaries"
+  conflicts_with "truncate", because: "both install `truncate` binaries"
 
   def install
     man1.mkpath
