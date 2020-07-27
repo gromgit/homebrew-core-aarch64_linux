@@ -48,7 +48,7 @@ class Latexml < Formula
       next if path.directory?
 
       program = path.basename
-      (bin+program).write_env_script("#{libexec}/bin/#{program}", :PERL5LIB => ENV["PERL5LIB"])
+      (bin+program).write_env_script("#{libexec}/bin/#{program}", PERL5LIB: ENV["PERL5LIB"])
     end
   end
 
