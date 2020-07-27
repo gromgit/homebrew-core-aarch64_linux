@@ -80,7 +80,7 @@ class ExtractUrl < Formula
 
     system "make", "prefix=#{prefix}"
     system "make", "prefix=#{prefix}", "install"
-    bin.env_script_all_files(libexec/"bin", :PERL5LIB => ENV["PERL5LIB"])
+    bin.env_script_all_files(libexec/"bin", PERL5LIB: ENV["PERL5LIB"])
   end
 
   test do
