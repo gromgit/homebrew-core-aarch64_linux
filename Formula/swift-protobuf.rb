@@ -13,11 +13,11 @@ class SwiftProtobuf < Formula
     sha256 "a8e4f0a5ce4906cc4a502a6b05bd5ed4505f84048dda3584f77529cf0b9cbf4d" => :high_sierra
   end
 
-  depends_on :xcode => ["8.3", :build]
+  depends_on xcode: ["8.3", :build]
   depends_on "protobuf"
 
   conflicts_with "protobuf-swift",
-    :because => "both install `protoc-gen-swift` binaries"
+    because: "both install `protoc-gen-swift` binaries"
 
   def install
     system "swift", "build", "--disable-sandbox", "-c", "release"
