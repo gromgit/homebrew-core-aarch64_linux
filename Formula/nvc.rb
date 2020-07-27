@@ -26,7 +26,7 @@ class Nvc < Formula
 
   resource "vim-hdl-examples" do
     url "https://github.com/suoto/vim-hdl-examples.git",
-        :revision => "c112c17f098f13719784df90c277683051b61d05"
+        revision: "c112c17f098f13719784df90c277683051b61d05"
   end
 
   def install
