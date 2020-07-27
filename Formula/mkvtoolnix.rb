@@ -31,7 +31,7 @@ class Mkvtoolnix < Formula
   depends_on "libmatroska"
   depends_on "libogg"
   depends_on "libvorbis"
-  depends_on :macos => :mojave # C++17
+  depends_on macos: :mojave # C++17
 
   uses_from_macos "libxslt" => :build
   uses_from_macos "ruby" => :build
