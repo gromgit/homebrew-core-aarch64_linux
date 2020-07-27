@@ -23,7 +23,7 @@ class Golo < Formula
 
     rm_f Dir["#{libexec}/bin/*.bat"]
     bin.install Dir["#{libexec}/bin/*"]
-    bin.env_script_all_files libexec/"bin", :JAVA_HOME => "${JAVA_HOME:-#{ENV["JAVA_HOME"]}}"
+    bin.env_script_all_files libexec/"bin", JAVA_HOME: "${JAVA_HOME:-#{ENV["JAVA_HOME"]}}"
     bash_completion.install "#{libexec}/share/shell-completion/golo-bash-completion"
     zsh_completion.install "#{libexec}/share/shell-completion/golo-zsh-completion" => "_golo"
     cp "#{bash_completion}/golo-bash-completion", zsh_completion
