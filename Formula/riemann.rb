@@ -38,7 +38,7 @@ class Riemann < Formula
     EOS
   end
 
-  plist_options :manual => "riemann"
+  plist_options manual: "riemann"
 
   def plist
     <<~EOS
