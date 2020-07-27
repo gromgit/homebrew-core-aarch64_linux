@@ -24,7 +24,7 @@ class Allureofthestars < Formula
   depends_on "sdl2_ttf"
 
   def install
-    install_cabal_package :using => ["happy", "alex"]
+    install_cabal_package using: ["happy", "alex"]
   end
 
   test do
