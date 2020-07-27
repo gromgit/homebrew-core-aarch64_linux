@@ -55,7 +55,7 @@ class SqlTranslator < Formula
     # https://github.com/Homebrew/homebrew-core/issues/4936
     bin.find { |f| rewrite_shebang detected_perl_shebang, f }
 
-    bin.env_script_all_files libexec/"bin", :PERL5LIB => ENV["PERL5LIB"]
+    bin.env_script_all_files libexec/"bin", PERL5LIB: ENV["PERL5LIB"]
   end
 
   test do
