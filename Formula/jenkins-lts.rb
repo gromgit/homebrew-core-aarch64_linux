@@ -11,8 +11,8 @@ class JenkinsLts < Formula
   def install
     system "#{Formula["openjdk@11"].opt_bin}/jar", "xvf", "jenkins.war"
     libexec.install "jenkins.war", "WEB-INF/lib/cli-#{version}.jar"
-    bin.write_jar_script libexec/"jenkins.war", "jenkins-lts", :java_version => "11"
-    bin.write_jar_script libexec/"cli-#{version}.jar", "jenkins-lts-cli", :java_version => "11"
+    bin.write_jar_script libexec/"jenkins.war", "jenkins-lts", java_version: "11"
+    bin.write_jar_script libexec/"cli-#{version}.jar", "jenkins-lts-cli", java_version: "11"
   end
 
   def caveats
@@ -21,7 +21,7 @@ class JenkinsLts < Formula
     EOS
   end
 
-  plist_options :manual => "jenkins-lts"
+  plist_options manual: "jenkins-lts"
 
   def plist
     <<~EOS
