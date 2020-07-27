@@ -173,7 +173,7 @@ class Cpm < Formula
     system "./Build"
     system "./Build", "install"
 
-    (bin/"cpm").write_env_script("#{libexec}/bin/cpm", :PERL5LIB => ENV["PERL5LIB"])
+    (bin/"cpm").write_env_script("#{libexec}/bin/cpm", PERL5LIB: ENV["PERL5LIB"])
     man1.install_symlink libexec/"man/man1/cpm.1"
     man3.install_symlink Dir[libexec/"man/man3/App::cpm*"].reject { |f| File.empty?(f) }
   end
