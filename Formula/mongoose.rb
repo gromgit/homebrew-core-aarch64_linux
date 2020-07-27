@@ -13,7 +13,7 @@ class Mongoose < Formula
 
   depends_on "openssl@1.1"
 
-  conflicts_with "suite-sparse", :because => "suite-sparse vendors libmongoose.dylib"
+  conflicts_with "suite-sparse", because: "suite-sparse vendors libmongoose.dylib"
 
   def install
     # No Makefile but is an expectation upstream of binary creation
