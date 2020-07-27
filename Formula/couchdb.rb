@@ -24,7 +24,7 @@ class Couchdb < Formula
   depends_on "openssl@1.1"
   depends_on "spidermonkey"
 
-  conflicts_with "ejabberd", :because => "both install `jiffy` lib"
+  conflicts_with "ejabberd", because: "both install `jiffy` lib"
 
   def install
     system "./configure"
@@ -57,7 +57,7 @@ class Couchdb < Formula
     EOS
   end
 
-  plist_options :manual => "couchdb"
+  plist_options manual: "couchdb"
 
   def plist
     <<~EOS
