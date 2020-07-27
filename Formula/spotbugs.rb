@@ -26,7 +26,7 @@ class Spotbugs < Formula
       chmod 0755, "#{libexec}/bin/spotbugs"
     end
     (bin/"spotbugs").write_env_script "#{libexec}/bin/spotbugs",
-      :JAVA_HOME => "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
+      JAVA_HOME: "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
   end
 
   test do
