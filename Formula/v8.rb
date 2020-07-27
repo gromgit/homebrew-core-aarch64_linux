@@ -15,19 +15,19 @@ class V8 < Formula
   depends_on "llvm" => :build
   depends_on "ninja" => :build
 
-  depends_on :xcode => ["10.0", :build] # required by v8
+  depends_on xcode: ["10.0", :build] # required by v8
 
   # Look up the correct resource revisions in the DEP file of the specific releases tag
   # e.g. for CIPD dependency gn: https://github.com/v8/v8/blob/7.6.303.27/DEPS#L15
   resource "gn" do
     url "https://gn.googlesource.com/gn.git",
-      :revision => "5ed3c9cc67b090d5e311e4bd2aba072173e82db9"
+      revision: "5ed3c9cc67b090d5e311e4bd2aba072173e82db9"
   end
 
   # e.g.: https://github.com/v8/v8/blob/7.6.303.27/DEPS#L60 for the revision of build for v8 7.6.303.27
   resource "v8/build" do
     url "https://chromium.googlesource.com/chromium/src/build.git",
-      :revision => "1b904cc30093c25d5fd48389bd58e3f7409bcf80"
+      revision: "1b904cc30093c25d5fd48389bd58e3f7409bcf80"
 
     # revert usage of unsuported libtool option -D (fixes High Sierra support)
     patch do
@@ -38,32 +38,32 @@ class V8 < Formula
 
   resource "v8/third_party/icu" do
     url "https://chromium.googlesource.com/chromium/deps/icu.git",
-      :revision => "f2223961702f00a8833874b0560d615a2cc42738"
+      revision: "f2223961702f00a8833874b0560d615a2cc42738"
   end
 
   resource "v8/base/trace_event/common" do
     url "https://chromium.googlesource.com/chromium/src/base/trace_event/common.git",
-      :revision => "dab187b372fc17e51f5b9fad8201813d0aed5129"
+      revision: "dab187b372fc17e51f5b9fad8201813d0aed5129"
   end
 
   resource "v8/third_party/googletest/src" do
     url "https://chromium.googlesource.com/external/github.com/google/googletest.git",
-      :revision => "a09ea700d32bab83325aff9ff34d0582e50e3997"
+      revision: "a09ea700d32bab83325aff9ff34d0582e50e3997"
   end
 
   resource "v8/third_party/jinja2" do
     url "https://chromium.googlesource.com/chromium/src/third_party/jinja2.git",
-      :revision => "3f90fa05c85718505e28c9c3426c1ba52843b9b7"
+      revision: "3f90fa05c85718505e28c9c3426c1ba52843b9b7"
   end
 
   resource "v8/third_party/markupsafe" do
     url "https://chromium.googlesource.com/chromium/src/third_party/markupsafe.git",
-      :revision => "8f45f5cfa0009d2a70589bcda0349b8cb2b72783"
+      revision: "8f45f5cfa0009d2a70589bcda0349b8cb2b72783"
   end
 
   resource "v8/third_party/zlib" do
     url "https://chromium.googlesource.com/chromium/src/third_party/zlib.git",
-      :revision => "90fc47e6eed7bd1a59ad1603761303ef24705593"
+      revision: "90fc47e6eed7bd1a59ad1603761303ef24705593"
   end
 
   def install
@@ -85,15 +85,15 @@ class V8 < Formula
 
     # Enter the v8 checkout
     gn_args = {
-      :is_debug                     => false,
-      :is_component_build           => true,
-      :v8_use_external_startup_data => false,
-      :v8_enable_i18n_support       => true, # enables i18n support with icu
+      is_debug:                     false,
+      is_component_build:           true,
+      v8_use_external_startup_data: false,
+      v8_enable_i18n_support:       true, # enables i18n support with icu
       # uses homebrew llvm clang instead of Google's custom one
-      :clang_base_path              => "\"#{Formula["llvm"].prefix}\"",
-      :clang_use_chrome_plugins     => false, # disable the usage of Google's custom clang plugins
-      :use_custom_libcxx            => false, # uses system libc++ instead of Google's custom one
-      :treat_warnings_as_errors     => false,
+      clang_base_path:              "\"#{Formula["llvm"].prefix}\"",
+      clang_use_chrome_plugins:     false, # disable the usage of Google's custom clang plugins
+      use_custom_libcxx:            false, # uses system libc++ instead of Google's custom one
+      treat_warnings_as_errors:     false,
     }
 
     # overwrite Chromium minimum sdk version of 10.15
