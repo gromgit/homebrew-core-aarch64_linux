@@ -5,7 +5,7 @@ class Corectl < Formula
   sha256 "9bdf7bc8c6a7bd861e2b723c0566d0a093ed5d5caf370a065a1708132b4ab98a"
   license "Apache-2.0"
   revision 2
-  head "https://github.com/TheNewNormal/corectl.git", :branch => "golang"
+  head "https://github.com/TheNewNormal/corectl.git", branch: "golang"
 
   bottle do
     cellar :any
@@ -18,7 +18,7 @@ class Corectl < Formula
   depends_on "go" => :build
   depends_on "ocaml" => :build
   depends_on "opam" => :build
-  depends_on :x11 => :build
+  depends_on x11: :build
   depends_on "libev"
 
   def install
