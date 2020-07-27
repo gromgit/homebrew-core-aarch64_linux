@@ -25,8 +25,8 @@ class CrushTools < Formula
 
   depends_on "pcre"
 
-  conflicts_with "aggregate", :because => "both install an `aggregate` binary"
-  conflicts_with "num-utils", :because => "both install an `range` binary"
+  conflicts_with "aggregate", because: "both install an `aggregate` binary"
+  conflicts_with "num-utils", because: "both install an `range` binary"
 
   def install
     system "./bootstrap" if build.head?
