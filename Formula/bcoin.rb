@@ -19,7 +19,7 @@ class Bcoin < Formula
 
   def install
     system "#{Formula["node"].libexec}/bin/npm", "install", *Language::Node.std_npm_install_args(libexec)
-    (bin/"bcoin").write_env_script libexec/"bin/bcoin", :PATH => "#{Formula["node"].opt_bin}:$PATH"
+    (bin/"bcoin").write_env_script libexec/"bin/bcoin", PATH: "#{Formula["node"].opt_bin}:$PATH"
   end
 
   test do
