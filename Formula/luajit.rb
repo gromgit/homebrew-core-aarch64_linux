@@ -1,7 +1,7 @@
 class Luajit < Formula
   desc "Just-In-Time Compiler (JIT) for the Lua programming language"
   homepage "https://luajit.org/luajit.html"
-  head "https://luajit.org/git/luajit-2.0.git", :branch => "v2.1"
+  head "https://luajit.org/git/luajit-2.0.git", branch: "v2.1"
 
   stable do
     url "https://luajit.org/download/LuaJIT-2.0.5.tar.gz"
