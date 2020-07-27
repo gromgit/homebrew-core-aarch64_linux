@@ -6,7 +6,7 @@ class Kettle < Formula
 
   bottle :unneeded
 
-  depends_on :java => "1.8"
+  depends_on java: "1.8"
 
   def install
     rm_rf Dir["*.{bat}"]
@@ -19,13 +19,13 @@ class Kettle < Formula
     (var+"log/kettle").mkpath
 
     # We don't assume that carte, kitchen or pan are in anyway unique command names so we'll prepend "pdi"
-    env = { :BASEDIR => libexec, :JAVA_HOME => Language::Java.java_home("1.8") }
+    env = { BASEDIR: libexec, JAVA_HOME: Language::Java.java_home("1.8") }
     %w[carte kitchen pan].each do |command|
       (bin+"pdi#{command}").write_env_script libexec+"#{command}.sh", env
     end
   end
 
-  plist_options :manual => "pdicarte #{HOMEBREW_PREFIX}/etc/kettle/carte-config.xml"
+  plist_options manual: "pdicarte #{HOMEBREW_PREFIX}/etc/kettle/carte-config.xml"
 
   def plist
     <<~EOS
