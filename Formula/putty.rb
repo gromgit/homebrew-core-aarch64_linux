@@ -23,7 +23,7 @@ class Putty < Formula
 
   uses_from_macos "expect" => :test
 
-  conflicts_with "pssh", :because => "both install `pscp` binaries"
+  conflicts_with "pssh", because: "both install `pscp` binaries"
 
   def install
     if build.head?
