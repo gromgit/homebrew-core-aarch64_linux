@@ -15,11 +15,11 @@ class GoAT110 < Formula
 
   keg_only :versioned_formula
 
-  deprecate! :date => "2019-02-25"
+  deprecate! date: "2019-02-25"
 
   resource "gotools" do
     url "https://go.googlesource.com/tools.git",
-        :branch => "release-branch.go1.10"
+        branch: "release-branch.go1.10"
   end
 
   # Don't update this unless this version cannot bootstrap the new version.
