@@ -40,7 +40,7 @@ class Whohas < Formula
     end
 
     bin.install "whohas"
-    bin.env_script_all_files(libexec/"bin", :PERL5LIB => ENV["PERL5LIB"])
+    bin.env_script_all_files(libexec/"bin", PERL5LIB: ENV["PERL5LIB"])
 
     man1.install "usr/share/man/man1/whohas.1"
     doc.install "html_assets", "intro.html"
