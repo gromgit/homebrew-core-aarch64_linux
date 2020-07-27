@@ -77,7 +77,7 @@ class Fail2ban < Formula
     end
 
     bin.install Dir[libexec/"bin/*"]
-    bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
+    bin.env_script_all_files(libexec/"bin", PYTHONPATH: ENV["PYTHONPATH"])
     man1.install Dir["man/*.1"]
     man5.install "man/jail.conf.5"
   end
@@ -109,7 +109,7 @@ class Fail2ban < Formula
     EOS
   end
 
-  plist_options :startup => true
+  plist_options startup: true
 
   def plist
     <<~EOS
