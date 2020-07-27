@@ -59,7 +59,7 @@ class Gearman < Formula
     system "make", "install"
   end
 
-  plist_options :manual => "gearmand -d"
+  plist_options manual: "gearmand -d"
 
   def plist
     <<~EOS
