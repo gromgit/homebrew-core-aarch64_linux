@@ -14,7 +14,7 @@ class Nailgun < Formula
   end
 
   depends_on "maven" => :build
-  depends_on :java => "1.8"
+  depends_on java: "1.8"
 
   def install
     system "make", "install", "CC=#{ENV.cc}", "PREFIX=#{prefix}", "CFLAGS=#{ENV.cflags}"
