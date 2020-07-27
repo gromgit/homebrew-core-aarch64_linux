@@ -42,7 +42,7 @@ class Icecream < Formula
     EOS
   end
 
-  plist_options :manual => "iceccd"
+  plist_options manual: "iceccd"
 
   def plist
     <<~EOS
