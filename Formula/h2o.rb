@@ -57,7 +57,7 @@ class H2o < Formula
     EOS
   end
 
-  plist_options :manual => "h2o"
+  plist_options manual: "h2o"
 
   def plist
     <<~EOS
