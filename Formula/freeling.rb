@@ -15,7 +15,7 @@ class Freeling < Formula
   depends_on "boost"
   depends_on "icu4c"
 
-  conflicts_with "hunspell", :because => "both install 'analyze' binary"
+  conflicts_with "hunspell", because: "both install 'analyze' binary"
 
   # Fix linking with icu4c
   patch do
