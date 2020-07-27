@@ -40,7 +40,7 @@ class CollectorSidecar < Formula
     end
   end
 
-  plist_options :manual => "graylog-sidecar"
+  plist_options manual: "graylog-sidecar"
 
   def plist
     <<~EOS
