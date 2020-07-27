@@ -8,7 +8,7 @@ class Storm < Formula
 
   bottle :unneeded
 
-  conflicts_with "stormssh", :because => "both install 'storm' binary"
+  conflicts_with "stormssh", because: "both install 'storm' binary"
 
   def install
     libexec.install Dir["*"]
