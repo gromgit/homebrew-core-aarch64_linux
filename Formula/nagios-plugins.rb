@@ -17,7 +17,7 @@ class NagiosPlugins < Formula
   depends_on "automake" => :build
   depends_on "openssl@1.1"
 
-  conflicts_with "monitoring-plugins", :because => "both install their plugins to the same folder"
+  conflicts_with "monitoring-plugins", because: "both install their plugins to the same folder"
 
   def install
     args = %W[
