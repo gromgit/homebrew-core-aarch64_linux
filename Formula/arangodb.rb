@@ -4,7 +4,7 @@ class Arangodb < Formula
   url "https://download.arangodb.com/Source/ArangoDB-3.6.5.tar.gz"
   sha256 "e5edc1af5f186dda485f06aeeaba0e621a479f145eaa9d1b411be0bba9c3b547"
   license "Apache-2.0"
-  head "https://github.com/arangodb/arangodb.git", :branch => "devel"
+  head "https://github.com/arangodb/arangodb.git", branch: "devel"
 
   bottle do
     sha256 "5286e70078293e13d40c35ee31aa936a2aea80aa0ea0262fc86fea71ca47b00a" => :catalina
@@ -14,7 +14,7 @@ class Arangodb < Formula
   depends_on "ccache" => :build
   depends_on "cmake" => :build
   depends_on "go@1.13" => :build
-  depends_on :macos => :mojave
+  depends_on macos: :mojave
   depends_on "openssl@1.1"
 
   # the ArangoStarter is in a separate github repository;
@@ -22,7 +22,7 @@ class Arangodb < Formula
   # with a unified CLI
   resource "starter" do
     url "https://github.com/arangodb-helper/arangodb.git",
-      :revision => "e32307e9ae5a0046214cb066355a8577e6fc4148"
+      revision: "e32307e9ae5a0046214cb066355a8577e6fc4148"
   end
 
   def install
@@ -77,7 +77,7 @@ class Arangodb < Formula
     EOS
   end
 
-  plist_options :manual => "#{HOMEBREW_PREFIX}/opt/arangodb/sbin/arangod"
+  plist_options manual: "#{HOMEBREW_PREFIX}/opt/arangodb/sbin/arangod"
 
   def plist
     <<~EOS
