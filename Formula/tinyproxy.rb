@@ -41,7 +41,7 @@ class Tinyproxy < Formula
     (var/"run/tinyproxy").mkpath
   end
 
-  plist_options :manual => "tinyproxy"
+  plist_options manual: "tinyproxy"
 
   def plist
     <<~EOS
