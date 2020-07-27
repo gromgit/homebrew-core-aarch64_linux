@@ -8,7 +8,7 @@ class Deployer < Formula
 
   depends_on "php"
 
-  conflicts_with "dep", :because => "both install `dep` binaries"
+  conflicts_with "dep", because: "both install `dep` binaries"
 
   def install
     bin.install "deployer.phar" => "dep"
