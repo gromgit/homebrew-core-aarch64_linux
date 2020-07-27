@@ -20,7 +20,7 @@ class Perltidy < Formula
                                   "INSTALLSITEMAN3DIR=#{man3}"
     system "make"
     system "make", "install"
-    bin.env_script_all_files(libexec/"bin", :PERL5LIB => ENV["PERL5LIB"])
+    bin.env_script_all_files(libexec/"bin", PERL5LIB: ENV["PERL5LIB"])
   end
 
   test do
