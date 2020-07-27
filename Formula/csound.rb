@@ -2,11 +2,11 @@ class Csound < Formula
   desc "Sound and music computing system"
   homepage "https://csound.com"
   url "https://github.com/csound/csound.git",
-    :tag      => "6.14.0",
-    :revision => "1073b4d1bc2304a1e06defd266781a9c441a5be0"
+    tag:      "6.14.0",
+    revision: "1073b4d1bc2304a1e06defd266781a9c441a5be0"
   license "LGPL-2.1"
   revision 5
-  head "https://github.com/csound/csound.git", :branch => "develop"
+  head "https://github.com/csound/csound.git", branch: "develop"
 
   bottle do
     sha256 "e6927a4fd4a1acc821bb5820318d2a0bca389d504271115a46b16f36c1cee642" => :catalina
@@ -41,8 +41,8 @@ class Csound < Formula
   uses_from_macos "curl"
   uses_from_macos "zlib"
 
-  conflicts_with "libextractor", :because => "both install `extract` binaries"
-  conflicts_with "pkcrack", :because => "both install `extract` binaries"
+  conflicts_with "libextractor", because: "both install `extract` binaries"
+  conflicts_with "pkcrack", because: "both install `extract` binaries"
 
   resource "ableton-link" do
     url "https://github.com/Ableton/link/archive/Link-3.0.2.tar.gz"
