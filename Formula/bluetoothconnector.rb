@@ -12,7 +12,7 @@ class Bluetoothconnector < Formula
     sha256 "1a0c1e83b5640a35c48ba982f1b7cf5b1bebdda6fd4957368262c3e001c740e3" => :mojave
   end
 
-  depends_on :xcode => ["11.0", :build]
+  depends_on xcode: ["11.0", :build]
 
   def install
     system "swift", "build", "--disable-sandbox", "-c", "release", "--static-swift-stdlib"
