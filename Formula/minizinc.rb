@@ -4,7 +4,7 @@ class Minizinc < Formula
   url "https://github.com/MiniZinc/libminizinc/archive/2.4.3.tar.gz"
   sha256 "c5c379b0275cc6c0fefd4568e621a43b6f1f0b4af793fea5995be7c6cf73cc07"
   license "MPL-2.0"
-  head "https://github.com/MiniZinc/libminizinc.git", :branch => "develop"
+  head "https://github.com/MiniZinc/libminizinc.git", branch: "develop"
 
   bottle do
     cellar :any_skip_relocation
@@ -14,7 +14,7 @@ class Minizinc < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on :arch => :x86_64
+  depends_on arch: :x86_64
 
   def install
     mkdir "build" do
