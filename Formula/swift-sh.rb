@@ -13,7 +13,7 @@ class SwiftSh < Formula
     sha256 "0339afad23f24918a45036a440dd833c91a0b6ce97d5b6641337d7a851d02c69" => :high_sierra
   end
 
-  depends_on :xcode => ["10.0", :build]
+  depends_on xcode: ["10.0", :build]
 
   def install
     system "swift", "build", "--disable-sandbox", "-c", "release"
