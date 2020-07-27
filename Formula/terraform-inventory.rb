@@ -20,12 +20,12 @@ class TerraformInventory < Formula
 
   go_resource "github.com/adammck/venv" do
     url "https://github.com/adammck/venv.git",
-        :revision => "8a9c907a37d36a8f34fa1c5b81aaf80c2554a306"
+        revision: "8a9c907a37d36a8f34fa1c5b81aaf80c2554a306"
   end
 
   go_resource "github.com/blang/vfs" do
     url "https://github.com/blang/vfs.git",
-        :revision => "2c3e2278e174a74f31ff8bf6f47b43ecb358a870"
+        revision: "2c3e2278e174a74f31ff8bf6f47b43ecb358a870"
   end
 
   def install
