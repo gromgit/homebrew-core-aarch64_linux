@@ -23,7 +23,7 @@ class Lha < Formula
     depends_on "automake" => :build
   end
 
-  conflicts_with "lhasa", :because => "both install a `lha` binary"
+  conflicts_with "lhasa", because: "both install a `lha` binary"
 
   def install
     system "autoreconf", "-is" if build.head?
