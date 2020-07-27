@@ -14,7 +14,7 @@ class Yq < Formula
 
   depends_on "go" => :build
 
-  conflicts_with "python-yq", :because => "both install `yq` executables"
+  conflicts_with "python-yq", because: "both install `yq` executables"
 
   def install
     ENV["GOPATH"] = buildpath
