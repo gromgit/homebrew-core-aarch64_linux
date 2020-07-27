@@ -12,7 +12,7 @@ class Cake < Formula
 
   depends_on "mono"
 
-  conflicts_with "coffeescript", :because => "both install `cake` binaries"
+  conflicts_with "coffeescript", because: "both install `cake` binaries"
 
   def install
     libexec.install Dir["*.dll"]
