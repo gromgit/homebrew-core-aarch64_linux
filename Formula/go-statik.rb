@@ -14,7 +14,7 @@ class GoStatik < Formula
 
   depends_on "go" => :build
 
-  conflicts_with "statik", :because => "both install `statik` binaries"
+  conflicts_with "statik", because: "both install `statik` binaries"
 
   def install
     ENV["GOPATH"] = HOMEBREW_CACHE/"go_cache"
