@@ -15,9 +15,9 @@ class Rem < Formula
     sha256 "bf65e89ec4ca486b95f04c1c737627b2e0091af8a5c137795e521b96664d75e2" => :mavericks
   end
 
-  depends_on :xcode => :build
+  depends_on xcode: :build
 
-  conflicts_with "remind", :because => "both install `rem` binaries"
+  conflicts_with "remind", because: "both install `rem` binaries"
 
   def install
     xcodebuild "SYMROOT=build"
