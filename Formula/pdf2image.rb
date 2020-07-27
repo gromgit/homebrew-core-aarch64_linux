@@ -18,7 +18,7 @@ class Pdf2image < Formula
   depends_on :x11
 
   conflicts_with "pdftohtml", "poppler", "xpdf",
-    :because => "poppler, pdftohtml, pdf2image, and xpdf install conflicting executables"
+    because: "poppler, pdftohtml, pdf2image, and xpdf install conflicting executables"
 
   def install
     system "./configure", "--prefix=#{prefix}"
