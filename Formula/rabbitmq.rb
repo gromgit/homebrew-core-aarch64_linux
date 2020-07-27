@@ -68,7 +68,7 @@ class Rabbitmq < Formula
     EOS
   end
 
-  plist_options :manual => "rabbitmq-server"
+  plist_options manual: "rabbitmq-server"
 
   def plist
     <<~EOS
