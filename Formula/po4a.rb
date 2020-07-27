@@ -87,7 +87,7 @@ class Po4a < Formula
        po4a-gettextize po4a-translate po4a-normalize po4a-updatepo].each do |cmd|
       rewrite_shebang detected_perl_shebang, libexec/"bin"/cmd unless shell_scripts.include? cmd
 
-      (bin/cmd).write_env_script(libexec/"bin"/cmd, :PERL5LIB => ENV["PERL5LIB"])
+      (bin/cmd).write_env_script(libexec/"bin"/cmd, PERL5LIB: ENV["PERL5LIB"])
     end
 
     man1.install Dir[libexec/"man/man1/{msguntypot.1p.gz,po4a*}"]
