@@ -26,12 +26,12 @@ class GitAnnex < Formula
   def install
     install_cabal_package "--constraint", "http-conduit>=2.3",
                           "--constraint", "network>=2.6.3.0",
-                          :using => ["alex", "happy", "c2hs"],
-                          :flags => ["s3", "webapp"]
+                          using: ["alex", "happy", "c2hs"],
+                          flags: ["s3", "webapp"]
     bin.install_symlink "git-annex" => "git-annex-shell"
   end
 
-  plist_options :manual => "git annex assistant --autostart"
+  plist_options manual: "git annex assistant --autostart"
 
   def plist
     <<~EOS
