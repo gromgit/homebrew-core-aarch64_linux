@@ -38,7 +38,7 @@ class Mutt < Formula
   uses_from_macos "zlib"
 
   conflicts_with "tin",
-    :because => "both install mmdf.5 and mbox.5 man pages"
+    because: "both install mmdf.5 and mbox.5 man pages"
 
   def install
     user_in_mail_group = Etc.getgrnam("mail").mem.include?(ENV["USER"])
