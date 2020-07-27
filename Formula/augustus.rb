@@ -47,7 +47,7 @@ class Augustus < Formula
 
     system "make"
     system "make", "install", "INSTALLDIR=#{prefix}"
-    bin.env_script_all_files libexec/"bin", :AUGUSTUS_CONFIG_PATH => prefix/"config"
+    bin.env_script_all_files libexec/"bin", AUGUSTUS_CONFIG_PATH: prefix/"config"
     pkgshare.install "examples"
   end
 
