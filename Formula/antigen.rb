@@ -4,7 +4,7 @@ class Antigen < Formula
   url "https://github.com/zsh-users/antigen/releases/download/v2.2.3/v2.2.3.tar.gz"
   sha256 "bd3f1077050d52f459bc30fa3f025c44c528d625b4924a2f487fd2bacb89d61e"
   license "MIT"
-  head "https://github.com/zsh-users/antigen.git", :branch => "develop"
+  head "https://github.com/zsh-users/antigen.git", branch: "develop"
 
   bottle :unneeded
 
