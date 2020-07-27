@@ -13,7 +13,7 @@ class Pdftohtml < Formula
   end
 
   conflicts_with "pdf2image", "poppler", "xpdf",
-    :because => "poppler, pdftohtml, pdf2image, and xpdf install conflicting executables"
+    because: "poppler, pdftohtml, pdf2image, and xpdf install conflicting executables"
 
   def install
     system "make"
