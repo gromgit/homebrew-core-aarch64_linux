@@ -2,8 +2,8 @@ class Packetbeat < Formula
   desc "Lightweight Shipper for Network Data"
   homepage "https://www.elastic.co/products/beats/packetbeat"
   url "https://github.com/elastic/beats.git",
-    :tag      => "v7.8.0",
-    :revision => "f79387d32717d79f689d94fda1ec80b2cf285d30"
+    tag:      "v7.8.0",
+    revision: "f79387d32717d79f689d94fda1ec80b2cf285d30"
   head "https://github.com/elastic/beats.git"
 
   bottle do
@@ -66,7 +66,7 @@ class Packetbeat < Formula
     EOS
   end
 
-  plist_options :manual => "packetbeat"
+  plist_options manual: "packetbeat"
 
   def plist
     <<~EOS
