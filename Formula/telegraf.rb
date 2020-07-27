@@ -25,7 +25,7 @@ class Telegraf < Formula
     (etc/"telegraf.d").mkpath
   end
 
-  plist_options :manual => "telegraf -config #{HOMEBREW_PREFIX}/etc/telegraf.conf"
+  plist_options manual: "telegraf -config #{HOMEBREW_PREFIX}/etc/telegraf.conf"
 
   def plist
     <<~EOS
