@@ -41,7 +41,7 @@ class MongoOrchestration < Formula
     virtualenv_install_with_resources
   end
 
-  plist_options :startup => true, :manual => "#{HOMEBREW_PREFIX}/opt/mongo-orchestration/bin/mongo-orchestration -b 127.0.0.1 -p 8889 --no-fork start"
+  plist_options startup: true, manual: "#{HOMEBREW_PREFIX}/opt/mongo-orchestration/bin/mongo-orchestration -b 127.0.0.1 -p 8889 --no-fork start"
 
   def plist
     <<~EOS
