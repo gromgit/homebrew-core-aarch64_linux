@@ -6,7 +6,7 @@ class Ack < Formula
   license "Artistic-2.0"
 
   head do
-    url "https://github.com/beyondgrep/ack3.git", :branch => "dev"
+    url "https://github.com/beyondgrep/ack3.git", branch: "dev"
 
     resource "File::Next" do
       url "https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/File-Next-1.16.tar.gz"
@@ -32,7 +32,7 @@ class Ack < Formula
       libexec.install "ack"
       chmod 0755, libexec/"ack"
       (libexec/"lib").install "blib/lib/App"
-      (bin/"ack").write_env_script("#{libexec}/ack", :PERL5LIB => ENV["PERL5LIB"])
+      (bin/"ack").write_env_script("#{libexec}/ack", PERL5LIB: ENV["PERL5LIB"])
       man1.install "blib/man1/ack.1"
     else
       bin.install "ack-v#{version.to_s.tr("-", "_")}" => "ack"
