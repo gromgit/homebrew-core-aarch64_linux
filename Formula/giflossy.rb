@@ -20,7 +20,7 @@ class Giflossy < Formula
   depends_on "automake" => :build
 
   conflicts_with "gifsicle",
-    :because => "both install an `gifsicle` binary"
+    because: "both install an `gifsicle` binary"
 
   def install
     args = %W[
