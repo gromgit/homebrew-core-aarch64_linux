@@ -9,7 +9,7 @@ class Prestodb < Formula
 
   depends_on "openjdk"
 
-  conflicts_with "prestosql", :because => "both install `presto` and `presto-server` binaries"
+  conflicts_with "prestosql", because: "both install `presto` and `presto-server` binaries"
 
   resource "presto-cli" do
     url "https://search.maven.org/remotecontent?filepath=com/facebook/presto/presto-cli/0.235.1/presto-cli-0.235.1-executable.jar"
@@ -77,7 +77,7 @@ class Prestodb < Formula
     EOS
   end
 
-  plist_options :manual => "presto-server run"
+  plist_options manual: "presto-server run"
 
   def plist
     <<~EOS
