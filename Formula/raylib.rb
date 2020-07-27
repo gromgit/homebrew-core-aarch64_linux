@@ -4,7 +4,7 @@ class Raylib < Formula
   url "https://github.com/raysan5/raylib/archive/3.0.0.tar.gz"
   sha256 "164d1cc1710bb8e711a495e84cc585681b30098948d67d482e11dc37d2054eab"
   license "Zlib"
-  head "https://github.com/raysan5/raylib.git", :branch => "master"
+  head "https://github.com/raysan5/raylib.git", branch: "master"
 
   bottle do
     cellar :any
