@@ -13,7 +13,7 @@ class Global < Formula
   end
 
   head do
-    url ":pserver:anonymous:@cvs.savannah.gnu.org:/sources/global", :using => :cvs
+    url ":pserver:anonymous:@cvs.savannah.gnu.org:/sources/global", using: :cvs
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
@@ -57,7 +57,7 @@ class Global < Formula
     system "./configure", *args
     system "make", "install"
 
-    bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
+    bin.env_script_all_files(libexec/"bin", PYTHONPATH: ENV["PYTHONPATH"])
 
     etc.install "gtags.conf"
 
