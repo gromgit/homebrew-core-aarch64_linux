@@ -17,7 +17,7 @@ class Advancemenu < Formula
   uses_from_macos "expat"
   uses_from_macos "zlib"
 
-  conflicts_with "advancemame", :because => "both install `advmenu` binaries"
+  conflicts_with "advancemame", because: "both install `advmenu` binaries"
 
   def install
     system "./configure", "--prefix=#{prefix}"
