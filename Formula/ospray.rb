@@ -15,7 +15,7 @@ class Ospray < Formula
   depends_on "cmake" => :build
   depends_on "ispc" => :build
   depends_on "embree"
-  depends_on :macos => :mojave # Needs embree bottle built with SSE4.2.
+  depends_on macos: :mojave # Needs embree bottle built with SSE4.2.
   depends_on "tbb"
 
   resource "rkcommon" do
