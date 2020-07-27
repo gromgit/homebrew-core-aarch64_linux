@@ -13,7 +13,7 @@ class Mtools < Formula
     sha256 "ebed9be10002c3a8a68089ff43702b24f1f2c451be9e14778eaece3ad4e0cdc0" => :high_sierra
   end
 
-  conflicts_with "multimarkdown", :because => "both install `mmd` binaries"
+  conflicts_with "multimarkdown", because: "both install `mmd` binaries"
 
   def install
     # Prevents errors such as "mainloop.c:89:15: error: expected ')'"
