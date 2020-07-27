@@ -22,7 +22,7 @@ class OpenMpi < Formula
   depends_on "hwloc"
   depends_on "libevent"
 
-  conflicts_with "mpich", :because => "both install MPI compiler wrappers"
+  conflicts_with "mpich", because: "both install MPI compiler wrappers"
 
   def install
     # otherwise libmpi_usempi_ignore_tkr gets built as a static library
