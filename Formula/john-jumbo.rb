@@ -18,7 +18,7 @@ class JohnJumbo < Formula
   depends_on "gmp"
   depends_on "openssl@1.1"
 
-  conflicts_with "john", :because => "both install the same binaries"
+  conflicts_with "john", because: "both install the same binaries"
 
   # https://github.com/magnumripper/JohnTheRipper/blob/bleeding-jumbo/doc/INSTALL#L133-L143
   fails_with :gcc do
