@@ -4,7 +4,7 @@ class Twoping < Formula
   url "https://www.finnie.org/software/2ping/2ping-4.5.tar.gz"
   sha256 "867009928bf767d36279f90ff8f891855804c0004849f9554ac77fcd7f0fdb7b"
   license "GPL-2.0"
-  head "https://github.com/rfinnie/2ping.git", :branch => "main"
+  head "https://github.com/rfinnie/2ping.git", branch: "main"
 
   bottle do
     cellar :any_skip_relocation
@@ -22,10 +22,10 @@ class Twoping < Formula
     man1.install "doc/2ping.1"
     man1.install_symlink "2ping.1" => "2ping6.1"
     bin.install Dir["#{libexec}/bin/*"]
-    bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
+    bin.env_script_all_files(libexec/"bin", PYTHONPATH: ENV["PYTHONPATH"])
   end
 
-  plist_options :manual => "2ping --listen", :startup => true
+  plist_options manual: "2ping --listen", startup: true
 
   def plist
     <<~EOS
