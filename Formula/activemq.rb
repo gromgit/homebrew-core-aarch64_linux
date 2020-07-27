@@ -13,10 +13,10 @@ class Activemq < Formula
   def install
     rm_rf Dir["bin/linux-x86-*"]
     libexec.install Dir["*"]
-    (bin/"activemq").write_env_script libexec/"bin/activemq", :JAVA_HOME => Formula["openjdk"].opt_prefix
+    (bin/"activemq").write_env_script libexec/"bin/activemq", JAVA_HOME: Formula["openjdk"].opt_prefix
   end
 
-  plist_options :manual => "activemq start"
+  plist_options manual: "activemq start"
 
   def plist
     <<~EOS
