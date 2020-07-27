@@ -14,7 +14,7 @@ class Kakoune < Formula
     sha256 "7fc5a7b69fe56f47b24a2e4c1074319963e3b7c0a0c92f3c0d0688f57eb2a278" => :high_sierra
   end
 
-  depends_on :macos => :high_sierra # needs C++17
+  depends_on macos: :high_sierra # needs C++17
   depends_on "ncurses"
 
   def install
