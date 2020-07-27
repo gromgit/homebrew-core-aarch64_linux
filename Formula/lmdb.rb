@@ -4,7 +4,7 @@ class Lmdb < Formula
   url "https://git.openldap.org/openldap/openldap/-/archive/LMDB_0.9.25/openldap-LMDB_0.9.25.tar.bz2"
   sha256 "45269ebbf13fe1b6a3aa3fa77b3109c1764bd17a95264cd56506eac832b91b6f"
   version_scheme 1
-  head "https://git.openldap.org/openldap/openldap.git", :branch => "mdb.master"
+  head "https://git.openldap.org/openldap/openldap.git", branch: "mdb.master"
 
   bottle do
     cellar :any
