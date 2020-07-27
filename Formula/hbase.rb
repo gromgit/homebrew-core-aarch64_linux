@@ -34,7 +34,7 @@ class Hbase < Formula
     # Some binaries have really generic names (like `test`) and most seem to be
     # too special-purpose to be permanently available via PATH.
     %w[hbase start-hbase.sh stop-hbase.sh].each do |script|
-      (bin/script).write_env_script "#{libexec}/bin/#{script}", :JAVA_HOME => "${JAVA_HOME:-#{java_home}}"
+      (bin/script).write_env_script "#{libexec}/bin/#{script}", JAVA_HOME: "${JAVA_HOME:-#{java_home}}"
     end
 
     resource("hadoop-lzo").stage do
@@ -102,7 +102,7 @@ class Hbase < Formula
     (var/"run/hbase").mkpath
   end
 
-  plist_options :manual => "#{HOMEBREW_PREFIX}/opt/hbase/bin/start-hbase.sh"
+  plist_options manual: "#{HOMEBREW_PREFIX}/opt/hbase/bin/start-hbase.sh"
 
   def plist
     <<~EOS
