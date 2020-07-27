@@ -23,7 +23,7 @@ class Folly < Formula
   depends_on "libevent"
   depends_on "lz4"
   # https://github.com/facebook/folly/issues/966
-  depends_on :macos => :high_sierra
+  depends_on macos: :high_sierra
   depends_on "openssl@1.1"
   depends_on "snappy"
   depends_on "xz"
