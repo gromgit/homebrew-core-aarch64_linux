@@ -14,7 +14,7 @@ class Agda < Formula
     resource "stdlib" do
       # version needed to build with ghc-8.10.1
       url "https://github.com/agda/agda-stdlib.git",
-          :revision => "b859bd363a96bc862ead0509bdf5869837651896"
+          revision: "b859bd363a96bc862ead0509bdf5869837651896"
     end
   end
 
@@ -41,13 +41,13 @@ class Agda < Formula
 
   def install
     # install Agda core
-    install_cabal_package :using => ["alex", "happy", "cpphs"]
+    install_cabal_package using: ["alex", "happy", "cpphs"]
 
     resource("stdlib").stage lib/"agda"
 
     # generate the standard library's bytecode
     cd lib/"agda" do
-      cabal_sandbox :home => buildpath, :keep_lib => true do
+      cabal_sandbox home: buildpath, keep_lib: true do
         cabal_install "--only-dependencies"
         cabal_install
         system "GenerateEverything"
