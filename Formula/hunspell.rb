@@ -20,7 +20,7 @@ class Hunspell < Formula
   depends_on "gettext"
   depends_on "readline"
 
-  conflicts_with "freeling", :because => "both install 'analyze' binary"
+  conflicts_with "freeling", because: "both install 'analyze' binary"
 
   def install
     system "autoreconf", "-fiv"
