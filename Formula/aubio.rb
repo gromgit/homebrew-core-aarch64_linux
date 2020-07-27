@@ -26,7 +26,7 @@ class Aubio < Formula
     system Formula["python@3.8"].opt_bin/"python3", "./waf", "install"
 
     system Formula["python@3.8"].opt_bin/"python3", *Language::Python.setup_install_args(prefix)
-    bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
+    bin.env_script_all_files(libexec/"bin", PYTHONPATH: ENV["PYTHONPATH"])
   end
 
   test do
