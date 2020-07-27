@@ -15,7 +15,7 @@ class Cryfs < Formula
   end
 
   head do
-    url "https://github.com/cryfs/cryfs.git", :branch => "develop", :shallow => false
+    url "https://github.com/cryfs/cryfs.git", branch: "develop", shallow: false
   end
 
   depends_on "cmake" => :build
