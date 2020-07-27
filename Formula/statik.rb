@@ -25,7 +25,7 @@ class Statik < Formula
     depends_on "pkg-config" => :build
   end
 
-  conflicts_with "go-statik", :because => "both install `statik` binaries"
+  conflicts_with "go-statik", because: "both install `statik` binaries"
 
   resource "argh" do
     url "https://files.pythonhosted.org/packages/e3/75/1183b5d1663a66aebb2c184e0398724b624cecd4f4b679cb6e25de97ed15/argh-0.26.2.tar.gz"
