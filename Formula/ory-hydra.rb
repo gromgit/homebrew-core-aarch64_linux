@@ -14,7 +14,7 @@ class OryHydra < Formula
 
   depends_on "go" => :build
 
-  conflicts_with "hydra", :because => "both install `hydra` binaries"
+  conflicts_with "hydra", because: "both install `hydra` binaries"
 
   def install
     ENV["GOBIN"] = bin
