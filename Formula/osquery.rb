@@ -26,7 +26,7 @@ class Osquery < Formula
   depends_on "librdkafka"
   depends_on "lldpd"
   # osquery only supports macOS 10.12 and above. Do not remove this.
-  depends_on :macos => :sierra
+  depends_on macos: :sierra
   depends_on "openssl@1.1"
   depends_on "rapidjson"
   depends_on "rocksdb"
@@ -142,7 +142,7 @@ class Osquery < Formula
     (include/"osquery/core").install Dir["osquery/core/*.h"]
   end
 
-  plist_options :startup => true, :manual => "osqueryd"
+  plist_options startup: true, manual: "osqueryd"
 
   test do
     assert_match "platform_info", shell_output("#{bin}/osqueryi -L")
