@@ -12,7 +12,7 @@ class Stella < Formula
     sha256 "ff69cdd3d5a5def9e99557b0d327e16da16b3b37298f769ec66bed2c0ff18003" => :high_sierra
   end
 
-  depends_on :xcode => :build
+  depends_on xcode: :build
   depends_on "libpng"
   depends_on "sdl2"
 
