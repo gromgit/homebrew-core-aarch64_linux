@@ -121,7 +121,7 @@ class PerlBuild < Formula
     system "./Build", "install"
 
     %w[perl-build plenv-install plenv-uninstall].each do |cmd|
-      (bin/cmd).write_env_script(libexec/"bin/#{cmd}", :PERL5LIB => ENV["PERL5LIB"])
+      (bin/cmd).write_env_script(libexec/"bin/#{cmd}", PERL5LIB: ENV["PERL5LIB"])
     end
   end
 
