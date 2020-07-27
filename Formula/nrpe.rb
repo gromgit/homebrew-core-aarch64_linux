@@ -46,7 +46,7 @@ class Nrpe < Formula
     (var/"run").mkpath
   end
 
-  plist_options :manual => "nrpe -n -c #{HOMEBREW_PREFIX}/etc/nrpe.cfg -d"
+  plist_options manual: "nrpe -n -c #{HOMEBREW_PREFIX}/etc/nrpe.cfg -d"
 
   def plist
     <<~EOS
