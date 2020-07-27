@@ -23,7 +23,7 @@ class Monit < Formula
     etc.install "monitrc"
   end
 
-  plist_options :manual => "monit -I -c #{HOMEBREW_PREFIX}/etc/monitrc"
+  plist_options manual: "monit -I -c #{HOMEBREW_PREFIX}/etc/monitrc"
 
   def plist
     <<~EOS
