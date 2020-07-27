@@ -13,7 +13,7 @@ class SonarScanner < Formula
     bin.install libexec/"bin/sonar-scanner"
     etc.install libexec/"conf/sonar-scanner.properties"
     ln_s etc/"sonar-scanner.properties", libexec/"conf/sonar-scanner.properties"
-    bin.env_script_all_files libexec/"bin/", :SONAR_SCANNER_HOME => libexec
+    bin.env_script_all_files libexec/"bin/", SONAR_SCANNER_HOME: libexec
   end
 
   test do
