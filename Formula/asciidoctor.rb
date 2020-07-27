@@ -141,7 +141,7 @@ class Asciidoctor < Formula
     system "gem", "install", "asciidoctor-#{version}.gem"
     bin.install Dir[libexec/"bin/asciidoctor"]
     bin.install Dir[libexec/"bin/asciidoctor-pdf"]
-    bin.env_script_all_files(libexec/"bin", :GEM_HOME => ENV["GEM_HOME"])
+    bin.env_script_all_files(libexec/"bin", GEM_HOME: ENV["GEM_HOME"])
     man1.install_symlink "#{libexec}/gems/asciidoctor-#{version}/man/asciidoctor.1" => "asciidoctor.1"
   end
 
@@ -171,6 +171,6 @@ class Asciidoctor < Formula
     system bin/"asciidoctor", "-b", "html5", "-o", "test.html", "test.adoc"
     assert_match "<h1>AsciiDoc is Writing Zen</h1>", File.read("test.html")
     system bin/"asciidoctor", "-r", "asciidoctor-pdf", "-b", "pdf", "-o", "test.pdf", "test.adoc"
-    assert_match "/Title (AsciiDoc is Writing Zen)", File.read("test.pdf", :mode => "rb")
+    assert_match "/Title (AsciiDoc is Writing Zen)", File.read("test.pdf", mode: "rb")
   end
 end
