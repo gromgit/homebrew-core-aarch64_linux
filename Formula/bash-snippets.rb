@@ -7,7 +7,7 @@ class BashSnippets < Formula
 
   bottle :unneeded
 
-  conflicts_with "cheat", :because => "both install a `cheat` executable"
+  conflicts_with "cheat", because: "both install a `cheat` executable"
 
   def install
     system "./install.sh", "--prefix=#{prefix}", "all"
