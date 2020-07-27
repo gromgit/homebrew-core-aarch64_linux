@@ -49,7 +49,7 @@ class Bitlbee < Formula
     (var/"bitlbee/lib").mkpath
   end
 
-  plist_options :manual => "bitlbee -D"
+  plist_options manual: "bitlbee -D"
 
   def plist
     <<~EOS
