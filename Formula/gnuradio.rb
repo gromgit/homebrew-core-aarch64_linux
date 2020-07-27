@@ -118,7 +118,7 @@ class Gnuradio < Formula
     end
 
     rm bin.children.reject(&:executable?)
-    bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
+    bin.env_script_all_files(libexec/"bin", PYTHONPATH: ENV["PYTHONPATH"])
   end
 
   test do
