@@ -19,7 +19,7 @@ class LibtorrentRakshasa < Formula
   depends_on "openssl@1.1"
 
   conflicts_with "libtorrent-rasterbar",
-    :because => "they both use the same libname"
+    because: "they both use the same libname"
 
   def install
     args = ["--prefix=#{prefix}", "--disable-debug",
