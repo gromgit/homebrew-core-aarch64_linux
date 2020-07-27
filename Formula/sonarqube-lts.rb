@@ -8,7 +8,7 @@ class SonarqubeLts < Formula
 
   depends_on "openjdk"
 
-  conflicts_with "sonarqube", :because => "both install the same binaries"
+  conflicts_with "sonarqube", because: "both install the same binaries"
 
   def install
     # Delete native bin directories for other systems
@@ -17,10 +17,10 @@ class SonarqubeLts < Formula
     libexec.install Dir["*"]
 
     (bin/"sonar").write_env_script libexec/"bin/macosx-universal-64/sonar.sh",
-      :JAVA_HOME => Formula["openjdk"].opt_prefix
+      JAVA_HOME: Formula["openjdk"].opt_prefix
   end
 
-  plist_options :manual => "sonar console"
+  plist_options manual: "sonar console"
 
   def plist
     <<~EOS
