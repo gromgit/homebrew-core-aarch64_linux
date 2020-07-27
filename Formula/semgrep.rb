@@ -4,10 +4,10 @@ class Semgrep < Formula
   desc "Easily detect and prevent bugs and anti-patterns in your codebase"
   homepage "https://semgrep.live"
   url "https://github.com/returntocorp/semgrep.git",
-    :tag      => "v0.16.0",
-    :revision => "26bb98d50dd1350aee49ea9a345c12c271c9b0f4"
+    tag:      "v0.16.0",
+    revision: "26bb98d50dd1350aee49ea9a345c12c271c9b0f4"
   license "LGPL-2.1"
-  head "https://github.com/returntocorp/semgrep.git", :branch => "develop"
+  head "https://github.com/returntocorp/semgrep.git", branch: "develop"
 
   bottle do
     cellar :any_skip_relocation
