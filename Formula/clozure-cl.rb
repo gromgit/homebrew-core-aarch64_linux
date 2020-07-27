@@ -13,7 +13,7 @@ class ClozureCl < Formula
     sha256 "3e2a8e6263055e8e21ae373b0def8f4ad5aebaa4e64df12d67b148bbb3fde177" => :high_sierra
   end
 
-  depends_on :xcode => :build
+  depends_on xcode: :build
 
   resource "bootstrap" do
     url "https://github.com/Clozure/ccl/releases/download/v1.12/darwinx86.tar.gz"
@@ -51,7 +51,7 @@ class ClozureCl < Formula
     doc.install Dir["doc/*"]
     libexec.install Dir["*"]
     bin.install Dir["#{libexec}/scripts/ccl64"]
-    bin.env_script_all_files(libexec/"bin", :CCL_DEFAULT_DIRECTORY => libexec)
+    bin.env_script_all_files(libexec/"bin", CCL_DEFAULT_DIRECTORY: libexec)
   end
 
   test do
