@@ -15,7 +15,7 @@ class Carrot2 < Formula
     inreplace bin/"carrot2", "java", "cd #{libexec} && exec '#{Formula["openjdk"].opt_bin}/java'"
   end
 
-  plist_options :manual => "carrot2"
+  plist_options manual: "carrot2"
 
   def plist
     <<~EOS
