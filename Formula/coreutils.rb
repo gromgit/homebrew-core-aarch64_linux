@@ -24,14 +24,14 @@ class Coreutils < Formula
     depends_on "xz" => :build
   end
 
-  conflicts_with "aardvark_shell_utils", :because => "both install `realpath` binaries"
-  conflicts_with "b2sum", :because => "both install `b2sum` binaries"
-  conflicts_with "ganglia", :because => "both install `gstat` binaries"
-  conflicts_with "gegl", :because => "both install `gcut` binaries"
-  conflicts_with "idutils", :because => "both install `gid` and `gid.1`"
-  conflicts_with "md5sha1sum", :because => "both install `md5sum` and `sha1sum` binaries"
-  conflicts_with "truncate", :because => "both install `truncate` binaries"
-  conflicts_with "uutils-coreutils", :because => "coreutils and uutils-coreutils install the same binaries"
+  conflicts_with "aardvark_shell_utils", because: "both install `realpath` binaries"
+  conflicts_with "b2sum", because: "both install `b2sum` binaries"
+  conflicts_with "ganglia", because: "both install `gstat` binaries"
+  conflicts_with "gegl", because: "both install `gcut` binaries"
+  conflicts_with "idutils", because: "both install `gid` and `gid.1`"
+  conflicts_with "md5sha1sum", because: "both install `md5sum` and `sha1sum` binaries"
+  conflicts_with "truncate", because: "both install `truncate` binaries"
+  conflicts_with "uutils-coreutils", because: "coreutils and uutils-coreutils install the same binaries"
 
   def install
     system "./bootstrap" if build.head?
