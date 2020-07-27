@@ -34,7 +34,7 @@ class Pdf2htmlex < Formula
   # Pdf2htmlex use an outdated, customised Fontforge installation.
   # See https://github.com/coolwanglu/pdf2htmlEX/wiki/Building
   resource "fontforge" do
-    url "https://github.com/coolwanglu/fontforge.git", :branch => "pdf2htmlEX"
+    url "https://github.com/coolwanglu/fontforge.git", branch: "pdf2htmlEX"
   end
 
   # Upstream issue "poppler 0.59.0 incompatibility"
