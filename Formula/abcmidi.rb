@@ -1,8 +1,8 @@
 class Abcmidi < Formula
   desc "Converts abc music notation files to MIDI files"
   homepage "https://ifdo.ca/~seymour/runabc/top.html"
-  url "https://ifdo.ca/~seymour/runabc/abcMIDI-2020.07.14.zip"
-  sha256 "09f2839f9ec171e5c8253998d510dbd16959e68f98b74fa8a18f22f4ffeab837"
+  url "https://ifdo.ca/~seymour/runabc/abcMIDI-2020.07.26.zip"
+  sha256 "d21a9bce598231f98c092e360170ca21dd0c8dd08cb30e07b796e7ba9b5b1f28"
 
   bottle do
     cellar :any_skip_relocation
@@ -16,9 +16,6 @@ class Abcmidi < Formula
     # the tarball. On case-sensitive file-systems, the "makefile" file won't
     # be overridden and will be chosen over the "Makefile" file.
     rm "makefile"
-
-    # Fix "Failed to execute: ./configure" issue
-    chmod 0755, "./configure"
 
     system "./configure", "--disable-debug",
                           "--prefix=#{prefix}",
