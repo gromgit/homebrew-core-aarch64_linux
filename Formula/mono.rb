@@ -14,7 +14,7 @@ class Mono < Formula
   depends_on "pkg-config" => :build
   depends_on :macos # Due to Python 2
 
-  conflicts_with "xsd", :because => "both install `xsd` binaries"
+  conflicts_with "xsd", because: "both install `xsd` binaries"
 
   # xbuild requires the .exe files inside the runtime directories to
   # be executable
@@ -29,15 +29,15 @@ class Mono < Formula
 
   resource "fsharp" do
     url "https://github.com/fsharp/fsharp.git",
-        :tag      => "10.2.3",
-        :revision => "e31bc96e8a5e5742af1c6c45d55d5cc06bb524cb"
+        tag:      "10.2.3",
+        revision: "e31bc96e8a5e5742af1c6c45d55d5cc06bb524cb"
   end
 
   # When upgrading Mono, make sure to use the revision from
   # https://github.com/mono/mono/blob/mono-#{version}/packaging/MacSDK/msbuild.py
   resource "msbuild" do
     url "https://github.com/mono/msbuild.git",
-        :revision => "ad9c9926a76e3db0d2b878a24d44446d73640d19"
+        revision: "ad9c9926a76e3db0d2b878a24d44446d73640d19"
   end
 
   def install
