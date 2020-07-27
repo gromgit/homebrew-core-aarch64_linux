@@ -31,7 +31,7 @@ class Chapel < Formula
 
     # Install chpl and other binaries (e.g. chpldoc) into bin/ as exec scripts.
     bin.install Dir[libexec/"bin/darwin-x86_64/*"]
-    bin.env_script_all_files libexec/"bin/darwin-x86_64/", :CHPL_HOME => libexec
+    bin.env_script_all_files libexec/"bin/darwin-x86_64/", CHPL_HOME: libexec
     man1.install_symlink Dir["#{libexec}/man/man1/*.1"]
   end
 
