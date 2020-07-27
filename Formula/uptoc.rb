@@ -2,8 +2,8 @@ class Uptoc < Formula
   desc "Convenient static file deployment tool that supports multiple platforms"
   homepage "https://github.com/saltbo/uptoc"
   url "https://github.com/saltbo/uptoc.git",
-      :tag      => "v1.4.3",
-      :revision => "30266b490379c816fc08ca3670fd96808214b24c"
+      tag:      "v1.4.3",
+      revision: "30266b490379c816fc08ca3670fd96808214b24c"
   license "MIT"
 
   bottle do
