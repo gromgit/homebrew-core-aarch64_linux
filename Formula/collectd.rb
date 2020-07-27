@@ -43,7 +43,7 @@ class Collectd < Formula
     system "make", "install"
   end
 
-  plist_options :manual => "#{HOMEBREW_PREFIX}/sbin/collectd -f -C #{HOMEBREW_PREFIX}/etc/collectd.conf"
+  plist_options manual: "#{HOMEBREW_PREFIX}/sbin/collectd -f -C #{HOMEBREW_PREFIX}/etc/collectd.conf"
 
   def plist
     <<~EOS
