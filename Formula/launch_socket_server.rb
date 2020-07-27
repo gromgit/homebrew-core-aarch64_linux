@@ -19,7 +19,7 @@ class LaunchSocketServer < Formula
     system "make", "install", "PREFIX=#{prefix}"
   end
 
-  plist_options :startup => true
+  plist_options startup: true
 
   def plist
     <<~EOS
