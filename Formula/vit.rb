@@ -7,7 +7,7 @@ class Vit < Formula
   sha256 "0c8739c16b5922880e762bd38f887240923d16181b2f85bb88c4f9f6faf38d6d"
   license "MIT"
   revision 1
-  head "https://github.com/scottkosty/vit.git", :branch => "2.x"
+  head "https://github.com/scottkosty/vit.git", branch: "2.x"
 
   bottle do
     cellar :any_skip_relocation
