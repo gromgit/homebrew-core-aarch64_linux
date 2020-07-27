@@ -2,8 +2,8 @@ class Lunchy < Formula
   desc "Friendly wrapper for launchctl"
   homepage "https://github.com/eddiezane/lunchy"
   url "https://github.com/eddiezane/lunchy.git",
-      :tag      => "v0.10.4",
-      :revision => "c78e554b60e408449937893b3054338411af273f"
+      tag:      "v0.10.4",
+      revision: "c78e554b60e408449937893b3054338411af273f"
   license "MIT"
 
   bottle do
@@ -15,14 +15,14 @@ class Lunchy < Formula
 
   uses_from_macos "ruby"
 
-  conflicts_with "lunchy-go", :because => "both install a `lunchy` binary"
+  conflicts_with "lunchy-go", because: "both install a `lunchy` binary"
 
   def install
     ENV["GEM_HOME"] = libexec
     system "gem", "build", "lunchy.gemspec"
     system "gem", "install", "lunchy-#{version}.gem"
     bin.install libexec/"bin/lunchy"
-    bin.env_script_all_files(libexec/"bin", :GEM_HOME => ENV["GEM_HOME"])
+    bin.env_script_all_files(libexec/"bin", GEM_HOME: ENV["GEM_HOME"])
     bash_completion.install "extras/lunchy-completion.bash"
     zsh_completion.install "extras/lunchy-completion.zsh" => "_lunchy"
   end
