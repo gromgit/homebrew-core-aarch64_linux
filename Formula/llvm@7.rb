@@ -22,7 +22,7 @@ class LlvmAT7 < Formula
 
   # https://llvm.org/docs/GettingStarted.html#requirement
   depends_on "cmake" => :build
-  depends_on :xcode => :build
+  depends_on xcode: :build
   depends_on "libffi"
 
   resource "clang" do
