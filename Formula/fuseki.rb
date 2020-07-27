@@ -14,10 +14,10 @@ class Fuseki < Formula
     %w[fuseki-server fuseki].each do |exe|
       libexec.install exe
       (bin/exe).write_env_script(libexec/exe,
-                                 :FUSEKI_BASE => var/"fuseki",
-                                 :FUSEKI_HOME => libexec,
-                                 :FUSEKI_LOGS => var/"log/fuseki",
-                                 :FUSEKI_RUN  => var/"run")
+                                 FUSEKI_BASE: var/"fuseki",
+                                 FUSEKI_HOME: libexec,
+                                 FUSEKI_LOGS: var/"log/fuseki",
+                                 FUSEKI_RUN:  var/"run")
       chmod 0755, libexec/exe
     end
 
@@ -34,7 +34,7 @@ class Fuseki < Formula
     (var/"log/fuseki").mkpath
   end
 
-  plist_options :manual => "fuseki start"
+  plist_options manual: "fuseki start"
 
   def plist
     <<~EOS
