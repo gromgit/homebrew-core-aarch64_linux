@@ -77,7 +77,7 @@ class Mpd < Formula
     EOS
   end
 
-  plist_options :manual => "mpd"
+  plist_options manual: "mpd"
 
   def plist
     <<~EOS
