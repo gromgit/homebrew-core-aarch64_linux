@@ -15,7 +15,7 @@ class CouchdbLucene < Formula
 
   depends_on "maven" => :build
   depends_on "couchdb"
-  depends_on :java => "1.8"
+  depends_on java: "1.8"
 
   def install
     system "mvn"
@@ -65,7 +65,7 @@ class CouchdbLucene < Formula
     EOS
   end
 
-  plist_options :manual => "#{HOMEBREW_PREFIX}/opt/couchdb-lucene/bin/cl_run"
+  plist_options manual: "#{HOMEBREW_PREFIX}/opt/couchdb-lucene/bin/cl_run"
 
   def plist
     <<~EOS
