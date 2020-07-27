@@ -3,7 +3,7 @@ class Fossil < Formula
   homepage "https://www.fossil-scm.org/"
   url "https://www.fossil-scm.org/index.html/uv/fossil-src-2.11.1.tar.gz"
   sha256 "b391f34fada5f16eba452f36d2ad8baa3fe2a5267bf8f4169cb1b9832c0cb8eb"
-  head "https://www.fossil-scm.org/", :using => :fossil
+  head "https://www.fossil-scm.org/", using: :fossil
 
   bottle do
     cellar :any
