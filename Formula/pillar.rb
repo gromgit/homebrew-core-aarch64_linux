@@ -16,7 +16,7 @@ class Pillar < Formula
   end
 
   depends_on "sbt" => :build
-  depends_on :java => "1.8"
+  depends_on java: "1.8"
 
   def install
     inreplace "src/main/bash/pillar" do |s|
