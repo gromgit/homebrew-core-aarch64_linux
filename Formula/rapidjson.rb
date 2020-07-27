@@ -19,7 +19,7 @@ class Rapidjson < Formula
   depends_on "cmake" => :build
   depends_on "doxygen" => :build
 
-  conflicts_with "mesos", :because => "mesos installs a copy of rapidjson headers"
+  conflicts_with "mesos", because: "mesos installs a copy of rapidjson headers"
 
   def install
     system "cmake", ".", *std_cmake_args
