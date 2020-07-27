@@ -24,7 +24,7 @@ class Gpac < Formula
   depends_on "pkg-config" => :build
   depends_on "openssl@1.1"
 
-  conflicts_with "bento4", :because => "both install `mp42ts` binaries"
+  conflicts_with "bento4", because: "both install `mp42ts` binaries"
 
   def install
     args = %W[
