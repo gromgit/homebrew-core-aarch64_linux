@@ -17,7 +17,7 @@ class Swift < Formula
 
   # Has strict requirements on the minimum version of Xcode
   # https://github.com/apple/swift#system-requirements
-  depends_on :xcode => ["11.2", :build]
+  depends_on xcode: ["11.2", :build]
 
   uses_from_macos "icu4c"
 
