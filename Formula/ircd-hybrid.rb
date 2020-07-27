@@ -13,7 +13,7 @@ class IrcdHybrid < Formula
 
   depends_on "openssl@1.1"
 
-  conflicts_with "ircd-irc2", :because => "both install an `ircd` binary"
+  conflicts_with "ircd-irc2", because: "both install an `ircd` binary"
 
   # ircd-hybrid needs the .la files
   skip_clean :la
@@ -37,7 +37,7 @@ class IrcdHybrid < Formula
     EOS
   end
 
-  plist_options :manual => "ircd"
+  plist_options manual: "ircd"
 
   def plist
     <<~EOS
