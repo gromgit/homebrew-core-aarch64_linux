@@ -6,7 +6,7 @@ class Ansible < Formula
   url "https://releases.ansible.com/ansible/ansible-2.9.11.tar.gz"
   sha256 "88f9d033ece7fd51eca3abb4f02e13b63c924b97f9705a997d5a711c0cf42ab1"
   license "GPL-3.0"
-  head "https://github.com/ansible/ansible.git", :branch => "devel"
+  head "https://github.com/ansible/ansible.git", branch: "devel"
 
   bottle do
     cellar :any
