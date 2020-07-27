@@ -18,7 +18,7 @@ class BashCompletion < Formula
   end
 
   conflicts_with "bash-completion@2",
-    :because => "each are different versions of the same formula"
+    because: "each are different versions of the same formula"
 
   # Backports the following upstream patch from 2.x:
   # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=740971
