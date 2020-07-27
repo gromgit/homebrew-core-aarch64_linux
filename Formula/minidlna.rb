@@ -55,7 +55,7 @@ class Minidlna < Formula
     EOS
   end
 
-  plist_options :manual => "minidlna"
+  plist_options manual: "minidlna"
 
   def plist
     <<~EOS
