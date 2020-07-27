@@ -12,7 +12,7 @@ class B2sum < Formula
     sha256 "129dbe4d91bf7843a40399b392b3ddc2448e56c249a45567bd9193e4fb722b37" => :high_sierra
   end
 
-  conflicts_with "coreutils", :because => "both install `b2sum` binaries"
+  conflicts_with "coreutils", because: "both install `b2sum` binaries"
 
   def install
     cd "b2sum" do
