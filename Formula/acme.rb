@@ -1,7 +1,7 @@
 class Acme < Formula
   desc "Crossassembler for multiple environments"
   homepage "https://sourceforge.net/projects/acme-crossass/"
-  url "https://svn.code.sf.net/p/acme-crossass/code-0/trunk", :revision => "121"
+  url "https://svn.code.sf.net/p/acme-crossass/code-0/trunk", revision: "121"
   version "0.96.5"
 
   bottle do
