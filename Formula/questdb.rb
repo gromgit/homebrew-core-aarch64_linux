@@ -13,10 +13,10 @@ class Questdb < Formula
   def install
     rm_rf "questdb.exe"
     libexec.install Dir["*"]
-    (bin/"questdb").write_env_script libexec/"questdb.sh", :java_version => "11"
+    (bin/"questdb").write_env_script libexec/"questdb.sh", java_version: "11"
   end
 
-  plist_options :manual => "questdb start"
+  plist_options manual: "questdb start"
 
   def plist
     <<~EOS
