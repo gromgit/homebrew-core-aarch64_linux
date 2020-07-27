@@ -4,7 +4,7 @@ class Stubby < Formula
   url "https://github.com/getdnsapi/stubby/archive/v0.3.0.tar.gz"
   sha256 "b37a0e0ec2b7cfcdcb596066a6fd6109e91a2766b17a42c47d3703d9be41d000"
   license "BSD-3-Clause"
-  head "https://github.com/getdnsapi/stubby.git", :branch => "develop"
+  head "https://github.com/getdnsapi/stubby.git", branch: "develop"
 
   bottle do
     rebuild 1
@@ -24,7 +24,7 @@ class Stubby < Formula
     system "make", "install"
   end
 
-  plist_options :startup => true, :manual => "sudo stubby -C #{HOMEBREW_PREFIX}/etc/stubby/stubby.yml"
+  plist_options startup: true, manual: "sudo stubby -C #{HOMEBREW_PREFIX}/etc/stubby/stubby.yml"
 
   def plist
     <<~EOS
