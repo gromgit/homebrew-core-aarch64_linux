@@ -12,7 +12,7 @@ class VertX < Formula
     rm_f Dir["bin/*.bat"]
     libexec.install %w[bin conf lib]
     (bin/"vertx").write_env_script "#{libexec}/bin/vertx",
-      :JAVA_HOME => "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
+      JAVA_HOME: "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
   end
 
   test do
