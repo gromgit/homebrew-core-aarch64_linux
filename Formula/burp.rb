@@ -10,7 +10,7 @@ class Burp < Formula
 
     resource "uthash" do
       url "https://github.com/troydhanson/uthash.git",
-          :revision => "8b214aefcb81df86a7e5e0d4fa20e59a6c18bc02"
+          revision: "8b214aefcb81df86a7e5e0d4fa20e59a6c18bc02"
     end
   end
 
@@ -67,7 +67,7 @@ class Burp < Formula
     EOS
   end
 
-  plist_options :startup => true
+  plist_options startup: true
 
   def plist
     <<~EOS
