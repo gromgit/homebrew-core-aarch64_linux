@@ -1,8 +1,8 @@
 class GolangMigrate < Formula
   desc "Database migrations CLI tool"
   homepage "https://github.com/golang-migrate/migrate"
-  url "https://github.com/golang-migrate/migrate/archive/v4.11.0.tar.gz"
-  sha256 "e9b7a1fc834414584186cebb96ef59439d843d62f3d2c0b0c7aaa6da689d5d86"
+  url "https://github.com/golang-migrate/migrate/archive/v4.12.1.tar.gz"
+  sha256 "df216d3df6461a6cfacf465296b3289db247b685b474296666d58555cf8e4752"
   license "MIT"
 
   bottle do
@@ -15,15 +15,8 @@ class GolangMigrate < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = HOMEBREW_CACHE/"go_cache"
-    (buildpath/"src/github.com/golang-migrate/migrate").install buildpath.children
-
-    # Build and install CLI as "migrate"
-    cd "src/github.com/golang-migrate/migrate" do
-      system "make", "build-cli", "VERSION=v#{version}"
-      bin.install "cli/build/migrate.darwin-amd64" => "migrate"
-      prefix.install_metafiles
-    end
+    system "make", "VERSION=v#{version}"
+    bin.install "migrate"
   end
 
   test do
