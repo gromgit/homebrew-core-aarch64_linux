@@ -6,6 +6,13 @@ class ChartTesting < Formula
       revision: "50db473a1e68c605b18d82f019d83ea401542213"
   license "Apache-2.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "df4d2c0adac9176896955b1d82b5b8351a4f4f9b1763c9809262dace250c0a66" => :catalina
+    sha256 "3f63d2b0db943e7ead94fb917c4ad99e8b97a445f8ded3676ec812a0895a9e9c" => :mojave
+    sha256 "d6438baad2e1ab132d22a42480254870532854eff59f57aa54c900c03e3bd33a" => :high_sierra
+  end
+
   depends_on "go" => :build
   depends_on "helm" => :test
   depends_on "yamllint" => :test
