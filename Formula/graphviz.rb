@@ -41,6 +41,10 @@ class Graphviz < Formula
       --disable-swig
       --with-quartz
       --without-freetype2
+      --without-gdk
+      --without-gdk-pixbuf
+      --without-gtk
+      --without-rsvg
       --without-qt
       --without-x
       --with-gts
