@@ -7,9 +7,9 @@ class Azcopy < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "1eaf3f28362411b14204b93635bedfbd82dd7395a00c58b5e252722a5780088d" => :catalina
-    sha256 "b95663369d98848d1731b46e7d52211f4b2ffa34091626aa896d9bb81cfaf1e4" => :mojave
-    sha256 "55db871f3b5dd6d5f32e5f9614fefbd64dce550089904b64534443647c254cf7" => :high_sierra
+    sha256 "adbe49aa62797ac82274548fee08827e4c6d85240bcd8e6f026f5165c5d1a3aa" => :catalina
+    sha256 "8f6ffde86df2bf64e1ffd3712321d5c6f687bcafe892072020c8032f7533c402" => :mojave
+    sha256 "8afa12a5d61c1fda453a61f182c18a8c4d4edb1b756875eaa416ed3f6c33bb9e" => :high_sierra
   end
 
   depends_on "go" => :build
