@@ -6,6 +6,13 @@ class Jinx < Formula
   license "MIT"
   head "https://github.com/JamesBoer/Jinx.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "500008f0bcc3b8104cf661a23f0801d898699b4ceb811f4605025af28d5556c9" => :catalina
+    sha256 "146702c8621f915729d27b1ac04105e534a984e62532d7966a4252e412febcb0" => :mojave
+    sha256 "d091ec17ecfeba616bdf756768e8f1800a06d6dfbf1245979194d35f7a4b4039" => :high_sierra
+  end
+
   depends_on "cmake" => :build
 
   def install
