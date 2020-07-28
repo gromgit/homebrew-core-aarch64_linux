@@ -4,7 +4,7 @@ class Distcc < Formula
   url "https://github.com/distcc/distcc/releases/download/v3.3.3/distcc-3.3.3.tar.gz"
   sha256 "bead25471d5a53ecfdf8f065a6fe48901c14d5008956c318c700e56bc87bf0bc"
   license "GPL-2.0"
-  revision 1
+  revision 2
   head "https://github.com/distcc/distcc.git"
 
   bottle do
@@ -18,8 +18,8 @@ class Distcc < Formula
   depends_on "python@3.8"
 
   resource "libiberty" do
-    url "https://deb.debian.org/debian/pool/main/libi/libiberty/libiberty_20190907.orig.tar.xz"
-    sha256 "4c649c2cee918399dd5c4051bbac8d4ca4bbfb8c8e83215c00143f413578f236"
+    url "https://deb.debian.org/debian/pool/main/libi/libiberty/libiberty_20200409.orig.tar.xz"
+    sha256 "1807b6d4c70040d71d5c93abdbcb2c05c9ad4f64ed1802583d1107fcdfc2c722"
   end
 
   def install
