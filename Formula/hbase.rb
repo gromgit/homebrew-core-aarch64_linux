@@ -7,9 +7,9 @@ class Hbase < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 "a9ec56fc8c2a4629decb24c71c940f6fe455f5805d8935d5bc5f735cc1598711" => :catalina
-    sha256 "1c7e1f742b67d5309ff781c8956e6626a618218f340df3a829c43179b2b2c11b" => :mojave
-    sha256 "188b5091ec942c61b789b823aa3537a0cb0ffc808d7c20a37262c18899c5e394" => :high_sierra
+    sha256 "70eaa63686721431c3b91e00d8b2eacc8ceb93e9b429a875492e8ff1e6ba7848" => :catalina
+    sha256 "d907b06d8ee0090ecacb34298c80051a44f783b8e5a1addc6bf1a62c3e5735bc" => :mojave
+    sha256 "56a54e9a3daa728290fea4cf5556d8ae18fcd24a6f63616a7f0b411ad9725f0d" => :high_sierra
   end
 
   depends_on "ant" => :build
