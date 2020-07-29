@@ -7,9 +7,9 @@ class Gpp < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7b18d4755835ab3cad89e5d90b459475dd499695d461a6c8ac4df35f07a11b1b" => :catalina
-    sha256 "d83bbb08210bd763f300a44c9cae8cf8bad7070fcd0e8064e2c81f6c385937b8" => :mojave
-    sha256 "c45c620602411620fa60c1b780a0a9b6172606f9f03c9e7d18e31e9c1276b172" => :high_sierra
+    sha256 "f6dcf32a23b4dfab4c9fa231757f87a9eb8f4ea2fcd4e8146a02e8afe22b38cc" => :catalina
+    sha256 "54f5f9b098335023273291b6ec95615148ab3fa02039a0d7c1645cd59d0eb134" => :mojave
+    sha256 "d56879d518d9924d17327594b31501c8ea4eaa58295e12ae41fc74156cffc179" => :high_sierra
   end
 
   def install
