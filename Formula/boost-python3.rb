@@ -9,9 +9,9 @@ class BoostPython3 < Formula
 
   bottle do
     cellar :any
-    sha256 "dbb68300aafb7dc618ed08e91ba34d07e8d2e80a28988a68ebb9fccba4e0e11e" => :catalina
-    sha256 "3c02bc31d2de7b3df8379ee24f70b9740c9fcd07f0d7ea5fcbf8de59be9edb1e" => :mojave
-    sha256 "ba57a38cc8bd70c95bc62b0c41dea57a931fbf4ee1b3601e4406f8f537129006" => :high_sierra
+    sha256 "36a3b2ffacb47649b51e0b3031b8f67bf7dcd87e61dfd6d594610cb3e21a1acc" => :catalina
+    sha256 "deda39650cec775da3e8a4915aec600cfd55b367f212be975bdcc70952f2e805" => :mojave
+    sha256 "237b8dcaaa8fcdc72ef8a57e6e38675a82579b736f819707f28bbf5f644ceffa" => :high_sierra
   end
 
   depends_on "numpy" => :build
