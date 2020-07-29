@@ -7,9 +7,9 @@ class ElasticsearchAT6 < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "6da7da7cf1a98ed2e6ecdb02e25d5ff48a3b63415d6951b3b174b640f744db23" => :catalina
-    sha256 "6da7da7cf1a98ed2e6ecdb02e25d5ff48a3b63415d6951b3b174b640f744db23" => :mojave
-    sha256 "6da7da7cf1a98ed2e6ecdb02e25d5ff48a3b63415d6951b3b174b640f744db23" => :high_sierra
+    sha256 "216e813f6a02fd87a7eb8fc19052cf99c7c6357a5977c5d15f35edbecfed5625" => :catalina
+    sha256 "dccf4a7e06e585eb81769211286ee183bc34721338970389a7adf29e8d910f5a" => :mojave
+    sha256 "dccf4a7e06e585eb81769211286ee183bc34721338970389a7adf29e8d910f5a" => :high_sierra
   end
 
   keg_only :versioned_formula
