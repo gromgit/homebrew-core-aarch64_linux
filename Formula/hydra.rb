@@ -1,10 +1,9 @@
 class Hydra < Formula
   desc "Network logon cracker which supports many services"
   homepage "https://github.com/vanhauser-thc/thc-hydra"
-  url "https://github.com/vanhauser-thc/thc-hydra/archive/v9.0.tar.gz"
-  sha256 "56672e253c128abaa6fb19e77f6f59ba6a93762a9ba435505a009ef6d58e8d0e"
+  url "https://github.com/vanhauser-thc/thc-hydra/archive/v9.1.tar.gz"
+  sha256 "ce08a5148c0ae5ff4b0a4af2f7f15c5946bc939a57eae1bbb6dda19f34410273"
   license "AGPL-3.0"
-  revision 4
   head "https://github.com/vanhauser-thc/thc-hydra.git"
 
   bottle do
