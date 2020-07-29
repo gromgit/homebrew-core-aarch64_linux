@@ -6,6 +6,13 @@ class Sdns < Formula
   license "MIT"
   head "https://github.com/semihalev/sdns.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "1cee8c42148b4128465ea3305548bc9824fd53d14de391e679f3ee0f55640def" => :catalina
+    sha256 "9a2f0df5b3fc9b9dc9b42c7023d22ad22c34a4d5d2d347ae6fd8ad61e1344602" => :mojave
+    sha256 "41edd8b283682e17445dee3279ead478050b6fba75265351b2f51ce5a697152b" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
