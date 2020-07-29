@@ -2,8 +2,8 @@ class KibanaAT6 < Formula
   desc "Analytics and search dashboard for Elasticsearch"
   homepage "https://www.elastic.co/products/kibana"
   url "https://github.com/elastic/kibana.git",
-      tag:      "v6.8.10",
-      revision: "8542051ee8adba98f671a18cff02910fcd1f06fc"
+      tag:      "v6.8.11",
+      revision: "0bf552bd6baafe3053c68dd20af14a088065df69"
   license "Apache-2.0"
 
   bottle do
