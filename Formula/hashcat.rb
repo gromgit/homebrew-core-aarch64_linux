@@ -3,9 +3,9 @@ class Hashcat < Formula
   # MacOS curl complains about https://hashcat.net SSL cert
   # See https://github.com/Homebrew/homebrew-core/pull/56503#issuecomment-660728358
   homepage "https://hashcat.net/hashcat/"
-  url "https://hashcat.net/files/hashcat-6.0.0.tar.gz"
-  mirror "https://github.com/hashcat/hashcat/archive/v6.0.0.tar.gz"
-  sha256 "e8e70f2a5a608a4e224ccf847ad2b8e4d68286900296afe00eb514d8c9ec1285"
+  url "https://hashcat.net/files/hashcat-6.1.0.tar.gz"
+  mirror "https://github.com/hashcat/hashcat/archive/v6.1.0.tar.gz"
+  sha256 "916f92434e3b36a126be1d1247a95cd3b32b4d814604960a2ca325d4cc0542d1"
   license "MIT"
   version_scheme 1
   head "https://github.com/hashcat/hashcat.git"
