@@ -2,8 +2,8 @@ class OperatorSdk < Formula
   desc "SDK for building Kubernetes applications"
   homepage "https://coreos.com/operators/"
   url "https://github.com/operator-framework/operator-sdk.git",
-      tag:      "v0.19.0",
-      revision: "8e28aca60994c5cb1aec0251b85f0116cc4c9427"
+      tag:      "v0.19.1",
+      revision: "24395e17b0f2601320227b7ca32b5f54db000e42"
   license "Apache-2.0"
   head "https://github.com/operator-framework/operator-sdk.git"
 
@@ -16,29 +16,16 @@ class OperatorSdk < Formula
   depends_on "go"
 
   def install
-    # TODO: Do not set GOROOT. This is a fix for failing tests when compiled with Go 1.13.
-    # See https://github.com/Homebrew/homebrew-core/pull/43820.
-    ENV["GOROOT"] = Formula["go"].opt_libexec
+    ENV["GOBIN"] = bin
+    system "make", "install"
 
-    ENV["GOPATH"] = buildpath
+    # Install bash completion
+    output = Utils.safe_popen_read("#{bin}/operator-sdk", "completion", "bash")
+    (bash_completion/"operator-sdk").write output
 
-    dir = buildpath/"src/github.com/operator-framework/operator-sdk"
-    dir.install buildpath.children - [buildpath/".brew_home"]
-    dir.cd do
-      # Make binary
-      system "make", "install"
-      bin.install buildpath/"bin/operator-sdk"
-
-      # Install bash completion
-      output = Utils.safe_popen_read("#{bin}/operator-sdk", "completion", "bash")
-      (bash_completion/"operator-sdk").write output
-
-      # Install zsh completion
-      output = Utils.safe_popen_read("#{bin}/operator-sdk", "completion", "zsh")
-      (zsh_completion/"_operator-sdk").write output
-
-      prefix.install_metafiles
-    end
+    # Install zsh completion
+    output = Utils.safe_popen_read("#{bin}/operator-sdk", "completion", "zsh")
+    (zsh_completion/"_operator-sdk").write output
   end
 
   test do
