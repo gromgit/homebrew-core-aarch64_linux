@@ -2,8 +2,8 @@ class Heartbeat < Formula
   desc "Lightweight Shipper for Uptime Monitoring"
   homepage "https://www.elastic.co/products/beats/heartbeat"
   url "https://github.com/elastic/beats.git",
-      tag:      "v7.8.0",
-      revision: "f79387d32717d79f689d94fda1ec80b2cf285d30"
+      tag:      "v7.8.1",
+      revision: "94f7632be5d56a7928595da79f4b829ffe123744"
   license "Apache-2.0"
   head "https://github.com/elastic/beats.git"
 
@@ -20,6 +20,13 @@ class Heartbeat < Formula
   resource "virtualenv" do
     url "https://files.pythonhosted.org/packages/b1/72/2d70c5a1de409ceb3a27ff2ec007ecdd5cc52239e7c74990e32af57affe9/virtualenv-15.2.0.tar.gz"
     sha256 "1d7e241b431e7afce47e77f8843a276f652699d1fa4f93b9d8ce0076fd7b0b54"
+  end
+
+  # Update MarkupSafe to 1.1.1, remove with next release
+  # https://github.com/elastic/beats/pull/20105
+  patch do
+    url "https://github.com/elastic/beats/commit/5a6ca609259956ff5dd8e4ec80b73e6c96ff54b2.patch?full_index=1"
+    sha256 "b362f8921611297a0879110efcb88a04cf660d120ad81cd078356d502ba4c2ce"
   end
 
   def install
@@ -42,7 +49,7 @@ class Heartbeat < Formula
     cd "src/github.com/elastic/beats/heartbeat" do
       system "make", "mage"
       # prevent downloading binary wheels during python setup
-      system "make", "PIP_INSTALL_COMMANDS=--no-binary :all", "python-env"
+      system "make", "PIP_INSTALL_PARAMS=--no-binary :all", "python-env"
       system "mage", "-v", "build"
       ENV.deparallelize
       system "mage", "-v", "update"
