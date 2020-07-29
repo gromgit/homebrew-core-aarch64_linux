@@ -6,9 +6,9 @@ class Nano < Formula
   license "GPL-3.0"
 
   bottle do
-    sha256 "199872e5dbe7229dc98f1a4bf2c51a72b37289ba226618a49d065b8c15f4f90c" => :catalina
-    sha256 "7714d03eed965ed869fefb0140ae7c6accc423664643b85c6abb9e88498af9ca" => :mojave
-    sha256 "d1e31bd078e9d26b892e7431b4bc1f66e5b297eef8eae8651d25a783563d5363" => :high_sierra
+    sha256 "364da878cbe90e6e09be7cfd252f01e55cdf787bf013530cba2d94e437eaffb1" => :catalina
+    sha256 "7f7103bf8eb1d02d370f574a030a84a231356688314d182b63cc21a72999dfcc" => :mojave
+    sha256 "6684387d3aed8f58a0205a04db2162c6d2b95ff1d09e7438df4299eefabbadf0" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
