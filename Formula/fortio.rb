@@ -7,10 +7,9 @@ class Fortio < Formula
   license "Apache-2.0"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "39d31e90bd03a6287b6a9a5a28dc93c61f2555e482932f1ee4b3f38f8ba9f213" => :catalina
-    sha256 "0be61266869edab25c8154e6e617eee593e29c7f9b7f05617ff50d513171ba54" => :mojave
-    sha256 "d6fa91c01350008dde0a528547a4c4e50be941e0627423924a0075ee9eb058dc" => :high_sierra
+    sha256 "d868e5f17b4d66dcca9213f3222b9a7c03a9ebadffc5358958e462dbb58303a7" => :catalina
+    sha256 "000b2147d68f48918a61427d65489f6e32abe97ad741fef6eb957e23f8a107f6" => :mojave
+    sha256 "bb9e47226f7f10e173f7ffe6b4bceea6c0838f015504c6e65a6b5aa65c2e843a" => :high_sierra
   end
 
   depends_on "go" => :build
