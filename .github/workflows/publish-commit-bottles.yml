@@ -36,7 +36,7 @@ jobs:
           ln -s $(brew --repo ${{github.repository}}) ${{github.workspace}}
 
       - name: Checkout tap
-        run:
+        run: |
           git remote set-url origin ${{github.event.repository.clone_url}}
           git fetch --prune --force origin master
           git reset --hard origin/master
