@@ -1,9 +1,10 @@
 class Oha < Formula
   desc "HTTP load generator, inspired by rakyll/hey with tui animation"
   homepage "https://github.com/hatoo/oha/"
-  url "https://github.com/hatoo/oha/archive/v0.4.0.tar.gz"
-  sha256 "8aa13bfabfd648d42aa35b77eada5fe7ed6cca11a5b1d39a6e73050bb9d271b7"
+  url "https://github.com/hatoo/oha/archive/v0.4.1.tar.gz"
+  sha256 "2a713a00aef8db3de98fe5a936e84fdf7fcebfa8211aee03a4c7754aa094d7d1"
   license "MIT"
+  head "https://github.com/hatoo/oha.git"
 
   bottle do
     cellar :any_skip_relocation
