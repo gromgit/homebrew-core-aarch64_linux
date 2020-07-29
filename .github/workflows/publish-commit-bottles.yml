@@ -11,6 +11,7 @@ jobs:
   upload:
     runs-on: ubuntu-latest
     env:
+      HOMEBREW_COLOR: 1
       HOMEBREW_DEVELOPER: 1
       HOMEBREW_FORCE_HOMEBREW_ON_LINUX: 1
       HOMEBREW_NO_ANALYTICS: 1
