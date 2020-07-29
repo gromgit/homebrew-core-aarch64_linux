@@ -10,10 +10,10 @@ class Semgrep < Formula
   head "https://github.com/returntocorp/semgrep.git", branch: "develop"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "fd74e00de184b3bd348aec3f461d0dccef7e1d955074410636e7c02da6dc7ab3" => :catalina
-    sha256 "b3b0b0dca2467a3c63cb7598eac87c87de9f74eb8c52e8c1bb7ce36da337dd89" => :mojave
-    sha256 "e2d56a08024418f5978f99d84130ed451427674f1cfc04fdbdc405adc2e81aab" => :high_sierra
+    cellar :any
+    sha256 "03233df07aa8301268a673992c66343d17f5ebdf3e121b40be865fba823fce56" => :catalina
+    sha256 "02dfbd98a4030d2d7d763b03103b4761ad7e5833115a53a5dd533ebeb5957fa4" => :mojave
+    sha256 "52a2bf82789c8678f67666d48ad0a27e042f7bde7a0cf7abe369d0d960a2194d" => :high_sierra
   end
 
   depends_on "cmake" => :build
