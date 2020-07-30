@@ -1,20 +1,10 @@
 class Cmake < Formula
   desc "Cross-platform make"
   homepage "https://www.cmake.org/"
+  url "https://github.com/Kitware/CMake/releases/download/v3.18.1/cmake-3.18.1.tar.gz"
+  sha256 "c0e3338bd37e67155b9d1e9526fec326b5c541f74857771b7ffed0c46ad62508"
   license "BSD-3-Clause"
   head "https://gitlab.kitware.com/cmake/cmake.git"
-
-  stable do
-    url "https://github.com/Kitware/CMake/releases/download/v3.18.0/cmake-3.18.0.tar.gz"
-    sha256 "83b4ffcb9482a73961521d2bafe4a16df0168f03f56e6624c419c461e5317e29"
-
-    # Allow customisation of emacs install directory.
-    # Remove with 3.18.1.
-    patch do
-      url "https://gitlab.kitware.com/cmake/cmake/-/commit/24571e8eca27d6c51ca408f4b834fa930760e1d0.diff"
-      sha256 "7234977c8bfa0822bc57867a04f22ecc0347241bb06c7ba99b0d86681c64aa73"
-    end
-  end
 
   bottle do
     cellar :any_skip_relocation
