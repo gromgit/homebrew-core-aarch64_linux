@@ -11,10 +11,9 @@ class Flawfinder < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "db9c5f0ba0292c17e40eafb1b26f8ec45aa56265797a6af6b23242c5f81f538e" => :catalina
-    sha256 "db9c5f0ba0292c17e40eafb1b26f8ec45aa56265797a6af6b23242c5f81f538e" => :mojave
-    sha256 "db9c5f0ba0292c17e40eafb1b26f8ec45aa56265797a6af6b23242c5f81f538e" => :high_sierra
+    sha256 "834e8b598e411e3722bb5955348293cc9ef833400ee0a45357525c91c13a29c6" => :catalina
+    sha256 "834e8b598e411e3722bb5955348293cc9ef833400ee0a45357525c91c13a29c6" => :mojave
+    sha256 "834e8b598e411e3722bb5955348293cc9ef833400ee0a45357525c91c13a29c6" => :high_sierra
   end
 
   depends_on "python@3.8"
