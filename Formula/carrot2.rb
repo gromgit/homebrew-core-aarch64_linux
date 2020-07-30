@@ -6,6 +6,13 @@ class Carrot2 < Formula
       revision: "6a5e2ff984b3ec60375fd475c7cdcd25f7403beb"
   license "Apache-2.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "a194d103ec94747cc1ff6b1c3d1dff55cb1881cd2abef6bd136d9e051d8318a9" => :catalina
+    sha256 "a10345d4b2edbecaedf57600101130e74d61c0bea18a9a8fb3eb5d07de32b5ee" => :mojave
+    sha256 "2e91d4f0ad08292b172485246c853214d930f32ff3980fbaf5021522efa4493b" => :high_sierra
+  end
+
   depends_on "gradle" => :build
   depends_on "openjdk"
 
