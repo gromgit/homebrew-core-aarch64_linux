@@ -1,8 +1,8 @@
 class Modules < Formula
   desc "Dynamic modification of a user's environment via modulefiles"
   homepage "https://modules.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/modules/Modules/modules-4.5.1/modules-4.5.1.tar.bz2"
-  sha256 "8d9829905f79d379c2cf753c7fe6f7be1188853e859f81b44f5116337e8f49d9"
+  url "https://downloads.sourceforge.net/project/modules/Modules/modules-4.5.2/modules-4.5.2.tar.bz2"
+  sha256 "9366a2c6230f7ce4b5861a0629db10867f39144e382d209681619fe273950655"
 
   bottle do
     cellar :any
@@ -13,7 +13,6 @@ class Modules < Formula
 
   def install
     args = %W[
-      --disable-dependency-tracking
       --prefix=#{prefix}
       --datarootdir=#{share}
       --with-tcl=#{MacOS.sdk_path}/System/Library/Frameworks/Tcl.framework
