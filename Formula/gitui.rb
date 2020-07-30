@@ -31,7 +31,9 @@ class Gitui < Formula
     # select log tab
     input.puts "2"
     sleep 1
-    # inspect commit (right arrow key)
+    # inspect commit (return + right arrow key)
+    input.puts "\n"
+    sleep 1
     input.puts "\e[C"
     sleep 1
     input.close
