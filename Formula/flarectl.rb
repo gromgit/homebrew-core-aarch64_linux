@@ -1,8 +1,8 @@
 class Flarectl < Formula
   desc "CLI application for interacting with a Cloudflare account"
   homepage "https://github.com/cloudflare/cloudflare-go/tree/master/cmd/flarectl"
-  url "https://github.com/cloudflare/cloudflare-go/archive/v0.12.2.tar.gz"
-  sha256 "9a2e111034108716f965552c9d9899aae61bfbd5abe33e03c9fb272b37163f1f"
+  url "https://github.com/cloudflare/cloudflare-go/archive/v0.13.0.tar.gz"
+  sha256 "8efb25d4831842788656736c4a2604208bd6bf8ff47912a0a2dd1174a096e9c5"
   license "BSD-3-Clause"
   head "https://github.com/cloudflare/cloudflare-go.git"
 
@@ -18,7 +18,6 @@ class Flarectl < Formula
   def install
     cd "cmd/flarectl"
     system "go", "build", *std_go_args, "-ldflags", "-s -w", "./..."
-    prefix.install_metafiles
   end
 
   test do
