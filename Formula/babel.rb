@@ -9,9 +9,9 @@ class Babel < Formula
   license "MIT"
 
   bottle do
-    sha256 "97994b3ae974782537a2a0127526230470c340f88eb79115142258ca895e5336" => :catalina
-    sha256 "a5b87e906beea6580a65befdd61a927bfa152bbf47698d516c211d1a8be34691" => :mojave
-    sha256 "663c420051ebf322932f7c82af7b5bd7fc6269cf9eefed6b14ab5966eeff4f6c" => :high_sierra
+    sha256 "cdb6e8a677abd51806f613bf3b0dea2f279a585c404b2394c2f67d3cf25579e0" => :catalina
+    sha256 "eea97404fb7967b785bd125340335f4ba6deb1a5690fcd532444f2cb57b8f3c5" => :mojave
+    sha256 "26d0080da12d5e4cbb005125391c2c345136581c4a982c2fa83bf71c45641fc7" => :high_sierra
   end
 
   depends_on "node"
