@@ -7,9 +7,9 @@ class Xmrig < Formula
   head "https://github.com/xmrig/xmrig.git"
 
   bottle do
-    sha256 "69e018ecd5a617de07c4a37f54b10e81e079338c4b032e82211695f2aba5cc7b" => :catalina
-    sha256 "6fb39ff00cf89948cb3c34d72d7c96d8bc891e762ab7daf280e680e471834e99" => :mojave
-    sha256 "a10ebc69a3eb231fa3dbe80da557a7a94f1cb361d1bec86e2f3cafbd16b556f0" => :high_sierra
+    sha256 "6d81a25e263fc6745c9bbf333c3cbbe0ee35fb24a87c75890676895143217fc2" => :catalina
+    sha256 "3dcf0f3913b6ee03b9bfe6cac3e800b4d187004cb2707956dfb832d0bb342f0b" => :mojave
+    sha256 "509b8ba8d2c6f2e50e150045f8f3146907dae69d146e5c895e1b3d3b63691eb6" => :high_sierra
   end
 
   depends_on "cmake" => :build
