@@ -7,6 +7,13 @@ class Apidoc < Formula
   sha256 "b63797091e9ccd0cc2d65129bb38e54957131067e37029ae137d73eb2e3520d6"
   license "MIT"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "b320b931cba5d805a88e825d3edc4c049835c8cf5fe4358a7ec2cf3d0eac8140" => :catalina
+    sha256 "3cd2c255226284e948ea29323318e67fcd69d55a47a768a178a87ed457100e27" => :mojave
+    sha256 "a8cbad5592a1abb70debd5639539f8a7b9d674f9270069fa389d677a07b01754" => :high_sierra
+  end
+
   depends_on "node"
 
   def install
