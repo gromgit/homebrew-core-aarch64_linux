@@ -4,6 +4,7 @@ class Smali < Formula
   url "https://github.com/JesusFreke/smali/archive/v2.4.0.tar.gz"
   sha256 "6a9014ecffd7d374f1b9e3c236b11d18a8d8f9c33dbb8ca171c79cc243a0f902"
   license "BSD-3-Clause"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
@@ -22,12 +23,7 @@ class Smali < Formula
       jarfile = "#{name}-#{version}-dev-fat.jar"
 
       libexec.install "#{name}/build/libs/#{jarfile}"
-
-      (bin/name).write <<~EOS
-        #!/bin/bash
-        export JAVA_HOME="${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
-        exec "${JAVA_HOME}/bin/java" -jar "#{libexec}/#{jarfile}" "$@"
-      EOS
+      bin.write_jar_script libexec/jarfile, name
     end
   end
 
