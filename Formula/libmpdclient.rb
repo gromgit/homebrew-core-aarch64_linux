@@ -4,6 +4,7 @@ class Libmpdclient < Formula
   url "https://www.musicpd.org/download/libmpdclient/2/libmpdclient-2.19.tar.xz"
   sha256 "158aad4c2278ab08e76a3f2b0166c99b39fae00ee17231bd225c5a36e977a189"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/MusicPlayerDaemon/libmpdclient.git"
 
   bottle do
@@ -14,7 +15,7 @@ class Libmpdclient < Formula
   end
 
   depends_on "doxygen" => :build
-  depends_on "meson-internal" => :build
+  depends_on "meson" => :build
   depends_on "ninja" => :build
 
   def install
