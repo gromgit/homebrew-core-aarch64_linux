@@ -2,9 +2,10 @@ class Eksctl < Formula
   desc "The official CLI for Amazon EKS"
   homepage "https://eksctl.io"
   url "https://github.com/weaveworks/eksctl.git",
-      tag:      "0.24.0",
-      revision: "f23f8d7d75943d1a62c87ce2f3d455da7af741fa"
+      tag:      "0.25.0",
+      revision: "673de795554c4138baeda442268026c2b22c3bd6"
   license "Apache-2.0"
+  head "https://github.com/weaveworks/eksctl.git"
 
   bottle do
     cellar :any_skip_relocation
