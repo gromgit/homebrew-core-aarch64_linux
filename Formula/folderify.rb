@@ -9,6 +9,13 @@ class Folderify < Formula
   # Default branch is "main" not "master"
   head "https://github.com/lgarron/folderify.git", branch: "main"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "062b16879ed2d131b59c248742e264c5a0408cf2920726e7a8e5748e8f26311e" => :catalina
+    sha256 "53fe9712af93934f58d7240be8352a1bba5af825c125ed299a436b652c5c9f8a" => :mojave
+    sha256 "73e6e1481a6be47c97ffb05bfde6721e48096c9ad574a29917f680599acc9bff" => :high_sierra
+  end
+
   depends_on "imagemagick"
   depends_on "python@3.8"
 
