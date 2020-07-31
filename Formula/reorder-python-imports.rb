@@ -9,9 +9,9 @@ class ReorderPythonImports < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7356f526bee0a17d233ce5a174fac6bc26b018888142fbe29306553edf8472e2" => :catalina
-    sha256 "df9181bf185db5aac4d20f1c6958007918ad432ae7ee94e6a58f2d1fc14d20c2" => :mojave
-    sha256 "4304a03eb06e464b8464535b98352ece430eaac271ebfe0db9a863e70d624aa7" => :high_sierra
+    sha256 "f82f81ae238fb1ea08d2847d85688226f665c247cee99e6928761139bd84f14a" => :catalina
+    sha256 "00b8dfb9fc9de88820c7115a701a86c582fe08651130eab710216e629fa748ab" => :mojave
+    sha256 "e068d759d9b9897c699e515c5a41791fd8029c990bb8bdedd2a38ce2f91122c1" => :high_sierra
   end
 
   depends_on "python@3.8"
