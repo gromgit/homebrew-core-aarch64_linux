@@ -9,9 +9,9 @@ class Litecli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2c79502cd84f73df3dbf201917a3bdc091091d3d0fb0ae2f7cc7ca1c0e055f9b" => :catalina
-    sha256 "b4ea02b71598cbf830cc48daae3478ffb8bcdf045423945bd06805b6e1a0a273" => :mojave
-    sha256 "4ecaf830402a79f5b1f5cb8e3437288978b4c42920764604b370a2476d3f2ab7" => :high_sierra
+    sha256 "a5c32ad08cf648a27f4227a318fcaa0703ae5997b0eb305ff1b5922825e114df" => :catalina
+    sha256 "dad4c2dc18b9bd8d9902e021fc28772947e1fb99179edffa32218091ca330671" => :mojave
+    sha256 "eb2ebf6ab934ad00fe09c41be58e5bbd6fb347d0f2a79fdf3108587b5a0db639" => :high_sierra
   end
 
   depends_on "python@3.8"
