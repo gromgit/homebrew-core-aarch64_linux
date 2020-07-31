@@ -4,6 +4,7 @@ class Metabase < Formula
   url "https://downloads.metabase.com/v0.36.3/metabase.jar"
   sha256 "122fd1364271a1dabbbbe95b40950a9de5306b88a2a1237e3d858e714f5296bb"
   license "AGPL-3.0"
+  revision 1
 
   head do
     url "https://github.com/metabase/metabase.git"
@@ -25,11 +26,7 @@ class Metabase < Formula
       libexec.install "metabase.jar"
     end
 
-    (bin/"metabase").write <<~EOS
-      #!/bin/bash
-      export JAVA_HOME="${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
-      exec "${JAVA_HOME}/bin/java" -jar "#{libexec}/metabase.jar" "$@"
-    EOS
+    bin.write_jar_script libexec/"metabase.jar", "metabase"
   end
 
   plist_options startup: true, manual: "metabase"
