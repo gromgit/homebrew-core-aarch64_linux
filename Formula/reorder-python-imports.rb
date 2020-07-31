@@ -3,8 +3,8 @@ class ReorderPythonImports < Formula
 
   desc "Rewrites source to reorder python imports"
   homepage "https://github.com/asottile/reorder_python_imports"
-  url "https://github.com/asottile/reorder_python_imports/archive/v2.3.4.tar.gz"
-  sha256 "238b6586e336667d0dfcc64654ed64847e0cb600a21edaab478ff5fd299d1c55"
+  url "https://github.com/asottile/reorder_python_imports/archive/v2.3.5.tar.gz"
+  sha256 "e5c5b77efbd3a61fc2a4ab1ad36c57445dbec4313b8177725ead98ae05f8426e"
   license "MIT"
 
   bottle do
