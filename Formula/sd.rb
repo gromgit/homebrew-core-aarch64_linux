@@ -7,9 +7,9 @@ class Sd < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "cc2d08fca64a765bc5df67fc69b23f4afa3350c0851fabd06d4e3b218c456bb2" => :catalina
-    sha256 "6496955ab15f26f18111214c0b97c24143f752aa4b222b6c54b15e24c5ee1462" => :mojave
-    sha256 "0cdf79c329703411f1e67a4ff85fd58f10bd6de5293c1a5b7983c56b3defd7a4" => :high_sierra
+    sha256 "649c660b6e8a4a77e5fc9dd12b1aa28a59212f676d2394f7e3ea682a9d3cc533" => :catalina
+    sha256 "1b451f55b69988e53a7699005f5aac1e50ed30e466ea0bbf1b30d382887360b1" => :mojave
+    sha256 "971451d1dd8fb3340c9c5a74ea20769e114362e84b0f9bb9a0ead52881c71196" => :high_sierra
   end
 
   depends_on "rust" => :build
