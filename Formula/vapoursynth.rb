@@ -1,12 +1,10 @@
 class Vapoursynth < Formula
-  include Language::Python::Virtualenv
-
   desc "Video processing framework with simplicity in mind"
   homepage "http://www.vapoursynth.com"
   url "https://github.com/vapoursynth/vapoursynth/archive/R50.tar.gz"
   sha256 "b9dc7ce904c6a3432df7491b7052bc4cf09ccf1e7a703053f8079a2267522f97"
   license "LGPL-2.1"
-  revision 1
+  revision 2
   head "https://github.com/vapoursynth/vapoursynth.git"
 
   bottle do
@@ -18,6 +16,7 @@ class Vapoursynth < Formula
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+  depends_on "cython" => :build
   depends_on "libtool" => :build
   depends_on "nasm" => :build
   depends_on "pkg-config" => :build
@@ -25,18 +24,11 @@ class Vapoursynth < Formula
   depends_on "python@3.8"
   depends_on "zimg"
 
-  resource "Cython" do
-    url "https://files.pythonhosted.org/packages/99/36/a3dc962cc6d08749aa4b9d85af08b6e354d09c5468a3e0edc610f44c856b/Cython-0.29.17.tar.gz"
-    sha256 "6361588cb1d82875bcfbad83d7dd66c442099759f895cf547995f00601f9caf2"
-  end
-
   def install
-    venv = virtualenv_create(buildpath/"cython", Formula["python@3.8"].opt_bin/"python3")
-    venv.pip_install "Cython"
     system "./autogen.sh"
     inreplace "Makefile.in", "pkglibdir = $(libdir)", "pkglibdir = $(exec_prefix)"
     system "./configure", "--prefix=#{prefix}",
-                          "--with-cython=#{buildpath}/cython/bin/cython",
+                          "--with-cython=#{Formula["cython"].bin}/cython",
                           "--with-plugindir=#{HOMEBREW_PREFIX}/lib/vapoursynth"
     system "make", 'LIBS="$(python3-config --ldflags --embed)"'
     system "make", "install"
