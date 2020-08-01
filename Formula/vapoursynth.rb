@@ -9,9 +9,9 @@ class Vapoursynth < Formula
 
   bottle do
     cellar :any
-    sha256 "4839ac1ac710a243b886789f560029e1e6e5f6b13eedb2a07f2666877fb17e54" => :catalina
-    sha256 "7264f344e3cf299a5e8ceaf9ef910db025ff403552af63a2cfd8e77cdf28c5d0" => :mojave
-    sha256 "5c190cc18c3b61b2425c01ef2d007a7fcf8c13866be3e73ce9fe48e558622117" => :high_sierra
+    sha256 "4874de1112cf9a5a6800756ba21ed78973b52ed0cd3628fad20266913ac3f6ce" => :catalina
+    sha256 "7ed9411a55473fb969a31f9a040cdcea320847842eb8abc589607f20f2a76287" => :mojave
+    sha256 "c166b1ffefb14533207313d145069a59fb5f3b0cf08e19306bcd8f12f2c5f1c9" => :high_sierra
   end
 
   depends_on "autoconf" => :build
