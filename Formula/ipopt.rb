@@ -9,9 +9,9 @@ class Ipopt < Formula
 
   bottle do
     cellar :any
-    sha256 "a5817c890786d3585f85f718a95fdaec4e148d5e21ee6febb013410478a20ea3" => :catalina
-    sha256 "35760d1bf4676d2fcc54b8175754b2cdb7129f64739cac1a87755660c458ef66" => :mojave
-    sha256 "f5d21e4fdf87a1002a87d99954dc13b796187a0b5e8cf84177ad9ffa2d0e6f77" => :high_sierra
+    sha256 "d7a39ffbd4228581ca59ffb091b997aebd40a41038c60809baea596ebcd2e871" => :catalina
+    sha256 "1147231684595f18ffe44e3a2852ece5456fc4dbfe7455f6a853dd4ef4e055c0" => :mojave
+    sha256 "4d9b8a8cc3091182b49fd4a38bf55f4ca7e953d326af64e247db419c42f8859c" => :high_sierra
   end
 
   depends_on "pkg-config" => [:build, :test]
