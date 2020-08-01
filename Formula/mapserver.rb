@@ -1,9 +1,8 @@
 class Mapserver < Formula
   desc "Publish spatial data and interactive mapping apps to the web"
   homepage "https://mapserver.org/"
-  url "https://download.osgeo.org/mapserver/mapserver-7.6.0.tar.gz"
-  sha256 "12380737ce71d78520ddaad90d1562a7e321436ad78d463923999030a03b4bda"
-  revision 2
+  url "https://download.osgeo.org/mapserver/mapserver-7.6.1.tar.gz"
+  sha256 "2d250874d55bee44e0dbbb3a38e612f8572730705edada00c6ab8b2c9e890581"
 
   bottle do
     cellar :any
