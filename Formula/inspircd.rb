@@ -6,9 +6,9 @@ class Inspircd < Formula
   license "GPL-2.0"
 
   bottle do
-    sha256 "5ffffc7ee1d4a804d3bea62c0daacbc37113504cd540b107c7845c001613ea91" => :catalina
-    sha256 "72807c0b16c0a71fc272a67dc0ab0678f8978443e37d2492bf758263d1a29526" => :mojave
-    sha256 "10773bb68411503c25a83bf09b6ba3bbdb7ba0f40ff10bc5afe4b07c9b0e81e3" => :high_sierra
+    sha256 "224bfcd1dcc583280d917610dc35a2fcf6696e28911ce2b06fd07ae612761a37" => :catalina
+    sha256 "fc06d01b383aeeba481e00aacba60ee3a2dbaf25c49cff1662a546d6a6df2135" => :mojave
+    sha256 "84c698649f37d4165ed627a053ab1e89c2201d436692341559e132440e22e84c" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
