@@ -8,9 +8,9 @@ class WlaDx < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e851b78047927db8fef64911fdb6df9bc046ee304e6af9d78f52c9cdd20e9d85" => :catalina
-    sha256 "e1440068792536cf0c902e190b395d9075d22872370c14f6f7062e7e3bf7bf30" => :mojave
-    sha256 "34c0184ae1a71bd11365f42bcb44627ea6d3f91b8f4e83aec8ab4d4b5f15964f" => :high_sierra
+    sha256 "8f0d4747eb9ef0885ddf6c08b3d4ac980bd2b6dbaaa9f5048ea7aa4bc6f681b8" => :catalina
+    sha256 "b515cc9b31fd4d978143c518555b02873fabff5ef390d369575c3d3e99606326" => :mojave
+    sha256 "0ed73304d947e4ea44431c06df38bb6887a7551f575ade25a6b63ce7b27187c7" => :high_sierra
   end
 
   depends_on "cmake" => :build
