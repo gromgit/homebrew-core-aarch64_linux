@@ -7,8 +7,8 @@ class Mkvtoolnix < Formula
 
   bottle do
     cellar :any
-    sha256 "7e14ea2456fe8aa3435e9b835d782f1ff60dc6cf326bcf9dca840511ee96a6d5" => :catalina
-    sha256 "d9cdf539429485bff6b61a42503b0b52d84d4c420cb75de77eb1ecf643249cdd" => :mojave
+    sha256 "aa49b43a8e5fb6d9bb213d65f2b50820aecb09ef963adaeab44e2e84f94809aa" => :catalina
+    sha256 "899f9ca22be5a094b68d242103b62edc48bcd799d1a4bfb57f6ae9a1c7b5937c" => :mojave
   end
 
   head do
