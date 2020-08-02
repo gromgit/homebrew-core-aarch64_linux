@@ -1,8 +1,8 @@
 class Libmatroska < Formula
   desc "Extensible, open standard container format for audio/video"
   homepage "https://www.matroska.org/"
-  url "https://dl.matroska.org/downloads/libmatroska/libmatroska-1.6.1.tar.xz"
-  sha256 "a48a3ce8c3c13c2147ae31564edffdb32966877307e865ffb6e08ff26af663b8"
+  url "https://dl.matroska.org/downloads/libmatroska/libmatroska-1.6.2.tar.xz"
+  sha256 "bc4479aa8422ab07643df6a1fa5a19e4bed4badfd41ca77e081628620d1e1990"
   license "LGPL-2.1"
   head "https://github.com/Matroska-Org/libmatroska.git"
 
