@@ -6,9 +6,9 @@ class Freeling < Formula
   license "AGPL-3.0"
 
   bottle do
-    sha256 "3e5cbfb547396e03170a5c393b5fa5597fbbfef82d386b3cdaa808a8ab024737" => :catalina
-    sha256 "da007f9042a7d187f257c27045071ee615c9f17fab1975d05dfdc5b23a526000" => :mojave
-    sha256 "083f4a759fdd2f8a482d4e1ee0f804eafd1562434cc95136e082befbd4ca5544" => :high_sierra
+    sha256 "22ee0da143b9d7f402e36992a215891898c9cd9dc0caef7671126b841eca0402" => :catalina
+    sha256 "fdbea1f56535241d510d41c2e388045b402c8385528910a4f1b5f60aa12d364f" => :mojave
+    sha256 "e8bc020fb721b127999afa30985aa80de79baf62d70a838217730f6c89ddaed3" => :high_sierra
   end
 
   depends_on "cmake" => :build
