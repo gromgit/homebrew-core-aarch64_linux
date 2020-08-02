@@ -15,9 +15,9 @@ class Rust < Formula
 
   bottle do
     cellar :any
-    sha256 "79472962cab63fc6e2a4695e9d3697d6449124e7b448edbcf77e7acb405bd21d" => :catalina
-    sha256 "2317cf5c5a5e743a337d9a771e24912ece1b20f0b19dbaf74fb098885a7eebd9" => :mojave
-    sha256 "2c1013aec08b7ede24995c2686f4c4af1c6c1b6cc140dac6f93534c41b1c702e" => :high_sierra
+    sha256 "825ab73358b796efc7be4f47fe1c62009cd43b05b2631acfaac343baedf737b8" => :catalina
+    sha256 "f641fd3fb4902b66e5334aa8b9c26c1c80e81e378a0c013facc2a83dc546a827" => :mojave
+    sha256 "20041687555f8de92b5209ee898104ed9ff29a5a8810f74a239a4214c41f39a5" => :high_sierra
   end
 
   head do
