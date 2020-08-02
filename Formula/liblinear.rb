@@ -8,9 +8,9 @@ class Liblinear < Formula
 
   bottle do
     cellar :any
-    sha256 "a8647325d4a99e221622eb1d9162c15128be0739c94e6df12c89b872ecb0f307" => :catalina
-    sha256 "171f9aa9f7e9b18d7cd5c688b0ae8a1ffd457f70dd48294f04f5fd94912295cc" => :mojave
-    sha256 "e001224c65e70b520a8e8aae2763a2c2c9d4348244ecd645af156197cf6b022c" => :high_sierra
+    sha256 "7f87690e48b1c1ad17cff21494d81e0c7539c13dcb8e2f90d810e99165ef3013" => :catalina
+    sha256 "8c884bdc5cc931e6d4762561518b8b1836785c09fea1cbb034ddd1182519bb62" => :mojave
+    sha256 "dd26a959a98b379ce158256166f638b8f5ac23f636052c7a41975c2320b2173f" => :high_sierra
   end
 
   # Fix sonames
