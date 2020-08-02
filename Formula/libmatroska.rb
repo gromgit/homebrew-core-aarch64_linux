@@ -8,9 +8,9 @@ class Libmatroska < Formula
 
   bottle do
     cellar :any
-    sha256 "6e0fcb6eaab382b943734853dc74b58abc88d1a6b58623aed85c2d3d62676a06" => :catalina
-    sha256 "d6ccd27705a5ec5b414f1373fde91ed7e4b27b1a98ddadf92ce14dd879e7f2fb" => :mojave
-    sha256 "d55b378401f82f39c47af6cc4568c7ddf4d1a18534515b58927112539bd3dce2" => :high_sierra
+    sha256 "6a2ae9df8279bb33af3195baad983b9984b9d15e4102e1a8324f365c704aaa71" => :catalina
+    sha256 "15ec15e52dfbab751edc3717e9486e8d1d86c27b9c11d191d7b4386da9719558" => :mojave
+    sha256 "3951b56f6f095b6f4fd2fef10b73368294ed53755295bfc0349cb461d87014bc" => :high_sierra
   end
 
   depends_on "cmake" => :build
