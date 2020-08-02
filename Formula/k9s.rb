@@ -8,9 +8,9 @@ class K9s < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "78baa27b60d788fcc5f145bab7c75b6bb8fc5ba3ac427b57c951e0ca0da99a46" => :catalina
-    sha256 "1230568dc4d8f32af168f9b2a5cea8c2c85bf8764f7beb6ee3befe952779bc89" => :mojave
-    sha256 "446c7da6e3272034b39c05cd8e49116e132b2f5b2c0f3f99be4157f1a368f88c" => :high_sierra
+    sha256 "c92d4c4d6c9e43edd5d7bf482c1fc50b2c6630058f65d0a77bc098e19239b259" => :catalina
+    sha256 "31670ba359a0b1f801772c55b1571f3ece42a97503131eafc7c9c23ba60fbf24" => :mojave
+    sha256 "721835d94666eb9655824c4f7e8219a6532859c31ea18feecc34de340a40f265" => :high_sierra
   end
 
   depends_on "go" => :build
