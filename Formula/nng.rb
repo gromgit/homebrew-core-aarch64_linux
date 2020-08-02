@@ -6,9 +6,9 @@ class Nng < Formula
   license "MIT"
 
   bottle do
-    sha256 "89bba37c334ca7a130d598fb976f9c5f6c94d5a446ab665774cda9ae9224c9f9" => :catalina
-    sha256 "5ead1d0ad461e09c9b72b0465d704a4b05186b698f9d7698f6e320e6bb6c9b1c" => :mojave
-    sha256 "a636719676a386935f3d7006aedcd42183c84e139bc2edc5fa7cff6d735ab7a3" => :high_sierra
+    sha256 "108518e716f6e752b93e30dd54f597f303e2b87b65399460e4d954e12254c8a8" => :catalina
+    sha256 "9ba28b38c5529f14e36c0de4231152431c3de02c8fd375f09375bceeaddd6088" => :mojave
+    sha256 "ddacb6bb51d546a4d3a5d45b01cf25588a9a7d644fdb5747e99179278e115459" => :high_sierra
   end
 
   depends_on "asciidoctor" => :build
