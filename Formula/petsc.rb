@@ -1,9 +1,8 @@
 class Petsc < Formula
   desc "Portable, Extensible Toolkit for Scientific Computation (real)"
   homepage "https://www.mcs.anl.gov/petsc/"
-  url "http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-lite-3.13.3.tar.gz"
-  sha256 "dc744895ee6b9c4491ff817bef0d3abd680c5e3c25e601be44240ce65ab4f337"
-  revision 1
+  url "https://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-lite-3.13.4.tar.gz"
+  sha256 "8d470cba1ceb9638694550134a2f23aac85ed7249cb74992581210597d978b94"
 
   bottle do
     sha256 "3687e6867dfd0cc24ab30467c68814dbdc0a1b92df43f951841042416562f7b6" => :catalina
