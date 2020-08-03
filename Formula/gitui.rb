@@ -7,9 +7,9 @@ class Gitui < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b94f377f1976908862b4c0a7245066882b12b22c30917ce8c4cc200820fbdf9c" => :catalina
-    sha256 "91dc87cfe10bec502b3a3b8085164fcfc23061c1f0c5a3f6fe8f459bb69e3191" => :mojave
-    sha256 "dacd4f58f87566bf594b8985c4a03446a9523607b05505b177f8823a9ab3084c" => :high_sierra
+    sha256 "3be65a8a965a8cb4643641c63119afc27221e1dae3e227e2ee49b4943c55ef75" => :catalina
+    sha256 "a9d7d94a1a6de1e61c526b828d63a60b6526b0bd93942d69bc4f86ddfb07034a" => :mojave
+    sha256 "d9763fde6296904449114c083f8f79728da805418443aad002647157f6fb70a2" => :high_sierra
   end
 
   depends_on "rust" => :build
