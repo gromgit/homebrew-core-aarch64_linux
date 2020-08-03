@@ -32,7 +32,7 @@ class Gitui < Formula
     input.puts "2"
     sleep 1
     # inspect commit (return + right arrow key)
-    input.puts "\n"
+    input.puts "\r"
     sleep 1
     input.puts "\e[C"
     sleep 1
