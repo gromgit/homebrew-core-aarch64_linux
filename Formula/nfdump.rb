@@ -1,9 +1,10 @@
 class Nfdump < Formula
   desc "Tools to collect and process netflow data on the command-line"
-  homepage "https://nfdump.sourceforge.io"
-  url "https://github.com/phaag/nfdump/archive/v1.6.20.tar.gz"
-  sha256 "672f4fbe2b7424cfdba5917441100a440cbc9083f2a79147562fb5a966838543"
+  homepage "https://github.com/phaag/nfdump"
+  url "https://github.com/phaag/nfdump/archive/v1.6.21.tar.gz"
+  sha256 "7ad5dd6a7c226865b5cafe317684e4c61ea95093f943fd46cd896977f234ca5c"
   license "BSD-3-Clause"
+  head "https://github.com/phaag/nfdump.git"
 
   bottle do
     cellar :any
