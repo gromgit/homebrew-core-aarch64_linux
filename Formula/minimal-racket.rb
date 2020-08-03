@@ -6,9 +6,9 @@ class MinimalRacket < Formula
 
   bottle do
     cellar :any
-    sha256 "c16ada1784dafe74e56c4a860f310752060fb161a4acce72bd9f3ac9f85897f3" => :catalina
-    sha256 "7b32a64228abada82c29a05e5bac3fc172b49adb2d86fa27f46665b416f1825b" => :mojave
-    sha256 "a8d174fecc59249af342499b0a174d78f07bd4ea037cd71a177487b980579d7b" => :high_sierra
+    sha256 "7bbc4358faae0aeb94e88a87016b4ecb899b9e188c5e318afabc151eb68f4300" => :catalina
+    sha256 "58f2fdad411b3e7852f1c442e2be4ccd01ed8ab3d563ef8c418de9101c989e88" => :mojave
+    sha256 "a9afe8d28a6c0a67b55d9bc46d5b30ee2f169db4ce25bef25355644fd4a83163" => :high_sierra
   end
 
   uses_from_macos "libffi"
