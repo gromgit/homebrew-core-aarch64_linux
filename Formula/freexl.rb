@@ -1,9 +1,8 @@
 class Freexl < Formula
   desc "Library to extract data from Excel .xls files"
   homepage "https://www.gaia-gis.it/fossil/freexl/index"
-  url "https://www.gaia-gis.it/gaia-sins/freexl-sources/freexl-1.0.5.tar.gz"
-  sha256 "3dc9b150d218b0e280a3d6a41d93c1e45f4d7155829d75f1e5bf3e0b0de6750d"
-  revision 1
+  url "https://www.gaia-gis.it/gaia-sins/freexl-sources/freexl-1.0.6.tar.gz"
+  sha256 "3de8b57a3d130cb2881ea52d3aa9ce1feedb1b57b7daa4eb37f751404f90fc22"
 
   bottle do
     cellar :any
