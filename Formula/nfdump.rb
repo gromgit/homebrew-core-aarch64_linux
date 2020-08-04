@@ -8,9 +8,9 @@ class Nfdump < Formula
 
   bottle do
     cellar :any
-    sha256 "c83ba9aaa48563952986ff836401cf32eb218025b976f0b16400db4ca4e191c4" => :catalina
-    sha256 "2d8e2b2f2515b141dd79bc26994320a2e2d1aae7927f7a62d8183afae07f7689" => :mojave
-    sha256 "75ca1d3a74970fa228e2d5ef5c54e39e9f9b9b434e90220fdf8c41ba5bed9c3c" => :high_sierra
+    sha256 "783bf2b6d71040e8d1a55288e6ea7bd6bfd5cfcac9c3e0850ffbac9dfa7edc4e" => :catalina
+    sha256 "602ab449a2352aa7366978cdc7fb57ee1dcf9d8ca8979a8226492cfd85920591" => :mojave
+    sha256 "880c24b712d459b4c0a4402ef33b8c96fffd8815f6096dd538f30332c97c13ac" => :high_sierra
   end
 
   depends_on "autoconf" => :build
