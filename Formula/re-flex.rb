@@ -7,9 +7,9 @@ class ReFlex < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "a7f3da3f734666c91fbf68e7f1c6ff82d832ba60dd8aae8c26f2d6cb69f1a7af" => :catalina
-    sha256 "1be1c7ab5fc883d150afd08ee7d83866877c78ea4931abed024990fdbbd8aff5" => :mojave
-    sha256 "a8f17566d3ae4335ea8582e8e4ee29a712e4fcdfa7519c2e5225498d77e57901" => :high_sierra
+    sha256 "3e8011102f27d9811bf1aacc7766ea22380759c5cf84b166e008bc8f410dd1ef" => :catalina
+    sha256 "93bb912cf8af0a002b45df76bbf71e35059366a7faf610727cd5bc8d72b182b3" => :mojave
+    sha256 "9c754ca9c993c65d8a158b28a2db4b8e45fe2e4b4fd382b34c2b973dc07c7a72" => :high_sierra
   end
 
   depends_on "pcre2"
