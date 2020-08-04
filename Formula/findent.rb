@@ -6,9 +6,9 @@ class Findent < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "da0eefdb70f76e0f31443b510725d483941a0ba58c7a7c2bd85e2934ab8ed04e" => :catalina
-    sha256 "bf2e8d595feae56fd6a8568abb08c3d3b9d6e7d7da2a1e0126a8bfa39eff7ad0" => :mojave
-    sha256 "93181b8b1f49db914b56caf888313bbba6223f9d9dffa39e12c2985bebce0f55" => :high_sierra
+    sha256 "24a8f26724d9e49ca1fcd4b87bccb4bc1f120205e54fbc8806a654683020ba3a" => :catalina
+    sha256 "d3a515ec3d972eb63943d112ce9cb3cdd7a0835394205d971fa7fdf488dce210" => :mojave
+    sha256 "bec64c83b6ad2769e8fa36245796ed743a6a1f6c20b6c17e49b495b3e7bab7dc" => :high_sierra
   end
 
   def install
