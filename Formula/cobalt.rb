@@ -7,9 +7,9 @@ class Cobalt < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "c5086533f291688d0729939f84720d98564d0fe03abd930ce93b514ec3c7c121" => :catalina
-    sha256 "504eb4b6f09a6f24bcaca95fbaae57d40dc2d3cbb8570a4ae9b244d6bd946ffb" => :mojave
-    sha256 "ae8924b5bf3fa835ba0fd93a823f30a6f4b7f5657a59aafe27e05c6e1a30d18c" => :high_sierra
+    sha256 "05ca26b8e2ae6c7f10f6e52ad37027d8d3990092a37e78d3a2475bdda2fa51f7" => :catalina
+    sha256 "52b2a35136119708ec6598dbf8b964ca5cdc71bd955a04bbeda4a9dc45741e71" => :mojave
+    sha256 "5001ab4d12aed7498b3bd42cad67cc75c6e8aecdb6fcde205b0a7c989ce260eb" => :high_sierra
   end
 
   depends_on "rust" => :build
