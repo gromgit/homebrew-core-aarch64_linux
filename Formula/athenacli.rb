@@ -7,6 +7,13 @@ class Athenacli < Formula
   sha256 "ad70993238d718a8eae5b573b12af83574ceb85ae694daa5c2e98215f89a5423"
   license "BSD-3-Clause"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "bef4c8f60d21b74351a51909440105eb23b60955f1d5169863402a80b270fd03" => :catalina
+    sha256 "2374a54e8769fc27cd7122f125ffab859c32d300784a6f75e0ada7b2cd9e7538" => :mojave
+    sha256 "84e5bc3b21424252d7d04f95392b525d7e1bc314c7218b140e49fe3f247850f2" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   resource "boto3" do
