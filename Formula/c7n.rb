@@ -7,6 +7,13 @@ class C7n < Formula
   sha256 "30407a828b35dc299dfd46531b64a27c19a2ee6e54464471df11f721c491de9e"
   license "Apache-2.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "6698261956745c6e0adb0898034df995b74bd3180ba6278bc4a005c11cc8c3bb" => :catalina
+    sha256 "0fdfcd5e2699fdea31e8d4428b78842c9c3d9840d9b8040973263b762e0e915e" => :mojave
+    sha256 "b4cff70481e7eddb4de4d077f655bc8b0229bcfae3e8c70e65a089af5a961b09" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   resource "argcomplete" do
