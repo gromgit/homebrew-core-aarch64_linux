@@ -9,9 +9,9 @@ class Jc < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "ef2a840a58c6d47c9dc6adac17ea1cc51656356ac55c54a4fc7c418bee47839c" => :catalina
-    sha256 "9512b3d3863e54f4a4c9085c385fd42633c09e8ded88e5ade14b9dc1b9b2f0cb" => :mojave
-    sha256 "d2be1ec2a74249f2fce8e2d8465371eced293a689bcba64e017cd5e5e4672954" => :high_sierra
+    sha256 "c99b8a1dc01b6a11f3bcbd43ee22e38888e591ae89509c4f4253e524f662eea6" => :catalina
+    sha256 "fe25728b07727bc56cc0b2c1c3dbe3ebb5167189ddd97fcf305a552900a2e037" => :mojave
+    sha256 "7abaf038e0340377fb53ed3f1cc37c35664f52929408da995883f7edd765d1de" => :high_sierra
   end
 
   depends_on "python@3.8"
