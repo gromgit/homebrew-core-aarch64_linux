@@ -1,8 +1,8 @@
 class Inko < Formula
   desc "The Inko programming language"
   homepage "https://inko-lang.org/"
-  url "https://gitlab.com/inko-lang/inko/-/archive/v0.6.0/inko-v0.6.0.tar.gz"
-  sha256 "3560023128675db5f76698e546e7f3fce70f45816735fb3fa71d103ae383fc61"
+  url "https://gitlab.com/inko-lang/inko/-/archive/v0.7.0/inko-v0.7.0.tar.gz"
+  sha256 "81a613b4d6bee524a8fe8e346466b7f277a42875b357ad61ba0ca3871750c1e3"
   license "MPL-2.0"
   head "https://gitlab.com/inko-lang/inko.git"
 
