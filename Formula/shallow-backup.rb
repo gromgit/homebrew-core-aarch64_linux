@@ -8,6 +8,13 @@ class ShallowBackup < Formula
   license "MIT"
   head "https://github.com/alichtman/shallow-backup.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "229b33c4ec8ca8298b4a6fdf88161d2cb7023399af7adeaf445516557e9dea8c" => :catalina
+    sha256 "d5e2a09b5c4cf1da508b1e18f44d1509f70313e7b831f38424db2e67367907fd" => :mojave
+    sha256 "bf8b92d72f9e051d036ad04386ecf753191732342f92618b7b80238c8f00738b" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   resource "blessed" do
