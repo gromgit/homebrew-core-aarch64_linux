@@ -4,6 +4,7 @@ class Kumo < Formula
   url "https://search.maven.org/remotecontent?filepath=com/kennycason/kumo-cli/1.27/kumo-cli-1.27.jar"
   sha256 "f3643a734e6f8d9c31b0a50f7d4df3f99ea0bf81377efd5a79291b2fff51f1e6"
   license "MIT"
+  revision 1
 
   bottle :unneeded
 
@@ -11,10 +12,7 @@ class Kumo < Formula
 
   def install
     libexec.install "kumo-cli-#{version}.jar"
-    (bin/"kumo").write <<~EOS
-      #!/bin/bash
-      exec "#{Formula["openjdk"].opt_bin}/java" -jar "#{libexec}/kumo-cli-#{version}.jar" "$@"
-    EOS
+    bin.write_jar_script libexec/"kumo-cli-#{version}.jar", "kumo"
   end
 
   test do
