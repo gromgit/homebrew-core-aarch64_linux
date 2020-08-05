@@ -4,7 +4,7 @@ class SeleniumServerStandalone < Formula
   url "https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar"
   sha256 "acf71b77d1b66b55db6fb0bed6d8bae2bbd481311bcbedfeff472c0d15e8f3cb"
   license "Apache-2.0"
-  revision 1
+  revision 2
 
   bottle :unneeded
 
@@ -12,10 +12,7 @@ class SeleniumServerStandalone < Formula
 
   def install
     libexec.install "selenium-server-standalone-#{version}.jar"
-    (bin/"selenium-server").write <<~EOS
-      #!/bin/bash
-      exec "#{Formula["openjdk"].opt_bin}/java" -jar "#{libexec}/selenium-server-standalone-#{version}.jar" "$@"
-    EOS
+    bin.write_jar_script libexec/"selenium-server-standalone-#{version}.jar", "selenium-server"
   end
 
   plist_options manual: "selenium-server -port 4444"
@@ -34,7 +31,7 @@ class SeleniumServerStandalone < Formula
         <false/>
         <key>ProgramArguments</key>
         <array>
-          <string>/usr/bin/java</string>
+          <string>#{Formula["openjdk"].opt_bin}/java</string>
           <string>-jar</string>
           <string>#{libexec}/selenium-server-standalone-#{version}.jar</string>
           <string>-port</string>
