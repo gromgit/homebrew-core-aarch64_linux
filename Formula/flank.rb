@@ -4,6 +4,7 @@ class Flank < Formula
   url "https://github.com/Flank/flank/releases/download/v20.08.1/flank.jar"
   sha256 "eb7ab6119a4cd653bf4b8b763269bf42df0c02bbf925a94411b957b76efd4d94"
   license "Apache-2.0"
+  revision 1
 
   bottle :unneeded
 
@@ -11,10 +12,7 @@ class Flank < Formula
 
   def install
     libexec.install "flank.jar"
-    (bin/"flank").write <<~EOS
-      #!/usr/bin/env sh
-      exec "#{Formula["openjdk"].opt_bin}/java" -jar "#{libexec}/flank.jar" "$@"
-    EOS
+    bin.write_jar_script libexec/"flank.jar", "flank"
   end
 
   test do
