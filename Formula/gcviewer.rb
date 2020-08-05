@@ -4,6 +4,7 @@ class Gcviewer < Formula
   url "https://downloads.sourceforge.net/project/gcviewer/gcviewer-1.36.jar"
   sha256 "5e6757735903d1d3b8359ae8fabc66cdc2ac6646725e820a18e55b85b3bc00f4"
   license "LGPL-2.1"
+  revision 1
 
   bottle :unneeded
 
@@ -11,10 +12,7 @@ class Gcviewer < Formula
 
   def install
     libexec.install Dir["*"]
-    (bin/"gcviewer").write <<~EOS
-      #!/bin/bash
-      exec "#{Formula["openjdk"].opt_bin}/java" -jar "#{libexec}/gcviewer-#{version}.jar" "$@"
-    EOS
+    bin.write_jar_script libexec/"gcviewer-#{version}.jar", "gcviewer"
   end
 
   test do
