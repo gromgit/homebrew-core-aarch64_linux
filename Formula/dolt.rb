@@ -7,9 +7,9 @@ class Dolt < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "4a751e5931287a1fa7906b4875d94e6432795ed8fe774fd05824129303f5de23" => :catalina
-    sha256 "62d553cf0eea59c7dd07dec079a9c850b85037fefdd4901bfd4c417b18812f65" => :mojave
-    sha256 "a85ae4bccdb7b1dfec194adcbd7d9d1d35eaba9fcf44080a1a3268df7ebf8183" => :high_sierra
+    sha256 "3849972071e1224c9f3997ad74c0f7e8e2c0f34e28db7d69d0a3d173401a418a" => :catalina
+    sha256 "07fbecca6f33b8c6ea71779cfc6a609cbe7890e0663be7d1eb61cf4e72e445a5" => :mojave
+    sha256 "59bddbc645a596ffc60c7e25838430d9f986c1a932cfc8cc92cd0e0459e2b1b5" => :high_sierra
   end
 
   depends_on "go" => :build
