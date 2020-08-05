@@ -8,9 +8,9 @@ class Libgusb < Formula
   license "LGPL-2.1"
 
   bottle do
-    sha256 "9e916fa412c48ec87a1e637011a8427e7486282196c7357b755613f714a552cf" => :catalina
-    sha256 "73c5ad041e47e22306ab183df0bbb40e7cb257e5e3cf657f83627142f6b57fbc" => :mojave
-    sha256 "d854847ba9e74654ca556a6a86dfd9569e99fddfeaaf0e94ad844ba26b282994" => :high_sierra
+    sha256 "e9080684116b2b6e4c78c1c1be5e8e210fab77b6f6b3d659cae1a9ad0c630bbb" => :catalina
+    sha256 "99c0d0471fd33fbf5bc48eeec6dd971d67555ddf47ebe0659f5af0c8d60beeb1" => :mojave
+    sha256 "ae5ef65c9ea969ded1eadfb31f65c32789ad3d1d7c78d80560f14a46cab72561" => :high_sierra
   end
 
   depends_on "gobject-introspection" => :build
