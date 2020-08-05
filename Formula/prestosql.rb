@@ -3,6 +3,7 @@ class Prestosql < Formula
   homepage "https://prestosql.io"
   url "https://search.maven.org/remotecontent?filepath=io/prestosql/presto-server/338/presto-server-338.tar.gz"
   sha256 "d07e29c3a24b317a0c37694e36e1c57effd2325502873aeb84eaf98d51c6691c"
+  revision 1
 
   bottle :unneeded
 
@@ -50,18 +51,11 @@ class Prestosql < Formula
       connector.name=jmx
     EOS
 
-    (bin/"presto-server").write <<~EOS
-      #!/bin/bash
-      export JAVA_HOME="#{Formula["openjdk"].opt_prefix}"
-      exec "#{libexec}/bin/launcher" "$@"
-    EOS
+    (bin/"presto-server").write_env_script libexec/"bin/launcher", Language::Java.overridable_java_home_env
 
     resource("presto-cli").stage do
       libexec.install "presto-cli-#{version}-executable.jar"
-      (bin/"presto").write <<~EOS
-        #!/bin/bash
-        exec "#{Formula["openjdk"].opt_bin}/java" -jar "#{libexec}/presto-cli-#{version}-executable.jar" "$@"
-      EOS
+      bin.write_jar_script libexec/"presto-cli-#{version}-executable.jar", "presto"
     end
   end
 
