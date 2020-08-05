@@ -5,6 +5,7 @@ class Tika < Formula
   mirror "https://archive.apache.org/dist/tika/tika-app-1.24.1.jar"
   sha256 "e56d2e38be4755c78b511f316bda2a55af5c3b3b36e7e5536d3584c71239b187"
   license "Apache-2.0"
+  revision 1
 
   bottle :unneeded
 
@@ -18,16 +19,10 @@ class Tika < Formula
 
   def install
     libexec.install "tika-app-#{version}.jar"
-    (bin/"tika").write <<~EOS
-      #!/bin/bash
-      exec "#{Formula["openjdk"].opt_bin}/java" -jar "#{libexec}/tika-app-#{version}.jar" "$@"
-    EOS
+    bin.write_jar_script libexec/"tika-app-#{version}.jar", "tika"
 
     libexec.install resource("server")
-    (bin/"tika-rest-server").write <<~EOS
-      #!/bin/bash
-      exec "#{Formula["openjdk"].opt_bin}/java" -jar "#{libexec}/tika-server-#{version}.jar" "$@"
-    EOS
+    bin.write_jar_script libexec/"tika-server-#{version}.jar", "tika-rest-server"
   end
 
   test do
