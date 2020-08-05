@@ -8,9 +8,9 @@ class Inko < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f3191304d3390550d8c47e063ca84e204d571f398c6034fda2395487f8aa81ea" => :catalina
-    sha256 "be14d156158816f1389f2b18e04f06f8a6bc9310c9ff6286e1045d9a98f27f18" => :mojave
-    sha256 "751dd81d09fcbd7aff9fe9580997d04f8c96ea45c064a18b94455c7508a3ba7e" => :high_sierra
+    sha256 "a31ee4cbff6f48c5384c1966aa6d3821358706ec4716c9ec5a0f3962adc8be60" => :catalina
+    sha256 "bd7f421a086636e9edb9a6946961c717147b174125f45421d6e1db00c09d42dc" => :mojave
+    sha256 "49de93ab54879a2a48bc4e3dce4f2bc52a5912085583de9290895eadae4b119e" => :high_sierra
   end
 
   depends_on "autoconf" => :build
