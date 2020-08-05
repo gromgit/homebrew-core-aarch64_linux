@@ -8,9 +8,9 @@ class Mercurial < Formula
   license "GPL-2.0"
 
   bottle do
-    sha256 "4442d9b0fb15881077b1db6c4a16b371e4bc2f154de1ed81a11e9a41ee679077" => :catalina
-    sha256 "88e37b6acefc5dd471484482bdb6f4f12b7fa44621cd11233176b08facc2648b" => :mojave
-    sha256 "8419bbee00d870653b44dbf144b8509e1a8db22e5c8560624ddf596aa7d6d47b" => :high_sierra
+    sha256 "99cd39e3f4bd9bbfc94b191d4c73276da4e174f0bd4043de96737c2b91c1bfe8" => :catalina
+    sha256 "a0e0763833b37b8731e2555c99c7a96825df7ab2c978f912b4bb17b87d0f8bcd" => :mojave
+    sha256 "5477a3357f4e2345d626cb5dfe5f090f3765d24100aec70af9c958c5fd6338c0" => :high_sierra
   end
 
   depends_on "python@3.8"
