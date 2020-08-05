@@ -4,6 +4,7 @@ class Detekt < Formula
   url "https://jcenter.bintray.com/io/gitlab/arturbosch/detekt/detekt-cli/1.10.0/detekt-cli-1.10.0-all.jar"
   sha256 "bde5df05598fab5fe6c8f636a2cacce42440591985b744bc77ca519b25d20b9d"
   license "Apache-2.0"
+  revision 1
 
   bottle :unneeded
 
@@ -11,10 +12,7 @@ class Detekt < Formula
 
   def install
     libexec.install "detekt-cli-#{version}-all.jar"
-    (bin/"detekt").write <<~EOS
-      #!/bin/bash
-      exec "#{Formula["openjdk"].opt_bin}/java" -jar "#{libexec}/detekt-cli-#{version}-all.jar" "$@"
-    EOS
+    bin.write_jar_script libexec/"detekt-cli-#{version}-all.jar", "detekt"
   end
 
   test do
