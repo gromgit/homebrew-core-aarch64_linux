@@ -7,9 +7,9 @@ class Rocksdb < Formula
 
   bottle do
     cellar :any
-    sha256 "d0bf91474177980de65bf72f41fbdfe60d5e5c934cfbb56011a0636e9dee1717" => :catalina
-    sha256 "3fc961b8a51c6e5e2a85e43d1dc5fad0c59db80315784bb75e82345bc240b9c3" => :mojave
-    sha256 "9c1a3a6ee74fda67c2af84f25f41bd9c9769513b6d48bc222db1baceeb527ba8" => :high_sierra
+    sha256 "e480342b56120c038d7d29de482eea256f3d4b4b173701a37fdf9afddf92b9a9" => :catalina
+    sha256 "230c7bb4164b9a819da6b8118252c650e6b71a04769bfd242d3e561ab9361cc2" => :mojave
+    sha256 "c08fc8d6ad16f159fe8a2dccf118752e730fad45840c95ed2cf34cf875474c66" => :high_sierra
   end
 
   depends_on "gflags"
