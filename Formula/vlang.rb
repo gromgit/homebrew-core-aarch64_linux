@@ -1,8 +1,9 @@
 class Vlang < Formula
   desc "V programming language"
   homepage "https://vlang.io"
-  url "https://github.com/vlang/v/archive/0.1.28.1.tar.gz"
-  sha256 "cbaded862d56d943c119630bf13974ef4370bb7fff533d244c9f42f7f5c5f3ad"
+  # Note: Keep this in sync with V compiler below when updating
+  url "https://github.com/vlang/v/archive/0.1.29.tar.gz"
+  sha256 "5111d04663d8454c9e8bcbd7e3544dcbd6abc54eb5034e31649417af6e8418a6"
   license "MIT"
 
   bottle do
@@ -16,8 +17,8 @@ class Vlang < Formula
     # For every vlang release there is a matching commit of the V compiler in the format
     # "[v:master] {short SHA of the vlang release commit} - {vlang version number}".
     # The sources of this V compiler commit need to be used here
-    url "https://github.com/vlang/vc/archive/197b42bd0e9268ec7c3c16526edc8530ad90a075.tar.gz"
-    sha256 "a8319bc8b9a7683d798825deee7b2fdae944f2c53ff19024f75dd3472eeccd93"
+    url "https://github.com/vlang/vc.git",
+      revision: "b01d0fcda4b55861baa4be82e307cca4834b1641"
   end
 
   def install
