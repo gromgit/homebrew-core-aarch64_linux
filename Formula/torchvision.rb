@@ -5,6 +5,13 @@ class Torchvision < Formula
   sha256 "fa0a6f44a50451115d1499b3f2aa597e0092a07afce1068750260fa7dd2c85cb"
   license "BSD-3-Clause"
 
+  bottle do
+    cellar :any
+    sha256 "49d97796750224bad8b8b736baf55559ea5d14e213f64ed9f694a3e7af5b0436" => :catalina
+    sha256 "24c96d72711af9ed8b2164ba2ffee46ebacc2c0423482a1afde2426c5343b81b" => :mojave
+    sha256 "f555a780fe0a5c1f6685ddf17248efb97459ff3ad1c4b15b1d07d56088eda5f4" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "python@3.8" => :build
   depends_on "libtorch"
