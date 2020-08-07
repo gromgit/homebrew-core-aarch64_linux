@@ -9,9 +9,9 @@ class Bazelisk < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d1462676651a8d389cdd4114b61d05db442b1b73806797f8033a7c7bf76dc638" => :catalina
-    sha256 "30e28be7758c0c4675deb753081bb32b6a9053bdf825dca6087d99c3f17fb3e9" => :mojave
-    sha256 "df36ce6e180c27bc5f9edd1ab5e3d34594da5ad9f21a2ded037f6a622c5adf5f" => :high_sierra
+    sha256 "627e1557a552c5ed5eddfb53126ed152752e209d3b58061ad418ba9fc0290259" => :catalina
+    sha256 "a247e13b854c070f5cd7a3f41cafd000873784e784dba6ebfe77966a260f2c65" => :mojave
+    sha256 "179ad490882d4761a713d02f0d715fa4bd131910446c984ad107ee3c87b52cdb" => :high_sierra
   end
 
   depends_on "go" => :build
