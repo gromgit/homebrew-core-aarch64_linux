@@ -9,9 +9,9 @@ class BalenaCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 "988699fb14a192cd4c4a34f57323a72ab74e5fbb2eb89e8aacf6b8cbfe5cfd53" => :catalina
-    sha256 "0c3ba3d0ae7ff4440d0653638b24e8a7c536ff9c8b5f7ed2da51a9722b0fefb6" => :mojave
-    sha256 "ea4ded2cbba1e571ffab3a365a676f8cb47addad1a44d81953cc45a48c447150" => :high_sierra
+    sha256 "2475e4f308feccc35fc2596c0ff9fc2c215ff8b63de5cff6be9b0a37c2dc6f5c" => :catalina
+    sha256 "38bd5a398661ed223176160bf86d46e3f32cc47843dc43a955f5cb8f8e566017" => :mojave
+    sha256 "caac09808a877df6067c5e17f63b824865f8f8bee171a8c9420cc87bfc196411" => :high_sierra
   end
 
   depends_on "node"
