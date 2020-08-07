@@ -9,9 +9,9 @@ class Reposurgeon < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b66f514eadf1c9c1b05a953cf8ffda7623adc2ea6a1e828926e9658e52458956" => :catalina
-    sha256 "ee5bdbf4903ce0a7be0916f4b0193db771984ade17b670dfcfa33db2ace7e226" => :mojave
-    sha256 "124eca67a4500349387b3a28cc237a65f520bff81d508c83d0cd6513345f0292" => :high_sierra
+    sha256 "70884b75eabc115f95d2a1ddf3cbe00262da98f6e4e635e11c4df23461c9741c" => :catalina
+    sha256 "23f535aabc71a938a7b3abc464887d2c9cb7a64ea3e87045165b70edcb141782" => :mojave
+    sha256 "b194525b3aff91ffb17169e84c4b1f96d815056c2ccfada78e9e57e0ab2802df" => :high_sierra
   end
 
   depends_on "asciidoctor" => :build
