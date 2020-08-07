@@ -11,9 +11,9 @@ class Semgrep < Formula
 
   bottle do
     cellar :any
-    sha256 "03233df07aa8301268a673992c66343d17f5ebdf3e121b40be865fba823fce56" => :catalina
-    sha256 "02dfbd98a4030d2d7d763b03103b4761ad7e5833115a53a5dd533ebeb5957fa4" => :mojave
-    sha256 "52a2bf82789c8678f67666d48ad0a27e042f7bde7a0cf7abe369d0d960a2194d" => :high_sierra
+    sha256 "c8396745dd6248f3318fcec5cc1e036657d8b8c41b27ff33ab9026b36fc9432f" => :catalina
+    sha256 "1c48eddc8027a3e8c8fca46f208ced85f9b6c953e0e095b5601bd54f1b70eec8" => :mojave
+    sha256 "fe57010998baa185487a3624c685a2bfc595b32b531d8552767a2b619295307c" => :high_sierra
   end
 
   depends_on "cmake" => :build
