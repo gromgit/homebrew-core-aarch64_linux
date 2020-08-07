@@ -8,9 +8,9 @@ class Fblog < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "fdef753a3f63feb70bcb2a37b14433a65353c83720e3d64131bcaacce17a7590" => :catalina
-    sha256 "99c727fc90cfb248e2d667d8906ee312cdbc34bb79fc35bd0f0fbc94e578e241" => :mojave
-    sha256 "163b953a575ee872f8c5f7f7c599e33274d3562b4e0202d1332baf279a4a3e8c" => :high_sierra
+    sha256 "073b76d7c246f672906e7ededa27fb4791f7282a458638829da9e8e4667ef8c9" => :catalina
+    sha256 "16bdfe547bdad0b581ac563e1420623df35eda3a52e293f229f6e84e46010798" => :mojave
+    sha256 "8ddd09ea7663352daba5ffeb48a35f05bab17ab729dc24d3e0bb1f8c3aee1db9" => :high_sierra
   end
 
   depends_on "rust" => :build
