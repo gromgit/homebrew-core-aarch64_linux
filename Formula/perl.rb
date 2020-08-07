@@ -17,6 +17,13 @@ class Perl < Formula
   # Prevent site_perl directories from being removed
   skip_clean "lib/perl5/site_perl"
 
+  patch do
+    # Enable build support on macOS 11.x
+    # Remove when https://github.com/Perl/perl5/pull/17946 is merged
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/526faca9830646b974f563532fa27a1515e51ca1/perl/version_check.patch"
+    sha256 "cff250437f141eb677ec2215a9f2dfcbacba77304dac06499db6c722c9d30b58"
+  end
+
   def install
     args = %W[
       -des
