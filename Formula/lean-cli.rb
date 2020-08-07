@@ -1,8 +1,8 @@
 class LeanCli < Formula
   desc "Command-line tool to develop and manage LeanCloud apps"
   homepage "https://github.com/leancloud/lean-cli"
-  url "https://github.com/leancloud/lean-cli/archive/v0.22.0.tar.gz"
-  sha256 "c00aa7f6510aa9d19e4299acdadd8f726b37d5ce7c664514e6e44c287c5a2cf1"
+  url "https://github.com/leancloud/lean-cli/archive/v0.23.0.tar.gz"
+  sha256 "f87fde319a9275db81eafb205d71760bc9548551ba9f781a63ae74224219bebb"
   license "Apache-2.0"
   head "https://github.com/leancloud/lean-cli.git"
 
@@ -17,17 +17,18 @@ class LeanCli < Formula
 
   def install
     build_from = build.head? ? "homebrew-head" : "homebrew"
-    ENV["GOPATH"] = buildpath
-    mkdir_p buildpath/"src/github.com/leancloud/"
-    ln_s buildpath, buildpath/"src/github.com/leancloud/lean-cli"
-    system "go", "build", "-o", bin/"lean",
-                 "-ldflags", "-X main.pkgType=#{build_from}",
-                 "github.com/leancloud/lean-cli/lean"
+    system "go", "build",
+            "-ldflags", "-X main.pkgType=#{build_from}",
+            *std_go_args,
+            "-o", bin/"lean",
+            "./lean"
+
     bash_completion.install "misc/lean-bash-completion" => "lean"
     zsh_completion.install "misc/lean-zsh-completion" => "_lean"
   end
 
   test do
     assert_match "lean version #{version}", shell_output("#{bin}/lean --version")
+    assert_match "Please login first.", shell_output("#{bin}/lean init 2>&1", 1)
   end
 end
