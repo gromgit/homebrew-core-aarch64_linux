@@ -6,6 +6,13 @@ class Nfpm < Formula
   license "MIT"
   head "https://github.com/goreleaser/nfpm.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "99b37801162d659f9a4c9b030334265a2f38cd2dd25dc48d2d4f3eb70b42a8e3" => :catalina
+    sha256 "fa0bd63df89fb0ee8d558b598e10a7c321312a62e3c3dd4c71e63b93bd1a21d7" => :mojave
+    sha256 "08f9679364e20c4d0814988f0713581c8207c12a30d315a3b26bcd186ce902eb" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
