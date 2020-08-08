@@ -6,9 +6,9 @@ class Re2c < Formula
   license :public_domain
 
   bottle do
-    sha256 "617a92159d2aefb4b454b81496c5c8615f27a303249c11f5ac40f887ee8ca392" => :catalina
-    sha256 "d9ae7d2af374b4c57e106685b19998216265d651e8e270af822531f47c3ae44a" => :mojave
-    sha256 "69d41987ea6a3250d7f4d5ff559013b20e055c99fb892cf24a14b131724515e5" => :high_sierra
+    sha256 "322bebea8b7ef36ba9fa67f8eb244720e703e3caa61c4cb0c3f69233844a7249" => :catalina
+    sha256 "c4e54f2eebcc3bf581d8b0a794041f6cbbbdc0148856d2061069396412fb080f" => :mojave
+    sha256 "070dcf3fdca558cb8aac21bc3db638faba8aaadcacd199f459a4bef743d87ecd" => :high_sierra
   end
 
   def install
