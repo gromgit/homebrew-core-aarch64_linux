@@ -8,9 +8,9 @@ class Devspace < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "09545e263d88a5cce5129d58b7cecc2b4f609266bb2f7280c911bb6320304e6e" => :catalina
-    sha256 "85629be8d03222a334b32ddd61dc9b599bd86a8644295faf4ea050020568eeba" => :mojave
-    sha256 "2a8e26bec72882dd303856c7960b664f558967382e82a2285cc871075f9639a3" => :high_sierra
+    sha256 "896a6d26a9fa1d54ec5c525cc4c3db53fd32099e4e5f4ec79a5654a25dca4f9d" => :catalina
+    sha256 "791195439e829f4a7cc0f4df05c983fab6b0a4fb2a25c9a836d5db939ae13c03" => :mojave
+    sha256 "dfb08c95936772779312c5c61da43678658981d0c0855dfeeb28f74211b77508" => :high_sierra
   end
 
   depends_on "go" => :build
