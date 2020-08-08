@@ -18,11 +18,11 @@ jobs:
 
     - name: Cache Bundler RubyGems
       id: cache
-      uses: actions/cache@main
+      uses: actions/cache@v1
       with:
         path: ${{ steps.set-up-homebrew.outputs.gems-path }}
-        key: ${{ runner.os }}-gems-${{ steps.set-up-homebrew.outputs.gems-hash }}
-        restore-keys: ${{ runner.os }}-gems-
+        key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+        restore-keys: ${{ runner.os }}-rubygems-
 
     - name: Install Bundler RubyGems
       if: steps.cache.outputs.cache-hit != 'true'
