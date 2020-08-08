@@ -4,7 +4,7 @@ class Rawtoaces < Formula
   url "https://github.com/ampas/rawtoaces/archive/v1.0.tar.gz"
   sha256 "9d15e7e30c4fe97baedfdafb5fddf95534eee26392002b23e81649bbe6e501e9"
   license "AMPAS"
-  revision 9
+  revision 10
 
   bottle do
     sha256 "7df849270b754ff329d7e87c96f7338077269aea3a93244795982a61fcc0cdcc" => :catalina
@@ -18,6 +18,13 @@ class Rawtoaces < Formula
   depends_on "ceres-solver"
   depends_on "ilmbase"
   depends_on "libraw"
+
+  # Fixes build with libraw 0.20.0
+  # https://github.com/ampas/rawtoaces/pull/120
+  patch do
+    url "https://github.com/ampas/rawtoaces/commit/86d13a0b6d6a7058594258dfa6e1c5888d6a0b75.patch?full_index=1"
+    sha256 "a0a897a6341783e7e4b4db117b37d54bd3197bb42e9c90b59dd74361137388d8"
+  end
 
   def install
     ENV.cxx11
