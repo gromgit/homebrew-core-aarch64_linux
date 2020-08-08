@@ -10,9 +10,9 @@ class Liquidctl < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "cb1825861905de403f759203b015a7e3fca7ba814e0a364b93426f21ff28553b" => :catalina
-    sha256 "89f6b2caa75d40bb321783eea887c1298a6467cdd517cbe2f9ad14c4b6acfd15" => :mojave
-    sha256 "af6b3aa6900598d9524a42dc572ad0c28bc6a05f10e67b5459ec67c560c42d88" => :high_sierra
+    sha256 "2ac17a2c76c3e9573fa25446b3163d6d12971717a5fffe398a0bfed1b96cc0cb" => :catalina
+    sha256 "751f952fd1716a93878e4260706f9b704bb7131cd187426caa66092e6ea442de" => :mojave
+    sha256 "a792d9ed36334e5b7a3d56b84445a630dd5cfc1124cf1da1271399368d0e7214" => :high_sierra
   end
 
   depends_on "libusb"
