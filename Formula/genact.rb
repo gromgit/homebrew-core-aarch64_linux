@@ -7,10 +7,9 @@ class Genact < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "38ba680b756939cbf698a3bb4e135613663e5d7778f15cf03c8cd2fb19abdad7" => :catalina
-    sha256 "da6e18f5cbe7a84c8ad3c4a3d079d7ca0deaded383d98ce72afed4f770a02aed" => :mojave
-    sha256 "2c962de62551fce95f18b2e46cc9b1140256daa10fcd5555d5cfc2e3999df340" => :high_sierra
+    sha256 "550cbb0ca15284dd7b6bbf4e006b80972a2ba3e1aadff66624b1bcbce9f70f39" => :catalina
+    sha256 "403a5768a7198c6d317a8170e9eca2937ca3e956c418b041840f2f30f811ffc0" => :mojave
+    sha256 "0f53228b7e1bc47bab7b596067b67e3670649749a5192d3435e6381069d6d1bd" => :high_sierra
   end
 
   depends_on "rust" => :build
