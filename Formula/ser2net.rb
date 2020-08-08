@@ -1,10 +1,9 @@
 class Ser2net < Formula
   desc "Allow network connections to serial ports"
   homepage "https://ser2net.sourceforge.io"
-  url "https://downloads.sourceforge.net/project/ser2net/ser2net/ser2net-4.2.0.tar.gz"
-  sha256 "1d895f005896e8c5bcff4fe573e2fec3611bf4feee1247857e476b74323d916c"
-  license "GPL-2.0"
-  revision 1
+  url "https://downloads.sourceforge.net/project/ser2net/ser2net/ser2net-4.2.1.tar.gz"
+  sha256 "a0d84c71a6bc75d73737461708f964084c6bbfe0cc1ef4725b4cd9cc35de14c0"
+  license "GPL-2.0-only"
 
   bottle do
     cellar :any
@@ -14,11 +13,10 @@ class Ser2net < Formula
   end
 
   depends_on "libyaml"
-  depends_on macos: :sierra # needs clock_gettime
 
   resource "gensio" do
-    url "https://downloads.sourceforge.net/project/ser2net/ser2net/gensio-2.1.2.tar.gz"
-    sha256 "4b84c81376bcc557818d771a995fc0dddf77f146365a836c70c3d4c55f503dbc"
+    url "https://downloads.sourceforge.net/project/ser2net/ser2net/gensio-2.1.4.tar.gz"
+    sha256 "1f5a29aabfb35886893cfda5cd78192db67e96de796dbf9758dbecd4077a3fd8"
   end
 
   def install
