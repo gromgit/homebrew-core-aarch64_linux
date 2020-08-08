@@ -4,6 +4,7 @@ class Coturn < Formula
   url "http://turnserver.open-sys.org/downloads/v4.5.1.3/turnserver-4.5.1.3.tar.gz"
   sha256 "408bf7fde455d641bb2a23ba2df992ea0ae87b328de74e66e167ef58d8e9713a"
   license "BSD-3-Clause"
+  revision 1
 
   livecheck do
     url "http://turnserver.open-sys.org/downloads/"
@@ -20,6 +21,13 @@ class Coturn < Formula
   depends_on "libevent"
   depends_on "libpq"
   depends_on "openssl@1.1"
+
+  # fix compilation on macOS Big Sur
+  # remove in next release
+  patch do
+    url "https://github.com/coturn/coturn/commit/5b07b98.patch?full_index=1"
+    sha256 "186cbd35d74d440abfddf5a04c46a7ce781ceca7af989b1000feb5f98b2c270a"
+  end
 
   def install
     system "./configure", "--disable-debug",
