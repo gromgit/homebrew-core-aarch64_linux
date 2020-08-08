@@ -1,8 +1,8 @@
 class RangeV3 < Formula
   desc "Experimental range library for C++14/17/20"
   homepage "https://ericniebler.github.io/range-v3/"
-  url "https://github.com/ericniebler/range-v3/archive/0.10.0.tar.gz"
-  sha256 "5a1cd44e7315d0e8dcb1eee4df6802221456a9d1dbeac53da02ac7bd4ea150cd"
+  url "https://github.com/ericniebler/range-v3/archive/0.11.0.tar.gz"
+  sha256 "376376615dbba43d3bef75aa590931431ecb49eb36d07bb726a19f680c75e20c"
   license "BSL-1.0"
 
   bottle do
