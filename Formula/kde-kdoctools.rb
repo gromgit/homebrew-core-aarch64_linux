@@ -6,9 +6,9 @@ class KdeKdoctools < Formula
   head "https://invent.kde.org/frameworks/kdoctools.git"
 
   bottle do
-    sha256 "2c6b89009cad1bd129abedd5f3eb01c216c2c9b53fa712a68f2552ed7c779122" => :catalina
-    sha256 "98afe3eeefc5af7fa8f52bf128dc93ec25198ac60c5fc590d35409fc09b1ecc0" => :mojave
-    sha256 "6b1fec3f94d540be8903da06086686478dbc258a73ea6945b73a1b5eae137284" => :high_sierra
+    sha256 "e652121fcb077c55b3b3ab2c2770c1641e1fc4fdb66c1c7b79f6dffd69d944bc" => :catalina
+    sha256 "a5a8e1774f647543ed0c589fe66dc1e1b5269012f0296238b28014605e6c9c7d" => :mojave
+    sha256 "98938ebf9005887f434410c1db617eb5f6bd18006f28589be18714ae988f631c" => :high_sierra
   end
 
   depends_on "cmake" => [:build, :test]
