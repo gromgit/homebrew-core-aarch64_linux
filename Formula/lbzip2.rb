@@ -9,13 +9,9 @@ class Lbzip2 < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "680d9be89102168fac9b4ae8403486d99c7337423f0774721a620ffb338d226a" => :catalina
-    sha256 "e9a936e34f1b42f2b7c57deb4eebfa76ee9dd8967960fad81babef5ac8f23867" => :mojave
-    sha256 "d297c1d65f6d255c8fec3afa0b79b9b24e92b5462f47673ba8950a8c81a06b90" => :high_sierra
-    sha256 "e30a2f0d1bb044183857ea0f6c0b314f97b66b800916f71c0788cbdcf58fcdbc" => :sierra
-    sha256 "91c1fb0593205365ff4ada30a34fe7f3afcb1c4e684a3bf239e9168d9fdfc4f7" => :el_capitan
-    sha256 "983c8fe1c23dbfdb73d9e7320e776521c4998169a2d17cd1c6f3035674d8a147" => :yosemite
-    sha256 "7e521c70fadae71ad2e7807cc844183c05751e4a2433d9f1210069fb2a34333e" => :mavericks
+    sha256 "6643ba1c0f17a13e742383c69112df62c1d6bce80e6833d717df4e112922deb5" => :catalina
+    sha256 "5f7f053aac95586cdcacb2528fe4540bd16522707e9d7bbbf8e6d38012378e06" => :mojave
+    sha256 "3d4e0de242b81f83ba2addd163688647288fb17f3a3ae3ccd37a2e62f20871d4" => :high_sierra
   end
 
   # Fix crash on macOS >= 10.13.
