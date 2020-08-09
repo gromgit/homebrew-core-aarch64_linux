@@ -8,9 +8,9 @@ class TreCommand < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "eea4f9721693b8a53653493a5f23ba5c479408f93af5b523c0b1c2a735e8221a" => :catalina
-    sha256 "5cc06505dea4282bf314af76b1e4b4fd0157c837c984ce579251cd65d53a0623" => :mojave
-    sha256 "b5732a5671204ef476c21bded3722d2f72227dcd9da6582185b316dee6fab97b" => :high_sierra
+    sha256 "850e60da6af3a6a385a6f176b89f48808d3000682cc639203dc722aa8dddbab0" => :catalina
+    sha256 "2c3ac22146a844ede3c8f2689e6ec00ff8dcddf4432fee2783d8cccfdf1d9e8f" => :mojave
+    sha256 "de1035a4023926ae8a8be54d00d3749c079a2954a8de25594a00584da71192d9" => :high_sierra
   end
 
   depends_on "rust" => :build
