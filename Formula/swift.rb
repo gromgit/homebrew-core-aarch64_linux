@@ -8,8 +8,8 @@ class Swift < Formula
   revision 1
 
   bottle do
-    sha256 "46a8fe5334749039cca2b04a20e1f0e94977ada7490cacbe50c92c355d7f4164" => :catalina
-    sha256 "0c89bf717243451df78d8e74c789b64b12d8320ca5eb13ee324e86371c77beb0" => :mojave
+    sha256 "26e59645661eaeea4b9c59deea4dd5591dedce7c74b20c772f2e82ab3450d678" => :catalina
+    sha256 "b49fe185bb64ab86515c9b51d43046aad807fa70e49668a403385a72cc4a70b7" => :mojave
   end
 
   keg_only :provided_by_macos
