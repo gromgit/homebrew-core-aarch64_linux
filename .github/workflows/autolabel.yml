@@ -46,7 +46,7 @@ jobs:
                 }, {
                     "label": "deprecated license",
                     "path": "Formula/.+",
-                    "content": "license .*\"(GPL|LGPL|AGPL|GFDL)-\d\.\d\+?\".*"
+                    "content": "license .*\"(GPL|LGPL|AGPL|GFDL)-[0-9]\.[0-9]\+?\".*"
                 }, {
                     "label": "go",
                     "path": "Formula/.+",
