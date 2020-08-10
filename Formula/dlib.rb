@@ -8,9 +8,9 @@ class Dlib < Formula
 
   bottle do
     cellar :any
-    sha256 "72c4cead9806e3416452ec0acb918f36428b97368189a85f3074864dec0f7229" => :catalina
-    sha256 "7f41f22f65075ff180b306d6e34156d3197a3201cbe862d2fa2ad01d0a70db1d" => :mojave
-    sha256 "f7b967654cd3a85d235ca6406f94fa0ee03be8bd8f4e7a77ab306e77c7864ecf" => :high_sierra
+    sha256 "e2d4bb20a24df712a73fc74c162851dbfededf25391e4ae002858d705cbfb112" => :catalina
+    sha256 "58ad454876f4a987a8fff1df2fc5f7e04693a19cb0ece79eaa7ffb2dcdf18c36" => :mojave
+    sha256 "c34bb491a71eb49ab4eb9af3dd18d2c8557f9f06b14b55b08aa8ed7d3cf6945e" => :high_sierra
   end
 
   depends_on "cmake" => :build
