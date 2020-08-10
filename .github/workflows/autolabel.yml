@@ -1,6 +1,7 @@
 name: Label pull requests
 
 on:
+  workflow_dispatch:
   schedule:
     # Once every 30 minutes
     - cron: '*/30 * * * *'
