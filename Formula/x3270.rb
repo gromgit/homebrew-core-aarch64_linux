@@ -6,9 +6,9 @@ class X3270 < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 "0a97545f8a95a71631e033a52b15a99c36ba620d5e79a62fb8f4e947ed48b827" => :catalina
-    sha256 "1cb7acd49a6aadfbda744a7bd29a5002b0f521ebe989ee9b866c2e172051e964" => :mojave
-    sha256 "eadc86529406c0c5a2e5b5a3182037b1341eb4ef4326421722faa35edfbdf07a" => :high_sierra
+    sha256 "c6fe40f28c1b0e20cb3ee10280f324ac272f5b4b4fc77209660bf2a095d855a3" => :catalina
+    sha256 "6b56b9d4bee80297a4e2ee4e18e1ca50efab5b5870445e7741a2c446732d237d" => :mojave
+    sha256 "7de587f8dd4eb24ddd2c2d9ab48b82aa9ca2097cf5797bb8a33c35494acd8840" => :high_sierra
   end
 
   depends_on "readline"
