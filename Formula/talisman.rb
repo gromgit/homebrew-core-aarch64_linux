@@ -9,9 +9,9 @@ class Talisman < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9eb4f610bb1a9df059215ff73b7824e41843d4533f7c7fb0c54a63955bacb36f" => :catalina
-    sha256 "226b694a1e3619ec361fd49be1f502e7608fa6cef23c0ffaa1eedeff93131173" => :mojave
-    sha256 "953b5dfcb93d7344444460d695dbaba06f928194307d7bd43b17ecbf2f53618c" => :high_sierra
+    sha256 "38b29f67639b7cf0a1487df3d0da050a1f386bfb142989f01d9ee751b760f650" => :catalina
+    sha256 "84132617d2b54108bb8214e430c86453051c2bca527b48a9c927f4790bedfd1f" => :mojave
+    sha256 "1b9cd5dc1388dd311dabf5a910a25ce34ffb0d7d614fa684f8b4bf102f3ee712" => :high_sierra
   end
 
   depends_on "go" => :build
