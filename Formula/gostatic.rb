@@ -6,6 +6,13 @@ class Gostatic < Formula
   license "ISC"
   head "https://github.com/piranha/gostatic.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "9442534f628490c837ad638025a327654fbe9ea32181ac282fb50e375833b8a7" => :catalina
+    sha256 "d9ccf0db837ffdec144e6d0e96b3bd0b00ec5862f99b378a39d32befa52da708" => :mojave
+    sha256 "bacddb091bd43d5ed7d4d0fce06fbceb79bdbcbfbaf44134eff09731de835490" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
