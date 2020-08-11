@@ -5,6 +5,12 @@ class Acl2 < Formula
   sha256 "45eedddb36b2eff889f0dba2b96fc7a9b1cf23992fcfdf909bc179f116f2c5ea"
   license "BSD-3-Clause"
 
+  bottle do
+    sha256 "fb689491e046319cd8ccf2133f8f0944feedb32f04785da0fb79f36da35dfb64" => :catalina
+    sha256 "fd941d803c5fba0fb4b421a03074344b37eed013e383b65bdae4082163b7331e" => :mojave
+    sha256 "b10ec2c8fabb4a01b443108c3ea27a36a565c1adf838291057dba418e8111a23" => :high_sierra
+  end
+
   depends_on "sbcl"
 
   def install
