@@ -5,6 +5,13 @@ class TerraformAT012 < Formula
   sha256 "17df1258f99865681fda2086c804336246407e74c195ae7a45e3e34de98b82ca"
   license "MPL-2.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "6dd856617186380d96a3b277e6df15f9df0a929c44c1567e70cc1cff8fcc58e3" => :catalina
+    sha256 "6dd856617186380d96a3b277e6df15f9df0a929c44c1567e70cc1cff8fcc58e3" => :mojave
+    sha256 "6dd856617186380d96a3b277e6df15f9df0a929c44c1567e70cc1cff8fcc58e3" => :high_sierra
+  end
+
   keg_only :versioned_formula
 
   depends_on "go@1.13" => :build
