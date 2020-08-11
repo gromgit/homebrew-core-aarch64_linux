@@ -2,8 +2,8 @@ class OperatorSdk < Formula
   desc "SDK for building Kubernetes applications"
   homepage "https://coreos.com/operators/"
   url "https://github.com/operator-framework/operator-sdk.git",
-      tag:      "v0.19.2",
-      revision: "4282ce9acdef6d7a1e9f90832db4dc5a212ae850"
+      tag:      "v1.0.0",
+      revision: "d7d5e0cd6cf5468bb66e0849f08fda5bf557f4fa"
   license "Apache-2.0"
   head "https://github.com/operator-framework/operator-sdk.git"
 
@@ -30,20 +30,13 @@ class OperatorSdk < Formula
   end
 
   test do
-    # Use the offical golang module cache to prevent network flakes and allow
-    # this test to complete before timing out.
-    ENV["GOPROXY"] = "https://proxy.golang.org"
-
     if build.stable?
       version_output = shell_output("#{bin}/operator-sdk version")
       assert_match "version: \"v#{version}\"", version_output
       assert_match stable.specs[:revision], version_output
     end
 
-    # Create an example AppService operator. This exercises most of the various pieces
-    # of generation logic.
-    args = ["--type=ansible", "--api-version=app.example.com/v1alpha1", "--kind=AppService"]
-    system "#{bin}/operator-sdk", "new", "test", *args
-    assert_predicate testpath/"test/requirements.yml", :exist?
+    system bin/"operator-sdk", "init", "--domain=example.com", "--repo=example.com/example/example"
+    assert_predicate testpath/"bin/manager", :exist?
   end
 end
