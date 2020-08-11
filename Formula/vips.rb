@@ -3,7 +3,8 @@ class Vips < Formula
   homepage "https://github.com/libvips/libvips"
   url "https://github.com/libvips/libvips/releases/download/v8.10.0/vips-8.10.0.tar.gz"
   sha256 "1299d3a98213ae477f0180817ec79afd36803a5b8434f48068e75a721d23b6f9"
-  license "LGPL-2.1"
+  license "LGPL-2.1-or-later"
+  revision 1
 
   bottle do
     sha256 "22d7a4ed2c7964a11f8d9319a71ffd9034ca72a52d4bf4c9cdfef1d1b2c42931" => :catalina
@@ -26,6 +27,7 @@ class Vips < Formula
   depends_on "libmatio"
   depends_on "libpng"
   depends_on "librsvg"
+  depends_on "libspng"
   depends_on "libtiff"
   depends_on "little-cms2"
   depends_on "mozjpeg"
