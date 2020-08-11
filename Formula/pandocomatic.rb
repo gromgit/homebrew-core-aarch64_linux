@@ -5,6 +5,13 @@ class Pandocomatic < Formula
   sha256 "902d1c366e85c14b5a3bc0fd5247b22fde985858f8f985e368e3eb7c03324e23"
   license "GPL-3.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "e8844df8b3f91e671a6734004ecb712db288adcf8952d17aa444e7cba8a29115" => :catalina
+    sha256 "c3e059e365bf28455fbb0db2010e09195ff01b78ca02248bb6282f7d03136be2" => :mojave
+    sha256 "5824fc9e4accf029a29ddc6dc31f1027d9e63d2752c316bcf941eddf75884b64" => :high_sierra
+  end
+
   depends_on "pandoc"
   uses_from_macos "ruby", since: :catalina
 
