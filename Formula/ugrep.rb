@@ -5,6 +5,12 @@ class Ugrep < Formula
   sha256 "98cc23f27ec4ebba14d36f21b5625e0def4aab3e65afecc609e676938002b110"
   license "BSD-3-Clause"
 
+  bottle do
+    sha256 "fe7ed295538c51459e4dd89bdf47cf5bef13d8707f1ba74c5b563134c48e6811" => :catalina
+    sha256 "5188397bf07fc26fabb0cb417cc4f017b08693164c81d4345f5830a3a814767a" => :mojave
+    sha256 "d701f4a1b01d3eafd8d44f2a468c975d47cf6ede9c0afb82f5303b55187453eb" => :high_sierra
+  end
+
   depends_on "pcre2"
   depends_on "xz"
 
