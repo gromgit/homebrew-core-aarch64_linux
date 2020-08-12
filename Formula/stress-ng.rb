@@ -7,9 +7,9 @@ class StressNg < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7d1828bffc59f3c2362dc384459a3a77fe590c22c7b0870590c43f15ef1c796b" => :catalina
-    sha256 "3f24d951bb942d2371643041d3a40a749bb0d7582dbbea7de9d0baa57a53be59" => :mojave
-    sha256 "ce6ba7b9462527da068ccc3252e22ce1635cc31d2c7c4f7048b6b462d23e0168" => :high_sierra
+    sha256 "8e049dcd01ec4b4f3a60e5cb54ebe6be5c083130859b297c63e767cecf24890b" => :catalina
+    sha256 "866d91a80f928888bd171fa93894d87d0688f8ece209c5bf62e916ef677528f9" => :mojave
+    sha256 "b0a0ee1d1f9ddb42d335bcd2cfad3070471fd5fc26a034fd2a9530161b7ac1c1" => :high_sierra
   end
 
   depends_on macos: :sierra
