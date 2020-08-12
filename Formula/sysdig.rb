@@ -6,9 +6,9 @@ class Sysdig < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 "c3b1b55e16c9e7d143138c0b824872f000e92a9323c43683877da83c0eeeeda0" => :catalina
-    sha256 "de3c1cedda2cdc14ba06892f556161c25f023975ff4a9b8a38ad47a13bcdc13d" => :mojave
-    sha256 "41b0016def49ba75c9d48dcc4d017fe684aedb79e2a35132952cee85ec1c0b33" => :high_sierra
+    sha256 "592586c570869dabe8da4ed4d81c280a1db9c0e9dd4ca813af30e4a313c611ea" => :catalina
+    sha256 "95c565cd53a705937b4036c794b439c3707177fc02527ad3f1ad1439d838df85" => :mojave
+    sha256 "88f2a23fa721a6bf6c13b6d22525a2deea83c4efb1c08a3abf72af3e92b8f290" => :high_sierra
   end
 
   depends_on "cmake" => :build
