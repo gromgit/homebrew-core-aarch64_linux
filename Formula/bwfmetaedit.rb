@@ -7,9 +7,9 @@ class Bwfmetaedit < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "72cdfdf26527d3a82cac945c81a9a53097dd4831f3a315fdbd1dc67e0f1a01d0" => :catalina
-    sha256 "3afb53dc8f46493cc50dbce9d6369b84385110b908a847d2ab84eca9c06ff8cb" => :mojave
-    sha256 "332b5ad0e217e6433f51d25135f98036120f6444820dcece627228c1fdfe881c" => :high_sierra
+    sha256 "f8fc7ea2c57a3eaa0a247cbce5ae47839efc7ef098f3333d34f0d5628250fef2" => :catalina
+    sha256 "8c0514552045937ff4ed9d27073ffcd9e4516b44fea073eddd11729ac8fe2c7e" => :mojave
+    sha256 "bc8b768a4849b8c3740b18becc861fac1cde2e5294662dcd6e5c5697b91b15a2" => :high_sierra
   end
 
   def install
