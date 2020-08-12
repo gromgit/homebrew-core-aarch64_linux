@@ -3,7 +3,8 @@ class Ccache < Formula
   homepage "https://ccache.dev/"
   url "https://github.com/ccache/ccache/releases/download/v3.7.11/ccache-3.7.11.tar.xz"
   sha256 "8d450208099a4d202bd7df87caaec81baee20ce9dd62da91e9ea7b95a9072f68"
-  license "GPL-3.0"
+  license "GPL-3.0-or-later"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
@@ -39,13 +40,13 @@ class Ccache < Formula
       cc
       gcc gcc2 gcc3 gcc-3.3 gcc-4.0
       gcc-4.2 gcc-4.3 gcc-4.4 gcc-4.5 gcc-4.6 gcc-4.7 gcc-4.8 gcc-4.9
-      gcc-5 gcc-6 gcc-7 gcc-8 gcc-9
+      gcc-5 gcc-6 gcc-7 gcc-8 gcc-9 gcc-10
       c++ c++3 c++-3.3 c++-4.0
       c++-4.2 c++-4.3 c++-4.4 c++-4.5 c++-4.6 c++-4.7 c++-4.8 c++-4.9
-      c++-5 c++-6 c++-7 c++-8 c++-9
+      c++-5 c++-6 c++-7 c++-8 c++-9 c++-10
       g++ g++2 g++3 g++-3.3 g++-4.0
       g++-4.2 g++-4.3 g++-4.4 g++-4.5 g++-4.6 g++-4.7 g++-4.8 g++-4.9
-      g++-5 g++-6 g++-7 g++-8 g++-9
+      g++-5 g++-6 g++-7 g++-8 g++-9 g++-10
     ].each do |prog|
       libexec.install_symlink bin/"ccache" => prog
     end
