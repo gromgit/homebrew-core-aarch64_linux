@@ -8,9 +8,10 @@ class Awsweeper < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e0b61214e9db15dea9a6a87a7ec434a0ffe3e86c75c80fe6aaa6d436483a5cad" => :catalina
-    sha256 "5f781a42c16de3ce223e02b5e31fc7714970a9528badc86457648e00b14f4ef7" => :mojave
-    sha256 "cbb4f2723713a9c3a0623dd703ce121408ac7470977f691f6fb331f8c99eda64" => :high_sierra
+    rebuild 1
+    sha256 "584e94945ee6f5e5d1d436cfa6817d60405787ed0dd8390919d8ada6da750a26" => :catalina
+    sha256 "844e62f7429517656ad31c7fe590b023950b2ee87200fe6288a03dd337a2e9fd" => :mojave
+    sha256 "5e397a0b681188855c9ace13381aa06083b56e67159413cc76b26a5047d81656" => :high_sierra
   end
 
   depends_on "go" => :build
