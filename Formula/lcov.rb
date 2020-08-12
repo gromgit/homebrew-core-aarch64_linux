@@ -12,9 +12,9 @@ class Lcov < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "90c994926b62eed98249982152fdc763805c14f700dab908410a2a7c66f1cce6" => :catalina
-    sha256 "4ffc0d4d6051ae4f8e3f53526433725f270e8dabca57acf41f7e99773b5a8889" => :mojave
-    sha256 "efa4bb222f6e9f8b12ca687d470b2c4f4ff2e23e88287bc2fe8c07eb81460f8d" => :high_sierra
+    sha256 "1c84487473440a6f7971ecf25f2b8b5022d23a230d16e863825b43944788e3be" => :catalina
+    sha256 "41ebe534e6bf4166e88d0eb59ac04d28df457a86fb514fc610ca485386bd06b4" => :mojave
+    sha256 "9c3a3586283d61ae1f1ce30145b613ebdc50e28a7656cf4b4f4e935408f4c147" => :high_sierra
   end
 
   depends_on "gcc" => :test
