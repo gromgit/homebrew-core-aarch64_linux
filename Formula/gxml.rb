@@ -1,9 +1,9 @@
 class Gxml < Formula
   desc "GObject-based XML DOM API"
   homepage "https://wiki.gnome.org/GXml"
-  url "https://download.gnome.org/sources/gxml/0.18/gxml-0.18.1.tar.xz"
-  sha256 "bac5bc82c39423c1dbbfd89235f4a9b03b69cfcd3188905359ce81747b6400ed"
-  license "LGPL-2.1"
+  url "https://download.gnome.org/sources/gxml/0.20/gxml-0.20.0.tar.xz"
+  sha256 "0a0fc4f305ba9ea2f1f76aadfd660fd50febdc7a5e151f9559c81b2bd362d87b"
+  license "LGPL-2.1-or-later"
 
   bottle do
     sha256 "4eb68617f73471be697746b879fe118fb3e116a1e911a2f95541982a77cd4714" => :catalina
@@ -23,7 +23,7 @@ class Gxml < Formula
 
   def install
     mkdir "build" do
-      system "meson", *std_meson_args, "-Dintrospection=true", ".."
+      system "meson", *std_meson_args, "-Dintrospection=true", "-Ddocs=false", ".."
       system "ninja", "-v"
       system "ninja", "install", "-v"
     end
@@ -47,7 +47,7 @@ class Gxml < Formula
       -I#{libxml2.opt_include}/libxml2
       -I#{glib.opt_include}/glib-2.0
       -I#{glib.opt_lib}/glib-2.0/include
-      -I#{include}/gxml-0.18
+      -I#{include}/gxml-0.20
       -I#{libgee.opt_include}/gee-0.8
       -D_REENTRANT
       -L#{gettext.opt_lib}
@@ -59,7 +59,7 @@ class Gxml < Formula
       -lgio-2.0
       -lglib-2.0
       -lgobject-2.0
-      -lgxml-0.18
+      -lgxml-0.20
       -lintl
       -lxml2
     ]
