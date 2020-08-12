@@ -6,10 +6,9 @@ class Gxml < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 "4eb68617f73471be697746b879fe118fb3e116a1e911a2f95541982a77cd4714" => :catalina
-    sha256 "b9bb621d776f10dc1c3a9bde25964bd26847bf49cdee49ada1c0407f5fb14dbb" => :mojave
-    sha256 "4253e9a1bd9ce221e2287e5d53d39342c65fd06aa63028aa56effae2514854b4" => :high_sierra
-    sha256 "47042a94c013db905170cc0c373b8f7000d77e9c75d2d17dbacad6cd658e6b56" => :sierra
+    sha256 "7ac6b48935cda53013a788e02cb0169fd609589beac7b1af2ad6b3b64e3045a2" => :catalina
+    sha256 "656bfa0f89deba237c40af306b141291c548befeadd268d7aaca198db78afe91" => :mojave
+    sha256 "c206e3ea69e32dce78804db3d9e0ab2d10a441a4677614324fd46e1e53bdb5e7" => :high_sierra
   end
 
   depends_on "gobject-introspection" => :build
