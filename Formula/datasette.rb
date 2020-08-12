@@ -6,6 +6,13 @@ class Datasette < Formula
   sha256 "afd3d089115ac2ea68795870f7a2d18678ec923fc190dd31fcb550bd967c777f"
   license "Apache-2.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "f5961564343f703ea165b0f6b11256387d1a2b51581f58244fe34151fa24621c" => :catalina
+    sha256 "91d56f87fcfb2af52f947eab506815e4833d40653999012fbc29ab6ec705b24b" => :mojave
+    sha256 "7313204e33f382dc616c340befb3d794f970f5a00bc2515717cb0e53e25d8fbb" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   resource "aiofiles" do
