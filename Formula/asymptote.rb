@@ -7,9 +7,9 @@ class Asymptote < Formula
   license "LGPL-3.0-only"
 
   bottle do
-    sha256 "dc6d4f13df8030bb0cd0040cd6372af6f0bd7b94cb369821b73d5cb3d996b91f" => :catalina
-    sha256 "1c2d88dfbe123512db773d1499a8e21d4c759ce72099ce02c30f7f46be8a3b41" => :mojave
-    sha256 "2314a6f120bdeef1e01083c501edc4d5519cf6e0e4ebe805bb3dc6f17bc7c66c" => :high_sierra
+    sha256 "386132f253683b60ef9204e88a1545f66ee03bf601e6ffa2d26be8e4d4cddd0d" => :catalina
+    sha256 "db70cf85ba7e962682817ba1dbcea83d092dd858ad221f3e398a06f033c4b9e5" => :mojave
+    sha256 "04f142eb358b5449850629c2262b268415cd4b3ec5b131ff77338017c4d20246" => :high_sierra
   end
 
   depends_on "glm" => :build
