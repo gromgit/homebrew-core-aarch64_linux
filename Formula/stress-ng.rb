@@ -3,7 +3,7 @@ class StressNg < Formula
   homepage "https://kernel.ubuntu.com/~cking/stress-ng/"
   url "https://kernel.ubuntu.com/~cking/tarballs/stress-ng/stress-ng-0.11.18.tar.xz"
   sha256 "07c82a5c89538b5b696a79192faa70d0232352004c9e532946f7f3613d0adf23"
-  license "GPL-2.0"
+  license "GPL-2.0-or-later"
 
   bottle do
     cellar :any_skip_relocation
