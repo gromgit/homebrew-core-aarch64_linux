@@ -7,9 +7,9 @@ class Kumactl < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "93f86603b24a999b0bb291de1c970a48f2c789175f47a622e9022f12d31b3ffe" => :catalina
-    sha256 "cf451675168150c90f3eb2fcade9ef23ffcc5199a1b869c306840b059ba4619d" => :mojave
-    sha256 "6642d08d4e5aa1e34354db6ed780bf2a045e8143d3394f891fbc74bdf58884e5" => :high_sierra
+    sha256 "8dcd9c2788ad48ec1f969fc21b61e1a0c09dded3f090691544f86aa6f5fb3786" => :catalina
+    sha256 "e9fda0e335c92d25dec9e8c6853c89e4ad16bad0fe25789b9a75284f62601664" => :mojave
+    sha256 "d25c3f5e963c994f0677b3e68aa38da9ea45944c2d0c04f983ae859af4f171ea" => :high_sierra
   end
 
   depends_on "go" => :build
