@@ -6,9 +6,9 @@ class Netdata < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 "b4080d267775bc62f01d18fc4c6dc0b9d38a3eeb8da84175ed6ccd26f4475018" => :catalina
-    sha256 "ebc0d753c80938968f05979485a3974302e9136959de31d6dff0145dfed10283" => :mojave
-    sha256 "259aad4b0d234de4265e2ef95239d47fdf46271f7c269a0548c72adb442bf69c" => :high_sierra
+    sha256 "5149d410991d69f6930956a4559cf5672296baee357aa4a3e762086ffbdc2e26" => :catalina
+    sha256 "881b6fcd86834263b11dd450e1a16fd19e39408c14f70c2b50d6b759ddad30d3" => :mojave
+    sha256 "fe57c76ecac9042ec28fb7a001a33784232c4a5fde5cda6034bc7ef2686dcfd3" => :high_sierra
   end
 
   depends_on "autoconf" => :build
