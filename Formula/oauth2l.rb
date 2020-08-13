@@ -8,9 +8,9 @@ class Oauth2l < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5cc7ab09462ced7fde59421399d9a2eaa6bdc6a7c223f82ea6c2998961ec690d" => :catalina
-    sha256 "7273e656e6e6d24e0a2e0a1a2e21e4fc9704b03f0e26e4172c2f51ca851d441b" => :mojave
-    sha256 "950e998aeae2d56005f4c4915f05458d1a59715f024811e6a70eaca886aa8aaa" => :high_sierra
+    sha256 "4dedbbebe5996581e6a6c41500abded4f96b0d888e7b68e64584b846d196967e" => :catalina
+    sha256 "3cdb4abb44ae3fa046446c28a54225ab46efa736a6cc5dcab80d7156c8f78348" => :mojave
+    sha256 "d52fe266287cba01a822204ae32770cff65a244011a69f5306d9d38071c6385a" => :high_sierra
   end
 
   depends_on "go" => :build
