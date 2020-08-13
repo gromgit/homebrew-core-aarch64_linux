@@ -1,9 +1,8 @@
 class Deheader < Formula
   desc "Analyze C/C++ files for unnecessary headers"
   homepage "http://www.catb.org/~esr/deheader"
-  url "http://www.catb.org/~esr/deheader/deheader-1.6.tar.gz",
-      using: :nounzip
-  sha256 "3b99665c4f0dfda31d200bf2528540d6898cb846499ee91effa2e8f72aff3a60"
+  url "http://www.catb.org/~esr/deheader/deheader-1.7.tar.gz"
+  sha256 "6856e4fa3efa664a0444b81c2e1f0209103be3b058455625c79abe65cf8db70d"
   license "BSD-2-Clause"
   head "https://gitlab.com/esr/deheader.git"
 
@@ -26,18 +25,9 @@ class Deheader < Formula
   def install
     ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
 
-    # Remove for > 1.6
-    # Fix "deheader-1.6/deheader.1: Can't create 'deheader-1.6/deheader.1'"
-    # See https://gitlab.com/esr/deheader/commit/ea5d8d4
-    system "/usr/bin/tar", "-xvqf", "deheader-1.6.tar.gz",
-                           "deheader-1.6/deheader.1"
-    system "/usr/bin/tar", "-xvf", "deheader-1.6.tar.gz", "--exclude",
-                           "deheader-1.6/deheader.1"
-    cd "deheader-1.6" do
-      system "make"
-      bin.install "deheader"
-      man1.install "deheader.1"
-    end
+    system "make"
+    bin.install "deheader"
+    man1.install "deheader.1"
   end
 
   test do
