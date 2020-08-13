@@ -6,9 +6,9 @@ class MariadbAT101 < Formula
   license "GPL-2.0-only"
 
   bottle do
-    sha256 "bc23160ad65b005fa2548a15279eba9514a93526c79fdfb311370b5215a1ba9d" => :catalina
-    sha256 "2ae7f80a01184bd035a51f77be142a3d85d4cc54e9d34a8d02c597d19134da7d" => :mojave
-    sha256 "0da7b90040d6f28180bd892d7d84fbf37969038d084d106bc2ab03d074ef9ff5" => :high_sierra
+    sha256 "d04c52b6893eb344ec10995bba0fbfb1251616b825fee35ec67309b38505e844" => :catalina
+    sha256 "8fce602507981a0d15cffb608311edce3bd20d1e0279f05c7bc84d97dc8ef4f1" => :mojave
+    sha256 "68e17082d5a251d5daf3a01af1b62b9a353f7decf883eae34473a5e89a140f2d" => :high_sierra
   end
 
   keg_only :versioned_formula
