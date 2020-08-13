@@ -10,9 +10,10 @@ class S3ql < Formula
 
   bottle do
     cellar :any
-    sha256 "f97a6f3d0931473821d13cc6dd974f90d34c00cf5ab9c7372c60cddb6bf13948" => :catalina
-    sha256 "70874e572a344a22c239657d1bb9008c896582800f2740fc5a6684b66fb08faa" => :mojave
-    sha256 "4d5df651fa2f880a5341b3945ca29190fe798cfddc0f80973b4c6bd0ea31753f" => :high_sierra
+    rebuild 1
+    sha256 "507f2c0c077b5ed4219042fa0b6d77ef62693f7aad57148c3b1d327b7923252d" => :catalina
+    sha256 "5cb74d53c8529637963a543360365a83ea1c8cabab740cc2d9691d3a75ce261c" => :mojave
+    sha256 "63b52252fa9acd84fe7af0812241ab35e72062044cfe0659163a39e47a76581d" => :high_sierra
   end
 
   # disable due to osxfuse API is with fuse2
