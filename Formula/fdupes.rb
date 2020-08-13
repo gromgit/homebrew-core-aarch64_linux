@@ -8,9 +8,9 @@ class Fdupes < Formula
 
   bottle do
     cellar :any
-    sha256 "13686b900c1c95aaa6904e4f007ef79185a46626722228ddcd273e8bd265c2f5" => :catalina
-    sha256 "95ddd9ad27d0805991a64e7454b3a9abbd332aea0f893e1337dc3d2b14a06324" => :mojave
-    sha256 "ad80afb06ccbdc78c055560549341b10d19fd7e1ccf6f832630bba1aef78cd6b" => :high_sierra
+    sha256 "e77144bd7d4b3ed472590b0bb7cb99dea185cf57b5b645bb0558c312441624c0" => :catalina
+    sha256 "d9504149274c97eb7edb268d43ff18ebd292046d4c5691ae7c7aa9d16b40b0b3" => :mojave
+    sha256 "0bd9b7c00c454042c485b1839ce6cef7f42af21710aa0d83f64a51ab5b18bfe2" => :high_sierra
   end
 
   depends_on "pcre2"
