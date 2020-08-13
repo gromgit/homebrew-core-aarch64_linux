@@ -8,9 +8,9 @@ class Subfinder < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0cc176df89297e8589b4e7beeb2c814c13a1b77cfcedb1e7e5325141ea51dc9c" => :catalina
-    sha256 "4c9dd93b4a0c62148ec01cee562cf530745894e839f7f6b6a10b1d8b084bfda8" => :mojave
-    sha256 "d141ce3e5e480fe402cc844c8e0e350380dc3973fa6d02d7146e173b125923ad" => :high_sierra
+    sha256 "5be0e1ba5341b28e664ec92fd76a072a9c1cdc0cda604d7a09b9d1539ee21bcb" => :catalina
+    sha256 "fb5b981f50794b69e0d30c5dc479ddbe431f08c2a0e4f2381b06159b6b490d60" => :mojave
+    sha256 "47ae3e2e7f2645f16c963a43ec1bf57f3bf9afa25ebffb11fe6b85f540d52a72" => :high_sierra
   end
 
   depends_on "go" => :build
