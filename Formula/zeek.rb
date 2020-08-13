@@ -2,9 +2,9 @@ class Zeek < Formula
   desc "Network security monitor"
   homepage "https://www.zeek.org"
   url "https://github.com/zeek/zeek.git",
-      tag:      "v3.1.5",
-      revision: "468ede389827cbe68505ce36c08d7fd4eb869111"
-  revision 1
+      tag:      "v3.2.0",
+      revision: "8e79c8dcd14b185726c5f7be9d31bb8e93686d46"
+  license "BSD-3-Clause"
   head "https://github.com/zeek/zeek.git"
 
   bottle do
@@ -18,7 +18,7 @@ class Zeek < Formula
   depends_on "swig" => :build
   depends_on "caf"
   depends_on "geoip"
-  depends_on :macos # Due to Python 2 (https://github.com/zeek/zeek/issues/706)
+  depends_on macos: :mojave
   depends_on "openssl@1.1"
 
   uses_from_macos "flex"
