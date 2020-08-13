@@ -6,10 +6,9 @@ class PostgresqlAT96 < Formula
   license "PostgreSQL"
 
   bottle do
-    rebuild 1
-    sha256 "f9165d916aaf9021fbaf74b42f5678a7cd9058776157d7b01cad8647d149e84f" => :catalina
-    sha256 "5628c5aba843e2fd2cee4042371939542d6c675795a733007a8049d7564950c0" => :mojave
-    sha256 "868fb2c77b0dc6617fcabdf09e3277e1f0e305e1aaaa8e1a952bb916b12c0117" => :high_sierra
+    sha256 "81b3a3ac4e549641e48fe4f291b32266603858cff2ceb6242f2725deb20bdd9a" => :catalina
+    sha256 "b515085fd803628a5979a34402fa7296e95c437bc5805ec08acd69b43ac11c6a" => :mojave
+    sha256 "59593120c3bce07fa0c130eda3f1b0aef1cc2ed254b822fd9ed416d7469a8da2" => :high_sierra
   end
 
   keg_only :versioned_formula
