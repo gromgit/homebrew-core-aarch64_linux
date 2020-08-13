@@ -7,9 +7,9 @@ class Onioncat < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "4ef31c45ecf525bfc963069d8020dfd8d63ccad9b779ad1efa4ea4c6ae8832db" => :catalina
-    sha256 "f69495ac60b021b3d84b8abd2f74152d93bba7bbb59a5c0a28f0edcaf7149c0c" => :mojave
-    sha256 "62bfd76828320dd38f8081086ebdfed307f112f88019a348c39d43b53882893d" => :high_sierra
+    sha256 "18bca9a7fa0830c5efb83c8914923202b6a1ed0abadf5cc4755c04c54978e3eb" => :catalina
+    sha256 "102814e9feb8bccb65537f9fd156e3b718466dfafdf7df6e513ab5b5e3560ff3" => :mojave
+    sha256 "cef6fe952042a8b9d838a8369f96c9ab74d83eb271ccdf4829e0b23ba89dee58" => :high_sierra
   end
 
   depends_on "tor"
