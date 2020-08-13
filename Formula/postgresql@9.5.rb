@@ -1,10 +1,9 @@
 class PostgresqlAT95 < Formula
   desc "Object-relational database system"
   homepage "https://www.postgresql.org/"
-  url "https://ftp.postgresql.org/pub/source/v9.5.22/postgresql-9.5.22.tar.bz2"
-  sha256 "48555470a17248cb204d25ab1ad4231ef16295db55161922f006b9942d69640f"
+  url "https://ftp.postgresql.org/pub/source/v9.5.23/postgresql-9.5.23.tar.bz2"
+  sha256 "e314fa7e3355c4b8a35e94eeb8e58a6cf46adf49a2f9afa0c15cbc39980c8366"
   license "PostgreSQL"
-  revision 2
 
   bottle do
     rebuild 1
