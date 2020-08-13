@@ -7,9 +7,9 @@ class ChibiScheme < Formula
   head "https://github.com/ashinn/chibi-scheme.git"
 
   bottle do
-    sha256 "2e1e4fefe7672d6814cc1902884d817e1d54e9916bff13621fbdb1d36ae05ef2" => :catalina
-    sha256 "cffd5499340844f3c4c4c105f66a173ac5cd782ae9266fda32ece1edd07e3f2e" => :mojave
-    sha256 "2331acc8a6aedd1ec78aa07e38bfc5f9fc6e97bf41b077c25ccee0a5cb4b3175" => :high_sierra
+    sha256 "75122fe5413f7f206e9fcc717307d3603041a39a93b895c4b89a02845ac4c683" => :catalina
+    sha256 "0ce202e52817dbed3e87e5911a74ad7f85e6f081b45deba0427d5d09b1dcb6ae" => :mojave
+    sha256 "c3dac9e5642a0d725ae1d77e0a9139e829b24c7c34e8e85eb58e506d7ba2e240" => :high_sierra
   end
 
   def install
