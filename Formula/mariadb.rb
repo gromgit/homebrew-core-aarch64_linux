@@ -6,9 +6,9 @@ class Mariadb < Formula
   license "GPL-2.0-only"
 
   bottle do
-    sha256 "fbf0183fe7247e798fdbff82a09d2c9e82615c5a9713731836bec32604cc3182" => :catalina
-    sha256 "44fc91ae969a84deb5716d102eeaf4dd87552744be2a24e63c666e7dc4bf87b9" => :mojave
-    sha256 "18288459a2a4c8051ba1102fbdc67142dff850f7526eaa07c9f4637863e0eaa4" => :high_sierra
+    sha256 "df8622183262cb4871480d909e3144fa767a0dba995929e5ddb72d310d1f6ffa" => :catalina
+    sha256 "ba7afe3313015e58b9ca9c9b17178ebbbb6b804239b31957cfaead678e31aa86" => :mojave
+    sha256 "66dfcb470c80d0b7d0b56985e84ee36af5bb4c0c488fe02327f560cdb713785e" => :high_sierra
   end
 
   depends_on "cmake" => :build
