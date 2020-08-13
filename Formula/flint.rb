@@ -8,9 +8,9 @@ class Flint < Formula
 
   bottle do
     cellar :any
-    sha256 "ae209ece8e2b1dac05c3df9cc9d486153b5d7e0982c26a811a6038628c46d4d1" => :catalina
-    sha256 "827a4a202b966ebea8e4fec9ef76ee221e3f32303af5a07e238c81bd820d1336" => :mojave
-    sha256 "ea7193e4401bd3de54e9cb7b3ab4c86d58077e54fe830302b577cdc2ac05e5d4" => :high_sierra
+    sha256 "9b8d1495a83baee84f260abfae043cadc60b5f88fd5234996d386f6a07e8c42f" => :catalina
+    sha256 "8335ac9e0c42ac2ebb2272694a5e2a273bf82bb0895a0ba6ffaef7322ca94c73" => :mojave
+    sha256 "74b721ccd5dca704b9e884190e15b4068587d5438a4e1e0a70e23bff2de5d77e" => :high_sierra
   end
 
   depends_on "gmp"
