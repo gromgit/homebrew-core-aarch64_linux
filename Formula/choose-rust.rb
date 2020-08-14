@@ -7,9 +7,9 @@ class ChooseRust < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5fc92343f3271b68c34297dc3b5be11c613cbbe3859a19b0fa77458e3a4c4062" => :catalina
-    sha256 "8ae1baa55d848f0cbdb3833ce5cc257870b0f4edd84e7d0e61c84ebd3ba1b510" => :mojave
-    sha256 "d8a10d3ad72b6b5c80f3656e2bab071eab67ba225959518283c1940d19707fd7" => :high_sierra
+    sha256 "761e6a2bf7d2455352a09ddb67efa9dcd192555267706bdf1575a1f662a63c4c" => :catalina
+    sha256 "56897b4f0bce51d9c2dbd9f397fcac4dc9aeffbbd25b40bbd335b7cf33405831" => :mojave
+    sha256 "e54e01d106f23c59df123d0ca5bdc7c51bdbab46dd33f6314af6fb6c811eb4ca" => :high_sierra
   end
 
   depends_on "rust" => :build
