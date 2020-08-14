@@ -11,9 +11,9 @@ class Deheader < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "65e4de02caeb5b8028c1c0f6edcfcc149d375da261fc2f7b811b97249b09264d" => :catalina
-    sha256 "65e4de02caeb5b8028c1c0f6edcfcc149d375da261fc2f7b811b97249b09264d" => :mojave
-    sha256 "65e4de02caeb5b8028c1c0f6edcfcc149d375da261fc2f7b811b97249b09264d" => :high_sierra
+    sha256 "03645d8b8d1c27fb6b957fc1cf153f4d458e9377a3ce81b448adf07551b5338d" => :catalina
+    sha256 "03645d8b8d1c27fb6b957fc1cf153f4d458e9377a3ce81b448adf07551b5338d" => :mojave
+    sha256 "03645d8b8d1c27fb6b957fc1cf153f4d458e9377a3ce81b448adf07551b5338d" => :high_sierra
   end
 
   depends_on "xmlto" => :build
