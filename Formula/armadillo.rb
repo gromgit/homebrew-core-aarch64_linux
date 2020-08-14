@@ -15,8 +15,8 @@ class Armadillo < Formula
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "arpack"
-  depends_on "openblas"
   depends_on "hdf5"
+  depends_on "openblas"
   depends_on "superlu"
   depends_on "szip"
 
