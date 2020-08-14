@@ -8,9 +8,9 @@ class Envconsul < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "54aca2b7ad236dfadfe9b2c8db6df755ba16de8c458f74dd71e994f6aab976ca" => :catalina
-    sha256 "a27ce0e1775134b40891dc746ff36c2f046a96e3ab57a6aed20f805ba7d88db2" => :mojave
-    sha256 "f92ba9326c7ac451e91b35bc692ffb461691ade89df336afb1ef1931d4de644f" => :high_sierra
+    sha256 "0c24de84c15beae1d7dae04403be0bcd7732372be8bc75adb1fe19d6278e2107" => :catalina
+    sha256 "4f5a2fbc1b7010c85610a4bf51daacc8f7acb1e787b1577f1b3d55cf4b95692d" => :mojave
+    sha256 "2cefa866ee17b44d57e02f5a006d5a933ca53d19286cd438c3de33109a8f0219" => :high_sierra
   end
 
   depends_on "go" => :build
