@@ -14,14 +14,16 @@ class Armadillo < Formula
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
+  depends_on "openblas"
   depends_on "arpack"
+  depends_on "superlu"
   depends_on "hdf5"
   depends_on "szip"
 
   def install
     ENV.prepend "CXXFLAGS", "-DH5_USE_110_API -DH5Ovisit_vers=1"
 
-    system "cmake", ".", "-DDETECT_HDF5=ON", *std_cmake_args
+    system "cmake", ".", "-DDETECT_HDF5=ON", "-DALLOW_OPENBLAS_MACOS=ON", *std_cmake_args
     system "make", "install"
   end
 
