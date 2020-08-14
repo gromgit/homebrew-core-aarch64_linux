@@ -6,9 +6,9 @@ class Goffice < Formula
   license ["GPL-3.0-only", "GPL-2.0-only"]
 
   bottle do
-    sha256 "983c0ffa880b04fff6e29283a5d02fa089a08c86f0e203abff977e1dae1d9468" => :catalina
-    sha256 "c33d7ef544bec3d218f80d43998e6e5b80583699f9f6066b78c39fd21c87b5f6" => :mojave
-    sha256 "25961ad399e8d8e0bdde62ad3cfbed0ec2926ae39f8eb4facc6f9ad303a1487e" => :high_sierra
+    sha256 "3e05167a37c42bfa01acf4be7055a52e3c2a03c990536ae5562b2c0aa4812e42" => :catalina
+    sha256 "9edf36fd2ffb0a116e4e5f69cd00a04dd29eda04c1a3069b0e4da8950573c0a4" => :mojave
+    sha256 "7043808e39862444e7aaae796137b30fadefb142dea291f9d8ce23228d635264" => :high_sierra
   end
 
   head do
