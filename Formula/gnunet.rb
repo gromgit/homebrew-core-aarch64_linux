@@ -8,9 +8,9 @@ class Gnunet < Formula
 
   bottle do
     cellar :any
-    sha256 "ac396db25d2f21a17974afdc2dade1a03813fe2348b94d71a15512d17c275bcf" => :catalina
-    sha256 "1d2b9418f9d932da8c5f17a52c7660616921b296502b0076b1b16d1a83fcaab9" => :mojave
-    sha256 "41064ea3cb2a9eb7d34f35146fe03876d13edcd8a2db2008c1fe1ddb2faf6620" => :high_sierra
+    sha256 "3c504480a83dc1c28802cae7e964b3516df3b8b40676bdc124bdf7e45b950fbe" => :catalina
+    sha256 "70800264e8f098e64d4ff805adbf483a6f146414976ef2dc5492c44ba93d5cb8" => :mojave
+    sha256 "d2b897256e0e17e2d8e0c4c905787a72341939ffefe1c6d669437a1a44bd48ef" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
