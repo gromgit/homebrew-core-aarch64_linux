@@ -7,9 +7,9 @@ class Mailutils < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 "35f9c47a5686e1d32fbb262cfe107713724968c1803ff514c9af42cc2d0b4814" => :catalina
-    sha256 "7674dc436a80ad930a23ea27fc5e68cccafa98f1f14ccaa14a67f363cf94a004" => :mojave
-    sha256 "e498a1ff3f1b8d80dd04425e13b7f74ccd18736743e063315347c242e0b67b79" => :high_sierra
+    sha256 "2a0c02530447ce4edeeaab7b84cec370e342b02a5606eb36b6ab611d6a308eb9" => :catalina
+    sha256 "dbdbd2b06de4ad016feaf7f89f3bd4536b205489476daac87e8a7e60e8350fd6" => :mojave
+    sha256 "f03c50b72974082a31d51f2665786d723ab853b19ab3df35dd8a2b8c39e27901" => :high_sierra
   end
 
   depends_on "gnutls"
