@@ -8,9 +8,9 @@ class Prest < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "194d431f1723c23f8a074753447159e6cfda53e7312a554e28952b7742dd6895" => :catalina
-    sha256 "b9278e8a7863a8e63e2f9bbdbf50aa7d97f354d54c421bf6442c6c7ffaec8522" => :mojave
-    sha256 "d2ad5f27bac070fb8a4113c67accb6cf1f4280c03623577aa87e28bfed139f17" => :high_sierra
+    sha256 "0c7212c1113a1658b8c53d978ae95e795ce3902b8bc705425cd96b019cd024dd" => :catalina
+    sha256 "644feaf5d91eb242d5cce6844fbd69d228c5fe06353788abf16feaca3c87529c" => :mojave
+    sha256 "22822327eeabeecbc63b19c8bde15f3b2e0c602f39214a26728d366f10449020" => :high_sierra
   end
 
   depends_on "go" => :build
