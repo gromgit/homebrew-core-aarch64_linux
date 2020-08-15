@@ -6,6 +6,12 @@ class GoAT114 < Formula
   sha256 "064392433563660c73186991c0a315787688e7c38a561e26647686f89b6c30e3"
   license "BSD-3-Clause"
 
+  bottle do
+    sha256 "8c78676c81b8a58af19fb2c32095729009ab773b7f7903c6a7acbf0fa99e4aaf" => :catalina
+    sha256 "ab2f909bc79e1a5d4a06b121836f2f4fc564877528c59a64da582060b38eb3a1" => :mojave
+    sha256 "60ae93d5091bcde7694bb9883bf478212c050dc9c83260b05637aa07c02f817a" => :high_sierra
+  end
+
   keg_only :versioned_formula
 
   depends_on macos: :el_capitan
