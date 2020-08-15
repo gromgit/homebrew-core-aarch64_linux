@@ -7,9 +7,10 @@ class GoAT113 < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 "49a97032a5641ebbfffba0e8deeb76124edf05e1be75345a4599d07b9f4c857c" => :catalina
-    sha256 "c2c1b700fc0600b32c13911505065681842fc952472a4b4e9a79f8f3c7a365c0" => :mojave
-    sha256 "8ad6f03c6ff53c474fc486f14f184b960dab184d3228dd43146d20803f67831f" => :high_sierra
+    rebuild 1
+    sha256 "4c728bf1466cdd0d9fa6f9ed3a565e4a2203717730603189d8b5f2675a008c88" => :catalina
+    sha256 "d994ff2b27c191bb74dd44a373e254ef92472c1cb13e381cf6bf9d3d118bdaef" => :mojave
+    sha256 "4c62c487e96657aabebc01f662c2506724e123a08bdf3ead0715945c9838429c" => :high_sierra
   end
 
   keg_only :versioned_formula
