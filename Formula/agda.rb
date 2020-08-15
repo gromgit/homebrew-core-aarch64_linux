@@ -147,18 +147,13 @@ class Agda < Formula
     system bin/"agda", "--js", simpletest
 
     # test the GHC backend
-    cabal_sandbox do
-      cabal_install "ieee754"
-      dbpath = Dir["#{testpath}/.cabal-sandbox/*-packages.conf.d"].first
-      dbopt = "--ghc-flag=-package-db=#{dbpath}"
-
-      # compile and run a simple program
-      system bin/"agda", "-c", dbopt, iotest
-      assert_equal "", shell_output(testpath/"IOTest")
-
-      # compile and run a program that uses the standard library
-      system bin/"agda", "-c", "-i", lib/"agda"/"src", dbopt, stdlibiotest
-      assert_equal "Hello, world!", shell_output(testpath/"StdlibIOTest")
-    end
+    system "cabal", "v2-update"
+    system "cabal", "v2-install", "ieee754", "--lib", *std_cabal_v2_args
+    # compile and run a simple program
+    system bin/"agda", "-c", iotest
+    assert_equal "", shell_output(testpath/"IOTest")
+    # compile and run a program that uses the standard library
+    system bin/"agda", "-c", "-i", lib/"agda"/"src", stdlibiotest
+    assert_equal "Hello, world!", shell_output(testpath/"StdlibIOTest")
   end
 end
