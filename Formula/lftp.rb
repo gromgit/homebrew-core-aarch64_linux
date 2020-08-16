@@ -6,9 +6,9 @@ class Lftp < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 "88341463e443203acace85f22c68bfecc1e374e97c3bc61a4d55992a7894dbdc" => :catalina
-    sha256 "7fb04159e36521d586e023c99ac6f63d3a695e6043ae62645c68da964776eebc" => :mojave
-    sha256 "54a5bfc00d589ffec053ceb367cb1acee8ad1d13a5549eeda097f9b3fb5c92e2" => :high_sierra
+    sha256 "a388da5bb2e5beee32d122f71ae93a0d000af5d00b6ff40428d7e113ce123471" => :catalina
+    sha256 "db1429c68ffecc6a300d1adbcb980425c95a3d92112d1f4b69a148fe09bad066" => :mojave
+    sha256 "d92a86e574d3660a49de510815a7780708606fef9f498d5376ee91d2d61956f8" => :high_sierra
   end
 
   depends_on "libidn"
