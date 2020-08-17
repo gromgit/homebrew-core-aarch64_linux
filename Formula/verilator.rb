@@ -6,9 +6,9 @@ class Verilator < Formula
   license ["LGPL-3.0-only", "Artistic-2.0"]
 
   bottle do
-    sha256 "262db50617a00e4f3fa85f1458808f61c531cd273e0dc0d5c1ee908ecd3bf9f5" => :catalina
-    sha256 "2bd4bb491dd8b2a1a1780d84d5a246b9c75899b1922e4dbbdbad05f16757532a" => :mojave
-    sha256 "4687c0800cb5961f66b04c0844e101eb9f54ebaab5e8ac8f50c3bd0261109376" => :high_sierra
+    sha256 "f4f7abca35a5479c05aecdab7cd1a0e693a1e6a731663c175ade7b61dc017d10" => :catalina
+    sha256 "a74987a1eea55449a79c828b3c140e16f2c8272eddeb12b2fd3080256ef0cccb" => :mojave
+    sha256 "a0305efdbcd821ab55c49bcc3267c4a2a27567b85d1b2a21c001551ef1741d14" => :high_sierra
   end
 
   head do
