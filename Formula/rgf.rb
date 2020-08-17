@@ -7,9 +7,9 @@ class Rgf < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "472e412b8f6af779fb7764695a5bc621bc6b9b4c2a2c3cd238944e98e8eb7d41" => :catalina
-    sha256 "768ae58c3d372fdee93dd60893b83fe626be76e25e6ebb099e666e90e1bcfa21" => :mojave
-    sha256 "5091b77f8e7323e7518d42ad0cbe27b0328f24c6931ed3a5e5fd85fa4828d294" => :high_sierra
+    sha256 "6de68732658233225c9b6bac4d685e9e11a51748f140e3213dee4bbda47f0a14" => :catalina
+    sha256 "4ec45f0308dbbe42ddb35ada76473f5d9cead2fb118fa5d71a5ef3a8ce684435" => :mojave
+    sha256 "8887ef17fd595310b43d6ef940a28608fced9c828f012a0d991929c8d44a0ab4" => :high_sierra
   end
 
   depends_on "cmake" => :build
