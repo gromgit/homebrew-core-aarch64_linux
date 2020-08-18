@@ -6,6 +6,13 @@ class Wownero < Formula
     revision: "7d1693b1601cb4b3d56191953f403c92a1c51f64"
   license "BSD-3-Clause"
 
+  bottle do
+    cellar :any
+    sha256 "fe8ad482ff3df42bcdfc299ecbefd8fe0c354066df8b774aeb2c3bce93cbbdd8" => :catalina
+    sha256 "169c19877957f3936c53782c72255309d0dfcb27c028d6c98b30e2b222506c2b" => :mojave
+    sha256 "caef0ae59edee7b31714885a0c2a9e32b649e4f74b611b29f33b1ce6b7a9dc45" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "boost"
