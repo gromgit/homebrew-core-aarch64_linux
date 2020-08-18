@@ -7,6 +7,13 @@ class Borgbackup < Formula
   sha256 "164a8666a61071ce2fa6c60627c7646f12e3a8e74cd38f046be72f5ea91b3821"
   license "BSD-3-Clause"
 
+  bottle do
+    cellar :any
+    sha256 "dd71d53fa665ec83d2f68a1b353ffcabaf499c83681ad0ce3a78eef3f3c79c18" => :catalina
+    sha256 "f903ca24436d27d5f218b7bcdaf757a99a600c45bfbb63c9ab235ced12d8f2cc" => :mojave
+    sha256 "6bc8fd5091f705e9843a77d3f87cd7b722b84243a68e99d8d15d8f8ae20d0b03" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "libb2"
   depends_on "lz4"
