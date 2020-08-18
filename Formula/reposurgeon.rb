@@ -2,8 +2,8 @@ class Reposurgeon < Formula
   desc "Edit version-control repository history"
   homepage "http://www.catb.org/esr/reposurgeon/"
   url "https://gitlab.com/esr/reposurgeon.git",
-    tag:      "4.16",
-    revision: "f8717b4f0a8b4f051037f26201b0a340538b41c2"
+    tag:      "4.17",
+    revision: "00147d3ac750882f82ec5751beb6249bcbd6981a"
   license "BSD-2-Clause"
   head "https://gitlab.com/esr/reposurgeon.git"
 
