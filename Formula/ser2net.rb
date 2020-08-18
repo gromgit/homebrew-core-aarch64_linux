@@ -7,9 +7,9 @@ class Ser2net < Formula
 
   bottle do
     cellar :any
-    sha256 "1f72aa5bda0313aab823ee8afbb91ea46a39d021b5e38872864481e2b5555a7a" => :catalina
-    sha256 "33e6a1c897ab0af156af1554be2391fdfbb3a9bd3cc29fc8be34ab44e2de8595" => :mojave
-    sha256 "217b9ded1b3e0a8566db9cf67e15112f5aebffbe74b429f75b22581f19046fa8" => :high_sierra
+    sha256 "ae75303b4163f8f89366652ef7fafea5af5e158cb8f38b60ba11d71802f5b437" => :catalina
+    sha256 "05f13e77292479fa8f605d854fe853d57b078b3afee2038c1bdf12470e670664" => :mojave
+    sha256 "5888f6158084ff46d3d863ad468dd0a776bc84116a7100a85e5b9fbbfc781291" => :high_sierra
   end
 
   depends_on "libyaml"
