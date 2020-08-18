@@ -8,9 +8,9 @@ class Opa < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "faf8db7b543fa2aa963634b17173b3971c538da824ec088685ad1b05964b708b" => :catalina
-    sha256 "f52b6b64dc7b83f26c0cfdf3f4da90459f3fdf041540938ef91b1b760845e2d8" => :mojave
-    sha256 "5eb1507bcdc402758bc043ad63654a9cc466fb7ecb24242003dd40bd07a5ea06" => :high_sierra
+    sha256 "721f45af256355dd43763ebafd0c48622fc9ea8a9340421560e70b8d0ef0eea0" => :catalina
+    sha256 "9f4fe641b53e03ae843a475d390179cacd250a93c79b3a70cb6653c8e96bc7e4" => :mojave
+    sha256 "38d738f67fa3ae1e87ace32366990fc5c43d43688404a6e040b0c1f263d7f7ef" => :high_sierra
   end
 
   depends_on "go" => :build
