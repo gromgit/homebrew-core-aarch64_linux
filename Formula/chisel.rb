@@ -8,9 +8,9 @@ class Chisel < Formula
 
   bottle do
     cellar :any
-    sha256 "77635fc7ebef3451a9f81eb942d380c39990866eb7e1ca134efdcd9bc0c3f02c" => :catalina
-    sha256 "458800fbdac364534efa7105a17294125b58b5f929b6993bc7893e01a157e6cc" => :mojave
-    sha256 "596ef36832b696a736d8b47b6d0a27893dc74be2e999e80dbb7893ec79ca9ea5" => :high_sierra
+    sha256 "7ef6b79ffa9641e0617b2aec1b4f3dfcea59fc4059887c0d734baa1bda20441d" => :catalina
+    sha256 "70b49b0ba45571db3341adf586e1498a041492745cfa2130b2ef95b81d14fb85" => :mojave
+    sha256 "41797386262e226cf471995eac8ec50dffbf622140634254c6a7dab8a9471b48" => :high_sierra
   end
 
   def install
