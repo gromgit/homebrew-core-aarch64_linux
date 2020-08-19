@@ -1,9 +1,10 @@
 class Atlantis < Formula
   desc "Terraform Pull Request Automation tool"
   homepage "https://www.runatlantis.io/"
-  url "https://github.com/runatlantis/atlantis/archive/v0.14.0.tar.gz"
-  sha256 "32e24f4d341be578137f74385c9c97dd10461d260e23c77ed84298c578ec39e6"
+  url "https://github.com/runatlantis/atlantis/archive/v0.15.0.tar.gz"
+  sha256 "2a2d94d86ac9d84a050e4766bb9e012d239d268ccafdc548571624f46bc701da"
   license "Apache-2.0"
+  head "https://github.com/runatlantis/atlantis.git"
 
   bottle do
     cellar :any_skip_relocation
