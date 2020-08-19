@@ -6,9 +6,9 @@ class CurlOpenssl < Formula
   license "curl"
 
   bottle do
-    sha256 "3eb7b47868af07e3b766a325a2576749dc2f10ea1ff7ff6ccca3be59d1345712" => :catalina
-    sha256 "1bb271e14654750ec19a61283af0865b7f3ea18c2310bf6c7fd235ff294986b4" => :mojave
-    sha256 "8706151f228258eb6a75d98a661f9ab498025261b56d4fe6b44d0b3cc9967d6a" => :high_sierra
+    sha256 "15299fa5e937818764c521a47b030c6fffbe10b157818b398603211f2911fb6e" => :catalina
+    sha256 "2aecded2758c03167042ebea30ae13c1a35369b019d402d51932a07cad728ce3" => :mojave
+    sha256 "9f96df9a49f417cfa884a843ed410fd2dbf4f515c9f63d2293a4e8517f70093f" => :high_sierra
   end
 
   head do
