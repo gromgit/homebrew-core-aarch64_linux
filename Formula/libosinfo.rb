@@ -3,8 +3,8 @@ class Libosinfo < Formula
   homepage "https://libosinfo.org/"
   url "https://releases.pagure.org/libosinfo/libosinfo-1.8.0.tar.xz"
   sha256 "49ff32be0d209f6c99480e28b94340ac3dd0158322ae4303adfbdfe973a108a5"
-  license "GPL-2.0"
-  revision 2
+  license "LGPL-2.0-or-later"
+  revision 3
 
   bottle do
     sha256 "1f37bf2e3ff5b94f183416806b0cd5ea8c21cf1de87d28bf1e84ae9d4d298d04" => :catalina
@@ -21,26 +21,21 @@ class Libosinfo < Formula
   depends_on "glib"
   depends_on "libsoup"
   depends_on "libxml2"
+  depends_on "usb.ids"
 
   resource "pci.ids" do
-    url "https://pci-ids.ucw.cz/v2.2/pci.ids.gz"
-    sha256 "09dc9980728dfeb123884ecedf51311f6441ffa8c5fa246e4cbea571ceae41b7"
-  end
-
-  resource "usb.ids" do
-    url "https://deb.debian.org/debian/pool/main/u/usb.ids/usb.ids_2020.06.22.orig.tar.xz"
-    sha256 "d55befb3b8bdb5db799fb8894c4e27ef909b2975c062fa6437297902213456a7"
+    url "https://raw.githubusercontent.com/pciutils/pciids/791050fc4eca1e19db3a985a284081f9038c21aa/pci.ids"
+    sha256 "587aa462719ffa840254e88b7b79fb499da2c3af227496a45d7e8b7c87f790f6"
   end
 
   def install
     (share/"misc").install resource("pci.ids")
-    (share/"misc").install resource("usb.ids")
 
     mkdir "build" do
       flags = %W[
         -Denable-gtk-doc=false
         -Dwith-pci-ids-path=#{share/"misc/pci.ids"}
-        -Dwith-usb-ids-path=#{share/"misc/usb.ids"}
+        -Dwith-usb-ids-path=#{Formula["usb.ids"].opt_share/"misc/usb.ids"}
         -Dsysconfdir=#{etc}
       ]
       system "meson", *std_meson_args, *flags, ".."
