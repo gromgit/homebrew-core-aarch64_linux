@@ -1,8 +1,8 @@
 class Earthly < Formula
   desc "Build automation tool for the post-container era"
   homepage "https://earthly.dev/"
-  url "https://github.com/earthly/earthly/archive/v0.2.2.tar.gz"
-  sha256 "2b09408f60572d70df83cdc2f6fc6805d19f2fbe852c54360a7a37eae55f8076"
+  url "https://github.com/earthly/earthly/archive/v0.3.0.tar.gz"
+  sha256 "7a2f28d56d5c74872638a131e69c2edb02de3d2d1808ea10012175fca5168b75"
   license "MPL-2.0"
   head "https://github.com/earthly/earthly.git"
 
