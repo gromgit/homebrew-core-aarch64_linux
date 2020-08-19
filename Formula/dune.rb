@@ -8,9 +8,9 @@ class Dune < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2a6b7c488a6bcfe1b483d076f8e4ef4d774467620e45541bcd7ce34ebb829596" => :catalina
-    sha256 "3ba9524cc8af5cc2f458216241e6a7f2b9c06908b0a695493974ce5b6ca6b1ba" => :mojave
-    sha256 "f2aed7376f75f27b13a970b52134c266a97a514ae34e9ed468b611ed372cd321" => :high_sierra
+    sha256 "637ff9902fcd06fc9f048c5bf1a9214d0bd8b3a8a883a8b312650f1972985dcf" => :catalina
+    sha256 "b1825a28dd391ffa2b3d4eadcf5495523b37e0fa63dfd92eaa067e51fa7f6f27" => :mojave
+    sha256 "4d70f58146199488cb87c607b691b962cdfd0ccbbf13852af2e835323ce554a7" => :high_sierra
   end
 
   depends_on "ocaml" => [:build, :test]
