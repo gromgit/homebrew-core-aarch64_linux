@@ -8,9 +8,9 @@ class Libdeflate < Formula
 
   bottle do
     cellar :any
-    sha256 "212aed6ec63f047e554de8f3214d7af20bff375032c8702df6f8964a568b072a" => :catalina
-    sha256 "6ac658a25367a45ad9d5a28a98e0f4fd80fd8a40fba01b2655a177a0b6ceafbc" => :mojave
-    sha256 "e61e6da245814b3964750d5db14567c85ed51421ea36e43aeee81906fd04a4d3" => :high_sierra
+    sha256 "cda21372c1a5a131c1bff0f56db0bcede77fc33b7d7993a2d10c942a687a12fa" => :catalina
+    sha256 "73e0789c105bca4c823f90d4e299fa92033a3420efbde58f173cd09a469ad3a2" => :mojave
+    sha256 "841ca895ade3760d2ded53aa4734a2919ca1f74cdf8acfb8cc63c9f3aa4d1165" => :high_sierra
   end
 
   # Install shared lib symlink as dylib on macOS
