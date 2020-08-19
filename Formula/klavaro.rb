@@ -6,9 +6,9 @@ class Klavaro < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 "fcdf087c22fed79c28c0c43aa8c82af9d631770040011b55c47c7c140d5200fa" => :catalina
-    sha256 "0884d8ae7d2c1cbf535afda565b06b2ae27e675b2e91c2b403d229508dd337d0" => :mojave
-    sha256 "4e34ed13b02cf0a6f2226a01f5b32a1ff3a59cd197ec52506ef5fc5299d45004" => :high_sierra
+    sha256 "cdcfb850a7948e249c28f38c29fd425bf4b60c36751d881a197bd027849f4cf6" => :catalina
+    sha256 "ddd221d6a3d97da22c6a257076df29e1c8795dd2a47b4c9eb76782d451a26a35" => :mojave
+    sha256 "3f75e1159ad6a743c00d9b00583bb8b99eaa66875f3316b437b6e3e63f99aa8a" => :high_sierra
   end
 
   depends_on "intltool" => :build
