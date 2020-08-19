@@ -5,6 +5,12 @@ class MariadbAT104 < Formula
   sha256 "f92fcd59e0122461482f28c67c5ea01c7cf6979494a571db68074396864c86fc"
   license "GPL-2.0-only"
 
+  bottle do
+    sha256 "14e0d9c1e4030cf055a7f7024c2fe7597847540f562a6e12b96aac3ee2d47de8" => :catalina
+    sha256 "9e063debd5075f2b8be0fae7eb5ed0ceeec93cba8fb416cb7d7a62bbd3e33e95" => :mojave
+    sha256 "29535b17add7f6f3e2f18f597b97ca138fa6ef65066ee7afce0f9331d839c061" => :high_sierra
+  end
+
   keg_only :versioned_formula
 
   depends_on "cmake" => :build
