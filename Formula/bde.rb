@@ -7,9 +7,9 @@ class Bde < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "91b683a000a386f4d502fe46020b1e5ca362f3a35244e1e2dcd12397deb1df54" => :catalina
-    sha256 "1b52a280a13506cabfeafdb14e39db0d1359677279e9a5d582b772321190c228" => :mojave
-    sha256 "3fa5cca398b3805036cfa8579a781e7dd31e74d4acc56296d4024d856005978f" => :high_sierra
+    sha256 "c4f0d3ff45ae75ac38274874b58ed3a5fa0a8f8d7b98224a0a8ea809da46e264" => :catalina
+    sha256 "d03dbc9f00ef94ae858e28c69c8e65f7cd5be51ff30a623b5d87a024a5f6251a" => :mojave
+    sha256 "c75d1a4fbf94f056f67a7d6fec064affba6035cafbde38689d1bed09acbcdea2" => :high_sierra
   end
 
   depends_on "cmake" => :build
