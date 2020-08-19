@@ -3,9 +3,21 @@ class Libgusb < Formula
 
   desc "GObject wrappers for libusb1"
   homepage "https://github.com/hughsie/libgusb"
-  url "https://people.freedesktop.org/~hughsient/releases/libgusb-0.3.5.tar.xz"
-  sha256 "5b2a00c6997cc4b0133c5a5748a2e616e9e7504626922105b62aadced78e65df"
-  license "LGPL-2.1"
+  license "LGPL-2.1-only"
+  revision 1
+  head "https://github.com/hughsie/libgusb.git"
+
+  stable do
+    url "https://people.freedesktop.org/~hughsient/releases/libgusb-0.3.5.tar.xz"
+    sha256 "5b2a00c6997cc4b0133c5a5748a2e616e9e7504626922105b62aadced78e65df"
+
+    # Patch accepted upstream to allow for building without meson-internal
+    # Remove on next release
+    patch do
+      url "https://github.com/hughsie/libgusb/commit/b2ca7ebb887ff10314a5a000e7d21e33fd4ffc2f.patch?full_index=1"
+      sha256 "a068b0f66079897866d2b9280b3679f58c040989f74ee8d8bd70b0f8e977ec37"
+    end
+  end
 
   bottle do
     sha256 "e9080684116b2b6e4c78c1c1be5e8e210fab77b6f6b3d659cae1a9ad0c630bbb" => :catalina
@@ -21,27 +33,13 @@ class Libgusb < Formula
   depends_on "vala" => :build
   depends_on "glib"
   depends_on "libusb"
-
-  # The original usb.ids file can be found at http://www.linux-usb.org/usb.ids
-  # It is updated over time and its checksum changes, we maintain a copy
-  resource "usb.ids" do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/4235be3ce12f415f75869349af9a4198543f167a/simple-scan/usb.ids"
-    sha256 "ceceb3759e48eaf47451d7bca81ef4174fced1d4300f9ed33e2b53ee23160c6b"
-  end
-
-  # Patch accepted upstream to allow for building without meson-internal
-  # Remove on next release
-  patch do
-    url "https://github.com/hughsie/libgusb/commit/b2ca7ebb887ff10314a5a000e7d21e33fd4ffc2f.patch?full_index=1"
-    sha256 "a068b0f66079897866d2b9280b3679f58c040989f74ee8d8bd70b0f8e977ec37"
-  end
+  depends_on "usb.ids"
 
   def install
     rewrite_shebang detected_python_shebang, "contrib/generate-version-script.py"
-    (share/"hwdata/").install resource("usb.ids")
 
     mkdir "build" do
-      system "meson", *std_meson_args, "-Ddocs=false", "-Dusb_ids=#{share}/hwdata/usb.ids", ".."
+      system "meson", *std_meson_args, "-Ddocs=false", "-Dusb_ids=#{Formula["usb.ids"].opt_share}/misc/usb.ids", ".."
       system "ninja"
       system "ninja", "install"
     end
