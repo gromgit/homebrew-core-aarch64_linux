@@ -5,6 +5,13 @@ class Castget < Formula
   sha256 "438b5f7ec7e31a45ed3756630fe447f42015acda53ec09202f48628726b5e875"
   license "LGPL-2.1-only"
 
+  bottle do
+    cellar :any
+    sha256 "83d589037e4418829134060be140fce4b4b9883b9b68376f20257df68d9fff9a" => :catalina
+    sha256 "fedc8c680b948b9f87cfd3f63f90bd6cb02143120a9c74d5b1bc5a04e84290d9" => :mojave
+    sha256 "4d1f21bb31abc39d28110a76608493423f96a1f19c4b67c1cb651887f3848675" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "glib"
   depends_on "id3lib"
