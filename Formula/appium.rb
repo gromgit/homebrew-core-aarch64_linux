@@ -10,9 +10,9 @@ class Appium < Formula
 
   bottle do
     cellar :any
-    sha256 "d6d0adf1f5b4380cf09ad9571e708f51e7d3f5c99307eafd5411dc7318ee03b9" => :catalina
-    sha256 "6e1fc2e7528234ec093d77933030e796accdd927e58fed2869e9b91f9951590f" => :mojave
-    sha256 "cc6f096c1464b401f52b6808eb8fe3d71975bb9c83594fcc7a0dc67551abb5e8" => :high_sierra
+    sha256 "4ea1dbc255495f77ccd8b8eef8a8e0244ce0c4d5e302f39f0ca4ed07d4fb087c" => :catalina
+    sha256 "ed7587c1b90e17ace1d8882bb393e9af52fe85e35c2fcb944b906878e39ee243" => :mojave
+    sha256 "e16208f7f59caa4b0676051413e849556a6f9865b2da3f965eaac44d52f42bfe" => :high_sierra
   end
 
   depends_on "node"
