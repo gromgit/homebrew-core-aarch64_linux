@@ -8,9 +8,9 @@ class Bloaty < Formula
 
   bottle do
     cellar :any
-    sha256 "94aa3561343dc487bc3c6ac1d08c7d8fada44d9309236153b3140030aa63ccf4" => :catalina
-    sha256 "85dd26047db38e0fe9bbe2ce6eda78f757fe699df9b737d8b1f90a185533f19c" => :mojave
-    sha256 "ec2cfde251cf64f4c132c108a45df0859d68a19963dccbd12c24306e23a1a330" => :high_sierra
+    sha256 "9c0aad71da35c2719b1e2056ed2b3667b717b5c4f65df0b6e9b91cce5ccab7cd" => :catalina
+    sha256 "6454e2c689e71e2afaa692f14a71c07820e8d99c193a1da4b58b7e504a810a83" => :mojave
+    sha256 "1fe1f86ebf763e5388eb7191d0790b3f5a0a23afd08d4dd2b01bc4b43dee8fe4" => :high_sierra
   end
 
   depends_on "cmake" => :build
