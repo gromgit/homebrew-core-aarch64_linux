@@ -1,8 +1,9 @@
 class Debianutils < Formula
   desc "Miscellaneous utilities specific to Debian"
   homepage "https://packages.debian.org/sid/debianutils"
-  url "https://deb.debian.org/debian/pool/main/d/debianutils/debianutils_4.11.tar.xz"
-  sha256 "bb5ce6290696b0d623377521ed217f484aa98f7346c5f7c48f9ae3e1acfb7151"
+  url "https://deb.debian.org/debian/pool/main/d/debianutils/debianutils_4.11.1.tar.xz"
+  sha256 "8be869f19c55c18d53d9f0414b68bb966a068b2154e9fbbfc6193827d6af983c"
+  license "GPL-2.0-or-later"
 
   bottle do
     cellar :any_skip_relocation
