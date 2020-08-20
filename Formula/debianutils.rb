@@ -7,9 +7,9 @@ class Debianutils < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "91343603e1d52380fd28a65781e2cc8e7f9708cd94fd710a60261cc626509286" => :catalina
-    sha256 "0968d5be34075a8d95c5884baee76f3147216d403446cf2d121931a20664925b" => :mojave
-    sha256 "632fac3d90523c039bc7ab6829de0a27cd3f1fc39ce41337ba90ea6d14f2be89" => :high_sierra
+    sha256 "9467ace428a54b279c5c69472a1d83f4c2f62ba7adcf04222546a3f763e396b7" => :catalina
+    sha256 "22633540f57bd7b0757b086a5bb150703959941aae875b23875904f5ac3f2eb9" => :mojave
+    sha256 "c440b2a9b14c7f4b8b7315af4528ad7bd09b83890b7c40d67109a3a62031d5b5" => :high_sierra
   end
 
   def install
