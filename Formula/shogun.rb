@@ -9,9 +9,9 @@ class Shogun < Formula
   revision 8
 
   bottle do
-    sha256 "8c607b82b6ae66098c5bbdfb899cd9016e29396cff31bfd4c08e74729915e425" => :catalina
-    sha256 "faf548b5905695701a0b326c617563454b7d507ac94741457bf17f3f3bfc8337" => :mojave
-    sha256 "fa5a267302c7a17cef53ac419fddda4df941abd0537e259b831af0ec16abc68a" => :high_sierra
+    sha256 "b209c78c4755e2f6531facac0384fa5952454e67d091c92d0031ba98f3193668" => :catalina
+    sha256 "b6e776d5ebe2d938dede0a2b731c8b62feee96ef8b40db634f81c88ce38c6235" => :mojave
+    sha256 "6f5442ccbbb241bf1ffed242bb6eaeaab9110f88369488ae76cd0a595c7d0736" => :high_sierra
   end
 
   depends_on "cmake" => :build
