@@ -8,9 +8,10 @@ class X265 < Formula
 
   bottle do
     cellar :any
-    sha256 "51c759fb1ae6220caca443ef28171e94e387c5358ff5d8803716dc7d80d0b7d0" => :catalina
-    sha256 "f17d8ecd707aac0fd61354432adf63bc7e4a2513c4cf5d38af7813e4c59e628c" => :mojave
-    sha256 "68430356df947fbe78480d737180b3129c3a4b1e5fcec90762df19d14de30b1c" => :high_sierra
+    rebuild 1
+    sha256 "a24f202256e98285ed39c80277b2aa5d9eba2b5f37ee7f05993b269b3033684e" => :catalina
+    sha256 "5a0033bb9c6b2cf12f5836a1ad3f887f61df55eceecedc2d3414665282e576f2" => :mojave
+    sha256 "fc09819e3bba1189d57b7708ad0fcccc359b160ea380574796d7eb4a71e139ac" => :high_sierra
   end
 
   depends_on "cmake" => :build
