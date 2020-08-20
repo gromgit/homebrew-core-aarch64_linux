@@ -8,9 +8,9 @@ class Libressl < Formula
   license "OpenSSL"
 
   bottle do
-    sha256 "7574171656070665bb3bda72ceb202753f969754efd538249c351b458c642cb5" => :catalina
-    sha256 "73f014a32921e7cac5a4369e55a0c9bfd5afaa52b2d802a6d3d635f2d67553e5" => :mojave
-    sha256 "a303985660e86455f63cecf8733de05896846522db407afc6154788e6bccf40c" => :high_sierra
+    sha256 "77d556189abc30c257d3a138ad0d119ce16eab9da05c3950976dee7a7018ffe3" => :catalina
+    sha256 "77bfe70048abc4c22558790066f77173258325aff1e8ec53798d10b83154abf2" => :mojave
+    sha256 "a6eae44494b1914dfb9ea8a1011c038b99f138b98b1cc3825e20446330ce74a4" => :high_sierra
   end
 
   head do
