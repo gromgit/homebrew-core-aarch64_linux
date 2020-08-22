@@ -7,9 +7,10 @@ class Armadillo < Formula
 
   bottle do
     cellar :any
-    sha256 "a9d493551b5b30c28ad0b8fd6cf03c81401f516b056ac7b1e020fa0d2d3a19d2" => :catalina
-    sha256 "664ed8eb28fe3c6b84d752c2cf402d088c9769b7a496b6283c090f84ebbf8144" => :mojave
-    sha256 "991456aa8ddc477c001e717ecc668cbef96f7abca83d8fb36dc058a915693476" => :high_sierra
+    rebuild 1
+    sha256 "0af9e42fe77c6b497ddc82e427dc9130da85cb59e3659808cab0ebc1f8172024" => :catalina
+    sha256 "33d39fbdc6ac4b7ab9827848a2cd7ee91704b30c3bbc64943fac9dc0dfefdcfd" => :mojave
+    sha256 "911e10152ae6e30f42cb1cccb0bc1c99b3d0d86eda3aff1ad79a05ed31d89d4f" => :high_sierra
   end
 
   depends_on "cmake" => :build
