@@ -6,6 +6,13 @@ class ParallelHashmap < Formula
   license "Apache-2.0"
   head "https://github.com/greg7mdp/parallel-hashmap.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "932e18bb079269506931abfe4722a1eab66bb83f850bb5952c982b21864679a3" => :catalina
+    sha256 "d020435a32c4fe59e1bbc0f0e744726b81cade9f89fd871fd49487c5c8a3958f" => :mojave
+    sha256 "c3e7184629352580841f4e14d032eb09653e2dcc4d36f107113e8784ac45060c" => :high_sierra
+  end
+
   depends_on "cmake" => :build
 
   def install
