@@ -9,9 +9,9 @@ class Wolfssl < Formula
 
   bottle do
     cellar :any
-    sha256 "0be0aa725d9cd9d9a127d574a3e63548ad7176d03613913e714175af1a91eae9" => :catalina
-    sha256 "44add33b67e8f1d4e48f5130e9f0c73cbeda7277f8c43aa5fddbd8e9dccba657" => :mojave
-    sha256 "e3220ea7176729c24f817900a45002a8502defeba7ef4a1001cff1b342b3c487" => :high_sierra
+    sha256 "65dc4e927eadda0948058bdbb2dbd93ad3e0949dd5f3ec4a40a13147166fab07" => :catalina
+    sha256 "fb1db5f016b181902c78dd438136b881b2fbc4c361caaaa9cf173f18e3420e95" => :mojave
+    sha256 "4ec178ea428a5045b73a076f1342535a6b38ca06511638bb83c7fe7559ae8039" => :high_sierra
   end
 
   depends_on "autoconf" => :build
