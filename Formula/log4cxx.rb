@@ -8,12 +8,9 @@ class Log4cxx < Formula
 
   bottle do
     cellar :any
-    sha256 "61d3bf62743bd2e2d6537f0f7d795eab7098d2a3917b526832f2eeebdbbb5171" => :catalina
-    sha256 "3394ba006562401352b3ba42857f9e8ccd3f84d23e4ce7c22041c0bd82d1cdda" => :mojave
-    sha256 "0d29b911db2c77048046e048589fcf6739b72f25494145f8d0650d81b67a36f1" => :high_sierra
-    sha256 "0e1c8e304f87bdb864f14e7b158e2f9e82ab4300a0ea144a8abaf9c8d5bc2976" => :sierra
-    sha256 "16eb54dca4f5d772a23d55d9599947f93a8c6003df5d6a4ad468b99daeda9153" => :el_capitan
-    sha256 "b96afe3f4e4b63017d2061028ed8792c4190996b1e008d8c87c3f52dba660ec5" => :yosemite
+    sha256 "ec9ff34b2c49aa9a48536f7d109da16cc32f9ce83e95ac1dc3efc8a982709908" => :catalina
+    sha256 "23a968d63f8a181a73410cffcde5fd16fbacd5867453e7c0d7b0cb3815942bf8" => :mojave
+    sha256 "11478b4f5ece24ec391954cc0538bb28f11ae6256a9499ca1e95103c2eb1d75c" => :high_sierra
   end
 
   depends_on "autoconf" => :build
