@@ -6,6 +6,13 @@ class Numcpp < Formula
   license "MIT"
   head "https://github.com/dpilger26/NumCpp.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "a52593f4d24ab2a416f0b3ddda28d0d58f2b429cd986f005d0d9246c9bf63dd0" => :catalina
+    sha256 "6772bdab82ef5b03cab645d3b64d537ef58755f794c102c36eb56a8a45b4e369" => :mojave
+    sha256 "3a8f07d4cd0695bf8f6ceda9f8e771ac71bac7c35ec4c91d720e05ffd4db35b2" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "boost"
 
