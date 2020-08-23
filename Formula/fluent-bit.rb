@@ -8,9 +8,9 @@ class FluentBit < Formula
 
   bottle do
     cellar :any
-    sha256 "eba66538e9a02b1089e1821a6feef8b78a72ebbd363fdfa43001541395747a63" => :catalina
-    sha256 "d2c96c19c4e91add1588b2079448ace97d7f18a41f97f8bb0d7169da8897a99f" => :mojave
-    sha256 "fa0f26ed0282fb8231813d717cfcc05bdf4bfadee73232ead880af09188b4438" => :high_sierra
+    sha256 "6573c1c0dec7a13561cb1de47835c5637d574929f58d0e2612072c9a79217989" => :catalina
+    sha256 "73686bea4d4f39c7948027007d8779a0773ec8751235f4367d4a8f10cf76990a" => :mojave
+    sha256 "6f65e46ebb047264d30d340ee6b91230cc4afdb6cfbd19f66321054b33076f12" => :high_sierra
   end
 
   depends_on "bison" => :build
