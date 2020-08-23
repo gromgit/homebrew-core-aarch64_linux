@@ -6,9 +6,9 @@ class Gsoap < Formula
   license any_of: ["GPL-2.0-or-later", "gSOAP-1.3b"]
 
   bottle do
-    sha256 "0512965f3153e3669a52135cd1a9506b72ef3e9492b79386e028cc7ac16d9770" => :catalina
-    sha256 "791b245081c3b11482a04a813536011e4c4bdaa2b79d4fa5bf7f5d13f22330b3" => :mojave
-    sha256 "97233572e8dc3d26c99e42ebad04bf57d1344ebcb59ab505c2d605c0b88101ef" => :high_sierra
+    sha256 "155b8a6caafea00e17d03f713dc450359c37d7c193deff91a19c25a4045cb1da" => :catalina
+    sha256 "ade4c75fd5bc70122bb5925397161bd8dd4d39ea4bd3e30e7ca0ef8d0beef4aa" => :mojave
+    sha256 "b8c9ca987c521a6ce5513fb2c1617b137f47e3f061990bca7b88a196d1402be1" => :high_sierra
   end
 
   depends_on "autoconf" => :build
