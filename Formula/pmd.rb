@@ -12,7 +12,7 @@ class Pmd < Formula
   def install
     rm Dir["bin/*.bat"]
     libexec.install Dir["*"]
-    (bin/"pmd").write_env_script libexec/"bin/run.sh", JAVA_HOME: "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
+    (bin/"pmd").write_env_script libexec/"bin/run.sh", Language::Java.overridable_java_home_env
   end
 
   def caveats
