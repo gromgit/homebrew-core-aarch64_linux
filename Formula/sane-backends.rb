@@ -7,9 +7,9 @@ class SaneBackends < Formula
   head "https://gitlab.com/sane-project/backends.git"
 
   bottle do
-    sha256 "7dfb3ca74bc32f87a8126bcdb29950d7781882caa2e3175a777e892db69bbd38" => :catalina
-    sha256 "c5751d3247be66a5b2019ab23fb3eca1bb4bca86ef051e830bb7fbc27647e9da" => :mojave
-    sha256 "b80391595e2dd773f1bf0a093befbf3727801c7110bedfed68f295772399e2b7" => :high_sierra
+    sha256 "7b263e24809b81b27db7d43c4ce92e6c09c003055e3da0874b7d7282fb3a35c8" => :catalina
+    sha256 "2bd03a03d1807d5d0e56695d567b1598696dc0e8e29ada67517665043854865b" => :mojave
+    sha256 "3b54db3fec1723a2cbd5705cd1d9344791ff4942cb2a51d62e5c166f8cca9a9a" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
