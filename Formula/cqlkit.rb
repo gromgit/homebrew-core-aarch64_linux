@@ -13,7 +13,7 @@ class Cqlkit < Formula
     libexec.install %w[bin lib]
     rm_f Dir["#{libexec}/bin/*.bat"]
     bin.install Dir["#{libexec}/bin/*"]
-    bin.env_script_all_files libexec/"bin", JAVA_HOME: "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
+    bin.env_script_all_files libexec/"bin", Language::Java.overridable_java_home_env
   end
 
   test do
