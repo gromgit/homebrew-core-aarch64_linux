@@ -3,6 +3,8 @@ class Htmlcleaner < Formula
   homepage "https://htmlcleaner.sourceforge.io"
   url "https://downloads.sourceforge.net/project/htmlcleaner/htmlcleaner/htmlcleaner%20v2.24/htmlcleaner-2.24-src.zip"
   sha256 "ee476c1f31eabcbd56c174ec482910e1b19907ad3e57dff9a4d0a2f456c9cd42"
+  license "BSD-3-Clause"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
@@ -12,20 +14,20 @@ class Htmlcleaner < Formula
   end
 
   depends_on "maven" => :build
-  depends_on java: "1.8"
+  depends_on "openjdk"
 
   def install
-    cmd = Language::Java.java_home_cmd("1.8")
-    ENV["JAVA_HOME"] = Utils.safe_popen_read(cmd).chomp
+    ENV["JAVA_HOME"] = Formula["openjdk"].opt_prefix
 
-    system "mvn", "--log-file", "build-output.log", "clean", "package"
+    # Homebrew's OpenJDK no longer accepts Java 5 source
+    inreplace "pom.xml" do |s|
+      s.gsub! "<source>1.5</source>", "<source>1.7</source>"
+      s.gsub! "<target>1.5</target>", "<target>1.7</target>"
+    end
+
+    system "mvn", "clean", "package", "-DskipTests=true", "-Dmaven.javadoc.skip=true"
     libexec.install Dir["target/htmlcleaner-*.jar"]
-
-    (bin/"htmlcleaner").write <<~EOS
-      #!/bin/bash
-      export JAVA_HOME=$(#{cmd})
-      exec java  -jar #{libexec}/htmlcleaner-#{version}.jar "$@"
-    EOS
+    bin.write_jar_script libexec/"htmlcleaner-#{version}.jar", "htmlcleaner"
   end
 
   test do
