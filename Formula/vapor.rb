@@ -8,7 +8,7 @@ class Vapor < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b34e9ef3f43cfaa725a60798e6a32997233b56479b0889161dc8dcf026a86779" => :catalina
+    sha256 "f49f6f3ec03a5d17c155c4ea7bb72eecd766c669c32fec89bbd5bb1c65d84226" => :catalina
   end
 
   depends_on xcode: "11.4"
