@@ -3,6 +3,7 @@ class Jruby < Formula
   homepage "https://www.jruby.org/"
   url "https://search.maven.org/remotecontent?filepath=org/jruby/jruby-dist/9.2.13.0/jruby-dist-9.2.13.0-bin.tar.gz"
   sha256 "73a8c241a162e644c87e864c3485c55adedeb82a6fd80fa3cb538fdacda7af58"
+  license any_of: ["EPL-2.0", "GPL-2.0-only", "LGPL-2.1-only"]
 
   bottle :unneeded
 
@@ -24,7 +25,7 @@ class Jruby < Formula
     rm_rf Dir["lib/jni/*"] - ["lib/jni/Darwin"]
     libexec.install Dir["*"]
     bin.install Dir["#{libexec}/bin/*"]
-    bin.env_script_all_files libexec/"bin", JAVA_HOME: "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
+    bin.env_script_all_files libexec/"bin", Language::Java.overridable_java_home_env
   end
 
   test do
