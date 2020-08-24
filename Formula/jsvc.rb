@@ -24,7 +24,7 @@ class Jsvc < Formula
       system "make"
 
       libexec.install "jsvc"
-      (bin/"jsvc").write_env_script libexec/"jsvc", JAVA_HOME: "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
+      (bin/"jsvc").write_env_script libexec/"jsvc", Language::Java.overridable_java_home_env
     end
   end
 
