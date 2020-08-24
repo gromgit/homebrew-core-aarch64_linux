@@ -7,9 +7,9 @@ class Treefrog < Formula
   head "https://github.com/treefrogframework/treefrog-framework.git"
 
   bottle do
-    sha256 "b60083bd0a5e7ae3d938d10fd44b22ec00a49efdf984294f02cfd88fd859af52" => :catalina
-    sha256 "e87f7b1ff88ed2cff824039ac6acbf1437e9adcc4599cd0dc6162194fc861733" => :mojave
-    sha256 "a690eac1c340e7695a25b2f561d86b33cb5d2c970f6b6961799257787af89a65" => :high_sierra
+    sha256 "034a80dd1abd63f9afcb7ddd5753ed69f70806ad2f63d0511c8dbde706f8f3ee" => :catalina
+    sha256 "53c4e5ced4f597347ca95fb3b2c6359ce964f3f094ee3032e2d2da6f7016e090" => :mojave
+    sha256 "0c31aaf7a5199f8b409288fc3e5fd5d4e154b23e8be83354e1ed8e0fd4bb13ec" => :high_sierra
   end
 
   depends_on xcode: ["8.0", :build]
