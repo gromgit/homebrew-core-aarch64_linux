@@ -12,7 +12,7 @@ class AmmoniteRepl < Formula
   def install
     (libexec/"bin").install Dir["*"].first => "amm"
     chmod 0755, libexec/"bin/amm"
-    (bin/"amm").write_env_script libexec/"bin/amm", JAVA_HOME: "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
+    (bin/"amm").write_env_script libexec/"bin/amm", Language::Java.overridable_java_home_env
   end
 
   test do
