@@ -3,6 +3,7 @@ class Groovy < Formula
   homepage "https://www.groovy-lang.org/"
   url "https://dl.bintray.com/groovy/maven/apache-groovy-binary-3.0.5.zip"
   sha256 "f7ffaed8aa63611bf68bef0db512ab979926c6e8778393fe573c553b9bd39e10"
+  license "Apache-2.0"
 
   bottle :unneeded
 
@@ -16,7 +17,7 @@ class Groovy < Formula
 
     libexec.install "bin", "conf", "lib"
     bin.install Dir["#{libexec}/bin/*"] - ["#{libexec}/bin/groovy.ico"]
-    bin.env_script_all_files libexec/"bin", JAVA_HOME: "${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
+    bin.env_script_all_files libexec/"bin", Language::Java.overridable_java_home_env
   end
 
   def caveats
