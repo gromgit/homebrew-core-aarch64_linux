@@ -3,6 +3,10 @@ class Abcl < Formula
   homepage "https://abcl.org/"
   url "https://abcl.org/releases/1.7.1/abcl-src-1.7.1.tar.gz"
   sha256 "d51014b2be6ecb5bcaaacda0adf4607a995dd4b6e9e509c8a1f5a998b7649227"
+  license "GPL-2.0-or-later" => {
+    with: "Classpath-exception-2.0",
+  }
+  revision 1
   head "https://abcl.org/svn/trunk/abcl/", using: :svn
 
   bottle do
@@ -13,18 +17,19 @@ class Abcl < Formula
   end
 
   depends_on "ant"
-  depends_on java: "1.8"
+  depends_on "openjdk"
   depends_on "rlwrap"
 
   def install
-    ENV["JAVA_HOME"] = Language::Java.java_home("1.8")
+    ENV["JAVA_HOME"] = Formula["openjdk"].opt_prefix
 
+    system "ant", "abcl.properties.autoconfigure.openjdk.14"
     system "ant"
 
     libexec.install "dist/abcl.jar", "dist/abcl-contrib.jar"
     (bin/"abcl").write_env_script "rlwrap",
-                                  "java -cp #{libexec}/abcl.jar:\"$CLASSPATH\" org.armedbear.lisp.Main \"$@\"",
-                                  Language::Java.overridable_java_home_env("1.8")
+                                  "java -cp #{libexec}/abcl.jar:\"$CLASSPATH\" org.armedbear.lisp.Main",
+                                  Language::Java.overridable_java_home_env
   end
 
   test do
