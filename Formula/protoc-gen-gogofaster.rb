@@ -6,6 +6,13 @@ class ProtocGenGogofaster < Formula
   license "BSD-3-Clause"
   head "https://github.com/gogo/protobuf.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "00acaa078f3284f87ffdd438be762fd5cb20054b3bfbe9165d9fdf735115f92c" => :catalina
+    sha256 "52850416de9fb23a820f7655f47b74633349405d3c2230b68ede71bd1963b4cb" => :mojave
+    sha256 "b91c1a5e5effda960a8029b9cbe4855a6e3a7ea8859e06d3237cd87cc12604ed" => :high_sierra
+  end
+
   depends_on "go" => :build
   depends_on "protobuf"
 
