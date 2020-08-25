@@ -10,9 +10,9 @@ class ContentfulCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "95a9b15e7c85ca5624ce717bfe9a43f437aaf6e1146fec905f05082d5d2797eb" => :catalina
-    sha256 "75c14c0a8c426b9cf1960602dd5b04f75ec055c0586f5f362e08304df73c0dc6" => :mojave
-    sha256 "ab95fde89b75baf09d05a75a19dcd7836ba19b5c53b9e9e54890c0924a4fef1c" => :high_sierra
+    sha256 "95ad0e165c35fb01687769cce1ddc91dec39fd2c8070757587b5751e8de379a8" => :catalina
+    sha256 "29683abd54162b59a237df02680e7f10c7cf72926f30b1fb7cc20b49312e84b6" => :mojave
+    sha256 "007370edf81200b3408319ed0192662597a1880bc4ba45f5d64abb9415f68c35" => :high_sierra
   end
 
   depends_on "node"
