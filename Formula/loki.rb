@@ -7,9 +7,9 @@ class Loki < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9e8b438c27433539256ee0e35792c9d8d5018048c27e4829974d8703641f1e5a" => :catalina
-    sha256 "1398ad9a3ab97d3ef1e72e6e8784765c4739c4e8d3eb3b36cdb461346d5f4c5f" => :mojave
-    sha256 "775281b0c4377f49ec18a9176946501e338783f9c18575059489efbd743ca5c5" => :high_sierra
+    sha256 "407914f713e48ebbb8105b9d6cbb7b1961a39b23b1a6aee73df32d26942d9671" => :catalina
+    sha256 "29974a46a0217c4491613fac9e2119d2c2846ad35d076b0472b690e8451078ea" => :mojave
+    sha256 "38d7a26d3899aba36fe359f62349dc4b5b592a043bfac76a9162202eb829de1e" => :high_sierra
   end
 
   depends_on "go" => :build
