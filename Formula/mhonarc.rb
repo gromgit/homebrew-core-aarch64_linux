@@ -5,6 +5,13 @@ class Mhonarc < Formula
   sha256 "08912eae8323997b940b94817c83149d2ee3ed11d44f29b3ef4ed2a39de7f480"
   license "GPL-2.0-or-later"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "12e9e0b46aa96c824594af7e8d68faeb11940f9dd42574524e906ab9bb8d2082" => :catalina
+    sha256 "63205520df1e3503e6faced33cce8cbfdb0198409638d353b3bbe15a5bf18928" => :mojave
+    sha256 "58ed9777ef00e00f33a7a7cc71c8eea8841d987a933f2bf8e9beffc37d5f7f2d" => :high_sierra
+  end
+
   depends_on "perl"
 
   # Apply a bugfix for syntax. http://savannah.nongnu.org/bugs/?49997
