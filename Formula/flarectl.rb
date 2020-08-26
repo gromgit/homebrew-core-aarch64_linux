@@ -8,9 +8,9 @@ class Flarectl < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "ffd5f05f779bb2e10d5df7c33ec592cf7f09158ae16744175dff7504cc3fee5a" => :catalina
-    sha256 "2ae9d69c1c49863261676210e3d19c35008becd60e2f3b6d219afcdfae1530ff" => :mojave
-    sha256 "ec33f389866a93ab7f290a0d17ad287e2da64dee4173bda1527822ff27ad349e" => :high_sierra
+    sha256 "501d90b9b83b8fd898ceb43e3cfed81d653cd5dde92213a85b6a1e7b86e24043" => :catalina
+    sha256 "d44748d6dd6550bc3a8940f4c2a91451126b774cc6233480fe717f16d8a6f5df" => :mojave
+    sha256 "1e202ff7da87a0e66c2529c693e45d6ff8cb456ef5c2751d2a5f7d2f3b400810" => :high_sierra
   end
 
   depends_on "go" => :build
