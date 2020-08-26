@@ -10,9 +10,9 @@ class Prettier < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "424662a92b8278a40ff9b575212c060250b4f944e63c1d33afde620d06f9af1e" => :catalina
-    sha256 "582fe60306f19ad67785195e206e350788369dfe444e42291c997cc0d5e7b1cc" => :mojave
-    sha256 "ae6d322369444dff0af44b8576cc9978e808c634809e9a1524afdc4cf25a37b1" => :high_sierra
+    sha256 "1ea6631eafa826bbf238e3d36c62c206371bba3beec95589090b7310d8572f83" => :catalina
+    sha256 "e83b9d633ca5f53f28aa9eaee46198064cf2485ec6a60d237dc63a23158d53aa" => :mojave
+    sha256 "98f993cebe29a9efdc42132ff3e5bb5d12d89b9871908b6a59f3339771b15575" => :high_sierra
   end
 
   depends_on "node"
