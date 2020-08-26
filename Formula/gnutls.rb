@@ -8,9 +8,10 @@ class Gnutls < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 "ed76b5d22e195a797c2d01ab2f4a8e769a023b056b17e86f11cb6b9af200babe" => :catalina
-    sha256 "d57c7537ca0565e8c8fdf13beb4b082548f87a0df2295469596f1cfe3067faae" => :mojave
-    sha256 "2773c249c2a71f299261889185bda3950ed15150ff09529a71f88c30d68ff26f" => :high_sierra
+    rebuild 1
+    sha256 "0375c70651fb5aa4f6b1d8bcb1f0a5f280eb297d8989967ca22922761f86c290" => :catalina
+    sha256 "e2ce4fc536e450399800b72daa512d7aa993bf6e550a5be4ddfaf379b7e0aff4" => :mojave
+    sha256 "72058b4ad7fb6bf56f36843fba0389973da46202cc3f5e2e1721b05b4e1966cc" => :high_sierra
   end
 
   depends_on "autoconf" => :build
