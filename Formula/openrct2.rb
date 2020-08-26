@@ -9,9 +9,8 @@ class Openrct2 < Formula
 
   bottle do
     cellar :any
-    sha256 "b77f8f232b8af2d615734f94c43b60bebc656c3dacdd1ad50a3b31b7f3e945e0" => :catalina
-    sha256 "2f9f44ee3c1f9b60b32a60cb40b8a1eabbcddad89d8a3c6c37a04fa41c799493" => :mojave
-    sha256 "50f6ea68a2265b15ee444ffe1ed624d3ff3cfee98fc914cac148d42b6232d920" => :high_sierra
+    sha256 "41bebec7c60c9cc27cbc7fdb399be17275d9dc988dd6cb5f1f355f5043617249" => :catalina
+    sha256 "bb9e8f32646037c3e054ec6e7d4fe9da7fa70c2f23097d7d91633faab102ac44" => :mojave
   end
 
   depends_on "cmake" => :build
