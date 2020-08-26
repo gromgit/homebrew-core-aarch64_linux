@@ -9,9 +9,9 @@ class Doxygen < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "cb5dc54b77c0c510e7242e37bc54828569ee2c976ea08245b99abfa4021b6cf7" => :catalina
-    sha256 "3be27666e048b1b7eb74f8194d3d869b4eab56d4373e056b629ef03030ca81ed" => :mojave
-    sha256 "4b35de197efeef2f7b673d63865bc2c60da76b1d9485d19d64fd633d4ce42fb8" => :high_sierra
+    sha256 "8a4685d1a070c772799993261962da186a43d35bea7d0648c71e593878ca033a" => :catalina
+    sha256 "975acd4d783e3d07f77d93bd8fa817eab4e192d297503494cb60dbc30880620c" => :mojave
+    sha256 "6490b7d253d715a1210f87c1ba4ebb3a6a65d96d9802ce8760416cc09b1f36b3" => :high_sierra
   end
 
   depends_on "bison" => :build
