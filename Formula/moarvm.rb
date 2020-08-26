@@ -6,9 +6,9 @@ class Moarvm < Formula
   license "Artistic-2.0"
 
   bottle do
-    sha256 "e0c39e3ee08d26eee62ab00a11fb751e36e8739d3eb896e58992e38ed5c0c14f" => :catalina
-    sha256 "71fa477b3d249386cfe445de25eeff31ee9b7b8f051c775d5d9a90ea10e16fbf" => :mojave
-    sha256 "e90e3a2106f9f780d5fdd75a40ad8ef01970f23e14b20094607da3f48a1c296c" => :high_sierra
+    sha256 "90f47968f3a270437bacdf0803de1d3aad9e9c6e50cd5cc8cd903d75b314294f" => :catalina
+    sha256 "43f3eec7e9d9c58e695c3f8d6b47eaf469afb3cf02ec78ffbf7118cc65b0fb5e" => :mojave
+    sha256 "fa5889f5024bed04226b7aeabec7e626d8bd27728f09d8363022922da4cfd3b7" => :high_sierra
   end
 
   depends_on "libatomic_ops"
