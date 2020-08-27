@@ -9,9 +9,9 @@ class StellarCore < Formula
 
   bottle do
     cellar :any
-    sha256 "36cbcda3bb3064cdbedf6a37925757227087d50d513b65ed6fd83e731b9496ab" => :catalina
-    sha256 "c789eb0cedc23e5878e702119b9a6c6f1ef853b512ac926d8a9ef13146231649" => :mojave
-    sha256 "76d0a3743be0948ccb584677a98a1994711ff8d74750f8c5149ff3f858bd6b33" => :high_sierra
+    sha256 "90e3a2a7ee27cf6bf0fbf73326f31efd5211704a94d6c266dd1860f02734c841" => :catalina
+    sha256 "b9a0e969d218908ca36ba35cc71bfd866f8d8c2858d0635f3d63c92ac5d6f91c" => :mojave
+    sha256 "4aec90c47396ee3c63b3fc6961e30ce8f7feda4f7b396dbe26aaa483e0b5aac9" => :high_sierra
   end
 
   depends_on "autoconf" => :build
