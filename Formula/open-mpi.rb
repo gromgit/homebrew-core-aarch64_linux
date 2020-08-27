@@ -6,9 +6,9 @@ class OpenMpi < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 "d0fff667ea8857e586804896e548941e21b164a6967ef5b5d4e6f19023e27370" => :catalina
-    sha256 "2a7c4fccb0807f159fa0f5b4021214385e7a38cd573a3f0ae8ea59aa96734e58" => :mojave
-    sha256 "6ca3b12ced550f1ecf9ba0440a86474d1415691cd14e84e949466c82732a72f2" => :high_sierra
+    sha256 "fd21d8d449c7fee6126f11994b6e0d12178b1eab55cbb17f99056d535cb1ace4" => :catalina
+    sha256 "f3a7dca683792a4fe866b62004351b1dae6acf2376609cf36bdc771d9e9104ef" => :mojave
+    sha256 "33d3cd119f7f7d7d3154d758cc0ad68ad513624c9a648c9b87d732ea6a8e6068" => :high_sierra
   end
 
   head do
