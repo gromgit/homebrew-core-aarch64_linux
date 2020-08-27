@@ -9,9 +9,9 @@ class Whistle < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0354b7ca9e5d31242bc77d393375eef9ca9967629b31325cd6b3c8c0e2a152c8" => :catalina
-    sha256 "aef98bc4ed006acbb2e5176a54d328469f6ad28c68f6e9b9beaf1af588bbe1d2" => :mojave
-    sha256 "b395eff6caa0133d278c0030de299a65bf1956ff272edfff876972c5fcf71fb7" => :high_sierra
+    sha256 "0be5076469b5e823f29bb356232a34757aa891251dcca60bcd290c4c63e759ce" => :catalina
+    sha256 "2dcbad31cba5d91e9c464d0cd96ffafa994db30d1fc5cc5f149e10177575f8fd" => :mojave
+    sha256 "ce10b57a51773ce7994d6ba0f3d121d67846714267631a1acf322f0a1db33fb9" => :high_sierra
   end
 
   depends_on "node"
