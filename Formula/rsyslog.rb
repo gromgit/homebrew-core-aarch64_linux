@@ -6,9 +6,9 @@ class Rsyslog < Formula
   license all_of: ["Apache-2.0", "GPL-3.0-or-later", "LGPL-3.0-or-later"]
 
   bottle do
-    sha256 "6e2da2c80153db338ae7acb282ee690fa888e11e3f2bc0c5d7cd86640e1d5264" => :catalina
-    sha256 "a6292acf708905547dbaea460f92c59e5d1924506293afc751a349f8734a787b" => :mojave
-    sha256 "fd426af7ddbe1611be30da51a5850f05d3496713b80c8f313e6763e9a245a2dd" => :high_sierra
+    sha256 "97381545007f27c0cfe29662eedb197aeea7c01a221e87f5553a0f45dfc8f1cf" => :catalina
+    sha256 "95c46152ac156ee1bfff208092e41d64ab2bded77d25eff90390529ed37bba06" => :mojave
+    sha256 "26f9d1750e98bcce954c824408cebb9450f57e3e927777ed246b668bf029d93e" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
