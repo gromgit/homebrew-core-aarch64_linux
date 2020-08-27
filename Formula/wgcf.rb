@@ -8,9 +8,9 @@ class Wgcf < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "98aedcc0ea89206a598ad085bdda918ee87e7fd4d0953ea61bb11ee413425907" => :catalina
-    sha256 "76b8267b99558a8d59c633dce247b6c59fca66346fbd754c6ed13635efbfbbf2" => :mojave
-    sha256 "e8f1364e5ab689ccd79a48157f1913ae29d206f9ced7cececeb56e0ddd8177bd" => :high_sierra
+    sha256 "5580af3756ad75c1b9d94ba6cd391a7f1fbc25ee6992fd8d101911f04771ba1a" => :catalina
+    sha256 "a206036aff8dbd8afe9196fe0dca8ba510dbf39bbd168034a7be97de914495c7" => :mojave
+    sha256 "9523a32e151867029d17ecbe66813b4961e594613ca397b61b869961b1b1f29a" => :high_sierra
   end
 
   depends_on "go" => :build
