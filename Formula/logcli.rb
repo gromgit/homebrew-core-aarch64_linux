@@ -7,9 +7,9 @@ class Logcli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "af69580a9106b8b08ee73b65aaa21e159004337a07f976c9c1cf027c6b45d502" => :catalina
-    sha256 "2a50707940dff101b465d2f5bf4a926ea506081a80ba711681ca399cf1ba3cca" => :mojave
-    sha256 "759365beafe8a2996eaeaea081a1020b545a2ed28b8a74e017b4d63823b30193" => :high_sierra
+    sha256 "130981f7347099308a00b999953d7233fb4f793607e06253a8d310d0bd1e77f4" => :catalina
+    sha256 "707888b346c37ba3deee914f1c44551c055ec4de7fba4d6a72803ea1a1d05a24" => :mojave
+    sha256 "16e78a76040d4da26f3e88accc19893bb33b5b84c0ce0a2b10ceaab9e807d1e5" => :high_sierra
   end
 
   depends_on "go" => :build
