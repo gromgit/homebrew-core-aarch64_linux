@@ -8,9 +8,9 @@ class Xgboost < Formula
 
   bottle do
     cellar :any
-    sha256 "a80dfdb4e53157f2a5e3ff325303be7448952c80fa5db3292d1031024a36eded" => :catalina
-    sha256 "7fbe70d2c3acff2901c3499ae7ce2582e44d4e944ffa1eab09ee79b7262413c3" => :mojave
-    sha256 "6f40ceaac9d8aed4cbc8e52081f9d0c63ab24f5c63b38e564334a7c2c0717118" => :high_sierra
+    sha256 "c8d19350dfc4643d4336a58c88a405edc804c1b0513c83b50cb5a72a89c8dc32" => :catalina
+    sha256 "be8665b0eb41df7319746c723d438241ccca5b28847524193ceb6a37a5708a77" => :mojave
+    sha256 "2d0116ba64bcfdc82f00a3da16bd243a59ddd970fb661e095891451668533f6e" => :high_sierra
   end
 
   depends_on "cmake" => :build
