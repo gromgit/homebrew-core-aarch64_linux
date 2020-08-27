@@ -9,9 +9,9 @@ class Camlp5 < Formula
   head "https://github.com/camlp5/camlp5.git"
 
   bottle do
-    sha256 "37dddf4bb25b87697f67da03bafce93b5ed258468e4ca3381f92a76a76c1b956" => :catalina
-    sha256 "b2fddd39a3d20529598983ab9a1b1b80c86e228111e613501a71a223bf0d5694" => :mojave
-    sha256 "ab802383d18fa5a34dc9dc1abd3d264c006693df3205a53c4be17cca6e5f223d" => :high_sierra
+    sha256 "0fc4737c1395d1ef602b2e8c39ea759717c2315f8978a6d59eff0486a7b6f5b1" => :catalina
+    sha256 "873bd9b0c0155fd2eadcfaf021e6f0fc2667790aac60dc756efe3383795af0e2" => :mojave
+    sha256 "40965450f249c2485e737c20a00efc960508da83bc3d7989dbf1341729deb5c6" => :high_sierra
   end
 
   depends_on "ocaml"
