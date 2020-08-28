@@ -7,9 +7,9 @@ class Libde265 < Formula
 
   bottle do
     cellar :any
-    sha256 "7621e45fa0b119aff03a8c3ff3ed94bec24a2844a28cc10603b96e531afc3dab" => :catalina
-    sha256 "f0b536c23ac8080dd7946dd3bcbe2517f4a9b7e50b815e1ba745277c9982e6ac" => :mojave
-    sha256 "9815c937712d61876a1cb61241b60164f65cf463d6594d46857f691d37775882" => :high_sierra
+    sha256 "119771a3c4b3da418886e2142d27d93191e37ecdebb46d07060f8f7b85fbb1c4" => :catalina
+    sha256 "97450df80726024f5e1f099a4df07555caeead0a89b225ccf895aca0f033d98f" => :mojave
+    sha256 "b1961f6dc7dbba259edafcee3b57741177ba9c6c6b1ccf43337167ec4d0cb246" => :high_sierra
   end
 
   def install
