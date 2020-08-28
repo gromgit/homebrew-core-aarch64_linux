@@ -82,6 +82,10 @@ class Gnutls < Formula
 
     pkgetc.mkpath
     (pkgetc/"cert.pem").atomic_write(valid_certs.join("\n"))
+
+    # Touch gnutls.go to avoid Guile recompilation.
+    # See https://github.com/Homebrew/homebrew-core/pull/60307#discussion_r478917491
+    touch "#{lib}/guile/3.0/site-ccache/gnutls.go"
   end
 
   def caveats
