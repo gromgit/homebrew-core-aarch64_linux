@@ -14,9 +14,9 @@ class Dvc < Formula
 
   bottle do
     cellar :any
-    sha256 "a66f566251c04e2b0ac769ec4279a62f82a2d2ed67d5a9f95b154fde9596fa1c" => :catalina
-    sha256 "10b241ae228bf3cb95a68ad427307e6cd09117bca2349f05819dd13c2d9e326d" => :mojave
-    sha256 "c1835d22b12ddb926df63172a3dddb94f1c1d870b14df16951b42f79279f2d43" => :high_sierra
+    sha256 "f3ef2d52304b7f8afb63b5e32a56c8a4493cf0a1dfd02b94ae2ce05ab2e1ffc4" => :catalina
+    sha256 "cdec2c54969b0936d733bffef38c3da2e0bd10f9d1dcb6554974cb2cbcaba0ab" => :mojave
+    sha256 "2f3d235e1e62bd97c57dd8005a0ed2112fe6952484baf7911172b6d0461350a2" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
