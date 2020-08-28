@@ -8,9 +8,9 @@ class Gist < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7eb37c0514203306a3e5be9176acca230014a30e07d43d0e9ba72afcc3dc3203" => :catalina
-    sha256 "7eb37c0514203306a3e5be9176acca230014a30e07d43d0e9ba72afcc3dc3203" => :mojave
-    sha256 "7eb37c0514203306a3e5be9176acca230014a30e07d43d0e9ba72afcc3dc3203" => :high_sierra
+    sha256 "1d756e91ae99001381dda127f1315af4363cb158e323d83c72f466a5ff7c3e36" => :catalina
+    sha256 "af69b6fdaf48f811b2eb1789febe49677d74375da1e4b118b7753ff783f6ce0c" => :mojave
+    sha256 "28f8947a2912459cc79536eed7cbc2af958c9282f31990741f2fd0f32fffa70a" => :high_sierra
   end
 
   depends_on "ruby" if MacOS.version <= :sierra
