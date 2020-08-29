@@ -12,11 +12,9 @@ class Qrencode < Formula
 
   bottle do
     cellar :any
-    sha256 "467f54a970d8ceaceaee214d3723aa4adea9277ecc7c5ccd575da3f7a918af77" => :catalina
-    sha256 "1da2c679c176cd636ba258e6f504b35e86b0378f1a97608187b7cc7bb133cc9c" => :mojave
-    sha256 "a541a4b376c69168e1d3392c90810893e02bfc1ba235437453018495901a0171" => :high_sierra
-    sha256 "9b876f9388c74c61e1d5a3c87663b424c4215e546c37a3a8e1543e5de976988d" => :sierra
-    sha256 "83b2cb0f1f60421584a5e6694907ccb636834349a61a40dc8e1a40272a95cc9f" => :el_capitan
+    sha256 "2cc7a1c318d30f1e1fd9a79975f28b0ae17b982e6252e632ef31ad10eb8559cf" => :catalina
+    sha256 "becf48027c78b7b5a21121cfe19a21adb6cad2f9a3692ade37ddcfe9e737de87" => :mojave
+    sha256 "e40f0dcb310095f0d90dff2b1a7ecb17fd94c364b776b3c29a4dfe214df95fdf" => :high_sierra
   end
 
   head do
