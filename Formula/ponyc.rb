@@ -8,9 +8,9 @@ class Ponyc < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d5ee5c7de9411cd4ef0a89ec20ecf4b65b24f909140ab471b1ed363848eb2d21" => :catalina
-    sha256 "850f9ce9041cd9d730cd0f7436640164513fea9e87d1700b9a1407a78ddc780f" => :mojave
-    sha256 "be3c504153f0c4b1402263820f51578c720c6a03d7b4b06ac2e0f1ccb82f13b7" => :high_sierra
+    sha256 "98271b54f1ea1171b63e88d26e5093278553007d2c22d535a86499094b56f7e8" => :catalina
+    sha256 "5167364b13e68c873d6141987e30a2a06e9d3d49da7c2b270aa2d8fba18fe959" => :mojave
+    sha256 "0799b0a955962c33411b0261cadc2d4c556670b19a8094b5acabd21d61153db8" => :high_sierra
   end
 
   depends_on "cmake" => :build
