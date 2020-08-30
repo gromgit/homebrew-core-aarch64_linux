@@ -17,7 +17,6 @@ jobs:
       uses: Homebrew/actions/setup-homebrew@master
 
     - name: Cache Bundler RubyGems
-      id: cache
       uses: actions/cache@v1
       with:
         path: ${{ steps.set-up-homebrew.outputs.gems-path }}
@@ -25,7 +24,6 @@ jobs:
         restore-keys: ${{ runner.os }}-rubygems-
 
     - name: Install Bundler RubyGems
-      if: steps.cache.outputs.cache-hit != 'true'
       run: brew install-bundler-gems
 
     - run: brew test-bot --only-tap-syntax
