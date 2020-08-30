@@ -14,9 +14,9 @@ class AnimeDownloader < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f72af53be1b91169b613617cbbf597e10ca77b8df5c97619ac5beb9ae993ca05" => :catalina
-    sha256 "0132c4f18af10e9e7a4b1fb0833cdd07153f1f6d4e932e2d43ee77771133e34e" => :mojave
-    sha256 "8fdb34e55ff31e1307baee3819c44ac81fd34aee5d9ff20cae1e7fce45ab40d3" => :high_sierra
+    sha256 "3d0a8dab67b7a28863aae65b35e96eff23981192735785cc5577281e19b87716" => :catalina
+    sha256 "7182d5190eaa861f4f69789680c2b235ca7eb1b394e2631810c3a2c5154bf4a1" => :mojave
+    sha256 "22090d8217a5e7611f91ac1e84fa38ad4fa2b099d2382ba216dd6eaa3aca2f05" => :high_sierra
   end
 
   depends_on "aria2"
