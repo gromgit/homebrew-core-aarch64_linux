@@ -13,9 +13,9 @@ class Xxh < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "34a321ac28c031fdb427f866d04a3e5d8aa074e2050afb330edc1718147fa3d9" => :catalina
-    sha256 "525eb4703597ec79fcc04f52058b0df50151ce375a72186e8b062fefc955e20f" => :mojave
-    sha256 "029ad00049f267959b390fda46ce1889a0fc7c3d3fdea68844ce477e2cb86e91" => :high_sierra
+    sha256 "2363936330ef4377578a60a1735fe1740c4849cba53f0b698b3c7247b09d470a" => :catalina
+    sha256 "ac8f21bed8844e190488e83d76f08a350c8efb7b724d3f55c9bca47ddd975e03" => :mojave
+    sha256 "23398378567de59e4a45b37d394467c7980b9db12f3c83ea63ff8da1c0f44c50" => :high_sierra
   end
 
   depends_on "python@3.8"
