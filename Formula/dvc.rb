@@ -3,8 +3,8 @@ class Dvc < Formula
 
   desc "Git for data science projects"
   homepage "https://dvc.org"
-  url "https://github.com/iterative/dvc/archive/1.6.3.tar.gz"
-  sha256 "1c4200a228cf8f2fd6b2a7c5cb5655f5cd4034fc3623d63db785318ae499f15f"
+  url "https://github.com/iterative/dvc/archive/1.6.4.tar.gz"
+  sha256 "16d6a057fd981cd4e5c645db397fb02a6508f5427476544aaeba488fd7798a24"
   license "Apache-2.0"
 
   livecheck do
@@ -180,8 +180,8 @@ class Dvc < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/3e/53/3cbb5388424c384c1e8177c4734f4e8e2ef684cf83eef1dceb1dcc0fc55a/rich-5.2.1.tar.gz"
-    sha256 "d791263dc505b635b75249dfc1991510d7eabb27047652e3209e98384365c9c9"
+    url "https://files.pythonhosted.org/packages/e8/a1/eb2c0fdc7e223dacd7441495c4e12d616bbbecebd403efc96b7208269159/rich-6.0.0.tar.gz"
+    sha256 "53c683a79e3f949d675b1d04e6fe3ccd53fad97aa7e2f6a83f2985502663f420"
   end
 
   resource "ruamel.yaml" do
