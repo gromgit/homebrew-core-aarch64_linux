@@ -7,9 +7,9 @@ class Seal < Formula
 
   bottle do
     cellar :any
-    sha256 "238e9b8f29e71d44093b32fe207236251d41647823cb20dc92729d4fc938a6f6" => :catalina
-    sha256 "15fdadd59ff8cd66129816efa4616b90c2cbe8aaba4c011edf2cb26207c85335" => :mojave
-    sha256 "1328dc70b3de969b8a7454464f01e43c488a81efdab9a22fb310f27c517f1b31" => :high_sierra
+    sha256 "eacc96f1628b4bbd5dd9345e40ad4554d888749708d83b32f0afbba1d6951871" => :catalina
+    sha256 "f9054ec5d1823bc32e916a4d2afeb9e0a7e42ab81b1bc55ea3242ca1eb4ab654" => :mojave
+    sha256 "4a16dd91ba86088961c79009939866ed3331ab066e5d5b182ec74eebc652d910" => :high_sierra
   end
 
   depends_on "cmake" => [:build, :test]
