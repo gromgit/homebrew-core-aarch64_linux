@@ -1,9 +1,9 @@
 class Uptimed < Formula
   desc "Utility to track your highest uptimes"
   homepage "https://github.com/rpodgorny/uptimed/"
-  url "https://github.com/rpodgorny/uptimed/archive/v0.4.2.tar.gz"
-  sha256 "5f803eccc1247b4a22171de4670a896e05adb9a82f018facda1b2cc5b19dbc97"
-  license "GPL-2.0"
+  url "https://github.com/rpodgorny/uptimed/archive/v0.4.3.tar.gz"
+  sha256 "11add61c39cb2a50f604266104c5ceb291ab830939ed7c84659c309be1e1e715"
+  license "GPL-2.0-only"
 
   bottle do
     cellar :any
