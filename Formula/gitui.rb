@@ -1,8 +1,8 @@
 class Gitui < Formula
   desc "Blazing fast terminal-ui for git written in rust"
   homepage "https://github.com/extrawurst/gitui"
-  url "https://github.com/extrawurst/gitui/archive/v0.9.1.tar.gz"
-  sha256 "2112575a5ec65f744572d38df9f4f79e7547fc2139093a6c9cf2e9ad85bdf547"
+  url "https://github.com/extrawurst/gitui/archive/v0.10.1.tar.gz"
+  sha256 "2d6fa87d88002716cf0fedef9d4332b7212ee05fbfa4b8c536ae4270bef99bce"
   license "MIT"
 
   bottle do
@@ -47,7 +47,7 @@ class Gitui < Formula
     screenlog.gsub! /\e\[([;\d]+)?m/, ""
     assert_match "Author: Stephan Dilly", screenlog
     assert_match "Date: 2020-06-15", screenlog
-    assert_match "SHA: 9c2a31846c417d8775a346ceaf38e77b710d3aab", screenlog
+    assert_match "Sha: 9c2a31846c417d8775a346ceaf38e77b710d3aab", screenlog
   ensure
     Process.kill("TERM", wait_thr.pid)
   end
