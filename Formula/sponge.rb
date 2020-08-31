@@ -7,9 +7,10 @@ class Sponge < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b77ba5818bf53f3e864592820af2277c00b8e371b1ffb478b33edc78f9343993" => :catalina
-    sha256 "0d651d015389d46adb0d91d4dba2fab77ad75a53af1979ce6e7f254e6dd7b941" => :mojave
-    sha256 "bfbb4be2239ab1e181d8e671e940c42d55784facb6ca9734e1d8569ede665c00" => :high_sierra
+    rebuild 1
+    sha256 "b913bb8811814b0541192ab204784859bc30af5003cf8d2b462722003d2038f9" => :catalina
+    sha256 "19df51f19f13b1742b5f81bebd1c68cf2bb7d9693c3dae587e171ab57cb7fdca" => :mojave
+    sha256 "c25d99fcacc21592944ed74b6390ce8f81d60dbd03e2122b75a544542ec18cb8" => :high_sierra
   end
 
   conflicts_with "moreutils", because: "both install a `sponge` executable"
