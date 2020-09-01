@@ -13,9 +13,9 @@ class Redis < Formula
 
   bottle do
     cellar :any
-    sha256 "0559d97459fddbcbf882d30e3c73a00f4b77f7f75544a7cd9c5954ec9ffa1ff8" => :catalina
-    sha256 "1c82be1e9b5c5fcd3c5716347552e972ee547a40c45ab88620ddd871e96e6f59" => :mojave
-    sha256 "963de099575ccda056e785ba344de5fcb8ddbfe45dec5bc57d2a6d42b48198fd" => :high_sierra
+    sha256 "4b229e8295883472f68218dbda526a85af91ac913a3fed04208fa3ea4ed95b5d" => :catalina
+    sha256 "67f18b3f04c672f4755d40b3056f012fb08f4330af9c472b706ba0b2bb05220d" => :mojave
+    sha256 "7918cf6a8d723e9b8fc9d71845015b62d78f6e1a1a5fbe5817b71b4628d70a6e" => :high_sierra
   end
 
   depends_on "openssl@1.1"
