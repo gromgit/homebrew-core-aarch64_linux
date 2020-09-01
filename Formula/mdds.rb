@@ -11,10 +11,9 @@ class Mdds < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 2
-    sha256 "c7415479dc1b23ba867eef310cd265d6813ea9523591a2d30670f3ee20a99923" => :catalina
-    sha256 "ccfeb176c14e310b913302c74ba30d5973184662e62060ec8eea0f16c931f607" => :mojave
-    sha256 "ccfeb176c14e310b913302c74ba30d5973184662e62060ec8eea0f16c931f607" => :high_sierra
+    sha256 "a5e6a996bf112bca0d5c7e628fd15128977b9075938155a4185aaf5613d136bc" => :catalina
+    sha256 "5146b50529f63030c978dbdab3755ce7a7383d7c8049e03ae1186fa231f867c9" => :mojave
+    sha256 "67f497efa10f695da64e4769d3ef5de6fb0e9d3d0d62026c2105b7c5148b91a9" => :high_sierra
   end
 
   head do
