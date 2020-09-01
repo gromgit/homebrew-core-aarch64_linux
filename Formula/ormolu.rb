@@ -6,6 +6,13 @@ class Ormolu < Formula
   license "BSD-3-Clause"
   head "https://github.com/tweag/ormolu.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "14ca12579e0137130bdb48ee2eaaf1610f526bb0e0cd30c1444c1ccbef86a6a2" => :catalina
+    sha256 "393da89deaa62a76fe3d0453736f0f94ba8d5ba4ea69b47ea453bcb2351e1f71" => :mojave
+    sha256 "09803d60ccbd9bb84b5dd99b8f387c2d4553ffd38aa02545596bc19b38ea4b67" => :high_sierra
+  end
+
   depends_on "cabal-install" => :build
   depends_on "ghc" => :build
 
