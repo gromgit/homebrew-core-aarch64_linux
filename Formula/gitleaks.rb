@@ -1,8 +1,8 @@
 class Gitleaks < Formula
   desc "Audit git repos for secrets"
   homepage "https://github.com/zricethezav/gitleaks"
-  url "https://github.com/zricethezav/gitleaks/archive/v6.1.1.tar.gz"
-  sha256 "e6c1da674b38a082a7c49c202380148b934eb60229d336a5049efc2ac859385a"
+  url "https://github.com/zricethezav/gitleaks/archive/v6.1.2.tar.gz"
+  sha256 "43d53ed0fa716d47074f4640d1916af0d3dc635a77ce66ebb3167b47b88fb767"
   license "MIT"
 
   bottle do
