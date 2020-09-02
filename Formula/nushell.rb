@@ -7,10 +7,10 @@ class Nushell < Formula
   head "https://github.com/nushell/nushell.git"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "637a8f1a243640b4f88ff510757a14a05863789deec5f369f72ad5f2ecd9997c" => :catalina
-    sha256 "4cc71973703b022332cdd71f5ba1ace11d27388b0c3daa8489b26cb4e6aafc76" => :mojave
-    sha256 "ff803c46885adef74139fcf27c7403555bb51908363565e0fc4ff23b1dd27119" => :high_sierra
+    cellar :any
+    sha256 "49511da84622a111286b1e7b65df8d3294115783827424396cebe157f55a07ba" => :catalina
+    sha256 "c37e14e2354f1c4179140739e00006a492d40c82b0fd7fd269ad3180382e7070" => :mojave
+    sha256 "1987098d0bc2539d351471e080cfc9857b32b05b4598913b5328dc15ec038531" => :high_sierra
   end
 
   depends_on "rust" => :build
