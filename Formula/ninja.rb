@@ -14,9 +14,10 @@ class Ninja < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "3269729bfc2139757eba003ac7caa7664c355ddb6856c0b0b94fe1d05918da3c" => :catalina
-    sha256 "643b9539ddec245f960156a4ddc54c82bb0cf46c2cfc94065737481ec61a705a" => :mojave
-    sha256 "5c9a9675b27740d6d4b895a4b5462341593e11f8d2c1ec783e75b956052d7f82" => :high_sierra
+    rebuild 1
+    sha256 "573d01508893add0fadf069f53d6ccc968e93943d1a3e40bf65b4d8ac8ed0a1f" => :catalina
+    sha256 "d431b62893122706a8feb184e61c0d5836189e1e2614764540a356ae0a665ed3" => :mojave
+    sha256 "d7ea07c919779729613eba445b34aaa0425d505af17ea5bda70dada8ac473ddb" => :high_sierra
   end
 
   depends_on "cmake" => :build
