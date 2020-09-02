@@ -1,8 +1,8 @@
 class Podman < Formula
   desc "Tool for managing OCI containers and pods"
   homepage "https://podman.io/"
-  url "https://github.com/containers/podman/archive/v2.0.5.tar.gz"
-  sha256 "cd7618429f02db8e7dbca29c6f8a7623a91a01804ef768dc5ec8c7660679b0c5"
+  url "https://github.com/containers/podman/archive/v2.0.6.tar.gz"
+  sha256 "990c341fe563d34a25ebab818af60480061cb80e4e8d61eacbdeb998151d6663"
   license "Apache-2.0"
 
   bottle do
@@ -19,7 +19,6 @@ class Podman < Formula
     system "make", "podman-remote-darwin"
     bin.install "bin/podman-remote-darwin" => "podman"
 
-    inreplace "docs/remote-docs.sh", "sed -i", "sed -i \"\""
     system "make", "install-podman-remote-darwin-docs"
     man1.install Dir["docs/build/remote/darwin/*.1"]
 
