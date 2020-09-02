@@ -8,9 +8,9 @@ class Vcpkg < Formula
 
   bottle do
     cellar :any
-    sha256 "e4b51bd648a112d77dc6f16f7e702f1edbd3f14a3dfe9bc29dc46ca996f26670" => :catalina
-    sha256 "db0dc9240c0c62ad995b56cbb19bb7089a6463fd41fe01cf3d5cb860d408f564" => :mojave
-    sha256 "e8b701d7a51ed48a27f93f6ac6e16f1f38118f5a9bfd15360594c5db6c19b881" => :high_sierra
+    sha256 "35363b2d066c920dcde30159e28b580e346f33064accaa79f789759816eef61a" => :catalina
+    sha256 "055f677516a5474e4964f7bb5fdb6f05e91913b8aea32aba56918cb7d31fe34b" => :mojave
+    sha256 "b1cab740efdb40b575553ad9bd96cd457482e16d0246315b69a996f753b72a85" => :high_sierra
   end
 
   depends_on "cmake" => :build
