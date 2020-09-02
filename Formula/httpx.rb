@@ -6,6 +6,13 @@ class Httpx < Formula
   license "MIT"
   head "https://github.com/projectdiscovery/httpx.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "8d7fdb697d1a2c6295b7c9ecc685007ee38ae4b17752283028aec50494d792cf" => :catalina
+    sha256 "09fc321f4f84348e51b8c791ed3184733aba87584a232bc5eaac0afb1fc42d64" => :mojave
+    sha256 "eb3d6bbb28a94e7c98cc9cedbb4b3ff765a6a9660df5ff9ef1206aff756d6e56" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
