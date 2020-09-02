@@ -1,8 +1,8 @@
 class Solidity < Formula
   desc "Contract-oriented programming language"
   homepage "https://solidity.readthedocs.io"
-  url "https://github.com/ethereum/solidity/releases/download/v0.7.0/solidity_0.7.0.tar.gz"
-  sha256 "86e782a88eaaf4aa98f4e1e915f46b5bc5f596ea86c784fb911dc6e4c04309bf"
+  url "https://github.com/ethereum/solidity/releases/download/v0.7.1/solidity_0.7.1.tar.gz"
+  sha256 "c69205d902ac8dd66f5aeaa78a08e5411cdb26a0b9479fcf44f394b7008b484c"
   license "GPL-3.0"
 
   bottle do
