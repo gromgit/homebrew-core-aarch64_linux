@@ -3,6 +3,7 @@ class Vcpkg < Formula
   homepage "https://github.com/microsoft/vcpkg"
   url "https://github.com/microsoft/vcpkg/archive/2020.07.tar.gz"
   sha256 "11af5dc5ac7a01d98145e894f5962711b16b23cbcf6998bef9c77f00a565c9d1"
+  license "MIT"
   head "https://github.com/microsoft/vcpkg.git"
 
   bottle do
