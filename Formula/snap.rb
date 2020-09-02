@@ -6,6 +6,13 @@ class Snap < Formula
   sha256 "c4f532018ca9d2a5f87a95909b3674f8e299e97ba5cb5575895bcdd29be23db3"
   license "GPL-3.0-only"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "0879922d7e220a6af8e6e14056e3785f105d79a1e5b7c8ed6152fedf891f32bf" => :catalina
+    sha256 "548d0fa5791b84ae340c33ce7ee4c00ae34afeac08c40c2dd7865e39e6aa39b0" => :mojave
+    sha256 "b79ccf4586bcdd234c108527fcc25e8cba2068f11a22e588095a3cdbbd1f4043" => :high_sierra
+  end
+
   depends_on "go" => :build
   depends_on "squashfs"
 
