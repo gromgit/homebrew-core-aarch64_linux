@@ -1,8 +1,8 @@
 class Julius < Formula
   desc "Two-pass large vocabulary continuous speech recognition engine"
   homepage "https://github.com/julius-speech/julius"
-  url "https://github.com/julius-speech/julius/archive/v4.5.tar.gz"
-  sha256 "d6a087a8c55b656c018638b4d2f7e58c534d4aa87b4dda4dd8a200232dbd0161"
+  url "https://github.com/julius-speech/julius/archive/v4.6.tar.gz"
+  sha256 "74447d7adb3bd119adae7915ba9422b7da553556f979ac4ee53a262d94d47b47"
   license "BSD-3-Clause"
 
   bottle do
