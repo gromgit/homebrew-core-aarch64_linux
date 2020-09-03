@@ -12,9 +12,9 @@ class Gdal < Formula
   end
 
   bottle do
-    sha256 "b781dd4174e448f161d1e3f38fa898fea35ea16cb9fa6212cbcd0cffd6951e81" => :catalina
-    sha256 "5a517fafd975da2c073cbca3946b481683f88e832432efdc6c3951c8aac325d3" => :mojave
-    sha256 "d3e3b959e7c6f80ff748a345ba26c1876568de7f0edffe69ae6ed40959ddeee9" => :high_sierra
+    sha256 "dfd3110ca155a7201308c9b40b2d398c79b42343912851150e5a75f77e5d039b" => :catalina
+    sha256 "4fee4dc5dd479157b13f22d10920d76499ba0eb090a002f83fa2201faf321bed" => :mojave
+    sha256 "bdd41511474301e6eeb8b820668973d4eaab96b08d0f72a959dd4066d80904aa" => :high_sierra
   end
 
   head do
