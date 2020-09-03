@@ -13,9 +13,9 @@ class Htop < Formula
 
   bottle do
     cellar :any
-    sha256 "f53ae5c8d846b7f11ef6431f65b1a056a31d2703c1b2bc691330cd618dea5a3a" => :catalina
-    sha256 "7007e92a3c9b4f818c9caa53ac27b941b3b6079d5eff62f84837d5092d04ea83" => :mojave
-    sha256 "db64171160ccd3abce6be5fad7547aa254fa0b46b6447b37a08a3a31c5e1f66a" => :high_sierra
+    sha256 "82587d9e03beca35d06e7e82225c021d4af07ecfe9d901d867cfeebec8edbb6d" => :catalina
+    sha256 "c9ce09b9aee0b84c5837122ad84482536383752332366495b9021510c2b94474" => :mojave
+    sha256 "0d2fe8465f89d94a1e95a7b625387f4830e1d4c90c2bb3f8f58818a413c251e6" => :high_sierra
   end
 
   depends_on "autoconf" => :build
