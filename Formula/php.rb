@@ -13,9 +13,9 @@ class Php < Formula
   end
 
   bottle do
-    sha256 "d9fab3b015bed719b2a9ece221a6c813cfcc50b0e5f133e4dbb1a19da25a7d6d" => :catalina
-    sha256 "9e7433b038f67fae0a1508ea01b14747f1b6d69d16b484f11a90dc94938d3e67" => :mojave
-    sha256 "bfa9026aab3df2add7087b803a700eb106096387af0f12128abd5a09a3b4e03f" => :high_sierra
+    sha256 "b4bf7b37671bf26dec1986a3be42416fb41e731b6d632f02fb2bc968379d4022" => :catalina
+    sha256 "983da87997888992e345cc5bbae84ab1bd1e20503c5a171a66533744001d1e9e" => :mojave
+    sha256 "7c8107f2c86c99cce71c35a9ce42ab4d88e35c7475a706bef1533d18c0f22982" => :high_sierra
   end
 
   head do
