@@ -13,9 +13,9 @@ class AngularCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "bbca782fe2c245bcd7d0a179c8a77545c0f2ee58279887c4a097374da28bd17d" => :catalina
-    sha256 "231e10fe9c116af0561e645906697f75aca73c04446766022d7049c6516fbfde" => :mojave
-    sha256 "cd382724764c1ef259d7d9b37c9106a8c9455ff6b1d4f52bf09e10dc827cb56e" => :high_sierra
+    sha256 "cfce9bc4181ff4294d3b79c27ca911f538bd3305c358e8a4474f9e0a89ea0708" => :catalina
+    sha256 "db9e70a0f9b9e49ece797880a2db34023e9688c2ff3dcbd945acb59fc39cc7f0" => :mojave
+    sha256 "f79237471302f693ea2167834f0f4a5976161038c8981b8e6381fd84ef8ca9fa" => :high_sierra
   end
 
   depends_on "node"
