@@ -11,9 +11,9 @@ class Modules < Formula
 
   bottle do
     cellar :any
-    sha256 "a2ad130312c85f33d18a50e31c4461f3cee080169aa29e00481fc51a8353b3f3" => :catalina
-    sha256 "055020e7d4050da4c501aab2aaf7c71e3999bf497558488ff02b877a029cf2e2" => :mojave
-    sha256 "e7684dbd641f7aaaab506df008d1c4caa41aa73f1a28631a461e0c671d23f5d9" => :high_sierra
+    sha256 "cbc6ac501c2142c7919ecc9b56aa80d2e0828eb2c28060f792ab2d6da7947dec" => :catalina
+    sha256 "5f21d6a67818b08d239fb5b530d2c82d097ea161ca17fd4b378fa63f4a50bf55" => :mojave
+    sha256 "62863887e0df66d8fc99dd581a1949223d615d4bc58e4366bd0a086b42e8f94d" => :high_sierra
   end
 
   def install
