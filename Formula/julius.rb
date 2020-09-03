@@ -7,10 +7,9 @@ class Julius < Formula
 
   bottle do
     cellar :any
-    sha256 "f336509726e71d8e0a2b0588d8d84833934d75193168e133dd9b647f7cc775e5" => :catalina
-    sha256 "c21148f0df6124ddb3f790bd2283971dcbac0f56e6679e2fdc8ebbfa0d025a39" => :mojave
-    sha256 "10b892fb25a00b80bece10ab1bf218f6fad4466d9c5ddc5395ddcf9e6a40df73" => :high_sierra
-    sha256 "c49edc3178b6d6582a0a82fa3b172acdf7ab7c4b275011853341fa17651ead5f" => :sierra
+    sha256 "b06b9ca71df4cccff10e36a4a75a55f7d5bdb009f4dba9f940044da6ba0c258d" => :catalina
+    sha256 "041d7a3185850375ef67148a74ab9513e9a4eb6de05deeb3595f3941c41010d6" => :mojave
+    sha256 "d699dbf645c69f795421569e21c9d676e0db534a8d72fabfb721d5864e391549" => :high_sierra
   end
 
   depends_on "libsndfile"
