@@ -3,6 +3,7 @@ class Llvm < Formula
   homepage "https://llvm.org/"
   # The LLVM Project is under the Apache License v2.0 with LLVM Exceptions
   license "Apache-2.0"
+  revision 1
   head "https://github.com/llvm/llvm-project.git"
 
   stable do
@@ -12,6 +13,11 @@ class Llvm < Formula
     resource "clang" do
       url "https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.1/clang-10.0.1.src.tar.xz"
       sha256 "f99afc382b88e622c689b6d96cadfa6241ef55dca90e87fc170352e12ddb2b24"
+
+      patch :p1 do
+        url "https://raw.githubusercontent.com/Homebrew/formula-patches/c7da61787c62822804dd90192dd9dd254511192c/llvm/10.0.1-clang.diff"
+        sha256 "44a605f614a26fb20d127b041e2a87e6adc9b8332e07cbbb6b457bc391cda660"
+      end
     end
 
     resource "clang-tools-extra" do
@@ -22,6 +28,11 @@ class Llvm < Formula
     resource "compiler-rt" do
       url "https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.1/compiler-rt-10.0.1.src.tar.xz"
       sha256 "d90dc8e121ca0271f0fd3d639d135bfaa4b6ed41e67bd6eb77808f72629658fa"
+
+      patch :p1 do
+        url "https://raw.githubusercontent.com/Homebrew/formula-patches/c7da61787c62822804dd90192dd9dd254511192c/llvm/10.0.1-compiiler-rt.diff"
+        sha256 "8ad0ce521b010dfb941c0979c1c072a2b40e4a69424374541d28122ba74ce4a0"
+      end
     end
 
     resource "libcxx" do
@@ -37,11 +48,21 @@ class Llvm < Formula
     resource "lld" do
       url "https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.1/lld-10.0.1.src.tar.xz"
       sha256 "591449e0aa623a6318d5ce2371860401653c48bb540982ccdd933992cb88df7a"
+
+      patch :p1 do
+        url "https://raw.githubusercontent.com/Homebrew/formula-patches/c7da61787c62822804dd90192dd9dd254511192c/llvm/10.0.1-lld.diff"
+        sha256 "734f87580e89d76507b8c41a5a75b5105c41a2d03a8dc2fad5c7ef027d771a3e"
+      end
     end
 
     resource "lldb" do
       url "https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.1/lldb-10.0.1.src.tar.xz"
       sha256 "07abe87c25876aa306e73127330f5f37d270b6b082d50cc679e31b4fc02a3714"
+
+      patch :p1 do
+        url "https://raw.githubusercontent.com/Homebrew/formula-patches/c7da61787c62822804dd90192dd9dd254511192c/llvm/10.0.1-lldb.diff"
+        sha256 "69c7d4c803a174dff6809d02255e7e4c19d80f25c73dd5fcf2657769db158e25"
+      end
     end
 
     resource "openmp" do
@@ -86,6 +107,11 @@ class Llvm < Formula
   uses_from_macos "libxml2"
   uses_from_macos "ncurses"
   uses_from_macos "zlib"
+
+  patch :p1 do
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/c7da61787c62822804dd90192dd9dd254511192c/llvm/10.0.1-llvm.diff"
+    sha256 "86b4e2bf10dfb9a04153e3d4fc744c3f323f3e13fc7b3a7d22e6791d47eb2e2c"
+  end
 
   def install
     projects = %w[
