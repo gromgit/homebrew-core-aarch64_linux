@@ -12,9 +12,9 @@ class Libvirt < Formula
   end
 
   bottle do
-    sha256 "48241043ff81ccd226d4303b11034ccdc636fd72aec2c5ba56398ef0191667d3" => :catalina
-    sha256 "e76fd3f6fb11397c8963d6d92f8f6b56d19dc86ffcfdffb45663b50239f89a93" => :mojave
-    sha256 "466948b3ed952a7ed22a41284ada218b5c007013670c799a54c23eff9ab15482" => :high_sierra
+    sha256 "26fddc5e2e3e40b10188b22b4bffb8e0eca7c8365dca5c1497246d7a0faf315b" => :catalina
+    sha256 "d782a2efbe666ccaf3ae902c9ff7b854cee213e9199c23e7c90f29c098de4a01" => :mojave
+    sha256 "da27d51e3bf4d3c0232881aa9adb18ce24d0306e9c3daad3475b36ba54c4324d" => :high_sierra
   end
 
   head do
