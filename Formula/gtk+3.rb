@@ -11,9 +11,9 @@ class Gtkx3 < Formula
   end
 
   bottle do
-    sha256 "8be1bc471681688387c1bae5b48522e02c924e4b65badc89dda6ac8a32613dc2" => :catalina
-    sha256 "a6e75a26e12b929abcde2055d38f6a75be9fdc602da31dfaa3a01f8618e99aad" => :mojave
-    sha256 "32b35af03f9f90fa05c667afbdc6c15c71d1f1ef3753bd46737c441f7deb0b7c" => :high_sierra
+    sha256 "94b7fbbd4b2557e511b7971998d46b9e96a050b9b5468f8df6410c4b1f28ba18" => :catalina
+    sha256 "ea959fea33bb7ebc455249f782372f1f7f89aa6f19113f2f8a16c8539b6f0ea2" => :mojave
+    sha256 "c5ec8329feaa8a798714bea712ba07836014aa04d28d42a9b63bd5e0adc4e659" => :high_sierra
   end
 
   depends_on "docbook" => :build
