@@ -3,7 +3,7 @@ class Freetds < Formula
   homepage "https://www.freetds.org/"
   url "https://www.freetds.org/files/stable/freetds-1.2.4.tar.gz"
   sha256 "e04de1411bb0459eb4a2514b0d3272898d84684edac9c2f702c0844f802ffa85"
-  license "LGPL-2.0"
+  license "LGPL-2.0-or-later"
 
   livecheck do
     url "https://www.freetds.org/files/stable/"
