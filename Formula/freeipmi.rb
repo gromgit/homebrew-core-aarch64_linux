@@ -4,7 +4,7 @@ class Freeipmi < Formula
   url "https://ftp.gnu.org/gnu/freeipmi/freeipmi-1.6.6.tar.gz"
   mirror "https://ftpmirror.gnu.org/freeipmi/freeipmi-1.6.6.tar.gz"
   sha256 "cfa30179b44c582e73cf92c2ad0e54fe49f9fd87f7a0889be9dc2db5802e6aab"
-  license "GPL-3.0"
+  license "GPL-3.0-or-later"
 
   livecheck do
     url :stable
