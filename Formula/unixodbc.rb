@@ -11,11 +11,9 @@ class Unixodbc < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 "03ba378d971af98d07652f978548ffacb4c155ba11dd36af9d46af36e2d5674b" => :catalina
-    sha256 "d9f30688c0639d73b9e3a4b4b94d3679b2762e2cf0bff6b2ad64fcd175cc30ca" => :mojave
-    sha256 "0b30b166c0e6bbd9df375a018d0f2a80b944617230b15531093d20eb015971e6" => :high_sierra
-    sha256 "44407c41dc2c5cc58fcd2c254fa54ede75e7782b82567f4f1ba421d357203105" => :sierra
+    sha256 "b0df0122140e5b40cf874b0334c6a7bfc1cd5acc79ceffde21f9b95c56c27cc6" => :catalina
+    sha256 "7cd0f37108f83ec9079cd22592e4afc528d726bba5dafb7a93cc8a62ffcd7961" => :mojave
+    sha256 "6d0f38787107264f9e55563625b18d8c5a744da061925c37ee013c538001f875" => :high_sierra
   end
 
   depends_on "libtool"
