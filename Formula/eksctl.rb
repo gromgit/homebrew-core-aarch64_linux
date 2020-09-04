@@ -2,8 +2,8 @@ class Eksctl < Formula
   desc "The official CLI for Amazon EKS"
   homepage "https://eksctl.io"
   url "https://github.com/weaveworks/eksctl.git",
-      tag:      "0.26.0",
-      revision: "d421724d30b9a045aee025d10b99e40e5f738924"
+      tag:      "0.27.0",
+      revision: "1a00f96d2af62d4a69686500d7328053da2771fc"
   license "Apache-2.0"
   head "https://github.com/weaveworks/eksctl.git"
 
