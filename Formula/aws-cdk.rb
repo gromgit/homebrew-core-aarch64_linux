@@ -3,8 +3,8 @@ require "language/node"
 class AwsCdk < Formula
   desc "AWS Cloud Development Kit - framework for defining AWS infra as code"
   homepage "https://github.com/aws/aws-cdk"
-  url "https://registry.npmjs.org/aws-cdk/-/aws-cdk-1.61.1.tgz"
-  sha256 "e43c63411a99db7878a4c407f675a46e8f70a571dba94dd7b4c2972396a3a0e3"
+  url "https://registry.npmjs.org/aws-cdk/-/aws-cdk-1.62.0.tgz"
+  sha256 "1b980528363dc624b881fe19f4b2782d814d78c493bda770f4555627c512bf50"
   license "Apache-2.0"
 
   livecheck do
