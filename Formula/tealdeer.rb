@@ -7,9 +7,9 @@ class Tealdeer < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5a4970ee9547792f323a4a8d7b8049d71a643d458b0f3b6d15ef70402f4efd79" => :catalina
-    sha256 "358f7dee83a7c125f56df3e50cb02daa1fb515e8ddd04e65d03fbe1ed0040401" => :mojave
-    sha256 "c095afdb06d12e0efa194d16e8169a6c49f219893f8df7df15b1a6f6a62207c1" => :high_sierra
+    sha256 "db4a2fc7dceef4f4f914aaf7b655741e960664b46c61ab2c163f015a74949533" => :catalina
+    sha256 "9ad3e3ea878b05fd2764cc8e534888b8bf810f88cc4d986de158ed6b33633b42" => :mojave
+    sha256 "80a29641c9b29a3cda69adf5afd2c36b27f84fb8f89a555dbf2a676dddf03b70" => :high_sierra
   end
 
   depends_on "rust" => :build
