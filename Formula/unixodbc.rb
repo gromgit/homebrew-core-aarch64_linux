@@ -3,7 +3,7 @@ class Unixodbc < Formula
   homepage "http://www.unixodbc.org/"
   url "http://www.unixodbc.org/unixODBC-2.3.8.tar.gz"
   sha256 "85372b9cd2cdfea3983c3958ab11ca1513ea091a263d82105e5da043379e48a5"
-  license "LGPL-2.1"
+  license "LGPL-2.1-or-later"
 
   livecheck do
     url "http://www.unixodbc.org/download.html"
