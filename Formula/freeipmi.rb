@@ -11,9 +11,9 @@ class Freeipmi < Formula
   end
 
   bottle do
-    sha256 "b9f840759c2573e79707d7010217d1814fd96737857a76bc25c68cc4a9e7aff4" => :catalina
-    sha256 "a0ca63ac6b49e9f0b09a513982e34f94f7c2aa7d7345fc1009459d9fd8dfbd5a" => :mojave
-    sha256 "65484065d4f8f4056af2dfa8c28cceb9e83b19ec5cbeec50a955af0be794a7c3" => :high_sierra
+    sha256 "ff69947a14d7d273349f9f5219b55b8581fee4745c3571fb27f790307f1647a5" => :catalina
+    sha256 "47441cb06fdfae9277c2760f43ba0236020de8906e9ead7bf4e1dc2569f2abc4" => :mojave
+    sha256 "836d80487ea7790b95c951c48a9a7f9788117e254a55c1f6417c5a2455695f5c" => :high_sierra
   end
 
   depends_on "argp-standalone"
