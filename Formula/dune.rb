@@ -1,8 +1,8 @@
 class Dune < Formula
   desc "Composable build system for OCaml"
   homepage "https://dune.build/"
-  url "https://github.com/ocaml/dune/releases/download/2.7.0/dune-2.7.0.tbz"
-  sha256 "b417ca85bdce4171e71255be4a9c5a7572646cb1dcb221bba3757dc6ac8f1c15"
+  url "https://github.com/ocaml/dune/releases/download/2.7.1/dune-2.7.1.tbz"
+  sha256 "c3528f2f8b3a2e3fe18e166fc823e6caeee8b7c78ade6b6fe4d2fa978070925d"
   license "MIT"
   head "https://github.com/ocaml/dune.git"
 
@@ -16,11 +16,9 @@ class Dune < Formula
   depends_on "ocaml" => [:build, :test]
 
   def install
-    system "ocaml", "configure.ml"
     system "ocaml", "bootstrap.ml"
     system "./dune.exe", "build", "-p", "dune", "--profile", "dune-bootstrap"
-    bin.install "_build/default/bin/dune.exe"
-    mv bin/"dune.exe", bin/"dune"
+    bin.install "_build/default/bin/dune.exe" => "dune"
   end
 
   test do
