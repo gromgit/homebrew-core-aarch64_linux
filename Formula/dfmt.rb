@@ -9,9 +9,9 @@ class Dfmt < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "70a01e51339a8bbc3d72c4927a3016227b8aea5fbe9238e1f8c9240b7c3effbf" => :catalina
-    sha256 "97a07085db537c652c1b3afe994eae61e3df931a184a72e1515feae1ea2988b7" => :mojave
-    sha256 "3e5fb65962d1e76dc734123b14de06001498b416f8dfb1c765994d18d68da285" => :high_sierra
+    sha256 "a372283e75b5f16695a85ebd7bbf4ae48a559fc14ad412b6fa512e154c9343c3" => :catalina
+    sha256 "bf98795473d84cdc524d702a62e5d861fc10516ea908127403d6d4568cd36fc1" => :mojave
+    sha256 "9f551c5d629bad54b159b0d42531df92ff54c3dfb47ae1e49dfa4235c0a043af" => :high_sierra
   end
 
   depends_on "dmd" => :build
