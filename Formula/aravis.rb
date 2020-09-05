@@ -10,9 +10,9 @@ class Aravis < Formula
   end
 
   bottle do
-    sha256 "604d55cc8bf4d12d598d6a306e75d38e3986202e6971838b42ec1e770a0cd8ed" => :catalina
-    sha256 "083b7c5f1b7a4b7e068119ebd37858c891ada5148f5a8a41884cca286d8f8cdf" => :mojave
-    sha256 "6bae8a3e91bc83a8f331da4ec5dabddaf3c877a835445f2ba92b2f80bd758fd5" => :high_sierra
+    sha256 "90c41ee46b73d25dba0bff7320bb190946c0725c07adcceaa1f438bb6f15e062" => :catalina
+    sha256 "503b363c8582ec6cbd0ebfe940909f3cfd5ef2c5a77fdac7c3c574c77f98f3e5" => :mojave
+    sha256 "c29d201d259e362616933f038d2b9b2cc109ede3a90a0821a8318296e9b10d1b" => :high_sierra
   end
 
   depends_on "gobject-introspection" => :build
