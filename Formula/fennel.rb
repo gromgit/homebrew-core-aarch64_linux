@@ -7,9 +7,9 @@ class Fennel < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "113e9aa637dd9c8bf2f40b480b5a76f996cfe96954c33f1429b88f8151c48019" => :catalina
-    sha256 "113e9aa637dd9c8bf2f40b480b5a76f996cfe96954c33f1429b88f8151c48019" => :mojave
-    sha256 "113e9aa637dd9c8bf2f40b480b5a76f996cfe96954c33f1429b88f8151c48019" => :high_sierra
+    sha256 "49cd0ff7aaa69ada9d53d7d88694fff426eceaafe4e4e0b7836810be8255e4e9" => :catalina
+    sha256 "fc21ba932ee4c3f9b1ee0fb64e7b8adfefe58e2135a840e8307ad2fb824ac8c3" => :mojave
+    sha256 "d794b7069c8789f69e04ff0a46213667a38ab67c00ee3186ddb42a4dd40686a0" => :high_sierra
   end
 
   depends_on "lua"
