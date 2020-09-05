@@ -12,9 +12,9 @@ class Libwps < Formula
 
   bottle do
     cellar :any
-    sha256 "61b3ad745560c34d24735c1459f418ab083ea80aba8b0b6a64595fafd1916a4a" => :catalina
-    sha256 "ca320b85cbcd3f8bf8d17bc5133c99fb83509d88e2e7c5cff4da6c11b2df36ad" => :mojave
-    sha256 "ab40a8031a5971abede418b01d851e3ad3031da72f42ad9e5e4a7ac40b6acc0e" => :high_sierra
+    sha256 "df168fef776884800b6e739e914ca328b2ed2011fb2f7c650a95ffb410669ff9" => :catalina
+    sha256 "6858e4fc67b746fa2f392c717eab3abf2af4826e7499489b4da45d98b9539b24" => :mojave
+    sha256 "cfba7b4a80156e0783277ea263ee303ecc2194b1a1147493e9b8e6ccafb3885d" => :high_sierra
   end
 
   depends_on "boost" => :build
