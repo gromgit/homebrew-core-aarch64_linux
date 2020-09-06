@@ -11,10 +11,9 @@ class Emacs < Formula
   end
 
   bottle do
-    sha256 "9ab33f4386ca5f7326a8c28da1324556ec990f682a7ca88641203da0b42dbdae" => :catalina
-    sha256 "8162a26246de7db44c53ea0d0ef0a806140318d19c69e8e5e33aa88ce7e823a8" => :mojave
-    sha256 "6a2629b6deddf99f81abb1990ecd6c87f0242a0eecbb6b6c2e4c3540e421d4c4" => :high_sierra
-    sha256 "2a47477e71766d7dd6b16c29ad5ba71817ed80d06212e3261ef3c776e7e9f5a2" => :sierra
+    sha256 "6586559b5aa8c51ce6cc7738abe4796ef7e803ab3389dc2e30eda7bb5e46b85d" => :catalina
+    sha256 "6704d9430ac4b602a5dc7046f845d8b93d00cb509fc70244403f14af6c97bc3b" => :mojave
+    sha256 "a4808d9f5433bcc9512ae4c62dba04b7954a1c0ee47e01b34ba5a401f227f375" => :high_sierra
   end
 
   head do
