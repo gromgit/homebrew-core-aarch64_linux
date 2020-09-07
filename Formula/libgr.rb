@@ -6,9 +6,9 @@ class Libgr < Formula
   license "MIT"
 
   bottle do
-    sha256 "ac5472cbb7e312c22bc5048b472cd763c271866ad3e4c369bdb9b822e3b1dd92" => :catalina
-    sha256 "941e72407cdbc7e193cfa6eaeb9bf6e0a497fed2b853df2d5537042776bba298" => :mojave
-    sha256 "923de166a7fbf4bf8d15a85eac94f795cd6a5563c3a3d0acaf157823d65539f1" => :high_sierra
+    sha256 "530c9db2560c4b7f75e1ef6e3280d0246889d2707e9326406ad9d22d2e3dceb0" => :catalina
+    sha256 "26cfa2787105c17c79027c96acc39fd04a3716c65810edd72dc83cf19f81a155" => :mojave
+    sha256 "beaa733249692d24749156ad652ac3a3144cbd4e571e639c2088bb6331b1598b" => :high_sierra
   end
 
   depends_on xcode: :build
