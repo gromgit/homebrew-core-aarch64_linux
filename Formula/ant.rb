@@ -5,6 +5,7 @@ class Ant < Formula
   mirror "https://archive.apache.org/dist/ant/binaries/apache-ant-1.10.8-bin.tar.xz"
   sha256 "8be685aacf2bfe8515a1249fbebb0ccd861dfe05ee2c027c89fd7912c1ce2c2a"
   license "Apache-2.0"
+  revision 2
   head "https://git-wip-us.apache.org/repos/asf/ant.git"
 
   livecheck do
