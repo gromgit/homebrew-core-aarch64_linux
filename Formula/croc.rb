@@ -6,6 +6,13 @@ class Croc < Formula
   license "MIT"
   head "https://github.com/schollz/croc.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "3934c4ebae77c48c8e81382b97d744680432fee5b4eaaffb2f57f2a45df5ef39" => :catalina
+    sha256 "e746dc794607003225810bf4ea74d59e285311eb17169a5da876710a5cb0c5ea" => :mojave
+    sha256 "3a9f7d2c3618437c616a35b16a20b232c690a7129d4f0ce43f6fa729d5ec6df4" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
