@@ -49,6 +49,7 @@
   "google-app-engine": "app-engine-python",
   "google-perftools": "gperftools",
   "grunt": "grunt-cli",
+  "gst-validate": "gst-devtools",
   "gtef": "tepl",
   "gtksourceview@4": "gtksourceview4",
   "gutenberg": "zola",
