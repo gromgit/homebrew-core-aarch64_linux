@@ -14,9 +14,10 @@ class Grpc < Formula
   end
 
   bottle do
-    sha256 "19bbcb825bfd65ec65bfb7a2750f5ad828bf74c1287c5684bbf13a1c188e7cc4" => :catalina
-    sha256 "92f88af6c076c6511938565ed7ab786da4417027ff12936f82de327d7a66d671" => :mojave
-    sha256 "77551361ecc61e5aa21839413a27a298ee849cfd12c7d90a20048f8c1c58c637" => :high_sierra
+    cellar :any
+    sha256 "3efaa235c102fc5e1ed2c2120a81cad4357b482931ae9a74231e5b964877caf7" => :catalina
+    sha256 "876faceb8a3eb484a58d091242b797dd1379442c9bd710a8bbf75564b403cb82" => :mojave
+    sha256 "5371f4c1d147650b81b384eeb0e0a247e492abc61b8b6ebb13194e68c19f95b3" => :high_sierra
   end
 
   depends_on "autoconf" => :build
