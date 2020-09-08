@@ -12,9 +12,9 @@ class LibvirtGlib < Formula
   end
 
   bottle do
-    sha256 "0e4ef4273857818f627595c15dbda1e69ef71a71ec4aaed88c33a6af96e65a80" => :catalina
-    sha256 "bfd1b4197f3069d72dd8da66002ee3f138f165eb9956e217ee7a36bd8cea1e15" => :mojave
-    sha256 "dde218b4644a43fd7fe9b47bd62e0d2ec0b7f52a4e6d68ca5413c3fd04da5800" => :high_sierra
+    sha256 "167725ebc46919472e205ae7f11953ac1dd1a6b7d4431fa8a54f720dd8d32717" => :catalina
+    sha256 "836139b6c4349752f9e5e6ce0863f3129602c54ee040caf0e8bb31ea97a6bf3f" => :mojave
+    sha256 "fd81e19fae3e2855e61e9519ec829859fd3a9956927c47396af123611c6a23cd" => :high_sierra
   end
 
   depends_on "gobject-introspection" => :build
