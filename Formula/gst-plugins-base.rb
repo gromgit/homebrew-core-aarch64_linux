@@ -1,8 +1,10 @@
 class GstPluginsBase < Formula
   desc "GStreamer plugins (well-supported, basic set)"
   homepage "https://gstreamer.freedesktop.org/"
-  url "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.16.2.tar.xz"
-  sha256 "b13e73e2fe74a4166552f9577c3dcb24bed077021b9c7fa600d910ec6987816a"
+  url "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.18.0.tar.xz"
+  sha256 "762abdd1a950809a1cea62fff7f86b5f7d6bd5f6841e3e585c700b823cdb7897"
+  license "LGPL-2.0-or-later"
+  head "https://anongit.freedesktop.org/git/gstreamer/gst-plugins-base.git"
 
   livecheck do
     url "https://gstreamer.freedesktop.org/src/gst-plugins-base/"
@@ -15,17 +17,12 @@ class GstPluginsBase < Formula
     sha256 "d9144e2a0c20e479c341167a8aa9ecc87e65a9c7c9515a62a855785cb1d42252" => :high_sierra
   end
 
-  head do
-    url "https://anongit.freedesktop.org/git/gstreamer/gst-plugins-base.git"
-
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
-  end
-
   depends_on "gobject-introspection" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "gettext"
+  depends_on "graphene"
   depends_on "gstreamer"
   depends_on "libogg"
   depends_on "libvorbis"
@@ -36,29 +33,21 @@ class GstPluginsBase < Formula
 
   def install
     # gnome-vfs turned off due to lack of formula for it.
-    args = %W[
-      --prefix=#{prefix}
-      --enable-experimental
-      --disable-libvisual
-      --disable-alsa
-      --disable-cdparanoia
-      --without-x
-      --disable-x
-      --disable-xvideo
-      --disable-xshm
-      --disable-debug
-      --disable-dependency-tracking
-      --enable-introspection=yes
+    args = std_meson_args + %w[
+      -Dintrospection=enabled
+      -Dlibvisual=disabled
+      -Dalsa=disabled
+      -Dcdparanoia=disabled
+      -Dx11=disabled
+      -Dxvideo=disabled
+      -Dxshm=disabled
     ]
 
-    if build.head?
-      ENV["NOCONFIGURE"] = "yes"
-      system "./autogen.sh"
+    mkdir "build" do
+      system "meson", *args, ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
     end
-
-    system "./configure", *args
-    system "make"
-    system "make", "install"
   end
 
   test do
