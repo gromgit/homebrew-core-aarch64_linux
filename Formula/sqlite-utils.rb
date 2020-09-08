@@ -8,9 +8,9 @@ class SqliteUtils < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e490a52af5f1d240e0fcc6aac9f9b47ba8b298c65064adc294d193f940f9fc6e" => :catalina
-    sha256 "dc0c7f8e6aa845c348a170f803c2db4e1b6f9998e5af691cf22ce41359d3eae0" => :mojave
-    sha256 "76bc8e334307ebd983fc032eaa53c7239bc904d83db83a825443ee2171f027d8" => :high_sierra
+    sha256 "99d627c0876b5450ffb2233fecc51ecea343be704c1b7e03b9a989ae5fcae078" => :catalina
+    sha256 "a5506c4011875fbee7fba5b41e0b66fb838f1f8aa895677538c12f30bb76b6c2" => :mojave
+    sha256 "18a9a7ddd8e5dd244ee53f55080b2effc6fb91a59836edaebb5d12d9bec33f3c" => :high_sierra
   end
 
   depends_on "python@3.8"
