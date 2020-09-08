@@ -1,9 +1,10 @@
 class GstPluginsBad < Formula
   desc "GStreamer plugins less supported, not fully tested"
   homepage "https://gstreamer.freedesktop.org/"
-  url "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.16.2.tar.xz"
-  sha256 "f1cb7aa2389569a5343661aae473f0a940a90b872001824bc47fa8072a041e74"
-  revision 3
+  url "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.18.0.tar.xz"
+  sha256 "f382ab1caddd64aaa7acb7c4787487f63fd39bd0fde9c757655cbaa457c1185f"
+  license "LGPL-2.0-or-later"
+  head "https://anongit.freedesktop.org/git/gstreamer/gst-plugins-bad.git"
 
   livecheck do
     url "https://gstreamer.freedesktop.org/src/gst-plugins-bad/"
@@ -16,15 +17,9 @@ class GstPluginsBad < Formula
     sha256 "76524f6b5d72948656e52c06d9dc20b0bb534fe016ee33086aac12ea8d1bbfae" => :high_sierra
   end
 
-  head do
-    url "https://anongit.freedesktop.org/git/gstreamer/gst-plugins-bad.git"
-
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-  end
-
   depends_on "gobject-introspection" => :build
-  depends_on "libtool" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "faac"
   depends_on "faad2"
@@ -42,27 +37,19 @@ class GstPluginsBad < Formula
   depends_on "srtp"
 
   def install
-    args = %W[
-      --prefix=#{prefix}
-      --disable-yadif
-      --disable-examples
-      --disable-debug
-      --disable-dependency-tracking
-      --enable-introspection=yes
+    args = std_meson_args + %w[
+      -Dintrospection=enabled
+      -Dexamples=disabled
     ]
 
     # The apple media plug-in uses API that was added in Mojave
-    args << "--disable-apple_media" if MacOS.version <= :high_sierra
+    args << "-Dapplemedia=disabled" if MacOS.version <= :high_sierra
 
-    if build.head?
-      # autogen is invoked in "stable" build because we patch configure.ac
-      ENV["NOCONFIGURE"] = "yes"
-      system "./autogen.sh"
+    mkdir "build" do
+      system "meson", *args, ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
     end
-
-    system "./configure", *args
-    system "make"
-    system "make", "install"
   end
 
   test do
