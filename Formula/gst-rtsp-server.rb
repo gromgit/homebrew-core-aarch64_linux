@@ -1,8 +1,9 @@
 class GstRtspServer < Formula
   desc "RTSP server library based on GStreamer"
   homepage "https://gstreamer.freedesktop.org/modules/gst-rtsp-server.html"
-  url "https://gstreamer.freedesktop.org/src/gst-rtsp-server/gst-rtsp-server-1.16.2.tar.xz"
-  sha256 "de07a2837b3b04820ce68264a4909f70c221b85dbff0cede7926e9cdbb1dc26e"
+  url "https://gstreamer.freedesktop.org/src/gst-rtsp-server/gst-rtsp-server-1.18.0.tar.xz"
+  sha256 "2ad19311054cbf2df0d0622936bc703dedc06ced706df46a3d3a3ea5a4b7c70f"
+  license "LGPL-2.0-or-later"
 
   livecheck do
     url "https://gstreamer.freedesktop.org/src/gst-rtsp-server/"
@@ -16,22 +17,25 @@ class GstRtspServer < Formula
   end
 
   depends_on "gobject-introspection" => :build
-  depends_on "libtool" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "gettext"
   depends_on "gst-plugins-base"
   depends_on "gstreamer"
 
   def install
-    system "./configure", "--prefix=#{prefix}",
-                          "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--disable-examples",
-                          "--disable-tests",
-                          "--enable-introspection=yes"
+    args = std_meson_args + %w[
+      -Dintrospection=enabled
+      -Dexamples=disabled
+      -Dtests=disabled
+    ]
 
-    system "make", "install"
+    mkdir "build" do
+      system "meson", *args, ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
   end
 
   test do
