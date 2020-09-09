@@ -3,7 +3,7 @@ class AppstreamGlib < Formula
   homepage "https://github.com/hughsie/appstream-glib"
   url "https://github.com/hughsie/appstream-glib/archive/appstream_glib_0_7_18.tar.gz"
   sha256 "73b8c10273c4cdd8f6de03c2524fedad64e34ccae08ee847dba804bb15461f6e"
-  license "LGPL-2.1"
+  license "LGPL-2.1-or-later"
 
   bottle do
     cellar :any
