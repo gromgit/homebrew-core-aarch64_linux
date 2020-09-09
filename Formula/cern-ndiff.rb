@@ -2,8 +2,8 @@ class CernNdiff < Formula
   desc "Numerical diff tool"
   # Note: ndiff is a sub-project of Mad-X at the moment..
   homepage "https://mad.web.cern.ch/mad/"
-  url "https://github.com/MethodicalAcceleratorDesign/MAD-X/archive/5.06.00.tar.gz"
-  sha256 "b4853e231b510b6153968190aedfe95a2b0de058324a2b9bcc70b795d73c304d"
+  url "https://github.com/MethodicalAcceleratorDesign/MAD-X/archive/5.06.01.tar.gz"
+  sha256 "cd2cd9f12463530950dab1c9a26730bb7c38f378c13afb7223fb9501c71a84be"
   head "https://github.com/MethodicalAcceleratorDesign/MAD-X.git"
 
   livecheck do
