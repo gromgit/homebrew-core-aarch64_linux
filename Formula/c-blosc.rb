@@ -1,8 +1,8 @@
 class CBlosc < Formula
   desc "Blocking, shuffling and loss-less compression library"
   homepage "https://blosc.org/"
-  url "https://github.com/Blosc/c-blosc/archive/v1.20.0.tar.gz"
-  sha256 "992ab5b475b7ba94f91c5ce58359ff0d6069fc65ba0c5bee373db8daecb17ce0"
+  url "https://github.com/Blosc/c-blosc/archive/v1.20.1.tar.gz"
+  sha256 "42c4d3fcce52af9f8e2078f8f57681bfc711706a3330cb72b9b39e05ae18a413"
   license "BSD-3-Clause"
 
   bottle do
