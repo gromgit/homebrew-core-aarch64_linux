@@ -4,8 +4,8 @@ class Networkit < Formula
   desc "Performance toolkit for large-scale network analysis"
   homepage "https://networkit.github.io"
   url "https://github.com/networkit/networkit.git",
-      tag:      "7.0",
-      revision: "d8e952f1e4d5e2758e4744e7c6ea7429a59c7cdf"
+      tag:      "7.1",
+      revision: "4c6dcc4367b51005a34221242048609c357ffbd6"
   license "MIT"
 
   bottle do
@@ -26,6 +26,7 @@ class Networkit < Formula
     rpath_addons = Formula["libnetworkit"].opt_lib
 
     ENV.prepend_create_path "PYTHONPATH", libexec+"lib/python#{xy}/site-packages/"
+    ENV.append_path "PYTHONPATH", Formula["cython"].opt_libexec/"lib/python#{xy}/site-packages"
     system Formula["python@3.8"].opt_bin/"python3", "setup.py", "build_ext",
           "--networkit-external-core",
            "--rpath=@loader_path;#{rpath_addons}"
