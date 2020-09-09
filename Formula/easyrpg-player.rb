@@ -3,7 +3,7 @@ class EasyrpgPlayer < Formula
   homepage "https://easyrpg.org/"
   url "https://easyrpg.org/downloads/player/0.6.2.2/easyrpg-player-0.6.2.2.tar.xz"
   sha256 "b96e197b9bb5cd174f9900637bec16b9fc0c5c6989f7f7a3739da0db41e09669"
-  license "GPL-3.0"
+  license "GPL-3.0-or-later"
 
   livecheck do
     url "https://github.com/EasyRPG/Player.git"
