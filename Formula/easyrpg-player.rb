@@ -1,8 +1,8 @@
 class EasyrpgPlayer < Formula
   desc "RPG Maker 2000/2003 games interpreter"
   homepage "https://easyrpg.org/"
-  url "https://easyrpg.org/downloads/player/0.6.2.1/easyrpg-player-0.6.2.1.tar.xz"
-  sha256 "681b7df9546f3fee52658d4262e295a8433d6a9bb9f1cd7597196f1015326ba9"
+  url "https://easyrpg.org/downloads/player/0.6.2.2/easyrpg-player-0.6.2.2.tar.xz"
+  sha256 "b96e197b9bb5cd174f9900637bec16b9fc0c5c6989f7f7a3739da0db41e09669"
   license "GPL-3.0"
 
   livecheck do
