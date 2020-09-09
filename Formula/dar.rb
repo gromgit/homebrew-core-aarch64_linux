@@ -3,7 +3,7 @@ class Dar < Formula
   homepage "http://dar.linux.free.fr/doc/index.html"
   url "https://downloads.sourceforge.net/project/dar/dar/2.6.11/dar-2.6.11.tar.gz"
   sha256 "5763e660b31ca494f67543026abfba778022915c8feef95672c9f5f5aa5cd4eb"
-  license "GPL-2.0"
+  license "GPL-2.0-or-later"
 
   livecheck do
     url :stable
