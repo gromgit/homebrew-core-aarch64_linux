@@ -11,9 +11,9 @@ class PythonAT37 < Formula
   end
 
   bottle do
-    sha256 "820f16256e3e36b6ef99538edb4b825b223ca0a8a906dc6512a1e268b39c7b0a" => :catalina
-    sha256 "e87ae74ceefe52ba923a3a604354bd6662ffa1a5e5f89461f1194c601e8dde4d" => :mojave
-    sha256 "e765c73c931d40ed8145507415ad6e511c18a615827e087d3e9c8b7a47700324" => :high_sierra
+    sha256 "0f2cece6843e6b0f0e8c584cb3b8ad2b987e3919e954ec7db2f8e4154ef79255" => :catalina
+    sha256 "3f1ee86cceeebd98cd01a14670d24a1642d5ac1bf6323566daacc25ffb9e1fa2" => :mojave
+    sha256 "897e237390c3da53ce82f3a9488e1a53b0766fdfbaa4251f8db5a4660f0fb7fc" => :high_sierra
   end
 
   # setuptools remembers the build flags python is built with and uses them to
