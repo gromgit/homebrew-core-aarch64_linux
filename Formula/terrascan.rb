@@ -6,6 +6,13 @@ class Terrascan < Formula
   license "Apache-2.0"
   head "https://github.com/accurics/terrascan.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "251437fab5c965b052488e3e938a5801aed88099c7624e47b98aa238b2d90a29" => :catalina
+    sha256 "070e5251c01b77974afb44fa01f55aa4a7cb14063bead5885456327bd86d07a9" => :mojave
+    sha256 "1c26c19e0b247860b55b1998b1ecb8d0009190eadc45031fa943604a03ef63ed" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
