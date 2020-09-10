@@ -7,9 +7,9 @@ class Libnetworkit < Formula
 
   bottle do
     cellar :any
-    sha256 "86915bb4086ab367364d03ae45b1228aa0b788facda6daf18e0a0adaff9b140e" => :catalina
-    sha256 "9b9d3a3e7aa1a6f948a474b14aa251813d96e703eddf2bbc65e1c815e83be564" => :mojave
-    sha256 "2b2ae31876287265a67d737efa586d66e839e9fbf648354c53a3222a0c679ae1" => :high_sierra
+    sha256 "ce41e3c47bba5ffc61f1b5ea65b908b64032b1af605e19c8a40f40f26bb946fa" => :catalina
+    sha256 "f2dab092758749672edc5058fc89e53da086e1acec7756900be0e0d7d839bf16" => :mojave
+    sha256 "94522c74e5a3867137849646c49d0e664fd298db24436bf2bfba2e7d725d9caa" => :high_sierra
   end
 
   depends_on "cmake" => :build
