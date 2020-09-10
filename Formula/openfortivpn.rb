@@ -6,9 +6,9 @@ class Openfortivpn < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 "0c04566ef63f3cc1cb5062c3a18b78f6fed368dd6d449670e3a2fedf2d6f3806" => :catalina
-    sha256 "d35fe4166d8371cf285e6b54fe3b92d380bb8932b9f307f3ba1d6f51650013d0" => :mojave
-    sha256 "7bb4c80c9b516bc18ab034ef0d928d254212aec7d4ee34d43e3f94fe16115044" => :high_sierra
+    sha256 "e39f7fb2a5e3ab15632ae1568b4c969dec71fab19b99e50da5b061d7599c8906" => :catalina
+    sha256 "bc45f74d11de64c9db45bed0c9c2b7b8b0c5b9467c6d4354ba17fa89467c0a2e" => :mojave
+    sha256 "58d6f22f8d8f3c3e81abe98ea282d8f0b86139a54c2367a6d91d7c7a7862ceee" => :high_sierra
   end
 
   depends_on "autoconf" => :build
