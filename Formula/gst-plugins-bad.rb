@@ -12,9 +12,9 @@ class GstPluginsBad < Formula
   end
 
   bottle do
-    sha256 "c1031cef7c790bbdf27ffe3eee51ccd128cd28c7309e9da6814ec8cf87682c9d" => :catalina
-    sha256 "d390095d1b6cd82eec7c6133fe11c5d944cf63ffe783ce65e7cf0900aedb1100" => :mojave
-    sha256 "76524f6b5d72948656e52c06d9dc20b0bb534fe016ee33086aac12ea8d1bbfae" => :high_sierra
+    sha256 "f12df9ec7b12b106ab72ae58d2955bae9e4a4d65223e2df4837613bf519b0c73" => :catalina
+    sha256 "7fc1ad19c1c314ae6ea745d899463c5055ed6ebab6cc5fdb715a37b107ecefc5" => :mojave
+    sha256 "0854322c4f59be22497fa315490e13e84b12a3c7203e36d572f1458db788e225" => :high_sierra
   end
 
   depends_on "gobject-introspection" => :build
