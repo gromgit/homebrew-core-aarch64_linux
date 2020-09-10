@@ -12,9 +12,9 @@ class GoAT114 < Formula
   end
 
   bottle do
-    sha256 "c47e875943b343561bed411b99929814448b2d17d929c90931b304922be763ea" => :catalina
-    sha256 "013f87c9bad7943b98ac799fc3a944c4614d032de1bf203bece0ed93bdd59b1f" => :mojave
-    sha256 "6e0adc176387b31d8a4ca0d72bf2d20d4fac32db9728f92485f2a8a317fae20e" => :high_sierra
+    sha256 "522d18382ba1bf41be30c3479269907f953a7117d145f8206ddff3f1db1ad50f" => :catalina
+    sha256 "faaebc33afb3b43f060cfa611da9a4f53d61bea9761f8b0ebd61a7f84ca7e8be" => :mojave
+    sha256 "9edb9fc0b04b1b79a3848522e2335bd067b41e075b5b5cf68f528dbd8c4dd975" => :high_sierra
   end
 
   keg_only :versioned_formula
