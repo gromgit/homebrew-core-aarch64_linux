@@ -1,10 +1,9 @@
 class Amtk < Formula
   desc "Actions, Menus and Toolbars Kit for GNOME"
   homepage "https://wiki.gnome.org/Projects/Amtk"
-  url "https://download.gnome.org/sources/amtk/5.0/amtk-5.0.2.tar.xz"
-  sha256 "71cc891fbaaa3d0cb87eeef9a2f7e1a2acab62f738d09ea922fb4b9ea2f84f86"
-  license "LGPL-2.1"
-  revision 1
+  url "https://download.gnome.org/sources/amtk/5.2/amtk-5.2.0.tar.xz"
+  sha256 "820545bb4cf87ecebc2c3638d6b6e58b8dbd60a419a9b43cf020124e5dad7078"
+  license "LGPL-2.1-or-later"
 
   livecheck do
     url :stable
