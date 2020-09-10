@@ -6,9 +6,9 @@ class VtkAT82 < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 "8eb01d3ba874398a6a8d1a920df4bfd0ae759aa1c608e141b8136b72c57c357b" => :catalina
-    sha256 "e39960ed536681ea158fbe2d10da875e8fb52a1354b37c97a631d4d84b4216bf" => :mojave
-    sha256 "335502476de20a9780fc2bcc3257cce3aebffcc3f7fdc57e322ac94e7e0c8f3b" => :high_sierra
+    sha256 "37d86d6f6021aece7811709f2efddaf1146b49b46e4ce35fe831561f2465f462" => :catalina
+    sha256 "0c08fc45e6b7b0ed70ced6511cb65e04bb2dadbdac45fae431fcd02e36010748" => :mojave
+    sha256 "60920bd860d41f69e6988ac8a94008fa2c16d5c2a9c13b21915c89828519c83c" => :high_sierra
   end
 
   keg_only :versioned_formula
