@@ -6,9 +6,9 @@ class Znc < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 "005cacad69c5a76df51fec1b909618bc3c6607e35c242ce3fb7a072691c27cc5" => :catalina
-    sha256 "acf1a6758351f662fba78bff2d08664000290c4e1f92bf2cfa7e160827110c91" => :mojave
-    sha256 "3f9ed65af25e3b5edeb3c07a78b24e96944a4d05acec6c13b1336d3ce06ae0c0" => :high_sierra
+    sha256 "0b02e44228df2fb44db94b8dd34e084f597ecc6d01885942df5aebbd5a9a87e5" => :catalina
+    sha256 "cdded48a2efbd597eb87f74f6deb62e8efc5db435ab448142313347d96629db9" => :mojave
+    sha256 "6674bc79049906362368dd5e942991229e02cec51d53ba90d38c22d8a81b140f" => :high_sierra
   end
 
   head do
