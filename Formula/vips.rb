@@ -6,9 +6,9 @@ class Vips < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 "aed63961ae3f7557f222ec9d9d89fcaecf30d5bd3ced9f90c4fae07a8386d7f8" => :catalina
-    sha256 "9863f39f9f517efca31cc15a53fcbaa4bfbcf5db889fad52ae9146d48388a414" => :mojave
-    sha256 "348c759b286d9c71e79d0da66f8432f3a700f84df865b01a5db11a7480309c34" => :high_sierra
+    sha256 "d2a0d29e9b37b9f396d9f21d5483ac433d83de92335a87651e20dc0368fb26f4" => :catalina
+    sha256 "0515b6dc422a35e1cea9e610e0c8360bb566cf2e4ba4add6f3824c613a5721f9" => :mojave
+    sha256 "02d8833b1754a8da55e2f6c0c2154439f51b9b02785a33b8e20fdff54c9f9d6b" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
