@@ -8,6 +8,13 @@ class Q < Formula
   license "GPL-3.0-only"
   head "https://github.com/harelba/q.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "18c62a2d46208918358284480642afd04422eb1829392bb30ba46aeaed905e28" => :catalina
+    sha256 "a009291c7cc9eb49414f85c08786d9e2d069ca00942a713462795b3c7914c0f7" => :mojave
+    sha256 "c908b1cdfbbd4c3411f6cf1990abb5d96bccc7e65351a9d921679fe4cedf6fa4" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   resource "six" do
