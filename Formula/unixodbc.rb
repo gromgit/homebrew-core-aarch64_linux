@@ -1,8 +1,8 @@
 class Unixodbc < Formula
   desc "ODBC 3 connectivity for UNIX"
   homepage "http://www.unixodbc.org/"
-  url "http://www.unixodbc.org/unixODBC-2.3.8.tar.gz"
-  sha256 "85372b9cd2cdfea3983c3958ab11ca1513ea091a263d82105e5da043379e48a5"
+  url "http://www.unixodbc.org/unixODBC-2.3.9.tar.gz"
+  sha256 "52833eac3d681c8b0c9a5a65f2ebd745b3a964f208fc748f977e44015a31b207"
   license "LGPL-2.1-or-later"
 
   livecheck do
