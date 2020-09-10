@@ -1,8 +1,8 @@
 class Qrcp < Formula
   desc "Transfer files to and from your computer by scanning a QR code"
   homepage "https://claudiodangelis.com/qrcp"
-  url "https://github.com/claudiodangelis/qrcp/archive/0.6.3.tar.gz"
-  sha256 "2d39ba661aad9c60b816bc06f53ef4f3d8747e11d5fc27c104d3687d1e77204c"
+  url "https://github.com/claudiodangelis/qrcp/archive/0.6.4.tar.gz"
+  sha256 "a2f4433bcfca001a310bce2adcaca19c82c44d1d3727d74ab9a5420cf0b01830"
   license "MIT"
 
   bottle do
