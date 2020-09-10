@@ -1,8 +1,8 @@
 class Openldap < Formula
   desc "Open source suite of directory software"
   homepage "https://www.openldap.org/software/"
-  url "https://www.openldap.org/software/download/OpenLDAP/openldap-release/openldap-2.4.52.tgz"
-  sha256 "277b453f8e1593d759e6d6f4c8744f2042fa843e558f8e267f1c7890b8c35508"
+  url "https://www.openldap.org/software/download/OpenLDAP/openldap-release/openldap-2.4.53.tgz"
+  sha256 "035860e2fb812f2e294ea3e9914944691e4e4f52521b8945a5aacdcd088d8ae8"
   license "OLDAP-2.8"
 
   livecheck do
