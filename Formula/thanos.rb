@@ -7,9 +7,9 @@ class Thanos < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "06732f3355bdbcb985641bf05fc25b6c00e8cc3eec3577b4ec144770412b23ff" => :catalina
-    sha256 "2c091e795f8cd556188dfb64ff989b57fb727b8c7fd27adff832b9f6899a5d71" => :mojave
-    sha256 "9c0abdf3859ed78918d98a67eab5cf49a4dff8ea42d3788e1f8cbc5cda04c54a" => :high_sierra
+    sha256 "8a70056641e1886b19b0478061f1771822f4201fdd96e06c7953b7842f3c1e83" => :catalina
+    sha256 "e4de7bdda7f6d433c32bbb00ffbba10d94a3870303b7165afd625f35f71062b9" => :mojave
+    sha256 "7425526c2c895f489da382413c7abadc89628a22e030f40b01b0f00e719ef13c" => :high_sierra
   end
 
   depends_on "go" => :build
