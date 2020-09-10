@@ -6,6 +6,13 @@ class Infracost < Formula
   license "Apache-2.0"
   head "https://github.com/infracost/infracost.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "73ae87a10144e1917cc00da5ecbc98bd35e7b9199634c68a4c9402e7c2da2832" => :catalina
+    sha256 "38deed810d34abfdb2cd7940b399ce392b6ff971480b25179400e4b58e3bb4a7" => :mojave
+    sha256 "4b52b8111ab72c54b7677f851ad0d4c120b09dfdd55ca269e03b33c75620600c" => :high_sierra
+  end
+
   depends_on "go" => :build
   depends_on "terraform" => :test
 
