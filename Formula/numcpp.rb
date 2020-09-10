@@ -8,9 +8,9 @@ class Numcpp < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "82c6072f7b1dbb789af12774a997888b4a50411b9979ee24dfba865bca13aa3b" => :catalina
-    sha256 "eee4970f2b66665c17a67b93d84296af236861b466e2d7db154f6535a70a1182" => :mojave
-    sha256 "27cdc95505568b37fde713717f95006e44b1450dca0fcf64089c35d484be3e17" => :high_sierra
+    sha256 "45d1e6f87c6c253c5cd1a5b75247c2433dcbb4fe4ac5ecb6c2ac1d0d53a9f231" => :catalina
+    sha256 "830cc9312d29337ac066b1861ced8846a54aeddbc7d6401796ee6490fe4881b3" => :mojave
+    sha256 "e68ae1eb4314455e0efa51c8a56a2afbf18f3a8c1987b8b587611fe36966fa65" => :high_sierra
   end
 
   depends_on "cmake" => :build
