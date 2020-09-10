@@ -3,7 +3,7 @@ class Abyss < Formula
   homepage "https://www.bcgsc.ca/resources/software/abyss"
   url "https://github.com/bcgsc/abyss/releases/download/2.2.5/abyss-2.2.5.tar.gz"
   sha256 "38e886f455074c76b32dd549e94cc345f46cb1d33ab11ad3e8e1f5214fc65521"
-  license "GPL-3.0-only"
+  license all_of: ["GPL-3.0-only", "LGPL-2.1-or-later", "MIT", "BSD-3-Clause"]
 
   bottle do
     cellar :any
