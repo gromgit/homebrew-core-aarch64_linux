@@ -7,9 +7,9 @@ class Qrcp < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "857aa5ad50a7a2124a1c37f7f206b25a65d9f3c76bae0ec9223945238c83d0eb" => :catalina
-    sha256 "5a1bede14f849cd49815b351325d5f375a9d7dc4d7ae8abd4053505f3fc1b6b0" => :mojave
-    sha256 "aba7e5ceb1c788d2eeae3e117e6dcae5c14530e5b759832adac7a6f4296565cd" => :high_sierra
+    sha256 "35c4fc732d2e19d78aff13129954130331498d2450f3320fe0a0046623c9adf2" => :catalina
+    sha256 "c68d4a7fd6225ddaada0355ed374902f64875d6dda923ad460d2ada1a268bde5" => :mojave
+    sha256 "0a05c9f53a4ef108b2716699f3c6f7586221db2b9385f7755c4cf79844c0869c" => :high_sierra
   end
 
   depends_on "go" => :build
