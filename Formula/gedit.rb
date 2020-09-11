@@ -1,10 +1,9 @@
 class Gedit < Formula
   desc "The GNOME text editor"
   homepage "https://wiki.gnome.org/Apps/Gedit"
-  url "https://download.gnome.org/sources/gedit/3.36/gedit-3.36.2.tar.xz"
-  sha256 "6887554643c5b1b3862ac364d97b7b50224bff95e6758aeaa08f4a482b554197"
-  license "GPL-2.0"
-  revision 1
+  url "https://download.gnome.org/sources/gedit/3.38/gedit-3.38.0.tar.xz"
+  sha256 "46cf06806de58f6e5e95e34fd98ad0b2c0c50b3dae6d23ca57d16d5cc41856f8"
+  license "GPL-2.0-or-later"
 
   livecheck do
     url :stable
@@ -58,10 +57,10 @@ class Gedit < Formula
     system bin/"gedit", "--version"
     # API test
     (testpath/"test.c").write <<~EOS
-      #include <gedit/gedit-utils.h>
+      #include <gedit/gedit-debug.h>
 
       int main(int argc, char *argv[]) {
-        gchar *text = gedit_utils_make_valid_utf8("test text");
+        gedit_debug_init();
         return 0;
       }
     EOS
@@ -97,7 +96,7 @@ class Gedit < Formula
       -I#{gtksourceview4.opt_include}/gtksourceview-4
       -I#{gtkx3.opt_include}/gtk-3.0
       -I#{harfbuzz.opt_include}/harfbuzz
-      -I#{include}/gedit-3.36
+      -I#{include}/gedit-3.38
       -I#{libepoxy.opt_include}
       -I#{libffi.opt_lib}/libffi-3.0.13/include
       -I#{libpeas.opt_include}/libpeas-1.0
@@ -122,7 +121,7 @@ class Gedit < Formula
       -lcairo-gobject
       -lgdk-3
       -lgdk_pixbuf-2.0
-      -lgedit-3.36
+      -lgedit-3.38
       -lgio-2.0
       -lgirepository-1.0
       -lglib-2.0
