@@ -62,12 +62,10 @@ class DocbookXsl < Formula
     etc_catalog = etc/"xml/catalog"
     ENV["XML_CATALOG_FILES"] = etc_catalog
 
-    [
-      ["xsl",    "xsl-nons"],
-      ["xsl-ns", "xsl"],
-    ].each do |nms|
-      old_name = nms[0]
-      new_name = nms[1]
+    {
+      "xsl"    => "xsl-nons",
+      "xsl-ns" => "xsl",
+    }.each do |old_name, new_name|
       loc = "file://#{opt_prefix}/docbook-#{old_name}"
 
       # add/replace catalog entries
@@ -76,14 +74,15 @@ class DocbookXsl < Formula
       system "xmlcatalog", "--noout", "--add", "nextCatalog", "", cat_loc, etc_catalog
 
       # add rewrites for the new and old catalog URLs
+      rewrites = ["rewriteSystem", "rewriteURI"]
       [
         "https://cdn.docbook.org/release/#{new_name}",
         "http://docbook.sourceforge.net/release/#{old_name}",
       ].each do |url_prefix|
         [version.to_s, "current"].each do |ver|
           system "xmlcatalog", "--noout", "--del", "#{url_prefix}/#{ver}", etc_catalog
-          ["rewriteSystem", "rewriteURI"].each do |k|
-            system "xmlcatalog", "--noout", "--add", k, "#{url_prefix}/#{ver}", loc, etc_catalog
+          rewrites.each do |rewrite|
+            system "xmlcatalog", "--noout", "--add", rewrite, "#{url_prefix}/#{ver}", loc, etc_catalog
           end
         end
       end
