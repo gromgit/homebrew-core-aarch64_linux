@@ -24,14 +24,16 @@ class Lammps < Formula
   depends_on "open-mpi"
 
   def install
+    # Disable some packages for which we do not have dependencies, that are
+    # deprecated or require too much configuration.
+    disabled_packages = %w[gpu kokkos latte mscg message mpiio poems voronoi]
+
     %w[serial mpi].each do |variant|
       cd "src" do
         system "make", "clean-all"
         system "make", "yes-standard"
 
-        # Disable some packages for which we do not have dependencies, that are
-        # deprecated or require too much configuration.
-        %w[gpu kokkos latte mscg message mpiio poems voronoi].each do |package|
+        disabled_packages.each do |package|
           system "make", "no-#{package}"
         end
 
