@@ -1,9 +1,9 @@
 class Pygobject3 < Formula
   desc "GNOME Python bindings (based on GObject Introspection)"
   homepage "https://wiki.gnome.org/Projects/PyGObject"
-  url "https://download.gnome.org/sources/pygobject/3.36/pygobject-3.36.1.tar.xz"
-  sha256 "d1bf42802d1cec113b5adaa0e7bf7f3745b44521dc2163588d276d5cd61d718f"
-  license "LGPL-2.1"
+  url "https://download.gnome.org/sources/pygobject/3.38/pygobject-3.38.0.tar.xz"
+  sha256 "0372d1bb9122fc19f500a249b1f38c2bb67485000f5887497b4b205b3e7084d5"
+  license "LGPL-2.1-or-later"
 
   livecheck do
     url :stable
@@ -26,7 +26,7 @@ class Pygobject3 < Formula
   def install
     mkdir "buildpy3" do
       system "meson", *std_meson_args,
-                      "-Dpycairo=true",
+                      "-Dpycairo=enabled",
                       "-Dpython=#{Formula["python@3.8"].opt_bin}/python3",
                       ".."
       system "ninja", "-v"
