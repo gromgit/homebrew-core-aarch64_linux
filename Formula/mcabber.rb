@@ -6,10 +6,9 @@ class Mcabber < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 "4d9680b14dd136a5b1d70f47d8567fcfa7962eb044e43f2f987bb5797b71c74a" => :catalina
-    sha256 "fe6ea0970c446bab941b3d4f0206e75673e112dff88c55b5ee429d18f0c9fd68" => :mojave
-    sha256 "55b6b38bfe8d3b924f7eb9b707c3e72324e81d312dd589ec99e283aa567b7ba9" => :high_sierra
-    sha256 "4be58f58cf92107259a4cc18cf17480dabbeeb130cfc6a182daca0bf76634ac5" => :sierra
+    sha256 "ee47a9acdd7772e85f13479db1306c612a4a3da1695fba50d10c2f769a43305a" => :catalina
+    sha256 "922acf4fa2a52e1bac0156099357081a779c875a7d7f05d04343b13d555c2d8a" => :mojave
+    sha256 "1c988edd8a478dfb42532470a455b3c5c81f41186186683e77793e0d881c4153" => :high_sierra
   end
 
   head do
