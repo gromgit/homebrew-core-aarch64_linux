@@ -3,6 +3,7 @@ class Quickjs < Formula
   homepage "https://bellard.org/quickjs/"
   url "https://bellard.org/quickjs/quickjs-2020-09-06.tar.xz"
   sha256 "0021a3e8cdc6b61e225411d05e2841d2437e1ccf4b4cabb9a5f7685ebfb57717"
+  license "MIT"
 
   bottle do
     sha256 "5bb0910b8bbb4f83a112108a458ac6923db2faa2e4b6e1bf25bbbd0433112802" => :catalina
