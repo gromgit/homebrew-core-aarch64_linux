@@ -13,9 +13,9 @@ class Z3 < Formula
 
   bottle do
     cellar :any
-    sha256 "06f1a289d9f846c31fd171ebcad05442eb03473b6aaf4bf1cbb1ca7c6e77d612" => :catalina
-    sha256 "3ac5deca9acb17a0a228766d6353048001747543ddcca607871cadaa6c736bbf" => :mojave
-    sha256 "e8c20ad5ef814ae9e8700f0e8f79590a11d46e8077be7204a9517a5a0af663a9" => :high_sierra
+    sha256 "ec93e6adf6c98ad275de3aa4c2b81dc28e73d3b5dabf09f00ad0331bc477c196" => :catalina
+    sha256 "6d8fe5edae3dbffef24fc3e65c5102a4d58a5ef62594a508f2042bec068b10a1" => :mojave
+    sha256 "1ef6ec089f5a3b42b9e9be906ddb99d7538984b58310051acc90e2a92af4146c" => :high_sierra
   end
 
   # Has Python bindings but are supplementary to the main library
