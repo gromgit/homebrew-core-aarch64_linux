@@ -3,7 +3,7 @@ class Z80dasm < Formula
   homepage "https://www.tablix.org/~avian/blog/articles/z80dasm/"
   url "https://www.tablix.org/~avian/z80dasm/z80dasm-1.1.6.tar.gz"
   sha256 "76d3967bb028f380a0c4db704a894c2aa939951faa5c5630b3355c327c0bd360"
-  license "GPL-2.0"
+  license "GPL-2.0-or-later"
 
   bottle do
     cellar :any_skip_relocation
