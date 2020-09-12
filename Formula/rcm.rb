@@ -1,8 +1,8 @@
 class Rcm < Formula
   desc "RC file (dotfile) management"
   homepage "https://thoughtbot.github.io/rcm/rcm.7.html"
-  url "https://thoughtbot.github.io/rcm/dist/rcm-1.3.3.tar.gz"
-  sha256 "935524456f2291afa36ef815e68f1ab4a37a4ed6f0f144b7de7fb270733e13af"
+  url "https://thoughtbot.github.io/rcm/dist/rcm-1.3.4.tar.gz"
+  sha256 "9b11ae37449cf4d234ec6d1348479bfed3253daba11f7e9e774059865b66c24a"
   license "BSD-3-Clause"
 
   bottle do
