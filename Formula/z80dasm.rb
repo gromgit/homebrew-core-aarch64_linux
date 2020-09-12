@@ -7,11 +7,9 @@ class Z80dasm < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f743b105a40263316f44b6d0437ea71c1ac35d8e2d5887090b9b1c4b8ca45e15" => :catalina
-    sha256 "5342a99e093cf751afa8a79420999b21e5c63440a77acf7b485cbab2b4ab567c" => :mojave
-    sha256 "aa3f2ab337305b4dcbb37e868fcc537e04cac5fd4a2af7c8548347965f26a226" => :high_sierra
-    sha256 "527e7f1cd02531e634745086a7b74eafa57fa8e1f676c3ad60d552f0d6d9ef20" => :sierra
-    sha256 "35be0cbdb1c9abc7277c740d7da130bb8b8f7bc50f744ae8a8ea3965a228b9ed" => :el_capitan
+    sha256 "5012e33c0fc342ec32a22462f9a75897fd69d44cf2918c64a593d268fa365c86" => :catalina
+    sha256 "0650fc5eadf8ee791201886bd39356af1365f9258c2222e27824fe63500b6eac" => :mojave
+    sha256 "a6d8e1d4caa612567de07580a353c82040e5c8005a08117386633e9a11f0df2e" => :high_sierra
   end
 
   def install
