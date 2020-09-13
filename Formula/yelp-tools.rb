@@ -11,9 +11,9 @@ class YelpTools < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "fd04fbc43832ca6a6e75ffcd928794c866153c7cf04d4f366e79d15a14a317b6" => :catalina
-    sha256 "fd04fbc43832ca6a6e75ffcd928794c866153c7cf04d4f366e79d15a14a317b6" => :mojave
-    sha256 "fd04fbc43832ca6a6e75ffcd928794c866153c7cf04d4f366e79d15a14a317b6" => :high_sierra
+    sha256 "74682c7165e489fcc0b4c5134dfb38e91a1c1416da4172fbd71af2437defeed0" => :catalina
+    sha256 "860e65ac76a6f80aaa6426a8c9cb6df1c6182381d918e0bad34045f4948d0463" => :mojave
+    sha256 "f2c62eebb9eab64483ac42b4d085fe1eafa6816d5dd4c46115915b5d22ac2041" => :high_sierra
   end
 
   depends_on "gettext" => :build
