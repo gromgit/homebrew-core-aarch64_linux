@@ -1,8 +1,8 @@
 class Sleef < Formula
   desc "SIMD library for evaluating elementary functions"
   homepage "https://sleef.org"
-  url "https://downloads.sourceforge.net/project/sleef/sleef-3.4.1.tar.gz"
-  sha256 "25babe83b9358817ac05bbec09b7557439e4e96b907b86717906e6d980ff2036"
+  url "https://github.com/shibatch/sleef/archive/3.5.0.tar.gz"
+  sha256 "6b952560cec091477affcb18baf06bf50cef9f932ff6aba491a744ee8e77ffea"
   license "BSL-1.0"
   head "https://github.com/shibatch/sleef.git"
 
