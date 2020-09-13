@@ -1,8 +1,9 @@
 class Orientdb < Formula
   desc "Graph database"
-  homepage "https://orientdb.com/"
-  url "https://s3.us-east-2.amazonaws.com/orientdb3/releases/3.1.1/orientdb-3.1.1.zip"
-  sha256 "1538bfcc5d1a83e8a686be37950a69a2466d19eb824f754367a7b254c56b748f"
+  homepage "https://orientdb.org/"
+  url "https://s3.us-east-2.amazonaws.com/orientdb3/releases/3.1.2/orientdb-3.1.2.zip"
+  sha256 "14fdd2e2ca596f0336175590851fa3a10130a7265f4df5ef8c0c1faf8253f8df"
+  license "Apache-2.0"
 
   bottle do
     cellar :any_skip_relocation
@@ -57,7 +58,7 @@ class Orientdb < Formula
   def caveats
     <<~EOS
       The OrientDB root password was set to 'orientdb'. To reset it:
-        https://orientdb.com/docs/last/security/Server-Security.html#restoring-the-servers-user-root
+        https://orientdb.org/docs/3.1.x/security/Server-Security.html#restoring-the-servers-user-root
     EOS
   end
 
