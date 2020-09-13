@@ -8,9 +8,9 @@ class Sleef < Formula
 
   bottle do
     cellar :any
-    sha256 "d8ae909caeaf4b8341254b458931ac8b4264d9acbfc7232ffa4dcd2bfaa93248" => :catalina
-    sha256 "0b16c2e2daa5b3521e195d183daa70ea8f7cc4a5dd4924610c82945846ba0c81" => :mojave
-    sha256 "fd59d2dc9fc8c757054a16f2dfb19d8b0a2eebb48e34de8ce67f585bb8b7e586" => :high_sierra
+    sha256 "c3aec292662ac506d6c8ccae2d6ea45019a5cbd9928b9c9bde35706410aac1c1" => :catalina
+    sha256 "a9763b5dc87d218f416769cea9d1f349506dc37ccc102901840acb6667e9c3ec" => :mojave
+    sha256 "ef3857646cb8e871f2a50f4f3e44e39debf6ef58cc43b3e82bb576fa0614f8ba" => :high_sierra
   end
 
   depends_on "cmake" => :build
