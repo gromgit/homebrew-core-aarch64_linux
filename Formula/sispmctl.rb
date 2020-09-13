@@ -10,9 +10,9 @@ class Sispmctl < Formula
   end
 
   bottle do
-    sha256 "81744e45749770c78d2faf4dbbca0acafcfafbcddd13490aa34bc4b0f85376f5" => :catalina
-    sha256 "99772ae9b4243338477c550297e5c21bddab9ceaee225c92ed4ea0d5a5877eca" => :mojave
-    sha256 "4acb337efca6d3efb2e6b18457ba8e957ae493869f96f230d1555fcb2db354b8" => :high_sierra
+    sha256 "2c4a8a22528a34de494a7e5f93873f80cf4bc47646e725baddd86bb2d242ade8" => :catalina
+    sha256 "ec93867cb3b46835c74d640fdb329735b15cb4b273b722cb5855808a764e27c9" => :mojave
+    sha256 "1d7c6d1b3e44399b748f6e47d08e8b381ac9685cacd2d0993fbdac140760cc4b" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
