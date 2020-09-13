@@ -1,9 +1,9 @@
 class Glade < Formula
   desc "RAD tool for the GTK+ and GNOME environment"
   homepage "https://glade.gnome.org/"
-  url "https://download.gnome.org/sources/glade/3.36/glade-3.36.0.tar.xz"
-  sha256 "19b546b527cc46213ccfc8022d49ec57e618fe2caa9aa51db2d2862233ea6f08"
-  revision 1
+  url "https://download.gnome.org/sources/glade/3.38/glade-3.38.0.tar.xz"
+  sha256 "4a914c5c0b19c2e52fd4ad15077d406dbfd6ad0245e239d7390bf87f27d9103c"
+  license "LGPL-2.1-or-later"
 
   livecheck do
     url :stable
@@ -18,6 +18,8 @@ class Glade < Formula
   depends_on "docbook-xsl" => :build
   depends_on "gobject-introspection" => :build
   depends_on "itstool" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "adwaita-icon-theme"
   depends_on "gettext"
@@ -33,14 +35,11 @@ class Glade < Formula
     # Disable icon-cache update
     ENV["DESTDIR"] = "/"
 
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--prefix=#{prefix}",
-                          "--enable-gladeui",
-                          "--enable-introspection"
-
-    system "make" # separate steps required
-    system "make", "install"
+    mkdir "build" do
+      system "meson", *std_meson_args, "-Dintrospection=true", "-Dgladeui=true", ".."
+      system "ninja"
+      system "ninja", "install"
+    end
   end
 
   def post_install
