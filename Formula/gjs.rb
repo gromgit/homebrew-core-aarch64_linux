@@ -1,8 +1,9 @@
 class Gjs < Formula
   desc "JavaScript Bindings for GNOME"
   homepage "https://gitlab.gnome.org/GNOME/gjs/wikis/Home"
-  url "https://download.gnome.org/sources/gjs/1.64/gjs-1.64.4.tar.xz"
-  sha256 "a3cc3a8eda87074b2c363ffe28b29a5202d7f12914b6973f199acf2d1816d44c"
+  url "https://download.gnome.org/sources/gjs/1.66/gjs-1.66.1.tar.xz"
+  sha256 "8d4240455eff642c8bf6d9805077e33e0a60cb2ea13f77a55f7f30c29668344c"
+  license all_of: ["LGPL-2.0-or-later", "MIT"]
 
   livecheck do
     url :stable
@@ -17,6 +18,7 @@ class Gjs < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
+  depends_on "python@3.8" => :build
   depends_on "rust" => :build
   depends_on "gobject-introspection"
   depends_on "gtk+3"
@@ -30,9 +32,14 @@ class Gjs < Formula
     sha256 "f0611136bee505811e9ca11ca7ac188ef5323a8e2ef19cffd3edb3cf08fd791e"
   end
 
-  resource "mozjs68" do
-    url "https://archive.mozilla.org/pub/firefox/releases/68.8.0esr/source/firefox-68.8.0esr.source.tar.xz"
-    sha256 "fa5b2266d225878d4b35694678f79fd7e7a6d3c62759a40326129bd90f63e842"
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/6b/34/415834bfdafca3c5f451532e8a8d9ba89a21c9743a0c59fbd0205c7f9426/six-1.15.0.tar.gz"
+    sha256 "30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"
+  end
+
+  resource "mozjs78" do
+    url "https://archive.mozilla.org/pub/firefox/releases/78.2.0esr/source/firefox-78.2.0esr.source.tar.xz"
+    sha256 "965ccfcbb8c0aa97639911997c54be0fcf896fd388b03138952089af675ea918"
   end
 
   def install
@@ -48,17 +55,23 @@ class Gjs < Formula
       system "make", "install"
     end
 
-    resource("mozjs68").stage do
+    resource("six").stage do
+      system Formula["python@3.8"].opt_bin/"python3", *Language::Python.setup_install_args(buildpath/"vendor")
+    end
+
+    resource("mozjs78").stage do
+      inreplace "build/moz.configure/toolchain.configure",
+                "sdk_max_version = Version('10.15.4')",
+                "sdk_max_version = Version('11.0')"
       inreplace "config/rules.mk",
                 "-install_name $(_LOADER_PATH)/$(SHARED_LIBRARY) ",
                 "-install_name #{lib}/$(SHARED_LIBRARY) "
       inreplace "old-configure", "-Wl,-executable_path,${DIST}/bin", ""
-      inreplace "build/moz.configure/toolchain.configure",
-                "sdk_max_version = Version('10.14')",
-                "sdk_max_version = Version('10.16')"
 
       mkdir("build") do
-        ENV["PYTHON"] = "python"
+        xy = Language::Python.major_minor_version "python3"
+        ENV.prepend_create_path "PYTHONPATH", buildpath/"vendor/lib/python#{xy}/site-packages"
+        ENV["PYTHON"] = Formula["python@3.8"].opt_bin/"python3"
         ENV["_MACOSX_DEPLOYMENT_TARGET"] = ENV["MACOSX_DEPLOYMENT_TARGET"]
         ENV["CC"] = Formula["llvm"].opt_bin/"clang"
         ENV["CXX"] = Formula["llvm"].opt_bin/"clang++"
@@ -72,8 +85,7 @@ class Gjs < Formula
                               "--enable-optimize",
                               "--enable-release",
                               "--with-intl-api",
-                              "--disable-jemalloc",
-                              "--disable-xcode-checks"
+                              "--disable-jemalloc"
         system "make"
         system "make", "install"
         rm Dir["#{bin}/*"]
