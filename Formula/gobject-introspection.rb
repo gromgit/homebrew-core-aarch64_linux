@@ -12,9 +12,9 @@ class GobjectIntrospection < Formula
   end
 
   bottle do
-    sha256 "4715d7cb549501fa75101266f6c49fe656666cb071a6e8f111b08cb3b74a2b15" => :catalina
-    sha256 "e6f0eacacdda25019941d42dd600c478f22de8c57a8975b2e26c4a5cfb8f367c" => :mojave
-    sha256 "b54f973af9b413e20a7b6485315da882f73e623c61f3573325a434d47e5b011a" => :high_sierra
+    sha256 "78481011ce21a280d5803f867c7760ef263306ea32f5a171a38132870b366286" => :catalina
+    sha256 "81f0d3fb9f5c11713ca012667ece092e32347307d6e3f759566a1791bcc16bd4" => :mojave
+    sha256 "2589ea5a46c0aa38046d9c71ad235027cba380e1e21b39e132a28908ac1cf443" => :high_sierra
   end
 
   depends_on "bison" => :build
