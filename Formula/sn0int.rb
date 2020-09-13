@@ -7,9 +7,10 @@ class Sn0int < Formula
 
   bottle do
     cellar :any
-    sha256 "618417dd910df3bb10c461c4e5b41f202c23ce24bf39043e5b88e544bc56df0a" => :catalina
-    sha256 "cff5e42d3b5e9e44b92f437601ef1764f93df0f5bb259ec0d683cd4d2be59e83" => :mojave
-    sha256 "66382b358f95db51620653c1120e903dd009a8a2e4be25c759593a01956df48d" => :high_sierra
+    rebuild 1
+    sha256 "5a6cc5bdf07a29ebf714aff83d338394d030780aaf69dda387499ca0db8138f2" => :catalina
+    sha256 "75c89017e8f92cc2ef2a1701554a2047ec1a4a42806bc47081c7af42935a8043" => :mojave
+    sha256 "0cf32130ed1155b959935202031f7d71c34f141a46c726233836e402c9bd8bc8" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
