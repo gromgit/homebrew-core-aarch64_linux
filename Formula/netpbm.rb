@@ -17,10 +17,9 @@ class Netpbm < Formula
 
   bottle do
     cellar :any
-    rebuild 2
-    sha256 "394105a420df7d2048adf8ca4657cc600e294d930d1d44c0dd693335eb9e25b4" => :catalina
-    sha256 "b71e3cb138e800b2b48ab0bf70dee655fb8eaabf961ee31f94509faefe9b0983" => :mojave
-    sha256 "595b9dce867e5985b638907567c19181388c5b034a208adc49175a808ac288eb" => :high_sierra
+    sha256 "6228db9b2582c4d3208d898abc3212bce0b17b31521d77ab84f4a3910cb0cbfd" => :catalina
+    sha256 "ffba128ffd4736ba31f2060153f9dabdc3e99863a46bee115876c038d2711089" => :mojave
+    sha256 "f1ef6fa03533f5244f00cff470e64d96ad1de44b5f3ce9e7a9a6718c363255a6" => :high_sierra
   end
 
   depends_on "jasper"
