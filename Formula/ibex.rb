@@ -19,23 +19,20 @@ class Ibex < Formula
   end
 
   depends_on "bison" => :build
+  depends_on "cmake" => :build
   depends_on "flex" => :build
   depends_on "pkg-config" => [:build, :test]
-  depends_on :macos # Due to Python 2
 
   uses_from_macos "zlib"
 
   def install
     ENV.cxx11
 
-    # Reported 9 Oct 2017 https://github.com/ibex-team/ibex-lib/issues/286
-    ENV.deparallelize
-
-    system "./waf", "configure", "--prefix=#{prefix}",
-                                 "--enable-shared",
-                                 "--lp-lib=soplex",
-                                 "--with-optim"
-    system "./waf", "install"
+    mkdir "build" do
+      system "cmake", "..", *std_cmake_args
+      system "make", "SHARED=true"
+      system "make", "install"
+    end
 
     pkgshare.install %w[examples benchs/solver]
     (pkgshare/"examples/symb01.txt").write <<~EOS
@@ -49,14 +46,6 @@ class Ibex < Formula
     ENV.cxx11
 
     cp_r (pkgshare/"examples").children, testpath
-
-    # so that pkg-config can remain a build-time only dependency
-    inreplace %w[makefile slam/makefile] do |s|
-      s.gsub!(/CXXFLAGS.*pkg-config --cflags ibex./,
-              "CXXFLAGS := -I#{include} -I#{include}/ibex "\
-                          "-I#{include}/ibex/3rd")
-      s.gsub!(/LIBS.*pkg-config --libs  ibex./, "LIBS := -L#{lib} -libex")
-    end
 
     (1..8).each do |n|
       system "make", "lab#{n}"
