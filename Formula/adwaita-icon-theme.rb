@@ -1,8 +1,9 @@
 class AdwaitaIconTheme < Formula
   desc "Icons for the GNOME project"
   homepage "https://developer.gnome.org"
-  url "https://download.gnome.org/sources/adwaita-icon-theme/3.36/adwaita-icon-theme-3.36.1.tar.xz"
-  sha256 "e498518627044dfd7db7d79a5b3d437848caf1991ef4ef036a2d3a2ac2c1f14d"
+  url "https://download.gnome.org/sources/adwaita-icon-theme/3.38/adwaita-icon-theme-3.38.0.tar.xz"
+  sha256 "6683a1aaf2430ccd9ea638dd4bfe1002bc92b412050c3dba20e480f979faaf97"
+  license any_of: ["LGPL-3.0-or-later", "CC-BY-SA-3.0"]
 
   livecheck do
     url :stable
