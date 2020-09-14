@@ -12,9 +12,9 @@ class KdeExtraCmakeModules < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7e7861c3073349f9748f7407985d993242895b5207cdc11f7666db898cb3020b" => :catalina
-    sha256 "7e7861c3073349f9748f7407985d993242895b5207cdc11f7666db898cb3020b" => :mojave
-    sha256 "7e7861c3073349f9748f7407985d993242895b5207cdc11f7666db898cb3020b" => :high_sierra
+    sha256 "d4d8ba9eb87ab1469ad89fba8b36c52fbc6dbf5708d965bb1d8bbb7f9ff36221" => :catalina
+    sha256 "efebab28b28b19d32c52d19260a4b336c08cccf9d1ea7b7bfdd44371329a8055" => :mojave
+    sha256 "9d3a79667fde10f785d04c9143ead052c454a7930ca08e003299f7ecbc576fb4" => :high_sierra
   end
 
   depends_on "cmake" => [:build, :test]
