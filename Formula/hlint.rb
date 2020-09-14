@@ -12,10 +12,9 @@ class Hlint < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "f276a6a6880e8bd6496f6390c337b9175acfcc16a1c4cee56655fa25858e5d20" => :catalina
-    sha256 "3c6ce1c19c2d13593ce62fe077678c5901a4456eb1d0f3521f6d55df15f48fb4" => :mojave
-    sha256 "0bbdd97f8227feb367c81857012d5df4b0eabb895dea7585b029bf99c05e5756" => :high_sierra
+    sha256 "ea96ebff70add4db014bd83c57f71f8f9df4ed1c437942959192b94fbdaac940" => :catalina
+    sha256 "6b2e4de58ca753b7b91cbcbc004186de64c84be82761ffa8bc0909197449a1b1" => :mojave
+    sha256 "65149d639d145c02ff529cc9889c0a909f776654137ce87cd995361673fed7e5" => :high_sierra
   end
 
   depends_on "cabal-install" => :build
