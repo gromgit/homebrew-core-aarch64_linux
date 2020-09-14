@@ -6,9 +6,9 @@ class KdeThreadweaver < Formula
   head "https://invent.kde.org/frameworks/threadweaver.git"
 
   bottle do
-    sha256 "31b662eb063e476c9b9aa6b1aa3c1e1143e892f96e33c5699bf3c73933f4aef8" => :catalina
-    sha256 "7e91cff9074db139d7a35923c0241833823532fd5f53913986c0bf5424051399" => :mojave
-    sha256 "63d505700bb14f015bcbd49033e32db8941a5c5980c26207e2c8e2d4ff4824da" => :high_sierra
+    sha256 "f803750e847123597d76551e6d277f5a006301412a506ba226d2e33cb7cb5842" => :catalina
+    sha256 "b9c2f7899640087646398f92aa7eb85e26b861fd470bc2c4cdb86f3bd994ea7a" => :mojave
+    sha256 "33ef7e1e69f50ee47b522e437d623fd44ae5d37cac5a8829e776b778b2b0cb62" => :high_sierra
   end
 
   depends_on "cmake" => [:build, :test]
