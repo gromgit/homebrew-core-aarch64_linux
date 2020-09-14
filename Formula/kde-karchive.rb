@@ -6,9 +6,9 @@ class KdeKarchive < Formula
   head "https://invent.kde.org/frameworks/karchive.git"
 
   bottle do
-    sha256 "5d5993edc094152be0659cf0c8f6bec828aa8f0ceb187644958bd80936af3c67" => :catalina
-    sha256 "cd68910063856432b3f983a0d9ee7eb8faff9d0328221dded1c89daef11d8bdb" => :mojave
-    sha256 "79f0a91cc9dcaf24a033b23c4b46269244a4f4642ec6c68756e29b735aa9e2aa" => :high_sierra
+    sha256 "28cdb99cb76a6b82e9aa1800b3c69e116d1ef6b4266ae56045ea3b7cd9f8a642" => :catalina
+    sha256 "4ab8590963fa77fdf7d715d2126a1d7460c6c11ce1936a288846d9fb3d495223" => :mojave
+    sha256 "10815dac0c11c5a9a44584ab3ab6eaa8efc34b88dea3234282441d110a384bfd" => :high_sierra
   end
 
   depends_on "cmake" => [:build, :test]
