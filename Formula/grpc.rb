@@ -30,6 +30,7 @@ class Grpc < Formula
   depends_on "gflags"
   depends_on "openssl@1.1"
   depends_on "protobuf"
+  depends_on "re2"
 
   def install
     mkdir "cmake/build" do
@@ -43,6 +44,7 @@ class Grpc < Formula
         -DgRPC_PROTOBUF_PROVIDER=package
         -DgRPC_SSL_PROVIDER=package
         -DgRPC_ZLIB_PROVIDER=package
+        -DgRPC_RE2_PROVIDER=package
       ] + std_cmake_args
 
       system "cmake", *args
