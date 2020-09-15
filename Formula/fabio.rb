@@ -25,9 +25,9 @@ class Fabio < Formula
     require "socket"
     require "timeout"
 
-    CONSUL_DEFAULT_PORT = 8500
-    FABIO_DEFAULT_PORT = 9999
-    LOCALHOST_IP = "127.0.0.1".freeze
+    consul_default_port = 8500
+    fabio_default_port = 9999
+    localhost_ip = "127.0.0.1".freeze
 
     def port_open?(ip_address, port, seconds = 1)
       Timeout.timeout(seconds) do
@@ -38,8 +38,8 @@ class Fabio < Formula
       false
     end
 
-    if !port_open?(LOCALHOST_IP, FABIO_DEFAULT_PORT)
-      if !port_open?(LOCALHOST_IP, CONSUL_DEFAULT_PORT)
+    if !port_open?(localhost_ip, fabio_default_port)
+      if !port_open?(localhost_ip, consul_default_port)
         fork do
           exec "consul agent -dev -bind 127.0.0.1"
           puts "consul started"
@@ -53,7 +53,7 @@ class Fabio < Formula
         puts "fabio started"
       end
       sleep 10
-      assert_equal true, port_open?(LOCALHOST_IP, FABIO_DEFAULT_PORT)
+      assert_equal true, port_open?(localhost_ip, fabio_default_port)
       system "killall", "fabio" # fabio forks off from the fork...
       system "consul", "leave"
     else
