@@ -3,8 +3,8 @@ class Q < Formula
 
   desc "Run SQL directly on CSV or TSV files"
   homepage "https://harelba.github.io/q/"
-  url "https://github.com/harelba/q/archive/2.0.16.tar.gz"
-  sha256 "3376c7bcea4b2511e4bcbb4f3b0a04d76a4fdf28f3345755f6d468edaa2fd936"
+  url "https://github.com/harelba/q/archive/2.0.17.tar.gz"
+  sha256 "3efcae0d1c188e91f686de20569c48ca1be6e0c58840dbd3aae0dd3b5f567817"
   license "GPL-3.0-only"
   head "https://github.com/harelba/q.git"
 
