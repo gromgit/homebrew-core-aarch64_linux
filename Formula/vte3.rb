@@ -1,9 +1,9 @@
 class Vte3 < Formula
   desc "Terminal emulator widget used by GNOME terminal"
   homepage "https://developer.gnome.org/vte/"
-  url "https://download.gnome.org/sources/vte/0.60/vte-0.60.3.tar.xz"
-  sha256 "feb76e1181a357d86112d447a08d127e2081438df76ece83243b18609dd9822a"
-  revision 1
+  url "https://download.gnome.org/sources/vte/0.62/vte-0.62.0.tar.xz"
+  sha256 "4d2d246ed47f08cc73f6471aa8e9f378998b7d0f7dcb0c433f29da5839dbb016"
+  license "LGPL-2.0-or-later"
 
   livecheck do
     url :stable
@@ -22,6 +22,7 @@ class Vte3 < Formula
   depends_on "gettext"
   depends_on "gnutls"
   depends_on "gtk+3"
+  depends_on macos: :mojave
   depends_on "pcre2"
   depends_on "vala"
 
