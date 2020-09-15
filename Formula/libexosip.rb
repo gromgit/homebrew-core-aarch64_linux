@@ -14,9 +14,9 @@ class Libexosip < Formula
 
   bottle do
     cellar :any
-    sha256 "7fddfd2e60d8a14273dff40805d6b453317923aab3150fe1d48a809532eac6a0" => :catalina
-    sha256 "15ec135f72580195346daab0702ae0a4562bf14909cb783d0476a58700064155" => :mojave
-    sha256 "f2109a6dcf51ace28cb2a6a22bcbe56f7c41dd380e69bf33c5928d4cf87798a2" => :high_sierra
+    sha256 "75f5593831cb7059245b17f778e2a884e9ef08c41589b17e39d49d230fba45d4" => :catalina
+    sha256 "dbfa4e8499e92567ca2915fdccf4447249e7bd209aa3736b93b19a95c3d9242a" => :mojave
+    sha256 "3fcdb640cd6b2bc77df35dde0f9f1eb34a61f52102c2e184c2eb14164cec9956" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
