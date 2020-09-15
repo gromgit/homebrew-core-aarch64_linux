@@ -38,8 +38,8 @@ class Inlets < Formula
   test do
     upstream_port = free_port
     remote_port = free_port
-    MOCK_RESPONSE = "INLETS OK".freeze
-    SECRET_TOKEN = "itsasecret-sssshhhhh".freeze
+    mock_response = "INLETS OK".freeze
+    secret_token = "itsasecret-sssshhhhh".freeze
 
     (testpath/"mock_upstream_server.rb").write <<~EOS
       require 'socket'
@@ -51,7 +51,7 @@ class Inlets < Formula
         response = "OK\\n"
         shutdown = false
         if request.include? "inlets-test"
-          response = "#{MOCK_RESPONSE}\\n"
+          response = "#{mock_response}\\n"
           shutdown = true
         end
         socket.print "HTTP/1.1 200 OK\\r\\n" +
@@ -88,17 +88,17 @@ class Inlets < Formula
       # testing that we can hit the mock server upstream_port via the tunnel remote_port
       sleep 3 # Waiting for mock server
       server_pid = fork do
-        exec "#{bin}/inlets server --port #{remote_port} --token #{SECRET_TOKEN}"
+        exec "#{bin}/inlets server --port #{remote_port} --token #{secret_token}"
       end
 
       client_pid = fork do
         # Starting inlets client
         exec "#{bin}/inlets client --remote localhost:#{remote_port} " \
-             "--upstream localhost:#{upstream_port} --token #{SECRET_TOKEN}"
+             "--upstream localhost:#{upstream_port} --token #{secret_token}"
       end
 
       sleep 3 # Waiting for inlets websocket tunnel
-      assert_match MOCK_RESPONSE, shell_output("curl -s http://localhost:#{remote_port}/inlets-test")
+      assert_match mock_response, shell_output("curl -s http://localhost:#{remote_port}/inlets-test")
     ensure
       cleanup("Mock Server", mock_upstream_server_pid)
       cleanup("Inlets Server", server_pid)
