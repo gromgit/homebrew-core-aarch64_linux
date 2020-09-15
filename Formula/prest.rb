@@ -1,10 +1,9 @@
 class Prest < Formula
   desc "Serve a RESTful API from any PostgreSQL database"
   homepage "https://github.com/prest/prest"
-  url "https://github.com/prest/prest/archive/v1.0.3.tar.gz"
-  sha256 "3035e59926967f8f7e094b08c1287681a1e7e53b80c5fd6566a6a9fc9d90115e"
+  url "https://github.com/prest/prest/archive/v1.0.4.tar.gz"
+  sha256 "c1025c368c6276530416ef4027150439fe90dbe094199875605b6f9ecb5423c3"
   license "MIT"
-  revision 1
   head "https://github.com/prest/prest.git"
 
   bottle do
@@ -25,10 +24,9 @@ class Prest < Formula
   end
 
   test do
-    output_regex = /Version (?<migration>\d+) migration files created in .*:/
-    output = shell_output("prest migrate create test --path .")
-    migration = output.match(output_regex)[:migration]
-    assert_predicate testpath/"#{migration}_test.down.sql", :exist?
-    assert_predicate testpath/"#{migration}_test.up.sql", :exist?
+    output = shell_output("prest migrate up --path .", 255)
+    assert_match "connect: connection refused", output
+
+    assert_match version.to_s, shell_output("prest version")
   end
 end
