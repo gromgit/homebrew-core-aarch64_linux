@@ -25,8 +25,8 @@ class Rdesktop < Formula
       --disable-credssp
       --enable-smartcard
       --with-sound=libao
-      --x-includes=#{MacOS::X11.include}
-      --x-libraries=#{MacOS::X11.lib}
+      --x-includes=#{MacOS::XQuartz.include}
+      --x-libraries=#{MacOS::XQuartz.lib}
     ]
 
     system "./configure", *args
