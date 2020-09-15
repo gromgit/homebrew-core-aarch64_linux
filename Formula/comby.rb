@@ -7,9 +7,9 @@ class Comby < Formula
 
   bottle do
     cellar :any
-    sha256 "9705899126d0faef44488234c638179cd698559fe4bb748a21117ea4e512221a" => :catalina
-    sha256 "ddf72509219f41e70ebe39658b47e68b5fd828be9b7ff671583d924354b5d0fa" => :mojave
-    sha256 "58767410bf68f747b0c2e9968b80cfdfb1d208b5ba443f0451bbf0941c23108a" => :high_sierra
+    sha256 "8441273e383d1a79787cba483f9d27c78e03722596c4a80bd4bf636933226b69" => :catalina
+    sha256 "2630927aa177293db660deea99133bab70247c0f9c751c5e21d9a18c38f5a2c0" => :mojave
+    sha256 "b7c4c8bf2817ec659a33f1fa8af1e049bba199e2f08bf246a99cbda036eba523" => :high_sierra
   end
 
   depends_on "gmp" => :build
