@@ -1,9 +1,9 @@
 class Scummvm < Formula
   desc "Graphic adventure game interpreter"
   homepage "https://www.scummvm.org/"
-  url "https://www.scummvm.org/frs/scummvm/2.1.2/scummvm-2.1.2.tar.xz"
-  sha256 "c4c16c9b8650c3d512b7254551bbab0d47cd3ef4eac6983ab6d882e76cf88eb0"
-  license "GPL-2.0"
+  url "https://www.scummvm.org/frs/scummvm/2.2.0/scummvm-2.2.0.tar.xz"
+  sha256 "1469657e593bd8acbcfac0b839b086f640ebf120633e93f116cab652b5b27387"
+  license "GPL-2.0-or-later"
   head "https://github.com/scummvm/scummvm.git"
 
   livecheck do
@@ -30,12 +30,6 @@ class Scummvm < Formula
   depends_on "mad"
   depends_on "sdl2"
   depends_on "theora"
-
-  # Support fluid-synth 2.1
-  patch do
-    url "https://sources.debian.org/data/main/s/scummvm/2.1.2+dfsg1-1/debian/patches/git_fluidsynth_update.patch"
-    sha256 "4e03d4b685bf38c2367bb669867175bd4b84039a678613bf6e32a34591b382c6"
-  end
 
   def install
     system "./configure", "--prefix=#{prefix}",
