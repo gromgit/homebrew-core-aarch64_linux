@@ -7,9 +7,9 @@ class Openfast < Formula
 
   bottle do
     cellar :any
-    sha256 "a3853476d60b961beb46c9dd2e6d57cfa82b566336630d7d761295f67a1eef39" => :catalina
-    sha256 "083887ac9bc3bff177b483423fbbe7dae850e70b81c481a2e48b5263fef48671" => :mojave
-    sha256 "e02a5cff1f9c007018873388a77a719a6db38da7e935e150a4b49a0f4feeb0ed" => :high_sierra
+    sha256 "4002905c49121e6d207f019001aafe98fe40e001a8e0507c91e36a5942f2e528" => :catalina
+    sha256 "975d21ae1596c7ed4f23119e7008d61c88d386eff9ff29bc3ad594cbea722c25" => :mojave
+    sha256 "36c1b0f032d686639382774346c7c71f25fc09db6ff1733b46939c4728199f1d" => :high_sierra
   end
 
   depends_on "cmake" => :build
