@@ -1,8 +1,8 @@
 class Gau < Formula
   desc "Open Threat Exchange, Wayback Machine, and Common Crawl URL fetcher"
   homepage "https://github.com/lc/gau"
-  url "https://github.com/lc/gau/archive/v1.0.3.tar.gz"
-  sha256 "fc6e569dace151915474c81285b2ffb03c07968f25d8634a9e6bcaaf9d33d0b4"
+  url "https://github.com/lc/gau/archive/v1.0.4.tar.gz"
+  sha256 "dd96be06dfb99e2805d663e8342c3f8eec03ccce35c33711451bdbc520ae2fd7"
   license "MIT"
 
   bottle do
