@@ -43,7 +43,7 @@ class Imake < Formula
     resource("xorg-cf-files").stage do
       # Fix for different X11 locations.
       inreplace "X11.rules", "define TopXInclude	/**/",
-                "define TopXInclude	-I#{MacOS::X11.include}"
+                "define TopXInclude	-I#{MacOS::XQuartz.include}"
       system "./configure", "--with-config-dir=#{lib}/X11/config",
                             "--prefix=#{HOMEBREW_PREFIX}"
       system "make", "install"
