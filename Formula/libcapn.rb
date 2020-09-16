@@ -28,12 +28,12 @@ class Libcapn < Formula
   # Compatibility with OpenSSL 1.1
   # Original: https://github.com/adobkin/libcapn/pull/46.diff?full_index=1
   patch do
-    url "https://github.com/adobkin/libcapn/commit/d5e7cd219b7a82156de74d04bc3668a07ec96629.diff?full_index=1"
-    sha256 "18db4435c4417cbb3052714808f50f32827effbd7f03f9ae37ab7659af53050f"
+    url "https://github.com/adobkin/libcapn/commit/d5e7cd219b7a82156de74d04bc3668a07ec96629.patch?full_index=1"
+    sha256 "d027dc78f490c749eb04c36001d28ce6296c2716325f48db291ce8e62d56ff26"
   end
   patch do
-    url "https://github.com/adobkin/libcapn/commit/5fde3a8faa6ce0da0bfe67834bec684a9c6fc992.diff?full_index=1"
-    sha256 "d0c87b4ffb514fa1f8a1930a73e53b76e6512b39d69fc02ed74456307c3521ae"
+    url "https://github.com/adobkin/libcapn/commit/5fde3a8faa6ce0da0bfe67834bec684a9c6fc992.patch?full_index=1"
+    sha256 "caa70babdc4e028d398e844df461f97b0dc192d5c6cc5569f88319b4fcac5ff7"
   end
 
   def install
