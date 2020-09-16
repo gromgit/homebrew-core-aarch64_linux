@@ -29,8 +29,8 @@ class Liblas < Formula
   # Fix compilation against GDAL 2.3
   # Remove in next version
   patch do
-    url "https://github.com/libLAS/libLAS/commit/ec10e274.diff?full_index=1"
-    sha256 "3f5cc283d3e908d991b05b4dcf5cc0440824441ec270396e11738f96a0a23a9f"
+    url "https://github.com/libLAS/libLAS/commit/ec10e274.patch?full_index=1"
+    sha256 "3f8aefa1073aa32de01175cd217773020d93e5fb44a4592d76644a242bb89a3c"
   end
 
   def install
