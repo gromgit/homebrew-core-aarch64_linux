@@ -18,8 +18,8 @@ class Afsctool < Formula
 
   # Fixes Sierra "Unable to compress" issue; reported upstream on 24 July 2017
   patch :p2 do
-    url "https://github.com/vfx01j/afsctool/commit/26293a3809c9ad1db5f9bff9dffaefb8e201a089.diff?full_index=1"
-    sha256 "a541526679eb5d2471b3f257dab6103300d950f7b2f9d49bbfeb9f27dfc48542"
+    url "https://github.com/vfx01j/afsctool/commit/26293a3809c9ad1db5f9bff9dffaefb8e201a089.patch?full_index=1"
+    sha256 "69ec72b2d6f89b53e93c7bacef1916ea4cf815e4b3e7ab4ee8010c31de1d4e66"
   end
 
   # Fixes High Sierra "Expecting f_type of 17 or 23. f_type is 24" issue
