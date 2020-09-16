@@ -12,9 +12,9 @@ class Micronaut < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0af1ce0fe51da38205f6ae4c0dc2bdaaff0ab5d0ba20efb3e584b81cf44d92f2" => :catalina
-    sha256 "38f0df54c92727eb27ef61025bb4c95cf1de45e9368595ade7e53a6771833ad1" => :mojave
-    sha256 "d8beed32a8279539c9bebac12c5c81a46462ce9895e85241a02a5a940802647f" => :high_sierra
+    sha256 "9fe694abad9425a67180ccc2b24d8ea61425a799acd36f7b142e4150aec66692" => :catalina
+    sha256 "0ab865a56fe7dbdb08f3fb6a33271b4065ac3efeff6225e926dd39b6cbaba105" => :mojave
+    sha256 "a36edc278ee0c17e4ce4e9bc579418a30d5d72cd09570208de52b0f5f756747f" => :high_sierra
   end
 
   depends_on "gradle" => :build
