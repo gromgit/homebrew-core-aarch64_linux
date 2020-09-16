@@ -24,14 +24,14 @@ class Unison < Formula
   # Upstream fix for compatibility with OCaml 4.08 and later
   # https://github.com/bcpierce00/unison/pull/276
   patch do
-    url "https://github.com/bcpierce00/unison/commit/23fa1292.diff?full_index=1"
-    sha256 "ad6b28dc2fe1c6c99863079c7e96b12452aa05c05ed010b6c551e32244ce76f2"
+    url "https://github.com/bcpierce00/unison/commit/23fa1292.patch?full_index=1"
+    sha256 "25e3a4fc4460e40fcc61135b13effdc6ec71b8399af7d1f9d6399c7e96e07fbd"
   end
 
   # compatibility fix with ocaml 4.10
   patch do
-    url "https://github.com/bcpierce00/unison/commit/acbce432.diff?full_index=1"
-    sha256 "db4f98547fb8e66c8c7d557387b352cece3d06c982bce361bda7f7c3806133d2"
+    url "https://github.com/bcpierce00/unison/commit/acbce432.patch?full_index=1"
+    sha256 "07e94b6a16b32f9aa46bb1b9a3592a70f37ecbd80bc5c4bd6b39736b5969f83f"
   end
 
   def install
