@@ -20,8 +20,8 @@ class Libfreefare < Formula
   # Upstream commit for endianness-related functions, fixes
   # https://github.com/nfc-tools/libfreefare/issues/55
   patch do
-    url "https://github.com/nfc-tools/libfreefare/commit/358df775.diff?full_index=1"
-    sha256 "54cace0b9f7be073ba96ba1ae04fba8882a5ce99100a7b707498b9d2bfb0a660"
+    url "https://github.com/nfc-tools/libfreefare/commit/358df775.patch?full_index=1"
+    sha256 "20d592c11e559d0a5f02f7ed56da370e39439feebd971be11b064d58ea85777f"
   end
 
   def install
