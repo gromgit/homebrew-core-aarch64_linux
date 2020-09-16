@@ -23,13 +23,13 @@ class BoostAT155 < Formula
   # https://github.com/Homebrew/homebrew/issues/27396
   # https://github.com/Homebrew/homebrew/pull/27436
   patch :p2 do
-    url "https://github.com/boostorg/atomic/commit/6bb71fdd.diff?full_index=1"
-    sha256 "1574ef5c1c3ec28cf3786e40e4a8608f2bbb1c426ef2f14a2515e7a1a9313fab"
+    url "https://github.com/boostorg/atomic/commit/6bb71fdd.patch?full_index=1"
+    sha256 "a0478ca4e0f7d14e648c69cba2912d61695737db1914011b610d7113b7a39ad4"
   end
 
   patch :p2 do
-    url "https://github.com/boostorg/atomic/commit/e4bde20f.diff?full_index=1"
-    sha256 "fa6676d83993c59e3566fff105f7e99c193a54ef7dba5c3b327ebdb5b6dcba37"
+    url "https://github.com/boostorg/atomic/commit/e4bde20f.patch?full_index=1"
+    sha256 "dd476a4ac5853a605add17b785ff0ab61f912736c052f5048147cbc4c592128b"
   end
 
   # Patch fixes upstream issue reported here (https://svn.boost.org/trac/boost/ticket/9698).
@@ -37,8 +37,8 @@ class BoostAT155 < Formula
   # See this issue (https://github.com/Homebrew/homebrew/issues/30592) for more details.
 
   patch :p2 do
-    url "https://github.com/boostorg/chrono/commit/143260d.diff?full_index=1"
-    sha256 "96ba2f3a028df323e9bdffb400cc7c30c0c67e3d681c8c5a867c40ae0549cb62"
+    url "https://github.com/boostorg/chrono/commit/143260d.patch?full_index=1"
+    sha256 "6c2a777c6d7df4608be0fd4c7495e2ee52abb392987d8eeea5bb99a248db50d2"
   end
 
   # Fix build on Xcode 11.4
