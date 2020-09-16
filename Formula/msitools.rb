@@ -30,13 +30,13 @@ class Msitools < Formula
   # https://gitlab.gnome.org/GNOME/msitools/commit/9bbcc6da06ccf6144258c26ddcaab3262538d3ce
   # Remove in next release.
   patch do
-    url "https://gitlab.gnome.org/GNOME/msitools/commit/248450a2f2a23df59428fa816865a26f7e2496e0.diff"
-    sha256 "5046316e61af8af32a2b7d4ed2579a88fe0618e56d0aca32fea2c8a64b747f06"
+    url "https://gitlab.gnome.org/GNOME/msitools/commit/248450a2f2a23df59428fa816865a26f7e2496e0.patch"
+    sha256 "32bf8c2995085c2751c3fe8cd67878ea28b2ee255f5d00ed3ea7c5fddea3d902"
   end
 
   patch do
-    url "https://gitlab.gnome.org/GNOME/msitools/commit/9bbcc6da06ccf6144258c26ddcaab3262538d3ce.diff"
-    sha256 "fadc1c5ade1afd8add5f5a4997a10098efa9f24a5788230a16af89965551c1c7"
+    url "https://gitlab.gnome.org/GNOME/msitools/commit/9bbcc6da06ccf6144258c26ddcaab3262538d3ce.patch"
+    sha256 "5178df1577a967e887a859fe1a6c791071712e3acfc6f898e1e83352b7336a9a"
   end
 
   def install
