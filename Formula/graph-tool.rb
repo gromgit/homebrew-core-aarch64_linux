@@ -3,9 +3,9 @@ class GraphTool < Formula
 
   desc "Efficient network analysis for Python 3"
   homepage "https://graph-tool.skewed.de/"
-  url "https://downloads.skewed.de/graph-tool/graph-tool-2.33.tar.bz2"
-  sha256 "f07025160a8cb376551508c6d8aa5fd05a146c67c4706ea4635d2766aa5c9fcb"
-  license "GPL-3.0"
+  url "https://downloads.skewed.de/graph-tool/graph-tool-2.35.tar.bz2"
+  sha256 "2395823c33d4d12cc8465782a640b99ec7bddf074a7a02e9c1eab4eb3f8ce9ba"
+  license "LGPL-3.0"
 
   livecheck do
     url "https://downloads.skewed.de/graph-tool/"
@@ -68,6 +68,11 @@ class GraphTool < Formula
   resource "six" do
     url "https://files.pythonhosted.org/packages/94/3e/edcf6fef41d89187df7e38e868b2dd2182677922b600e880baad7749c865/six-1.13.0.tar.gz"
     sha256 "30f610279e8b2578cab6db20741130331735c781b56053c59c4076da27f06b66"
+  end
+
+  resource "zstandard" do
+    url "https://files.pythonhosted.org/packages/1b/a7/97b157508923ec0c2d27cdc23003cb096fa50ae38ded6e54adcbca3dca35/zstandard-0.14.0.tar.gz"
+    sha256 "9052398da52e8702cf9929999c8986b0f68b18c793e309cd8dff5cb7863d7652"
   end
 
   def install
