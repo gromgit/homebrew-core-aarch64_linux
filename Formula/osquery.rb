@@ -62,8 +62,8 @@ class Osquery < Formula
   # Upstream fix for boost 1.69, remove in next version
   # https://github.com/facebook/osquery/pull/5496
   patch do
-    url "https://github.com/facebook/osquery/commit/130b3b3324e2.diff?full_index=1"
-    sha256 "46bce0c62f1a8f0df506855049991e6fceb6d1cc4e1113a2f657e76b5c5bdd14"
+    url "https://github.com/facebook/osquery/commit/130b3b3324e2.patch?full_index=1"
+    sha256 "b5bcb8a774423131be72dc7981227552f565a7102edb27b0644c1c904ff9949a"
   end
 
   # Patch for compatibility with OpenSSL 1.1
