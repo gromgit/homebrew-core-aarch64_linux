@@ -19,8 +19,8 @@ class TemporalTables < Formula
   # Fix for postgresql 11 compatibility:
   # https://github.com/arkhipov/temporal_tables/issues/38
   patch do
-    url "https://github.com/mlt/temporal_tables/commit/24906c44.diff?full_index=1"
-    sha256 "9c20bde0bafb9cbf0fee9a4922134069e403c728660f6b9c0d6ee3ae7e48cdfc"
+    url "https://github.com/mlt/temporal_tables/commit/24906c44.patch?full_index=1"
+    sha256 "bb2a8b507b6e6a42a25c8da694f889ee55f40b6ae621190348155b5e9198244d"
   end
 
   # Fix for postgresql 12 compatibility:
