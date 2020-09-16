@@ -18,12 +18,12 @@ class Ocp < Formula
   # Fix duplicate symbol errors, remove in next release
   # https://github.com/mywave82/opencubicplayer/issues/15
   patch do
-    url "https://github.com/mywave82/opencubicplayer/commit/04368dc54e649050517fe3a058e919fb5fb5f150.diff?full_index=1"
-    sha256 "baf237701358a45c79fd9e31fec5ecf3c8087597b30e9846023ef2e76006bb58"
+    url "https://github.com/mywave82/opencubicplayer/commit/04368dc54e649050517fe3a058e919fb5fb5f150.patch?full_index=1"
+    sha256 "27ba15871499ffcc540a59fcb2435945ab842af74265d1032a1bf0831c5cbe2b"
   end
   patch do
-    url "https://github.com/mywave82/opencubicplayer/commit/1907b8f85e3e5fa61a02ad0ca3ce9bd30bfc0ea6.diff?full_index=1"
-    sha256 "fc82d4d7f630885097efa2223bba4c941456f2d70e625b6721ca2e825fad2d43"
+    url "https://github.com/mywave82/opencubicplayer/commit/1907b8f85e3e5fa61a02ad0ca3ce9bd30bfc0ea6.patch?full_index=1"
+    sha256 "3260bcfbd27e4aa64081674081e9f06963b705b3f89ba8aabaa8f54bb995986f"
   end
 
   def install
