@@ -24,8 +24,8 @@ class Pev < Formula
   # Upstream fix for compatibility with OpenSSL 1.1
   # https://github.com/merces/pev/pull/104
   patch do
-    url "https://github.com/merces/pev/commit/53eb494b.diff?full_index=1"
-    sha256 "66eeadd149716597dfa4ecb6dc9c021cb6ab910aa4002b7730c822dd5c8ea654"
+    url "https://github.com/merces/pev/commit/53eb494b.patch?full_index=1"
+    sha256 "851a7db93c75766bfcf0da4fe5485dc1965672be9bc9a992fe57b52c93958a31"
   end
 
   def install
