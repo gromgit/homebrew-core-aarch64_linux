@@ -11,8 +11,8 @@ class Uwsgi < Formula
     # Fix "library not found for -lgcc_s.10.5" with 10.14 SDK
     # Remove in next release
     patch do
-      url "https://github.com/unbit/uwsgi/commit/6b1b397f.diff?full_index=1"
-      sha256 "b2c3a22f980a4e3bd2ab2fe5c5356d8a91e567a3ab3e6ccbeeeb2ba4efe4568a"
+      url "https://github.com/unbit/uwsgi/commit/6b1b397f.patch?full_index=1"
+      sha256 "85725f31ea0f914e89e3abceffafc64038ee5e44e979ae85eb8d58c80de53897"
     end
   end
 
