@@ -23,8 +23,8 @@ class Valabind < Formula
 
   # Vala 0.48 compatibility
   patch do
-    url "https://github.com/radare/valabind/commit/9d4fb181e24346a8c5d570290fa9892ce10c8c3b.diff?full_index=1"
-    sha256 "db3f6afc2e4ff968d887c1f86ed8a666e2a2f8210e37a18297372265f24cd767"
+    url "https://github.com/radare/valabind/commit/9d4fb181e24346a8c5d570290fa9892ce10c8c3b.patch?full_index=1"
+    sha256 "817e68b784728102e7f182819e750af9a8d4338ded0517e426604a3561949c9a"
   end
 
   def install
