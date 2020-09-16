@@ -8,6 +8,12 @@ class GstDevtools < Formula
   license "LGPL-2.1-or-later"
   head "https://anongit.freedesktop.org/git/gstreamer/gst-devtools.git"
 
+  bottle do
+    sha256 "f9f4c3b56900451560a484f7f08f566bb34c17b1bf63c32d8653851e7afe0f4c" => :catalina
+    sha256 "b38054091a5c0156951daa97288e4b6728b768774e6e479111cc3d75373f0fa8" => :mojave
+    sha256 "0c0d08f61c6c4a5589146edbdcb702831d7942c0a37b6bf64b22a30bab950828" => :high_sierra
+  end
+
   depends_on "gobject-introspection" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
