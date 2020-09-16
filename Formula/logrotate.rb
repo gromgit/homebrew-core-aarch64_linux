@@ -16,8 +16,8 @@ class Logrotate < Formula
 
   # https://github.com/logrotate/logrotate/pull/344
   patch do
-    url "https://github.com/logrotate/logrotate/commit/5aee3d4d73bbdca7531bf641a78bcb5ec58d93ea.diff?full_index=1"
-    sha256 "1fd0057b7b97cd5070a5bacacdfd5c2bc4f68c86dcd438b6efd76cdbab86710c"
+    url "https://github.com/logrotate/logrotate/commit/5aee3d4d73bbdca7531bf641a78bcb5ec58d93ea.patch?full_index=1"
+    sha256 "c0446056737c94e353893f9c6cba547b13cc34190df459c27b1a60654327759f"
   end
 
   def install
