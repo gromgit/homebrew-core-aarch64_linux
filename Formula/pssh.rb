@@ -26,8 +26,8 @@ class Pssh < Formula
   # Fix for Python 3 compatibility
   # https://bugs.archlinux.org/task/46571
   patch do
-    url "https://github.com/nplanel/parallel-ssh/commit/ee379dc5.diff?full_index=1"
-    sha256 "467df6024d180ea41a7e453b2d4485ef2be2a911410d8845df1b9e6b6dc301ae"
+    url "https://github.com/nplanel/parallel-ssh/commit/ee379dc5.patch?full_index=1"
+    sha256 "79c133072396e5d3d370ec254b7f7ed52abe1d09b5d398880f0e1cfaf988defa"
   end
 
   def install
