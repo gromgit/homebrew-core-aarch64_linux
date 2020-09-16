@@ -11,8 +11,8 @@ class Ponysay < Formula
 
     # upstream commit 16 Nov 2019, `fix: do not compare literal with "is not"`
     patch do
-      url "https://github.com/erkin/ponysay/commit/69c23e3a.diff?full_index=1"
-      sha256 "4343703851dee3ea09f153f57c4dbd1731e5eeab582d3316fbbf938f36100542"
+      url "https://github.com/erkin/ponysay/commit/69c23e3a.patch?full_index=1"
+      sha256 "2c58d5785186d1f891474258ee87450a88f799408e3039a1dc4a62784de91b63"
     end
   end
 
