@@ -11,8 +11,8 @@ class Mlt < Formula
 
     # fix compilaton with opencv4
     patch do
-      url "https://github.com/mltframework/mlt/commit/08ed33a9551a0e4c0685e13da3b98bf37e08ecad.diff?full_index=1"
-      sha256 "837adafbf67bc5c916f76512c989bcbc2ff1646bf7d1311d614e8e5728ad76c7"
+      url "https://github.com/mltframework/mlt/commit/08ed33a9551a0e4c0685e13da3b98bf37e08ecad.patch?full_index=1"
+      sha256 "86aa10881ce223f67e93ae7c051287744c01416bbc0cedf75224262b33a2175d"
     end
   end
 
