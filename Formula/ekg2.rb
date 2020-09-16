@@ -32,8 +32,8 @@ class Ekg2 < Formula
 
   # Upstream commit, fix build against OpenSSL 1.1
   patch do
-    url "https://github.com/ekg2/ekg2/commit/f05815.diff?full_index=1"
-    sha256 "5a27388497fd4537833807a0ba064af17fa13d7dd55abec6b185f499d148de1a"
+    url "https://github.com/ekg2/ekg2/commit/f05815.patch?full_index=1"
+    sha256 "207639edc5e6576c8a67301c63f0b28814d9885f0d4fca5d9d9fc465f4427cd7"
   end
 
   def install
