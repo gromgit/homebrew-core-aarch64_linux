@@ -17,8 +17,8 @@ class Libdrawtext < Formula
   depends_on "freetype"
 
   patch do
-    url "https://github.com/jtsiomb/libdrawtext/commit/543cfc67beb76e2c25df0a329b5d38eff9d36c71.diff?full_index=1"
-    sha256 "a2d7ad77e7f1a4590ca85754de2f9961c921c34723f6c86cdd23395cc3566be0"
+    url "https://github.com/jtsiomb/libdrawtext/commit/543cfc67beb76e2c25df0a329b5d38eff9d36c71.patch?full_index=1"
+    sha256 "dd6a78d2c982215b91fcb6fba9d00311b09a8eea26564f7710daabc744c3be09"
   end
 
   def install
