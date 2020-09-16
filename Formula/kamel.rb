@@ -3,8 +3,8 @@ class Kamel < Formula
   homepage "https://camel.apache.org/"
 
   url "https://github.com/apache/camel-k.git",
-    tag:      "v1.1.0",
-    revision: "29d581a49eacb4d191ff665a559fdd569c6deef7"
+    tag:      "v1.1.1",
+    revision: "b7b785db55faf33a95e4c3c337e248192510ce85"
   license "Apache-2.0"
   head "https://github.com/apache/camel-k.git"
 
