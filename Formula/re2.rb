@@ -5,6 +5,7 @@ class Re2 < Formula
   version "20200801"
   sha256 "6f4c8514249cd65b9e85d3e6f4c35595809a63ad71c5d93083e4d1dcdf9e0cd6"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/google/re2.git"
 
   bottle do
@@ -14,10 +15,18 @@ class Re2 < Formula
     sha256 "018ee2711b2c739074221a3248a812b23fbe97be5222b618fc254ce658242fdd" => :high_sierra
   end
 
+  depends_on "cmake" => :build
+
   def install
     ENV.cxx11
 
-    system "make", "install", "prefix=#{prefix}"
+    # Run this for pkg-config files
+    system "make", "common-install", "prefix=#{prefix}"
+
+    # Run this for the rest of the install
+    system "cmake", ".", "-DBUILD_SHARED_LIBS=ON", "-DRE2_BUILD_TESTING=OFF", *std_cmake_args
+    system "make"
+    system "make", "install"
   end
 
   test do
