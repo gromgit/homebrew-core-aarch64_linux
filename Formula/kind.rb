@@ -8,9 +8,10 @@ class Kind < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "ae4b118e9c55007ee38e99a1a37f9b3693475a0c25e90670e63773b9304f44d2" => :catalina
-    sha256 "e32358095a62316019b620ffaa49bd94c1d78a6257ea6afa3e665ffb3fb6dc2c" => :mojave
-    sha256 "76c237b09ab616c4a1b30d5a3cb4a6a170a35b79863d704b86909f4044041c04" => :high_sierra
+    rebuild 1
+    sha256 "e5ba99b5f14711e0dcb121a992d74c5ee6c6b0468b27e5200bf796d4987e13c0" => :catalina
+    sha256 "d52a780ad6af93a2a7c480a41c5178a461b9966ddc1adb66adde8ff3bce15238" => :mojave
+    sha256 "423ea750ae8589d1a199847f746d8e9b5b1f1d81ceff3a9dab2d63f161532588" => :high_sierra
   end
 
   depends_on "go" => :build
