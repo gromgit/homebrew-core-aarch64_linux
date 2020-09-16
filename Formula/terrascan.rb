@@ -8,9 +8,9 @@ class Terrascan < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "251437fab5c965b052488e3e938a5801aed88099c7624e47b98aa238b2d90a29" => :catalina
-    sha256 "070e5251c01b77974afb44fa01f55aa4a7cb14063bead5885456327bd86d07a9" => :mojave
-    sha256 "1c26c19e0b247860b55b1998b1ecb8d0009190eadc45031fa943604a03ef63ed" => :high_sierra
+    sha256 "58d110ee51c8c910cf09561aec034fd7bd8c149159fb91b9da9fc93506c0fc2c" => :catalina
+    sha256 "88665e1348a8d54a64fb902718f055727d744127707eb0bda18ce699202e4206" => :mojave
+    sha256 "2d94a5b1142130bd73c3b38e1989c0b5401f248d3876cf44fa86f20045adc27a" => :high_sierra
   end
 
   depends_on "go" => :build
