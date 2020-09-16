@@ -24,8 +24,8 @@ class Urdfdom < Formula
 
   patch do
     # Fix for finding console_bridge 1.0
-    url "https://github.com/ros/urdfdom/commit/6faba176d41cf39114785a3e029013f941ed5a0e.diff?full_index=1"
-    sha256 "f914442c1a3197cd8ac926fd2f7ef1a61f81f54b701515b87f7ced7a59078eb4"
+    url "https://github.com/ros/urdfdom/commit/6faba176d41cf39114785a3e029013f941ed5a0e.patch?full_index=1"
+    sha256 "7aa3fdd462b47326bac6f8f94187be18459dcbad568cefb239625103d7b31239"
   end
 
   def install
