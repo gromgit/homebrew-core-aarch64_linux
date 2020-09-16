@@ -3,8 +3,8 @@ class Dvc < Formula
 
   desc "Git for data science projects"
   homepage "https://dvc.org"
-  url "https://github.com/iterative/dvc/archive/1.7.0.tar.gz"
-  sha256 "e5b2205187c1875ce500eeb6f880d5fe1c90745242bf51dc2fbb08c87d5f4ac1"
+  url "https://github.com/iterative/dvc/archive/1.7.2.tar.gz"
+  sha256 "d6a4c14917ce343d9f1086da5389238947adb9b099fb48955902d87b1aeade75"
   license "Apache-2.0"
 
   livecheck do
@@ -79,9 +79,9 @@ class Dvc < Formula
     sha256 "bea06b5f4ff620a28dfc9848cf4d6b2bfeed34238edeb8ebe815c433b54eb1fa"
   end
 
-  resource "flatten-json" do
-    url "https://files.pythonhosted.org/packages/49/e1/02d1f28a0276c0018c5dbe09929b12953c7c6a6d6b887686492ce53278a1/flatten_json-0.1.7.tar.gz"
-    sha256 "06341ba64baf2fd9b960b4cacf3d3bab38e1e09a855d9902e79cfd2fe66fa29c"
+  resource "flatten-dict" do
+    url "https://files.pythonhosted.org/packages/7b/1c/52ee230b2008fd552e1b130d2696e98559ce9e2087fb49394bf71d23df3b/flatten-dict-0.3.0.tar.gz"
+    sha256 "0ccc43f15c7c84c5ef387ad19254f6769a32d170313a1bcbf4ce582089313d7e"
   end
 
   resource "flufl.lock" do
@@ -105,8 +105,8 @@ class Dvc < Formula
   end
 
   resource "GitPython" do
-    url "https://files.pythonhosted.org/packages/53/ea/fc34cddaa30bfc5e283f13e754fb3e2648ccd9f7019eaa3518fb5350ae51/GitPython-3.1.7.tar.gz"
-    sha256 "2db287d71a284e22e5c2846042d0602465c7434d910406990d5b74df4afb0858"
+    url "https://files.pythonhosted.org/packages/63/c7/639d7965f5c860ba0fec323fd3b80ba57f7c3eb90e58ca5b4ea467e50ba9/GitPython-3.1.8.tar.gz"
+    sha256 "080bf8e2cf1a2b907634761c2eaefbe83b69930c94c66ad11b65a8252959f912"
   end
 
   resource "grandalf" do
@@ -120,8 +120,8 @@ class Dvc < Formula
   end
 
   resource "jsonpath-ng" do
-    url "https://files.pythonhosted.org/packages/85/24/981fa76e1e415bcceb3a9741d5be04b32c10edd42d88f6783faa750b1239/jsonpath-ng-1.5.1.tar.gz"
-    sha256 "77b1f93f4444a50c924cb11cdc273546ff79f41830d485916fc6ddf4e0c1ce55"
+    url "https://files.pythonhosted.org/packages/c5/d0/c4b2fa7e00e69670a92b103761b4e10a4bdaca109818d44753219c20b7be/jsonpath-ng-1.5.2.tar.gz"
+    sha256 "144d91379be14d9019f51973bd647719c877bfc07dc6f3f5068895765950c69d"
   end
 
   resource "nanotime" do
@@ -137,6 +137,11 @@ class Dvc < Formula
   resource "packaging" do
     url "https://files.pythonhosted.org/packages/55/fd/fc1aca9cf51ed2f2c11748fa797370027babd82f87829c7a8e6dbe720145/packaging-20.4.tar.gz"
     sha256 "4357f74f47b9c12db93624a82154e9b120fa8293699949152b22065d556079f8"
+  end
+
+  resource "pathlib2" do
+    url "https://files.pythonhosted.org/packages/94/d8/65c86584e7e97ef824a1845c72bbe95d79f5b306364fa778a3c3e401b309/pathlib2-2.3.5.tar.gz"
+    sha256 "6cd9a47b597b37cc57de1c05e56fb1a1c9cc9fab04fe78c29acd090418529868"
   end
 
   resource "pathspec" do
@@ -160,8 +165,8 @@ class Dvc < Formula
   end
 
   resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/6e/4d/4d2fe93a35dfba417311a4ff627489a947b01dc0cc377a3673c00cf7e4b2/Pygments-2.6.1.tar.gz"
-    sha256 "647344a061c249a3b74e230c739f434d7ea4d8b1d5f3721bc0f3558049b38f44"
+    url "https://files.pythonhosted.org/packages/5d/9d/208733ccc91b1d2c2af7270ffe3def197504bd8da875bc3fa1dc75039795/Pygments-2.7.0.tar.gz"
+    sha256 "2594e8fdb06fef91552f86f4fd3a244d148ab24b66042036e64f29a291515048"
   end
 
   resource "pygtrie" do
@@ -180,18 +185,18 @@ class Dvc < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/e8/a1/eb2c0fdc7e223dacd7441495c4e12d616bbbecebd403efc96b7208269159/rich-6.0.0.tar.gz"
-    sha256 "53c683a79e3f949d675b1d04e6fe3ccd53fad97aa7e2f6a83f2985502663f420"
+    url "https://files.pythonhosted.org/packages/5a/6b/2b9f7d787b67e740dcb4a8f62f4879d05f408bc5eac8145e909680ce8024/rich-6.2.0.tar.gz"
+    sha256 "f99c877277906e1ff83b135c564920590ba31188f424dcdb5d1cae652a519b4b"
   end
 
   resource "ruamel.yaml" do
-    url "https://files.pythonhosted.org/packages/16/8b/54a26c1031595e5edd0e616028b922d78d8ffba8bc775f0a4faeada846cc/ruamel.yaml-0.16.10.tar.gz"
-    sha256 "099c644a778bf72ffa00524f78dd0b6476bca94a1da344130f4bf3381ce5b954"
+    url "https://files.pythonhosted.org/packages/17/2f/f38332bf6ba751d1c8124ea70681d2b2326d69126d9058fbd9b4c434d268/ruamel.yaml-0.16.12.tar.gz"
+    sha256 "076cc0bc34f1966d920a49f18b52b6ad559fbe656a0748e3535cf7b3f29ebf9e"
   end
 
   resource "ruamel.yaml.clib" do
-    url "https://files.pythonhosted.org/packages/92/28/612085de3fae9f82d62d80255d9f4cf05b1b341db1e180adcf28c1bf748d/ruamel.yaml.clib-0.2.0.tar.gz"
-    sha256 "b66832ea8077d9b3f6e311c4a53d06273db5dc2db6e8a908550f3c14d67e718c"
+    url "https://files.pythonhosted.org/packages/fa/a1/f9c009a633fce3609e314294c7963abe64934d972abea257dce16a15666f/ruamel.yaml.clib-0.2.2.tar.gz"
+    sha256 "2d24bd98af676f4990c4d715bcdc2a60b19c56a3fb3a763164d2d8ca0e806ba7"
   end
 
   resource "shortuuid" do
@@ -225,8 +230,8 @@ class Dvc < Formula
   end
 
   resource "tqdm" do
-    url "https://files.pythonhosted.org/packages/7c/a2/4cc95d7766a5d17ea2541d88da357d5905f75b6dbdfd17dfffd6c37647ae/tqdm-4.48.2.tar.gz"
-    sha256 "564d632ea2b9cb52979f7956e093e831c28d441c11751682f84c86fc46e4fd21"
+    url "https://files.pythonhosted.org/packages/bc/03/2bc607a15e201058cb6b19784b9c217d7ff37a686ce4a2d8a37a638f3ba5/tqdm-4.49.0.tar.gz"
+    sha256 "faf9c671bd3fad5ebaeee366949d969dca2b2be32c872a7092a1e1a9048d105b"
   end
 
   resource "typing-extensions" do
