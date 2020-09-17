@@ -4,7 +4,7 @@ class Colordiff < Formula
   url "https://www.colordiff.org/colordiff-1.0.19.tar.gz"
   mirror "https://dl.bintray.com/homebrew/mirror/colordiff-1.0.19.tar.gz"
   sha256 "46e8c14d87f6c4b77a273cdd97020fda88d5b2be42cf015d5d84aca3dfff3b19"
-  license "GPL-2.0"
+  license "GPL-2.0-or-later"
 
   livecheck do
     url :homepage
@@ -19,8 +19,6 @@ class Colordiff < Formula
   end
 
   depends_on "coreutils" => :build # GNU install
-
-  conflicts_with "cdiff", because: "both install `cdiff` binaries"
 
   def install
     man1.mkpath
