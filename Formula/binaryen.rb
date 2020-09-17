@@ -1,8 +1,8 @@
 class Binaryen < Formula
   desc "Compiler infrastructure and toolchain library for WebAssembly"
   homepage "https://webassembly.org/"
-  url "https://github.com/WebAssembly/binaryen/archive/version_96.tar.gz"
-  sha256 "fe140191607c76f02bd0f1cc641715cefcb48e723409418c2a39a50905a4514c"
+  url "https://github.com/WebAssembly/binaryen/archive/version_97.tar.gz"
+  sha256 "a1bb8a62851706892faabd4f2aa3c6f7f00462512abd1a6923c746e51290b265"
   license "Apache-2.0"
   head "https://github.com/WebAssembly/binaryen.git"
 
@@ -27,7 +27,6 @@ class Binaryen < Formula
   end
 
   test do
-    system "#{bin}/wasm-opt", "#{pkgshare}/test/passes/O.wast"
-    system "#{bin}/asm2wasm", "#{pkgshare}/test/hello_world.asm.js"
+    system "#{bin}/wasm-opt", "-O", "#{pkgshare}/test/passes/O.wast", "-o", "1.wast"
   end
 end
