@@ -1,10 +1,9 @@
 class Dasm < Formula
   desc "Macro assembler with support for several 8-bit microprocessors"
   homepage "https://dasm-assembler.github.io/"
-  url "https://github.com/dasm-assembler/dasm/archive/2.20.13.tar.gz"
-  sha256 "48be84858d578dd7e1ac702fb2dca713a2e0be930137cbb3d6ecbeac1944ff5c"
+  url "https://github.com/dasm-assembler/dasm/archive/2.20.14.tar.gz"
+  sha256 "c66538ad8c413a4ea88525246ed9fef2bf9c9d2e36593acdf651e06635ad7497"
   license "GPL-2.0"
-  revision 1
   version_scheme 1
 
   bottle do
@@ -16,7 +15,7 @@ class Dasm < Formula
 
   def install
     system "make"
-    prefix.install "bin", "doc", "machines"
+    prefix.install "bin", "docs", "machines"
   end
 
   test do
