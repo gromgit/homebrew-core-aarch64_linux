@@ -11,9 +11,9 @@ class GsettingsDesktopSchemas < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "ca79e0409fb9d658c9ab2f9e3ecde89e10ef305121b9fa71c909cf3cb098a82a" => :catalina
-    sha256 "ca79e0409fb9d658c9ab2f9e3ecde89e10ef305121b9fa71c909cf3cb098a82a" => :mojave
-    sha256 "ca79e0409fb9d658c9ab2f9e3ecde89e10ef305121b9fa71c909cf3cb098a82a" => :high_sierra
+    sha256 "0bcc0f743e141beb151ad2b400c40a4d30e317d1080437e359095fb53da3c8e4" => :catalina
+    sha256 "dd69129d87fd0b0c435b29b19e2ac9cea2d1a72d557aed9b3db1202afb49578d" => :mojave
+    sha256 "63a1370fe1e1e58eabb9e608cb992a8391e2ba11c0940899d4c37c3c43088ff2" => :high_sierra
   end
 
   depends_on "gobject-introspection" => :build
