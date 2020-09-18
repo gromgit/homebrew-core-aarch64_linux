@@ -1,8 +1,8 @@
 class Varnish < Formula
   desc "High-performance HTTP accelerator"
   homepage "https://www.varnish-cache.org/"
-  url "https://varnish-cache.org/_downloads/varnish-6.4.0.tgz"
-  sha256 "f636ba2d881b146f480fb52efefae468b36c2c3e6620d07460f9ccbe364a76c2"
+  url "https://varnish-cache.org/_downloads/varnish-6.5.0.tgz"
+  sha256 "00814949f28701e164d8f246a4e37431594136c6bfcb02f64c58d77ab44861d9"
 
   livecheck do
     url "https://varnish-cache.org/releases/"
