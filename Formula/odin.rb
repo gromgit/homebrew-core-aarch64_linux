@@ -1,5 +1,5 @@
 class Odin < Formula
-  desc "The Odin Programming Language"
+  desc "Programming language with focus on simplicity, performance and modern systems"
   homepage "https://odin-lang.org/"
   url "https://github.com/odin-lang/Odin/archive/v0.13.0.tar.gz"
   sha256 "ae88c4dcbb8fdf37f51abc701d94fb4b2a8270f65be71063e0f85a321d54cdf0"
