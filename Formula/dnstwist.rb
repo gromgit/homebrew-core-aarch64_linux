@@ -9,9 +9,9 @@ class Dnstwist < Formula
 
   bottle do
     cellar :any
-    sha256 "bc12a0d72921370961acd9802a547d8b4c940462cc8f8745e35027e7a747297c" => :catalina
-    sha256 "14674817c598ec74cfdb5892e196c908853e8e2325e437add16dcba08dd439eb" => :mojave
-    sha256 "3074ad20059b21245482ef0960ecb65385f3e834add362d077bc4bb0b6ca738a" => :high_sierra
+    sha256 "d5ba8b2e42b761a4af39c4d63aa4a4a1a153033b0acb5a65d07ee8077dc4eb55" => :catalina
+    sha256 "fc276874616698a4e87f0202079fc505ad129b8a863abb0332681781f9345f65" => :mojave
+    sha256 "3a27a877969b256f6bbf1a8805a93672347f46cabaa5baab312aa4971007beca" => :high_sierra
   end
 
   depends_on "geoip"
