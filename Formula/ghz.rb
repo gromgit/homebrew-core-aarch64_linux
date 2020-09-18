@@ -7,9 +7,9 @@ class Ghz < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "3fa715dc67889126add290e9d201486732f34721a57af5f695822ac3e3fa53db" => :catalina
-    sha256 "c37c86755c10416fdae46fb7bbe2dc94af1aeeb091f99a0a2b093bb677fac87a" => :mojave
-    sha256 "48cee2048b7787f72a1c3033c006f9c78600c075250b4620d6dcc9cefc9aae75" => :high_sierra
+    sha256 "c2350053e23ee501a2421db8b2c1904019a80c2cbd2cbb9e10de49688bffa854" => :catalina
+    sha256 "cdb414a2c766efcab809dc7c5b29b0258b525d69131e8d33f6ec94760bbb9597" => :mojave
+    sha256 "67a082a5ff9d5160588cc6347d92d2caeedb79afe1847d7e4645d15e36315b4f" => :high_sierra
   end
 
   depends_on "go" => :build
