@@ -1,5 +1,5 @@
 class Polynote < Formula
-  desc "The polyglot notebook with first-class Scala support"
+  desc "Polyglot notebook with first-class Scala support"
   homepage "https://polynote.org/"
   url "https://github.com/polynote/polynote/releases/download/0.3.12/polynote-dist.tar.gz"
   sha256 "09e75030fc168f715351ed6afd88b56fab00ea6611861b9143a40569c71e2cb2"
