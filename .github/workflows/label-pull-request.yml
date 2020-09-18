@@ -23,7 +23,7 @@ jobs:
                 }, {
                     "label": "bottle unneeded",
                     "path": "Formula/.+",
-                    "content": "\n  bottle :unneeded\n"
+                    "content": "\n  (bottle :unneeded|depends_on :linux)\n"
                 }, {
                     "label": "formula deprecated",
                     "path": "Formula/.+",
