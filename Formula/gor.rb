@@ -9,9 +9,9 @@ class Gor < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "a36b70bcd45188693395cea5faec7fbc59641f2aac7918e16042560064d28ad0" => :catalina
-    sha256 "ad78a27ea91f8731573e633bcb3490a62fb8d1330292544da37876fb8d8805a5" => :mojave
-    sha256 "b8c6106bc0ef1b1defc163d9e3e477a8d0462ab65b9b3f409a8a79debf96ba85" => :high_sierra
+    sha256 "0a2c7715c47fa3fb9ba70494b1bf20a4216cabb09d909702f86d810a07c58f17" => :catalina
+    sha256 "347fab444ceaee3d2dae0f23cedcd924267bbbba95a099ad5602ba3051fd5c1f" => :mojave
+    sha256 "0e07f5bf90d57b9bd1b0ccb961e6ee240fd8346a923c45d075b66cd7c4714a63" => :high_sierra
   end
 
   depends_on "go" => :build
