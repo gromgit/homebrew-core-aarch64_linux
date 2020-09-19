@@ -1,8 +1,8 @@
 class Flank < Formula
   desc "Massively parallel Android and iOS test runner for Firebase Test Lab"
   homepage "https://github.com/Flank/flank"
-  url "https://github.com/Flank/flank/releases/download/v20.08.3/flank.jar"
-  sha256 "38ba01915c4d6b4ce0969f5324c7a94b8c06a12a5bcf45427a28dd40f8fdc63d"
+  url "https://github.com/Flank/flank/releases/download/v20.08.4/flank.jar"
+  sha256 "fb3f1ee359d0bd9360c114eff9f40cb9eb59b9f6762525ca0edda18bb10512af"
   license "Apache-2.0"
 
   bottle :unneeded
@@ -19,7 +19,7 @@ class Flank < Formula
       gcloud:
         device:
         - model: Pixel2
-          version: 29
+          version: "29"
           locale: en
           orientation: portrait
     EOS
