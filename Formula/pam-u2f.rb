@@ -13,9 +13,9 @@ class PamU2f < Formula
 
   bottle do
     cellar :any
-    sha256 "879e5ac58f8b3dbf4eed7fb075cee4683fae3e9a121000539eb810146c87f0d6" => :catalina
-    sha256 "7967b151cd1ca9c32c61515c0921ec1bc265ae3a5f6a9681c342872974c139b7" => :mojave
-    sha256 "82c61c7cc3d348e81b3669e3d3c1832ac7b97e34840a46f28a213c9052ad1df5" => :high_sierra
+    sha256 "5232a721233849c26ea3233f9328eec1df3de4fc3a3c144c2ae1698e815ab702" => :catalina
+    sha256 "d17890b3639487004b5ca0b9596fb1ce73b4638ecff1595f5b6c5283eb8034b8" => :mojave
+    sha256 "1a7fabe83bb36b06b7d1c95d9b22149d572f71be648b0482617225cc08917a17" => :high_sierra
   end
 
   depends_on "asciidoc" => :build
