@@ -10,9 +10,9 @@ class X8664ElfBinutils < Formula
   end
 
   bottle do
-    sha256 "4aa6103fb091ca890f96fc4bd32ede47ea00180190ce7af74c3ef6d2a33efd01" => :catalina
-    sha256 "3fbbd0397080012c98d274499dcaf3ca6c510f9d18adc9040d725ec82c7ab31c" => :mojave
-    sha256 "000600460decf639019762f1eafaf6c353b6974b2bca17a42786361014aff54e" => :high_sierra
+    sha256 "8ca33c467a19a068f0e92c75d00f87115283072d5054672449d9abd2fa96036e" => :catalina
+    sha256 "59d35da02f1387ae5fd0b0c13f1647a0ae7b88dcff3e662bb3eaa502990937c4" => :mojave
+    sha256 "df62f4e6bf30c75023ebad89244e0a71d86f03966ba46892a5c1046332af2a73" => :high_sierra
   end
 
   def install
