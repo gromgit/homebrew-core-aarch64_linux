@@ -17,9 +17,9 @@ class Vault < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "1c4977affbeb09fc0c348ffc733f9bdbeeb9ae5825d5a9de77df8b00406c249d" => :catalina
-    sha256 "caab1a40567ae9a98d8b701ad658a0a491b5910390f8b498073d6669c7006251" => :mojave
-    sha256 "2d2182737f0e209b1725dfe00cd217b2c5a0f8cbe76c33747f15e2986ff0fdee" => :high_sierra
+    sha256 "affea01b3389fc048c781ea480d174fa4acbdd23c22fbd3878100e2a24b36888" => :catalina
+    sha256 "8052773216f68af034f4dddd8a75358115c31696aac68a737145dd782e465563" => :mojave
+    sha256 "bc7d8fcc458b3242738c91228f3b42ce52dd7a08bdefff14a3ea21c147b65983" => :high_sierra
   end
 
   depends_on "go" => :build
