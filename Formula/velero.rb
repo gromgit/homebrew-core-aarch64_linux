@@ -7,9 +7,9 @@ class Velero < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "dd5801fb7890ea9486c9ce5c6c1bdb1b84fd2a77302727e85f6564071de7e076" => :catalina
-    sha256 "ee3ebd2a57bf6c857f3cf503ada044575aa255ca4b545c2eb23433994f9d3f65" => :mojave
-    sha256 "4e626cf800b85e124a402ce35ce67042587dcf420a318c6b470811289286a795" => :high_sierra
+    sha256 "6f776808bb0cb0f4e05644ac7ed8818c30d6ce37136fa88ccca223fa7c2db5ad" => :catalina
+    sha256 "0d49268aceef9cd0db1f3f6e5f8362175b6d7ac4fb57f8cd7fee2ad4d0b056b2" => :mojave
+    sha256 "7dfbd8334fcd79e17ebba1c471ce1c7b5aab73428783782e86b382f9c1f4efaa" => :high_sierra
   end
 
   depends_on "go" => :build
