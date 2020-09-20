@@ -3,6 +3,7 @@ class Libsoxr < Formula
   homepage "https://sourceforge.net/projects/soxr/"
   url "https://downloads.sourceforge.net/project/soxr/soxr-0.1.3-Source.tar.xz"
   sha256 "b111c15fdc8c029989330ff559184198c161100a59312f5dc19ddeb9b5a15889"
+  license "LGPL-2.1-or-later"
 
   livecheck do
     url :stable
@@ -47,7 +48,7 @@ class Libsoxr < Formula
         return 0;
       }
     EOS
-    system ENV.cc, "-L#{lib}", "-lsoxr", "test.c", "-o", "test"
+    system ENV.cc, "-L#{lib}", "test.c", "-lsoxr", "-o", "test"
     system "./test"
   end
 end
