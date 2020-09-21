@@ -5,6 +5,13 @@ class Rustscan < Formula
   sha256 "9923b91310be342f5fcec42796662b53f4d0b05ec5339c44b801959ebfe824dc"
   license "GPL-3.0-or-later"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "3f6072b555545a3efe33cc84aec3ba11c8110b038fe51cd1ec95be921e44fe16" => :catalina
+    sha256 "29b494ff1b888b9cd2e94a61168236ccab5a2030a923efc490706301dcfe7bef" => :mojave
+    sha256 "03b01fce247218e8dd5e60565199c61e4d458ab0d66f9952a2bbf158d04c9f0f" => :high_sierra
+  end
+
   depends_on "rust" => :build
   depends_on "nmap"
 
