@@ -11,9 +11,9 @@ class Ghostscript < Formula
   end
 
   bottle do
-    sha256 "8cd0efa1e5525f849be3ee1e50e1635b99667cb4d1eb6c3002a45378346882f4" => :catalina
-    sha256 "8906a4dbf2513963a4710f351e3426622c259bd888c760e4c08a9436860b4014" => :mojave
-    sha256 "cd5e55d0429d7e88ba2d580e79934c157d5bd2981d71a7f40db4573abe79af67" => :high_sierra
+    sha256 "c3945ee2723abad99b56f3ecc6aa8972384d8fb05bac1fb15c7a57b540a36f22" => :catalina
+    sha256 "8fecbb1ce9e3eae04147f05ea6c0105555e563566eab47167ca11c34a64458d2" => :mojave
+    sha256 "670ce3aada1fdb8b2670aeebc99dec0b0150843f4d2ab85aececc1772962a3fe" => :high_sierra
   end
 
   head do
