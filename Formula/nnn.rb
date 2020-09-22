@@ -8,9 +8,10 @@ class Nnn < Formula
 
   bottle do
     cellar :any
-    sha256 "db823ba37ee3cf5c16a06d5dcf84307ec7b0dc2dc7c83d9ee9cdd87755c06856" => :catalina
-    sha256 "cc21b0159efe6087265de581033cb6737ceee1613c2857c613408b3da6ff1aa6" => :mojave
-    sha256 "5ec7be04b6cce16cf8b14bd365fce2628e6438e09233cd62311c34227631f2cd" => :high_sierra
+    rebuild 1
+    sha256 "44109c19d7e9c4108538ed3fc5a75c3ae176cdecaf64d19d194ccf4802aa6354" => :catalina
+    sha256 "a8dd428c9cbdea23be4b13493edfe09583814adbdee2d49627812268481af7df" => :mojave
+    sha256 "e0d170451efa4edb22b8899577ee1bd0fb2f5cac90218fcc021f20514ef52ece" => :high_sierra
   end
 
   depends_on "gnu-sed"
