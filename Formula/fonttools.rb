@@ -10,9 +10,9 @@ class Fonttools < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f24a468a043db8f42265a1ec1c0639370b7168942b6f8a315f63fec3183bbc71" => :catalina
-    sha256 "35a40f39c9b448ec0643435ad4efe679647051116b18635157d6f60afa64fedb" => :mojave
-    sha256 "96ff2dda5bf3aeaf0aaf8dd29e20aa4b0592d3b0a38c5c58abaf8433e4578928" => :high_sierra
+    sha256 "48bb0b54fa915e5d6998f673992da8c8a5d81ad91f00c4f0de816b824b001549" => :catalina
+    sha256 "02b34409b6c87831a05509fd35087a3e5776c70243cdb47dd219ca324f4f2e13" => :mojave
+    sha256 "76b250c04d044252c9fd47df5541634f036664d780dee1c91f58fadba5daddc8" => :high_sierra
   end
 
   depends_on "python@3.8"
