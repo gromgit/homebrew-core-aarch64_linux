@@ -1,8 +1,8 @@
 class Podman < Formula
   desc "Tool for managing OCI containers and pods"
   homepage "https://podman.io/"
-  url "https://github.com/containers/podman/archive/v2.0.6.tar.gz"
-  sha256 "990c341fe563d34a25ebab818af60480061cb80e4e8d61eacbdeb998151d6663"
+  url "https://github.com/containers/podman/archive/v2.1.0.tar.gz"
+  sha256 "b3098ef71b8f93829ad144352d7223ce4f60f7571e779be5b97fc70538250781"
   license "Apache-2.0"
 
   bottle do
@@ -28,6 +28,6 @@ class Podman < Formula
 
   test do
     assert_match "podman version #{version}", shell_output("#{bin}/podman -v")
-    assert_match "Error: Get \"http://d/v1.0.0/libpod../../../_ping\"", shell_output("#{bin}/podman 2>&1", 125)
+    assert_match "Error: Get", shell_output("#{bin}/podman info 2>&1", 125)
   end
 end
