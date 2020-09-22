@@ -13,9 +13,9 @@ class Sslscan < Formula
 
   bottle do
     cellar :any
-    sha256 "0949543e58e7665068a56a31d977de39d2c092489a05766321ac8297296f79d9" => :catalina
-    sha256 "27b2d69702049d3663743745e5415196512c54c4a736a79d192c721cfa27597b" => :mojave
-    sha256 "369d750ed9b291f096efb2166475e5daeb0c0b0c4d9f438746b861a6c40de799" => :high_sierra
+    sha256 "b342b9409e3fc40ec23aa6d05ea18fb8629493e5209e33bfb683313156364dc2" => :catalina
+    sha256 "e09987d3aa3659f35c263e4b90dd7f9ceb2c2ba340dc63cd50ae824252fae887" => :mojave
+    sha256 "d6378f91cc8d47530e7eac7a36fdc276740e192262d4cad8eb72ad1f1e6062ca" => :high_sierra
   end
 
   depends_on "openssl@1.1"
