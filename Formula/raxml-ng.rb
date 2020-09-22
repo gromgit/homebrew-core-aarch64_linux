@@ -8,9 +8,9 @@ class RaxmlNg < Formula
 
   bottle do
     cellar :any
-    sha256 "0902dc74193390a5769d57e566c686a0dfbe0336d44273be76cc38103551b5aa" => :catalina
-    sha256 "08286840feb5b0ef4a8f13717df0d62980e10fcf07c102ffd2722433087ed5b9" => :mojave
-    sha256 "358ce270c0607ad2985a02ab4a26a0d87439bf134611e0e6ed82251a50bef1d8" => :high_sierra
+    sha256 "4d7397bf30c609cb53ca946d398d14fadb6e7ade0bfd4b427fb0fd0a6385df95" => :catalina
+    sha256 "2851487308922e7bad8c5c9364cdd81318d2982cd76458b55eeeee8c50e5f693" => :mojave
+    sha256 "0da342f7d906f920117cecdacd93368fcedc88ca6e8b362ebc34697e8d489f2a" => :high_sierra
   end
 
   depends_on "autoconf" => :build
