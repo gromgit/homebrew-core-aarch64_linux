@@ -1,9 +1,9 @@
 class Naabu < Formula
   desc "Fast port scanner"
   homepage "https://github.com/projectdiscovery/naabu"
-  url "https://github.com/projectdiscovery/naabu/archive/v1.1.4.tar.gz"
-  sha256 "fb5fae5ef7ef45217a238b59ed16095960c197c6f8b2f460873a445dbc80c2b4"
-  license "GPL-3.0"
+  url "https://github.com/projectdiscovery/naabu/archive/v2.0.2.tar.gz"
+  sha256 "e42c01b62f7ddb5d5f30615caf1888e2d706c1c54842d2f8565ac8cf290cadef"
+  license "MIT"
   head "https://github.com/projectdiscovery/naabu.git"
 
   bottle do
@@ -16,10 +16,12 @@ class Naabu < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args, "./cmd/naabu"
+    cd "v2" do
+      system "go", "build", *std_go_args, "./cmd/naabu"
+    end
   end
 
   test do
-    assert_match "brew.sh:443", shell_output("#{bin}/naabu -host brew.sh -ports 443")
+    assert_match "brew.sh:443", shell_output("#{bin}/naabu -host brew.sh -p 443")
   end
 end
