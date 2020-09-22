@@ -8,9 +8,9 @@ class Libfido2 < Formula
 
   bottle do
     cellar :any
-    sha256 "ba0312771c9cab19b0081ce397e34064d7a203856344d2364f2e6650ca1b3ed3" => :catalina
-    sha256 "4fab8b470d78e69569383566b4dd77e78279e72f69ffafb20548842669731471" => :mojave
-    sha256 "64ea1c57c33c2cf778fd58ad0bd9f033c1b60e9d012a810a467fd5a9438afe14" => :high_sierra
+    sha256 "3160d880a6c2175777523c26a82629500ea2cea52aabc54d31b868c15ad823c2" => :catalina
+    sha256 "ff215921abe2965e55f66bab26eaa5cc6b6d822d0b9068f0a6e85b3e2a071586" => :mojave
+    sha256 "018430b7f86e69a66fa01c1400054e5e05b7cbf44a95622909b9c010f313c736" => :high_sierra
   end
 
   depends_on "cmake" => :build
