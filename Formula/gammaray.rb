@@ -8,9 +8,9 @@ class Gammaray < Formula
 
   bottle do
     cellar :any
-    sha256 "d43f04f5d9d8f0f26ff7ec8164b8a6a6397174e56476a60abf7f592a5e8ef2d8" => :catalina
-    sha256 "daaad613868d4159d40b7c954dfca613ac68a6cbd75e1471d35e04958ff5ae16" => :mojave
-    sha256 "652ed0574b07f8e0bffa9b7927c718295cbc4d1e5b69148101923d8edebcf406" => :high_sierra
+    sha256 "ec6ed993cf1a0c29f82afbb1ecb9172e04a333e809754821e4be0cef6477db07" => :catalina
+    sha256 "4083804c1fb3ad5e49a3ae646d4d83f7d20fef40ed0a0b51e0d1ae3baa043f90" => :mojave
+    sha256 "35610f498837c932f55a0d4fdf3c2cfb7992976ae8ef489bb49031ab293bdd38" => :high_sierra
   end
 
   depends_on "cmake" => :build
