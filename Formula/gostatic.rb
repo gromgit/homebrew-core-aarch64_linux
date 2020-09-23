@@ -8,9 +8,9 @@ class Gostatic < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "35119b8faabc1535ee3cbd07784c28946dd80e5ab70d7106e8d3a263cfd85a91" => :catalina
-    sha256 "7f7e7eb137e2476d58b583ae157b80d9f38c4087a5a60790b8b54202b064dc4a" => :mojave
-    sha256 "cba0f92cb6d4f2dda5cbcce639756320ecd17cf3a422fdbb8deac54c73fb9767" => :high_sierra
+    sha256 "70cf99943af6cc808131048373a9afe23dcc31168ac720aeafca93dc9cdde423" => :catalina
+    sha256 "185fae96275a567bf4639cdca30cdc1317201411426617cd64c6f4148b2c7edf" => :mojave
+    sha256 "214241a4f6f57038167698e306a7fa2b8584c494da162b848c90210ffb11170c" => :high_sierra
   end
 
   depends_on "go" => :build
