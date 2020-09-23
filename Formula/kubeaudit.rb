@@ -8,9 +8,9 @@ class Kubeaudit < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "a85ad800af6a035a4e2638f53ae8b40514a40070f68f5e75fe3ce617dcb81632" => :catalina
-    sha256 "33a12e5c2abc59ffbf7f1c47b552c388a7a9922b9c3f5922c95af83fbdf3b705" => :mojave
-    sha256 "e7b3dc1fec29a2ec4850122fa9a639bd7a359469eb65c6a6e6cc7d8768ac7c50" => :high_sierra
+    sha256 "730b054a56e802a9499e147ae83e452294f215484a915ee074b1d40f27e6e4a3" => :catalina
+    sha256 "c6ae841973747d42f2c45193b33fc8f3627c2c23077aaf655d56799748ede8a8" => :mojave
+    sha256 "c5c81b1fe8f0ec9c1013b5b6a4357529bdc54beaa71648d52f0acf89788e387e" => :high_sierra
   end
 
   depends_on "go" => :build
