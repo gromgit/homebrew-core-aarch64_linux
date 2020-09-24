@@ -8,9 +8,9 @@ class Earthly < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7b7a2d7c06c3ee570c394142b1625c23cd37b4b42eb90c574ea4bf1337d65824" => :catalina
-    sha256 "89238fa6a55f65040f893cf71eff6013ac8ceefb68fa9700ee34d79a79bbb2f8" => :mojave
-    sha256 "03c9bde23b6ded40292c16fb84e66083d72ad0862e2d88afb66b7d9a03b364b5" => :high_sierra
+    sha256 "0e8963af3534f7c8561d7bab453ba11f7b8e00f7e088d1ba0ffcf64a2ef2d84a" => :catalina
+    sha256 "c37cf466dc2b6cce8647901bdc600964bae97ec771577b5e2122b79f669c60df" => :mojave
+    sha256 "c1c36918db7d1586a62407780abb5623c6cf15a5acef1b58a9758d1b154d765b" => :high_sierra
   end
 
   depends_on "go" => :build
