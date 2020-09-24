@@ -1,8 +1,8 @@
 class ChooseGui < Formula
   desc "Fuzzy matcher that uses std{in,out} and a native GUI"
   homepage "https://github.com/chipsenkbeil/choose"
-  url "https://github.com/chipsenkbeil/choose/archive/1.1.tar.gz"
-  sha256 "cd921cfa6a7b7e976716c33dd8c800a06f41e88e12e385cd7b1ad5edc63578f2"
+  url "https://github.com/chipsenkbeil/choose/archive/1.2.1.tar.gz"
+  sha256 "cab6083be6429e9c67bd0026aedf8bd76675a2dea045d235a973fb61b106aeaf"
   license "MIT"
 
   bottle do
@@ -19,7 +19,8 @@ class ChooseGui < Formula
   conflicts_with "choose-rust", because: "both install a `choose` binary"
 
   def install
-    xcodebuild "SDKROOT=", "SYMROOT=build"
+    xcodebuild "SDKROOT=", "SYMROOT=build", "clean"
+    xcodebuild "SDKROOT=", "SYMROOT=build", "-configuration", "Release", "build"
     bin.install "build/Release/choose"
   end
 
