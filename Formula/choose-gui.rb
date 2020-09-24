@@ -7,10 +7,9 @@ class ChooseGui < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "397e6aaafb87524e0baa3f52376814a3d5e5dcf87e909719116742b57a513e4b" => :catalina
-    sha256 "b1f2b4a734d1cb3eca56eddac1a0a0c89a1bb1a57f4b3412843e971fd24a01ad" => :mojave
-    sha256 "7b5031da703f0297a387fc3f8220e28070b120c91ae4989327164955eedc56d6" => :high_sierra
+    sha256 "8df952db2e54267c80dadb67f0da6a249fb0e3d58c92e1d7ac9e791ab8157f76" => :catalina
+    sha256 "0f045585cc3cfb9308e79156e9fbdcea273f7a6ec14da690d3000b445cf82689" => :mojave
+    sha256 "327a21c741b66cc4484dfba8dcdf3cdd1c4d6f30b8f9e15cd4dbd59b87501e66" => :high_sierra
   end
 
   depends_on xcode: :build
