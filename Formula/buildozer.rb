@@ -9,9 +9,9 @@ class Buildozer < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7d37c5fbccc7386681f297931fac56e086d90cfa17d7d66100005d83c790ba70" => :catalina
-    sha256 "7d37c5fbccc7386681f297931fac56e086d90cfa17d7d66100005d83c790ba70" => :mojave
-    sha256 "7d37c5fbccc7386681f297931fac56e086d90cfa17d7d66100005d83c790ba70" => :high_sierra
+    sha256 "9fe7f3968698450308a92d4d9518ccc0b67720d730acd2533e752184f8bc1d86" => :catalina
+    sha256 "8279fdac655641ecc196576b16eeac00727bbeba8d9a811eb20916485c6d6f4a" => :mojave
+    sha256 "a257921eb9df552c485cb2656ce7f535a708846308de4aa1ee47942492a61aee" => :high_sierra
   end
 
   depends_on "bazelisk" => :build
