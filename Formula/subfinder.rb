@@ -16,7 +16,9 @@ class Subfinder < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args, "./cmd/subfinder"
+    cd "v2" do
+      system "go", "build", *std_go_args, "./cmd/subfinder"
+    end
   end
 
   test do
