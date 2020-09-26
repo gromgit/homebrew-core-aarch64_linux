@@ -7,9 +7,9 @@ class Podman < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "c9ab7f4cfc620ff7550e7e6ec2395d4cb3e474a2c2c366eda5e2353d9353dc54" => :catalina
-    sha256 "1c549c4630bd81deb0ed73db2734c367db277760ae31ea4229641059de02239e" => :mojave
-    sha256 "c7d8d19f0cd60d2e8faa54a2f229c1990cd857654dfc8696892dc42f4f9104ed" => :high_sierra
+    sha256 "eb411460ee3d91f8286df3eadd4dfd0fec63d61e29a8a6c29c581ac073642011" => :catalina
+    sha256 "09967354204cdd075332de1ba2eaf39ae154da5167200ead9e2db38d96f7a96b" => :mojave
+    sha256 "fb2ca2c9370177bddf1f1683cef3d121fbdb72126a3999eddc097f20ec637540" => :high_sierra
   end
 
   depends_on "go" => :build
