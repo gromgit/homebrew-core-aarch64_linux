@@ -8,6 +8,13 @@ class Flit < Formula
   license "BSD-3-Clause"
   head "https://github.com/takluyver/flit.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "1f1cf8c1e5c454335cdfc49329143bcdfdd593c3e6f6e70dcb9abfdeea0b9992" => :catalina
+    sha256 "5d363cf8af3e3a6e8f5725e459d11ce4e4b1344cc63438600ec45bdb5be1e3da" => :mojave
+    sha256 "f1a8665a3c0c5a1a010ab1719e23abb3d93c3391dd2f1f46053c40916e37c588" => :high_sierra
+  end
+
   depends_on "python@3.8"
 
   resource "certifi" do
