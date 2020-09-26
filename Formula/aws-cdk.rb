@@ -13,9 +13,9 @@ class AwsCdk < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "bc76400043a768f904a0678dcce9329a04de0d52995730e8ec92052efd1fdb5f" => :catalina
-    sha256 "f54cb76537455eb038cbeace75aabb65777347291334f8a93268d0c664977b76" => :mojave
-    sha256 "44e0abbac7d075c616ca717d3806f2e0f4989859336fdbb93be00cf2f6f44235" => :high_sierra
+    sha256 "0d6c33bdb69c904bd371d3fde74821e17b077941dd26f9a1c37b65e45e96a0f9" => :catalina
+    sha256 "0445623dbadf4fea1ad75d36951a5eeecd9060e0f1c9c6835da1bf632fe4bb7f" => :mojave
+    sha256 "b6ef2973b11c8238a7ca7b95b3dc6a75d344e4d216629bfd27be4eb4ccd2aad9" => :high_sierra
   end
 
   depends_on "node"
