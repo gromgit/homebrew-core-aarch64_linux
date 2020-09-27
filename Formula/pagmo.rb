@@ -1,8 +1,8 @@
 class Pagmo < Formula
   desc "Scientific library for massively parallel optimization"
   homepage "https://esa.github.io/pagmo2/"
-  url "https://github.com/esa/pagmo2/archive/v2.15.0.tar.gz"
-  sha256 "07977be690b512ea11fc40d5b8bfa0a7a8507ce9053a615c2bc4725d355ef9a8"
+  url "https://github.com/esa/pagmo2/archive/v2.16.0.tar.gz"
+  sha256 "076918ca975e2b45eedd85b65da0de650d4bd0b3f86182c0c144c7fdc191185b"
   license "GPL-3.0"
 
   bottle do
@@ -19,9 +19,9 @@ class Pagmo < Formula
   depends_on "tbb"
 
   def install
-    ENV.cxx11
     system "cmake", ".", "-DPAGMO_WITH_EIGEN3=ON", "-DPAGMO_WITH_NLOPT=ON",
-                         *std_cmake_args
+                         *std_cmake_args,
+                         "-DCMAKE_CXX_STANDARD=17"
     system "make", "install"
   end
 
@@ -40,22 +40,24 @@ class Pagmo < Formula
       int main()
       {
           // 1 - Instantiate a pagmo problem constructing it from a UDP
-          // (user defined problem).
+          // (i.e., a user-defined problem, in this case the 30-dimensional
+          // generalised Schwefel test function).
           problem prob{schwefel(30)};
 
-          // 2 - Instantiate a pagmo algorithm
+          // 2 - Instantiate a pagmo algorithm (self-adaptive differential
+          // evolution, 100 generations).
           algorithm algo{sade(100)};
 
-          // 3 - Instantiate an archipelago with 16 islands having each 20 individuals
-          archipelago archi{16, algo, prob, 20};
+          // 3 - Instantiate an archipelago with 16 islands having each 20 individuals.
+          archipelago archi{16u, algo, prob, 20u};
 
           // 4 - Run the evolution in parallel on the 16 separate islands 10 times.
           archi.evolve(10);
 
-          // 5 - Wait for the evolutions to be finished
+          // 5 - Wait for the evolutions to finish.
           archi.wait_check();
 
-          // 6 - Print the fitness of the best solution in each island
+          // 6 - Print the fitness of the best solution in each island.
           for (const auto &isl : archi) {
               std::cout << isl.get_population().champion_f()[0] << std::endl;
           }
@@ -63,8 +65,9 @@ class Pagmo < Formula
           return 0;
       }
     EOS
+
     system ENV.cxx, "test.cpp", "-I#{include}", "-L#{lib}", "-lpagmo",
-                    "-std=c++11", "-o", "test"
+                    "-std=c++17", "-o", "test"
     system "./test"
   end
 end
