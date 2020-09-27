@@ -8,9 +8,9 @@ class Embree < Formula
 
   bottle do
     cellar :any
-    sha256 "c2314a12cbbdf6719d2273059abadfe6011f9d687846fff186d1e9936f3835fc" => :catalina
-    sha256 "98e880b02ee28bf5f7b30d5f1490e8675c00a868a4fe2f7cf3ccdc663b93a613" => :mojave
-    sha256 "2c9d9b8609732beaf03fd4eece181dbea33d2f11325f7062657be84db8ba8dfd" => :high_sierra
+    sha256 "24dd899fecc29d3dae947fa89e73e55d74613446a917b8859275532bc0678608" => :catalina
+    sha256 "76d3ae888b4d6ea0a411d1596b6e3df5b1ab3f545ce4c617905c90895baa13d8" => :mojave
+    sha256 "ceb906540e0219a32fa3ea0a22d581293e16d6cac55b385165bdb15518cef757" => :high_sierra
   end
 
   depends_on "cmake" => :build
