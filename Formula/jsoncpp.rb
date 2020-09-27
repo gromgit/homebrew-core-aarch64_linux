@@ -13,9 +13,9 @@ class Jsoncpp < Formula
 
   bottle do
     cellar :any
-    sha256 "0e937647ccad5ed68b70aa059027e367f120f7b6ad8657bfbd17ab4835a134a8" => :catalina
-    sha256 "c235548c34fbf5359a780f292b20c13e17ff6a4f2de02ec5cb2116bff2b6cbf1" => :mojave
-    sha256 "a31ea936169d1e199425e5125cea17ff5d61467e3825ce988a610adec0cc027b" => :high_sierra
+    sha256 "8790c09b47eafd5e6c9cb80e8923eb2c4555ae950644ffdd7b48be8757a38765" => :catalina
+    sha256 "1222b8d8b45d721499cc0bad57e69e53a01d734b48371b2d5519d47fbe59667d" => :mojave
+    sha256 "96b5952e3542637b530cec555628c1e41fa5aeda44c5c9b8fd9619f790f10efa" => :high_sierra
   end
 
   depends_on "meson" => :build
