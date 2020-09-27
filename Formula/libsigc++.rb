@@ -11,9 +11,9 @@ class Libsigcxx < Formula
 
   bottle do
     cellar :any
-    sha256 "77bf9858cb60a1842d970bbbc020a5379536806acbc4114afa56d8c941013765" => :catalina
-    sha256 "7ae9cb9a4d6a645574c6cf5aba8a9cfbbab44349545374f604073393c67f6f50" => :mojave
-    sha256 "e2c75abf2675c7830fd19aa268472aeee8b5c42cd9355147585bad9be7c3059a" => :high_sierra
+    sha256 "6e77a5e5ac7b87088e47fc57c50567e0528ac17a451d219470b274fd41f8b57f" => :catalina
+    sha256 "c8ec93f63daaf73d3141d1e0a1e96a8fc208dbc9e872595f5fce9b4bd7025238" => :mojave
+    sha256 "16ff1c845aed6d385dc947056504b4e22869081b591678c91ed59e39e06f0663" => :high_sierra
   end
 
   depends_on "meson" => :build
