@@ -3,9 +3,9 @@ class AzureCli < Formula
 
   desc "Microsoft Azure CLI 2.0"
   homepage "https://docs.microsoft.com/cli/azure/overview"
-  url "https://codeload.github.com/Azure/azure-cli/legacy.tar.gz/39d334dddd25224b97eacac39c12f39d41b902c1"
-  version "2.12.0"
-  sha256 "db7bf216db0adc25aa9e895d01e1aa23f4983e4f04633d757482ef9f67cbc987"
+  url "https://codeload.github.com/Azure/azure-cli/legacy.tar.gz/74f7683ef37fad9df9d71e059ceac50a4db04841"
+  version "2.12.1"
+  sha256 "12aa412261b10cf341c29f70314a703b047cdae7045584a98237d14e8381deab"
   license "MIT"
   head "https://github.com/Azure/azure-cli.git"
 
@@ -701,8 +701,8 @@ class AzureCli < Formula
   end
 
   resource "zipp" do
-    url "https://files.pythonhosted.org/packages/ce/8c/2c5f7dc1b418f659d36c04dec9446612fc7b45c8095cc7369dd772513055/zipp-3.1.0.tar.gz"
-    sha256 "c599e4d75c98f6798c509911d08a22e6c021d074469042177c8c86fb92eefd96"
+    url "https://files.pythonhosted.org/packages/30/a3/a67b64feac23b22c71ca2a4084387a6f205dc7cb4f0c67c755d6a4b29a7f/zipp-3.2.0.tar.gz"
+    sha256 "b52f22895f4cfce194bc8172f3819ee8de7540aa6d873535a8668b730b8b411f"
   end
 
   def install
