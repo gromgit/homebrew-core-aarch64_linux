@@ -1,8 +1,8 @@
 class Act < Formula
   desc "Run your GitHub Actions locally 🚀"
   homepage "https://github.com/nektos/act"
-  url "https://github.com/nektos/act/archive/v0.2.14.tar.gz"
-  sha256 "bd18b6ba580d96fb6bd72ef34ebd12f947aadd1de7f4b3d07e363a8bea380dbc"
+  url "https://github.com/nektos/act/archive/v0.2.15.tar.gz"
+  sha256 "3acefc293fe86df10a9ef9e40616331adcab20a36fe2cf1ed2bc571328a3e13d"
   license "MIT"
 
   bottle do
