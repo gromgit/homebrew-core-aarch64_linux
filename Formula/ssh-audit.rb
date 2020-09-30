@@ -3,10 +3,9 @@ class SshAudit < Formula
 
   desc "SSH server & client auditing"
   homepage "https://github.com/jtesta/ssh-audit"
-  url "https://github.com/jtesta/ssh-audit/releases/download/v2.2.0/ssh-audit-2.2.0.tar.gz"
-  sha256 "a8f4f01122234bd84c01440bfd3b7a6026c50c1a06f3044846a8503c94f94cfb"
+  url "https://github.com/jtesta/ssh-audit/releases/download/v2.3.0/ssh-audit-2.3.0.tar.gz"
+  sha256 "776547591e7b69a2a8dcd1eaaac5d38321f2cb4a5de5f8e5a3e135b33236e812"
   license "MIT"
-  revision 1
   head "https://github.com/jtesta/ssh-audit.git"
 
   bottle :unneeded
@@ -19,7 +18,6 @@ class SshAudit < Formula
   end
 
   test do
-    output = shell_output("#{bin}/ssh-audit -h 2>&1", 1)
-    assert_match "force ssh version 1 only", output
+    assert_match "[exception]", shell_output("#{bin}/ssh-audit -nt 0 ssh.github.com", 1)
   end
 end
