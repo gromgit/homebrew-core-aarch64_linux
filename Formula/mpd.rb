@@ -1,9 +1,9 @@
 class Mpd < Formula
   desc "Music Player Daemon"
   homepage "https://www.musicpd.org/"
-  url "https://www.musicpd.org/download/mpd/0.21/mpd-0.21.25.tar.xz"
-  sha256 "20a0ad01bf327b2dbeb6ae8e1af952cb0de83d2d63fab0fa4b7183a74765c201"
-  license "GPL-2.0"
+  url "https://www.musicpd.org/download/mpd/0.22/mpd-0.22.tar.xz"
+  sha256 "7de742d925d01bf52685cc6cbb31fdeb671e4992a448720897ef706e57e39076"
+  license "GPL-2.0-or-later"
   head "https://github.com/MusicPlayerDaemon/MPD.git"
 
   bottle do
@@ -34,6 +34,7 @@ class Mpd < Formula
   depends_on "libshout"
   depends_on "libupnp"
   depends_on "libvorbis"
+  depends_on macos: :mojave # requires C++17 features unavailable in High Sierra
   depends_on "opus"
   depends_on "sqlite"
 
