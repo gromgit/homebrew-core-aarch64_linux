@@ -5,6 +5,12 @@ class Libhandy < Formula
   sha256 "dc1fff98cbc72a492d1adb489ee1b00e43ab4ac14c983c855ef3df435bbbda27"
   license "LGPL-2.1-or-later"
 
+  bottle do
+    sha256 "7f278f23dc944a680ac6df6d5cbf5dd10da5bf26a39cbbeb258dbcb704295932" => :catalina
+    sha256 "7b6dd04cda9ba133af641367460e0d046ad8e86d8cea61f16d42b1f51b1af810" => :mojave
+    sha256 "b6a2782b7a601d0f8ba2c84b6cd8cacf1a9e040dd0f17e1148cb822e512e1efe" => :high_sierra
+  end
+
   # Note: The glade catalog is disabled due to a bug that has been fixed but
   # not landed in a stable libhandy version yet (as of September 2020).
   # See https://gitlab.gnome.org/GNOME/libhandy/-/merge_requests/614
