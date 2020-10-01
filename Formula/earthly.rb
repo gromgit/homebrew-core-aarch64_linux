@@ -1,8 +1,8 @@
 class Earthly < Formula
   desc "Build automation tool for the post-container era"
   homepage "https://earthly.dev/"
-  url "https://github.com/earthly/earthly/archive/v0.3.8.tar.gz"
-  sha256 "29437680c22ba68028df5200cb0582b61bc02a3fe0a83cc9e1df54405b013268"
+  url "https://github.com/earthly/earthly/archive/v0.3.9.tar.gz"
+  sha256 "1d2a3b39a0bee1cc41e8dc5f777ef06462ae195ce1527d3d06d3e56f7b9448aa"
   license "MPL-2.0"
   head "https://github.com/earthly/earthly.git"
 
@@ -17,7 +17,7 @@ class Earthly < Formula
 
   def install
     ldflags = "-X main.DefaultBuildkitdImage=earthly/buildkitd:v#{version} -X main.Version=v#{version} -X" \
-              " main.GitSha=4c01bae32ab1ecea65910e06f20d30c30923e225 "
+              " main.GitSha=72d4caac2c56779201cb3f52a3c21d5cfc5657b5 "
     tags = "dfrunmount dfrunsecurity dfsecrets dfssh dfrunnetwork"
     system "go", "build",
         "-tags", tags,
@@ -25,8 +25,10 @@ class Earthly < Formula
         *std_go_args,
         "-o", bin/"earth",
         "./cmd/earth/main.go"
-    (bash_completion/"earth").write `#{bin}/earth bootstrap --source bash`
-    (zsh_completion/"_earth").write `#{bin}/earth bootstrap --source zsh`
+    bash_output = Utils.safe_popen_read("#{bin}/earth", "bootstrap", "--source", "bash")
+    (bash_completion/"earth").write bash_output
+    zsh_output = Utils.safe_popen_read("#{bin}/earth", "bootstrap", "--source", "zsh")
+    (zsh_completion/"_earth").write zsh_output
   end
 
   test do
