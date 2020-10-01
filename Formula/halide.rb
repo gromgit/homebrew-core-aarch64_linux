@@ -5,6 +5,13 @@ class Halide < Formula
   sha256 "23808f8e9746aea25349a16da92e89ae320990df3c315c309789fb209ee40f20"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "93c86ba497d66ddd04bb5fc29ed122f9388f6911fcbc5d5b9972869a9cdd1bc6" => :catalina
+    sha256 "d9db4f376d1aec822e9302540670c7853b8163caf0b824afb6beb33d53549740" => :mojave
+    sha256 "34f379eb801990b3c43011befab88deb8507df0d8d9c4b015e5c84c04394f64e" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "jpeg"
   depends_on "libomp"
