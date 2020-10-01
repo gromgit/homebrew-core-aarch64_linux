@@ -6,6 +6,13 @@ class ServerGo < Formula
       revision: "53d0a8d6fbf982a20651d0c420eca3b1f1e95523"
   license "MIT"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "a8f9eb48ac79a628aa71ca08caeb8577a85e47b81e81968475aa5b318c536b42" => :catalina
+    sha256 "58996b6453268397e81337f7feb94b346297ba14cf1db24c23b0f05d0c19e420" => :mojave
+    sha256 "8e49eb94a30c9f97b53a6201a165e7f07e1904f4ad9e933c4bc9e613e7c6ff75" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
