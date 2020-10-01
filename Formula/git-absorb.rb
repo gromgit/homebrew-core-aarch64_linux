@@ -7,9 +7,9 @@ class GitAbsorb < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "bdf7c3b57f49dc9ccd83d9fed9f089f994f20c3591c6f18900f4e70ee80627e6" => :catalina
-    sha256 "63d50725c92837dbd25b63560ee2b8061c8b335288230c9f3f5976b94aed6248" => :mojave
-    sha256 "c6dc732ac254cc9d5aa2ebfe5ecc4e65c95b6ed860efc22b443c1911911099f4" => :high_sierra
+    sha256 "e4f8afc0556751bf7bce12294fa6b0d13d2b6b35a592f74ffd9ae42d692ffc32" => :catalina
+    sha256 "dd12357127c05d4f3b0b8fcde610ecbd2bd2f99f38a2acbbeb75957edcbacf9d" => :mojave
+    sha256 "2b4e43d04f83bb331a0521ed67938066068a7eb0ee06588ef482eab4fb306be9" => :high_sierra
   end
 
   depends_on "rust" => :build
