@@ -6,6 +6,13 @@ class Shtools < Formula
   license "BSD-3-Clause"
   head "https://github.com/SHTOOLS/homebrew-shtools.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "4cc5c0cf89291f3b8add63f05e12a90875a953b02fc3273ef81b0d7103cfcb32" => :catalina
+    sha256 "b2f7e074fa7ecea8d703c96201de2301682cfcb3dd7d1b781f1e2a2e1c75ad8a" => :mojave
+    sha256 "efa5d3314011b1483184edca0ec6b7eedbfc3f132aa613c58d04b5936338b424" => :high_sierra
+  end
+
   depends_on "fftw"
   depends_on "gcc"
 
