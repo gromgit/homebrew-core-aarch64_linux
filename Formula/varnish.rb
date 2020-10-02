@@ -11,9 +11,9 @@ class Varnish < Formula
   end
 
   bottle do
-    sha256 "871574bc7e588db55cfe913a5ade7696556a1fd378c1ab518cef6cd7afb53bca" => :catalina
-    sha256 "596fa29d0c5ad3bc3f68ec3fc440d194549ddda4f91b92ffaa31970729592e20" => :mojave
-    sha256 "7c4e4ce06008328c08cb989001516786e4d16792c01459ad860698c0b3a80c10" => :high_sierra
+    sha256 "c965ba15a912c5ec2edda39dbea0dc407f6def32880ff0b36f562a181c551cf5" => :catalina
+    sha256 "b429c593e98a20172de524371ec8fbe562a1c3162bb6ca5af1a473211f14bfc5" => :mojave
+    sha256 "c91874d68b7c64aaaa8bbe0b55219c516362e66120f4a1c131fbfa1d1e6ef67c" => :high_sierra
   end
 
   depends_on "docutils" => :build
