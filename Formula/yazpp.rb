@@ -7,12 +7,9 @@ class Yazpp < Formula
 
   bottle do
     cellar :any
-    sha256 "fc6c551c54b78b477836368f8f4c24f39bc8324ced4aaed418ed6ebde071c130" => :catalina
-    sha256 "ad3ae23deb4f16249fbfc8794a30116911a211c76adbc024948cf9b8842a55b4" => :mojave
-    sha256 "870f730cc4ee76700749f4091d111cb0e9a529d43c1ba7cb40b36807e49d9b76" => :high_sierra
-    sha256 "794e2e265413005b3c26a0fa38e1ab8957bd1ec13cf4abb63730070181d9beb4" => :sierra
-    sha256 "292447a86953bb10361130542d2db9e0c0fc410e9be3b13b8c80891fbfaeec20" => :el_capitan
-    sha256 "6f769c30797af9cb98bf02491706f96b7085eed2d5d05c377e51ca5e0bf8541a" => :yosemite
+    sha256 "5136d27fa1e25ceccbd1a73dc1655fa039c99f3d99faaae07239865ea22ee777" => :catalina
+    sha256 "60a07217d07224b442d2810d99261b48f846df54dd06eb5e4a4688f0864d1939" => :mojave
+    sha256 "0d783b21b0cd116bef6b358866b2ac557e340c4e5dd6961c6bd843b6bcda68b7" => :high_sierra
   end
 
   depends_on "yaz"
