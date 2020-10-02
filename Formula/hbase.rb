@@ -11,9 +11,9 @@ class Hbase < Formula
   end
 
   bottle do
-    sha256 "fdf0eb89433c3c1d3b6432a5261f9a433dba0c1d128cba544d1a69861d931c07" => :catalina
-    sha256 "cf38cab402d016cfed0c937b67ea84fc4faf620121f422a673b81b422fd2356f" => :mojave
-    sha256 "fd9352d2ba177f23ae5388fe63f7abdc528d7d9013a03a2c022c926456b0268e" => :high_sierra
+    sha256 "b18c993c5f4bffe90725bec08d91869878ade5c407d51d93567fbbbd5a1754da" => :catalina
+    sha256 "90e078ceb88743755acf1042ef8a50131866748de6d7c52382c48cab138815a3" => :mojave
+    sha256 "d6a735c720dc4f2fae9b658b5fc58beb7c0d73cd559b83e4a2711b40c61bdea2" => :high_sierra
   end
 
   depends_on "ant" => :build
