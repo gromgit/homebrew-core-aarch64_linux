@@ -3,7 +3,7 @@ class Ansifilter < Formula
   homepage "http://www.andre-simon.de/doku/ansifilter/ansifilter.html"
   url "http://www.andre-simon.de/zip/ansifilter-2.17.tar.bz2"
   sha256 "5985beb39c960a3cb5b0e70d6a121687043dc8458e5783777ff250303cccc42f"
-  license "GPL-3.0"
+  license "GPL-3.0-or-later"
 
   livecheck do
     url "http://www.andre-simon.de/zip/download.php"
