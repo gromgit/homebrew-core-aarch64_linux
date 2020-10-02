@@ -5,6 +5,7 @@ class Nbdime < Formula
   homepage "https://nbdime.readthedocs.io"
   url "https://files.pythonhosted.org/packages/d8/55/34e050f939e37b79c1a6283ea6c8b411cfda21a12e5d492da32fbdac23d5/nbdime-2.1.0.tar.gz"
   sha256 "4e3efdcfda31c3074cb565cd8e76e2e5421b1c4560c3a00c56f8679dd15590e5"
+  license "BSD-3-Clause"
 
   livecheck do
     url :stable
