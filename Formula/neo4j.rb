@@ -1,8 +1,8 @@
 class Neo4j < Formula
   desc "Robust (fully ACID) transactional property graph database"
   homepage "https://neo4j.com/"
-  url "https://neo4j.com/artifact.php?name=neo4j-community-4.1.2-unix.tar.gz"
-  sha256 "c4917a1f16da0ab214de9fa04e4db351efbd0b92a7f2314d27501c1d82293a6f"
+  url "https://neo4j.com/artifact.php?name=neo4j-community-4.1.3-unix.tar.gz"
+  sha256 "6da059f04f86e1a74221eb0103da38a1f645969cbbfe1b37c9de48bf55acabdc"
   license "GPL-3.0"
 
   livecheck do
@@ -13,17 +13,13 @@ class Neo4j < Formula
 
   bottle :unneeded
 
-  # Upstream does not intend to provide Java 8+ support until 4.0
-  # and there are various issues with running against newer Javas.
-  # https://github.com/neo4j/neo4j/issues/11728#issuecomment-387038804
-  # https://github.com/neo4j/neo4j-browser/issues/671#issuecomment-346224754
-  # https://github.com/Homebrew/homebrew-core/issues/31090
-  # As of v4.1.0, neo4j still needs to build with java 1.8
-  # https://github.com/neo4j/neo4j/issues/12516
-  depends_on java: "1.8"
+  depends_on "openjdk@11"
 
   def install
-    ENV["NEO4J_HOME"] = libexec
+    env = {
+      JAVA_HOME:  Formula["openjdk@11"].opt_prefix,
+      NEO4J_HOME: libexec,
+    }
     # Remove windows files
     rm_f Dir["bin/*.bat"]
 
@@ -32,7 +28,7 @@ class Neo4j < Formula
 
     # Symlink binaries
     bin.install Dir["#{libexec}/bin/neo4j{,-shell,-import,-shared.sh,-admin}", "#{libexec}/bin/cypher-shell"]
-    bin.env_script_all_files(libexec/"bin", NEO4J_HOME: ENV["NEO4J_HOME"])
+    bin.env_script_all_files(libexec/"bin", env)
 
     # Adjust UDC props
     # Suppress the empty, focus-stealing java gui.
