@@ -7,7 +7,8 @@ class ApacheDrill < Formula
   license "Apache-2.0"
 
   livecheck do
-    url :stable
+    url "https://drill.apache.org/download/"
+    /href=.*?apache-drill[._-]v?(\d+(?:\.\d+)+)\.t/i
   end
 
   bottle :unneeded
