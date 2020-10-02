@@ -8,9 +8,9 @@ class ContainerStructureTest < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "51c418c5331fa47eb2a4fcaad891a9fdf16b1f1603350845cbbcef5e9b555306" => :catalina
-    sha256 "284e7ef67863ec90229ccae95dc240c850803aff531476f26194a84ed8cf33c7" => :mojave
-    sha256 "5c176caeb206957f6a943faad2a194ee88ebd5d3e6ed02cd6d9441fd3d1556c9" => :high_sierra
+    sha256 "e9901c9334658108c1aed10c2d0e8ae6509a436f69133b14fe8452978e7cf9fa" => :catalina
+    sha256 "8b8173563086f3e7587b7b7c8419bbca9196f52460a80636070225636075611b" => :mojave
+    sha256 "523c4f21e5ce23befd82ae9d5395785c7541736b3b43e827a04ecae61e588791" => :high_sierra
   end
 
   depends_on "go" => :build
