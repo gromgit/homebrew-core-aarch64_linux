@@ -4,7 +4,7 @@ class GnuUnits < Formula
   url "https://ftp.gnu.org/gnu/units/units-2.20.tar.gz"
   mirror "https://ftpmirror.gnu.org/units/units-2.20.tar.gz"
   sha256 "c5e298c87516711f3bedb9315583bad0965c5d3d0bb587f9837a9af12a50fadc"
-  license "GPL-3.0"
+  license "GPL-3.0-or-later"
 
   livecheck do
     url :stable
