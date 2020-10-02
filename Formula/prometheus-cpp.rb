@@ -10,9 +10,9 @@ class PrometheusCpp < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "8a7554ae3fc4618f5b405aa365f2c48192304406a5aba72611110cb909e1669f" => :catalina
-    sha256 "c843326804e9e84640a31254e793e15b7956aa69be769d8bd0d6888bf7933a0f" => :mojave
-    sha256 "3b9b31ccd9421f6777605f7c0b1921b0dca02a3be8c143b5468e32ccf7b36536" => :high_sierra
+    sha256 "cd5025a44a31af6dff41e71c3d241b7bdb689e4e97659a8ebce35a7e44dd9860" => :catalina
+    sha256 "e9bcb8999fef1b2ef32fd492ac68dedd1776cc5571532e43e4627c38b0b131bd" => :mojave
+    sha256 "5b5f45777549c4407be8bbfdc55e5d351ea71c02974d5b61713a39a63d0732d8" => :high_sierra
   end
 
   depends_on "cmake" => :build
