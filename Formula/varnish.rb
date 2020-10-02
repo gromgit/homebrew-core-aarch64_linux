@@ -3,6 +3,7 @@ class Varnish < Formula
   homepage "https://www.varnish-cache.org/"
   url "https://varnish-cache.org/_downloads/varnish-6.5.1.tgz"
   sha256 "11964c688f9852237c99c1e327d54dc487549ddb5f0f5aa7996e521333d7cdb5"
+  license "BSD-2-Clause"
 
   livecheck do
     url "https://varnish-cache.org/releases/"
