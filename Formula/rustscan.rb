@@ -7,9 +7,9 @@ class Rustscan < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9bbd788a689f80c4e725169032456f6978e50a5351bde8ca5ceafae7271d8d61" => :catalina
-    sha256 "a9d0d7ca678fbe570150ce427b002ee0e84347dd8a5c29800645ac288f448a45" => :mojave
-    sha256 "f4d1a2a3a887a63bc232a803af28d8a2c9c1f338063646aec0d73d5244471da0" => :high_sierra
+    sha256 "283697b96fff0a738e64581b25d86c8b3391b88887aea99efac96892d3d69e7e" => :catalina
+    sha256 "0a98297ff385f5c18864a4b05f3b68323dda21fed87ab096a6c551b3bf4a81d3" => :mojave
+    sha256 "9592dcac08be3079efb91c9b9affd9a297d2ff1d650dc01629ec77b7215669e0" => :high_sierra
   end
 
   depends_on "rust" => :build
