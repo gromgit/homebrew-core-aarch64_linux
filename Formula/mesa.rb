@@ -14,9 +14,9 @@ class Mesa < Formula
 
   bottle do
     cellar :any
-    sha256 "5308eef12c7e1a13fedcce181c043564eba0a44960935eaf6b93de75cad86ecb" => :catalina
-    sha256 "8f99474bc1abeb7f5dd0ba333454aa112fa70e5a70c185c9f99a48e367111a99" => :mojave
-    sha256 "0a2e786d887053c1cf8d8a81d42b3402f3fb505a63393bf60c73f0a8406757c0" => :high_sierra
+    sha256 "80f2a41eb9de16114eb1ca1d9635d5ca2d22b9651bbdafb621b3b3ff35998d00" => :catalina
+    sha256 "3b5251d783c51d20fe2f72067d8b060267d522e285b2eb67f215a737396ec6c1" => :mojave
+    sha256 "3e7f48cbb9e932c7be02a100db4986ddc2fd3780a199be668f15e049b021666b" => :high_sierra
   end
 
   depends_on "meson" => :build
