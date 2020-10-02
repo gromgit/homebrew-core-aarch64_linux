@@ -6,9 +6,10 @@ class Geogram < Formula
   license all_of: ["BSD-3-Clause", :public_domain, "LGPL-3.0-or-later", "MIT"]
 
   bottle do
-    sha256 "35c53782912da99acd4b4e743d5a09a19116fc17ecd85403e84aafb1287bb718" => :catalina
-    sha256 "5513a02ddae6bd636eee3ca6d16b6ffe011c8ba32c0d4288190019069dcf6971" => :mojave
-    sha256 "6167a9a73fec8b04358aa2e84104ec956206ea013975ddd9e28d2293d4df4a87" => :high_sierra
+    rebuild 1
+    sha256 "4345844b616fb74fbb2124a0c7bdaeb222c62704908b358427bce7122cb9404d" => :catalina
+    sha256 "f263799496ffc570463ce635eedd9287f81502b06f72142a7829c0b857185079" => :mojave
+    sha256 "f0eedab23f61affd89684a7e1492cfc2cc8deffa4ca7ebc8459a5768a05876f3" => :high_sierra
   end
 
   depends_on "cmake" => :build
