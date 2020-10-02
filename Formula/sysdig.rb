@@ -1,8 +1,8 @@
 class Sysdig < Formula
   desc "System-level exploration and troubleshooting tool"
   homepage "https://sysdig.com/"
-  url "https://github.com/draios/sysdig/archive/0.27.0.tar.gz"
-  sha256 "a67f97b2620e3d9c5d48d07932604c938a5a6d3b625d7a23bfb2eb9802024b52"
+  url "https://github.com/draios/sysdig/archive/0.27.1.tar.gz"
+  sha256 "b9d05854493d245a7a7e75f77fc654508f720aab5e5e8a3a932bd8eb54e49bda"
   license "Apache-2.0"
 
   livecheck do
@@ -17,6 +17,7 @@ class Sysdig < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "c-ares"
   depends_on "jsoncpp"
   depends_on "luajit"
   depends_on "tbb"
