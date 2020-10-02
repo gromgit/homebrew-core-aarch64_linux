@@ -1,9 +1,9 @@
 class Libxmlxx3 < Formula
   desc "C++ wrapper for libxml"
   homepage "https://libxmlplusplus.sourceforge.io/"
-  url "https://download.gnome.org/sources/libxml++/3.2/libxml++-3.2.0.tar.xz"
-  sha256 "b786fae7fd7820d356698069a787d107995c3efcbef50d8f4efd3766ab768e4f"
-  license "LGPL-2.1"
+  url "https://download.gnome.org/sources/libxml++/3.2/libxml++-3.2.2.tar.xz"
+  sha256 "a53d0af2c9bf566b4d5d57d1c6495b189555c54785941d7e3bef666728952f0b"
+  license "LGPL-2.1-or-later"
 
   livecheck do
     url :stable
@@ -16,6 +16,8 @@ class Libxmlxx3 < Formula
     sha256 "2da0d0f6e732f910e75e5b20c19a01056854d00feab6e1c2490b7722bbc1af29" => :high_sierra
   end
 
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "glibmm"
 
@@ -23,8 +25,11 @@ class Libxmlxx3 < Formula
 
   def install
     ENV.cxx11
-    system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}"
-    system "make", "install"
+    mkdir "build" do
+      system "meson", *std_meson_args, ".."
+      system "ninja"
+      system "ninja", "install"
+    end
   end
 
   test do
