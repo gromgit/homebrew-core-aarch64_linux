@@ -10,9 +10,9 @@ class Mujs < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "3b78a1dd9611f016c24fd19bcd764031cbd7a514e156ff04b9a5b0c75d2bfe44" => :catalina
-    sha256 "94cfe788bc39fb1f5042ab6ce565fbaa98568362698d6fc2441487a3a79f27e5" => :mojave
-    sha256 "b074364d9806ef46e750c685f27368882185592c5cb3f825da345c05340845ed" => :high_sierra
+    sha256 "eb7344e1f8e8e407fddc9484dd7392be6c6e7a4b88ca05f912a2028ffd780991" => :catalina
+    sha256 "1c945e15f08632584cde81b06d233bf62bcd3fee4bde016cbdb37bb067e85a22" => :mojave
+    sha256 "9d94f85a85c383c131a32b31f87548d7a8bd89595227a63470925ce5272b41d8" => :high_sierra
   end
 
   def install
