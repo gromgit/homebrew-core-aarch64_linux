@@ -3,8 +3,8 @@ require "language/node"
 class Lanraragi < Formula
   desc "Web application for archival and reading of manga/doujinshi"
   homepage "https://github.com/Difegue/LANraragi"
-  url "https://github.com/Difegue/LANraragi/archive/v.0.7.2.tar.gz"
-  sha256 "e5c726e885bd9a40cb9ca574644533f83058020b68ed06c3f85f82ce36387dd0"
+  url "https://github.com/Difegue/LANraragi/archive/v.0.7.3.tar.gz"
+  sha256 "1a094d32c14aee98844bfe18c828dc894d1d896f489a1f8bb8b1547f72eed4ee"
   license "MIT"
   head "https://github.com/Difegue/LANraragi.git"
 
