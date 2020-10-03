@@ -3,14 +3,12 @@ require "language/node"
 class Emscripten < Formula
   desc "LLVM bytecode to JavaScript compiler"
   homepage "https://emscripten.org/"
+  url "https://github.com/emscripten-core/emscripten/archive/2.0.5.tar.gz"
+  sha256 "35377ca91921c29b44d78a2de4c98a70b3eba31ae95d6ac843ea5cb361a857fc"
   # Emscripten is available under 2 licenses, the MIT license and the
   # University of Illinois/NCSA Open Source License.
   license "MIT"
-
-  stable do
-    url "https://github.com/emscripten-core/emscripten/archive/2.0.5.tar.gz"
-    sha256 "35377ca91921c29b44d78a2de4c98a70b3eba31ae95d6ac843ea5cb361a857fc"
-  end
+  head "https://github.com/emscripten-core/emscripten.git"
 
   livecheck do
     url :head
@@ -22,10 +20,6 @@ class Emscripten < Formula
     sha256 "59c1cfdd1d59aaca707b4860bee519c0dee9d345bbddab381970adf8d6e20d42" => :catalina
     sha256 "a8dfc6cc941a0249a1e004c9854be8465bc08fb6863a1d250bbd4341f72aa42d" => :mojave
     sha256 "2b429d5280414358783d8ca9640b95f9252a15424d275b6028d38944f60828e2" => :high_sierra
-  end
-
-  head do
-    url "https://github.com/emscripten-core/emscripten.git"
   end
 
   depends_on "cmake" => :build
