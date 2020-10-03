@@ -7,9 +7,9 @@ class OpenImageDenoise < Formula
 
   bottle do
     cellar :any
-    sha256 "36e3eaab701c477b99a8dd45ee9280de718aeb561429d9583cb2a387b9eace13" => :catalina
-    sha256 "3fae1d44be63e61401450dc6c3f0afe8b56bbf138e8c764e915911677749ee05" => :mojave
-    sha256 "768e611cdf47486bcd8167cd2532b944f10f2fe0d7895d7f0403989529932e06" => :high_sierra
+    sha256 "0c117deaaf32f10964c8015eeb79973d913aee536e8cf3033c0eb2f136dbb621" => :catalina
+    sha256 "5a678166eb2c322130d9e9a864cf2b35ee08219b9def4a1b309a8f10f2c67315" => :mojave
+    sha256 "f83735e198b5066eaace6614176f7558189b9532daf523981bed58c5719054f0" => :high_sierra
   end
 
   depends_on "cmake" => :build
