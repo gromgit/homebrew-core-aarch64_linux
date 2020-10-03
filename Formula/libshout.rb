@@ -12,10 +12,9 @@ class Libshout < Formula
 
   bottle do
     cellar :any
-    sha256 "c0a0c87887e331d2f4b174d956e974bae44d427f282024f6a7b36910da7dbe05" => :catalina
-    sha256 "14144ef978dbceb4b858ebeb667be83721ba4b3742fd0e0743ab76a9b2f99095" => :mojave
-    sha256 "f9fef02da35d628c601f24726fa2d748f350692d4bf4c196d28bd08b0f4786eb" => :high_sierra
-    sha256 "1d246580781a0bf5240363da62a476499a16948935f1b0693d05660ccd5aa9de" => :sierra
+    sha256 "d79a739ec341a9e39f8b60e36d1109b9b235146dcaa766cd468ab392b107c426" => :catalina
+    sha256 "7e06d3251ed6520de0278308c90e33036b7d25efbf370286753bdea69fa000d8" => :mojave
+    sha256 "57029eaff39233c54b38d7ca44254423f8ece8c4deaea17514dc53b325065a28" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
