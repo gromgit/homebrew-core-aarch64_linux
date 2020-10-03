@@ -7,9 +7,9 @@ class CloudformationGuard < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5d1af2c3d59f5a87feb0d86d51538c4a300c8c37fdce88faa668d63e42b67492" => :catalina
-    sha256 "5a3af034fb1c5c4729a2c1043e032d156531ade94a56f88349df32e43f340be0" => :mojave
-    sha256 "1d97514ed0c474825c6c0b334fa546f8dfbab107031d435b4325e523b46e5de9" => :high_sierra
+    sha256 "bc7dfce2654ad8ac46e0f7e60e5b9a79ec08e0c60e63ba02b4ad5131035764a7" => :catalina
+    sha256 "6e62019f3ef472d09b52a322628d964787de3be3059d54e2879c3d7e166f673f" => :mojave
+    sha256 "b738a55d9ced11569203dcce689e808c8573f00c61c0cbeabf0aa4745c3f8144" => :high_sierra
   end
 
   depends_on "rust" => :build
