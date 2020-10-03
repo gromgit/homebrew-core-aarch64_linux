@@ -7,9 +7,9 @@ class Wsk < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "461c8bd630f1fb80859d16f1ef4ec57ba73990febdada45deb0411b66fca044e" => :catalina
-    sha256 "3082ab49e515fa5b534ee3e8f0de9e90a23d7130d9fbf5f469ea5ef3f40c8bd9" => :mojave
-    sha256 "9ea3a295b2eb7b4f622ec8d6065aa5a9cd50285d83df66453e41d2214de6135c" => :high_sierra
+    sha256 "09b1a197c94b0cfa767e35b26e078d25b4c6935f2a77815ea3ff377a10edee72" => :catalina
+    sha256 "826e4c9d04daf02229f311006f28387d25fc4f282fc9ca53c3fade638bcc6c7a" => :mojave
+    sha256 "cac45056e30af6e9c6d53c0568ab05c865c9aa7206a1b08e4fcf1de4fa48c35f" => :high_sierra
   end
 
   depends_on "go" => :build
