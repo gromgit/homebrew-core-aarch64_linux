@@ -7,9 +7,9 @@ class Samtools < Formula
 
   bottle do
     cellar :any
-    sha256 "53c31e536e1f0a98e2dba30eddb61a782bf14b45ebf12e56973788f3427c1bac" => :catalina
-    sha256 "18abf7b1a130579066fa055116589cfc7ca4d20842408d7038470ebd612e8a85" => :mojave
-    sha256 "b9be0c12847087c47e0a1d9776d77795d35f98ed3373963564453de15c40437a" => :high_sierra
+    sha256 "b078ad37ae8107643fc20e3b2c2a90c229fa80ea087e8f392bb29964bb7b90c6" => :catalina
+    sha256 "4dba7c6bba7c28ff151c98d483c2490c39280f9b4108db057d456f602c193a5d" => :mojave
+    sha256 "dafc393d7128f14fee13b4ebf27cad545154c9b45cda7341a78b03fa340b699a" => :high_sierra
   end
 
   depends_on "htslib"
