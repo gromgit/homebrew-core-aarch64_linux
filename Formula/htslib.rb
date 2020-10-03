@@ -12,9 +12,9 @@ class Htslib < Formula
 
   bottle do
     cellar :any
-    sha256 "15811a81a76e9245f555614843c079350f2e11ab7a043dde180a4b21e19f76a1" => :catalina
-    sha256 "9ffe5808464115e1047a9d352d640eb127335e060314413538588bbfe287db69" => :mojave
-    sha256 "03a7a1b503004ee5cb8df02df54ed0c9030dd57e27a14ccd3a0c6e713fc7e6b2" => :high_sierra
+    sha256 "f28d03e151afa13f70ed32382fe39dfbd519b94684bffc1351e38c928156f678" => :catalina
+    sha256 "e32ece4437430fb982ab295b6efaa9bed569dd5a661adcf1bc4240b48ae72914" => :mojave
+    sha256 "b0fd73dc104edc3fc591a998ce27fe99e8086873b0ac29775532374213225a1f" => :high_sierra
   end
 
   depends_on "xz"
