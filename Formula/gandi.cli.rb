@@ -12,10 +12,10 @@ class GandiCli < Formula
   end
 
   bottle do
-    cellar :any
-    sha256 "22779ab21e92c826c99ade2c24c9a8ebd7b8ab952fcf70b7c3ddd312e0419ee7" => :catalina
-    sha256 "4a0a55dbe51a2c20328b95fc90b8a89f6d4fc6c3118579e78d1a526a0712b351" => :mojave
-    sha256 "987991ebd9c8be956e4e2a358e5bc1310a18f98be561b8ce007b5582d033ba3b" => :high_sierra
+    cellar :any_skip_relocation
+    sha256 "f54b377a3d3b9bf27145ab79de68adea3c5188c499b4e64736b03809d0ad6345" => :catalina
+    sha256 "ea2d35473cd69b8f7b1eda66d31b8ed3365b9513918bf86177c66c1251de9e11" => :mojave
+    sha256 "3888020e1fd0042fdb57bc82340d8d34eb39f098e2748cedb0e423b5f47f7924" => :high_sierra
   end
 
   depends_on "python@3.8"
