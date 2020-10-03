@@ -3,12 +3,6 @@ class Libgccjit < Formula
   homepage "https://gcc.gnu.org/"
   url "https://ftp.gnu.org/gnu/gcc/gcc-10.2.0/gcc-10.2.0.tar.xz"
   sha256 "b8dd4368bb9c7f0b98188317ee0254dd8cc99d1e3a18d0ff146c855fe16c1d8c"
-  bottle do
-    sha256 "4cf030080128753ca81ef1fd8a719435902b9153bc6549e6fa6cdafecebb2f49" => :catalina
-    sha256 "af284969d6667e78eb576672a76ad80e7c23979cfdf91b3daad6873521aed1ba" => :mojave
-    sha256 "c42884567811a2aae043a8fa44cbefe71da5bf2309e5e1489a22034b65736a19" => :high_sierra
-  end
-
   license "GPL-3.0-or-later" => {
     with: "GCC-exception-3.1",
   }
@@ -17,6 +11,12 @@ class Libgccjit < Formula
   livecheck do
     url :stable
     regex(%r{href=.*?gcc[._-]v?(\d+(?:\.\d+)+)(?:/?["' >]|\.t)}i)
+  end
+
+  bottle do
+    sha256 "4cf030080128753ca81ef1fd8a719435902b9153bc6549e6fa6cdafecebb2f49" => :catalina
+    sha256 "af284969d6667e78eb576672a76ad80e7c23979cfdf91b3daad6873521aed1ba" => :mojave
+    sha256 "c42884567811a2aae043a8fa44cbefe71da5bf2309e5e1489a22034b65736a19" => :high_sierra
   end
 
   # The bottles are built on systems with the CLT installed, and do not work
