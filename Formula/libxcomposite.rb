@@ -5,6 +5,13 @@ class Libxcomposite < Formula
   sha256 "b3218a2c15bab8035d16810df5b8251ffc7132ff3aa70651a1fba0bfe9634e8f"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "3b8b0780e6c95393d9a6d56739ecc501b183d462009544c45d89293850c2ccf6" => :catalina
+    sha256 "5332e3ec89bac3372540513a9b54b3ba1d5f4bbe0dfe233d8297a4fbc6168d98" => :mojave
+    sha256 "4571cc99283062d9f242fcad7bbabb32ea687974723eaa0289639d018393ff61" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "libxfixes"
   depends_on "xorgproto"
