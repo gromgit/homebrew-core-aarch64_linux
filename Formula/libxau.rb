@@ -5,6 +5,13 @@ class Libxau < Formula
   sha256 "ccf8cbf0dbf676faa2ea0a6d64bcc3b6746064722b606c8c52917ed00dcb73ec"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "d10771f476b47134c9c3f18a33fb4d4d86c37e2a4d6dbbc87c13b7ffd06c7248" => :catalina
+    sha256 "3a34b529a2092bf1aaffc6603056871c2b0c4b8bd1fe728a14ae6b35e8cf3f77" => :mojave
+    sha256 "15522122382cdc3e364167c71835e4885a0241189be938853cc4744f38e82aa0" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "util-macros" => :build
   depends_on "xorgproto"
