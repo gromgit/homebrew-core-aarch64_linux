@@ -1,8 +1,8 @@
 class ClawsMail < Formula
   desc "User-friendly, lightweight, and fast email client"
   homepage "https://www.claws-mail.org/"
-  url "https://www.claws-mail.org/releases/claws-mail-3.17.6.tar.gz"
-  sha256 "8577673a8c238dc5c4481ca2b10373907995a340d3b8826f77b598601afadc70"
+  url "https://www.claws-mail.org/releases/claws-mail-3.17.7.tar.gz"
+  sha256 "47e634fcea55f08bd401849c7a3827f8a4a277fda15788961ff0aac5d59ecc38"
 
   bottle do
     sha256 "eab9985ac951a1e4f34b50c8bd1958a750ff3d7340927ae3df5918c65bb7ca98" => :catalina
