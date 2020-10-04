@@ -5,6 +5,13 @@ class Libxfont < Formula
   sha256 "1a7f7490774c87f2052d146d1e0e64518d32e6848184a18654e8d0bb57883242"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "0321fea5b7329575b6d4b3ed762d741309c329c74df6a9ae2693667828e9a1da" => :catalina
+    sha256 "68cfb860815eedac8d96bb1853a64a12c3cc77bcc0e99ffbd693666b2bfb9119" => :mojave
+    sha256 "54fe9ff4143205d5d14a416f276193c4f9f5dc83898a057823462ac78c8de891" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "util-macros" => :build
   depends_on "xtrans" => :build
