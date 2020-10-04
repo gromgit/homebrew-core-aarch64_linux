@@ -4,6 +4,7 @@ class YelpTools < Formula
   url "https://download.gnome.org/sources/yelp-tools/3.38/yelp-tools-3.38.0.tar.xz"
   sha256 "607ce4b3ee8517c42db924a01a78660a03317595c75825731ea86a920e2b04b0"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url :stable
@@ -25,8 +26,8 @@ class YelpTools < Formula
   depends_on "gtk+3"
 
   resource "yelp-xsl" do
-    url "https://download.gnome.org/sources/yelp-xsl/3.38/yelp-xsl-3.38.0.tar.xz"
-    sha256 "13bcc2011c4c55384174d18c7b2f0015a96b04efd24f3f646af2e7167e7ab0d7"
+    url "https://download.gnome.org/sources/yelp-xsl/3.38/yelp-xsl-3.38.1.tar.xz"
+    sha256 "b321563da6ab7fa8b989adaf1a91262059696316b4ddca2288fddcfed8dcdf67"
   end
 
   def install
