@@ -5,6 +5,13 @@ class Libdmx < Formula
   sha256 "253f90005d134fa7a209fbcbc5a3024335367c930adf0f3203e754cf32747243"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "89fc7b694d6e0d2bd786f053bf9f8bb8aa2005f99319e6a75fad30dfcff7b831" => :catalina
+    sha256 "53a22f968698ff43bd3e483a77cc1c1a1b9bcc4ef3cbdfc6ffa5039d7e6af6b1" => :mojave
+    sha256 "d4b4e652d95db58f17afbf8d061cc161982b3726da03f403a05c14c8b99558a4" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "libx11"
   depends_on "libxext"
