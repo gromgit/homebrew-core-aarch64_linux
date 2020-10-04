@@ -5,6 +5,13 @@ class Libxcb < Formula
   sha256 "a89fb7af7a11f43d2ce84a844a4b38df688c092bf4b67683aef179cdf2a647c4"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "d94e980a6cbea6f1691809e9b504bf51b3c28d869f18f398f11fcfdabc7849e3" => :catalina
+    sha256 "c69762de3172dc88faf98a4c00f8db90ab1a367f722317d7cfa2f25b5c9aee6b" => :mojave
+    sha256 "dfb4fc4f1163c08754f4677d37e6385eea69328be7c5ce89d18a40bc1307eb49" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "python@3.8" => :build
   depends_on "xcb-proto" => :build
