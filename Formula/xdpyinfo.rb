@@ -5,6 +5,13 @@ class Xdpyinfo < Formula
   sha256 "30238ed915619e06ceb41721e5f747d67320555cc38d459e954839c189ccaf51"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "d0bfd330052a61271d604640de4f6e44b277a41ab8eec0cc9b6c5a75e649002a" => :catalina
+    sha256 "b14c61c161037be3f2913d6a7ffcdc3bc415f244718d813608c866602d9fd198" => :mojave
+    sha256 "6e069524d654b3f89ec300b5516b12360e2f713786f01a2597e7210c18b69dcf" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "libx11"
   depends_on "libxcb"
