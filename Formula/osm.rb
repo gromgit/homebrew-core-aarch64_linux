@@ -7,9 +7,9 @@ class Osm < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "1d919080c06f48497aa61afa3218a14e16deb130de69237b55e9d55c18bd9cd5" => :catalina
-    sha256 "6d61028e903da81e664ee9994c3948353303d52212f1c1e894af0baa15b259ca" => :mojave
-    sha256 "08c329ad3fa81cd0da5e94015d462c35cb7764f7a1e490bdac51e8d3021ebbb3" => :high_sierra
+    sha256 "e4e2e346746e54ff6b612e9b632de739c363c4268eb88f0eeeec63a380443b5d" => :catalina
+    sha256 "e7a1164c06c7f237c41fffdc3cd6ad7d93f9d7b18dd5fdea891f3ce04e251abf" => :mojave
+    sha256 "41559e91e5218b4b6c3356502c4c006ed5cea510a6eaf96bbcbbaa4205abea04" => :high_sierra
   end
 
   depends_on "go" => :build
