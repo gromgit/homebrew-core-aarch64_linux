@@ -5,6 +5,13 @@ class Libxshmfence < Formula
   sha256 "b884300d26a14961a076fbebc762a39831cb75f92bed5ccf9836345b459220c7"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "b6edc10c83f07c28fdece7c98b9be2e7c85518b0357311874c5bd5cca1217922" => :catalina
+    sha256 "9ba60796d9101ebe5fe01d5fcbbc7f685fa8619fc0ba51004b0fd68488af47c4" => :mojave
+    sha256 "ed7509cbecb38ec5fb75ae80de12248c8d25b931cbaff12f94f3566d05b77238" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "xorgproto" => :build
 
