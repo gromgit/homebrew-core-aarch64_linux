@@ -13,9 +13,9 @@ class Cdk8s < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "1f51d3bf8fc9522bc19e7ae8b2b17cc3caf9ea0a2eb1c498ba5f52ab24096e2a" => :catalina
-    sha256 "e6bb0b698277c6ff53b7d12aaacb2e355e8f9755f0c88f11fa64ad00b8dca964" => :mojave
-    sha256 "4330280fe6cd0212020f3a877b54f81fa48da9b79c1d4586e0471f5182d2aadb" => :high_sierra
+    sha256 "9aa9e251872a6ed43dbaf3c06b761779286f8f10608775d23c6789197470cf98" => :catalina
+    sha256 "119db77f81ff73cdcc0deb457b711565c4c4b7f8d69e45f140f99916a571486a" => :mojave
+    sha256 "254e068917bcbacf60c9dac975e01c304a1913ba0d8be43257cbc933f321885d" => :high_sierra
   end
 
   depends_on "node"
