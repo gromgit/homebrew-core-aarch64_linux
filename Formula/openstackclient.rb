@@ -13,9 +13,9 @@ class Openstackclient < Formula
 
   bottle do
     cellar :any
-    sha256 "286bfe5a812dabcd8517bb5ccb9fc742985763cead4c54ac32db0e3c18deea12" => :catalina
-    sha256 "ed9233b480a711ef0669bd29931574decfee9f363a8b73ce4c7f12a210bab872" => :mojave
-    sha256 "6d3e12e6336f964c55726053ab33e50116574b7b165e00319526940f176123a5" => :high_sierra
+    sha256 "ca6b8383c8de2a27a211cc3d7d9bade73ef515e822d35a5f552ee1cc33202e35" => :catalina
+    sha256 "78e06438c8ab89beb4d576a85ec290bce34671a6ee1330d1524bd101af9fa908" => :mojave
+    sha256 "91a1961fb31d29f36ae859de770845d8c1d7d1c6fb7a2e5a8a77996900c33b28" => :high_sierra
   end
 
   depends_on "python@3.8"
