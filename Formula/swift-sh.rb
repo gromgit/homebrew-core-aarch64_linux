@@ -8,8 +8,8 @@ class SwiftSh < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "aeab9b696171e5a0e10896be70317618f096ef5024c2ab73b286a9a958466251" => :catalina
-    sha256 "7568e6bb0d39e6ec5582f5e135507fce1cecc3b0ea0706aaa94a8e866a992367" => :mojave
+    sha256 "cb5374c2f8d5fddd23d181f7148b4a5f37ee82b70fd96e2344d58acfef3dbed5" => :catalina
+    sha256 "949500fc6f95cb490bcf848b000d7321b4ea0d9e0a67e8e31898c11cec08f1a8" => :mojave
   end
 
   depends_on xcode: ["11.0", :build]
