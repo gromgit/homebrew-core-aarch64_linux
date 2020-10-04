@@ -8,10 +8,9 @@ class Hsd < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 "dbd50284d8546d83bbe30663b99eeb5244fad4c0fedac0e673772b99300e0967" => :catalina
-    sha256 "051254fac8a90d4069a7da8a56e17b16b926083d74bf699b34ab71d0c815bd81" => :mojave
-    sha256 "0420b2d3785703c26a0c02f873d08463795e0bcee43a5f3bf871b28a7901ba40" => :high_sierra
+    sha256 "1313e41c8cc2c88a884e39cead4de454d30a688a69102357f39f12d40d4cd005" => :catalina
+    sha256 "5963bdc9f5d671e661074a29d9ad58a6aa33ba781ea29d48dce359758d7a3bb0" => :mojave
+    sha256 "96d2753d93d0ec184fcbf821c71d1517710cdeb28219198bcc730ab9b6748490" => :high_sierra
   end
 
   depends_on "python@3.8" => :build
