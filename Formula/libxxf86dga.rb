@@ -5,6 +5,13 @@ class Libxxf86dga < Formula
   sha256 "2b98bc5f506c6140d4eddd3990842d30f5dae733b64f198a504f07461bdb7203"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "15c9455a9f38b82ed8d6254ed5316426426fa5ae1451f3f0261adaf4c44f8c05" => :catalina
+    sha256 "0c6b3b1caa96edeb68748295ecfd60001e50cffe3275dc156534d955bfc4951a" => :mojave
+    sha256 "6d5cc78dafe39697dc39b8b061c74bff94046f9bf9819eded1c6575a5c4b9f4c" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "xorgproto" => :build
   depends_on "libx11"
