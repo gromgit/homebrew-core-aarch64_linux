@@ -5,6 +5,13 @@ class Libxrender < Formula
   sha256 "c06d5979f86e64cabbde57c223938db0b939dff49fdb5a793a1d3d0396650949"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "cb7f48876d362f919ed1c34ece8ec5abb16f6e414a6119655e3948fffab5dfab" => :catalina
+    sha256 "77563596957d673a9f4acb0cb4f1e1d28c3b99e7f4a13f0a1dd1e3e403c454b9" => :mojave
+    sha256 "b1bf08a6c6c6827af5a3472ac979c9328b780da52c1d234d385ef1fc3b0771b6" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "libx11"
   depends_on "xorgproto"
