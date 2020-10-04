@@ -5,6 +5,13 @@ class Libxaw3d < Formula
   sha256 "2dba993f04429ec3d7e99341e91bf46be265cc482df25963058c15f1901ec544"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "e089705cc442b4076b7d3b9bc86a1379eb193b73cb57387d04809411876eb755" => :catalina
+    sha256 "b5510c021114d1579116242eb88f4fbd6a9fd3d3a61292a17d6158c02ac71194" => :mojave
+    sha256 "ccf2fd19db504f82ab9f280525a879bd0669934a51cdc69003238d0626735b52" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "util-macros" => :build
   depends_on "libx11"
