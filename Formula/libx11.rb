@@ -5,6 +5,12 @@ class Libx11 < Formula
   sha256 "9cc7e8d000d6193fa5af580d50d689380b8287052270f5bb26a5fb6b58b2bed1"
   license "MIT"
 
+  bottle do
+    sha256 "2d5fbc66d1462c668875a60334fe67573f3502f00b0d5dae132b2d3af2cbaa48" => :catalina
+    sha256 "06e1c91602f542b78e514f66dec29664f44dab568c0e189254d82633eef11138" => :mojave
+    sha256 "5765a0de3d1ab8e5830e8c53c403b0cee9d4ebf5dcec9cc6dba6f73c9ef99b51" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "util-macros" => :build
   depends_on "xtrans" => :build
