@@ -18,6 +18,8 @@ class Libxkbcommon < Formula
   depends_on "pkg-config" => :build
   depends_on :x11
 
+  uses_from_macos "libxml2"
+
   def install
     mkdir "build" do
       system "meson", *std_meson_args, "-Denable-wayland=false", "-Denable-docs=false", ".."
