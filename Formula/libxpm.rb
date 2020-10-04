@@ -5,6 +5,13 @@ class Libxpm < Formula
   sha256 "fd6a6de3da48de8d1bb738ab6be4ad67f7cb0986c39bd3f7d51dd24f7854bdec"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "53865d3b3d752c71525a40db99851580b5d979f7b722b0bf361d923e33a39ea5" => :catalina
+    sha256 "9b34b6b7ca85c9e0082b823d31e82094c5b7106e7d3af1e8cba33fc994b54382" => :mojave
+    sha256 "32c76e168d128d34dea14d51c422888fab28c3db1ecad10fc5bd457afe239b8a" => :high_sierra
+  end
+
   depends_on "gettext" => :build
   depends_on "pkg-config" => :build
   depends_on "gettext"
