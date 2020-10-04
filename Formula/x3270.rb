@@ -11,9 +11,9 @@ class X3270 < Formula
   end
 
   bottle do
-    sha256 "1207876192b9bd7bcf06c7811cb376426e47028027a47718dc32224972352e80" => :catalina
-    sha256 "d2d31ed1a62515d6acd00b2d3fa72a821b1d94bb13b581830e30664fe72f2626" => :mojave
-    sha256 "c68394dce8fc34be49786ebfd1c0beb914b1f894611fc97163ca5a3097967151" => :high_sierra
+    sha256 "910cfb45bab78112705869fd8bb3fac970d0bd84194ab9555635ff484d355bcb" => :catalina
+    sha256 "99fbe83bf0dfbfab1f11b536608d02cd93d530eca7f0ec72ebde4d4424293444" => :mojave
+    sha256 "e30468e4081beeab927279e9317f30107db6391ac4e8f9f5334d2ecc0e8e57e2" => :high_sierra
   end
 
   depends_on "readline"
