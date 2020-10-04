@@ -5,6 +5,13 @@ class Libice < Formula
   sha256 "6f86dce12cf4bcaf5c37dddd8b1b64ed2ddf1ef7b218f22b9942595fb747c348"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "4c5c97814304360fdaeec959107e79e9fdb62ba151159ca55342944efec4bd82" => :catalina
+    sha256 "d7249247483e6ee2787e66c7f887a7df52aedd5abd2558ae377b5d16e3b6275e" => :mojave
+    sha256 "b5f1f14bc4fd8d18fd19b2552ddc898f53f573015de0706289de54c177b16eb4" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "xtrans" => :build
   depends_on "xorgproto"
