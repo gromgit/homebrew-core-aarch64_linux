@@ -5,6 +5,13 @@ class Libfs < Formula
   sha256 "c8e13727149b2ddfe40912027459b2522042e3844c5cd228c3300fe5eef6bd0f"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "6ccad0f27601c96ffffac5229d5a25c0ece882b0faf626ae115dfd57a1ac09cb" => :catalina
+    sha256 "b8edb6c54600c14a791a33e7997927d394254b1212ea646ac786a667db263921" => :mojave
+    sha256 "f62ce9b989c58747a5b5764478cab8acdf021b60d2a6d306547605305ad41f04" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "xtrans" => :build
   depends_on "xorgproto"
