@@ -5,6 +5,13 @@ class Libxscrnsaver < Formula
   sha256 "f917075a1b7b5a38d67a8b0238eaab14acd2557679835b154cf2bca576e89bf8"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "d90c91c9058ec7f2bcac9b2b9b83a5dd76096acd88d09c93edee9abaa02707a5" => :catalina
+    sha256 "f57eb48a438ab0556e3401ba7b0b049392d11faa2de214ab533e9d444cbf65f2" => :mojave
+    sha256 "44c025315c63c131e89f1fbb4949a0bae4b56bc76ea9e2db320c058e245a3e43" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "libx11"
   depends_on "libxext"
