@@ -5,6 +5,12 @@ class Libxaw < Formula
   sha256 "8ef8067312571292ccc2bbe94c41109dcf022ea5a4ec71656a83d8cce9edb0cd"
   license "MIT"
 
+  bottle do
+    sha256 "cdaab6ac0ae83f6c7fd615f00f1ac9d4111d7912b4d4c3f1d6065f7bc3735485" => :catalina
+    sha256 "d62b47d62a98b1e98d674ee06861dd7d0a2d52ae177df35e10efc850b94f0147" => :mojave
+    sha256 "1c6e777ab323b157620636022ac3f19bf83c39fa3ee97768b52c82abaa870281" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "libx11"
   depends_on "libxext"
