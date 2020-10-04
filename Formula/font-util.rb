@@ -5,6 +5,13 @@ class FontUtil < Formula
   sha256 "3ad880444123ac06a7238546fa38a2a6ad7f7e0cc3614de7e103863616522282"
   license "MIT"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "3b1ccaebd2a3efc9cd2daac2e9e740362349a1847e4c169ebe3d475ff3b31a8d" => :catalina
+    sha256 "c606e6261604b92184fad13ea3fa0cdf377fe09bd3280389ae3c2b32b15b4785" => :mojave
+    sha256 "e5a86e6341ec516e06c3c22cc347ef5329add351e8aeb1f3aac3cf981dd81d51" => :high_sierra
+  end
+
   depends_on "pkg-config" => [:build, :test]
   depends_on "util-macros" => :build
 
