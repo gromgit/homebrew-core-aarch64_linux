@@ -5,6 +5,13 @@ class Libsm < Formula
   sha256 "2d264499dcb05f56438dee12a1b4b71d76736ce7ba7aa6efbf15ebb113769cbb"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "0cfe06bc49f376e5f770e378097ecf7e261db7d4b3c51740ddfcb86df36815af" => :catalina
+    sha256 "35cca1d4348481da2d35f1c91882e9b32604480a15b679efed3209f74ff8d78b" => :mojave
+    sha256 "927db02bae25120237de025a8219899d9ed69d8f4669c6662e170a4e0ce9eee2" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "xtrans" => :build
   depends_on "libice"
