@@ -5,6 +5,13 @@ class Libxmu < Formula
   sha256 "9c343225e7c3dc0904f2122b562278da5fed639b1b5e880d25111561bac5b731"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "ff33cd2f865f77d04ad861dd5e10784842511050c754e9bd772ab81b2e1c6918" => :catalina
+    sha256 "a437eedd57edefe94c7a4d7cb30ac03d5ea6852f7a6ba6be33e12c839cde6ac6" => :mojave
+    sha256 "24ca27eaf60f6dfe9d35d61ff4edc5ba7b9e04e3d9efc9938fe5eb905057c8e6" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "libxext"
   depends_on "libxt"
