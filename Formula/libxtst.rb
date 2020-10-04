@@ -5,6 +5,13 @@ class Libxtst < Formula
   sha256 "4655498a1b8e844e3d6f21f3b2c4e2b571effb5fd83199d428a6ba7ea4bf5204"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "f92434b774fd9e3907c2cd1c1da713ac5d96b1b1f849499ac6e9de931ea351c2" => :catalina
+    sha256 "ab324bbaded049ed3c6aa72eb768df8d6c20e1c98be3d56f9568ed56be5a9c26" => :mojave
+    sha256 "e8d0a57e80cd57e9dbb1034bbcac52ca03812a627cd42e086f73db077ce707e8" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "util-macros" => :build
   depends_on "libxi"
