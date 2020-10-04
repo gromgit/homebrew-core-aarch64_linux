@@ -5,9 +5,9 @@ class ClawsMail < Formula
   sha256 "47e634fcea55f08bd401849c7a3827f8a4a277fda15788961ff0aac5d59ecc38"
 
   bottle do
-    sha256 "eab9985ac951a1e4f34b50c8bd1958a750ff3d7340927ae3df5918c65bb7ca98" => :catalina
-    sha256 "29e33f59611554615ea37a1954445a8b8ad6290cbb344c7039512fd60197580a" => :mojave
-    sha256 "7cf466e982da9464c1393e1d8e3bb0610581423639358466b265db6acadc2b23" => :high_sierra
+    sha256 "7777390cfea96a30277ebb79738341f0944bae3dcfd18a7befd2748ea4671356" => :catalina
+    sha256 "6a7264ed191bcfdc7ae1b1c1020a09b3d9b224e61b45c876cc047db181a225cb" => :mojave
+    sha256 "3d5c69c7654a22c8b51d3a7bf18224a40fade38281bb4c4fb4287221b3ca19ee" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
