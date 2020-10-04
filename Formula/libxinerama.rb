@@ -5,6 +5,13 @@ class Libxinerama < Formula
   sha256 "0008dbd7ecf717e1e507eed1856ab0d9cf946d03201b85d5dcf61489bb02d720"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "7a008044d1824d0585b13cba7021ec038bda6485a8789337cd6a9fd305b83233" => :catalina
+    sha256 "c69df5fe02995fbbf085b26da9ae1af4b890b2d57d1e8d115253706486297e5f" => :mojave
+    sha256 "27a945b6652dd0c36b3360ca55de687dd350feca08fc0e32bafe71d06edca377" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "libx11"
   depends_on "libxext"
