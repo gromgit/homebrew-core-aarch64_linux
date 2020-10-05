@@ -3,8 +3,8 @@ class Scour < Formula
 
   desc "SVG file scrubber"
   homepage "https://www.codedread.com/scour/"
-  url "https://github.com/scour-project/scour/archive/v0.38.tar.gz"
-  sha256 "565d52331b40793f038a2725fcc3ee53539d9ef287d582b7c305789cb1d503eb"
+  url "https://github.com/scour-project/scour/archive/v038.1.tar.gz"
+  sha256 "0d2f88170305d54b143410276ff84da98e3ae9c36abe52430d9c2b510fa77884"
   license "Apache-2.0"
   head "https://github.com/scour-project/scour.git"
 
