@@ -1,10 +1,9 @@
 class Syncthing < Formula
   desc "Open source continuous file synchronization application"
   homepage "https://syncthing.net/"
-  url "https://github.com/syncthing/syncthing/archive/v1.9.0.tar.gz"
-  sha256 "ca66e0929428db2ed9476ff8ef4d46b06c5221a5aa24db504cdb2cd1aebe5ac6"
+  url "https://github.com/syncthing/syncthing/archive/v1.10.0.tar.gz"
+  sha256 "9baacd5383e36696d5ecf467536659c5e4beb12caf2126da29a92bd423277a46"
   license "MPL-2.0"
-  revision 1
   head "https://github.com/syncthing/syncthing.git"
 
   livecheck do
