@@ -7,9 +7,9 @@ class Libxpm < Formula
 
   bottle do
     cellar :any
-    sha256 "53865d3b3d752c71525a40db99851580b5d979f7b722b0bf361d923e33a39ea5" => :catalina
-    sha256 "9b34b6b7ca85c9e0082b823d31e82094c5b7106e7d3af1e8cba33fc994b54382" => :mojave
-    sha256 "32c76e168d128d34dea14d51c422888fab28c3db1ecad10fc5bd457afe239b8a" => :high_sierra
+    sha256 "fbd3f2bbf058c081bd35672c0129a33efa38b7e599726be145d0b8b818549516" => :catalina
+    sha256 "c3f788d5e8d2f0ec940af7c758acc0efce194cf526b19ab64bdeaba55e1b6793" => :mojave
+    sha256 "72d7dc1306010048b85b9070287e8c9d5f5a24308b1a413080a4e129aa9bcc0f" => :high_sierra
   end
 
   depends_on "gettext" => :build
