@@ -4,7 +4,7 @@ class Coreutils < Formula
   url "https://ftp.gnu.org/gnu/coreutils/coreutils-8.32.tar.xz"
   mirror "https://ftpmirror.gnu.org/coreutils/coreutils-8.32.tar.xz"
   sha256 "4458d8de7849df44ccab15e16b1548b285224dbba5f08fac070c1c0e0bcc4cfa"
-  license "GPL-3.0"
+  license "GPL-3.0-or-later"
 
   livecheck do
     url :stable
