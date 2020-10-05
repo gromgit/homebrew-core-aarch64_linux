@@ -4,6 +4,7 @@ class Shtools < Formula
   url "https://github.com/SHTOOLS/SHTOOLS/archive/v4.7.1.tar.gz"
   sha256 "6ed2130eed7b741df3b19052b29b3324601403581c7b9afb015e0370e299a2bd"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/SHTOOLS/homebrew-shtools.git"
 
   bottle do
@@ -15,6 +16,7 @@ class Shtools < Formula
 
   depends_on "fftw"
   depends_on "gcc"
+  depends_on "openblas"
 
   def install
     system "make", "fortran"
@@ -37,7 +39,7 @@ class Shtools < Formula
                    "LIBPATH=#{HOMEBREW_PREFIX}/lib",
                    "LIBNAME=SHTOOLS",
                    "FFTW=-L #{HOMEBREW_PREFIX}/lib -lfftw3 -lm",
-                   "LAPACK=-framework accelerate",
+                   "LAPACK=-L #{Formula["openblas"].opt_lib} -lopenblas",
                    "BLAS="
   end
 end
