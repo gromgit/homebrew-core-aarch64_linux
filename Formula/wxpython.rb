@@ -5,6 +5,7 @@ class Wxpython < Formula
   homepage "https://www.wxpython.org/"
   url "https://files.pythonhosted.org/packages/cb/4f/1e21d3c079c973ba862a18f3be73c2bbe2e6bc25c96d94df605b5cbb494d/wxPython-4.1.0.tar.gz"
   sha256 "2e2475cb755ac8d93d2f9335c39c060b4d17ecb5d4e0e86626d1e2834b64a48b"
+  license "LGPL-2.0-or-later" => { with: "WxWindows-exception-3.1" }
 
   livecheck do
     url :stable
