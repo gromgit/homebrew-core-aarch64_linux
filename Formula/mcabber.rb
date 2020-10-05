@@ -1,8 +1,8 @@
 class Mcabber < Formula
   desc "Console Jabber client"
   homepage "https://mcabber.com/"
-  url "https://mcabber.com/files/mcabber-1.1.1.tar.bz2"
-  sha256 "d789ceb33eaa78967c172241e941d43f91300ee0235a33f826f3df6f1163f959"
+  url "https://mcabber.com/files/mcabber-1.1.2.tar.bz2"
+  sha256 "c4a1413be37434b6ba7d577d94afb362ce89e2dc5c6384b4fa55c3e7992a3160"
   license "GPL-2.0-or-later"
 
   bottle do
