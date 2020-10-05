@@ -8,9 +8,9 @@ class Carrot2 < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "a194d103ec94747cc1ff6b1c3d1dff55cb1881cd2abef6bd136d9e051d8318a9" => :catalina
-    sha256 "a10345d4b2edbecaedf57600101130e74d61c0bea18a9a8fb3eb5d07de32b5ee" => :mojave
-    sha256 "2e91d4f0ad08292b172485246c853214d930f32ff3980fbaf5021522efa4493b" => :high_sierra
+    sha256 "36f1ecc38e5125f43c5d5340d1668352113ba3cd4b19c7bf24bc8c0ff8395ec8" => :catalina
+    sha256 "06e88e39d7dbc37fcf7d9076f0aaea14e45976e71ab899001562fc4781ce3a2c" => :mojave
+    sha256 "79fbefd0c225c020c1704f4bd7250f80765c856a91cf6ff049b46ab6e6dc2351" => :high_sierra
   end
 
   depends_on "gradle" => :build
