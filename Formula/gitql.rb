@@ -5,6 +5,13 @@ class Gitql < Formula
   sha256 "bf82ef116220389029ae38bae7147008371e4fc94af747eba6f7dedcd5613010"
   license "MIT"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "fbeb1c5d3f24eab8d0cb038fbba6f2900cab2dac9541826f301038f30656b6dd" => :catalina
+    sha256 "362e70cce840cb4fd4df93de474047957e08bc5e522801d74756840caf3846f9" => :mojave
+    sha256 "d382fa5dd8e22697cb6aea88970c532a2e8c6919d25ed5ed2a0c7ba5fea61eaf" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
