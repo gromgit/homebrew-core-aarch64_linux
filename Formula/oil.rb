@@ -13,8 +13,6 @@ class Oil < Formula
   end
 
   def install
-    # Disable hardcoded HAVE_EPOLL, unsupported in macOS
-    inreplace "Python-2.7.13/pyconfig.h", /^(#define HAVE_EPOLL .*)$/, '/* \1 */'
     system "./configure", "--prefix=#{prefix}"
     system "make"
     system "./install"
