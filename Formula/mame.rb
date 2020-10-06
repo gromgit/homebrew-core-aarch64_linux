@@ -1,9 +1,9 @@
 class Mame < Formula
   desc "Multiple Arcade Machine Emulator"
   homepage "https://mamedev.org/"
-  url "https://github.com/mamedev/mame/archive/mame0224.tar.gz"
-  version "0.224"
-  sha256 "3518e71ec20fbeac8ebe93f8ec856078b8288e19f0d7cb38959d4bde30cd2810"
+  url "https://github.com/mamedev/mame/archive/mame0225.tar.gz"
+  version "0.225"
+  sha256 "ca4d5a429d72b30fd2bdf60350e490c7de4ac64b1e0dafcf38450f8ba84a1a95"
   license "GPL-2.0-or-later"
   head "https://github.com/mamedev/mame.git"
 
@@ -57,7 +57,7 @@ class Mame < Formula
     bin.install "mame64" => "mame"
     cd "docs" do
       # We don't convert SVG files into PDF files, don't load the related extensions.
-      inreplace "source/conf.py", "'sphinxcontrib.rsvgconverter'", ""
+      inreplace "source/conf.py", "'sphinxcontrib.rsvgconverter',", ""
       system "make", "text"
       doc.install Dir["build/text/*"]
       system "make", "man"
