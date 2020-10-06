@@ -9,7 +9,7 @@ class Bartycrouch < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "78315575edd2d5854799d610582a9bf8a3123cbf3f41054ffcb48a28d344a55c" => :catalina
+    sha256 "aa2777a08e4d1a12340638678c4652b4ab5d5aa6f7db2917e7c907550d524119" => :catalina
   end
 
   depends_on xcode: ["12.0", :build]
