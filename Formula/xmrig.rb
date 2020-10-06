@@ -12,9 +12,9 @@ class Xmrig < Formula
   end
 
   bottle do
-    sha256 "f3368e208018fde51123f51b9d9abbc0de637d389d191fcae09912e2169b4c6a" => :catalina
-    sha256 "7f1b7166a123eafef64bb7014ec0aacc1958d166ec8f7b7c92ea3f8a0590dc84" => :mojave
-    sha256 "16eb40efe1de2f5ad0a2882fc2e0d79e5dddbc6c2f8f38697a092dda377cb166" => :high_sierra
+    sha256 "bf839a1e2b68a4e997f45150ccfebcf29d3b8488bb64ed1b65e20ef956eb4cad" => :catalina
+    sha256 "cea8208f23d797f08075b2c2acdd1cbba4a1f0327814f391c87541d60b8364f8" => :mojave
+    sha256 "61c0f29b83498c0fe5c55d3593c495681844d5abb10133e73a8473604ed138cd" => :high_sierra
   end
 
   depends_on "cmake" => :build
