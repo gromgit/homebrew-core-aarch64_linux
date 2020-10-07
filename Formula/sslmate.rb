@@ -11,9 +11,9 @@ class Sslmate < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "39df7966fbc2d8ddf054fca99456e3f5837b78c849bacc25fd40a0ae9e48bb60" => :catalina
-    sha256 "39df7966fbc2d8ddf054fca99456e3f5837b78c849bacc25fd40a0ae9e48bb60" => :mojave
-    sha256 "39df7966fbc2d8ddf054fca99456e3f5837b78c849bacc25fd40a0ae9e48bb60" => :high_sierra
+    sha256 "91ed7cfa14d48f01dae1c4d5d672ee43a0b3e769b938a1a6d53d8e2ba31df379" => :catalina
+    sha256 "39507ab1185187781a82869d1604f24f75cee165c64671ce7d003fac75e343db" => :mojave
+    sha256 "5833c9efa844a9ba89f435581700186842dd484aed4a3f9e62bb92199e1ae906" => :high_sierra
   end
 
   depends_on "python@3.9"
