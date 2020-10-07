@@ -16,9 +16,9 @@ class AwscliAT1 < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "6d05990b015c8f9147be02fa497a6acf595bfd927d4287e653416300051db8af" => :catalina
-    sha256 "987950fde49cf449d1136a8ee75014b8c25ef0a5f2b843edf0edceb5c802ecca" => :mojave
-    sha256 "3fbeacd2bf5c87efadc00db85aa8726235231ab0792ad77077a917033937bda1" => :high_sierra
+    sha256 "d4249768aa663f0c4651cd5778214ede273834ce9aa789aa6823602a9d39c111" => :catalina
+    sha256 "2df344ffa3a3149e1f7ab185172ab6d1fa16afae3ce6ef3afcf7ae132168509e" => :mojave
+    sha256 "74e615056a8bd6e5f2898325fd7514a1577a6d281bbda730c9de1f1ae89179d7" => :high_sierra
   end
 
   keg_only :versioned_formula
