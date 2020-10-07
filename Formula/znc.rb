@@ -7,9 +7,9 @@ class Znc < Formula
   revision 1
 
   bottle do
-    sha256 "0b02e44228df2fb44db94b8dd34e084f597ecc6d01885942df5aebbd5a9a87e5" => :catalina
-    sha256 "cdded48a2efbd597eb87f74f6deb62e8efc5db435ab448142313347d96629db9" => :mojave
-    sha256 "6674bc79049906362368dd5e942991229e02cec51d53ba90d38c22d8a81b140f" => :high_sierra
+    sha256 "0968a0d12ce30428023911e4074b276b1d5e80f689fabf5cdb4ff72a3f57e721" => :catalina
+    sha256 "476fe82c16953d5e0645f59128e8dd86cb1cba86bb798a483d2b3ef394b8e28e" => :mojave
+    sha256 "512c83a43b82c84dc773a603e3ccc21f1f315fd8bcef1e259cc4a50c46359e2e" => :high_sierra
   end
 
   head do
