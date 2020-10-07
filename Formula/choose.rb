@@ -9,10 +9,9 @@ class Choose < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "add76ddd5165ad17bfc784dff7237777eac7ee898379bd55d76228e6f6897d6d" => :catalina
-    sha256 "74170f2582ab4a29bffcc34583017f97f39c5b600a5f5cfebacd6d66ecd5c818" => :mojave
-    sha256 "388b64e8072a54f01006ab9cad297789eda36fe0bec83b45759cfe80dbf8cb2c" => :high_sierra
+    sha256 "086ebca8f9bff4d065e788c9076bfe204b958f96b8da0cce142f3c890c38cb75" => :catalina
+    sha256 "bef5f7490cf4a45398bfdef4867163957675227e74bab1494ea0da56cda2cda6" => :mojave
+    sha256 "f860816e00292d161ed6f6617cef47c3297eb91e9231f3c125ce12b16ad7d220" => :high_sierra
   end
 
   depends_on "python@3.9"
