@@ -12,9 +12,9 @@ class PythonYq < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "14367444c4678afdef3b135fe1cac576c87dfa70b30f15262a38e22692c12d3c" => :catalina
-    sha256 "74be260f3b475b0117ddaa1ea78bcc2d29f45cecd6e72e829ba2a19720760ca1" => :mojave
-    sha256 "1d99de9b25e693959ee8d30f9181d541a74348b951e6b795899c2b08fdca66d7" => :high_sierra
+    sha256 "45289e8520aa9dced6210c1fa4baa69042f9d15ca49b89dc21659c6f49311df8" => :catalina
+    sha256 "511b92444a1adc14910119fecb575d45bb2f4293309b9097cf66f6d610a98a23" => :mojave
+    sha256 "629339b0b95e4d92e9f14122efd7d497738bab9355e4b9679db56b0dbbc29632" => :high_sierra
   end
 
   depends_on "jq"
