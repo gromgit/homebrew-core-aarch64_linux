@@ -5,6 +5,13 @@ class GitHound < Formula
   sha256 "32f79f470c790db068a23fd68e9763b3bedc84309a281b4c99b941d4f33f5763"
   license "MIT"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "b800dc830647b0806200364a0b242c64cef639618a5ccc9268f3333f3a645802" => :catalina
+    sha256 "6bfbbe48552eaa75d5fd861c1feb9bd21a5d47c1718f4295ce469062965311de" => :mojave
+    sha256 "5951f740815c5e38e8d0a97270bf867f99cb0a2ea2ec9ee3cc4b4ccba5ee96fd" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
