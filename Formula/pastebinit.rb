@@ -12,9 +12,9 @@ class Pastebinit < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "088a0565e08ea4beced3319aff9ebc0fa97101be72c9e54f34c603ee3c501c80" => :catalina
-    sha256 "088a0565e08ea4beced3319aff9ebc0fa97101be72c9e54f34c603ee3c501c80" => :mojave
-    sha256 "088a0565e08ea4beced3319aff9ebc0fa97101be72c9e54f34c603ee3c501c80" => :high_sierra
+    sha256 "f24d4dbd9723f5726c7786af82cd16df86485ea3ae075906531f82d0544ec688" => :catalina
+    sha256 "d2195934de64bf7814790b59d2429b90cb58e492f13f08430958b82ec3bd652d" => :mojave
+    sha256 "4ca0432c7652ab49ee0f61823335d0e0ea70caaf220f4654291406dcb425cd23" => :high_sierra
   end
 
   depends_on "docbook2x" => :build
