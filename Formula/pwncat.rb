@@ -13,9 +13,9 @@ class Pwncat < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "effc23c8094a031f9bc1964adf5f5ab050500b86726c948f81fe67d35f5e700d" => :catalina
-    sha256 "c140bcf0cca3b1b2176e762dbbafb1c02f831c032741ece1dda4f95fa0ada397" => :mojave
-    sha256 "cc5dcb70ed1762f24f7d0511b74b2f119403f2bf8bc463aec844b8701682e2f2" => :high_sierra
+    sha256 "192c19f127e900be34ca58bc3b7dec8b2fae412e53d2613396233f9e3fbb6123" => :catalina
+    sha256 "5eedc0f7cdfa07a82325e09c5a3bc37e7250ad1fc87f48062c99a3a21f5964ac" => :mojave
+    sha256 "9448463d98056aa3b6049f00261fea896e2a16712407f8c10fdf61d9d82dd61b" => :high_sierra
   end
 
   depends_on "python@3.9"
