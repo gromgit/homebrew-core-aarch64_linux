@@ -8,9 +8,9 @@ class XcbProto < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7c153aa9eb525b3d41da64b4ae88809f7d2c1ac8c336a39f82fc06e050e75eed" => :catalina
-    sha256 "fff5d96c2df05bcf8bd6f6eabda65555b6eba91f82b5030cd20a2e4817a428ba" => :mojave
-    sha256 "eb6e23cf13348b115e842768fa183fd7cc741e4b5fb61c935e87af2a6d2bf2c2" => :high_sierra
+    sha256 "f1784c79ed426c069f6a63bc93cfa81bdbf2927c88f44f46bdbe7721095a545a" => :catalina
+    sha256 "632746e279433e8ec37e692bd9f90475d7a8cb16dbc743641677937e74974027" => :mojave
+    sha256 "428b789f3406ebfc2c4b1857cb8ca900853e2cc75d314588002484a2a8648d87" => :high_sierra
   end
 
   depends_on "pkg-config" => [:build, :test]
