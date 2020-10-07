@@ -15,9 +15,9 @@ class Rbtools < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5a748911d650da054e85d6c78c208664b64c9c78a22c6a44ad33959317893b2c" => :catalina
-    sha256 "cedc380f26e21667b91379462b7108f231c81a736650412f322c5256bb55a2cb" => :mojave
-    sha256 "6aa5f77cc2368f5e442635294a6878d1e3d738a0ac27083ba3856b255c0b3ba2" => :high_sierra
+    sha256 "0b12f736ad37628d1fb9c87c909985696a73518c9f7ff5377f48be9310ca399e" => :catalina
+    sha256 "654a068175e2e29facbef092127b5848f3a4464fe1f2077cc08e0be1f3d93e5f" => :mojave
+    sha256 "8982afb981edc037655be37cceaebd5a352f29b05e6385d8b67ce678f832c5bf" => :high_sierra
   end
 
   depends_on "python@3.9"
