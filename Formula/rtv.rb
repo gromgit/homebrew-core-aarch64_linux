@@ -11,9 +11,9 @@ class Rtv < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "c75871adcd642a2f80afc256b7718ee7b154acf165a5572d0b199ad57c92d947" => :catalina
-    sha256 "178b8009cae28e82ca661ca016a414576dc5a24284e11960c85b37fedf8c8e99" => :mojave
-    sha256 "2510e9e484f8eeff62d204b4ae4c21c1cacce11fba156eeb42d3450789b90452" => :high_sierra
+    sha256 "c3a4eb9ce139d6d768a8ff6f3dfaaf6c24dee517fd18a8243ba88215df162650" => :catalina
+    sha256 "aaffc3c8e0859424697554af41e79b82057e252b1d3ce5eb3e929a0695ed5785" => :mojave
+    sha256 "76dd530c8986d96aa2417f565beb6b2db7662c84de06ff65e4953ceceff761d8" => :high_sierra
   end
 
   deprecate! date: "2019-06-02", because: :repo_archived
