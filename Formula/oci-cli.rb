@@ -11,9 +11,9 @@ class OciCli < Formula
 
   bottle do
     cellar :any
-    sha256 "f0d4447270f844cbee46c8b70c86e46293364ac7e6936117a87c1887d79d4a6a" => :catalina
-    sha256 "951b6da890138f96580e3e7970c98c3d251f4d3eaa4b8fab5e8fd88ea23018d8" => :mojave
-    sha256 "7d213bb938b24709a245cb04d079c9eacb30cb99ea7fc6c5663019cc516e1ffa" => :high_sierra
+    sha256 "8cba6f3fd72fccbb8b37ea85cb02388a8472ab16435895f53f738a90c03f019c" => :catalina
+    sha256 "13adc1ae17338971b234864ff96ff4f97c04130022de66557b8c04d8f447fda0" => :mojave
+    sha256 "2be5fda1f0b17d0e3671ccf0f6d5429ef44dc48b62416c5c1d774e1087379c4f" => :high_sierra
   end
 
   depends_on "python@3.9"
