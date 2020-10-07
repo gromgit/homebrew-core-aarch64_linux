@@ -11,9 +11,9 @@ class Q < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f400f27622cd10d2e00166557d426acf0c9ebb5d902c91149acfd91b70807ec9" => :catalina
-    sha256 "cf36dcb7c4950e64c0c1281f2efbeab7f178069a6c5f33f1c39f8e2556777bb8" => :mojave
-    sha256 "68368b50bc4b208deda10fe9b47d617382166ebfea84f6fa1cb6a53b4c5706a6" => :high_sierra
+    sha256 "c1ba50d0c4c47cddb88e3c2b1aa024b7c8f81810aa2c52c988e61d7115d1e708" => :catalina
+    sha256 "6676084cffd70aec2c8bb073189df32ae0617d7e039d39e4b13a7d6cb7dc05ca" => :mojave
+    sha256 "a4976c08f89e618b70c73e96fd69bc8faebd193c4935a9d5b425012194c95af5" => :high_sierra
   end
 
   depends_on "python@3.9"
