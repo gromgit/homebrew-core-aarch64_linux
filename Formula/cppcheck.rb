@@ -8,9 +8,9 @@ class Cppcheck < Formula
   head "https://github.com/danmar/cppcheck.git"
 
   bottle do
-    sha256 "ab0f102f9c481cd4c25db328e2fb4b5cd52175a4ff3a8ab7628e36dc9c305c2c" => :catalina
-    sha256 "331531e6576f24505b438b9edb3ed46dedf52396ce5a3887b9ec318e28c2fd47" => :mojave
-    sha256 "419c210db1ba83e80fbb9f78f3aad467e5d8eb5221d03074badf0917bd23fa81" => :high_sierra
+    sha256 "b126ab11f1a38e53d94f4f58a5f5f48d0e0cb7cc2a24fd104e0d8a4526f8455f" => :catalina
+    sha256 "e2f6f74f00041c30404a337c78c6b15e7a189a94398cfec1bcae3ccc48c4ba98" => :mojave
+    sha256 "a43ed45890d3253137ca3b47d7c2562951abd5791a404a29c121461fda28813d" => :high_sierra
   end
 
   depends_on "python@3.9" => :test
