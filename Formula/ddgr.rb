@@ -10,9 +10,9 @@ class Ddgr < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "08367098555c6cd274eee9906f0f9092742c9c182c3f54bcc6673fdfd32ac319" => :catalina
-    sha256 "08367098555c6cd274eee9906f0f9092742c9c182c3f54bcc6673fdfd32ac319" => :mojave
-    sha256 "08367098555c6cd274eee9906f0f9092742c9c182c3f54bcc6673fdfd32ac319" => :high_sierra
+    sha256 "2e072910ed4e40203156efec17ffd926142f1dcbe452ee975f7bda67bf658e67" => :catalina
+    sha256 "e790e6a0175047496f3b81e1226e4e55a1047c9b070dd18ffcd6825d17e840dd" => :mojave
+    sha256 "57266892ebb4fe452b375f06ad756426eecbe7f144e4c6b79673cfce289d34fc" => :high_sierra
   end
 
   depends_on "python@3.9"
