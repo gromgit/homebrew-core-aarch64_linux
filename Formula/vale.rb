@@ -1,8 +1,8 @@
 class Vale < Formula
   desc "Syntax-aware linter for prose"
   homepage "https://errata-ai.github.io/vale/"
-  url "https://github.com/errata-ai/vale/archive/v2.4.0.tar.gz"
-  sha256 "d99aeea5d0e93a96088f849db05520f7b531f211d158e9538a46eb2ca7931f3e"
+  url "https://github.com/errata-ai/vale/archive/v2.4.1.tar.gz"
+  sha256 "0fc0521cf0d4f8f0ecafacb675b04bea76914dafe0cd06a1da190aa61a2a03b4"
   license "MIT"
 
   bottle do
@@ -15,8 +15,8 @@ class Vale < Formula
   depends_on "go" => :build
 
   def install
-    flags = "-X main.version=#{version} -s -w"
-    system "go", "build", "-ldflags=#{flags}", "-o", "#{bin}/#{name}"
+    ldflags = "-X main.version=#{version} -s -w"
+    system "go", "build", *std_go_args, "-ldflags=#{ldflags}"
   end
 
   test do
@@ -38,6 +38,6 @@ class Vale < Formula
     (testpath/"document.md").write("# heading is not capitalized")
 
     output = shell_output("#{bin}/vale --config=#{testpath}/vale.ini #{testpath}/document.md 2>&1")
-    assert_match("✖ 0 errors, 1 warning and 0 suggestions in 1 file.", output)
+    assert_match(/✖ .*0 errors.*, .*1 warning.* and .*0 suggestions.* in 1 file\./, output)
   end
 end
