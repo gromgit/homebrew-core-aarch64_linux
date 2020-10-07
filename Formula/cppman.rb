@@ -14,9 +14,9 @@ class Cppman < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "fdae58d79f577a45b067be37598b239ee07f339f0dbdce0ef206caed7c83f33b" => :catalina
-    sha256 "6d2a39cf742b3c18ce35010bb81addd1164c6ce254e7fbf8999b0922b9326174" => :mojave
-    sha256 "df16ad64a2749394e0d105be9ddad4ddf782d5db56648577bf2d2568d5bd800b" => :high_sierra
+    sha256 "4b80eea61f0f7c9050c52a076f297a591f3482513350532f00c039a4cba58860" => :catalina
+    sha256 "70c43842a449dd2fc325c188a79d48e0465bca0fa3909d92807d4860cb71898b" => :mojave
+    sha256 "c8fd2f679703f64dfe3f2cb8a073c10fff3b5db4325291643e07c4c13dc37211" => :high_sierra
   end
 
   depends_on "python@3.9"
