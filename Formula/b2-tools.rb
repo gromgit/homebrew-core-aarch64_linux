@@ -10,9 +10,9 @@ class B2Tools < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "44a0e9dd53f7711359859cf75fcadfd741cb15f413929589923770a7c5094358" => :catalina
-    sha256 "6153a57ec789a18a9566d692213d814199b9239019f63a3edcb5fe8ccaa05a1d" => :mojave
-    sha256 "50f86e78975ab3401e41ddcc6259e94eced3782df36c978b4b4ef7c169fc83dc" => :high_sierra
+    sha256 "0828a503f620c700dbdc14b1ed8c7c3f3e24d8ec7957d4ddc82096878937dc27" => :catalina
+    sha256 "699e4b2c8b59b1e0e8f9a201414999a849d310e74df0b324630f04a49d7fb909" => :mojave
+    sha256 "8df0fc81ad83193c54130bce8697f578b9581dbeaf73b736812e5e8aa603290f" => :high_sierra
   end
 
   depends_on "python@3.9"
