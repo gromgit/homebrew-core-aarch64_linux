@@ -1,8 +1,8 @@
 class Vte3 < Formula
   desc "Terminal emulator widget used by GNOME terminal"
   homepage "https://developer.gnome.org/vte/"
-  url "https://download.gnome.org/sources/vte/0.62/vte-0.62.0.tar.xz"
-  sha256 "4d2d246ed47f08cc73f6471aa8e9f378998b7d0f7dcb0c433f29da5839dbb016"
+  url "https://download.gnome.org/sources/vte/0.62/vte-0.62.1.tar.xz"
+  sha256 "c369e87c0c8284e09109d0a9aac821f543558f51c0cb9c7acfff3df64153308d"
   license "LGPL-2.0-or-later"
 
   livecheck do
