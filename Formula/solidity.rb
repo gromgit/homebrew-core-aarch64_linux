@@ -7,8 +7,8 @@ class Solidity < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f859e3a1f2de70dd59b6850201ad2635f2a9a8e2fc43dcaa0f78b7ce9f80ff73" => :catalina
-    sha256 "f0f96591dbb4bd6944a041c5807c61a983bdfb9452dc83d180c63fc365d10046" => :mojave
+    sha256 "ca7716d324afdeb5e692b3b493b4ab3437e0498d12278ec73bc607bec9d3dc90" => :catalina
+    sha256 "1fb2d31bc30782ab3525097d02ce398fbaaa7ada46e78fab6e120be8a30f03ad" => :mojave
   end
 
   depends_on "cmake" => :build
