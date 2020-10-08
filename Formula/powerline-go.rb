@@ -3,7 +3,7 @@ class PowerlineGo < Formula
   homepage "https://github.com/justjanne/powerline-go"
   url "https://github.com/justjanne/powerline-go/archive/v1.18.0.tar.gz"
   sha256 "f7418109e89a8280f2181c675a7790669ba0b0ba5c0eae2bca13879257f96d57"
-  license "GPL-3.0"
+  license "GPL-3.0-or-later"
 
   bottle do
     cellar :any_skip_relocation
