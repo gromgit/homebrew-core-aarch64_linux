@@ -8,9 +8,9 @@ class Broot < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "71ce8bc9f41374fd4df9b6d868862340ef6c8c7b2f565a388f366cb38f82e487" => :catalina
-    sha256 "a87934db32c00ddd0ed868ccc152f50584ecc136c7c8f490a7f160cf8d84fe96" => :mojave
-    sha256 "05aa251e5d1d294d32c73ddb3d473eb07fb1c74972ddddc9215efe4f5fc44261" => :high_sierra
+    sha256 "4073625c13c59143976ff805a88ce3e6fc295ea767d0644d3a108b250097af54" => :catalina
+    sha256 "66404dd0399eac068e7d7b794ed57794474cbd31d6e01e62ffae6d61b58ec165" => :mojave
+    sha256 "9a91c25c2a9a1e70f48e1c243bd00686e641cf8312524ee8d7f1f34f37cbf101" => :high_sierra
   end
 
   depends_on "rust" => :build
