@@ -13,9 +13,9 @@ class Unoconv < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b8926bf449026133df038d3f6fa221803173193765a1de2de70da7b1e9ea4c7a" => :catalina
-    sha256 "b8926bf449026133df038d3f6fa221803173193765a1de2de70da7b1e9ea4c7a" => :mojave
-    sha256 "b8926bf449026133df038d3f6fa221803173193765a1de2de70da7b1e9ea4c7a" => :high_sierra
+    sha256 "f2512d061951b02d953ad4c968d5fc4edf6f1ce0b11fecaf9b806c5655c70f7d" => :catalina
+    sha256 "92911d5bef4561db470583e2a2d42a918ad13c4016f79902448c07f6b8a17a00" => :mojave
+    sha256 "cbfd5a7ba3828eedcbfe26dd7f64ed4c58988f42d7972c2139e4e747010a68e5" => :high_sierra
   end
 
   depends_on "python@3.9"
