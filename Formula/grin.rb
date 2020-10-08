@@ -7,9 +7,9 @@ class Grin < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "009718ef042a332f022fea46acab90e45366c79454ada1fb5bef550474acbed5" => :catalina
-    sha256 "2ec3cc88ae8b05dedc298127d0cec0f50d2730d1aac0a9c23f44c6dd9018d1e6" => :mojave
-    sha256 "2fe2f4d486044785212f3e3069d37386a83f5b9f673d5cc2cf5f192c310c2ae9" => :high_sierra
+    sha256 "e92f7bf7c98330543de4939bbc2d506f109cebdfd406f356ed408720d6f7292d" => :catalina
+    sha256 "55f22d3460a12a3167c71ba7f450b64e2e81afcc72f6f3408b9a55b9284ceb16" => :mojave
+    sha256 "c1f7a7170fe91c4b8fd1b7a7da6de551c01bdd610e4325344dfbbe2398f94830" => :high_sierra
   end
 
   depends_on "llvm" => :build # for libclang
