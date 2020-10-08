@@ -11,9 +11,9 @@ class Xonsh < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "3e884ff7820dd096c93640599d0d77ea43445d5b4da76601cf87ccbd1ac1c49d" => :catalina
-    sha256 "1a30ad503ef95cd9ad2bd6c4eb2e6107b3d862d6702ddc89f0894f5f027d5b37" => :mojave
-    sha256 "d8f3d21965fcea70899c89399c6831de20e404f2fa89b4ff03d9a3b3caa6c139" => :high_sierra
+    sha256 "00e93c376da82ba8980bd7b48aa04d11bbc15ff69b4e5474cb249df6f227dea3" => :catalina
+    sha256 "b3b57321c204d4046a7e5dd78aad41a370d1d70d11aab4a4f28a3cb6e634008a" => :mojave
+    sha256 "31b662c6d1a620cfd9035b0d8321b2fec1abee9439b780fb2af1bfcf2a171ade" => :high_sierra
   end
 
   depends_on "python@3.9"
