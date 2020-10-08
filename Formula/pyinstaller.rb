@@ -16,9 +16,9 @@ class Pyinstaller < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "ab6c283c0c560a084c663c61b84b1bedc256096ccea394d6499be25b06cc4c4b" => :catalina
-    sha256 "8720fa7b49a46601752dd89d742a4351b41ebedabfb4db6debd0ba0d82338fc8" => :mojave
-    sha256 "be06967b424605aab0bc04193c0057f2fe16ebbb35b476718f7ce75f65b84a9f" => :high_sierra
+    sha256 "993cd7304cd2a5572b807c1b52cf33a0972c59529713f62ab73540221d9a1e51" => :catalina
+    sha256 "bebf11059880ac90633f42e74c2805b01ce460a01c08cb5617b09ca2096a6cd0" => :mojave
+    sha256 "8458ed3230b6421e88293f41174f6fb83d97bb5dd59716767cba17c82ffaa0b8" => :high_sierra
   end
 
   depends_on "python@3.9"
