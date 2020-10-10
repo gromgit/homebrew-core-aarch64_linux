@@ -11,9 +11,9 @@ class Efl < Formula
   end
 
   bottle do
-    sha256 "ad9b51f91730a6ed17d97f995c888f76af8bfc369a60ed49280858262fc3f4de" => :catalina
-    sha256 "d2f077340f3db39e04d92214cae392d5ea68179c5fe96f4b47f0f82a9bc291b7" => :mojave
-    sha256 "6fb9e4e472da125889b7c0c6d8f801e75f0887f3128c7118bd85fd3b67cd5a2e" => :high_sierra
+    sha256 "ea5807f392fcde52a309485fd4549a4950a8de48d567d4e69f3d56548091fe89" => :catalina
+    sha256 "fce32b43f89cee7d1b952e8d8aef5d65f8476e26c166e59b0bd4ae68611d6038" => :mojave
+    sha256 "980a333028f8ee49d8e86928ff29ab781369d98a7c99cf3f3663594956b7dc84" => :high_sierra
   end
 
   depends_on "meson" => :build
