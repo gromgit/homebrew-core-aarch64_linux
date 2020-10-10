@@ -5,6 +5,13 @@ class Matplotplusplus < Formula
   sha256 "19f5f6fe40b56efc49dcda7f6c6de07679f5707254dea6859c3c7b4a8a0759a3"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "e24805c80b41e2d9957c1757e3f7cb329b39302127eeced2c81c9091487986db" => :catalina
+    sha256 "e522028527552e68faedc2377ff419ea08986b10f0a5b74e1f573537e99ee41c" => :mojave
+    sha256 "c17c5db0287c73c0d126c0d459a32c1c56ebb702e19f8c53f8d8d91880dfc75a" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "fftw"
