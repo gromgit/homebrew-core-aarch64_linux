@@ -7,9 +7,9 @@ class Hdf5AT110 < Formula
 
   bottle do
     cellar :any
-    sha256 "883714d800b7d167ffc96ca4bd43e66e6d6ff725ef4ec1bef8c7ca2c4c9ebef2" => :catalina
-    sha256 "98eea2bc9464f516dfd7e4bc2375c5e1b7abf0e50a15972abe4a2c19e58a0028" => :mojave
-    sha256 "7cd8d6f0c183a2aad1ceacbca0ecf5667df81b786fc05d3cfe5640c4c24e46fa" => :high_sierra
+    sha256 "b60cf0990900c97ed302056e8ac51e2def10d6d9972d769f7e22d2e94ae0fe7e" => :catalina
+    sha256 "ca0304a962af4bc0c0009f13b47ba55c7be49d26c63a39e8a99b37ae544b72cc" => :mojave
+    sha256 "4ecc6d44b4eb1fd71eaa5f2e8d240d8804352643fc3255b18e71fcb3f9e6af80" => :high_sierra
   end
 
   keg_only :versioned_formula
