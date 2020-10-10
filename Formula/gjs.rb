@@ -10,9 +10,9 @@ class Gjs < Formula
   end
 
   bottle do
-    sha256 "48ab51876b8cb4b93914f6ec9f97134d19883a3aecdf0fceeb39ba4565820c84" => :catalina
-    sha256 "3605114b6a6168aac10d3544cb44a8c543b94d1938f22edfe3b898e1f967136c" => :mojave
-    sha256 "37212a55eeac304e95953c4681c42a6eddf82eb62eca40bedc459c943ce55580" => :high_sierra
+    sha256 "819aaf721030c22a9f479fca06f52490a2df2b9d2731377d35bf017509723a17" => :catalina
+    sha256 "bc1a84cd054dc1b0918f956b9c88601edf95af714a3a41e08ec3c6c310d4d2c3" => :mojave
+    sha256 "2289aed2c52497f646b73861b4d7f6291a860abf332c5cab65f3581c441b2ad9" => :high_sierra
   end
 
   depends_on "meson" => :build
