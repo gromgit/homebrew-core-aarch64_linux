@@ -5,6 +5,13 @@ class Tfsec < Formula
   sha256 "95c0b856c95185315cdad4b8442b65cd8178664ed36d776813230d2fb15c43ac"
   license "MIT"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "c690a49f89af1a4adcfec4d4efc804b64113f4c4ef826af828349eeeadf10ce4" => :catalina
+    sha256 "bd6c1ad822401704511bb4141bd2b7435e4bb571d4d191fcc16dc4b35e0a085d" => :mojave
+    sha256 "e625749b036d7cff56090b1138ce19eabcc70888ce405ea52f193f08a0575794" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   resource "testfile" do
