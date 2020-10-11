@@ -12,9 +12,9 @@ class Itk < Formula
   end
 
   bottle do
-    sha256 "a52a56d9a5be354830f5d5b30783a3ca09aa9c84e2345db07b3432ac53d821a7" => :catalina
-    sha256 "3e93260a8bf76121169b211af228cbecae4a47c3825a0d523733248aaa6972bd" => :mojave
-    sha256 "f1ed794c0405713bc89e679aa13408223b2e90b60134b6807116fceddf5610a5" => :high_sierra
+    sha256 "0f61a4a6db8935c74dad672472a9df7a920dcad0081db2ff9b8af62291cd27f7" => :catalina
+    sha256 "cdab5fa00fc056cb691b95ee762bee986af9f90bf388dc178cd71fc708be5cab" => :mojave
+    sha256 "6693ad5cd1d63c568eb9613553333e04b0fd808a6ebace4e6fdaee2cddaee0fd" => :high_sierra
   end
 
   depends_on "cmake" => :build
