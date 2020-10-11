@@ -14,9 +14,9 @@ class Nsd < Formula
   end
 
   bottle do
-    sha256 "c466ecf5c21b6e2454b65df532abc3c70de837eb383511024d723914ae325d8e" => :catalina
-    sha256 "0072f454fa6565e04f625046b56ed790b4053cd691aab71cadc664503f0bcacd" => :mojave
-    sha256 "cb8acf39097774f28de4cf2e9f76c7c4f17d90c6de9f38917f106cca5da7ab29" => :high_sierra
+    sha256 "d2d0731a5a4a03fff114250debcc1ff5fa6fe15faf77351afda9a2ccc6cdfbd0" => :catalina
+    sha256 "1f0661c9656ab0d0821a9eeb5b990c9eb6a088654e5406318577084296ab8119" => :mojave
+    sha256 "189a5b486bbfdcc0571e89f67d5f4f11474ce1fe2fb9e5ca720ced3662aba054" => :high_sierra
   end
 
   depends_on "libevent"
