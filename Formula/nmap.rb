@@ -11,9 +11,9 @@ class Nmap < Formula
   end
 
   bottle do
-    sha256 "f86423c5d193de1df53de7264ec5c2955bf589f878943ebbdf28c718bfea2a6e" => :catalina
-    sha256 "fe5709980a63192317186cf994b2522ae401b1c37fa74e5eb497f2587a20e959" => :mojave
-    sha256 "371113f240b24105a46bbe7b7b5db504656cd33bb1c5299cbc110c872610825d" => :high_sierra
+    sha256 "5592fb8c2fe633a6339ee61901122c075a4b44c002e2887bddfb2c4b3aa2885f" => :catalina
+    sha256 "ba808d31033d996488fdf56664de1cf424fc942db794ab7030d40a1caad93aa8" => :mojave
+    sha256 "b9a5b9d54fb0af76b1ce343e94f142b3421309fbeb81078d73e41bc2a9d862ea" => :high_sierra
   end
 
   depends_on "openssl@1.1"
