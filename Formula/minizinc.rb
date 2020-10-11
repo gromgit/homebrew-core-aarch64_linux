@@ -8,10 +8,9 @@ class Minizinc < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "de77b7f987cc6bded664d6467dead64f56706c41ae76610fcf4929d12a30d90e" => :catalina
-    sha256 "6e007ff9719ca90fb5840d363e96237718fbcc225f1616adf516fc85a8d43031" => :mojave
-    sha256 "f4ca6c6e0495880b7990a438f7c06a6bf9d91bab85d6f1497944ae7370a4e911" => :high_sierra
+    sha256 "3761bf1a5f715d47c2292fa0e71d5edaf66dc5d18362952a19c9ab61bdb5f4dd" => :catalina
+    sha256 "10169d25a64dd162ac28aaccd6296efaa084c380942115c0ce7ba17ac7a0ffc7" => :mojave
+    sha256 "ea375d5c130fa16354d6b48c01aa32752593da13526afabab3bf3e79c93953f7" => :high_sierra
   end
 
   depends_on "cmake" => :build
