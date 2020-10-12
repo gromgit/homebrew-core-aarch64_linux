@@ -15,9 +15,9 @@ class Ghc < Formula
   end
 
   bottle do
-    sha256 "a7bb4f707d08e220f4c94a48eebb142c59061eef0bb059cd01bed8d4aed7a775" => :catalina
-    sha256 "f37c3a131aa50e5a60ec3377ae3fabcfeb1e6b5aa9596061c4f264b586dde49a" => :mojave
-    sha256 "2a46799075c511b890069be59323d711791767922267bf71ac0eeac36ca6cebc" => :high_sierra
+    sha256 "1fc15705e5b9a24ca773d2df745345e75496ec3f227ea518d9945d6e1add6e18" => :catalina
+    sha256 "cf8e2755d55d2a6479e4cebbee041ff63bece9bbae7d514c0b7601f6542b8081" => :mojave
+    sha256 "40e2b31e3390cf784dedcd4357362bee577b6a5c1d911f5c072828fe01f42e8f" => :high_sierra
   end
 
   head do
