@@ -7,8 +7,8 @@ class Vroom < Formula
 
   bottle do
     cellar :any
-    sha256 "b8b6ba6f23ce63a5d1fe3060c688de42bfd7191ce741bf1f133ad988d2008b8c" => :catalina
-    sha256 "598e546078bb441380537ea0fb684d6f20e3a35b8efb8f7561a399e8e4885546" => :mojave
+    sha256 "afa201989a1bd34ddf8dc96379bffe303eaa855a05dbbae570f44974bf5bf7e6" => :catalina
+    sha256 "9ac415735021d7f3dd94247d0c9a8c7cfe2f4b1d1ec0ea1950663db92d70ff19" => :mojave
   end
 
   depends_on "pkg-config" => :build
