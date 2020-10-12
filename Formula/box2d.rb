@@ -6,6 +6,13 @@ class Box2d < Formula
   license "MIT"
   head "https://github.com/erincatto/Box2D.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "1007faf13049c1f129e114fb0a2d55d2b5e35b47370cf2d7926fd391605fb341" => :catalina
+    sha256 "4b0ae6666eaa0276c7e90b860cf7e705d9123893c729b126114603b318615b79" => :mojave
+    sha256 "304c665585267303ba601d6efe71dbc1dcf435622ecb08180d59237c02313fdf" => :high_sierra
+  end
+
   depends_on "cmake" => :build
 
   def install
