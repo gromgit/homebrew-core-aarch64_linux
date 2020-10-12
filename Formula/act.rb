@@ -7,9 +7,9 @@ class Act < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "23704fe672478e6ff666099184ade714dcaca4506f1e23558d47597151e7f290" => :catalina
-    sha256 "5c7891349dd286524eda4a59bf5502c1b26d40741b9e1623a055994dc0326cf9" => :mojave
-    sha256 "85860acc4ec3aa9dfcb4ad8b5eab0f7dce36809e89ca77b1a9e360187518a5a3" => :high_sierra
+    sha256 "0f07dbc4d2b860661513a7e345179c95cf3d13dcf9061508885be2993ee35975" => :catalina
+    sha256 "63aa66b44617c85b5d4b2d9e6db8d2adf97909c85f312d40abe5fd8ad8ecb2ed" => :mojave
+    sha256 "8e5bcd4db6828643ca780f0e8e1a85f324cb7dfa57ea11965b5f882f74cb98f1" => :high_sierra
   end
 
   depends_on "go" => :build
