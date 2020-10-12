@@ -12,9 +12,9 @@ class Alpine < Formula
   end
 
   bottle do
-    sha256 "3e775bad34dc730ad9c15e3df30e753842ee542695172362cc648ead05e4d151" => :catalina
-    sha256 "5492f86a14779b434ebb069bcef8ae551c93dc8835106d6144699e54191de3bd" => :mojave
-    sha256 "f7b9f13b015de8e08ec73b1e4784abc64e5cf01785ef722ffa3d80441248a640" => :high_sierra
+    sha256 "8a856082da848d13cc4019f3bed974e896144b0cf192125285e20a7250a72295" => :catalina
+    sha256 "43533b14f530c72a3f89dbaebf2c4efcd66c8c7fc89349e56d714ff15f2af02e" => :mojave
+    sha256 "bed10deca1df682e23ffec4b21af9f837db1dbf011879ab0df579efc81116db1" => :high_sierra
   end
 
   depends_on "openssl@1.1"
