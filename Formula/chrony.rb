@@ -7,9 +7,9 @@ class Chrony < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "16e6a0020f088989b22e80f191718c41a98bc715718d29b0b3612ca5bdbb412c" => :catalina
-    sha256 "30feb201dbe7b055636a862a497650c6331eecc06fcacdef22b605596339a236" => :mojave
-    sha256 "ba4e1767836ab20111bc9502ff72d0adf4d436c154ff1464d9c1136905503ba6" => :high_sierra
+    sha256 "18080256097344abcf595e69bc8e0b15faefbe5e9d5e36f1326e0bae8e089d5d" => :catalina
+    sha256 "5227442d8a26057125ac087fb30520dc65d65ee287ce56362d08b2f12e5e6f7c" => :mojave
+    sha256 "c92b075e3cfd4419cf2339b2bfd779e2df4479ab58c23b19b396c4e85bdeb300" => :high_sierra
   end
 
   depends_on "nettle"
