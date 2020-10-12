@@ -8,9 +8,9 @@ class Stella < Formula
 
   bottle do
     cellar :any
-    sha256 "905c36cc2c68968ffcedb83867474bd757f9b6188a9d49f7fd94d22f0e479b0d" => :catalina
-    sha256 "482b97a5ebe760bb2793c95d0c51c3ac356417eb1c8479c4539086cc9ad203e9" => :mojave
-    sha256 "ff69cdd3d5a5def9e99557b0d327e16da16b3b37298f769ec66bed2c0ff18003" => :high_sierra
+    sha256 "bf868761209511cc1c31233f22f6c7bd95d7f2ce4045f83057b8b2209f2231d9" => :catalina
+    sha256 "c3622486edcba6a4d31cb2945411fb69ec2dc04cfde529f30537965e566318a2" => :mojave
+    sha256 "2034af90fcc6aba5af2e5d6718ec99309b55a3dbc415f32017f8d2e0a1b72a70" => :high_sierra
   end
 
   depends_on xcode: :build
