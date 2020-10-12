@@ -1,9 +1,9 @@
 class Gphoto2 < Formula
   desc "Command-line interface to libgphoto2"
   homepage "http://www.gphoto.org/"
-  url "https://downloads.sourceforge.net/project/gphoto/gphoto/2.5.23/gphoto2-2.5.23.tar.bz2"
-  sha256 "df87092100e7766c9d0a4323217c91908a9c891c0d3670ebf40b76903be458d1"
-  license "GPL-2.0"
+  url "https://downloads.sourceforge.net/project/gphoto/gphoto/2.5.26/gphoto2-2.5.26.tar.bz2"
+  sha256 "7653213b05329c1dc2779efea3eff00504e12011436587aedc9aaa1e8665ab2f"
+  license "GPL-2.0-or-later"
 
   livecheck do
     url :stable
