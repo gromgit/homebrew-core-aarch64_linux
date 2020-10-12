@@ -12,9 +12,9 @@ class GraphqlCli < Formula
   end
 
   bottle do
-    sha256 "5ecb75b7aa2887d2a7e81fe08b3cb18cb62e0dfe38d57eaa2cfa7fd636dab625" => :catalina
-    sha256 "a9c8667aebd1344a6bfb265180054a6e063122da8a567fc62d54f05cd62f5ab9" => :mojave
-    sha256 "be04819e9354a609deb3e075510e324eb5c7520d43eafc1b589ea03da487a3b0" => :high_sierra
+    sha256 "5060d007d13a695709ff9afaa16a1492d8645e17ab78ec2b14650e0c7a305e55" => :catalina
+    sha256 "212bf2d20997a930838775736ca468dc25cbd3c3978c0189f8a435873a029286" => :mojave
+    sha256 "d8f266f129027b1fe731c12264f7b8679c271ecdb6418cef72dba0a730e99771" => :high_sierra
   end
 
   depends_on "node"
