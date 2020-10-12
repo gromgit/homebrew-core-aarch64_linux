@@ -11,9 +11,9 @@ class Libgphoto2 < Formula
   end
 
   bottle do
-    sha256 "0609b72a67e2d6c45ede30bb4cfca8b4fc6b312d5873c4e647e292fdc1f227ff" => :catalina
-    sha256 "5a1f7ec7d0146bb772a4c6fa2ef5ed53e6a6ac183fe1f916ca8b53b2a4c68ad9" => :mojave
-    sha256 "110b4ca7ee321419851bcf5b8401d2fe082bf29261787700890f93db77af0112" => :high_sierra
+    sha256 "9ab56abc466d07fdb2d16aced13ae7afffb9e71642b8c86a0b1610304e34baba" => :catalina
+    sha256 "434336b976e6c930255891e9d478fec925c484f50fdf153dca262a9184b6874b" => :mojave
+    sha256 "918032eba6577fda5b956841d50abd91c5272a0d1b69d21f3ac9f40eb24027af" => :high_sierra
   end
 
   head do
