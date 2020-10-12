@@ -10,6 +10,13 @@ class ProtocGenGoGrpc < Formula
     regex(%r{cmd/protoc-gen-go-grpc/v?(\d+(?:\.\d+)+)}i)
   end
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "46920c9b75eaf0f473e61865d391b7fb753253f050865ecd856509e06f2b71ea" => :catalina
+    sha256 "9634dcccbd06eaa037d88e4d647845684c7fbdb72564a889a3a856c663a0e150" => :mojave
+    sha256 "7a42ddf7f4827de9a1c8548ec0db496ffb665520a8ec10839461db2a1bf10c74" => :high_sierra
+  end
+
   depends_on "go" => :build
   depends_on "protobuf"
 
