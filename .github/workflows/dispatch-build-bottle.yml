@@ -42,7 +42,7 @@ jobs:
         run: |
           mkdir bottles
           cd bottles
-          brew test-bot --only-formulae
+          brew test-bot --only-formulae ${{github.event.inputs.formula}}
 
       - name: Output brew test-bot --only-formulae failures
         if: always()
@@ -72,7 +72,7 @@ jobs:
           echo "$count bottles"
           echo "::set-output name=count::$count"
 
-      - name: Upload bottles
+      - name: Upload bottles to GitHub Actions
         if: always() && steps.bottles.outputs.count > 0
         uses: actions/upload-artifact@main
         with:
@@ -83,7 +83,7 @@ jobs:
         if: github.event.inputs.upload && steps.bottles.outputs.count > 0
         uses: Homebrew/actions/git-user-config@master
 
-      - name: Upload bottles to Bintray
+      - name: Upload and publish bottles on Bintray
         if: github.event.inputs.upload && steps.bottles.outputs.count > 0
         env:
           HOMEBREW_BINTRAY_USER: brewtestbot
