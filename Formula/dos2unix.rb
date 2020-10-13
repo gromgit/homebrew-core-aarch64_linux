@@ -1,9 +1,9 @@
 class Dos2unix < Formula
   desc "Convert text between DOS, UNIX, and Mac formats"
   homepage "https://waterlan.home.xs4all.nl/dos2unix.html"
-  url "https://waterlan.home.xs4all.nl/dos2unix/dos2unix-7.4.1.tar.gz"
-  mirror "https://fossies.org/linux/misc/dos2unix-7.4.1.tar.gz"
-  sha256 "1cd58a60b03ed28fa39046102a185c5e88c4f7665e1e0417c25de7f8b9f78623"
+  url "https://waterlan.home.xs4all.nl/dos2unix/dos2unix-7.4.2.tar.gz"
+  mirror "https://fossies.org/linux/misc/dos2unix-7.4.2.tar.gz"
+  sha256 "6035c58df6ea2832e868b599dfa0d60ad41ca3ecc8aa27822c4b7a9789d3ae01"
 
   livecheck do
     url "https://waterlan.home.xs4all.nl/dos2unix/"
