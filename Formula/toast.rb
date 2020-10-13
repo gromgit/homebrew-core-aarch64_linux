@@ -7,9 +7,9 @@ class Toast < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "1a941a71fbbab8e21f41756a0d3b63e6e3ee859547cc4a99c3042cdc4485d6dd" => :catalina
-    sha256 "23905ffe680fe8babd9650b0cc306ddec5ec279adfc36a41add793d571e49d8a" => :mojave
-    sha256 "b02f8e3bd163f086ff3575917b9b775f61027b3ee5436de836d90f39a1f2f9c3" => :high_sierra
+    sha256 "7d64f44aeeffee13008cc6fb8f8aafc4277f1fa032b8da12e5e484f44db10cee" => :catalina
+    sha256 "248c78453c196fc4b821c9e9b5a94d12e38795c80a94c863aaccb22a0c109278" => :mojave
+    sha256 "5da5b46d7f8b6eb4902696cdaaddfde84d81e3d4267f2242fd5691ef699778b5" => :high_sierra
   end
 
   depends_on "rust" => :build
