@@ -6,9 +6,9 @@ class OpencvAT3 < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 "890dcb6beccc060f02a7d5f594e604ac29cb10b7c5a471dd5cc2f8cdea026d5d" => :catalina
-    sha256 "36ed82e801b3e60ddf08592d28f03add4acbab5b26630a3856ebbafc137eaeb8" => :mojave
-    sha256 "3f48062f043a2208fde3360abb0cbb373674b2768218cc49aed55637fad2b5dc" => :high_sierra
+    sha256 "ddd575264b09a0c2082f37b8a07ce1782ef0b0e72d67245a6fbe177a3382938b" => :catalina
+    sha256 "907fb90b36f3a4db48a278a7f06d258b778c29a614d074b42eac9de7db9e4e8c" => :mojave
+    sha256 "4ea1d46fdcc64cf34583fd4a8f2d9eedbacd05b53cad79fc458701d857fbdd36" => :high_sierra
   end
 
   keg_only :versioned_formula
