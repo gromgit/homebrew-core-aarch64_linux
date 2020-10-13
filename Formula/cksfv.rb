@@ -1,8 +1,8 @@
 class Cksfv < Formula
   desc "File verification utility"
   homepage "https://zakalwe.fi/~shd/foss/cksfv/"
-  url "https://zakalwe.fi/~shd/foss/cksfv/files/cksfv-1.3.14.tar.bz2"
-  sha256 "8f3c246f3a4a1f0136842a2108568297e66e92f5996e0945d186c27bca07df52"
+  url "https://zakalwe.fi/~shd/foss/cksfv/files/cksfv-1.3.15.tar.bz2"
+  sha256 "a173be5b6519e19169b6bb0b8a8530f04303fe3b17706927b9bd58461256064c"
   license "GPL-2.0"
 
   bottle do
