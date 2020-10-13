@@ -102,8 +102,6 @@ class Orientdb < Formula
     inreplace "#{testpath}/orientdb-server-config.xml", "</properties>",
       "  <entry name=\"server.database.path\" value=\"#{testpath}\" />\n    </properties>"
 
-    begin
-      assert_match "OrientDB console v.#{version}", pipe_output("#{bin}/orientdb-console \"exit;\"")
-    end
+    assert_match "OrientDB console v.#{version}", pipe_output("#{bin}/orientdb-console \"exit;\"")
   end
 end
