@@ -7,9 +7,9 @@ class Freediameter < Formula
 
   bottle do
     cellar :any
-    sha256 "f63eb43c09115ecc506fb8a3f0cccc4293ee21d8b408a745508cb8a5dadb935f" => :catalina
-    sha256 "f41db0f291fcbbafecd7325c440dbaa2f61df4a250d9a18b216606130df020bc" => :mojave
-    sha256 "66df7c67d2a5f4c18a907df28d115004e1ad016e60af64f2e138356e90458bca" => :high_sierra
+    sha256 "92933b4a5076f85098b784f47f3943065444b9dda243c6165d38aaffb9122b68" => :catalina
+    sha256 "3d5aa2577193d90113f4deadd81c6db0b40384a4cf3cca096e6edeb76ee734e3" => :mojave
+    sha256 "a242566b7096b737a094ebe7c792fe306ab6f06f28cded3b5c6660962b812610" => :high_sierra
   end
 
   depends_on "cmake" => :build
