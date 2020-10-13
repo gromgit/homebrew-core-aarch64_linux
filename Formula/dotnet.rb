@@ -6,6 +6,13 @@ class Dotnet < Formula
       revision: "05a0c8f6b13fcbec4b441c977b639b75e8a74f67"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "777c2c233711c7c68de632a5ca7c8f08ae8ecc3ee3eb984ce9865add00af9b69" => :catalina
+    sha256 "b7c249f4be6c9fa58482b03f3398178131e67db280ee06460988df2a598d3d22" => :mojave
+    sha256 "12d970b23c3671c72a9ade43b405f9e8b8779d016c7c846750f6097429158b2e" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on xcode: :build
