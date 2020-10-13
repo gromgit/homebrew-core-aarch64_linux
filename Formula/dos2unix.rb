@@ -12,9 +12,9 @@ class Dos2unix < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e361c9877212a1666721d1b62348690d8dd24dadc94ef0f33b582c44b9650ab6" => :catalina
-    sha256 "98ca83a3810ce6daa87546fbe821345859d943f7609389a52c2b59bf6cef03d3" => :mojave
-    sha256 "24f1fc82e112c612641898b1e25d96c9f5b38442566041fce45c3b1aa998af09" => :high_sierra
+    sha256 "eb14b6db2fbf8fa0f52b69aa33101e1eb04bf3d4ef5dae7234754046e4cd54a6" => :catalina
+    sha256 "7a23d283d81cad13690d788c61117cbfe091282503077ad56bde83f026dd5097" => :mojave
+    sha256 "98858938fe95e2453056d80c03c35396913a5c6902b2df00b618c884a4b51521" => :high_sierra
   end
 
   def install
