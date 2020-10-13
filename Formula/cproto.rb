@@ -7,9 +7,9 @@ class Cproto < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2791bdef02007dabef1d3129853b566ebe82012479336d52d892be8add1fbe56" => :catalina
-    sha256 "b53d9e4fe9ef19daed4017bc47fbd1ec2803859d78ecca96bd0e53a0ea18e3e1" => :mojave
-    sha256 "fd7ccdeb13066090ff755fa70f88b7453d65eab0e14d30187429b08808aa66fe" => :high_sierra
+    sha256 "05936e555dc7f1cbe36cebf67e20de0f7c0404db6cbf1ee23f69aa4a858281db" => :catalina
+    sha256 "5123cb4d20d57211cd5348087194fcbaff4f79b0e45317e2d82f82c3c54b42da" => :mojave
+    sha256 "ecd7b1cb65d67008fe7b904a24d60df256d4d3d88cf7fff6647adf98db5a411c" => :high_sierra
   end
 
   def install
