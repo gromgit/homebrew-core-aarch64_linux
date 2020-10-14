@@ -5,6 +5,13 @@ class Gitversion < Formula
   sha256 "70c6f867e4a85325ba1e54211fd014d9b3ec9be43bb828393e1f0d6a5e33cefb"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "807c000e45f4e0933fbc4295b55ce83ce4174bfb74a34c141fa2a42f863dc592" => :catalina
+    sha256 "bfb552cda166ba379fb8dbf5a4e0d2689959f4c21bd94a5da5872e37143babe8" => :mojave
+    sha256 "c88bbdf084a9bcd227d4e1f66b851aad65692e6d630bda57e703a6af925391d4" => :high_sierra
+  end
+
   depends_on "dotnet"
 
   def install
