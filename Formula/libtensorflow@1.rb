@@ -10,9 +10,9 @@ class LibtensorflowAT1 < Formula
 
   bottle do
     cellar :any
-    sha256 "8f70d086b5723c656a2a051af8fda934666effbf64e5ac406abc704bfa74bbf4" => :catalina
-    sha256 "a1c43f234abe52401166c8e7d87cbb693622c513e0f9c0b7dc1d8ef0fb529057" => :mojave
-    sha256 "4ecb26695f233cbf40bc273ced0b0a7cdb2d78dc7a090759a38f86241e582650" => :high_sierra
+    sha256 "9763732a2181ccbd646821c7bdf4e59dbefa67e9d70616b11492d3860d59710d" => :catalina
+    sha256 "0d60e4fdc3565e394a87824af4ad5612d059a38c9a48babfe3dee85d372d3cc6" => :mojave
+    sha256 "958c949341285f4cb069a1a8ff3477dae75aea70f5d6f86cf4c9af42c29ee2ab" => :high_sierra
   end
 
   keg_only :versioned_formula
