@@ -6,6 +6,13 @@ class Foreman < Formula
       revision: "5b815c5d8077511664a712aca90b070229ca6413"
   license "MIT"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "5c2b39c1f7e9667b9ebc6b7228b6cf31f06c2261c85019028272cfdda7073ea5" => :catalina
+    sha256 "674b5fc005986f47294acedccba6b2a2bcdc1d423e392a356f8d58cc88a2c81a" => :mojave
+    sha256 "b0d289ff31caf33f3d549af6dd615e37588aadb243355395380c4df5b0e52d63" => :high_sierra
+  end
+
   uses_from_macos "ruby"
 
   def install
