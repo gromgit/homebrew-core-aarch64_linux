@@ -13,10 +13,10 @@ class Exa < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "728ebb14408ce469fa4920a0a3bf9fb27bf84f90f6d16da494cf3f34c6a5bb97" => :catalina
-    sha256 "9bef54033f1bc1b97a3bed0410f0cc28d40be9ac236211134ff0530d27d12b8d" => :mojave
-    sha256 "dfa0c54e4a0e4ace4d69bfbea2b19065deac6271a7f564a7379e6a5266d96dbf" => :high_sierra
+    rebuild 2
+    sha256 "db91d6383734415664520fadb8a4401c465f08b6c8dbd5c56d47e959d04ec6f5" => :catalina
+    sha256 "6c4473e06868d60a18657f8f6d98985ec7480de89213765738a3e33eeb9ceee1" => :mojave
+    sha256 "e47d5005f3a6a05bc442ed8e12a8e3206f39d0e4daf4835e84545ab158c4f089" => :high_sierra
   end
 
   depends_on "rust" => :build
