@@ -5,6 +5,12 @@ class PostgresqlAT12 < Formula
   sha256 "bee93fbe2c32f59419cb162bcc0145c58da9a8644ee154a30b9a5ce47de606cc"
   license "PostgreSQL"
 
+  bottle do
+    sha256 "9a77bfba8c21995349b40344f5e37a1922accd358ba589fd1baa63c3aa6158e9" => :catalina
+    sha256 "b25e735de5a85feb7dbcbf8764acce39f37fd7f99f5d9ef0b86faa2a9559ac5a" => :mojave
+    sha256 "a27afea346d392eda96c7d767d7582becebf02ad7bf8b72490933cea76757cd6" => :high_sierra
+  end
+
   keg_only :versioned_formula
 
   depends_on "pkg-config" => :build
