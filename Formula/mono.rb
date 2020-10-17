@@ -1,8 +1,8 @@
 class Mono < Formula
   desc "Cross platform, open source .NET development framework"
   homepage "https://www.mono-project.com/"
-  url "https://download.mono-project.com/sources/mono/mono-6.8.0.123.tar.xz"
-  sha256 "e2e42d36e19f083fc0d82f6c02f7db80611d69767112af353df2f279744a2ac5"
+  url "https://download.mono-project.com/sources/mono/mono-6.12.0.90.tar.xz"
+  sha256 "51de5c02ad511333f93ff585bca54c8784de35af4ff27b759d16b46c4402cdac"
   license "MIT"
 
   livecheck do
@@ -18,11 +18,13 @@ class Mono < Formula
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
-  depends_on :macos # Due to Python 2
+  depends_on "python@3.9"
 
   uses_from_macos "unzip" => :build
 
   conflicts_with "xsd", because: "both install `xsd` binaries"
+  conflicts_with cask: "mono-mdk"
+  conflicts_with cask: "mono-mdk-for-visual-studio"
 
   # xbuild requires the .exe files inside the runtime directories to
   # be executable
