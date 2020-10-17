@@ -9,9 +9,9 @@ class Autojump < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "160a92bfee5152dc1642133296dca2277d145ec1aaa05523bca23c809971586a" => :catalina
-    sha256 "6a9dcc3219489432367104903e1985b41ca2c7f6f23eb7a3816f197d1597a19f" => :mojave
-    sha256 "8383941ff7aab058fa913df0d88e0c16852b4715725a156d984d9316bdd1df9a" => :high_sierra
+    sha256 "86f9b762fdc71023781e999f2269c1c9af87ad7c22f01b6ad9481e6583cf972a" => :catalina
+    sha256 "aeabdd63a425d4505d8b5f9aa6f3895e3447e8835d2ba82799e6de46162dc0f4" => :mojave
+    sha256 "225ebe9420dc834c2381b9c0fdadd1acb19a9152db6822ebce1ee8071db9bdd3" => :high_sierra
   end
 
   depends_on "python@3.9"
