@@ -13,9 +13,9 @@ class Dxpy < Formula
 
   bottle do
     cellar :any
-    sha256 "12f4d974c4f72495aaeae34cea2f63f7d9cd54ed581450edc920b5ca5eaedada" => :catalina
-    sha256 "606f0c235044fcb02ac17490411fd81e79eda332657b5b80816aa50e5e2ccc71" => :mojave
-    sha256 "8cdefe37cbe96ad9652368f16208000b88ed3d33bd463e14d3e64e082e63cdf1" => :high_sierra
+    sha256 "c9fd5d1f39c75655223dc8bc03e051cd1bf6da808cc2f827aa3ef17f68767918" => :catalina
+    sha256 "50d2e7caf684cad1c5b892a00ba589d949369332e0e32e3538acad585b76fa13" => :mojave
+    sha256 "24b6fac401db9e5bc7941a57bb5d6c6a37b12b164776c1e57da3443f35438ece" => :high_sierra
   end
 
   depends_on "python@3.9"
