@@ -8,9 +8,9 @@ class Box2d < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "1007faf13049c1f129e114fb0a2d55d2b5e35b47370cf2d7926fd391605fb341" => :catalina
-    sha256 "4b0ae6666eaa0276c7e90b860cf7e705d9123893c729b126114603b318615b79" => :mojave
-    sha256 "304c665585267303ba601d6efe71dbc1dcf435622ecb08180d59237c02313fdf" => :high_sierra
+    sha256 "5c6508a2d661409273a28ac5f0495d7d7c506b5d1bc7ceeb9ab90298db225178" => :catalina
+    sha256 "51709abf7cf22ce487b7fb543c2760add5f6935459b00163567448f47ab6d86c" => :mojave
+    sha256 "0312b876dd91ae896fc127fa6afe21736b7dd1d55569389a6cfc20af90f83cd6" => :high_sierra
   end
 
   depends_on "cmake" => :build
