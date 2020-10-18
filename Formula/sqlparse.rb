@@ -13,9 +13,9 @@ class Sqlparse < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "51938899cca31fea46f4b8ca06ed6ea730b3fa9f8ccf3b05c0d5ae01a58b4bac" => :catalina
-    sha256 "2d52f1ea77ef4b97c95a5dc77097c324f950c9ec0fe370afd795222a41d8b6a8" => :mojave
-    sha256 "60f79b4eca3f227ee975ab3a464f772b7f3e6c955aca664b891d978f5c9dd0d7" => :high_sierra
+    sha256 "474e731b38baa47c6db75bf1ca957e6814148dd166941c70967836eeb3be844e" => :catalina
+    sha256 "fe9331f9ef485b2b110cf72fb36a9344d5744efb79b4652b4f8e37c1c43facc6" => :mojave
+    sha256 "743a16f18f46d93b073e9dcf01164c1347314fbbbced824d86906a345324e29a" => :high_sierra
   end
 
   depends_on "python@3.9"
