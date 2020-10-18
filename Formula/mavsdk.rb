@@ -13,9 +13,9 @@ class Mavsdk < Formula
 
   bottle do
     cellar :any
-    sha256 "be1c2fb1fdc55d40f2c4e7599bf5d9c950db6c76283e9b50e3f155ecb8d3b2f2" => :catalina
-    sha256 "b5d8ce18096566a3d99224d43cf437e9addfecedc24fe4b614afb2a315559c91" => :mojave
-    sha256 "aff4b1897156e0d2ea91bac5ee45d9710d23819a59b3c4ecd66916317ffe9eed" => :high_sierra
+    sha256 "b3c2a54b46f27813bb62987d4e080cb17c3698ca9e00e861da8629dac9dc09c8" => :catalina
+    sha256 "6120b14db527f398bf009e4bc3b55116ea9320cbceace6d583b856406e5d2ae1" => :mojave
+    sha256 "5456d0065d23c9de92a97ee9ec98a4f87733a1926b114a667cd5114a66617b75" => :high_sierra
   end
 
   depends_on "cmake" => :build
