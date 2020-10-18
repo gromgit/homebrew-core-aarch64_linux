@@ -12,9 +12,9 @@ class SpiceProtocol < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e1ade135b57cc78000d754e20b86ac2ce39f3a6bb466095995cc1dd1b57f7e96" => :catalina
-    sha256 "e1ade135b57cc78000d754e20b86ac2ce39f3a6bb466095995cc1dd1b57f7e96" => :mojave
-    sha256 "e1ade135b57cc78000d754e20b86ac2ce39f3a6bb466095995cc1dd1b57f7e96" => :high_sierra
+    sha256 "c1e7d23c49491707d0113d45759756a55fb479ed0cdc6c0d3ec55d68a58a61cd" => :catalina
+    sha256 "c65655047ff18f1b00ec71a24469409c4483f0be190fdc2735470730cdf95b17" => :mojave
+    sha256 "86145a5c7d8c109671fb9277ac07c56c8f8475c0854b2e2123a3beabd2626f06" => :high_sierra
   end
 
   depends_on "meson" => :build
