@@ -12,6 +12,13 @@ class Gcalcli < Formula
     url :stable
   end
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "cdba25bc19242bcef227b7ce304044267b47d8dc50f08f6e33ee7ccfeaa687a5" => :catalina
+    sha256 "7b362833fa9794fa940f0785f354c8384143dfcf764008aa3847c1fa576f6b52" => :mojave
+    sha256 "2a50521955f86a01262fac57cc327922367e2d4ec66461e652aec7a465e04f0b" => :high_sierra
+  end
+
   depends_on "python@3.9"
 
   resource "cachetools" do
