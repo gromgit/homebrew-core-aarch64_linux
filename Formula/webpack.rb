@@ -14,9 +14,10 @@ class Webpack < Formula
   end
 
   bottle do
-    sha256 "084398b30d0980dc3d96f346550ac3a15b1228b542af9f908a30a8c2a3db03d7" => :catalina
-    sha256 "5ffdd83f04627ccdf04fe74b4d43e034501a85783e9fe0ed65ecec393128f746" => :mojave
-    sha256 "ae6ff3f234aeb8987b354a178e2d8a6cc4b373c1035532842e4f2fe644a7453a" => :high_sierra
+    cellar :any_skip_relocation
+    sha256 "02340d06c7da315b6e10c265b6605b2dc7232abbfb5735935a52110c91f2ca67" => :catalina
+    sha256 "8cd1b9427f38f39cdc8ab541f15db1dc6c0ecc34cb5818665bb6e0a2c48c4e59" => :mojave
+    sha256 "8f209bf09f5c901df6bebbc2148fa57513d09e879df2c6c01af1e63327b4a9d7" => :high_sierra
   end
 
   depends_on "node"
