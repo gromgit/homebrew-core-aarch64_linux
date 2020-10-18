@@ -9,9 +9,9 @@ class Localstack < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "de27d61ff6e9b3c72321ce96151ac7c3688adfab0bd312a01548504b787b3324" => :catalina
-    sha256 "391853de2eea78e363d0509f791534b47bf32be3ef602d848588da30548e1718" => :mojave
-    sha256 "6786aed621545da75340485f36032ac038f3f04155c9c61d1fcf0616abec7e0d" => :high_sierra
+    sha256 "18abc81335dbe38f2ccd61dc8b247270574e1450f6a2a8afdb3b2e6c25b412d4" => :catalina
+    sha256 "8e65aa3bca665423c54b5e6e5ec978cb6108bce43e59c4f212d4a889b8bbca49" => :mojave
+    sha256 "cdd4a9a5c92760e8ac652dc289c1375db24a793a7ad614723fa15474b1ac6c26" => :high_sierra
   end
 
   depends_on "docker" => :test
