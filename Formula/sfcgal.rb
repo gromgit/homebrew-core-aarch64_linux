@@ -7,9 +7,9 @@ class Sfcgal < Formula
   revision 1
 
   bottle do
-    sha256 "8cc583e706bc2755d61c362afbdd0cc627c6126113d4d6c5c0cc1f1bb62e8dfa" => :catalina
-    sha256 "4137e3e9b3058a0d05a1ef9a357f0b22d4e0cf57ea6c525b3c4d7e3741a6ba86" => :mojave
-    sha256 "cddd030fa1e55f74ee70068d2ac5b6c748def91794a82cad87a3025078cb2f78" => :high_sierra
+    sha256 "0293346eb037821d5ccc0b25b2f614d87b618ca337a8533a146add94968cb2c9" => :catalina
+    sha256 "5b9747bc8fc4695cdf59252fde7d22dd00ba53bc2fee8092e4869326f643dce2" => :mojave
+    sha256 "f8dd9ae70ab130d39d5526ad0c4df3803999dbf97cae044657d73fe9cbc320dd" => :high_sierra
   end
 
   depends_on "cmake" => :build
