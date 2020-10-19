@@ -8,9 +8,9 @@ class Dotnet < Formula
 
   bottle do
     cellar :any
-    sha256 "777c2c233711c7c68de632a5ca7c8f08ae8ecc3ee3eb984ce9865add00af9b69" => :catalina
-    sha256 "b7c249f4be6c9fa58482b03f3398178131e67db280ee06460988df2a598d3d22" => :mojave
-    sha256 "12d970b23c3671c72a9ade43b405f9e8b8779d016c7c846750f6097429158b2e" => :high_sierra
+    sha256 "f6c4d1db106a901e28fb32cbd7d5eadf09ad4b934c5329acafc1d126ce0c4300" => :catalina
+    sha256 "39a01a9e7855df54640d1b234001f09bd36dacc95e62b7ff22edb3fb1c9cab15" => :mojave
+    sha256 "672944a955d164420b9b1977a4ab457bdc0d6fbd03ef0cb05aad433108bf72c7" => :high_sierra
   end
 
   depends_on "cmake" => :build
