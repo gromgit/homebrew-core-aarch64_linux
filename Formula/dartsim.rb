@@ -6,9 +6,9 @@ class Dartsim < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 "bad657c56bb6d83b782b7a25e97e3bb60a042984255d05b85d1d50e9c50f830e" => :catalina
-    sha256 "a9c7a4c1aaf357f88bc389ced38816c4d5857cc44c2876933e8c12be3f5e4450" => :mojave
-    sha256 "9ff5943e7d6d6d055091e9e9318d230051379dd09dae3ec48a063a5a477ec78b" => :high_sierra
+    sha256 "0467aa46c1f8a066bd8f7accc4209c91a2e7b31d14c16ee071620319fa9f15a1" => :catalina
+    sha256 "c210ac10948631e8ec82203e5012ba47e94cc05dcd276eb4ff6c1813b90d62c0" => :mojave
+    sha256 "4c4b87a6e38acc07a62be41c49895540a030d1fd2544775d122bb359ef0dceb3" => :high_sierra
   end
 
   depends_on "cmake" => :build
