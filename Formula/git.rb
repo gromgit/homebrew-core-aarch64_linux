@@ -13,9 +13,9 @@ class Git < Formula
   end
 
   bottle do
-    sha256 "6c4d10f29f78dcbefa12fab3e47e7755d5d2ca2e9bbc5aeee4838ad223296d0a" => :catalina
-    sha256 "10f23bc63568fdeb598df2dd30fbb0ead31f2eef3c0990a8ac53f3e2005de82f" => :mojave
-    sha256 "5095b064dfafb8cf4cabd017844f181d8eabaf45fb6965d2d30ed6de00c0e884" => :high_sierra
+    sha256 "ec73f2ef4364451a8bffef7af1f4f2fbb53145135ea6b9e595ce181bb7567314" => :catalina
+    sha256 "a5b8ca103d32cf62f1693e20f70335bd9e331e413e565b72c9ce7da33e5b923f" => :mojave
+    sha256 "d71e19675402b0f88a0bc8f0c6cb13b85a5ebf110adcb671a756a8ae740b51e1" => :high_sierra
   end
 
   depends_on "gettext"
