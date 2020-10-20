@@ -12,9 +12,9 @@ class Glib < Formula
   end
 
   bottle do
-    sha256 "262f87a82d6409a34bec932f4bfae6c30fa8a39c8886161dd46043243ffcdd9f" => :catalina
-    sha256 "202946f77d5bde6c9bad1f3bad818bc0f01b2493a7c826dbd4a18bd451410f97" => :mojave
-    sha256 "8457442f4db9c331cabeca46344354b5177ff0cc54bef1d3ede8981aeda84b6b" => :high_sierra
+    sha256 "325391b8f3f49936c8add539b1c686622d8bf6c8fcd35c4f9c5874e13db15a4d" => :catalina
+    sha256 "b7bc4d0f176edd757f1c9dba48ab9ad72f57e4130ea34588e559ac8b911f3ba5" => :mojave
+    sha256 "832c7168aef9afb23967c4641ab807f9daaf8aabc6bcb4da97caa28e85eb8c98" => :high_sierra
   end
 
   depends_on "meson" => :build
