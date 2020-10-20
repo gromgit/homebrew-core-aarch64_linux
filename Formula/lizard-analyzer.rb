@@ -12,9 +12,9 @@ class LizardAnalyzer < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0e16a4352698ce9a033b2670a4031e9bae298631b0bc28012ae8d9f2defedf12" => :catalina
-    sha256 "d33983b21c3da6ea5760f48a3528763be0d7222665e84e4163b3a805d5f4465f" => :mojave
-    sha256 "e96119714905814a1bcf74f385b40e1742076d615576e55d5533195446733dd8" => :high_sierra
+    sha256 "f3e7d8d0c1108714727d7b8065166073f207a5d35ad302f1be788d48c91cca51" => :catalina
+    sha256 "bc9bca50b8f2d83404353f5692021d00e995ca95dc389eb976584ae29d1bb1f9" => :mojave
+    sha256 "79f9a6da530de4e7d15a93256a7eb7ec4bcf4b4a227c601974cccdeee21b9a32" => :high_sierra
   end
 
   depends_on "python@3.9"
