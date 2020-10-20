@@ -3,11 +3,9 @@ class Semtag < Formula
   homepage "https://github.com/pnikosis/semtag"
   url "https://github.com/pnikosis/semtag/archive/v0.1.0.tar.gz"
   sha256 "9e16a418b795363a9283318e5dc02da8a67ec96adaac0ae8eb23f1b21b06666f"
+  license "Apache-2.0"
 
   bottle :unneeded
-
-  # https://github.com/pnikosis/semtag/issues/15
-  disable! because: :no_license
 
   def install
     bin.install "semtag"
