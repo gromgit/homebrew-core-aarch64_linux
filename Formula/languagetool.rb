@@ -10,6 +10,13 @@ class Languagetool < Formula
     url :head
   end
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "abc34aa15417a0b27c29d991e467d2bf039e856755c771026ddc25aa28768055" => :catalina
+    sha256 "a8e667a790fb2c339006f0ab9e191dcf7f61929e2936bf8a17ef0928d797b4ea" => :mojave
+    sha256 "0574176bcd107ae1933decbdabc6d71d1060c391bd7740436883b96a8059eb02" => :high_sierra
+  end
+
   depends_on "maven" => :build
   depends_on "openjdk"
 
