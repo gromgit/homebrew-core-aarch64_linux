@@ -1,8 +1,8 @@
 class Clair < Formula
   desc "Vulnerability Static Analysis for Containers"
   homepage "https://github.com/quay/clair"
-  url "https://github.com/quay/clair/archive/v2.1.4.tar.gz"
-  sha256 "444e109091ddc49e00277e38ddf9456a53243ab70f2560ab927f4d35b53555f4"
+  url "https://github.com/quay/clair/archive/v2.1.6.tar.gz"
+  sha256 "51e3c1e13c7670406097b447d385cdac9a0509e6bcb71bf89c29d6143ed4f464"
   license "Apache-2.0"
 
   bottle do
