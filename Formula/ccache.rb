@@ -1,9 +1,10 @@
 class Ccache < Formula
   desc "Object-file caching compiler wrapper"
   homepage "https://ccache.dev/"
-  url "https://github.com/ccache/ccache/releases/download/v3.7.12/ccache-3.7.12.tar.xz"
-  sha256 "a02f4e8360dc6618bc494ca35b0ae21cea080f804a4898eab1ad3fcd108eb400"
+  url "https://github.com/ccache/ccache/releases/download/v4.0/ccache-4.0.tar.xz"
+  sha256 "ac1b82fe0a5e39905945c4d68fcb24bd0f32344869faf647a1b8d31e544dcb88"
   license "GPL-3.0-or-later"
+  head "https://github.com/ccache/ccache.git"
 
   bottle do
     cellar :any_skip_relocation
@@ -12,23 +13,11 @@ class Ccache < Formula
     sha256 "1d0f36a0da0c0677590856ea905b6b7aec4682f1ac2c412897b400809818d702" => :high_sierra
   end
 
-  head do
-    url "https://github.com/ccache/ccache.git"
-
-    depends_on "asciidoc" => :build
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
-  end
-
-  uses_from_macos "zlib"
+  depends_on "cmake" => :build
+  depends_on "zstd"
 
   def install
-    ENV["XML_CATALOG_FILES"] = etc/"xml/catalog" if build.head?
-
-    system "./autogen.sh" if build.head?
-    system "./configure", "--prefix=#{prefix}", "--mandir=#{man}"
-    system "make"
+    system "cmake", ".", *std_cmake_args
     system "make", "install"
 
     libexec.mkpath
