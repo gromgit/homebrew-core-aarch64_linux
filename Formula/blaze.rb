@@ -6,6 +6,13 @@ class Blaze < Formula
   license "BSD-3-Clause"
   head "https://bitbucket.org/blaze-lib/blaze.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "0b6eea6a400363549d96c9093a8987653c966580c39c2e96b223a9139974636b" => :catalina
+    sha256 "5dd4f2b4876abb2b483c3a8a529e0019cef7e6ee62631d10d041ca6d377f5ca9" => :mojave
+    sha256 "99d8e68c81380e11226786f2843b476d782e305fc0a78dbf0fc095b659a9fe50" => :high_sierra
+  end
+
   depends_on "cmake" => :build
 
   def install
