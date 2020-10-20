@@ -6,9 +6,9 @@ class ClawsMail < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 "7777390cfea96a30277ebb79738341f0944bae3dcfd18a7befd2748ea4671356" => :catalina
-    sha256 "6a7264ed191bcfdc7ae1b1c1020a09b3d9b224e61b45c876cc047db181a225cb" => :mojave
-    sha256 "3d5c69c7654a22c8b51d3a7bf18224a40fade38281bb4c4fb4287221b3ca19ee" => :high_sierra
+    sha256 "291bdf8b3f542711d06f2c7d0fd0dab69fad2afc20dc82bda031e7908c1e6073" => :catalina
+    sha256 "54067161cc3de3a740c0307ddbe49d127ca7855a5857d54baa25e60ed9942cbf" => :mojave
+    sha256 "1ea18b8c1903d458fc080ef53738549d6f197b86c4501e0f4bfe779ad51a5ba6" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
