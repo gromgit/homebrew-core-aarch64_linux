@@ -2,8 +2,8 @@ class Cpr < Formula
   desc "C++ Requests, a spiritual port of Python Requests"
   homepage "https://whoshuu.github.io/cpr/"
   url "https://github.com/whoshuu/cpr.git",
-      tag:      "v1.5.1",
-      revision: "5e87cb5f45ac99858f0286dc1c35a6cd27c3bcb9"
+      tag:      "1.5.2",
+      revision: "41fbaca90160950f1397e0ffc6b58bd81063f131"
   license "MIT"
   head "https://github.com/whoshuu/cpr.git"
 
@@ -18,6 +18,15 @@ class Cpr < Formula
   depends_on "openssl@1.1"
 
   uses_from_macos "curl"
+
+  # Fix system curl detection
+  # See https://github.com/whoshuu/cpr/pull/428
+  #
+  # Remove in the next release
+  patch do
+    url "https://github.com/whoshuu/cpr/commit/451fd1a896c963367ebb3d77cfe4550b2d5636f3.patch?full_index=1"
+    sha256 "74349209c5d28d9261871080341c735517b3e64e91ac6cc6884abb2767f14b33"
+  end
 
   def install
     args = std_cmake_args
