@@ -11,9 +11,9 @@ class Vgmstream < Formula
 
   bottle do
     cellar :any
-    sha256 "74b726aca9e8a085ff1d5f4afe6f892f3620d2cb229c86276451fcb25e993a11" => :catalina
-    sha256 "b233a6c088526b989be281b44ff467aec792ff8cfc69afed7329f60f82b51eb5" => :mojave
-    sha256 "ffa46eab45d850eaa18f0f0e280a9e387d0332b89935e4a6cdc5f1e5455fd228" => :high_sierra
+    sha256 "9b28ea5e9373114cd0553a1da3ee0bcb424c5d99d967ca586e736b201ab9a07f" => :catalina
+    sha256 "298a3a24cf365b1600fb8cc4e393181e8f4674b40dfc1e536392d4e14299334f" => :mojave
+    sha256 "7ab68532f977a0ff2f0214d585c132ea68a825aad487aa98f43b68f33dfb998e" => :high_sierra
   end
 
   depends_on "cmake" => :build
