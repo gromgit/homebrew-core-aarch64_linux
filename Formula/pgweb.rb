@@ -1,8 +1,8 @@
 class Pgweb < Formula
   desc "Web-based PostgreSQL database browser"
   homepage "https://sosedoff.github.io/pgweb/"
-  url "https://github.com/sosedoff/pgweb/archive/v0.11.6.tar.gz"
-  sha256 "8d692a1220a85884f231c3480e0da305678d86660e795a5eb510d076945adf65"
+  url "https://github.com/sosedoff/pgweb/archive/v0.11.7.tar.gz"
+  sha256 "d35f74a6d80093764aece7b0a0ad6869799d04316efab077e0f7603835a9f159"
   license "MIT"
 
   bottle do
