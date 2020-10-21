@@ -4,8 +4,8 @@ class Semgrep < Formula
   desc "Easily detect and prevent bugs and anti-patterns in your codebase"
   homepage "https://semgrep.dev"
   url "https://github.com/returntocorp/semgrep.git",
-    tag:      "v0.27.0",
-    revision: "549bfa79f81939ac06e57a527b5f0d46c87c46ce"
+    tag:      "v0.28.0",
+    revision: "b9f1d25600247ee1042eacfec428225ae623a646"
   license "LGPL-2.1-only"
   head "https://github.com/returntocorp/semgrep.git", branch: "develop"
 
@@ -136,6 +136,14 @@ class Semgrep < Formula
       ENV.deparallelize { system "opam", "switch", "create", "ocaml-base-compiler.4.10.0" }
 
       system "opam", "exec", "--", "make", "setup"
+
+      # Install spacegrep
+      cd "spacegrep" do
+        system "opam", "install", "--deps-only", "-y", "."
+        system "opam", "exec", "--", "make"
+        system "opam", "exec", "--", "make", "install"
+        bin.install "_build/default/src/bin/Spacegrep_main.exe" => "spacegrep"
+      end
 
       # Install tree-sitter
       cd "ocaml-tree-sitter" do
