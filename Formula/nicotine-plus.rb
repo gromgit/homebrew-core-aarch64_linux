@@ -8,6 +8,13 @@ class NicotinePlus < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/Nicotine-Plus/nicotine-plus.git"
 
+  bottle do
+    cellar :any
+    sha256 "79f838b75ca361f58760ba72b1249c7713def0cd7aecf4f6d08ea111989cee50" => :catalina
+    sha256 "21e9579eb01c586c391a5d23785021ea10be26fd493bce2592cb1ea7af59c582" => :mojave
+    sha256 "c82082e0ff3002617e91804a3539c34c19170bb1f33c057c7f69198569a1177a" => :high_sierra
+  end
+
   depends_on "adwaita-icon-theme"
   depends_on "gtk+3"
   depends_on "pygobject3"
