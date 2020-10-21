@@ -14,9 +14,10 @@ class Qcachegrind < Formula
 
   bottle do
     cellar :any
-    sha256 "0a16a588310bd7251602e330366a5abde440e1f8ae4ac564eb99ac9e69298c0c" => :catalina
-    sha256 "0e4e81423ef0fc5dd92f8e5dc247b1add910ddbf1491ba6d11175fe57c9642d2" => :mojave
-    sha256 "67924a8923c4b2f29b69dd1cde8131d072a674051ec6ffc637547b4b67a7c31d" => :high_sierra
+    rebuild 1
+    sha256 "dc39ea438ea591b5aec09e7aa88b82af413100df0b6c689f7930df16953f87e0" => :catalina
+    sha256 "6b27fca8ce13fc1a9cf62bcc85cbcb3f08149dde15f12012aeea6d61ce1bae77" => :mojave
+    sha256 "7635d2f92941c12efce0a89e526198d5b730979511010e7af181f83fe48ff078" => :high_sierra
   end
 
   depends_on "graphviz"
