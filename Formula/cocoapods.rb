@@ -1,8 +1,8 @@
 class Cocoapods < Formula
   desc "Dependency manager for Cocoa projects"
   homepage "https://cocoapods.org/"
-  url "https://github.com/CocoaPods/CocoaPods/archive/1.9.3.tar.gz"
-  sha256 "12d8f52dcfbaf0f4b3e52001e072e26aa3c967e1c41e84511e84b587ae434e27"
+  url "https://github.com/CocoaPods/CocoaPods/archive/1.10.0.tar.gz"
+  sha256 "d44c70047020ea114ca950df6d4499b1f86e5e7bbd3536a46f6fa3e32f1df21e"
   license "MIT"
 
   bottle do
