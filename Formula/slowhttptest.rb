@@ -9,9 +9,9 @@ class Slowhttptest < Formula
 
   bottle do
     cellar :any
-    sha256 "baaffefacf315bcb7ae0d5a241e8f41e326c76a3ac67e119ced1c9139e198bde" => :catalina
-    sha256 "77d5fe071eb0015008a405ffa3838060a186d6e6134ae6dcf8ee9498a995857c" => :mojave
-    sha256 "c9b36ccf8aee0f6572e2eb1112caf25811c22f1500ad81c1277309c76bd6460b" => :high_sierra
+    sha256 "7cd865ac1b118d8ef7bdf0b540f56140ff4254e7a38d2b22d520c9bd1158df5d" => :catalina
+    sha256 "f4da64ee55ba56ffaff0d383954d0e13577326dbca30b431d5d89775dcfb396e" => :mojave
+    sha256 "3ffeaec203cd16a00aeb0bf239dfe5b32087e35a74dd5c6917bd3e7a2a09848f" => :high_sierra
   end
 
   # Remove these in next version
