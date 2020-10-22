@@ -10,9 +10,9 @@ class GstDevtools < Formula
   head "https://anongit.freedesktop.org/git/gstreamer/gst-devtools.git"
 
   bottle do
-    sha256 "f9f4c3b56900451560a484f7f08f566bb34c17b1bf63c32d8653851e7afe0f4c" => :catalina
-    sha256 "b38054091a5c0156951daa97288e4b6728b768774e6e479111cc3d75373f0fa8" => :mojave
-    sha256 "0c0d08f61c6c4a5589146edbdcb702831d7942c0a37b6bf64b22a30bab950828" => :high_sierra
+    sha256 "9deffbd51968295db502d9ae7874f83458458c163daa427fba0451a6fed47bb5" => :catalina
+    sha256 "a958772618d4b35b5a05fbacb9aee801c2d26b1e11e30270197f19abb83a08ea" => :mojave
+    sha256 "d5a3e6fcbe0d7454574a0029925e103aa70e96db2235341c3e4bb7d1e81553ef" => :high_sierra
   end
 
   depends_on "gobject-introspection" => :build
