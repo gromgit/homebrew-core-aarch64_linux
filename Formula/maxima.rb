@@ -20,22 +20,22 @@ class Maxima < Formula
   depends_on "gawk" => :build
   depends_on "gnu-sed" => :build
   depends_on "perl" => :build
-  depends_on "sbcl" => :build
   depends_on "texinfo" => :build
   depends_on "gettext"
   depends_on "gnuplot"
   depends_on "rlwrap"
+  depends_on "sbcl"
 
   def install
     ENV["LANG"] = "C" # per build instructions
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--prefix=#{prefix}",
-                          "--enable-gettext",
-                          "--enable-sbcl",
-                          "--enable-sbcl-exec",
-                          "--with-emacs-prefix=#{share}/emacs/site-lisp/#{name}",
-                          "--with-sbcl=#{Formula["sbcl"].opt_bin}/sbcl"
+    system "./configure",
+           "--disable-debug",
+           "--disable-dependency-tracking",
+           "--prefix=#{prefix}",
+           "--enable-gettext",
+           "--enable-sbcl",
+           "--with-emacs-prefix=#{share}/emacs/site-lisp/#{name}",
+           "--with-sbcl=#{Formula["sbcl"].opt_bin}/sbcl"
     system "make"
     system "make", "install"
   end
