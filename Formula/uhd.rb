@@ -13,10 +13,9 @@ class Uhd < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 "ee9fdf4b27ddf83c6d1965a7bb97b0686518ce67ddf780a2f1713fee9bda9c3a" => :catalina
-    sha256 "e3cdd07c0bfa1e29983566cae2fe2b964431f05c4a06479f37e4347d3f1f676b" => :mojave
-    sha256 "fbae4fec9ad2802ceab2407915588440dcbdd810d510733064601178b1151f6a" => :high_sierra
+    sha256 "8e65f370dea3f23cb226e35595441c1b998f1044737e3f327cb15bcc6c12838d" => :catalina
+    sha256 "78652146db42531d9af14c776f8acb4eaaa1abbb2d956aeedcaa27d91f7bd305" => :mojave
+    sha256 "107ab41c9790f36ef37efb7382a65d8cd57f8bd872408943f8224dc3061d1bab" => :high_sierra
   end
 
   depends_on "cmake" => :build
