@@ -15,9 +15,9 @@ class Pympress < Formula
 
   bottle do
     cellar :any
-    sha256 "0882199094438644ae2af8e60ea55f02272990cca88b4ae0cbcfbabc9a68465b" => :catalina
-    sha256 "7594889ecb2cf373356f01c1eb4e56573ba26bd50fd5ed0de5ece83d75f1adca" => :mojave
-    sha256 "e6634bc9a8213054574d6be0814ef0b8faf6209e20aafb721753418a718f68af" => :high_sierra
+    sha256 "41e557d40ec52c40294021c554e02abca4e5de71c2a2a36d34b76fc433f3adb5" => :catalina
+    sha256 "167651130f883be21626ddd71e076c96e2746cc37abe6e252af702892c741822" => :mojave
+    sha256 "37a9f33d6c4fcd28ddbb81213a74d221f0d03446676dad3f144b0efaad771947" => :high_sierra
   end
 
   depends_on "gobject-introspection"
