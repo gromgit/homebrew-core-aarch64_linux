@@ -14,9 +14,9 @@ class Carla < Formula
 
   bottle do
     cellar :any
-    sha256 "1b3bc683f5671334c8d5e2ca01dd304d122cee9d95f3cc4cc4f41c60076d9af9" => :catalina
-    sha256 "7554f8791409b5bf2b1b1cae0ee87d32572937a8f73e62065cbcd4811bd39575" => :mojave
-    sha256 "89c00822dd9365366d58cdff17ce720f99daec9ca11faa0507bf346e42c9bf93" => :high_sierra
+    sha256 "8f55c9c9f85709f1d85d219d3d421cee0246b9e5b4a097613a8a8d2b1aba8c9b" => :catalina
+    sha256 "ed7ec50b3e5193111da088c770dc1c4e6609299c9009f18b6b09e7558ac6e03e" => :mojave
+    sha256 "e4ae5a76855872c3fca8ffda7054abf5ae5acdb56473132a9945ff52f42ff2b1" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
