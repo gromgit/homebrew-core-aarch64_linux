@@ -8,9 +8,9 @@ class Pybind11 < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "c154d564868492981456c9a4e3fa21b6cdb821d96ba14d1ca1f4825d642a1384" => :catalina
-    sha256 "c154d564868492981456c9a4e3fa21b6cdb821d96ba14d1ca1f4825d642a1384" => :mojave
-    sha256 "c154d564868492981456c9a4e3fa21b6cdb821d96ba14d1ca1f4825d642a1384" => :high_sierra
+    sha256 "a3334931157e3b139511958bb099ea0f2db16a2d057b16ffd89892e067c867a8" => :catalina
+    sha256 "0bbab71bb6068d909b284aba95440602d9f157dc431ea132c8c5e2582f677102" => :mojave
+    sha256 "c5760e0911e19d56308e1ca88327d9c24d9184fce606b6c92436ca405ee11407" => :high_sierra
   end
 
   depends_on "cmake" => :build
