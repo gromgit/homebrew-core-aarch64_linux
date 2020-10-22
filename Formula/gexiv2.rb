@@ -12,9 +12,9 @@ class Gexiv2 < Formula
 
   bottle do
     cellar :any
-    sha256 "1f8d42d1bb3e9ca58311b3a08b0576993007cb0d580e8740663e7ad4a055fb52" => :catalina
-    sha256 "7d97c40bab30a98f845560e0e6d12ea514ecceee3aab447f9a06664474d2ba10" => :mojave
-    sha256 "98515f671493f424a126e54ed940358f87a26d1bb049051735014b7c8a070900" => :high_sierra
+    sha256 "9ebb451be639c6e3557c4113dc999ab3a0ef6c0f9f2ab508a6eb5197da40e2c7" => :catalina
+    sha256 "87d16bcad50a98b318106735fb10ed2652d8cab8768f2e9a5fb8690690d656d5" => :mojave
+    sha256 "6fdb45c5dec3259a2f178fdd3baee874d3b6db477ab2067d89635632900742a8" => :high_sierra
   end
 
   depends_on "gobject-introspection" => :build
