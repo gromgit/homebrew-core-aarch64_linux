@@ -11,9 +11,9 @@ class Gom < Formula
 
   bottle do
     cellar :any
-    sha256 "2d41e90512e737bfd112ba64278fda9c0dbaf1ab7dbd00732ed6ebb644da31e0" => :catalina
-    sha256 "619f71c318e02d8c33e4d827aedfaad09d6f349d92408bb9a40097dba99eb65e" => :mojave
-    sha256 "7566dd0ded406861960ebd556ce0d7f7e6e48eac4e72ab88aa9934d554ad638b" => :high_sierra
+    sha256 "c86f525462ffd97cb6bd469b5a26d1db56281d725916d5eb524f31a4750b1892" => :catalina
+    sha256 "afda0dc772004cee3b8148719a078f6ac2871480260f310a5d06e367dcd68412" => :mojave
+    sha256 "cccd9551ffced0a1648ff2f420eb3e5666ff102b4c81d96806cd7d25068ef7d7" => :high_sierra
   end
 
   depends_on "gobject-introspection" => :build
