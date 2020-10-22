@@ -14,10 +14,9 @@ class Ipython < Formula
   end
 
   bottle do
-    cellar :any
-    sha256 "02a8edee16108cef627e7c98cc73b021aa64f274df901c6518077d1fb930db32" => :catalina
-    sha256 "4e2b941df0b13d103bdbc047b69144e5ad373cd92ff434b2751ca300961685ce" => :mojave
-    sha256 "3912624b50eb2b825cbf1d5d03b5e3e18d51e209686f315790d2699b4022c5a4" => :high_sierra
+    sha256 "771a5d49aa7394e765b52b3792e49bd6179fa6ab21b2365fbdb0d097febefb4b" => :catalina
+    sha256 "dd677ed30a02e5d1b037b1bdaad66fd1648e9aeb58c9d64f473850ce10e8ac36" => :mojave
+    sha256 "15784abaaf5861b917fe85836782f8d4cdf7fa7a56fe93dac9dc3c7c0009f1a0" => :high_sierra
   end
 
   depends_on "python@3.9"
