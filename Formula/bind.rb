@@ -23,9 +23,9 @@ class Bind < Formula
   end
 
   bottle do
-    sha256 "18f25bc05253751cd74b30547c4abc32948ea71381d0c20911b1b9b39206214f" => :catalina
-    sha256 "43874746fb0e50cd80195b1498234713aa7a1250fc2cd03dc446a66d3981314f" => :mojave
-    sha256 "5d5646151f026eac651fc1ee663346cb7929e5d11e1c43da6a1d4c31705e7cf2" => :high_sierra
+    sha256 "4e30344b9663cd8ae33af31e8a5241ca9d98f33985f7360701cea1ff072a691e" => :catalina
+    sha256 "76ff0b81b4e52f3ca7a503b240204e5fd31704c9dc3cdfc970e3e0ee5334309e" => :mojave
+    sha256 "eb2c21722592007b5567c8df20bfed89819bcaa08bcfba597031df65122c0569" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
