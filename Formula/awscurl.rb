@@ -10,9 +10,9 @@ class Awscurl < Formula
 
   bottle do
     cellar :any
-    sha256 "7b4a63349870bd2279e277f130e703ba811b2f645f306fba33164c2144bea583" => :catalina
-    sha256 "161885cf59500de377e1c74d5248a64d2e25ba977f9a1bda76888b8264a72782" => :mojave
-    sha256 "f489f6be212f02ad9dc4f0a3c0685722a8c2f121a2acdf2c7c28d67c753bb90b" => :high_sierra
+    sha256 "efa9b0530287ea2f6c6b66d04aa77728b65afcf0ba12f4ec76717bb5315362ea" => :catalina
+    sha256 "8ad98d1c5efd9c68f413c7718bdf4deb6c003279a6edc6cf398184725e88bcb6" => :mojave
+    sha256 "1a6466c5d01b1d62910a821be9f3c3926a9b152684f612b91de539a0c2174a07" => :high_sierra
   end
 
   depends_on "python@3.9"
