@@ -13,9 +13,9 @@ class Ninja < Formula
   end
 
   bottle do
-    sha256 "63c39e6268dc84add9ec7322a8d030546054892a89cd0df362ae8b71d9fe3dd1" => :catalina
-    sha256 "1522e6c7e3cf3e9d6c8c4bb19c118f20def7d10f681a5af466486e5f8f50d388" => :mojave
-    sha256 "48ae1960e86fc500b4f4c6d90ec79d82dece00ae7e26936a12cc539b2f707e37" => :high_sierra
+    sha256 "e7bf290104b821c1bc54a3f20f17c6ead05704130c92b6438ca85cc52f7027b8" => :catalina
+    sha256 "aa9821c77bc31e22b8abde346c787353b53c1b092b7c16a5fcefc9d64c97e6ed" => :mojave
+    sha256 "a7a30267288572d960f0d213b941076e6740f6b89c65447ae6c8d41fa3752480" => :high_sierra
   end
 
   depends_on "cmake" => :build
