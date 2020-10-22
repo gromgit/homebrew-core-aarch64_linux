@@ -10,9 +10,9 @@ class Yamllint < Formula
 
   bottle do
     cellar :any
-    sha256 "90198d7785e1338371e05318329a18c648884bdae5666338667bc800ed248029" => :catalina
-    sha256 "43eeac2efc920b6e3e57f14b369ab88d1734c8dc565922e699d170882fa60a1b" => :mojave
-    sha256 "8af90e6d4e820011b38d4a85f436dfbbb6dca1a242b0ca970b81ce619fd172da" => :high_sierra
+    sha256 "4da53cd2d8d61957b50189cdaf4378319bc233ae4d9714c95cb189a06058ff2e" => :catalina
+    sha256 "e6c94f6fc961be975a542b3c1fdd0a490d7755a54fe8af07e3611175a9adf619" => :mojave
+    sha256 "bf90ed58f27615bccd363fc33da8a03b0d60e4e1400d62872c1e46a59592e3ba" => :high_sierra
   end
 
   depends_on "libyaml"
