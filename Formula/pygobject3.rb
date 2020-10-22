@@ -12,9 +12,9 @@ class Pygobject3 < Formula
 
   bottle do
     cellar :any
-    sha256 "3b8a6b54d626f8fb57b28ac43f21b1ba7fc528701487ba7be9d1e7c3f7ed7ae6" => :catalina
-    sha256 "629f3c862dddd99522e79bd33fc0931c6c93cef41806c14a55d893de3b8469a7" => :mojave
-    sha256 "21348f74c4a9be8c3cf3ef74c25d2907aeb48b77459cdcbbdb086e4b1946cfb3" => :high_sierra
+    sha256 "e4e592579b949b2b7df8cbd3b3956d3ee285054a4c1e3ecfbc9647a4e9bcf24e" => :catalina
+    sha256 "6c7132a187cc3cd7885d980b449022ca20d458e1657007000e471234f0504bed" => :mojave
+    sha256 "6f26840f9ae7c64ce17121d9ae60690447eb58269099fc96ed488308c755c8ac" => :high_sierra
   end
 
   depends_on "meson" => :build
