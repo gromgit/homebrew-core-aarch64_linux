@@ -9,8 +9,8 @@ class Handbrake < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "79cad2f66f656641da650bac57445c033ed6e23ac4707a96b1bdd38298fba007" => :catalina
-    sha256 "7930401b64b3960fb96edf3da3d3b235fe881c1282b9db2be303e99a5b15d473" => :mojave
+    sha256 "ab4f6d98eb86afd4c71f74310867a8e919c827ea44c5aea52d56c9de33884ac8" => :catalina
+    sha256 "7dd630c2fb5ea87ab59bd0e3c161b8091906484d7c286438cea86faaef2961cb" => :mojave
   end
 
   depends_on "autoconf" => :build
