@@ -8,10 +8,9 @@ class Ola < Formula
   head "https://github.com/OpenLightingProject/ola.git"
 
   bottle do
-    rebuild 1
-    sha256 "13a256a0bf648fd37be6190655af18b3d68d08cf6ccdc739870f2f89d6b5a11b" => :catalina
-    sha256 "3e18bbda8d9093ad9204067849de41c288d36154a4e3f5d71138254866a2cecb" => :mojave
-    sha256 "ca923883d08d515008ed578e1ebb6fa0c691c7e7f2c251958084bd2005185e86" => :high_sierra
+    sha256 "0d1e17e8fe6fe3807861fd861d005f5bd9bdcd363d41d6c66839959dcd2b7fa5" => :catalina
+    sha256 "e34574637827ecc45ed31f9d4d1f628cf80ba567c1803436c3293126c2bd699d" => :mojave
+    sha256 "8297329aff21747ce86d0b182f2eb41f3982f9ed3d55e7c22f708a4ea83e584c" => :high_sierra
   end
 
   depends_on "autoconf" => :build
