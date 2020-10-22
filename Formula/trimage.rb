@@ -8,9 +8,9 @@ class Trimage < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "34db72d3e2bbec742fd9d8286919e6dfda53ad2d552c80c1285240b9338ff384" => :catalina
-    sha256 "34db72d3e2bbec742fd9d8286919e6dfda53ad2d552c80c1285240b9338ff384" => :mojave
-    sha256 "34db72d3e2bbec742fd9d8286919e6dfda53ad2d552c80c1285240b9338ff384" => :high_sierra
+    sha256 "26b150cd030648ed8ca36448b80299a51c90d5487b7a9ad4d449b8540428e9a7" => :catalina
+    sha256 "1e1d69b2eb37119b8e9078476443a4944ae84eee458d7346a9ad1a8cbd3a9e75" => :mojave
+    sha256 "0e6f831f6c28348eb20f29e1b12bf9b6dcdbf665bf896f377c4d840aae967715" => :high_sierra
   end
 
   depends_on "advancecomp"
