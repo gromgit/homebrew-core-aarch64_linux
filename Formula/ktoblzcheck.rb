@@ -12,9 +12,9 @@ class Ktoblzcheck < Formula
   end
 
   bottle do
-    sha256 "93495421d21c635d04637865d68c922d70ed0112b01929d113d21cd533afabc1" => :catalina
-    sha256 "447d1889a2350c704d8c4d276c8122f8ecd24b906f5b4944e39bdbb77bf39962" => :mojave
-    sha256 "242eca7d985cf7d70b78a2838d96a7b91b1e67b68ca7376919296bc253a99540" => :high_sierra
+    sha256 "b7abb3dd65cefac9c8ebe1f54482c42adc6a4dbc2c6e3f18452f4b500d5d9aa5" => :catalina
+    sha256 "94c9812c2bcffef71b7e6805fa0f54b4a17cc52cb92dadb87fd804fcfab97701" => :mojave
+    sha256 "39e8b0149fcd448eddace995b7dc37331716b25a5f77b2be5f7b3eb462635854" => :high_sierra
   end
 
   depends_on "cmake" => :build
