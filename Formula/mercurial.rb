@@ -14,9 +14,9 @@ class Mercurial < Formula
   end
 
   bottle do
-    sha256 "4e825ea14b93467d22bfc45e3e7664b2d722fa7f9173711acca61650c3dbd8c5" => :catalina
-    sha256 "9077db79a19701298455a005c04228ff8a111ffeb7f9becee8b4f368526f710c" => :mojave
-    sha256 "98885b56a85023d257f2362908712c1770cf0a779b1db8c3de3b3a06de652b83" => :high_sierra
+    sha256 "ced57e0c39f62ef0ee485284b3560bd394c67a38e67948c1e1433779ae90b18e" => :catalina
+    sha256 "d8acf15025aecc357a7ff6017ab49a1d168c106f767b3a3a8dc71b0b2da690f6" => :mojave
+    sha256 "f736166694484b3a212ef99151ba6fba6502d78c8327bff4f2da03a9e07a25bd" => :high_sierra
   end
 
   depends_on "python@3.9"
