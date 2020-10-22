@@ -7,9 +7,9 @@ class Abseil < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "ac18b6939251847cf870284e02b81a322b6eb1b52ed6309fdc54226a3826f8c4" => :catalina
-    sha256 "83e37a50324358e6858db2420f5dad181fd36c9ef4c8133e6aafc5fbd429a8e3" => :mojave
-    sha256 "3f25082bb450d9e81b7be69ec8f3d34ae05a68a6f94c1f48820be427aa18be1a" => :high_sierra
+    sha256 "427d76ee4e58414546725bab7720284f0e513fa4317c4259ad1a4ffdc1f6be56" => :catalina
+    sha256 "60c98f7731cf9de032fe54a3691f648908f12ae462590b1e0a99e607abe5b939" => :mojave
+    sha256 "ad2c933b411cbfc06f39e6abed04f26522d7ea9eaea9bf47887a0eca7c6754c7" => :high_sierra
   end
 
   depends_on "cmake" => :build
