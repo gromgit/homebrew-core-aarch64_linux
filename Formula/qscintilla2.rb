@@ -13,9 +13,9 @@ class Qscintilla2 < Formula
 
   bottle do
     cellar :any
-    sha256 "ad21b9c248d85d8c76c34c504d5c6e8a3cf0091034c50f916cb8c50e1ca83c28" => :catalina
-    sha256 "67b316a64f594a424c77ba50f31fc4724856fb8c8f247de60de98e5a311170ad" => :mojave
-    sha256 "ce35dfa9a500a78cd89bf7bade336304434c99e4de972af80ed4fbed1f6d7318" => :high_sierra
+    sha256 "24fdd9ba205c8ae725ff19af75ab7f5effe304bca32360320f4237f7a5205f12" => :catalina
+    sha256 "80767f8eacf428235b22662838696fc824ee178f5e7e725939f5a8c632bba69a" => :mojave
+    sha256 "390d65518706dc7100d52c794d7de67a5b8891c6f6fa019bb0259190cd8a04f5" => :high_sierra
   end
 
   depends_on "pyqt"
