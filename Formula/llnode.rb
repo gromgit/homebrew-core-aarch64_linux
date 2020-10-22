@@ -8,9 +8,9 @@ class Llnode < Formula
 
   bottle do
     cellar :any
-    sha256 "7cae66b1f165be9e0167179b2512b232c367d226f0dd902e3a9ab9b5268592c3" => :catalina
-    sha256 "be4240e396ba27163184e031a6037461786ad13ae3c206e8f3461d546a472f01" => :mojave
-    sha256 "eed224951b899923a307415072bc9c4402e85d9e0d5f0aedc214cf1106f15935" => :high_sierra
+    sha256 "560fa7f91b9efca4de97feffe3bec3ee218eca2786df2a2e473009ab520f855b" => :catalina
+    sha256 "23c5930b1c3a4d3d9be6c410dc745014544331af8394917ecd9a928064d7ff49" => :mojave
+    sha256 "33842b20f13a721a880810a50422bfbf25b8c20a12f5e4882453939e7203ff1d" => :high_sierra
   end
 
   depends_on "node" => :build
