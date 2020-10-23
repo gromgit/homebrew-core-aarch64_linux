@@ -9,9 +9,9 @@ class GitGui < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "3485f4c80d9b510e4f749be31cf76d8287716f279aafbe094951b02817a144ad" => :catalina
-    sha256 "52903ac15430cf14d29cb95c6aa1e118733fbb36a5ecf9bcbb51e63f3e4976b0" => :mojave
-    sha256 "eececd54ad97593286e29f032d1e306c27bfd1d91e36dbebf4d194c851c2e5f7" => :high_sierra
+    sha256 "dd33d21f75c610a4e000abc2a08a5492bc4f6ea9d4554bd8eadb2c4a5c70e515" => :catalina
+    sha256 "2042ecc5781ac6018347f78f99f423a007699b0b2522ca71f45fc3a63f12e393" => :mojave
+    sha256 "9d7c41389b003399086520a1012056be1e308324a56b793a58fb6e4eea2bd4a0" => :high_sierra
   end
 
   depends_on "tcl-tk"
