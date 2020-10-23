@@ -1,9 +1,9 @@
 class Libmpc < Formula
   desc "C library for the arithmetic of high precision complex numbers"
   homepage "http://www.multiprecision.org/mpc/"
-  url "https://ftp.gnu.org/gnu/mpc/mpc-1.2.0.tar.gz"
-  mirror "https://ftpmirror.gnu.org/mpc/mpc-1.2.0.tar.gz"
-  sha256 "e90f2d99553a9c19911abdb4305bf8217106a957e3994436428572c8dfe8fda6"
+  url "https://ftp.gnu.org/gnu/mpc/mpc-1.2.1.tar.gz"
+  mirror "https://ftpmirror.gnu.org/mpc/mpc-1.2.1.tar.gz"
+  sha256 "17503d2c395dfcf106b622dc142683c1199431d095367c6aacba6eec30340459"
 
   livecheck do
     url :stable
