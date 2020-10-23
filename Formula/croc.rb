@@ -8,9 +8,9 @@ class Croc < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "730ff98e54ac8663b482eef9e6ebf8c2726cb40eb82b9da1ceca98ae4dba84af" => :catalina
-    sha256 "8f62a6d88a2120089d2eac0af15446ec0d952a43bc8de8aac590cabcb1ff216e" => :mojave
-    sha256 "f71a16b93ec5590bf5ffbf7ceaf07fc3d046f94d4a95f183fee0ed053161c9f6" => :high_sierra
+    sha256 "82c31455d6d6010ba7a6012f01adc014075307089f6cd589fbef63b7fe0e435f" => :catalina
+    sha256 "8b406f8c1e6be1779a99fbabbb1f539a32703eb7b806e7244ae3ef477c206435" => :mojave
+    sha256 "75a7061af51e4db4851e069ac2003cd49103eb28399caa942e1fe085f61a6813" => :high_sierra
   end
 
   depends_on "go" => :build
