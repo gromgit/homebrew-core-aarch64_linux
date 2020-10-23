@@ -13,10 +13,9 @@ class IcarusVerilog < Formula
   end
 
   bottle do
-    sha256 "bf40a384b8432dfb72276e31e87d550b9b47515dc68bdfb25f0cde9becd4ac10" => :catalina
-    sha256 "0237851e478bcb76567111f14c1e42fe79161a8cd28ca04127295fc40db14113" => :mojave
-    sha256 "96a15af23212d29f9410e073418c9388447955245fa8c38cf3b27ccf8fabd178" => :high_sierra
-    sha256 "ded40d14a1cd74f2b764d9cf667d48ee8b6c010e77d88ca47afc99188ace1255" => :sierra
+    sha256 "99791a3fd0891487586c49112fa3293e65320e651bbf9c03f15a58b456e96e6e" => :catalina
+    sha256 "92851adfb43caad0826da2bf74706c15e6fffc2e32b2b003e19659b0e6a4542b" => :mojave
+    sha256 "a92f6fe981238a8c2b9f47b99d77c1e8596bc74235b8f6601835aae8f9ad70a1" => :high_sierra
   end
 
   depends_on "autoconf" => :build
