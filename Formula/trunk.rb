@@ -8,9 +8,9 @@ class Trunk < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e1d19b1b84c80eff7f298e3ffda7765d7dd95fa6cd4d1320b7fc28fcbd0dcd49" => :catalina
-    sha256 "269360fc9e6f348b79c79f02281afe9d8ce321601ac7e3031042f58e55972cb3" => :mojave
-    sha256 "882301f19abbd26aafa6d8587072a9703f9a751942cb34a36e1963e7ae49568c" => :high_sierra
+    sha256 "24b9add8333f05984d5d34e49f6631e24ea4dd3f01fd74aa929f0c3e0c078c36" => :catalina
+    sha256 "a4e47e8f468442ead0174ed1e821cc1fc7cf95aba41970a43cdd6ec26db8cf72" => :mojave
+    sha256 "53ffac0b8c5c5f4322d609ce50fbb37e7ce913e60bea3235d0d512bfc395aee1" => :high_sierra
   end
 
   depends_on "rust" => :build
