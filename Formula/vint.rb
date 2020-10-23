@@ -7,6 +7,13 @@ class Vint < Formula
   sha256 "ebbb4ffd790324331aabf82d0b8777db8ce41d72d7c4c1c328bc099359ae06d6"
   license "MIT"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "75161a294d40430a9146e35a9e3871f3d8761cc6b60f66f8b9abd22630f8e579" => :catalina
+    sha256 "aea0df6f034bcec57f8f930781fae0a48349a0910465c253f5969e429bded6a3" => :mojave
+    sha256 "5174b7b0ffdcc7231efa29c69a69d13a1e8b7649016d384931135d7dc11640bd" => :high_sierra
+  end
+
   depends_on "python@3.9"
 
   resource "PyYAML" do
