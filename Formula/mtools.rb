@@ -1,10 +1,10 @@
 class Mtools < Formula
   desc "Tools for manipulating MSDOS files"
   homepage "https://www.gnu.org/software/mtools/"
-  url "https://ftp.gnu.org/gnu/mtools/mtools-4.0.24.tar.gz"
-  mirror "https://ftpmirror.gnu.org/mtools/mtools-4.0.24.tar.gz"
-  sha256 "3483bdf233e77d0cf060de31df8e9f624c4bf26bd8a38ef22e06ca799d60c74e"
-  license "GPL-3.0"
+  url "https://ftp.gnu.org/gnu/mtools/mtools-4.0.25.tar.gz"
+  mirror "https://ftpmirror.gnu.org/mtools/mtools-4.0.25.tar.gz"
+  sha256 "8b6d4a75122984350186250aaa6063665bfa69100253fd77b972d2744e07dc08"
+  license "GPL-3.0-or-later"
 
   livecheck do
     url :stable
@@ -19,15 +19,10 @@ class Mtools < Formula
 
   conflicts_with "multimarkdown", because: "both install `mmd` binaries"
 
-  def install
-    # Prevents errors such as "mainloop.c:89:15: error: expected ')'"
-    # Upstream issue https://lists.gnu.org/archive/html/info-mtools/2014-02/msg00000.html
-    if ENV.cc == "clang"
-      inreplace "sysincludes.h",
-        "#  define UNUSED(x) x __attribute__ ((unused));x",
-        "#  define UNUSED(x) x"
-    end
+  # 4.0.25 doesn't include the proper osx locale headers.
+  patch :DATA
 
+  def install
     args = %W[
       LIBS=-liconv
       --disable-debug
@@ -46,3 +41,19 @@ class Mtools < Formula
     assert_match /#{version}/, shell_output("#{bin}/mtools --version")
   end
 end
+
+__END__
+diff --git a/sysincludes.h b/sysincludes.h
+index 056218e..ba3677b 100644
+--- a/sysincludes.h
++++ b/sysincludes.h
+@@ -279,6 +279,8 @@ extern int errno;
+ #include <pwd.h>
+ #endif
+ 
++#include <xlocale.h>
++#include <strings.h>
+ 
+ #ifdef HAVE_STRING_H
+ # include <string.h>
+
