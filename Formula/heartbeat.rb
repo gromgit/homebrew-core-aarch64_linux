@@ -9,9 +9,9 @@ class Heartbeat < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "508c92814f0d4a95f5382749054853f6367be8ef2e9ada98f242fc62988f547a" => :catalina
-    sha256 "091d7e0165b22bf36bf8f7250073b7b8da607f834912d9b27ae0b35285f8bbbb" => :mojave
-    sha256 "83112b1b55aad54e0669666e20215b189e71d76ad125a9f01e852498abc32286" => :high_sierra
+    sha256 "933dedd05884a96dc3e01e54923f5a2e15ae15a8f9f86914e55118d3df82f8e2" => :catalina
+    sha256 "fb76b8006bb6a9235688945fdd1240b064fd1144e502749c3b9b261200b89756" => :mojave
+    sha256 "e78c9d62f7cdf340729f2cc846629c9ffc34b1227cbacddfa606c41c37983d52" => :high_sierra
   end
 
   depends_on "go" => :build
