@@ -1,11 +1,10 @@
 class Gdb < Formula
   desc "GNU debugger"
   homepage "https://www.gnu.org/software/gdb/"
-  url "https://ftp.gnu.org/gnu/gdb/gdb-9.2.tar.xz"
-  mirror "https://ftpmirror.gnu.org/gdb/gdb-9.2.tar.xz"
-  sha256 "360cd7ae79b776988e89d8f9a01c985d0b1fa21c767a4295e5f88cb49175c555"
-  license "GPL-2.0"
-  revision 2
+  url "https://ftp.gnu.org/gnu/gdb/gdb-10.1.tar.xz"
+  mirror "https://ftpmirror.gnu.org/gdb/gdb-10.1.tar.xz"
+  sha256 "f82f1eceeec14a3afa2de8d9b0d3c91d5a3820e23e0a01bbb70ef9f0276b62c0"
+  license "GPL-3.0-or-later"
   head "https://sourceware.org/git/binutils-gdb.git"
 
   livecheck do
@@ -38,13 +37,6 @@ class Gdb < Formula
       probe.c:63:28: error: default initialization of an object of const type
       'const any_static_probe_ops' without a user-provided default constructor
     EOS
-  end
-
-  # Fix for Python 3.9, remove in next version
-  # https://sourceware.org/pipermail/gdb-patches/2020-May/169110.html
-  patch do
-    url "https://github.com/Homebrew/formula-patches/raw/88f56f8f/gdb/python39.diff"
-    sha256 "19e989104f54c09a30f06aac87e31706f109784d3e0fdc7ff0fd1bcfd261ebee"
   end
 
   def install
