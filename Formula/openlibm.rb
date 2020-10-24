@@ -6,9 +6,9 @@ class Openlibm < Formula
 
   bottle do
     cellar :any
-    sha256 "f1e3e0273605b2433a5d44d99a10d8dcb31631965dc8bf02e322aaa7d3cb124b" => :catalina
-    sha256 "ad3fdd38f3f3e49739ade208a42d3212ded50bcff0aeda3593da46f162649398" => :mojave
-    sha256 "051c797563aca3ae42f5aaa50e7f92bb5692716e420638b9f689302118604e69" => :high_sierra
+    sha256 "83e9c076e9376c4bcd1cf0fa694e4bb4ad6ffd55f0e230c1baf7cda461d3ccd5" => :catalina
+    sha256 "0ac5dc628f60e37f5f4285f860d4e94fe99e4f2f2ab9e7416e0c887ee1d98f0a" => :mojave
+    sha256 "b7e6d444189106624ec496e00e79f3e9e9c1236f4908e846086a9e27421a4466" => :high_sierra
   end
 
   keg_only :provided_by_macos
