@@ -1,10 +1,15 @@
 class X8664ElfGdb < Formula
   desc "GNU debugger for i386-elf cross development"
   homepage "https://www.gnu.org/software/gdb/"
-  url "https://ftp.gnu.org/gnu/gdb/gdb-9.2.tar.xz"
-  sha256 "360cd7ae79b776988e89d8f9a01c985d0b1fa21c767a4295e5f88cb49175c555"
+  url "https://ftp.gnu.org/gnu/gdb/gdb-10.1.tar.xz"
+  mirror "https://ftpmirror.gnu.org/gdb/gdb-10.1.tar.xz"
+  sha256 "f82f1eceeec14a3afa2de8d9b0d3c91d5a3820e23e0a01bbb70ef9f0276b62c0"
   license "GPL-3.0-or-later"
-  revision 1
+  head "https://sourceware.org/git/binutils-gdb.git"
+
+  livecheck do
+    url :stable
+  end
 
   bottle do
     sha256 "d2355fbe70719b02b830f2c3522c8b41ff4e95cd1242b31250004c0f76d1e363" => :catalina
@@ -17,13 +22,6 @@ class X8664ElfGdb < Formula
 
   conflicts_with "gdb", because: "both install include/gdb, share/gdb and share/info"
   conflicts_with "i386-elf-gdb", because: "both install include/gdb, share/gdb and share/info"
-
-  # Fix for Python 3.9, remove in next version
-  # https://sourceware.org/pipermail/gdb-patches/2020-May/169110.html
-  patch do
-    url "https://github.com/Homebrew/formula-patches/raw/88f56f8f/gdb/python39.diff"
-    sha256 "19e989104f54c09a30f06aac87e31706f109784d3e0fdc7ff0fd1bcfd261ebee"
-  end
 
   def install
     args = %W[
