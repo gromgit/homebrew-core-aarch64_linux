@@ -11,9 +11,9 @@ class MysqlAT56 < Formula
   end
 
   bottle do
-    sha256 "3ae76dae15820186fc74aef54f6365a55e19abc7c6d7826db5a1c774b9d9c759" => :catalina
-    sha256 "85d0cd1ae169ee42eb5fbc95a6a337c17d79d042e041ffb7f01c8313874989c7" => :mojave
-    sha256 "bf8272f7d912896a94f21ba7802e78ca49b70b20fc9c01f610d0f9b449469fae" => :high_sierra
+    sha256 "1e392a56a5d37169764852a15cbda9794358cd2e198601b35bd2e5d178f5fa5a" => :catalina
+    sha256 "2ee2ab2a4ee0d8007c588ba956b584a19273ca89bc3a63643fedeba4ce385792" => :mojave
+    sha256 "156677c64acb688c490d1369093ff6cd329c0f19b7ee1229aabd337ce9f25abc" => :high_sierra
   end
 
   keg_only :versioned_formula
