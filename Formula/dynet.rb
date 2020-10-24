@@ -7,10 +7,9 @@ class Dynet < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "500a9235a348147fb8aa6b07f9618e9ae45d1a88c42504facc384f50cf0d1943" => :catalina
-    sha256 "40496e31ece215e6f1faffc56eb8d674195f0f946cc100222d1d4a9762fd59c6" => :mojave
-    sha256 "6d1bc8d99dfaff753f6bbea2d3da485de1c7494eec8b7eba85a9ea376eccfbcd" => :high_sierra
+    sha256 "d699aaf34e601dca84a10d735a822954de02b2139757699da77df2632d9ae95c" => :catalina
+    sha256 "edc5ba7539f3c224b091ae08b2f23ae667f6851ebbc10515e410fbe2efb2aec4" => :mojave
+    sha256 "a8b5c58b84c07911937f5b2c633e38e884f860ac97fc45881bfa817f6045c467" => :high_sierra
   end
 
   depends_on "cmake" => :build
