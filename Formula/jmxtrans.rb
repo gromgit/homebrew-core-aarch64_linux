@@ -4,6 +4,7 @@ class Jmxtrans < Formula
   url "https://github.com/jmxtrans/jmxtrans/archive/jmxtrans-parent-271.tar.gz"
   sha256 "4aee400641eaeee7f33e1253043b1e644f8a9ec18f95ddc911ff8d35e2ca6530"
   license "MIT"
+  revision 1
   version_scheme 1
 
   bottle do
@@ -15,10 +16,10 @@ class Jmxtrans < Formula
   end
 
   depends_on "maven" => :build
-  depends_on java: "1.8"
+  depends_on "openjdk@8"
 
   def install
-    ENV["JAVA_HOME"] = Language::Java.java_home("1.8")
+    ENV["JAVA_HOME"] = Formula["openjdk@8"].opt_prefix
 
     system "mvn", "package", "-DskipTests=true",
                              "-Dmaven.javadoc.skip=true",
@@ -40,7 +41,7 @@ class Jmxtrans < Formula
       doc.install Dir["doc/*"]
     end
 
-    (bin/"jmxtrans").write_env_script libexec/"jmxtrans.sh", Language::Java.java_home_env("1.8")
+    (bin/"jmxtrans").write_env_script libexec/"jmxtrans.sh", JAVA_HOME: Formula["openjdk@8"].opt_prefix
   end
 
   test do
