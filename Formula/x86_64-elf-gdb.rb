@@ -7,9 +7,9 @@ class X8664ElfGdb < Formula
   revision 1
 
   bottle do
-    sha256 "dfe4806259f346a687fdd33e04c0380a3e29042359d0035649bc921197482472" => :catalina
-    sha256 "e791fd5b2c8bdf7c64574615dc0e5aeea5022b5f18beb2a92586ef777b999578" => :mojave
-    sha256 "08a7d238e78d7cda369afbf7e00e5e778a6d089c7c28713da8eb81692525c849" => :high_sierra
+    sha256 "d2355fbe70719b02b830f2c3522c8b41ff4e95cd1242b31250004c0f76d1e363" => :catalina
+    sha256 "fb7e178d35f25670759ee6c1d9467779efb0f942b638e2e9b76dfa0ec227a4ab" => :mojave
+    sha256 "36e4d6e182b2d62c4848d424be5dd3f88895e11e457acdca56c37f2622ef2c54" => :high_sierra
   end
 
   depends_on "python@3.9"
