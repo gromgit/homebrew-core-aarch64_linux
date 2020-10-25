@@ -7,9 +7,9 @@ class Oil < Formula
   head "https://github.com/oilshell/oil.git"
 
   bottle do
-    sha256 "e108fa748c1338a788d4a88bcd94e826d95c721776049168461a371d3536c94a" => :catalina
-    sha256 "2f9abacbf14fac154ae4e4c46b49e058f1552246ff9397641057d48a931ad5f9" => :mojave
-    sha256 "7fb1fc3474a531602e3123b354b8fc6733eec5dcefc0bc21a4d0a1d11d3cb77a" => :high_sierra
+    sha256 "b184f8496f001e47b9dbf2822cf69476c74af91042d1fffe855fd347ca24fb80" => :catalina
+    sha256 "80bc6f37ee51eec363ac13c69c3910aef46d594a9d16a1de1b14645c3437ef10" => :mojave
+    sha256 "43d4aa89e3a88da11799780d154bb629bb051b52c3e251e2f47faf623f02e28a" => :high_sierra
   end
 
   def install
