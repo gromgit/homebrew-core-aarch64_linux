@@ -1,10 +1,9 @@
 class Openblas < Formula
   desc "Optimized BLAS library"
   homepage "https://www.openblas.net/"
-  url "https://github.com/xianyi/OpenBLAS/archive/v0.3.10.tar.gz"
-  sha256 "0484d275f87e9b8641ff2eecaa9df2830cbe276ac79ad80494822721de6e1693"
+  url "https://github.com/xianyi/OpenBLAS/archive/v0.3.12.tar.gz"
+  sha256 "65a7d3a4010a4e3bd5c0baa41a234797cd3a1735449a4a5902129152601dc57b"
   license "BSD-3-Clause"
-  revision 2
   head "https://github.com/xianyi/OpenBLAS.git", branch: "develop"
 
   bottle do
@@ -18,13 +17,6 @@ class Openblas < Formula
 
   depends_on "gcc" # for gfortran
   fails_with :clang
-
-  # This patch fixes a known issue with large matrices in numpy on Haswell and later
-  # chipsets.  See https://github.com/xianyi/OpenBLAS/pull/2729 for details
-  patch do
-    url "https://github.com/xianyi/OpenBLAS/commit/6c33764ca43c7311bdd61e2371b08395cf3e3f01.patch?full_index=1"
-    sha256 "a945a8df0a77c25e7c3540a8d3b998b567b207f5d104cbb723de3d8dcb43dd5c"
-  end
 
   def install
     ENV["DYNAMIC_ARCH"] = "1"
