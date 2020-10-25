@@ -7,9 +7,9 @@ class Okteto < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "fa102ba4116a2af3fb0d8296eb24fadf2aa1f95d6ed1bf3ffb9997cf9e4eb346" => :catalina
-    sha256 "1181516dc3e78ddc180183a60969b259bde4730a35c563f3b151b8128c382073" => :mojave
-    sha256 "c708a4c7c008bbf60e1ac838750a88fa9ef35f9482e796333be28e2bd6f5f666" => :high_sierra
+    sha256 "b39346a848b2ecc8977f09ff2f460e6ffa2d319494484d858a87d9707dd56435" => :catalina
+    sha256 "7aa4dfd65e8ce992bafc4bf30f60df40a93de6b458f7bd65c984bae7893b9818" => :mojave
+    sha256 "d4e12778b09920f9eb0eb62e8a1e75e4e477f36ec80f245afbb4d42220b8eaf7" => :high_sierra
   end
 
   depends_on "go" => :build
