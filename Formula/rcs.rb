@@ -12,12 +12,9 @@ class Rcs < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "48a77f06f4568a177b0b2e10fde07ee3c2833f34478472cf6b3ce94124d10ee2" => :catalina
-    sha256 "f24fb3b2f14d19bf02bc5b4c325f7735ec4657b43fac8e6a8a7e6a2e5551851c" => :mojave
-    sha256 "f43c9160cbc605578af4473892f71f733dc05a9ab836d280400acece9cb75708" => :high_sierra
-    sha256 "f082af49e1b1570892fa76b91bed0246e9ad63e59f953e0388b20dbf55edc485" => :sierra
-    sha256 "4681c5fae05b4f4b267a9bccc9032de2b216437105d591ec5de7a10ca31e0441" => :el_capitan
+    sha256 "a16720713ee2f30c3f126ca4716b4df5e1e5e68c24d31fd93ea312c2900d2b4f" => :catalina
+    sha256 "fddb77e2b68d2f0f4f8264d7c44127cb0bd407a275e4123f5096f89be4734fa7" => :mojave
+    sha256 "f429e435048ad65275519c990aa4c2c437fd3b5d682865c057fe7f001e93946f" => :high_sierra
   end
 
   def install
