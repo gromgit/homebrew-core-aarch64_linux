@@ -8,9 +8,9 @@ class Openblas < Formula
 
   bottle do
     cellar :any
-    sha256 "30b44b63c1dcbd46ffaf78a03caa423e198c5827ccc4f14ef847a66d05c3223e" => :catalina
-    sha256 "2a924ce4abd8558cfbbc53c124c50fb188e34c318a98c38136962201b6d92549" => :mojave
-    sha256 "e99c28e8e72f7ac07277b2cf1511bcd1abdf7091b723c9605a70c4551f603b44" => :high_sierra
+    sha256 "7ba7ba209680b05379b11cc82aa90961e46c77441205b7cec05566ac01707e0c" => :catalina
+    sha256 "f3fb72089ff3e7ea288027f9dbcac730caa3cb8fc3bb0b650f8a5ae6682c094f" => :mojave
+    sha256 "8433e192ab508dfdbfb4e1a7071ef01e7e5c2c3d38187c7bcfd32536be3b5590" => :high_sierra
   end
 
   keg_only :shadowed_by_macos, "macOS provides BLAS in Accelerate.framework"
