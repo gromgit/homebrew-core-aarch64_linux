@@ -12,9 +12,9 @@ class Gdb < Formula
   end
 
   bottle do
-    sha256 "1423f4be295c421835b9da9af107b24eb898ad9a109d7386d46ca3d75765992b" => :catalina
-    sha256 "628a0639add17870b589dd586aa683c85c8090ba8d4abcb954d04e0051444181" => :mojave
-    sha256 "f159ff299b9bd7fc5aec573b5bbf4bb13036decf2eb9a16db1096f9073838828" => :high_sierra
+    sha256 "fbd7836617ad0bb335ad9175280f14162dfdf0dd2f5e6b634d37b2d93765b51e" => :catalina
+    sha256 "f3656f04b8725825296ce977461af0d0e6133ec9a1f9086ca3b889661f40802e" => :mojave
+    sha256 "a57db00038cdcdc85f80c064332f3b4ef45571a2c0cd0defa55f2e6bde6a751d" => :high_sierra
   end
 
   depends_on "python@3.9"
