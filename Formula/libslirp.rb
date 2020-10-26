@@ -5,6 +5,13 @@ class Libslirp < Formula
   sha256 "388b4b08a8cc0996cc5155cb027a097dc1a7f2cfe84b1121496608ab5366cc48"
   license "BSD-3-Clause"
 
+  bottle do
+    cellar :any
+    sha256 "1b810179f0b4978a6b06f15156b8f4ecddd7b7b8408e61129a11913cf9ac4145" => :catalina
+    sha256 "d708a39f70d01586c4d9e6fcccd832f638b07325424ce451418bcaee68688669" => :mojave
+    sha256 "a7c30a50420febf21f5969719f1d7d9a0abee04a79586c951799212cb952cb9f" => :high_sierra
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
