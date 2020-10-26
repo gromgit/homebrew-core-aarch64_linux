@@ -11,6 +11,13 @@ class Fnm < Formula
     regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
   end
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "489e39ce5985246827b8b4d2d98a7eddd28f9e6ffdb656b54c26c81b2f170288" => :catalina
+    sha256 "9a1b7bf3aedf9c550f045205644dadbb80062b365464676d26723f04566dc8c5" => :mojave
+    sha256 "98e5b7eb1cb980862bad8da53f1dff912dc7b17ac4122c403adf831a578d2837" => :high_sierra
+  end
+
   depends_on "rust" => :build
 
   uses_from_macos "zlib"
