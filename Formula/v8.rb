@@ -2,8 +2,8 @@ class V8 < Formula
   desc "Google's JavaScript engine"
   homepage "https://github.com/v8/v8/wiki"
   # Track V8 version from Chrome stable: https://omahaproxy.appspot.com
-  url "https://github.com/v8/v8/archive/8.5.210.26.tar.gz"
-  sha256 "da33d3f6b08a721677d0218fa5d2120182ed68d0c80ba64c04f0ea54f803d371"
+  url "https://github.com/v8/v8/archive/8.6.395.17.tar.gz"
+  sha256 "421cdeb93495632a4cd814d68af56788635b58a0225ecb08661b972825be257c"
   license "BSD-3-Clause"
 
   livecheck do
@@ -27,13 +27,13 @@ class V8 < Formula
   # e.g. for CIPD dependency gn: https://github.com/v8/v8/blob/7.6.303.27/DEPS#L15
   resource "gn" do
     url "https://gn.googlesource.com/gn.git",
-      revision: "7d7e8deea36d126397bda2cf924682504271f0e1"
+      revision: "e327ffdc503815916db2543ec000226a8df45163"
   end
 
   # e.g.: https://github.com/v8/v8/blob/7.6.303.27/DEPS#L60 for the revision of build for v8 7.6.303.27
   resource "v8/build" do
     url "https://chromium.googlesource.com/chromium/src/build.git",
-      revision: "2dc7c7abc04253e340b60fa339151a92519f93d1"
+      revision: "78b2991b0494c775e437770def455fe40061038f"
 
     # revert usage of unsuported libtool option -D (fixes High Sierra support)
     patch do
@@ -49,7 +49,7 @@ class V8 < Formula
 
   resource "v8/base/trace_event/common" do
     url "https://chromium.googlesource.com/chromium/src/base/trace_event/common.git",
-      revision: "ef3586804494b7e402b6c1791d5dccdf2971afff"
+      revision: "23ef5333a357fc7314630ef88b44c3a545881dee"
   end
 
   resource "v8/third_party/googletest/src" do
@@ -59,17 +59,17 @@ class V8 < Formula
 
   resource "v8/third_party/jinja2" do
     url "https://chromium.googlesource.com/chromium/src/third_party/jinja2.git",
-      revision: "3f90fa05c85718505e28c9c3426c1ba52843b9b7"
+      revision: "61cfe2ac6c9108534c43b4039a95a0980251f266"
   end
 
   resource "v8/third_party/markupsafe" do
     url "https://chromium.googlesource.com/chromium/src/third_party/markupsafe.git",
-      revision: "8f45f5cfa0009d2a70589bcda0349b8cb2b72783"
+      revision: "f2fb0f21ef1e1d4ffd43be8c63fc3d4928dea7ab"
   end
 
   resource "v8/third_party/zlib" do
     url "https://chromium.googlesource.com/chromium/src/third_party/zlib.git",
-      revision: "02daed1bb93a34cf89d68913f88708228e12a0ab"
+      revision: "d53accfbd0382a98ad7378045631866449b5f92e"
   end
 
   def install
@@ -89,7 +89,19 @@ class V8 < Formula
     end
     ENV.prepend_path "PATH", buildpath/"gn/out"
 
-    # Enter the v8 checkout
+    # overwrite Chromium minimum sdk version of 10.15
+    ENV["FORCE_MAC_SDK_MIN"] = "10.13"
+    # link against system libc++ instead of llvm provided libc++
+    ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib
+
+    # create gclient_args.gni
+    (buildpath/"build/config/gclient_args.gni").write <<~EOS
+      declare_args() {
+        checkout_google_benchmark = false
+      }
+    EOS
+
+    # setup gn args
     gn_args = {
       is_debug:                     false,
       is_component_build:           true,
@@ -101,11 +113,6 @@ class V8 < Formula
       use_custom_libcxx:            false, # uses system libc++ instead of Google's custom one
       treat_warnings_as_errors:     false,
     }
-
-    # overwrite Chromium minimum sdk version of 10.15
-    ENV["FORCE_MAC_SDK_MIN"] = "10.13"
-    # link against system libc++ instead of llvm provided libc++
-    ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib
 
     # Transform to args string
     gn_args_string = gn_args.map { |k, v| "#{k}=#{v}" }.join(" ")
@@ -125,7 +132,7 @@ class V8 < Formula
     t = "#{bin}/d8 -e 'print(new Intl.DateTimeFormat(\"en-US\").format(new Date(\"2012-12-20T03:00:00\")));'"
     assert_match %r{12/\d{2}/2012}, shell_output(t).chomp
 
-    (testpath/"test.cpp").write <<~'EOS'
+    (testpath/"test.cpp").write <<~EOS
       #include <libplatform/libplatform.h>
       #include <v8.h>
       int main(){
