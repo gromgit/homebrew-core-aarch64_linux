@@ -11,9 +11,9 @@ class MingwW64 < Formula
   end
 
   bottle do
-    sha256 "092d1d30ae9f2de677a35f14ec2907d285b85f9b4ed465a506f72a970deea715" => :catalina
-    sha256 "cdefb18e91d0102ba193caa2c6994d83c30742fa03e03e12b3fc5864ca6b003c" => :mojave
-    sha256 "2658e687bbfee45cfa9d0d74c9c129f9ffc2ac1de017143d25b4017aa899404f" => :high_sierra
+    sha256 "d294bc0e960294bf573b9da364a8d95a06a257aec8f388c16e2b975ed8e4410c" => :catalina
+    sha256 "e6390c194b2d5fadbf5b9d39737e6862a22126f2b5a4086350c47f6d91dfb271" => :mojave
+    sha256 "5af1dc0450f49e20c94a011b0818f9f194db1d91a918ea748b9021f366f741a5" => :high_sierra
   end
 
   # Apple's makeinfo is old and has bugs
