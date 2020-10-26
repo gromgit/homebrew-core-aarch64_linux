@@ -12,9 +12,9 @@ class I386ElfGdb < Formula
   end
 
   bottle do
-    sha256 "b43c93bf06ff777d8f98a283d2b17f2ad6f99a290fada81ba66c7afc1ad398f5" => :catalina
-    sha256 "1f1c96fa5d20f0c66a21cce01fa0732c5ea37861acaecfb7b0a21f931e1099f7" => :mojave
-    sha256 "7a9834dccac84a18afe4dc897fa7ff77248098844cbce868abdae9ecaf9fc39e" => :high_sierra
+    sha256 "4b529407dbdbb4a4686bf0c8e88511f6ec77cc24cd808704f457443d774ea7b7" => :catalina
+    sha256 "7ffb645794a491ccc52fea225c511647ab3f39771e65c3a2912d0e77f7f4e181" => :mojave
+    sha256 "f97095dfc0fc75cfdfa67f9cc8ef4402c7b8d4f24a0a522281f1d5c93c3ee4b3" => :high_sierra
   end
 
   depends_on "python@3.9"
