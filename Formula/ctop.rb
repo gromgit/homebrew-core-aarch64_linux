@@ -8,10 +8,9 @@ class Ctop < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "d91134c9c0f82fa52d66316b3ce2508e6c53878e2bfcbb937a62f33bc0267d0c" => :catalina
-    sha256 "c70a8b08c6acf81b7c1b8a3183da8d02218be1ab966f5357c1ed537f4830b258" => :mojave
-    sha256 "fe7d332a2e1068be73ef3ef524745ddf444b77bcc0f67b8368e4fc78f3abb69e" => :high_sierra
+    sha256 "c6e714eb31bdaba6389494a4df3fb88f44a0c549f35ab91db4084a2be425c988" => :catalina
+    sha256 "6f770da2bb6f915aa4a39d6cd0788f601c86a693eafe37071da7e13fa9d3910b" => :mojave
+    sha256 "6fb6e94dd381f3313d964b81a3490c3025fb9e654945a22c5cb5c7705b8a5bf8" => :high_sierra
   end
 
   depends_on "go" => :build
