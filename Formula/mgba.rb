@@ -13,9 +13,9 @@ class Mgba < Formula
   end
 
   bottle do
-    sha256 "c50ed180ffa0e36df07915aa62fecfa586c5ba2225be460fbd84ff09a8842803" => :catalina
-    sha256 "fc0c39c89c6c6dddc8dff172371264c55968c8ea7436da91352f98e558e8bb90" => :mojave
-    sha256 "349b00ebf36aab83875dfa08b516611f79608afaec4ce52060ff8df73f2a336c" => :high_sierra
+    sha256 "c55cfeafb7c6daecb169a1d7ed4c0a5776838c74cf430946000b4d3cbf6315f0" => :catalina
+    sha256 "f0e7d35f3006c464adbc24fb34e01946245aea68982342c9f5f5a06732ca6962" => :mojave
+    sha256 "6269da0dd599c26563c5bbc1764223d8441e2d38cad15da569b65e5fa37b393a" => :high_sierra
   end
 
   depends_on "cmake" => :build
