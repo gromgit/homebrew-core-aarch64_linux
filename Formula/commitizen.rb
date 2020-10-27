@@ -14,9 +14,9 @@ class Commitizen < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "995e49652bdead4339657a18c74d9977ab46d9400ed46cd2b378555ed1e05671" => :catalina
-    sha256 "b164cb763ae330dfbe36daa3879468514728a38977f601f51d75e04d6326c7dc" => :mojave
-    sha256 "ffcdbe751c8c69b23b378aea67146de4f3cb7688d1a117960c3a5c3ed86e469f" => :high_sierra
+    sha256 "e5841ccdd053a558e0f3f379439cc2977c99a7e8c89348e913177952bf0e5654" => :catalina
+    sha256 "b14d7941ca4d5a950f683c5395b19687c5e08be92fa5d1d687898fe47dd8ba39" => :mojave
+    sha256 "74f6b047fc36fcbb81a0a465f1094996f2c01c82ed51dcce46528e65103b5097" => :high_sierra
   end
 
   depends_on "python@3.9"
