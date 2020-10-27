@@ -2,9 +2,9 @@ class GolangciLint < Formula
   desc "Fast linters runner for Go"
   homepage "https://golangci-lint.run/"
   url "https://github.com/golangci/golangci-lint.git",
-    tag:      "v1.31.0",
-    revision: "3d6d0e7ca66c7f81a7080575dda76cace50e9cf4"
-  license "GPL-3.0"
+    tag:      "v1.32.0",
+    revision: "9d557ed40edcf96b59d7a35c43cd9a6f45f663a2"
+  license "GPL-3.0-only"
 
   bottle do
     cellar :any_skip_relocation
