@@ -10,6 +10,13 @@ class NodeAT14 < Formula
     regex(%r{href=["']?v?(14(?:\.\d+)+)/?["' >]}i)
   end
 
+  bottle do
+    cellar :any
+    sha256 "da655dedd31abf94afea894fb4709d7a72a042941f81d45e8da61622d53a9660" => :catalina
+    sha256 "0fd9f21ff2e14c1a5f400f91d1b90495d716eed9d4e5989559aeff28b9b53a77" => :mojave
+    sha256 "f6f9535332519532087dfb5593d81e32b574ee485e2f6daa0af3bdf9d01d6835" => :high_sierra
+  end
+
   keg_only :versioned_formula
 
   depends_on "pkg-config" => :build
