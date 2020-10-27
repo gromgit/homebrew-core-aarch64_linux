@@ -1,8 +1,8 @@
 class Redis < Formula
   desc "Persistent key-value database, with built-in net interface"
   homepage "https://redis.io/"
-  url "https://download.redis.io/releases/redis-6.0.8.tar.gz"
-  sha256 "04fa1fddc39bd1aecb6739dd5dd73858a3515b427acd1e2947a66dadce868d68"
+  url "http://download.redis.io/releases/redis-6.0.9.tar.gz"
+  sha256 "dc2bdcf81c620e9f09cfd12e85d3bc631c897b2db7a55218fd8a65eaa37f86dd"
   license "BSD-3-Clause"
   head "https://github.com/redis/redis.git", branch: "unstable"
 
