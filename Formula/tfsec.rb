@@ -12,9 +12,9 @@ class Tfsec < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "adb26b3a24ec2ca6e4ab184ff6bf972005ae1276a5f036f4279126de0edd5d86" => :catalina
-    sha256 "047589b24dade9ef8742887c0f5fb16359eec3beb4458858c02ecbca0aa9d4fc" => :mojave
-    sha256 "6372b136027e5796aafe197da45bc78d76b22629cde660f84ffd2a1b0bd0097d" => :high_sierra
+    sha256 "3a42c08f8e6ab3cc4548af07e1718cf947288db095c5d8267502469d4611affd" => :catalina
+    sha256 "49dcc29ee9465a2ae68ca1f77ad4079f3a59e6f55ccf4781839e35b20d669ae2" => :mojave
+    sha256 "740004004f83618c1bae0e8b35cb870a6eb61c4718fc09b8f3e1202b90901bbc" => :high_sierra
   end
 
   depends_on "go" => :build
