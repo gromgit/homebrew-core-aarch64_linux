@@ -6,6 +6,13 @@ class Pdm < Formula
   license "MIT"
   head "https://github.com/frostming/pdm.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "e69a7840a3256d319d6d81548abe354db8f246de13a4ea236c5b4103c3af5632" => :catalina
+    sha256 "971c1f5f7edcf3991b48875946333c08912e0bf09fa1a2cfa1a4bc6734f1cb7a" => :mojave
+    sha256 "f89a9aba124565d58255e5a1c107c7bd9a1b552057890d382e9c29ea0e5feb99" => :high_sierra
+  end
+
   depends_on "python@3.9"
 
   def install
