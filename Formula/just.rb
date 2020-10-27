@@ -7,9 +7,9 @@ class Just < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "4bad1156644662edb520f9a7c0bfb080333c92355f01506ddfbb142b189f1d69" => :catalina
-    sha256 "3882ebe9e3ba3a9a6df550fd1efdafc399db72926b658580388ee039bd4e4366" => :mojave
-    sha256 "93cb8613517af9f8a600acef13b889174d99df621c0008ab3069f491fb4ae183" => :high_sierra
+    sha256 "8f3ff506e27d07bcd3b7415e141197d2b6d35aabc49e0f213cf7a968ad2f875c" => :catalina
+    sha256 "32b820046fe98a158d8fb339e37fa6cdeaf6fa9507dcd20084dd6f40f1e46e4a" => :mojave
+    sha256 "3bc44189de2528cd8e7113efe42515de9b919431186888592e46a5fdd656c5c6" => :high_sierra
   end
 
   depends_on "rust" => :build
