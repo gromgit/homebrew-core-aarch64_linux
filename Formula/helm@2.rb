@@ -15,9 +15,9 @@ class HelmAT2 < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f842166eae515ed30c9f91c0ad27994640332b889fb490c2fe2f4ef818501dac" => :catalina
-    sha256 "edc42658f135c42ca81df5a05184b209fd26e2ad78c93583646a219dbd33cbd5" => :mojave
-    sha256 "bf0f6e9a6a3d40e03b76f551bf88d6b2f81f825f063a139c90f804c56b94f885" => :high_sierra
+    sha256 "831c4f5b7cf7fc1ab53364eeb2eeb6eff8babdbc51817b406b65a948ac6258c2" => :catalina
+    sha256 "ab7ef44ce55c8b3597a2cb6dfe0ef93b74b389e6a4d6ab09c9a1ebe8dce5e594" => :mojave
+    sha256 "a1c5cb86cce4fe2941c94309c8c75cd00ed9fae2e6edc6ea67aacadcf2f13c9e" => :high_sierra
   end
 
   keg_only :versioned_formula
