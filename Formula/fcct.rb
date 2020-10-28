@@ -13,9 +13,9 @@ class Fcct < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "1b525343e7d1401c4de2694c7ed25a40d05e607900519ce36c63e76166fde16b" => :catalina
-    sha256 "6b968d4d747e4eb678ab899ff539e49ed771f5a0cc2f87a359e2e404b1e7f12b" => :mojave
-    sha256 "bd2d80c315a29dba226b390329418701e2a149d50c4a16a5fad4a9083f26b433" => :high_sierra
+    sha256 "80a3a8a30009c739ff99f2f5714f1bdcd09865fa9b12a41ab0e8013c59a6e285" => :catalina
+    sha256 "e8c7b72902f0e5169afdbef0bd845337d0bca14082b0a4d75ab71e02b684dd55" => :mojave
+    sha256 "45c64886c1ef514df45decbae073d7aa002ae45ca48cf5bb5fade20fee262e73" => :high_sierra
   end
 
   depends_on "go" => :build
