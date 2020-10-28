@@ -8,9 +8,9 @@ class Fetch < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "c0e1d50848e6e2f46a796a642857fc43082b14c0e6d99107426265eed17a518f" => :catalina
-    sha256 "e359908f3c023cfb0179a1829641792109beb9815ffbf75e0abb85562f3ef66a" => :mojave
-    sha256 "2589550aef609838abb725f0f96589c889884d9c3ad64da3c235cac040549ebd" => :high_sierra
+    sha256 "4ff8bb89d5ce13392ed8f96d7da747eaacb842fa5829d799aa469c15197e8caf" => :catalina
+    sha256 "e2c9c3b2aa915880cda1e940763d6adc09bca9de097003a06c2b900b24616ef8" => :mojave
+    sha256 "47a73e9563c765b488948574e9ef935fb3a2f8db8f2c98b4997829d877a233ca" => :high_sierra
   end
 
   depends_on "go" => :build
