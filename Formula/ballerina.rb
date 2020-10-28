@@ -1,8 +1,8 @@
 class Ballerina < Formula
   desc "Programming Language for Network Distributed Applications"
   homepage "https://ballerina.io"
-  url "https://dist.ballerina.io/downloads/1.2.8/ballerina-1.2.8.zip"
-  sha256 "bade40aea47ed75c15efe99425908cb3a9401e410310bf59f0cd3f5602fb911d"
+  url "https://dist.ballerina.io/downloads/1.2.9/ballerina-1.2.9.zip"
+  sha256 "369f64135779f464fdac1dc0c6827baedbfbccc5f0e9428505879be84789b7a0"
   license "Apache-2.0"
 
   livecheck do
