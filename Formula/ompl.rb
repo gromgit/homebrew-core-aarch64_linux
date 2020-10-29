@@ -6,6 +6,11 @@ class Ompl < Formula
   license "BSD-3-Clause"
   head "https://github.com/ompl/ompl.git"
 
+  livecheck do
+    url "https://github.com/ompl/ompl/releases/latest"
+    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
+  end
+
   bottle do
     sha256 "f58fc1ff49aeac3a38aa2629385019ad854e9624b4c6e3a3f9051456494984f9" => :catalina
     sha256 "9d66bb50880af5db4f3fc3a1d85140170643518fc72e78ccc6b7b7814261d198" => :mojave
