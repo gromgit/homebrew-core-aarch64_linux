@@ -11,9 +11,9 @@ class Freetds < Formula
   end
 
   bottle do
-    sha256 "9839a834be891a96d426f0427d604823dd3128bb6bdede66b9ed912b5fbd8003" => :catalina
-    sha256 "af717565ba7292428db72bd01b36bd999e35651561bbd3ef8b3901d618084f79" => :mojave
-    sha256 "a52f4b469544f676833590177ff74aeb0477c8772b550befa00505d003d67b8e" => :high_sierra
+    sha256 "e19700655a6d66ae21ead7d0ab2ee7b269f31a7bedcff834a62c69acf235d8a9" => :catalina
+    sha256 "73db5c8e43fbdb62961362b69b79a16d2ba7580a40d0516371699fc62b619419" => :mojave
+    sha256 "9730aea831798be5de7e6ca540c304e350e119cbdbc14dddd6712afcce57be5d" => :high_sierra
   end
 
   head do
