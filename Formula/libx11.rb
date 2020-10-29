@@ -6,10 +6,9 @@ class Libx11 < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 "3d43199780211678460636fd1a9b82c6edd33135a7945cbad3f056b732306663" => :catalina
-    sha256 "e5755ec184d3b40c251c15440e09a1f8ccd85d630bb1b1f31e29dabf32fd5401" => :mojave
-    sha256 "e2fdce1536a452844604fa15eec928af8d8fbca4cb3a86b9852e1ec0f855a97e" => :high_sierra
+    sha256 "74866ceb706b28e81a08161b6e0e954d98145582426458139be4ed456c0a4ea8" => :catalina
+    sha256 "11062a043878726b396a166c4bb60a34640628d6cae9ff0d17364de1d2f2c730" => :mojave
+    sha256 "a9c9c8f5a88a58b292a069729a9958880501d3c57d2fe54f0f1ed869f8ca0f1a" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
