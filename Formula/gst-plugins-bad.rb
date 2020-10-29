@@ -4,6 +4,7 @@ class GstPluginsBad < Formula
   url "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.18.1.tar.xz"
   sha256 "c195978c85d97406c05eb9d43ac54b9ab35eda6ffdae32b3ed597b8f1743c1b2"
   license "LGPL-2.0-or-later"
+  revision 1
   head "https://anongit.freedesktop.org/git/gstreamer/gst-plugins-bad.git"
 
   livecheck do
