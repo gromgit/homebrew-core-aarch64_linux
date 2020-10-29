@@ -1,8 +1,8 @@
 class T1utils < Formula
   desc "Command-line tools for dealing with Type 1 fonts"
   homepage "https://www.lcdf.org/type/"
-  url "https://www.lcdf.org/type/t1utils-1.41.tar.gz"
-  sha256 "fc5edd7e829902b3b685886382fed690d533681c0ab218a387c9e47606623427"
+  url "https://www.lcdf.org/type/t1utils-1.42.tar.gz"
+  sha256 "61877935b1987044ddff4bb90a05200ca7164678a355e170bf5f1a5556cc9f29"
   license "MIT"
 
   bottle do
