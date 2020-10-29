@@ -12,9 +12,9 @@ class GstPluginsUgly < Formula
   end
 
   bottle do
-    sha256 "54d19cbac4d27aa8fa37dd34729bdb7cfd29474253e04417d5ac7e2b00aadc67" => :catalina
-    sha256 "e751f3fdecf4663b935a3972a7ff67d14288886d63cdc3225cc61bc872c9e911" => :mojave
-    sha256 "ee7d82c863d117e1723b291f79070f7e79c8910649db210f5b679a6c0ff8b92b" => :high_sierra
+    sha256 "969988311f13eeed74f28e076b1224f2c0ff2d72f2c3aa0e80b25e47689da0d2" => :catalina
+    sha256 "198d2784b617d9809be93951d5dc92b1808ec6e6dd88ec220477bc5b4bf24a46" => :mojave
+    sha256 "b655213165ac066d0835dc6f12244e04ced5534fedc84a82e72a39bc2319fbae" => :high_sierra
   end
 
   depends_on "meson" => :build
