@@ -12,9 +12,9 @@ class Moarvm < Formula
   end
 
   bottle do
-    sha256 "9b3fee5144e62120ab86c10f0b66b648d9b6e2491c6ff5ea6c4c759c476bcb19" => :catalina
-    sha256 "6887fbd716e7e9056cfc422ffbcd4632efb4292abfda92fc9353a7309d0a51d0" => :mojave
-    sha256 "7cccf71f0ad76e2f8415c0c0a049c971c801bea1fd18bb0135819f1d0bce088f" => :high_sierra
+    sha256 "9e3146b60581d3f77792baf04ba3bfd521ac03c75d64f43cd60d2bf776ad2c85" => :catalina
+    sha256 "48ab812e389f573f85f334ed21067518ee88df8143c968ff1c9268f8959cf326" => :mojave
+    sha256 "0d93427bbe00240c7146228aedd6c5dbf7d0b987b1397aeb2be8ee0627aad556" => :high_sierra
   end
 
   depends_on "libatomic_ops"
