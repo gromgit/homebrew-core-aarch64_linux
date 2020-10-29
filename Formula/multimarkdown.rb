@@ -8,9 +8,9 @@ class Multimarkdown < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "fda293b3a57480609f06eee55ec2ba8d65799577df2be38c0af1cc70e22fcd9d" => :catalina
-    sha256 "ce5d41628cd36556b2e6375a88dce78d90da7502033fe147fff90c3d542bd7c9" => :mojave
-    sha256 "fde9097e38d1fdb2161d71eb81758e25c1a1a39120a27c931e2d408ac8338fd6" => :high_sierra
+    sha256 "f4a26eb7603d38d0f67db4edbde56334fce2024c1c78fd5f49a7b8b69ba48683" => :catalina
+    sha256 "f095caaf1f01dd0611afcdfc77252dc2f21a3d89f8e41210e4d00307b835eb2d" => :mojave
+    sha256 "308d597802afebc412f38df92dda2b98cef91845bb0e9c8e27d1bd2d38ee9d56" => :high_sierra
   end
 
   depends_on "cmake" => :build
