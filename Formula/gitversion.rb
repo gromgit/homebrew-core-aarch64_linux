@@ -1,8 +1,8 @@
 class Gitversion < Formula
   desc "Easy semantic versioning for projects using Git"
   homepage "https://gitversion.net"
-  url "https://github.com/GitTools/GitVersion/archive/5.3.7.tar.gz"
-  sha256 "70c6f867e4a85325ba1e54211fd014d9b3ec9be43bb828393e1f0d6a5e33cefb"
+  url "https://github.com/GitTools/GitVersion/archive/5.5.0.tar.gz"
+  sha256 "d4570bf2d08a49dd469f35159c7365333b24cd07d04ab9f00e628371949fb757"
   license "MIT"
 
   bottle do
@@ -35,8 +35,10 @@ class Gitversion < Formula
 
     (testpath/"test.txt").write("test")
     system "git", "init"
+    system "git", "config", "user.name", "Test"
+    system "git", "config", "user.email", "test@example.com"
     system "git", "add", "test.txt"
-    system "git", "commit", "-q", "--author='Test <test@example.com>'", "--message='Test'"
+    system "git", "commit", "-q", "--message='Test'"
     assert_match '"FullSemVer":"0.1.0+0"', shell_output("#{bin}/gitversion -output json")
   end
 end
