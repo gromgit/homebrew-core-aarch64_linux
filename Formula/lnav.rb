@@ -5,6 +5,11 @@ class Lnav < Formula
   sha256 "03e15449a87fa511cd19c6bb5e95de4fffe17612520ff7683f2528d3b2a7238f"
   license "BSD-2-Clause"
 
+  livecheck do
+    url "https://github.com/tstack/lnav/releases"
+    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
+  end
+
   bottle do
     cellar :any
     sha256 "b21b188394092e3ca801819e0b2eb26017132fb2baadfcb014d6fb3c8c6253e3" => :catalina
