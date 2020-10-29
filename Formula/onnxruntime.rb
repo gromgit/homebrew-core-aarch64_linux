@@ -6,6 +6,11 @@ class Onnxruntime < Formula
     revision: "530117cfdb230228c3429ab39d1b7cf1f68c0567"
   license "MIT"
 
+  livecheck do
+    url "https://github.com/microsoft/onnxruntime/releases/latest"
+    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
+  end
+
   bottle do
     cellar :any
     sha256 "8523ac42679c8d4ab9b7224468020781a2654abad851d7e95a3d570cd29456c2" => :catalina
