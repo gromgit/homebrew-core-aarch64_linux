@@ -11,9 +11,9 @@ class GstEditingServices < Formula
   end
 
   bottle do
-    sha256 "6186de7daeaa8962f9f92e20903ffc91e106a28dadd0060d7ab001ff8acab890" => :catalina
-    sha256 "eab524514fdaa2ea301d0956dfe706199c91606b96bbae802074102b061b2715" => :mojave
-    sha256 "2a207a17f9948055db758ec32d231a909cc24611e9e58dfdffa6933ba39bf4fd" => :high_sierra
+    sha256 "c852fabdc2ea836956cb54efce308f5739e4908c5e4f479f89008a16d30333d6" => :catalina
+    sha256 "5eb26d65a3b9b2ab8ea0d1cfb08a059b53a08531bee31857707a59f28d5b7322" => :mojave
+    sha256 "688eab7b97190c31e1cb6cb8673285526237bbc1a0d88913d89547a95fadccf3" => :high_sierra
   end
 
   depends_on "gobject-introspection" => :build
