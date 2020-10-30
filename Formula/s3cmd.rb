@@ -15,9 +15,9 @@ class S3cmd < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0f660e6f188828607eecea389019d1c9d1c2d128ac400969bea0e56a7b7453a1" => :catalina
-    sha256 "584271d030de4833c8d17a6cbb198157052b06c3df7ca6be923552f23e5f68d1" => :mojave
-    sha256 "3f071500164cbeeab6b43eb832145b93610260f013257eee2736242032ec8ff0" => :high_sierra
+    sha256 "140b574c93db1f67b40b7cf22e8468bbcb066ecbbfffb8cf649b31d268a82775" => :catalina
+    sha256 "c76760a661e4c9438bd2d0b7016430a99a934ac8e6705727b55bc868a466031d" => :mojave
+    sha256 "6c2188352b0662521ee7dac484183e0e0a65a1f802e282dad4d5287fa3c955e6" => :high_sierra
   end
 
   # s3cmd version 2.1.0 is not compatible with Python 3.9, know issues are:
