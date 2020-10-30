@@ -8,9 +8,9 @@ class Archiver < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b21849e81b6a13c0f7929a19670b14bcaa14dc77722435df97b10041c4f38104" => :catalina
-    sha256 "fb4bc579b93f20fcc2342ab5cb6e83c97b9e5f13b14c20dd86cd7793f2318865" => :mojave
-    sha256 "fb45223dbbcd82d0621c99c317b681f004baf556c69c71c7d4c605c9f14e05ce" => :high_sierra
+    sha256 "a61d7f77c7e3a291af4afa1edc6a6059c3f48c4c9828303c805e51e69902caf0" => :catalina
+    sha256 "eb27d3455b2ef6e30317f9be5d54e3c15196b8736209ebc5cc8ac95f3058d1ee" => :mojave
+    sha256 "50d359a1201e04663c8a42b3736c11c9d0f046a814d3ec5af00d0326822474ff" => :high_sierra
   end
 
   depends_on "go" => :build
