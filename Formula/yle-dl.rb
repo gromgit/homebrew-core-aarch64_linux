@@ -8,9 +8,9 @@ class YleDl < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "c42d859ad598358af4a89616b0b1adc665db7ca85060989dcb48f5097b643e12" => :catalina
-    sha256 "4c8bb3a844bcae01854ab00c523b4cb3df74678f136c536fb345af417db7ff23" => :mojave
-    sha256 "24be3547fd5de1af5869dd78342e21c5c2ebf521f080cf97a263dc4e8f7835c7" => :high_sierra
+    sha256 "46fb35889e5e66edcc7fa8a10f673db0619c6b3791a2e17a11c282bae905903a" => :catalina
+    sha256 "ea8bcddb32ad8bc3721354dd74e0dd277161fe168b20d07d9731e336a1a01ec5" => :mojave
+    sha256 "8d0a5ec6abac52514d91ecb62fff845e6b12ed8988e1773ceb72c70c9b532dba" => :high_sierra
   end
 
   depends_on "python@3.9"
