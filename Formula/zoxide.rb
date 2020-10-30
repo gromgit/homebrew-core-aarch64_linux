@@ -7,9 +7,9 @@ class Zoxide < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "40e1d6f7e805a4627a0c9c8c2f743db1f86ff4d20ffe8ee8986d536d9d937728" => :catalina
-    sha256 "ed59dfdf07cd7c9581b0d5f57be454a99b480a5bd916b7b67254a7a3197efa34" => :mojave
-    sha256 "8a64fa405d29a1981c71994138fe00b2af2c344c15fd40ceabafa8cd996ff6f5" => :high_sierra
+    sha256 "0752c35a480b33fe21e6b336ebfd192b913817d649de9baf1e7d1b69e84f3a83" => :catalina
+    sha256 "e9070115cff363740372b028958e590405663813526d77cfbf40b3b0abb9b9d0" => :mojave
+    sha256 "9c85724a7f8272fa6fb29cd894ec78bcf4034178d88fd37cd332dec0ce34de30" => :high_sierra
   end
 
   depends_on "rust" => :build
