@@ -6,9 +6,9 @@ class Jimtcl < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 "c91b95aea2acc6fe7d469cddf8dbde23ce65f1ace79619f89d5352f4bd38f3e7" => :catalina
-    sha256 "22ab871e18afe4bccfd40f169050f2629382f9964de4bf441b593e951e586d2c" => :mojave
-    sha256 "0962cd4e3b386a6bdf463d023a21c4d296c17711d413501b6781b0b69cdcdc01" => :high_sierra
+    sha256 "fc4750e0deaf8025402e6a2ed78bd28bcddb98f39012bf3d0c9c8413480505c7" => :catalina
+    sha256 "d9ae5a5d397bf13c6c9c6f355a007454ef05d00e82938d75cdcc549fd7538c0d" => :mojave
+    sha256 "4ba0d399f6622e3ce37433c43f314a5cb8546d0a08f2700cb45d67a04d6f1706" => :high_sierra
   end
 
   depends_on "openssl@1.1"
