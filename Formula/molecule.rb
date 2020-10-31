@@ -13,9 +13,9 @@ class Molecule < Formula
 
   bottle do
     cellar :any
-    sha256 "d39e826bdac425d8b7cd19fdb3b33d55344c532b21e1b54089795b4cfad54c2e" => :catalina
-    sha256 "e0b6ebe9a0aec1f11cf8a8f3ca13c7ae72d67de4d4970f80dbcd97059cc14378" => :mojave
-    sha256 "5d50d23861d39d107d5177d53d84f67527e2b91a00fcf38f571f8ddc0aa17a82" => :high_sierra
+    sha256 "3bcb3396bab86aff6638e9abb166c34a7030aa4f26c472a2edde531fb4bea8ed" => :catalina
+    sha256 "c9401bc688b4ebf8a0ffd9d52e1a4a69504d835933cb01422244747304620cbf" => :mojave
+    sha256 "6099f2cd692b1076dbc4914b03ddbbf2c98981b29501adb42c9e8a888a235c63" => :high_sierra
   end
 
   depends_on "ansible"
