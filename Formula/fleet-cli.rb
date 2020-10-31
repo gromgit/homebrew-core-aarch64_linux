@@ -13,9 +13,9 @@ class FleetCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f35d0d4376ac67b6c354c8bb7111ae261275d65b95cff65295dffcfddca778c8" => :catalina
-    sha256 "e1739f6e06c70942ceff7f1182e81076feb810314f04ae9d9ac2cd21c0df7626" => :mojave
-    sha256 "4eed32c7c3371071608b2a7f0a044fc61165c537ef637dde6cc79cc79b85c35b" => :high_sierra
+    sha256 "3b67e8efdd84a72182347386c79b28bb792355919ee4e46ad9643f25d37e0b7f" => :catalina
+    sha256 "473658446ff24a8873aee2de76d805c1285c7ba62eebd7374c6d339c8f028e02" => :mojave
+    sha256 "f43939a331854c0e19236f2b441bb6f68987d0552f57747893e36811e2e9529a" => :high_sierra
   end
 
   depends_on "go" => :build
