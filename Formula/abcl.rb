@@ -15,9 +15,9 @@ class Abcl < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "bf6e2009b77b8e23c1140be6043bc51096180bd9cb8d00888caa9750eb9d1a89" => :catalina
-    sha256 "1d884eb75df567889352f3a3dcd5620d92df1acdc28a219a5d1c75b06052b859" => :mojave
-    sha256 "7a04bbbe48101327cbd7c08fb93c34e578a427b8dafdc2a7dbe59c213923764a" => :high_sierra
+    sha256 "febebefd11614b22a01ee26b5db6284dc029e6001957394ed7d0111f845a5245" => :catalina
+    sha256 "50ced025ace2e69c2ff81f6f09199eee5d9d5277c5eda0c107ab15872afdbbcb" => :mojave
+    sha256 "5842be84ff71e952fa8d5144a136babc6b4a324257cd45a6b30fe2cb5a253568" => :high_sierra
   end
 
   depends_on "ant"
