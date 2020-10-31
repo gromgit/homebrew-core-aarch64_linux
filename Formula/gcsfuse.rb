@@ -13,9 +13,9 @@ class Gcsfuse < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f17d670c7a662c8d16aa651b822b754507e22a2d6e4594aea1b0310d3aefb6f6" => :catalina
-    sha256 "4088dc349ce2baba035e901b93a5347a8cbe38600a28845a9883abc35d534d6f" => :mojave
-    sha256 "3935cf67d77796530c79ae81d493c9b82477ddc891f07b92e3553df8be833a61" => :high_sierra
+    sha256 "59df52ee1b44a532d2ebe8c83d0c9d2d3706da8510c9daf0b53d46c3aa156664" => :catalina
+    sha256 "a97edf4dbfa9e41d2e9d4de092507c9d5199de2324b0d95f454c50893d977889" => :mojave
+    sha256 "e0f04b45a7fe6583e424fc81a7c34dace7b01e215739758930b6baab14d3d50c" => :high_sierra
   end
 
   depends_on "go" => :build
