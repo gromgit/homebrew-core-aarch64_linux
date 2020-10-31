@@ -11,13 +11,9 @@ class Pipemeter < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "fe84476d7d258a2e5f02df94a90e59faafdcc8ed4b1277c6a4347c1de85114f7" => :catalina
-    sha256 "2e8cc64e9e25c27c2c18680f22f59b68962740d04f6f80c9406ca915747ae990" => :mojave
-    sha256 "977077866b51a7c0620fe036431ea207b72d38bc383422d682dbfde40a90d6a6" => :high_sierra
-    sha256 "19c2d3933e5d0ac8e80559ae77ea09ad83bb8746ebf313d4cdd8a30374eadaa3" => :sierra
-    sha256 "bf99d50927a1277c1a481af0eea25314dfbd1449dbd1394368f7a933da367e9a" => :el_capitan
-    sha256 "cee0b494c5f7647d0c597e90dbc8be2c7b759d53a12cd87f89f9620b9260c3ac" => :yosemite
-    sha256 "a1bd1a5466eb44aeeba7ab2563f3bd34978d248deec50964624f985f066fe2bf" => :mavericks
+    sha256 "ba82201ed8c010ce938f35dd987cab9ffd8d7b456cc5f4aeed8a638b88e84598" => :catalina
+    sha256 "0f56a78ed6cc3e8b8eaccd21f2697fb6d810d64e2afd42deebbb251b93622c06" => :mojave
+    sha256 "a599406cbf6dcdcef8029d156d00b81af91f585447e80c22b0bab27e8180cd99" => :high_sierra
   end
 
   def install
