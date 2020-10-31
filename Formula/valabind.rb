@@ -1,10 +1,9 @@
 class Valabind < Formula
   desc "Vala bindings for radare, reverse engineering framework"
   homepage "https://github.com/radare/valabind"
-  url "https://github.com/radare/valabind/archive/1.7.1.tar.gz"
-  sha256 "b463b18419de656e218855a2f30a71051f03a9c4540254b4ceaea475fb79102e"
-  license "GPL-3.0"
-  revision 4
+  url "https://github.com/radare/valabind/archive/1.7.2.tar.gz"
+  sha256 "643c1ddc85e31de975df361a20e3f39d385f5ced0e50483c6e96b33bb3d32261"
+  license "GPL-3.0-or-later"
   head "https://github.com/radare/valabind.git"
 
   bottle do
@@ -20,12 +19,6 @@ class Valabind < Formula
 
   uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
-
-  # Vala 0.48 compatibility
-  patch do
-    url "https://github.com/radare/valabind/commit/9d4fb181e24346a8c5d570290fa9892ce10c8c3b.patch?full_index=1"
-    sha256 "817e68b784728102e7f182819e750af9a8d4338ded0517e426604a3561949c9a"
-  end
 
   def install
     system "make"
