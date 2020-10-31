@@ -8,9 +8,9 @@ class Shfmt < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "42bd98e64ae352448f09fdc2b56a71e36e3659e382338447e94d20f4d7befcff" => :catalina
-    sha256 "d58c28c678be4be515c4a22e99338f7b1120a9f9d2eb004b6d7863a284ad5295" => :mojave
-    sha256 "127c0adf737c2de8d0a23850249b7cbc22fe5f864434c331ed521d4f00f3f3f7" => :high_sierra
+    sha256 "d92a8a5a5a49abd58ea5efadd750fe203985093af4c7575be389da02d50c84ac" => :catalina
+    sha256 "53262774401bb3671d96d12e2a279cc6aee11980931f37e8b74c459e03f9191e" => :mojave
+    sha256 "6bffd631df5ad9173c9037f48c143c57df1f0b3a5c6b778a9ce304dcd29c05a7" => :high_sierra
   end
 
   depends_on "go" => :build
