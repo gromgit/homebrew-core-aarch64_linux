@@ -8,10 +8,9 @@ class ScmManager < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "243c6c1c7047996457078beedf753d836a4548696fb2a231afddba97d83b4aee" => :catalina
-    sha256 "b90390788ed53f447e0c501842c7ecf99802a6a1ceeed48cbc6b7ade84e8bc31" => :mojave
-    sha256 "d0999804b3919b8f6b77f4342ab7f65a22b1a27f2084f310c443eb4b80ef3642" => :high_sierra
+    sha256 "a7d1d6994937ca3170f5bc078886339910520eb1261b835c9c6f1173fe9d5496" => :catalina
+    sha256 "6b0ed9e9d667ec92070b3f4b53f9dc90cbb508d2c6649684f39182e3bb23d6ac" => :mojave
+    sha256 "3e71fdc3039b4cc46fbbb49ae7976b8be09d8b9c4f6e5c0e052d30016668ac74" => :high_sierra
   end
 
   depends_on "openjdk@8"
