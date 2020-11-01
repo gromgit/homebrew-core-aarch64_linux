@@ -4,6 +4,7 @@ class DoubleConversion < Formula
   url "https://github.com/google/double-conversion/archive/v3.1.5.tar.gz"
   sha256 "a63ecb93182134ba4293fd5f22d6e08ca417caafa244afaa751cbfddf6415b13"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/google/double-conversion.git"
 
   bottle do
@@ -18,8 +19,13 @@ class DoubleConversion < Formula
 
   def install
     mkdir "dc-build" do
-      system "cmake", "..", *std_cmake_args
+      system "cmake", "..", "-DBUILD_SHARED_LIBS=ON", *std_cmake_args
       system "make", "install"
+      system "make", "clean"
+
+      system "cmake", "..", "-DBUILD_SHARED_LIBS=OFF", *std_cmake_args
+      system "make"
+      lib.install "libdouble-conversion.a"
     end
   end
 
