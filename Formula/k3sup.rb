@@ -11,6 +11,13 @@ class K3sup < Formula
     regex(%r{href=.*?/tag/?(\d+(?:\.\d+)+)["' >]}i)
   end
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "e1ef732373e6ff432cf1cd46b467d6b33b18a2acf85663f6d16b215ec4d73823" => :catalina
+    sha256 "e939ba24f2bc8b8c4b9d8f79bbf67cc556001ba94b968739ae80f54b46963d54" => :mojave
+    sha256 "980e991cd1edf2c7f4e886b7b91f63aef31ff3e5913f90b6850e9f4dc71c412b" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
