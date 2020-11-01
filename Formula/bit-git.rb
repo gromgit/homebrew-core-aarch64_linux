@@ -7,9 +7,9 @@ class BitGit < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "545935e02014b4eac74fda0443bdec11d5b0746113e7c45bbf97fb3035b65bea" => :catalina
-    sha256 "694adb25013317abfb363101953a5028561238190c3ef3134593337698913093" => :mojave
-    sha256 "f5de0cc16a2db81240054929a0ac40e6298f37ba9e9255da79a4880c0ac54a2a" => :high_sierra
+    sha256 "8ca334755e7f5e61db20a5dc52a636a297b33b7bdb4f3c3f7547998bd86abb26" => :catalina
+    sha256 "ffcefc3c17f5695e2f00d8ac4e0c107aa8b6115412c78a1fa4317572ab89d7ed" => :mojave
+    sha256 "2d018589f911ce954202cc01a4358c991dc4b4fdb1823f1eb39677b18cb2915a" => :high_sierra
   end
 
   depends_on "go" => :build
