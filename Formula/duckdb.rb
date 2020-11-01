@@ -2,10 +2,9 @@ class Duckdb < Formula
   desc "Embeddable SQL OLAP Database Management System"
   homepage "https://www.duckdb.org"
   url "https://github.com/cwida/duckdb.git",
-      tag:      "v0.2.1",
-      revision: "d9bceddc7209a7e0b5c0402958d1191e19a491e7"
+      tag:      "v0.2.2",
+      revision: "3222accbaf4b2648e5f2b4d3ff99ba26cbf2aba5"
   license "MIT"
-  revision 1
 
   bottle do
     cellar :any
@@ -38,6 +37,15 @@ class Duckdb < Formula
       INSERT INTO weather (temp) VALUES (40), (45), (50);
       SELECT AVG(temp) FROM weather;
     EOS
-    assert_equal "45.0", shell_output("#{bin}/duckdb_cli < #{path}").strip
+
+    expected_output = <<~EOS
+      ┌───────────┐
+      │ avg(temp) │
+      ├───────────┤
+      │ 45.0      │
+      └───────────┘
+    EOS
+
+    assert_equal expected_output, shell_output("#{bin}/duckdb_cli < #{path}")
   end
 end
