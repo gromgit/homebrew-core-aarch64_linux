@@ -9,9 +9,9 @@ class Wartremover < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "26d7317ee347ce31083a93e8e5cce25f92181ababb8cfac46929765afee5497d" => :catalina
-    sha256 "affcd0b426e565cb6bb3410f89586eb9675820b60a8d0ca680dc7b0c6d1ef3d1" => :mojave
-    sha256 "13a05da126316b1e546e0f66162ddd411f449f100fc98b59ce1344406e3ef440" => :high_sierra
+    sha256 "a2272e206adb7c11369c476e6d11b227bb7e3034e1141d414801970c330686db" => :catalina
+    sha256 "84c9d2fa3e0ee16d4983647a33f045d3fc4a5e11c3722458963451f5adff3c5a" => :mojave
+    sha256 "db7876a7fca960bb215d2509f74b4233579d7e6499dddb38eac5446393129f4a" => :high_sierra
   end
 
   depends_on "sbt" => :build
