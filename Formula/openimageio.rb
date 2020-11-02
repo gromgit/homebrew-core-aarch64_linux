@@ -13,9 +13,9 @@ class Openimageio < Formula
   end
 
   bottle do
-    sha256 "58a7e8a3c3203de3b43061fb402a93715657be05532ed37520561399d5b4c2ad" => :catalina
-    sha256 "1151e45b06a05602ede35309323be229b6d0819a26de3d0e2052b8a4cb52750e" => :mojave
-    sha256 "7602e1fa13c77da432a6a83e64f43e0d5d52a4ba34ead1e5290be6fc3f817f92" => :high_sierra
+    sha256 "25e3b9deb60f803701d1119dc5139df450e151ff1d6168acb8e4817c25e305c4" => :catalina
+    sha256 "19dedbbe7734cafb6874bcb621b0c0033fd945a4260cec15b6e4da9cebecfd25" => :mojave
+    sha256 "e0a72c043af1f91e415fa5718bf3cbe2e8020f049f631445ff3882437115731b" => :high_sierra
   end
 
   depends_on "cmake" => :build
