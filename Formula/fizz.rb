@@ -6,6 +6,13 @@ class Fizz < Formula
   license "BSD-2-Clause"
   head "https://github.com/facebookincubator/fizz.git"
 
+  bottle do
+    cellar :any
+    sha256 "f08634303bebfa2de1eb06164d067f7f304efd2ca5768a6f462b59ecff01d315" => :catalina
+    sha256 "dddf074503b463890d489e5ec054f1250b0ffcdc1d8b33facd918f5a967d5006" => :mojave
+    sha256 "64b036ca36821ae5f22184213cb2bb4e2f7e090d525740461b7d50053793c027" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "boost"
   depends_on "double-conversion"
