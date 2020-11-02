@@ -4,6 +4,7 @@ class Pybind11 < Formula
   url "https://github.com/pybind/pybind11/archive/v2.6.0.tar.gz"
   sha256 "90b705137b69ee3b5fc655eaca66d0dc9862ea1759226f7ccd3098425ae69571"
   license "BSD-3-Clause"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
@@ -13,11 +14,14 @@ class Pybind11 < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "python@3.9"
+  depends_on "python@3.9" => :test
 
   def install
-    system "cmake", ".", "-DPYBIND11_TEST=OFF", *std_cmake_args
-    system "make", "install"
+    system "cmake", "-S", ".", "-B", "build",
+           "-DPYBIND11_TEST=OFF",
+           "-DPYBIND11_NOPYTHON=ON",
+           *std_cmake_args
+    system "cmake", "--install", "build"
   end
 
   test do
@@ -28,10 +32,9 @@ class Pybind11 < Formula
           return i + j;
       }
       namespace py = pybind11;
-      PYBIND11_PLUGIN(example) {
-          py::module m("example", "pybind11 example plugin");
+      PYBIND11_MODULE(example, m) {
+          m.doc() = "pybind11 example plugin";
           m.def("add", &add, "A function which adds two numbers");
-          return m.ptr();
       }
     EOS
 
