@@ -8,9 +8,9 @@ class Innoextract < Formula
 
   bottle do
     cellar :any
-    sha256 "d3a81822f7925b57904c0c669c4296b3ed0df8551c1cc3039c58341af674bf01" => :catalina
-    sha256 "c83524adccf3e591b2e72a7cc72668972f379a9aad9f8a555cc2ce3fa0a90143" => :mojave
-    sha256 "92323fd4044aae1db881b3e18ce58b8c51e77a8b745b4e9c120e500cf2cb3ed1" => :high_sierra
+    sha256 "d929af92d772abc9d2e243044250bf536d1703c2d2b124ad26a65989ecba8bce" => :catalina
+    sha256 "c65b57194a8adccdb33db63b0061fbcf94d1e8a1b4b62a441d94ae99c7512adb" => :mojave
+    sha256 "83b502512cbdce3329d67f2e4a9784e77632c0f8b672854fef5561e542214e3c" => :high_sierra
   end
 
   depends_on "cmake" => :build
