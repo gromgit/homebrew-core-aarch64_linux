@@ -8,6 +8,13 @@ class Vulture < Formula
   license "MIT"
   head "https://github.com/jendrikseipp/vulture.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "cbe063689773ed4f0f631c359603a53f803f312b98944e3718d21b9f7974bda7" => :catalina
+    sha256 "87d1b12cb798f56a56f0c16bcd5af882ecf111a5a181655209da4cc60afd0d81" => :mojave
+    sha256 "305fefa88f47886779dc6c377abba61134c4c045be7400227bc7b0b24d75c337" => :high_sierra
+  end
+
   depends_on "python@3.9"
 
   resource "toml" do
