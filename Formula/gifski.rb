@@ -7,9 +7,9 @@ class Gifski < Formula
 
   bottle do
     cellar :any
-    sha256 "2ed67ec41d01f066787ae791cf9dae12a5fa789130191ff07df9fafc98fc533e" => :catalina
-    sha256 "6d955ad92a79489e5d0ff927fc57c10a562efb1cb484fd85f7cf997b805184aa" => :mojave
-    sha256 "515618c62c7f30df3913fa62c551193d973adfb8f0eb6c86d0acdcc8debd7c78" => :high_sierra
+    sha256 "026cb7b5320eac2dba06134f989ab3a2ca0e59c05233b9105125a7b4958627df" => :catalina
+    sha256 "e499b92025e2a91e0d3baa2b53593f1a9be2e5f09bc7b1b1f94185b6368f9a45" => :mojave
+    sha256 "1555dabc41a4d93e37b1b8343d55f4b42c4c72f98e79812fa99a05f86dae3cbc" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
