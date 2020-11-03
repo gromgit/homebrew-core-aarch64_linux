@@ -12,9 +12,9 @@ class Blast < Formula
   end
 
   bottle do
-    sha256 "652c133a61840c1a1f69de4f5827bd358434f3d7caa7886c273b3bab034e0721" => :catalina
-    sha256 "b544b1e6e510c0c72b82b581a17eb8704ad53e46e9574d4dfd24bef8f5044148" => :mojave
-    sha256 "9dd8d68f78e3825fc33064bc3b79d6474d56593e7260d39ab5f6408ad2e1e939" => :high_sierra
+    sha256 "b682885e3ef53795f010e04a55ebc607e82105b24d441f0354dda4fa2ce56b41" => :catalina
+    sha256 "0d98042978cd28ea16e9e89f4b4f2ff318c67e662a11a9b9bf130d810ee1eb3f" => :mojave
+    sha256 "5899dbfbdd65d6274b03eb0ed576d87a7bfc18a3d9a5b588fe30edddb554ce24" => :high_sierra
   end
 
   depends_on "lmdb"
