@@ -8,9 +8,9 @@ class Faudio < Formula
 
   bottle do
     cellar :any
-    sha256 "86ee91e8ae14aceacb8f5c2071bb1558429da10b462a3780db3739547acaac93" => :catalina
-    sha256 "c820aa1ce3dca2a113523fb386366188c18bb511de5b9687b893cb441ed6d92f" => :mojave
-    sha256 "51e88941cb467d1661137490eea2a9546cfb4abf7485d246733f7cd3074425a0" => :high_sierra
+    sha256 "760e3a2b0d9978f936d760424f091aa5dfe400eba58d8deb26c8171d7a672837" => :catalina
+    sha256 "5f471633c508cbd62168bbb6802cc32d44e94259f7ed47adf5ca100f063b8ebe" => :mojave
+    sha256 "2920a196fa5880e7021475bf279dca9ca5b5c7795d73e2e28a134e5c81b4273a" => :high_sierra
   end
 
   depends_on "cmake" => :build
