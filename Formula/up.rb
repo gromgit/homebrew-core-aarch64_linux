@@ -7,10 +7,9 @@ class Up < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "83553c30a557b081201b4e28600f52b589bfd8fc640c8b57dc6086d3a450be15" => :catalina
-    sha256 "0c453761279cdc6a995ae471841b2e8513215c3d30f4f448c3cf82f548376fa5" => :mojave
-    sha256 "f9ea40f11e458e2bda259fa428a9f390d9a9efce1d7983f9325eda17b4655501" => :high_sierra
-    sha256 "558f89d83bd23a28ef31a1d72f7749521f68ebf0d767a8cffb2c6b9311461e13" => :sierra
+    sha256 "0b7f8e1fdef01b1395acd9331cae1bd15b703d244692ac108e0c9f3d2e75b170" => :catalina
+    sha256 "fbe848c08368b189a0a97372a5b11848d72d2c6759a7c877e1628e9e4439ba30" => :mojave
+    sha256 "5059e775356194442c930aecf199b7a418c3c6ecdd8b82db078c26970a1b3af5" => :high_sierra
   end
 
   depends_on "go" => :build
