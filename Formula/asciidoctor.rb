@@ -1,10 +1,9 @@
 class Asciidoctor < Formula
   desc "Text processor and publishing toolchain for AsciiDoc"
   homepage "https://asciidoctor.org/"
-  url "https://github.com/asciidoctor/asciidoctor/archive/v2.0.10.tar.gz"
-  sha256 "afca74837e6d4b339535e8ba0b79f2ad00bd1eef78bf391cc36995ca2e31630a"
+  url "https://github.com/asciidoctor/asciidoctor/archive/v2.0.11.tar.gz"
+  sha256 "ac0e5bf85476b77c3e3c3be126e13e8a8a5c519bdf9a80069031a4eeef589342"
   license "MIT"
-  revision 1
 
   depends_on "ruby" if MacOS.version <= :sierra
 
@@ -16,8 +15,8 @@ class Asciidoctor < Formula
   end
 
   resource "concurrent-ruby" do
-    url "https://rubygems.org/gems/concurrent-ruby-1.1.6.gem"
-    sha256 "14da21d5cfe9ccb02e9359b01cb7291e0167ded0ec805d4f3a4b2b4ffa418324"
+    url "https://rubygems.org/gems/concurrent-ruby-1.1.7.gem"
+    sha256 "ff4befc88d522ccb2109596da26309f4b0b041683ca62d3cb903b313e1caddee"
   end
 
   resource "pdf-core" do
@@ -41,8 +40,8 @@ class Asciidoctor < Formula
   end
 
   resource "public_suffix" do
-    url "https://rubygems.org/gems/public_suffix-4.0.3.gem"
-    sha256 "87a9b64575e6d04a2e83882a2610470ea47132828c96650610b4c511b4c1d3b0"
+    url "https://rubygems.org/gems/public_suffix-4.0.6.gem"
+    sha256 "a99967c7b2d1d2eb00e1142e60de06a1a6471e82af574b330e9af375e87c0cf7"
   end
 
   resource "addressable" do
@@ -86,8 +85,8 @@ class Asciidoctor < Formula
   end
 
   resource "pdf-reader" do
-    url "https://rubygems.org/gems/pdf-reader-2.4.0.gem"
-    sha256 "de3968992d64c3fefe4e3976191cb4ab6d8a07e6926c67b684e50843aac86fbc"
+    url "https://rubygems.org/gems/pdf-reader-2.4.1.gem"
+    sha256 "705502cf151ac59a774a368819bd96c174bc63552cdc4a2f7db80ad0187d0725"
   end
 
   resource "prawn-templates" do
@@ -111,8 +110,8 @@ class Asciidoctor < Formula
   end
 
   resource "treetop" do
-    url "https://rubygems.org/gems/treetop-1.6.10.gem"
-    sha256 "67df9f52c5fdeb7b2b8ce42156f9d019c1c4eb643481a68149ff6c0b65bc613c"
+    url "https://rubygems.org/gems/treetop-1.6.11.gem"
+    sha256 "102e13adf065fc916eae60b9539a76101902a56e4283c847468eaea9c2c72719"
   end
 
   resource "asciidoctor-pdf" do
@@ -121,13 +120,13 @@ class Asciidoctor < Formula
   end
 
   resource "coderay" do
-    url "https://rubygems.org/gems/coderay-1.1.2.gem"
-    sha256 "9efc1b3663fa561ccffada890bd1eec3a5466808ebc711ab1c5d300617d96a97"
+    url "https://rubygems.org/gems/coderay-1.1.3.gem"
+    sha256 "dc530018a4684512f8f38143cd2a096c9f02a1fc2459edcfe534787a7fc77d4b"
   end
 
   resource "rouge" do
-    url "https://rubygems.org/gems/rouge-3.17.0.gem"
-    sha256 "f98a2702deb1110a3603f9ff06e948ce1b348972965478f529d718a76e998776"
+    url "https://rubygems.org/gems/rouge-3.24.0.gem"
+    sha256 "228df3eae97599f49546b2b34ffba34bff86a9f3a712327b27586d301f00f4c5"
   end
 
   def install
