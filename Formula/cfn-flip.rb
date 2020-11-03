@@ -7,6 +7,13 @@ class CfnFlip < Formula
   sha256 "2bed32a1f4dca26dc64178d52511fd4ef778b5ccbcf32559cac884ace75bde6a"
   license "Apache-2.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "e0f813ad41397d94b167cbcae814862abf436cd46b0996f83da0dae5e3d6d717" => :catalina
+    sha256 "d22cab76b33a3b6b836aa723242befc46fb8028fe282af1d4ccee64e4a21165a" => :mojave
+    sha256 "29ecc4856f9b64362498cf82765cef635f7b12f6b8570a19f5c223ca007a4e0c" => :high_sierra
+  end
+
   depends_on "python@3.9"
 
   resource "click" do
