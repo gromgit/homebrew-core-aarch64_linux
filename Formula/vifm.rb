@@ -6,9 +6,9 @@ class Vifm < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 "0495acdf812f89f23c7fafcccef47589249477c5c38dd0e47049c3421edc712a" => :mojave
-    sha256 "8371dea589590796e0f1c6b7b5ce263e18b9a1619551d5967deefd5035e512e0" => :high_sierra
-    sha256 "ded145b46f48c79712b12e7f8d14ab8b219778fcd6d0b436d0c156dd0b15129d" => :sierra
+    sha256 "d10ee88a7127716193fdfaad429e7c5c09f6a37c4b8b5ef78ba9cbb24229f4fa" => :catalina
+    sha256 "fef03d352df4b86b94a5e529a6eb54fd4ffea6584fba2ab6e4bc8c6af2bae83d" => :mojave
+    sha256 "9391d61f7b0cd098ce66789b3917e3b5d0e74104d309918980d94623c4cacac4" => :high_sierra
   end
 
   uses_from_macos "groff" => :build
