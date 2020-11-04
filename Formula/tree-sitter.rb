@@ -6,6 +6,13 @@ class TreeSitter < Formula
   license "MIT"
   head "https://github.com/tree-sitter/tree-sitter.git"
 
+  bottle do
+    cellar :any
+    sha256 "5740ba521c1e62fcbd68545c41ce729356c9249412a283a3f695031935fa8831" => :catalina
+    sha256 "40f05cfb205ab7eaaf59f2bf9351ce3735f07d19e6f999c777de43f5b9c44e66" => :mojave
+    sha256 "f142b02c17ed1c789b1675a3e56f448cade7000752f099850c18764aca2b960f" => :high_sierra
+  end
+
   def install
     system "make"
     system "make", "install", "PREFIX=#{prefix}"
