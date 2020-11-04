@@ -39,7 +39,7 @@ class Uhd < Formula
     end
 
     mkdir "host/build" do
-      system "cmake", "..", *std_cmake_args, "-DENABLE_STATIC_LIBS=ON", "-DENABLE_TESTS=OFF"
+      system "cmake", "..", *std_cmake_args, "-DENABLE_TESTS=OFF"
       system "make"
       system "make", "install"
     end
