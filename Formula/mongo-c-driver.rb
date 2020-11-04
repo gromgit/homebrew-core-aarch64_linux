@@ -8,9 +8,9 @@ class MongoCDriver < Formula
 
   bottle do
     cellar :any
-    sha256 "7322cc3c371f74949e7a05b607c636ad152454789199587b7343637f4b29d034" => :catalina
-    sha256 "fc5c58be20b5f3191dfc2dc84477f843a19dd58abe74a54d45894265a3491548" => :mojave
-    sha256 "146acef2744da2aaf61f0fc30de0e36a1ab545dbdc60c18ee968f8a571618109" => :high_sierra
+    sha256 "7d34fe918a27b7dbfde916994d1e068f317d22b95d2e3f0852ca1fad7fb924ee" => :catalina
+    sha256 "21268df63f6f1a0d6c21791ea4b2e57bc89cd132058de1cba0c8ded151aa3912" => :mojave
+    sha256 "ab28880884d121306ea193343c7c530c174cfd04247c125d3c8bf1b14af3f029" => :high_sierra
   end
 
   depends_on "cmake" => :build
