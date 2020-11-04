@@ -9,9 +9,9 @@ class Asciidoctor < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0a76a0014e0f52d35446749f04aa65e28cb148c689e148d412992e6e82adf8ac" => :catalina
-    sha256 "70d93211cdad629b023bd2aa74bfc6736378fc7740f9c2ccfc31ac327977f001" => :mojave
-    sha256 "a5bce7d4fc26dd7a56a80fc10a65f74966e294f2db2e2754f9bfabe95ffa605a" => :high_sierra
+    sha256 "36f5353774bbadce2a0ca7fff32cb2ed3d2aee1e71f7a16e113a6af6eeebc254" => :catalina
+    sha256 "061c5a1b466a915974c92ec315aa686c2615fa311926eca72590a398cdd4bf67" => :mojave
+    sha256 "c085727e1a6aeabbe2b5431359ec60a1b8a09d9209ff5d1e0229ddee9e37723d" => :high_sierra
   end
 
   resource "concurrent-ruby" do
