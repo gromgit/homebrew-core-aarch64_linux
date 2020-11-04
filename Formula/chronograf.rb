@@ -10,9 +10,9 @@ class Chronograf < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "78e04ee12c6cafb1b8be0c72580a36c41a79cd26cd94fde4acf91b8c9cf86a83" => :catalina
-    sha256 "d6c31b05a25784ced4df964568d314315ac14942caca665a756d2c5e36d44d99" => :mojave
-    sha256 "43e036a0c84359212625d8cf7eb7573fe1935bc95a3e99820e30922299252b9d" => :high_sierra
+    sha256 "d7f3238fa6d3c884c0fe303cbdd8c4d54c9190c413e2c1bfbd7905811f817930" => :catalina
+    sha256 "7d49422c89b520a89fe104048151e81bcefa6da1099980ab069951996eae190a" => :mojave
+    sha256 "1fe46b505ec117d07e590c8ffaa48013e910b5a3a8d34522d3029f2b05c782ae" => :high_sierra
   end
 
   depends_on "go" => :build
