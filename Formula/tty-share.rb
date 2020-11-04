@@ -7,9 +7,9 @@ class TtyShare < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "adfa3de302df681f3e236d28f69dcb7cd63143582d26b698a034adc5337fe18a" => :catalina
-    sha256 "b9b97a2733c85508451799419dfbc36326c8d9bfe30c26800bc22ddf2bd7b30f" => :mojave
-    sha256 "6820c38434e99f26e0cc247ae89831376c914a6eb1ee0d4b20056a2ca2e7c0e3" => :high_sierra
+    sha256 "ccd6e95f86a6639fd8f098c9a4755c06dd32a90a2a125056edb20f767903b6df" => :catalina
+    sha256 "99a8e16cbcef7ae89011182e456f70315ff4c84569a29bc4ff4d2b3db0e6502f" => :mojave
+    sha256 "d5433ba927eb10a40c64a8168e26ff6fb28fb5c71a296bc83970647f573a6db3" => :high_sierra
   end
 
   depends_on "go" => :build
