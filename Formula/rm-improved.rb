@@ -11,6 +11,13 @@ class RmImproved < Formula
     regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
   end
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "6b404b0fe096447d90c21c15140ee9295fdea4060771723e818625e8dcde8e2f" => :catalina
+    sha256 "cd164204efca72560dcb8d39db760d7e9efbeab5e9bfd0718c6cccd5b022a7f3" => :mojave
+    sha256 "27fa7c0976c9361fae1638f05a0c756603a509a16459db688d2e787ceb123de2" => :high_sierra
+  end
+
   depends_on "rust" => :build
 
   def install
