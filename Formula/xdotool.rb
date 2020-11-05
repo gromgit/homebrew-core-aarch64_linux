@@ -6,9 +6,9 @@ class Xdotool < Formula
   revision 2
 
   bottle do
-    sha256 "8dbfb2b1c32176c7cba00aaa2365f3cd438619dc0286e668e5d87412c3717d53" => :catalina
-    sha256 "860e5e7f2ca2ae88c86e8a979eba543f544960894bb4d8ec59d98cbba9805614" => :mojave
-    sha256 "9de15325d8ed42b629a94e34ff710672e96c1570dc51a6544aff0d0445de5e9c" => :high_sierra
+    sha256 "7092970eee9f15fab6aad9e364cb23b29f11fc19b1edbedd3ac794a7858aecc5" => :catalina
+    sha256 "0a24fe2911c4db734794e7c22c596a9809602af3d974abe2aae2f6ef9babb777" => :mojave
+    sha256 "9e84711dc1979c07a5367c2a2638e07e01f9bb7b8fb5166b4d1cadaed6babb7b" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
