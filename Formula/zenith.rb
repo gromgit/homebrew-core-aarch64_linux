@@ -8,9 +8,10 @@ class Zenith < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "fb3bf567a186ff31b7dece427dc0244d5985f7d4c0119a60dff2775be8e08006" => :catalina
-    sha256 "f25ad39995519a869e01f3c715b5b483b4c8ee1a071fa5d806419855c197b780" => :mojave
-    sha256 "a75c6582501ba73ebf97479549fde6ee1e087859bfe78cdf28589c3a985d53f7" => :high_sierra
+    rebuild 1
+    sha256 "a6c9804ff96250b57852555414d3f37e793c379178ffd9b0b00bb4b79ac37c4a" => :catalina
+    sha256 "33aeda2cfe6a2e2ce8089e5991b0b41feb201ddaaf250e62796a7e3bd85692ac" => :mojave
+    sha256 "34669ca8a79071a5ab3d78ccd80a261984f60711126bd6d35ead14890279fde7" => :high_sierra
   end
 
   depends_on "rust" => :build
