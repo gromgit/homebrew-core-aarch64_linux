@@ -12,9 +12,9 @@ class MariadbConnectorC < Formula
   end
 
   bottle do
-    sha256 "1450e02b0bb188edb8b104bc3d238a267f98d285791938b0e9bfcbdb5b8475e5" => :catalina
-    sha256 "344dc040d56b52b9d6eb5dbadf25a1795d0bffd98b6150fbb23b58e7bdcabe8c" => :mojave
-    sha256 "6f91bed0bab61a64d263afbd6a2fe0eb6eb111f8417e5d32a0b456ad29d3e7a1" => :high_sierra
+    sha256 "a6c670fce92617a9d00943243b33a72b70477cad277d120c0662fb603d5165ab" => :catalina
+    sha256 "d49661c28ad85799cc966b04fff2722084ee307115c77028a93521eaa6e28643" => :mojave
+    sha256 "40eae30f00cb94eabe4ba08ae280d2075ab9a721409267e0932cb219b40eb19d" => :high_sierra
   end
 
   depends_on "cmake" => :build
