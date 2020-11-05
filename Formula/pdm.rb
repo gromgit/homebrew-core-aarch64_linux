@@ -10,9 +10,9 @@ class Pdm < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e69a7840a3256d319d6d81548abe354db8f246de13a4ea236c5b4103c3af5632" => :catalina
-    sha256 "971c1f5f7edcf3991b48875946333c08912e0bf09fa1a2cfa1a4bc6734f1cb7a" => :mojave
-    sha256 "f89a9aba124565d58255e5a1c107c7bd9a1b552057890d382e9c29ea0e5feb99" => :high_sierra
+    sha256 "8bfb03d58e43a247c1be73e99f4c1167661c98ec30f33262184ad4e2fdcb33cf" => :catalina
+    sha256 "44daa5245e235b777f195b64364827aa698ccef2e55abd2ec6cb6b6371808868" => :mojave
+    sha256 "dcb87c9d91eeeae80e2e53f132e065561471137ea4a650fda0c5d4e64a0fa0c6" => :high_sierra
   end
 
   depends_on "python@3.9"
