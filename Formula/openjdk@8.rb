@@ -8,9 +8,9 @@ class OpenjdkAT8 < Formula
 
   bottle do
     cellar :any
-    sha256 "a10deef9727306433d7636522a6a145bfeb84b8be1bb64954b14807f5bf53df0" => :catalina
-    sha256 "1dd09cfcedd6e4fef1246986fa2f694aafb44452059618dae9f8203b1fe65946" => :mojave
-    sha256 "d75758be09e53521eb80402bad4f6d0c7ad6c31f176a08c7f0b1af73c2ac3abb" => :high_sierra
+    sha256 "16f86cf92a80e514256dc138b3c4f7722db71a19b2ae8d41edb89855b81ad99d" => :catalina
+    sha256 "9f61aa3d393a54db90874ed74936c1aa787e1d1bde44ceea739ec812c579adfe" => :mojave
+    sha256 "e6f2ee73e32b9b52903f4b13557b683f1fc93ebbb07bb75590a39a64011f79f5" => :high_sierra
   end
 
   keg_only :versioned_formula
