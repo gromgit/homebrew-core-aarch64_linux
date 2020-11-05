@@ -12,6 +12,13 @@ class IslAT018 < Formula
   sha256 "0f35051cc030b87c673ac1f187de40e386a1482a0cfdf2c552dd6031b307ddc4"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "728e3b1ab4e7c7cf6298e80c398dfdb8012c1b5c77fb54261d618d094bd9a1bb" => :catalina
+    sha256 "efcde3c18baf1ee3e76312758ab5a95cb4df68267d7273003d519abce2ad6c87" => :mojave
+    sha256 "0525751dc4fd778bf8be05f743d798d9229e9955999d06a1cfbecee33d737a38" => :high_sierra
+  end
+
   keg_only :versioned_formula
 
   deprecate! because: :versioned_formula
