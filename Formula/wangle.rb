@@ -6,6 +6,13 @@ class Wangle < Formula
   license "Apache-2.0"
   head "https://github.com/facebook/wangle.git"
 
+  bottle do
+    cellar :any
+    sha256 "fe5e9b87d495cd476ad22432ee2cffdca3c9e9fdbd175b6c6f66215865bcfe6f" => :catalina
+    sha256 "74cdf62b803a1a650e2b84edcb9f15268312c2a17e3117e5d571f2c8b961a05d" => :mojave
+    sha256 "a88b026bd2dd20b9a1f22fa032a7a83ccb4a98eeba3749000b45f872f53aa0b5" => :high_sierra
+  end
+
   depends_on "cmake" => :build
   depends_on "boost"
   depends_on "double-conversion"
