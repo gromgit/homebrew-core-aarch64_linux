@@ -7,9 +7,10 @@ class Bombadillo < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e28036e78119313b05947c16b65c5d512a97b96c1a096470c2c38877bd396954" => :catalina
-    sha256 "dc47ed396c8a8c988d82b0a87f5c5c368d604f535ae5cc932ad941c22376073f" => :mojave
-    sha256 "e45a0bec0801f7719539f0ccda6ce7cfc76dccd346d6a09bb65a04f2c2238cd9" => :high_sierra
+    rebuild 1
+    sha256 "d4cb984fc96583b1bf71dc482125b54d6dac9b46c47c6b0134183cc501cfb8b8" => :catalina
+    sha256 "a2ae947fb7d64598be63f1e54ea66cc5325fd135efed9c16f1fc2220f362a056" => :mojave
+    sha256 "685062637b7a2d279bcd9b002edd87e16cff4ce400bcb3c739899e95a652c809" => :high_sierra
   end
 
   depends_on "go" => :build
