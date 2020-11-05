@@ -11,6 +11,13 @@ class MarkdownlintCli < Formula
     url :stable
   end
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "23a07fc56387e9b9c4775cc5a019c7a84aac92014a16c6b4eaf0fb632513be08" => :catalina
+    sha256 "8195ff1e2483e2e5ffeda4a803f83a0a317182a35f1d5044883155e99d95d27d" => :mojave
+    sha256 "f4f231c624ab61391ed89cd171b55fe3938000c36b3155f5e58c7cb67ca66526" => :high_sierra
+  end
+
   depends_on "node"
 
   def install
