@@ -12,9 +12,9 @@ class Caffe < Formula
   end
 
   bottle do
-    sha256 "65bf174c97c7a3fac9f2d4765387d41c59abf59a0f7c3f5eb5012b9445ade013" => :catalina
-    sha256 "12f41de7b8e34434312f00f330aad10bed4cd1fea905ae3038a566c5e6ce0476" => :mojave
-    sha256 "fc668d361b8ac9d2d246a37e47b0ad696ee73bd66ca10e8b7814a17b3ceb5f29" => :high_sierra
+    sha256 "8dcb984deb1b427d7e2839c0f025650a2d7b324d2be21b9c035c8093a42b8e4c" => :catalina
+    sha256 "5ea51fdca984a90c3f0154dc3d7f2181b87c061bc6316470e63875bda3b0b8b5" => :mojave
+    sha256 "35dc319041a554bf9006fe93624e95ace0a4ac540ae1fe503a43986a05ffe769" => :high_sierra
   end
 
   depends_on "cmake" => :build
