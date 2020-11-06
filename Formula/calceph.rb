@@ -7,9 +7,9 @@ class Calceph < Formula
 
   bottle do
     cellar :any
-    sha256 "ff929e5e068babbef00d17b01c0c7fd21de40572da6afb09fd86682d38db1ed0" => :catalina
-    sha256 "38c27cb1518f4a9392db30923905aff6699953a8dcacd5e7bb4cb57d06623e41" => :mojave
-    sha256 "7c2ca014b2180796d059837204b96f5dc8493baccb1d44bd8fda6375c39f27d5" => :high_sierra
+    sha256 "2ce6fa8b2b26b317a0bb5896a7bbb8a492d85788f2f7eda43cac8cc2dde7a3a4" => :catalina
+    sha256 "6fe017217defc0a4746d5881f8ced6f2ae0af262f0fa6aef33c94721f45b1742" => :mojave
+    sha256 "8b2a7955298fe618abe12328de07a6c991a47d15805b27f11f2df2f0bf88de0d" => :high_sierra
   end
 
   depends_on "gcc" # for gfortran
