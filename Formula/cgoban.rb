@@ -3,7 +3,8 @@ class Cgoban < Formula
   homepage "https://cgoban1.sourceforge.io/"
   url "https://downloads.sourceforge.net/project/cgoban1/cgoban1/1.9.14/cgoban-1.9.14.tar.gz"
   sha256 "3b8a6fc0e989bf977fcd9a65a367aa18e34c6e25800e78dd8f0063fa549c9b62"
-  license "GPL-2.0"
+  license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url :stable
@@ -16,14 +17,18 @@ class Cgoban < Formula
     sha256 "38bb87533d7c54253a2836af87c326651dda87c046f3803189308b155651e825" => :high_sierra
   end
 
-  depends_on :x11
+  depends_on "libice"
+  depends_on "libsm"
+  depends_on "libx11"
 
   def install
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
                           "--mandir=#{man}",
-                          "--with-x"
+                          "--with-x",
+                          "--x-includes=#{Formula["libx11"].opt_include}",
+                          "--x-libraries=#{Formula["libx11"].opt_lib}"
     system "make", "install"
   end
 
