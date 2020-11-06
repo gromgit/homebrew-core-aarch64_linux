@@ -6,7 +6,7 @@ class GrOsmosdr < Formula
   url "https://github.com/osmocom/gr-osmosdr/archive/v0.2.2.tar.gz"
   sha256 "5a7ce7afee38a56191b5d16cb4a91c92476729ff16ed09cbba5a3851ac619713"
   license "GPL-3.0-or-later"
-  revision 2
+  revision 3
 
   bottle do
     sha256 "1589cb2357dd7e8fa1608de624beab565f2e45898e70c1d2e0cd72c6cb46710d" => :big_sur
