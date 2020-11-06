@@ -8,9 +8,9 @@ class Cmus < Formula
   head "https://github.com/cmus/cmus.git"
 
   bottle do
-    sha256 "28bcd80ed26797cfbf1d7e0b42da105fcf431e8ddf268410a9d48def8c5c9b6b" => :catalina
-    sha256 "04bb64db2401fc5007bbb82746676c789ef33d83415a7d56235ded3983bb0e12" => :mojave
-    sha256 "d81b4668ed5acac3d758bd90b79c01ec12f3ea51186f804941f4d3418c28c72a" => :high_sierra
+    sha256 "63e046f82a65d23949d3c147ca484490aee9f41eb75bec24178c9ebf0928a02a" => :catalina
+    sha256 "87ae24805f1363afd8f409c05fd9b2b684c599838e40f4a7e1bb5f0ef1264c7d" => :mojave
+    sha256 "d11dc1c6d34f9caf2cfd0de6893d14013a4e2e50f9414598603ca55d91198b2c" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
