@@ -14,6 +14,7 @@ on:
       - "Formula/libpciaccess.rb"
       - "Formula/libseccomp.rb"
       - "Formula/linux-headers.rb"
+      - "Formula/strace.rb"
 jobs:
   tests_linux:
     runs-on: ubuntu-latest
