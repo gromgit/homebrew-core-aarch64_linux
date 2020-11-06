@@ -14,9 +14,10 @@ class Vint < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "75161a294d40430a9146e35a9e3871f3d8761cc6b60f66f8b9abd22630f8e579" => :catalina
-    sha256 "aea0df6f034bcec57f8f930781fae0a48349a0910465c253f5969e429bded6a3" => :mojave
-    sha256 "5174b7b0ffdcc7231efa29c69a69d13a1e8b7649016d384931135d7dc11640bd" => :high_sierra
+    rebuild 1
+    sha256 "8848e8f89f352b4bbcfb875438c09e4dbae683bc1a5044b30d254ee1700ec0e3" => :catalina
+    sha256 "8e4f3863fcdd29a7c727e4117dbb8731606c97ad25bf5a80ddbad65d96a43dd7" => :mojave
+    sha256 "4719b1fd512613b97246d52968fe3a7dfe6d45b7c9749bad87bd22bf4841fc0d" => :high_sierra
   end
 
   depends_on "python@3.9"
