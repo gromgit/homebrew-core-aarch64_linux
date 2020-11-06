@@ -11,10 +11,10 @@ class Cgoban < Formula
   end
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "6b8613fe9566746c60a0ec45830b5c687d54cbaa6107179906248fa6094e856d" => :catalina
-    sha256 "fd7177595494fb367982e080af14fb7a249d6651a73a1b33f63394f9546fc837" => :mojave
-    sha256 "38bb87533d7c54253a2836af87c326651dda87c046f3803189308b155651e825" => :high_sierra
+    cellar :any
+    sha256 "e61d461ae44716ab681151657ff73af5b438f306419142a247543b14de951ab4" => :catalina
+    sha256 "65a58482e8da31098a71ed49467b069bff5a6172df8304bb1bccd579301abca2" => :mojave
+    sha256 "4fc05de2c69a98f7c1dbd55303a508ac50e6bb3a3b6297ebd43ec4bf5a79c14d" => :high_sierra
   end
 
   depends_on "libice"
