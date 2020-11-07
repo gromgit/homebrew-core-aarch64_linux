@@ -71,6 +71,10 @@ jobs:
                     "path": "Formula/.+",
                     "content": "depends_on \"?(?:java|openjdk@?).+"
                 }, {
+                    "label": "linux-only",
+                    "path": "Formula/.+",
+                    "content": "depends_on :linux"
+                }, {
                     "label": "lua",
                     "path": "Formula/.+",
                     "content": "depends_on \"lua(?:@[0-9.]+|jit)?\""
