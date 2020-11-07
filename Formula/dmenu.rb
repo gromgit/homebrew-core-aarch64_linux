@@ -13,10 +13,10 @@ class Dmenu < Formula
   end
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "c3c3df399b25d4f8973cb2dad21e9eee4e6c07f60fa639e0239c6e64a134c284" => :catalina
-    sha256 "28c154b8f5c657ca864305f495d7cd43ed4d39ce3d9fe17ffc101dc808033edf" => :mojave
-    sha256 "ed800e10a28a770ff50b0a4462ecb18406d0dec7a4d59f42885b7f6e8ee387db" => :high_sierra
+    cellar :any
+    sha256 "d92a894ca1d4bb9904b4671f7c849738e266a0cd99d28fcd49324edfd888b367" => :catalina
+    sha256 "e08e8de333a1d00b6ba7c94f6d3916bce646cbf651cd04eb1cdd604df49639c8" => :mojave
+    sha256 "e94b31e21d9ea3d307b61661fa766592a0856ab13111f17be9a4ae4227759a01" => :high_sierra
   end
 
   depends_on "fontconfig"
