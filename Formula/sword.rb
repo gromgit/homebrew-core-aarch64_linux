@@ -11,9 +11,10 @@ class Sword < Formula
   end
 
   bottle do
-    sha256 "606a413399112a486c2b4095a76f83b03ed6f08efc0b00074e68dcdbad6c8aff" => :catalina
-    sha256 "4090521dc9b44fcfba1d9fdebd3ea2c708ca4f6046c278fea3fc568e3a8bc61c" => :mojave
-    sha256 "6bb12d6e5bee18ef39752f365fdb2cfb9ea6347b51db9ee36f8d4a70684dcaa1" => :high_sierra
+    rebuild 1
+    sha256 "65d2da4bfbc5517b4fba2d4da6a4b57ff2429126041c59ee83ad29886df71d70" => :catalina
+    sha256 "84420513bcd1215cfcee1737022551b86d80059a0dfb1de6fc82dcec050280a2" => :mojave
+    sha256 "42b2dfd8162cd7b96efeba4da340df7dafae5f581be6c6bbb47f37a07bd9f66a" => :high_sierra
   end
 
   uses_from_macos "zlib"
