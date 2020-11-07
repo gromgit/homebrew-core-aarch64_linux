@@ -3,10 +3,9 @@ class ReorderPythonImports < Formula
 
   desc "Rewrites source to reorder python imports"
   homepage "https://github.com/asottile/reorder_python_imports"
-  url "https://github.com/asottile/reorder_python_imports/archive/v2.3.5.tar.gz"
-  sha256 "e5c5b77efbd3a61fc2a4ab1ad36c57445dbec4313b8177725ead98ae05f8426e"
+  url "https://github.com/asottile/reorder_python_imports/archive/v2.3.6.tar.gz"
+  sha256 "33df7db05db1557c743ddb3fe24cbf2d5d29bb56c3e42cb41383a242c8a213db"
   license "MIT"
-  revision 1
 
   bottle do
     cellar :any_skip_relocation
@@ -23,8 +22,8 @@ class ReorderPythonImports < Formula
   end
 
   resource "cached-property" do
-    url "https://files.pythonhosted.org/packages/57/8e/0698e10350a57d46b3bcfe8eff1d4181642fd1724073336079cb13c5cf7f/cached-property-1.5.1.tar.gz"
-    sha256 "9217a59f14a5682da7c4b8829deadbfc194ac22e9908ccf7c8820234e80a1504"
+    url "https://files.pythonhosted.org/packages/61/2c/d21c1c23c2895c091fa7a91a54b6872098fea913526932d21902088a7c41/cached-property-1.5.2.tar.gz"
+    sha256 "9fa5755838eecbb2d234c3aa390bd80fbd3ac6b6869109bfc1b499f7bd89a130"
   end
 
   def install
