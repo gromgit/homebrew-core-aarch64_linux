@@ -1,10 +1,9 @@
 class Fontforge < Formula
   desc "Command-line outline and bitmap font editor/converter"
   homepage "https://fontforge.github.io"
-  url "https://github.com/fontforge/fontforge/archive/20200314.tar.gz"
-  sha256 "ad0eb017379c6f7489aa8e2d7c160f19140d1ac6351f20df1d9857d9428efcf2"
+  url "https://github.com/fontforge/fontforge/releases/download/20201107/fontforge-20201107.tar.xz"
+  sha256 "68bcba8f602819eddc29cd356ee13fafbad7a80d19b652d354c6791343476c78"
   license "GPL-3.0"
-  revision 2
 
   bottle do
     sha256 "9c0a61fe2fc9fa5c387c596b69c6a2e76f8316a1115d2796ae1138af0b9ac319" => :big_sur
