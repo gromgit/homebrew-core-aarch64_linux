@@ -11,6 +11,13 @@ class Showkey < Formula
     regex(/showkey[._-]v?(\d+(?:\.\d+)+)/i)
   end
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "7565c213c9d1e4d0859164eaa92ec1e6f0cdf4d9e28f8e3a4f7a156971292de1" => :catalina
+    sha256 "7bb7683a2f338db50eaed3bb2079308f32d30a43ce0ac37d16b7a9ae98235678" => :mojave
+    sha256 "2eb4e4da78137fc93f5558e9448744e7dfdef298e6259f562093f956656c86a6" => :high_sierra
+  end
+
   depends_on "xmlto" => :build
 
   def install
