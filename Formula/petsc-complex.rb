@@ -6,9 +6,9 @@ class PetscComplex < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 "8bb3190a0ed6125a0fda91f251072966a4a59694dbf7f3c35cd03e2736162b69" => :catalina
-    sha256 "5b0109633282f324ad05b439adc083babd105548172cda5dea5f8ba808d22aab" => :mojave
-    sha256 "3edf6549a8f9d2c8048f3a566123f19518b6b133d3eab956a631bd6659c9df78" => :high_sierra
+    sha256 "37c4464703e7c4cdb6fef406f046aaa9a21c57d1ca514e33650f0f5af90ff2c4" => :catalina
+    sha256 "2128291c8151ed900e9fc93bddc97a5f79730a6a0d3382aab2683728f63014b7" => :mojave
+    sha256 "ebb3d6850a04a637792f4656c220881584d1b2c8ce897300328c58591349d909" => :high_sierra
   end
 
   depends_on "hdf5"
