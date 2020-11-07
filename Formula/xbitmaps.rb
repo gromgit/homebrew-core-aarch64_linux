@@ -5,6 +5,13 @@ class Xbitmaps < Formula
   sha256 "b9f0c71563125937776c8f1f25174ae9685314cbd130fb4c2efce811981e07ee"
   license "MIT"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "1f2ba4ed5d9c1347ae66b5721a0fc91fd63332a1602b6e6fd0899491e5e33bb9" => :catalina
+    sha256 "012d091ea559b0d3fae3449d1f18b2ea05beb3ac2363b3bd67d5b27bc3b4567e" => :mojave
+    sha256 "2f3a3dbeeca8256a15c7902b5028791706cc999d9d7e1e080a940aa68c0622b9" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "util-macros" => :build
 
