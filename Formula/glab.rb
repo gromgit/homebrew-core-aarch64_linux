@@ -6,6 +6,13 @@ class Glab < Formula
   license "MIT"
   head "https://github.com/profclems/glab.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "23c8c7338b05a82257c762ab05431c04d96336f06afb60c5275b5e86104c25fa" => :catalina
+    sha256 "17421f91e7f700a7ceb45ff78c9cf49038fe635388c88f67719c704ef46c14b5" => :mojave
+    sha256 "3c5b40d0ae4cbb093ae82164c4ad7e0fa1014a1432f6bbb0727f0349e9cdad59" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
