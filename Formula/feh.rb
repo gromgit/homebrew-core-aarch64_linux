@@ -4,6 +4,7 @@ class Feh < Formula
   url "https://feh.finalrewind.org/feh-3.5.tar.bz2"
   sha256 "388f9dcc8284031023364355e23a82c276e79ca614f2dcd64d2f927857a4531e"
   license "MIT-feh"
+  revision 1
 
   livecheck do
     url :homepage
@@ -18,7 +19,9 @@ class Feh < Formula
 
   depends_on "imlib2"
   depends_on "libexif"
-  depends_on :x11
+  depends_on "libx11"
+  depends_on "libxinerama"
+  depends_on "libxt"
 
   def install
     system "make", "PREFIX=#{prefix}", "verscmp=0", "exif=1"
