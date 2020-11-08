@@ -2,21 +2,14 @@ class Ntopng < Formula
   desc "Next generation version of the original ntop"
   homepage "https://www.ntop.org/products/traffic-analysis/ntop/"
   license "GPL-3.0"
-  revision 1
 
   stable do
-    url "https://github.com/ntop/ntopng/archive/4.0.tar.gz"
-    sha256 "caf3aeec5c66eca7ddc3a1d4edc4a109b6c963a22bfcf6843e402a569c8e12a1"
+    url "https://github.com/ntop/ntopng/archive/4.2.tar.gz"
+    sha256 "c7ce8d0c7b4251aef276038ec3324530312fe232d38d7ad99de21575dc888e8b"
 
     resource "nDPI" do
-      url "https://github.com/ntop/nDPI/archive/3.2.tar.gz"
-      sha256 "6808c8c4495343e67863f4d30bb261c1e2daec5628ae0be257ba2a2dea7ec70a"
-
-      # Contains an API change which ntopng 4.0 uses.
-      patch do
-        url "https://github.com/ntop/nDPI/commit/e4512dbcb9e1db0500290b712257e501d1440d71.patch?full_index=1"
-        sha256 "b753532c7c4e68bd20ac432e4ea2159b38609ee7bf6296e96b511222813cc633"
-      end
+      url "https://github.com/ntop/nDPI/archive/3.4.tar.gz"
+      sha256 "dc9b291c7fde94edb45fb0f222e0d93c93f8d6d37f4efba20ebd9c655bfcedf9"
     end
   end
 
