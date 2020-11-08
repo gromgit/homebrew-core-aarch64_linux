@@ -17,12 +17,9 @@ class Jnethack < Formula
   end
 
   bottle do
-    sha256 "22c77a0b903452c595e324b04dc5cf09d37fa56af922fc438e8aad3e4899082d" => :catalina
-    sha256 "54890df9ae6c932ed1ec36deb7892e5ddd28857e3740dd0c36f9d20f231caf3d" => :mojave
-    sha256 "7422717258f234810d99d330df0a0e99b90da7328db9324a92d39a63869e008b" => :high_sierra
-    sha256 "89c2fed343614d39084a8c59908032fe929e78c1572e92f50b9eafa4aca3860d" => :sierra
-    sha256 "c11837932635f89762360ad449e189c44e8213cb74f981ccb7908671a0e3ad4b" => :el_capitan
-    sha256 "f0c7c0c5bbf5c7d5b2d733fd76d49f31039b15c982a7ef7530444f734a41ec7c" => :yosemite
+    sha256 "059b8ffd6b13d6335e746b70ac59706b632982eff307a2c9d66c1e4114bab994" => :catalina
+    sha256 "6f985e89658c5c5e4443a2fa88dafef23bbad24c01ea9dbc29661eb3b1028133" => :mojave
+    sha256 "34845f6e7a2773374e778043b0ca456f23aeff7f1fd72389a551a6bbe160d871" => :high_sierra
   end
 
   depends_on "nkf" => :build
