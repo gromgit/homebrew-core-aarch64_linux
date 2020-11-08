@@ -8,10 +8,10 @@ class Esptool < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "5604775a4ca2fd6862321cea2669d433ca6e787dd3067f906253850b916dbd55" => :catalina
-    sha256 "d4042620d6ea819adf11e05d909d77a1872a0d100cd47bed163514994a9f81b9" => :mojave
-    sha256 "62c206f044e3b712ae9068919882a5f311cae0740affe3846043407439d8183c" => :high_sierra
+    cellar :any
+    sha256 "3adf28370ae055d19fb546334fe076d80ed0d151b54972a1a1876cf56f121995" => :catalina
+    sha256 "2301134224ef45fed4bd5f739ad907b561c59455fda3a0a2b2833e4daefde692" => :mojave
+    sha256 "5a4ac5ccfd87d4355b1be991195f0547f1e99340526ed20c1e1dfa8de5b05112" => :high_sierra
   end
 
   depends_on "python@3.9"
