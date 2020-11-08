@@ -5,6 +5,13 @@ class Libxp < Formula
   sha256 "bd1e449572359921dd5fa20707757f57d7535aff1772570ab2c29c6b49b86266"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "e70342d93c5cf690582f559318b05b26da9175fc7620493fa15a224a847ec1da" => :catalina
+    sha256 "1cc823e7fe3acb64e58b554e5e956302959f28cb5737eea5c6d15655128aee15" => :mojave
+    sha256 "8e904b533b4c4264232ae6391e7d4bc37dade77d5d20539ed3d42900ab3950ce" => :high_sierra
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
