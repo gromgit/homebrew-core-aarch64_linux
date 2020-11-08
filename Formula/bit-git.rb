@@ -4,6 +4,7 @@ class BitGit < Formula
   url "https://github.com/chriswalz/bit/archive/v0.9.11.tar.gz"
   sha256 "a6d7f31d92007725b18f6203c7b9c8f9eaaa49e22f807ad683473d7388350681"
   license "Apache-2.0"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
@@ -17,7 +18,7 @@ class BitGit < Formula
   conflicts_with "bit", because: "both install `bit` binaries"
 
   def install
-    system "go", "build", *std_go_args
+    system "go", "build", *std_go_args, "-ldflags", "-X main.version=v#{version}"
     bin.install_symlink "bit-git" => "bit"
   end
 
