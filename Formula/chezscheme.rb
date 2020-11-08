@@ -4,6 +4,7 @@ class Chezscheme < Formula
   url "https://github.com/cisco/ChezScheme/archive/v9.5.4.tar.gz"
   sha256 "258a4b5284bb13ac6e8b56acf89a7ab9e8726a90cc57ea1cd71c5da442323840"
   license "Apache-2.0"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
@@ -12,7 +13,8 @@ class Chezscheme < Formula
     sha256 "062b486d9b8fc1d81716361b5f0267a12599dea779f3cf37e5879c33b41bf568" => :high_sierra
   end
 
-  depends_on x11: :build
+  depends_on "libx11" => :build
+  depends_on "xterm"
   uses_from_macos "ncurses"
 
   def install
@@ -26,6 +28,11 @@ class Chezscheme < Formula
         s.gsub! "CLOCK_THREAD_CPUTIME_ID", "UNDEFINED_GIBBERISH"
       end
     end
+
+    inreplace "configure", "/opt/X11", Formula["libx11"].opt_prefix
+    inreplace Dir["c/Mf-*osx"], "/opt/X11", Formula["libx11"].opt_prefix
+    inreplace "c/version.h", "/usr/X11R6", Formula["libx11"].opt_prefix
+    inreplace "c/expeditor.c", "/usr/X11/bin/resize", Formula["xterm"].opt_bin/"resize"
 
     system "./configure",
               "--installprefix=#{prefix}",
