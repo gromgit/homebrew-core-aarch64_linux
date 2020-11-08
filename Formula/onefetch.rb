@@ -7,9 +7,9 @@ class Onefetch < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "11655cd5654644a3cadc0406c474225bf449d8658952f4227f35e0c8be47cfe4" => :catalina
-    sha256 "3f141349341475e10008d77b1008bda6690ea7575cfbc2d0a89cf0fa46049008" => :mojave
-    sha256 "dc1c69a73e53fff8afe79e990c8b088c8ae63dfdb5c53dbf9e90fd2b21ae266a" => :high_sierra
+    sha256 "9b3e02f4eedb99eda8a752a935899baee21e972b2f7aade64aef2331b46b6644" => :catalina
+    sha256 "160b0e9f86b386dce6c8236938465727c0e6cfcd6690527934787df81cbe67cb" => :mojave
+    sha256 "1dabb0f229e28a98c494bd137f2f8b970f2390d54a5a21fcbc2965d1bc4989aa" => :high_sierra
   end
 
   depends_on "rust" => :build
