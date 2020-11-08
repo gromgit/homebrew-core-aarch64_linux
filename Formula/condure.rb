@@ -5,6 +5,13 @@ class Condure < Formula
   sha256 "28d19110765e78701b512cf81aba23e4a823e3f502c6e87c7e247554da748cfe"
   license "Apache-2.0"
 
+  bottle do
+    cellar :any
+    sha256 "6ed502304ea5516ac043e8476767b9b3780aabafb49aa9e3d2907c2e46ef870b" => :catalina
+    sha256 "d56f9ccffe8d8e0c6fc4f8ae80ffdf15be032be7e8ebb5a68d821ba377e692fc" => :mojave
+    sha256 "474f9b3e9832107903a4e0e2af1ce23da4d8edb714fcd36e628e5dba7781b366" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "rust" => :build
   depends_on "python@3.8" => :test
