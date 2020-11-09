@@ -13,9 +13,9 @@ class Fnm < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5ef8aa4e9d807115fb9d07a574f9310e54ea5424e348398cb777948cd967a3b4" => :catalina
-    sha256 "1d68be19c87276cc3f43f6a9dca925c366752e57673924667311116e3d27277b" => :mojave
-    sha256 "b20020182942c4d16b205058ece8b5508f2f948a6bd5f785e2f91843a0df1a61" => :high_sierra
+    sha256 "fb7a10ca743733c57c54aee383593f6b85027e4a715c1fbe92bdfdfe7b142bda" => :catalina
+    sha256 "0616d43ab3fab3194a79dc343385adefefea0b5cbcecee6af9967483cd71deff" => :mojave
+    sha256 "0c1674937c6196ace66708e6fa39ec11a6297830321f14b65c1d26360b8d5c97" => :high_sierra
   end
 
   depends_on "rust" => :build
