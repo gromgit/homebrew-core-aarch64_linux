@@ -9,9 +9,9 @@ class OperatorSdk < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "69874324c44d8731c7a0c572a1dbcbea2b27811ffd5d29d60f3c32ae46434287" => :catalina
-    sha256 "88d91481811b2fba02c348d54a6f46b6303fccdd60b6a36ee4f56412a773698e" => :mojave
-    sha256 "e2181db5b4f393784088f66377fe1fb410002e1faac0802e115209805ee9b064" => :high_sierra
+    sha256 "9c5a65ecd8a7a880fb9313c9fdf00067468aaf758273dcc1c638cfcad982ce98" => :catalina
+    sha256 "30c354c68fac5ef3f2f24d5ad7b5db531c053084f2fe726755397d4342eb84c0" => :mojave
+    sha256 "f12d158290dbbe2ec76976da1082cf71b3a94b36a917b469735ab1ed66c0bc8d" => :high_sierra
   end
 
   depends_on "go"
