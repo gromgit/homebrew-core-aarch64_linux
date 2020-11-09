@@ -16,9 +16,10 @@ class Remake < Formula
   end
 
   bottle do
-    sha256 "ad7371427c7aa33cc28ac17f8f91fd6dd6a4e15b031a8aedabdc38a8da5ae7f7" => :catalina
-    sha256 "308ec13eaf2295d55be5d8dd92e9932a8fa9d25dd06001f43436fcd304b638e3" => :mojave
-    sha256 "835577312df4dc23a7ea0701b15b80db4cd233cfaf4efcfbd6bfea8f0f5b27d5" => :high_sierra
+    rebuild 1
+    sha256 "310b2ef02888a953487fb4e3f7fd7101c209a9abd12286d6a8509669c3ed2909" => :catalina
+    sha256 "05998e7ad1f8442b57e0826b5152894186f359b59d75e68634c1da1a96b0345f" => :mojave
+    sha256 "b3c14a7963aeda5e8367e0e4375354fdd58b24a99c07d6cb3fd881dc8d1b1941" => :high_sierra
   end
 
   depends_on "readline"
