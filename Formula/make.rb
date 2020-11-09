@@ -11,9 +11,10 @@ class Make < Formula
   end
 
   bottle do
-    sha256 "b2cbb6b854495469de4d065825c94540ad3053a1ff7c1832f4eb7781ee6b8231" => :catalina
-    sha256 "50ac9c7185e08349c35531d8ee30e755713aec340229cab2008ba1a2ceac15c9" => :mojave
-    sha256 "e7f49884dbeaae3e7ccc9dc3a58fec587c2a594f50314dbc33cde44c6f807f53" => :high_sierra
+    rebuild 1
+    sha256 "39fc5ebff5ff708c2e3eea597b9f2eb79b910a122d30c3ac9bb93ebe313f030c" => :catalina
+    sha256 "0c0a08eef68bcd78b0345f5f57a6efffcc7be877bcb3b803f39ac8916b882477" => :mojave
+    sha256 "429177235322c3209e1657bea36364cd84222075b636939f6ed93a1cd04aeb21" => :high_sierra
   end
 
   conflicts_with "remake", because: "both install texinfo files for make"
