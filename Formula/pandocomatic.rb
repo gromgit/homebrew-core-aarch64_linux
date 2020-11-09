@@ -7,9 +7,9 @@ class Pandocomatic < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "8cc6d2218d4aaef9eb614d66784464123f7b735118e583ac6ff824303f7b2c86" => :catalina
-    sha256 "473c84bc5f3ebbbff68fae54153a3f463562fab8cd422ef60ec43632a3c6f364" => :mojave
-    sha256 "8d1d02f49374611d7e02c0e1c0b510de780903eb672f44afcc6a1fcaf1c876d1" => :high_sierra
+    sha256 "462b6fb04be99bd19985476d36d29b26625a8ada343ec41f8373c0f7fcf11033" => :catalina
+    sha256 "f4a6df084b43ebe5a123dbeeef27881d737aec895df518050eb948a6d7712b1a" => :mojave
+    sha256 "8f6ca37732470b38636fd37d6d5a7c75b15e6642fdd8a3fdbe2e57b196ca2fcf" => :high_sierra
   end
 
   depends_on "pandoc"
