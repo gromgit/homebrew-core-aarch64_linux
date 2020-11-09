@@ -7,13 +7,10 @@ class Morse < Formula
   revision 1
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "b97853e5c7a071e81c9fc7845f9467ebe00fab07fd0c738532230d3463d1826b" => :catalina
-    sha256 "5fe911c0c4d71783759f9d8c4e6269c873a830d0511e0813edf7ec86f3c7f62f" => :mojave
-    sha256 "fb58a8af73002f98fe7ff1274c1712eb4bf0cab8b08640d2836fc6951c5cb2e9" => :high_sierra
-    sha256 "d779902b961e9ebbfa41b0906d8d41357232fd4da83a393e112cde87f5bcdcaa" => :sierra
-    sha256 "491a1ea5455d058af9adb607e0e49d95b94e52f0068cd5fb197c1ea71666b524" => :el_capitan
-    sha256 "c89c45cdc2ff59d6ac327188c484659c769fe94a07e5e1f38f4d568f0b1a943d" => :yosemite
+    cellar :any
+    sha256 "adae05d8824303ba9aa4ab1c39e909c593cc63a61b4b6be26cc51afec37a2696" => :catalina
+    sha256 "114581f2ca08f2cde40767654aba3752d03c0f9bf45f05e68ce56079fde8308c" => :mojave
+    sha256 "cf3b1e007ccd9008513ec84b6411ccee4756d61e801902faad5cf4d5243a8b0f" => :high_sierra
   end
 
   depends_on "libx11"
