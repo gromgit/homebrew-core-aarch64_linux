@@ -13,9 +13,9 @@ class Zbar < Formula
   end
 
   bottle do
-    sha256 "1d045da2a7bd7f348a19643fa203e3bac2a41f3b4b913acf6c3dcbfd8ab451f0" => :catalina
-    sha256 "9494f562f1fca7e00c461e46768f61305802facfc4127d7253d7ffa1690af485" => :mojave
-    sha256 "6cc127961a7a4047fa3b10f5ffcdccbc15a26b13f43d232a18aa7e5fea131e01" => :high_sierra
+    sha256 "24145f43665e55e719161c6cae3fe23be591912bff2343f07f8eec88ee0b9760" => :catalina
+    sha256 "8aa8edbbdd7ba716f74986a67f0b33eb369fe0f06a4ae20aee3b7383498fcd72" => :mojave
+    sha256 "401610f57821c4f6ce548695a4736750cced275cc6fc51978adb89f17903d1fd" => :high_sierra
   end
 
   depends_on "autoconf" => :build
