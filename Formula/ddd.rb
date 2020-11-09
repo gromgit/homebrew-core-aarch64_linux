@@ -12,12 +12,10 @@ class Ddd < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 "a2d1ceeadc2055223cea7c3e3776393dfc01bd0f2946ed82dda8226fe11ccb29" => :catalina
-    sha256 "41917b105d1329eaa9421fe314e449fca4c9b9f27b5c4a2ad10d0dbb746a8cea" => :mojave
-    sha256 "381ae07c96a67534b05a03ca72741d99aa3437a01c0fef603336ea218c470df9" => :high_sierra
-    sha256 "af12e95b5b4326906236559a40f6715e896d164d5c18d9448384e0e22d089abf" => :sierra
-    sha256 "68864faf1967b400bc5df5809ab9ee03a0d632f3736071131dd5469be715c58f" => :el_capitan
+    rebuild 2
+    sha256 "df163eb838675a73c69913af1e1526a5c20e5cbeafa58836112ce4ae642a705a" => :catalina
+    sha256 "ef4ae2c46be3ad1aee12c52ca34d7606c3aa056250792a61c03af4581fe8e568" => :mojave
+    sha256 "9fc9c568178424aeb25d6721c4faffb99a8bd7ef967ea0ae4e3464b65651d0b8" => :high_sierra
   end
 
   depends_on "gdb" => :test
