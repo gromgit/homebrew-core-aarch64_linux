@@ -9,9 +9,9 @@ class Eksctl < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "95d7731ea3766d16793e65fffb9273d4c0915f1859476f120daed9e4a4d787ba" => :catalina
-    sha256 "0af8a4b8725474eeeec08b314032e53ae5362613aa2b8a8c5748e89b26104924" => :mojave
-    sha256 "4ab15c9e0466265b99f54aa5bbc672ff948a91b4ceb529ad8dd6c1264e782a88" => :high_sierra
+    sha256 "bfa7b2fc15af7343dd31670c916c470b5df4bb26b60f7991c938ae730ffa24a4" => :catalina
+    sha256 "79ff3528842b4d602d7ce5195d698cdbe498acb98d550fd8946ae7adb687d434" => :mojave
+    sha256 "b4fe067b46ba355b075aad0891df35baefcaf276dcf0243d09ac780000b0a1c8" => :high_sierra
   end
 
   depends_on "go" => :build
