@@ -7,9 +7,9 @@ class Miniserve < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e8955f888b8c0828d741d5541a2ae6567704d78db99600d59b3d9a02dc571089" => :mojave
-    sha256 "8711ae0bb727abd3ed3ad8d1335275d26fbc473f19bacfbad76b10b5a0bf4efc" => :high_sierra
-    sha256 "a00b82cfce9fecd067b62ec3135a0e9cc59d3133f97ed3c0e7b815e4921c32d0" => :sierra
+    sha256 "5aecd4dd080d29cbdc19c9364d0f258dab2c0b949d91f7e1476c04815b1efe04" => :catalina
+    sha256 "a1ad84a40334855440f7a05815a6824c6ee300fadaa6324be156057b2ee04d60" => :mojave
+    sha256 "3c004b4741d5b70faa4d77dc560b7416027a5dc5af4fcca54baaa559946571a5" => :high_sierra
   end
 
   depends_on "rust" => :build
