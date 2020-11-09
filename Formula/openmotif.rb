@@ -11,11 +11,9 @@ class Openmotif < Formula
   end
 
   bottle do
-    sha256 "a997ddf37cc71329a09ca6616cbf0ef63bbe1a477a65a94781fdb72d8ec15822" => :catalina
-    sha256 "f9eec7b02d0e04b8a41a5c7e3b8c0096c9156100fe888ee663742dca1298f7c5" => :mojave
-    sha256 "ca0c7a96b098ed5efc2dace2cb1b9bc2447c8f1cf0780e882bfee691160466e0" => :high_sierra
-    sha256 "21120a7b3aab57d5660c480ab5f1924cbfb31e8625674bf02704971f103616f9" => :sierra
-    sha256 "bef02966fb2d72ac23235c8038cdf864cefe47d1cb905fac08a9194d7c9ed554" => :el_capitan
+    sha256 "07edf35230c5dca07fd5b4aa3a198d9ec706319e9b57ae62259f63d9726262f7" => :catalina
+    sha256 "b921f9634055bd7aaab722d156feca35da0742106036f23837241d53d1380648" => :mojave
+    sha256 "0ebe3e7a88d400291a3e0a3f46d40b500c1e0487f5f689535c8c468993e786da" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
