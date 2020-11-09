@@ -7,6 +7,13 @@ class Checkov < Formula
   sha256 "e0a220748b4cd9c4521db66a8997483075a2230d9e217a2c3a0b71b001cc03a7"
   license "Apache-2.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "2dd11c07c746f0b57198a34b34634ffb6020c3a4277712d9e5586997a7f10a2a" => :catalina
+    sha256 "9e8936e27c41f2ffe94dcb1d2b7dee8a3e29cd9950f6c330ef0a2e033b07cbcd" => :mojave
+    sha256 "b12abd3a92b8ad01af320c1aa94f9984d283bd0bf99af64fd93f59b5f5587d57" => :high_sierra
+  end
+
   depends_on "python@3.9"
 
   resource "bc-python-hcl2" do
