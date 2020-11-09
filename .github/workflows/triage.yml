@@ -47,6 +47,7 @@ jobs:
                     "path": "Formula/.+@.+",
                     "except": [
                         "Formula/openssl@1.1.rb",
+                        "Formula/openssl@3.0.rb",
                         "Formula/python@3.9.rb"
                     ]
                 }, {
