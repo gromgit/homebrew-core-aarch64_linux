@@ -7,9 +7,10 @@ class Condure < Formula
 
   bottle do
     cellar :any
-    sha256 "6ed502304ea5516ac043e8476767b9b3780aabafb49aa9e3d2907c2e46ef870b" => :catalina
-    sha256 "d56f9ccffe8d8e0c6fc4f8ae80ffdf15be032be7e8ebb5a68d821ba377e692fc" => :mojave
-    sha256 "474f9b3e9832107903a4e0e2af1ce23da4d8edb714fcd36e628e5dba7781b366" => :high_sierra
+    rebuild 1
+    sha256 "4915eb903078bdf04c7d1cfe68cad3426099282f2cd9d7f84824e5bc9e22d9e0" => :catalina
+    sha256 "fc2adc0f4586cf6bf97a0a6d39b03a77a6d4aa08edec6bb97f3fcbfde95faf14" => :mojave
+    sha256 "6876102c57416a4bd25fd61ecbfff1354f08edb12797c265dcff36a90db515ea" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
