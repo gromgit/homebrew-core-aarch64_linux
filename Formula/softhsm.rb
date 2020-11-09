@@ -3,6 +3,7 @@ class Softhsm < Formula
   homepage "https://www.opendnssec.org/softhsm/"
   url "https://dist.opendnssec.org/source/softhsm-2.6.1.tar.gz"
   sha256 "61249473054bcd1811519ef9a989a880a7bdcc36d317c9c25457fc614df475f2"
+  license "BSD-2-Clause"
 
   # We check the GitHub repo tags instead of https://dist.opendnssec.org/source/
   # since the aforementioned first-party URL has a tendency to lead to an
@@ -18,9 +19,19 @@ class Softhsm < Formula
     sha256 "cd17fa2e8538ca99b5963d60074578c91839740e7f87cc292b9b8f4f67dd99d8" => :high_sierra
   end
 
+  head do
+    url "https://github.com/opendnssec/SoftHSMv2.git", branch: "develop"
+
+    depends_on "autoconf" => :build
+    depends_on "automake" => :build
+    depends_on "libtool" => :build
+    depends_on "pkg-config" => :build
+  end
+
   depends_on "openssl@1.1"
 
   def install
+    system "sh", "./autogen.sh" if build.head?
     system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}",
