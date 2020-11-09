@@ -8,9 +8,9 @@ class DmtxUtils < Formula
 
   bottle do
     cellar :any
-    sha256 "b769c72ede0c30f8d66fa831a0228e1896a59bee2c1edb833cc983ffad647ff3" => :catalina
-    sha256 "2aa5a9010d8aa229b81b7b571739131420a33643814b93d23de55547ac7c0202" => :mojave
-    sha256 "dc6b4de991219302c6cc12f6bfc4ef867469f76278f77e0b7bed41e07e27f598" => :high_sierra
+    sha256 "0985c4c4a239de3a85eb2201f15c8ae12dbb49ccc9036f93f728e13d0d46705b" => :catalina
+    sha256 "7f2702b52b6e627607593542f0276a092b08de852200fa8fbc051ca76a00a3b5" => :mojave
+    sha256 "0de24aad51177bb26b8e33c7e459919e158fad2357436314410ccefc60e18024" => :high_sierra
   end
 
   depends_on "autoconf" => :build
