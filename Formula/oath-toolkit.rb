@@ -11,10 +11,9 @@ class OathToolkit < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 "24a65399ed4b462a3291c542616e1a5dad4df008dcb116fd12c34030f05135b0" => :catalina
-    sha256 "ab9cbc2e7e8c7004c5a3db7fbc4b6a0cbc9560a353a306cba0fa4d1174a46f68" => :mojave
-    sha256 "a7fbff2831b4c6a61896c65b482b3db50d2e070e1e74772e7fb929bbd4a586f0" => :high_sierra
+    sha256 "65829db6f4cead3afc2fed55266f10f826873f50d8f958bf17dc2b0b2837aeea" => :catalina
+    sha256 "85a0ec8fff24c0522924fb1218e8e85deb60a88d2357ccf9c23c963240935ebf" => :mojave
+    sha256 "1d0e17197d67e4fe3b9cc6e658faa98de0e9dd92715393e49b96050f823489f3" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
