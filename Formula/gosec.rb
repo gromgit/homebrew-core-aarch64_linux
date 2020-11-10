@@ -6,6 +6,13 @@ class Gosec < Formula
   license "Apache-2.0"
   head "https://github.com/securego/gosec.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "f2ab2597115da15b5310c5456a4fe363e591432bc283dd2666f1f587b8f2cde3" => :catalina
+    sha256 "c0217676973c37182efc63f728471659f7c5129f413df6923b73b1e91ea744db" => :mojave
+    sha256 "8b70996fcd2624ac7bec3602a5f2002935924ad6cf8bbd90a670b9764540759c" => :high_sierra
+  end
+
   depends_on "go"
 
   def install
