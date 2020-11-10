@@ -12,12 +12,9 @@ class Grace < Formula
   end
 
   bottle do
-    sha256 "7629c4a481667d3acbbb5813789d885beece9f063e41826546b68b5f7170360b" => :catalina
-    sha256 "919ed10debaca3045266712e6927d410c152ec92e44f403efc91c11a322652d4" => :mojave
-    sha256 "24e9a28ea6b6665f2e8e7a0d179735a6f956bb55b02d5515570017780e4903a1" => :high_sierra
-    sha256 "80eae698e6f2cf3dd8a1fb11937871f2e588417b3abfe22ff12d066dd9f0e747" => :sierra
-    sha256 "f178d67cb811997af5d52c11afb1e27c73bc44a1063aa06f08bc7ee189691812" => :el_capitan
-    sha256 "e1dc9c34d5417798dbd2d0c834fe099e7f1d8b395863964ffeb9fcb69e4b3c33" => :yosemite
+    sha256 "ba476c55bdee47b52c7b0a1f5cc6fb54ceac945cc25b45095643afca91243f68" => :catalina
+    sha256 "7f9b574dd0e37c2f15a0c87df07959c7a634d1a7ec959305ce9a036ed4efdb9c" => :mojave
+    sha256 "b75a7e4b3abf5d83878cb5b5cd8d3eed30a17119af95fcac6e9852856a049ce1" => :high_sierra
   end
 
   depends_on "fftw"
