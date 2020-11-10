@@ -7,9 +7,9 @@ class Goaccess < Formula
   head "https://github.com/allinurl/goaccess.git"
 
   bottle do
-    sha256 "ca26b40fa6af07692cef8397e8b5cef4a4426f413cea4d08399bf2e075656f70" => :catalina
-    sha256 "ff8280daf00ff222480c70ab73762a74f1661053f68f318b48c934b91215d80c" => :mojave
-    sha256 "fb4fd174c742537f1cbf536ca36a5cfd0580ae0576cfe484dc6848daea208953" => :high_sierra
+    sha256 "4c595d0c97f0f73ca0135724e1fb270376803558e061cafb510aacd9b3c03bbf" => :catalina
+    sha256 "34b0e6c71bca1e06092f150ae7a71c7fb5a6dd4a1e9fa6a7bac9a4582d768154" => :mojave
+    sha256 "f8c7eea092fc381f163565cf8cb925ae84d2d2f26a3f06e8543b9a7672af8932" => :high_sierra
   end
 
   depends_on "autoconf" => :build
