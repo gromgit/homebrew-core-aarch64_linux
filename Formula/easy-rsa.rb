@@ -6,6 +6,13 @@ class EasyRsa < Formula
   license "GPL-2.0-only"
   head "https://github.com/OpenVPN/easy-rsa.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "f8fb06de036f9b9d1b5483054b967c8b0ba61f7617f40c7b2d8443c87b3b54a9" => :catalina
+    sha256 "a9e8dd8d94adc330b85d60b74380987bd680103c2b4cac61d407eca7b272174b" => :mojave
+    sha256 "0e814810990e326f9b20a416d684a05261c6e4b68cd9d092a09898fe50077fa0" => :high_sierra
+  end
+
   depends_on "openssl@1.1"
 
   def install
