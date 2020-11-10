@@ -3,7 +3,7 @@ class Fontforge < Formula
   homepage "https://fontforge.github.io"
   url "https://github.com/fontforge/fontforge/releases/download/20201107/fontforge-20201107.tar.xz"
   sha256 "68bcba8f602819eddc29cd356ee13fafbad7a80d19b652d354c6791343476c78"
-  license "GPL-3.0-or-later"
+  license all_of: ["GPL-3.0-or-later", "BSD-3-Clause"]
 
   bottle do
     sha256 "9c0a61fe2fc9fa5c387c596b69c6a2e76f8316a1115d2796ae1138af0b9ac319" => :big_sur
