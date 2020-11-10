@@ -7,6 +7,13 @@ class KubeLinter < Formula
   license "Apache-2.0"
   head "https://github.com/stackrox/kube-linter.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "0339da5dbc9507d60a5a6089bc8a1a4662344a5a165f89f3c450e5941350e164" => :catalina
+    sha256 "9b6b67038dd1db365041afd3ab9205e14d3439e2a331e696a5e0b2c4fbea73f1" => :mojave
+    sha256 "020d8688cf36c0a175bbc2fa9f163b919f6482ac36b03deed8c19c1959bb39f9" => :high_sierra
+  end
+
   depends_on "go" => :build
 
   def install
