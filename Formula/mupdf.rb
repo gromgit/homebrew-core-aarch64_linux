@@ -13,10 +13,10 @@ class Mupdf < Formula
   end
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "c781037e13df1edd80ab97d715bf087f8ed1011016804123fcae03bc4e20cf14" => :catalina
-    sha256 "c487a3e37a7004cfe63cc617db030d15199924d68eeec75d7c2f445448457d81" => :mojave
-    sha256 "21389eb838991da63ebd3bb5903ce83c001d716ed192c38c0a14ae3939f758a8" => :high_sierra
+    cellar :any
+    sha256 "b656ec4a7c2cbb3b55b52678e5129bbeb27215c793cd6e3876d40a51d293bd84" => :catalina
+    sha256 "5b06c1203b68608f64d082b83db659a46d98a849d79530bfa83f28adb970e17e" => :mojave
+    sha256 "32dc7277f5dce0762c695ecf15f3ec745ec7767afec09f6acefc4aea86386873" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
