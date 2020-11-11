@@ -22,31 +22,25 @@ class OpensslAT11 < Formula
 
   keg_only :shadowed_by_macos, "macOS provides LibreSSL"
 
-  resource "cacert" do
-    on_linux do
+  on_linux do
+    resource "cacert" do
       # homepage "http://curl.haxx.se/docs/caextract.html"
       url "https://curl.haxx.se/ca/cacert-2020-01-01.pem"
       mirror "https://gist.githubusercontent.com/dawidd6/16d94180a019f31fd31bc679365387bc/raw/ef02c78b9d6427585d756528964d18a2b9e318f7/cacert-2020-01-01.pem"
       sha256 "adf770dfd574a0d6026bfaa270cb6879b063957177a991d453ff1d302c02081f"
     end
-  end
 
-  resource "Test::Harness" do
-    on_linux do
+    resource "Test::Harness" do
       url "https://cpan.metacpan.org/authors/id/L/LE/LEONT/Test-Harness-3.42.tar.gz"
       sha256 "0fd90d4efea82d6e262e6933759e85d27cbcfa4091b14bf4042ae20bab528e53"
     end
-  end
 
-  resource "Test::More" do
-    on_linux do
+    resource "Test::More" do
       url "https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302175.tar.gz"
       sha256 "c8c8f5c51ad6d7a858c3b61b8b658d8e789d3da5d300065df0633875b0075e49"
     end
-  end
 
-  resource "ExtUtils::MakeMaker" do
-    on_linux do
+    resource "ExtUtils::MakeMaker" do
       url "https://cpan.metacpan.org/authors/id/B/BI/BINGOS/ExtUtils-MakeMaker-7.48.tar.gz"
       sha256 "94e64a630fc37e80c0ca02480dccfa5f2f4ca4b0dd4eeecc1d65acd321c68289"
     end
@@ -57,16 +51,35 @@ class OpensslAT11 < Formula
   # be obvious to everyone, so explicitly state it for now to
   # help debug inevitable breakage.
   def configure_args
-    %W[
+    args = %W[
       --prefix=#{prefix}
       --openssldir=#{openssldir}
       no-ssl3
       no-ssl3-method
       no-zlib
     ]
+    on_linux do
+      args += (ENV.cflags || "").split
+      args += (ENV.cppflags || "").split
+      args += (ENV.ldflags || "").split
+      args << "enable-md2"
+    end
+    args
   end
 
   def install
+    on_linux do
+      ENV.prepend_create_path "PERL5LIB", libexec/"lib/perl5"
+
+      %w[ExtUtils::MakeMaker Test::Harness Test::More].each do |r|
+        resource(r).stage do
+          system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
+          system "make", "PERL5LIB=#{ENV["PERL5LIB"]}", "CC=#{ENV.cc}"
+          system "make", "install"
+        end
+      end
+    end
+
     # This could interfere with how we expect OpenSSL to build.
     ENV.delete("OPENSSL_LOCAL_CONFIG_DIR")
 
@@ -75,7 +88,17 @@ class OpensslAT11 < Formula
     # Whilst our env points to opt_bin, by default OpenSSL resolves the symlink.
     ENV["PERL"] = Formula["perl"].opt_bin/"perl" if which("perl") == Formula["perl"].opt_bin/"perl"
 
-    arch_args = %w[darwin64-x86_64-cc enable-ec_nistp_64_gcc_128]
+    arch_args = []
+    on_macos do
+      arch_args += %w[darwin64-x86_64-cc enable-ec_nistp_64_gcc_128]
+    end
+    on_linux do
+      if Hardware::CPU.intel?
+        arch_args << (Hardware::CPU.is_64_bit? ? "linux-x86_64" : "linux-elf")
+      elsif Hardware::CPU.arm?
+        arch_args << (Hardware::CPU.is_64_bit? ? "linux-aarch64" : "linux-armv4")
+      end
+    end
     # Remove `no-asm` workaround when upstream releases a fix
     # See also: https://github.com/openssl/openssl/issues/12254
     arch_args << "no-asm" if Hardware::CPU.arm?
@@ -83,8 +106,8 @@ class OpensslAT11 < Formula
     ENV.deparallelize
     system "perl", "./Configure", *(configure_args + arch_args)
     system "make"
-    system "make", "test"
     system "make", "install", "MANDIR=#{man}", "MANSUFFIX=ssl"
+    system "make", "test"
   end
 
   def openssldir
@@ -92,6 +115,11 @@ class OpensslAT11 < Formula
   end
 
   def post_install
+    on_macos(&method(:macos_post_install))
+    on_linux(&method(:linux_post_install))
+  end
+
+  def macos_post_install
     keychains = %w[
       /System/Library/Keychains/SystemRootCertificates.keychain
     ]
@@ -112,6 +140,15 @@ class OpensslAT11 < Formula
 
     openssldir.mkpath
     (openssldir/"cert.pem").atomic_write(valid_certs.join("\n") << "\n")
+  end
+
+  def linux_post_install
+    # Download and install cacert.pem from curl.haxx.se
+    cacert = resource("cacert")
+    cacert.fetch
+    rm_f openssldir/"cert.pem"
+    filename = Pathname.new(cacert.url).basename
+    openssldir.install cacert.files(filename => "cert.pem")
   end
 
   def caveats
