@@ -8,9 +8,9 @@ class Parallelstl < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5b3837f32d57d6d5398da1127eb4bba489a85821ae32e125fc486edb3abbca11" => :catalina
-    sha256 "5b3837f32d57d6d5398da1127eb4bba489a85821ae32e125fc486edb3abbca11" => :mojave
-    sha256 "5b3837f32d57d6d5398da1127eb4bba489a85821ae32e125fc486edb3abbca11" => :high_sierra
+    sha256 "90737db9c682cbb31c250745bf089fd4f3d72fca3980dad138472c1d6ef8a5ae" => :catalina
+    sha256 "c0eb967346b81fa899a348dcc51c5cec898add7384134006bf2335f349b9be4a" => :mojave
+    sha256 "4e0f682ecd6e591ab1a6d71e4579409485a1a63bbcc1b6d22738eda43e1fd762" => :high_sierra
   end
 
   depends_on "cmake" => :build
