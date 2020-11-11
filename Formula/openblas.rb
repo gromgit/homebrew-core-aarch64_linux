@@ -4,6 +4,7 @@ class Openblas < Formula
   url "https://github.com/xianyi/OpenBLAS/archive/v0.3.12.tar.gz"
   sha256 "65a7d3a4010a4e3bd5c0baa41a234797cd3a1735449a4a5902129152601dc57b"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/xianyi/OpenBLAS.git", branch: "develop"
 
   bottle do
@@ -22,6 +23,8 @@ class Openblas < Formula
     ENV["DYNAMIC_ARCH"] = "1"
     ENV["USE_OPENMP"] = "1"
     ENV["NO_AVX512"] = "1"
+    # Force a large NUM_THREADS to support larger Macs than the VMs that build the bottles
+    ENV["NUM_THREADS"] = "56"
     ENV["TARGET"] = case Hardware.oldest_cpu
     when :arm_vortex_tempest
       "VORTEX"
