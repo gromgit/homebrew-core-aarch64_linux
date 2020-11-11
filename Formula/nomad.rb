@@ -1,8 +1,8 @@
 class Nomad < Formula
   desc "Distributed, Highly Available, Datacenter-Aware Scheduler"
   homepage "https://www.nomadproject.io"
-  url "https://github.com/hashicorp/nomad/archive/v0.12.7.tar.gz"
-  sha256 "0890978c03e91163f64f0364069a9cb44ebdb1c6087aa23d77eceaf1be5d6fd0"
+  url "https://github.com/hashicorp/nomad/archive/v0.12.8.tar.gz"
+  sha256 "6a91d83c0375ead496888238f208c15edf22bac6ea05281edb809eab9a8c9963"
   license "MPL-2.0"
   head "https://github.com/hashicorp/nomad.git"
 
@@ -21,13 +21,7 @@ class Nomad < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    src = buildpath/"src/github.com/hashicorp/nomad"
-    src.install buildpath.children
-    src.cd do
-      system "go", "build", "-tags", "ui", "-o", bin/"nomad"
-      prefix.install_metafiles
-    end
+    system "go", "build", *std_go_args, "-tags", "ui"
   end
 
   plist_options manual: "nomad agent -dev"
