@@ -7,9 +7,9 @@ class Imake < Formula
   revision 3
 
   bottle do
-    sha256 "9397e56fac8b92243e8dbd73e9bf96d6bb932832a4571e8b571098ea251eb1e2" => :catalina
-    sha256 "857384a54365558b10ca72836f6367027f28eb7ce480c5bb3266f5630bb3530f" => :mojave
-    sha256 "ad17ed4504f421c25c474e005e9595745719f4448f55cbfdee0c3fd42ad44b76" => :high_sierra
+    sha256 "fadd526555076cbe59ef74e14456c732a084230e3bf23a78df259f222b11b4fc" => :catalina
+    sha256 "211e42f25de025770eae0cf3b5ca2c5f03821a809009e0111115f808cd498ab1" => :mojave
+    sha256 "582ea346c5d5caaa38795e2221172358b584e22cfe25ec48cacf78467272b257" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
