@@ -7,9 +7,9 @@ class Ucloud < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "ed7e6bb64dc6ae191629dd0926c551f4711c20279353106b6ab910597fdae5c0" => :catalina
-    sha256 "dc63cd551ca4dba836795dec1f2c38301f877db843d30354328fbf88ecfc89d4" => :mojave
-    sha256 "764b7fdf043b64037522b90afda7bf56bc3d609bb4e3d2f66fc35c41bf308479" => :high_sierra
+    sha256 "0e447115650b1cfc4a6149dd83f39c7ca849d740ec430a581be09e8e21adbff5" => :catalina
+    sha256 "e5a5bcfec828253269cd75c1f0e7f6d606748a4b4d5ef987088581f7b5425e17" => :mojave
+    sha256 "e7208d9e0dc5db081191c336d4e11ad44fb39d98221253a9577f6c2b7de3a374" => :high_sierra
   end
 
   depends_on "go" => :build
