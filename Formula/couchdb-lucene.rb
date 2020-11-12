@@ -4,6 +4,7 @@ class CouchdbLucene < Formula
   url "https://github.com/rnewson/couchdb-lucene/archive/v2.1.0.tar.gz"
   sha256 "8297f786ab9ddd86239565702eb7ae8e117236781144529ed7b72a967224b700"
   license "Apache-2.0"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
@@ -15,7 +16,7 @@ class CouchdbLucene < Formula
 
   depends_on "maven" => :build
   depends_on "couchdb"
-  depends_on java: "1.8"
+  depends_on "openjdk@8"
 
   def install
     system "mvn"
