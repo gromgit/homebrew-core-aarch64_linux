@@ -21,8 +21,6 @@ class Kafka < Formula
   depends_on "openjdk"
   depends_on "zookeeper"
 
-  conflicts_with "confluent-platform", because: "both install identically named Kafka related executables"
-
   def install
     data = var/"lib"
     inreplace "config/server.properties",
