@@ -4,6 +4,7 @@ class SwaggerCodegenAT2 < Formula
   url "https://github.com/swagger-api/swagger-codegen/archive/v2.4.17.tar.gz"
   sha256 "8dbcd9311b22ca0aa16094fd616e6e6053ee081f06f26a1ae97df5b8e25dbb31"
   license "Apache-2.0"
+  revision 1
 
   livecheck do
     url "https://github.com/swagger-api/swagger-codegen.git"
@@ -20,7 +21,7 @@ class SwaggerCodegenAT2 < Formula
   keg_only :versioned_formula
 
   depends_on "maven" => :build
-  depends_on java: "1.8"
+  depends_on "openjdk@8"
 
   def install
     ENV["JAVA_HOME"] = Language::Java.java_home("1.8")
