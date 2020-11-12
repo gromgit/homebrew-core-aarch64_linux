@@ -3,7 +3,7 @@ class LibreadlineJava < Formula
   homepage "https://java-readline.sourceforge.io/"
   url "https://downloads.sourceforge.net/project/java-readline/java-readline/0.8.0/libreadline-java-0.8.0-src.tar.gz"
   sha256 "cdcfd9910bfe2dca4cd08b2462ec05efee7395e9b9c3efcb51e85fa70548c890"
-  revision 2
+  revision 3
 
   livecheck do
     url :stable
@@ -17,7 +17,7 @@ class LibreadlineJava < Formula
     sha256 "784fc9cb94f45ccaf91af932f35d6ac3570326914c4a4da866c9e34e173238a2" => :sierra
   end
 
-  depends_on java: "1.8"
+  depends_on "openjdk@8"
   depends_on "readline"
 
   # Fix "non-void function should return a value"-Error
@@ -25,7 +25,7 @@ class LibreadlineJava < Formula
   patch :DATA
 
   def install
-    java_home = ENV["JAVA_HOME"]
+    java_home = Formula["openjdk@8"].opt_prefix
 
     # Reported 4th May 2016: https://sourceforge.net/p/java-readline/bugs/12/
     # JDK 8 doclint for Javadoc complains about minor HTML conformance issues
