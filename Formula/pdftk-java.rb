@@ -4,6 +4,7 @@ class PdftkJava < Formula
   url "https://gitlab.com/pdftk-java/pdftk/-/archive/v3.2.1/pdftk-v3.2.1.tar.gz"
   sha256 "16aacc54d5b3cd5da35e0d8e09a51bf4e5938f289cf32d09ef9225dda99041ed"
   license "GPL-2.0-or-later"
+  revision 1
   head "https://gitlab.com/pdftk-java/pdftk.git"
 
   livecheck do
@@ -19,7 +20,7 @@ class PdftkJava < Formula
   end
 
   depends_on "gradle" => :build
-  depends_on java: "1.8"
+  depends_on "openjdk@8"
 
   def install
     system "gradle", "shadowJar", "--no-daemon"
