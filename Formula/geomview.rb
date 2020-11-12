@@ -13,12 +13,9 @@ class Geomview < Formula
   end
 
   bottle do
-    sha256 "2a2d54a233f02bb8667cc5217fe110fc31e29eeeaca51f99bb7ac58237f9b0a9" => :catalina
-    sha256 "cd70e7bf1004fe4b28933971dc3e817822c2abdd17fd09eb728f26ac85506cb2" => :mojave
-    sha256 "d66bbca7b5fb25556f03f40264d338e5ce99efaeba4e227b14711632a7f97cf5" => :high_sierra
-    sha256 "34cc860cab36fad0c134035897063de637b55c1bd53aafbccd24847af6af3b34" => :sierra
-    sha256 "6857c1bc6d2640c074b53981b2f027eb527a7c103b0c7ab1cd16d868decd35f9" => :el_capitan
-    sha256 "edc57089dc5ba7f2e7ec43c66202f19c460c4a1970f9c60984c0f3fe6c481012" => :yosemite
+    sha256 "8fcdf484eb6699c2f4c5bc46dec876ba9b4439d39a2dcc6342f63eec019decf4" => :catalina
+    sha256 "ff34b05281e51f09386f1c1ae150ec0fee0d1c8c7afe74a63fec22c7add9285c" => :mojave
+    sha256 "8c92e54836c38a56cbb22a0488dab7665d11fd44d918956a899bb4ef2175d338" => :high_sierra
   end
 
   depends_on "libice"
