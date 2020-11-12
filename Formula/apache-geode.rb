@@ -6,6 +6,7 @@ class ApacheGeode < Formula
   mirror "https://downloads.apache.org/geode/1.13.0/apache-geode-1.13.0.tgz"
   sha256 "8caf6dcafa5c6bb7c10dc7d512d0569dd16e463e01c18997118e20a5f43e6097"
   license "Apache-2.0"
+  revision 1
 
   livecheck do
     url :stable
@@ -13,7 +14,7 @@ class ApacheGeode < Formula
 
   bottle :unneeded
 
-  depends_on java: "1.8"
+  depends_on "openjdk@8"
 
   def install
     rm_f "bin/gfsh.bat"
