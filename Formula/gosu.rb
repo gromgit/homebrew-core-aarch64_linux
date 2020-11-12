@@ -4,6 +4,7 @@ class Gosu < Formula
   url "https://github.com/gosu-lang/gosu-lang/archive/v1.14.18.tar.gz"
   sha256 "b6bf6967ee127b727b4be56aaa02bc807340d4663e00dafd9fd8a6c1a5cd6958"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/gosu-lang/gosu-lang.git"
 
   bottle do
@@ -15,7 +16,7 @@ class Gosu < Formula
   end
 
   depends_on "maven" => :build
-  depends_on java: "1.8"
+  depends_on "openjdk@8"
 
   skip_clean "libexec/ext"
 
