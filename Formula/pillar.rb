@@ -4,6 +4,7 @@ class Pillar < Formula
   url "https://github.com/comeara/pillar/archive/v2.3.0.tar.gz"
   sha256 "f1bb1f2913b10529263b5cf738dd171b14aff70e97a3c9f654c6fb49c91ef16f"
   license "MIT"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
@@ -16,11 +17,11 @@ class Pillar < Formula
   end
 
   depends_on "sbt" => :build
-  depends_on java: "1.8"
+  depends_on "openjdk@8"
 
   def install
     inreplace "src/main/bash/pillar" do |s|
-      s.gsub! "$JAVA ", "`/usr/libexec/java_home --version 1.8`/bin/java "
+      s.gsub! "$JAVA ", "#{Formula["openjdk@8"].bin}/java "
       s.gsub! "${PILLAR_ROOT}/lib/pillar.jar", "#{libexec}/pillar-assembly-#{version}.jar"
       s.gsub! "${PILLAR_ROOT}/conf", "#{etc}/pillar-log4j.properties"
     end
