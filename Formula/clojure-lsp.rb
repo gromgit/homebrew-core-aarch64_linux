@@ -7,6 +7,7 @@ class ClojureLsp < Formula
     revision: "a6803d9a329961764956c7bdc05a379cd09fa3d0"
   version "20201009T224414"
   license "MIT"
+  revision 1
   head "https://github.com/snoe/clojure-lsp.git"
 
   bottle do
@@ -18,7 +19,7 @@ class ClojureLsp < Formula
 
   depends_on "leiningen" => :build
   # The Java Runtime version only recognizes class file versions up to 52.0
-  depends_on java: "1.8"
+  depends_on "openjdk@8"
 
   def install
     system "lein", "uberjar"
@@ -30,17 +31,14 @@ class ClojureLsp < Formula
   test do
     require "Open3"
 
-    begin
-      stdin, stdout, _, wait_thr = Open3.popen3("#{bin}/clojure-lsp")
-      pid = wait_thr.pid
-      stdin.write <<~EOF
-        Content-Length: 58
+    stdin, stdout, _, wait_thr = Open3.popen3("#{bin}/clojure-lsp")
+    pid = wait_thr.pid
+    stdin.write <<~EOF
+      Content-Length: 58
 
-        {"jsonrpc":"2.0","method":"initialize","params":{},"id":1}
-      EOF
-      assert_match "Content-Length", stdout.gets("\n")
-    ensure
-      Process.kill "SIGKILL", pid
-    end
+      {"jsonrpc":"2.0","method":"initialize","params":{},"id":1}
+    EOF
+    assert_match "Content-Length", stdout.gets("\n")
+    Process.kill "SIGKILL", pid
   end
 end
