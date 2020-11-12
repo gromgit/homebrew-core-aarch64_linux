@@ -4,6 +4,7 @@ class Hexgui < Formula
   url "https://github.com/apetresc/hexgui/archive/v0.9.3.tar.gz"
   sha256 "e7bf9daebe39c4efb06d758c5634c6fa25e97031ffa98592c378af89a03e9e8d"
   license "GPL-3.0"
+  revision 1
   head "https://github.com/apetresc/hexgui.git"
 
   bottle do
@@ -14,7 +15,7 @@ class Hexgui < Formula
   end
 
   depends_on "ant" => :build
-  depends_on java: "1.8"
+  depends_on "openjdk@8"
 
   def install
     system "ant"
