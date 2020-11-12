@@ -9,9 +9,9 @@ class Rdesktop < Formula
   deprecate! because: :unmaintained
 
   bottle do
-    sha256 "4b504df078255fec4d85c94f9a815eb26e55cec1cd38ebf2755ead4d0bcda3be" => :catalina
-    sha256 "12d99aa6dd32ee04b5c0030def99ec91ec9de695d11bd7e062429e760a5ece94" => :mojave
-    sha256 "16afb599f321df0271f1b7b10eb93884b111feefc4cfb7b116ccf7b90dfede46" => :high_sierra
+    sha256 "8b22a2d1f52ff40334a16fc4614bc2f2c9e50386f0732e8e4478f68c7008f961" => :catalina
+    sha256 "91b95a137be4361dee7d8bf2e442fa75eaf159469c09e238a127aa1186534638" => :mojave
+    sha256 "84ca9f1d74ad63108e320f2cae63a2afdfafd3995aa2d37837d551cc5dda8688" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
