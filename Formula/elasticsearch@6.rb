@@ -4,6 +4,7 @@ class ElasticsearchAT6 < Formula
   url "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-oss-6.8.11.tar.gz"
   sha256 "2d136743072ca810f1af982f1c5a270b9fcc970be923ca1ee967aa7b9836cd3e"
   license "Apache-2.0"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
@@ -14,7 +15,7 @@ class ElasticsearchAT6 < Formula
 
   keg_only :versioned_formula
 
-  depends_on java: "1.8"
+  depends_on "openjdk@8"
 
   def cluster_name
     "elasticsearch_#{ENV["USER"]}"
