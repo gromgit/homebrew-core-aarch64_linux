@@ -17,7 +17,20 @@ class TigerVnc < Formula
   depends_on "gnutls"
   depends_on "jpeg-turbo"
   depends_on "pixman"
-  depends_on :x11
+
+  on_linux do
+    depends_on "libx11"
+    depends_on "libxcursor"
+    depends_on "libxdamage"
+    depends_on "libxext"
+    depends_on "libxfixes"
+    depends_on "libxft"
+    depends_on "libxi"
+    depends_on "libxinerama"
+    depends_on "libxrandr"
+    depends_on "libxrender"
+    depends_on "libxtst"
+  end
 
   def install
     turbo = Formula["jpeg-turbo"]
