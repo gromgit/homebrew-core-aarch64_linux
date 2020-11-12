@@ -4,11 +4,12 @@ class CypherShell < Formula
   url "https://github.com/neo4j/cypher-shell/releases/download/4.1.3/cypher-shell.zip"
   sha256 "9e61b40e33e23847ac3493c1f381a34c92ab67c14b849fc472cc703e16c921e8"
   license "GPL-3.0"
+  revision 1
   version_scheme 1
 
   bottle :unneeded
 
-  depends_on java: "1.8"
+  depends_on "openjdk@8"
 
   def install
     rm_f Dir["bin/*.bat"]
