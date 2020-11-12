@@ -4,6 +4,7 @@ class Voldemort < Formula
   url "https://github.com/voldemort/voldemort/archive/release-1.10.26-cutoff.tar.gz"
   sha256 "8bd41b53c3b903615d281e7277d5a9225075c3d00ea56c6e44d73f6327c73d55"
   license "Apache-2.0"
+  revision 1
 
   livecheck do
     url :stable
@@ -19,7 +20,7 @@ class Voldemort < Formula
   end
 
   depends_on "gradle" => :build
-  depends_on java: "1.8"
+  depends_on "openjdk@8"
 
   def install
     system "./gradlew", "build", "-x", "test"
