@@ -9,9 +9,9 @@ class Tarsnapper < Formula
 
   bottle do
     cellar :any
-    sha256 "7b793b4d3a42fe3b6099442d604cf689ce764e3b0e71cfff162a9afb73a81ade" => :catalina
-    sha256 "58b2d3d7a2a58234900edbfa683073d8409e8b55900cdb1b4caa4c5201c9f8c9" => :mojave
-    sha256 "242565b804312be5b0f9c0bbfd034bb0982ffdad7f7130e0b868206c2fe751fd" => :high_sierra
+    sha256 "fce1d4069e55c05f40ec638e27e4b064ae5ed72854b8ddd13268d6baf735cd95" => :catalina
+    sha256 "aba5962a85058b3468e224b15d0c8f294ba4472f1b29c5d1072c64fc6c6a104b" => :mojave
+    sha256 "810a32cba365609ed7d28dd52d2f68aaded70deccde209849db5be49a3662e68" => :high_sierra
   end
 
   depends_on "libyaml"
