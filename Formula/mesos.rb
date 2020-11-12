@@ -5,6 +5,7 @@ class Mesos < Formula
   mirror "https://archive.apache.org/dist/mesos/1.10.0/mesos-1.10.0.tar.gz"
   sha256 "f4b9e8a1e9f905334adf4d349a2ed33a4cfa43278381cd34fb4fc7e9df9e12a1"
   license "Apache-2.0"
+  revision 1
 
   livecheck do
     url :stable
@@ -21,8 +22,8 @@ class Mesos < Formula
   depends_on "libtool" => :build
   depends_on "maven" => :build
   depends_on "apr-util"
-  depends_on java: "1.8"
   depends_on :macos # Due to Python 2
+  depends_on "openjdk@8"
   depends_on "subversion"
 
   conflicts_with "nanopb-generator", because: "they depend on an incompatible version of protobuf"
