@@ -1,9 +1,16 @@
 class Less < Formula
   desc "Pager program similar to more"
   homepage "http://www.greenwoodsoftware.com/less/index.html"
-  url "http://www.greenwoodsoftware.com/less/less-563.tar.gz"
-  sha256 "ce5b6d2b9fc4442d7a07c93ab128d2dff2ce09a1d4f2d055b95cf28dd0dc9a9a"
   license "GPL-3.0-or-later"
+
+  stable do
+    url "http://www.greenwoodsoftware.com/less/less-563.tar.gz"
+    sha256 "ce5b6d2b9fc4442d7a07c93ab128d2dff2ce09a1d4f2d055b95cf28dd0dc9a9a"
+
+    # Fix build with Xcode 12 as it no longer allows implicit function declarations
+    # See https://github.com/gwsw/less/issues/91
+    patch :DATA
+  end
 
   livecheck do
     url :homepage
@@ -18,15 +25,18 @@ class Less < Formula
     sha256 "e9fe8e7982ddfb6e4c3ab5c5cc9e90a8190a61ffbb8afcd7cb95ea49523a44db" => :high_sierra
   end
 
+  head do
+    url "https://github.com/gwsw/less.git"
+    depends_on "autoconf" => :build
+    uses_from_macos "perl" => :build
+  end
+
   depends_on "pcre"
 
   uses_from_macos "ncurses"
 
-  # Fix build with Xcode 12 as it no longer allows implicit function declarations
-  # See https://github.com/gwsw/less/issues/91
-  patch :DATA
-
   def install
+    system "make", "-f", "Makefile.aut", "dist" if build.head?
     system "./configure", "--prefix=#{prefix}", "--with-regex=pcre"
     system "make", "install"
   end
