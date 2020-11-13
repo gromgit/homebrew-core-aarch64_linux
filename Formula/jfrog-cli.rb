@@ -7,9 +7,9 @@ class JfrogCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5236895e8e7c575fba41c5d6b0a85c93450d4aafe5cbf4d50bf4f0cd669a5b24" => :catalina
-    sha256 "291aca3df6339557a242d249b8e6db4f4def33710f13f1ec377f507f6591a6e2" => :mojave
-    sha256 "2bfe533a50c3233a46dd0134a258ed8df7c82342ee13182eea8eef8312010604" => :high_sierra
+    sha256 "d3d8780cc32a80388bb51a35ae2c01238ba33db7ae275cc1ad104b5514554973" => :catalina
+    sha256 "2dd25783c525b6c18228d8cc9d8fd1898e2b6d76fb1ee3d6259ab070d5939c16" => :mojave
+    sha256 "c331c0ba7d1a5f17043a51c14a89b422edefd18191b1f7deb36d2a212efad698" => :high_sierra
   end
 
   depends_on "go" => :build
