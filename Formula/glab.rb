@@ -16,7 +16,7 @@ class Glab < Formula
   depends_on "go" => :build
 
   def install
-    system "make", "LDFLAGS=-s -w", "GLAB_VERSION=#{version}"
+    system "make", "GLAB_VERSION=#{version}"
     bin.install "bin/glab"
     output = Utils.safe_popen_read({ "SHELL" => "bash" }, bin/"glab", "completion", "bash")
     (bash_completion/"glab").write output
