@@ -13,9 +13,9 @@ class Athenacli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d1e664eb5317be9ddf6bc8f4237b81167e99e0ea706822ce93c23113bea0d7bc" => :catalina
-    sha256 "2ba91b1f9c698e23e808a214b7160673b53dc39585891d81cbf5693df7a14518" => :mojave
-    sha256 "1cf1b69d57de2ffe1f850bc70ab1eed1ffa2594e546d3e0ecb6344bcc417c6a2" => :high_sierra
+    sha256 "bbefb72db4429e6ae24b8b46c08a3e111120c4fdbe095bcde854c0a5425de55d" => :catalina
+    sha256 "96fe18bb34aef559076a8469eea261f536b5aa45dac14caba01417b0bef175a4" => :mojave
+    sha256 "ceb054bb0f34917b0b8dd71cd4c5a7024d2f253c84bb82db05e9f15a8e28f342" => :high_sierra
   end
 
   depends_on "python@3.9"
