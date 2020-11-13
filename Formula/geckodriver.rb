@@ -6,24 +6,24 @@ class Geckodriver < Formula
 
   stable do
     # Get the hg_revision for stable releases from https://github.com/mozilla/geckodriver/releases
-    hg_revision = "90ec81285ff6287cb2824b29ddebb7818cc7b96b"
+    hg_revision = "c00d2b6acd3fb1b197b25662fba0a96c11669b66"
     url "https://hg.mozilla.org/mozilla-central/archive/#{hg_revision}.zip/testing/geckodriver/"
-    version "0.27.0"
-    sha256 "06d92c830016edd9c4f88c9a659343fd9c35cae168820f6808f5486b3e42456f"
+    version "0.28.0"
+    sha256 "278b0f57b4659c82a22be260e754a38d0e61fc28cb76bf8a4b672020456c2f08"
 
     resource "webdriver" do
       url "https://hg.mozilla.org/mozilla-central/archive/#{hg_revision}.zip/testing/webdriver/"
-      sha256 "88ceccaba4df4ba57bdf3c9238a9834695fb51d67b749e37e1c158662ea2a6ef"
+      sha256 "eddf228980cd00a357f549435e5225a7d291305583c1d5010b0930039f6ddfb7"
     end
 
     resource "mozbase" do
       url "https://hg.mozilla.org/mozilla-central/archive/#{hg_revision}.zip/testing/mozbase/rust/"
-      sha256 "65c723351868f2a8b2c8dc7cb72b06ed0372dbef34ca21420162cf870c4f8b5a"
+      sha256 "1049fa9f18ffc7bb03da0523d782c6f52f12bdee8b5ee3d705ee618a1e95011e"
     end
 
     resource "Cargo.lock" do
       url "https://hg.mozilla.org/mozilla-central/raw-file/#{hg_revision}/Cargo.lock"
-      sha256 "cb3d9f8f6daa3bc5cb884312c03cbd25fc754e7899c6c3ed90c452d1a90cb6ae"
+      sha256 "e2b6ba6af118d2fde12cdc05dfd0feca0d1d583f8bd083255dd48544fd416ca9"
     end
   end
 
