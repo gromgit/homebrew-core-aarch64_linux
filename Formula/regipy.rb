@@ -8,6 +8,13 @@ class Regipy < Formula
   license "MIT"
   head "https://github.com/mkorman90/regipy.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "670f0e909da308c7b690ba0441f1bb29dd3c90fb9c89c39fd35797d56a32eec5" => :catalina
+    sha256 "b094a494cbfe892aa6a633d1e332ebe4411248ca58ec3325814bac14565f25b3" => :mojave
+    sha256 "e3be1717cba1972af0db9fc92e74c5a6f694dfe00ce314b2edceb9acc8520d2a" => :high_sierra
+  end
+
   depends_on "python@3.9"
 
   resource "attrs" do
