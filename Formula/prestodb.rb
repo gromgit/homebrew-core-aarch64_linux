@@ -1,8 +1,8 @@
 class Prestodb < Formula
   desc "Distributed SQL query engine for big data"
   homepage "https://prestodb.io"
-  url "https://search.maven.org/remotecontent?filepath=com/facebook/presto/presto-server/0.243.1/presto-server-0.243.1.tar.gz"
-  sha256 "29af52c0dbbafd2ffe73c0d8f111dcc942c8355a11aff033a671e218364a648e"
+  url "https://search.maven.org/remotecontent?filepath=com/facebook/presto/presto-server/0.243.2/presto-server-0.243.2.tar.gz"
+  sha256 "6040fc843154c8a5d087589a67818d47ab8d6c36bbd5aab35c2b63aaa3e0b094"
   license "Apache-2.0"
 
   # The source of the Presto download page at https://prestodb.io/download.html
@@ -23,8 +23,8 @@ class Prestodb < Formula
   conflicts_with "prestosql", because: "both install `presto` and `presto-server` binaries"
 
   resource "presto-cli" do
-    url "https://search.maven.org/remotecontent?filepath=com/facebook/presto/presto-cli/0.243.1/presto-cli-0.243.1-executable.jar"
-    sha256 "25c01a95cd126a8e4ea13dba79b571ca932fede418c752390f63273e08252451"
+    url "https://search.maven.org/remotecontent?filepath=com/facebook/presto/presto-cli/0.243.2/presto-cli-0.243.2-executable.jar"
+    sha256 "0e1de529977b6e9ee29d9622dfb8685c62086d1cd8d276ca7bcba0b18bcd85e5"
   end
 
   def install
