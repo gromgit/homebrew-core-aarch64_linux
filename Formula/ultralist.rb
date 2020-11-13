@@ -7,9 +7,9 @@ class Ultralist < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "48175adf19c1d24846ff72cc9646a273783aa4dccc1ced94debc349fd972e3d4" => :catalina
-    sha256 "597b4205322618c240d72ad4d8344105feeb3ad2bb9393938900c9087579ef91" => :mojave
-    sha256 "95ef63755ca09c9487816ee9cadd1a6f2f1ecf3511b6b1ce555efdbbb233632c" => :high_sierra
+    sha256 "529daa8fdf264f4f13f8f93d785095d4a803f94902772e25094415691bf7f83c" => :catalina
+    sha256 "5bf8a9d39b953f0c24c8a1b978fab945f667a5f4e48c0d2729162f948f3b9118" => :mojave
+    sha256 "eff4c2ac2bd4d1a4bfe6f0d2bcd92b4c572d17eaa047df909533d8f510f366a1" => :high_sierra
   end
 
   depends_on "go" => :build
