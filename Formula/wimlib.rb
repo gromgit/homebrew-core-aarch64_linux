@@ -11,6 +11,7 @@ class Wimlib < Formula
 
   bottle do
     cellar :any
+    sha256 "614a97547be188f045804df374d629d78f47949b0987327531802839edc25ff9" => :big_sur
     sha256 "cca83d6932d6acad1449a9e55509868e7e403b1b360e1da34ad5d4e1900def87" => :catalina
     sha256 "edeeaa5d20b4612eb24252ef825cec5c4a9c6e36d31f93d8901f6575bffeaeeb" => :mojave
     sha256 "cc317323e8e2a95cf69518cb6257ae2de1bd548b8e76c3c404e057cfc27bdcf6" => :high_sierra
