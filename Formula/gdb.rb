@@ -12,6 +12,7 @@ class Gdb < Formula
   end
 
   bottle do
+    sha256 "3a9d6b7bfe4530321ab858ca8817431a28010ffbdbe5b0db1d700c81a392c91f" => :big_sur
     sha256 "fbd7836617ad0bb335ad9175280f14162dfdf0dd2f5e6b634d37b2d93765b51e" => :catalina
     sha256 "f3656f04b8725825296ce977461af0d0e6133ec9a1f9086ca3b889661f40802e" => :mojave
     sha256 "a57db00038cdcdc85f80c064332f3b4ef45571a2c0cd0defa55f2e6bde6a751d" => :high_sierra
