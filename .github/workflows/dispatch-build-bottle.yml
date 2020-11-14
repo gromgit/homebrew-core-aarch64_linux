@@ -42,7 +42,7 @@ jobs:
         run: |
           mkdir bottles
           cd bottles
-          brew test-bot --only-formulae ${{github.event.inputs.formula}}
+          brew test-bot --keep-old --only-formulae ${{github.event.inputs.formula}}
 
       - name: Output brew test-bot --only-formulae failures
         if: always()
