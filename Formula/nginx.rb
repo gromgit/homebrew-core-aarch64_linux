@@ -14,6 +14,7 @@ class Nginx < Formula
   end
 
   bottle do
+    sha256 "6bac29f2d1e2db6e1f8d41ad601cd436035fa1fca9bd207f3ce2414fed67dcf4" => :big_sur
     sha256 "ba06157261435dbc64d363398480866855f7cb2ad0296138fcce864abf570aaf" => :catalina
     sha256 "7e99a7583a9ca640e06d9d6a608ec1c0d5ab6374485ba631c7d556dcd5e1a7f8" => :mojave
     sha256 "8fd77f248cf8a66c88334cde60b862d50d73d101987e080598477d6da301abfe" => :high_sierra
