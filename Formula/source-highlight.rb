@@ -12,6 +12,7 @@ class SourceHighlight < Formula
   end
 
   bottle do
+    sha256 "e2adc58909aabadad02e5d02ca5ff6ff754bbee2fd0cb604c0900a32117b92fd" => :big_sur
     sha256 "e11d0a5ba8039635b7462ad70b6b01b9c8f44ba52ed50d0a1e07b4cbdb0f7695" => :catalina
     sha256 "655ff057f0faa1c048e123eb593264fd3060e70e10b311fe11b34252372acde5" => :mojave
     sha256 "0a4b58f6b35335861e29d6f662d87076fb68c20a78599389fec6406ceab295de" => :high_sierra
