@@ -12,9 +12,9 @@ class KnotResolver < Formula
   end
 
   bottle do
-    sha256 "556ef2808aabd638a927a7045ce1c0672c5cb0c134dd6b5180f59164255f7873" => :catalina
-    sha256 "d53358d7dd8360257edc2fed7d87e473273c82bd0c05355c68bb36a1bb7a1e67" => :mojave
-    sha256 "de0f1fb0fcbb4146a3d761f4f5ca137b245980d11025bfda39294d963e4137ab" => :high_sierra
+    sha256 "c07f9bdcc088371ff15fa9aa96ce633fcb5adca7ede95db1a17818be3ce7044b" => :catalina
+    sha256 "57689d81c9f571fb079575feea002312956a96489a2ab400db7a4b2b892ffb03" => :mojave
+    sha256 "f3c44457b8f6445f4f670ce62724b3d44c1608bac696c5b18296895ce769a5df" => :high_sierra
   end
 
   depends_on "meson" => :build
