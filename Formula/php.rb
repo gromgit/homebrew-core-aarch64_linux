@@ -13,6 +13,7 @@ class Php < Formula
   end
 
   bottle do
+    sha256 "73a67f98ee592ecb37c95ebc1d706c1821d8b691391de46007b4678e37f8fe46" => :big_sur
     sha256 "d39510178db7866bc6a7b857c379e3ddf091f5bfdde9f9ae5c895baa507d685b" => :catalina
     sha256 "315b551456d25cf1fee37a302ac9fa80ccbc3ba138282db0cca29f6526395fec" => :mojave
     sha256 "ae650360d6b704a2d96bdaaf2bd9d87512629ef6a442ec6480a828a53de91318" => :high_sierra
