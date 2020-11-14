@@ -7,6 +7,7 @@ class Kondo < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "fbee7326b1a3528129a6b900b1582c2e7573e631ff0fc7497f967ec4ccd92481" => :big_sur
     sha256 "3bf874b00e0c442d3887e076389c3bca0d1f1d2830713d179d8377ae2a5eb5cb" => :catalina
     sha256 "f4cb386aa743645639124f47729afcb5b9a545a97eb3ab6785aa0dfbc432a18f" => :mojave
     sha256 "1636cef203700859a8bcf48b315325192fe6a3fa0a0fa05df89e23e28833f161" => :high_sierra
