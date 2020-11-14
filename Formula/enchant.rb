@@ -6,6 +6,7 @@ class Enchant < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
+    sha256 "cbae9c0ee4b2c3196200e273df4a2f1cc25995d4e5cba17387ae7cd82e7ee459" => :big_sur
     sha256 "54ab4b4e7d6c8f8c222ff7abffe56ca8c2f4fbba466beed8284d45823bef8c5e" => :catalina
     sha256 "6fe8c922c85aeeb18a229190db56fbae1504698d3839cf9ed7fcdb5e4d44772a" => :mojave
     sha256 "3dcbc8f4fa237626aaba1caff0448af6e40869491b62acec79e9b572daa273d4" => :high_sierra
