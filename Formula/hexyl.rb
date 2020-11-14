@@ -7,6 +7,7 @@ class Hexyl < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "bba889ef6dae61053f47c70868cf511515e93e6157c3f232b60e879a293ead92" => :big_sur
     sha256 "2443b91247ef98143863f23724ab1ffe3b192aa65471d2198ab02ffa72936ce9" => :catalina
     sha256 "465474b8dd2b6344efda4d611341a0d40c46965fabce4e3446bb3bc0a45c2392" => :mojave
     sha256 "8805fb02b8cc13ffe9ca11663140f502dfbcbe5a4cbdf1262bd88758bc88167f" => :high_sierra
