@@ -13,6 +13,7 @@ class Help2man < Formula
 
   bottle do
     cellar :any
+    sha256 "64157a192452284e835e7826c9a4deb9afaa9a7fadae2407989aad35e3e20fba" => :big_sur
     sha256 "0df51bfb13aae7a1cc8fefd2d5853d5659ef29bd676ae1b84de1c5775fd46475" => :catalina
     sha256 "0c6508b21593f464813e5d0f813801fb26af4792bb8cc4aaee0a4ad9b44350f9" => :mojave
     sha256 "46f3e7058af47162c5649eed42b2e573b27ac2187f0c397e83357e0ba0724e93" => :high_sierra
