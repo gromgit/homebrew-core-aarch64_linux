@@ -13,6 +13,7 @@ class Gluon < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "4c46d2aa89cd80b3fd135f8160019076bc0f01a208a561ef63d84e7959a5d64e" => :big_sur
     sha256 "abea6a7007ec7663a5d3d8994a8028412843d45210b5b17723f2bcb0dc43134b" => :catalina
     sha256 "b6a865cd7da1a201a008ae65478191082501e1dc9ab7b6dae189e4f2f2bef8e4" => :mojave
     sha256 "847b61a0a4b7d4afc4598301c5bbf6afac3e70c737cdb0a26ad0438db42b1e44" => :high_sierra
