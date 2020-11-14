@@ -12,6 +12,7 @@ class Texi2html < Formula
   bottle do
     cellar :any_skip_relocation
     rebuild 2
+    sha256 "4ad9c71802c3258a3c0c7ff8800ddd70cc230ddfecc095080d0144ba153bc2dc" => :big_sur
     sha256 "10f6d76de400799fb21dc900a2344ef444d43658dd502f0c040ad7c0a4bf0fbb" => :catalina
     sha256 "10f6d76de400799fb21dc900a2344ef444d43658dd502f0c040ad7c0a4bf0fbb" => :mojave
     sha256 "10f6d76de400799fb21dc900a2344ef444d43658dd502f0c040ad7c0a4bf0fbb" => :high_sierra
