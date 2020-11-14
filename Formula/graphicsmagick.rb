@@ -10,6 +10,7 @@ class Graphicsmagick < Formula
   end
 
   bottle do
+    sha256 "01d63807d02cc20cecc7fea250cfd300135836cb8a7451315b2f7430a607d1ef" => :big_sur
     sha256 "e5517b416b979debeafdf4fc7a408e09f77c2a8f93b76051d6707f2a6750d0c2" => :catalina
     sha256 "26ba769c14c9ab3b4de02afcb3735b4f1256f23e822166934152c68939508245" => :mojave
     sha256 "8d27e0e2ee2ce56c77a65d691ae893b1ac4ec38e62ee78111964023800756ac5" => :high_sierra
