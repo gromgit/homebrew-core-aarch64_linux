@@ -13,6 +13,7 @@ class Bison < Formula
   end
 
   bottle do
+    sha256 "526bbc72b3a70297ffba6cc557cec656aedccd32416ab508b05591c27914c9bb" => :big_sur
     sha256 "f5bfd5e40ae8b0501e398e2ea29f95e8b80bdbabab2daedcb40c19cf5c4e3491" => :catalina
     sha256 "8a99fb499af4af8e49d93e8eae8b48e26a4c30400a9d7cc66e70ea0621b47e7e" => :mojave
     sha256 "20c775058c2bc15b2f7ccf27cf3b2817a98ea13cf656fa69f1877af2ea62cf04" => :high_sierra
