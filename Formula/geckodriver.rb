@@ -34,6 +34,7 @@ class Geckodriver < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "7fa8c7402cf7b076094ca1ef3286236866641530b270dda9f4e11ad2f4d93ba6" => :big_sur
     sha256 "a20476cfe9b256bdceb599e58e0d8364d9407c7c83a49a9a7c7933367c14de56" => :catalina
     sha256 "06808179a65aebbddcea493ba1c6002cd0abb396473f01947a11e2789f9354d2" => :mojave
     sha256 "986d06965c069a00d36246a8d12bcf73d5869433519919e64edfc6076b236d97" => :high_sierra
