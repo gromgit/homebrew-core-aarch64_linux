@@ -13,6 +13,7 @@ class Libressl < Formula
   end
 
   bottle do
+    sha256 "2a3625bdbdb264bc96357a77db73f5e445f454d1935c0f1b2a6d3882f064f197" => :big_sur
     sha256 "00d8d05fd6e3a712f8220e49a1e405ab5067028b1839f70c450c31ab2ceccb30" => :catalina
     sha256 "903fa188bd18598a9caecc6e3f7a799be8f0574b102aa69d383ab6ad653a39ca" => :mojave
     sha256 "e6dc8d2b2c6634cdfb6456d176cde1e94ad8e11ebf3e518d5b394edfb1cca823" => :high_sierra
