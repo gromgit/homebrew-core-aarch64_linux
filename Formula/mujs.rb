@@ -10,6 +10,7 @@ class Mujs < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "0fdceb128ad3fed5618bb9d29d9afc81da346df39982c44050e0a831a1bd9267" => :big_sur
     sha256 "eb7344e1f8e8e407fddc9484dd7392be6c6e7a4b88ca05f912a2028ffd780991" => :catalina
     sha256 "1c945e15f08632584cde81b06d233bf62bcd3fee4bde016cbdb37bb067e85a22" => :mojave
     sha256 "9d94f85a85c383c131a32b31f87548d7a8bd89595227a63470925ce5272b41d8" => :high_sierra
