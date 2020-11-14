@@ -14,6 +14,7 @@ class Flux < Formula
 
   bottle do
     cellar :any
+    sha256 "25e973a0a257ab97c295b371715d97fc0b0789a76ce067dd963a807af6da1e6e" => :big_sur
     sha256 "b1b981c9c6d0189d3c4fc93795077dfb04ee8349b33b19929f76c79993f373c0" => :catalina
     sha256 "bad9cd01d1a588e2a8de1ddbdb85b152d98645232781f3bfcf718c6b2282f48d" => :mojave
     sha256 "94d271d3a87ae8086197e5945488be7b8684a3fefc57a3ead34e26253b05fede" => :high_sierra
