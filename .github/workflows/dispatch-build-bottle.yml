@@ -89,7 +89,7 @@ jobs:
         run: rm -rvf bottles
 
       - name: Post comment on failure
-        if: failure() && github.event.inputs.issue
+        if: ${{!success() && github.event.inputs.issue > 0}}
         uses: Homebrew/actions/post-comment@master
         with:
           token: ${{secrets.HOMEBREW_GITHUB_API_TOKEN}}
@@ -131,7 +131,7 @@ jobs:
           token: ${{secrets.HOMEBREW_GITHUB_API_TOKEN}}
 
       - name: Post comment on failure
-        if: failure() && github.event.inputs.issue
+        if: ${{!success() && github.event.inputs.issue > 0}}
         uses: Homebrew/actions/post-comment@master
         with:
           token: ${{secrets.HOMEBREW_GITHUB_API_TOKEN}}
