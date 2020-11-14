@@ -8,6 +8,7 @@ class Diskus < Formula
   bottle do
     cellar :any_skip_relocation
     rebuild 1
+    sha256 "56ca7dc82e101e1dbb7090fe1567c924bd967f4d3df8b138caa45182fd76e446" => :big_sur
     sha256 "3c4f0aafa14c810b36b2d5dbeb6998bdc866aad7b531f12f14508ee2e8b1c46d" => :catalina
     sha256 "16deb101df03efdcc20f56ed24d2e9608e8733e3bf9f552935ccc73428ac96a3" => :mojave
     sha256 "e603cd7daf7d48e0f139b584ef77f4f59949470e4e2d0ee0f430ac229fe444ea" => :high_sierra
