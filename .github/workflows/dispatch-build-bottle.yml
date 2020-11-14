@@ -113,6 +113,8 @@ jobs:
 
       - name: Push commits
         uses: Homebrew/actions/git-try-push@master
+        with:
+          token: ${{secrets.HOMEBREW_GITHUB_API_TOKEN}}
 
       - name: Post comment on failure
         if: failure() && github.event.inputs.issue
