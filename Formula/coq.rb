@@ -12,9 +12,9 @@ class Coq < Formula
   end
 
   bottle do
-    sha256 "a5554791729dd815ac14788c76b7f4e72970d734fa0fa161709030409cf55f90" => :catalina
-    sha256 "ac3b6a5a21b51c4c535255607a0d620665f9747183115ff20a6349bcf863afc1" => :mojave
-    sha256 "28d141665e1ca46ead7af4061aff2658712817b6d140b37e69171586e28999f3" => :high_sierra
+    sha256 "829b50bb3170e75c5f03f5f2a6260ab6a4fb15d924eae46b510d6e0e1f21fbef" => :catalina
+    sha256 "7de6bce7d480b06cb46ebbee170d3c723fd93373e2903573d2e286b96319c5c9" => :mojave
+    sha256 "e411c3338f14185e41269693fd481db3e37ed7115038a0ccbdda3589381abce6" => :high_sierra
   end
 
   depends_on "ocaml-findlib" => :build
