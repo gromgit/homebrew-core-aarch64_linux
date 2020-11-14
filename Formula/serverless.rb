@@ -8,6 +8,7 @@ class Serverless < Formula
   license "MIT"
 
   bottle do
+    sha256 "d2c5cf11a28832cb5b45bac5456a0156c5d279af4487b3244b20077c95155936" => :big_sur
     sha256 "958fdeeac2a0c4ab592d0760f2ec234e6d6b30a2a071a6f4b7d24d4c68c13521" => :catalina
     sha256 "d44be90880db425ed036e3bb78df9aa45f50d57ad36ba1f5965c805f6cb24bb9" => :mojave
     sha256 "34f38fd6e770fdc77167f12ddc1c8a91dcb5b4a93c1b2b2acadb0fdc28700375" => :high_sierra
