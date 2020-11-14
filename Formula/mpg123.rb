@@ -11,6 +11,7 @@ class Mpg123 < Formula
   end
 
   bottle do
+    sha256 "eaca212bd2fbd93cae9dff2142868c8ab2ba63c8f757657fa0f24a780f21b555" => :big_sur
     sha256 "95a40afc24b7ab30eff21a988421d9b172f5b073fe3291cf01db8b42531f5ca4" => :catalina
     sha256 "9b4f0e5aa8a80ff30ffa01c4076f76112d7252015416c5b58a7e5b4a5862d786" => :mojave
     sha256 "426a0e2c5650cd89be77a3aa78f8ebcb7bd5a2fd220675dc58c630be0ab0ec15" => :high_sierra
