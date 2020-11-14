@@ -7,6 +7,7 @@ class Utf8proc < Formula
 
   bottle do
     cellar :any
+    sha256 "f268d8911f277619cdd71552ba41945cfd38ec3f309c1af50e82314dc2115e11" => :big_sur
     sha256 "f215acf62769b7036110950b65285742b6550c631b0606befa12b98f32c53130" => :catalina
     sha256 "1bd0f29df929fff62b33895ca76162b9d376aefea09115c84a3841793fa7a9a3" => :mojave
     sha256 "12b05c0477b8f6fd029f3723d74712f267960fb9d212a21520f9a557d3cd516c" => :high_sierra
