@@ -12,6 +12,7 @@ class Docbook < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "2c4e8398b5548cef2830169aadaf6221ac9ee7e6733547642ccee1ea81e07e99" => :big_sur
     sha256 "8152e5356c47a7b8282f3ed84ee3f29565e8ce620bddeaeaf23dfd1f5ef111a3" => :catalina
     sha256 "8152e5356c47a7b8282f3ed84ee3f29565e8ce620bddeaeaf23dfd1f5ef111a3" => :mojave
     sha256 "8152e5356c47a7b8282f3ed84ee3f29565e8ce620bddeaeaf23dfd1f5ef111a3" => :high_sierra
