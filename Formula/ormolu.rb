@@ -8,9 +8,9 @@ class Ormolu < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "191f73e59002b4e90f0383df10c9b41ac533468e19147873d0b27a7b4cba4098" => :catalina
-    sha256 "f55918963a4eb01ad7be185165a7a72bf73b7638ae1176bb61980eb2d0b6a8c2" => :mojave
-    sha256 "0b00fe5d9ceba573d497ed9143c57725ad8d6b2bbc99c3663fb478434659068f" => :high_sierra
+    sha256 "5ee01f8be8e5d977ea3436ce701487af66d1e0b858f072754c48e83544172a38" => :catalina
+    sha256 "939649afce92296b1b6b02b6041ab7409856f1cb1bc8c25ed989660ed7aacfa4" => :mojave
+    sha256 "0a6ecd608e57debe45a60e8089c8cd2db4aba2ac0efdeb629aaa2960f19b033d" => :high_sierra
   end
 
   depends_on "cabal-install" => :build
