@@ -15,6 +15,8 @@ class Nethack < Formula
   end
 
   bottle do
+    root_url "https://homebrew.bintray.com/bottles"
+    sha256 "7386a7e0b2946f5ccd358d250ae008850ae8e1ac2c7bb3743e1b8a0f40cbe077" => :big_sur
     sha256 "69418bfcba43b656118140a7e50992772567c4c2ab4827ce0af343892a149945" => :catalina
     sha256 "4d186d190dcab9cc719a3868aa73a6c311407f8c1510e1d3bfd185a8070177bc" => :mojave
     sha256 "6b6b5eb3571c69d31ac0c88f42acae3cea5f42ec513bafd03960db8c9f994177" => :high_sierra
