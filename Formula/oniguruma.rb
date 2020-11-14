@@ -13,6 +13,7 @@ class Oniguruma < Formula
 
   bottle do
     cellar :any
+    sha256 "505599ad17e21360a58a89db2133115b5aa109cdebd5d284bec2bc25cfee5062" => :big_sur
     sha256 "e40a40789488ed0f0a98e5aec3336bfa04f87b7983e139524fbbc1b192ea71ac" => :catalina
     sha256 "98d43005ae967cba150b66abfe0c76163f7072ecb80eb573612284a706d6e5c1" => :mojave
     sha256 "737284ca190ac20d86a070bccf720194342f617e60690781eefae867230a2f58" => :high_sierra
