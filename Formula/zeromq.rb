@@ -11,6 +11,7 @@ class Zeromq < Formula
 
   bottle do
     cellar :any
+    sha256 "3a0cde0350d5604c6d0a51120893cbb6a953e784c356afe5276ba431ae5936b6" => :big_sur
     sha256 "5310a4204987850db552bb2746c48171a0faf51692c9f52debf10f85ac4db569" => :catalina
     sha256 "b67097dee2a42630e01978befe5c173f2a976c16fe4190873997776a584e4559" => :mojave
     sha256 "fee7be7f0a0762755037f3cd2ab1207dc9af43b0b75bf517d5f6f522a315a3bd" => :high_sierra
