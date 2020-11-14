@@ -6,6 +6,7 @@ class Ilmbase < Formula
   license "BSD-3-Clause"
 
   bottle do
+    sha256 "2d5ac295eca0406b65a50fba2ffe68b3ac4d384b1b10fbd0ec6ec61cd0b67491" => :big_sur
     sha256 "06a9f5b4582372750cf8fb6ba67d65284b00c6c338fc037a363ef9d550c5a9d2" => :catalina
     sha256 "5cb7f4e1e07f02aba93615d1ef1ec6785a5d868cad642460b2d2871cde3fc08a" => :mojave
     sha256 "30cea2bd30d5fd3baae5188b0e98d065f78070b741b367b2cdd22b7a7e0269be" => :high_sierra
