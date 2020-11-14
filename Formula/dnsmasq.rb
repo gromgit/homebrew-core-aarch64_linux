@@ -11,6 +11,7 @@ class Dnsmasq < Formula
   end
 
   bottle do
+    sha256 "d452e2a6562538d398ffa39c7a1761d222d613b2cbcadf5796a7dc2a25697d55" => :big_sur
     sha256 "0cab9dbb88d09946faed36b09a1f0919141b3e56eea45e5f77969619e00796e0" => :catalina
     sha256 "c70c3fe42cdabac2497377e6718678eb5c433658ce1ea92e4193d6877d81c628" => :mojave
     sha256 "77e52871d7bd6af6f4f1e7b1d55bae2fa235c1d6cafc14b290758b741bc19f95" => :high_sierra
