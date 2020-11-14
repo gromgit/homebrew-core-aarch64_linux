@@ -12,6 +12,7 @@ class Librdkafka < Formula
   end
 
   bottle do
+    sha256 "832ed31ebd9fb44415bc5cc6d91edaa094db929c3fe2686589eaee6cf64c88cb" => :big_sur
     sha256 "9aaa1cfe08a116ae3c064062bc2120a98baddc460f956219bac775d8f6ae5209" => :catalina
     sha256 "edc1ad30e18104d2fe4f0e94c457c65231a6c03a7ccddcd71d1486cad86d2816" => :mojave
     sha256 "cd7f63a0dcee584b97bdbf93d56ed0f097c00ec4dc2a1e6dab38368e569118c7" => :high_sierra
