@@ -12,6 +12,7 @@ class Postgresql < Formula
   end
 
   bottle do
+    sha256 "d8d0d489637d4ef94217efa717e83f9d46e26b2da14aebbd0e3138fd106ded31" => :big_sur
     sha256 "0c8e80038485e0e398210b87b309da03e409dab0b0f78d2b7a3be9f51a3d30c0" => :catalina
     sha256 "74499938a2f7bde3c33fb158161566eaf61a70975e69d1c59b491deff94826dd" => :mojave
     sha256 "5175c72b20e73566ef1dadc07286a68b70ae4f31eacc484ad11c4f90f39fd840" => :high_sierra
