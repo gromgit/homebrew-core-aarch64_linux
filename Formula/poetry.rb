@@ -13,6 +13,7 @@ class Poetry < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "231e27ede1813a9465f0100d42b41a729f26a61b031aa7fc516172c4cf82deb5" => :big_sur
     sha256 "548aa4c097e7cc9825fcaa5e3f430e660d1424bbd11bbdb313759b417ce4c83e" => :catalina
     sha256 "91830c6a9c88cca53bb04d351aa76eba0f37ba259d807be14b6ba0754eb0d48a" => :mojave
     sha256 "5d5e2b671e9595975c13cc7c91534a0da1915db6500c9023b3255bd4a3c876b8" => :high_sierra
