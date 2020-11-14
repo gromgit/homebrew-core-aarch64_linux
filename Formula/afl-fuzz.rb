@@ -13,9 +13,9 @@ class AflFuzz < Formula
   end
 
   bottle do
-    sha256 "958368e0937e051e3330ffa78f93481f8c729a104b87fd24c04ff067fb8780ec" => :catalina
-    sha256 "82fb4d89ca48bc6a48c6d583497fcb48aa8e1fe7c00db57f0391881ab4a851c0" => :mojave
-    sha256 "2fea83e82eca377b8adaf58a3b7f4577336db1a00f931170e0abc94a5c431529" => :high_sierra
+    sha256 "9d9406abfd60163bea04281f6f3746a4f1a1c138c980fa28ace79869b1097052" => :catalina
+    sha256 "7c539dbcb692e99baa85a2edbb11f2945d7bc820d14a454a99594ba3e5321638" => :mojave
+    sha256 "8e64a9a77f39a8803058381cc80396a4ca7e5104c212d5ef1bd3d9513f9753ab" => :high_sierra
   end
 
   def install
