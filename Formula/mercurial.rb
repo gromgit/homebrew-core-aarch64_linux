@@ -13,6 +13,7 @@ class Mercurial < Formula
   end
 
   bottle do
+    sha256 "d83bfd062511da71682f6785fedac7db65041b3ebec6fff903e0ca87e4c30ece" => :big_sur
     sha256 "b07858cbdab90ed0b12519af5916c440a08ebb2c1906079b556812b288ed79f1" => :catalina
     sha256 "c18aef777907d1d3d3681f3c18ea5f20a4ffc3640fc780fed7babf2ba9df30f3" => :mojave
     sha256 "a2aff7b9bd96091ab1efc1e14f2555448c12d49b123bcfebe2f5c7f15b9accbd" => :high_sierra
