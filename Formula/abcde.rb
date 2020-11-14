@@ -8,10 +8,10 @@ class Abcde < Formula
   head "https://git.einval.com/git/abcde.git"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "6994f8e32417a1630b2680c96bcae3de5c430976de0dc66056e5687070473f19" => :mojave
-    sha256 "6994f8e32417a1630b2680c96bcae3de5c430976de0dc66056e5687070473f19" => :high_sierra
-    sha256 "7fbfff0c184bef38f29580ec587d5edb473699eaad29bb15e686d2634c070737" => :sierra
+    cellar :any
+    sha256 "fa00c7fc4b6b4ab794439f619ba00961358a4e5684a0ae2412fbd78ba2497df1" => :catalina
+    sha256 "c2ef29d1b906767727d858047ddab9516f14c70073b30174a6222b1300446432" => :mojave
+    sha256 "2a81af2921befb14f0a96e66ebc3884bd33f8bab156f7dc27e2816a956d033cb" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
