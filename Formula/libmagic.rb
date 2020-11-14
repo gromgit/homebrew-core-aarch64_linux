@@ -10,6 +10,7 @@ class Libmagic < Formula
   end
 
   bottle do
+    sha256 "2a09f46305a9457a2bfae1069cbf8f6a473d77f69a6370e67f67c0decc96ca0a" => :big_sur
     sha256 "90b17cb74e853804227abdd32c6810ff535fb98e8862f946c49860b697faece0" => :catalina
     sha256 "f32eb14fbef470d28a041ddefec932e8d96870b4a13dbac3f61d8c6de6e50f29" => :mojave
     sha256 "110d2db0b588dc5a379124d024b228e8ee8aae58c95a6a0510e68dc36426a86a" => :high_sierra
