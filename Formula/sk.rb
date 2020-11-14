@@ -8,6 +8,7 @@ class Sk < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "0d760d248a659112d772854614764286b3bf09616f344658481e09d5642246fa" => :big_sur
     sha256 "07b4b9382fa9a43d57609d18481fd63b0b4561b09d625762e68c0fcfefc0120a" => :catalina
     sha256 "a299f9fd5ed97d733838ede34a7602ac9682fe3957de49faf660aa2aa086a15a" => :mojave
     sha256 "d80ddfbbca4c831a61d987edc3554cbb32d6d93ff65054b99cb67eb796854349" => :high_sierra
