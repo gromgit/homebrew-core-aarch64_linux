@@ -11,6 +11,7 @@ class Sbcl < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "7460b496a8b4a8eff00ab183b84eb5a2633f2f0458c24eed8e159f76c6bce8ff" => :big_sur
     sha256 "380119855e28b63538777282bb8f2ca785bfadb58269e83d8c54c5c92ef78ec5" => :catalina
     sha256 "e0ee21b72a5f5ad5632be05d0b6fb61689710866e8d3f9dd395cae53ab087895" => :mojave
     sha256 "8163f42efd83fcdf2a1345a04955eeb834c91ae5291632b61a736f02b8d9bf50" => :high_sierra
