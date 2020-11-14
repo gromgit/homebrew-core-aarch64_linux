@@ -1,10 +1,9 @@
 class Mozjpeg < Formula
   desc "Improved JPEG encoder"
   homepage "https://github.com/mozilla/mozjpeg"
-  url "https://github.com/mozilla/mozjpeg/archive/v3.3.1.tar.gz"
-  sha256 "aebbea60ea038a84a2d1ed3de38fdbca34027e2e54ee2b7d08a97578be72599d"
+  url "https://github.com/mozilla/mozjpeg/archive/v4.0.0.tar.gz"
+  sha256 "961e14e73d06a015e9b23b8af416f010187cc0bec95f6e3b0fcb28cc7e2cbdd4"
   license "BSD-3-Clause"
-  revision 1
 
   livecheck do
     url :stable
@@ -21,19 +20,16 @@ class Mozjpeg < Formula
 
   keg_only "mozjpeg is not linked to prevent conflicts with the standard libjpeg"
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "libtool" => :build
+  depends_on "cmake" => :build
   depends_on "nasm" => :build
-  depends_on "pkg-config" => :build
   depends_on "libpng"
 
   def install
-    system "autoreconf", "-fvi"
-    system "./configure", "--prefix=#{prefix}",
-                          "--disable-dependency-tracking",
-                          "--with-jpeg8"
-    system "make", "install"
+    mkdir "build" do
+      system "cmake", "..", *std_cmake_args
+      system "make"
+      system "make", "install"
+    end
   end
 
   test do
