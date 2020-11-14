@@ -15,6 +15,7 @@ class Unbound < Formula
   end
 
   bottle do
+    sha256 "a177141e80c7018a98e7d593aa08defbbd2d5d2cc831bea47b3eae5a15b47f4e" => :big_sur
     sha256 "c5c89b6f51314d30ed291f08f195f6733bc756a2244b024cc4a08971137b2442" => :catalina
     sha256 "7a72e66c935707fef194772e9a747a28629a6b4ae1a32a500e6b842893afecd5" => :mojave
     sha256 "457f5cefd1951bbdcf58ebce0ba27cc135ad0e639d06d054ff346263899b64b5" => :high_sierra
