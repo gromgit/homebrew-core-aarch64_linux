@@ -1,8 +1,8 @@
 class Gmsh < Formula
   desc "3D finite element grid generator with CAD engine"
   homepage "https://gmsh.info/"
-  url "https://gmsh.info/src/gmsh-4.6.0-source.tgz"
-  sha256 "0f2c55e50fb6c478ebc8977f6341c223754cbf3493b7b0d683b4395ae9f2ad1c"
+  url "https://gmsh.info/src/gmsh-4.7.0-source.tgz"
+  sha256 "e27f32f92b374ba2a746a9d9c496401c13f66ac6e3e70753e16fa4012d14320e"
   head "https://gitlab.onelab.info/gmsh/gmsh.git"
 
   bottle do
