@@ -13,6 +13,7 @@ class Libtiff < Formula
 
   bottle do
     cellar :any
+    sha256 "05c23050dc75cf8f53d1f74c2ead3ff13640f14e3e4f3870527a18a3c2382c08" => :big_sur
     sha256 "449bd9123e73e4c4eab85b77322d769cc9df0f6adab05e9b9319b012d1215a68" => :catalina
     sha256 "dd060521aa30fb2f4678c9ebab6362104a9a705d098a90eac4059743c93c8c16" => :mojave
     sha256 "577c2754b00fc8a5009e08bfd7af630ab4812250508df20a1c92d3c7ae678b94" => :high_sierra
