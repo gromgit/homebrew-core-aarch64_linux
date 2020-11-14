@@ -8,12 +8,9 @@ class StartupNotification < Formula
 
   bottle do
     cellar :any
-    sha256 "3febf31cc5b401f8023ef680288e684ffe12687c3b08eb14143704b081286c0a" => :catalina
-    sha256 "9104d94776847d5605cae94d2206c44007fb5ef4d9db1071bdbcbcae0f9c0f84" => :mojave
-    sha256 "593deddd4f3398736ba818eaa224dcc5b5337c88ba13c7ff1676f96b5c3adfd2" => :high_sierra
-    sha256 "1480bccd4d65d99905fdd5010bd156b0ff2ee2ada36ce0bcb4e7b74fa632c9da" => :sierra
-    sha256 "7762bbbdb98d8f360e82a9ac5e94239f94433e7bb38e8eec309230270c5158e0" => :el_capitan
-    sha256 "770f1ab8c0339c940b098d91989fbc06bacafabe1a91cc891e9891ef39e83781" => :yosemite
+    sha256 "bdb8f9123099562853461f5299108f7cbfac9be39ea3ab9ad6b3853c288ba5c9" => :catalina
+    sha256 "c4fcbad957b22a8999a0bc87a3c2b0b2b6b94654b3f6213f5903025574ae4c76" => :mojave
+    sha256 "60f0a0ce0a2954f53fa9f4b5dfc3aeb99aa5607801f340b506ea172bb1e381f3" => :high_sierra
   end
 
   depends_on "pkg-config" => [:build, :test]
