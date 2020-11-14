@@ -89,6 +89,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: bottle
     if: github.event.inputs.upload
+    env:
+      HOMEBREW_FORCE_HOMEBREW_ON_LINUX: 1
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
