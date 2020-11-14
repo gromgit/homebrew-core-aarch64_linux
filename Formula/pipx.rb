@@ -12,6 +12,7 @@ class Pipx < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "ba1011dbd0d219e53098dca70b3f6405e401166456fa5695a87623cc4544c85f" => :big_sur
     sha256 "88a34438842b955e46cc1c14430a0aba203b7bfdb5ccdceb3f796756c446c7bb" => :catalina
     sha256 "009a99c7c5338806125cf51cf4a2e2ad444c9302a64a9f09c7b9faf2a8229af5" => :mojave
     sha256 "206b537482465e4281356ccfbce84bfe01bed66530441017cc3cd2c8fa751a4d" => :high_sierra
