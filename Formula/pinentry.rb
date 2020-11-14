@@ -14,6 +14,7 @@ class Pinentry < Formula
 
   bottle do
     cellar :any
+    sha256 "9ea54bc3839990cc7e6843e03aea50bb7c85206464da9a731093ad062b7dc0f7" => :big_sur
     sha256 "58dbcd3dc641fe0e14829d2d72be6bc5cadc9a5c26bf50678906866101d2589a" => :catalina
     sha256 "206708ea13875bc8197f7d066bc0cb36893bd95b9ecc7ba6102c2f33b0fbd6c4" => :mojave
     sha256 "a1a0e526f622d7dc4e2b3e0dcde061dbb383050b8efbe424d916bf983ae66c74" => :high_sierra
