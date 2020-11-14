@@ -22,6 +22,7 @@ class X264 < Formula
 
   bottle do
     cellar :any
+    sha256 "ae4f4d320db6d3c52c118da312de4118870c0d60228c085f87cf75b88b63c5fe" => :big_sur
     sha256 "60b2b82a877d14c5c02f28e0d51ae90b89d4a141fa3c4efcc3fed6926d41033a" => :catalina
     sha256 "25c5033625c3de8f4f2e4de5b9d2e3f954e42ec9ec04104f49d6d4c255f65286" => :mojave
     sha256 "7a7dbe31d8afd48909c01294cc165b60fcaa20ca3df245617151b13f38d7c626" => :high_sierra
