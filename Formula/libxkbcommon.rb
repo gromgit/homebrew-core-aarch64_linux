@@ -8,10 +8,9 @@ class Libxkbcommon < Formula
   head "https://github.com/xkbcommon/libxkbcommon.git"
 
   bottle do
-    rebuild 1
-    sha256 "d13e68cce3b98b2aa427a33b7f19277efdb5b09061bbf09457dfb8f58baeb531" => :catalina
-    sha256 "faa2d9bc12a5a7e1f56e1284abc06fcc795828f037ea9a0089f821f76e81d5fc" => :mojave
-    sha256 "08c07cb44b08aa8e0f1703632dd5e87795e79ec25389f6c841cd4a84236f5963" => :high_sierra
+    sha256 "bf2346f444e3c8dcf1b34a08abeb5142eb07019a14c1513638df8e4b60c7acef" => :catalina
+    sha256 "57e4659ca526ee0b579a35f4eb7ab4a97d56631ec17f5320cd662d3379c92521" => :mojave
+    sha256 "01e3b905b6e11da0fd02674ae5e659659a2019bc4a99c8d874ceb2dc3daa7610" => :high_sierra
   end
 
   depends_on "bison" => :build
