@@ -10,6 +10,7 @@ class Zsh < Formula
   end
 
   bottle do
+    sha256 "9f26059745a6396e9f6ed641e10fb7eed6659c1a225d0756a58a82f524fbd71d" => :big_sur
     sha256 "209d04a4d62f6162f1b6cf824d2c50b00b52cb812c04c1967e5b376573b5aef0" => :catalina
     sha256 "c5c35657637c97132efbaa0fd8e2add568aaa62adfe66e7d19f961f8e9506da9" => :mojave
     sha256 "029b8c6922f01bfd832dd0f4f940f99328d2495714c37c1dc7ef326d6fb1459e" => :high_sierra
