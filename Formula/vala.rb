@@ -10,6 +10,7 @@ class Vala < Formula
   end
 
   bottle do
+    sha256 "d8042afa508bf07fc2997febac00f15f68dea0c3171540fc69e78d7dae14e893" => :big_sur
     sha256 "cb21133addf409d424f488c8cc859f1f1002fc92daeaf3e6fa0c749315e46b60" => :catalina
     sha256 "1b36a7bbe5c7253445ecbeb99cca3a9815751d151ae105ef7f1ded61ec0e32fd" => :mojave
     sha256 "1cc06100d8aa160afa31dae8c6583bad2824945812214d07b4b363e910670fb9" => :high_sierra
