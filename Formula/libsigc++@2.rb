@@ -7,6 +7,7 @@ class LibsigcxxAT2 < Formula
 
   bottle do
     cellar :any
+    sha256 "b13a8c4ad6256012ae43049d84c045866f6c51e3ffbeea2cadb5927230e8696c" => :big_sur
     sha256 "7154ac476939a124a9fce607a2e04179f769a942e4faac24f9e15d4e408d0bb1" => :catalina
     sha256 "2ed859eacbb9d12487be891f1b3f06b1b5fffb1ccac3af37787ac174fabd934d" => :mojave
     sha256 "0b46ff09499e252f0821f22cc1deff57a332130a807928bd018bdb4145705bac" => :high_sierra
