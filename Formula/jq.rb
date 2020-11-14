@@ -13,6 +13,7 @@ class Jq < Formula
   bottle do
     cellar :any
     rebuild 1
+    sha256 "bf0f8577632af7b878b6425476f5b1ab9c3bf66d65affb0c455048a173a0b6bf" => :big_sur
     sha256 "820a3c85fcbb63088b160c7edf125d7e55fc2c5c1d51569304499c9cc4b89ce8" => :catalina
     sha256 "71f0e76c5b22e5088426c971d5e795fe67abee7af6c2c4ae0cf4c0eb98ed21ff" => :mojave
     sha256 "dffcffa4ea13e8f0f2b45c5121e529077e135ae9a47254c32182231662ee9b72" => :high_sierra
