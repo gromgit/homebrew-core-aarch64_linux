@@ -7,6 +7,7 @@ class Nghttp2 < Formula
   revision 1
 
   bottle do
+    sha256 "f6174be18edb91cbe8fc53bbebcb9d2569df52af465c3e5f132fc1dd76ddb11d" => :big_sur
     sha256 "ae423161fb662dbd308578a9d20917392ee019878eb59e39779ab7e852b3fd21" => :catalina
     sha256 "2f79858dc2901da2c314468d39b07506f10c9d8f543a95308f8610f2f00888a4" => :mojave
     sha256 "34f66d7f13b502faa96a34cf936710ed8910e7d789d430eaeb452d011a0842df" => :high_sierra
