@@ -13,6 +13,7 @@ class Dialog < Formula
   bottle do
     cellar :any_skip_relocation
     rebuild 1
+    sha256 "9f372d53ff05a0d9a640d7f019797eec80ecbe03a183f8c480ba5f3fdc63b88c" => :big_sur
     sha256 "35e1f4c9beb789e9f6db97089f5c0d41032cf72f79ebf2aa1fd804d6d5d62240" => :catalina
     sha256 "2de067bc267ae01c09b826e55a2ab8626fb9f04e15aeb30189653c731db890db" => :mojave
     sha256 "0e979958393b4d5db87aea2408ed1ac385db8b999ee38b882da96ed0e32beb19" => :high_sierra
