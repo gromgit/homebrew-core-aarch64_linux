@@ -12,6 +12,7 @@ class Sshuttle < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "465a87922822f59c5e3cbc014a2eb15e3dde2fa30064db8ec8eda3752fe58be1" => :big_sur
     sha256 "41b9c52318318597e31403c66bc1fff91fd3da97047e6d82344f406118d06d17" => :catalina
     sha256 "5ee6b7d0f0afdd178a769213c1da1c1caea53228e8a21dcd4571b7fcc643deef" => :mojave
     sha256 "ddc86c2b17f9b3caedd813a8f2d11b9154637f5783b73a031276aef78909b1c1" => :high_sierra
