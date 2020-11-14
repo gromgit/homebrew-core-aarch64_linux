@@ -10,6 +10,7 @@ class Pstoedit < Formula
   end
 
   bottle do
+    sha256 "1eb7bdc1ab76c8ae40450b686b1948f3e037ca871d7c505657489d501e073a5a" => :big_sur
     sha256 "f048d902c088f0625c0c9e18d84b159493775b40e742812b040e7b517900260a" => :catalina
     sha256 "1f3ec91e58d95e08081694b43e031ed83f13a73cecff15c55c532268282b0ad1" => :mojave
     sha256 "22710dd8997d40cec3492c40960a9966b80b386bdbd3fed46515c66bb25053d7" => :high_sierra
