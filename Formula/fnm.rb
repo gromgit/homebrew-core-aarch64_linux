@@ -13,6 +13,7 @@ class Fnm < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "15e957f33a7474f9b41463f9de587db55fc2ac2c8ed7a9d120c108207376b763" => :big_sur
     sha256 "785aedf913a65e97029e2bed1c3e52a686d3707245183dbee84056ef6057d3da" => :catalina
     sha256 "8622fde031ee84e1ecf498250962b2be3972b9f161999e15ea64f50299b7e597" => :mojave
     sha256 "fb445426396192450f9b99ab43e798fa3dc18432ad25990d7b1c2ba5163783ad" => :high_sierra
