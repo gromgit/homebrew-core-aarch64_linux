@@ -11,6 +11,7 @@ class Metis < Formula
 
   bottle do
     cellar :any
+    sha256 "bca0197271b673ba235c37334494b47250c9732e9a0164d8ee79948fc3cd4308" => :big_sur
     sha256 "b410b124973bf31beb58806d4050b8dda1fb3dca679fc3443514025200fd4a37" => :catalina
     sha256 "f3cdcf0cc5af4ddd27a4550d4a73cffcb34058fe34604b09d453610460d24465" => :mojave
     sha256 "88b6965d941a87044150238387971c4bb94ed2ffca327affccaf311d666a2b4b" => :high_sierra
