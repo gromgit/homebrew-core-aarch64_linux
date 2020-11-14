@@ -13,6 +13,7 @@ class Libsndfile < Formula
   bottle do
     cellar :any
     rebuild 1
+    sha256 "5f5f3336e19849c21cf00531cd2a04c92f4cd724c9fce2449335a684c195c62c" => :big_sur
     sha256 "5f5f4ad1f22b2893b115fdf972c1f8f30a4919719f12fe0f3d186f879eae3051" => :catalina
     sha256 "5e0f78600b00ca0ebdbafe83e0a0a0a4833810233d714300acac13babb7553bf" => :mojave
     sha256 "83fe3a19e7c679b07ed791dafeb2e942540092ae714f7c73ae7168ba2115179b" => :high_sierra
