@@ -11,6 +11,7 @@ class Ncurses < Formula
   end
 
   bottle do
+    sha256 "b34b4aa433f23405c6104bf810836eed2686f11c660b8668a7af86f99be2329f" => :big_sur
     sha256 "eae51ad3391edafe3d6c649ba44f607ee1464b4b5d9ee48770e9817ee5f0ccdd" => :catalina
     sha256 "1771e0ce821cf8cbe38d0ce8d1843fd559532923222edc5dbf5b31fcf24fed90" => :mojave
     sha256 "4648be8457b081026d3da80f290abaf3fbfdcb49d62914861a63fc706f9adabe" => :high_sierra
