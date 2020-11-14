@@ -6,9 +6,9 @@ class Quickjs < Formula
   license "MIT"
 
   bottle do
-    sha256 "a1f998b9825902b58cbc9fff5dfbb3b7fa3cff70bdb00d5518c124c7fb241dda" => :catalina
-    sha256 "bd0b90ea85294d55896f668c2079112606052c6695e8b419b874d98198b5d69c" => :mojave
-    sha256 "d21f88599b0f002f71b477be73f48a5ca9faaa32f3696faf647d1ce416a2fcec" => :high_sierra
+    sha256 "b88f53813926176757beb784b812e17e53522de98e078ae97c385d349a13818c" => :catalina
+    sha256 "93f6dc2c5dfd6ac8250b5595a242a5d2892a6a09b4f5999c029ce5bf0e1bb951" => :mojave
+    sha256 "dfdee7a1285ce8648695c388f8fce766e2113bcd6b11ebd5ba4f21baf988c0fd" => :high_sierra
   end
 
   def install
