@@ -7,6 +7,7 @@ class PostgresqlAT12 < Formula
   revision 1
 
   bottle do
+    sha256 "c3aebb8ad25a889aaee5ffbe69f4a711458877e0b4f7be9b231af5d5de181537" => :big_sur
     sha256 "2e2720ad0af2af08a77c08cb3b0e70bf5b8b401e13f50317d5b2a969cc7ae0c2" => :catalina
     sha256 "617b1ab93b938589d644d446900477be0eaec48977a13898223f6c4584d5343c" => :mojave
     sha256 "e6b8a5b887133c2f555254232014477195760e0d860bd847a0dddfe7610bc510" => :high_sierra
