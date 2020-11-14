@@ -10,6 +10,7 @@ class Re2 < Formula
 
   bottle do
     cellar :any
+    sha256 "45e6b0a29c9cefd023a625be005478d3150d4ff13cffb604a5923570940c8c20" => :big_sur
     sha256 "6ea685673f2cccce319d1c03da2fdc65796174f32d4c6acaa10774f48f52e6de" => :catalina
     sha256 "b565f33e82a0017a9c7933ce816f201087471920f8a2762e70346b41165ea02a" => :mojave
     sha256 "c2be399e6c6776cdc9e579a1c941756145059ace6f98d3adfd836e08cc4836d8" => :high_sierra
