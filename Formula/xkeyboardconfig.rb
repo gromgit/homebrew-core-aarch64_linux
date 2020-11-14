@@ -6,6 +6,13 @@ class Xkeyboardconfig < Formula
   license "MIT"
   head "https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "2bc4ef4bb2f03b72f8ceb8c4fb12048c8dfda6c4db24f7fa2cf6b19f4ba54b17" => :catalina
+    sha256 "347f0195f728cbff5e9e2330248d1d195e8fb198134572bd66d1f45fb4449c10" => :mojave
+    sha256 "8350bb43f9ae136e0d3a811230d351ce741c63ba2ba1e9901d63b009cf6f588e" => :high_sierra
+  end
+
   depends_on "gettext" => :build
   depends_on "intltool" => :build
   depends_on "pkg-config" => [:build, :test]
