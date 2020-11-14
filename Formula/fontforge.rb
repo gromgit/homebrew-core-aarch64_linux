@@ -7,6 +7,7 @@ class Fontforge < Formula
   revision 2
 
   bottle do
+    sha256 "9c0a61fe2fc9fa5c387c596b69c6a2e76f8316a1115d2796ae1138af0b9ac319" => :big_sur
     sha256 "1e71933145235afca40aeb357ff8d0ee6ec9461e5b4f7607b7b935cbbf07c0ae" => :catalina
     sha256 "621b45bbce2fb407847fa5978eda807561288a8ba793dbc18b9f6cb089fac756" => :mojave
     sha256 "aeff8baaaadf3bb54734feae6a75e8868291a5cb8441e88e5fd13772a08f5ccf" => :high_sierra
