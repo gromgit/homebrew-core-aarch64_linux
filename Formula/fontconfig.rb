@@ -26,7 +26,7 @@ class Fontconfig < Formula
   end
 
   head do
-    url "https://anongit.freedesktop.org/git/fontconfig.git"
+    url "https://gitlab.freedesktop.org/fontconfig/fontconfig.git"
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
