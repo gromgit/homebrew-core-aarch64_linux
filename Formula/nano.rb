@@ -11,6 +11,7 @@ class Nano < Formula
   end
 
   bottle do
+    sha256 "28dc57a07bcbb80f6f4b372ee8b9c5cd27e9b96bfb33f90a15393ce33cc8c417" => :big_sur
     sha256 "a4a34983c9f7c81fda1ced912f0af688c44c2a34d3f623c81348baec63d5b056" => :catalina
     sha256 "4a4d2a058b98ed80a600fc5c5e4b7fb09f1b2109fee637f38c992db6c875324e" => :mojave
     sha256 "486b3ca40ba07df98354f622df6b7efbd3b3b1a0e9decd043875a9e415c9a107" => :high_sierra
