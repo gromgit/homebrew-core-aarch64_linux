@@ -12,6 +12,7 @@ class Gpgme < Formula
 
   bottle do
     cellar :any
+    sha256 "90dbde159a11bd2a11fbe061f17487c00bbb687de1243e63c67c84906a863fb5" => :big_sur
     sha256 "fa8c359b9ca00fc0269f26243da8a1032f6a75a01196942b3fbf5ab0933bca23" => :catalina
     sha256 "95e303f1b3f7201c9d684d84a5fa849dfa5942dc623a810f9f383f3331d6bb25" => :mojave
     sha256 "3fa5a848421bcf9f36106f49d9fde42bd59999cfbfd57c9d2b6fbd0da095ba1b" => :high_sierra
