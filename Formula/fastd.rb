@@ -9,9 +9,9 @@ class Fastd < Formula
 
   bottle do
     cellar :any
-    sha256 "37f5ce56da71775cec3a8d1441a13d5f9ee8c3e903a3605867f46ca6452c8900" => :catalina
-    sha256 "94eb461f5c5cbbadf1a3eec6c647ca34e9bf7897efe37c22c8f4c4eb045311e9" => :mojave
-    sha256 "ec6bf6837faa5900e5e13380ea47b22d1ed317b0c4b7e7282d4c9b467ec1a125" => :high_sierra
+    sha256 "33e3a81748094389e5d7bd4cc894a75a01f40891f1a4693c4ea3e16014e912cb" => :catalina
+    sha256 "eb48fd5b2eab89e016223dbbfdf5faaf6a4e0194f0a3e5711218c4f3d83727f5" => :mojave
+    sha256 "5064081410018559132b1f2a970f897130474fa3f9919bd51c5e17253a67ed76" => :high_sierra
   end
 
   depends_on "bison" => :build
