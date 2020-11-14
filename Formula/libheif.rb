@@ -7,6 +7,7 @@ class Libheif < Formula
 
   bottle do
     cellar :any
+    sha256 "31fda849d5d3ffa475c1ff312cf76c307a639905134f305069f12d0255ec2a4d" => :big_sur
     sha256 "4e6759dcfcedf91ca277b8c338f25f39884b2daacf997f14c9a82e8914cf9a9f" => :catalina
     sha256 "39b1616553af121c49bafcbaf95a19fbdd6dc7ebcecbdfbe3c25dbbc097d2266" => :mojave
     sha256 "18febe31fe9dfa094c745e7e3a45082bbf8c43d928891f7a1856a64ae35a89c6" => :high_sierra
