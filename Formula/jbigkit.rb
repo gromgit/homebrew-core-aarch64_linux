@@ -10,6 +10,7 @@ class Jbigkit < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "568ea0a6734dc1da5d50b5261f43753f7cf1089fae9c786e7859a8ec22562144" => :big_sur
     sha256 "16936e06d59fe44d40a3829bc60fec43cb7ca23d54b5fdf9510aca78df648460" => :catalina
     sha256 "887d4f100ed2264220232720a7732a969ee97df32a1c87f03897952920b6019a" => :mojave
     sha256 "c8a003d12559b6f506fbd912c3b68163f7ab6022fd53e069bfbd55c813f52df5" => :high_sierra
