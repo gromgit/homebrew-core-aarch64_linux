@@ -11,6 +11,7 @@ class Inetutils < Formula
   end
 
   bottle do
+    sha256 "c91540c2e73378ddc2da24503537e096647b084e10bffd1d29311848c896f8b5" => :big_sur
     sha256 "9f227bd3a357e822a8fbc399828a5ac3c06cc32c1d8d8e8da9a03a11f3df92e8" => :catalina
     sha256 "cd8d9c2d67518442b03bd4c6573a22408136fbfa54822db89db9236dca9d31bb" => :mojave
     sha256 "52c3e2f7e4d62cf0e0c742e81c026f591b9c331a338d110619b285d02a9d8b2f" => :high_sierra
