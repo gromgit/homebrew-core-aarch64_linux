@@ -27,6 +27,7 @@ class Readline < Formula
 
   bottle do
     cellar :any
+    sha256 "0a6b12ddbee78cf31dfd744c0b0eaaa8cb88d6506d4a3915feb432b67e21a898" => :big_sur
     sha256 "6ae1c8e7c783f32bd22c6085caa4d838fed7fb386da7e40ca47b87ec9b1237d6" => :catalina
     sha256 "29f7102a730ab39c8312cad1e7e439f6da2a67c452ce2b3380581eb185a5d8e8" => :mojave
     sha256 "896a3d50ce8962ba56e853bdd590fadeabc00ab36475d143d6c2bea5cc15bb28" => :high_sierra
