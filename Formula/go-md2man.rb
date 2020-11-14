@@ -9,6 +9,7 @@ class GoMd2man < Formula
   bottle do
     cellar :any_skip_relocation
     rebuild 1
+    sha256 "c6f05023662243e7c46d5206a1a2af2db7c2bc584086608f18388e1a05ecc755" => :big_sur
     sha256 "1ff2123c31e56bc183a1b9b0e270c01ee31e16efc34c060e0d4ecbde87d9e16e" => :catalina
     sha256 "1ff2123c31e56bc183a1b9b0e270c01ee31e16efc34c060e0d4ecbde87d9e16e" => :mojave
     sha256 "1ff2123c31e56bc183a1b9b0e270c01ee31e16efc34c060e0d4ecbde87d9e16e" => :high_sierra
