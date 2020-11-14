@@ -98,6 +98,7 @@ jobs:
         uses: actions/download-artifact@main
         with:
           name: bottles
+          path: ~/bottles/
 
       - name: Setup git
         uses: Homebrew/actions/git-user-config@master
@@ -106,7 +107,9 @@ jobs:
         env:
           HOMEBREW_BINTRAY_USER: brewtestbot
           HOMEBREW_BINTRAY_KEY: ${{secrets.HOMEBREW_BINTRAY_KEY}}
-        run: brew pr-upload --verbose --keep-old
+        run: |
+          cd ~/bottles
+          brew pr-upload --verbose --keep-old
 
       - name: Push commits
         uses: Homebrew/actions/git-try-push@master
