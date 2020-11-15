@@ -14,6 +14,7 @@ class Gcalcli < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "1e242f9b62d2085581ab1a8788d9077d41ec1bc908802f56f084e3bbc708676e" => :big_sur
     sha256 "cdba25bc19242bcef227b7ce304044267b47d8dc50f08f6e33ee7ccfeaa687a5" => :catalina
     sha256 "7b362833fa9794fa940f0785f354c8384143dfcf764008aa3847c1fa576f6b52" => :mojave
     sha256 "2a50521955f86a01262fac57cc327922367e2d4ec66461e652aec7a465e04f0b" => :high_sierra
