@@ -10,6 +10,7 @@ class Trailscraper < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "51ef8b457ed906ac945456cb8ddf8ed7d579fa4b6f5cf40176f338b7a9eef48b" => :big_sur
     sha256 "15da50f67ee3a4124d199c4a73c20b93408aa56eccd09643fb38f949113a3be5" => :catalina
     sha256 "322bbbd8c5aa8274d63d8b5ad8662bf510820c9ba344c0cb166a6966a7d94dd7" => :mojave
     sha256 "65f8da4cab666cf67e1456de2dfb835d186f7fde6a4c92981744546d8cfed5a8" => :high_sierra
