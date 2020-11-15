@@ -7,6 +7,7 @@ class Libxres < Formula
 
   bottle do
     cellar :any
+    sha256 "fcb9ac04422ee9752674c1fe7cad12cf079b299b0bbd7492866c1cd51223455d" => :big_sur
     sha256 "9284047f0480984d64b23e375e7aea8fe986e92cf511aac09cd6966221a2e7a7" => :catalina
     sha256 "1e5bda4d9cd50b6d45252949946e03758e0e05bdd4bf0e3d4e4724a43cd9aa55" => :mojave
     sha256 "bfec4cc0604f69d40a032f4ec36d231be3bac9eca44bcfcf4fb18ecd23023fbc" => :high_sierra
