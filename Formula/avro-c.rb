@@ -11,6 +11,7 @@ class AvroC < Formula
   end
 
   bottle do
+    sha256 "7abc536f295117964af2d32b3d16a48482109653a71a55614b9f0f4a0a4ec7a9" => :big_sur
     sha256 "44708472b87d7d9375ed156ad510f1884b050d4cc345bfef49e6e9f2bc7a756c" => :catalina
     sha256 "971102fc6b294cb8b98759edba3e390d376d7660eb49c6ed9063e03cf0cf2067" => :mojave
     sha256 "6aec75d7260ab6eb56a7c7b6bceb03f547947a2b1c0eba579ad21a7b048b0367" => :high_sierra
