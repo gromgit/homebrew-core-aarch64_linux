@@ -11,6 +11,7 @@ class Tgif < Formula
   end
 
   bottle do
+    sha256 "0488ea1c1291ea86653e1f5e3b0a9d7499ee101ccec3a5cb8f1e855aa445181d" => :big_sur
     sha256 "ce5a689942aed9986f74150bddebb09a129aba97810658fc67a6060519eacd86" => :catalina
     sha256 "3ab28b39b5a4b0c5cea21b096c0e8b2317725f8b6da6455ab365e8d13ac644a4" => :mojave
     sha256 "9c35ee5713a7efcdedb42d4602213dd94e84385bb8c5b0f9331706d6e897d08c" => :high_sierra
