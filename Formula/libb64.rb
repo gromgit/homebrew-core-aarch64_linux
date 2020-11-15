@@ -10,6 +10,7 @@ class Libb64 < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "56790860cf8aba45beb19d6b50dab0e3905d98308dea3716e913863f61047754" => :big_sur
     sha256 "ee788cea9a073c456398f86661ea27e092c3d327ea8b0792643ed7d38bd402d0" => :catalina
     sha256 "7a53661bc0fe2bea875f0a14cc66b6352694f1e797e4506ad2c8ef35dfcc2169" => :mojave
     sha256 "3b5266e99b78c81ae7ec00c19aa7e9d3fad7f47611fc1332710bd8e03f48da55" => :high_sierra
