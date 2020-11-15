@@ -8,6 +8,7 @@ class Termshark < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "484009521b2ea405a234cd35f4a9377757cdc725a07b16ffeb9debe67c604165" => :big_sur
     sha256 "f5aa37f01cde3195529f2d712bf430eba6f2d72e55956a1da8adc82369ec7d6a" => :catalina
     sha256 "fc4c36a57bb543b3fa5a78b0dbe75f6989a675789f0eeaaed84880c367a439fe" => :mojave
     sha256 "16c5dd511a2fa621d103fc07ed93b0af39ac3b08d5976162f5881cc46095dce7" => :high_sierra
