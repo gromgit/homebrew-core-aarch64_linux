@@ -11,6 +11,7 @@ class Mackup < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "bb9acba90780a9b523ae03177434d43906bea0781d0909675f2348c11556667b" => :big_sur
     sha256 "b76ef684413cff5aa37666202ee84a0e42c7db942689ddf6d815a1f3b48352a1" => :catalina
     sha256 "e2a3b323ac3b0d57ae3962d996b959ebdec5008db19a9495343f5987542ba5a8" => :mojave
     sha256 "c8043863b82bf5acd733c235e64005782ec26e516c66477527fde373819535d8" => :high_sierra
