@@ -12,6 +12,7 @@ class Cortex < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "337c92f3ba0fc8bb6401ba03fcd6d185ab14fe6042ff3f06081d87af5989b585" => :big_sur
     sha256 "7b048addb9cae0bcc4d4624c22d45ea94447317407836a11198e46d078351513" => :catalina
     sha256 "8791d3c130d3ca1c6fd088ea07f585716b8d33b1f4024e3bdd247f00aa5a2f5d" => :mojave
     sha256 "91b1dae9d8a3d08e5d0a31315a4a37f24d2bd4178546d7ceddfe22810b6b8253" => :high_sierra
