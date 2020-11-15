@@ -10,6 +10,7 @@ class Vulture < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "a3d2a03fa3542b8e7fd9acf7f4f5e4135ad27b5238ffa34505ff59e091a36e88" => :big_sur
     sha256 "cbe063689773ed4f0f631c359603a53f803f312b98944e3718d21b9f7974bda7" => :catalina
     sha256 "87d1b12cb798f56a56f0c16bcd5af882ecf111a5a181655209da4cc60afd0d81" => :mojave
     sha256 "305fefa88f47886779dc6c377abba61134c4c045be7400227bc7b0b24d75c337" => :high_sierra
