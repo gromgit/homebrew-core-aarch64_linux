@@ -11,6 +11,7 @@ class Lighttpd < Formula
   end
 
   bottle do
+    sha256 "554b3ba863106bbec2bcb99c4acdc242c50952bf77e1ec4045b188de0600ad53" => :big_sur
     sha256 "7cb7b6026dbba9a3afde8a0e2e2740499564687fb61ee6c49d5cabc29f780a2d" => :catalina
     sha256 "432da2049539f4416d952ecdfcfefc5b5230447edaebfd63b958a92581ae57ab" => :mojave
     sha256 "c7e9b87c219d8bf64561c185c6fcc68c2caafded7a4e980d379fd4fbbe00bd1d" => :high_sierra
