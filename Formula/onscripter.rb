@@ -7,6 +7,7 @@ class Onscripter < Formula
 
   bottle do
     cellar :any
+    sha256 "d7f53c83fbbc4cbfb321d535d44d5d8600b43f48eddac8d07eee07b93ea32a74" => :big_sur
     sha256 "d886def76e269ded54ad9b5c128d6c8d6b40d26814ef7c3a1e46113101e61088" => :catalina
     sha256 "67ad8935801c205450775f3abb6f8ae318da8110835fa10bf984538b1ef963b3" => :mojave
     sha256 "27471aca0f4b1bc08721ef8ee650a4fb2b42085c0eba7ecf7d281fa050f64b65" => :high_sierra
