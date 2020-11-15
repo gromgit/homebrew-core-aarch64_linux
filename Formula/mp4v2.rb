@@ -7,6 +7,7 @@ class Mp4v2 < Formula
   bottle do
     cellar :any
     rebuild 1
+    sha256 "8a15f36160b80d4bf578a0a61f09e6f80b7fa4f0b15443ce1682346e9fed0a65" => :big_sur
     sha256 "bf2838fe1bf196c40546bfb7a5800bce710aaf55305a05b719d07d9de2e5b24e" => :catalina
     sha256 "bd4c8e435216cbfc4ed60030e1cd4135156643f8befa1477061c1e59292394bb" => :mojave
     sha256 "359eecfb160a0d31975961933b50c7ba512891aedd053e3e9153edba1da364c3" => :high_sierra
