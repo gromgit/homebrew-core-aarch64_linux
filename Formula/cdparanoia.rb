@@ -6,6 +6,7 @@ class Cdparanoia < Formula
 
   bottle do
     cellar :any
+    sha256 "2b7649f89581be2a35b246e4aab15e936573d3920f794ae5187e23b796874dbf" => :big_sur
     sha256 "9a2def6e4aa8db0e7f35392dd73e2bbaf86a52ddc5cb6ff80e1fcf6f34f6133e" => :catalina
     sha256 "68b478e2d9e8f7121040f99551a45cab8dd8cd91d94e8690ea17103d884daeaf" => :mojave
     sha256 "8b8b1eeb36773ce01ef09232e2e7270fc759aedd1814218cbd8eb9f668a4bf73" => :high_sierra
