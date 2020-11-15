@@ -11,6 +11,7 @@ class Convmv < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "20517059aabe3b68553cc8a756331db3692732cddd5f3cf10905189f1494ddef" => :big_sur
     sha256 "203e34d5e76b55fabbf8548b93f749cd044ad843ca9062a916026e548332f7b0" => :catalina
     sha256 "8e5a0c8207cb0c57f1640c5a8c9a4a05cd9c8ffc68d922774cae4bfa56b691e6" => :mojave
     sha256 "856021a73afb22052e496ced9eb1a7386d810a6d75903aac99feb98298801ea8" => :high_sierra
