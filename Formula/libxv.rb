@@ -7,6 +7,7 @@ class Libxv < Formula
 
   bottle do
     cellar :any
+    sha256 "9449b8a36bcaedf03b437b4ebb8fcfd4f1a421c4e9aa39c736bc9ca374a32427" => :big_sur
     sha256 "9e4adc6980cd27f0261b5858d8c660db9b42f2303fdeb579d7f14c982f2cd615" => :catalina
     sha256 "6e32200b7d439f9255e2f5c6c19cb329fe5efd4f51a3ecf681e85320e1a41d5d" => :mojave
     sha256 "e94ca27db4487e4af4a906297a184db021d66b3f254332331cb3bb6f5d21fd09" => :high_sierra
