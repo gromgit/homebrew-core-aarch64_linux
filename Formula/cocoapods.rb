@@ -6,6 +6,7 @@ class Cocoapods < Formula
   license "MIT"
 
   bottle do
+    sha256 "5fec9be27505bf6858fdbd409f50247987a03471dd0dfe0af15ddb58c267f604" => :big_sur
     sha256 "e134955d0501635a62e16c9c9b10e01c5f8b9e0ffdeee3d7b778db5845bd88a1" => :catalina
     sha256 "9977145a066bf2545f5fe3d1ddd41f0360c7efe46523087d56cf06ac305eb069" => :mojave
     sha256 "783448183d3bb63dc46c8148fe1f3b783b705bfda763fb6f6237760e30b94ff6" => :high_sierra
