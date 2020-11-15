@@ -12,6 +12,7 @@ class PythonAT37 < Formula
   end
 
   bottle do
+    sha256 "d58781b8d8b467285b2740dca0c5dbca1e99b08a3b2c1f2bb05ca05abd3aca2b" => :big_sur
     sha256 "6ab2d5599aa9b26bec29562418b8a15d83aa408518402e971c7f44177690b518" => :catalina
     sha256 "95f3926d2d889032e9dba25533caaf3c4a90dc06d7b1f2ae345e7bd8ab43d069" => :mojave
     sha256 "31c104f6633fe8da29a9580e885cabe947917aee12729355840b4d58deb4b193" => :high_sierra
