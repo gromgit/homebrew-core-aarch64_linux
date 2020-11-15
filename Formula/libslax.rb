@@ -11,6 +11,7 @@ class Libslax < Formula
   end
 
   bottle do
+    sha256 "e155b74af4563cfc2236a8c473154275118b978bf068329e941f3f6ecf58fea5" => :big_sur
     sha256 "8b4506f10c72d75425ad849f17918a6574c349ebdf29ab740ad323811d1a4d02" => :catalina
     sha256 "5e024a22f8a47c0a11724d7543cd50141e8246b3669155cd734854ee74ec9d71" => :mojave
     sha256 "95e8b6bdc7010103110d8c7a92c33dd8e2e04228e037ca81c3a5cb69ea955ab2" => :high_sierra
