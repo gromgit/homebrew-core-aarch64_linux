@@ -11,6 +11,7 @@ class Pstree < Formula
   bottle do
     cellar :any_skip_relocation
     rebuild 2
+    sha256 "9e3f51c55862f554dfc3e3d70ffb435f6999c5b5592625ef4562633d7ffaed82" => :big_sur
     sha256 "af4d6c7d6bffd6e12d3cb31ceb6bdd5292b66405ddd1be3a48870373829219a7" => :catalina
     sha256 "27b643077e6fa2e233945f505b024f3e725ed8b930bdd89a9df73817197acbea" => :mojave
     sha256 "426d5701e835bc1f9313c3b7cd630aa0f2b279ad5f95406bd73f50d174e8eaf1" => :high_sierra
