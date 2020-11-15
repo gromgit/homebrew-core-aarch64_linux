@@ -9,6 +9,7 @@ class Bartycrouch < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "a9b173c9de755e9c45234e503c062748786d7f984749354a1ac4450ec37df6aa" => :big_sur
     sha256 "aa2777a08e4d1a12340638678c4652b4ab5d5aa6f7db2917e7c907550d524119" => :catalina
   end
 
