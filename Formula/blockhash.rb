@@ -9,6 +9,7 @@ class Blockhash < Formula
 
   bottle do
     cellar :any
+    sha256 "4cc1dfdfa365edd25d95d9188e9b45f03477a7c138ff3e539dce3ff839f7330c" => :big_sur
     sha256 "3db282d2098b5e52c197a62e977382fe5b192ce22ecb88020599534e07682475" => :catalina
     sha256 "45c611b516f5a0f53c75588ede65591eab5ec76bc65e05e5400ef232cb367a89" => :mojave
     sha256 "3b46ba7629e56dc9ef1b5a8a00fe7dc43b81d1f09b8f9efcb8bff49ecf16676e" => :high_sierra
