@@ -8,6 +8,7 @@ class Autodiff < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "dcc86184326b3832aa73c3eda18ea39002fd41429e2ed0ee6aa50b36d1925725" => :big_sur
     sha256 "df9683ce241dbc7cca5798251423c81e1e10cc94e7af390a0e0e3361cdfbb26a" => :catalina
     sha256 "79753e9e6b3cce24eca76e99d59ce56c330b209d940f7873df87963a1a66302f" => :mojave
     sha256 "ed369921225b6e64e86351a7870500946fa6385990658daae9a1c9a9985342ce" => :high_sierra
