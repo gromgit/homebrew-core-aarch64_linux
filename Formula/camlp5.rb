@@ -13,6 +13,7 @@ class Camlp5 < Formula
   end
 
   bottle do
+    sha256 "4c764d0d4fe553d8ad8594288a90c1ee0c59a918beedb7793c3d00f7ccfe521d" => :big_sur
     sha256 "42db6069ff94f56ae402349dd6cfb2dd11dcf82bb8976eec981c8c1d4a1bebbc" => :catalina
     sha256 "27fbf9131d73480ad618b586ea34a54b2487d8a0b0265707a40bc1bc32f5f4a4" => :mojave
     sha256 "09d7960df4487c5bd0034ca7945d13957341c2053ed618313aed99f293734528" => :high_sierra
