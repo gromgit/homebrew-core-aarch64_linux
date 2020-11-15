@@ -7,6 +7,7 @@ class Googletest < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "81bf0921c99faeff6a37ee72c55f5506b914b3588eaa6551f489ac23c074f78a" => :big_sur
     sha256 "ebe4172d84fd8d29282e61c810e1f99b3b6b78ac0369381b617755cd070371c6" => :catalina
     sha256 "7eface4df1365cd951d402e244a28984a2f656afb2e3fee31cf046f1a8aefaff" => :mojave
     sha256 "595a13da3151557305ddf8fc479fcab3cd6041c2ee9832fe18a9f717046116b1" => :high_sierra
