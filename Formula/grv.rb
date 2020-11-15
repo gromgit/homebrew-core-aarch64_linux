@@ -8,6 +8,7 @@ class Grv < Formula
 
   bottle do
     cellar :any
+    sha256 "b432708e238c550cd9e0c0cfa560d658eeaaf8f41f724316b81e6a56b77ff4ea" => :big_sur
     sha256 "47ca79fcad09617a086eddf37627be483b9d6ca9a2436d11acac6754b0d2ce15" => :catalina
     sha256 "2f223f7ca56ee01201a05e8660c219a2f70d7ead2c5e4f0dac65f4a9b8cd5941" => :mojave
     sha256 "d51249eec72ee11cc90b0d5b4c06e10b77eec0bd7ddf8b53df6d0a0d8a291605" => :high_sierra
