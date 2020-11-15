@@ -11,6 +11,7 @@ class Discount < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "fbcfc1383e2818e7bf0231dcaf6a875ae3ec485ef0a98143567d3e7ed388f4f7" => :big_sur
     sha256 "231a8ed8499ddec2aaad5731f273d84e5195a898f89fc7fc1548875c7fc7ddfe" => :catalina
     sha256 "579d7cf9a3930a8b91b748de259387554d28f900d7e3bedd310f64f8d5cb291e" => :mojave
     sha256 "c929af7cff8c87b6dcdf651009894659d3ca9ef7c21b1d935cf0889654b20a7b" => :high_sierra
