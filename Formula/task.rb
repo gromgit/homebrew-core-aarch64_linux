@@ -12,6 +12,7 @@ class Task < Formula
   end
 
   bottle do
+    sha256 "0a5aa472b0830025324a8f73c58215fecef5c3c1bf8f1b0990a1fd370931c4c0" => :big_sur
     sha256 "24c80011867aa34766864a4bbac071493fb45c93bd3e08b3e9979b3ba4780fa2" => :catalina
     sha256 "bba98b6bdfb3f79f1434229d8ade4b0622119320353da0eb8fec39809d66947d" => :mojave
     sha256 "6a651be957b736bef14633efedef011a81c49ee37178eae4d8ef863549d7c584" => :high_sierra
