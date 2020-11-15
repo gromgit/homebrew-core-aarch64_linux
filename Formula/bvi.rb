@@ -10,6 +10,7 @@ class Bvi < Formula
   end
 
   bottle do
+    sha256 "cc03571d7931314c6fbe6adacace77b4d6b5204b6c34d57da40f45915f84b1db" => :big_sur
     sha256 "83cfa7a1fe8848d8eab7f01da94a32e75eb7c57221854a3f3f06a05417975977" => :catalina
     sha256 "567e9512dfd4fcf7768c442a6e609f7b798b887e4cdd59c1b38970940b9c528f" => :mojave
     sha256 "28ba5db61217dfe797423fd55b5fce06def1d5760aa466685759f1e315459777" => :high_sierra
