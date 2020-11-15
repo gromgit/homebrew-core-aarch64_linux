@@ -14,6 +14,7 @@ class Rcm < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "1ae14043eb53ab02db26a3bf33d15d817a09917788f0165bbcc538f77a9d38fd" => :big_sur
     sha256 "86ac10a7254567afb24c9816f6a80dd90a81bc8cd8619c112e59c0950929ef14" => :catalina
     sha256 "44c9524d9d5ce8ea5310fe6681b040d6c685cec693446f617686f82929d83c6b" => :mojave
     sha256 "7130060f9a26eda6a704eb06bda4c04a4cc0b0980f1c9d3fc5dce876fa5a3fdf" => :high_sierra
