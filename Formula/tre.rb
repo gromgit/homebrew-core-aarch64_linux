@@ -6,6 +6,7 @@ class Tre < Formula
 
   bottle do
     cellar :any
+    sha256 "112a8c8590e654fbbbd5339cf5b3fa83a5c163c3320fcb386ddc0affad7148b2" => :big_sur
     sha256 "26b187538786109c8a08f52cb868ea9cf70dfbc9681c014a4778ead61c90f389" => :catalina
     sha256 "6135ceb88c62b006fb0fbcc772ffd4006da4ae03d05fd872155fa36d33216efc" => :mojave
     sha256 "eaab931989b5bf5fc18949eaa234a1840531ef3aeb9deda65e4d66be40cae149" => :high_sierra
