@@ -8,6 +8,7 @@ class Staticcheck < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "f1d71ca52ec68da6c0dfe25f9b091a18cf1f12fbb1bee68d216a5fa0465ecf76" => :big_sur
     sha256 "d50abbd47adab10e9f8fb4356abb678e0f35db3eee15fd503daa4d8617897848" => :catalina
     sha256 "d9fd2811d193e5a61c7a11c01cbbb8e541f3992854d4a33c9be9004ecaa74395" => :mojave
     sha256 "84b99eefde0756c76933ba759e03c884bebb9ddfa0eeb3e44db032f31f7c5cec" => :high_sierra
