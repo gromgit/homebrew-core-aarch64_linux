@@ -6,6 +6,7 @@ class Diffstat < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "6dcd1fba2f36a3a67c68f97de8f8d350cfd04e20b2874889815520d2cc166432" => :big_sur
     sha256 "056ed50b34a51b0f86dd9aad74785dc956e204621faa7c0ee4535e4bb54dfdfb" => :catalina
     sha256 "ccdff1c449f1d218ae636de168f9f36fdc1fd8aee3dd71c83ad4d562c7cd4567" => :mojave
     sha256 "aa3691a218fb3b34065729e648dbf4339150de2247f48c458832fba6221ca509" => :high_sierra
