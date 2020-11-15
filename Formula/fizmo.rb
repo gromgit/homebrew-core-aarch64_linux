@@ -12,6 +12,7 @@ class Fizmo < Formula
   end
 
   bottle do
+    sha256 "620198d285ed205b8feb79aae7f04be8450bbf32b627536cec8aa48caf91eaf7" => :big_sur
     sha256 "9f84f5f3d0f97f9637ad66d6d7906c53bd794518eab45c22f4eb51c153e31ac8" => :catalina
     sha256 "e37b186ac0ed5c8cdf5f08a7f7bedd7e997454700b6b9a92e14c41f3afc4c9fd" => :mojave
     sha256 "16992ff53e0327dfc9bce300d6a1c3a2e6e0874faf9ef3fb7638c3267ae09788" => :high_sierra
