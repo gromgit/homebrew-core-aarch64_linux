@@ -12,6 +12,7 @@ class Libstfl < Formula
 
   bottle do
     cellar :any
+    sha256 "c3be3f27c3e229104c33221d6552f025780dddcad0bb510df99f5eb5216f152a" => :big_sur
     sha256 "6c2efe2840c84e8f37c56771f2e05f995a495ccbc9688d7af6dd7e993eee2525" => :catalina
     sha256 "c6f9a115588e219c10c9b532b332ffb382fbb217d299f09c803b35ebe426ed1c" => :mojave
     sha256 "63092cebd3e9f26be516acfe3ec11af61dec8b9769fd87eec9fca4334c3e3c96" => :high_sierra
