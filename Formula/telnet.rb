@@ -52,7 +52,7 @@ class Telnet < Formula
   end
 
   test do
-    output = shell_output("#{bin}/telnet 94.142.241.111 666", 1)
-    assert_match "Connected to towel.blinkenlights.nl.", output
+    output = shell_output("#{bin}/telnet india.colorado.edu 13", 1)
+    assert_match "Connected to india.colorado.edu.", output
   end
 end
