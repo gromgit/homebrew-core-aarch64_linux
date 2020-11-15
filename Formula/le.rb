@@ -11,6 +11,7 @@ class Le < Formula
   end
 
   bottle do
+    sha256 "5e783b96b482837243218a8c69f0bf5be7a7afa3ed19cb9950fc88342dd65e5a" => :big_sur
     sha256 "704e7762fb13634aa7b2fe4cc271747894d8ffcf5028abd0d27497bceb6bc378" => :catalina
     sha256 "aa1144661f13ab5fbe4eb132415da66785ab1b903c8d517df03f40826d08632f" => :mojave
     sha256 "b6fad9458d040f9a47a0d3ff003ab5f77cdb9508a5b653c3cddc201cfb5310e2" => :high_sierra
