@@ -7,6 +7,7 @@ class Kubie < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "a738e587f50a89113c1820f7718a64e050cecbe73f655d0811986d923a2799f7" => :big_sur
     sha256 "bd3da314d0a0afad8c592611173bb00daa89146f04d1fe7b9279da71e054b9ff" => :catalina
     sha256 "c97e1d927a563504a3a1022c15206ae1936ccf37ac727923fcbfa5be989a14f8" => :mojave
     sha256 "d2dd17d1335ecb571ad441db3b57bbb2f36e1f152ed107937ff0b661d092b6a6" => :high_sierra
