@@ -9,11 +9,10 @@ class Stdman < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e6de42bfa765085aca6f89020a7c61142f37d87f84d3290d8d427416ec7ba83f" => :catalina
-    sha256 "538451fbb366f727f89919bc2056b4b4bde46351d07509559c1793d5816c9099" => :mojave
-    sha256 "0f795424e68e066cc1f6c567a5513001481cd610cded75dfab77aa8db42cf9ed" => :high_sierra
-    sha256 "d3e640c191d2cf471b37b2121d20ebab97ff353f2d69616cfa7f7227db069beb" => :sierra
-    sha256 "d4b15103ae4011c1f2c9a4e3dcb0b205bfa45595d7ad25d6cb87ec1dc4f395ab" => :el_capitan
+    sha256 "5ac1a49ad04d00ad240a8dea6ff1069b20b3166d90772db5865fc2ac25ec7c98" => :big_sur
+    sha256 "0c7500e80257d9639866f2216199b605d1bb33abb3a11cca5f8c8baae5807e60" => :catalina
+    sha256 "a598b69cd962050da6e5ec4bbfb844e5c84ad9a6b2afc4aa8670591cab05090e" => :mojave
+    sha256 "a1d5c1b4e19ae36a4526f71a47c1868547fbb573579977d299accb678ec93234" => :high_sierra
   end
 
   on_linux do
