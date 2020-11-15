@@ -7,6 +7,7 @@ class Ahcpd < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "d61fe30a858cd3579dbcc065e0c13b18b39669ae8a94497c66fdde6796396088" => :big_sur
     sha256 "7440676cc30eed4de9c2cb3ad3c9a9691ba0da6636e4d38a33722ca54d168c9d" => :catalina
     sha256 "8852e7e5e11d6ea413657d012e4d49ca0d9ac406e56da6bf7c0daa6d4d788a16" => :mojave
     sha256 "ab3221a9f28ded916f8d2ef4b8377a2a793fa2fee5f891b9a97e3dede0d294ae" => :high_sierra
