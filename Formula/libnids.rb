@@ -11,6 +11,7 @@ class Libnids < Formula
 
   bottle do
     cellar :any
+    sha256 "0235b5bccac955c60852984ed13fa3213e3ccad9c0fe36ae522b5ac53f1f2a42" => :big_sur
     sha256 "0cd6c420a38ea61eb8abe96b6b2f754bddf1ca5583b3dbccfb1b268990426764" => :catalina
     sha256 "175d04b2db4bc65923eed696272339f4533ea8277ec64f01ba6a2b9a6019c8d6" => :mojave
     sha256 "e9e968ec057ae597b39c45ff1e804fde87f265c6783e62cb70e009ecc4aafd05" => :high_sierra
