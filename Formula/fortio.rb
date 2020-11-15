@@ -7,6 +7,7 @@ class Fortio < Formula
   license "Apache-2.0"
 
   bottle do
+    sha256 "b233fe8735838b37209137302821410750fb257c2b287e4d8b08a07163a92b5a" => :big_sur
     sha256 "bf1652d451eb70f0d5cf8b52cdf539b5df4012c32f12619022c9abc90f3dd58b" => :catalina
     sha256 "ee3a5040942a2679933c6b9a5522746dfc8033173e0b911c07e6d6c11a7ad16a" => :mojave
     sha256 "7ca3f1a22af748542e31873bc96307da643c47a51b0a9817c5d70ca85ee58182" => :high_sierra
