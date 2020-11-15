@@ -12,6 +12,7 @@ class Libuecc < Formula
 
   bottle do
     cellar :any
+    sha256 "844327a3e5e6bed43c2ed9a36e3b7f6c8c871803fb5968f34ee6aa667fc345b8" => :big_sur
     sha256 "89acc7a04f910882b89d9e032a45e8c27dc98257d6d4e6b28f6c6a26c8c369ae" => :catalina
     sha256 "d4d0c41262688ddca9ee2f2e6b80c33670c5a8db7266cd0c0592cd50b0d18be1" => :mojave
     sha256 "95646c23acf19c1f07032c6f311f446e7a32b1a9d0c1dd385ec3c41811036572" => :high_sierra
