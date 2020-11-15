@@ -7,6 +7,7 @@ class Orientdb < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "2934fd90d1f43ea1fe29367ffef0680872abe1e6cd5ae102d29f0f4da0ca08f2" => :big_sur
     sha256 "ef2465b839a30dd67f22aa7a3289d828521643e2c33d05246dd6b44fbb45bae7" => :catalina
     sha256 "a28ce4d0f02308ba641d1cf897a188b8883c555da30a119651b7aa05c73eca32" => :mojave
     sha256 "dd002904aa68d93e9c76e55662df768b90cce7cbbf2c2734f0a1fb4a08ed9a67" => :high_sierra
