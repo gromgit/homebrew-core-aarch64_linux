@@ -13,6 +13,7 @@ class Nzbget < Formula
   end
 
   bottle do
+    sha256 "f8b38a005fecc058238c9ed9a190061e1e20a149b13210f2f861885e078414e2" => :big_sur
     sha256 "d44d1a8dbd26f5cdb307c08f3294bd381ca79d51c48f51df98ae10a19272397e" => :catalina
     sha256 "1d69e26d929d2a1be4824ea8c2134d543033462302bc5527269d5ca7b1b2c575" => :mojave
     sha256 "862bd9889d1590b8e3f600419f2bbf84f1ea7582ed55c58eccc024382d6db245" => :high_sierra
