@@ -14,6 +14,7 @@ class Dmenu < Formula
 
   bottle do
     cellar :any
+    sha256 "1512aa45817b4bdb25a1190ea923e5454f6c4f08feece65b48b1c05bc75cd1db" => :big_sur
     sha256 "d92a894ca1d4bb9904b4671f7c849738e266a0cd99d28fcd49324edfd888b367" => :catalina
     sha256 "e08e8de333a1d00b6ba7c94f6d3916bce646cbf651cd04eb1cdd604df49639c8" => :mojave
     sha256 "e94b31e21d9ea3d307b61661fa766592a0856ab13111f17be9a4ae4227759a01" => :high_sierra
