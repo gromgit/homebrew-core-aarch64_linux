@@ -15,6 +15,7 @@ class Shyaml < Formula
 
   bottle do
     cellar :any
+    sha256 "daf25766ecb83bea348309fff2f86e310a75189ea138e8fd2c28d49b065f0e5e" => :big_sur
     sha256 "701dda753798f5e343311a1e8378614a572909b0b35b6882f6ac0be56ab9e16a" => :catalina
     sha256 "ea8a71d7782e8bdf0c700e93e3455e7b4180ae86388f9631eaf1fca440b58e69" => :mojave
     sha256 "b1dae6f7ee6138a7bd70301a4851720e693b45adceabd47184618d091d767fdb" => :high_sierra
