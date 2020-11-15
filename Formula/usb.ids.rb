@@ -12,6 +12,7 @@ class UsbIds < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "02a17ca9f1852d442ac0b6b41591b547cffb9a104a5466d9e12fb18535b91fcd" => :big_sur
     sha256 "2994769226c7815ef5eee9ba27f729005fd993341dfbca50f413139ef411ac5c" => :catalina
     sha256 "8b29c5873a395b8bdff9219dcfafb13d05d7428c8f4d050cb776d332dd7aef1f" => :mojave
     sha256 "18a048550eae20c48c7af4cc0b93f1da748cae52417e364b1aedc154c27613d5" => :high_sierra
