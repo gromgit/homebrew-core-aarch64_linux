@@ -11,6 +11,7 @@ class Libmatio < Formula
 
   bottle do
     cellar :any
+    sha256 "6581c5cc3897753a78031740d10ccc534e9d0e8bde17d7c97d578b0b034d0475" => :big_sur
     sha256 "ceb9363a18078ce2c25154d230a359ec3ce3db0cea9c2aaea3cfd41119806363" => :catalina
     sha256 "f015d539a7c798899a45b3a35d2795bc64aef3856b2ef5ef08fba6cf21295e25" => :mojave
     sha256 "41b16e1b850d33c612c474b2780b27396ba83da81f875a869014e5232d1f06da" => :high_sierra
