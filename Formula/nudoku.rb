@@ -7,6 +7,7 @@ class Nudoku < Formula
   head "https://github.com/jubalh/nudoku.git"
 
   bottle do
+    sha256 "bd5279ad0896787dadf5f2ef3c9796eed06d7dac60fb91ae337a7e372191082a" => :big_sur
     sha256 "42af644b71eee33e827eb588221eddc0a2b16d552907f9bd80116177e91b748a" => :catalina
     sha256 "c31813e8e20e6a7f3869bd0869d21e24877ee15de9f00f7eaf812bc81244418f" => :mojave
     sha256 "fabdc0fc21df7b01f097ae89884d8234d8efe1a3b4335a4d2897f98df5291e67" => :high_sierra
