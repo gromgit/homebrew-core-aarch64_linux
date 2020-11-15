@@ -15,6 +15,7 @@ class Libtorch < Formula
 
   bottle do
     cellar :any
+    sha256 "48b1ff7a2171d0f9d9d4abec326874b6f0d8b339648ac25892b6c8cfc36e64a5" => :big_sur
     sha256 "d4440f13b375e8ae4abc5bd63e77edfea4c49417f7a6df2cdcdc2f3156b9ec2c" => :catalina
     sha256 "e0c1d28daf2e561f649c5e90f1e450aad2c0e223c293f1ce152902c7f063c097" => :mojave
     sha256 "893d2485a56429168c7070076eee9f17ea3d3386c859d0ed1aa35aec866f6390" => :high_sierra
