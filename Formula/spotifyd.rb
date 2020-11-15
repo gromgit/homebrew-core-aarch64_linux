@@ -14,6 +14,7 @@ class Spotifyd < Formula
   bottle do
     cellar :any_skip_relocation
     rebuild 1
+    sha256 "5b5f8cae3d600eb6aee6ac3ac9ccdd036d37308820e2ac11b9b49bcd2ae41983" => :big_sur
     sha256 "e86e0a3ece83eccdfecfd584b4a6dea2682c857b766945821dfbf792370540de" => :catalina
     sha256 "d7e0da5e772657ce9cbdb3a6f48aa47cc55a87b563913f957cf35ba678814991" => :mojave
     sha256 "d745753724407c3b7e1d88743c4abfac7c1c945a9f03608dc7be4d90f1878bd0" => :high_sierra
