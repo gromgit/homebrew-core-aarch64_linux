@@ -10,6 +10,7 @@ class Libiptcdata < Formula
   end
 
   bottle do
+    sha256 "5bb2bce1d8a877c84abb51f3b9d9e0c40588bdeb2d6ea8d66c6de230d2e35e8d" => :big_sur
     sha256 "1dbcf1dd89b05f7f1fdc1a15d9c56b7e726f7296d8096ccae22fed9adf36790a" => :catalina
     sha256 "78dc7bb6b1e5bcccc1c0c9ef158b8d423f782aa455b1b10c3eebb29de6e7fa58" => :mojave
     sha256 "62f4a032075fbf0b9a43ef474b784bae7c47d503483bdc2e09e851c5568345e3" => :high_sierra
