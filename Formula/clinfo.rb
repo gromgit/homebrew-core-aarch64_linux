@@ -13,6 +13,7 @@ class Clinfo < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "2f013ae3d78a2e935228b61e81177a046b57a072b3bad126d73fc96861e97256" => :big_sur
     sha256 "860a35b3f6e571b54f7d7292446b9c1365b72f9fe9cc4d402641207156a58e17" => :catalina
     sha256 "9678520a5637d07faa9cb50e9d490c5ea44da41ce332b70c0115ad6c2d2d14cc" => :mojave
     sha256 "d10832aa0b4a2f8602efca713aa85a2a78ae6df19d61d9c256c3e3cd4c37aba1" => :high_sierra
