@@ -30,7 +30,7 @@ jobs:
       GITHUB_ACTIONS_HOMEBREW_SELF_HOSTED: 1
       GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     steps:
-      - name: ${{github.event.sender.login}}
+      - name: ${{github.event.inputs.formula}}
         id: print_details
         run: |
           echo sender=${{github.event.sender.login}}
