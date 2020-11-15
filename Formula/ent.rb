@@ -7,6 +7,7 @@ class Ent < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "7023711763240801b061fa09d5a721286b650edbd01188f54d41c070317e6106" => :big_sur
     sha256 "e51a453d227894a84db498d75bac3205f82fdd3b104b176fa691cb8ae864a14a" => :catalina
     sha256 "c2a9cd4a124a37767cc35a683aad913a92e712627c5ff00c43db06dbab38909f" => :mojave
     sha256 "61cac8b0bcf0c511e6c77760cc9441ec7b4d981392f98d37bd8a40fd281620df" => :high_sierra
