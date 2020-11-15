@@ -22,6 +22,7 @@ class Bind < Formula
   end
 
   bottle do
+    sha256 "e05c5aa3c5b21e9aa125753f868d68ab4c68c1eee872e87b27579d6b49807c8a" => :big_sur
     sha256 "1b1361e9192d1605142f16c4d16d753dcd6b63b8d127447c74ac15f4a3a942ff" => :catalina
     sha256 "6b2f9796d650d85cdc30493c7cdf16536f88cc1bce39e2769a03d576506017ce" => :mojave
     sha256 "b2fc44bdc3f8f4a4c838016cb4c0662092e2016fe4d0dac81c6d6760b203c784" => :high_sierra
