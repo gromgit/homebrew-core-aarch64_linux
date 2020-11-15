@@ -8,6 +8,7 @@ class Chezmoi < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "f5056d11f7b277541fcccf0e006c2c748b7e771f454fb48cbf1baeda0a0412cb" => :big_sur
     sha256 "d8943c663fe4c753b9aaf62dd493058d233cb7ab9e4880cc34749da748c9efce" => :catalina
     sha256 "34725bf9c5c4cfd5706b33d89f18497370c99f6061738205dfc1652825eba435" => :mojave
     sha256 "036f16a1354e6c8bbe7da3826d0a137109458b6f27c1e30c427c0ad0c43cc024" => :high_sierra
