@@ -7,6 +7,7 @@ class Unicorn < Formula
 
   bottle do
     cellar :any
+    sha256 "18a17bdacc8c9171a049a3b77533ad5a7abc340c0b99ff351e40b3058bf7f1b3" => :big_sur
     sha256 "d1e59e6241ec4851d24e3f3086e118ed421ee4bda1fb3d8a5e47053256f97d5a" => :catalina
     sha256 "72d3bba30abcb9cc00ce28b3fa109aca19adaf60e0fbd6fcf248a3b7c24bc3fd" => :mojave
     sha256 "81be5f24d90b028828fe678e57086d0db49c5739bcd83a636c8aba01062133a1" => :high_sierra
