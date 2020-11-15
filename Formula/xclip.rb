@@ -8,6 +8,7 @@ class Xclip < Formula
 
   bottle do
     cellar :any
+    sha256 "4b3d034f8770dd75585b98910ce1ad1c0bbe010f91f61c814f9b655cc978e122" => :big_sur
     sha256 "2229de2d3139a5a916be1d7e6c3227ef989ff20ce4322f0881eaeb22ee34caf1" => :catalina
     sha256 "7bacdf14b8a248a969952c6cba098e01b15d63b280b95a453164d2b0117400dc" => :mojave
     sha256 "4ff44edecff889254b56f12f261127e90f20c8b0f8d10e0d7f6b41788be0b2e4" => :high_sierra
