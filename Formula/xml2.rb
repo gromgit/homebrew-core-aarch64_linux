@@ -12,6 +12,7 @@ class Xml2 < Formula
   bottle do
     cellar :any_skip_relocation
     rebuild 1
+    sha256 "c6e91ba5879e8891be5aca28eba77249f18c8860d2d387447da0ca13efbe066c" => :big_sur
     sha256 "832aa209cf47c4f18ad512f7eca2acf76aa047522b3a417466722203203bd71e" => :catalina
     sha256 "63b136beee1c47726c6756f3c57bf55fcff4e660cd280d090aa35640138465b6" => :mojave
     sha256 "548421fe00487faa136c700e4d18f48b6bc349956044e2aa0f65667c3856883d" => :high_sierra
