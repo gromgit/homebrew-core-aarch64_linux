@@ -8,6 +8,7 @@ class Simdjson < Formula
 
   bottle do
     cellar :any
+    sha256 "ddb4e012c0e18dd1b014686c0f5e80e297130742206ac01ab0f2e3a0ad45e2fa" => :big_sur
     sha256 "e0b2ae73582ead699b984b3053cb2776122683acf70898bbd48a4d3603b432fa" => :catalina
     sha256 "170cf2d9057258edf1e1aa6db25ef201419f2761b63709592e797bedd72450c7" => :mojave
     sha256 "610c8b599489b5411d12b057600d27f206c2ca0f08b0491b24561b7e7ef45bed" => :high_sierra
