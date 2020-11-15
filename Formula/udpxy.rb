@@ -13,6 +13,7 @@ class Udpxy < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "989ff2e839f119d27e7df16ef1ed0cd439db78caa79be19662df3d548a3fc139" => :big_sur
     sha256 "48a44c1a8510793fe0e878da79ac3a94953b3c13ecfe2dd4f338cecc17d30406" => :catalina
     sha256 "37defc78c8d90754343c9d0c1b69bf1939ba081c42868daa41572551f5d60e4a" => :mojave
     sha256 "46de795b585d88c658554fb943931885db85d75c7f838d9db6d11d98e46538d0" => :high_sierra
