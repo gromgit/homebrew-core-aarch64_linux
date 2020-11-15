@@ -12,6 +12,7 @@ class Libvncserver < Formula
 
   bottle do
     cellar :any
+    sha256 "a28d45216831ec31a87e0756fd13fd226b9341b2bfa798acc865be3f34a530ac" => :big_sur
     sha256 "c667ff09ee40d2ab0e8db25a51697ae62edd14496c1075f07015bf0ed372695e" => :catalina
     sha256 "7e5799814cd2077d39c8d4c95806fa23c408d8a26c92140ba64f852b6a53567f" => :mojave
     sha256 "f331a9fc3ba043f0febe78df7551630a5a28f9adb362a58384901192476dff89" => :high_sierra
