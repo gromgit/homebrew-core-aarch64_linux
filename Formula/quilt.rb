@@ -13,6 +13,7 @@ class Quilt < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "fedbbbff60a547d82005736175e9264ea217aff6821e40eda9ccf9b77e1f07e0" => :big_sur
     sha256 "b7304ce0125f31f6d38f8645d436de553f765b599e4c66f8f659478963bf33f6" => :catalina
     sha256 "5d7f412108ec8831b8b6bfbc8e41d8b577523ffd66f9d095853a4680ec23b04f" => :mojave
     sha256 "691a01a091194910f0848aea529b331559fb98d44e9821c1ebafba51d2a2d62c" => :high_sierra
