@@ -12,6 +12,7 @@ class Gtkmm < Formula
 
   bottle do
     cellar :any
+    sha256 "6f01b168170de0eb9ac1bb25ea1146885624c80bf91d4c57cf6f6924ff3b54d7" => :big_sur
     sha256 "172050b87d5a7d4cd945722d80d5a8c933ed6329ad130ba9f92c0705a44acbbd" => :catalina
     sha256 "bfa9c862a46b1ca66466e30ba6dfcb74bf69a345089aba76f6620f6aa28b69dc" => :mojave
     sha256 "160a917c60ae9f41117f297a3bc8933fffb0084edccb6113fc7510798ad01d3e" => :high_sierra
