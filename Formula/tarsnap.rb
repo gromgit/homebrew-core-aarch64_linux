@@ -13,6 +13,7 @@ class Tarsnap < Formula
 
   bottle do
     cellar :any
+    sha256 "db0fceeaf2b93d4d7588ef1b3c0ac69080595e4fd05311fb3d61ccb95c9f9ae0" => :big_sur
     sha256 "afa6ebfefbc93faf12ac6576f26edb0b68c6a47cc65b893d590ea1efd4301fb4" => :catalina
     sha256 "c6c97cd8e16ba02f7997d1d269373dca82d4a3d188b89dc3532c8149e277bd02" => :mojave
     sha256 "847aae76230beaedfa23ea0a0f375864a8af6063c8539634637ab218a425540d" => :high_sierra
