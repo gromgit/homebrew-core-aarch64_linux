@@ -16,6 +16,7 @@ class Urlview < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "20e13c05f4e090cf897ae74480a5bbc2cafb47a7ba7c6b3a569c6bca14b1d0ea" => :big_sur
     sha256 "1a29faf6b64714501b62a1ad36d33bbb133fc23515dfaa352c36b47b47ed8669" => :catalina
     sha256 "4949121abe0237bf3322701201873aa20a0c23746107b79bc696d6d728200b90" => :mojave
     sha256 "abe2ea4e7d7f07e606837852d3e46c72c56fd4018a703e72f0945d87ccba19a4" => :high_sierra
