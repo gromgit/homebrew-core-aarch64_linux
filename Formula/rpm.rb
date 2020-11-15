@@ -13,6 +13,7 @@ class Rpm < Formula
   end
 
   bottle do
+    sha256 "29179e00af067eb16545dd8928b59abbd7d986e962fcc67268cd53f16ecd7fe1" => :big_sur
     sha256 "e5d398daca37da278add441d2cb0825c019fed8bcfb33bd4abb01dad3dce42e0" => :catalina
     sha256 "0b5556d33614062b0b9d39cc8d3f4046d562cbaa9b03498cf4b11c57debb38fe" => :mojave
     sha256 "a59870c437fe72ce7438726f79a44111d8352dbe50b7f6cf9d147210034a764b" => :high_sierra
