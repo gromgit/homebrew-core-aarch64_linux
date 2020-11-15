@@ -10,6 +10,7 @@ class Calc < Formula
   end
 
   bottle do
+    sha256 "79b3844caf8d7e0bdca720aa2c8c5668c4df580e62544c418bbd8058b98906a3" => :big_sur
     sha256 "d78863a41409a2e3eaee0b8e4c5eb21a84ee28f1c3f8a27545d6e1f3fe3ae213" => :catalina
     sha256 "1b4e5456d4965f8b74c120590070f74896c1fca85c8aa30354ffe519c1755600" => :mojave
     sha256 "7614247fc707caf03a96e302ab2e1324f6a3609cfd1cdd7c6389bca77511ff18" => :high_sierra
