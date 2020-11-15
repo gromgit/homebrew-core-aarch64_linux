@@ -12,6 +12,7 @@ class Physfs < Formula
 
   bottle do
     cellar :any
+    sha256 "00c1ceb61a64c6d9c23fe6de1c73a31e89f8ff1657ffddc9d688482a1a217ca8" => :big_sur
     sha256 "31693a34c610ea382a1b0832065db2b223db549ced6fe6a2f8c569d6b58bf19a" => :catalina
     sha256 "cb97a3a17728f3173d4c19fde495cffbddce965bbf6015e45882e3c27f267cf3" => :mojave
     sha256 "296927566472c976a578f89c4bd6bf0f518427a53d586499a8e202896d469ee3" => :high_sierra
