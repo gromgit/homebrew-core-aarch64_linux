@@ -8,6 +8,7 @@ class Libfabric < Formula
 
   bottle do
     cellar :any
+    sha256 "41d497d91e00d31dbaac6e133f5bfc6684f6e04bb91aba60f2a7146d18040790" => :big_sur
     sha256 "8aa0b77f4999eb110de1a377250b2aa82dc719a07f33197dc5041f257a64e668" => :catalina
     sha256 "0c297a2011336eb7e1b4273d7f204888b1c7d22e24ae6354676822b912874bfe" => :mojave
     sha256 "897aa5456f78ee765d586c3a249c75f4f96178de847c09a4ce45834701236903" => :high_sierra
