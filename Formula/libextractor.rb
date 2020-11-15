@@ -11,6 +11,7 @@ class Libextractor < Formula
   end
 
   bottle do
+    sha256 "57cc73af98204c3c4cd49c7121b34a2f4a312112700226df6d694d0a09e3bf6f" => :big_sur
     sha256 "1f9781fe4c690eca0d719016cd4f23bd94890ae69cc30c4c1caa47d919286483" => :catalina
     sha256 "0929de2de549d871c775fb2b3aaf22dc52377b504b8ed3d01ca9350a52704e39" => :mojave
     sha256 "5a30c428cb327ef0bfd2458feeeb638200df28acf63b688d598a79591cb1c812" => :high_sierra
