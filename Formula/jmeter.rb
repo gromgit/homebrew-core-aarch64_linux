@@ -13,6 +13,7 @@ class Jmeter < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "35782a22fb9fb63892756bc44e05e1e231997549e3bbf69674dd8fb86e814de9" => :big_sur
     sha256 "3acc6eb0511d25a8181113baafe6886ef137167205b9a0ebc116463e6ec3b01c" => :catalina
     sha256 "02634135916cb0aa45ed91c073ffba66824b8fd2609cd65d491e894cdae0b7e3" => :mojave
     sha256 "ffd194e084e78018d51d80129c22f424db57eaddad21990af6a9c8dd8d617a42" => :high_sierra
