@@ -11,6 +11,7 @@ class Dcmtk < Formula
   end
 
   bottle do
+    sha256 "375ed5cd0d4eefb919f99e6894f6beae3c366cb1cce76b0b048bf8924b10a0d4" => :big_sur
     sha256 "5b49e8b8d34cd1472f5091fc4d6e4b4a05133ac3cd85f6f428aef6c1013234b0" => :catalina
     sha256 "3d149b4aa7f6d76df7ddda09d845c4c43a0aa0617800b9ea25602183e213f5b0" => :mojave
     sha256 "70ba2b42c6a522f2da68ac47834f240db316afd12b388edb4bc7c1f586a18f2c" => :high_sierra
