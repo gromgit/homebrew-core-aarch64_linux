@@ -25,6 +25,7 @@ class Dmd < Formula
 
   bottle do
     rebuild 1
+    sha256 "d3e2451ad512f6201db49c6a0cca0a78ed4f0651a2169acf6dae0bba0328130b" => :big_sur
     sha256 "093076f19bfb6318241800aff24c6ba78a743e4ea28b13454d375b79de7da71f" => :catalina
     sha256 "e3fd5e418d448bebcead72a1f4cc0dea9edbeb2615be05561e821a3ee7ffca26" => :mojave
     sha256 "07b2d68d37fb32f0f4409a840a92fa084ec3623e5ebca5b54c4e0df589e44b28" => :high_sierra
