@@ -7,6 +7,7 @@ class Gmailctl < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "c4eed374a0bffac03a5a86eb7a1407207b1850d292cb58d61a71b62b7d1c9a44" => :big_sur
     sha256 "d3a358debf1f7335f2736a28437b8106f917a9449593a498ccf6ce2589d813aa" => :catalina
     sha256 "7695c67ce6a12008b8c04a84d4899cf17d7bc5d3ad32a9bca35c101c1ca65195" => :mojave
     sha256 "c2803a3f282d5b1b60b76552787d13ad54d0403537380daebdf09105793b87df" => :high_sierra
