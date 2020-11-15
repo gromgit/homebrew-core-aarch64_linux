@@ -11,6 +11,7 @@ class Fetchmail < Formula
 
   bottle do
     cellar :any
+    sha256 "fd22ee8f06b1b13f8e8e2ffbae80f46d265db5bf8d4ac5e32520e9b3442f5d90" => :big_sur
     sha256 "4d8de02963568efa7ee1d6981ba07a65a3a71dae716b6c39d50194041412b654" => :catalina
     sha256 "ec6784b3cfb19a9b71b5ad52b9a27d35cef4f059ca8bf0a00ae2efe824450de3" => :mojave
     sha256 "6c6899e760722945cf40667a1e6300180c5623da67cb024d21242cfd1e9c2543" => :high_sierra
