@@ -8,6 +8,7 @@ class Tdlib < Formula
 
   bottle do
     cellar :any
+    sha256 "5a739f9199a7f9f24fdc70afdbc632ab23ae84b2a3d67fafcffc2bcc5273832c" => :big_sur
     sha256 "c1a28a0f9a80fb62b6ac8a30fffcaf413336e9df49f79f9f952ae38c8840becf" => :catalina
     sha256 "08507a9bf3c9f93ff97666fe9478398768f135e7943145a82946e008acf543e7" => :mojave
     sha256 "12ce0917663736dc4790482c5545a6bee2b82dd7b304ab401c4232ba5d14a3f3" => :high_sierra
