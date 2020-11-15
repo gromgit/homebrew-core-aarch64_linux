@@ -8,6 +8,7 @@ class ChartTesting < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "5db5969dbd5a298a2ba69352776111842895f409d219d98c05c6a95f66679174" => :big_sur
     sha256 "f31d43837c0e6a7e2d01e92807f8a78663fca8fd7c4c6fd1fe48f683cad19637" => :catalina
     sha256 "def80e2b612e4304ee5a670eee3ab435b885ef2e6db0af6c6b95f3ff91a3f722" => :mojave
     sha256 "bc04c1ee82f44fa9f6cc85df8e2a4efbeb66639426a2e751ac6a25f9f441bdfd" => :high_sierra
