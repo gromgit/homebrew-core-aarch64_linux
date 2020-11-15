@@ -10,6 +10,7 @@ class Tass64 < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "8c9cac57b73b6e69b31534935f72bc832f9ee85618063bd93dde2fa932183330" => :big_sur
     sha256 "afefda676ae81f3340850d132e17fa408505d79da25fd50c42c3042ca3b4f7f2" => :catalina
     sha256 "4a1a224e806b0f9827ffe1f4e5e8ce792e616e6b2e829c278fad5c8a5ee958af" => :mojave
     sha256 "1aa51c3d25cf651f7d4725d89a022ab2510963684dc3b3ebe4845b488b3bb5d7" => :high_sierra
