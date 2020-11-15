@@ -10,6 +10,7 @@ class Amtk < Formula
   end
 
   bottle do
+    sha256 "6ab887f121458fad7c480b897bb296d48daf01e3379b96098ce18ca2ae9da7b7" => :big_sur
     sha256 "89e24e19e0614b13d387b9c0d2ccf89ac15f485edf49c7c39bcaa4f80deba3c1" => :catalina
     sha256 "004425110c03c91144cfd53df0f6141b05e38d86b64e96303cd6760db9e66a42" => :mojave
     sha256 "67ad617a78c6922647c2af49225a5f4b8fd7eff3635d0e7f8b4320687b896b60" => :high_sierra
