@@ -8,11 +8,11 @@ class Govendor < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5b69e8fa939454a773bf64f82998bc95523bf7fda3f037baabe25cd4cbb6132d" => :catalina
-    sha256 "b5bcf9c902173a5ea922be49153fb3a5f59d44534a7f4dbbb5b9f536c0607fa6" => :mojave
-    sha256 "38df7324a3a5292636a57c8c17cbdda94a0d529fa42f2e446f372a49b5697f26" => :high_sierra
-    sha256 "5708cee7e053271235d433cc1f7450f10540129810016095db622652621dc528" => :sierra
-    sha256 "52e2dd5debbd16a4da952ce16dd37d2697e16ba8509ff1e9a9551e7303ec6949" => :el_capitan
+    rebuild 1
+    sha256 "80a65c6a119d2b511cbbccc810db50822ebdf9f70ef1e46c5e6c17e2a1081ef3" => :big_sur
+    sha256 "654e979f975c3cf1174f6b1b572657d4d4d813551e0d4cf73239a2b6e2bc15e4" => :catalina
+    sha256 "913ae29b2c13520f049c1cca03f0a12b7aba75702fdb9c981395d3e888903ed3" => :mojave
+    sha256 "bf52da036c6701f20182ce7252e7920e4e12630f7e0bf0e3e3d3c9c88d58be8b" => :high_sierra
   end
 
   deprecate! because: :repo_archived
