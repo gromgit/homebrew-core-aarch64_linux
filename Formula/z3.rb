@@ -14,6 +14,7 @@ class Z3 < Formula
 
   bottle do
     cellar :any
+    sha256 "a8a2dab47dcde379343d66bc38630e96fff4f0af2a11f7ef981a7e535dab78d9" => :big_sur
     sha256 "214adde7572bc8a15e496c5d5c9e4ead2896f734c4aae4ede0769ac103668e9a" => :catalina
     sha256 "12808ffa55f75ef38a61faf4f973445a6436ccc1cae30fd29489b249fd22467b" => :mojave
     sha256 "037a6a59ab8b4c776421d4beb3583ce10b0e45b00c4dac9d8075ec56e0e9e858" => :high_sierra
