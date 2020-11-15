@@ -6,6 +6,7 @@ class Octomap < Formula
   license "BSD-3-Clause"
 
   bottle do
+    sha256 "61071dabd01169f7677c8a3794920719f5d746b261c52ec31f087d2c9c1cd407" => :big_sur
     sha256 "dcf938ee253a527143d78cbc39c20046015519b5aff741656016f0a67ff705b9" => :catalina
     sha256 "878681f950a14d49b47bd69605a12bae4f42f127b4cc7750de14b7a16f6a9930" => :mojave
     sha256 "92def71d469ce8d5a660d371eded16f8d25f9346e2fc3f34ffd105f3bbd2060c" => :high_sierra
