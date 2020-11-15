@@ -12,6 +12,7 @@ class Suricata < Formula
   end
 
   bottle do
+    sha256 "1ea262ba672f76134a1f03b5807fe51b2a9836be5aa425195403933ca7d41ace" => :big_sur
     sha256 "357f14c8a5904953453139e1d9363388d1f5779fa21ab413357a4b476eff6c24" => :catalina
     sha256 "aa86c75ad788ab24ccd6b3dcf47e21e2766bcf018a302d67bfa569289da59edb" => :mojave
     sha256 "5d885e9492f79dcc5cb039f3a5012dc8eb3549ccbf91695c563e73ffd205a329" => :high_sierra
