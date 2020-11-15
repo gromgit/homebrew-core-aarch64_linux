@@ -12,6 +12,7 @@ class Widelands < Formula
   end
 
   bottle do
+    sha256 "9dc7cd97fbe6488adeb395c5fae344127d86297f438cf3a384ce8d8d0d71c712" => :big_sur
     sha256 "bd894b479827cc07ab590b02175f21ff9d0fcea173f2e67e28a9b89f1057a99e" => :catalina
     sha256 "afcec9d9d45e6353763207b5afc7d63794bd3f103dc38ae60a9174bc14d34eab" => :mojave
     sha256 "450547ad552cfc246160e375858adafa37565ed80a2be772acca595636980ea5" => :high_sierra
