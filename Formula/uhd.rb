@@ -13,6 +13,7 @@ class Uhd < Formula
   end
 
   bottle do
+    sha256 "3ca192e6af5f393b5317e90db8c3313aa8bf16d7fb9daf53bb5467ffbe3a772e" => :big_sur
     sha256 "8e65f370dea3f23cb226e35595441c1b998f1044737e3f327cb15bcc6c12838d" => :catalina
     sha256 "78652146db42531d9af14c776f8acb4eaaa1abbb2d956aeedcaa27d91f7bd305" => :mojave
     sha256 "107ab41c9790f36ef37efb7382a65d8cd57f8bd872408943f8224dc3061d1bab" => :high_sierra
