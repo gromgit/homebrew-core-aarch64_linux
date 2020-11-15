@@ -13,6 +13,7 @@ class VorbisTools < Formula
   bottle do
     cellar :any
     rebuild 1
+    sha256 "671568dbd6ae11ccaafc0e0a3a4bd467898bfa6d700b2e21db8457f900c44778" => :big_sur
     sha256 "71a81bbeec2d79ddd7f39858cf66a450fac9d542824c30a064298229d6637594" => :catalina
     sha256 "c3e402519ad170a0a37d80d394d8afbe905985784f8ea5d93fcc84a4486a9977" => :mojave
     sha256 "e929c31331ffcb58d21cb086184ed747185dd8d0f4b7ee1b98134cabe44490bc" => :high_sierra
