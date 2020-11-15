@@ -12,6 +12,7 @@ class Libotr < Formula
 
   bottle do
     cellar :any
+    sha256 "783eead021ab3ddb3897f8c40e91bd6aec58e5084ef1df3c45a98550591ad29c" => :big_sur
     sha256 "b841026a4752756107affe9f6016da14ea5a9a0a48b33ccd461eced5cd89b64a" => :catalina
     sha256 "90da0033157a7771cf7239d038f36e0d613616f1918a168fa763f3e2eafc0106" => :mojave
     sha256 "0b340441feba4b325c3ff5c26a9e79b16294461f6f681ae42a2a5d45966e7391" => :high_sierra
