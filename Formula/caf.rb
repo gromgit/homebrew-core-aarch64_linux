@@ -10,6 +10,7 @@ class Caf < Formula
   bottle do
     cellar :any
     rebuild 1
+    sha256 "0779640072ac88745f00f5946958a815f0deeb19dba46509181fd2ee944d4aa8" => :big_sur
     sha256 "131af3b3422867d6cb4c9e46d773e7b102e2dd9209be5d844cbbe99a1a7c6883" => :catalina
     sha256 "20b60e3ee9f2953ac5453aeb1c5d724b1141f5b90be8b2b2d611f9f0938ff913" => :mojave
     sha256 "be54ecedb3968591490e165d7260b0b8c19745e44d125fde2a5cd209fa71fc16" => :high_sierra
