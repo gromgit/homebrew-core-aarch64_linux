@@ -7,6 +7,7 @@ class Opendetex < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "41eed284b3ec304b8957d1d4c5fd36113f1a427f3ff458de513996096e7269bd" => :big_sur
     sha256 "db8c07a7987de189582449f403d15ecbcf7867cac9b1a6694ffe91217fa3f2cb" => :catalina
     sha256 "d9b5550e47478394dd53f9b307bd0398488ac93311a4aa1544f9b7172a0a310c" => :mojave
     sha256 "59bfca18bfe6cf097d158a3e411e0f24f4c800b52d4d43d4f939c8e23082d009" => :high_sierra
