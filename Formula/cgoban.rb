@@ -12,6 +12,7 @@ class Cgoban < Formula
 
   bottle do
     cellar :any
+    sha256 "a224cfdd74e8cc232edf360168bc0a7061abf5ce58b8c0723e5df156cb00604d" => :big_sur
     sha256 "e61d461ae44716ab681151657ff73af5b438f306419142a247543b14de951ab4" => :catalina
     sha256 "65a58482e8da31098a71ed49467b069bff5a6172df8304bb1bccd579301abca2" => :mojave
     sha256 "4fc05de2c69a98f7c1dbd55303a508ac50e6bb3a3b6297ebd43ec4bf5a79c14d" => :high_sierra
