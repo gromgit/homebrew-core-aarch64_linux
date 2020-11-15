@@ -11,6 +11,7 @@ class Pidgin < Formula
   end
 
   bottle do
+    sha256 "db281d2a0ba80382da619c2a5478db48592b40ab1dfaaf39c33f36f3469c37f3" => :big_sur
     sha256 "4634da7bc606d00dcdc9e3ea42f00d33a9764d6d231b6a7baef0c7a3ef451e74" => :catalina
     sha256 "a549ae59ccff2482dd02c9eea51db80fb831ab7e720f7f2ec7df37c60eb7f1d8" => :mojave
     sha256 "99708561a57b3e47d603b8b46b9f3a7dd8fc7f6bb08746ce996130c10ef13784" => :high_sierra
