@@ -12,6 +12,7 @@ class Clair < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "0a67ddd722919a47f88db76cfa2f10d052d5a72dbb78819dd5d6841cbba1f552" => :big_sur
     sha256 "0d68ea1e0d988662effc3192756c8b5c35051641980d7853582b9af313c5cdda" => :catalina
     sha256 "65fef5fe64e988408e491d404ec8514526c550ea785f37bad807626e3e82714a" => :mojave
     sha256 "902c4992f09e044694e5cad96191e5df4f4e1e6dfb51b6a25122a25f0c9ad9a9" => :high_sierra
