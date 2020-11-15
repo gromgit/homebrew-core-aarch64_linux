@@ -12,6 +12,7 @@ class Gtksourceview3 < Formula
 
   bottle do
     rebuild 1
+    sha256 "2dc6c71c803b006967ee4154912c7f6e050c5c8c8f68a113335e66f48fe32277" => :big_sur
     sha256 "e82371b46c1d8206c5aedf9966835e27ffb3bd011ad936bffa0e26cfe3c2808c" => :catalina
     sha256 "f9f3856ad743d604e084f77e68d2edd53d99093ce06dc23b9f0cdbdc5e70c5d0" => :mojave
     sha256 "d67cdf5db8996c90d56ad6468c830fcb8e28b26753ab7d332b3a4c990c17e84b" => :high_sierra
