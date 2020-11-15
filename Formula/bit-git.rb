@@ -8,6 +8,7 @@ class BitGit < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "10fe23fbb229098ef6548909184ff2173f6f55831f01a9555d91c2c7ec6808a2" => :big_sur
     sha256 "627db9ab99558d5515cc6de83dd6d79fea1fb6dffc4541baa0aa181f24de1732" => :catalina
     sha256 "43dfd72b27f1e48b105c5175da4993dedc809438644a3b9401b1d567c2b1325d" => :mojave
     sha256 "23c7ec23e0d0da58e0b2da1d48fb740727765981c414269f9f11637e813e111c" => :high_sierra
