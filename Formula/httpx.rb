@@ -8,6 +8,7 @@ class Httpx < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "9ff450dc012f627b972c20b08d3e6ee3e9a0a48e3b5115e14165ac4ab18a9bae" => :big_sur
     sha256 "5bc253dcee7026509d3a90ca5055907d08483d7dbe5c60b6a5000daf8c70d4b1" => :catalina
     sha256 "145169991f1cbe15fae1b7070ea067074df5a2f81c2774f114854a74e90c4f4d" => :mojave
     sha256 "39efa049e8a2e7c657f0762e2792f24586f3bb309397645b892e14d34be07714" => :high_sierra
