@@ -13,6 +13,7 @@ class Fdroidserver < Formula
 
   bottle do
     cellar :any
+    sha256 "a53a754f00a3b4e32cfe70efac5145a5ae3be5d6cc1a4483f5f7845f1e5150e2" => :big_sur
     sha256 "6d640234123d13d4bdacd8f84ecdf417563b461f35fb003ba77a94cf76392e1d" => :catalina
     sha256 "4c63bee7bfbc167cbca0205724bd8fb32730f05370d0944776ccd4f1938b8646" => :mojave
     sha256 "b0ac3694db543cacc00f92f9f08962b4d05f7199a7edf5ee8d45bdf9a37bd7b3" => :high_sierra
