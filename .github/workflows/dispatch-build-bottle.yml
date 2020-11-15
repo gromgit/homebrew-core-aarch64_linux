@@ -113,7 +113,7 @@ jobs:
     env:
       HOMEBREW_FORCE_HOMEBREW_ON_LINUX: 1
     steps:
-      - name: ${{github.event.sender.login}}
+      - name: ${{github.event.inputs.formula}}
         id: print_details
         run: |
           echo sender=${{github.event.sender.login}}
