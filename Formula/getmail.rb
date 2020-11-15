@@ -11,6 +11,7 @@ class Getmail < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "f8b68c2c3d3245e6ef4a7bdb7bec68a7c12cc990a6455f3dd543822dda5573ce" => :big_sur
     sha256 "571bce56f171a3ea5274bdcb3aaac6bb18dc20323ccee9e513ca14d15f7b75f0" => :catalina
     sha256 "bc414cc8a0f41c10adea2fe326d90567ed5fb143db7a4030db72c40c94f816d5" => :mojave
     sha256 "bc414cc8a0f41c10adea2fe326d90567ed5fb143db7a4030db72c40c94f816d5" => :high_sierra
