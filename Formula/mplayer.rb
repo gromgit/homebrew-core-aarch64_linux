@@ -11,6 +11,7 @@ class Mplayer < Formula
 
   bottle do
     cellar :any
+    sha256 "63fb6ec4952313df37a928d3e450e070c551a9e880711be27370cbaa3dcfe5e6" => :big_sur
     sha256 "d46c9afd22fbdda5423877d2583732e6c88ee9bd52b26c8b79ea8e90c9af7d59" => :catalina
     sha256 "72da2446b0077085121da3cc3437a3e07d0bd2136529dd7dfba79d05bca1b405" => :mojave
     sha256 "11c01635f619e3aa77a85cd095be0b302d2b25fdd4362f47340c93122a113775" => :high_sierra
