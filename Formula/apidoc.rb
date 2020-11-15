@@ -9,6 +9,7 @@ class Apidoc < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "a21c5e41aad85415f9203b521ffe4602aca269e6394798c1a350daeba409931b" => :big_sur
     sha256 "c61fa821d8fff7c5a1dc82b9a7e8f1256299cd042054148b69cbbb88e646c7aa" => :catalina
     sha256 "5af452f07506102633a26f2407e56f5f190d8fc0579d2df468c433a0e8e2d5c6" => :mojave
     sha256 "def407d3837157a7cace0286b075f0f3e4df1b069ba4d53e67b769f497385d6a" => :high_sierra
