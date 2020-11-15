@@ -7,6 +7,7 @@ class Libxaw3d < Formula
 
   bottle do
     cellar :any
+    sha256 "4a5d334d3ed17d4fe8654edc1cc8e0168a282792e5a9e9c5e82b4d1ff1c260ba" => :big_sur
     sha256 "e089705cc442b4076b7d3b9bc86a1379eb193b73cb57387d04809411876eb755" => :catalina
     sha256 "b5510c021114d1579116242eb88f4fbd6a9fd3d3a61292a17d6158c02ac71194" => :mojave
     sha256 "ccf2fd19db504f82ab9f280525a879bd0669934a51cdc69003238d0626735b52" => :high_sierra
