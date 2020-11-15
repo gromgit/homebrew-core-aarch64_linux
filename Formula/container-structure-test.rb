@@ -8,6 +8,7 @@ class ContainerStructureTest < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "24442f575335f02d97b542f410e76bd944319001b72f06be9f366bd7e5beef89" => :big_sur
     sha256 "e9901c9334658108c1aed10c2d0e8ae6509a436f69133b14fe8452978e7cf9fa" => :catalina
     sha256 "8b8173563086f3e7587b7b7c8419bbca9196f52460a80636070225636075611b" => :mojave
     sha256 "523c4f21e5ce23befd82ae9d5395785c7541736b3b43e827a04ecae61e588791" => :high_sierra
