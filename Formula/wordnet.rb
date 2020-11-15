@@ -9,6 +9,7 @@ class Wordnet < Formula
   revision 1
 
   bottle do
+    sha256 "603c49d51a805975f31491b9f0faec95900cc9bde2042a3ce042c14ed4a2a808" => :big_sur
     sha256 "56264f8aa182e0fb8d64b0166e2583465b6e373b5d69c7e2247e5ec011467a91" => :catalina
     sha256 "8fedff541aa821dbee4d0396c2137c1cdc43968e6772a69caa664ffabbc23dbe" => :mojave
     sha256 "2e7eb00a5f63eec2972c927c4e566cf51121e61f95d5f04e4e29443950e3b42f" => :high_sierra
