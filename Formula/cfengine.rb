@@ -10,6 +10,7 @@ class Cfengine < Formula
   end
 
   bottle do
+    sha256 "f89f448c20951a96e061ec06cc73682144c15a93a42b93eaf18b8118ec0d03f4" => :big_sur
     sha256 "0ab2ee4f191720ab6e546f05235449a62c0435c5897a1d9bd271ba5de2d6192b" => :catalina
     sha256 "11ffdc33ab4a8004aed11a71545dfb230c15c1a07780b73955a7095df223c2e0" => :mojave
     sha256 "359f56d367aa77a65b089616556c7caf02aff9144fcbfc1eb208b2582d5a1ba5" => :high_sierra
