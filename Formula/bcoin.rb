@@ -11,6 +11,7 @@ class Bcoin < Formula
 
   bottle do
     rebuild 1
+    sha256 "18e9b1f2074c5c98b15cb118b72a6104db12e9c80bc56d4c74374d86f394dece" => :big_sur
     sha256 "3f46d506838e38420dc9ed5bd5b8c5c3ae8038bea02fad83f36f1ed36cda9046" => :catalina
     sha256 "5adbc476b4e3ef00c5e8fe7fc1554a891b4a3b09bd5d318103d0ac44f7540d80" => :mojave
     sha256 "c4bdb0a86a7fbfce14261af58ab4954c93f2eba09806a6933959fdfe8698878d" => :high_sierra
