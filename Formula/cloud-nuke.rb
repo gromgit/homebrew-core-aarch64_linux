@@ -8,6 +8,7 @@ class CloudNuke < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "dd4f3352cb74e48bf3f216cb135e91d9159459e6faa263f306dc7dc4a4126bd4" => :big_sur
     sha256 "ac2f1a0c8c8ad02cc0fb1244ea067ee158f9073a254c06dbe118366b2ae26b7a" => :catalina
     sha256 "21ebf7a8ab689ff06593b2b1c28eb22e9e0cfa2d97db33542a793a284a35f222" => :mojave
     sha256 "7f4a022d959addd1e994a471cdda468faa790cde402a32f299772a5eb60ce451" => :high_sierra
