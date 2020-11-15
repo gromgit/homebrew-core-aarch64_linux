@@ -15,6 +15,7 @@ class Gtkx < Formula
 
   bottle do
     rebuild 1
+    sha256 "598e9ab4f7b5464396f9eab2d378877c430a568ed83d5c563dcdfc88314fb550" => :big_sur
     sha256 "09e223d16f3e891d2a4184c66fecbf0a777e70e23680ac794dd8c44e4a63d5cf" => :catalina
     sha256 "cec64106c085533a58f8d436f029b2d7199a14cd15af9ece086814396ba48b0e" => :mojave
     sha256 "30ce8d0a4062200196f8d802ae75769d8e05d530c338619d290704c46a7d317b" => :high_sierra
