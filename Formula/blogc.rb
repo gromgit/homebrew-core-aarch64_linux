@@ -8,6 +8,7 @@ class Blogc < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "0261ed0fa3abb0db46377b07efbe9766498e45c7da54d0b8b4d80899fd08c100" => :big_sur
     sha256 "6a317dc37a8c6fe8c0c607f0c5a94a2d3037b892896c7442e365eb337abb3a2f" => :catalina
     sha256 "26e69c263cf562fa5cbf411a943d6ff28537640472d09b39d47fb29e1d12ddbf" => :mojave
     sha256 "aed4dbb0098a80cee16f66523fe1bee118f5aba60746089a174880c34fbed0e2" => :high_sierra
