@@ -13,11 +13,10 @@ class Lz4 < Formula
 
   bottle do
     cellar :any
-    sha256 "a4e78dfd2b3cf4749dd2fd9d53ca873bd032469e670def61d61272a6c3d99da6" => :big_sur
-    sha256 "7de6165d86c7a7ae01d254a5d0ea0a6d5876f90cffb63a2570942d46cca6373a" => :catalina
-    sha256 "67ca428e60e2c2f6e524dd3de42629c1a616d28b2c743b66bf4cbdcc3b28ea46" => :mojave
-    sha256 "7f60879b81a3a9ee52b3e9b87ed265c4934058b841e8f5320044f826b4660a92" => :high_sierra
-    sha256 "00d3610cf09b0fcde34928890f5dac870ebcaffacd6eb51eaea05b754753e462" => :sierra
+    sha256 "7024d0b6ee857352cbd3138f752496b87fa27252adbc6daefa4a6c64d3e347e5" => :big_sur
+    sha256 "899aeb12833a982e06013a60aa9b1ee69e3f77f969a5aa2dcec02ad329f369bb" => :catalina
+    sha256 "e6adc6da46164495cf129c9e54bd69c6620eb4622a38e403edf1b5f488d044a8" => :mojave
+    sha256 "46e99b27c33fd51a4394850be3559ea7b69fc26060ab2095dae315be14aa5e94" => :high_sierra
   end
 
   def install
