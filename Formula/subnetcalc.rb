@@ -8,9 +8,10 @@ class Subnetcalc < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "3292425456f8c87e8d3d468421de889ac20f859e4d00530646c973581ffc4543" => :catalina
-    sha256 "d8537fab1388a387ab985bfdd841b106bccd663fbc0d53062af8cbdcaa9c7d35" => :mojave
-    sha256 "367c6a6f8104ecee70216a06545e2b7e1eb81ffb887b6b4e335cd5acd1d56e67" => :high_sierra
+    sha256 "2e0914221773eb6805b107278fe488525c655afe891d8575bf6123c8716824bf" => :big_sur
+    sha256 "a75a2bd86939439d349617d4f9bcebfd2cd06fd8521259ae528618de3498ea13" => :catalina
+    sha256 "4f04ffbceed2e9f1d9a5f8d04e92303ec8d8cc677d1931670fea0ee7d0c84259" => :mojave
+    sha256 "a08ec739f53261955b4d4478be8347adb76d7061e0e61b776e2ff42539747159" => :high_sierra
   end
 
   depends_on "cmake" => :build
