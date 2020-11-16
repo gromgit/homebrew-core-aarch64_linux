@@ -12,6 +12,7 @@ class Biosig < Formula
 
   bottle do
     cellar :any
+    sha256 "3d9649438fd9e04c97bee4ad9595bfcbbe09ae83f914e8ddd011fef0705b5544" => :big_sur
     sha256 "7ddfff1529286000cd32a28ce1bf735cfe810804c08b20eaa2fe39a587f8b73b" => :catalina
     sha256 "4786b282a950d325f91d681615a9d60cc8335703f818d527c5d55f7718b206e9" => :mojave
     sha256 "0818b0bdfe19286f9d18de35d5fa72981b4b1e1403083c92136c7d5c937dbe6f" => :high_sierra
