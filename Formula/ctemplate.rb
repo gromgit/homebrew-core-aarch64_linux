@@ -9,6 +9,7 @@ class Ctemplate < Formula
 
   bottle do
     cellar :any
+    sha256 "4211a546bfa2216bee5c09548525a01682be861a5ed98d64fa414b743a706863" => :big_sur
     sha256 "450518a03eec232531f67655c372b5be4cdb9d35d532d7a8941863f74a45bca2" => :catalina
     sha256 "37f5073fec13f28f3869c6e80d89c9a8659e9fad4fecc30721abe964f927ddff" => :mojave
     sha256 "6f0e5b78eab78861361f4a4e27cb264ce33d641c71c5981950bb28209205cb1d" => :high_sierra
