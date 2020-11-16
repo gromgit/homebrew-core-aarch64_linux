@@ -15,6 +15,7 @@ class Rbtools < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "6822bdaeada6203bd5a1a83088d0897fb3c4e87b44d821309e00de8208affc76" => :big_sur
     sha256 "0b12f736ad37628d1fb9c87c909985696a73518c9f7ff5377f48be9310ca399e" => :catalina
     sha256 "654a068175e2e29facbef092127b5848f3a4464fe1f2077cc08e0be1f3d93e5f" => :mojave
     sha256 "8982afb981edc037655be37cceaebd5a352f29b05e6385d8b67ce678f832c5bf" => :high_sierra
