@@ -13,6 +13,7 @@ class Libopenmpt < Formula
 
   bottle do
     cellar :any
+    sha256 "54de329b1d56520a69c206277e059ba40e00975f74541e19002074807c91808c" => :big_sur
     sha256 "c5277617d0a90bc0928861bffa8ded5ec2607c5db240f7b1be58478cf74fc772" => :catalina
     sha256 "ca7ec39beeafbd8e21ed2b5a0076ae4c603b3e55f150ee241a9f12a17a36b080" => :mojave
     sha256 "be35d3a0df76b160ff4fe9bc5ebdd7a2ac462d431bca56f451b3829fdf08ca8c" => :high_sierra
