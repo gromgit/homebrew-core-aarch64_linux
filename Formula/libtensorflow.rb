@@ -10,6 +10,7 @@ class Libtensorflow < Formula
 
   bottle do
     cellar :any
+    sha256 "c48e0b193c0094c2235d480177b74d9c7719c90da5ddb99f4a048504022f43f4" => :big_sur
     sha256 "0d95170da7f97c7744ad544c0ebd7a2c69db7b463c6dca5f9c082976452e96f6" => :catalina
     sha256 "2fa9f87fe4706c9c3a020b16ec26ea9dbec18ace6d5d98c29bd341ec13d67878" => :mojave
     sha256 "2e405f287eb13ef4c6837ee66cf48afdda2d86849c8785c14c4ed399e56cd400" => :high_sierra
