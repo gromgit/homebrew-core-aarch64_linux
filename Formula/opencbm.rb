@@ -12,6 +12,7 @@ class Opencbm < Formula
   end
 
   bottle do
+    sha256 "2c6f695b90e4b6dec2954d4cab254abe8563998311634ced199641a9b8c65aca" => :big_sur
     sha256 "0fcf92ca18ebde6b9d431dfd1ab8667ca93ee59c53f85e818eed9f0b8ba78306" => :catalina
     sha256 "489ae793f9f226c93667cf67f23d7eac1cde97d4ed33549bbe9731fcc824eb2a" => :mojave
     sha256 "d9555da83fc70f801663f13cfc4ed34241feec72d29125fb12a2105fce414210" => :high_sierra
