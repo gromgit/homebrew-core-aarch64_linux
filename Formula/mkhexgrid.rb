@@ -7,6 +7,7 @@ class Mkhexgrid < Formula
 
   bottle do
     cellar :any
+    sha256 "ea516f25e28f2f0dae0223de16f1d27abd08f658ee85fb8caab7c41f02f3932b" => :big_sur
     sha256 "0e358685212d241af28055f0a47392bf077575469426e5bc4e38352847451325" => :catalina
     sha256 "dc24513041f3dc8ae8cd27abb07aeb028074a636b3a139dfa6e862eee73237f5" => :mojave
     sha256 "66011c65d0a32036f58b67ae41ca6a61eb307bc92d958dec026f88e180cab972" => :high_sierra
