@@ -8,6 +8,7 @@ class Miller < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "775f496bb2d1aaee32a3bb103eb85cfb7b8c4937972b36f7c3960f4a826ca05d" => :big_sur
     sha256 "f723f639b78b03e09657ec505aaac48b7971fbe924b4269f860f1bc97f7db9cc" => :catalina
     sha256 "36c0835f067998aa8458762915d3cfaf8304170fe47433c43f7001a302110e08" => :mojave
     sha256 "e034b65d138c356931f0c29d5808d6d8cbc3468bfb7a0007edd37637f0dd265b" => :high_sierra
