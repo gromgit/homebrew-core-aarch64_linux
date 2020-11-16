@@ -26,6 +26,7 @@ class Id3lib < Formula
 
   bottle do
     cellar :any
+    sha256 "18f0b568466493ca322662357962fecfe1774844ad140be1c2d23443c2845ff3" => :big_sur
     sha256 "914ff24e2ca015f81b5c58fbd39f1a059c10ecbca87d09cf7e77285435bd158e" => :catalina
     sha256 "fa00373e74d0b57967108dd48b652bf6750c742db31ab72ff9b7c8c777ba181e" => :mojave
     sha256 "33c419dd2789c20e5e71b96185e41b2c81b2056d84b0e1a5cea0835e58dfb572" => :high_sierra
