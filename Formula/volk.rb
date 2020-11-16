@@ -9,6 +9,7 @@ class Volk < Formula
   revision 1
 
   bottle do
+    sha256 "b7441460759ea94e1045325beb3d62e5d97e4d11bc80e60ace2242b225b13496" => :big_sur
     sha256 "863d6958c08b8f7bbe556c6435f086d7b8175eef7cc78c9f86abb78d27a6f493" => :catalina
     sha256 "f46852e225b61a10b6c36962298f88f6b17f707426f10052454ff8e497300ac9" => :mojave
     sha256 "cb355f044c6a69ef69f0375c57d2bf22ecd723dc1189a10cefd1466e5a0ee0d4" => :high_sierra
