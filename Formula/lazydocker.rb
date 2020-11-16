@@ -8,6 +8,7 @@ class Lazydocker < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "68be351eabf1834a34465ee7ee44ef5d006252235d90374e0a35e4f2bceb408d" => :big_sur
     sha256 "beb117f1a6967c87d619fb493ba6a4ec03b528ff55e568b8f740245e0679d1aa" => :catalina
     sha256 "0caabdbda1ce740c6a76952d40c8b8dc28acf936860d5f117113a9c3370ba84c" => :mojave
     sha256 "129c5552e5b09b98e170878c7713e52310daa8c3ab507200935415e4621ee1ce" => :high_sierra
