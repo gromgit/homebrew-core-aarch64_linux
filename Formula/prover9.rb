@@ -8,6 +8,7 @@ class Prover9 < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "a81af1adbb27059709ec9bd9afd30e7819fbd750ea18736c079640058e9ca5b0" => :big_sur
     sha256 "1f637c295f07ddf31eedf6bcc73b957584da4d55cb92c7bfea3264d6c3780d1b" => :catalina
     sha256 "5ae1f642fa781841fc843a548b5327cf1dfb8d8c4fbe5ea83ddffef004282d57" => :mojave
     sha256 "055cf6646dd19effa87d7b9fa8e820c24710a023bcefc98c35604205530ab2c3" => :high_sierra
