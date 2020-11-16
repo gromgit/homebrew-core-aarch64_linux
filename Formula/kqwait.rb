@@ -8,6 +8,7 @@ class Kqwait < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "d628f1544a08964c38352d12b7d7c8eab0317391e7eceab195d11882852b4ee3" => :big_sur
     sha256 "a126094dabbb2fd9a2c539b1515657c1855bb0c971492ca0d6c56aa97bfebe48" => :catalina
     sha256 "474c5ae5f69ca9a2a239d601733b88ad2eeca8701bae1b5431385bb05fff6b24" => :mojave
     sha256 "dff2354e240808ec604ebd457c45ca9f2fe540fc235fc30c71c7d4effae5d0a3" => :high_sierra
