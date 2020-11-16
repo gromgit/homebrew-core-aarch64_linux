@@ -7,6 +7,7 @@ class Libcanberra < Formula
   bottle do
     cellar :any
     rebuild 1
+    sha256 "37f03c26282f804ee5d3c1ae6335c53b494cc89418c017ea3ff3e7c1025dcd12" => :big_sur
     sha256 "34ff83c6dc8af0afc1f1988ebde1ccb4c17d4604fa6d36567daedef43da3047d" => :catalina
     sha256 "3d32a254ac069ef41b785f6950e3eea625de6faaf99d2402236b451f8c765b05" => :mojave
     sha256 "561aa9aba4e6b5f191b74d3dd1c96de9951e3dc5b696d93abaeaa301aa117bae" => :high_sierra
