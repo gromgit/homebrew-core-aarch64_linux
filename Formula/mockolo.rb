@@ -8,6 +8,7 @@ class Mockolo < Formula
   bottle do
     cellar :any_skip_relocation
     rebuild 1
+    sha256 "88b19c71e47e5badad6215d49877e65302da8ffd95f4aedb3e793a065106b395" => :big_sur
     sha256 "0cdb833934996a911b08f7eedfa44c1bbf7ebcf50823eb0e8c9a382170ba4bbd" => :catalina
   end
 
