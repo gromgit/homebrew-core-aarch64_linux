@@ -10,6 +10,7 @@ class Hevea < Formula
   end
 
   bottle do
+    sha256 "7bcea50f197e11b68f945adb9f0e9a0fb9603a8f1fb07269c3ab03f012693023" => :big_sur
     sha256 "34fd968c75f335330d256da9ad1b3e39b65b4286deb36810f898a6a729794b41" => :catalina
     sha256 "780ecfdaaac0985d9d9a6ef2b92c966d101144637bb65c41880f9b71c27c3c13" => :mojave
     sha256 "851ce38d9468eee9b2548f303e1e9d029e863dadcf90caa68039b8615b5acf07" => :high_sierra
