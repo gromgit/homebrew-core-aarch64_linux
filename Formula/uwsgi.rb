@@ -17,6 +17,7 @@ class Uwsgi < Formula
   end
 
   bottle do
+    sha256 "74b43633e464fc0e7c77a5878c6c30653c281d1803accab14449cef015e55360" => :big_sur
     sha256 "54ef215cc4b0dd34c256e757b8ab6bfe691e061429dd51909af1c3c08cf4a580" => :catalina
     sha256 "f3ce20a0196e32d76e0c355672bc9401fa390f8fc2e64d28e011e07d65b6c8f9" => :mojave
     sha256 "4508c03d1f3e7df0dadb55f6dfe48d9fb360aaab51195b52784c15791f3f2da6" => :high_sierra
