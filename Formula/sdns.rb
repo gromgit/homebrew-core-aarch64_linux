@@ -8,6 +8,7 @@ class Sdns < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "a645b63c434d598a348208a5967d2c3e20959f3b17a8015ff70f39504d4b2c79" => :big_sur
     sha256 "f3adab56dd15cdc30a5ece4f24a7c2ef3900cc1ae779660609885ecbe9c9add0" => :catalina
     sha256 "6bed2b4a199ac0851bc2afd974013245c7b9625a40b25db03a6d08344867f37e" => :mojave
     sha256 "6ba4e92207324f66de1bcff838fe1898f057d102d076568c18c842afbeb717aa" => :high_sierra
