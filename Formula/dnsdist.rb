@@ -10,6 +10,7 @@ class Dnsdist < Formula
   end
 
   bottle do
+    sha256 "f22642d83c7b76914c05a2607c660ac8a60158ff4ac6287114fcb3ff86a4328a" => :big_sur
     sha256 "c21a37f8b202fe9c3257d3b3bc13058d5c55b2cb86dd2ca42af541bb27de9160" => :catalina
     sha256 "18f713b5f63b18ac0aa5fa40ea0cbe088b209a5ed7c0c035cb6f8dedad2b891b" => :mojave
     sha256 "5894b2dd3badaa2e8c7e4b3fe691870f0477d3b7c8461465cae6c6891d3fdc40" => :high_sierra
