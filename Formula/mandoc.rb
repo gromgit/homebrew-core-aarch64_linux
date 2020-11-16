@@ -6,6 +6,7 @@ class Mandoc < Formula
   head "anoncvs@mandoc.bsd.lv:/cvs", using: :cvs
 
   bottle do
+    sha256 "62085d74ed9eb8c3765e3f187784b0e55842f0ad666de8f8e66463a2db09b791" => :big_sur
     sha256 "f408752db9b1ba4cc1fc8f47fdf41e1ade8abbcf243e947938efbbea550006b4" => :catalina
     sha256 "78ffbf8bee7e5135ea303bb861f432288f2d48d403d7e932753b1ef962348917" => :mojave
     sha256 "3236fdca9fe2cd8cca29d246d9252eaeea8ceeb7d8f5251574c2bc771a841647" => :high_sierra
