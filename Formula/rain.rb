@@ -8,10 +8,10 @@ class Rain < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e69463fc1800789c8b6a02560597aeab9e5f5bbf2dd555f2adf68bab49ae5ec8" => :big_sur
-    sha256 "b4539bb5e88e61706954b63cc0e330755324e0baee5d78ad63b5e2248b250af8" => :catalina
-    sha256 "c48a837ff273ca1f91b11beb8fd65b33edb83e340d73d80b4038f5c432a6801c" => :mojave
-    sha256 "d78bf038a48d0618a2263e72e4acd8e3a1ff10340974d585fd826a35c7b8c0fa" => :high_sierra
+    sha256 "edf9b2482b39525644b682922d1653deeeb2fbed49b35ba5a40faa0baced1bcc" => :big_sur
+    sha256 "988710d2ad8fe440006db2b7308570e2f0d16cb5697d0e2bae222138cf76be91" => :catalina
+    sha256 "15924ace4c68f471cbc6f4d89d9657cba5033bbb83f85e5dcac8039b7f7c98d3" => :mojave
+    sha256 "10d098488c17198175e8494441c5313a93a89dc14c4eefd3530b78d9755051f8" => :high_sierra
   end
 
   depends_on "go" => :build
