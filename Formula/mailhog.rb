@@ -114,6 +114,7 @@ class Mailhog < Formula
   bottle do
     cellar :any_skip_relocation
     rebuild 1
+    sha256 "401803d928f308ba6b05c8e3450e6a6a1c8d4c8e198cf500432d8364d08f7b1c" => :big_sur
     sha256 "e127d4cd9bc97838be1586912d0fa14370062f9f98f901ce0de9faf6c9d4fba4" => :catalina
     sha256 "58b7a9427521adeb1f65aa961e7548532c3d2c1141bd167deba8ff031d90d2c9" => :mojave
     sha256 "de3accd2587eb597e92b31fcf6dd93e78b0c0e52511680a6354d17d066ed776f" => :high_sierra
