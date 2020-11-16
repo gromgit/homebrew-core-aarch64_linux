@@ -15,10 +15,10 @@ class Grpc < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "0588400a642f91dc3a04a51af045f20f47babc301f87ba8ffa5c7493c2e618a7" => :catalina
-    sha256 "69135cd3114f1ea57d34be778a992c0e56e9d01253d8f48966e6f5cd51ccf6d3" => :mojave
-    sha256 "47ccc49dab77f9844283f1edd05a82a4ae64b8f86fd8943b6580ee9fe4abf915" => :high_sierra
+    sha256 "42e892a55e3fbbd128f65f48cfe8ae59414c15508c49128525841105fbe2ca5a" => :big_sur
+    sha256 "b4336b217349d80961690d4ffeaf498be65855eba290847ae31f5c02f8e8ac4c" => :catalina
+    sha256 "ac0adba235aabbea547163407944d441bd8ca30589f1d0778f6f508b67db6de9" => :mojave
+    sha256 "762bcf5de8619962cad10d9692d3a6f9950af9c1db61f04c4d402449d0dda818" => :high_sierra
   end
 
   depends_on "autoconf" => :build
