@@ -12,6 +12,7 @@ class Qmmp < Formula
   end
 
   bottle do
+    sha256 "343a1715ee0854365984a75de76d45e1121ebb0973320d83fb72b57f2cc050b6" => :big_sur
     sha256 "035e511cd658ed37d0ee1313b579689d2fee64dced1b76320337e3933efe86e5" => :catalina
     sha256 "07cb54096a3ffd6c2d73485f5d7a49802f5c4d7f5c6546d9be50e3a36e0adaeb" => :mojave
     sha256 "2bc4a8d7adc72acd0d25123e8c0b40130abe428c10c029cb0853afacca9e1209" => :high_sierra
