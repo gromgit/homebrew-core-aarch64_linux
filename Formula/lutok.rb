@@ -8,6 +8,7 @@ class Lutok < Formula
 
   bottle do
     cellar :any
+    sha256 "dc3f3e2d0550c96e96f0c1365b6e2e198412f9c5dcd464800e7fcb17f003adb0" => :big_sur
     sha256 "20554341566479d2c715f0707ec96db12fa0fdfbc7fdb6d6bfc4e85e5407479e" => :catalina
     sha256 "88e2ba9da751f966f9f6c1b030e8f65ac4042dada954ed41d0d832e051d2e58b" => :mojave
     sha256 "1a78a65920384f74c126fcc1b0dd50d32050e624b31c13832258e25c8ddeeb85" => :high_sierra
