@@ -8,6 +8,7 @@ class Blis < Formula
 
   bottle do
     cellar :any
+    sha256 "e66265c300274d46ccdcea7aa34361ea96bbe276c368b64ff508123047765b11" => :big_sur
     sha256 "8ac1fb34cdaad5dfdac2e3ac454de08e7ff2a165571554f0bfd665ab2e5f2a71" => :catalina
     sha256 "2ab25f7e90a115e604a5233420b190c7ab60c73642f6eedc3b519f96d20c7bc2" => :mojave
     sha256 "4f19883538758550e8a0ce958d661e186b42cd8af66d6671e3589c30a6e96e14" => :high_sierra
