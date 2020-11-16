@@ -12,6 +12,7 @@ class Nedit < Formula
 
   bottle do
     cellar :any
+    sha256 "d39ce752a03c79732c908a3cbe93df61f413a12126f764e7e1c3d71f4106f701" => :big_sur
     sha256 "c726811764a5d12465d4c11b273229482af935921df472f6d083a27e34b39b3f" => :catalina
     sha256 "7e3760fcb4d5a78393094c94b0c97a4e9b73487eeca6510963f098ebaeddf281" => :mojave
     sha256 "0f1ea26247cf5abe89ecc7038820b937ee20046fa44b504363604af4a7bbb093" => :high_sierra
