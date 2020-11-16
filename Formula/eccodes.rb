@@ -11,6 +11,7 @@ class Eccodes < Formula
   end
 
   bottle do
+    sha256 "ccfc4b45800180876004b8e468b43a7ccec83cc54b52a36aa46987f4a461f98f" => :big_sur
     sha256 "776e898b7bc2e0ac5702df71ece3e542db8975d9a14cff6481bed1f761a6d535" => :catalina
     sha256 "1c45326fa7887c878d00997bdfff1837c7b9366d7f1ce7fe226111e7b78ff773" => :mojave
     sha256 "bcdea4208f061cf2a11d631821758f4e57896397fb8778bdf0ba68d529d8da24" => :high_sierra
