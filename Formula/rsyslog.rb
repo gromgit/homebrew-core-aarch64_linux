@@ -11,6 +11,7 @@ class Rsyslog < Formula
   end
 
   bottle do
+    sha256 "6ad3a60362fcddb288bfd748a0d070205b750458900eb4fb7e725752abc2fb8c" => :big_sur
     sha256 "128ed628f1b65a38f2e2d6463ab5d7ad82e2605b35a00db38e8282467cd3fbfe" => :catalina
     sha256 "eb44aad01f3736ee2c0c69e907c66ee82f31abb00ce1b101b1c32c66312112d1" => :mojave
     sha256 "25ce0e6d606ab2623f842f9d05a19dc7cea7efa13a8a0ec25df9ea6844a048ca" => :high_sierra
