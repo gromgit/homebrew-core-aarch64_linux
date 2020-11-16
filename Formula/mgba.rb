@@ -13,6 +13,7 @@ class Mgba < Formula
   end
 
   bottle do
+    sha256 "f691a03dc8505ed36f146d58a140573ffde40fd16086a01617b91a04f1fc085f" => :big_sur
     sha256 "bbee8886c0006db66d9dedb8c6215e5764554fe29c24aa19f41be72b35eefbe6" => :catalina
     sha256 "8acfbcc044e88e66422f0508fdfa79139fc5d9134656800997d5116bdc48a3c8" => :mojave
     sha256 "2c071d25f025b1db6cc61e2fb8909dce8119d9edcfa31bce13fe4ed50c686fc3" => :high_sierra
