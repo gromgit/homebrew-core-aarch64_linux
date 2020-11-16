@@ -10,6 +10,7 @@ class Atomicparsley < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "e79d2e76d6fd57bb96cbc879e9760d556284c7c61ecd345edeed73442cbce203" => :big_sur
     sha256 "6bc22e04f5d2863e73010606d823eb0768d637165d190d3889db3780bbbb724c" => :catalina
     sha256 "204e206047f48cdffef4fa91f81dbce6db370f002dd883000798d91f2916c391" => :mojave
     sha256 "ce2509fe2cc72c18b6b82c9df5e802e2503f61ebf841833618a974ac21fc92c3" => :high_sierra
