@@ -7,6 +7,7 @@ class Monetdb < Formula
   head "https://dev.monetdb.org/hg/MonetDB", using: :hg
 
   bottle do
+    sha256 "1808f68a4f489c1e12907381b59bae9bfd38d323d4c4b8572f9cf4a68511207b" => :big_sur
     sha256 "811aaf2c50777d27500bdd26efe3b71e55a3d908b88c5c12c8675ac1de03330a" => :catalina
     sha256 "c98f4faa1d30c5db9ccc243ac454480a22e4ed468f5ca9df5483cdf07725fb1b" => :mojave
     sha256 "dcbffc22befc8541737611e6243f2fb2e6434ccc23564f2b82b6538a44ad351b" => :high_sierra
