@@ -12,6 +12,7 @@ class Packetq < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "78b947bf8208aceefdbca0119ed141b5617347ce08f20ce6493157ab4a567c77" => :big_sur
     sha256 "e09c6588aa801951e518c10e09339d496fa23ab88c0a837a06b963bf6c6a5ba9" => :catalina
     sha256 "cf369b7e772dd7a390ca50f68e6b8eead2448414353ce313042ecaedb2f6ee88" => :mojave
     sha256 "58bfb682012318c49bb013b791771f94896d008d77f0ce1bb189d13ab55b20ea" => :high_sierra
