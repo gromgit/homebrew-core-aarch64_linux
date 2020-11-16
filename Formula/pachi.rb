@@ -8,6 +8,7 @@ class Pachi < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "9b1ae6a01f632409937bb18ac34b7e75e6142c101a629d951d17c0d8f756d37c" => :big_sur
     sha256 "e1cac19564a176a50d27f08b4e395a53ff4144dc17fd93dcaa013adfc8cca83a" => :catalina
     sha256 "76edc1b521dfb93e8c6573b689c8bc5a01103888f2f7310fd46aa53d8b6ea0dc" => :mojave
     sha256 "476509041b907edfd0380bc91a3fd4fc41b359bae58524ab4ab8017df4f61fe0" => :high_sierra
