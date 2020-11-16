@@ -8,6 +8,7 @@ class Rswift < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "725bc1c842394c544ae24bbcf278093627b0543d9fa2ebf7f43603a15a90367b" => :big_sur
     sha256 "1da952f52f531fcc1cb86888ce59c97547636855a4e2d23d147591ed9de0ec49" => :catalina
     sha256 "a344a394d9edece2c4737eec24ed2ed087719e0b95dfd269aae80b6b90040b44" => :mojave
   end
