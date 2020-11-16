@@ -12,6 +12,7 @@ class Grace < Formula
   end
 
   bottle do
+    sha256 "f428d5a0f0607ed81db8a68559d733212a328a08614eb47e4e18768de84e6673" => :big_sur
     sha256 "ba476c55bdee47b52c7b0a1f5cc6fb54ceac945cc25b45095643afca91243f68" => :catalina
     sha256 "7f9b574dd0e37c2f15a0c87df07959c7a634d1a7ec959305ce9a036ed4efdb9c" => :mojave
     sha256 "b75a7e4b3abf5d83878cb5b5cd8d3eed30a17119af95fcac6e9852856a049ce1" => :high_sierra
