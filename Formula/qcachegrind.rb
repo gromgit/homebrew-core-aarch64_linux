@@ -15,6 +15,7 @@ class Qcachegrind < Formula
   bottle do
     cellar :any
     rebuild 1
+    sha256 "2aeeb8c9bd36dabcf9941ea18b8aa24b1c7549262f3130a572ed01ae96576a78" => :big_sur
     sha256 "dc39ea438ea591b5aec09e7aa88b82af413100df0b6c689f7930df16953f87e0" => :catalina
     sha256 "6b27fca8ce13fc1a9cf62bcc85cbcb3f08149dde15f12012aeea6d61ce1bae77" => :mojave
     sha256 "7635d2f92941c12efce0a89e526198d5b730979511010e7af181f83fe48ff078" => :high_sierra
