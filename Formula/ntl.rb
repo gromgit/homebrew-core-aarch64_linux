@@ -11,6 +11,7 @@ class Ntl < Formula
 
   bottle do
     cellar :any
+    sha256 "9e02780202c0a4b9b65080df3a731347b2f8fc1cfdeb4073d68440acba012ecd" => :big_sur
     sha256 "fc44a358782565b05098a29f2694fe16100c2b5aa096c04875edd093adf78b5d" => :catalina
     sha256 "d0739cc2ebea1427d1fae3b0f871105b69d6f9c4c765415ed2f328af1e925598" => :mojave
     sha256 "5747add8bf85ae5a46d8c12635efbf61a2b5c402e35fdaebcf7499148c682564" => :high_sierra
