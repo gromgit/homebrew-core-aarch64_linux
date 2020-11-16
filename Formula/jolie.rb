@@ -7,6 +7,7 @@ class Jolie < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "03517491264e7bdbdb6bc71648f1a8d654ef5a192af2c0233470808bf5a570ef" => :big_sur
     sha256 "f8aecb9822259d55665704df3939d474d4c86de04979d4f8cf244a4cf2ba3150" => :catalina
     sha256 "f8aecb9822259d55665704df3939d474d4c86de04979d4f8cf244a4cf2ba3150" => :mojave
     sha256 "f8aecb9822259d55665704df3939d474d4c86de04979d4f8cf244a4cf2ba3150" => :high_sierra
