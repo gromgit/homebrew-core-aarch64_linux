@@ -13,6 +13,7 @@ class Bcpp < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "b80a4d382855b882ec893247f9398aac9a6fd8bca0d8068062dc40895451942d" => :big_sur
     sha256 "e7c25aa0608c77248f3414b49ebfa7808673b4afea1925e57323c9b1384d8c03" => :catalina
     sha256 "75cfd0b4bf87b30217e8d36c29d083fd961425583e322b5fdfdf16f189009048" => :mojave
     sha256 "7bd443a2afe3a8bccdc39c0744de2e7b3f9c6d45ff11030c9757e434d4767b85" => :high_sierra
