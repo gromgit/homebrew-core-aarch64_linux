@@ -14,6 +14,7 @@ class Jc < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "ff41c2b25d668eb53b205f2647d21d80ab5937c89fccc17d792adbf1c43666da" => :big_sur
     sha256 "313688f0f20b532ca13557cfc17646733742138f140b17453c7485a32f1f2048" => :catalina
     sha256 "fe818b492817a0d857121ca5170ce693c141c796d4c4fd7b99f172fe5077a5ae" => :mojave
     sha256 "bd3fe1005d4773d72ce992685c86fbe5114d3660638c26bb024fc0be45aec0e7" => :high_sierra
