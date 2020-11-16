@@ -16,6 +16,7 @@ class Gabedit < Formula
   bottle do
     cellar :any
     rebuild 1
+    sha256 "ec85ca37b2fce63ac9064364a740fef98389adb8729a6cdb1d2b969c8faff151" => :big_sur
     sha256 "af6b9870f2b34921313f3f38329a507e450462bf74055880f8c572e153c78932" => :catalina
     sha256 "c8bd86798356203a2e554310149b51299c2221827a030fd74763c9237996fc9f" => :mojave
     sha256 "83b205bd7a01eb782a9346f048c3c2e217ba4dc425f620853a4da066563e6b5c" => :high_sierra
