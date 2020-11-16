@@ -7,6 +7,7 @@ class Wordgrinder < Formula
 
   bottle do
     cellar :any
+    sha256 "cbb4777f6f4851a305e0aa4bddc1f83cfd452d521c5845db7202ec8179c5c972" => :big_sur
     sha256 "34217b351fac13fc71bdcf99757e27547d31b028720ede8cff75dd8df98d731b" => :catalina
     sha256 "044ee7c9874894b65e2b407e38fef047dae2277f8bb4ad85e927f038612cfa82" => :mojave
     sha256 "7fe55fe2030606991d37ca2d0541674e3761e17dc02192ab62e54e8fceaec3f0" => :high_sierra
