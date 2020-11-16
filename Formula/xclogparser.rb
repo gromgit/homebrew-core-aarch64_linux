@@ -7,6 +7,7 @@ class Xclogparser < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "49b5ef15830c0023adf194a3d1e9c55b58faa2936c444a5e8d960e97343a3173" => :big_sur
     sha256 "ebab01462344c61739a95f2fbcdf19548e3845b5fedd01326e6d8826417550ba" => :catalina
     sha256 "a13650a1540031bc4657443317b9d72f4ed2c033335480de88b145c2ad13b4b9" => :mojave
   end
