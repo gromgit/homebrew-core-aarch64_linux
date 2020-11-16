@@ -12,6 +12,7 @@ class Dnsperf < Formula
 
   bottle do
     cellar :any
+    sha256 "d1a85f1c052c0ed43c769627d0dcdc558020a988295b0a51e545e9a7d02f0623" => :big_sur
     sha256 "29ce167d9cac25446abbab3948a4de2b66bead70576bca24f13bda51c1d79de4" => :catalina
     sha256 "4cc4b444f46fe98328a3d07c70672b6e963b7b530a10515a02a1f40eab1b2d42" => :mojave
     sha256 "d2bad43d4858579143f5f01aab16ca5fe8a528b3fe81051ee212ebefc7e4a057" => :high_sierra
