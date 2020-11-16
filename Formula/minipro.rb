@@ -7,6 +7,7 @@ class Minipro < Formula
 
   bottle do
     cellar :any
+    sha256 "a7f44b05364a29856b0fda0067227e3400d3580ceff69ee6264ea74b8f614978" => :big_sur
     sha256 "eca0b4a6206491f7d429f75032bf16312078ac7bd36fffc8b97dc19b9999dbc4" => :catalina
     sha256 "a636a9d69994308ecc1340ed93285171e04c5c25f3ad7c970d31d11e7c6123cd" => :mojave
     sha256 "0969900d68207aab7fc9edca1d49f8816d2bf48a754af904ffa57466463b9c28" => :high_sierra
