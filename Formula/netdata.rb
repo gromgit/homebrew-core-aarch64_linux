@@ -11,6 +11,7 @@ class Netdata < Formula
   end
 
   bottle do
+    sha256 "781b2daf7c212416145cc15395d8fce21a7453d271c6a64c8e0b83985b00bc51" => :big_sur
     sha256 "bd2e4c457cb565f03c632527ac62eef558bf54ea770a06bd06a4c53a100d043f" => :catalina
     sha256 "e2a1165f6dcabb048cc8298213b5ea2b212fb393ab19e24245b6403edb128764" => :mojave
     sha256 "0e27a3c39108a37709aaaf549b57bbb1d4726f31e2abfdb5f0ba73432bbcc849" => :high_sierra
