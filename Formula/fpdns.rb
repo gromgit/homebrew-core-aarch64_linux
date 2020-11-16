@@ -8,6 +8,7 @@ class Fpdns < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "b0dcb11f28f97cf7ecb129a0e7ecbcd91bb8b60ffe9091fc690da73bf6a88b29" => :big_sur
     sha256 "fcf157864bccda7f1064856e592acf3b6ef7d46c8dcd48aab66ceae5ef2b394e" => :catalina
     sha256 "dadfa0adfbca40276bc951e541e3d7867d4550fcb552749dca37c95049830a84" => :mojave
     sha256 "0de082e3b044641f04bdc018b5a720c89f1ae3f24340c1bc6bfb88fbe0c3f79f" => :high_sierra
