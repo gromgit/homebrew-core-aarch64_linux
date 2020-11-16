@@ -16,6 +16,7 @@ class Awsume < Formula
   bottle do
     cellar :any_skip_relocation
     rebuild 1
+    sha256 "af6e54708b6d4847f24cadab61f1d7b3d308119a1e72449fb96344fadd406586" => :big_sur
     sha256 "9bacc4f8e2e6990387d7a7837deaf1637ae0fde430b1c5020cc884ba25499351" => :catalina
     sha256 "5ae3a8f686391d626459f4d7c416bf0503ad3f328d9d031ee7f1a8e9e27e796e" => :mojave
     sha256 "14219a73a5cf5a2b167bc27a96475dc73c8016a6d22696e9973ad395e3799b9c" => :high_sierra
