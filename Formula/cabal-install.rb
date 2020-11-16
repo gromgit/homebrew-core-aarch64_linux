@@ -4,6 +4,7 @@ class CabalInstall < Formula
   url "https://hackage.haskell.org/package/cabal-install-3.2.0.0/cabal-install-3.2.0.0.tar.gz"
   sha256 "a0555e895aaf17ca08453fde8b19af96725da8398e027aa43a49c1658a600cb0"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/haskell/cabal.git", branch: "3.2"
 
   livecheck do
@@ -17,6 +18,8 @@ class CabalInstall < Formula
     sha256 "2946e5b36632d7e33e1312c0597d4858479748ee94eb1a52df9f4869c87eb2a7" => :high_sierra
   end
 
+  # cabal-install 3.2 needs to be bootstrapped with ghc 8.8
+  depends_on "ghc@8.8" => :build
   depends_on "ghc"
   uses_from_macos "zlib"
 
@@ -27,6 +30,7 @@ class CabalInstall < Formula
   end
 
   def install
+    ENV.prepend_path "PATH", Formula["ghc@8.8"].bin
     cd "cabal-install" if build.head?
 
     system "sh", "bootstrap.sh", "--sandbox"
