@@ -6,6 +6,7 @@ class Reaver < Formula
   license "GPL-2.0"
 
   bottle do
+    sha256 "0cd13169a7c0f7603fab7ec7ac55e8896ffd5518c4e790a59183e894291a5cab" => :big_sur
     sha256 "73539f97836b5df80e030e429eb7f209dec3067c14b1bfd6753bcf7796c1f541" => :catalina
     sha256 "386ed8ae2562ae032f0d622d52d7302be2e99bbe671f1ca5ba3acb88b86f6417" => :mojave
     sha256 "c2c6d45abc45f5639b74da0bdb294a5ee83548f548642f6b61d764d05801352e" => :high_sierra
