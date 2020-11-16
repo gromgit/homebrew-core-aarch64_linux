@@ -12,6 +12,7 @@ class Languagetool < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "5055fc330b930efe7171a32c57d53ad46b3359cd9d000110a07ddd054f2d9d16" => :big_sur
     sha256 "6bde80d183c16d84c92986042edcf4f3baa383ae072251e9826fbaa2ccfb4860" => :catalina
     sha256 "78995e979adc689bbb988a0242094c76289a3f24e61f3d38766a8825877c5ab5" => :mojave
     sha256 "727ec2c9a799ab437f0764b06bc30203de405dd47571cb52091a0ca2f75a78a2" => :high_sierra
