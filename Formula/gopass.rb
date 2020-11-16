@@ -8,6 +8,7 @@ class Gopass < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "eaeba339220efef431cb87934369a1b06790a1105fb8ba8d15b958ddaee68791" => :big_sur
     sha256 "a9cb1f08e282ab8a9abe4c96553b336141b9c6abeaca11949134de35e45046fd" => :catalina
     sha256 "8cb98e59bf7622afb658d5115ff18ac21bd7c2d52fab74dffdb8db344c1c11b2" => :mojave
     sha256 "7eb6e87bccacafcd03a69aacfff0d4081fa413dc9d0d4aa55bfbdca6ea25dc26" => :high_sierra
