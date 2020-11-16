@@ -13,6 +13,7 @@ class Libgit2Glib < Formula
   end
 
   bottle do
+    sha256 "40c5f8fa088afdf1d5881885a1bb40cbcc3d63963f1c3475a69f7363630779f7" => :big_sur
     sha256 "a5297beb6c9ab0602847472ec08fbd2eddad7e91ca3c78db15f4a8175912feea" => :catalina
     sha256 "ffff80b61a3dd453796abdd059803d887c6de603d501c65a153571a0c04be5ce" => :mojave
     sha256 "74b08631fc92b096f3034c512ea9f62889edc92c49c6581043fbf56256306ad4" => :high_sierra
