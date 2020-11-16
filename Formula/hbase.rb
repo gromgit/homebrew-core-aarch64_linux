@@ -11,6 +11,7 @@ class Hbase < Formula
   end
 
   bottle do
+    sha256 "d59f469c0fc89b942be566b057e5243cbd19ac6229ec75f93245779474acd1ef" => :big_sur
     sha256 "f703e3ddce84f7a365e55075d4a488971b7857f2b8c310005d0fa239728a3727" => :catalina
     sha256 "6f6a789f2bc0a72c81c7ae393438add0506e426365acf81045fea89be5778874" => :mojave
     sha256 "487a62bec9fa66f7303c4863587cfed140630a4b14510076d771f10f38f31f37" => :high_sierra
