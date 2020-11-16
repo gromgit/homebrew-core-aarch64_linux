@@ -6,6 +6,7 @@ class Skopeo < Formula
   license "Apache-2.0"
 
   bottle do
+    sha256 "99ce8458032e1360d467a2b23a661920457dcfc0abff0c697b5fc9fcee8b3d1e" => :big_sur
     sha256 "f36d5a47905fe5a06efe727ddc44bd948eb4c55f9e18a6bccb7979f229e7e60f" => :catalina
     sha256 "fb6dbdab20623d34703c7764f469caacf4108b3b88c1ae802f59e4ddde5e88eb" => :mojave
     sha256 "ae339b7ad02045142355564a4144a12383acb23a32b5092c80a9c6985859b0b5" => :high_sierra
