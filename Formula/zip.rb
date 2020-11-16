@@ -13,6 +13,7 @@ class Zip < Formula
   bottle do
     cellar :any_skip_relocation
     rebuild 1
+    sha256 "60bcaddc206cf96c70d8c466bfd0e7aab64f082c8594016e9c26f5032ebebff3" => :big_sur
     sha256 "0c942307306bb96e68bb0aba70d253b37ed1e519a882ba778c42d8ac9fd230f9" => :catalina
     sha256 "b76c061fa0a226fb5b484fc790582bb07e5138648738f35726fa278ab5e8a612" => :mojave
     sha256 "d218e0b7d82c7864a1ead12186b5bc09b43c2aa3749651008ac8dbcf32ec0d7c" => :high_sierra
