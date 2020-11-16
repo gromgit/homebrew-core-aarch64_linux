@@ -40,6 +40,7 @@ class Qtads < Formula
 
   bottle do
     cellar :any
+    sha256 "0b7ca6977cd90d44364cbea43a729e80c4c4dcd95427968cde38e1bf1971befc" => :big_sur
     sha256 "ddc00587ac0d9f3ebcd6f0bac9e8a4207f9ae930a6646e4f3ce60d186abdc832" => :catalina
     sha256 "3158fb6eb3d97f548c908983348e221ee190835bda5ce70704747117ecf7611d" => :mojave
     sha256 "ef218d294d01133003c6e52fc32f9482726d6f237b3b5b90add019960ffe9eb2" => :high_sierra
