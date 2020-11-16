@@ -8,6 +8,7 @@ class Dsocks < Formula
 
   bottle do
     cellar :any
+    sha256 "56c7d9bf70295a5c41fc439d16c9c905b4eb40dcc2d6a4d27513efd5cc48979a" => :big_sur
     sha256 "d675be1f5c6a31c1fbb20dd8c521a638edca6ecfe13a6bb1f8db84b35a01178d" => :catalina
     sha256 "04977648b6805fb7e82c01064872c9a44356cc2b8499adde514aebe1687bfed8" => :mojave
     sha256 "c6f4212b4e925dc0d29b21f96ab244a8a6842ea44b72f3e48036e69d86ac4c93" => :high_sierra
