@@ -13,6 +13,7 @@ class Mikutter < Formula
 
   bottle do
     cellar :any
+    sha256 "8ecbab30bff549fb458e17eaba056ba3ff1d4f0647bb35bf7fab4a8c850ac0a7" => :big_sur
     sha256 "78bdaee50e892b26f88fa078435a7363971d22d5059b7b03ad4d98ba3e336b9a" => :catalina
     sha256 "5e9faa3e6f38d9e77fd2eb4ffa8e342e2338e1bc41a954a6f3f6f5dc3fbd4c30" => :mojave
     sha256 "8c9a8c31deae892a3d4a02e265aef0693aed749fb86a91788009fd586df2e68e" => :high_sierra
