@@ -8,6 +8,7 @@ class Lsyncd < Formula
   bottle do
     cellar :any
     rebuild 4
+    sha256 "d16f3a2da5566d6bfebbf10339cf13b1f26af3f2616cf2eb41eb46db576ffb20" => :big_sur
     sha256 "571c5f5aa4069b5ed8a42a63e47e2e43512f95da0218f5ef7f0d5e8a9c0d66ea" => :catalina
     sha256 "45c0f8bc62b9c7224241ff3d646f6c38d3f544890deb20c9670659f2637367f4" => :mojave
     sha256 "335359bb356c753e6e286681d5bcb484d066df0f15910cf614de74ee131628be" => :high_sierra
