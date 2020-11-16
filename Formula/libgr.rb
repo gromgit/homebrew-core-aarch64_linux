@@ -6,6 +6,7 @@ class Libgr < Formula
   license "MIT"
 
   bottle do
+    sha256 "a62524317ad69b3e60c8e30639b712c63cfb21c190045c3e81a96964aedaa7af" => :big_sur
     sha256 "a2b5205e39dab110bffed5b0d2ba65c406357cae506f104cc5d5ac4ffc3d03f2" => :catalina
     sha256 "2ce2a02ab4e593bf7f67fec74d76e15456f1261dd74d6abffe18d91fa26dc9be" => :mojave
     sha256 "b90abf73dbd6f77e4c8c98c7887ca0ce32bb085a11542f1e942dd6495a641d3e" => :high_sierra
