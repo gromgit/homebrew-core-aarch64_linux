@@ -11,6 +11,7 @@ class Gnuplot < Formula
   end
 
   bottle do
+    sha256 "26ea0150196aa8226b134676ff678d9f6fae15643c1d45ae525290bd59d058dc" => :big_sur
     sha256 "07e87a593917fbb66d6eef8efe30ee04531bde21c5d4a45775bae98b5314b42d" => :catalina
     sha256 "221b581e96e34f346ef8de648e8e4ddadf66250ec1b1d5d9a894d12846c11f0a" => :mojave
     sha256 "43bd44cae7f514c857f548f671c6b600b31e077c2aa783d1b63d5295c467a2ad" => :high_sierra
