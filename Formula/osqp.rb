@@ -7,6 +7,7 @@ class Osqp < Formula
 
   bottle do
     cellar :any
+    sha256 "eebcefb4e1cad627fd2fb67068895b4f58931f07cd040b9e95e18871ebd1c778" => :big_sur
     sha256 "50feea323216bf8cc5d8dda92264a9354d547b5076d4c3b37b75792d0ac14c3f" => :catalina
     sha256 "99a2f2810fc34c0241c0bc4a7bc31704a5b1ccc8201d112735e75cda14bb4bca" => :mojave
     sha256 "2f50e046d34b7556891c7351aeab94347d1404b4ac1dcb041c413c4fb42bf16d" => :high_sierra
