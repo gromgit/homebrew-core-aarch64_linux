@@ -11,6 +11,7 @@ class Cpptest < Formula
 
   bottle do
     cellar :any
+    sha256 "89c6ffcf939917d09725840bb55497a8477ddf951895a8f62377a8ff11e11b6b" => :big_sur
     sha256 "531646bba9e8aedff87216058a90e2fdc245b11ef55ad3f5c3aaaf717fd998cb" => :catalina
     sha256 "5a109d0b6cb796d0de9e6b32a6373e1e78fd4da316be33a26ba9c84fbf799eb8" => :mojave
     sha256 "cac49d059592f8d9f030855041727a61c7358404e16fc63d106ade58253ba0f1" => :high_sierra
