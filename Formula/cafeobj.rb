@@ -6,6 +6,7 @@ class Cafeobj < Formula
   revision 1
 
   bottle do
+    sha256 "98abc7f03647ba1f78d55c7f6b293d03b7abbf43f62f35512ecc40365051c11f" => :big_sur
     sha256 "759c36caf712b7dc37b078e8c544b87748f9fcf4d1979f8b6cd879b339b75602" => :catalina
     sha256 "7bebd25dbac82c676ef1901b2edbf3e543fc866d289376bb0faf6b603aa27d28" => :mojave
     sha256 "33f8dd427702d6271ec88656838212b7f5ca77ca72e44db4e5eaae08433abca8" => :high_sierra
