@@ -7,6 +7,7 @@ class Xorgrgb < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "f6756bd8981d3006fe25f524bc8220f07d1a5995e77eeb3ae31c3d8854b98678" => :big_sur
     sha256 "ec1075868cfedeed6e68f844637fe8cbf1d978cacb6bedf6ca746a3a2a5e68f8" => :catalina
     sha256 "ab75e74585e880cdaa2a0383626440834dcf2ed164d8c556d12ca9e74ede9386" => :mojave
     sha256 "9035c5f64f471dcf32ab07e2321237fcab8a5fc3057cef3f29664db32222fc35" => :high_sierra
