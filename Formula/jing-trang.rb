@@ -9,10 +9,10 @@ class JingTrang < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "beca56be27f7e897bc7f8ede1f7b1a3e07decb0f247bbebd5612c95b6814ef13" => :catalina
-    sha256 "041409b5ddb20a932c66d390b06fde4d25f89373f1d386b28e4e592686cc3ed9" => :mojave
-    sha256 "c73af2f82d10dd5a7e11818c41ac687b52f4c6128157323e211ab499dc22eaa5" => :high_sierra
-    sha256 "da34fcbed6b7c8700f3384a83224c20bb47cff05c6ff0ff2a7cdaaa3b89792c4" => :sierra
+    sha256 "fbfaf15a1309a394ba34f78a6fd28062e56c05d0f118061031cb84a1f0cd2695" => :big_sur
+    sha256 "1448a797ce37ead9d47b398a2c96af6da95acecf60532fd9edc302a1468308a3" => :catalina
+    sha256 "10424ca3b36b8219a58894bb23a29ce3abf67feb4a18e7f03a3daf2c328d459b" => :mojave
+    sha256 "7d7c7ba57430d123a9b53e8f4f9e7427d1ab2c1fb0b37149572cd4dc5eb1ddeb" => :high_sierra
   end
 
   depends_on "ant" => :build
