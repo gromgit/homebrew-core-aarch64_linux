@@ -7,6 +7,7 @@ class Wolfmqtt < Formula
 
   bottle do
     cellar :any
+    sha256 "e07f57c741c69ef671c74c08a2dc9207235c9f31392a147570f27c17bfe532a9" => :big_sur
     sha256 "073807b984df8fb86ffde192cb3c0ace7c7f139d81da937e71874fcaa02e820b" => :catalina
     sha256 "32e32e9f2d87974550fdc18e054f639d0a138e74aace8a2ceb639b992cdd54f1" => :mojave
     sha256 "3e2a29fd675291511f203d094e235461483a7a0d8135b286c94900dd9e25f963" => :high_sierra
