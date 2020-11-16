@@ -11,6 +11,7 @@ class I686ElfBinutils < Formula
   end
 
   bottle do
+    sha256 "0f5e842acd46e0d467ee349c39ea1816b659acd229e1c9144245b6fa49a59753" => :big_sur
     sha256 "a71d3f952d1a1d9a59c3759dc7b87fdd4ec0036fb77d0156ff3f84627bbc1a1c" => :catalina
     sha256 "845a38bb82fdcd66d2b7464e21d228b8db5e34551671056079c488e6c714f818" => :mojave
     sha256 "f591e9b3514229690865b05a66d12e1418cbdd217d88a2bf4e7006375e594de0" => :high_sierra
