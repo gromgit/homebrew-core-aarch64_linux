@@ -14,6 +14,7 @@ class Isort < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "cfe5ce4ffe7f57604fd65e1b0a6ed9c60d9eb4e477113be0eef8e8d3dcf1da90" => :big_sur
     sha256 "ee43e1f2f07c6d309ea19e1001e740feed67db1a27b8f03a415e513ea34e73e1" => :catalina
     sha256 "d1f54b06f018f33ac11c15f960c4f192c0c489ecb8dbb42df6496cd6a0856e22" => :mojave
     sha256 "7b4fb7d120f70e8cd5b785ccf44cef6da8eac9d879735363f29f557c3e1582ec" => :high_sierra
