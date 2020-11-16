@@ -11,6 +11,7 @@ class Ispell < Formula
   end
 
   bottle do
+    sha256 "3a4e9be38a549cbbb9512dbbec23acc6dcfaae3710d0ef36961513cb4ed2853e" => :big_sur
     sha256 "c4a726692b88e792bd82ee0b4cd527e8f69ab0a244f839486087e2b291947afe" => :catalina
     sha256 "5e4a1b0bd20714be296012b2b90c7bb92bfa01b997a4d4efccc369b9553a8eb8" => :mojave
     sha256 "67142ae321c800cc9f4941e8d4e665f195dad06cc483cde11d51fed7a0cde426" => :high_sierra
