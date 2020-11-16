@@ -8,6 +8,7 @@ class Afio < Formula
   bottle do
     cellar :any_skip_relocation
     rebuild 1
+    sha256 "0daf7df23f36271e3141cc11cab067b33ed5855b9faba53bc697d5259deb82ca" => :big_sur
     sha256 "28494133d10acea2c1a298fe858d26889ba8567422b9f431710b156a4a8ac858" => :catalina
     sha256 "733a4169a7be82dc173cc302994ad205493a9085580634b92faa38c96c84608b" => :mojave
     sha256 "53dbb826f2c3e050bd70078945d92772a4c434b0aa75e1a71cb29e56ed8e62fa" => :high_sierra
