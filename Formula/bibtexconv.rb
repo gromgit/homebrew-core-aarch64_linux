@@ -8,6 +8,7 @@ class Bibtexconv < Formula
 
   bottle do
     cellar :any
+    sha256 "3325b26408a05b02c8a9002993168aa97fec5c7749556c47dcd0494aed99ad8a" => :big_sur
     sha256 "825df161159801283a8a9a500e2854417c3d4d461c8012e782e0bea6f9accced" => :catalina
     sha256 "21f9bb60c2858343772d50f1cb6fa5075800a6804491643a9db6dd02d3224785" => :mojave
     sha256 "9820d6c2634a28a2c8fd510a71d5929cf1f83c7e5bcaffc41056536a3c3df9a9" => :high_sierra
