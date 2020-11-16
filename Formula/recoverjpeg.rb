@@ -13,6 +13,7 @@ class Recoverjpeg < Formula
   bottle do
     cellar :any_skip_relocation
     rebuild 1
+    sha256 "bd56d3048f05834faf5181f4372fe49a8ef3895c291fe0ca2a434a416e305495" => :big_sur
     sha256 "87b3d9adf8b59d91350b7e655a78b68525caaaad0a614c5b7e1b6097d29cf6d9" => :catalina
     sha256 "0f424efc21d5e07c2cdce7a870e28ee1aea42ac8f65f12eb5a845895c49ed958" => :mojave
     sha256 "5366edde2383098f7ee4ac866d0d2ff528efbf63af934dd469c3b8e6739678ed" => :high_sierra
