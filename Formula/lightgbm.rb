@@ -7,10 +7,10 @@ class Lightgbm < Formula
 
   bottle do
     cellar :any
-    sha256 "531eaadacdf2a212efd6dd17c354228aa18aadc36e5d3be485c765386263f982" => :big_sur
-    sha256 "24a02453d33224cbe3f0d5f2f623d1356eb4b26c6bb6367e0da4c644ffaedd60" => :catalina
-    sha256 "681eaac747cc86830db2d7162715803a794b95678af3d9072dafa80483ee6699" => :mojave
-    sha256 "8cbaa97be86257f42bcaecfc1b8ee805558351e11438976606f9f58a897ed23d" => :high_sierra
+    sha256 "d164f0cf1ead997543806e7d6ecdd44aa36fb1d5fb1b30a4fb45e50e97f58d41" => :big_sur
+    sha256 "de69b09945578e7912c03820580f59b41a979bc1babe3949d7bfcad574446698" => :catalina
+    sha256 "35b7bd53ac73e1c2d0c5d736f85f3e3dc7d264e354b2a10f63c3ed6733cea3b8" => :mojave
+    sha256 "7adcfa409b33f5e7b528ef8f5a11b148619947f36f0dbc43c8b3ca754f58180e" => :high_sierra
   end
 
   depends_on "cmake" => :build
