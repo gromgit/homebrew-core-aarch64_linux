@@ -6,6 +6,7 @@ class Suil < Formula
   license "ISC"
 
   bottle do
+    sha256 "aea75cb3be00abce7094eed0be51b10ce8fd5d7ac8bd3514989dfa5e9e209880" => :big_sur
     sha256 "24627d37fb66084ea3c0577d2dac5df714611004fb5c8cd9fddf747005eaa5be" => :catalina
     sha256 "f84ea1b5e7a2b786e5f989093d72b2c7270218ef637b30a60df73e0ee7a517fb" => :mojave
     sha256 "9b197d98140760bbb1293b90674941a0b3d5614c9a7f8353bd5ff64c23f0cd3f" => :high_sierra
