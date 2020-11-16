@@ -7,6 +7,7 @@ class Cc65 < Formula
   head "https://github.com/cc65/cc65.git"
 
   bottle do
+    sha256 "8f6e81d5c51fc62602fff142d4b4af1d8f6127204eb414db904c6098d87b7bc4" => :big_sur
     sha256 "8f64703adec128eede5e3a980d1898e2b13ed87441ef7fdb5d41400850b82989" => :catalina
     sha256 "a84e72ecee825a41a9614a7563df24418d5173ff13ff767adf2a924e28b00fcb" => :mojave
     sha256 "2fecec53d0f65fc2ae409fc29516207cf11377e6726574087da4f06502e10770" => :high_sierra
