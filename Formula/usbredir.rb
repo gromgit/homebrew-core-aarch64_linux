@@ -12,6 +12,7 @@ class Usbredir < Formula
 
   bottle do
     cellar :any
+    sha256 "8f86636870cc889d4a8ef202fdf4d65681e930961e19de50438deb49d1d2065d" => :big_sur
     sha256 "c7182aed390cc4cf96e9a99a728129367714b954062b7f92471a6e3864aed244" => :catalina
     sha256 "579f1db366d50c027cfd6ea92149878b358d86bb6a9d491320e5f7fd62dfd2e8" => :mojave
     sha256 "0d83ca33451b2c382dcf4b70be515549db139b0960712dc7f213e993ba7973d7" => :high_sierra
