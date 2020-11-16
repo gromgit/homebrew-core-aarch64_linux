@@ -7,6 +7,7 @@ class Cdo < Formula
 
   bottle do
     cellar :any
+    sha256 "a9b7acb1b9e16a835b5c7430f0283d3eb1d58261e2c0a2187646276e90867021" => :big_sur
     sha256 "52253227a742132e1ed2fadcc549025539d246abf899e13ef9572f0ae8e49c15" => :catalina
     sha256 "07ee76a81ad678ed9608ad8460cae87fcc20398401dec3607558057e46abe39e" => :mojave
     sha256 "a17b8f98e2470e75e8c0cffc4e838ab45188218a021683d866578063ad2aaecc" => :high_sierra
