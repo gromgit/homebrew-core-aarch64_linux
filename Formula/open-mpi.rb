@@ -11,6 +11,7 @@ class OpenMpi < Formula
   end
 
   bottle do
+    sha256 "2afe47eb2c9664599a1bf8687d0244a9b9067bc96e3de184cdee8e3110fa8012" => :big_sur
     sha256 "fd21d8d449c7fee6126f11994b6e0d12178b1eab55cbb17f99056d535cb1ace4" => :catalina
     sha256 "f3a7dca683792a4fe866b62004351b1dae6acf2376609cf36bdc771d9e9104ef" => :mojave
     sha256 "33d3cd119f7f7d7d3154d758cc0ad68ad513624c9a648c9b87d732ea6a8e6068" => :high_sierra
