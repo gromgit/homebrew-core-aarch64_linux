@@ -8,6 +8,7 @@ class Modd < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "16f137693f5e0d6a6526a74b2e3382a44576b4a6172155ad90ee36fb2dca256a" => :big_sur
     sha256 "bc54b5c78bf68af83b2ae7233f5bcaf20295ba803e82aa4a1ccd77e5a9dd9a9f" => :catalina
     sha256 "d1b77821aff14d108379646434442ec9ca4869ec50867083c8e109c35dfb5095" => :mojave
     sha256 "9dab505f6322b00919c69a8b396b25efb04f38341d2113c0681e6d12181b13d0" => :high_sierra
