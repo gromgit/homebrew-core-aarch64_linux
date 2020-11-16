@@ -11,6 +11,7 @@ class H264bitstream < Formula
 
   bottle do
     cellar :any
+    sha256 "2ace75ebe5094b847024fb80a23a82bba3acfa7869399f3962c6910089ebc777" => :big_sur
     sha256 "ac1f452b4c4d4d90310ec1f3cd9ec45271665604844dca55df3f7a91885d28d7" => :catalina
     sha256 "ebe66ef0a10e2afacf2b418eb15aa57ed873c6df73d6da71b6252efce8c15a5e" => :mojave
     sha256 "191acedb64e2ab618696fe16c55b81cdadb9819a0b0fc594235d31a28a1cdf96" => :high_sierra
