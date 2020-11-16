@@ -9,6 +9,7 @@ class Kcov < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "6e098f67e1795b2e1e9a8075c05a16cbb5b113a6158b8d071a0d5f366e2e96e0" => :big_sur
     sha256 "84e08342871b62bb65fd89ba6612ea8826db9be3a93f84d5ba25bdf05a8ef01b" => :catalina
     sha256 "583b5fe1351a6a3148a4e030701143a99e08d71f184f85e97c69864543f4de54" => :mojave
     sha256 "2dfacc1726aba5b15a18e0b845d3bb84cf93d5e320ebbf47e6c66960a80e231c" => :high_sierra
