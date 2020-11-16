@@ -6,6 +6,7 @@ class Instead < Formula
   license "MIT"
 
   bottle do
+    sha256 "4279441d1a315d876f9646a284ac3beefd109e7fa7c4ebce2fb8549bf0947d94" => :big_sur
     sha256 "e447bee8716c692d07e6d58b337639a64334dfa921326810c5ae0d64b14fe72e" => :catalina
     sha256 "128a389655c4361f48dd8ee81344682a3d4433485cf91569a71961bed0885e06" => :mojave
     sha256 "e9029b89e6133d0f233a679a684e64d0195b283aabb6c55640f8a95ed1297f50" => :high_sierra
