@@ -8,6 +8,7 @@ class Naabu < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "79d2b1d6c4972d60ff0dd08e948b452b29bac1e4d9db0dd80a259fd3bf6a4860" => :big_sur
     sha256 "63d6a0d8c5839c93e61ce2caf6fbe912722fead979bcaaba42f1f9c066e7d6fd" => :catalina
     sha256 "340adb52b40c2722030adbc0698d528226b873956b2a65a66f1850b1435bde41" => :mojave
     sha256 "8a7153836445c301a9510bb9481d20d8cfb51b74c991f6c1e5b0ed23939d260a" => :high_sierra
