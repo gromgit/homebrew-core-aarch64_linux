@@ -11,6 +11,7 @@ class Gwenhywfar < Formula
   end
 
   bottle do
+    sha256 "94677112862b163f17bf3b66973f8f38ef5c7c9281edff9f35bd9ab63fc87f9b" => :big_sur
     sha256 "0ecd6df52f49623e27d2272ac3f2b047df7fed883fa75dec1fc794df03192805" => :catalina
     sha256 "6b52b25cbac6e88c2db675085762c22998897731181d550ff2c46ecc8ac93533" => :mojave
     sha256 "71f2b5747cd620a2330e62a5e99f673e65049bb0282781f3e7e66a245f78e712" => :high_sierra
