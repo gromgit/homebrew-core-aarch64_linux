@@ -8,6 +8,7 @@ class Gocloc < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "72eadebf1e8cafb5e94238f673af68216fbaacaae0100bfcb3699a6ffb54b9f3" => :big_sur
     sha256 "a6dc5fa859f29d07e0668c169dfc4d240dbd46a8e79fbc63c31261cdf4f6a79b" => :catalina
     sha256 "a6dc5fa859f29d07e0668c169dfc4d240dbd46a8e79fbc63c31261cdf4f6a79b" => :mojave
     sha256 "a6dc5fa859f29d07e0668c169dfc4d240dbd46a8e79fbc63c31261cdf4f6a79b" => :high_sierra
