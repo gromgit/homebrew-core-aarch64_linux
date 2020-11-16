@@ -7,6 +7,7 @@ class VtkAT82 < Formula
   revision 1
 
   bottle do
+    sha256 "961f425ff924bcb05d4968fec2ab3a883b1b079b3547966753ccdd86a05ff81b" => :big_sur
     sha256 "047462441e9da29fb30fd623813f0cf8d2ac622b625decca87cca64945aca945" => :catalina
     sha256 "2e1e70ac0856b2c320db624248587810b9212b919cf7055e2a46712238e71d9a" => :mojave
     sha256 "e3e0622f90192b04810ad3e2c7638c307df23b49a39e94b8993d3ae1da60b7c4" => :high_sierra
