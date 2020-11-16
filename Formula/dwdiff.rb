@@ -10,6 +10,7 @@ class Dwdiff < Formula
   end
 
   bottle do
+    sha256 "549d7fede90272606f5e723b3729e895627cfd90ee6e5e47b6adbc8935354d0c" => :big_sur
     sha256 "d46e1fc2de0e1f8cf9b1a807f8ec52e7c68ca1a12f9dad1be38cde7b925a206a" => :catalina
     sha256 "4b154cbac63ac35e11b0d16a4e6a4b59c514c1ed795c4efe63a084d06f718e4b" => :mojave
     sha256 "0e607121b31851d64aab5e82110ebfec5e052130b0002fad11234f25029b4db3" => :high_sierra
