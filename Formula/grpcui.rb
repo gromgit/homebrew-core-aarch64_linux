@@ -7,6 +7,7 @@ class Grpcui < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "316b3929786b948f6d18d580c3bf9d59a414bba3acac1520017972af55cddca0" => :big_sur
     sha256 "c6c62dbe114c2bb1de1a0c19d7845bdf2fe758e1810721772888776332a28897" => :catalina
     sha256 "9f5c2e8b3bdc9e0d4609819503f4a10de72cba88b7fb4aa614e5c315975f7436" => :mojave
     sha256 "af7abe614d2e96ce599ec1683ad9ec94c51daaf5d72613ad9c4bdedb7c9a4495" => :high_sierra
