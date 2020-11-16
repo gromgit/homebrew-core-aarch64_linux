@@ -11,6 +11,7 @@ class Gwyddion < Formula
   end
 
   bottle do
+    sha256 "319ecf28afd492ed5237e77f851af931e72e04001050aa70d778c9591038f36b" => :big_sur
     sha256 "4172123e804c37db82b8b2ce473f36f4f644f1c2af6029f4e36a35576f792635" => :catalina
     sha256 "a7d84f53539e1f9d77e0f11ccddd17a000733bf50d169c1af567ed157755502f" => :mojave
     sha256 "e9a3d12639dc7018e50a0b422b5ea144a651c692818b9e7eb5b168670b8462d3" => :high_sierra
