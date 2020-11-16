@@ -15,6 +15,7 @@ class Awscurl < Formula
   bottle do
     cellar :any
     rebuild 1
+    sha256 "1cbe7ba64032047ffdc0485460e4ed3b9812425897932b1504b02bee47fd66f8" => :big_sur
     sha256 "750f3ad6f616b1c1273424ff10fdc949d3b2f2365021e22fb7e345c50e9b6bb6" => :catalina
     sha256 "2c0fad7c4e223c05a8454010b32a4832635e75d500e79391e6b2affb176cf05a" => :mojave
     sha256 "f96e6fe97b9e61bba1503474deaf158e0cc694c0cb9e078236e84d02d0427a1b" => :high_sierra
