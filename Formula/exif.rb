@@ -7,6 +7,7 @@ class Exif < Formula
 
   bottle do
     cellar :any
+    sha256 "9603f2b9c8b5efc9a83e2a9fb5b89fe2b4954567c39e814c2a8b81735c824063" => :big_sur
     sha256 "3d4f3d7c86e7c112f9164970cb5e283a96d82235c1633f15de6683b04ec7df87" => :catalina
     sha256 "a600fdec30f561aaf97184c57ef77697cb617dd19795cb89201f9851646e9fad" => :mojave
     sha256 "f8978e60a9eedc21fe0da30fa0a6bf900635635a5b1fa827473881b25c12d542" => :high_sierra
