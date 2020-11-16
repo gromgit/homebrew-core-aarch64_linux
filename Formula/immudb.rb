@@ -7,6 +7,7 @@ class Immudb < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "4766b2e2443fa6bb2ee8693a085aee84c78315ef29a98a904b36b833fb10c409" => :big_sur
     sha256 "c592a4c753771f52dd248eaba401b3a108e07fc07aabc87b0900c5649a8a34ab" => :catalina
     sha256 "0c66b229f9192069dc5cbac020ff95cd181117990cb2037fa5686a9689d02077" => :mojave
     sha256 "4ef807ed5bcfea9eb3beae5408bbecfe91ab76404db094aac12a0b5a512db056" => :high_sierra
