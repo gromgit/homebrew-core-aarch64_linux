@@ -12,6 +12,7 @@ class Caffe < Formula
   end
 
   bottle do
+    sha256 "9c2382bad9ef2962813c9f7fc53620d1a27957004f42ebb5485ca7913411c01e" => :big_sur
     sha256 "8dcb984deb1b427d7e2839c0f025650a2d7b324d2be21b9c035c8093a42b8e4c" => :catalina
     sha256 "5ea51fdca984a90c3f0154dc3d7f2181b87c061bc6316470e63875bda3b0b8b5" => :mojave
     sha256 "35dc319041a554bf9006fe93624e95ace0a4ac540ae1fe503a43986a05ffe769" => :high_sierra
