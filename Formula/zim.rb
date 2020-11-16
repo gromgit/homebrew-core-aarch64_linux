@@ -9,6 +9,7 @@ class Zim < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "43a6468159255c411db5d0bd690751427ae01dfb6ff354124181df4d91e49b86" => :big_sur
     sha256 "e47f624df0392eb5a1e7b910592e748350d41d18ada4aa49dd64933f1b8c07a3" => :catalina
     sha256 "0968fcf27a8294155c5ab055cc6cabeb1e0f93cd45cb5a8767cf8ae1153df311" => :mojave
     sha256 "69b62111844fcedb2c95545a62339f9f9481c748ed8a5d7706b75d7b9b6005b6" => :high_sierra
