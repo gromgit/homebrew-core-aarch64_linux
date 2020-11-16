@@ -12,9 +12,10 @@ class Less < Formula
 
   bottle do
     cellar :any
-    sha256 "a76b3f1fb43e1e0ab566a70eca5430afa744d6d87430b55e9a5b98160834c8b9" => :catalina
-    sha256 "2ee3f16d15855ab88ad87067085c0f2dd58c90c5b91ae51499ae0548a24693b2" => :mojave
-    sha256 "46cd5ba33b6a1d00cfa3993712ea617bce5b6c9908b016a72413f370eda714be" => :high_sierra
+    sha256 "78e78c03cfa593c7a8d8d082dd9d1b3f5ba742828d75c362fa0a69904349337f" => :big_sur
+    sha256 "a9964d5cb1b7b86e7c6b734c59931f76dd1a5e8c6caaab727936de976e3f10c4" => :catalina
+    sha256 "745421ab0d0226624ca632d8db1e63c7f5063be53da579db909d3079964c8113" => :mojave
+    sha256 "e9fe8e7982ddfb6e4c3ab5c5cc9e90a8190a61ffbb8afcd7cb95ea49523a44db" => :high_sierra
   end
 
   depends_on "pcre"
