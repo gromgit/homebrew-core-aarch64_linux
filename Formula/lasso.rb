@@ -8,6 +8,7 @@ class Lasso < Formula
 
   bottle do
     cellar :any
+    sha256 "83fa7671b9b8635dbf79c5db616d72c0f8d53ca543a508effd4bf628f46af26e" => :big_sur
     sha256 "bc1f4dc6fccff1c5631d37b4539d2d9a657357445488ce892756feccf98f660b" => :catalina
     sha256 "d4bfe838fe8fd0b32ff7e19a4601c85a3b98a49ed8e1f05dc796ed5adf89005b" => :mojave
     sha256 "8256178a39f08386db515226b334a93f895cb8d96c043acfe1a8d420efbb668f" => :high_sierra
