@@ -12,6 +12,7 @@ class Latexml < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "4c96138c4b69a5c88f72c33a7023ac1734897c94bd7bab9d26ab802213f09159" => :big_sur
     sha256 "89177de9fcad665602e176c80095dc52ad5faebe5db384348ac7afaa67a37aab" => :catalina
     sha256 "e7c78acf6bb580fdb949777719972a806c1d7d349d9e826b338572bedde6cf5c" => :mojave
     sha256 "388dbf99df85e55879cccfa48eed9b6ef362d13f3ffe83dbfd09b1e7fb12fa1f" => :high_sierra
