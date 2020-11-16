@@ -12,6 +12,7 @@ class Gpa < Formula
   end
 
   bottle do
+    sha256 "99a96ea7888131c8cd627907ebed8c180e5cd1a1ce0ff7567b684a1bc67e0c4c" => :big_sur
     sha256 "296e517c02d381101befecef3700d17c12a9542dd0b105912f304846a7d54fb2" => :catalina
     sha256 "183d889ae94650931d7ed470ec643a9e5b02843e037a97de2669f2d48076e996" => :mojave
     sha256 "dc9d49486a627330931c0d2caeb6af4629e3871bdbff840ae33e5afb97c087ba" => :high_sierra
