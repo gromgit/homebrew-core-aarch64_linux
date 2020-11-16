@@ -7,6 +7,7 @@ class Latexindent < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "c530867dafee5480b27a7d314b1cfaf5beabe2a6e09c6c3d2929d5fa08f13fa7" => :big_sur
     sha256 "3c76d2f3b2e22e221a65b0c87d721364453beb3e9fb629545239c5cabdf33a67" => :catalina
     sha256 "f9197433c239b421bb5cf9dd741cdec1b1a8f4721ac0550c2bf7f1e2d968a2f7" => :mojave
     sha256 "482dee6614373edc7588b5406615376efe84139ab94e590f99389deeaf489b66" => :high_sierra
