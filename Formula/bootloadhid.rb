@@ -12,6 +12,7 @@ class Bootloadhid < Formula
 
   bottle do
     cellar :any
+    sha256 "f77b7e77b043661da38b1c5d64140de538587d38a2ce50722a95c79339ceeee6" => :big_sur
     sha256 "aa0bc95a39610d6b5951d064d781d85b898ca2ebf230acbc60aa2f4e1f51e573" => :catalina
     sha256 "36032498ab37f82f538d6aa037dac2b2f1c90f552ab5403f3e87c184bc47e75b" => :mojave
     sha256 "59d545d65c052c2a62f171d4b6e92098a2725cb7c44997051e96863e30d26a03" => :high_sierra
