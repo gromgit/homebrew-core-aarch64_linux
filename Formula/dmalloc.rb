@@ -6,6 +6,7 @@ class Dmalloc < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "20e9a95a069eb9f8715a06ff803d3c85547dc529c0c7d068224aa618d3bd8921" => :big_sur
     sha256 "bb7efa95445722da981fd93013f07db5124aa2b74470d783ac4a18df869a6e8c" => :catalina
     sha256 "f4bd200bf3b14f68387a1110588f10cbd813b5fddcb585d0edf48d48ece5a8ee" => :mojave
     sha256 "ad501bd5d70dfd3ede2258c0a7c0535b29eba957b67271e4db930ecf6bcc845f" => :high_sierra
