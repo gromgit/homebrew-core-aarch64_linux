@@ -18,6 +18,7 @@ class Qt < Formula
 
   bottle do
     cellar :any
+    sha256 "d7b6d9c9f971f09ee690b7624229f7703e4f92ee347419d10b5bd29a207d5230" => :big_sur
     sha256 "98b58f82856c44dd6d675db01bcbbf05bf371c62d63be8c32b1a2facb17145bb" => :catalina
     sha256 "b9e96e6ae3d37a9d3c56369ab4dfa329361d83c2b632da53037feaf26d0362b5" => :mojave
     sha256 "75f2dda074131afb9423cff66d38f20815f61955b192a4834b169947a4ebf8e4" => :high_sierra
