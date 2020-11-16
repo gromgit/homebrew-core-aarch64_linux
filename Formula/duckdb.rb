@@ -8,6 +8,7 @@ class Duckdb < Formula
 
   bottle do
     cellar :any
+    sha256 "8b5a9b4cb61a047a1bbfd622f26e657db98eb549ef21b53de6845761b8390748" => :big_sur
     sha256 "b3928bdf9934279b10485a29ad3e7279ccfc12118d713fd23e3d287a01b4cf0f" => :catalina
     sha256 "b42c5e39ae23a9b460569cfec630c93d8758e073941952acf617e859bba5c62d" => :mojave
     sha256 "7395d6ce40323f839ee50d599abafbee2ed0e24d0429e69363d754841ebe085a" => :high_sierra
