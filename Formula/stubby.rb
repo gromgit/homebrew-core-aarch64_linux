@@ -8,6 +8,7 @@ class Stubby < Formula
 
   bottle do
     rebuild 1
+    sha256 "d158abd2fb311a487794a26f180426a98bd1c2e07b577196b43144d294e4bc71" => :big_sur
     sha256 "aaa2e665539768e5095b04cdbbf61b8b865334770e4608f144096f010631d47c" => :catalina
     sha256 "be2d27bc1ceb52f5728c34b179ba4b57593ded2e66c87c4ab26fa6e89ac26ece" => :mojave
     sha256 "437687f0eebd8218424dbefd61988a5ebb9c2a4487c779c36a329deaf2c2ad92" => :high_sierra
