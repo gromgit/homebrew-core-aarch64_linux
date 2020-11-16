@@ -11,6 +11,7 @@ class Abnfgen < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "bddcdbc3e7993d70dc27f99fd18b439ecb25cd338c8c88762d7d3842439fd2f2" => :big_sur
     sha256 "c1531bab58a352221fca0cc5b73db2d9f206e1b98272ff06a90d72aa9e991925" => :catalina
     sha256 "b553651b5500f66d10a369f4d8862ed9c6d2b39d395c43e372b346b4c7bfead0" => :mojave
     sha256 "3a62e72bec09b9bfff637710db366f713abc95de45437aeadbfa87a87dfc040c" => :high_sierra
