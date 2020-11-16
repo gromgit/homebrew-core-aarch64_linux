@@ -11,6 +11,7 @@ class Libgnomecanvas < Formula
 
   bottle do
     cellar :any
+    sha256 "b039344fb1a268478cc71fea25dad2f815157fa02a1041bec01d2c95dabe94c2" => :big_sur
     sha256 "775379b446e5fd6bcb13863e5c5d3993b382d84b8e68b4f06fdf6d758921cb81" => :catalina
     sha256 "9ccb81e0493aa409725fe76ae345d5910be9ea3c782e4d9a46c24c42b0537150" => :mojave
     sha256 "3c4443a3944a6834a107e2752c95174b49c83c3213be2ac3df319bfd900c22e6" => :high_sierra
