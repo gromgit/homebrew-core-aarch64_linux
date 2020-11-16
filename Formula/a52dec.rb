@@ -13,6 +13,7 @@ class A52dec < Formula
 
   bottle do
     cellar :any
+    sha256 "2583bf4e3b872ebdc5e2f51307cbecad6317327110adda899eb95d13bc86d0f9" => :big_sur
     sha256 "a40e7384a64c5d4e22209088af424eeb4a9de3eba4c5451f95a2a1b6732969f6" => :catalina
     sha256 "5186add25fb7aae66c80139b56ea81fb3aff1f87e74354c2cebe022374532286" => :mojave
     sha256 "c7485fae127d02a6628186b821d72fc40bc82019ae30ddee0abfacf2b63701dc" => :high_sierra
