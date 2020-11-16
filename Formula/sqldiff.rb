@@ -13,6 +13,7 @@ class Sqldiff < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "c9eec1c36e293154323243fa5de45f6fc7b68c30a819559a4cf20c106b2e5cc1" => :big_sur
     sha256 "f19d9c0de62635d0bf72503ac50034b6ac7e35435dfb472ee26f7d7312687c92" => :catalina
     sha256 "b15a0707f6f59fe6ce472d0d7ae6ebd023087e86a24f5fdc176add7c7729c37a" => :mojave
     sha256 "bde4f49fa6c7ff36ce787f26638625e9f88b2735148ffe4f57e9b2aee286d516" => :high_sierra
