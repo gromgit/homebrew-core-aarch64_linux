@@ -7,6 +7,7 @@ class Helib < Formula
 
   bottle do
     cellar :any
+    sha256 "e77384c784b27403cb32d67024fd152af86f75fd74c074885e39b9d67a0c46a2" => :big_sur
     sha256 "072822b5f36b1c6ada8cfc05a8db3206fe8cfe2ab34ca97dd8c0c93ab30a30d1" => :catalina
     sha256 "b0b8f49c6114141cd35afd1ce6b992e5e2e0acd83a5e426da9c209a76ff0c165" => :mojave
     sha256 "d878fc06839eb4aa0beaa00ee556b2e9793485381c3fca511cad0397020bce1b" => :high_sierra
