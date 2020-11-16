@@ -13,6 +13,7 @@ class Ledger < Formula
   end
 
   bottle do
+    sha256 "4946e7b57a72305beb26c88191dcce36e795108525f5eeea10873168c35fe13d" => :big_sur
     sha256 "3aa99883691fcd92825ba5596633cd7958ccdbc7b14d54879a906b20c8936d2d" => :catalina
     sha256 "4c50dd4776d1014f83f3f08242af9d0309db9c6afddd45e88912025be803adae" => :mojave
     sha256 "c63574b6f1df94721c5f20c7d04607a1fe6c3b85f3e72064fd2a10525d12dcd2" => :high_sierra
