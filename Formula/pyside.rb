@@ -12,6 +12,7 @@ class Pyside < Formula
   end
 
   bottle do
+    sha256 "892b34cf6fdbda82d2f9dd512f903efdaf5c2d7e83b124f464683411516559c4" => :big_sur
     sha256 "afdd8738204ad5b99abf98b5f0e5425bc82fb3769878060f9c767d8aa373aed4" => :catalina
     sha256 "1c4c8a6a2ca8f15e7c84547668f75b325b69a4cf969d7b082f0dafd086eac602" => :mojave
     sha256 "52327debd095166a0d5c7e1eb32979d95f2b4cd08f635c662139bbf830981ac7" => :high_sierra
