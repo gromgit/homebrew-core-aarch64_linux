@@ -13,9 +13,10 @@ class Notmuch < Formula
 
   bottle do
     cellar :any
-    sha256 "41a433bb148fed019ff8382df394d4139aa64ad4e36b40160dff83b5b12ee1dd" => :catalina
-    sha256 "7e149250a7ed2e0381557d1adbad16d4736c5d086aa27ca3fc0d9b03371d9ad8" => :mojave
-    sha256 "871dccce993147aa11750a7182b11ecee59404271022213c4553cd7888e4298a" => :high_sierra
+    sha256 "86205549d8971bcc17798ef64d43853a96c180f1997e6d991ad106c654f00eb3" => :big_sur
+    sha256 "33019e1569b78dc2ac4f72f6f901b05526d4678a2310f931609943f0f578c22b" => :catalina
+    sha256 "feef25a27ef288c9506b51b1c3f5482ccf29b98e4341f89bdeccb4452d8fd07b" => :mojave
+    sha256 "650579d43babe2435ba190a8cce066f1a3f6621ba840d7ea9a961b0f084ae589" => :high_sierra
   end
 
   depends_on "doxygen" => :build
