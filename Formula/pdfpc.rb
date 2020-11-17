@@ -8,6 +8,7 @@ class Pdfpc < Formula
   head "https://github.com/pdfpc/pdfpc.git"
 
   bottle do
+    sha256 "c1e404b1f9ab52f405cbb8122cb2e238c44efb5b848c6eb666faad594495c4e9" => :big_sur
     sha256 "aa21bf874d02d920eefc1ec3d8b2ce35cac2712a18d18817d1cbb0594639fb9d" => :catalina
     sha256 "85befb240c734d282ed137ebec82ed69da0b62ee9cf72288e7c052030e0daf56" => :mojave
     sha256 "028edb85cd773f143754f616fb54064d60126316de3330e9dc67f6332d9b5f09" => :high_sierra
