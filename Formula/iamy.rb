@@ -8,6 +8,7 @@ class Iamy < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "a9cb9c7fed6faa3b485837ed36a486ff1950f18230575955bf73d7126fb7d367" => :big_sur
     sha256 "a74e94857f4b788918ac74f9ef20c3c6c19a0e1164522a4591165b0d070795a4" => :catalina
     sha256 "d24e802f1fc572c7d49620531e57a5e143956b2ce1e1d05b2320167b09fbf875" => :mojave
     sha256 "aac8b68119dad48d8aca16a2355cc5c8605e8b1fe44b18e5eb8326216873d657" => :high_sierra
