@@ -10,6 +10,7 @@ class Ploticus < Formula
   end
 
   bottle do
+    sha256 "8b86736a916ccd6455e8fa3fa79234abae9e9c55e963a696d9c393ec97818aeb" => :big_sur
     sha256 "5b23a77e8f83f384d8b3da9af8d1bd89832099a5dec99f1711a72f50a4d682fe" => :catalina
     sha256 "b9ba4732a13508d6aba81b81c31a71ca65543fbcda431d57263f28255072087f" => :mojave
     sha256 "bfdaab8cdaf7c0c97e02caea8fa79e76e7ac85704d21591ced4a59914b4c5c26" => :high_sierra
