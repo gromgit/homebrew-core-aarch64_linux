@@ -10,6 +10,7 @@ class Gxml < Formula
   end
 
   bottle do
+    sha256 "93014bd6358485893840d5e1fcb66bbb2b9528c342d5d38e08525ffd6c8dfd4c" => :big_sur
     sha256 "7ac6b48935cda53013a788e02cb0169fd609589beac7b1af2ad6b3b64e3045a2" => :catalina
     sha256 "656bfa0f89deba237c40af306b141291c548befeadd268d7aaca198db78afe91" => :mojave
     sha256 "c206e3ea69e32dce78804db3d9e0ab2d10a441a4677614324fd46e1e53bdb5e7" => :high_sierra
