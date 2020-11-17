@@ -5,6 +5,13 @@ class CargoEdit < Formula
   sha256 "56b51ef8d52d8b414b5c4001053fa196dc7710fea9b1140171a314bc527a2ea2"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "02962a1a65b5259647e87a4b065e2ca7fee5da04de585e579b6a08772064ad73" => :big_sur
+    sha256 "0a90a56248feeb9a2371ab94a82ddc111688d9323bb4deb92c9863d96fd36f1b" => :catalina
+    sha256 "b26248fef6c09401f36f5d4c30c5cfa10b9944817c84f6b55b384fc7106ef31d" => :mojave
+  end
+
   depends_on "rust" => :build
   depends_on "libgit2"
   depends_on "openssl@1.1"
