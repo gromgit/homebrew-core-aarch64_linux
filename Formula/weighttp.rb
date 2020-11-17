@@ -8,6 +8,7 @@ class Weighttp < Formula
 
   bottle do
     cellar :any
+    sha256 "73c147309603c830719feac16847dc9ec2f09d27dc3a3f702760efe1eaaf8405" => :big_sur
     sha256 "b76ee9060b8cb86897af45c620b1f1fb3d757955a2a2f8e4c55ef6a153bfc547" => :catalina
     sha256 "2ab4f5e31f9411d55c4a4653f78bb381b70f53f49d07efaf6e99b5a86281b62a" => :mojave
     sha256 "4225f653fe64067e3330c33202a15ad65a6b194ce23619ae045cbe50528a9b02" => :high_sierra
