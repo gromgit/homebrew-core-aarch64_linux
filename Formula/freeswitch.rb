@@ -44,6 +44,7 @@ class Freeswitch < Formula
   end
 
   bottle do
+    sha256 "fcb517b506a3bf57f3c8330ce900b37d82130aa450e183e2020e6cc880aa58cb" => :big_sur
     sha256 "98b7f70806d0fc0db8b68fb1f4bc60b20c8f5e651e783fca9b603acaec4612b8" => :catalina
     sha256 "3ce8827fb84989cfeb54faafbd91ef1fe4f0271a85190c7352826fee93022f08" => :mojave
     sha256 "ffc4904104a0dbba2cd9d10ea4e6485d77f41618b9311950e7f31d0d762e89cc" => :high_sierra
