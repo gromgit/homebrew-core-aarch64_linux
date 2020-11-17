@@ -12,6 +12,7 @@ class Scummvm < Formula
   end
 
   bottle do
+    sha256 "bfdd3aa29ce7738729b03c1c58844a9085df58de2e8042db880519dcb3d61aeb" => :big_sur
     sha256 "b48fb222871740414480cb4a1789c1c1b379b30dafac2970656ec8802deb205b" => :catalina
     sha256 "0e359a79ab9835cd3511d1aa7e617349b50fcb0a3241c2d700d2341f321a90b7" => :mojave
     sha256 "dafe75e762c2ccee797055f3bf6dda13d08f3e1efcd2c7017dc734db41a1acef" => :high_sierra
