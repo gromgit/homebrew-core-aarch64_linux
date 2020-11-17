@@ -11,6 +11,7 @@ class Petsc < Formula
   end
 
   bottle do
+    sha256 "cee2a92909ff2620ac7e5d114522562b91597ba1170621dd8ca8d0c4489ddb33" => :big_sur
     sha256 "c6cfc26de6b6e8ac74dd1f2ef3a42e0756fbe6b91f2a0af9e539ef71ab6a9b23" => :catalina
     sha256 "7b1a501039bf194f336362f4d4ef098fcd003cf558ab9d6bc23d9dcfc741d00a" => :mojave
     sha256 "7ca64e51658f48611e81da76d75dc62bcaa3c9d9be8843a142cbf256b51f3e95" => :high_sierra
