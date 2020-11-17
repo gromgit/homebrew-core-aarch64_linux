@@ -12,6 +12,7 @@ class Sratom < Formula
 
   bottle do
     cellar :any
+    sha256 "930146db04f23544f9e89c36b783761217e834035e0a6c6d934fc75367852a5d" => :big_sur
     sha256 "eb959c7930bef09a0d25e5213b387c28d0bcfe5567fe97327699c36ae966d7a9" => :catalina
     sha256 "9a1ae4be9fbf3643fd782aef40928125d257244c368fa7e748df04b5ceb31a1d" => :mojave
     sha256 "acbfea6ae53d91a461eedfe7ad0467be9fe2fe18ae34bb45896efa936b3684ce" => :high_sierra
