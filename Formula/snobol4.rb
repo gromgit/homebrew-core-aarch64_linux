@@ -7,6 +7,7 @@ class Snobol4 < Formula
   license "BSD-2-Clause"
 
   bottle do
+    sha256 "14172b3d9e48c6b7401c5fa84c3169fef2fcb72ed023ce87779950b7cc8210cf" => :big_sur
     sha256 "d1902c73b221c4ed0e97c6a9da03d154dbaf81e18b8420ff2e4bbd320c349644" => :catalina
     sha256 "836e69e4b55f8e061d3862b0f52b7c9800a224e4186bb2116f5d2121b4ed4f79" => :mojave
     sha256 "9282b4f4887f0e031321314fcb4ed9af82b7f023c2c20f8cf7b7d278c098424b" => :high_sierra
