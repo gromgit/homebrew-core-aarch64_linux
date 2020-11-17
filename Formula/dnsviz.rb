@@ -14,6 +14,7 @@ class Dnsviz < Formula
 
   bottle do
     cellar :any
+    sha256 "894e6863cfc58d8f4efb0d8c7da584819fd929c879279cf4bb6e6f58cc9d5e46" => :big_sur
     sha256 "98841730e89ea63774ef33bc723f3f55ce74e965aef94df623dafaef277e8f05" => :catalina
     sha256 "d1cfccf7a3eee282d072f7e8b704ecf447e0fe57c57b6453cde69bf68454b147" => :mojave
     sha256 "7a84c44a46a4dd1e7cd4d6b951ca3011ae662275c67b9f0fecf35626ab66ce8f" => :high_sierra
