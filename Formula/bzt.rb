@@ -14,6 +14,7 @@ class Bzt < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "8f56138fa2be223e2d72358c59a8a42388de9cd496d4756f63b48717bb1d0040" => :big_sur
     sha256 "005b5ccf365b60ec41f9842175ac0e2ddc49e95f854fa808f171cf3364b3b0cd" => :catalina
     sha256 "0625ae9ddc783fc64aef537e5822403d6e24c39a974351dc4ee9c711bb314884" => :mojave
     sha256 "62cc681776a079db76066ab787ca50eddf8f5517df9222a9356af87a7e27ae6c" => :high_sierra
