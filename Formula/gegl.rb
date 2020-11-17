@@ -13,6 +13,7 @@ class Gegl < Formula
 
   bottle do
     rebuild 1
+    sha256 "b0c2c4a4d420f51f2034e8767214cef5638e7750f34a10ebcc9958cb3b23531c" => :big_sur
     sha256 "a3540f7585cc3bad21608ff58dee983e6309d8af74068aa1bea99d8864c11c42" => :catalina
     sha256 "74edbefe0d2ec7f76fdb4566ae8b02ce728049c78f10fd2205a3381db26f3337" => :mojave
     sha256 "f1ac9e40057da12f5132db71ceca4f9f55c60d4787ea630278e8cb9b445bcbee" => :high_sierra
