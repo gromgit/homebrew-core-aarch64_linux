@@ -9,6 +9,7 @@ class Ttf2eot < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "88edb09b376fe32ce292747416549530e92a763c9859817e7eb936c65cf1c696" => :big_sur
     sha256 "05b1f397b4784a77f36a3d3138e812932db4419d8d03e0f0735e58591677e918" => :catalina
     sha256 "54d328636bcb7d9fe1e28bf46115f0b718fc9f4d8e18c48b39d5b2e87bb3930b" => :mojave
     sha256 "7b44ec925ee2bbeeaba775befc77c0c22f2f690ecd94edb72e471c631da80f43" => :high_sierra
