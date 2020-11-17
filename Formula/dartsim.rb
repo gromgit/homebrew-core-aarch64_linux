@@ -7,6 +7,7 @@ class Dartsim < Formula
   revision 1
 
   bottle do
+    sha256 "0272c14be39d1dc6e68ee7f527f7b5412809c7e687086bb922045050f943a4cf" => :big_sur
     sha256 "6bc3941b914e7052855cc887a33794efd910e5e97716ef8ab60662d9fc80e3bb" => :catalina
     sha256 "f9b521725e18122b4174f4a97919248362df4b04892b91e9229f218343814741" => :mojave
     sha256 "10b1a4aa99a6a8e399439137ad871ef5d0b780c5dca96db0843bf26ee7983042" => :high_sierra
