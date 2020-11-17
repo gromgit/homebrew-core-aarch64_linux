@@ -10,6 +10,7 @@ class Gnumeric < Formula
   end
 
   bottle do
+    sha256 "c744003a24dd677bedcc09d1f9064a553da3e2539bfbe14173bf6110fb231419" => :big_sur
     sha256 "d9edd4ae0d044bfe837cc94adfb5f2cc812ae5706b0e7f8a96a0c7b2f9dae63b" => :catalina
     sha256 "43780a97ecfad5fc206241cebbb2d3f16ced32b36a2f095ea047ab6c27dee1c0" => :mojave
     sha256 "67df679b5fe937f17c339812cf1e06aa7b5d5971f6ebfc5c6772b59952745fb7" => :high_sierra
