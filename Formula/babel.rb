@@ -21,18 +21,22 @@ class Babel < Formula
   depends_on "node"
 
   resource "babel-cli" do
-    url "https://registry.npmjs.org/@babel/cli/-/cli-7.11.5.tgz"
-    sha256 "753dac0c168274369d18cb7c2d90326173aa15639aa843d81b29ca2ac64926e5"
+    url "https://registry.npmjs.org/@babel/cli/-/cli-7.12.1.tgz"
+    sha256 "f3df18f3c37e4bcb0294b3e4ccdbd5eef14debdf4bb83120f660b36be7418c94"
   end
 
   def install
     (buildpath/"node_modules/@babel/core").install Dir["*"]
     buildpath.install resource("babel-cli")
 
+    cd buildpath/"node_modules/@babel/core" do
+      system "npm", "install", *Language::Node.local_npm_install_args, "--production"
+    end
+
     # declare babel-core as a bundledDependency of babel-cli
     pkg_json = JSON.parse(IO.read("package.json"))
     pkg_json["dependencies"]["@babel/core"] = version
-    pkg_json["bundledDependencies"] = ["@babel/core"]
+    pkg_json["bundleDependencies"] = ["@babel/core"]
     IO.write("package.json", JSON.pretty_generate(pkg_json))
 
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
