@@ -7,6 +7,7 @@ class Seal < Formula
 
   bottle do
     cellar :any
+    sha256 "9bd89b5be52e81a6c4c0ff588d0d2cbc17075ff44283b37d08ba49952605fbb6" => :big_sur
     sha256 "e13c03ab99faa6ad88a86622e3646eac5c3db1c6b57542bad702612f714eedfb" => :catalina
     sha256 "fd36a3416c5bc506c8a56c1e5c3267aec2f28e4720f8cf31db31b7ac2f9cab63" => :mojave
     sha256 "576df58ef112717404d4c9ced08289fd3f58d7eb275e01175f16552673a26ac8" => :high_sierra
