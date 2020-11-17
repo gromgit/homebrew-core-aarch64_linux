@@ -6,6 +6,7 @@ class RubyAT24 < Formula
   license "Ruby"
 
   bottle do
+    sha256 "1a7a65cd2e59851019c7629e4e441595722af8918e97a62e439c4245caa2ac3b" => :big_sur
     sha256 "0af834c6be2b5b377eb53b27895d0eb5cfcf9298b7613197f4d3cc83bc3fdad5" => :catalina
     sha256 "160204426fc18dfead0ceeb0be27eba371a68996792d6a8258b30bdfca8ef5f6" => :mojave
     sha256 "c8f457842cfc697ead2e961539742995bf1a6782de9cecd0b293c9fe6107b9d3" => :high_sierra
