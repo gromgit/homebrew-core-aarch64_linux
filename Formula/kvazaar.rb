@@ -13,6 +13,7 @@ class Kvazaar < Formula
 
   bottle do
     cellar :any
+    sha256 "294a8c34175f2338af524ca7b7cf134d9893405013314c006ad3e075160e28b6" => :big_sur
     sha256 "75467ab21cc9bb1a3f81f41949a0312300f9d470b4547e827111379b94a237d8" => :catalina
     sha256 "d146e6aa5dda30a3353f72bae18356622fe613e1a7a43ae6d5d5e2fa8bfc2aba" => :mojave
     sha256 "50723e7fbe1dfb25f2ba39b84f4059b208bed481ae0832d00f24c7221bdde905" => :high_sierra
