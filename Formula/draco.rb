@@ -7,6 +7,7 @@ class Draco < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "5eac271d90d5c0f81d75539e7d1f6df5432655fb6d9f26ef41716ed826cbaccf" => :big_sur
     sha256 "54ea5852087b08f08945c7a73f6fc3b9d91958e6f23685c9848e08c2bce1ac03" => :catalina
     sha256 "cd40c18a7c54185a154785e7245ae1b3ddeff275a96854488e625f9a1b6701a5" => :mojave
     sha256 "341560bdd2d7831f274feaa1646f10c79a00618d8c00f9522e885f23af1f2f87" => :high_sierra
