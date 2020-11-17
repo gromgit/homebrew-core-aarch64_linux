@@ -10,6 +10,7 @@ class Xonsh < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "715d5eeb40ed888f76ab3c0bbb3123d1cccb2ff46ccb9fb7607f6917bf788c70" => :big_sur
     sha256 "f151539d535a20d69d0ae170883f83101a09be772421eb3adcc96e2e92b314b7" => :catalina
     sha256 "2a8897561350ada2eb6c18919c220cf360854db84fa06714483954e67d5a83cc" => :mojave
     sha256 "dc3cfbb0128ee2a6bd1a9f8886a4e96c623302cee7b18394189b162a36a55201" => :high_sierra
