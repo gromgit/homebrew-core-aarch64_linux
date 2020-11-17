@@ -8,6 +8,7 @@ class Ensmallen < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "674c213991c16278a2b83d10f3f66a0bf2f6a9a31b762cc01c026f6061d5461d" => :big_sur
     sha256 "cf68516cb03954178975000e32770434ca57fe6ff7cd3049060edfa2963848d6" => :catalina
     sha256 "7625ecf3f624fa12c42742842d0e6e01c373acf3d7e075f96d911e834ab13d54" => :mojave
     sha256 "070c51440d22bdbdd03ea2547f72b2aab52486786dc9887af32a375710f618da" => :high_sierra
