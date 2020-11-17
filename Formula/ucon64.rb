@@ -12,6 +12,7 @@ class Ucon64 < Formula
   end
 
   bottle do
+    sha256 "182de5c5b157eabade695604dcdd7075fb322f707765bbb02381891ead11069e" => :big_sur
     sha256 "f0bf36d7828e138e2fe1068b4b5bf1b9e70f80cef564c186950a30ab2cb1df85" => :catalina
     sha256 "893570e77b17c3400f391fc0a710958b3599d5ad0c5971897d84c7e4552e2ca6" => :mojave
     sha256 "30d2d85dba7891d5eb5b43c69c5b6ac0ad0606d279c6a30e254f6ffd819356f8" => :high_sierra
