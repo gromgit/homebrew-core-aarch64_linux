@@ -11,10 +11,9 @@ class JpegTurbo < Formula
   end
 
   bottle do
-    sha256 "9676ec6b49bc132e29635d608644fbab7e3af307915d0984a5a6db03f5bacfa6" => :big_sur
-    sha256 "8e5ea85c9b9e2c35badbae2ac326871779438d92d89caedf4a454ae31699c65f" => :catalina
-    sha256 "705f3e434a0e2d28360ae63fe99cca55b552bee2e95eac737a49b825946b91dd" => :mojave
-    sha256 "4d564fd7620edb99c656a964cdd53aeb3c93d9f61ff1a94c68bf568cce789f67" => :high_sierra
+    sha256 "3695ec52986316f6c6af1961b3f61ac56b913a45093e22559f247f6da117f587" => :big_sur
+    sha256 "5bc31435b24ad0330c56cc7f92f1070882b9e256f60f96fdb17f0609321469e6" => :catalina
+    sha256 "84f1b97ddf855d9e323305eeaf6d4e8d148ff43c1ef5bbb9f19e4b0d5cc2d8b9" => :mojave
   end
 
   keg_only "libjpeg-turbo is not linked to prevent conflicts with the standard libjpeg"
