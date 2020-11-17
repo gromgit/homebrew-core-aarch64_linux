@@ -12,6 +12,7 @@ class Vcs < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "2c969fddac4c38cdc33a0d34677b13cd63d78d2b16ba972830b875f34bbc5645" => :big_sur
     sha256 "bc404841c013cf935691020cc3bac998161d800a2a98f72fb1e5821e6c07ea28" => :catalina
     sha256 "df66eb7ddab36140a72c6be470d5629cb4ed31f74c168cc70ddb622877b47920" => :mojave
     sha256 "adefb8791367c30169a8fae3aee792521d4082adb33e7dfd7626db88901e84ed" => :high_sierra
