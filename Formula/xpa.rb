@@ -8,6 +8,7 @@ class Xpa < Formula
   bottle do
     cellar :any_skip_relocation
     rebuild 1
+    sha256 "025fa588033850451ca384e0274dd96d29c6e9e1331fd09aa82aad0bb2289af5" => :big_sur
     sha256 "223dc44eba3ff66b59c26e53e9d0ab14c63d57e2f76786bae9fdb7a2be5bbdac" => :catalina
     sha256 "6ba46da9e3de8719db32f1f577fb6943be03a58f8c6472ef7f9b398d0fea9743" => :mojave
     sha256 "686a14717f6ae1b2af6230c3568622f9a480f8884cfee0924ffbecbee8b33db9" => :high_sierra
