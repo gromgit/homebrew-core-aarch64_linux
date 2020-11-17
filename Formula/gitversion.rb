@@ -7,9 +7,9 @@ class Gitversion < Formula
 
   bottle do
     cellar :any
-    sha256 "aafbdba40a99693085eb43b73c1901ec25c5ce60f87bfe195becbb88ab70d907" => :catalina
-    sha256 "cd9169e8c0a4624f0cfb9c1c919d864726cad064856ba7c53da6e7e49fc7253a" => :mojave
-    sha256 "6fa6fbe0eb6dd8a7d226e655199321ffca584d78ab85fcb9c29ee9b1499076eb" => :high_sierra
+    sha256 "902c15e068c707f92083405d1bff5dc664ba4e77e944ca043c133220590dcf31" => :big_sur
+    sha256 "6b2c74883286d8f515df9dc97fcb5342a9e720fee675e0947b1184110a7ce24e" => :catalina
+    sha256 "8fc7140f2c3ae4a8828a7da95a4a0af5149d8156025b41ad2889f6ac2d71061e" => :mojave
   end
 
   depends_on "dotnet"
