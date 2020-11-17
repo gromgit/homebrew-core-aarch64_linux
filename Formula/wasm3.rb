@@ -7,6 +7,7 @@ class Wasm3 < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "39b3cff2a02da9e73b7821b362e42707f02308d9b9985c35f675d0a60e872993" => :big_sur
     sha256 "f2e961b5a0ab02691fe707568a0975fb1b77c75b1e949cff863117efc4eb23f8" => :catalina
     sha256 "263421ab14ca11c25dce074033945db85a5f333fc2c7715a1245b3826beef72e" => :mojave
     sha256 "4b36e31ed5c9c109cefad55fc126091f60e416c6c1a846a636ac8d789f8bc7dd" => :high_sierra
