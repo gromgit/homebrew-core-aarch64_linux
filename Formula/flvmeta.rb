@@ -8,6 +8,7 @@ class Flvmeta < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "e519203e5deb5c2f18f34b12095f4389a5a76d86f914379cb62e397b175e7466" => :big_sur
     sha256 "bb16f5006d22ffaebba50c0d9c5cc962cf73dfcf1ca51d1e69735908ef9aa8cd" => :catalina
     sha256 "176a5edcfbe2da366e27f67590c45870b59ad250cc7f2a51d7a8d0a18f12632b" => :mojave
     sha256 "2ef376486588157dc4e17914ab8ba62a1689aaf92fe101613f93fd0d05018fee" => :high_sierra
