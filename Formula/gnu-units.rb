@@ -11,10 +11,9 @@ class GnuUnits < Formula
   end
 
   bottle do
-    sha256 "31caa8a266a1565f9ded8df385aa85395ee442e310cd5e483dfa87fb05c692d4" => :big_sur
-    sha256 "8349a1d519d546b0e900099d654225f8b722549687a61b34101caddff8ea1c19" => :catalina
-    sha256 "b00474fcb014e19244ad5dee6152164c02dba0a15892cf3e7d8b7d4b3e8faecb" => :mojave
-    sha256 "eda9851ba0da4b3facfeb56f6997d075915f8b55a468c0bfaa3571839e91c750" => :high_sierra
+    sha256 "67c4941efc8a2b0b2b76193f28a83381cea01b74a2e981fb51222cc87e497aca" => :big_sur
+    sha256 "9a3735d1c7a52c9c4a1e2f81e1b0219a2621c3d32be663a085c5a1c48299a6d5" => :catalina
+    sha256 "720dc5aea47a82932ca0cb33b4a45ec3b4ac5c7910274c0dc925a371493f3b32" => :mojave
   end
 
   depends_on "readline"
