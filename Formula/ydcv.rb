@@ -10,6 +10,7 @@ class Ydcv < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "c4ff545cddb41fe2ccaf575cb4f3e76c5c01f232c625eb1c530e47d2ef8075c9" => :big_sur
     sha256 "a16a37a02c2a91cb46238a89d8771af6c65b623f361648e7f13247f0af9ef436" => :catalina
     sha256 "2ad28560612e25690f859e8ba31e4d7a7b35820dc414c0778aa8c99f90737ceb" => :mojave
     sha256 "148d1c3f69a30f2f7e42e037bd2dd0a704a400b41990317513d36a993f914a66" => :high_sierra
