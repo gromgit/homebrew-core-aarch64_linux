@@ -7,6 +7,7 @@ class RubyAT26 < Formula
   revision 1
 
   bottle do
+    sha256 "0c04882fcf548e2691cf451c790e0f85fda7fff90e2af57da10a88c48ac2f624" => :big_sur
     sha256 "b9618a3e2b84a8364e2a9db594c8def107996030155908d1d2f932c97720ef46" => :catalina
     sha256 "e14b839ac8de2cbca1b7f67803a2cfd085159045102c2c073d8d90e7bbeaf81d" => :mojave
     sha256 "6be9583785d94e62384bb4642a5dd514653dbaab7acf77a6873b4e654c355ce9" => :high_sierra
