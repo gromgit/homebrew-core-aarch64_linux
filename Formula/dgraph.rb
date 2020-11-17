@@ -15,6 +15,7 @@ class Dgraph < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "7ac1f2a4a9af53e4fa6ee2137825e1095417b9f066acf4cb82b2ccf0a70f6007" => :big_sur
     sha256 "8bafc5de5848440c3f1c978a475c128432029a638f2d2febf7104fc1bfc73533" => :catalina
     sha256 "57e295bc99e16fa92f1253752957530c97d102c1c713ca89e6d59cc6a3c07a3c" => :mojave
     sha256 "0150fc8ae2de160040728047de34b74223f4f3ecedd2b979df64c220b609074a" => :high_sierra
