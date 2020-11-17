@@ -13,6 +13,7 @@ class Kona < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "ec3ffc9d3cbedb40a58f9932aa77d11126aa9d0415e4cabf19f367e250f30296" => :big_sur
     sha256 "4d0adcc97354ca21c78d666906a718fa2dca47ca5cade99387750e8bf74f12c8" => :catalina
     sha256 "47267596e8da2d49e5f9527896a81cc5987cb993991d7e10e941bd5839fbc2e7" => :mojave
     sha256 "e40a7ad668c3363a1ae1ab4fbc29729d2eff833b8975e1f40239c9d071adc64d" => :high_sierra
