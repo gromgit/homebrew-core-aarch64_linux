@@ -1,11 +1,10 @@
 class CAres < Formula
   desc "Asynchronous DNS library"
   homepage "https://c-ares.haxx.se/"
-  url "https://c-ares.haxx.se/download/c-ares-1.16.1.tar.gz"
-  sha256 "d08312d0ecc3bd48eee0a4cc0d2137c9f194e0a28de2028928c0f6cae85f86ce"
+  url "https://c-ares.haxx.se/download/c-ares-1.17.1.tar.gz"
+  sha256 "d73dd0f6de824afd407ce10750ea081af47eba52b8a6cb307d220131ad93fc40"
   license "MIT"
-  revision 1
-  head "https://github.com/bagder/c-ares.git"
+  head "https://github.com/c-ares/c-ares.git"
 
   livecheck do
     url :homepage
