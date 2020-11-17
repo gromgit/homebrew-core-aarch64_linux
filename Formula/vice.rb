@@ -13,6 +13,7 @@ class Vice < Formula
 
   bottle do
     cellar :any
+    sha256 "1a0bc0f49e3f16b32f678547fef6acf1aad720e20e033651f4516b280c86a6d6" => :big_sur
     sha256 "b65fbef8066263ccd42679a2b9ed9f3d438ff75a5d8c097dcf04ffb5fa1b1e43" => :catalina
     sha256 "65380e5bdb80143cfbd668fe45c385b7715faa6baa8f109707003be3fb410efb" => :mojave
     sha256 "d2532e0ccc1a84a9896a611c9ac7eac15342f7ebbaedba7c0b29f36c178a0c27" => :high_sierra
