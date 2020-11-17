@@ -13,6 +13,7 @@ class Urh < Formula
 
   bottle do
     cellar :any
+    sha256 "16bb2589b748f1c8b5d9a10bbd4548b3a4cd9784f7c1d262567c202dd2868ba0" => :big_sur
     sha256 "b9bee49e954482216177eeb5d489c0ef552204ed0f1d4c5331d3f133d332f8c7" => :catalina
     sha256 "bd9bad9dd91efb3ed22e5a522a41cdf8a78cd519fcdd8903a165ff8e27f15249" => :mojave
     sha256 "a84bae547c870e05976d3d4bccc1d3df30026a30b26dd5084a06296429b654d5" => :high_sierra
