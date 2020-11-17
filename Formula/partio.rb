@@ -7,6 +7,7 @@ class Partio < Formula
 
   bottle do
     cellar :any
+    sha256 "201ed3e9688506db7cb7f0c0f8191a0c66bd05656a9878f5e27cf6fa700f9915" => :big_sur
     sha256 "2f968d33da264dca45bec37b40d60bac33d47c158e2ba7ccf3c3589c0fdc5535" => :catalina
     sha256 "7b6a89f27d152c1ad4593d9df79e79efa4757058b404802b41e68e5c85191eb9" => :mojave
     sha256 "2a3dbcd7e576aa70904b21e5cee1b733720d2322b1f5ab8fb9064a31b7ed9531" => :high_sierra
