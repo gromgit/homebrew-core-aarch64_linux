@@ -8,6 +8,7 @@ class Dasm < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "0de7ec1bbb50537c46364d86188b6ef07c2e6d6efeee6b013be29eab793290d3" => :big_sur
     sha256 "354cf4953e70e7518fc7ee0b0861a0be21fa80770a60d18a2c0ea0d31deb979d" => :catalina
     sha256 "43a9c82d0ed5d8466cdf1bd749c3a94710f76c5a1f1599a5a4538a58616bc95f" => :mojave
     sha256 "145c79491ba96ba7d21f4085ff3cedf482555e46c9c334fe6c9b2458202bfb8c" => :high_sierra
