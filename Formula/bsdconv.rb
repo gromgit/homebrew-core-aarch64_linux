@@ -7,6 +7,7 @@ class Bsdconv < Formula
   head "https://github.com/buganini/bsdconv.git"
 
   bottle do
+    sha256 "bacb2566ef52670b07cbaadfd20f21fdcde1cac9b122c21f9f7cb88e1d3f27e9" => :big_sur
     sha256 "ea7dbfdeede5b0144d00533798f4b76a4af216b12c37a5e5ecaeaac030eab507" => :catalina
     sha256 "c4133e2b55be3a74a241941b4ee3bf4a1a9cacbbe0e5a41827b1229698d79215" => :mojave
     sha256 "ddbd2053b0cff3e0d5c635b370138d5e4de8f5353621dbcabe616f014f3362c1" => :high_sierra
