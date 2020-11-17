@@ -13,6 +13,7 @@ class Pgrouting < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "ec7facd6a5a8b60406792d5abefef3e567afef541261f2ef276e3fd1786fe36f" => :big_sur
     sha256 "b3aa8eceb62d44771da5531da4510686e3fde40ce094bc3499a39444ffaacb46" => :catalina
     sha256 "d21137db3123b293308e209419048a68ed675c2a0ae037f3cd8bcfe466bb949b" => :mojave
     sha256 "6749c0af036ad6e74d7777f12e2fcbff5e10479e318d4b9fb7d33028dcef6c07" => :high_sierra
