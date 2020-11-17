@@ -10,6 +10,7 @@ class Glade < Formula
   end
 
   bottle do
+    sha256 "89b8e6ea161749d4590b3051d561932079e0993ef471f8920ff6e7c269f1fdc1" => :big_sur
     sha256 "3187701f15fe07fa109f2a842dcbb87cb1bc0f9e8d0acd8062460cff9b4f5eef" => :catalina
     sha256 "251a6d9af41c33cad41380ce09146638c29bb547e38ada77d1c076a9edeeff82" => :mojave
     sha256 "42fc02ee56dc09c6c30438591327ee82cf1ecc5c93e96d5687b81995ebab9f61" => :high_sierra
