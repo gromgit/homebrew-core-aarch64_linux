@@ -9,6 +9,7 @@ class Idris2 < Formula
 
   bottle do
     cellar :any
+    sha256 "4e850720481a3aa77a2447ae4da25b3a68ffb70c748c965dc4adf277aed65acf" => :big_sur
     sha256 "0dfa71945dc9e8199954880828412616e7472c0a72bce756fab0a0ef62b94472" => :catalina
     sha256 "09ccf3e0d6871d3898e80afa92fa83b2df63b8dedc21547777e8e58dfc2d1979" => :mojave
     sha256 "6641e4427bd78b544caf8f78fd72ff1faafd8f5439a8357f62e2311db891e146" => :high_sierra
