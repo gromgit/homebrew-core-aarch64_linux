@@ -14,6 +14,7 @@ class Peru < Formula
 
   bottle do
     cellar :any
+    sha256 "57f925b823115f0eaa2ae96f25dcac171496737e0caa1a7fb86972cd80c86045" => :big_sur
     sha256 "505d7ab6f8c65dd5414a67e88b1a30ca0a1dbab35415b4c48aea8ab99616362f" => :catalina
     sha256 "31f7ea3a66e854e6dddfa1127b3d208f6a04406cb0aa6e4b94a034c63c7bd2db" => :mojave
     sha256 "c4eb15429ad2c832220b2ac782745e06bfc29dd8c6a7a3bce15b9291246793ac" => :high_sierra
