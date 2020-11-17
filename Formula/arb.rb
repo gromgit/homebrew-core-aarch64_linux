@@ -8,6 +8,7 @@ class Arb < Formula
 
   bottle do
     cellar :any
+    sha256 "7b0c007b47ab33951df7ec181ffed820bd908864e83fb001b909511eb8a6cd9a" => :big_sur
     sha256 "9315171ee0802ba4fc1e1e8b799f387126c2c2a9adbc8501d659acd3781ad042" => :catalina
     sha256 "2674198ab1752ca366e40c6a0b46b62ea85c6035f28c49239658082d6054b3b1" => :mojave
     sha256 "0560ad466e4bcbe318c00619c86366f13d1265c178bbcdaea034c4064ee0d55e" => :high_sierra
