@@ -7,6 +7,7 @@ class Arrayfire < Formula
 
   bottle do
     cellar :any
+    sha256 "8a95691693ed61d8ced4d856375205366d6ac3e86612638959e48e85d05eacda" => :big_sur
     sha256 "ee4a83613f9c2515a0b59a19bf83913c6f8f81646e5e0d024d2850508cc6925c" => :catalina
     sha256 "20ffb2185bdca09c2797186c17c7e89146b367c9c5c95f0602dfc02e4f14bb16" => :mojave
     sha256 "e0b0931974ffa870ec3e48f712aa0eaaaead6880214ba158f94215f70a2f2241" => :high_sierra
