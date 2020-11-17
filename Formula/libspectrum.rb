@@ -13,6 +13,7 @@ class Libspectrum < Formula
   bottle do
     cellar :any
     rebuild 1
+    sha256 "223d156e3594667291fbc123051e41843087681276e8d1966231005cb0e2af72" => :big_sur
     sha256 "25edb4f26816ec6bfb7f1437c9a17fb2621c1bb81b93a48e22960aabf89d3a1d" => :catalina
     sha256 "29b40b473d7db763d376b1ac1949db8887b3d0a08016d84370add76524c0c377" => :mojave
     sha256 "b4ee40ecf01a16826994e74d31ca1dbc34baeeee0287908f4e1e4a11365f6b4b" => :high_sierra
