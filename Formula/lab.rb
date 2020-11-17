@@ -8,6 +8,7 @@ class Lab < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "23d80095f9432435323f48a778cdd0c9a318afd2bacad9556ac6763be5d31ee8" => :big_sur
     sha256 "15c50154f5322e57c48f0242cb5d234922d5dced1eae5b1aed6071c1133a203e" => :catalina
     sha256 "11715b31f5ed38d3e84af0530b354ac86027b08bf89f8f0ec27509b0a1f7c408" => :mojave
     sha256 "08c8bc4ad5de8a819b4d9741bb9c94a923b5373d834d9d88b044053aa5596b24" => :high_sierra
