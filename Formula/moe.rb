@@ -11,6 +11,7 @@ class Moe < Formula
   end
 
   bottle do
+    sha256 "fca841c40f9b05c85f6e32bf63a8dd8bb6fd01e6a4b01be09b1e90e4c684a54e" => :big_sur
     sha256 "204f87443d288dd953d310ca2e2fa3de0051f460f1586e357ddfdcc540411412" => :catalina
     sha256 "934ee30ec5f7f95c74183e5faf6ccc7ac36c426747476a5a0fb9628a6169de04" => :mojave
     sha256 "fdfffe18871a25a5f0a8cf86ac8682f2cc6623dea335575d39f1dd529ee2ae46" => :high_sierra
