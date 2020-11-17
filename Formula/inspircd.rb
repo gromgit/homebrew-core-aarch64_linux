@@ -11,6 +11,7 @@ class Inspircd < Formula
   end
 
   bottle do
+    sha256 "7d4c77622a6ccef14d7a58548101ad1fd28e6b5add130eb7d2450d1ab41e0cf8" => :big_sur
     sha256 "34dc59aeda4825d28c49bf3eb70c8a48de780a5e468518bb6f4996062cb04243" => :catalina
     sha256 "9e958c6d286cd14e48c3da30b112dd85767559e10beb37da17d34691093bf4c9" => :mojave
     sha256 "ec15fcc66f27585110a022330567f08251617fca67ed96efe9079c67eead9508" => :high_sierra
