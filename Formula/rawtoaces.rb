@@ -7,6 +7,7 @@ class Rawtoaces < Formula
   revision 10
 
   bottle do
+    sha256 "817835b2dc5f277e666a86930b614a5deed5cc28f9feadcd09d4279a8e0350e2" => :big_sur
     sha256 "bac6d5c1c94756f04bd9dd74093e0a4880bd558248771c2d33e7ad1818d8ded2" => :catalina
     sha256 "5ea5b07b5b3079318b9cf751664a2e822acff72c22eab7f7aa4673280ff9b241" => :mojave
     sha256 "de3645e35d6e0ba3ed7cf3890bc94f5009d426e39d682e767a3d861056aa6d18" => :high_sierra
