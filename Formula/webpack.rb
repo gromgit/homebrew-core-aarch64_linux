@@ -4,8 +4,8 @@ require "json"
 class Webpack < Formula
   desc "Bundler for JavaScript and friends"
   homepage "https://webpack.js.org/"
-  url "https://registry.npmjs.org/webpack/-/webpack-5.2.0.tgz"
-  sha256 "196111df2ca36ccc9987cf005b998ffeced769554ba9a2c90306b876106017fb"
+  url "https://registry.npmjs.org/webpack/-/webpack-5.4.0.tgz"
+  sha256 "98c8b7e0febbc55aa169eb9effd385e81fb938875a442d844897a111356b902e"
   license "MIT"
   head "https://github.com/webpack/webpack.git"
 
@@ -23,18 +23,22 @@ class Webpack < Formula
   depends_on "node"
 
   resource "webpack-cli" do
-    url "https://registry.npmjs.org/webpack-cli/-/webpack-cli-4.0.0.tgz"
-    sha256 "ba846e71caddbf5a48b090f23f8ce91df6c771c72e324d1fb2b9eda6e2af1a7a"
+    url "https://registry.npmjs.org/webpack-cli/-/webpack-cli-4.2.0.tgz"
+    sha256 "09ca2de6deee939a4a2f8edf206a776caafb6fe3590ed1a8310a3e3b69ad4a18"
   end
 
   def install
     (buildpath/"node_modules/webpack").install Dir["*"]
     buildpath.install resource("webpack-cli")
 
+    cd buildpath/"node_modules/webpack" do
+      system "npm", "install", *Language::Node.local_npm_install_args, "--production", "--legacy-peer-deps"
+    end
+
     # declare webpack as a bundledDependency of webpack-cli
     pkg_json = JSON.parse(IO.read("package.json"))
     pkg_json["dependencies"]["webpack"] = version
-    pkg_json["bundledDependencies"] = ["webpack"]
+    pkg_json["bundleDependencies"] = ["webpack"]
     IO.write("package.json", JSON.pretty_generate(pkg_json))
 
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
