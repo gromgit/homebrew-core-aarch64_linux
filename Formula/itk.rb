@@ -12,6 +12,7 @@ class Itk < Formula
   end
 
   bottle do
+    sha256 "fc3663a70cf636219ede4bfd9a8b92d4d2613e938f0b865020abba0e91957b0b" => :big_sur
     sha256 "0f61a4a6db8935c74dad672472a9df7a920dcad0081db2ff9b8af62291cd27f7" => :catalina
     sha256 "cdab5fa00fc056cb691b95ee762bee986af9f90bf388dc178cd71fc708be5cab" => :mojave
     sha256 "6693ad5cd1d63c568eb9613553333e04b0fd808a6ebace4e6fdaee2cddaee0fd" => :high_sierra
