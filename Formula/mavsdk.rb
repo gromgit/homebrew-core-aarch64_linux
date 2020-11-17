@@ -13,6 +13,7 @@ class Mavsdk < Formula
 
   bottle do
     cellar :any
+    sha256 "dd331ed6f54a79f874af4b1ff624e792749957db0bb513368aa87b291c95a8e9" => :big_sur
     sha256 "32b1e60946aaaa6ef1646ee970d1065a84afad20ed14e77a35704acc3403ebc3" => :catalina
     sha256 "708bf344f670598ae3337ca543af3ed42f9cd729d1a6812a7f892b4e4ec0a08c" => :mojave
     sha256 "ed7d66e4f646153fcf07552cde5d8d5899e48d3c781212030730df37db96411c" => :high_sierra
