@@ -7,6 +7,7 @@ class Align < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "984c0d271dd402ede064d9e584f82533fc9f0a8f5f7ca9339d952fbdd7d1f3d6" => :big_sur
     sha256 "cca0be9634d92fe10b845b98f26ee953f59482e0436806484a907f487e76d093" => :catalina
     sha256 "b8de67536085ba47ddeaed3b8567645beaf5e84ab0b7ab958cf7b6cc358e10dc" => :mojave
     sha256 "4b0b70a5909b7d6d2fa78fcb4e36acb20295202adbdbd6bf5754530f7e055199" => :high_sierra
