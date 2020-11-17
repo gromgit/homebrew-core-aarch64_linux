@@ -6,6 +6,13 @@ class Gping < Formula
   license "MIT"
   head "https://github.com/orf/gping.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "23b1fc9ef364feeca2c3a9101358a2b30d19b88f75fb376ee9705e59895670df" => :big_sur
+    sha256 "3620b468fb75ab8fccd2bab0bae02adedc8c240214dd7ea0989b6eb066e84ad6" => :catalina
+    sha256 "c996f5ffcdc3fb78d77f3db30c789162b805b8e4d63600a99ca1bf60850d17c2" => :mojave
+  end
+
   depends_on "rust" => :build
 
   def install
