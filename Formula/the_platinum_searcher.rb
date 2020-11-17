@@ -8,6 +8,7 @@ class ThePlatinumSearcher < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "35e13a3b79c8fdd790d2f7368a37b79cec9b6c71503fd53877d6e31511035267" => :big_sur
     sha256 "fbaca6dca74533a513f9b483607a75fe1ae1b772e39bd3e051d3c859bf378f84" => :catalina
     sha256 "b2e99bee242a5b9a1667a321de1e777eb83a8023b034ebe0da3fc0953a193f26" => :mojave
     sha256 "5b85047b2b893e8ec45e3f68b37c09cfb80ceb0a7c2b9c70937f2f2ca1f6f0bc" => :high_sierra
