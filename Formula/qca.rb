@@ -24,6 +24,7 @@ class Qca < Formula
 
   bottle do
     cellar :any
+    sha256 "d5af7b8c341d6c1d5792278b4fc4584e189fc68b7615221947de16567ba45430" => :big_sur
     sha256 "beffb3f0ec64707df65d6debe01378970a64a09bd1f3e62a75135fceb05fad2a" => :catalina
     sha256 "1698ced59723dd813b0d844557701ff944e2392877bdf6ef3c5dbf6d2dbbc60b" => :mojave
     sha256 "adf5f64082417a58d3472fbd8a57b1b2f9b37cb5a9410cf1db86b8fa44868cf5" => :high_sierra
