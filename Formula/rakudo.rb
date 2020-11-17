@@ -7,6 +7,7 @@ class Rakudo < Formula
   license "Artistic-2.0"
 
   bottle do
+    sha256 "cac9d275c92c4ccc09ba546eab1e54e151736f53c959d884b745d420c1fae77f" => :big_sur
     sha256 "955154866a3c4594c5e25eecfdb5616b1c575afcd46a38171ef9560edecc14d4" => :catalina
     sha256 "6b9473bc84f70846cedfa28c05bb01555b090cd61bb657507eb2ff37969b6187" => :mojave
     sha256 "f72348cf24d1928449d3550d2ec9b14380fab52171a53ce20a44fa086d25ebff" => :high_sierra
