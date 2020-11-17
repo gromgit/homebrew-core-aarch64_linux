@@ -10,6 +10,7 @@ class Gsmartcontrol < Formula
   end
 
   bottle do
+    sha256 "ab626d0d5eeda3b0b23c3d46d73a9fd95537dc9e7d72e6bf40e33c30dd9e555b" => :big_sur
     sha256 "f013a063bc125ddf0eb174d8893edc7eea8433aac4ba910b0ed3a11337171fd4" => :catalina
     sha256 "f07ac44ce8d76f469f2bd02da3476f41151416dacb64569a03cf936d8b50697f" => :mojave
     sha256 "67fa6b9c4b3f203916bb66ca3b5b67c2171cbd2d0fd26886746408e09243577f" => :high_sierra
