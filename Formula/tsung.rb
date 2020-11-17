@@ -9,6 +9,7 @@ class Tsung < Formula
   bottle do
     cellar :any_skip_relocation
     rebuild 1
+    sha256 "82f9c26269d705ce0757bb7b1f0485737b62bb6ab440c3a349a3910c2c929c31" => :big_sur
     sha256 "5ba49316a6d401d171ddd27e366c9bfb1a73aaeced24b562a326dbe1bd1249ab" => :catalina
     sha256 "bfd02c24483727832c624e5de2e289efec4eaf30b651be8da85696c1c896c091" => :mojave
     sha256 "64dba403e11577b28f3a80114158b96d8c74f58d09a4d9930801674031d4a7d9" => :high_sierra
