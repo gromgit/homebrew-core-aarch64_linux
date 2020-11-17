@@ -7,6 +7,7 @@ class Gti < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "2466fec7628acfe3d24bb93cd31313d353a808f373e3c666b7b9c52326f45a0d" => :big_sur
     sha256 "dc2f7bf9b442294a044b782321689783cd3fd93a465a9604db606b2b420e4443" => :catalina
     sha256 "2e1f996a67020a9bd842b41d0ac7d6e5ef0791fbc7fd57ffe3e9b7aacc1ee6de" => :mojave
     sha256 "9d46e56c0f79ba9d81e40bc1edc7b4ff1a9c9eeb4dbcb087827dec5b84c4f82b" => :high_sierra
