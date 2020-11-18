@@ -8,8 +8,8 @@ class Needle < Formula
 
   bottle do
     cellar :any
-    sha256 "c600d106422e22c2930d6fb8a7208995a7d996e06e159a57f6b210a15fbad7ee" => :big_sur
-    sha256 "059325b81a187b15fc465fbef99f72892a53ad53016a4b768368e2cd66ae77e4" => :catalina
+    sha256 "d1b4c382f90fb980a40f4d04c7fb4f6c7afb9024b453731dbaf2a24cc974fd76" => :big_sur
+    sha256 "3d62dba1647de4fb3d967bf42435eb4009d3eedc760d3d69e87ba9be17315681" => :catalina
   end
 
   depends_on xcode: ["12.2", :build]
