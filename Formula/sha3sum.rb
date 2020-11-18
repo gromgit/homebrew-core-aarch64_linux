@@ -7,11 +7,9 @@ class Sha3sum < Formula
 
   bottle do
     cellar :any
-    sha256 "45f7cdbaa21efa036f108869e7195a99fa825656406290863d53160a66802fde" => :big_sur
-    sha256 "2a2d98b9289a0a98536d1d73e840fb88bd9ab430f44e914d00cf29a0879a3c72" => :catalina
-    sha256 "261621253f9915637cb0e49ce33764bc7c7fa80ac54481ba897b9cfffcb82965" => :mojave
-    sha256 "4042da1f6559af01943de4bca3c86b9b4b5729cae9a0cb5009b849870fb086b2" => :high_sierra
-    sha256 "99c160dd3fab4dd776d940ec369b9d11e5948376755f12f8c0248a3f5ab8b223" => :sierra
+    sha256 "c1d9c795aa8919edcf17567be2dc5604561b9d5a6596d2ef1ec05051c68915e9" => :big_sur
+    sha256 "112203983307e26b79141bd8886e4bb4e5c5f33fdd240f08d487aed870e0f004" => :catalina
+    sha256 "d5648273485e7cc33aa58186215b39ec7795df427cb5060643029447c8dbc8a1" => :mojave
   end
 
   depends_on "libkeccak"
