@@ -4,6 +4,7 @@ class Patchelf < Formula
   url "https://github.com/NixOS/patchelf/releases/download/0.12/patchelf-0.12.tar.bz2"
   sha256 "699a31cf52211cf5ad6e35a8801eb637bc7f3c43117140426400d67b7babd792"
   license "GPL-3.0-or-later"
+  revision 1
   head "https://github.com/NixOS/patchelf.git"
 
   livecheck do
@@ -21,6 +22,13 @@ class Patchelf < Formula
   resource "helloworld" do
     url "http://timelessname.com/elfbin/helloworld.tar.gz"
     sha256 "d8c1e93f13e0b7d8fc13ce75d5b089f4d4cec15dad91d08d94a166822d749459"
+  end
+
+  # Fix unsupported overlap of SHT_NOTE and PT_NOTE
+  # See https://github.com/NixOS/patchelf/pull/230
+  patch do
+    url "https://github.com/rmNULL/patchelf/commit/6edec83653ce1b5fc201ff6db93b966394766814.patch?full_index=1"
+    sha256 "072eff6c5b33298b423f47ec794c7765a42d58a2050689bb20bf66076afb98ac"
   end
 
   def install
