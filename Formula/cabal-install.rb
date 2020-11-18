@@ -13,9 +13,9 @@ class CabalInstall < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7fbdab393a7e9c70d4da3246152d852eb919f1fb6fd45eda6ab9b0326b3516fe" => :catalina
-    sha256 "11e3cd8f442d083b175f8d4e043f5d232c2593fc8c606551ef65b41b988b9748" => :mojave
-    sha256 "2946e5b36632d7e33e1312c0597d4858479748ee94eb1a52df9f4869c87eb2a7" => :high_sierra
+    sha256 "e5cf4ef514f88918a5eb50b704b97cd5a335d9112b2458d19ba6ed2520e8da2c" => :big_sur
+    sha256 "28a4d8d675adfd734abf2bc4294a1587caca5bf34c1a8e5dbf5c7bea03d36513" => :catalina
+    sha256 "e9bdce7d81f4a3135f054da0cf596d23a22b3996f1264614e0a87a21c5b9be55" => :mojave
   end
 
   # cabal-install 3.2 needs to be bootstrapped with ghc 8.8
