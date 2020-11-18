@@ -12,6 +12,7 @@ class Pandoc < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "10f88e0f6d822432a7500de9b256b2a3304901256a0abbdeee4e4091218fc5c7" => :big_sur
     sha256 "7cdcf09a97ea9156a2450f67f597099b31f6e9826d4e3cbcd1312871f05964f9" => :catalina
     sha256 "5365310e20e9caa6f14f2c884c9a05348568d96398cd05b5c497ca65e2106a53" => :mojave
     sha256 "383bbdec7227f3c0a07b193d2ff00915c654e8d3bce59528f2450ec6a4d18d60" => :high_sierra
