@@ -1,9 +1,9 @@
 class Libhttpserver < Formula
   desc "C++ library of embedded Rest HTTP server"
   homepage "https://github.com/etr/libhttpserver"
-  url "https://github.com/etr/libhttpserver/archive/0.18.1.tar.gz"
-  sha256 "c830cb40b448a44cfc9000713aefff15d4ab1f6ebd6b47280a3cb64cb020f326"
-  license "LGPL-2.1"
+  url "https://github.com/etr/libhttpserver/archive/0.18.2.tar.gz"
+  sha256 "1dfe548ac2add77fcb6c05bd00222c55650ffd02b209f4e3f133a6e3eb29c89d"
+  license "LGPL-2.1-or-later"
   head "https://github.com/etr/libhttpserver.git"
 
   bottle do
@@ -39,22 +39,16 @@ class Libhttpserver < Formula
   test do
     port = free_port
 
-    cp pkgshare/"examples/hello_world.cpp", testpath
-    inreplace "hello_world.cpp", "create_webserver(8080)",
-                                 "create_webserver(#{port})"
+    cp pkgshare/"examples/minimal_hello_world.cpp", testpath
+    inreplace "minimal_hello_world.cpp", "create_webserver(8080)",
+                                         "create_webserver(#{port})"
 
-    system ENV.cxx, "hello_world.cpp",
-      "-std=c++11", "-o", "hello_world", "-L#{lib}", "-lhttpserver", "-lcurl"
+    system ENV.cxx, "minimal_hello_world.cpp",
+      "-std=c++11", "-o", "minimal_hello_world", "-L#{lib}", "-lhttpserver", "-lcurl"
 
-    pid = fork { exec "./hello_world" }
+    fork { exec "./minimal_hello_world" }
+    sleep 3 # grace time for server start
 
-    sleep 1 # grace time for server start
-
-    begin
-      assert_match /Hello World!!!/, shell_output("curl http://127.0.0.1:#{port}/hello")
-    ensure
-      Process.kill 9, pid
-      Process.wait pid
-    end
+    assert_match /Hello, World!/, shell_output("curl http://127.0.0.1:#{port}/hello")
   end
 end
