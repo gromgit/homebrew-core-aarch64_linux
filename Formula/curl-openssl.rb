@@ -25,7 +25,7 @@ class CurlOpenssl < Formula
   depends_on "pkg-config" => :build
   depends_on "brotli"
   depends_on "c-ares"
-  depends_on "libidn"
+  depends_on "libidn2"
   depends_on "libmetalink"
   depends_on "libssh2"
   depends_on "nghttp2"
