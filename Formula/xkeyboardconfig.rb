@@ -8,10 +8,9 @@ class Xkeyboardconfig < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "914f4d2b2f99366532b6966a45f58da6be6bd391e1f162d1aca512341aab6298" => :big_sur
-    sha256 "2bc4ef4bb2f03b72f8ceb8c4fb12048c8dfda6c4db24f7fa2cf6b19f4ba54b17" => :catalina
-    sha256 "347f0195f728cbff5e9e2330248d1d195e8fb198134572bd66d1f45fb4449c10" => :mojave
-    sha256 "8350bb43f9ae136e0d3a811230d351ce741c63ba2ba1e9901d63b009cf6f588e" => :high_sierra
+    sha256 "5d2d8508d8ea7a1aeb33520285088526d460f3e796911bde60af52e0fee0cab7" => :big_sur
+    sha256 "657ec08d8201cd932171f8f9acecd94e62f66657ea7c730810fb2dec70e17c1f" => :catalina
+    sha256 "20a9ec45d3b7fbeca4dfd3bef4dff0108e7ed2481a2b3256c0dd4f152b996de5" => :mojave
   end
 
   depends_on "gettext" => :build
