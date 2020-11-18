@@ -5,6 +5,13 @@ class Giza < Formula
   sha256 "69f6b8187574eeb66ec3c1edadf247352b0ffebc6fc6ffbb050bafd324d3e300"
   license "GPL-2.0-or-later"
 
+  bottle do
+    cellar :any
+    sha256 "7a485d9f66a4b57eadf001fe38219c52b95ddd097830a02cdc3356b2e435765d" => :big_sur
+    sha256 "4651e890ce15036cb2e8862a5c72d56201be4cfc345f7f66d95aa3fd452b6615" => :catalina
+    sha256 "3bfd5ff70ee646773ac6d799c3bd5865a9ab689833ca1f484a6402fa9443b105" => :mojave
+  end
+
   depends_on "pkg-config" => :build
   depends_on "cairo"
   depends_on "gcc" # for gfortran
