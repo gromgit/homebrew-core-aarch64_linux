@@ -1,8 +1,8 @@
 class Patchelf < Formula
   desc "Modify dynamic ELF executables"
   homepage "https://github.com/NixOS/patchelf"
-  url "https://github.com/NixOS/patchelf/archive/0.12.tar.gz"
-  sha256 "3dca33fb862213b3541350e1da262249959595903f559eae0fbc68966e9c3f56"
+  url "https://github.com/NixOS/patchelf/releases/download/0.12/patchelf-0.12.tar.bz2"
+  sha256 "699a31cf52211cf5ad6e35a8801eb637bc7f3c43117140426400d67b7babd792"
   license "GPL-3.0-or-later"
   head "https://github.com/NixOS/patchelf.git"
 
@@ -18,9 +18,6 @@ class Patchelf < Formula
     sha256 "d7c841a08ca1f9e4cc24fa6378e14f82f46dac6124d860777fb53161ac82a426" => :high_sierra
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-
   resource "helloworld" do
     url "http://timelessname.com/elfbin/helloworld.tar.gz"
     sha256 "d8c1e93f13e0b7d8fc13ce75d5b089f4d4cec15dad91d08d94a166822d749459"
@@ -34,7 +31,6 @@ class Patchelf < Formula
       ENV["HOMEBREW_RPATH_PATHS"] = nil
     end
 
-    system "./bootstrap.sh"
     system "./configure", "--prefix=#{prefix}",
                           "--disable-dependency-tracking",
                           "--disable-silent-rules"
