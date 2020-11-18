@@ -8,6 +8,7 @@ class Bnfc < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "75d47e0482b6fe0bf7572ee816ed34b1067cc818826ab72abb5522824e4c7b7c" => :big_sur
     sha256 "c7b3510e24ff12639c19089bacfacbf64352e9f91401fe72b9c7c5842dd9063d" => :catalina
     sha256 "0c306bbd71021879d87d0db3195196250e44296b8643f2a8c824c63fbd8a4a9a" => :mojave
     sha256 "28e29f258ab9da7626b351a106b3423bee9a13fa813ff37fe94c67efb432b180" => :high_sierra
