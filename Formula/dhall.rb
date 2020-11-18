@@ -11,6 +11,7 @@ class Dhall < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "c0f806e50e86f3292e3ad56680733fbcb819af9e1c3ee8ef71aca221aba409f4" => :big_sur
     sha256 "02331205e3f27d14f8c5fe108bbd69497c01d7b2e795c92158fa5c0cbe628913" => :catalina
     sha256 "53dacefb2ccf077ee0b8545c33da906aae9fa262d306da709f9eb13c38aae7f5" => :mojave
     sha256 "f332b105f50c549fe3e96e9b077d2c076e47e312397bdf48f70bb68990b27c02" => :high_sierra
