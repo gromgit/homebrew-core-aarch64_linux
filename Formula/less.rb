@@ -19,10 +19,10 @@ class Less < Formula
 
   bottle do
     cellar :any
-    sha256 "78e78c03cfa593c7a8d8d082dd9d1b3f5ba742828d75c362fa0a69904349337f" => :big_sur
-    sha256 "a9964d5cb1b7b86e7c6b734c59931f76dd1a5e8c6caaab727936de976e3f10c4" => :catalina
-    sha256 "745421ab0d0226624ca632d8db1e63c7f5063be53da579db909d3079964c8113" => :mojave
-    sha256 "e9fe8e7982ddfb6e4c3ab5c5cc9e90a8190a61ffbb8afcd7cb95ea49523a44db" => :high_sierra
+    rebuild 1
+    sha256 "0484ddddfc2032fd649e13fc85e70fb324aaf274e77a64460c6461ca8b15dc3e" => :big_sur
+    sha256 "256e333b35fc588aabec222e12e21141cc75d10dd0171ccd6e8915ba84efc8db" => :catalina
+    sha256 "5f44d9a8cd58bc98f833fbac17be5fcfb8057b63f33abffb7e7d4cff58be2d17" => :mojave
   end
 
   head do
