@@ -5,6 +5,13 @@ class Librttopo < Formula
   sha256 "2e2fcabb48193a712a6c76ac9a9be2a53f82e32f91a2bc834d9f1b4fa9cd879f"
   license "GPL-2.0-or-later"
 
+  bottle do
+    cellar :any
+    sha256 "59068843a454371abc25ad9421771eb2770febfaa00d41e1527476f4cbfdb05b" => :big_sur
+    sha256 "9512f32068f310fc02c082828e4ebac85a698ef69f370243aa00a5b873569319" => :catalina
+    sha256 "d6bc9674875a3eeb44cec544f6cc9ac9ce6435f7fd951f446801a8aadcb1a323" => :mojave
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
