@@ -12,6 +12,7 @@ class StoneSoup < Formula
   end
 
   bottle do
+    sha256 "107380882974abe841cfcd3c59fe1f149f692a91545ca2f8b97a265e699541ca" => :big_sur
     sha256 "d204a26d9742e6355a77d867878044e88302df1814c55c02ca0056698a6c668d" => :catalina
     sha256 "55ca7e2a08746780c722188bfb5805369afbde633f819ebc88acc24cec478633" => :mojave
     sha256 "6e0ff6160286762bce0fed0805ff0d9384f2c183fb351df174b4fe31705dab8d" => :high_sierra
