@@ -7,6 +7,7 @@ class Pmdmini < Formula
 
   bottle do
     cellar :any
+    sha256 "5778b030ba5ad8c7b850946f038729089893f5dd066d9d49fc23377da56a8bc3" => :big_sur
     sha256 "cfbf667e152bede1fce92c8d358195a651e807595bc5e704d71ee80cfe65682b" => :catalina
     sha256 "fe87429ee546fa0629d178c52476c4cc5696abac76b21abcd3e4977c7527bd22" => :mojave
     sha256 "c3195012d5b5333e76c1a8a44b3f734575540deee884dfb6685e139e1038c138" => :high_sierra
