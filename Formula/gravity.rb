@@ -7,10 +7,9 @@ class Gravity < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "a550eea3266010b48fb99540a1670dcd9c8f3b2f6a1dc79b93b59cd0901cd855" => :big_sur
-    sha256 "bbe0bbe4ea0aaa3b4585c232b4c4fbef8e51ab906be17fc6f76df9876594bb0c" => :catalina
-    sha256 "ae65ee69f6a7b53ba1c1bdbaf9e07f421766d023158ef44cb1a6a6df1cee516f" => :mojave
-    sha256 "8d1b8b51674fa30da8827f01fef3352a67e0319ebaabc0ea9cf05926280053b5" => :high_sierra
+    sha256 "9de1478c092c6d76cc371231f6b8b9c33027b03631f4dcc538c233e695444b02" => :big_sur
+    sha256 "f52cc57b5674778efff24e2fa3717fe9e697b129013fd5d779bc4fe30cea2775" => :catalina
+    sha256 "e85c05bbd55c03b82dcfa10bc0dedfd23f8c9512a0ec16b087adeaf576d20447" => :mojave
   end
 
   def install
