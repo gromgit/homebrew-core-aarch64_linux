@@ -8,6 +8,7 @@ class Sqtop < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "236b80d46f0cbc8aedc14b6771b4b58cff6e445eb2e8a115ae14917b307fbab2" => :big_sur
     sha256 "653be227eb16e647b90f0f034543a490476e3ceaa0e9c165b1963b916b4a9703" => :catalina
     sha256 "27786a7ca63d00ecb47e9f1e3e844a077d38048871cec3c03308831716338dc1" => :mojave
     sha256 "fe9a704fdf7f24dadba6b4f7cc20f8f07d93c19450701e01b408ea2f7574ec63" => :high_sierra
