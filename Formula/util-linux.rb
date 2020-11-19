@@ -1,8 +1,8 @@
 class UtilLinux < Formula
   desc "Collection of Linux utilities"
   homepage "https://github.com/karelzak/util-linux"
-  url "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.36/util-linux-2.36.tar.xz"
-  sha256 "9e4b1c67eb13b9b67feb32ae1dc0d50e08ce9e5d82e1cccd0ee771ad2fa9e0b1"
+  url "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.36/util-linux-2.36.1.tar.xz"
+  sha256 "09fac242172cd8ec27f0739d8d192402c69417617091d8c6e974841568f37eed"
   license "GPL-2.0"
 
   bottle do
@@ -37,10 +37,11 @@ class UtilLinux < Formula
     system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}",
-                          "--disable-ipcs",  # does not build on macOS
-                          "--disable-ipcrm", # does not build on macOS
-                          "--disable-wall",  # already comes with macOS
-                          "--enable-libuuid" # conflicts with ossp-uuid
+                          "--disable-ipcs",     # does not build on macOS
+                          "--disable-ipcrm",    # does not build on macOS
+                          "--disable-libmount", # does not build on macOS
+                          "--disable-wall",     # already comes with macOS
+                          "--enable-libuuid"    # conflicts with ossp-uuid
 
     system "make", "install"
 
