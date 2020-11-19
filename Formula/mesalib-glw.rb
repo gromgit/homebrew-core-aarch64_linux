@@ -8,6 +8,7 @@ class MesalibGlw < Formula
 
   bottle do
     cellar :any
+    sha256 "9580a442aa0843b284317be696caa8742165a1574d20e8398c9fadbdfc426dc6" => :big_sur
     sha256 "1a1690918045f775ea6d71216a5b674b5762556aeaf0285e70533150aa7f14b6" => :catalina
     sha256 "39c625451d18574ed9b9fcd6383c3a3e3b0ac7633f85d28df97a3594ea02e37a" => :mojave
     sha256 "fdd89421a230f4b3ea4c2b73cae82cd37d3b44bc61afd5b9e7274dc23491dc8b" => :high_sierra
