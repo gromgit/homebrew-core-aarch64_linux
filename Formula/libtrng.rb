@@ -12,6 +12,7 @@ class Libtrng < Formula
 
   bottle do
     cellar :any
+    sha256 "8eff7623b750819d2bc64e993601623805898bc279b0790841485e4c089735cb" => :big_sur
     sha256 "b0e5af117a32d265de30662de4d7ef61e412853f262949e86ac1ff91dfd69875" => :catalina
     sha256 "4b753374a4fb6305e417ea5d89237f6e62b47b8c9e2c034c76e26475184de48c" => :mojave
     sha256 "4f269f561d5b8b692189e90cba163578ad68b2fa83a84660d8da4d367c4a2e93" => :high_sierra
