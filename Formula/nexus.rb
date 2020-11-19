@@ -10,6 +10,13 @@ class Nexus < Formula
     regex(/href=.*?nexus[._-]v?(\d+(?:\.\d+)+(?:-\d+)?)(?:-bundle)?\.t/i)
   end
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "de3a5e6934087a0d7a52ddfcd5bf9c2b547ee19812cff2316afaca91f638fb82" => :big_sur
+    sha256 "3eb3a774ba71339596c7a255a03e7dd88a003cf9326d51c6e6f32d99bff0bd8a" => :catalina
+    sha256 "aa2dde0621bc26d80d87a2b325b9ba37b0a9c36dcdd57b66c30a95320be19cae" => :mojave
+  end
+
   depends_on "maven" => :build
   depends_on "openjdk@8"
 
