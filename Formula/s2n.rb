@@ -12,6 +12,7 @@ class S2n < Formula
 
   bottle do
     cellar :any
+    sha256 "d2de6735ea9b3b5dbc6c027959beb240f5fe7dbcf66c5d7be10eb2e1fd9e6230" => :big_sur
     sha256 "563c56399c77a3d3a6a7fa265a854c11671e671ad679316e0f5eb3fadfe1d3ea" => :catalina
     sha256 "5dfe9d90d210cf4df21c785d866efb35a4e2a2c23fc79e8de2c77d732ae666c7" => :mojave
     sha256 "fa1f38966a646891d5fda5573743d5212f462a3d816e7879c92e27ef243858e8" => :high_sierra
