@@ -8,6 +8,7 @@ class GithubRelease < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "be80f9385a3b69fcbcdd68020ce392831e94aa5f9079fdea0989907b7ccc0e4c" => :big_sur
     sha256 "55ca08b3981304bfdeea12ce4cec19b75bb56e0c502060211eb360774bfddc47" => :catalina
     sha256 "753179f81586312d394ab636eccc14a67af766f37b1056030bff7b9bfa7fad7a" => :mojave
     sha256 "c0a159a17d1b68a20581a048267c228bc242db00e36cd8bc3221a26dea2f0488" => :high_sierra
