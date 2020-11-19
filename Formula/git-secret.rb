@@ -11,6 +11,7 @@ class GitSecret < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "4f83446af4efa5d587ae8b0db398fc990eecc7b58be77fdcbc15af53d3ce72a7" => :big_sur
     sha256 "2fb53e4162baa1e614c3d73dbb24257604cf8b7864f73deeba21c784c6434193" => :catalina
     sha256 "2fb53e4162baa1e614c3d73dbb24257604cf8b7864f73deeba21c784c6434193" => :mojave
     sha256 "2fb53e4162baa1e614c3d73dbb24257604cf8b7864f73deeba21c784c6434193" => :high_sierra
