@@ -12,6 +12,7 @@ class X8664ElfGdb < Formula
   end
 
   bottle do
+    sha256 "d9c893cd48502f675e5ccfbf139c70dc811683ff8427ee12053af00d63800d4b" => :big_sur
     sha256 "fc5398cdb8a918f3e0153c3467074145e69112fd42866c3dc8fee5a66869e8da" => :catalina
     sha256 "7f6d20cc6f1d7f23834614f2f159d8438732e31bb3375c380d64e8dd010232c1" => :mojave
     sha256 "bc725f791779a9400ab2b11d485ebba7e71aced9e6cef3365db614dbb273205c" => :high_sierra
