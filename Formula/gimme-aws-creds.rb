@@ -13,6 +13,7 @@ class GimmeAwsCreds < Formula
 
   bottle do
     cellar :any
+    sha256 "294eb29b6e65c371e760c0e8e5b91a29e5a1f0feba830401295b5839e63ae440" => :big_sur
     sha256 "05fab637d72486194770241723b14f80b28cfd73c9b420d17890aa3b0c6fd109" => :catalina
     sha256 "ed8da06b863380e0a6a212b5767c909da78a7c521cdcbe8f1f4722c33a4eceb3" => :mojave
     sha256 "c4d28fba876061ece196d8b9e8eede53d5887701833b860ba7ae249fc4acd236" => :high_sierra
