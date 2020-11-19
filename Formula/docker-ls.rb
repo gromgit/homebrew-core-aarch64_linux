@@ -8,6 +8,7 @@ class DockerLs < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "d6f5f5d58a814fa6935ef38ca19d594dc7f37b7f20d006ed8ee776f23e988568" => :big_sur
     sha256 "0dd57092a34d0bfac07d79e87912e3bedfda5f9b7046db31c9c637d080519f2c" => :catalina
     sha256 "13e48e45be8cdb09ff06ca244927b8131debc11b3bc8a31f3d1a1960015024f9" => :mojave
     sha256 "f16bb4511bb3880c9f9dfe114c825f57075ae5524c4e009372a4c9305c236f8d" => :high_sierra
