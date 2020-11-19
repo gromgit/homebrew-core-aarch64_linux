@@ -8,10 +8,10 @@ class Hostess < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b3ba5dc41977ec8bf7ec2075079131202a24e2a1f30736890ab7b44301c04dd3" => :big_sur
-    sha256 "80480773a167fdcad3fadb3feeb298b51aeb89aec5863204f512f941af7271da" => :catalina
-    sha256 "f3f06881067507c0d115209d515e6ebbe4090d7aa8fcff7bc685027c49ea6479" => :mojave
-    sha256 "15050f5b2f5936fe74e47937323c8a872ec12b75ed639b3df2c6eac11cf7da6f" => :high_sierra
+    rebuild 1
+    sha256 "addb5bc6b7ff84ad6d2a33f2e0c46298f16865473ad82a32c02434def068c26b" => :big_sur
+    sha256 "9386f4841bb16ea44d5131b0a360138a3d33d7595e85d0baba3b9546762d7ae6" => :catalina
+    sha256 "90e6b36f4131f2e8a914cd81e6a17e59075e734fa83b583654e178c6e7e65aa3" => :mojave
   end
 
   depends_on "go" => :build
