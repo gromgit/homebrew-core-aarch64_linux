@@ -8,6 +8,7 @@ class CppGsl < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "f635cfb0498a07174dd4dd06dcaeeb4f461508d0cffc622dad19258a472a8691" => :big_sur
     sha256 "ba5b32881db75527872525bcde6bef641bdb6c89dff511ccf5105229f1ba1e7c" => :catalina
     sha256 "262709d81631cc7aa7477b03bd1904320da93b12cecf4aded01e3cc59917287f" => :mojave
     sha256 "262709d81631cc7aa7477b03bd1904320da93b12cecf4aded01e3cc59917287f" => :high_sierra
