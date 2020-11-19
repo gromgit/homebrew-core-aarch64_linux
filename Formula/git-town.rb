@@ -8,6 +8,7 @@ class GitTown < Formula
   bottle do
     cellar :any_skip_relocation
     rebuild 1
+    sha256 "95e2d5299980978b1901814ada3baa3b42a5c38474e042f891ba0aff10bbbeff" => :big_sur
     sha256 "9c90e21d837c016a37117bbf04a6cb66e5acda6ea129dd7013a133cbf3e23d72" => :catalina
     sha256 "f54ad1a3ad30a40be97995c2a8abbecc447e4d93966f18fbb43fcfaf65448bfc" => :mojave
     sha256 "2ff4e78e7a3472caa0f5961996efd2ef9e4cfc82455363dfb4f9eaebd441cbe7" => :high_sierra
