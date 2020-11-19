@@ -12,6 +12,7 @@ class WebtorrentCli < Formula
   end
 
   bottle do
+    sha256 "10f51f2af1b7cf40eb078d27f1176f63e920bb93d617f393ed41230f088eaeb2" => :big_sur
     sha256 "60cdc0a2f395beda3dee530f46b0d3fd6308cd178dc04ca41c4572d12912df69" => :catalina
     sha256 "ac4d1d3d6c92aa23de4a7283a960917254ca5a9958f108e972ea06a328b72dfa" => :mojave
     sha256 "b3a637a7f8f1598e9a3ca7dc356da01b5ea4c0d761df3f9645853574de9ba86c" => :high_sierra
