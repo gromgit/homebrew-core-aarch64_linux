@@ -12,6 +12,7 @@ class DhallBash < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "debd6d818fe6d6a00a77a61e59aa40f4f939e51048427c52c3bb4db59ecd81ef" => :big_sur
     sha256 "255413ce3ff725f3e1c32decec41b4d0435572c9a8c36cd69d96c8e60bd14bda" => :catalina
     sha256 "554c1fbfa317f7c2ac0bc2e907681165c29d6e542227a2918c0530923961af88" => :mojave
     sha256 "3b0a9e5e65404cce129e530b9c1ffb16695988c57d24c4153367b584645b9bf3" => :high_sierra
