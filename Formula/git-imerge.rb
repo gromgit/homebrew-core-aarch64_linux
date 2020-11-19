@@ -8,6 +8,7 @@ class GitImerge < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "89d2e824ebd85a2f3682f59387b579605c1479b1ebb73293d117ba70aa14f0cd" => :big_sur
     sha256 "18c1258aaf3bf4614044a508f4e9189ea2a4c751bafb3885f36147662010a435" => :catalina
     sha256 "5abf5b539420bb46a8ab7b10e43126b3719e2ebc6e0a37fc18434027ed816995" => :mojave
     sha256 "76aee24eeb5e7615e4cfbd7aaf3aacac8d8729dfcee79d8542a84cbd9b663459" => :high_sierra
