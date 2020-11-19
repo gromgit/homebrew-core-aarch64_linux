@@ -11,6 +11,7 @@ class Gtmess < Formula
   end
 
   bottle do
+    sha256 "e11c66ecdaba54ce45967b358c5be1cd036a6763e840d842dd5f855578d45e9b" => :big_sur
     sha256 "3c8e2979b478bfe761e2baf263ce4bfdee03426d853ee10faaba353481a21420" => :catalina
     sha256 "9b5e2ecdb133c3a069305f572ec6d172dfaf10371459e44cc84574b08d2db19c" => :mojave
     sha256 "90d1a2aeab88db7022e64335d101d2a10a045a3b8d6c443381ade99b2c13e2d1" => :high_sierra
