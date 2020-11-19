@@ -11,6 +11,7 @@ class SstpClient < Formula
   end
 
   bottle do
+    sha256 "dfa678dbed0f557f73449091d107882f7f8f02debcbd6f665d180882c59f3a0a" => :big_sur
     sha256 "07d9e21c21591a675d760f059838f26bbbe02a04b27518bce5d3a9b0d0069194" => :catalina
     sha256 "0c32039442cbe0c26bc90660fd99e19940b71677637b60d03350a4c90b3ca35c" => :mojave
     sha256 "cfc794cfd038b84da0b1f329bc7eb6f5c5165e1727ec53c259a5d93ab48d47b0" => :high_sierra
