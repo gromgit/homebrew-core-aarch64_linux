@@ -18,14 +18,10 @@ class Modd < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOOS"] = "darwin"
-    ENV["GOARCH"] = "amd64"
     ENV["GOPATH"] = buildpath
-    ENV["GOBIN"] = bin
     (buildpath/"src/github.com/cortesi/modd").install buildpath.children
     cd "src/github.com/cortesi/modd" do
-      system "go", "install", ".../cmd/modd"
-      prefix.install_metafiles
+      system "go", "build", *std_go_args, "./cmd/modd"
     end
   end
 

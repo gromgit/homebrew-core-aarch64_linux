@@ -18,16 +18,13 @@ class IamPolicyJsonToTerraform < Formula
 
   def install
     ENV["GOPATH"] = buildpath
-    ENV["GOOS"] = "darwin"
 
     dir = buildpath/"src/github.com/flosell/iam-policy-json-to-terraform"
     dir.install buildpath.children
     cd "src/github.com/flosell/iam-policy-json-to-terraform" do
-      # system "go", "build", "-o", "iam-policy-json-to-terraform", "*.go"
       system "make", "iam-policy-json-to-terraform_darwin"
       mv "iam-policy-json-to-terraform_darwin", "iam-policy-json-to-terraform"
       bin.install "iam-policy-json-to-terraform"
-      prefix.install_metafiles
     end
   end
 

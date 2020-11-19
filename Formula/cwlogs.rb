@@ -20,8 +20,6 @@ class Cwlogs < Formula
 
   def install
     ENV["GOPATH"] = buildpath
-    ENV["GOOS"] = "darwin"
-    ENV["GOARCH"] = "amd64"
     ENV["CGO_ENABLED"] = "0"
 
     path = buildpath/"src/github.com/segmentio/cwlogs"
@@ -29,9 +27,7 @@ class Cwlogs < Formula
 
     cd "src/github.com/segmentio/cwlogs" do
       system "govendor", "sync"
-      system "go", "build", "-o", bin/"cwlogs",
-                   "-ldflags", "-X main.Version=#{version}"
-      prefix.install_metafiles
+      system "go", "build", *std_go_args, "-ldflags", "-X main.Version=#{version}"
     end
   end
 

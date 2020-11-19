@@ -17,19 +17,7 @@ class Terrahelp < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    ENV.prepend_create_path "PATH", buildpath/"bin"
-
-    dir = buildpath/"src/github.com/opencredo/terrahelp"
-    dir.install buildpath.children
-
-    cd dir do
-      ENV["GOOS"] = "darwin"
-      ENV["GOARCH"] = "amd64"
-
-      system "go", "build", "-mod=vendor", "-o", "dist/darwin/amd64/terrahelp"
-      bin.install "dist/darwin/amd64/terrahelp"
-    end
+    system "go", "build", *std_go_args, "-mod=vendor"
   end
 
   test do

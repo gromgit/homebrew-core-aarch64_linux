@@ -25,9 +25,6 @@ class Bazelisk < Formula
   end
 
   def install
-    ENV["GOOS"] = "darwin"
-    ENV["GOARCH"] = "amd64"
-
     system "go", "build", *std_go_args, "-ldflags", "-X main.BazeliskVersion=#{version}"
 
     bin.install_symlink "bazelisk" => "bazel"

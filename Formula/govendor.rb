@@ -21,12 +21,10 @@ class Govendor < Formula
 
   def install
     ENV["GOPATH"] = buildpath
-    ENV["GOOS"] = "darwin"
-    ENV["GOARCH"] = "amd64"
 
     (buildpath/"src/github.com/kardianos/").mkpath
     ln_sf buildpath, buildpath/"src/github.com/kardianos/govendor"
-    system "go", "build", "-o", bin/"govendor"
+    system "go", "build", *std_go_args
   end
 
   test do

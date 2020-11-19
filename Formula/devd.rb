@@ -18,13 +18,10 @@ class Devd < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOOS"] = "darwin"
-    ENV["GOARCH"] = "amd64"
     ENV["GOPATH"] = buildpath
     (buildpath/"src/github.com/cortesi/devd").install buildpath.children
     cd "src/github.com/cortesi/devd" do
-      system "go", "build", "-o", bin/"devd", ".../cmd/devd"
-      prefix.install_metafiles
+      system "go", "build", *std_go_args, "./cmd/devd"
     end
   end
 
