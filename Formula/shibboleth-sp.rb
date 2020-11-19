@@ -10,6 +10,7 @@ class ShibbolethSp < Formula
   end
 
   bottle do
+    sha256 "13c6f207d88563c9e96514e22a6ec537be5a7ffa020580e4b37fa174f9cd191c" => :big_sur
     sha256 "0e9ce54b4624d94327ad5d0c67ebcb6dc01d4a47f9bef359424c050b332ffe82" => :catalina
     sha256 "d6f41e0976912dd5bf59bada50f91c4254a42eb45b9371a84f9ba8e4177706f3" => :mojave
     sha256 "25841e4f4a66c574dd42f94ad9d2ef18e793b64ff94c7d193740fb5067d8f6bf" => :high_sierra
