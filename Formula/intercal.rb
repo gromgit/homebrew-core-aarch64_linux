@@ -18,6 +18,7 @@ class Intercal < Formula
   end
 
   bottle do
+    sha256 "487fc70071a54c09cccdbba0284db23c156983b76416a4b4c03f44130531213c" => :big_sur
     sha256 "a2c1673fbed3d331e725694196acf9ea4cd6bc6df3b86568af3e67ee90d70b30" => :catalina
     sha256 "d048d5c58fd1fc3b17c44103b3bbddd445a657415c215916587d9eb8e7f9c2da" => :mojave
     sha256 "c0569e08915adc912bdc3fb149d0d3c50e7a2d941fff8b2d951b22fcfaf4539f" => :high_sierra
