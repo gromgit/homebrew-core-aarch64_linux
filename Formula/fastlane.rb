@@ -13,10 +13,9 @@ class Fastlane < Formula
 
   bottle do
     cellar :any
-    sha256 "be8145485326d9a3c9b398743872e5c85c29d957198f28ae0d63c9813483cc8b" => :big_sur
-    sha256 "7d33a30c1e854a934a725139ea60eb506a2b0fd4965cccb1947e12652974ec38" => :catalina
-    sha256 "34fd983b5f9522389d76e4d4d1e09092ff6f36df7e1b11c6eba756a26570820d" => :mojave
-    sha256 "6dc02f7408f8da0982f977dfdb0e6d3296d8356d97e7c5cf17b59ecca735160b" => :high_sierra
+    sha256 "1487fffd2cf5252bd85c52c6a933e3da4eb1a8c44ca486a3079725b3548ae0ee" => :big_sur
+    sha256 "737a7ad686ecd86977e629e61e001e82b4d9b772468a345254a66d6903eb3244" => :catalina
+    sha256 "973157160e8e5aaa0fc9881d4fdf1e7c80cc9988409fe00ba8f89c006777f12c" => :mojave
   end
 
   depends_on "ruby"
