@@ -11,6 +11,7 @@ class BareosClient < Formula
   end
 
   bottle do
+    sha256 "668e0505862ccd35650243f96bc970be5be595145810d67884ba27a438313e61" => :big_sur
     sha256 "9d23bb8c20bc022d7426df495d12f79f49dc57c1b7cf0779c1be3d763e5e87fc" => :catalina
     sha256 "f75f72d5c4a2758e5ea68c9eeba4688e523db15aa5c0a4120fcb094199200036" => :mojave
     sha256 "a02db1b627c88aee9a740343533a99726c0e5b9f89168aa1b2ffad757ae59909" => :high_sierra
