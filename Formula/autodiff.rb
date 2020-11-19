@@ -8,10 +8,9 @@ class Autodiff < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "dcc86184326b3832aa73c3eda18ea39002fd41429e2ed0ee6aa50b36d1925725" => :big_sur
-    sha256 "df9683ce241dbc7cca5798251423c81e1e10cc94e7af390a0e0e3361cdfbb26a" => :catalina
-    sha256 "79753e9e6b3cce24eca76e99d59ce56c330b209d940f7873df87963a1a66302f" => :mojave
-    sha256 "ed369921225b6e64e86351a7870500946fa6385990658daae9a1c9a9985342ce" => :high_sierra
+    sha256 "d82c564c95a5d6ff0e74993ee5f0402b9d8d9680ec80bf756851ae86d4cc57aa" => :big_sur
+    sha256 "fde07b4c7f1c1fa1c004e0449a7a9fbb32535105c142de4325cd602e629db9a3" => :catalina
+    sha256 "33ea270a121b13a25f1f28ba844cb78a0e0c9bacf4d1df2e6bb8993e8c6b4fab" => :mojave
   end
 
   depends_on "cmake" => :build
