@@ -12,6 +12,7 @@ class GitRemoteGcrypt < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "feb525041cfdf3a36d3d8e7a0c701ec73d1d0bcf90ebb8e900cee2113cd1c8d7" => :big_sur
     sha256 "40fe96f458da47660ec153c19efc0271f9f8bcd987cf328081873adecffd6a88" => :catalina
     sha256 "c475f8f9a231038a1dcebdf37d14255ed9abb8e242cb0fe5a5216c3727ced1f1" => :mojave
     sha256 "40fe96f458da47660ec153c19efc0271f9f8bcd987cf328081873adecffd6a88" => :high_sierra
