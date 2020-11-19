@@ -14,6 +14,7 @@ class JdnssecTools < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "4341a864f01748c3009213510cc983ef29e354c0e486f14c3fd453ad55ac6802" => :big_sur
     sha256 "c12eafadb12264e88ef14fe4e93cdb41f0afccbb24b8cff892e8747d8ad2d73b" => :catalina
     sha256 "c12eafadb12264e88ef14fe4e93cdb41f0afccbb24b8cff892e8747d8ad2d73b" => :mojave
     sha256 "c12eafadb12264e88ef14fe4e93cdb41f0afccbb24b8cff892e8747d8ad2d73b" => :high_sierra
