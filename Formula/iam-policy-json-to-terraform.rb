@@ -8,9 +8,10 @@ class IamPolicyJsonToTerraform < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d5aa3dea843226e508c13bd46c418d7d76e928d631863002054a0bd05b139a73" => :catalina
-    sha256 "b7d80897886195d53da78f483318c12c5873483faaf73bf42dc91dfe1d7ddfbc" => :mojave
-    sha256 "1ad4ad756d400206cc8583a53dc57e50139b45865118d13594c5cc4acef7ff75" => :high_sierra
+    rebuild 1
+    sha256 "4937929d8440ae240e41db53131c388bbd7060e11bc0f72a304bcc34ce5b8eeb" => :big_sur
+    sha256 "a331e44477c92d026cad6d7bdb2865c82fd88813225bfeab5223d1da5d88e7fb" => :catalina
+    sha256 "b81637d334ede30f8fe183ca74ecbf43aadf355f09c001737d69edf56dc36d2c" => :mojave
   end
 
   depends_on "dep" => :build
