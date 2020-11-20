@@ -6,6 +6,13 @@ class V2ray < Formula
   license all_of: ["MIT", "CC-BY-SA-4.0"]
   head "https://github.com/v2fly/v2ray-core.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "7b6b61b6bd3488132f35852356c22b04d19e79bc97e93b7778daf717a8a8fcc2" => :big_sur
+    sha256 "09066d9a293fc5d9759a6c5f9325632d213dbb6c72cfa465d5f1f4da10164850" => :catalina
+    sha256 "352ebff222463c09df705673743ed8699ad202ddcc17154e9fb27906bfb788dd" => :mojave
+  end
+
   depends_on "go" => :build
 
   resource "geoip" do
