@@ -11,6 +11,7 @@ class GitRemoteCodecommit < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "3b2128aaacc269dc6e1a48e4fd83c1eb1eb3a74e66c5555e856d1bde562d24e7" => :big_sur
     sha256 "67424681bf8ead286d446d946c818027049cbec4c4ddf618644cf1d10b8b24f7" => :catalina
     sha256 "b98901e24f879198646f624346d0e04ae92d92eddad8857e5d9aa0f97d4294ae" => :mojave
     sha256 "842cc8e9642a4c5e5875d33b962005a0e0aef7915624216f9b517c9561515b50" => :high_sierra
