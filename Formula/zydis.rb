@@ -10,6 +10,7 @@ class Zydis < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "d6625ee8f3c5e9943e9168cb788fcbf9aa6751c288bf3f00c71aa49b5baa1754" => :big_sur
     sha256 "ceffe3459006c374498e06809f8d75e9f512d5a43482d9b4d3973bbe4b2e3944" => :catalina
     sha256 "a51c744f89ed204c66e0699a960a3c58625a5f46f16f3710e68a4746bbc0fb7e" => :mojave
     sha256 "cefab7b097b79ae4c04616c235e572ffc5416296eba2a10bd7b07c6f18148313" => :high_sierra
