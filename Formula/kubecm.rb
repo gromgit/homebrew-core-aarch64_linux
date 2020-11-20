@@ -5,6 +5,13 @@ class Kubecm < Formula
   sha256 "1c5527a783c15f3389d0b8505a028704fd7238492d6ae511831cdaab32626c2f"
   license "Apache-2.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "8f359c37e0680f45917d7bcffff2d7cf25ae6c1ea10bc2a988963a6e7417a01d" => :big_sur
+    sha256 "aee2facb1875a74299c2ccdea14528f0574ae42197d2499ca79d93bf82a1bead" => :catalina
+    sha256 "e617b5a9c595881bf55915fd230ac778c9a9b37abd19bb4731bbad47e5c75451" => :mojave
+  end
+
   depends_on "go" => :build
 
   def install
