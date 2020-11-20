@@ -8,6 +8,7 @@ class MacosTrash < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "6b0b3fd96b400200bd92f734643501247fe2d3c5b2e063017c0d6aeebd337567" => :big_sur
     sha256 "5962bfd5851549b6a251dc4b9632794622af126175faec6a4d97468d45de22c6" => :catalina
     sha256 "030b17bc67400a3f0873bd6983954fe0b55166b26c764e77b1d8cd1adc1bc1b7" => :mojave
   end
