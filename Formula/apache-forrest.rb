@@ -14,6 +14,7 @@ class ApacheForrest < Formula
   bottle do
     cellar :any_skip_relocation
     rebuild 1
+    sha256 "2767298b0c6c15419a22f4a9ed56e0eaf8b0f466a23a7edbaf4db0ae7e179871" => :big_sur
     sha256 "53aed268e732c00ae5d57d4b98287c59f12c124f5a1b925d02aefacdc6dc5132" => :catalina
     sha256 "53aed268e732c00ae5d57d4b98287c59f12c124f5a1b925d02aefacdc6dc5132" => :mojave
     sha256 "53aed268e732c00ae5d57d4b98287c59f12c124f5a1b925d02aefacdc6dc5132" => :high_sierra
