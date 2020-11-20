@@ -12,6 +12,7 @@ class ShairportSync < Formula
   end
 
   bottle do
+    sha256 "5e80cb769ab8c391af730a66ffd90dee2e810827edc232412c3f7e1ae2c4dbf3" => :big_sur
     sha256 "3c2a973fbbe200704e35737226fd4e7ed6edad9f389253602fe5d14c50bb171e" => :catalina
     sha256 "afe30af9e783c581888b525d7e3aab13e09e9812e9f717ad258c9cbb996da8a4" => :mojave
     sha256 "d08952f97ce3a3f7e10a602322d0fdb23d8553586b4a7ad6b01af927f9969e1f" => :high_sierra
