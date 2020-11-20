@@ -10,6 +10,7 @@ class PassGitHelper < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "11bbb8eadaa742fc42ef7459efa02608a4c9a3d23a3e78cf7d95f23a8bfa1e30" => :big_sur
     sha256 "16c381567a7d7584955dd3584ab6cdf73db6f27ba240b638e1e5e5a9a1157825" => :catalina
     sha256 "d3db9b4d99dc078897b3998d76abf4dee8e8236ee8c0addcbef1b9a49b693845" => :mojave
     sha256 "47647006f90c61081c40579fdbb3431398f8f67084b344b084f356558ead87f6" => :high_sierra
