@@ -13,10 +13,9 @@ class Marked < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "696c6e074dfad53cd54359a26115b7deb149a508f0c56a32ca8b23572d669bb2" => :big_sur
-    sha256 "2d7d7d92f82712f012ec042b88a247e45777d2c712f30a1aeab696656b493d85" => :catalina
-    sha256 "dedebec9f51f7dbe3f4fbd104c3991b62c362a286c81d5605a95cdcbe20e3076" => :mojave
-    sha256 "7cadf28836fe33c3bff11de0e751788a359d8a6dea801650715d991acbd1f9ef" => :high_sierra
+    sha256 "80faf549f7c3ef1032e3c42c471321f0f3d9285e638e9eb653962fd6673661e2" => :big_sur
+    sha256 "25d3044a6032363b4c3bc7cc0f6512147fd431d864e03496b2d36a56b863ec9c" => :catalina
+    sha256 "94c9671358e79834678d7dd4a4bc86e1c46afc7b0a6ef849f911249a2b46bfaf" => :mojave
   end
 
   depends_on "node"
