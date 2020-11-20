@@ -12,6 +12,7 @@ class LcdfTypetools < Formula
   end
 
   bottle do
+    sha256 "45ff77c662edb2a238d2c07be58cf242685ed85c926847a381e9a2acf7035b3a" => :big_sur
     sha256 "e7ce2d4d16d2b79e482cb862231519653e6d3c09cd5e310573b04f804323e1e3" => :catalina
     sha256 "0fd983396dbcf027e560753e6f25797500d085762edcf59a1a2034cd55c24cfd" => :mojave
     sha256 "cdff1c16d03fd920033f85dd2e2180f91791057729fbd26b6f193ac7cd0ce9f4" => :high_sierra
