@@ -12,6 +12,7 @@ class DhallLspServer < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "00c90dcf68563db4e74910954edebbff98bac4b318a7e82d8bec41514c2f85ce" => :big_sur
     sha256 "1c925e8990bed3e3a0389dbd5d14747fb505616fca88dd46558971295e516bc0" => :catalina
     sha256 "b06f4182ed72529cf7fc193db336a00d0fb277515887ae601d426194a7407fa7" => :mojave
     sha256 "dd5b2b20ec49b4e6c80ddf20f02088a91152a385f8524f4953649937bf24c225" => :high_sierra
