@@ -9,6 +9,7 @@ class BaculaFd < Formula
   end
 
   bottle do
+    sha256 "93e80a00345e656f521e24fd8f20cf96412b12c13de03a519d560aa20e55a5e6" => :big_sur
     sha256 "0dd869846330eeec14fdf2c4c4fb4c68366f436a541d15c2ffb5cce2184b7d68" => :catalina
     sha256 "835731f3c18291b5dc2d30cd55040e0b1fa349d00e83a8fa4c7a1de85e974c50" => :mojave
     sha256 "6283f63974c24309a3219b6952b43f30fdc91cc6776305a240e5970320c76e39" => :high_sierra
