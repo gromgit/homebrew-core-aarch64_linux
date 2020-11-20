@@ -8,6 +8,7 @@ class SpirvCross < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "795b80c4182097a74736610ca4f5ef7db326f7c3fa1877034294c596e3eb6b5a" => :big_sur
     sha256 "6c7ebf3dcc65a7392247b7643f6f36461720ef8399c52bd05aaf79ed53af2123" => :catalina
     sha256 "4da93b781991248cd8af56b41b84dc09a18f587a41e5a52b1f65f75a0be78afb" => :mojave
     sha256 "971cd943944647d47c1a6def86faed5f011236915d4085a7b8b5317610f32be4" => :high_sierra
