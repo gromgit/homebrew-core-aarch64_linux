@@ -11,6 +11,7 @@ class Vit < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "7f92f4eedad20637f8f99d531fcc89e9d44514df8ab46421059c0b06497f59de" => :big_sur
     sha256 "4e1509120e57d5bfcb00274ff1f0a8e63f77ece272e93dfbc17aa694d37c6a26" => :catalina
     sha256 "4e3434b618336f3c507df406cab0e37f2f3119217e24237d9d390f17e6ab88d6" => :mojave
     sha256 "9549087c4e477517e6f6aec719bb8d79727e642f8c65c0b28363f4290ac440d9" => :high_sierra
