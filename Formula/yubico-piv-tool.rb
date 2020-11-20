@@ -11,6 +11,7 @@ class YubicoPivTool < Formula
   end
 
   bottle do
+    sha256 "0b1730e571788cc2f5d772cae7320095cad90d912370e356dc32ea6ba58a1c97" => :big_sur
     sha256 "13da151129e6ae4bf5dbdc013890d5d8ce5b1328461716b454cc904cb21bb78b" => :catalina
     sha256 "ace3c2ecf7edae27f22f836edab9f1d6dd3527c2442284e9acb85eca88294a42" => :mojave
     sha256 "86e59608b3832aa49d4a7d36d14e0fd491ac00c0c9be81c3a17185d552212393" => :high_sierra
