@@ -8,6 +8,7 @@ class GrOsmosdr < Formula
   license "GPL-3.0-or-later"
 
   bottle do
+    sha256 "c4a00d0ab33d277fbd036c7f496b09ca8259ec892a2a8877a3707a512f4ec705" => :big_sur
     sha256 "fe44d2d7c7191673e63737c5d836d678db4118c3642ac2bb8bb1a2ac9c9748c1" => :catalina
     sha256 "eda09b693472907745359cbc0f98bf8bb684d74d1cbca4d057683efa989a59aa" => :mojave
     sha256 "a7688b87b3100710348257944d22b23cadd98edd9fb06e145c8db1b80ad476a8" => :high_sierra
