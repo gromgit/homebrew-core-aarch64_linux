@@ -14,13 +14,53 @@ class TreeSitter < Formula
     sha256 "f142b02c17ed1c789b1675a3e56f448cade7000752f099850c18764aca2b960f" => :high_sierra
   end
 
+  depends_on "rust" => :build
+  depends_on "emscripten"
+  depends_on "node"
+
   def install
     system "make"
     system "make", "install", "PREFIX=#{prefix}"
+
+    cd "cli" do
+      system "cargo", "install", *std_cargo_args
+    end
   end
 
   test do
-    (testpath/"test.c").write <<~EOS
+    # a trivial tree-sitter test
+    assert_equal "tree-sitter #{version}", shell_output("#{bin}/tree-sitter --version").strip
+
+    # test `tree-sitter generate`
+    (testpath/"grammar.js").write <<~EOS
+      module.exports = grammar({
+        name: 'YOUR_LANGUAGE_NAME',
+        rules: {
+          source_file: $ => 'hello'
+        }
+      });
+    EOS
+    system "#{bin}/tree-sitter", "generate"
+
+    # test `tree-sitter parse`
+    (testpath/"test/corpus/hello.txt").write <<~EOS
+      hello
+    EOS
+    parse_result = shell_output("#{bin}/tree-sitter parse #{testpath}/test/corpus/hello.txt").strip
+    assert_equal("(source_file [0, 0] - [1, 0])", parse_result)
+
+    # test `tree-sitter test`
+    (testpath/"test"/"corpus"/"test_case.txt").write <<~EOS
+      =========
+        hello
+      =========
+      hello
+      ---
+      (source_file)
+    EOS
+    system "#{bin}/tree-sitter", "test"
+
+    (testpath/"test_program.c").write <<~EOS
       #include <string.h>
       #include <tree_sitter/api.h>
       int main(int argc, char* argv[]) {
@@ -46,7 +86,7 @@ class TreeSitter < Formula
         return 0;
       }
     EOS
-    system ENV.cc, "test.c", "-L#{lib}", "-ltree-sitter", "-o", "test"
-    assert_equal "tree creation failed", shell_output("./test")
+    system ENV.cc, "test_program.c", "-L#{lib}", "-ltree-sitter", "-o", "test_program"
+    assert_equal "tree creation failed", shell_output("./test_program")
   end
 end
