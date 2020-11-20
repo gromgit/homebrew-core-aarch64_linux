@@ -9,6 +9,7 @@ class GstDevtools < Formula
   head "https://gitlab.freedesktop.org/gstreamer/gst-devtools.git"
 
   bottle do
+    sha256 "7d0942271189310a4f67660a8850f124172292c91ae3e76be64c62c1bd523a19" => :big_sur
     sha256 "4befaddc224b6621effeed0b92e336b6ec6cc8ea2be44fb5ccfe681561d7509b" => :catalina
     sha256 "fbca18af1a8412f2a58ca7c3b0166e3e2019b1673ec493c252ae522c3094ad14" => :mojave
     sha256 "0eb56251926b5ecc220708f8da188d1585473dfbd59a629d8a8351a971678f76" => :high_sierra
