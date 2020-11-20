@@ -7,6 +7,7 @@ class Karn < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "5d6f89b8d10f4afb4e9b293940f79de15845105edc95372c5f208d6042abae3a" => :big_sur
     sha256 "dbe143cddeeb74fa8cbac57f8f28f9280ce6ba554fe00d02b44f68316a229710" => :catalina
     sha256 "3a353fc809699b904cdbc845138518fddabfac7250b22d68a47f9ecdd98de967" => :mojave
     sha256 "a837fd65265db402d67fda5ff5bb4337822d1efd945bee56f7a664e6bc67c343" => :high_sierra
