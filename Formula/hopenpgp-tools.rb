@@ -12,6 +12,7 @@ class HopenpgpTools < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "66058ae92d0f823601cb440b84c3e312ee3c662be9a56895a91baf43a7ac2d4c" => :big_sur
     sha256 "8d6b240336e06f4a12a1abc3ba911b398ab565f07c597ad8c5a95a32716b6139" => :catalina
     sha256 "449c9d19526406e7204c302b3b14dfb31637e1ea9b3256518a02ff68422989c5" => :mojave
     sha256 "28978d7cbd8da9251a3bedfadd43b7a79cbea80f8b98e60b81391f45029ff03e" => :high_sierra
