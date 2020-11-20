@@ -12,6 +12,7 @@ class Ffe < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "e8b62e3707553ca422a0540b72959fabc49093c27935967ac4fbd94cce594b3d" => :big_sur
     sha256 "59d1950fc3b1ed9baccaa08b100a4768e1a5dd21895623d1bbb99077218426fb" => :catalina
     sha256 "845ba501eb75d9f3d0466e95700c5b04511a3908dd2fa8b0a3dd06e611a937c4" => :mojave
     sha256 "3415f4fa4e7407929bfc62ac70c663a48669d39a38375524319851cf396abacb" => :high_sierra
