@@ -8,6 +8,7 @@ class GithubMarkdownToc < Formula
   bottle do
     cellar :any_skip_relocation
     rebuild 1
+    sha256 "99fbf5a57dc8acfcdfb315e14e89886f01584536888426626f7cd594c54c2388" => :big_sur
     sha256 "b4f9d659136a64866c45db6175dd57c366a05b99228e59c889714ae07810a9d9" => :catalina
     sha256 "599edae04915747981605739964b0f496e22d434005be54cc7102ff64e592ba7" => :mojave
     sha256 "44e9a44b52c69571064b4d316f99b1b0ba9b87ac0453e2f0e69a8da65513c9f7" => :high_sierra
