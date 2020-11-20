@@ -11,6 +11,7 @@ class PandocCrossref < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "5d15b2d48222cbf4ab3a6ca10b560501eaa0456587b411b397312417440f7eed" => :big_sur
     sha256 "b7290977c7c81ecfbede54af1c702bd89badca69f6cc64b7ab47503708899d95" => :catalina
     sha256 "736eacab8cc887d6f408de964b382085bb4ae0dd66f3c6258c8ef72cdd99f6cb" => :mojave
     sha256 "64bfd8404e5cc8046ca7a8a5151a019e910acaaf7da2c6595ec95bfc843edd2b" => :high_sierra
