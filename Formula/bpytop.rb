@@ -7,6 +7,13 @@ class Bpytop < Formula
   sha256 "0a06b621d77b7b7223cef6421f6ceb04da4bfce20836d1c473ebfaa89dc1c838"
   license "Apache-2.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "b39de73e084429f1e3b2f5276a3134f2075813b5810ebf2782617f7274fd23ca" => :big_sur
+    sha256 "7f7ee5558e63a38d8944eb39161c648846bf6355966fc6be7d2437a2e8de734f" => :catalina
+    sha256 "115ecf39c7e025c6a0a24d07ba8a214ddc67765f64edec049f0a5f6dcbad86d7" => :mojave
+  end
+
   depends_on "osx-cpu-temp"
   depends_on "python@3.9"
 
