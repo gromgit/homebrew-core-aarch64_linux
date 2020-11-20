@@ -16,6 +16,7 @@ class ZabbixCli < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "2b4d595e2cc721f242912d2440f563edf5d2356489c1729a241477c2a8895e11" => :big_sur
     sha256 "279c0d15eb9b0d3318511c235652627498179b6b37664b47e65e47dd37848586" => :catalina
     sha256 "2021e4b3ca3cc30b290c7a999dd36fd9cd0d9a61bb0498f35537ee52907ad838" => :mojave
     sha256 "834aaba4a28b53861bd3bf58155131dd50d1b2ea6ccf33177d366365c707fb74" => :high_sierra
