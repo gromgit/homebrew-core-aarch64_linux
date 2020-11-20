@@ -7,6 +7,7 @@ class LibbitcoinExplorer < Formula
   revision 5
 
   bottle do
+    sha256 "da9a30cee0b7272947a20c1157cbb7bd8efde7b307507d115f904a5594a10cef" => :big_sur
     sha256 "6986795d66ecad3d3c6f7c37236d2c13f2da69b929b93a152cbc0108785d2486" => :catalina
     sha256 "2024341cfa9ac89d12324cfbe45a2dd3e7435f12d368eeab699e77ccfd3b7651" => :mojave
     sha256 "517f9c9849d8c0b6c7c255aaf61d08b3b24fe98b7096f3eacb5a2aeb2f30e99b" => :high_sierra
