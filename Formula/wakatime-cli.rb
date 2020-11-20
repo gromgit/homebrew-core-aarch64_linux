@@ -11,6 +11,7 @@ class WakatimeCli < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "3435709410408bacf076594f87fffe654048e4e7aabe124f7f6bb37bbf3943e9" => :big_sur
     sha256 "1573e0dd92f96002d51d388bb75f4ea06946dacf8c2e46c2408513c0a13c9feb" => :catalina
     sha256 "84e365ad5241e4c17926bb32730cbf0d2d9de798551e137fe568a3934e7d733f" => :mojave
     sha256 "9c4ddbce30fc3b94deb970c30527a80534e4389810524cfc58b634fc0863fc0c" => :high_sierra
