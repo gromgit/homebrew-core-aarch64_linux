@@ -9,6 +9,7 @@ class CmarkGfm < Formula
 
   bottle do
     cellar :any
+    sha256 "3e26c1d17fc758db9384e87ae0fb9c14bf72131e907999f3df7e92e82db9f740" => :big_sur
     sha256 "f7d1e82fce11d59440842e86065a21ec244b85159e091528dca7e004a32615ba" => :catalina
     sha256 "e203ca97951abc32dc20dede8c504df44a6972f8cb03df7a0e597bc7caeb20f5" => :mojave
     sha256 "461d5443abc76191e65b3df9f2448072107e31211017e38bbb461842b523ee43" => :high_sierra
