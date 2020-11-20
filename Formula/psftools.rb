@@ -10,6 +10,7 @@ class Psftools < Formula
 
   bottle do
     cellar :any
+    sha256 "f4f46e695337976c5820baf6afc98cb16612dff9d4042d65c03a8a093ab77bb1" => :big_sur
     sha256 "30d2a62f05343fbd172a0b7d094e84755d3441fae6e9a5734793cf363a9e8c40" => :catalina
     sha256 "9a04003b9ff3529c3e1e94f63b062c120b8a5e4af66a99965347d63827004128" => :mojave
     sha256 "cd1682c76f401ff6fc6c4dce3e4c5d31aeb50a2deb4b56a31b8bab5830c6ec4b" => :high_sierra
