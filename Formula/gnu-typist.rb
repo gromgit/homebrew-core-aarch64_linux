@@ -11,6 +11,7 @@ class GnuTypist < Formula
   end
 
   bottle do
+    sha256 "74506e983cf7d74abcd8cfa4007d8429cdae7283a1b3cd3a3f0272d4380df024" => :big_sur
     sha256 "2a824f3fad3871cbf43f15009c23563aa03872597f22e823f9e2551d35fe1e26" => :catalina
     sha256 "9f0fcdd42b9a041408b132882778db2eb479749a7169b82f2caf1f4fd486b599" => :mojave
     sha256 "72503afd4efafe7a8485ea22332819937008263976a6f5f5b42818565d59edbf" => :high_sierra
