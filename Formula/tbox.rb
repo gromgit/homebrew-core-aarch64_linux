@@ -8,6 +8,7 @@ class Tbox < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "66c432e0d62961cb5f6fd49d09362c8a181440291f908c49310217092c6b9016" => :big_sur
     sha256 "0be436a7df4a7b942f37e397b2cc0929e64e9475fad74cb9fb8dd70d7d5b42a7" => :catalina
     sha256 "cf391788c014a7acac0d1e7ff4a4fea01e840dddeb4e901427fb5f40939f9157" => :mojave
     sha256 "8eaecc2a931b034521a468cc1410b01991139f631e8f888ccce60092d825af0c" => :high_sierra
