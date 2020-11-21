@@ -8,6 +8,7 @@ class Binkd < Formula
   bottle do
     cellar :any_skip_relocation
     rebuild 1
+    sha256 "3b309f2c4a6ee43441a32c0396a570454737bb85c5467f3e27a8c666140bda59" => :big_sur
     sha256 "263219b174c193cd86454770d838013daa797994d8d21cdca45493a59d8a5a79" => :catalina
     sha256 "1582b44b77979d7258c51baec8bb54f367fc21f8cc03838c9c1b1351ea9f77e7" => :mojave
     sha256 "e890bed8ae5c89dfabd589e2c9654b2c8da6811bd24fbfd99aa4fc520a535e26" => :high_sierra
