@@ -8,6 +8,7 @@ class Homeworlds < Formula
 
   bottle do
     cellar :any
+    sha256 "d6a22f3c56da49ec935804ed17594b8a82a8114781d953b0c3315330eb64ef18" => :big_sur
     sha256 "a31bff64509e705b514068d75a4bdd6b9e11fa1f0e0aa45bef8b6ecb2b10c7be" => :catalina
     sha256 "9998b77fea42a5c72c4ffdab61b84165ae8ce067763e4c661a058235749eaf84" => :mojave
     sha256 "b26fbb5f7955afa48247667b0caeff13d504eee6ef744284c498702026f9528e" => :high_sierra
