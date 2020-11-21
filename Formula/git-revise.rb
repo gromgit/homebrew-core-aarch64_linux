@@ -11,6 +11,7 @@ class GitRevise < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "4b02d17b10a298ddf872c2d43fe836064d51b382abc1db9557fe1f8e1607a1fb" => :big_sur
     sha256 "1d04c34ac1606c6918141e94194f2d9c22c7a39179a8652b928dddb8c4064374" => :catalina
     sha256 "8c812be3c150c174ce7774b35dc35f9c8322ffbac8d32748c26dbb4340f08fb0" => :mojave
     sha256 "b6f7e178e2862dd4ed3d14c0282da9eaec7bc124d1409d35858f1206c0de5bbd" => :high_sierra
