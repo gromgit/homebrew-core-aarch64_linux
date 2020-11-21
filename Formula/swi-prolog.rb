@@ -12,6 +12,7 @@ class SwiProlog < Formula
   end
 
   bottle do
+    sha256 "90b6af595ad9b78a386af8d76977d5bcb9611bbba343655bad013dfdfc24c612" => :big_sur
     sha256 "d46306be59beb87062c033be2575b833d1d0cefe87ef1dbe4019fba2e4ea7b4c" => :catalina
     sha256 "ecad13f16b9db9eb64be41741d4a905b3efc9069f6edfb455b48ca0dd2609504" => :mojave
     sha256 "00af33c50aed56b7c8451cfd9e1e25633ba05c14e34d95dffe5d8aa759d606c7" => :high_sierra
