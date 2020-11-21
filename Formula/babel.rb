@@ -13,10 +13,10 @@ class Babel < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 "4406c70c05dc0e45ead7a898f279f280b9b6b95474e56808e01ded0197e0451b" => :big_sur
-    sha256 "bf09fe7aac5c201ae31d832c41696fd04ae67546e596ab5839e21584f5bcc9ad" => :catalina
-    sha256 "250e7bf00cf6396d63e410532d0e42cc8245410b269c4f40d85450f45941a01e" => :mojave
+    cellar :any_skip_relocation
+    sha256 "677db4aed1515579276826747f9b309ba26950f95dc7e4dce00c91a0c2f5e0a3" => :big_sur
+    sha256 "50693b4208694a6d5618dd714a200998e2f79981d90a62f8b7d3c3758e948991" => :catalina
+    sha256 "1b3d79127b6d6911a32db24fc0ec2f10ae4b9724d719180df59eb3bbbc3afbae" => :mojave
   end
 
   depends_on "node"
