@@ -1,9 +1,9 @@
 class Glibmm < Formula
   desc "C++ interface to glib"
   homepage "https://www.gtkmm.org/"
-  url "https://download.gnome.org/sources/glibmm/2.64/glibmm-2.64.2.tar.xz"
-  sha256 "a75282e58d556d9b2bb44262b6f5fb76c824ac46a25a06f527108bec86b8d4ec"
-  license "LGPL-2.1"
+  url "https://download.gnome.org/sources/glibmm/2.64/glibmm-2.64.4.tar.xz"
+  sha256 "405040ab257cef0c8f1b14fdf9f3f92d6e6403715b64f1b75e4b6f04dfb56284"
+  license "LGPL-2.1-or-later"
 
   livecheck do
     url :stable
@@ -17,15 +17,23 @@ class Glibmm < Formula
     sha256 "7d224a2283e08715a1f7f286fcdc3e1c5cc277101bb3e2cc4bce488ec776cc02" => :high_sierra
   end
 
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "glib"
   depends_on "libsigc++@2"
 
+  # submitted upstream at https://gitlab.gnome.org/GNOME/glibmm/-/merge_requests/43
+  patch :DATA
+
   def install
     ENV.cxx11
 
-    system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}"
-    system "make", "install"
+    mkdir "build" do
+      system "meson", *std_meson_args, ".."
+      system "ninja"
+      system "ninja", "install"
+    end
   end
 
   test do
@@ -63,3 +71,33 @@ class Glibmm < Formula
     system "./test"
   end
 end
+
+__END__
+diff --git a/meson.build b/meson.build
+index 4d2c13a6..fd253a60 100644
+--- a/meson.build
++++ b/meson.build
+@@ -45,21 +45,7 @@ project_build_root = meson.current_build_dir()
+ cpp_compiler = meson.get_compiler('cpp')
+ is_msvc = cpp_compiler.get_id() == 'msvc'
+ is_host_windows = host_machine.system() == 'windows'
+-
+-is_os_cocoa = false
+-if not is_host_windows
+-  # This test for Mac OS is copied from glib. If the result of glib's test
+-  # is ever made available outside glib, use glib's result instead of this test.
+-  # glib: https://bugzilla.gnome.org/show_bug.cgi?id=780309
+-  # glibmm: https://bugzilla.gnome.org/show_bug.cgi?id=781947
+-  is_os_cocoa = cpp_compiler.compiles(
+-    '''#include <Cocoa/Cocoa.h>
+-    #ifdef GNUSTEP_BASE_VERSION
+-    #error "Detected GNUstep, not Cocoa"
+-    #endif''',
+-    name: 'Mac OS X Cocoa support'
+-  )
+-endif
++is_os_cocoa = host_machine.system() == 'darwin'
+
+ python3 = import('python').find_installation()
+ python_version = python3.language_version()
+
