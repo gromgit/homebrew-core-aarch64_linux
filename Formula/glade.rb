@@ -1,8 +1,8 @@
 class Glade < Formula
   desc "RAD tool for the GTK+ and GNOME environment"
   homepage "https://glade.gnome.org/"
-  url "https://download.gnome.org/sources/glade/3.38/glade-3.38.1.tar.xz"
-  sha256 "171a50be4930d4806fc8ce7f5ce3a75b49e9916f9d3037a5b50d35799bd0cfcd"
+  url "https://download.gnome.org/sources/glade/3.38/glade-3.38.2.tar.xz"
+  sha256 "98fc87647d88505c97dd2f30f2db2d3e9527515b3af11694787d62a8d28fbab7"
   license "LGPL-2.1-or-later"
 
   livecheck do
