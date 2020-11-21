@@ -1,8 +1,8 @@
 class GolangMigrate < Formula
   desc "Database migrations CLI tool"
   homepage "https://github.com/golang-migrate/migrate"
-  url "https://github.com/golang-migrate/migrate/archive/v4.13.0.tar.gz"
-  sha256 "df0886dfdff9673eee847addb686018757a55b7c8168d5ec38894af68cc3a725"
+  url "https://github.com/golang-migrate/migrate/archive/v4.14.0.tar.gz"
+  sha256 "fdd72511531e73d0f9c94143269d787df338a00720d910dc6132e630e3cae709"
   license "MIT"
 
   bottle do
