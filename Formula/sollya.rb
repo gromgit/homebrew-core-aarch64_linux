@@ -6,6 +6,7 @@ class Sollya < Formula
 
   bottle do
     cellar :any
+    sha256 "ac847fff33b334ea8d07ac75463c36a710f1da98fef3c6f3265a21d0e700dd2e" => :big_sur
     sha256 "ff549e2fff8c593449a7bf92d2d2d7ff423c6a40885838d5be4d7852308a4b28" => :catalina
     sha256 "5a3569111ea2936599668fc075a146ebfd01f471613b7c695a6a3d031ea6a309" => :mojave
     sha256 "5b5b3762879216a04a4fbcea2fa5407dddb331510a9e01f768d684ebdcd99c66" => :high_sierra
