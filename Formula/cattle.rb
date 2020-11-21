@@ -6,6 +6,7 @@ class Cattle < Formula
   license "GPL-2.0"
 
   bottle do
+    sha256 "d6d17fed746c28274bd67416616df6ed87b7c6eae25593792d1ce815760458d3" => :big_sur
     sha256 "d721fea1c78f6b79eb7ae7e325442e276638919bdef0a21604e910501d4cc67f" => :catalina
     sha256 "7ce0b67200025300e8e326dc890c79b94be12b627ebc4bbf230ae64437aa286d" => :mojave
     sha256 "43b809e209b52621c0ac66810b751a22f43d1718f75f41c9c0364d6ecb762b83" => :high_sierra
