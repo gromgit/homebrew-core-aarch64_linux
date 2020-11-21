@@ -8,6 +8,7 @@ class MrubyCli < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "e15510585f6f0d64a93288218ab267281230937d0c97dc6982913683641bc98b" => :big_sur
     sha256 "0418ca77d1a6adeaaf3184e9cbd566bab2829f2f736cc0f7f07ecf79e3bb6195" => :catalina
     sha256 "232802e1ee21a4c1d3790272414914f9d5b7ab073a2fd819c9ef5fc6872a165f" => :mojave
     sha256 "267baff54cace7684edd4184625afd6fb788cdb072035e88b9c10e4d274454fe" => :high_sierra
