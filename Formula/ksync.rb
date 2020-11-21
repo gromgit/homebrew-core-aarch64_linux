@@ -8,6 +8,7 @@ class Ksync < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "01c1dfd22817646205cfc6605ffeeafc04102ed9f472f719cd99aa3ffa0c858c" => :big_sur
     sha256 "1973e9cc12928e1680bc63c948404a81ae0eb83a083ecfcc593c0f9ba6799f2b" => :catalina
     sha256 "253963ea2fe87fd45fb16ea131273878368964637140de4b0eeb9b2150e290c7" => :mojave
     sha256 "b86ba3886a09fa0a5d78d86cf46bdd2dbcf524ef99cd4342e6c176698e0b5d00" => :high_sierra
