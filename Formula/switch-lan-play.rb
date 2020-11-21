@@ -8,6 +8,7 @@ class SwitchLanPlay < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "520620d6ae69e98a169edda5ed47b0ebb496a843eedacda867b1eb52b14c007e" => :big_sur
     sha256 "caa1992416c8eae4c281af3166238bb2bf8104c1d91d7dc37a2abd8715712ccc" => :catalina
     sha256 "62da027220b8d01270c8459cec638744ed06eac2ec046ccff56729b7f126eacf" => :mojave
     sha256 "41a10e6d0ce45410763c4774afa4286a8c633ac60348c0d0963e33cbef855c1d" => :high_sierra
