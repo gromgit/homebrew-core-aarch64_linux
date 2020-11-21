@@ -8,6 +8,7 @@ class Bam < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "0bd9f6ad25f64fc5282dd4facfea787bbca5855eb855c12eebb12cb60d82261b" => :big_sur
     sha256 "de24826592ac3d7a97f2ea0372d6a002e67e39bc1f10dc5d2e54563f84953690" => :catalina
     sha256 "195777b4263d8e5d84e91123ab1c47a362a5d92aa2c5c1cf7ac5c45b7728eb1d" => :mojave
     sha256 "59aebec505aba51189ccedb1872affd1c48ca84598caa591c2e0c955817e7cd7" => :high_sierra
