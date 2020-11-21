@@ -8,6 +8,7 @@ class StartupNotification < Formula
 
   bottle do
     cellar :any
+    sha256 "17601558b8e72930f3917e9c7373d620a37e6cbf987172e3134f87a2ccc60af0" => :big_sur
     sha256 "bdb8f9123099562853461f5299108f7cbfac9be39ea3ab9ad6b3853c288ba5c9" => :catalina
     sha256 "c4fcbad957b22a8999a0bc87a3c2b0b2b6b94654b3f6213f5903025574ae4c76" => :mojave
     sha256 "60f0a0ce0a2954f53fa9f4b5dfc3aeb99aa5607801f340b506ea172bb1e381f3" => :high_sierra
