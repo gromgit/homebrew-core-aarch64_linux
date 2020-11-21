@@ -7,10 +7,9 @@ class Serd < Formula
 
   bottle do
     cellar :any
-    sha256 "1e37820a695b8146fd21d544816b2e413cf93d7865ccabfd96d562ae4e006ee4" => :big_sur
-    sha256 "3361f452fbde6a02d8dfe77fdd53c6c5ff99e0bcb9df4504526674641cc4b24e" => :catalina
-    sha256 "e511ee4c7bb634cef312c139535c537aaafd70bbf2c62900a2b2950901f9eebf" => :mojave
-    sha256 "6d5a775d35f00fca2fb98c9177616322e3a868204c2c3f93614102e5ece3237f" => :high_sierra
+    sha256 "c53043a419c1409b8c1df9a3ab3b304525a69392933ffd421fa6fa3c22df4ab9" => :big_sur
+    sha256 "6ab4aae5b944f5fdcbd08d54b9fa55275e5a4cea89e1711b1288353ec75f6f4b" => :catalina
+    sha256 "c579e8246255757af42717d1b93989c6422e8fba8459e5446963ab95bd78f383" => :mojave
   end
 
   depends_on "pkg-config" => :build
