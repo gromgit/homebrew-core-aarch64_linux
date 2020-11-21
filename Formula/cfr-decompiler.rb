@@ -14,6 +14,7 @@ class CfrDecompiler < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "0ab2bafd7228773c3cb8a03ce56cdd3eb04bb4644d2f0cf985417931d92628d8" => :big_sur
     sha256 "05d1bff6093077a4f9789606c7b8d77d26f66f341aa491a9412da3e85669c932" => :catalina
     sha256 "0235b4a3204736079b3790db8de5bb02f99162318bff390aea45168f2bd1ea48" => :mojave
     sha256 "c6866f8e6b6c8e849936d2b5a45c3827dda9acacfe49ca2e831041e633617ac5" => :high_sierra
