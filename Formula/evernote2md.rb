@@ -5,6 +5,13 @@ class Evernote2md < Formula
   sha256 "ab1103a176b7e82852d71791f0190f0e5f22c9ac8eb07d0881c3e8bea5620a08"
   license "MIT"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "2d71d40d784234eeef883c7b64bfbc3bf3b88ecd2a86c179f76105800d84b794" => :big_sur
+    sha256 "312aea2e8be3636053fce7da50c162fa633757a400e774ec6912dd42ec1e9d1f" => :catalina
+    sha256 "2e7e7a2109a7b2860539f1e992013ad97d0489e5c37db47377647060a23a3dbc" => :mojave
+  end
+
   depends_on "go" => :build
 
   def install
