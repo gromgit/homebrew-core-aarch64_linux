@@ -10,10 +10,9 @@ class PgpoolIi < Formula
   end
 
   bottle do
-    sha256 "5fc9378b24dc25d88791f3d19f1ae55f0bc9fb2db7ad7fe44e09884cf3cf6f98" => :big_sur
-    sha256 "98fb748b5e21ef39138e3db09336cc8848d4149a478d29cd649743829174d374" => :catalina
-    sha256 "9b091f6ee580595ed7344fa1179d1cde7e192000e62c70410082ad45b80dcd53" => :mojave
-    sha256 "e50db96eddf72434629e5fd2e42ee7f262f74f694cbc0cd2f3e85b0f80790be6" => :high_sierra
+    sha256 "b7d1804401e059f37975d2b3d6187bcc1b744163cfdbaefaf88dda5f1207f2e2" => :big_sur
+    sha256 "e963963b5e7b02157bb7bee2723950cb1d9e44408a0e44c70e6d2775d5af9e92" => :catalina
+    sha256 "c96f6c768856da44efdc3a1f7f310d9cbd9b654b277bdf9095ec5038ff0c3ef4" => :mojave
   end
 
   depends_on "postgresql"
