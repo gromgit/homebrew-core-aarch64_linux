@@ -17,9 +17,10 @@ class Ncview < Formula
   end
 
   bottle do
-    sha256 "b416e10f8aa1674f1c0323d5f1ecbadf930069520d0c093e18d71a3d07957c19" => :catalina
-    sha256 "386218ffad288810cb9447f3b666cbbea50be2517c1a6a36105980e8682be949" => :mojave
-    sha256 "37672fc5cea8e4a1178b2e0a91e2277099b900045617d01c1070cccad407fd1c" => :high_sierra
+    rebuild 1
+    sha256 "62940cf53207de388e665e1d1376e48c684af71732422fff53c5ab660be55648" => :big_sur
+    sha256 "cd138ec52b70136fc6593d390a384490921b5cdfea173396e776f10f2fbc8466" => :catalina
+    sha256 "17d275efffcb75749da6a8ad011fcc675e2db41b57fd1948e4a7951a1495aa08" => :mojave
   end
 
   depends_on "libice"
