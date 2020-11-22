@@ -8,9 +8,9 @@ class Morse < Formula
 
   bottle do
     cellar :any
-    sha256 "adae05d8824303ba9aa4ab1c39e909c593cc63a61b4b6be26cc51afec37a2696" => :catalina
-    sha256 "114581f2ca08f2cde40767654aba3752d03c0f9bf45f05e68ce56079fde8308c" => :mojave
-    sha256 "cf3b1e007ccd9008513ec84b6411ccee4756d61e801902faad5cf4d5243a8b0f" => :high_sierra
+    sha256 "a956bb32257136228025435a70344d3322b621be1c932e1f61be3fbc1db3b000" => :big_sur
+    sha256 "f489bcc53ec31f5473e2116bd8d4f6867e15501cc8400e9992d1949331d18dee" => :catalina
+    sha256 "e696b87957c0215da2e9f600f66460c341b4141b4ef86096dd78d9000a5ceafe" => :mojave
   end
 
   depends_on "pkg-config" => :build
