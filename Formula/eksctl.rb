@@ -2,8 +2,8 @@ class Eksctl < Formula
   desc "Simple command-line tool for creating clusters on Amazon EKS"
   homepage "https://eksctl.io"
   url "https://github.com/weaveworks/eksctl.git",
-      tag:      "0.31.0",
-      revision: "69240f207ff054c60d61ba87d85acdc2de44db73"
+      tag:      "0.32.0",
+      revision: "41d40c256b68823f42a8c71cce7a2eb4d6236ce7"
   license "Apache-2.0"
   head "https://github.com/weaveworks/eksctl.git"
 
@@ -37,7 +37,7 @@ class Eksctl < Formula
     assert_match "The official CLI for Amazon EKS",
       shell_output("#{bin}/eksctl --help")
 
-    assert_match "Error: --cluster must be set",
+    assert_match "Error: couldn't create node group filter from command line options: --cluster must be set",
       shell_output("#{bin}/eksctl create nodegroup 2>&1", 1)
   end
 end
