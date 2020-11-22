@@ -7,6 +7,7 @@ class LibbitcoinNode < Formula
   revision 1
 
   bottle do
+    sha256 "ec0c1e08ea4167cd1c9bd8e28952d82fcbdadfff9748bb74d56ffe28e08c5bc3" => :big_sur
     sha256 "653e045b09c85d70bcc454f6a2fb7c7cbd5fcfdd77eb0f4d376699c5bde730e8" => :catalina
     sha256 "d80c4711180ca3046edfad49d380a434f3dee07232ab3171483a5f135ebe41d2" => :mojave
     sha256 "d0e3c6d9bcd6db9b2275aadafd8c15ad086da4f4b43cb3e2b25ed76239841d8d" => :high_sierra
