@@ -7,11 +7,9 @@ class Cc65 < Formula
   head "https://github.com/cc65/cc65.git"
 
   bottle do
-    sha256 "8f6e81d5c51fc62602fff142d4b4af1d8f6127204eb414db904c6098d87b7bc4" => :big_sur
-    sha256 "8f64703adec128eede5e3a980d1898e2b13ed87441ef7fdb5d41400850b82989" => :catalina
-    sha256 "a84e72ecee825a41a9614a7563df24418d5173ff13ff767adf2a924e28b00fcb" => :mojave
-    sha256 "2fecec53d0f65fc2ae409fc29516207cf11377e6726574087da4f06502e10770" => :high_sierra
-    sha256 "e4bf2981ea6489e414bf2166f6e591612b2e589aa30a3beaab1fd0d7a2ca1207" => :sierra
+    sha256 "d0010fe7f4b58daea95dd57f4116668bd2bedfbd5392e73412162292034d456d" => :big_sur
+    sha256 "a773d68d33b81899ebe7c10d294c0d6e2c2eab9063206f787b1e8c5b8e36f437" => :catalina
+    sha256 "bd750ae3470b736a6b7260723ead51d6e871edc8d8607f53b670f03c84932a00" => :mojave
   end
 
   conflicts_with "grc", because: "both install `grc` binaries"
