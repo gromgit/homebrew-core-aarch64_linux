@@ -6,10 +6,9 @@ class Libx11 < Formula
   license "MIT"
 
   bottle do
-    sha256 "9108d2bb858dea2700a37d5d7cd6f8359dde0b243980bbf8d024ec60e3a21e14" => :big_sur
-    sha256 "74866ceb706b28e81a08161b6e0e954d98145582426458139be4ed456c0a4ea8" => :catalina
-    sha256 "11062a043878726b396a166c4bb60a34640628d6cae9ff0d17364de1d2f2c730" => :mojave
-    sha256 "a9c9c8f5a88a58b292a069729a9958880501d3c57d2fe54f0f1ed869f8ca0f1a" => :high_sierra
+    sha256 "8663963c8520d669be3a5cf7e49bc253dc39ea3aba8d35b01cdd9103a058041f" => :big_sur
+    sha256 "59b7a9aa7a99a4f7257617558c71b1ca0ccf34f065dda785a3616b3c5ec75754" => :catalina
+    sha256 "b3f38839b3b3a024247ffb43324f6a53ecc45ec8bd32de3d7bfbc1142385488a" => :mojave
   end
 
   depends_on "pkg-config" => :build
