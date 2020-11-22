@@ -13,9 +13,9 @@ class Patchelf < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "76fbad0cfce574922838b776de79999a9092ea00dc2d878762f2e20956a5df98" => :big_sur
-    sha256 "4bdb98927df64e1af3fa765d9171dd39021093e0c5b89bfec8426af39e8ca8a2" => :catalina
-    sha256 "b43f892846c58349425c2c061561e90fb74d065abeaa1c93c62ec2176bdc289d" => :mojave
+    sha256 "e1fb2c4ce49b005bc2b61e1d7d5981b1a678d0b9877624396eca6bf2c339e7ff" => :big_sur
+    sha256 "c614aade308b851a63d63733b7fd4756efe350fce9985291099f4ffaf7b3760f" => :catalina
+    sha256 "754976c84c9d76186306b06981abb82a6787b0d5e8c5a329dd9017fab98af38a" => :mojave
   end
 
   resource "helloworld" do
