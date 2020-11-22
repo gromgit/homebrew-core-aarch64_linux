@@ -1,9 +1,8 @@
 class Djvulibre < Formula
   desc "DjVu viewer"
   homepage "https://djvu.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/djvu/DjVuLibre/3.5.27/djvulibre-3.5.27.tar.gz"
-  sha256 "e69668252565603875fb88500cde02bf93d12d48a3884e472696c896e81f505f"
-  revision 1
+  url "https://downloads.sourceforge.net/project/djvu/DjVuLibre/3%2C5%2C28/djvulibre-3.5.28.tar.gz"
+  sha256 "82e392a9cccfee94fa604126c67f06dbc43ed5f9f0905d15b6c8164f83ed5655"
 
   livecheck do
     url :stable
@@ -20,18 +19,14 @@ class Djvulibre < Formula
     sha256 "a175ac622b0f8914e401ba93938b4316c08f35bc186c35196a5a3de6b56b95ab" => :yosemite
   end
 
-  head do
-    url "https://git.code.sf.net/p/djvu/djvulibre-git.git"
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
-  end
-
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "libtool" => :build
   depends_on "jpeg"
   depends_on "libtiff"
 
   def install
-    system "./autogen.sh" if build.head?
+    system "./autogen.sh"
     # Don't build X11 GUI apps, Spotlight Importer or QuickLook plugin
     system "./configure", "--prefix=#{prefix}", "--disable-desktopfiles"
     system "make"
