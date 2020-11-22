@@ -11,9 +11,9 @@ class Gnupg < Formula
   end
 
   bottle do
-    sha256 "2f2c92c01d35e37d239864e0ee92e5d197ac5f9859ac89f9b5aa06200b8af388" => :big_sur
-    sha256 "4db5c77dda1d32ba88ddcd87d1ac637b4a231da29bb436bc1f4a62166fd9a629" => :catalina
-    sha256 "74b40cae75b99ac65fea83c5764512eadfa69e41288d0786bf57a307aa788abd" => :mojave
+    sha256 "d6803d2ee6626ab275f87e39585ca35f4b5c815508d600fbdad83c3ee74c3851" => :big_sur
+    sha256 "317f1534c5fac829c914a0cb73a34f82f6b5c27a4f5150ce902f8ecccdd54a28" => :catalina
+    sha256 "bf7afe5c1f91ea190bd01c631c111989e185bc7fb097ab45d577c66453965bc2" => :mojave
   end
 
   depends_on "pkg-config" => :build
