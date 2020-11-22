@@ -1,8 +1,8 @@
 class Stormlib < Formula
   desc "Library for handling Blizzard MPQ archives"
   homepage "http://www.zezula.net/en/mpq/stormlib.html"
-  url "https://github.com/ladislav-zezula/StormLib/archive/v9.22.tar.gz"
-  sha256 "7ed583aae5549ba1abc68a8fc9a642b28323cdf835941bd9b2b549a7b623e53d"
+  url "https://github.com/ladislav-zezula/StormLib/archive/v9.23.tar.gz"
+  sha256 "d62ba42f1e02efcb2cbaa03bd2e20fbd18c45499ef5fe65ffb89ee52a7bd9c92"
   license "MIT"
   head "https://github.com/ladislav-zezula/StormLib.git"
 
@@ -22,6 +22,10 @@ class Stormlib < Formula
   patch :DATA
 
   def install
+    # remove in the next release
+    inreplace "src/StormLib.h", "dwCompressionNext = MPQ_COMPRESSION_NEXT_SAME",
+                                  "dwCompressionNext"
+
     system "cmake", ".", *std_cmake_args
     system "make", "install"
     system "cmake", ".", "-DBUILD_SHARED_LIBS=ON", *std_cmake_args
@@ -45,14 +49,25 @@ end
 
 __END__
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 76c6aa9..4fd0a46 100644
+index bd8d336..927a47d 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -297,7 +297,6 @@ target_include_directories(${LIBRARY_NAME} PUBLIC src/)
- set_target_properties(${LIBRARY_NAME} PROPERTIES PUBLIC_HEADER "src/StormLib.h;src/StormPort.h")
- if(BUILD_SHARED_LIBS)
+@@ -314,7 +314,6 @@ if(BUILD_SHARED_LIBS)
+     message(STATUS "Linking against dependent libraries dynamically")
+
      if(APPLE)
 -        set_target_properties(${LIBRARY_NAME} PROPERTIES FRAMEWORK true)
          set_target_properties(${LIBRARY_NAME} PROPERTIES LINK_FLAGS "-framework Carbon")
      endif()
      if(UNIX)
+diff --git a/src/StormLib.h b/src/StormLib.h
+index f254290..43fefb8 100644
+--- a/src/StormLib.h
++++ b/src/StormLib.h
+@@ -480,7 +480,9 @@ typedef void (WINAPI * SFILE_ADDFILE_CALLBACK)(void * pvUserData, DWORD dwBytesW
+ typedef void (WINAPI * SFILE_COMPACT_CALLBACK)(void * pvUserData, DWORD dwWorkType, ULONGLONG BytesProcessed, ULONGLONG TotalBytes);
+
+ struct TFileStream;
++typedef struct TFileStream TFileStream;
+ struct TMPQBits;
++typedef struct TMPQBits TMPQBits;
