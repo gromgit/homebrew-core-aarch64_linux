@@ -10,13 +10,9 @@ class Djvulibre < Formula
   end
 
   bottle do
-    sha256 "32d4bdab85be56f64cf4909acc3ebcbd84db17bbcfd5b84b0509236cc5e873ad" => :big_sur
-    sha256 "db05f9813a9bc65c90de3cb0dedae93cf8f34694f01975b2c077add5b007d435" => :catalina
-    sha256 "e4b26399caea6a5496e8c6710ed6853d6a4961e010fc499a93abf38846ae9c8b" => :mojave
-    sha256 "70f48c15f481fd3939f60eb94f3fa47ea67340a3343df73110252ef7b5ce69de" => :high_sierra
-    sha256 "7f3f10f71e06342886c20b449551fc36d9edebf5bf5e90cb3fc355cf4624f4d9" => :sierra
-    sha256 "9f0fa17a46c514ab33d1d5fc88429f4d9f27926aef59807bdd74f94f8f4343ca" => :el_capitan
-    sha256 "a175ac622b0f8914e401ba93938b4316c08f35bc186c35196a5a3de6b56b95ab" => :yosemite
+    sha256 "6d308b8e5bb791a708926ca46adba3b40c3e3cc68edcc80928eeaca21f08b460" => :big_sur
+    sha256 "c6d381a0927b5a9cf24b32a0bca2b5aa7481fbc2824fb85460aa846026013e07" => :catalina
+    sha256 "2a264a38035e422d9af42adbc64486aa30eb0ed206a03a369f15e07905ca37be" => :mojave
   end
 
   depends_on "autoconf" => :build
