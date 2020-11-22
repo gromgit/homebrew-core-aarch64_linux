@@ -3,6 +3,7 @@ class Gnupg < Formula
   homepage "https://gnupg.org/"
   url "https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.24.tar.bz2"
   sha256 "9090b400faae34f08469d78000cfec1cee5b9c553ce11347cc96ef16eab98c46"
+  revision 1
 
   livecheck do
     url "https://gnupg.org/ftp/gcrypt/gnupg/"
