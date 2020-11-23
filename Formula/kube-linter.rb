@@ -9,6 +9,7 @@ class KubeLinter < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "9c4598a3d75b5b92d26afce327efd1deace98b6a5ce9e3ed8950b9f4c9290828" => :big_sur
     sha256 "a70d385c7815fc90b18c2ea7a7bb3229abe33b98a4c0f253c798c5a84ce59dd6" => :catalina
     sha256 "11ca1e5548093c88e1a98db5edd2884f9cc152208369c695e8cf44107b21e5fd" => :mojave
     sha256 "cc48078561d01be76c29fdd051bda565820026e48721117c88879fba624d092b" => :high_sierra
