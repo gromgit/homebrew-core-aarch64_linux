@@ -13,10 +13,9 @@ class Jsonnet < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e5f579df1018bcd462e4a6d913c7a080689b3cc7e8afb670e311a337206ba931" => :big_sur
-    sha256 "af01487239fc6947ef6c27d9b4b18772d2b7773393d7e48704001bf09d380e5b" => :catalina
-    sha256 "2255443d01048798797696161de2ddf435565348d7a246647a37b5ec0919dc2b" => :mojave
-    sha256 "7cc0ca007b2d56160e93437779f7214f44caef1a76b0647c911b1ca6ac6ab4c5" => :high_sierra
+    sha256 "dd84e7d6175e98b4839c009120569ece03b5b98db3f152f97ca05b5ae7169843" => :big_sur
+    sha256 "4e06530634324040a69a9f22018e154febc71467cadf2498806d9ba07b06a1b3" => :catalina
+    sha256 "1e4faf2a09e9a233275d78ede532a0e757d3f8cc9b0ab152326ff9ea9d244dba" => :mojave
   end
 
   def install
