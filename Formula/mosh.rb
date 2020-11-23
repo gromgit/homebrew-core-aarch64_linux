@@ -17,10 +17,9 @@ class Mosh < Formula
 
   bottle do
     cellar :any
-    sha256 "19677da8af2f4ee04502c4ffba52b66c2494ca122339b5be9b52c990a439c2bd" => :big_sur
-    sha256 "80aa0652a09eacf7e786012d1db2382d7423d476b44c536c1a7a3312b4a5e45a" => :catalina
-    sha256 "6d1567ab1ff2159a5bd346ed8b51bca5fd82506279b930bb10079dc1ea79f860" => :mojave
-    sha256 "e82a65883dc605e100b159ccd55ffee43c14eb65086a02b8cceba67f1b524066" => :high_sierra
+    sha256 "d0c27ab82d67f64b0c091a1f6c21d01a78525c4fdbb9067ffec81649e2f75afb" => :big_sur
+    sha256 "819cc9328f65b5f7ee28a64b775a01735ace8f2f76d64cf88992680a1a796e0d" => :catalina
+    sha256 "49a7bf24d46fa22ebddb8b6b4598f4bfa0be1bc48cc2f894129295ecf43bc765" => :mojave
   end
 
   head do
