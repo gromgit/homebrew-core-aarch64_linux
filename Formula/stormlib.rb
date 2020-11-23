@@ -8,12 +8,9 @@ class Stormlib < Formula
 
   bottle do
     cellar :any
-    sha256 "09e7a1ac6c2b8b12c07a97e19b39c4f4ca664c91a4c1c286c1bb30c6e0890352" => :big_sur
-    sha256 "27c5056c5f0001e3a0445b31de2361583b8f19b4fde60658f8075383a82bb7ff" => :catalina
-    sha256 "c550620a6b13ac72d11763612582483514156a4ffdb1cf5a602b71ae186cc588" => :mojave
-    sha256 "b76d57a2af0971b96c0cc46b3e24078486f732131b6845e92cbd776b4d5c20c7" => :high_sierra
-    sha256 "aa27fedf8877032a52c85f9a7a57a94149e9fd2c18f25351fd6a61203e5a797d" => :sierra
-    sha256 "71e3d5e94f69c23c8f0d5181b4bc130c3202aa6c99e0e42c4b6508b71be0167a" => :el_capitan
+    sha256 "12177d76e3bac8c67baba52c812a855642e780624d7a75f1e826b10811de35b4" => :big_sur
+    sha256 "686a27d3793a4a80858f442d1feda9d5880e21e687c152067136b4bb27c6fa50" => :catalina
+    sha256 "0270b8a31bf89afd8a81a0b8e36f3a967e196f024a3900fdf24ef5ab1b26a422" => :mojave
   end
 
   depends_on "cmake" => :build
