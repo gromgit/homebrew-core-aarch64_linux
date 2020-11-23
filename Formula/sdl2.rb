@@ -30,11 +30,10 @@ class Sdl2 < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "7ee842d81f00d7cc3943854e99535d177b0b0bc4edb84aa957e6980975d281d5" => :big_sur
-    sha256 "4a074d422e597b6f68c61cff5ee7d212264f3392b1c40a185a01cf180fe34516" => :catalina
-    sha256 "7d757169bb95da1477e01a4704e8ad204fccfb1cabb3292cee3449885e14e6b8" => :mojave
-    sha256 "5c7aa312b1a5d7fb8fe3fcd2112a8a74250bb84954024794333b465acafbee4f" => :high_sierra
+    rebuild 2
+    sha256 "bdf2c30a7267e33a214a0170b6639a31f6a86b5ae524ebfa9dcb06c54d2c1514" => :big_sur
+    sha256 "d02d45d59eabad3ed6ffdd780e44f798f35748a1080ce48ded17934bd0db2e05" => :catalina
+    sha256 "6ff1b92dc1515a631549343ea7f52ddc108e5a08cd5f462f2ba0a31a04fd0d13" => :mojave
   end
 
   head do
