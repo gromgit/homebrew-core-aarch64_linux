@@ -7,10 +7,9 @@ class TerraformProviderLibvirt < Formula
 
   bottle do
     cellar :any
-    sha256 "3a2b4e58f0f9dd4437ea3ccc5c694d4854418663a96661f238d303ff0516f42f" => :big_sur
-    sha256 "9d18c7b5ca1868526c6866049229106039799db8690d78487633d48c12cb7e3b" => :catalina
-    sha256 "2dcb0f31b0038845d131b95252a885e43acbdb88b7a34fec260cb3077cfba6fe" => :mojave
-    sha256 "1c661e58cc120d58b01e13b63a3012c2f17987ad643a1644601410880d8cbea8" => :high_sierra
+    sha256 "16ae4512f40a98056d05c21077bac05f96a6356e17362bfcff28e3649548f254" => :big_sur
+    sha256 "d9b1288e730298acd13c72661eaab16cec9d1f435032f9a3d12340910a6cb85a" => :catalina
+    sha256 "9d54585dbad9de738460f1cf773aefcf1d557e5edadb1e245f8cf618edbc6152" => :mojave
   end
 
   depends_on "go" => :build
