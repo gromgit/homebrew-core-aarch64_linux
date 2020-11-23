@@ -13,11 +13,9 @@ class Etl < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "4901ffbc8efbd0794fa4d50e9b7f471e95b4655ca5ad82d68204227c8de004d4" => :big_sur
-    sha256 "1ff4de15ba9b82ef2afe44be648f1c42031d7bc4e9e1538e3e1951cfa353ecaa" => :catalina
-    sha256 "b775dfeb3634c3b4ff3828239250394328b5c971e472cb775a0590d94bcdc6f8" => :mojave
-    sha256 "b775dfeb3634c3b4ff3828239250394328b5c971e472cb775a0590d94bcdc6f8" => :high_sierra
-    sha256 "507d4f4b35d0e075869446600e36e0f9f382014e99bf16a07d77f2c256cbc594" => :sierra
+    sha256 "3e50fc4f2e8a00bdb55f276839b7bebfde795c6da8a170395baa932009f1891c" => :big_sur
+    sha256 "36399b703008be7d253bbbd1313c22929982319d3e7e52dbeb92a1acbc554cb4" => :catalina
+    sha256 "3499623804687865757dec0f5df9ae2b8c70ed8d8c8c6cfa2e8bd6bf839b55db" => :mojave
   end
 
   def install
