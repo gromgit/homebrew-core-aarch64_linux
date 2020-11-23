@@ -6,10 +6,9 @@ class Nghttp2 < Formula
   license "MIT"
 
   bottle do
-    sha256 "f6174be18edb91cbe8fc53bbebcb9d2569df52af465c3e5f132fc1dd76ddb11d" => :big_sur
-    sha256 "ae423161fb662dbd308578a9d20917392ee019878eb59e39779ab7e852b3fd21" => :catalina
-    sha256 "2f79858dc2901da2c314468d39b07506f10c9d8f543a95308f8610f2f00888a4" => :mojave
-    sha256 "34f66d7f13b502faa96a34cf936710ed8910e7d789d430eaeb452d011a0842df" => :high_sierra
+    sha256 "05a32909b92b1e546c20d5722cf0ede751757d6865de0e8a3c030609b36406bc" => :big_sur
+    sha256 "52cdad0d7525cd28ce3e1b0efd9c677457dc6c51a729ae9f760d2a55bde51e1a" => :catalina
+    sha256 "5459e23d7214299f8e227a0fe204f43baca8fad45a845990c165c7db6ce1b192" => :mojave
   end
 
   head do
