@@ -11,12 +11,9 @@ class Yaf < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "68d27f8746f791f03fe382b84ef8261cc6262fbb2d2094379b63f581463d38e3" => :big_sur
-    sha256 "62355ef76633be429f5a281b1a357fa74d12e33ffaf5c2e38b0291442cb1f9fd" => :catalina
-    sha256 "7395026369a9b4b30f6614ab98baa1d810de2af29511b635b3ba2ad5a3d82289" => :mojave
-    sha256 "3e4ba45a90c4a47bcb4edc7dd9d9bf227d8b70af3989368bbf6cc4b006d2a9f7" => :high_sierra
-    sha256 "f9f45a164b81d2b4d4ef3b45664faa81d8317039cee93b69a1f4dc2d55786068" => :sierra
+    sha256 "381c026a049cd90821c57cb05e97f66d1fd949c9e794578f9fa768132f67342d" => :big_sur
+    sha256 "01a829d4aeb5fb22bee1fdf36859a514724ad593948301c195dd5dfc84b80168" => :catalina
+    sha256 "72647a3208e653d43e51ff6539b9853e08ec8960cc5cda8820e9e750e4f37c9f" => :mojave
   end
 
   depends_on "pkg-config" => :build
