@@ -4,7 +4,7 @@ class Pangomm < Formula
   url "https://download.gnome.org/sources/pangomm/2.42/pangomm-2.42.1.tar.xz"
   sha256 "14bf04939930870d5cfa96860ed953ad2ce07c3fd8713add4a1bfe585589f40f"
   license "LGPL-2.1-only"
-  revision 2
+  revision 3
 
   livecheck do
     url :stable
@@ -19,7 +19,7 @@ class Pangomm < Formula
   end
 
   depends_on "pkg-config" => :build
-  depends_on "cairomm"
+  depends_on "cairomm@1.14"
   depends_on "glibmm"
   depends_on "pango"
 
@@ -38,7 +38,7 @@ class Pangomm < Formula
       }
     EOS
     cairo = Formula["cairo"]
-    cairomm = Formula["cairomm"]
+    cairomm = Formula["cairomm@1.14"]
     fontconfig = Formula["fontconfig"]
     freetype = Formula["freetype"]
     gettext = Formula["gettext"]
