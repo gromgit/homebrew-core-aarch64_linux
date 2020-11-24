@@ -7,10 +7,9 @@ class Arrayfire < Formula
 
   bottle do
     cellar :any
-    sha256 "8a95691693ed61d8ced4d856375205366d6ac3e86612638959e48e85d05eacda" => :big_sur
-    sha256 "ee4a83613f9c2515a0b59a19bf83913c6f8f81646e5e0d024d2850508cc6925c" => :catalina
-    sha256 "20ffb2185bdca09c2797186c17c7e89146b367c9c5c95f0602dfc02e4f14bb16" => :mojave
-    sha256 "e0b0931974ffa870ec3e48f712aa0eaaaead6880214ba158f94215f70a2f2241" => :high_sierra
+    sha256 "bd0155cbacbdae4aefc106eebcc698c01c1f12e863b2e904b39b74ea8c1e262c" => :big_sur
+    sha256 "ede6ece8582145d943499e3679dfa19858022b1e5662076940249c27ccbe3f49" => :catalina
+    sha256 "710d8a0f9536955e2734c9932317b8b30af90a7741c1fd03b0ec1b65db206167" => :mojave
   end
 
   depends_on "boost" => :build
