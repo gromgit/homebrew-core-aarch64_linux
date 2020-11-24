@@ -8,9 +8,9 @@ class Helmsman < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5757c987e73c1837a434afb7a96497345a49dd01250d62732e1af5b683ed1c81" => :big_sur
-    sha256 "27b251021a112c20015ace659603ee0bd160feeab14d8f0fe7506c316f063918" => :catalina
-    sha256 "3cb90a34ac154be7d83fc1f42cad3918c769d3a21362884ea955f49b4ed2f1a3" => :mojave
+    sha256 "147c3374588210660b3e6343c95a5fb9f901b310544ed210afcf73576283f6b6" => :big_sur
+    sha256 "dbe22c308c8de99794f88803d990c5df5c1b76e79570ff82c7cb712900ce101c" => :catalina
+    sha256 "237bf255f83389268df66a08d11292e1048cd4cb2b696c3181d47286089cfe2d" => :mojave
   end
 
   depends_on "go" => :build
