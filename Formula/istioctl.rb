@@ -18,6 +18,7 @@ class Istioctl < Formula
   depends_on "go-bindata" => :build
 
   def install
+    ENV["VERSION"] = version.to_s
     ENV["TAG"] = version.to_s
     ENV["ISTIO_VERSION"] = version.to_s
     ENV["HUB"] = "docker.io/istio"
@@ -32,6 +33,6 @@ class Istioctl < Formula
   end
 
   test do
-    assert_match version.major_minor.to_s, shell_output("#{bin}/istioctl version --remote=false")
+    assert_equal version.to_s, shell_output("#{bin}/istioctl version --remote=false").strip
   end
 end
