@@ -7,9 +7,9 @@ class Lmod < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "8856f5da8f58666804b098f2603a794aa2913703cbd5f446be9e58c91e29f8f7" => :big_sur
-    sha256 "48445f464163b78996030f8ccc988bcbcb7fe836ce087401213d2784e1c3aba3" => :catalina
-    sha256 "343932a585ac1dc0cd96f4fefec9339d34a7cb5e8952789bd62bf1eef90a875d" => :mojave
+    sha256 "bb20d1db75945e33908c40e05d8ce61178ecd244321321fbe053b2707acce8bb" => :big_sur
+    sha256 "ee4c79bc7deafdb38c12c7ea8af3e598b3b7e92bc9f589e23bc75f2c170205b4" => :catalina
+    sha256 "7f216e701f7a8233c3750e725f66ef8699fae6e0b06395f583778f1d58bcaa5f" => :mojave
   end
 
   depends_on "luarocks" => :build
