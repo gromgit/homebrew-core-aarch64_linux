@@ -12,10 +12,9 @@ class Opensc < Formula
   end
 
   bottle do
-    sha256 "661819f520da3558c6a0980ab1bef828e33f24050dd94c8caddccbd276f132d7" => :big_sur
-    sha256 "38a3b5cb96dc21a68ecb7a5ec55cb4e16245718f43494442c43c7bf1dfbc9cbd" => :catalina
-    sha256 "a4f9ffe8088a618dc349e74463ac7a846335dc847b8dc37c8037ec8c7e3244de" => :mojave
-    sha256 "ec40e0b292df9c7819244653977a7ce03b1121f2f98cf2960c0e6f611f18eaf1" => :high_sierra
+    sha256 "4a6b8c4b43e331548c53ef20d35be15156ff7cef5d3e6a2400f1e5eeff14c02b" => :big_sur
+    sha256 "5ba13391a55bcd288e0ab35458503bea761213e3e5a4395ea0966e2d19deb03f" => :catalina
+    sha256 "89526a544b8fb886dbbf62710c30a6c52f339d48240ca72afe1f99098394ee11" => :mojave
   end
 
   depends_on "autoconf" => :build
