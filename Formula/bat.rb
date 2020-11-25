@@ -7,9 +7,9 @@ class Bat < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e593195e2a85c85fd8d462d2cf70d91b2a3f061daee77fff0a5019069d07643c" => :big_sur
-    sha256 "ca5eeaae808c8b2eb95de52e80896825022c3790f112904039f1cb4b6a7d471d" => :catalina
-    sha256 "c68b601b0e4c5ce0fde06e2799ae51e9209bb844071cc81f4d69b43a8d343a1f" => :mojave
+    sha256 "2154428e50a347937148312bd787b422fd21b1135b58bf9362aebd3ea08c25d8" => :big_sur
+    sha256 "37950cb2429346cacc2dd0a9902b71eb958fb9531114d3606bdc3acfdd4dc3c2" => :catalina
+    sha256 "9f4df3e3e829e59ec2d196be8a494d60f9f68ef7f9f769adfb018f75148677be" => :mojave
   end
 
   depends_on "rust" => :build
