@@ -8,10 +8,10 @@ class TreeSitter < Formula
 
   bottle do
     cellar :any
-    sha256 "d128dbb7c1f73425f69cbb23e391f3428b126930cae6e00ac731061f52840610" => :big_sur
-    sha256 "5740ba521c1e62fcbd68545c41ce729356c9249412a283a3f695031935fa8831" => :catalina
-    sha256 "40f05cfb205ab7eaaf59f2bf9351ce3735f07d19e6f999c777de43f5b9c44e66" => :mojave
-    sha256 "f142b02c17ed1c789b1675a3e56f448cade7000752f099850c18764aca2b960f" => :high_sierra
+    rebuild 1
+    sha256 "c89bc31148685aa6c2abe0aca99d0283f3ac7ca8b95fdfd31f1b38c8e955ee7e" => :big_sur
+    sha256 "affadea701f887e8ae3f757ce88c3aa9cbc558887dfcf997c167f93e3a94af57" => :catalina
+    sha256 "1b745dd2fbd391ce0e26b639cb3202606f1d4f745e86a98a6f0d5c34ed3f8106" => :mojave
   end
 
   depends_on "rust" => :build
