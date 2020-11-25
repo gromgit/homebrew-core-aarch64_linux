@@ -5,6 +5,13 @@ class Clash < Formula
   sha256 "34a31e12eb7e639bdc2e19421fe3a8d9ad710e7d4c13bfc361c2023c9dfe04f6"
   license "GPL-3.0-only"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "d3c6497c1d3b6f6c4c7c8c611a964d2d9acf54fc7e0f11e1f4b7ba0cfc1bb75f" => :big_sur
+    sha256 "05c3cc38443156b857ba98ec54b8b7ba413d464ec76aad2283487560fa687599" => :catalina
+    sha256 "bbc2a5cc2abc096ed91ca251a2fcac994fc8ecd1c327472eaa5bfdf67f074c77" => :mojave
+  end
+
   depends_on "go" => :build
   depends_on "shadowsocks-libev" => :test
 
