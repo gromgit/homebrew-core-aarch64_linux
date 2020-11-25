@@ -1,9 +1,9 @@
 class CassandraAT22 < Formula
   desc "Eventually consistent, distributed key-value db"
   homepage "https://cassandra.apache.org"
-  url "https://www.apache.org/dyn/closer.lua?path=cassandra/2.2.17/apache-cassandra-2.2.17-bin.tar.gz"
-  mirror "https://archive.apache.org/dist/cassandra/2.2.17/apache-cassandra-2.2.17-bin.tar.gz"
-  sha256 "85bd0e19e0b7a83394968ebbadfebf2a595f71741d7f93fb5c063b8ed4841b0b"
+  url "https://www.apache.org/dyn/closer.lua?path=cassandra/2.2.19/apache-cassandra-2.2.19-bin.tar.gz"
+  mirror "https://archive.apache.org/dist/cassandra/2.2.19/apache-cassandra-2.2.19-bin.tar.gz"
+  sha256 "5496c0254a66b6d50bde7999d1bab9129b0406b71ad3318558f4d7dbfbed0ab9"
   license "Apache-2.0"
 
   bottle do
@@ -17,6 +17,7 @@ class CassandraAT22 < Formula
 
   depends_on "cython" => :build
   depends_on :macos # Due to Python 2 (does not support Python 3)
+  depends_on "openjdk@8"
 
   # Only >=Yosemite has new enough setuptools for successful compile of the below deps.
   # Python 2 needs setuptools < 45.0.0 (https://github.com/pypa/setuptools/issues/2094)
@@ -82,6 +83,9 @@ class CassandraAT22 < Formula
       # Storage path
       s.gsub! "cassandra_storagedir\=\"$CASSANDRA_HOME/data\"",
               "cassandra_storagedir\=\"#{var}/lib/cassandra\""
+
+      s.gsub! "#JAVA_HOME=/usr/local/jdk6",
+              "JAVA_HOME=#{Language::Java.overridable_java_home_env("1.8")[:JAVA_HOME]}"
     end
 
     rm Dir["bin/*.bat", "bin/*.ps1"]
