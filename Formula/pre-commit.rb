@@ -9,9 +9,9 @@ class PreCommit < Formula
 
   bottle do
     cellar :any
-    sha256 "4b8022f413acf8bda0cccb9ef457568b1f9738c99f350d6da4e847deb637872a" => :big_sur
-    sha256 "57dec71ecbcca3f870d221952ca2f798db71a9d2d5b1ff16d5726e4494798506" => :catalina
-    sha256 "c3e7a1e0655353c905e0f91f53f8b9bdab2d9abc72b76973b3b482c1d18d09dd" => :mojave
+    sha256 "9cd70fc49010e8fd13171d8eb3a6fb6b5bff41db22a660d9aec0d3791bce1b10" => :big_sur
+    sha256 "171e14fd87dc5475b9f13a75f828fb1490a15a664d953db0abdcddf3a458b863" => :catalina
+    sha256 "2dd53792dca4edc20f77b0c87c9b2a3c0f086f1e6bb367a02e30f63028e0ed39" => :mojave
   end
 
   depends_on "libyaml"
