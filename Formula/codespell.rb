@@ -13,10 +13,9 @@ class Codespell < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "fcb75db588b0ee07820cea9623c54047317c259a3b7fcee2c2790df94edbbf09" => :big_sur
-    sha256 "4cb15e19443191ba519e77ae1503e645096fe38cebc29425f7aab0c1da0c0e96" => :catalina
-    sha256 "d2d93078208cbf498d4f18e6c7f1096a33b70ea00d8f7ef5e556150842d1c4fc" => :mojave
-    sha256 "5e533ea4ed12daf3435849cc585f880da3ef80edc51131e5b601dc91a41c5120" => :high_sierra
+    sha256 "c593fceba8be94074570221a350741dc1f11929f5c1176197e3962f34fb46363" => :big_sur
+    sha256 "2d338cbcf31abc4712005bca0cd59543403a1525a24952b14fadc6592c2c7791" => :catalina
+    sha256 "c53e89d6f26521dac01d2f26952674a12228e8f70070c9a02abd0c31744d2128" => :mojave
   end
 
   depends_on "python@3.9"
