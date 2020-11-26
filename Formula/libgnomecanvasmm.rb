@@ -3,7 +3,8 @@ class Libgnomecanvasmm < Formula
   homepage "https://launchpad.net/libgnomecanvasmm"
   url "https://download.gnome.org/sources/libgnomecanvasmm/2.26/libgnomecanvasmm-2.26.0.tar.bz2"
   sha256 "996577f97f459a574919e15ba7fee6af8cda38a87a98289e9a4f54752d83e918"
-  revision 6
+  license "LGPL-2.1-or-later"
+  revision 7
 
   livecheck do
     url :stable
@@ -40,7 +41,7 @@ class Libgnomecanvasmm < Formula
     atk = Formula["atk"]
     atkmm = Formula["atkmm"]
     cairo = Formula["cairo"]
-    cairomm = Formula["cairomm"]
+    cairomm = Formula["cairomm@1.14"]
     fontconfig = Formula["fontconfig"]
     freetype = Formula["freetype"]
     gdk_pixbuf = Formula["gdk-pixbuf"]
