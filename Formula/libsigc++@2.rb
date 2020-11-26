@@ -1,8 +1,8 @@
 class LibsigcxxAT2 < Formula
   desc "Callback framework for C++"
   homepage "https://libsigcplusplus.github.io/libsigcplusplus/"
-  url "https://download.gnome.org/sources/libsigc++/2.10/libsigc++-2.10.4.tar.xz"
-  sha256 "1f5874358d9a21379024a4f4edba80a8a3aeb33f0531b192a6b1c35ed7dbfa3e"
+  url "https://download.gnome.org/sources/libsigc++/2.10/libsigc++-2.10.6.tar.xz"
+  sha256 "dda176dc4681bda9d5a2ac1bc55273bdd381662b7a6d49e918267d13e8774e1b"
   license "LGPL-3.0-or-later"
 
   bottle do
@@ -15,12 +15,6 @@ class LibsigcxxAT2 < Formula
 
   depends_on "meson" => :build
   depends_on "ninja" => :build
-
-  # submitted upstream at https://github.com/libsigcplusplus/libsigcplusplus/pull/65
-  patch do
-    url "https://github.com/libsigcplusplus/libsigcplusplus/commit/2a7c936dfe4e5327372c17f8c45e333b5728608f.patch?full_index=1"
-    sha256 "bdac66d120906e355f3403c15e74ba931229c833fb4ad97888c475d71d02171c"
-  end
 
   def install
     ENV.cxx11
