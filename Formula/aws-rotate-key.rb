@@ -6,6 +6,13 @@ class AwsRotateKey < Formula
   license "MIT"
   head "https://github.com/stefansundin/aws-rotate-key.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "ae4352b4f481dbcb3d5538c6140f4fc0c7c6af45e844d2a1740944ef09191226" => :big_sur
+    sha256 "b45abd46858f15815ca5a1cf540e508c4e05051c4d9448133a04ff23f026843b" => :catalina
+    sha256 "afbf03d4e1323d8cb41ae103ce1bf9de456883d8df92e418f8c69fc54d57126e" => :mojave
+  end
+
   depends_on "go" => :build
 
   def install
