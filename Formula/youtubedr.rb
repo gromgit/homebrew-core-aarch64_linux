@@ -5,6 +5,13 @@ class Youtubedr < Formula
   sha256 "e0e298aa4d589813b635bc09e9b50b220f248312ec5893a381bacf70a624a9e1"
   license "MIT"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "a82e3c0afb87bc378fa7619c2afc65ace75c234c4713b50badd97f2db34af5a9" => :big_sur
+    sha256 "2767bd8bd91ac47287b7a16902fd457dfaa20ced285d2f85ab4f8c8dd384e290" => :catalina
+    sha256 "3fcd3f4118d41a2aee8ebdde0d4437bfb32a641af1a13233070f126acc387477" => :mojave
+  end
+
   depends_on "go" => :build
 
   def install
