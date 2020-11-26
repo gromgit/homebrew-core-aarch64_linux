@@ -13,9 +13,9 @@ class CloudformationCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2a2e1f54887c31331dfc7ed1f496db8be7bbe5ca597fdb9374348df63981cf76" => :big_sur
-    sha256 "aa6ab9218fbfba3c3855958c684da7813f5ac2b16ad3e7ec22670ebdb1f0f46b" => :catalina
-    sha256 "73dc08baa1b68f8db15ebb2f6e9ae83768719f68cf89dbe30dec803b33e27f41" => :mojave
+    sha256 "86c130f86569921e99479bda3404d9858abf90aa9a5f2c1f88b1cad4329e4879" => :big_sur
+    sha256 "ab12a3379ed2c9f0e595f15fa95ef54ea113fb61064b058573ddf640a5932a30" => :catalina
+    sha256 "355c4ad79aab855003f43815c25e052c52e36b568417ef6c8238729c40308caf" => :mojave
   end
 
   depends_on "go" => :test
