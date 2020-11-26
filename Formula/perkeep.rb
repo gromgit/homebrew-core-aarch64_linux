@@ -2,19 +2,18 @@ class Perkeep < Formula
   desc "Lets you permanently keep your stuff, for life"
   homepage "https://perkeep.org/"
   license "Apache-2.0"
+  head "https://github.com/perkeep/perkeep.git"
 
   stable do
     url "https://github.com/perkeep/perkeep.git",
-        tag:      "0.10",
-        revision: "0cbe4d5e05a40a17efe7441d75ce0ffdf9d6b9f5"
+        tag:      "0.11",
+        revision: "76755286451a1b08e2356f549574be3eea0185e5"
 
     # gopherjs doesn't tag releases, so just pick the most recent revision for now
     resource "gopherjs" do
       url "https://github.com/gopherjs/gopherjs/archive/fce0ec30dd00773d3fa974351d04ce2737b5c4d9.tar.gz"
       sha256 "e5e6ede5f710fde77e48aa1f6a9b75f5afeb1163223949f76c1300ae44263b84"
     end
-
-    depends_on "go@1.12" => :build
   end
 
   bottle do
@@ -26,12 +25,7 @@ class Perkeep < Formula
     sha256 "b188c23945a51d253dc6c4435afaa509a2ddaf151124ef1f08a1186611041c92" => :high_sierra
   end
 
-  head do
-    url "https://github.com/perkeep/perkeep.git"
-
-    depends_on "go" => :build
-  end
-
+  depends_on "go" => :build
   depends_on "pkg-config" => :build
 
   conflicts_with "hello", because: "both install `hello` binaries"
