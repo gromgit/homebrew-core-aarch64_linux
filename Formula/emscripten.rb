@@ -25,7 +25,6 @@ class Emscripten < Formula
 
   depends_on "cmake" => :build
   depends_on "binaryen"
-  # error "fatal error: '__config' file not found" when building llvm 12 on High Sierra
   depends_on "node"
   depends_on "python@3.9"
   depends_on "yuicompressor"
@@ -49,17 +48,17 @@ class Emscripten < Formula
     # repository.
     libexec.install Dir["*"]
 
+    # emscripten needs an llvm build with the following executables:
+    # https://github.com/emscripten-core/emscripten/blob/#{version}/docs/packaging.md#dependencies
     resource("llvm").stage do
       projects = %w[
         clang
         lld
       ]
 
-      runtimes = %w[
-        compiler-rt
-        libcxx
-        libcxxabi
-        libunwind
+      targets = %w[
+        host
+        WebAssembly
       ]
 
       llvmpath = Pathname.pwd/"llvm"
@@ -77,29 +76,12 @@ class Emscripten < Formula
       args = std_cmake_args.reject { |s| s["CMAKE_INSTALL_PREFIX"] } + %W[
         -DCMAKE_INSTALL_PREFIX=#{libexec}/llvm
         -DLLVM_ENABLE_PROJECTS=#{projects.join(";")}
-        -DLLVM_ENABLE_RUNTIMES=#{runtimes.join(";")}
-        -DLLVM_BUILD_EXTERNAL_COMPILER_RT=ON
+        -DLLVM_TARGETS_TO_BUILD=#{targets.join(";")}
         -DLLVM_LINK_LLVM_DYLIB=ON
-        -DLLVM_BUILD_LLVM_C_DYLIB=ON
-        -DLLVM_ENABLE_EH=ON
-        -DLLVM_ENABLE_FFI=ON
-        -DLLVM_ENABLE_LIBCXX=ON
-        -DLLVM_ENABLE_RTTI=ON
-        -DLLVM_INCLUDE_DOCS=OFF
+        -DLLVM_BUILD_LLVM_DYLIB=ON
+        -DLLVM_INCLUDE_EXAMPLES=OFF
         -DLLVM_INCLUDE_TESTS=OFF
-        -DLLVM_INSTALL_UTILS=ON
-        -DLLVM_ENABLE_Z3_SOLVER=OFF
-        -DLLVM_OPTIMIZED_TABLEGEN=ON
-        -DLLVM_TARGETS_TO_BUILD=host;WebAssembly
-        -DFFI_INCLUDE_DIR=#{Formula["libffi"].opt_lib}/libffi-#{Formula["libffi"].version}/include
-        -DFFI_LIBRARY_DIR=#{Formula["libffi"].opt_lib}
-        -DLLVM_CREATE_XCODE_TOOLCHAIN=#{MacOS::Xcode.installed? ? "ON" : "OFF"}
-        -DLLDB_USE_SYSTEM_DEBUGSERVER=ON
-        -DLLDB_ENABLE_PYTHON=OFF
-        -DLLDB_ENABLE_LUA=OFF
-        -DLLDB_ENABLE_LZMA=OFF
-        -DLIBOMP_INSTALL_ALIASES=OFF
-        -DCLANG_INCLUDE_TESTS=OFF
+        -DLLVM_INSTALL_UTILS=OFF
       ]
 
       sdk = MacOS.sdk_path_if_needed
@@ -113,9 +95,8 @@ class Emscripten < Formula
 
       mkdir llvmpath/"build" do
         system "cmake", "-G", "Unix Makefiles", "..", *args
-        system "make"
-        system "make", "install"
-        system "make", "install-xcode-toolchain" if MacOS::Xcode.installed?
+        system "cmake", "--build", "."
+        system "cmake", "--build", ".", "--target", "install"
       end
     end
 
