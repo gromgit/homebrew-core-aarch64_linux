@@ -1,8 +1,8 @@
 class Hugo < Formula
   desc "Configurable static site generator"
   homepage "https://gohugo.io/"
-  url "https://github.com/gohugoio/hugo/archive/v0.78.2.tar.gz"
-  sha256 "bbfacf3bf379911bc348e6300912838fd07a75ad6de6d41082c54226e0055029"
+  url "https://github.com/gohugoio/hugo/archive/v0.79.0.tar.gz"
+  sha256 "83e9b7e4bd3b321d140d1f35c75eafa6a70d3b814f2cac8e2f78b11feb23f1b2"
   license "Apache-2.0"
   head "https://github.com/gohugoio/hugo.git"
 
@@ -17,23 +17,16 @@ class Hugo < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = HOMEBREW_CACHE/"go_cache"
-    (buildpath/"src/github.com/gohugoio/hugo").install buildpath.children
+    system "go", "build", *std_go_args, "-tags", "extended"
 
-    cd "src/github.com/gohugoio/hugo" do
-      system "go", "build", "-o", bin/"hugo", "-tags", "extended", "main.go"
+    # Build bash completion
+    system bin/"hugo", "gen", "autocomplete", "--completionfile=hugo.sh"
+    bash_completion.install "hugo.sh"
 
-      # Build bash completion
-      system bin/"hugo", "gen", "autocomplete", "--completionfile=hugo.sh"
-      bash_completion.install "hugo.sh"
-
-      # Build man pages; target dir man/ is hardcoded :(
-      (Pathname.pwd/"man").mkpath
-      system bin/"hugo", "gen", "man"
-      man1.install Dir["man/*.1"]
-
-      prefix.install_metafiles
-    end
+    # Build man pages; target dir man/ is hardcoded :(
+    (Pathname.pwd/"man").mkpath
+    system bin/"hugo", "gen", "man"
+    man1.install Dir["man/*.1"]
   end
 
   test do
