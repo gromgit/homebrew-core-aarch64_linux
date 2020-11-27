@@ -12,10 +12,9 @@ class Pangomm < Formula
 
   bottle do
     cellar :any
-    sha256 "9dc75bd5d85a445f17d6245e555e5b72e5e479cd00c1e8e4afea94431762c3b4" => :big_sur
-    sha256 "b76cf574756211f73f6145ce57738e47c20740bbced59243526580ac97c639bf" => :catalina
-    sha256 "4c656b17af2dd884085c70493389a5d4c415d9631a6dedb1b88b964bf6e05aca" => :mojave
-    sha256 "ab43bb783b24993470dbb96fa3ac1e75cbfc641e7ac477cb492d2dbecce25091" => :high_sierra
+    sha256 "e67fe280d0d9b45f6ea6c7ff12421a77c00d730891c2e06d6f1ab4918a1cc5bb" => :big_sur
+    sha256 "104923d8e1fc41c4b833c688ff76fbdcedb7ec7dcf8719822c2e00618cb0c753" => :catalina
+    sha256 "d1e761358ec09f74604b768e47948446a87ae14dbf2d7f9af30d89398751e85a" => :mojave
   end
 
   depends_on "pkg-config" => :build
