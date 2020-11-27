@@ -6,6 +6,13 @@ class Tm < Formula
   license "Apache-2.0"
   head "https://github.com/triggermesh/tm.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "5f37b9116247e25c34b6888bbecb20f3e3998f293a16ac69502579cf44d33954" => :big_sur
+    sha256 "557c1d43923c836f9428f43a48fd385856524a72e30e7bd8e66cdf2dcc3e5e67" => :catalina
+    sha256 "e2345f38c556f7dd62a3a19cef806ea1a7c24266cc200964e22c8341425ecf0e" => :mojave
+  end
+
   depends_on "go" => :build
 
   def install
