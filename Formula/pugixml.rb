@@ -7,10 +7,9 @@ class Pugixml < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "ea01dea9510c3fb7495f8f47a58fc4e791f9c55810b4b8fb3edd2202a16b0cb4" => :big_sur
-    sha256 "ffcc56b93b63ac573480cdcafd859bdee76409e834e4e6b855c0ac4cfa9eb94c" => :catalina
-    sha256 "ee86188a54388e0644fd3f90e0319c8c734fb6ae254b23da609af17e1f579c9a" => :mojave
-    sha256 "2b5ce73035deb5e9557fca05fc6100c4a1c18acf33816316185d00d9bb2198fe" => :high_sierra
+    sha256 "6467a14e11171c7c01d1c2188afe4c0563d2a4332538f430995ed16fe52c3fc7" => :big_sur
+    sha256 "fa4b6e0c3e5b9f446c2c48e9802cfcd0e66822fc3e1bdd76fe4b3555446dda15" => :catalina
+    sha256 "ddb195caceb2c0eed78941b9fc8c525df45f6e615b48d9d378c02be7df5a2c7d" => :mojave
   end
 
   depends_on "cmake" => :build
