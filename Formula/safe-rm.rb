@@ -10,6 +10,13 @@ class SafeRm < Formula
     url :stable
   end
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "2196591237f36b84a8f715907743e5da00bf8f47f8867734e9a2c048361717cf" => :big_sur
+    sha256 "deccc20055e675864f7e13194eb720928b94f6e9799f1a83030db87f65dc645e" => :catalina
+    sha256 "0c2d57ca73b19cf2fc2d29b38863ab570ac75db5678842099c032f383fad2be9" => :mojave
+  end
+
   depends_on "rust" => :build
 
   def install
