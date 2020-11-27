@@ -7,6 +7,12 @@ class PhpAT74 < Formula
   sha256 "aead303e3abac23106529560547baebbedba0bb2943b91d5aa08fff1f41680f4"
   license "PHP-3.01"
 
+  bottle do
+    sha256 "1e326adac9efbbe064c834b4277bb0edfda4072d4fbf783982fab4b70b06ac42" => :big_sur
+    sha256 "6b3722e139285c51298478c01c91c9ac6790155cb965aefa84219892e6067a61" => :catalina
+    sha256 "ac58dc521020f7e123a39040f9e063fb8d3a3fb5264c9d0e1c5ed8651afe02e2" => :mojave
+  end
+
   keg_only :versioned_formula
 
   deprecate! date: "2022-11-28", because: :versioned_formula
