@@ -14,10 +14,9 @@ class Gitlint < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e50fd506c7d182bb45aab2cdf82cf918a37d1dbd761bc2394d1a14a7e19fe243" => :big_sur
-    sha256 "502da604b0cab7af062c12eca761ba9f913b9585df342ba9eeb2b1b8987e58c4" => :catalina
-    sha256 "591b138560d44f138511b9662c1c2094c095d3778be4fa5fd7aab43bccf81b99" => :mojave
-    sha256 "71ce9d6e42c8bc3dded0ab04fc1a5aa3b1bee7179de8c77bea4c85db4447d42c" => :high_sierra
+    sha256 "52ac0738eaf1ee717e838a7a2d2c2e8c4745f281bafc846a054be2526567c411" => :big_sur
+    sha256 "79dacaaf2f45dedcca1fb05efbf8c84d37f85996db920a4a675ceff724a8110f" => :catalina
+    sha256 "dbb9d4e5bbabaa3a75ea7d38df6cb46ad51f95e5378591068f397884cee9ceb6" => :mojave
   end
 
   depends_on "python@3.9"
