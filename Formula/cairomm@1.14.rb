@@ -10,6 +10,13 @@ class CairommAT114 < Formula
     regex(/href=.*?cairomm[._-]v?(\d+\.\d*[02468](?:\.\d+)*)\.t/i)
   end
 
+  bottle do
+    cellar :any
+    sha256 "ac3ed3d2ba79498f26005046e61a835978c4c8ca0ca6435d39b405d2bc39535b" => :big_sur
+    sha256 "89fc4b03efa9136f5a828959c3263b36dfb209d303b62192d57d6d6aed4058ef" => :catalina
+    sha256 "b9eff4d0aca913e713ee870137962be2a44c498936f1c915e459eb95002e60ef" => :mojave
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
