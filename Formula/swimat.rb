@@ -13,9 +13,9 @@ class Swimat < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f03f021887a387010e733167f87b37afb05a909b8bfa94d69793b43ea0e637c1" => :big_sur
-    sha256 "a94df9efa0aef16df8e593696a3dc3dd1fbe4f8fa59512af713d4915a103843c" => :catalina
-    sha256 "197ba3d1db2bfbee29a10e4735925b4fdac3035c486b7899bc564cea5f019839" => :mojave
+    sha256 "f4099d895297155fe34b95ff66e214c31fcf2990e03aeaad8e1680061fb580a9" => :big_sur
+    sha256 "6ee6f59882dcec7188ef4684fcada0d22edf68470023fffb73b610f2dbe44112" => :catalina
+    sha256 "6b9a5174b6050250d0dfe5721102c5455997f2abcef1f2dc6a82686af11117fd" => :mojave
   end
 
   depends_on xcode: ["10.2", :build]
