@@ -1,8 +1,8 @@
 class Root < Formula
   desc "Object oriented framework for large scale data analysis"
   homepage "https://root.cern.ch/"
-  url "https://root.cern.ch/download/root_v6.22.04.source.tar.gz"
-  sha256 "a2f066d85db8eb5b5f1c72573923484a6782a47b94954eff64879609f360e951"
+  url "https://root.cern.ch/download/root_v6.22.06.source.tar.gz"
+  sha256 "c4688784a7e946cd10b311040b6cf0b2f75125a7520e04d1af0b746505911b57"
   license "LGPL-2.1-or-later"
   head "https://github.com/root-project/root.git"
 
@@ -95,6 +95,10 @@ class Root < Formula
 
     cxx_version = (MacOS.version < :mojave) ? 14 : 17
     args << "-DCMAKE_CXX_STANDARD=#{cxx_version}"
+
+    # Homebrew now sets CMAKE_INSTALL_LIBDIR to /lib, which is incorrect
+    # for ROOT with gnuinstall, so we set it back here.
+    args << "-DCMAKE_INSTALL_LIBDIR=lib/root"
 
     # Workaround the shim directory being embedded into the output
     inreplace "build/unix/compiledata.sh", "`type -path $CXX`", ENV.cxx
