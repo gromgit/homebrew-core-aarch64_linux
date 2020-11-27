@@ -8,10 +8,9 @@ class Duckscript < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "95a0fe29b1907c7a470c7438cf09d4dabad782bbc7c044bc6852a93419d593a3" => :big_sur
-    sha256 "504bd5561e0e1bc0411224626b1dcbd5d5cc5c12bcf376fa375db44406c3fb31" => :catalina
-    sha256 "e46bb4319996bc3eefa666cd34df09f5397c418291ae9727f166720a969526fe" => :mojave
-    sha256 "ab1c0687f2ec303561547349e21342c8eeb9d38c64f59e1c63ebc50f8601fc2a" => :high_sierra
+    sha256 "1457ddea6906878bd2ce5b92483774dae364f5191a88465ad6aa1957cc2fccdf" => :big_sur
+    sha256 "7894355ca12adb247fed4663b3eac885568db46b88f54bd92974387ceb73850f" => :catalina
+    sha256 "f96b32b3e9dc6755af9e6b3852f7221408f6f0c45cb3caee3f0c05dd118b720a" => :mojave
   end
 
   depends_on "rust" => :build
