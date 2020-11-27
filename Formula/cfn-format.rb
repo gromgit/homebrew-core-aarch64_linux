@@ -7,9 +7,9 @@ class CfnFormat < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "a405d340893970cf9d9b35e69440fc63f317343b4d4a81a83ca4490630429632" => :big_sur
-    sha256 "a56dcb6003dcd52f84f6215689261c900665a421bccade0afac3645b5c4b986e" => :catalina
-    sha256 "111fff60ba6bf31d53afc9a2e6571a9d7f4240fbc450da38303f2c092a9b36c4" => :mojave
+    sha256 "a0e2a6e2e90e084941915f907daa408d5ff087a97e73efdf340d57e8c28f6fd1" => :big_sur
+    sha256 "19a2772cae2dad769fd8170a18c9f8e16a02466a74c9cb0ddf4becea49b0abf0" => :catalina
+    sha256 "3094a879f0d338e65d0b0ad77f20954fb415a22ae98f4cb853bf78c3f4fa74aa" => :mojave
   end
 
   depends_on "go" => :build
