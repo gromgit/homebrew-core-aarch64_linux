@@ -12,11 +12,9 @@ class Cairomm < Formula
 
   bottle do
     cellar :any
-    sha256 "a7e5e1838390320a4894316c4e4e1e714dc3d7c65efffb5d58b6772fd6774578" => :big_sur
-    sha256 "58ce00547bc4f0210b0236b3e3df344b372e801bc129ba32091a5396334af7f8" => :catalina
-    sha256 "2a77a830256c2da441f636fddbdc2bd4ad390e920fc223b4ea33821ec1265195" => :mojave
-    sha256 "08a29b621ee8173cb17452f2e7a62adb83a60a65f0758cab545ddc0c53ecf681" => :high_sierra
-    sha256 "1845ba3e5dd9364551980e16b446620e4088f1fe90517b5af7cd81435b60cc08" => :sierra
+    sha256 "6177df22ea052d3e7ccd44d621d24837478340ea0d1385ef401a069414f893f1" => :big_sur
+    sha256 "cad19588b9a033b690cd2f1b73cb75282e017e1d32dfd39e29f7a35e2e8d3d91" => :catalina
+    sha256 "b90f4177caced79c28888be8b38150c22d9a147eaa96493810ddbdf3fee87bf4" => :mojave
   end
 
   depends_on "meson" => :build
