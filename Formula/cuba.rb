@@ -12,11 +12,9 @@ class Cuba < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "dd3e744e7357b51f502a8241360df6f29ecfe74a8d33dad2503ab64528e99573" => :catalina
-    sha256 "4520616f7170177dd546ec6d71d3c52e592c93e8a7e24b9c2e252382011a7b4d" => :mojave
-    sha256 "a607f8cbcfa954ac20a407fce07dc6cc65bfaab6b06079cc5d1eb85400532e74" => :high_sierra
-    sha256 "b3317c5c1d2f902d60aaa175f3e35d906f2ac6ab179b87de09e0f9110125b4ff" => :sierra
-    sha256 "6f1bf18403892cea4d5d692256e31dd11d170ecadaf996f960c454084e51b243" => :el_capitan
+    sha256 "6fe604c61d01768a99cb42321606f6b5feb5ed709f6d7fb419c3efb3e7e83f3a" => :big_sur
+    sha256 "758999a8bef3aeaf37f38402affd375ff55b4293cbdb52ee76846a25ba7f5209" => :catalina
+    sha256 "abd47d8d13cfefdaf542675e465b717cb95e8b1a8ba0ca2c3745bbcf0c6bd1d0" => :mojave
   end
 
   def install
