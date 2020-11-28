@@ -8,10 +8,9 @@ class Vlang < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "31b10de43dde1d96261d9fbe8fe7c6a9c47edfbb512b9ef3ff5f2cc6a51b0e93" => :big_sur
-    sha256 "584ea22b4d50d0da4f08cae22b8f59f4a9fe4b789a2c070d22d0b7dc36be864a" => :catalina
-    sha256 "a67724f8d35b90f3ebc4f385bd2eb6658e340a1d38a42f7328fd545324e35935" => :mojave
-    sha256 "33a9a5f5ece4ab6088e08b5d6e4d31c34a041a5b2cc006eb5270b332c5d6ee25" => :high_sierra
+    sha256 "4e3d0af15fbd9cfd98157e468e6479f04666c7ffda7bb092c356228867579a03" => :big_sur
+    sha256 "c9f90f6472af2dc0367fc2b36176730cc8ee37d022da550d532044dbf77d23db" => :catalina
+    sha256 "e6b819f3d96b3c41590a0248483067e88664efffff55a95d18475e2fa63f83ab" => :mojave
   end
 
   resource "vc" do
