@@ -1,9 +1,9 @@
-name: "Close stale issues"
+name: Triage issues on a schedule
 
 on:
   push:
     paths:
-    - .github/workflows/stale.yml
+    - .github/workflows/scheduled-triage.yml
   schedule:
     # Once every day at midnight UTC
     - cron: "0 0 * * *"
@@ -27,3 +27,12 @@ jobs:
             recent activity. It will be closed if no further activity occurs.
           exempt-issue-labels: 'gsoc-outreachy,help wanted,in progress'
           exempt-pr-labels: 'gsoc-outreachy,help wanted,in progress'
+
+      - name: Lock Outdated Threads
+        uses: dessant/lock-threads@63786a6c74ee3cfc4584f36de4360305c55e5126
+        with:
+          github-token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          issue-lock-inactive-days: 30
+          issue-lock-labels: outdated
+          pr-lock-inactive-days: 30
+          pr-lock-labels: outdated
