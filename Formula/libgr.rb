@@ -7,10 +7,9 @@ class Libgr < Formula
   revision 1
 
   bottle do
-    sha256 "a62524317ad69b3e60c8e30639b712c63cfb21c190045c3e81a96964aedaa7af" => :big_sur
-    sha256 "a2b5205e39dab110bffed5b0d2ba65c406357cae506f104cc5d5ac4ffc3d03f2" => :catalina
-    sha256 "2ce2a02ab4e593bf7f67fec74d76e15456f1261dd74d6abffe18d91fa26dc9be" => :mojave
-    sha256 "b90abf73dbd6f77e4c8c98c7887ca0ce32bb085a11542f1e942dd6495a641d3e" => :high_sierra
+    sha256 "74e780077f603713e35d583f2db4fef09a80f012c76f5ca35472a4fe875459fc" => :big_sur
+    sha256 "8ea42749d5fe7799b1c18a184141990e847ae7a05b980d04a76b0416e7d37edb" => :catalina
+    sha256 "d0b0b7a1d0da60f9c42256f7975f648ef81f58040d4e1d92544a5b1a681b8da8" => :mojave
   end
 
   depends_on "cmake" => :build
