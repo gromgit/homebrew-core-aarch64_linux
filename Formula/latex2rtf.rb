@@ -10,9 +10,9 @@ class Latex2rtf < Formula
   end
 
   bottle do
-    sha256 "be21a155b6d80c651312135de1348e1847ac57b1b1d612bf820e92fe663e9b10" => :catalina
-    sha256 "7c933531921ef07cc2471938266c91380d2364761b01fad8680bc70648812b19" => :mojave
-    sha256 "cf6c89983b5c8593a74f62e86825f4a9e7cc7f31fb83639c8247c51fa4d3975a" => :high_sierra
+    sha256 "fedf28c8cd7113f639a32776b9b55bbbae3ccfa7aa15e142d08004d39cf56d23" => :big_sur
+    sha256 "a4f536a8f9a6001fe955727e7d9473b5294daf416b422dab70b489067dad35f3" => :catalina
+    sha256 "e57496652dd135bddb2d28f88d96e6207b69551f040ac4436cb6d043557e90c3" => :mojave
   end
 
   def install
