@@ -14,9 +14,9 @@ class GraphTool < Formula
   end
 
   bottle do
-    sha256 "0d40bb0f5e363b7ac05844dc54b8c1e3f521a2ecb39b977967ecd46d9a896e0f" => :big_sur
-    sha256 "a40bb74bb0f26997e70dbd3184b790e31c7803e4213f3162a457a2601de6d59f" => :catalina
-    sha256 "0701551b1f3fcab3422338343a90638081b83f8bddf4e8101c7250e14e5ed6ba" => :mojave
+    sha256 "34cfb22a1e00efca115f0bbd8b946b7ac3d73513f7fc550c70c248ac70c768f1" => :big_sur
+    sha256 "c8af988b1eb5413389d99ed356270483db48b7fb0f8e72aea12a11f7452d6c7c" => :catalina
+    sha256 "be31e6dfa44335e66f140c88bf7343bb494fe2cbfb7f0a7e1ee53ca92b7d8cdb" => :mojave
   end
 
   depends_on "autoconf" => :build
