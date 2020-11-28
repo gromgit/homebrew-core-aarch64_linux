@@ -11,10 +11,9 @@ class Pulseaudio < Formula
   end
 
   bottle do
-    sha256 "2c66cd8a26ff24ae4b53ec18844fb163a13ae809d8a8369e1fbd11a4d2c39e02" => :big_sur
-    sha256 "0e9445dd8d49abd299324e93f00231605e993f791674997d9d2c35b88efec528" => :catalina
-    sha256 "ae68dfdb8ad584bf3f602ea7fb36d9bc1e4540e6905986a7129e45c6170d8d95" => :mojave
-    sha256 "687c4c646487eb8a9988303e279dc2ee542b6404504cb54fcfce1d6d6bcf949f" => :high_sierra
+    sha256 "36f025d67efa9bc8198e4810dfc58b584d28f7980d4a98a3c2310f84caf7b773" => :big_sur
+    sha256 "fc7ff97eaf91b6bcfeeb391b6c885c2fd9c6d3843ab668d9e85a68d7bb55f92d" => :catalina
+    sha256 "78718069edbad1c576f4abf5c6fa2e6945e08699b006863dc3e94e27990f044c" => :mojave
   end
 
   head do
