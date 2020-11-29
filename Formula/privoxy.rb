@@ -12,11 +12,9 @@ class Privoxy < Formula
 
   bottle do
     cellar :any
-    sha256 "c718aefcd3525611e8d5f659ee6054e013829e45e7b751548c8a39a47df1a08d" => :big_sur
-    sha256 "27fe56112d9fda97417f830b4c17a5066b4389f7831db250a702c91d8df62131" => :catalina
-    sha256 "01d3b6f679a5819786936626ed093773d68094aa16a8969bf912a507690043f1" => :mojave
-    sha256 "1dfa322367c0f6e5013f2a08fe12a825d4627b2c23aba0aecc94e65e10904700" => :high_sierra
-    sha256 "cd9a919132c032f335f6c7bce15fc5a6abb24fbd56f7ee51884ea30aac710b67" => :sierra
+    sha256 "7b49313bc0ca6074e83753c56c192cc8c922e63f37a07ffd6954d81f63b39e69" => :big_sur
+    sha256 "8e6f41dd3f0828b17ed3ee516de139ae4baa66d7c01c633bf3fc95097029e5a8" => :catalina
+    sha256 "8c382bc37d0a27ca33786a09e435942f38aac55bb48b22f4dafe8810002a06da" => :mojave
   end
 
   depends_on "autoconf" => :build
