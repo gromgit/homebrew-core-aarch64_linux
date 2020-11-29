@@ -13,10 +13,9 @@ class Wxpython < Formula
 
   bottle do
     cellar :any
-    sha256 "b79c369698d4b810127ec00ee1de52151cfabf651e2b4e6064c9bdf45659d24d" => :big_sur
-    sha256 "a9646e690310c718f071dd0b5e4188a93c839588af80647c3f4e8b84ab30021d" => :catalina
-    sha256 "aa2a899b27b94c5c2fc99d18eee8f82b6b1a372aaf07a087096ed379597d1f8d" => :mojave
-    sha256 "94fe1e101973190e7ddb04f4b5c3bfe7343014ed3439b4a4c8f588b00541c500" => :high_sierra
+    sha256 "9aed884ad2d17eadce20f6a004bdef1388b3f28a53dbe82751d110786723c336" => :big_sur
+    sha256 "962dc706ef5e748da2f8ec188ce1fca50dcab98350b2254f50955ef8b118761e" => :catalina
+    sha256 "342cee7f2cc885871b3471ef18e6ce026c93687a930fc7c658afbe21101f10ec" => :mojave
   end
 
   depends_on "freetype"
