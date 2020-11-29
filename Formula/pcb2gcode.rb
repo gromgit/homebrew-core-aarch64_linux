@@ -3,7 +3,8 @@ class Pcb2gcode < Formula
   homepage "https://github.com/pcb2gcode/pcb2gcode"
   url "https://github.com/pcb2gcode/pcb2gcode/archive/v2.1.0.tar.gz"
   sha256 "ee546f0e002e83434862c7a5a2171a2276038d239909a09adb36e148e7d7319a"
-  license "GPL-3.0"
+  license "GPL-3.0-or-later"
+  revision 1
   head "https://github.com/pcb2gcode/pcb2gcode.git"
 
   bottle do
@@ -15,13 +16,20 @@ class Pcb2gcode < Formula
   end
 
   # Release 2.0.0 doesn't include an autoreconfed tarball
+  # glibmm, gtkmm and librsvg are used only in unittests,
+  # and are therefore not needed at runtime.
+  depends_on "atkmm" => :build
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+  depends_on "cairomm@1.14" => :build
+  depends_on "glibmm" => :build
+  depends_on "gtkmm" => :build
+  depends_on "librsvg" => :build
+  depends_on "libsigc++@2" => :build
   depends_on "libtool" => :build
+  depends_on "pangomm" => :build
   depends_on "pkg-config" => :build
   depends_on "gerbv"
-  depends_on "gtkmm"
-  depends_on "librsvg"
 
   # Upstream maintainer claims that the geometry library from boost >= 1.67
   # is severely broken. Remove the vendoring once fixed.
