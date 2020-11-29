@@ -9,10 +9,9 @@ class Pcb2gcode < Formula
 
   bottle do
     cellar :any
-    sha256 "1a34f6b2445d00940199c779d02978c1524758205b5430135f9ab57693933b9f" => :big_sur
-    sha256 "f061b44896db47c40e3ff5d58434aa701c7ba974b22a82f82b0206338181a200" => :catalina
-    sha256 "dae5016ae6634dda64d1ddc9ead1cd1dba55d8ef23f74dd2b9e848248bfdfee6" => :mojave
-    sha256 "bc556eccf6a7eb74ffaf14ce4396c5d311f8961cc035638692193009dda195f5" => :high_sierra
+    sha256 "ebeae69a3b6c8ce423c361efbf21914582de1953dd1435829249d1179dc8d59c" => :big_sur
+    sha256 "25c1b52ff023dd2137810355ba205d3be3e065ccf90851b2f49329f665ff54a5" => :catalina
+    sha256 "cc6d2180685fa076d25a24db6ccd39b7346f28ad52f90a1d72cc3d22bfe840df" => :mojave
   end
 
   # Release 2.0.0 doesn't include an autoreconfed tarball
