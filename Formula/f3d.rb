@@ -5,6 +5,13 @@ class F3d < Formula
   sha256 "fb362dba3ccf49db9e8841d8a5310f37399bfea8866b6e040ce85670d54b97f7"
   license "BSD-3-Clause"
 
+  bottle do
+    cellar :any
+    sha256 "0bf1315a83f055c0a31d93d4ef7d906e774b8271979e4727ab3b544452a531b1" => :big_sur
+    sha256 "09a4635338429517f2892be552dc1909aabb4b433d6ade7515826cec6588f0c3" => :catalina
+    sha256 "d70d0469a39e6201238cb5212d6b900528d60dd19bc6949da2966a2c273b372b" => :mojave
+  end
+
   depends_on "cmake" => :build
   depends_on "vtk"
 
