@@ -12,10 +12,9 @@ class Mtools < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "ca6daf3fce1f9e42783434c20f99da97735050f51d525fa3913392a6d23cda0d" => :big_sur
-    sha256 "cb2c2d3fc7800cdea12f6be7ed16caba9a4c7c19ab88e3e63a5c1918997f574d" => :catalina
-    sha256 "6fdc5e5b10131648eeeadd8a76ceb81b6f06a0a7b8918fffae500b0d0b41d0ad" => :mojave
-    sha256 "753dd7f093256f2e8e0a609e9196f1365953e68661aeb4849441aef6c1b168da" => :high_sierra
+    sha256 "e79ddc6fe5d42ee6254d92868da71fefc84b3c65130ee84304f9cc73ae119b4f" => :big_sur
+    sha256 "c03be273031ac22f8d407cbd903ba2913c81f058ad72d23f392289d3c7f9d7f6" => :catalina
+    sha256 "7d5f50dd790784f12c447570d9f905646cb92cfb7ce88bc0dea32386e26ed6a3" => :mojave
   end
 
   conflicts_with "multimarkdown", because: "both install `mmd` binaries"
