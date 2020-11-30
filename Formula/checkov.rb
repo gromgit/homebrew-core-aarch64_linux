@@ -171,12 +171,6 @@ class Checkov < Formula
     virtualenv_install_with_resources
   end
 
-  def caveats
-    <<~EOS
-      cloudformation java and go plugins are installed, but the Go and Java are not bundled with the installation.
-    EOS
-  end
-
   test do
     (testpath/"test.tf").write <<~EOS
       resource "aws_s3_bucket" "foo-bucket" {
