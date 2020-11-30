@@ -5,7 +5,7 @@ class Portaudio < Formula
   version "19.6.0"
   sha256 "f5a21d7dcd6ee84397446fa1fa1a0675bb2e8a4a6dceb4305a8404698d8d1513"
   version_scheme 1
-  head "https://git.assembla.com/portaudio.git"
+  head "https://github.com/PortAudio/portaudio.git"
 
   bottle do
     cellar :any
