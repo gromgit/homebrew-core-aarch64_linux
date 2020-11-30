@@ -5,6 +5,13 @@ class TRec < Formula
   sha256 "57c89a5befeaab63201ee45f47d08a1fe3861947478c729a6f4a9318613e01fa"
   license "GPL-3.0-only"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "c895fe703a54317c8a9fbeabadf8bbf1910c18f7f7163a818796d5d70c7ace10" => :big_sur
+    sha256 "6039e8741541b9e2a63e98f144f6ed400389d276c8bbba651b0a407fbff9fca4" => :catalina
+    sha256 "83733e285f7bb41e547e117e6e8ee8a5d1a7b1dda87e322006826c0b55fc41e6" => :mojave
+  end
+
   depends_on "rust" => :build
   depends_on "imagemagick"
 
