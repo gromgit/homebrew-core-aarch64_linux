@@ -6,9 +6,10 @@ class Ecl < Formula
   head "https://gitlab.com/embeddable-common-lisp/ecl.git", branch: "develop"
 
   bottle do
-    sha256 "2a33f32a5ae0e6f53cc341e2235525a5c5bdeaf1a696e19f1fdaf2b8c36bb02c" => :catalina
-    sha256 "1cccfc0bb6405dc4c9515936ee14589837794b61738477bd72ba77d5e0fcc9e9" => :mojave
-    sha256 "8b216d4e8eb3491593160a2d291beb13b228bc8442cc0c5d391c196754f8968c" => :high_sierra
+    rebuild 1
+    sha256 "23de8394468aa1682fdfaa00544b0316798eaf726b674f5003c6451dbecbb6f8" => :big_sur
+    sha256 "612d10e1c4c34d9fcb5ec731e683210634f12111c30862ae890d225a604343ce" => :catalina
+    sha256 "a29d90c9343ff63a28c6442caccf1161724804b0632624a531546db9ea63ce45" => :mojave
   end
 
   depends_on "texinfo" => :build # Apple's is too old
