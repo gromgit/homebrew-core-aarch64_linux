@@ -6,6 +6,13 @@ class Tendermint < Formula
   license "Apache-2.0"
   head "https://github.com/tendermint/tendermint.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "ad7854f901ae4ac1ab4f7af7f02d4ee00d807789914515fd25b1c5b2c8c2ca04" => :big_sur
+    sha256 "3901a4b32d2fd8c576929b52603c2166f08978a228f8c18491b258c72f0777e9" => :catalina
+    sha256 "65a04941f0c97cdb98ffdf3b4e16fe4640566d35b107b634bcd789779fa58deb" => :mojave
+  end
+
   depends_on "go" => :build
 
   def install
