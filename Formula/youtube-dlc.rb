@@ -11,6 +11,13 @@ class YoutubeDlc < Formula
     regex(%r{href=.*?/tag/v?(\d+(?:[.-]\d+)+)["' >]}i)
   end
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "cda21c7d407f10c01c189b5dd71c14dccd2b53d60717726cb013dd9f8551c47a" => :big_sur
+    sha256 "0b7b4d68b5cbbd018a7baaca6a1cc31f123986881c926b79299e0a25bde7178f" => :catalina
+    sha256 "cd3a872ac084b1063848a0fe327b92b4000dc72fc268a1e03ca029c783caa586" => :mojave
+  end
+
   depends_on "make" => :build
   depends_on "pandoc" => :build
   depends_on "python@3.9"
