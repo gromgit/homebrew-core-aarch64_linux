@@ -11,10 +11,10 @@ class Aspell < Formula
   end
 
   bottle do
-    sha256 "895865aeb2cc7040802dbada7dbcad6a2fac4a08e57f3d96576ad0feb3f3258c" => :big_sur
-    sha256 "f34a5b53fa80f6f0ea3cef83d04eceed93f918153463e0b77a596374a842249d" => :catalina
-    sha256 "756d2f24409150b932043544af99bc1c2ea242299174ab89a2d06c7878812af8" => :mojave
-    sha256 "9bbb8be505d953395bcccde4712cf85792c6bf03af535cc553783361476ddddb" => :high_sierra
+    rebuild 1
+    sha256 "abf04f9f474e21d070e22667204cd122e7e099e90e60110dc7639fdaa5f5a66f" => :big_sur
+    sha256 "86b7d31eff12742ccb73464c088c8313998bd4c1e37f108754f936d51b6f49dd" => :catalina
+    sha256 "aeded9b9861145353ad13bbf85772f23e556fe6dc0b263beebd555cf19762197" => :mojave
   end
 
   uses_from_macos "ncurses"
