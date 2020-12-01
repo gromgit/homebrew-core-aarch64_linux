@@ -8,9 +8,9 @@ class CargoEdit < Formula
 
   bottle do
     cellar :any
-    sha256 "02962a1a65b5259647e87a4b065e2ca7fee5da04de585e579b6a08772064ad73" => :big_sur
-    sha256 "0a90a56248feeb9a2371ab94a82ddc111688d9323bb4deb92c9863d96fd36f1b" => :catalina
-    sha256 "b26248fef6c09401f36f5d4c30c5cfa10b9944817c84f6b55b384fc7106ef31d" => :mojave
+    sha256 "dda337a0b67c8e1b0be8a8718871e72363208f355b2204e1b91f0cb3fd746460" => :big_sur
+    sha256 "6998a3ce2b08aa612b3fa875f368d0fa8012404ef52480292c57d611d176de75" => :catalina
+    sha256 "db8fc1ad91e81679e46f49dddb9280b825b17b6ed9762f66a070af52ddee952a" => :mojave
   end
 
   depends_on "rust" => :build
