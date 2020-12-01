@@ -13,9 +13,9 @@ class Salt < Formula
   end
 
   bottle do
-    sha256 "c5e7477c701d1fca58ed75b843fb6177fb655f002d66c78acd49517d0c470176" => :catalina
-    sha256 "9a1068ea05113e25f15eb79303178d75d18c0ffa7d00ccd3ca97a804bb073ffc" => :mojave
-    sha256 "931b163609b7e915f2e29c589cd83c3d8894651b9c4a656db2d4892e5928281c" => :high_sierra
+    sha256 "3b8936ee7fc3a11051f131b8c665320c37b06b4487797c1e3b6980f871d02fa9" => :big_sur
+    sha256 "c669635717b6bd34e3540d97d71e6eeaa357eab209b7a8857b0190da73d193f6" => :catalina
+    sha256 "bbc802eb5097a9f2d02b182215ca73eb37bdd841972e321bcaac219c2b530431" => :mojave
   end
 
   depends_on "swig" => :build
