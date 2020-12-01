@@ -8,11 +8,9 @@ class Glab < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "0d0c63b8389b0e7034effccc9d970395c2b8b85a6f92a4169cbf54b4ae93d589" => :big_sur
-    sha256 "f16fc3e38d554c0238f6b5230c207a0bccd0b20f3f27ffdf088c37d488151170" => :catalina
-    sha256 "fd391d0782e5f76604ccdde46032484d50b844a252a50d241dab0656cb98efd2" => :mojave
-    sha256 "62f911797cee3981fc9fea930d638cc1f1ad76faa80daa6383bf0ebf7ecfbc44" => :high_sierra
+    sha256 "92f48790c9d68ba28fe78f63c80b6273504170353daa091d4ce50def9f32e158" => :big_sur
+    sha256 "24e4ed57e81155fa8368719aec2b737484c534da8550c2440039fd75fb9b6d99" => :catalina
+    sha256 "c7db9dc9f231f36c13a3791dd70fbebfddbf7817dc8d6cefdd65563dfed0f0cb" => :mojave
   end
 
   depends_on "go" => :build
