@@ -8,10 +8,9 @@ class Dynare < Formula
 
   bottle do
     cellar :any
-    sha256 "c5b893dde8576e1a7f3d3a64fb63f0980cd073c58215beb75ed6942ea430c2a3" => :big_sur
-    sha256 "ef6b5cf37122962b667f06b71de4ca49ae6ab9aaa3057231dab9831b52cdfba6" => :catalina
-    sha256 "5f1a585a1f41986d0c73785e0f782e0ede2344e12f52495cbc07f79eeb79bf05" => :mojave
-    sha256 "b0a54902990f22922feb676bb8f9f112d658c5019a8f873f6e0831d07de5026b" => :high_sierra
+    sha256 "82f10ec400a45d52308681a31da463f233158f3a73a7ec51da4bfbe322fb2ae8" => :big_sur
+    sha256 "ce1fca3d77fe15fb198a3610524f3b0210f57b6757ba36f171705060ee8d1074" => :catalina
+    sha256 "da202eccfc7d8235160d974ebe88021d10efd5be016fd0d78f77c2837e6f6fd3" => :mojave
   end
 
   head do
