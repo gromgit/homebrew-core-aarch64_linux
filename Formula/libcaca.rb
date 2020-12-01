@@ -21,9 +21,9 @@ class Libcaca < Formula
 
   bottle do
     cellar :any
-    sha256 "b05fb9698cfdc95696c1fa80d9b72fabd2a45372de83116f61707d7bff1cb38b" => :big_sur
-    sha256 "621026d8276dd31c1464ed1fd688aac04841336b6e686ee122b9cc760a8a255f" => :catalina
-    sha256 "7474fbf03e949d693c4ac8f601df4b40baa05094491438d7e2ce77df1e974d58" => :mojave
+    sha256 "fca71650e2702ac497560f86779bbc77acb5fd8cf09c8219c2381be20af6d11e" => :big_sur
+    sha256 "3d2d080e206d0d7d9720687aadfce949e78588df510b9039ff1b8f4277015d6d" => :catalina
+    sha256 "38488f0e4363948a80d60201da73c6c67856525ff0b67cfd53dc3caa16de602e" => :mojave
   end
 
   head do
