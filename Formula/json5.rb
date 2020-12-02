@@ -6,6 +6,13 @@ class Json5 < Formula
   sha256 "8377e5b7a604ba3e3113ec14f2346e89850224670c1593a542863ca1ea75c97d"
   license "MIT"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "23ab51ca388f7efb2bf410f059acc51c161ec45a5976fb5f4e483d1a19146a18" => :big_sur
+    sha256 "bedfd496f81978deb0f7745b1465666460beb8f32b4b5cd2c304272177f4974e" => :catalina
+    sha256 "568c1550671b000a316cfec4168c135039edb2dc714be89f9ac4282170fdd195" => :mojave
+  end
+
   depends_on "node"
 
   def install
