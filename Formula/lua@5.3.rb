@@ -10,6 +10,13 @@ class LuaAT53 < Formula
     regex(/href=.*?lua[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    cellar :any
+    sha256 "c5b136ccbb51ce4150c5c8b86d8bd93f773cffcffd58afcbc7ee89f03c7e6341" => :big_sur
+    sha256 "8be5939dba6e18dd559463f60b9fdff5d3c5fcd49f244c5fb2c1c37745149557" => :catalina
+    sha256 "d16178dce1c0afc10bbdf80cb233c4a69f3cebcc6f3eec699381170a65b81bdd" => :mojave
+  end
+
   keg_only :versioned_formula
 
   uses_from_macos "unzip" => :build
