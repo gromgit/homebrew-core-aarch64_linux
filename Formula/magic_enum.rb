@@ -5,6 +5,13 @@ class MagicEnum < Formula
   sha256 "11bb590dd055194e92936fa4d0652084c14bd23ac8e4b5a02271b6259a05cec9"
   license "MIT"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "9075c66a5f67e4e254de1e53db323d0a6b519c627e55e739b5a9c9bec204087c" => :big_sur
+    sha256 "ab11edfbbbbfe410e82b49ff6be4dba2d3298f925c2569d08af1869f675e2d9d" => :catalina
+    sha256 "0a95f97cb4ddb9b46f425202c76cfb1b19aa08403ba598d546cdc10b10e0f60c" => :mojave
+  end
+
   depends_on "cmake" => :build
 
   def install
