@@ -12,9 +12,9 @@ class Pdnsrec < Formula
   end
 
   bottle do
-    sha256 "cc0c48157bb2e39fcd9fe29ca33e35e580b4bd9046c20e7e1357fdc4154dbeca" => :big_sur
-    sha256 "c8c1e5a526b6588cd95d02e3bf6c7c14dd9f8ea4ff3ec0601855c5df2d0ccf68" => :catalina
-    sha256 "4c389f453d543f51becd243a370a239bcd228187e9f0f5bebc45e94de078d749" => :mojave
+    sha256 "0f080e316dd2d20e656f7ae48dbb881fc9824a5ca35b468dd9fd153c9e2a3c22" => :big_sur
+    sha256 "f38be52b2d55015172cc0e89dac5a29eadffdd12e8f7b21c4247050237ffc246" => :catalina
+    sha256 "f1e89927a21f517c6e96668149735b838fa1f9e96e36878fbbddc52d61253900" => :mojave
   end
 
   depends_on "pkg-config" => :build
