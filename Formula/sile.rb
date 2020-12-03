@@ -8,9 +8,9 @@ class Sile < Formula
   head "https://github.com/sile-typesetter/sile.git", shallow: false
 
   bottle do
-    sha256 "81543d9536c274cb85f88d2aa2b8f450b5b2c57bd983d9498063ebf39fca18e4" => :big_sur
-    sha256 "9fe71ede042de259964849f79dda53e5e6f653e84f4b287f86541071aca2b207" => :catalina
-    sha256 "6e635e002581fdf1c8ba78b882318537da588406e8039940f115f660e1736346" => :mojave
+    sha256 "d791ab6a480aabc66efede6487b6c8199527d0d9874249f510f18bf50fdb8443" => :big_sur
+    sha256 "cb965e298eeb6f23de84f65c97b6537c2ae5ad1fc55224c3355f77eb28113bb7" => :catalina
+    sha256 "f1707b37213ffda7234761238e10a8abb8179c86c3f9b6e02c6d8dd71ffbecc0" => :mojave
   end
 
   if build.head?
