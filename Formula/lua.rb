@@ -12,9 +12,9 @@ class Lua < Formula
 
   bottle do
     cellar :any
-    sha256 "4f272153bbd6e1febd06c914319bf8383e5b85366c0139397163261570e71fb3" => :big_sur
-    sha256 "a602cc7892eaf5a989366afc6c11edd1a2e9b51742c9ba6b6a8dc0dcc6e18577" => :catalina
-    sha256 "94c834986ce133fddaa035609bc7748c193ebaeaf382944336d131d0d7f95975" => :mojave
+    sha256 "f7e0d6c4b3cd8d3fba1f26dd81d23eb68e1adfcd6f7915732449a8671eedfb1c" => :big_sur
+    sha256 "7fa53bc358e3fc6ebd2e1bcc326cd13f18141d780d07daadcecb891ebe61aa94" => :catalina
+    sha256 "0196098bf8f4f49c78061412237acda0e2e2010f4abc61a7ac085ede71e9b7a3" => :mojave
   end
 
   uses_from_macos "unzip" => :build
