@@ -7,10 +7,9 @@ class KyotoTycoon < Formula
   revision 4
 
   bottle do
-    sha256 "2f430dc00ac505a7098596c769cc1c03d6d7a3fdc35ba7bc55fcd707576ac9a2" => :catalina
-    sha256 "04d72b5c55be3c26c688eda6c0cc9f88c85855ba6fe81aa36e210fc29afe7572" => :mojave
-    sha256 "ce7db5082c632bef982d5463f3a8507d786fd3bcae7f7cccf8663ab36c3571bd" => :high_sierra
-    sha256 "e75c60a4417bc00d04e1f24241320329f01b0d3076de2585e92375b12c4ef31d" => :sierra
+    sha256 "6718c70e1a6f9095077180661a2fb9649e3c7f36847738ef900bd5565cefb4af" => :big_sur
+    sha256 "fb28428ef7f62c2ac86f78e00101ca58940fe875d4c4a0df5cada4cca8dce7a6" => :catalina
+    sha256 "2272eabbc069a844c838aaa501285b475037ebe8a76e1bf1f41ab36974bc035d" => :mojave
   end
 
   depends_on "lua" => :build
