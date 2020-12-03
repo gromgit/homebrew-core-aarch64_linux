@@ -1,8 +1,8 @@
 class Gitleaks < Formula
   desc "Audit git repos for secrets"
   homepage "https://github.com/zricethezav/gitleaks"
-  url "https://github.com/zricethezav/gitleaks/archive/v6.2.0.tar.gz"
-  sha256 "7f2d96baba62325e208d11ff34f4bcf349be702f76dbf23faabb6e880e7f9665"
+  url "https://github.com/zricethezav/gitleaks/archive/v7.0.0.tar.gz"
+  sha256 "c55e5a44bd3a70fa2ce19943f348e656cfc83c451d20f6e1d6775545fdf00b6a"
   license "MIT"
 
   bottle do
@@ -21,8 +21,10 @@ class Gitleaks < Formula
   end
 
   test do
-    assert_match "remote repository is empty",
-      shell_output("#{bin}/gitleaks -r https://github.com/gitleakstest/emptyrepo.git", 2)
+    output = shell_output("#{bin}/gitleaks -r https://github.com/gitleakstest/emptyrepo.git 2>&1", 1)
+    assert_match "level=info msg=\"cloning... https://github.com/gitleakstest/emptyrepo.git\"", output
+    assert_match "level=error msg=\"remote repository is empty\"", output
+
     assert_equal version, shell_output("#{bin}/gitleaks --version")
   end
 end
