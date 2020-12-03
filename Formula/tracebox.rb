@@ -10,7 +10,9 @@ class Tracebox < Formula
 
   bottle do
     cellar :any
-    sha256 "427833bcd91fe0ab0b0e05b68bd2a34043020687a57509fc034dc29088942faf" => :high_sierra
+    sha256 "7d942d1431c44893cba7ae8b6b3e24f632042051fd5e1039ad3c6ad59845f938" => :big_sur
+    sha256 "ea8e698fabb1071549a35f2af430272d0e705501078b5d9aad938f3fa5c3ded9" => :catalina
+    sha256 "a1a34c7c29255f429879e0687c014ef9140c78915c00617a82134cefa91d7a3c" => :mojave
   end
 
   depends_on "autoconf" => :build
