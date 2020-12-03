@@ -13,10 +13,9 @@ class BitwardenCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2431b0913001d69a820487c05b0b372987e72dfd32d557d0cbe7d407b65716b6" => :big_sur
-    sha256 "b11f8cc6aa79e2cac76319be59fe77b09f39c592c9dfac66dc17169683c5a83b" => :catalina
-    sha256 "bb8bede4fa99caa9d0d4e5ec93f7c42b42868395da3693c8849119129fd5873e" => :mojave
-    sha256 "e714a7f95873ff28f858c727b68846014514c9dea4df4a607dad9e940ff7b7f3" => :high_sierra
+    sha256 "d8d85b4f14d7b98d7ca5844741fc5009c21500724e9ce034b1ebc5298c54f667" => :big_sur
+    sha256 "ef80f95534d1e0731599620dbbd06d8297a1b4c83a486b14a9c2f507313422f9" => :catalina
+    sha256 "32f5ccd2ac760504711915d3291c0787a4b6b477ad44670b9c351d909a455167" => :mojave
   end
 
   depends_on "node"
