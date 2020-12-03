@@ -12,10 +12,9 @@ class Pdns < Formula
   end
 
   bottle do
-    sha256 "42b5af5d9882ad21a4b0105fc30f4d263695aaecb4f155bfab56ca87c4fef176" => :big_sur
-    sha256 "a2157c837b834c7d428066e64d375636917066ea37c48935afec632c2fe539d9" => :catalina
-    sha256 "3221d27d70b3d023b0bf7ab053f269e3ae0ae31f3b7697e7a495687dba252ec9" => :mojave
-    sha256 "26266299abce6649649c05949369f11139b418bc0bbca23ffb65fa1dbf1640db" => :high_sierra
+    sha256 "fe13a92880a716f80c06d30aeb6bb74d8a99792cbc22544e14dd667698a9b6f9" => :big_sur
+    sha256 "f1d62a9eb590c0b762004f120d62cb721583da29ceea61c3a397b8ffa0033f90" => :catalina
+    sha256 "7a93c7a53c5ee245a6d86da5ba18cad02700d61c4e524cb380d3ff48a660cc88" => :mojave
   end
 
   head do
