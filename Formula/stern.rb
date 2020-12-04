@@ -8,10 +8,9 @@ class Stern < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0f8f6af5554f315bd5865e29df96c78227adf7dc3b760ce4405a78aef46842a5" => :big_sur
-    sha256 "d6dbc6b4d2bc279d0fe11f755ff22076275dc63f860507fea7c25b290cf4923a" => :catalina
-    sha256 "888437271eb402c05e692d69bc469d6a471c475a4f8a1c2434c097470b79ace1" => :mojave
-    sha256 "36b25df7f6bdd4efdd90bb379e00e423da5e1123151c040b707cbf3f0f049d09" => :high_sierra
+    sha256 "e2ef4eb2ba0ef91c0b687801b2d36eeecad1c4bfdba0d547c30bad07cb24ec4a" => :big_sur
+    sha256 "161fa35aea584ef3065d55441602e6a453bc2b55deb52691b5bd23eb4a9bdbfa" => :catalina
+    sha256 "4a520ca8ac031e5bfe72ebab6d535f5d0d15918ff0e23348df66694050f92c6e" => :mojave
   end
 
   depends_on "go" => :build
