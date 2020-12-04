@@ -11,10 +11,9 @@ class Geeqie < Formula
   end
 
   bottle do
-    sha256 "a501e8d8c8c16f456fd3febeee883b37b329286b828f1799070691d99a52d66d" => :big_sur
-    sha256 "5d344202876e8d095f69c10241a7018a97d4033f1e6c5fabc8db0f8152dc4d1c" => :catalina
-    sha256 "80074bcd449427974fafe01f1292d3d77111bb380eac0b94f91797a4802a2108" => :mojave
-    sha256 "bb5923d1d1a922ea077796653061d98b571bb96a89bb16d555ed5bf91770e79c" => :high_sierra
+    sha256 "2aa83988145308caaa7bdd49b0fabfff7e2b7805c988f4cb5a782696355d53e7" => :big_sur
+    sha256 "6cd0177bb8e510ce20c440f21491e390e0f4339cb0461bc24fa2e0cadda17a99" => :catalina
+    sha256 "de5e6de4c8b6098193cff623e96f0fbbd9204705bff0accfc1c354cfd8cc95e5" => :mojave
   end
 
   depends_on "autoconf" => :build
