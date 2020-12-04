@@ -1,10 +1,9 @@
 class Imapfilter < Formula
   desc "IMAP message processor/filter"
   homepage "https://github.com/lefcha/imapfilter/"
-  url "https://github.com/lefcha/imapfilter/archive/v2.6.16.tar.gz"
-  sha256 "90af9bc9875e03fb5a09a3233287b74dd817867cb18ec9ff52fead615755563e"
+  url "https://github.com/lefcha/imapfilter/archive/v2.7.4.tar.gz"
+  sha256 "ac4cf846edb9b96c86e3a250f54130af7f1bb6c4c2600bf014dd1c819e10c72c"
   license "MIT"
-  revision 1
 
   bottle do
     sha256 "5a38d2feddf00dd15f9c34a7d9ce8bae81a08703cc4f52cf0af52c20d7a5ef5e" => :big_sur
@@ -14,12 +13,12 @@ class Imapfilter < Formula
 
   depends_on "lua"
   depends_on "openssl@1.1"
-  depends_on "pcre"
+  depends_on "pcre2"
 
   def install
     # find Homebrew's libpcre and lua
     ENV.append "CPPFLAGS", "-I#{Formula["lua"].opt_include}/lua"
-    ENV.append "LDFLAGS", "-L#{Formula["pcre"].opt_lib}"
+    ENV.append "LDFLAGS", "-L#{Formula["pcre2"].opt_lib}"
     ENV.append "LDFLAGS", "-L#{Formula["lua"].opt_lib}"
     ENV.append "LDFLAGS", "-liconv"
     system "make", "PREFIX=#{prefix}", "MANDIR=#{man}", "MYCFLAGS=#{ENV.cflags}", "MYLDFLAGS=#{ENV.ldflags}"
