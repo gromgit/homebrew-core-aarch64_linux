@@ -11,6 +11,7 @@ class Bind < Formula
   url "https://downloads.isc.org/isc/bind9/9.16.9/bind-9.16.9.tar.xz"
   sha256 "bcb292c4d738a46e3cbcb8afaa25ecf54f77652fa575135da9a2a1d525304a5a"
   license "MPL-2.0"
+  revision 1
   version_scheme 1
   head "https://gitlab.isc.org/isc-projects/bind9.git"
 
@@ -29,6 +30,7 @@ class Bind < Formula
 
   depends_on "pkg-config" => :build
   depends_on "json-c"
+  depends_on "libidn2"
   depends_on "libuv"
   depends_on "openssl@1.1"
   depends_on "python@3.9"
@@ -57,7 +59,8 @@ class Bind < Formula
                           "--with-libjson=#{Formula["json-c"].opt_prefix}",
                           "--with-python-install-dir=#{vendor_site_packages}",
                           "--with-python=#{Formula["python@3.9"].opt_bin}/python3",
-                          "--without-lmdb"
+                          "--without-lmdb",
+                          "--with-libidn2=#{Formula["libidn2"].opt_prefix}"
 
     system "make"
     system "make", "install"
@@ -202,5 +205,6 @@ class Bind < Formula
   test do
     system bin/"dig", "-v"
     system bin/"dig", "brew.sh"
+    system bin/"dig", "ü.cl"
   end
 end
