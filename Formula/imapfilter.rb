@@ -6,9 +6,9 @@ class Imapfilter < Formula
   license "MIT"
 
   bottle do
-    sha256 "5a38d2feddf00dd15f9c34a7d9ce8bae81a08703cc4f52cf0af52c20d7a5ef5e" => :big_sur
-    sha256 "f82d8268b6a147ba30ddc7d2c1ca18045b180d2247b1f312d8d1a475ef1257f3" => :catalina
-    sha256 "f32bdb431eafeb2c981d945cdd7fc6beb2ca7e5a0e98b8c8248c1ffdc953874d" => :mojave
+    sha256 "ff90e2681be192d3b97c87e644eb0f01712f91630ac5125e5681ae6bc2eedc01" => :big_sur
+    sha256 "0f686e00927ae8b38ff85c46d34974753387631fc7cbf2294d969f45e7c47e0e" => :catalina
+    sha256 "dc6586a02c6b329096e02c01ebc5d191ac7ed74c4c856d199935750605a4ed3b" => :mojave
   end
 
   depends_on "lua"
