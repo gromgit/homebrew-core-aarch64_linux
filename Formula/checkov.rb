@@ -10,9 +10,9 @@ class Checkov < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "dec42a7d6ab7df727325a97df88df01a45188bdac13a7bf13856f160514a311c" => :big_sur
-    sha256 "ae1de183452c92260eacd267e384ac09ecc78c425d13c341a2ca5e28e5659c56" => :catalina
-    sha256 "0e4f275f259e9db1641d4d1e7f876409d5c92bb96acf9043fe2d0f857544e581" => :mojave
+    sha256 "12072345e17af704afd9663d9e57924f1d1d9cf878b4a0eda7f9d176cc7770aa" => :big_sur
+    sha256 "2f952f87256e7b227b052fce1342d0d72803b29561cd143f1ee8a4eeead1c008" => :catalina
+    sha256 "e59d05f5292422fed9d50bb9b05e6a76e852b9ae737fd2d6ce4a222343f3594c" => :mojave
   end
 
   depends_on "python@3.9"
