@@ -6,10 +6,9 @@ class Jack < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 "f06b40271bfe65dc21417b614fa485dbe86d0f1567c52edf95d6fb1cd01323bc" => :big_sur
-    sha256 "cd99d66f3ddbe0aeaa35474bfeec3994b779f779fd00f9d5773c79bea8eaf248" => :catalina
-    sha256 "ffc645c97ccb709f71b50b756e0fc15485b02b12a695e29b03a428f9bf8c53de" => :mojave
-    sha256 "883658cd45eb52986b8eeef5b6443c5d6cf90feeded1ed78446a883e6b00fbda" => :high_sierra
+    sha256 "8700de5add46350491add58d820108aabb5ab18545a4fab4fa20b2f05287e9ef" => :big_sur
+    sha256 "0c30bbc478e9305530f69fee884640dee62e5613c997dca8c99e736d8c943899" => :catalina
+    sha256 "dc531389d6a167fc2caa078f480272f8048bbf5d85ff4f46c299a42456661360" => :mojave
   end
 
   depends_on "autoconf" => :build
