@@ -12,9 +12,10 @@ class LuaAT53 < Formula
 
   bottle do
     cellar :any
-    sha256 "c5b136ccbb51ce4150c5c8b86d8bd93f773cffcffd58afcbc7ee89f03c7e6341" => :big_sur
-    sha256 "8be5939dba6e18dd559463f60b9fdff5d3c5fcd49f244c5fb2c1c37745149557" => :catalina
-    sha256 "d16178dce1c0afc10bbdf80cb233c4a69f3cebcc6f3eec699381170a65b81bdd" => :mojave
+    rebuild 1
+    sha256 "3fec7275812f0646dc113da036b77ab09af80421ae5ab2d90f8a122b5b225f1e" => :big_sur
+    sha256 "1ba7031cba6c4b703e6ac2729ceb8bb23fb9ce12915888bcf395c9ebbfbb95b5" => :catalina
+    sha256 "180e59018eb294a00e41b426071ffbca0d3dc522569217064472e39aed359c0e" => :mojave
   end
 
   keg_only :versioned_formula
