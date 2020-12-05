@@ -4,6 +4,8 @@ class ManDb < Formula
   url "https://download.savannah.gnu.org/releases/man-db/man-db-2.9.3.tar.xz"
   mirror "https://download-mirror.savannah.gnu.org/releases/man-db/man-db-2.9.3.tar.xz"
   sha256 "fa5aa11ab0692daf737e76947f45669225db310b2801a5911bceb7551c5597b8"
+  license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url "https://download.savannah.gnu.org/releases/man-db/"
@@ -18,8 +20,8 @@ class ManDb < Formula
   end
 
   depends_on "pkg-config" => :build
+  depends_on "groff"
 
-  uses_from_macos "groff"
   uses_from_macos "zlib"
 
   on_linux do
