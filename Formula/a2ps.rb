@@ -6,6 +6,10 @@ class A2ps < Formula
   sha256 "f3ae8d3d4564a41b6e2a21f237d2f2b104f48108591e8b83497500182a3ab3a4"
   license "GPL-3.0-or-later"
 
+  livecheck do
+    url :stable
+  end
+
   bottle do
     rebuild 3
     sha256 "98a293e2d83134c9a1c35026f68207d9fc2ac1bde9d7d15dd29849d7d9c5b237" => :catalina
@@ -20,9 +24,6 @@ class A2ps < Formula
     # https://github.com/Homebrew/brew/issues/2005
     satisfy { HOMEBREW_PREFIX.to_s == Homebrew::DEFAULT_PREFIX }
   end
-
-  # Fails to build on Catalina. No new release since 2007
-  disable! because: :does_not_build
 
   # Software was last updated in 2007.
   # https://svn.macports.org/ticket/20867
@@ -44,6 +45,9 @@ class A2ps < Formula
   end
 
   def install
+    # Work around configure issues with Xcode 12
+    ENV.append "CFLAGS", "-Wno-implicit-function-declaration"
+
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
                           "--prefix=#{prefix}", "--sysconfdir=#{etc}",
                           "--with-lispdir=#{elisp}"
