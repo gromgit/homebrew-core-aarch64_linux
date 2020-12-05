@@ -13,9 +13,9 @@ class Eslint < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5014c61a8ef3bd593783e6650d1a348b9217b6cb9cec031dda9d0d925bcb3be5" => :big_sur
-    sha256 "38a6b74edd765ae26d7137ae6ebb6ef3c7be1a9e6eef7afba6baa26126b2a99a" => :catalina
-    sha256 "2108f454020c57fda310de6cfe45d47207d3248bc2dfba481703a835b1913ed3" => :mojave
+    sha256 "dff15aa679bba67e05b8afd8dcc91a91575537d420aa10b7d8d88fb1309b6e7b" => :big_sur
+    sha256 "f3b3d88769da39e713f7da58129120107221a2bd6d21d1e2951f443b8d269781" => :catalina
+    sha256 "468091e30bebaa6f2a392a114a45c4ee58bd4b2fbdfca6d1ee7ad4fdb11d6059" => :mojave
   end
 
   depends_on "node"
