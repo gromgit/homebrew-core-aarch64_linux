@@ -14,10 +14,9 @@ class Todoman < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "122a9365d5f0334537b4006a494cae75338fb33571c819b3b48cb06d9bc2a98f" => :big_sur
-    sha256 "f6993b44ca2ccc065f36e604a8d849ff75f0b19e0a60a02c7a62a3b593c79f85" => :catalina
-    sha256 "91437d4566b38ec2c73fef20231e6f737fa0c1c4416a4737f305934683281845" => :mojave
-    sha256 "160d8ab38ea292452d527881894be36db186494e6a86136d72cff97c7237763f" => :high_sierra
+    sha256 "67b32a6c50b1ebd68727c4cf02086fab7206300c82abd76e364b0f66d664267f" => :big_sur
+    sha256 "607fe3be782f120d990422e478cb380530d60de3890f54cb3a700d40c4ee6a54" => :catalina
+    sha256 "33524bd7330f99979230051bf8a8f6d4e173ab4dac6dc9dece6667582e1b28da" => :mojave
   end
 
   depends_on "python@3.9"
