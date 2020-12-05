@@ -38,6 +38,11 @@ class Expect < Formula
     ENV.prepend "CFLAGS",
       "-I#{MacOS.sdk_path}/System/Library/Frameworks/Tcl.framework/Versions/8.5/Headers/tcl-private"
 
+    # Temporarily workaround build issues with building 5.45.4 using Xcode 12.
+    # Upstream bug (with more complicated fix) is here:
+    #   https://core.tcl-lang.org/expect/tktview/0d5b33c00e5b4bbedb835498b0360d7115e832a0
+    ENV.append "CFLAGS", "-Wno-implicit-function-declaration"
+
     # Regenerate configure script. Remove after patch applied in newer
     # releases.
     system "autoreconf", "--force", "--install", "--verbose"
