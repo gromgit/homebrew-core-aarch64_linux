@@ -37,6 +37,9 @@ class Lha < Formula
   conflicts_with "lhasa", because: "both install a `lha` binary"
 
   def install
+    # Work around configure/build issues with Xcode 12
+    ENV.append "CFLAGS", "-Wno-implicit-function-declaration"
+
     system "autoreconf", "-is" if build.head?
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
