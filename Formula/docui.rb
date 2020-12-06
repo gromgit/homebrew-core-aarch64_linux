@@ -6,6 +6,13 @@ class Docui < Formula
   license "MIT"
   head "https://github.com/skanehira/docui.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "17950b11df021726ebb04675ffc92c096e94ab213c32b803888ab3c16e360f60" => :big_sur
+    sha256 "85812a1ae880fa35f8f03fb7632d6e1cae1288c673c02d5ef41763a998e1ce42" => :catalina
+    sha256 "da3b5097f43474a93b7fd5d9cdd27c351b4c86214041369a7e3c41690574fe45" => :mojave
+  end
+
   depends_on "go" => :build
 
   def install
