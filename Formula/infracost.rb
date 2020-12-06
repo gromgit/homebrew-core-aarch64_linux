@@ -8,9 +8,9 @@ class Infracost < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7d8aab3d04ca05510fbc9a03039e8638b8d1e8bdd8fd7b4ee8c21804f8246821" => :big_sur
-    sha256 "e8295a5c12cf579ffc8c5ce37fce86b561017d1b4a6537c8a624da42b5e20631" => :catalina
-    sha256 "5f77001255c252628c2c31f36982f19c2b518e89c75e0fc4ace23b53182d4aee" => :mojave
+    sha256 "4d50fb2de6328778be4d657415d06132b0c465b8b6249bc5f490fa1e6860d5bb" => :big_sur
+    sha256 "9d353a1d31c81486498c357c664441cbb3a2fa9c7d129819b926215ccf5448ce" => :catalina
+    sha256 "e20a2edaa279d798d97578eabd40572563c115ecfc02f415f5c6746717086722" => :mojave
   end
 
   depends_on "go" => :build
