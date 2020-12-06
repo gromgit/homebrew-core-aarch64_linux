@@ -14,10 +14,9 @@ class Pygments < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "be5cc6d5c5cac34d16d088b2ba774d6cec53c41d579f86a94e68fa235e4b7309" => :big_sur
-    sha256 "8e900db6179b52b2a216430b5b1f7c5962f421c6bea365023cfa22f4198f9aee" => :catalina
-    sha256 "0a869fbf52f375e695e13bac636e543f5696fd40372bb6a5085618976d09a617" => :mojave
-    sha256 "9f8e6c987e2d6e4f296266501489a0b8f8708588a824cdf1555277f77e6c3036" => :high_sierra
+    sha256 "a97e775ec600eac6459e812a5b56d6be6e31942eb700650749becf84f97d7f33" => :big_sur
+    sha256 "ebf72c4fbc6b7c4992ecb815a9092f52e6a862deeb6ba2e4534aa62701a40e02" => :catalina
+    sha256 "c3fa220fa15087e40f4df61f3c7c249b8bec78177d6609306a92b3c1af92ecb3" => :mojave
   end
 
   depends_on "python@3.9"
