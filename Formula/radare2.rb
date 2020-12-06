@@ -3,7 +3,7 @@ class Radare2 < Formula
   homepage "https://radare.org"
   url "https://github.com/radareorg/radare2/archive/4.5.1.tar.gz"
   sha256 "4e85b35987bd2ca5881ad9585970b970fe7374814bd383bd1cd62e961a0c228b"
-  license "LGPL-3.0"
+  license "LGPL-3.0-only"
   head "https://github.com/radareorg/radare2.git"
 
   bottle do
@@ -13,6 +13,8 @@ class Radare2 < Formula
   end
 
   def install
+    # Workaround for Xcode 12 from https://github.com/radareorg/radare2/pull/17879/files
+    inreplace "mk/darwin.mk", "$(XCODE_VERSION_MAJOR),11", "$(shell test $(XCODE_VERSION_MAJOR) -gt 10;echo $$?),0"
     system "./configure", "--prefix=#{prefix}"
     system "make"
     system "make", "install"
