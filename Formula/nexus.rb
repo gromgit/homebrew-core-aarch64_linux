@@ -12,9 +12,9 @@ class Nexus < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "de3a5e6934087a0d7a52ddfcd5bf9c2b547ee19812cff2316afaca91f638fb82" => :big_sur
-    sha256 "3eb3a774ba71339596c7a255a03e7dd88a003cf9326d51c6e6f32d99bff0bd8a" => :catalina
-    sha256 "aa2dde0621bc26d80d87a2b325b9ba37b0a9c36dcdd57b66c30a95320be19cae" => :mojave
+    sha256 "e62561a37e301d5308d28ccaa1d438803f4dc2490a65572d9267c2f35c32b0cd" => :big_sur
+    sha256 "09d35ac43dfb7c7674a2e8aaf739fd67f9c238403d958806bee68d33939446b2" => :catalina
+    sha256 "8cfd75535043381764845b6fc13c3bf0b30a38087f7639469ee84d0c25940160" => :mojave
   end
 
   depends_on "maven" => :build
