@@ -21,6 +21,7 @@ class Autoconf < Formula
     sha256 "ded69c7dac4bc8747e52dca37d6d561e55e3162649d3805572db0dc2f940a4b8" => :el_capitan
     sha256 "daf70656aa9ff8b2fb612324222aa6b5e900e2705c9f555198bcd8cd798d7dd0" => :yosemite
     sha256 "d153b3318754731ff5e91b45b2518c75880993fa9d1f312a03696e2c1de0c9d5" => :mavericks
+    sha256 "9d4972cf90465fade2c2e91fadc4aabbb7cfa56fb27b41775e7d3a141418f644" => :arm64_big_sur
   end
 
   uses_from_macos "m4"
