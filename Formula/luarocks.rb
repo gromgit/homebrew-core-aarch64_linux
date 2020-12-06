@@ -9,9 +9,10 @@ class Luarocks < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "db3a461587f6a854b66176526ce60cfed456b502f88854e5632ed0a4f89087dd" => :big_sur
-    sha256 "3bd30c08dafcabee9db8fbe701cde57f5ae11d333254394dc8d7852766ea6ac0" => :catalina
-    sha256 "75b43ab5ea3a697bbc9782f1e2c21cc6ae2c7bfdd9acfedb7b7ad0e5ed5e6e74" => :mojave
+    rebuild 1
+    sha256 "467c07a4a1d8caa1c203b018eed458b52d8422eb7462a7c8b660e5039c8ea715" => :big_sur
+    sha256 "9a63642081b7f8ea892c2f2af21bb406c3a40ad8104c1611cbdc1af2bb426350" => :catalina
+    sha256 "8d2939561e8b8f0c0162458e0460a29954836fa1536c34e5e15b7c91ba8536b7" => :mojave
   end
 
   depends_on "lua@5.1" => :test
