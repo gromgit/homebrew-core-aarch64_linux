@@ -11,9 +11,9 @@ class ClojureLsp < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "4ecead5fe9522b71166075b3eb40ff9194fd4bc5f5534eb08d5c2525a89c93c0" => :catalina
-    sha256 "7c39d1f1b3cf68f04b8dcd10024d1c7669c3d0fb540665c938c03a4faff81fc8" => :mojave
-    sha256 "713e1b16819bae5f60936e27ae604b83145c681aef453f7fe98319f0a1e96a51" => :high_sierra
+    sha256 "a085fd28c1a954aee84e0994d5766eaca8132af087e7cc16a05508f24d599100" => :big_sur
+    sha256 "4b368c432eedca9c8c2bc833d1aeedb2b2158c9b5f379e8598b300992afcb04b" => :catalina
+    sha256 "689aa444c3c9a2329bad3d09930bdaffbe19e04bc4b35d1b193186f5be988212" => :mojave
   end
 
   depends_on "leiningen" => :build
