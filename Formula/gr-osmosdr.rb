@@ -9,9 +9,9 @@ class GrOsmosdr < Formula
   revision 3
 
   bottle do
-    sha256 "1589cb2357dd7e8fa1608de624beab565f2e45898e70c1d2e0cd72c6cb46710d" => :big_sur
-    sha256 "0bda1bf94288809bcb2c7168bfd787bab8cae3c6a284b5c7d92baf0d07bd4147" => :catalina
-    sha256 "b0b2c889159663f0c99da4a7037278e0db49133062988e5103e31396d264ab17" => :mojave
+    sha256 "615d2cc006b9128bedb04beebfcf597fd538a6c0d995aa559ea8782835d4e055" => :big_sur
+    sha256 "0c00cae94bb4716f1eabce5c0cda827ef3cecf86cc5696c52b4d9a75a4a08819" => :catalina
+    sha256 "9907e3f120999006e63e6309597ed3ded713b14633689fc42e94875e03417d84" => :mojave
   end
 
   depends_on "cmake" => :build
