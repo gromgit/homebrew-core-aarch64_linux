@@ -12,9 +12,9 @@ class Gping < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "a89239b8418fbed36c48615ef509ef0f3cd11e600d68c623ff6094f95694e4ac" => :big_sur
-    sha256 "12ad9db825834264cf54abe9f94a5c9da4bec17f9ff46fb4d1cfe7546027fdb1" => :catalina
-    sha256 "9a2792ff20f09bbdbd0505498eb1d331bd333757e72c0374f7ac62556efbcc85" => :mojave
+    sha256 "ad76726fb0897f1960e045b31d6a080a1c699a5ebe187f1b5f3fabb1575afe90" => :big_sur
+    sha256 "c8162661b26ec98036c7abd06916867fb715f1c6b0881fe41ce7bbd292773f07" => :catalina
+    sha256 "9c0a56c20f3c378227ae9288ff6b88d0eb2f3f1cbd33dcb493226dab1b894ad8" => :mojave
   end
 
   depends_on "rust" => :build
