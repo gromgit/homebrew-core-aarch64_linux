@@ -1,9 +1,10 @@
 class Ipv6toolkit < Formula
   desc "Security assessment and troubleshooting tool for IPv6"
-  homepage "https://www.si6networks.com/tools/ipv6toolkit/"
-  url "https://www.si6networks.com/tools/ipv6toolkit/ipv6toolkit-v2.0.tar.gz"
+  homepage "https://www.si6networks.com/research/tools/ipv6toolkit/"
+  url "http://pages.cs.wisc.edu/~plonka/ipv6toolkit/ipv6toolkit-v2.0.tar.gz"
   sha256 "16f13d3e7d17940ff53f028ef0090e4aa3a193a224c97728b07ea6e26a19e987"
-  license "GPL-3.0"
+  license "GPL-3.0-or-later"
+  head "https://github.com/fgont/ipv6toolkit.git"
 
   bottle do
     cellar :any_skip_relocation
