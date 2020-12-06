@@ -1,6 +1,6 @@
 class Slrn < Formula
   desc "Powerful console-based newsreader"
-  homepage "https://slrn.sourceforge.io/"
+  homepage "https://slrn.info/"
   url "https://jedsoft.org/releases/slrn/slrn-1.0.3a.tar.bz2"
   sha256 "3ba8a4d549201640f2b82d53fb1bec1250f908052a7983f0061c983c634c2dac"
   license "GPL-2.0-or-later"
@@ -26,6 +26,10 @@ class Slrn < Formula
     bin.mkpath
     man1.mkpath
     mkdir_p "#{var}/spool/news/slrnpull"
+
+    # Work around configure issues with Xcode 12.  Hopefully this will not be
+    # needed after next slrn release.
+    ENV.append "CFLAGS", "-Wno-implicit-function-declaration"
 
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
