@@ -51,9 +51,13 @@ class Nvi < Formula
 
   def install
     cd "dist" do
+      # Xcode 12 needs the "-Wno-implicit-function-declaration" to compile successfully
+      # The usual trick of setting $CFLAGS in the environment doesn't work for this
+      # configure file though, but specifying an explicit CC setting does
       system "./configure", "--prefix=#{prefix}",
                             "--program-prefix=n",
-                            "--disable-dependency-tracking"
+                            "--disable-dependency-tracking",
+                            "CC=" + ENV.cc + " -Wno-implicit-function-declaration"
       system "make"
       ENV.deparallelize
       system "make", "install"
