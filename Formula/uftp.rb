@@ -3,7 +3,7 @@ class Uftp < Formula
   homepage "https://uftp-multicast.sourceforge.io/"
   url "https://downloads.sourceforge.net/project/uftp-multicast/source-tar/uftp-5.0.tar.gz"
   sha256 "562f71ea5a24b615eb491f5744bad01e9c2e58244c1d6252d5ae98d320d308e0"
-  license "GPL-3.0"
+  license "GPL-3.0-or-later"
 
   livecheck do
     url :stable
@@ -41,7 +41,7 @@ class Uftp < Formula
         <string>#{plist_name}</string>
         <key>ProgramArguments</key>
         <array>
-          <string>#{opt_sbin}/uftpd</string>
+          <string>#{opt_bin}/uftpd</string>
           <string>-d</string>
         </array>
         <key>RunAtLoad</key>
