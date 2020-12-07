@@ -13,8 +13,8 @@ class Gmp < Formula
 
   bottle do
     cellar :any
-    sha256 "3626da4caca6819effc7a1b35d4a43299cc7574f603a4464b82d9253b6f11faa" => :arm64_big_sur
     sha256 "6a44705536f25c4b9f8547d44d129ae3b3657755039966ad2b86b821e187c32c" => :big_sur
+    sha256 "3626da4caca6819effc7a1b35d4a43299cc7574f603a4464b82d9253b6f11faa" => :arm64_big_sur
     sha256 "35e9f82d80708ae8dea2d6b0646dcd86d692321b96effaa76b7fad4d6cffa5be" => :catalina
     sha256 "00fb998dc2abbd09ee9f2ad733ae1adc185924fb01be8814e69a57ef750b1a32" => :mojave
     sha256 "54191ce7fa888df64b9c52870531ac0ce2e8cbd40a7c4cdec74cb2c4a421af97" => :high_sierra
