@@ -30,6 +30,9 @@ class Hspell < Formula
   def install
     ENV.deparallelize
 
+    # The build scripts rely on "." being in @INC which was disabled by default in perl 5.26
+    ENV["PERL_USE_UNSAFE_INC"] = "1"
+
     # autoconf needs to pick up on the patched configure.in and create a new ./configure
     # script
     system "autoconf"
