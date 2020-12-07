@@ -9,13 +9,10 @@ class Hfsutils < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "3f357724a46995df877e649f9ade4afb97b78e4e8cec503666a8423343d1589b" => :catalina
-    sha256 "980dd894478cfc6b12f76b56dfd12996218af2ea7aa4a14503e11865364b2cab" => :mojave
-    sha256 "1a0fd0b0ac3529aac6c79b1f3b15fbeefa2cf05838de439929b8c5c61d49c077" => :high_sierra
-    sha256 "4b9c18851c1fd5ce7049946cb583d4f8336c29bd48c76690df707c768a2879fd" => :sierra
-    sha256 "61847361f9dac3c719ae8fb464fb9e45d7b64054c7d3c2ff23b37a698546f63d" => :el_capitan
-    sha256 "2d0997b77b2bc7b3a0454c552c6ebd3b24c6efc01bc9e4814781f7971c8802f9" => :yosemite
-    sha256 "06dddcb4d540a24b63b389213724b828f99bfc7c32272be1a9e4ca4472409c93" => :mavericks
+    rebuild 1
+    sha256 "133b4b04a161486e76ca06ed4e78086a83ce7ed238b10b879f78a93d66d9dc68" => :big_sur
+    sha256 "5a0e074c5fdcfb43508e049941dd5d7384a7f4843c8d0fe3df325880a45823fd" => :catalina
+    sha256 "f32eb0e176bc5f5939a12599f0dbc808631a7680e21b5f820cc096e00fcec46e" => :mojave
   end
 
   def install
