@@ -24,11 +24,9 @@ class W3m < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 "274f48d738d351b3c6a07ada24b866a485c49d400f36108d904a6d2a8835a660" => :catalina
-    sha256 "c2a4f7208e98f575eadaff6af3dc9a93305008b93d2f069c53d687ba61b85d64" => :mojave
-    sha256 "bc46bb9b70d7149058d2c757aa0b8ea68c7c6836faee26da0b697d81cca0927d" => :high_sierra
-    sha256 "809a34cb2c14b98827cfe9f18008b0ebc545e359c5f8c1279e71948ac336bdd1" => :sierra
+    sha256 "9865fb7a43e8732bb7d309502c3de3410d05aeb093ba8916462b5aab36563a5a" => :big_sur
+    sha256 "5b752461983a608c684bae9efa13a0a5e37a456def0b368c8b0706b35fd480a3" => :catalina
+    sha256 "a77f9a7ceee4dbb2a7288ecfad9c903c489ce4a60ff10056cd735433986df901" => :mojave
   end
 
   depends_on "pkg-config" => :build
