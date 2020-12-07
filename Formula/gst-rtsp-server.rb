@@ -1,8 +1,8 @@
 class GstRtspServer < Formula
   desc "RTSP server library based on GStreamer"
   homepage "https://gstreamer.freedesktop.org/modules/gst-rtsp-server.html"
-  url "https://gstreamer.freedesktop.org/src/gst-rtsp-server/gst-rtsp-server-1.18.1.tar.xz"
-  sha256 "10a82865c3d199e66731017ca4b120bad071df9889e60cfe4dd6c49d953ef754"
+  url "https://gstreamer.freedesktop.org/src/gst-rtsp-server/gst-rtsp-server-1.18.2.tar.xz"
+  sha256 "973922aba65a1672a131527dee965fb09bab4bb996c351f0ee7f42f0d5b954e2"
   license "LGPL-2.0-or-later"
 
   livecheck do
