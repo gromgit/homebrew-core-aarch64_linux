@@ -4,7 +4,7 @@ class Httptunnel < Formula
   url "https://ftp.gnu.org/gnu/httptunnel/httptunnel-3.3.tar.gz"
   mirror "https://ftpmirror.gnu.org/httptunnel/httptunnel-3.3.tar.gz"
   sha256 "142f82b204876c2aa90f19193c7ff78d90bb4c2cba99dfd4ef625864aed1c556"
-  license "GPL-2.0"
+  license "GPL-2.0-only"
 
   livecheck do
     url :stable
@@ -21,7 +21,12 @@ class Httptunnel < Formula
     sha256 "dcec84a118e1e7246d29ccc12397b7aa0134e1a2a952aa83af7b4ba6745318ac" => :mavericks
   end
 
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+
   def install
+    # The ./configure file inside the tarball is too old to work with Xcode 12, regenerate:
+    system "autoreconf", "--verbose", "--install", "--force"
     system "./configure", "--prefix=#{prefix}", "--mandir=#{man}"
     system "make", "install"
   end
