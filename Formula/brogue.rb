@@ -2,8 +2,10 @@ class Brogue < Formula
   desc "Roguelike game"
   homepage "https://sites.google.com/site/broguegame/"
   # The OS X version doesn't contain a Makefile, so we
-  # need to download the Linux version
-  url "https://sites.google.com/site/broguegame/brogue-1.7.5-linux-amd64.tbz2"
+  # need to download the Linux version.  This is the
+  # file "brogue-1.7.5-linux-amd64.tbz2" inside their
+  # official google drive they distribute source from:
+  url "https://drive.google.com/u/0/uc?id=1ED_2nPubP-P0e_PHKYVzZF42M1Y9pUb4&export=download"
   version "1.7.5"
   sha256 "a74ff18139564c597d047cfb167f74ab1963dd8608b6fb2e034e7635d6170444"
 
