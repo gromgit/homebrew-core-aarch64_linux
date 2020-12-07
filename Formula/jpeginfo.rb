@@ -9,12 +9,10 @@ class Jpeginfo < Formula
 
   bottle do
     cellar :any
-    sha256 "db2e64acdf22c4013155ed4947696891967973819f60aa735911d079bc7bb93d" => :catalina
-    sha256 "ea481ba295f3e6a7dcaa4b220dc63ecbada6b652b5f4f83ad01d49dbbde96aaf" => :mojave
-    sha256 "afafe6f163b0e058975470f6281907d125408e0c1c678ade5ef141024b6d20ed" => :high_sierra
-    sha256 "0ec9e97f1ce99e36c9e5d4de8be48ca6b5bfc2d807ee590115426a7c57e26d00" => :sierra
-    sha256 "ca1548c5ed9e3f18cf2e013f49d22a00276c9ef0b3d829fd256ae48178ed9974" => :el_capitan
-    sha256 "d28d3fcbf355139760d15d1869f57d180940e8114b150446214b18270275dcf8" => :yosemite
+    rebuild 1
+    sha256 "27bb3588438853fb065ef36885dfea66a2e066dddc7025ea8fd6295682ff8b83" => :big_sur
+    sha256 "0f0cc493a38a1a701a51f6aa2cada9b8f248c228a72ce30c451d5cab2906e8c5" => :catalina
+    sha256 "71cbeda00d00f513847a88930a6851b00ab9811fb6ed37d0617eaee5e86decf3" => :mojave
   end
 
   depends_on "autoconf" => :build
