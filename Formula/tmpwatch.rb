@@ -7,10 +7,10 @@ class Tmpwatch < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "d2e77af7339bd09c9b7352a1646c79e15db6b43c27537b4af59efbc51e23f114" => :catalina
-    sha256 "4f7b1e540daebe79e1ad64b2e4e4b7214074c05150dcd9de7a5ffe9c12e6b9bb" => :mojave
-    sha256 "24a734b4cf32ce5720e1c089060fa66dcc2d9dde437804a4dc147f81d9cd8512" => :high_sierra
+    rebuild 2
+    sha256 "990ba2839f3c2ddf69e280e976463969d3274410f1a84a90e00a6a9b0f5cef35" => :big_sur
+    sha256 "acd49e52b73f82c2cab4a77f46e99e0f69f856dc43cbf03f775ab58b44e78d6b" => :catalina
+    sha256 "800714b1d0f11a8fc52b070046aa3a5aaf99883f9320d9a233ffabf801ae2996" => :mojave
   end
 
   def install
