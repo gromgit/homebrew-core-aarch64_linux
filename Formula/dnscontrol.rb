@@ -12,10 +12,9 @@ class Dnscontrol < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5a7bd8f23458cf4edaddabc756eaafa9f3b28e519a28d8adbb6fb1658812873c" => :big_sur
-    sha256 "59fa2b6cce2d8e0ef1e129f6e2864a024b70ae97c13f439cb02a0116e1458081" => :catalina
-    sha256 "df9dc00d6618943aaa24f1658c28651209c7e257df4eca91471fbf89b9a918d9" => :mojave
-    sha256 "7dbafdd2344519f503f3e9cbaac7a208b6c45db02ba5a2b6f0cb64b3d392a53c" => :high_sierra
+    sha256 "c85dbea7452b24e36c4932a3845ddc69d08a2eaa05f7dc5ddad97558d8c70c48" => :big_sur
+    sha256 "bb7d836b564b044cb52dfc8251ef55eb103ae5233465ff6c7336a42b057b73cd" => :catalina
+    sha256 "f0f938120734f158cccbdb635e017dc3226acb911ca417973abd7bc9e272b505" => :mojave
   end
 
   depends_on "go" => :build
