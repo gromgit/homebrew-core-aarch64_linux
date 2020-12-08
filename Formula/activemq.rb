@@ -15,7 +15,9 @@ class Activemq < Formula
   depends_on "openjdk"
 
   def install
-    rm_rf Dir["bin/linux-x86-*"]
+    on_macos do
+      rm_rf Dir["bin/linux-x86-*"]
+    end
     libexec.install Dir["*"]
     (bin/"activemq").write_env_script libexec/"bin/activemq", JAVA_HOME: Formula["openjdk"].opt_prefix
   end
