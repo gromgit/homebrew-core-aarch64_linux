@@ -8,10 +8,9 @@ class Hpack < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "26956bc93fa2a892ca6c050fec6fc9546f1a0b74e0cb8cc80feeb1516407650d" => :big_sur
-    sha256 "e230f0684178727141cfb242d235de3f062a056816c06c1e882ad3c2caf34c35" => :catalina
-    sha256 "cc6b80c259ea44fdb961fc758c9472264b48ce481f5c9d436c325493d7d13c0a" => :mojave
-    sha256 "197fe924cebba40e09bf85adb60beeb889e576cc8600b1e92361f20a5e9c0a04" => :high_sierra
+    sha256 "466512c7e107af8fb86a9c9f99d4d7e503a34d619b2a52638f60664bf52fe1eb" => :big_sur
+    sha256 "042c0f105b04129a0963bc271af9a834d4ca51c30a228db9977ed89449c36435" => :catalina
+    sha256 "a66723dac94a75ca6c70edcfba4446bedad2bbcd66b688bf68e6a3425de75abe" => :mojave
   end
 
   depends_on "cabal-install" => :build
