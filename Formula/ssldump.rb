@@ -19,6 +19,8 @@ class Ssldump < Formula
     sha256 "096ee72c50d64cddefb9d90f2b9c904322eaf36eab4c76bb914a60387b75baf9" => :high_sierra
   end
 
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
   depends_on "libpcap"
   depends_on "openssl@1.1"
 
@@ -31,15 +33,25 @@ class Ssldump < Formula
     ENV["LIBS"] = "-lssl -lcrypto"
 
     # .dylib, not .a
-    inreplace "configure", "if test -f $dir/libpcap.a; then",
-                           "if test -f $dir/#{shared_library("libpcap")}; then"
+    inreplace "configure.in", "if test -f $dir/libpcap.a; then",
+                              "if test -f $dir/#{shared_library("libpcap")}; then"
+
+    # The configure file that ships in the 0.9b3 tarball is too old to work
+    # with Xcode 12
+    system "autoreconf", "--verbose", "--install", "--force"
+
+    # Normally we'd get these files installed as part of autoreconf.  However,
+    # this project doesn't use Makefile.am so they're not brought in.  The copies
+    # in the 0.9b3 tarball are too old to detect MacOS
+    %w[config.guess config.sub].each do |fn|
+      cp "#{Formula["automake"].opt_prefix}/share/automake-#{Formula["automake"].version.major_minor}/#{fn}", fn
+    end
 
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
                           "--mandir=#{man}",
-                          "--with-pcap=#{Formula["libpcap"].opt_prefix}",
-                          "osx"
+                          "--with-pcap=#{Formula["libpcap"].opt_prefix}"
     system "make"
     # force install as make got confused by install target and INSTALL file.
     system "make", "install", "-B"
