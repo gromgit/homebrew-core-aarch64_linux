@@ -3,7 +3,7 @@ class Ncrack < Formula
   homepage "https://nmap.org/ncrack/"
   url "https://github.com/nmap/ncrack/archive/0.7.tar.gz"
   sha256 "f3f971cd677c4a0c0668cb369002c581d305050b3b0411e18dd3cb9cc270d14a"
-  license "GPL-2.0"
+  license "GPL-2.0-only"
   head "https://github.com/nmap/ncrack.git"
 
   bottle do
@@ -16,8 +16,12 @@ class Ncrack < Formula
   depends_on "openssl@1.1"
 
   def install
+    # Work around configure issues with Xcode 12 (at least in the opensshlib component)
+    ENV.append "CFLAGS", "-Wno-implicit-function-declaration"
+
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
+                          "--with-openssl=#{Formula["openssl@1.1"].opt_prefix}",
                           "--prefix=#{prefix}"
     system "make"
     system "make", "install"
