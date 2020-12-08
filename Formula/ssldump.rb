@@ -14,9 +14,10 @@ class Ssldump < Formula
 
   bottle do
     cellar :any
-    sha256 "4227a45957205b7e183b9f66f4ad2cd57abd7eda44db220d0feadf4de03b5778" => :catalina
-    sha256 "940b872d8dd649cc7ef309bb169a02a48425b7059c44c012831fafd5cbe8b61e" => :mojave
-    sha256 "096ee72c50d64cddefb9d90f2b9c904322eaf36eab4c76bb914a60387b75baf9" => :high_sierra
+    rebuild 1
+    sha256 "27b04d713522d2937232b457ee32a2293cc9c633acee5efc147ae3fa84741da2" => :big_sur
+    sha256 "4f05ecf010a75b92ce19c9889759484f7f4e337e2659516be3c87fe02d99c9ed" => :catalina
+    sha256 "3c9186ee97ff509fd83a0e81acc06e621d50701bcf94e15ce61e4edbbb1b9796" => :mojave
   end
 
   depends_on "autoconf" => :build
