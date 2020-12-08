@@ -15,9 +15,10 @@ class Bash < Formula
   end
 
   bottle do
-    sha256 "0bac9da33c729ceb28f40e820d9649d2e3f3f569086077bd796f785a942660ab" => :big_sur
-    sha256 "ecbed8f0ac49aadda72956da6cb0f1793c00cc1ee8249c3a43b25d9cbc55f07e" => :catalina
-    sha256 "61a49bd39ce60240b3ca2fb7b4a312faf81b6346b9fa4724058e80a47ff6747e" => :mojave
+    rebuild 1
+    sha256 "5bbdf900514e74d1f951c72df0ef6dc1765996f0c30ab1ef29f252e8761ec7b7" => :big_sur
+    sha256 "5b2eb18068b921fc3539eeba06c6846634f4a8f811dce022670a0ac1fbbf136d" => :catalina
+    sha256 "ce8a6ffd1e5df2014d7d7290a08f0682d5124c43cee4ae2ec2ac4d49155978ff" => :mojave
   end
 
   def install
