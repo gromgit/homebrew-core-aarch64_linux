@@ -7,13 +7,10 @@ class Dupseek < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "418a32b038ecf5aa2b00598b865096a1d62be9d160d531eff3eff50ac55f9bdd" => :catalina
-    sha256 "487097be0d37b3fb4d15062dcb6a6b92dca302aa95e5a458a9e737f0e3c7efaa" => :mojave
-    sha256 "fec3e17a1d9f120895a8b70df43cc366347656f2971a461e9d7251a9ea0c0927" => :high_sierra
-    sha256 "c1782462d69bba5735a53dc65adb20beb42577fdb543debe9a7d19446fa16171" => :sierra
-    sha256 "576106465507f9281685d12dba4409e1b409f090fc6ac1397c92b5190a5416d4" => :el_capitan
-    sha256 "ec38b1caa009ca1c33efe85eb1b00cd7e37f67f3cf43b547f889e39f5be4d28a" => :yosemite
-    sha256 "ff34b6c5ac5fcf84bf532008fb5fd2b2cfd9db7736854efb09e451e54b370c37" => :mavericks
+    rebuild 1
+    sha256 "5dd4ba8f61d6e17de45eed186601e3d90b84515a6971520cf38be3d94888ee4f" => :big_sur
+    sha256 "aca5de3c9426773cb4ae19e791bb8662fd55b5f56075c2120d850d5228176a19" => :catalina
+    sha256 "e06fc46656cf29f29a33a198a011a022753e616b03e36dfee9cf1ade5c4ab227" => :mojave
   end
 
   def install
