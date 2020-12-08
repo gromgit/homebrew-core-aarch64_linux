@@ -6,6 +6,13 @@ class Kubevela < Formula
     revision: "79c2209d19ddc62bb6682c91b3a485b4f939ab5f"
   license "Apache-2.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "496c4a442d98b68f7f2d12ca5888a7585d0074ad6a0b794a9db190f96fede506" => :big_sur
+    sha256 "e6445adb63a542e5684ec4c7396842a99544d87a507de8cb8762778c87abde3b" => :catalina
+    sha256 "6c70afb1e7f05898cfbf721ebd7f6f37239e9d00fc850d2e538a8ee3ddc4a644" => :mojave
+  end
+
   depends_on "go" => :build
 
   def install
