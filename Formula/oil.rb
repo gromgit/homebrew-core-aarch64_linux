@@ -12,10 +12,9 @@ class Oil < Formula
   end
 
   bottle do
-    sha256 "42068d72ea52048dc6bde38406c5f95199533739001d969a526e30b32d15c264" => :big_sur
-    sha256 "b184f8496f001e47b9dbf2822cf69476c74af91042d1fffe855fd347ca24fb80" => :catalina
-    sha256 "80bc6f37ee51eec363ac13c69c3910aef46d594a9d16a1de1b14645c3437ef10" => :mojave
-    sha256 "43d4aa89e3a88da11799780d154bb629bb051b52c3e251e2f47faf623f02e28a" => :high_sierra
+    sha256 "5e8473c5b00b281b1e0d4ad78def14dabc7d2e6c8d3746e3be71d39f1bbbbf97" => :big_sur
+    sha256 "3c410f150716b4facfcdd1ad7e5e0bcbed71ca50f8171cacdf65cf1ad82ef2aa" => :catalina
+    sha256 "107d9f64b0b71b8764b268bf6046587718aa6e90c07866fd5178065c15695383" => :mojave
   end
 
   def install
