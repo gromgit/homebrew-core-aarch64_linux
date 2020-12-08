@@ -7,9 +7,9 @@ class Instead < Formula
   revision 2
 
   bottle do
-    sha256 "71af1e349e6da503d572dbe2b0cd969a33020fa9101bbe9692c56c85e02e676c" => :big_sur
-    sha256 "a2f65af64781e9b45d363bdf589ab614286cf5342d585699527f63af6cf5d008" => :catalina
-    sha256 "d3fb0b0cb48c58ee904d783df541cd71eac200a58ba9a4e9e7a8bffe7c9800b1" => :mojave
+    sha256 "bd0463eca5582cfb5e6a5db1befaa55a0fa7be8580296fc32b690873fb134e1e" => :big_sur
+    sha256 "cd2c8eaae8f35bcd76dabe29ffbba977913c31b23df407dfcc1959b9946dacc2" => :catalina
+    sha256 "8052e44079c28c8d997e005be8d43844803e8be1d340016608cf28833fc6edb2" => :mojave
   end
 
   depends_on "cmake" => :build
