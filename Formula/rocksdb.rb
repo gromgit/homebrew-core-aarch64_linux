@@ -72,8 +72,14 @@ class Rocksdb < Formula
       }
     EOS
 
+    extra_args = []
+    on_macos do
+      extra_args << "-stdlib=libc++"
+      extra_args << "-lstdc++"
+    end
     system ENV.cxx, "test.cpp", "-o", "db_test", "-v",
-                                "-std=c++11", "-stdlib=libc++", "-lstdc++",
+                                "-std=c++11",
+                                *extra_args,
                                 "-lz", "-lbz2",
                                 "-L#{lib}", "-lrocksdb_lite",
                                 "-DROCKSDB_LITE=1",
