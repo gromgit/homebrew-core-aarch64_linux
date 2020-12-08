@@ -3,6 +3,7 @@ class Dupseek < Formula
   homepage "http://www.beautylabs.net/software/dupseek.html"
   url "http://www.beautylabs.net/software/dupseek-1.3.tgz"
   sha256 "c046118160e4757c2f8377af17df2202d6b9f2001416bfaeb9cd29a19f075d93"
+  license "GPL-2.0-only"
 
   bottle do
     cellar :any_skip_relocation
@@ -15,8 +16,6 @@ class Dupseek < Formula
     sha256 "ff34b6c5ac5fcf84bf532008fb5fd2b2cfd9db7736854efb09e451e54b370c37" => :mavericks
   end
 
-  disable! date: "2020-12-08", because: :unmaintained
-
   def install
     bin.install "dupseek"
     doc.install %w[changelog.txt doc.txt copyright credits.txt]
@@ -27,7 +26,7 @@ class Dupseek < Formula
     touch "folder/file1"
     assert_equal "", shell_output("#{bin}/dupseek -b report -f de folder").chomp
     touch "folder/file2"
-    assert_equal "folder\\/file2", shell_output("#{bin}/dupseek -b report -f de folder").chomp
-    assert_equal "folder\\/file1\nfolder\\/file2", shell_output("#{bin}/dupseek -b report -f e folder").chomp
+    assert_match %r{^folder\\/file[12]$}, shell_output("#{bin}/dupseek -b report -f de folder").chomp
+    assert_equal "folder\\/file1\nfolder\\/file2", shell_output("#{bin}/dupseek -b report -f e folder | sort").chomp
   end
 end
