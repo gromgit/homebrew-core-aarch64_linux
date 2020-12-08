@@ -3,9 +3,9 @@ class AzureCli < Formula
 
   desc "Microsoft Azure CLI 2.0"
   homepage "https://docs.microsoft.com/cli/azure/overview"
-  url "https://codeload.github.com/Azure/azure-cli/legacy.tar.gz/f0d68450dd6db7d4e6b603c2f0a8b840a52dbcb8"
-  version "2.15.1"
-  sha256 "3aeab2fb854b9c93290f73064607dc823f79380455d347541494f7e73fe82e98"
+  url "https://codeload.github.com/Azure/azure-cli/legacy.tar.gz/adb59a62ecbbea5e7c7bddd5e062ef7806825d02"
+  version "2.16.0"
+  sha256 "dc8318bef61fb1054d9a64f6243b203438d8c66114c82879339aae568460ff58"
   license "MIT"
   head "https://github.com/Azure/azure-cli.git"
 
@@ -152,8 +152,8 @@ class AzureCli < Formula
   end
 
   resource "azure-mgmt-cdn" do
-    url "https://files.pythonhosted.org/packages/a5/8a/98129884f982c44c4b6595506f891dc762786528b67b31c3c978743234c3/azure-mgmt-cdn-5.0.0.zip"
-    sha256 "95b3d7296a11a5ae85e80279f8ef6d87b92e4e9789c4e63fb2a4f31ca9c12b78"
+    url "https://files.pythonhosted.org/packages/79/d6/310df0a02621feeda16173748befc85da4bc3656e30c55830f0bf2fecd35/azure-mgmt-cdn-5.2.0.zip"
+    sha256 "3e470ba07918a4f97dadb6f50c6f64068da423b735fad38d31d9535c56f06881"
   end
 
   resource "azure-mgmt-cognitiveservices" do
@@ -317,13 +317,13 @@ class AzureCli < Formula
   end
 
   resource "azure-mgmt-netapp" do
-    url "https://files.pythonhosted.org/packages/80/50/4265bf22bfea068239346b63a3ca92b4e35c38f835514f53a7b6b249007c/azure-mgmt-netapp-0.13.0.zip"
-    sha256 "e86034d073144bd5dbafe17e20fef3f48b5bf98a31b27cc0de462dc8f98303bb"
+    url "https://files.pythonhosted.org/packages/1c/03/e8620fd9a48fde3b6f3db552912ba903c14c319bd220e70aac9b12ec3f7d/azure-mgmt-netapp-0.14.0.zip"
+    sha256 "6fd915e68d314bec8b56c6ece194005d2c4fc97478fc1f797639d4a6913c1539"
   end
 
   resource "azure-mgmt-network" do
-    url "https://files.pythonhosted.org/packages/eb/f0/218ff521e973369c95c428445800bbd2aa373aa7b4e36c8c7edeb1e2fe4b/azure-mgmt-network-12.0.0.zip"
-    sha256 "74502996a4d6c7b3b72e3f57c2ff297263cc02f18fec33363582346a29390094"
+    url "https://files.pythonhosted.org/packages/f6/76/3c987c51b5f683e0af10fe7e5c3d9ab2820ee0939f78772df10b2f834ed2/azure-mgmt-network-13.0.0.zip"
+    sha256 "084b4253ef61e26a72cad3eb00e7adbfd0e54cf738498392e70d73a21d294c09"
   end
 
   resource "azure-mgmt-nspkg" do
@@ -377,8 +377,8 @@ class AzureCli < Formula
   end
 
   resource "azure-mgmt-resource" do
-    url "https://files.pythonhosted.org/packages/1b/dd/cdc7fd9bf77322c6440dc078ef89b17f613d1a6ecdce713696528bc35556/azure-mgmt-resource-10.2.0.zip"
-    sha256 "ddfe4c0c55f0e3fd1f66dd82c1d4a3d872ce124639b9a77fcd172daf464438a5"
+    url "https://files.pythonhosted.org/packages/62/9d/3d6b0c9cfdb0fbb838788921393c68eeb7a4fd8738402dfbfc5a8db2636b/azure-mgmt-resource-10.3.0.zip"
+    sha256 "1fca79db668ed98c1211d886babcf23de4e768d9403dffeea06e46c7692e69ad"
   end
 
   resource "azure-mgmt-search" do
@@ -422,8 +422,8 @@ class AzureCli < Formula
   end
 
   resource "azure-mgmt-synapse" do
-    url "https://files.pythonhosted.org/packages/21/16/516509bd2283fa362f65cdc203fd78f8bd96efa2742804f5dd8af115a7d6/azure-mgmt-synapse-0.3.0.zip"
-    sha256 "7e0bbf9abfa4e8397e04005895aa5522376f58e79a46ba2c0fb427a78a164169"
+    url "https://files.pythonhosted.org/packages/55/cb/ccd7fa24e714a5dbaef963bebacf65e2f46f38167041641f971fe170ffd5/azure-mgmt-synapse-0.5.0.zip"
+    sha256 "4eb76230c38525b71eb1addefebd265bc3d9b68ba7ff60ce5356d39f68ed2837"
   end
 
   resource "azure-mgmt-trafficmanager" do
