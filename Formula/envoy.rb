@@ -8,9 +8,9 @@ class Envoy < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "53c47a2d719a6382a6ba8810b451e350f9c5ad3ffed1b6e5a0732eab8808cf5b" => :big_sur
-    sha256 "fe4cf7943fd603ceb507a55c085c55124c10ea0b8bcd3c4c6ceac145b47cadb4" => :catalina
-    sha256 "9872a1ec13f0aee427ac9715a6bc5ccf9d4f505c3aca6e94f18ae28f9f673a1a" => :mojave
+    sha256 "b3ec63685e5ebe11d51641db8a0d4ad0b02ff8687dd1c19d0ea578dbc405dcfc" => :big_sur
+    sha256 "15fcd5993171d022e2813c3c7cd7f25a48c0627ef33dd572aeee0e3621966c4a" => :catalina
+    sha256 "976e3adb1a9942e058c0ffb2fd6e194ce1590acb7ba4480246b54841126f218d" => :mojave
   end
 
   depends_on "automake" => :build
