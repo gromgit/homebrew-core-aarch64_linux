@@ -7,9 +7,9 @@ class Vis < Formula
   head "https://github.com/martanne/vis.git"
 
   bottle do
-    sha256 "67949704251f825447617f673f7e0c0844d446cb335129c9de2d5a8a6c9aa79a" => :big_sur
-    sha256 "3ad4eb021d3b4aef3119c72b47e3597dc33984b1a0ca0b72df4375f22a6b7804" => :catalina
-    sha256 "06a6d71ac80299ce9dfa8a6bc7c69039b6fcb838e8842ff955cd425a089c2c18" => :mojave
+    sha256 "4aeb0308a6d979940de003d4c2013c5c5b85eecf600b5f44351f5dae5bdfa99d" => :big_sur
+    sha256 "801a96b4aa47cbe0196af84017177d9e3bde18561a75bcf3e7bee970c491973a" => :catalina
+    sha256 "4abbde51b5cf5b4451678d2d4a6d8c1279c64cac44970b3715416beffb726b0f" => :mojave
   end
 
   depends_on "luarocks" => :build
