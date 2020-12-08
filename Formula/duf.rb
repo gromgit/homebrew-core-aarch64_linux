@@ -6,6 +6,13 @@ class Duf < Formula
   license "MIT"
   head "https://github.com/muesli/duf.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "d6f7af02fd6422feeb24fdd9babb145c3f98323e064c5f46dd494d1edf706e38" => :big_sur
+    sha256 "6b0501d446ed33d86614bf447b4a653aec11bc002dfb1fc5f50e9efb6b83b831" => :catalina
+    sha256 "3e7b9439d31b8f2486b7812dd741b62c6ff3eed2c691b4c0e87d9a2276fa1b49" => :mojave
+  end
+
   depends_on "go" => :build
 
   def install
