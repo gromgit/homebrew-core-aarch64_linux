@@ -1,8 +1,8 @@
 class Minizip2 < Formula
   desc "Zip file manipulation library with minizip 1.x compatibility layer"
   homepage "https://github.com/nmoinvaz/minizip"
-  url "https://github.com/nmoinvaz/minizip/archive/2.10.1.tar.gz"
-  sha256 "34f9cf28ee8d933835d476f50dcbb9e3fed56b48bfbcda1a561ce0d3affea663"
+  url "https://github.com/nmoinvaz/minizip/archive/2.10.4.tar.gz"
+  sha256 "6ef3d2e0c15352fe87a4a658b2e8f665fb0c21ddfb57a2e0a515658389d2e850"
   license "Zlib"
 
   bottle do
@@ -14,6 +14,8 @@ class Minizip2 < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "pkg-config" => :build
+  depends_on "xz"
   depends_on "zstd"
 
   uses_from_macos "bzip2"
@@ -44,7 +46,7 @@ class Minizip2 < Formula
     EOS
     system ENV.cc, "test.c", "-I#{include}", "-L#{lib}",
                    "-lminizip", "-lz", "-lbz2", "-liconv",
-                   "-L#{Formula["zstd"].opt_lib}", "-lzstd",
+                   "-L#{Formula["zstd"].opt_lib}", "-lzstd", "-llzma",
                    "-framework", "CoreFoundation", "-framework", "Security", "-o", "test"
     system "./test"
   end
