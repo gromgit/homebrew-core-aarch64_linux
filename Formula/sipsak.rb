@@ -7,11 +7,9 @@ class Sipsak < Formula
 
   bottle do
     cellar :any
-    sha256 "c5d5192b5f6aae341d6b6124edda2962b7d1b70822c312b5684351a89fffdc84" => :big_sur
-    sha256 "84d9694858c95f7ce07829e602be3d9727b00602ea69bf8e191f79f399f53597" => :catalina
-    sha256 "5da0bb6fc866723e423714b275cbc6c64ac1e57f171cfe112bda6f9779385ae3" => :mojave
-    sha256 "6cc0007fe520e225bc0a6b9b646817468acbc1383cb6a4382ae8bf1243ae3e5b" => :high_sierra
-    sha256 "0d074a6356f127485211b79741fd7f45e7ed9435e4d708e539088a9e9154daea" => :sierra
+    sha256 "7386f87aa1a38a6004a2bccb2f1a60f508d0c8f01f9021cf88b2938223de11d9" => :big_sur
+    sha256 "47c8709eafb9b97b72b22c1d01ac0e9686de5ebc2c1c57cc29c72d7bdadda2b7" => :catalina
+    sha256 "7a3693652e8a56ea265a73fbc26044ee9b51f076233c154b40618bf6e8cd5c42" => :mojave
   end
 
   depends_on "openssl@1.1"
