@@ -7,10 +7,10 @@ class Ncrack < Formula
   head "https://github.com/nmap/ncrack.git"
 
   bottle do
-    sha256 "8b37ec44db091fce2d12844eb369f94adf96b21775da7265bd1aca9b9bdbc9f2" => :catalina
-    sha256 "b323c29b588f397487e74ee9e7312a8344a4b4c728043cf825838a0e19c58c17" => :mojave
-    sha256 "297c3ca427025e5e07a435e8c46f96846c10c88a3a19eaf432639d05c1e82d12" => :high_sierra
-    sha256 "5f1be0ae0ed5b38dc19ff32b4b157b81929bbfa2e8ebf524f0406a5dca962fc2" => :sierra
+    rebuild 1
+    sha256 "025bbf5951382b56c8a6a16b558eed06e13eccc3885eff0080e4c32907176a08" => :big_sur
+    sha256 "4cde5b8ed210e4b5f2ef644507d4838b367012f3159f649ebe81a375fed66029" => :catalina
+    sha256 "907bcfd20459589aa0e7ae766897d38613338e9c1f57244d2610bf8a1b3b1e59" => :mojave
   end
 
   depends_on "openssl@1.1"
