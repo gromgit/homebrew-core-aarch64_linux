@@ -13,9 +13,9 @@ class CubejsCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "6ede8e7623c2c72d6ceef80ba483a0393582136dea882b50c93c251db2bbbcd4" => :big_sur
-    sha256 "fe1249f150f92e4988a7373fb676f2d1d03cd7903cdfa3673efaa8518429a8e2" => :catalina
-    sha256 "b6643a91558a71782eacc14380c813be23b2ad357d9829066b5788262cada392" => :mojave
+    sha256 "bd0e8e02789e9a0116a8535dc551a69f7625419308c369a88cb07c03731a1c80" => :big_sur
+    sha256 "a2ae80d30a8e7ccb6f9aa7427fca75479e2d51b6f0d4dfefced5de13491c045f" => :catalina
+    sha256 "504a87e0b56638b05cec54643b28a1b2f2bd0de008d75ececa63570594884ed3" => :mojave
   end
 
   depends_on "node"
