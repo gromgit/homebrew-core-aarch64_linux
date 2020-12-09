@@ -1,11 +1,13 @@
 class Rtptools < Formula
   desc "Set of tools for processing RTP data"
   homepage "https://web.archive.org/web/20190924020700/www.cs.columbia.edu/irt/software/rtptools/"
-  url "https://web.archive.org/web/20190714051650/www.cs.columbia.edu/irt/software/rtptools/download/rtptools-1.22.tar.gz"
-  sha256 "2c76b2a423fb943820c91194372133a44cbdc456ebf69c51616ec50eeb068c28"
+  url "https://github.com/irtlab/rtptools/archive/1.22.tar.gz"
+  sha256 "ac6641558200f5689234989e28ed3c44ead23757ccf2381c8878933f9c2523e0"
+  license "BSD-3-Clause"
+  head "https://github.com/irtlab/rtptools.git"
 
   livecheck do
-    url "https://github.com/columbia-irt/rtptools.git"
+    url :head
   end
 
   bottle do
@@ -16,7 +18,11 @@ class Rtptools < Formula
     sha256 "e96df17dfe878ecb9e87a938579a21d514e31dbf8e5e6b743264dac23e42501c" => :high_sierra
   end
 
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+
   def install
+    system "autoreconf", "--verbose", "--install", "--force"
     system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}"
