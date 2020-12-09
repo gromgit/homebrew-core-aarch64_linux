@@ -9,12 +9,12 @@ class Attr < Formula
   depends_on :linux
 
   def install
+    ENV.append "LDFLAGS", "-lintl"
     system "./configure",
            "--disable-debug",
            "--disable-dependency-tracking",
            "--disable-silent-rules",
-           "--prefix=#{prefix}",
-           "--with-libintl-prefix=#{Formula["gettext"].opt_prefix}"
+           "--prefix=#{prefix}"
     system "make", "install"
   end
 
