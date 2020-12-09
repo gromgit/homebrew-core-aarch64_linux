@@ -5,9 +5,10 @@ class Zlib < Formula
   mirror "https://downloads.sourceforge.net/project/libpng/zlib/1.2.11/zlib-1.2.11.tar.gz"
   sha256 "c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1"
   license "Zlib"
+  head "https://github.com/madler/zlib.git", branch: "develop"
 
   livecheck do
-    url "https://github.com/madler/zlib.git"
+    url :head
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
