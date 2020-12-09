@@ -7,10 +7,9 @@ class Elasticsearch < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b437ee4e8d565a44e2badb2fcf14ad15edb9c13d6f5c2691a3afa2e41454a82c" => :big_sur
-    sha256 "499dca3ebaab05e21f582b0d3e933db36f5b1c75f3709afde704e22d09797ea2" => :catalina
-    sha256 "0cffa27f33980f16387789cc6031d0ed1c960d726509c160449238a8057cf425" => :mojave
-    sha256 "5d89734940c42cfb4aabfb6adcbd9e04eb2f3d2dc932486725db942124c817ab" => :high_sierra
+    sha256 "679c248bcc2369dead1d8239518e96e70b2aaea655d8e16ec3716777e199837f" => :big_sur
+    sha256 "e5e6791161d94f09b1bd0e7823c9e3fa414b120405af0ba6666ca2e1380183e4" => :catalina
+    sha256 "20056758a9acc1f9de8d4adac2fde028154a1b5b1ce4d7062474a69bc1595233" => :mojave
   end
 
   depends_on "gradle" => :build
