@@ -3,7 +3,8 @@ class Pike < Formula
   homepage "https://pike.lysator.liu.se/"
   url "https://pike.lysator.liu.se/pub/pike/latest-stable/Pike-v8.0.702.tar.gz"
   sha256 "c47aad2e4f2c501c0eeea5f32a50385b46bda444f922a387a5c7754302f12a16"
-  revision 1
+  license any_of: ["GPL-2.0-only", "LGPL-2.1-only", "MPL-1.1"]
+  revision 2
 
   livecheck do
     url "https://pike.lysator.liu.se/download/pub/pike/latest-stable/"
@@ -18,6 +19,7 @@ class Pike < Formula
   end
 
   depends_on "gmp"
+  depends_on "librsvg"
   depends_on "libtiff"
   depends_on "nettle"
   depends_on "pcre"
@@ -25,6 +27,9 @@ class Pike < Formula
   def install
     ENV.append "CFLAGS", "-m64"
     ENV.deparallelize
+
+    # Workaround for https://git.lysator.liu.se/pikelang/pike/-/issues/10058
+    ENV.append "CFLAGS", "-Wno-implicit-function-declaration"
 
     system "make", "CONFIGUREARGS='--prefix=#{prefix} --without-bundles --with-abi=64'"
 
