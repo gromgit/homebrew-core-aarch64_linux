@@ -13,6 +13,7 @@ class Mysql < Formula
 
   bottle do
     sha256 "0f413dcdf2131394ac28cd77c71f0e43f4cf92bec3769543c47f3f715672ac44" => :big_sur
+    sha256 "cc7d10d08b7caaaff5a3e91b89697d27bdbf251489ea9861591e408cfe5e36e3" => :arm64_big_sur
     sha256 "46f7516a9a81ff798e586f5e46fa1464c5c4c9cd40bc56ce9ef6a8060cfe3a0d" => :catalina
     sha256 "d5e69d9e8de79610a7309c087c2eb46438dfbf2c306113a2011119d3efb1f517" => :mojave
   end
