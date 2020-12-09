@@ -4,6 +4,7 @@ class Ncftp < Formula
   url "https://mirrorservice.org/sites/ftp.ncftp.com/ncftp/ncftp-3.2.6-src.tar.gz"
   mirror "https://fossies.org/linux/misc/ncftp-3.2.6-src.tar.gz"
   sha256 "129e5954850290da98af012559e6743de193de0012e972ff939df9b604f81c23"
+  license "ClArtistic"
 
   livecheck do
     url "https://www.ncftp.com/download/"
@@ -19,9 +20,15 @@ class Ncftp < Formula
     sha256 "ac12f87bb648eb4dde883ad5ccca0c8cf80c60e1437ce03e5fc8d768fcec1bde" => :yosemite
   end
 
+  uses_from_macos "ncurses"
+
   def install
+    # Work around ./configure issues with Xcode 12:
+    ENV.append "CFLAGS", "-Wno-implicit-function-declaration"
+
     system "./configure", "--disable-universal",
                           "--disable-precomp",
+                          "--with-ncurses",
                           "--prefix=#{prefix}",
                           "--mandir=#{man}"
     system "make"
