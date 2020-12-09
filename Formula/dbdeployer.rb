@@ -8,10 +8,9 @@ class Dbdeployer < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "cdf6561ab8357d0e86c01bc6f589f5ac5eac5b0a6e5d9c75e24003f1e8d21429" => :big_sur
-    sha256 "1d30b95db8de59f1bdeb25cc5dce634d7b33a4e27f67092e349dc2e468f2c4eb" => :catalina
-    sha256 "9aedf4a705ae17ffacf901735f14c9d831b4684588e8cca20e56f34f17407b82" => :mojave
-    sha256 "0290db070ad96f26e51a57346a0ea6118d5cfb877eadcda206674bed30dba1fc" => :high_sierra
+    sha256 "fc872b9096b1b93ff20408c90adf9c52f14460b2f25aaf55fb601fee7e31f36a" => :big_sur
+    sha256 "2662fbc7ff443f1941dfc13f72f336100d2d866637fdf6d366dff854e17de4f4" => :catalina
+    sha256 "8706acc54a4278288eb16cb84c111b40a4380b366a9deb118c81de5387d73dd6" => :mojave
   end
 
   depends_on "go" => :build
