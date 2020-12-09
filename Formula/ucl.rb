@@ -3,7 +3,7 @@ class Ucl < Formula
   homepage "https://www.oberhumer.com/opensource/ucl/"
   url "https://www.oberhumer.com/opensource/ucl/download/ucl-1.03.tar.gz"
   sha256 "b865299ffd45d73412293369c9754b07637680e5c826915f097577cd27350348"
-  license "GPL-2.0"
+  license "GPL-2.0-or-later"
 
   livecheck do
     url "https://www.oberhumer.com/opensource/ucl/download/"
@@ -22,6 +22,11 @@ class Ucl < Formula
   end
 
   def install
+    # Workaround for ancient ./configure file
+    # Normally it would be cleaner to run "autoremake" to get a more modern one,
+    # but the tarball doesn't seem to include all of the local m4 files that were used
+    ENV.append "CFLAGS", "-Wno-implicit-function-declaration"
+
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--prefix=#{prefix}"
