@@ -12,9 +12,9 @@ class Ocp < Formula
   end
 
   bottle do
-    sha256 "d9c557bc2f3161818fcf4701e7cc123bd6d2f85ff9e80df5976392de9102a737" => :catalina
-    sha256 "e23ff51d2b5b9adaa44f5d851da94c836f68886bacc2cd739b30166a2ec04312" => :mojave
-    sha256 "6b40bde3ba007a8b18451502bcf49841d8a3f75ec06a7d6a8e748f508e7dc1f9" => :high_sierra
+    sha256 "3aa881d279e6b72656bd08b9394b3ca5eeddc78b91529735ebbc59a3fad91c33" => :big_sur
+    sha256 "ea5ae27e76002683c28eefae03de9d5867d88eb8b6491e4d28b736937fc871a5" => :catalina
+    sha256 "f7ea663318cf0f5a221b53bbc080094fe5931760d3cde229f44dc95f3aa8eba9" => :mojave
   end
 
   depends_on "pkg-config" => :build
