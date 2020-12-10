@@ -7,9 +7,9 @@ class Helib < Formula
 
   bottle do
     cellar :any
-    sha256 "9d54a261f04ae892b5adeb24d9f449725307171456fe66af8304ea8746f7935d" => :big_sur
-    sha256 "320e0198e300b850ddfa454f43b975ed66a46fae79c9bbfecd92242ebb56f44f" => :catalina
-    sha256 "6d653d18508d62e7dbe141a21ae3bf6ddbb4dbe13be0da7115986a90e7ee1de2" => :mojave
+    sha256 "004ce4122626f0f6bc5ffc0bf97dd8b8be979ab6025898ec413d270b220e0985" => :big_sur
+    sha256 "0d3a2af4c976d6c83a3ce2885006e8c6c1aeba6b841df97241d34b15ed2b1141" => :catalina
+    sha256 "0b4c9c77add39afa71a846e56cd59b7ecffe001556d8f8ca7fb3fb17559c9f72" => :mojave
   end
 
   depends_on "cmake" => :build
