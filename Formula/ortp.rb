@@ -1,10 +1,9 @@
 class Ortp < Formula
   desc "Real-time transport protocol (RTP, RFC3550) library"
   homepage "https://www.linphone.org/technical-corner/ortp"
-  url "https://gitlab.linphone.org/BC/public/ortp/-/archive/4.3.2/ortp-4.3.2.tar.bz2"
-  sha256 "1796a7faaaced1278fae55657686e7b9fee66ca4d9dabd8f1c83f21957fc002b"
-  license "GPL-3.0"
-  revision 1
+  url "https://gitlab.linphone.org/BC/public/ortp/-/archive/4.4.13/ortp-4.4.13.tar.bz2"
+  sha256 "70c527a6ad1988e3f212d1c44d78d0cc8f49900f4602b991bbd316c70e2eac95"
+  license "GPL-3.0-or-later"
   head "https://gitlab.linphone.org/BC/public/ortp.git"
 
   bottle do
@@ -18,14 +17,16 @@ class Ortp < Formula
   depends_on "pkg-config" => :build
   depends_on "mbedtls"
 
+  # bctoolbox appears to follow ortp's version. This can be verified at the GitHub mirror:
+  # https://github.com/BelledonneCommunications/bctoolbox
   resource "bctoolbox" do
-    url "https://gitlab.linphone.org/BC/public/bctoolbox/-/archive/4.3.1/bctoolbox-4.3.1.tar.bz2"
-    sha256 "1b7ec1a7fa2af2a6741ebda7602c82996752aa46fb17d6c9ddb2ed0846872384"
+    url "https://gitlab.linphone.org/BC/public/bctoolbox/-/archive/4.4.13/bctoolbox-4.4.13.tar.bz2"
+    sha256 "41a0505db2a34051b8466423a01b280a54dd47b72ca39969011fc085a98f4ba9"
   end
 
   def install
     resource("bctoolbox").stage do
-      args = std_cmake_args + %W[
+      args = std_cmake_args.reject { |s| s["CMAKE_INSTALL_PREFIX"] } + %W[
         -DCMAKE_INSTALL_PREFIX=#{libexec}
         -DENABLE_TESTS_COMPONENT=OFF
       ]
@@ -38,6 +39,7 @@ class Ortp < Formula
     args = std_cmake_args + %W[
       -DCMAKE_PREFIX_PATH=#{libexec}
       -DCMAKE_C_FLAGS=-I#{libexec}/include
+      -DCMAKE_CXX_FLAGS=-I#{libexec}/include
       -DENABLE_DOC=NO
     ]
     mkdir "build" do
