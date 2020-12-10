@@ -13,11 +13,9 @@ class Readline < Formula
 
   bottle do
     cellar :any
-    sha256 "0a6b12ddbee78cf31dfd744c0b0eaaa8cb88d6506d4a3915feb432b67e21a898" => :big_sur
-    sha256 "fddfda14236ff92544efbfbd3b7a98032b1c15e352531adb81191c89a67153dd" => :arm64_big_sur
-    sha256 "6ae1c8e7c783f32bd22c6085caa4d838fed7fb386da7e40ca47b87ec9b1237d6" => :catalina
-    sha256 "29f7102a730ab39c8312cad1e7e439f6da2a67c452ce2b3380581eb185a5d8e8" => :mojave
-    sha256 "896a3d50ce8962ba56e853bdd590fadeabc00ab36475d143d6c2bea5cc15bb28" => :high_sierra
+    sha256 "2cc3a9582e3c7e21eb3c2c8964abd33e9720fb4a9588c626d8424ff8cc9b1aed" => :big_sur
+    sha256 "fe4de019cf549376a7743dcb0c86db8a08ca2b6d0dd2f8cb796dd7cf973dc2e9" => :catalina
+    sha256 "1ea5a8050482911b319dc3e1436ee03310ba79d75d855d40114ba6067e01b9c5" => :mojave
   end
 
   keg_only :shadowed_by_macos, "macOS provides BSD libedit"
