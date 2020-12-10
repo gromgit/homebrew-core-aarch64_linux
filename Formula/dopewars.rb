@@ -1,9 +1,9 @@
 class Dopewars < Formula
   desc 'Free rewrite of a game originally based on "Drug Wars"'
   homepage "https://dopewars.sourceforge.io"
-  url "https://downloads.sourceforge.net/project/dopewars/dopewars/1.5.12/dopewars-1.5.12.tar.gz"
-  sha256 "23059dcdea96c6072b148ee21d76237ef3535e5be90b3b2d8239d150feee0c19"
-  revision 1
+  url "https://downloads.sourceforge.net/project/dopewars/dopewars/1.6.0/dopewars-1.6.0.tar.gz"
+  sha256 "f8543d6cb73074a63c75409a60e8c739bc6cf121328f939f99ac86df2fe89d3d"
+  license "GPL-2.0-or-later"
 
   livecheck do
     url :stable
@@ -22,7 +22,7 @@ class Dopewars < Formula
 
   def install
     inreplace "src/Makefile.in", "$(dopewars_DEPENDENCIES)", ""
-    inreplace "ltmain.sh", "need_relink=yes", "need_relink=no"
+    inreplace "auxbuild/ltmain.sh", "need_relink=yes", "need_relink=no"
     inreplace "src/plugins/Makefile.in", "LIBADD =", "LIBADD = -module -avoid-version"
     system "./configure", "--disable-gui-client",
                           "--disable-gui-server",
