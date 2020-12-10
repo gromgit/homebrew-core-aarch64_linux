@@ -2,9 +2,9 @@ class ArduinoCli < Formula
   desc "Arduino command-line interface"
   homepage "https://github.com/arduino/arduino-cli"
   url "https://github.com/arduino/arduino-cli.git",
-     tag:      "0.13.0",
-     revision: "693a045eea420c29ca7027e668eee31bce37365d"
-  license "GPL-3.0"
+     tag:      "0.14.0",
+     revision: "a86b21d99e2af9e0857da0ce4ab80baf1d3afb55"
+  license "GPL-3.0-only"
   head "https://github.com/arduino/arduino-cli.git"
 
   livecheck do
@@ -46,6 +46,6 @@ class ArduinoCli < Formula
     assert File.directory?("#{testpath}/test_sketch")
 
     version_output = shell_output("#{bin}/arduino-cli version 2>&1")
-    assert_match "arduino-cli Version: #{version}", version_output
+    assert_match "arduino-cli alpha Version: #{version}", version_output
   end
 end
