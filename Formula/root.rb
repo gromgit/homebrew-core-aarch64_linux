@@ -12,9 +12,9 @@ class Root < Formula
   end
 
   bottle do
-    sha256 "438b73d8ad8e731e58edd302a86f1d87e90245a5d8cc51e197f19e330bb3ad4d" => :catalina
-    sha256 "acbe14d4b26fd847a0cc7fdc4be0fab92f2394d1ad706523c1f1cc4efde0d116" => :mojave
-    sha256 "aca8fc57aa9d5777b6897a457a5660604c41898a578003431a6867274fe96a77" => :high_sierra
+    sha256 "43fa16262c747e5fde9e3b16c1e84051c1421fa7721e55a79db2b696acc421cd" => :big_sur
+    sha256 "6085c0eb513a710ba721652cb7e74e48ee6089963ea0e190d6882237c3181e0e" => :catalina
+    sha256 "ce2b7b2942bb7155297f30b485a584f1d40856d38d6eccc050f2e34f907582ad" => :mojave
   end
 
   # https://github.com/Homebrew/homebrew-core/issues/30726
