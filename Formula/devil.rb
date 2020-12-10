@@ -1,8 +1,8 @@
 class Devil < Formula
   desc "Cross-platform image library"
   homepage "https://sourceforge.net/projects/openil/"
-  license "LGPL-2.1"
-  revision 1
+  license "LGPL-2.1-only"
+  revision 2
   head "https://github.com/DentonW/DevIL.git"
 
   stable do
@@ -23,6 +23,12 @@ class Devil < Formula
     patch do
       url "https://github.com/DentonW/DevIL/commit/4a2d7822.patch?full_index=1"
       sha256 "7e74a4366ef485beea1c4285f2b371b6bfa0e2513b83d4d45e4e120690c93f1d"
+    end
+
+    # allow compiling against jasper >= 2.0.17
+    patch do
+      url "https://github.com/DentonW/DevIL/commit/42a62648.patch?full_index=1"
+      sha256 "b3a99c34cd7f9a5681f43dc0886fe360ba7d1df2dd1eddd7fcdcae7898f7a68e"
     end
   end
 
