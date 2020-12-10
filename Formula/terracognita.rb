@@ -6,6 +6,13 @@ class Terracognita < Formula
   license "MIT"
   head "https://github.com/cycloidio/terracognita.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "e1e553599bb43ed4da4c27b1c44b269bb46425644c6c50101b4742996c2da4b2" => :big_sur
+    sha256 "650b2e9035df64ec6bc9a6712b84e220f93a51efaac53fbe650a985b427eef2e" => :catalina
+    sha256 "2f5be55a454464e18b554c5bc2861b78f6c65b491e488caa6be484267bdf24e5" => :mojave
+  end
+
   depends_on "go" => :build
 
   def install
