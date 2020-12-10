@@ -3,8 +3,8 @@ class Psftools < Formula
   homepage "https://www.seasip.info/Unix/PSF/"
   # psftools-1.1.10.tar.gz (dated 2017) was a typo of 1.0.10 and has since been deleted.
   # You may still find it on some mirrors but it should not be used.
-  url "https://www.seasip.info/Unix/PSF/psftools-1.0.13.tar.gz"
-  sha256 "9c61e6885dca2f9591b4aa5fe821e16d4779cd071c3a45ead326629f210def65"
+  url "https://www.seasip.info/Unix/PSF/psftools-1.0.14.tar.gz"
+  sha256 "dcf8308fa414b486e6df7c48a2626e8dcb3c8a472c94ff04816ba95c6c51d19e"
   license "GPL-2.0"
   version_scheme 1
 
