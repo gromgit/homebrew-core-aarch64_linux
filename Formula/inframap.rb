@@ -6,6 +6,13 @@ class Inframap < Formula
   license "MIT"
   head "https://github.com/cycloidio/inframap.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "8db89e38e5d255b7bf38c2d375e9b78a8565b78ad7776ed6491a72c8ee6d4e46" => :big_sur
+    sha256 "bbb1e66bfee4b0a097403c1bc862a85065b6edcb176699758e7508f0d5d9000f" => :catalina
+    sha256 "075ef7667e91efaeda845953975e59d46b19cfc1455186169bac1d758b0ecabd" => :mojave
+  end
+
   depends_on "go" => :build
 
   resource "test_resource" do
