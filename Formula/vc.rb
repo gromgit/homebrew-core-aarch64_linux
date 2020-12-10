@@ -5,6 +5,13 @@ class Vc < Formula
   sha256 "68e609a735326dc3625e98bd85258e1329fb2a26ce17f32c432723b750a4119f"
   license "BSD-3-Clause"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "528735327505bd30c949c2028ee60fd9fd7858162f4c1ceab2418ba2d40f4b06" => :big_sur
+    sha256 "fc96abd9aab0fdd88d84cf0d56129b44d02fff3481078e332e4c3859661e66e6" => :catalina
+    sha256 "01f676787da9756b8a2b9ba58041596002d9c1ae5c4fac683db8d4d8af6f0a8b" => :mojave
+  end
+
   depends_on "cmake" => :build
 
   def install
