@@ -1,10 +1,9 @@
 class Recode < Formula
   desc "Convert character set (charsets)"
-  homepage "https://github.com/pinard/Recode"
-  url "https://github.com/pinard/Recode/archive/v3.7-beta2.tar.gz"
-  sha256 "72c3c0abcfe2887b83a8f27853a9df75d7e94a9ebacb152892cc4f25108e2144"
-  license "GPL-2.0"
-  revision 1
+  homepage "https://github.com/rrthomas/recode"
+  url "https://github.com/rrthomas/recode/releases/download/v3.7.8/recode-3.7.8.tar.gz"
+  sha256 "4fb75cacc7b80fda7147ea02580eafd2b4493461fb75159e9a49561d3e10cfa7"
+  license "GPL-3.0-or-later"
 
   bottle do
     sha256 "61083b9e7eaab6ba33d88958e10d14e08173bbc62b5c1b4d0e7eaa47d62e8ddb" => :big_sur
@@ -15,25 +14,12 @@ class Recode < Formula
   end
 
   depends_on "libtool" => :build
+  depends_on "python@3.9" => :build
   depends_on "gettext"
 
   def install
-    # Missing symbol errors without these.
-    ENV.append "LDFLAGS", "-liconv"
-    ENV.append "LDFLAGS", "-lintl"
-
-    # Fixed upstream in 2008 but no releases since. Patched by Debian also.
-    # https://github.com/pinard/Recode/commit/a34dfd2257f412dff59f2ad7f714.
-    inreplace "src/recodext.h", "bool ignore : 2;", "bool ignore : 1;"
-
-    cp Dir["#{Formula["libtool"].opt_pkgshare}/*/config.{guess,sub}"], buildpath
-
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--without-included-gettext",
-                          "--prefix=#{prefix}",
-                          "--infodir=#{info}",
-                          "--mandir=#{man}"
+    system "./configure", "--disable-dependency-tracking",
+                          "--prefix=#{prefix}"
     system "make", "install"
   end
 
