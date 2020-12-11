@@ -3,8 +3,8 @@ require "language/node"
 class Appium < Formula
   desc "Automation for Apps"
   homepage "https://appium.io/"
-  url "https://registry.npmjs.org/appium/-/appium-1.18.1.tgz"
-  sha256 "938783100df8be224cb85b5dbdcebeb91d164f003d4cdd2aa9c801480bd027b4"
+  url "https://registry.npmjs.org/appium/-/appium-1.19.1.tgz"
+  sha256 "c24f11fe3dba96a9c9d41300e53251b7e8423b88911abd4a5d1ef42bb77fffa0"
   license "Apache-2.0"
   head "https://github.com/appium/appium.git"
 
@@ -22,7 +22,12 @@ class Appium < Formula
   depends_on "node"
 
   def install
+    # workaround packaging bug exposed in npm 7+ (bin smylinks are now created
+    # before installing dependencies) => manually create symlink for authorize-ios
+    inreplace "package.json", "\"appium\": \"./build/lib/main.js\",", "\"appium\": \"./build/lib/main.js\""
+    inreplace "package.json", "\"authorize-ios\": \"./node_modules/.bin/authorize-ios\"", ""
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
+    ln_s libexec/"lib/node_modules/appium/node_modules/.bin/authorize-ios", libexec/"bin/authorize-ios"
     bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 
@@ -37,7 +42,7 @@ class Appium < Formula
       end
       sleep 3
 
-      assert_match "The URL '/' did not map to a valid resource", shell_output("curl -s 127.0.0.1:#{port}")
+      assert_match "unknown command", shell_output("curl -s 127.0.0.1:#{port}")
     ensure
       Process.kill("TERM", pid)
       Process.wait(pid)
