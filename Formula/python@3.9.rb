@@ -12,6 +12,7 @@ class PythonAT39 < Formula
 
   bottle do
     sha256 "341bf346d9754ec96aec17b381cae65a0714deaa5d91d6eae9fe07ff879933f1" => :big_sur
+    sha256 "81143f2cc607e657f9a69f88a177a4c7225bd13c1a4ebe2b06423b7654cb9818" => :arm64_big_sur
     sha256 "2b9946108e230384c48fcb4fcc07febd31e3987a7b9e66ee952e2c4f153a5dee" => :catalina
     sha256 "5a4691a91e9c16cd07600b4afba9fe35ef475d816df3033e530dcce9f34f34a4" => :mojave
   end
