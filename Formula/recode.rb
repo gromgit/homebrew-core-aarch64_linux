@@ -6,11 +6,10 @@ class Recode < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 "61083b9e7eaab6ba33d88958e10d14e08173bbc62b5c1b4d0e7eaa47d62e8ddb" => :big_sur
-    sha256 "104914c7dd2db1afbafe61a025ebe41da5a88ed89ac8079c8e7d9150bb7a2e2d" => :catalina
-    sha256 "541408c872b2c16e999cb6f74fc94e8c340dfb1e2eb3a89aa21d3f118554219d" => :mojave
-    sha256 "65d9921e28f36fe7a0755d1cab44e4c2d2e5752ab25ed6c35cc7ee9e9072aee3" => :high_sierra
-    sha256 "d8d1838e5484c1bbdde1a1f4f57907a601ee32b6577c3c9364dde06e095a5605" => :sierra
+    cellar :any
+    sha256 "6d53af7b188693ffa022df92beea56d3963482c8206d1608e25d47ca5bd88848" => :big_sur
+    sha256 "367ab01690803d0270de4734faf1ef5175c2e3df7528b9f64bdcc0c1a78f1668" => :catalina
+    sha256 "34d0491040e447e2a0cbe304d021ea82be00040a7c5533ac82e43907771636b1" => :mojave
   end
 
   depends_on "libtool" => :build
