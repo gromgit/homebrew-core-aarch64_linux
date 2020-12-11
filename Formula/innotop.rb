@@ -3,8 +3,8 @@ class Innotop < Formula
   homepage "https://github.com/innotop/innotop/"
   url "https://github.com/innotop/innotop/archive/v1.12.0.tar.gz"
   sha256 "f56d51b2c33a9c03f1b9d4fc5f7480f1c2104ef1e8f04def84a16f35d0bc42f6"
-  license "GPL-2.0"
-  revision 2
+  license any_of: ["GPL-2.0-only", "Artistic-1.0-Perl"]
+  revision 3
   head "https://github.com/innotop/innotop.git"
 
   bottle do
@@ -17,19 +17,24 @@ class Innotop < Formula
   depends_on "mysql-client"
   depends_on "openssl@1.1"
 
+  resource "Devel::CheckLib" do
+    url "https://cpan.metacpan.org/authors/id/M/MA/MATTN/Devel-CheckLib-1.14.tar.gz"
+    sha256 "f21c5e299ad3ce0fdc0cb0f41378dca85a70e8d6c9a7599f0e56a957200ec294"
+  end
+
   resource "DBI" do
-    url "https://cpan.metacpan.org/authors/id/T/TI/TIMB/DBI-1.636.tar.gz"
-    sha256 "8f7ddce97c04b4b7a000e65e5d05f679c964d62c8b02c94c1a7d815bb2dd676c"
+    url "https://cpan.metacpan.org/authors/id/T/TI/TIMB/DBI-1.643.tar.gz"
+    sha256 "8a2b993db560a2c373c174ee976a51027dd780ec766ae17620c20393d2e836fa"
   end
 
   resource "DBD::mysql" do
-    url "https://cpan.metacpan.org/authors/id/C/CA/CAPTTOFU/DBD-mysql-4.046.tar.gz"
-    sha256 "6165652ec959d05b97f5413fa3dff014b78a44cf6de21ae87283b28378daf1f7"
+    url "https://cpan.metacpan.org/authors/id/D/DV/DVEEDEN/DBD-mysql-4.050.tar.gz"
+    sha256 "4f48541ff15a0a7405f76adc10f81627c33996fbf56c95c26c094444c0928d78"
   end
 
   resource "TermReadKey" do
-    url "https://cpan.metacpan.org/authors/id/J/JS/JSTOWE/TermReadKey-2.37.tar.gz"
-    sha256 "4a9383cf2e0e0194668fe2bd546e894ffad41d556b41d2f2f577c8db682db241"
+    url "https://cpan.metacpan.org/authors/id/J/JS/JSTOWE/TermReadKey-2.38.tar.gz"
+    sha256 "5a645878dc570ac33661581fbb090ff24ebce17d43ea53fd22e105a856a47290"
   end
 
   def install
@@ -37,6 +42,11 @@ class Innotop < Formula
     resources.each do |r|
       r.stage do
         system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
+        # Work around restriction on 10.15+ where .bundle files cannot be loaded
+        # from a relative path -- while in the middle of our build we need to
+        # refer to them by their full path.  Workaround adapted from:
+        #   https://github.com/fink/fink-distributions/issues/461#issuecomment-563331868
+        inreplace "Makefile", "blib/", "$(shell pwd)/blib/" if r.name == "TermReadKey"
         system "make", "install"
       end
     end
