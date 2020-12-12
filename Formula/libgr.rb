@@ -4,7 +4,7 @@ class Libgr < Formula
   url "https://github.com/sciapp/gr/archive/v0.53.0.tar.gz"
   sha256 "a348602c3e2d928b5c293a19ed91e126bf56e23720d4f0e12aa92767da767276"
   license "MIT"
-  revision 1
+  revision 2
 
   bottle do
     sha256 "74e780077f603713e35d583f2db4fef09a80f012c76f5ca35472a4fe875459fc" => :big_sur
@@ -19,6 +19,13 @@ class Libgr < Formula
   depends_on "qhull"
   depends_on "qt"
   depends_on "zeromq"
+
+  # Use .dylib extension on macOS
+  # https://github.com/sciapp/gr/pull/128
+  patch do
+    url "https://github.com/sciapp/gr/commit/81f6f66b9766eb876e64dff43a6b1a802536ccac.patch?full_index=1"
+    sha256 "15dd98e65172a7354dc27d4858c6e06ccafa040d451171bf5e770596668478d4"
+  end
 
   def install
     mkdir "build" do
