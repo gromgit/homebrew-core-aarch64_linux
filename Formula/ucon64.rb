@@ -12,10 +12,9 @@ class Ucon64 < Formula
   end
 
   bottle do
-    sha256 "182de5c5b157eabade695604dcdd7075fb322f707765bbb02381891ead11069e" => :big_sur
-    sha256 "f0bf36d7828e138e2fe1068b4b5bf1b9e70f80cef564c186950a30ab2cb1df85" => :catalina
-    sha256 "893570e77b17c3400f391fc0a710958b3599d5ad0c5971897d84c7e4552e2ca6" => :mojave
-    sha256 "30d2d85dba7891d5eb5b43c69c5b6ac0ad0606d279c6a30e254f6ffd819356f8" => :high_sierra
+    sha256 "b6b2a89d3da04d4a6ff3ce5fa39f9439ca0c2068d5f66a4a32e9abb4d09be329" => :big_sur
+    sha256 "a935bde7d18d023d03b38631b9fdb8229bc6b4514bd693cd832515295cc47a7b" => :catalina
+    sha256 "3652059ae186bbd01f2fc85586629ac47b2067d0b851d71858d66fb3f4080523" => :mojave
   end
 
   uses_from_macos "unzip" => [:build, :test]
