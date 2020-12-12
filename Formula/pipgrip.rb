@@ -13,9 +13,9 @@ class Pipgrip < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "03e4cec7b8ab773febf3e1fc0fb16972f6ac2fd8a7585b4cbaff094d7befef46" => :catalina
-    sha256 "5cc8c1676b079f8b9fa7ca5f159086adc1a6eb7e23a1ab2975b83fb7de27ac26" => :mojave
-    sha256 "0046981ebb80c278a9ad46eddc05d0890575df55960238b3ebd81827fa551cba" => :high_sierra
+    sha256 "13b01f35d30b10a0caeb39c486d2bc7bf4d652736de3e28fa2684ac881e83a98" => :big_sur
+    sha256 "26d79927450050d2db8ca89c4144e3be93405ff096df8466cd91f422d1e9c914" => :catalina
+    sha256 "98fbc2f6d513292d4d072375836d4502e3ba39d848cf5bee45309ea78c01d7e2" => :mojave
   end
 
   depends_on "python@3.9"
