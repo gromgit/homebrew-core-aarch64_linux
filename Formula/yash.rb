@@ -12,10 +12,9 @@ class Yash < Formula
   end
 
   bottle do
-    sha256 "e9ce00f183e818cc273cae2748dc2c5021565083870351b5ac391548baa49580" => :big_sur
-    sha256 "7e92afc1391f9d80bcab553e29705fd0cb11c88ae10448a7d57d408284c8490f" => :catalina
-    sha256 "1ce52a85f6ed173af4e6e296a1051b08536a31d7e7c8704d0324bb4d2c751fad" => :mojave
-    sha256 "026106ab6ee3296619ad4cd762756d4676713feb7060172cabc39e92d8f222a0" => :high_sierra
+    sha256 "0148513daad07ea6867715f97d04d8f2eb66b4efe937d51bc7616d99d1aaef58" => :big_sur
+    sha256 "f9d79d098c75b321288c45626bec895e2ce35f8c68fcbd1d6405a0b6614226fb" => :catalina
+    sha256 "0eec194f969eb03add9615ed1f4569749ff423007552fdf40b12b7df82c72024" => :mojave
   end
 
   depends_on "gettext"
