@@ -9,10 +9,9 @@ class Cups < Formula
   head "https://github.com/OpenPrinting/cups.git"
 
   bottle do
-    sha256 "00bdcf0cb9e681d4e10bc7ec87eb57ccc9c63a5b76816a8545b77e454a8a0021" => :big_sur
-    sha256 "1bed38f7aa9ee2c76fed5393e308cf7de5dd6d443debb0455ee7739e010b0e20" => :catalina
-    sha256 "19ea09cef986e1c66f1736409f4e7917914100bb68525d8118e705500fbf28e0" => :mojave
-    sha256 "0d3328bddece686cfa54e63b61f68c68fed1b1f8553cd45ed194d8a80e56f9c9" => :high_sierra
+    sha256 "8eed2907ba0d36d073a53a2556693826113b2aad09256c1451f3c9defd275c75" => :big_sur
+    sha256 "8f00138524b80aa2b4df62a75ddee6e2ebbd89670335b733f58fc529b2e2872d" => :catalina
+    sha256 "e749bd85f784c552184fce875caa01d6095991362a95796e4ceeb68bf68f9bd3" => :mojave
   end
 
   keg_only :provided_by_macos
