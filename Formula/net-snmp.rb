@@ -13,9 +13,10 @@ class NetSnmp < Formula
   end
 
   bottle do
-    sha256 "46837a0296f9a9cb434371d7377800da0e0e06a09ef07a0d70bd79d8bbe3bfb2" => :catalina
-    sha256 "57dc4d78d02ec37a30d822b40aca17afc187de70c15d87c62bd660c5cc17d211" => :mojave
-    sha256 "8285c2dfee4c083c7ea0f5c99964aaa68c5cc26e4c223405727ec9fc85d636db" => :high_sierra
+    rebuild 1
+    sha256 "4519ee0aa3a4ebdcb4235466861a13b41ff19363a2b83fce26ab507cdc40a015" => :big_sur
+    sha256 "97ca904418f6fc7488478cec55106ce51987eb139fea9f90b38afa4240c4683b" => :catalina
+    sha256 "ffac347f7d928bdc233355f324cff14a0751315661ef480d121362085b56f8d3" => :mojave
   end
 
   keg_only :provided_by_macos
