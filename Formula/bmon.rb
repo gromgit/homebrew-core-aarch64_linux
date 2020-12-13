@@ -23,7 +23,13 @@ class Bmon < Formula
   depends_on "pkg-config" => :build
   depends_on "confuse"
 
+  uses_from_macos "ncurses"
+
   def install
+    # Workaround for https://github.com/tgraf/bmon/issues/89 build issue:
+    inreplace "include/bmon/bmon.h", "#define __unused__", "//#define __unused__"
+    inreplace %w[src/in_proc.c src/out_curses.c], "__unused__", ""
+
     system "./autogen.sh" if build.head?
     system "./configure", "--disable-debug",
                           "--prefix=#{prefix}",
