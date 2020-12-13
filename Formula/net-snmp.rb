@@ -4,6 +4,8 @@ class NetSnmp < Formula
   url "https://downloads.sourceforge.net/project/net-snmp/net-snmp/5.9/net-snmp-5.9.tar.gz"
   sha256 "04303a66f85d6d8b16d3cc53bde50428877c82ab524e17591dfceaeb94df6071"
   license "Net-SNMP"
+  head "https://github.com/net-snmp/net-snmp.git"
+  # ...previously used "https://git.code.sf.net/p/net-snmp/code" but github seems more current
 
   livecheck do
     url :stable
@@ -20,16 +22,21 @@ class NetSnmp < Formula
 
   depends_on "openssl@1.1"
 
+  # Fix "make install" bug with 5.9
+  patch do
+    url "https://github.com/net-snmp/net-snmp/commit/52d4a465dcd92db004c34c1ad6a86fe36726e61b.patch?full_index=1"
+    sha256 "669185758aa3a4815f4bbbe533795c4b6969c0c80c573f8c8abfa86911c57492"
+  end
+
+  # Clean up some Xcode 12 issues with ./configure
+  patch do
+    url "https://github.com/net-snmp/net-snmp/commit/a7c8c26c48c954a19bca5fdc6ba285396610d7aa.patch?full_index=1"
+    sha256 "8ccc46a3c15d145e5034c0749f3c0e7bd11eca451809ae7f2312dab459e07cec"
+  end
+
   def install
-    # https://sourceforge.net/p/net-snmp/bugs/2504/
-    # I suspect upstream will fix this in the first post-Mojave release but
-    # if it's not fixed in that release this should be reported upstream.
-    (buildpath/"include/net-snmp/system/darwin18.h").write <<~EOS
-      #include <net-snmp/system/darwin17.h>
-    EOS
-    (buildpath/"include/net-snmp/system/darwin19.h").write <<~EOS
-      #include <net-snmp/system/darwin17.h>
-    EOS
+    # Workaround https://github.com/net-snmp/net-snmp/issues/226 in 5.9:
+    inreplace "agent/mibgroup/mibII/icmp.h", "darwin10", "darwin"
 
     args = %W[
       --disable-debugging
