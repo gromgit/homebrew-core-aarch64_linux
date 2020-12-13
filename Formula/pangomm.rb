@@ -1,10 +1,9 @@
 class Pangomm < Formula
   desc "C++ interface to Pango"
   homepage "https://www.pango.org/"
-  url "https://download.gnome.org/sources/pangomm/2.42/pangomm-2.42.1.tar.xz"
-  sha256 "14bf04939930870d5cfa96860ed953ad2ce07c3fd8713add4a1bfe585589f40f"
+  url "https://download.gnome.org/sources/pangomm/2.42/pangomm-2.42.2.tar.xz"
+  sha256 "1b24c92624ae1275ccb57758175d35f7c39ad3342d8c0b4ba60f0d9849d2d08a"
   license "LGPL-2.1-only"
-  revision 3
 
   livecheck do
     url :stable
@@ -17,6 +16,8 @@ class Pangomm < Formula
     sha256 "d1e761358ec09f74604b768e47948446a87ae14dbf2d7f9af30d89398751e85a" => :mojave
   end
 
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "cairomm@1.14"
   depends_on "glibmm"
@@ -24,8 +25,12 @@ class Pangomm < Formula
 
   def install
     ENV.cxx11
-    system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}"
-    system "make", "install"
+
+    mkdir "build" do
+      system "meson", *std_meson_args, ".."
+      system "ninja"
+      system "ninja", "install"
+    end
   end
   test do
     (testpath/"test.cpp").write <<~EOS
