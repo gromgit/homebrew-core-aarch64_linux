@@ -4,7 +4,7 @@ class Libglademm < Formula
   url "https://download.gnome.org/sources/libglademm/2.6/libglademm-2.6.7.tar.bz2"
   sha256 "38543c15acf727434341cc08c2b003d24f36abc22380937707fc2c5c687a2bc3"
   license "LGPL-2.1-or-later"
-  revision 7
+  revision 8
 
   livecheck do
     url :stable
@@ -64,6 +64,7 @@ class Libglademm < Formula
     flags = %W[
       -I#{atk.opt_include}/atk-1.0
       -I#{atkmm.opt_include}/atkmm-1.6
+      -I#{atkmm.opt_lib}/atkmm-1.6/include
       -I#{cairo.opt_include}/cairo
       -I#{cairomm.opt_include}/cairomm-1.0
       -I#{cairomm.opt_lib}/cairomm-1.0/include
