@@ -13,9 +13,9 @@ class Gtksourceviewmm3 < Formula
 
   bottle do
     cellar :any
-    sha256 "630813f829e3c417b9f2a04d118a5af68d27265922abe771f2f448c9a067017c" => :big_sur
-    sha256 "c3da8e9141b12c8e4528c2a89324aafe40e15b4384f9e2d884120e6fffb89ddb" => :catalina
-    sha256 "338fdd8eec67f3744ed1eb3506b064ac8c4415bc876a8ac79db89e010edad76c" => :mojave
+    sha256 "af2e4b1e25d3845214252d31b839190e18afdc1054f88a11ed5792442a945a6a" => :big_sur
+    sha256 "a9cdca45d6a7938413682a4a37f0f2b235a6f7b1f4b336fce2cdba8f0bfa6dcf" => :catalina
+    sha256 "f933f99aca0ae0bfdc095d2f642a18c91be00f445b516098b1fb627d8e1fe885" => :mojave
   end
 
   depends_on "pkg-config" => :build
