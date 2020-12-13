@@ -10,9 +10,9 @@ class Theharvester < Formula
 
   bottle do
     cellar :any
-    sha256 "46856f81e9b3e915c37f652886bd17f886fbc7d3c4fb25095a43a04b5b2a916c" => :catalina
-    sha256 "ef8331534e766d52d242fe874e331baa3e563e366a8f5a2bae777024b38310fb" => :mojave
-    sha256 "628cf264b4109d51f768dde76b59409a02d1d6167ce1843d30d9f0ef82016a65" => :high_sierra
+    sha256 "8ede7178e65a77fefe2f6bb806a350e334a81e38077296c933759132646fb6bc" => :big_sur
+    sha256 "5097a7fbf2a5a0a6fd8718d3510eea17ba0b3b99b79008b01f850248532141ca" => :catalina
+    sha256 "a838c99579ddee4d320ca90e9a092d7075df4e5577482b5b804b3ac2a1510fd0" => :mojave
   end
 
   depends_on "libyaml"
