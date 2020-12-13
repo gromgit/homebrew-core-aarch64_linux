@@ -3,6 +3,7 @@ class BerkeleyDbAT4 < Formula
   homepage "https://www.oracle.com/technology/products/berkeley-db/index.html"
   url "https://download.oracle.com/berkeley-db/db-4.8.30.tar.gz"
   sha256 "e0491a07cdb21fb9aa82773bbbedaeb7639cbd0e7f96147ab46141e0045db72a"
+  license "Sleepycat"
 
   bottle do
     cellar :any
@@ -24,6 +25,8 @@ class BerkeleyDbAT4 < Formula
   def install
     # BerkeleyDB dislikes parallel builds
     ENV.deparallelize
+    # Work around issues ./configure has with Xcode 12
+    ENV.append "CFLAGS", "-Wno-implicit-function-declaration"
 
     args = %W[
       --disable-debug
