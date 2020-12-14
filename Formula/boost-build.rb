@@ -1,8 +1,8 @@
 class BoostBuild < Formula
   desc "C++ build system"
   homepage "https://www.boost.org/build/"
-  url "https://github.com/boostorg/build/archive/boost-1.73.0.tar.gz"
-  sha256 "3490f9859a08cf46d963f0cfb834d30cd2c9f4cf5e0738dc19287b5849a316c2"
+  url "https://github.com/boostorg/build/archive/boost-1.75.0.tar.gz"
+  sha256 "889e931b25e435912e7b0dda89ae150fa1dabe419caccfbb923d41e85809e7df"
   license "BSL-1.0"
   version_scheme 1
   head "https://github.com/boostorg/build.git"
@@ -22,16 +22,10 @@ class BoostBuild < Formula
 
   conflicts_with "b2-tools", because: "both install `b2` binaries"
 
-  # Fix Xcode 11.4 compatibility.
-  # Remove with the next release.
-  patch do
-    url "https://github.com/boostorg/build/commit/b3a59d265929a213f02a451bb63cea75d668a4d9.patch?full_index=1"
-    sha256 "04a4df38ed9c5a4346fbb50ae4ccc948a1440328beac03cb3586c8e2e241be08"
-  end
-
   def install
     system "./bootstrap.sh"
     system "./b2", "--prefix=#{prefix}", "install"
+    pkgshare.install "boost-build.jam"
   end
 
   test do
