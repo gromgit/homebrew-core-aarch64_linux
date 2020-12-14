@@ -8,10 +8,9 @@ class Zig < Formula
 
   bottle do
     cellar :any
-    sha256 "49ed801fbd9d811765e6154805bcb259c4efa831d729c65e2d8d97edc1e770da" => :big_sur
-    sha256 "e1961b8c92810f085db84f43d4a20e3f14efdfe4d8d816cbd4620e412761edc7" => :catalina
-    sha256 "fe8d287d02eaea270f69a51455f4aa27dda3bc4984231e592e9f56eaafba194a" => :mojave
-    sha256 "e1cf0c30406fc5b9b0cbc00c56879674118b89cb40e2b1b840cac04996df29b4" => :high_sierra
+    sha256 "f088607533abf8e77c38ad57b5c068b7c975d31d3558eda5ff9ef23221278650" => :big_sur
+    sha256 "f1168c13a73d6677a8d6eb04ecd0d67e93038bd33218bafadd9aac9a23045e7d" => :catalina
+    sha256 "eb2e0de16f666b740fb67529910712c517fed8ae3fd6e14d27acbbf19a41018a" => :mojave
   end
 
   depends_on "cmake" => :build
