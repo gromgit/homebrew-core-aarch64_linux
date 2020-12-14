@@ -9,9 +9,9 @@ class Kibana < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "18f55a7e615160830390bb6b9ef09ff00d620a3085ee78f40a790c7b58a20dc8" => :big_sur
-    sha256 "8ddd2830d0b87aaba02cb54beef5dfab61e37afea6b8c62783c9253c4081dcd4" => :catalina
-    sha256 "d3ea8991e0adae31c382d990f39729092c5a73c8c7dcd2913b9568460fc6612c" => :mojave
+    sha256 "fee3e848d8b9c2889b7fa89b7a6cdfbfa85b2dbf23712a5b07b58d676f60f73c" => :big_sur
+    sha256 "5d8234a00c1b04278c083dd3deede12eb622c887e3338fc6e5906651dbb216a0" => :catalina
+    sha256 "454a4b3df30516055103c0bbd0783705d26d92659352ec2e3d37a2c0bb6326d2" => :mojave
   end
 
   depends_on "python@3.9" => :build
