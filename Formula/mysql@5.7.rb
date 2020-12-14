@@ -11,10 +11,10 @@ class MysqlAT57 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 "48e8d4d882da80c7d4c43435a0282ed4cc30e8d705a46882d83d4a4518da654a" => :big_sur
-    sha256 "5c37a3dd74822b5eca9d69e1f892ebc299a2bc651551da80a074d823dd76e260" => :catalina
-    sha256 "3f6bfb38faad67e8b65b2a22cd26d77e146bdd95ee2fb0593bdb3bc6fb8f0773" => :mojave
+    rebuild 2
+    sha256 "d698d7de62f5d7d3eef93c04c3ac2b7ba0aa2081f31f6617972b6c88a18a95e5" => :big_sur
+    sha256 "1bf3050f0ed024f54538ccf95d96a41536ab54d87e303d802f32b5c149eb8eb7" => :catalina
+    sha256 "0240b57da7513b0082d251cc314a27022842fd588092a22088cd14eec9f1cc86" => :mojave
   end
 
   keg_only :versioned_formula
