@@ -1,8 +1,8 @@
 class Fq < Formula
   desc "Brokered message queue optimized for performance"
   homepage "https://github.com/circonus-labs/fq"
-  url "https://github.com/circonus-labs/fq/archive/v0.13.0.tar.gz"
-  sha256 "01fb729a0a2257c944e6489718ce6d334f3dd3639cb8d604592c291d1bd017ea"
+  url "https://github.com/circonus-labs/fq/archive/v0.13.4.tar.gz"
+  sha256 "1ec2e6293d092c0a2b560a5bd325488d1ae11f7c571494192792abf300549420"
   license "MIT"
   head "https://github.com/circonus-labs/fq.git"
 
@@ -18,6 +18,8 @@ class Fq < Formula
   depends_on "openssl@1.1"
 
   def install
+    ENV.append_to_cflags "-DNO_BCD=1"
+    inreplace "Makefile", "-lbcd", ""
     inreplace "Makefile", "/usr/lib/dtrace", "#{lib}/dtrace"
     system "make", "PREFIX=#{prefix}"
     system "make", "install", "PREFIX=#{prefix}"
@@ -26,7 +28,7 @@ class Fq < Formula
 
   test do
     pid = fork { exec sbin/"fqd", "-D", "-c", testpath/"test.sqlite" }
-    sleep 1
+    sleep 10
     begin
       assert_match /Circonus Fq Operational Dashboard/, shell_output("curl 127.0.0.1:8765")
     ensure
