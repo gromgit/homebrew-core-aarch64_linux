@@ -11,11 +11,10 @@ class Mariadb < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 "cc13a943751cb2bff630af6b1a85259867030c1a94534b625d7221824c0962fa" => :big_sur
-    sha256 "6c4ab91c7eadee170806cf2d95d5690a6b00a35e3811298f9906f2da79f1c11f" => :catalina
-    sha256 "b22a037c88a4327dea62f83cc60c0ad70855c1e078625d7eb7c483bf3f7d3e30" => :mojave
-    sha256 "d370191e26c5940cfd5ab0ff28dedeed21957b6a7675ffcbac69dacf3ae797e9" => :high_sierra
+    rebuild 2
+    sha256 "8a27f4ff10628a7366f0a63480433fa1138c547fbd49343258abb47cd4908e67" => :big_sur
+    sha256 "4b32c4d13a178a568d7a8668f0d42c40a02d161fac8ea7b10f5c2e468cbca4a6" => :catalina
+    sha256 "c52e7c5c5a92e4e5faf2ab5aa6cb66eeabc943869161bf5c8853b37dbd6a49a3" => :mojave
   end
 
   depends_on "cmake" => :build
