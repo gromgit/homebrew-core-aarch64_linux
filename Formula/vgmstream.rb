@@ -17,9 +17,9 @@ class Vgmstream < Formula
   end
 
   bottle do
-    sha256 "4a16ce76fe0d5ec2d54854dbfca2af23382c5d82aa5849a2b43cd6343990a9cd" => :big_sur
-    sha256 "46743ef7b4c70323b20958a96956b20e706eec25f642867bca34afd12a50944f" => :catalina
-    sha256 "8295377a0ee9e671332a0b4861d5f010eb0c98ecff11f83fed8e818451034b31" => :mojave
+    sha256 "214d533c705543d4962d3c9db29f5796d40048c0ff036585ac6ad35f013ad8fa" => :big_sur
+    sha256 "4b78bf09f3643d5e2cfc3b88cad0721a4079634970eefa5aa3da56dd0e023e6b" => :catalina
+    sha256 "4fc77e961d92b85fb884370c15e57829cbc5dbf1cd9351a2420b8df68ff67f80" => :mojave
   end
 
   depends_on "cmake" => :build
