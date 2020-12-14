@@ -1,8 +1,8 @@
 class Minizip2 < Formula
   desc "Zip file manipulation library with minizip 1.x compatibility layer"
   homepage "https://github.com/nmoinvaz/minizip"
-  url "https://github.com/nmoinvaz/minizip/archive/2.10.4.tar.gz"
-  sha256 "6ef3d2e0c15352fe87a4a658b2e8f665fb0c21ddfb57a2e0a515658389d2e850"
+  url "https://github.com/nmoinvaz/minizip/archive/2.10.5.tar.gz"
+  sha256 "1c6420d3f3509e722178d9130a57cb77537b34900e7b67acca7e3e2858846939"
   license "Zlib"
 
   bottle do
@@ -27,7 +27,9 @@ class Minizip2 < Formula
     because: "libtcod, libzip and minizip2 install a `zip.h` header"
 
   def install
-    system "cmake", ".", *std_cmake_args, "-DIconv_IS_BUILT_IN=on"
+    system "cmake", ".", "-DIconv_IS_BUILT_IN=on",
+                         "-DMZ_FETCH_LIBS=OFF",
+                         *std_cmake_args
     system "make", "install"
   end
 
