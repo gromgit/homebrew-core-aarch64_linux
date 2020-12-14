@@ -13,11 +13,9 @@ class S2geometry < Formula
 
   bottle do
     cellar :any
-    sha256 "9488426c240b398d49b1532a5c10e3b7f217199c94c8125f5d3d43160521a215" => :big_sur
-    sha256 "69e0912c7a35acdcd926fa997e0c7e37ee1b8908f113b0d5a6ccc80c1bbe020c" => :catalina
-    sha256 "5ecc3866aa3ad158fbb42b3d1b545d5c69a1ad5f1d5a574ae902de320d28d073" => :mojave
-    sha256 "cfdbc5dd02ab2ddd7561342f6c225c8de8c86b5dcbf321265e33d3296a8b66f1" => :high_sierra
-    sha256 "870466f63d2da435da772eff61412ea7a474bd72234f9e14e61deb850223791b" => :sierra
+    sha256 "68903a12c6383cbfef68c89a82c224aa5f51fc7fb03cd416b67f395aa134c218" => :big_sur
+    sha256 "be6efced1d7d6339598aa104619fafb57b8f3b8f87837882369a17511a1d4800" => :catalina
+    sha256 "bb270713b3f271b75d992cd0bc76e594163c319104e9aac8ac58605dd7e31135" => :mojave
   end
 
   depends_on "cmake" => :build
