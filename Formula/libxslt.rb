@@ -4,6 +4,7 @@ class Libxslt < Formula
   url "http://xmlsoft.org/sources/libxslt-1.1.34.tar.gz"
   sha256 "98b1bd46d6792925ad2dfe9a87452ea2adebf69dcb9919ffd55bf926a7f93f7f"
   license "X11"
+  revision 1
 
   livecheck do
     url "http://xmlsoft.org/sources/"
@@ -29,6 +30,7 @@ class Libxslt < Formula
 
   keg_only :provided_by_macos
 
+  depends_on "libgcrypt"
   depends_on "libxml2"
 
   def install
@@ -38,6 +40,7 @@ class Libxslt < Formula
                           "--disable-silent-rules",
                           "--prefix=#{prefix}",
                           "--without-python",
+                          "--with-crypto",
                           "--with-libxml-prefix=#{Formula["libxml2"].opt_prefix}"
     system "make"
     system "make", "install"
@@ -52,5 +55,15 @@ class Libxslt < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/xslt-config --version")
+    (testpath/"test.c").write <<~EOS
+      #include <libexslt/exslt.h>
+      int main(int argc, char *argv[]) {
+        exsltCryptoRegister();
+        return 0;
+      }
+    EOS
+    flags = shell_output("#{bin}/xslt-config --cflags --libs").chomp.split
+    system ENV.cc, "test.c", "-o", "test", *flags, "-lexslt"
+    system "./test"
   end
 end
