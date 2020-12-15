@@ -9,10 +9,9 @@ class Carton < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "07a85f36f8e278d7238e0d65d464ed9bc1bdd6de3f532b6ac3ef07bb0346c40a" => :big_sur
-    sha256 "6b297651d53363d8e300cfa3f1dd30b3a3b26bc12d42d869cf3ae994edca0daa" => :catalina
-    sha256 "dad7e5f481b721f027a956e13d4c0845e3d9dfd40c823296d206ed0b0a0e9f15" => :mojave
-    sha256 "08a660d4f27f1159886a6fddbebe7b082d1b755fdcaa2c4bc31b50dfadc15e43" => :high_sierra
+    sha256 "a8346120d0c0c90969deffae1f9f6a62cd801b85d960236a027ac01a66bb8764" => :big_sur
+    sha256 "089c962c1d804848a5b1c00d424b840f4f97d56c9bc36628b660af9cf4d2ab13" => :catalina
+    sha256 "151b0beef68a8538b731e39e8bea4325279b2912f491c2be5f0a8ab8fde68123" => :mojave
   end
 
   depends_on "perl"
