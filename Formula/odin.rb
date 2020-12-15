@@ -13,9 +13,10 @@ class Odin < Formula
 
   bottle do
     cellar :any
-    sha256 "772509e10bf0a73af78b51e4f85309eb6d25e0078d1f2fa02bfa2d252e0055ca" => :catalina
-    sha256 "8e86193674aeecfc0b103cd067c39f2ac3df41d72f3875676fc21e397c9748b1" => :mojave
-    sha256 "87d21cd84cc602f553a8b9533ad2fafcf8fb8d987bb5f8a25d27239a3d2d177d" => :high_sierra
+    rebuild 1
+    sha256 "9679cdd8b54d7331d4b8d7e386426402246c8e098e9245397d9fc48fa88c8034" => :big_sur
+    sha256 "10b41130ce2877bbbbb44226206170c5d710b81dd72335f22f781120848c295a" => :catalina
+    sha256 "940a412200b5b40246d9fd5a7775add5ea88e9fe8b8c0f7a4563b89d38c47314" => :mojave
   end
 
   depends_on "llvm"
