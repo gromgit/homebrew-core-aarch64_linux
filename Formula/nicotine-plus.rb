@@ -9,10 +9,10 @@ class NicotinePlus < Formula
   head "https://github.com/Nicotine-Plus/nicotine-plus.git"
 
   bottle do
-    cellar :any
-    sha256 "bdba841698f194d00a44586bef26acefb8371f681d8ab31dd2f6fb1cdaae2705" => :big_sur
-    sha256 "dc9c56ceb84625f2c6cae5f9cdc291fba3d1d3e177c1de99d3b7446c766f3ac0" => :catalina
-    sha256 "c2e1d03e2eed1a033031a9b9617cf82cb351f626bdfc62f4d7cafe3892544839" => :mojave
+    cellar :any_skip_relocation
+    sha256 "bb57d96d376930c48f6c66f47c2dde3f813b65b106870fe1b0a56cc8f3039145" => :big_sur
+    sha256 "b8b27084c9f6aad79968494e1bac71a1690e2e01613857eda6b8ec1d723724b9" => :catalina
+    sha256 "dd52da32c8394630c2f3264f27fe807c5a6cb059703ee490337d784ab7df9569" => :mojave
   end
 
   depends_on "adwaita-icon-theme"
