@@ -12,9 +12,9 @@ class Gauche < Formula
   end
 
   bottle do
-    sha256 "a7f9770236a3c66cb06d932d976ac2b30dfa55a1858d1cb93ed3269d9fe9a047" => :big_sur
-    sha256 "882a6fe7b736bdb095c380cf7e29ac0d04e28b33cd53370e20a8bcba5809cbac" => :catalina
-    sha256 "322d17fd4e60ea24938ec4e58da27940688cadb072eb488818cfec58271afb11" => :mojave
+    sha256 "946cf4fb5df28115150e9e8fef530885dea4ea78a141340b76a3696813c5ceb5" => :big_sur
+    sha256 "3242db5cccc130802f125d27c51b447b1f52a43d2a4d8a4819f52b71d88d08e5" => :catalina
+    sha256 "c278ec5a5c34957a9e75b386aad28736a4a64864c4f1a156486e6b4959e4aed5" => :mojave
   end
 
   depends_on "mbedtls"
