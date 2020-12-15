@@ -1,8 +1,9 @@
 class Remctl < Formula
   desc "Client/server application for remote execution of tasks"
   homepage "https://www.eyrie.org/~eagle/software/remctl/"
-  url "https://archives.eyrie.org/software/kerberos/remctl-3.16.tar.xz"
-  sha256 "d1c444ab6c817c82413ec9686d178b9d760cd684eae7d24782bbe5c9ce5b0908"
+  url "https://archives.eyrie.org/software/kerberos/remctl-3.17.tar.xz"
+  sha256 "2ca2f3c7808af1f6fedc89f0e852e0abb388ed29062b3822747c789b841dbd2a"
+  license "MIT"
 
   livecheck do
     url "https://archives.eyrie.org/software/kerberos/"
