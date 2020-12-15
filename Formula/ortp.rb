@@ -8,9 +8,9 @@ class Ortp < Formula
   head "https://gitlab.linphone.org/BC/public/ortp.git"
 
   bottle do
-    sha256 "1012fc0fdf6fe9e8513ce2658c70cc94fef01756e4f69b46a173e0b356bcbf03" => :big_sur
-    sha256 "0397140067f87e820f4481949fd47f8b9904b7d55fa099c6ff38a08a8ae3f414" => :catalina
-    sha256 "58d839f8e2e518226d3cab556fcc8eadc97ba9e6b0a1c165aeb4ae38b103d057" => :mojave
+    sha256 "4007e619fdf9b62f48dc6897309d600bb7bcc927d94c62d53f9438e1c946dc8e" => :big_sur
+    sha256 "5caba650034ac5418a2dfe1d5cb26e667af555dcba655a765ed7a0e21bbdd6ba" => :catalina
+    sha256 "1037969f3d5869cdde0f1ca6f3d1f8f7d3cb01c544fbcf14f913f96f29f8cf29" => :mojave
   end
 
   depends_on "cmake" => :build
