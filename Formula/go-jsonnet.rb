@@ -20,6 +20,8 @@ class GoJsonnet < Formula
   def install
     system "go", "build", "-o", bin/"jsonnet", "./cmd/jsonnet"
     system "go", "build", "-o", bin/"jsonnetfmt", "./cmd/jsonnetfmt"
+    system "go", "build", "-o", bin/"jsonnet-lint", "./cmd/jsonnet-lint"
+    system "go", "build", "-o", bin/"jsonnet-deps", "./cmd/jsonnet-deps"
   end
 
   test do
