@@ -5,6 +5,13 @@ class TrecEval < Formula
   sha256 "c3994a73103ec842e12df693749584a45814c35c36dcc15f38984bd463566ba1"
   license :public_domain
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "909a8fa72d9da9dc50790dd31faf7ce80bfa13f6714fb39008ea4ef9ceefbff5" => :big_sur
+    sha256 "ea8723ce3d27bc893ec5255f8bb3235d03d442a58ef36586997b085626d752c7" => :catalina
+    sha256 "cecbd8490c8b889b72922ff9d6f6fdd5bed740e211217b4ac5c37b742b4e1b41" => :mojave
+  end
+
   def install
     system "make"
     bin.install "trec_eval"
