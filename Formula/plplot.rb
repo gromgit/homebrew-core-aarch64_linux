@@ -41,9 +41,20 @@ class Plplot < Formula
       -DPLD_xwin=OFF
     ]
 
+    # std_cmake_args tries to set CMAKE_INSTALL_LIBDIR to a prefix-relative
+    # directory, but plplot's cmake scripts don't like that
+    args.map! { |x| x.start_with?("-DCMAKE_INSTALL_LIBDIR=") ? "-DCMAKE_INSTALL_LIBDIR=#{lib}" : x }
+
+    # Also make sure it already exists:
+    lib.mkdir
+
     mkdir "plplot-build" do
       system "cmake", "..", *args
       system "make"
+      # These example files end up with references to the Homebrew build
+      # shims unless we tweak them:
+      inreplace "examples/c/Makefile.examples", %r{^CC = .*/}, "CC = "
+      inreplace "examples/c++/Makefile.examples", %r{^CXX = .*/}, "CXX = "
       system "make", "install"
     end
 
