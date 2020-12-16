@@ -49,7 +49,7 @@ class Cloog < Formula
   end
 
   test do
-    cloog_source = <<~EOS
+    (testpath/"test.cloog").write <<~EOS
       c
 
       0 2
@@ -65,7 +65,7 @@ class Cloog < Formula
       0
     EOS
 
-    output = pipe_output("#{bin}/cloog /dev/stdin", cloog_source)
-    assert_match %r{Generated from /dev/stdin by CLooG}, output
+    assert_match %r{Generated from #{testpath}/test.cloog by CLooG},
+                 shell_output("#{bin}/cloog #{testpath}/test.cloog")
   end
 end
