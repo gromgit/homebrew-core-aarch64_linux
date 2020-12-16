@@ -17,13 +17,19 @@ class OpenSp < Formula
     sha256 "03629f243a1598b2b26fc07f8b747c77b62efe88ce435d8e018167140d22b86e" => :el_capitan
   end
 
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
   depends_on "docbook" => :build
   depends_on "ghostscript" => :build
+  depends_on "libtool" => :build
   depends_on "xmlto" => :build
+  depends_on "gettext"
 
   def install
     ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
 
+    # The included ./configure file is too old to work with Xcode 12
+    system "autoreconf", "--verbose", "--install", "--force"
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
                           "--mandir=#{man}",
