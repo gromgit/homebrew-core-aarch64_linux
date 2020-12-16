@@ -6,6 +6,13 @@ class Muffet < Formula
   license "MIT"
   head "https://github.com/raviqqe/muffet.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "fbf4fe5c9e0422c2f032428ec4af6579e8b9bc1589d015ca9b6dbe83fa5773be" => :big_sur
+    sha256 "b98ea175fa41b49e6106ad5bede8ca34038c5c474fdb9d6a1587c4b2dba1cdb7" => :catalina
+    sha256 "abc9c60df720e0799f8952cf285c6b1c3c9937d9fb9240d7201b1e6812476dbe" => :mojave
+  end
+
   depends_on "go" => :build
 
   def install
