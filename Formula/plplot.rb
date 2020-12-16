@@ -10,9 +10,10 @@ class Plplot < Formula
   end
 
   bottle do
-    sha256 "c37878dbf7a1805da137aa6b9f1222050b6b62eebd36834597279b8f58f5f4d6" => :catalina
-    sha256 "c647d868b1fd01db2a760965665d9ff22192fefc0ad02641a2f89c4ccf35a37f" => :mojave
-    sha256 "bc07655baabc8c4faf3f76def152ad8f55a92670cd289a0d10fd33ae550f537a" => :high_sierra
+    rebuild 1
+    sha256 "54b7f57eb347cd104a27d199b7a5bca36f01be5c0f5c837290c9efc19429d7bb" => :big_sur
+    sha256 "57046a10346c01ff487b1da3623ad21daf5452be29b2adfef0845db9e5f4a185" => :catalina
+    sha256 "e89a7f7b82e127c5980077b96423c1a40f534bca789818ef4fc95f0b67dee34a" => :mojave
   end
 
   depends_on "cmake" => :build
