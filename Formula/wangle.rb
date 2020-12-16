@@ -8,9 +8,9 @@ class Wangle < Formula
 
   bottle do
     cellar :any
-    sha256 "2686ae2afb6865f53421ffd01a869ce6ca4ab2618329aef82149db6149f5178d" => :big_sur
-    sha256 "74ba97566da37dd176d5fc66aca6a1a89764168f09738d2b3f27206044a6e2b8" => :catalina
-    sha256 "30e555b84de7030a59436208dd95092471ec0e73e48ab4200323c725e25ec974" => :mojave
+    sha256 "1de108e0da62bc153e6e319482c7dbdcf407ed864ed2b52b07bb9e3ef0ece3b8" => :big_sur
+    sha256 "2f647f21ef75fa1989ab57fe2c15a650649cce02702f0a8142424af9e4839119" => :catalina
+    sha256 "ae3426a403f069c0a5c0e4e0ffc1e31b36b10938a22e997721598a49521cea34" => :mojave
   end
 
   depends_on "cmake" => :build
