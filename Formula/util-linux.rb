@@ -99,7 +99,7 @@ class UtilLinux < Formula
       sum.insert 0, ((stat.mode & (2 ** index)).zero? ? "-" : flag)
     end
 
-    out = shell_output("#{bin}/namei -lx /usr").split("\n").last.split(" ")
+    out = shell_output("#{bin}/namei -lx /usr").split("\n").last.split
     assert_equal ["d#{perms}", owner, group, "usr"], out
   end
 end
