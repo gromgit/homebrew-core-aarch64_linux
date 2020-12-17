@@ -1,10 +1,9 @@
 class Ejabberd < Formula
   desc "XMPP application server"
   homepage "https://www.ejabberd.im"
-  url "https://static.process-one.net/ejabberd/downloads/20.07/ejabberd-20.07.tgz"
-  sha256 "9e922b938458ae9d72d4e5fdd2d08a1fbad651aae47c9a9d15b79d0bbd1e11f8"
-  license "GPL-2.0"
-  revision 1
+  url "https://static.process-one.net/ejabberd/downloads/20.12/ejabberd-20.12.tgz"
+  sha256 "9d9c5d617472bf851e8cf2c7353fe9e82aef5b6d8aa28eeb6528bde8a463a854"
+  license "GPL-2.0-only"
 
   bottle do
     cellar :any
@@ -57,13 +56,15 @@ class Ejabberd < Formula
     (var/"lib/ejabberd").mkpath
     (var/"spool/ejabberd").mkpath
 
-    # Create the vm.args file, to generate a cookie
-    require "securerandom"
-    cookie = SecureRandom.hex
+    # Create the vm.args file, if it does not exist. Put a random cookie in it to secure the instance.
     vm_args_file = etc/"ejabberd/vm.args"
-    vm_args_file.write <<~EOS
-      -setcookie #{cookie}
-    EOS
+    unless vm_args_file.exist?
+      require "securerandom"
+      cookie = SecureRandom.hex
+      vm_args_file.write <<~EOS
+        -setcookie #{cookie}
+      EOS
+    end
   end
 
   def caveats
