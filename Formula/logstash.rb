@@ -12,6 +12,13 @@ class Logstash < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    cellar :any
+    sha256 "d6fbe6e8a77fa79920b2de60bc5b4c3da86180f92fbbf24ccd3c0d77ba01a434" => :big_sur
+    sha256 "0593e2f125b9861cfc8fb0cdf44d374f99c7dbca2b28cee3fda8cc46c0728b52" => :catalina
+    sha256 "4df0a2a9ab93fe344cfd42f5765ea4abf850aa50a57489f15864a93afecd4de0" => :mojave
+  end
+
   depends_on "openjdk@8"
 
   def install
