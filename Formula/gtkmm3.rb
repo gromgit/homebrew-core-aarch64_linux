@@ -4,6 +4,7 @@ class Gtkmm3 < Formula
   url "https://download.gnome.org/sources/gtkmm/3.24/gtkmm-3.24.3.tar.xz"
   sha256 "60497c4f7f354c3bd2557485f0254f8b7b4cf4bebc9fee0be26a77744eacd435"
   license "LGPL-2.1-or-later"
+  revision 1
 
   livecheck do
     url :stable
@@ -54,7 +55,7 @@ class Gtkmm3 < Formula
     gdk_pixbuf = Formula["gdk-pixbuf"]
     gettext = Formula["gettext"]
     glib = Formula["glib"]
-    glibmm = Formula["glibmm"]
+    glibmm = Formula["glibmm@2.64"]
     gtkx3 = Formula["gtk+3"]
     harfbuzz = Formula["harfbuzz"]
     libepoxy = Formula["libepoxy"]
