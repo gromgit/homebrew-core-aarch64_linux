@@ -13,9 +13,9 @@ class TaskwarriorTui < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7640e12a9e743c6cced2680307d931ed577d85c5ea99a4e4ec1d1382c1c1b661" => :big_sur
-    sha256 "c8f062c6832daa687f7049981d819415835bb553b05b903e2eaccfffd73969e7" => :catalina
-    sha256 "d46ba5842e3bd3a38d1e471344097acc883641317255f1128015e5431038adf8" => :mojave
+    sha256 "a56fdc4e59440cd36f0225f721dc3f9eb003c201c2adaeaccdd0b3cb7fb1a016" => :big_sur
+    sha256 "58cdb481a8fc3c715617070588fad8fd4ebf392a882d872de3df7dea47b9a587" => :catalina
+    sha256 "6f0e8fbb45323b4a0d894dac8bd52152740beb2477e8a80ddcca5b177eb4704f" => :mojave
   end
 
   depends_on "rust" => :build
