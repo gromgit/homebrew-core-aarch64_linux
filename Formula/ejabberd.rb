@@ -7,9 +7,9 @@ class Ejabberd < Formula
 
   bottle do
     cellar :any
-    sha256 "e196794bf1e7a303e57dc8fe7d86a8c20ff3377c7898dee386e576aa97f32fbe" => :catalina
-    sha256 "162ee337822b273b41a2c8321a5f5fc9d40175d70dcd9b1d334c6b0b38139b2d" => :mojave
-    sha256 "49b8ba3a3c253fa2e0cf3a856d9895cceafad05b3ad54ff0d207056e78c8f9d3" => :high_sierra
+    sha256 "0ceed5bdb4dca54b7af825e2ddff42f29ccb92ac08cd68de783bbe82c70158a6" => :big_sur
+    sha256 "848676f2ae43c6b05ee9732caaee469fe25571624e9b2ded161788fffbd84a35" => :catalina
+    sha256 "7273b1ef75bb32ec39aca0a57018839c04e8ecaadb06f3d097858d58544ec2bb" => :mojave
   end
 
   head do
