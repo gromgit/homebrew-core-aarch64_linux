@@ -8,10 +8,9 @@ class Samurai < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "070b95f4b8998f10f22e429499f77b885de00d01deff3e2a596501fd2cafe566" => :big_sur
-    sha256 "ef3f56caffb50416e4d708cea0910b1658811464b94697b850760bf6acc70e4a" => :catalina
-    sha256 "90d42648667443f8bc1e9de25e221b2c16d8c973bac6cda33bfb1f611893144a" => :mojave
-    sha256 "e9c857e0bf7f2713d90d21040ab28431c03fe0e560a17d8dab6a3b4d6c463111" => :high_sierra
+    sha256 "5e3819fa6eb240e781c236528297422575c6c2ae9aa4e38e6ddc7dbac0e25339" => :big_sur
+    sha256 "35e183246e80cfe5a6f9b11b12cd2e0c3a754da15b8fb7550b5716de9e219e8d" => :catalina
+    sha256 "ef652224d51e64d4e83f921a3870cd9cb4d7dbc315156cb68dd01d30d2d34414" => :mojave
   end
 
   def install
