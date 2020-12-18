@@ -9,6 +9,7 @@
   "gcc@7",
   "gcc@8",
   "gcc@9",
+  "glibmm@2.64",
   "gnupg@1.4",
   "libsigc++@2",
   "lua@5.1",
