@@ -4,6 +4,7 @@ class Atkmm < Formula
   url "https://download.gnome.org/sources/atkmm/2.28/atkmm-2.28.1.tar.xz"
   sha256 "116876604770641a450e39c1f50302884848ce9cc48d43c5dc8e8efc31f31bad"
   license "LGPL-2.1-or-later"
+  revision 1
 
   livecheck do
     url :stable
@@ -20,7 +21,7 @@ class Atkmm < Formula
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "atk"
-  depends_on "glibmm"
+  depends_on "glibmm@2.64"
 
   def install
     ENV.cxx11
@@ -44,7 +45,7 @@ class Atkmm < Formula
     atk = Formula["atk"]
     gettext = Formula["gettext"]
     glib = Formula["glib"]
-    glibmm = Formula["glibmm"]
+    glibmm = Formula["glibmm@2.64"]
     libsigcxx = Formula["libsigc++@2"]
     flags = %W[
       -I#{atk.opt_include}/atk-1.0
