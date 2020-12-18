@@ -4,7 +4,7 @@ class Libglademm < Formula
   url "https://download.gnome.org/sources/libglademm/2.6/libglademm-2.6.7.tar.bz2"
   sha256 "38543c15acf727434341cc08c2b003d24f36abc22380937707fc2c5c687a2bc3"
   license "LGPL-2.1-or-later"
-  revision 8
+  revision 9
 
   livecheck do
     url :stable
@@ -51,7 +51,7 @@ class Libglademm < Formula
     gdk_pixbuf = Formula["gdk-pixbuf"]
     gettext = Formula["gettext"]
     glib = Formula["glib"]
-    glibmm = Formula["glibmm"]
+    glibmm = Formula["glibmm@2.64"]
     gtkx = Formula["gtk+"]
     gtkmm = Formula["gtkmm"]
     harfbuzz = Formula["harfbuzz"]
