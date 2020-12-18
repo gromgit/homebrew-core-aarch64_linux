@@ -3,7 +3,7 @@ class Gstreamermm < Formula
   homepage "https://gstreamer.freedesktop.org/bindings/cplusplus.html"
   url "https://download.gnome.org/sources/gstreamermm/1.10/gstreamermm-1.10.0.tar.xz"
   sha256 "be58fe9ef7d7e392568ec85e80a84f4730adbf91fb0355ff7d7c616675ea8d60"
-  revision 4
+  revision 5
 
   livecheck do
     url :stable
@@ -19,7 +19,7 @@ class Gstreamermm < Formula
   end
 
   depends_on "pkg-config" => :build
-  depends_on "glibmm"
+  depends_on "glibmm@2.64"
   depends_on "gst-plugins-base"
   depends_on "gstreamer"
 
@@ -43,7 +43,7 @@ class Gstreamermm < Formula
     EOS
     gettext = Formula["gettext"]
     glib = Formula["glib"]
-    glibmm = Formula["glibmm"]
+    glibmm = Formula["glibmm@2.64"]
     gst_plugins_base = Formula["gst-plugins-base"]
     gstreamer = Formula["gstreamer"]
     libsigcxx = Formula["libsigc++@2"]
