@@ -8,9 +8,9 @@ class Tm < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5f37b9116247e25c34b6888bbecb20f3e3998f293a16ac69502579cf44d33954" => :big_sur
-    sha256 "557c1d43923c836f9428f43a48fd385856524a72e30e7bd8e66cdf2dcc3e5e67" => :catalina
-    sha256 "e2345f38c556f7dd62a3a19cef806ea1a7c24266cc200964e22c8341425ecf0e" => :mojave
+    sha256 "23afb2232f4254c6ce2b3c5104ef8ee2e4e83d96256dce8bb619528e9777b3fe" => :big_sur
+    sha256 "b7923845ee0e1681493c53784c6f1e181818f365285b477f2283c772ed5cc3a5" => :catalina
+    sha256 "9114671c8810164964727e5405e9cddc85963e0f716a9165ba0ab0080b6bd423" => :mojave
   end
 
   depends_on "go" => :build
