@@ -8,9 +8,9 @@ class Skylighting < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "956f95b4b96372684de6cccc82862236aa95b76a021a479cbc3ae086eee50132" => :big_sur
-    sha256 "8d8db3888aaae769fccf0375370b3416c5631539764f52b49563b9b6b6e1a30b" => :catalina
-    sha256 "44389ea6a49c943231544f47de6fad4334c6406a2d339463573466761bffa1c2" => :mojave
+    sha256 "34f08222d7e15af6bd91bfcd04ac8be60c5f67774339e1e18fd9487eaf74f92a" => :big_sur
+    sha256 "6010870086412a61abf05d67707b4563911c9c1fb0374c52069e2434632ae680" => :catalina
+    sha256 "067f75de5cfbfe7bd35a98b50624863ca202615a21f3ff2ca6b2f57543efc41a" => :mojave
   end
 
   depends_on "cabal-install" => :build
