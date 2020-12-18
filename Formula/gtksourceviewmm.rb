@@ -4,7 +4,7 @@ class Gtksourceviewmm < Formula
   url "https://download.gnome.org/sources/gtksourceviewmm/2.10/gtksourceviewmm-2.10.3.tar.xz"
   sha256 "0000df1b582d7be2e412020c5d748f21c0e6e5074c6b2ca8529985e70479375b"
   license "LGPL-2.1-or-later"
-  revision 8
+  revision 9
 
   livecheck do
     url :stable
@@ -47,7 +47,7 @@ class Gtksourceviewmm < Formula
     gdk_pixbuf = Formula["gdk-pixbuf"]
     gettext = Formula["gettext"]
     glib = Formula["glib"]
-    glibmm = Formula["glibmm"]
+    glibmm = Formula["glibmm@2.64"]
     gtkx = Formula["gtk+"]
     gtkmm = Formula["gtkmm"]
     gtksourceview = Formula["gtksourceview"]
