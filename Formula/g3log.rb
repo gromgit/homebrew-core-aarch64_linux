@@ -7,10 +7,9 @@ class G3log < Formula
 
   bottle do
     cellar :any
-    sha256 "733e3a8e675dfb858f309648bb5e7f47d9757da43d37be2042dcc0e4e1313fe3" => :big_sur
-    sha256 "b819589f20ba980113593517ca9d54109a9a7cec22f756126021e2276a56bca4" => :catalina
-    sha256 "1b95598a1e31c627a40d9a2b67edd10a35209dc1c426849163ee297ca05e2bc6" => :mojave
-    sha256 "ac0ea62242bf04f640a7bd2cdd56a0ab585cef139748e47fe4d3ec118510dfd0" => :high_sierra
+    sha256 "5e24eda970bf16a1d737e0112ef7e86651c6cdd29b14b6dd4beec2faf9f9d292" => :big_sur
+    sha256 "3325a5a22c63c02f6c3a7d9b35f533e579f369ff2871f7152d0ca4994bb049d3" => :catalina
+    sha256 "f44e98ef652573827da51288539acb1122af634b79f61f8ec2687b7b5184e971" => :mojave
   end
 
   depends_on "cmake" => :build
