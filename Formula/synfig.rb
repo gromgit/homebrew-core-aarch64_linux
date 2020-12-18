@@ -4,6 +4,8 @@ class Synfig < Formula
   url "https://downloads.sourceforge.net/project/synfig/releases/1.4.0/source/synfig-1.4.0.tar.gz"
   mirror "https://github.com/synfig/synfig/releases/download/v1.4.0/synfig-1.4.0.tar.gz"
   sha256 "7f36d57eba9dc959e1deae89e6908585a08db7f2d9399915a46a9eff33080c9c"
+  license "GPL-3.0-or-later"
+  revision 1
   head "https://svn.code.sf.net/p/synfig/code/"
 
   livecheck do
@@ -61,7 +63,7 @@ class Synfig < Formula
     freetype = Formula["freetype"]
     gettext = Formula["gettext"]
     glib = Formula["glib"]
-    glibmm = Formula["glibmm"]
+    glibmm = Formula["glibmm@2.64"]
     libpng = Formula["libpng"]
     libsigcxx = Formula["libsigc++@2"]
     libxmlxx = Formula["libxml++"]
