@@ -4,7 +4,7 @@ class Gtkmm < Formula
   url "https://download.gnome.org/sources/gtkmm/2.24/gtkmm-2.24.5.tar.xz"
   sha256 "0680a53b7bf90b4e4bf444d1d89e6df41c777e0bacc96e9c09fc4dd2f5fe6b72"
   license "LGPL-2.1-or-later"
-  revision 5
+  revision 6
 
   livecheck do
     url :stable
@@ -21,7 +21,7 @@ class Gtkmm < Formula
   depends_on "pkg-config" => :build
   depends_on "atkmm"
   depends_on "cairomm@1.14"
-  depends_on "glibmm"
+  depends_on "glibmm@2.64"
   depends_on "gtk+"
   depends_on "libsigc++@2"
   depends_on "pangomm"
@@ -50,7 +50,7 @@ class Gtkmm < Formula
     gdk_pixbuf = Formula["gdk-pixbuf"]
     gettext = Formula["gettext"]
     glib = Formula["glib"]
-    glibmm = Formula["glibmm"]
+    glibmm = Formula["glibmm@2.64"]
     gtkx = Formula["gtk+"]
     harfbuzz = Formula["harfbuzz"]
     libpng = Formula["libpng"]
