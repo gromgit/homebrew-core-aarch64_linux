@@ -7,9 +7,9 @@ class Pegtl < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "3044879b7c3b323251009528b53b5bea68cb314f51cfec06f59ceb15f74b492b" => :big_sur
-    sha256 "5fa80672bf58a5eaa91bf684ea3ef37c96b37a9b1f8246517e279a8613a0231e" => :catalina
-    sha256 "854e19bfaf2383f758acb6f978ea5f8ad04e23790543facef037019832a7ce6c" => :mojave
+    sha256 "4818531d0c091179407f90ac1429ddd91ea7209f98070e5016cad16a0a093546" => :big_sur
+    sha256 "51869f0e3f17a8ad20ab7de025b2a343fb8767b224d3243ab53c2b286d9e8e3d" => :catalina
+    sha256 "aa73f0f63e2ae9b31967404c8d5bbaad82e6e25e955807a555f19e11f30bdd0d" => :mojave
   end
 
   depends_on "cmake" => :build
