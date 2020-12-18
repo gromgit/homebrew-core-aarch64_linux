@@ -4,6 +4,7 @@ class Pangomm < Formula
   url "https://download.gnome.org/sources/pangomm/2.42/pangomm-2.42.2.tar.xz"
   sha256 "1b24c92624ae1275ccb57758175d35f7c39ad3342d8c0b4ba60f0d9849d2d08a"
   license "LGPL-2.1-only"
+  revision 1
 
   livecheck do
     url :stable
@@ -20,7 +21,7 @@ class Pangomm < Formula
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "cairomm@1.14"
-  depends_on "glibmm"
+  depends_on "glibmm@2.64"
   depends_on "pango"
 
   def install
@@ -47,7 +48,7 @@ class Pangomm < Formula
     freetype = Formula["freetype"]
     gettext = Formula["gettext"]
     glib = Formula["glib"]
-    glibmm = Formula["glibmm"]
+    glibmm = Formula["glibmm@2.64"]
     harfbuzz = Formula["harfbuzz"]
     libpng = Formula["libpng"]
     libsigcxx = Formula["libsigc++@2"]
