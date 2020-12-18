@@ -2,8 +2,8 @@ class Argo < Formula
   desc "Get stuff done with container-native workflows for Kubernetes"
   homepage "https://argoproj.io"
   url "https://github.com/argoproj/argo.git",
-      tag:      "v2.11.8",
-      revision: "310e099f82520030246a7c9d66f3efaadac9ade2"
+      tag:      "v2.12.2",
+      revision: "7868e723704bcfe1b943bc076c2e0b83777d6267"
   license "Apache-2.0"
 
   bottle do
@@ -14,7 +14,7 @@ class Argo < Formula
   end
 
   depends_on "go" => :build
-  depends_on "node" => :build
+  depends_on "node@14" => :build
   depends_on "yarn" => :build
 
   def install
@@ -30,8 +30,8 @@ class Argo < Formula
   end
 
   test do
-    assert_match "argo is the command line interface to Argo",
-      shell_output("#{bin}/argo --help")
+    assert_match "argo:",
+      shell_output("#{bin}/argo version")
 
     # argo consumes the Kubernetes configuration with the `--kubeconfig` flag
     # Since it is an empty file we expect it to be invalid
