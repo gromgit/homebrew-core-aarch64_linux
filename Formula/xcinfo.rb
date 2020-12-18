@@ -7,8 +7,8 @@ class Xcinfo < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2e9234ff445d2673f391f0e58d7858e475d5cfb7a674fa1a2f36830b0f1d5606" => :big_sur
-    sha256 "ec7dbfffbb4b2358dce4aee2961d083eae644408226bf2391fa8b736db6b0cd6" => :catalina
+    sha256 "07c7b50b903770d63078ba45e61d167f9135299c731208ff02c8d8521525df5d" => :big_sur
+    sha256 "98e64cd5d992b20d9b8c52beb9599f7c6469ca1bb95746a97ac536ed9be85b79" => :catalina
   end
 
   depends_on xcode: ["12.0", :build]
