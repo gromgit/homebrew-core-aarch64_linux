@@ -14,9 +14,9 @@ class C7n < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "6bffad70d9ca47f2b460aefc3e798a0a617812f2665f6620b58e5b84c80f0a01" => :big_sur
-    sha256 "dbdeea140fa29748a26131f0a60c1c501fd45c885c3d37c73278a470813a13f2" => :catalina
-    sha256 "c4eb3b187cb7a781a81907eff3bb727165490879112385a84c65dba17a8a3df1" => :mojave
+    sha256 "a62297eeb80016514996f58a3b3ece537590813ddef039d65bf9b966cc5262f7" => :big_sur
+    sha256 "43f6215e8bed4c02a32ee1d0ad69124d055ce285770ae6f4d132796cfa928d25" => :catalina
+    sha256 "1d5bb3f73bc5bfdc6b7d0192a52a3bdf69b89600345e3da8cfcd4aff103e83b5" => :mojave
   end
 
   depends_on "python@3.9"
