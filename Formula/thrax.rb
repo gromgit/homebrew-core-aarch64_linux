@@ -5,6 +5,13 @@ class Thrax < Formula
   sha256 "823182c9bca7f866437c0d8db9fc4c90688766f4492239bfbd73be20687c622e"
   license "Apache-2.0"
 
+  bottle do
+    cellar :any
+    sha256 "a072e3d04f88b542f3b52bc87c2e759c7bab28ae275a82f56f9cb289c5d35361" => :big_sur
+    sha256 "d78aa60f3cd29ac49ef887d6534a93cfbb605e133514e75681041d0b5744e0ac" => :catalina
+    sha256 "6047f5e9d277a6987f580803d7e7220f6eceb76f84805f91aafb5c729bb39f0a" => :mojave
+  end
+
   depends_on "openfst"
 
   def install
