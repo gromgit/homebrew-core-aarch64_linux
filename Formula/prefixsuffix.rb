@@ -3,8 +3,8 @@ class Prefixsuffix < Formula
   homepage "https://github.com/murraycu/prefixsuffix"
   url "https://download.gnome.org/sources/prefixsuffix/0.6/prefixsuffix-0.6.9.tar.xz"
   sha256 "fc3202bddf2ebbb93ffd31fc2a079cfc05957e4bf219535f26e6d8784d859e9b"
-  license "GPL-2.0"
-  revision 6
+  license "GPL-2.0-or-later"
+  revision 7
 
   livecheck do
     url :stable
