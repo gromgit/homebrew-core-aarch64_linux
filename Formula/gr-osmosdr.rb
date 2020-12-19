@@ -8,9 +8,9 @@ class GrOsmosdr < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 "615d2cc006b9128bedb04beebfcf597fd538a6c0d995aa559ea8782835d4e055" => :big_sur
-    sha256 "0c00cae94bb4716f1eabce5c0cda827ef3cecf86cc5696c52b4d9a75a4a08819" => :catalina
-    sha256 "9907e3f120999006e63e6309597ed3ded713b14633689fc42e94875e03417d84" => :mojave
+    sha256 "54c41d6a6ad6ff508d1a9fb3fcebf1d245ecd50eded905b9ca51f26fb6f4d01a" => :big_sur
+    sha256 "781bf31b9c0ef7764dad1509148fadade96b1c8c43042951bf3e0b3ade05ae3e" => :catalina
+    sha256 "1316ec1150647972436f96a9d957b5c5b7889f6f962217b181e6185a939aa2e2" => :mojave
   end
 
   depends_on "cmake" => :build
