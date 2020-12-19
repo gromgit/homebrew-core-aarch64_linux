@@ -5,6 +5,13 @@ class ZshAsync < Formula
   sha256 "3ba4cbc6f560bf941fe80bee45754317dcc444f5f6114a7ebd40ca04eb20910a"
   license "MIT"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "c1f30da09c587d1670b42fd489fa6507b3166633887565b17e7d5f4dc892f2ad" => :big_sur
+    sha256 "5f7835aa0c6c9d73dd63f6a27655f359caa76d34caec5ae0465bca2390349e50" => :catalina
+    sha256 "bdf610a55644e4182b35307a946ecb6b3724fbade6dabae0dc1d655079b34614" => :mojave
+  end
+
   def install
     zsh_function.install "async.zsh" => "async"
   end
