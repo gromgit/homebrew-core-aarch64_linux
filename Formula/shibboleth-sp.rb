@@ -12,9 +12,9 @@ class ShibbolethSp < Formula
   end
 
   bottle do
-    sha256 "60cd0ce81b065b7031f65b35fda8009177d7472a9dd323b63f9d989c009430de" => :big_sur
-    sha256 "4ffa054c95953b9dd00dbb89d42bd1f71cfde7318f6945f0524799b66971a03d" => :catalina
-    sha256 "3cc19f2ce2d570cd580f287c87954a2dd9c3380d011178463eea74e1b16e097b" => :mojave
+    sha256 "781bbb7e15b8bd627faebbbba9d0ab953f16b404bc5f038b3922ef9758a93a54" => :big_sur
+    sha256 "a1ef4ff3fee2e58592efa0c5ae94e3db23989ca840a4ea5243cba20443b0e756" => :catalina
+    sha256 "3b38d18397b68c481e8872fbd45a3771a45e5278c6f1c2e2540111c18404a865" => :mojave
   end
 
   depends_on "apr" => :build
