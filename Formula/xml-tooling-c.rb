@@ -12,10 +12,9 @@ class XmlToolingC < Formula
 
   bottle do
     cellar :any
-    sha256 "30c5c4b06ce22a4442e66be4a8f0152aa1fc444f850f4f3c1a65723ca860d97f" => :big_sur
-    sha256 "0608d8938278794d1101b96e70d7f408b3e12f270eccc9cb1a8595e2880ab934" => :catalina
-    sha256 "d04a629486e2478f98c1f729c474d18fee5fc4bb0b2f2bdab17c6e4b3131db9f" => :mojave
-    sha256 "6ee9b56942dcf7b05e830c11eb4249c14d07ae367433e40838454f8e6cd84858" => :high_sierra
+    sha256 "57c8c16990f589f0e07a7e5d57dd202c4f35b6e66d57bbda66d4d9bc2af6bd33" => :big_sur
+    sha256 "859a056b4271610e876b42606d145a0ddc2d79cb94c0470e2ca93cdef38c4e2b" => :catalina
+    sha256 "69d6679f8c610867e03269af38ce56306af656a2e1f7b3bbce30d25085d6ae9a" => :mojave
   end
 
   depends_on "pkg-config" => :build
