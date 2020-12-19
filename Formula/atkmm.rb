@@ -1,10 +1,9 @@
 class Atkmm < Formula
   desc "Official C++ interface for the ATK accessibility toolkit library"
   homepage "https://www.gtkmm.org/"
-  url "https://download.gnome.org/sources/atkmm/2.28/atkmm-2.28.1.tar.xz"
-  sha256 "116876604770641a450e39c1f50302884848ce9cc48d43c5dc8e8efc31f31bad"
+  url "https://download.gnome.org/sources/atkmm/2.36/atkmm-2.36.0.tar.xz"
+  sha256 "c93fa9f3876536391b54c307a923b7788e79796ace69a5e9141d67398c019973"
   license "LGPL-2.1-or-later"
-  revision 1
 
   livecheck do
     url :stable
@@ -21,7 +20,7 @@ class Atkmm < Formula
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "atk"
-  depends_on "glibmm@2.64"
+  depends_on "glibmm"
 
   def install
     ENV.cxx11
@@ -45,19 +44,21 @@ class Atkmm < Formula
     atk = Formula["atk"]
     gettext = Formula["gettext"]
     glib = Formula["glib"]
-    glibmm = Formula["glibmm@2.64"]
-    libsigcxx = Formula["libsigc++@2"]
+    glibmm = Formula["glibmm"]
+    libsigcxx = Formula["libsigc++"]
     flags = %W[
       -I#{atk.opt_include}/atk-1.0
       -I#{gettext.opt_include}
       -I#{glib.opt_include}/glib-2.0
       -I#{glib.opt_lib}/glib-2.0/include
-      -I#{glibmm.opt_include}/glibmm-2.4
-      -I#{glibmm.opt_lib}/glibmm-2.4/include
-      -I#{include}/atkmm-1.6
-      -I#{lib}/atkmm-1.6/include
-      -I#{libsigcxx.opt_include}/sigc++-2.0
-      -I#{libsigcxx.opt_lib}/sigc++-2.0/include
+      -I#{glibmm.opt_include}/giomm-2.68
+      -I#{glibmm.opt_include}/glibmm-2.68
+      -I#{glibmm.opt_lib}/giomm-2.68/include
+      -I#{glibmm.opt_lib}/glibmm-2.68/include
+      -I#{include}/atkmm-2.36
+      -I#{lib}/atkmm-2.36/include
+      -I#{libsigcxx.opt_include}/sigc++-3.0
+      -I#{libsigcxx.opt_lib}/sigc++-3.0/include
       -L#{atk.opt_lib}
       -L#{gettext.opt_lib}
       -L#{glib.opt_lib}
@@ -65,16 +66,16 @@ class Atkmm < Formula
       -L#{libsigcxx.opt_lib}
       -L#{lib}
       -latk-1.0
-      -latkmm-1.6
+      -latkmm-2.36
       -lglib-2.0
-      -lglibmm-2.4
+      -lglibmm-2.68
       -lgobject-2.0
-      -lsigc-2.0
+      -lsigc-3.0
     ]
     on_macos do
       flags << "-lintl"
     end
-    system ENV.cxx, "-std=c++11", "test.cpp", "-o", "test", *flags
+    system ENV.cxx, "-std=c++17", "test.cpp", "-o", "test", *flags
     system "./test"
   end
 end
