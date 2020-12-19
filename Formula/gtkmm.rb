@@ -4,7 +4,7 @@ class Gtkmm < Formula
   url "https://download.gnome.org/sources/gtkmm/2.24/gtkmm-2.24.5.tar.xz"
   sha256 "0680a53b7bf90b4e4bf444d1d89e6df41c777e0bacc96e9c09fc4dd2f5fe6b72"
   license "LGPL-2.1-or-later"
-  revision 6
+  revision 7
 
   livecheck do
     url :stable
@@ -19,12 +19,12 @@ class Gtkmm < Formula
   end
 
   depends_on "pkg-config" => :build
-  depends_on "atkmm"
+  depends_on "atkmm@2.28"
   depends_on "cairomm@1.14"
   depends_on "glibmm@2.64"
   depends_on "gtk+"
   depends_on "libsigc++@2"
-  depends_on "pangomm"
+  depends_on "pangomm@2.42"
 
   def install
     ENV.cxx11
@@ -42,7 +42,7 @@ class Gtkmm < Formula
       }
     EOS
     atk = Formula["atk"]
-    atkmm = Formula["atkmm"]
+    atkmm = Formula["atkmm@2.28"]
     cairo = Formula["cairo"]
     cairomm = Formula["cairomm@1.14"]
     fontconfig = Formula["fontconfig"]
@@ -56,7 +56,7 @@ class Gtkmm < Formula
     libpng = Formula["libpng"]
     libsigcxx = Formula["libsigc++@2"]
     pango = Formula["pango"]
-    pangomm = Formula["pangomm"]
+    pangomm = Formula["pangomm@2.42"]
     pixman = Formula["pixman"]
     flags = %W[
       -I#{atk.opt_include}/atk-1.0
