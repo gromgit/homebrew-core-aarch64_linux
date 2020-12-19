@@ -12,10 +12,10 @@ class Heimdal < Formula
   end
 
   bottle do
-    sha256 "7a57b6c9bd3a0279831f0ff55f104e0fd56be2d9f64d0bc36f923ff99a899960" => :big_sur
-    sha256 "339287d54592d68d27ad3420f71c02bd0bf988b901116a4609ac05560fe38ca0" => :catalina
-    sha256 "c1d88cd19ae7300789f7423ccbda607a1d08c81881e4eb697686211e9451067a" => :mojave
-    sha256 "05b2d973befd459ec885e88876f6ebe9730c684f004eadb8e13bad31ac2dc1cc" => :high_sierra
+    rebuild 1
+    sha256 "95ad69bc1e08ebbd279062632bdf576982fbcba5c34a4ba83c7e91523952b6e6" => :big_sur
+    sha256 "6345879296177a9b33c73bbae4749debb92d20cf6fe951d51bb2c592f9d82b3b" => :catalina
+    sha256 "280f713c88dd355d0c385eaa7e3e4e3ae762854259b1edc801821287f132c15a" => :mojave
   end
 
   keg_only :shadowed_by_macos, "macOS provides Kerberos"
