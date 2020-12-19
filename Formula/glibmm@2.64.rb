@@ -9,6 +9,13 @@ class GlibmmAT264 < Formula
     url :stable
   end
 
+  bottle do
+    cellar :any
+    sha256 "59179b822c27f1c01e10ae59e44562dabc44f5f00f04c0951644f7d2465146eb" => :big_sur
+    sha256 "d8e9d38b8a4a3945777ccacc703363e1c036efa1aa2b49ee857a08e7938f7c5e" => :catalina
+    sha256 "838331b973d6d0498c16a28330e1354d63fa7dda297a32093eaf37660a0227c0" => :mojave
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
