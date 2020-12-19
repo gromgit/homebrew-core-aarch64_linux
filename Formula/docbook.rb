@@ -3,6 +3,7 @@ class Docbook < Formula
   homepage "https://docbook.org/"
   url "https://docbook.org/xml/5.1/docbook-v5.1-os.zip"
   sha256 "b3f3413654003c1e773360d7fc60ebb8abd0e8c9af8e7d6c4b55f124f34d1e7f"
+  license :cannot_represent
   revision 1
 
   livecheck do
