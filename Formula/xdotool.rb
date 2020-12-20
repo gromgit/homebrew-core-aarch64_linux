@@ -3,7 +3,9 @@ class Xdotool < Formula
   homepage "https://www.semicomplete.com/projects/xdotool/"
   url "https://github.com/jordansissel/xdotool/archive/v3.20160805.1.tar.gz"
   sha256 "ddafca1239075c203769c17a5a184587731e56fbe0438c09d08f8af1704e117a"
+  license "BSD-3-Clause"
   revision 2
+  head "https://github.com/jordansissel/xdotool.git"
 
   bottle do
     sha256 "7092970eee9f15fab6aad9e364cb23b29f11fc19b1edbedd3ac794a7858aecc5" => :catalina
@@ -17,11 +19,15 @@ class Xdotool < Formula
   depends_on "libxkbcommon"
   depends_on "libxtst"
 
-  def install
-    # Work around an issue with Xcode 8 on El Capitan, which
-    # errors out with `typedef redefinition with different types`
-    ENV.delete("SDKROOT") if MacOS.version == :el_capitan && MacOS::Xcode.version >= "8.0"
+  # Disable clock_gettime() workaround since the real API is available on OS/X >= 10.12
+  # Note that the PR from this patch was actually closed originally because of problems
+  # caused on pre-10.12 environments, but that is no longer a concern.
+  patch do
+    url "https://github.com/jordansissel/xdotool/commit/dffc9a1597bd96c522a2b71c20301f97c130b7a8.patch?full_index=1"
+    sha256 "447fa42ec274eb7488bb4aeeccfaaba0df5ae747f1a7d818191698035169a5ef"
+  end
 
+  def install
     system "make", "PREFIX=#{prefix}", "INSTALLMAN=#{man}", "install"
   end
 
