@@ -2,8 +2,10 @@ class MariadbConnectorC < Formula
   desc "MariaDB database connector for C applications"
   homepage "https://downloads.mariadb.org/connector-c/"
   url "https://downloads.mariadb.org/f/connector-c-3.1.11/mariadb-connector-c-3.1.11-src.tar.gz"
+  mirror "https://fossies.org/linux/misc/mariadb-connector-c-3.1.11-src.tar.gz"
   sha256 "3e6f6c399493fe90efdc21a3fe70c30434b7480e8195642a959f1dd7a0fa5b0f"
   license "LGPL-2.1-or-later"
+  revision 1
   head "https://github.com/mariadb-corporation/mariadb-connector-c.git"
 
   livecheck do
@@ -22,12 +24,14 @@ class MariadbConnectorC < Formula
   depends_on "openssl@1.1"
 
   uses_from_macos "curl"
+  uses_from_macos "zlib"
 
   conflicts_with "mariadb", because: "both install `mariadb_config`"
 
   def install
     args = std_cmake_args
     args << "-DWITH_OPENSSL=On"
+    args << "-DWITH_EXTERNAL_ZLIB=On"
     args << "-DOPENSSL_INCLUDE_DIR=#{Formula["openssl@1.1"].opt_include}"
     args << "-DCOMPILATION_COMMENT=Homebrew"
 
