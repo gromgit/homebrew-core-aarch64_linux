@@ -9,9 +9,9 @@ class Arb < Formula
 
   bottle do
     cellar :any
-    sha256 "2247c9011332a8a0b58429fe87e32dafa1ab0d9e6ad949f63005879544ae7914" => :big_sur
-    sha256 "0e83a92b14db51893838ac8a35e0463593a986a75d95235ab574651acd437326" => :catalina
-    sha256 "585c4e018bb9a6d95fd68f8bc84d24069a14780c2eedc720cfd3e3ba479f68e6" => :mojave
+    sha256 "0e09a51868eb29ac963d7a05de8d69582b84fcaa0daeda65d36a4836b3e8ce7a" => :big_sur
+    sha256 "735bd3b8dc3f89429d51b1fed7b0a651176d2816402eb5c88b7e7a33709d723f" => :catalina
+    sha256 "e2001e15a3cab1166c517a366269ad88258748cd8373253f071450d433c7f8cb" => :mojave
   end
 
   depends_on "cmake" => :build
