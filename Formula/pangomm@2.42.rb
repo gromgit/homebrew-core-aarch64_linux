@@ -9,6 +9,13 @@ class PangommAT242 < Formula
     url :stable
   end
 
+  bottle do
+    cellar :any
+    sha256 "5c9e14b2e7c96d10ffc4411eae99ce059578163bdc2230aaaf2f122c2ed1f816" => :big_sur
+    sha256 "98a193de21bc07a5e39cadd4e4967f30fd19e06c44c46ef24f0d4b8e184bec59" => :catalina
+    sha256 "cf3d702b8b506abcbcce428435b16f78a0ba75c2865094e9b391a8c2622af022" => :mojave
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
