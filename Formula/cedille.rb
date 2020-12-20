@@ -9,9 +9,10 @@ class Cedille < Formula
   head "https://github.com/cedille/cedille.git"
 
   bottle do
-    sha256 "f35c0eb5cfe557eea19c757244345a8761354ab34b59cba492f40b997b246ffa" => :catalina
-    sha256 "31cbfd570e8ec6a98991f5fe66b2b3b5865f1fbfcffa7cf6ba7d8509fc904eee" => :mojave
-    sha256 "fdffd4669a910e9435e09c7dbef6c85694cbd107e07c945c808ff2bdef3eee3b" => :high_sierra
+    rebuild 1
+    sha256 "9bfbd5b2e5b630d41cc5a43fe0c98931cad6c35751ce39328c5a26edc8070f3a" => :big_sur
+    sha256 "ec0149eec408a85bad6bc1e1475807b097d0c85e134c0f8ec88cb152422ebbd0" => :catalina
+    sha256 "a63ef04390299c7fad40453d4a979924e9d6d79e94d4eacfb3a6cfadb4e072a6" => :mojave
   end
 
   depends_on "agda" => :build
