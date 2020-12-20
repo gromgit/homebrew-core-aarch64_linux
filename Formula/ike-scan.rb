@@ -3,7 +3,7 @@ class IkeScan < Formula
   homepage "https://github.com/royhills/ike-scan"
   url "https://github.com/royhills/ike-scan/archive/1.9.4.tar.gz"
   sha256 "2865014185c129ac443beb7bf80f3c5eb93adb504cd307c5b6709199abf7c121"
-  license "GPL-3.0"
+  license "GPL-3.0-or-later"
   revision 1
 
   head "https://github.com/royhills/ike-scan.git"
@@ -19,6 +19,12 @@ class IkeScan < Formula
   depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "openssl@1.1"
+
+  # Fix Xcode 12 build: https://github.com/royhills/ike-scan/pull/32
+  patch do
+    url "https://github.com/royhills/ike-scan/commit/c9ef0569443b03fda5339911acb8056a73c952de.patch?full_index=1"
+    sha256 "890a60984c7e09570fe0b3a061dc2219bb793586bdf49ebd5dd338b3690ce52a"
+  end
 
   def install
     system "autoreconf", "-fvi"
