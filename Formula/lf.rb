@@ -7,10 +7,9 @@ class Lf < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "1fdb7e34f3790bc00e746e0a09615df05630f3bd7fcd0c52e45163d3e32d9ea0" => :big_sur
-    sha256 "577b07faf529ac6934b52a8c34453d76865938876b34ad8c860e14fbec5732b6" => :catalina
-    sha256 "7381c831dc9444b1b151d6b9c8bb8d4c6a8bf0030ebf6dee7fa0e34b00b5a78b" => :mojave
-    sha256 "6231de35fbdbc59be8ce3fb69cd5e87fee84dbfcb5aa81300835900109cc8161" => :high_sierra
+    sha256 "6044386633dc91ab445dbf477b18c2e6e5502a382036d6e87dd5cb9ff2d4f59e" => :big_sur
+    sha256 "168e8bb96c49691e5dad111bcce04c4877e22a730fe12e41ae2f87fdca139fe9" => :catalina
+    sha256 "bfd50575aa60082a49d4710a0dc414ff29e0f46093be5209e53253ba2aac15ca" => :mojave
   end
 
   depends_on "go" => :build
