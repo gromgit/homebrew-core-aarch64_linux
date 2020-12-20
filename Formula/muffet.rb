@@ -8,9 +8,9 @@ class Muffet < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e38e6f43851743efa2d25d1ffab71f7312385825ecfd8b29b1edfa14853427dd" => :big_sur
-    sha256 "32a9fed5222519754a3302d0a7b48e5598cd5408cec55d0357ed4c9ba9902c56" => :catalina
-    sha256 "51e5cb6791fc75534d3cc31aff5d2826955d646dac379c88d161f3da6675d4bf" => :mojave
+    sha256 "69140cc1b455447e3d854ddf1f72bf111f16b1172bb6c6b252eb91bfd33ba9dc" => :big_sur
+    sha256 "81e67b81c6f1ee2eb044713f4731fd52675c8680b50e9f7bbf8c88a6c759f50a" => :catalina
+    sha256 "8dd42b1d41d88aae4737aba6ad652449a3750e19b3ee633ebfe279289cd015a8" => :mojave
   end
 
   depends_on "go" => :build
