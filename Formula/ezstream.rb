@@ -13,9 +13,10 @@ class Ezstream < Formula
 
   bottle do
     cellar :any
-    sha256 "5dbee1cca793b44cd470bd858b3c6f53bd82c48609468fefe11fc79ba495fe56" => :catalina
-    sha256 "fe97ee0a48df55d159cbd9f9cb7c066cc003ff430fb211f83a95df41a2e555e2" => :mojave
-    sha256 "7714b3b155984c561dabce8a39c2668658cce995ee582aaca387fde476b38914" => :high_sierra
+    rebuild 1
+    sha256 "6e4ae956fd62819bb7417528bd7e30c8b95bcbdc313c786d42b41e506ac51667" => :big_sur
+    sha256 "f8ac059c41ccbe5e3f5ec47460cdd52b45c7bc4b3ef9f94fbbb371f26b220549" => :catalina
+    sha256 "78ccfbc94038fa03dba4badfc46bfa607154845dbf0b9c5f11066dc6cd013697" => :mojave
   end
 
   depends_on "check" => :build
