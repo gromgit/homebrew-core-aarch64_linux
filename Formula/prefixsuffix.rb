@@ -11,9 +11,9 @@ class Prefixsuffix < Formula
   end
 
   bottle do
-    sha256 "15de04984c558fc657406c078463e50010b995b55faa28797d5b751c1c61fe69" => :big_sur
-    sha256 "8de52a170c24c34d11d3dfdeeacc3274c9365aa3988cd448acbcdba86b0f30bd" => :catalina
-    sha256 "849354e6d09e1d57965b32056c49c067712c2775c8391de9ab7330d4e6801ba1" => :mojave
+    sha256 "1a206fbaa56f4f914d6abe1c1cafc05252227f50acc7f87aaf941796e8bab383" => :big_sur
+    sha256 "05aeea58be85836d1edd0bea80a9cc00e238286c710dfe142449a6ad5bf1f891" => :catalina
+    sha256 "6b8a81c367bedd1384555dc5a98a64b2cc2acdf50495e071606467373ea2b503" => :mojave
   end
 
   depends_on "intltool" => :build
