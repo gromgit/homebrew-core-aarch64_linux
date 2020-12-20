@@ -3,6 +3,7 @@ class Foremost < Formula
   homepage "https://foremost.sourceforge.io/"
   url "https://foremost.sourceforge.io/pkg/foremost-1.5.7.tar.gz"
   sha256 "502054ef212e3d90b292e99c7f7ac91f89f024720cd5a7e7680c3d1901ef5f34"
+  license :public_domain
 
   livecheck do
     url "http://foremost.sourceforge.net/"
@@ -22,7 +23,7 @@ class Foremost < Formula
     inreplace "Makefile" do |s|
       s.gsub! "/usr/", "#{prefix}/"
       s.change_make_var! "RAW_CC", ENV.cc
-      s.change_make_var! "RAW_FLAGS", ENV.cflags
+      s.gsub! /^RAW_FLAGS =/, "RAW_FLAGS = #{ENV.cflags}"
     end
 
     system "make", "mac"
