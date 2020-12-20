@@ -8,9 +8,10 @@ class Xdotool < Formula
   head "https://github.com/jordansissel/xdotool.git"
 
   bottle do
-    sha256 "7092970eee9f15fab6aad9e364cb23b29f11fc19b1edbedd3ac794a7858aecc5" => :catalina
-    sha256 "0a24fe2911c4db734794e7c22c596a9809602af3d974abe2aae2f6ef9babb777" => :mojave
-    sha256 "9e84711dc1979c07a5367c2a2638e07e01f9bb7b8fb5166b4d1cadaed6babb7b" => :high_sierra
+    rebuild 1
+    sha256 "341d016062ad7e0ffe416e8d70636a912ea62e8cfeae6bfd420935ed740c70a2" => :big_sur
+    sha256 "2a11b0772f3ae332186d8d257c9687e759772d4e3fbe8a42e6fa07e9a5f11329" => :catalina
+    sha256 "fd132f4ad55f7e709179a027878df3ee13d497d82ada355f323e2dd0b8f12409" => :mojave
   end
 
   depends_on "pkg-config" => :build
