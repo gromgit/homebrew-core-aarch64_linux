@@ -1,18 +1,12 @@
 class Cedille < Formula
   desc "Language based on the Calculus of Dependent Lambda Eliminations"
   homepage "https://cedille.github.io/"
+  url "https://github.com/cedille/cedille.git",
+    tag:      "v1.1.2",
+    revision: "4d8a343a8d3f0b318e3c1b3209d216912dbc06ee"
   license "MIT"
   revision 3
-
-  stable do
-    url "https://github.com/cedille/cedille/archive/v1.1.2.tar.gz"
-    sha256 "cf6578256105c7042b99a70a897c1ed60f856b28628b79205eb95730863b71cb"
-
-    resource "ial" do
-      url "https://github.com/cedille/ial/archive/v1.5.0.tar.gz"
-      sha256 "f003a785aba6743f4d76dcaafe3bc08bf879b2e1a7a198a4f192ced12b558f46"
-    end
-  end
+  head "https://github.com/cedille/cedille.git"
 
   bottle do
     sha256 "f35c0eb5cfe557eea19c757244345a8761354ab34b59cba492f40b997b246ffa" => :catalina
@@ -20,16 +14,8 @@ class Cedille < Formula
     sha256 "fdffd4669a910e9435e09c7dbef6c85694cbd107e07c945c808ff2bdef3eee3b" => :high_sierra
   end
 
-  head do
-    url "https://github.com/cedille/cedille.git"
-
-    resource "ial" do
-      url "https://github.com/cedille/ial.git"
-    end
-  end
-
   depends_on "agda" => :build
-  depends_on "cabal-install" => :build
+  depends_on "haskell-stack" => :build
   depends_on "ghc@8.8"
 
   # needed to build with agda 2.6.1
@@ -40,25 +26,19 @@ class Cedille < Formula
   patch :DATA
 
   def install
-    resource("ial").stage buildpath/"ial"
+    inreplace "stack.yaml", "resolver: lts-12.26", <<~EOS
+      resolver: lts-16.12
+      allow-newer: true
+      system-ghc: true
+      install-ghc: false
+    EOS
 
-    cabal_sandbox do
-      # build tools
-      cabal_install_tools "alex", "happy", "cpphs"
+    system "stack", "build", "--copy-bins", "--local-bin-path=#{bin}"
 
-      # build dependencies
-      cabal_install "ieee754"
-
-      # use the sandbox when building with Agda
-      ENV["GHC_PACKAGE_PATH"] = "#{buildpath/Dir[".cabal-sandbox/*packages.conf.d/"].first}:"
-
-      # build
-      system "make", "core/cedille-core", "cedille-mac"
-    end
+    system "make", "core/cedille-core"
 
     # binaries and elisp
     bin.install "core/cedille-core"
-    bin.install "cedille-mac" => "cedille"
     elisp.install "cedille-mode.el", "cedille-mode", "se-mode"
 
     # standard libraries
