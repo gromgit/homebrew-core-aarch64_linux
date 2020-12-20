@@ -1,11 +1,14 @@
 class Connect < Formula
   desc "Provides SOCKS and HTTPS proxy support to SSH"
-  homepage "https://bitbucket.org/gotoh/connect/wiki/Home"
-  url "https://bitbucket.org/gotoh/connect/get/1.105.tar.gz"
-  sha256 "e7c98d31787f93b51c62ee05e0b558cfb577cda8198834a6d5b4d32528bf63ee"
+  homepage "https://github.com/gotoh/ssh-connect"
+  url "https://github.com/gotoh/ssh-connect/archive/1.105.tar.gz"
+  sha256 "96c50fefe7ecf015cf64ba6cec9e421ffd3b18fef809f59961ef9229df528f3e"
+  license "GPL-2.0-or-later"
+  head "https://github.com/gotoh/ssh-connect.git"
 
   livecheck do
-    skip "Bitbucket repository is missing"
+    url :head
+    regex(/^(\d+(?:\.\d+)+)$/i)
   end
 
   bottle do
