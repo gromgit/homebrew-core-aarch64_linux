@@ -10,6 +10,13 @@ class Gtkmm4 < Formula
     regex(/gtkmm[._-]v?(4\.([0-8]\d*?)?[02468](?:\.\d+)*?)\.t/i)
   end
 
+  bottle do
+    cellar :any
+    sha256 "ef80d29cee5c8dc89f1c67286578a5ba4184c89f25e812156dc635a9949ba92f" => :big_sur
+    sha256 "167c1777a12807a3d6beb77c8eea5a2905402d3eb80f4e1a1799ac2284ac34f3" => :catalina
+    sha256 "9d9efaba8f60440d68c910bb2a4770fa41f7872e1cef3579c3491c2f5194c1fb" => :mojave
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => [:build, :test]
