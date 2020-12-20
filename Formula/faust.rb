@@ -7,9 +7,9 @@ class Faust < Formula
 
   bottle do
     cellar :any
-    sha256 "48f36d87c5d99c94dd5480fd24aacf1d12f7a1e0910c7c51d1486d00c732ead7" => :catalina
-    sha256 "1e1c7d96ce8b9aae9742fa9933e3b9f400a0396fb37f1acc493b7af99cee53fe" => :mojave
-    sha256 "a304cdfea4858109db24f99a54f16b95ad451804fd569d1b601bb4ba01921452" => :high_sierra
+    sha256 "6bca64d09f6bc052c71aaa01b1345294dab92dc30e7e02ec2775cf332d6eb310" => :big_sur
+    sha256 "3e17a2b3203fdf2851afde34281373fb2d8fe908e224f380bb1692aac8ee7564" => :catalina
+    sha256 "96f641dec558778e6e652bea11d4b446bcc7c61bebec5ec314862479b22989d7" => :mojave
   end
 
   depends_on "cmake" => :build
