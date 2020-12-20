@@ -37,25 +37,43 @@ class Cairo < Formula
   uses_from_macos "zlib"
 
   on_linux do
+    depends_on "libx11"
+    depends_on "libxcb"
     depends_on "libxext"
     depends_on "libxrender"
   end
 
   def install
+    args = %W[
+      --disable-dependency-tracking
+      --prefix=#{prefix}
+      --enable-gobject
+      --enable-svg
+      --enable-tee
+      --disable-valgrind
+    ]
+    on_macos do
+      args += %w[
+        --enable-quartz-image
+        --disable-xcb
+        --disable-xlib
+        --disable-xlib-xrender
+      ]
+    end
+    on_linux do
+      args += %w[
+        --enable-xcb
+        --enable-xlib
+        --enable-xlib-xrender
+      ]
+    end
+
     if build.head?
       ENV["NOCONFIGURE"] = "1"
       system "./autogen.sh"
     end
 
-    system "./configure", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}",
-                          "--enable-gobject=yes",
-                          "--enable-svg=yes",
-                          "--enable-tee=yes",
-                          "--enable-quartz-image",
-                          "--enable-xcb=no",
-                          "--enable-xlib=no",
-                          "--enable-xlib-xrender=no"
+    system "./configure", *args
     system "make", "install"
   end
 
