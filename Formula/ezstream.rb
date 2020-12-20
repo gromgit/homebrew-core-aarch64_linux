@@ -3,6 +3,13 @@ class Ezstream < Formula
   homepage "https://icecast.org/ezstream/"
   url "https://downloads.xiph.org/releases/ezstream/ezstream-1.0.1.tar.gz"
   sha256 "fc4bf494897a8b1cf75dceefb1eb22ebd36967e5c3b5ce2af9858dbb94cf1157"
+  license "GPL-2.0-only"
+  head "https://gitlab.xiph.org/xiph/ezstream.git"
+
+  livecheck do
+    url "https://downloads.xiph.org/releases/ezstream/"
+    regex(/href=.*?ezstream[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
 
   bottle do
     cellar :any
@@ -17,6 +24,13 @@ class Ezstream < Formula
   depends_on "taglib"
 
   uses_from_macos "libxml2"
+
+  # Work around issue with <sys/random.h> not including its dependencies
+  # https://gitlab.xiph.org/xiph/ezstream/-/issues/2270
+  patch :p0 do
+    url "https://raw.githubusercontent.com/macports/macports-ports/fa36881/audio/ezstream/files/sys-types.patch"
+    sha256 "a5c39de970e1d43dc2dac84f4a0a82335112da6b86f9ea09be73d6e95ce4716c"
+  end
 
   def install
     system "./configure", "--disable-debug",
