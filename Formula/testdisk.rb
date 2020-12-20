@@ -28,7 +28,8 @@ class Testdisk < Formula
 
   test do
     path = "test.dmg"
-    system "hdiutil", "create", "-megabytes", "10", path
+    cp test_fixtures(path + ".gz"), path + ".gz"
+    system "gunzip", path
     system "#{bin}/testdisk", "/list", path
   end
 end
