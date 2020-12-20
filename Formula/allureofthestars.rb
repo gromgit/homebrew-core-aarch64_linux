@@ -18,14 +18,14 @@ class Allureofthestars < Formula
   end
 
   depends_on "cabal-install" => :build
-  depends_on "ghc@8.8" => :build
   depends_on "pkg-config" => :build
+  depends_on "ghc"
   depends_on "gmp"
   depends_on "sdl2_ttf"
 
   def install
     system "cabal", "v2-update"
-    system "cabal", "v2-install", *std_cabal_v2_args
+    system "cabal", "--store-dir=#{libexec}", "v2-install", *std_cabal_v2_args
   end
 
   test do
@@ -33,7 +33,7 @@ class Allureofthestars < Formula
       shell_output("#{bin}/Allure --dbgMsgSer --dbgMsgCli --logPriority 0 --newGame 3 --maxFps 100000 " \
                                  "--stopAfterFrames 50 --automateAll --keepAutomated --gameMode battle " \
                                  "--setDungeonRng 7 --setMainRng 7")
-    assert_equal "", shell_output("cat ~/.Allure/stderr.txt")
-    assert_match "UI client FactionId 1 stopped", shell_output("cat ~/.Allure/stdout.txt")
+    assert_equal "", (testpath/".Allure/stderr.txt").read
+    assert_match "UI client FactionId 1 stopped", (testpath/".Allure/stdout.txt").read
   end
 end
