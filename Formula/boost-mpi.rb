@@ -8,10 +8,9 @@ class BoostMpi < Formula
   head "https://github.com/boostorg/boost.git"
 
   bottle do
-    sha256 "430d907082d3e26559451e1e67512e9a23f863ef556c46172ed24ab5bd8d9b38" => :big_sur
-    sha256 "3a7a77d91db3d7f2f04bc564c2189769e53e37ffeb2cc08a716a299a341b0eb8" => :catalina
-    sha256 "78868cfa11d4bccdbbedb69ad36c208c7b467d77f4fefd198591e7b51a3d250c" => :mojave
-    sha256 "ae3da02f294d9eaaca43ef27316cb117136b84e3f7ce8eecbe671f17d1d2e90a" => :high_sierra
+    sha256 "e26c78b7b79809c2011c4cdfd11affa1c67c7f11ea3bb48a2ed36b23438b3430" => :big_sur
+    sha256 "9e8f6567030032ca400b8c4efa109cbdb43f7e0736638db6255ae8c1c194b505" => :catalina
+    sha256 "18c0d683a25e9ec0e7bf24a5d0a1fa8fae728719fa14d7b236656be1dc56d15c" => :mojave
   end
 
   # Test with cmake to avoid issues like:
