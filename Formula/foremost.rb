@@ -13,10 +13,10 @@ class Foremost < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 2
-    sha256 "3ce88077de06f1f58980822adeed92ca6db4b32bad5ed24aa3912dc8f0a1a47f" => :catalina
-    sha256 "2255dbe5608916e081e46f1d332fcfc9b47265630827a472c4166daa061ea373" => :mojave
-    sha256 "4411ec156c431a8715ba5d74f101c8f4e54793001424729dde2e305abf570558" => :high_sierra
+    rebuild 3
+    sha256 "c8f1ad7327f5cc999d9c54486bfcf2a1c6ab4ff3e76b455b3ba79f930befba14" => :big_sur
+    sha256 "9ccac7b43068a6c89c5b48b33af7bfac09ab7e69fb36b1376e79646c6a01f049" => :catalina
+    sha256 "a552aed53b1ca671b4c23e0dd61ce2e82ea09a0c2798615a6a44860475aeaea7" => :mojave
   end
 
   def install
