@@ -13,13 +13,10 @@ class Connect < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "a353ddbeceae3a28038be62f2bbbdc54be7f2bd8642c57e33c2cd5f883dcfb3d" => :catalina
-    sha256 "9950d137f925a1a64a241235fa355ec0b73238e1d89c9b31cc979ce8ccba3f98" => :mojave
-    sha256 "406798ed3fe31bdf93780ea4f33b3be0c14b3d262ff09c3fa11eb6bad509a643" => :high_sierra
-    sha256 "20658283a4ed9ee93c6a6faeb2b33d0b3721ababb31068b6d898da5db77b0a68" => :sierra
-    sha256 "af244ce650bc1ebd50209b62d98c9780df9ff3b90b2b7496f7b74426f33349a6" => :el_capitan
-    sha256 "1285bb995a9eed5ce5198da853bd33ce49c04ac0caa328b651be5d0421e784f4" => :yosemite
-    sha256 "4f1dffe41e3164e12fe447c123e17a998cdc936d5dddb7cdc6195fb1b2293fcb" => :mavericks
+    rebuild 1
+    sha256 "90d0c91146180552a3a023ceba3850804139eb30b146151efe9c6d889ab9c99d" => :big_sur
+    sha256 "a08dfce847d75746d2b31ed3561e961fdcf950b051c5860e6d137ff5e1bcd1c7" => :catalina
+    sha256 "cc0a39f7e2fea7672f6d691d2e1221d0c5963a9f7e0039317930418fc7c7ebfa" => :mojave
   end
 
   def install
