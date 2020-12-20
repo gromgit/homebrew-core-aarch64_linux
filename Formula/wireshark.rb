@@ -13,9 +13,9 @@ class Wireshark < Formula
   end
 
   bottle do
-    sha256 "20a564de5a3e02761f7ccb4adeb752f21b1f5828e93195d970f26eb9ba962cb7" => :big_sur
-    sha256 "0d703466ed67f0071bf3bec9a6243a9b3a959c48c612fbc10fe9caba3bc02e90" => :catalina
-    sha256 "b1a95843dda464ba3f82316220981f91b6d6475ec6445e4e39ddfb68d2ba3b3d" => :mojave
+    sha256 "a7574115b2e92bbdc12108e14641e7e77f6a8613126e04960ce4f133025b6f71" => :big_sur
+    sha256 "8f09f802d20dc9d86b77482004347f034a3875e9d2c1ea3bf4d72dc937e78655" => :catalina
+    sha256 "e363ca19a898a0f480ec35fac73dc3fdbc6cbe75428edb03c74b5ee478cedeb6" => :mojave
   end
 
   depends_on "cmake" => :build
