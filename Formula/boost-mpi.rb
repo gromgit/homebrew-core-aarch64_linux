@@ -1,9 +1,9 @@
 class BoostMpi < Formula
   desc "C++ library for C++/MPI interoperability"
   homepage "https://www.boost.org/"
-  url "https://dl.bintray.com/boostorg/release/1.74.0/source/boost_1_74_0.tar.bz2"
-  mirror "https://dl.bintray.com/homebrew/mirror/boost_1_74_0.tar.bz2"
-  sha256 "83bfc1507731a0906e387fc28b7ef5417d591429e51e788417fe9ff025e116b1"
+  url "https://dl.bintray.com/boostorg/release/1.75.0/source/boost_1_75_0.tar.bz2"
+  mirror "https://dl.bintray.com/homebrew/mirror/boost_1_75_0.tar.bz2"
+  sha256 "953db31e016db7bb207f11432bef7df100516eeb746843fa0486a222e3fd49cb"
   license "BSL-1.0"
   head "https://github.com/boostorg/boost.git"
 
@@ -14,6 +14,9 @@ class BoostMpi < Formula
     sha256 "ae3da02f294d9eaaca43ef27316cb117136b84e3f7ce8eecbe671f17d1d2e90a" => :high_sierra
   end
 
+  # Test with cmake to avoid issues like:
+  # https://github.com/Homebrew/homebrew-core/issues/67285
+  depends_on "cmake" => :test
   depends_on "boost"
   depends_on "open-mpi"
 
@@ -90,5 +93,8 @@ class BoostMpi < Formula
     boost = Formula["boost"]
     system "mpic++", "test.cpp", "-L#{lib}", "-L#{boost.lib}", "-lboost_mpi", "-lboost_serialization", "-o", "test"
     system "mpirun", "-np", "2", "./test"
+
+    (testpath/"CMakeLists.txt").write "find_package(Boost COMPONENTS mpi REQUIRED)"
+    system "cmake", ".", "-Wno-dev"
   end
 end
