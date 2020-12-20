@@ -5,6 +5,13 @@ class XcbUtilKeysyms < Formula
   sha256 "0ef8490ff1dede52b7de533158547f8b454b241aa3e4dcca369507f66f216dd9"
   license "X11"
 
+  bottle do
+    cellar :any
+    sha256 "702425d6d222f48788f38ab247dd84664f5a4d349484634a9f775b64045cbaca" => :big_sur
+    sha256 "6ad4d1328c04a6ef44033161542d0f27f94160cb326af4572c86473e8d0cba09" => :catalina
+    sha256 "a6abcd84a8ded46e939d3551642e08a87fddb9fd8a2744071351086ddd35170c" => :mojave
+  end
+
   depends_on "pkg-config" => [:build, :test]
   depends_on "util-macros" => :build
   depends_on "libxcb"
