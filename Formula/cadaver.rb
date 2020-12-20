@@ -5,7 +5,9 @@ class Cadaver < Formula
   mirror "https://src.fedoraproject.org/repo/pkgs/cadaver/cadaver-0.23.3.tar.gz/502ecd601e467f8b16056d2acca39a6f/cadaver-0.23.3.tar.gz"
   mirror "https://web.archive.org/web/20170629224036/www.webdav.org/cadaver/cadaver-0.23.3.tar.gz"
   sha256 "fd4ce68a3230ba459a92bcb747fc6afa91e46d803c1d5ffe964b661793c13fca"
+  license "GPL-2.0-or-later"
   revision 5
+  head "https://github.com/notroj/cadaver.git"
 
   livecheck do
     url :homepage
@@ -50,7 +52,7 @@ __END__
      if test "$ne_cv_lib_neon" = "yes"; then
         ne_cv_lib_neonver=no
 -       for v in 27 28 29; do
-+       for v in 27 28 29 30; do
++       for v in 27 28 29 30 31; do
            case $ne_libver in
            0.$v.*) ne_cv_lib_neonver=yes ;;
            esac
@@ -60,8 +62,8 @@ __END__
  else
 -    { $as_echo "$as_me:$LINENO: incompatible neon library version $ne_libver: wanted 0.27 28 29" >&5
 -$as_echo "$as_me: incompatible neon library version $ne_libver: wanted 0.27 28 29" >&6;}
-+    { $as_echo "$as_me:$LINENO: incompatible neon library version $ne_libver: wanted 0.27 28 29 30" >&5
-+$as_echo "$as_me: incompatible neon library version $ne_libver: wanted 0.27 28 29 30" >&6;}
++    { $as_echo "$as_me:$LINENO: incompatible neon library version $ne_libver: wanted 0.27 28 29 30 31" >&5
++$as_echo "$as_me: incompatible neon library version $ne_libver: wanted 0.27 28 29 30 31" >&6;}
      neon_got_library=no
  fi
  
