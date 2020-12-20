@@ -12,10 +12,9 @@ class Kafka < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "12f128d0371a9dd24b2ed9909311c4626310ccbf90774d6c559e310f6b03f975" => :big_sur
-    sha256 "83589fb8053e087bb0c667c491f1d688e186864fdb1ae40ea9c4c910c4b8cc02" => :catalina
-    sha256 "8d3b3d4db0bbf7f8e6e9a606099570bfeabfd3ebe5c965203f884b6bfc900c7a" => :mojave
-    sha256 "d6b2a8e37b0c682c49a3b9c6b47c5587b6a9e2f14505de84d56c26f3bd5777a4" => :high_sierra
+    sha256 "ca872162f6fd02dc02a554a2c84f3b92cb5b2648f92dd8e0daf16eae6fd02ed3" => :big_sur
+    sha256 "ab63bbcd513acd2c9d39fda4f1888e5a8d96d3df819fb05b1c50e75fc3d2230f" => :catalina
+    sha256 "c7ef596aafc4e23c1144348e4e258e892135db6d9cebbd4d1a2a3d0da009ec79" => :mojave
   end
 
   depends_on "openjdk"
