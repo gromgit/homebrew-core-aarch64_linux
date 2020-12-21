@@ -23,6 +23,10 @@ class Jnettop < Formula
   depends_on "glib"
 
   def install
+    # Work around "-Werror,-Wimplicit-function-declaration" issues with
+    # configure scripts on Xcode 12:
+    ENV.append "CFLAGS", "-Wno-implicit-function-declaration"
+
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
