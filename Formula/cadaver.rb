@@ -15,10 +15,10 @@ class Cadaver < Formula
   end
 
   bottle do
-    sha256 "44367afa090d79665cfc760d44daa172e1489627aaf7b8a125af8701b2b813e4" => :catalina
-    sha256 "57ebca208464b812e3bbb1df71e68369227d29005a15c990087f7de761007458" => :mojave
-    sha256 "d828c3a7454ea82ec5e575aebc3f57911ee3f08e45ed64ae1293026fc0ee8380" => :high_sierra
-    sha256 "2a80f1355db0d31d395596ab4941565af8f3d6dda36952c834e2ebeaadb9d65b" => :sierra
+    rebuild 1
+    sha256 "240a41ea5b71aa144bea0fdb28b6233130d5368e8a221171eaa7bee24f5075a6" => :big_sur
+    sha256 "da94dea10afd90e1d0e41f24d4319ea006bf909381de2c2379c3144374c3feff" => :catalina
+    sha256 "a232491b47135718f6cf65d00954099d92a43f5fcc6b01838a676faa77f2ed13" => :mojave
   end
 
   depends_on "pkg-config" => :build
