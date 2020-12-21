@@ -12,9 +12,9 @@ class Libgnomecanvasmm < Formula
 
   bottle do
     cellar :any
-    sha256 "a5c94355276b754903c48790c57c18ee4c8c0f794bb7b390a93fb4474703e658" => :big_sur
-    sha256 "19738b123860a54f4ca307ffcd42c0de8ff324ea0ce060c49e734bc4d0bebd26" => :catalina
-    sha256 "1827d05f1125389b3786832bbb741b65a375de9d3f16554f77432ab1fca13027" => :mojave
+    sha256 "109859d2925c79b17566e0aaef6ba7142b611a4b89c79d8568fe9de0cea113ba" => :big_sur
+    sha256 "11e5ae5c4a485d806232311f719cd7553cf88329c55efa0c4c01f60c4d77d9a3" => :catalina
+    sha256 "92941b52627b1511007fc56a0f49ec3f19c13fd6c2e816e3649e50b5eb8b704e" => :mojave
   end
 
   depends_on "pkg-config" => [:build, :test]
