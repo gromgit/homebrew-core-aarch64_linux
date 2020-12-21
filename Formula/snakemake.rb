@@ -14,9 +14,9 @@ class Snakemake < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "aba21c4d14d6396f5eeb43fca43ab86fe4ff3c7d7da263b6ea34c1fc8c397f43" => :big_sur
-    sha256 "32ef9d58335f6a40ef135971ededce3ede2c97977a45ee2ce95b1be26254b64f" => :catalina
-    sha256 "f648ffc020ec8c20c7a1c7ca81c5663b48d3cb8a4c972c978a3fa7117da126e8" => :mojave
+    sha256 "51ea23a34f8cc0eb35b7d2bf68bd2f666b79f89e602411b383d91d188ce2de0b" => :big_sur
+    sha256 "8a0b5058e7e720afc683d1460bc075e4dc03b8b30ce070bf3a6dd3c05c255ac7" => :catalina
+    sha256 "27ce16e163f5d990acf06b05c0faebf52db92314066712bab3715740de8568cf" => :mojave
   end
 
   depends_on "cbc"
