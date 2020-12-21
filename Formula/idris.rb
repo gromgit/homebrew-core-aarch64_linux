@@ -13,18 +13,13 @@ class Idris < Formula
   end
 
   depends_on "cabal-install" => :build
-  depends_on "ghc@8.6" => :build # 8.8 will be supported in the next release
   depends_on "pkg-config" => :build
+  depends_on "ghc@8.8"
   depends_on "libffi"
 
   def install
-    args = *std_cabal_v2_args
-    args << "-f"
-    args << "FFI"
-    args << "-f" << "release" if build.stable?
-
     system "cabal", "v2-update"
-    system "cabal", "v2-install", args
+    system "cabal", "--storedir=#{libexec}", "v2-install", *std_cabal_v2_args
   end
 
   test do
