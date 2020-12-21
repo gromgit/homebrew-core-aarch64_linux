@@ -38,6 +38,8 @@ class Exim < Formula
       s.gsub! "/var/spool/exim", var/"spool/exim"
       # https://trac.macports.org/ticket/38654
       s.gsub! 'TMPDIR="/tmp"', "TMPDIR=/tmp"
+    end
+    open("Local/Makefile", "a") do |s|
       s << "AUTH_PLAINTEXT=yes\n"
       s << "SUPPORT_TLS=yes\n"
       s << "USE_OPENSSL=yes\n"
