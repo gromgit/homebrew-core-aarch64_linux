@@ -11,12 +11,9 @@ class Gtksourceview < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 "4a5b5382e28be8397fdd0b2df14b095e437a77ac854a700aa0d9876f82ed174c" => :big_sur
-    sha256 "c17eddcfc4490429a25b8c2ebd5dd32ac430e8bb26230698910bde85d2b48af6" => :catalina
-    sha256 "240b0c4807eb0920d9e349898f637d1070eaff855a06ae8389e2894d359c3096" => :mojave
-    sha256 "ac6289f22ae87186413936732cba3aaaf9b8d15ff4b71c574bf6c874bb6d1df4" => :high_sierra
-    sha256 "eb5679608c0d4b848640218761d6978a7b1a914721b31e648d92ed8b5968bf85" => :sierra
+    sha256 "211ad57ec70d9f855d79f8a463ef2346556289239599a9aa4ffa9c48a347d2b0" => :big_sur
+    sha256 "f50a88ebea0a96ab78b14db8a5b726c8996daccc9e0fea31616cc97527195a60" => :catalina
+    sha256 "9993fdad23678f2cae6f3eca54560d20438ae43f386a0cf4baa8a4f43ba6af2f" => :mojave
   end
 
   depends_on "intltool" => :build
