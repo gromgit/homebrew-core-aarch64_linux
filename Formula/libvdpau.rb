@@ -10,6 +10,12 @@ class Libvdpau < Formula
     regex(/^(?:libvdpau[._-])?v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 "74a3ea48e33530a014162fab0c6502f7a6be8aff25b05bd5fe971dd9d39e1371" => :big_sur
+    sha256 "9b57bf4d53024c75f4a431fd814fa0b6f54163d13dfbb63607d41c1a43b7117d" => :catalina
+    sha256 "59980ec6bf90b676354ddda5e3c93a6240c4564d1c01aa35b1f1aa804d7b949a" => :mojave
+  end
+
   depends_on "pkg-config" => [:build, :test]
   depends_on "libx11"
   depends_on "libxext"
