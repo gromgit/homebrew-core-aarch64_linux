@@ -4,6 +4,7 @@ class ClawsMail < Formula
   url "https://www.claws-mail.org/releases/claws-mail-3.17.8.tar.gz"
   sha256 "50d40789d33063c16b38b4177be88ffb1d499e75007e8630670996fa2cb25f20"
   license "GPL-3.0-or-later"
+  revision 1
 
   bottle do
     sha256 "9ba42699814c854729bbbea6f91d446e5202eb017ac8fcff8fa956e151472d02" => :big_sur
