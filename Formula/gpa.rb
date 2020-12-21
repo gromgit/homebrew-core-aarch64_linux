@@ -12,11 +12,9 @@ class Gpa < Formula
   end
 
   bottle do
-    sha256 "99a96ea7888131c8cd627907ebed8c180e5cd1a1ce0ff7567b684a1bc67e0c4c" => :big_sur
-    sha256 "296e517c02d381101befecef3700d17c12a9542dd0b105912f304846a7d54fb2" => :catalina
-    sha256 "183d889ae94650931d7ed470ec643a9e5b02843e037a97de2669f2d48076e996" => :mojave
-    sha256 "dc9d49486a627330931c0d2caeb6af4629e3871bdbff840ae33e5afb97c087ba" => :high_sierra
-    sha256 "73e3e3c27b72b36ed733b01435dd4eb9538f036cf1a817d48a171e58b70de395" => :sierra
+    sha256 "b4476f76bdd1e9b7acb836a49cb7e216726d277d04d24ce1b5c2d3d7e392adf0" => :big_sur
+    sha256 "c598e546d83f042d3de1011bff926a839c34e56c06a4c9cc6dbab25ff9c19df6" => :catalina
+    sha256 "14eace8606e49fe9d3d2fa39a9f79fbbaca7cff7d78c0cb7027033f92133fa04" => :mojave
   end
 
   depends_on "pkg-config" => :build
