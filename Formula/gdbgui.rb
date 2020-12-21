@@ -13,10 +13,9 @@ class Gdbgui < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e32feb826945bf7c04b3991f8541a769b5554995bdb115347727ac158066ff7c" => :big_sur
-    sha256 "c5694285a5e01534c2ddd9f38794ee56bf900763d432eeb8459f79dd5b116a56" => :catalina
-    sha256 "a82a2f379f9354730b72f5cea442f2627d8c3fd76c0d11ea9dd977a6bdfff6b9" => :mojave
-    sha256 "56fcf6ea4eec7533a22aa1a957d05046fa7a4df4c923b7c6bbeea7706fa13f04" => :high_sierra
+    sha256 "01ab2720fb16cd45b07f7f64cacc395122ed74002914a7e49501a86676ccd12f" => :big_sur
+    sha256 "083fcf08771cf6fffe1a2dd0a11ab0aaa2b430dee8f89a38bc67abbc4ee92b40" => :catalina
+    sha256 "2e142057b5aac7280b532045372a1c3f86d9af8e18aa3f9461be23ac6a2afef9" => :mojave
   end
 
   depends_on "gdb"
