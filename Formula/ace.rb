@@ -13,9 +13,10 @@ class Ace < Formula
 
   bottle do
     cellar :any
-    sha256 "3d450d620db8f0368b709c56a271939ea3d3680a56956672fede858b18794555" => :catalina
-    sha256 "af5e1fccc5885689daeab10db051f9d3b15c694fcee33b86c8d60d5c3ccb821e" => :mojave
-    sha256 "67426f70081ea3aa5845f9d582a47f5795f9770b726e27242189a2d863967e22" => :high_sierra
+    rebuild 1
+    sha256 "35421f2b6d685d304bf091673f470509e4c7e91c682d49001807b8449d8b6b0c" => :big_sur
+    sha256 "c8df669ae59fcf41cbfea88a8316965332f46e77886e21e1ea3848352c6b0e48" => :catalina
+    sha256 "40e6474093ba8816d8693a6979e121138edd3b4f3619da51ca1ab8c0e9a3f9ae" => :mojave
   end
 
   # Fix issues with detection of newer OS/X versions; makefiles 6.5.12 are OK with
