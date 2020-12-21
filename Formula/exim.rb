@@ -19,9 +19,10 @@ class Exim < Formula
   end
 
   bottle do
-    sha256 "74e195304b29ce8ce47fbccc2c58e468a677482a94efecc1cfd9dcc0210c07d1" => :catalina
-    sha256 "bae912aa71182fd91e5e65b38cba3ea162f7d63d4dc4b4b365ef6532c4329a7a" => :mojave
-    sha256 "230f63be05a2dde5fcb4487e7159db758abe984cbc70d495a697c209107fc284" => :high_sierra
+    rebuild 1
+    sha256 "e6dd0ac8d655c88f4a774c3ec49852d7502f56c585f83a0edf247b048344eba3" => :big_sur
+    sha256 "831aed4b806adb75d3b510531d47f17ae0c38ea9539c608e68e5013c4508bc9f" => :catalina
+    sha256 "a2341adeb6989c905c6f3cdcb3152bba15c76a9d2678e70c7738dd7e8fbc9c9c" => :mojave
   end
 
   depends_on "berkeley-db@4"
