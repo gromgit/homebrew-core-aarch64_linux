@@ -20,8 +20,6 @@ class Libgcrypt < Formula
 
   depends_on "libgpg-error"
 
-  uses_from_macos "libxslt"
-
   def install
     system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",
