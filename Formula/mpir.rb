@@ -1,9 +1,9 @@
 class Mpir < Formula
   desc "Multiple Precision Integers and Rationals (fork of GMP)"
-  homepage "http://mpir.org/"
-  url "http://mpir.org/mpir-3.0.0.tar.bz2"
+  homepage "https://mpir.org/"
+  url "https://mpir.org/mpir-3.0.0.tar.bz2"
   sha256 "52f63459cf3f9478859de29e00357f004050ead70b45913f2c2269d9708675bb"
-  license "GPL-3.0"
+  license "GPL-3.0-or-later"
 
   bottle do
     cellar :any
@@ -14,11 +14,21 @@ class Mpir < Formula
     sha256 "006955801271b94f2e412ac056450000785965ed631d134554d7190deaf675d1" => :sierra
   end
 
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "libtool" => :build
   depends_on "yasm" => :build
 
+  # Fix Xcode 12 build: https://github.com/wbhart/mpir/pull/292
+  patch do
+    url "https://github.com/wbhart/mpir/commit/bbc43ca6ae0bec4f64e69c9cd4c967005d6470eb.patch?full_index=1"
+    sha256 "8c0ec267c62a91fe6c21d43467fee736fb5431bd9e604dc930cc71048f4e3452"
+  end
+
   def install
+    # Regenerate ./configure script due to patch above
+    system "autoreconf", "--verbose", "--install", "--force"
     args = %W[--disable-silent-rules --prefix=#{prefix} --enable-cxx]
-    args << "--build=#{Hardware.oldest_cpu}-apple-darwin#{OS.kernel_version.major}"
     system "./configure", *args
     system "make", "install"
   end
