@@ -13,6 +13,7 @@ class Perl < Formula
 
   bottle do
     sha256 "7db44dc9609acbada14bd4cf847b26b49f1b3f18693e0870e806741a274c957a" => :big_sur
+    sha256 "e7ef68c4055b20ecaaaff6e90634a885c33a26a87921ee5c333f7be6aa1bc0f2" => :arm64_big_sur
     sha256 "bc6c97521b6edf723c8ee0742aebb1954b5c8fec81bf2d96861c3f8bcc4e404d" => :catalina
     sha256 "f09b3fefe2175b36e590ee13e7aa84d28ebcbce3ef8e252e24a0aebb752405ab" => :mojave
     sha256 "718a54da6e3b02c33d5230776aaa54eaaac710c09cf412078014c9c50dd0ac51" => :high_sierra
