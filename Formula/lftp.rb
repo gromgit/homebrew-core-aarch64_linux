@@ -12,6 +12,7 @@ class Lftp < Formula
 
   bottle do
     sha256 "68cdb9b693cf4ea5b7a8c9c0cdd02a2a2eb391c78df5e657767a59819dcbd9af" => :big_sur
+    sha256 "c6e871000f9337c8fa0d56ff9b345209c13449be17e00e4e0248deeae3fd589f" => :arm64_big_sur
     sha256 "16e629365517da3f55e271f5e55c1d8ae759b5f2a2d7df669b87e93e05b948f9" => :catalina
     sha256 "7165e8f2ed29e55cc2cb819961d167fb7da7c8ebba7ababf4475c792b6f29afb" => :mojave
   end
