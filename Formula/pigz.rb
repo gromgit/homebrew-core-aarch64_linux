@@ -12,6 +12,7 @@ class Pigz < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "65b5e19d6b5afceb89c94600e9c517f2444ca94eca76be5b1ccd53cf9607b777" => :big_sur
+    sha256 "c110e8491b74dbca9a4b81c24a71a1b0b559edc3723845b42d0134e5da473b01" => :arm64_big_sur
     sha256 "f9d47b369bad1ec3571d06fb40a1ad926e14360a13ec6e1fc16a6be8a81b7ed7" => :catalina
     sha256 "341c5f3c0a82aedd822b2dd187ecc12b3dbdea9b2f00b08ce7ba049916557314" => :mojave
     sha256 "216e716eafd2786ed6fa672daf27bb77b420e05f92a14cfeccab28a6be6b7778" => :high_sierra
