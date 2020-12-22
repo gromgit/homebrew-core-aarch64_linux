@@ -1,8 +1,8 @@
 class ContainerDiff < Formula
   desc "Diff your Docker containers"
   homepage "https://github.com/GoogleContainerTools/container-diff"
-  url "https://github.com/GoogleContainerTools/container-diff/archive/v0.15.0.tar.gz"
-  sha256 "4bdd73a81b6f7a988cf270236471016525d0541f5fe04286043f3db28e4b250c"
+  url "https://github.com/GoogleContainerTools/container-diff/archive/v0.16.0.tar.gz"
+  sha256 "255e08e82ffb9139b78054cd0caf0c20b1e6ab8fc359a9a8558da3912b70aba5"
   license "Apache-2.0"
 
   bottle do
@@ -17,19 +17,13 @@ class ContainerDiff < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    (buildpath/"src/github.com/GoogleContainerTools").mkpath
-    ln_sf buildpath, buildpath/"src/github.com/GoogleContainerTools/container-diff"
-
-    cd "src/github.com/GoogleContainerTools/container-diff" do
-      system "make"
-      bin.install "out/container-diff"
-    end
+    pkg = "github.com/GoogleContainerTools/container-diff/version"
+    system "go", "build", *std_go_args, "-ldflags", "-s -w -X #{pkg}.version=#{version}"
   end
 
   test do
     image = "daemon://gcr.io/google-appengine/golang:2018-01-04_15_24"
     output = shell_output("#{bin}/container-diff analyze #{image} 2>&1", 1)
-    assert_match "Cannot connect to the Docker daemon", output
+    assert_match "error retrieving image daemon://gcr.io/google-appengine/golang:2018-01-04_15_24", output
   end
 end
