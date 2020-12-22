@@ -12,6 +12,7 @@ class Curl < Formula
 
   bottle do
     sha256 "4e85f5e083888ddb215cc7cb445748b5a35baf1853214b2d9ef11ba2c1cc89e0" => :big_sur
+    sha256 "99260d61384cdc7d8f5cc6804d2c84c8f082dad9ba64b0c05139b638c350e569" => :arm64_big_sur
     sha256 "35edb3fd3ce31448b290ce441d43235d004e36de4b8f299e8a5c2e2b5118b7fe" => :catalina
     sha256 "36496011f345bd36b4ca83aca7bca3efbc5d30da0b7b039ab847b64aca5ca48d" => :mojave
   end
