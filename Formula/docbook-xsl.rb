@@ -16,6 +16,7 @@ class DocbookXsl < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "cfdfee3ff9db24a542cd8afd72cd05e67dffd88105b6af3bb1aabd9d48811dd2" => :big_sur
+    sha256 "9604b8989c3cc180c641b00f595e59d887aa85fbd410fb85bf4d459c6fb9f823" => :arm64_big_sur
     sha256 "65a5442556a88a865ef377cb73df0b3edf9ab2240e6f4bb2d71a71eabc74fa26" => :catalina
     sha256 "65a5442556a88a865ef377cb73df0b3edf9ab2240e6f4bb2d71a71eabc74fa26" => :mojave
     sha256 "65a5442556a88a865ef377cb73df0b3edf9ab2240e6f4bb2d71a71eabc74fa26" => :high_sierra
