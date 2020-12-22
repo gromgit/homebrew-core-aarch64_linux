@@ -15,6 +15,7 @@ class BoostBuild < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "a8391d8d237ba58ad70c524b21c0d9d3aef5c05b8e9b824e1a326f1d7b4785cd" => :big_sur
+    sha256 "1ff4602f5d80ab3129f451f6316fd9517503f88218eec48eb63cb244581e6ea0" => :arm64_big_sur
     sha256 "7ed06c86c4b86828bda71d03665c4464dd76603b68a6f8cd0199afed2bf749c1" => :catalina
     sha256 "23bc63e542ec5835f2450fbb0d472c4b0c2426759cb12ac2f0e7564a706193ca" => :mojave
   end
