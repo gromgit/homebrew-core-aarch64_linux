@@ -5,6 +5,13 @@ class CassandraReaper < Formula
   sha256 "ba9a925c512996f55481914f6c02832c96d3c334722f7d611a76d30c1a9c16ee"
   license "Apache-2.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "760c1fa6584111c867b28479f60eec50e362a531fa066fb29bd0d3082009c040" => :big_sur
+    sha256 "7368f52e8a3992a67a077442fcb3a2e4168cfd9607b873b55d4871302742002a" => :catalina
+    sha256 "29bf7a8f41b59dccf1466612a9b7a123e7e3183a5e5bd154bf47c42d44632482" => :mojave
+  end
+
   depends_on "openjdk@8"
 
   def install
