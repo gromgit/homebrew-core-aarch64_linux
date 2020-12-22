@@ -6,12 +6,11 @@ class PgTop < Formula
   sha256 "c48d726e8cd778712e712373a428086d95e2b29932e545ff2a948d043de5a6a2"
   revision 3
 
-  # We're currently checking the pg_top GitLab repository, since there are new
-  # 4.0.0 prerelease versions there that aren't at the existing stable source
-  # (i.e., https://ftp.postgresql.org/pub/projects/pgFoundry/ptop/pg_top/).
+  # 4.0.0 is out, but unfortunatley no longer supports OS/X.  Therefore
+  # we only look for the latest 3.x release until upstream adds OS/X support back.
   livecheck do
     url "https://gitlab.com/pg_top/pg_top.git"
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    regex(/^v?(3(?:\.\d+)+)$/i)
   end
 
   bottle do
@@ -25,10 +24,21 @@ class PgTop < Formula
 
   depends_on "postgresql"
 
+  uses_from_macos "ncurses"
+
   def install
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}"
+                          "--prefix=#{prefix}",
+                          "--with-postgresql=#{Formula["postgresql"].opt_prefix}"
     (buildpath/"config.h").append_lines "#define HAVE_DECL_STRLCPY 1"
+    # On modern OS/X [v]snprinf() are macros that optionally add some security checks
+    # In c.h this package provides their own declaration of these assuming they're
+    # normal functions.  This collides with macro expansion badly but since we don't
+    # need the declarations anyway just change the string to something harmless:
+    inreplace "c.h", "snprintf", "unneeded_declaration_of_snprintf"
+    # This file uses "vm_stats" as a symbol name which conflicts with vm_stats()
+    # function in the SDK:
+    inreplace "machine/m_macosx.c", "vm_stats", "vm_stats_data"
     system "make", "install"
   end
 
