@@ -17,6 +17,7 @@ class Zabbix < Formula
 
   bottle do
     sha256 "21d6a09c7b904a9ecbe7147632e8da85c9f46e090147601c3e46cb3f758ef4c0" => :big_sur
+    sha256 "339382cef13a19d4a80b5b589dd7fc7f75ccb3bbdab3bcbefe54eeaa0ea75861" => :arm64_big_sur
     sha256 "8ae1494fdea3da3695c8a0f1089f348a54817443dddd82115a017b5f4481a646" => :catalina
     sha256 "79492e64767727eb55008d1ccb1ebbfbbf95b00db2483084e44e5a0690248804" => :mojave
   end
