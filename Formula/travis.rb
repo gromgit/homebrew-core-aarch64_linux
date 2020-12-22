@@ -8,6 +8,7 @@ class Travis < Formula
   bottle do
     cellar :any
     sha256 "21ab8e73b2aab1a67e6ad0cf2dfe4e0f2337b1fd743d22b134baf27354c9dd54" => :big_sur
+    sha256 "c27b3f49ed453047c62be6a72c9c67e495fa1ec88355d212b2919905c377114f" => :arm64_big_sur
     sha256 "e6c6d41d24822636377d55de42b627fd901a6864512efbc1dab418dec752911d" => :catalina
     sha256 "cdc6ac367f2c79ecce4b33d6ad0c3c5c71457db7ff818eb6de67411a2820ce52" => :mojave
     sha256 "24bebab17d6e415efacc5314f4fc9c94b93b0da4c31b21069187acba83fc6be0" => :high_sierra
