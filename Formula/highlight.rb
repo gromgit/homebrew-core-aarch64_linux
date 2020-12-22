@@ -9,6 +9,7 @@ class Highlight < Formula
 
   bottle do
     sha256 "efb65db7b5870241ff19c71d1d6dc4a85c60f8690cfe8f468f0320b1b58b3c4a" => :big_sur
+    sha256 "030d281b39c8a48ec7130433920171324d5ebe70da0f9b89f880dcc341207dbc" => :arm64_big_sur
     sha256 "b22c1b722fae83da1833f8163b4714048b99d580c1a8593e873174e74433cecc" => :catalina
     sha256 "325b04e55f31cbc7e05101911eb915f7fd4919544d1753bcd875ab0c25b1086d" => :mojave
   end
