@@ -9,6 +9,7 @@ class Aom < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "c03472a3e8dd38972fe30ee245dade96626c7927f511b7c39eb5b1b6f789e34b" => :big_sur
+    sha256 "06d96aee6c62b57139fec871110fb0c53bbe0bea114f50ab4655dda087ae54ba" => :arm64_big_sur
     sha256 "ebac8d7473e89b82ad00046243ef47207c0823e410c4d3c40483a81324ad2a4c" => :catalina
     sha256 "99912d7dfc789ce059c33ea739f736930c40ea59ce58a70a6ee2478199b4363b" => :mojave
   end
