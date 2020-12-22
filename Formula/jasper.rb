@@ -7,6 +7,7 @@ class Jasper < Formula
 
   bottle do
     sha256 "5bdfa3e3512a37f98fee42ebb1de00d6f1252344a827bc60329c4a1337d1ef0b" => :big_sur
+    sha256 "b65f3d2c159fa0c9be917e074d79d9ffd79bee8e9b320a5e62bca4e425a9009c" => :arm64_big_sur
     sha256 "0920d1450e3545eb62d7446c8c1d8dcb9bc404e4a846230eb52963a212c43667" => :catalina
     sha256 "d29a2f3e4b14c7e4756150764d36c2fe7780a62af94a8320feab5f27967cf451" => :mojave
   end
