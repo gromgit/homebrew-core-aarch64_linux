@@ -14,6 +14,7 @@ class Mosquitto < Formula
 
   bottle do
     sha256 "a5ddf08b51984ea49cecf111055f81f3b22f4b7ead9374fa7548e58c6ccd577b" => :big_sur
+    sha256 "6bea49b413759cff51abf15fcb8fed6d7eba2ec70f73845c8ff4be808ae404ce" => :arm64_big_sur
     sha256 "bfb0a412544019ff41ac2b2c396fa9923d7447d112f43a4f8997f48fb0ce7961" => :catalina
     sha256 "39ec63a12d09866ac30ba0c10f7e0ba925f78126e84c3d44bec284be2bf59760" => :mojave
   end
