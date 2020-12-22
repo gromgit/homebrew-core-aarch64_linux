@@ -9,6 +9,7 @@ class Vim < Formula
 
   bottle do
     sha256 "6cff289fa94dafcf7b57f20316b75b7e34942a5e952c8293df473b51c531b461" => :big_sur
+    sha256 "1cacc022c704624d8a8a2cc286107d0d05eec4f6b7a46f48a0caa2432dd93b36" => :arm64_big_sur
     sha256 "29d822d5bc5856b42ada863a95977a1bf5e628d8369892c91ac193a787c26c4f" => :catalina
     sha256 "4e1dedc561c3ced84278cc043edecf1c61a4212f154f25e2858a08223e3fc66a" => :mojave
   end
