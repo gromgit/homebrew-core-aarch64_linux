@@ -11,6 +11,7 @@ class Portaudio < Formula
     cellar :any
     rebuild 2
     sha256 "15cafef0378ce5a162f4210be1809c22358ca22bfd6f199fb8fe0448ef9f4812" => :big_sur
+    sha256 "f28bf56e8387efa44468a1dd8b6b57a0075580a4a27d075a762469ef244f94d2" => :arm64_big_sur
     sha256 "752ecb3b066e413e83b40c2d9f1170927a600711deccb3ca861fc4a4137622f7" => :catalina
     sha256 "7aaae4d4ce8ecabf6470178d71aa826ea2808009ceb602cb52fa17658d34cc61" => :mojave
   end
