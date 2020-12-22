@@ -12,9 +12,9 @@ class Po4a < Formula
 
   bottle do
     cellar :any
-    sha256 "8caa5beaaa149a61cc1e491e2d38311dfaf4d5079bb059e407a97338780d6674" => :catalina
-    sha256 "d6fab13fda127a91eeadbb7e4d031cc7e9d0f7292fef8579539db76228b908f9" => :mojave
-    sha256 "31ef1111f0d6d4a1ff0f50d37dbacaef5e0d017fa0f95c621d4d395bcda9b616" => :high_sierra
+    sha256 "be07a4aa6a8aa9a7af23395b0147145bd6657d35d9893aa721fd147b95894812" => :big_sur
+    sha256 "8a72e398989f8092295c86e17cf6b83bc7c17b59db65dd3f1c7c1da735cd4e9a" => :catalina
+    sha256 "789846cb0a70c89373554db39fb5bc710e0c2d5207becf96edde186e2e8ba606" => :mojave
   end
 
   depends_on "docbook-xsl" => :build
