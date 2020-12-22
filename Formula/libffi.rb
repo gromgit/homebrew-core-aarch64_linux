@@ -26,14 +26,16 @@ class Libffi < Formula
   keg_only :provided_by_macos
 
   def install
-    # This can be removed in the future when libffi properly detects the CPU on ARM.
-    # https://github.com/libffi/libffi/issues/571#issuecomment-655223391
-    extra_args = []
-    extra_args << "--build=aarch64-apple-darwin#{OS.kernel_version}" if Hardware::CPU.arm?
+    args = std_configure_args
+
+    on_macos do
+      # This can be removed in the future when libffi properly detects the CPU on ARM.
+      # https://github.com/libffi/libffi/issues/571#issuecomment-655223391
+      args << "--build=aarch64-apple-darwin#{OS.kernel_version}" if Hardware::CPU.arm?
+    end
 
     system "./autogen.sh" if build.head?
-    system "./configure", "--disable-debug", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}", *extra_args
+    system "./configure", *args
     system "make", "install"
   end
 
