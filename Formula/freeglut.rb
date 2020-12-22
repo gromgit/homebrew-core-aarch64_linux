@@ -13,6 +13,7 @@ class Freeglut < Formula
   bottle do
     cellar :any
     sha256 "078bc333780fea9d4dd745529c91326a3ea4bcd393c18a0d817fd7870d90b7a2" => :big_sur
+    sha256 "203bade82803af2a0b0fae9e3049ed61d9a4e1f4f6efd42fc6160c7296a54f2e" => :arm64_big_sur
     sha256 "21e92d3aa8a1615937c6776292dd823912220d272a4a437f66917d1e6dd0b655" => :catalina
     sha256 "8d71afe59334afe060d513d68e8c76b3fc0927cf05d61b146dd1444c66d5db35" => :mojave
     sha256 "0a30955c90e594481f1ebf4dd218065768386704e2fdcdc0aae45055171dfd2d" => :high_sierra
