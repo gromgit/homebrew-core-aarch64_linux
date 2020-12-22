@@ -10,6 +10,7 @@ class Libserdes < Formula
   bottle do
     cellar :any
     sha256 "28d5e55c0e0e06b11a30b03250eca9e615b495f666a78efda0a8794752094519" => :big_sur
+    sha256 "a1b0c2b9a7fb677827b9728c508ffc48cdd72d1dbe1f53ac094a7d902e7ca0b3" => :arm64_big_sur
     sha256 "743106f80ee1f57a8fd2966fbfc926dc18b11438ed1d90da7373ada9094d7cff" => :catalina
     sha256 "dc74a2436a72405e5fe1b03c83820e3baaeb3bc6ff7623555e3a352d9d05f822" => :mojave
   end
