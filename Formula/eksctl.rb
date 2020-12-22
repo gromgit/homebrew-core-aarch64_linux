@@ -2,8 +2,8 @@ class Eksctl < Formula
   desc "Simple command-line tool for creating clusters on Amazon EKS"
   homepage "https://eksctl.io"
   url "https://github.com/weaveworks/eksctl.git",
-      tag:      "0.32.0",
-      revision: "41d40c256b68823f42a8c71cce7a2eb4d6236ce7"
+      tag:      "0.35.0",
+      revision: "1eafbc7b3fa3d9c31575b51b8fbac718ec108051"
   license "Apache-2.0"
   head "https://github.com/weaveworks/eksctl.git"
 
@@ -14,9 +14,18 @@ class Eksctl < Formula
     sha256 "0262d856dd6219204730bd3fa3bac93866e6f0cefd7e0c9b5ab637424d5a42f7" => :mojave
   end
 
+  depends_on "counterfeiter" => :build
   depends_on "go" => :build
   depends_on "go-bindata" => :build
+  depends_on "mockery" => :build
   depends_on "aws-iam-authenticator"
+
+  # PR ref, https://github.com/weaveworks/eksctl/pull/2987
+  # remove in next release
+  patch do
+    url "https://github.com/chenrui333/eksctl/commit/2207612.patch?full_index=1"
+    sha256 "50870dd22647f6b6252678fb5302c81aa89ca04177f3f327a044d301eb483c14"
+  end
 
   def install
     ENV["GOBIN"] = HOMEBREW_PREFIX/"bin"
