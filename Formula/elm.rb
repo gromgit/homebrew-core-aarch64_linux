@@ -7,9 +7,10 @@ class Elm < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e1bbfe4ff7deba3ed60eb55b81b86b6d3346325bea584802ca1212369f0fa0bb" => :catalina
-    sha256 "288eeb47caccfaa9bae220492cee8de7206d40b7760e1e309a139a2398f9710d" => :mojave
-    sha256 "7fb65ff925701c39bbc7d9a5099cd88f10a56949ae019bc8817035ed1d56edbd" => :high_sierra
+    rebuild 1
+    sha256 "04efe8b2f66b7904b05578e59a07300e8f070521a87ab0733433609da531f29d" => :big_sur
+    sha256 "bb6cd6a1bd9b3a7f280791b2ffba6631efa784f9068f48c4d6f9e64d756a4b2a" => :catalina
+    sha256 "03d2874b915186af4361360b5a3f3d9a9734046b97d46607b34a4e8f0d5228c2" => :mojave
   end
 
   depends_on "cabal-install" => :build
