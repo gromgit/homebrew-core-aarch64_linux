@@ -7,6 +7,7 @@ class Bsdmake < Formula
   bottle do
     rebuild 1
     sha256 "a7540422211c370618f938241419971aa6542298a0735a8e369b612c1f639866" => :big_sur
+    sha256 "e844047b809f9c3d3c297baebfcaaab0e5e0ee4cc993d4a8bb81c1db3ad372df" => :arm64_big_sur
     sha256 "85bdfdf2ca2e5761195c4781e52232e4fb1258c99bf79f46cf82f66338197df3" => :catalina
     sha256 "acee008d57c2ebe6ad2ee5932d1521a254e16453c61cdd517da2c675f60c1eb4" => :mojave
     sha256 "fa009c31c9fa5fc71f774cfe146f1338ca856158a606b796c3a1e7dbd64f3895" => :high_sierra
