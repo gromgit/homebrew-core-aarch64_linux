@@ -11,6 +11,7 @@ class Smartmontools < Formula
 
   bottle do
     sha256 "d6d62defc3e7e500c26180245e0af77d7c61d08c840e1b3ef5daeec6159cdb0d" => :big_sur
+    sha256 "4ce621436efd811a6c7bec87ccd57c6a214a4b06154ec67017b101c0eeeb82a3" => :arm64_big_sur
     sha256 "cc34524c76ff39abb4afc6794fe404e257cf04816c1d2c33f8edd158e5677239" => :catalina
     sha256 "cce7b82f81c999afcd180dd7fb1ef471bfb24d9934dc3ad326d86db7ea478f2c" => :mojave
     sha256 "77b4722b7ffc997a2b5482518f291640fcabc45468ae5fca12520943869263be" => :high_sierra
