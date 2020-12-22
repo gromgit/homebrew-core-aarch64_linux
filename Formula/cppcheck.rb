@@ -8,6 +8,7 @@ class Cppcheck < Formula
 
   bottle do
     sha256 "d43b72a935d69d6a170289be18dc91677021ce79e3a9b3098d185e74f86a76ef" => :big_sur
+    sha256 "48ddb6efdcb51f6bd829057f467e4b8cf99fabefe9be834a17fc0bcfc58ad9f9" => :arm64_big_sur
     sha256 "e5e9dcaa609ee6d13d4a49597bde145f7264cf9ea18b9bd4f8b3bd6733c6f56f" => :catalina
     sha256 "fc7ad924b5ab15d44cd6496d8fad5a5e1df639541bc04a67c9f68cd0ab909409" => :mojave
   end
