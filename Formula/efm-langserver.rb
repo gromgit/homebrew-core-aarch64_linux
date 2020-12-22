@@ -7,6 +7,13 @@ class EfmLangserver < Formula
   license "MIT"
   head "https://github.com/mattn/efm-langserver.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "e9897f2c173f23ae85e7c79058787caeeabf83d3665afc726b021667d764732f" => :big_sur
+    sha256 "27a983a57a57b18b64f38897a0005eda50b7a242aeb7dd39f50837c53a11530d" => :catalina
+    sha256 "13bffac8dfa2c47f2b4f7fa6fd28e1eb4c94c520e3e26eebd275272ef4079da5" => :mojave
+  end
+
   depends_on "go" => :build
 
   def install
