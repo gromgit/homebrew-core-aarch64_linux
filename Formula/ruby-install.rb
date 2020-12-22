@@ -8,9 +8,9 @@ class RubyInstall < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "fd8726c3703f3132ef342e98d197a5d46d3adb6dc7db88a25b2e01ea2eafaeb8" => :big_sur
-    sha256 "5d20763bbc1b77c06ab3615cdfb9d7df20ea8a933371d8b086146640bf806526" => :catalina
-    sha256 "89972ce4292a039d6cd446756f0f64cd979081a79dcaba795e9b1b880027c37c" => :mojave
+    sha256 "a7f9e33147703ddd362a07bb361f381b99ff5d936b1102108812ed08c4ccf386" => :big_sur
+    sha256 "0116171fc93d09c4893e7b88e8202b641f028f7e74817aff8f44952f792ad8b0" => :catalina
+    sha256 "6ab943b1a3882cb2e81099dc9870e364dcbbd4d40685227f2b6a89fcc37e896c" => :mojave
   end
 
   def install
