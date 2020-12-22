@@ -10,6 +10,7 @@ class Asciidoctor < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "4af4798f8081100713a1b3d301107b5ddd01d1f85d40d5f351d12b3261148fbe" => :big_sur
+    sha256 "bd10fcb661d700a6dc30113b6af905708978ca6d4198ea6531abc80628a34f2a" => :arm64_big_sur
     sha256 "b6d75bed00d6ab5586634823bee006e5f0bb3c57f9f46317b675c33b28eb7552" => :catalina
     sha256 "8ce4eb3ad0b311775a31f15d32939df21f3eefbac6dc39ac76f2d2573920b5af" => :mojave
     sha256 "d4fa41fc1f142f4d8ad25c2063ed79dd04091386d87c7996c17c9adcb10be301" => :high_sierra
