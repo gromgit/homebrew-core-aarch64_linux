@@ -8,6 +8,7 @@ class Libxcb < Formula
   bottle do
     cellar :any
     sha256 "7d5c969ae5d67cba138c36d0ec758ef383763d58a615e1f0d9d8cc86c1c6d16d" => :big_sur
+    sha256 "7c30db7602fd32f2e5234a9faf9c28d9b27fa3d78afccf5a81a3e4eaaa660642" => :arm64_big_sur
     sha256 "8775b3a19f927b57ca4077211b25898c6481318ff1cddb3098c61903ae832b1f" => :catalina
     sha256 "8a13efa25000a0695280f5465186f7511e9083685a49560d0dc5d7cc837a1cfa" => :mojave
     sha256 "e56b657f223ac78f4f600fe057dd8ab12303be5f4f0f5b61eb94443d10fb4cf4" => :high_sierra
