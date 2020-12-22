@@ -9,9 +9,9 @@ class Bpytop < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "25598bf6682ca4d7e2d68209e597e5c48249784ab3b9ec69976da163223ff2bf" => :big_sur
-    sha256 "28d5c7aef70e5cd3d68e93ef7d38a135cd628d0edd00e51b62d13a8484e31085" => :catalina
-    sha256 "7b35974839fce21c2074f116b029795b8fe222a342bb801490fd01b28ecfd267" => :mojave
+    sha256 "9ffb59aee70d89c9db96838f05d829eb91fffcfd1e39abf80874c94bab2f48fa" => :big_sur
+    sha256 "199055f9be0ec338a51d49b29fe3d45af387668b96e9d54d30fde06d935f5096" => :catalina
+    sha256 "185cbc02e0275ff68cb0d0cf3cdc52ec0959bbce44716114a79c19de8f8b9a5a" => :mojave
   end
 
   depends_on "python@3.9"
