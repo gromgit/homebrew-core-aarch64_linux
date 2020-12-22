@@ -13,6 +13,7 @@ class Librdkafka < Formula
 
   bottle do
     sha256 "b2e4bc434128ae0051500313fb75f584590edcc52801727c3a7a56667377100e" => :big_sur
+    sha256 "a18360feef0dce0cbb1b4aa519c91c78040f0b1ff30d1f1aea7fa1c362f98d4a" => :arm64_big_sur
     sha256 "694b593d8b0c3a3e36b3583c59d5df46096839b7efe94144498bf2e784b438c5" => :catalina
     sha256 "7c9b9a039460637f5271309113080485e5b32a75c7b28f0669441e52e6b1bab7" => :mojave
   end
