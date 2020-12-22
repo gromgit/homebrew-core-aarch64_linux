@@ -9,6 +9,7 @@ class Blueutil < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "1b868d1f1e57fe70234b70737b333aa528312e35e87b914c896e12265c83c2ae" => :big_sur
+    sha256 "b2994b6cd6195329f784c50dc77503fefdba555d31498d2a2b4966e771890352" => :arm64_big_sur
     sha256 "7ab6e3a2ee2545185668cdf4adda1b99c98fc381148c8c73db14dbeb9f683f74" => :catalina
     sha256 "f858bea22c78dc5e807183ff23cda2d2af13b84e5d445702751214cf9a58b85b" => :mojave
   end
