@@ -11,6 +11,7 @@ class Minicom < Formula
 
   bottle do
     sha256 "37646be23a39a2c08c798221a12997e9309c9ac68ded36cb94e407f2fafe2ec9" => :big_sur
+    sha256 "6121d7bcee3dc81cbcbc4efb1b84b5d5250fe0dc97c3b076a6131cd002f6fbfc" => :arm64_big_sur
     sha256 "9a95136e2a0176a25874a996fd93ff2e77da00b17e450fc532c85bbdc80edfd3" => :catalina
     sha256 "77cc043be40a99634caa99d5f309741d85309fed07c1c21f313c6d99c4732966" => :mojave
     sha256 "ec4beca9c9816db86a3bb7a11d7507fe0740feb62461341232a425a5156cd4a1" => :high_sierra
