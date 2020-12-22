@@ -21,7 +21,7 @@ class Sng < Formula
   depends_on "xorgrgb"
 
   def install
-    system "./configure", "--prefix=#{prefix}"
+    system "./configure", "--prefix=#{prefix}", "--with-rgbtxt=#{Formula["xorgrgb"].share}/X11/rgb.txt"
     system "make", "install"
   end
 
