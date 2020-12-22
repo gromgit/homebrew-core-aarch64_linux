@@ -4,6 +4,7 @@ class XcbProto < Formula
   url "https://xcb.freedesktop.org/dist/xcb-proto-1.14.tar.gz"
   sha256 "1c3fa23d091fb5e4f1e9bf145a902161cec00d260fabf880a7a248b02ab27031"
   license "MIT"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
@@ -15,6 +16,13 @@ class XcbProto < Formula
 
   depends_on "pkg-config" => [:build, :test]
   depends_on "python@3.9" => :build
+
+  # Fix for Python 3.9. Use math.gcd() for Python >= 3.5.
+  # fractions.gcd() has been deprecated since Python 3.5.
+  patch do
+    url "https://gitlab.freedesktop.org/xorg/proto/xcbproto/-/commit/426ae35bee1fa0fdb8b5120b1dcd20cee6e34512.patch"
+    sha256 "58c56b9713cf4a597d7e8c634f276c2b7c139a3b1d3f5f87afd5946f8397d329"
+  end
 
   def install
     args = %W[
