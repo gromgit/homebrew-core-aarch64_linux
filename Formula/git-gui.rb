@@ -10,6 +10,7 @@ class GitGui < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "710dcb76f28cd72e89b6cb03b54cc5b7ad226dd5b3c43acfb0c83e92a2ae8347" => :big_sur
+    sha256 "5510cfcddc8685325956788414758589ce62868bac34b1c08f4371c2c812375e" => :arm64_big_sur
     sha256 "8820d3ab3fb92d495faf6f3c784122f27bc8ccc4648f84812a695030f22d388c" => :catalina
     sha256 "42223e9dfd4b55352cdbb53b003b88b5e5f09fbf0e8e333bc903271ae7fa14b0" => :mojave
     sha256 "aa2b5c16d09f78e9a01f9c3b92086bd3933b36eef6e1a94e634f67966c323d9e" => :high_sierra
