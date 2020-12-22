@@ -11,6 +11,7 @@ class YouGet < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "75cec9d34b80971178480e7f70b22b649352d447ed638cbadd82019302e8a860" => :big_sur
+    sha256 "69e528cec05ac7e0e13b29c1d900545b8c0330e0199fea93eb3c1db13abebb09" => :arm64_big_sur
     sha256 "f51c08fdc10e1606ea6bd6f4f250f9c37369cf67ba87ce3ed04033af51994802" => :catalina
     sha256 "e42333fd481b4199d39e5f613da991506ec14f3f23ef97b8695fa1060626adba" => :mojave
   end
