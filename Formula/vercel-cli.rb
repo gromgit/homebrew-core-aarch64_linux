@@ -14,6 +14,7 @@ class VercelCli < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "8ac52deefe82f33c081ce0d58db7913f499ef2b524a236dfc8f873f13a9233b0" => :big_sur
+    sha256 "3c103c1cfbc27e1cca185f4ab4c02bd562698e6d691d143dcabd053cc88e7df0" => :arm64_big_sur
     sha256 "566e84e83bfa4893fe4f7e14deda0d80a9c72880d50cefcc880377663b75f1e5" => :catalina
     sha256 "00e29669fdc92df884451bc3c1174b7899ddcfd2b9fb78a6b4457ec924e57d52" => :mojave
   end
