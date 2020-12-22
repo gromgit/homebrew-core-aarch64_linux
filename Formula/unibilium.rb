@@ -7,12 +7,9 @@ class Unibilium < Formula
 
   bottle do
     cellar :any
-    sha256 "f0c90f1197382f36f1cc4629c625c04a434e5daa91db0c6f2336cb26c1f932a0" => :big_sur
-    sha256 "fb0335f25d2848a8dc1eb0911292905c76bb97e98bf349fc6afefe7752164fd1" => :catalina
-    sha256 "3886afa29fecdbf2051ae6a92fac638bd27b6edafb75b199e50c0fc6fbf18266" => :mojave
-    sha256 "5c29d645cd3e0ad950a7054c73b89cb76114b369476eb8bca26587c38571861d" => :high_sierra
-    sha256 "15338d452e5e09e7b8f3bedd6d557d735d06bfbc53204487d11b6c225a04ad71" => :sierra
-    sha256 "d8caea872f5f8ed11503e46fc37f17fafbc8a4c64a5382e2bf9e6d84feda2f98" => :el_capitan
+    sha256 "1ac932c37c4889fdf5382a66a5c909ece4d4c854835b24215c3c96653ebb914d" => :big_sur
+    sha256 "62b5e586837c4390918437def45064ce86c7ac8b81f570ceb11f98aed2b563af" => :catalina
+    sha256 "3b3292fa69eac93918fee92ffdb3b06f98524cc1fa705964a10fef35be4314a2" => :mojave
   end
 
   depends_on "libtool" => :build
