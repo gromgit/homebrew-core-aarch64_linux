@@ -15,6 +15,7 @@ class Libepoxy < Formula
   bottle do
     cellar :any
     sha256 "667873f9c3ce190c398412dc2777628e4805f21cf29d4aac958aee93f82daaa7" => :big_sur
+    sha256 "5384a83afdae256d771cb950907183f2ed2325ff0625d3a15247a4ec9f87036c" => :arm64_big_sur
     sha256 "2ff068dba2f188c30bc4e456e22a089f323c30d24dfa9df610d1515bf159d407" => :catalina
     sha256 "8263978cde00e743fef88e91afae02966e53e25e278aa0cea23aae648d1d11fa" => :mojave
   end
