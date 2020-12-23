@@ -12,6 +12,7 @@ class Verilator < Formula
 
   bottle do
     sha256 "f7def3eedd4e4ceb417b02054986524d0c69818c8837fc5a2ed479001804f93e" => :big_sur
+    sha256 "11944229b6818c17042010a7267303350da32275864d0c5d6414d00097522263" => :arm64_big_sur
     sha256 "8c9d1253dd911dca93ddc8e2da53aed9b634c0cafa26609b13a123254d7679c0" => :catalina
     sha256 "f45ae45c72884a8da166bbc4fb0eea4f4e602aaa8c89c2c2594cc851dd46338b" => :mojave
   end
