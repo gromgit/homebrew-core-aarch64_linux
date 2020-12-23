@@ -13,6 +13,7 @@ class Gstreamer < Formula
 
   bottle do
     sha256 "0fa613bf8670831bf70b916aa09f5f0e600f13ae83259d2f12541c39c23898fc" => :big_sur
+    sha256 "ff535bfaf605c0257c375eb6f8a38505e9bf0ce46c65b782c079d91002a33c52" => :arm64_big_sur
     sha256 "ba0329667c9347b25ab0623b239af2b43f27a2d2bdc666b5800602b6c2420e02" => :catalina
     sha256 "0e6609fc738289ee0d22383fa2d06b4eb931ecf0d86c8468e2307045bb2468fb" => :mojave
   end
