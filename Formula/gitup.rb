@@ -17,6 +17,7 @@ class Gitup < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "75267b1b78d901d02d25d3ffb0f867a5428319a5e7f71852549e610d92aef4e9" => :big_sur
+    sha256 "cac513baa7ac0514017dbb53996278e12f42cb9f8995c5404e332d4e742260f0" => :arm64_big_sur
     sha256 "24a5b0141173ca61a85b8b7aeec68dce1d43d17d67e7edf92d4197241b977c91" => :catalina
     sha256 "2ef7af3d0f8928ef352902bb7d583684adda069580d13af4c3d26818e5808d3a" => :mojave
   end
