@@ -6,6 +6,7 @@ class CrystalIcr < Formula
   license "MIT"
 
   bottle do
+    sha256 "fcddd33608c0eccf38cd3f3e7bc299cfac6ca2b7020e7d3171eead79c932b2db" => :big_sur
     sha256 "22389822712ed2a634ba8d32817a29e0930eb53669d4c931f740b5c895de9ed4" => :catalina
     sha256 "5c73c5c37ed0cd5ceb6fc72f88afe4a9156417a0e4752e93500d0aec755646c0" => :mojave
     sha256 "1ea960e6dd1eeffc8c7e9471a2e17e9dc912eccdc7558d18346a856c10e078bb" => :high_sierra
