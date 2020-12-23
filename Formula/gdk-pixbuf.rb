@@ -11,6 +11,7 @@ class GdkPixbuf < Formula
 
   bottle do
     sha256 "30685ea260245bc1a4e6c5e3b1301f7b603e64c98a83386e1b71515787e1a130" => :big_sur
+    sha256 "f5ba72b880262c20ef7fd5fd21232662b0b9d76d40c51b1f574483b63b1fb886" => :arm64_big_sur
     sha256 "fe5c2b2bc7a942a6cab4d091be0c9f88703919cc75b6ec92d51ef0ed24ebcdbc" => :catalina
     sha256 "a76668fe271e79d4a74ed56657130dda2012c4cf78e9d7e5c417f010ca35ad8c" => :mojave
   end
