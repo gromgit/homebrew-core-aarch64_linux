@@ -11,10 +11,10 @@ class Sng < Formula
   end
 
   bottle do
-    cellar :any
-    sha256 "1cc13309bec2c482abe4817e9161273c441c81eac7d363bc60f03e3371e9dad1" => :catalina
-    sha256 "d7fc7e7d8dd4bfac43c8b4bf4b2cb0032cfcd6167e51408636fc344972814653" => :mojave
-    sha256 "c9a851897c8a9a286a5988e822175769ca3aa554c48bbcf859c01c635a0fb6b3" => :high_sierra
+    rebuild 1
+    sha256 "f0e4ce732890622d796d3ab7d5c2d078f9ad327e5d64bdf9d7625b15d7a38281" => :big_sur
+    sha256 "070137e810c2ea02cdb3727ef7fc0da31065762ed6fee972a33d8690fc43e051" => :catalina
+    sha256 "de4c08894b82e37ff3fc07fd0ade38ede24bcf241757f0b6392ab2f4a5f87d67" => :mojave
   end
 
   depends_on "libpng"
