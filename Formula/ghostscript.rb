@@ -30,6 +30,10 @@ class Ghostscript < Formula
   depends_on "pkg-config" => :build
   depends_on "libtiff"
 
+  on_macos do
+    patch :DATA # Uncomment macOS-specific make vars
+  end
+
   on_linux do
     depends_on "fontconfig"
     depends_on "libidn"
@@ -48,9 +52,12 @@ class Ghostscript < Formula
     sha256 "155cf2ee5a498d441c3194ba3d75cb7812beaa3f507a72017174a884bf742862"
   end
 
-  patch :DATA # Uncomment macOS-specific make vars
-
   def install
+    on_linux do
+      # Fixes: ./soobj/dxmainc.o: file not recognized: File truncated
+      ENV.deparallelize
+    end
+
     args = %W[
       --prefix=#{prefix}
       --disable-cups
