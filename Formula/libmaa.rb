@@ -15,6 +15,7 @@ class Libmaa < Formula
     cellar :any
     rebuild 1
     sha256 "65222587a532a2412f342564d09e0dc134c84501803c75b450fa591f1c6fc029" => :big_sur
+    sha256 "39eb7101638dba1cd91aad7b7f33c281cb8b9709ed0bf3709b61a2315cf9f786" => :arm64_big_sur
     sha256 "b8d4137855afaa273b7decbfaf8e49657e83a0ec647b97592d803f816038a5bd" => :catalina
     sha256 "1ec304723997a8aabf2848900aa5293c560abbebfe2bc293eb40ace2176c148e" => :mojave
   end
