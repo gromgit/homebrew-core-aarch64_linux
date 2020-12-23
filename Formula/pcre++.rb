@@ -8,13 +8,10 @@ class Pcrexx < Formula
 
   bottle do
     cellar :any
-    sha256 "61b2942fa6a519289532736eaaa9754f8d0020ffca215eb8ba18324ed1682ab0" => :catalina
-    sha256 "74eb2f78269663a150978c7a221af9bb453c459f14838cbe551f9b25cba222ce" => :mojave
-    sha256 "65018b1dd42de0fc89e533f5343754cf8b07e0b989d0fc1820483fd76a36caab" => :high_sierra
-    sha256 "04da88d9c66600d7f636106f00b496e90fbd213431b7c4a2c20cc43f7e206a21" => :sierra
-    sha256 "5c30b4cbf987ad3b9a05521f83c672419b636277714838b6f7dee5a656c9868b" => :el_capitan
-    sha256 "c883ed380b38f020e7383643fedf80f4bad9ed1205592fe8127423e340c02c05" => :yosemite
-    sha256 "fd7050ff36dbb4c5605a4f0a9bb5d5de3ea01e6b959dd2026297a9ae35b99f51" => :mavericks
+    rebuild 1
+    sha256 "d7f87e5350fa4a45e038d4c84fca1396fc46871b4431a36cb9008909976cd962" => :big_sur
+    sha256 "89e8509bb894e25b47fef5d110aa254467751847cfb356f4e22f7f97298c14b6" => :catalina
+    sha256 "f4ab047c478328e02ff8030ecfe165d3094eea156508463ad9beb7e7bb68d87a" => :mojave
   end
 
   depends_on "autoconf" => :build
