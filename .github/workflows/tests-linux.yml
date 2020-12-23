@@ -19,6 +19,7 @@ on:
       - "Formula/libpciaccess.rb"
       - "Formula/libseccomp.rb"
       - "Formula/libtirpc.rb"
+      - "Formula/libva.rb"
       - "Formula/linux-headers.rb"
       - "Formula/strace.rb"
       - "Formula/valgrind.rb"
