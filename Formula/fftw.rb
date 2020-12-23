@@ -80,7 +80,7 @@ class Fftw < Formula
       }
     EOS
 
-    system ENV.cc, "-o", "fftw", "fftw.c", "-L#{lib}", "-lfftw3", *ENV.cflags.to_s.split
+    system ENV.cc, "-o", "fftw", "fftw.c", "-L#{lib}", "-lfftw3"
     system "./fftw"
   end
 end
