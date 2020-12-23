@@ -11,6 +11,7 @@ class GlibOpenssl < Formula
 
   bottle do
     sha256 "3ed8dc7e291495db26d893b673e7c665972569efa1fdbe0a3cf1ae39c1c2da50" => :big_sur
+    sha256 "3ff9db75ad58b19fe3b0c364cc0d8e1c7e570e6edd3eab8e7145f50ecdb2d237" => :arm64_big_sur
     sha256 "d3e3d452515afbf8ab39555e7c9e4add50f28aa89252321bee6ca021c7cb88a9" => :catalina
     sha256 "10b207a9c340bc6710e1df7f47ef4a0dba5a941c0cdb3330255718cf1884276c" => :mojave
     sha256 "04107ac3e021e4dd11feb50a3ac4024f3c73dd2b805f171ccfc22c1d7e3a665e" => :high_sierra
