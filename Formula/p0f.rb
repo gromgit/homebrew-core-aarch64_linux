@@ -6,12 +6,10 @@ class P0f < Formula
   license "LGPL-2.1-only"
 
   bottle do
-    rebuild 1
-    sha256 "6b3829d6561d30d480ad2dd550dce91f7b38f7ab98c73b921803b75728fd784c" => :catalina
-    sha256 "616522a36fb167db7a3e36c2113d6214e0e054be9c8fe7dc67a9c9da1b9a1c23" => :mojave
-    sha256 "ccd5b804de7e6fd430540283d6064d4647e1224dd2663f21e309a4077b1c30b9" => :high_sierra
-    sha256 "bd25792c98fd8c88599ab373ed8b9265fe4b69c47b6b3ebc84911750f48f190d" => :sierra
-    sha256 "37aea629cea6430b8516ea80eaaf687844a2a1656eebe7744ba6f3746381ce48" => :el_capitan
+    rebuild 2
+    sha256 "333bc8a70dec845a21858507a78babe80e6c7cd15b1a2f4ea3c4715daeef331f" => :big_sur
+    sha256 "e92f0c171b9cf2c80436092412916c98391d6fdc9f37ec16ab2243ad4539b288" => :catalina
+    sha256 "7c69ba2615e5ac9c84dba65ed8a208c7b3cc8b68d1f11b07ae3c5db17103557d" => :mojave
   end
 
   uses_from_macos "libpcap"
