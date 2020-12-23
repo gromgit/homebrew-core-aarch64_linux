@@ -5,6 +5,7 @@ class Apr < Formula
   mirror "https://archive.apache.org/dist/apr/apr-1.7.0.tar.bz2"
   sha256 "e2e148f0b2e99b8e5c6caa09f6d4fb4dd3e83f744aa72a952f94f5a14436f7ea"
   license "Apache-2.0"
+  revision 1
 
   livecheck do
     url :stable
@@ -49,14 +50,33 @@ class Apr < Formula
     system "./configure", "--prefix=#{libexec}"
     system "make", "install"
     bin.install_symlink Dir["#{libexec}/bin/*"]
+    lib.install_symlink Dir["#{libexec}/lib/*.a"]
+    lib.install_symlink Dir["#{libexec}/lib/#{shared_library("*")}"]
+    (lib/"pkgconfig").install_symlink Dir["#{libexec}/lib/pkgconfig/*"]
+    (include/"apr-#{version.major}").install_symlink Dir["#{libexec}/include/apr-#{version.major}/*.h"]
 
     rm Dir[libexec/"lib/*.la"]
 
     # No need for this to point to the versioned path.
-    inreplace libexec/"bin/apr-1-config", libexec, opt_libexec
+    inreplace libexec/"bin/apr-#{version.major}-config", libexec, opt_libexec
+
+    on_linux do
+      # Avoid references to the Homebrew shims directory
+      inreplace libexec/"build-#{version.major}/libtool", HOMEBREW_SHIMS_PATH/"linux/super/", "/usr/bin/"
+    end
   end
 
   test do
-    assert_match opt_libexec.to_s, shell_output("#{bin}/apr-1-config --prefix")
+    assert_match opt_libexec.to_s, shell_output("#{bin}/apr-#{version.major}-config --prefix")
+    (testpath/"test.c").write <<~EOS
+      #include <stdio.h>
+      #include <apr-#{version.major}/apr_version.h>
+      int main() {
+        printf("%s", apr_version_string());
+        return 0;
+      }
+    EOS
+    system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lapr-#{version.major}", "-o", "test"
+    assert_equal version.to_s, shell_output("./test")
   end
 end
