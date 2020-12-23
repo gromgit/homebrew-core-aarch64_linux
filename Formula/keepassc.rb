@@ -13,6 +13,7 @@ class Keepassc < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "8ba0332d53b90b3922beae741ea4ef144610c633a5852050c60d7876a158c1c3" => :big_sur
+    sha256 "1fda05aa9860777fc35146d01c2828b50ea58e297301b6403ffe49a10538fd35" => :arm64_big_sur
     sha256 "71632bb4ea2f91ca573ad5b52ddb233725b2c99b55866d743dda638e69b0c712" => :catalina
     sha256 "b2771b8b9ff6592959e6cde59e6f3f7fd30ad3380f8b2e84911179f1fb0bc3d3" => :mojave
   end
