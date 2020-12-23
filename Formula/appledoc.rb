@@ -19,10 +19,14 @@ class Appledoc < Formula
   end
 
   depends_on xcode: :build
+  depends_on arch: :x86_64
 
   def install
     xcodebuild "-project", "appledoc.xcodeproj",
                "-target", "appledoc",
+               # The 2.2.1 tarball includes prebuild Library/*.a files which only
+               # are built for intel:
+               "-arch", "x86_64",
                "-configuration", "Release",
                "clean", "install",
                "SYMROOT=build",
@@ -57,9 +61,11 @@ class Appledoc < Formula
     system bin/"appledoc", "--project-name", "Test",
                            "--project-company", "Homebrew",
                            "--create-html",
-                           "--no-install-docset",
+                           # docset tools were removed in Xcode 9.3:
+                           #   https://github.com/tomaz/appledoc/issues/628
+                           # ...so --no-create-docset is essentially required
+                           "--no-create-docset",
                            "--keep-intermediate-files",
-                           "--docset-install-path", testpath,
                            "--output", testpath,
                            testpath/"test.h"
   end
