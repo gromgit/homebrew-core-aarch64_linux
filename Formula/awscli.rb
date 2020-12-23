@@ -9,10 +9,9 @@ class Awscli < Formula
   head "https://github.com/aws/aws-cli.git", branch: "v2"
 
   bottle do
-    sha256 "90bd32296607c333384d8db14d2b8528657d975bfc635562dc6dc65d4b0e3b5d" => :big_sur
-    sha256 "61f25dce760b82a44b06786489945b007327a993894ce1fc5d810be483aafd1b" => :arm64_big_sur
-    sha256 "a17c2e2cf81b91374e0a44ab8feb28950c6380151f96393926c7e3340b09f5e0" => :catalina
-    sha256 "6d4176b9056a5afd3050b8b5f63ddb37e75826a29da1e231b940f250158d01ed" => :mojave
+    sha256 "655acb9f074664ea3b88a6f5e5e76ae3ecb45ba2c327669182d083eb4fa0976a" => :big_sur
+    sha256 "dc9828d95caab5310f4a2b662f14d0979c565968c27c8340366c432e987646b8" => :catalina
+    sha256 "c5d7e0df78c7030fbe6f8c908f125705f037e50001b260bbe772332033aa4aac" => :mojave
   end
 
   depends_on "python@3.9"
