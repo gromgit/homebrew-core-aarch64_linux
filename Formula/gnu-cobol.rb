@@ -11,9 +11,9 @@ class GnuCobol < Formula
   end
 
   bottle do
-    sha256 "d9d87cf03319065de1c261067af6e566b261bbab31d79703efe13de185e3db60" => :big_sur
-    sha256 "14fe1b09a70cadf72f9f9eecd887dcdbb901e27b0c2cd708fe746f6ea0c4dda4" => :catalina
-    sha256 "42f1271d839b9c9f829d235ba1c298ea80d3545d9667ddde8b1eab50539b7e4f" => :mojave
+    sha256 "54120a32f1aca55dcf086ee8263460f8450ca7f2b35950f66577f43dbbce0228" => :big_sur
+    sha256 "0d347c1e84adebd9244bacdf8eb3ebce9250b077a745e18cab6a4cef0e804d51" => :catalina
+    sha256 "b17301c541db62619dadfaae4c06bddbeff42fbc6a35e651655fe9e5db5cc733" => :mojave
   end
 
   depends_on "berkeley-db"
