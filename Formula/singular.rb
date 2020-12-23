@@ -6,10 +6,9 @@ class Singular < Formula
   license "GPL-2.0"
 
   bottle do
-    sha256 "470cce62a2e4de91b9ddbd6fef610b8c30fa23b6180ba7ad37ee3f5394a6c15b" => :big_sur
-    sha256 "75f8a2d324d2d9bff14ec7063ccc23992502f899ddacc6603102dd7e0047f482" => :catalina
-    sha256 "6462648583c2d1a3f21e6bcd341ff75ffc6cf9e2a945b80d268093187591dcd4" => :mojave
-    sha256 "f0c3ef15a16f9e59290da7ad7530a5c6897aacf2b825b41db5ea4da61bb7cf25" => :high_sierra
+    sha256 "26709b976c059b3cd9ebd8b3a5c397d6379503786dbd282a7b25a69af612cb1a" => :big_sur
+    sha256 "bcbff484908f20d9677e051686bf44822430a12b18e4f8ec44782977f5ca1d2b" => :catalina
+    sha256 "f3e2e200d751f2b7d39d011388a4b2c7cb59ac67bf7ea3583b200a677ee9938c" => :mojave
   end
 
   head do
