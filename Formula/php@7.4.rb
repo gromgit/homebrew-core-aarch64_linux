@@ -10,6 +10,7 @@ class PhpAT74 < Formula
 
   bottle do
     sha256 "0c2e9649e104d2a8f909f4fbb0c310ed679fd0eab7a6a855715d687dadaa34b6" => :big_sur
+    sha256 "394c0882a448c3a0281db8ce4269859d833627686b96938f67339726ae7330f3" => :arm64_big_sur
     sha256 "7405eccb1004fde7ce9de79d52a53fa8263f88292a426ed0106c4c4f4015b130" => :catalina
     sha256 "2c97ec750a48b4c477945966ff72bc4f62a8123bce5df02304964b35e68a9dc8" => :mojave
   end
