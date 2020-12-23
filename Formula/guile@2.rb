@@ -7,6 +7,7 @@ class GuileAT2 < Formula
 
   bottle do
     sha256 "35072ce02c8db7b27f6890da7244e63ecb6e37d510b8c8794be27b46b2d57cb5" => :big_sur
+    sha256 "b281df6321e291747d5d847ac8c61f74f4de2777c031ca597b4f5440459f5207" => :arm64_big_sur
     sha256 "2821f055df7815abc7467a42f1bd90a09672261a9aad4ce994111a59a2ce6dbe" => :catalina
     sha256 "78e5fd69581a54b8d7c701e1fc03d96660b80a2699d7dad701cdd2865a5f2442" => :mojave
     sha256 "2832668210b0ef94ae0596c7e27aca846f76453719df6a9103e34af9e885d031" => :high_sierra
