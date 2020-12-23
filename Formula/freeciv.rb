@@ -12,6 +12,7 @@ class Freeciv < Formula
 
   bottle do
     sha256 "52d96a063c396c0b3c7993936c6d2520da049c9a265f32e26e7175d8c3328435" => :big_sur
+    sha256 "bbfa9ab1b85454c31f7970e52e7f4d1cae80aea4952fade625a434cd1b9cccb8" => :arm64_big_sur
     sha256 "f29bd227e4735a4e6fde10ffa6810460437f8a1fa47f42694f2fa82d6db213fe" => :catalina
     sha256 "909bc9989745d0626fdf8d985598d01a7b6ee97b8550bdf701470e991e2e0ab2" => :mojave
   end
