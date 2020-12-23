@@ -11,6 +11,7 @@ class Libstxxl < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "2c14a0f97038d5c1818fd9a9214c859ab58cf32ff3c4cb1697c5a61660577715" => :big_sur
+    sha256 "e0c1246609170b60702ec4f97432969977d28882b24baf82f2948a605ee174bb" => :arm64_big_sur
     sha256 "d8789eb30edee21c2800e2f93f70a2187a9a62ec193ec4d63ed5788cffdd9c0d" => :catalina
     sha256 "be650cf787270080a323cbebf05109bcc72d94ea508b0e7c265c6592b871065a" => :mojave
     sha256 "a8b116ba332c5d32055f754db6fb491e3c3fd87b4b4a317213a2e0963d34ddeb" => :high_sierra
