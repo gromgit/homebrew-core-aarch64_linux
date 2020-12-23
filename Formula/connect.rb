@@ -15,6 +15,7 @@ class Connect < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "90d0c91146180552a3a023ceba3850804139eb30b146151efe9c6d889ab9c99d" => :big_sur
+    sha256 "33e6c06bbe902eea4790679f99c9aef340cce1e647238a13c151300afa46ee1a" => :arm64_big_sur
     sha256 "a08dfce847d75746d2b31ed3561e961fdcf950b051c5860e6d137ff5e1bcd1c7" => :catalina
     sha256 "cc0a39f7e2fea7672f6d691d2e1221d0c5963a9f7e0039317930418fc7c7ebfa" => :mojave
   end
