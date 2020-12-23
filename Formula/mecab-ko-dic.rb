@@ -13,6 +13,7 @@ class MecabKoDic < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "ab72fcbb7b1e0bc1ec8667a2d183ad5beab66279d27486ef1ae241d4114fddd1" => :big_sur
+    sha256 "6e39a270ea5fbb5424d0ca358acafc2f08b9232d878eded2789f990f4065aba7" => :arm64_big_sur
     sha256 "02f67f9bd82e7310074c4c47097bcb4244c79211af9736db8fa73861dbbb820d" => :catalina
     sha256 "8d9c37045d060855f558ef8706cee66e918e553ff5c8893811e5cf78767893cb" => :mojave
   end
