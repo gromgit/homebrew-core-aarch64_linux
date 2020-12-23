@@ -15,6 +15,7 @@ class Dpkg < Formula
   end
 
   bottle do
+    sha256 "4f28e3cf9f5efab34cfeca360751e5369552e9a5122e2b76b6375e0c7425999f" => :big_sur
     sha256 "32ae6083fd4207f4cecd58087b68afc43a22d6020bd7a89184a0af20ecc9a2fb" => :catalina
     sha256 "ec0d8e85f436bc6394de1f261c1c0e791ed72797d7ae20e6fb8f1cda016a7b43" => :mojave
     sha256 "483c5e48a18dd401638399670aff9fd1a2800a243a37f208235777e9fc140986" => :high_sierra
