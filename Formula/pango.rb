@@ -13,6 +13,7 @@ class Pango < Formula
   bottle do
     cellar :any
     sha256 "48d12081cc6415724e0b6f73fef7ac2df3d5c523a408d65c5105f7c83e4a2f40" => :big_sur
+    sha256 "70e12652d4cb07296576f8f096e6a04fe51658a09ea4d904f4c1049400f45f1b" => :arm64_big_sur
     sha256 "8efc7e43fabedde9160927212857a7fa950a0ee4768374a5f36fc7b7a4e79c44" => :catalina
     sha256 "39a4c6fd12e5a6cb12902e272e95358d1ef925b3bfadf41d67a43b7ab608b8c5" => :mojave
     sha256 "bbb19280fb8b85544c566fc0b668508d5363b2fa4a062091dea7bae115be5c6a" => :high_sierra
