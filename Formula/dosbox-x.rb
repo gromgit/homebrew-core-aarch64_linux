@@ -15,6 +15,7 @@ class DosboxX < Formula
   bottle do
     cellar :any
     sha256 "801fbc5c1f9a9379cf49966d1fc9202818acc6e80b351b258f22a42d3a3248da" => :big_sur
+    sha256 "ca42769d75fa502b39bf51aa3338148a2df23562ccfb05a8c32c226d2ba9f793" => :arm64_big_sur
     sha256 "ccc8e783cc9043a1685ef7bbb596ff6f80ab4d952bdfcb4ecd590fd790b8f56f" => :catalina
     sha256 "fd3af9a91249a6f811371321db18005a2f98f8d984ff2a398064e3bb18be34f7" => :mojave
   end
