@@ -7,6 +7,7 @@ class Ugrep < Formula
 
   bottle do
     sha256 "334413432ed8d878f7506d6f027aaea776cdcc7d3b2990715369cbad103d78a7" => :big_sur
+    sha256 "f0c095095e0c2b75f9bd655e72cd664990fce4561e0aa877ebddfc0a96bd9c68" => :arm64_big_sur
     sha256 "3488654793a1cf08cf249ca8d6305535847a58f9115b9b2fab3b35f4291addcb" => :catalina
     sha256 "b2fe8a609d1dfdbc0c5966f06741866f7e1ce7f419172f2d1655877c47b18b3b" => :mojave
   end
