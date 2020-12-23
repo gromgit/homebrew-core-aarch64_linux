@@ -27,6 +27,7 @@ class Gcc < Formula
   bottle do
     rebuild 1
     sha256 "721b6e0927796363e8ccbb9409d7e6dc2c17e121ae371cfd8198e26b31f5dff8" => :big_sur
+    sha256 "2c26fecebc423e96c2de5458dc9420201f23eaae1cde6e3b3d43501ad7de8016" => :arm64_big_sur
     sha256 "520596722515e691a408b878c93e1f3d93cd6964d033533e48c368490bed0d87" => :catalina
     sha256 "62f6d04e2b699be8a89a1827d18acb4d6d4df98a40b80091a51ba85712c5585e" => :mojave
     sha256 "4886ccbae6b664f016595d0bbb518baec08d6cf2ed72803661921950536ab6ed" => :high_sierra
