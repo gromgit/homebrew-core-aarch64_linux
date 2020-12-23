@@ -6,6 +6,13 @@ class Counterfeiter < Formula
   license "MIT"
   head "https://github.com/maxbrunsfeld/counterfeiter.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "7c5bad9e7f55695e1cfdd2eed013d16ca3b5cf6853a6834a0ba7b1de294afeab" => :big_sur
+    sha256 "c8d8b1fedc2205d8ee93b686df168d8045eea70494cd27cb93ba308d305a9ccd" => :catalina
+    sha256 "b6cbfda0d1461c9afaf3f00bf8fe215ffcf7d3a1732b2dd829747740d2ba69c5" => :mojave
+  end
+
   depends_on "go"
 
   def install
