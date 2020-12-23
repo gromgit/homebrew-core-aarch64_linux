@@ -4,6 +4,7 @@ class Vsftpd < Formula
   url "https://security.appspot.com/downloads/vsftpd-3.0.3.tar.gz"
   mirror "https://fossies.org/linux/misc/vsftpd-3.0.3.tar.gz"
   sha256 "9d4d2bf6e6e2884852ba4e69e157a2cecd68c5a7635d66a3a8cf8d898c955ef7"
+  license "GPL-2.0-only"
 
   livecheck do
     url :homepage
@@ -20,11 +21,13 @@ class Vsftpd < Formula
     sha256 "25a9d2e92ca7e3efda6c9882a62ad5927c0c5e450eca4d62d7829c467dd086d9" => :yosemite
   end
 
+  uses_from_macos "perl" => :build
+
   # Patch to remove UTMPX dependency, locate macOS's PAM library, and
   # remove incompatible LDFLAGS. (reported to developer via email)
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/vsftpd/3.0.3.patch"
-    sha256 "7947d91f75cb02b834783382bcd2a2ef41565a76e31a5667a1ea0bd5bef48011"
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/5fbea7b01a521f840f51be6ffec29f612a37eed3/vsftpd/3.0.3.patch"
+    sha256 "c158fac428e06e16219e332c3897c3f730586e55d0ef3a670ed3c716e3de5371"
   end
 
   def install
