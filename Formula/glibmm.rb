@@ -12,6 +12,7 @@ class Glibmm < Formula
   bottle do
     cellar :any
     sha256 "59b86d3d2fe4f28e8a19ba0f5faf0174f7829bb46ae3b04f06bdcf5f3c24935b" => :big_sur
+    sha256 "ad82e21e43601e8804150bea12157afa6c38201a441d97a91521ecea93bbfc13" => :arm64_big_sur
     sha256 "f4d4326c91b4c573e07a832a0b204bd5a8bc75da331e87f18c044e1397951bc2" => :catalina
     sha256 "ff82b1c3e7e8467ac8cd91f01cd97ca2bb4329861b2dd99bda0be89954f730b6" => :mojave
   end
