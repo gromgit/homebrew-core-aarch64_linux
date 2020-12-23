@@ -10,6 +10,7 @@ class Awscli < Formula
 
   bottle do
     sha256 "655acb9f074664ea3b88a6f5e5e76ae3ecb45ba2c327669182d083eb4fa0976a" => :big_sur
+    sha256 "ce35535a431cbc0b83a9c9ca97ea470658b6096bdc6acdf442e86eba6b981d17" => :arm64_big_sur
     sha256 "dc9828d95caab5310f4a2b662f14d0979c565968c27c8340366c432e987646b8" => :catalina
     sha256 "c5d7e0df78c7030fbe6f8c908f125705f037e50001b260bbe772332033aa4aac" => :mojave
   end
