@@ -11,6 +11,7 @@ class Dict < Formula
 
   bottle do
     sha256 "e2f72aa23fa4294603f7c85da2c0748e97c36360e18845c929fc0de691ef8952" => :big_sur
+    sha256 "9be91e0b0c069d9ab1ea54591408752206ae7906366bb0d5b2127a636b3df3a9" => :arm64_big_sur
     sha256 "cd01d30024209e614bbe8614f4e7ef1c468a8994c3f8f13df618ba115b7749cb" => :catalina
     sha256 "f1887f0f6cf6acaf113f393938f09dc50a7b9ac2b01b0e3689d1c7241f3e4d08" => :mojave
     sha256 "a050d2b5ac7c9ff4535ddd7e397757694b679ed8b1be5c2a2768a9b8de9ed49c" => :high_sierra
