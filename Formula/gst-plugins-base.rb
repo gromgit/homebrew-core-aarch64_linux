@@ -13,6 +13,7 @@ class GstPluginsBase < Formula
 
   bottle do
     sha256 "41df7adc463eddef2e64d52990a076437dc115b5dcf501d0739aa754879f54b3" => :big_sur
+    sha256 "25c8983ac5492195697fdb49424bbbbec6547394e0879b8f59235a20a87db138" => :arm64_big_sur
     sha256 "515ad20ac0cb9d714aefc57c4dca4a566a3ae652c701251d0ea3dbe78542f65e" => :catalina
     sha256 "6ca05eda42dc16f6652f9f3135557a794806e2b3ec2dd6ce910adde700c5f5ac" => :mojave
   end
