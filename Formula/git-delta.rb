@@ -8,10 +8,9 @@ class GitDelta < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9ca2f88662822e52195b10e52f16f0261a3faebddf4ec30496997fab3ebc699c" => :big_sur
-    sha256 "3561fccb1ff28c7021d5cc5ed549f3be47dfd4127787510aac38192670077f17" => :catalina
-    sha256 "6ece760a0d39fbee0b2d40237c3a0e81c1d67df655502072dc06077676ac43ea" => :mojave
-    sha256 "a5767a8e9621884bb26cfb4205ffb9b2e2c0ff53536d79981ee2e22ff823a474" => :high_sierra
+    sha256 "ea97c81e666640dad59723fc79e5a7773b064b1cefbb93d2164f2454d2635436" => :big_sur
+    sha256 "a2d632b219259aaf9febbf383a0b243a24328a273d859ce320731d017ece8f30" => :catalina
+    sha256 "506bc14a8e5e0a371dd1ac5cceaeff6b337d4b84444c6b9809ff4a7c3a588be7" => :mojave
   end
 
   depends_on "rust" => :build
