@@ -12,6 +12,7 @@ class GnuCobol < Formula
 
   bottle do
     sha256 "54120a32f1aca55dcf086ee8263460f8450ca7f2b35950f66577f43dbbce0228" => :big_sur
+    sha256 "4adae6c3c543ee00f131df979b97f48ea93df1ae8ab984f3635e4ba3c1e35dd4" => :arm64_big_sur
     sha256 "0d347c1e84adebd9244bacdf8eb3ebce9250b077a745e18cab6a4cef0e804d51" => :catalina
     sha256 "b17301c541db62619dadfaae4c06bddbeff42fbc6a35e651655fe9e5db5cc733" => :mojave
   end
