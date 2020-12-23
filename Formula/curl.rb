@@ -14,6 +14,7 @@ class Curl < Formula
     cellar :any
     rebuild 1
     sha256 "c6ab851e1535ebea16d0af34a620ca3bf37d2b1b9571ab7a1f4403f859129c10" => :big_sur
+    sha256 "2727fbadda487785e7e7033b045196f6e5f65670d3984366d535f4e7f01dad3d" => :arm64_big_sur
     sha256 "f3d93b2c3ba69e5c7afd8bb2ff2b2daf67ddc9c5b0a5184a2fa565d9a05b26b2" => :catalina
     sha256 "c305611273c90a9b973df642e60f31b931ba1276294406d3a910d36472ad45ba" => :mojave
   end
