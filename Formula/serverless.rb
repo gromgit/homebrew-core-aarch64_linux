@@ -9,6 +9,7 @@ class Serverless < Formula
 
   bottle do
     sha256 "a0659cfde7d73e4bd859c37191b9b003b3bf633e62d1ae8d1b0f6fd8cd6810f0" => :big_sur
+    sha256 "869a060c419713bbf78d078418b53079be523068a34450caf75df1fec701c64b" => :arm64_big_sur
     sha256 "de78d07871e8d7aca35def658da29a079c20a19c08a5b4632e619c5b4c3191a1" => :catalina
     sha256 "e5eb7a13334512d5b8695160f63064e54cefaca9183216f5372f065a55f4f45d" => :mojave
   end
