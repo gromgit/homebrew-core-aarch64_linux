@@ -8,6 +8,7 @@ class Libpinyin < Formula
   bottle do
     cellar :any
     sha256 "e4ffe7193d01eb5e040da9f4a9f8b53f214a989b0f07553cce636e31325032a2" => :big_sur
+    sha256 "ccce070c15525539c1b1573e1ade80fc81a70007a08377698b30f0180384db59" => :arm64_big_sur
     sha256 "134f8fe1749c65e65c222f14dbd0d2b758e82df5dc5193d31e6fda2b43056773" => :catalina
     sha256 "b9a8e06f0534bb5e9c15f27be8d4bd78be2082e3ea241d2d3500c9357e5a786b" => :mojave
   end
