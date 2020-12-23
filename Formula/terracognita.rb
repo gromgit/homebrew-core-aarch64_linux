@@ -8,9 +8,9 @@ class Terracognita < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e1e553599bb43ed4da4c27b1c44b269bb46425644c6c50101b4742996c2da4b2" => :big_sur
-    sha256 "650b2e9035df64ec6bc9a6712b84e220f93a51efaac53fbe650a985b427eef2e" => :catalina
-    sha256 "2f5be55a454464e18b554c5bc2861b78f6c65b491e488caa6be484267bdf24e5" => :mojave
+    sha256 "91aedc3bc0275d4519a0bca398cdc42f1c419cc4979b89e9063c04cb58ee9769" => :big_sur
+    sha256 "ed1875f71c6e7c16a0857815f3e97e2c258d591b21d7a3fb3db2cd0d4434db5a" => :catalina
+    sha256 "f4233f3a50dcd2e872eef49d00b7cbdc80af701dd686039be71d6b2fbb6f2251" => :mojave
   end
 
   depends_on "go" => :build
