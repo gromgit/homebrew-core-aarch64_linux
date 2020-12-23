@@ -10,6 +10,7 @@ class Flann < Formula
     cellar :any
     rebuild 1
     sha256 "d8e10f25b888a78bf0d16900c37f2acfec0a3e2131c22c02a4de8b0d0983ae3d" => :big_sur
+    sha256 "ce67c71c2ab07f777a5d8fe7accd1cbb6d77e12d51b65fbc627071e57a73efc8" => :arm64_big_sur
     sha256 "a57044aa842d90b739c5008fa0d40d081afc68f8a390a93b59abc1f2e9e79b62" => :catalina
     sha256 "ac3439865022716c8db18d6af7ab44d74e4eb98e161c426a68cf52156e54e106" => :mojave
     sha256 "e8cd82ec90abf1dc403b7d364c638c43ed46036d81fb053e4cdc3b48967d3d3e" => :high_sierra
