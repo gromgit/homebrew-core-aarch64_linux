@@ -13,6 +13,7 @@ class GstPluginsUgly < Formula
 
   bottle do
     sha256 "cb86e77291ae8fddf9970104dd35692dd203700bb7478435eac7b7b69a1d9142" => :big_sur
+    sha256 "88a88429d31270011aaf94fd43a8b21cdd4d9778df5ee87fd9b9ebdc838deef5" => :arm64_big_sur
     sha256 "95a7a76aecfe472051a07be32cb7b76f8d340ae12f3d8f56fa1546d81bab2348" => :catalina
     sha256 "a00090d74613bbe4bb3f22c9f2941364f97530ed0160c4888efc868af458969c" => :mojave
   end
