@@ -13,6 +13,7 @@ class Oil < Formula
 
   bottle do
     sha256 "3df7db073f8172ed6215f23141c894da5038cb01ab21e9fa3963fdf85977ac28" => :big_sur
+    sha256 "09995b74c7f608022a3b4255c615995bc23ad2da3ca334e9c19cefee5b69fb3d" => :arm64_big_sur
     sha256 "f768ace710ef8c63d699cb81765ab8aed700de33ce0451d92d03adaf28b270b1" => :catalina
     sha256 "e31eb9050a371c77ada60cbd6bc02a37b76aae54f9e65b2320d9ec4bda902554" => :mojave
   end
