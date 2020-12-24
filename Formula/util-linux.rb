@@ -17,6 +17,7 @@ class UtilLinux < Formula
     cellar :any
     rebuild 1
     sha256 "d3ca947d64da7e1a090f6747bcfacda7ba4059ad5b716d2560778aab08a26b41" => :big_sur
+    sha256 "c2f3ac87aa2240489c515bdf2403a47550dff94202c6871406af363d9bbe7cf7" => :arm64_big_sur
     sha256 "7a2842abe7cffd1a4d40e7cda3284bb6d1a8960d4a7f528c131bd3a7916efa2b" => :catalina
     sha256 "dd4bfa3e3ffc8b3106e55c8fa52350130d7a7616bb65eb64fb8f8b9492fc9765" => :mojave
   end
