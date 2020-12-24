@@ -10,6 +10,7 @@ class Pcrexx < Formula
     cellar :any
     rebuild 1
     sha256 "d7f87e5350fa4a45e038d4c84fca1396fc46871b4431a36cb9008909976cd962" => :big_sur
+    sha256 "878feefd05caca9c45b4d0cc0072918b46c095c5e82ca99cdc88255b9f4b7f14" => :arm64_big_sur
     sha256 "89e8509bb894e25b47fef5d110aa254467751847cfb356f4e22f7f97298c14b6" => :catalina
     sha256 "f4ab047c478328e02ff8030ecfe165d3094eea156508463ad9beb7e7bb68d87a" => :mojave
   end
