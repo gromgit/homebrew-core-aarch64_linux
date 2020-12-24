@@ -8,6 +8,7 @@ class Pagmo < Formula
   bottle do
     cellar :any
     sha256 "a588c00c5d91e2caffed1a3d9392dffb9a037e9780d59df8f7377e9c6a5e1ec8" => :big_sur
+    sha256 "6725f487933f464063c5e25b411bceb5526de6c36406aa8d1fb89f8347930a1f" => :arm64_big_sur
     sha256 "7091ff4fcda1793ed4a68028304954ff745c081fdb99d3337313ceba5f7f1f66" => :catalina
     sha256 "27ae1027b5d5ec1404895162aeed7cb5a4c086cf4741f6b9ef824e417d5321d8" => :mojave
   end
