@@ -7,6 +7,7 @@ class PetscComplex < Formula
 
   bottle do
     sha256 "06f085d7e2d65268531f3dfb1c3a41fc954310843c9dd2b0f2f81f261d0602ad" => :big_sur
+    sha256 "f098cf417f6ca1759a93932ef34841531bc971730b501514323f015253fd5ebe" => :arm64_big_sur
     sha256 "dd6321b74cae89523563d6245bb054e8324d73dac127de8a906452aae5f36566" => :catalina
     sha256 "6a328e638d1cdfa0ba9a89300b0a090013de490bd5e5153966b3c7d173153b25" => :mojave
   end
