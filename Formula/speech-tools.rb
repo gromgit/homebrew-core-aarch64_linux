@@ -3,6 +3,8 @@ class SpeechTools < Formula
   homepage "http://festvox.org/docs/speech_tools-2.4.0/"
   url "http://festvox.org/packed/festival/2.5/speech_tools-2.5.0-release.tar.gz"
   sha256 "e4fd97ed78f14464358d09f36dfe91bc1721b7c0fa6503e04364fb5847805dcc"
+  revision 1
+  head "https://github.com/festvox/speech_tools.git"
 
   livecheck do
     url "http://festvox.org/packed/festival/?C=M&O=D"
@@ -18,11 +20,21 @@ class SpeechTools < Formula
     sha256 "a0794d1d7f424833d2fe92726d26b6ebcc8dcf63b7f9700b19e1119ed7e2ca62" => :el_capitan
   end
 
+  depends_on "libomp"
+
+  uses_from_macos "ncurses"
+
   conflicts_with "align", because: "both install `align` binaries"
 
   def install
     ENV.deparallelize
-    system "./configure"
+    # Xcode doesn't include OpenMP directly any more, but with these
+    # flags we can force the compiler to use the libomp we provided
+    # as a dependency.  Normally you can force this on autoconf by
+    # setting "ac_cv_prog_cxx_openmp" and "LIBS", but this configure
+    # script does OpenMP its own way so we need to actually edit the script:
+    inreplace "configure", "-fopenmp", "-Xpreprocessor -fopenmp -lomp"
+    system "./configure", "--prefix=#{prefix}"
     system "make"
     # install all executable files in "main" directory
     bin.install Dir["main/*"].select { |f| File.file?(f) && File.executable?(f) }
@@ -39,9 +51,10 @@ class SpeechTools < Formula
 
     File.open(txtfile, "w") do |f|
       scale = 2 ** 15 - 1
-      f.puts Array.new(duration_secs * rate_hz) do |i|
+      samples = Array.new(duration_secs * rate_hz) do |i|
         (scale * Math.sin(frequency_hz * 2 * Math::PI * i / rate_hz)).to_i
       end
+      f.puts samples
     end
 
     # convert to wav format using ch_wave
