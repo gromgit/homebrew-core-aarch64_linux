@@ -1,8 +1,15 @@
 class Remind < Formula
   desc "Sophisticated calendar and alarm"
   homepage "https://dianne.skoll.ca/projects/remind/"
-  url "https://dianne.skoll.ca/projects/remind/download/remind-03.03.01.tar.gz"
-  sha256 "d1a164d1c2d1e963d5f1f251457a8065cae12f36e3914cac1e54275180499478"
+  url "https://dianne.skoll.ca/projects/remind/download/remind-03.03.03.tar.gz"
+  sha256 "10f946fd5b5cd83e4ba435ca493d3ebff235a5808aef1f871010942e95ea8e02"
+  license "GPL-2.0-only"
+  head "https://dianne.skoll.ca/projects/remind/git/Remind.git"
+
+  livecheck do
+    url :homepage
+    regex(%r{href=.*?/download/remind-(\d+(?:[._]\d+)+)\.t}i)
+  end
 
   bottle do
     cellar :any_skip_relocation
