@@ -7,11 +7,9 @@ class Freerdp < Formula
   revision 2
 
   bottle do
-    sha256 "9ce96071c6b5669d95af69ae583c6ae15ba3c9d52597d0eacbb967386c7461cc" => :big_sur
-    sha256 "81141b89bc0243522912ea242d05951966be48d85c69325faa1a3cd4123c6ac6" => :arm64_big_sur
-    sha256 "500faf5c949356095126fc08fd1f5bd71ee2254cdb7f65e7ac38cbfde151911d" => :catalina
-    sha256 "a97258802689aebfb320f3649a9fa36389c885953afb211f9b54962eec8a87f7" => :mojave
-    sha256 "8c95c86605b16b6a524b720f70c783c9a77e50719d49cd02a0624da03e4cf92d" => :high_sierra
+    sha256 "dd8fc56553931bdc70efae9305b68b9061092f4f1cf901df4a3f499419de7608" => :big_sur
+    sha256 "cae2807414c8e79c8bab0e044fa02946c0eba15a3ceba56d156b12bb8867bed0" => :catalina
+    sha256 "bf764412f282f795ec8bf58055ff54489c75cd344f2c5f901d7eadd15b9201ee" => :mojave
   end
 
   head do
