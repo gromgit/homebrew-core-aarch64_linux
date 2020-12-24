@@ -12,10 +12,9 @@ class Ncmpc < Formula
 
   bottle do
     cellar :any
-    sha256 "7b984d2e6c46fbc3975e09cf35f76d67eff0c40c6c589bb5f0f9d2a7eeddecf3" => :big_sur
-    sha256 "b0d7f89faa7f1a6a0d39b2e257f8ca0abca93bb6654b69251a3261e2b1fc075b" => :catalina
-    sha256 "d2bbc8836a5c0cb5380c4698706e30876fad06788771129ad0cf953e0b219f50" => :mojave
-    sha256 "da45a87cc0e143418c66f468f94f3930c24544b4ef5d22396aa5280d5878dd45" => :high_sierra
+    sha256 "0f9ea71e567da470344475a361e294ac08abb30c3d7accf802e224fbe9caf4c7" => :big_sur
+    sha256 "fd422c49a76b2d474a474357aa44c2340f109b9309d4045698d2be1a94d37775" => :catalina
+    sha256 "79a2da8c50a7d3cec1ed463d98b97a46a497f7b2a8b52d4ea99f7a460d0c47fd" => :mojave
   end
 
   depends_on "boost" => :build
