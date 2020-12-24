@@ -8,9 +8,9 @@ class Oq < Formula
 
   bottle do
     cellar :any
-    sha256 "916037c7be0a4d68aefc50766972bd9af94d1aed6c4f799464df7ddfc757597b" => :catalina
-    sha256 "0a75e9085381291184131f31551bbce6fce440587165a93ca577805fdb077a5c" => :mojave
-    sha256 "19d5820ecbf9fb4eba3f799c2bf0c1aca9924dcb3e7b82b041bf13c757d828fd" => :high_sierra
+    sha256 "b94465265a43dd9a684d5b205ea0d5965b422f44a4bc77a9133994826c58b60e" => :big_sur
+    sha256 "e92635d67b476ab08a118969a069a0b06b959dc04c118ae3483722dea8b3d0bc" => :catalina
+    sha256 "ea4207876a0d571bede16a2de04fee5a381a699510c44a1736e82f21d63f75a8" => :mojave
   end
 
   depends_on "crystal" => :build
