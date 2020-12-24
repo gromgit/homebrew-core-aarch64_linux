@@ -10,6 +10,7 @@ class Functionalplus < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "244d54ac6b458a8f170a5eba497817b5b22b374e834d65537d674ab9e39c666c" => :big_sur
+    sha256 "f924c8c83fcdc4d22a32166a3b0c29a213951ff5f27e139bdc6eb3c26d795714" => :arm64_big_sur
     sha256 "73e1e7337735aefb7deed60dd5a2fa21f6e08852c3ed2b030e599196c7af2328" => :catalina
     sha256 "7c71a5c706e7b89288b9f9897eaee2a22f4b375ef710c68d94fe131b012daa6d" => :mojave
   end
