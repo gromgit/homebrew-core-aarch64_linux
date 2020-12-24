@@ -12,6 +12,7 @@ class Lesstif < Formula
 
   bottle do
     sha256 "49ec8eeeb266caef90b7fee6151d7292e4b636256863a9a4b67abdf965aba33b" => :big_sur
+    sha256 "b21ba8ea2bfc016141ab76a3021c7a941f1a682840cec111bc2bc2b8adc53af6" => :arm64_big_sur
     sha256 "78f251801b6befbfc5823a668c45babcec2f24a0de4befd089f1034e02dcbf46" => :catalina
     sha256 "f522a309507b2f9c2aad4aea7a8bbb6cc7d845e922d6d49cd3ca81bccad7f5f5" => :mojave
     sha256 "6bc0a2511a83a9a15bc27a2385aa7fd944836eb4e685ee7878e590be7680e713" => :high_sierra
