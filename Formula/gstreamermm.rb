@@ -12,6 +12,7 @@ class Gstreamermm < Formula
   bottle do
     cellar :any
     sha256 "d30aeafe0ac35fa2ce631e2c8e47f72eebbfcf5e395f3e8703a72f8e68dfe136" => :big_sur
+    sha256 "f568885efde3d1d18801014eb944b87138db9ea2fa067aa9c714c0a0c404fad1" => :arm64_big_sur
     sha256 "683541895f76162db0eb4f0637fd5d1e131d2385e68ac25b3401dcc991e496d3" => :catalina
     sha256 "d11aaca4754a2420e206829837a34a8aaf16c2ad1ebaba5cd9a6f5d85e4f50cc" => :mojave
   end
