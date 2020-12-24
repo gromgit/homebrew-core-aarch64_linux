@@ -8,6 +8,7 @@ class Sollya < Formula
   bottle do
     cellar :any
     sha256 "c4bfa257d2e396ec055f3032d5ece3753d47f582db360d2f5c639d5d21304bc9" => :big_sur
+    sha256 "e85099273aa58bed86a2f3f5cecd630d6ef34733eb82781db493baf17e3beecb" => :arm64_big_sur
     sha256 "2a005ddf4e5215f870f20efd84297d27d7683b5acc5ff771545893cf729da2a4" => :catalina
     sha256 "711853a4670a2951c6160f5681c8c511136f3f731e7a7806dd4a9f39b3eff209" => :mojave
   end
