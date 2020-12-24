@@ -16,6 +16,7 @@ class ReorderPythonImports < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "1f504f5fca0798b46939964114068f233e5cc330858c5c35684e9f38e5ca3294" => :big_sur
+    sha256 "541915078b0a90ba972a7976fda87237d3d9715fc5645e767117c34ca5b0e33a" => :arm64_big_sur
     sha256 "b9beb2be9546035065dd15fe87f5dcd7df3bfbcfff6cfdf3941b09925e0884a4" => :catalina
     sha256 "b5da6963dea056b23d05a8a562968eeb200b25d5fd4162f4dfcb6379784a82e4" => :mojave
   end
