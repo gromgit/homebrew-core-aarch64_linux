@@ -13,6 +13,7 @@ class Libplctag < Formula
   bottle do
     cellar :any
     sha256 "c2ec604baf5a893508ae8a45fc2af74efd0abb22aaba2119743e00c8c8685858" => :big_sur
+    sha256 "ec91e0e4c5565138b4faf0f2e9b36f00c606c678a12e112542648793c15dcfa4" => :arm64_big_sur
     sha256 "d45af9651866466b70b2c5c6479d7681d216230ef6b7c892c0450edeedb5714c" => :catalina
     sha256 "56a3926222b479954123f5e922d09d0ec71817f7afbbfcffac57a31daa2eee29" => :mojave
   end
