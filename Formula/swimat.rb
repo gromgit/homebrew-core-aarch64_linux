@@ -14,6 +14,7 @@ class Swimat < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "f4099d895297155fe34b95ff66e214c31fcf2990e03aeaad8e1680061fb580a9" => :big_sur
+    sha256 "5474723b7d13050f04c03a9ba5dc7bf0d962b13ff384f82fd9cf5f47754fdb7a" => :arm64_big_sur
     sha256 "6ee6f59882dcec7188ef4684fcada0d22edf68470023fffb73b610f2dbe44112" => :catalina
     sha256 "6b9a5174b6050250d0dfe5721102c5455997f2abcef1f2dc6a82686af11117fd" => :mojave
   end
