@@ -10,6 +10,7 @@ class Shntool < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "2d6288006837305251858e7ff434646727104197329ac62a3c534ad7cbc50f68" => :big_sur
+    sha256 "a1be5a6c5cf7da02c26f1a2a04e2109c7752d55b2dbd30054d233fbb50640983" => :arm64_big_sur
     sha256 "b9978393fd387c12aa64ae33b653b790df8bb422f2d278c146071fa402de0e02" => :catalina
     sha256 "e7dfe8483a2c233a3bf6ce9838367a0a292c08a764afb1e156ca6cad537e9e31" => :mojave
   end
