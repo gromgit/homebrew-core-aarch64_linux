@@ -3,7 +3,15 @@ class UtilLinux < Formula
   homepage "https://github.com/karelzak/util-linux"
   url "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.36/util-linux-2.36.1.tar.xz"
   sha256 "09fac242172cd8ec27f0739d8d192402c69417617091d8c6e974841568f37eed"
-  license "GPL-2.0"
+  license all_of: [
+    "BSD-3-Clause",
+    "BSD-4-Clause-UC",
+    "GPL-2.0-only",
+    "GPL-2.0-or-later",
+    "GPL-3.0-or-later",
+    "LGPL-2.1-or-later",
+    :public_domain,
+  ]
 
   bottle do
     cellar :any
@@ -82,12 +90,14 @@ class UtilLinux < Formula
       wall wdctl
       zramctl
     ]
-    <<~EOS
-      The following tools are not supported under macOS, and are therefore not included:
-      #{Formatter.wrap(Formatter.columns(linux_only_bins), 80)}
-      The following tools are already shipped by macOS, and are therefore not included:
-      #{Formatter.wrap(Formatter.columns(system_bins), 80)}
-    EOS
+    on_macos do
+      <<~EOS
+        The following tools are not supported for macOS, and are therefore not included:
+        #{Formatter.columns(linux_only_bins)}
+        The following tools are shipped by macOS, and are therefore not included:
+        #{Formatter.columns(system_bins)}
+      EOS
+    end
   end
 
   test do
