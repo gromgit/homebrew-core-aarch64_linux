@@ -13,6 +13,7 @@ class Solidity < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "721abd3121957e11cd39084a90ae3cf7a385a330745a13a6ee26e978348a94b6" => :big_sur
+    sha256 "06b9c4deb734f35350fd3c7bb7fef169169c4d6804a49b5693f643b3213c98b2" => :arm64_big_sur
     sha256 "dfc15d2f00dca49304056340ae1363f403513c22ff05ff9a6dbd8b5135266170" => :catalina
     sha256 "5574a633f0cc5e629b46f5503f3ac34d077c5112efbeb3dbff0a64e054465380" => :mojave
   end
