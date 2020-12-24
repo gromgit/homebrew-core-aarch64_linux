@@ -7,6 +7,7 @@ class TaskSpooler < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "fd413989afe1cd32a45c02ed58b79dcab5c0242289a1b7ebf028228b4359aa39" => :arm64_big_sur
     sha256 "2a31687b430989e2a004ef2a3c69e20648707f6d60907031dcebd43b51924a38" => :catalina
     sha256 "319c29e750b0ba183b14accb571c4d210723458d5fcd72302b5ec866e5a76ad4" => :mojave
     sha256 "8045397e275ade52621a1ab3a21e3eddf277fafd1beea60db2d10bc15d11b8f2" => :high_sierra
