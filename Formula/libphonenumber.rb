@@ -8,6 +8,7 @@ class Libphonenumber < Formula
   bottle do
     cellar :any
     sha256 "ee9063f6468e03a32ac4c4c486a988312be41d34d0cd99ac657d1612a70569e1" => :big_sur
+    sha256 "a4b52514ee47582d893d00d2c5740c00ac9ac38a2570e5e9e506ae79b0e250c4" => :arm64_big_sur
     sha256 "53a33a6126452a7c65f92a7b344e047703692426d18976456703cda6de911a5c" => :catalina
     sha256 "a5259c647acf6281508df5d490a138edb640f295ed31109206e51f5882acadc0" => :mojave
   end
