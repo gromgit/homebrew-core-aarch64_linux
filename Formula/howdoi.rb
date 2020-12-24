@@ -14,6 +14,7 @@ class Howdoi < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "00e7a2f4baebdd64f79b3e56539ddee40b23037bfa78327235519e46d59d3ccd" => :big_sur
+    sha256 "e7c50d24d9b0103c1315bd4336422f4ea477abafd4f01be073236c725d2a27d9" => :arm64_big_sur
     sha256 "13671b0d0eeb6589f91840b395b2062e386f83b0469bbb639a47c4d04ec4884a" => :catalina
     sha256 "bf4bcddbd07fd5b8a7515f1b4a3657dcdcc218ba670033e71d8e61c14f36e84e" => :mojave
   end
