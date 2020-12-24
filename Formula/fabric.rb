@@ -17,6 +17,7 @@ class Fabric < Formula
     cellar :any
     rebuild 1
     sha256 "bbcb947031b93874e33550da5833e3ea9940285e31c086aed584942613951f94" => :big_sur
+    sha256 "7374500d57b518847481e7dd5513904a8a33548405ff8576a3341f24df41022d" => :arm64_big_sur
     sha256 "260faa98b5386a7f21133d5bc7528881519be45edb045c761b293a75c7e2c291" => :catalina
     sha256 "93e488ce8dc9ea75048eb1dde24dbd24cfda9fbcd2169a1703e9386602fc673a" => :mojave
   end
