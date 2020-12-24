@@ -9,9 +9,9 @@ class Macvim < Formula
   head "https://github.com/macvim-dev/macvim.git"
 
   bottle do
-    sha256 "1b1d92000e321cf0a172c26965404c738be5ac68c51203ee34164152528bd67a" => :big_sur
-    sha256 "f2e611635742434ebfaffa952918ac44bbb7c2da40782304b49ee7d847ce62a9" => :catalina
-    sha256 "c2c4ffb3a206a59ad3ba17dc70e3a46b5cd25d79cb297732cf8a653018ce2059" => :mojave
+    sha256 "9c9acdacda5e069a2ca48c967c010e7c6d34bcca4c747ed1d22614e04943e1dd" => :big_sur
+    sha256 "7e03b1a4d69d54d39f6ff4270ac6482796a7c56852e40891f95b115686fc3f3f" => :catalina
+    sha256 "23b8818c9dec41aee05a3f743d312c12aa6a7d7eb6eb583be850b1685d53316f" => :mojave
   end
 
   depends_on xcode: :build
