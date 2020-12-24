@@ -12,11 +12,9 @@ class Vice < Formula
   end
 
   bottle do
-    cellar :any
-    sha256 "1a0bc0f49e3f16b32f678547fef6acf1aad720e20e033651f4516b280c86a6d6" => :big_sur
-    sha256 "b65fbef8066263ccd42679a2b9ed9f3d438ff75a5d8c097dcf04ffb5fa1b1e43" => :catalina
-    sha256 "65380e5bdb80143cfbd668fe45c385b7715faa6baa8f109707003be3fb410efb" => :mojave
-    sha256 "d2532e0ccc1a84a9896a611c9ac7eac15342f7ebbaedba7c0b29f36c178a0c27" => :high_sierra
+    sha256 "54469e98b53d284cd45667fcaa90c97288c5b086e9fd3d389a6057caf94c8caa" => :big_sur
+    sha256 "00d02729c640d211d25f84a47606c99464fe6c649936566fbfffe1ac7436c7a3" => :catalina
+    sha256 "7bbc703b670c5b5555c562fa9e52eabfd0cfdc0b379e9559e9d9c5c95499fe8b" => :mojave
   end
 
   depends_on "autoconf" => :build
