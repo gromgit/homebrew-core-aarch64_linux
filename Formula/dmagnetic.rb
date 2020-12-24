@@ -8,6 +8,7 @@ class Dmagnetic < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "4e71323da4207dd754b6e7298cef93be779e1788460089a1ea5159383db3a602" => :big_sur
+    sha256 "7ce2e8df2b0a94e1f4f3b05e12d79b5660326110934d42c90628bb80766687bc" => :arm64_big_sur
     sha256 "ca0509bc470f70a1cbefaa923ce7ae050588693505928be7e978d2690e7c2141" => :catalina
     sha256 "f75e5bbd19aa1ae5272dc6bfdd7654a9c09e2a2dcc11cc9b58180f8ffd61acf2" => :mojave
   end
