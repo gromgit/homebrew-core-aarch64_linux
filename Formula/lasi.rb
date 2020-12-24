@@ -3,7 +3,8 @@ class Lasi < Formula
   homepage "https://www.unifont.org/lasi/"
   url "https://downloads.sourceforge.net/project/lasi/lasi/1.1.3%20Source/libLASi-1.1.3.tar.gz"
   sha256 "5e5d2306f7d5a275949fb8f15e6d79087371e2a1caa0d8f00585029d1b47ba3b"
-  revision 1
+  license "GPL-2.0-or-later"
+  revision 2
   head "https://svn.code.sf.net/p/lasi/code/trunk"
 
   livecheck do
@@ -24,10 +25,18 @@ class Lasi < Formula
   depends_on "pango"
 
   def install
-    # None is valid, but lasi's CMakeFiles doesn't think so for some reason
-    args = std_cmake_args - %w[-DCMAKE_BUILD_TYPE=None]
+    args = std_cmake_args.dup
+
+    # std_cmake_args tries to set CMAKE_INSTALL_LIBDIR to a prefix-relative
+    # directory, but lasi's cmake scripts don't like that
+    args.map! { |x| x.start_with?("-DCMAKE_INSTALL_LIBDIR=") ? "-DCMAKE_INSTALL_LIBDIR=#{lib}" : x }
+
+    # If we build/install examples they result in shim/cellar paths in the
+    # installed files.  Instead we don't build them at all.
+    inreplace "CMakeLists.txt", "add_subdirectory(examples)", ""
 
     system "cmake", ".", "-DCMAKE_BUILD_TYPE=Release", *args
+
     system "make", "install"
   end
 end
