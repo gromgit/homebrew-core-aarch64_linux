@@ -13,6 +13,7 @@ class Privoxy < Formula
   bottle do
     cellar :any
     sha256 "7b49313bc0ca6074e83753c56c192cc8c922e63f37a07ffd6954d81f63b39e69" => :big_sur
+    sha256 "08590216716f79252f4485179965c2a41a5db7064f86e575874a85dccda4adaa" => :arm64_big_sur
     sha256 "8e6f41dd3f0828b17ed3ee516de139ae4baa66d7c01c633bf3fc95097029e5a8" => :catalina
     sha256 "8c382bc37d0a27ca33786a09e435942f38aac55bb48b22f4dafe8810002a06da" => :mojave
   end
