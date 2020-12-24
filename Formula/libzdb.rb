@@ -3,7 +3,13 @@ class Libzdb < Formula
   homepage "https://tildeslash.com/libzdb/"
   url "https://tildeslash.com/libzdb/dist/libzdb-3.2.2.tar.gz"
   sha256 "d51e4e21ee1ee84ac8763de91bf485360cd76860b951ca998e891824c4f195ae"
-  license "GPL-3.0"
+  license "GPL-3.0-only"
+  revision 1
+
+  livecheck do
+    url :homepage
+    regex(%r{href=.*?dist/libzdb[._-]v?(\d+(?:\.\d+)+)\.t}i)
+  end
 
   bottle do
     cellar :any
@@ -21,7 +27,7 @@ class Libzdb < Formula
   def install
     system "./configure", "--prefix=#{prefix}", "--disable-dependency-tracking"
     system "make", "install"
-    pkgshare.install "test"
+    (pkgshare/"test").install Dir["test/*.{c,cpp}"]
   end
 
   test do
