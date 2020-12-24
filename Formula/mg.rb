@@ -9,6 +9,7 @@ class Mg < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "d953ff7efb6a4fffedc3021dc85397ada7062a5af02a27ccd6480235c808d9f5" => :big_sur
+    sha256 "5f981515a969a53ba0a0dfa6eb180d73a0e094d8dca0490edf0a7785ab49a2a8" => :arm64_big_sur
     sha256 "3dba473bffce8dbbd93c3b73e989348873317705b768cd9e920c8d4365caa5e6" => :catalina
     sha256 "c81adc2432c2e5f07faac951fe0f07407d0abc24234e6302acd55ac7e99bb501" => :mojave
   end
