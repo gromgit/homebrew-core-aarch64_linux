@@ -9,6 +9,7 @@ class Dupseek < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "5dd4ba8f61d6e17de45eed186601e3d90b84515a6971520cf38be3d94888ee4f" => :big_sur
+    sha256 "b82a513c1aa616e8f6ea6f8c621355815381d6b0315c85f5956c08aea7c7493f" => :arm64_big_sur
     sha256 "aca5de3c9426773cb4ae19e791bb8662fd55b5f56075c2120d850d5228176a19" => :catalina
     sha256 "e06fc46656cf29f29a33a198a011a022753e616b03e36dfee9cf1ade5c4ab227" => :mojave
   end
