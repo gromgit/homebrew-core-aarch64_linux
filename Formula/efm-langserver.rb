@@ -9,9 +9,9 @@ class EfmLangserver < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e9897f2c173f23ae85e7c79058787caeeabf83d3665afc726b021667d764732f" => :big_sur
-    sha256 "27a983a57a57b18b64f38897a0005eda50b7a242aeb7dd39f50837c53a11530d" => :catalina
-    sha256 "13bffac8dfa2c47f2b4f7fa6fd28e1eb4c94c520e3e26eebd275272ef4079da5" => :mojave
+    sha256 "df90e5180b1d93ffbe8435bf849cc80cd0890e7df34b5ce17ecf1af15f013f45" => :big_sur
+    sha256 "77d85f1f8510268844579470f58f48dd0a4f12657196133fa526574bdbd7788e" => :catalina
+    sha256 "1bff252177ab0969be92b57fb25c5a80711bccdf533a235d68522f68c7191eb4" => :mojave
   end
 
   depends_on "go" => :build
