@@ -15,6 +15,7 @@ class Vlmcsd < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "a146afc78975084e13a441c939accd492ef3611a7147b97990151723e809fc25" => :big_sur
+    sha256 "ac8d57435904a90703b3b98b80420d0d50d23709eb74f18b38cc13bfe22c5bef" => :arm64_big_sur
     sha256 "3f3cc34de780b15b2c5eb32660f79a95bd28674c7cebb78452f9f8888d9d8b38" => :catalina
     sha256 "512da18ff22fe4dbc539aa31020acad022fdf6b19c6b14d49a361e1615af58fb" => :mojave
     sha256 "0cb2abe0a85b0ca14602d565b6ef3c69afa1f466123b37503936dfe064581b54" => :high_sierra
