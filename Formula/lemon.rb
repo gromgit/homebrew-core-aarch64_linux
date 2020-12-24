@@ -14,6 +14,7 @@ class Lemon < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "e2871b39951595b238769253f3134631b41bacd23513ce7baf3211025a1e797c" => :big_sur
+    sha256 "49dbd4a06ec071275f603af0be31eabc3e20c631a38db8ea9fd3d278f8f199f7" => :arm64_big_sur
     sha256 "81fb0b45456f294af50bd1df1088360883ad6607a50c4e1e722b21b644f4c47a" => :catalina
     sha256 "fedd632bf40be50395eee85868c886e68495226e1922ca805dc5f5be2c923400" => :mojave
   end
