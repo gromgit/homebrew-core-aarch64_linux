@@ -12,6 +12,7 @@ class TranslateToolkit < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "2a8e4095b7fdbee98080753726057fad9647f147a78aacf1b3c04796fab5971a" => :big_sur
+    sha256 "e975f51549f118fabe4bdb9a3229e307bac3d2a0be359ff53efa05735fc5eadd" => :arm64_big_sur
     sha256 "aee1cb11f4814f2842ffecc3569586b235d8badb633493eb93e4ef34c2225109" => :catalina
     sha256 "01c3d700b2ef9b1dd2b01946a314d1cab2910340a810f21462047098eabd7a36" => :mojave
   end
