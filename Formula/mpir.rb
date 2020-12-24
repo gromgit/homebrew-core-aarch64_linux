@@ -7,11 +7,10 @@ class Mpir < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "d45de304310770a0788c528faff83b5c16ad8903f54e7788fcb5b0d16182d049" => :catalina
-    sha256 "5fd2ec4df58a2c8a1dd74729c90dd6928893f9c87c8ee06af8519dfb7ea9d71f" => :mojave
-    sha256 "e9786b8cd2ee485e34b6e63c95bb7f71289c038dc9be0fdf583279853056302a" => :high_sierra
-    sha256 "006955801271b94f2e412ac056450000785965ed631d134554d7190deaf675d1" => :sierra
+    rebuild 2
+    sha256 "2364f0bb79cf8a0ef739f077eaacc7228fd89d39d18d0b9f1e135a2577472684" => :big_sur
+    sha256 "884e9e0b62c809c531c55d6da43fbebadd5428976afbf95d2dc8968599e6e013" => :catalina
+    sha256 "1b930468cbd16840c9c689b8b24c91ce45a136b7512ccd06b6c13a14cd5405e2" => :mojave
   end
 
   depends_on "autoconf" => :build
