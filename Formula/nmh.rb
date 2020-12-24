@@ -12,6 +12,7 @@ class Nmh < Formula
 
   bottle do
     sha256 "c110aabe62b73e5682ead3d4d3bb5a73aed4136212176f473dfcf2a9a1c828b9" => :big_sur
+    sha256 "9a8f26580762932b1707478df1022d25570cfd6a2a0be436ad2947082a7410b0" => :arm64_big_sur
     sha256 "5ed10257c9024848ec26fc4c80e1ddbbba3cca6199b83cf62fbbdc9a1970e404" => :catalina
     sha256 "9c53df993c2f8f0dd45dea112d082d7cfc67efd34e58be2f62d95bfb44d3c9b7" => :mojave
     sha256 "f46c5ca5a87081a9a8f7f454e0cb36de543dff666ac0ba8e1bcb867a2f7e7763" => :high_sierra
