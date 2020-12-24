@@ -4,6 +4,7 @@ class Oq < Formula
   url "https://github.com/Blacksmoke16/oq/archive/v1.1.2.tar.gz"
   sha256 "1bd940a72af556a4e685086ca0d3a363d71e3cfedeffb36f865f38d44386f94a"
   license "MIT"
+  revision 1
 
   bottle do
     cellar :any
@@ -16,6 +17,7 @@ class Oq < Formula
   depends_on "jq"
   depends_on "libevent"
   depends_on "libyaml"
+  depends_on "pcre"
 
   uses_from_macos "libxml2"
 
