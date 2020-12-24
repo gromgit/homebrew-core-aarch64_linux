@@ -4,6 +4,7 @@ class Vitetris < Formula
   url "https://github.com/vicgeralds/vitetris/archive/v0.59.0.tar.gz"
   sha256 "8a3fd7ad6cef51eb49deb812d2bf2c9489647115fdf95506657cf9d7361b1f54"
   license "BSD-2-Clause"
+  head "https://github.com/vicgeralds/vitetris.git", branch: "master"
 
   bottle do
     cellar :any_skip_relocation
