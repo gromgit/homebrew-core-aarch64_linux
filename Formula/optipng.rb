@@ -11,13 +11,11 @@ class Optipng < Formula
   end
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "78a1e3b84286b56a56e5492c05f9d39d3b2bc0e154fb3f5a77c403da4a3ffc8b" => :big_sur
-    sha256 "093c6a64c408594726d3bbf646394d1bec0ff05e95e8a71b7ca244afb67929ee" => :catalina
-    sha256 "150c2cace53963fa77b40e30e403fea731ac87ce3aa5bf0528205f3bcd0626ab" => :mojave
-    sha256 "b64e8d6bd75de2e40d481c7b0e816f45b0865e2dfa42f03e507f67607804ef2b" => :high_sierra
-    sha256 "416ce24daab37aaef4fecda949fc80bed2b1d9b9714406f972b093846578ab3a" => :sierra
-    sha256 "f59e3cedb808003915ee214f6487b968e3e6dcea669452f0a732fcced03aaa8f" => :el_capitan
+    cellar :any
+    rebuild 1
+    sha256 "5cee26efb92016f057a55b2711a08c4a0350046b7c0b1d969c75a913caf66fc2" => :big_sur
+    sha256 "3d423dfa59e07122f70e2a15026289dfc6884798ac76898065dbe587256c6e35" => :catalina
+    sha256 "bd44fa66b00a6ee0340a9a5b239d22823787fcaa26312783b21c0f4afc39fd0b" => :mojave
   end
 
   depends_on "libpng"
