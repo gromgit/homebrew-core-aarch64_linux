@@ -12,6 +12,7 @@ class Xonsh < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "848521c9f7fd0e0085274891dcb6d6dc20b100a1785a627864b16b9cd9b77ef8" => :big_sur
+    sha256 "715f5bdd666836dd89fd9cf05987f321ef74e46946da48f5cbe069ff163dfd0b" => :arm64_big_sur
     sha256 "da3755d9ed3dc8d00d1f680903131fade342f16ad02466b237a32bf53a932820" => :catalina
     sha256 "0d7681a10d327caae8efa6866778ba04a3709a799ceda850fc34054332e6b0bd" => :mojave
   end
