@@ -13,6 +13,7 @@ class Cuba < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "6fe604c61d01768a99cb42321606f6b5feb5ed709f6d7fb419c3efb3e7e83f3a" => :big_sur
+    sha256 "01567f5b76f7baad0d2fd5a08083d545d0d0543795e03bb8759953f317090cf4" => :arm64_big_sur
     sha256 "758999a8bef3aeaf37f38402affd375ff55b4293cbdb52ee76846a25ba7f5209" => :catalina
     sha256 "abd47d8d13cfefdaf542675e465b717cb95e8b1a8ba0ca2c3745bbcf0c6bd1d0" => :mojave
   end
