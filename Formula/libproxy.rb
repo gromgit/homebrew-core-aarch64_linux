@@ -8,6 +8,7 @@ class Libproxy < Formula
 
   bottle do
     sha256 "f3d87ec7e6d5ee417691c26a776886216436ab1b190bf6674c8dede66da0ec00" => :big_sur
+    sha256 "868bf3c73324f4e9275dfe482be9b23a251563ba12f51a7c9d2df678fc4b439b" => :arm64_big_sur
     sha256 "76cde5260a836b3ce6c3ed0d1e588c29159018d702866209fe36c0be24995603" => :catalina
     sha256 "69e02ca786abaa1fb825995039e67750f2315a8d93206c15ec60e839830c0bf7" => :mojave
   end
