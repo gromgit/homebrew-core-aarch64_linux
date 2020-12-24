@@ -10,6 +10,7 @@ class Mpack < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "b3ac3a2ad7ba9481bdbd6ce2c2a3e1d0e59128f4cf8cd846be7a75fc6f27d6b5" => :big_sur
+    sha256 "590ebe27e3a84b46df9a304a6207a0d6754ed71dd04892aa965eed9315240c48" => :arm64_big_sur
     sha256 "561bc78b36f0b0cb8b67ff4c59407439fcb70d7f0b0ed23313cbe7579ad6a00f" => :catalina
     sha256 "3da5fac96c17669d27049ec2b5eebc0b711258ece13dad09c609792b45498bbc" => :mojave
   end
