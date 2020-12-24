@@ -14,6 +14,7 @@ class Mp3info < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "f5e52d02125f49b9c5afc960a565f7f5a774ced3f88fabd07d2723e741369d82" => :big_sur
+    sha256 "ebb88262f3ba1eb8196c8821769298b4aa29bb4c5d0733fc8dcd47092cfafdd5" => :arm64_big_sur
     sha256 "4f70eb02805d1fe2a93dc169b9baf2a3d1c685ded71094241189c93599ba6662" => :catalina
     sha256 "74e04cc5b66e44632a9f3187f2360eba1f1f13ea153f7c6e4e0b4e466f58f084" => :mojave
     sha256 "9b966553a2ed76afb888577cad6ae8f359cde30e445bb0742a87ff2c5d5dfa85" => :high_sierra
