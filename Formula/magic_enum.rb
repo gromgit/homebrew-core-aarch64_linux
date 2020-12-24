@@ -7,9 +7,9 @@ class MagicEnum < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9075c66a5f67e4e254de1e53db323d0a6b519c627e55e739b5a9c9bec204087c" => :big_sur
-    sha256 "ab11edfbbbbfe410e82b49ff6be4dba2d3298f925c2569d08af1869f675e2d9d" => :catalina
-    sha256 "0a95f97cb4ddb9b46f425202c76cfb1b19aa08403ba598d546cdc10b10e0f60c" => :mojave
+    sha256 "02d5aca1f1f02b8a7623289189fbebbe349db98f551b80afdf31371f37499472" => :big_sur
+    sha256 "c9861f04884832a1b13f27ccc7eef8d96ad10d7b3637acbb077b7ff72e91e804" => :catalina
+    sha256 "e858d99e9766b58afee79c9eabfed3145dd89afc06e786de4db87582878fefca" => :mojave
   end
 
   depends_on "cmake" => :build
