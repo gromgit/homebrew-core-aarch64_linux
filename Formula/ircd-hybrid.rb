@@ -12,6 +12,7 @@ class IrcdHybrid < Formula
 
   bottle do
     sha256 "f192d0cc270024015f0b6d155df8f74f617585d8250fdc9cebd4f0cbc6ed7b4e" => :big_sur
+    sha256 "e706fd34e38fa8b7241dc34f35c0e71d18f2654a48dd1445e2055552b991ee89" => :arm64_big_sur
     sha256 "c48d4c05fb9b276fdbf9e92fbfee0165ef690082d75327e4e235839ef5202a4f" => :catalina
     sha256 "384c0bf8f2e1e8a2abeba7b6505f6bc2becd8e7e71a5a73728f7258bdf130c6a" => :mojave
   end
