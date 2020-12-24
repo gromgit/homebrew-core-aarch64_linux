@@ -12,6 +12,7 @@ class Feh < Formula
 
   bottle do
     sha256 "e1d1f215337bc782e22c0be9bab3d21724bc39d5ed7e4e79ed08d409e9c1a862" => :big_sur
+    sha256 "0cefe29da27469551f1a0cf47c19217e0b88f65a2d9f8ca23900a4a6abf8b9b7" => :arm64_big_sur
     sha256 "c99b3a9f524feaae060b15d8d5707a95cc73345934d30038726be58519fe7855" => :catalina
     sha256 "2f0068a025b73f6906e7235359cb0aed127ac236db2d89874f1c61e0465c62c3" => :mojave
   end
