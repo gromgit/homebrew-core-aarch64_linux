@@ -16,6 +16,7 @@ class IncludeWhatYouUse < Formula
 
   bottle do
     sha256 "0bbf806279315bb9e367def80c0c537cd2a80ee3983ae87a9103cc3ae3640067" => :big_sur
+    sha256 "564fe6fef3d7aff9903bb03c67e1124209533fba97463f7b4ed86f180ec46169" => :arm64_big_sur
     sha256 "63958bac561cef7a7370893c6716ca123ff585971bd3dd129158467a30fc2066" => :catalina
     sha256 "0794bc316e86146e2afecd05c22e18492cf703cf772f60ecdffee80991fa773f" => :mojave
   end
