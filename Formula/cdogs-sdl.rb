@@ -13,6 +13,7 @@ class CdogsSdl < Formula
 
   bottle do
     sha256 "ecfce356cd0f4b376a1a8cb7350dc32dc8103a6f88b3c80899237918d02aabee" => :big_sur
+    sha256 "284ec1992ac8451edada6781f30eec6e724e91ee2d2673b588b5ba010f9b5b7d" => :arm64_big_sur
     sha256 "47c3ec4b25b74d6eaddcc637e0af2b79c7c9c5e30fce053586280427c1e47dd1" => :catalina
     sha256 "3bc1ed2ed0e30ac32ebe50997ead19a53b57aa40b9d1f0c2c3de5420e545ebbd" => :mojave
   end
