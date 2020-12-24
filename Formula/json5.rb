@@ -9,6 +9,7 @@ class Json5 < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "23ab51ca388f7efb2bf410f059acc51c161ec45a5976fb5f4e483d1a19146a18" => :big_sur
+    sha256 "09115626c7ab7470d31c81236b24ac1f23e7a4e81904355966638fced59d50e2" => :arm64_big_sur
     sha256 "bedfd496f81978deb0f7745b1465666460beb8f32b4b5cd2c304272177f4974e" => :catalina
     sha256 "568c1550671b000a316cfec4168c135039edb2dc714be89f9ac4282170fdd195" => :mojave
   end
