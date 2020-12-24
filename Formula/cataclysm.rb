@@ -16,6 +16,7 @@ class Cataclysm < Formula
   bottle do
     cellar :any
     sha256 "0e93a967d9e4e01129912388ef9b9b0de954d25088ee65c05a6fea80aca7acbb" => :big_sur
+    sha256 "aacc35c573fa5f841054e73d76c1c954086a990f5821372ab0716652d4b7ee7a" => :arm64_big_sur
     sha256 "c81600f8324c60d92121e5134fbb26a1212375c5e0c017363cceb473e0ef10e7" => :catalina
     sha256 "2a3c5ef376aaeb2ee93ddbf3b6ebbb1997056411d48369454283b9518a4da345" => :mojave
   end
