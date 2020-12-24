@@ -12,6 +12,7 @@ class MariadbConnectorOdbc < Formula
 
   bottle do
     sha256 "8ecf2575cfb6897176626d13821da084b97a86fff29103f21a6122fb508234c6" => :big_sur
+    sha256 "14eab02c927c39019801250936766b9f913ccee3ce1ebc0a10d87753ec46e5c3" => :arm64_big_sur
     sha256 "9e026906501acc48c754a22cd3415f968121d378d9b23ae02d09a92e771634b9" => :catalina
     sha256 "7291bc304b018ed6f5b9edbc5dcc35de99135be517eb559217148ae3f9d333c2" => :mojave
   end
