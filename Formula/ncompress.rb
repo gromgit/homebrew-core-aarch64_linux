@@ -15,6 +15,7 @@ class Ncompress < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "99dfe3616e05c375b6ae1763076b4e22f5ebc174871b90bce96ecfd5026a2f66" => :big_sur
+    sha256 "936e3de1f5c49c55295c889acbb032d31f71d0f91cfb6f7f1b1ca0886c049c05" => :arm64_big_sur
     sha256 "fb99eafbcce7f39b4abec7c16f12fa0a78a386862e76502ebcca8103d5926111" => :catalina
     sha256 "675a940f00e11c3003ca42aa3f77bac4e853fab48d2a036cfd2bd41e24d369b7" => :mojave
   end
