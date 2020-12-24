@@ -15,6 +15,7 @@ class Appium < Formula
   bottle do
     cellar :any
     sha256 "e9cd43b0871486f6567eada38f1f535dc24a7605f3b7222f1f37939bbb8a9076" => :big_sur
+    sha256 "0fb1f237254b60f10333b22c5a4854bd5cb2af830b1859618241656eb200f749" => :arm64_big_sur
     sha256 "a624ae16c43c88e4cfa29597efff5c824dbebd7434353dffa29fc55c4218e7bc" => :catalina
     sha256 "23999d5f9ae201854deb5f5ee5b70938bdb9f0204f16324375ac5e63f6c9f481" => :mojave
   end
