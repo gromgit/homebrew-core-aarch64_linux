@@ -8,6 +8,7 @@ class Monetdb < Formula
 
   bottle do
     sha256 "6c0770dace7168e109ad0ec48fe79ea09cb7cb2ad7c5d3a85900c86b9770b71f" => :big_sur
+    sha256 "46058c916deab13eec10c6019822c754d96ee3d36094760db8d1ca8373aec077" => :arm64_big_sur
     sha256 "0ba6a4cc4cc2569f77b22f695ba49621f834cd0125cfe003ac464c0633163440" => :catalina
     sha256 "136d3b1c44e2611add81bbfa24a18328983abbad60712e4d95d8b1cde26982d5" => :mojave
   end
