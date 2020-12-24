@@ -11,6 +11,7 @@ class Fonttools < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "2fc8e51466b4fc346c8ce3780692c1176a266b9d6aadbc16a748725684e89495" => :big_sur
+    sha256 "365031c45833a0342bf1b558233be15e8014816184eeeb85ada1dcd7076ea57d" => :arm64_big_sur
     sha256 "98704bad103b75973589ab1eb1e488509394430e0dd7f226ff67dfadd246800e" => :catalina
     sha256 "a4a4710e08590d88df88822ec506a34adbc6cd95d17e10f542300f52c155f62b" => :mojave
   end
