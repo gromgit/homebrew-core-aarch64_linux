@@ -13,6 +13,7 @@ class Perltidy < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "1199bca3ba6ecf245fcc0642a70fee090f3b12b567d86e2361af7391cae57e00" => :big_sur
+    sha256 "e38bf179878203015b3eb522361df0dfa02897683c2b5aedd7c60fa5d3dc3430" => :arm64_big_sur
     sha256 "b733a78ef6180b1bc2cc182b1a267e177e931965db5d030c7651b41918b99474" => :catalina
     sha256 "98b81cb9520970e285d8249fa27d1d3cd1fcaaae8dc453a1b10c6bea1d2ab9ed" => :mojave
   end
