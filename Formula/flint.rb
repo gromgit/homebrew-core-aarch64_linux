@@ -8,6 +8,7 @@ class Flint < Formula
 
   bottle do
     sha256 "ca09f0a008ddfcd88f6220957ad869b62a2d2ba46a30fe11b8b36104b22c036e" => :big_sur
+    sha256 "aa3a08170c309ce96febaead6c255262ec8797bb28ac89c861c9414f37ec7153" => :arm64_big_sur
     sha256 "03ecd7eb691ad509717a567daa72972d54d0cbf2928ac037e6138c0f0dd0a3a4" => :catalina
     sha256 "5cfdb4de40331e3730b625386ff609b495bb5b708dd2fed57fefc6a90a718127" => :mojave
   end
