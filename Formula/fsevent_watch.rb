@@ -9,6 +9,7 @@ class FseventWatch < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "279381b54145951c51d3e88d5d4435167a86c39a36d5b65d86ba70a7db338e01" => :big_sur
+    sha256 "bc7a5f379a5c2943b0ecad9d4fdd36447d3f7c831cd496517d6972cd3a4992f4" => :arm64_big_sur
     sha256 "f0247a4a6826c062993a593ea26db5f4c87370beb3edbd5c358511aa8f37e8a6" => :catalina
     sha256 "726165ea3d49c1244c1058ce37ac1ac900dacfb34ca11e44fa752a3525ed66dc" => :mojave
     sha256 "ef2fd8cd9dc6804e6b48d99f3ef517b397c01ea205b80ec9415147cc211c4e9e" => :high_sierra
