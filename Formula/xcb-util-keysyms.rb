@@ -8,6 +8,7 @@ class XcbUtilKeysyms < Formula
   bottle do
     cellar :any
     sha256 "702425d6d222f48788f38ab247dd84664f5a4d349484634a9f775b64045cbaca" => :big_sur
+    sha256 "dd74abb9e12be716ae5d6007a734710eb4b1974c34c14b851cf0184079b1136f" => :arm64_big_sur
     sha256 "6ad4d1328c04a6ef44033161542d0f27f94160cb326af4572c86473e8d0cba09" => :catalina
     sha256 "a6abcd84a8ded46e939d3551642e08a87fddb9fd8a2744071351086ddd35170c" => :mojave
   end
