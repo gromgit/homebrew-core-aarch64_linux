@@ -7,6 +7,7 @@ class IrcdIrc2 < Formula
 
   bottle do
     sha256 "e51f7e7ef9c5f11235392b7601fe7e0695e329e4d6cd6dbf07e66747cbbf8f45" => :big_sur
+    sha256 "608dd6c598eb65e15f4084c1687813d7b6f7d35208d5c7790a6430b2cbf86825" => :arm64_big_sur
     sha256 "8508a48308449f51d7190eccc640b9351de2d30379b99b4fe0595cb185458204" => :catalina
     sha256 "81e5c21532c98066b89bddc0ec6285eba22d2fcfb2c620b00ada8a6f4d641c7f" => :mojave
     sha256 "ebc4e1007b994ae418cd522ecc70fa2c738dbf7eb52a883f775e7dcc9b06892e" => :high_sierra
