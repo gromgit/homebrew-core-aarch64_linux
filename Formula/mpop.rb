@@ -7,6 +7,7 @@ class Mpop < Formula
 
   bottle do
     sha256 "77c41a741e2a15b06cbcdb58f662ce5766b0e54f65bd096b0bceb5eab3ce3420" => :big_sur
+    sha256 "a429b9d5d27a830a6bdf264f9ac737deb97226a9844ee030acf1f5d867d80411" => :arm64_big_sur
     sha256 "7cfa5ab2e69e875b11145a0ad3bfe4a372b522cb5ecb8d81738f67e619aa5eeb" => :catalina
     sha256 "58689c559173e5e3a15cdffbd055f4a6466ebcba2278d1492a26e86cc19ce244" => :mojave
   end
