@@ -14,6 +14,7 @@ class Borgbackup < Formula
   bottle do
     cellar :any
     sha256 "f947520a2800099bca60f8123095921405435a7424b85cbf0e9b071e4f751015" => :big_sur
+    sha256 "d985ac01e5ebdeb9eece5589f98eac62e5d91f58652e54062e92f5a1bbeda7df" => :arm64_big_sur
     sha256 "7ed4740d804cc059161fc72699ca6414f83bf9d656677bc3f9743e743c050768" => :catalina
     sha256 "f7eecc8b325130bf49bd86cb608b3ef124f04eaf0d3c7e8131baa8f0ee0659df" => :mojave
   end
