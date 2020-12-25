@@ -9,6 +9,7 @@ class Libstrophe < Formula
   bottle do
     cellar :any
     sha256 "8af3feb84f80d88ac047cb3719bdd44ba36569a46fbc631841557f18018e21d4" => :big_sur
+    sha256 "19f1daa320f573b87b489438069612d983d5566ba88f6382974c7d6f9a0528dc" => :arm64_big_sur
     sha256 "9d02ccf101797f9d37ad709c6827bde93b06a356f94d50c57290b25cb917d7d6" => :catalina
     sha256 "b85ddffb34d325b02d9d401892446b269300bc3ba2e170b14cb6c50576070d4a" => :mojave
   end
