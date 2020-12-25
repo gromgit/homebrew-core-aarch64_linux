@@ -16,6 +16,7 @@ class Chuck < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "92dca7513ce71a4d1a99a912fd03cd3341c2bc90a4e69deda124d2900bf6c80c" => :big_sur
+    sha256 "2e380f6d583ab0d44206b8b420bbc13cb753bf720f9998cd028efe57ec91a482" => :arm64_big_sur
     sha256 "0cf4564e0cbf9ee5b0bfeafe2dd694aeae5207b551474ad17d926cf71f05863a" => :catalina
     sha256 "674cbb7904d4ec9f09d1949b3bd8b3034835fcd183c0bd768291c1f7fbc12b69" => :mojave
   end
