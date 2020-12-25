@@ -9,6 +9,7 @@ class Duf < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "d6f7af02fd6422feeb24fdd9babb145c3f98323e064c5f46dd494d1edf706e38" => :big_sur
+    sha256 "ac445821820ebafe2ab4bfaab44773760b8a592c00a167700c32716869bba18c" => :arm64_big_sur
     sha256 "6b0501d446ed33d86614bf447b4a653aec11bc002dfb1fc5f50e9efb6b83b831" => :catalina
     sha256 "3e7b9439d31b8f2486b7812dd741b62c6ff3eed2c691b4c0e87d9a2276fa1b49" => :mojave
   end
