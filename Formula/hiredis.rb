@@ -8,11 +8,9 @@ class Hiredis < Formula
 
   bottle do
     cellar :any
-    sha256 "e56680ffe95af8db4989e9a0d9bb0fe546cd61b337049d570cfb073cff8a066c" => :big_sur
-    sha256 "18e913416a9138855a932395036bc9bc27a178e359b8aaf48a82d56d45d90b70" => :arm64_big_sur
-    sha256 "4b089bee868b4fe533bea75917f21a42a11a9e04d5b396ec5a94d5623372ec0b" => :catalina
-    sha256 "8974f8bacac7ce018f6f238915c6c5f07751c5183283337634a1715624d344b8" => :mojave
-    sha256 "5ed94f51e6dbe91f7d195be5a5d085c7929f82bafeecba8645dd2315a94dad8d" => :high_sierra
+    sha256 "1d6e99d11a211499f85f80783c3bbf83c4acda50607c409b9120a7e7b685e48d" => :big_sur
+    sha256 "5f11389538e1c20397783e2aca46853b013468610d517f6e0e14f37160e0a3c4" => :catalina
+    sha256 "9688a9f2a1adf2669c32785d9ca2354b4d79408234a444a21f864b5ecb86c28d" => :mojave
   end
 
   # remove in next release
