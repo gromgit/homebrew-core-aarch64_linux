@@ -14,6 +14,7 @@ class Onnxruntime < Formula
   bottle do
     cellar :any
     sha256 "337d7698df55dc5e51642648c48b197d16b16724a18f8b3f2dd8d945ab3d9570" => :big_sur
+    sha256 "86072fc05e9cf6c79ceace253b63db065b7b0e102f411b86ef6491f5ef02cd8e" => :arm64_big_sur
     sha256 "abba47ba776200c08639652a71b543152a60cb665cfeba5a6d10802329ac3637" => :catalina
     sha256 "66ad4dd817c95e4f47e29ee2728d0f0e4e1e5e21b0bcb69cee1153b08fe115c9" => :mojave
   end
