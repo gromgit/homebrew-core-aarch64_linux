@@ -1,9 +1,9 @@
 class Mpop < Formula
   desc "POP3 client"
   homepage "https://marlam.de/mpop/"
-  url "https://marlam.de/mpop/releases/mpop-1.4.11.tar.xz"
-  sha256 "9b53df519d47b5e709aa066b54b97f0cdca84a06c92dbcf52118f86223dc9dbd"
-  license "GPL-3.0"
+  url "https://marlam.de/mpop/releases/mpop-1.4.12.tar.xz"
+  sha256 "5f6355b52d9c360619623a40c66c1a5571e393b43fe58375c0de35429ac3480a"
+  license "GPL-3.0-or-later"
 
   bottle do
     sha256 "e95b6c6b714ae9ed4d88e084e42ba46b7e86b608cc4a6eac7f9e65a5116fcf92" => :big_sur
