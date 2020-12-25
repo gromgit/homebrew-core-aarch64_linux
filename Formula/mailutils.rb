@@ -12,6 +12,7 @@ class Mailutils < Formula
 
   bottle do
     sha256 "18e4b39e0d08513d683225d6bbf2b599415954e5d152d05755b3c7594e7867f1" => :big_sur
+    sha256 "61960d03d4a4aa6bc67f18a54e45211786777d01290918e110aee0cfedcfb637" => :arm64_big_sur
     sha256 "843a30ab78bc59fa5a99a99ac7f45f09a2f145e4361e4cc877d1277fc44b41ed" => :catalina
     sha256 "ce6bcfccb0b14b3c571b41eddaef778f25285a02e4534b6d610e058025d82677" => :mojave
   end
