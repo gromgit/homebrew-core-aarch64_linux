@@ -15,6 +15,7 @@ class Linkerd < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "5e1d514e823f835f30c245dbc2e2d115f287ccb60f25d33335e7aaa71adf4ba4" => :big_sur
+    sha256 "0ba475ac36c57ec4d82b799e1b087f338b1c2672c7447cc5a4bc253761b9325b" => :arm64_big_sur
     sha256 "42d10f369486219dfe203c4a219310be08d2a62250e31ddfb31668921204fef2" => :catalina
     sha256 "972c9162520a936baf72bbf3771a52f5698f15903cd7418724cfcab008669b9a" => :mojave
   end
