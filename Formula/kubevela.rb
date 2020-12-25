@@ -9,6 +9,7 @@ class Kubevela < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "f9e8cfd3a05ca4b811a4719e6dcd6a3b7d02f2c0ec0dd92d992c2d260ff07229" => :big_sur
+    sha256 "c0bf0d74ab0b6657feca3fcbf57b41bdf0f436f3eb730cbdb9426643448365b7" => :arm64_big_sur
     sha256 "c335351e167f90826a4bff3ce8aa79f438b1901960b6e2f68514e113d62df5b7" => :catalina
     sha256 "dffdc6439bd982fa483eb7826241ac123b5e41e190d7502adca1923a46de42f6" => :mojave
   end
