@@ -8,6 +8,7 @@ class Kubecm < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "a983a73d762316662a7aa92b5692321f5a8a960199820334199c79efede99163" => :big_sur
+    sha256 "6720d954d186b3da5a5ae39aec15ee8cf7f51108016bb769342ba99e96ebc688" => :arm64_big_sur
     sha256 "4584fd305eaa2b5c81c57d8d01cc258af880f1cf58df9b5aed315237ad1803b9" => :catalina
     sha256 "8ab23737c5c10d27109292c1dca60046a35047ad7788afe775ff6f5d7c9da226" => :mojave
   end
