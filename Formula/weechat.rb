@@ -4,7 +4,7 @@ class Weechat < Formula
   url "https://weechat.org/files/src/weechat-3.0.tar.xz"
   sha256 "6cb7d25a363b66b835f1b9f29f3580d6f09ac7d38505b46a62c178b618d9f1fb"
   license "GPL-3.0-or-later"
-  revision 1
+  revision 2
   head "https://github.com/weechat/weechat.git"
 
   bottle do
@@ -39,6 +39,9 @@ class Weechat < Formula
       -DENABLE_JAVASCRIPT=OFF
       -DENABLE_PHP=OFF
     ]
+
+    # Fix error: '__declspec' attributes are not enabled
+    args << "-DCMAKE_C_FLAGS=-fdeclspec"
 
     # Fix system gem on Mojave
     ENV["SDKROOT"] = ENV["HOMEBREW_SDKROOT"]
