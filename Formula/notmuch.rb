@@ -14,6 +14,7 @@ class Notmuch < Formula
   bottle do
     cellar :any
     sha256 "9bd204d311516cb411413209cfb264d05c654b7436ee89bb3822b2808ba2a5a2" => :big_sur
+    sha256 "c09c988435263ee3c9fa5c305b621a39cdf28ac4f279a783b36779644dc419fb" => :arm64_big_sur
     sha256 "9f08fa00d635ecafc717d500dff1aa03756bccd70ac5bde856d14487e52252e5" => :catalina
     sha256 "b97c6eeda07929f0645bfc4c9d0c5604c1581a1136ec93c936f10ef607f7b5cf" => :mojave
   end
