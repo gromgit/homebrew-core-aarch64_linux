@@ -9,6 +9,7 @@ class GitCinnabar < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "c5a93076b2e9594362fa665edf9aab87ad5f6861a179ec2e16fb87241caf135d" => :big_sur
+    sha256 "1944a8e26196b0c068235d412a08abe53e8e8ef9e7fec9e6c3e18ad73837301d" => :arm64_big_sur
     sha256 "074ae846819011d8632aadec2f3532dd2c1bf8c36385f09b09b7d8d977c3f411" => :catalina
     sha256 "049b1d43555be25052dd9857fbdb35a871daf0c4b25b23568d881bac4e69aa75" => :mojave
     sha256 "ab04140cfeea3a7c0370aae72b4b0ebf98bb5c6b72aaf1fc02cd9cdf7eb3ecce" => :high_sierra
