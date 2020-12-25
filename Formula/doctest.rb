@@ -8,6 +8,7 @@ class Doctest < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "ff3e085421ee6d980afcd33d0fb923576b2450e45bccfc9475291afd94415f59" => :big_sur
+    sha256 "4d54d32811df2fc119a18704eb672df9dbfdc4562801f3571b69ed43a8a88101" => :arm64_big_sur
     sha256 "ec5730e02ee6da3f74d0b0b00542ad085cd9e0dab51403c9436ef5398846d499" => :catalina
     sha256 "5b6c590bb22dc1b1e31db08e70f0c253223af17b3565cd4f7b209bb4835ae0e6" => :mojave
   end
