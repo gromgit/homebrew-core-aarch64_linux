@@ -16,6 +16,7 @@ class Gcalcli < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "ea59966235cefdd993cac5eb6e9afe3f34ed5d6409dd9017e756c112269f3934" => :big_sur
+    sha256 "e47220e4f7ac29d1309f0ff63150b9c4d1a269c5e3e1016169a28a48f712db15" => :arm64_big_sur
     sha256 "669ebad1c69fcdaf933079ce53301861344b1d955a22993314d93db67637c701" => :catalina
     sha256 "ffebafee3ca507d3d3629651e04e4cf42b90f61d067d704d23030368234bf9ab" => :mojave
   end
