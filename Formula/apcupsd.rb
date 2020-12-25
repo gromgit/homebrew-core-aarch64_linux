@@ -11,10 +11,10 @@ class Apcupsd < Formula
   end
 
   bottle do
-    rebuild 3
-    sha256 "6bdbc101891e5c10b8aead1e1c86ce8ed1560f38b4de96a6c804c73953ad3ac0" => :catalina
-    sha256 "f9e745573abb55d0194e958d48256ace18a8116fc2c7577617de915746e6c18b" => :mojave
-    sha256 "8e604286ac22168ede829d3dff95ac782b458316c3389827c6d6c5168a2552e4" => :high_sierra
+    rebuild 4
+    sha256 "1c425f1d6db43a760e4d068ae8ef193c3ca32a3157564989ba1a6aa2ce44a2c7" => :big_sur
+    sha256 "7636fe8d43fde7368817c64dc8f689526f48d2a958532e3fdd3f05db3deb4c5e" => :catalina
+    sha256 "7c87a398311314a0f789cabb5956932962800297e2ba4890f07ac60c13cc3f68" => :mojave
   end
 
   depends_on "gd"
