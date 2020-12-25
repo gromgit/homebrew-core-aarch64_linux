@@ -9,6 +9,7 @@ class DockerLs < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "5ca16daa59b3fcb5cf7196492d8307b1f40fa92932f9573d9568c9acd3806e20" => :big_sur
+    sha256 "510bf640ba6d5be06401f707391e728f9fd1069e8828fdefdcce5ad610ead718" => :arm64_big_sur
     sha256 "8e08cc258716c42f48d8000423772dfb00903b85b18e3633c53dad99697b4210" => :catalina
     sha256 "5994442415bfbcc775069311428b7f3b810e5ca09ff7af25f2c3a322d8105786" => :mojave
   end
