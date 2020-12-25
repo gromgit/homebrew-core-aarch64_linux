@@ -14,6 +14,7 @@ class Pakchois < Formula
     cellar :any
     rebuild 2
     sha256 "071f8af3739d95b9aa192ef05d6832c13dc2c857d3d12cf36ef542dc49e20368" => :big_sur
+    sha256 "c00b0a1f15ecabd511cae29db368f03b6f29df9ab719a3462b0e7a6044d7208e" => :arm64_big_sur
     sha256 "cb96f79b314a139b4edbce5dbcb4e5c9b4057cf8eb0b86ed848f4acfd2b777d8" => :catalina
     sha256 "794a3b40666739128f8f0ceb0af71dc787c725dc9bfc10a048b79009dfabf4c3" => :mojave
   end
