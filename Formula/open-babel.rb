@@ -10,6 +10,7 @@ class OpenBabel < Formula
 
   bottle do
     sha256 "f741147b739d71d7bfb79e80ad89ad49f05a6922a36c6f663690c1a5f65cdcdb" => :big_sur
+    sha256 "990abdbe32d92c4d6e7a17f1d5a2c1c4cd979f4daba30a8eba4a9e20a3e0d099" => :arm64_big_sur
     sha256 "770cdafc4dfdd0c216ca9308d5b5ae6b9b00be8d30b387dd2e86cbff82db5acd" => :catalina
     sha256 "6c44b3e574a786396b8099192e5154f1d751ee413ec265c99f8046fc5167876a" => :mojave
     sha256 "49d5dc2fc8c9a857bf08e6e6711fbaf48d8a0165c328cc400e904aa5a37080a4" => :high_sierra
