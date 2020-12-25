@@ -15,6 +15,7 @@ class Fava < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "d6bfd5004ffba5d9c7dc1f8352c6d430c68b4412abd2e6b671b372e7f892e439" => :big_sur
+    sha256 "b614e5e412a842f23b3310ac33a43bbf6b9e6d36aebeaee0715405598ec08a7d" => :arm64_big_sur
     sha256 "cdca600b6fd6b310e9574127a15294450adb4b15cc1da74f65fad0ac0bcfed7d" => :catalina
     sha256 "0f906ae06bff585092d863a5bf8b1bdf87f25f6a7d3e813cbdae689ddd5558e5" => :mojave
     sha256 "489268a7a11bd66b397625ef07ffc716af4fc78c6f31b9437845d61db97365a9" => :high_sierra
