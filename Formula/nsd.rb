@@ -15,6 +15,7 @@ class Nsd < Formula
 
   bottle do
     sha256 "89235887c73372327a0f4c372d5b93e5fbccfeb6bde079d02d4c932b1982a020" => :big_sur
+    sha256 "af4902f97a90e7b5a011268389edb36d95b0df049d8f0faaf87cb6966abca30c" => :arm64_big_sur
     sha256 "b21b9f1ad17d10473d8acc41b37d75add960de933ae5c7569eec2a1d2a9be79c" => :catalina
     sha256 "aa51669ef28ff75d2eb3fb4dd9dc02dc905b0bb96c78a6740c54296e0b4626ed" => :mojave
   end
