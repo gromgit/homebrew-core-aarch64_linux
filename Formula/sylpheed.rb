@@ -12,6 +12,7 @@ class Sylpheed < Formula
 
   bottle do
     sha256 "b8d825cf9222f047cf9eec78a8a8b81c8133cd75ded1c66e3423d38318226c41" => :big_sur
+    sha256 "ae2f9828834200f3a587a7d596560bf8809f173a1044e997a58a0ea8d8a45acc" => :arm64_big_sur
     sha256 "294ac17fa03002cb92f7f1bcb5f1a9b4f56157e54b564bd8e4e673f5902fc8a0" => :catalina
     sha256 "80a9483de9580d154fe32831a5172cc5e72b31a3722f8335e39aa5fd763935ff" => :mojave
   end
