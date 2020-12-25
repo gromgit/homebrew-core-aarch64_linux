@@ -8,6 +8,7 @@ class Fortio < Formula
 
   bottle do
     sha256 "dc3dcac1c7007b2b21dd9105c55505cb1b6f86149be1242ac413baa0a361feb4" => :big_sur
+    sha256 "8df5eecd8bff63c24abc875c6977cf5a1e548f8a52f12e9ffc64f8650fdeaaae" => :arm64_big_sur
     sha256 "41a9b9b4ddb5729ee114dfb42e305f558260c055d786bd1b17cc837344bff1d0" => :catalina
     sha256 "eb37c04b1d2bcdf1237fdf75fcbf0c83a274f4027b532b2eb6a9e62fe63f39d7" => :mojave
   end
