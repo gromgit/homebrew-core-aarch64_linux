@@ -10,6 +10,7 @@ class Networkit < Formula
   revision 1
 
   bottle do
+    sha256 "23f70cc4fa3dc267391415b12f871ef39e27cca750e2e3a638b9075075ef4314" => :arm64_big_sur
     sha256 "e9e7a572043c181f4aca4c76099b4d1d15e64108c15f5a85f308e9670a23afe4" => :catalina
     sha256 "b89291dd82191c1f0723260297b0b95be0a060380dc820cd4041b00a4a48e149" => :mojave
     sha256 "4c5688263e090b92933eda18a481a6c4de5e30460b1d503148fdc614c0324b2c" => :high_sierra
