@@ -7,10 +7,9 @@ class Doctest < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "ff3e085421ee6d980afcd33d0fb923576b2450e45bccfc9475291afd94415f59" => :big_sur
-    sha256 "4d54d32811df2fc119a18704eb672df9dbfdc4562801f3571b69ed43a8a88101" => :arm64_big_sur
-    sha256 "ec5730e02ee6da3f74d0b0b00542ad085cd9e0dab51403c9436ef5398846d499" => :catalina
-    sha256 "5b6c590bb22dc1b1e31db08e70f0c253223af17b3565cd4f7b209bb4835ae0e6" => :mojave
+    sha256 "4b728e7c1f23ecdd4be4f4dbd0b8a70dec3a53736ba1e99a0ba24751a15a2f58" => :big_sur
+    sha256 "77a40787ed1a545e41cf5b5b6ece7f88eafed3268b9b2cf09928a5dc9c0b81ef" => :catalina
+    sha256 "bc4e4fb3237bc95328171dcce0ba3b38f963ebe450b39cfd5777238bc4c38db0" => :mojave
   end
 
   depends_on "cmake" => :build
