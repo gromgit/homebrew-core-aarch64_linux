@@ -7,9 +7,9 @@ class Glow < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "bec804d3c8ff8ff3dbd7d265ad39a213cb90173dead7d81d15f8f606ed03e15d" => :big_sur
-    sha256 "f55176ddc5b1f40503ad9b2599c5474e58a8e806dc2a33c7bd54375f110ad865" => :catalina
-    sha256 "bec57a12c75182f65427aceabed7be270be7890e37794429780791f80ac7fd85" => :mojave
+    sha256 "875a1044ff25038e3e3f0cf74c849885b3f62fef942418402373511b533cdebc" => :big_sur
+    sha256 "f0635d4d7cf60db408c0a6d9048551e7fdb8e0fd226046a9e67d80972b2e082e" => :catalina
+    sha256 "86940c7791ad59c5977ae4ee150da983043df845a8b6f9c9d9c5e99c47f75651" => :mojave
   end
 
   depends_on "go" => :build
