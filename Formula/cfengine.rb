@@ -11,6 +11,7 @@ class Cfengine < Formula
 
   bottle do
     sha256 "67bdde882244562579842da22d9e1a50708caeda776cfc2039f23abae34cd79b" => :big_sur
+    sha256 "dcbfc690677dad4edb4054a38aa93297520fc9a5047979e232f8c3cc443f02d3" => :arm64_big_sur
     sha256 "0fffe31906626805cb526bfec833c96cb5fce1055bf4403e95e3df6cfb378e39" => :catalina
     sha256 "5547175a2bffb5013ca52344b3f2ecf58ec17ddf61e8ed7e482edb65c0ed03c5" => :mojave
   end
