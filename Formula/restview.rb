@@ -11,6 +11,7 @@ class Restview < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "4ba3029792fba4cc83b0b623744f972c28cdb923fcffadeac09529f338705287" => :big_sur
+    sha256 "a57ef09b32b094bac63bf07d794485acb46a94962df7bed53b541adafc0c6c7a" => :arm64_big_sur
     sha256 "a7d9331d1da6155733bd914f4d0d987887ddeb116d11d71a39161f9213d85e41" => :catalina
     sha256 "cc035715443be21749ec92c08ca2e25b9f7773e1f6078d46deb9c754bea59a28" => :mojave
     sha256 "b526e9a774ed4ef1b83d48c2367dafe105365f059f0085d12650bf4a1dee778c" => :high_sierra
