@@ -10,11 +10,10 @@ class Diceware < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "07a4acde7cb1b987552c155ed7f961d444cb1e9b84e1a42d007bce600983d06a" => :big_sur
-    sha256 "b79193bc77688703712d1b8d1af1e6414b1aa536c0d354c11b68cb813a178d6d" => :arm64_big_sur
-    sha256 "98142655d4892f15af5f4063171df2004ff3d394bfbd4d783af9fe03cbcb0add" => :catalina
-    sha256 "4c2751c3a7d2f0049f0080eb6b8b0def6febe62252ef0957d06dbfced55271f0" => :mojave
-    sha256 "5128fb4da8f9189651bf0b164c92ce58fc64290dc2539dc0b70a103799fb9405" => :high_sierra
+    rebuild 1
+    sha256 "82ed5a515e4ee8d549911fe48a078ae9b149bb9e7a46f4a9042e7635fc4ba977" => :big_sur
+    sha256 "135d84622bbe9328996ba5128e05190e23801b7802440409b80d1a4a50b7daba" => :catalina
+    sha256 "42561d7b56413cdaed177753e1de2d2c9d7e882b36023e1fa112d19efc25de87" => :mojave
   end
 
   depends_on "python@3.9"
