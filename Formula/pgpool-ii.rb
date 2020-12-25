@@ -11,6 +11,7 @@ class PgpoolIi < Formula
 
   bottle do
     sha256 "5d9e9684a6889d139033d02927823fe34f23c8feb12b06f4570cf5028bc84d2d" => :big_sur
+    sha256 "4892a0165dfd283553d615483a937104173147b103ffe0527dd9791b79867282" => :arm64_big_sur
     sha256 "7b0245d2cfad6fdb47a8ae12a2c8f787cf917ae521244a42e9bdf79254f492f8" => :catalina
     sha256 "9847e3f4dfb8351c0e2d0e855b4cb3bd5beb0ea2d3237c544b82a150d0aacfeb" => :mojave
   end
