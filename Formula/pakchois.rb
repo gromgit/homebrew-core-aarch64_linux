@@ -12,10 +12,10 @@ class Pakchois < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "0312304691fe567185eb8fe854d6ca036f887c39ae4ca5652cc53bd0f837cb44" => :catalina
-    sha256 "5c6f1f39ca7bd268ba0df6f1f0f24a167aef86c77257fd6f8fccee7146b94c0d" => :mojave
-    sha256 "0ff5336b2165a755efeab1185edcde604ddc77f3cc359d5c41a07f3d5d8b9c0f" => :high_sierra
+    rebuild 2
+    sha256 "071f8af3739d95b9aa192ef05d6832c13dc2c857d3d12cf36ef542dc49e20368" => :big_sur
+    sha256 "cb96f79b314a139b4edbce5dbcb4e5c9b4057cf8eb0b86ed848f4acfd2b777d8" => :catalina
+    sha256 "794a3b40666739128f8f0ceb0af71dc787c725dc9bfc10a048b79009dfabf4c3" => :mojave
   end
 
   def install
