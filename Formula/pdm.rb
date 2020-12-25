@@ -15,6 +15,7 @@ class Pdm < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "fc99fb36f2f50b12cda7ec9686da46a78dbc5f569af002d85986119dc6583db4" => :big_sur
+    sha256 "ea12d97d61258c42d21a79847a04b9cdba6cd5e939fa75f1e1131bd73b2cd446" => :arm64_big_sur
     sha256 "29ea7f1596e0ef6c968706bf39ea6297623bb4a1ea383ea9d9beffe5e992dfde" => :catalina
     sha256 "5b042502410d504c3d5d5f390dc23cef481853c4e6930f125aa90df8cc000340" => :mojave
   end
