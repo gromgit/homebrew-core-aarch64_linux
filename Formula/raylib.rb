@@ -9,6 +9,7 @@ class Raylib < Formula
   bottle do
     cellar :any
     sha256 "e7429c2349ffd43bee8f7e412e0e0cdbb5d1c57601347abd968fad8e91165f39" => :big_sur
+    sha256 "d43421e12bdfbe0aac882e1ef8a4e9f17a2c2dd6b1d89aa63603e0ba7efc9a0a" => :arm64_big_sur
     sha256 "36271bac2ece0ae5efcfa2b55738242c6786f61a23dbd0567a155e18422a49e6" => :catalina
     sha256 "a6d93094325dc1d8dd5520e92caeab935606456f9b5b3c46995e78c5839cc557" => :mojave
   end
