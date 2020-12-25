@@ -14,6 +14,7 @@ class V8 < Formula
   bottle do
     cellar :any
     sha256 "50f51a34a06ca28c52401df43275755396b7fdee7e8f18356cedf026884783eb" => :big_sur
+    sha256 "e98659632153492b81057e7c7b155f5b2c846536b606319a43c01844613f7466" => :arm64_big_sur
     sha256 "19550a7952ac8e8882e746ec5c9cd17f8903a6e1e3859bd10c3255f373af4e13" => :catalina
     sha256 "b8222edfa40c8838b910eefe67b17c5b278447e94dc4d365ae9cb55d0e35d7e9" => :mojave
   end
