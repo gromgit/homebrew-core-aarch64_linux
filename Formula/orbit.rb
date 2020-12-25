@@ -14,6 +14,7 @@ class Orbit < Formula
   bottle do
     rebuild 2
     sha256 "df877ac8003a21bc6e626b6769bee6c062a97bc9a0ad4c8696f1edbce84e2952" => :big_sur
+    sha256 "e045b7442c08b71b665de30269248130508dc54615b2a231ef430e81a5e80bcf" => :arm64_big_sur
     sha256 "a5d0bd3e20410a7ca44b081e0282d1b379a35dca178c5742aaf4f565142994e1" => :catalina
     sha256 "650966efa8e12742e8db315777831955842731bc2aa8f2d149f2969ff87b356a" => :mojave
   end
