@@ -15,6 +15,7 @@ class Gitlint < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "52ac0738eaf1ee717e838a7a2d2c2e8c4745f281bafc846a054be2526567c411" => :big_sur
+    sha256 "8131d633d12e717a5cffd63fcd8717d1f7de4660c0ecea17e39a35cee982d9ca" => :arm64_big_sur
     sha256 "79dacaaf2f45dedcca1fb05efbf8c84d37f85996db920a4a675ceff724a8110f" => :catalina
     sha256 "dbb9d4e5bbabaa3a75ea7d38df6cb46ad51f95e5378591068f397884cee9ceb6" => :mojave
   end
