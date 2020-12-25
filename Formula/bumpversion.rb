@@ -13,6 +13,7 @@ class Bumpversion < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "0565fcf56009d940c51badc4a28a0613490db4334a571c204532c9a2aa4c881a" => :big_sur
+    sha256 "55a004675d686be21cc9dbf7f820063165d13c50388046f4b7e8ccfe664f6215" => :arm64_big_sur
     sha256 "d7bf73d933580643487b48d170a0e0357e8da2cddc47b4c238d020a7141c0ff5" => :catalina
     sha256 "7324e4d10330ec6f90a2c09f073f209b54264c6aac2ac81d173eb256f9bc8758" => :mojave
   end
