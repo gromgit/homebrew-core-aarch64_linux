@@ -15,6 +15,7 @@ class Pygitup < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "2729ba1c5fff79743b8e46e04a6dd5839184c80fe57f3e4df1768f558ba4e970" => :big_sur
+    sha256 "0e261cbb6ac35ca4c905238155cfa7566f8ff38f686e553a140f7813fd38cbaa" => :arm64_big_sur
     sha256 "e02c94526d58af22a560a80d981fea7c537f5faa7253e27f216cbb07ddb2eddf" => :catalina
     sha256 "3638f5357ceb0aa375c334b1586efd376d524c0134c0d89b738145e890f1e3d0" => :mojave
     sha256 "aee7d37c874a7bab06dcb113eddacd69b38f538cd6a880894a41fed90ec55840" => :high_sierra
