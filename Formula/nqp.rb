@@ -7,9 +7,9 @@ class Nqp < Formula
   license "Artistic-2.0"
 
   bottle do
-    sha256 "f374dfbf394b8238e126c75ceebebfb86285506d43818c2b3b869d531383ecd9" => :big_sur
-    sha256 "d898cd5b76ecb0b5d0fb6fae918a76d1dd242551eaca8db7a9f4a534af1074b4" => :catalina
-    sha256 "dd4a49183750cc951e994ee486ff2d2b76f84a68d7ab685c951c99692f381b00" => :mojave
+    sha256 "7532b02608b579edb4adf02dca2569cfad4aeecbb5c10a0949b02b71252fbd25" => :big_sur
+    sha256 "55d917153481171c3d955bec4a2724748a8957889111aaf523672a78a1632564" => :catalina
+    sha256 "93957544005becea32a6ab558ada80781cd5600fb4fe7319e198be0d84664a6d" => :mojave
   end
 
   depends_on "moarvm"
