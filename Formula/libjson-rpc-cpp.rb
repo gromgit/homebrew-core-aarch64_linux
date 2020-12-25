@@ -11,6 +11,7 @@ class LibjsonRpcCpp < Formula
     cellar :any
     rebuild 1
     sha256 "66710525dfe087cf3fa90cd9880b9d2a46a45e1b9d5baf2f1742cd3aa32ee019" => :big_sur
+    sha256 "5228a60e5c444cbad61bdb7451d0900ad9d5f75416d39db526a4619f3359047b" => :arm64_big_sur
     sha256 "1f790d2b77bc7dd5fedc0aed3982162212216196dc9b292d3c7871aea73b5383" => :catalina
     sha256 "c4a5604efe261cddd6f8aa87a6c615251eab3a78f922b80186dfdf136e9a7b7f" => :mojave
   end
