@@ -17,6 +17,7 @@ class AwsGoogleAuth < Formula
     cellar :any
     rebuild 1
     sha256 "ad6d9d8de411b4c9e147be73169f1b39f8bca939e574cccbbfd968db3a56695f" => :big_sur
+    sha256 "dfe6620aae681364e57f5aeab387b5ede1218519a215f467cb953786e7f91b3b" => :arm64_big_sur
     sha256 "d800cd512dad640afec75d8f5eae2c46a34b08775975a083248a2f012d8c7359" => :catalina
     sha256 "b6a99e3575737f418496222fcdd3d3ef0dfe04cbf133437f56df5db72e9d595a" => :mojave
   end
