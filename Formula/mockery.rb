@@ -9,6 +9,7 @@ class Mockery < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "c3d56daaa0b9bcf881f9c5fc4115286c49e3a1a3dc19003dd943f12356e32113" => :big_sur
+    sha256 "f0700c30fe39132a12da92077fd0b58a5ffede03ec01b89deb632bf9098f3cf5" => :arm64_big_sur
     sha256 "ad36b64a09477534520ad394a1e2229b546c5cafd04370d4d98fcafb7fbddf8b" => :catalina
     sha256 "a7c381a6121357b3cc70e209465650fb12ce48fc362bd2b780b074d01490324a" => :mojave
   end
