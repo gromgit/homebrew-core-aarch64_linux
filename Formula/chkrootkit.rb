@@ -14,6 +14,7 @@ class Chkrootkit < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "5744d8fb6169d25dee805a879b3e27bc9a690becb6ad1ede0a5ac81d21357e84" => :big_sur
+    sha256 "16f0d7e985169c6b72715ad17f300707788b72cdaa8447d7140d760fe121c547" => :arm64_big_sur
     sha256 "2255d52041c7f2ab54d2ada28a0f6e193d900e1ff2e4b5a9fd85e65dd26b4f75" => :catalina
     sha256 "fca54772544e396cfcf2dc9391835513088068eadd8ddb8590e90d141a9a2354" => :mojave
   end
