@@ -16,6 +16,7 @@ class SwiftFormat < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "7db963099096dac3d24d2d3095286791c55837506c12d8ebde3560c2c169890b" => :big_sur
+    sha256 "75fa25fe584857edcac70f44e1bf5f2c1ab8cea794cab40955da080f0f2b1061" => :arm64_big_sur
     sha256 "21776a6b8f2417f3d2171536f6788948f3c5e8e4f1681cd4cf088ebd828c307b" => :catalina
   end
 
