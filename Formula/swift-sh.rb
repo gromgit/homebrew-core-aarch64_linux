@@ -9,6 +9,7 @@ class SwiftSh < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "f4060ad81c05a41ed20842107a88faa82ab1c7698e5d5f53d6501815b3ece5c9" => :big_sur
+    sha256 "4c0584c930b05daa6ec211ad25ef31e591d62822226a555cb6952a586b59895f" => :arm64_big_sur
     sha256 "cb5374c2f8d5fddd23d181f7148b4a5f37ee82b70fd96e2344d58acfef3dbed5" => :catalina
     sha256 "949500fc6f95cb490bcf848b000d7321b4ea0d9e0a67e8e31898c11cec08f1a8" => :mojave
   end
