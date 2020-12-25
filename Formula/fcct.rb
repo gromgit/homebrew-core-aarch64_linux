@@ -14,6 +14,7 @@ class Fcct < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "365386878665e279e3649861a1e7955dd28898ed3eec6b1c3b144339fbb397bf" => :big_sur
+    sha256 "423e25428e2aa6c037c573c5a9d158f93d4423306cf5396fcdd0e3d0298e0526" => :arm64_big_sur
     sha256 "6db04a1c576680f2b5a1789b0f9df88f2215bc668e9e20fd19410183b340e734" => :catalina
     sha256 "513e72c532404b4458605cd6d37922d427b68eaebdc50f85ccfafedc65cd480c" => :mojave
   end
