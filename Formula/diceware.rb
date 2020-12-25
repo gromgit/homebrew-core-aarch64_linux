@@ -12,6 +12,7 @@ class Diceware < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "82ed5a515e4ee8d549911fe48a078ae9b149bb9e7a46f4a9042e7635fc4ba977" => :big_sur
+    sha256 "a509ee5a4669ed7ca0af8dd384f45ce7639221c471a937c899683f7aaee649f7" => :arm64_big_sur
     sha256 "135d84622bbe9328996ba5128e05190e23801b7802440409b80d1a4a50b7daba" => :catalina
     sha256 "42561d7b56413cdaed177753e1de2d2c9d7e882b36023e1fa112d19efc25de87" => :mojave
   end
