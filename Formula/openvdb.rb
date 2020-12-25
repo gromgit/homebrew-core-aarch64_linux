@@ -8,6 +8,7 @@ class Openvdb < Formula
 
   bottle do
     sha256 "20ab4ee266bd4d81cddc9173deace850a6f029f56a70bf1e6e9b7de597ab6272" => :big_sur
+    sha256 "e9a79382494370f3a26852a967558b98bfb2b676925912f9b10dae107ab7f09e" => :arm64_big_sur
     sha256 "ae9c312f0e4c0559ba2a22734ce6472fb93b57badca7072e29ef05abe940064f" => :catalina
     sha256 "6fb5ca672cb6690dd655722105c4ad9aec9553437171f4b7ed4a0313de8e87d7" => :mojave
   end
