@@ -9,6 +9,7 @@ class Adios2 < Formula
 
   bottle do
     sha256 "2e6889eacff86171837feafd9c53cf3c3f5ecb47323a4d5a50bba6439e743b6e" => :big_sur
+    sha256 "80bc705482d7f6e79d696e95424e2e5b1652b1e5d8a209543aa0593a416b7e30" => :arm64_big_sur
     sha256 "b2e21f05ce51864584440bbee0df419a4adf1c842159af0a975415f2d31dbb9d" => :catalina
     sha256 "9b91ada3dc230fa55c94f8a13fbb7fa0483b5487d84c464d31b04fcc831148ba" => :mojave
     sha256 "3d12753838588f88e5e55de6095bc93af2731b34ff65c807414208cf443a3442" => :high_sierra
