@@ -10,6 +10,7 @@ class CucumberCpp < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "f418f5fb249b81fb5842ca53352a6c74eb9870ffd653e4e9c74492642f5c9e15" => :big_sur
+    sha256 "390dca18b362d87115693bbd596bd536106e33e2a420212283ed111e3bd4d9e9" => :arm64_big_sur
     sha256 "d0d6f87f685a4a21780b66f900007635eb8335be9b296963913cdac14dca12f6" => :catalina
     sha256 "b86eb848c6a88b0934d755be34e314fe39bd6240da79ed7658c8946783c18e82" => :mojave
   end
