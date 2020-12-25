@@ -15,9 +15,10 @@ class Folderify < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b54441414ed46cb54a40fdd64dc8e0d1457d5cc370809417073705eefd2e9a81" => :big_sur
-    sha256 "c3ef91fc66d46514d556f7d0cbf038a09e80dee34c5aaec7ee6efcebeb98378e" => :catalina
-    sha256 "c86cb0415afa5a41e2c2d4f7e9ca2a9035187ad14ab4c750dd1adf4a7133c9c7" => :mojave
+    rebuild 1
+    sha256 "67dab09b903e629be04f21a92f1cb7edff692a78d2e5f0a5f404fc0477a659a7" => :big_sur
+    sha256 "20944598cedaecd415fad0fa09e336369329be6dc486423c8ed10c9d07f35cbe" => :catalina
+    sha256 "b2bce519fa455f363ef24745a6533f032b7abe1ed4f28fb64c718a962c06f150" => :mojave
   end
 
   depends_on "imagemagick"
