@@ -9,6 +9,7 @@ class Hamlib < Formula
   bottle do
     cellar :any
     sha256 "bb9d73c8ec45bf3a4274b8262bc2d15dcb0863cf9fcc0274d0103d600420dc1a" => :big_sur
+    sha256 "8f37af17e93f6eb97fa0540a1429d39730c8ae40d47069fd34b49a362969897b" => :arm64_big_sur
     sha256 "a63c4253d798367507e46096c4d4f92e3026e086f116d364f298e7909a986fb6" => :catalina
     sha256 "2d82d6ba8bf5197285d0262ab556a5d344d244b8118b6e27b51dbd503d3c618b" => :mojave
   end
