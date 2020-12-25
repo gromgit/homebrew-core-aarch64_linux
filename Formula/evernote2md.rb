@@ -8,6 +8,7 @@ class Evernote2md < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "1887f7e62decddd7bdb004a9ac813c892a71f9598b4767be67e5a8b53aabf8b0" => :big_sur
+    sha256 "da80b7d5d975ff6216e117ffc5d4b2a8240ec0cb276947c2304e588de613558c" => :arm64_big_sur
     sha256 "14fc0cf4058c4e335c562ac627a1e1d764fe6a2f16708fd5a382eedcf568d8e7" => :catalina
     sha256 "aac9b423d5a0b42f06c94c0ecc01354cd4a522d83cacb2454d4bc19d12751d7f" => :mojave
   end
