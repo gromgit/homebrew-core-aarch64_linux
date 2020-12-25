@@ -15,6 +15,7 @@ class C7n < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "a62297eeb80016514996f58a3b3ece537590813ddef039d65bf9b966cc5262f7" => :big_sur
+    sha256 "c3af0fb59ac596aecd44ff63626910f5dfe78a5bb252145e5f0ef68b24429383" => :arm64_big_sur
     sha256 "43f6215e8bed4c02a32ee1d0ad69124d055ce285770ae6f4d132796cfa928d25" => :catalina
     sha256 "1d5bb3f73bc5bfdc6b7d0192a52a3bdf69b89600345e3da8cfcd4aff103e83b5" => :mojave
   end
