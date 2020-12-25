@@ -17,6 +17,7 @@ class GitRevise < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "e259f71bef41a4a5b956fed4f7d619ceffdce443fbb8d06199239681133b196f" => :big_sur
+    sha256 "99e97daddb3fe806c5a848b86574e4ff25c45f16cabb58c06e278b754e96df64" => :arm64_big_sur
     sha256 "b94663b14f3509958993f9c18fca3f4b2ecbf16901f3f7c61236e52bd180cfac" => :catalina
     sha256 "154cdb0cfa30aa40a4ca6498fbe7c8516c5153a3f2e181cf92d8f8894716b572" => :mojave
   end
