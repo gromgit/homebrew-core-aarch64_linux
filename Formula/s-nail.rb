@@ -6,6 +6,7 @@ class SNail < Formula
 
   bottle do
     sha256 "6d660c644fb08f0d351a1eaa20d89dc2b6c79691b6b821c1337d824b400e7c7c" => :big_sur
+    sha256 "a4f5ed7bf1a3c1f8252067a7433adefd3ce994a9ddff2108491572c317aa2f41" => :arm64_big_sur
     sha256 "fe903ebf2cad85b35e070e37afa01830a82a64f2d075608ccf000ddeeaa58039" => :catalina
     sha256 "8cedc5aa5ed25d16f386c75cf184e793267bedf5687c1746a3bb5e7588faa2fd" => :mojave
   end
