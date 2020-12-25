@@ -11,6 +11,7 @@ class Librsvg < Formula
 
   bottle do
     sha256 "37f06d5645603a844550a8ef7fd9b2b1b5abdfde4865fdc97530744673c31a38" => :big_sur
+    sha256 "7a9b9d526de36bec0544fb61c5834a464a12533da36777ebd4b9db6079477f7b" => :arm64_big_sur
     sha256 "31e57e1d77eb1ffde7abebaca3bcb1a8552dc7cdaf9484687f575865a9f02906" => :catalina
     sha256 "9b9242aeb3b35e08fd08a9a46df3ed11d30e22031be23465a2e4aafe2dadf82d" => :mojave
   end
