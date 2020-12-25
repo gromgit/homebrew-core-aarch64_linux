@@ -5,6 +5,7 @@ class Vim < Formula
   url "https://github.com/vim/vim/archive/v8.2.2200.tar.gz"
   sha256 "bb2025a2d8e271be0c73483d754272b86a95261090a5e9c2e27c1f6ca8ea3c9c"
   license "Vim"
+  revision 1
   head "https://github.com/vim/vim.git"
 
   bottle do
@@ -29,6 +30,9 @@ class Vim < Formula
     because: "vim and macvim both install vi* binaries"
 
   def install
+    # Fix error: '__declspec' attributes are not enabled
+    ENV.append_to_cflags "-fdeclspec"
+
     ENV.prepend_path "PATH", Formula["python@3.9"].opt_libexec/"bin"
 
     # https://github.com/Homebrew/homebrew-core/pull/1046
