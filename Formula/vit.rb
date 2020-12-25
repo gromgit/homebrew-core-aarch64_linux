@@ -17,6 +17,7 @@ class Vit < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "74f88c7e830cabe5c94a7b375186967a0ec911a9cffa51819ddd24034ef51862" => :big_sur
+    sha256 "beb362f7a6835aacc58308494f648723e2bfcaba198dba14a27b6ff18596297a" => :arm64_big_sur
     sha256 "443aacf6cdd09d3667d51fdf272315234d074731e11d965a8518a86a9e536e84" => :catalina
     sha256 "97eabbf5cebec0dda1322f73294302159d53c2f9c4ccfce5056edde44081b682" => :mojave
   end
