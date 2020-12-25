@@ -10,6 +10,7 @@ class LibjsonRpcCpp < Formula
   bottle do
     cellar :any
     sha256 "1187bd48b858e3f9c2cfb8909bd7ba0a75973179a2254b335dd208304a8b0e00" => :big_sur
+    sha256 "00eaebee121524bd0c92f7e02090c503b0d7e5b8ba34ee0637d9598bac711e2c" => :arm64_big_sur
     sha256 "5f4124936a55b2fa598205b70d615137f1b5726f62f71e36b9d6a2f2dee8c127" => :catalina
     sha256 "02a2722ed816d843eb3eaf38dbd2634d8ee325bb4be95c94a35383a7ed5c6955" => :mojave
   end
