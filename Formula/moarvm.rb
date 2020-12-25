@@ -13,6 +13,7 @@ class Moarvm < Formula
 
   bottle do
     sha256 "c9728c1e0b77e7a68f3ac5689975c28c72da6860ca7b55b099244e9256cff32d" => :big_sur
+    sha256 "373260b1859ec90ea268a6440a02dec0fb6248e3d0f93424062773f0e71cdf03" => :arm64_big_sur
     sha256 "91c1103370b2d7c9a0831fa448c50a97c63c4c0cad174fdfca4cf90cdc43fa02" => :catalina
     sha256 "7a7249de788c78bf75163989db13f32d7da4db49747f58d9210766e206ffb773" => :mojave
   end
