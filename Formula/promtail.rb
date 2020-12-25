@@ -7,9 +7,9 @@ class Promtail < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "50ea3132d8603aa26dd730b4bdaab1d4d6f291aca37343409401bace6241dd72" => :big_sur
-    sha256 "266e3141851c43a8e66c8133ec783c364b9c6a78fddea261e9373b2e17dc25f8" => :catalina
-    sha256 "0f8dfd4e9d043ab006f797f6ab58cb943f6f3f9bb597345260b634a48eb927f7" => :mojave
+    sha256 "52202671f43f8d1ec401277ebe505f4a454699394b17a063827ab9a6a0c90eaf" => :big_sur
+    sha256 "468eb2985bef79ea0fc3e1297130388154a3ab0245d1f52e1c6d31ce8bd3f27b" => :catalina
+    sha256 "03701ed2836ac34136b3ca18e11260378492c730da4b45e5b92f78c08c3aa04d" => :mojave
   end
 
   depends_on "go" => :build
