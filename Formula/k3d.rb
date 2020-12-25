@@ -13,6 +13,7 @@ class K3d < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "6c69c8263f50c8656a05817d9ace011c98437938e3eebd9f75fed5c657ca9a53" => :big_sur
+    sha256 "40ca2797e168fcb74cc3ca598f4743f90eb87ab4d364ee2eaa73b587cff7d704" => :arm64_big_sur
     sha256 "0c1ccc0a47e30c0b9634dfd42690fe3bddfb680b6a6544dcb60db95ac34c159f" => :catalina
     sha256 "d7287519fac90f176286c41502a3776e8b1b6e1c45dbd26b06b4f82959ef5419" => :mojave
   end
