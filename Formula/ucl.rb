@@ -14,6 +14,7 @@ class Ucl < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "91ce0597dc8e648e4ee0d0caaa30bceb5f569acc90634d88fa5e7859f2ae682a" => :big_sur
+    sha256 "ef63a86669c63e486c3682494a93c9db453a33089a2a71398efb8e5e26cf5e44" => :arm64_big_sur
     sha256 "116db1f8157bf88831fece730fb3e6fa82420d53c29b032afd63b979df42b386" => :catalina
     sha256 "89c37d38b41d5107f85c0880eb1599c885dafc2a7150a378c645b3fbe1f0e5ef" => :mojave
   end
