@@ -9,6 +9,7 @@ class Periscope < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "35479a4685dd8e7ba43ea839c60f1f1964dea46c6db0e54b944c2912a79c397d" => :big_sur
+    sha256 "17ecf00c477dacb2827e030a7367109b9aff437e9439876e5ee78d2bb6562f73" => :arm64_big_sur
     sha256 "887b43d68fe6cfb92410ddd969d7ff9dfc6341e0108592b05c6fd246fe10d95c" => :catalina
     sha256 "00f88c11b1826501afe3ff21fb1ae3ca082e72bd27060d9570dbb95d9383f0f3" => :mojave
     sha256 "d768d1900b8996fe954d00a38c2665cc6154bd0f56554594fa84a44caae4a392" => :high_sierra
