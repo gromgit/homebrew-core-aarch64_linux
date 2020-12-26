@@ -17,6 +17,7 @@ class Ydcv < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "549b7b6c442bc91d63c09c5ea887272e47dfefe27ed2879dd5e137af23da7bab" => :big_sur
+    sha256 "ce4085dd22c1434dbb030889d1967ba955eb369b89c268660bb2656f21a9e64a" => :arm64_big_sur
     sha256 "0ec0bead521d8569e9b398e08c9baa0ee28d8abee94e0adf478e7a30f7484f91" => :catalina
     sha256 "2e2bacf0d62c5a1496e3ab383e05334c3d36e65312eed0663bdfb2f0e05375e3" => :mojave
   end
