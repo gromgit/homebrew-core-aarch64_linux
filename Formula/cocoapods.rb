@@ -8,6 +8,7 @@ class Cocoapods < Formula
 
   bottle do
     sha256 "d55424b1e441e989fe4865369e0322739bce49806accea459f5e726677e532d7" => :big_sur
+    sha256 "1dcddcefa7a9cc5658bf62ef7e0e05bd43e6542fd84959872bdee70345cce6fb" => :arm64_big_sur
     sha256 "0018d5a725bcc02e53d5c9b10b9c6e396c3a2ece14b7c413efce27c67bdccfcb" => :catalina
     sha256 "ad9286fda5eb301017348df283e0c68ae135e267b4506f090b5504835e961e60" => :mojave
   end
