@@ -1,9 +1,17 @@
 class Rinetd < Formula
   desc "Internet TCP redirection server"
-  homepage "https://www.boutell.com/rinetd/"
-  url "https://www.boutell.com/rinetd/http/rinetd.tar.gz"
-  version "0.62"
-  sha256 "0c68d27c5bd4b16ce4f58a6db514dd6ff37b2604a88b02c1dfcdc00fc1059898"
+  homepage "https://github.com/samhocevar/rinetd"
+  url "https://github.com/samhocevar/rinetd/releases/download/v0.70/rinetd-0.70.tar.bz2"
+  sha256 "cefe9115c57fe5ec98d735f6421f30c461192e345a46ef644857b11fa6c5fccb"
+  license "GPL-2.0-or-later"
+  # NOTE: Original (unversioned) tool is at https://github.com/boutell/rinetd
+  #       Debian tracks the "samhocevar" fork so we follow suit
+  head "https://github.com/samhocevar/rinetd"
+
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
 
   bottle do
     rebuild 1
@@ -15,32 +23,27 @@ class Rinetd < Formula
   end
 
   def install
-    inreplace "rinetd.c" do |s|
+    # The daemon() function does exist but its deprecated so keep configure
+    # away:
+    system "./configure", "--prefix=#{prefix}", "--sysconfdir=#{share}", "ac_cv_func_daemon=no"
+
+    # Point hardcoded runtime paths inside of our prefix
+    inreplace "rinetd.h" do |s|
       s.gsub! "/etc/rinetd.conf", "#{etc}/rinetd.conf"
-      s.gsub! "/var/run/rinetd.pid", "#{var}/rinetd.pid"
+      s.gsub! "/var/run/rinetd.pid", "#{var}/run/rinetd.pid"
     end
+    inreplace "rinetd.conf", "/var/log", "#{var}/log"
 
-    inreplace "Makefile" do |s|
-      s.gsub! "/usr/sbin", sbin
-      s.gsub! "/usr/man", man
-    end
-
-    sbin.mkpath
-    man8.mkpath
+    # Install conf file only as example and have post_install put it into place
+    mv "rinetd.conf", "rinetd.conf.example"
+    inreplace "Makefile", "rinetd.conf", "rinetd.conf.example"
 
     system "make", "install"
+  end
 
+  def post_install
     conf = etc/"rinetd.conf"
-    unless conf.exist?
-      conf.write <<~EOS
-        # forwarding rules go here
-        #
-        # you may specify allow and deny rules after a specific forwarding rule
-        # to apply to only that forwarding rule
-        #
-        # bindadress bindport connectaddress connectport
-      EOS
-    end
+    cp "#{share}/rinetd.conf.example", conf unless conf.exist?
   end
 
   test do
