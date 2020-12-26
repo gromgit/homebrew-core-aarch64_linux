@@ -9,6 +9,7 @@ class Findomain < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "4ad50723952f3be57618a6d8abe573a0ee3485bcd132f6ef7f6747a676236c8e" => :big_sur
+    sha256 "048595848f25aab1d8ce875ee206f2de26bff21d481af45386f3dcfe6bb60a00" => :arm64_big_sur
     sha256 "fe80011577eafc2f17973ea265859b41a13064e039179fa663a7cdbcf9199d45" => :catalina
     sha256 "4f19c79953f6e322684eeeda38a79c3a0bdeb05b6665007aa042d8644e555a8d" => :mojave
   end
