@@ -17,6 +17,7 @@ class ShallowBackup < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "adfc473f09b59e45bdc9942cd6f5eb95898691a1643d4f22da2dc18a471a1356" => :big_sur
+    sha256 "5a105b3d8dcddd09591a8716ae4ed8ecca9af001b0ac51719c5088b3db443a01" => :arm64_big_sur
     sha256 "26ccb36f907869ddeb01460ec46a45773acb3dbd2212f6247e79e731fa4a1b00" => :catalina
     sha256 "67ea3ad0afb6b8107f0ca8a6ae33cac5a8be7c409e9c76111e41da43cb3a3c51" => :mojave
   end
