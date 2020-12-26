@@ -18,6 +18,8 @@ class Jerasure < Formula
     sha256 "1db6ef4631512bf3b155d614588689b2bacc911178cedf828db8f810d9e18d43" => :el_capitan
   end
 
+  disable! date: "2020-12-08", because: "Depends on gf-complete which has been disabled"
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
