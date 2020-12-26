@@ -8,10 +8,10 @@ class Jql < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "ef2ef62525d88d33ca05ee66c76f742988bab7e515dd7b61a5838788eccab117" => :big_sur
-    sha256 "08a3d9f375bd022d51056b1cc1cdc232c8b2337918cd36190e086fb1b0e5527a" => :arm64_big_sur
-    sha256 "df9bd45f44731ca4033ed42e27c65324afe68ec4d16539ae90075df3d77e03c7" => :catalina
-    sha256 "6b7303e254e7dfde4619fba4df69688f003b45346d75830e64b6a3d8c875032e" => :mojave
+    sha256 "1c4a19588accf78643b55bcf22c6b8047949e30af503ae7899eb72db94fa1ab3" => :big_sur
+    sha256 "ddf64aa07d7cc4368fd45a22525b634a4ecf5c22e148a4a4348fb4fe392fbe51" => :arm64_big_sur
+    sha256 "b358b640e2f101925b5a9d3973de242996896b1e3346c7c75cd57121ac224f7b" => :catalina
+    sha256 "81b8df9f542f00ad7da3f73273202d459185447a50cd0d4b8764805ebd059a07" => :mojave
   end
 
   depends_on "rust" => :build
