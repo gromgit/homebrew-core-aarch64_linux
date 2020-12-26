@@ -14,9 +14,10 @@ class NicotinePlus < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "bb57d96d376930c48f6c66f47c2dde3f813b65b106870fe1b0a56cc8f3039145" => :big_sur
-    sha256 "b8b27084c9f6aad79968494e1bac71a1690e2e01613857eda6b8ec1d723724b9" => :catalina
-    sha256 "dd52da32c8394630c2f3264f27fe807c5a6cb059703ee490337d784ab7df9569" => :mojave
+    rebuild 1
+    sha256 "ef928b9b97833d14fc88287baeae60b18150466695061e3262d75bfaa5ff6930" => :big_sur
+    sha256 "1f41e8015df019b8a56261867ba8cb11c313137459fc0c7350f0c70d5dbf5f75" => :catalina
+    sha256 "8b0995596b1ce4de0a67dba2363b9dbee6a25761d2e26bf94e893cff262c4c81" => :mojave
   end
 
   depends_on "adwaita-icon-theme"
