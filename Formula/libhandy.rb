@@ -7,6 +7,7 @@ class Libhandy < Formula
 
   bottle do
     sha256 "c2b6756592ef4285b88f91dd699790909d97bd4e3d935e79a8d2d254891b65e3" => :big_sur
+    sha256 "67db50e995c9ced8b24c1db9d855291e3a3df3f68ec79f7a8940c7be2861c7b2" => :arm64_big_sur
     sha256 "d2aa0abcdd31af71e361166fef2ee9fafe60518c6187f18bdd51c57599b683ee" => :catalina
     sha256 "eac1f6220e4e1463ae79e2c84f879ef27b99be779cfff58cb5e700e8d8d0c469" => :mojave
   end
