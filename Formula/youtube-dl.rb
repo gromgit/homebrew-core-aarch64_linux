@@ -9,10 +9,10 @@ class YoutubeDl < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "17a5a938dec6d6f719e76ba3e4e060a7182a34e83269ded02ea46780ffb6882a" => :big_sur
-    sha256 "25a55dfcd3c845982c34affe49c5b070f98ebd3e79f83c3500ecdb1273ae10ed" => :arm64_big_sur
-    sha256 "5734e0e1f5e43cc7db9cf63f7d079a2212e024ed4652cc3ca89d8a2abeaa7fe5" => :catalina
-    sha256 "f6f15c2acba96cba668a737c4b2a7bc770ed767a516059f1376f64e26d0b4d08" => :mojave
+    sha256 "540d08b3288fcb89c4f13584aac2a62df8db6c4f0deff4817902aba5c163083e" => :big_sur
+    sha256 "5a573947f43390861cc3198adb30bb3eb746f14dfbccadc1ae6eb4cfba658ad6" => :arm64_big_sur
+    sha256 "542a43dd337e63079f5f8c4ebe2e3d32cbe2fb8286515bbb2878c83213085b23" => :catalina
+    sha256 "98c151c454642d54306832126f66cdcf1922f7dc1929784fe19b4c4145824d99" => :mojave
   end
 
   depends_on "python@3.9"
