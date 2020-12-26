@@ -15,6 +15,7 @@ class Nushell < Formula
   bottle do
     cellar :any
     sha256 "3fd215ea0b1c8512b6c272107dcb48e76adce1733b0c6d4a495f2243d847fea3" => :big_sur
+    sha256 "63a8799e77505de86e40b8bd635bf75039b2ec1e32a1859b20003f4d185c3bfe" => :arm64_big_sur
     sha256 "81c226684e631321762d3941b11e9709a26123240af30561f74ab3e9661e246e" => :catalina
     sha256 "d9df76bfc701753b76981b950b2cd5d93740fca0df876fae72fe000322bb9f0c" => :mojave
   end
