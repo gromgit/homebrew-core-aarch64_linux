@@ -8,6 +8,7 @@ class Youtubedr < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "6956fea8197b2302b6b5e31077d3c71a043e1bd1c0aadd5cb13691c1a569d94f" => :big_sur
+    sha256 "873add0ee7b1dcd70242db09789b9c0fbf1b6f9c8d68031f0fb3bebd3360a548" => :arm64_big_sur
     sha256 "39c6fdca870d0ce13ac4888f8671bbe5cb2e1628da753b38b701e2989e496dde" => :catalina
     sha256 "e8953674953c78d36207f9584f720f4a511690b1b9862a2ce564cb7c30f79f8b" => :mojave
   end
