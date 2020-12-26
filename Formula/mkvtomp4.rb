@@ -15,9 +15,10 @@ class Mkvtomp4 < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e28f9ae16e682b2fecfe4d0a7d93c9b0997266083dcdcc63a42362cd5eb590a6" => :big_sur
-    sha256 "87db5af32a6a707a10c11280169dff12f9df3874f93428e49aa14cbfd88eb313" => :catalina
-    sha256 "16a6465c2e78d1755d43d1eeba3f1c20605e44a236d892eafcd5cb402c47f060" => :mojave
+    rebuild 1
+    sha256 "081d9ac327ac15673cc580c72268bab867954cdbf342a2b2f0f8b4d6c5a0e935" => :big_sur
+    sha256 "8a0cfe2a1c9cb72fa3cf450d2d9ef6bf0f3166802e86e6854dbc6de4d079e3c6" => :catalina
+    sha256 "694911a5ed4c147120d1f9eae4bd608390ab09d5e05123ce5d1129c216826010" => :mojave
   end
 
   depends_on "ffmpeg"
