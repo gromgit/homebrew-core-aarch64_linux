@@ -4,6 +4,7 @@ class TerraformLandscape < Formula
   url "https://github.com/coinbase/terraform-landscape/archive/v0.3.3.tar.gz"
   sha256 "8594948ebfc0d4f311a2f0a2261a0397b190500f33492c5bf647b3e07b8b625d"
   license "Apache-2.0"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
@@ -44,6 +45,13 @@ class TerraformLandscape < Formula
   resource "treetop" do
     url "https://rubygems.org/gems/treetop-1.6.10.gem"
     sha256 "67df9f52c5fdeb7b2b8ce42156f9d019c1c4eb643481a68149ff6c0b65bc613c"
+  end
+
+  # Fix Ruby 3 syntax errors
+  # https://github.com/coinbase/terraform-landscape/pull/118
+  patch do
+    url "https://github.com/coinbase/terraform-landscape/commit/29b07f3c0a23e00b10d8ea3ed018a1cb5805689e.patch?full_index=1"
+    sha256 "ea651dc182bbd4cfddfbec098d641657097270eceb0c056a38a0f34286ef1144"
   end
 
   def install
