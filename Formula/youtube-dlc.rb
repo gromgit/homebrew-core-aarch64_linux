@@ -15,9 +15,10 @@ class YoutubeDlc < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "cda21c7d407f10c01c189b5dd71c14dccd2b53d60717726cb013dd9f8551c47a" => :big_sur
-    sha256 "0b7b4d68b5cbbd018a7baaca6a1cc31f123986881c926b79299e0a25bde7178f" => :catalina
-    sha256 "cd3a872ac084b1063848a0fe327b92b4000dc72fc268a1e03ca029c783caa586" => :mojave
+    rebuild 1
+    sha256 "4cc5bc35a4e0b9458af5f8497683ce532f8ff5051dcc23745983fc233264c548" => :big_sur
+    sha256 "541fbc8f509ca8b5acc301a00cc2bdde8cb73d1c1d25e7d99bd96ac833013ded" => :catalina
+    sha256 "4d24ae860520ce11d92db35174864a68cecfc66cf90e19baef498c734d0eab69" => :mojave
   end
 
   depends_on "make" => :build
