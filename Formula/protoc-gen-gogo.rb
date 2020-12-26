@@ -10,6 +10,7 @@ class ProtocGenGogo < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "7d66d0581956943a2d3ee73f881a0d455466c4f0c94d080685afb5ca2b6951b6" => :big_sur
+    sha256 "89ca97d74201bb2acbf16d80f657d0ffbad1c71425724ee2865b8423fa3e927e" => :arm64_big_sur
     sha256 "11c3555306af5dcfbaf85953c96fb386c4b864da16d91f45d99435fd55ee3615" => :catalina
     sha256 "5767e5448ae3e8a70d961cca120aa12c8491db0d498bafe1abb3d935c208bf8f" => :mojave
   end
