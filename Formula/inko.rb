@@ -9,6 +9,7 @@ class Inko < Formula
   bottle do
     cellar :any
     sha256 "41ab1fbef244bc9d59410946f6887a9b3e26a7a2c042d0802b3446c2a82ce5a1" => :big_sur
+    sha256 "8bd684b53bc1eb3d48168370522a666c720aab0f62a415d7c33366261e883aad" => :arm64_big_sur
     sha256 "50e59361460408563479d63cc5d884c8336371463a7da8f72019d38a27408bee" => :catalina
     sha256 "ac5c0017a6565b937a3dc367ccb6bccd9b57c5c710f70641160109c4f32fc3f1" => :mojave
   end
