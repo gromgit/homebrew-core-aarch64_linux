@@ -7,11 +7,9 @@ class Cocoapods < Formula
   revision 1
 
   bottle do
-    sha256 "5fec9be27505bf6858fdbd409f50247987a03471dd0dfe0af15ddb58c267f604" => :big_sur
-    sha256 "9b56b7844e57f6593e00e118c4d4cc9487c74c4cca55c286d11374a68ba5c7c4" => :arm64_big_sur
-    sha256 "e134955d0501635a62e16c9c9b10e01c5f8b9e0ffdeee3d7b778db5845bd88a1" => :catalina
-    sha256 "9977145a066bf2545f5fe3d1ddd41f0360c7efe46523087d56cf06ac305eb069" => :mojave
-    sha256 "783448183d3bb63dc46c8148fe1f3b783b705bfda763fb6f6237760e30b94ff6" => :high_sierra
+    sha256 "d55424b1e441e989fe4865369e0322739bce49806accea459f5e726677e532d7" => :big_sur
+    sha256 "0018d5a725bcc02e53d5c9b10b9c6e396c3a2ece14b7c413efce27c67bdccfcb" => :catalina
+    sha256 "ad9286fda5eb301017348df283e0c68ae135e267b4506f090b5504835e961e60" => :mojave
   end
 
   depends_on "pkg-config" => :build
