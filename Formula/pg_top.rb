@@ -15,11 +15,10 @@ class PgTop < Formula
 
   bottle do
     cellar :any
-    sha256 "a8bd95ff06d4f746e3763933fee8f4118b5ae6e3d16c4a8e2ff1bc675bd4091a" => :catalina
-    sha256 "d31b2fb44c6d363f0f635bf6a16427968ca610ea285569bfa867bea6d0437549" => :mojave
-    sha256 "32637c635d8da78d4910df2dabd474f4115c31cba57890ad053b3a43cb38a758" => :high_sierra
-    sha256 "5f06ae8b8ef1c979143e19c0527c31c8d649d23e1e9612c63bc6c5ff05bf8276" => :sierra
-    sha256 "6d0104d461d7187ad02e1085098f2dad4fa00c4f2db93b1b910a6a072517ca54" => :el_capitan
+    rebuild 1
+    sha256 "770ec08d04f5f88d91f99855fb5ac13466734b7b396a0bf499387a02490cc8b8" => :big_sur
+    sha256 "00231ec96d368d18286b69104979b2d35307f02e2f5acf54293f97b7619803ff" => :catalina
+    sha256 "1110da076403c8f3030421ce4fbb5acb51d61c71102564aa00db9611d08b50c8" => :mojave
   end
 
   depends_on "postgresql"
