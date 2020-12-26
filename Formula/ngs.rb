@@ -8,10 +8,9 @@ class Ngs < Formula
 
   bottle do
     cellar :any
-    sha256 "0bbba726bd955c1af00edcab7609c29c9afb267002f05df92291b3dd3d441fc6" => :big_sur
-    sha256 "39660e7b8a4a88b41ab30ec43a832feb487c1813e57f713a3100af05fa8a762e" => :catalina
-    sha256 "a4a4fd7ddcfc2d51851a733c117dd3e6076e2ee9b8334fa852c4890a547fe0d4" => :mojave
-    sha256 "8a9b038543f6a2fb7f7cd065942c75e76ae971cde8ca448c2aff0bbef9fa59f1" => :high_sierra
+    sha256 "9a6b1d98f851941dc00cdedac191bf2581973d69b7131bbfc2134bd060bf7f50" => :big_sur
+    sha256 "a3075d022a4c41144370777ffa081d0d6e642d5c280c9807a82c5480363679a3" => :catalina
+    sha256 "c23efe4b00f0ceaa5fab4948affe5ee37846e14918fbe34ee843c4db0bdcda70" => :mojave
   end
 
   depends_on "cmake" => :build
