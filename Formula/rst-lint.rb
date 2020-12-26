@@ -15,6 +15,7 @@ class RstLint < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "b2f2daab471857924b79de844c77047a02452d4fb201b9844a6293577dbd1e50" => :big_sur
+    sha256 "f2d97208f650502efab1af5bf619f0fd89cb071d3cb755abb1ac66104ffc526c" => :arm64_big_sur
     sha256 "ba3a1093fb3d07a4293e80c9cb04f0b3abf6d6ad1e341f73ee107d96d5a6584b" => :catalina
     sha256 "1ab54f054de10974bc5eebd92c710a7ea2ce95c71f5de4628f4febf99ca517b3" => :mojave
   end
