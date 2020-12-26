@@ -8,6 +8,7 @@ class Sonobuoy < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "d7f3e8d91d907888ebe0585f29b01c64f25cc829f55e3aa0a896d9ef60177a70" => :big_sur
+    sha256 "d4ae3e3c577c3753e15b75cf0af1deb822c441df381d3d1d923a9337684d62a9" => :arm64_big_sur
     sha256 "cf34ec271d9a63ea979c379cfb3c30828d4b53ebc3d691d4b7798ca83c7fb87d" => :catalina
     sha256 "d59cd7e3d92970fb71818826c9a93d3ced9ce9179493d33914df125bbbaa78b0" => :mojave
   end
