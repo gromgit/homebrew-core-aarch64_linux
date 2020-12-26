@@ -11,6 +11,7 @@ class Vte3 < Formula
 
   bottle do
     sha256 "648845b96b5175bc135671b5d6812871973344baaf988634e1fb79e45df22bb8" => :big_sur
+    sha256 "71191ecd93f71207adf8198d4a7c60dc3e01ae09fe1296254370d2a0fa1c72a1" => :arm64_big_sur
     sha256 "682bd63b12521e701f58b13f72f0a9f3449314670320e491b06d437de309daff" => :catalina
     sha256 "617d21b21c0ffc0d53dea2ca5dc4ebf796afc9e3f0a46fc0c85ef9a01b2d6e28" => :mojave
   end
