@@ -10,6 +10,7 @@ class Stern < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "fcb10818d0cbb75c642f304c81d22176a010a42ee60a9c4a1853129380ae5805" => :big_sur
+    sha256 "830637de6aa8964ff8a72ad5d92ed7b1ef1892c32833898c92fb94a9b373848f" => :arm64_big_sur
     sha256 "f42887e06595cc6f75e4600860f7795c71b5582476307c5222d612aed2a8c018" => :catalina
     sha256 "f2bcd849ee63b84a23c8d2ed75ad123d70af5d73a7456feba9c332399f42658f" => :mojave
   end
