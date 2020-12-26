@@ -16,6 +16,7 @@ class TrashCli < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "5709ac7582a562b73ee9990da76d1e47eda1c9462de1b27c1002058a8bf4a95e" => :big_sur
+    sha256 "3338c06b98502ac0541819df14c9750f60396a58c7c0f96fa2c94af1d13f6497" => :arm64_big_sur
     sha256 "181a25c6c47163b33789da438ddf5ed2f8b20be195a3ac1c2e4043b0a2ebcd90" => :catalina
     sha256 "c7cba34dc885096b61e2f3edb8ec473c625ae71342e42377e588a371ea475cdd" => :mojave
   end
