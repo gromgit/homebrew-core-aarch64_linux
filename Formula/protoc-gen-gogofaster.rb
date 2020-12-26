@@ -10,6 +10,7 @@ class ProtocGenGogofaster < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "f7d48a601b42a51ce9982cad4772a66a410602a64a15856cc2a704fc9275e647" => :big_sur
+    sha256 "01ca1d04d4ee1a33e038345a6ab7208edafa046485237ff2890bf1f203a68968" => :arm64_big_sur
     sha256 "454929acb01ffbc0f4f641388d3986a960d03dc92a566b89c42876bf42076fb3" => :catalina
     sha256 "f57cfc59528edcafc8daebae58f5b82084ca9710429a25926830adc6a5573f57" => :mojave
   end
