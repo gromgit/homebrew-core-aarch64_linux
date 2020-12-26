@@ -8,6 +8,7 @@ class Scw < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "b410dd52d238835670a831130875fcc2e4307851ebac10fd5a4443bcdc8b016e" => :big_sur
+    sha256 "8bcad55ba9ea6475c27cba9c11648cea64df9425677be5b0ffb86a222cb394eb" => :arm64_big_sur
     sha256 "57f7099f827810ef25f7956194c59d6504b98e209be37003fc4be2b647ec40f7" => :catalina
     sha256 "e0b5d4629a0efb6c8e40c9fd4260987c5c9caf35ebadbd6be827340588ea5087" => :mojave
   end
