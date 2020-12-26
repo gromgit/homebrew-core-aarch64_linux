@@ -8,6 +8,7 @@ class Nqp < Formula
 
   bottle do
     sha256 "7532b02608b579edb4adf02dca2569cfad4aeecbb5c10a0949b02b71252fbd25" => :big_sur
+    sha256 "865d04f5c0514f991155973a4edd75c8767b3afbb4f996d0823b90958796d3d7" => :arm64_big_sur
     sha256 "55d917153481171c3d955bec4a2724748a8957889111aaf523672a78a1632564" => :catalina
     sha256 "93957544005becea32a6ab558ada80781cd5600fb4fe7319e198be0d84664a6d" => :mojave
   end
