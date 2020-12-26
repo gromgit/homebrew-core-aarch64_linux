@@ -9,6 +9,7 @@ class Jql < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "ef2ef62525d88d33ca05ee66c76f742988bab7e515dd7b61a5838788eccab117" => :big_sur
+    sha256 "08a3d9f375bd022d51056b1cc1cdc232c8b2337918cd36190e086fb1b0e5527a" => :arm64_big_sur
     sha256 "df9bd45f44731ca4033ed42e27c65324afe68ec4d16539ae90075df3d77e03c7" => :catalina
     sha256 "6b7303e254e7dfde4619fba4df69688f003b45346d75830e64b6a3d8c875032e" => :mojave
   end
