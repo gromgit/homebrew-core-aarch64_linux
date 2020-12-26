@@ -9,6 +9,7 @@ class Weechat < Formula
 
   bottle do
     sha256 "658fddd4482922db0279597fe57423c5a603ab1ddeb2af3be206a92fe5a44cf7" => :big_sur
+    sha256 "351d3edc4d64723ebf501f58a2b4819c7df953e64f3eda7602bd0fef285606f8" => :arm64_big_sur
     sha256 "bc3e89725f90bcca4dd41e7b8e0f12c8ab2fb8f31194e0eb5cb55029bb036db0" => :catalina
     sha256 "662c25bdada863d62370aa5681a3cd55dcc566e1567147b02a006ded992c8dc7" => :mojave
   end
