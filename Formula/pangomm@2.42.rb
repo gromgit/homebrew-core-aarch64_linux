@@ -7,6 +7,7 @@ class PangommAT242 < Formula
 
   livecheck do
     url :stable
+    regex(/pangomm-(2\.42(?:\.\d+)*)\.t/i)
   end
 
   bottle do
