@@ -17,6 +17,7 @@ class Sshuttle < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "fa77f74869c9185da2b49344915bdb4d2b6983a1782c41d8a1a9fedf8b601dea" => :big_sur
+    sha256 "0a7693876ec8d147c9bbc302ecbf55aa3de2e36d0a88b3816eecfe7a8e7c7ae6" => :arm64_big_sur
     sha256 "4f5d464826fac3aa195ed93b99c35b21dc76400d691e9a36e449baed645f0be9" => :catalina
     sha256 "f1a764a8fb4a9240109b733358c10bb21cadda3fa008c929c8a95f2188aa6385" => :mojave
   end
