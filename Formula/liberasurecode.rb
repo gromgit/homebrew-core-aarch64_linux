@@ -12,6 +12,8 @@ class Liberasurecode < Formula
     sha256 "2f0bb8a2f295cff0ba42097db3f31103f2f10637faa66ba2028bc746934b58d0" => :high_sierra
   end
 
+  disable! date: "2020-12-08", because: "Depends on gf-complete which has been disabled"
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
