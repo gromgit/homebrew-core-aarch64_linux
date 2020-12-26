@@ -14,6 +14,7 @@ class ProtocGenGoGrpc < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "efae87531b44a132d58058ae94017d0230dc18e2ccba755fee48629240265016" => :big_sur
+    sha256 "5fa761d77fcbfc02cb828a883c590d48599816f41d4e52e53753984cd8e9bd83" => :arm64_big_sur
     sha256 "06248f002516f5265c1885a53e9a636a0c7e4f202a8383fbbc02c39ef683a25f" => :catalina
     sha256 "ce5dcf277a02a3130c5da382521d1a3ca3e6e26ff715a6f44cf18ce52e6e10df" => :mojave
   end
