@@ -11,11 +11,9 @@ class Ruby < Formula
   end
 
   bottle do
-    sha256 "39e7896f6b1c365dcff147f41ca2072d901b4edadb16e6d9e8cd7a6084be9e04" => :big_sur
-    sha256 "1914e3513c5b58f5362be4bb41af89c6e8dc661fe1d40bfad823d0bdb2529f62" => :arm64_big_sur
-    sha256 "c5c8fef5a6068f0657558662aaf83abd21d4d456f2bf5f5152d932dae09ab3fd" => :catalina
-    sha256 "0c46013234250f1bea09127fa33899a51bbae47109dc9eb3ac6f883ab394e43f" => :mojave
-    sha256 "ea7555713b598bb8c21a1af1554658c65ca8e9368f663a44540343122008afc3" => :high_sierra
+    sha256 "481d432636b34cf494849808415e6311c57b898404f9eef91a7c9e540077abdb" => :big_sur
+    sha256 "8ac76da7189d330564486386b5f420faddc6eca602e9d0bd62aaaf6305e40947" => :catalina
+    sha256 "1e6a2b72bdf846f56df42e6b8e5f19376190bb04852d67d46f4b9602ed9b8678" => :mojave
   end
 
   head do
