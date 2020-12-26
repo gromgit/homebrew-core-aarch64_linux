@@ -15,11 +15,10 @@ class RobotFramework < Formula
 
   bottle do
     cellar :any
-    sha256 "833d39b5c5bf790a1512bed8326a34730391f6dec9a14c3eb37532d533ae3891" => :big_sur
-    sha256 "96fcda2650c032131e650c421884284be81459df9f6d2f1554797c0f4574200b" => :arm64_big_sur
-    sha256 "bca11543784d4e3cb483b2fef303bd9e01b5bc3dd79178e1e46f68662cf02435" => :catalina
-    sha256 "20a4dfaae392a2224c24835bdbd50a2dc09fcda73f501c4efd5e9f183ca15fac" => :mojave
-    sha256 "35967f471fc0b592ff50236dd57c812d9324a14a485b8f2bc5dce9cf07e1f5c9" => :high_sierra
+    rebuild 1
+    sha256 "4a02e0260d573c1e3bb99c085afbf60a3cabccf25ddce9be4e9a6e72fe7c4247" => :big_sur
+    sha256 "cacd73bfdc145390d3e0577a57a84b7725b2070d787a0f1ff296daf947c1fbed" => :catalina
+    sha256 "1a69d927f964eed10d4aa7df1650bdaaeef6f42292704dc72e302f339b3aa649" => :mojave
   end
 
   depends_on "openssl@1.1"
