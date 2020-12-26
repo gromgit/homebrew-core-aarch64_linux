@@ -8,10 +8,10 @@ class Vitetris < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "4a773e9655aa93819f5c96d08925c12797a3540975e28b00de8c1d42d4e3a454" => :big_sur
-    sha256 "6b594a11ce43cd4dc66034d95a4abbe9904fd175bb0045973db8b5cc0a7deee3" => :arm64_big_sur
-    sha256 "1ced40dfe35a80d2820ea3875024b27d31b590a94ac1cc5ca5b6d6ef7e9fd679" => :catalina
-    sha256 "fadb41e0b7ad861cec4883c148c2cfc6ebe52e8a3b4eb099a3ffcb4cd07e5936" => :mojave
+    sha256 "a71a46511c0544c0d43f488710bfe420e3a45e629dd1f29692d02d88f4b0392a" => :big_sur
+    sha256 "802182254bcd3d143d7499b9ed0df276958aac04af0728dafa1f337a2789fb45" => :arm64_big_sur
+    sha256 "618e1eb2f8e9d70d3e7f6593ae58615f8d2217faa512af717d52b62cb4d5bc26" => :catalina
+    sha256 "316f0e559e519a2a44e6e3fff6298cd138f7df3e62372a07f6b03fd7d5bf650e" => :mojave
   end
 
   def install
