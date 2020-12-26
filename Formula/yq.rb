@@ -8,6 +8,7 @@ class Yq < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "92877d8baaef5809c61189100045020edc9aed99c66f6134776a8e64b1b495f5" => :big_sur
+    sha256 "239aa087e74c651d8948a22dee680c80d911abf53fa41051929791e18408128b" => :arm64_big_sur
     sha256 "85a259decd4aae3e1dbb0456c9c2da622148a53442688b89c5fc13ccadfa0958" => :catalina
     sha256 "23cab616c9701d88bcbbc9bcc91662c94e132e3dd80c29c8b5ad160658c47315" => :mojave
   end
