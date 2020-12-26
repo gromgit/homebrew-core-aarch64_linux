@@ -8,6 +8,7 @@ class Hqx < Formula
 
   bottle do
     cellar :any
+    sha256 "00a56bf946edffc932666fa52e0962a0a1bd2f10c23dad1b9751fe74d9ae04fc" => :big_sur
     sha256 "3deb836a530023786bf7d5f97212774bb73b81c9ceb86b8f58753e2cdd4ba27a" => :arm64_big_sur
     sha256 "14a68ef6155118b80a663827075e5a98a9f889f0edbe0fac77905ea69be9b334" => :catalina
     sha256 "557085364f580e05f98df85ba471d686563820c1cf4b890c8c577ea1a1ac6e27" => :mojave
