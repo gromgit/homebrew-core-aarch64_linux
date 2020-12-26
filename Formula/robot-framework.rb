@@ -17,6 +17,7 @@ class RobotFramework < Formula
     cellar :any
     rebuild 1
     sha256 "4a02e0260d573c1e3bb99c085afbf60a3cabccf25ddce9be4e9a6e72fe7c4247" => :big_sur
+    sha256 "2338b813e2aeaeb216d0c303b97ba2d1aa07d72fe617444e7f15e6920ca5a3c6" => :arm64_big_sur
     sha256 "cacd73bfdc145390d3e0577a57a84b7725b2070d787a0f1ff296daf947c1fbed" => :catalina
     sha256 "1a69d927f964eed10d4aa7df1650bdaaeef6f42292704dc72e302f339b3aa649" => :mojave
   end
