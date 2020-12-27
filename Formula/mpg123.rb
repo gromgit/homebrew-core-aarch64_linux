@@ -12,9 +12,11 @@ class Mpg123 < Formula
   end
 
   bottle do
-    sha256 "e3e025bc2ecaf9598e5608a19cc3c8cb44d867acecb0193d589800a92d5082bd" => :big_sur
-    sha256 "9fe91130d664eab75c1e034ea1f3cb44e90e6212fe978c7e9bb9945e83916b90" => :catalina
-    sha256 "fb7123c88bf249dc4841f41dce370dda96d50c7499ab27992442a88fed6b9c3c" => :mojave
+    rebuild 1
+    sha256 "2ebc5eab8199c9cc750504cde6f6fe739ba596f5129b59c79d51fb0d4d54b113" => :big_sur
+    sha256 "0bc1e129314c8f53f34ff804b6cb868ead8e223fe74e11fbef4ffcc969c2771e" => :arm64_big_sur
+    sha256 "0b9132c429c02b726597beeb217ce2f69ba63e1edf6bbff96652e080ba6f10a7" => :catalina
+    sha256 "5027b3751482e62a72c8a5514c728ae8ae1f4aaf34c46a9264a64fc11883c16b" => :mojave
   end
 
   def install
