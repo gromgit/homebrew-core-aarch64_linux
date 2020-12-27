@@ -4,7 +4,13 @@ class MysqlSandbox < Formula
   url "https://github.com/datacharmer/mysql-sandbox/archive/3.2.17.tar.gz"
   sha256 "3af4af111536e4e690042bc80834392f46a7e55c7143332d229ff2eb32321e89"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/datacharmer/mysql-sandbox.git"
+
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
 
   bottle do
     cellar :any_skip_relocation
@@ -15,15 +21,21 @@ class MysqlSandbox < Formula
     sha256 "77ab4eb3bbd5d374020081b3505cd7f18de1500019af148f00ebef13a34e4222" => :el_capitan
   end
 
-  def install
-    ENV["PERL_LIBDIR"] = libexec/"lib/perl5"
-    ENV.prepend_create_path "PERL5LIB", libexec/"lib/perl5/site_perl"
+  uses_from_macos "perl"
 
-    system "perl", "Makefile.PL", "PREFIX=#{libexec}"
+  def install
+    ENV["PERL_LIBDIR"] = lib/"perl5"
+    ENV.prepend_create_path "PERL5LIB", lib/"perl5"
+
+    system "perl", "Makefile.PL", "INSTALL_BASE=#{prefix}", "INSTALLSITEMAN3DIR=#{man3}"
     system "make", "test", "install"
 
-    bin.install Dir["#{libexec}/bin/*"]
-    bin.env_script_all_files(libexec/"bin", PERL5LIB: ENV["PERL5LIB"])
+    Pathname.glob("#{bin}/*") do |file|
+      next if file.extname == ".sh"
+
+      libexec.install(file)
+      file.write_env_script(libexec.join(file.basename), PERL5LIB: ENV["PERL5LIB"])
+    end
   end
 
   test do
