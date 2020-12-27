@@ -13,6 +13,7 @@ class Libcddb < Formula
     cellar :any
     rebuild 1
     sha256 "14faa4ce2a853bbe09dbaf20e78b820728690b4e27b7cb1a7bd956a7b6a9ee85" => :big_sur
+    sha256 "181971031cd4579cbc939fea21c38da072b9b637b2005f9ac65af51693eeab67" => :arm64_big_sur
     sha256 "7f1c41ce153e0550edac0073eeaf3a82d430fdd6b8e1c6d766459f81905b5b1e" => :catalina
     sha256 "4a54605d856a52362d5b3a76a20872c72df138dca4b19595ffbdd6bc44e210be" => :mojave
     sha256 "fcb848ca3b114f197ca52850d56a63b298fad61b9ee968496ddc450d969c3078" => :high_sierra
