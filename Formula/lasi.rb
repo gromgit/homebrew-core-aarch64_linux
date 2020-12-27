@@ -13,10 +13,9 @@ class Lasi < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "65a46c00e8cef9b98bf1b36229a3da7cf69038b5e1d8cccbb620cb1431d27319" => :catalina
-    sha256 "5ef18cc43b46bf548f42925b3b2beb4993461ba78d5078f1cacaf8ac7b7af169" => :mojave
-    sha256 "447ee1c538c34cb9f06c5dc743ad86807ddb4e05ea6e345b6db085705324da6d" => :high_sierra
+    sha256 "e00c7b114025b62a0666b5fe26603b48b4a2592f4e11c1cba044bf9b2ffc913f" => :big_sur
+    sha256 "2c29f3bef5230641352714e4dee8bca0278f45bd22928c1908b696821d5b8261" => :catalina
+    sha256 "fa986f8628b3e9914b46ab430d1f8105d1e83e70857c5e41e69c1fa022c16064" => :mojave
   end
 
   depends_on "cmake" => :build
