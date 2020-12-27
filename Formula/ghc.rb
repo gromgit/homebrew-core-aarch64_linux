@@ -15,19 +15,6 @@ class Ghc < Formula
     sha256 "eb32eeadb989c83317d8509764f8c3584df9c7f5c168d930e074f24630c94969" => :mojave
   end
 
-  head do
-    url "https://gitlab.haskell.org/ghc/ghc.git", branch: "ghc-8.10"
-
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
-
-    resource "cabal" do
-      url "https://hackage.haskell.org/package/cabal-install-3.2.0.0/cabal-install-3.2.0.0.tar.gz"
-      sha256 "a0555e895aaf17ca08453fde8b19af96725da8398e027aa43a49c1658a600cb0"
-    end
-  end
-
   depends_on "python@3.9" => :build
   depends_on "sphinx-doc" => :build
 
