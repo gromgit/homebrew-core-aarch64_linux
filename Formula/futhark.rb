@@ -8,9 +8,10 @@ class Futhark < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "239f061d4df506b850592ada004cb054d3e3a14d3ea8b29417b8226b3e0bd5c1" => :big_sur
-    sha256 "2962b067a2dc35d1eb807e75f625e706be5159c5e16db3f89a6ba2b924500909" => :catalina
-    sha256 "8eeac644f1983cecc78ef0ec5afe2b4bbddd929520121a94de46dd420865a8d6" => :mojave
+    rebuild 1
+    sha256 "8a6c71ff19ad47d8568ff2cefbc6eb8707ed2409422dd51340a745302c865fcb" => :big_sur
+    sha256 "bef296e915d5459daa640db1dd16662b8e1fbbb84aa6417cf19c9c2235a03851" => :catalina
+    sha256 "f3feffbe5f11434a705cf132c25e98cef89db5914a6b64a165b0ef5f5da4803e" => :mojave
   end
 
   depends_on "cabal-install" => :build
