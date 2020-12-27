@@ -13,6 +13,7 @@ class Coturn < Formula
 
   bottle do
     sha256 "5d799451b19a9b46d9d9c69349072fb8884dcef31e487eb846472fac06a83d54" => :big_sur
+    sha256 "47f02cdfba1ea04f69290cf80e78c9fcf55b2396dfab237ee313327dcdd5ce0e" => :arm64_big_sur
     sha256 "87db10f79c5dce8730f955ba470e9a01513c164e9b3d5be3c027feb7208cf0d4" => :catalina
     sha256 "8cd1cb0949e458f8f8fc539d37516750660d5473fdac35eadec6468b96a52288" => :mojave
   end
