@@ -10,6 +10,7 @@ class Braid < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "5ed59741b764ea43be0d8ff2848f3b006b3c95ac7f1761b85cca6c2d45d365b0" => :big_sur
+    sha256 "9d48b1fa445962c1b76aeefaa9f58e1b870e0e1f1b2b51f5e3c501b1ee044cb3" => :arm64_big_sur
     sha256 "bce00e37a5002ce2f02609002ea4da1db5a55f4cbfb2d13be051ac6c2747e082" => :catalina
     sha256 "ddf8f5467d0660a4d279e4410dba27f68923ca56826b251bef6762db3497e5f4" => :mojave
   end
