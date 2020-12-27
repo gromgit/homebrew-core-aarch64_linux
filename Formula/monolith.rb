@@ -7,11 +7,10 @@ class Monolith < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2f9188c982346fa01eae772a38a94d85c5f2caa5c8c9ead9c180d2062b80a31a" => :big_sur
-    sha256 "990adc89aa28d7ac21f5655a43e67a00ffed8b2ee674a656fa72f4cb6b2c3cd4" => :arm64_big_sur
-    sha256 "d3dc3a9d7415b6599f7b2d8405b54f5af8aaff550d0536cef47817cd4cc134fb" => :catalina
-    sha256 "5244b390e2a4465b4d9e882353fbf0b7ecb01a03011f4268a8fa4b066bcda42b" => :mojave
-    sha256 "1f6f354e4b427036593fa4c7a93f8b1d551455f8a423f0e9f73550a230978b35" => :high_sierra
+    sha256 "0fe966e60aba778a8fb0db2a0d62b95fce87b8ba3484aa8a8f3ef376c0ff5f22" => :big_sur
+    sha256 "478279d751123e01c26ca6426c5b81b1a905f6160cc8743fb61caa5718c1d991" => :arm64_big_sur
+    sha256 "f0f53627bafa8b487dd31ae9a7fb33c69f5ec87b2129e9f26a7f8beacd3f8a97" => :catalina
+    sha256 "7c8df579c475560e352f38e538967067e03d30a11658b2c18a158de25cfc1458" => :mojave
   end
 
   depends_on "pkg-config" => :build
