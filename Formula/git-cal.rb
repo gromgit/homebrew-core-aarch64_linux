@@ -4,7 +4,13 @@ class GitCal < Formula
   url "https://github.com/k4rthik/git-cal/archive/v0.9.1.tar.gz"
   sha256 "783fa73197b349a51d90670480a750b063c97e5779a5231fe046315af0a946cd"
   license "MIT"
+  revision 1
   head "https://github.com/k4rthik/git-cal.git"
+
+  livecheck do
+    url :head
+    strategy :github_latest
+  end
 
   bottle do
     cellar :any_skip_relocation
@@ -19,7 +25,7 @@ class GitCal < Formula
   end
 
   def install
-    system "perl", "Makefile.PL", "PREFIX=#{prefix}"
+    system "perl", "Makefile.PL", "INSTALL_BASE=#{prefix}", "INSTALLSITEMAN1DIR=#{man1}"
     system "make"
     system "make", "install"
   end
