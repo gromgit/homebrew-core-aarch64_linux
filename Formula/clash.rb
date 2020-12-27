@@ -7,10 +7,10 @@ class Clash < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d3c6497c1d3b6f6c4c7c8c611a964d2d9acf54fc7e0f11e1f4b7ba0cfc1bb75f" => :big_sur
-    sha256 "6ce4ec8d6dde665215579c54584fd38fa8c17cb8876c24608afdbd8b3748cabf" => :arm64_big_sur
-    sha256 "05c3cc38443156b857ba98ec54b8b7ba413d464ec76aad2283487560fa687599" => :catalina
-    sha256 "bbc2a5cc2abc096ed91ca251a2fcac994fc8ecd1c327472eaa5bfdf67f074c77" => :mojave
+    sha256 "40f8034354d00d49bce0e0ef1ccbac80d6c2fda24585c089866e5731764765bd" => :big_sur
+    sha256 "f07acbfbd535be24b60b4955b7240f1a8043eda02106c8653ef39751c3cc663b" => :arm64_big_sur
+    sha256 "c7bccc2222aa2ab4c139b23d515555eeefc161c5466881ca30ebf080d960cf41" => :catalina
+    sha256 "487294f97464d95b55aabd6162186b7df590de1af471f7a8036836b7ba630687" => :mojave
   end
 
   depends_on "go" => :build
