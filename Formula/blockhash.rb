@@ -11,6 +11,7 @@ class Blockhash < Formula
     cellar :any
     rebuild 1
     sha256 "18aff0ad3432de881f61cf760c2582d04edcd464815c0295fb16ce1b3d33e25d" => :big_sur
+    sha256 "cff3b941522479a8ba44c7cb75f972308ee5f8575189e20304d6b249a6d01465" => :arm64_big_sur
     sha256 "fccd88402eef1d464bc0acced536611fb01370b401eea3c81646ea76f6c71ebc" => :catalina
     sha256 "80fbbe34b7fdba30703797df3ca288cba9471586ddb1ef024d11ea8f03d913db" => :mojave
   end
