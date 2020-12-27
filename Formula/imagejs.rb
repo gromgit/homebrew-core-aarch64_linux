@@ -14,6 +14,7 @@ class Imagejs < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "7b9812855ddca5e1553eed1e613a840642d01fbd35e5c5558610a7a96f7142a6" => :big_sur
+    sha256 "e11ffbb759ce743689d3abfffdf8bd24b96ffb7c6677d17f213f204b4e9756aa" => :arm64_big_sur
     sha256 "2e758f8cb396b7dde6e80ff4115798122739418868b36d05a19231ff103c3028" => :catalina
     sha256 "4129ad096d0f6c28d40dd7e99749eaaa519b08db6bf708bea9b97c56cb45f6db" => :mojave
     sha256 "5abd3ddcc69f1d44205b5f66b01850c5469cc982643711f3a37f13f7bd0d649b" => :high_sierra
