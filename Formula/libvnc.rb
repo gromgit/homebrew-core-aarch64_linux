@@ -15,6 +15,7 @@ class Libvnc < Formula
   bottle do
     cellar :any
     sha256 "ea5e78dfaf457a33519debdc579dfd868f6503ef93b526d0f57fcab73997f298" => :big_sur
+    sha256 "20c74a915bd00103a38d68a25a24aa700b36f4b0f1882ce399f1ad45b9b4a3c5" => :arm64_big_sur
     sha256 "908c0d7fa104abe781cc67b0a9ebff7e2208cf3cbfb4b7acd770d3d92bb14c9d" => :catalina
     sha256 "4744d5940eb9095e9d7ec8a731c8f611a252e5548237d3d338a2334766b38825" => :mojave
   end
