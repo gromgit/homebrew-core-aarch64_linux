@@ -6,6 +6,13 @@ class CargoAudit < Formula
   license "Apache-2.0"
   head "https://github.com/RustSec/cargo-audit.git"
 
+  bottle do
+    cellar :any
+    sha256 "cc3a589e9754896c184a212e8bfcf2017332299b5769fe0256bbbe791f481258" => :big_sur
+    sha256 "ed44448e1d7317cb0cc01cb728065d60b821efa8f2921f4b375793971c6c3aab" => :catalina
+    sha256 "f9f90aa44066dd6591294f78309bed08e88fd88aa3f5d5fcc63b1d0fbc77de2d" => :mojave
+  end
+
   depends_on "rust" => :build
   depends_on "openssl@1.1"
 
