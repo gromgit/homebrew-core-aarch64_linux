@@ -13,9 +13,9 @@ class Rethinkdb < Formula
 
   bottle do
     cellar :any
-    sha256 "1c2ef66f6bf7d2efdf55b377032955905186c74a0dacf1306665671931e1159c" => :catalina
-    sha256 "5db706fb3f48f378771f5076d167e3d3dc5441b328e3b194e7337fe7bd7dde97" => :mojave
-    sha256 "7d37fba07988bc8adc4ef0dece038adf443b02d868fdf22d018360fb8958383b" => :high_sierra
+    sha256 "bb4dc60cb80b346f5c095af46c195c6d54cc927531f690889c2d5256f55a63b4" => :big_sur
+    sha256 "31fa08475118f77ecd8785bac8b59c1f5732171a5c0c8ec44087fbbb559cb95b" => :catalina
+    sha256 "3aff9d5aff3f0bc1318f8b53e04d2b688560fcf4911f64d6c963d38f78a88316" => :mojave
   end
 
   depends_on "boost" => :build
