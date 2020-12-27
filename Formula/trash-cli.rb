@@ -14,11 +14,10 @@ class TrashCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "5709ac7582a562b73ee9990da76d1e47eda1c9462de1b27c1002058a8bf4a95e" => :big_sur
-    sha256 "3338c06b98502ac0541819df14c9750f60396a58c7c0f96fa2c94af1d13f6497" => :arm64_big_sur
-    sha256 "181a25c6c47163b33789da438ddf5ed2f8b20be195a3ac1c2e4043b0a2ebcd90" => :catalina
-    sha256 "c7cba34dc885096b61e2f3edb8ec473c625ae71342e42377e588a371ea475cdd" => :mojave
+    sha256 "24574061108b1eb0906b573baec0aee240229a5011b7a02e3b139e664f228a99" => :big_sur
+    sha256 "d1e5b0d1d167a67cdeb66d1f7490cd83693c8a8986d89ddc5028791fc3827945" => :arm64_big_sur
+    sha256 "64cfdbfbdce3a999c438d36b67ce6b3473ce9547f8320258e3da86ab7c12e683" => :catalina
+    sha256 "5a638963dc04946eba48aa9dbcceee188dd055459ca62883228cf4a40385bb83" => :mojave
   end
 
   depends_on "python@3.9"
