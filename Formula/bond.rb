@@ -7,10 +7,9 @@ class Bond < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "cb4ef09d092f549b6d1560a45495a0409ee833cc704f19f19a6c686b98d5dc7d" => :big_sur
-    sha256 "6673df7678225c039e6109c31b900c08dd17c1dc37f13354e037380165826f17" => :catalina
-    sha256 "20e6e5f4f5885095067f0f477260561ff8f8e6e17408f06473d7bf54bc70d4a2" => :mojave
+    sha256 "b777ee788ae5d9ee234cc7dea3f671d4d8e50edafdd2b48ecd990c6643ffcacb" => :big_sur
+    sha256 "c4677d09cbf02e66671d9760ca64fcfbab1127b778c70719d9db58daca9b7c7e" => :catalina
+    sha256 "432c38ccaa1931fb8320cbbc8692d3982ce225732f70cdb5c7f3b8596c487f31" => :mojave
   end
 
   depends_on "cmake" => :build
