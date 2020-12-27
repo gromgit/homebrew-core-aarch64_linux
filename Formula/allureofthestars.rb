@@ -12,10 +12,9 @@ class Allureofthestars < Formula
   end
 
   bottle do
-    rebuild 4
-    sha256 "18ca050f2c24ae293796e2947ca310f26fd4a4b272053b58508c9adca796c67a" => :big_sur
-    sha256 "25b7640e340a56a77e10f3453d06ac54939e3dbfea68ae758c61d8f31ec43f39" => :catalina
-    sha256 "2f2581e82436f19586c7c545d251596c0e5af643192770574c444ef61fff8017" => :mojave
+    sha256 "d82455c81cf0a631109ea16ae197fbce21ba141a7d4af065e38f67bf9d03438c" => :big_sur
+    sha256 "542feabc974e7b3506e46312dbe3aaaae6f03474708c969520c661edaf0da088" => :catalina
+    sha256 "adfd9f24390bac8ea4d661bbdde89c2d96187f6ad6e1045c4ed495e1ec6db275" => :mojave
   end
 
   depends_on "cabal-install" => :build
