@@ -15,6 +15,7 @@ class Regipy < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "11a11f25b4299ed4eecaf7220ae3c5c8f3f8cb8c67dcd46622c6b8b3fa323314" => :big_sur
+    sha256 "0bf99bcb150b785b4fff14ec4dc6425a936afd2a1798cd6a9359a988f85ff776" => :arm64_big_sur
     sha256 "62b09d78f42faba628ec6f50185fcc62acc90fbe8fdd1766be354a5d1ad86d6f" => :catalina
     sha256 "b300cc5407e2ba579f649ccf418f2273c7bfb27cca6b637c91b02b6041740efd" => :mojave
   end
