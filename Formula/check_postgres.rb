@@ -4,6 +4,7 @@ class CheckPostgres < Formula
   url "https://bucardo.org/downloads/check_postgres-2.25.0.tar.gz"
   sha256 "11b52f86c44d6cc26e9a4129e67c2589071dbe1b8ac1f8895761517491c6e44b"
   license "BSD-2-Clause"
+  revision 1
   head "https://github.com/bucardo/check_postgres.git"
 
   livecheck do
@@ -21,7 +22,7 @@ class CheckPostgres < Formula
   depends_on "postgresql"
 
   def install
-    system "perl", "Makefile.PL", "PREFIX=#{prefix}"
+    system "perl", "Makefile.PL", "INSTALL_BASE=#{prefix}", "INSTALLSITEMAN1DIR=#{man1}"
     system "make", "install"
     mv bin/"check_postgres.pl", bin/"check_postgres"
     inreplace [bin/"check_postgres", man1/"check_postgres.1p"], "check_postgres.pl", "check_postgres"
