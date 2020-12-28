@@ -10,6 +10,13 @@ class RubyAT27 < Formula
     regex(/href=.*?ruby[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 "bd5316036e68d01516a5432c8ecf8920a5b4f9ddccdaf26f7d36ae3897cf1a23" => :big_sur
+    sha256 "b97a27586d820e6f6c0eeeab57598a2f1f544707aff830269e52314736744656" => :arm64_big_sur
+    sha256 "034b77a8e5fe20a2cc16d1a31df2a92dccd6a6cb22ad25b45474665587f131fb" => :catalina
+    sha256 "7c81d846365cc64bf6fa5cb674e290912d8eed8b533fa8a90c4967ab31b43f65" => :mojave
+  end
+
   keg_only :versioned_formula
 
   depends_on "pkg-config" => :build
