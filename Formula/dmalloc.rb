@@ -1,8 +1,8 @@
 class Dmalloc < Formula
   desc "Debug versions of system memory management routines"
   homepage "https://dmalloc.com/"
-  url "https://dmalloc.com/releases/dmalloc-5.6.3.tgz"
-  sha256 "9200fb869be041df297710355d6debaeb780a7a685e3d83583fb9e7efe18985a"
+  url "https://dmalloc.com/releases/dmalloc-5.6.5.tgz"
+  sha256 "480e3414ab6cedca837721c756b7d64b01a84d2d0e837378d98444e2f63a7c01"
   license "ISC"
 
   bottle do
