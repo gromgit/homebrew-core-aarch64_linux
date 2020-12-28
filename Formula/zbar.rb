@@ -14,6 +14,7 @@ class Zbar < Formula
 
   bottle do
     sha256 "0107f9d5bba2e9585acf35c4df3885e3310828c7665526521a9f84fd79ad38a3" => :big_sur
+    sha256 "b533efe9ea7470c01bb2f7dc02b52349df82030748f92cfd96bdd1d422af9c70" => :arm64_big_sur
     sha256 "24145f43665e55e719161c6cae3fe23be591912bff2343f07f8eec88ee0b9760" => :catalina
     sha256 "8aa8edbbdd7ba716f74986a67f0b33eb369fe0f06a4ae20aee3b7383498fcd72" => :mojave
     sha256 "401610f57821c4f6ce548695a4736750cced275cc6fc51978adb89f17903d1fd" => :high_sierra
