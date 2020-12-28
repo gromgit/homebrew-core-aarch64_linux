@@ -7,10 +7,10 @@ class Yq < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "92877d8baaef5809c61189100045020edc9aed99c66f6134776a8e64b1b495f5" => :big_sur
-    sha256 "239aa087e74c651d8948a22dee680c80d911abf53fa41051929791e18408128b" => :arm64_big_sur
-    sha256 "85a259decd4aae3e1dbb0456c9c2da622148a53442688b89c5fc13ccadfa0958" => :catalina
-    sha256 "23cab616c9701d88bcbbc9bcc91662c94e132e3dd80c29c8b5ad160658c47315" => :mojave
+    sha256 "cbc1cbc2d97986e68c712a8209ae3bea8453bc26835e9785b4b8731d05986d0c" => :big_sur
+    sha256 "748c60bb49b215125720b8f5fdf234ed1acda3b1325a54fb3eff37edd39939e5" => :arm64_big_sur
+    sha256 "f7a59c64d025533a1aa2da66d8bd5170378fdc25f82d3778b707d115e1e6f829" => :catalina
+    sha256 "a7e3858366f036092d10edc52f0a9b371d4afc1ff9db671b7200bb8e84101fe6" => :mojave
   end
 
   depends_on "go" => :build
