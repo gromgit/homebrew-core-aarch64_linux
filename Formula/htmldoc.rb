@@ -7,10 +7,11 @@ class Htmldoc < Formula
   head "https://github.com/michaelrsweet/htmldoc.git"
 
   bottle do
-    sha256 "55c790b02ac59c49c70b8bec5d99ab5b364d44a40a348cbcb967f2c0c4eea3d8" => :big_sur
-    sha256 "0f9e6dc5e68e5684dcd531ef1a134982f29b1d1c27ac35947543d36675fe8d6a" => :arm64_big_sur
-    sha256 "d5845962e26e0e164f4dab3425bdd7391b3e01f3d0d19fba643f8bc8f24f17c4" => :catalina
-    sha256 "6aef5c1eaf4e4b77b6383a17078048aab90a8efb3936fae7ba1f11591b7161af" => :mojave
+    rebuild 1
+    sha256 "a2ad4b8f476286d77cbf3c4c05f39bf0ef7d472b308fa8b11814cee4c090c224" => :big_sur
+    sha256 "7c02353667f8f762f0607c05d8387b0f77e848fac1d8f903533ed40a25667436" => :arm64_big_sur
+    sha256 "f2dd1888010a9d29664f1ecac8ac3892b2aa95edeaf7b27f7dd48900ce45e824" => :catalina
+    sha256 "b80236d31f3d87fbeba9908617f9868b8c0f998de5f72184684e60f7fe1ccef6" => :mojave
   end
 
   depends_on "jpeg"
