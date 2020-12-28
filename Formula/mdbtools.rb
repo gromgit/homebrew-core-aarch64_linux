@@ -7,10 +7,11 @@ class Mdbtools < Formula
 
   bottle do
     cellar :any
-    sha256 "951f06fb69f1a28942e6eca0a2d850f9d916f011489fdf5f020bc3cf651b7c83" => :big_sur
-    sha256 "438ff8e5d6621ec779e8a0f61ad4ee28eb90475145ecaecc55decfb79d140286" => :arm64_big_sur
-    sha256 "bf7540031032765b8e7fdc8e178a026f0e8510f08351e1f79fe1a17108807f1a" => :catalina
-    sha256 "20d12c72a3b59fe33f0989ebda42a2baf211e323e347d90e6f4cf33a64c2213d" => :mojave
+    rebuild 1
+    sha256 "6ba5e23cde1a24611de95ee581cea65cdde8cf53e619fecdba3f6a46e97b5094" => :big_sur
+    sha256 "bc0ae6979a0fafede8b3c350cb9552581d8f9a8f885d7c3d015d8e1c77c0ca5d" => :arm64_big_sur
+    sha256 "027976880d1dec75e95cca86a36b4699a5f10d6cd4ef1c5949a683dee628cd03" => :catalina
+    sha256 "f88d6e3bfaad817421851b4284b93fc8cd695e6ccc43a299be08f615a000b67a" => :mojave
   end
 
   depends_on "autoconf" => :build
