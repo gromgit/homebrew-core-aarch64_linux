@@ -8,11 +8,11 @@ class Pacparser < Formula
 
   bottle do
     cellar :any
-    rebuild 2
-    sha256 "f13a42eac871188878a53dcd32336dac1da03d9cac519d45710be85392948cdc" => :big_sur
-    sha256 "2bb182a846f3bf527df4e1b8a80935126b91c3e0baecd83fcf5ac44caad16610" => :arm64_big_sur
-    sha256 "b93489e78cd052204d255f63c2e8d1b719dfbea1052cfd547332fb585f7bf8f9" => :catalina
-    sha256 "8a61793f2d7ffcfdea7a7b98a5a6a19151d4fe559ce0c659c9cd0483a71b012a" => :mojave
+    rebuild 3
+    sha256 "55ce66921189d2ba41d3cf58f7548237442c5387372b8cc4bab891cf1ed7766f" => :big_sur
+    sha256 "1999482c32deaa8c6b9a38800b6dbc4f6d18076177f6a8a0dad49c21c4327781" => :arm64_big_sur
+    sha256 "ca13d2507c9c6616bc6c3604c19a7f6f1652bb3b3c1fed3168c4d832a10b0174" => :catalina
+    sha256 "3544e7aed8d310d3407997f46b8b51cbbc2b1d962f90535175baff72301e375e" => :mojave
   end
 
   # Fix build for MacOS 11.1
