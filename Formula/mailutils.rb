@@ -11,10 +11,11 @@ class Mailutils < Formula
   end
 
   bottle do
-    sha256 "18e4b39e0d08513d683225d6bbf2b599415954e5d152d05755b3c7594e7867f1" => :big_sur
-    sha256 "61960d03d4a4aa6bc67f18a54e45211786777d01290918e110aee0cfedcfb637" => :arm64_big_sur
-    sha256 "843a30ab78bc59fa5a99a99ac7f45f09a2f145e4361e4cc877d1277fc44b41ed" => :catalina
-    sha256 "ce6bcfccb0b14b3c571b41eddaef778f25285a02e4534b6d610e058025d82677" => :mojave
+    rebuild 1
+    sha256 "e0694e4e8cfb3bfdd5d3e228142a314cc321bf82308d23148126b8ca488d1b41" => :big_sur
+    sha256 "c855fc17cf334a9db2d7f3d1ed44d4484c3943ff273154b41f0013d477cf8be4" => :arm64_big_sur
+    sha256 "ec93701d653bb3d54d47d795b762a5a4491901b28fa12c5de7c2127d32e2bcf6" => :catalina
+    sha256 "a3bd339cc91ad0d8bdb8d68cc3aea0b89b183b5615d25eeb73f6757ed874ddf6" => :mojave
   end
 
   depends_on "gnutls"
