@@ -13,10 +13,10 @@ class Libxslt < Formula
 
   bottle do
     cellar :any
-    sha256 "fc4a9d38d4d9f1eddeae21590da5e2b83efa09746aac3b88782f649ce11e7ab8" => :big_sur
-    sha256 "8ec4882a50963dc9e2fd75d6ef9ad8758f8471d8d4fe6acd2f1ca70e5b855f84" => :arm64_big_sur
-    sha256 "00b65e03cb4e10b0a5fc325afe63c7fb227bd5bb74e91d8832c70c040f200aa4" => :catalina
-    sha256 "61161548ecff81c00db284f921f7435ac1ae2395d1feead4d207caf5c62edcba" => :mojave
+    sha256 "61c11bb170d9ba4bd079a2c81887b9d82cb34a3de110117d61d75f7f050b90d3" => :big_sur
+    sha256 "7f0dcf602ce806db8ce41b1e8d4ef352823f7343f258cd0519e6ad1885f3c593" => :arm64_big_sur
+    sha256 "7f1626b1ae090f561ed8d7c2a3c7e9067ad29d68b547d91ff5a2e83d346183bc" => :catalina
+    sha256 "6c73651ec7791877fe42675f9de291709300a2c3aa0da3e859d139e4121a5a18" => :mojave
   end
 
   head do
