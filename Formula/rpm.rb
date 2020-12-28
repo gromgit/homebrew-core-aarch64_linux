@@ -1,10 +1,10 @@
 class Rpm < Formula
   desc "Standard unix software packaging tool"
   homepage "https://rpm.org/"
-  url "http://ftp.rpm.org/releases/rpm-4.15.x/rpm-4.15.1.tar.bz2"
-  mirror "https://ftp.osuosl.org/pub/rpm/releases/rpm-4.15.x/rpm-4.15.1.tar.bz2"
-  sha256 "ddef45f9601cd12042edfc9b6e37efcca32814e1e0f4bb8682d08144a3e2d230"
-  revision 2
+  url "http://ftp.rpm.org/releases/rpm-4.16.x/rpm-4.16.1.2.tar.bz2"
+  mirror "https://ftp.osuosl.org/pub/rpm/releases/rpm-4.16.x/rpm-4.16.1.2.tar.bz2"
+  sha256 "8357329ceefc92c41687988b22198b26f74a12a9a68ac00728f934a5c4b4cacc"
+  license "GPL-2.0-only"
   version_scheme 1
 
   livecheck do
