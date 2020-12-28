@@ -8,10 +8,11 @@ class Raylib < Formula
 
   bottle do
     cellar :any
-    sha256 "e7429c2349ffd43bee8f7e412e0e0cdbb5d1c57601347abd968fad8e91165f39" => :big_sur
-    sha256 "d43421e12bdfbe0aac882e1ef8a4e9f17a2c2dd6b1d89aa63603e0ba7efc9a0a" => :arm64_big_sur
-    sha256 "36271bac2ece0ae5efcfa2b55738242c6786f61a23dbd0567a155e18422a49e6" => :catalina
-    sha256 "a6d93094325dc1d8dd5520e92caeab935606456f9b5b3c46995e78c5839cc557" => :mojave
+    rebuild 1
+    sha256 "079378b95371d4212b9603a41d3d44a838ad7fd07943cc902064251c644d2ef5" => :big_sur
+    sha256 "2411fb0870c9cec11f2f27f4d6f217fd7cff9351b65569970dcc3e27bee00964" => :arm64_big_sur
+    sha256 "78ef0455f7b3602829bf81c13dfeb81ca7867cde572bae477e6c2b9355289035" => :catalina
+    sha256 "ef45020d299bcb5c03f12f05b1a51791e155dce76073a54572ae5da04142fa7e" => :mojave
   end
 
   depends_on "cmake" => :build
