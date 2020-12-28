@@ -10,6 +10,7 @@ class Minizinc < Formula
     cellar :any
     rebuild 1
     sha256 "1c54e2022738c39dd339bec62ba9d933b5b44fc07587c51361492cdfd5a961db" => :big_sur
+    sha256 "d3e7df985149ff4c1b12782a94b0ccfb5d862dd3e186e6c934d6e9d70dc21c3e" => :arm64_big_sur
     sha256 "2ee5718af0ff50473754355384284e29162d2dff60c7b433d312c9cef0e21ff0" => :catalina
     sha256 "9d2af2903a893c0dadeddecbdbbdd2fb55fac3b1f37364881b4648fd90c037b2" => :mojave
   end
