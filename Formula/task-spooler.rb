@@ -12,12 +12,10 @@ class TaskSpooler < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "fd413989afe1cd32a45c02ed58b79dcab5c0242289a1b7ebf028228b4359aa39" => :arm64_big_sur
-    sha256 "2a31687b430989e2a004ef2a3c69e20648707f6d60907031dcebd43b51924a38" => :catalina
-    sha256 "319c29e750b0ba183b14accb571c4d210723458d5fcd72302b5ec866e5a76ad4" => :mojave
-    sha256 "8045397e275ade52621a1ab3a21e3eddf277fafd1beea60db2d10bc15d11b8f2" => :high_sierra
-    sha256 "e0f7e33946d3f8c93782692b3bab5833cb2e882f1fb47a4473b69e39ce3e7378" => :sierra
-    sha256 "9403d0c240bad09d576288d6b5ed94057dad03ceb30a4893a935c13f9e58af7f" => :el_capitan
+    sha256 "0ee61ba4a007adce01bfe9d70b025770ba444b016a40271241db9a86f82ef505" => :big_sur
+    sha256 "acccbd91c0a28354e0e5cfa448b84e65b56cdc3183037608d88426ce42361b42" => :arm64_big_sur
+    sha256 "095b74d3cbad466cf63f40b1fb26face89ea2e9046d377fb8fc5e05eb9293012" => :catalina
+    sha256 "ced31018d86983a844fd5a4d0ba2f0b390ba78b4c9840c0f1a2f8cddfd4242b1" => :mojave
   end
 
   conflicts_with "moreutils", because: "both install a `ts` executable"
