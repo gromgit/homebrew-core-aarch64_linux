@@ -9,10 +9,11 @@ class Passenger < Formula
 
   bottle do
     cellar :any
-    sha256 "79d0f1d4534c658e69cabc4ca54b0d78d4bfc435359db34c87af09a8fd7dd0a8" => :big_sur
-    sha256 "0472caf47da0636c7eab4b62cf04fe44b5dd243d7ecb528ef51369b4ba4ad967" => :arm64_big_sur
-    sha256 "8300752ba1fbcdf941534a449cc8e65f933fea53f0b7dbffe1cfe153507578dc" => :catalina
-    sha256 "e4923010fa83312318ce88b93819047c2cdf4bfa65936bd0af4b81fc83fd8817" => :mojave
+    rebuild 1
+    sha256 "c66b7091ad1f40ef8724dd9b87588db4dd1e382ee265a1ae5cd1c69a575718c4" => :big_sur
+    sha256 "9950cb473f753c481ea3ca84aff1f9b6e91b176851c6e895e114fb3f4ce9fc97" => :arm64_big_sur
+    sha256 "30a713e4b7003595bf4eea17fc5cdb97d927137614c54fa009cea8a48ae17f11" => :catalina
+    sha256 "33e2a9072fa908bf48572dd1202ba8eb0a86fd490d6e9b3d4f1b1cc4767c772d" => :mojave
   end
 
   # to build nginx module
