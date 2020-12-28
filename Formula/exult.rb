@@ -12,9 +12,10 @@ class Exult < Formula
   end
 
   bottle do
-    sha256 "6b3f2e032a2a04e9e3bb2101d91af3fec63195f5e66c9174b976204465a99125" => :catalina
-    sha256 "7a3891dc200ec4d01222b3ab7fbc2d4db4d94a8b91f9144fd7e6ab3a79fd8cc7" => :mojave
-    sha256 "de9329e08a29b01601a40218bd82746a122294e5322529ca1e678e0aa63ccebb" => :high_sierra
+    rebuild 1
+    sha256 "af93f694844a8f0abdf22f7f8048ffac29992b6d027841fde98d98509876a00b" => :big_sur
+    sha256 "1b5343fcca2332c05f7b75412dccdc0bb84fb7dd2cceb47fdb3ed7a8cdb319ae" => :catalina
+    sha256 "45efe9a12cb0a446543a03c45f412c96355ef4d7dd4bef4b016b8e9bc98e3df7" => :mojave
   end
 
   depends_on "autoconf" => :build
