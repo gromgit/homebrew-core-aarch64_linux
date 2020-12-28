@@ -12,10 +12,10 @@ class Appledoc < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 "e182316143290aa24b778b57c4f2fa15b66039af0d94840de0d99836f92e7926" => :big_sur
-    sha256 "2fbc0125b9cbe625b5ec657f4e0e2a83ff368418c526f9770a202bccc87d1524" => :catalina
-    sha256 "b2728220ad4932d681eb7151f0629ebd32b9ed6dd149648575707f7cdd2e4b71" => :mojave
+    rebuild 3
+    sha256 "a44c317d4c80798c24e3c9b72b622dd037e3c73f47c21e8fce200958322e14f6" => :big_sur
+    sha256 "d4808573e4dd15de060e90374e77e43b1df1926cad45bec5331381d7dff1d1f3" => :catalina
+    sha256 "a2530c73cfaa02a2a40be2b823d8c2115ce5fe8d0a59c765829aad55bf3e7c33" => :mojave
   end
 
   depends_on xcode: :build
