@@ -8,10 +8,10 @@ class Bullet < Formula
   head "https://github.com/bulletphysics/bullet3.git"
 
   bottle do
-    sha256 "400f206997a5e1992075bf02574372e7b11393b45472092854fa226f059e367a" => :big_sur
-    sha256 "2d84bf5c5c4066ace5c0a020afd59dea6fbebb5a2bed1b96ec7d660d35a4315b" => :arm64_big_sur
-    sha256 "a2ce4674ecc39e802606a82b28897a28c9e03651e4633a38f43d5c09f7b90a6c" => :catalina
-    sha256 "80769ee5343d4df206d4e01e29a68c3e3d8e4b72ab1e644e1cdf8509da14a7cf" => :mojave
+    sha256 "c24a6a53450090dbccc161dd17f2555b8988934771019809c4c5e33aca9864b5" => :big_sur
+    sha256 "565e712684c82a288a59d47bc9bbde23ff076fb6b48f85433b1997516b014b72" => :arm64_big_sur
+    sha256 "c6fdc1cb6d9d45e68ed4c2ed841edacfc0d7d1b44ffc05c77869329260f2c266" => :catalina
+    sha256 "8c66500f251d89ee7ae7e9c282984fe81f43c21dd9566024e47132ec78a1322a" => :mojave
   end
 
   depends_on "cmake" => :build
