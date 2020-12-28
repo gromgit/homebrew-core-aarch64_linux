@@ -3,7 +3,7 @@ class Ykneomgr < Formula
   homepage "https://developers.yubico.com/libykneomgr/"
   url "https://developers.yubico.com/libykneomgr/Releases/libykneomgr-0.1.8.tar.gz"
   sha256 "2749ef299a1772818e63c0ff5276f18f1694f9de2137176a087902403e5df889"
-  license "LGPL-3.0"
+  license "LGPL-3.0-or-later"
   revision 2
 
   bottle do
@@ -23,6 +23,8 @@ class Ykneomgr < Formula
     depends_on "libtool" => :build
   end
 
+  deprecate! date: "2020-12-28", because: :deprecated_upstream  # ... in favor of ykman
+
   depends_on "help2man" => :build
   depends_on "pkg-config" => :build
   depends_on "libzip"
@@ -37,6 +39,6 @@ class Ykneomgr < Formula
   end
 
   test do
-    assert_match "0.1.8", shell_output("#{bin}/ykneomgr --version")
+    assert_match version.to_s, shell_output("#{bin}/ykneomgr --version")
   end
 end
