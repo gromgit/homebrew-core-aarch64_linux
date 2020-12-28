@@ -4,11 +4,6 @@ class Exomizer < Formula
   url "https://bitbucket.org/magli143/exomizer/wiki/downloads/exomizer-3.0.2.zip"
   sha256 "cf94a2d9e66c104489846bb703c497aab8146ac4a54964def01692d418b16075"
 
-  livecheck do
-    url "https://bitbucket.org/magli143/exomizer/wiki/browse/downloads/"
-    regex(/href=.*?exomizer[._-]v?(\d+(?:\.\d+)+)\.zip/i)
-  end
-
   bottle do
     cellar :any_skip_relocation
     sha256 "3c8e7724f8ff5820c2233f91797f34333a9eefcb9c1520db2dcffb4a05cea833" => :big_sur
