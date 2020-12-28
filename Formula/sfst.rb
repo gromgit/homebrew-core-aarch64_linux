@@ -2,8 +2,14 @@ class Sfst < Formula
   desc "Toolbox for morphological analysers and other FST-based tools"
   homepage "https://www.cis.uni-muenchen.de/~schmid/tools/SFST/"
   url "https://www.cis.uni-muenchen.de/~schmid/tools/SFST/data/SFST-1.4.7e.tar.gz"
-  sha256 "9e1bda84db1575ffb3bea56f3d49898661ad663280c5b813467cd17a7d6b76ac"
-  license "GPL-2.0"
+  sha256 "4c5de5ace89cb564acd74224074bbb32a72c8cf744dc8ef565971da3f22299e4"
+  license "GPL-2.0-only"
+  revision 1
+
+  livecheck do
+    url :homepage
+    regex(%r{href=.*?data/SFST[._-]v?(\d+(?:\.\d+)+[a-z]*)\.[tz]}i)
+  end
 
   bottle do
     cellar :any_skip_relocation
