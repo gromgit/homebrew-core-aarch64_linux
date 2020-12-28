@@ -13,10 +13,11 @@ class Asio < Formula
 
   bottle do
     cellar :any
-    sha256 "733b954f4a2bc7121cce761a00d0c2b9996e4126d26bd226103da779d55c1f8a" => :big_sur
-    sha256 "07ceadebcad55cac9b86ac42a301bfe4f3c335e45244210efc92fd77b2934ef9" => :arm64_big_sur
-    sha256 "5822c0287d74cb0452f8b4bc62543fcb76e0b13cd6cdc90e4b048f116d7e5219" => :catalina
-    sha256 "0c49ab2ea69cec8127b14d48995169f0c053c4727057368c568607fc08bc1198" => :mojave
+    rebuild 1
+    sha256 "9cf6b9d1a1cc605977a853af92d5fd65a21f20a6128126ad19d8cceabc766a4b" => :big_sur
+    sha256 "f335dcfcae4e9345a6510d06cafe8884a8368a43368d52e53f95e1ca6bb8699c" => :arm64_big_sur
+    sha256 "a3eec5329a66d0e7017f407d653adc6234f09f20de691cb4290a5f1ca16c6c94" => :catalina
+    sha256 "1cbf161c11f1f4863d39d190d61a6c8efc0cdb2932c3763df7ff1111c480aaae" => :mojave
   end
 
   depends_on "autoconf" => :build
