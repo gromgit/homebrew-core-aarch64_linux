@@ -1,9 +1,14 @@
 class TaskSpooler < Formula
   desc "Batch system to run tasks one after another"
   homepage "https://vicerveza.homeunix.net/~viric/soft/ts/"
-  url "https://vicerveza.homeunix.net/~viric/soft/ts/ts-1.0.tar.gz"
-  sha256 "4f53e34fff0bb24caaa44cdf7598fd02f3e5fa7cacaea43fa0d081d03ffbb395"
-  license "GPL-2.0"
+  url "https://vicerveza.homeunix.net/~viric/soft/ts/ts-1.0.1.tar.gz"
+  sha256 "f41ef307b0b9c7424398813b9c6e39d37a970831071e301842ba4b1145d56278"
+  license "GPL-2.0-only"
+
+  livecheck do
+    url :homepage
+    regex(/href=.*?ts[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
 
   bottle do
     cellar :any_skip_relocation
