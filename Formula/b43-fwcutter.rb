@@ -13,10 +13,10 @@ class B43Fwcutter < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "ba4d98184260e69c16c721c905e281f8638a34f8785ce43216093afb55305f22" => :catalina
-    sha256 "0f3c2998b168c9f614f5b28e1e219acada8cdd86018706fe30c46a9b0850d73e" => :mojave
-    sha256 "59c187f34c0f3e3eb99e7da175fcec4bc69cd4baea62e053898c985bef63ecf5" => :high_sierra
+    rebuild 2
+    sha256 "d71a9a74998af98e4593b5593ff415aa4e6f868a9fe7b7fa4814fd27a4b6652d" => :big_sur
+    sha256 "65b60abba52b848bd47386245505719c4c2218429719cf008a6720a4fbcac36a" => :catalina
+    sha256 "244e2363a7eff64ea8708724a386796d8fbf6d49677519a4132a2296faa0c411" => :mojave
   end
 
   def install
