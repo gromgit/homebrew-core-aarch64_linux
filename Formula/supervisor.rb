@@ -15,11 +15,10 @@ class Supervisor < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "0b6a17d29734b45552184775c3339bfb2e5af08a04716fe4252b6f3fd4e4421b" => :big_sur
-    sha256 "92035446c6ce7fa0aa5785fe101952c98d6ab678bf0061118aa842de34b10915" => :arm64_big_sur
-    sha256 "87d351372d24000edfe96cbc8090a085b4ff332aa4278bea7640071c95e22650" => :catalina
-    sha256 "2ec044dc73b2b99145b029fd7b95dcfc77f522a85abdad9d752f654e77091c00" => :mojave
+    sha256 "248bad901b7e19631fb4d228a8e921d0f52002bce4aa9349c60b9643ab668376" => :big_sur
+    sha256 "687ab3e1017d97838e1ae06bd4899d02b675e0be80baf61a37cd8e89f1f86061" => :arm64_big_sur
+    sha256 "67ef6d809ef2058a6276ef58e1f0d7f7f4608ab52ab79c3dcce52b6427629b77" => :catalina
+    sha256 "f65972b734ff88f1acc25967b1639ae847d6895f6af79a2330db99a3ccf5a1ed" => :mojave
   end
 
   depends_on "python@3.9"
