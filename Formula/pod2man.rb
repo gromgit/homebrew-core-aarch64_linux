@@ -3,6 +3,7 @@ class Pod2man < Formula
   homepage "https://www.eyrie.org/~eagle/software/podlators/"
   url "https://archives.eyrie.org/software/perl/podlators-4.14.tar.xz"
   sha256 "e504c3d9772b538d7ea31ce2c5e7a562d64a5b7f7c26277b1d7a0de1f6acfdf4"
+  revision 1
 
   livecheck do
     url "https://archives.eyrie.org/software/perl/"
@@ -19,9 +20,8 @@ class Pod2man < Formula
   keg_only :provided_by_macos
 
   def install
-    system "perl", "Makefile.PL", "PREFIX=#{prefix}",
-                   "INSTALLSCRIPT=#{bin}",
-                   "INSTALLMAN1DIR=#{man1}", "INSTALLMAN3DIR=#{man3}"
+    system "perl", "Makefile.PL", "INSTALL_BASE=#{prefix}",
+                   "INSTALLSITEMAN1DIR=#{man1}", "INSTALLSITEMAN3DIR=#{man3}"
     system "make"
     system "make", "install"
   end
