@@ -12,11 +12,11 @@ class Orbit < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 "df877ac8003a21bc6e626b6769bee6c062a97bc9a0ad4c8696f1edbce84e2952" => :big_sur
-    sha256 "e045b7442c08b71b665de30269248130508dc54615b2a231ef430e81a5e80bcf" => :arm64_big_sur
-    sha256 "a5d0bd3e20410a7ca44b081e0282d1b379a35dca178c5742aaf4f565142994e1" => :catalina
-    sha256 "650966efa8e12742e8db315777831955842731bc2aa8f2d149f2969ff87b356a" => :mojave
+    rebuild 3
+    sha256 "d39f55257c7d7eff2ecb9bb03c596a23d53abf2c081b87bf06f1b93415dda0b4" => :big_sur
+    sha256 "42435b23e00c8227cd80af182e39c4f24ea2bd6e50b01c0df0cd171a92ba4c02" => :arm64_big_sur
+    sha256 "3108db04a65e53b067b29f700b1360e90badde53e891555f341fabe7c5dd5fe4" => :catalina
+    sha256 "638d7bc192d39014137dfe3508e935b0b129b78e1f6971c1342e8ed1a52b2900" => :mojave
   end
 
   # GNOME 2.19 deprecated Orbit2 in 2007; now even their webpage for it is gone as of 2020
