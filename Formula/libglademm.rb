@@ -13,6 +13,7 @@ class Libglademm < Formula
   bottle do
     cellar :any
     sha256 "213a8e4e74a1c31d52580e1f0438e80bd3a089c9a2fe28f7a5174fb0ecb6e4b9" => :big_sur
+    sha256 "53b2b0bb8b46564bce44e054fabbe53968ecc32bca6bb21c1610ec30082c31b8" => :arm64_big_sur
     sha256 "4e32714d9b8b1e87ba17774e43356ebdd29c6ae2593f2eed6ec07460927e6c62" => :catalina
     sha256 "7cd380f335e9461dd9a9726f442b1056ea89cda5cb3ef37b2260462cfdcc4936" => :mojave
   end
