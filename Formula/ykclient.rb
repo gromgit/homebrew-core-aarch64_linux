@@ -1,9 +1,20 @@
 class Ykclient < Formula
   desc "Library to validate YubiKey OTPs against YubiCloud"
   homepage "https://developers.yubico.com/yubico-c-client/"
-  url "https://developers.yubico.com/yubico-c-client/Releases/ykclient-2.15.tar.gz"
-  sha256 "f461cdefe7955d58bbd09d0eb7a15b36cb3576b88adbd68008f40ea978ea5016"
   license "BSD-2-Clause"
+  revision 1
+
+  stable do
+    url "https://developers.yubico.com/yubico-c-client/Releases/ykclient-2.15.tar.gz"
+    sha256 "f461cdefe7955d58bbd09d0eb7a15b36cb3576b88adbd68008f40ea978ea5016"
+
+    # Use HTTPS and disable old v1 API tests; without this patch "make check" fails
+    # to work against api.yubico.com
+    patch do
+      url "https://github.com/Yubico/yubico-c-client/commit/0d45452e7fbe47e77e78ff23b480c77fd9c06f2b.patch?full_index=1"
+      sha256 "1e4e85d9d009488cd81a87f54be0f67a5a4cee03d34e1f0afadbc92f5194e93a"
+    end
+  end
 
   bottle do
     rebuild 2
