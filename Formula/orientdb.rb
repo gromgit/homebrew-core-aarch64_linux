@@ -7,9 +7,10 @@ class Orientdb < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e7762e5aa16c1654257434dbd8052ca2f6ca29591b5e27f405130e9e67625dd1" => :big_sur
-    sha256 "cf5fc18d4bd6f834a34819ec1728f49a5207e9cbf6b5bd8fc236927317133a95" => :catalina
-    sha256 "6bb85823316fcb0f81621917f8ed6ae14e7a907c895cfaf2f6d2853ed5941b7d" => :mojave
+    rebuild 1
+    sha256 "6fbb1f7c7070a50a286c4ece536355a3de4fe0af6a9e11426ec87f67f7d5f1cc" => :big_sur
+    sha256 "1b77867297b69df6d3abc285220f75a4e3764e442f39afaf81cfb828d44ae955" => :catalina
+    sha256 "33b46532d444683742814d31d28f4f7f29eae0a5810b818357525314899e4d72" => :mojave
   end
 
   depends_on "maven" => :build
