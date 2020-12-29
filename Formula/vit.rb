@@ -15,11 +15,11 @@ class Vit < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "74f88c7e830cabe5c94a7b375186967a0ec911a9cffa51819ddd24034ef51862" => :big_sur
-    sha256 "beb362f7a6835aacc58308494f648723e2bfcaba198dba14a27b6ff18596297a" => :arm64_big_sur
-    sha256 "443aacf6cdd09d3667d51fdf272315234d074731e11d965a8518a86a9e536e84" => :catalina
-    sha256 "97eabbf5cebec0dda1322f73294302159d53c2f9c4ccfce5056edde44081b682" => :mojave
+    rebuild 2
+    sha256 "facc1cfc1cad4655cc045ed25f2f134a2526eb4505a25f4ced073facbed9ebbb" => :big_sur
+    sha256 "a36d7446ff702acf2b57db04ccbe3f10d32086207d96ad34dc6e013f2a7fdfcf" => :arm64_big_sur
+    sha256 "be5b88c99d467dcacba5ec84bd12dce9d5196bd5479469d3aaa32744cf531787" => :catalina
+    sha256 "e1187a8c5a4b75d55bcda3758f1a70375f7cb8fd995239383de172dc408cf23e" => :mojave
   end
 
   depends_on "python@3.9"
