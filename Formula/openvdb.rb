@@ -7,10 +7,11 @@ class Openvdb < Formula
   head "https://github.com/AcademySoftwareFoundation/openvdb.git"
 
   bottle do
-    sha256 "20ab4ee266bd4d81cddc9173deace850a6f029f56a70bf1e6e9b7de597ab6272" => :big_sur
-    sha256 "e9a79382494370f3a26852a967558b98bfb2b676925912f9b10dae107ab7f09e" => :arm64_big_sur
-    sha256 "ae9c312f0e4c0559ba2a22734ce6472fb93b57badca7072e29ef05abe940064f" => :catalina
-    sha256 "6fb5ca672cb6690dd655722105c4ad9aec9553437171f4b7ed4a0313de8e87d7" => :mojave
+    rebuild 1
+    sha256 "aca9749f30518e713372752d61852505516171b6d3c99aa1b44dcc8ada9574c3" => :big_sur
+    sha256 "97007153e3a295731c12e7c2bae5e60a8c4e98ec76651c5337023d7a524ad288" => :arm64_big_sur
+    sha256 "f84f5645fe791485c6e41a59dfc602dc55fe84d233ac7c458646d41b8652ea52" => :catalina
+    sha256 "fb01a2bbe0e6e2876815a8fdd70aee0b1868983cfeccb5482c291cd76a2596ab" => :mojave
   end
 
   depends_on "cmake" => :build
