@@ -13,11 +13,10 @@ class Git < Formula
   end
 
   bottle do
-    sha256 "99ffa981e42bfb6ed77fc1a9f4d1dc07681b2ba532ffc122d02b75eb002047e1" => :big_sur
-    sha256 "f085ee82a758db44ad9ae7342ef633792e7d4cfbe7c102abf791678fd2093090" => :arm64_big_sur
-    sha256 "47cffc0d84e2a273cc6088802633e1d4d1fc8afe67633ed8487b497cd78c54f8" => :catalina
-    sha256 "97cd781a7060f6c1dc456d36e6d17d68ec78470affe3fc0b1d8ff46402be6fcf" => :mojave
-    sha256 "b0ad755307e1f83e0c844aeef94774e499ebb85f1e36934966ac9bb31618da61" => :high_sierra
+    sha256 "bd4dd57a4740df3c596377954d45fcf2b08db83f7d8853f5361db1d158a6bdb8" => :big_sur
+    sha256 "7e0f30621e1a5be89bf604eacdca8de9a79bd16c273a1d6f4dd39c6f806d4b98" => :arm64_big_sur
+    sha256 "091c6e512e9dd5c3373f75a9b495dbe42f9852d93dab4c72d3fb2c8e01738953" => :catalina
+    sha256 "bd96accac4e05c8799b062772ab943a10e9ff25784f2828c5c25b2debd3d2f13" => :mojave
   end
 
   depends_on "gettext"
