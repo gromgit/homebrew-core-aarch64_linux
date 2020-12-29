@@ -13,10 +13,11 @@ class Lemon < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e2871b39951595b238769253f3134631b41bacd23513ce7baf3211025a1e797c" => :big_sur
-    sha256 "49dbd4a06ec071275f603af0be31eabc3e20c631a38db8ea9fd3d278f8f199f7" => :arm64_big_sur
-    sha256 "81fb0b45456f294af50bd1df1088360883ad6607a50c4e1e722b21b644f4c47a" => :catalina
-    sha256 "fedd632bf40be50395eee85868c886e68495226e1922ca805dc5f5be2c923400" => :mojave
+    rebuild 1
+    sha256 "f73ec9e5adc37f7ecf2dc5b0a05c2122cb51045a8fb7bca99a874c2b52beb9bd" => :big_sur
+    sha256 "7d5d6b17c61c61039a78fc2ad90abde356053c75fc1ce24924845b03b9ab4f84" => :arm64_big_sur
+    sha256 "cd970ac9a17164fd58a20ee54557dea07258e519b3a01654c00aca5db923d595" => :catalina
+    sha256 "3723a266a33393454e89bc95eb86f643f4f6a6507a09fbc73bcd47fafb4adedd" => :mojave
   end
 
   def install
