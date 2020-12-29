@@ -12,10 +12,11 @@ class Immudb < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "1af460fb4aaa435eab45d7eea56985d6dc5b11969f379b7f852bb1b8ff801bac" => :big_sur
-    sha256 "91001f64138beeda2108874dc01a7f8253efc1c64653ede4001a809f89bb375b" => :arm64_big_sur
-    sha256 "fa7212e07386dd14029400cee8dfe2e5ebe1483f9e55ba03ecc9fc97788feab2" => :catalina
-    sha256 "975bd32bec4bbdfdfa78b6ebe809a5ccae0deb4ab2d80e8280a28feb3bd22df7" => :mojave
+    rebuild 1
+    sha256 "fd2d3440238a957e684c4799e1024e7f22efa82bb90ac772ae2eb3587bfbbe46" => :big_sur
+    sha256 "e91a080299ec7b6414f3d8f12cffc4349bd5239b0716edf3d21623bfe86a68c1" => :arm64_big_sur
+    sha256 "b033a1e612a61dea608528086e71a43071648be7d58a60d74b64d05f91859cbf" => :catalina
+    sha256 "69f2b95ccaa655900d8af3ea00f2c59a0459dc0d59244d186c2018ea51e08801" => :mojave
   end
 
   depends_on "go" => :build
