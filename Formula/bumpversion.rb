@@ -11,11 +11,11 @@ class Bumpversion < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "0565fcf56009d940c51badc4a28a0613490db4334a571c204532c9a2aa4c881a" => :big_sur
-    sha256 "55a004675d686be21cc9dbf7f820063165d13c50388046f4b7e8ccfe664f6215" => :arm64_big_sur
-    sha256 "d7bf73d933580643487b48d170a0e0357e8da2cddc47b4c238d020a7141c0ff5" => :catalina
-    sha256 "7324e4d10330ec6f90a2c09f073f209b54264c6aac2ac81d173eb256f9bc8758" => :mojave
+    rebuild 2
+    sha256 "9fefa3665413e3241a1c796d8363abf903c9c157177dba7277f5dc8d9532a327" => :big_sur
+    sha256 "1d69dd65cfe24eae5ab087a4d8907f1e7ac8437911d31c34b5881700fc5ce69e" => :arm64_big_sur
+    sha256 "a56efe7440a9495e9b4f2d6ef82a2f56e088db459aa680c3ab5368b1b47c17db" => :catalina
+    sha256 "18141d47aa00efccaa7e0de803a190abe09549d485e82db5f7af57a40b79aa3f" => :mojave
   end
 
   depends_on "python@3.9"
