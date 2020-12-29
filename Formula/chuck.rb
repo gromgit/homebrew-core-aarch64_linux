@@ -14,11 +14,11 @@ class Chuck < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "92dca7513ce71a4d1a99a912fd03cd3341c2bc90a4e69deda124d2900bf6c80c" => :big_sur
-    sha256 "2e380f6d583ab0d44206b8b420bbc13cb753bf720f9998cd028efe57ec91a482" => :arm64_big_sur
-    sha256 "0cf4564e0cbf9ee5b0bfeafe2dd694aeae5207b551474ad17d926cf71f05863a" => :catalina
-    sha256 "674cbb7904d4ec9f09d1949b3bd8b3034835fcd183c0bd768291c1f7fbc12b69" => :mojave
+    rebuild 2
+    sha256 "0d7d491edff5d042134f2930bc4d66ed6c2a00f727ef3b9db26970b8f68a9c41" => :big_sur
+    sha256 "f22a34388deb237f78a2197aede95396de6b15f629c92969b75f326f004ee815" => :arm64_big_sur
+    sha256 "dda91ec418bd79160d2e9167e5096f9a81075558fcf8943e509c355c5e827e98" => :catalina
+    sha256 "524a64579b8132a18d7a0ad9edd200a623ac954a72663b4ac229958e7a64541e" => :mojave
   end
 
   depends_on xcode: :build
