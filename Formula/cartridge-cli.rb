@@ -2,8 +2,8 @@ class CartridgeCli < Formula
   desc "Tarantool Cartridge command-line utility"
   homepage "https://tarantool.org/"
   url "https://github.com/tarantool/cartridge-cli.git",
-      tag:      "2.4.0",
-      revision: "2079d9ba7f2271061cbab2fb478c31be2782fffd"
+      tag:      "2.5.0",
+      revision: "98f361c2a44bc003ff2838fc9b20bd5fa2b4a876"
   license "BSD-2-Clause"
 
   bottle do
@@ -15,17 +15,11 @@ class CartridgeCli < Formula
   end
 
   depends_on "go" => :build
+  depends_on "mage" => :build
 
   def install
-    commit = Utils.safe_popen_read("git", "rev-parse", "--short", "HEAD").chomp
-
-    ldflags = %W[
-      -s -w
-      -X github.com/tarantool/cartridge-cli/cli/version.gitTag=#{version}
-      -X github.com/tarantool/cartridge-cli/cli/version.gitCommit=#{commit}
-    ]
-
-    system "go", "build", "-o", bin/"cartridge", "-ldflags", ldflags.join(" "), "cli/main.go"
+    system "mage", "build"
+    bin.install "cartridge"
     system bin/"cartridge", "gen", "completion"
 
     bash_completion.install "completion/bash/cartridge"
