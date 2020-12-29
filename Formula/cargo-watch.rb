@@ -8,10 +8,11 @@ class CargoWatch < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "07d9a040ecf1f8fa64404f3fe54d1fee1942e947c1840a35630eacae1589d844" => :big_sur
-    sha256 "b20a48e766fd3374fb290670f1aacfa3c5d4c02db6a512cc1fb05478e48be544" => :arm64_big_sur
-    sha256 "60215fc98f1860979b64335e42e77720c9eecdc0c915e134118d3e6b3cb40703" => :catalina
-    sha256 "581b7f6d973525e0565179a7aa2cf0127ae2af70882159d602046ac910e30eed" => :mojave
+    rebuild 1
+    sha256 "f6e28b4b5ddd527bd9c14ab5361714c1ab126151bf30dc3a253f7d657d2013df" => :big_sur
+    sha256 "c108df77dabba1f731c31936a0c68dd75d46fd789073845a844a6c2d8a2e51ad" => :arm64_big_sur
+    sha256 "48f1ccc2ad40ecb371b3ff5873be8cc3bac97eb7a99bdf2a5f3dab51585f76ef" => :catalina
+    sha256 "7cf3bec869b3b44f1b76d1b97016760519fcdf966f7209b998f1330ce1836b70" => :mojave
   end
 
   depends_on "rust" => :build
