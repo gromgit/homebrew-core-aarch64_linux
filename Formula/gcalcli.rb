@@ -14,11 +14,11 @@ class Gcalcli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "ea59966235cefdd993cac5eb6e9afe3f34ed5d6409dd9017e756c112269f3934" => :big_sur
-    sha256 "e47220e4f7ac29d1309f0ff63150b9c4d1a269c5e3e1016169a28a48f712db15" => :arm64_big_sur
-    sha256 "669ebad1c69fcdaf933079ce53301861344b1d955a22993314d93db67637c701" => :catalina
-    sha256 "ffebafee3ca507d3d3629651e04e4cf42b90f61d067d704d23030368234bf9ab" => :mojave
+    rebuild 2
+    sha256 "6278e00d39dbbc91b98766cf7cc793117c3b6ed758907c7a5453847f350a0eb1" => :big_sur
+    sha256 "38015fc1203a392c9386e8d57088f9f8101cf56d81f50140db4bd1bfac6c8b5e" => :arm64_big_sur
+    sha256 "25245965cf728bda9fe9b9a01dab4eb78320cfcf462fa213fcce12cdcc16d6e3" => :catalina
+    sha256 "183dbf701ff365b7f117d0736887e7d97b000041fad03a92aa004d2050fb4525" => :mojave
   end
 
   depends_on "python@3.9"
