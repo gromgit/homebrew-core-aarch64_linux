@@ -9,6 +9,7 @@ class DmtxUtils < Formula
   bottle do
     cellar :any
     sha256 "97e1235bf73de14de83c96baa9ea3ff32b72c27f49d776af3d672fd5bd779d3b" => :big_sur
+    sha256 "4f026d11495fe7b279007f6691f859352be3ca9c87d97353fc5f51729e6ea93d" => :arm64_big_sur
     sha256 "0985c4c4a239de3a85eb2201f15c8ae12dbb49ccc9036f93f728e13d0d46705b" => :catalina
     sha256 "7f2702b52b6e627607593542f0276a092b08de852200fa8fbc051ca76a00a3b5" => :mojave
     sha256 "0de24aad51177bb26b8e33c7e459919e158fad2357436314410ccefc60e18024" => :high_sierra
