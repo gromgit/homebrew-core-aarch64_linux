@@ -8,11 +8,11 @@ class Shntool < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "2d6288006837305251858e7ff434646727104197329ac62a3c534ad7cbc50f68" => :big_sur
-    sha256 "a1be5a6c5cf7da02c26f1a2a04e2109c7752d55b2dbd30054d233fbb50640983" => :arm64_big_sur
-    sha256 "b9978393fd387c12aa64ae33b653b790df8bb422f2d278c146071fa402de0e02" => :catalina
-    sha256 "e7dfe8483a2c233a3bf6ce9838367a0a292c08a764afb1e156ca6cad537e9e31" => :mojave
+    rebuild 2
+    sha256 "c265916725e367c0b187924177b6e5d9ed12d434f242e6bc7b59596a02f08c71" => :big_sur
+    sha256 "1dfa65178720559cebc5500eb9f32d4ca2606a4f1b6a94b9d175ceded8fae2f0" => :arm64_big_sur
+    sha256 "e140337ce89f886c0044ac6eaf75dda3711622f9da418932e8a02337213785ca" => :catalina
+    sha256 "8f318573fa965da7dc5fcff667f2f9ee3295e2034a6c877a9d182459f08308f8" => :mojave
   end
 
   def install
