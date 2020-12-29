@@ -7,11 +7,10 @@ class Rqlite < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "92ec353a600b27d631a5d275d41f0e632714af8ab9a4dfb57d2262621c72c977" => :big_sur
-    sha256 "8d396d2ce7f6049fed7b65b0b7506a144ab012a35cb8db488a6947cacb5630da" => :arm64_big_sur
-    sha256 "ba6d61e298f4535c5c079a4620fe05c20923b0ba7ee3eeb1dc43214281976148" => :catalina
-    sha256 "69c26d3235b8ccf79a1cc10ef2b9600f9385e532b9e77ab693399688740b5eb2" => :mojave
+    sha256 "dd60ce50ba7637aece795274f855b2d6d6aad0a234279ebd5fdf262dbe45d10f" => :big_sur
+    sha256 "b32254c8497d1d16f26c7c926fe45c7206d4a1773c4159a386511ae0547d547c" => :arm64_big_sur
+    sha256 "21abe21de2554edb8f0e304c94f382872309703a9985f47057f25646b04f47d5" => :catalina
+    sha256 "ceb6c033e3567d4a5d1b858718c93d4c02dca179ed81c7165dc8b02880ab8e1d" => :mojave
   end
 
   depends_on "go" => :build
