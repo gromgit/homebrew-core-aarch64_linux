@@ -15,9 +15,11 @@ class Rinetd < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "1c12b89085411d90b1ee003b06f64208235210e01ad1cd940706d7663bd2dbce" => :big_sur
-    sha256 "7f4dd364eba5c14a1de1901b9ec08d072165d308110912838127d1fd4e293732" => :catalina
-    sha256 "f2afbf352dcf6cd00b5636ca486f0d8542e4af3d047e144e0ba409c6f828ffcd" => :mojave
+    rebuild 1
+    sha256 "3b5b6e687790fd0d6167cf42ce89baeb895acb4a66b1bf8451cfe5e46bb45e0a" => :big_sur
+    sha256 "d5e98fb2a9a9d85a92e5efb8dfed1e64f38a97c2c0e0de7c86cca30e1ad6ba70" => :arm64_big_sur
+    sha256 "530373c4f2c88c0ddf3463733fba78776d22f7640d952db496104147d55d2275" => :catalina
+    sha256 "bdac7c623c5c49367b11a16dea5661f99fd5130fbea10973cc15842a1284d1b1" => :mojave
   end
 
   def install
