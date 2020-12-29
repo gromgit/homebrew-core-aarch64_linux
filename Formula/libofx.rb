@@ -11,11 +11,11 @@ class Libofx < Formula
   end
 
   bottle do
-    sha256 "b7cfdbbdf131872ff2c0cb26c4e14ee2c346fa8e16c8e0293be58f4c60d43e2e" => :big_sur
-    sha256 "8ea84e59b6cbe07695556d488c8bcb3b5505e0d24c966277b8c7ebc2bd0c59b1" => :arm64_big_sur
-    sha256 "aa4c73d9fe09d54bc4fb0a1dde14bd927949f4d0ce100dae987f03df79236958" => :catalina
-    sha256 "9b731e873dee237f2723fd05aa7f88b0e64f29197297c33e9def68112d7c2fc8" => :mojave
-    sha256 "7c561c3c928ad133d1763afe6a9d25b784d236411f00085151740f3505b164b3" => :high_sierra
+    rebuild 1
+    sha256 "1a79a86dec4941045cc078ac6f43b401972eb4a07b7ae72593e4972b3c2ba631" => :big_sur
+    sha256 "9d047abebed9d7c5554b6b853e256d4385152ecf67cc7109710140f988502a48" => :arm64_big_sur
+    sha256 "b10f735c4f3ac6359e776ba83622d89baa52ad422e2159e94d40e6d2c10a0fc5" => :catalina
+    sha256 "4b16fe23cf0cd2bc44db7e4816b04e3217742bec7ce0bba75fe8fa45754be28f" => :mojave
   end
 
   depends_on "open-sp"
