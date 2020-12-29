@@ -13,6 +13,7 @@ class KdeKarchive < Formula
 
   bottle do
     sha256 "f5cde4cf769c9ade2f09b8e51eed847ee4af926f898b49cb8c533d4b67de59af" => :big_sur
+    sha256 "f689fed2d889bec07888ed12409ae9b9805a35aedb1407b5246b672ce5344907" => :arm64_big_sur
     sha256 "e284dad7930966c54df3f93901f55842654ad498a380259b15239fd3e1aa4930" => :catalina
     sha256 "c8f734a6345b440574e9263d8007b7359987e4236258e4fe0e72aa6ec3f55ae6" => :mojave
   end
