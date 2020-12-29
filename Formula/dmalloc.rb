@@ -7,11 +7,10 @@ class Dmalloc < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "9bd6d3c762ca8b60f3b625fc23647b4a16d48d5863952779a7f98aa1ac9e5e2f" => :big_sur
-    sha256 "aee67c0ef1f77ddbaa9bcd68fc26877a09155d3a5f8e41a138e25edb3d6668d5" => :arm64_big_sur
-    sha256 "da1c12b4bc40289030cd237a90046eea7605b6d69e34a12d23b90a55fa115c6a" => :catalina
-    sha256 "35da99bbb7ee86823c2f3c75026f5b1674e2bc212a41cf8f9436fd0c4653bb89" => :mojave
+    sha256 "300f9e7b54c15071bc36fb861cc6b75ef671052c8be6096a99314b1ca0077565" => :big_sur
+    sha256 "c8e1beff8a66f4a5d7a90fa8c5f9836ed79b9241ab642966d82550916a3af5c1" => :arm64_big_sur
+    sha256 "770699ff908a65026ecdebbe57272a50e57f60341c2918302ee4b6729e866533" => :catalina
+    sha256 "40c8cf6501477c243064179e7b634da0d9d32348155d3aee9fbf6631ffdc7ba7" => :mojave
   end
 
   def install
