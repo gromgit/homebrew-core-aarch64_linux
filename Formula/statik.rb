@@ -15,10 +15,10 @@ class Statik < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "81f259b408e8b6f0aa58081f1960c4539be55cef2dfca1ba1d002443e01f1cc6" => :big_sur
-    sha256 "d9e13372b0e5ef1cd7b61da5ac6dbdaddf98faec271058af493997450b400850" => :catalina
-    sha256 "95732042042a451de5f590b665414c7fb92e80f2061f012600258a21b1e078db" => :mojave
+    rebuild 2
+    sha256 "dda0baaa97e649c54029d17a54700b3d65804874bb50317ba9d8e9554437b453" => :big_sur
+    sha256 "fd0ccec0435cfc0b72a254e6b3bf9df6ba2abb19794f8394394fe93ee24bd2e4" => :catalina
+    sha256 "099a851cbb721857a874b7e9d690e83e57d12b0f0f19e5e2ef0d102d8e2c6b94" => :mojave
   end
 
   depends_on "libpq"
