@@ -13,10 +13,11 @@ class Remind < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "fbeb40884bc1f988b217e094cecc2ff0b1700c2f8b050df71f5bf20468cdda35" => :big_sur
-    sha256 "00fc0c53fa14558604577512f01da13ca4bef2315a10f13a212239708dd109ce" => :arm64_big_sur
-    sha256 "430dee13826b27ec7fe83de7a7a48342c63f198c75d7db7081177065b6021d14" => :catalina
-    sha256 "be51d268452bde2df71b4f9a13f3d1c60fd6680b55be7500b8336d8d224d1910" => :mojave
+    rebuild 1
+    sha256 "f4c4d7cad039e7eab881a6ed2f2b5b66cb721a3de2af4375a7f1102739cbae02" => :big_sur
+    sha256 "389f6a3b60d0023d7dafcf01b3281591b94bb6b6bab7a4610ed63c37f9e86038" => :arm64_big_sur
+    sha256 "f8e8700c70324229b72d14ab1a391909036c912dc04a7b5a74d461f3f2d4393c" => :catalina
+    sha256 "e5ab4837656fed7e9f5649a6fb170a3d990aeeff1b05fa7b152eb128e3a939c0" => :mojave
   end
 
   conflicts_with "rem", because: "both install `rem` binaries"
