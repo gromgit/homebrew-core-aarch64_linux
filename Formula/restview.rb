@@ -14,11 +14,11 @@ class Restview < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "1357703d188eca6969188e8f65210916b2a7abc43479df35e23de1aa5f830726" => :big_sur
-    sha256 "40c4650f9227bef7a7e642445872b0c5c4fd7f1d1424eea95e2223c961d85fe4" => :arm64_big_sur
-    sha256 "863871057c097330e17eeb8f0d449177e458108cd5b19b3fe5e4cdee11124352" => :catalina
-    sha256 "4435543bf0faad23da84a50c350172a6a717b648de5cc195d4e56ab185aefd0c" => :mojave
+    rebuild 2
+    sha256 "9470d4f0e710da0bda1cb188f6a26ea8300fad4273c67d8362b95655a3131436" => :big_sur
+    sha256 "cb2eeee507bc57c0b8ea4daaa09beb5953ed23c6368279e0965d5db83da851d6" => :arm64_big_sur
+    sha256 "51774d5ba45376854bbccc90a94252cedc5c7e22efbe933305aa55c077a755ed" => :catalina
+    sha256 "9afe08d8d8f8f4cd5a64e2de7af17eff2de637442feccdedb36320afb8a0deb7" => :mojave
   end
 
   depends_on "python@3.9"
