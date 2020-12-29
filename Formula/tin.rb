@@ -11,10 +11,11 @@ class Tin < Formula
   end
 
   bottle do
-    sha256 "f6ecb72caaa1d89772b4d4a52046ccfc40ce1eff2de619e4bf6cf7cdf5221495" => :big_sur
-    sha256 "3c531db6fec66e40f5a9f93edf37a4115c40b83fb9a7a741ae59994e67a14d73" => :arm64_big_sur
-    sha256 "61d6592e64a27ef72707338b98fb80fecd92e6679510f1734a301e0618fb7818" => :catalina
-    sha256 "23f5488623cc0c8fa0765541a56a6fa714e07b1f7194144f05bb4e4a22931037" => :mojave
+    rebuild 1
+    sha256 "1c9c260926726183ef975425c557afbd9be80a2cab7eb2258d63945716153980" => :big_sur
+    sha256 "051423dd86f4bf45e3584e8aadd838e46bcc006c7322e7471b1158f4c156c84a" => :arm64_big_sur
+    sha256 "b3e2e78b8e6d0db0d04cb036454deb8bc718fb1c7cd489924ffcc548eacdeec4" => :catalina
+    sha256 "1170864e0be31fee55f0a49993e5d40908eafe0c8ed47eee2087236ad17ab988" => :mojave
   end
 
   depends_on "gettext"
