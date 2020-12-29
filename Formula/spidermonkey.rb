@@ -15,9 +15,10 @@ class Spidermonkey < Formula
 
   bottle do
     cellar :any
-    sha256 "f27ae227bcc2f755a89fb0e7075d7609fbebf0c442c5b558dde314ed477f2e8b" => :big_sur
-    sha256 "876cb32f87f7f61b5d0b7b5b62fb5881cb859112eb8235304d75755add2b8af3" => :catalina
-    sha256 "8cda55126be55fce01a82cf60e10522e211e7d8d384a0935c74a9d524256127f" => :mojave
+    rebuild 1
+    sha256 "2d684e4bc093674e45578d2cdf7905cdececf8661ec75fe3fd4b29ce7db5eeb4" => :big_sur
+    sha256 "aa2807a42c05e6611cf530b84ce8165e77344a7a9da4eaa0af01c4023b9a7479" => :catalina
+    sha256 "8c0b46bc04a7e95f99262969b22cc311ee1f7d83413af05865318743ccd96944" => :mojave
   end
 
   depends_on :macos # Due to Python 2
