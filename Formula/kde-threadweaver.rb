@@ -8,6 +8,7 @@ class KdeThreadweaver < Formula
 
   bottle do
     sha256 "82f6056c178a78be529ac55154c17a08f4c6f27540c8c314c06384fdbd104f34" => :big_sur
+    sha256 "8d05d6b6cf57272d490c40906ab41131a00574996b4947b650ca79d3a9de9bfb" => :arm64_big_sur
     sha256 "662638057a18a3e558ad94de5c653f31f0d54dad17a68a84a23dd2762839d86e" => :catalina
     sha256 "bbe2e94b988134190bda49c4c74d112ab31941da55fc00c52de7930f75caa46e" => :mojave
   end
