@@ -7,6 +7,7 @@ class Libqalculate < Formula
 
   bottle do
     sha256 "84f7dda0cf6c217da6a10e0264fcaf55d1f496f0360d05c807fc546cf4caa633" => :big_sur
+    sha256 "8f3f3d611fc17ac3adf2ffcb12e7e73981f75586ea42905ae2860dea1120e40b" => :arm64_big_sur
     sha256 "1dcf5abe5fa1cb7f773460119228aec96c72305bd26031ca03be9c6a471e89d3" => :catalina
     sha256 "acac62df2acfe4dbae36ca58edd8e7e99abb6efcc3b58d92f0d0df267d08b74a" => :mojave
   end
