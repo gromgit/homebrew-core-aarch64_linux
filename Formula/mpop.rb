@@ -6,10 +6,11 @@ class Mpop < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 "77c41a741e2a15b06cbcdb58f662ce5766b0e54f65bd096b0bceb5eab3ce3420" => :big_sur
-    sha256 "a429b9d5d27a830a6bdf264f9ac737deb97226a9844ee030acf1f5d867d80411" => :arm64_big_sur
-    sha256 "7cfa5ab2e69e875b11145a0ad3bfe4a372b522cb5ecb8d81738f67e619aa5eeb" => :catalina
-    sha256 "58689c559173e5e3a15cdffbd055f4a6466ebcba2278d1492a26e86cc19ce244" => :mojave
+    rebuild 1
+    sha256 "6e1d0e59df73534ec28952b1a00fc490335959c5da636306ba3f2224f1f5d995" => :big_sur
+    sha256 "3aaad5f552e6c7b1dc2826e17fde83b873f63d540607a83edf8f0d9466dd4be3" => :arm64_big_sur
+    sha256 "8fa53695d0f74cb8575a6eb1b3582ef2e06814c1540c8c3ad20be5f9667f617e" => :catalina
+    sha256 "8c30103713ed7538025b297aaf50fd072dfdfe3fe803ee0712f8d06dddb094f3" => :mojave
   end
 
   depends_on "pkg-config" => :build
