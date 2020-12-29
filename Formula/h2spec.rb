@@ -9,10 +9,11 @@ class H2spec < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "706f40a67a78af6c71271908ab2257e31062d6ec74e535d2a00545b07ba0ec8e" => :big_sur
-    sha256 "3f55603ca4395cfc83a031309f37f1296f659e63a014c9e86823cfecaa20012e" => :arm64_big_sur
-    sha256 "0b0d4199f2374659211a838b29543d6c7719d78ff31f097c3c089e957ac28b42" => :catalina
-    sha256 "ab4a757f0962b3a2db0db09c708ede632df6fa5229b000625ea9e39d31354063" => :mojave
+    rebuild 1
+    sha256 "ee24c3ab807d25dc92116e1b794d319365b7ad7a801f9ef9089f2992844673aa" => :big_sur
+    sha256 "90d9e00cce2bd7659510bb75cc6735b94d7488207a4aeb665fd9aedae3ed8ca1" => :arm64_big_sur
+    sha256 "c585fbaa7e8d101d280edafce5e26b4df57a1ac8ddbd7327f1efdc07d0ac17a0" => :catalina
+    sha256 "83ba531c3cfffe083ffc687cff9c7ad41eb30c6745994a6eca2bc9f245e7f00e" => :mojave
   end
 
   depends_on "go" => :build
