@@ -8,10 +8,11 @@ class Sqlc < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "159376fbb6da52240161c2ac689432121ea7110838758552b735dcc6e4fb8180" => :big_sur
-    sha256 "d6e1795618e027c9cf06506877f5ec6285d41c0f9e28b638335f8de522eec9a2" => :arm64_big_sur
-    sha256 "debad9ab4e258cf867de532c0f6715ed69bebe970e43c0dcf875d6f1c4f761d4" => :catalina
-    sha256 "be41455ec25177178d8d2c89d995c32cc82332c0ecb9bf5748d5619bdaff4c36" => :mojave
+    rebuild 1
+    sha256 "67ec941540b1c125e991d493eb418cddadda8a0c4cebd6b7f4ac9e32947b1fea" => :big_sur
+    sha256 "0e3aefdd8b650ac9e29021a2ab29188902a1d3296eaa63f7150c22da26474de1" => :arm64_big_sur
+    sha256 "5463145e573a3c4e79fb4b8a5ba22432962bf28e8f4594ca8914dfa18ba62b56" => :catalina
+    sha256 "8ecd01378e5828f38cc5a2082a2a3e5e586a68d7046e3ef0008687a2fd7fc095" => :mojave
   end
 
   depends_on "go" => :build
