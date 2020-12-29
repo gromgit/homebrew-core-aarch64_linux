@@ -8,6 +8,7 @@ class Sn0int < Formula
   bottle do
     cellar :any
     sha256 "c9b3cf070d01ecc5ad921e5654f5a7765e90a294e4e2bfd941a995308a4a5bad" => :big_sur
+    sha256 "cc24878380598597022557113c8355f9d97cffa69665022521cbde65886a26b5" => :arm64_big_sur
     sha256 "9689b81c3e4e2a04cf05d150422949b87a7f24d219817716e2b82b58eb2191c5" => :catalina
     sha256 "d2c817bf73cb79a88c208cb22bcb7e9cc24d4d37448d3cdc1bfec7b8efbab9cd" => :mojave
   end
