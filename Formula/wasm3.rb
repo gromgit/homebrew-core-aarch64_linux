@@ -7,11 +7,10 @@ class Wasm3 < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "39b3cff2a02da9e73b7821b362e42707f02308d9b9985c35f675d0a60e872993" => :big_sur
-    sha256 "4b729b5f029bde0dedf4ef309bacd2533313176be5c0974fe72441389bbf8c03" => :arm64_big_sur
-    sha256 "f2e961b5a0ab02691fe707568a0975fb1b77c75b1e949cff863117efc4eb23f8" => :catalina
-    sha256 "263421ab14ca11c25dce074033945db85a5f333fc2c7715a1245b3826beef72e" => :mojave
-    sha256 "4b36e31ed5c9c109cefad55fc126091f60e416c6c1a846a636ac8d789f8bc7dd" => :high_sierra
+    sha256 "296862636f23bda386da3d469e6bd22e79959203d8960e457777e7ea88952978" => :big_sur
+    sha256 "a89be08c7ff241a0a624161b333d9d08c3ebd4539fb4499d2fa96bb5a5c5e31d" => :arm64_big_sur
+    sha256 "94625f80433b1af43daba906cc715d78891e202f92d323fae9164efbc2fa76ed" => :catalina
+    sha256 "e7aac098bda9f38e0f10778b82bcd0b08e88f7834d9a0e511dc6d4f7536ae74d" => :mojave
   end
 
   depends_on "cmake" => :build
