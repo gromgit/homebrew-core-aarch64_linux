@@ -12,6 +12,7 @@ class KdeKi18n < Formula
 
   bottle do
     sha256 "727a0636bd38e7d2efdb6f9b1c6730853454025a1c09b6b925d48a6db6561a4e" => :big_sur
+    sha256 "c5e263c44f8aa614d96aff77793f1e0e8717a6d47907218162f898b56c35f256" => :arm64_big_sur
     sha256 "f40801e895c598b54e997d8b7a964414cc6a3b110f3b06f20f3e49edc0273de3" => :catalina
     sha256 "f979b2436650892d4fcb4a20ed3cb202d0733a185f0102e5755cc4fafef4396d" => :mojave
   end
