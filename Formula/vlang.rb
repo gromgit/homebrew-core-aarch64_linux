@@ -7,8 +7,8 @@ class Vlang < Formula
   license "MIT"
 
   livecheck do
-    url "https://raw.githubusercontent.com/vlang/v/master/CHANGELOG.md"
-    regex(/## v?\s?(\d+(?:\.\d+)+)/i)
+    url :stable
+    strategy :github_latest
   end
 
   bottle do
