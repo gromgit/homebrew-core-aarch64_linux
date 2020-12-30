@@ -12,11 +12,10 @@ class Tokei < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "803e994bda8e499d7d8ed7b584319756cb917b6c566077abe92c583e7b7ffa04" => :big_sur
-    sha256 "292ef25aba7ba4acc6760f353c09d131611050fde16f75ff60faff77a8e1f9e6" => :arm64_big_sur
-    sha256 "6f8d9daba7bffc3bdca8801809df42250179de135e566885a23087c392f79a05" => :catalina
-    sha256 "388e4436b3d20be506cfb62cb258479b7b77d2041c3762988cb3d88eb3606086" => :mojave
+    sha256 "abf9d085c9b7f570febd69a431fcfa25b6bd2f3e6f70ee8a86ae34b5fbd2a114" => :big_sur
+    sha256 "c9f0f41321eb5504b6a5867178a7686dda6f37eb47a040d828ce81096b2c515d" => :arm64_big_sur
+    sha256 "89299611a6f336c378fe2be3eb67ff51fe0882eb18a066d6beda0b373e7f8a2a" => :catalina
+    sha256 "f27651fba0d57a1c2977862114f5779bcf7c9a0d4199c4b742f8732145ebaff7" => :mojave
   end
 
   depends_on "rust" => :build
