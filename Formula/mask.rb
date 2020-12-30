@@ -7,11 +7,10 @@ class Mask < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "46561cab979648d082e4c2c591b0b8db89d5bffaa440b41460177fd2716ccef3" => :big_sur
-    sha256 "37bc68cf85d0cd1c87c95be13666f00eee7e3cb8b287322d082e5703b01d523a" => :arm64_big_sur
-    sha256 "0f36dcc50a822da9a3facf9878157cb43bbf2c5ba44a56bdd87759d0ebe5d534" => :catalina
-    sha256 "b8a0c2921b7641e36a8ce92523ba5a89aa6558b1e9089095eee102a734360bf3" => :mojave
-    sha256 "5445d94b7efe4a65c8d9c5332e951aace2b9bc88564a3e4f714c38d53a4b4961" => :high_sierra
+    sha256 "95563975f0b87651a58c01845c098b93d6d0f7dfed889bebf4364e8fdfe2ffa6" => :big_sur
+    sha256 "f41f306180943b68451ecbdafacab47f497ccfa00d95baf592c58d0068ee6295" => :arm64_big_sur
+    sha256 "80a869d6a62e065235ca7057e1a0df2b5045232cd897bfc5ee7b924098d8ac99" => :catalina
+    sha256 "a4caf4f75c456b398325a2dc24d4a9b7681559fc53a55bac2b590a179bc5cde3" => :mojave
   end
 
   depends_on "rust" => :build
