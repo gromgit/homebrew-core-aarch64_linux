@@ -13,10 +13,10 @@ class NodeSass < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9174afe265ef853edc7f8584f38e30cb0fc8e809faa08115ae134761a650fdec" => :big_sur
-    sha256 "a97810fa76864ef70d04d93cb53ae6ad75ac606848ffd41694cb56ef09e85508" => :arm64_big_sur
-    sha256 "17632419c069f504a0523a6aaaafe7b7875ce284942152311e8a8a6a894ca460" => :catalina
-    sha256 "6c369a7ce201fe19dcc591e226ae749812b9717e74b36288ed094d0a8f906e59" => :mojave
+    sha256 "3714e2c97c541989ff1effcb7905ade5c5bd5ad7b173febaa214318936c85d51" => :big_sur
+    sha256 "e6c49ff4689fd4ab33dcd82bd2660a345f99da0c9a324baba650649a00d33e3d" => :arm64_big_sur
+    sha256 "5b4c626725475373df76a9d00dd618fb21d165300bd75aed143c8f6b416f8e0f" => :catalina
+    sha256 "da49b7102e6d2c3691ad6d9e8ccc6d324ea7a6166d82338df832c5b673cf0eb5" => :mojave
   end
 
   depends_on "node"
