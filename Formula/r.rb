@@ -39,8 +39,8 @@ class R < Formula
       ENV["ac_cv_have_decl_clock_gettime"] = "no"
     end
 
-    # Upstream report in progress (bugzilla antispam built-in delay...)
     # BLAS detection fails with Xcode 12 due to missing prototype
+    # https://bugs.r-project.org/bugzilla/show_bug.cgi?id=18024
     ENV.append "CFLAGS", "-Wno-implicit-function-declaration"
 
     args = [
