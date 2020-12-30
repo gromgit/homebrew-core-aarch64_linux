@@ -10,6 +10,7 @@ class Snappystream < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "0259933ab01a0edf8162f901820728e9f36e0244e6dc34aa8de64caf95247bcb" => :big_sur
+    sha256 "4723ca8cfbd115326740f631b84db163cba902c1233c98e0b413a4250c228692" => :arm64_big_sur
     sha256 "083a4297326a9171920d68c6f0d93891d1cef8971546efd0293360b8dfc4e564" => :catalina
     sha256 "f768ccd06fd8d1cceb9905d71d7be38b55c3d2797df8d58a4f5528f22144db6d" => :mojave
   end
