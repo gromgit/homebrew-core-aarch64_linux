@@ -26,11 +26,10 @@ class Gcc < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 "dc3ea9a854cf248590ee06450993c80955fc8a37aa3274701d39e0c13934f942" => :big_sur
-    sha256 "e7b39fcb031d3c9f9fc6ebc48a8a6d1f4f486277ab3cdf1451a33b6cf655bcc0" => :arm64_big_sur
-    sha256 "a61e50f55795f44f3e9f4f92453c0a7832624e356c098db82c03984700701b76" => :catalina
-    sha256 "ba63918e8523e8c37cefee8da0c97da98eb4dd5cffef7a39d0bef7b630906e17" => :mojave
+    sha256 "60424299458ac0e658f3ac4515916b3efb930b3717084601fc957c8962680740" => :big_sur
+    sha256 "a5ebb1c2db1dbf7bec08c0e67844c1b521f959c103b5e33091f4a7e5bf319e44" => :arm64_big_sur
+    sha256 "93f7199203fa36df4e197687a1eb9a582e06aae793e16e258d75abfc5ba6d528" => :catalina
+    sha256 "257f9d4fd82675c99e97bcf6063ce17874bda6110f4fcdd2481faddc7fb82b6a" => :mojave
   end
 
   # The bottles are built on systems with the CLT installed, and do not work
