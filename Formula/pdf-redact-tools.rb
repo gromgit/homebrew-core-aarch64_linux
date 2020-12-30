@@ -11,6 +11,7 @@ class PdfRedactTools < Formula
     cellar :any_skip_relocation
     rebuild 1
     sha256 "7c70360f14e7dd09fe4d29e86fdd98a40688f60bbd24475b5c9ff54f8dc526db" => :big_sur
+    sha256 "7f949403c9b5927ae95adf02b32c8f7c74cff9ee14881d50f5634850fc418f2e" => :arm64_big_sur
     sha256 "2b652f29d55bf7d476f02b6ac35c2aab3920709fe72e5390838ee4732a1210da" => :catalina
     sha256 "e89303de13975510234c078756470ac529050a93a4e4a7592b94ef5971cea049" => :mojave
   end
