@@ -7,6 +7,13 @@ class MermaidCli < Formula
   sha256 "d56089a4e82c0c2bba00397bd7ee73164338da32b8e1c381518242a00e29689b"
   license "MIT"
 
+  bottle do
+    cellar :any
+    sha256 "ec65fe9a5b90065f242b1bd9242c299d8e8920957789f53eca273c82d6a6321d" => :big_sur
+    sha256 "d3349bbcfcf97eb001455f0c81d4b3d31936380d46d6439586b4f31485b15ad1" => :catalina
+    sha256 "31b7bbed1063c16c2979512bde0a20cd3792be90f0485a2644fab649e0dfda83" => :mojave
+  end
+
   depends_on "node"
 
   def install
