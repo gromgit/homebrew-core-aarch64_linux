@@ -18,6 +18,7 @@ class Vgmstream < Formula
 
   bottle do
     sha256 "214d533c705543d4962d3c9db29f5796d40048c0ff036585ac6ad35f013ad8fa" => :big_sur
+    sha256 "f0a3f7bbdccac44d4b9d82c1b423898a625bfcab73da849ccd07b4f0aaf4fcb1" => :arm64_big_sur
     sha256 "4b78bf09f3643d5e2cfc3b88cad0721a4079634970eefa5aa3da56dd0e023e6b" => :catalina
     sha256 "4fc77e961d92b85fb884370c15e57829cbc5dbf1cd9351a2420b8df68ff67f80" => :mojave
   end
