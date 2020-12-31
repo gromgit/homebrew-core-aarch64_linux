@@ -13,10 +13,10 @@ class Rav1e < Formula
 
   bottle do
     cellar :any
-    sha256 "fa8c012e3cdbbf325090c8aac4f6d7e5f2e4eaedeab7421caece85919b14d826" => :big_sur
-    sha256 "ee813b17cb949b695b9a199598b87370decbd7b9b2bfa1400aacd5542c2f73de" => :catalina
-    sha256 "047aa3d9eb50622a2f8ebf34559393d8d7b276989ef0329ffad94933eaca2060" => :mojave
-    sha256 "042c41714f694ce482a1405b0346f14e69607c0cea8285a6563dfbf2f899aba0" => :high_sierra
+    sha256 "e6329616d64e121aa50928e2c3af36227cb510a7495abd1f74c134e8bdd25922" => :big_sur
+    sha256 "1c974d467b6bf507aad84d05afff9b4622a774dd5fa69e5da873212fdf776ab9" => :arm64_big_sur
+    sha256 "5364867cd28ec604b94f9eea1f861be71ef7e0cc99bc0bc67cb1b4abeff15cb8" => :catalina
+    sha256 "9dfb724ec01ed6f2b1fdafb924ac883f6d64abaecb8482c904e92c3160553f4d" => :mojave
   end
 
   depends_on "cargo-c" => :build
