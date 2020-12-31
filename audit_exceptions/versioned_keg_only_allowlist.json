@@ -13,6 +13,8 @@
   "glibmm@2.64",
   "gnupg@1.4",
   "libsigc++@2",
+  "libxml++@4",
+  "libxml++@5",
   "lua@5.1",
   "numpy@1.16",
   "openssl@1.1",
