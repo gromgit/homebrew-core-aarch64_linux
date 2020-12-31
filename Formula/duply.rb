@@ -5,6 +5,7 @@ class Duply < Formula
   homepage "https://sourceforge.net/projects/ftplicity/"
   url "https://downloads.sourceforge.net/project/ftplicity/duply%20%28simple%20duplicity%29/2.3.x/duply_2.3.tgz"
   sha256 "2352a46e5167655382bdc5846ab1ac4979f3968776fb2678a24693a5c90b15b1"
+  license "GPL-2.0-only"
 
   livecheck do
     url :stable
