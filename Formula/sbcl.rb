@@ -16,6 +16,8 @@ class Sbcl < Formula
     sha256 "a8eadb8a7b8a092995d0f29f4b68cf5450c070dd41bdf3f9f15e4907b516d48b" => :mojave
   end
 
+  depends_on arch: :x86_64
+
   uses_from_macos "zlib"
 
   # Current binary versions are listed at https://sbcl.sourceforge.io/platform-table.html
