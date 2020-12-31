@@ -25,9 +25,10 @@ class Ffmpeg < Formula
   end
 
   bottle do
-    sha256 "d5e19eef9378b1ca1dcfa1f167f7a0fc4a1ecb2a86c3e522bb7adf89e54d1a9c" => :big_sur
-    sha256 "389282c41c4a724cab9e49e32cf334186a846267577ad1078f4d5b4fa52844b1" => :catalina
-    sha256 "de6781097bbc8c83c549338c8424d7af8da61a04c496ad75dfc1ad9fbb51793a" => :mojave
+    sha256 "c6342f638203e0d6bda7ce92add949a7a2db0a4fb2ac205637d92d713298ecad" => :big_sur
+    sha256 "f3d75997805fa7139d5dde99b1dd58d5877958b2dc76997f9e8ad0d84e8edd89" => :arm64_big_sur
+    sha256 "9af13c4b632cf0f092fe6178e256deb1a702f7465b0211c3c5994ae19467a59c" => :catalina
+    sha256 "3c3765174346a8da8043e376901deb15c22cc2c3ebf3554c87591d4ab6063cd1" => :mojave
   end
 
   depends_on "nasm" => :build
