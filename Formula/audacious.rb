@@ -15,6 +15,7 @@ class Audacious < Formula
 
   bottle do
     sha256 "263228588ae36e89a4996042689d621c8160118f0e93b48fa76948e98fae6b34" => :big_sur
+    sha256 "554ded5d075a7106717fbff9391b6a9b0937fb78f9668143f28eee8ef1624843" => :arm64_big_sur
     sha256 "b91911a8c81456b650fb88eb7f9dda4844538632b034a783eb209524aa6a2467" => :catalina
     sha256 "09a4731e3df8b48e43305051a64ca73b07fec7ff76cf1cee1edc734a3cac99ea" => :mojave
     sha256 "49a8da44d9aabfeb8d45057d7f04270a6cc0efc65f703d1e810edf74437691af" => :high_sierra
