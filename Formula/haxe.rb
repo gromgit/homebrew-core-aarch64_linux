@@ -2,9 +2,9 @@ class Haxe < Formula
   desc "Multi-platform programming language"
   homepage "https://haxe.org/"
   url "https://github.com/HaxeFoundation/haxe.git",
-      tag:      "4.1.4",
-      revision: "7d0faa039ffe5e618587e2417323b59044282177"
-  revision 1
+      tag:      "4.1.5",
+      revision: "5e33a78aad9a6733f4aa3a4b99f7c14555523a36"
+  license all_of: ["GPL-2.0-or-later", "MIT"]
   head "https://github.com/HaxeFoundation/haxe.git", branch: "development"
 
   livecheck do
@@ -28,11 +28,30 @@ class Haxe < Formula
   depends_on "pcre"
 
   uses_from_macos "m4" => :build
+  uses_from_macos "perl" => :build
   uses_from_macos "unzip" => :build
+
+  resource "String::ShellQuote" do
+    url "https://cpan.metacpan.org/authors/id/R/RO/ROSCH/String-ShellQuote-1.04.tar.gz"
+    sha256 "e606365038ce20d646d255c805effdd32f86475f18d43ca75455b00e4d86dd35"
+  end
+
+  resource "IPC::System::Simple" do
+    url "https://cpan.metacpan.org/authors/id/J/JK/JKEENAN/IPC-System-Simple-1.30.tar.gz"
+    sha256 "22e6f5222b505ee513058fdca35ab7a1eab80539b98e5ca4a923a70a8ae9ba9e"
+  end
 
   def install
     # Build requires targets to be built in specific order
     ENV.deparallelize
+
+    ENV.prepend_create_path "PERL5LIB", libexec/"lib/perl5"
+    resources.each do |r|
+      r.stage do
+        system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
+        system "make", "install"
+      end
+    end
 
     Dir.mktmpdir("opamroot") do |opamroot|
       ENV["OPAMROOT"] = opamroot
