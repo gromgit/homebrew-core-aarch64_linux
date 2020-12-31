@@ -9,6 +9,7 @@ class Cmus < Formula
 
   bottle do
     sha256 "9125314022209f8a28ec6b9b0f1298c990b3ef4a7b5d3970c1466fd95ee3023b" => :big_sur
+    sha256 "84d0cbe96063e77665e24193b223a8cb1117c9b180009990af6ff9891bc7013c" => :arm64_big_sur
     sha256 "9e9a3aff98eab65a1e1f5b212dab68af90affb189cf80b22a526037a50c5da43" => :catalina
     sha256 "cecf891598d7edd93be3f429ed5ef05a2962a23fb0b53e54c413373b72ddeb6b" => :mojave
   end
