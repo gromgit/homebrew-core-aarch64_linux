@@ -15,9 +15,10 @@ class EyeD3 < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "8c413651ff61a76a5e5998eff9fd51944895b63c92ee7f82e2af436f9a9ce2cb" => :catalina
-    sha256 "427a4f9c0bed9e543ea478ca1d5d6914a1dd3e38897bdd3e25855a1771a3d4af" => :mojave
-    sha256 "6abe02207943590759f2853e3dee4aed9f8815d1a621ebe238ae70a5be0286db" => :high_sierra
+    sha256 "fabd715d3a65c1227ba6f6f0f5f5ef6e4f30311fdb6a81c6ee64f29ab06b6315" => :big_sur
+    sha256 "a4613276d6a11d859910c4fc261acd46ed8c79f6fb39e1174fc9a0e3aa9a425f" => :arm64_big_sur
+    sha256 "fac417d9f81abb4a7f9a7c422e166eecafc1d7eedfeb0db93e47d59d9e1894b7" => :catalina
+    sha256 "9a2595374e19a747a5c5e04bd25cd95d80cf99e3a78c9259fe9b4cd9414f9afc" => :mojave
   end
 
   depends_on "python@3.9"
