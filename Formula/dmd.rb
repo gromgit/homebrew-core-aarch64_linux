@@ -45,6 +45,8 @@ class Dmd < Formula
     end
   end
 
+  depends_on arch: :x86_64
+
   uses_from_macos "unzip" => :build
   uses_from_macos "xz" => :build
 
