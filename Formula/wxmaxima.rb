@@ -7,9 +7,9 @@ class Wxmaxima < Formula
   head "https://github.com/wxMaxima-developers/wxmaxima.git"
 
   bottle do
-    sha256 "e313165add19cf7f2453302d6d98453a48f4a4f249e80d5149f3c6b5559b69e4" => :big_sur
-    sha256 "2ef1d767ca05d9bfdd8505c16c6fddc85512a0c9ab2f0fdfdacc5f631745d9f0" => :catalina
-    sha256 "aab84e7e3ac951b2a9fecf735cc6120f5c62b457d77e842c530907fad1862c9e" => :mojave
+    sha256 "e84bf2ae87721e760beb0e0dddcd463ecb430b2ced3fb763f696251deda35abe" => :big_sur
+    sha256 "c671a35bfceeb9f2aa98f4b14cbe3c69434697ea6af26b36dcf5f9f6886fc7a6" => :catalina
+    sha256 "817f99c13402e2740e0ddddcac66fdedeea605957b47d0c66f30d3e07cb7f341" => :mojave
   end
 
   depends_on "cmake" => :build
