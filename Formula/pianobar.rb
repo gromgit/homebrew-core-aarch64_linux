@@ -9,6 +9,7 @@ class Pianobar < Formula
   bottle do
     cellar :any
     sha256 "849b8cc567a95e0f91441dd8045567681f697cc8567baa5abcc72f2abe26504f" => :big_sur
+    sha256 "1a73d54145ec3a65a7677b1cc3038fc596f06c0ed9157f8581dc08a86d455f42" => :arm64_big_sur
     sha256 "e61e802a0ef161583c808d017b7652e93ba618b6d64314fb391b30a1dba3b86e" => :catalina
     sha256 "57d781b3c9db03c3d91147d8ac19a4c8222756765d96921a53213b8845faed64" => :mojave
   end
