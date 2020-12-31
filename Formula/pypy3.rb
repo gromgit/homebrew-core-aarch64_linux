@@ -12,9 +12,8 @@ class Pypy3 < Formula
   end
 
   bottle do
-    sha256 "0abe67d4da37ae77c85e8883bcb01ed6b5b8061ad54d4ef9f659b50d9e7a8246" => :catalina
-    sha256 "7b80681acba5b237e6a164e3f91dd1d968ebf5b35b60c503d19e4ad3d903147e" => :mojave
-    sha256 "022d70ee06728680081e825e1d6737fab2d74d0b51fcc758361a01258423df34" => :high_sierra
+    sha256 "856c421f1051e802767e23bdfd58727fb168dcffff904ab1eb486a57fc614f47" => :catalina
+    sha256 "a2f43940fe3fb2604aa01c9f7720c26c74b3cb9e09b7bf0846f4341ded919e17" => :mojave
   end
 
   depends_on "pkg-config" => :build
