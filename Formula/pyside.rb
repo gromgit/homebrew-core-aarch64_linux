@@ -23,11 +23,22 @@ class Pyside < Formula
 
   def install
     ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib
+    if MacOS.version == :big_sur
+      # Sysconfig promotes '11' to an integer which confuses the build
+      # system. See:
+      #  * https://bugreports.qt.io/browse/PYSIDE-1469
+      #  * https://codereview.qt-project.org/c/pyside/pyside-setup/+/328375
+      inreplace "build_scripts/wheel_utils.py",
+                "python_target_split = [int(x) for x in python_target.split('.')]",
+                "python_target_split = [int(x) for x in str(python_target).split('.')]"
+    end
 
     args = %W[
       --ignore-git
       --parallel=#{ENV.make_jobs}
       --install-scripts #{bin}
+      --rpath=#{lib}
+      --macos-sysroot=#{MacOS.sdk_path}
     ]
 
     xy = Language::Python.major_minor_version Formula["python@3.9"].opt_bin/"python3"
@@ -48,7 +59,7 @@ class Pyside < Formula
 
   test do
     system Formula["python@3.9"].opt_bin/"python3", "-c", "import PySide2"
-    %w[
+    modules = %w[
       Core
       Gui
       Location
@@ -56,9 +67,14 @@ class Pyside < Formula
       Network
       Quick
       Svg
-      WebEngineWidgets
       Widgets
       Xml
-    ].each { |mod| system Formula["python@3.9"].opt_bin/"python3", "-c", "import PySide2.Qt#{mod}" }
+    ]
+
+    # QT web engine is currently not supported on Apple
+    # silicon. Re-enable it once it has been enabled in the qt.rb.
+    modules << "WebEngineWidgets" unless Hardware::CPU.arch == :arm64
+
+    modules.each { |mod| system Formula["python@3.9"].opt_bin/"python3", "-c", "import PySide2.Qt#{mod}" }
   end
 end
