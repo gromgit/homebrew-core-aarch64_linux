@@ -2,8 +2,8 @@ class Cppad < Formula
   desc "Differentiation of C++ Algorithms"
   homepage "https://www.coin-or.org/CppAD"
   # Stable versions have numbers of the form 201x0000.y
-  url "https://github.com/coin-or/CppAD/archive/20200000.3.tar.gz"
-  sha256 "b37f3bc13d1e653828fefec604260d93224dc66a5f70da5500bc7bf2ba13c3d3"
+  url "https://github.com/coin-or/CppAD/archive/20210000.0.tar.gz"
+  sha256 "05d62baf31757364d2883811b0574be0b8706d4cb0110485dfeb506ec01894c8"
   license "EPL-2.0"
   version_scheme 1
   head "https://github.com/coin-or/CppAD.git"
@@ -25,11 +25,14 @@ class Cppad < Formula
   depends_on "cmake" => :build
 
   def install
+    ENV.cxx11
+
     mkdir "build" do
       system "cmake", "..", *std_cmake_args,
                       "-Dcppad_prefix=#{prefix}"
       system "make", "install"
     end
+
     pkgshare.install "example"
   end
 
@@ -46,7 +49,7 @@ class Cppad < Formula
       }
     EOS
 
-    system ENV.cxx, "#{pkgshare}/example/general/acos.cpp", "-I#{include}",
+    system ENV.cxx, "#{pkgshare}/example/general/acos.cpp", "-std=c++11", "-I#{include}",
                     "test.cpp", "-o", "test"
     system "./test"
   end
