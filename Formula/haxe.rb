@@ -14,9 +14,9 @@ class Haxe < Formula
 
   bottle do
     cellar :any
-    sha256 "2dd8ce7d51cc9fc0f81a4bd3fd7cc768c17d1b82ca8258cd725505a2a93f47ce" => :big_sur
-    sha256 "78bf7c08233e8c8d1b5adf3ced4281bcf946500ca3943900b7814383f6e41718" => :catalina
-    sha256 "a14642ba794f4bf71a0db224452511da6c630f574f2f940e6ee509bfe514569b" => :mojave
+    sha256 "e7699cc68fbab0efc9562cf045c36a2acebbeb63e5b109bec7723f98448ea2ff" => :big_sur
+    sha256 "4e8990bb2d2f2556272d8cbc2ee6966a6f6c4308fe47e5d89aeca3d32d46f24c" => :catalina
+    sha256 "203944b02f84bc182342c6831ec81ba27a0c71c8fba56849a2c2adc6a1ad8f4c" => :mojave
   end
 
   depends_on "cmake" => :build
