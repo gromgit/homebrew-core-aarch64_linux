@@ -15,6 +15,7 @@ class Fragroute < Formula
   bottle do
     rebuild 1
     sha256 "bc2aad3bd752e06ec939f1fd2f49ae26ceaff3175c6675be53c9dfebd41e694b" => :big_sur
+    sha256 "4dc9241d550bf71ddf6dff241a3335bc2ee812415ac5e191887ae9ff2c91ae39" => :arm64_big_sur
     sha256 "7bd2a4a54f15b14b015e4defdfdf633db0b51cee12f126402dd99b708540ce9d" => :catalina
     sha256 "76571eb2b3a3026700b58e589b6a2e30651898763b63b26f9bc8d78856cf7e51" => :mojave
   end
