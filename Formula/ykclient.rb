@@ -17,11 +17,10 @@ class Ykclient < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 "73b153bb1d9f5df3aa3a4ffed206c60bd1f207946b9cb43116985ed0cf76de8e" => :mojave
-    sha256 "3e1459f192f7f1df756e2071c78ee41fd163b3dee1f09254e8e5ffc0442a2205" => :high_sierra
-    sha256 "aec1bc9640c8a84089b1d749d689b59862fce858478d180cd6a34a93a34eb370" => :sierra
-    sha256 "deee73fbd68f44bd86fb07d1f2179313dac4679395d861b821ccf218745ab1c8" => :el_capitan
+    cellar :any
+    sha256 "9763765c3a3eb3d2fac970755b9c0ed1c48c8d74d7dd767dd824c8b0b3cfffd7" => :big_sur
+    sha256 "1a0d524e983bd1b22c012a00d60c4529b776640386e978fb3f6046b52e17eed7" => :catalina
+    sha256 "6e1365c8a6d412ae2a65c65b741ab666340bbb384b730989e2833fe96e0b8e92" => :mojave
   end
 
   head do
