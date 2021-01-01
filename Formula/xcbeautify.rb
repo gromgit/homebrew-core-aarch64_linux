@@ -9,9 +9,9 @@ class Xcbeautify < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "05387bb5adaec4a508dd0b9a0f52210a481900d8be9ce2696a37c67add4f3901" => :big_sur
-    sha256 "30230cc7bd735b91ad7eb0e692a349ecc75a0d17109e8cd70502b28c16251916" => :arm64_big_sur
-    sha256 "a263117ddff2a44a586920f96249030b176b9d718d9b985e08b7fe6c0e9d4b51" => :catalina
+    sha256 "1b95942893695e6ea3d30c17064939161f6e573243cc92035e930b4e1a39deef" => :big_sur
+    sha256 "07f7226da16337b9947871edf3e6112e042d9371872eea692877cd83e3f4e18c" => :arm64_big_sur
+    sha256 "5b053728e2ee73f3542cf2b7178af1a5d309970f5374fd1342da93e6dfcb57af" => :catalina
   end
 
   depends_on xcode: ["11.4", :build]
