@@ -1,8 +1,8 @@
 class Tcpdump < Formula
   desc "Command-line packet analyzer"
   homepage "https://www.tcpdump.org/"
-  url "https://www.tcpdump.org/release/tcpdump-4.9.3.tar.gz"
-  sha256 "2cd47cb3d460b6ff75f4a9940f594317ad456cfbf2bd2c8e5151e16559db6410"
+  url "https://www.tcpdump.org/release/tcpdump-4.99.0.tar.gz"
+  sha256 "8cf2f17a9528774a7b41060323be8b73f76024f7778f59c34efa65d49d80b842"
   license "BSD-3-Clause"
   head "https://github.com/the-tcpdump-group/tcpdump.git"
 
@@ -25,13 +25,19 @@ class Tcpdump < Formula
 
   def install
     system "./configure", "--prefix=#{prefix}",
-                          "--enable-ipv6",
                           "--disable-smb",
                           "--disable-universal"
     system "make", "install"
   end
 
   test do
-    system sbin/"tcpdump", "--help"
+    output = shell_output("#{bin}/tcpdump --help 2>&1")
+
+    assert_match "tcpdump version #{version}", output
+    assert_match "libpcap version #{Formula["libpcap"].version}", output
+    assert_match "OpenSSL #{Formula["openssl@1.1"].version}", output
+
+    assert_match "tcpdump: (cannot open BPF device) /dev/bpf0: Operation not permitted",
+      shell_output("#{bin}/tcpdump ipv6 2>&1", 1)
   end
 end
