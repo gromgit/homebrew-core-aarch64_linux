@@ -1,8 +1,8 @@
 class Mdcat < Formula
   desc "Show markdown documents on text terminals"
   homepage "https://github.com/lunaryorn/mdcat"
-  url "https://github.com/lunaryorn/mdcat/archive/mdcat-0.22.1.tar.gz"
-  sha256 "b14846542fb8b60ac0235b399136372df7569aa59ed63f3faf88ff7a485abe5f"
+  url "https://github.com/lunaryorn/mdcat/archive/mdcat-0.22.2.tar.gz"
+  sha256 "92102c448c1742aa69604817d7d209c69ce1db5261cb6d8f0bb98cdc6c4f02f9"
   license "MPL-2.0"
 
   bottle do
