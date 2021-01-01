@@ -3,8 +3,8 @@ class Cpprestsdk < Formula
   homepage "https://github.com/Microsoft/cpprestsdk"
   # pull from git tag to get submodules
   url "https://github.com/Microsoft/cpprestsdk.git",
-      tag:      "v2.10.16",
-      revision: "18212a2a7967e12d740bfb957e500892b3463c88"
+      tag:      "2.10.17",
+      revision: "41e7d0074b6cb5b22c89f835b4531d848ab66987"
   license "MIT"
   head "https://github.com/Microsoft/cpprestsdk.git", branch: "development"
 
@@ -17,11 +17,15 @@ class Cpprestsdk < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "pkg-config" => :build
+
   depends_on "boost"
   depends_on "openssl@1.1"
 
   def install
-    system "cmake", "-DBUILD_SAMPLES=OFF", "-DBUILD_TESTS=OFF", "Release", *std_cmake_args
+    system "cmake", "-DBUILD_SAMPLES=OFF", "-DBUILD_TESTS=OFF",
+                    "-DOPENSSL_ROOT_DIR=#{Formula["openssl@1.1"]}.opt_prefix",
+                    "Release", *std_cmake_args
     system "make", "install"
   end
 
