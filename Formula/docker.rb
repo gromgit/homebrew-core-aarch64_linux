@@ -1,9 +1,9 @@
 class Docker < Formula
   desc "Pack, ship and run any application as a lightweight container"
   homepage "https://www.docker.com/"
-  url "https://github.com/docker/docker-ce.git",
-      tag:      "v19.03.14",
-      revision: "5eb3275d4006e4093807c35b4f7776ecd73b13a7"
+  url "https://github.com/docker/cli.git",
+      tag:      "v20.10.1",
+      revision: "831ebeae967552edf2e19980b628fc7b8e92b59f"
   license "Apache-2.0"
 
   bottle do
@@ -18,8 +18,9 @@ class Docker < Formula
 
   def install
     ENV["GOPATH"] = buildpath
+    ENV["GO111MODULE"] = "auto"
     dir = buildpath/"src/github.com/docker/cli"
-    dir.install (buildpath/"components/cli").children
+    dir.install (buildpath/"").children
     cd dir do
       commit = Utils.safe_popen_read("git", "rev-parse", "--short", "HEAD").chomp
       build_time = Utils.safe_popen_read("date -u +'%Y-%m-%dT%H:%M:%SZ' 2> /dev/null").chomp
