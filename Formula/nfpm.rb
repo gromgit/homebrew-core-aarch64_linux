@@ -8,10 +8,10 @@ class Nfpm < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "3c373825bef200f192b530e09a7b2a223dc85210ab484ea7d9b4820cfb608010" => :big_sur
-    sha256 "ad7653296c049db4b5b8b1f0f54889b5102473fe3b7c268936efb5efbb1d1968" => :arm64_big_sur
-    sha256 "1aa61ac2f24e9c15ba0be37a059e9870361f7056b358944712fdd1629f021533" => :catalina
-    sha256 "8bfef1c749b6b3504f0b85027976ed909ef5766afbf8db46f356a1fea9ad2ba5" => :mojave
+    sha256 "e06aefbef3da540181206325ddebed7712bf43ffe307ad6802438cf5eaf84f9c" => :big_sur
+    sha256 "cb89330466d60841270629c42f3d192d4b4b118afffb803ec4e2b2872c9a76c7" => :arm64_big_sur
+    sha256 "d6be6a3d4ddacaca2fee655f566c95cfde762a45473eac4ecccd98a8bf9eb7e4" => :catalina
+    sha256 "606ecb9b7c2b0f52b47a02c9c625709f0352bbba7e3c066c68ce8a75b05f71f6" => :mojave
   end
 
   depends_on "go" => :build
