@@ -7,11 +7,10 @@ class Mdcat < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f0bff22df0952a61a78e6e317e30860bb568c43ccf30b4b7f469311435f739db" => :big_sur
-    sha256 "efb63962746712d38e859844a408e34f14144fb8d1c1e118a67060206560232e" => :arm64_big_sur
-    sha256 "8765ebb14e200949ef0cc2fa572aef8a84eea0c7b5b5b89ed6b8e2ee1896c4a1" => :catalina
-    sha256 "3d46736eb02798a8d9dc986bcf025d89b3e5c19bc4bf0900eab9ea7c7aafb519" => :mojave
-    sha256 "74d85385506c912257d520d7425ef9770cb7da76cd0edb1da1f4f22abeebaa2c" => :high_sierra
+    sha256 "cd7462ead62dca44da914a890c0e16e4bc2e334b9973d99b47c77c8d23722a76" => :big_sur
+    sha256 "874f6ef6565821c7ebccfaf032c0616e64c667214779f07fdb489f43c8499c73" => :arm64_big_sur
+    sha256 "26cc236d7acf8ee17d2b9cf6b3e7f1ffa47c86d4b1abc40e1acd5ad418bc1c01" => :catalina
+    sha256 "9aca864d6a18421d4daba029d9e8568c0bc1e8a3a3b51013c62b53237b4ba156" => :mojave
   end
 
   depends_on "cmake" => :build
