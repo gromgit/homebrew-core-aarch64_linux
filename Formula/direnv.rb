@@ -8,10 +8,10 @@ class Direnv < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "32d8506f7eedfa4723b9b0acd06759e44e39ea29ec78eb94eba7022a613b192c" => :big_sur
-    sha256 "5fba0c6d999b15cad35491431c49ed1b705713179b545bc524c8640be0d2eb8a" => :arm64_big_sur
-    sha256 "931988a1192cd06480b0a3818a9732aad47b1d0a33d591fd5f0cc1edaebcff5d" => :catalina
-    sha256 "4e1b4ac2a984bb63a895269c694ac2ac5259f4dc974525cad200d2b27c246f70" => :mojave
+    sha256 "bf23db053d25081095366198f72f8b00ce272fd682d29e38f8af61dd3e5a61d5" => :big_sur
+    sha256 "0c982e714b93db8139ca8712e994bcdba19c1341132304b17d282ce1a6caa13b" => :arm64_big_sur
+    sha256 "02454d5571292dcc4520687ae721518de35deadccf7fe3b4de8eade2d19b27b1" => :catalina
+    sha256 "6be47ea404f214c73485e722555c5f59c0a857cc553cc8a455763ac4d73f974a" => :mojave
   end
 
   depends_on "go" => :build
