@@ -15,11 +15,10 @@ class Cppad < Formula
 
   bottle do
     cellar :any
-    sha256 "eaf51d282b9812ddc697f9e606e6f17b2a728f5b670885c8dc0e26f2b2f896a1" => :big_sur
-    sha256 "a9baa4f60725d18c5f7cbb244f47c9a4af645012ad5e21889b43f0d1272d0357" => :arm64_big_sur
-    sha256 "4ef0d734cddee5d7dfde8398b8b295cc35100424639db041816459636de3087f" => :catalina
-    sha256 "948e5a9ae91c50297d528c87b1f38afcd15f4e6b6f162ce7ddffa2f43b329143" => :mojave
-    sha256 "d74b4ab769dccd4537ef03dd28fea858b81ee2938df776e5d45a23069c57c142" => :high_sierra
+    sha256 "23d98b424d2feebedf1ff91fb5ad9373c0dfa41701196e6e9ae4ab4fa611cdfe" => :big_sur
+    sha256 "5bf2eb6cd8c96bb9cc3e2d4d86ce4e0c946481a0406165312cf250fb1fd41c8c" => :arm64_big_sur
+    sha256 "21c85b34b6305d55e8c91cb8a9ffef087cf0bd0c82159f9b4e4a13e0f5c3b14b" => :catalina
+    sha256 "cab9a4d88d9342f2789ad085c526aa91a4cb1d24a181fb758bc88b4a4333b26b" => :mojave
   end
 
   depends_on "cmake" => :build
