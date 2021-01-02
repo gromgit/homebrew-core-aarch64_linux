@@ -12,11 +12,10 @@ class Gsasl < Formula
 
   bottle do
     cellar :any
-    sha256 "028f7609a7ca21f52e8341cf4c62a019297e0d156c8e3a6526ca68702d6da866" => :big_sur
-    sha256 "83b752a80d1e1ebf8fc39b0fe64ffb53baa7fe0aad0c42df69a14bd3624158a7" => :arm64_big_sur
-    sha256 "964ad480f7fafd04051fe76a288b5f109766ae39e4329b00f1a268b5082b316e" => :catalina
-    sha256 "ac8236d918eea76cb15f196f5a571aab775ba1381e33d2c222a98114a2d391f6" => :mojave
-    sha256 "d79efee531f43ebd0019d68f2066fb02f0ab9009ea3b78bddda231b6ddda5a7a" => :high_sierra
+    sha256 "42ef3c24427817c75c74804f31cd0d039a9900c8da5f96dbf9ab7b76e2563168" => :big_sur
+    sha256 "29fe198c3ae4c00a487b94cb8e711cb1c293c3a28bd0fb21f6f56e18cf1c1e5e" => :arm64_big_sur
+    sha256 "6f7aa6d0a2276a8d3434f2c16cfd7f60d85fbb4204194dcf6a678b7bb8c4e0f2" => :catalina
+    sha256 "f9518412c5a6f631a78ef1ed3ed8989914446f2be1bad0de786ad82dc4c190e1" => :mojave
   end
 
   depends_on "libgcrypt"
