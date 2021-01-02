@@ -10,11 +10,10 @@ class Atomicparsley < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e79d2e76d6fd57bb96cbc879e9760d556284c7c61ecd345edeed73442cbce203" => :big_sur
-    sha256 "fef552dd4f9361c20281cc87de2c69aa7cd54a9a0fe07de15c17d9c987acc3ec" => :arm64_big_sur
-    sha256 "6bc22e04f5d2863e73010606d823eb0768d637165d190d3889db3780bbbb724c" => :catalina
-    sha256 "204e206047f48cdffef4fa91f81dbce6db370f002dd883000798d91f2916c391" => :mojave
-    sha256 "ce2509fe2cc72c18b6b82c9df5e802e2503f61ebf841833618a974ac21fc92c3" => :high_sierra
+    sha256 "10ed6bfad101b5e57fd8d44e9485033308b56d09b4cc08bcd02d9b0eb45c7595" => :big_sur
+    sha256 "5b27fb350ad43a09587dd8fb606b70b5c839c6b9a4079e054def9ffa58c3f69c" => :arm64_big_sur
+    sha256 "164a92e2a72ac3f1e3a47edaad51114d83582019722d8688299684381299f5eb" => :catalina
+    sha256 "04cdcb145d63be082b604db3b79284987c6fdc042b7b5451fd28b21789c015b4" => :mojave
   end
 
   depends_on "cmake" => :build
