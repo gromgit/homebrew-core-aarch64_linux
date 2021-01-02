@@ -1,10 +1,9 @@
 class Algernon < Formula
   desc "Pure Go web server with Lua, Markdown, HTTP/2 and template support"
   homepage "https://algernon.roboticoverlords.org/"
-  url "https://github.com/xyproto/algernon/archive/1.12.8.tar.gz"
-  sha256 "562d6f1145980d5e4c8eaefc2780801b163d228720599f22165135182018d6bf"
+  url "https://github.com/xyproto/algernon/archive/1.12.11.tar.gz"
+  sha256 "0ecedfe86cf2016d8da281ca64d76b9383f76b0d58acee0d80e08c61df5035cc"
   license "MIT"
-  revision 1
   version_scheme 1
   head "https://github.com/xyproto/algernon.git"
 
@@ -21,7 +20,7 @@ class Algernon < Formula
     sha256 "b78c41a051aac0d969b8d7b49507a11e3e1b69990efe22aa88f9d5a5d544eb46" => :high_sierra
   end
 
-  depends_on "go@1.14" => :build
+  depends_on "go" => :build
 
   def install
     system "go", "build", "-trimpath", "-mod=vendor", "-o", bin/"algernon"
