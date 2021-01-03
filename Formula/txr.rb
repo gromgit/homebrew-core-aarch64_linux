@@ -11,11 +11,10 @@ class Txr < Formula
   end
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "b6fd4090a8a0fa9b90dcc4c614ba8fb1599565a9f75636f1ba8ae34718b88ad2" => :big_sur
-    sha256 "0ad6e1b88ac7dc2f29b99e1944c16a36479529af9e8154b94fd097c71bb12e18" => :catalina
-    sha256 "ce5b9bd68469716f93df3a30f5f0cc5348054ccc4206c181186afa3ffb812882" => :mojave
-    sha256 "4def7304997039f48be24742fa670c5e8f292dd3256793696b09bf9da31cafd7" => :high_sierra
+    cellar :any
+    sha256 "a56a11ffa457176f369e9a09efbb13d962d4eb8f547c0791704497284acb4cf7" => :big_sur
+    sha256 "e467433174a1b719f4129794c10bb07d9eb57c4b44c25863c868a0e6162215b1" => :catalina
+    sha256 "f040ee03a05b1baeeba6a83a1e61c9b91b25430d44ab66519f7ee2553c1c5d43" => :mojave
   end
 
   depends_on "libffi"
