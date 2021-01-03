@@ -15,6 +15,18 @@ class Pcapplusplus < Formula
   def install
     system "./configure-mac_os_x.sh", "--install-dir", prefix
 
+    # Fix OS/X build issue in v20.08 which inclues <in.h> whether it exists or not,
+    # can be removed next release:
+    inreplace %w[Examples/DnsSpoofing/main.cpp
+                 Examples/HttpAnalyzer/main.cpp
+                 Examples/IPDefragUtil/main.cpp
+                 Examples/IPFragUtil/main.cpp
+                 Examples/IcmpFileTransfer/Common.cpp
+                 Examples/IcmpFileTransfer/IcmpFileTransfer-catcher.cpp
+                 Examples/IcmpFileTransfer/IcmpFileTransfer-pitcher.cpp
+                 Examples/PcapSplitter/IPPortSplitters.h
+                 Examples/SSLAnalyzer/main.cpp], "#include <in.h>", "#include <netinet/in.h>"
+
     # library requires to run 'make all' and
     # 'make install' in two separate commands.
     system "make", "all"
