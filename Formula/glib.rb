@@ -13,10 +13,10 @@ class Glib < Formula
   end
 
   bottle do
-    sha256 "d91f0d628868133fc5477a90adc10297701b10aad761d1076fd46f51fd980ca9" => :big_sur
-    sha256 "39f217b4de262204c396bd70277bc779ff3aa4aced0b50cf844bbdf65055ebca" => :arm64_big_sur
-    sha256 "65d130d343e12482908e6faa372af3c80dbcd5d02652cab648282a733c5e4f93" => :catalina
-    sha256 "48e7761d5a9cf09d2b8c46568458944f4d6654ffd0be9bc18a992c1e9f4b59f7" => :mojave
+    sha256 "4f48567977f08be9d02920f54fc3a31d0ceb106e733d7e5e7fde44fcf7a59990" => :big_sur
+    sha256 "c81fcd1d7973f90f2923a0a569d8e748107da9fcc0e283c62c281bdda8bca059" => :arm64_big_sur
+    sha256 "56681d90bb716b6a7c28825a3e014571bae6e06b94325e434d4845d7b4502a34" => :catalina
+    sha256 "3a742af0366177f75672fd24839fa9c98e021cf677f2b94318a0207730886939" => :mojave
   end
 
   depends_on "meson" => :build
