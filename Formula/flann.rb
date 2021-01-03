@@ -8,12 +8,10 @@ class Flann < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "d8e10f25b888a78bf0d16900c37f2acfec0a3e2131c22c02a4de8b0d0983ae3d" => :big_sur
-    sha256 "ce67c71c2ab07f777a5d8fe7accd1cbb6d77e12d51b65fbc627071e57a73efc8" => :arm64_big_sur
-    sha256 "a57044aa842d90b739c5008fa0d40d081afc68f8a390a93b59abc1f2e9e79b62" => :catalina
-    sha256 "ac3439865022716c8db18d6af7ab44d74e4eb98e161c426a68cf52156e54e106" => :mojave
-    sha256 "e8cd82ec90abf1dc403b7d364c638c43ed46036d81fb053e4cdc3b48967d3d3e" => :high_sierra
+    sha256 "f6555dce8d62d9dde8da5ee6ea7a6efc1e9a80339060bb4b7af3fd1e7e845584" => :big_sur
+    sha256 "1d8425ca4d79dcf978e9bb43e7b1a52480febf9b9deadc8b966ffa2d004b2971" => :arm64_big_sur
+    sha256 "101ec3e673a5b69c5f6cf6c79af0fbfca3a00ef90b7a4dde0a4bad638a187d1a" => :catalina
+    sha256 "ab351183f61258ac6fefd9f64677c4b917929674fb36eff89aa9d85c825dfef8" => :mojave
   end
 
   depends_on "cmake" => :build
