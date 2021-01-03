@@ -7,11 +7,10 @@ class Uni < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "4441cc2d95b43746b9e39646b14417387d439253d5313d291ddf52002650c837" => :big_sur
-    sha256 "51fa81cb09e70f107e350cbf9be7ba37fd614610da26986ed30a31662475cabc" => :arm64_big_sur
-    sha256 "d6a995e94c8bc6f9b74a1eb370b5aa348a7377e9170453820400da83641cef66" => :catalina
-    sha256 "1a2f04a3dd21f6d2c2ea16d3683f936e1d8310dd4b2d503aa8a60d67b6f24367" => :mojave
-    sha256 "e4b8e98523d14eb9cba3991946deb0cea86c09acfb65d175c04d4233ec32eceb" => :high_sierra
+    sha256 "37fe7b02e6737bec8b2200c31e336a79b7af54cfdb22ee82ee1465e429276572" => :big_sur
+    sha256 "6edc8fe86733254e8ff4ee7176f2b97c47196206da7b714989f9c324d596ad08" => :arm64_big_sur
+    sha256 "9a4a7180d2b989dcd2514e87b8a1153de5d8b284a07b191d6197fce9784b0ea3" => :catalina
+    sha256 "b06d8669efefddbe70b7b07634f4db98a3283234284fbcc1e8326ec6c18ee9fe" => :mojave
   end
 
   depends_on "go" => :build
