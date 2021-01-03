@@ -7,11 +7,9 @@ class Ngircd < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 "4e4bd4f8a09df60785d81aade4d04db63db930a7203b2065b10b754e08cb17e3" => :big_sur
-    sha256 "129bf331b86f1d54735cf773a36b402323af0667afc1e2a1da4554899d05e8e3" => :catalina
-    sha256 "7fdce95437555b6de33aa1b0c9d3e3441405b5d3c9ec2f728a7b28f35983402d" => :mojave
-    sha256 "b58cacea0c009487e46b48d7220623001e49ad31722704ee805fd7029313f5d6" => :high_sierra
+    sha256 "9fe092e3ca8de75453b4aa667067e1cd863c041b8055ae7981e51f3506ac19c4" => :big_sur
+    sha256 "95f504faeffb209318e93a050c632805178e91cd1e9475bbccfa9eb040b8d785" => :catalina
+    sha256 "af9fea8f344f76077063b24d68d057bb9ecb93db1fb469d2e0992d0919f87b0c" => :mojave
   end
 
   depends_on "libident"
