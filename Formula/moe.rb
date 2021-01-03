@@ -11,12 +11,10 @@ class Moe < Formula
   end
 
   bottle do
-    sha256 "fca841c40f9b05c85f6e32bf63a8dd8bb6fd01e6a4b01be09b1e90e4c684a54e" => :big_sur
-    sha256 "161f630213e5567956ac42596fd10eeba2abb16ca6d03a9fffd46ec5205fab63" => :arm64_big_sur
-    sha256 "204f87443d288dd953d310ca2e2fa3de0051f460f1586e357ddfdcc540411412" => :catalina
-    sha256 "934ee30ec5f7f95c74183e5faf6ccc7ac36c426747476a5a0fb9628a6169de04" => :mojave
-    sha256 "fdfffe18871a25a5f0a8cf86ac8682f2cc6623dea335575d39f1dd529ee2ae46" => :high_sierra
-    sha256 "f83a8e961f1a7d295741a6abfe7434580761fa485e32498327ffb0e09322fa1e" => :sierra
+    sha256 "fd26036b9c0e0c72963f91b99f1a0787109af0a519df1d33d0f04d0d0cc12ebe" => :big_sur
+    sha256 "ecf7d889fc677d4fbd201086dc195d5d072dfdbc78fc0c506104a8a1e5216365" => :arm64_big_sur
+    sha256 "38b7920c9d82ba731f98bd1a56932b0d0ebe675d6d9006848a48e392013aad5a" => :catalina
+    sha256 "688fc7c768e785581675079dd436c9cf3fef36094ea1aa078a8c3fc221d00fbc" => :mojave
   end
 
   uses_from_macos "ncurses"
