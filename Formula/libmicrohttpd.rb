@@ -11,11 +11,10 @@ class Libmicrohttpd < Formula
 
   bottle do
     cellar :any
-    sha256 "de891c6fd4290b2686b569b253436b8038d8e7a048dd411b340c844c30acd457" => :big_sur
-    sha256 "45e29d6b867c14ad332287e1b4952325f9c9eef13159d42b3516949018b0368f" => :arm64_big_sur
-    sha256 "4b726d32231d5178a6e9fb1eff7a4a2e27776fe434fb5e40ecff377ac300719c" => :catalina
-    sha256 "03c40981973ceca4b9efbe13d28254378fceba98b45470492a9d677595ce1d0c" => :mojave
-    sha256 "87f16499f102b9bf25d31bce38bd396d0d09a8517b036ba2ad57bf9ace7709a5" => :high_sierra
+    sha256 "8077a7455cced7a3aa3da7d3f9a2cbf5626e7ff52f18e0f9518646a224b5d049" => :big_sur
+    sha256 "100b76ee0927bbc78ef71edf61a5f1df115aeac0dd37ec22169f2b4c83b65451" => :arm64_big_sur
+    sha256 "1d4ef28fe8b92ca4243f35c7caa5d586c7b4cb7d2eac7f6d408b50f58478d5c4" => :catalina
+    sha256 "0880e89689cbda10d2586d4c0c46ab405dfcfc3b569ad69e855cd238f5772a89" => :mojave
   end
 
   depends_on "gnutls"
