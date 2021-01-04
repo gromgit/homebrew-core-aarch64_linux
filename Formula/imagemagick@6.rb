@@ -16,10 +16,10 @@ class ImagemagickAT6 < Formula
   end
 
   bottle do
-    sha256 "b0a72d572fbfba8492b8a98609b1d5dc886a143e9de2d22f6d0b701c59b080a2" => :big_sur
-    sha256 "1422843654f1cde9f15a419a77ae334ccb84fe70a5f3c1585a384c616e4963c2" => :arm64_big_sur
-    sha256 "e264f830468e3e791d6822df06c5813c6b1f27556c598acac2554080cd5aa5a5" => :catalina
-    sha256 "3406b0a04bc95946d293f816e55e2c7168d3a6d7582fc268a6475ac283440f13" => :mojave
+    sha256 "36f96bf89066836288afe31d316d5bfd2b96cc334e95e29faef01e3fed7013a1" => :big_sur
+    sha256 "d7fc8e339020e4815bf2c3e6d48d6d2c9a58e7290810b7a32e9ec7a5feb76b22" => :arm64_big_sur
+    sha256 "fbf123dd10dc8a30d887f89ab29a32c33d69d2bd1f6282f45105be6dfc04d4cf" => :catalina
+    sha256 "f5e5aa748ab267541c15eccef09222d68bf6a13543af1fd698e322466acae894" => :mojave
   end
 
   keg_only :versioned_formula
