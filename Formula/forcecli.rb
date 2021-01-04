@@ -8,11 +8,10 @@ class Forcecli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "bd272e2bbe76e54caced1523e90ec249296d36b83dafdd27b74f3cfe2ab2ac0b" => :big_sur
-    sha256 "f8754b57754c8f8055c525f1eb7d237f491ec9441a5498bc970c9b18c759f796" => :arm64_big_sur
-    sha256 "b4e2f2425b38eb74ed2cff1b2ab9bfb99210f5a527bc82f3c2abafbd4a21d94e" => :catalina
-    sha256 "168945571441dec3ee1eece262ab3f8363e831a4ff585748355b31a59de24feb" => :mojave
-    sha256 "6597c18df4c105cda4053a33da3536c16bb5560d46caeb28b0040c4e50fa3d75" => :high_sierra
+    sha256 "64d643a4421cdb63de14ee703f020cb5b03c0f7e7aad09915f719c3b26d9b6a9" => :big_sur
+    sha256 "d67c0177daaa47d31fb17fe1a48dde54ccf14168d7bf821cfc6cc3a1578808ea" => :arm64_big_sur
+    sha256 "12c3c9887210c8dc606980b268e5bde2b3ae9ec15dc45e4ee7eac35e38c48ab1" => :catalina
+    sha256 "32ed79f122d17880baa3ead235ce8c3624a5663f45213020726bc3f6949c4988" => :mojave
   end
 
   depends_on "go" => :build
