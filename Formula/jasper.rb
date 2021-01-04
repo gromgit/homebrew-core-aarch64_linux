@@ -6,10 +6,10 @@ class Jasper < Formula
   license "JasPer-2.0"
 
   bottle do
-    sha256 "5bdfa3e3512a37f98fee42ebb1de00d6f1252344a827bc60329c4a1337d1ef0b" => :big_sur
-    sha256 "b65f3d2c159fa0c9be917e074d79d9ffd79bee8e9b320a5e62bca4e425a9009c" => :arm64_big_sur
-    sha256 "0920d1450e3545eb62d7446c8c1d8dcb9bc404e4a846230eb52963a212c43667" => :catalina
-    sha256 "d29a2f3e4b14c7e4756150764d36c2fe7780a62af94a8320feab5f27967cf451" => :mojave
+    sha256 "d3ec3a84be1bd061d7c64ef8434f126d1e6d6f086d177405b2e8e9c7651dcc79" => :big_sur
+    sha256 "638641e641f36d5c48fe361bb5f1096506fb3ce9337c4f15174faf593d8d4a14" => :arm64_big_sur
+    sha256 "d1c76e642247f71829a1bfafbff0ddb4f46a11b918299bec64175287033ac90f" => :catalina
+    sha256 "1c1317a1ef7c31f8586e98d3fb1604220d7c15a5fd3ccedd5c2cd3bbe0304769" => :mojave
   end
 
   depends_on "cmake" => :build
