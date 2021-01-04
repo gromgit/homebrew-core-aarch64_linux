@@ -2,10 +2,9 @@ class Vim < Formula
   desc "Vi 'workalike' with many additional features"
   homepage "https://www.vim.org/"
   # vim should only be updated every 50 releases on multiples of 50
-  url "https://github.com/vim/vim/archive/v8.2.2250.tar.gz"
-  sha256 "be1de89b4e41d17a4f27bb70210e9e7d334b80a8f488659617d0742e0cd1bbbd"
+  url "https://github.com/vim/vim/archive/v8.2.2300.tar.gz"
+  sha256 "fb426946fc61399222c57b4358ce243863ee7d70a816d7e7c2b6db9a8b356d54"
   license "Vim"
-  revision 1
   head "https://github.com/vim/vim.git"
 
   bottle do
@@ -28,13 +27,6 @@ class Vim < Formula
 
   conflicts_with "macvim",
     because: "vim and macvim both install vi* binaries"
-
-  # Fix vimscript issue that was fixed upstream in 8.2.2251 (just missed our cutoff of every 50 releases)
-  # Remove the next time vim is updated.
-  patch do
-    url "https://github.com/vim/vim/commit/a04d447d3aaddb5b978dd9a0e0186007fde8e09e.patch?full_index=1"
-    sha256 "ddc00f61dc75e3875ea490c56b9cf843f20292844bc34ad434c566ab30e2335a"
-  end
 
   def install
     ENV.prepend_path "PATH", Formula["python@3.9"].opt_libexec/"bin"
