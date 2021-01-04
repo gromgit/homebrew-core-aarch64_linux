@@ -7,9 +7,10 @@ class Pcapplusplus < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "92055e1311b0ef55f5e65481de87e64269b7a170713575ca167649c547fd0954" => :catalina
-    sha256 "25b1bf8b919fd755be9bd070265ee0f2b72de51375fc711af2de03ec4a73e046" => :mojave
-    sha256 "77422853771c5a32b0d7551e5acb9db83507c8072bc39d6fa84dfab161a30643" => :high_sierra
+    rebuild 1
+    sha256 "a85939e3b64f246eb7b4c7d0e0c8ec7eac3a108c17b33af1328d6c54a30dfeb0" => :big_sur
+    sha256 "d0f032c98d420d3b340e5b6421877e5c89dcf31e74b2dbb6fbed33bd153ab6be" => :catalina
+    sha256 "30ad1d79f76c841448e3e76bd25c9ddeae2c0ba543d11fbd621799f8da81077f" => :mojave
   end
 
   def install
