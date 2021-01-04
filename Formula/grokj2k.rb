@@ -6,6 +6,14 @@ class Grokj2k < Formula
   license "AGPL-3.0-or-later"
   head "https://github.com/GrokImageCompression/grok.git"
 
+  bottle do
+    cellar :any
+    sha256 "1c4919f407ffadd6727bbbf4ed216f41228545167fa1a82096d4eefab917dbdf" => :big_sur
+    sha256 "0e9306fc6d53a8287e68b9b7ce2c0781b5241dad730067faf1ceadf3278a5748" => :arm64_big_sur
+    sha256 "27f44155a3f8e5f4dd6d08503f76ba376ffc6ef1689fefdfb599ca55d529c0fc" => :catalina
+    sha256 "1136669a8671d8690a2bc86f94b9c0f0071496b3d54432500dc89b88e87b9840" => :mojave
+  end
+
   depends_on "cmake" => :build
   depends_on "doxygen" => :build
   depends_on "exiftool"
