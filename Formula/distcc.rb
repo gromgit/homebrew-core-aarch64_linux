@@ -1,8 +1,8 @@
 class Distcc < Formula
   desc "Distributed compiler client and server"
   homepage "https://github.com/distcc/distcc/"
-  url "https://github.com/distcc/distcc/releases/download/3.3.4/distcc-3.3.4.tar.gz"
-  sha256 "9d4cddfa8cd510f157c6c082145bc0949e6851e96f5ee907b5948bb6896b7d7b"
+  url "https://github.com/distcc/distcc/releases/download/v3.3.5/distcc-3.3.5.tar.gz"
+  sha256 "6a20c0896d546c507dbf608660d22f5da606509f52d2e97f6c47ca9b8c1cc405"
   license "GPL-2.0-or-later"
   head "https://github.com/distcc/distcc.git"
 
@@ -33,9 +33,6 @@ class Distcc < Formula
     end
     ENV.append "LDFLAGS", "-L#{buildpath}/libiberty"
     ENV.append_to_cflags "-I#{buildpath}/include"
-
-    # Fix for https://github.com/distcc/distcc/issues/408
-    inreplace "src/util.c", /\bsd_is_socket_internal/, "not_sd_is_socket_internal"
 
     # Make sure python stuff is put into the Cellar.
     # --root triggers a bug and installs into HOMEBREW_PREFIX/lib/python2.7/site-packages instead of the Cellar.
