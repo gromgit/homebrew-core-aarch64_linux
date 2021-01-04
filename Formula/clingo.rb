@@ -11,10 +11,10 @@ class Clingo < Formula
   end
 
   bottle do
-    sha256 "9a02b6ced933810e4cff55143989e37ef08d22bcf6a945a9682d3d73a0accedb" => :big_sur
-    sha256 "89d4cb89080b15aae7e9c53a9d2cb16f4782e704d7af991098ca2310ad29a947" => :arm64_big_sur
-    sha256 "5c6dd1f45a2cfe48e4616c6e4bcc45a8b9b5ab050016ad8db6c38bd810129985" => :catalina
-    sha256 "55a5d161667e66004aa6d56f92ab00ccefb6863094fd2ba3c113b6d20d741968" => :mojave
+    sha256 "6f4b60fa6d911b4740a30b6ccfa4d4014afb3b854027353ec59ad6e93e706ef4" => :big_sur
+    sha256 "b32ff9822ef258cf9eb034e7777ab748a57ae0c41d8dff7eddf1631dfb1acf6b" => :arm64_big_sur
+    sha256 "a009c8c0bfd4a47c515d94ad7d779a906e1ca8a69a99b5361d44314b750920ef" => :catalina
+    sha256 "c13ee502b4f99f4f8b9164a020262fdac0d557eb1527f932b798886efbacd012" => :mojave
   end
 
   head do
