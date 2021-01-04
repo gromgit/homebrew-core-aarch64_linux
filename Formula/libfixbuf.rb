@@ -1,8 +1,9 @@
 class Libfixbuf < Formula
   desc "Implements the IPFIX Protocol as a C library"
   homepage "https://tools.netsa.cert.org/fixbuf/"
-  url "https://tools.netsa.cert.org/releases/libfixbuf-2.4.0.tar.gz"
-  sha256 "bf20f9f7986a525ea6cc648d32f4ba30bfeb2a83f8c830bc39c48dfa7a415175"
+  url "https://tools.netsa.cert.org/releases/libfixbuf-2.4.1.tar.gz"
+  sha256 "8c535d48120b08df1731de709f2dbd2ba8bce568ad64cac34826102caf594d84"
+  license "LGPL-3.0-only"
 
   livecheck do
     url "https://tools.netsa.cert.org/fixbuf/download.html"
@@ -18,10 +19,13 @@ class Libfixbuf < Formula
   end
 
   depends_on "pkg-config" => :build
+
   depends_on "glib"
+  depends_on "openssl@1.1"
 
   def install
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
+                          "--with-openssl=#{Formula["openssl@1.1"].opt_prefix}",
                           "--prefix=#{prefix}",
                           "--mandir=#{man}"
     system "make"
