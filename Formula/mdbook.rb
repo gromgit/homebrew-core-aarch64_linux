@@ -8,11 +8,10 @@ class Mdbook < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2a6d98eb7767042009250b84490dea3582bd7a811dc2374d616ce602c826eafb" => :big_sur
-    sha256 "ec9b64410a5f75aa49360ba15f70695da94e648a216255782935256e10a4bbd8" => :arm64_big_sur
-    sha256 "59595db021b9ae3e8a2137f7c9deb740508cf110a3822f49715721d571870b1d" => :catalina
-    sha256 "12bd9ff40b7421497209163efb1e802dd3ca08e5b84fe5f5c7446eae0366d291" => :mojave
-    sha256 "0671b254178a018b1d5ce8e2d1a880886904ff93caebe3d0867a3a5423e35f6f" => :high_sierra
+    sha256 "8c7f9275b61725f5a0fd55dfa0f2b6bcee1f32c97ce0a3edddb794991c182f60" => :big_sur
+    sha256 "6c898809def13270a09f20cf42c59c368292493fb80dafaeb44e3ffd3da3ad2d" => :arm64_big_sur
+    sha256 "aa2d7ccc4217a17265f0f80c7108274007d62ee7f75d93039a36bef0dabf2af4" => :catalina
+    sha256 "8055c1481f4857452eb98bded515dc393610c82d985f86b6b995a40e2ed3b8f5" => :mojave
   end
 
   depends_on "rust" => :build
