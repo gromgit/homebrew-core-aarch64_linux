@@ -14,10 +14,10 @@ class Mackup < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "59cffa819c8619850341ccc11813648c8b421ec3fa73d0d116dbfb23fddae796" => :big_sur
-    sha256 "b69073a4a6b88a58eecd4bd274b5bfc50ef649712016aacbef3b0509aece6425" => :arm64_big_sur
-    sha256 "177e2e6cefb3cbbb301727dfb30d116b46b9a0a17e67f9601f226902946537f1" => :catalina
-    sha256 "9e1913542a61f77ca193300af533ef3d29a26f6862ab8d1d4b2eabfdd4dce47f" => :mojave
+    sha256 "24dca4cbc991aad8990c672e7a88fd975f33fefcdb0dbb70f9e6e0b10a19841d" => :big_sur
+    sha256 "be968ec450c3e2c28255f2c6e7928404e24498c907a05aed69e5a87e6ae8612e" => :arm64_big_sur
+    sha256 "df736bcc51887e9621c00d2948c989db4f1d4b5234ab7e702b49933fc212705e" => :catalina
+    sha256 "5f413d937d26828065204eaf532ab280c9d642448a0ee4f280fc667cb03fc9e6" => :mojave
   end
 
   depends_on "python@3.9"
