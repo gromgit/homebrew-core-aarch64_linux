@@ -7,10 +7,11 @@ class OpencvAT2 < Formula
   revision 11
 
   bottle do
-    sha256 "22ae4740a37fe1ea19a377bb7207e2f06417fd62e5fe9c19626aea1b740a7506" => :big_sur
-    sha256 "180d6d38c261fbb8d8a874fe21018c0ad1fa9e9a526e9234ff5645affe04512f" => :catalina
-    sha256 "9beadffa6f23d7c7ea58a501d88e8512a67ac4f0848b8a9920209fc6430ab0ed" => :mojave
-    sha256 "b90a2e7e26ef9d18a2f87a954a786a6bc983047fbcae2280b662df66e254e76c" => :high_sierra
+    rebuild 1
+    sha256 "115b11655bf2cc24b77186531be0f5a001c87bebbba4b9eadfff6e9d9df4c5bb" => :big_sur
+    sha256 "b922e9b3ec3db807a32450bcbca07e300d63c6b4c3d5670fd7274e10cca597be" => :arm64_big_sur
+    sha256 "cec589da16fc90825ef984f9fe5439e3c76a51d95c56eceadccbe133974e3b68" => :catalina
+    sha256 "c1f177ad25d49a2d3fd626592201a151c3153bb3a3cd8d4d333a654afd2f5ec8" => :mojave
   end
 
   keg_only :versioned_formula
