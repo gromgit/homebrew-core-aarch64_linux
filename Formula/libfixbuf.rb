@@ -11,11 +11,10 @@ class Libfixbuf < Formula
   end
 
   bottle do
-    sha256 "085adc7203ce2622842c3bf16784de83a77e0f3bc0a3295a48d952ad4c9beb58" => :big_sur
-    sha256 "b7d61c0a90e2e9f9640ab8f25f4ba553fa3691336cd43a79d4688b79df843621" => :arm64_big_sur
-    sha256 "39eac22cafeaa515259fe5b8ddd635b98c69ca42699107bd05e5560d285f6724" => :catalina
-    sha256 "5c63110b498601708f2669fa1c5c734a4d8d67abbdfdfd5056255c746ef6e6ee" => :mojave
-    sha256 "d76d8050c0355326777460e738008b3820b39c53ec38ee759c0c8ddacf0c090e" => :high_sierra
+    sha256 "1cafffbb92c6bba1c328d01d1c00fa4ed1191a93eec966a6a3dce31219ef0d05" => :big_sur
+    sha256 "d29c4e4bd8a1d13508214f781306188fe89e78579747aea4ab1166a9d33a4402" => :arm64_big_sur
+    sha256 "4e7eb768bb5499147e8c630e4620c356abba37fff0c54d69daf8fe2c9f752771" => :catalina
+    sha256 "576d20e23954424a4132ed8b1dd9387f78ce0cf3b401d1fa1ed0d436016a3713" => :mojave
   end
 
   depends_on "pkg-config" => :build
