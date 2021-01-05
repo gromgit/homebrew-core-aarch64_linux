@@ -8,11 +8,10 @@ class Libebml < Formula
 
   bottle do
     cellar :any
-    sha256 "9eade4a983de4668765edfeadde9708bfb548607d3ad267a6a3720694821df3e" => :big_sur
-    sha256 "6b3cbb866b17716253f5c5c7d56812c71b866b642adf81032bfdab708956dbb8" => :arm64_big_sur
-    sha256 "141c96c12242fb7db7e292f487b9e45be1c4c84a4e7d94f0eab2ccb0d72d8285" => :catalina
-    sha256 "010e20e9b1779db7e69666a10c93bfb6a87c06e513ed80c89ea319c674eb215d" => :mojave
-    sha256 "505546edc98c4e9a382c35d17e299023f2ca91b2641f71691993dc99690f79b0" => :high_sierra
+    sha256 "0c02fee60d448bc4c3964cf075692af11eafcc77df26eddb4e4120bd5d5f5191" => :big_sur
+    sha256 "66c6769cd2da8da5573a43d3f106b5f0218ac172171c18f3b555ea26ff8f5f8c" => :arm64_big_sur
+    sha256 "37fa610470ee8ced3f88e8e2a1222323f888d3b367105f9ca52ee055f7b789b3" => :catalina
+    sha256 "0dcc4f56f9b16dbc4fa84e9f79474491490948edb5f7d0a5f1243b315c2968d1" => :mojave
   end
 
   depends_on "cmake" => :build
