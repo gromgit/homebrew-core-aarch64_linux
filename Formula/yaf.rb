@@ -12,10 +12,10 @@ class Yaf < Formula
 
   bottle do
     cellar :any
-    sha256 "381c026a049cd90821c57cb05e97f66d1fd949c9e794578f9fa768132f67342d" => :big_sur
-    sha256 "cfa6cb6be5d5c9d2c3d8b56330d57a47fa822155a08fba519ed3dcec5b06613d" => :arm64_big_sur
-    sha256 "01a829d4aeb5fb22bee1fdf36859a514724ad593948301c195dd5dfc84b80168" => :catalina
-    sha256 "72647a3208e653d43e51ff6539b9853e08ec8960cc5cda8820e9e750e4f37c9f" => :mojave
+    sha256 "c1b74fbe1059282892a5b6ffaa20ab78a2a826e012dd9660ca3d47620cf5c5c4" => :big_sur
+    sha256 "76f4110e69d43358fe777fb8592a1b70a7d559f5907f7e8a49498ceffaefb58a" => :arm64_big_sur
+    sha256 "916e896ce18eac857a04e804dd1e71b5db9d35bb140c07dbf6da3db392022ca9" => :catalina
+    sha256 "a3cc7c4da5056644725dfe0316140886199c6151bf868e62765ba4c2fe07d0e1" => :mojave
   end
 
   depends_on "pkg-config" => :build
