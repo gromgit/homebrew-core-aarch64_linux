@@ -6,6 +6,13 @@ class Squashfs < Formula
   license "GPL-2.0"
   head "https://github.com/plougher/squashfs-tools.git"
 
+  # Tags like `4.4-git.1` are not release versions and the regex omits these
+  # (see: https://github.com/plougher/squashfs-tools/issues/96).
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   bottle do
     cellar :any
     sha256 "4eaaf37caa9e67d1c53458418a0b9bfee298fbc61f1e22df33a99c10ccb1b499" => :big_sur
