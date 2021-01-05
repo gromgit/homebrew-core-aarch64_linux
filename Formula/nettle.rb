@@ -12,11 +12,10 @@ class Nettle < Formula
 
   bottle do
     cellar :any
-    sha256 "5119f665e058b08045462a2ddfe8371cf20e1e2a7256e97df1c6741af7289b1c" => :big_sur
-    sha256 "a0ef6e7fce016174df9b20e42d04f02c525e081df2bc4b9f893773649df4e349" => :arm64_big_sur
-    sha256 "7ac7677ba653dbef81dd83ed8cde3dfcb7b464d04442886c396179932f4f9faa" => :catalina
-    sha256 "d378b026725d8d449ca6497ce2158b93c991a0e0326921a5f914bc4847da3a92" => :mojave
-    sha256 "07c65cb4d172b05065dcceb702b41ca3408b31b6154690c7a4cfa430b2de074d" => :high_sierra
+    sha256 "e02e4ae1f73b54c0976a2e7afdbe2f461a202362c51c68e341f289477a9dfb6b" => :big_sur
+    sha256 "0f8cf7b90122188810887bd0b4b6230b1cf07898f7a135f8832db744fe89bd0d" => :arm64_big_sur
+    sha256 "d36ac9557eea88d8bbc2395a722af383f51f15dba6d1334bff024134579be7f7" => :catalina
+    sha256 "f3fd4302a0084c4be612b8f5d0968a86360bf5a080fa56977d9b293274144a13" => :mojave
   end
 
   depends_on "gmp"
