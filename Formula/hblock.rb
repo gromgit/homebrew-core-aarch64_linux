@@ -5,6 +5,13 @@ class Hblock < Formula
   sha256 "e7dad9febc5205f19b36ce9268a41374931d27e0195a2d7504b62c2d1721ab7f"
   license "MIT"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "e983c78b4e45ffcef65cea8dbd253d0c7893670dd2edebfd489c234598122b0c" => :big_sur
+    sha256 "400142a4275501a8ea5630260a41169e4b2bd9ab711cd4053bb716ac14510c52" => :catalina
+    sha256 "631a6da27cd7728a9c87caed412ccfa1236a8023385bbd623b482609a18cc30f" => :mojave
+  end
+
   uses_from_macos "curl"
 
   def install
