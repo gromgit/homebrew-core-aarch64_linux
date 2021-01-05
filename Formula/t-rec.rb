@@ -7,10 +7,10 @@ class TRec < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5834c8ba10e918e09a7dafb9d0fa105a43a49a806b976d3d782efa11d898b488" => :big_sur
-    sha256 "5c62b07064981ce06ffd74ed2eba4d6b3736f66d23b0a0f748d98f0e56297562" => :arm64_big_sur
-    sha256 "61bffa0f5cb4e18408da5c6da95c5bf1fd4f75db8778a67683377b183720fc5e" => :catalina
-    sha256 "d8ace673e28fd8c6e1e81f08a92dffac20b8f094f963a3087c79da40072e27e2" => :mojave
+    sha256 "f0dc5fa278fd3471e48fd88c9a32438ee64bbe76af168223209257e916c31c29" => :big_sur
+    sha256 "e6d9025fc2431ff0d804c4dd48012403df72920606065ba97aaa5eefb5b428d7" => :arm64_big_sur
+    sha256 "78864b412b392899987016508643a504502533cc8abe0551fe2aec47bf1c0989" => :catalina
+    sha256 "3626f64942a310ec5dd37c3bff779418d8ec8d094514346db88f770932ecc162" => :mojave
   end
 
   depends_on "rust" => :build
