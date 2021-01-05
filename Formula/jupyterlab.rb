@@ -13,9 +13,9 @@ class Jupyterlab < Formula
 
   bottle do
     cellar :any
-    sha256 "1dbeea124f3ef40af35359371a3ead9202169a47428014fdb522e119d8c64cf0" => :big_sur
-    sha256 "e42c961813386519d4303dc9865ac2ea39ded0d5885f90fbc91c8fd2c444ce78" => :catalina
-    sha256 "66bdf0716f8f53ca245d6b3b9b3a3bb395207d0b6ea1352d86d90e7b762efcfe" => :mojave
+    sha256 "96654908c6d6f56330d839d8ebffc14d916d98d9cdc0c26ec1f92da66f76e24f" => :big_sur
+    sha256 "8b8577d3da2d3a5545abe091afca472913acdf46b1008d173321deff86132023" => :catalina
+    sha256 "ba9915763fb51e4dc145bfea79a4c2257b61af41a472ab8c26805ad2668ad2f2" => :mojave
   end
 
   depends_on "ipython"
