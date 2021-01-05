@@ -12,6 +12,7 @@ class Gtk4 < Formula
 
   bottle do
     sha256 "310c1cee59793970949da865c1bb63120391e5bb16aa34ad0676d75ce345b576" => :big_sur
+    sha256 "0fbc5903eb979a2e9f712b91bdff8cae08430290670e31fac8b3c517dd3655b2" => :arm64_big_sur
     sha256 "2a0ac2c181ee997054f3a445634395854abffe32a5f3c7de0f207d74d5cb4837" => :catalina
     sha256 "5c67410b8a00718cfd0f6367fa17d4325a322ea512c8d255a206187975818610" => :mojave
   end
