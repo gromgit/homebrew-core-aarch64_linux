@@ -10,6 +10,12 @@ class Gtk4 < Formula
     regex(/gtk[._-](4\.([0-8]\d*?)?[02468](?:\.\d+)*?)\.t/i)
   end
 
+  bottle do
+    sha256 "310c1cee59793970949da865c1bb63120391e5bb16aa34ad0676d75ce345b576" => :big_sur
+    sha256 "2a0ac2c181ee997054f3a445634395854abffe32a5f3c7de0f207d74d5cb4837" => :catalina
+    sha256 "5c67410b8a00718cfd0f6367fa17d4325a322ea512c8d255a206187975818610" => :mojave
+  end
+
   depends_on "docbook" => :build
   depends_on "docbook-xsl" => :build
   depends_on "gobject-introspection" => :build
