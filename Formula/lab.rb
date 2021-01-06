@@ -1,8 +1,8 @@
 class Lab < Formula
   desc "Git wrapper for GitLab"
   homepage "https://zaquestion.github.io/lab"
-  url "https://github.com/zaquestion/lab/archive/v0.17.2.tar.gz"
-  sha256 "467cb35793c4129e7da68e4c63ef5ee96e9ca43f933c88758e90850f0d6c77b9"
+  url "https://github.com/zaquestion/lab/archive/v0.18.0.tar.gz"
+  sha256 "b34b08cb20d16f541eb3bf428e0224b4905ee40bda9394e7da4df756ba1aa109"
   license "CC0-1.0"
   head "https://github.com/zaquestion/lab.git"
 
@@ -16,6 +16,12 @@ class Lab < Formula
   end
 
   depends_on "go" => :build
+
+  # fix the build and remove in next release
+  patch do
+    url "https://github.com/prarit/lab/commit/4f7ea880d638647ec907f7e5e6395498588b7bcb.patch?full_index=1"
+    sha256 "49e571927e5b85c226eacf55ad0b3918932ee526703fafb01002b541b011e80a"
+  end
 
   def install
     ldflags = "-X main.version=#{version} -s -w"
@@ -42,6 +48,6 @@ class Lab < Formula
     %w[haunted house].each { |f| touch testpath/f }
     system "git", "add", "haunted", "house"
     system "git", "commit", "-a", "-m", "Initial Commit"
-    assert_equal "haunted\nhouse", shell_output("#{bin}/lab ls-files").strip
+    assert_match "haunted\nhouse", shell_output("#{bin}/lab ls-files").strip
   end
 end
