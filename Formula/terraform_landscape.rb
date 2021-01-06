@@ -7,11 +7,10 @@ class TerraformLandscape < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "84580bda78971f31534c6caf48c12f2cbfedcc359d68dcf094d89e263d1fa8c9" => :big_sur
-    sha256 "a3e4ee0c52c10a093b7f98155b0c703706f8672bd2997aec587519911f6d292e" => :arm64_big_sur
-    sha256 "923ff33a2daf927dbc8932be5ce48ea831dee75856fbba608cd9b92337e14609" => :catalina
-    sha256 "553ff98671692fb3e8e6f5fe067b9bfe9ea9ab219936e235be1ac7976fde00b8" => :mojave
+    sha256 "1bcd487a444cb78b3afdd394442ae24c4c1fa1fad393d76451a64c33b539b10f" => :big_sur
+    sha256 "6bddaa5d9648cc10f137bbdbf0e05d10239f49dde7c6fed01c887e52b0ba5725" => :arm64_big_sur
+    sha256 "af2918fc17765a6cbabaa0aae039afe3c5aa00821581570901a89e0edc850285" => :catalina
+    sha256 "5afa045cd1b2974f6247f3a31ae1e0141e5e9091b4c81a2a4660d5d06c90ca20" => :mojave
   end
 
   depends_on "ruby"
