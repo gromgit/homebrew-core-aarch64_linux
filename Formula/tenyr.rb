@@ -9,6 +9,7 @@ class Tenyr < Formula
   bottle do
     cellar :any
     sha256 "da43ae225d840b6b9848228b32cbd6bf57788ddf496d6caab2657b9da2134bf7" => :big_sur
+    sha256 "d7534b8f75f3e9a6ceac1f1558b9446ad49af76e510075c989f37af79578f3b7" => :arm64_big_sur
     sha256 "0991aa650dda340466acc2a425ee4f8e87c29ae937eed4edae3c44c4680985c6" => :catalina
     sha256 "5fecaf3174f726e8387635af1c7607206f5a66a60bb7f1964dc5281a2473b9f3" => :mojave
   end
