@@ -3,8 +3,8 @@ class Dvc < Formula
 
   desc "Git for data science projects"
   homepage "https://dvc.org"
-  url "https://files.pythonhosted.org/packages/a0/e6/89ed43501e47817b662c9ce936f2c374c810b6433d8296fb2856db8d0580/dvc-1.11.9.tar.gz"
-  sha256 "d5f8c634a333be06d8d4d84a6ed92015c553846c1e36207b3aea235a44fb6dc1"
+  url "https://files.pythonhosted.org/packages/a4/c9/d6dc1bf4a522055e2386570f6f876e1bea74f8f5c41e139ba04fdda4a772/dvc-1.11.10.tar.gz"
+  sha256 "6b53ebf1bd5619836f131181402bb21f7b44109166e9db8f8d6a0d8c7ce9458d"
   license "Apache-2.0"
 
   livecheck do
@@ -30,8 +30,8 @@ class Dvc < Formula
   end
 
   resource "atpublic" do
-    url "https://files.pythonhosted.org/packages/8c/cf/c152396a909f206fae8efee77e22ced3dc4f4599bb51fc445d8f4a7e6b4d/atpublic-2.1.1.tar.gz"
-    sha256 "fa1d48bcb85bbed90f6ffee6936578f65ff0e93aa607397bd88eaeb408bd96d8"
+    url "https://files.pythonhosted.org/packages/ee/b6/5ed5e4eb3147ec1e419d8a32b56d3387aa4334eded304d237d38eeadcb35/atpublic-2.1.2.tar.gz"
+    sha256 "82a2f2c0343ac67913f67cdee8fa4da294a4d6b863111527a459c8e4d1a646c8"
   end
 
   resource "certifi" do
@@ -115,8 +115,8 @@ class Dvc < Formula
   end
 
   resource "GitPython" do
-    url "https://files.pythonhosted.org/packages/85/3d/ee9aa9c77a3c0e9074461d2d8da86c3564ed96abd28fa099dc3e05338a72/GitPython-3.1.11.tar.gz"
-    sha256 "befa4d101f91bad1b632df4308ec64555db684c360bd7d2130b4807d49ce86b8"
+    url "https://files.pythonhosted.org/packages/ec/4d/e6553122c85ec7c4c3e702142cc0f5ed02e5cf1b4d7ecea86a07e45725a0/GitPython-3.1.12.tar.gz"
+    sha256 "42dbefd8d9e2576c496ed0059f3103dcef7125b9ce16f9d5f9c834aed44a1dac"
   end
 
   resource "grandalf" do
@@ -135,8 +135,8 @@ class Dvc < Formula
   end
 
   resource "mailchecker" do
-    url "https://files.pythonhosted.org/packages/26/9d/64dcc567904e46109539882a2deb1da973d5efd4f7619253f20790923dd6/mailchecker-4.0.2.tar.gz"
-    sha256 "a52fa39f263ba761d67c6dd65523b889c01265fab1111485a630ca92b3cfd8fc"
+    url "https://files.pythonhosted.org/packages/5a/0d/513e57bf531843ea4613fec8b6843c3b44d57307c9e4d815875f79329d9c/mailchecker-4.0.3.tar.gz"
+    sha256 "00dbe9739c754366233eb3887c5deef987672482a26e814314c3e749fc7b1d1f"
   end
 
   resource "nanotime" do
@@ -225,8 +225,8 @@ class Dvc < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/39/8f/8cbda9eb259d37e0c6b21c67edfae7b13b1d2feed0ee3d7372da02fc0e75/rich-9.5.1.tar.gz"
-    sha256 "8b937e2d2c4ff9dcfda8a5910a8cd384bd30f50ec92346d616f62065c662df5f"
+    url "https://files.pythonhosted.org/packages/91/2a/557d387c3f2d86ff5ac9d8c8cabec6f00b4eaeaa0e234c0ffe7bbe0be973/rich-9.6.1.tar.gz"
+    sha256 "5ac9f4f7f6b0e32e7e412de127f15b94144e22c9a7896551474d640143bbaa7b"
   end
 
   resource "ruamel.yaml" do
@@ -240,8 +240,8 @@ class Dvc < Formula
   end
 
   resource "shtab" do
-    url "https://files.pythonhosted.org/packages/ef/14/6b75b49169e84019bdacecddb6137d01e005a5b3014c577e96bdd5131bca/shtab-1.3.3.tar.gz"
-    sha256 "1f7f263631acdf0a9e685bbf7126a0fa711c2d663db12441670b1cea3fa431d4"
+    url "https://files.pythonhosted.org/packages/99/63/0100420a832f176285f28cef3aa2bd6ef249dd2e66a00601019630c5f4fe/shtab-1.3.4.tar.gz"
+    sha256 "353f2a3a5178cd2df8eb746e7ab26a5039a9989e4386de8fd239d8c1653a8887"
   end
 
   resource "six" do
@@ -270,8 +270,8 @@ class Dvc < Formula
   end
 
   resource "tqdm" do
-    url "https://files.pythonhosted.org/packages/de/ea/171518e4f9aacbfd71ca969251f3b1508b00b35562cd5fe8fd47647f6253/tqdm-4.55.0.tar.gz"
-    sha256 "f4f80b96e2ceafea69add7bf971b8403b9cba8fb4451c1220f91c79be4ebd208"
+    url "https://files.pythonhosted.org/packages/9c/97/6627aaf69c42a41d0d22a54ad2bf420290e07da82448823dcd6851de427e/tqdm-4.55.1.tar.gz"
+    sha256 "556c55b081bd9aa746d34125d024b73f0e2a0e62d5927ff0e400e20ee0a03b9a"
   end
 
   resource "typing-extensions" do
