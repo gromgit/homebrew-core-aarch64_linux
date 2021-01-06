@@ -7,10 +7,9 @@ class Libzzip < Formula
 
   bottle do
     cellar :any
-    sha256 "fec84d2d418c645f0a736922e04421c14ee6cd19f849d3a3e3657c72f23b743e" => :big_sur
-    sha256 "dc85b70f378aaaf57f17c6a945e7a36c9c125941651de6d2c2d0c5308befd3dc" => :catalina
-    sha256 "777bdcb24dfc69b7d91298949814a0c54313c251ae80173b636e2baae298f228" => :mojave
-    sha256 "1663861e1170f3e34b94580d0905063d48703717efbea616010a239eb135f1e8" => :high_sierra
+    sha256 "da81c94d36933d34fa6b280165d2d2aa3c98521e846f8b62b615373d32fb0fa4" => :big_sur
+    sha256 "ebcf0e4129b0baf2da24946a2d4707c39b61821d5a5cab6231e15b740d0cf367" => :catalina
+    sha256 "081779c8b26112cf75cf3b02cf87641e45bb25ce50994fc312ccff0229c413c1" => :mojave
   end
 
   depends_on "cmake" => :build
