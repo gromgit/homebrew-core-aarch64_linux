@@ -4,19 +4,13 @@ class Rust < Formula
   license any_of: ["Apache-2.0", "MIT"]
 
   stable do
-    if Hardware::CPU.arm?
-      url "https://static.rust-lang.org/dist/rustc-beta-src.tar.gz#1.49.0-beta"
-      sha256 "364fc8350d30f104595e458e51599369ffc5f796bb91b893372ba2631229963e"
-      version "1.48.0"
-    else
-      url "https://static.rust-lang.org/dist/rustc-1.48.0-src.tar.gz"
-      sha256 "0e763e6db47d5d6f91583284d2f989eacc49b84794d1443355b85c58d67ae43b"
-    end
+    url "https://static.rust-lang.org/dist/rustc-1.49.0-src.tar.gz"
+    sha256 "b50aefa8df1fdfc9bccafdbf37aee611c8dfe81bf5648d5f43699c50289dc779"
 
     resource "cargo" do
       url "https://github.com/rust-lang/cargo.git",
-          tag:      "0.49.0",
-          revision: "65cbdd2dc0b7e877577474b98b7d071308d0bb6f"
+          tag:      "0.50.0",
+          revision: "d00d64df9f803bf5bba8714ca498d8f9159d07f6"
     end
   end
 
@@ -50,18 +44,18 @@ class Rust < Formula
     on_macos do
       # From https://github.com/rust-lang/rust/blob/#{version}/src/stage0.txt
       if Hardware::CPU.arm?
-        url "https://static.rust-lang.org/dist/2020-12-23/cargo-beta-aarch64-apple-darwin.tar.gz"
-        sha256 "efbc0e72533d4ca7def9a985feef4b3e43d24f1f6792815bdba9125af1f8ecdf"
+        url "https://static.rust-lang.org/dist/2020-12-31/cargo-1.49.0-aarch64-apple-darwin.tar.gz"
+        sha256 "2bd6eb276193b70b871c594ed74641235c8c4dcd77e9b8f193801c281b55478d"
       else
-        url "https://static.rust-lang.org/dist/2020-11-19/cargo-1.48.0-x86_64-apple-darwin.tar.gz"
-        sha256 "ce00d796cf5a9ac8d88d9df94c408e5d7ccd3541932a829eae833cc8e57efb15"
+        url "https://static.rust-lang.org/dist/2020-12-31/cargo-1.49.0-x86_64-apple-darwin.tar.gz"
+        sha256 "ab1bcd7840c715832dbe4a2c5cd64882908cc0d0e6686dd6aec43d2e4332a003"
       end
     end
 
     on_linux do
       # From: https://github.com/rust-lang/rust/blob/#{version}/src/stage0.txt
-      url "https://static.rust-lang.org/dist/2020-11-19/cargo-1.48.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "52bf632e337a5e7464cb961766638e30dfa28edb3036428296678d1aaf7d8ede"
+      url "https://static.rust-lang.org/dist/2020-12-31/cargo-1.49.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "900597323df24703a38f58e40ede5c3f70e105ddc296e2b90efe6fe2895278fe"
     end
   end
 
@@ -92,9 +86,9 @@ class Rust < Formula
     end
 
     if Hardware::CPU.arm?
-      # Fix for 1.49.0-beta, remove when the stable version is released
-      inreplace "src/stage0.txt", "1.48.0", "beta"
-      inreplace "src/stage0.txt", "2020-11-19", "2020-12-23"
+      # Fix for 1.49.0-beta, remove when the 2nd stable ARM version is released
+      inreplace "src/stage0.txt", "1.48.0", "1.49.0"
+      inreplace "src/stage0.txt", "2020-11-19", "2020-12-31"
     end
 
     system "./configure", *args
@@ -125,19 +119,6 @@ class Rust < Formula
       MachO::Tools.change_dylib_id(dylib, "@rpath/#{File.basename(dylib)}")
       chmod 0444, dylib
     end
-  end
-
-  def caveats
-    s = ""
-
-    if Hardware::CPU.arm?
-      s += <<~EOS
-        This is a beta version of the Rust compiler for Apple Silicon
-        (rust 1.49.0-beta).
-      EOS
-    end
-
-    s
   end
 
   test do
