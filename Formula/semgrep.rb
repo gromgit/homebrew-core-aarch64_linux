@@ -4,8 +4,8 @@ class Semgrep < Formula
   desc "Easily detect and prevent bugs and anti-patterns in your codebase"
   homepage "https://semgrep.dev"
   url "https://github.com/returntocorp/semgrep.git",
-      tag:      "v0.35.0",
-      revision: "1f5c79ceea37d6679ad3bd6c8549de199f557020"
+      tag:      "v0.36.0",
+      revision: "30c4eee3bad923cac66b03757ff43ce0f44b68e1"
   license "LGPL-2.1-only"
   head "https://github.com/returntocorp/semgrep.git", branch: "develop"
 
@@ -162,6 +162,7 @@ class Semgrep < Formula
       end
     end
 
+    ENV["SEMGREP_SKIP_BIN"] = "1"
     python_path = "semgrep"
     cd python_path do
       venv = virtualenv_create(libexec, Formula["python@3.9"].bin/"python3.9")
