@@ -3,8 +3,8 @@ require "language/node"
 class Appium < Formula
   desc "Automation for Apps"
   homepage "https://appium.io/"
-  url "https://registry.npmjs.org/appium/-/appium-1.19.1.tgz"
-  sha256 "c24f11fe3dba96a9c9d41300e53251b7e8423b88911abd4a5d1ef42bb77fffa0"
+  url "https://registry.npmjs.org/appium/-/appium-1.20.0.tgz"
+  sha256 "d715204d5de23b4acd238567841f3bf900d383a1b7d7a0647a85fa566be7fa5e"
   license "Apache-2.0"
   head "https://github.com/appium/appium.git"
 
@@ -23,13 +23,42 @@ class Appium < Formula
   depends_on "node"
 
   def install
-    # workaround packaging bug exposed in npm 7+ (bin smylinks are now created
-    # before installing dependencies) => manually create symlink for authorize-ios
-    inreplace "package.json", "\"appium\": \"./build/lib/main.js\",", "\"appium\": \"./build/lib/main.js\""
-    inreplace "package.json", "\"authorize-ios\": \"./node_modules/.bin/authorize-ios\"", ""
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
-    ln_s libexec/"lib/node_modules/appium/node_modules/.bin/authorize-ios", libexec/"bin/authorize-ios"
     bin.install_symlink Dir["#{libexec}/bin/*"]
+  end
+
+  plist_options manual: "appium"
+
+  def plist
+    <<~EOS
+      <?xml version="1.0" encoding="UTF-8"?>
+      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+      <plist version="1.0">
+        <dict>
+          <key>KeepAlive</key>
+          <true/>
+          <key>RunAtLoad</key>
+          <true/>
+          <key>Label</key>
+          <string>#{plist_name}</string>
+          <key>ProgramArguments</key>
+          <array>
+            <string>#{bin}/appium</string>
+          </array>
+          <key>EnvironmentVariables</key>
+          <dict>
+            <key>PATH</key>
+            <string>#{HOMEBREW_PREFIX}/bin:#{HOMEBREW_PREFIX}/sbin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+          </dict>
+          <key>WorkingDirectory</key>
+          <string>#{var}</string>
+          <key>StandardErrorPath</key>
+          <string>#{var}/log/appium-error.log</string>
+          <key>StandardOutPath</key>
+          <string>#{var}/log/appium.log</string>
+        </dict>
+      </plist>
+    EOS
   end
 
   test do
