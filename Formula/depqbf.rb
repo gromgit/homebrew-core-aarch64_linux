@@ -9,6 +9,7 @@ class Depqbf < Formula
   bottle do
     cellar :any
     sha256 "e86513b7cd6ad6ac68c7aa8a1738d8586fe6e20a7a46237dcbc3d54d735ff6d0" => :big_sur
+    sha256 "afc477a7b941f95abf0a3e7db86d60b2ee9ef9e8b2f4ecb84d84044a9dbb0bdf" => :arm64_big_sur
     sha256 "432518e2ccee50695a9e79b4fe558142d78945ef96fcdbf7cccf090d72ec6543" => :catalina
     sha256 "210b2363035bf7772b275036b26938a8a286da0ddbd93d29a72cbbcb16237c23" => :mojave
     sha256 "7c956f3b4e86d6f60e90dde3e25f6b5ce75f2ba75e756c9e4dd6debe46d2ddea" => :high_sierra
