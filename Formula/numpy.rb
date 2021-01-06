@@ -12,10 +12,10 @@ class Numpy < Formula
 
   bottle do
     cellar :any
-    sha256 "fb2e87332b99e24056b915e28a78e17a33c1a13547e2cc144760646421aee01d" => :big_sur
-    sha256 "a32c273bf47a9304a415ea8c58b801e255eb69f3fbc1c3054c03ecdba0e0da13" => :arm64_big_sur
-    sha256 "ed781d5ce1f7c7a8495860b27b577cc83fd4eb056ad2f7f2c630a17141ccd0e8" => :catalina
-    sha256 "3ccaa0bf93bbc235d04af89c2777252e7655f6b4ddcef09b4fb100f28b2a5cc1" => :mojave
+    sha256 "7cb95a573088edce3373802ba84005c2bc461dcb098f94b15320a9a32db42a25" => :big_sur
+    sha256 "eae47ff8333fc9d0c5364ce6d71300ad5bd57cafbe5b124b0bf13a318f562774" => :arm64_big_sur
+    sha256 "1d336f68b7bfacfbd57e3b348ffacdb842e418ba219914549547982c2765d949" => :catalina
+    sha256 "bc985b0768c1c33db763b1b9d181f960509bda57a7c6cb58605b54ac0df93d3a" => :mojave
   end
 
   depends_on "cython" => :build
