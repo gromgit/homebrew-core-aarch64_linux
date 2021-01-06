@@ -12,11 +12,11 @@ class Freeimage < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "3cd5e0aa1f14c7895f9fff9ce6f08dc2283efbbe29467155e1f1dfba8c500ad5" => :big_sur
-    sha256 "75e29ff6d4b7ebf62e9ef610f60bd8521cd749a57d2a2d5c967685a7b8c7e998" => :catalina
-    sha256 "8d8b14e27793669cd6d43bbb5956c312301e94562f0f5bfb8ee88709d4deed83" => :mojave
-    sha256 "fbb88260ac76a166399deca5b8fa4eb23fbbb02cbecaf418c8310d3d7b6fb192" => :high_sierra
+    rebuild 2
+    sha256 "468acef9f22a474ce87a95ae6f6ec96f1b11495fa04258c47d73c2bf5aa571ef" => :big_sur
+    sha256 "2c2575c037f36b9f4d6bbef4f1de69aec114b5630f3de9f3eb23afb185ce9183" => :arm64_big_sur
+    sha256 "f822ee25eee740ea83447986823f233bfdc8e5014c5299cd55ea7f8ae6a58c54" => :catalina
+    sha256 "3402d2a116db186d2c4dfee8665ecdf1f0e1a24620b462e760c386572371c94e" => :mojave
   end
 
   patch do
