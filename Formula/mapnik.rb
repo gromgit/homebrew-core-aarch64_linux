@@ -1,10 +1,9 @@
 class Mapnik < Formula
   desc "Toolkit for developing mapping applications"
   homepage "https://mapnik.org/"
-  url "https://github.com/mapnik/mapnik/releases/download/v3.0.23/mapnik-v3.0.23.tar.bz2"
-  sha256 "4b1352e01f7ce25ab099e586d7ae98e0b74145a3bf94dd365cb0a2bdab3b9dc2"
-  license "LGPL-2.1"
-  revision 4
+  url "https://github.com/mapnik/mapnik/releases/download/v3.0.24/mapnik-v3.0.24.tar.bz2"
+  sha256 "75520a98ff688f48e4dd36e86199530ea084b296f2d4972478db1fcb3475d71c"
+  license "LGPL-2.1-or-later"
   head "https://github.com/mapnik/mapnik.git"
 
   livecheck do
@@ -34,13 +33,6 @@ class Mapnik < Formula
   depends_on "postgresql"
   depends_on "proj"
   depends_on "webp"
-
-  on_macos do
-    patch do
-      url "https://raw.githubusercontent.com/Homebrew/formula-patches/57e635431e09fa1b00f3e1fd9574ad516de13308/mapnik/mapnik-2.0.23.patch"
-      sha256 "b946071a95a52757e1aabb03ed7768408b864e20f46cbea39bda2cd1499b256c"
-    end
-  end
 
   # Fix for Boost >= 1.75
   # https://github.com/mapnik/mapnik/issues/4201
