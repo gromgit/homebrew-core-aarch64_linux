@@ -7,9 +7,9 @@ class F3d < Formula
 
   bottle do
     cellar :any
-    sha256 "0bf1315a83f055c0a31d93d4ef7d906e774b8271979e4727ab3b544452a531b1" => :big_sur
-    sha256 "09a4635338429517f2892be552dc1909aabb4b433d6ade7515826cec6588f0c3" => :catalina
-    sha256 "d70d0469a39e6201238cb5212d6b900528d60dd19bc6949da2966a2c273b372b" => :mojave
+    sha256 "0bac4019ea861ad37466e7bfbd3c5ce7cc497af88b84bc3b281a1e65c90ec570" => :big_sur
+    sha256 "084b51e428b310c22349769db16e2d55ec467ce6711251536f63e33ef469c6eb" => :catalina
+    sha256 "4bf7e46f38dcecc2ce4d6d4e6ef1f7d0418cd3b6578f3f0d44d9b6708f858669" => :mojave
   end
 
   depends_on "cmake" => :build
