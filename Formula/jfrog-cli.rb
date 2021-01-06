@@ -1,8 +1,8 @@
 class JfrogCli < Formula
   desc "Command-line interface for Jfrog Artifactory and Bintray"
   homepage "https://www.jfrog.com/confluence/display/CLI/JFrog+CLI"
-  url "https://github.com/jfrog/jfrog-cli/archive/v1.43.1.tar.gz"
-  sha256 "8a4a2e2e01b59347a969446832b47e27cd7db75a14cf7a87661a1df73549c7c4"
+  url "https://github.com/jfrog/jfrog-cli/archive/v1.43.2.tar.gz"
+  sha256 "cf1f4be33be667044b59762e0e8b02c162946a0eb249bc33041411f117e25e38"
   license "Apache-2.0"
 
   bottle do
