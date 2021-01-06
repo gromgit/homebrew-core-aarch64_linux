@@ -6,7 +6,7 @@ class Grpc < Formula
       revision: "ee5b762f33a42170144834f5ab7efda9d76c480b",
       shallow:  false
   license "Apache-2.0"
-  revision 2
+  revision 3
   head "https://github.com/grpc/grpc.git"
 
   livecheck do
@@ -65,7 +65,7 @@ class Grpc < Formula
       system "cmake", *args
       system "make", "grpc_cli"
       bin.install "grpc_cli"
-      lib.install Dir["libgrpc++_test_config*.{dylib,so}.*"]
+      lib.install Dir["libgrpc++_test_config*.{dylib,so}*"]
     end
   end
 
@@ -80,5 +80,7 @@ class Grpc < Formula
     EOS
     system ENV.cc, "test.cpp", "-I#{include}", "-L#{lib}", "-lgrpc", "-o", "test"
     system "./test"
+    output = shell_output("grpc_cli ls localhost:#{free_port} 2>&1", 1)
+    assert_match "Received an error when querying services endpoint.", output
   end
 end
