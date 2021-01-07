@@ -24,10 +24,8 @@ class Libstxxl < Formula
   depends_on "cmake" => :build
 
   def install
-    args = std_cmake_args - %w[-DCMAKE_BUILD_TYPE=None]
-    args << "-DCMAKE_BUILD_TYPE=Release"
     mkdir "build" do
-      system "cmake", "..", *args
+      system "cmake", "..", *std_cmake_args
       system "make", "install"
     end
   end
