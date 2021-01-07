@@ -87,7 +87,7 @@ class Libgccjit < Formula
 
     # We only install the relevant libgccjit files from libexec and delete the rest.
     Dir["#{prefix}/**/*"].each do |f|
-      rm_rf f unless File.directory?(f) || File.basename(f).to_s.start_with?("libgccjit")
+      rm_rf f if !File.directory?(f) && !File.basename(f).to_s.start_with?("libgccjit")
     end
   end
 
