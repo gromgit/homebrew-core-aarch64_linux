@@ -12,10 +12,10 @@ class SafeRm < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2196591237f36b84a8f715907743e5da00bf8f47f8867734e9a2c048361717cf" => :big_sur
-    sha256 "10d74864cd66894c1458d9b7d0602ef07cd87064c8d3864f71cfe0a1471322dd" => :arm64_big_sur
-    sha256 "deccc20055e675864f7e13194eb720928b94f6e9799f1a83030db87f65dc645e" => :catalina
-    sha256 "0c2d57ca73b19cf2fc2d29b38863ab570ac75db5678842099c032f383fad2be9" => :mojave
+    sha256 "702abe3719e6da0cc02c5b43c1a9e3878e8dd2dd30b2e214634545afe380f061" => :big_sur
+    sha256 "843d018422bc9b5463f5c28c733ced5cd3a1c6c245de4c92f91da5f3b8bc458b" => :arm64_big_sur
+    sha256 "206ed06e860f2474decb800b55326bf0fc0c82cd848b8a414ba7181cb56028d5" => :catalina
+    sha256 "fadf91df17e3698589e9c38cb281ce3ee9d7ce34ce53695dcd5400678f408805" => :mojave
   end
 
   depends_on "rust" => :build
