@@ -66,7 +66,7 @@ class Libmemcached < Formula
           memcached_free(memc);
       }
     EOS
-    system ENV.cc, "-I#{include}", "-L#{lib}", "-lmemcached", "test.c", "-o", "test"
+    system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lmemcached", "-o", "test"
 
     memcached = Formula["memcached"].bin/"memcached"
     # Assumes port 11211 is not already taken
