@@ -45,8 +45,8 @@ class Minetest < Formula
   def install
     (buildpath/"games/minetest_game").install resource("minetest_game")
 
-    args = std_cmake_args - %w[-DCMAKE_BUILD_TYPE=None]
-    args << "-DCMAKE_BUILD_TYPE=Release" << "-DBUILD_CLIENT=1" << "-DBUILD_SERVER=0"
+    args = std_cmake_args
+    args << "-DBUILD_CLIENT=1" << "-DBUILD_SERVER=0"
     args << "-DENABLE_FREETYPE=1" << "-DCMAKE_EXE_LINKER_FLAGS='-L#{Formula["freetype"].opt_lib}'"
     args << "-DENABLE_GETTEXT=1" << "-DCUSTOM_GETTEXT_PATH=#{Formula["gettext"].opt_prefix}"
 
