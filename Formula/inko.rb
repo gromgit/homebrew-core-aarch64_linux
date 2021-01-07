@@ -8,11 +8,11 @@ class Inko < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "7af20bfa1f4614c84b01163942ccd0dd2e774838a02fdb4908fb6434e4179bc3" => :big_sur
-    sha256 "173b2e9e8e9f602ebecf42bd4cf2e2f1420c753897d1f956d134bfa048fd3dd8" => :arm64_big_sur
-    sha256 "db8025c76fa5f9fa13d7bc5b9effe7196fa42b998cae164e24855d4c94e799d8" => :catalina
-    sha256 "33b860614ff94ce6c69962ecce17bb14fb107c2164f863d0d4c0340759498de3" => :mojave
+    rebuild 2
+    sha256 "0541ff8865a88d0b293ed4a088245c9da57fb4535be08cdb141404bff07cacae" => :big_sur
+    sha256 "43926844caecb8ef58e68dbe731136c148bae98f4895fb1a0f749a2e0393a13a" => :arm64_big_sur
+    sha256 "fe5852c91f891f3866d009793086ca265155b76874c9623cf233b5927962b667" => :catalina
+    sha256 "6412cea3a6d18324476c2d3b2020f87e86959944048bd423c73fb1f46a959647" => :mojave
   end
 
   depends_on "coreutils" => :build
