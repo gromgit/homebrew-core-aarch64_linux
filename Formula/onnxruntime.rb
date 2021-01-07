@@ -13,10 +13,11 @@ class Onnxruntime < Formula
 
   bottle do
     cellar :any
-    sha256 "337d7698df55dc5e51642648c48b197d16b16724a18f8b3f2dd8d945ab3d9570" => :big_sur
-    sha256 "86072fc05e9cf6c79ceace253b63db065b7b0e102f411b86ef6491f5ef02cd8e" => :arm64_big_sur
-    sha256 "abba47ba776200c08639652a71b543152a60cb665cfeba5a6d10802329ac3637" => :catalina
-    sha256 "66ad4dd817c95e4f47e29ee2728d0f0e4e1e5e21b0bcb69cee1153b08fe115c9" => :mojave
+    rebuild 1
+    sha256 "d7883b8f973ba719e20283677ee50d42f64157217477adc22d54c6fbf0501a91" => :big_sur
+    sha256 "9f3e990083162dcee2d6162833ad33093565629ef5a6be16207c130f04424a03" => :arm64_big_sur
+    sha256 "5482c3326db23684cae036c35d311d21e9828fa7324646a3eb29cafd1390cf08" => :catalina
+    sha256 "61a7101bc2a72943b88fd82aab691ad5dabb58798ac55807b6c8b9c88dfd4c94" => :mojave
   end
 
   depends_on "cmake" => :build
