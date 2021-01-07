@@ -1,8 +1,8 @@
 class Flow < Formula
   desc "Static type checker for JavaScript"
   homepage "https://flowtype.org/"
-  url "https://github.com/facebook/flow/archive/v0.141.0.tar.gz"
-  sha256 "b8b58e07fb754560684444f91df2e4a12a90fbb27cb4b0056f904d17b38b6193"
+  url "https://github.com/facebook/flow/archive/v0.142.0.tar.gz"
+  sha256 "c58c32deeeab454f5d56a98269d668237c68010da18d686f40a5b1e1b1d9acfb"
   license "MIT"
   head "https://github.com/facebook/flow.git"
 
@@ -19,13 +19,6 @@ class Flow < Formula
   uses_from_macos "m4" => :build
   uses_from_macos "rsync" => :build
   uses_from_macos "unzip" => :build
-
-  # Fix "No available version of ocaml-base-compiler satisfies the constraints" error
-  # See https://github.com/facebook/flow/pull/8559
-  patch do
-    url "https://github.com/facebook/flow/commit/073b02dc69f8ddc901775dd13200b46e3e4f8c8d.patch?full_index=1"
-    sha256 "dccac3dfe0d893392517f9f9c85d37c00691e947a0c76c66bee369fe1e317682"
-  end
 
   def install
     system "make", "all-homebrew"
