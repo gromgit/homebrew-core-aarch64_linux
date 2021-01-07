@@ -7,10 +7,11 @@ class Monetdb < Formula
   head "https://dev.monetdb.org/hg/MonetDB", using: :hg
 
   bottle do
-    sha256 "6c0770dace7168e109ad0ec48fe79ea09cb7cb2ad7c5d3a85900c86b9770b71f" => :big_sur
-    sha256 "46058c916deab13eec10c6019822c754d96ee3d36094760db8d1ca8373aec077" => :arm64_big_sur
-    sha256 "0ba6a4cc4cc2569f77b22f695ba49621f834cd0125cfe003ac464c0633163440" => :catalina
-    sha256 "136d3b1c44e2611add81bbfa24a18328983abbad60712e4d95d8b1cde26982d5" => :mojave
+    rebuild 1
+    sha256 "08c0956fec0f0d652ae61d8782d1215fffc2192f125af549d69838a598b38269" => :big_sur
+    sha256 "0a000ce26a0f8df4b6561581bd958f786d1366dd21eaea588f9b26c6ef8f2af5" => :arm64_big_sur
+    sha256 "0411fad3516ead405af6b5e22b9ca765dbb45d9feebb8a5f5adf5c26dc3681c8" => :catalina
+    sha256 "89ee034ef0320a9232b8ed10952711163744fe5a199ee1ce20a4bf34c87e17d3" => :mojave
   end
 
   depends_on "bison" => :build  # macOS bison is too old
