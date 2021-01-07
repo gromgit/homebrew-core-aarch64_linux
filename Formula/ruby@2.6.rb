@@ -7,11 +7,11 @@ class RubyAT26 < Formula
   revision 1
 
   bottle do
-    sha256 "0c04882fcf548e2691cf451c790e0f85fda7fff90e2af57da10a88c48ac2f624" => :big_sur
-    sha256 "ba5a6fca19bd335981f578e567d4d248587d6c04c7a8ea52620dde0c57043a38" => :arm64_big_sur
-    sha256 "b9618a3e2b84a8364e2a9db594c8def107996030155908d1d2f932c97720ef46" => :catalina
-    sha256 "e14b839ac8de2cbca1b7f67803a2cfd085159045102c2c073d8d90e7bbeaf81d" => :mojave
-    sha256 "6be9583785d94e62384bb4642a5dd514653dbaab7acf77a6873b4e654c355ce9" => :high_sierra
+    rebuild 1
+    sha256 "90a02e7c3985c005348fb1b750c22dce1ebbbd1a8854f3250da9956308c0c65f" => :big_sur
+    sha256 "a96708875a8876b485f3363013325280b7bc430b2476f1a96eec868a576c3767" => :arm64_big_sur
+    sha256 "9a4c70bb351c889e3b529be56eeb5699331f6de5bd0564e1baf14c94af37f523" => :catalina
+    sha256 "30328442ad700d940208b1423bab0a0cdc84aaa02501de820ca6d7903fee09a3" => :mojave
   end
 
   keg_only :versioned_formula
