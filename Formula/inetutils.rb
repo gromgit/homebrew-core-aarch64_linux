@@ -55,7 +55,7 @@ class Inetutils < Formula
       # Symlink commands without 'g' prefix into libexec/gnubin and
       # man pages into libexec/gnuman
       bin.find.each do |path|
-        next unless File.executable?(path) && !File.directory?(path)
+        next if !File.executable?(path) || File.directory?(path)
 
         cmd = path.basename.to_s.sub(/^g/, "")
         (libexec/"gnubin").install_symlink bin/"g#{cmd}" => cmd
