@@ -37,7 +37,7 @@ class CfrDecompiler < Formula
       if build.head?
         lib_jar = Dir["cfr-*-SNAPSHOT.jar"]
         doc_jar = Dir["cfr-*-SNAPSHOT-javadoc.jar"]
-        odie "Unexpected number of artifacts!" unless (lib_jar.length == 1) && (doc_jar.length == 1)
+        odie "Unexpected number of artifacts!" if (lib_jar.length != 1) || (doc_jar.length != 1)
         lib_jar = lib_jar[0]
         doc_jar = doc_jar[0]
       else
