@@ -9,9 +9,9 @@ class Qcli < Formula
 
   bottle do
     cellar :any
-    sha256 "5c34cab4ba2a4ed66b61f6aeb084e8d3e62fd884b15b1a29d0b0db58a81b5b1d" => :big_sur
-    sha256 "c963f5f98a05b6d3830edbec34a71b76c7928d2d46a706a3db60f51eee4c8c98" => :catalina
-    sha256 "517abf2cb61e7b5625a13dbfc16257233a805cd7cfa20d05b56f612cd3fabc08" => :mojave
+    sha256 "8a4928c33d4be801e30927b50b2badf54a88c38a9e1c57715c0b4c87a893c739" => :big_sur
+    sha256 "a25bcb4a21a2a5eaa3fd3789fc2065312bbe09ce080810fc663d1cd133bb81e2" => :catalina
+    sha256 "c543c4a06c3c4c72c3d003047ece7850ac63d9e6e2e044fa09b48f20b9abfd5e" => :mojave
   end
 
   depends_on "pkg-config" => :build
