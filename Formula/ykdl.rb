@@ -7,6 +7,13 @@ class Ykdl < Formula
   sha256 "44e9d946c0e311a5469319a200af5bc5a6e461efa0f117f6a9608f820f22ecb8"
   license "MIT"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "39f6e7ed8a11ec0a6eab3cb3e3236d261aa2490fc9e5697c75ecfc37ae33bead" => :big_sur
+    sha256 "797ce1b9f6002a6153019355f957013c078fbe3a36a709293b32a717ff78c30d" => :catalina
+    sha256 "163c3593145fc6f85b00be215f20c5393219147af348c4c90dc34c942e5966f4" => :mojave
+  end
+
   depends_on "python@3.9"
 
   def install
