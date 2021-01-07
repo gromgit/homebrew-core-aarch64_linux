@@ -65,7 +65,6 @@ class ClangFormat < Formula
       args << "-DLLVM_ENABLE_LIBCXX=ON"
       args << "-DLLVM_EXTERNAL_PROJECTS=\"clang;libcxx;libcxxabi\""
       args << "-DLLVM_EXTERNAL_LIBCXX_SOURCE_DIR=\"#{buildpath/"projects/libcxx"}\""
-      args << "-DCMAKE_BUILD_TYPE=Release"
       args << ".."
       system "cmake", "-G", "Ninja", *args
       system "ninja", "clang-format"
