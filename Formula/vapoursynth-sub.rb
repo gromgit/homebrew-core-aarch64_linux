@@ -9,10 +9,11 @@ class VapoursynthSub < Formula
 
   bottle do
     cellar :any
-    sha256 "0e24bc268a9474c7bdbc9ad42bc45c5fe39f2d9907902de99eeac767d203c69d" => :big_sur
-    sha256 "39429d6f7624a04bb4f7b642c8218a84c0a29093940d4043f8de76bd2ad52805" => :arm64_big_sur
-    sha256 "9820afad13d04bbe3953faab3e86487ab4a56114f56b1cd65ec04fb67a30ae9b" => :catalina
-    sha256 "2bbf69b306c9b63fab385924cc728da830bea826ae778efc4fc2572ae9480457" => :mojave
+    rebuild 1
+    sha256 "f35a87fae9d63140f78a33f901599cbd86590bb2da555af4f3e3340d9dfda48c" => :big_sur
+    sha256 "f839dc3e4798aed76186c3b120196fc1a68bc834cbbbb400431e4c508ed3323e" => :arm64_big_sur
+    sha256 "502317a7a2b4c831d2ae2e581db7f58bf214baf86fa016245c4a279a3041f287" => :catalina
+    sha256 "ec16cf11157f1adf26cbf9b0439f7d7cc9504d345b68714c14f148cde27795f5" => :mojave
   end
 
   depends_on "autoconf" => :build
