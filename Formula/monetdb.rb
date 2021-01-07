@@ -27,7 +27,6 @@ class Monetdb < Formula
     mkdir "build" do
       system "cmake", "..", *std_cmake_args,
                       "-DRELEASE_VERSION=ON",
-                      "-DCMAKE_BUILD_TYPE=Release",
                       "-DASSERT=OFF",
                       "-DSTRICT=OFF",
                       "-DTESTING=OFF",
