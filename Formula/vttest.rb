@@ -7,11 +7,10 @@ class Vttest < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "16cefda230b7a7bff904595e5a4b528d51c46096994a0d3077d7ae687ecdf0e5" => :big_sur
-    sha256 "0782d07617d76ad09d71834cec53a1a647d4a72cf4b35065b8c4d60220d822f9" => :arm64_big_sur
-    sha256 "18550bfedc0f4b511f56c564509b911b2a62a26b24e6b9d95093e44300be1ece" => :catalina
-    sha256 "e3bda0ee8aa89fe4197dddb7fcddaf510424b929667a029a4c05a67824e0a46b" => :mojave
-    sha256 "80644da812e6ee1c267ef9007ae5d1fb65538e732f18c1dc3851860a4e0495ad" => :high_sierra
+    sha256 "d99c891ef72835d79954094937d025a7e78d62c7ac6daccb9f924e20cff191bd" => :big_sur
+    sha256 "146b65073bd5cbed58ccaa43a2af7854a45a642fd81e27418b23e232a9d5126b" => :arm64_big_sur
+    sha256 "67bea69b355e52582b491452592cf3e752ea8c229303b5aad91fbf79f8d943d5" => :catalina
+    sha256 "77bdb11dde1c90472cf217f61c02e05520cfe39ad8635aaaa28a7e3bddc7e370" => :mojave
   end
 
   def install
