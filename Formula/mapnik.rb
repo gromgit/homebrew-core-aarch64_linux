@@ -13,11 +13,10 @@ class Mapnik < Formula
 
   bottle do
     cellar :any
-    rebuild 2
-    sha256 "48a0c9620a9ab8b0bdc9a5dce860b10929131fd4111d7867bb65b3edc3e5801f" => :big_sur
-    sha256 "ae4b934d41a83aae33c9683075eaead205b6394b6907be7c9807bd6dd335bb3c" => :arm64_big_sur
-    sha256 "f729bbdbe769cf517ac2a13ee2ef427b37ff0a6f81a57ad80f1469daf0352404" => :catalina
-    sha256 "0faa41637365731b2208661702c1c4f3acef2d37e8733fbd063dc72d45b53f29" => :mojave
+    sha256 "e8e6c39326cb7982c82597fda507635ce80d6b2cbdf261d15330ae2d680332a4" => :big_sur
+    sha256 "a2383ae9820b4ad50ab5ab72e16d85374ff723eb37ad1ea3a07edc1452ab1286" => :arm64_big_sur
+    sha256 "e50c65129ab5a5a2348f7177620aae74094aa5830fb0b5717f907e12fca5ffae" => :catalina
+    sha256 "3e7c475e36c0d2712069736b3e983d1820ff0662ed735a182f6d475e876ea7c3" => :mojave
   end
 
   depends_on "pkg-config" => :build
