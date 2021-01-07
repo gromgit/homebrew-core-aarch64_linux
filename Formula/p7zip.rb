@@ -12,12 +12,10 @@ class P7zip < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "ecdc4815bfff50521a58b16dd8e5433734353361a0a25fe2f1a56aa8c102a567" => :big_sur
-    sha256 "bb11f5174c07fbe798fc288a68aa0844b55441189b4b30b15194b1216357db60" => :arm64_big_sur
-    sha256 "b9f5fb1321ce5738d0129b3c48f51fc36a947bd84450f95ce9caa90e767fbd1b" => :catalina
-    sha256 "0de20c4bd05dc5652ca5f188895bf74e52eb701aaed502a0d1271eb58236f898" => :mojave
-    sha256 "5951a42bd864da7dba5ef5781a2efba206daba8b6f75c60c0cfd910dae218482" => :high_sierra
-    sha256 "73fe6276e906f67cd28adc0f5a22c914d57fd3cfdd54134ad64e5330f710235a" => :sierra
+    sha256 "910811e37db23bbe76d169211d31d36156403f503654d04ed612d7863ea907f8" => :big_sur
+    sha256 "672dff61eba151f9c1117a1486ef2908dc0d834c355ca31f359ac56dafc75e3d" => :arm64_big_sur
+    sha256 "82e0e2a437f8f2e58e82d4823bfaeb479e89d325af3bd4300ab349a5b09fa132" => :catalina
+    sha256 "971a247c66fae4b54fdf169fdea79b79a85af6a8d6dc01a3119df014aa4316fe" => :mojave
   end
 
   # Fix security bugs and remove non-free RAR sources
