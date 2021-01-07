@@ -36,7 +36,7 @@ class Lasi < Formula
     # installed files.  Instead we don't build them at all.
     inreplace "CMakeLists.txt", "add_subdirectory(examples)", ""
 
-    system "cmake", ".", "-DCMAKE_BUILD_TYPE=Release", *args
+    system "cmake", ".", *args
 
     system "make", "install"
   end
