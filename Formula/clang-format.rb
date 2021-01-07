@@ -34,10 +34,11 @@ class ClangFormat < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7978ffd41bd627e9054073763e8fca8a90f282636127bd17719d1b8326885a5e" => :big_sur
-    sha256 "9b299661bc571c3d711d0203f9b3de3f50b36f744f339ad3261d35ddc5f15db0" => :arm64_big_sur
-    sha256 "679f98a5595d37a20e018471c3b12ca2bf18ba4e26fe5311caafc24c627b8d9b" => :catalina
-    sha256 "70bbea9c85e84c730b36bd4ea27c0b219fe902d2a5ef8f9415c33b1653114e3e" => :mojave
+    rebuild 1
+    sha256 "210043c597e9bde9a3f0237c1c31a8ef7da945594bbe9ae19dd1dd3775188ca4" => :big_sur
+    sha256 "a083e51ce20a166020467d8f706dcb5de057df3a597c75e73fe10d5036ad2cce" => :arm64_big_sur
+    sha256 "c43220c14172612d612f7d04df938b9ad646fdb29531c48cf4fc5a2ad17a196f" => :catalina
+    sha256 "8db2426af381b430422595e1841dd9d134f37ab8551a1ffbc6025bf2cd852f96" => :mojave
   end
 
   depends_on "cmake" => :build
