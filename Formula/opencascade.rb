@@ -13,10 +13,11 @@ class Opencascade < Formula
   end
 
   bottle do
-    cellar :any
-    sha256 "5e77b44f9574ac2894c1d6500e64bb75270e0751b3d61b8a34af0967790942a5" => :big_sur
-    sha256 "0b0eca3e82aeafba19c02faa6967fe4409c77157ea9e487162c062522c29e404" => :catalina
-    sha256 "8ef8c1fc9e70c03b35cde7f5f8eb699dd03a2a374149eef2bc09c43287dca079" => :mojave
+    rebuild 1
+    sha256 "51fd6769b4b4e75062fe5a6486dfe17166471519e1ea8bcb71d5b1f1756d28af" => :big_sur
+    sha256 "ca21853b2cb26e34cf5c3aa6b755689327e023c0b04e4a6d9ff4466a94d8b48e" => :arm64_big_sur
+    sha256 "fb7225acbf5c42a431a30667f5f7e227bf1f68fa1583ea987f0b3caf946c4cab" => :catalina
+    sha256 "1155bf50f284adb9ea20ffa2429a896505f2b7cdec1fe9a24654fb3b94a1f2e8" => :mojave
   end
 
   depends_on "cmake" => :build
