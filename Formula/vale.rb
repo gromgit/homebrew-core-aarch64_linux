@@ -1,8 +1,8 @@
 class Vale < Formula
   desc "Syntax-aware linter for prose"
   homepage "https://errata-ai.github.io/vale/"
-  url "https://github.com/errata-ai/vale/archive/v2.6.8.tar.gz"
-  sha256 "7a01dbe5370b61a16a3126b752399174256722885946111ceea995d8cfb9e70f"
+  url "https://github.com/errata-ai/vale/archive/v2.7.0.tar.gz"
+  sha256 "c6ffbd86275141ccf909b4d19b10a84932de6ace180a1c6206ded6ad71168b4e"
   license "MIT"
 
   bottle do
@@ -17,7 +17,7 @@ class Vale < Formula
 
   def install
     ldflags = "-X main.version=#{version} -s -w"
-    system "go", "build", *std_go_args, "-ldflags=#{ldflags}"
+    system "go", "build", *std_go_args, "-ldflags=#{ldflags}", "./cmd/vale"
   end
 
   test do
