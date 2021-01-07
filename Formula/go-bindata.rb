@@ -4,6 +4,7 @@ class GoBindata < Formula
   url "https://github.com/kevinburke/go-bindata/archive/v3.22.0.tar.gz"
   sha256 "1ad4c1e8db221aadd53c69d4cb4e3ebfeae203ecc61f40dfd4679c2b0d23a932"
   license "BSD-2-Clause"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
@@ -17,6 +18,7 @@ class GoBindata < Formula
 
   def install
     ENV["GOPATH"] = buildpath
+    ENV["GO111MODULE"] = "auto"
     (buildpath/"src/github.com/kevinburke").mkpath
     ln_s buildpath, buildpath/"src/github.com/kevinburke/go-bindata"
     system "go", "build", "-o", bin/"go-bindata", "./go-bindata"
