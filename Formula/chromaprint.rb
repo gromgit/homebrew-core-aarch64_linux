@@ -8,10 +8,9 @@ class Chromaprint < Formula
 
   bottle do
     cellar :any
-    sha256 "86aea9488123d54e9cab885c19f253061b70f07d2841bdb90fd8e2051211b7b5" => :big_sur
-    sha256 "6fcc7d4f57aeba72a414908d4d190bbbc755b50efca3f0b6e709974303078491" => :catalina
-    sha256 "42279265906afd2ee3400ba3db790a789dc04327b9fa4a56c744ec33a26aafb6" => :mojave
-    sha256 "e3e06be8864eb0bc81ec2b89d1c41a69c4c7609660dbf96b315234d36192c00c" => :high_sierra
+    sha256 "9112d72906e765de84dee2414ec9b21761c7ed4fc357c54e715ed70041add089" => :big_sur
+    sha256 "955a4681c1937d04e0e7608bc2514c4829b906c43bccf382b8451ad8624a2a77" => :catalina
+    sha256 "1e6727215e5c9e04823b2edb8625ebeec16be87a4b32d7636b35448d2e2ee4d6" => :mojave
   end
 
   depends_on "cmake" => :build
