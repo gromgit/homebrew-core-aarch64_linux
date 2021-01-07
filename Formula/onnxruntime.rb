@@ -29,7 +29,6 @@ class Onnxruntime < Formula
       -DPYTHON_EXECUTABLE=#{Formula["python@3.9"].opt_bin}/python3
       -Donnxruntime_BUILD_SHARED_LIB=ON
       -Donnxruntime_BUILD_UNIT_TESTS=OFF
-      -DCMAKE_BUILD_TYPE=Release
     ]
 
     mkdir "build" do
