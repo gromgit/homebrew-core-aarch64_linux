@@ -5,6 +5,13 @@ class OcamlZarith < Formula
   sha256 "f996af120a10fd06a8272ae99b7affd57cef49c57a3a596e2f589147dd183684"
   license "LGPL-2.0-only"
 
+  bottle do
+    cellar :any
+    sha256 "f70ad5d11b3a1c4eb35cd249c110a6e764bf2079eaf67f08ff7a253034256170" => :big_sur
+    sha256 "ad4a1aa81a4a1d2fc136e07e7574b448bb1a2fa75aaceafc109c5e1426e064f3" => :catalina
+    sha256 "51fde5a55a28bba380a16a462d0319626c1340e823d425777e8d9189bcfa6759" => :mojave
+  end
+
   depends_on "ocaml-findlib" => :build
   depends_on "gmp"
   depends_on "ocaml"
