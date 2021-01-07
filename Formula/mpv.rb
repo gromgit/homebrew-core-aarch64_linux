@@ -8,9 +8,9 @@ class Mpv < Formula
   head "https://github.com/mpv-player/mpv.git"
 
   bottle do
-    sha256 "82651bb364974f9dabe113a52c921888c97dddf33a02b38ae6557c38a6a5a128" => :big_sur
-    sha256 "64bc86054fe67befc54e50318a52ee71b711732b678a62c2609866beb12b7030" => :catalina
-    sha256 "7e1ca3cf5a9557299161f6584f5457c4fc98e9cb5d1001919587e74b675794ca" => :mojave
+    sha256 "3debe4c3806bf3d47ced197ed29eff431853b427e6a7a5c27ba6ac70ed35e7f4" => :big_sur
+    sha256 "9eda666ea53b6109b8fd354907a19dd5407995b8de1ac3d0781e59933c95c844" => :catalina
+    sha256 "b2301e7317c60dbfb27b199cd0966825e59c733c49d12864e703296cff85de21" => :mojave
   end
 
   depends_on "docutils" => :build
