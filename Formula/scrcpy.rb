@@ -7,10 +7,10 @@ class Scrcpy < Formula
   revision 1
 
   bottle do
-    sha256 "35b09818c9bf3d9e11b9894b28dc3333a5395a347932a019c773e21878452bc2" => :big_sur
-    sha256 "cd3bce189328659edc3b9a0fcc11274c12d75ac96696e42cacb042c400fd6448" => :arm64_big_sur
-    sha256 "940fbcda8626585ae3e48e8d5d9edfc4efe85b149eda28a0ea40d99c9caa5379" => :catalina
-    sha256 "ee046917f0fd4ed6f53a162c353ab4d4ab2c27fc10f243d56436a798dafa66ce" => :mojave
+    sha256 "bc5af06f2c3de38ac6a5f6bd46ff0f8a048fcf610f1909065ed670112021f53e" => :big_sur
+    sha256 "c66169f203ac1714e6f632989c1b15c95907a67f943efd38303945a4d24f136f" => :arm64_big_sur
+    sha256 "55b97c706cc08908698b79d9d46bc091bcd746111ed834fbaa32a43f85833bfc" => :catalina
+    sha256 "f954665b6b5d479a4f6329e66cd3f8256fbb5ba165ac418f5a9bb2820e57c547" => :mojave
   end
 
   depends_on "meson" => :build
