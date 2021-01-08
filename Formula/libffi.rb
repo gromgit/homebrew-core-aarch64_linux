@@ -10,11 +10,10 @@ class Libffi < Formula
 
   bottle do
     cellar :any
-    sha256 "76e28c8fbcddd000f371ce146ee3ca980b7feb54596d649e9309a1edc3225a99" => :big_sur
-    sha256 "337709900b0392483dc42c2c3c67ad6e4b9afb0885c7a409deadd2b0129c7c11" => :arm64_big_sur
-    sha256 "dd94d39946f53a8f11f78e998f22e46be9666bb265f80bb4714d5d63c1e16a68" => :catalina
-    sha256 "d6e5efd7521676dfc58fcba567514b898091c8580df4d6253f5dd40a7ee67c82" => :mojave
-    sha256 "7065f0d426921fa069c2494beded9de61e8720954f3f346103c8f871daa4ff8b" => :high_sierra
+    sha256 "e4f919965a0c3e9a2f654fc0a60f9aefea7f3163909e8db80f972f47540684e0" => :big_sur
+    sha256 "a152fa7616e05f95c0b4309ea40c84815bdf6973a684d4494956727ea70cac9b" => :arm64_big_sur
+    sha256 "ebe0ab83adc6d1141296e9f1645e21bef62805e7d067249c057c937988a5999b" => :catalina
+    sha256 "a8bfa1ff95aa296ca25bc522267665f04516603e668829d72dbc22ea8f9c21b3" => :mojave
   end
 
   head do
