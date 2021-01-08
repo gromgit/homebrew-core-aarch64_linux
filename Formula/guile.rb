@@ -11,12 +11,10 @@ class Guile < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 "fb9d84289c4bcb60f7e455b7a00438c9dd955c213ef4ff5c2d9362631d07f337" => :big_sur
-    sha256 "04c87af951220fc259ec3d1505ac676423b284feccd573a9786708952fe99c07" => :arm64_big_sur
-    sha256 "677c227a6a9b67df6592ffc26478ce5daa10f84eec4ed2ec7818f2012bb582f7" => :catalina
-    sha256 "a4f0eeab635c5360ba0dea52358aa9ee8ebd841d2a53e3ccda8b65f5684f679f" => :mojave
-    sha256 "5f83affb2fa8fda3734c2379260a4df5372432b3b399cd9af195fa0fb94da578" => :high_sierra
+    sha256 "ce8a02da2f7a50ee2df21ace1dac3b8335855907ec31224cea3ea5f89d82c463" => :big_sur
+    sha256 "ce524aaa55b2a6200e4ba4a05b3d40e726eef82750767bbdebf2243c9c766ee9" => :arm64_big_sur
+    sha256 "18a97a127b757c021f8f3b7257306cac30efd055d1bde8cee88874d62b72d8b0" => :catalina
+    sha256 "1775232d131525bf77530ab194a4688e1a14804669267ef22b6d78ab3e088b70" => :mojave
   end
 
   head do
