@@ -4,8 +4,8 @@ require "json"
 class Webpack < Formula
   desc "Bundler for JavaScript and friends"
   homepage "https://webpack.js.org/"
-  url "https://registry.npmjs.org/webpack/-/webpack-5.11.0.tgz"
-  sha256 "cf8fc82308a8196eab9d2e905a645b9eb65d72b704868880110db34112b54ffc"
+  url "https://registry.npmjs.org/webpack/-/webpack-5.12.0.tgz"
+  sha256 "7e3eb6bd2291ae33aaeffad5cdb73b593e0dc44363be9cc2b15b0ae119e57661"
   license "MIT"
   head "https://github.com/webpack/webpack.git"
 
@@ -24,8 +24,8 @@ class Webpack < Formula
   depends_on "node"
 
   resource "webpack-cli" do
-    url "https://registry.npmjs.org/webpack-cli/-/webpack-cli-4.2.0.tgz"
-    sha256 "09ca2de6deee939a4a2f8edf206a776caafb6fe3590ed1a8310a3e3b69ad4a18"
+    url "https://registry.npmjs.org/webpack-cli/-/webpack-cli-4.3.1.tgz"
+    sha256 "9d12d225e965d5c7d7d7145b215d297b93f47dc621f61a3185e0c69f09a64d43"
   end
 
   def install
@@ -59,7 +59,7 @@ class Webpack < Formula
       document.body.appendChild(component());
     EOS
 
-    system bin/"webpack", testpath/"index.js"
+    system bin/"webpack", "bundle", "--mode", "production", "--entry", testpath/"index.js"
     assert_match "const e=document\.createElement(\"div\");", File.read(testpath/"dist/main.js")
   end
 end
