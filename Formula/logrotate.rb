@@ -7,11 +7,10 @@ class Logrotate < Formula
 
   bottle do
     cellar :any
-    sha256 "d49cb61db83f22a4b739d78613fa45469ad3eeb03697c57a5a4ba15a5d135526" => :big_sur
-    sha256 "aa51eb4e3f0486441cb2f36515489534b7e62a5c2cdeb27e9e3f581995810856" => :arm64_big_sur
-    sha256 "cb0e376e957310bf7a5c3edcd4cdbc41b0f8d2aa12996a3b25f63174090b9358" => :catalina
-    sha256 "94ab5540c338fa37c83de5ee0f1150b170c5bbb5dd50dcab592c9de74893febc" => :mojave
-    sha256 "c40599d984c6c5da3818e7f86c95626bd3006e61ee0bd0e588bed07729bb1242" => :high_sierra
+    sha256 "8074cf8252a19b7be06a4600ab49b38c16b6ac884ca58744c1afc489cc04eac9" => :big_sur
+    sha256 "4302035ee1c9162e650852b38ad0b384cb3ad2f7e74a97ff72f57e2d50d5848e" => :arm64_big_sur
+    sha256 "a8a48494c6d57c20ac9ff7b38d0ca2ed41ec16640928f0f4c83bfb18ea744908" => :catalina
+    sha256 "c970d6bce04d119e0ba69d925b5230d61fa71b92d51792744d9590a9cb8ead18" => :mojave
   end
 
   depends_on "popt"
