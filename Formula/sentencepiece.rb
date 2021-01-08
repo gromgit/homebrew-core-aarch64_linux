@@ -12,11 +12,10 @@ class Sentencepiece < Formula
   end
 
   bottle do
-    sha256 "f75c30a42e7ac2e931a8a4b19a17aa3640eef3c2e65b99fa86fb2f6af34f9131" => :big_sur
-    sha256 "321f5b8fca3933b2133f97f7ebb0faa3c1384e108e1552a6f2b21f885fb1ba43" => :arm64_big_sur
-    sha256 "34eaf54eed2f033c154575c04b517742dea72d9fdba2d80515348acb9afb8793" => :catalina
-    sha256 "367c727302ab46993a8604b21f4276d051bb06e17dd91b27252639abee05d84b" => :mojave
-    sha256 "81a320ad4d6d5c92493f471735bc50fc38ca580d97dd4c710928e743f48d3841" => :high_sierra
+    sha256 "83a099af51f446cc49000ace498502aa9044e23eef0c9439574b001a271aa3f4" => :big_sur
+    sha256 "d250f1291b756967014f92acb2147c55e835b64e87d39e03332d0c2e21c48785" => :arm64_big_sur
+    sha256 "e06bc08957fb608cc82029b3ca8d47fff51a00e9af625a68e46b1c84638992d3" => :catalina
+    sha256 "33e69d005368a566c100f838f054d9fdc547720169da34ab39f8b773c8347e33" => :mojave
   end
 
   depends_on "cmake" => :build
