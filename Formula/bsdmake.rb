@@ -5,6 +5,11 @@ class Bsdmake < Formula
   sha256 "82a948b80c2abfc61c4aa5c1da775986418a8e8eb3dd896288cfadf2e19c4985"
   license all_of: ["BSD-2-Clause", "BSD-3-Clause", "BSD-4-Clause-UC"]
 
+  livecheck do
+    url "https://opensource.apple.com/tarballs/bsdmake/"
+    regex(/href=.*?bsdmake[._-]v?(\d+(?:\.\d+)*)\.t/i)
+  end
+
   bottle do
     rebuild 1
     sha256 "a7540422211c370618f938241419971aa6542298a0735a8e369b612c1f639866" => :big_sur
