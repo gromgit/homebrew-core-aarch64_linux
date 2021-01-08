@@ -11,12 +11,11 @@ class Inetutils < Formula
   end
 
   bottle do
-    sha256 "c91540c2e73378ddc2da24503537e096647b084e10bffd1d29311848c896f8b5" => :big_sur
-    sha256 "cb29bc9d6c805fec9e9957dd2f67c2883bc0f4d141a0e1d9164fb6914c5fca77" => :arm64_big_sur
-    sha256 "9f227bd3a357e822a8fbc399828a5ac3c06cc32c1d8d8e8da9a03a11f3df92e8" => :catalina
-    sha256 "cd8d9c2d67518442b03bd4c6573a22408136fbfa54822db89db9236dca9d31bb" => :mojave
-    sha256 "52c3e2f7e4d62cf0e0c742e81c026f591b9c331a338d110619b285d02a9d8b2f" => :high_sierra
-    sha256 "40fc6bf3589516e420a3452c7effc46cb9463150680ab08ceed27206ddfe0b2a" => :sierra
+    rebuild 1
+    sha256 "63458282aca520a5b2b3a0b01d9aa5e172aa6a26777232d8419363d20e36bd14" => :big_sur
+    sha256 "e105a42e4d6c1f5bb76118c4457c4caf0b029e1e0182f8d6a44b41c412c945f1" => :arm64_big_sur
+    sha256 "b65d88fb7a2bda5f958174977a913910398e0896e1c76216e7d8435949449e6a" => :catalina
+    sha256 "41ebb24e34edb639849cc192f08f024267eb23217289869244e17bacc0718c70" => :mojave
   end
 
   depends_on "libidn"
