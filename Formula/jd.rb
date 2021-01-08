@@ -7,10 +7,11 @@ class Jd < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "881c3988d2ff749b6b98008f025f69d377b6750b48c8fe7746830ebab26cb979" => :big_sur
-    sha256 "e2803ce038346619f7007e08c9ac922b79bb2aaba4a47a65eb164264bfd39e4a" => :arm64_big_sur
-    sha256 "cb706ba25f462bd0f8c32b3373022d1fe2bb9416b709c9f2b5d3d2b5c8c8bd64" => :catalina
-    sha256 "a3c5ff305e4e52d31cd410dc6b88efaea8a758637cf96e997b95be2d8a049abd" => :mojave
+    rebuild 1
+    sha256 "838e83415f9a81d03dbde62ddc086233979d5b52b279c0a1edbc6ef754099a4d" => :big_sur
+    sha256 "dcc2f40817719ab6db214cf102ef282e7d5bd24fdb55b3a0f3e242bea28c3e9a" => :arm64_big_sur
+    sha256 "ed5e5d307438bf853693618019f776d6907ae948fd06ae1f7317b6d886645895" => :catalina
+    sha256 "d58d2bdb2a3a7f81f4ee78ac8dec5b71a1f0c2b6b89e83be8a921a74a263ac2d" => :mojave
   end
 
   depends_on "go" => :build
