@@ -5,6 +5,11 @@ class Rpcgen < Formula
   sha256 "99d6c4ef4f32593df937a42d50400c17054247e875ab8cfb3bf0f2de19a90860"
   # Sun-RPC license issue, https://github.com/spdx/license-list-XML/issues/906
 
+  livecheck do
+    url "https://opensource.apple.com/tarballs/developer_cmds/"
+    regex(/href=.*?developer_cmds[._-]v?(\d+(?:\.\d+)*)\.t/i)
+  end
+
   bottle do
     cellar :any_skip_relocation
     sha256 "8168bcd5de6cb890aae1bd5deb67f732c193f6729606632d7ece185c10dd3b75" => :big_sur
