@@ -8,9 +8,9 @@ class Pdfpc < Formula
   head "https://github.com/pdfpc/pdfpc.git"
 
   bottle do
-    sha256 "f7ec854f156648a550bdeb912af1be98c91a84633d9eb789892d5c3d90e067ba" => :big_sur
-    sha256 "f51bac229c55f8b5781804bd47cffe72d8acfb47b9447e3f02fc998c8abd9526" => :catalina
-    sha256 "893f490903ffd59dd8c7fdba0a9f6c6a91dc320056d8ddff940422ba5429fcd0" => :mojave
+    sha256 "b2de1a251cd401445b171247210e1e3a729cd793eeddfe7e725039b4ea9d272c" => :big_sur
+    sha256 "6797e6bfdcff10e4e4b099d28547f608fbbc4aa94c0063d04b0e4d5195924f63" => :catalina
+    sha256 "ceb38afd15133764d031c8abca4aabbd39fb2407bac81e0b0c0d8b9511e249cf" => :mojave
   end
 
   depends_on "cmake" => :build
