@@ -4,6 +4,11 @@ class Mtoc < Formula
   url "https://opensource.apple.com/tarballs/cctools/cctools-949.0.1.tar.gz"
   sha256 "830485ac7c563cd55331f643952caab2f0690dfbd01e92eb432c45098b28a5d0"
 
+  livecheck do
+    url "https://opensource.apple.com/tarballs/cctools/"
+    regex(/href=.*?cctools[._-]v?(\d+(?:\.\d+)*)\.t/i)
+  end
+
   bottle do
     cellar :any_skip_relocation
     sha256 "605abc57733add4e0643d6ffa0186df37e1b4adb5461b9fcdd92d1bfb688f649" => :big_sur
