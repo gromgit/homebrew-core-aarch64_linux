@@ -1,8 +1,8 @@
 class Topgrade < Formula
   desc "Upgrade all the things"
   homepage "https://github.com/r-darwish/topgrade"
-  url "https://github.com/r-darwish/topgrade/archive/v6.2.0.tar.gz"
-  sha256 "ee23ba04962509ac188ec601dd67c0f8a7eae7d6532155c0eb848756264dbc21"
+  url "https://github.com/r-darwish/topgrade/archive/v6.2.2.tar.gz"
+  sha256 "385cd9334865051b5d6a5ba170b96e78e2913d6530ddcfcdf72590c382e3f065"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -33,7 +33,7 @@ class Topgrade < Formula
 
     assert_match version.to_s, shell_output("#{bin}/topgrade --version")
 
-    output = shell_output("#{bin}/topgrade -n --only brew")
+    output = shell_output("#{bin}/topgrade -n --only brew_formula")
     assert_match "Dry running: #{HOMEBREW_PREFIX}/bin/brew upgrade", output
     assert_not_match /\sSelf update\s/, output
   end
