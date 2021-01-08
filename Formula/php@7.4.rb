@@ -6,6 +6,7 @@ class PhpAT74 < Formula
   mirror "https://fossies.org/linux/www/php-7.4.14.tar.xz"
   sha256 "f9f3c37969fcd9006c1dbb1dd76ab53f28c698a1646fa2dde8547c3f45e02886"
   license "PHP-3.01"
+  revision 1
 
   bottle do
     sha256 "e447459267e0dea4986be0a1e3026a1a0e380188e6b0dd5d01c9b1c5a2625793" => :big_sur
