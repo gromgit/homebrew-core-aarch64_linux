@@ -7,10 +7,10 @@ class Abseil < Formula
   revision 4
 
   bottle do
-    cellar :any
-    sha256 "eca91cdd1c34992498be4e66835e28f207d53fff3f0d4134b33064ff35b2d295" => :big_sur
-    sha256 "4d318e65276877eb1e1fd8a6b2b9dbe404820a7047335e92614c3d1cbc362e4f" => :catalina
-    sha256 "ef95ef36dbaecce52bf3c3bc4118badb729ca633080db11f112a13afb3f63c72" => :mojave
+    sha256 "fa79730a5856560ccba352aa29cba48d74e80392b4cec9d86c22d2301f0109d8" => :big_sur
+    sha256 "27e532ad8f8cb95daa149b59bb536c8576ff43a3818ffe4612d4f9ce92f81a37" => :arm64_big_sur
+    sha256 "ee1b6459287b0207aad007be9aea3fc78d04ca9e381eda6eed2772e40eeb5dd7" => :catalina
+    sha256 "c6770d5ad076e5aea441ce4536e5aba065cac5a5aa515ee9b5eae6fc4cdbf21c" => :mojave
   end
 
   depends_on "cmake" => :build
