@@ -8,10 +8,10 @@ class DiffPdf < Formula
 
   bottle do
     cellar :any
-    sha256 "4674469aa1ae2b8d69ca18c68c48c5d498b61d3281bd993619aef4a92d0374d2" => :big_sur
-    sha256 "d4fa7e1f8a275e267966f42fdbbd375c1585189ab956e39ee94bc28affee7c92" => :arm64_big_sur
-    sha256 "319eae3538250786dd5eb7f20a65bbdd5b63f457f6faa6ef567f3429a0392c34" => :catalina
-    sha256 "b527158c00c42fd70d1019927cc6bedbca7585a4de2369dd7d7d44a6f795482d" => :mojave
+    sha256 "14f985b5563212be377d5f71dc657b098fa17d9aaaf35bf4ba18d8265c937d9b" => :big_sur
+    sha256 "86e670f863f6b811b886a7ae58754a44325ec03b72967e594e07c26f9b2f4e5c" => :arm64_big_sur
+    sha256 "c84026bc89b534fc6be2becf80af431c018bd6705a99d67b660b29a677be9bb7" => :catalina
+    sha256 "69eec0668722b2bac9a01115ef4304275ecccd1f9f32bf9d4393910f42e7aad7" => :mojave
   end
 
   depends_on "autoconf" => :build
