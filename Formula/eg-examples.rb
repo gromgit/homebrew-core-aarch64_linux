@@ -13,11 +13,10 @@ class EgExamples < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "204831d83039555366ef695c6bace02cd9898c4580cb81c22ea984594d74c020" => :big_sur
-    sha256 "045e7e5b71cab053dc77b1391c5f95b22eafcff36907e9aee570eecda2f80894" => :arm64_big_sur
-    sha256 "839e81e263addcbf1baaa179f0422a0a061a7a71f81f7a378017efa91f102ea7" => :catalina
-    sha256 "a895c53ab1408e34514b41d24a7a4a2d878e18eaacf2a17b469dbff88a2b0a76" => :mojave
-    sha256 "8c4eb15ac9f12f809dfe2e69196dea9e62ad7471275473092f2e94bfbc14ea83" => :high_sierra
+    sha256 "348688d0ce1a2c1825d2e84a35f61d2cc4db44e648c338be7459133fe8f5d7c7" => :big_sur
+    sha256 "3c3fb055e2133a02b36bf18841ff7cd10d6d769ef77d255ddf07e8485362c256" => :arm64_big_sur
+    sha256 "4f49955a6032186f8e9013a5c9b458584436873586b7f2363653e0c079531675" => :catalina
+    sha256 "0232745391eb98aad737439b0c85ba93d599fef62e906032c9da19df89b916d3" => :mojave
   end
 
   depends_on "python@3.9"
