@@ -9,11 +9,10 @@ class Whalebrew < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5a5c9c6a3132942741bc69ed57081a38570f783f316a5b922d20ee6c16efa4a2" => :big_sur
-    sha256 "327c9a2fd0832a249576f27df06fa4b8b32e370e9bf624b862198d2fcb2da531" => :arm64_big_sur
-    sha256 "13a6c59ba4c19570fcccef4b187755a4dfcc26038faba5168a3eb33644ade588" => :catalina
-    sha256 "0aeae5e296d00a1b00a53b6a5b9c9aea39731826ea882e3adb51e51bd3fed653" => :mojave
-    sha256 "14b39018ed3d1fa076250354d86e3f9296de24bd5a57144cd265666cbe29a6ee" => :high_sierra
+    sha256 "81bec2d30d79be2ae2102100ad99ae3c70d1b6729b4b93c32fe6ba743f9a6be8" => :big_sur
+    sha256 "8353be040989f4bff9fd7817d07d4c2d74865700760101e7063b511bb8c760b9" => :arm64_big_sur
+    sha256 "f901fadcfb4bea48de0317c43b6cbbe292dd58a271f3c42a1731eee964fd6ba1" => :catalina
+    sha256 "13cf645f882ac7cb4350af0b607ca0732c83a4260dc41a30b8cf37531c3d11d2" => :mojave
   end
 
   depends_on "go" => :build
