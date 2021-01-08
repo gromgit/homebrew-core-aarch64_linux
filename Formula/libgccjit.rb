@@ -15,9 +15,10 @@ class Libgccjit < Formula
   end
 
   bottle do
-    sha256 "d93b5ccce0c840e693b24c459d9dbff44fec6ced2eaa244c7e7f4dd84266220f" => :big_sur
-    sha256 "117cc5b4a304b069ddc072e61ea35c197d58099eda5a42ab59e342af10a5929c" => :catalina
-    sha256 "6efffb1c0e0d688d43ee54bee7228247e04baa9ddcdb9902f855e96e3ad30bb9" => :mojave
+    rebuild 1
+    sha256 "84b3e7df022c08bd70d96a3897ef0391e48b8e796c49f6600e3b82b65e1120e6" => :big_sur
+    sha256 "014c277de860ab4862ef33a056c559d62693a06f1667ca0b267349ec8f58ddf0" => :catalina
+    sha256 "3b40caf5f7bb340467374f4f020028d1450226436a72290db55ed5eb5a3bfb3b" => :mojave
   end
 
   # The bottles are built on systems with the CLT installed, and do not work
