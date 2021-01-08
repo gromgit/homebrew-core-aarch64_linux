@@ -14,10 +14,10 @@ class Flintrock < Formula
 
   bottle do
     cellar :any
-    sha256 "f5b9ba99bc430a893b70b2392a2ec5d143b01313a3fc6d334f3f50596f31748b" => :big_sur
-    sha256 "6ef8289d6d808fca678fa087274e51c190f31578b4b804a7fb902e4ee7ec27c8" => :catalina
-    sha256 "4e4adc00f0a68277db0b401183a28854867ac24d55eb5a6709a86b86efcd0d7f" => :mojave
-    sha256 "e7818b83d7de14cd4529d3eb7e15f677011398c94f55371240a9c31ce317592d" => :high_sierra
+    sha256 "93d4f64dcc0f46a09df349b5a8d939a9ce6f16225e9e2f16734fc7d6ef0ddbd1" => :big_sur
+    sha256 "a91dd481b9714abbc598429e8dd3183e8f90d95d775188a91d6f9364d473799c" => :arm64_big_sur
+    sha256 "4ca8b205cc0998d1881d1b66b98a2c3e4fad37fa6c0eff62c59997da10b665f9" => :catalina
+    sha256 "d2cece693184089c70aae85671a5363cc2c9091755da2b8c50377472bf69cac9" => :mojave
   end
 
   depends_on "python@3.9"
