@@ -12,10 +12,9 @@ class Efl < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 "f766369d2b57930065ab0212d2f42fe70eafcac40ff2f2f81b7a26122362fb34" => :big_sur
-    sha256 "236808836f14291b3257770ffcda4facdb9c357b856ca0d0feffd9fbb7d88417" => :catalina
-    sha256 "e23fa6f70de8f3008688a27d56f02543839d37f6f2e21fcbb595207366528929" => :mojave
+    sha256 "1d1b1c21d3699c59be49171c4e5c24fc9f77021338ef15dba46683d47242ec26" => :big_sur
+    sha256 "49489a9dbdf02a63c5659f2eae01b190883eb499200345a77b5e1226836fd875" => :catalina
+    sha256 "0050be647d2f1b3378e2d75f6c80726c37d839c2fe35df5794221306a0572c42" => :mojave
   end
 
   depends_on "meson" => :build
