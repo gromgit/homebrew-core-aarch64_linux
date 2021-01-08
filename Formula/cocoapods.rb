@@ -6,10 +6,10 @@ class Cocoapods < Formula
   license "MIT"
 
   bottle do
-    sha256 "a5532d13f702b48348c7d21c6b1a80b56c8e638aa0624e8d56e7497bfc17e657" => :big_sur
-    sha256 "83ab1ef7d462362083fbc9bf079d0fd437b47f5207a226a06833e5d2d72882db" => :arm64_big_sur
-    sha256 "6200a5f99093050fcd136c1886acf33c311e56031b1fded1ee60ec5632a6ef2f" => :catalina
-    sha256 "7b935fe6c4ac9e379fa66bca56eac7914826baad13a5935afdf250cc2bc919a5" => :mojave
+    sha256 "0caa8953926c827f62d53f9767aed0a904604c0425ea0557b24d738240db809a" => :big_sur
+    sha256 "08794cfd260bf206eed3496805816661da367bffdf9af748cd812b1c40a0de75" => :arm64_big_sur
+    sha256 "3a05cecba1a15c8cad8baa04b4e6be6eef8159c061b37096012de75132e7cd74" => :catalina
+    sha256 "0883b18c75e7cade594eced3d828ccacefafbbb3ead61667bca21e1fbc94970d" => :mojave
   end
 
   depends_on "pkg-config" => :build
