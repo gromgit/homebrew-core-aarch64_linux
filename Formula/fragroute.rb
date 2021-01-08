@@ -13,11 +13,11 @@ class Fragroute < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 "bc2aad3bd752e06ec939f1fd2f49ae26ceaff3175c6675be53c9dfebd41e694b" => :big_sur
-    sha256 "4dc9241d550bf71ddf6dff241a3335bc2ee812415ac5e191887ae9ff2c91ae39" => :arm64_big_sur
-    sha256 "7bd2a4a54f15b14b015e4defdfdf633db0b51cee12f126402dd99b708540ce9d" => :catalina
-    sha256 "76571eb2b3a3026700b58e589b6a2e30651898763b63b26f9bc8d78856cf7e51" => :mojave
+    rebuild 2
+    sha256 "6d9bc388969f3798ca6ff4bc6e4cf5ecbc03f995b5f21268ae57fd49a69ec1c2" => :big_sur
+    sha256 "35adad42ecbe16056a06708e7d0a3af1b9611aa3cfc1b1dc8cede40ee6f3f69d" => :arm64_big_sur
+    sha256 "1427f299e84d0b1662a3492dc9c69cd46776265dc8b76488752b19eee1126ba6" => :catalina
+    sha256 "2e4c49a602719693ed6a285aab60158a489d0f6592920b37a41e7ee933959ea6" => :mojave
   end
 
   depends_on "libdnet"
