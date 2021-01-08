@@ -7,9 +7,9 @@ class Driftctl < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9075399347eaa3358f31fc12479838d334cad0bc2b6f64e12b208da8aa3ab751" => :big_sur
-    sha256 "2929b884676303b658c622ec796cfac82afbe3fcca6cecc623477d3352fce493" => :catalina
-    sha256 "47e4cb1ace5e7d36eaa204a0903fc8bf2f48dd58a21063201ae421511f949c3e" => :mojave
+    sha256 "64501e027324a4f0a6320bccf181b820eb6107532db7333a4f4f0fca99757fdd" => :big_sur
+    sha256 "f5f2d59d4a85c138bc94c4a26eb6be20c905b7d62f09387e80d3dbd85754ded9" => :catalina
+    sha256 "f1e41724bff659405576e7b52b7bf37cce0bff432643e768d16ad221b7d4d938" => :mojave
   end
 
   depends_on "go" => :build
