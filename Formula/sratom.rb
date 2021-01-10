@@ -12,11 +12,10 @@ class Sratom < Formula
 
   bottle do
     cellar :any
-    sha256 "930146db04f23544f9e89c36b783761217e834035e0a6c6d934fc75367852a5d" => :big_sur
-    sha256 "3ad5979c9075e82b293802ef25203719e5adf52a720c1c4557171b4ae8648ee8" => :arm64_big_sur
-    sha256 "eb959c7930bef09a0d25e5213b387c28d0bcfe5567fe97327699c36ae966d7a9" => :catalina
-    sha256 "9a1ae4be9fbf3643fd782aef40928125d257244c368fa7e748df04b5ceb31a1d" => :mojave
-    sha256 "acbfea6ae53d91a461eedfe7ad0467be9fe2fe18ae34bb45896efa936b3684ce" => :high_sierra
+    sha256 "8f20c286f07c722945a6bd3afd0b44ce62dbd0bb39777d90cbeea43b8e65df4d" => :big_sur
+    sha256 "922ad15a5f15bf4c54ef685106b70658dce53581ae0ce680e13bc870fc1eab85" => :arm64_big_sur
+    sha256 "1ef0da557a528c1b979b78624de2bd6ff6b23beca8918ca94dadc4e5faa7783f" => :catalina
+    sha256 "881192ccb8c3553de14975ab6175614170c3cba891760e82d58a1ad194b70269" => :mojave
   end
 
   depends_on "pkg-config" => :build
