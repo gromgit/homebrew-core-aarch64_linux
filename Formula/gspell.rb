@@ -11,6 +11,7 @@ class Gspell < Formula
 
   bottle do
     sha256 "2faf4dc1eba31babb0699a27e513825e161c758a8f413c9f60bee4cb05e61b9d" => :big_sur
+    sha256 "e8165b2fe1d4033e4d69905a9ffd928ef60f4aec6dd410c43a1ac564a314e87a" => :arm64_big_sur
     sha256 "b7165cc3def086000bc01e62724c5ae303200ca3eff64f681ead49f80313db20" => :catalina
     sha256 "eb478bbf00c69404e64f21db962abdcd237d146a326d2779aaeae08f6414b8a2" => :mojave
     sha256 "24dd633197c7ea490125a506db6379f7b134efdd1f7426bb6d9c0830c1b09f98" => :high_sierra
