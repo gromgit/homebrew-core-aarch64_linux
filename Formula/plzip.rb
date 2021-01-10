@@ -13,12 +13,10 @@ class Plzip < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2298b8c622169d674adc1f9cbdd8099e9affff9cc4bc5b1365823b42954c4d02" => :big_sur
-    sha256 "fc19ad8f6b927a88fed750b5df94fa7ad55baa09aff72835031317ede87483f7" => :arm64_big_sur
-    sha256 "9cae6af29d979ef1e9ed1869f8a5013fe188f6c65ca138bed9a5f76ce178c881" => :catalina
-    sha256 "3e266c42c66babd4fbdfe82645ab876fc7224846e94b26a39183c57404e17c35" => :mojave
-    sha256 "0a5df85c11e9afb266709a907980424cd60f1d1fd3adda71e8b0f9939ddf72a7" => :high_sierra
-    sha256 "c26a4b45c09173a4cb8ab2a56d2c5bb9018e16332e637d4d617bfcd75f90c0ad" => :sierra
+    sha256 "6c79b456b6b1ea19d12efe0a1087f4b36092787a94cedacdfeb1186294e1f72b" => :big_sur
+    sha256 "9d197045d0de19677e6ce0079afb3cfb94e54360aa2c00cda3bf5a74031e6b40" => :arm64_big_sur
+    sha256 "9f278923d8c1d12bebbfa37b52816b85b8f4cc49e67ef7dc37de7ff1af9ea4ab" => :catalina
+    sha256 "fe9addff91b4833212aa8107a92f1775af9cc7d5d96de1466917c3f0a51ee912" => :mojave
   end
 
   depends_on "lzlib"
