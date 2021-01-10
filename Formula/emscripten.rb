@@ -21,9 +21,9 @@ class Emscripten < Formula
 
   bottle do
     cellar :any
-    sha256 "12ed7be9b509066598d45828dad7dad800e287a8cc8373be0bf03c85222ebeac" => :big_sur
-    sha256 "a4d006811787d98589df911506cdd41c2f3ec67ce4d776c953476bce746f7a42" => :catalina
-    sha256 "663c1a2d8e70ac68982bc7cbf9069aad19b30b597db091103434bf2ff722cce7" => :mojave
+    sha256 "48800d0fa4e87506b21bd9bd770f701260e38a38db5e70ea1ea01235974e5817" => :big_sur
+    sha256 "ffa23a77ca9960849cd6a21dacec13d25daf03b638e54a08365ac5970c5790ed" => :catalina
+    sha256 "986de7621ea1965fdc7c20cb54e864da4039c477b2700bfdaf34e4ad83ae3c30" => :mojave
   end
 
   depends_on "cmake" => :build
