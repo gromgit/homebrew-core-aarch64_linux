@@ -13,10 +13,10 @@ class Dxpy < Formula
 
   bottle do
     cellar :any
-    sha256 "47e94e855de48a6ca376f24a758ddc1a746e7ed013fdff6ffde57c32a275e0fe" => :big_sur
-    sha256 "9d650eb18f94e03faebacef02409b597b627da09e4a01742d806463d7d181481" => :arm64_big_sur
-    sha256 "059b9c72131c995d7e14f034ac6ecd363d4da35d3d28e8c05597218a38c35c73" => :catalina
-    sha256 "d240fb030f1101de94568dda8d6260ba30f8f21e922126182ab94686bfcdaab5" => :mojave
+    sha256 "734cab349139acbfced69ae68d08beace041b9f06782ffc435eb2e7eff2f9cd7" => :big_sur
+    sha256 "ba02d6cfdbd5b81d777ac5c849861cdd3c924ed8b45935e04681aa9a4db54a46" => :arm64_big_sur
+    sha256 "c07ac4ef1438f4e9d4803698ce0a8f22cc52f50c1eb863e6c8d28f27f249c338" => :catalina
+    sha256 "73440a442eda3526a034d326063367566ef56fc4b2aa83b17916cf29321fe9b3" => :mojave
   end
 
   depends_on "python@3.9"
