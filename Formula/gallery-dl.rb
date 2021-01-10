@@ -8,6 +8,14 @@ class GalleryDl < Formula
   license "GPL-2.0-only"
   head "https://github.com/mikf/gallery-dl.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "ebc2ad31f1b5f56247a345ba1f5f6caad8c3db569fca0437588ea16d65a9ba57" => :big_sur
+    sha256 "c9a37d99ca108f3cc540e2e5a967ff47d62d7be4429b2a04a41b5ef2a624af63" => :arm64_big_sur
+    sha256 "80c6ed68c08a973152a987726aaa38a3d894ddc374e7b76d4303bab8702ca154" => :catalina
+    sha256 "e2d353690354e0f916950f0da40ad4c9e50f0f8c900e2db1324970619aef4b4d" => :mojave
+  end
+
   depends_on "python@3.9"
 
   resource "certifi" do
