@@ -8,12 +8,10 @@ class BwmNg < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "81b97f5bfdcb51cef9927bb4459eefb6ef80083350accbfdd443e89809f29d1e" => :big_sur
-    sha256 "ad15b588b98b9ff4a70c111c8d674e1f267cf5d66d9347598d6c83a39b0e0630" => :arm64_big_sur
-    sha256 "99d28681821e0c8114f4d1ea8db15ff088beb61d755e657c4a43684292cf556d" => :catalina
-    sha256 "4126db28facbbd0c0575d166a4c30968c4449b8094430022d3c8455ec7481809" => :mojave
-    sha256 "4a8ffbfe0bc2c9bf93bd516cff8916e9ea1d9554d939f21c4f7e9bfbd02ab04f" => :high_sierra
-    sha256 "0c663c3fedbcdc690b553ccb88b6f69b94a4a70dea67e3d152dbaaa741973ba8" => :sierra
+    sha256 "174c1fe863ea893c778909824972bebf6691c399076db4ca638dc2cee3b8c065" => :big_sur
+    sha256 "5f572a2c3cba92b810273eec515a00b0dc406319efd33934a571e97a2f48fb9c" => :arm64_big_sur
+    sha256 "8ece99c9c9349e80ac741aa8beafc3ea77ae62035279ed5da0c79d201d762882" => :catalina
+    sha256 "34ce809be16ab1eef9106643f22ff223a8da78a6c8336bd86e14dd41dccbec09" => :mojave
   end
 
   depends_on "autoconf" => :build
