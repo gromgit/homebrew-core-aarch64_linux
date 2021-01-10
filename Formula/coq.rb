@@ -36,7 +36,7 @@ class Coq < Formula
 
   test do
     (testpath/"testing.v").write <<~EOS
-      Require Coq.omega.Omega.
+      Require Coq.micromega.Lia.
       Require Coq.ZArith.ZArith.
 
       Inductive nat : Set :=
@@ -52,12 +52,12 @@ class Coq < Formula
       intros n; induction n; simpl; auto; rewrite IHn; auto.
       Qed.
 
-      Import Coq.omega.Omega.
+      Import Coq.micromega.Lia.
       Import Coq.ZArith.ZArith.
       Open Scope Z.
       Lemma add_O_r_Z : forall (n: Z), n + 0 = n.
       Proof.
-      intros; omega.
+      intros; lia.
       Qed.
     EOS
     system("#{bin}/coqc", "#{testpath}/testing.v")
