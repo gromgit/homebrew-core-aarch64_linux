@@ -14,11 +14,10 @@ class Ansible < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "3999686e7366ebb71a4ef215087e08dca344f823ac9b041657e7e75e70402917" => :big_sur
-    sha256 "21d3cac05c189484ac87af659fcfd05c61c07ca17cdaf54397caba648b39eea5" => :arm64_big_sur
-    sha256 "a6c1fb4f681b052b528601365b117c924c4ff6dfb80500e87db36a5b76c66d03" => :catalina
-    sha256 "0a9e7db53e7ca79bb1e22ac01233e48b402d0a1fc0e7d2cdcbd4afb558ffd0c3" => :mojave
+    sha256 "3dccb66f1d1b34ec1bfceff6eb20ee289839f381706adf7baab0e1f70f9294e5" => :big_sur
+    sha256 "d223f508dfb0a42e6a8e64b2b60095e213c3520001c95b8931f18ce8d76bcfb3" => :arm64_big_sur
+    sha256 "ca9ef48086509b667bba2716ae22e4c2f94a8964a8e49d5d9a7e31e305a05c0d" => :catalina
+    sha256 "74d51c8654ea447c7b147b4dd3d118be56407045669b0058894f53501cf7cad7" => :mojave
   end
 
   depends_on "pkg-config" => :build
