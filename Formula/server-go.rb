@@ -13,10 +13,9 @@ class ServerGo < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0e168e5705de596db16a8b7e5bfbb07fc8d25d52ce7536badfa2ca06963e27fd" => :big_sur
-    sha256 "a8f9eb48ac79a628aa71ca08caeb8577a85e47b81e81968475aa5b318c536b42" => :catalina
-    sha256 "58996b6453268397e81337f7feb94b346297ba14cf1db24c23b0f05d0c19e420" => :mojave
-    sha256 "8e49eb94a30c9f97b53a6201a165e7f07e1904f4ad9e933c4bc9e613e7c6ff75" => :high_sierra
+    sha256 "0a4a8dfb56f8d155af2f145244ea98c5dc1dbc22cd34794731920ab988d9feba" => :big_sur
+    sha256 "27bf41849f2ca5517944c9255f478d2c2bc3e114b391563683ace75b5bd68be1" => :catalina
+    sha256 "b7bc5e04789a9402b32ede05549a25b8b0b269fcd690b00960692cfc5e001412" => :mojave
   end
 
   depends_on "go" => :build
