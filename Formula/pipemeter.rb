@@ -11,11 +11,10 @@ class Pipemeter < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "55ac3ec03d80003fd2274e7bcda397e52291c7b3749ead096dbcf6039816510c" => :big_sur
-    sha256 "4946ec7fe2fa750611027a6440859fd52f9b0286f077b1b1805daf92df001e68" => :arm64_big_sur
-    sha256 "ba82201ed8c010ce938f35dd987cab9ffd8d7b456cc5f4aeed8a638b88e84598" => :catalina
-    sha256 "0f56a78ed6cc3e8b8eaccd21f2697fb6d810d64e2afd42deebbb251b93622c06" => :mojave
-    sha256 "a599406cbf6dcdcef8029d156d00b81af91f585447e80c22b0bab27e8180cd99" => :high_sierra
+    sha256 "ef9f94223b9b5d583ca7f3714e85fbdc59721be6bdc31f46bda43cecb4a4c0b5" => :big_sur
+    sha256 "1ca7da50232374280744805d8497a42c4e8795d4592a1e6ec35fb3e51812cea9" => :arm64_big_sur
+    sha256 "faf2fcb90aebb9e26bfd1f9dcfd32bb43fd4247a87a466640dcd74824806da00" => :catalina
+    sha256 "73de834fc4df5c79baf9cffc35fbe14df34e35e8414c1d3648326de9a5ced34c" => :mojave
   end
 
   def install
