@@ -14,9 +14,10 @@ class GtkMacIntegration < Formula
   end
 
   bottle do
-    sha256 "f0d9bb8b2c933eed402589d7b767fb87fa42382f05790e318c8499f653f9e0e2" => :big_sur
-    sha256 "399875d7fc8d09a9a36fa064b0162b77495340320a402eef3ff820672659fcfa" => :catalina
-    sha256 "b313e1ee47a17b401455b055a4a8b79279a2016f682ee5239a6a915aa11f5884" => :mojave
+    sha256 "691c07cfd431e5388935a3b281b815f13cc3e7be8280962f88dfe86b5d2304b3" => :big_sur
+    sha256 "ef5a2b5f7fe43e02983c1ef32d1de720fdcfa5db08cb7ecb87ff06d14836dfdb" => :arm64_big_sur
+    sha256 "2fc4360143f0dc7464d4aded53ce3ba32bf08a094cffbcb431c748eb50a235ba" => :catalina
+    sha256 "36d524103f6ee6062af215b2fff733b950453a4b9c4d8f6e2f32451fc73d1d8b" => :mojave
   end
 
   head do
