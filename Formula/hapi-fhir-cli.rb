@@ -5,6 +5,11 @@ class HapiFhirCli < Formula
   sha256 "3d26f947aec63d9826a685403268b4db28ede4f6e7ced4026f28c2eb18c3f082"
   license "Apache-2.0"
 
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   bottle :unneeded
 
   depends_on "openjdk"
