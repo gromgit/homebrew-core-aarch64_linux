@@ -8,9 +8,9 @@ class Microplane < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "cd84d0aec16be620d405367c6afb6212fcd18495ccddbfc42594ea4cf14370a8" => :big_sur
-    sha256 "f69c2809ab3d97ae84dc78a8bea4b2f32a7de47630136be624af358e67d2d6bb" => :catalina
-    sha256 "5c03494a3311b7726cd8e894ef69b0d05e0208040c44e9598ab99e5f9b92858d" => :mojave
+    sha256 "dd71709815772fbf94f434f77f7426ce0544d2343471cfe7d9c71fd3e7e9567a" => :big_sur
+    sha256 "338b41245377f99989cc7ac786af29c075d7bec8764cedcb176fb21b9beb4ed7" => :catalina
+    sha256 "9adc70ddbc6fa4e70e1b006d33222de211caa09d58773e70d449e974482ddfc5" => :mojave
   end
 
   depends_on "dep" => :build
