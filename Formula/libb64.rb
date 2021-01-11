@@ -37,7 +37,7 @@ class Libb64 < Formula
         return 0;
       }
     EOS
-    system ENV.cc, "test.c", "-L/usr/local/lib", "-lb64", "-o", "test"
+    system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lb64", "-o", "test"
     system "./test"
   end
 end
