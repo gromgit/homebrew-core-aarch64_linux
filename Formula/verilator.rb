@@ -1,8 +1,8 @@
 class Verilator < Formula
   desc "Verilog simulator"
   homepage "https://www.veripool.org/wiki/verilator"
-  url "https://www.veripool.org/ftp/verilator-4.106.tgz"
-  sha256 "e31f43fcd984f17c0f10fb4e26bed4203919a5c8c9f1beafc9aafcb5f85d72b7"
+  url "https://www.veripool.org/ftp/verilator-4.108.tgz"
+  sha256 "8e8ec1de0bf200b6206035214f9071a5acc64bd2e7134361d564271e48552702"
   license any_of: ["LGPL-3.0-only", "Artistic-2.0"]
 
   livecheck do
@@ -22,6 +22,9 @@ class Verilator < Formula
     depends_on "autoconf" => :build
     depends_on "automake" => :build
   end
+
+  depends_on "python@3.9" => :build
+  uses_from_macos "perl"
 
   skip_clean "bin" # Allows perl scripts to keep their executable flag
 
