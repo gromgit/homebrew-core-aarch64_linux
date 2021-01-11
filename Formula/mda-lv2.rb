@@ -12,11 +12,10 @@ class MdaLv2 < Formula
 
   bottle do
     cellar :any
-    sha256 "c98df66e1d834f99c433066c4b64114c61b8a6f0b69d2efec156e27d229c3864" => :big_sur
-    sha256 "d82ee3c76fc7247c99ced5d4ea1450ac73e0488afc8f07344eba9ba32c9d2f04" => :arm64_big_sur
-    sha256 "d79b7ac328f0064f2ca3d14b4ddfb7dc999aaf5386f21e7122d239dca72dfbbc" => :catalina
-    sha256 "852451a5e46cacc35f5ca529d2a9edba3d6874c21e1d0478c46cafcb93c8291a" => :mojave
-    sha256 "616562cb40d0af01063e188d5d46a505455a947fc93c008b0f0eb6c65d0dd2af" => :high_sierra
+    sha256 "11305c6dd1065f380811fc8fa2058d2885360eabc95592a926e583fe43c0d6a7" => :big_sur
+    sha256 "70a7e6c2ec6687191da96a243d428d3a36f39f2eafbbea149fd2518dc70001af" => :arm64_big_sur
+    sha256 "479125c63a6736dbe110711d9978764f1b44bb2520aa9646c2ca2fb7aa914f4a" => :catalina
+    sha256 "d10c751b2b276f037f4ee8b4cbe00871fc390c47661957ba96713161b1f6411a" => :mojave
   end
 
   depends_on "pkg-config" => :build
