@@ -11,11 +11,10 @@ class Suil < Formula
   end
 
   bottle do
-    sha256 "aea75cb3be00abce7094eed0be51b10ce8fd5d7ac8bd3514989dfa5e9e209880" => :big_sur
-    sha256 "8594e4cb706f8fe8ec8b8b3c5d3663e0d0d7741f3a1f818263fd12477354c0d7" => :arm64_big_sur
-    sha256 "24627d37fb66084ea3c0577d2dac5df714611004fb5c8cd9fddf747005eaa5be" => :catalina
-    sha256 "f84ea1b5e7a2b786e5f989093d72b2c7270218ef637b30a60df73e0ee7a517fb" => :mojave
-    sha256 "9b197d98140760bbb1293b90674941a0b3d5614c9a7f8353bd5ff64c23f0cd3f" => :high_sierra
+    sha256 "77388b3a76d608319f011867cf66d6e212cc75b325654f892af85a952fdf39a0" => :big_sur
+    sha256 "ae9df00545cf2e938ad3a580e92b96b18b29de83645ca5f77c4f1e92e22f4df1" => :arm64_big_sur
+    sha256 "7ae30ca6e4c23a5f0a8b47eb1ddbf20ac6c06896cc181aaf53f344be72a11abe" => :catalina
+    sha256 "f21210f03d28fdd33d48e16094011aa4e1e0aa6f474eedb36932b2b0e1eabd32" => :mojave
   end
 
   depends_on "pkg-config" => :build
