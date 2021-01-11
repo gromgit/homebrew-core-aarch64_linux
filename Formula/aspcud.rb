@@ -6,10 +6,10 @@ class Aspcud < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 "5696aa5e1520bbdb4d6c279944325ab6b2bc0e0b109e648037bbec0aad880938" => :big_sur
-    sha256 "3271ff048eea3fb3bbf5b22b8f59bce767362cf2b5e15935be0b407fba8914fd" => :catalina
-    sha256 "3363c5cfa7f9ad4dd35ddb172c5eb878a504000bae59a477e5ea9246fe27680a" => :mojave
+    sha256 "c934a46742cb4d96d62a3e15dd9e0ada641672f405b1a96edc3f71dac2c87036" => :big_sur
+    sha256 "c984eb4cfd2892c3cca7df260064546275a82fa02c01996ee65ecdf8973f27cb" => :arm64_big_sur
+    sha256 "3b19a6ee9f466789d05533e5614ae6daf9cf4abc4e2f6347ad401ea7d4d1040a" => :catalina
+    sha256 "b5d0df64bc57c7f929b00f04617f9b1260e7c3715abe68b98559c8b693070add" => :mojave
   end
 
   depends_on "boost" => :build
