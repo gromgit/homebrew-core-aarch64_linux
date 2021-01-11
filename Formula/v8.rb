@@ -13,10 +13,10 @@ class V8 < Formula
 
   bottle do
     cellar :any
-    sha256 "50f51a34a06ca28c52401df43275755396b7fdee7e8f18356cedf026884783eb" => :big_sur
-    sha256 "e98659632153492b81057e7c7b155f5b2c846536b606319a43c01844613f7466" => :arm64_big_sur
-    sha256 "19550a7952ac8e8882e746ec5c9cd17f8903a6e1e3859bd10c3255f373af4e13" => :catalina
-    sha256 "b8222edfa40c8838b910eefe67b17c5b278447e94dc4d365ae9cb55d0e35d7e9" => :mojave
+    sha256 "cf43ee1269cd2b69ed3d9f70845aa5b362f27e68627c012b8a0aa2b92251c460" => :big_sur
+    sha256 "20dd91225bb39478a1f7f6ef2660cdf7fb4539e9c71b414826f54566a88a219c" => :arm64_big_sur
+    sha256 "b07dbd5045ea5a4e78db22e2ceaaf7b511db0e5fc6c2c2950cb4d966add8356f" => :catalina
+    sha256 "4b9767f4bcfb37ef65cfa064c656c50a8b3c8aa1469466f6e5b94183d2525df0" => :mojave
   end
 
   depends_on "llvm" => :build if DevelopmentTools.clang_build_version < 1200 || Hardware::CPU.arm?
