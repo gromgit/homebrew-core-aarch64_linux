@@ -7,10 +7,10 @@ class Bingrep < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "18a5d9c56b49961303a17cb37da53d43ff0c5ebe80730f3a8fcc08b9f6405b7b" => :big_sur
-    sha256 "38cb293ea71d8d11e422838e378cb67b09334590ed501e45b9a0f6da7d70f3ac" => :catalina
-    sha256 "cef323546a1e6978ca5a67f9f18333819e318bbe136d9ba210c1fbd89f4af82f" => :mojave
-    sha256 "d63ae62eff912723629b9d991fb77771f700ee306cf3b3cc40a934e3f2f13dd1" => :high_sierra
+    sha256 "ef4cf4c58851cc931c11a0bdb3686c4527b6f1dff1c7a8f3decf0125cef8ae56" => :big_sur
+    sha256 "3006a4b60bb139967b5df41ebf5b0c249e555f67d7cbca687f71c44a689c9a39" => :arm64_big_sur
+    sha256 "f7f25ab475eb4401fcc7a117236e0fa9d50d210d470dd21678cc45e38cc87abe" => :catalina
+    sha256 "32512bb7405dd8006668cef6c5f837c8d65d4877e4a0e7a0ad51120d0cdc070b" => :mojave
   end
 
   depends_on "rust" => :build
