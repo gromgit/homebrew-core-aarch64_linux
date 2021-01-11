@@ -8,10 +8,10 @@ class Cpm < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b727c24a007032e7f5dcf007badbdce7ee6217f7a2d70eb981658d7a875f615a" => :big_sur
-    sha256 "61f9281bd193146e1f4c78cda253c0f6f7a12bec03ae6a2f771a17ecb552c508" => :arm64_big_sur
-    sha256 "727e43975204542a54757f7d585214863a95bc528607cfbf91b68be8e304c35c" => :catalina
-    sha256 "0b4623144642687031a9b28e96282112baec095b7b226d1560c390d3a57a8c89" => :mojave
+    sha256 "00c937cca67b30b62f57f395a3b2b65023ce0fc22ecc6898e5632a21a8c3cffd" => :big_sur
+    sha256 "6ae4ce127f80c7c1f72a651c5ae37531726e431b69c41f90e4f2c90b56765ac0" => :arm64_big_sur
+    sha256 "c1c3eb60b9a990d9534f28d44990449b674e6c03544fcf2f3daeb3dde4ab700f" => :catalina
+    sha256 "c04b9529d213461432fb0028c66587f3890d1044376f260b0466f48357b7c2d7" => :mojave
   end
 
   depends_on "perl"
