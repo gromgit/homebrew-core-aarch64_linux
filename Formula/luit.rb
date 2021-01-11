@@ -5,6 +5,11 @@ class Luit < Formula
   sha256 "c948da3c8b163e8e8f23cbe1255e7f3fa234c48aaf470b201ce55a3ecb4ad985"
   license "MIT"
 
+  livecheck do
+    url "https://invisible-mirror.net/archives/luit/"
+    regex(/href=.*?luit[._-]v?(\d+(?:[.-]\d+)*)\.t/i)
+  end
+
   bottle do
     cellar :any_skip_relocation
     sha256 "15a8a5131d2751a372eb1304cff89af4a0437255de8b35221611021cb810d6b9" => :big_sur
