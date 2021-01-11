@@ -8,11 +8,10 @@ class DotenvLinter < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "ced7a6252dfccabeef5bebe57d826ff2d47ad169fe675769194ff8a670a74261" => :big_sur
-    sha256 "3b91a8fbc50e0e909d5235f37396db9ce4e316f764a9a443f00fbc0a5d7fc34e" => :arm64_big_sur
-    sha256 "ea3cd8fbb12d6c5aaa962d20a07f6a3aabb418cf6142a9fff057fecbf63c02cd" => :catalina
-    sha256 "6dc5965ef3f36811e133c28636dec3b06eed99782fbfc980e83d775722a979e0" => :mojave
-    sha256 "8bdecac347a74490c4972a31a4c713cfb438e5531b5dc626fea42d495ad932c3" => :high_sierra
+    sha256 "851044d08dcdaa0d16d0fd1cc0743b7539ef464b7c708137a065f78e9b6d5727" => :big_sur
+    sha256 "394d505159a7fa57862d7231e2aad10ce33836f54dbfbc2010c1d57d5172eb27" => :arm64_big_sur
+    sha256 "7e21af0a9acb92e757a0d0b1b086548c91ea8ef10cce7487797f9bc2c66825ba" => :catalina
+    sha256 "d9cd2cfa877f183617e0154482350605934e6a4fbbddff0c002299fbb079d87b" => :mojave
   end
 
   depends_on "rust" => :build
