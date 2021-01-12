@@ -7,6 +7,14 @@ class Richmd < Formula
   sha256 "c91c2587dba9aa8dd30c5f090e700f54433ccd73e209f4737e10385c4c1cbf19"
   license "MIT"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "171191f6478e6e5d080e73f883c424625dd32cfc51b8dfcb4e69685d30302aaa" => :big_sur
+    sha256 "ffc25b76a928f678bed98027aa249ab9b88b15e8905ca33fa7e66433d83dd1ba" => :arm64_big_sur
+    sha256 "1d125f573f16cafa4c637862ed81b95770259b3895949746962c08c874475e5c" => :catalina
+    sha256 "66a0cb03e0b6f5ce7a12089dd6361732c03b0fee132b850303fce73c319f06d2" => :mojave
+  end
+
   depends_on "python@3.9"
 
   resource "colorama" do
