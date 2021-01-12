@@ -7,10 +7,10 @@ class Gdu < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2e394192ec479375b483f5a882e01f1ade6b03fa298e7d52b85c3013a27e0282" => :big_sur
-    sha256 "05a6430db194b98832d8c63383176e1f7fd77a4633feabd71703e9fa48090830" => :arm64_big_sur
-    sha256 "203d2846cfdc7f20db09dde616c72cbae7fcea10b55076aa5c4c0fdf499c01eb" => :catalina
-    sha256 "ac292f74b86e7d96493e34a2c003e14aab9a3a913e099a8ca5ee295c866de75a" => :mojave
+    sha256 "bc4c9da50185f14b57de86be129ec81b2be814e086f5b492026f9ab8f51b8551" => :big_sur
+    sha256 "a9f9c285d26750b892b894060fbf4f6d74751ce34314c29b2730b39c7f79d717" => :arm64_big_sur
+    sha256 "f6fb43e2c981ba04ca7d1a9f77da8ae34071da5dfdd9d056b014f7644f1011b9" => :catalina
+    sha256 "d331cb29ff59a6ff7fc48a0a8787b7807b8b8b784f16a5fb4e620e2316bacb30" => :mojave
   end
 
   depends_on "go" => :build
