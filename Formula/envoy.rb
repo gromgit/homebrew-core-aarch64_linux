@@ -2,8 +2,8 @@ class Envoy < Formula
   desc "Cloud-native high-performance edge/middle/service proxy"
   homepage "https://www.envoyproxy.io"
   url "https://github.com/envoyproxy/envoy.git",
-      tag:      "v1.16.2",
-      revision: "e98e41a8e168af7acae8079fc0cd68155f699aa3"
+      tag:      "v1.17.0",
+      revision: "5c801b25cae04f06bf48248c90e87d623d7a6283"
   license "Apache-2.0"
 
   bottle do
@@ -37,7 +37,7 @@ class Envoy < Formula
   test do
     port = free_port
 
-    cp pkgshare/"configs/google_com_proxy.v2.yaml", testpath/"envoy.yaml"
+    cp pkgshare/"configs/envoyproxy_io_proxy.yaml", testpath/"envoy.yaml"
     inreplace "envoy.yaml" do |s|
       s.gsub! "port_value: 9901", "port_value: #{port}"
       s.gsub! "port_value: 10000", "port_value: #{free_port}"
