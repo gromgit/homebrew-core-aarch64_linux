@@ -6,6 +6,11 @@ class VaultCli < Formula
   license "Apache-2.0"
   head "https://github.com/apache/jackrabbit-filevault.git"
 
+  livecheck do
+    url "https://search.maven.org/remotecontent?filepath=org/apache/jackrabbit/vault/vault-cli/"
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
+  end
+
   bottle :unneeded
 
   depends_on "openjdk"
