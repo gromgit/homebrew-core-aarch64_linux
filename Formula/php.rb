@@ -14,10 +14,10 @@ class Php < Formula
   end
 
   bottle do
-    sha256 "d1f6a2b1430317b439896946ff689cea5f01c122da0358bc8ab3ab477f7fbcc2" => :big_sur
-    sha256 "44ee3bd80856fcded721e3c93539ae5464d434e99487389640dd81fa10b17c05" => :arm64_big_sur
-    sha256 "511b8e7a32673fa2c5cdfbfaae72a89b97bb882816cc60c6253547cb336474e3" => :catalina
-    sha256 "f36fc1d02847fc8ceace771347edc21830e41e41a53277ab89179fd22cff0103" => :mojave
+    sha256 "bd676e1cd3af8fe9db8668d9449abab0451ee901d6d77ff613eaec1e0dbe866e" => :big_sur
+    sha256 "ee47f0fe24f240ad10bddd12acf144a04bb0e551d55275ae497fc1fc6fdf49c9" => :arm64_big_sur
+    sha256 "747269ecdcbaeb40db9cd8da39ae284eac49a52a4a8090b265d6d19d5067fa04" => :catalina
+    sha256 "b287bc7f712a5ef204a246484b8f6e5b759da409e0c5c0580bb9a699e96f99c2" => :mojave
   end
 
   head do
