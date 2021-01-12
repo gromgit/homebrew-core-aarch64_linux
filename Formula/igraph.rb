@@ -8,10 +8,10 @@ class Igraph < Formula
 
   bottle do
     cellar :any
-    sha256 "f465b8d9fefa756c504d37e0af723557c276b15d1f7d548ed25d45368dded147" => :big_sur
-    sha256 "c545569d11877ab3692dff937cd885f6ee58ca492af51839e47c2f0cef8a538d" => :arm64_big_sur
-    sha256 "8e9868d06e9ad6a4bc388f7f44ed175fcc54f81c4362eb3de324fadadaf8c3c3" => :catalina
-    sha256 "e14e7cb3c9925863daea2981b4130bcdb969a34c6e73b43dcfc49820c809948d" => :mojave
+    sha256 "df32f814a2a0ab2a4385709941e986fd397f49314845d2f46a0a738eb1ff074e" => :big_sur
+    sha256 "c47315766863332a294eb63c135d674142f66faf6176b28f35c0572be3237bcc" => :arm64_big_sur
+    sha256 "fd1f5b91421abd8f0daffeb8f6f5399add7703a574eae94d001b6692a717faf8" => :catalina
+    sha256 "a1b5b395940614336af1155290e4eed9f964e58138ed9e515950d64d9d34ef3c" => :mojave
   end
 
   depends_on "glpk"
