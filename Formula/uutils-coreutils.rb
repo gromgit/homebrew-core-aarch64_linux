@@ -8,10 +8,9 @@ class UutilsCoreutils < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "cd49ec02727d0c4b48e1b17c0580576d4130256c3dcefa5fe66e5683eda0ad49" => :big_sur
-    sha256 "bd2d08c082e4249d9d73dcdc251f8a441d6dad6f949547110ecb96a023c7f84e" => :catalina
-    sha256 "421ae0f39ebdea7acf3bfd9f569f376ee9008b4e7bb72340c09628e5b50021d1" => :mojave
-    sha256 "b8eb6f2ff0292941b52d1b1ecafad239844b8447a0bce67792b7d4b61b7aece8" => :high_sierra
+    sha256 "ef3d13967768ce2ed6eedb0c5af97e4fd59f80ad62b55c735d4a2170d987dee4" => :big_sur
+    sha256 "b963b9a054f6f256a683bca32ac132ef97e6b517884c18d18439993fece4c746" => :catalina
+    sha256 "3a6b5f46e37fff916ddef446ef9e70432858900983720630fb262b4af0c7fbcd" => :mojave
   end
 
   depends_on "make" => :build
