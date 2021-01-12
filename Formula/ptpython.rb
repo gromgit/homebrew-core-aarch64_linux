@@ -8,6 +8,14 @@ class Ptpython < Formula
   license "BSD-3-Clause"
   head "https://github.com/prompt-toolkit/ptpython.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "b3c2b22c3dd6fe2d361bd8ca2ef3e797b95f07f67fa6e0048ffc5f8fca4366a5" => :big_sur
+    sha256 "4f4e20182faca4cd1e2e3dc59aebb5844c302ab32f3ebc685bfabda8fbfdd4de" => :arm64_big_sur
+    sha256 "42f820b8e9d062cdd08e576bca12d95cd2004af426b30f8661a4d40dafab8ab6" => :catalina
+    sha256 "5326423ad48bc4adeeb3e11b7ac27adfff6cbd28e26e6d5bb66125a74bbac71e" => :mojave
+  end
+
   depends_on "python@3.9"
 
   resource "appdirs" do
