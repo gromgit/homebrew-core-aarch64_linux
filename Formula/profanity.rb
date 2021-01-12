@@ -6,9 +6,10 @@ class Profanity < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 "d3438a7bee47f6fab9d4a20c3523e4bb0fd02dd8438e7d566aaed6ee6baf2e8b" => :big_sur
-    sha256 "15730bfe363723c0fca635beba9112c4a2883739a024f86e84ab07074da50287" => :catalina
-    sha256 "181ed4e8ae4eaad8bf43a99dc1cec785094b213c5e8409e3f9959e3f2e67fd41" => :mojave
+    rebuild 1
+    sha256 "c997a1e4dd8e64b5cef0a457b734831f84741b45d8d630aa81a89f231499bd42" => :big_sur
+    sha256 "aea5848ba083a0cabee58d7c8bf09220c193287d144321374207cd913d88d397" => :catalina
+    sha256 "c146f06dbe713c3e762e0c4ec9ca3c056b6fdb71d641e8905ce9a76ef90ce1eb" => :mojave
   end
 
   head do
