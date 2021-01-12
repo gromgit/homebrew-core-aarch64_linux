@@ -10,10 +10,10 @@ class GitGui < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "6daa1a3d93f88e183dd97a9dfe564a0e73daabeb3f6b55b92c69c02b9a1bce3b" => :big_sur
-    sha256 "a88e400fae60a6415a45299f4a979b8539c06b990e66d3c5897f796d5fe12420" => :arm64_big_sur
-    sha256 "d23a4f19ee1235aca94ba49c9b3d04290df910bacb991a71ea9dfcd4d7ed4453" => :catalina
-    sha256 "5983f88520e038b1dbe555d8bf09490cc8b1dc71961b57e31d1e46f684f9f0cf" => :mojave
+    sha256 "27a0f42ff0d90bdfe57eff9a5077049303722c7ca25be401dd5dafbe1eff3cfe" => :big_sur
+    sha256 "045a1afff977d4973f123b1088567fe15b4d4f9c70beff602c4101aa1816e499" => :arm64_big_sur
+    sha256 "39ac88d194e39f15648b2c0a5667e04666b40c003d3d64dc21ed6e46db56437f" => :catalina
+    sha256 "9ec9d216c68fe11fa2f36c0f62e5f995836745d373a3521f6d87f418610c75dc" => :mojave
   end
 
   depends_on "tcl-tk"
