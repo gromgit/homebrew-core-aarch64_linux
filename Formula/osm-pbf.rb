@@ -6,11 +6,11 @@ class OsmPbf < Formula
   license "LGPL-3.0"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "bb6525bab64e792c04a42dc14f4c282357a1ca810528291c708ad4bb675850ef" => :big_sur
-    sha256 "d69b8678764efa4aa16a5eebd85610bdd3ec411655946447d56ca7571f8057db" => :arm64_big_sur
-    sha256 "848d0ffd20470d7988d5bb9f4a93e5b58f799646a4c551732c271d4d57b5a1f8" => :catalina
-    sha256 "324c716503518b77533db927144643db877d3cf3297234333c056ae45f85d911" => :mojave
+    cellar :any
+    sha256 "cde905f5e30549acb2e9d002b95e8ebbf581aa078108abddc2e8a645329ffa71" => :big_sur
+    sha256 "5cfaf02637be652c5d7913288a576961c1d6bd9bf67c7818196c18aff0bda149" => :arm64_big_sur
+    sha256 "a61abe978818b7abd27cf0716204b24cc0135f2589298b63d7cad95577d2550f" => :catalina
+    sha256 "16ba12db1cc49ec09169e8463cdac17edeefb91ef7a32ff0eaa62556bfc409a0" => :mojave
   end
 
   depends_on "cmake" => :build
