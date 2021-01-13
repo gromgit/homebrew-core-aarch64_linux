@@ -8,6 +8,14 @@ class Bpython < Formula
   license "MIT"
   head "https://github.com/bpython/bpython.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "de35dcdf907c27c31b10b85c905cbea73b607a0831b96a3689776603b935b6cf" => :big_sur
+    sha256 "88c6afa2a6f4623623fbbfb0c08e73fdae892ab6e5d260342b1946c7bb98613a" => :arm64_big_sur
+    sha256 "9b59cf323587ed75e060f3abf996dd6a834b31bc82d9c56710ee6be15d93c365" => :catalina
+    sha256 "c41f6683a528a6427c62c8323b4c1d4dcb1f1a53beaf192382cdbd1c7413ade0" => :mojave
+  end
+
   depends_on "python@3.9"
 
   resource "blessings" do
