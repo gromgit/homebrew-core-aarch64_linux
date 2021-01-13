@@ -7,10 +7,10 @@ class Ncspot < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "272ff0ca2d15a5195b4ef3e76c90b949400aee9225983d8218e797ca00e0897a" => :big_sur
-    sha256 "89b5d9d1049eedd795cfcc5068bdc043ec605d7eb971e3adde1841b889cdf7aa" => :arm64_big_sur
-    sha256 "0cc47ededdba553570ca4b443e26fe66bb3419a8c76a8f748b3170eb54e4787a" => :catalina
-    sha256 "765ec65802d29d0b65130d5333fdf6d0c9460204ae9f8d3e9d59c2dc2a8471b6" => :mojave
+    sha256 "1920c8f0552f2258d1da08bde9664ace319817ff05338135bb3e8cd7e2181270" => :big_sur
+    sha256 "d324eb8e68356da802fabce2db3485f963c7088a8bef148682a10ba2344b88fa" => :arm64_big_sur
+    sha256 "f796c4632dce2dcd752811e3184e210b45bba1bd447f652a4cac3763c67e3922" => :catalina
+    sha256 "60a9b2c1ce1ed2829cad3b0a9f69be2279b1c18eba8cb104f5d9d36c74410943" => :mojave
   end
 
   depends_on "python@3.9" => :build
