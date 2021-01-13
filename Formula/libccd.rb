@@ -8,12 +8,10 @@ class Libccd < Formula
 
   bottle do
     cellar :any
-    sha256 "03e307babffd73dba35ca5c02063654b5c985f3d61eb51e600800d88abeb5632" => :big_sur
-    sha256 "1b2832b20562635f45476d32e8546c6e9ea66fc96445fa41fbe5df9d8fb28d10" => :arm64_big_sur
-    sha256 "d243743b0d6962d55961bdda60fe8ea32bb738dea0509930d5d4114db2d52013" => :catalina
-    sha256 "05c8005ed028e5d5ca250aba9f3c69ece3af5766d91c68fa50fbcf78d139849d" => :mojave
-    sha256 "3b0a74f46d98cc57ddbff8c4f37227e8c5f528905037f346bf17104ba17b71f7" => :high_sierra
-    sha256 "63e2b6149dea77e8ece7a88f7f5f941d9606e9843bc46e4a48853858f6b4a7b3" => :sierra
+    sha256 "8257a7f8ab8f5eca8fced2e881b96a68202c08ce94a4aa169d1d80149b61eb0f" => :big_sur
+    sha256 "69d8c269bc6c5f60d141eaebe6bdff9cf333f789c4d3b72cd69b1e61edff3ea3" => :arm64_big_sur
+    sha256 "caa0aba8d2ba740998b54c73d3ab038747ac984e4d27797b9f768195a487dc4e" => :catalina
+    sha256 "47c19c5f277ecc9016ef1e62a3ce1a0c4aafd1c91e6893fb4f251183ebd505ec" => :mojave
   end
 
   depends_on "cmake" => :build
