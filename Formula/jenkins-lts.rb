@@ -1,8 +1,8 @@
 class JenkinsLts < Formula
   desc "Extendable open-source CI server"
   homepage "https://jenkins.io/index.html#stable"
-  url "http://mirrors.jenkins.io/war-stable/2.263.1/jenkins.war"
-  sha256 "0eedeb2b11a32726acb57db26e262b1923cf408e84708baf471e3b53462ed6f1"
+  url "http://mirrors.jenkins.io/war-stable/2.263.2/jenkins.war"
+  sha256 "89d054193d541b8d542f61e13262daf842b13fd5c04bfdc52765c70346f0878e"
   license "MIT"
 
   livecheck do
