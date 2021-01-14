@@ -23,7 +23,7 @@ class Buildkit < Formula
   depends_on "go" => :build
 
   def install
-    revision = Utils.git_head(buildpath)
+    revision = Utils.git_head
     ldflags = %W[
       -s -w
       -X github.com/moby/buildkit/version.Version=#{version}
