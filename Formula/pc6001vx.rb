@@ -8,11 +8,10 @@ class Pc6001vx < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "06bf7debd67d4f1b4165b35b222f48fa19eac46d6b73bcae04af093a61efcab5" => :big_sur
-    sha256 "6fbc717e8c3726eda2135bf5d881dbfd110c26a11b4fc4c09a4063663f437d8b" => :arm64_big_sur
-    sha256 "c53cf5ef699b779e5160200f901eae55ff108ab0ab9cf489a422a3d239ed1710" => :catalina
-    sha256 "d7665cfb82d6a249a3b8dea0cdef20e2f08a7ca0a39fccbc11e1ad3ac2f2e043" => :mojave
+    sha256 "8b5a64b028a8534033f6ea1b6101aeb1599bb497a8f2fd55ddff718e020a19a3" => :big_sur
+    sha256 "44404d7b3752cecfa0a5f6ddca04fa30f8f8dd10fb3c262cd9d2e69c5cb3958c" => :arm64_big_sur
+    sha256 "80de7e25b021a3913630a7c56ed5e5d5b56313806ab837dbc7111b8a6561e115" => :catalina
+    sha256 "f8ed76c4f02f54d813f476a83ea4500e4c79d72105283a55cd94eaf47eb6d692" => :mojave
   end
 
   depends_on "pkg-config" => :build
