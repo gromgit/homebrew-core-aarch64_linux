@@ -5,6 +5,7 @@ class AwsIamAuthenticator < Formula
       tag:      "v0.5.2",
       revision: "292b9b82df69b87af962b92485b254d9f4b10f00"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/kubernetes-sigs/aws-iam-authenticator.git"
 
   bottle do
@@ -19,12 +20,9 @@ class AwsIamAuthenticator < Formula
   depends_on "go" => :build
 
   def install
-    # project = "github.com/kubernetes-sigs/aws-iam-authenticator"
-    revision = Utils.safe_popen_read("git", "rev-parse", "HEAD").strip
-    version = Utils.safe_popen_read("git", "describe", "--tags").strip
     ldflags = ["-s", "-w",
                "-X main.version=#{version}",
-               "-X main.commit=#{revision}"]
+               "-X main.commit=#{Utils.git_head}"]
     system "go", "build", "-ldflags", ldflags.join(" "), "-trimpath",
            "-o", bin/"aws-iam-authenticator", "./cmd/aws-iam-authenticator"
     prefix.install_metafiles
@@ -32,7 +30,7 @@ class AwsIamAuthenticator < Formula
 
   test do
     output = shell_output("#{bin}/aws-iam-authenticator version")
-    assert_match "\"Version\":\"v#{version}\"", output
+    assert_match %Q("Version":"#{version}"), output
 
     system "#{bin}/aws-iam-authenticator", "init", "-i", "test"
     contents = Dir.entries(".")
