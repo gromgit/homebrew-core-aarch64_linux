@@ -19,7 +19,7 @@ class H2spec < Formula
   depends_on "go" => :build
 
   def install
-    commit = Utils.git_short_head(buildpath)
+    commit = Utils.git_short_head
     ldflags = %W[
       -s -w
       -X main.VERSION=#{version}
