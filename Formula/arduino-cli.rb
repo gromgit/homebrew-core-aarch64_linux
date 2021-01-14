@@ -22,11 +22,10 @@ class ArduinoCli < Formula
   depends_on "go" => :build
 
   def install
-    commit = Utils.safe_popen_read("git", "rev-parse", "HEAD").chomp
     ldflags = %W[
       -s -w
       -X github.com/arduino/arduino-cli/version.versionString=#{version}
-      -X github.com/arduino/arduino-cli/version.commit=#{commit}
+      -X github.com/arduino/arduino-cli/version.commit=#{Utils.git_head}
     ]
     system "go", "build", *std_go_args, "-ldflags", ldflags.join(" ")
 
