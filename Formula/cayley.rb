@@ -28,12 +28,10 @@ class Cayley < Formula
       # Run packr to generate .go files that pack the static files into bytes that can be bundled into the Go binary.
       system "go", "run", "github.com/gobuffalo/packr/v2/packr2"
 
-      commit = Utils.safe_popen_read("git", "rev-parse", "--short", "HEAD").chomp
-
       ldflags = %W[
         -s -w
         -X github.com/cayleygraph/cayley/version.Version=#{version}
-        -X github.com/cayleygraph/cayley/version.GitHash=#{commit}
+        -X github.com/cayleygraph/cayley/version.GitHash=#{Utils.git_short_head}
       ]
 
       # Build the binary
