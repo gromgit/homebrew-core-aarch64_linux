@@ -6,6 +6,14 @@ class LuajitOpenresty < Formula
   license "MIT"
   head "https://github.com/openresty/luajit2.git", branch: "v2.1-agentzh"
 
+  bottle do
+    cellar :any
+    sha256 "9fa20c915d38bc34cf61def4820d6f07e7bf16f1a2e01a8a2a80db6ba3f7567e" => :big_sur
+    sha256 "60153b2fbc7fe9735802e9c603b07f811713a3f7afc3af1f5662e9abebee3a96" => :arm64_big_sur
+    sha256 "ff62b7661154ef6b28e686dd5a5f50c732f375b67700b7aa285ef6d01b91987c" => :catalina
+    sha256 "6ba231a307a5ff68374d543b8a8a59eedb2b35228f4e822f666a187c16ef16d3" => :mojave
+  end
+
   keg_only "it conflicts with the LuaJIT formula"
 
   def install
