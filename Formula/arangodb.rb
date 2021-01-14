@@ -37,13 +37,11 @@ class Arangodb < Formula
     resource("starter").stage do
       ENV["GO111MODULE"] = "on"
       ENV["DOCKERCLI"] = ""
-      # use commit-id as projectBuild
-      commit = `git rev-parse HEAD`.chomp
       system "make", "deps"
       ldflags = %W[
         -s -w
         -X main.projectVersion=#{resource("starter").version}
-        -X main.projectBuild=#{commit}
+        -X main.projectBuild=#{Utils.git_head}
       ]
       system "go", "build", *std_go_args, "-ldflags", ldflags.join(" "), "github.com/arangodb-helper/arangodb"
     end
