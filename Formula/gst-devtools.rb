@@ -3,8 +3,8 @@ class GstDevtools < Formula
 
   desc "GStreamer development and validation tools"
   homepage "https://gstreamer.freedesktop.org/modules/gstreamer.html"
-  url "https://gstreamer.freedesktop.org/src/gst-devtools/gst-devtools-1.18.2.tar.xz"
-  sha256 "6ea73d718bf1f9692218540ff88479c51d67c0b477fa56d6812fc7b739d30a56"
+  url "https://gstreamer.freedesktop.org/src/gst-devtools/gst-devtools-1.18.3.tar.xz"
+  sha256 "3025fee3607caf5069154c099533785675916e044ee92c936bbeacdda3750f26"
   license "LGPL-2.1-or-later"
   head "https://gitlab.freedesktop.org/gstreamer/gst-devtools.git"
 
