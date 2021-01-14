@@ -5,6 +5,7 @@ class Docker < Formula
       tag:      "v20.10.2",
       revision: "2291f610ae73533e6e0749d4ef1e360149b1e46b"
   license "Apache-2.0"
+  head "https://github.com/docker/cli.git"
 
   bottle do
     cellar :any_skip_relocation
