@@ -20,11 +20,10 @@ class ConsulTemplate < Formula
 
   def install
     project = "github.com/hashicorp/consul-template"
-    commit = Utils.safe_popen_read("git", "rev-parse", "--short", "HEAD").chomp
     ldflags = %W[
       -s -w
       -X #{project}/version.Name=consul-template
-      -X #{project}/version.GitCommit=#{commit}
+      -X #{project}/version.GitCommit=#{Utils.git_short_head}
     ]
     system "go", "build", "-ldflags", ldflags.join(" "), *std_go_args
     prefix.install_metafiles
