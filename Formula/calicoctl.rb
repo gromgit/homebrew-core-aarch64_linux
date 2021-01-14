@@ -5,6 +5,7 @@ class Calicoctl < Formula
       tag:      "v3.17.1",
       revision: "8871aca3dc0b30d6143031e46498b648e153da2a"
   license "Apache-2.0"
+  head "https://github.com/projectcalico/calicoctl.git"
 
   bottle do
     cellar :any_skip_relocation
@@ -19,8 +20,8 @@ class Calicoctl < Formula
   def install
     commands = "github.com/projectcalico/calicoctl/calicoctl/commands"
     system "go", "build", *std_go_args,
-                          "-ldflags", "-X #{commands}.VERSION=#{stable.specs[:tag]} " \
-                                      "-X #{commands}.GIT_REVISION=#{stable.specs[:revision][0, 8]} " \
+                          "-ldflags", "-X #{commands}.VERSION=#{version} " \
+                                      "-X #{commands}.GIT_REVISION=#{Utils.git_short_head} " \
                                       "-s -w",
                           "calicoctl/calicoctl.go"
   end
