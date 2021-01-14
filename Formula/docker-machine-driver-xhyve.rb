@@ -30,7 +30,7 @@ class DockerMachineDriverXhyve < Formula
     build_tags = "lib9p"
 
     cd build_root do
-      git_hash = `git rev-parse --short HEAD --quiet`.chomp
+      git_hash = Utils.git_short_head
       git_hash = "HEAD-#{git_hash}" if build.head?
 
       go_ldflags = "-w -s -X 'github.com/zchee/docker-machine-driver-xhyve/xhyve.GitCommit=Homebrew#{git_hash}'"
