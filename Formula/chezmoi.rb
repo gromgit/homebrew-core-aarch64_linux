@@ -5,6 +5,7 @@ class Chezmoi < Formula
       tag:      "v1.8.10",
       revision: "11ed57d9a7e86434744f336b595ed0fd19aff6f5"
   license "MIT"
+  head "https://github.com/twpayne/chezmoi.git"
 
   bottle do
     cellar :any_skip_relocation
@@ -17,11 +18,10 @@ class Chezmoi < Formula
   depends_on "go" => :build
 
   def install
-    commit = Utils.safe_popen_read("git", "rev-parse", "HEAD").chomp
     ldflags = %W[
       -s -w
       -X main.version=#{version}
-      -X main.commit=#{commit}
+      -X main.commit=#{Utils.git_head}
       -X main.date=#{Time.now.utc.rfc3339}
       -X main.builtBy=homebrew
     ].join(" ")
