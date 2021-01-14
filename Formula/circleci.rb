@@ -6,6 +6,7 @@ class Circleci < Formula
       tag:      "v0.1.11756",
       revision: "b3861824d1cfee9362758dc7583128a28e74677e"
   license "MIT"
+  head "https://github.com/CircleCI-Public/circleci-cli.git"
 
   bottle do
     cellar :any_skip_relocation
@@ -23,12 +24,11 @@ class Circleci < Formula
     dir.install buildpath.children
 
     cd dir do
-      commit = Utils.safe_popen_read("git", "rev-parse", "--short", "HEAD").chomp
       ldflags = %W[
         -s -w
         -X github.com/CircleCI-Public/circleci-cli/version.packageManager=homebrew
         -X github.com/CircleCI-Public/circleci-cli/version.Version=#{version}
-        -X github.com/CircleCI-Public/circleci-cli/version.Commit=#{commit}
+        -X github.com/CircleCI-Public/circleci-cli/version.Commit=#{Utils.git_short_head}
       ]
       system "make", "pack"
       system "go", "build", "-ldflags", ldflags.join(" "),
