@@ -11,11 +11,10 @@ class Gptfdisk < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "bdaeba66200ebc8a588676918a6c6180ef52e87bce17b28177a90f5aa0c3e2ef" => :big_sur
-    sha256 "7dd969dec0e8d7176de929401fb68e5fecfe1bec9346697f99a9ec1727bfd090" => :arm64_big_sur
-    sha256 "b0232add041d99be5213600609a9bb21ba8ba31830c50bcc16f3870ee8cc4c80" => :catalina
-    sha256 "a827e15b756b188b6c23b8447d4b41668d328b00f8e85eee84d55d2a895ab091" => :mojave
+    sha256 "a3e4b6f68aba2aca20a6a197613e662af80a84a71765f7cdc9760ea495d00a86" => :big_sur
+    sha256 "dfe0b4cbc0e2cb2118fb2fbbbcd3ad1d42ff9fad8c7ad785c7a27bfd8cc48c5f" => :arm64_big_sur
+    sha256 "b3fc1b140c2a2c4b713460483134620b61066d351a4bdd5a1adc5dfe9c53f1be" => :catalina
+    sha256 "9d8b7f91e699513e4c6c42d4b8e56548f93d76d0e30da1d09b8f9725d49d0f15" => :mojave
   end
 
   depends_on "popt"
