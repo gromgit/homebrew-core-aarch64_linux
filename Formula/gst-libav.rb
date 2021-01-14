@@ -13,10 +13,10 @@ class GstLibav < Formula
 
   bottle do
     cellar :any
-    sha256 "2b6d7062a96bed51182f712ce2632602cdd46b92c11ee648795dbf8af44e55bc" => :big_sur
-    sha256 "bde9b0dd591630feef32f7ff4ef9f6259419a194c28eb363e4ffb8eb675249ce" => :arm64_big_sur
-    sha256 "d4c5d3dcb35e70402f8e1c03e4ef20ff748e60e7b80a47b75230f6869385c0f1" => :catalina
-    sha256 "44225f1d4edde2abd5d09f398452275c033ac6a2b4a6c2a92f17ec5c20cf037f" => :mojave
+    sha256 "2824b4c1998b68774cffceb17354178f1959e615505eac53637a227e78492b2c" => :big_sur
+    sha256 "f5a635d58ea18362c44dc87e551eb56bfcb4efcd2ce69b32106195e030925a02" => :arm64_big_sur
+    sha256 "bf46288c33d59607e167f02490448593c56d1875583c66774605dcc2941f10aa" => :catalina
+    sha256 "5ecbcf85f03499e057ddb9b2b8a4364ac68918d3da6df74a51f883bc6b48e9a4" => :mojave
   end
 
   depends_on "meson" => :build
