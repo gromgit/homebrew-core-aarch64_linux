@@ -18,10 +18,9 @@ class ChartTesting < Formula
   depends_on "yamllint" => :test
 
   def install
-    commit = Utils.safe_popen_read("git", "rev-parse", "HEAD").chomp
     ldflags = %W[
       -X github.com/helm/chart-testing/v#{version.major}/ct/cmd.Version=#{version}
-      -X github.com/helm/chart-testing/v#{version.major}/ct/cmd.GitCommit=#{commit}
+      -X github.com/helm/chart-testing/v#{version.major}/ct/cmd.GitCommit=#{Utils.git_head}
       -X github.com/helm/chart-testing/v#{version.major}/ct/cmd.BuildDate=#{Date.today}
     ].join(" ")
     system "go", "build", *std_go_args, "-ldflags", ldflags, "-o", bin/"ct", "./ct/main.go"
