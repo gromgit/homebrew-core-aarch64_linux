@@ -32,7 +32,7 @@ class Rbenv < Formula
 
     if build.head?
       # Record exact git revision for `rbenv --version` output
-      git_revision = Utils.git_short_head(buildpath)
+      git_revision = Utils.git_short_head
       inreplace "libexec/rbenv---version", /^(version=)"([^"]+)"/,
                                            %Q(\\1"\\2-g#{git_revision}")
     end
