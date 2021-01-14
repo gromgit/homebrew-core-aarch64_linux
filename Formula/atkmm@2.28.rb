@@ -7,6 +7,7 @@ class AtkmmAT228 < Formula
 
   livecheck do
     url :stable
+    regex(/atkmm-(2\.28(?:\.\d+)*)\.t/i)
   end
 
   bottle do
