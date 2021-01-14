@@ -8,10 +8,10 @@ class Cadence < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "342ae43e6501d304e73550b3d7aa5aa4d87e5fa58e2048ddc1e9b6a1e8678e6e" => :big_sur
-    sha256 "75eea00e2ad0cd75f248abfb7a8497085aa35f70b8dfa073d98564730e2747be" => :arm64_big_sur
-    sha256 "bf4c21e40d3f19f04a57ad030912aae5c88db54301f6c2ce1b41ce5cee267976" => :catalina
-    sha256 "116cc5a12aea331577faa06f693912d77a3c5f18d17b2e1e566c81dcc6a26d8c" => :mojave
+    sha256 "8c31a5e9a59b01306129b01f73a38f575306f135e11a756db16652d9c4abcb43" => :big_sur
+    sha256 "92462f709868ba30ace7186e9b6fd52f18c630c626b68458ad10f66c0396e888" => :arm64_big_sur
+    sha256 "e50c08ff75fe91a8364246f768e6d19781c1e2b55e6c1c22b7f04f465deb0148" => :catalina
+    sha256 "42bead94af065c824b3c7ac15af3f5a824f80a8162b0995d2b846470a23921ff" => :mojave
   end
 
   depends_on "go" => :build
