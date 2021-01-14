@@ -6,6 +6,14 @@ class Goredo < Formula
   sha256 "d735a27312504914ec4413abc6719c52800d5aa5defb135e871396299b2c720f"
   license "GPL-3.0-only"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "c03721823a2849b78cc5ccf20e52a0ae0469e1795f9b2c36110b949b1bc5168e" => :big_sur
+    sha256 "ec16c45979431a557b937df2a5e657bc85b576a2ebf9f9b089895e7f2ded917c" => :arm64_big_sur
+    sha256 "6037d2404387e19dea95837cec3ac12883e073033bcdad792d9e9556e72864fb" => :catalina
+    sha256 "a2c78dcbcd336c13c8a2e5dd224d44e924187abc6062b99ac0ff02d0084593ad" => :mojave
+  end
+
   depends_on "go" => :build
   depends_on "zstd" => :build
 
