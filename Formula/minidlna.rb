@@ -14,6 +14,7 @@ class Minidlna < Formula
     cellar :any
     rebuild 1
     sha256 "94228e90b5a315e668aecd6890dba7e857a1366cb7086e5e3f559c15a58c5eb5" => :big_sur
+    sha256 "62d4cffaf85a758edf20d9c91884789de481a483dc5337e4ae6ed415ac1eab53" => :arm64_big_sur
     sha256 "fe71689f51142e3017edb49dc9288c28c2f9c5826f002389add9e90fb512eb3e" => :catalina
     sha256 "0df8b04dfa0ac6638070b206705d3f1c582bebd7441916fae9037a9e2c380c51" => :mojave
   end
