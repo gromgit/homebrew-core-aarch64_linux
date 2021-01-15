@@ -14,9 +14,9 @@ class Logstash < Formula
 
   bottle do
     cellar :any
-    sha256 "d6fbe6e8a77fa79920b2de60bc5b4c3da86180f92fbbf24ccd3c0d77ba01a434" => :big_sur
-    sha256 "0593e2f125b9861cfc8fb0cdf44d374f99c7dbca2b28cee3fda8cc46c0728b52" => :catalina
-    sha256 "4df0a2a9ab93fe344cfd42f5765ea4abf850aa50a57489f15864a93afecd4de0" => :mojave
+    sha256 "d12f264267e3f89f5b73550e2eed5f44d0dbb8bc287bb5e34eac244045068f43" => :big_sur
+    sha256 "37e9b894679f19a3faf930ca6af7a547365c16e28642d52497ba9d8c73f73001" => :catalina
+    sha256 "3689011a5a36b58492d7f1bf9fd904fc80452cca25e60fc43c5c8142a4cc1b11" => :mojave
   end
 
   depends_on "openjdk@8"
