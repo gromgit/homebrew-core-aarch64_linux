@@ -15,9 +15,9 @@ class Hledger < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "aa8a1e5557c932a746bcca23b9d9bab16639af4973c8c5a1ea55308facc68f6f" => :big_sur
-    sha256 "8adfbc73fc81e33591bf6683bbebb24264092490058a47682497fd53c2132754" => :catalina
-    sha256 "6d76219c533e3fcfef1ae0123125364299e9bb76d189057fb90914b9f353d4a9" => :mojave
+    sha256 "d6afd6441959d6dd3da9df2ccf5fffd0ba01a1945d42e20ee523c79888487bef" => :big_sur
+    sha256 "5c7c5e170066f06f125bd9d26faf480c2cb1ac31135188e71c50194e9ea02ae6" => :catalina
+    sha256 "99ccb9c6e74d3914f67af8df09a45256866763af58da4f347c1dc2baf7d224df" => :mojave
   end
 
   depends_on "ghc" => :build
