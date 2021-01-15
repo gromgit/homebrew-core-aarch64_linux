@@ -1,8 +1,8 @@
 class Goose < Formula
   desc "Go Language's command-line interface for database migrations"
   homepage "https://github.com/pressly/goose"
-  url "https://github.com/pressly/goose/archive/v2.6.0.tar.gz"
-  sha256 "389953f40e567fd92090fd29d60e1baec576e6432e689f11ef54e6493502383a"
+  url "https://github.com/pressly/goose/archive/v2.7.0.tar.gz"
+  sha256 "ce4115e3184d0929a90c5e4215d303aa5243e8d49f8576154396098f0c6536fd"
   license "MIT"
 
   bottle do
@@ -13,17 +13,14 @@ class Goose < Formula
     sha256 "0e8c6ed483b244eac2370dad2d7fa59a6a7f1075305577553aac66463c7b0062" => :high_sierra
   end
 
-  depends_on "dep" => :build
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    (buildpath/"src/github.com/pressly/goose").install buildpath.children
-    cd "src/github.com/pressly/goose" do
-      system "dep", "ensure"
-      system "go", "build", "-o", bin/"goose", ".../cmd/goose"
-      prefix.install_metafiles
-    end
+    # raise a quesiton about this setup, https://github.com/pressly/goose/issues/238
+    mv "_go.mod", "go.mod"
+    mv "_go.sum", "go.sum"
+
+    system "go", "build", *std_go_args, "-ldflags", "-s -w", "./cmd/goose"
   end
 
   test do
