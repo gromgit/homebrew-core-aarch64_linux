@@ -11,11 +11,10 @@ class Gspell < Formula
   end
 
   bottle do
-    sha256 "2faf4dc1eba31babb0699a27e513825e161c758a8f413c9f60bee4cb05e61b9d" => :big_sur
-    sha256 "e8165b2fe1d4033e4d69905a9ffd928ef60f4aec6dd410c43a1ac564a314e87a" => :arm64_big_sur
-    sha256 "b7165cc3def086000bc01e62724c5ae303200ca3eff64f681ead49f80313db20" => :catalina
-    sha256 "eb478bbf00c69404e64f21db962abdcd237d146a326d2779aaeae08f6414b8a2" => :mojave
-    sha256 "24dd633197c7ea490125a506db6379f7b134efdd1f7426bb6d9c0830c1b09f98" => :high_sierra
+    sha256 "8f64c612f1821ce72363a92af87bd7b31a72a97b63979c890b2325397bdbd0f7" => :big_sur
+    sha256 "95eb286c8aeeb8ce8b3342e96b44c028d6e0d0a8480028a69fdba8571e97caf6" => :arm64_big_sur
+    sha256 "ddcf9d182d0248a598860a2657ab0fc029b5fe2c14c1079e9600355fa6fa5486" => :catalina
+    sha256 "0b780e3db25001367090861c8867b0b4f06a8df1512f7f32e858a7b0d1200b34" => :mojave
   end
 
   depends_on "autoconf" => :build
