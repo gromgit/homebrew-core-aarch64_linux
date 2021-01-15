@@ -6,11 +6,10 @@ class Virtualpg < Formula
 
   bottle do
     cellar :any
-    sha256 "62178e004321740f4ce9ff06a9650085a8ff73f5b09594c11377c5a8b26f7b7b" => :catalina
-    sha256 "11f87cc36cdd1bc00799f4d877b7c25c6ffae17c32322041831cec002d927c8d" => :mojave
-    sha256 "2e7d844424706349b16cbbf1f7ab6fd257703ed8de3347277090c75cadb491b8" => :high_sierra
-    sha256 "1d61bc6b83f9584e6a787b614f475177fe98472bc6fa697c1a6695dfe6f65701" => :sierra
-    sha256 "47b8d302bde32565c4b1a627041fda8df645b4349d3eb5ff250b266309d47271" => :el_capitan
+    sha256 "b0753a8f3cca894abd6c422479062ed242e6a780c497b94d7a5596009508f678" => :big_sur
+    sha256 "1d87321f13aec1d9ca1b75a9d3a3750f427910aead760d88d94ed4c9fd63e72b" => :arm64_big_sur
+    sha256 "68282c2258b52c72bad812eddadef2f9ce0c34e4011ceb43522ec1e2b21bbc4f" => :catalina
+    sha256 "5e14713d8a04acecf93faf9c387f0fcff32b8f5b39ee208b98355d638d60f92a" => :mojave
   end
 
   depends_on "libspatialite"
