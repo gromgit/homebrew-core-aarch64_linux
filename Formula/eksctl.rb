@@ -2,10 +2,9 @@ class Eksctl < Formula
   desc "Simple command-line tool for creating clusters on Amazon EKS"
   homepage "https://eksctl.io"
   url "https://github.com/weaveworks/eksctl.git",
-      tag:      "0.35.0",
-      revision: "1eafbc7b3fa3d9c31575b51b8fbac718ec108051"
+      tag:      "0.36.0",
+      revision: "2fe9fe4c5a9c8b7f02f70cb919e3f28a17f9d5e3"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/weaveworks/eksctl.git"
 
   bottle do
@@ -21,13 +20,6 @@ class Eksctl < Formula
   depends_on "go-bindata" => :build
   depends_on "mockery" => :build
   depends_on "aws-iam-authenticator"
-
-  # PR ref, https://github.com/weaveworks/eksctl/pull/2987
-  # remove in next release
-  patch do
-    url "https://github.com/chenrui333/eksctl/commit/2207612.patch?full_index=1"
-    sha256 "50870dd22647f6b6252678fb5302c81aa89ca04177f3f327a044d301eb483c14"
-  end
 
   def install
     ENV["GOBIN"] = HOMEBREW_PREFIX/"bin"
