@@ -7,6 +7,13 @@ class ArchiSteamFarm < Formula
   license "Apache-2.0"
   head "https://github.com/JustArchiNET/ArchiSteamFarm.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "96264a2bcb5494cbb9cacfb2a7ee46e70f75a594699938bb6a762fd7be92dd74" => :big_sur
+    sha256 "774eb7f137b45fce2daf728d5a0dab6de159a9bf99c1e3dc48735045ff481f0c" => :catalina
+    sha256 "9126e87d0afe22979e67471b5b786309979160e0759a907a0801ec7b5f3f9b01" => :mojave
+  end
+
   depends_on "dotnet"
 
   def install
