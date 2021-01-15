@@ -8,12 +8,10 @@ class Cassowary < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "f5149dc4bda54c8b21c522f0b46ca7196885d3ec54ce9c34e8117bf50a954734" => :big_sur
-    sha256 "8fa66113ec359799c1ccf3ffc93709aa7beec48f7fa6251cb09cf3d23aadc020" => :arm64_big_sur
-    sha256 "3a6e5b9679a3c5da70142d98eddb6825cb51ba69581e21a485a16c09f56de5f4" => :catalina
-    sha256 "e8ee2d0e616f89a395ed1e6b881a4c7f29529ebccd1524af9bb3ba2a23364106" => :mojave
-    sha256 "2b723e48851feba06f504d2c5ddd51314c619509df0a380cdd286e439ff35c07" => :high_sierra
+    sha256 "2329ffcb5f5f4777ec17661461c25a650e60c02bacfe0f7ebc738e1217c7fa27" => :big_sur
+    sha256 "3a66cf898e85a56861cbfc4073e73a29b8c222a0cb921ae92fffe56694a4b250" => :arm64_big_sur
+    sha256 "83d6b17ca128c3830cec6e8ef31452e2f303f92f1fd9090d48711b639cb9c76e" => :catalina
+    sha256 "f6ac1ec8b86f43a9e64b407d9797d47a6e74200ebd3caf90fa9d856c8860772a" => :mojave
   end
 
   depends_on "go" => :build
