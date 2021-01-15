@@ -4,7 +4,7 @@ class Siril < Formula
   url "https://free-astro.org/download/siril-0.99.6.tar.bz2"
   sha256 "255dbffb72bb39b1d9d56ab948b4cad32d1458161b1d997cd84ada21f9a8499f"
   license "GPL-3.0-or-later"
-  revision 4
+  revision 5
   head "https://gitlab.com/free-astro/siril.git"
 
   bottle do
@@ -15,6 +15,7 @@ class Siril < Formula
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+  depends_on "cmake" => :build
   depends_on "intltool" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
