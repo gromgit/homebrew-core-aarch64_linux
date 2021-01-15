@@ -11,10 +11,10 @@ class Gtksourceview < Formula
   end
 
   bottle do
-    sha256 "211ad57ec70d9f855d79f8a463ef2346556289239599a9aa4ffa9c48a347d2b0" => :big_sur
-    sha256 "9e46e3f2cb4330bc878dd315a6fe624288173b0c7e389f3a32231c0ee15490b9" => :arm64_big_sur
-    sha256 "f50a88ebea0a96ab78b14db8a5b726c8996daccc9e0fea31616cc97527195a60" => :catalina
-    sha256 "9993fdad23678f2cae6f3eca54560d20438ae43f386a0cf4baa8a4f43ba6af2f" => :mojave
+    sha256 "146b08e9b6c084de86ed9de2783f50b4c564826f102b0d917579ffa19b60ab94" => :big_sur
+    sha256 "3622986240ea216f4a404ea7e40d2099d94bc0f175bdb0ac0d8b242c29d81514" => :arm64_big_sur
+    sha256 "633745bd26dcc7d96f3c102002a2cdfb1cb45ff2762a5c2c814d2af787b6a5c5" => :catalina
+    sha256 "e4acd9c34e98b342eac330a7c7393b1199441474be6e3d7523c6b173e609febe" => :mojave
   end
 
   depends_on "intltool" => :build
