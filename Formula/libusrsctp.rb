@@ -8,10 +8,10 @@ class Libusrsctp < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e4b589e181e22152697f3bf6f14a84e9e9e7c26244f9e8468a76f6fe918ce113" => :big_sur
-    sha256 "bb88856f61f5e9353df491a962ebd40adf7a5989620d437abb5f2a80fc67714e" => :arm64_big_sur
-    sha256 "75ca75af9d013e188f37b926ad22fee4d2f54baf9fc1a3ebf7f04796957ed360" => :catalina
-    sha256 "fff9829e035d500eaa8b67fc687bfdb15a3b23bc0f6c26148b339c7fd54de0d1" => :mojave
+    sha256 "ca45d1d9431028ad9b7025e6d5486a10f98c6c49e39dd1a4e1d033c75bee6135" => :big_sur
+    sha256 "cccdb95cc428680b9dc8c57ae970f23874889797d8438eaa9079e675473ab394" => :arm64_big_sur
+    sha256 "5c2a6b26e354c0498e0e3ef590dfc9f9651f70ce36112f196baec64ef76aec31" => :catalina
+    sha256 "fe831b138df6c6b80d260d8a224bf1b1114af51d1b14186e9d714fd99f035e30" => :mojave
   end
 
   depends_on "cmake" => :build
