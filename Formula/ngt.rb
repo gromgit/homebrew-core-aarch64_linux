@@ -1,8 +1,8 @@
 class Ngt < Formula
   desc "Neighborhood graph and tree for indexing high-dimensional data"
   homepage "https://github.com/yahoojapan/NGT"
-  url "https://github.com/yahoojapan/NGT/archive/v1.12.3.tar.gz"
-  sha256 "5845ab38cde21e08f4b9a99eb03ee2786c386de0daba2b2d38c1850ee0c75092"
+  url "https://github.com/yahoojapan/NGT/archive/v1.13.1.tar.gz"
+  sha256 "b63d718e297c6bf0dcabfcf26ab7334fd56386e68adfd1717636d1f68a66122c"
   license "Apache-2.0"
 
   livecheck do
@@ -22,7 +22,7 @@ class Ngt < Formula
 
   def install
     mkdir "build" do
-      system "cmake", "..", *std_cmake_args
+      system "cmake", "..", *std_cmake_args, "-DCMAKE_INSTALL_RPATH=#{lib}"
       system "make"
       system "make", "install"
     end
