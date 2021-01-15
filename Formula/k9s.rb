@@ -5,6 +5,7 @@ class K9s < Formula
       tag:      "v0.24.2",
       revision: "f929114ae4679c89ca06b2833d8a0fca5f1ec69d"
   license "Apache-2.0"
+  head "https://github.com/derailed/k9s.git"
 
   bottle do
     cellar :any_skip_relocation
@@ -19,7 +20,7 @@ class K9s < Formula
   def install
     system "go", "build", "-ldflags",
              "-s -w -X github.com/derailed/k9s/cmd.version=#{version}
-             -X github.com/derailed/k9s/cmd.commit=#{stable.specs[:revision]}",
+             -X github.com/derailed/k9s/cmd.commit=#{Utils.git_head}",
              *std_go_args
   end
 
