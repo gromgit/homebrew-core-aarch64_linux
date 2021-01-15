@@ -1,8 +1,8 @@
 class Hcxtools < Formula
   desc "Utils for conversion of cap/pcap/pcapng WiFi dump files"
   homepage "https://github.com/ZerBea/hcxtools"
-  url "https://github.com/ZerBea/hcxtools/archive/6.1.4.tar.gz"
-  sha256 "9bd55014f8f535fa192c29b76c0fd3550210c7b6625dc73a06eecb52df1942a8"
+  url "https://github.com/ZerBea/hcxtools/archive/6.1.5.tar.gz"
+  sha256 "6229e46a1298ee6f883e25dafbf837fe6314476d4b3201e1ba63645569c862c7"
   license "MIT"
   head "https://github.com/ZerBea/hcxtools.git"
 
@@ -14,6 +14,7 @@ class Hcxtools < Formula
     sha256 "0f7a126b9cef14368f13a494ed1465668ba83f6050e0b5d778adea34fdc795ab" => :mojave
   end
 
+  depends_on "pkg-config" => :build
   depends_on "openssl@1.1"
 
   def install
