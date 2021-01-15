@@ -5,6 +5,7 @@ class Goreleaser < Formula
       tag:      "v0.154.0",
       revision: "e8ea231122dc98ec2315eff2df2defc5191764d6"
   license "MIT"
+  head "https://github.com/goreleaser/goreleaser.git"
 
   bottle do
     cellar :any_skip_relocation
@@ -18,7 +19,7 @@ class Goreleaser < Formula
 
   def install
     system "go", "build", "-ldflags",
-             "-s -w -X main.version=#{version} -X main.commit=#{stable.specs[:revision]} -X main.builtBy=homebrew",
+             "-s -w -X main.version=#{version} -X main.commit=#{Utils.git_head} -X main.builtBy=homebrew",
              *std_go_args
   end
 
