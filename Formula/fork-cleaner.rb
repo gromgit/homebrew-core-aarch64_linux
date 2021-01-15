@@ -7,10 +7,10 @@ class ForkCleaner < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "21c159f9b3bcd5f5155ad18ebceae61437db7518d9c0731c84542ffd9d5dd1bf" => :big_sur
-    sha256 "7547bd412bbc2cfd25670359effa43ba5d5926f3170e1884184a22113f4d917f" => :arm64_big_sur
-    sha256 "a3a153a1405133680f0bfd6172032ac7a5a0daf9f3bdf60185692d6c76a44e72" => :catalina
-    sha256 "cc23785568a1364c1e4b5128e784768a0ff1a161af402ab9bcc58f44e6988c94" => :mojave
+    sha256 "b7bdc9b4d3c9f20d9cf6d07a95ba95035550cc080662254c4018c417d05f2ac8" => :big_sur
+    sha256 "9198de534dd396ea7efbdf034faf7a6f5b31f9c5d5d793456b4c4bcc46fa7a85" => :arm64_big_sur
+    sha256 "170c8bac819883adab9e91fc90e39c4799fcab75dd654b31ef4069093596548a" => :catalina
+    sha256 "6ece7b427bbb0c21dde939ed429e008361cd0308ec0c67f55659419413de6637" => :mojave
   end
 
   depends_on "go" => :build
