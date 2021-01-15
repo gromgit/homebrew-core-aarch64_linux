@@ -4,6 +4,7 @@ class Gedit < Formula
   url "https://download.gnome.org/sources/gedit/3.38/gedit-3.38.1.tar.xz"
   sha256 "0053853d2cd59cad8a1662f5b4fdcfab47b4c0940063bacd6790a9948642844d"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url :stable
