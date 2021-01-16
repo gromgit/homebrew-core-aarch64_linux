@@ -31,12 +31,7 @@ class Gcsfuse < Formula
     system "go", "build", "./tools/build_gcsfuse"
 
     # Use that tool to build gcsfuse itself.
-    gcsfuse_version = if build.head?
-      `git rev-parse --short HEAD`.strip
-    else
-      version
-    end
-
+    gcsfuse_version = build.head? ? Utils.git_short_head : version
     system "./build_gcsfuse", buildpath, prefix, gcsfuse_version
   end
 
