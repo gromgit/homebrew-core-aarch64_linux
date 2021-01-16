@@ -5,6 +5,7 @@ class Inlets < Formula
       tag:      "2.7.10",
       revision: "9bbbd0ef498474b922830bd2bfaa6a1caf382660"
   license "MIT"
+  head "https://github.com/inlets/inlets.git"
 
   livecheck do
     url :stable
@@ -25,10 +26,12 @@ class Inlets < Formula
   uses_from_macos "ruby" => :test
 
   def install
-    commit = Utils.safe_popen_read("git", "rev-parse", "HEAD").chomp
-    system "go", "build", *std_go_args,
-            "-ldflags", "-s -w -X main.GitCommit=#{commit} -X main.Version=#{version}",
-            "-a", "-installsuffix", "cgo"
+    ldflags = %W[
+      -s -w
+      -X main.GitCommit=#{Utils.git_head}
+      -X main.Version=#{version}
+    ]
+    system "go", "build", *std_go_args, "-ldflags", ldflags.join(" "), "-a", "-installsuffix", "cgo"
   end
 
   def cleanup(name, pid)
@@ -76,13 +79,11 @@ class Inlets < Formula
     end
 
     begin
-      stable_resource = stable.instance_variable_get(:@resource)
-      commit = stable_resource.instance_variable_get(:@specs)[:revision]
-
       # Basic --version test
+      commit_regex = /[a-f0-9]{40}/
       inlets_version = shell_output("#{bin}/inlets version")
-      assert_match /\s#{commit}$/, inlets_version
-      assert_match /\s#{version}$/, inlets_version
+      assert_match commit_regex, inlets_version
+      assert_match version.to_s, inlets_version
 
       # Client/Server e2e test
       # This test involves establishing a client-server inlets tunnel on the
