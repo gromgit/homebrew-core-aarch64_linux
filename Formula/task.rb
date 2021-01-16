@@ -12,15 +12,10 @@ class Task < Formula
   end
 
   bottle do
-    sha256 "0a5aa472b0830025324a8f73c58215fecef5c3c1bf8f1b0990a1fd370931c4c0" => :big_sur
-    sha256 "0362dd5bf421b919ff93b7be95e7b43ec7007f21fe45600578a1a05fd4e0ea08" => :arm64_big_sur
-    sha256 "24c80011867aa34766864a4bbac071493fb45c93bd3e08b3e9979b3ba4780fa2" => :catalina
-    sha256 "bba98b6bdfb3f79f1434229d8ade4b0622119320353da0eb8fec39809d66947d" => :mojave
-    sha256 "6a651be957b736bef14633efedef011a81c49ee37178eae4d8ef863549d7c584" => :high_sierra
-    sha256 "d1cb582ab9ee211ec154690634b5988f8058ead31000c74d5cdfa949d319d0ed" => :sierra
-    sha256 "07aa2c19ae6d7a9a46b286bfc48fa970aa9a9e0237e034bbaab354dcfc4f6848" => :el_capitan
-    sha256 "113fc7ce057c51ea14021006a4106c25d29e361e4b70113e33fb7a83e57ee8d1" => :yosemite
-    sha256 "7888e42210edb6691ff57d056585536abd318d62b43a898bb98e286373519164" => :mavericks
+    sha256 "13cbe306b15eda0b1a2edd707f3c1e2a18759bfa2613a4a5909f5945c7ac367c" => :big_sur
+    sha256 "188f5f1a5dda2cff99e1adf0be22980f5cfa72b3dbffdbef8d9648e65ce23641" => :arm64_big_sur
+    sha256 "6b15062cfa4e67ba49cd6bcb88a1be453e49b86f4ab680acb171fe98e01e256b" => :catalina
+    sha256 "8ea578cb22e2a379478111ca18c735482c264a46d3733a866cfc959ce344c4f4" => :mojave
   end
 
   depends_on "cmake" => :build
