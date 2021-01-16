@@ -8,9 +8,9 @@ class Elasticsearch < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "679c248bcc2369dead1d8239518e96e70b2aaea655d8e16ec3716777e199837f" => :big_sur
-    sha256 "e5e6791161d94f09b1bd0e7823c9e3fa414b120405af0ba6666ca2e1380183e4" => :catalina
-    sha256 "20056758a9acc1f9de8d4adac2fde028154a1b5b1ce4d7062474a69bc1595233" => :mojave
+    sha256 "e199fbcb913252e2f60134de2dfff98bff9ae3f1a28f30f3f44c8b0174e189fb" => :big_sur
+    sha256 "6bb47c36590116e78d14b1d3bdce0aa091867f5a30007018b9fcac14ca0c3d8b" => :catalina
+    sha256 "dbc33bf97783ffae45b4438219a8e4586b82f9939d7c9cdb2398bace6f8ade8b" => :mojave
   end
 
   # elasticsearch will be relicensed before v7.11.
