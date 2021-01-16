@@ -6,6 +6,7 @@ class Juju < Formula
       revision: "ee2cfeb2c8c716af763a011e184ddea879c0985d"
   license "AGPL-3.0-only"
   version_scheme 1
+  head "https://github.com/juju/juju.git"
 
   livecheck do
     url :stable
@@ -23,10 +24,9 @@ class Juju < Formula
   depends_on "go" => :build
 
   def install
-    git_commit = Utils.safe_popen_read("git", "rev-parse", "HEAD").chomp
     ld_flags = %W[
       -s -w
-      -X version.GitCommit=#{git_commit}
+      -X version.GitCommit=#{Utils.git_head}
       -X version.GitTreeState=clean
     ]
     system "go", "build", *std_go_args,
