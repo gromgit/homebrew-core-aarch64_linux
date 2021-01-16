@@ -5,6 +5,7 @@ class GolangciLint < Formula
       tag:      "v1.35.2",
       revision: "1da57014f928ec8d56fd240388a8c594a0534a46"
   license "GPL-3.0-only"
+  head "https://github.com/golangci/golangci-lint.git"
 
   bottle do
     cellar :any_skip_relocation
@@ -17,11 +18,10 @@ class GolangciLint < Formula
   depends_on "go"
 
   def install
-    commit = Utils.safe_popen_read("git", "rev-parse", "--short=7", "HEAD").chomp
     ldflags = %W[
       -s -w
       -X main.version=#{version}
-      -X main.commit=#{commit}
+      -X main.commit=#{Utils.git_short_head(length: 7)}
       -X main.date=#{Time.now.utc.rfc3339}
     ].join(" ")
 
