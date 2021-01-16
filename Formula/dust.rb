@@ -13,11 +13,10 @@ class Dust < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "bfcdb4a3fe8417d4bb88d1b0945b002e818271a8b1f5e7ac3a9502763c0e4157" => :big_sur
-    sha256 "88a327584a516af51e1b5a27b918f705fb06694b11f81cc2fd91fc78bf1f0f79" => :arm64_big_sur
-    sha256 "693714f8f0d1207b8e54357f924e3a1242dd54d93f21de76b669217812065711" => :catalina
-    sha256 "4c5c1cda666e8d405cf39ae79b3327dd8581555c18417b0834c2d334ad4568ed" => :mojave
-    sha256 "52750a57ee2e58c7b95661b61cb0d855ba653946f6f21881ed041f2ce2cea747" => :high_sierra
+    sha256 "d1b5422255a774bfc2a582936c2a639e70167a1a6ae01cc2a99d9d3bded9d3fb" => :big_sur
+    sha256 "63975da52bf489fa48faf28948811662e212ba34bd3eec9e46326ef75c90d3aa" => :arm64_big_sur
+    sha256 "7b30dd40fba19a354809b0d311afb061b3d67134a4e8dc522911240fc04f1c56" => :catalina
+    sha256 "9a20691424cccdb57170661480740191517a617d2a1a079d29411fd376f4f78a" => :mojave
   end
 
   depends_on "rust" => :build
