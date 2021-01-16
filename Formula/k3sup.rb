@@ -5,6 +5,7 @@ class K3sup < Formula
       tag:      "0.9.13",
       revision: "95fc8b074a6e0ea48ea03a695491e955e32452ea"
   license "MIT"
+  head "https://github.com/alexellis/k3sup.git"
 
   livecheck do
     url :stable
@@ -24,10 +25,12 @@ class K3sup < Formula
   depends_on "go" => :build
 
   def install
-    commit = Utils.safe_popen_read("git", "rev-parse", "--short", "HEAD").chomp
-
-    system "go", "build", "-ldflags",
-            "-s -w -X github.com/alexellis/k3sup/cmd.Version=#{version} -X github.com/alexellis/k3sup/cmd.GitCommit=#{commit}", *std_go_args
+    ldflags = %W[
+      -s -w
+      -X github.com/alexellis/k3sup/cmd.Version=#{version}
+      -X github.com/alexellis/k3sup/cmd.GitCommit=#{Utils.git_short_head}
+    ]
+    system "go", "build", "-ldflags", ldflags.join(" "), *std_go_args
   end
 
   test do
