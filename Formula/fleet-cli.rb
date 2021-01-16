@@ -5,6 +5,7 @@ class FleetCli < Formula
       tag:      "v0.3.3",
       revision: "c17a2f2cd69df7ac028ae9c0dd8ae3ea1e492f2b"
   license "Apache-2.0"
+  head "https://github.com/rancher/fleet.git"
 
   livecheck do
     url :stable
@@ -22,10 +23,11 @@ class FleetCli < Formula
   depends_on "go" => :build
 
   def install
-    commit = Utils.safe_popen_read("git", "rev-parse", "--short", "HEAD").chomp
-    system "go", "build", *std_go_args, "-ldflags",
-           "-X github.com/rancher/fleet/pkg/version.Version=#{version} -X github.com/rancher/fleet/pkg/version.GitCommit=#{commit}",
-           "-o", bin/"fleet"
+    ldflags = %W[
+      -X github.com/rancher/fleet/pkg/version.Version=#{version}
+      -X github.com/rancher/fleet/pkg/version.GitCommit=#{Utils.git_short_head}
+    ]
+    system "go", "build", *std_go_args, "-ldflags", ldflags.join(" "), "-o", bin/"fleet"
   end
 
   test do
