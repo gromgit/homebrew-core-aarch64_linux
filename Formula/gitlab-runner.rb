@@ -28,15 +28,12 @@ class GitlabRunner < Formula
 
     cd dir do
       proj = "gitlab.com/gitlab-org/gitlab-runner"
-      commit = Utils.safe_popen_read("git", "rev-parse", "--short=8", "HEAD").chomp
-      branch = "#{version.major}-#{version.minor}-stable"
-      built = Time.new.strftime("%Y-%m-%dT%H:%M:%S%:z")
       system "go", "build", "-ldflags", <<~EOS
         -X #{proj}/common.NAME=gitlab-runner
         -X #{proj}/common.VERSION=#{version}
-        -X #{proj}/common.REVISION=#{commit}
-        -X #{proj}/common.BRANCH=#{branch}
-        -X #{proj}/common.BUILT=#{built}
+        -X #{proj}/common.REVISION=#{Utils.git_short_head(length: 8)}
+        -X #{proj}/common.BRANCH=#{version.major}-#{version.minor}-stable
+        -X #{proj}/common.BUILT=#{Time.new.strftime("%Y-%m-%dT%H:%M:%S%:z")}
       EOS
 
       bin.install "gitlab-runner"
