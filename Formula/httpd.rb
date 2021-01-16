@@ -12,10 +12,10 @@ class Httpd < Formula
   end
 
   bottle do
-    sha256 "58958f4f22c9e815f2590bd84dbae5f34d761836e45b625b001f71047d055660" => :big_sur
-    sha256 "2c9351c32678a6c266d066a54cc8d17ea2a660caf8390d6e32b37c0794199283" => :arm64_big_sur
-    sha256 "7351527d21a67d696ba732e43924a1b8f73f987098b45f96c366afbbaede03ef" => :catalina
-    sha256 "93a50743615ce0bef192e2d40c05255456016e4c5774a817f3f9a8ca3ef03375" => :mojave
+    sha256 "5a979ae3affd408b4ab51f917ef34e662a9cb85eb3918e56e05e1bcfac1aedac" => :big_sur
+    sha256 "35357c35f6be07c0f3e60d64c88eae200158dca6e390a341569a9f0296ed33fb" => :arm64_big_sur
+    sha256 "c540cd4ba596ff6f0df9d772c41487c26201f548a3756ee7a02108c70fee147e" => :catalina
+    sha256 "b88153894953fa0c976f0f74bec8abf2646b320424cc92a5cbdebb6a493ab729" => :mojave
   end
 
   depends_on "apr"
