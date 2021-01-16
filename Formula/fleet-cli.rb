@@ -14,10 +14,11 @@ class FleetCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0c5dfccdfc07605a1bbefdc16882745a22201f18dca17806bf8e542719827459" => :big_sur
-    sha256 "6ea8c0ebbe4b2990e4c8bf29582c1aed50b4649513eb0e7e42ab4bad33cf6203" => :arm64_big_sur
-    sha256 "03b4414cb80b9bf95a4dacd9a432f04d240a21aa00a26a2df7ce47342df7ed47" => :catalina
-    sha256 "e8f8fadfaee6bc9d893454aa7035985ce652bcb25448ce5fd50e33ac45d09acc" => :mojave
+    rebuild 1
+    sha256 "cbeb2c468c086fa58b37fe893676e8513a3157ead23ae4458fc8200374134e0f" => :big_sur
+    sha256 "1fc1160faf02f1a81da9cb77acfa1afef1de9ba27318b246fc3803c38b1268f4" => :arm64_big_sur
+    sha256 "a7f6a234baac314527226325e09e820a3005f535fd8bf0dbbddce12b7cd59d58" => :catalina
+    sha256 "84883f4961ecadc2fcd27001ed56c839bfc7cc0e3119cf8335cd22a85313e816" => :mojave
   end
 
   depends_on "go" => :build
