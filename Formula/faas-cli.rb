@@ -5,6 +5,7 @@ class FaasCli < Formula
       tag:      "0.12.21",
       revision: "598336a0cad38a79d5466e6a3a9aebab4fc61ba9"
   license "MIT"
+  head "https://github.com/openfaas/faas-cli.git"
 
   livecheck do
     url :stable
@@ -25,10 +26,12 @@ class FaasCli < Formula
     ENV["XC_OS"] = "darwin"
     ENV["XC_ARCH"] = "amd64"
     project = "github.com/openfaas/faas-cli"
-    commit = Utils.safe_popen_read("git", "rev-parse", "HEAD").chomp
-    system "go", "build", "-ldflags",
-            "-s -w -X #{project}/version.GitCommit=#{commit} -X #{project}/version.Version=#{version}", "-a",
-            "-installsuffix", "cgo", "-o", bin/"faas-cli"
+    ldflags = %W[
+      -s -w
+      -X #{project}/version.GitCommit=#{Utils.git_head}
+      -X #{project}/version.Version=#{version}
+    ]
+    system "go", "build", "-ldflags", ldflags.join(" "), "-a", "-installsuffix", "cgo", "-o", bin/"faas-cli"
     bin.install_symlink "faas-cli" => "faas"
   end
 
@@ -73,11 +76,10 @@ class FaasCli < Formula
       output = shell_output("#{bin}/faas-cli deploy --tls-no-verify -yaml test.yml", 1)
       assert_match "Deploying: dummy_function.", output
 
-      stable_resource = stable.instance_variable_get(:@resource)
-      commit = stable_resource.instance_variable_get(:@specs)[:revision]
+      commit_regex = /[a-f0-9]{40}/
       faas_cli_version = shell_output("#{bin}/faas-cli version")
-      assert_match /\s#{commit}$/, faas_cli_version
-      assert_match /\s#{version}$/, faas_cli_version
+      assert_match commit_regex, faas_cli_version
+      assert_match version.to_s, faas_cli_version
     ensure
       Process.kill("TERM", pid)
       Process.wait(pid)
