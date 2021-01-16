@@ -12,6 +12,14 @@ class Hexo < Formula
     url :stable
   end
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "bc3cc137fef9e6bc0351f4438ae7a51c8ec9187fc2334c9ff5be74e7d118f9e6" => :big_sur
+    sha256 "f5d1af98229cb54b69a8f256c45b20fecac6100c4663d38874c213cb7fe52936" => :arm64_big_sur
+    sha256 "99db3ced545c108730dc565eacfbf91f39fd4235760c52ec55efc7731f7bc947" => :catalina
+    sha256 "2a523c0293434b8b687eca111680d3044bbd1f6d4f4eaa0ca301ee2a22f0ba92" => :mojave
+  end
+
   depends_on "node"
 
   def install
