@@ -23,13 +23,13 @@ class Kustomize < Formula
   depends_on "go" => :build
 
   def install
-    revision = Utils.safe_popen_read("git", "rev-parse", "HEAD").strip
     tag = Utils.safe_popen_read("git", "tag", "--contains", "HEAD").strip
 
     cd "kustomize" do
       ldflags = %W[
-        -s -X sigs.k8s.io/kustomize/api/provenance.version=#{tag}
-        -X sigs.k8s.io/kustomize/api/provenance.gitCommit=#{revision}
+        -s
+        -X sigs.k8s.io/kustomize/api/provenance.version=#{tag}
+        -X sigs.k8s.io/kustomize/api/provenance.gitCommit=#{Utils.git_head}
         -X sigs.k8s.io/kustomize/api/provenance.buildDate=#{Time.now.iso8601}
       ]
       system "go", "build", "-ldflags", ldflags.join(" "), "-o", bin/"kustomize"
