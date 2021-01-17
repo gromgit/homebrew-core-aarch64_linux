@@ -12,10 +12,10 @@ class Libsigsegv < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "8f4dde47fdc37a7d8bfe2e5fb5a6935df61933ac0c261c7e84a779ea9d1571f9" => :big_sur
-    sha256 "3f08091c87658aaf556a9309ce98146faee3d9be07e72380fdab78449111195c" => :catalina
-    sha256 "f883382e7eb115a7ea8f660487b40f186d2d422f16d0bceaa58ceca19f7279f9" => :mojave
+    sha256 "9bd929ab1b6a2c35bdde0306a2a4c30498a47659ae0877bc89a7b74f67d93425" => :big_sur
+    sha256 "709a1a801698a0e0862be0f71d9b15ed8af9b6777956ae2caf0795d418956ce4" => :arm64_big_sur
+    sha256 "0d7f731afff70661df049267de9fe2c34b74d3918a7a7695fbfd1deef664aa68" => :catalina
+    sha256 "95525c7e620743555e44175496c21c57a8cc39b8ca2670bf0fd690cc42a2977c" => :mojave
   end
 
   head do
