@@ -7,11 +7,10 @@ class Codequery < Formula
 
   bottle do
     cellar :any
-    sha256 "7f8c243f0fc8d33c04ed5ec3579a85d1c39802c4cafd05df0b83a34a1d6edc47" => :big_sur
-    sha256 "b4412d85b3db4b9f51af79da9b5adcc172bcf9448d5b6e45b272da764751a37a" => :arm64_big_sur
-    sha256 "b3f585e17783444968f0739397eb41fb14f897584118689bf1dbb862344e4221" => :catalina
-    sha256 "94fd84eb8c088b69eeddd1e09ad6bf7ed97ddd052e2ab4f6381776a6b4d3622d" => :mojave
-    sha256 "da150e36ca0d9cc56f7b243aa26677e4bed67335b1be5d01f10eeaf83df6884b" => :high_sierra
+    sha256 "6882e0c73522ed885c8019728345d715f052131a977c2fcb412719f291067c2a" => :big_sur
+    sha256 "e878297e7d2e9199a0524a9de866b5d98c49746449bd34829cb2df1ad8062466" => :arm64_big_sur
+    sha256 "3e65dd4fdeca53a31d87f1de5cf2957624797575773a25a650e6899b33803056" => :catalina
+    sha256 "b8ef06cdace299c0ac728ae6cfc29d4b7d9eee89ed80e9f04797e5e9b21db83b" => :mojave
   end
 
   depends_on "cmake" => :build
