@@ -5,6 +5,7 @@ class Devspace < Formula
       tag:      "v5.7.1",
       revision: "7ba03fa139f02840cb7561f57e045709823dcc0d"
   license "Apache-2.0"
+  head "https://github.com/devspace-cloud/devspace.git"
 
   livecheck do
     url :stable
@@ -22,8 +23,12 @@ class Devspace < Formula
   depends_on "kubernetes-cli"
 
   def install
-    system "go", "build", "-ldflags",
-    "-s -w -X main.commitHash=#{stable.specs[:revision]} -X main.version=#{stable.specs[:tag]}", *std_go_args
+    ldflags = %W[
+      -s -w
+      -X main.commitHash=#{Utils.git_head}
+      -X main.version=#{version}
+    ]
+    system "go", "build", "-ldflags", ldflags.join(" "), *std_go_args
   end
 
   test do
