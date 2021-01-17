@@ -5,6 +5,7 @@ class TclTk < Formula
   mirror "https://fossies.org/linux/misc/tcl8.6.11-src.tar.gz"
   sha256 "8c0486668586672c5693d7d95817cb05a18c5ecca2f40e2836b9578064088258"
   license "TCL"
+  revision 1
 
   livecheck do
     url :stable
@@ -47,9 +48,9 @@ class TclTk < Formula
   end
 
   resource "tk" do
-    url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.11/tk8.6.11-src.tar.gz"
-    mirror "https://fossies.org/linux/misc/tk8.6.11-src.tar.gz"
-    sha256 "5228a8187a7f70fa0791ef0f975270f068ba9557f57456f51eb02d9d4ea31282"
+    url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.11/tk8.6.11.1-src.tar.gz"
+    mirror "https://fossies.org/linux/misc/tk8.6.11.1-src.tar.gz"
+    sha256 "006cab171beeca6a968b6d617588538176f27be232a2b334a0e96173e89909be"
   end
 
   resource "itk4" do
