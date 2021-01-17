@@ -33,13 +33,12 @@ class SyncGateway < Formula
     (buildpath/"build").install_symlink repo_cache
     cp Dir["*.sh"], "build"
 
-    git_commit = `git rev-parse HEAD`.chomp
     manifest = buildpath/"new-manifest.xml"
     manifest.write Utils.safe_popen_read "python", "rewrite-manifest.sh",
                                          "--manifest-url",
                                          "file://#{buildpath}/manifest/default.xml",
                                          "--project-name", "sync_gateway",
-                                         "--set-revision", git_commit
+                                         "--set-revision", Utils.git_head
     cd "build" do
       mkdir "godeps"
       system "repo", "init", "-u", stable.url, "-m", "manifest/default.xml"
