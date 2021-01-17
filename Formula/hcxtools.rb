@@ -8,10 +8,10 @@ class Hcxtools < Formula
 
   bottle do
     cellar :any
-    sha256 "4ac2701c280d72e1d47df83a5427d37fe4c616ff21d9df2e8ab5d88f30947404" => :big_sur
-    sha256 "a195c011f94d4babf9ab62746a05d170aa6157bb3ad6e9f17a44d1e0cbb5b640" => :arm64_big_sur
-    sha256 "82513d7ab36ea35c5b9899630bba673f0017c36a2162614714cf8be505d0fea6" => :catalina
-    sha256 "0f7a126b9cef14368f13a494ed1465668ba83f6050e0b5d778adea34fdc795ab" => :mojave
+    sha256 "99013be82236937ee4f100fc0e52b19d45a6e2c15952e116fcf1394873b8af9d" => :big_sur
+    sha256 "7203d4127bf7bffe5ef0ce0ac53bf06ef4d3d46f5acad23eb084268a1fd68df1" => :arm64_big_sur
+    sha256 "d8f6de053a88b742ac743f88d8f22f49e4f01fe6ea3f3be2fa235b2db80cd38f" => :catalina
+    sha256 "57d98cd8c5744413822fd26bd3445c076a22c24a664451a2b64d413e8a2a5ca5" => :mojave
   end
 
   depends_on "pkg-config" => :build
