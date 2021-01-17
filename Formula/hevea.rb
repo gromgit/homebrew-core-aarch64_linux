@@ -10,10 +10,9 @@ class Hevea < Formula
   end
 
   bottle do
-    sha256 "7bcea50f197e11b68f945adb9f0e9a0fb9603a8f1fb07269c3ab03f012693023" => :big_sur
-    sha256 "34fd968c75f335330d256da9ad1b3e39b65b4286deb36810f898a6a729794b41" => :catalina
-    sha256 "780ecfdaaac0985d9d9a6ef2b92c966d101144637bb65c41880f9b71c27c3c13" => :mojave
-    sha256 "851ce38d9468eee9b2548f303e1e9d029e863dadcf90caa68039b8615b5acf07" => :high_sierra
+    sha256 "7679aa58989eb2715fad0c5967407ce69b94bc3ec2aa7b3ad9fe7992be315858" => :big_sur
+    sha256 "6d654577f6c28ddd3c1029df88c7ecfce23dcc3ddac12fba90fc247abfcdb43e" => :catalina
+    sha256 "6e0aa3139d0f799090295e989d8aa53d27b6d3735011ee9a8cedd85a0fd3b95b" => :mojave
   end
 
   depends_on "ocamlbuild" => :build
