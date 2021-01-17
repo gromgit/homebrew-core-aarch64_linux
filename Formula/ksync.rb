@@ -5,6 +5,7 @@ class Ksync < Formula
       tag:      "0.4.5",
       revision: "9f40bf134329814a57e1a58d73b84761a2b06c73"
   license "Apache-2.0"
+  head "https://github.com/ksync/ksync.git"
 
   bottle do
     cellar :any_skip_relocation
@@ -17,17 +18,16 @@ class Ksync < Formula
   depends_on "go" => :build
 
   def install
-    time = Utils.safe_popen_read("date", "+%Y%m%dT%H%M%S").chomp
-    goversion = "go#{Formula["go"].version}"
-    commit = Utils.safe_popen_read("git", "rev-parse", "--short", "HEAD").chomp
-    system "go", "build", "-ldflags",
-              "-w -X github.com/ksync/ksync/pkg/ksync.GitCommit=#{commit} \
-              -X github.com/ksync/ksync/pkg/ksync.GitTag=#{version} \
-              -X github.com/ksync/ksync/pkg/ksync.BuildDate=#{time} \
-              -X github.com/ksync/ksync/pkg/ksync.VersionString=Homebrew \
-              -X github.com/ksync/ksync/pkg/ksync.GoVersion=#{goversion}",
-              *std_go_args,
-              "github.com/ksync/ksync/cmd/ksync"
+    project = "github.com/ksync/ksync"
+    ldflags = %W[
+      -w
+      -X #{project}/pkg/ksync.GitCommit=#{Utils.git_short_head}
+      -X #{project}/pkg/ksync.GitTag=#{version}
+      -X #{project}/pkg/ksync.BuildDate=#{Utils.safe_popen_read("date", "+%Y%m%dT%H%M%S").chomp}
+      -X #{project}/pkg/ksync.VersionString=Homebrew
+      -X #{project}/pkg/ksync.GoVersion=go#{Formula["go"].version}
+    ]
+    system "go", "build", "-ldflags", ldflags.join(" "), *std_go_args, "#{project}/cmd/ksync"
   end
 
   test do
