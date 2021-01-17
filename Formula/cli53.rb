@@ -7,11 +7,10 @@ class Cli53 < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0cb72c1182f1f323ce607fe9e016c3cf9352db57e18384da6b356164aab751cf" => :big_sur
-    sha256 "1d7ce2cfe475ced9a092cf4c8c18d34feab5398249bc8672235c13004dfe9206" => :arm64_big_sur
-    sha256 "65f9f13eb5c2f53afcb697f9699f8dd6b9df5f400908a2d3423879f8ca895942" => :catalina
-    sha256 "73ec9efeaf423dd32530bd4a547b11522b54dd5666942735268bb7690479ff09" => :mojave
-    sha256 "190e2e02b890cf099ca52d1468b224d16c82840a3a534db83a2aed5553b07bfc" => :high_sierra
+    sha256 "9f7f7b6f459a9d42e4f58bf32a618046e124e5544af3fece7a76e7e50005dbe4" => :big_sur
+    sha256 "98cb37be5b6af7dd7cc216a93ad0c5fb000d4bac22762e9731832de6119a9f0c" => :arm64_big_sur
+    sha256 "9bf273343ecbaadbae4b55c1bc48bc529d1e6ecfe651848db995f2cd70966756" => :catalina
+    sha256 "6e3fff5c7242c391fa6a43d1a9cb79467b56149102624b60abc8008e46280199" => :mojave
   end
 
   depends_on "go" => :build
