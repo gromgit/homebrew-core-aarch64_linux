@@ -14,6 +14,7 @@ class Heimdal < Formula
   bottle do
     rebuild 1
     sha256 "95ad69bc1e08ebbd279062632bdf576982fbcba5c34a4ba83c7e91523952b6e6" => :big_sur
+    sha256 "16cc4ba36dbbc9750c522eefa8da0a6e7685281f00ef611c982d8dd7b5b4bd69" => :arm64_big_sur
     sha256 "6345879296177a9b33c73bbae4749debb92d20cf6fe951d51bb2c592f9d82b3b" => :catalina
     sha256 "280f713c88dd355d0c385eaa7e3e4e3ae762854259b1edc801821287f132c15a" => :mojave
   end
