@@ -3,8 +3,9 @@ class Mmctl < Formula
   homepage "https://github.com/mattermost/mmctl"
   url "https://github.com/mattermost/mmctl.git",
       tag:      "v5.31.0",
-      revision: "689bd041b5aa02183721fda0c4e9a4e3d84fab15"
+      revision: "fc161b2931110a913169a0601f0d9d0a36b1749a"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/mattermost/mmctl.git"
 
   livecheck do
@@ -25,7 +26,7 @@ class Mmctl < Formula
   def install
     ENV["GOBIN"] = buildpath/bin
     ENV["ADVANCED_VET"] = "FALSE"
-    ENV["BUILD_HASH"] = Utils.safe_popen_read("git", "rev-parse", "HEAD").chomp
+    ENV["BUILD_HASH"] = Utils.git_head
     ENV["BUILD_VERSION"] = version.to_s
     (buildpath/"src/github.com/mattermost/mmctl").install buildpath.children
     cd "src/github.com/mattermost/mmctl" do
