@@ -5,6 +5,7 @@ class Krew < Formula
       tag:      "v0.4.0",
       revision: "8bebb56d7295f361db3780fa18bd9f2f995ed48f"
   license "Apache-2.0"
+  head "https://github.com/kubernetes-sigs/krew.git"
 
   bottle do
     cellar :any_skip_relocation
@@ -18,7 +19,6 @@ class Krew < Formula
   depends_on "kubernetes-cli"
 
   def install
-    commit = Utils.safe_popen_read("git", "rev-parse", "--short=8", "HEAD").chomp
     ENV["CGO_ENABLED"] = "0"
     # build in local dir to avoid this error:
     # go build: cannot write multiple packages to non-directory /usr/local/Cellar/krew/0.3.2/bin/krew
@@ -26,7 +26,7 @@ class Krew < Formula
 
     ldflags = %W[
       -w
-      -X sigs.k8s.io/krew/pkg/version.gitCommit=#{commit}
+      -X sigs.k8s.io/krew/pkg/version.gitCommit=#{Utils.git_short_head(length: 8)}
       -X sigs.k8s.io/krew/pkg/version.gitTag=v#{version}
     ]
 
