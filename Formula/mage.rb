@@ -5,6 +5,7 @@ class Mage < Formula
       tag:      "v1.11.0",
       revision: "07afc7d24f4d6d6442305d49552f04fbda5ccb3e"
   license "Apache-2.0"
+  head "https://github.com/magefile/mage.git"
 
   bottle do
     cellar :any_skip_relocation
@@ -17,12 +18,10 @@ class Mage < Formula
   depends_on "go"
 
   def install
-    commit = Utils.safe_popen_read("git", "rev-parse", "--short", "HEAD").chomp
-
     ldflags = %W[
       -s -w
       -X github.com/magefile/mage/mage.timestamp=#{Date.today}
-      -X github.com/magefile/mage/mage.commitHash=#{commit}
+      -X github.com/magefile/mage/mage.commitHash=#{Utils.git_short_head}
       -X github.com/magefile/mage/mage.gitTag=#{version}
     ]
     system "go", "build", *std_go_args, "-ldflags", ldflags.join(" ")
