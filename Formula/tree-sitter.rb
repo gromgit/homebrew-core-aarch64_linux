@@ -10,11 +10,11 @@ class TreeSitter < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "31e8ee1b74728b4720c33487d41c24d3b2e947c53f5b586c713f11159b195d8d" => :big_sur
-    sha256 "bde39679171a3c3aec7c9f5fec924b106a5582977435a559c8767ab9a477a328" => :arm64_big_sur
-    sha256 "31815f6cc12219253cb73ea3626383119e11f2f027286641f8dadaf69381852e" => :catalina
-    sha256 "fbef61fe89cc07c5af05a06185ccb91cfa9c34773ab6b26b751ae0171e3806a2" => :mojave
+    rebuild 2
+    sha256 "99f761f4f254e03c4a1340389f0997e168695764f448984b691b4c2ed636a228" => :big_sur
+    sha256 "bcb908e01eb052b68fb3780f12d9cf74da9b36967f9cd6be1f37ffcce5a65805" => :arm64_big_sur
+    sha256 "6acc385bf4be8cbbc3199a57c918346fc724f4da7afbdd3bc7612595b04d27c2" => :catalina
+    sha256 "d15a8f3640166e717d4dd1f805b19aa48272c72d414bde3838d66a6a6d8c2197" => :mojave
   end
 
   depends_on "emscripten" => [:build, :test]
