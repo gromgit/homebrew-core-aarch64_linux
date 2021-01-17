@@ -13,10 +13,10 @@ class Mycli < Formula
 
   bottle do
     cellar :any
-    sha256 "4330bad05a909ae40743ef8b773a1bd8c815611717ad3f6c253eb0cd5adccb2f" => :big_sur
-    sha256 "3dd8416e5e67cf6b6ed0fd128ae68590c06383b868d766a1d37783c46ce58321" => :arm64_big_sur
-    sha256 "3b81b2cd3c85ddef0f98137023e9005d1b3674086b49e0ac8ac39fb5cfb33f03" => :catalina
-    sha256 "617b9731931d57b437a5ce41c7f010fd9c9888e9f71f8837a0ad803b0ee24d9e" => :mojave
+    sha256 "d9ae615304f231e75451bfb499c660a7bd06100ccfdf7be3865e364e44fa0f13" => :big_sur
+    sha256 "892dd35ba80781a61b68c6fb860211d496359de0ea73ca09a4e49fc4efe9c845" => :arm64_big_sur
+    sha256 "13e45a3ea412ca3b34b1cece6c8c13eff5b41cf67cca64a0413f4301373ac5fc" => :catalina
+    sha256 "807d55e715987b991454200aa6ec5e767cbce84df2701972186e0e0a9c4abddc" => :mojave
   end
 
   depends_on "openssl@1.1"
