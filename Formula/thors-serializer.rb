@@ -8,11 +8,10 @@ class ThorsSerializer < Formula
 
   bottle do
     cellar :any
-    sha256 "c9e5ad98aa1ec0ce8b0003e865ab33f8d53583548bb4eeb8500e2c1a98e08f99" => :big_sur
-    sha256 "832d5ce674557e3c007d8224c3c16f89ee4d8d6cd4e39848ecc28bd94b9297b7" => :arm64_big_sur
-    sha256 "b03bf969cade0d22b86d88ad9c7414ee49c585bed65b3aed18dc28c24bd5ddf4" => :catalina
-    sha256 "eddf2665dbf5da0f54b4ad942a4b78214afa0242f22106b91a55e6868bb5a2a5" => :mojave
-    sha256 "8649be65f46b9cbde2fadc93962d4ad4a4e06478ead0469505ba6c5fa4ea36c4" => :high_sierra
+    sha256 "32d1ca4b2195bca9c17d3ff542155985cf56216880f2d9885f66876dca5fe7ce" => :big_sur
+    sha256 "dc277afe1f6b2ba3f83d0e8deca405465ddf484aecc234b2531b1eefa20dd195" => :arm64_big_sur
+    sha256 "6e736c6c9c571624bf6b53fab2f63921f56a1d5cc875375a1120676ee4d34f04" => :catalina
+    sha256 "e1ed8ab93ffd5f40791935c90464a3a90ed77440fc720910bfc3cb8fe149a395" => :mojave
   end
 
   depends_on "boost" => :build
