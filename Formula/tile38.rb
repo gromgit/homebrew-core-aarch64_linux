@@ -5,6 +5,7 @@ class Tile38 < Formula
       tag:      "1.22.5",
       revision: "6c653ab268df2ef36618ef7c2060f6744f220632"
   license "MIT"
+  head "https://github.com/tidwall/tile38.git"
 
   bottle do
     cellar :any_skip_relocation
@@ -22,12 +23,10 @@ class Tile38 < Formula
   end
 
   def install
-    commit = Utils.safe_popen_read("git", "rev-parse", "--short", "HEAD").chomp
-
     ldflags = %W[
       -s -w
       -X github.com/tidwall/tile38/core.Version=#{version}
-      -X github.com/tidwall/tile38/core.GitSHA=#{commit}
+      -X github.com/tidwall/tile38/core.GitSHA=#{Utils.git_short_head}
     ]
 
     system "go", "build", "-o", bin/"tile38-server", "-ldflags", ldflags.join(" "), "./cmd/tile38-server"
