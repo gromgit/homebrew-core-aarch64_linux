@@ -5,6 +5,7 @@ class GatewayGo < Formula
       tag:      "v0.1.95",
       revision: "19c8673a044deb3ec419e05b74b3fd745fe8678c"
   license "MIT"
+  head "https://github.com/OpenIoTHub/gateway-go.git"
 
   bottle do
     cellar :any_skip_relocation
@@ -17,11 +18,14 @@ class GatewayGo < Formula
   depends_on "go" => :build
 
   def install
-    (etc/"gateway-go").mkpath
-    system "go", "build", "-mod=vendor", "-ldflags",
-             "-s -w -X main.version=#{version} -X main.commit=#{stable.specs[:revision]} -X main.builtBy=homebrew",
-             *std_go_args
-    etc.install "gateway-go.yaml" => "gateway-go/gateway-go.yaml"
+    ldflags = %W[
+      -s -w
+      -X main.version=#{version}
+      -X main.commit=#{Utils.git_head}
+      -X main.builtBy=homebrew
+    ]
+    system "go", "build", "-mod=vendor", "-ldflags", ldflags.join(" "), *std_go_args
+    (etc/"gateway-go").install "gateway-go.yaml"
   end
 
   plist_options manual: "gateway-go -c #{HOMEBREW_PREFIX}/etc/gateway-go/gateway-go.yaml"
