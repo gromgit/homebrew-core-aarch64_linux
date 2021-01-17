@@ -7,10 +7,10 @@ class Tmx < Formula
 
   bottle do
     cellar :any
-    sha256 "4a02eaad5feda5bd83ddbc7292dab864a9e031861e739dd12270daa10ac762da" => :big_sur
-    sha256 "3e571d91e3c0e20a9e6a5cbf75d097b04ff7045e00b7beb092d2d9bf09e5cc36" => :arm64_big_sur
-    sha256 "0263118ee359ad7dc4d1ff0eb9ab68de5903b38d9ab337bb0dda83ae2fc04b55" => :catalina
-    sha256 "badbdbca1c082cd0d1229f0d4d3e200051d90a9cd95a99db4a35b370858f1070" => :mojave
+    sha256 "91e9846b6d59e0694918753e357736c229c2a70d8021fdbaa2eb506e5be746c2" => :big_sur
+    sha256 "770cdb601ea6b496a29832960cb5fd79626a99f55f01c635985aa921f3e5f31d" => :arm64_big_sur
+    sha256 "1013715fdb263f6d6985c9145a5dbc05d2e41ba6c4aa28af766f0bc82a87f2c5" => :catalina
+    sha256 "060eab2a5090afed9dfbf6ca716a2867b956be2222e6a623a5b98774bf06ef6e" => :mojave
   end
 
   depends_on "cmake" => :build
