@@ -7,10 +7,9 @@ class Libical < Formula
 
   bottle do
     cellar :any
-    sha256 "63bf149d253ce0058dc0c8d482498bcdc2f98a1f5fbbcbb5e994ca5902d2585a" => :big_sur
-    sha256 "aee72172114e605f00d453d7a2f5e7be3b813fcc56d05463c97de76f579db5f4" => :catalina
-    sha256 "93bd93bbad50f91aaa215ba2f764046fef919790a4ff227328a309b2ad2490d2" => :mojave
-    sha256 "3ff8dae7c504718bffd8fb8ce066c3b5c777d12250bdc87ff3fbb7f230284d1b" => :high_sierra
+    sha256 "e12adf682ea1f397351271c34de6ea2ef1d8d2b85f06fef6a6fa5e9c0639009e" => :big_sur
+    sha256 "36981c1f3b12fb5fb5b2b5cb9992c4fad91bbdcabb0ba3d369fb2e56c6c912c9" => :catalina
+    sha256 "31f627dd8dd297bc02be8c7a4b790058d9209d98839cb31e727b7a948e29a66a" => :mojave
   end
 
   depends_on "cmake" => :build
