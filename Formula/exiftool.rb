@@ -14,11 +14,10 @@ class Exiftool < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "63ec4f485ba5c8e96fdd1814da833cedb7f9707c654c4167cb4d22b3205414b6" => :big_sur
-    sha256 "2093b487fe4738a03117ee7c2e7b7771d6a5b6b74da43e7b321ae2c5ff38fc79" => :arm64_big_sur
-    sha256 "94e6bea5ede141fec762e7c7e06e1434d84b90695388cf269787ae77ece01cda" => :catalina
-    sha256 "94e6bea5ede141fec762e7c7e06e1434d84b90695388cf269787ae77ece01cda" => :mojave
-    sha256 "b7aa0c2aa1d2e0e1d2eab87c16c180153f62715e780f31a83f2f081d8f91b620" => :high_sierra
+    sha256 "460e9669b490c7eb499fe22a79a61af24274b29f8ed30630f3066b5bafc78569" => :big_sur
+    sha256 "c3f82fb1ef904fdfda38001924c9a0e4c1ad97f14cee34982cf2b36c2db80a58" => :arm64_big_sur
+    sha256 "b21f5d6bdf69f77fba7803b27eaf24c8f564503a192774ed4cf0c6bf259052b0" => :catalina
+    sha256 "fca252c42eec5f3a026668e9e96997c57d4ce5cc4a8bfd3a844f8016fe7bc41e" => :mojave
   end
 
   def install
