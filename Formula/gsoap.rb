@@ -11,10 +11,10 @@ class Gsoap < Formula
   end
 
   bottle do
-    sha256 "93fe2a7aa626ca66e67bba197f1fffa04fd43715b8ac44234c21d753db0a3f2c" => :big_sur
-    sha256 "a16b4576ac353965e5dfff452e42f13fd632d6ab71e6411fd9b4031cd30228de" => :arm64_big_sur
-    sha256 "c2bf0fe4477d58fbbd507b01892e8e52df4b79a905ed1c4c7a3fbbe3b4f4e13f" => :catalina
-    sha256 "3947a0297c9b3ec635ce7951bcd622b1c2ae8f2c03a7149be2c001569c304961" => :mojave
+    sha256 "c55587438262b398d433af85087de4ebc8f90b43cb797f0677f386d8506680d5" => :big_sur
+    sha256 "786cd2fafa7aecc09f78f5282372d77043b7c6203d5d565f58459f63dc2ef7f0" => :arm64_big_sur
+    sha256 "d961088f83353a43f77ce55fd0986e1402ecfe47626d06b73cc654b346b4a758" => :catalina
+    sha256 "2c76abc3cfdae87a6193e5de6dc0cb06c41affce2bf11b3284effca70f8c7ada" => :mojave
   end
 
   depends_on "autoconf" => :build
