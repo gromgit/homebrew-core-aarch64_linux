@@ -12,10 +12,10 @@ class Dialog < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "eb3455238be98e27905b275e88723a0e0ccee0c959ca1124ba681728626e08b6" => :big_sur
-    sha256 "1123439be33e07dafe32f34271445d3e3a7d7d00aa21f4141ba8a7d88a5164da" => :arm64_big_sur
-    sha256 "6fc24c87e6cf32e7702c0f9e64eba5ad79908b84bf1614cc62a99c967bb659ea" => :catalina
-    sha256 "0bb780acdabb6d05e8e6465fa8f204758a27c39caf7fc93fa9e5da17dcfeac31" => :mojave
+    sha256 "677d2554e2edadf745696c9071287cf34e567bc1247e780de08ca4e8150901cd" => :big_sur
+    sha256 "bf1cf9dd2d58d9548899df78a3e17db59a81c78c372c1027eb031195b70cc53a" => :arm64_big_sur
+    sha256 "572b7a9d28c5ba6b064ae85ee21f294e7e1c0f7e7f9a56a13d77ee55f30a2175" => :catalina
+    sha256 "aaae8bb17a8e2d3b2f62d305cf9e054e9d5c47ab1ce31b4546d677ad01e7b8a1" => :mojave
   end
 
   uses_from_macos "ncurses"
