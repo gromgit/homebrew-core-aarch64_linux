@@ -7,11 +7,10 @@ class Mydumper < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "fb43610eb7d7f45268ab926341a55822ec02774a8887e7ecc811a11d18108cfc" => :big_sur
-    sha256 "5091c42ae3b3ddc5424a04683e93239d16a9c1fdef46d7814b6ef0a7aa3c1f54" => :arm64_big_sur
-    sha256 "c87396db1270975e11f320c0437a0b002715a23c9400713fa40f8fc71e4e2d39" => :catalina
-    sha256 "22d6196c9f25dce4e190e528009ead061e395a07a5aa1eb2c61247572bf1ee82" => :mojave
+    sha256 "7d69132e5dc16095b3505e9e0d9a32d007ed59aaddc434080aca281be67b89f0" => :big_sur
+    sha256 "2a6e0ac0dc3666bd2b4968a3e860781b06972794124579cffa4d01f8f7aac0e5" => :arm64_big_sur
+    sha256 "c4209a1c5683a68bbbf7ef285bd3426ccc356c0c4d3b605ebe239883b060e743" => :catalina
+    sha256 "474f771d2bc3621402c21ffe07286f7a67b5e344209514ef63d55c1f2bf8b266" => :mojave
   end
 
   depends_on "cmake" => :build
