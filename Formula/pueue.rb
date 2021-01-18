@@ -1,8 +1,8 @@
 class Pueue < Formula
   desc "Command-line tool for managing long-running shell commands"
   homepage "https://github.com/Nukesor/pueue"
-  url "https://github.com/Nukesor/pueue/archive/v0.10.2.tar.gz"
-  sha256 "dbd333079df9249609f6a01d7c96175ec9d74f9d621688b95ec755134b7fa1f5"
+  url "https://github.com/Nukesor/pueue/archive/pueue-v0.11.1.tar.gz"
+  sha256 "72cdfb5a460c76bd26a0824fc68c984b88c70f65ff79e8b047e53f9d68b792ce"
   license "MIT"
   head "https://github.com/Nukesor/pueue.git"
 
@@ -18,7 +18,8 @@ class Pueue < Formula
   depends_on "rust" => :build
 
   def install
-    system "cargo", "install", *std_cargo_args
+    system "cargo", "install", "--locked", "--root", libexec, "--path", "pueue"
+    bin.install [libexec/"bin/pueue", libexec/"bin/pueued"]
 
     system "./build_completions.sh"
     bash_completion.install "utils/completions/pueue.bash" => "pueue"
@@ -59,15 +60,21 @@ class Pueue < Formula
   end
 
   test do
-    mkdir testpath/"Library/Preferences"
+    pid = fork do
+      exec bin/"pueued"
+    end
+    sleep 2
 
     begin
-      pid = fork do
-        exec bin/"pueued"
-      end
-      sleep 5
-      cmd = "#{bin}/pueue status"
-      assert_match /Task list is empty.*/m, shell_output(cmd)
+      mkdir testpath/"Library/Preferences"
+      output = shell_output("#{bin}/pueue status")
+      assert_match "Task list is empty. Add tasks with `pueue add -- [cmd]`", output
+
+      output = shell_output("#{bin}/pueue add x")
+      assert_match "New task added (id 0).", output
+
+      output = shell_output("#{bin}/pueue status")
+      assert_match "(1 parallel): running", output
     ensure
       Process.kill("TERM", pid)
     end
