@@ -5,6 +5,7 @@ class SyncGateway < Formula
       tag:      "2.8.0",
       revision: "e2e7d4286f84e3d101e2ea0d9ee868c66e6243f1"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/couchbase/sync_gateway.git"
 
   livecheck do
