@@ -3,7 +3,7 @@ class SyncGateway < Formula
   homepage "https://docs.couchbase.com/sync-gateway/current/index.html"
   url "https://github.com/couchbase/sync_gateway.git",
       tag:      "2.8.0",
-      revision: "61ca30a14f10edf40a26f7b2189c962c16a04b8a"
+      revision: "e2e7d4286f84e3d101e2ea0d9ee868c66e6243f1"
   license "Apache-2.0"
   head "https://github.com/couchbase/sync_gateway.git"
 
