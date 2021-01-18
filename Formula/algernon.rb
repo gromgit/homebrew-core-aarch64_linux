@@ -1,8 +1,8 @@
 class Algernon < Formula
   desc "Pure Go web server with Lua, Markdown, HTTP/2 and template support"
   homepage "https://algernon.roboticoverlords.org/"
-  url "https://github.com/xyproto/algernon/archive/1.12.11.tar.gz"
-  sha256 "0ecedfe86cf2016d8da281ca64d76b9383f76b0d58acee0d80e08c61df5035cc"
+  url "https://github.com/xyproto/algernon/archive/1.12.12.tar.gz"
+  sha256 "6127eb975da960fd8aa7732c82f3b5e62d14ea763801778552bdbeec28846bf7"
   license "MIT"
   version_scheme 1
   head "https://github.com/xyproto/algernon.git"
@@ -22,10 +22,9 @@ class Algernon < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", "-trimpath", "-mod=vendor", "-o", bin/"algernon"
+    system "go", "build", *std_go_args, "-mod=vendor"
 
     bin.install "desktop/mdview"
-    prefix.install_metafiles
   end
 
   test do
