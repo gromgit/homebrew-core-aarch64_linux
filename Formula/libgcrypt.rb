@@ -1,10 +1,9 @@
 class Libgcrypt < Formula
   desc "Cryptographic library based on the code from GnuPG"
   homepage "https://gnupg.org/related_software/libgcrypt/"
-  url "https://gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.8.7.tar.bz2"
-  sha256 "03b70f028299561b7034b8966d7dd77ef16ed139c43440925fe8782561974748"
+  url "https://gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.9.0.tar.bz2"
+  sha256 "4d9ccaa5f99db59ebcb64d73f62825b05ce8a6b7f86d19178559ef84de1381cb"
   license "GPL-2.0-only"
-  revision 1
 
   livecheck do
     url "https://gnupg.org/ftp/gcrypt/libgcrypt/"
@@ -21,13 +20,10 @@ class Libgcrypt < Formula
 
   depends_on "libgpg-error"
 
-  # Upstream patch which corrects the pkg-config flags to include the header and library paths
-  # Important on non /usr/local prefixes
-  # https://git.gnupg.org/cgi-bin/gitweb.cgi?p=libgcrypt.git;a=commit;h=761d12f140b77b907087590646651d9578b68a54
-  patch do
-    url "https://git.gnupg.org/cgi-bin/gitweb.cgi?p=libgcrypt.git;a=patch;h=761d12f140b77b907087590646651d9578b68a54"
-    sha256 "f4da2d8c93bc52a26efa429a81d32141246d163d752464cd17ac9cce27d1fc64"
-  end
+  # Upstream patches to fix basic test failing
+  # https://lists.gnupg.org/pipermail/gcrypt-devel/2021-January/005040.html
+  # https://lists.gnupg.org/pipermail/gcrypt-devel/2021-January/005039.html
+  patch :DATA
 
   def install
     system "./configure", "--disable-dependency-tracking",
@@ -41,13 +37,6 @@ class Libgcrypt < Formula
     # Parallel builds work, but only when run as separate steps
     system "make"
     on_macos do
-      # Slightly hideous hack to help `make check` work in
-      # normal place on >10.10 where SIP is enabled.
-      # https://github.com/Homebrew/homebrew-core/pull/3004
-      # https://bugs.gnupg.org/gnupg/issue2056
-      MachO::Tools.change_install_name("#{buildpath}/tests/.libs/random",
-                                       "#{lib}/libgcrypt.20.dylib",
-                                       "#{buildpath}/src/.libs/libgcrypt.20.dylib")
       MachO.codesign!("#{buildpath}/tests/.libs/random") if Hardware::CPU.arm?
     end
 
@@ -64,3 +53,28 @@ class Libgcrypt < Formula
     assert_match "0e824ce7c056c82ba63cc40cffa60d3195b5bb5feccc999a47724cc19211aef6", output
   end
 end
+
+__END__
+diff --git a/cipher/kdf.c b/cipher/kdf.c
+index 3d707bd..93c2c9f 100644
+--- a/cipher/kdf.c
++++ b/cipher/kdf.c
+@@ -342,7 +342,7 @@ check_one (int algo, int hash_algo,
+ static gpg_err_code_t
+ selftest_pbkdf2 (int extended, selftest_report_func_t report)
+ {
+-  static struct {
++  static const struct {
+     const char *desc;
+     const char *p;   /* Passphrase.  */
+     size_t plen;     /* Length of P. */
+@@ -452,7 +452,8 @@ selftest_pbkdf2 (int extended, selftest_report_func_t report)
+       "\x34\x8c\x89\xdb\xcb\xd3\x2b\x2f\x32\xd8\x14\xb8\x11\x6e\x84\xcf"
+       "\x2b\x17\x34\x7e\xbc\x18\x00\x18\x1c\x4e\x2a\x1f\xb8\xdd\x53\xe1"
+       "\xc6\x35\x51\x8c\x7d\xac\x47\xe9"
+-    }
++    },
++    { NULL }
+   };
+   const char *what;
+   const char *errtxt;
