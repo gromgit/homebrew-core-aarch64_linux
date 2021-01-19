@@ -3,8 +3,8 @@ class AzureCli < Formula
 
   desc "Microsoft Azure CLI 2.0"
   homepage "https://docs.microsoft.com/cli/azure/overview"
-  url "https://github.com/Azure/azure-cli/archive/azure-cli-2.17.1.tar.gz"
-  sha256 "492a50736d407f5ef9d1c9c8101e6b27e397c85765ac31b054fad2b3d85c836c"
+  url "https://github.com/Azure/azure-cli/archive/azure-cli-2.18.0.tar.gz"
+  sha256 "444230665e86e7b229ca2622599c429605dc1f9c0f6b6b791dda2ba59034973b"
   license "MIT"
   head "https://github.com/Azure/azure-cli.git"
 
@@ -118,8 +118,8 @@ class AzureCli < Formula
   end
 
   resource "azure-mgmt-appconfiguration" do
-    url "https://files.pythonhosted.org/packages/3f/3b/3dd55a7081523b97ac3dafdf9191a5d557a8dd175e14daa303c3a1ee4c0e/azure-mgmt-appconfiguration-0.6.0.zip"
-    sha256 "fe6e216ce7293219b7d8d1cbcca7cf2f4511f134c2bf0b3455078bf086436c5f"
+    url "https://files.pythonhosted.org/packages/dd/b1/da10dc4bbe2af67cc71f7031af6c102516227a8cf03ac1e503a6ba0e9194/azure-mgmt-appconfiguration-1.0.1.zip"
+    sha256 "b58bbe82a7429ba589292024896b58d96fe9fa732c578569cac349928dc2ca5f"
   end
 
   resource "azure-mgmt-applicationinsights" do
@@ -218,8 +218,8 @@ class AzureCli < Formula
   end
 
   resource "azure-mgmt-datamigration" do
-    url "https://files.pythonhosted.org/packages/69/0c/d876ab1ff8786deaf5bbf3b10c6823ae92c1d1ff576e262f4a6c681ffd39/azure-mgmt-datamigration-0.1.0.zip"
-    sha256 "e754928992743f54d999800a5e0679ee3e91d804d23a25f12c2e6f2f86cd05df"
+    url "https://files.pythonhosted.org/packages/96/7e/e8735fb1ffa239ee3e10b98c76467e072e055fcb56b052c50f8384bcb8ae/azure-mgmt-datamigration-4.1.0.zip"
+    sha256 "c33d1deb0ee173a15c8ec21a1e714ba544fe5f4895d3b1d8b0581f3c1b2e8ce4"
   end
 
   resource "azure-mgmt-deploymentmanager" do
@@ -383,8 +383,8 @@ class AzureCli < Formula
   end
 
   resource "azure-mgmt-resource" do
-    url "https://files.pythonhosted.org/packages/62/9d/3d6b0c9cfdb0fbb838788921393c68eeb7a4fd8738402dfbfc5a8db2636b/azure-mgmt-resource-10.3.0.zip"
-    sha256 "1fca79db668ed98c1211d886babcf23de4e768d9403dffeea06e46c7692e69ad"
+    url "https://files.pythonhosted.org/packages/9b/79/aac15f42c9d37a6bc76e0b78c6d7fa144fc53937ce432adae9c7ac7ee96b/azure-mgmt-resource-12.0.0.zip"
+    sha256 "8779e27fae0e81e9128789a33924dba26f2a0d756b215364b1b4372f020b9f1f"
   end
 
   resource "azure-mgmt-search" do
@@ -508,8 +508,8 @@ class AzureCli < Formula
   end
 
   resource "humanfriendly" do
-    url "https://files.pythonhosted.org/packages/53/1e/cde1153172d0d2bdf68845b8a52f8dd1bdd509f506d123a32a751a1bb0bd/humanfriendly-8.0.tar.gz"
-    sha256 "2f79aaa2965c0fc3d79452e64ec2c7601d70d67e51ea2e99cb40afe3fe2824c5"
+    url "https://files.pythonhosted.org/packages/31/0e/a2e882aaaa0a378aa6643f4bbb571399aede7dbb5402d3a1ee27a201f5f3/humanfriendly-9.1.tar.gz"
+    sha256 "066562956639ab21ff2676d1fda0b5987e985c534fc76700a19bd54bcb81121d"
   end
 
   resource "idna" do
@@ -558,8 +558,8 @@ class AzureCli < Formula
   end
 
   resource "knack" do
-    url "https://files.pythonhosted.org/packages/26/19/d59ed5e8bea6cbdc53c851eb5aca56b756a9e73566010cc566851172ad00/knack-0.7.2.tar.gz"
-    sha256 "dfc6aef6760ea9a9620577e01540617678d78cab3111a0f03e8b9f987d0f08ca"
+    url "https://files.pythonhosted.org/packages/da/a6/aff7d584715de9995e7afcbacb675e4be20a200679d2f075adc19ebff353/knack-0.8.0rc2.tar.gz"
+    sha256 "e29ce0570395713e54b236f21a4137d316ac84c012533a107b63861d29cae5da"
   end
 
   resource "MarkupSafe" do
@@ -623,8 +623,8 @@ class AzureCli < Formula
   end
 
   resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/29/60/8ff9dcb5eac7f4da327ba9ecb74e1ad783b2d32423c06ef599e48c79b1e1/Pygments-2.7.3.tar.gz"
-    sha256 "ccf3acacf3782cbed4a989426012f1c535c9a90d3a7fc3f16d231b9372d2b716"
+    url "https://files.pythonhosted.org/packages/e1/86/8059180e8217299079d8719c6e23d674aadaba0b1939e25e0cc15dcf075b/Pygments-2.7.4.tar.gz"
+    sha256 "df49d09b498e83c1a73128295860250b0b7edd4c723a32e9bc0d295c7c2ec337"
   end
 
   resource "PyJWT" do
