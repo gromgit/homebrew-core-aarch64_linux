@@ -7,11 +7,11 @@ class Go < Formula
     if Hardware::CPU.arm?
       url "https://golang.org/dl/go1.16beta1.src.tar.gz"
       sha256 "48e032c8cf71af4dc8119a29ee829c4fbd5265e32fd012564d4a70bb207695c1"
-      version "1.15.6"
+      version "1.15.7"
     else
-      url "https://golang.org/dl/go1.15.6.src.tar.gz"
-      mirror "https://fossies.org/linux/misc/go1.15.6.src.tar.gz"
-      sha256 "890bba73c5e2b19ffb1180e385ea225059eb008eb91b694875dd86ea48675817"
+      url "https://golang.org/dl/go1.15.7.src.tar.gz"
+      mirror "https://fossies.org/linux/misc/go1.15.7.src.tar.gz"
+      sha256 "8631b3aafd8ecb9244ec2ffb8a2a8b4983cf4ad15572b9801f7c5b167c1a2abc"
     end
 
     go_version = version.major_minor
