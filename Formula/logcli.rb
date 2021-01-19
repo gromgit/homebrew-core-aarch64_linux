@@ -7,11 +7,10 @@ class Logcli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "09885d26fa0980e0d51fd172b6d6b2fd6ff108cdfbc3c9ea0830f4deab12ad68" => :big_sur
-    sha256 "0c65387f35a1b50797cc9d2744823b1bed26d41e6aa12c5df954a0d3e8d8a0e6" => :arm64_big_sur
-    sha256 "b1a559d5d7d78851b73e659673d86f42d408d512f96d8bd38b46d9e41df0890b" => :catalina
-    sha256 "8c42544e8dea3ed9042392ccacbd7de7e944cc7ab88ea27c899fdec52483cba4" => :mojave
-    sha256 "4914fb833d0e4f4d4cb83bdd5b7b791bec1e432ea87cce75e02ff63e97dd28ba" => :high_sierra
+    sha256 "c00781eb4b3e730f5adbc1761e3ef026200b7ef7009c052c2e745af71006c817" => :big_sur
+    sha256 "08ac07823aeb4f80e1f634fdf344603d6450c8433f37cf0f646021839c5114f8" => :arm64_big_sur
+    sha256 "4e1718a506115656753253f0795a22378ee3d0fa691e1fdd38334f6c1604d304" => :catalina
+    sha256 "16c60bb03516466f2933aaac781a2a951120250caf03dd99fa27b2b214c03cc0" => :mojave
   end
 
   depends_on "go" => :build
