@@ -6,6 +6,7 @@ class MinioMc < Formula
       revision: "f1f3003e5eddf7be07d03d2a83037dabb2c55e94"
   version "20210116024534"
   license "Apache-2.0"
+  head "https://github.com/minio/mc.git"
 
   livecheck do
     url :stable
@@ -33,13 +34,12 @@ class MinioMc < Formula
     else
       minio_release = `git tag --points-at HEAD`.chomp
       minio_version = minio_release.gsub(/RELEASE\./, "").chomp.gsub(/T(\d+)-(\d+)-(\d+)Z/, 'T\1:\2:\3Z')
-      minio_commit = `git rev-parse HEAD`.chomp
       proj = "github.com/minio/mc"
 
       system "go", "build", "-trimpath", "-o", bin/"mc", "-ldflags", <<~EOS
         -X #{proj}/cmd.Version=#{minio_version}
         -X #{proj}/cmd.ReleaseTag=#{minio_release}
-        -X #{proj}/cmd.CommitID=#{minio_commit}
+        -X #{proj}/cmd.CommitID=#{Utils.git_head}
       EOS
     end
   end
