@@ -11,11 +11,10 @@ class Openldap < Formula
   end
 
   bottle do
-    sha256 "345810c84de13512ecf41b3ff0b606d8e59b093ab6bb3532e2cc3488a76c77fe" => :big_sur
-    sha256 "8b395311cd3ab9e08fec534f6d8f21dab159089aed7e73d636e63943da8df41a" => :arm64_big_sur
-    sha256 "c51d24181e4291ece30b4ff8504f864bc4e0432a0dc85b64d6f4cac68b4f43dd" => :catalina
-    sha256 "8a9151d93ef5d9fe13aefe74b9cbba128524cfa5646d3bafa84b44180ffcba22" => :mojave
-    sha256 "517c23bda49065c883a38d4d2ea0b1816860913c0b30013be170a01d3518a824" => :high_sierra
+    sha256 "7d305b33a411e3d20524b79e69ebb355b14e9514a10371f1426b450c4166ae97" => :big_sur
+    sha256 "a54e8979251114f78f1edb64668a6aaca413653e7c648b8a5cc13c675a710c42" => :arm64_big_sur
+    sha256 "1fcdd72cf7619ea2c79055357f8e1a600e4758d04f2233160381316bf64b0659" => :catalina
+    sha256 "6eb20ddb58b95eb2e7523cd5e61dfcd01f7210dacba0659374f60bc0e94a2aec" => :mojave
   end
 
   keg_only :provided_by_macos
