@@ -18,10 +18,11 @@ class MinioMc < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f99f7fd964a7cd94ead6859bb6471bee9bd01bbf7f5b1ee4a29540d43af80d6a" => :big_sur
-    sha256 "3fa1e4ce8c41145e617f2b261915c996e8b64a4c316b9404feb9b347dd077796" => :arm64_big_sur
-    sha256 "2e5950ab321a1156dfa780e6e83c8da63a3ec4391cfd380fcff245d6a6e9e53b" => :catalina
-    sha256 "69ca73389c6fbb26548660054d379a111982fdabd96683215cf4ff0fc64ae4f0" => :mojave
+    rebuild 1
+    sha256 "8dc735682796813d141f070e85ad0fff9876acf17ad0c46869fe4cf7362f18ce" => :big_sur
+    sha256 "cd088183559eb50d553dcc33f86f1e5a02f5bfb3d6bea1b1194bc87eac3f96f7" => :arm64_big_sur
+    sha256 "a7b5a51965913f2ef304827e99fd2d2390ed5bbdf1ef52a147c16669e6e63873" => :catalina
+    sha256 "cf9f3920d8cb20304784d07963a4560b0ffb0bafcf50bcbaa13c280a23e3a0d7" => :mojave
   end
 
   depends_on "go" => :build
