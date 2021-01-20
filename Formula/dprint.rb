@@ -8,9 +8,9 @@ class Dprint < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "77a9ea8f3e9bfbe4933a58d111f11f7a9d5354c9c431ea18e0183960e9273845" => :big_sur
-    sha256 "811b611a09d890db5548facc7db914f13741e7d2de94b4f0081a0746f4f6a179" => :catalina
-    sha256 "79814bd0f878870701930232ab8b3f7490cf16ae0190dd65b61ba30c810f0ba3" => :mojave
+    sha256 "390eda4604117de7d389484949424a130c3f417c2cbff2b5d59b06033eb7222c" => :big_sur
+    sha256 "d87537fa6beaec8ba177aba620213b7504b689a6b6d2b0fe7a5b3c7c6861dae6" => :catalina
+    sha256 "568b92a212191f284669aeab7ea1bed50c0beea6cd20860d0db0832d5dfb7913" => :mojave
   end
 
   depends_on "rust" => :build
