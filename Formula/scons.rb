@@ -13,11 +13,10 @@ class Scons < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5ebef89fc0bc3ac4b510504e24368a44f926771e61dfa6adb2b0ac29f92e66d7" => :big_sur
-    sha256 "25a6b0372a45596d23dfedd7529b41f57c966eb63b08ae1589298f182e25f5f9" => :arm64_big_sur
-    sha256 "c5051503085ee71b2ca039c0c30d16a1aceb77fd2603735b3e37571b936b9158" => :catalina
-    sha256 "b3fbbbf21fc6198ba87770cc870aa98602a2cf76f2971fb054b7e7dafdcd191c" => :mojave
-    sha256 "337031123eb8835112a41baec030df5d16fcd90944a827d9f9721dd64388d6ef" => :high_sierra
+    sha256 "9f88d30ce5ca1988ef8e22b28893b8f2efcdbf66135cbb18e70cc19912360571" => :big_sur
+    sha256 "b7b3af07e0b2686ab9413ec26839f9b965cd1a5ce7779a725e91157a236e7070" => :arm64_big_sur
+    sha256 "2ab0ded542c705c9cd7c84269035b08a6754844af4cd2580e1de5a55365af495" => :catalina
+    sha256 "36d14af5663e63ce0b7a40f53c6824a5545b1f1ba2e4195e83dad0978cb54dc5" => :mojave
   end
 
   depends_on "python@3.9"
