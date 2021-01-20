@@ -8,10 +8,10 @@ class Tendermint < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "305ebc63c28d0b66822e201bc2551d67b5186386d7964c5657087eef20257ab7" => :big_sur
-    sha256 "dbdff265a952ff04ef727ca2ef4c5537ae1d38045f103ce644f4f516c1be09e9" => :arm64_big_sur
-    sha256 "434b66b1a2e9dc6fd3b363e3120eaf8d226945f89c195b333b12627a74da05ca" => :catalina
-    sha256 "3a410e6879341212259a38a4078ba686910d22bb2913869914d79af3180edb32" => :mojave
+    sha256 "bfdc2737846402eb2fce2b13252729a3f016091d21d1bae4188d8ab0b03d5d4b" => :big_sur
+    sha256 "a4c507303fffdcb6f18788c366df6b50ebbe375406a8aff6cdfa7d2e9adf11ac" => :arm64_big_sur
+    sha256 "e72e990d6bea4a2e3db90dd36ab4a63fa96db7999a9c499c85f585873df48c1d" => :catalina
+    sha256 "c52b8e5797f97833d2dc4017f10bb64c53bce45a098518b34099e4b3800c03f5" => :mojave
   end
 
   depends_on "go" => :build
