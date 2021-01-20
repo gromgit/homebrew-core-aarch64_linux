@@ -8,11 +8,10 @@ class FlowCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "0add0adfbb2b7c98247ba720e5b55291de38019d08584830a1bbdd5852ef0f82" => :big_sur
-    sha256 "099d7c82462b61bf72730e3063968ca78d17f690bbf03c178317c34a33026d1a" => :arm64_big_sur
-    sha256 "db183d2c22eb8884717965948bb902a2b9ad9797bd1568c291aae6514ebe9b22" => :catalina
-    sha256 "cf8eb23062324486436af885bf4329f6d20d334156b49e75156e68e526a1219c" => :mojave
+    sha256 "d0efaa85dadbb105dbeaf6d56ec0c3eef4e3fa3743d843723c72b066dd7678a4" => :big_sur
+    sha256 "d2336ea4c8453b551ca63f1fc32f5bb21a885444a46abc146d2c0d53f4bdb992" => :arm64_big_sur
+    sha256 "fe0c5e3b0ae07655e0dd78ac52ce71654a8e68492a7bf7e342e5739f823a0613" => :catalina
+    sha256 "673e17bec4a299423fc52d59ceeeffd126f9f5ee4c134002bfeb7ddf29e317ff" => :mojave
   end
 
   depends_on "go" => :build
