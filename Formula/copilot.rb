@@ -4,8 +4,8 @@ class Copilot < Formula
   desc "CLI tool for Amazon ECS and AWS Fargate"
   homepage "https://github.com/aws/copilot-cli/wiki"
   url "https://github.com/aws/copilot-cli.git",
-      tag:      "v1.0.0",
-      revision: "238fd708679d4534b2f4c58cc3b7a85e6e1a768d"
+      tag:      "v1.1.0",
+      revision: "79c165450bb68856f565fd874e21e191e9a873b6"
   license "Apache-2.0"
   head "https://github.com/aws/copilot-cli.git"
 
@@ -40,7 +40,7 @@ class Copilot < Formula
     assert_match "Welcome to the Copilot CLI! We're going to walk you through some questions",
       shell_output("#{bin}/copilot init 2>&1", 1)
 
-    assert_match "list environments for application : MissingRegion: could not find region",
+    assert_match "could not find an application attached to this workspace, please run `app init` first",
       shell_output("#{bin}/copilot pipeline init 2>&1", 1)
   end
 end
