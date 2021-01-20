@@ -12,11 +12,10 @@ class Help2man < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "45e30569a906318428642a079e7b528ce7bf4a3093d4bc74b42cfdf465024747" => :big_sur
-    sha256 "eb514b632ea6772589c038ee185c1d5f69ad8a828ce7c66b8da4e9a4ec9e1ca6" => :arm64_big_sur
-    sha256 "26e1576582cf0be060f656a44dbad2a296fe4ba159e939fa5be627595ee3d53a" => :catalina
-    sha256 "d390ddda63284c31d16a93d0af2d6c857798b12704e9eb402411d931aff31ca6" => :mojave
+    sha256 "ee60622e70903c293171ea78097544d796a5454b29e8c1494529aa537901e460" => :big_sur
+    sha256 "7bc46236d8916519b432020f2d51df5c6006c7000b67835ff7e1276c58ec208c" => :arm64_big_sur
+    sha256 "603b604aaf17770dd4f4a0f9b45c266848d8c005228c64773fdec2d94e3d45dd" => :catalina
+    sha256 "f57b3269934c79434b70ac7807ea364af47ae8a3b6096364c0615b2789d4a0a9" => :mojave
   end
 
   depends_on "gettext" if Hardware::CPU.intel?
