@@ -14,11 +14,10 @@ class GitlabRunner < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "14511a5ca78458f448eb4caf25c84611640a3e8d850ecf351d83708875eb6281" => :big_sur
-    sha256 "0ee9eb9724c18d072dbbc75f018bb13aea312dca300894cf365df358e9453d1b" => :arm64_big_sur
-    sha256 "abb3276176d5a1a06a79fb0400f513e5d077bd1798aa798cf265064efe097405" => :catalina
-    sha256 "f231e664c00ee68e74c35135fac65077b1b139cb423ed5e06d966ef7f7f48542" => :mojave
+    sha256 "4b4babe8c296895c0a5608b5e7bc1202e3cbf21eb53e921638e315d32475cc18" => :big_sur
+    sha256 "c576eb3eb089d47a3c4d876c553b3112fd294337b63c163d902ad07a88eb47fc" => :arm64_big_sur
+    sha256 "2212629ccdfbad4277c3b4fd1306f4bbc6a3b6753ff9daa49535d0ed74cb285d" => :catalina
+    sha256 "01d055c7b65926732753be4b8def59ad9fa926316ef3c7bd72807a5f44452d11" => :mojave
   end
 
   depends_on "go" => :build
