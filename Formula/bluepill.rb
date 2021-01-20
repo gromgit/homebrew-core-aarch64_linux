@@ -14,9 +14,10 @@ class Bluepill < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d7962bc6a7cebe51127a8195f15562298749880004a29ecc5f7ce688ff59a8d7" => :arm64_big_sur
-    sha256 "695be1e8867ff14019e9604f7350ba90be43dc7f7794fdc830ee3311595f6a6d" => :catalina
-    sha256 "c99867b72bcaeb0198a69b7c957979b30ba0a6e4d9ca3b72dfa3ea27b50f2387" => :mojave
+    sha256 "74d6f5f15513a23c60a9a6fb0c1e8d6e01b74d73466821b66891a0402e10c4f7" => :big_sur
+    sha256 "2f6fb626e74027dfa8cdc9a03f66e97d6034e4e32edfe327e544f0cd0abb8ed8" => :arm64_big_sur
+    sha256 "c05dba48f83e600ea0104f1edc4dd5b88017fe9ee487544bd4f78b61e2f4154b" => :catalina
+    sha256 "4459ee11cb00af2e0ae2aab7052a442cfde2a4b63d78abfc333df8b8b6e6badc" => :mojave
   end
 
   depends_on xcode: ["11.2", :build]
