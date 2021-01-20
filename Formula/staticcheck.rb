@@ -8,10 +8,10 @@ class Staticcheck < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "27241d832369d54e2c75db20d984c841b96519e9474dd74f8e2bc4e92d9d0c41" => :big_sur
-    sha256 "ac3fd9cb21581df6bee190217b4e68af401da99c4a201b540af960505dab0a0b" => :arm64_big_sur
-    sha256 "16379ebcb571ff00903bd0894afc34b4eacf4d7076781afb2711816039c7db23" => :catalina
-    sha256 "7e17edd850f6cf0c49a6c5fabfb10ca3e489f1f33a38595d10de621e5fb13175" => :mojave
+    sha256 "a515f5fc81be1069541c86a0dbb0c10ce406d5f63420e25d6736eea2d970f011" => :big_sur
+    sha256 "6b7c908b171158a2e7bd736d903cf349542d504197a753c9967be8fcb42400e4" => :arm64_big_sur
+    sha256 "c207bf44becf6d82ad8fed9eff75db5a14a106df080fb90eb8ed6e1b7a0c0375" => :catalina
+    sha256 "2e7d67e9a2aba779e109c18b0aac9729438033ae3666e332b83f2a9c5c84f3fe" => :mojave
   end
 
   depends_on "go"
