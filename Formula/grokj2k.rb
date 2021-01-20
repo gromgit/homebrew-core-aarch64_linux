@@ -6,6 +6,11 @@ class Grokj2k < Formula
   license "AGPL-3.0-or-later"
   head "https://github.com/GrokImageCompression/grok.git"
 
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   bottle do
     cellar :any
     sha256 "034b2c793f856d59049c4d7881e2a103b3cbf9b8eac4bfd9becb48791a3cefc0" => :big_sur
