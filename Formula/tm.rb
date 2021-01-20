@@ -8,10 +8,10 @@ class Tm < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "23afb2232f4254c6ce2b3c5104ef8ee2e4e83d96256dce8bb619528e9777b3fe" => :big_sur
-    sha256 "3aa822177fc4d588cd89d406d62e8f002cee994a47cfea7f32535bff0f93eb4c" => :arm64_big_sur
-    sha256 "b7923845ee0e1681493c53784c6f1e181818f365285b477f2283c772ed5cc3a5" => :catalina
-    sha256 "9114671c8810164964727e5405e9cddc85963e0f716a9165ba0ab0080b6bd423" => :mojave
+    sha256 "90a2a241e24d9ceb8cf91e17c7df282c14627494a7743db3edfc6f6fdec0a284" => :big_sur
+    sha256 "ea3773e93db4af6d55289ccab9b0c605d6fe45288d9f8fdda9b7c3f441d0ece0" => :arm64_big_sur
+    sha256 "70d84228a91b8c8646dc79447c14d9ec3773e093dd86521c6cd52e30c9c52214" => :catalina
+    sha256 "e1d9a3b8f64857f602e3ffc749e876beb888b5ca973aeba2dc736f1632bee379" => :mojave
   end
 
   depends_on "go" => :build
