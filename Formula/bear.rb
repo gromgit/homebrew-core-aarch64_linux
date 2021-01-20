@@ -3,10 +3,9 @@ class Bear < Formula
 
   desc "Generate compilation database for clang tooling"
   homepage "https://github.com/rizsotto/Bear"
-  url "https://github.com/rizsotto/Bear/archive/2.4.4.tar.gz"
-  sha256 "5e95c9fe24714bcb98b858f0f0437aff76ad96b1d998940c0684c3a9d3920e82"
+  url "https://github.com/rizsotto/Bear/archive/3.0.7.tar.gz"
+  sha256 "90004c7f8c83b81b3c6d9a1dced83e6cc212f60a1d1434b934ae0cf0045b3193"
   license "GPL-3.0-or-later"
-  revision 1
   head "https://github.com/rizsotto/Bear.git"
 
   bottle do
@@ -19,20 +18,39 @@ class Bear < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "pkg-config" => :build
+  depends_on "fmt"
+  depends_on "grpc"
+  depends_on macos: :catalina
+  depends_on "nlohmann-json"
   depends_on "python@3.9"
+  depends_on "spdlog"
+  depends_on "sqlite"
 
   def install
-    args = std_cmake_args + %W[
-      -DPYTHON_EXECUTABLE=#{Formula["python@3.9"].opt_bin}/python3
+    args = std_cmake_args + %w[
+      -DENABLE_UNIT_TESTS=OFF
+      -DENABLE_FUNC_TESTS=OFF
     ]
-    system "cmake", ".", *args
-    system "make", "install"
+
+    mkdir "build" do
+      system "cmake", "..", *args
+      system "make", "all"
+      system "make", "install"
+    end
 
     rewrite_shebang detected_python_shebang, bin/"bear"
   end
 
   test do
-    system "#{bin}/bear", "true"
+    (testpath/"test.c").write <<~EOS
+      #include <stdio.h>
+      int main() {
+        printf("hello, world!\\n");
+        return 0;
+      }
+    EOS
+    system "#{bin}/bear", "--", "clang", "test.c"
     assert_predicate testpath/"compile_commands.json", :exist?
   end
 end
