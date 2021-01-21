@@ -8,10 +8,10 @@ class Goredo < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "c03721823a2849b78cc5ccf20e52a0ae0469e1795f9b2c36110b949b1bc5168e" => :big_sur
-    sha256 "ec16c45979431a557b937df2a5e657bc85b576a2ebf9f9b089895e7f2ded917c" => :arm64_big_sur
-    sha256 "6037d2404387e19dea95837cec3ac12883e073033bcdad792d9e9556e72864fb" => :catalina
-    sha256 "a2c78dcbcd336c13c8a2e5dd224d44e924187abc6062b99ac0ff02d0084593ad" => :mojave
+    sha256 "663c62a3318bb14e86ca61e9f70bd23d1c89c7ea0ee8e7f270aec3831893e6a9" => :big_sur
+    sha256 "486255d07949c3cc4f49a2962ec7ca593d1f00ee81900ccee4b03a05c9cc8c62" => :arm64_big_sur
+    sha256 "9ac536d8704588a968b3a6be3182d7763b39e016bad7d3f9d550e4742a757e42" => :catalina
+    sha256 "400a1ed8419de96fc8d331c6fa8be4df016ebccaedecef189131501008109bad" => :mojave
   end
 
   depends_on "go" => :build
