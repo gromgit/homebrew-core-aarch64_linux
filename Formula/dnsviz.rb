@@ -13,10 +13,10 @@ class Dnsviz < Formula
 
   bottle do
     cellar :any
-    sha256 "fbe6838e30362cfe8ccfa666484f6340969fe2e01eb56baa68568121e082d606" => :big_sur
-    sha256 "993c8d514d9b4873bee83cb3cb8563fc39c3cad498e32f5fc605251379f040e0" => :arm64_big_sur
-    sha256 "67e4a6c62210c8cdeeae7019f221607e8c3cb95cf5f55fade577547a0098d1df" => :catalina
-    sha256 "a7e8f043fa526d6d5e4752a52d02abd1102b65a1e903abcf52c68eda632b7303" => :mojave
+    sha256 "d4f4e549c3184c0e7bf1ab1639e096b5eb53e2ee4f00a2015c84cc2991eb80f6" => :big_sur
+    sha256 "a7198e45539b7bbee521cb2433670269c98cce7e47f8d511503323cdfe8c110e" => :arm64_big_sur
+    sha256 "ef016731870649b2f385f19e3f2750fe7a3ec1597232943f6c30539e2a80daec" => :catalina
+    sha256 "7cba6ba3c4ed08f3dbb8d992077dac4b73cff72a61d6020aa45ccd7c6c0a3c2a" => :mojave
   end
 
   depends_on "pkg-config" => :build
