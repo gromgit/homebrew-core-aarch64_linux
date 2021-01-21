@@ -5,6 +5,7 @@ class Kustomize < Formula
       tag:      "kustomize/v3.9.2",
       revision: "e98eada7365fc564c9aba392e954f306a9cbf1dd"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/kubernetes-sigs/kustomize.git"
 
   livecheck do
@@ -23,13 +24,14 @@ class Kustomize < Formula
   depends_on "go" => :build
 
   def install
+    commit = Utils.git_head
     tag = Utils.safe_popen_read("git", "tag", "--contains", "HEAD").strip
 
     cd "kustomize" do
       ldflags = %W[
         -s
         -X sigs.k8s.io/kustomize/api/provenance.version=#{tag}
-        -X sigs.k8s.io/kustomize/api/provenance.gitCommit=#{Utils.git_head}
+        -X sigs.k8s.io/kustomize/api/provenance.gitCommit=#{commit}
         -X sigs.k8s.io/kustomize/api/provenance.buildDate=#{Time.now.iso8601}
       ]
       system "go", "build", "-ldflags", ldflags.join(" "), "-o", bin/"kustomize"
