@@ -7,9 +7,9 @@ class Arturo < Formula
 
   bottle do
     cellar :any
-    sha256 "7157d2a231c708add52c19de3b3b5aa9aa938a399c5637a92ec1afd9a76a0c64" => :catalina
-    sha256 "64166ff338c9fde490fd67a587e922627e8edbb0ef24b35ebe5323f628f40afb" => :mojave
-    sha256 "662a58f2465df1f8074ca8d60d8c03665d0800bc36f906d3dfb6ec17faa1c591" => :high_sierra
+    sha256 "cd975a138c834193d32c9f76514153f38841ed3c9e8c37000dd045017124d2fe" => :big_sur
+    sha256 "65a4a6052d7e932286165074d4faf3b4a81993c11ed769e0587d5854028babaa" => :catalina
+    sha256 "2b6040141a9b688b998b64e099f85f99ad2002972541df8384c204eb444f7da5" => :mojave
   end
 
   depends_on "nim" => :build
