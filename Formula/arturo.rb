@@ -1,8 +1,8 @@
 class Arturo < Formula
   desc "Simple, modern and portable programming language for efficient scripting"
-  homepage "http://arturo-lang.io"
-  url "https://github.com/arturo-lang/arturo/archive/v0.9.5.tar.gz"
-  sha256 "fcf8064d4ae49fee0eeca6fd55a9ba30abefd9111c3102c6d682f56993694fc1"
+  homepage "https://arturo-lang.io"
+  url "https://github.com/arturo-lang/arturo/archive/v0.9.6.tar.gz"
+  sha256 "b9028b97537a81f4bb7dff6c036ed84d951292e858653dbb2012b0ae069cd509"
   license "MIT"
 
   bottle do
