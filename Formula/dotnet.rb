@@ -2,8 +2,8 @@ class Dotnet < Formula
   desc ".NET Core"
   homepage "https://dotnet.microsoft.com/"
   url "https://github.com/dotnet/source-build.git",
-      tag:      "v5.0.100-SDK",
-      revision: "67f4df5115c23264eb7193cc623d1fa1050a3cc2"
+      tag:      "v5.0.102-SDK",
+      revision: "de79212ef1b49ee853e09d079445cdeb5db56348"
   license "MIT"
 
   livecheck do
@@ -24,13 +24,6 @@ class Dotnet < Formula
   depends_on "curl"
   depends_on "icu4c"
   depends_on "openssl@1.1"
-
-  # Replace legacy MyGet feeds
-  # https://github.com/dotnet/source-build/pull/1972
-  patch do
-    url "https://github.com/dotnet/source-build/commit/eea00e5feef14010533a60ab240f54f12e2c5764.patch?full_index=1"
-    sha256 "76d9b638200d3d2712d8a3380f68a0c12f370ff21881631567f2704788636c47"
-  end
 
   # Fix the find command used for logger
   # Use TargetOverrideRid (osx-x64) instead of TargetRid (osx.10.13-x64)
@@ -119,8 +112,8 @@ index 6cb3e80ab1808704973ee1ef6a7f2f5171752877..74d9064f711f3cbb8ec02fd392113766
      <!-- Additional Targets -->
    <Target Name="InstallJustBuiltRuntime" AfterTargets="RemoveBuiltPackagesFromCache">
      <!-- Install the runtime that was just built to be used by downstream repos, namely, aspnetcore -->
--    <Exec Command="tar -xvf $(SourceBuiltAssetsDir)dotnet-runtime-$(runtimeOutputPackageVersion)-$(TargetRid).tar.gz -C $(DotNetRoot)" />
-+    <Exec Command="tar -xvf $(SourceBuiltAssetsDir)dotnet-runtime-$(runtimeOutputPackageVersion)-$(OverrideTargetRid).tar.gz -C $(DotNetRoot)" />
+-    <Exec Command="tar -xvf $(SourceBuiltAssetsDir)dotnet-runtime-$(runtimeOutputPackageVersion)-$(TargetRid).tar.gz -C $(DotNetCliToolDir)" />
++    <Exec Command="tar -xvf $(SourceBuiltAssetsDir)dotnet-runtime-$(runtimeOutputPackageVersion)-$(OverrideTargetRid).tar.gz -C $(DotNetCliToolDir)" />
    </Target>
  
  
