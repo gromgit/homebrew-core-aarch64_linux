@@ -12,10 +12,10 @@ class Gh < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "daf4c5b566b1a1b9f00ac73aeffcc72792479da9ddebfdb3a91ce5d19fbba309" => :big_sur
-    sha256 "b039ae32ed849b635eb7b3e1c7528d9934537c4dac76f170a2d195eab2148466" => :arm64_big_sur
-    sha256 "70c9d617f18341ab35bebc17b1916ec79cc053dbed5782eb34656babdb6908a8" => :catalina
-    sha256 "930dd87d86bcc1b6ac220cc488766df4fc00472d49221b37f51281970015cabe" => :mojave
+    sha256 "663bd535afe56f4d0cdd1a9677a1bcbf7f603805349120d4938e596beef65cfb" => :big_sur
+    sha256 "46285720614f0a69645bd94265c5e1d798beaa92d41a6f3aabcf97f8747859a3" => :arm64_big_sur
+    sha256 "0448e049f21a24a2ed9fe20bb5b5a5325b76570ea6faf78d50733954cc8cd715" => :catalina
+    sha256 "ae889bc195283a5bf49e887dd2ba521f4c36971170941c4d6105eb76b820c40f" => :mojave
   end
 
   depends_on "go" => :build
