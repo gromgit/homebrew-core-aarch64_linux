@@ -8,11 +8,10 @@ class Tbox < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "a1465af2674967d3a913d23a2adbbf8d84eb1eaf2d8c76e590c736166fda196c" => :big_sur
-    sha256 "efbd3cb9e04bdc66b5a25a24be957be60589fb902357fa13d1efb832160c2f55" => :arm64_big_sur
-    sha256 "ce40f3f45a981856840999da154f1ec53f63457824e6e664327afae62a79a38f" => :catalina
-    sha256 "32a54a4715e25302a9e908c345a0021d272d4ab78d989f7f6343207da974f25a" => :mojave
+    sha256 "fc5612421cbec4955e8a99ee3cb9e214842cbb942384c4b1cd44d7d302a54137" => :big_sur
+    sha256 "999ed2823cd0b81af561f0fb16e63f36be40db4e11cf9835e09a75295a3a64eb" => :arm64_big_sur
+    sha256 "1993c672049429417dd5e0ccef97be5b8aee4c5120b8d925a90dc708f10d2540" => :catalina
+    sha256 "c325bd6d49a9bdbf667af3a15cbcec4c171e2d71b7dc0c21d4f45906912aabaa" => :mojave
   end
 
   depends_on "xmake" => :build
