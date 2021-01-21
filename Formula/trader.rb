@@ -1,8 +1,8 @@
 class Trader < Formula
   desc "Star Traders"
   homepage "https://www.zap.org.au/projects/trader/"
-  url "https://ftp.zap.org.au/pub/trader/unix/trader-7.14.tar.xz"
-  sha256 "ac9b659496facbd8d062afb4149c870e2dfcb22ba219961b724e6aa460611ee9"
+  url "https://ftp.zap.org.au/pub/trader/unix/trader-7.16.tar.xz"
+  sha256 "7fced3adfe61099679cec67dd7d7187314b0f6d4378a4aece1a1b5eab9f81ef2"
 
   bottle do
     sha256 "d47f18eea0c0f210c48fa15f4ff038869ee2efec31fb6dacc0d8df1abaf1183b" => :big_sur
