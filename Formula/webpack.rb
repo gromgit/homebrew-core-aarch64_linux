@@ -15,10 +15,10 @@ class Webpack < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "05c73b5ab958f9ec6e2f6c2a63d51394475cc04df54cf8db79b5b3408ae7ae3e" => :big_sur
-    sha256 "aaed1d41752ea14fbf9edfc9a08f8e34df4f873c0648cfe211f37330605e257b" => :arm64_big_sur
-    sha256 "c4e9f3cd306bade84b73aa49bf05e60ae04eaff1511e52b35096d505efb8f37b" => :catalina
-    sha256 "aa8449741d5f6d802aa84f47a3f38d5dd09c2c8af5baae3183ad22dbaa40ec32" => :mojave
+    sha256 "de86ee2088e739f6b189b0544a5a4cfd7e87c38ad970ffa4ad8e3b4ce572d9e7" => :big_sur
+    sha256 "b2ed217ecc6a122e49cc72b7215bf7f817231527ce8f91d33c334f7bfff24f61" => :arm64_big_sur
+    sha256 "77a1bc04d4eb47902c4d23cff67146a91cbc424fda47f624b91b4bc55013f286" => :catalina
+    sha256 "5338918a409dc702c62cd3fa515dd51dbe19a5e332a8a672bd110b6dcfcc6d08" => :mojave
   end
 
   depends_on "node"
