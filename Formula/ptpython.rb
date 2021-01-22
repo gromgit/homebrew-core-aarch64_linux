@@ -10,10 +10,10 @@ class Ptpython < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "4d673d03655bad59faf514da60ab5d1699c32597f09af3abd03afc6ae795958e" => :big_sur
-    sha256 "a0d317014a70b8639ca825719fc2facc25a14765d2c5433d2916804aca7e325d" => :arm64_big_sur
-    sha256 "fc89ba912d833774329a34243d6ea945e0b647dab2f3e79debc5843bff6b5bac" => :catalina
-    sha256 "0df6bf59720b4235565196aacce1e00363244baf2cd8078d68b423932986396e" => :mojave
+    sha256 "675fd9b33dd80b46a2c5c4907eee6ea9c3de42c473f1ba6ad787d4ca2a36f254" => :big_sur
+    sha256 "2ef25fcd54836852aee87fb0791f72b0a053b68b68c3d25e33c859e9b6293b3a" => :arm64_big_sur
+    sha256 "0b43254158b36c5a78f1c1c81214532dbd794fb666d54dc4dabfa634691d03f0" => :catalina
+    sha256 "5c32976648041df21b92cd3d0010fb79ae11ec2235b701021174b5a6c7ab0495" => :mojave
   end
 
   depends_on "python@3.9"
