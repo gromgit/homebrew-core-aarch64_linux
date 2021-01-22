@@ -7,6 +7,13 @@ class Aliddns < Formula
   license "MIT"
   head "https://github.com/OpenIoTHub/aliddns.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "b91312e27065e23f3444144d9e1dddcad8337c6c60d3e597235089befb50dcc7" => :big_sur
+    sha256 "868f0972a9c769d8854cf4b9d86b0c1ac75c542764054f867d909ddc9b091b1d" => :catalina
+    sha256 "3eaeedd4962169e2ac8660fdccfa628c389e01e00b9435dda1adebdb18488a70" => :mojave
+  end
+
   depends_on "go" => :build
 
   def install
