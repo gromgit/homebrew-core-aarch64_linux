@@ -3,8 +3,8 @@ class Dvc < Formula
 
   desc "Git for data science projects"
   homepage "https://dvc.org"
-  url "https://files.pythonhosted.org/packages/a4/c9/d6dc1bf4a522055e2386570f6f876e1bea74f8f5c41e139ba04fdda4a772/dvc-1.11.10.tar.gz"
-  sha256 "6b53ebf1bd5619836f131181402bb21f7b44109166e9db8f8d6a0d8c7ce9458d"
+  url "https://files.pythonhosted.org/packages/13/87/0276ee563bb634ba947bf82851c4f464fe099db1a0314a5ecacdb04b933b/dvc-1.11.11.tar.gz"
+  sha256 "ed19fffaa1ad6323ff390fbf53b73a5da802b0238fa425e8c82d12ea314a90d0"
   license "Apache-2.0"
 
   livecheck do
@@ -164,8 +164,8 @@ class Dvc < Formula
   end
 
   resource "phonenumbers" do
-    url "https://files.pythonhosted.org/packages/2e/cb/4cf6441ff9731e1d6a3b1c00064e0b2c1263077751dc8885ad4c8a52e38b/phonenumbers-8.12.15.tar.gz"
-    sha256 "b734bfcf33e87ddae72196a40b3d1af35abd0beb263816ae18e1bff612926406"
+    url "https://files.pythonhosted.org/packages/ed/10/6e8e0ab7535a54b69793d7ea7f7b1d80262f2ebc3c10bed29f1118d54a17/phonenumbers-8.12.16.tar.gz"
+    sha256 "a820ab08c980ef24a2d2a1ead4f8d7016fdf008e484d1aecf7ff0b32cc475e16"
   end
 
   resource "ply" do
@@ -184,8 +184,8 @@ class Dvc < Formula
   end
 
   resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/29/60/8ff9dcb5eac7f4da327ba9ecb74e1ad783b2d32423c06ef599e48c79b1e1/Pygments-2.7.3.tar.gz"
-    sha256 "ccf3acacf3782cbed4a989426012f1c535c9a90d3a7fc3f16d231b9372d2b716"
+    url "https://files.pythonhosted.org/packages/e1/86/8059180e8217299079d8719c6e23d674aadaba0b1939e25e0cc15dcf075b/Pygments-2.7.4.tar.gz"
+    sha256 "df49d09b498e83c1a73128295860250b0b7edd4c723a32e9bc0d295c7c2ec337"
   end
 
   resource "pygtrie" do
@@ -199,13 +199,18 @@ class Dvc < Formula
   end
 
   resource "python-benedict" do
-    url "https://files.pythonhosted.org/packages/52/8f/9cba6409d6b47b6ff3214896b34051bd6721162e4ec2b7078fd884fa0d01/python-benedict-0.22.4.tar.gz"
-    sha256 "3dc012a84b8c3b7d5ede2f18ab56fb1e68183ec482f2c67631b0df524ffd1109"
+    url "https://files.pythonhosted.org/packages/13/2e/f799845699100d1ea31fa190dc7322782ad960554c90085f89871f829014/python-benedict-0.23.2.tar.gz"
+    sha256 "b7bdffd92ba1c9b9e044bda08ed545a48a45bd7a5207f93b4b2a8eb2660d1b4c"
   end
 
   resource "python-dateutil" do
     url "https://files.pythonhosted.org/packages/be/ed/5bbc91f03fa4c839c4c7360375da77f9659af5f7086b7a7bdda65771c8e0/python-dateutil-2.8.1.tar.gz"
     sha256 "73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c"
+  end
+
+  resource "python-fsutil" do
+    url "https://files.pythonhosted.org/packages/27/56/9aab18bd4769d515b49e9e3fcf827264bc131b36fa73212753cd5575e0a1/python-fsutil-0.4.0.tar.gz"
+    sha256 "873eceb11fb488fc2d7675cd1bc74a743502f674f0be88f5e7b920c7baeefed6"
   end
 
   resource "python-slugify" do
@@ -214,8 +219,8 @@ class Dvc < Formula
   end
 
   resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/64/c2/b80047c7ac2478f9501676c988a5411ed5572f35d1beff9cae07d321512c/PyYAML-5.3.1.tar.gz"
-    sha256 "b8eac752c5e14d3eca0e6dd9199cd627518cb5ec06add0de9d32baeee6fe645d"
+    url "https://files.pythonhosted.org/packages/a0/a4/d63f2d7597e1a4b55aa3b4d6c5b029991d3b824b5bd331af8d4ab1ed687d/PyYAML-5.4.1.tar.gz"
+    sha256 "607774cbba28732bfa802b54baa7484215f530991055bb562efbed5b2f20a45e"
   end
 
   resource "requests" do
@@ -224,8 +229,8 @@ class Dvc < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/91/2a/557d387c3f2d86ff5ac9d8c8cabec6f00b4eaeaa0e234c0ffe7bbe0be973/rich-9.6.1.tar.gz"
-    sha256 "5ac9f4f7f6b0e32e7e412de127f15b94144e22c9a7896551474d640143bbaa7b"
+    url "https://files.pythonhosted.org/packages/fb/96/b268c7ac622597f8660e14e01d8b66b84a34fbbaed3b920bfca440f742fe/rich-9.8.2.tar.gz"
+    sha256 "c0d5903b463f015b254d6f52da82af3821d266fe516ae05fdc266e6abba5c3a8"
   end
 
   resource "ruamel.yaml" do
@@ -269,8 +274,8 @@ class Dvc < Formula
   end
 
   resource "tqdm" do
-    url "https://files.pythonhosted.org/packages/9c/97/6627aaf69c42a41d0d22a54ad2bf420290e07da82448823dcd6851de427e/tqdm-4.55.1.tar.gz"
-    sha256 "556c55b081bd9aa746d34125d024b73f0e2a0e62d5927ff0e400e20ee0a03b9a"
+    url "https://files.pythonhosted.org/packages/69/50/9f29874d835945b845812799edc732ba30c41e9d20431f9f69c8ffb9c670/tqdm-4.56.0.tar.gz"
+    sha256 "fe3d08dd00a526850568d542ff9de9bbc2a09a791da3c334f3213d8d0bbbca65"
   end
 
   resource "typing-extensions" do
