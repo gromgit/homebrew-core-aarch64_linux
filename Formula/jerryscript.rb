@@ -1,8 +1,8 @@
 class Jerryscript < Formula
   desc "Ultra-lightweight JavaScript engine for the Internet of Things"
   homepage "https://jerryscript.net"
-  url "https://github.com/jerryscript-project/jerryscript/archive/v2.3.0.tar.gz"
-  sha256 "75f039f2e7eb55e3ce5d48fd6f9c4e8ec643a94654070125a6d76a906218e0fa"
+  url "https://github.com/jerryscript-project/jerryscript/archive/v2.4.0.tar.gz"
+  sha256 "5850947c23db6fbce032d15560551408ab155b16a94a7ac4412dc3bb85762d2d"
   license "Apache-2.0"
   head "https://github.com/jerryscript-project/jerryscript.git"
 
