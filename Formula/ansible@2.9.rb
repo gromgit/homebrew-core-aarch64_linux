@@ -14,6 +14,14 @@ class AnsibleAT29 < Formula
     regex(%r{href=.*?/project/ansible/v?(2\.9(?:\.\d+)*)/?["' >]}i)
   end
 
+  bottle do
+    cellar :any
+    sha256 "8a7e1983a53cf1cb125ab500e6c1dfd7b4d4fe78ae47ed86e3db28900992df95" => :big_sur
+    sha256 "c095c4571e1acec337f3619afdc91b9384801f4587d3eee68e31205bfed93255" => :arm64_big_sur
+    sha256 "e2e6408b7ef18540783f1b499e7a924afa8316f153ed7631ff6c814bb6fa83f3" => :catalina
+    sha256 "0b9ea098f0d24b94c1c3bfa7a919e912cfd11049a45f86ad096368c0ac6be502" => :mojave
+  end
+
   keg_only :versioned_formula
 
   depends_on "pkg-config" => :build
