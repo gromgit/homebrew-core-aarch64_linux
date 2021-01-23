@@ -28,7 +28,16 @@ class MonoLibgdiplus < Formula
   depends_on "libexif"
   depends_on "libpng"
   depends_on "libtiff"
+  depends_on "pango"
   depends_on "pixman"
+
+  # Remove at next version bump.
+  # Upstream PR: https://github.com/mono/libgdiplus/pull/605.
+  # Without this patch, it requires pango 1.43 or lower (current available version is 1.48).
+  patch do
+    url "https://github.com/mono/libgdiplus/commit/8f42e17e92c562cc243844b8a004cd03144b1384.patch?full_index=1"
+    sha256 "b38823891ea201588c1edf29f931a0d353a155d7fac36f114482bbe608c5a1c9"
+  end
 
   def install
     system "autoreconf", "-fiv"
