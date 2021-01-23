@@ -1,8 +1,8 @@
 class Dune < Formula
   desc "Composable build system for OCaml"
   homepage "https://dune.build/"
-  url "https://github.com/ocaml/dune/releases/download/2.8.1/dune-2.8.1.tbz"
-  sha256 "e7b405c75af321ce6518aa8e70ebdd403dbcc2ede931713e69c2b5addda4bd44"
+  url "https://github.com/ocaml/dune/releases/download/2.8.2/dune-2.8.2.tbz"
+  sha256 "e2c4e8230f7c96236503fd75f22bdbc263639971bf104509e446855ded35ae1e"
   license "MIT"
   head "https://github.com/ocaml/dune.git"
 
