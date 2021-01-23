@@ -8,10 +8,10 @@ class Simdjson < Formula
 
   bottle do
     cellar :any
-    sha256 "85aeb3340cc39d800c15b663fb78c188c36fb1db7d403836b4d61b02bf075682" => :big_sur
-    sha256 "55f52dae81a764b8a2510718c5ce8589a2d18e09daecd7fe8d89732a582bb970" => :arm64_big_sur
-    sha256 "d63e7c62294fb267b500121c473a2e383757b6c855abb883cea57a1022bf1f11" => :catalina
-    sha256 "56b858b76bb485b334eefbefafb37b37be75f9bc42992d888f5d3a46e2c5a0b5" => :mojave
+    sha256 "b605301a14620b41253bde6963ebe3ce0905d3c1b1aae40a3c7a262a32b317f2" => :big_sur
+    sha256 "129baa718037520fc4bedac4f455101815dd990b24c4a9f9ef24207b3905f6cc" => :arm64_big_sur
+    sha256 "39fd0ad985dd077d138b152b396e90163782b0cb712e93d425706cf315ddc97f" => :catalina
+    sha256 "f3c1ff931f4cf8f1fd707e5324c306868a9e1eb3b669af4dec197a269568dc83" => :mojave
   end
 
   depends_on "cmake" => :build
