@@ -1,8 +1,8 @@
 class Aide < Formula
   desc "File and directory integrity checker"
   homepage "https://aide.github.io/"
-  url "https://github.com/aide/aide/releases/download/v0.16.2/aide-0.16.2.tar.gz"
-  sha256 "17f998ae6ae5afb9c83578e4953115ab8a2705efc50dee5c6461cef3f521b797"
+  url "https://github.com/aide/aide/releases/download/v0.17/aide-0.17.tar.gz"
+  sha256 "4fd88d1d5ddc70c698c6519ebbc05c8d32c3f6d8137bbfdefeaebaafd6db867b"
   license "GPL-2.0-or-later"
 
   bottle do
@@ -21,6 +21,7 @@ class Aide < Formula
     depends_on "automake" => :build
   end
 
+  depends_on "pkg-config" => :build
   depends_on "libgcrypt"
   depends_on "libgpg-error"
   depends_on "pcre"
@@ -30,6 +31,13 @@ class Aide < Formula
   uses_from_macos "curl"
 
   def install
+    # fix `fatal error: 'error.h' file not found`
+    # remove in next release
+    inreplace "include/aide.h", "#include \"error.h\"", ""
+
+    # use sdk's strnstr instead
+    ENV.append_to_cflags "-DHAVE_STRNSTR"
+
     system "sh", "./autogen.sh" if build.head?
 
     args = %W[
@@ -53,13 +61,13 @@ class Aide < Formula
 
   test do
     (testpath/"aide.conf").write <<~EOS
-      database = file:/var/lib/aide/aide.db
+      database_in = file:/var/lib/aide/aide.db
       database_out = file:/var/lib/aide/aide.db.new
       database_new = file:/var/lib/aide/aide.db.new
       gzip_dbout = yes
-      summarize_changes = yes
-      grouped = yes
-      verbose = 7
+      report_summarize_changes = yes
+      report_grouped = yes
+      log_level = info
       database_attrs = sha256
       /etc p+i+u+g+sha256
     EOS
