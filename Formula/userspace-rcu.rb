@@ -18,13 +18,10 @@ class UserspaceRcu < Formula
   end
 
   def install
-    # Enforce --build to work around broken upstream detection
-    # https://bugs.lttng.org/issues/578#note-1
     args = %W[
       --disable-dependency-tracking
       --disable-silent-rules
       --prefix=#{prefix}
-      --build=x86_64
     ]
 
     system "./configure", *args
