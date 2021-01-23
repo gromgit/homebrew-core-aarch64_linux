@@ -3,8 +3,8 @@ class Exiftool < Formula
   homepage "https://exiftool.org"
   # Ensure release is tagged production before submitting.
   # https://exiftool.org/history.html
-  url "https://exiftool.org/Image-ExifTool-12.15.tar.gz"
-  sha256 "02e07fae4070c6bf7cdeb91075f783fea17c766b7caa23e6834e8bba424551b9"
+  url "https://exiftool.org/Image-ExifTool-12.16.tar.gz"
+  sha256 "c140797d72acdaf04f7ce0629867353510b56fbe99ceaac0742bbc379610756a"
   license any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"]
 
   livecheck do
