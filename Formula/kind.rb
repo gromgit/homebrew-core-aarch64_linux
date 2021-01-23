@@ -8,12 +8,10 @@ class Kind < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "e40a2343bf999585fa4fcb1a1e9b801427e921c098fc3f7e3026c071a0e72520" => :big_sur
-    sha256 "dc44080f2aa9eed1d51e4ea8e9dcf1a418a36fee88327b7a9770ee24dc3c2787" => :arm64_big_sur
-    sha256 "e5ba99b5f14711e0dcb121a992d74c5ee6c6b0468b27e5200bf796d4987e13c0" => :catalina
-    sha256 "d52a780ad6af93a2a7c480a41c5178a461b9966ddc1adb66adde8ff3bce15238" => :mojave
-    sha256 "423ea750ae8589d1a199847f746d8e9b5b1f1d81ceff3a9dab2d63f161532588" => :high_sierra
+    sha256 "21dd92a2adc3dc568e6b6b29a17f85227cf938bd93709ee1817f40f9e1c9a2fb" => :big_sur
+    sha256 "4b233d91a8d967dd1c2e0b1cda5abfc9c18d67d7062d74193d6bbb3247726227" => :arm64_big_sur
+    sha256 "88fc4241b464cfec95189c325d2d28eecb0b04aeb1d7e56f9d04a7cd82f7ebd5" => :catalina
+    sha256 "0e920ee972ce05f98aaddf4a7bc4b591df4fdd19dc95db508dfaa763499ff118" => :mojave
   end
 
   depends_on "go" => :build
