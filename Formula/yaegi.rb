@@ -8,10 +8,10 @@ class Yaegi < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f71cd661e29324aab6d2f36844566f429f62b0dafcfccd0a56fa9da1a8f5fef3" => :big_sur
-    sha256 "f1005480f2b8d5aa6a77feaf4c7f756767025e0e2bf160babfd6cef9e2da8985" => :arm64_big_sur
-    sha256 "0ce7c35dffdb7b44bd217b879782e2d04589655a62a1f4e7b6e43f0c8f35c44a" => :catalina
-    sha256 "fca8970d81c16924e98d0519a07221d403f876493c2e3f3224a3df61e4adbae3" => :mojave
+    sha256 "a03447c0a1a8358b510f21354c5927db6cbb622b4d7a2fa58276d59d8d91e0dc" => :big_sur
+    sha256 "e8e2e114ab838a7540ab78e98f2f41b0d083e2743d5c71b25dd3ac8e1da46613" => :arm64_big_sur
+    sha256 "0761773a460df6af65c38813e173fb2673246cf1e635950651151b3276bc4d59" => :catalina
+    sha256 "1c9e3915c5d8a0494c0de9120c9e86e99d351e8424fce8c7e3f64f36507ab28e" => :mojave
   end
 
   depends_on "go" => :build
