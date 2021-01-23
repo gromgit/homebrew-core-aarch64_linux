@@ -13,11 +13,10 @@ class Coredns < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "a6f1e2dccdd0f658c18508fa8cc65fdfcd1c10ff0bc5cb417e5e687ca173dab3" => :big_sur
-    sha256 "dbf91ab34f2c604aa122e2d077b5d3d5cf3f231ae7b0e31e090b48c670fc07a1" => :arm64_big_sur
-    sha256 "effbd42542b71878967de42c4eaee916fa45bd245704cf5507b9310b552c89e1" => :catalina
-    sha256 "13cdbec577e0c594c58899e00d11b49253797e7516d74859eb11179e51658480" => :mojave
-    sha256 "ee162e739ebe97f27833680c2da6cd2b3a4578897207ff9e3513a4c1a2987f6f" => :high_sierra
+    sha256 "098ef6db12d262111d1acf135408b3b9a5456ce09b4cd0e78e9c7a1d55a0f892" => :big_sur
+    sha256 "2b255a4515bc26a91ee5335ba0daba1b811fe29d3460af89445fac1306c641d7" => :arm64_big_sur
+    sha256 "1d1ad1e07e5ee741e6845850983556c325151f9db80944517889752119139f4c" => :catalina
+    sha256 "8303822b262d65660fb295870d52d270cfbc9c742b3d8cf8f2ea6481c08a30be" => :mojave
   end
 
   depends_on "go" => :build
