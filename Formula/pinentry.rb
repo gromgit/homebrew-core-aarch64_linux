@@ -13,13 +13,10 @@ class Pinentry < Formula
 
   bottle do
     cellar :any
-    sha256 "9ea54bc3839990cc7e6843e03aea50bb7c85206464da9a731093ad062b7dc0f7" => :big_sur
-    sha256 "3ff101d0d6781507c598c7986a18d6b024395e128e40853d79d4a6574fec1421" => :arm64_big_sur
-    sha256 "58dbcd3dc641fe0e14829d2d72be6bc5cadc9a5c26bf50678906866101d2589a" => :catalina
-    sha256 "206708ea13875bc8197f7d066bc0cb36893bd95b9ecc7ba6102c2f33b0fbd6c4" => :mojave
-    sha256 "a1a0e526f622d7dc4e2b3e0dcde061dbb383050b8efbe424d916bf983ae66c74" => :high_sierra
-    sha256 "fd93c11a28d38ba1b78c7fe646f027f98ce29c08ba02c7a0e14e69f355614e35" => :sierra
-    sha256 "e8c6180d9d86f008d0d9cdf0bc9638f2c119bb426504955ecbd16ef6b108d01d" => :el_capitan
+    sha256 "b2fca70261e4f8a945628d62d8d673ee75df71bffa469616447928ab05eaa9bb" => :big_sur
+    sha256 "933ed357a058e743d86ad965ecd246e8a228cc9b9fb05e310eb19c552f587201" => :arm64_big_sur
+    sha256 "83a923d3334fa79364af9539de6126014209b8f50a313b7a085986d06fe80753" => :catalina
+    sha256 "92cf647e09770cda92dd77ef0814da6ea8b69a27710e73fc4bf601e0d9d8a8ce" => :mojave
   end
 
   depends_on "pkg-config" => :build
