@@ -8,11 +8,10 @@ class Luvit < Formula
   head "https://github.com/luvit/luvit.git"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "e946287a71eead01b620d34ffe99628a5bd143951265bbae9de6288eaf124bb0" => :big_sur
-    sha256 "a1210dda91aa024d11bd4d15a67b71654dcbbbc2ba14a87d1d34ab012f4d5c2a" => :catalina
-    sha256 "a3a37fdf8f0e99efdfc1736978ea9d8cdea74e939b42696fe771c3c5c9914f8f" => :mojave
-    sha256 "2c704b1f98b965c0b6010a897a0c951f47cb896bbbf5381e7d4ee80238692033" => :high_sierra
+    cellar :any
+    sha256 "8c0a060b75b4f877e4df310e7ebe3c9159e7536bce244731b1c21f9bf96b4a60" => :big_sur
+    sha256 "e5aa766db0f5760ebb217a462540f13b2ca221474ca22fd9cd710e79333a1bb6" => :catalina
+    sha256 "2d0d77fceac6194e9329eba75f015c8b870ad9a32d2b76c4785126f7642fc665" => :mojave
   end
 
   depends_on "cmake" => :build
