@@ -17,11 +17,11 @@ class Frugal < Formula
 
   def install
     ENV["GOPATH"] = buildpath
+    ENV["GO111MODULE"] = "auto"
     (buildpath/"src/github.com/Workiva/frugal").install buildpath.children
     cd "src/github.com/Workiva/frugal" do
       system "glide", "install"
-      system "go", "build", "-o", bin/"frugal"
-      prefix.install_metafiles
+      system "go", "build", *std_go_args
     end
   end
 
