@@ -8,10 +8,10 @@ class Inframap < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5c5ab56cf2b6a57e25bb2122c99feaed04599e70ebfe3f76f8fcd1aa0f3869dc" => :big_sur
-    sha256 "762e1b64331df8b6174eefe8b56cad13e76f6c13ec5fd369fa2d374f834d675d" => :arm64_big_sur
-    sha256 "4bc07dd6c389c33a639f584b3407d53a679459425e8c4197470f0183d845c31a" => :catalina
-    sha256 "afdd706328b6fe63d321b88af82dde0e763a271c4a6a404f842885f55fc2af9b" => :mojave
+    sha256 "27cce7188124c9cff8f36d077d8b8c37275091bc4e0d2baea576cae81a6b09ea" => :big_sur
+    sha256 "8464331ddc920853269c71e01e176986c51f713f377b89ce11983a841f0472c5" => :arm64_big_sur
+    sha256 "ce5822937679ec9a931cd35c45b14cf02d30bdf2e292ddc77c6d9a830847f230" => :catalina
+    sha256 "6d7988dfa381196590d5798aa338f04550a5dcba757221bf76b125915fd77a43" => :mojave
   end
 
   depends_on "go" => :build
