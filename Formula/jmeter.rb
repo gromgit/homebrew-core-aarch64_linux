@@ -12,10 +12,10 @@ class Jmeter < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b1ad4759a899c7c874774eda290a49e43d2d98fb5a04ee8b3ba6035587a019cd" => :big_sur
-    sha256 "d0d16fa9b777f63eb8bea56de7eb9a2d06a2e7e2df2f95002e65a849975cda9d" => :arm64_big_sur
-    sha256 "68fadfae2c4b129fe86504504ab980b942937ce0b66dba6dbd716846796f5262" => :catalina
-    sha256 "93a53dce5bd7d8a7dd8e6f51905e7c4c38db9c0965eee022925cc1166ea672ca" => :mojave
+    sha256 "c0e2b8904f50831defb9c2cc948f6fc6591324d0e14db6e996cc5d0ba4c15867" => :big_sur
+    sha256 "511f09fb39543951f61dfd1ec75cefc91d86d181e4fcc016408bff5cffc8e860" => :arm64_big_sur
+    sha256 "d7aba96b31d80733d0e1cb760411465fd5d27780579c66f8218186c8bd412149" => :catalina
+    sha256 "9d97d4aaae18b7001f0aba7db65f703e54c7fc90704fef283c3bacd5323b9735" => :mojave
   end
 
   depends_on "openjdk"
