@@ -5,6 +5,13 @@ class Osmcoastline < Formula
   sha256 "b08ddcc8cb494a19cbf4d9f1501c47443fe374a4fe171e6f55c730ca1e710689"
   license "GPL-3.0-or-later"
 
+  bottle do
+    cellar :any
+    sha256 "484435d2e38ed650ac0244a4de44a1ab857db1f25f2270fa2e4809fb8873d24a" => :big_sur
+    sha256 "c3777d42b345383e5a4949bc00b388d71a6b5e20695cc959bfd958d4b07885a1" => :catalina
+    sha256 "6830542a881dd0b7aedd8af1a9c9d62b882d4f4e3eff66929a31e5592e23ea8a" => :mojave
+  end
+
   depends_on "cmake" => :build
   depends_on "libosmium" => :build
   depends_on "gdal"
