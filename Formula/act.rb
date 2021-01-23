@@ -1,8 +1,8 @@
 class Act < Formula
   desc "Run your GitHub Actions locally 🚀"
   homepage "https://github.com/nektos/act"
-  url "https://github.com/nektos/act/archive/v0.2.18.tar.gz"
-  sha256 "fda422fcd497f08777a4558d68d3124a78eb59a46ff0fd786fdb84ea06b0f08f"
+  url "https://github.com/nektos/act/archive/v0.2.19.tar.gz"
+  sha256 "6058f4c2b6a6bffa1cf4a37b65e94216eec56d4766927a2610faa0e177309452"
   license "MIT"
 
   bottle do
@@ -21,7 +21,15 @@ class Act < Formula
   end
 
   test do
+    (testpath/".actrc").write <<~EOS
+      -P ubuntu-latest=node:12.6-buster-slim
+      -P ubuntu-12.04=node:12.6-buster-slim
+      -P ubuntu-18.04=node:12.6-buster-slim
+      -P ubuntu-16.04=node:12.6-stretch-slim
+    EOS
+
     system "git", "clone", "https://github.com/stefanzweifel/laravel-github-actions-demo.git"
+
     cd "laravel-github-actions-demo" do
       system "git", "checkout", "v2.0"
 
