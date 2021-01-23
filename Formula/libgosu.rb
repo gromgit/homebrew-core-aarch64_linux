@@ -8,10 +8,10 @@ class Libgosu < Formula
 
   bottle do
     cellar :any
-    sha256 "d6afbd6af6184ff1e51f4dbe580ff8f19f11235d8dde4f9834951f4079070831" => :big_sur
-    sha256 "b6a28109e1504d9640bd25b4e76112c873b00e72c319c66aa32c8a44851fd72f" => :arm64_big_sur
-    sha256 "bfdc72d6d978814a4ef914605de1b0969c7d3ca62fb98b035c3be0120a9cf168" => :catalina
-    sha256 "442d1168c40e34104c445df179e9482d1d03a359d5cc7676f589ce3d42289093" => :mojave
+    sha256 "ddecd4c4e7e5efae176564fe284fa28ea0d2ca036307275746cc89ebfcfec465" => :big_sur
+    sha256 "0a069eed6b4818492b6f17529bf410016e718fec02083057b7fd69bee82ba222" => :arm64_big_sur
+    sha256 "333e8f988f9684060721d0ea90fdd2d9c4fae1464f71dc36ea214894459c062a" => :catalina
+    sha256 "45d11a2ac6b2a24f5c2dac4c631bc0c4bdcdae59061534b70598431a5e1b7496" => :mojave
   end
 
   depends_on "cmake" => :build
