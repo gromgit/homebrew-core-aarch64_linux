@@ -9,10 +9,10 @@ class Richmd < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "4d28e18afeb12971dc69848c6509464b93addc289ef1f17058c40a1f984605b7" => :big_sur
-    sha256 "ea4f0dd51f1b9a819114fca48d3a55865eea2530773433657364c64d0caf1473" => :arm64_big_sur
-    sha256 "91fdb6277709ec5f6ae59424ec3c37fd47b442cc0663bbeb9286dac1aa3bf49d" => :catalina
-    sha256 "b11246f5d9fb7ae84ed76285211f6e41a67eb2ba4469fab98d5aa80565049b36" => :mojave
+    sha256 "b2b706385f4e2d05fa0275272a5df22f3cf03eccab587e8ded1c631f0e871bc4" => :big_sur
+    sha256 "0bfa7ab40783d2350d6eb6f6c02a00cf3e111a4e43c19ebc525731367059060d" => :arm64_big_sur
+    sha256 "409bf41731fab5fc5cab592c9ac118166d4f4ca0609961f3f92f98e6cfbb28c2" => :catalina
+    sha256 "1e0956960255ccff0de3d9bb369723792fda96226ef171f488a128b2072f9460" => :mojave
   end
 
   depends_on "python@3.9"
