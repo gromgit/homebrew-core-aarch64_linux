@@ -1,8 +1,8 @@
 class Flyway < Formula
   desc "Database version control to control migrations"
   homepage "https://flywaydb.org/"
-  url "https://search.maven.org/remotecontent?filepath=org/flywaydb/flyway-commandline/7.5.0/flyway-commandline-7.5.0.tar.gz"
-  sha256 "be095c91459a30c91c195514bef0570d91337198059f06405fc62e915fda7f6b"
+  url "https://search.maven.org/remotecontent?filepath=org/flywaydb/flyway-commandline/7.5.1/flyway-commandline-7.5.1.tar.gz"
+  sha256 "d046b62c4b0bae44c82a90eb34f9bd810cbade03628eda2bd8f4e3ed73b24342"
   license "Apache-2.0"
 
   livecheck do
