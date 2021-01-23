@@ -16,13 +16,11 @@ class Kumactl < Formula
 
   def install
     srcpath = buildpath/"src/kuma.io/kuma"
-    outpath = srcpath/"build/artifacts-darwin-amd64/kumactl"
     srcpath.install buildpath.children
 
     cd srcpath do
       system "make", "build/kumactl", "BUILD_INFO_VERSION=#{version}"
-      prefix.install_metafiles
-      bin.install outpath/"kumactl"
+      bin.install Dir["build/artifacts-*/kumactl/kumactl"].first
     end
   end
 
