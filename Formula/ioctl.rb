@@ -7,9 +7,9 @@ class Ioctl < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "3a4ed6686010c057740b3034deac2213f2c3dd6531be061f3f723ce71d368d70" => :big_sur
-    sha256 "91ac4733539093413bf3d8bc3b4beac08589917ef84434bba5ddc61cc49a16ca" => :catalina
-    sha256 "02c80614399fc92d2425b34b00931acd20c689d93a588a1adcb137d8b60ba807" => :mojave
+    sha256 "a404957720d81eb86f3d6c987d9892784fae103fc2bd1d190f8aa012e4842fde" => :big_sur
+    sha256 "36c60197eb59786edb16100664c35e5e52dd2e19c6047bc533df4b5a065f9630" => :catalina
+    sha256 "30a08048e7fe9cb12a4ac716b98e359982ddf23e6544a982e05f5f2bfad3b560" => :mojave
   end
 
   depends_on "go" => :build
