@@ -1,9 +1,8 @@
 class VorbisTools < Formula
   desc "Ogg Vorbis CODEC tools"
   homepage "https://github.com/xiph/vorbis-tools"
-  url "https://downloads.xiph.org/releases/vorbis/vorbis-tools-1.4.0.tar.gz"
-  sha256 "a389395baa43f8e5a796c99daf62397e435a7e73531c9f44d9084055a05d22bc"
-  revision 2
+  url "https://downloads.xiph.org/releases/vorbis/vorbis-tools-1.4.2.tar.gz"
+  sha256 "db7774ec2bf2c939b139452183669be84fda5774d6400fc57fde37f77624f0b0"
 
   livecheck do
     url "https://downloads.xiph.org/releases/vorbis/"
