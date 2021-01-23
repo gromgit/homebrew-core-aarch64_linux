@@ -10,10 +10,10 @@ class GalleryDl < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "ebc2ad31f1b5f56247a345ba1f5f6caad8c3db569fca0437588ea16d65a9ba57" => :big_sur
-    sha256 "c9a37d99ca108f3cc540e2e5a967ff47d62d7be4429b2a04a41b5ef2a624af63" => :arm64_big_sur
-    sha256 "80c6ed68c08a973152a987726aaa38a3d894ddc374e7b76d4303bab8702ca154" => :catalina
-    sha256 "e2d353690354e0f916950f0da40ad4c9e50f0f8c900e2db1324970619aef4b4d" => :mojave
+    sha256 "bf144bfc7a489c35e9dc30dc75896b3e1974f6476aa3783d1edef343f3fdc124" => :big_sur
+    sha256 "fd14829617fb6934a7a57ab75561dd28c9489728c2030c0c95333899cf16bbd3" => :arm64_big_sur
+    sha256 "c4bc1aa0d3a46f1e69b88ced437423f4c1f8c2e5616353cb1444c16742d90032" => :catalina
+    sha256 "42763978fe0efa75fc35b0e19d700452b969cc5752921c286c6f14ef1bcc0bf5" => :mojave
   end
 
   depends_on "python@3.9"
