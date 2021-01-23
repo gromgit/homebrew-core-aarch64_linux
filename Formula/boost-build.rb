@@ -14,11 +14,11 @@ class BoostBuild < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "c9efeef3c0749dbc9f7224ac82be198c52a1e620049ae63697fd0b8679f7258f" => :big_sur
-    sha256 "1d59b5c0e5eb864a49b4990a9b23942554a45bbe86e27899aa657cb967420b06" => :arm64_big_sur
-    sha256 "aa8ed675bc4dfed24661ed3dfaed3243da82da9e88026d6056d28f86fa8c489e" => :catalina
-    sha256 "538c1f6cc8508eee4235ba0317a8d2b9bcdefd237093741821271394c16e1a3f" => :mojave
+    rebuild 2
+    sha256 "3e55b292a1bb2162a3ac207897e0c38031dc65a4bd858c085ffb35dfeae8237e" => :big_sur
+    sha256 "050492679c4ceafce723aca7fa4185e1342e3cd011b1947f33466e639ece226a" => :arm64_big_sur
+    sha256 "71b77320b7c991c74dbad21e38e875cb2b150db8fcd56113d3f74ea379343b6f" => :catalina
+    sha256 "ef91e139803aba94c3ce22e085d1332b78e1a820fdeb73dace0eebc194aec0a4" => :mojave
   end
 
   conflicts_with "b2-tools", because: "both install `b2` binaries"
