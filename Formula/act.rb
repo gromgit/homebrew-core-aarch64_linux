@@ -7,10 +7,10 @@ class Act < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "129324772b70bddbac8bf5f05ad2c446a898287089d07c7590b0812efc66cf95" => :big_sur
-    sha256 "00d1cd0957e9bc4c316d331891cb490657f1203fda35f9d2ea7033edcb830065" => :arm64_big_sur
-    sha256 "63e4c98ff67ce6e8c39dc1cdc96e782328adfbe08c3ee6b420dd75f942dea242" => :catalina
-    sha256 "f44412d572c2ae10f1e547ff26f6c01b55609ebe34fdc4fe78be18e4ef7bb0b5" => :mojave
+    sha256 "073ec3c987e044b3f730a5e451884c74390f0521c25e3d887a4fcaa511608175" => :big_sur
+    sha256 "d2bd2042f26d5a8be7454c8e5f2ab636691f02d99aad91ecafa6b1f1018ba631" => :arm64_big_sur
+    sha256 "7cbf53abcecbf19075fdf1199998c61a0c6c3fd8dadf40e6a1295fc866169ebe" => :catalina
+    sha256 "39ab75db53d6260817eb8c2169d40fdf77b681f5c42470a21cd341f3b7eb929f" => :mojave
   end
 
   depends_on "go" => :build
