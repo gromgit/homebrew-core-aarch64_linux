@@ -1,10 +1,9 @@
 class Pnetcdf < Formula
   desc "Parallel netCDF library for scientific data using the OpenMPI library"
   homepage "https://parallel-netcdf.github.io/index.html"
-  url "https://parallel-netcdf.github.io/Release/pnetcdf-1.12.1.tar.gz"
-  sha256 "56f5afaa0ddc256791c405719b6436a83b92dcd5be37fe860dea103aee8250a2"
+  url "https://parallel-netcdf.github.io/Release/pnetcdf-1.12.2.tar.gz"
+  sha256 "3ef1411875b07955f519a5b03278c31e566976357ddfc74c2493a1076e7d7c74"
   license "NetCDF"
-  revision 1
 
   bottle do
     sha256 "89fe221a5cfb46dac697259ace423488721524a62cf9753e2f2b0824a5092316" => :catalina
@@ -20,11 +19,14 @@ class Pnetcdf < Formula
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}",
-                          "--enable-shared",
-                          # Fix for GCC 10, remove in next version
-                          # https://github.com/Parallel-NetCDF/PnetCDF/pull/63
-                          "FFLAGS=-fallow-argument-mismatch",
-                          "FCFLAGS=-fallow-argument-mismatch"
+                          "--enable-shared"
+
+    cd "src/utils" do
+      # Avoid references to Homebrew shims
+      inreplace ["pnetcdf-config", "pnetcdf_version/Makefile"], "#{HOMEBREW_SHIMS_PATH}/mac/super/",
+                                                                "/usr/bin/"
+    end
+
     system "make", "install"
   end
 
