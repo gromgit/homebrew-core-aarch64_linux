@@ -13,10 +13,10 @@ class Jrnl < Formula
 
   bottle do
     cellar :any
-    sha256 "f9ca8bca15329ef3d89d3a2b8a5532ae7cceac1886d602042925f85880d63041" => :big_sur
-    sha256 "d8b8f4d8b72fa13db0c6c233819684144f0f4a509354a9e7a3444dbd55bcea4a" => :arm64_big_sur
-    sha256 "0b6415a27a1ae8295c766fe06a9eb0de676382ae46b27374e153e7d24d2528bf" => :catalina
-    sha256 "7ddcbda75725c2e3e6de6442c96cb45d0f4db767232c70eb22c7d7430f592058" => :mojave
+    sha256 "4e448410c5aaeb2956c40164885b44acbf490654b167e070d71994f801686846" => :big_sur
+    sha256 "61c9d11c1bb47b070876ca61df5f0b0fa15fb67ca5b818cacb47bd2dd6c6869f" => :arm64_big_sur
+    sha256 "98e893542a7b48585a5a1a6a5fd01f6d13e43043142c8e195d3e712f64d00647" => :catalina
+    sha256 "c216cd7f0bc5d2fc62aa327aa7ea474cc2e7c2c313ab722994201c0f7a997775" => :mojave
   end
 
   depends_on "python@3.9"
