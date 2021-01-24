@@ -7,11 +7,10 @@ class Libxt < Formula
 
   bottle do
     cellar :any
-    sha256 "a70e54d9374444cbc8e1ed592ccd24de3120854efb3248085db261411d318058" => :big_sur
-    sha256 "01c92a3915f414ec9880723e6c2928a33bea584ca5c1d1f38f67e001920ecded" => :arm64_big_sur
-    sha256 "6b454a895e68fb652f1b54aaa4cdefa9282465d5bc4f6dbebd5fc499fea6a7d1" => :catalina
-    sha256 "c4522922f276b72a5ba605b80ca188ae8808d5f5d4cb0de8f4d0639669bd6232" => :mojave
-    sha256 "a68f79946b3061006f1b59c6b63f1dfc2f72565a15a05c6b91b1165946f952aa" => :high_sierra
+    sha256 "db76d4efdf96e00af7b4230245b81c26539b4ec20e93c1d379a3c92b39217885" => :big_sur
+    sha256 "0fd900ad5097946ee343ba7c15311a3b85540dcd058233e05f198c15405b9da0" => :arm64_big_sur
+    sha256 "a1bcc92d37e1602ef760fecb79f7729db7e38aee2835879689596d478480217b" => :catalina
+    sha256 "4bd6052344cc12c674d40f44c31083264f5ce097ec0d2f6111e726862a8a2b04" => :mojave
   end
 
   depends_on "pkg-config" => :build
