@@ -6,11 +6,10 @@ class Octomap < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 "61071dabd01169f7677c8a3794920719f5d746b261c52ec31f087d2c9c1cd407" => :big_sur
-    sha256 "ccd5bda09d82b445cec55b443429d18ac9c5567c73f69b1e1a42d190b6f49653" => :arm64_big_sur
-    sha256 "dcf938ee253a527143d78cbc39c20046015519b5aff741656016f0a67ff705b9" => :catalina
-    sha256 "878681f950a14d49b47bd69605a12bae4f42f127b4cc7750de14b7a16f6a9930" => :mojave
-    sha256 "92def71d469ce8d5a660d371eded16f8d25f9346e2fc3f34ffd105f3bbd2060c" => :high_sierra
+    sha256 "fd9d3306fd3baa8c19a330c1deb9683a83572fe7dea71abcbe368ed5e9e90a93" => :big_sur
+    sha256 "484725230dbef1b0cb797a649219f481fadd4ac9841ba38d1e841dd4adbb0d77" => :arm64_big_sur
+    sha256 "5e914c7f5e2f0fa183fa8f0bd24508170162b5ae62fbb7b7672c18a36787c8a5" => :catalina
+    sha256 "5e019f4a11c0098d6dd0250fae94038946417030be84fea8b2bb65cc145440b4" => :mojave
   end
 
   depends_on "cmake" => :build
