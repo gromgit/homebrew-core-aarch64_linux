@@ -12,13 +12,10 @@ class Pigz < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "65b5e19d6b5afceb89c94600e9c517f2444ca94eca76be5b1ccd53cf9607b777" => :big_sur
-    sha256 "c110e8491b74dbca9a4b81c24a71a1b0b559edc3723845b42d0134e5da473b01" => :arm64_big_sur
-    sha256 "f9d47b369bad1ec3571d06fb40a1ad926e14360a13ec6e1fc16a6be8a81b7ed7" => :catalina
-    sha256 "341c5f3c0a82aedd822b2dd187ecc12b3dbdea9b2f00b08ce7ba049916557314" => :mojave
-    sha256 "216e716eafd2786ed6fa672daf27bb77b420e05f92a14cfeccab28a6be6b7778" => :high_sierra
-    sha256 "9173b4bdf36c787ad7a3b7d738236e0393430b607ba44d5a32fa387b008a347a" => :sierra
-    sha256 "d0c4ec5ac96ab0262d5e67bd5df5432d7dc40ac1404341962c02835ca8451b5c" => :el_capitan
+    sha256 "ab03009238f5a5181cd69b03905f9e85e89773ec643691ce3eb010d008d39aa0" => :big_sur
+    sha256 "9ca4d00080d69cb2df3f9301a86c9518693a75143d6dac70eee7fbe005a297d6" => :arm64_big_sur
+    sha256 "1f054b879a528740c7a6b854ff7fe948d2706dae808088fa19f82102b1ad174b" => :catalina
+    sha256 "0338683c663acf7cf0e403cf044ae62512215739bb811c3751165f2368edead3" => :mojave
   end
 
   uses_from_macos "zlib"
