@@ -6,10 +6,10 @@ class Ugrep < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 "bce1939abcb5a606c375000447cf685a6e439a267cb9e88c428507f97b0b8bb9" => :big_sur
-    sha256 "831580602bc1e8d0abf5107d99364e09d089eede87026fc4366fb6fda2bc6b04" => :arm64_big_sur
-    sha256 "018124dbd077c90bf42b8b3822d2a4cd8be799730a069022ffd2841913771b30" => :catalina
-    sha256 "a56844b0fbf89467ba41274c59c8e7da3443795204440656fa0bc9c141d08aad" => :mojave
+    sha256 "3e1ce591b9b4dfa49c3d00c472e60179d91bcfa89119b4c05f5ca64950c2c5e0" => :big_sur
+    sha256 "4cab8e9221bfa059f213a18bd837dd818ad9e38defdc27725534d69d07437f7e" => :arm64_big_sur
+    sha256 "79c66bf303f960663e9264afb2fc2390ec3cf647e4c70763ba00ef4a09c172a2" => :catalina
+    sha256 "45232be0add69494dc4a652bc92f8d2ab6257059a56c5da79de0fb6610bef5e0" => :mojave
   end
 
   depends_on "pcre2"
