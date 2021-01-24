@@ -10,11 +10,10 @@ class Asciidoc < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "a7f6a49939e627eece6cddf4cbb91ae72922e6beb88ae9715cfd479051b3fb4b" => :big_sur
-    sha256 "a27b62e2f37f96b534abb47af010a7b6282339439a4a3b19682544e7634f3ca1" => :arm64_big_sur
-    sha256 "0d4c6143d618720d9d1907d4a914b0ba685e67ee024859de3afb7fb6f50bbbb5" => :catalina
-    sha256 "23836dcab06fc863b9babf4501179317d6e28899a83f078aca1cac564ef585e2" => :mojave
-    sha256 "e61daf8474cb187643e49c313b839c957dbaecc5944ed43c9b8a8116ff656a5f" => :high_sierra
+    sha256 "fdfe12fdf2042b563bc1a483ffa374af8a66e4cf0ba3016a391dc2fc21900543" => :big_sur
+    sha256 "b1bcbcde0a7c320b6545b860c6970ba4fe3197fd9895bcd7213bc4e1d94e3fc8" => :arm64_big_sur
+    sha256 "ea51b42dc1abaebdd7651c7f173425120abebe59d3fa71d44c6def60a737cdbe" => :catalina
+    sha256 "fbd4303b8c1cfd427120a8b90e8504fd1d553b65243b8079e4d9e694f0a340d6" => :mojave
   end
 
   depends_on "autoconf" => :build
