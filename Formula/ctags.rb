@@ -23,12 +23,10 @@ class Ctags < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 2
-    sha256 "d874d12982113ff0cc79501241b6c5f0caa16ae73821be66a49e246c257ccee5" => :big_sur
-    sha256 "d78b7f55870960eb32371500da37e1b74f3d67f63e4b9e3e7fba2040f68f5743" => :arm64_big_sur
-    sha256 "0f9bebdadd76a7ec818b904d6266eae183e869bf6f83302d836b93fc50a03714" => :catalina
-    sha256 "da05bcfc8536c7e627dbea17e67997b45388706ba9bb84e521682c0358cf18b5" => :mojave
-    sha256 "169b9d458f2db04d609c86c36e9d9dd4ee2474b7c472a1a11c766454e4bba1a4" => :high_sierra
+    sha256 "9986b3f6897b60cbdf5d73b4ad819d2d30726043dc0d665b77ba2def399a60b4" => :big_sur
+    sha256 "8e8ee6051008e73c999dbc8476221f220ef87fdf9cbc409a308df6a956e114e6" => :arm64_big_sur
+    sha256 "2292b70a7b744c2238507417e40c2dc7273c6d919c9fe037bf668cf00863ad92" => :catalina
+    sha256 "238b65e5e1614f1d24fd88b6741c04d1cf48fd5f5d247cdbcd1f82d5796197d5" => :mojave
   end
 
   head do
