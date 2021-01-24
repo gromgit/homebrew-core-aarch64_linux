@@ -11,10 +11,11 @@ class Mcrypt < Formula
 
   bottle do
     cellar :any
-    rebuild 3
-    sha256 "284a74fc68549f1479e592b8daf2fd02f695292c5ca0334e7181906803396ceb" => :big_sur
-    sha256 "488ff0ff6090f2d58c4bee440fe473f53f3755017bea445e84c94455c235a5b9" => :catalina
-    sha256 "55b9b6cb471b312208afddc9bbc9caaf8be6043d2b1cc7e32161633f83e226e5" => :mojave
+    rebuild 4
+    sha256 "e3182ac2f12baccfab81146bb4c6944b05154259a65165d694ca64e43d1f03f7" => :big_sur
+    sha256 "849ffa4e23dff9bff130c10d8ace02994034120b7d97ad36e9d7f6e8c048f97a" => :arm64_big_sur
+    sha256 "a52070083dfe080bbe0b8f71597a8a619c6b1421970c4670c6f40f5f2ba0fafe" => :catalina
+    sha256 "6a23409a37396e2b2256485737a8195b06dcdea3607583e509f1d87d6a75faec" => :mojave
   end
 
   # Added automake as a build dependency to update config files in libmcrypt.
