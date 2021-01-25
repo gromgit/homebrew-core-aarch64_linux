@@ -12,11 +12,10 @@ class Talloc < Formula
 
   bottle do
     cellar :any
-    sha256 "1ec1b32b844e7c4b8c00d67f400b9140a1d79637924e4cf198b306672c0130fa" => :big_sur
-    sha256 "6060c8dc16c3a4947f12d8b41d03a164128f9475b7c5c93fda879797dc92be00" => :arm64_big_sur
-    sha256 "f9b77cca02b56ffa431f45d49d090c21f1a762a47149d6e92d57884772dd0875" => :catalina
-    sha256 "e0a573fbcce5380f8a31be002f14651f8f9e0cf43b254fe50100ae9134ff319a" => :mojave
-    sha256 "c4c4ebb7d3e92b05abe832134c3f6745e8279a0585963e5a9967471b6c3a753a" => :high_sierra
+    sha256 "52c7fce48dc4d2a7f9a9d04c6728df1ca6ef485f7e7f4db7a7f381d1069ae48b" => :big_sur
+    sha256 "0075bc00e43000ac1e6aa959e7a0942a16e0097209be856cbe66b452fc937e27" => :arm64_big_sur
+    sha256 "da325e962398aecb598415cbc629e3066c07904d3a7ac0e86d73a996ce44629c" => :catalina
+    sha256 "d16cc6d63e86849c6aad4bf0479dd245e20d488662845c4df41ffea359242995" => :mojave
   end
 
   depends_on "python@3.9" => :build
