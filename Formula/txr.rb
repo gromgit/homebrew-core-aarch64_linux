@@ -12,9 +12,9 @@ class Txr < Formula
 
   bottle do
     cellar :any
-    sha256 "b0bbab0e3e533111a5947043edda7d2d47b8fbb939e7dcdea93588eeedbaaf50" => :big_sur
-    sha256 "42730adc812ea2b1f8f9a6f8b303fccddd2c2df305cb5702a9b0171719ae4a69" => :catalina
-    sha256 "f824db34d76affaa8dcbda35e0f4e65ef9e171aea6107532413cb1750ed6130f" => :mojave
+    sha256 "8f85096c67e6121717cd4613fed3c1eaf46270fca03ef176434a845c72676461" => :big_sur
+    sha256 "65be4809baf6a905d4293d5b322695e65ef73b6159991c8b9e6ebfc4223e8cac" => :catalina
+    sha256 "26340b55c6290b4bc1b4b258711ce51174e38cd8efcf83364e43bf18957a64b3" => :mojave
   end
 
   depends_on "libffi"
