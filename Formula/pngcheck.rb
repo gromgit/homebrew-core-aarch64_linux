@@ -1,13 +1,13 @@
 class Pngcheck < Formula
   desc "Print info and check PNG, JNG, and MNG files"
   homepage "http://www.libpng.org/pub/png/apps/pngcheck.html"
-  url "https://downloads.sourceforge.net/project/png-mng/pngcheck/2.3.0/pngcheck-2.3.0.tar.gz"
-  sha256 "77f0a039ac64df55fbd06af6f872fdbad4f639d009bbb5cd5cbe4db25690f35f"
-  revision 1
+  url "http://www.libpng.org/pub/png/src/pngcheck-3.0.1.tar.gz"
+  sha256 "66bf4cbaa29908984c0d7ba539358ed63c7c2f02a0b2407ac691465b143efbbb"
+  license all_of: ["MIT", "GPL-2.0-or-later"]
 
   livecheck do
-    url :stable
-    regex(%r{url=.*?/pngcheck[._-]v?(\d+(?:\.\d+)+)\.t}i)
+    url :homepage
+    regex(/href=.*?pngcheck[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
   bottle do
