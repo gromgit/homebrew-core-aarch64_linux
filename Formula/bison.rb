@@ -13,11 +13,10 @@ class Bison < Formula
   end
 
   bottle do
-    sha256 "b7a25d5b1a69dd214d31304edb008d378b9de7dfd026d04b2843786c9af88118" => :big_sur
-    sha256 "733377e1e13ad873eae32d91d830975fa52e8d75514b042a7be38b3ec03d09be" => :arm64_big_sur
-    sha256 "6252edf4d591cf1de3e94e9e08c5986205593da971d0b381a411d272c95cf30f" => :catalina
-    sha256 "50a80771867419e621404f94ff89cab629fd1aff69bdb68a473fd41a233d00a2" => :mojave
-    sha256 "b0015c5773c569e7de673bc2159f0c86d50422bc4fcf06de66f6bac1fe1f06c5" => :high_sierra
+    sha256 "b0f383e37c2e1e4bb14b654b07e96e8da7a01bd19b4c41cd5d2d88198dabff90" => :big_sur
+    sha256 "7717d17b5ebca46f673d4ba2eb5626c7a726c3e6203db10d0bf21185356841b6" => :arm64_big_sur
+    sha256 "b4128068b3902c2f98a3a3d25d19ff63daf61449dfb21146d5b117a34b38a4ef" => :catalina
+    sha256 "c9e6a12dd08f5a956d67e18294d49bc50803bc58decd4a0fb234e0606042e0fa" => :mojave
   end
 
   keg_only :provided_by_macos
