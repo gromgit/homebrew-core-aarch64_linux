@@ -13,9 +13,10 @@ class Mplayer < Formula
 
   bottle do
     cellar :any
-    sha256 "acaa1e3eefe8b4cdf1ec9280897ccf9105df580ad3912a41c8cbe1d7d6572d62" => :big_sur
-    sha256 "0dd16cbb1ae697835329526876e76bea3801b6e0282a224bdb8ad80a8ff34442" => :catalina
-    sha256 "e2ffb89894320617bd3dd058060f1a99d94a3b18b8daa349cea6cdd15385adfb" => :mojave
+    rebuild 1
+    sha256 "7482460cff2275c11a9a0249bd77b018a211d926cc2fde68912e1063b2769dbd" => :big_sur
+    sha256 "cbbbc082ba6ceb67c119d97a4ecce0c2af5f7e19668e4361093e761cd981a6a6" => :catalina
+    sha256 "2ee069c78251cc7e45bd3c1b6bd5941e927b01f43af5f6deeb4fcdd744dbc52b" => :mojave
   end
 
   head do
