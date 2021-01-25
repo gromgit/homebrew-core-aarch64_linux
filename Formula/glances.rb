@@ -7,10 +7,10 @@ class Glances < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f0b69083701a86ff073467c20ef586ab74a7a7c330361bda4f2647fd260734c5" => :big_sur
-    sha256 "8bf34f1bc64e0f111b800607da07b1c67c2f2ca77686dcf27da474a59875a237" => :arm64_big_sur
-    sha256 "21524d3f04fcd3e9fbe933bfd1364845f41c4c9db21c7802b8095df48ace6cb3" => :catalina
-    sha256 "6a1c6b11d6ceff49d885d5369fc3c972034f63225b782420bd4b2748f3c41330" => :mojave
+    sha256 "76c4d76215950ba7c9739b42bb0542a2ae5675950104bdd99b3c1e9eacd801d2" => :big_sur
+    sha256 "b8df470b377572b9586901f7c64aed23d84e9ff1490ffb16afbc24ae7be4d379" => :arm64_big_sur
+    sha256 "1fd1fa2bfce06817d40711060ce0d2918303ce62e32e203de70bf89175d0176a" => :catalina
+    sha256 "6939d40ec9f567132efbcf71539d503e2d5407fefcb08a90337a2059bf8e0dc4" => :mojave
   end
 
   depends_on "python@3.9"
