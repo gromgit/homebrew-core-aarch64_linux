@@ -10,10 +10,10 @@ class Evince < Formula
   end
 
   bottle do
-    sha256 "fc4985043ed06d8d6fa6295798e358561bc4450f760eb16c85258d5251a89cad" => :big_sur
-    sha256 "afcbf0dc169fdd425f6eb3bd794e3501df4d20f984a773b60b0a5175a35b0526" => :arm64_big_sur
-    sha256 "cb2dd1b96c0ba421fba972447653c9df1b752ad700078fc18e8059f9dbd94789" => :catalina
-    sha256 "29a0b6cf9b844348efbb47fff9283f72a36d83b4fb7005de8358a22e2c4d3eb0" => :mojave
+    sha256 "d933c0ca5a4093c159cc5ca792399650da74f0064ee23fd9aa5e09bcca8ec373" => :big_sur
+    sha256 "4a439a49655288679024251e580de7fbfd34ccaf1a075c0f4eb66279d5139128" => :arm64_big_sur
+    sha256 "9ad3478e5b27d2d513875c107dd9823947df4d4258678da7a4ce7c4da7812558" => :catalina
+    sha256 "b9f92de5c2032ebcea7ab7d4f1a70a2b4f15fa2cd3db57e483a5e3ed4986fe99" => :mojave
   end
 
   depends_on "gobject-introspection" => :build
