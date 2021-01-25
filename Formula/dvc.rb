@@ -3,8 +3,8 @@ class Dvc < Formula
 
   desc "Git for data science projects"
   homepage "https://dvc.org"
-  url "https://files.pythonhosted.org/packages/13/87/0276ee563bb634ba947bf82851c4f464fe099db1a0314a5ecacdb04b933b/dvc-1.11.11.tar.gz"
-  sha256 "ed19fffaa1ad6323ff390fbf53b73a5da802b0238fa425e8c82d12ea314a90d0"
+  url "https://files.pythonhosted.org/packages/72/72/55b57dadba2f63b0b6c30ebaceb62b56e33643cb22a66a58ec64eeedc745/dvc-1.11.12.tar.gz"
+  sha256 "aa419a0174fc7bc104dedd08017eef045e3e82e51c0ee4755f284117737b4d30"
   license "Apache-2.0"
 
   livecheck do
@@ -229,8 +229,8 @@ class Dvc < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/fb/96/b268c7ac622597f8660e14e01d8b66b84a34fbbaed3b920bfca440f742fe/rich-9.8.2.tar.gz"
-    sha256 "c0d5903b463f015b254d6f52da82af3821d266fe516ae05fdc266e6abba5c3a8"
+    url "https://files.pythonhosted.org/packages/5a/2d/5e92c69f971cb2a373a5203fe2ff0a06751b3eea918c709318e19f7caf62/rich-9.9.0.tar.gz"
+    sha256 "0bd8f42c3a03b7ef5e311d5e37f47bea9d268f541981c169072be5869c007957"
   end
 
   resource "ruamel.yaml" do
@@ -254,8 +254,8 @@ class Dvc < Formula
   end
 
   resource "smmap" do
-    url "https://files.pythonhosted.org/packages/75/fb/2f594e5364f9c986b2c89eb662fc6067292cb3df2b88ae31c939b9138bb9/smmap-3.0.4.tar.gz"
-    sha256 "9c98bbd1f9786d22f14b3d4126894d56befb835ec90cef151af566c7e19b5d24"
+    url "https://files.pythonhosted.org/packages/2b/6f/d48bbed5aa971943759f4ede3f12dca40aa7faa44f22bad483de86780508/smmap-3.0.5.tar.gz"
+    sha256 "84c2751ef3072d4f6b2785ec7ee40244c6f45eb934d9e543e2c51f1bd3d54c50"
   end
 
   resource "tabulate" do
