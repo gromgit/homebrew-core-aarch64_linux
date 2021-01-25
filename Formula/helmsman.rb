@@ -2,8 +2,8 @@ class Helmsman < Formula
   desc "Helm Charts as Code tool"
   homepage "https://github.com/Praqma/helmsman"
   url "https://github.com/Praqma/helmsman.git",
-      tag:      "v3.6.3",
-      revision: "5583540acbd38487c014205af3f64eeedfc28147"
+      tag:      "v3.6.4",
+      revision: "d77cf03aef82851ab3da0c4c1134673844faaa50"
   license "MIT"
 
   bottle do
@@ -18,10 +18,7 @@ class Helmsman < Formula
   depends_on "kubernetes-cli"
 
   def install
-    system "go", "build",
-      "-ldflags", "-s -w -X main.version=#{version}",
-      "-trimpath", "-o", bin/"helmsman", "cmd/helmsman/main.go"
-    prefix.install_metafiles
+    system "go", "build", *std_go_args, "-ldflags", "-s -w -X main.version=#{version}", "./cmd/helmsman"
     pkgshare.install "examples/example.yaml"
   end
 
