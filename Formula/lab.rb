@@ -8,10 +8,10 @@ class Lab < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "91fb46c4c3bae4f629e69ab3f94088abeea42696832c895957a5c8548a08417a" => :big_sur
-    sha256 "18f1c894f7d69729a4b558e5291188ded17e4025687d6b76c89f9000cd5b5402" => :arm64_big_sur
-    sha256 "411d03a214b91d9b6fa403b5a34921967bbb75bd7facf916b9d313e7845488e9" => :catalina
-    sha256 "0097c4d91eb8098827d8ed4c3a9bed00f33f30b2319a4c2a7ed82be5eb7efa25" => :mojave
+    sha256 "151c2058f572bd93f607ea16e5c2f54bd5d927a9cb9634cfd8c3b8cd1a9079e7" => :big_sur
+    sha256 "4a809eacd2ba1ce4bb3e8b944c8e1f18ea9b11195b6abe5cee86b7df4ecbb252" => :arm64_big_sur
+    sha256 "4ab9f56d7969ef005cb72613a8bcbef6765eacff3bf5c808c5c4d4dc56138e0f" => :catalina
+    sha256 "b8c28ac2a824aeacec68b184568c8189ffe2576e0edd93ed2f3ff0908309b64b" => :mojave
   end
 
   depends_on "go" => :build
