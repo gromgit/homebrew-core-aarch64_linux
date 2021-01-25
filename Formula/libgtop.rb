@@ -10,12 +10,11 @@ class Libgtop < Formula
   end
 
   bottle do
-    sha256 "a3d2cbf8479bbf20404768d9245b3d5714dbf8befc96167c05c915f5d5c6ec8a" => :big_sur
-    sha256 "541315975bad3ee2b0725655b5dc48c7d5bf59d9c5b746ff50f9dadc135a1a89" => :arm64_big_sur
-    sha256 "e0391a7a27f7a7f27806294b73a49eb23b60bba785bb4d147f39f6cc3bf2cf4c" => :catalina
-    sha256 "207550dec06c9af31f523534a6ca65906b7e4c69ad6ec670969f98e00dcc8c2b" => :mojave
-    sha256 "981a91a3221651bf94e922f8e29cd8be08527453a833ab8f69cb7dbf7d39ed0d" => :high_sierra
-    sha256 "77db9c002217605f8bad346413fc8cc038109ddd65ba7e62e09d25d341e1023f" => :sierra
+    rebuild 1
+    sha256 "973fc8add2e31a02533932aef1f796ca423f316ec566b995cdba040ea377832a" => :big_sur
+    sha256 "61b8fb81ad64f49c86c088f7bf3f21b9f9fd9fd850d4b39a1c845800a76a93dd" => :arm64_big_sur
+    sha256 "9794f2b20646011aaff625c099484987d887f7a5587cffcdec1d3b35ada15470" => :catalina
+    sha256 "c42027859936dd0725f77c845ef2bb2fc87cabf6929878722a4539b63784fb9a" => :mojave
   end
 
   depends_on "gobject-introspection" => :build
