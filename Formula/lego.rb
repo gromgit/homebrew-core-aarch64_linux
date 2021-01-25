@@ -7,10 +7,10 @@ class Lego < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b99349308a1af2cc963b3c825cb0fefc37ea21b7ea98497c2e9e49f1c9329bd6" => :big_sur
-    sha256 "f5023447b0ac0ae205c301e961b2199a748fdd5a8b78381822b4b54e3a2925a5" => :arm64_big_sur
-    sha256 "20a37f8e5ccbd6f40908a2d60fd2c4f41aadfd5fc65b861174c181e908c60320" => :catalina
-    sha256 "fc8c01b9e2e5cefcbf9f3f0d002c534d1a7c320b4e7a53849bdcd01fd4f5e4a2" => :mojave
+    sha256 "b595da7dbfd1049bbc84d7b48fb9429bc3d66063cb46d5e07f655d9085168556" => :big_sur
+    sha256 "7cb8bbe7c240db16f61187ba7faebb75686fa1393a343cad7e467e848cf2ff6e" => :arm64_big_sur
+    sha256 "028e00c786018b4ce27c40d770fce87d2243063c23460f6a5fd16a618f0c6c25" => :catalina
+    sha256 "f45b5a1e25b3f83fc91679ecdbd38148d46eb8cb94cdd40eb8791959f8999d43" => :mojave
   end
 
   depends_on "go" => :build
