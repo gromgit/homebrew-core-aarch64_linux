@@ -8,10 +8,10 @@ class Fizz < Formula
 
   bottle do
     cellar :any
-    sha256 "f77058ccb109d0f6e965294cc996c6d80e73540d3c9186481959e571a00900b3" => :big_sur
-    sha256 "493c2b333a3e5a3d477abc54cfea961efd5c2f3ddc256e084935bb5cc492a76c" => :arm64_big_sur
-    sha256 "f2a65d310b55b3fd9698559078d4fd6b7ae45a2fd1102882c57ca0156e3ac169" => :catalina
-    sha256 "21a00f26d668c2e3eabc6dd97edbe23358c026c244ae57b7712fb178fdb993a3" => :mojave
+    sha256 "cc465ed61af168d7f577f2baa34a82cf7fbc0f5b2ad1e6af25575f8fdb1276a5" => :big_sur
+    sha256 "d75ffb151797b4697a63d2ae82393b1f9fc62b1f74a3204808e9958faaeeaac7" => :arm64_big_sur
+    sha256 "2618989f46b90f2b1c8cd92ba6ceddd1bd3043bf500ed928bdf9ea93a3fea0cb" => :catalina
+    sha256 "40be319d704b30e6f872cad1edb621c0341d0f0f1580b824d244f0ed252e04f7" => :mojave
   end
 
   depends_on "cmake" => :build
