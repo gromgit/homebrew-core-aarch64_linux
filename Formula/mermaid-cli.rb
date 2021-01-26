@@ -9,9 +9,9 @@ class MermaidCli < Formula
 
   bottle do
     cellar :any
-    sha256 "a1f146280bdf459bd1c62f3032aa284991886e28ad254deee8e94dc23681eeca" => :big_sur
-    sha256 "04a30ab774696f49ea0dcac6a2119078d32b3fc4f4488dadfb413d3a3959fa00" => :catalina
-    sha256 "c85e4cfb11303b1ec32629e3c42cb6ea31e9dbb4582861629d8f6d9679b6ec2c" => :mojave
+    sha256 "503f1999378800866e6acea39608d2e7a80fc6d7956bed3ad5a9a2c3fb6f7f54" => :big_sur
+    sha256 "05015617b49fe9d215798fc16cc504afe92605fdf84fd93d1aeda3aa8c5f4e9f" => :catalina
+    sha256 "a1ef6b374cd599b41251985613ea840345630921499e86903cf1bd8f89048bfc" => :mojave
   end
 
   depends_on "node"
