@@ -8,10 +8,10 @@ class Networkit < Formula
   license "MIT"
 
   bottle do
-    sha256 "23f70cc4fa3dc267391415b12f871ef39e27cca750e2e3a638b9075075ef4314" => :arm64_big_sur
-    sha256 "e9e7a572043c181f4aca4c76099b4d1d15e64108c15f5a85f308e9670a23afe4" => :catalina
-    sha256 "b89291dd82191c1f0723260297b0b95be0a060380dc820cd4041b00a4a48e149" => :mojave
-    sha256 "4c5688263e090b92933eda18a481a6c4de5e30460b1d503148fdc614c0324b2c" => :high_sierra
+    sha256 "1d61dc3b796983a9917d3432c81f71970124b1b92223571f8e71e5d93bfcf3a3" => :big_sur
+    sha256 "6bcc6f2a916a88aecde8ba207f9529e85f4aa5c0824103cd174edd8305829853" => :arm64_big_sur
+    sha256 "9993759bccd6358ac11a8155f38f00c567216fde5f6b9bf7bf7540c16b3ade4d" => :catalina
+    sha256 "91d651e6ddc12737aa0c54bc70426a2156247fe24360bb4c4de1d548e5838224" => :mojave
   end
 
   depends_on "cmake" => :build
