@@ -1,11 +1,10 @@
 class Shtools < Formula
   desc "Spherical Harmonic Tools"
   homepage "https://shtools.github.io/SHTOOLS/"
-  url "https://github.com/SHTOOLS/SHTOOLS/archive/v4.7.1.tar.gz"
-  sha256 "6ed2130eed7b741df3b19052b29b3324601403581c7b9afb015e0370e299a2bd"
+  url "https://github.com/SHTOOLS/SHTOOLS/releases/download/v4.8/SHTOOLS-4.8.tar.gz"
+  sha256 "c36fc86810017e544abbfb12f8ddf6f101a1ac8b89856a76d7d9801ffc8dac44"
   license "BSD-3-Clause"
-  revision 1
-  head "https://github.com/SHTOOLS/homebrew-shtools.git"
+  head "https://github.com/SHTOOLS/SHTOOLS.git"
 
   bottle do
     cellar :any_skip_relocation
@@ -26,7 +25,11 @@ class Shtools < Formula
     pkgshare.install "examples/fortran/", "examples/ExampleDataFiles/"
 
     lib.install "lib/libSHTOOLS.a", "lib/libSHTOOLS-mp.a"
-    include.install "include/fftw3.mod", "include/planetsconstants.mod", "include/shtools.mod", "include/ftypes.mod"
+    include.install "include/fftw3.mod",
+                    "include/planetsconstants.mod",
+                    "include/shtools.mod",
+                    "include/ftypes.mod",
+                    "include/shtools.h"
     share.install "man"
   end
 
