@@ -11,10 +11,10 @@ class Dnsmasq < Formula
   end
 
   bottle do
-    sha256 "8c76a679924b5f2a31d9d90236d6c35f4b05074f447656f3e0e814d3e823e74a" => :big_sur
-    sha256 "5eaac9c49cc46b01e2c969edb078414945d75827e930002475742ee22949e00e" => :arm64_big_sur
-    sha256 "cd4bccd3c41ef17b4a71c9dec0e8ceaed15e5e4dd4c9ca23cc681a1b0d391566" => :catalina
-    sha256 "f122bdd0e288193e65cf366c560570e9de1aee2d68ed04d1c94b49e9e519a3e5" => :mojave
+    sha256 "a4479c0bef111c09b0501624e009cd5b923007c7bd36193da63b22462b0f0bf9" => :big_sur
+    sha256 "bc3658b1513c04ceb65465f739efab9b4607df16d5019ac4868b58f3faf3b489" => :arm64_big_sur
+    sha256 "72c66278024f906a82de40d85a270067303cb3f118fe9bdd62522d819364cfac" => :catalina
+    sha256 "9c0d15c06f40e148e28c5ffd795e69634e897f5569b3a75a112d5209385d1ff5" => :mojave
   end
 
   depends_on "pkg-config" => :build
