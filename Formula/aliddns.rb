@@ -10,6 +10,7 @@ class Aliddns < Formula
   bottle do
     cellar :any_skip_relocation
     sha256 "b91312e27065e23f3444144d9e1dddcad8337c6c60d3e597235089befb50dcc7" => :big_sur
+    sha256 "93f5b40f2357c7b904c52ea10f8bba2924143e2e8214670037db5435ac2e3108" => :arm64_big_sur
     sha256 "868f0972a9c769d8854cf4b9d86b0c1ac75c542764054f867d909ddc9b091b1d" => :catalina
     sha256 "3eaeedd4962169e2ac8660fdccfa628c389e01e00b9435dda1adebdb18488a70" => :mojave
   end
