@@ -9,11 +9,10 @@ class GolangciLint < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "72bc1c5b77a869166835d95c530a094c3e15af2cf1ea37e240bf25d60f3a160d" => :big_sur
-    sha256 "789816953076852c07443ca81976247da4ff4d8dcb4ea6f78167daefb1fb752b" => :arm64_big_sur
-    sha256 "240072df692296e13fc72d1e35d538a3397ee15d08d9fb9e8c06b463434ccde5" => :catalina
-    sha256 "0e6b7d4df47684269fd3293ae30d0b7472c6cb7bfc75f0a3bb249a2072dec4f5" => :mojave
+    sha256 "47044977ebc7a6f1e7dafea2fd937b83c008feda0d97fe88403f3c1f581111fe" => :big_sur
+    sha256 "f01048a841defc0f4302693bacb7058d03e061b7c617ed21ef6a308695a6a65a" => :arm64_big_sur
+    sha256 "2b56ecd4d0570533f23d4d2417e732574a1b07da3729728c62ab990a4b2ea46c" => :catalina
+    sha256 "eacb5c9defafda54297dafa400045bce4f57b88418047649b67380e20b701eba" => :mojave
   end
 
   depends_on "go"
