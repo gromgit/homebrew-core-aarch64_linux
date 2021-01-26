@@ -13,9 +13,9 @@ class Ocrmypdf < Formula
 
   bottle do
     cellar :any
-    sha256 "a018052f52e57f431b89b660f1afeafff7458815c21b655348864e837e607abb" => :big_sur
-    sha256 "ae5642fa1b4c2344cc232f80f7d6acfce2e9e0ad6680ed1f70a73ce3b158bfe5" => :catalina
-    sha256 "5c3fe5e615185bffd4d2c5285382c29e4e7e85de9ae41b91f0d509a388db5546" => :mojave
+    sha256 "58b9c966a8f29c214a2e328630cb08232598df004c5fba2dc441c7b2b8117b88" => :big_sur
+    sha256 "e23eb9a57dc8ef9902b8ec315c9a9012722166606e2b54acb6b4f7ce75dc169f" => :catalina
+    sha256 "30b4f12f8a4099728f99489252d6f25396d922209951ea414def99815ae74e0e" => :mojave
   end
 
   depends_on "pkg-config" => :build
