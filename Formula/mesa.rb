@@ -14,10 +14,10 @@ class Mesa < Formula
   end
 
   bottle do
-    sha256 "881fc567fc963b90c11aee365fddae3cada63a51348adb2b41251fdc8521bf8b" => :big_sur
-    sha256 "c02a30332e271b8f4fd0b725c0d2365b1453d32123a8424e5c49814c039808b1" => :arm64_big_sur
-    sha256 "59128e38491cd106301c23ba3063668338156bf10c8beaaf4f12fb4461acbcba" => :catalina
-    sha256 "6b75a105ec1fedabef2fdfb5e8bb366a3627abf333044b2e2d0902bdc95832bf" => :mojave
+    sha256 "de19172509d1d200b275abc87f3e4239bcd786ca9629c47d9dde8f37e825d2aa" => :big_sur
+    sha256 "b00018a0517349b91003f295ec96874621a0a4056c8138c49e0cf2c8d267e54c" => :arm64_big_sur
+    sha256 "fa1446210f1f08b95d113ab2fea439c448d7746f11095a396e0b87d36f45c2c3" => :catalina
+    sha256 "6831faac87491e5321db31744457dc19a47985017605c9c01471a217d6b0b189" => :mojave
   end
 
   depends_on "meson" => :build
