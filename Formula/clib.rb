@@ -13,10 +13,10 @@ class Clib < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "ab863f15a818566f933db178a2c174ca5ceea5f4dcac7134a48cfcf8489af04d" => :big_sur
-    sha256 "5e278922b5073b3855686c1993943ac978bb80417c0ed7a083d5b82775011c37" => :arm64_big_sur
-    sha256 "278095d11c8e7cf01dc41de774323d49746d0fcce23ea332277911f03310e6fc" => :catalina
-    sha256 "903694121ada8b3ecc41ab0ba16054d41b410b5cd8290ac73d51cc60313db829" => :mojave
+    sha256 "ba2d9b6112f7a183a28e06b00bdf01c3164dbdf05b6284b5a5d8c972c4a5ef59" => :big_sur
+    sha256 "b77f5026ceceec9764651778eb88f536540faaa8aa3845f7cf6bc15bd78dc0f9" => :arm64_big_sur
+    sha256 "19a1b473f5c392ce7a1f8ae8209918926777f32395a31199047af6cd22ff01a5" => :catalina
+    sha256 "30f21023c47efeda8c7609f7ad09de5c866e903ab85d90f11227424836fbf248" => :mojave
   end
 
   uses_from_macos "curl"
