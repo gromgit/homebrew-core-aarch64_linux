@@ -7,11 +7,10 @@ class Libnetworkit < Formula
 
   bottle do
     cellar :any
-    sha256 "2e0c3e5599416ae8007b4baf2b55fd6f6a63354727bafd978d4f654586c5ae77" => :big_sur
-    sha256 "456bcb891377b0666eaa4f068c5e0664b038474b10cb03475068109cc5c06b40" => :arm64_big_sur
-    sha256 "ce41e3c47bba5ffc61f1b5ea65b908b64032b1af605e19c8a40f40f26bb946fa" => :catalina
-    sha256 "f2dab092758749672edc5058fc89e53da086e1acec7756900be0e0d7d839bf16" => :mojave
-    sha256 "94522c74e5a3867137849646c49d0e664fd298db24436bf2bfba2e7d725d9caa" => :high_sierra
+    sha256 "af356f704e84e2bd01c3eba35b52db809985536c2be04cc0642a2fd1599db6e0" => :big_sur
+    sha256 "5f2bff7d671e380fdd61d0f19526dca6497ff2846ff0569721b93b7067efa11f" => :arm64_big_sur
+    sha256 "66137ce8956685d9ff6a905553e4275f0eb963a439900c111fa1568f03c4462d" => :catalina
+    sha256 "6a6dc69af2c96f1a4745e480026dd093f59369018965f1e85b7e0a7b5a03a29a" => :mojave
   end
 
   depends_on "cmake" => :build
