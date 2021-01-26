@@ -20,9 +20,9 @@ class Crystal < Formula
 
   bottle do
     cellar :any
-    sha256 "c382e452d3586561986a8eea143dc09fb3ca089c989d9c54a7a3cd4d054f1624" => :big_sur
-    sha256 "e3907b45ca9c3e0344d130141d23915c5825d34b27660b6f1ea847351b127fb5" => :catalina
-    sha256 "0aa5aa3835d42d9139ede2d3e134d29db4d43cc29f0e735f17c48c1bdcc7ea0a" => :mojave
+    sha256 "a585f83a1634392a67b8cca58134dcb2ec13fe5aee6b31bdadb71de719b3d103" => :big_sur
+    sha256 "38508588d43eef3e18b19e4dbc6b827ebebfdec958ced7d216bd362f618b6715" => :catalina
+    sha256 "0cb3e38c1504568fb7a013d7bfdde75a49ad252b23cb1257bb720c25d11e7fea" => :mojave
   end
 
   head do
