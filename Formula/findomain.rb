@@ -7,10 +7,10 @@ class Findomain < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d786858d2819476ffc1c3979fbb8fdd0d1cbb756123fb5376be13faf3d89a341" => :big_sur
-    sha256 "16c9f1281a2a54952835423da396e41b4f3788273fa468eb74b7564fa20f0933" => :arm64_big_sur
-    sha256 "290366f2319e32c716c817d2b86c184d879a4488495ae54f56e180e3c4d52fe2" => :catalina
-    sha256 "eaf96a84962218711a7317249c0f6d0fd5a1156249e6e6ba1d3c53a236ec3fb7" => :mojave
+    sha256 "bb204b4cd242fca47870a7ea606b2d895c7ca31bb379a7ca2430543983140e99" => :big_sur
+    sha256 "55ccd6d8f9da545c9832e440af212ad0544bd2df20b58fcd7519780d9fc88b93" => :arm64_big_sur
+    sha256 "287516da14dc786c922aa2de166ddcddf8c031cb3057c758e80fb983354cd3e1" => :catalina
+    sha256 "64753c162781bc596926ffffbc370c0e0632694e6fbd4c5abcb0c35c3f5ebef9" => :mojave
   end
 
   depends_on "rust" => :build
