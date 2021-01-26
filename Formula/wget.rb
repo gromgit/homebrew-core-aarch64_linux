@@ -10,10 +10,10 @@ class Wget < Formula
   end
 
   bottle do
-    sha256 "eb830909eed1e6d861968f324fd0701883df44f9d6e191c4e5ebbe2635cc70e7" => :big_sur
-    sha256 "2824baa832bb6abe003371d42bab24df5afab5e4076922b2300a90a98526990b" => :arm64_big_sur
-    sha256 "d163d32bba98f0a535d179c5d8efd076d12f41bd9232f5c0a41523a4eeaeb500" => :catalina
-    sha256 "6343b9c76468bf9ba05e587403b378b1bb93e5108c6505abef4eaaee92257e22" => :mojave
+    sha256 "e6ea2a50b8196206f7072360e713535bb16fb786c8b5fe23cab05757e0f67b13" => :big_sur
+    sha256 "e9034fc9062d5d28972135be031876672aff18fa945ce37e9c2ee1e2c4287f3a" => :arm64_big_sur
+    sha256 "88116cb28d6b85e441d1bb9df0a1454b84f8b9d0e8817a5bee0f228acc59e75a" => :catalina
+    sha256 "ae4e6f1dc4ecaf2bbed7700e8d64cdc671bf9d6c085ba335f119861fd15956fe" => :mojave
   end
 
   head do
