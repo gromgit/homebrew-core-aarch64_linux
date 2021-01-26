@@ -11,11 +11,10 @@ class Coturn < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 "83258540358e8a1b03e504eca1494841efaf5ff3d8d2bab21be3889fec3b1b53" => :big_sur
-    sha256 "9de50fb73d1af5224a577444d395fdc77395a7fbc42010a8dfb8cb40d2b5078e" => :arm64_big_sur
-    sha256 "62ad808fb17756704e5fbec7f1f6acb7246545e27b05cf537ab3a716c0fcbec7" => :catalina
-    sha256 "e9601d4fca70c049a01145aee4f09aac8efad87d73de706dd3ea580f6be7e875" => :mojave
+    sha256 "cbf4ffbe501023ff20d1d0798c0d3976c16fe29062fe18ce9e03230031c55f5b" => :big_sur
+    sha256 "daebf6cf1b50a886b5f647c2331d0f9b811205148b04f03f60c79b0ef9b4b34f" => :arm64_big_sur
+    sha256 "9fcb011c5da93820c3b567ddb6488fb6812cd8d40477d167990023db5d510749" => :catalina
+    sha256 "eef1e160c7951bd96f3f59a395d2474529fa03c12d380dd7daf9625435003c31" => :mojave
   end
 
   depends_on "pkg-config" => :build
