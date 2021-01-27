@@ -8,10 +8,10 @@ class Unyaffs < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 2
-    sha256 "4bcff00c990f1376a4a14084a7e4c5c47a9abd1411140071a8f32820b24bc0c3" => :catalina
-    sha256 "9ffaad154e3119644c754d02544e386f9d5b6f7d06aceba76e972cb321608deb" => :mojave
-    sha256 "c215b5e405c842ca4a82dc120b8a3c9b9a1868303ab740d4d8973b1cd0160eb9" => :high_sierra
+    rebuild 3
+    sha256 "54982f10cb8c866e7370886765744c109f3566717f7af6f397e8a83a7ca65520" => :big_sur
+    sha256 "0319fb2b8ee918808e30a0bb5deef42abaf7d4afe35cff538b4ed513f06de16e" => :catalina
+    sha256 "1c3b921af84a9fee0bb8faf7d420ff2a3d6e6a4e42aeec235d8587a8ccd5da61" => :mojave
   end
 
   def install
