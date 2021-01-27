@@ -7,10 +7,10 @@ class OryHydra < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "c68d6749b62a34ed6e8ce49fa487521a96668fd5240e7ae337d4bbae883ad31a" => :big_sur
-    sha256 "b0291784d618cbb721bf802fd1c6b789561617577a12ec089aec935f1206ec6d" => :arm64_big_sur
-    sha256 "ba93138fad45995274fdecd39c69cf80f6db1506df382bf033e112bde560cf58" => :catalina
-    sha256 "50bded603ab420fd48498c0baff6b2e5f0a7645bac056690b0ed80857490a412" => :mojave
+    sha256 "e81542a9bad2cd7de922cc634f38a3836ca5ba1abb98739b6c8ff735a66c702d" => :big_sur
+    sha256 "138f474ca11974be1e9f08a7d5efa94a6cac013e12a5ac1ce179af35ecdae9a9" => :arm64_big_sur
+    sha256 "2d26a741b1be1d4b66110299774f6d43c6521ea876eee0e55131f6e2294f1ffc" => :catalina
+    sha256 "39b5af96367b9cfd5e761809150d260de43cb997ee4053c5cce01f1bb3429b9b" => :mojave
   end
 
   depends_on "go" => :build
