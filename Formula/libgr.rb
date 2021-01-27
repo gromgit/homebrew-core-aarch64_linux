@@ -1,10 +1,9 @@
 class Libgr < Formula
   desc "GR framework: a graphics library for visualisation applications"
   homepage "https://gr-framework.org/"
-  url "https://github.com/sciapp/gr/archive/v0.53.0.tar.gz"
-  sha256 "a348602c3e2d928b5c293a19ed91e126bf56e23720d4f0e12aa92767da767276"
+  url "https://github.com/sciapp/gr/archive/v0.54.0.tar.gz"
+  sha256 "82ec7b3d32d0536325ef8751ec87b607c9969005702ebc0cd3ed8c7daa029b94"
   license "MIT"
-  revision 2
 
   bottle do
     sha256 "1ae1c4c80659db2c9505449acc52f0f6328054caa287af5bcc9e755771d8c382" => :big_sur
@@ -20,13 +19,6 @@ class Libgr < Formula
   depends_on "qhull"
   depends_on "qt"
   depends_on "zeromq"
-
-  # Use .dylib extension on macOS
-  # https://github.com/sciapp/gr/pull/128
-  patch do
-    url "https://github.com/sciapp/gr/commit/81f6f66b9766eb876e64dff43a6b1a802536ccac.patch?full_index=1"
-    sha256 "15dd98e65172a7354dc27d4858c6e06ccafa040d451171bf5e770596668478d4"
-  end
 
   def install
     mkdir "build" do
