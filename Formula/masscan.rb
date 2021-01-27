@@ -13,10 +13,10 @@ class Masscan < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "bd1e27ecc33563b9d658443216bbd46526db0a4bcae7068293deda858f9077b7" => :big_sur
-    sha256 "147e7c46071329d24e43c5cbfc9187f8e098f576510fcf6b43bb2fd7cb637aac" => :arm64_big_sur
-    sha256 "ea14dde3b5fe0813ca9737cc0be54e46078ba3de67d701a7249a84bbd34271bf" => :catalina
-    sha256 "b0ebd8c0f61bc44267bdda6467f71b4c6b7f363f705e58b30160b7d341ce58f2" => :mojave
+    sha256 "612d8beacadb4af14a1dd776b422d224d3430bd6bfae2c7b7e459184e53bd50e" => :big_sur
+    sha256 "94df6861a365e06e6c8670f494263ad8a7b99ee7dfd52640afffe9caa0b29a74" => :arm64_big_sur
+    sha256 "d25f5a0ebdce09e1f2adb6a30f0b3fb2510133142707e534880d1883f41a3de1" => :catalina
+    sha256 "5502310faef46572223ac81702ed48327bbe93778bc2031aaef4ff99b4a0d185" => :mojave
   end
 
   def install
