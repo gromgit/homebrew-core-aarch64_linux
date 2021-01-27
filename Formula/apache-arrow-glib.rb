@@ -13,10 +13,10 @@ class ApacheArrowGlib < Formula
 
   bottle do
     cellar :any
-    rebuild 1
-    sha256 "915a5ef975e06d79c541d24e5106ecdb8740b8365ad5cf270dfc11b75d16e529" => :big_sur
-    sha256 "b51bf431c664c55d949ae469e69575aa170b6adf878a0692497c5b9556943a4e" => :catalina
-    sha256 "3e04b577e546fdcf67ab353f52091044658efc633ad69a2c08f748db5c483718" => :mojave
+    sha256 "83d1cd2b7e609b2511190646ab24b91e791656515273588172ce240a1354608e" => :big_sur
+    sha256 "ba8da1e8724d7ea1c0928b4ce0243c86321b0abfe83e24260eb5f4a5e1a23964" => :arm64_big_sur
+    sha256 "7f9bcc0ec7352d6d509232e4e8c84b7165366177ac855bc639247f67153bf2ce" => :catalina
+    sha256 "409b2858623ac0a4bf06803c26113df6135991bf060a016b3f58dfe1badfa0e3" => :mojave
   end
 
   depends_on "gobject-introspection" => :build
