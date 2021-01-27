@@ -5,6 +5,13 @@ class Vitess < Formula
   sha256 "14254f423f2472fb48034299cbfc4acc6b767f7497036cf43eb3e7f2a70f7beb"
   license "Apache-2.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "aa51ca8319e5c017cd77fdaa3118773164cb06e4d2d463a026804d756d9a48ee" => :big_sur
+    sha256 "9391247e8271f55f85ef108e5b8e55c9f529686bd104d4fa0c2b0075790efd6f" => :catalina
+    sha256 "51709fef029ab1134ed279f5d597c8e9c794dc5d9fc117845119f9c9b08a78a1" => :mojave
+  end
+
   depends_on "go" => :build
   depends_on "etcd"
 
