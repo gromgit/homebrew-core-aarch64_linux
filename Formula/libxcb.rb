@@ -19,9 +19,11 @@ class Libxcb < Formula
 
   bottle do
     cellar :any
-    sha256 "d8c096c4f253747c9f19f12d36c084deb6bb7e108e06e0359179b54008704db4" => :big_sur
-    sha256 "d3f1f2afcf583b5dfb1660630e8ef30d05c401205453918fcef71e6ee033186f" => :arm64_big_sur
-    sha256 "b631a2c2ab299af91f482ab2897089cf10386b3ed99ba0939e80fe2d72074fc2" => :catalina
+    rebuild 1
+    sha256 "990819c1dd57e74dc867ba37d1952fc0e7baa69273aa6a809ce5b4c18346eac4" => :big_sur
+    sha256 "5ffb8c3b6520d99063e973ae9f26110737757f57e4c63fb88d8462666d96d777" => :arm64_big_sur
+    sha256 "7f40d617b2092e9dc4fed78b032a1cde7658b813b26bcabb349770cd6c744208" => :catalina
+    sha256 "3a21a6aee4bda8851599df53ed9ebe6b282ff3264be763badcb7c3346d89c90a" => :mojave
   end
 
   depends_on "pkg-config" => :build
