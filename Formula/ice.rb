@@ -12,10 +12,10 @@ class Ice < Formula
 
   bottle do
     cellar :any
-    sha256 "2b1fb05867bdbc31844aa82742923e39bc03da19c95aeab06ef465abbcbf0041" => :big_sur
-    sha256 "ed026c50e889b8eab856b8310d9b57a5a09487775b85e0fd3a745c3703234aa3" => :catalina
-    sha256 "d8ddc0c493286e78174f61eb8feb7af105c6c4b33580435f6df4515aefa56b0a" => :mojave
-    sha256 "d80dfe41a72184cfb820940e926acd8204d5338327b0ff1007fe77e7662a8164" => :high_sierra
+    sha256 "3a61df370da3e0ee676eaabe0470a0bc75296dc0dd3d4a62bd02e7a84829a50a" => :big_sur
+    sha256 "9f6864341db930e3fec14ee0e108e2c71d268441d6890c76f57e873475daaf99" => :arm64_big_sur
+    sha256 "ce6660264a1b883917ca7437e173ec954d5b552f9f1fcbda82ae3a8594668dd4" => :catalina
+    sha256 "d1b6db2cd443c0cf57990bea3651fefeca93e22a6542657967617560e483e78a" => :mojave
   end
 
   depends_on "lmdb"
