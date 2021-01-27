@@ -13,11 +13,10 @@ class Pike < Formula
   end
 
   bottle do
-    cellar :any
-    sha256 "5aa4cacc8d0fd3d81fca3e029a74813f3c40b2a8d27684b9ee665aece4b50f45" => :big_sur
-    sha256 "0e1de33bfc595a2a4b944b496aa886ab620554fbea24bbf080cef9403b8fc24f" => :arm64_big_sur
-    sha256 "65526e58ded68ff16a6eb53104406f48ac535ac955912b320c724b497d418619" => :catalina
-    sha256 "550251a57aacd9f491cfda25c997a544bd993dcd1c9b1d29f03e7386bf16c758" => :mojave
+    sha256 "15805f34b5fa27d32c8a86cb69459d03300b11b2ec491597264823899f77568f" => :big_sur
+    sha256 "66bef9efce57896b13bfaac552d145d35534e44ab8fe4e3367b8334c10509b34" => :arm64_big_sur
+    sha256 "b34252e2bd9dfea5ffc5e56e10523658ff44ecc5686eabda34ce2c19a22faabc" => :catalina
+    sha256 "1eacafb5514b416f75a39a50bdfc697123f66be10a892be1906fa674580f9298" => :mojave
   end
 
   depends_on "gmp"
