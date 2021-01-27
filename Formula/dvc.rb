@@ -3,8 +3,8 @@ class Dvc < Formula
 
   desc "Git for data science projects"
   homepage "https://dvc.org"
-  url "https://files.pythonhosted.org/packages/72/72/55b57dadba2f63b0b6c30ebaceb62b56e33643cb22a66a58ec64eeedc745/dvc-1.11.12.tar.gz"
-  sha256 "aa419a0174fc7bc104dedd08017eef045e3e82e51c0ee4755f284117737b4d30"
+  url "https://files.pythonhosted.org/packages/44/0e/4ae6ca8b5030c36a6694d836b324b83f978596147af7b9417edf95ad95bc/dvc-1.11.13.tar.gz"
+  sha256 "904d2a484513dcaefca13812a90ae9a5eb1a8f3455ebf519dda90f2d80e71bf0"
   license "Apache-2.0"
 
   livecheck do
@@ -284,8 +284,8 @@ class Dvc < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/29/e6/d1a1d78c439cad688757b70f26c50a53332167c364edb0134cadd280e234/urllib3-1.26.2.tar.gz"
-    sha256 "19188f96923873c92ccb987120ec4acaa12f0461fa9ce5d3d0772bc965a39e08"
+    url "https://files.pythonhosted.org/packages/d7/8d/7ee68c6b48e1ec8d41198f694ecdc15f7596356f2ff8e6b1420300cf5db3/urllib3-1.26.3.tar.gz"
+    sha256 "de3eedaad74a2683334e282005cd8d7f22f4d55fa690a2a1020a416cb0a47e73"
   end
 
   resource "voluptuous" do
