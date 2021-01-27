@@ -7,10 +7,10 @@ class Tctl < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "77311371e3e7359723f02e3a2d8871c2ff72c948b2f54034de4e86468cf3ef1e" => :big_sur
-    sha256 "ca24c6d4fd9d5dbd47c8e4398b0f69649a1c234890fdab1d11a63e27f6863168" => :arm64_big_sur
-    sha256 "122c79493d6fa1daad6d12fccbe4126adb08de9a664a983fbfe4b26a3a499af7" => :catalina
-    sha256 "24ba425dc2c16aa1360a3e9a28fd31d065397aa00adb3c871e51a1f82589df29" => :mojave
+    sha256 "3c4b5b83249be1f4762af8a7c2a3e2104cd6a9d2593212434ca6c74d00592768" => :big_sur
+    sha256 "84c46b6424e6f5ff70f23a1b70969fc30b949352ca4cb1aaa6164e669f17483c" => :arm64_big_sur
+    sha256 "6512c8b762782c1e9928e7c459306dd63d9facf8c3ed2d34838588cafca0607e" => :catalina
+    sha256 "99f7c4b5f731f0f42a2e0df2e2fe73fd0385f1e42b2400f3ad12769b8a07fadb" => :mojave
   end
 
   depends_on "go" => :build
