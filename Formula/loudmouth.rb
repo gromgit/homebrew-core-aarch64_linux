@@ -7,12 +7,10 @@ class Loudmouth < Formula
 
   bottle do
     cellar :any
-    sha256 "61b2b7a8995a3cc43c2acee5cff2571e961581d4a77235e0415c25efcd850995" => :big_sur
-    sha256 "655e2d5906024cd381455f3e89828718b2d527add5315859e4d202ac7cfad0a3" => :arm64_big_sur
-    sha256 "88dfcc04d5dec8056ce00c91d881a31b01044f5eb4084da599df451b5a700471" => :catalina
-    sha256 "43052aa18cefe00338ba03fe866badd2b2f17cb6766ae2a1203bdcd54cf2ca6b" => :mojave
-    sha256 "28635ff511d03492181d4b2c9f4cfe5b65600f512bc4ed8dc02611ff1c4b1b56" => :high_sierra
-    sha256 "72854a1ff4e2492f0b90d1f435c523ae3801e1ea60d65e033909043081004db0" => :sierra
+    sha256 "d770f0cd1a81375c306d0bc6fdd81610d27bc844fd5086518aaa7f8fa6252a14" => :big_sur
+    sha256 "0b60046b8a592ab656ed824b75774f2e9e8f9749b0a5edb024190019c36da766" => :arm64_big_sur
+    sha256 "b83be4ad6fce30f484015b344d21e3e425860b3c8a2cb6a609e059611d03caf9" => :catalina
+    sha256 "681944a95c5642a4651110e5d91d88acf335176b34d85f0f159aef291f07b38d" => :mojave
   end
 
   head do
