@@ -8,11 +8,9 @@ class Gron < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "a7851170e1feed7c87430f7af735f193cf295b5a4116d0f177296dd8fb000815" => :catalina
-    sha256 "8250d3b6d9acc5bf1700a6513ab9df0df1a3e5660d2f984a4a903c234e6cd555" => :mojave
-    sha256 "7838ab1c751a11027f31b7b4dac4f7a83402b04a7eef522edeb15735846dfd81" => :high_sierra
-    sha256 "fa5310f4ac25091387f24e5dd4bb0364db432ebc9f3273da371cbd35116af09e" => :sierra
-    sha256 "23c3378ea69d5936b6966608942a0769c4adad0cdeabb9575e8b811b9b6c3a26" => :el_capitan
+    sha256 "18f72c72d99203bd58c670642d6c33fa9e1f67e6861212ba21f98b975df406f0" => :big_sur
+    sha256 "dc6b46a589f618ab5b2e9d4aea01bd75f0326f585085c3b1f12e266dda2e7e5d" => :catalina
+    sha256 "2a0ad03c4c7dfd2098758be2c5b65f16107ce8c67b586a4679f9d871aaee09a7" => :mojave
   end
 
   depends_on "go" => :build
