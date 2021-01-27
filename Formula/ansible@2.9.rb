@@ -6,6 +6,7 @@ class AnsibleAT29 < Formula
   url "https://files.pythonhosted.org/packages/f0/03/4547c6afee926b842a288b12036a7bddce4f7f661b6797414eaee6ac2ccc/ansible-2.9.17.tar.gz"
   sha256 "d78b46d647d91dd478ba7f43baf36ffa27f9a5992b826b16a6cc15cf993f19dc"
   license "GPL-3.0-or-later"
+  revision 1
 
   # The newest PyPI release won't be a 2.9.x version, so we match versions from
   # the links in the "Release History" section.
@@ -305,8 +306,8 @@ class AnsibleAT29 < Formula
   end
 
   resource "kubernetes" do
-    url "https://files.pythonhosted.org/packages/a1/56/fd57e391f60dc143402e45560ca87df1d74ddade5ac9b7e9f2cc0338171e/kubernetes-12.0.1.tar.gz"
-    sha256 "ec52ea01d52e2ec3da255992f7e859f3a76f2bdb51cf65ba8cd71dfc309d8daa"
+    url "https://files.pythonhosted.org/packages/60/3f/2fef94fb65e8f94d768356e5fb9be222d18027e6167ccc65e2090917a771/kubernetes-11.0.0.tar.gz"
+    sha256 "1a2472f8b01bc6aa87e3a34781f859bded5a5c8ff791a53d889a8bd6cc550430"
   end
 
   resource "lxml" do
@@ -435,8 +436,8 @@ class AnsibleAT29 < Formula
   end
 
   resource "prettytable" do
-    url "https://files.pythonhosted.org/packages/78/dc/96f8633fcd49fad2189dd57918ff410627818ff3ebe1649678d8ac2e7126/prettytable-2.0.0.tar.gz"
-    sha256 "e37acd91976fe6119172771520e58d1742c8479703489321dc1d9c85e7259922"
+    url "https://files.pythonhosted.org/packages/ef/30/4b0746848746ed5941f052479e7c23d2b56d174b82f4fd34a25e389831f5/prettytable-0.7.2.tar.bz2"
+    sha256 "853c116513625c738dc3ce1aee148b5b5757a86727e67eff6502c7ca59d43c36"
   end
 
   resource "ptyprocess" do
