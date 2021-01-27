@@ -7,10 +7,10 @@ class Vsh < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0af5c38833134db8fa818f6bd7ae6b1b1b94e9984a387b01887d3b8f7aebcda6" => :big_sur
-    sha256 "65bc43c8b8ad6a8bb2ddd714990f6391d65478e3556522a38374e0c3704608ce" => :arm64_big_sur
-    sha256 "7232f135e336d31e7a8f5d31781e926ddc82abc6463d78d8839694f109a45955" => :catalina
-    sha256 "3174e3ea2b7fe1df28581c295eeee44c565cc31f69e6daed434e77f797e145a0" => :mojave
+    sha256 "a6adcf670bd110cc5a31dde92b63f971a45ba6ea226a97394dc41c78177c3e37" => :big_sur
+    sha256 "66801dbbaf9dd30bfcc8924de726443b16eebc55c13f2a02f438b8dfb8f46eb4" => :arm64_big_sur
+    sha256 "88da4d7e536488b80e76a019158b8e1344e9efc9dc26e7c3ae891f2537e533ce" => :catalina
+    sha256 "115a71008dab242d2e7332cbf8e2fcd084db03b8df4e8c54023f27e004a636cb" => :mojave
   end
 
   depends_on "go" => :build
