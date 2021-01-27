@@ -12,10 +12,10 @@ class Rtptools < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "62a46aec907b497ca92c8a07731cf56b3a2b986850acbcb203aa87e94e945abe" => :catalina
-    sha256 "51fe1b7831b60ee5ca438c11f72094149dbee5f96209a965997209fd6ac95742" => :mojave
-    sha256 "e96df17dfe878ecb9e87a938579a21d514e31dbf8e5e6b743264dac23e42501c" => :high_sierra
+    rebuild 2
+    sha256 "a9f1e8f18d40ba8b435f619de132a5fbc00e0ef84d5a1e10378700e0f3ce417b" => :big_sur
+    sha256 "59fa4c8c53c3430c6bb47b82c752eef710f692ad3fb1bd3ab82c108524aabe00" => :catalina
+    sha256 "eb8412186a92c44426b2f4c4bef7adcffb308afd4bb036a2dd9d1a0d184b504e" => :mojave
   end
 
   depends_on "autoconf" => :build
