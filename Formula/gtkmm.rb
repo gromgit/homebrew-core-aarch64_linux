@@ -25,7 +25,7 @@ class Gtkmm < Formula
   depends_on "glibmm@2.66"
   depends_on "gtk+"
   depends_on "libsigc++@2"
-  depends_on "pangomm@2.42"
+  depends_on "pangomm@2.46"
 
   def install
     ENV.cxx11
@@ -57,7 +57,7 @@ class Gtkmm < Formula
     libpng = Formula["libpng"]
     libsigcxx = Formula["libsigc++@2"]
     pango = Formula["pango"]
-    pangomm = Formula["pangomm@2.42"]
+    pangomm = Formula["pangomm@2.46"]
     pixman = Formula["pixman"]
     flags = %W[
       -I#{atk.opt_include}/atk-1.0
