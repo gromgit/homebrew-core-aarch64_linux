@@ -3,8 +3,8 @@ class Platformio < Formula
 
   desc "Professional collaborative platform for embedded development"
   homepage "https://platformio.org/"
-  url "https://files.pythonhosted.org/packages/ac/75/cf0307f4c2220b5c1c6d2b3af5d60637fb41e8c0aad882e09f59526192c6/platformio-5.0.4.tar.gz"
-  sha256 "5c19eee89ca957aa3ecd4f7357dae3c4ff902992f375fa620926eb6442a6c6a2"
+  url "https://files.pythonhosted.org/packages/b2/68/63ed6a16eb5338ee81ff0e32697a4c5f4840c3c684f62373c2ae8e9cf734/platformio-5.1.0.tar.gz"
+  sha256 "8382a07cce5f6490a61c817588e69d86ef768fefe0f53cab810cdfd2befab4a2"
   license "Apache-2.0"
 
   livecheck do
@@ -20,6 +20,11 @@ class Platformio < Formula
   end
 
   depends_on "python@3.9"
+
+  resource "aiofiles" do
+    url "https://files.pythonhosted.org/packages/77/47/19e5951cc6ed771669906d2946b3deac32a35a9a155f730be49d8fa73dc9/aiofiles-0.6.0.tar.gz"
+    sha256 "e0281b157d3d5d59d803e3f4557dcc9a3dff28a4dd4829a9ff478adae50ca092"
+  end
 
   resource "bottle" do
     url "https://files.pythonhosted.org/packages/ea/80/3d2dca1562ffa1929017c74635b4cb3645a352588de89e90d0bb53af3317/bottle-0.12.19.tar.gz"
@@ -46,9 +51,24 @@ class Platformio < Formula
     sha256 "5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"
   end
 
+  resource "h11" do
+    url "https://files.pythonhosted.org/packages/bd/e9/72c3dc8f7dd7874812be6a6ec788ba1300bfe31570963a7e788c86280cb9/h11-0.12.0.tar.gz"
+    sha256 "47222cb6067e4a307d535814917cd98fd0a57b6788ce715755fa2b6c28b56042"
+  end
+
   resource "idna" do
     url "https://files.pythonhosted.org/packages/ea/b7/e0e3c1c467636186c39925827be42f16fee389dc404ac29e930e9136be70/idna-2.10.tar.gz"
     sha256 "b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6"
+  end
+
+  resource "ifaddr" do
+    url "https://files.pythonhosted.org/packages/3d/fc/4ce147e3997cd0ea470ad27112087545cf83bf85015ddb3054673cb471bb/ifaddr-0.1.7.tar.gz"
+    sha256 "1f9e8a6ca6f16db5a37d3356f07b6e52344f6f9f7e806d618537731669eb1a94"
+  end
+
+  resource "json-rpc" do
+    url "https://files.pythonhosted.org/packages/43/5a/7c2ea59e622682fff34d5aa3b301aa9a10bb0dbf0120f85cd391e4badad8/json-rpc-1.13.0.tar.gz"
+    sha256 "def0dbcf5b7084fc31d677f2f5990d988d06497f2f47f13024274cfb2d5d7589"
   end
 
   resource "marshmallow" do
@@ -76,14 +96,34 @@ class Platformio < Formula
     sha256 "d2cb2de0558762934679b9a104e82eca7af448c9f4974d1f3eeccff651df8a54"
   end
 
+  resource "starlette" do
+    url "https://files.pythonhosted.org/packages/33/62/accb8a86fed6ffb95a8dd1c8730450fba1dfd8e93271e9b17a476deb24ec/starlette-0.14.1.tar.gz"
+    sha256 "5268ef5d4904ec69582d5fd207b869a5aa0cd59529848ba4cf429b06e3ced99a"
+  end
+
   resource "tabulate" do
     url "https://files.pythonhosted.org/packages/57/6f/213d075ad03c84991d44e63b6516dd7d185091df5e1d02a660874f8f7e1e/tabulate-0.8.7.tar.gz"
     sha256 "db2723a20d04bcda8522165c73eea7c300eda74e0ce852d9022e0159d7895007"
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/29/e6/d1a1d78c439cad688757b70f26c50a53332167c364edb0134cadd280e234/urllib3-1.26.2.tar.gz"
-    sha256 "19188f96923873c92ccb987120ec4acaa12f0461fa9ce5d3d0772bc965a39e08"
+    url "https://files.pythonhosted.org/packages/d7/8d/7ee68c6b48e1ec8d41198f694ecdc15f7596356f2ff8e6b1420300cf5db3/urllib3-1.26.3.tar.gz"
+    sha256 "de3eedaad74a2683334e282005cd8d7f22f4d55fa690a2a1020a416cb0a47e73"
+  end
+
+  resource "uvicorn" do
+    url "https://files.pythonhosted.org/packages/5e/03/dde1ff2144db62bc531606eb1f9c8aa49d71f985f08b31593b460d0ba2e6/uvicorn-0.13.3.tar.gz"
+    sha256 "ef1e0bb5f7941c6fe324e06443ddac0331e1632a776175f87891c7bd02694355"
+  end
+
+  resource "wsproto" do
+    url "https://files.pythonhosted.org/packages/2b/a4/aded0882f8f1cddd68dcd531309a15bf976f301e6a3554055cc06213c227/wsproto-1.0.0.tar.gz"
+    sha256 "868776f8456997ad0d9720f7322b746bbe9193751b5b290b7f924659377c8c38"
+  end
+
+  resource "zeroconf" do
+    url "https://files.pythonhosted.org/packages/4b/21/a09b4a8fdd0f9068c8134de31c4258f43c1c35352e89bdcb8994dae180d9/zeroconf-0.28.8.tar.gz"
+    sha256 "4be24a10aa9c73406f48d42a8b3b077c217b0e8d7ed1e57639630da520c25959"
   end
 
   def install
