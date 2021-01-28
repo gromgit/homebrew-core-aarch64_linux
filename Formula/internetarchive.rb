@@ -13,11 +13,10 @@ class Internetarchive < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "969e7aa41adecbb73ef893eb4850b3737be34c2875dd75eea4cf3dad9403ca4d" => :big_sur
-    sha256 "5a73fdffe6265ff22b2fba541825ef5359f4f9d99474c3079b9949c899f1dd3b" => :arm64_big_sur
-    sha256 "18becdb072b9cc6b1d14cfcc22a73ac3bc7aefab713ac12f94bdedaaa9a03e5c" => :catalina
-    sha256 "b6e3ff557945f3737afa34dba3a04149e5cb5a6114300835113a191435deb773" => :mojave
-    sha256 "abcdcd519699bab6a16e5458f50be52cfb79a81095933c7f06e6bcc2172e47c2" => :high_sierra
+    sha256 "8bbb208166fe6d36ad639c3b2a7a062c23ffbefb46e6ff5087acb923eb2418f5" => :big_sur
+    sha256 "6fc93b7d1a7b5445af264cf80dbc46543ffaecfa5828aebbb8b8fa7a07cf12cc" => :arm64_big_sur
+    sha256 "f24d4891757cca45c3fbf30c2c3a8f38caf727b6e63897717dbb1ed0390cb819" => :catalina
+    sha256 "1dff0700defb5d43a0f161024b86f1ed308793cc660150d3086760f649eb7623" => :mojave
   end
 
   depends_on "python@3.9"
