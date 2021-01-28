@@ -12,10 +12,10 @@ class Librdkafka < Formula
   end
 
   bottle do
-    sha256 "b2e4bc434128ae0051500313fb75f584590edcc52801727c3a7a56667377100e" => :big_sur
-    sha256 "a18360feef0dce0cbb1b4aa519c91c78040f0b1ff30d1f1aea7fa1c362f98d4a" => :arm64_big_sur
-    sha256 "694b593d8b0c3a3e36b3583c59d5df46096839b7efe94144498bf2e784b438c5" => :catalina
-    sha256 "7c9b9a039460637f5271309113080485e5b32a75c7b28f0669441e52e6b1bab7" => :mojave
+    sha256 "860c7e63fcdf6eb225a19ed41129209b7e35109f63506b1eae9ce99409533dfe" => :big_sur
+    sha256 "1700456f7c796346d69369ff969b2cec001c4fb602e5d55db8121c7dc2ab78a9" => :arm64_big_sur
+    sha256 "8f9ba2426166a7d12cf82570a1fe08eb569f00935757c0105dab8fc4f7c37772" => :catalina
+    sha256 "f067008cc0245579c74f656d90f8f1c886fde639d1b6c45414c497e9a260ac40" => :mojave
   end
 
   depends_on "pkg-config" => :build
