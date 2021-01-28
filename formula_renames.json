@@ -41,6 +41,7 @@
   "geth": "ethereum",
   "gitlab-ci-multi-runner": "gitlab-runner",
   "giflib@5": "giflib",
+  "glibmm@2.64": "glibmm@2.66",
   "glfw3": "glfw",
   "gloo-ctl": "glooctl",
   "gnatsd": "nats-server",
