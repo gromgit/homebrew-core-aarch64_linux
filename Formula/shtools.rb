@@ -8,10 +8,9 @@ class Shtools < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5c5163cc734b57d538fc8507a974fbafa7fd52769ff3d51f18f69bef8a399b18" => :big_sur
-    sha256 "02042f2cf73c441cc6f0a98654ededcaccefe1851d7817bdb7dde72d6f7a8af4" => :catalina
-    sha256 "b8f08723ebb0811022c50a8e86cab9a9844427859ddc708660c7d5375825983b" => :mojave
-    sha256 "e96a79e0e15a37acd2758c10c2b3d3bb7a98d5372f8fb856205a1a8b10a4891f" => :high_sierra
+    sha256 "1a9fd37585d31ef6f1c61b431bfab4fde9755db5ee081d8eba1c9a358278481f" => :big_sur
+    sha256 "99aea0397bae82f956eab6868704b493b99f9160e4c5f8f558937db3e349b96b" => :catalina
+    sha256 "00f6302f52c6df51ee3477d0c05d66c1a1feec59a4b8883b2af53faa6a631e30" => :mojave
   end
 
   depends_on "fftw"
