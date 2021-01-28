@@ -11,10 +11,9 @@ class DhallJson < Formula
   end
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "8bbcdfe78eb0c0fead3f5ff9e037649ece167e04c72f8293cc056544089e40b7" => :big_sur
-    sha256 "c532f257507c5bb20320a0ad374ee4eccc0b9f4654eb0a919da8b2c90f59784c" => :catalina
-    sha256 "4ecf9c8416f990b951bdd0350747ab75cd8e3e3d860824cd35ad0b80870e0dd2" => :mojave
+    sha256 cellar: :any_skip_relocation, big_sur: "a1e0cb4f7e4a7e0994b43ecd783240356631d36655cfbf59a903cc3f6a799242"
+    sha256 cellar: :any_skip_relocation, catalina: "050f219d8050cf46a54487e0cad414374a5d2b4a6422d1e2e2c7a682149c3afb"
+    sha256 cellar: :any_skip_relocation, mojave: "56007f50e5a52a3062973574ddc1e888d74698e3ac9310ed223ce5c131834cb9"
   end
 
   depends_on "cabal-install" => :build
