@@ -4,7 +4,7 @@ class Gtksourceviewmm3 < Formula
   url "https://download.gnome.org/sources/gtksourceviewmm/3.18/gtksourceviewmm-3.18.0.tar.xz"
   sha256 "51081ae3d37975dae33d3f6a40621d85cb68f4b36ae3835eec1513482aacfb39"
   license "LGPL-2.1-or-later"
-  revision 9
+  revision 10
 
   livecheck do
     url :stable
