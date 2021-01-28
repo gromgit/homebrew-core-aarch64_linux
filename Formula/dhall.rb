@@ -1,8 +1,8 @@
 class Dhall < Formula
   desc "Interpreter for the Dhall language"
   homepage "https://dhall-lang.org/"
-  url "https://hackage.haskell.org/package/dhall-1.37.1/dhall-1.37.1.tar.gz"
-  sha256 "8d08f9fd1b92bbb24dcc7da27aa32f824b256c1b446749535c8ff140b856179b"
+  url "https://hackage.haskell.org/package/dhall-1.38.0/dhall-1.38.0.tar.gz"
+  sha256 "490854a22a158f675ff7e98aeb33f88faeba3f93923e263420c6d37b628add45"
   license "BSD-3-Clause"
 
   livecheck do
@@ -27,6 +27,6 @@ class Dhall < Formula
   test do
     assert_match "{=}", pipe_output("#{bin}/dhall format", "{ = }", 0)
     assert_match "8", pipe_output("#{bin}/dhall normalize", "(\\(x : Natural) -> x + 3) 5", 0)
-    assert_match "∀(x : Natural) → Natural", pipe_output("#{bin}/dhall type", "\\(x: Natural) -> x + 3", 0)
+    assert_match "(x : Natural) -> Natural", pipe_output("#{bin}/dhall type", "\\(x: Natural) -> x + 3", 0)
   end
 end
