@@ -7,11 +7,6 @@ class Openrtsp < Formula
   sha256 "89bdfba7fd215e16be2c9d46a797bf85c5f7f7c46b53dc8af2d1171a658da5b7"
   license "LGPL-3.0-or-later"
 
-  livecheck do
-    url "http://www.live555.com/liveMedia/public/"
-    regex(/href=.*?live[._-]v?(\d+(?:\.\d+)+[a-z]?)\.t/i)
-  end
-
   bottle do
     cellar :any
     sha256 "fce2e67f55b717cd6889b5f2bc4e21bcde69acc87ed561f5a5bab17dc1aafe8a" => :big_sur
