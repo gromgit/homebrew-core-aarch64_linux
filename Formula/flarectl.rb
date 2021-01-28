@@ -1,8 +1,8 @@
 class Flarectl < Formula
   desc "CLI application for interacting with a Cloudflare account"
   homepage "https://github.com/cloudflare/cloudflare-go/tree/master/cmd/flarectl"
-  url "https://github.com/cloudflare/cloudflare-go/archive/v0.13.7.tar.gz"
-  sha256 "4d8dca19dae441381a61033437c8b93c205188ede2cbc847c6cf89e54c69d6da"
+  url "https://github.com/cloudflare/cloudflare-go/archive/v0.13.8.tar.gz"
+  sha256 "a9b599b1bcb190e75c294cc96fe8b476c88dae06f3aad046a388e0c15ab8e149"
   license "BSD-3-Clause"
   head "https://github.com/cloudflare/cloudflare-go.git"
 
@@ -16,9 +16,14 @@ class Flarectl < Formula
 
   depends_on "go" => :build
 
+  # remove in next release
+  patch do
+    url "https://github.com/chenrui333/cloudflare-go/commit/5c74c62.patch?full_index=1"
+    sha256 "428c3504205af52b90a4d16e07ba7069e71ac2546787f9b6218ccb4784975b09"
+  end
+
   def install
-    cd "cmd/flarectl"
-    system "go", "build", *std_go_args, "-ldflags", "-s -w", "./..."
+    system "go", "build", *std_go_args, "-ldflags", "-s -w", "./cmd/flarectl"
   end
 
   test do
