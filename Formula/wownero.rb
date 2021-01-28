@@ -8,10 +8,10 @@ class Wownero < Formula
 
   bottle do
     cellar :any
-    sha256 "c67f6cfaf35cb5862e83aca0354a80212a474725ee8481cb3c54b28dfac5544a" => :big_sur
-    sha256 "8fbb06653656ad4f59af7f1eb7739c0bbd04094b5282a465a13d24c0fe9eec8e" => :arm64_big_sur
-    sha256 "000381f47cdf6b098e27c513cb76fb12072e87db8c96bd3f40ce81915f11ca04" => :catalina
-    sha256 "8afdc6287f0e31521843a00902ae3449aa140559471a1f5124ab5b74b997066b" => :mojave
+    sha256 "d07b7be22848eec299611aaca316e9bd7c126b7e46a42ee6e4d2f68686abc2c4" => :big_sur
+    sha256 "c6ae9f113bd94feddb7c7ca1253b63ad4cade092674ab507864b0a29b1e517e7" => :arm64_big_sur
+    sha256 "97cd807f5bb67417e39369d3e119563610c747e260161ef39b669b9ed96e4ef2" => :catalina
+    sha256 "35dc49cbba290886b13408ca8721e5821a3008cd68fefe231ecf91f1cd8d8a54" => :mojave
   end
 
   depends_on "cmake" => :build
