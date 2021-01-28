@@ -8,10 +8,10 @@ class CloudNuke < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "63989e68781a118a30426e3be6d8436999ba4b19d58c0924b9c5477209c76e5e" => :big_sur
-    sha256 "bb4b68220d1ae0c081ef18528b0933d1d46c1b6d632b18ea82ce9d9b2ec80a93" => :arm64_big_sur
-    sha256 "42ec0cda2feffb1954e087daf9b753760b6aa295e71525e757f95f03211b4c34" => :catalina
-    sha256 "f6dd1f92ce9e959e96c8e1a4379b06d1618404b99f7e145b5fdad7f76c0a8adf" => :mojave
+    sha256 "5dfbb61a88d7f98ee1a62a879f4b5b4b454a589e5075c883a65bc934e240c5b2" => :big_sur
+    sha256 "b9b0004c478661abde73731d1992f4d0be499964b7e21f435612a2655401c5c9" => :arm64_big_sur
+    sha256 "b70ad8545d3392c26958d9c390f2d92ab2e4530e8b925251d39a27e4bfa47f78" => :catalina
+    sha256 "09d0f6c97b54c100956763b6418a3419ceedf4e55838b3954d19d1ffdf9aaf07" => :mojave
   end
 
   depends_on "go" => :build
