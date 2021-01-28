@@ -5,6 +5,14 @@ class Mpdecimal < Formula
   sha256 "15417edc8e12a57d1d9d75fa7e3f22b158a3b98f44db9d694cfd2acde8dfa0ca"
   license "BSD-2-Clause"
 
+  bottle do
+    cellar :any
+    sha256 "720cac61e7e5d61abb0dd1ba0df369ef7a7b1cf188db7e8a1d22a1e62fc84613" => :big_sur
+    sha256 "e0703b703eacc78c9c472e9d4266831ba66a0764310a846e2e8a958a85aa3a28" => :arm64_big_sur
+    sha256 "f43f2a183184abe0bf78291472ac115897fb7defda7394f61367659d95c84c5c" => :catalina
+    sha256 "9619a02392403884e72cd78113eade5bc7687270a762dabf063231f574966221" => :mojave
+  end
+
   def install
     system "./configure", "--prefix=#{prefix}"
     system "make"
