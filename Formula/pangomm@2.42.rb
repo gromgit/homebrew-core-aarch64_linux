@@ -22,7 +22,7 @@ class PangommAT242 < Formula
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "cairomm@1.14"
-  depends_on "glibmm@2.64"
+  depends_on "glibmm@2.66"
   depends_on "pango"
 
   def install
@@ -49,7 +49,7 @@ class PangommAT242 < Formula
     freetype = Formula["freetype"]
     gettext = Formula["gettext"]
     glib = Formula["glib"]
-    glibmm = Formula["glibmm@2.64"]
+    glibmm = Formula["glibmm@2.66"]
     harfbuzz = Formula["harfbuzz"]
     libpng = Formula["libpng"]
     libsigcxx = Formula["libsigc++@2"]
