@@ -18,6 +18,6 @@
   "lua@5.1",
   "numpy@1.16",
   "openssl@1.1",
-  "pangomm@2.42",
+  "pangomm@2.46",
   "python@3.9"
 ]
