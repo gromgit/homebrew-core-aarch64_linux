@@ -8,9 +8,9 @@ class CartridgeCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "eef624f8c6e2e685a6ebc1701b49379649d18aa286aca8c0850ee81a9bad3e87" => :big_sur
-    sha256 "d35447ff5b2f525b2efb04374efb5192b500793476c1ed6350c695c0555d8fc2" => :catalina
-    sha256 "8491a54e283498d46b9959e668d57933b5737ec1a40672f44522cc044f9248a5" => :mojave
+    sha256 "875c19e2fcb15d07b7ce167d6657af81e7137c5b80c77b33533792a307e06dce" => :big_sur
+    sha256 "361e9cfc5f12e0980f3ac052603c9dca0c52e62ed4c70e01b3b07faf554b5924" => :catalina
+    sha256 "8e2ec16a6bed6b6762530ebf34ee9084b33417f56f975a5270e35b115bca8107" => :mojave
   end
 
   depends_on "go" => :build
