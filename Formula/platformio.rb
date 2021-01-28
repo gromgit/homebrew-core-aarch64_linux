@@ -12,11 +12,10 @@ class Platformio < Formula
   end
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "be9a755f7272e6498ac57fca04a272c4e13f8f77a739ca0ab42c5c0237f7c9ab" => :big_sur
-    sha256 "59f3a58f9af0cb531260b2ec951e3210bfe5c35c6c3808c6ef23a85d1212ea09" => :arm64_big_sur
-    sha256 "950ebc5d6c6bcb4b6be961a1985415932a495412c7ea91b42ee27e3aff05a027" => :catalina
-    sha256 "e04794654c4f1cf7743113f3cf4edc207b1d53b272fe74821d16181d2e412c57" => :mojave
+    sha256 cellar: :any_skip_relocation, big_sur: "815d462f210632cd558f01268896a74cc87b17defbb82de80c1d4619193792c9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "11de8a3e5c7303a0fb22728305939a3f2d62fecf50cea39de0c4d986e8307b0a"
+    sha256 cellar: :any_skip_relocation, catalina: "13c6d901982b59873b581fef869b93ac91ca5db32428de46628a69ee385dc89b"
+    sha256 cellar: :any_skip_relocation, mojave: "b164440f9684f5428f86006375143bda3916f582a61e06b38df52f308d35a702"
   end
 
   depends_on "python@3.9"
