@@ -5,6 +5,14 @@ class Htmltest < Formula
   sha256 "add922cf1dd957afba2927d401184c1d2331983a6d8ed96dd10f5001930cebf8"
   license "MIT"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "56ada97849ef9e1c525838c0739c6034ea92c560576b18a22ce3089eba7cc340" => :big_sur
+    sha256 "62b0968b1a9b25c2f72e6f35bf440f5393c58981ab8d3ae592ec6a1b15a17fbc" => :arm64_big_sur
+    sha256 "046159e1bc0d2c590a9f38c00fe9628e8abd2ac5c5797f3bcd33c8387c21c378" => :catalina
+    sha256 "496943d4cd10178d81ee420902f36e3691f7a97ac65ded868f88631235ac71c3" => :mojave
+  end
+
   depends_on "go" => :build
 
   def install
