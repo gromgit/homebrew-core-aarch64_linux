@@ -6,9 +6,9 @@ class CucumberRuby < Formula
   license "MIT"
 
   bottle do
-    sha256 "7f15e3bf5bdeac38070b802f85d4828324d50085b5345e0148992af24b876181" => :big_sur
-    sha256 "2afca64d3f15f52839cdfcb903e07a0a781e3537316d46be2cece665cc07ee71" => :catalina
-    sha256 "05eb994b0c94f00ffe3bea8f740593f5c85fcfe4017e517a8b299ef2d78c34ba" => :mojave
+    sha256 big_sur: "3242cbdc2387d58308c92b4ff9cfdae04e9be67ce7e50681b862a03cd0a6e964"
+    sha256 cellar: :any, catalina: "f9ac5ad41fb8363c4577609cd347b08a00f28a61a4df1485d4b31d54e7b54b6c"
+    sha256 cellar: :any, mojave: "27fec91ee466eca329af0c3ac503a6b5d20c558fb38b034509ee09efc56534c9"
   end
 
   depends_on "pkg-config" => :build
