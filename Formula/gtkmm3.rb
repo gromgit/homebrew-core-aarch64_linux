@@ -4,7 +4,7 @@ class Gtkmm3 < Formula
   url "https://download.gnome.org/sources/gtkmm/3.24/gtkmm-3.24.3.tar.xz"
   sha256 "60497c4f7f354c3bd2557485f0254f8b7b4cf4bebc9fee0be26a77744eacd435"
   license "LGPL-2.1-or-later"
-  revision 2
+  revision 3
 
   livecheck do
     url :stable
@@ -25,7 +25,7 @@ class Gtkmm3 < Formula
   depends_on "atkmm@2.28"
   depends_on "cairomm@1.14"
   depends_on "gtk+3"
-  depends_on "pangomm@2.42"
+  depends_on "pangomm@2.46"
 
   def install
     ENV.cxx11
