@@ -7,10 +7,10 @@ class Websocketd < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "614c1bb4d3fdd65e452d7af66d5cac5e397ff452d2b023dbd1261e632ec346e9" => :catalina
-    sha256 "a0ad536184c0f12c3c65710be453e810eda0ffa3b0109a56f69b364c05439703" => :mojave
-    sha256 "a2b5e17e00e1c74b52cf0d44ba802bc6e0eb450e950530cedd7cef38e83437ca" => :high_sierra
-    sha256 "5200608539895835b8faa52b886fe9181c23e94c560c4ef9f2f6afe842de3626" => :sierra
+    sha256 "cbdc36c8c64cb2b0f1f149242a4c82e5d3eebff521e45bdfc88aa7dced9d2440" => :big_sur
+    sha256 "8d9e5282df6737a6870a2a750570ab79909fb4463411797b0bf5d20cb269162d" => :arm64_big_sur
+    sha256 "944c9e728f5f1a7ba098207a0acf50b1e19209010c9d87c8cdd18758ec9c71b2" => :catalina
+    sha256 "28f0108f697e146faec81782988e8fd8bd7162b11e7703578f752f7a51f2b6db" => :mojave
   end
 
   depends_on "go" => :build
