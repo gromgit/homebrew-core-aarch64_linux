@@ -1,8 +1,8 @@
 class Librsvg < Formula
   desc "Library to render SVG files using Cairo"
   homepage "https://wiki.gnome.org/Projects/LibRsvg"
-  url "https://download.gnome.org/sources/librsvg/2.50/librsvg-2.50.2.tar.xz"
-  sha256 "6211f271ce4cd44a7318190d36712e9cea384a933d3e3570004edeb210a056d3"
+  url "https://download.gnome.org/sources/librsvg/2.50/librsvg-2.50.3.tar.xz"
+  sha256 "a4298a98e3a95fdd73c858c17d4dd018525fb09dbb13bbd668a0c2243989e958"
   license "LGPL-2.1-or-later"
 
   livecheck do
@@ -26,12 +26,6 @@ class Librsvg < Formula
   depends_on "pango"
 
   def install
-    on_macos do
-      # Can be removed with librsvg 2.50.3
-      # https://gitlab.gnome.org/GNOME/librsvg/issues/545#note_753842
-      ENV.append "LDFLAGS", "-lobjc"
-    end
-
     args = %W[
       --disable-dependency-tracking
       --prefix=#{prefix}
