@@ -11,12 +11,10 @@ class Xpdf < Formula
   end
 
   bottle do
-    cellar :any
-    rebuild 1
-    sha256 "df33213e9a7d6d3f330d96b7402c3c1bb7afb4e3665ee71bd9835b3366ae3be2" => :big_sur
-    sha256 "968cef17a786a39bf3d99a5bf9398ad58ed913bcc2588271eb23ef6d01e18c41" => :arm64_big_sur
-    sha256 "f08da8bc25d97b0ca2f7b3ca6a69f57dcc32df15d74c23c01c1e4f13977320dc" => :catalina
-    sha256 "c21f4b4cde0cf16509e1550d2b0a6c55b07eeb8be83614fcd62978fcb1757e29" => :mojave
+    sha256 cellar: :any, big_sur: "dd539162f595f665a230ea4504969da19425acf9066b4943227f6e418ba924c9"
+    sha256 cellar: :any, arm64_big_sur: "8daf2dd394f5990c3effcfe075f5e18366d6c1537b919c8bbe7aecb377b64d59"
+    sha256 cellar: :any, catalina: "6eea94e938839130aed8666e611a0a96c0457c56dd9c5ccbe108df5da732cff2"
+    sha256 cellar: :any, mojave: "1d2d40b362e1f6098884c9a8781491b4d609063ebb9c328160d8b5e4b78cf4c7"
   end
 
   depends_on "cmake" => :build
