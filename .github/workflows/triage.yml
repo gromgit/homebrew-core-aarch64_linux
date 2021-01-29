@@ -15,9 +15,6 @@ jobs:
         if: always()
         with:
           token: ${{secrets.HOMEBREW_GITHUB_API_TOKEN}}
-      - name: Sleep for 10 seconds
-        if: always()
-        run: sleep 10
       - name: Label pull request
         uses: Homebrew/actions/label-pull-requests@master
         if: always()
@@ -106,7 +103,7 @@ jobs:
                     "label": "python",
                     "path": "Formula/.+",
                     "content": "(depends_on|uses_from_macos) \"python(@[0-9.]+)?\"",
-                    "missing_content": "(depends_on|uses_from_macos) \"python(@[0-9.]+)?\" => \[?:(build|test)"
+                    "missing_content": "(depends_on|uses_from_macos) \"python(@[0-9.]+)?\" => \\[?:(build|test)"
                 }, {
                     "label": "ruby",
                     "path": "Formula/.+",
