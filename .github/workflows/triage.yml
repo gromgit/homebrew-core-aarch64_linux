@@ -15,6 +15,9 @@ jobs:
         if: always()
         with:
           token: ${{secrets.HOMEBREW_GITHUB_API_TOKEN}}
+      - name: Sleep for 10 seconds
+        if: always()
+        run: sleep 10
       - name: Label pull request
         uses: Homebrew/actions/label-pull-requests@master
         if: always()
@@ -66,15 +69,15 @@ jobs:
                 }, {
                     "label": "go",
                     "path": "Formula/.+",
-                    "content": "depends_on \"go(?:@[0-9.]+)?\""
+                    "content": "depends_on \"go(@[0-9.]+)?\""
                 }, {
                     "label": "haskell",
                     "path": "Formula/.+",
-                    "content": "depends_on \"(?:ghc@?|haskell-stack).+"
+                    "content": "depends_on \"(ghc|haskell-stack)(@[0-9.]+)?\""
                 }, {
                     "label": "java",
                     "path": "Formula/.+",
-                    "content": "depends_on \"?(?:java|openjdk@?).+"
+                    "content": "depends_on \"openjdk(@[0-9.]+)?\""
                 }, {
                     "label": "linux-only",
                     "path": "Formula/.+",
@@ -82,36 +85,36 @@ jobs:
                 }, {
                     "label": "lua",
                     "path": "Formula/.+",
-                    "content": "depends_on \"lua(?:@[0-9.]+|jit)?\""
+                    "content": "depends_on \"(lua|luajit|luajit-openresty)(@[0-9.]+)?\""
                 }, {
                     "label": "nodejs",
                     "path": "Formula/.+",
-                    "content": "depends_on \"node(?:@\\d+)?\""
+                    "content": "depends_on \"node(@[0-9.]+)?\""
                 }, {
                     "label": "ocaml",
                     "path": "Formula/.+",
-                    "content": "depends_on \"ocaml\""
+                    "content": "depends_on \"ocaml(@[0-9.]+)?\""
                 }, {
                     "label": "perl",
                     "path": "Formula/.+",
-                    "content": "(?:depends_on|uses_from_macos) \"perl@?.+"
+                    "content": "(depends_on|uses_from_macos) \"perl(@[0-9.]+)?\""
                 }, {
                     "label": "php",
                     "path": "Formula/.+",
-                    "content": "(?:depends_on|uses_from_macos) \"php@?.+"
+                    "content": "(depends_on|uses_from_macos) \"php(@[0-9.]+)?\""
                 }, {
                     "label": "python",
                     "path": "Formula/.+",
-                    "content": "(?:depends_on|uses_from_macos) \"python@?.+",
-                    "missing_content": "(?:depends_on|uses_from_macos) \"python@?.+\" => :(build|test)"
+                    "content": "(depends_on|uses_from_macos) \"python(@[0-9.]+)?\"",
+                    "missing_content": "(depends_on|uses_from_macos) \"python(@[0-9.]+)?\" => \[?:(build|test)"
                 }, {
                     "label": "ruby",
                     "path": "Formula/.+",
-                    "content": "(?:depends_on|uses_from_macos) \"ruby@?.+"
+                    "content": "(depends_on|uses_from_macos) \"ruby(@[0-9.]+)?\""
                 }, {
                     "label": "rust",
                     "path": "Formula/.+",
-                    "content": "depends_on \"rust\""
+                    "content": "depends_on \"rust(@[0-9.]+)?\""
                 }, {
                     "label": "swift",
                     "path": "Formula/.+",
