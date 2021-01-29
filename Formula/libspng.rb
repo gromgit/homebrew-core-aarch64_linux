@@ -1,8 +1,8 @@
 class Libspng < Formula
   desc "C library for reading and writing PNG format files"
   homepage "https://libspng.org/"
-  url "https://github.com/randy408/libspng/archive/v0.6.1.tar.gz"
-  sha256 "336856bea0216fe0ddc6cc584be5823cfd3a142e9d90d8e1635d2d2a5241f584"
+  url "https://github.com/randy408/libspng/archive/v0.6.2.tar.gz"
+  sha256 "eb7faa3871e7a8e4c1350ab298b513b859fcb4778d15aa780a79ff140bcdfaf3"
   license "BSD-2-Clause"
 
   bottle do
