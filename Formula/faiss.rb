@@ -1,8 +1,8 @@
 class Faiss < Formula
   desc "Efficient similarity search and clustering of dense vectors"
   homepage "https://github.com/facebookresearch/faiss"
-  url "https://github.com/facebookresearch/faiss/archive/v1.6.3.tar.gz"
-  sha256 "e1a41c159f0b896975fbb133e0240a233af5c9286c09a28fde6aefff5336e542"
+  url "https://github.com/facebookresearch/faiss/archive/v1.7.0.tar.gz"
+  sha256 "f86d346ac9f409ee30abe37e52f6cce366b7f60d3924d65719f40aa07ceb4bec"
   license "MIT"
 
   livecheck do
@@ -18,19 +18,21 @@ class Faiss < Formula
     sha256 "03b95260a4fdd6cceaa69bb4e7168939aadf2b608f998079f7511aec6171f2d1" => :high_sierra
   end
 
+  depends_on "cmake" => :build
   depends_on "libomp"
-
-  on_linux do
-    depends_on "openblas"
-  end
+  depends_on "openblas"
 
   def install
-    system "./configure", "--without-cuda",
-                          "--prefix=#{prefix}",
-                          "ac_cv_prog_cxx_openmp=-Xpreprocessor -fopenmp",
-                          "LIBS=-lomp"
-    system "make"
-    system "make", "install"
+    args = *std_cmake_args + %w[
+      -DFAISS_ENABLE_GPU=OFF
+      -DFAISS_ENABLE_PYTHON=OFF
+      -DBUILD_SHARED_LIBS=ON
+    ]
+    system "cmake", "-B", "build", ".", *args
+    cd "build" do
+      system "make"
+      system "make", "install"
+    end
     pkgshare.install "demos"
   end
 
