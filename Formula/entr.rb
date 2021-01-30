@@ -12,12 +12,10 @@ class Entr < Formula
   end
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "014e80aa42f3793499133711e30b9d4b626789482f558aad60d2e864d2c5bbd0" => :big_sur
-    sha256 "f1b1b9b34ced4b9ac9b365e16673ca1030040dda599524316d0f9952cbfe07d9" => :arm64_big_sur
-    sha256 "21b69b1e641551d2022f5b261fd03d43e16e54d7eb09528890d122968de12460" => :catalina
-    sha256 "26cae580f66328a940c9f13add3c4cf91fae6b01247144a302757aac11e53427" => :mojave
-    sha256 "f37ebf2d5da20610536902c4010e4cd93136bc6282f2f3c7a119e3876c79d447" => :high_sierra
+    sha256 cellar: :any_skip_relocation, big_sur: "619e035bd88e1022abe8ea2bb47872d8d9bb0ce48774d316b20d78ed236cdcb6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "382670926073b72a8a4661c3dbeda426bd525ec0d671095ed57e297b0cb85711"
+    sha256 cellar: :any_skip_relocation, catalina: "c2f8633d2f84a9f1b0b06fe49d8bf09ca07c4ca3b386b0111c1ab14609d28fa7"
+    sha256 cellar: :any_skip_relocation, mojave: "667d0ba4094590eb0c24db62a35b467b58a2a5899b2419b05d8d49dd8f22fd15"
   end
 
   def install
