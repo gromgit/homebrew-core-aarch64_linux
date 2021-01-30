@@ -6,10 +6,9 @@ class Ejabberd < Formula
   license "GPL-2.0-only"
 
   bottle do
-    cellar :any
-    sha256 "0ceed5bdb4dca54b7af825e2ddff42f29ccb92ac08cd68de783bbe82c70158a6" => :big_sur
-    sha256 "848676f2ae43c6b05ee9732caaee469fe25571624e9b2ded161788fffbd84a35" => :catalina
-    sha256 "7273b1ef75bb32ec39aca0a57018839c04e8ecaadb06f3d097858d58544ec2bb" => :mojave
+    sha256 cellar: :any, big_sur: "d6c70f318a01122269aa0a9356f926e23eb190f38f51a3c8d7b5b59a1b568f8a"
+    sha256 cellar: :any, catalina: "f47d3de3194e456908d8e75aa1f308772dee675ce1789653787711d91a7669a1"
+    sha256 cellar: :any, mojave: "9d59c55287a10faa857383a76f41559f0f26b73d65c569820d5ba108d3d39f83"
   end
 
   head do
