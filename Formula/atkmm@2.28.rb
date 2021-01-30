@@ -12,11 +12,10 @@ class AtkmmAT228 < Formula
   end
 
   bottle do
-    cellar :any
-    sha256 "ef1b7d9dc9fd11bc07199b54078619fb68d78b8bbcf7a6335ccebc28a4ae215a" => :big_sur
-    sha256 "eae5a9abd9c93ef9c81d292c788df9e0099ce8f3a991728eff969c74a3753ab4" => :arm64_big_sur
-    sha256 "750b50b9da2bf48ce5e69b0fbaf09e87183e5c0bd79fb2d3574e23e9fa8c7e6e" => :catalina
-    sha256 "5d3a7b3bed2ee8da8a8152138db15aa461aee925c3a2eba5b83b3da8bfea6c84" => :mojave
+    sha256 cellar: :any, big_sur: "0819a047abff34b69f124d18d0bde9a441919580bf7510945a0a18530450270c"
+    sha256 cellar: :any, arm64_big_sur: "f74f19f6e1f6757a9eeb848f4091e0adb7f19b321fb15856697c5f7354684699"
+    sha256 cellar: :any, catalina: "f9aff58445d0a3941de032d92ae5fe40e2bb1bfbfbcff5ae8bd1b41d41365957"
+    sha256 cellar: :any, mojave: "1524ca8c602a0fe3f3750be64957a68d7c6d2bcdcb4c47ed24800bd2f9f2a0ff"
   end
 
   depends_on "meson" => :build
