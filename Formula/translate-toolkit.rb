@@ -9,11 +9,10 @@ class TranslateToolkit < Formula
   head "https://github.com/translate/translate.git"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "2252b5c00295a305232b97f6012baf2cdbcbbde039f5070caa1218c3ece89bc4" => :big_sur
-    sha256 "00452ca853d17c31029f3d992e0fad06a38fd529ffe77e391ea49edfd6bf4d19" => :arm64_big_sur
-    sha256 "e4a0a4460589c926ad2c5645e19d379450daec1686536584e93296007e48450e" => :catalina
-    sha256 "ca6fc0acb707f1fb6b963e7da797de6b57abaf655c3fa73e72dc3b2dc9ee5d41" => :mojave
+    sha256 cellar: :any_skip_relocation, big_sur: "076a916a9198ca1e6d8918548326a595dfbb73f56ecb815952addc07addd3890"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f2871f790bb13c0edef8aedecc5d1d938005ed055a202b3e264a6b045303d609"
+    sha256 cellar: :any_skip_relocation, catalina: "648c4b60b04630cb2dcd6434ba0d3385c61179bf08770064165d3f7d7508f149"
+    sha256 cellar: :any_skip_relocation, mojave: "40714dc2fbe0a73b3509b1f0e9be48638b0a1b685f4019522d01f75fb6c1221d"
   end
 
   depends_on "python@3.9"
