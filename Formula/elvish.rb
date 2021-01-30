@@ -7,12 +7,10 @@ class Elvish < Formula
   head "https://github.com/elves/elvish.git"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "0ce973f88b08a79b04f23bc36399d124ebc37f7ed15851e39d842e214648132e" => :big_sur
-    sha256 "f683a6e6d7034a4645f73aaa2cca531371a55465cd7999b4bcf9a20db4e126e8" => :arm64_big_sur
-    sha256 "ba7fb1490f6a8bb5136d465a0ab60129f94d00ea996fa246214816e84a7fcf50" => :catalina
-    sha256 "13eefbaac25770a6d26e27bc1e061e6916ec5a258e0bd74c6980cd22b12ff121" => :mojave
-    sha256 "f17ce74f44eb978941acaf715849399ddf3e154e4425ac17b020c6da59e63af6" => :high_sierra
+    sha256 cellar: :any_skip_relocation, big_sur: "4f94ee1690a4e64a5d8d6e3bac2494f8a1936ca9d9e3dece173ffc1e870e9a19"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "79c48f95ff206c058f77401f776ca9696d68528eab1e1df26023eeab986646f5"
+    sha256 cellar: :any_skip_relocation, catalina: "5699b736a32e20ce52ad1ec440af26cb409be9bcb09512d82939d3ae743a51f1"
+    sha256 cellar: :any_skip_relocation, mojave: "f39264950f60b3c7aeac77f179818d111ceebaea86f1e07cf914ff035d524d17"
   end
 
   depends_on "go" => :build
