@@ -12,9 +12,9 @@ class Kops < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur: "efc7c3228bc67151994f0a943864d07ab8fea13a37c94dafe7a8b7a9b724558b"
-    sha256 cellar: :any_skip_relocation, catalina: "9d441d1122e641b047a029c52c4722837be0708e285433cbfec108d9687121af"
-    sha256 cellar: :any_skip_relocation, mojave: "57ef9d56d07826a31ce2a6776f32acd6da0ef493e3fe36b2e34b287a46492c6d"
+    sha256 cellar: :any_skip_relocation, big_sur: "5017210f634c7f79b8dcde2f02cf16c19ecaba26285540f462381c440be55b8e"
+    sha256 cellar: :any_skip_relocation, catalina: "aadacf2463229576790c7035cb231d6f78661c744cfdba1667305c556efd58e4"
+    sha256 cellar: :any_skip_relocation, mojave: "ef46f1bd7cee14ee1f81d17c2f49de6871a4f14dd428ea47d06bd65a72fdd384"
   end
 
   depends_on "go" => :build
