@@ -9,12 +9,10 @@ class Xonsh < Formula
   head "https://github.com/xonsh/xonsh.git"
 
   bottle do
-    cellar :any_skip_relocation
-    rebuild 1
-    sha256 "848521c9f7fd0e0085274891dcb6d6dc20b100a1785a627864b16b9cd9b77ef8" => :big_sur
-    sha256 "715f5bdd666836dd89fd9cf05987f321ef74e46946da48f5cbe069ff163dfd0b" => :arm64_big_sur
-    sha256 "da3755d9ed3dc8d00d1f680903131fade342f16ad02466b237a32bf53a932820" => :catalina
-    sha256 "0d7681a10d327caae8efa6866778ba04a3709a799ceda850fc34054332e6b0bd" => :mojave
+    sha256 cellar: :any_skip_relocation, big_sur: "f452f1a1bb8d5d47fcc882a8fc9819b39a38570e4b5a5aa259569f974e88619e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "adf5638b08a02469fda9b604245892717519c3e2e6672f2a0d45fde285e235b6"
+    sha256 cellar: :any_skip_relocation, catalina: "c32fcc12a0c3e00d98929d4d2a31f7d3c890ac5210a48a17087eb3e854af7982"
+    sha256 cellar: :any_skip_relocation, mojave: "3ef62348b98b48176fb167fefc2097bb88fc5c0d4194c895234f72e86f79101c"
   end
 
   depends_on "python@3.9"
