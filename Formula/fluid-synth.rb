@@ -7,11 +7,10 @@ class FluidSynth < Formula
   head "https://github.com/FluidSynth/fluidsynth.git"
 
   bottle do
-    cellar :any
-    sha256 "be02ecfb522e79de8f0001da67d09c259b4fc14c8952fddfe08e5c55208386fd" => :big_sur
-    sha256 "5713992232cb4c298d5ab200220883393d95ea1081bb362f55a7d2b2ceeddf17" => :arm64_big_sur
-    sha256 "55785ce947a8ef644efe4ecdb1358b329174538ec54e81a3f1598e562c1fe8db" => :catalina
-    sha256 "200cc4f524be149e679e8c258db12f1ef7843474d4d68636b5f8f22c6d8da292" => :mojave
+    sha256 cellar: :any, big_sur: "2e02d5f16e66f192a9012c074f4b26a5e6152f75785b31f67686b52fe9f6ca90"
+    sha256 cellar: :any, arm64_big_sur: "4305044cba000c5d84091d08212a591ee194095d64f58bfd3a2f7774eb74aa80"
+    sha256 cellar: :any, catalina: "b42d65523f293bd5f684f218954598b7512a7a9ad70f5ee70d4c0d8653267390"
+    sha256 cellar: :any, mojave: "c362af5dc1a15d2d0798b79452068c1f65a98f8604b04734cf48dad22ebba4c3"
   end
 
   depends_on "cmake" => :build
