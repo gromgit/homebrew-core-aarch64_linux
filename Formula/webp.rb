@@ -6,12 +6,10 @@ class Webp < Formula
   license "BSD-3-Clause"
 
   bottle do
-    cellar :any
-    sha256 "5723d4b2701f6c4348419164c38b11cd9c274dca35925fc8c3fbf0c8c14cfc4d" => :big_sur
-    sha256 "823234931878dfebe1a66aa438011cfa24479bc86f6db537dccaf7c30dc8a384" => :arm64_big_sur
-    sha256 "27c76a7054277ff5a2e844c5996fc731d8644acbaaa505d35dba42c4a48a0c51" => :catalina
-    sha256 "819c76cbf75c1d1d51db88602b69a9d9cd24975cc65834a9eb5a804c4b96ee35" => :mojave
-    sha256 "069cac577750d53095cc43a05a3eab54310c35ea819ea05fa6bf425bcb0313d2" => :high_sierra
+    sha256 cellar: :any, big_sur: "1099da9d890c863542eb14e0de9f82b20ffbd9b869da33230f76adc8fa70579c"
+    sha256 cellar: :any, arm64_big_sur: "dd6e09db88a5d8a1317ea461fafe7e6e3e92e0ef4885c2e8a6a70a1a44d00a91"
+    sha256 cellar: :any, catalina: "dc30946a7cf3bee45f279a2886d54d7b5c3d7253ba4e0728d49341d26573ed14"
+    sha256 cellar: :any, mojave: "31d671e9218539c8b2671b14b8c5f09b58b6d711469dd13da729fa33f61fddb0"
   end
 
   head do
