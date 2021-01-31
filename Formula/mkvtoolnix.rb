@@ -11,11 +11,10 @@ class Mkvtoolnix < Formula
   end
 
   bottle do
-    cellar :any
-    sha256 "300f1694601120d50f06fc0a47cb630d3453803ada9f202ac0dc9252761358c1" => :big_sur
-    sha256 "e17ce87ec0e18d02c2954573b905b83626ef93a28def3d45fd4fe2821effdbd0" => :arm64_big_sur
-    sha256 "6ed48528c522a746919bf8e45e05cf39638bc680875caff3b1ac91ae8ff3a81e" => :catalina
-    sha256 "a54d7fa351997df702d31d3b5bafecd640bda963efe36b6b7a9d417ef1cd0f71" => :mojave
+    sha256 cellar: :any, big_sur: "712880637df3730d2c49390de8fc3be9053b2e093a06e8d5dcd43ba7c1d79547"
+    sha256 cellar: :any, arm64_big_sur: "3a9e5699a395a9e2a5823885fa3337c74dccb13b545195a1010075a7587e5a03"
+    sha256 cellar: :any, catalina: "8139fcc6b846f6f4b317bd4ac393a3ef15e72446a0f6a0f12b65daddff04cd76"
+    sha256 cellar: :any, mojave: "a633f4d8d7438fdc876fc2dfba0ef20037d43391e63e509df833d34ef169d812"
   end
 
   head do
