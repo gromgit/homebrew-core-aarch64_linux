@@ -33,6 +33,7 @@ class Jetty < Formula
   end
 
   test do
+    ENV["JETTY_ARGS"] = "jetty.http.port=#{free_port} jetty.ssl.port=#{free_port}"
     ENV["JETTY_BASE"] = testpath
     cp_r Dir[libexec/"*"], testpath
     pid = fork { exec bin/"jetty", "start" }
