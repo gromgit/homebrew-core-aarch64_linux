@@ -6,6 +6,7 @@ class Lanraragi < Formula
   url "https://github.com/Difegue/LANraragi/archive/v.0.7.6.tar.gz"
   sha256 "2c498cc6a18b9fbb77c52ca41ba329c503aa5d4ec648075c3ebb72bfa7102099"
   license "MIT"
+  revision 1
   head "https://github.com/Difegue/LANraragi.git"
 
   bottle do
@@ -34,6 +35,11 @@ class Lanraragi < Formula
     sha256 "3af99fb4625fe6c7ccb55c79709afe31df4af66886a35e5c5a494507a0814061"
   end
 
+  resource "IO::Socket::SSL" do
+    url "https://cpan.metacpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-2.069.tar.gz"
+    sha256 "d83c2cae5e8a22ab49c9f2d964726625e9efe56490d756a48a7b149a3d6e278d"
+  end
+
   resource "libarchive-headers" do
     url "https://opensource.apple.com/tarballs/libarchive/libarchive-83.40.4.tar.gz"
     sha256 "20ad61b1301138bc7445e204dd9e9e49145987b6655bbac39f6cad3c75b10369"
@@ -58,6 +64,11 @@ class Lanraragi < Formula
 
       system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
       system "make"
+      system "make", "install"
+    end
+
+    resource("IO::Socket::SSL").stage do
+      system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
       system "make", "install"
     end
 
