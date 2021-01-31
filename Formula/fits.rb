@@ -18,7 +18,7 @@ class Fits < Formula
 
     inreplace "fits-env.sh" do |s|
       s.gsub! /^FITS_HOME=.*/, "FITS_HOME=#{libexec}"
-      s.gsub! "${FITS_HOME}/lib", libexec/"lib"
+      s.gsub! "${FITS_HOME}/lib", "#{libexec}/lib"
     end
 
     inreplace %w[fits.sh fits-ngserver.sh],
@@ -27,9 +27,9 @@ class Fits < Formula
     # fits-env.sh is a helper script that sets up environment
     # variables, so we want to tuck this away in libexec
     libexec.install "fits-env.sh"
-    bin.install "fits.sh", "fits-ngserver.sh"
-    bin.install_symlink bin/"fits.sh" => "fits"
-    bin.install_symlink bin/"fits-ngserver.sh" => "fits-ngserver"
+    (libexec/"bin").install %w[fits.sh fits-ngserver.sh]
+    (bin/"fits").write_env_script libexec/"bin/fits.sh", Language::Java.overridable_java_home_env
+    (bin/"fits-ngserver").write_env_script libexec/"bin/fits.sh", Language::Java.overridable_java_home_env
   end
 
   test do
