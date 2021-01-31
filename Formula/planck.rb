@@ -8,10 +8,10 @@ class Planck < Formula
   head "https://github.com/planck-repl/planck.git"
 
   bottle do
-    cellar :any
-    sha256 "5b406713770c2829f37ea2a979339d63e25919d843c2bd99b637965415bc0607" => :catalina
-    sha256 "9aa890a053401c91cc47614297141f98c368ffbd10c5bccdcd16dfc44c608926" => :mojave
-    sha256 "a5527c52066b07419fef2617323897d21b90b6ce59a5014637eb4c6f234d8596" => :high_sierra
+    rebuild 1
+    sha256 cellar: :any, big_sur: "436bb7f0481e0a6a0edeaa1abd2687c349e6314bf6139a2b8ae4e9a73978ed8e"
+    sha256 cellar: :any, catalina: "2528a360ad99d9d5031ae53138523c691e5a5ccb93da15cc44d214a9ad0d2e3b"
+    sha256 cellar: :any, mojave: "b0d1fe14b9ab71a5a18601e8e21fe3b16dc96247b877ce6842bbc7c7cae93784"
   end
 
   depends_on "clojure" => :build
