@@ -11,16 +11,10 @@ class Robodoc < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 "e51ea8add4cb4076e6416eb35d4edeaf3564df4553c77a4d3cc6a8844b233207" => :big_sur
-    sha256 "3d9deb13c98147c7deeee0428da4554a9f5c768cfb8c0761ab33f78073c494b9" => :arm64_big_sur
-    sha256 "2d80013dbc6b8f85599bd793741b69fde224552b0bb543fc3029f488fc2c55bc" => :catalina
-    sha256 "338eaad16a1962befefcac8adff0f501409fdaee709b42b93a19221a4bc79728" => :mojave
-    sha256 "0fa779e5f937f0e7a4c17a2bbe86ea84178bd5d0739ba3f8429ced46f3c10435" => :high_sierra
-    sha256 "230f593f9fadd10d98868593e273ad40dfee6ad877b396073042a187f19c60b8" => :sierra
-    sha256 "54532e8e7629f4eeedbdef400f40997c25558b692755b816f6facc37a4975d4d" => :el_capitan
-    sha256 "a5c2794eb7e02c27707aad1bbea593ddc0d21fbf197f6b4313f8d0ba84fb34a5" => :yosemite
-    sha256 "cea580dd90f87075879dc722262668deac629673ed22dc1e2e5a6cb52e2439ca" => :mavericks
+    sha256 big_sur: "72127c3a10a58f3a4d1c5eaaae50c33944063d3fe10eb71a95f17c7c32635d44"
+    sha256 arm64_big_sur: "4dddc1a534d6c0e60601403b9272f84cb14ce2e665e6882b9609b6f7db27d981"
+    sha256 catalina: "8c02f006c5ef0639855d20c284bdc9ce03f2e4ad11e6d4659a75f3080e815abf"
+    sha256 mojave: "f6cf96a433e670f0e92079848d45062fc93da258c3bda2749464aedb9bffc1f9"
   end
 
   head do
