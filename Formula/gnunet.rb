@@ -12,12 +12,10 @@ class Gnunet < Formula
   end
 
   bottle do
-    cellar :any
-    sha256 "cea8501f8fa52cbb4b1d1af8628d4c0f09f3f3ae667a45f0445ab79e47c5b255" => :big_sur
-    sha256 "413b9db61db66ea96a9f1cbbb3471c35313ff195c1c1ee10d526e37e59f92fbf" => :arm64_big_sur
-    sha256 "1e2b31e022792cc40dcd11061644808f761e378a2178b1bfdd9191a31363ad1e" => :catalina
-    sha256 "ef84c90eb8ea9783adbaaa8b7034cb0662d7b697d2e5b7953365bac1681d5277" => :mojave
-    sha256 "5470d0894a0ca01ca53d3376e4bbc7ad038621827e7ff1e075e1dd2c07c579f3" => :high_sierra
+    sha256 cellar: :any, big_sur: "8f3629373c78f67c8995c3aeb9ec4d27f7576b5f28c1d5b9daac3c8d2ef1796c"
+    sha256 cellar: :any, arm64_big_sur: "d2e622cc444972bf0fd15a30922f7f853c066eac83c94b18415fa1547fe1aa2c"
+    sha256 cellar: :any, catalina: "dce4848ff96012a2169bd768d4112dce18dd658f45fa1ab2dfafb4de6886c5fe"
+    sha256 cellar: :any, mojave: "cd3507df5abe3ac3832e61caffc487860e98f05b4a16bb629565c1e84d785c7d"
   end
 
   depends_on "pkg-config" => :build
