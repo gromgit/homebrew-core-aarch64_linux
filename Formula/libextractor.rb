@@ -11,11 +11,10 @@ class Libextractor < Formula
   end
 
   bottle do
-    sha256 "57cc73af98204c3c4cd49c7121b34a2f4a312112700226df6d694d0a09e3bf6f" => :big_sur
-    sha256 "d57a5379b72fae761386f624d0c21dd164fff53032642472b96c66bf458dbdc7" => :arm64_big_sur
-    sha256 "1f9781fe4c690eca0d719016cd4f23bd94890ae69cc30c4c1caa47d919286483" => :catalina
-    sha256 "0929de2de549d871c775fb2b3aaf22dc52377b504b8ed3d01ca9350a52704e39" => :mojave
-    sha256 "5a30c428cb327ef0bfd2458feeeb638200df28acf63b688d598a79591cb1c812" => :high_sierra
+    sha256 big_sur: "c79547c7f5d513ede389034b436fce8a68898827dcbe814540b700286f0ad76b"
+    sha256 arm64_big_sur: "46684b1a7a45edf4a8febdff6138463abd97cde89520824575f476f2d500f576"
+    sha256 catalina: "ecd3a409a45003e3800c0c4e266a991ea7b2b2291e624d5e596f618a8ffbda84"
+    sha256 mojave: "82cfeb01761e5f1878e12a816b225cf8c769c0f8f63e0624fa873bc3994c598b"
   end
 
   depends_on "pkg-config" => :build
