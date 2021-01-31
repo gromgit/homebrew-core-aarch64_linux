@@ -7,14 +7,10 @@ class Dosfstools < Formula
   head "https://github.com/dosfstools/dosfstools.git"
 
   bottle do
-    cellar :any_skip_relocation
-    rebuild 1
-    sha256 "6a2413a2efbaf76112cb88e3531b4e57c826423c276eeb5ed055a4ece39d9426" => :big_sur
-    sha256 "df48192564cfabe5d9682029032fcc32a62871a7f9f3200503be6b2710073a2a" => :arm64_big_sur
-    sha256 "c537f560096a325d904edb80218af9c113ad365ae3c39c9b1b3393aa38418885" => :catalina
-    sha256 "a12605487c15e462c7ae652bb3f1587d254fc0001bfbae9261903c9f85542c2e" => :mojave
-    sha256 "44d8a1baa92d553ec9c24c1152c875b0f7d3730146d3decf4cdfa8f7b1516434" => :high_sierra
-    sha256 "b14dc5d79955f0ee586a33c7e265df2def55b1c64b7eb123539fce827cdeb6ec" => :sierra
+    sha256 cellar: :any_skip_relocation, big_sur: "c4f450bef47449fa57d911e1c3610cd65bf8d7fd661e3efc8a0a44c7d45510f5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3d8437b8921385c7675d2502c0c7b746f060e6b1656923e061173d568927f34d"
+    sha256 cellar: :any_skip_relocation, catalina: "df9afee3d6ec3da028a6fdd487b98800099f8aa248261c35ed2821e984b91a70"
+    sha256 cellar: :any_skip_relocation, mojave: "4d910d3f83352692379e5ead97f3c52ab845cc187a1d791f655ed02ef7b7b9e6"
   end
 
   depends_on "autoconf" => :build
