@@ -7,12 +7,10 @@ class Hamlib < Formula
   head "https://github.com/hamlib/hamlib.git"
 
   bottle do
-    cellar :any
-    rebuild 1
-    sha256 "fe04cc5576e85b4b22a07e0b681bbae881c9bb639fc0be19500b1e94b7803d43" => :big_sur
-    sha256 "8faea293fa6fd60893c05571b2d52b52339866d4c65fb103d097ccbe91897aa9" => :arm64_big_sur
-    sha256 "cf210e6b1a182e52f93c26e99b36e76db21b5b11ab45f30f553dbb58f51cd936" => :catalina
-    sha256 "d45e4cdde74cac09f37a111e965cfb9cfa110ff68b15ea8575766bf161697704" => :mojave
+    sha256 cellar: :any, big_sur: "9ceda629c590e4f94150d19b65d41ad60692c36e95a15f3a402a7b77b77264ec"
+    sha256 cellar: :any, arm64_big_sur: "69ca3e44a728006591fbfd52e8941f630b60a5f78491f5c7a7b00e73d5c09d3a"
+    sha256 cellar: :any, catalina: "8438ca728e483627d35c770a76a07d814336e469619e1b7f9baa3f8a3659d0cf"
+    sha256 cellar: :any, mojave: "af9e82439e617309d3d5f979347d0ffd5c3b65768ffc5f93f8031fd74ee71178"
   end
 
   depends_on "autoconf" => :build
