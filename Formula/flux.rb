@@ -13,11 +13,10 @@ class Flux < Formula
   end
 
   bottle do
-    cellar :any
-    sha256 "3b1a841f43aa5aadabd4cc634fefc11282b6a30f41efb42e7dad4e224dc4275b" => :big_sur
-    sha256 "9adfbd97a45a5454a794ddff786d20b258dcdcd522db64b62afe62560d7d1dc4" => :arm64_big_sur
-    sha256 "0d0f4c0e4c5f776a68f077cf761e8602c2c0a9d1a56422b27199f5cded3628db" => :catalina
-    sha256 "6592500c177ea5d11acf91ba55110a7da2274dab16eb85108a764604de6b8ecc" => :mojave
+    sha256 cellar: :any, big_sur: "01176f94a74d94c33d1c4b46e337239c1771923b1997b92d9e48b5f3f828e8c5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "cdc96323915a1a9517058316ae98554d22106c4f8ba7264d4db870b9579e9b1b"
+    sha256 cellar: :any, catalina: "fc0be0dc6d16e47168830aa3f19df62a8d32b7545ef49c308f50c5254e1129c8"
+    sha256 cellar: :any, mojave: "506742a4de59cf9f68504934744ff8cc4fd1e391ebebf9aa735b532e67194982"
   end
 
   depends_on "go" => :build
