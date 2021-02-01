@@ -1,8 +1,8 @@
 class Pngcheck < Formula
   desc "Print info and check PNG, JNG, and MNG files"
   homepage "http://www.libpng.org/pub/png/apps/pngcheck.html"
-  url "http://www.libpng.org/pub/png/src/pngcheck-3.0.1.tar.gz"
-  sha256 "66bf4cbaa29908984c0d7ba539358ed63c7c2f02a0b2407ac691465b143efbbb"
+  url "http://www.libpng.org/pub/png/src/pngcheck-3.0.2.tar.gz"
+  sha256 "0d7e262f24116fddf2847a8ceb5c92d9f5f26efb42e9fff63ec2bb7676131ca7"
   license all_of: ["MIT", "GPL-2.0-or-later"]
 
   livecheck do
