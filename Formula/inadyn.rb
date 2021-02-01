@@ -6,10 +6,10 @@ class Inadyn < Formula
   license all_of: ["GPL-2.0-or-later", "ISC", "MIT"]
 
   bottle do
-    sha256 big_sur: "7f9d314798a94e4e49a16350e70557de633fe42ff47e9fcfcf9c3e4054932c3c"
-    sha256 arm64_big_sur: "2cbabfe7c86d67e99218fd34afd49f97cf7f9a164f383072d50c8d95f343fd9a"
-    sha256 catalina: "29c03eaf67c3ca7d75ddbdee20c8875156d014f37f1f81afa5e4718dc2349167"
-    sha256 mojave: "0408849a9bdec78ccb0e503d2db0a6d4b9b0110f02a1b5c05c082351d07eff97"
+    sha256 big_sur: "5046bd4f55ab963fdfa8bb8edd46454b2bf5b8e0e5f7ae8b1ba6f6d4b81251ee"
+    sha256 arm64_big_sur: "3459e2119123af5cceab755c044952c6399e80bf0efb67ae2c5a5c268b618341"
+    sha256 catalina: "e0a601e59fecb91b7932eabfaf7b276a45cadb2233ca2fbde1e71e17240a96a4"
+    sha256 mojave: "5f26612509b04128a4cc7d73c4a47520a7c72e3575de255f9b579c6a94255f0b"
   end
 
   depends_on "autoconf" => :build
