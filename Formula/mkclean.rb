@@ -10,13 +10,10 @@ class Mkclean < Formula
   end
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "e1566860e6b09b48b227415b7f683aa1774d218c96b9c5bdf754614c809c4100" => :big_sur
-    sha256 "8bbf507533210f38e1ec8e8f18238194b9d67cc54c9d037b25670f6d48fbac6b" => :catalina
-    sha256 "645c0b42475bb4d09c2c27219e80ffc3fed4c34b72c5f6bb0e8534cba1101ea2" => :mojave
-    sha256 "eb519c8f3fb9b2773529d5e7a9751cec7e2a7a67a76af92cab0e6b48449dc6de" => :high_sierra
-    sha256 "73e502b5331d28da40fc3b94763f6ea30a141e48329bede7eddf3e396991671b" => :sierra
-    sha256 "a5db5b2309de19ea395efaafcf828c253e38133464faca623545a221f2b0ba52" => :el_capitan
+    sha256 cellar: :any_skip_relocation, big_sur: "c840bc41e467e5e5da4a58843280ea53238cbc0574a1954904423fccf6a23350"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9cbb79d68f3b6f25830b76a374782b1cee440c6112280393a718f0950a561ecc"
+    sha256 cellar: :any_skip_relocation, catalina: "233250daa7e3c2b5dea11c5afd8fd2ac6985b054dac3e71ba62f6a7e02f302a8"
+    sha256 cellar: :any_skip_relocation, mojave: "ab570a0a6db26d6dbe08ab347ef3b8f881f77766ce2fbfffdf9a9c3b61a94f46"
   end
 
   depends_on "cmake" => :build
