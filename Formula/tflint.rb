@@ -7,10 +7,10 @@ class Tflint < Formula
   head "https://github.com/terraform-linters/tflint.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur: "6dad78fb2c9a25e51c8f629840a9945a6de4489910d3b1059d818b8a1f34cb24"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d645c8b0dbebb779c954f0c1563e70600cbc5ee0f5a4a78fb9fa5ba1e334cc2c"
-    sha256 cellar: :any_skip_relocation, catalina: "c8056115315a70a20120e15beee28a0d7811812a32dc95c44a771b3848bd341b"
-    sha256 cellar: :any_skip_relocation, mojave: "2eb177d6c33f27cbc69aa7d9fa9baeef260a6239da866dda9d7ef7784920fbb5"
+    sha256 cellar: :any_skip_relocation, big_sur: "ae2af08ef4a81aaa4396631d42aa4dc5f789ae3cccbef346223700c985cdd928"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f59f8f1abf34e6bacf352453235a9f83da8e31e06db8ab33ba1a016c0faa0517"
+    sha256 cellar: :any_skip_relocation, catalina: "caa165af722c3bfdd6e38d5c6617d75d0c7c91019eacbb74f2c536eda3947f4c"
+    sha256 cellar: :any_skip_relocation, mojave: "6276be551e92dbd5d91047b0a6b0fe09f9d09994913944ab7608efd650ebc8dd"
   end
 
   depends_on "go" => :build
