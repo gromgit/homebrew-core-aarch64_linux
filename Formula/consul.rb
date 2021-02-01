@@ -2,8 +2,8 @@ class Consul < Formula
   desc "Tool for service discovery, monitoring and configuration"
   homepage "https://www.consul.io"
   url "https://github.com/hashicorp/consul.git",
-      tag:      "v1.9.2",
-      revision: "6530cf370af2187db9d37e026cc56e5a2bcb421a"
+      tag:      "v1.9.3",
+      revision: "f55da93061e8f696ed94ae2b3c18ec412049f9af"
   license "MPL-2.0"
   head "https://github.com/hashicorp/consul.git", shallow: false
 
