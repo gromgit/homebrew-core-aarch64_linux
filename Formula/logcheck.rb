@@ -11,13 +11,10 @@ class Logcheck < Formula
   end
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "8bc85cf12dd6e76956cc0ddc53d85d7465b5b2f45ed9f6a79e5896c29fcbbc83" => :big_sur
-    sha256 "adabe666b896fb9395c41e5b678df2dc3d15dfa508f56a2373c9a2eefc6b1c39" => :arm64_big_sur
-    sha256 "9e354b3fe568c0751443a702251949b5227a5ce09e3bbae4c28664aa1d7f0631" => :catalina
-    sha256 "111520f51e26088aa012bd42dc772e0a00e41decec22011a2bcf71c2ee3e20cc" => :mojave
-    sha256 "111520f51e26088aa012bd42dc772e0a00e41decec22011a2bcf71c2ee3e20cc" => :high_sierra
-    sha256 "12caeda115373b2b964509c07c2101926ab2e67154176078bf72353f3aeab7a3" => :sierra
+    sha256 cellar: :any_skip_relocation, big_sur: "8907bcff70936e3418f4194860e7874990a71958028f11d42caf720e856d15f8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4af2e10c4914663440c40f8149b0fee3a03598ac9b24577750f7a95115db72f1"
+    sha256 cellar: :any_skip_relocation, catalina: "d181f0b17c7518ae41e0b6e45f2eb533273f6868f19ec0412d302b3b70fbdd52"
+    sha256 cellar: :any_skip_relocation, mojave: "6ed00ab1ce56bd1cee25785f373f20362a8e4bf6e998026eac635086e4cccb71"
   end
 
   def install
