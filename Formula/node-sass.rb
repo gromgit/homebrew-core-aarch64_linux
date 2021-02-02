@@ -12,11 +12,10 @@ class NodeSass < Formula
   end
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "b4bce85415f0aca26a255dffc7f0a00a64426a34e692506f03a71979a04291d7" => :big_sur
-    sha256 "60f627515dbf2a989b65b3d34acb3f42ee32f1a2c3de08068d78de11dc206d65" => :arm64_big_sur
-    sha256 "2c118df451fd954b260ba60c889797b6e5372a45ff1b67698b045ab67ec9e139" => :catalina
-    sha256 "a611612e2017fbc825e2aef6ea7951bc8caf0411d4f2165618ae21aaabddcdd1" => :mojave
+    sha256 cellar: :any_skip_relocation, big_sur: "5891229fce7328eb619b57b8ca4c04430159a1491b824a9ee427387ea599e6b4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "28f61babd03feda0d39d66a5801d76123bd67e28feec6df95e10f2c739690af3"
+    sha256 cellar: :any_skip_relocation, catalina: "11a7d824ad2bbbf9800e20ef7755f009b7e68ee823975fe37e325b1f85bb7a42"
+    sha256 cellar: :any_skip_relocation, mojave: "31b5ea620e157eb11db0f86aac65deb2ed055a4be0def6cf1a627f51fe884c77"
   end
 
   depends_on "node"
