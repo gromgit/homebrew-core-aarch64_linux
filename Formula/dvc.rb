@@ -12,11 +12,10 @@ class Dvc < Formula
   end
 
   bottle do
-    cellar :any
-    sha256 "8f5c73f9fc3d43d97267454b21bb21cb134491baeefe4e6c4a2ed9c438cfe632" => :big_sur
-    sha256 "438d19cd028eaf52a83cada05a740592c1663ccf6679f03d513694021311cddd" => :arm64_big_sur
-    sha256 "ec4926bac20948aaa7a9b4b9f41653578d36746eae03d9d867a737e84108c00b" => :catalina
-    sha256 "815912fd7d9d8080f8d89a027a65ea46dd054b68504f398a8d417e45843175f3" => :mojave
+    sha256 cellar: :any, big_sur: "998a5f2a3d6c5635a8d96bd9141edfd1dbf223153b09af9168eb0f8a5e670596"
+    sha256 cellar: :any, arm64_big_sur: "e119a623616544d988f0bc48b802ba82d36645ad877fadddf472f2a0e32b8ccf"
+    sha256 cellar: :any, catalina: "4b434e08cb83f4fa6f7cb58a461a6b1baa6461c4e7fc82fd8ef6d90ba2962122"
+    sha256 cellar: :any, mojave: "183d1516a6f1538bb65c0e2b4c4130286ea16306235665025e043ca385978c72"
   end
 
   depends_on "pkg-config" => :build
