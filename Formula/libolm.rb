@@ -33,8 +33,9 @@ class Libolm < Formula
         void * utility_buffer = malloc(::olm_utility_size());
         ::OlmUtility * utility = ::olm_utility(utility_buffer);
 
-        uint8_t output[43];
+        uint8_t output[44];
         ::olm_sha256(utility, "Hello, World", 12, output, 43);
+        output[43] = '\0';
         cout << output;
         return 0;
       }
