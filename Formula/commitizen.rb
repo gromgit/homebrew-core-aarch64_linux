@@ -13,11 +13,10 @@ class Commitizen < Formula
   end
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "2e67919e5d856c70a8c14d486f89418adb315b65be1b53ae16c2034a61efb5a4" => :big_sur
-    sha256 "496f9dcbfc558c13b9daa899a22399ffa7391fe952e8c3d3f39a55172e1740f9" => :arm64_big_sur
-    sha256 "7a6ea98fe262fe67b603cb814c3b515be147c7e56eecab2903744bb3ea1b793b" => :catalina
-    sha256 "0efd54fbc38b71e1b71addd3cf5619e8af90a81e1b00baa5aba6068f9c56c8a0" => :mojave
+    sha256 cellar: :any_skip_relocation, big_sur: "08e027f622f2569be91d555c6279910438cef56c85e13f0aed413a8237a3886b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8dab29f65bb585bc5f392fdf8b553908eccf49936400e3aefbcd5b7cfff2da1f"
+    sha256 cellar: :any_skip_relocation, catalina: "edda4007c88b9a789feba786525bc624cda2b9efab3b09f8644f9fcf8d440d86"
+    sha256 cellar: :any_skip_relocation, mojave: "1e3972cadd40df90ec773d317e2faff3e7f1c09defd1c744d1fd9e4cf6dce26a"
   end
 
   depends_on "python@3.9"
