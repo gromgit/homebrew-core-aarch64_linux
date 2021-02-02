@@ -13,10 +13,10 @@ class FirebaseCli < Formula
   end
 
   bottle do
-    sha256 "4e85db8763929ab219801286bbfcda55afc45798137587c3f70de4457053444b" => :big_sur
-    sha256 "d92445ca66cfb7bf5afe6965016c631296a9a40d2e6d1ad587a9c29071902d95" => :arm64_big_sur
-    sha256 "bac6351e975ccb9f583db7d98ef9211e179cc91d9f78a1cf7c5d221fad68926d" => :catalina
-    sha256 "351dee62026d416a70dddc5800174afbab9014040dd643a625e34ae4f0cdb402" => :mojave
+    sha256 cellar: :any_skip_relocation, big_sur: "8720c16da6eaadeb2e8155adfa302b7621137e8cc74344344dab680f4d9d6266"
+    sha256 arm64_big_sur: "164272fc6509d724c6fcc877ee988b6b6a3c9e1ab572fab6e93cf91fed432042"
+    sha256 cellar: :any_skip_relocation, catalina: "a665da560eb8a7dfa18b563e3991de9b0a24bc8f2e5f24d02106ae5e4a0a86ba"
+    sha256 cellar: :any_skip_relocation, mojave: "b3a2587705ce4863ec6f1fdcdc2857d7017f4b913c30840f36b8161ccc2a8900"
   end
 
   depends_on "node"
