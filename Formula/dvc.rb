@@ -3,8 +3,8 @@ class Dvc < Formula
 
   desc "Git for data science projects"
   homepage "https://dvc.org"
-  url "https://files.pythonhosted.org/packages/44/0e/4ae6ca8b5030c36a6694d836b324b83f978596147af7b9417edf95ad95bc/dvc-1.11.13.tar.gz"
-  sha256 "904d2a484513dcaefca13812a90ae9a5eb1a8f3455ebf519dda90f2d80e71bf0"
+  url "https://files.pythonhosted.org/packages/87/eb/9009869e7d8d4c71b2a10d59897aaf7651690bbee9f88d97a3e196e40012/dvc-1.11.14.tar.gz"
+  sha256 "55d47ff0da7138dbe07bde6d9a82a8f5f1c2006d6682f4401fb2baf96431e103"
   license "Apache-2.0"
 
   livecheck do
@@ -150,8 +150,8 @@ class Dvc < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/d7/c5/e81b9fb8033fe78a2355ea7b1774338e1dca2c9cbd2ee140211a9e6291ab/packaging-20.8.tar.gz"
-    sha256 "78598185a7008a470d64526a8059de9aaa449238f280fc9eb6b13ba6c4109093"
+    url "https://files.pythonhosted.org/packages/86/3c/bcd09ec5df7123abcf695009221a52f90438d877a2f1499453c6938f5728/packaging-20.9.tar.gz"
+    sha256 "5b327ac1320dc863dca72f4514ecc086f31186744b84a230374cc1fd776feae5"
   end
 
   resource "pathlib2" do
@@ -165,8 +165,8 @@ class Dvc < Formula
   end
 
   resource "phonenumbers" do
-    url "https://files.pythonhosted.org/packages/ed/10/6e8e0ab7535a54b69793d7ea7f7b1d80262f2ebc3c10bed29f1118d54a17/phonenumbers-8.12.16.tar.gz"
-    sha256 "a820ab08c980ef24a2d2a1ead4f8d7016fdf008e484d1aecf7ff0b32cc475e16"
+    url "https://files.pythonhosted.org/packages/72/e5/1509a2f560a76f858d678bc84ab6f5cf325d3b1763d3cb3c0d4662383388/phonenumbers-8.12.17.tar.gz"
+    sha256 "f5d57c9fc8f7162ba562325d69d65b4f76e750951c5945c57876e94d824392ec"
   end
 
   resource "ply" do
@@ -230,8 +230,8 @@ class Dvc < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/5a/2d/5e92c69f971cb2a373a5203fe2ff0a06751b3eea918c709318e19f7caf62/rich-9.9.0.tar.gz"
-    sha256 "0bd8f42c3a03b7ef5e311d5e37f47bea9d268f541981c169072be5869c007957"
+    url "https://files.pythonhosted.org/packages/8c/65/8743a4b98585dbebf943aa8d8d30421606b492decfde9b8ffc3d5812a791/rich-9.10.0.tar.gz"
+    sha256 "e0f2db62a52536ee32f6f584a47536465872cae2b94887cf1f080fb9eaa13eb2"
   end
 
   resource "ruamel.yaml" do
