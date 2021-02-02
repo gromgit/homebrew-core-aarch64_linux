@@ -3,6 +3,8 @@ class Libftdi < Formula
   homepage "https://www.intra2net.com/en/developer/libftdi"
   url "https://www.intra2net.com/en/developer/libftdi/download/libftdi1-1.5.tar.bz2"
   sha256 "7c7091e9c86196148bd41177b4590dccb1510bfe6cea5bf7407ff194482eb049"
+  license "LGPL-2.1-only"
+  revision 1
 
   livecheck do
     url "https://www.intra2net.com/en/developer/libftdi/download.php"
@@ -20,6 +22,7 @@ class Libftdi < Formula
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "swig" => :build
+  depends_on "boost"
   depends_on "confuse"
   depends_on "libusb"
 
@@ -27,6 +30,7 @@ class Libftdi < Formula
     mkdir "libftdi-build" do
       system "cmake", "..", "-DPYTHON_BINDINGS=OFF",
                             "-DCMAKE_BUILD_WITH_INSTALL_RPATH=ON",
+                            "-DFTDIPP=ON",
                             *std_cmake_args
       system "make", "install"
       pkgshare.install "../examples"
