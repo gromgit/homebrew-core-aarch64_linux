@@ -4,8 +4,8 @@ class Crystal < Formula
   license "Apache-2.0"
 
   stable do
-    url "https://github.com/crystal-lang/crystal/archive/0.36.0.tar.gz"
-    sha256 "32ad927e78c4cc85e18136f70cfb9f1798edcc734de4d927b28f4de16c1456d3"
+    url "https://github.com/crystal-lang/crystal/archive/0.36.1.tar.gz"
+    sha256 "e6806aa04f60dfe0aaf3cfef103e252f6ac3d8400ea3305b0d1b8463b052ec88"
 
     resource "shards" do
       url "https://github.com/crystal-lang/shards/archive/v0.13.0.tar.gz"
@@ -41,7 +41,7 @@ class Crystal < Formula
   depends_on "gmp" # std uses it but it's not linked
   depends_on "libevent"
   depends_on "libyaml"
-  depends_on "llvm@9"
+  depends_on "llvm"
   depends_on "openssl@1.1" # std uses it but it's not linked
   depends_on "pcre"
   depends_on "pkg-config" # @[Link] will use pkg-config if available
