@@ -7,11 +7,10 @@ class Wangle < Formula
   head "https://github.com/facebook/wangle.git"
 
   bottle do
-    cellar :any
-    sha256 "06467351aad44f6b73f3e3abdcae82cb5db98d41ed3c4df3a936ffd8be039302" => :big_sur
-    sha256 "fa928ebf1fb8364d27336b2c398453b6f0a6119162ab144407bcc67710f66fc8" => :arm64_big_sur
-    sha256 "425e49fc10e56226870ab2ecd3ed63a0a9e17d1c9e509d90e84f73351451f151" => :catalina
-    sha256 "3b50f1ac70e047268d8c246367c95f4803235a25556f16685abf77b64ae6ea20" => :mojave
+    sha256 cellar: :any, big_sur: "b5ebbe076c63faff2121854889523ea5b94435c682430cabc7071d5b39d12207"
+    sha256 cellar: :any, arm64_big_sur: "2ffc4f9b97c0e2d3c68da58b7b2282187b71cd1e18da4ed9d6bbe9ed6bfaf033"
+    sha256 cellar: :any, catalina: "e49e4c527c2c04135e2f98dd6f7e8c12c5b12fa3fc0b08224f181395381b57ac"
+    sha256 cellar: :any, mojave: "92b8fec0802eac2ca3cbf1c263571f40c676b929ad93f576088306a1cb52db4d"
   end
 
   depends_on "cmake" => :build
