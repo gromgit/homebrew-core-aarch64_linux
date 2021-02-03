@@ -1,4 +1,6 @@
 class Unoconv < Formula
+  include Language::Python::Shebang
+
   desc "Convert between any document format supported by OpenOffice"
   homepage "https://github.com/unoconv/unoconv"
   url "https://files.pythonhosted.org/packages/ab/40/b4cab1140087f3f07b2f6d7cb9ca1c14b9bdbb525d2d83a3b29c924fe9ae/unoconv-0.9.0.tar.gz"
@@ -22,6 +24,8 @@ class Unoconv < Formula
   depends_on "python@3.9"
 
   def install
+    rewrite_shebang detected_python_shebang, "unoconv"
+
     system "make", "install", "prefix=#{prefix}"
   end
 
