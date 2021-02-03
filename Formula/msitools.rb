@@ -10,11 +10,10 @@ class Msitools < Formula
   end
 
   bottle do
-    sha256 "0c1f853fe5b312dead4d5d805f17b9620b8c5a759167e8ea38fea102bcd7579f" => :big_sur
-    sha256 "524ebab8f0758feefa9560aadfaf06bbdc133cd76584524dc7804306c3b467db" => :arm64_big_sur
-    sha256 "f9b65f68c973c323e96a0492df562bae32e3ede79d9e5a6f24b89f53ef085883" => :catalina
-    sha256 "b7646423954ae62a8dcb8ee413f98e0f5e1c4b8a73876255fcd2f0371e547f92" => :mojave
-    sha256 "fd8689ba0902ed4d784f85969d281a0e1c58bb76f0fe17a93d96ba2d3f845cdb" => :high_sierra
+    sha256 big_sur: "ec00cadc6477adbd6c6b5ddd107586b31cfe8ecc78f9df7ff264c5b3b2990944"
+    sha256 arm64_big_sur: "a8efd95e41c4b40428c1e2c6f2b3abafa76f99781d26c64cbe0ca80f27b8ab06"
+    sha256 catalina: "f757655d692ef4acf1192c6fa4459a77b4480e0303589b158b862a0a1497afef"
+    sha256 mojave: "ad7526c586e2bb15a4325798af37c278448315fe4434daa6553258a00ac13cd4"
   end
 
   depends_on "bison" => :build
