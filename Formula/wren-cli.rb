@@ -6,12 +6,11 @@ class WrenCli < Formula
   license "MIT"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "d5304fb08746fd9b3a796adc0c0c15398153cca662d64047f9424e039d4b446f" => :big_sur
-    sha256 "c3bfd34fe266901e7d729780778390e1e3f9d65f96f25473add41c4572f43979" => :arm64_big_sur
-    sha256 "c7f9b2cc6e9913517f802d8ef0142484fd86cb2b972ceb670f1b791b65144937" => :catalina
-    sha256 "9bf6170802498342b99b6fb167a6ff9254601e911b5c7c74605145985909e6ff" => :mojave
-    sha256 "074f4d9634a9e8e7fc33cd302778116121874851aa854830d41e3b73ba50500b" => :high_sierra
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, big_sur: "a24574abd51e1ddd58d41e2dbbd89fc0a85f27087541e1c9a982daa601bcdb39"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fe12f29f5ae858b05f3069d15c7245ff8126a08cea8e9521f877b7991409eafe"
+    sha256 cellar: :any_skip_relocation, catalina: "bf9368948d1953ceef3246ff6e4d4d142b8d86d9d62d3f0f432a6f5d241f10b2"
+    sha256 cellar: :any_skip_relocation, mojave: "e11eb478ca480716c938c8f88af228bbdeaf394b6e11738606fbd57dff86a25d"
   end
 
   def install
