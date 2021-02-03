@@ -11,13 +11,11 @@ class Wren < Formula
   end
 
   bottle do
-    cellar :any
-    rebuild 1
-    sha256 "d9bad5cf08d732c215d5272618bdbe79ea9b5b8a57ab5879fdcc21bdd3ff073f" => :big_sur
-    sha256 "a60ed53ad23d2b9e4a1b8bcd59e4f48e2e6458ce23d61377add956c7c9128a8b" => :arm64_big_sur
-    sha256 "21bb30d077f3de93293d6e6f3c41e8f923e6de7d8d04df2f48c7378f76b3d16f" => :catalina
-    sha256 "d3837f28ed556d33753beb658f22b197f0afdb2aac3b30de26b2859397123d51" => :mojave
-    sha256 "529a384d6d1665dd269ef7b6e8ea61f1edccddd5478ce82ec30839346af3d3b5" => :high_sierra
+    rebuild 2
+    sha256 cellar: :any, big_sur: "af31e3436d816900efe9a6cefdf4934abaeab26e4624216e4a2e066b95459a35"
+    sha256 cellar: :any, arm64_big_sur: "7ef952fd5a8e55ff56f3d2e5a56434e105dbb9b983fa4996beac0105408a036c"
+    sha256 cellar: :any, catalina: "c975932fca6aa5e23a331542d2d905d9b53af0b32c44fa9489c9b7bbca666b79"
+    sha256 cellar: :any, mojave: "12270fe77e376fe51eec1ceb2f113b84edcf3bfe37ef1c6dbcbf313459488536"
   end
 
   def install
