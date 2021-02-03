@@ -1,8 +1,8 @@
 class Terrascan < Formula
   desc "Detect compliance and security violations across Infrastructure as Code"
   homepage "https://www.accurics.com/products/terrascan/"
-  url "https://github.com/accurics/terrascan/archive/v1.3.1.tar.gz"
-  sha256 "8be53cec9a55691bf14d035c99417b7566e43abeee1fd152e8fb9ef69ea67119"
+  url "https://github.com/accurics/terrascan/archive/v1.3.2.tar.gz"
+  sha256 "f5cab886ca8f0b233060524840280341bcdbc724fb79c08dfdb1ec8f66097a3a"
   license "Apache-2.0"
   head "https://github.com/accurics/terrascan.git"
 
@@ -35,7 +35,7 @@ class Terrascan < Formula
     EOS
 
     expected = <<~EOS
-      \tPolicies Validated  :	149
+      \tPolicies Validated  :	159
       \tViolated Policies   :	0
       \tLow                 :	0
       \tMedium              :	0
