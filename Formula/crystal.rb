@@ -19,10 +19,9 @@ class Crystal < Formula
   end
 
   bottle do
-    cellar :any
-    sha256 "a585f83a1634392a67b8cca58134dcb2ec13fe5aee6b31bdadb71de719b3d103" => :big_sur
-    sha256 "38508588d43eef3e18b19e4dbc6b827ebebfdec958ced7d216bd362f618b6715" => :catalina
-    sha256 "0cb3e38c1504568fb7a013d7bfdde75a49ad252b23cb1257bb720c25d11e7fea" => :mojave
+    sha256 cellar: :any, big_sur: "ac5f52170b9be5f15878d81fef3d6cd918ebed5d413f0a6904e46f8893d53b0b"
+    sha256 cellar: :any, catalina: "a3091f12520a9298bf0e86811125a0f2eb884152e621cc7da71f2ca75f7781cc"
+    sha256 cellar: :any, mojave: "29aa03814c1576aa8509ec65205425a3e2300f7eb9613f506d2b198277d13e7c"
   end
 
   head do
