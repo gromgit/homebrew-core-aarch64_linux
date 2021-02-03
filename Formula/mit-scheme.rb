@@ -13,10 +13,9 @@ class MitScheme < Formula
   end
 
   bottle do
-    sha256 "ae2167a7a177e9731350e5f7d91679dc29856fd1b504653c5e54c5e3d2266393" => :big_sur
-    sha256 "5ae123ef4a76b34e2b927873991a823b0ab68a5518d1543f1e76bf9d3c36e589" => :catalina
-    sha256 "7f74120df838cc2f4542c73f20b7f3e3473f23a775d249e2b8170e6acfd43ed1" => :mojave
-    sha256 "cf0d2bf18da0dd0454f53f125bcb4d85632619cd8a79f3dd30ddb16a19c0d470" => :high_sierra
+    sha256 big_sur: "575c4d509b9718b21324f135fd9945a6906d5d09c72da10c3f48915ab21976f8"
+    sha256 catalina: "02fa401eabf3c3b2c382e257b64e15b13f5e3a27cf97a7a1c13f629242fd0061"
+    sha256 mojave: "02ddca7dbe1b6bb1e0e69496dde10ee3e4de49a623c7a6ec2ee2d43f5dfda2bb"
   end
 
   # Has a hardcoded compile check for /Applications/Xcode.app
