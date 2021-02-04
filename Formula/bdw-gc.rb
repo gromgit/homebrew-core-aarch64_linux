@@ -17,12 +17,10 @@ class BdwGc < Formula
   end
 
   bottle do
-    cellar :any
-    rebuild 1
-    sha256 "bb94ab58bc20b01662c432d21920c9a2e644aad92208b640658d3fd9fb530636" => :big_sur
-    sha256 "928805b89e3de74d9d45043077ee9e64de15079ae9730216a604603afb17b810" => :arm64_big_sur
-    sha256 "31634ad61ce92329e34154feb1ad14e4786592555ef9a14259a09ea0648d5af7" => :catalina
-    sha256 "898aa902c343deda1046532d36351a9d0a08d619dda393f4e50dbc78c674a580" => :mojave
+    sha256 cellar: :any, big_sur: "af8bfafe1425f3cc9923bd49a375f85c13255124ed7a952137fe924431adc1c4"
+    sha256 cellar: :any, arm64_big_sur: "ee743d115b619b02230863812224a1c33dc1d3430280728eb10990cc86caa994"
+    sha256 cellar: :any, catalina: "73a3a75a47a0007a772fe229f11bc0710988af6a8603c56a0f7fae3d9a317149"
+    sha256 cellar: :any, mojave: "960f60118f6f5cbf4e04a76e4c2103c7fb446e43e5db08362bca0b13763e137b"
   end
 
   head do
