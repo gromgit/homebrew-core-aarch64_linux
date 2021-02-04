@@ -12,10 +12,10 @@ class BitwardenCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "169dc03c6e32060e3e8e32e9cd61d58e386b52238c4ff0d9d830bba84015a7c2"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d8d85b4f14d7b98d7ca5844741fc5009c21500724e9ce034b1ebc5298c54f667"
-    sha256 cellar: :any_skip_relocation, catalina:      "ef80f95534d1e0731599620dbbd06d8297a1b4c83a486b14a9c2f507313422f9"
-    sha256 cellar: :any_skip_relocation, mojave:        "32f5ccd2ac760504711915d3291c0787a4b6b477ad44670b9c351d909a455167"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d35e2f8abba1c08879ef4f756643b005dc13ced957cabb542ae9fe8ca72eb71c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "76456ab9cc5aa55791cc6480d771b23370a3ed3ac038efd7841cc3535ecbc1c1"
+    sha256 cellar: :any_skip_relocation, catalina:      "7be0a5239e74b4a754730ca1baecb6e2666a7a2c2883ffc61b368989e50dbb4d"
+    sha256 cellar: :any_skip_relocation, mojave:        "a55e52d3c9c4fe1fba871182575dceb6b7a415cedeea192062d556b07b61483f"
   end
 
   depends_on "node"
