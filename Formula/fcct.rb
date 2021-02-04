@@ -12,10 +12,10 @@ class Fcct < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "66f683e925f258e4392bbe26d6ca2652f5cf4f038e856dbeecfeffbc18cc78a3"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ebe717abe749c01afdead955cd5f53a37a3cfc2272acc138e7d12fbfe33358a8"
-    sha256 cellar: :any_skip_relocation, catalina:      "c113ecd134bea6273e4cf66f59b7a646278ae5f9ea0b55b2266a207814788171"
-    sha256 cellar: :any_skip_relocation, mojave:        "7cb56820d1a8fc8db365477f1af7e346484e159747fc86f0ad0e11f9e1fbf6e5"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ad3be57c5b5be44baebf9b65b58707dc6ae42d8ec88694ecf212ef48b1ec6f71"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "168e14f5c7e7843342a66bd5073e198ee1f63c614b84803f9c9a83d6932b33c2"
+    sha256 cellar: :any_skip_relocation, catalina:      "bfa9271ef810cdaa856fe7f77a1bedebda49156a62ffedbadac2a7b3dff762ee"
+    sha256 cellar: :any_skip_relocation, mojave:        "01a0424af0d9e118de1f247fee0c9b0cde198364860c818b55259e9c8884ae5b"
   end
 
   depends_on "go" => :build
