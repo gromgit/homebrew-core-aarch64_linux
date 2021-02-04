@@ -7,10 +7,10 @@ class Jql < Formula
   head "https://github.com/yamafaktory/jql.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3d28b652abfe40c2fe87fee9c6456bd0503c5dce909936b241dd203dc17c3a19"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c19bf87a9f1d36b96100191ac0eab6936f531646bcb52ae92213088cae70820f"
-    sha256 cellar: :any_skip_relocation, catalina:      "996fd5b3d1f5020ab3fc1730ca089f9a4798c46c035b014053b1213ee6bdc34b"
-    sha256 cellar: :any_skip_relocation, mojave:        "8692fdf225aad4d9380f0574ee558c8c65c22916eaeedd15fc2eb6de695c6e17"
+    sha256 cellar: :any_skip_relocation, big_sur:       "1f5948e6b22235f43c23bfcdeaa8bfcb9ab238b1ce7050f455f6416c4d9b5b67"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5ac4ee4d58c7c60ca260f9ed69f210f6e73149be8b8b9d571f01986c6fae2d60"
+    sha256 cellar: :any_skip_relocation, catalina:      "d95e93bea9dc17026e5033482916686a87e22a80035c387efeb17bcc8af48c2b"
+    sha256 cellar: :any_skip_relocation, mojave:        "b0e27ddd36efe3fa14caac8b3096e3408b4406af2cda72a7b0bb66a1f062d060"
   end
 
   depends_on "rust" => :build
