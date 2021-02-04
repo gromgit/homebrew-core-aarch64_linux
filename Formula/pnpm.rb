@@ -12,10 +12,10 @@ class Pnpm < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4f5b57b3adea427c661869c8007da845dcd03056e56e2dc3afa1ac853c9297c0"
-    sha256 cellar: :any_skip_relocation, big_sur:       "dcd4fff98abe6003bf78452c67e85b91e080922204a703147fb6b82931d4e20b"
-    sha256 cellar: :any_skip_relocation, catalina:      "9f3dcfa8356e778fff7c11288ae8ff9e2c9cc3a8c7696a4f70ce2653015537b9"
-    sha256 cellar: :any_skip_relocation, mojave:        "490740369b91b01358d6f29cc119e807a452e0e71cf4eca5cc088c3c5ab5916d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "38f0857cdfcd85de81608412e85b20ea87ec8b3c55e673b327b36efe34a92f25"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "af7cde2aac12ee4eb55dd1c70abcb34e528a042a6402ec8215c0bb589278b91c"
+    sha256 cellar: :any_skip_relocation, catalina:      "1edef5556774b4e87c7750aaca79a06d50ca19599be719c2aaa4dcf8f4ece724"
+    sha256 cellar: :any_skip_relocation, mojave:        "62e08ef5ce53395848b839f36a5eb921344cd63813619a3adc6289baa1175b05"
   end
 
   depends_on "node"
