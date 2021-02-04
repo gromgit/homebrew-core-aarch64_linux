@@ -6,11 +6,12 @@ class TerraformAT011 < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:     "6fe2975cab4a9a85cf75db6739bfd376db4df944f85078f73fba22da291bfb91"
-    sha256 cellar: :any_skip_relocation, catalina:    "e6db9ebe826e856ff9bb10ffcb8885ce9bf1535ced8c3b477ae48d64c0c99de2"
-    sha256 cellar: :any_skip_relocation, mojave:      "4460e332118c477f7389093d533e63752469973487275f1d656a80974d723888"
-    sha256 cellar: :any_skip_relocation, high_sierra: "a7b28af5ba3c9f06614eef3ca71653fbfacc3ff62abbaa75f4c187f996584af8"
-    sha256 cellar: :any_skip_relocation, sierra:      "eb5d3500ed06ce55c984e79a317050b4483b25774bf6a77147dfdb2c3746fa25"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c04e927708a3c11be644b96295d2f2cdd5ea0452398e54ea5240fb7b4900d10e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6fe2975cab4a9a85cf75db6739bfd376db4df944f85078f73fba22da291bfb91"
+    sha256 cellar: :any_skip_relocation, catalina:      "e6db9ebe826e856ff9bb10ffcb8885ce9bf1535ced8c3b477ae48d64c0c99de2"
+    sha256 cellar: :any_skip_relocation, mojave:        "4460e332118c477f7389093d533e63752469973487275f1d656a80974d723888"
+    sha256 cellar: :any_skip_relocation, high_sierra:   "a7b28af5ba3c9f06614eef3ca71653fbfacc3ff62abbaa75f4c187f996584af8"
+    sha256 cellar: :any_skip_relocation, sierra:        "eb5d3500ed06ce55c984e79a317050b4483b25774bf6a77147dfdb2c3746fa25"
   end
 
   keg_only :versioned_formula
