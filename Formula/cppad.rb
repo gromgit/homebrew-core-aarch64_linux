@@ -14,10 +14,10 @@ class Cppad < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "62c2c9be49532a807e1d9698548496c21903124b8c6b4dc408ff8db186bf9a91"
-    sha256 cellar: :any, big_sur:       "4abb02a14de2587593cd00ceb6bef953529969e87dddad3b331845330f560415"
-    sha256 cellar: :any, catalina:      "de8b01a4ded52362908c9b4551c5170de57ccd75c7d85877eefb1002bf8ff140"
-    sha256 cellar: :any, mojave:        "4e233fc020fbb8cef7372ba617d5591547738a793f4180559633cc59008756c1"
+    sha256 cellar: :any, big_sur:       "bbd9d0e16ee51ec4f9d1b031ee459b815bd1fc059c36246b7cbe69e6177750ca"
+    sha256 cellar: :any, arm64_big_sur: "577118fabf3804c109fa22d2f995c3170ae9e319e9d50bd810ba98a38ff285bd"
+    sha256 cellar: :any, catalina:      "dba78015166853249a2ff6467f9dd7fd4e45c7914706ed174e94f31536294549"
+    sha256 cellar: :any, mojave:        "28cbc31c7971a99a55d73af33159ccdb6ff0e4902dba0a512065704a30bf5c47"
   end
 
   depends_on "cmake" => :build
