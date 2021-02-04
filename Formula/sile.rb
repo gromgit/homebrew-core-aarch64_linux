@@ -7,10 +7,10 @@ class Sile < Formula
   head "https://github.com/sile-typesetter/sile.git", shallow: false
 
   bottle do
-    sha256 arm64_big_sur: "80c36c1b06e74e2c46e16ef274874fecce5f2b4bc1521a1569c55aa89dccb359"
-    sha256 big_sur:       "d791ab6a480aabc66efede6487b6c8199527d0d9874249f510f18bf50fdb8443"
-    sha256 catalina:      "cb965e298eeb6f23de84f65c97b6537c2ae5ad1fc55224c3355f77eb28113bb7"
-    sha256 mojave:        "f1707b37213ffda7234761238e10a8abb8179c86c3f9b6e02c6d8dd71ffbecc0"
+    sha256 cellar: :any, big_sur:       "96fa8729e8a5a329e31ba0a72401e37f555cb1b901fe40bdaf86ff212f40d873"
+    sha256 cellar: :any, arm64_big_sur: "7aacf1722fd5edb35edbafed39a5135ee9dbfc614d5c2af6a78a10a4e72b58ae"
+    sha256               catalina:      "63164873fb734c31bef4f15dbe1c4b7825f8f4493188be75ebf3930c7a2c6e91"
+    sha256               mojave:        "9da40bac62aa9a45c9f0c3b0bcd06de5c6f7da79240b69b21e13c7af52b9885f"
   end
 
   if build.head?
