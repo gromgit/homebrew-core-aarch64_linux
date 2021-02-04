@@ -7,9 +7,10 @@ class Mlkit < Formula
   head "https://github.com/melsman/mlkit.git"
 
   bottle do
-    sha256 mojave:      "52ac5d00915774111535053f287c05a63976c83ed7a5a900bbc263f030ea6900"
-    sha256 high_sierra: "79694e15c915cb2c08b680b2b4404cfbbb6fff56e8f6b5f0196fcc485466d41b"
-    sha256 sierra:      "5df6b95fad69e10b31352824433251d3306a42c55c5e7164b0c47b986ea1009d"
+    rebuild 1
+    sha256 big_sur:  "40b6dcb141c3c8d77df6e0e269f29f8b738353b9c21201c4bad83b7ae66f460c"
+    sha256 catalina: "e4d43996ae80f20aa5792b23cf1e01e8f8bf12828c3e8a1b3c698c001f52f8b2"
+    sha256 mojave:   "b650ddc8a5b9448fa159e053a8daf246e404f7ac817eff8e8195036e13e1bb75"
   end
 
   depends_on "autoconf" => :build
