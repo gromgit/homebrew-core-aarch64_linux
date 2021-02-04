@@ -12,10 +12,10 @@ class Whistle < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6d7b74c58893d2094e5094da3bb29d43c1ec96ed4933c7c05d16a86d58530035"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3933da9e9d4da7a2113b6d9985d8440ae992323729277f7f9680e732002d455e"
-    sha256 cellar: :any_skip_relocation, catalina:      "193e546cb0b7a0bbb0478caffd442a3de4b0ff57fae944c7de65f73be74593ea"
-    sha256 cellar: :any_skip_relocation, mojave:        "9a99fd867586905c0276f964db23f3fc6f8cbdd2ee31bdb71b244a72f2e16b05"
+    sha256 cellar: :any_skip_relocation, big_sur:       "55c1a3c814402fd3b3eb7c9e55a85fc34f2f4ec6d7c690550921516f2fb30c41"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d25cfd686f466915d102aa6dbed3a981bf8590175336c58a6ec9bda67c92d9c6"
+    sha256 cellar: :any_skip_relocation, catalina:      "3b2443d360313ddcf9007e41c7dbcf61d3d61f8b2b0b47a63d2aa274b30af258"
+    sha256 cellar: :any_skip_relocation, mojave:        "acca70eda23b746e429ba07e79504df55e9c877da950b017c8094224bc31e101"
   end
 
   depends_on "node"
