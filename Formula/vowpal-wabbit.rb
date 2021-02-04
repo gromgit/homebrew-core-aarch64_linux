@@ -3,9 +3,9 @@ class VowpalWabbit < Formula
   homepage "https://github.com/VowpalWabbit/vowpal_wabbit"
   # pull from git tag to get submodules
   url "https://github.com/VowpalWabbit/vowpal_wabbit.git",
-      tag:      "8.8.1",
-      revision: "5ff219ec0ff28af5d35e452f5f18e6808993e08a"
-  revision 1
+      tag:      "8.9.2",
+      revision: "88442026750858c1dea9218dc0666fbbb5ae6520"
+  license "BSD-3-Clause"
   head "https://github.com/VowpalWabbit/vowpal_wabbit.git"
 
   bottle do
@@ -18,12 +18,6 @@ class VowpalWabbit < Formula
   depends_on "cmake" => :build
   depends_on "rapidjson" => :build
   depends_on "boost"
-
-  # Support using brewed rapidjson
-  patch do
-    url "https://github.com/VowpalWabbit/vowpal_wabbit/commit/9aea63874e70eee477b9b281ef12515f70f5d1bd.patch?full_index=1"
-    sha256 "e69037901f0027dbcd21204822875efb98c676805d383818483fbe7badc3d6b4"
-  end
 
   def install
     ENV.cxx11
