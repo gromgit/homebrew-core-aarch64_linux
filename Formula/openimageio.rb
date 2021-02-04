@@ -1,10 +1,9 @@
 class Openimageio < Formula
   desc "Library for reading, processing and writing images"
   homepage "https://openimageio.org/"
-  url "https://github.com/OpenImageIO/oiio/archive/Release-2.2.10.1.tar.gz"
-  sha256 "625f4ad666f9aa133039c0ae6ade8fc5dab835fadac988cbe65f824463d614dc"
+  url "https://github.com/OpenImageIO/oiio/archive/Release-2.2.11.1.tar.gz"
+  sha256 "120170e8517d8911f52b0fb56f14eb56aad88edd72cc9e4b2e35c74025293b7d"
   license "BSD-3-Clause"
-  revision 1
   head "https://github.com/OpenImageIO/oiio.git"
 
   livecheck do
@@ -37,14 +36,6 @@ class Openimageio < Formula
   depends_on "pybind11"
   depends_on "python@3.9"
   depends_on "webp"
-
-  # Patch to remove explicit Python framework linkage:
-  # https://github.com/OpenImageIO/oiio/pull/2807
-  # Remove at version bump
-  patch do
-    url "https://github.com/OpenImageIO/oiio/commit/5ed9d270222d18c1a789e08cea543c8cb50e1030.patch?full_index=1"
-    sha256 "1fba4ce7bc33efcd1184a5aef87e76591008c0b1d823f9b82f51eae78802a591"
-  end
 
   def install
     args = std_cmake_args + %w[
