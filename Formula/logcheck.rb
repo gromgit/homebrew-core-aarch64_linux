@@ -11,10 +11,10 @@ class Logcheck < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4af2e10c4914663440c40f8149b0fee3a03598ac9b24577750f7a95115db72f1"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8907bcff70936e3418f4194860e7874990a71958028f11d42caf720e856d15f8"
-    sha256 cellar: :any_skip_relocation, catalina:      "d181f0b17c7518ae41e0b6e45f2eb533273f6868f19ec0412d302b3b70fbdd52"
-    sha256 cellar: :any_skip_relocation, mojave:        "6ed00ab1ce56bd1cee25785f373f20362a8e4bf6e998026eac635086e4cccb71"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f2bfaccdb1a53aec3701d8f35c960b3d253395f648ff32602adcc355741b5c36"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "93c3137e2f64093bbd04d83e291b6703c438c2f54624c48b66812dbe59e3e554"
+    sha256 cellar: :any_skip_relocation, catalina:      "aa5bf95cb6fe848f0577be456ee84fd3ea2e5f5e7c00ecab57d6bbc85bf2d218"
+    sha256 cellar: :any_skip_relocation, mojave:        "5d88f3e85dd26050d6e65c4e980de25e7168bf6c254ac7e141c10360c41d8c28"
   end
 
   def install
