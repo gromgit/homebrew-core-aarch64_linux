@@ -12,10 +12,10 @@ class Octave < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "8f06de8a81e26a256997ab63f293a0cf7a45d2aa903bec5fad64f0eeac4dff91"
-    sha256 big_sur:       "ff33dcad0c4ac9f3217536737c0efa63502c6fe918fbe188d44dfce82f3eb4a3"
-    sha256 catalina:      "ea27285a96cdfa71144297ee0d63e1a26df618b8f763a40994d62bc91aca2d41"
-    sha256 mojave:        "45e1d85154018d876e772283c5efe297383355b9be5aa287c51fe583b5d9b9d9"
+    sha256 big_sur:       "364eefc2bd38db495795f8815f234031b00dec5a9a1f45cd9e667d1641ececf8"
+    sha256 arm64_big_sur: "0ffe32cfaeb313b49a4f6b1dd1663dbf313156682492c126cfa32bac542bcb1c"
+    sha256 catalina:      "01140e3fafbe5062e299f372959a7e59c7a49031097ab26a3a34bf582b7016a6"
+    sha256 mojave:        "0cf560a9f9c32bd5f0155ca27c38047205bdc53009c0540017dac10c99f6ff4c"
   end
 
   head do
