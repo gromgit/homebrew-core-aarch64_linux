@@ -2,8 +2,8 @@ class Kamel < Formula
   desc "Apache Camel K CLI"
   homepage "https://camel.apache.org/"
   url "https://github.com/apache/camel-k.git",
-      tag:      "v1.2.1",
-      revision: "476ed0e600abe6fe54de19225f8f0c18d6bcbfa9"
+      tag:      "v1.3.1",
+      revision: "b705f57d2503505388e40931a8c97ad50fc2d346"
   license "Apache-2.0"
   head "https://github.com/apache/camel-k.git"
 
@@ -51,7 +51,7 @@ class Kamel < Formula
     assert_match "Error: run expects at least 1 argument, received 0", run_output
 
     run_none_output = shell_output("echo $(#{bin}/kamel run None.java 2>&1)")
-    assert_match "Error: cannot read file None.java", run_none_output
+    assert_match "cannot read sources: Missing file or unsupported scheme in None.java", run_none_output
 
     reset_output = shell_output("echo $(#{bin}/kamel reset 2>&1)")
     assert_match "Error: cannot get command client: invalid configuration", reset_output
