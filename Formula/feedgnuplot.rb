@@ -1,10 +1,9 @@
 class Feedgnuplot < Formula
   desc "Tool to plot realtime and stored data from the command-line"
   homepage "https://github.com/dkogan/feedgnuplot"
-  url "https://github.com/dkogan/feedgnuplot/archive/v1.55.tar.gz"
-  sha256 "1205afedf8ce79d8531e0d0f8f9565df365a568a0ee6a8e17738602682095303"
-  # licensed under either "GPL-3.0" or "Artistic-1.0"
-  license "GPL-3.0"
+  url "https://github.com/dkogan/feedgnuplot/archive/v1.56.tar.gz"
+  sha256 "93943aee58f124cc21f70267fcfba48ec70a8dc112ddcba075afe074b51270bc"
+  license any_of: ["GPL-1.0-or-later", "Artistic-1.0"]
 
   bottle do
     sha256 cellar: :any_skip_relocation, catalina:    "7d394a581a614dcc5130eac02310e58f994067b94a8dbd413c983157e3d37cc2"
@@ -18,6 +17,7 @@ class Feedgnuplot < Formula
     system "perl", "Makefile.PL", "prefix=#{prefix}"
     system "make"
     system "make", "install"
+    prefix.install Dir[prefix/"local/*"]
 
     bash_completion.install "completions/bash/feedgnuplot"
     zsh_completion.install "completions/zsh/_feedgnuplot"
