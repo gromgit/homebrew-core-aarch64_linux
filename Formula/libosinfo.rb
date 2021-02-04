@@ -1,10 +1,9 @@
 class Libosinfo < Formula
   desc "Operating System information database"
   homepage "https://libosinfo.org/"
-  url "https://releases.pagure.org/libosinfo/libosinfo-1.8.0.tar.xz"
-  sha256 "49ff32be0d209f6c99480e28b94340ac3dd0158322ae4303adfbdfe973a108a5"
+  url "https://releases.pagure.org/libosinfo/libosinfo-1.9.0.tar.xz"
+  sha256 "b4f3418154ef3f43d9420827294916aea1827021afc06e1644fc56951830a359"
   license "LGPL-2.0-or-later"
-  revision 3
 
   livecheck do
     url "https://releases.pagure.org/libosinfo/?C=M&O=D"
@@ -31,8 +30,8 @@ class Libosinfo < Formula
   depends_on "usb.ids"
 
   resource "pci.ids" do
-    url "https://raw.githubusercontent.com/pciutils/pciids/791050fc4eca1e19db3a985a284081f9038c21aa/pci.ids"
-    sha256 "587aa462719ffa840254e88b7b79fb499da2c3af227496a45d7e8b7c87f790f6"
+    url "https://raw.githubusercontent.com/pciutils/pciids/7906a7b1f2d046072fe5fed27236381cff4c5624/pci.ids"
+    sha256 "255229b8b37474c949736bc4a048a721e31180bb8dae9d8f210e64af51089fe8"
   end
 
   def install
