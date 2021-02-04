@@ -11,10 +11,10 @@ class Sundials < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "ce5c25344fa3d88cc89d4840706bc7b03ce0b8abcbe199f253da7fac03bfdd0f"
-    sha256 big_sur:       "3efeaeab0d7097370464a61085e8feddabf80436e092674f8ec36894406d791c"
-    sha256 catalina:      "db84818157b4d314de7ebc338f8c972cb026f84ff9234365b2e91bbc8a4caaf1"
-    sha256 mojave:        "1876f70f5c54be1cc4aadc7935385e65451f7612766f1a33a0850e12c152232f"
+    sha256 big_sur:       "eca818ac9876c5f784483f49eaeb6b8bb2a4a7950520f13e7dd99f43ad06d223"
+    sha256 arm64_big_sur: "0fde980804a45806673fce03d868a090d38b8d1615b152dc8da3797f1d59054d"
+    sha256 catalina:      "bacddf8c38b9c1236cd0aa2dc85273f7ffff6726418781f5a0e223bf132e3e07"
+    sha256 mojave:        "9ad76e3dbc09c9d9cb4af9e600376fcae287c63128a100959871ddfe8dba438e"
   end
 
   depends_on "cmake" => :build
