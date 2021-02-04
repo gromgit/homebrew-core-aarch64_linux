@@ -11,10 +11,10 @@ class Lighttpd < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "0a51151b104b49f3441184f4ca6ca217c652205433284673904f74264c9cb7c6"
-    sha256 big_sur:       "ae1d303787fd7ca9a7c568ad6d6433c6fb8a1e5c3a635ce0557c466f2e591690"
-    sha256 catalina:      "5c4a953e2c563c975d3a8d835614a49d8aebf9daa8e9a1eaa1d426aa2e524d5e"
-    sha256 mojave:        "0742066005e53a6cfa4d4aad06f3ff16f82439932ec0f265f0a8812cb52bce66"
+    sha256 big_sur:       "71ac008d18b324a770a9f39a5c8194d0526ab85e4491336f059206531f7f0868"
+    sha256 arm64_big_sur: "83be5fc9ff54264e3a2ec2633259eb9121fc5fdc7bdd3f43c3319971bc9a6e97"
+    sha256 catalina:      "bcc720caef8110766bad93f27016cac6443a000ab5de0cb7b231e8f01d3f1129"
+    sha256 mojave:        "243daa151b9d0bc1fb6ac914eb807a78f219bbced3ed76f1cfbe1c319189bcbc"
   end
 
   depends_on "autoconf" => :build
