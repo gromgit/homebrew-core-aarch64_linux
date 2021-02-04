@@ -6,10 +6,10 @@ class Helmfile < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d48898f44f096a5ac149f0c1cca68335f8234a0ed0e7e82ed1e9dc1ab4b1c85a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "133625040991e07c1d18e646b1d73c177ea5c79741b85ff1aaabdef0e8ed9907"
-    sha256 cellar: :any_skip_relocation, catalina:      "0404ad747ed1d5c74bf730af84d2c0c0650d26d93609182803cb9384c767398a"
-    sha256 cellar: :any_skip_relocation, mojave:        "fe94b8383c0cc9dedeb9968f3ad007a57027df574afa46e17a472f6adfac76b0"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e346b2062d4eeefc4ce572034ff5786d685ff0e7afae1e22a67675f173779162"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e638118710ee6b1dbd35d68a5d69ddd6173fc74dc6399e0ccfab227de84ea8a0"
+    sha256 cellar: :any_skip_relocation, catalina:      "8da57f526fc2a750b2c0ffc2188f2e85dea0075e3f905a84a31df3cd598763ff"
+    sha256 cellar: :any_skip_relocation, mojave:        "f77168617bd88f9280f3a1de5299bcf7b2c3b3350c85066878cfd4a6ec36b44d"
   end
 
   depends_on "go" => :build
