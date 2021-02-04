@@ -6,9 +6,9 @@ class Gotop < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "01ed715cd19b9ced52c17755df4666f6b16ec9252d9844b713e6381205f82c56"
-    sha256 cellar: :any_skip_relocation, catalina: "91732e8e1bf94c18b3c06a43a675aed959c0d87b6ec3e1930e9b06e7a9b6e2e5"
-    sha256 cellar: :any_skip_relocation, mojave:   "06d7521db8a6b3d9a03aae4d246ed48908491d3d4f3ba7d9f5051165e4cb2fd8"
+    sha256 cellar: :any_skip_relocation, big_sur:  "5bd55068dd42b2aac57ed81c27a991491c1025e419f1a9a04fc8625ee6b052b9"
+    sha256 cellar: :any_skip_relocation, catalina: "20dcda60bff1a19a0aa266ac9171928435ed2f5100ef4737a9d7c0fc68b5e8d7"
+    sha256 cellar: :any_skip_relocation, mojave:   "7292d06bb5efcbb61f919249c1c7ee5a1ab3547f2c791dc0ee18b80694baef47"
   end
 
   depends_on "go" => :build
