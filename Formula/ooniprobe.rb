@@ -6,9 +6,9 @@ class Ooniprobe < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "96ec812187f18df0ce2b892275f712495167d5b07441325f3d19ab043c0e3352"
-    sha256 cellar: :any_skip_relocation, catalina: "aa5c27c834a0cd256f31536c6c186cf15304e22331774c83da6961c22145473d"
-    sha256 cellar: :any_skip_relocation, mojave:   "e8726380e93d3c6df0138fa764da071c10d7ad6add4a59ad19962941930438dc"
+    sha256 cellar: :any_skip_relocation, big_sur:  "fa6ad042547fc508eb4cb41c13e91df1b54ba95079ebb5daf1fdf17b2a23fa57"
+    sha256 cellar: :any_skip_relocation, catalina: "539c5d2476da05943c9a44b668b621479ce9105a0463c6526ec7b76dfb1653bb"
+    sha256 cellar: :any_skip_relocation, mojave:   "d54dcf20b1f3d0b67aafecf3086310de96bbe857c5b79e6d58c0347a21c40719"
   end
 
   depends_on "go" => :build
