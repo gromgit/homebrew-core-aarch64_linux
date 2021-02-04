@@ -8,9 +8,9 @@ class Tanka < Formula
   head "https://github.com/grafana/tanka.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "9b470a925b2fb43d4fa08f7798bd3c5e0ce9ab54841d71f969c33af12f09f612"
-    sha256 cellar: :any_skip_relocation, catalina: "a37f3718e66f5944930c4b7c0268f9e57c65a86327663080d438ef01fcd5c198"
-    sha256 cellar: :any_skip_relocation, mojave:   "3b2759ab2b1f4c85543ca6badf31a60a2e6682037f8a4a88950bcd59efd2f532"
+    sha256 cellar: :any_skip_relocation, big_sur:  "f07de82a23882bb5f3e70ce75af636ac8531a1dad3ffff9d6c3e1bff2477e48d"
+    sha256 cellar: :any_skip_relocation, catalina: "a623c5125bfe60bd68f2ce905a1181a16a1307ad9eefb058128ac7d5e34a0b87"
+    sha256 cellar: :any_skip_relocation, mojave:   "e05cfb512827a94bb0d8303a32737ff0da0fe63f5d44a49603b1d5d39d3ae264"
   end
 
   depends_on "go" => :build
