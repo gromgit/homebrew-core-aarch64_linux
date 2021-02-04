@@ -12,11 +12,10 @@ class Autopep8 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ada2ccfd2662a8b51baca7ba6d8b7ac2d56615439d21f79014f2e596bbece49d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a50d7391893a20c137ba971ef2119ab63f5ceaca21d35fee6e8bda5472a6c6b2"
-    sha256 cellar: :any_skip_relocation, catalina:      "8ee96be12db50876b59fd7527e5ac37e78956a1e0a7afee54c37606057b0512b"
-    sha256 cellar: :any_skip_relocation, mojave:        "f988eb964253d539121936ee925466884bfd57adea919a642d926b5ee5c6188a"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "b0105ebba5fe631f32f32a097c15ac904f363746d5945c7d16f994e7dd0cb129"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0d9286b07276cd78d5fb31ed9bd126b5675ffb9b8509793f17d49a571e44b49b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "abf487f3114b67ebfe0760421a3df96e948fbcb2ec378cd2fcab08e2d73aaf49"
+    sha256 cellar: :any_skip_relocation, catalina:      "7445d78c6c97dad32d841a2afaa2f655d1514b72eca5650460d1d1a8f175e1fe"
+    sha256 cellar: :any_skip_relocation, mojave:        "b3ea685a6f92eb1c2b283a38c54a1155fe06fc3f0f7374c8a99ffcbd483286c8"
   end
 
   depends_on "python@3.9"
