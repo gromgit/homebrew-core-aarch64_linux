@@ -7,10 +7,10 @@ class TerraformLs < Formula
   head "https://github.com/hashicorp/terraform-ls.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "077434a34498a60299978fbc61b791ceaba4bf6b0a59baf5dd02deeb77d11895"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6b6c3b8fd09b11f785529284d947894ae20907c18ad5784c7bfdc3b53e3875e9"
-    sha256 cellar: :any_skip_relocation, catalina:      "716918f69f13a96abcbc3d4f5250b24e6f0f0b9c606c98afd4fadb7517901f83"
-    sha256 cellar: :any_skip_relocation, mojave:        "a32cb21629c530e0427e60c0b121f9b5171a8eda9bc6f56e36e14244b75f9864"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3629ebc8543ab98dd8a02a77ccae3e47575e31965441fdc8fd6c035bb30f72da"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a5694059a150e38151efda727ea648e6138dd618efb287ad0e86666bd75e9fe9"
+    sha256 cellar: :any_skip_relocation, catalina:      "63fba7d57c5b7504463ddd4f207aa00911afa78a97e3a1d97153bdb53f2c373a"
+    sha256 cellar: :any_skip_relocation, mojave:        "e796d66cbf4bda8dc72ddd1b00b69e804e73132bd66a7af1ca9eb4f1354df2b2"
   end
 
   depends_on "go" => :build
