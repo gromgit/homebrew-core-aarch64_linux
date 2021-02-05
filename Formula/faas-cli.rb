@@ -13,11 +13,10 @@ class FaasCli < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a9d872e863bd0f6dfdc67f8409c219e563b1bf7c1ea387da412269d9c25fd213"
-    sha256 cellar: :any_skip_relocation, big_sur:       "fc72787d12d87458a7f4316b6bb17b787de281ad29b1278b67e52e961b5fc46c"
-    sha256 cellar: :any_skip_relocation, catalina:      "3a10c82fa4f9fa0b086704079ba0161b3883ce5d185841dae218770727d775b3"
-    sha256 cellar: :any_skip_relocation, mojave:        "40f441a84115426863d186f994fc247d115f46917d88f81b92c54628b172a7f8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "65b9db3d39329f4595cdcbd405404d922b7c1ce5ce0e9f386e30e32855c4aac4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "89e9ce8efca26a75c561134c48d3c74fd9171fca3fa93d3dd58c380e5defaa3a"
+    sha256 cellar: :any_skip_relocation, catalina:      "12817b376b182bb12b51731615beb7e39b831d6217bff294dfdf1ab968bb4f8a"
+    sha256 cellar: :any_skip_relocation, mojave:        "6ca1c7f2d37ac19befb416ce012b0a1a4830593bed1ed60370bf992a6939f6b7"
   end
 
   depends_on "go" => :build
