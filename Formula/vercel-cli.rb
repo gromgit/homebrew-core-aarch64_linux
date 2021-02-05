@@ -12,10 +12,10 @@ class VercelCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "14898515b34eef752230b77a29474d843a8d446ff05570dedaea495a6c4db773"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9b1625cbeb9e146fa3dce6b7a8a9d77860ddb92314169056985ea1cb84cc0d97"
-    sha256 cellar: :any_skip_relocation, catalina:      "5f1ff0f828e5cf8ffbf4a4f00dee0096d46975986aeccea9f56c178c7fba13ee"
-    sha256 cellar: :any_skip_relocation, mojave:        "df1de79b6830d01ae33454ef939aad4aead5437a808a8fa27d6f123690403da2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2d873f60196eb679baf4f95ca1d6b98892f4c2918c845e93a66a64db321a626d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "9abc682c893410a630752b8d07e214d72b4c4d61afaa2fd42dbc716e8279373b"
+    sha256 cellar: :any_skip_relocation, catalina:      "cb7e141d7faf06576144eafbdd801c6d6303b49b96517e7792c00a0006957982"
+    sha256 cellar: :any_skip_relocation, mojave:        "ea477fdf61b98c95c7de300cab1906f9ce58d267dda592d5d36807fe66739a47"
   end
 
   depends_on "node"
