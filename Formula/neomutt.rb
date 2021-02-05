@@ -7,10 +7,10 @@ class Neomutt < Formula
   head "https://github.com/neomutt/neomutt.git"
 
   bottle do
-    sha256 arm64_big_sur: "a3119427eec30804ee282513555975d22aaa2d959654a59dc0e7e9111014a626"
-    sha256 big_sur:       "02c44bd0160b8c4118ee6c8c96569b8907b6bf9caa2b4f5de6091eb2a820a896"
-    sha256 catalina:      "291d157a3ca06df36d33f772c5c7e34cf9e30b468d9d7abb9bb232aaad53d415"
-    sha256 mojave:        "7e7f2b4645d82958e8ff7f068b50312622a7db16c10e142a25162ad519e1f61b"
+    sha256 arm64_big_sur: "3c35079a979306068a2adf86e73c472149ec8ed2b5a8a19ac40db751a104316f"
+    sha256 big_sur:       "f40a3412fef8321567e8572bb015f447f0e81f29c7fc0a9e7f001a26688c1cb3"
+    sha256 catalina:      "f1375fe0f878437bb23257363230f5e805956bde9a97979da33c1ec5aa09169c"
+    sha256 mojave:        "9cd93e7f86b0da3940852430f1bbd19e07213b966ab1074c55d435953be187eb"
   end
 
   depends_on "docbook-xsl" => :build
