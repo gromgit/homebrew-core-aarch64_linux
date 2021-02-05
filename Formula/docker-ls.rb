@@ -7,11 +7,10 @@ class DockerLs < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3fb48f7d7a07483d41c04f9aab96ad801d332a30a976278144baf7f92d277f4d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "dc044719ff5da5744b7dca752f3f73020e3f23a0c16b586b80fceabf3e45ba51"
-    sha256 cellar: :any_skip_relocation, catalina:      "e3cd5c79cbbdda8ba4d1273e479e767e1cb74d0aed195929f92439846e6f8d53"
-    sha256 cellar: :any_skip_relocation, mojave:        "a082d41b08e3649ae2e8df8efbfaa5b6bd9abc103eaeb491adf54cd8a1db7a0c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "146371ff787d25857ec030cb07025e9e7e062b4fba43eb59136aad8ceca57790"
+    sha256 cellar: :any_skip_relocation, big_sur:       "69d17d15d79bfa1813ad39ae3a0250ddd919a36b4d3923412cfbc17be56316dc"
+    sha256 cellar: :any_skip_relocation, catalina:      "47231e20bcc919d92de35c537c87c54f52bbcdaa85cf2bb9b27bc03a69f25587"
+    sha256 cellar: :any_skip_relocation, mojave:        "38eb334f22797271ae8e121030133f6fc3e33cd178cd938940d4ead6565e0225"
   end
 
   depends_on "go" => :build
