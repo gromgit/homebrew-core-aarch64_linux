@@ -8,10 +8,10 @@ class Truffle < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "03fdff6fd123950c8a97caf58ba7b2359e3289018810aa4a128a5529be80da36"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b075416984afba971b1710aec06e2725ee8c6d267c8c51bfd14734d335cf28bf"
-    sha256 cellar: :any_skip_relocation, catalina:      "996dc05117812640ec131a9dfdecde0e960aa994448cdfce420f83232da01a28"
-    sha256 cellar: :any_skip_relocation, mojave:        "f3e9a3bff2ed3e0060eed6853c0fc3e44619d2bf0aa65fa9bc2033a68696fab6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ed2e0a343feaea348f271d993955c51864d256131930eba47385212f7006444b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "32149f53ddddd471e2001a352bc8b409ef914d7a622f169114111b6035e261bf"
+    sha256 cellar: :any_skip_relocation, catalina:      "fa49884ba164c557202ea79fb7289cb7e62f2c97b56ab08657bee895e02c1e63"
+    sha256 cellar: :any_skip_relocation, mojave:        "5eabbf8bc14624d128edc27831bdf45b0d3cf52aad784768126c53922cf09bbd"
   end
 
   depends_on "node"
