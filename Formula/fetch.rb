@@ -1,8 +1,8 @@
 class Fetch < Formula
   desc "Download assets from a commit, branch, or tag of GitHub repositories"
   homepage "https://www.gruntwork.io/"
-  url "https://github.com/gruntwork-io/fetch/archive/v0.3.14.tar.gz"
-  sha256 "af6513aadf2105bb2355c3b6acc74fa2b12df12d963292750df197b879c32868"
+  url "https://github.com/gruntwork-io/fetch/archive/v0.4.1.tar.gz"
+  sha256 "f50016bdb2138efdebf44284d75b4340133a670b51a7ba5248fe58f630c4f7d1"
   license "MIT"
   head "https://github.com/gruntwork-io/fetch.git"
 
@@ -23,6 +23,6 @@ class Fetch < Formula
     repo_url = "https://github.com/gruntwork-io/fetch"
 
     assert_match "Downloading release asset SHA256SUMS to SHA256SUMS",
-      shell_output("#{bin}/fetch --repo=\"#{repo_url}\" --tag=\"v0.3.10\" --release-asset=\"SHA256SUMS\" . 2>1&")
+      shell_output("#{bin}/fetch --repo=\"#{repo_url}\" --tag=\"v0.3.10\" --release-asset=\"SHA256SUMS\" . 2>&1")
   end
 end
