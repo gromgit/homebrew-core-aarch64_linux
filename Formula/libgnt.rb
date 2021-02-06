@@ -1,8 +1,8 @@
 class Libgnt < Formula
   desc "NCurses toolkit for creating text-mode graphical user interfaces"
   homepage "https://keep.imfreedom.org/libgnt/libgnt"
-  url "https://downloads.sourceforge.net/project/pidgin/libgnt/2.14.0/libgnt-2.14.0.tar.xz"
-  sha256 "6b7ea2030c9755ad9756ab4b1d3396dccaef4a712eccce34d3990042bb4b3abf"
+  url "https://downloads.sourceforge.net/project/pidgin/libgnt/2.14.1/libgnt-2.14.1.tar.xz"
+  sha256 "5ec3e68e18f956e9998d79088b299fa3bca689bcc95c86001bc5da17c1eb4bd8"
   license "GPL-2.0"
 
   livecheck do
