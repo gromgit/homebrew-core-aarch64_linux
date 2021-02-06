@@ -7,10 +7,9 @@ class Smlpkg < Formula
   head "https://github.com/diku-dk/smlpkg.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, big_sur:  "fd459b66ca6600128d61f41aa636992d79bff55eb2685560649bf0b5a124a59e"
-    sha256 cellar: :any_skip_relocation, catalina: "2ad06cae7d868c565f3c8eb8ca52ebdd01748bb89317467faea42359c19fae3b"
-    sha256 cellar: :any_skip_relocation, mojave:   "e02a5edf96861f5b5c0a35540202ec9dafb4b1f94e56fce8cb7db351e93e238c"
+    sha256 cellar: :any_skip_relocation, big_sur:  "64911c8474f780f2ca5e40dfa42e0d839b5b406b28f2ba97090d52132d2813de"
+    sha256 cellar: :any_skip_relocation, catalina: "a710728bd5d1972eb545792375f286691fe75f7d470f532c33517ccf5d85858c"
+    sha256 cellar: :any_skip_relocation, mojave:   "6e7e55cdf218da273d5184d411a7a1491b1e52941859bbf08ab610b470b824c4"
   end
 
   depends_on "mlkit"
