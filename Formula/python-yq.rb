@@ -6,11 +6,10 @@ class PythonYq < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e82db9e41acc0b88b8c5f6785953a016ed702c1213234e012a3002cb9f975b32"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f5d014ddb9d16c8cb902eed5adaf297f3fc10a96a492db5d2a567b3d0d637a6e"
-    sha256 cellar: :any_skip_relocation, catalina:      "45289e8520aa9dced6210c1fa4baa69042f9d15ca49b89dc21659c6f49311df8"
-    sha256 cellar: :any_skip_relocation, mojave:        "511b92444a1adc14910119fecb575d45bb2f4293309b9097cf66f6d610a98a23"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "629339b0b95e4d92e9f14122efd7d497738bab9355e4b9679db56b0dbbc29632"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d3d413c423a4369a7d722ca9b97d9b0dd07ec0952c0662af027abafe2f6d2869"
+    sha256 cellar: :any_skip_relocation, big_sur:       "77a3b59a07dcd9856282bc7c863672227be02a1b7d84cde9bd7d2577c1cb1b2c"
+    sha256 cellar: :any_skip_relocation, catalina:      "ad8ad7411f3d147443ec64697b696e63dce6286c26288676de64a105a1845af9"
+    sha256 cellar: :any_skip_relocation, mojave:        "97f1278c54c24044b19496a8ea1dd0cdd37ebed7fffd9e9824635b096854e4a2"
   end
 
   depends_on "jq"
