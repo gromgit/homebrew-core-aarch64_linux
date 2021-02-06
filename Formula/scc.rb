@@ -11,10 +11,11 @@ class Scc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:     "66e94332b83430ce107eb5e529ca1a08b06adfed3ae258b35de391a2194a898d"
-    sha256 cellar: :any_skip_relocation, catalina:    "798591b31f8fa70978615076a78cb7adc556d4fb63e6901052728ce47106d4bd"
-    sha256 cellar: :any_skip_relocation, mojave:      "76530a13d533fd2e54593a119e61f20796f746bfdceaebe01bc64b81e33eb308"
-    sha256 cellar: :any_skip_relocation, high_sierra: "f10f5e6376c18ace0dc1d9fa9c4f6cb8bd21720a4e16378693d6fe36b80195ed"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "62b0422f5870ec284d34261c83459095a958be8e6e227c61f0af534d55c1dd41"
+    sha256 cellar: :any_skip_relocation, big_sur:       "93d4e567fe99406e6aa8406bef550907df0b0f668459a008ab465fd2c62c4fe2"
+    sha256 cellar: :any_skip_relocation, catalina:      "648beb7662a3bd6cd47681fbabfbbe0b77ab557849c4842145c848c753ee4a53"
+    sha256 cellar: :any_skip_relocation, mojave:        "82f1f701f3739a60a2e5e24e698fe0a62c0fa12ec5c0d7935c702659fe0b0eae"
   end
 
   depends_on "go" => :build
