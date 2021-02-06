@@ -6,9 +6,9 @@ class Rocksdb < Formula
   license any_of: ["GPL-2.0-only", "Apache-2.0"]
 
   bottle do
-    sha256 cellar: :any, big_sur:  "98c2d9712a43aae4efdab83d7b3fe9323489c09a28845404db9620907ce70e08"
-    sha256 cellar: :any, catalina: "42635bc093ed498a1f7c24545a894def03b6fde82ff45be1d6d8a9c658dd8400"
-    sha256 cellar: :any, mojave:   "e7c1d9ff93f7248f945b826e114bf8424dccd0fde2de1c0b762d88497ae35933"
+    sha256 cellar: :any, big_sur:  "aad14af99b39d155869bbb1f389b6da072890a531cd1e268aeb24ef911415a90"
+    sha256 cellar: :any, catalina: "e40e671dd9b9fe4ac37af9cb5845c085445ddc46dccadb523fa16fbbc9d8a539"
+    sha256 cellar: :any, mojave:   "189185a4b829e09cfb51fd9739f20b908bcc72b0a22327bc132c40a3b76fecbb"
   end
 
   depends_on "cmake" => :build
