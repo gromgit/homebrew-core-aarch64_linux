@@ -9,10 +9,6 @@ class Webpack < Formula
   license "MIT"
   head "https://github.com/webpack/webpack.git"
 
-  livecheck do
-    url :stable
-  end
-
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "1fc3c17089233d76928e6ab58e471b5f6920a60b74b7e3a57080415f3872d7c0"
     sha256 cellar: :any_skip_relocation, big_sur:       "bfff589bd30fcd91dbdcf467ca316709325497dbecd10924a6aed36e4fe4b6cf"
