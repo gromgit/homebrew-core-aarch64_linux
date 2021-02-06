@@ -13,10 +13,10 @@ class TclTk < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "644ee6e6ddc248535a25e515b0792dfa3e80a801f1173b50fffc97abd68574d8"
-    sha256 big_sur:       "f7c4fb93ca32dca70f3ead938b44bce22c7a99f060242ce802ca8955d274f361"
-    sha256 catalina:      "5bc2306be500fe9eba4df65215a7322196260c91864095591216b442d62dfccf"
-    sha256 mojave:        "2980557e6f0539e821c50207631a6cd45bc5999715c48972d3857ba792443d51"
+    sha256 arm64_big_sur: "81f1041b639d8e6b8d7865226917c8b2f2cff604636a35fd65108ec61a618eed"
+    sha256 big_sur:       "d9ffd39a32e602515594c4658aaab20224d9d57eeffa3aa10028736ff64ad40b"
+    sha256 catalina:      "f4027cdfd4d797d769b027f13b53e0ad714b47cd94fa02f550ff1403294467da"
+    sha256 mojave:        "23916830afd9e9fb7bf63b0c047f0b2a6f969cb746055d73ca6576e18c87e07f"
   end
 
   keg_only :provided_by_macos
