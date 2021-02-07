@@ -11,11 +11,10 @@ class Homebank < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "d08ab0fa40f4b94917a8794da31f8c6149df98ba48ef5a49b39511d78d55ffa0"
-    sha256 big_sur:       "48cd56a0f840fedc0c6e4943e149da832ed2d0b86f5fef6f09b2da7402e5e656"
-    sha256 catalina:      "d985498d9c7916903d550cc5871e32c3730878f544aec6fb875d2c22768913ab"
-    sha256 mojave:        "e884c6c2ee8682be2a7895af8b8c001e8d59d8e1c28586302fabcaca622cafd4"
+    sha256 arm64_big_sur: "96d1b2970dbabefad1f94368258c8457868434983a7c6ba189b509378139ff3c"
+    sha256 big_sur:       "6e413ee134c65cb503b5b887340b0d0c7ee5da38fc87962410fadb902a3e867d"
+    sha256 catalina:      "585334fcd41f97c64bdb16c1f7c8494f426d4192ad2d96f99a8620b18dac8284"
+    sha256 mojave:        "792c4a0526e2c390dc9a00f0decd3e2694ddaed21a8462b27f1eda9a22f27782"
   end
 
   depends_on "intltool" => :build
