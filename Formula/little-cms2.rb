@@ -18,11 +18,10 @@ class LittleCms2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "249a7b998b64074fa0978aa52cdbb9d11414734b2b5c2061ebc61159a9f98771"
-    sha256 cellar: :any, big_sur:       "e6f70f21087ef1f0e1379446b5b5f460915d3a132763919feb245534ed9bc4af"
-    sha256 cellar: :any, catalina:      "b0fe7486871b0fb0e34012f48bce09e96229e5e2985d64e7a0164c2847e41975"
-    sha256 cellar: :any, mojave:        "e05f0a487d2243411eeb9fd9909f875517d7b27feb3cb914117acd9c60b76fcc"
-    sha256 cellar: :any, high_sierra:   "928d1b8b8292a2d7950d0ef1381c70996bcde325f0124d7dcb68059090544dac"
+    sha256 cellar: :any, arm64_big_sur: "83c79aaa225d6363154151a6b1099bb23ee0c7c1ffed35cb4682b993e047f4a0"
+    sha256 cellar: :any, big_sur:       "70eaa9b280425731f7dcf104e75d4ae1e6a90421e1a741e0fe82859361c8ae84"
+    sha256 cellar: :any, catalina:      "0f782fa69d2e12e9c1765df4ae1b7bd87143402aa1840d483092f3b74f89ae19"
+    sha256 cellar: :any, mojave:        "69af639323557bdd2c09fdaf354d9830441014f98609609146a8c836c752ac10"
   end
 
   depends_on "jpeg"
