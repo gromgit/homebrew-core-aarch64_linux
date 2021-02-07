@@ -6,10 +6,10 @@ class AliyunCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "80acdf57680db7a8c04c10cf0d052115685cf34ecf5e4d53f12336db8379a704"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ee5c3e65afac02f97067bdb8d4dc62e0e8914fcd3a62db5e664334f3705af435"
-    sha256 cellar: :any_skip_relocation, catalina:      "7fce8f65771b9d5f2eaf4d0a0bee81e6a39a3d0e863d46f9b095af4c40d9614a"
-    sha256 cellar: :any_skip_relocation, mojave:        "60bdb7a637d2c509b60462a659c56c1d3c222076523c8ed6774ab3d5539cc5d8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c3e2a6b0225b0fc3fde3d5b170387d954c758fb8f709e0ac0dae1149a804e08d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "342902030b8f1a9cffcf1d509892e371b5ad353662b0cdfd968f80ed9a576ed8"
+    sha256 cellar: :any_skip_relocation, catalina:      "f3af03188008baca06b8136918e40e8521d35bdffef04aa1ee4d9a8e432519a5"
+    sha256 cellar: :any_skip_relocation, mojave:        "53e0ad5815a9fc6840d43794fc790f17256c8d0e52b0fd8b1911364b8674d2e9"
   end
 
   depends_on "go" => :build
