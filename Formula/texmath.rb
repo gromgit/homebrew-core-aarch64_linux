@@ -6,9 +6,9 @@ class Texmath < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "f091dafb8c9967d2a47b85f45361e60eb7c85b88b8346d76cb2db8a757a1f776"
-    sha256 cellar: :any_skip_relocation, catalina: "2769946483f9d19111f011337b7a25f2cf46145ddc86990fe58c311194be0eb8"
-    sha256 cellar: :any_skip_relocation, mojave:   "a155b6bad3842722d5bdbe2fa22be5c10aa191ab44ebaa63000a921acef24b1f"
+    sha256 cellar: :any_skip_relocation, big_sur:  "cdc91e162794f7481b0b4d881b8217e7b51d7c1613d5fa73772fd778d1eac7c0"
+    sha256 cellar: :any_skip_relocation, catalina: "dd439f733a8c27d6eabb310d73679e100ffef8de14f0f0a705ac5d715ada5164"
+    sha256 cellar: :any_skip_relocation, mojave:   "1ac2b2157f436c43c9857b7506677fa875780b74a819127dcbbee2c83bab34be"
   end
 
   depends_on "cabal-install" => :build
