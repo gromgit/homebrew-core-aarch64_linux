@@ -9,10 +9,10 @@ class Regipy < Formula
   head "https://github.com/mkorman90/regipy.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0bf99bcb150b785b4fff14ec4dc6425a936afd2a1798cd6a9359a988f85ff776"
-    sha256 cellar: :any_skip_relocation, big_sur:       "11a11f25b4299ed4eecaf7220ae3c5c8f3f8cb8c67dcd46622c6b8b3fa323314"
-    sha256 cellar: :any_skip_relocation, catalina:      "62b09d78f42faba628ec6f50185fcc62acc90fbe8fdd1766be354a5d1ad86d6f"
-    sha256 cellar: :any_skip_relocation, mojave:        "b300cc5407e2ba579f649ccf418f2273c7bfb27cca6b637c91b02b6041740efd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "144da1f401a441a8134d3b7e851a266c39abeef7215f6a06eb61fc5e544436f1"
+    sha256 cellar: :any_skip_relocation, big_sur:       "769ec4dfef3b4cfb19db7d5bad3218b8e5667386c006df160229879bfe38e646"
+    sha256 cellar: :any_skip_relocation, catalina:      "8a72cfb8636c91568d8d8d295865093ece9eb45e8145355ae9291a3ba0ca18b0"
+    sha256 cellar: :any_skip_relocation, mojave:        "8d6b1a24d0b65a33f7b1149800b365e64e3c68b74edfba1a378400aeb3f980e9"
   end
 
   depends_on "python@3.9"
