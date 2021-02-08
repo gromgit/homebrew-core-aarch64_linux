@@ -7,10 +7,10 @@ class Help2man < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "7bc46236d8916519b432020f2d51df5c6006c7000b67835ff7e1276c58ec208c"
-    sha256 cellar: :any, big_sur:       "ee60622e70903c293171ea78097544d796a5454b29e8c1494529aa537901e460"
-    sha256 cellar: :any, catalina:      "603b604aaf17770dd4f4a0f9b45c266848d8c005228c64773fdec2d94e3d45dd"
-    sha256 cellar: :any, mojave:        "f57b3269934c79434b70ac7807ea364af47ae8a3b6096364c0615b2789d4a0a9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fc9c571dfe3bb9a6bd50d79ac0a72eac8381646d7cabe52965a12c1b5314ee57"
+    sha256 cellar: :any,                 big_sur:       "5b2c195f1db08cefabfa6a7abf2f4c023331b0fd236859994e2cffb8491dc3af"
+    sha256 cellar: :any,                 catalina:      "494671eb1d653e331675a27c4bdae7def258522ade3faf17d5ebf5e8676650b6"
+    sha256 cellar: :any,                 mojave:        "c970589ff2925de795ffae0f2964dde865da1e09cb32fb3ef7d0086abd57d8de"
   end
 
   depends_on "gettext" if Hardware::CPU.intel?
