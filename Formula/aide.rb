@@ -1,8 +1,8 @@
 class Aide < Formula
   desc "File and directory integrity checker"
   homepage "https://aide.github.io/"
-  url "https://github.com/aide/aide/releases/download/v0.17.1/aide-0.17.1.tar.gz"
-  sha256 "a401c951938f1169ceaec868ce3594736e89c5c881578c263d8a824a06b0002d"
+  url "https://github.com/aide/aide/releases/download/v0.17.2/aide-0.17.2.tar.gz"
+  sha256 "3cff624b1717dc19c106d4b898c37eee106bf2fae029880f005820294917bafa"
   license "GPL-2.0-or-later"
 
   bottle do
