@@ -1,9 +1,9 @@
 class X8664ElfBinutils < Formula
   desc "GNU Binutils for x86_64-elf cross development"
   homepage "https://www.gnu.org/software/binutils/"
-  url "https://ftp.gnu.org/gnu/binutils/binutils-2.36.tar.gz"
-  mirror "https://ftpmirror.gnu.org/binutils/binutils-2.36.tar.gz"
-  sha256 "f67c632ccd81137d745681672bb4515a3411afa53722ccf01caa07d798fd8fb0"
+  url "https://ftp.gnu.org/gnu/binutils/binutils-2.36.1.tar.xz"
+  mirror "https://ftpmirror.gnu.org/binutils/binutils-2.36.1.tar.xz"
+  sha256 "e81d9edf373f193af428a0f256674aea62a9d74dfe93f65192d4eae030b0f3b0"
   license "GPL-3.0-or-later"
 
   bottle do
