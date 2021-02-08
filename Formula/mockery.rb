@@ -8,10 +8,10 @@ class Mockery < Formula
   head "https://github.com/vektra/mockery.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "73af9616980727010bb370b90f195acdf7fae8fe8aed870afa7059b37cbd6cf0"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9042c369628ba6ed7f01ed774114ed5194f2a06db3c91f6bd3baa958b387a52d"
-    sha256 cellar: :any_skip_relocation, catalina:      "1e9b569d40889982fc89ed2e6182e40c8d7151e4f696ea1d8ef8c49a7be9a71f"
-    sha256 cellar: :any_skip_relocation, mojave:        "21c9319ca3d75ca69883c1df8cbdb504ddc307577f6e5aebd10ac2970655e4fe"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "838bc4e94d6889dab090984c0f70062d5a6e65c25076eb891140e0caa80cb3b7"
+    sha256 cellar: :any_skip_relocation, big_sur:       "775e3c5ab4ff9baa1e464a3402cc5df4d40938f8e1830743e713e48dbefc6861"
+    sha256 cellar: :any_skip_relocation, catalina:      "8b4d00f30efe40382d919e3deebbb89cedb178c9b7a26be8008105bd8b8ecb9d"
+    sha256 cellar: :any_skip_relocation, mojave:        "95b2ea44dbbc182f2b870a3526fc41abd98b43dcb700d6a4b10f789229a17ed2"
   end
 
   depends_on "go"
