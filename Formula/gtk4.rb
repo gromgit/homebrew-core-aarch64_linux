@@ -1,8 +1,8 @@
 class Gtk4 < Formula
   desc "Toolkit for creating graphical user interfaces"
   homepage "https://gtk.org/"
-  url "https://download.gnome.org/sources/gtk/4.0/gtk-4.0.2.tar.xz"
-  sha256 "626707ac6751426ed76fed49c5b2d052dfee45757ce3827088ba87ca7f1dbc84"
+  url "https://download.gnome.org/sources/gtk/4.0/gtk-4.0.3.tar.xz"
+  sha256 "d7c9893725790b50bd9a3bb278856d9d543b44b6b9b951d7b60e7bdecc131890"
   license "LGPL-2.0-or-later"
 
   livecheck do
@@ -62,7 +62,7 @@ class Gtk4 < Formula
   def post_install
     system "#{Formula["glib"].opt_bin}/glib-compile-schemas", "#{HOMEBREW_PREFIX}/share/glib-2.0/schemas"
     system bin/"gtk4-update-icon-cache", "-f", "-t", "#{HOMEBREW_PREFIX}/share/icons/hicolor"
-    system "#{Formula["glib"].opt_bin}/gio-querymodules #{HOMEBREW_PREFIX}/lib/gtk-4.0/4.0.0/immodules.cache"
+    system "#{Formula["glib"].opt_bin}/gio-querymodules #{HOMEBREW_PREFIX}/lib/gtk-4.0/4.0.0/printbackends"
   end
 
   test do
