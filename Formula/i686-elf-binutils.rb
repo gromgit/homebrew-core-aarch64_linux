@@ -7,10 +7,10 @@ class I686ElfBinutils < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "e5b3899557c9de0e40411d07977a45f12aca0cfd5ddb11f24621c336bf1b5a34"
-    sha256 big_sur:       "7ff73624acb4bc0671e9ae35f661f5118c8ed198e0a3db132f21be96e569d1ee"
-    sha256 catalina:      "f364786230b8fad53479825413cbaa1a3a763ab6d5db878eecb4f5905649ea7b"
-    sha256 mojave:        "4d026755aba1104a8af8ddde405521acb74103ab1a8a7df2a4eeb4f00f0863ce"
+    sha256 arm64_big_sur: "1250e2e488a22f422b981a5b38602b1269568020c167c491894a7d984a3fbea8"
+    sha256 big_sur:       "3531f2d1d0ca60c8f6adc3b01f1eefb06013772753a5d897d25ff519e6e3a46f"
+    sha256 catalina:      "70089cd3999c348b635336714145c516ae12d11d6ff8cfb600143f6828fe0f97"
+    sha256 mojave:        "158c9edec23673109178a80eb05faa007e7230e94ee489e4d427211c11263e96"
   end
 
   def install
