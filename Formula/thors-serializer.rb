@@ -7,10 +7,10 @@ class ThorsSerializer < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "7f6c671e7842eea5f5e6ab76a8e961805fb9f09f16f381101e1037ae2270b220"
-    sha256 cellar: :any, big_sur:       "febdec67998826f6c02d103d7fc1392791f6674fb33c86dd727278b8b58583d0"
-    sha256 cellar: :any, catalina:      "9bbd671562f15494d9bb012ed94d952c101d6864fb8320951fdcab8ea3810a68"
-    sha256 cellar: :any, mojave:        "52f4348cba84e1b0f2b6f400c9519e094146715c592baf6501eb8772c55c7611"
+    sha256 cellar: :any, arm64_big_sur: "6511e30afbe0f7e468d4b25d1d86ab9e2068e2c560605916822145fefd548dc2"
+    sha256 cellar: :any, big_sur:       "da64016e8475c07200f43ba4f5de2148795c2cd0ae0172d7e4e307be3dcb293a"
+    sha256 cellar: :any, catalina:      "99713ede7b47b2dbed13ac1312d52acbc4b20e7bb22e3171160f2ed063a7dec2"
+    sha256 cellar: :any, mojave:        "ba6eed10bc969358ba4b002a02bc76d97a048c30968cc18928b1b0261e2d91b5"
   end
 
   depends_on "boost" => :build
