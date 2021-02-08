@@ -7,11 +7,9 @@ class Opam < Formula
   head "https://github.com/ocaml/opam.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, big_sur:     "34baee7b82515f19b8b5163bb8dd410128519e67635c079e392fc35b4625deb9"
-    sha256 cellar: :any_skip_relocation, catalina:    "2b1115dfcdfe71a806d07da60597a76f0e531c828e33e2c2c9901b0ef343c285"
-    sha256 cellar: :any_skip_relocation, mojave:      "39900786c86d1534586d261ced1876e9d0a90d119d41b37ba7eb2fbed948c033"
-    sha256 cellar: :any_skip_relocation, high_sierra: "2d363ac12943a0505c55b9fe3249a5f12b37d666d6b811e374908ae2cbd22626"
+    sha256 cellar: :any_skip_relocation, big_sur:  "d34e0dcbfa4302960a8f813d4e06c113e24beff31d2fbf8e55e470c5b51ecc0b"
+    sha256 cellar: :any_skip_relocation, catalina: "882bf7f9d3f94fbbc2d5f08019456f533e0a71fd58c0a02650aa5781faefca9a"
+    sha256 cellar: :any_skip_relocation, mojave:   "e091ed13ebfa241890e0489cdc2645d66c9c189f618466cf8f7576751b381726"
   end
 
   depends_on "ocaml" => [:build, :test]
