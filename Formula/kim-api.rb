@@ -12,9 +12,9 @@ class KimApi < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:  "5dd5843a46622bc3371a60fd99968e5a94890d72ee5461c72b0a81983d2d447d"
-    sha256 cellar: :any, catalina: "ef2fca76455a7b3511664b32451fe1fcde637735de43797b5179c55d26405cac"
-    sha256 cellar: :any, mojave:   "5d892bfae5488c6a0e019235dac4eee23f918f5f4d63da117a92eaea46ba5ab8"
+    sha256 cellar: :any, big_sur:  "00b02a276ca2df5eb4b6b72aa310573bedbab3905999aa49591bcd7e2f1a4703"
+    sha256 cellar: :any, catalina: "2da803d1ea94fa5dcc07fc0fc5afbe511e37c644b419623416ff443ef497dfaa"
+    sha256 cellar: :any, mojave:   "ab1c2d8867c00ce7c4c3d5220c45fa84f8fe43e26e56d7be67718ba4da9c2cf1"
   end
 
   depends_on "cmake" => :build
