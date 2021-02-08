@@ -4,6 +4,7 @@ class RtAudio < Formula
   url "https://www.music.mcgill.ca/~gary/rtaudio/release/rtaudio-5.1.0.tar.gz"
   sha256 "ff138b2b6ed2b700b04b406be718df213052d4c952190280cf4e2fab4b61fe09"
   license "MIT"
+  revision 1
   head "https://github.com/thestk/rtaudio.git"
 
   bottle do
@@ -19,8 +20,8 @@ class RtAudio < Formula
                           "--disable-silent-rules",
                           "--prefix=#{prefix}"
     system "make", "install"
-    doc.install Dir["doc/*"]
-    pkgshare.install "tests"
+    doc.install %w[doc/release.txt doc/html doc/images]
+    (pkgshare/"tests").install "tests/testall.cpp"
   end
 
   test do
