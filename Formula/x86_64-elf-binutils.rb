@@ -7,10 +7,10 @@ class X8664ElfBinutils < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "f98f3c65ee6d746e1f3d00fccf58eb6c224d4f981ebe2731aa6ec68d28b28828"
-    sha256 big_sur:       "46f97c695943a5b35baffa5e06a372b9cf0c410799503b27610e7d17f13146eb"
-    sha256 catalina:      "2c3de0514d336239cf149fd1b7d1045fb90e9f351d04040162f96d4eb24bf567"
-    sha256 mojave:        "9f79d95eae16f5907bb6414f0e10c69161cc095f379b0497114c943c454594d2"
+    sha256 arm64_big_sur: "a5584ba07f4f488096061f8f11c5d2fad72b87f42526aae902ba24b2dded7e13"
+    sha256 big_sur:       "98a1c41b67cda5c8552edf16e826aada8f29409da4477301db7ce861c6e93295"
+    sha256 catalina:      "0911b52c58f70ea3fd24861c10f22b1f65a8f3ee08ec4c57f90a47cc19f529af"
+    sha256 mojave:        "0b82544bb76a74993fa3a663b6ced46dd48e3f5afb61df97653cf46581f5c317"
   end
 
   def install
