@@ -8,10 +8,10 @@ class Ppsspp < Formula
   head "https://github.com/hrydgard/ppsspp.git"
 
   bottle do
-    sha256 cellar: :any, big_sur:     "61164c952a552c94c384ba618b429e8725d812142b58e55c02b89962ce8b28c2"
-    sha256 cellar: :any, catalina:    "637651f2a60d63b33d4944fb075b8e8a564a4a0b94ce824ccf0ba69b6d101f88"
-    sha256 cellar: :any, mojave:      "ef1850d442ed09bdec54ace53e6bedf2eb081ca3da4d2ca9fba91293a98f0f6e"
-    sha256 cellar: :any, high_sierra: "a42d7af34d1aab6f25345aec6711fccedad54fd506eb12947c7c6c8b7e095a55"
+    sha256 cellar: :any, arm64_big_sur: "aadd439c9379c19f33f99ba1045e0e44853e02574bb6819eae421154be55c593"
+    sha256 cellar: :any, big_sur:       "c7619f3f55dbbd1f13810db371cf33fe05eb2de536fa59042bd7ffd1899afd7b"
+    sha256 cellar: :any, catalina:      "4cc7fc966db279c3a5caefa7b4058023945bb2066340afc651ad4b1baabc6e4a"
+    sha256 cellar: :any, mojave:        "2f2e9c6e8145c835e2f001ca11f4bfc2c5e5a243a6bcb63ad6100fbe607f32d7"
   end
 
   depends_on "cmake" => :build
