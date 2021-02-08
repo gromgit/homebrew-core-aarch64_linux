@@ -11,10 +11,10 @@ class Pdns < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "f3fe8ff82dcfb910ceee21d2a58a93c34c8e8b2b4dcdb626a3c3a126d0fbf33f"
-    sha256 big_sur:       "3bcdd4ecf99f973dfc4f228e429eb0aa61f51b1d237383709d8224528f4c8c6b"
-    sha256 catalina:      "7e011f3e8ef5765023f9c9a2f37e623d793879a68289f7efd19f044b9067a9ff"
-    sha256 mojave:        "bc758310a198a7339455d1727270283019189a9c3e08db9d76d00734c8f79bf5"
+    sha256 arm64_big_sur: "41d4db1f974f4139abf4e064c33c98e0b31d47fb3be3e062e482f37449a326c4"
+    sha256 big_sur:       "3462eb24c8379733f29bdc2fa6177cdf643aecbfc5fbe58ac3d5f9129a32befe"
+    sha256 catalina:      "b3caacf5599b6a71a88daabb7c7ce5ec606f75ad7378e57a8eb0e19935923c19"
+    sha256 mojave:        "03a2e4848800803555e0e2ea398de47b0172f96a82412b83e0629a62979dd6e7"
   end
 
   head do
