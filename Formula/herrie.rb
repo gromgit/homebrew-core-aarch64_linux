@@ -1,14 +1,10 @@
 class Herrie < Formula
   desc "Minimalistic audio player built upon Ncurses"
-  homepage "https://herrie.info/"
+  homepage "https://github.com/EdSchouten/herrie"
   url "https://github.com/EdSchouten/herrie/releases/download/herrie-2.2/herrie-2.2.tar.bz2"
   sha256 "142341072920f86b6eb570b8f13bf5fd87c06cf801543dc7d1a819e39eb9fb2b"
   license "BSD-2-Clause"
   revision 1
-
-  livecheck do
-    url "https://github.com/EdSchouten/herrie"
-  end
 
   bottle do
     sha256 catalina:    "ceb3bb01f7cc36c3d55d785ff6d06706708ce11e81bd9da29b4dcdaaa6476f9a"
@@ -17,6 +13,8 @@ class Herrie < Formula
     sha256 sierra:      "f794117e72309d83bc947463032c262a7341d21eabc5099712016d0f078804f2"
   end
 
+  deprecate! date: "2021-02-09", because: :repo_archived
+
   depends_on "pkg-config" => :build
   depends_on "gettext"
   depends_on "glib"
@@ -24,6 +22,8 @@ class Herrie < Formula
   depends_on "libsndfile"
   depends_on "libvorbis"
   depends_on "mad"
+
+  uses_from_macos "ncurses"
 
   def install
     ENV["PREFIX"] = prefix
