@@ -12,9 +12,9 @@ class Quex < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, catalina:    "f3d39a7468e8c529ce1c0d6ab5b2d028f50771304993e9f2e996490f846c4b6c"
-    sha256 cellar: :any_skip_relocation, mojave:      "f3d39a7468e8c529ce1c0d6ab5b2d028f50771304993e9f2e996490f846c4b6c"
-    sha256 cellar: :any_skip_relocation, high_sierra: "f3d39a7468e8c529ce1c0d6ab5b2d028f50771304993e9f2e996490f846c4b6c"
+    sha256 cellar: :any_skip_relocation, big_sur:  "dc866a83867dca24a0126b57d9dfb5b1613d491e6eac63d4f22d7ca2f92368db"
+    sha256 cellar: :any_skip_relocation, catalina: "7a0be7cfed70b009c5e04fef0db429d7e677c74d24659cc3fe33aec1e278f7a0"
+    sha256 cellar: :any_skip_relocation, mojave:   "42e34011b0350928c50d20a4bc12a813e8cdd7934e9879484df46af8de6cfff0"
   end
 
   # https://sourceforge.net/p/quex/bugs/310/
