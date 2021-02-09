@@ -1,13 +1,14 @@
 class Quex < Formula
   desc "Generate lexical analyzers"
   homepage "https://quex.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/quex/quex-0.70.0.tar.gz"
-  sha256 "761b68d68255862001d1fe8bf8876ba3d35586fd1927a46a667aea11511452cd"
+  url "https://downloads.sourceforge.net/project/quex/quex-0.71.0.zip"
+  sha256 "2e8df936f1daea1367f58aabea92e05136f439eea3cd6cbea96c6af1969e4901"
+  license "MIT"
   head "https://svn.code.sf.net/p/quex/code/trunk"
 
   livecheck do
     url :stable
-    regex(%r{url=.*?/quex[._-]v?(\d+(?:\.\d+)+)\.t}i)
+    regex(%r{url=.*?/quex[._-]v?(\d+(?:\.\d+)+)\.[tz]}i)
   end
 
   bottle do
@@ -16,17 +17,20 @@ class Quex < Formula
     sha256 cellar: :any_skip_relocation, high_sierra: "f3d39a7468e8c529ce1c0d6ab5b2d028f50771304993e9f2e996490f846c4b6c"
   end
 
-  depends_on :macos # Due to Python 2 (Migration to Python 3 has started)
-  # https://sourceforge.net/p/quex/git/ci/e0d9de092751dc0b61e0c7fa2777fdc49ea1d13e/)
+  # https://sourceforge.net/p/quex/bugs/310/
+  depends_on "python@3.7"
 
   def install
+    # Backport one change from https://sourceforge.net/p/quex/git/ci/28c8343c6fe054e5e1a085daebcca43715bc6108/#diff-7
+    # to allow running under Python 3.7
+    inreplace "quex/input/code/base.py", "_pattern_type", "Pattern"
     libexec.install "quex", "quex-exe.py"
     doc.install "README", "demo"
 
     # Use a shim script to set QUEX_PATH on the user's behalf
     (bin/"quex").write <<~EOS
       #!/bin/bash
-      QUEX_PATH="#{libexec}" "#{libexec}/quex-exe.py" "$@"
+      QUEX_PATH="#{libexec}" "#{Formula["python@3.7"].opt_bin}/python3" "#{libexec}/quex-exe.py" "$@"
     EOS
 
     if build.head?
