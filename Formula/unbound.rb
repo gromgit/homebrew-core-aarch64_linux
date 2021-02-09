@@ -15,10 +15,10 @@ class Unbound < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "2db4e311e44be817d3639b59ef14abdf53aa990bff95f2c6f445c47b704370de"
-    sha256 big_sur:       "cef5d9843ecaabaa0a4cb9b89e04bc3d370ce143e4ff2e0f6711aa6572b1ad3a"
-    sha256 catalina:      "132e7387adde0939a0f50d125ef5b6bdfa0186bae6dd9628668e9813813f4a9a"
-    sha256 mojave:        "a1941e3c48de236e9310547620b1fdf71ec5c07ff8cb6dadc9e9433d02dfa1a7"
+    sha256 arm64_big_sur: "ca8e29b1898957208edd7a8ea445b0d39c942815a57f428b612ff0ae636bf859"
+    sha256 big_sur:       "c29ad2474ecb496f9e98a7389485cac2c542d8515d5fd2810bed05f206350a21"
+    sha256 catalina:      "0276d7a615cdd250ce1764a708c9e031c9c814f7d2c1a0f7aeb9d08166875af6"
+    sha256 mojave:        "27a471fe986b64f4ccd80280ba5695532ec77198542b30f0bd176cb02f07b0b8"
   end
 
   depends_on "libevent"
