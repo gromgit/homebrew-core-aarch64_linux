@@ -12,10 +12,11 @@ class WireguardGo < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bc158ab30671d54381f9d77200468c211df5c95d3977a28b6fbd2bfc9ad3651f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "efb79650301180cef69d3d3f300436c2f8a799318ab176ecf1e6ae32bd55f45f"
-    sha256 cellar: :any_skip_relocation, catalina:      "14d8dc66f51aa9fe8e8a727b0753a73f454ce35de86436cc880e9e9d8c768d87"
-    sha256 cellar: :any_skip_relocation, mojave:        "dc5491d1e72ced9c3f43e5cb36f639292641848b85ce70c88d9771079401a0bc"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8202a28ec02de5c7e82afc087610a85c3704bb5413890cc83c83e8a98a8e6650"
+    sha256 cellar: :any_skip_relocation, big_sur:       "75c2b3b1531830c9cd45eb7569a7b8c0d8e2896d4123cae0a15cc1ceeb4f3da0"
+    sha256 cellar: :any_skip_relocation, catalina:      "16df54f1adef2a15ea9c5cb4a51a4696e423bfc5a4449b264376d97877b48218"
+    sha256 cellar: :any_skip_relocation, mojave:        "412be0aa4d2f277825695e732099f62f0183d9eb9e85286c25cc7624589d0ce6"
   end
 
   depends_on "go" => :build
