@@ -16,6 +16,8 @@ class EchoprintCodegen < Formula
     sha256 cellar: :any, el_capitan:  "06f93b8c6bb025d833ff7757048ea0680b240e3cdd6a51f4dd2fb4e6aad3f7dd"
   end
 
+  deprecate! date: "2021-02-09", because: :unmaintained
+
   depends_on "boost"
   depends_on "ffmpeg"
   depends_on "taglib"
@@ -27,6 +29,9 @@ class EchoprintCodegen < Formula
   end
 
   def install
+    # Further Makefile fixes for https://github.com/spotify/echoprint-codegen/issues/97#issuecomment-776068938
+    inreplace "src/Makefile", "-lSystem", ""
+    inreplace "src/Makefile", "-framework Accelerate", ""
     system "make", "-C", "src", "install", "PREFIX=#{prefix}"
   end
 end
