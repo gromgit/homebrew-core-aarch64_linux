@@ -12,10 +12,10 @@ class TaskwarriorTui < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b5a2c4e3cc139ee5e88c7b6ec41ab0e67607ed7e56c4583650e64c5bfa2f30ed"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8c1bca824b073c62b92aff868780a31909ec894799c374f097278ec601fc76bc"
-    sha256 cellar: :any_skip_relocation, catalina:      "82031c03f7ff464dae2af9c6770c5625f78cf38c788b073c4075d9d807766d9f"
-    sha256 cellar: :any_skip_relocation, mojave:        "7e442fd4b1e03828bf536e1de0c46d0dc3bc31102c1a7cdf9253261ea976d251"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "21dd86ffecabc669f44c785357aa35615f58d4d7381de6f9d24828af8eebc0b3"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a81d7b1e5cad67f33a8ed35141d9ea11349c78e823c1e03eea8c0a9c35ae5baa"
+    sha256 cellar: :any_skip_relocation, catalina:      "9ab8aef9aef3e80200ef1e383370df4fe2097a17ba8e66e1d9f23c4690429e14"
+    sha256 cellar: :any_skip_relocation, mojave:        "4f07a20f8fc8198dfd760cbae4b5d9aed9c72165302c3a60605724ea634f8b3d"
   end
 
   depends_on "rust" => :build
