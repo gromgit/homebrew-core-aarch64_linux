@@ -6,10 +6,10 @@ class Meilisearch < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5a9a62b3064aec6ad5935a5e4f319c610b814e6017919df4b63159dd061659bc"
-    sha256 cellar: :any_skip_relocation, big_sur:       "4408d5fb3e13c4bb4d0dfd3c50bab7d9f0147be15932b41eff51e0948a61dfe5"
-    sha256 cellar: :any_skip_relocation, catalina:      "c92ee78d6c4bf1073a4c3b3f505ac8c0f5f075b34b827b4702be72403f954a4a"
-    sha256 cellar: :any_skip_relocation, mojave:        "55f63c3c266ddb189d419ed9fc7919d658b93d96871e5358107daa473c441fb2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f6bafaf6fda9387ed5ae00c5e120467a83dd857177ab3debf7fbcdebf6c34285"
+    sha256 cellar: :any_skip_relocation, big_sur:       "288c51d44f1b88d3b89b412a14769416c97e292c70c52cd5d3d14aca5a96545c"
+    sha256 cellar: :any_skip_relocation, catalina:      "14d58488784c2a5655233ed3d7891780019b9f0210e4f9ed3da607da4ac2d40f"
+    sha256 cellar: :any_skip_relocation, mojave:        "aadd4813419198bd9beed09373430e8d2a781e88e8a93696b0f02a214c076d96"
   end
 
   depends_on "rust" => :build
