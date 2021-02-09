@@ -7,9 +7,9 @@ class Gambit < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, catalina:    "c1bf628cb87dbed50a0bd5299b3921545a001999af7a061343caf6aa75784cf5"
-    sha256 cellar: :any, mojave:      "849760c07650bf6d240e3d488ed984ef3f1520976cc402ec1afe215ac881aa08"
-    sha256 cellar: :any, high_sierra: "f5d187618279c18de8e290151ba7683a5b68e4b96203db1a05600eb84002d391"
+    sha256 cellar: :any, big_sur:  "e5b2c33a83a81fedeaf73e1e62186864a52031c6046fb7a69f2d5a0e44d881f4"
+    sha256 cellar: :any, catalina: "05ab5f78b317c4128110507c07b8eb94914361624248defae542008d9a9d62d5"
+    sha256 cellar: :any, mojave:   "74b93be01bbbdd562b00977b6d3f442c0edcfde923ab973c1c62b61e9afd33ad"
   end
 
   depends_on "autoconf" => :build
