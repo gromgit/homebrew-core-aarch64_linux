@@ -12,6 +12,7 @@ on:
       - "Formula/libcap-ng.rb"
       - "Formula/libdrm.rb"
       - "Formula/libfuse.rb"
+      - "Formula/libmd.rb"
       - "Formula/libmnl.rb"
       - "Formula/libnetfilter-queue.rb"
       - "Formula/libnfnetlink.rb"
