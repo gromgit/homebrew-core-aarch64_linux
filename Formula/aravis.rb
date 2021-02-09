@@ -6,10 +6,10 @@ class Aravis < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "59472780fd24166c9699d3fb41a7365f947124a41b4a047975dcadda734762cf"
-    sha256 big_sur:       "218ce79f2236b26add2e63a08d8c9a9e84602d529721961314d7e4983bda2876"
-    sha256 catalina:      "56df75d6751653be613443afe383d4a48baa2b5ab3a6afe3aa14552b0fc3304b"
-    sha256 mojave:        "e146837e4fc78e8aa7af2298547862ec0beb20dcdd229cceae503f6996928b21"
+    sha256 arm64_big_sur: "03957fe3eab53520827a52a153f527615cdbf07406636279891189f8b037c6fa"
+    sha256 big_sur:       "13b501800640ac63a447119d9f82f1dabf26feeabfd119d8e559536bdb6723ec"
+    sha256 catalina:      "21518b405685f7cf230f084570bc92b9fbf7ea116bbabd02041b4f265d2e762c"
+    sha256 mojave:        "da90fdc84b7291acab730e63443b23c007f9f328a4a0f172bce50c054b3d76f8"
   end
 
   depends_on "gobject-introspection" => :build
