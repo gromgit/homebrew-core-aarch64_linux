@@ -8,9 +8,10 @@ class RtAudio < Formula
   head "https://github.com/thestk/rtaudio.git"
 
   bottle do
-    sha256 cellar: :any, big_sur:  "80179e6294797448e1d3c70a23f42c8d64f1a45dc0b9d335af665143a65ec29f"
-    sha256 cellar: :any, catalina: "0d370ab05627fc2a81ca3893e9112c4fbc5282b4503e4a2d39ab9bb99e076e65"
-    sha256 cellar: :any, mojave:   "b6a89413b4075ca42dfe7b6fb85e1546d02536dae94c5de5b23bbf231fde7247"
+    sha256 cellar: :any, arm64_big_sur: "6aaea7e2e041421f615e4a20a371e2fe9c4fe601a8d1e3da61e9820595ab7c84"
+    sha256 cellar: :any, big_sur:       "80179e6294797448e1d3c70a23f42c8d64f1a45dc0b9d335af665143a65ec29f"
+    sha256 cellar: :any, catalina:      "0d370ab05627fc2a81ca3893e9112c4fbc5282b4503e4a2d39ab9bb99e076e65"
+    sha256 cellar: :any, mojave:        "b6a89413b4075ca42dfe7b6fb85e1546d02536dae94c5de5b23bbf231fde7247"
   end
 
   def install
