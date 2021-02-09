@@ -1,10 +1,16 @@
 class Cpl < Formula
   desc "ISO-C libraries for developing astronomical data-reduction tasks"
-  homepage "https://www.eso.org/sci/software/cpl/index.html"
+  homepage "https://www.eso.org/sci/software/cpl/"
   url "ftp://ftp.eso.org/pub/dfs/pipelines/libraries/cpl/cpl-7.1.2.tar.gz"
   mirror "https://src.fedoraproject.org/repo/pkgs/cpl/cpl-7.1.2.tar.gz/sha512/0835917153fdcf4e7908f9261e143dc54fe7b50dc7903c2041a23a1984554b94a99584def70a792d9fe44a42830bc2baee397635ce922848d514a580be59348a/cpl-7.1.2.tar.gz"
   sha256 "b6d20752420e2333e86d9a08c24a08057351a9fef97c32f5894e63fbfece463a"
+  license "GPL-2.0-or-later"
   revision 6
+
+  livecheck do
+    url "https://www.eso.org/sci/software/cpl/download.html"
+    regex(/href=.*?cpl[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
 
   bottle do
     sha256 cellar: :any, catalina:    "4585413a3561eea4a3443b1214dd1759e82853ca5273929e202a2c38ad526add"
@@ -25,7 +31,9 @@ class Cpl < Formula
                           "--prefix=#{prefix}",
                           "--with-cfitsio=#{Formula["cfitsio"].prefix}",
                           "--with-fftw=#{Formula["fftw"].prefix}",
-                          "--with-wcslib=#{Formula["wcslib"].prefix}"
+                          "--with-wcslib=#{Formula["wcslib"].prefix}",
+                          # Needed for 7.1.2's ./configure to work under Xcode 12:
+                          "CC=#{ENV.cc} -Wno-implicit-function-declaration"
     system "make", "install"
   end
 
