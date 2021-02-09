@@ -7,10 +7,10 @@ class Janet < Formula
   head "https://github.com/janet-lang/janet.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "46ae27b110fdef6d333d44d10632fead02c88da4bfbbb7a3b625a5b263acba15"
-    sha256 cellar: :any, big_sur:       "831ee848dfaf6e45611274dbaefd5f0debc1202936369b79daf7c55e927de3a4"
-    sha256 cellar: :any, catalina:      "9b020b08ab6756c1c33f980d850fd9eee05c917edce2d6ccf28e87f30db899dd"
-    sha256 cellar: :any, mojave:        "91c5ad4566064f72604943b2268fd0434790525324ccf073048519c07da42fd5"
+    sha256 cellar: :any, arm64_big_sur: "3fdd21a0267f9f791d88f0088c04ea989e8bd7867969f1c54fb596c6d1feefc5"
+    sha256 cellar: :any, big_sur:       "75e53b9ad08c33c511958112ac1b93e1b8e111659827fd32d8dc5147136cee60"
+    sha256 cellar: :any, catalina:      "d64943b91a284260e87545d398649d2c894408d36cec30db1520f64088f29fde"
+    sha256 cellar: :any, mojave:        "290d07100ea1e65cc9e5180e60f3bf3c0c7f7f3d548221819ba5ae41736359c9"
   end
 
   depends_on "meson" => :build
