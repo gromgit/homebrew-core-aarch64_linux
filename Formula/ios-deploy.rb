@@ -7,11 +7,10 @@ class IosDeploy < Formula
   head "https://github.com/ios-control/ios-deploy.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "453f018b6596d17395ccb3ef81874924e322079a3148408146e2532ac82ae75d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "33a69d0cdbc5b3a87c4d823c03d5cea427689697f28904487f91d44bce0c156d"
-    sha256 cellar: :any_skip_relocation, catalina:      "0547d1ceb2525f68bd73210586875053269dff5bd6731556a836b54f7ed17f86"
-    sha256 cellar: :any_skip_relocation, mojave:        "838319b9ff90fe670f92a792ceaa538f382578095ecf3df9f4d8835cd1795893"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "914ef6e3a7d365274e8ed2d9415b61df714c5eb41d5c07aaa6a2ac0066ea5bdf"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e85b52bd030eef2dfdc3f354fd4850fc6a09391e2822f48a1de8fed4d3581a4d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b4490b2ef74d1e2b498bf9a5e79305dacbd2bed3c5e0dd6b93822e19953f2074"
+    sha256 cellar: :any_skip_relocation, catalina:      "23244feccb6cf78da5eb83163c6a187acc3aa8248fa34eb909e1728b4876e5bb"
+    sha256 cellar: :any_skip_relocation, mojave:        "2a5a3fd9d3288d48a75f4f85aaf72e98d0866edca7c5b56ba6d2ccf0d98e96b8"
   end
 
   depends_on xcode: :build
