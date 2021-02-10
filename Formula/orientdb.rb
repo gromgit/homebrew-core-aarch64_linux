@@ -12,9 +12,10 @@ class Orientdb < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "8d22fa96c1fbfbec3a79558eac3d39313bab1fa33c6b88d8c55aa2d5a992c115"
-    sha256 cellar: :any_skip_relocation, catalina: "8feb18c41c07e84c8e4c14e1a9df84108a031f17fcf2bff99cd8be59579e201b"
-    sha256 cellar: :any_skip_relocation, mojave:   "595b217e15986cbe420d8762cb72f2050c25a6a744c1e415583dc1c128f8c108"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "05d8bf875b21f80a4bd38c13c7901dd69d408dcc762ce7bbb7590cff6b580a2c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6f56905a7921a7ac5c9721ce2d246269bdb1459a4baf5f3185ac62b116a883ff"
+    sha256 cellar: :any_skip_relocation, catalina:      "c125ce4a81a2ec52e5710df02aad3a19b42e72773d8254a1161868dd9b45c137"
+    sha256 cellar: :any_skip_relocation, mojave:        "8aefab2dd24d96463ef61e4b7834a3e0ffbfd26eadd300285be09c73f654dd34"
   end
 
   depends_on "maven" => :build
