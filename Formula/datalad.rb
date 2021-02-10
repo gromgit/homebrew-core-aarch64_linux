@@ -7,6 +7,12 @@ class Datalad < Formula
   sha256 "da157ec9bde834eccefed30d528e2d6467768d9c75dd308cf221b9d151083963"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, big_sur:  "c1c1c3b3142635a3b57733d01aac12e869d4200acb9495245a5a0bd71699ac53"
+    sha256 cellar: :any_skip_relocation, catalina: "4d0541da79e801a39b4dd35f2d2b5f9c887974f81aa8392d788bf07c7fa4c566"
+    sha256 cellar: :any_skip_relocation, mojave:   "3d265668a09af405985817852c4e7d18b6753d73b4c2b6626487427fbffe2fb0"
+  end
+
   depends_on "git-annex"
   depends_on "python@3.9"
 
