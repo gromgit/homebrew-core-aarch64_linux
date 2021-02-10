@@ -1,8 +1,8 @@
 class JsonGlib < Formula
   desc "Library for JSON, based on GLib"
   homepage "https://wiki.gnome.org/Projects/JsonGlib"
-  url "https://download.gnome.org/sources/json-glib/1.6/json-glib-1.6.0.tar.xz"
-  sha256 "0d7c67602c4161ea7070fab6c5823afd9bd7f7bc955f652a50d3753b08494e73"
+  url "https://download.gnome.org/sources/json-glib/1.6/json-glib-1.6.2.tar.xz"
+  sha256 "a33d66c6d038bda46b910c6c6d59c4e15db014e363dc997a0414c2e07d134f24"
   license "LGPL-2.1-or-later"
 
   bottle do
