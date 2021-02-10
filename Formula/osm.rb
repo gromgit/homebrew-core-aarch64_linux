@@ -8,10 +8,10 @@ class Osm < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "217cac47e47bcd4d47b5244302681524ad9dfce9943e87c4bdbf6faf547ebdb8"
-    sha256 cellar: :any_skip_relocation, big_sur:       "62cf4d646d1f983ce86d09b4bd86cd1e0dc43c98337e1fee7bfc10be89cc7478"
-    sha256 cellar: :any_skip_relocation, catalina:      "074c38844fc3561734304ee2ef7e6529bbc7b331c561a7bb1002b0838074b3a7"
-    sha256 cellar: :any_skip_relocation, mojave:        "4994184d5c9bcdb44eed93aca8441c7e4b7d25effa6c9c2181c3d2d4758c5569"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0a0ec8143cf42a76cad79c8a90ba42f1ee940ed2617f2a68fd66cb6143191d6e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3573b793dceb91ba10cc42a70da33c3fe859baa7264e2cbb6149717c13427ae9"
+    sha256 cellar: :any_skip_relocation, catalina:      "ee3e3de0a60d14d84038db764b49a7c2078c9c8a582afe92e79de099fe208f85"
+    sha256 cellar: :any_skip_relocation, mojave:        "74c6970fdfbd37faf0dd650aea5aae3c875236a38103f7c3809945015b2e5d77"
   end
 
   depends_on "go" => :build
