@@ -11,10 +11,10 @@ class Groonga < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "52a59769463063e753cff0f91d695ba76cf5d5e49a3ba86b0bd85fbd8287e03a"
-    sha256 big_sur:       "bba20e760e7fdc81c6ccddb6cccce20e656549b89af62ccafa8197b7972ee281"
-    sha256 catalina:      "29752b33e85e1b9de937d35f1852ccb179ac0de5cbbc8bff9db27153d111c6d9"
-    sha256 mojave:        "6d39d5dffe57c6f16e855f035f2df15b9a1295318e50986d237a4574937a58b0"
+    sha256 arm64_big_sur: "a13ea21d2bda53f4a21af0beea01a655ee96f375e4c7b2debe46f09382493fde"
+    sha256 big_sur:       "dc6597d2ebfe1227fa22b2fe648cd34078856b580ce4bcf2cf1ecc754c32fe9a"
+    sha256 catalina:      "d0a0807d3d57dc0fb4653dc318efc816737e423bd803836a211034abbe1a755c"
+    sha256 mojave:        "56459e3a9174b5a4ff6ae1ff7a55f62d28e4bc6157698542e33b48cc841d2b02"
   end
 
   head do
