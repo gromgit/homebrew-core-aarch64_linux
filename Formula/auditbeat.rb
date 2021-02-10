@@ -2,8 +2,8 @@ class Auditbeat < Formula
   desc "Lightweight Shipper for Audit Data"
   homepage "https://www.elastic.co/products/beats/auditbeat"
   url "https://github.com/elastic/beats.git",
-      tag:      "v7.10.2",
-      revision: "aacf9ecd9c494aa0908f61fbca82c906b16562a8"
+      tag:      "v7.11.0",
+      revision: "84c4d4c4034fcb49c1a318ccdc7311d70adee15b"
   license "Apache-2.0"
   head "https://github.com/elastic/beats.git"
 
@@ -14,12 +14,7 @@ class Auditbeat < Formula
   end
 
   depends_on "go" => :build
-  depends_on "python@3.8" => :build
-
-  resource "virtualenv" do
-    url "https://files.pythonhosted.org/packages/d4/0c/9840c08189e030873387a73b90ada981885010dd9aea134d6de30cd24cb8/virtualenv-15.1.0.tar.gz"
-    sha256 "02f8102c2436bb03b3ee6dede1919d1dac8a427541652e5ec95171ec8adbc93a"
-  end
+  depends_on "python@3.9" => :build
 
   def install
     # remove non open source files
@@ -27,15 +22,6 @@ class Auditbeat < Formula
 
     ENV["GOPATH"] = buildpath
     (buildpath/"src/github.com/elastic/beats").install buildpath.children
-
-    xy = Language::Python.major_minor_version "python3"
-    ENV.prepend_create_path "PYTHONPATH", buildpath/"vendor/lib/python#{xy}/site-packages"
-
-    resource("virtualenv").stage do
-      system Formula["python@3.8"].opt_bin/"python3", *Language::Python.setup_install_args(buildpath/"vendor")
-    end
-
-    ENV.prepend_path "PATH", buildpath/"vendor/bin" # for virtualenv
     ENV.prepend_path "PATH", buildpath/"bin" # for mage (build tool)
 
     cd "src/github.com/elastic/beats/auditbeat" do
