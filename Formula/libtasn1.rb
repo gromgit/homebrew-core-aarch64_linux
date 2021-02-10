@@ -8,11 +8,10 @@ class Libtasn1 < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "e5ff2498ab8bcc108dd6797fede68929ae3fd2796c39e349ff3f8e0a87abb7a0"
-    sha256 cellar: :any, big_sur:       "9a69770cae180c61ada4bb4701f5402b35b828d2baa7c5135196cf1df35965cb"
-    sha256 cellar: :any, catalina:      "00bd968b6a110c5cb497cf0e3b14800ed5e67a2476d0d544aeb1c0c2c1f3f332"
-    sha256 cellar: :any, mojave:        "3c2e9cdfec0ccec899847a3ab69b88967b6cbc0b3e406fa1938a4ca6f277b674"
-    sha256 cellar: :any, high_sierra:   "c3cf713b5bb29fcac1381b7242e557b7920cb327c77170a6dd038a477d6021cd"
+    sha256 cellar: :any, arm64_big_sur: "a5a79346194afa5a466d36f07aee16700be211a92e6cbddd522fb252dd6b1b5b"
+    sha256 cellar: :any, big_sur:       "367dc37e3bcb626de815129016cb106aa39ca8c2e8c3c9c5904b8da763b10e9f"
+    sha256 cellar: :any, catalina:      "09f4b0b626425f10665ff506c2dca70101ae9062b284b956197d7e88c91d952c"
+    sha256 cellar: :any, mojave:        "384a48716bc3b0fa7122c2fbd3a1ab4a93087acee7191710fa5bbbfa31e0f24f"
   end
 
   # Remove the patch when the issue is resolved:
