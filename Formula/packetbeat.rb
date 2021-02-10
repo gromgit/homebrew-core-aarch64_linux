@@ -2,8 +2,8 @@ class Packetbeat < Formula
   desc "Lightweight Shipper for Network Data"
   homepage "https://www.elastic.co/products/beats/packetbeat"
   url "https://github.com/elastic/beats.git",
-      tag:      "v7.10.2",
-      revision: "aacf9ecd9c494aa0908f61fbca82c906b16562a8"
+      tag:      "v7.11.0",
+      revision: "84c4d4c4034fcb49c1a318ccdc7311d70adee15b"
   license "Apache-2.0"
   head "https://github.com/elastic/beats.git"
 
@@ -14,12 +14,7 @@ class Packetbeat < Formula
   end
 
   depends_on "go" => :build
-  depends_on "python@3.8" => :build
-
-  resource "virtualenv" do
-    url "https://files.pythonhosted.org/packages/b1/72/2d70c5a1de409ceb3a27ff2ec007ecdd5cc52239e7c74990e32af57affe9/virtualenv-15.2.0.tar.gz"
-    sha256 "1d7e241b431e7afce47e77f8843a276f652699d1fa4f93b9d8ce0076fd7b0b54"
-  end
+  depends_on "python@3.9" => :build
 
   def install
     # remove non open source files
@@ -27,15 +22,6 @@ class Packetbeat < Formula
 
     ENV["GOPATH"] = buildpath
     (buildpath/"src/github.com/elastic/beats").install buildpath.children
-
-    xy = Language::Python.major_minor_version "python3"
-    ENV.prepend_create_path "PYTHONPATH", buildpath/"vendor/lib/python#{xy}/site-packages"
-
-    resource("virtualenv").stage do
-      system Formula["python@3.8"].opt_bin/"python3", *Language::Python.setup_install_args(buildpath/"vendor")
-    end
-
-    ENV.prepend_path "PATH", buildpath/"vendor/bin" # for virtualenv
     ENV.prepend_path "PATH", buildpath/"bin" # for mage (build tool)
 
     cd "src/github.com/elastic/beats/packetbeat" do
