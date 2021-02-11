@@ -7,10 +7,10 @@ class Subversion < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 arm64_big_sur: "cbf0d587edf228480d7ff2f94bb850d96d30e2f03ed47fae7fed6e3efa2bfd43"
-    sha256 big_sur:       "0c9c96e6d321a1e6d523d0783a315529e8f169c230017209d85f9afe6aa37693"
-    sha256 catalina:      "074d4f24adf5242be5a23996db6abcc7a2a4b25ae0faf6fbe52d5fcd71d7405a"
-    sha256 mojave:        "c4d00745a6ef81fe3e856da71e3cc3600108f32a9f4912bcaaca743f591c8da3"
+    sha256 arm64_big_sur: "ca05380632bac6c53ae282050a0ce9a3034ffbb5719684f2d96cc43fbfe1e130"
+    sha256 big_sur:       "b98befd5c5b05ab4381e055a967cb6df55a59174cca11ce6ff9cbe4a3bd35e59"
+    sha256 catalina:      "3cfd3fc3886817d9accd3f118083b95e1c6832eee4f20fa1b73b28a2e2262600"
+    sha256 mojave:        "5de933ae5c71c09e2aae3607dfc84a47c85a67532e2e35b1b09c06e27046e0ba"
   end
 
   head do
