@@ -3,7 +3,12 @@ class Xaric < Formula
   homepage "https://xaric.org/"
   url "https://xaric.org/software/xaric/releases/xaric-0.13.7.tar.gz"
   sha256 "fd8cd677e2403e44ff525eac7c239cd8d64b7448aaf56a1272d1b0c53df1140c"
-  license "GPL-2.0"
+  license "GPL-2.0-or-later"
+
+  livecheck do
+    url "https://xaric.org/software/xaric/releases/"
+    regex(/href=.*?xaric[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
 
   bottle do
     rebuild 2
@@ -15,7 +20,11 @@ class Xaric < Formula
 
   depends_on "openssl@1.1"
 
+  uses_from_macos "ncurses"
+
   def install
+    # Workaround https://github.com/laeos/xaric/pull/10
+    ENV.append "CFLAGS", "-Wno-implicit-function-declaration"
     system "./configure", "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
                           "--with-openssl=#{Formula["openssl@1.1"].opt_prefix}"
