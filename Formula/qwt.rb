@@ -7,10 +7,10 @@ class Qwt < Formula
   license "LGPL-2.1-only" => { with: "Qwt-exception-1.0" }
 
   bottle do
-    sha256 big_sur:     "1abf218dc1a4cd47873267d984c71cc6aac3830d19cd6dea6de7d67ee00aec40"
-    sha256 catalina:    "1890f28117b4bc819d39359bfe70af5993d735a9bf4e8b5121992e3681287801"
-    sha256 mojave:      "79dfcceaa6ad17084d8997201d22de70a19b8228e626094ed1d4a6787c3324f7"
-    sha256 high_sierra: "22baeaa7b5cbaade938f80ab01845e8fb8516389b82cfd2ca8180aeeb676289f"
+    sha256 arm64_big_sur: "a3ebfd4004fec1a451a9af3764b92932ac03f9c0f62ecf2d2c38087a8968aaa3"
+    sha256 big_sur:       "b703690ba90cdecc05cbbe3681d00d4c5138a341fb67e5d6c3586a0f3fa91ae4"
+    sha256 catalina:      "e54a2c2582412a4ac2730dfc9d59b00a98ffce155c1f2fefac78abd266fcdb84"
+    sha256 mojave:        "6dffaa9d451b82e5bdd78ae6dea239b3f0e5338677085babe3b2185724b46580"
   end
 
   depends_on "qt"
