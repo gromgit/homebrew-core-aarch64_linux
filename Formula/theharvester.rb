@@ -9,10 +9,10 @@ class Theharvester < Formula
   head "https://github.com/laramies/theHarvester.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "02ea573d0407250c3e25729bc4c727b75efd34131bd759f8971073611c3b644f"
-    sha256 cellar: :any, big_sur:       "9dc1561d8d8b808f883e5f738116f20b9f40da8e23831c6b839b669a38718301"
-    sha256 cellar: :any, catalina:      "180c2e46cd59537a9fb3941b45651227458b824180d1e2dca953ef0dfdb82414"
-    sha256 cellar: :any, mojave:        "dec2bf1a27212b9fab8afa967fded9c9b2b641a53b0f59b4118e93b863377471"
+    sha256 cellar: :any, arm64_big_sur: "067f0db43ce012caa1e4bac215af57ac37e91196c57c178eb504381853383eb1"
+    sha256 cellar: :any, big_sur:       "62b00a711849b1fe5f31b5f798aee40312f7808bd9b1f8a3a58e4e8332e1fbc0"
+    sha256 cellar: :any, catalina:      "82e589ec0cf84632915807d7130bf926e2401d92628f14fbd178d03e2e612296"
+    sha256 cellar: :any, mojave:        "b2c93a47b3bf301dad45d205a4266ee6bf3ea0b52b98079037e6df30a9e6fde6"
   end
 
   depends_on "libyaml"
