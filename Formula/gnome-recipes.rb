@@ -6,11 +6,10 @@ class GnomeRecipes < Formula
   revision 15
 
   bottle do
-    sha256 arm64_big_sur: "c2e5d814490f07f330d62591b7848c5b988706c74feeac8deb7a207201235045"
-    sha256 big_sur:       "555f367e08429f2d3f3b7c328ae1ee3f98e6d814cbf74dff07082868e924e4ba"
-    sha256 catalina:      "8525bf318111d8b1e5b8e1df89675c0994717820d6bf1da78f245ae80d571668"
-    sha256 mojave:        "1dbaaf7bf99ef4f2e6f1a7ebbd092385661b0f8edbc174574d58024dd93fd2db"
-    sha256 high_sierra:   "09462612f5370fae0aad9c0af904328c7fa37092ea81e8eda62e3f614bcdc479"
+    sha256 arm64_big_sur: "a383ac85885a09d8c959af00fda8ab9fd6599b4347ce26929b6ed67bf9735e05"
+    sha256 big_sur:       "c0ad5482453faf871b12613b8d6a6e9c2ae5762ed14513ff96e941645822feb6"
+    sha256 catalina:      "57c8af5693a567947ea106732c61bcb30e867118dddc79c17856a0b226ee93da"
+    sha256 mojave:        "4c3c1df208cdb1114858b1760fa0db2f606c9c5d999d2cfee9a483a519681cde"
   end
 
   depends_on "itstool" => :build
