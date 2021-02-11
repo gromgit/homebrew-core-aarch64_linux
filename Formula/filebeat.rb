@@ -10,9 +10,9 @@ class Filebeat < Formula
   head "https://github.com/elastic/beats.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "e61cfbd9a512b682f92b4a8eb671de6e5e07eca094bade3aa228c337f2bf2c39"
-    sha256 cellar: :any_skip_relocation, catalina: "7f6f1c8c7a09a9e22b7851f09bcd5df276f0dd25a13356d7cbd92b12085a4352"
-    sha256 cellar: :any_skip_relocation, mojave:   "f5365d692e77423773f383e3cbf0d7d8469d0f54d0b202c42ae64507c795d025"
+    sha256 cellar: :any_skip_relocation, big_sur:  "adf7eb2e448f0291536685c5936cc8c0c99f80cfa1b29f0e190e465f7d959b73"
+    sha256 cellar: :any_skip_relocation, catalina: "358f44022e196f2c5aa631928f9ddf62d852d6ff825ba9f1a188b3544e9c3c4d"
+    sha256 cellar: :any_skip_relocation, mojave:   "9d262694eab1e8bd0cd38105a03ac2066c0019a79385541c5977a318ba5f3b8a"
   end
 
   depends_on "go" => :build
