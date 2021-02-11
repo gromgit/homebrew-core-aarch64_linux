@@ -11,11 +11,10 @@ class Squid < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "e19b7283407a359db233a4ff98b8e8e2aecb9300cc58fc9127b265cd268c21fd"
-    sha256 big_sur:       "bcfe5fb98976abceb99c38e1a56be7d8ce008898dfc99e4ae7dccb9c188c5d2d"
-    sha256 catalina:      "9993d7d8c41a778163e0bdcd13a882125269784fce9969b3f6a4c723daa8b750"
-    sha256 mojave:        "cab7176b8938750b08ec079ff5bd2b37408dace0a1823f61fc2e913d08afe377"
-    sha256 high_sierra:   "5fc9145a26ff1555e94e5c0e124cdacd5e9b06747240da161ddb1782731b5f71"
+    sha256 arm64_big_sur: "422162362d423a8cb0ab116731da03eedad5991cb36c64304a3462971d2f90bf"
+    sha256 big_sur:       "8e0aaa487fd37fa2da664d23bfd1a199f3b774908f1b35ec9efc842ff4ac3574"
+    sha256 catalina:      "858bb9791ae9e3a6d6bb7fadb46ac8fa6cfc16f946a1d6cbe6ecce4cdc8077b5"
+    sha256 mojave:        "1c726f0f574c9b5a0d74afa54b4436d0f97486ad7bddb426fad5235fdda16396"
   end
 
   head do
