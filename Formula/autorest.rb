@@ -8,9 +8,9 @@ class Autorest < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "c3fd2567d1d0e80fa3db5d78382ea4a9948ca4d30e6da13ce2851c4e5d114852"
-    sha256 cellar: :any_skip_relocation, catalina: "95a0b86206adeea3f718bbb7df68bd943c1992f5c3247a9af74e1a38d803060c"
-    sha256 cellar: :any_skip_relocation, mojave:   "cb46ce8b659f3c61447b9327cbb58e63cec960f367818ad9171ec5efa301ece5"
+    sha256 cellar: :any_skip_relocation, big_sur:  "efc8ea6483ea4be47b68d1fbeda0cb547887df62f904392da4c57426f07962c1"
+    sha256 cellar: :any_skip_relocation, catalina: "2beeb573f9de89c189617659aef625da0aa7dbf466a3f1e1d6192712f39e9878"
+    sha256 cellar: :any_skip_relocation, mojave:   "6e07e8f9b93b062594dbe37ca1c07abd59fa63efd00d27d7b209992f14a430f3"
   end
 
   depends_on "node"
