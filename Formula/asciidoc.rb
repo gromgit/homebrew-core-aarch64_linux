@@ -14,10 +14,10 @@ class Asciidoc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b1bcbcde0a7c320b6545b860c6970ba4fe3197fd9895bcd7213bc4e1d94e3fc8"
-    sha256 cellar: :any_skip_relocation, big_sur:       "fdfe12fdf2042b563bc1a483ffa374af8a66e4cf0ba3016a391dc2fc21900543"
-    sha256 cellar: :any_skip_relocation, catalina:      "ea51b42dc1abaebdd7651c7f173425120abebe59d3fa71d44c6def60a737cdbe"
-    sha256 cellar: :any_skip_relocation, mojave:        "fbd4303b8c1cfd427120a8b90e8504fd1d553b65243b8079e4d9e694f0a340d6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0613eea2af2be4241ba6ccdeb94eb8c061bf07c5fd18ecc8e3a8d2ce0b3e1128"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4a13fb6be824ba6a60ccd646aa8d64535c41fb2a2bdf6cf242b5bd4e94a8d75b"
+    sha256 cellar: :any_skip_relocation, catalina:      "e7dd75c43dd2370426f3383ee7975f5acbb2b9d4499ebd8404aa63d215b7d4f9"
+    sha256 cellar: :any_skip_relocation, mojave:        "64d87ef7c0ba34bee18612d2fdfd623ad045cf9580cc88c9073a63a067d3e76f"
   end
 
   depends_on "autoconf" => :build
