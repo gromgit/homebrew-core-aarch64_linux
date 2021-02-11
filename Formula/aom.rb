@@ -7,10 +7,10 @@ class Aom < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 arm64_big_sur: "40ff3aca3a017ec17da8b1e259d6d73279eb05d04d88d34da67363187a9a7706"
-    sha256 big_sur:       "630f7667afa820f812e6db647a35daed6a0c178234e9d021f327e77209d291f6"
-    sha256 catalina:      "0ff8bc71b78e7dab72a5f51d877c4566e8933308e282e4225fb30d9858d71a3d"
-    sha256 mojave:        "d53d69ac2b2a129d20322b3c994d3e3491bc669deb08d46c253f43ec8b5e145a"
+    sha256 arm64_big_sur: "f17ad0f61eef16b08826918342e88f7d180009b867467aba7307a6a495b20b59"
+    sha256 big_sur:       "4ac5117ff5065d8ad5e185c98eba0b4909ea2201bd0f8b8844edf2987e85d8a6"
+    sha256 catalina:      "0cad1d09aafe134daa8e24f5e346fd2766171f637b31894be22f9a80dcbbb770"
+    sha256 mojave:        "1856596662ee2ad37056f4db3ac26e049be22801dade3b98f1bc4ef143a23908"
   end
 
   depends_on "cmake" => :build
