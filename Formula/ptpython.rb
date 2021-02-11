@@ -9,10 +9,10 @@ class Ptpython < Formula
   head "https://github.com/prompt-toolkit/ptpython.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bd8d8148b5665ac3c264adcbb3b92f6f69929486b3a1f1b147f13b074a12769d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ea7546cd4088749497a82ef67862d86dc5d5707e19b9fee3a1c885ab28eef332"
-    sha256 cellar: :any_skip_relocation, catalina:      "d20d9130a9365538af47930be4cac3e93b8f81a05852cb7790564b865020ad49"
-    sha256 cellar: :any_skip_relocation, mojave:        "93824e58ebd542f2639838765fb3c44f0e945c1f2c1e8affd7c78bea8acda7f5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "32fafdadf92aa16f4c4ba99a5cdc738250719380084c1b90369c52ef79a2c2d5"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7403256d48e79dffdce96095feab9822cffeffcd1e9433577658ff7ca663ed97"
+    sha256 cellar: :any_skip_relocation, catalina:      "a4dd345f87fb2da5406ed6d060a5777011ff3d34ee7fe14fef57080bdb2884e3"
+    sha256 cellar: :any_skip_relocation, mojave:        "b32eedf88527ecf4550474a65c9b392d818c71b1bfdcb3068352c54f0ce2e830"
   end
 
   depends_on "python@3.9"
