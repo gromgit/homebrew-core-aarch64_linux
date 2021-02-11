@@ -6,11 +6,10 @@ class Qwtpolar < Formula
   revision 4
 
   bottle do
-    rebuild 1
-    sha256 big_sur:     "634cd7925ec1cd45dee256c4e274592714caa44c25d0aeea554b309a90141299"
-    sha256 catalina:    "29e8dcae83fabafd75613c3299482b3d126ade4837b6c312d882994726fe3667"
-    sha256 mojave:      "29e8dcae83fabafd75613c3299482b3d126ade4837b6c312d882994726fe3667"
-    sha256 high_sierra: "5bd97a27b353a338b97b1e5f33f1c95b568dacc9e49f9d56a1e085bf554264bb"
+    sha256 arm64_big_sur: "9e69907710588144c7d42992d475bb4dee85b2c5d65f7516148139bee378b1b8"
+    sha256 big_sur:       "24c95a54e4235a58322474e0bad2333cbb8d7345a6962314198c99e2db6c05d0"
+    sha256 catalina:      "aecaa5a0aa1d226e6e270e56efdb43884ba9d5fd73780e5460795910e7e0560b"
+    sha256 mojave:        "0d493ae14bbe49a4580e567c36df9bbbfa0f394055e9f49df812059e9e9aa3ea"
   end
 
   depends_on xcode: :build
