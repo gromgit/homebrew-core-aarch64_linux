@@ -4,7 +4,7 @@ class TemporalTables < Formula
   url "https://github.com/arkhipov/temporal_tables/archive/v1.2.0.tar.gz"
   sha256 "e6d1b31a124e8597f61b86f08b6a18168f9cd9da1db77f2a8dd1970b407b7610"
   license "BSD-2-Clause"
-  revision 2
+  revision 3
 
   bottle do
     rebuild 1
@@ -27,6 +27,13 @@ class TemporalTables < Formula
   patch do
     url "https://github.com/mlt/temporal_tables/commit/a6772d195946f3a14e73b7d3aff200ab872753f4.patch?full_index=1"
     sha256 "c15d7fa8a4ad7a047304c430e039776f6214a40bcc71f9a9ae627cb5cf73647e"
+  end
+
+  # Fix for postgresql 13 compatibility:
+  # https://github.com/arkhipov/temporal_tables/issues/55
+  patch do
+    url "https://github.com/bbernhard/temporal_tables/commit/23284c2a593d3e01f7b4918c0aaa8459de84c4d8.patch?full_index=1"
+    sha256 "c1e63befec23efbeff26492a390264cbc7875eaa3992aa98f3e3a53a9612d0e0"
   end
 
   def install
