@@ -11,10 +11,10 @@ class Geos < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "c0ed29477cb947d1c5b128e05bde75b48a5bac0e96f48516941c19feaa488607"
-    sha256 cellar: :any, big_sur:       "af956efbf37bc8b6462e1ad18f19e5d4a42a1b59e78f6a01901244899f8f0cba"
-    sha256 cellar: :any, catalina:      "2dba43e2cb2dfacb24c6017c47c8f14c8433db0865e973d025e40924d8fc06e6"
-    sha256 cellar: :any, mojave:        "e460db9c6729fc8091e51e693cab84dcbb1ed046bc20e0edb54069ff39daf2b9"
+    sha256 cellar: :any, arm64_big_sur: "55162eaa549fb0b551ddbd6fa2e7e25da1f9c4cf9772ed62d077f0f8bf03ecbe"
+    sha256 cellar: :any, big_sur:       "763727a2a096dd9a5ba2735672f2ff2ee58c7c1efd8b2db8d79dc2e5e6989cbe"
+    sha256 cellar: :any, catalina:      "6ebbc7afe80b38660e33be4b95a47654d0d4dc067b13076f1b88d06c52dd717a"
+    sha256 cellar: :any, mojave:        "ff5f29ff0856fdc987c5338a066ddbaa2eb3e231ff1a87bc7c166be73dcac892"
   end
 
   depends_on "swig" => :build
