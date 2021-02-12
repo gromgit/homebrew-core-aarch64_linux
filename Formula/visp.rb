@@ -3,7 +3,7 @@ class Visp < Formula
   homepage "https://visp.inria.fr/"
   url "https://gforge.inria.fr/frs/download.php/latestfile/475/visp-3.3.0.tar.gz"
   sha256 "f2ed11f8fee52c89487e6e24ba6a31fa604b326e08fb0f561a22c877ebdb640d"
-  revision 11
+  revision 12
 
   livecheck do
     url "https://visp.inria.fr/download/"
@@ -26,6 +26,9 @@ class Visp < Formula
   depends_on "pcl"
   depends_on "zbar"
 
+  uses_from_macos "libxml2"
+  uses_from_macos "zlib"
+
   # from first commit at https://github.com/lagadic/visp/pull/768 - remove in next release
   patch do
     url "https://github.com/lagadic/visp/commit/61c8beb8442f9e0fe7df8966e2e874929af02344.patch?full_index=1"
@@ -38,8 +41,6 @@ class Visp < Formula
 
   def install
     ENV.cxx11
-
-    sdk = MacOS::CLT.installed? ? "" : MacOS.sdk_path
 
     # Avoid superenv shim references
     inreplace "CMakeLists.txt" do |s|
@@ -76,21 +77,15 @@ class Visp < Formula
                          "-DPNG_PNG_INCLUDE_DIR=#{Formula["libpng"].opt_include}",
                          "-DPNG_LIBRARY_RELEASE=#{Formula["libpng"].opt_lib}/libpng.dylib",
                          "-DUSE_PTHREAD=ON",
-                         "-DPTHREAD_INCLUDE_DIR=#{sdk}/usr/include",
-                         "-DPTHREAD_LIBRARY=/usr/lib/libpthread.dylib",
                          "-DUSE_PYLON=OFF",
                          "-DUSE_REALSENSE=OFF",
                          "-DUSE_REALSENSE2=OFF",
                          "-DUSE_X11=OFF",
                          "-DUSE_XML2=ON",
-                         "-DXML2_INCLUDE_DIR=#{sdk}/usr/include/libxml2",
-                         "-DXML2_LIBRARY=/usr/lib/libxml2.dylib",
                          "-DUSE_ZBAR=ON",
                          "-DZBAR_INCLUDE_DIRS=#{Formula["zbar"].opt_include}",
                          "-DZBAR_LIBRARIES=#{Formula["zbar"].opt_lib}/libzbar.dylib",
                          "-DUSE_ZLIB=ON",
-                         "-DZLIB_INCLUDE_DIR=#{sdk}/usr/include",
-                         "-DZLIB_LIBRARY_RELEASE=/usr/lib/libz.dylib",
                          *std_cmake_args
     system "make", "install"
   end
