@@ -9,10 +9,10 @@ class Poetry < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "88339bd33aefac99d6efb795a8a7a3a3596b5d02985523950d98e2a16207e085"
-    sha256 cellar: :any_skip_relocation, big_sur:       "844ff17a687f18081080999f8ff09e7636a7bc41d3f44e70ceb96f37fb410b08"
-    sha256 cellar: :any_skip_relocation, catalina:      "b6e56413cb47ca7c6f972fd9429ba2d2daed2bb1fe1f4c726b8f0d600fea5108"
-    sha256 cellar: :any_skip_relocation, mojave:        "737ae3040efc4130cad9043f2d59f14ad2980e283f7532623e1a5ae8850b5355"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "73287c47d3aef6f5cdab0eccd7b8fd523fc7e6bd5e4c98defc3693ff34d83995"
+    sha256 cellar: :any_skip_relocation, big_sur:       "1fd511ee4f9ee2edd7a4b5cddaf6aa66981de4e923f2f1afc14d3a6ff20b0148"
+    sha256 cellar: :any_skip_relocation, catalina:      "b64dae2f9e212bede530897dc02a876e21ad082933317894a0d48844f781e9d3"
+    sha256 cellar: :any_skip_relocation, mojave:        "3582e8c14a17949011e4a35f832976eaa5320c34fcf32cb8cb9c8d7f600e7395"
   end
 
   depends_on "python@3.9"
