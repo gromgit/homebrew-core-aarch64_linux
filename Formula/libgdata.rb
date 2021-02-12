@@ -6,11 +6,10 @@ class Libgdata < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "e31807a39d967829c44e6fb94a2d3efba07e3e6fc8ae80747e18b435f46ed15f"
-    sha256 big_sur:       "acf37716c065ba69fc22c35236bfc7ebdb7b01623e20ce82ec03306c2684b925"
-    sha256 catalina:      "c93f83c348b673c9768be22ae9e1119d5eb86ff94bd28e95976c2dca47f5defe"
-    sha256 mojave:        "e84e22686408f68d77b239d0cdc476f33e677f8aa66405ba4506513e31eafe2c"
-    sha256 high_sierra:   "0320d28747a36cf8451eff40a16bc25c9735e287888177c2c1f1ec93a835cf56"
+    sha256 cellar: :any, arm64_big_sur: "413a354df3ae8ea57c10b586e51dae29e58a62b1ab31f7f39a3604d368f31f9f"
+    sha256 cellar: :any, big_sur:       "ef65e8ecd410c9f9123922def6c7ccff264f235965e292fc3eab6bf6be93349f"
+    sha256 cellar: :any, catalina:      "1e7c809fca23a4ce3f61177749f6fd814bbe2f465caa8dada1f6b6c6f8be2c50"
+    sha256 cellar: :any, mojave:        "d09ac23f65b3bc9a63c22cb45d7a7742a70fc11af0fcedcee39f2c643f3cd4e1"
   end
 
   depends_on "gobject-introspection" => :build
