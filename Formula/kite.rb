@@ -1,9 +1,10 @@
 class Kite < Formula
   desc "Programming language designed to minimize programmer experience"
-  homepage "http://www.kite-language.org/"
+  homepage "https://web.archive.org/web/20200217045713/http://www.kite-language.org/"
   url "http://www.kite-language.org/files/kite-1.0.4.tar.gz"
   sha256 "8f97e777c3ea8cb22fa1236758df3c479bba98be3deb4483ae9aff4cd39c01d5"
-  revision 2
+  license "BSD-3-Clause"
+  revision 3
 
   livecheck do
     url "http://www.kite-language.org/files/"
@@ -16,6 +17,8 @@ class Kite < Formula
     sha256 sierra:      "5f090153489b27969c99e30a3be64e747da75738d9377f830a717bd856df3a72"
     sha256 el_capitan:  "0c4b034731a0b3fa2f492f1a435122e78bdda3508d778507de3679c353894ad8"
   end
+
+  deprecate! date: "2021-02-12", because: :unmaintained
 
   depends_on "bdw-gc"
 
@@ -41,7 +44,7 @@ __END__
  #endif
  
  #ifdef HAVE_GC_H
-+#if GC_VERSION_MAJOR >= 7 && GC_VERSION_MINOR >= 2
++#if (GC_VERSION_MAJOR > 7) || (GC_VERSION_MAJOR == 7 && GC_VERSION_MINOR >= 2)
 +    ret->old_proc = GC_get_warn_proc();
 +    GC_set_warn_proc ((GC_warn_proc)kite_ignore_gc_warnings);
 +#else
