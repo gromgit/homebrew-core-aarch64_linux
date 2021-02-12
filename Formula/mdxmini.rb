@@ -8,6 +8,7 @@ class Mdxmini < Formula
   bottle do
     rebuild 1
     sha256 cellar: :any, arm64_big_sur: "dabc5df917cc5cbbbd5ee9196edbbc864baeaa8ce7e1911721951bf5eedab58d"
+    sha256 cellar: :any, big_sur:       "7b372fab53a00c33796d91b6f2a7261a10ab51d1893f82176dd75ce89577d524"
     sha256 cellar: :any, catalina:      "04b985db291b09f8f1c4a57e522700f9c67eadcd1074faae78ab0e2ff268d9da"
     sha256 cellar: :any, mojave:        "e93281dc0c64642e33763f0dc2a4cfa0a6da0dd4739222b0411e54913435ee27"
     sha256 cellar: :any, high_sierra:   "5bf36e82084146ab4604b4746bcf6634cfe4268f2044712e4d13519b21ab5165"
