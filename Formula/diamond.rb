@@ -6,10 +6,10 @@ class Diamond < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "26f4a5bca093868765c8091b4062011a4f9e5189e0d1a1959091fc9c6a158fa9"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f70e5557c3015df2accd59a310f8d71594b6d01876f2b44168dd4feb6902dd25"
-    sha256 cellar: :any_skip_relocation, catalina:      "d1683829029ac914c498b89fba6b09575938dfb5d5eafbbcf4a39a11557f7c11"
-    sha256 cellar: :any_skip_relocation, mojave:        "38bb582b25980f7303ba643c8d1a889ba47fd7992679744557016c38739d65d9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c573e096c0fc3f51cca1d01b8ed844a72e32363c84b4288e870f8532bf621593"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5d347c31e0e69187454084656a564d4d6a21201efa4420084b058157d2059407"
+    sha256 cellar: :any_skip_relocation, catalina:      "4b23cf7459b30d36c07f9d22664eab2b9966bd720a687435fae99ac1e849f640"
+    sha256 cellar: :any_skip_relocation, mojave:        "d1bbd8ebcaf859efd57d6ab9fd9ccb6187e44771baf3fc728026e30320e58f71"
   end
 
   depends_on "cmake" => :build
