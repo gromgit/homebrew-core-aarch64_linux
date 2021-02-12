@@ -7,10 +7,10 @@ class Tm < Formula
   head "https://github.com/triggermesh/tm.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ea3773e93db4af6d55289ccab9b0c605d6fe45288d9f8fdda9b7c3f441d0ece0"
-    sha256 cellar: :any_skip_relocation, big_sur:       "90a2a241e24d9ceb8cf91e17c7df282c14627494a7743db3edfc6f6fdec0a284"
-    sha256 cellar: :any_skip_relocation, catalina:      "70d84228a91b8c8646dc79447c14d9ec3773e093dd86521c6cd52e30c9c52214"
-    sha256 cellar: :any_skip_relocation, mojave:        "e1d9a3b8f64857f602e3ffc749e876beb888b5ca973aeba2dc736f1632bee379"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ee64fb1f753b611c0417d2f346a5f40f6eeba83a0788c3d2100b630d5d8a41fb"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f18a9b4454bcaf2e3dce803c48334f55705668224ae6d29a5b0e7b531d3c7eb8"
+    sha256 cellar: :any_skip_relocation, catalina:      "0095bd87a847107f958de558b096a701c99eec4cbcfc2e7aaa5ef74994208b98"
+    sha256 cellar: :any_skip_relocation, mojave:        "4160f40f0d8b5d52e0fb66ab3152b8918a83c74d4010bbf79d7d06beec697ddd"
   end
 
   depends_on "go" => :build
