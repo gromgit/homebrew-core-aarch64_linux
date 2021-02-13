@@ -8,11 +8,10 @@ class Watch < Formula
   head "https://gitlab.com/procps-ng/procps.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "dac922f7e9d6ca9ec89dc8529acf11f15bd4c40cfb24718e81701173cbde778e"
-    sha256 cellar: :any, big_sur:       "3933eb4166737df39b49d7abf3279385e09867c516f2952095cfbe3b74d93175"
-    sha256 cellar: :any, catalina:      "011e48363fe62c7a4ba0dec746d5964ee25545bde7855a31db0cb411420df190"
-    sha256 cellar: :any, mojave:        "d17aba6f80c530e6b91b30e088df60aab3dc84b2f57ca7499928322438b9f0d2"
-    sha256 cellar: :any, high_sierra:   "13d63ebc419965182d98f10b25cc99961679e1ba5ce6118e66b7037eb4e78de8"
+    sha256 cellar: :any, arm64_big_sur: "45b90fbbda918d2c87ef6ccc29f1d931cbd0a490f2b1d599444591aae04a3cb0"
+    sha256 cellar: :any, big_sur:       "251b920890874ad798cf01c4c52564c720f785ce8184ae41181654b8f65e592b"
+    sha256 cellar: :any, catalina:      "05698a04a502ac32c97e0de0d9f00ac7c7450afd5d42b85d8ce1cd55d010fff3"
+    sha256 cellar: :any, mojave:        "d2ce790ff9e073d04615051cd94dce4e06d37993de21894a64d4a23b7dfe5ea5"
   end
 
   depends_on "autoconf" => :build
