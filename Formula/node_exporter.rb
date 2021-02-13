@@ -12,10 +12,10 @@ class NodeExporter < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "26f970b579fc2f551f4e474ba196cdd34181932b0812a64fb017f06f8d1d2549"
-    sha256 cellar: :any_skip_relocation, big_sur:       "86ba022ea466819b800291becc0a825b49e5070303eacad15058bffb697e105b"
-    sha256 cellar: :any_skip_relocation, catalina:      "4e227e18e0423734f894d69809c6847dab93911b34d6cde8add107247d6438ed"
-    sha256 cellar: :any_skip_relocation, mojave:        "8f383bea5a6f4180de303c91513c6fb1b7d7b5b98f1914682cde4aa6d6e047e9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9667e4236b0afadd58eb02047ef4be19a5a9265cea49a89ddd794a29adefbe6e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "2b6527d04527d0900000b41ed501eed11d9b3cfec65328efa7f48427ce197c24"
+    sha256 cellar: :any_skip_relocation, catalina:      "b50bdef7eb4fbf4d963d3b57879be5b97094e68c9d7372ec3103da246b21ff9e"
+    sha256 cellar: :any_skip_relocation, mojave:        "04e225d74595e2ecef0d5aefb24edd32171a6368b2bdc22957dab43f46925d3d"
   end
 
   depends_on "go" => :build
