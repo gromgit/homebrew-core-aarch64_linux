@@ -7,10 +7,10 @@ class Libgosu < Formula
   head "https://github.com/gosu/gosu.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "0a069eed6b4818492b6f17529bf410016e718fec02083057b7fd69bee82ba222"
-    sha256 cellar: :any, big_sur:       "ddecd4c4e7e5efae176564fe284fa28ea0d2ca036307275746cc89ebfcfec465"
-    sha256 cellar: :any, catalina:      "333e8f988f9684060721d0ea90fdd2d9c4fae1464f71dc36ea214894459c062a"
-    sha256 cellar: :any, mojave:        "45d11a2ac6b2a24f5c2dac4c631bc0c4bdcdae59061534b70598431a5e1b7496"
+    sha256 cellar: :any, arm64_big_sur: "ba3dc05c5b75e98517f19f8c79b1250905ed45d10470e318fe039950ac98ea10"
+    sha256 cellar: :any, big_sur:       "e3743ae931e3fb3e7f2f606d61678a8ea4377b2edd065f3972f5c59fdaed2124"
+    sha256 cellar: :any, catalina:      "032761586a702d3ca96cfc9635bb4d6660505c3638127a411a9d5c7faf7a9f3b"
+    sha256 cellar: :any, mojave:        "116839d8a24839752bb94c9904351db68d10a3cc33b56968e89f243ca1174675"
   end
 
   depends_on "cmake" => :build
