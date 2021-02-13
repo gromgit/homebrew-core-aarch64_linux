@@ -7,11 +7,10 @@ class Inetutils < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "e105a42e4d6c1f5bb76118c4457c4caf0b029e1e0182f8d6a44b41c412c945f1"
-    sha256 big_sur:       "63458282aca520a5b2b3a0b01d9aa5e172aa6a26777232d8419363d20e36bd14"
-    sha256 catalina:      "b65d88fb7a2bda5f958174977a913910398e0896e1c76216e7d8435949449e6a"
-    sha256 mojave:        "41ebb24e34edb639849cc192f08f024267eb23217289869244e17bacc0718c70"
+    sha256 cellar: :any, arm64_big_sur: "82b61f26f0dc565334619a3ca34994cfea99088e25db94bd15706037a2c49b61"
+    sha256 cellar: :any, big_sur:       "31f0fdd6e2bdc5ed3e25d46aa8c47c2e0d6c9fe13011fe4c388388eead919676"
+    sha256 cellar: :any, catalina:      "8fd3005c6e2914ee9d3d2f513bfa903827a94a74a232f1553d9a113aba1eddc2"
+    sha256 cellar: :any, mojave:        "85a50b1e624497625bea4c836be1005dfd60c11814778e09153acf256a9e3992"
   end
 
   depends_on "libidn"
