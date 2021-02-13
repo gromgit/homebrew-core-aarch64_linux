@@ -8,10 +8,10 @@ class OperatorSdk < Formula
   head "https://github.com/operator-framework/operator-sdk.git"
 
   bottle do
-    sha256 arm64_big_sur: "a5c000656cb126a8d6397fadafb9411b3ba81d9ace4c082423153ee7e63705d5"
-    sha256 big_sur:       "9e61b0ea0edb9f1e9565efffe0e73f516ffe49d77faf3dad95cee7e49cf6a0e5"
-    sha256 catalina:      "eed2388cc5f42c6ae7644aed1432f35bf857ac8a1f12b9b05e2f6ffc68edccf1"
-    sha256 mojave:        "b1709956e6097986e20600c9d7f1adc25e39839899ea829b6e767773d8c12917"
+    sha256 arm64_big_sur: "775b47ec7acfe939129e2e9ac074f606fc8c83743fe7ec2504563f414a1ff8c0"
+    sha256 big_sur:       "41b96e62890690976ca737125507d72ce95c2f831b86f9353103f975ec97a2da"
+    sha256 catalina:      "2cc1f2a5a8e0c831235145bbaf78c3534d755cc1d2b1a0d0b882aa1525c5d6c2"
+    sha256 mojave:        "ebaaef06b386c0336adb2b8f7cbcab7540eeed106c78002dcc1555f86425854b"
   end
 
   depends_on "go"
