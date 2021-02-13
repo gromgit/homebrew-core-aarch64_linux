@@ -8,10 +8,10 @@ class WriteGood < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6c57f2c41a2e7f4cc3c69d33c91926a00b96f37a9f52dabcc5b626553ba05b7f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0cbfb814e0720e423f18144adfd984c696929581a7f7ceb84365875c089a2c17"
-    sha256 cellar: :any_skip_relocation, catalina:      "2cb74d1eff7e1d6bdd6d3113f7fd8ce12c59039fd41ac2be234af2acced3c75a"
-    sha256 cellar: :any_skip_relocation, mojave:        "58dfaf0d8c714ba8bc4adec2b73668698d9b55f81daa066b6e120af1826420a2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a735c28a8d8a652e6f691de1ab62f724ee439338b4c217b02216331d9d8f818a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "bf662c7fdc80b156e86fb965fa7a168c8b6ba2ca9f1a1c781ea304bfa56eb2c0"
+    sha256 cellar: :any_skip_relocation, catalina:      "74167adfc2d6d669166dac2c7963f02fa5cf8bbc48a30d3a087bd2c38ecad4a4"
+    sha256 cellar: :any_skip_relocation, mojave:        "c2fca0ad0044ec1042a9c1f424c16cccafe8f84ecda3427b8e444262253aa895"
   end
 
   depends_on "node"
