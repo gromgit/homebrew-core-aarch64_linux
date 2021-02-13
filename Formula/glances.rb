@@ -6,10 +6,10 @@ class Glances < Formula
   license "LGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b8df470b377572b9586901f7c64aed23d84e9ff1490ffb16afbc24ae7be4d379"
-    sha256 cellar: :any_skip_relocation, big_sur:       "76c4d76215950ba7c9739b42bb0542a2ae5675950104bdd99b3c1e9eacd801d2"
-    sha256 cellar: :any_skip_relocation, catalina:      "1fd1fa2bfce06817d40711060ce0d2918303ce62e32e203de70bf89175d0176a"
-    sha256 cellar: :any_skip_relocation, mojave:        "6939d40ec9f567132efbcf71539d503e2d5407fefcb08a90337a2059bf8e0dc4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "93d5581ed75138ec02fce99be6cb458f55824192a77bf01f810676df612a8c18"
+    sha256 cellar: :any_skip_relocation, big_sur:       "27690378cfd22dfb6b7ace07409abfb0d0ec1ef452492aad352eee852b005258"
+    sha256 cellar: :any_skip_relocation, catalina:      "9b5c8bf188496b2b74ca32b66402cc423dfcd9ce193b9c9c4b3b1bc0246c1275"
+    sha256 cellar: :any_skip_relocation, mojave:        "abc3f5bece445731db56508950a3c841631f835c712fe0c8afed8223b73d4387"
   end
 
   depends_on "python@3.9"
