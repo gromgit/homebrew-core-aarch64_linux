@@ -3,8 +3,8 @@ class Libming < Formula
   homepage "http://www.libming.org"
   url "https://github.com/libming/libming/archive/ming-0_4_8.tar.gz"
   sha256 "2a44cc8b7f6506adaa990027397b6e0f60ba0e3c1fe8c9514be5eb8e22b2375c"
-  license "LGPL-2.1"
-  revision 1
+  license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
+  revision 2
 
   bottle do
     sha256 cellar: :any, catalina:    "9c37f5438fb510747686c52cfd2070007ccbb57ecdfb256e344713764aae8782"
@@ -19,10 +19,10 @@ class Libming < Formula
   depends_on "giflib"
   depends_on "libpng"
   depends_on :macos # Due to Python 2
+  depends_on "perl"
 
   uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
-  uses_from_macos "perl"
 
   def install
     system "autoreconf", "-fiv"
