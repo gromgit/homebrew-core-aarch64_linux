@@ -3,6 +3,7 @@ class Upx < Formula
   homepage "https://upx.github.io/"
   url "https://github.com/upx/upx/releases/download/v3.96/upx-3.96-src.tar.xz"
   sha256 "47774df5c958f2868ef550fb258b97c73272cb1f44fe776b798e393465993714"
+  revision 1
   head "https://github.com/upx/upx.git", branch: "devel"
 
   bottle do
@@ -14,6 +15,12 @@ class Upx < Formula
   depends_on "ucl" => :build
 
   uses_from_macos "zlib"
+
+  patch do
+    # Big Sur fix: https://github.com/upx/upx/issues/424
+    url "https://github.com/upx/upx/commit/51f69a20e0287904398bbf4c72ba2f809a0b0850.patch?full_index=1"
+    sha256 "2f311ce1e7254085817d3415a687d561f761fb3a2077f0605fc3f39e620485f0"
+  end
 
   def install
     system "make", "all"
