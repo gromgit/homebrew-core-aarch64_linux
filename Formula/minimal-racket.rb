@@ -11,9 +11,9 @@ class MinimalRacket < Formula
   end
 
   bottle do
-    sha256 big_sur:  "e505c77a1703d75d214e081250cff9cbdbb13d604f8995703bd96f5a5454803d"
-    sha256 catalina: "68ce8bdaed9890086696fe63ce655c994848e58da24040363441bdc6eaa0d9d6"
-    sha256 mojave:   "4fd0070df83c2d0761bc64e31b479f776f9cee55fe51a770811748706742e528"
+    sha256 cellar: :any, big_sur:  "beb2a0852ecf8684bbe1107a606949b8ca0de51af7162ed5f08c82070256f8d6"
+    sha256 cellar: :any, catalina: "be1a5ecd7b8e83ee7d16fbdc1c811a68814d38a0ffcc0584641875f6598f8e8c"
+    sha256 cellar: :any, mojave:   "b258ef48248bdba52dfb728ea0c0e14704fc9f794a31fe86e870339a30ff1c8c"
   end
 
   uses_from_macos "libffi"
