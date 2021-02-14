@@ -7,10 +7,10 @@ class Fetch < Formula
   head "https://github.com/gruntwork-io/fetch.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "678a2b7373830d0dc64ca9a335706f0638c810298094b8ceb2eb7dff0db973f4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "61109bd1f647acef7cb68a09cfd4a8fa04053dfff90a3be32deb8027ee6b06f7"
-    sha256 cellar: :any_skip_relocation, catalina:      "194dba2e7ccdaf0691b3b17146ac1ab77088251823b143fe9cbcf3d790ca2a59"
-    sha256 cellar: :any_skip_relocation, mojave:        "544a2cc87fed7545d1e220954b445a6519c47662cd41b64c9ff8ec9f0fd0742b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "cf261069583f06fe6404096f7f9e5a7a60abbb5619adf1227965758f5a8e61da"
+    sha256 cellar: :any_skip_relocation, big_sur:       "af283a1ba60884d6677b139940fa0b4c2e172c52b8e7661963dfd99cd775db46"
+    sha256 cellar: :any_skip_relocation, catalina:      "731906b2e52f0b4fbb8a8929ae6821be11b0194b794e716a6747d869eca3203d"
+    sha256 cellar: :any_skip_relocation, mojave:        "e52be0f1be40f3e6e67a431b367cb2080cd9ffbe9be7f59d15aaea9d286ac5ba"
   end
 
   depends_on "go" => :build
