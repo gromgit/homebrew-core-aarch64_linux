@@ -3,7 +3,8 @@ class Libowfat < Formula
   homepage "https://www.fefe.de/libowfat/"
   url "https://www.fefe.de/libowfat/libowfat-0.32.tar.xz"
   sha256 "f4b9b3d9922dc25bc93adedf9e9ff8ddbebaf623f14c8e7a5f2301bfef7998c1"
-  license "GPL-2.0"
+  license "GPL-2.0-only"
+  revision 1
   head ":pserver:cvs:@cvs.fefe.de:/cvs", using: :cvs
 
   livecheck do
@@ -26,6 +27,18 @@ class Libowfat < Formula
 
   def install
     system "make", "libowfat.a"
-    system "make", "install", "prefix=#{prefix}", "MAN3DIR=#{man3}", "INCLUDEDIR=#{include}/libowfat"
+    system "make", "install", "prefix=#{prefix}", "MAN3DIR=#{man3}"
+  end
+
+  test do
+    (testpath/"test.c").write <<~EOS
+      #include <libowfat/str.h>
+      int main()
+      {
+        return str_diff("a", "a");
+      }
+    EOS
+    system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lowfat", "-o", "test"
+    system "./test"
   end
 end
