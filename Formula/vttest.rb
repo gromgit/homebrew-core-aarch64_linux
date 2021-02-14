@@ -11,10 +11,10 @@ class Vttest < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "146b65073bd5cbed58ccaa43a2af7854a45a642fd81e27418b23e232a9d5126b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d99c891ef72835d79954094937d025a7e78d62c7ac6daccb9f924e20cff191bd"
-    sha256 cellar: :any_skip_relocation, catalina:      "67bea69b355e52582b491452592cf3e752ea8c229303b5aad91fbf79f8d943d5"
-    sha256 cellar: :any_skip_relocation, mojave:        "77bdb11dde1c90472cf217f61c02e05520cfe39ad8635aaaa28a7e3bddc7e370"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5bd298d05ad47843648ba8f8b8825614d647b495e4c09c34e00e4947eff9a016"
+    sha256 cellar: :any_skip_relocation, big_sur:       "bcaa7bfde1caffa18b43a357d684b92e6cfc1db34e5f77a47fb4be22f9ed2051"
+    sha256 cellar: :any_skip_relocation, catalina:      "07691c12896f2adfd4cae9ddd7f04b3fcd67ccd6727fe59b7ba79200e7f4961c"
+    sha256 cellar: :any_skip_relocation, mojave:        "a73bba40a8459292c25b2999286c29278c9789cbaed70e5382fb1f2b116a0b21"
   end
 
   def install
