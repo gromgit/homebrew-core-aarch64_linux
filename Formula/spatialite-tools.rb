@@ -11,10 +11,10 @@ class SpatialiteTools < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "d36a2b7641d0958cd0e18bd41dd97e08e91042b7552384b70af34e7e65952c4d"
-    sha256 cellar: :any, big_sur:       "1542627d080bd9b955b79194087f399ecfb51c6795319cac33a3447136d69574"
-    sha256 cellar: :any, catalina:      "fd5e08038abf520727946839c34e61eb080fe4e0d69eb2d43ff7aa1ca4b0fd91"
-    sha256 cellar: :any, mojave:        "36686d2ddec30cdd857f5c1161ddb79b2b67269fc9bc5d78eef83e50c80de89d"
+    sha256 cellar: :any, arm64_big_sur: "5e0b6d533e1d0b31e29811693464ecc895fbf7a556a233b5f4e213036f53a7a3"
+    sha256 cellar: :any, big_sur:       "d7214560462a3031b23a7f0ae25ea019e44071e72a374a5621cfa4373e9db97e"
+    sha256 cellar: :any, catalina:      "2be1cfd090f14eecaf18974612ee0d6c7a751c1138fd2eea6d2667098f6315cb"
+    sha256 cellar: :any, mojave:        "94e72cdc9587bff34d6db75fd39eb8d94ca3992e1f94089f0eaf713d33372257"
   end
 
   depends_on "pkg-config" => :build
