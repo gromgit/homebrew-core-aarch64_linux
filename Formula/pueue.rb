@@ -7,10 +7,10 @@ class Pueue < Formula
   head "https://github.com/Nukesor/pueue.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "85465e35ad5470d8e42578f25fbdb38bf00e6855880c886317816f515de9f4d2"
-    sha256 cellar: :any_skip_relocation, big_sur:       "886f95008b45fbf70caf75a6172cb5872a8e19e1e1dbeb0e78f27ca9b5c50d00"
-    sha256 cellar: :any_skip_relocation, catalina:      "8d98cefc0bf5f1a64122ad769f570661a6d96de06910a42821a4912483a39ade"
-    sha256 cellar: :any_skip_relocation, mojave:        "949387054d56f8fab44cae482b659cbf3a40eb65c264c9d5acf5885b241e7795"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "34050139a57ab4f6874cae421082f2449c61d28703fc39f988b9470fe4bd9263"
+    sha256 cellar: :any_skip_relocation, big_sur:       "47feda4778516a8b2b68afd05b86013e6383d112c4553c466658549a94786222"
+    sha256 cellar: :any_skip_relocation, catalina:      "6f48e1ac9b2705da5e8d5a5fc147c06a78af1067a7e639a3cbc3dee4ec47e9b1"
+    sha256 cellar: :any_skip_relocation, mojave:        "3c604c05fa8f52884fd9513051b98792387861f0627e0a71a47c030a97da3166"
   end
 
   depends_on "rust" => :build
