@@ -7,11 +7,10 @@ class GnuTar < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "561f31d09837edf9398d73b0843010b4154b209196106df07cff06624e3df746"
-    sha256 big_sur:       "ae7e03fc22f5e216f8dfb1aae1822595e5c11f9c78b06e1623577a8d76bc8d75"
-    sha256 catalina:      "906c7a5265feb825505d1fe0ca563fe03f941f8d9d5487c83a90c0eade960d2b"
-    sha256 mojave:        "057667a5bc2671beb8371b4da25b576167de95538c2a2e5cea9c16c76e14a20d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "660e573b78965f1d3fa9f8f7f78a72d38f7f26f77ca66e9f72fec26fe9be6c3a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a6ab3eb4a49d609f5f1dde43710b847fd827ebc03195aee052c7aeb528aa9bcc"
+    sha256 cellar: :any_skip_relocation, catalina:      "53b9fc4011ca3ca3e669aa96a95a5394ef45138b9b2d52c76c3a17fceb432229"
+    sha256 cellar: :any_skip_relocation, mojave:        "c4f9fcc7bdbb2bc5591a6650cf3bbfc1aa791e85f6d299f165a9466c235c83ae"
   end
 
   head do
