@@ -4,7 +4,7 @@ class AntlrAT2 < Formula
   url "https://www.antlr2.org/download/antlr-2.7.7.tar.gz"
   sha256 "853aeb021aef7586bda29e74a6b03006bcb565a755c86b66032d8ec31b67dbb9"
   license "ANTLR-PD"
-  revision 3
+  revision 4
 
   bottle do
     sha256 cellar: :any_skip_relocation, catalina:    "39b73c18b82c8f0ca76a7245b7b5a9af55da9ac10b8e722cbaafd10febf9e18a"
@@ -25,12 +25,13 @@ class AntlrAT2 < Formula
     system "make"
 
     libexec.install "antlr.jar"
+    rm Dir["lib/cpp/antlr/Makefile*"]
     include.install "lib/cpp/antlr"
     lib.install "lib/cpp/src/libantlr.a"
 
     (bin/"antlr").write <<~EOS
       #!/bin/sh
-      exec "#{Formula["openjdk"].opt_bin}/java" -classpath #{libexec}/antlr.jar antlr.Tool "$@"
+      exec "#{Formula["openjdk"].opt_bin}/java" -classpath "#{libexec}/antlr.jar" antlr.Tool "$@"
     EOS
   end
 
