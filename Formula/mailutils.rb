@@ -7,10 +7,10 @@ class Mailutils < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "f16f6ae8c4081e7c37016b14ed028834953ea7bd4d25d93b6263f17cc56751c6"
-    sha256 big_sur:       "687c53f8c730b0de5464c6459a028d5b297e6b6c4543b1e4c1f686cda806b072"
-    sha256 catalina:      "8b0f0328d61b1a3d5b6d7bf0d395eece7ad6d267419c705e3818ad8b39ed5f39"
-    sha256 mojave:        "2d7b9ac9fec5c1dbe554b5fc4f866911b3cdc607a503b8968472fe700f7a1b20"
+    sha256 arm64_big_sur: "4f56ee5963a199cbf16e7418f8eb656a1396cee297de7dc708ff3f37f1733a69"
+    sha256 big_sur:       "e341518e551aed3c4ffb4b3fa72ea6725834fdc6fab187218b31eaf11b7e3e47"
+    sha256 catalina:      "710553bf2b8f3946adf42cbe918df0d6bc83fe93d9a6134a863e95e73c1b009b"
+    sha256 mojave:        "fdc180f3df9812370849499c0946d548910a97c5c2a1875f6796916a5b341d2a"
   end
 
   depends_on "gnutls"
