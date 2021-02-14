@@ -6,10 +6,10 @@ class Topgrade < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f03ddf46fc91148504c54456c07ddd4dc3fe05900a46dc4a8809150236594375"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3c3f1359f250d71ea4a54a279ad303170a27bba32f6a07b27f9833ecdb3ef82f"
-    sha256 cellar: :any_skip_relocation, catalina:      "5eee5154ca65852111e6bd23c63579e642214fc8ab1ad826abe65bd42e11746d"
-    sha256 cellar: :any_skip_relocation, mojave:        "54a40ba739ae9b28e37b3303c7b7e4a8ff1e8a7d5bde8f7b8d2a9e011ebfb28b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "639218325506f4fa914283b38b7ab23301a7a277d953b3d8d407fbb7957f2e0c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "141634a0edf68f01222f1e0fa284c2f4c19bde4720caca72981b5edffb203ec1"
+    sha256 cellar: :any_skip_relocation, catalina:      "7210af9c626969a15dc389648d16b2da5f70ed406038b53b206e5f21690639bf"
+    sha256 cellar: :any_skip_relocation, mojave:        "c36b430b3b904b29b84f714e2bf2705d8d4c153d3a2c06d0fdc78bb41492be26"
   end
 
   depends_on "rust" => :build
