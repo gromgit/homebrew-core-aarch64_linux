@@ -12,9 +12,9 @@ class Eprover < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, catalina:    "224dffbf0f507dd756b45f8ab9f06ec65e963ecfeeea69dcf72e76cc95bf760d"
-    sha256 cellar: :any_skip_relocation, mojave:      "598fb6477f28822a593fe6c0fb218b4e70140ba44f6cd21feb6c0381c0b64641"
-    sha256 cellar: :any_skip_relocation, high_sierra: "9b2ece8fa609748d06a102d398c7315ab09c0da9af2d8b17daff11cb634767f6"
+    sha256 cellar: :any_skip_relocation, big_sur:  "52c89a856cb177db7e4b9a2e44420499c2899de522a646878e3bce984187f0ba"
+    sha256 cellar: :any_skip_relocation, catalina: "cc226a3377899294f072cab54a5a8247a78b1370817c56b8f2bbdfbd58428b4d"
+    sha256 cellar: :any_skip_relocation, mojave:   "fc0066c171a5ffb6ecc6b25d0e439c7167e504e3afc2b4033c6c1a8b221db48e"
   end
 
   def install
