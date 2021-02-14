@@ -1,8 +1,8 @@
 class Liblockfile < Formula
   desc "Library providing functions to lock standard mailboxes"
   homepage "https://tracker.debian.org/pkg/liblockfile"
-  url "https://deb.debian.org/debian/pool/main/libl/liblockfile/liblockfile_1.16.orig.tar.gz"
-  sha256 "cf6e3828ced3fcc7e5ed36b7dabdf9e0e3ba55a973dab8ed212fb86afc901c69"
+  url "https://deb.debian.org/debian/pool/main/libl/liblockfile/liblockfile_1.17.orig.tar.gz"
+  sha256 "6e937f3650afab4aac198f348b89b1ca42edceb17fb6bb0918f642143ccfd15e"
 
   bottle do
     sha256 arm64_big_sur: "4fd8e00fafc2190ddfba9a3de861ce86b5ce3d9942ccaed88833e0a78589ac37"
