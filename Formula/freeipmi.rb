@@ -7,11 +7,10 @@ class Freeipmi < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "9b9cf442de57271b2a7d338e4828669da746e2a80fbfd7e5feee5108160262a4"
-    sha256 big_sur:       "f34294d363284a09e5852070f2c73cdafcb9a94ce584c83a30c82b3451541433"
-    sha256 catalina:      "ff69947a14d7d273349f9f5219b55b8581fee4745c3571fb27f790307f1647a5"
-    sha256 mojave:        "47441cb06fdfae9277c2760f43ba0236020de8906e9ead7bf4e1dc2569f2abc4"
-    sha256 high_sierra:   "836d80487ea7790b95c951c48a9a7f9788117e254a55c1f6417c5a2455695f5c"
+    sha256 arm64_big_sur: "7fc59ef6110976e7b0c8bb3dcb3e484c5f948d67fb1ab9cc59295906ca36cd99"
+    sha256 big_sur:       "7ab8672696881b32d56597ede911c2fdf75d3e0cd531aa50efdfd2b3abcac008"
+    sha256 catalina:      "a94e3a7512811b97aca338ed4cbf092d7ad59f2b8a6d82b263e20da73c7a9334"
+    sha256 mojave:        "89e7d4a50bd75dec380935ab910ae741c6fdd9c5b67c8e1e044a8f8f8d36d2ce"
   end
 
   depends_on "argp-standalone"
