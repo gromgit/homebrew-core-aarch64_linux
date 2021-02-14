@@ -7,9 +7,9 @@ class AntlrAT2 < Formula
   revision 4
 
   bottle do
-    sha256 cellar: :any_skip_relocation, catalina:    "39b73c18b82c8f0ca76a7245b7b5a9af55da9ac10b8e722cbaafd10febf9e18a"
-    sha256 cellar: :any_skip_relocation, mojave:      "bc4b117c432d2bb29ca76463209ce38d3233ea435ea14666fe76ff8058dda0b8"
-    sha256 cellar: :any_skip_relocation, high_sierra: "d8013efcd3b9cf2b53140801125e9b20c6cc10712c80fada68b8fd472e7338d3"
+    sha256 cellar: :any_skip_relocation, big_sur:  "cc27645bb089a3ffc38aeeb4dcc7c5352d93472ac31d7e9853b0b5b90a695e64"
+    sha256 cellar: :any_skip_relocation, catalina: "b3a7378ef4a657176107a37a6d5661b9eb3750f7407ebe081200aa8b45d6d480"
+    sha256 cellar: :any_skip_relocation, mojave:   "5642de8d8012c11705b3199f5daf8758d8029333ae9eb4ab113e80069e49ef57"
   end
 
   keg_only :versioned_formula
