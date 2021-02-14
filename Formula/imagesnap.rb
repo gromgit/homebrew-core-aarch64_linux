@@ -3,6 +3,7 @@ class Imagesnap < Formula
   homepage "https://iharder.sourceforge.io/current/macosx/imagesnap/"
   url "https://github.com/rharder/imagesnap/archive/0.2.6.tar.gz"
   sha256 "e55c9f8c840c407b7441c16279c39e004f6225b96bb64ff0c2734da18a759033"
+  license :public_domain
 
   bottle do
     rebuild 1
@@ -30,7 +31,7 @@ class Imagesnap < Formula
   end
 
   def install
-    xcodebuild "-project", "ImageSnap.xcodeproj", "SYMROOT=build", "-sdk", MacOS.sdk_path
+    xcodebuild "-project", "ImageSnap.xcodeproj", "SYMROOT=build"
     bin.install "build/Release/imagesnap"
   end
 
