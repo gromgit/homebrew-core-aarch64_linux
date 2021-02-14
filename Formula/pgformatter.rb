@@ -6,11 +6,10 @@ class Pgformatter < Formula
   license "PostgreSQL"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0b0e188f17ebdc9d493d450f3eff18f8c3de039f5dd7fa5fc9149f7ddc99a60b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0e4436d5bcd6f06c948428e34b2afe1be57984d11aa5c8eed6161d76273f12ed"
-    sha256 cellar: :any_skip_relocation, catalina:      "afcce813b73ebaa9326790850289abdfeba332e4be86c6e55fcec6220b66bbef"
-    sha256 cellar: :any_skip_relocation, mojave:        "d991b9830807c92d78108a2320a358d162db5749b97bcdb8dea846058392c97c"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "86e00ee2a7f917e6e0e8c7409c788267faeb710b4c707f4a6463bcd0c2dd0fae"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0ed20e16efad36d589a80538e78ddcfa9b71f02b56bf32f9415e803eb8cbd537"
+    sha256 cellar: :any_skip_relocation, big_sur:       "83a175025f66104c66f735201a15852b8b7e210d8dc5185b004822f0032fdd9e"
+    sha256 cellar: :any_skip_relocation, catalina:      "81895f455d9c400ed7de8e8cb2ebc1fa55147be0fe6cd4e9faae3f61a44b8040"
+    sha256 cellar: :any_skip_relocation, mojave:        "330e956df52c371e9d403e3eb5b9b46a0a5e415d1ceea6156fd2e2036aa046e4"
   end
 
   def install
