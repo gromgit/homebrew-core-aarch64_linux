@@ -20,10 +20,10 @@ class X264 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "6d7df76a6715b6dd306b970bddcd2c03e12af34e4b9ad778432bf64cedef0531"
-    sha256 cellar: :any, big_sur:       "0c50bd2414e1cc79c3936747455523b8a4a149ac251891b68fd0a7a68464a21c"
-    sha256 cellar: :any, catalina:      "ab0f1283e786e219af1ebfe7bddd22ce4e5568de2101aac151ef8d7140a38656"
-    sha256 cellar: :any, mojave:        "e225e569be5557df7c27699661d858e76e9b38f3aa9b142295fd6d3b5098963c"
+    sha256 cellar: :any, arm64_big_sur: "4f597c360dc023f6a9cd1bbe9b91e582dab095ba728a0f1456b604f0027e190e"
+    sha256 cellar: :any, big_sur:       "c15ba7b15e08f8d58ae1913935994c49fbc7242aae36eb7346be493b164ffb6b"
+    sha256 cellar: :any, catalina:      "2f3a1318610548a1eae131141dace544594da35d11753dfdd9dc3b6f81c08801"
+    sha256 cellar: :any, mojave:        "6bd8fc9dd92ce4aad6071c0e7d2eac6ccf8a9971f5176901a3fff22dbf24198d"
   end
 
   depends_on "nasm" => :build
