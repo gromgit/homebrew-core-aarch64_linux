@@ -7,11 +7,10 @@ class Libuv < Formula
   head "https://github.com/libuv/libuv.git", branch: "v1.x"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "b9d7666e1a603e6fe52b16766340633dc1c4da4e669266674d696650dfd0a671"
-    sha256 cellar: :any, big_sur:       "de936683bd073e5e564222cdd2dd954a422c03298591f77a720aab9183d1d62c"
-    sha256 cellar: :any, catalina:      "2f7836743d77fcf9ccebd6b6d00b28b38c6490639db3cf802eac039916db0647"
-    sha256 cellar: :any, mojave:        "ed9d2d1bcea3599185ec85ea3f270148971153d4e61d3e181558a768cbfffd4f"
-    sha256 cellar: :any, high_sierra:   "d574eb3deffdca605ab70a0bbfd9687c3795c98db2d9224eadb39b2be77aa125"
+    sha256 cellar: :any, arm64_big_sur: "25ba3f6a09c7fa6c6dd3aeda7842aa95e05d3377788938ef59e71d1c504e2826"
+    sha256 cellar: :any, big_sur:       "74240126a16d9be316c69535e61fd1c000428b89b6e5a8f72198dc1ce86ddc99"
+    sha256 cellar: :any, catalina:      "fec3670ca2dcbe641c1351c806fa3f66f7e7054dc4d42c683d80c0dcfddf0131"
+    sha256 cellar: :any, mojave:        "452550de9576d4bea5258ec6e40f345b72819f2fad1b96f2c4a71d9481c16310"
   end
 
   depends_on "autoconf" => :build
