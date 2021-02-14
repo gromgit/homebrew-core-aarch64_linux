@@ -1,11 +1,10 @@
 class ManDb < Formula
   desc "Unix documentation system"
   homepage "https://www.nongnu.org/man-db/"
-  url "https://download.savannah.gnu.org/releases/man-db/man-db-2.9.3.tar.xz"
-  mirror "https://download-mirror.savannah.gnu.org/releases/man-db/man-db-2.9.3.tar.xz"
-  sha256 "fa5aa11ab0692daf737e76947f45669225db310b2801a5911bceb7551c5597b8"
+  url "https://download.savannah.gnu.org/releases/man-db/man-db-2.9.4.tar.xz"
+  mirror "https://download-mirror.savannah.gnu.org/releases/man-db/man-db-2.9.4.tar.xz"
+  sha256 "b66c99edfad16ad928c889f87cf76380263c1609323c280b3a9e6963fdb16756"
   license "GPL-2.0-or-later"
-  revision 1
 
   livecheck do
     url "https://download.savannah.gnu.org/releases/man-db/"
@@ -29,8 +28,8 @@ class ManDb < Formula
   end
 
   resource "libpipeline" do
-    url "https://download.savannah.gnu.org/releases/libpipeline/libpipeline-1.5.2.tar.gz"
-    sha256 "fd59c649c1ae9d67604d1644f116ad4d297eaa66f838e3dfab96b41e85b059fb"
+    url "https://download.savannah.gnu.org/releases/libpipeline/libpipeline-1.5.3.tar.gz"
+    sha256 "5dbf08faf50fad853754293e57fd4e6c69bb8e486f176596d682c67e02a0adb0"
   end
 
   def install
