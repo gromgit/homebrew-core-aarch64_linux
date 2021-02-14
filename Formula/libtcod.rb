@@ -6,11 +6,10 @@ class Libtcod < Formula
   license "BSD-3-Clause"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "2307306cad3fe74920216768953f8b2ba6721a49d1738870f7b2ccbab8a2691e"
-    sha256 cellar: :any, big_sur:       "464855bc6a479110433503a085c22f0bd8c2389875334595f9e525528982c1c3"
-    sha256 cellar: :any, catalina:      "0ac1dde6fa975c1504880848ba2ec66dd0d044c5cfeccb92d3afe4f6ebb8231a"
-    sha256 cellar: :any, mojave:        "e076b9fe253e60fc065493cab467d30c4db178d9364e410a3c7cf71293df7cf0"
+    sha256 cellar: :any, arm64_big_sur: "91e3bd372b0d6443963d2009fc694f6520f9a9de4ef45f6d18f3f00e65de9fb8"
+    sha256 cellar: :any, big_sur:       "31bfe926a2effb964e4653a12a321f6bb3bd3ed0e05c63c5509442a8518bc150"
+    sha256 cellar: :any, catalina:      "c0855fddcf47a6ca4b544f34993913480953705c7c1764c4a7fe3ce4c1d74b5d"
+    sha256 cellar: :any, mojave:        "b2c376538851cfe1f09fbe4700961d23dbf9da6572f43e57b6aae67f8ffef931"
   end
 
   depends_on "autoconf" => :build
