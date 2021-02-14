@@ -15,11 +15,10 @@ class Bagit < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "77e0cf9a2484eed1d2822a20df071c490bcb3676fe554edd1ab71e44defa0256"
-    sha256 cellar: :any_skip_relocation, big_sur:       "86cf43159c0f34293039285a88480edf09369896665a75a075b69c2a0de57d38"
-    sha256 cellar: :any_skip_relocation, catalina:      "193388b8a93aa1d52e3cf8acd5da0d3d6dc0e71fbf598ea654b620ba377a7517"
-    sha256 cellar: :any_skip_relocation, mojave:        "f1a211e58d9945524ab5aa5cc62ee180e553b8fde90d969fda952cf629e21c99"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "e3f52f281e13d9d333d4425b603c609f07e502b2ad8525dcf6b633da0e4a5721"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "968ab8fef1c1378693bb911e8aebd42770ffb6cc02f51751008be4adec8ccd27"
+    sha256 cellar: :any_skip_relocation, big_sur:       "62094bf88731c7b94940aa4e4653ca22cc041b25330e3423001eacaa88ab6ee9"
+    sha256 cellar: :any_skip_relocation, catalina:      "8cb401bf3f5d03dd8ec84f47fb9bbebff28a0a5be96f1aeb4ee95530ec2b29b2"
+    sha256 cellar: :any_skip_relocation, mojave:        "4fefca46d83bb674b3969080548a4b8028db0d3aa7225d83cb4d13bc4602e6ed"
   end
 
   depends_on "python@3.9"
