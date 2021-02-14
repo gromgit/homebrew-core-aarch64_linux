@@ -6,11 +6,11 @@ class Ht < Formula
   license "GPL-2.0"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_big_sur: "405e3628c0af358c0014fa5fe79ddd258f1b9b080ecfc2910c362a2daae77785"
-    sha256 cellar: :any, big_sur:       "4f552c6754e25dc6d790015516167222490dbf15f2b490b714b078278d444b3e"
-    sha256 cellar: :any, catalina:      "94df31fe5a0bd007170030e65a25242acd467270d9960c42a128fcfbfb43e379"
-    sha256 cellar: :any, mojave:        "62adaf2ac899b3e0b3e6fec81de26eec41f38be0316f55b42fb0fe2a829dcbe7"
+    rebuild 3
+    sha256 cellar: :any, arm64_big_sur: "67aa1b783d01e759a908a568cfc1715e614bff7b77171fc82af00e2af682b464"
+    sha256 cellar: :any, big_sur:       "68a9ebfab03bd7d4f5e61d26075d07ee692002a07b8e5f201ae84ebbac45e5dd"
+    sha256 cellar: :any, catalina:      "75ab4e842bc671346e7e75ef512f5f2b3d55008a07d91437a9ba46e9c9dcb1b4"
+    sha256 cellar: :any, mojave:        "9ba777d460dbc11e7c119d6924c765c0d3fb9c50953ed833a07de5e7eb9f6807"
   end
 
   depends_on "lzo"
