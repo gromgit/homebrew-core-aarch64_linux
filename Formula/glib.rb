@@ -8,10 +8,10 @@ class Glib < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "2581429faf45f81b45b5a247a5b0182ed25cb88ece43f7898f9578f1d507562e"
-    sha256 big_sur:       "1b633efb91bd4daad3252735886a27d37ad1aadcb70d95cfcc6da073a56164e8"
-    sha256 catalina:      "27176463684d23f712f42e0d6aeabbff3efca1c555226bee1c5f8f5410965166"
-    sha256 mojave:        "af5ee309e12bba797dbf59bb5553591fa901eb8314f290aa2f30a50c286922c4"
+    sha256 arm64_big_sur: "601f19d91192c89a80611d4b5d6f4721c908b03c60d369f0e5b6dbb9064a5b0e"
+    sha256 big_sur:       "d5769584a13c0abc5a7610764d79a69b88be6df7c0fb575120d5a69316ea41cf"
+    sha256 catalina:      "fd6f45492b3a5a51683a231f4b07bd5c9b460892c4b1be580915ff7aed17874e"
+    sha256 mojave:        "870a1b7bfc1e8325d446bfcc5152ef578bba5ae418d402dd887b6ef568ed3f76"
   end
 
   depends_on "meson" => :build
