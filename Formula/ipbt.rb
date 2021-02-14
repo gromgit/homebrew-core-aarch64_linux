@@ -12,11 +12,10 @@ class Ipbt < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e9b51c4509c77561acb5e1d2d90dd0b0e0e64b13c15bc3238e508995eb6c782a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "136112dbee67f57c38adf83a55913fff16c4444d7c849b80be5c463f5e2efc76"
-    sha256 cellar: :any_skip_relocation, catalina:      "367536bc0020cd8b4313936070ec9539bcfe56de061a40b6bfc4aa0533d82a5a"
-    sha256 cellar: :any_skip_relocation, mojave:        "e68f7a1286319ca19382bef65cbf2d80fd1f15bc46dc623cbe9b8f73b5d9d848"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "9ae5d95807ead91cb2bd746fb2f3d4fee82cb39dba42f67bdea9eede792b7261"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "93862f6474250d069f0bac1b463cbbe1228bf0b713c4234e683cff991f8d8dba"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ac90fea5805663d24f9a6a712064ab0d3d543322523585e1b382521ed156a979"
+    sha256 cellar: :any_skip_relocation, catalina:      "a702173664a98d4d1f42a6ef4599f733916a64cea7e4dc995b83e73739ac455f"
+    sha256 cellar: :any_skip_relocation, mojave:        "636394fcd3103d17aa176ef176bc8e6a2bf8f01517ff0bdb1ed8aa1faf9c6358"
   end
 
   uses_from_macos "ncurses"
