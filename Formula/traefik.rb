@@ -7,10 +7,10 @@ class Traefik < Formula
   head "https://github.com/traefik/traefik.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "67788b67308f82fce96da618c00ccecf84729745f6c1a871aab0eed7c99003e2"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a0efdc2f7f039bd5a16fdffe4b855f8d94b6046c38f43a1e035617f9d9c20e37"
-    sha256 cellar: :any_skip_relocation, catalina:      "87a48692842764e71051ef9f9afbc7d186146bdaf2287c66caf384da4a724312"
-    sha256 cellar: :any_skip_relocation, mojave:        "3ad89a685c1d5d230e5a939307b08c1d58217c1531d46d895f41841257ffb3d2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "21ddef56c87306fa53d7cf9b30d51c094e6562a511ce2c3cd60b9f4234c17d1a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "22511bd5adc2617fed1312b5af915b0f37b3427feed5613c01635525309b1582"
+    sha256 cellar: :any_skip_relocation, catalina:      "a7ddd0876e6c99c7a0746beb71bf22c481195e59059825cb116793bd1cc3ca6e"
+    sha256 cellar: :any_skip_relocation, mojave:        "98c7e41b68f2894ec058e11b6207d781098ca78738a9931a632d8269d03b092a"
   end
 
   depends_on "go" => :build
