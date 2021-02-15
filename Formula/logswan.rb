@@ -6,10 +6,10 @@ class Logswan < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "d6bcc058eb4c8493ee6e9cc6314e2b27c860dca22eaebdea8a6fd2d9748d96e3"
-    sha256 cellar: :any, big_sur:       "aec6e22b5e3f78e1ef3b09421c465a210c16101948603ee145d356f2f0f1c0fc"
-    sha256 cellar: :any, catalina:      "38dab3a524aeb292bf163d472e3adfc5f349c4fc97b0e07f09a8a6d601535aa4"
-    sha256 cellar: :any, mojave:        "9400f3fe332ce90fa3c0c6075ef42ba214742d0b1c3ccbc76161c60f02251ce9"
+    sha256 cellar: :any, arm64_big_sur: "23442a9f241288d9733861abfca7cd6b3f99ce66b8787ec18799810731bba602"
+    sha256 cellar: :any, big_sur:       "68760ddf896f317d44496728987da7255c40f4ccc3612c40fd13dbb33f2d6662"
+    sha256 cellar: :any, catalina:      "b1eab00c396357a4d123a6747827774dab732d6d2e56e85fb9a32c7b22989cc2"
+    sha256 cellar: :any, mojave:        "914eaff19cac1e0e58bf0d61fc23d089f69b405e7d35d95b818ef0b6c2968840"
   end
 
   depends_on "cmake" => :build
