@@ -1,8 +1,8 @@
 class TaskwarriorTui < Formula
   desc "Terminal user interface for taskwarrior"
   homepage "https://github.com/kdheepak/taskwarrior-tui"
-  url "https://github.com/kdheepak/taskwarrior-tui/archive/v0.10.1.tar.gz"
-  sha256 "7443f8ff8e55aba22733419d306b0f04ea99f48b5bc48ee82e2d0cc4cbb5d96b"
+  url "https://github.com/kdheepak/taskwarrior-tui/archive/v0.10.2.tar.gz"
+  sha256 "9a38402770d4f71124e2ca8220d5e2c4bca87701792862b7085ce7ffb99ea88f"
   license "MIT"
   head "https://github.com/kdheepak/taskwarrior-tui.git"
 
@@ -18,11 +18,20 @@ class TaskwarriorTui < Formula
     sha256 cellar: :any_skip_relocation, mojave:        "c3ab5d5d216088f3f1835f5ec5cdeb06be2c157e8fe2a8834f8034792c7a0a5e"
   end
 
+  depends_on "pandoc" => :build unless Hardware::CPU.arm?
   depends_on "rust" => :build
   depends_on "task"
 
   def install
     system "cargo", "install", *std_cargo_args
+    unless Hardware::CPU.arm?
+      args = %w[
+        --standalone
+        --to=man
+      ]
+      system "pandoc", *args, "docs/taskwarrior-tui.1.md", "-o", "taskwarrior-tui.1"
+      man1.install "taskwarrior-tui.1"
+    end
   end
 
   test do
