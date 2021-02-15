@@ -12,10 +12,9 @@ class DockerCredentialHelperEcr < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:     "fe14097587f1f22cba7ba36b49c738abc8027408cd6944e768030608deb49738"
-    sha256 cellar: :any_skip_relocation, catalina:    "d5e603dc272c983cfd10995ac0b39418308e26c791a28d1a56fc13282d5425bb"
-    sha256 cellar: :any_skip_relocation, mojave:      "2bcb4437b3096c71bc248e4bcbe4aa20d4cd801a63eb139c2250cd73f5c9f5cb"
-    sha256 cellar: :any_skip_relocation, high_sierra: "5db19be899dc7a06ab6e180bbf2972d6f8b4e44a092e6f7b2be35297f03044f5"
+    sha256 cellar: :any_skip_relocation, big_sur:  "822e7f36e21c109c0228fd53858781f872a4176a712b591a775c38769edc5189"
+    sha256 cellar: :any_skip_relocation, catalina: "8506b1954205b0ccc6622738219606deb595da298797455442f5e7590886a1d8"
+    sha256 cellar: :any_skip_relocation, mojave:   "ade7af932bef1787cd560cb2befcd2ce9dcaa4ee694cac37dbf4a86265186667"
   end
 
   depends_on "go" => :build
