@@ -6,9 +6,10 @@ class Tgui < Formula
   license "Zlib"
 
   bottle do
-    sha256 cellar: :any, big_sur:  "43215426baf657e7f73aa0751c3c952d35c489025065ed530223353d254c6556"
-    sha256 cellar: :any, catalina: "7e8a817332ba8a35526ee7dd0a499d4136780f54d905f4abd10fea287a185662"
-    sha256 cellar: :any, mojave:   "4f003c5fc1520d427c657af818d88168cba1eeda04652a8cc016d10ef3214b23"
+    sha256 cellar: :any, arm64_big_sur: "b58a6d6ff3990f2afb85ea39073e00ce31d91c16d7c88c6c6f1c4f22c4f4f674"
+    sha256 cellar: :any, big_sur:       "43215426baf657e7f73aa0751c3c952d35c489025065ed530223353d254c6556"
+    sha256 cellar: :any, catalina:      "7e8a817332ba8a35526ee7dd0a499d4136780f54d905f4abd10fea287a185662"
+    sha256 cellar: :any, mojave:        "4f003c5fc1520d427c657af818d88168cba1eeda04652a8cc016d10ef3214b23"
   end
 
   depends_on "cmake" => :build
