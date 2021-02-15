@@ -7,14 +7,10 @@ class Taglib < Formula
   head "https://github.com/taglib/taglib.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "1345e85f67a1246d97fb16bc3c30db0a5e2ae469995261fbea632df757598975"
-    sha256 cellar: :any, big_sur:       "403004b0afd61b06a1e018a20d2e7760f04daa78d262996e317d47051a57ee11"
-    sha256 cellar: :any, catalina:      "678392b9ac6fbc17a70433b5a98630ccbfa0b71eb1475402d826e4052086f246"
-    sha256 cellar: :any, mojave:        "98f103a3174694dd9ff58661cb83c08180049681ac1768b55b447dd99874150d"
-    sha256 cellar: :any, high_sierra:   "14e9be9fd1d5a86615d8b2b6ac51893eb6fab0eb6100f44547d297ccadc4497e"
-    sha256 cellar: :any, sierra:        "a0a374439cbf94a6fb57d791abf0bc6fb974eef1cf21f66c2731d1fc83d2428d"
-    sha256 cellar: :any, el_capitan:    "edaf79d2a2ec72ae32d9b46621697626a27299226a6b4d963431da8c37d3af52"
-    sha256 cellar: :any, yosemite:      "bfda081fd34cb47bcdfd41e814612dbdf330166e30e69867cf43fcac60e5ed1a"
+    sha256 cellar: :any, arm64_big_sur: "e76adce741330b6648c33971004f1101b42fac129fc78303e83932c27cb38b2d"
+    sha256 cellar: :any, big_sur:       "d24fee8c8c6f491a2c078a84fbcba5f36e0381bf230ff3c35893a46cfe3e3c70"
+    sha256 cellar: :any, catalina:      "766531146ab62a88352ad1718b14ec2461951d25feb3c1111a3005071b4c2e9a"
+    sha256 cellar: :any, mojave:        "f63f8ade1e478f04697481873468017fa06fb78fbe7a8fe42ba2a67533496f57"
   end
 
   depends_on "cmake" => :build
