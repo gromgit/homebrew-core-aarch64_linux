@@ -7,11 +7,10 @@ class Jvgrep < Formula
   head "https://github.com/mattn/jvgrep.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "23b060469e6fb4c29df8592879f2ac79dab99d446eb70169e00153a91d110124"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9f85163e29106ddf5e3e67b7ebc9d9b0fe4ad402a64b8d2847085b351b8b2f2f"
-    sha256 cellar: :any_skip_relocation, catalina:      "fa73d4fa22c06a91abae4fb577d8000897a95687de102fa09258a2f726801791"
-    sha256 cellar: :any_skip_relocation, mojave:        "fa73d4fa22c06a91abae4fb577d8000897a95687de102fa09258a2f726801791"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "fa73d4fa22c06a91abae4fb577d8000897a95687de102fa09258a2f726801791"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a9f22b7d0972294f7d6d1dec7f88628df527656aad3e3f5331da3b16d78928cb"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d7d7ed4778bab36afa71a8b06b5a42b5d4178bb3bd08c94a90e9f099af5ea92e"
+    sha256 cellar: :any_skip_relocation, catalina:      "da1235bed154594ddbda2614b02a42cefe359aeb02835bd99cce97642aa83df7"
+    sha256 cellar: :any_skip_relocation, mojave:        "dde02ed909386bfbbd045fb7c6109544a7e7f3f047b0add74d2ace9ff1fa5d62"
   end
 
   depends_on "go" => :build
