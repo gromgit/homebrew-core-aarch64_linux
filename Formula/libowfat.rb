@@ -13,11 +13,10 @@ class Libowfat < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d10e148f1ebd15c97a7f4663fdf38beff7774347ca4545bfdc818056aa14c568"
-    sha256 cellar: :any_skip_relocation, big_sur:       "1a08648fa8307771ae1d5c45da0ddefdfdc20d58b89091a614df74371eebbc59"
-    sha256 cellar: :any_skip_relocation, catalina:      "2424abb2cccd7f41582ea49ccbee60dbecc436c843d9531c0e7c68c35b9330a4"
-    sha256 cellar: :any_skip_relocation, mojave:        "08041ad3f0edd4b20e6ed1f6c768414aa7241940a14386c1dffd04caa5ef70ca"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "4740574a0e5184f8b371b1a7571304810b4fb29a92d60cf54979387dab3448c5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1f136abc75d88d46768041ce1e32344905a3cc66179734785011ed001acda8db"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c5fcc5eed33299becabcd1144074b6971730d7edbacea54b22f0ed5c723a09bf"
+    sha256 cellar: :any_skip_relocation, catalina:      "9fd957c443aa34237004dbcce7254377b164262df39bb3ba7ea8a8f1d70f5f59"
+    sha256 cellar: :any_skip_relocation, mojave:        "2b1cffc2e679e98801f576358d42fb3b7217187f2551f5fe4460f5b29ffd485c"
   end
 
   patch do
