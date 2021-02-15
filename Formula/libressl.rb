@@ -2,9 +2,9 @@ class Libressl < Formula
   desc "Version of the SSL/TLS protocol forked from OpenSSL"
   homepage "https://www.libressl.org/"
   # Please ensure when updating version the release is from stable branch.
-  url "https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.2.3.tar.gz"
-  mirror "https://mirrorservice.org/pub/OpenBSD/LibreSSL/libressl-3.2.3.tar.gz"
-  sha256 "412dc2baa739228c7779e93eb07cd645d5c964d2f2d837a9fd56db7498463d73"
+  url "https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.2.4.tar.gz"
+  mirror "https://mirrorservice.org/pub/OpenBSD/LibreSSL/libressl-3.2.4.tar.gz"
+  sha256 "ac1dbb9e05a64910856599b1ac61118fdec1b3d0c700e42444d81c0d5f507a5a"
   license "OpenSSL"
 
   livecheck do
