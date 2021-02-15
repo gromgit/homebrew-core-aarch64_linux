@@ -6,10 +6,10 @@ class Gdu < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "12cdac328da92b4d9dea810e749300fe0fbdcfe85e27dd9f846496b41a7560f9"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c23604003df6802b576d7c0f190317ad8cac7698e021b001e52e3e7444d0ddc2"
-    sha256 cellar: :any_skip_relocation, catalina:      "3d61fcfafcf993cbf273fe15d5e01b292fb522c82d4e715859f956230bfd4fed"
-    sha256 cellar: :any_skip_relocation, mojave:        "8f5f75d0105b1bb27c205c904bb291631deb816f2b5bc020aca7e0e94b4c5bd6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4d4492b069e4be485513ac31103daaf9599ae781507364ecf4a671e5b1eb1631"
+    sha256 cellar: :any_skip_relocation, big_sur:       "aeaf4ad8f0526cf11c0c5c9880305916135ff2fd289892d28821f414f36d6f74"
+    sha256 cellar: :any_skip_relocation, catalina:      "5313c8ea28de72c1068cf8962168d1962444986ae51c67ac207cf5ad6b28c7e9"
+    sha256 cellar: :any_skip_relocation, mojave:        "ec3e1de513367641ed4df03a1aa29cf3f969d3760e0c5a5dd39f3c1a3e22a2c0"
   end
 
   depends_on "go" => :build
