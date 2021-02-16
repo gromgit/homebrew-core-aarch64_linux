@@ -9,10 +9,10 @@ class NameThatHash < Formula
   head "https://github.com/HashPals/Name-That-Hash.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "981d9084784254b087c7337fa7fc0c5f21a4fa8656a9d85da2fe55be3c627a92"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ee865adb3997432fde088bb2f777ee4d5e639a65ae0fac793e32eadc0e2bd910"
-    sha256 cellar: :any_skip_relocation, catalina:      "3449a3ee1a4cb493ae42a11ba2f96316980dcee2600c99f49220ff647eea33c8"
-    sha256 cellar: :any_skip_relocation, mojave:        "777f25e52b9bc16c20e8ce439240bc73b0f7e0592cec1b7d1e2577fd480661f8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d6160cacb8d0b3136c542ed69c3b10319d86bd2b24d6f81cf14c3205b56554df"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4557546dd4f65ba3f928e0c0b714d3ed7413c774a3739cd613d78eb559488093"
+    sha256 cellar: :any_skip_relocation, catalina:      "505c362e2dbfbaf8c943266ae0056ca1e8bedcba1270274ea5d8ef531a27b096"
+    sha256 cellar: :any_skip_relocation, mojave:        "df8c93cdc2f6088e8e86ac32dee8e8678014cba3e7bffe07c06fa6593289e58d"
   end
 
   depends_on "python@3.9"
