@@ -2,8 +2,8 @@ class ErlangAT21 < Formula
   desc "Programming language for highly scalable real-time systems"
   homepage "https://www.erlang.org/"
   # Download tarball from GitHub; it is served faster than the official tarball.
-  url "https://github.com/erlang/otp/archive/OTP-21.3.8.18.tar.gz"
-  sha256 "3481a47503e1ac0c0296970b460d1936ee0432600f685a216608e04b2f608367"
+  url "https://github.com/erlang/otp/archive/OTP-21.3.8.20.tar.gz"
+  sha256 "7ed3b3c149add9f847144d507ffc411d63a212523539789e9d73d19edcf5aa16"
   license "Apache-2.0"
 
   livecheck do
@@ -50,6 +50,12 @@ class ErlangAT21 < Formula
   patch do
     url "https://github.com/erlang/otp/commit/388622e9b626039c1e403b4952c2c905af364a96.patch?full_index=1"
     sha256 "85d3611fc071f06d421b9c7fae00b656fde054586bf69551aec38930d4086780"
+  end
+
+  # Fix build on Big Sur (https://github.com/erlang/otp/pull/4524)
+  patch do
+    url "https://github.com/erlang/otp/commit/99fc87254e07fbd7bf4f9a02966a455846d5d017.patch?full_index=1"
+    sha256 "8a9b91f428f779e76d4ed85af1a079fd6b54bd9fc6d4d45fc2747f8a4fcac0cf"
   end
 
   def install
