@@ -8,12 +8,10 @@ class CrosstoolNg < Formula
   head "https://github.com/crosstool-ng/crosstool-ng.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "d917bda890f8a1f6eecb6f0ba6f914fcd7fcc92909d7f0d8e76e8eb05e8e6e43"
-    sha256 cellar: :any, big_sur:       "e96a70d1be1e25e77895b7c509929435ca2a5950abea37c5e5387c2586ad4db0"
-    sha256 cellar: :any, catalina:      "733a1e37563ffd06a187fdad312bb03e1eca1467832771b57141b4542b81464a"
-    sha256 cellar: :any, mojave:        "f95cc7d4b3bfcc8584d89c5dfa11d39e246c36ca2d707b108d5330fe24ac41c7"
-    sha256 cellar: :any, high_sierra:   "c7f30be654aece34ce9e7cf5fc08f745cad233ff11ad1fd81826d9344a22345b"
-    sha256 cellar: :any, sierra:        "b4d034ebac32df3affdd139f4c49804b74216bf372a9831c01693220d442a39a"
+    sha256 cellar: :any, arm64_big_sur: "6b511659323ff03bd405c20e8591cacb55dbb081fe8f2416666228d9ed4cf1a8"
+    sha256 cellar: :any, big_sur:       "179cfc5008cbff1c21aba36ba14a9fb76e927035bf2554cdd0761382d70e58ca"
+    sha256 cellar: :any, catalina:      "77abb4c65e4eeabbc3300464367462c9342b6b4a6aa2342d6f92c6a682f91dd9"
+    sha256 cellar: :any, mojave:        "897d58874abdcf5dd4b7e606e8996f16255a996f53df29ff9dfcc2774ca5ef22"
   end
 
   depends_on "help2man" => :build
