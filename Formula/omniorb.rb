@@ -4,6 +4,7 @@ class Omniorb < Formula
   url "https://downloads.sourceforge.net/project/omniorb/omniORB/omniORB-4.2.4/omniORB-4.2.4.tar.bz2"
   sha256 "28c01cd0df76c1e81524ca369dc9e6e75f57dc70f30688c99c67926e4bdc7a6f"
   license "GPL-2.0"
+  revision 1
 
   livecheck do
     url :stable
@@ -19,6 +20,7 @@ class Omniorb < Formula
   end
 
   depends_on "pkg-config" => :build
+  depends_on "python@3.9"
 
   resource "bindings" do
     url "https://downloads.sourceforge.net/project/omniorb/omniORBpy/omniORBpy-4.2.4/omniORBpy-4.2.4.tar.bz2"
@@ -31,7 +33,7 @@ class Omniorb < Formula
     system "make", "install"
 
     resource("bindings").stage do
-      system "./configure", "--prefix=#{prefix}"
+      system "./configure", "--prefix=#{prefix}", "PYTHON=python3"
       system "make", "install"
     end
   end
