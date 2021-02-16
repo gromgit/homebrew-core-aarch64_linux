@@ -3,10 +3,9 @@ class Pylint < Formula
 
   desc "It's not just a linter that annoys you!"
   homepage "https://github.com/PyCQA/pylint"
-  url "https://files.pythonhosted.org/packages/24/4a/a07484119d23283de4d8db8176e85be3b20583eefc1cbfa8363b1414fbe2/pylint-2.6.0.tar.gz"
-  sha256 "bb4a908c9dadbc3aac18860550e870f58e1a02c9f2c204fdf5693d73be061210"
+  url "https://files.pythonhosted.org/packages/f7/d4/c065f898e48e0d839525a2ede871f6f083ad322fb42c0ca0e7cf7ab7bb07/pylint-2.6.2.tar.gz"
+  sha256 "718b74786ea7ed07aa0c58bf572154d4679f960d26e9641cc1de204a30b87fc9"
   license "GPL-2.0-or-later"
-  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "36d38ff773fd914b3314302906f65d1c1a06dd8b0e4afc5bb91cabc4c91a5a03"
@@ -24,8 +23,8 @@ class Pylint < Formula
   end
 
   resource "isort" do
-    url "https://files.pythonhosted.org/packages/16/2a/79c169c92d95db1ca015c481611b78f5255ef66f8ad8f40276cdcd2e5b68/isort-5.5.4.tar.gz"
-    sha256 "ba040c24d20aa302f78f4747df549573ae1eaf8e1084269199154da9c483f07f"
+    url "https://files.pythonhosted.org/packages/a2/f7/f50fc9555dc0fe2dc1e7f69d93f71961d052857c296cad0fb6d275b20008/isort-5.7.0.tar.gz"
+    sha256 "c729845434366216d320e936b8ad6f9d681aab72dc7cbc2d51bedc3582f3ad1e"
   end
 
   resource "lazy-object-proxy" do
@@ -44,8 +43,8 @@ class Pylint < Formula
   end
 
   resource "toml" do
-    url "https://files.pythonhosted.org/packages/da/24/84d5c108e818ca294efe7c1ce237b42118643ce58a14d2462b3b2e3800d5/toml-0.10.1.tar.gz"
-    sha256 "926b612be1e5ce0634a2ca03470f95169cf16f939018233a670519cb4ac58b0f"
+    url "https://files.pythonhosted.org/packages/be/ba/1f744cdc819428fc6b5084ec34d9b30660f6f9daaf70eead706e3203ec3c/toml-0.10.2.tar.gz"
+    sha256 "b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"
   end
 
   resource "wrapt" do
