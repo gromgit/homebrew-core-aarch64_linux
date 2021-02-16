@@ -12,10 +12,10 @@ class Ipbt < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "93862f6474250d069f0bac1b463cbbe1228bf0b713c4234e683cff991f8d8dba"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ac90fea5805663d24f9a6a712064ab0d3d543322523585e1b382521ed156a979"
-    sha256 cellar: :any_skip_relocation, catalina:      "a702173664a98d4d1f42a6ef4599f733916a64cea7e4dc995b83e73739ac455f"
-    sha256 cellar: :any_skip_relocation, mojave:        "636394fcd3103d17aa176ef176bc8e6a2bf8f01517ff0bdb1ed8aa1faf9c6358"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "78f292ac5378f3b8d1a9bb5260a60a3b40118b944edcdaaca912646407e42d5d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "66c701400fe87ae661d959bb9f7558f7658c5d81e71438ec76435ee2943329aa"
+    sha256 cellar: :any_skip_relocation, catalina:      "f08bb4d0b1710cb02f1960c229f137c44505980793251ab81d0222be5f1b61e7"
+    sha256 cellar: :any_skip_relocation, mojave:        "5678b11877df9433ceb47661596d3f0b4d0894e44a4173ae118b746117938e59"
   end
 
   uses_from_macos "ncurses"
