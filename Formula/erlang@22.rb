@@ -2,8 +2,8 @@ class ErlangAT22 < Formula
   desc "Programming language for highly scalable real-time systems"
   homepage "https://www.erlang.org/"
   # Download tarball from GitHub; it is served faster than the official tarball.
-  url "https://github.com/erlang/otp/archive/OTP-22.3.4.14.tar.gz"
-  sha256 "0d1e1f1acf542a98248e388b877d34eba92f367fdcc5ee3ebde557dee60ef551"
+  url "https://github.com/erlang/otp/archive/OTP-22.3.4.15.tar.gz"
+  sha256 "05d388ee252fd04a8e9e62f3ea7be3b45a19f698d978452933a21138a383e80d"
   license "Apache-2.0"
 
   livecheck do
@@ -43,6 +43,13 @@ class ErlangAT22 < Formula
   patch do
     url "https://github.com/erlang/otp/commit/388622e9b626039c1e403b4952c2c905af364a96.patch?full_index=1"
     sha256 "85d3611fc071f06d421b9c7fae00b656fde054586bf69551aec38930d4086780"
+  end
+
+  # Fix build on Big Sur
+  # https://github.com/erlang/otp/pull/4523
+  patch do
+    url "https://github.com/erlang/otp/commit/a0883306c4716dee0808aa80e60228f171de1317.patch?full_index=1"
+    sha256 "6d93477766c4903a68fde686965f00092f31b182499da61713bbf448f5f1fabc"
   end
 
   def install
