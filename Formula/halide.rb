@@ -11,11 +11,10 @@ class Halide < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "8f6e1c100dd2fbabef29fd1ffe9dbb30500c6fc095b38c2c7382ca82eb70e6ac"
-    sha256 cellar: :any, big_sur:       "061a4d20c6c8772a49b858e9cae542482e4383328ec8baaef0eb4613dc06f398"
-    sha256 cellar: :any, catalina:      "997ed23a3fcb238899272fab8a0f9c2948477fb53bdc1bf2382a31418bc51571"
-    sha256 cellar: :any, mojave:        "281f9219faf56e6e4b01e44bde6d9e8a4cd8bb0283e14aa6f2f78f6db4301dec"
-    sha256 cellar: :any, high_sierra:   "5aaa4023bfff9d9f1f18ee1efae442ff7e0c21c84acc220555504c42705d9c7c"
+    sha256 cellar: :any, arm64_big_sur: "ad19d68856aa1cc71143444247390ae4a6dd7e9f3ff62d466faca649f440d476"
+    sha256 cellar: :any, big_sur:       "df941a4b7b9e384b396e2a023e44565c0fdcb725ef14fdaf27138f76f9d1c5ee"
+    sha256 cellar: :any, catalina:      "300fb9d5ba8b9d5df83bf23edc62bd10f9614ccaa9bde758077cef79326566af"
+    sha256 cellar: :any, mojave:        "68f217f8fc16176d81325954ca87f92c62325d7beb8557852acb2c65e3dee052"
   end
 
   depends_on "cmake" => :build
