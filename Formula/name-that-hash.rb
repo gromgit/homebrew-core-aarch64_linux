@@ -6,6 +6,7 @@ class NameThatHash < Formula
   url "https://files.pythonhosted.org/packages/1b/45/c4545b48088fb5d2c10af10b7dc050dfe5f579ac9a25ca38a22fd6957c46/name-that-hash-1.1.3.tar.gz"
   sha256 "a33dafe987a38ea03439001a26449cb546214749eaf1154610a5b0b656c64f4f"
   license "GPL-3.0-or-later"
+  revision 1
   head "https://github.com/HashPals/Name-That-Hash.git", branch: "main"
 
   bottle do
@@ -54,6 +55,11 @@ class NameThatHash < Formula
 
   def install
     virtualenv_install_with_resources
+
+    xy = Language::Python.major_minor_version Formula["python@3.9"].opt_bin/"python3"
+    site_packages = "lib/python#{xy}/site-packages"
+    pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
+    (prefix/site_packages/"homebrew-name_that_hash.pth").write pth_contents
   end
 
   test do
@@ -61,5 +67,7 @@ class NameThatHash < Formula
     output = shell_output("#{bin}/nth --text #{hash}")
     assert_match "#{hash}\n", output
     assert_match "MD5, HC: 0 JtR: raw-md5 Summary: Used for Linux Shadow files.\n", output
+
+    system Formula["python@3.9"].opt_bin/"python3", "-c", "from name_that_hash import runner"
   end
 end
