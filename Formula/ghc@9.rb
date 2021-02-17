@@ -10,6 +10,12 @@ class GhcAT9 < Formula
     regex(/href=.*?download[._-]ghc[._-][^"' >]+?\.html[^>]*?>\s*?v?(\d+(?:\.\d+)+)\s*?</i)
   end
 
+  bottle do
+    sha256 big_sur:  "32d2b4c6ebe826206412f6faca0fc8c11496038544a11d6be0d95898d7e1e3f3"
+    sha256 catalina: "13537ee079be6304014683edc3c41015826d9fa92c66f41be55f36fb48cf026a"
+    sha256 mojave:   "e78ad22a89d607bc99ca10b89aa9a4a724aa235e170c1cf887250d158da3f904"
+  end
+
   keg_only :versioned_formula
 
   depends_on "python@3.9" => :build
