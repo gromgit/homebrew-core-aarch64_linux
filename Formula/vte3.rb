@@ -6,10 +6,10 @@ class Vte3 < Formula
   license "LGPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "e4dffc796de1262ba9e996770f1077ae04f57c9f3309ade7acdd7d98e3e90e27"
-    sha256 big_sur:       "4c9b4f83588414498702a755ed85adf8f82336e96904d53360430ed625f63b0f"
-    sha256 catalina:      "0bee470e969ca07f5d19e6fd644fbf35b72a73c919c197b67e75d6fa1b24d569"
-    sha256 mojave:        "f5e60ee9050f2139f97f6a75d9571fd65c9e60ab4421277bed993a4741069da6"
+    sha256 arm64_big_sur: "237386090e72c1d7a9a1cdacb26c863aba57c8b3f504842d32bd9461fe85165c"
+    sha256 big_sur:       "a4182d10e0035d491e0f8538b37affc3cae28ab8b17afa5c8cad2a43fc0f2f2f"
+    sha256 catalina:      "15a4f6887cf4e538971cea39b847b17b579be18c89b61d428a32160644ffd981"
+    sha256 mojave:        "39374da6e1ccd27d2858c588e89fee275d5955b4c3d6c5a97b92966852cbdf36"
   end
 
   depends_on "gobject-introspection" => :build
