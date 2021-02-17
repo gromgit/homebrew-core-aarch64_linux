@@ -5,14 +5,11 @@ class Einstein < Formula
   sha256 "0f2d1c7d46d36f27a856b98cd4bbb95813970c8e803444772be7bd9bec45a548"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "6499a95257a847e4d273da330d52a71da6dcf4f3de754515eb158ab850f5e0f2"
-    sha256 cellar: :any, big_sur:       "79969ac055b92c9d66391bc912592df75af67046abd57bde81c248a4a68dbfbe"
-    sha256 cellar: :any, catalina:      "54ce5ebd0b06256ecdda309bc0a0b500a0bf29411021fb5525dd647b923c3354"
-    sha256 cellar: :any, mojave:        "1430c04b154114c5ada29708033872f75a1c1ca361d997747aac748806d0182d"
-    sha256 cellar: :any, high_sierra:   "faa76a6c3363ec2c5f814940560db5fb52d8d7af89149dae7bbdf14967c51e3a"
-    sha256 cellar: :any, sierra:        "b2f4290bc28e3dd1c528b7c58fa363f8e5832c00283fa79f2f9243d8e5a02c4c"
-    sha256 cellar: :any, el_capitan:    "d0424faaf640750ab3ff8e8e24216a93227b9ff40d33405e3a55a7bdf14d1a36"
-    sha256 cellar: :any, yosemite:      "e884bcdb8f1644707fceb03a8d7732a528495e9655216eff42336c64fdd90179"
+    rebuild 1
+    sha256 cellar: :any, arm64_big_sur: "68cfd59e5ded3c4b91f81edf0e3b2d0c99822025b6828cc710216d5923bb49b2"
+    sha256 cellar: :any, big_sur:       "a3e0ddd14989c54fb03fe46c3f1b4ab37b8f2c882add23348041d19036d3fde3"
+    sha256 cellar: :any, catalina:      "7407f84e2b5f164daba38e36654bc0254b3b9094e4e499e1346a4d94943b38de"
+    sha256 cellar: :any, mojave:        "df8d532f00641727e29c50e3fc47ea52c9e8c1d1e98909922267bd71dad5d1a3"
   end
 
   depends_on "sdl"
