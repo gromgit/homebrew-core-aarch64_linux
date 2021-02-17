@@ -6,6 +6,13 @@ class Waffle < Formula
   license "BSD-2-Clause"
   head "https://gitlab.freedesktop.org/mesa/waffle.git"
 
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "133071fd7e8f381261162a14a33a31ed13d8b743b4da92c9749e37bcabf5261c"
+    sha256 cellar: :any, big_sur:       "2484b49e0b524c05c045caab09533473397905b6bcda35ce0336bcd5bb81bb17"
+    sha256 cellar: :any, catalina:      "1c640687e4194aea3ee1654a484ee55c3a26c57955b883e7fb9d32151db3ccf9"
+    sha256 cellar: :any, mojave:        "547df7826af57e6dfb59389e4dde24ec0c504a5a9fca13a3adf06caab07cfa81"
+  end
+
   depends_on "cmake" => :build
   depends_on "docbook-xsl" => :build
   depends_on "pkg-config" => :test
