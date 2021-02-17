@@ -7,9 +7,9 @@ class Libming < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any, catalina:    "9c37f5438fb510747686c52cfd2070007ccbb57ecdfb256e344713764aae8782"
-    sha256 cellar: :any, mojave:      "6c4230cfec9255a8f4f4d029414807726b44a1fcd597920c2502a1c5ad84ba52"
-    sha256 cellar: :any, high_sierra: "50d6199171c5d8bc5b7cfb24e6befe9f2c7aefc12d8ee7127202fcf1ea646ae4"
+    sha256 cellar: :any, big_sur:  "75412c5e2ac1e0a72f1e7a3e48529f0faf519496c5c2f5fa23e585e6d546063e"
+    sha256 cellar: :any, catalina: "f553beadeca1638d0deb61cf643279ba0f62a16c46f62e8140cab8f1ff86db04"
+    sha256 cellar: :any, mojave:   "fe9765ddd0524f6491e45ef8ac0a186a0a477996cbca3fa7d92f199f72a348cf"
   end
 
   depends_on "autoconf" => :build
