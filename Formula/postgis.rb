@@ -12,10 +12,10 @@ class Postgis < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "0a9f31b8eb858c8deec060b547a2cb6604b0123b666a11e3370f6a89e2489672"
-    sha256 cellar: :any, big_sur:       "c8ce4eea7e0fd796b62c6cf0dd68ad103c7367f6941e68b17d271074f024c3e1"
-    sha256 cellar: :any, catalina:      "9b759aee6e27a9636737594d4bab226e94d3b138952b060e2856d4cc611ee2f9"
-    sha256 cellar: :any, mojave:        "d90ff542d074be8ac87823764911c34ec778277e6ba32d5e1028f36006b18b8e"
+    sha256 cellar: :any, arm64_big_sur: "7b2db3f6e3f4582b8d865a9f30d8f865daef0def04d9035c7ff271f36880a49a"
+    sha256 cellar: :any, big_sur:       "1684641950af335917bf683c6d01a3134583fb607dacf659f1d178861443601a"
+    sha256 cellar: :any, catalina:      "5926acfc50c2c61d577df18965c28f9ad87370760f3888c69bbcf8da4d4c8a00"
+    sha256 cellar: :any, mojave:        "5f75dbcb69c3869aec09a51de9eb91ba57aff79e626c27736b494d6f5309f312"
   end
 
   head do
