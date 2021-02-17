@@ -10,10 +10,10 @@ class Folderify < Formula
   head "https://github.com/lgarron/folderify.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5648fa8e7a90da4514c5646fcd4cd472cc3874b1b8d1cc9c1b81787fbad71609"
-    sha256 cellar: :any_skip_relocation, big_sur:       "dcb3e86eb13c2efb3bf71761ac44d109e5b4becf435318837ee3dc5d897ff86d"
-    sha256 cellar: :any_skip_relocation, catalina:      "e481d4b6bca72a9c4962bb69f3805930f332bec45394dff462573ddbc94b4940"
-    sha256 cellar: :any_skip_relocation, mojave:        "39560442cbf37b6af98c11bf1f2d9e14a798552db9684381d9381c768dc1d7e5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5f9594b7165df5b95eafc0223d0d9f9b3dff3a860baf8c33c1aab317c201de8c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d696700f70a57671ce601395027ba95fba79d07b948f541609dbb5608092a1d6"
+    sha256 cellar: :any_skip_relocation, catalina:      "1ba1ac5ff80182cb53b794e98e74dc93327569e26ee64b58a40a9ec4dfe9fa73"
+    sha256 cellar: :any_skip_relocation, mojave:        "51fae77b3fd9de3091ee7cca85bebe4f8f388613bcc7adc5d4410242dd2e6f0e"
   end
 
   depends_on "imagemagick"
