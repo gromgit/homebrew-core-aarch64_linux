@@ -8,10 +8,9 @@ class CharmTools < Formula
   license "GPL-3.0-only"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, big_sur:  "1ea561e744d112c45f4f8d311a9ad6c55b0ec59f3d105dad6278554001471804"
-    sha256 cellar: :any, catalina: "5960e644e568c361491cfaed14eaa308f17bfcea6dd675cb4a39b5874b569c94"
-    sha256 cellar: :any, mojave:   "280e8b310117359a2d873b04a8758cd2c4191872897f37e851aaaf3d0d6009ea"
+    sha256 cellar: :any, big_sur:  "b174a401458fb0574b263bd51ee4f055f0595a0a380d28ddebb6de0e201a8702"
+    sha256 cellar: :any, catalina: "ec4c42bd27b33958b2fe10a0dc000147a099a72dde3a313e77d88640ca1b1a32"
+    sha256 cellar: :any, mojave:   "95ca45689f0233c756a6979e5e19404d14d705a2fd69b74c6b1cda6d3fe157c4"
   end
 
   depends_on "rust" => :build
