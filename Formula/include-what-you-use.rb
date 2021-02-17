@@ -16,10 +16,10 @@ class IncludeWhatYouUse < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "f62162f5365b047b87134efef2b50f24e258bf850eecda6b8ee4b29166fab099"
-    sha256 big_sur:       "5c106df7922e05e61e2a3b6e625c0c06afc254a63f7b1ac8506c292455487207"
-    sha256 catalina:      "dd12e81abc59893a49bf42f12d86998a11563032fdb3e87f6325dca9dadfa29b"
-    sha256 mojave:        "1d4904f0adafd004c47d7c23244bbd34ee301cc26cd3211901515c1b0f194340"
+    sha256 arm64_big_sur: "fc7068fdbc7a9e0bbf2100e5e1dc94ed3bb64a24b4d81386d04ee26639d2a5a0"
+    sha256 big_sur:       "e6df8a20b09f7477fb736af76854189bd98ac7191847d133b1bf63d227897337"
+    sha256 catalina:      "7d8ba990e1bc2ddc345b603bcc7000c5267896bfd16266d1f84633b5bd3a77bf"
+    sha256 mojave:        "8b36ee59b687530695baf9c766010b1356b3f09b6caba4a6750cf8ecd328b36e"
   end
 
   depends_on "cmake" => :build
