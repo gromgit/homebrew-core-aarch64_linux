@@ -7,9 +7,9 @@ class Argo < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "329c16e5ab94e1462cd0bd7aa92f4d6b7d28e8593e8f34c483789bb705f8279f"
-    sha256 cellar: :any_skip_relocation, catalina: "e1116f4de6e9de7f71071dd08f456874253393f9c039d3ea9724219062ea5e44"
-    sha256 cellar: :any_skip_relocation, mojave:   "f7f2e67344123eae1dd0db432a3fc71c55c2cbac71ffc82231da74689d9cc480"
+    sha256 cellar: :any_skip_relocation, big_sur:  "373e16ebb731b43932863afc2115019f8c44f26e86698cc2aed6ecdb273ad669"
+    sha256 cellar: :any_skip_relocation, catalina: "1faf7ac893b790e60262b7664fa87a68a9187fab3a24580529816a03f84e4413"
+    sha256 cellar: :any_skip_relocation, mojave:   "bcc2f077aeaa397afee18593fcc672d70c477990698023a621ee3026a22183fc"
   end
 
   depends_on "go" => :build
