@@ -1,10 +1,9 @@
 class PythonAT37 < Formula
   desc "Interpreted, interactive, object-oriented programming language"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tar.xz"
-  sha256 "91923007b05005b5f9bd46f3b9172248aea5abc1543e8a636d59e629c3331b01"
+  url "https://www.python.org/ftp/python/3.7.10/Python-3.7.10.tar.xz"
+  sha256 "f8d82e7572c86ec9d55c8627aae5040124fd2203af400c383c821b980306ee6b"
   license "Python-2.0"
-  revision 3
 
   livecheck do
     url "https://www.python.org/ftp/python/"
