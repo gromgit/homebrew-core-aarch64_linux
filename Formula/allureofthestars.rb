@@ -8,9 +8,9 @@ class Allureofthestars < Formula
   head "https://github.com/AllureOfTheStars/Allure.git"
 
   bottle do
-    sha256 big_sur:  "d82455c81cf0a631109ea16ae197fbce21ba141a7d4af065e38f67bf9d03438c"
-    sha256 catalina: "542feabc974e7b3506e46312dbe3aaaae6f03474708c969520c661edaf0da088"
-    sha256 mojave:   "adfd9f24390bac8ea4d661bbdde89c2d96187f6ad6e1045c4ed495e1ec6db275"
+    sha256 big_sur:  "d43def961fa93b09b7e892555cfa10f98ccb4d8951f5f0f1a042e21984c45406"
+    sha256 catalina: "f672e5207dc9741953f256add1c906f12f92f288d9a3f674323302e76401d1bb"
+    sha256 mojave:   "8f34aba3fc290ecfa4f938b32bfbf0c3f9955ab657223a514a0fe30223e34e8f"
   end
 
   depends_on "cabal-install" => :build
