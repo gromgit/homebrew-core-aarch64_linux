@@ -7,10 +7,10 @@ class Saml2aws < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fdd949819602c09ed3533d0b284070c8efa5d1176690128685d41b8cb8ccfa79"
-    sha256 cellar: :any_skip_relocation, big_sur:       "64dfca55124c588a0550085c9bba5048e3747df684c66248f63b522879cdf23e"
-    sha256 cellar: :any_skip_relocation, catalina:      "43b5b26c143c42ab2093cb5a6a3511b7417ec681a6130f73d22b64f9ff7b90ff"
-    sha256 cellar: :any_skip_relocation, mojave:        "e4ca2bac31ead962d44e9769fd04e8d322c53a5f6e169a1d04e942eeb6bdd35e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1ace313a31af2f3e1187769a1ad7848ae33631a04b67c1f4a1251be47deea810"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ca178f5b6fa3824d4502a4e5fb1086322bfaa076f00151c1e0070487ebb01585"
+    sha256 cellar: :any_skip_relocation, catalina:      "00799579ec4d3e0cc0655b12ced072523742e4e0a19a14568e5b7889c49467fe"
+    sha256 cellar: :any_skip_relocation, mojave:        "b3a05a3763d8d43220291725e14ba82309e2f2860b49c39bf405cb8ad8067ccb"
   end
 
   depends_on "go" => :build
