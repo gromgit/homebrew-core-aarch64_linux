@@ -14,6 +14,8 @@ class Buildozer < Formula
     sha256 cellar: :any_skip_relocation, high_sierra: "a257921eb9df552c485cb2656ce7f535a708846308de4aa1ee47942492a61aee"
   end
 
+  disable! date: "2021-02-17", because: :does_not_build
+
   depends_on "bazelisk" => :build
 
   def install
