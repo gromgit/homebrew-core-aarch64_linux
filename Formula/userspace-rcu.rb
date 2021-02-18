@@ -10,11 +10,10 @@ class UserspaceRcu < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "8d45763c520497f2a3062f4d4c7c9a291c956462e79fad11fc2f6bafc63ede75"
-    sha256 cellar: :any, big_sur:       "16786f80939cc886441f4be7850c1ffc3cad092aaedcfb9a5d3f4bc08aa17edf"
-    sha256 cellar: :any, catalina:      "87815b2af972d7e3596e639cec95b6da61436108dcb7380629c5f5b56785d513"
-    sha256 cellar: :any, mojave:        "a5fc1494e06f10ab0aa2743dea422d94206248cc72ea504cc48dd0fb1837c780"
+    sha256 cellar: :any, arm64_big_sur: "f4fc590ca3038ba37ae1f93f96799139bf99fa4c4ddcf3d1924759385d310203"
+    sha256 cellar: :any, big_sur:       "2eaf6d663b24932de82d80effcd6bf77fe7307a301296094809495eb4f6c5597"
+    sha256 cellar: :any, catalina:      "4066d1afdd9ab1bd126c933bcf53bff3d74179195443f272841d9ac5da0b4b05"
+    sha256 cellar: :any, mojave:        "63d30f6d0d0f00b5eae317aa0cff21f28cfed4a75fd460ba7c6651cc3d3dea79"
   end
 
   def install
