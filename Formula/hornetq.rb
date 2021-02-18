@@ -7,6 +7,10 @@ class Hornetq < Formula
 
   bottle :unneeded
 
+  # HornetQ has been merged into another project
+  # http://hornetq.blogspot.com/2015/06/hornetq-apache-donation-and-apache.html
+  disable! date: "2021-02-18", because: :unmaintained
+
   def wrapper_script(target)
     <<~EOS
       #!/bin/bash
