@@ -3,7 +3,7 @@ require "language/node"
 class AtomistCli < Formula
   desc "Unified command-line tool for interacting with Atomist services"
   homepage "https://github.com/atomist/cli#readme"
-  url "https://registry.npmjs.org/@atomist/cli/-/@atomist/cli-1.8.0.tgz"
+  url "https://registry.npmjs.org/@atomist/cli/-/cli-1.8.0.tgz"
   sha256 "64bcc7484fa2f1b7172984c278ae928450149fb02b750f79454b1a6683d17f62"
   license "Apache-2.0"
 
