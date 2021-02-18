@@ -4,6 +4,7 @@ class CstoreFdw < Formula
   url "https://github.com/citusdata/cstore_fdw/archive/v1.7.0.tar.gz"
   sha256 "bd8a06654b483d27b48d8196cf6baac0c7828b431b49ac097923ac0c54a1c38c"
   license "Apache-2.0"
+  revision 1
 
   bottle do
     rebuild 1
@@ -15,7 +16,20 @@ class CstoreFdw < Formula
   depends_on "postgresql"
   depends_on "protobuf-c"
 
+  # PG13 support from https://github.com/citusdata/cstore_fdw/pull/243/
+  patch do
+    url "https://github.com/citusdata/cstore_fdw/commit/b43b14829143203c3effc10537fa5636bad11c16.patch?full_index=1"
+    sha256 "8576e3570d537c1c2d3083c997a8425542b781720e01491307087a0be3bbb46c"
+  end
+  patch do
+    url "https://github.com/citusdata/cstore_fdw/commit/71949ec5f1bd992b2627a6f9f6cfe8be9196e98f.patch?full_index=1"
+    sha256 "fe812d2b7a52e7d112480a97614c03f6161d30d399693fae8c80ef3f2a61ad04"
+  end
+
   def install
+    # Makefile has issues with parallel builds: https://github.com/citusdata/cstore_fdw/issues/230
+    ENV.deparallelize
+
     # workaround for https://github.com/Homebrew/homebrew/issues/49948
     system "make", "libpq=-L#{Formula["postgresql"].opt_lib} -lpq"
 
