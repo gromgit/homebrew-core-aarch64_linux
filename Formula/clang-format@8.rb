@@ -4,6 +4,7 @@ class ClangFormatAT8 < Formula
   url "https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/llvm-8.0.1.src.tar.xz"
   sha256 "44787a6d02f7140f145e2250d56c9f849334e11f9ae379827510ed72f12b75e7"
   license "Apache-2.0"
+  revision 1
 
   depends_on "cmake" => :build
   depends_on "ninja" => :build
@@ -17,18 +18,11 @@ class ClangFormatAT8 < Formula
     sha256 "70effd69f7a8ab249f66b0a68aba8b08af52aa2ab710dfb8a0fba102685b1646"
   end
 
-  resource "libcxx" do
-    url "https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/libcxx-8.0.1.src.tar.xz"
-    sha256 "7f0652c86a0307a250b5741ab6e82bb10766fb6f2b5a5602a63f30337e629b78"
-  end
-
   def install
-    (buildpath/"projects/libcxx").install resource("libcxx")
     (buildpath/"tools/clang").install resource("clang")
 
     mkdir buildpath/"build" do
       args = std_cmake_args
-      args << "-DLLVM_ENABLE_LIBCXX=ON"
       args << ".."
       system "cmake", "-G", "Ninja", *args
       system "ninja", "clang-format"
