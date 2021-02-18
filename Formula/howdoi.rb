@@ -3,8 +3,8 @@ class Howdoi < Formula
 
   desc "Instant coding answers via the command-line"
   homepage "https://github.com/gleitz/howdoi"
-  url "https://files.pythonhosted.org/packages/b2/5a/772880d8d561efa885395befa6614aa5ca2117c49a9594e960d4377b0c74/howdoi-2.0.10.tar.gz"
-  sha256 "e561e3c5d4f39ab1f86e9f24bb0b2803ee6e312de61e90907f739aa638f35215"
+  url "https://files.pythonhosted.org/packages/6a/ce/beb25c37546afd5cb91318ed26c4f19af994cd059bc6d1ed75261422d005/howdoi-2.0.12.tar.gz"
+  sha256 "bab3eab349ec0b534cf1b05a563d45e4d301b914c53a7f2c3446fdcc60497c93"
   license "MIT"
 
   bottle do
@@ -50,8 +50,8 @@ class Howdoi < Formula
   end
 
   resource "Deprecated" do
-    url "https://files.pythonhosted.org/packages/c1/2d/60b1be29720ea1a3d3146fac1a596875622ae8dcb40cf926cc4759dadfd6/Deprecated-1.2.10.tar.gz"
-    sha256 "525ba66fb5f90b07169fdd48b6373c18f1ee12728ca277ca44567a367d9d7f74"
+    url "https://files.pythonhosted.org/packages/bf/f0/e5b25225d86b4ac205fdf4495ab1e0f120a0742bb1ccb488daf4eaf67079/Deprecated-1.2.11.tar.gz"
+    sha256 "471ec32b2755172046e28102cd46c481f21c6036a0ec027521eba8521aa4ef35"
   end
 
   resource "idna" do
@@ -75,8 +75,8 @@ class Howdoi < Formula
   end
 
   resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/e1/86/8059180e8217299079d8719c6e23d674aadaba0b1939e25e0cc15dcf075b/Pygments-2.7.4.tar.gz"
-    sha256 "df49d09b498e83c1a73128295860250b0b7edd4c723a32e9bc0d295c7c2ec337"
+    url "https://files.pythonhosted.org/packages/19/d0/dec5604a275b19b0ebd2b9c43730ce39549c8cd8602043eaf40c541a7256/Pygments-2.8.0.tar.gz"
+    sha256 "37a13ba168a02ac54cc5891a42b1caec333e59b66addb7fa633ea8a6d73445c0"
   end
 
   resource "PyJWT" do
@@ -100,8 +100,8 @@ class Howdoi < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/29/e6/d1a1d78c439cad688757b70f26c50a53332167c364edb0134cadd280e234/urllib3-1.26.2.tar.gz"
-    sha256 "19188f96923873c92ccb987120ec4acaa12f0461fa9ce5d3d0772bc965a39e08"
+    url "https://files.pythonhosted.org/packages/d7/8d/7ee68c6b48e1ec8d41198f694ecdc15f7596356f2ff8e6b1420300cf5db3/urllib3-1.26.3.tar.gz"
+    sha256 "de3eedaad74a2683334e282005cd8d7f22f4d55fa690a2a1020a416cb0a47e73"
   end
 
   resource "wrapt" do
