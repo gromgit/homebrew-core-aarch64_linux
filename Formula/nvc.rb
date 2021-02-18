@@ -3,8 +3,8 @@ class Nvc < Formula
   homepage "https://github.com/nickg/nvc"
   url "https://github.com/nickg/nvc/releases/download/r1.5.0/nvc-1.5.tar.gz"
   sha256 "4da984ba95eb3b8dd2893fb7a676675de869ff114b827a9f5490dfd54bc95fcb"
-  license "GPL-3.0"
-  revision 1
+  license "GPL-3.0-or-later"
+  revision 2
 
   bottle do
     sha256 catalina:    "7ba6e4a374fa45ac6727a3a94b68ec1e317989999aeace6e16e2d2374f1adef9"
@@ -21,8 +21,7 @@ class Nvc < Formula
 
   depends_on "check" => :build
   depends_on "pkg-config" => :build
-  # llvm 8+ is not supported https://github.com/nickg/nvc/commit/c3d1ae5700cfba6070293ad1bb5a6c198c631195
-  depends_on "llvm@7"
+  depends_on "llvm"
 
   resource "vim-hdl-examples" do
     url "https://github.com/suoto/vim-hdl-examples.git",
@@ -32,7 +31,7 @@ class Nvc < Formula
   def install
     system "./autogen.sh" if build.head?
     system "./tools/fetch-ieee.sh"
-    system "./configure", "--with-llvm=#{Formula["llvm@7"].opt_bin}/llvm-config",
+    system "./configure", "--with-llvm=#{Formula["llvm"].opt_bin}/llvm-config",
                           "--prefix=#{prefix}",
                           "--with-system-cc=/usr/bin/clang"
     system "make"
