@@ -20,10 +20,10 @@ class Emscripten < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "43c7fe5e4aa3f2301b21f8946b3ee787a563118d216f4ad7783e57107b2feaad"
-    sha256 cellar: :any, big_sur:       "48800d0fa4e87506b21bd9bd770f701260e38a38db5e70ea1ea01235974e5817"
-    sha256 cellar: :any, catalina:      "ffa23a77ca9960849cd6a21dacec13d25daf03b638e54a08365ac5970c5790ed"
-    sha256 cellar: :any, mojave:        "986de7621ea1965fdc7c20cb54e864da4039c477b2700bfdaf34e4ad83ae3c30"
+    sha256 cellar: :any, arm64_big_sur: "92359f957c80f52fd8cb477a5ce0f4b68e5d5d05ae6aa5ee95f9605460135dfb"
+    sha256 cellar: :any, big_sur:       "92ee5db54d289ca44c95c834cfb5102872bec8389826f143f435f10be2661ae2"
+    sha256 cellar: :any, catalina:      "d0c15dccbbf9c5a4d02a399cd5a13b11e30b13f8c8f9b2465b39abbbdb1f6155"
+    sha256 cellar: :any, mojave:        "285f68f73a7ce563864184dc6812a0b37dadafc2b93235b86e1015899a6c82d6"
   end
 
   depends_on "cmake" => :build
