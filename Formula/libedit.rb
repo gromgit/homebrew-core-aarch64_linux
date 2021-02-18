@@ -11,11 +11,10 @@ class Libedit < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "9150af78748811901eee0d2e3c5199ed14dd7722a466d6fb9b1d900369e3e86f"
-    sha256 cellar: :any, big_sur:       "7add4831a5be1d9829064a690c36fb47a9a3b75e8a59acf266f4fc4f2a3ad4f6"
-    sha256 cellar: :any, catalina:      "faa58f2e587c5b982af44765f7a034a27837fc1e94816e094ace3f408ab4a7bf"
-    sha256 cellar: :any, mojave:        "a707377be9d5fef881cdbb77ad3b562c9d5f54befb97a10d0b7158e4db87ef86"
-    sha256 cellar: :any, high_sierra:   "06e087927f024a9030947216be3aaa46f97fc9dcc1b70959f60240b86bd8f574"
+    sha256 cellar: :any, arm64_big_sur: "4d147b3faf124f55ff09117d8882ba96b605c29939c238083c13ad750d2749f2"
+    sha256 cellar: :any, big_sur:       "c56ab224f48f895bcd3220fbb6c0b05d625d5e720785abab4c10f28ff8af1837"
+    sha256 cellar: :any, catalina:      "6991169e0e1908adbcbdc1a578a27a47f237f9a1497bac29cfffa65055b0c9c7"
+    sha256 cellar: :any, mojave:        "a5ba27ac97b4033f4277624712038bdae55865258b74bc2302c3c810218204a4"
   end
 
   keg_only :provided_by_macos
