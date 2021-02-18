@@ -13,6 +13,8 @@ class Buildifier < Formula
     sha256 cellar: :any_skip_relocation, high_sierra: "5b54427b4bd78b0b3dccfd66b8003a52aab3b4d1a7683586b66d6a6c835c0b4b"
   end
 
+  disable! date: "2021-02-17", because: :does_not_build
+
   depends_on "bazelisk" => :build
 
   def install
