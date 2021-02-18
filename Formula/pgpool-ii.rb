@@ -10,11 +10,10 @@ class PgpoolIi < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "0d35b158d2d40bf8ee53db5774749ed7254874ce6f56c0eb0ac9a12510e2813b"
-    sha256 big_sur:       "0cf130171e6dee4a3c0cd5034a6d32031a137ea51c1f054047974b6a97b474cf"
-    sha256 catalina:      "61f0433e8836ce6fa178158889c0026af1220f169101f766419d3a470ef72f49"
-    sha256 mojave:        "ee328e472570d92320f144ba86530d9a5b8fa81e00813d2404aabfe7fc40e0ad"
+    sha256 arm64_big_sur: "2547d738d4d5ef11a881a175e5ae7cb70ff4d99f52c8f71fe03cb198608d96a0"
+    sha256 big_sur:       "79b4f7f5bdc76ca9aeedea952b13bf49b63c7258fa18e7e2551fb62969060140"
+    sha256 catalina:      "da66c1f679aa1eabf98246210c3428cfc956c61ebf0ca14652efb3fe7d3e6df8"
+    sha256 mojave:        "41f43474dbf1daac87ad3b0d71b050884687909a01fd7fb252d6aed6efa40794"
   end
 
   depends_on "postgresql"
