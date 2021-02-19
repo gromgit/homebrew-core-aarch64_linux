@@ -7,9 +7,10 @@ class CstoreFdw < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, big_sur:  "f31e1f58858d8c3379caa077e8944b088154ef4e2c24b6ead8fcfe630ec2e7a9"
-    sha256 cellar: :any, catalina: "59ef913883a6d6cf128621e06c2a0f83b753f6fa57c129634ed90650505d04e4"
-    sha256 cellar: :any, mojave:   "02ff5c1993f5c35f7ac2ec660293c243670a7e467e4e0d7f012e3f7c62e62dae"
+    sha256 cellar: :any, arm64_big_sur: "40f8f90ff00698421df744f2f50b2f7ebbd5fd85c1f8a34b181aa82f18c6af07"
+    sha256 cellar: :any, big_sur:       "f31e1f58858d8c3379caa077e8944b088154ef4e2c24b6ead8fcfe630ec2e7a9"
+    sha256 cellar: :any, catalina:      "59ef913883a6d6cf128621e06c2a0f83b753f6fa57c129634ed90650505d04e4"
+    sha256 cellar: :any, mojave:        "02ff5c1993f5c35f7ac2ec660293c243670a7e467e4e0d7f012e3f7c62e62dae"
   end
 
   depends_on "postgresql"
