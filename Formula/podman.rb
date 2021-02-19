@@ -1,8 +1,8 @@
 class Podman < Formula
   desc "Tool for managing OCI containers and pods"
   homepage "https://podman.io/"
-  url "https://github.com/containers/podman/archive/v3.0.0.tar.gz"
-  sha256 "4e9e81f570de200bbe42f452cda5366e24e35d94c303b6cc5052370552a925e6"
+  url "https://github.com/containers/podman/archive/v3.0.1.tar.gz"
+  sha256 "259e682d6e90595573fe8880e0252cc8b08c813e19408b911c43383a6edd6852"
   license "Apache-2.0"
 
   bottle do
@@ -28,6 +28,6 @@ class Podman < Formula
 
   test do
     assert_match "podman version #{version}", shell_output("#{bin}/podman -v")
-    assert_match "Error: Cannot connect to the Podman socket", shell_output("#{bin}/podman info 2>&1", 125)
+    assert_match(/Error: Cannot connect to the Podman socket/i, shell_output("#{bin}/podman info 2>&1", 125))
   end
 end
