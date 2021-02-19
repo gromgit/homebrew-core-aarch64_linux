@@ -6,10 +6,10 @@ class Yq < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "97f1817be7288d189905bfd4aded152e84c5bcc25f5b74759c69431d5e0bfb54"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c051ab104401da94bd1ee5e73ccbedc944ebce902c0bf953b1df5058d53a7262"
-    sha256 cellar: :any_skip_relocation, catalina:      "98ad09e3ac0bee6bdf4d92204726bf072aa5fc0044c843dcb17c9d6b08aa9bbb"
-    sha256 cellar: :any_skip_relocation, mojave:        "f8cd451194bb7e8bb690441c138e2c442abf79cd522bbd804d50927885b4aff3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "61c99989b2bdf5e79e4d084b65e5a92344cdc1fc5fd3553926ef0b06bfe95208"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5d0fcbadf2fdfc710372879f81b6a3ce7a6d7bd09f5b484720dca6e71c1ce2aa"
+    sha256 cellar: :any_skip_relocation, catalina:      "e1d958af2aa57c6395cdba7d42cc976e1db52f960ba8560db680d8d9a81159b2"
+    sha256 cellar: :any_skip_relocation, mojave:        "cdd26c23786a0599602fc66bc640e71d60f296d2903708ec6a66bcc8b90c31cf"
   end
 
   depends_on "go" => :build
