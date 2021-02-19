@@ -6,9 +6,9 @@ class Driftctl < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "6ce84db98668856da064b02bca101ba46cfd3c6f2b56bbecfe63f8f18a3bd5f9"
-    sha256 cellar: :any_skip_relocation, catalina: "c8ed583db406959d47ab2357b01d8dd5bda5fd19eccb7e37f527411fc3c31454"
-    sha256 cellar: :any_skip_relocation, mojave:   "fed10c3cdc6c07c6721ddf26b66484295d0f710ff35339d0bdc3997360dd8c5e"
+    sha256 cellar: :any_skip_relocation, big_sur:  "7787c3081a951a5153504c27646b4272e0cee36ebe1c9c5583ad08ebccb6744a"
+    sha256 cellar: :any_skip_relocation, catalina: "86ea68f9ab7c7fbf007e4aa5f03f1b75ff9509b773274c02127be38d745802e9"
+    sha256 cellar: :any_skip_relocation, mojave:   "a79c09d1ea891798b4cf978e47efaeb03801e6370d7f38c98012a2a8eb6460b0"
   end
 
   depends_on "go" => :build
