@@ -8,10 +8,10 @@ class AtomistCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 catalina:    "9682c4b3bcc11581ade4335bf5c4d4b4d2c1fbd141f8677aee8b399d5573ab0a"
-    sha256 mojave:      "a1f611e6f70a5dbdf886c6cf0a2aec9d6024a12e2e768e1f0230087babe7b3d6"
-    sha256 high_sierra: "f109033a8fa80bcf777e053dfae07b84fd134c40d1ed356dbedddfad1e7b85f8"
-    sha256 sierra:      "314c7129a7b8f2e37ab46324dba4423c8c7712b99f1bd8f0dd5eb5904d9d3e3e"
+    rebuild 1
+    sha256 big_sur:  "6dd88e8522cd4cf5d53b17f796aef1eca9cbe1c602c00c892d2f30eb73db0d39"
+    sha256 catalina: "c622ee3ba1742b49887892d30cead992cb34f4f28e68626b03b20a73bd88ba9d"
+    sha256 mojave:   "d5f0927cbfcf78438a0affe17488467727659c5caf9de3a65f9ed565bd23529c"
   end
 
   depends_on "node"
