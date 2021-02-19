@@ -2,8 +2,8 @@ class SqliteUtils < Formula
   include Language::Python::Virtualenv
   desc "CLI utility for manipulating SQLite databases"
   homepage "https://sqlite-utils.datasette.io/"
-  url "https://files.pythonhosted.org/packages/ca/70/3d6278ef2c8194a62e0080a237027472b8942a2ece3a1efc241b41d17f85/sqlite-utils-3.5.tar.gz"
-  sha256 "8bd4a74fe0dc40e72e8d5db96c3fd2355d6e440d8881f8925a11169500b94e20"
+  url "https://files.pythonhosted.org/packages/0d/7e/111bde53d3f4c4f03152963086a28aa11ea5536c6980f64b48eff43d7c7d/sqlite-utils-3.6.tar.gz"
+  sha256 "582a9bcf4b6cb32ee2efa4a0d8f79ec630e8965ca93c69ceaaa7d424e1c01560"
   license "Apache-2.0"
 
   bottle do
@@ -31,8 +31,8 @@ class SqliteUtils < Formula
   end
 
   resource "tabulate" do
-    url "https://files.pythonhosted.org/packages/57/6f/213d075ad03c84991d44e63b6516dd7d185091df5e1d02a660874f8f7e1e/tabulate-0.8.7.tar.gz"
-    sha256 "db2723a20d04bcda8522165c73eea7c300eda74e0ce852d9022e0159d7895007"
+    url "https://files.pythonhosted.org/packages/69/44/6c7326b95268c16cf8dc1376ed1a4f404fa9fd04c1371c0917d3f2806832/tabulate-0.8.8.tar.gz"
+    sha256 "26f2589d80d332fefd2371d396863dedeb806f51b54bdb4b264579270b621e92"
   end
 
   def install
