@@ -8,10 +8,10 @@ class Datasette < Formula
   head "https://github.com/simonw/datasette.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2b491724fa7ab5ea685346cd1c64a1009d7019bdf9c9aaae5c3e1afe727b4c66"
-    sha256 cellar: :any_skip_relocation, big_sur:       "97c69650fe117746694414a30abeb8495452fef0fa3e5c665a815b1e352b6fa5"
-    sha256 cellar: :any_skip_relocation, catalina:      "744d7ac1130301a1939950dfac7faa428e167eb08014c4182f919554484ee5ab"
-    sha256 cellar: :any_skip_relocation, mojave:        "bab63c125aa6e99114c9dd9cce0a34bd6e0769d7045229da00dc709984be3321"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5ad3b899e65d24c699db9f56f4c6624da5a304510ff97e909156b3a1ffc38656"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c63f0e7caf21b94beffeda22d57cf0cd7f596f7c391d4528fdfe1f5a0ab61c86"
+    sha256 cellar: :any_skip_relocation, catalina:      "bfbb19b21e5b6aa1464a27da31bfa2be94df7041bd28a55c6eb08a9249dca976"
+    sha256 cellar: :any_skip_relocation, mojave:        "5b777d70305c73d2d6027f044e7fe3057d7a0d827e0243b116b8af91b6a3605d"
   end
 
   depends_on "python@3.9"
