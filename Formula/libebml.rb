@@ -7,10 +7,10 @@ class Libebml < Formula
   head "https://github.com/Matroska-Org/libebml.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "66c6769cd2da8da5573a43d3f106b5f0218ac172171c18f3b555ea26ff8f5f8c"
-    sha256 cellar: :any, big_sur:       "0c02fee60d448bc4c3964cf075692af11eafcc77df26eddb4e4120bd5d5f5191"
-    sha256 cellar: :any, catalina:      "37fa610470ee8ced3f88e8e2a1222323f888d3b367105f9ca52ee055f7b789b3"
-    sha256 cellar: :any, mojave:        "0dcc4f56f9b16dbc4fa84e9f79474491490948edb5f7d0a5f1243b315c2968d1"
+    sha256 cellar: :any, arm64_big_sur: "fce6d01b12243501223e4e9294528b8eab1818815b18e4ffe777fd14cec0e525"
+    sha256 cellar: :any, big_sur:       "de4edaae6d3f42a388be996f448b582262e39e923acc9ccef881a20ffa817d38"
+    sha256 cellar: :any, catalina:      "20a71bb0c2babdc04f179dc77c7a03c2f2f2031e7d8d87fbf9d3c41ee831addc"
+    sha256 cellar: :any, mojave:        "c3c91dc9f86978012a06f299115bc088e5ea0af6aec2e915d0f8338c4c0edd03"
   end
 
   depends_on "cmake" => :build
