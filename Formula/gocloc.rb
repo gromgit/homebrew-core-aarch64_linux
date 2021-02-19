@@ -7,11 +7,10 @@ class Gocloc < Formula
   head "https://github.com/hhatto/gocloc.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "518e718b3cfe49ee519352ad5891868ad1445f83061ac1b93e89ab045060b6a5"
-    sha256 cellar: :any_skip_relocation, big_sur:       "72eadebf1e8cafb5e94238f673af68216fbaacaae0100bfcb3699a6ffb54b9f3"
-    sha256 cellar: :any_skip_relocation, catalina:      "a6dc5fa859f29d07e0668c169dfc4d240dbd46a8e79fbc63c31261cdf4f6a79b"
-    sha256 cellar: :any_skip_relocation, mojave:        "a6dc5fa859f29d07e0668c169dfc4d240dbd46a8e79fbc63c31261cdf4f6a79b"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "a6dc5fa859f29d07e0668c169dfc4d240dbd46a8e79fbc63c31261cdf4f6a79b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c6dc9d0d5c3a9da085aacd59dbd63516d9534dce80feb98e9b24f9972bd7dc99"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d4afbefd3a175ef99e40ec8806a202f977738453f4dbcfee03c5c6edb71cd06d"
+    sha256 cellar: :any_skip_relocation, catalina:      "05e693c773c83c26b0ce21f3970407c17f1d5858402f7cded3c2032e52f86d19"
+    sha256 cellar: :any_skip_relocation, mojave:        "83e435c8906ee9c2a57fb8799f08a4a63c1b3a6cc34f18594f09226f7d61e21e"
   end
 
   depends_on "go" => :build
