@@ -16,6 +16,7 @@ class GithubRelease < Formula
 
   def install
     ENV["GOPATH"] = buildpath
+    ENV["GO111MODULE"] = "auto"
     system "make"
     bin.install "github-release"
   end
