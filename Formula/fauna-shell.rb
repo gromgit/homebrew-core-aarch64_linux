@@ -8,10 +8,10 @@ class FaunaShell < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e83784816f9eb9e73f027b25d9afd6dedc3b4f5eb7556c26a7bbe056c71c7b41"
-    sha256 cellar: :any_skip_relocation, big_sur:       "18a734b293027c6659dadb8ceeced83da51122b3102d02cf2bb6e7e61b4b1681"
-    sha256 cellar: :any_skip_relocation, catalina:      "d3f4ac9c423ba0eb2f7cb35fa3c577574982b6a6fcd1d4edb93b7156ff4c4e2d"
-    sha256 cellar: :any_skip_relocation, mojave:        "af37d55323c798456afc7ad9ed936c057d143d23c266a2459e4717fae026965a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "cfbe8588059242d72ea0600146a185281aa01d605ee475f7e4cab695e3eccadd"
+    sha256 cellar: :any_skip_relocation, big_sur:       "93895f6f174600ec76a2cb06c38f0def11f165e3fb23feaa0aa07c65b9ee01ae"
+    sha256 cellar: :any_skip_relocation, catalina:      "9f70b2a5419ea0a3e8e16736208c337af3dd7e07c4cdb8e66da8ec05fcbf1bdd"
+    sha256 cellar: :any_skip_relocation, mojave:        "3165ff49383e20add88f52d4c1e7c8c8f7a3082321f57fb0fdedb3646a057022"
   end
 
   depends_on "node"
