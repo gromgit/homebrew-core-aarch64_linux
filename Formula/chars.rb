@@ -24,7 +24,7 @@ class Chars < Formula
 
   test do
     output = shell_output "#{bin}/chars 1C"
-    assert_match "control character", output
+    assert_match "Control character", output
     assert_match "FS", output
     assert_match "File Separator", output
   end
