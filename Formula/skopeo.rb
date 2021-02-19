@@ -6,10 +6,10 @@ class Skopeo < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 arm64_big_sur: "60d53a7cdfb3689978431c0f560f24cc3f5ceeb253126a9c51cd8dd514f67008"
-    sha256 big_sur:       "8bf7c0f95cb46b1e08a5e921ef687cb1b9265579ba5f61467b3adfafb59de92a"
-    sha256 catalina:      "50fb3b2b4fac5709d1da6f16e301409508309ce76d6e4172b95f8096c780adc0"
-    sha256 mojave:        "e85ad513454aa5e19b2aae6f3fc4166961295eb0993cd0a9487c65fa3e98d296"
+    sha256 arm64_big_sur: "5f40b68b833bbdffe712545f7c095fcf473be789a13a24cf8f4a5a9df1a591ca"
+    sha256 big_sur:       "e2c2bf736b3507731fabfe214ac1af2a6d332b05903fd5d917c8ffa84619c2a8"
+    sha256 catalina:      "938746cf291931c89ff6e1f122036328430bbfb37509161740381733e6c084dc"
+    sha256 mojave:        "83f4d51a299684dd04c48563794b1eb1aa862497af8dc6b6bbd29ed9a2cd62b8"
   end
 
   depends_on "go" => :build
