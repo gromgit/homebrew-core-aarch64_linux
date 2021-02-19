@@ -6,10 +6,10 @@ class SpirvTools < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "de0e45feb7b2342392980d3d9ee58098615296a0c3f7ff7f02b785fb75fd83ba"
-    sha256 cellar: :any, big_sur:       "3e11043908ed15d64d1ae3f8f7938d107e861d6fab9334d8a1738a8faeb99c97"
-    sha256 cellar: :any, catalina:      "e51201b6a2af7e6a557c044325b62e2388a08e44a5e4f3e57db544d000860c6d"
-    sha256 cellar: :any, mojave:        "c98af1a7354aecc6ff40d15025a83c60ab00e55e73252f9b292cf5c2dad2a420"
+    sha256 cellar: :any, arm64_big_sur: "298a193c4afa67d0205bcda76cc8ec2cdbc4c501b426da048ddedd39293db17a"
+    sha256 cellar: :any, big_sur:       "f0d685a0636f3fdc829b3bfd050b9307eaec55d3c14cc268597a5b6337878b00"
+    sha256 cellar: :any, catalina:      "862c589b37c0e016504a21f15db961537fda9233d646181154addd96495da1b5"
+    sha256 cellar: :any, mojave:        "8ba12af92ba9c44685ee2bed8f10ffa2890b0a991d7298659b1188351fc53521"
   end
 
   depends_on "cmake" => :build
