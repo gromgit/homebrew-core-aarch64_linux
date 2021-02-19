@@ -13,10 +13,10 @@ class Gh < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5a0c6e8ab02ac8f8a520738e670353f1d61d972b89bc96e23f2371765b4c9c67"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f91ab9482d48171d150ebca0b52f82e01aaafe4a543c7a77900d4481ad1d9e61"
-    sha256 cellar: :any_skip_relocation, catalina:      "a8353f58bcc3e84863432713a60840fc44f014d4af6e623cb3247e6fbae4a709"
-    sha256 cellar: :any_skip_relocation, mojave:        "9d453f1df91ec5f72193e0f65e9131e6f0f3e5a7d5b37a1200e70e172641561f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f19f7f06fc412ebd238dcda222bb35252c7f73e12287a1b5b5fc19ee1856d6d7"
+    sha256 cellar: :any_skip_relocation, big_sur:       "fd7378de70e3ca310179e9a81b80767902f35bd610d060010bf2a604d2e18598"
+    sha256 cellar: :any_skip_relocation, catalina:      "28c1db589fe531a296f95918122a4fe89fb3724386148fd96104a9423c3abedb"
+    sha256 cellar: :any_skip_relocation, mojave:        "0d72614c0db518bc16fb02e1165ac454501e7b576a7029ef383854ec9aa44931"
   end
 
   depends_on "go" => :build
