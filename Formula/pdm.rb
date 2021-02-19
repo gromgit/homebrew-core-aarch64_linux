@@ -9,10 +9,10 @@ class Pdm < Formula
   head "https://github.com/frostming/pdm.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e0246c204794142500fc8b92edc0a21efb265ab3d362b0cdecaed9c31aa66d16"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6c650db8a6465381f859a06daac01c4ea90621cfe86b197fb9ac1b06e3a39ec2"
-    sha256 cellar: :any_skip_relocation, catalina:      "52642092d8e099066626a5e51f09bd6448c572f50fedbb6afc5b8bdd0e4e3173"
-    sha256 cellar: :any_skip_relocation, mojave:        "e86ea9c912c1ab6fe3bd10e26ad690c560f2d20917b3d07b28d6c874b4434150"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "833f5cabdab40fb124885fa1bd63f0cdd2b08dd62b58df59b68b678564506a4e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "119f8b3fbbb26e4784498f91c08a5b184b45cce9ae9bd87dd1fcfdad306a0ff8"
+    sha256 cellar: :any_skip_relocation, catalina:      "ac6fad558407928de4bfc0f1f9f8a62b2b306d8c130865ad3b36373aad42d9e1"
+    sha256 cellar: :any_skip_relocation, mojave:        "d1b6cd38bea85fbd58ff229791fe652f8dbe40e96d1bc098074aab2182cb619d"
   end
 
   depends_on "python@3.9"
