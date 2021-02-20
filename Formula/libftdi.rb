@@ -12,11 +12,10 @@ class Libftdi < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "a139a5e28a0f0e7a548d5cd8c0c6ae3f53216c722c29aa585f0bb7d342acafbe"
-    sha256 cellar: :any, big_sur:       "17e8dfd27de8a962633117a3ec780dbbe416206bd66b315ead3a5e5ed5caee27"
-    sha256 cellar: :any, catalina:      "2ac29fc67dacd7c6e2c73e93114019d0df07aaeac7678c74402289d91d128d00"
-    sha256 cellar: :any, mojave:        "e267d6e573aad2f1372f5731bf2be30177d5b4feb6c30b0ac96b8933f545983a"
-    sha256 cellar: :any, high_sierra:   "5610431987b6b03db32ebed2c24b5007ffad77343cee35bfd23ed93470539846"
+    sha256 cellar: :any, arm64_big_sur: "a6e523e9065f328cc5218448b50cb56da7e4381bd345567174171481282decf7"
+    sha256 cellar: :any, big_sur:       "8b406299142e6269c2c88d90d91e4ecae55b154768a7ce0e2d908e5cf7928466"
+    sha256 cellar: :any, catalina:      "111c471640e58466f019255c65348cffaf691b61703a57aa64869663b1507670"
+    sha256 cellar: :any, mojave:        "c4444db83840c4811f386aa7f37fd2747eec27c7d7beca4e76f490694a4ad377"
   end
 
   depends_on "cmake" => :build
