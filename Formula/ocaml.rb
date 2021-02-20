@@ -13,9 +13,9 @@
 class Ocaml < Formula
   desc "General purpose programming language in the ML family"
   homepage "https://ocaml.org/"
-  url "https://caml.inria.fr/pub/distrib/ocaml-4.10/ocaml-4.10.0.tar.xz"
-  sha256 "30734db17b609fdd1609c39a05912325c299023968a2c783e5955dd5163dfeb7"
-  license "LGPL-2.1"
+  url "https://caml.inria.fr/pub/distrib/ocaml-4.10/ocaml-4.10.2.tar.xz"
+  sha256 "96871461078282d5db022077d89bde25c85fb5e376612b44f8c37d4e84f000e3"
+  license "LGPL-2.1-only"
   head "https://github.com/ocaml/ocaml.git", branch: "trunk"
 
   livecheck do
@@ -33,8 +33,8 @@ class Ocaml < Formula
   pour_bottle? do
     # The ocaml compilers embed prefix information in weird ways that the default
     # brew detection doesn't find, and so needs to be explicitly blacklisted.
-    reason "The bottle needs to be installed into /usr/local."
-    satisfy { HOMEBREW_PREFIX.to_s == "/usr/local" }
+    reason "The bottle needs to be installed into #{Homebrew::DEFAULT_PREFIX}."
+    satisfy { HOMEBREW_PREFIX.to_s == Homebrew::DEFAULT_PREFIX }
   end
 
   def install
