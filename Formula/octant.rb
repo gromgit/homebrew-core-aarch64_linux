@@ -2,8 +2,8 @@ class Octant < Formula
   desc "Kubernetes introspection tool for developers"
   homepage "https://octant.dev"
   url "https://github.com/vmware-tanzu/octant.git",
-      tag:      "v0.16.3",
-      revision: "656c7404e529262861eacb13e88d33dccd6035bf"
+      tag:      "v0.17.0",
+      revision: "7fded9570239df80f75fa6cf9f4a6ec17945a7e3"
   license "Apache-2.0"
   head "https://github.com/vmware-tanzu/octant.git"
 
@@ -52,7 +52,7 @@ class Octant < Formula
     fork do
       exec bin/"octant", "--kubeconfig", testpath/"config", "--disable-open-browser"
     end
-    sleep 2
+    sleep 5
 
     output = shell_output("curl -s http://localhost:7777")
     assert_match "<title>Octant</title>", output, "Octant did not start"
