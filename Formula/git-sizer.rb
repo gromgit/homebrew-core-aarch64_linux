@@ -6,11 +6,10 @@ class GitSizer < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:     "f56872fa31991104cc094547c29ae3c3d5f33fe0ef7fce8cc54e98c29345d433"
-    sha256 cellar: :any_skip_relocation, catalina:    "5d465491e6d2fd3b025dd6ad8f1448ef6ee7dd18d84ef73e895cc483afb9b98c"
-    sha256 cellar: :any_skip_relocation, mojave:      "4d4e1b47018c1b5efe0ae71996e1dad3f7b0ec4f9616793121463b1c092b03af"
-    sha256 cellar: :any_skip_relocation, high_sierra: "add468f96d564f1046a0908cc1f553c73a2ac672973f3c7a7bca47c12fd72867"
-    sha256 cellar: :any_skip_relocation, sierra:      "b0a6d0757c623e8e6b1f2ed6e9fb05496b29dd6f615df72e615a7a6a8fb45e3e"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, big_sur:  "3bbdefc72b5b2eea93256652344b3916fc713367d219bf069e305c552eef9f98"
+    sha256 cellar: :any_skip_relocation, catalina: "0f85f9bd85c765b0a48e5109816ea61a488c5e4cf282a2a9ad1eec3dbc96e31e"
+    sha256 cellar: :any_skip_relocation, mojave:   "3ddf790c92b04e46bb005187a8d0020634eba4d46b63afcac06684eac2420b77"
   end
 
   depends_on "go" => :build
