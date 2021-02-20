@@ -9,10 +9,10 @@ class Liquidctl < Formula
   head "https://github.com/jonasmalacofilho/liquidctl.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "913066333212aff43c0a6ae028ec28326c8b4bae1b15f88cd5e1a2db552b30d0"
-    sha256 cellar: :any_skip_relocation, big_sur:       "4c7ddd2507ad0fe438456f3c3c0c84aa542b82813127a88a417e2dfcbc7dd470"
-    sha256 cellar: :any_skip_relocation, catalina:      "e7b2567046ea9510da8dcb3021912960c2dd704d3afb7df562cbf4c1818c3334"
-    sha256 cellar: :any_skip_relocation, mojave:        "9bae5cf49538eec54d001a3125a9e0d8995b19ab556040e96a9e3f8c93cc0975"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fc9a4ef8e0885a8ae2f9bede87dcbfff051361be97aba7d8ca1bf41cb421c368"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3618276b06bacdabe57f01680b21bbfb92378810ddac5c0386b84b4a9e7153c0"
+    sha256 cellar: :any_skip_relocation, catalina:      "e2ef12a11773067a7629d1fd8f6895b1333cb6982823cf665caa60a5e777f07d"
+    sha256 cellar: :any_skip_relocation, mojave:        "0093e4e5ab94017f3d9267a3a0ade3fab7261e803ef62e27851dce25d921b83a"
   end
 
   depends_on "libusb"
