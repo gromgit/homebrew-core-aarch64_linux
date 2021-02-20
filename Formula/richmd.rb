@@ -3,8 +3,8 @@ class Richmd < Formula
 
   desc "Format Markdown in the terminal with Rich"
   homepage "https://github.com/willmcgugan/rich"
-  url "https://files.pythonhosted.org/packages/7b/5a/5ade9c4713b1745970b6276b6c7d5ae37d0cafd453c6c4f1a4b44833980a/rich-9.11.0.tar.gz"
-  sha256 "f8f08fdac6bd67dc2dd7fe976da702d748487aa9eb5d050c48b2321bc67ed659"
+  url "https://files.pythonhosted.org/packages/6a/d2/c8a097b27269ec7e759c9f6b505c35750602ed00d832034ab1dd90629c4d/rich-9.11.1.tar.gz"
+  sha256 "86a157008d17c73ee03da80de91e09fc2f7713109ccd4e90496eeb3702bef638"
   license "MIT"
 
   bottle do
@@ -46,6 +46,7 @@ class Richmd < Formula
   end
 
   test do
-    assert_equal "• Hello, World", shell_output("echo '- Hello, World' | #{bin}/richmd").strip
+    (testpath/"foo.md").write("- Hello, World")
+    assert_equal "• Hello, World", shell_output("#{bin}/richmd foo.md").strip
   end
 end
