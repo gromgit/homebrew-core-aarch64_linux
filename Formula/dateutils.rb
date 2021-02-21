@@ -6,11 +6,10 @@ class Dateutils < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 arm64_big_sur: "b8e6f41e3bbc0e784dba6ecfdd6ecfdf8bed76d06d8a749355568f8eeda78ef4"
-    sha256 big_sur:       "8ec20a61569fda99fc4979e7c1113546e03cb8f4aeae7177899acb72bdb7ab26"
-    sha256 catalina:      "25d5db665c0591e56c4ec698656a5519f20417473e3cb763299d804bc735a9a5"
-    sha256 mojave:        "3124ddab0439b64bcfc95057ee52c7c902e684898a2d96832732819682fba75c"
-    sha256 high_sierra:   "310bbe8e2d4d039d065fb9bc5cd33ced2fc45f970057f21a205ff0004d6921e0"
+    sha256 arm64_big_sur: "c70b9979cd1f117820f6aa531731115772b6320e22ffb779cddc1e248387a139"
+    sha256 big_sur:       "835ab3f87c6c6bf4a16b0e0f2e55fe16c4975ad63b1f8b7441786b9c75968c0f"
+    sha256 catalina:      "27ef93f0c6c9ceb68087939e3c4d8e8511a15fe59b78e50aab0ecdd6365db976"
+    sha256 mojave:        "e7649f49318c9f30cf4bc1c37bbf993b2a5471c7026bb4502000760c976d4892"
   end
 
   head do
