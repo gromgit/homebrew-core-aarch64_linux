@@ -7,12 +7,10 @@ class AutoconfArchive < Formula
   license "GPL-3.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c5adb533acd2e940523d4d49878a64ca53acd120144a448b55627ce6876af06e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "4927fe28a3553eb7b369ae1c8f4c4ae52a8897f2409ca0438c2a334466c89163"
-    sha256 cellar: :any_skip_relocation, catalina:      "75309bbf34fa9694b048206e2f79c477e8259c22df8173b43b9ec4294cff0f63"
-    sha256 cellar: :any_skip_relocation, mojave:        "18bec44cb2eb240971a855df50102aa6d5e6eadab4a325b3b562a04057991d0c"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "ef88538afd7d325b368f15e592a62e087b4bddc66f09e65551cc3597fb3da7a3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7d26fd3151dd3c363c91ea3c507d3c7dab579b906cf610d37c944abce78cc42a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c86fcd19fecc5c52847daebba5f81c768eb2d1c3f80cc3f8bee7ef1d0eb6e08c"
+    sha256 cellar: :any_skip_relocation, catalina:      "5eebb7b244cba512dc9ebb16d6ec6743d7c3859079af58213027adbdad6807de"
+    sha256 cellar: :any_skip_relocation, mojave:        "d2957cc212b85b0627cfb70760d7ab7d18dd984d838f9b62f8267b09220831ac"
   end
 
   # autoconf-archive is useless without autoconf
