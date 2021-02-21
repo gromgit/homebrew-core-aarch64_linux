@@ -6,10 +6,10 @@ class Kubecm < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ccdddd9914c7b94857e1b63abc5af158a9c1effc4d3a47da7373ba8e6f8a0307"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d13565452a24c97546f51b0e7270536d6904a7d919f105e3dcc6e070c6e0200b"
-    sha256 cellar: :any_skip_relocation, catalina:      "b32b34bcb811894654f350b3a8c6f5dc53a2c9b03e9bbdeaf63a28bf72a1eb23"
-    sha256 cellar: :any_skip_relocation, mojave:        "dd8c1c10a250a07d58ed90c1e65c09e1ffb082931e55fd403ef8739a990c956c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e8a9ee0a32590ed7f5cd6797075572f54b3ff8aab1794ae3e7269555a7925c3b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d7b26df73ea0ef858c9f04648d2c0fc1dc8cfac664b4998511f9bd57d7a8723a"
+    sha256 cellar: :any_skip_relocation, catalina:      "6522eefffc7dacd19c5e22a10a0c5bc826976f15e181e6a8a5a1890d17a1e2a9"
+    sha256 cellar: :any_skip_relocation, mojave:        "7a9f0f52e9944d980ad342d25161ed9f5974d2cd727dda7c7237429cf9fa39ca"
   end
 
   depends_on "go" => :build
