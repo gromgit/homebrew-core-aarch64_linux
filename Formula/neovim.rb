@@ -14,10 +14,11 @@ class Neovim < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "d682127e937b5ff1007cd18ad464d22e7029e6e22060fb9730383e6972365879"
-    sha256 big_sur:       "21b9ac9c864d4b0e875abd6908bab3db288cecd125d331cc24546b9091ccb815"
-    sha256 catalina:      "1cb46ac248f131738b8e1e4abc42778f1e6f351dd2e8307b08bf5c8589bb9f17"
-    sha256 mojave:        "7137b569204e1250e113b495f912417e8c4a4b68c47592ce6be7ef0332a834ae"
+    rebuild 1
+    sha256 arm64_big_sur: "306ef84a70624fa5924d04b0fe949e16433bc7f0a5bab86af368b780926a86a8"
+    sha256 big_sur:       "3a958561859b4f526a729d0efd7030eb57580ba7dc97decff586de6b2c48f804"
+    sha256 catalina:      "c5f97d4a2740a93137452feba2640a401f3bea83bc3b5b5fc2235a043f05cce8"
+    sha256 mojave:        "3646015b633d5c5044f3a27ee64c0a10c11a6554f0de2f0989e7e77b11d11c2c"
   end
 
   head do
