@@ -1,8 +1,8 @@
 class Xaric < Formula
   desc "IRC client"
   homepage "https://xaric.org/"
-  url "https://xaric.org/software/xaric/releases/xaric-0.13.7.tar.gz"
-  sha256 "fd8cd677e2403e44ff525eac7c239cd8d64b7448aaf56a1272d1b0c53df1140c"
+  url "https://xaric.org/software/xaric/releases/xaric-0.13.9.tar.gz"
+  sha256 "cb6c23fd20b9f54e663fff7cab22e8c11088319c95c90904175accf125d2fc11"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -22,8 +22,6 @@ class Xaric < Formula
   uses_from_macos "ncurses"
 
   def install
-    # Workaround https://github.com/laeos/xaric/pull/10
-    ENV.append "CFLAGS", "-Wno-implicit-function-declaration"
     system "./configure", "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
                           "--with-openssl=#{Formula["openssl@1.1"].opt_prefix}"
