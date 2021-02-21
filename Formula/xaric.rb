@@ -11,10 +11,9 @@ class Xaric < Formula
   end
 
   bottle do
-    rebuild 3
-    sha256 big_sur:  "d832ba1dd3908ef0d452fd2cf7af23e871d2bc93ce45bc3bee23417096724b6d"
-    sha256 catalina: "b1247cee2be64fbf7fe5c1c76e7dd009b2a05538fa6e3fea047a6887ef7cffe2"
-    sha256 mojave:   "8157b44f1d6a36035ac047e976c64e56b1c98d15f2e883f36bd033b1e0335ec4"
+    sha256 big_sur:  "4c9e9e9d0ef2e7f5c8bb8996ef72220f2315e756e1a4c9c8e23869b8e0abc84e"
+    sha256 catalina: "5438f46156ba60b6658275aefdda7617296691d949f7dd0f85dcdac1225d254e"
+    sha256 mojave:   "e8c40aad03fec80e9566a1bb9c7100cbb3a4e0fca3dbc9f79f65271d3e29631f"
   end
 
   depends_on "openssl@1.1"
