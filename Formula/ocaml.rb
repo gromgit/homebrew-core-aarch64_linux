@@ -24,10 +24,10 @@ class Ocaml < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:     "e6258cd7012b9c0d8e961eb661cc11bc42c388d2153a9f8b9f0a37cf4e63a0f7"
-    sha256 cellar: :any, catalina:    "0870fc3042b3725fb2c6f131c4d6f78aec9f19d553e054ba4890773ef69e45a7"
-    sha256 cellar: :any, mojave:      "b43a7247e3d3848d5f20d2432d4996e41049e79c738762f1026f4376ec7e80d3"
-    sha256 cellar: :any, high_sierra: "a534347814298cc8e66e321384f16eac85f2a59aaa2f536e542fb4870386bc2b"
+    sha256 cellar: :any, arm64_big_sur: "e063050517ec18694d395744b0f25db4347b9b39b805328dbd844ea73a4c406f"
+    sha256 cellar: :any, big_sur:       "ba026fe9338863ab3a79ca2c998f001eb38c913af36486db07e84e2c7e136e79"
+    sha256 cellar: :any, catalina:      "886db1a44bd60ac5275b56cd0acbf162d0b1836e2261a475035c40482ffb9788"
+    sha256 cellar: :any, mojave:        "5c4cce204b2ef4eea7c1f59df4216e9be9068e077d0ff92746af05035f485285"
   end
 
   pour_bottle? do
