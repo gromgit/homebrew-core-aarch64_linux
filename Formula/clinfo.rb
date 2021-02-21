@@ -12,9 +12,9 @@ class Clinfo < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "cafa2a5a349c8bee91179744247b919511793ffa28093067da0beff77d836345"
-    sha256 cellar: :any_skip_relocation, catalina: "c82664d00970694fe99c93ddaae4ee9f773826094bade686111e975262577adc"
-    sha256 cellar: :any_skip_relocation, mojave:   "e9b1ab0c1a02a4a35db288c91d3818801d0407f8ceee0d2a51ad98895c7a8871"
+    sha256 cellar: :any_skip_relocation, big_sur:  "cb20a0053dd57a483815485e804884ba93cafde11b2d265285a7ad0b49fd3705"
+    sha256 cellar: :any_skip_relocation, catalina: "fe9953456ce92ca4701c040d4971be611671ab058c4743802c4721a5313e2bf1"
+    sha256 cellar: :any_skip_relocation, mojave:   "6165806150adf656308b999a1fac88effdf0fe5128b39d21c4faa0cda9b3c491"
   end
 
   def install
