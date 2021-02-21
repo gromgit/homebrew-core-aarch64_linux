@@ -12,10 +12,10 @@ class Asymptote < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "6b5ed92e317909ee5dd60b85d76998860f5388391ce4c109277262d47cdcbdfd"
-    sha256 big_sur:       "6f1ebb862336eef8285a4b7dee6b4beff0720975cfa6d5927c638c354a62adf9"
-    sha256 catalina:      "e0a8838e707147ab51685dfedbeefd089d43e4fac4b6d6743cbd9cf3d714f3c0"
-    sha256 mojave:        "300e42702c4b0cb41f14f1a5ddf28930d2b5b73e58a75706a026f85936c68134"
+    sha256 arm64_big_sur: "5bc32ee475579206caed260136147e6bdf78033ae6802869610f0a819a8d3aca"
+    sha256 big_sur:       "1fca67852324d36dcef54330e3fff2dc63cfab1febb181fe32331fab68e3b1dc"
+    sha256 catalina:      "eb767b712aef26dbc03011b252816a75d11cb1b3f4d9283a8d5c471f107b321c"
+    sha256 mojave:        "93bba0f8c39057a76fb2d5bc13aa8e67d0b7a6ee831d26b70e3b23f5521672ea"
   end
 
   depends_on "glm" => :build
