@@ -6,10 +6,10 @@ class Detox < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 arm64_big_sur: "5fc638c886fbe24e55ac1391267c94a89b1225ebed8abc2867263c09779afa7f"
-    sha256 big_sur:       "3238d5e066a6caa95aa195f33076013557808c93d0d8580361e3e7f7ef14c2e4"
-    sha256 catalina:      "baacd18dacb6d6f7e860be0d09f16a1a2b3d88da595eaa26707ed6ecac874173"
-    sha256 mojave:        "26e7f19c4266c7365dc07dbdda15311cccfc44cd3d4fad9244c495dcf54a0948"
+    sha256 arm64_big_sur: "34f21ef616c1eeebc74b3d19186db6098de4bc3ba45a9d33aceb17a7c5e385b4"
+    sha256 big_sur:       "de36bde95c7afcafc38f9600cbf0a5eaadb6df1ccdd9c9b3dc64ce2c7afd3637"
+    sha256 catalina:      "42864935039463dd2f989f4e2010015a5f18f1ae61beeaf86c7daae19b8e6da8"
+    sha256 mojave:        "f8595a0409549a8a7726f03d4f8d46de29e4c1f79f8091c6c9e19bf20cb77798"
   end
 
   depends_on "autoconf" => :build
