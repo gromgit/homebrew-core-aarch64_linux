@@ -8,10 +8,10 @@ class GolangciLint < Formula
   head "https://github.com/golangci/golangci-lint.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e8dd1cffdb2b770771f15f6a1a71590dd791996482e24ae59ef1462085fed3d5"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6b7cf01f9e43be11ee31fc4c74221e39de018b7ee6f5b7332ad248d25eed93c7"
-    sha256 cellar: :any_skip_relocation, catalina:      "42095b67e5f28551f8fa4ff51adeac28d8f63820a6f489f32427d66574456815"
-    sha256 cellar: :any_skip_relocation, mojave:        "35a41358ccac484b40656715550c6b03b328bd1c7463318e2dc54ce64aa7e454"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "29875d77d7cbebd567375b9a14555f46c2a5165711ddb06a81bbe0423d4cba31"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e0c36667e70c311f30d021f9b1c0af42961efa16dc4d4736dd6be96f897d60f2"
+    sha256 cellar: :any_skip_relocation, catalina:      "24217f232a88d78d6377ab45c4d1e15860906e4d49d1cf11b922c9d8a3096dce"
+    sha256 cellar: :any_skip_relocation, mojave:        "afb4f5546c4062dedb3ff2a346a4d741b7123c8cf71559b7954a7d9e76d2867f"
   end
 
   depends_on "go"
