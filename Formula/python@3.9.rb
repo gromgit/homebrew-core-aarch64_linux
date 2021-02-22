@@ -4,6 +4,7 @@ class PythonAT39 < Formula
   url "https://www.python.org/ftp/python/3.9.2/Python-3.9.2.tar.xz"
   sha256 "3c2034c54f811448f516668dce09d24008a0716c3a794dd8639b5388cbde247d"
   license "Python-2.0"
+  revision 1
 
   livecheck do
     url "https://www.python.org/ftp/python/"
@@ -32,6 +33,7 @@ class PythonAT39 < Formula
 
   depends_on "pkg-config" => :build
   depends_on "gdbm"
+  depends_on "mpdecimal"
   depends_on "openssl@1.1"
   depends_on "readline"
   depends_on "sqlite"
@@ -78,6 +80,12 @@ class PythonAT39 < Formula
     sha256 "e11eefd162658ea59a60a0f6c7d493a7190ea4b9a85e335b33489d9f17e0245e"
   end
 
+  # Link against libmpdec.so.3, update for mpdecimal.h symbol cleanup.
+  patch do
+    url "https://www.bytereef.org/contrib/decimal.diff"
+    sha256 "b0716ba88a4061dcc8c9bdd1acc57f62884000d1f959075090bf2c05ffa28bf3"
+  end
+
   def lib_cellar
     on_macos do
       return prefix/"Frameworks/Python.framework/Versions/#{version.major_minor}/lib/python#{version.major_minor}"
@@ -102,6 +110,11 @@ class PythonAT39 < Formula
     ENV["PYTHONHOME"] = nil
     ENV["PYTHONPATH"] = nil
 
+    # Override the auto-detection in setup.py, which assumes a universal build.
+    on_macos do
+      ENV["PYTHON_DECIMAL_WITH_MACHINE"] = Hardware::CPU.arm? ? "uint128" : "x64"
+    end
+
     # The --enable-optimization and --with-lto flags diverge from what upstream
     # python does for their macOS binary releases. They have chosen not to apply
     # these flags because they want one build that will work across many macOS
@@ -117,6 +130,7 @@ class PythonAT39 < Formula
       --with-dbmliborder=gdbm:ndbm
       --enable-optimizations
       --with-lto
+      --with-system-libmpdec
     ]
 
     on_macos do
@@ -427,6 +441,7 @@ class PythonAT39 < Formula
 
     # Check if some other modules import. Then the linked libs are working.
     system "#{bin}/python#{version.major_minor}", "-c", "import _gdbm"
+    system "#{bin}/python#{version.major_minor}", "-c", "import _decimal"
     system "#{bin}/python#{version.major_minor}", "-c", "import zlib"
     on_macos do
       system "#{bin}/python#{version.major_minor}", "-c", "import tkinter; root = tkinter.Tk()"
