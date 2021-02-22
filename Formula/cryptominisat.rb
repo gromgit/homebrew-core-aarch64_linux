@@ -6,6 +6,7 @@ class Cryptominisat < Formula
   # Everything that's needed to run/build/install/link the system is MIT licensed. This allows
   # easy distribution and running of the system everywhere.
   license "MIT"
+  revision 1
 
   livecheck do
     url "https://github.com/msoos/cryptominisat.git"
@@ -27,7 +28,7 @@ class Cryptominisat < Formula
     inreplace "src/GitSHA1.cpp.in", "@CMAKE_CXX_COMPILER@", "/usr/bin/clang++"
 
     mkdir "build" do
-      system "cmake", "..", *std_cmake_args, "-DNOM4RI=ON"
+      system "cmake", "..", *std_cmake_args, "-DNOM4RI=ON", "-DCMAKE_INSTALL_RPATH=#{lib}"
       system "make", "install"
     end
   end
