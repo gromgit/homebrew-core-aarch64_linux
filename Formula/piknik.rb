@@ -1,8 +1,8 @@
 class Piknik < Formula
   desc "Copy/paste anything over the network"
   homepage "https://github.com/jedisct1/piknik"
-  url "https://github.com/jedisct1/piknik/archive/0.9.1.tar.gz"
-  sha256 "a682e16d937a5487eda5b0d0889ae114e228bd3c9beddd743cad40f1bad94448"
+  url "https://github.com/jedisct1/piknik/archive/0.10.1.tar.gz"
+  sha256 "9172acb424d864ba3563bbdb0cd2307815129027eec1a6ca04aee17da7f936c2"
   license "BSD-2-Clause"
   head "https://github.com/jedisct1/piknik.git"
 
@@ -18,22 +18,11 @@ class Piknik < Formula
     sha256 cellar: :any_skip_relocation, yosemite:      "c1bb1b4632aca54d93490f53b9142f7f808abec1cd6761418df63f11abeb80fe"
   end
 
-  depends_on "glide" => :build
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    ENV["GLIDE_HOME"] = HOMEBREW_CACHE/"glide_home/#{name}"
-    ENV["GO111MODULE"] = "auto"
-    dir = buildpath/"src/github.com/jedisct1/"
-    dir.install Dir["*"]
-    ln_s buildpath/"src", dir
-    cd dir do
-      system "glide", "install"
-      system "go", "build", "-o", bin/"piknik", "."
-      (prefix/"etc/profile.d").install "zsh.aliases" => "piknik.sh"
-      prefix.install_metafiles
-    end
+    system "go", "build", *std_go_args, "-ldflags", "-s -w"
+    (prefix/"etc/profile.d").install "zsh.aliases" => "piknik.sh"
   end
 
   def caveats
