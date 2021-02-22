@@ -9,11 +9,10 @@ class Gprof2dot < Formula
   head "https://github.com/jrfonseca/gprof2dot.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "684c64da289229aa5f3b0cba37aded80aa5ce8e771cd863d3b06788fdcce532a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e9834915198ff976dfc33b51aad580cdc585b19de21bae6ae2c23602e9d85c6f"
-    sha256 cellar: :any_skip_relocation, catalina:      "088de0dd88acd16d009b57229dc45028277d9a3401e7902208e0cde1972d75e0"
-    sha256 cellar: :any_skip_relocation, mojave:        "0d693183049e2ee10e946134997c9a0cd23a8ca335705080b0dce1af1831884c"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "b2396cc1daa5759af6642a8e85b66d447e3ff3f0395db74429d6969e62823f7c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ff5a7c93c9ee8fda75fb559b15771a9833e232678ada2f36f5d378d86ec18e11"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7fde10f750d764840f63e58ffbeab678c565859810288d7bd3b6978d50bcd655"
+    sha256 cellar: :any_skip_relocation, catalina:      "5c47790338ce21e3a7cbe32e9c366ddf1c451057d72bfe6f9c09ffb62d0b18c6"
+    sha256 cellar: :any_skip_relocation, mojave:        "6a2ab69926fa5a54cb4f263f9f99398292bdb7aaaf252a34f6d6ba412c627599"
   end
 
   depends_on "graphviz"
