@@ -112,9 +112,10 @@ class Mailhog < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "f917aca265baff755eef3cba936e694f2bb214a0bc95e8bd9de08b283746d5cd"
-    sha256 cellar: :any_skip_relocation, catalina: "baf343b697366b603e680e27d3642ffa8b2b62d1b1be1f394260f85a058b1b95"
-    sha256 cellar: :any_skip_relocation, mojave:   "7ebea41ba2db7c5bd144dd2844415800853c56ddefcd587d94717229196c5535"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ff819388bc4d6c5fb1220b3a1739f74aee9db9e28b928f5231d074ceaa3782b7"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f917aca265baff755eef3cba936e694f2bb214a0bc95e8bd9de08b283746d5cd"
+    sha256 cellar: :any_skip_relocation, catalina:      "baf343b697366b603e680e27d3642ffa8b2b62d1b1be1f394260f85a058b1b95"
+    sha256 cellar: :any_skip_relocation, mojave:        "7ebea41ba2db7c5bd144dd2844415800853c56ddefcd587d94717229196c5535"
   end
 
   depends_on "go" => :build
