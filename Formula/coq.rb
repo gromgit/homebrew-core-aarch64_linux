@@ -12,11 +12,10 @@ class Coq < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "edc99186a00b5fadfbd0c3d3d7c44e292fee83c7e13c08ab61528290e92785eb"
-    sha256 big_sur:       "7dd6076443266eac49ec08a6dfa21e87bc5ca4078c9f437a5332f1608850feca"
-    sha256 catalina:      "efa50a3b7b3e835905f814c8de3a8ec05348f5039387ec0ec615c034e92b985e"
-    sha256 mojave:        "201e0b61e6a02145c3afa3083cdf7b05fe270306317eedeaa35a27e8d8470445"
+    sha256 arm64_big_sur: "0447644917356bc431d9e97b408a84f0cef0f8bf96ea9b849198f244459e3a2e"
+    sha256 big_sur:       "6f09e0f0691cc213976a437a39c9898671884b333f2999a694bfe2c480edd7b6"
+    sha256 catalina:      "99d041e5c719e86a2a2d99a415e7689e870c08b17d540e2a3d710f6e1761506d"
+    sha256 mojave:        "ce88a3dcd0df33a03a99cc2da7517739c4eedceff7e267f5c3485c4108a741b7"
   end
 
   depends_on "ocaml-findlib" => :build
