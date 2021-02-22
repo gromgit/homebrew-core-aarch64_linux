@@ -17,10 +17,10 @@ class Cvs < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, big_sur:  "0cf65c20d4220d636cfd9c9b4f4e6f3ab011fe01136e5677f9da56cb67c0c208"
-    sha256 cellar: :any_skip_relocation, catalina: "2d6d9ac2f96edfbd55f9f13c215ba6aec3960c1c3f91e99294a512618b159bb9"
-    sha256 cellar: :any_skip_relocation, mojave:   "c564cc0e316461844b51f36f9d13e357184af89c325edfe8c565fd1f74d6d2da"
+    sha256 cellar: :any, arm64_big_sur: "d254eab8b61ddab83920f40ee1981b0f63ea9fd7bc02e570837bc61551dfdd32"
+    sha256 cellar: :any, big_sur:       "6d6120ae3bf1d373e769370cd6ef8621cb462fb592cb337ad4057e10c4ee07ec"
+    sha256 cellar: :any, catalina:      "4844c8cc28ae86ca8adc34d149f9d78c94195b8ccb88af24a85a3112e53246f0"
+    sha256 cellar: :any, mojave:        "735fd1cc0b3e954123e93bb3565622e57a833863aaa95475c719d908a74fa1df"
   end
 
   depends_on "autoconf" => :build
