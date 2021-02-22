@@ -5,6 +5,7 @@ class Zpaq < Formula
   version "7.15"
   sha256 "e85ec2529eb0ba22ceaeabd461e55357ef099b80f61c14f377b429ea3d49d418"
   license "Unlicense"
+  revision 1
   head "https://github.com/zpaq/zpaq.git"
 
   bottle do
@@ -20,6 +21,9 @@ class Zpaq < Formula
   end
 
   def install
+    # When building on non-Intel this is supposed to be manually uncommented
+    # from the Makefile!  (It's also missing "-D" though)
+    inreplace "Makefile", "# CPPFLAGS+=NOJIT", "CPPFLAGS+=-DNOJIT" unless Hardware::CPU.intel?
     system "make"
     system "make", "check"
     system "make", "install", "PREFIX=#{prefix}"
