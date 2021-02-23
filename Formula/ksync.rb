@@ -8,9 +8,10 @@ class Ksync < Formula
   head "https://github.com/ksync/ksync.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "e0e5dce990e687f5d19f30eff1dddf44430bfdcaa63da2389183436f6426833f"
-    sha256 cellar: :any_skip_relocation, catalina: "3d5ec6bf44c875d29d501b8ca96f7ca49aab9d749a8bad3a3cb967eea6883487"
-    sha256 cellar: :any_skip_relocation, mojave:   "03b1cda4ab1cb87932e019a009e8a46f06cfc180ecefd6cb574aa1d8e11ab751"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, big_sur:  "e68abf337654f51128a835f8d3c124df880a37a26f2773b0aa09fce74c67d63a"
+    sha256 cellar: :any_skip_relocation, catalina: "68409c1188fc629bb181765961ee9ff645b941400edcea9939d8d7189e7db5dc"
+    sha256 cellar: :any_skip_relocation, mojave:   "a4d52a2a59f8b6308ea858f051e8971145b9964c32564a832408e05f6582c23e"
   end
 
   depends_on "go" => :build
