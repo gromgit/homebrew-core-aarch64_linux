@@ -1,8 +1,8 @@
 class Libnetworkit < Formula
   desc "NetworKit is an OS-toolkit for large-scale network analysis"
   homepage "https://networkit.github.io"
-  url "https://github.com/networkit/networkit/archive/8.0.tar.gz"
-  sha256 "cdf9571043edbe76c447622ed33efe9cba2880f887ca231d98f6d3c22027e20e"
+  url "https://github.com/networkit/networkit/archive/8.1.tar.gz"
+  sha256 "0a22eb839606b9fabfa68c7add12c4de5eee735c6f8bb34420e5916ce5d7f829"
   license "MIT"
 
   bottle do
