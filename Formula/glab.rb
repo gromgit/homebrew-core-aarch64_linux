@@ -4,6 +4,7 @@ class Glab < Formula
   url "https://github.com/profclems/glab/archive/v1.15.0.tar.gz"
   sha256 "d2551b1ae3c8ec61e0d161e8a75efb16fea1e0716eed0095f23bcf5bfbc8d758"
   license "MIT"
+  revision 1
   head "https://github.com/profclems/glab.git"
 
   bottle do
@@ -18,12 +19,9 @@ class Glab < Formula
   def install
     system "make", "GLAB_VERSION=#{version}"
     bin.install "bin/glab"
-    output = Utils.safe_popen_read({ "SHELL" => "bash" }, bin/"glab", "completion", "bash")
-    (bash_completion/"glab").write output
-    output = Utils.safe_popen_read({ "SHELL" => "zsh" }, bin/"glab", "completion", "zsh")
-    (zsh_completion/"_glab").write output
-    output = Utils.safe_popen_read({ "SHELL" => "fish" }, bin/"glab", "completion", "fish")
-    (fish_completion/"glab.fish").write output
+    (bash_completion/"glab").write Utils.safe_popen_read(bin/"glab", "completion", "--shell=bash")
+    (zsh_completion/"_glab").write Utils.safe_popen_read(bin/"glab", "completion", "--shell=zsh")
+    (fish_completion/"glab.fish").write Utils.safe_popen_read(bin/"glab", "completion", "--shell=fish")
   end
 
   test do
