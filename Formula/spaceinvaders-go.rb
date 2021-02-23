@@ -6,13 +6,9 @@ class SpaceinvadersGo < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:     "20ecc3ccc4d2c28cc9251f14fccc66fbd88abe6edc64708a73ed5aaa7941e39c"
-    sha256 cellar: :any_skip_relocation, catalina:    "221c4d6f495ed8b4c1db5c737b4ff08be55a65b2bd15fc1c3e43ae96e29726ba"
-    sha256 cellar: :any_skip_relocation, mojave:      "3f6f5106ba62445e33e2181facd9644dde99bb0f527455e4b49cecdb56cb56aa"
-    sha256 cellar: :any_skip_relocation, high_sierra: "5a512f039b4a9698eb5ce766798f462b134e98944e07ab3eccf712ee35c811d1"
-    sha256 cellar: :any_skip_relocation, sierra:      "672db5956f42626d3e9fc18defe431c4f2c18cd647f8cd534f9f522c314a0c49"
-    sha256 cellar: :any_skip_relocation, el_capitan:  "2ac0b623df41e8c9e9da05fc7f21e842bce1e71c0b9d4db52ef685cca9e040b0"
-    sha256 cellar: :any_skip_relocation, yosemite:    "99a7e2c353d5dbb310fa03e4a430d05e0092cb0aee1c19e38bd592492ae16487"
+    sha256 cellar: :any_skip_relocation, big_sur:  "c0ed01fe110f5d7d681d12883f58962ae5c0ea721b032e8d3ef0adee41956841"
+    sha256 cellar: :any_skip_relocation, catalina: "1c4712409711d84aa1a7ce64214bb620e13660991f2afacd41681278ae0c3ba1"
+    sha256 cellar: :any_skip_relocation, mojave:   "596f084c8dad9588158ea9419e8a7ce4e33e8193d18b18e4095a6443b5e2fbbd"
   end
 
   depends_on "go" => :build
