@@ -6,10 +6,10 @@ class Mdcat < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "874f6ef6565821c7ebccfaf032c0616e64c667214779f07fdb489f43c8499c73"
-    sha256 cellar: :any_skip_relocation, big_sur:       "cd7462ead62dca44da914a890c0e16e4bc2e334b9973d99b47c77c8d23722a76"
-    sha256 cellar: :any_skip_relocation, catalina:      "26cc236d7acf8ee17d2b9cf6b3e7f1ffa47c86d4b1abc40e1acd5ad418bc1c01"
-    sha256 cellar: :any_skip_relocation, mojave:        "9aca864d6a18421d4daba029d9e8568c0bc1e8a3a3b51013c62b53237b4ba156"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "36db3981d1c0ecccd8505c51137b8f742b95b3372b0f96cd5d66edebd35d73fe"
+    sha256 cellar: :any_skip_relocation, big_sur:       "61f9b5935ff6b02edf87e25de955c3457d11a9d163b3ae893c116056ca8d0a47"
+    sha256 cellar: :any_skip_relocation, catalina:      "e70449d7eb7d3965c90bad8892d2654f56ed0bea0aae0b729ffafeb2bc0a7476"
+    sha256 cellar: :any_skip_relocation, mojave:        "665de148b7183a9c84f48e0b2f95e34f92280e46cfc2ed9c8c6fce9f6a8960e4"
   end
 
   depends_on "cmake" => :build
