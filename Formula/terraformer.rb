@@ -7,10 +7,10 @@ class Terraformer < Formula
   head "https://github.com/GoogleCloudPlatform/terraformer.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8085eba94b70c7ff060955579506bc2a78d8bc8d09c9a321116962f119282936"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ceace1a3c90353281ba125f08dbf856b3432c3ad53b451f4ce44f7403391a48a"
-    sha256 cellar: :any_skip_relocation, catalina:      "edd0bab50df8cb29b97413468318add8f44f09ad1a762725100f7db167c44fab"
-    sha256 cellar: :any_skip_relocation, mojave:        "f0ba34a3a112418298bd25e9e4011b32a7b5fedd7e6b489a44635341c619b04a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6aec1b6c2f23f3995540e6b5197326ff358c160c82fc68d633ae83d48085faec"
+    sha256 cellar: :any_skip_relocation, big_sur:       "52b907bef8df487d250ba1b697ec6098820df904287987f521bf24ad38bd98e5"
+    sha256 cellar: :any_skip_relocation, catalina:      "9defda3f8ceeea4e50757a3c4aea1d1f0108152adace35a892c02b018fb247b3"
+    sha256 cellar: :any_skip_relocation, mojave:        "2aeb38b63b0c934830b01529c480d8981746ca35c6a7be0a9f5cc5928107f77f"
   end
 
   depends_on "go" => :build
