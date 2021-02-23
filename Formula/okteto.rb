@@ -1,8 +1,8 @@
 class Okteto < Formula
   desc "Build better apps by developing and testing code directly in Kubernetes"
   homepage "https://okteto.com"
-  url "https://github.com/okteto/okteto/archive/1.10.9.tar.gz"
-  sha256 "1847619854dd018b8a4eaf369068422f7055483093dffab264cc7b662a694dcf"
+  url "https://github.com/okteto/okteto/archive/1.11.0.tar.gz"
+  sha256 "5ccc467470a9020196c52ff8a8719bdb61e37ccdf579a9f7ce9a8e10d8cbb715"
   license "Apache-2.0"
   head "https://github.com/okteto/okteto.git"
 
@@ -26,6 +26,7 @@ class Okteto < Formula
     system "echo | okteto init --overwrite --file test.yml"
     expected = <<~EOS
       name: #{Pathname.getwd.basename}
+      autocreate: true
       image: okteto/ruby:2
       command: bash
       sync:
