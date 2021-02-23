@@ -7,11 +7,10 @@ class Glfw < Formula
   head "https://github.com/glfw/glfw.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "2adf2b9b021094d134f027aa5199944ddb0b151e16008bd921e957bacffecd62"
-    sha256 cellar: :any, big_sur:       "2d5c251cffe0dca47f83199b0b0fc500b3464888fd244dd6969a055bf2530d8d"
-    sha256 cellar: :any, catalina:      "deaf1b20e9fc336d5f0c9a927bc07f2c509fc63538c39e4ab3a024ca7c6170d8"
-    sha256 cellar: :any, mojave:        "0c0de277c23273346d703004279d92d17a8962f4d62bf01f76021beea3c3f20a"
-    sha256 cellar: :any, high_sierra:   "c6a198383ef979823c1e0071e65771ed9059626071390f2dc5b84b218dc565c3"
+    sha256 cellar: :any, arm64_big_sur: "9f64dee7187b644ba98c6009890a5761d575516a10e055de2c75bb7c88e1ffdb"
+    sha256 cellar: :any, big_sur:       "68cf1e73ab3d2f826847607a07b7204a317c696ff635d0789d35b52df3dfe8dd"
+    sha256 cellar: :any, catalina:      "8d87eeccf2a8376c8e29fbc46f0d47e02738b5f999ab8aeacdd148d53c6d15bc"
+    sha256 cellar: :any, mojave:        "f2fe8dcb33b5dd0a53d5d05fe609bf270206c51e37d7a996bbb2a2089b6de2fd"
   end
 
   depends_on "cmake" => :build
