@@ -7,11 +7,10 @@ class Wgcf < Formula
   head "https://github.com/ViRb3/wgcf.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e2acc4515d744c2d7bbdb6ac5935529fffc8ad327134e85e0455cd39697b3537"
-    sha256 cellar: :any_skip_relocation, big_sur:       "94872893207ebc688892b960271ee100e1ce5a6dc73dd6195bb2756d3a5aa344"
-    sha256 cellar: :any_skip_relocation, catalina:      "c8f35565606c6fe3cc7b79105076e4d8e1106950cfb0ab3fdd184b089e5e94ff"
-    sha256 cellar: :any_skip_relocation, mojave:        "1635231fe27fd9dfa0a9202dcf266163f131254843de7546e2b910800545a140"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "0debd1f07625d225e2683b95a158c2d537a3ab7bae64335b6a3e4dfe745bfbdd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "75d7c90453127ff7a4eb4004ca09f7095b9db56897d1d07eb586a005c3f6a7b5"
+    sha256 cellar: :any_skip_relocation, big_sur:       "df08d54a8c03f9611a8c93c136c5cead470434b260d19ac2dd248ebae811d5bd"
+    sha256 cellar: :any_skip_relocation, catalina:      "f2b1614c88ade3e466d68d4ea61575b078d83c1e2cd8c7ab2a90351c8aa41504"
+    sha256 cellar: :any_skip_relocation, mojave:        "c8adec4341ad183db2d93d5ce21178396c8e800cc2f52c36bec6f01debf2366b"
   end
 
   depends_on "go" => :build
