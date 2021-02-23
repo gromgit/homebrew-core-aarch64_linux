@@ -7,10 +7,10 @@ class Isync < Formula
   head "https://git.code.sf.net/p/isync/isync.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "bd536177c4a965daea4358315eb140c0cdda45f4b9cb1477a3ead11ec0ff0e8a"
-    sha256 cellar: :any, big_sur:       "4045c90ef0e0471ace0bcd72ed0ca4927efec688005ed0af5811d869b59723b2"
-    sha256 cellar: :any, catalina:      "ef6f012a58abcc4efbc4ab2549fe4bf366905afbc7590c842463404e271e2fe6"
-    sha256 cellar: :any, mojave:        "f2c706e1acb39bfee2402abb8b36dc0475968c16f97b7c9c92f72ed0bfc6c2f0"
+    sha256 cellar: :any, arm64_big_sur: "47e57e76845e8f327c3125d97a80695e1f55b2f92837a9f6d9d3e496cbb84345"
+    sha256 cellar: :any, big_sur:       "5d051373932508e94d32d663a4f5352213997b107b690b702383a51810dad7a0"
+    sha256 cellar: :any, catalina:      "25182d348d0169c13d02405319edb4c764e421af445ca9cd903ea1a6964fcf4d"
+    sha256 cellar: :any, mojave:        "2d7e9567b746d9aaed7ec0e704800180b448df8ae762636182800eba491dad31"
   end
 
   depends_on "autoconf" => :build
