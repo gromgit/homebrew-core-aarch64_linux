@@ -3,8 +3,8 @@ class Networkit < Formula
 
   desc "Performance toolkit for large-scale network analysis"
   homepage "https://networkit.github.io"
-  url "https://github.com/networkit/networkit/archive/8.0.tar.gz"
-  sha256 "cdf9571043edbe76c447622ed33efe9cba2880f887ca231d98f6d3c22027e20e"
+  url "https://github.com/networkit/networkit/archive/8.1.tar.gz"
+  sha256 "0a22eb839606b9fabfa68c7add12c4de5eee735c6f8bb34420e5916ce5d7f829"
   license "MIT"
 
   bottle do
@@ -22,13 +22,6 @@ class Networkit < Formula
   depends_on "numpy"
   depends_on "python@3.9"
   depends_on "scipy"
-
-  # setup.py: add --external-tlx option
-  # https://github.com/networkit/networkit/pull/666
-  patch do
-    url "https://github.com/networkit/networkit/commit/dbe93306402e6ffee78bf45df5efc9cf2ac991a7.patch?full_index=1"
-    sha256 "7b50df48972f5490ede25e101d04e7ec4b1c4f8ededfdaee94c17fedf917d572"
-  end
 
   def install
     xy = Language::Python.major_minor_version Formula["python@3.9"].opt_bin/"python3"
