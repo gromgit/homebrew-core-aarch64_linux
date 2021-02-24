@@ -14,10 +14,10 @@ class Juju < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "67ccc3baca4e7d4546c80f3ed22272a4d5cefad57d1755bdab4d54d36916a862"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f3acd40ef4b5822f2aa84893383d1d4c6459eee98fd8889ab262d78fe88f9f04"
-    sha256 cellar: :any_skip_relocation, catalina:      "26065d4e5b2dbe5e74f295a9d6bb458102422bd2f05fb89ceaf2b5de8f085f02"
-    sha256 cellar: :any_skip_relocation, mojave:        "3ee10ae581a92d8a6c687d03eb7c09b8458e3585692fe5c81b3b5bfbc30bfa50"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "95dc859c88bb9d6dbbb70a2d20bc9c899e84751f1a053b4f837a1dd6c38f5464"
+    sha256 cellar: :any_skip_relocation, big_sur:       "06e8634a1b1b7fd5e532df6a7251ce9fd25ce63b74b9f6f45eeca53e005c3860"
+    sha256 cellar: :any_skip_relocation, catalina:      "fb58675cb2a2c8f3fa5998573f602b482e1197be7f4ce1d2248eefe8b8280bf4"
+    sha256 cellar: :any_skip_relocation, mojave:        "cffd1836e51caa82e3e8a98be443c9ba30b7e0a80e6a3262f6b5bf4bc0c2b4d2"
   end
 
   depends_on "go" => :build
