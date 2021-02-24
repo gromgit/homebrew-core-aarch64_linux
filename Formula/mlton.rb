@@ -2,8 +2,10 @@ class Mlton < Formula
   desc "Whole-program, optimizing compiler for Standard ML"
   homepage "http://mlton.org"
   url "https://downloads.sourceforge.net/project/mlton/mlton/20210117/mlton-20210117.src.tgz"
+  version "20210117"
   sha256 "ec7a5a54deb39c7c0fa746d17767752154e9cb94dbcf3d15b795083b3f0f154b"
   license "HPND"
+  version_scheme 1
   head "https://github.com/MLton/mlton.git"
 
   livecheck do
