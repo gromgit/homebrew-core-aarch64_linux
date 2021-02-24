@@ -14,11 +14,10 @@ class K3sup < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "857e5232a524b1458ef42038817b8a93713ea8e92e4d60441241990fc5bd5d22"
-    sha256 cellar: :any_skip_relocation, big_sur:       "1a58b4c61dd608e30e4ae2010d0cbcc5cc1208fe4035e4b152759b3e9b5c1424"
-    sha256 cellar: :any_skip_relocation, catalina:      "4303e006d4fafd8622976c09af83003e59512e062fb57cd4622bf4d99f0da691"
-    sha256 cellar: :any_skip_relocation, mojave:        "4790e0a97346b18606cdaa1f1f4fcccc6c1dfecccf4b7ba40abefd4960bb096d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fe19fba4ad87db2cb2392f6ef35f67411474be186873d28b45b0dad2a5b9d187"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0cb4adfc80d187190a1608247c35bee1b60916b3529e9189abb0cbb7b86dffa9"
+    sha256 cellar: :any_skip_relocation, catalina:      "efb5763f36f789c9df24a68cc7716359bb76f01ca7d470ed2a43c0d532ef9d0f"
+    sha256 cellar: :any_skip_relocation, mojave:        "10c68c168c1af5e94c153329a82d2685cf4a2ac4677a2ab62c1433e5e6101438"
   end
 
   depends_on "go" => :build
