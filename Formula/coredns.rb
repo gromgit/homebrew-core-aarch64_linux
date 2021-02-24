@@ -12,10 +12,10 @@ class Coredns < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2b255a4515bc26a91ee5335ba0daba1b811fe29d3460af89445fac1306c641d7"
-    sha256 cellar: :any_skip_relocation, big_sur:       "098ef6db12d262111d1acf135408b3b9a5456ce09b4cd0e78e9c7a1d55a0f892"
-    sha256 cellar: :any_skip_relocation, catalina:      "1d1ad1e07e5ee741e6845850983556c325151f9db80944517889752119139f4c"
-    sha256 cellar: :any_skip_relocation, mojave:        "8303822b262d65660fb295870d52d270cfbc9c742b3d8cf8f2ea6481c08a30be"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c6a09b43421a78f5ad6a3fad7011c641fcb81ef21b8b8709e75b8bad69228001"
+    sha256 cellar: :any_skip_relocation, big_sur:       "10830aee9fc7b1c00bad2ea2f9b2fbd9b00eec2b1c012eb57a135912a351b25f"
+    sha256 cellar: :any_skip_relocation, catalina:      "ec9e3e89a39915675a361dbd913f0ea2bbd79dec7c95d173e479b4add8a78c2f"
+    sha256 cellar: :any_skip_relocation, mojave:        "526046cafeb98efb6616b3e9802e36fc83273e0c89f6199767b8969fe552ec39"
   end
 
   depends_on "go" => :build
