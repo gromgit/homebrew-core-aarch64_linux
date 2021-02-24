@@ -11,6 +11,12 @@ class GoAT115 < Formula
     regex(/href=.*?go[._-]?v?(1\.15(?:\.\d+)*)[._-]src\.t/i)
   end
 
+  bottle do
+    sha256 big_sur:  "d834e8f821cc8470de4699e2be8beec90ce57c6628c7c6b4c5796e9713af6a2a"
+    sha256 catalina: "8b58e424ed6335ee2a71aa7f57f8d6a0651295186e22db405cadafc903b6afd7"
+    sha256 mojave:   "e93719a925a35950ca9a27fa6344c8fb3f4133cc587927a53648c290157a58e8"
+  end
+
   keg_only :versioned_formula
 
   depends_on arch: :x86_64
