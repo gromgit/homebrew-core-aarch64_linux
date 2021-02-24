@@ -9,9 +9,10 @@ class Ksync < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any_skip_relocation, big_sur:  "e68abf337654f51128a835f8d3c124df880a37a26f2773b0aa09fce74c67d63a"
-    sha256 cellar: :any_skip_relocation, catalina: "68409c1188fc629bb181765961ee9ff645b941400edcea9939d8d7189e7db5dc"
-    sha256 cellar: :any_skip_relocation, mojave:   "a4d52a2a59f8b6308ea858f051e8971145b9964c32564a832408e05f6582c23e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b8fdaafce04e89be790f15be07240b0ce0baabd5550ce6f625b6177d9fafecd1"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e68abf337654f51128a835f8d3c124df880a37a26f2773b0aa09fce74c67d63a"
+    sha256 cellar: :any_skip_relocation, catalina:      "68409c1188fc629bb181765961ee9ff645b941400edcea9939d8d7189e7db5dc"
+    sha256 cellar: :any_skip_relocation, mojave:        "a4d52a2a59f8b6308ea858f051e8971145b9964c32564a832408e05f6582c23e"
   end
 
   depends_on "go" => :build
