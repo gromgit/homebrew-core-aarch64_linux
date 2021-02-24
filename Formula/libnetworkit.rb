@@ -6,10 +6,10 @@ class Libnetworkit < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "5f2bff7d671e380fdd61d0f19526dca6497ff2846ff0569721b93b7067efa11f"
-    sha256 cellar: :any, big_sur:       "af356f704e84e2bd01c3eba35b52db809985536c2be04cc0642a2fd1599db6e0"
-    sha256 cellar: :any, catalina:      "66137ce8956685d9ff6a905553e4275f0eb963a439900c111fa1568f03c4462d"
-    sha256 cellar: :any, mojave:        "6a6dc69af2c96f1a4745e480026dd093f59369018965f1e85b7e0a7b5a03a29a"
+    sha256 cellar: :any, arm64_big_sur: "727074b6cac4f69e9c08ce93977f8532b6a1d23d6202b1d90170afdfbd33ac21"
+    sha256 cellar: :any, big_sur:       "7d64ac4870fb93c344fd0b736780fcd24dd4f97edd78ba9230695182509df683"
+    sha256 cellar: :any, catalina:      "06734dd0d47c1c6a97d97f9e4fc0a0ec8a15048d30a615b0b098980e1412d74f"
+    sha256 cellar: :any, mojave:        "fcad0e262612348b5f66af67d15ca7548797ed8c29a673d7a34c0ff28e7e52ad"
   end
 
   depends_on "cmake" => :build
