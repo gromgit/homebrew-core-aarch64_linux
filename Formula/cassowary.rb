@@ -7,10 +7,10 @@ class Cassowary < Formula
   head "https://github.com/rogerwelin/cassowary.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "00fcb2998b4a2f4773e7b63370bc59859cd8686f42a0c916df02ba6639b6a8de"
-    sha256 cellar: :any_skip_relocation, big_sur:       "66460d5be2e3a3ef3f8b27c6f6bec1f3414d1617a05ab7750f51a57e8ba79e5e"
-    sha256 cellar: :any_skip_relocation, catalina:      "8a4c292f05f1ca219faf9a0547200736883859a7148c8b91a775cce26929cdc4"
-    sha256 cellar: :any_skip_relocation, mojave:        "3bf88505d1a199c29ed4453d394027939803d1a31116af5b1f4917493c8c6401"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b151670fca47d74b6cc6339abb7b225d0208037e07702ee087143caf612cc3cd"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f8a763d9e15ad9988122f5cd5f9d1336f37f0f4cbda0b4acf97221a4a682160e"
+    sha256 cellar: :any_skip_relocation, catalina:      "a8dab98a2b27dee96655f891749635e67580e19a874c7f0d5e580623eae9868b"
+    sha256 cellar: :any_skip_relocation, mojave:        "521dc9c7d93a5485a8d7ac8210794392c052cfb9480cc21a2c5ab331d5709d1a"
   end
 
   depends_on "go" => :build
