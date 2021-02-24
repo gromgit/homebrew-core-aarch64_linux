@@ -6,9 +6,10 @@ class Nim < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "a0bd46ce2277fd158cc74f3ff1b628a043602048a45cc5a8308a9555fafb950c"
-    sha256 cellar: :any_skip_relocation, catalina: "b7c2cde81c13442221e9145469d36bc3bfb97ee75b41cc34e5be42d09a8688cc"
-    sha256 cellar: :any_skip_relocation, mojave:   "55f94a676d4b5c3c362cb61866a19915ef6bd146dc9b8b601b89c69fcf4808bd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "20805260d0f0717fd9eae775c879d1527e8f793b8a7701b739628a7c26e91889"
+    sha256 cellar: :any_skip_relocation, big_sur:       "91d277b8e9cc51f55a82e7b2e6abd48623d0ef8e5e82fcb46f72407f5aaf1de8"
+    sha256 cellar: :any_skip_relocation, catalina:      "037d54470df4c702cfa6054c0fd731d437472fa4cc2e547e0a48b49b687d2227"
+    sha256 cellar: :any_skip_relocation, mojave:        "4688d98b7f3819d9f3f994630f676c80873a7e8356bb858a0edf67d13b1bd7fd"
   end
 
   head do
