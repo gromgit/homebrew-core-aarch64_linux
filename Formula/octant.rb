@@ -13,10 +13,9 @@ class Octant < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, big_sur:  "e5e053c672b960819d117b7aeb6af91810458d508ab6b366e23cfc27c7c6491f"
-    sha256 cellar: :any_skip_relocation, catalina: "27cbe24e2fe0f5284f39656bf19914274490fa3f400200b9e5b1f762de7428a9"
-    sha256 cellar: :any_skip_relocation, mojave:   "1fad5c7151847338d432789e3b579e36f96839dc8a820d66b41b8e1f46b2e0ee"
+    sha256 cellar: :any_skip_relocation, big_sur:  "7aaa68d4f40aa80157ebd742f8c2daa7e6669302adf2caed6574d28ef4e09ddf"
+    sha256 cellar: :any_skip_relocation, catalina: "553b8b8dccc524c09141fea90a62c4c11a8dc26a5c7c9996e4adfe8be2041e85"
+    sha256 cellar: :any_skip_relocation, mojave:   "674f1f38df2d07bbd9f0aace72b5258b5f08ef604dd57c4a6ac2533298357a32"
   end
 
   depends_on "go" => :build
