@@ -1,8 +1,8 @@
 class Microplane < Formula
   desc "CLI tool to make git changes across many repos"
   homepage "https://github.com/Clever/microplane"
-  url "https://github.com/Clever/microplane/archive/v0.0.26.tar.gz"
-  sha256 "00d6abe55fedd7385f1782fc97a520c4c0aac1ff6d2cece88fc7a21c2c49f024"
+  url "https://github.com/Clever/microplane/archive/v0.0.27.tar.gz"
+  sha256 "1d5d1ee676f540ec98a3756783e18d414596ae3b6c034963588820aefca33f14"
   license "Apache-2.0"
   head "https://github.com/Clever/microplane.git"
 
@@ -12,20 +12,10 @@ class Microplane < Formula
     sha256 cellar: :any_skip_relocation, mojave:   "9adc70ddbc6fa4e70e1b006d33222de211caa09d58773e70d449e974482ddfc5"
   end
 
-  depends_on "dep" => :build
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    ENV["GO111MODULE"] = "auto"
-    ldflags = "-s -w -X main.version=#{version}"
-
-    dir = buildpath/"src/github.com/Clever/microplane"
-    dir.install buildpath.children
-    cd "src/github.com/Clever/microplane" do
-      system "dep", "ensure", "-v", "-vendor-only"
-      system "go", "build", *std_go_args, "-ldflags", ldflags, "-o", bin/"mp"
-    end
+    system "go", "build", *std_go_args, "-ldflags", "-s -w -X main.version=#{version}", "-o", bin/"mp"
   end
 
   test do
