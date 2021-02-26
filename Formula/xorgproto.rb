@@ -6,10 +6,10 @@ class Xorgproto < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "38c0c8cc1e6439f37d08ae643b338edb4b9fe20870e804060b78bb98515e5e1b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ec193775c03e4473b3d84ef717d2b31904700c8f57db45b37a53c85d01af2392"
-    sha256 cellar: :any_skip_relocation, catalina:      "c63919a404e17200e73d19c4f2ab130bb64843bb575d0c542a78a68a60ec88fa"
-    sha256 cellar: :any_skip_relocation, mojave:        "7cc2ab60ba641d3e471d50ef6c3e1534179c9d0767cd180c26bccc2493e9cd6f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c561ab188ce76353f6d02629dbb2ca6c0913c22fc8017e26742ceeae5b5ab133"
+    sha256 cellar: :any_skip_relocation, big_sur:       "33a7f790f2fa4831f225abf614f98b30d032a0d05a60725135f0c4006f898393"
+    sha256 cellar: :any_skip_relocation, catalina:      "386eeca1a9111911f47672b5902a1cc4d7327de7564086b356b5061d0599060b"
+    sha256 cellar: :any_skip_relocation, mojave:        "89d2e0e9fdf33b7dc2dbe6a305f02157b1444f1dba53c56eec248d355c8148fa"
   end
 
   depends_on "pkg-config" => [:build, :test]
