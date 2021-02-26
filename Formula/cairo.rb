@@ -12,10 +12,10 @@ class Cairo < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "eb04d54ac340a4954a178e99d3ea064913d3fe89184b1edd479c2a96260bb989"
-    sha256 big_sur:       "45f0b6aa6d76fa7806e1eeb066d6737033da3de74ac247a27735ff3a29b1b62b"
-    sha256 catalina:      "3d772a45e12f548338893e11cff0cd5c6a0a929bc214de8aa8cb6995c359bae9"
-    sha256 mojave:        "9ab59fee2cf7e7c331b95a9d5f026dbfdc03b6fa761304f729cdf87921c786bf"
+    sha256 arm64_big_sur: "2fc4da6029167f696fc0b3c0553d36abb8e77c75f0096396d4eb89d0ea912612"
+    sha256 big_sur:       "cb16c1bb070a7cdca7aaf8899a70e407d73636116d62225626b2c8d31aa8d2ff"
+    sha256 catalina:      "4a117545953b9784f78db8261c03d71a1ae7af836dcd995abe7e6d710cdfd39c"
+    sha256 mojave:        "38c7b7b0f6266632a5f04df12180dc36a1ce218a1c54b13cdca18ad024067311"
   end
 
   head do
