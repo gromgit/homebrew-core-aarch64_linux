@@ -13,10 +13,9 @@ class Haxe < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, big_sur:  "3700b66f87d751d019cdbaf3e09c5705f7fdae4f058a8ed0c48911da6eb40017"
-    sha256 cellar: :any, catalina: "9bd618d84132605415206ad5cad56ca14f5b8e883db61deaa02fcefd2c36b41d"
-    sha256 cellar: :any, mojave:   "b7f24aeb13e37f8aae76838cf298a88c04b71a2f19378e7d4d8e823487c281aa"
+    sha256 cellar: :any, big_sur:  "3dc0587c5d6c49899f0b2208a97671c80eff869c68da21873d345d95a7ad7a8b"
+    sha256 cellar: :any, catalina: "aa33bde76f485b4f587aaeccbfee29cdbb1838cf77bfdb8ada917b11aa4a617c"
+    sha256 cellar: :any, mojave:   "56c43935a93389029569492772bd0dfedfc46de51be542fbe5c3ea908f2f7dde"
   end
 
   depends_on "cmake" => :build
