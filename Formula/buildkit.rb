@@ -13,10 +13,10 @@ class Buildkit < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1d9745061ffdead3c2a13af9ea53ccb35387188d301aff52308027d72da7918b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3e71ae1f0248956f11e74d4d2d90decc62763e61c526ec77d65353d2bc42eeb3"
-    sha256 cellar: :any_skip_relocation, catalina:      "ba36ac1a8b1b3c7c2f8e0e6bbbd403be303fa6ca0d193a5193eeb4e22f21d0cb"
-    sha256 cellar: :any_skip_relocation, mojave:        "e6b41db313e3c7fb44dc70931dbab30e6f59274d522e58e194d5307977680d3d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "481ce58bfba185e6614761e4db47cfd5bad298c7d1befcda37a38ed88c98e2b0"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f0136996daa0dba57602f1cd2a662c21e24927feb758b3269c2be81533b87453"
+    sha256 cellar: :any_skip_relocation, catalina:      "b425bf61e8799358958db28a875f16069f5278d066f934c624bec1ace320a24e"
+    sha256 cellar: :any_skip_relocation, mojave:        "04805349df94e16f5cb3e59e14c2bdd29d8b72b266ee11119934a677b521e068"
   end
 
   depends_on "go" => :build
