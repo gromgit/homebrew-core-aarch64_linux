@@ -11,10 +11,10 @@ class Libomp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "e4bfe9b5a62d5f1a3d09e9ae242e945eabf0905abda6e85f7ba623fd2a4faa70"
-    sha256 cellar: :any, big_sur:       "4988dc1428616d4d116cd20ce97b4c0dc465d030c788d5eeb8161b10786b87cb"
-    sha256 cellar: :any, catalina:      "36322824081323ee666385e1ad0243542a8c511c9a61d6d4d158bbb153e2ef91"
-    sha256 cellar: :any, mojave:        "7313b982b9edd1f1f52c6434f0cc37c5946fd66e758a43c9f02941b08632cd66"
+    sha256 cellar: :any, arm64_big_sur: "f87f7841eb8b72650fa771af39642361aec371ea1a1f94f081ecc0e8168a0e75"
+    sha256 cellar: :any, big_sur:       "ec279162f0062c675ea96251801a99c19c3b82f395f1598ae2f31cd4cbd9a963"
+    sha256 cellar: :any, catalina:      "45a5aa653bd45bd5ff5858580b1a4670c4b5a51ea29d68d45a53f72f56010e05"
+    sha256 cellar: :any, mojave:        "aa823f2fef52a032496f4f4c42925ab86244087f81352d04ea8d7b594185fee1"
   end
 
   depends_on "cmake" => :build
