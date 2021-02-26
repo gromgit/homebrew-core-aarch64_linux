@@ -3,8 +3,8 @@ class Pdm < Formula
 
   desc "Modern Python package manager with PEP 582 support"
   homepage "https://pdm.fming.dev"
-  url "https://files.pythonhosted.org/packages/f1/33/2b726fb29bcfcd80245a01d2eb3b6605b09964e19022c61cbd62acf4ed1b/pdm-1.3.2.tar.gz"
-  sha256 "40474bb250096d2635e3733ea226f156bcfb006aa14844bfd04c92a20fd45cbc"
+  url "https://files.pythonhosted.org/packages/f6/e0/c24119e7dd297289c3eb9b18db0201e9941286b7f430a5447869ee2d0b17/pdm-1.3.3.tar.gz"
+  sha256 "cfe98130b78662608eed046c526005e1b4f076381864caa2798ea58f01c4e24d"
   license "MIT"
   head "https://github.com/frostming/pdm.git"
 
@@ -48,8 +48,8 @@ class Pdm < Formula
   end
 
   resource "keyring" do
-    url "https://files.pythonhosted.org/packages/9e/c1/f7851c1f1098f9444363641343ca4e2e461f4473bf97e1dcb405a192ddbb/keyring-22.0.1.tar.gz"
-    sha256 "9acb3e1452edbb7544822b12fd25459078769e560fa51f418b6d00afaa6178df"
+    url "https://files.pythonhosted.org/packages/70/a6/3a9a92e4a82b5b40eee4ab22a23c2b0d39a1f5844136880523e3e9c9938c/keyring-22.2.0.tar.gz"
+    sha256 "c73c66c4ca89bee6a233b1638e1d2f5bcba4da35f8713ad4f98decc46e64cccd"
   end
 
   resource "packaging" do
