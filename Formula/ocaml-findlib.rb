@@ -12,11 +12,10 @@ class OcamlFindlib < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "d8b36f14f73e5d2122029e86b3d2e057097fba83d52771e7203f315b84a0ad37"
-    sha256 big_sur:       "d0049172eb8e73000a7f085348dc8c2d89c891a67ade6a46b61acd7c9a330da8"
-    sha256 catalina:      "ba498040816b2b5b00ed84a96107119a99a52a0815b86ace5e5708f807be1ddb"
-    sha256 mojave:        "b9af770177876ae3ffff6cca808a7ea72866a0bfe3b92a987878629fc42b3eff"
-    sha256 high_sierra:   "a412ed75fa6bd7180846f2305eea5d2a4170bb41535c26fb047fbbd2b0adef8a"
+    sha256 arm64_big_sur: "5f55cdc49e933d7f2ee47ef4ca2f2ad5969b72ecdfea438184cbbf8b5505bc81"
+    sha256 big_sur:       "dc52beb2a668d316a30028f1183a8759b546ca34f7002e4040e1ff4e2b1f27d9"
+    sha256 catalina:      "4dc5bb648554bfb3aba9dc068c826f4bf95df811fef3c2a62ba1d0a91436751d"
+    sha256 mojave:        "f0321b2ae9ecb4119290845a0b18d32966e738155626098498b1409ca7db5188"
   end
 
   depends_on "ocaml"
