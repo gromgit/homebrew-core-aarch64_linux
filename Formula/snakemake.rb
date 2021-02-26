@@ -3,8 +3,8 @@ class Snakemake < Formula
 
   desc "Pythonic workflow system"
   homepage "https://snakemake.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/d3/c9/d99121a040f9984495367cdc47d75305fc4993f2411d7fb5becd696a1b3d/snakemake-5.32.2.tar.gz"
-  sha256 "ff35f3c5d283c5b38a926b943f18aa732cc8af4bd1f59471907ef3adda1b018c"
+  url "https://files.pythonhosted.org/packages/46/2a/2cb04ee9c9bc9a5c97ea01da2693560f80f4f7a7aadc5f9d54cd27c3fa20/snakemake-6.0.0.tar.gz"
+  sha256 "11ad688728332ff98653322385480143e31edf5d68685431b397d191beabf626"
   license "MIT"
   head "https://github.com/snakemake/snakemake.git"
 
@@ -44,8 +44,8 @@ class Snakemake < Formula
   end
 
   resource "ConfigArgParse" do
-    url "https://files.pythonhosted.org/packages/bb/79/3045743bb26ca2e44a1d317c37395462bfed82dbbd38e69a3280b63696ce/ConfigArgParse-1.2.3.tar.gz"
-    sha256 "edd17be986d5c1ba2e307150b8e5f5107aba125f3574dddd02c85d5cdcfd37dc"
+    url "https://files.pythonhosted.org/packages/3f/75/ca907906cd6c4c7097a037f7adaee36b3f32a08b66baed51b86d1fcc6398/ConfigArgParse-1.3.tar.gz"
+    sha256 "0428b975ab6c48bb101ccb732e1b5cb616296e28268e032aa806f32b647a1cc1"
   end
 
   resource "datrie" do
@@ -56,6 +56,11 @@ class Snakemake < Formula
   resource "docutils" do
     url "https://files.pythonhosted.org/packages/2f/e0/3d435b34abd2d62e8206171892f174b180cd37b09d57b924ca5c2ef2219d/docutils-0.16.tar.gz"
     sha256 "c2de3a60e9e7d07be26b7f2b00ca0309c207e06c100f9cc2a94931fc75a478fc"
+  end
+
+  resource "filelock" do
+    url "https://files.pythonhosted.org/packages/14/ec/6ee2168387ce0154632f856d5cc5592328e9cf93127c5c9aeca92c8c16cb/filelock-3.0.12.tar.gz"
+    sha256 "18d82244ee114f543149c66a6e0c14e9c4f8a1044b5cdaadd0f82159d6a6ff59"
   end
 
   resource "gitdb" do
@@ -131,6 +136,11 @@ class Snakemake < Formula
   resource "six" do
     url "https://files.pythonhosted.org/packages/6b/34/415834bfdafca3c5f451532e8a8d9ba89a21c9743a0c59fbd0205c7f9426/six-1.15.0.tar.gz"
     sha256 "30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"
+  end
+
+  resource "smart-open" do
+    url "https://files.pythonhosted.org/packages/c3/ff/f8ac652bc62fc78a35b0201d922e43da63e3469a6eab1d71776af6dd7844/smart_open-4.2.0.tar.gz"
+    sha256 "d9f5a0f173ccb9bbae528db5a3804f57145815774f77ef755b9b0f3b4b2a9dcb"
   end
 
   resource "smmap" do
