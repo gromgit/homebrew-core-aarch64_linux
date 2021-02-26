@@ -3,8 +3,8 @@ class DockerCompose < Formula
 
   desc "Isolated development environments using Docker"
   homepage "https://docs.docker.com/compose/"
-  url "https://files.pythonhosted.org/packages/bd/28/98a4cdb3ddfab3c356996a80f72e36a1c6d2e61f59dc503806d86b00780e/docker-compose-1.28.4.tar.gz"
-  sha256 "681aca74e70e238ae43c810a62f471b645942f0ce97b6a0ca375fcb64f3aca85"
+  url "https://files.pythonhosted.org/packages/92/29/303a71a1bf4522d6e36baa14d48f286d75da545777d8510b9f4085686ee3/docker-compose-1.28.5.tar.gz"
+  sha256 "b3ff8f0352eb4055c4c483cb498aeff7c90195fa679f3caf7098a2d6fa6030e5"
   license "Apache-2.0"
   head "https://github.com/docker/compose.git"
 
@@ -63,8 +63,8 @@ class DockerCompose < Formula
   end
 
   resource "docker" do
-    url "https://files.pythonhosted.org/packages/fb/21/459639c32d19ee5bc3e49c066e8f90969e6aca38779df590b9555cb1d1fe/docker-4.4.3.tar.gz"
-    sha256 "de5753b7f6486dd541a98393e423e387579b8974a5068748b83f852cc76a89d6"
+    url "https://files.pythonhosted.org/packages/fd/46/6f6116c30cb859a0cdb95444140e9fe0be0de455c9c83748ee421aec8274/docker-4.4.4.tar.gz"
+    sha256 "d3393c878f575d3a9ca3b94471a3c89a6d960b35feb92f033c0de36cc9d934db"
   end
 
   resource "dockerpty" do
