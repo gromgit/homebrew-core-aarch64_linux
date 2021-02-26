@@ -7,9 +7,9 @@ class Stella < Formula
   head "https://github.com/stella-emu/stella.git"
 
   bottle do
-    sha256 cellar: :any, big_sur:  "a61b80a329b7cf2a965225bcff5a2a19e8c5432ce727e02de47cf5497cb2c8e8"
-    sha256 cellar: :any, catalina: "10607ea0a2031f549b367ca28afef8d90228cd143b5e6ac834c0bc2b2518b5db"
-    sha256 cellar: :any, mojave:   "da4689a8d5db9f021ac0a382d00ec144269d63db4b77e1befd2ae087147873ce"
+    sha256 cellar: :any, big_sur:  "a470ccd8535c906aae5aa63c595fae6946d4145afcf75eb626216c7822a52484"
+    sha256 cellar: :any, catalina: "19242437c7f91e204b162f8eb542fd76ab6cd4facb62904ecd4f5187ff88da8f"
+    sha256 cellar: :any, mojave:   "b566cac3954c8b1c773845d3c55a23fc4f720ad41c16d51f4ec18eeddb58965a"
   end
 
   depends_on xcode: :build
