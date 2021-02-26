@@ -1,8 +1,8 @@
 class Pipx < Formula
   desc "Execute binaries from Python packages in isolated environments"
   homepage "https://github.com/pipxproject/pipx"
-  url "https://files.pythonhosted.org/packages/29/06/20d904aa0fac35f5f06c098aa9d3fcaa031dc33ae25a711d3fbc23ca23be/pipx-0.16.0.0.tar.gz"
-  sha256 "ec9d63753f34eb2dde5597ecdfe23df61749104485eead42937abec4dc4f4598"
+  url "https://files.pythonhosted.org/packages/34/19/e79e0a9836187e0b576da06859314887715c3adf4c6e2b4b4d5629f5a04f/pipx-0.16.1.0.tar.gz"
+  sha256 "22b9a0f0536e6b4e7ae030d33cbe34528c3f7ad1615d0c3795f2e5ac4db9d76d"
   license "MIT"
   head "https://github.com/pipxproject/pipx.git"
 
@@ -25,9 +25,14 @@ class Pipx < Formula
     sha256 "d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a"
   end
 
+  resource "colorama" do
+    url "https://files.pythonhosted.org/packages/1f/bb/5d3246097ab77fa083a61bd8d3d527b7ae063c7d8e8671b1cf8c4ec10cbe/colorama-0.4.4.tar.gz"
+    sha256 "5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"
+  end
+
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/d7/c5/e81b9fb8033fe78a2355ea7b1774338e1dca2c9cbd2ee140211a9e6291ab/packaging-20.8.tar.gz"
-    sha256 "78598185a7008a470d64526a8059de9aaa449238f280fc9eb6b13ba6c4109093"
+    url "https://files.pythonhosted.org/packages/86/3c/bcd09ec5df7123abcf695009221a52f90438d877a2f1499453c6938f5728/packaging-20.9.tar.gz"
+    sha256 "5b327ac1320dc863dca72f4514ecc086f31186744b84a230374cc1fd776feae5"
   end
 
   resource "pyparsing" do
@@ -36,8 +41,8 @@ class Pipx < Formula
   end
 
   resource "userpath" do
-    url "https://files.pythonhosted.org/packages/86/2b/0a443e7978ea0f6bc1baece1de35545fa12f6d9fc5451aa90529db41db70/userpath-1.4.1.tar.gz"
-    sha256 "211544ea02d8715fdc06f429cf66cd18c9877a31751d966d6de11b24faaed255"
+    url "https://files.pythonhosted.org/packages/f0/1b/d2bccd0b855484e3b419c0d87990e6f588793fb7b233d8ea26fa620936fb/userpath-1.4.2.tar.gz"
+    sha256 "dd4b5496e4ef2c1a3bbb103ffefa7738fa4ba15f23580918bb9f949dcd61a8a7"
   end
 
   def install
