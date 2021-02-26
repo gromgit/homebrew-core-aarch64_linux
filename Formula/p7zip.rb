@@ -16,9 +16,10 @@ class P7zip < Formula
   patch :DATA
 
   # Fix AES security bugs
-  patch :p4 do
-    url "https://github.com/aonez/Keka/files/2940620/15-Enhanced-encryption-strength.patch.zip"
-    sha256 "838dd2175c3112dc34193e99b8414d1dc1b2b20b861bdde0df2b32dbf59d1ce4"
+  # https://github.com/jinfeihan57/p7zip/pull/117
+  patch do
+    url "https://github.com/jinfeihan57/p7zip/commit/6106df26ff64fa8147bfc9abdc0a14908b5d3871.patch?full_index=1"
+    sha256 "5fcce7293ba017b4aa3ba5afbe6f2a847d60a785ea0966c31ac33da4bdf3ef6e"
   end
 
   def install
