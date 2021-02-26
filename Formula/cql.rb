@@ -1,8 +1,8 @@
 class Cql < Formula
   desc "Decentralized SQL database with blockchain features"
   homepage "https://covenantsql.io"
-  url "https://github.com/CovenantSQL/CovenantSQL/archive/v0.8.0.tar.gz"
-  sha256 "fc63d9bc296b037c8a8fd1984bc6e4156d0c73d9948dfa8654a954f904ad1f4a"
+  url "https://github.com/CovenantSQL/CovenantSQL/archive/v0.8.1.tar.gz"
+  sha256 "73abb65106e5045208aa4a7cda56bc7c17ba377557ae47d60dad39a63f9c88a6"
   license "Apache-2.0"
   head "https://github.com/CovenantSQL/CovenantSQL.git"
 
@@ -18,18 +18,15 @@ class Cql < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    ENV["GO111MODULE"] = "auto"
     ENV["CQLVERSION"] = "v#{version}"
     ENV["CGO_ENABLED"] = "1"
-    mkdir_p "src/github.com/CovenantSQL"
-    ldflags = "-X main.version=v#{version} " \
+
+    ldflags = "-s -w -X main.version=v#{version} " \
       "-X github.com/CovenantSQL/CovenantSQL/conf.RoleTag=C " \
       "-X github.com/CovenantSQL/CovenantSQL/utils/log.SimpleLog=Y"
-    ln_s buildpath, "src/github.com/CovenantSQL/CovenantSQL"
-    system "go", "build", "-tags", "sqlite_omit_load_extension",
-      "-ldflags", ldflags, "-o", "bin/cql", "github.com/CovenantSQL/CovenantSQL/cmd/cql"
-    bin.install "bin/cql"
+    system "go", "build", *std_go_args, "-tags", "sqlite_omit_load_extension",
+      "-ldflags", ldflags, "./cmd/cql"
+
     bash_completion.install "bin/completion/cql-completion.bash"
     zsh_completion.install "bin/completion/_cql"
   end
