@@ -13,10 +13,10 @@ class Mosquitto < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "7523d8429b97e657496c4f72efaaeb19da7a0b68a251f9788d4bbbfb6e9a86f5"
-    sha256 big_sur:       "b3c839f2215608319ab5b099dca732688b93e06236d7939b8620666d9332db48"
-    sha256 catalina:      "6af0ebda89b84e8204258137838b686073c67f026a4aa3a3a403577b5c59720d"
-    sha256 mojave:        "5a44cee40174d3d95b9072d9ed9000f1bd26a37e1d26ff2784bc1df66c958c5f"
+    sha256 arm64_big_sur: "ef77fabb6afa21afc71d4da3702909d62730bf985eab97c50baceab9db726b7d"
+    sha256 big_sur:       "77cc5148716a9ae22d6a5b19f92beef6d33cd777c020f2444200368097699b71"
+    sha256 catalina:      "0b450c6694c6940368bf150693dbc2e04f3bbda608c691f91fa84509d26d2510"
+    sha256 mojave:        "fb1679f4855964d8ed60af4f42903aad617550c9ada5c0e8e3a31c2aa204f2df"
   end
 
   depends_on "cmake" => :build
