@@ -6,10 +6,10 @@ class P7zip < Formula
   license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "672dff61eba151f9c1117a1486ef2908dc0d834c355ca31f359ac56dafc75e3d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "910811e37db23bbe76d169211d31d36156403f503654d04ed612d7863ea907f8"
-    sha256 cellar: :any_skip_relocation, catalina:      "82e0e2a437f8f2e58e82d4823bfaeb479e89d325af3bd4300ab349a5b09fa132"
-    sha256 cellar: :any_skip_relocation, mojave:        "971a247c66fae4b54fdf169fdea79b79a85af6a8d6dc01a3119df014aa4316fe"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f6cf223081d11458e4367c049596ac1cfa5b24f8905e6b837544a22e9b77c588"
+    sha256 cellar: :any_skip_relocation, big_sur:       "103ceafc69d49fcbf29574d8b433b995ad8a392a2264e46c08f81fb745ade728"
+    sha256 cellar: :any_skip_relocation, catalina:      "86e612c906985b6725236d8ed26d1242f870ee2d8f51d425c5ec6cebaec65dc5"
+    sha256 cellar: :any_skip_relocation, mojave:        "89bdd3bdb3aaacb8bd7a86a8fdde1de160cf5111e8f05323f92735f37ba4aef9"
   end
 
   # Remove non-free RAR sources
