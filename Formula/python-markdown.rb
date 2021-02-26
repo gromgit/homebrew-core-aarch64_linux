@@ -9,11 +9,10 @@ class PythonMarkdown < Formula
   head "https://github.com/Python-Markdown/markdown.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e15c00fbbc97ddc7727ed969fa6b66e39d14a0840c701a278cc7d936265b3820"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5c0eca089cf51f1a18fa14b08ef2e453940d216bd28c971c1e32c1d92dc924c8"
-    sha256 cellar: :any_skip_relocation, catalina:      "2a5f0bc6b8f4e8f8910b638ca9de6d78d1721c670a58b04e85843e486f91b321"
-    sha256 cellar: :any_skip_relocation, mojave:        "800ed7fb5c992646e2f6486eeb369b41a35f38f6aa1b219f91535ebb7817b755"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "43873534a708de73d549d2c4d0bc5b9bd096f3f1e75ea3e143aa82925ef3e6f2"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b4ef9a4f29b3c51b03907e50b89b0a9ef7f2a87951c624956beba0e1627f4618"
+    sha256 cellar: :any_skip_relocation, catalina:      "689b8240e4c6c352ba8d00bbb736a4e0bfa9854a4ab3b741231df6dc670a172f"
+    sha256 cellar: :any_skip_relocation, mojave:        "aefbd3f47aa88aadf990c0d3ae108da38a89cdbab7cf7bcfd1e81eadbca06340"
   end
 
   depends_on "python@3.9"
