@@ -13,6 +13,7 @@ class FuseEmulator < Formula
   bottle do
     sha256 arm64_big_sur: "1db9691d6ab77bffefb4f3bd2672f09e1ba556ac96f2fe21ba024d8ea3da359f"
     sha256 big_sur:       "d25066393429d363baff925a7d7213d109ec204fe7bec6c4508a8f20a913fe7e"
+    sha256 catalina:      "639db997dd24925ee80b1884ee206cabc9824c8bc6643dc181be4a1d641983ac"
     sha256 mojave:        "53310374faf051b906a38e8cabac72c9b68d1c671f1c33161dee0e4b44263e16"
     sha256 high_sierra:   "007c73a4b5bd3a79b3fa49683e12672afdcc6456d0d89c53de672ec308741555"
     sha256 sierra:        "f61e728e1a3bd5c89e8f9f887f15d5d18ab37cc0af6a857547eff7314d297305"
