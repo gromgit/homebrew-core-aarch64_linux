@@ -1,8 +1,8 @@
 class Verilator < Formula
   desc "Verilog simulator"
   homepage "https://www.veripool.org/wiki/verilator"
-  url "https://www.veripool.org/ftp/verilator-4.108.tgz"
-  sha256 "8e8ec1de0bf200b6206035214f9071a5acc64bd2e7134361d564271e48552702"
+  url "https://www.veripool.org/ftp/verilator-4.110.tgz"
+  sha256 "4716fe0058661a29d6b59caf8e7471b2eddbded6ed44ede78dc1c65094ecfecc"
   license any_of: ["LGPL-3.0-only", "Artistic-2.0"]
 
   livecheck do
