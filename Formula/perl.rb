@@ -13,11 +13,10 @@ class Perl < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "f44eafa67a7c43e5583f2190933c07645a3e93e2a46c8b7f53ec175e171e31be"
-    sha256 big_sur:       "e65b6722d7371a936e77af5c2d2aeec76cec8e3b6116562c0584d588a724bfcd"
-    sha256 catalina:      "2777e9490753ec7d79129663a1102d25148076bfd1788044e8adac4a02086cbc"
-    sha256 mojave:        "bb71c5e9bb3c1c734d7c2a91ada60ce054096c97b1a619f4c3df2a1f1e828981"
+    sha256 arm64_big_sur: "900ac321ecfc07d89588b203a6860fe3f3ba056a3565225d77115c99d651aed0"
+    sha256 big_sur:       "5178a634bfb37437ee40d836c3bacb1adb89516a553ef6a8c2d40cee9eea608b"
+    sha256 catalina:      "7ac87157d98223abcc2b25e35811c9dfd016f807454ec8fc219a910b4a9cdacc"
+    sha256 mojave:        "2663e8ce52b4fb4fab170e19fff638e0b65688a933a3cddd86696403323be88d"
   end
 
   depends_on "berkeley-db"
