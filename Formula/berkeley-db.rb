@@ -13,12 +13,10 @@ class BerkeleyDb < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "069db18392eb453adbf6862ff6ab7c694fba8a0885c432a4c9c63ef2946d73a4"
-    sha256 cellar: :any, big_sur:       "223eb7fbe303293676740e34fb6ff3f494ce17cba44029fb7ca47d64e138098f"
-    sha256 cellar: :any, catalina:      "f2fc006ecf0cddfeaf94af43572ca4cebc6654d8a87f3ebfdb55329174596887"
-    sha256 cellar: :any, mojave:        "eb5d0a59cec0fab48a0539f96195b1890599603577ca1792f831085418b19707"
-    sha256 cellar: :any, high_sierra:   "fa53aeeca3bef551d9f604b5eafb6b94bf1f14b95530a8d16e243fb7c2ad790e"
-    sha256 cellar: :any, sierra:        "1b3c06f6d3b1f45180068cb7127508072ed661e981e922dd273d6faef0030bc1"
+    sha256 cellar: :any, arm64_big_sur: "fb300ebe3dcc5b308c6fbc383856545a6b35e883889c95f0bfeee40d6d07b02d"
+    sha256 cellar: :any, big_sur:       "dc8c2c76f315ea02737e9277f74cc9f8faba1733c10c20e2ef62d50b4abce4b7"
+    sha256 cellar: :any, catalina:      "f4d82916099a1023af6a72675dce0a445000efd2286866d1f36bf0b1063b24aa"
+    sha256 cellar: :any, mojave:        "ef85a6b6fb93f8dcee4144acf22665a331c5b2398822a5f183aed0fb863718f5"
   end
 
   depends_on "openssl@1.1"
