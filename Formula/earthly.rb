@@ -12,10 +12,10 @@ class Earthly < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "aa035356c27782a07a0163d2178855e878fbb19ea3fe88a7cf3fcb7210e0cdef"
-    sha256 cellar: :any_skip_relocation, big_sur:       "47e4935a2d7f15fb56f23ada7d3cbe0d7b6535ae8a435a7ad0ab0fdbe2f61a98"
-    sha256 cellar: :any_skip_relocation, catalina:      "8e08ead2e116fdd1045fcad5ffb540e1789de4de7616dd80ab70b3ed621598ee"
-    sha256 cellar: :any_skip_relocation, mojave:        "5ade4fab3501ac735435c530b2c094bc7c7f6e411f9b0ca2bb087ecbd057a3d7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "96c082fd77293140b50a602a93bf5f40f59b262c532973334baa4ada8fcc4c78"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c21141390522a59074123624c5564aaef8caa1e1e9d507846a1d78d35eed9aa0"
+    sha256 cellar: :any_skip_relocation, catalina:      "e416d54d0d327d8143d071852cf9454d7de8e015b2a117ef8fc7b947876c2faf"
+    sha256 cellar: :any_skip_relocation, mojave:        "07e94a1265811798006285f81351691c2df32dcc9cb7a55168018e9b157d1e20"
   end
 
   depends_on "go" => :build
