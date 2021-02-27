@@ -9,10 +9,10 @@ class PhpAT74 < Formula
   revision 1
 
   bottle do
-    sha256 arm64_big_sur: "3120baa405c79acaae9622e4c99599d8fe09ccdbaeecb8965d131c9559c257f1"
-    sha256 big_sur:       "11cbe697525464636f1e1ecc9de2900b341e8566a0b66239ab05d57271f85076"
-    sha256 catalina:      "09d8e3bd11eea8df1020621ba7e9d5e7d540a7042372879893a070ab09c3ca37"
-    sha256 mojave:        "9e023ddc63e4269895fb520acc3b21e6619028a94e55706f52d3e998978e57ec"
+    sha256 arm64_big_sur: "dda32679c342b8b2583e387053e673ba17c529f30aa4f1f781a42a802560db62"
+    sha256 big_sur:       "51e0b9a37e2962dcea2385a94a69d53f3f8d20221269db318bb3851869d9f92d"
+    sha256 catalina:      "1a8d41ab0ec3547dfff7b326142a730f62be9bd5a3eb1acf982485ff85d627ff"
+    sha256 mojave:        "c41fa924c6d30172c39c905e94204709fd953e8ce0d1fe32226352ff76eabb0d"
   end
 
   keg_only :versioned_formula
