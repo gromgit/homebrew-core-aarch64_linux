@@ -3,8 +3,8 @@ class Ocrmypdf < Formula
 
   desc "Adds an OCR text layer to scanned PDF files"
   homepage "https://github.com/jbarlow83/OCRmyPDF"
-  url "https://files.pythonhosted.org/packages/3b/6f/b35629fe70cd059f5c503e544d9857b94b91ed58b50e291a34a7f0d3813b/ocrmypdf-11.6.2.tar.gz"
-  sha256 "0f624456a50be0b0bc8c0b59704d159f637616c093a1cabe8bb383706561bcf7"
+  url "https://files.pythonhosted.org/packages/26/5c/1593cebdd2b9d3bbc8434015cb8bed6814ad6828963da925217c3a65906c/ocrmypdf-11.7.0.tar.gz"
+  sha256 "5c386fcf2c0f2635533c2bad0edcd2d455f667a134d180dc61cbb3d4d5f0c8e2"
   license "MPL-2.0"
 
   bottle do
@@ -49,8 +49,8 @@ class Ocrmypdf < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/60/6d/b32368327f600a12e59fb51a904fc6200dd7e65e953fd6fc6ae6468e3423/cryptography-3.4.5.tar.gz"
-    sha256 "4f6761a82b51fe02cda8f45af1c2f698a10f50003dc9c2572d8a49eda2e6d35b"
+    url "https://files.pythonhosted.org/packages/fa/2d/2154d8cb773064570f48ec0b60258a4522490fcb115a6c7c9423482ca993/cryptography-3.4.6.tar.gz"
+    sha256 "2d32223e5b0ee02943f32b19245b61a62db83a882f0e76cc564e1cec60d48f87"
   end
 
   resource "humanfriendly" do
@@ -74,8 +74,8 @@ class Ocrmypdf < Formula
   end
 
   resource "pikepdf" do
-    url "https://files.pythonhosted.org/packages/9c/a4/29b68c54886a1ce0cac3b7f8c65ef11ba2b50acf21e2dbefe29328edbefa/pikepdf-2.5.2.tar.gz"
-    sha256 "8fc3e97b24dafbd4b1ac057c8f144c18467ce55d342a1a8c42688890ead58ef3"
+    url "https://files.pythonhosted.org/packages/04/ce/19464e144e3eb750ca224ed0997cf3472d106d8fadef0fe07a8e1dc67d27/pikepdf-2.6.0.tar.gz"
+    sha256 "42277afc386f1dd312dedf94e2230ab238a947f77514ccd67ac046b025af76f8"
   end
 
   resource "Pillow" do
@@ -104,8 +104,8 @@ class Ocrmypdf < Formula
   end
 
   resource "tqdm" do
-    url "https://files.pythonhosted.org/packages/d4/2a/99ac62cb012d81ffd96a2ddd9eba54d942c56f9244feb58b6a9a49d547d8/tqdm-4.56.2.tar.gz"
-    sha256 "11d544652edbdfc9cc41aa4c8a5c166513e279f3f2d9f1a9e1c89935b51de6ff"
+    url "https://files.pythonhosted.org/packages/b1/43/5fbcc228769304f437f412b98be988121afff58245105ad4fdad7f8c1526/tqdm-4.58.0.tar.gz"
+    sha256 "c23ac707e8e8aabb825e4d91f8e17247f9cc14b0d64dd9e97be0781e9e525bba"
   end
 
   def install
