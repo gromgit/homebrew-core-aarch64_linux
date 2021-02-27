@@ -6,10 +6,10 @@ class Lmod < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2b38c29714de3ceb0ea05317f0148c8b3c08a016963066136232a25b1de3774a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "2a489a06f65d78ebee6edaca37f6fae19708e7caedc70d3f8c538497ab4f6b2d"
-    sha256 cellar: :any_skip_relocation, catalina:      "894e7d078b89216a1fd4a071d021b625db90eab2eb3ae290749007b32cdd6780"
-    sha256 cellar: :any_skip_relocation, mojave:        "40f3300fff9aca10b27777f09ddc1207076f4351493880b4f896e9c6b1c26d5b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d02f44d622bf1a6e32c4a773d7347c13a7e7d180c60f86ac3b561baa3b825c1a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3af7c13110280516b1de84411c770daed03ebb05c81ea416ee22dbe850622b30"
+    sha256 cellar: :any_skip_relocation, catalina:      "7c8309785cd559fd33cd47199f2a3508bef788e17de32454a835509b8ace1217"
+    sha256 cellar: :any_skip_relocation, mojave:        "6defac263a7bc8e12a0d432b105a9c7a720f5a24ef0d7db57ad04030873cb0cc"
   end
 
   depends_on "luarocks" => :build
