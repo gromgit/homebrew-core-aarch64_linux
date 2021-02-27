@@ -7,9 +7,10 @@ class Ipopt < Formula
   head "https://github.com/coin-or/Ipopt.git"
 
   bottle do
-    sha256 cellar: :any, big_sur:  "3b0388a537a291d3078a67cccceff9b3d26042a868da1a48fef3dde71d33f26e"
-    sha256 cellar: :any, catalina: "40f3152e3f24b107acad92e645391ffdee423210a1af5e2c0d286ab14aa92d5b"
-    sha256 cellar: :any, mojave:   "13409cd330a4e313b67044d868618168dfd2e6c0adf8ff660243c3afedfada4b"
+    sha256 cellar: :any, arm64_big_sur: "b565cf2a619ac1925cda935b9ded13ee66f339d8d87716eff7778ea6e8364d9c"
+    sha256 cellar: :any, big_sur:       "3b0388a537a291d3078a67cccceff9b3d26042a868da1a48fef3dde71d33f26e"
+    sha256 cellar: :any, catalina:      "40f3152e3f24b107acad92e645391ffdee423210a1af5e2c0d286ab14aa92d5b"
+    sha256 cellar: :any, mojave:        "13409cd330a4e313b67044d868618168dfd2e6c0adf8ff660243c3afedfada4b"
   end
 
   depends_on "openjdk" => :build
