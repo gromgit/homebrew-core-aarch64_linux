@@ -6,10 +6,9 @@ class Urweb < Formula
   revision 3
 
   bottle do
-    sha256 big_sur:     "651f89a41cbaf3b06d775d56d6da32b50d36a2850985e762819f89e6701c36e6"
-    sha256 catalina:    "ea2ccdf37715d601fb22b301e9646d8a56bd408b88c8f83e2feda08d3695712c"
-    sha256 mojave:      "edfad2dea9f27c87d7a68396f50cbbf6d345edf6059abf555ad6c7d2d0bc2177"
-    sha256 high_sierra: "ccc6d329298c6d3f3f4ba7e67b8be51017b7f95dad00de35d63fe49c670f1ee2"
+    sha256 big_sur:  "6fd6c24befec836a6bdeb0880f909113379d901a7774b87daca85c9f66c32fa6"
+    sha256 catalina: "f523137760d386fefaadc6f2beaf0057fdc66abd94b25f1babb7a5ac5f7c2448"
+    sha256 mojave:   "63ea10560a98e90a910d88146f973fe072dd3e7392a0ba1c5e99be0c9d4f3011"
   end
 
   depends_on "autoconf" => :build
