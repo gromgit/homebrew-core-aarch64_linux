@@ -7,10 +7,10 @@ class Argocd < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "44341e62bccb23ab8a57d6400471b7197754681c7e1a8d1f93c6e37fa69c6a72"
-    sha256 cellar: :any_skip_relocation, big_sur:       "2f90e5e100cd1c4f3fb3f945950a73ab325a1f0275782313d2aec8fce8342895"
-    sha256 cellar: :any_skip_relocation, catalina:      "c33d8c368a9a107660e126a0cad3c4cca44725156abbbda054acdc3c80dcfbc8"
-    sha256 cellar: :any_skip_relocation, mojave:        "3c8b635b830fb1bf377ad8528dcc543b5c28e47f02aa9093046695e4a23b8b0d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9d7d9d0a69da65241d4991d755fda01f2e3967df8d6267422c329b257ae4a294"
+    sha256 cellar: :any_skip_relocation, big_sur:       "aa183e49d795f835f718fa3321281fc649de9370e832668d18b6b2521b7f8e5c"
+    sha256 cellar: :any_skip_relocation, catalina:      "9db81b3114af30415bdc66ed5d7f1fb0283128f5cf54ddf0fce7992216144db6"
+    sha256 cellar: :any_skip_relocation, mojave:        "487f4fb7aebc6a4e5168e84a49dded2012622eea0d926bfa20f6fca34c926658"
   end
 
   depends_on "go" => :build
