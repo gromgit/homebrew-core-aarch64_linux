@@ -13,11 +13,10 @@ class Supertux < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "c5a594ef5892731a556b3956b4633c576a8450939188493556b406ed0941254c"
-    sha256 cellar: :any, big_sur:       "7dba4235519691bd4a1cffb0764d8e88563936ff98f88dae6db324aca59b06e8"
-    sha256 cellar: :any, catalina:      "2180590875a08d8aa1a03303090ecf34ff3a01bca1084db4b0fba6437090d100"
-    sha256 cellar: :any, mojave:        "a3e03cceaedb6ab9dec08e4dc01882e259de440132d06f9c1f50cebd8b61c483"
-    sha256 cellar: :any, high_sierra:   "6f1c9c50af7ccbe9632e1211b81a6bef05ad7d1e0d9c5c20c88386ab3b07cc30"
+    sha256 cellar: :any, arm64_big_sur: "a43aa28db1ce468178567d76e8d62ecc90b7059efebf09e7486adeb7fb4fa22e"
+    sha256 cellar: :any, big_sur:       "b2a5292147a6d0f84589d699a2c5f0ffb196602640c5302f82281d021274c506"
+    sha256 cellar: :any, catalina:      "59c8ea513385b6d4785c28cca54864ebdcc415d5ece4fe724d11a4a74f7f95cc"
+    sha256 cellar: :any, mojave:        "2b0b76de7aa2d930df7d8b22eb3389c4dcaea132a45de9eb88907ded500c7cb3"
   end
 
   depends_on "cmake" => :build
