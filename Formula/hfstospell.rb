@@ -12,11 +12,10 @@ class Hfstospell < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "d97b466d38e3e05645cdad74fa1318b915b312c5cfac27f6b756f36862283040"
-    sha256 cellar: :any, big_sur:       "c4eea86c022f9650a5aa07422b218f58a7007a6261ca330bd14b70ca0a58942d"
-    sha256 cellar: :any, catalina:      "73ed82308ae27989db1584b449a0035220b4f9eb1dc70df6d311c361e06f5201"
-    sha256 cellar: :any, mojave:        "dda1e98815f201c5598441c4e4b16b2ed9502c15c2f159c04a289b711233f697"
-    sha256 cellar: :any, high_sierra:   "e37d41f7279ce5c4f26f4e3b61b459690980a2a39e96e948ac4e0002a46174d7"
+    sha256 cellar: :any, arm64_big_sur: "758ed5ec9ea9fc762b891ff8f27d83a840195fe86636cd9706115063841dcf0d"
+    sha256 cellar: :any, big_sur:       "9bef29b829d94f52c22206e365f364a604620c194fefea2134ba0827fee6b5a8"
+    sha256 cellar: :any, catalina:      "93b6e9890e78fcde61b18277861e3c3ec77039e22f4c9c723078791d787521e0"
+    sha256 cellar: :any, mojave:        "f33ba3c1c11a54a7c349b41a6c230735b54cf6c58314a3a4d3fa3a8d9b1fe809"
   end
 
   depends_on "autoconf" => :build
