@@ -8,10 +8,10 @@ class Gitmoji < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4b81b993db235de8580a935925a0b543f048637a2ae0e52df101f8a8a9aeddf0"
-    sha256 cellar: :any_skip_relocation, big_sur:       "aa481b2d3232b52e38672d5d4a63b3554d5485b4c8a68a2bd708112e43cd1b17"
-    sha256 cellar: :any_skip_relocation, catalina:      "7d661b3b3f3f14b74921b64bd11509baf1588f2b9e11b3fd95c0baf76a615642"
-    sha256 cellar: :any_skip_relocation, mojave:        "03693aa7bce8b924a125f27ae3e4b18407737b1a0e1e6e7bc76b1da8d497ac10"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3128a06278d85ea1d54b718866a32e78d9fd424372fe2023648e6139d6477832"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7bb76cec02ceae5df03280cd50bf8f06776b24cdb0cd1e9ae2995f6fefe6cff5"
+    sha256 cellar: :any_skip_relocation, catalina:      "43c16a44087dd58059c1b4d3d5cdd401663bcd0d1328f4c412062465dc738f51"
+    sha256 cellar: :any_skip_relocation, mojave:        "ab44b3fe5e4951c3e96b4ea47b15dac769ede3449668e3e0f66ecd59a5af7687"
   end
 
   depends_on "node"
