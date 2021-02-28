@@ -6,9 +6,9 @@ class CassandraReaper < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "760c1fa6584111c867b28479f60eec50e362a531fa066fb29bd0d3082009c040"
-    sha256 cellar: :any_skip_relocation, catalina: "7368f52e8a3992a67a077442fcb3a2e4168cfd9607b873b55d4871302742002a"
-    sha256 cellar: :any_skip_relocation, mojave:   "29bf7a8f41b59dccf1466612a9b7a123e7e3183a5e5bd154bf47c42d44632482"
+    sha256 cellar: :any_skip_relocation, big_sur:  "30e21a4dbee1a86a8115715f99552b6f4bded64077f6b89bf5c34c3aae038532"
+    sha256 cellar: :any_skip_relocation, catalina: "048e3ff4e561888460dc1f19fcb1dff4bedf96940dafb3b32ca52eb7d08cfd11"
+    sha256 cellar: :any_skip_relocation, mojave:   "bc65e9035e8fb1665fb6bd08c817975d965feca6eed651a5fd24e93fbfd86602"
   end
 
   depends_on "openjdk@8"
