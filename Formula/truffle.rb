@@ -3,8 +3,8 @@ require "language/node"
 class Truffle < Formula
   desc "Development environment, testing framework and asset pipeline for Ethereum"
   homepage "https://trufflesuite.com"
-  url "https://registry.npmjs.org/truffle/-/truffle-5.1.67.tgz"
-  sha256 "27a313d3ab83f67bbd7da83e1b6d4bd5937a214a9d0ef5d0712f77d728fec603"
+  url "https://registry.npmjs.org/truffle/-/truffle-5.2.0.tgz"
+  sha256 "8e89423cbb057316b1ce17867501a52c2d0d7c9a06a20f09d820bce0fbb16fbf"
   license "MIT"
 
   bottle do
