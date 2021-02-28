@@ -1,8 +1,8 @@
 class Entr < Formula
   desc "Run arbitrary commands when files change"
   homepage "https://eradman.com/entrproject/"
-  url "https://eradman.com/entrproject/code/entr-4.7.tar.gz"
-  sha256 "b6c1ab7644d83bb2a269dc74160867a3be0f5df116c7eb453c25053173534429"
+  url "https://eradman.com/entrproject/code/entr-4.8.tar.gz"
+  sha256 "f05555cd745b7dc67b61a98cf79971125b7e43931a5772d5bce2d891327425ae"
   license "ISC"
   head "https://github.com/eradman/entr.git"
 
