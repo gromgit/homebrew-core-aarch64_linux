@@ -2,8 +2,8 @@ class Inlets < Formula
   desc "Expose your local endpoints to the Internet"
   homepage "https://github.com/inlets/inlets"
   url "https://github.com/inlets/inlets.git",
-      tag:      "2.7.12",
-      revision: "448880e64b35b4027321cc4f328392649dca923c"
+      tag:      "3.0.1",
+      revision: "dbccc1ee8edfa0a06e4f7b258bbee4a959bc18af"
   license "MIT"
   head "https://github.com/inlets/inlets.git"
 
@@ -94,12 +94,12 @@ class Inlets < Formula
 
       client_pid = fork do
         # Starting inlets client
-        exec "#{bin}/inlets client --remote localhost:#{remote_port} " \
-             "--upstream localhost:#{upstream_port} --token #{secret_token}"
+        exec "#{bin}/inlets client --url ws://localhost:#{remote_port} " \
+             "--upstream localhost:#{upstream_port} --token #{secret_token} --insecure"
       end
 
       sleep 3 # Waiting for inlets websocket tunnel
-      assert_match mock_response, shell_output("curl -s http://localhost:#{remote_port}/inlets-test")
+      assert_match mock_response, shell_output("curl -s localhost:#{remote_port}/inlets-test")
     ensure
       cleanup("Mock Server", mock_upstream_server_pid)
       cleanup("Inlets Server", server_pid)
