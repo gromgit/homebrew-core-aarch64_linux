@@ -6,10 +6,10 @@ class Libpqxx < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "8a331a7d9b847c409e959afdf7ca19eea8ed294b6a511fc6f11a8a2af09adb28"
-    sha256 cellar: :any, big_sur:       "31966e7684f2d14bbce813826ac6a8fd32fa7a5994eb42e288a06dd9644f64a1"
-    sha256 cellar: :any, catalina:      "e326cc5eaced4f2499f8cfc53d807070a57a6ff6e166ae3712794c96688bed74"
-    sha256 cellar: :any, mojave:        "c9cb4e5f9ee9d134d55a2fe6d8384b29765c9a301356aef096fa967136bac6bf"
+    sha256 cellar: :any, arm64_big_sur: "5d7d1131c04dc41a6277ab06f953e180fef6979be60d854e4fa02df7111e59f8"
+    sha256 cellar: :any, big_sur:       "941aa261f18765bfed6888c94baaf7a0ad495ef8272229537a881e1ac8be5504"
+    sha256 cellar: :any, catalina:      "f0304c955169cdec57747a49acb59556001944ddd83d6d53601aaa9806f25d4f"
+    sha256 cellar: :any, mojave:        "e0fa3edf4874999fbf4062c9083c74d1517e974f1bb882b7f842a0d731cd5870"
   end
 
   depends_on "pkg-config" => :build
