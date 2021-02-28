@@ -6,10 +6,10 @@ class Miniserve < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b28e6374c318343d0118d62c780e3bfb51bc48044792f6ab85642deeba031b41"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b2f273329cfbbdee52d5846095079228e9a467928e05a43e2c15dffb9b46b0db"
-    sha256 cellar: :any_skip_relocation, catalina:      "379b4a5bbe9bf62605f5b34b4373e523136316caa6df0879ba27bbc30a512ce6"
-    sha256 cellar: :any_skip_relocation, mojave:        "0b3ea752c7a77684ec37b9b30f2000e52b0e978ed8a0b2aaacc4ad927a614eef"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "916cb032415cf9a92f99714535774592c1adb2e6b01aea36c28d60d3e910b909"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4195e1a7576a43bc2bf6accc959a81e1349cd8b4c6e28c3344616ea9ade1f1a8"
+    sha256 cellar: :any_skip_relocation, catalina:      "3e67b2ffa1b6ffda5adc32278fb7c9109202c49e2c9bf4537fe6bdb7237d1dfe"
+    sha256 cellar: :any_skip_relocation, mojave:        "26a6f26ac6dbdf86e9e5950accf6393c1a65c5baf310c387cee96e10389f627d"
   end
 
   depends_on "rust" => :build
