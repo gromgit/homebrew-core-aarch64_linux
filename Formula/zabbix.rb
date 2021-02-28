@@ -25,27 +25,19 @@ class Zabbix < Formula
   depends_on "openssl@1.1"
   depends_on "pcre"
 
-  def brewed_or_shipped(db_config)
-    brewed_db_config = "#{HOMEBREW_PREFIX}/bin/#{db_config}"
-    (File.exist?(brewed_db_config) && brewed_db_config) || which(db_config)
-  end
-
   def install
-    sdk = MacOS::CLT.installed? ? "" : MacOS.sdk_path
-
     args = %W[
       --disable-dependency-tracking
       --prefix=#{prefix}
       --sysconfdir=#{etc}/zabbix
       --enable-agent
-      --with-iconv=#{sdk}/usr
       --with-libpcre=#{Formula["pcre"].opt_prefix}
       --with-openssl=#{Formula["openssl@1.1"].opt_prefix}
     ]
 
-    if MacOS.version == :el_capitan && MacOS::Xcode.version >= "8.0"
-      inreplace "configure", "clock_gettime(CLOCK_REALTIME, &tp);",
-                             "undefinedgibberish(CLOCK_REALTIME, &tp);"
+    on_macos do
+      sdk = MacOS::CLT.installed? ? "" : MacOS.sdk_path
+      args << "--with-iconv=#{sdk}/usr"
     end
 
     system "./configure", *args
