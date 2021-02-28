@@ -11,11 +11,10 @@ class Libgphoto2 < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "2215d38a580f2d8e80bbcdfc6eb0a6b84db905e33db309fc8225fd73cf2cf480"
-    sha256 big_sur:       "d622d90aec3ddb4e168eda447ff0841c318b701710906290636ba24d4b9d7b60"
-    sha256 catalina:      "9ab56abc466d07fdb2d16aced13ae7afffb9e71642b8c86a0b1610304e34baba"
-    sha256 mojave:        "434336b976e6c930255891e9d478fec925c484f50fdf153dca262a9184b6874b"
-    sha256 high_sierra:   "918032eba6577fda5b956841d50abd91c5272a0d1b69d21f3ac9f40eb24027af"
+    sha256 arm64_big_sur: "701e50258ea1063eb44408a394930ed864c076a7f54eb83d123c249ef0296b95"
+    sha256 big_sur:       "2771425b25fc5daacca8b5c2322f08440aafda9df085069f40fc05c9579972ce"
+    sha256 catalina:      "69871cc5fc750b1ae1e73a51113dcc5a9c108df1b423c53f8a2e604df4911bc6"
+    sha256 mojave:        "3d9bf09a1d548e7bac00461c93f67fcdd68a48b44f296afd361f2279a9fff175"
   end
 
   head do
