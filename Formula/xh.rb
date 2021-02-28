@@ -7,10 +7,10 @@ class Xh < Formula
   head "https://github.com/ducaale/xh.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ba56c393af8c7c69f36da15e7b31fd3dc74352633660b2b245b477a7e6cbfbee"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6d8dea8525852e9fc1215e150e4d4bc273905036b3835483a51a860881afeee8"
-    sha256 cellar: :any_skip_relocation, catalina:      "8530dbb7d683d9c96ea7a463b0327955d3da49264a4fea07371b8d39b6288e3d"
-    sha256 cellar: :any_skip_relocation, mojave:        "fe97a5675e84bf52d192fc964917a34ca02e98afe3d762e76ade103d62a0ea23"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "64964d749f996bc9db0257bad03eb87e3b8999b6b5a2e500443d705a9791145b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "aa1a4544bb0d860c9346219e1130eb92c0fa76af6427a19934b4cbea1cb27789"
+    sha256 cellar: :any_skip_relocation, catalina:      "a3e8759c45203faa82ccdca430c21cf1e27fa74f68ac820ffc5106cde321b137"
+    sha256 cellar: :any_skip_relocation, mojave:        "da0cdf25012d6a602ba4e58d18a38703f22bc201c5f64ef9802f740a284c226d"
   end
 
   depends_on "rust" => :build
