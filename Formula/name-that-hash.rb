@@ -3,8 +3,8 @@ class NameThatHash < Formula
 
   desc "Modern hash identification system"
   homepage "https://nth.skerritt.blog/"
-  url "https://files.pythonhosted.org/packages/52/54/cd43ce29282559715a8fb55b048d8afe4c186783f452fd615fcc2e2b510e/name-that-hash-1.1.5.tar.gz"
-  sha256 "0591588d954b2805e83d1cbf0c0218b43ff5468bcd3146d03e7af1a98d7bddf6"
+  url "https://files.pythonhosted.org/packages/0c/6c/5a63e2d3450fd78679262769cf47a3820ed09f1eaa444b1d7a6367f480db/name-that-hash-1.1.6.tar.gz"
+  sha256 "a78136dded9aceb87da405b68570c6c000f6858a8c4e79490f48318a5b901c1d"
   license "GPL-3.0-or-later"
   head "https://github.com/HashPals/Name-That-Hash.git", branch: "main"
 
@@ -43,8 +43,8 @@ class NameThatHash < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/55/d0/bbb5c4ce2345173badac1415881b33d0253f07b8c3c7edf92c53b9e7cbde/rich-9.12.0.tar.gz"
-    sha256 "27e3deb24555d7dad554afa871c7e77f16a0336a625ed78dd10de21193b4ec11"
+    url "https://files.pythonhosted.org/packages/23/4d/85d622a12208a1fb09540554f812e867db983d4aa7fddf763cf26d9407f5/rich-9.12.2.tar.gz"
+    sha256 "493b4288273aa46475230733358696457e5df9215c898b164a324b7d9d694e88"
   end
 
   resource "typing-extensions" do
