@@ -12,7 +12,6 @@ class KnotResolver < Formula
   end
 
   bottle do
-    root_url "https://dl.bintray.com/homebrew/bottles"
     sha256 big_sur:  "f007354c76fdd4af09945fa548dc3889deab4e84c5bd1f1c206c109febd54b11"
     sha256 catalina: "62e84d19b85449c3bda7b7b177449143c69864c72a10c2251b35c016bd779d3a"
     sha256 mojave:   "562be32a5e4504b9f2bebeb4043d36efc6e21b6a7c13578d2228ab6f1a9545b8"
