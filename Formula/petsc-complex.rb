@@ -7,10 +7,11 @@ class PetscComplex < Formula
   revision 1
 
   bottle do
-    sha256 arm64_big_sur: "3e66975df40271cbca7259ff5c4909cb9dd626d2c41d37b92b2d7f4bc468f336"
-    sha256 big_sur:       "a5674c76fac96f0375c3b3d30e979e38b6b4b8d726831844592ad80afea410b4"
-    sha256 catalina:      "8d746274a734fc0292a8259e22209934efb5c333dc66349be76ae183296b4084"
-    sha256 mojave:        "704572892ea2b34844728db9a7b763f9bc014bf4ff7010d1fa90f82b1a9997a7"
+    root_url "https://dl.bintray.com/homebrew/bottles"
+    sha256 arm64_big_sur: "e979a889e1c6c17fde16b1b23cdc6a1e331f6593de530755481cd962d1d16bbd"
+    sha256 big_sur:       "9520a89e10a7d920086d2ec80d1a52f53e2fb7d891831f1815485df29b4dfc65"
+    sha256 catalina:      "4125f60243d7e28bc051d4d2554d18d2dc1c1f002bb55de889d09d4e499c48fb"
+    sha256 mojave:        "d94ad061ec2daf07f74b827ce9ff9b1bdb202d60a6379c6bf3b1707a337f695b"
   end
 
   depends_on "hdf5"
