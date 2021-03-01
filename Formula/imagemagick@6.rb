@@ -16,7 +16,6 @@ class ImagemagickAT6 < Formula
   end
 
   bottle do
-    root_url "https://dl.bintray.com/homebrew/bottles"
     sha256 arm64_big_sur: "48fc48baf32becfab4f7398c459fdc534bb932b08b03faae2b2207f7c19bf6e0"
     sha256 big_sur:       "4ea4cb6d4dcc99c4e1f1a57eeafdbcd6201227537cacacb1a59606aa1b2b00ad"
     sha256 catalina:      "739e313804179478d2bb781ad9e3491fff837a3f1983a25d8dccac1be79dbd11"
