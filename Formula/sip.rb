@@ -12,7 +12,6 @@ class Sip < Formula
   end
 
   bottle do
-    root_url "https://dl.bintray.com/homebrew/bottles"
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "71ce74e4246ef979c64023470b0d5d6d33cf108bbedc3d7423c410b145444971"
     sha256 cellar: :any_skip_relocation, big_sur:       "7f80f89a34ee8addbefe89fc8a858e25f374e4bb35f989b6e00f6f5d9a91e5a1"
     sha256 cellar: :any_skip_relocation, catalina:      "e6d4c1765eee476b786dc0f4d42f207df4f44210b70874ee6ba6f7538f2cd56f"
