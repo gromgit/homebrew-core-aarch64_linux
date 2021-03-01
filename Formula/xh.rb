@@ -8,7 +8,6 @@ class Xh < Formula
   head "https://github.com/ducaale/xh.git"
 
   bottle do
-    root_url "https://dl.bintray.com/homebrew/bottles"
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "86e2d10fe797a9583a42e7fe028923a8dffc63458eb39ca785e7adfa75fb8422"
     sha256 cellar: :any_skip_relocation, big_sur:       "af7e199fe0b18f23efb73d13575f2a389e59fe61d60b50d849ec10fc46de9ca5"
     sha256 cellar: :any_skip_relocation, catalina:      "171279e3d8a5154a701fccb3daff418f020406ec72d722b2c127f8f7576b4971"
