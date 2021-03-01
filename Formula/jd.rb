@@ -6,7 +6,6 @@ class Jd < Formula
   license "MIT"
 
   bottle do
-    root_url "https://dl.bintray.com/homebrew/bottles"
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "5b45be90cd17c04df3705c2ee08cdef96e46e74367d8203b0e5d78b03ac925e7"
     sha256 cellar: :any_skip_relocation, big_sur:       "25a7769810ab7ae690b0eb36ca77ebabb2c1d7bccf69fc5d84997019c1ecce42"
     sha256 cellar: :any_skip_relocation, catalina:      "b2598d40731b157f9bad27e48397db6dd44f8df036f66657ea9961e6a04573a2"
