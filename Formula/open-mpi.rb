@@ -28,7 +28,6 @@ class OpenMpi < Formula
   end
 
   bottle do
-    root_url "https://dl.bintray.com/homebrew/bottles"
     sha256 arm64_big_sur: "1a32070a050b640c3340fa373646616e24c08bb766a48ccc9c3acd96a17f2cad"
     sha256 big_sur:       "cd22187eefe00b41be67b2abb748d0a1423034263dd6c0675d09bf800362f2f8"
     sha256 catalina:      "66dc67fc6a8541ef9f8fc4fc67086ab792b229defc2723101fb55fcecb2bf563"
