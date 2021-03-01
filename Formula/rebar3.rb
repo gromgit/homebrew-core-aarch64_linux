@@ -11,10 +11,10 @@ class Rebar3 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9435773478bd827406624661c61bbd684915d0211fdfc4561534a71a35dc586b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "39fe38be9b648ad395ae221e1cc6e36ea19e70f1bd36e96e2329f2985e23b2a2"
-    sha256 cellar: :any_skip_relocation, catalina:      "a05ca90daf365ebae8b5970613e1bfed5b95cf7ab5f37673bd17f8595dc277fc"
-    sha256 cellar: :any_skip_relocation, mojave:        "a3184b782e3ca3b814d6a75641272ad2737492bfdaa6bd63225b1a1655c937af"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8f036ba3f725ef43b4a7ee18f5e1384411d9916a477dc88e1298b85b3867e6e3"
+    sha256 cellar: :any_skip_relocation, big_sur:       "8e2b1a22dce3f1bebc7b8825b6a1454ac4f37c68f85b821df52a56a908b46f38"
+    sha256 cellar: :any_skip_relocation, catalina:      "e484c9b86f0997d0f060989ab437ef02168693fde15ae4ac45700f354f604046"
+    sha256 cellar: :any_skip_relocation, mojave:        "72082c4fe351b34cf778f4e3acd59381c8c8d66477cfb495be84bd22532b1b70"
   end
 
   depends_on "erlang"
