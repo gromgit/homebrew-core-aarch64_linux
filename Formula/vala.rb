@@ -6,7 +6,6 @@ class Vala < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    root_url "https://dl.bintray.com/homebrew/bottles"
     sha256 arm64_big_sur: "d11bc6d03fb1db4083f1946c028e72517dbb216f96b5ed4a00a34e916c2a4087"
     sha256 big_sur:       "9992a0485766388a0a166346353b31fb336d2e90d02a9748166d82b68aff1bb9"
     sha256 catalina:      "eab48df8949d7a99fc3c91154b7c7cdaf6ae71c98812b2bbff5ace9517d2130c"
