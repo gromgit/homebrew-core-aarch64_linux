@@ -28,11 +28,11 @@ class OpenMpi < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "6134b45b6faa235377c5cd017b58393a0a124936c81a14da9902604671143ca8"
-    sha256 big_sur:       "2afe47eb2c9664599a1bf8687d0244a9b9067bc96e3de184cdee8e3110fa8012"
-    sha256 catalina:      "fd21d8d449c7fee6126f11994b6e0d12178b1eab55cbb17f99056d535cb1ace4"
-    sha256 mojave:        "f3a7dca683792a4fe866b62004351b1dae6acf2376609cf36bdc771d9e9104ef"
-    sha256 high_sierra:   "33d3cd119f7f7d7d3154d758cc0ad68ad513624c9a648c9b87d732ea6a8e6068"
+    root_url "https://dl.bintray.com/homebrew/bottles"
+    sha256 arm64_big_sur: "1a32070a050b640c3340fa373646616e24c08bb766a48ccc9c3acd96a17f2cad"
+    sha256 big_sur:       "cd22187eefe00b41be67b2abb748d0a1423034263dd6c0675d09bf800362f2f8"
+    sha256 catalina:      "66dc67fc6a8541ef9f8fc4fc67086ab792b229defc2723101fb55fcecb2bf563"
+    sha256 mojave:        "646305d4e1973750c88d0f08b7242517959143b632a08336b5f10195b8a8caed"
   end
 
   head do
