@@ -12,7 +12,6 @@ class Ldc < Formula
   end
 
   bottle do
-    root_url "https://dl.bintray.com/homebrew/bottles"
     sha256 arm64_big_sur: "b77a8eafcd350b25ec3e29a2c768c34f0f3ad322f1d8e60dcee7ea76da923fac"
     sha256 big_sur:       "e9cdbad72f9d7bf0b9efa3ba7776991f2f6096801d86a0fe4a1a180bf7082e31"
     sha256 catalina:      "88b4647fb9e5e172205aed2d9173867c1fc8a7421ece26593075b2f537de41ee"
