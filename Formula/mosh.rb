@@ -16,10 +16,10 @@ class Mosh < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "f57678679b33783bc9eb6e163f1bdd52d3507610a95ab2adf3130b49b037da93"
-    sha256 cellar: :any, big_sur:       "1bf08f5d050d35a8b8e12d8767e6cbd7cf8e42902773a07f0d77c33cdec80ecc"
-    sha256 cellar: :any, catalina:      "bcd06e5e53910cdbe91f303791762bb48acf09a0b34e30510fd332a03d4170fe"
-    sha256 cellar: :any, mojave:        "e4686d0217150775f8d3f45707dc1a660714432b11b284a45946960fa34f2d6d"
+    sha256 cellar: :any, arm64_big_sur: "8714105f4d1a6e178b6f274f77c18f8b0989ccfb15c2dd654681ab76cf8fc4d6"
+    sha256 cellar: :any, big_sur:       "32bdfeba5c00b7165fb9cac9482032d7584ea48794a51e61274991e61ec2fab4"
+    sha256 cellar: :any, catalina:      "8bad7be2124a23ab6580868d326ec4bad177e175dd03bfa025c95ab335c83920"
+    sha256 cellar: :any, mojave:        "18e66b8004547f8e6b7219f71c963cf847267398613fec6ab986a4e8f97f6dc5"
   end
 
   head do
