@@ -12,10 +12,11 @@ class Petsc < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "5fb1d34ea1fc10e593d9159aa0cf26a60ceedb98065b172277b5227783f02819"
-    sha256 big_sur:       "759dc30e93ccfdfa83fbfd799b7a880c077bb073dbd6d615cb18b7d032694609"
-    sha256 catalina:      "290ac64b9704477ff27f20b3f9a7b1f58e5331c565e7eaa245fb1a35c7b985cd"
-    sha256 mojave:        "b90aaa362215e8b3e00af3b2ba6abb247212fc2888c40c18411e85f9248d7434"
+    root_url "https://dl.bintray.com/homebrew/bottles"
+    sha256 arm64_big_sur: "f738cb048103c8f4691c815bdaba70387d92786c58b9517f389e58be9574816e"
+    sha256 big_sur:       "c24f27302916b3e0069384f41650cf1fe30898a4b958cffa346d16dacab0562b"
+    sha256 catalina:      "a6656c0730dcaded6ac0d3f92640e7823f8ae975e3f13465ea047a222b21c74f"
+    sha256 mojave:        "09d32a06217d800ab4204ff4ec4e0ef3f451a7381d0e50a4021ac7c0e2a6b292"
   end
 
   depends_on "hdf5"
