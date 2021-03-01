@@ -10,7 +10,6 @@ class Lanraragi < Formula
   head "https://github.com/Difegue/LANraragi.git"
 
   bottle do
-    root_url "https://dl.bintray.com/homebrew/bottles"
     sha256 cellar: :any, arm64_big_sur: "2d9c7f0bfea1cbd362f8d11adc65bc87a94bcc8a840d7d31c1d267d66c408329"
     sha256 cellar: :any, big_sur:       "818f42ce8f75cd917e28d369f80dcccb4ebb673ee9e5952489b4349f7ba60264"
     sha256 cellar: :any, catalina:      "4979a536f207000148c91c6474e676785d10ae1199299cfb64f86fb7af0b4ed6"
