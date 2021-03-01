@@ -12,11 +12,11 @@ class Sip < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "000960d8619e5dba18a9e5585e6eac8b9123977c448ea08024bf8fcab777d000"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8325e469dc8c267c526034ce3ea3bc014c3f66dc05471e0af81bef9725cdb671"
-    sha256 cellar: :any_skip_relocation, catalina:      "20c9e0745b80d218317e81bb81227b513c59d84524ad6cf44439d446cb289616"
-    sha256 cellar: :any_skip_relocation, mojave:        "5a64babc3b0e9058fce2b9963ef8193d6b8437de1d8119e43966b4ad42092590"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "c555ded74a09732751261cfe7cd243ceb69bed86f489df8a80cc4e6a5819220c"
+    root_url "https://dl.bintray.com/homebrew/bottles"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "71ce74e4246ef979c64023470b0d5d6d33cf108bbedc3d7423c410b145444971"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7f80f89a34ee8addbefe89fc8a858e25f374e4bb35f989b6e00f6f5d9a91e5a1"
+    sha256 cellar: :any_skip_relocation, catalina:      "e6d4c1765eee476b786dc0f4d42f207df4f44210b70874ee6ba6f7538f2cd56f"
+    sha256 cellar: :any_skip_relocation, mojave:        "9381bd79e617700717fe0e915df652ec5d223171be3edf760580df1529fc2b8f"
   end
 
   depends_on "python@3.9"
