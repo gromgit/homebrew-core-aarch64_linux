@@ -8,7 +8,6 @@ class Pipgrip < Formula
   license "BSD-3-Clause"
 
   bottle do
-    root_url "https://dl.bintray.com/homebrew/bottles"
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "6f7198ee3ed28547de18e8bbfd326099e3f4e3b87fc3242db9a5cef4a2ed97bb"
     sha256 cellar: :any_skip_relocation, big_sur:       "57d6f312a3880dc396b8d93982a21b52f30ee995a846663b5f6761f093224e0f"
     sha256 cellar: :any_skip_relocation, catalina:      "1f5a4656b9b8387d684d6450cd4131b56eef50717d727687dad374054632309f"
