@@ -1,8 +1,8 @@
 class VulkanHeaders < Formula
   desc "Vulkan Header files and API registry"
   homepage "https://github.com/KhronosGroup/Vulkan-Headers"
-  url "https://github.com/KhronosGroup/Vulkan-Headers/archive/v1.2.170.tar.gz"
-  sha256 "6fa84897197bd72cf4b1a686c903df67fc0fe108e4ed02e6adb3d72c468f1c1f"
+  url "https://github.com/KhronosGroup/Vulkan-Headers/archive/v1.2.171.tar.gz"
+  sha256 "b86266544ab1d6780c5ee6cdf10f24ba9ec4c97bc83d2229e0fb8142c36e52ac"
   license "Apache-2.0"
 
   bottle do
