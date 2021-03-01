@@ -6,10 +6,10 @@ class Bat < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "48a05609d5738b5f9fd8c886aa9e6915b2ad7e0a4148979a026ca157b6e8e199"
-    sha256 cellar: :any_skip_relocation, big_sur:       "2154428e50a347937148312bd787b422fd21b1135b58bf9362aebd3ea08c25d8"
-    sha256 cellar: :any_skip_relocation, catalina:      "37950cb2429346cacc2dd0a9902b71eb958fb9531114d3606bdc3acfdd4dc3c2"
-    sha256 cellar: :any_skip_relocation, mojave:        "9f4df3e3e829e59ec2d196be8a494d60f9f68ef7f9f769adfb018f75148677be"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9bbb0e82789791a64d355373fe297f0f4e3cffa229583a352d34a2b5e561025e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3665b461a7e64ff8fbd67d64ee43b1f59446087c9551b78954713602d3c0a67d"
+    sha256 cellar: :any_skip_relocation, catalina:      "d69cf5c91d2b62c76dd9e61a6fc68c6cd8c132dee4505af4f3f8677dd056436f"
+    sha256 cellar: :any_skip_relocation, mojave:        "ec1adbd7c9a6921dce69e7a538187f38a178dcd755c153cd9721d3603f052050"
   end
 
   depends_on "rust" => :build
