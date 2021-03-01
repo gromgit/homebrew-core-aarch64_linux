@@ -7,10 +7,10 @@ class Bloaty < Formula
   revision 6
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "9fe161ff1bbdd37542285fa6e5e71b4dfecadea0e34d18c0ad48f05e0cf69e3d"
-    sha256 cellar: :any, big_sur:       "923e9fbf9a2ee34f79339dbe4b012537a51cc59b05e467e813ba37519d12c881"
-    sha256 cellar: :any, catalina:      "04deacbac85760d5e8966e7d548a5844aa04db5f90d8cd68001e154003aa1b1d"
-    sha256 cellar: :any, mojave:        "657f9528c53262ef42158b29eef1a285ad98662fa037b04b8d4967eb82b8cedc"
+    sha256 cellar: :any, arm64_big_sur: "bda2966a745c782a4a0e3959195f0d00228412f18f7701f4f7984fd0d32375ab"
+    sha256 cellar: :any, big_sur:       "35e14304cbb8c06cd89f8603d05d5bc8c18144af5ca6f8462718421f9a807bf7"
+    sha256 cellar: :any, catalina:      "5bc72e3e9ed4d182c70b0a14f9236d0957b8d80e87f448c12ed58f4c6c16f5c3"
+    sha256 cellar: :any, mojave:        "33c8b5b8d008b587c1c6162cb6109c3ab59f79a84e5264d675ea2ba67f206718"
   end
 
   depends_on "cmake" => :build
