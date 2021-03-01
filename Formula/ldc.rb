@@ -12,10 +12,11 @@ class Ldc < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "4357ba0f0d76fe7a47f4d104719da05748eb7b2ff8c60759361930d7e282ef77"
-    sha256 big_sur:       "2f55c8a8f0a3c3c9a46d3d56792b539d663cbf889274ae0bc21a57002c6344c9"
-    sha256 catalina:      "c55b6dad0e09b8422d0544be364514489a1a0dea9aff57c72f769bf8d1c0ad61"
-    sha256 mojave:        "831e1e40027197d94e97670073d7a08fef68e464c5b5165d68ae670964d2e2be"
+    root_url "https://dl.bintray.com/homebrew/bottles"
+    sha256 arm64_big_sur: "b77a8eafcd350b25ec3e29a2c768c34f0f3ad322f1d8e60dcee7ea76da923fac"
+    sha256 big_sur:       "e9cdbad72f9d7bf0b9efa3ba7776991f2f6096801d86a0fe4a1a180bf7082e31"
+    sha256 catalina:      "88b4647fb9e5e172205aed2d9173867c1fc8a7421ece26593075b2f537de41ee"
+    sha256 mojave:        "b513d65c9f42d4753dd2e2d15b5b3b5ac7424d33ef037860bea86c55b1d9c7f1"
   end
 
   depends_on "cmake" => :build
