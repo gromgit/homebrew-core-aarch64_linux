@@ -13,10 +13,11 @@ class Kustomize < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e969b4596a2613d4a0218d0539247b414f1454761cd45515096828e769940cc3"
-    sha256 cellar: :any_skip_relocation, big_sur:       "76da148cdd5123bba6c93dcf1acc2f6c336b50068bf91540eebae7cf59770e31"
-    sha256 cellar: :any_skip_relocation, catalina:      "484f462718022edb82ff247f255e899dd840f9074b8ce806793f93d45bee6fbf"
-    sha256 cellar: :any_skip_relocation, mojave:        "79d9b040c8f2fc00116b389e393ec788af235534a8998a7407b1303e50c4608c"
+    root_url "https://dl.bintray.com/homebrew/bottles"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f4623b7c94d76d16b300fe0ff11418340b3e3e1dbde7193b2a5731b95a1855d3"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a01cb53c12a784dbcc54ea00ce6b35f11f74f4ab10775fe290f7ff3aa51e467c"
+    sha256 cellar: :any_skip_relocation, catalina:      "bd17057bcb469a22178063e5a1833618f6bba640076eb8e6769ee23b44b3fbca"
+    sha256 cellar: :any_skip_relocation, mojave:        "ac77d0af11db228899fc5a0741dd8b009fba7eb7d0faa4a16e43a1f1693beb1a"
   end
 
   depends_on "go" => :build
