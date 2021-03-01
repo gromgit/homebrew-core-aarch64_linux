@@ -13,7 +13,6 @@ class Kustomize < Formula
   end
 
   bottle do
-    root_url "https://dl.bintray.com/homebrew/bottles"
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "f4623b7c94d76d16b300fe0ff11418340b3e3e1dbde7193b2a5731b95a1855d3"
     sha256 cellar: :any_skip_relocation, big_sur:       "a01cb53c12a784dbcc54ea00ce6b35f11f74f4ab10775fe290f7ff3aa51e467c"
     sha256 cellar: :any_skip_relocation, catalina:      "bd17057bcb469a22178063e5a1833618f6bba640076eb8e6769ee23b44b3fbca"
