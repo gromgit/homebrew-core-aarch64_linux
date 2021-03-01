@@ -9,11 +9,10 @@ class Vit < Formula
   head "https://github.com/vit-project/vit.git", branch: "2.x"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a36d7446ff702acf2b57db04ccbe3f10d32086207d96ad34dc6e013f2a7fdfcf"
-    sha256 cellar: :any_skip_relocation, big_sur:       "facc1cfc1cad4655cc045ed25f2f134a2526eb4505a25f4ced073facbed9ebbb"
-    sha256 cellar: :any_skip_relocation, catalina:      "be5b88c99d467dcacba5ec84bd12dce9d5196bd5479469d3aaa32744cf531787"
-    sha256 cellar: :any_skip_relocation, mojave:        "e1187a8c5a4b75d55bcda3758f1a70375f7cb8fd995239383de172dc408cf23e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3fb8beae350a46c57b5e40940f5223043eb171dd7a1bcc4b9ef40320c2202571"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5fedd66cd3ea0e7b6f5cbb4e285b65c085a6b041190d42afa3ddbc4a1aa18f13"
+    sha256 cellar: :any_skip_relocation, catalina:      "17221b4deacb1ca0e63fc7949a06298dfe9d64c9a672a9974f63f4dc15473404"
+    sha256 cellar: :any_skip_relocation, mojave:        "d65ce3abf2f776a8baee233c618b543c2f806e48cfd343cc4d3febc9947f71b3"
   end
 
   depends_on "python@3.9"
