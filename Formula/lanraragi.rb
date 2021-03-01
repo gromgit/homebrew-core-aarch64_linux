@@ -10,10 +10,11 @@ class Lanraragi < Formula
   head "https://github.com/Difegue/LANraragi.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "fb0c87e940a7cc1575c7125d983b468ed7ff1564ac2c448fc70c30c5920c1189"
-    sha256 cellar: :any, big_sur:       "107ca8fb3207f324b61f7115019512c8a93280cbd8f16d60df2838d6ae8fbe44"
-    sha256 cellar: :any, catalina:      "a35ce1425f35485335912860dbf0276dd429b7091ee1166ad9b68828dc2a79b5"
-    sha256 cellar: :any, mojave:        "ed87a8d37fdb8a48cf537bd3483b42e58f3c8517abf513f9f3f1b575e1236152"
+    root_url "https://dl.bintray.com/homebrew/bottles"
+    sha256 cellar: :any, arm64_big_sur: "2d9c7f0bfea1cbd362f8d11adc65bc87a94bcc8a840d7d31c1d267d66c408329"
+    sha256 cellar: :any, big_sur:       "818f42ce8f75cd917e28d369f80dcccb4ebb673ee9e5952489b4349f7ba60264"
+    sha256 cellar: :any, catalina:      "4979a536f207000148c91c6474e676785d10ae1199299cfb64f86fb7af0b4ed6"
+    sha256 cellar: :any, mojave:        "c6d74e2aec8212ddf582f358af89cf5c6bbc820c9f2fc68132bfd6d56ad54a6a"
   end
 
   depends_on "pkg-config" => :build
