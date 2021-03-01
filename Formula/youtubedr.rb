@@ -6,7 +6,6 @@ class Youtubedr < Formula
   license "MIT"
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles"
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "91af75e110175b1cd364bb1472284dac08670daf115175b7b4cfda4440938769"
     sha256 cellar: :any_skip_relocation, big_sur:       "c11070f97e1d14caabc9bc54cfdc6b64f9fab5be0a8f906c02c6cf1557155014"
     sha256 cellar: :any_skip_relocation, catalina:      "0050fef719b5136394e6a12d35b3deafac78feb5747a90c914972d6a50ff95c5"
