@@ -7,9 +7,10 @@ class Wxmaxima < Formula
   head "https://github.com/wxMaxima-developers/wxmaxima.git"
 
   bottle do
-    sha256 big_sur:  "24b4db892c964747a2acbf3559f785c8a01cdfbfffd74425834591f51277cbb5"
-    sha256 catalina: "75b70db1b91735fe86719bff0c29f2974f2eda442ace56262d28e5a111d627ff"
-    sha256 mojave:   "b227b6400ad213a955e18ad99bfab0c541267d43a4b54aaf17ee19220ea32f32"
+    root_url "https://dl.bintray.com/homebrew/bottles"
+    sha256 big_sur:  "e15dcc46f0848c6c7d6a1b68f4a76b6d3329fb3d381e4c07cd41e1dc1c2b0383"
+    sha256 catalina: "e66764ba84d6fb8df4c9816c0e8ec84db840e8aa978abaa35e6fb8cec98e21a0"
+    sha256 mojave:   "d8ae8e9d2d931fd612ece6980ef11223305d6bd80870b0f844d31fa176b72fed"
   end
 
   depends_on "cmake" => :build
