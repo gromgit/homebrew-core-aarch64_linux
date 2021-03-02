@@ -8,10 +8,10 @@ class Pc6001vx < Formula
   head "https://github.com/eighttails/PC6001VX.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "f2f336642c7a262778f1488c7393141001d44f9926561317f718dbf21e684000"
-    sha256 cellar: :any, big_sur:       "89f9afe028baa7e2ff9bac2791f5d0c59186bafe5de3eb90817f229157ab35ce"
-    sha256 cellar: :any, catalina:      "38f1c392ed9cb5042619b663c8ef659f64ee3d8004beac5966af534cf3a977f8"
-    sha256 cellar: :any, mojave:        "12b257f629ecda8063fdede742c95ac88bf0adac8b99923cda54acacfc83136b"
+    sha256 cellar: :any, arm64_big_sur: "aee07f4792310c51d12c85a460ec600468169c9b584c47f56b1980ef1ad2ab25"
+    sha256 cellar: :any, big_sur:       "955a851714857a6316552a47e4456f1767c0031da42eb639f3bd256881f19633"
+    sha256 cellar: :any, catalina:      "26437cbcb26ef046a957c42c6a3a2ba1c35ddd35680efb1c9bbeecdf628574ab"
+    sha256 cellar: :any, mojave:        "84e0986b4d0db0802f75ed155e18b2fcf8305707ad031696179a51d28c2ff7b5"
   end
 
   depends_on "pkg-config" => :build
