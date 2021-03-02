@@ -13,10 +13,10 @@ class Qca < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "a49811534e35b364eb5ef5934cf2f938a3a936d1361636e9679cdd66f68a84b3"
-    sha256 cellar: :any, big_sur:       "bd2f1c1a96765e12401294d47b5c238f73df154adf9f75cbd4e7b1743d5ff6e5"
-    sha256 cellar: :any, catalina:      "3eb85a38faa170044765c86ec4add3ab13a403bcd8b681e2c0f03f6a20d0c864"
-    sha256 cellar: :any, mojave:        "4c5fd2f5004d77a33179eb45e7dd4d04c93c0797460b381f36c3fad0e546fe39"
+    sha256 cellar: :any, arm64_big_sur: "27409ec10e90ea2f1c6ab4c0cf343ad578ffe2d24f4ef4c8effb1ee9486c9367"
+    sha256 cellar: :any, big_sur:       "13f763f5765519e0ae2abdbd29157c913b2921a574858aae30adbcdaf2c26673"
+    sha256 cellar: :any, catalina:      "50c9fc8e51d570d965a70a978877e4b8aa632d61e6a8c836697ee7e046e1bffb"
+    sha256 cellar: :any, mojave:        "f9c79cd7db5b5c539ca73afd55b1acde851f8ca5180607265a83f72d7a29cde1"
   end
 
   depends_on "cmake" => :build
