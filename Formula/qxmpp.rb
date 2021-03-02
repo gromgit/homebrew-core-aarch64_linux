@@ -7,10 +7,9 @@ class Qxmpp < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, big_sur:     "98e9f506c62ab3b25d0de4fff745309eb36f99230910e83f8258a4853b8c99f9"
-    sha256 cellar: :any, catalina:    "ae5ada2da192e552193487318f63c28bc5a1ce71705ac97ff2f2cdaebf1ace20"
-    sha256 cellar: :any, mojave:      "ace2c4096387d98f5a27d28d73b0ed2453a61a5a9b4bd7ff1c55b105f0373b38"
-    sha256 cellar: :any, high_sierra: "a8342df624addc888a2d409e01a087e7974ff78b2091df7f6dc94949bb55abee"
+    sha256 cellar: :any, big_sur:  "305342475120bce321cb8c08155abea73b9bea24bf13182a2c90f5d15b52f55d"
+    sha256 cellar: :any, catalina: "3afe3b595811cbe3294fde018171c6af388f045ddc2a8c1dddda563d8713e5e0"
+    sha256 cellar: :any, mojave:   "bab8c0aa083c76d3dd59674a1b001efe33624e5a37b03b02effbd098d9c24852"
   end
 
   depends_on "cmake" => :build
