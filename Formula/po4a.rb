@@ -5,8 +5,8 @@ class Po4a < Formula
 
   desc "Documentation translation maintenance tool"
   homepage "https://po4a.org"
-  url "https://github.com/mquinson/po4a/releases/download/v0.62/po4a-0.62.tar.gz"
-  sha256 "0eb510a66f59de68cf7a205342036cc9fc08b39334b91f1456421a5f3359e68b"
+  url "https://github.com/mquinson/po4a/releases/download/v0.63/po4a-0.63.tar.gz"
+  sha256 "e21be3ee545444bae2fe6a44aeb9d320604708cc2e4c601bcb3cc440db75b4ce"
   license "GPL-2.0-or-later"
   head "https://github.com/mquinson/po4a.git"
 
