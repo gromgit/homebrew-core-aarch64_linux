@@ -10,10 +10,10 @@ class Copilot < Formula
   head "https://github.com/aws/copilot-cli.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "78fa7a1243e788c42e47ee8a41bd6a657a78bbe6feec0351f4ac2cb45ccf2a32"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c4e65bb0077dcf34dca1c7bbabdbc1b34b37660f89f3028321fa30ac13e5f94d"
-    sha256 cellar: :any_skip_relocation, catalina:      "0430526ab8a2bf8b3944971d1d69f986ca2e3c2c0881bacb18635b01573b17c1"
-    sha256 cellar: :any_skip_relocation, mojave:        "d79031b40ca64ab97a9f885b3c9a81f7174f91f1e7896d3b304d3059994a1bc9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "35bf8affb16f06e8435a2a1b273627b240c89044186833e16ef3495f983d215e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ca81917801301987b7688fb7a9e8b4fec893ee210c4a7465debd2d2bfdd09ea5"
+    sha256 cellar: :any_skip_relocation, catalina:      "d525998e5f9af989be701c5b24760c559340d1dd603c3273766c0d31f4080c8f"
+    sha256 cellar: :any_skip_relocation, mojave:        "520499adac5166ebd3407372bc0c7221f1303c94518b3d4ce5aa934d80862613"
   end
 
   depends_on "go" => :build
