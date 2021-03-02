@@ -5,6 +5,12 @@ class PysideAT2 < Formula
   sha256 "b306504b0b8037079a8eab772ee774b9e877a2d84bab2dbefbe4fa6f83941418"
   license all_of: ["GFDL-1.3-only", "GPL-2.0-only", "GPL-3.0-only", "LGPL-3.0-only"]
 
+  bottle do
+    sha256 arm64_big_sur: "5aced351a80a5cba50bd77ea61917574f76f85a77169f84db1e4875ef0ca6f2b"
+    sha256 big_sur:       "ef8e3252c1769370bee755084239dee8d18d93f048925134238a4e07c2ea51ae"
+    sha256 mojave:        "ff42e63c6b33b3a2e27b86a7c78155f33e74aed7ed73ba60a6b32186f63d079f"
+  end
+
   keg_only :versioned_formula
 
   depends_on "cmake" => :build
