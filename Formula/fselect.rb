@@ -6,10 +6,10 @@ class Fselect < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "384f3df72b382a2c105461dc0f800e8f7afa84b37a0046f521a47519cf1f5dba"
-    sha256 cellar: :any_skip_relocation, big_sur:       "4126d38a8952a7e51d3c0f3c4481518ca5718611137f9c864955786c39651a12"
-    sha256 cellar: :any_skip_relocation, catalina:      "368e4013f2a28775244c7758aea027e0809d6f9e676701ee386138cdefae9c94"
-    sha256 cellar: :any_skip_relocation, mojave:        "b869be256a65037aafe9e474f57ab1310f60630bdf6a22004359035e8ec73868"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c592d5306cdc7342582e28f722f1990d3dc76453d545d5d98bd4e8e374249cba"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7d92fcff976b3adcf040b5dc1571c3db7d562d96bacf06d688c300f1e11ede07"
+    sha256 cellar: :any_skip_relocation, catalina:      "e369f34177e3a27144a8560d375f15907ed4d70b2e61cd7c5fb21b5af2116cf8"
+    sha256 cellar: :any_skip_relocation, mojave:        "23ebf568871bcc6a91fc2f6f5c85fa13ca58c37fd6af2c7f8fb2f9c61fd41e5e"
   end
 
   depends_on "rust" => :build
