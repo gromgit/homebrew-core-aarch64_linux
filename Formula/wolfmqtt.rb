@@ -1,9 +1,10 @@
 class Wolfmqtt < Formula
   desc "Small, fast, portable MQTT client C implementation"
   homepage "https://github.com/wolfSSL/wolfMQTT"
-  url "https://github.com/wolfSSL/wolfMQTT/releases/download/v1.7/wolfmqtt-1.7.0.tar.gz"
-  sha256 "fd9aa74e4c7ad4fec8f2d4c40ce32785b5bb55d7c013c5acc846062583f09a9c"
+  url "https://github.com/wolfSSL/wolfMQTT/releases/download/v1.8/wolfmqtt-1.8.0.tar.gz"
+  sha256 "1d57dd90a963d79a5ec58261392d14451665c59205bdc826082266ff1b5733f2"
   license "GPL-2.0-or-later"
+  head "https://github.com/wolfSSL/wolfMQTT.git"
 
   bottle do
     sha256 cellar: :any, arm64_big_sur: "671d2455c56297175e060a87686e45d9a8343e360f99cb94030adf0679aa6f73"
@@ -13,14 +14,9 @@ class Wolfmqtt < Formula
     sha256 cellar: :any, high_sierra:   "3e2a29fd675291511f203d094e235461483a7a0d8135b286c94900dd9e25f963"
   end
 
-  head do
-    url "https://github.com/wolfSSL/wolfMQTT.git"
-
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
-  end
-
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "libtool" => :build
   depends_on "wolfssl"
 
   def install
@@ -38,7 +34,7 @@ class Wolfmqtt < Formula
       --enable-sn
     ]
 
-    system "./autogen.sh" if build.head?
+    system "./autogen.sh"
     system "./configure", *args
     system "make"
     system "make", "install"
