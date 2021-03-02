@@ -7,9 +7,9 @@ class Mesos < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 catalina:    "9b16abfb73c36bfd2b8a8f7648968730afb3fb30066b8886ddfb1dc287122f5c"
-    sha256 mojave:      "6c9c8120d0e6057f0637290a1845855b06e8830d9695d5d11ccabfcbb494bcb5"
-    sha256 high_sierra: "b8cad31bd364be2eef13f360f8b9315b4a00caac8308dd4f52f76e02b56dcb5e"
+    sha256 big_sur:  "05b5c4234338601c5fde42b7c692970d037ce6c5952dd615e5148be8dfde7c6e"
+    sha256 catalina: "7b94becb34b33903ab43411a814514cb40c82facf216480aff9c12e9125b684a"
+    sha256 mojave:   "4703f4fb7376a394f08e4b44bd90f2eacefc409e38350290dd131371892c89bb"
   end
 
   depends_on "autoconf" => :build
