@@ -19,10 +19,11 @@ class Coin3d < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "df8e2e369aad234bc940bfc8e64d3956ba9a0e1896ab68214a7fff82c14e05d7"
-    sha256 big_sur:       "509b6d290e63f31756b1040b46366e8c0cafe173b098544caf7e8c61cd8a9b7e"
-    sha256 catalina:      "7ff9151841889454aea31e68576541e0f8b2e2021fd7133abf3e596ac2ae9de8"
-    sha256 mojave:        "a791ec37b8aa81bd249cdb2837753ca4419c38957f60c60e249e6c8274976ab6"
+    rebuild 1
+    sha256 arm64_big_sur: "abd94352f91231a948c47f7f4e9c2dbe64394601dc2d9f7f8b15eae886a29529"
+    sha256 big_sur:       "e7ab948e3576ef9d8b0363b453a20a01c42dbd311088f20d7d853cc8355342f2"
+    sha256 catalina:      "bf082d3c43bbef1b6a5f0ece00c03c86b750363ea598a2d866bd6d5a78471f9c"
+    sha256 mojave:        "0d9867e5a73fef1e9f29df22300084626d76a3867d28f8898e02f1608369d4cc"
   end
 
   head do
