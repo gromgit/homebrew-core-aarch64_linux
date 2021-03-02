@@ -6,10 +6,10 @@ class CfnFormat < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "78cf14405e2bc20b7914cb2e357b5f806fd8a89bdb65792e5d2049a87dce32e3"
-    sha256 cellar: :any_skip_relocation, big_sur:       "736d8ccf911a2de6edeff90bed1ffe207ea9e1c21c0fd09c1afb724400152703"
-    sha256 cellar: :any_skip_relocation, catalina:      "3ffc8a003adc05637ed75636c41249452feb297d72b40227699681529b8b66ed"
-    sha256 cellar: :any_skip_relocation, mojave:        "d68a3331c643ee79c0b815dbe655ef5773e0a9e5e2c6b9f4f8fb2d7112bfeafb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "053205f9da61e5f8011d21fedf564f25d2e15b4f32373e1e25b5a9d44a2d9dbd"
+    sha256 cellar: :any_skip_relocation, big_sur:       "48e603a6ca9fb0ec806de448a1b43e3fad4329333d334caeadd32192126b2f04"
+    sha256 cellar: :any_skip_relocation, catalina:      "4ddde47ea62313d1ad04715c287490fb08b463331a438a14acb1184b7debd4a1"
+    sha256 cellar: :any_skip_relocation, mojave:        "c6c9b7832a4c5613d66dd7fa67d402dfbc7cd91dc5f935a6b389873c9544fc03"
   end
 
   depends_on "go" => :build
