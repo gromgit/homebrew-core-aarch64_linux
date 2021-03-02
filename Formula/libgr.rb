@@ -7,10 +7,10 @@ class Libgr < Formula
   revision 1
 
   bottle do
-    sha256 arm64_big_sur: "ac99069ce1dea838922beedb4a9bc6cc3c7e9aa2fc77b6e613aba07a7aa22283"
-    sha256 big_sur:       "c67802b5256a489bac964a3d6faa6e6434605f3e5e25ade721dff9108918868f"
-    sha256 catalina:      "aefce95a107b2463ce65fae151f0196542ce2154187a293b8acef12261f4a2e6"
-    sha256 mojave:        "b05cbf4f64def74f618ae3d6c98d8cfc77bd4dcc6704e266e02949348fb4dc9a"
+    sha256 arm64_big_sur: "248211e7864da1928b0825534e5b6518daeab27949b59a0f8306dc2c3052021a"
+    sha256 big_sur:       "c3f7f2047d7bdffbf444e02a7207336d164ad35f84599120859602201e0bc5c6"
+    sha256 catalina:      "168c22d7b50eb861cba4f9bd4cbedbefdd9c2583b4845d8ddc8b96b25fb79df6"
+    sha256 mojave:        "ae26f4e81badce18f8cf411ef9fc81ac132708ba0a739bd7e8fb3a40b60682ba"
   end
 
   depends_on "cmake" => :build
