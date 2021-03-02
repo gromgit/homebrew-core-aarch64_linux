@@ -8,11 +8,10 @@ class Qbs < Formula
   head "git://code.qt.io/qbs/qbs.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "4c90362d1b923060f7415e8725f8f83168c6aa99b0beb37c3509f05b7cfc8f69"
-    sha256 cellar: :any, big_sur:       "ed7c3801e8d426d14aed345de7357bb0cca8534ef19814fd1a58df50610686ed"
-    sha256 cellar: :any, catalina:      "302c8a1593e648b6cc95a54ee3fa997dbb8f69a4473dd4117b6896e651a6a5c1"
-    sha256 cellar: :any, mojave:        "9ebe2cac24aa15e5cfe8411e00286a8ee9fdfaa2de5851fa54036625deb775b4"
+    sha256 cellar: :any, arm64_big_sur: "86bde1552e00e2069904bea59a76654f6fe131e1ee48ec20fb8374dfe124bc8c"
+    sha256 cellar: :any, big_sur:       "2877134418908dda0931c2e56213a2d1059548fd1f10823887d1e5a6dd5e8a68"
+    sha256 cellar: :any, catalina:      "d8ba14e6afe3f8d292f074c5bfa655102f5b483e21789068d55b04671569806a"
+    sha256 cellar: :any, mojave:        "9b61fc6f4b8b8b1837a9d8d06ade301397b098d6d22e6fefe5ea1e73746551ce"
   end
 
   # https://www.qt.io/blog/2018/10/29/deprecation-of-qbs
