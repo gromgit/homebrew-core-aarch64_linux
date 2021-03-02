@@ -8,10 +8,10 @@ class CubejsCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "54359121f5f06b3658302b57507fc828d881cc9e04be1d6c40c95610592f9343"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8499a3a827ef3506096a257d5991ed6c8e38a87f8b99aa778c3a938ed5749e09"
-    sha256 cellar: :any_skip_relocation, catalina:      "67cc5f7898e5ffb61de266111ab7d5b167910c1c69b65d6dd92ee36d5cbdcd47"
-    sha256 cellar: :any_skip_relocation, mojave:        "8b7d7eab97e3fa142ed91f936014a0d5885fbda8544aef432dad4fcfef5c495d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f0f7d00e6e0f8ef06913f50e3ce5b7ac7b5ddc14662df1857fc973177b5887b8"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d489165fa864844b916e846e960ec0695db46341d2dd377b5523969f846c6499"
+    sha256 cellar: :any_skip_relocation, catalina:      "c9dec1e5eade33814aa8afee60916764331bcbbd24da29433bdfc34f4b4b41d3"
+    sha256 cellar: :any_skip_relocation, mojave:        "efa66a641f4b489882e485d21d32ca67987ebcc6ab883113a47141e1a7aa300f"
   end
 
   depends_on "node"
