@@ -7,10 +7,10 @@ class Cgal < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f610594b97b512f9dddbf434c3fa68e6de5d2e45a9a9fe27037fb9f189e76fb3"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a5f269116c77b8d520e186595582f5d5e71b4d356d396920287a59b3ae6fea7c"
-    sha256 cellar: :any_skip_relocation, catalina:      "17761c706fb5b039394dd23db164f5749ca348508820de1478f79f3422fd2ba2"
-    sha256 cellar: :any_skip_relocation, mojave:        "7163a4ad9b21491d1d9a10a0c6a126696b8647c4094c3c650dbd44b84274019d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f147afbea70885e0b536b942a8d2df08e80e95aaeca3a614b7cdde6c7aea5d00"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6b2bc9f1ff6c12c35578717211ed65c727d87362a1b5fdd94324bba7c52b7a78"
+    sha256 cellar: :any_skip_relocation, catalina:      "7c0402790a66c241c80cbc2288a4860afbdb9c3b33c1e800c3563565ba0f337f"
+    sha256 cellar: :any_skip_relocation, mojave:        "1794cb845b902e25ea590b1334fe1384c28985d21a5e181141c786c94361e153"
   end
 
   depends_on "cmake" => [:build, :test]
