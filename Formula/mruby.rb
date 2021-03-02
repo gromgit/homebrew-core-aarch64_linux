@@ -8,11 +8,10 @@ class Mruby < Formula
   head "https://github.com/mruby/mruby.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e46379c5d7600c8783732c5a4a93b9c3ce26370865e34f5b1f4c6459d2e8d94e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e1d5fd18c921cf19742a2c484f472d04b41fe84297c6c193ffc932cbc6c375df"
-    sha256 cellar: :any_skip_relocation, catalina:      "b6a638c04a991a249a737d0ad0d9f7fac31d35a7b2fd3c8507304e68f13bc983"
-    sha256 cellar: :any_skip_relocation, mojave:        "1f31eadc8801f65d42e2cfec43cda336324daf86978529dfc76338e6b094b16c"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "5b5dca177d9fdd6a2b543c9aeb2117e0d112d1578fadbb709d8565d83b21d6a7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2b4efffa2417122f3afbe67c4159d2e0938161d63a1caddbb7886bc8140eea8b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a37241df0d1f4a5a6b2d7a52c1bdf3b9487484b3fce1f90ff49994f6e7095c89"
+    sha256 cellar: :any_skip_relocation, catalina:      "13b1277f194b5b75b49d14b8ad814dc3ca0b261edf5d3c741bd99236348b47d3"
+    sha256 cellar: :any_skip_relocation, mojave:        "f6bee79071bec85f97704d8b3b7f535a8003d07bf8bb0e0ef556f82fdcb3cb81"
   end
 
   depends_on "bison" => :build
