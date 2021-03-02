@@ -1,8 +1,8 @@
 class Comby < Formula
   desc "Tool for changing code across many languages"
   homepage "https://comby.dev"
-  url "https://github.com/comby-tools/comby/archive/1.1.0.tar.gz"
-  sha256 "c843c44dd75160454f49c9fad3785e840762e73ada35bd40adf394cb5933a505"
+  url "https://github.com/comby-tools/comby/archive/1.2.0.tar.gz"
+  sha256 "3eaa6d0a3651b24c6197bab090b062d9a3b1fcba347fd4f8e96998b9e15e6c02"
   license "Apache-2.0"
 
   bottle do
@@ -11,11 +11,12 @@ class Comby < Formula
     sha256 cellar: :any, mojave:   "7ed775050f3e6178333a19e43d060f6a830c9ff89074233c77cd5cbd4c65971a"
   end
 
+  depends_on "autoconf" => :build
   depends_on "gmp" => :build
   depends_on "ocaml" => :build
   depends_on "opam" => :build
+  depends_on "pkg-config" => :build
   depends_on "pcre"
-  depends_on "pkg-config"
 
   uses_from_macos "m4"
   uses_from_macos "unzip"
