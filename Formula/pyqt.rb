@@ -7,10 +7,10 @@ class Pyqt < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "8ccb745e9c567b384ca31f8e3f4b4943240d44b6c51e8e49b38073eb2fd7a835"
-    sha256 cellar: :any, big_sur:       "167b4359448c02c360fb319a370ae27a002c2ad00430eb0ecf81b22f04714286"
-    sha256 cellar: :any, catalina:      "81c8c29e4a74e31ab9cfe8bcce524c991941f69861ab61fba073a42e24707218"
-    sha256 cellar: :any, mojave:        "25cb031596225a40027d02948692044d153a8f7d1e28102fb2b13db4146c7635"
+    sha256 cellar: :any, arm64_big_sur: "62dd04f103f14e2e1eaddf86a910150010272f3dbc65ccdc0f8a46b5c42838fb"
+    sha256 cellar: :any, big_sur:       "47f7747c0bb57baf7be2c90f0c7abd9382cb1a0caf3d0554ab6935a933962ff4"
+    sha256 cellar: :any, catalina:      "ad56d5b20ed4f896ae9295e5ddf6e4b3feba9abf462fec8b584fa162a1988d78"
+    sha256 cellar: :any, mojave:        "0ad16dcf14f820bb1ecbd96974264d04f9c58ee8f8068cd7f47de88b275d8c1e"
   end
 
   depends_on "python@3.9"
