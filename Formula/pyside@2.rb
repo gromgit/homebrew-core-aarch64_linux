@@ -8,6 +8,7 @@ class PysideAT2 < Formula
   bottle do
     sha256 arm64_big_sur: "5aced351a80a5cba50bd77ea61917574f76f85a77169f84db1e4875ef0ca6f2b"
     sha256 big_sur:       "ef8e3252c1769370bee755084239dee8d18d93f048925134238a4e07c2ea51ae"
+    sha256 catalina:      "19142ae6963b16b49aa167ea4b00e11a8c67b96fe240349f530398e2efec244a"
     sha256 mojave:        "ff42e63c6b33b3a2e27b86a7c78155f33e74aed7ed73ba60a6b32186f63d079f"
   end
 
