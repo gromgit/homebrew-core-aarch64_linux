@@ -9,9 +9,9 @@ class Datalad < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "c1c1c3b3142635a3b57733d01aac12e869d4200acb9495245a5a0bd71699ac53"
-    sha256 cellar: :any_skip_relocation, catalina: "4d0541da79e801a39b4dd35f2d2b5f9c887974f81aa8392d788bf07c7fa4c566"
-    sha256 cellar: :any_skip_relocation, mojave:   "3d265668a09af405985817852c4e7d18b6753d73b4c2b6626487427fbffe2fb0"
+    sha256 cellar: :any_skip_relocation, big_sur:  "110b3f6fce5af249a4d1fce62675cad76ff2ae7746924536a7686525f96c0242"
+    sha256 cellar: :any_skip_relocation, catalina: "5092a669ce9958c62d5a2bb0a142462e1839c9789e952ad8556e9cb00543e4a3"
+    sha256 cellar: :any_skip_relocation, mojave:   "29671dd544ba8c61421eb1016056d6e173cae8df3e8c61b3a82ef0ccbc1d3e72"
   end
 
   depends_on "git-annex"
