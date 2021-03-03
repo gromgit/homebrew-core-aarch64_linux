@@ -7,12 +7,10 @@ class Flex < Formula
   revision 2
 
   bottle do
-    sha256 arm64_big_sur: "5067cf61a1b9e5fba26590a01f0a1464c7fefa5450c3d3c673acb237b45a9c3c"
-    sha256 big_sur:       "0efd85122905dd05c8feb197492a72fcd0435270366c89dbe347fcbbe5d66ac1"
-    sha256 catalina:      "902e2701bb4d8130fe3177211dda84b6ebc6a520467874a52bcd7ff043b949cc"
-    sha256 mojave:        "2051ed8f0de322732b111f2cc82069e82f6dfd4d839e6d098bbebcd7f92220e6"
-    sha256 high_sierra:   "9c224c27a3d40a53b6f778a6b825f8b4f14654080b144e50f1bec9cc608c757d"
-    sha256 sierra:        "a958106ee0895b21c7577478b847ecdbc601ce6a723543c5da455bfe0eee5f8f"
+    sha256 arm64_big_sur: "ba78304da35f69526d386e1d1decca8818b155b4dda4f470d9393d23cf713e11"
+    sha256 big_sur:       "89ec2b04b1aab94297f490c60fe6ca2bcde7de9b7661482728b07931e635d21c"
+    sha256 catalina:      "e563a7a42aceff203cca4f420ebc6a8bbd5075a2b0007d46724f037ebc7b41a5"
+    sha256 mojave:        "687132db0837bdcb6e02b5715f6a07f658bdf109b5353908f260d46d354f7bdb"
   end
 
   head do
