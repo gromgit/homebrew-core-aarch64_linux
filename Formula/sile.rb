@@ -6,10 +6,10 @@ class Sile < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "40f32ab1907e28f043b6b08d2b19ea50fb931a79b966ede69bc741ce867d9ade"
-    sha256 cellar: :any, big_sur:       "f4ef220351da9434a844a4de65f2f4717df3255f5425d7968cbdcb3626a317a4"
-    sha256               catalina:      "fe879956b69c10c845d659dc47f49815a1d52ea83c1152235accff91311fc338"
-    sha256               mojave:        "4237eeaa4a9321141a800fdf1c6177da532496861789c9996c9662d0d906ba98"
+    sha256 cellar: :any, arm64_big_sur: "6e4cb6f0234094a58c5acee287639c91aaf6c78a64bc71f9bb98d30f4b6af5fc"
+    sha256 cellar: :any, big_sur:       "11d724e8aa83920fd025266027101c546ff300f06cbc91bb71939504aefddfb9"
+    sha256               catalina:      "da19d65b1c721bce480847fd2d28d5fd66ba6e16a715a90fc81af681304cf8d0"
+    sha256               mojave:        "2e0ae63e6a7a1db891ce18a18fecc5d261168994b239edb298ad68067ff34e29"
   end
 
   head do
