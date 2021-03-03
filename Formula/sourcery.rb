@@ -7,9 +7,9 @@ class Sourcery < Formula
   head "https://github.com/krzysztofzablocki/Sourcery.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b51831335f1fa7ee416221ded8617a0a8ed51edef37668fc5edfc96a2dedf11b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d432fb9b0b8fdfd70b5053849e7fda9e057fb3579f77b383c577dd9cec68a4e7"
-    sha256 cellar: :any_skip_relocation, catalina:      "9d8d3eee64c837af95293f30f3321636978015f821f1f6703be2c4d891045e3a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "328a5e296643bd6fac05b501cef3e02d0d9c0683446efcf19754945aeeb838af"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f47a9baba10d5395c2c5caf764382fd57d15e7761b152ee6bb230fbc32238d96"
+    sha256 cellar: :any_skip_relocation, catalina:      "c6a59fef12cb2ba7c12e847dfa311e3f1564d3d72fe6224f74de36fca37642fe"
   end
 
   depends_on xcode: "12.0"
