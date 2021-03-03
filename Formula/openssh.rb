@@ -13,10 +13,10 @@ class Openssh < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "138d45d469062c9b9622b9a962770041921b80fb88f291ec9c778c6409076238"
-    sha256 big_sur:       "291bda7c89dd8086c24a920f3a0ce0d03719f76d8aeecabfc1b6cac44e5a973e"
-    sha256 catalina:      "0eaaea9198eb264ce6c3ac5ddbba1fcfeceafa000f039317d5e746f4408088b5"
-    sha256 mojave:        "eac0ab69709477e02dd8f86142f531a9ced2a34737fd92d6b7d796152b85fcbe"
+    sha256 arm64_big_sur: "512393b02e5939a1f81f45ad968b0cd3602af9ddfecbacb6160bdb46b9d9f2fd"
+    sha256 big_sur:       "072d30cb24b4b9f9fb87096202cb007129a3299d0954cf06216b0b14a40f7d78"
+    sha256 catalina:      "1c6012ada90081236cbb95788c430623787a78ec4ce842d5990a092aa0031249"
+    sha256 mojave:        "d6b021979acbdcd9d803747977d58c9a1d23c906ceea2575b514233380c8a2ad"
   end
 
   # Please don't resubmit the keychain patch option. It will never be accepted.
