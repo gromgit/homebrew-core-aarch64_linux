@@ -4,6 +4,7 @@ class Cloc < Formula
   url "https://github.com/AlDanial/cloc/archive/1.88.tar.gz"
   sha256 "e85c2d1b3ec389d892955cf20b3fa5c797e81136e231d9a09e4f4c62e272f8cd"
   license "GPL-2.0-or-later"
+  revision 1
   head "https://github.com/AlDanial/cloc.git"
 
   bottle do
@@ -79,7 +80,9 @@ class Cloc < Formula
       end
     end
 
-    system "make", "-C", "Unix", "prefix=#{libexec}", "install"
+    # Passing in $(PODDATE) needed to work around https://github.com/AlDanial/cloc/issues/571
+    # in 1.88; remove when fixed.
+    system "make", "-C", "Unix", "prefix=#{libexec}", "PODDATE=2020-09-12", "install"
     bin.install libexec/"bin/cloc"
     bin.env_script_all_files(libexec/"bin", PERL5LIB: ENV["PERL5LIB"])
     man1.install libexec/"share/man/man1/cloc.1"
