@@ -6,14 +6,10 @@ class Zork < Formula
   head "https://github.com/devshane/zork.git"
 
   bottle do
-    sha256 arm64_big_sur: "deaa0573502a0b0f9ac6457e4b9dfa49a62eb9befe5e3917f859b17bc272a4e3"
-    sha256 big_sur:       "b1be4a149b5a45e979e1ede5e53625cf8ca3fb9d496373c50d6af7b3bba18ba6"
-    sha256 catalina:      "e3beae53e804ba7ad871d84431b76e1e7ca958bb0db4b70506771107b3f25ca1"
-    sha256 mojave:        "0290ba47e707b2812ae354672fd59409acd354fe00b445c424e07c2f3ae8133c"
-    sha256 high_sierra:   "13e9074fc59bcaeb1dbb5fdeb536da90cd33ef23889109fe20e79429ead56444"
-    sha256 sierra:        "d2fe9ee55de4906a3a99d30070d81f73637f3972a6e0c44eb7ab2461c024c684"
-    sha256 el_capitan:    "8dc6fd49cf72dfa69f677eb1cfd7850f781271c35e4adbacdac00bf918ce6fec"
-    sha256 yosemite:      "cb1076cd985679e6d9d093f4887c95bc7f0eb046c2799ec5000611703f428d47"
+    sha256 arm64_big_sur: "3f9f282ff618e0a31976bbae0b95e1fabcab2053cef50e2e54bce7877533bbec"
+    sha256 big_sur:       "d8138472c8d3b67db24ce72d03228081118aed98007d5280f6713f556fea337e"
+    sha256 catalina:      "694460ddf13fb4e4f05ef49dde4472dcce56dbc7a945c99307d3e34e35301aa2"
+    sha256 mojave:        "2c5a5b9e024a752e705b85c4420baf74aa27c5ed1088afbf043efadc7307aed3"
   end
 
   uses_from_macos "ncurses"
