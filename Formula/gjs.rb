@@ -7,9 +7,9 @@ class Gjs < Formula
   revision 2
 
   bottle do
-    sha256 big_sur:  "e8b6bb7eadddbffbae7726498add427ed12f8e14f7f284abb00cc87069bc0355"
-    sha256 catalina: "616ef4fc9b631b395af743be657c64879378303b3f5ccb523103b007a1ca4e75"
-    sha256 mojave:   "afc39b8fff6ddaadd91df0847db00cdc74252f9e186bfb8eed7bf7fbb40572cb"
+    sha256 big_sur:  "a065bebe7a6d0418e0fc35aed79ff6080691305f19bcc78de6bb81405ab73ee3"
+    sha256 catalina: "f630015b9b05f59c731cba6f99bacbd11be5ca6ac865b8a29f496c0fb1d34688"
+    sha256 mojave:   "150190528f20702178f5ad8391ad85b8f576eefa0f40b9bff94191603961dbf0"
   end
 
   depends_on "meson" => :build
