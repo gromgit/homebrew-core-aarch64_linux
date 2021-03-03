@@ -8,10 +8,10 @@ class YoutubeDl < Formula
   license "Unlicense"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "97cd96db16196a5e96c074812691b0201c5516ae28de05833072b4f3c41f6a56"
-    sha256 cellar: :any_skip_relocation, big_sur:       "94f975d584df72685a90a0bffa3fc5a7760acd8c33ca88a030f85b60f43d308b"
-    sha256 cellar: :any_skip_relocation, catalina:      "86e0556df6ded2cab2e0fa74b2ac9236eb275d1bb5acdb41a9f7eaedcb2b8585"
-    sha256 cellar: :any_skip_relocation, mojave:        "b5da2505f3fe4df4d1aadb033b740f1982f37f06acb41128c3398ad9b628a19c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "65f9444c23d097d383608ad528886f02d5c162bb40808445227877f225cd5e5a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "326f2a0caa1c1abaa383c33b1b9d1c018089facd706c590f35c594b790501c99"
+    sha256 cellar: :any_skip_relocation, catalina:      "872aae1eae8ac261c90307c18f62448e3ad6649577d9dfdb661789be41e28e98"
+    sha256 cellar: :any_skip_relocation, mojave:        "3b7f6e505dfe070aae9f537955aa3d8e0f4473a327b9570f4b14a4f2ce39a975"
   end
 
   depends_on "python@3.9"
