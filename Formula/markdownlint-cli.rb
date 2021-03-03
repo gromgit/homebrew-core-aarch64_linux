@@ -8,10 +8,10 @@ class MarkdownlintCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4c0083fd913cded2f954f9d334530b916e9f239e999f74f9686f371e2c81cb10"
-    sha256 cellar: :any_skip_relocation, big_sur:       "bc3e0ac3404144533dfb3637d783f63cfc77415c8f922b389417806a0d58cf33"
-    sha256 cellar: :any_skip_relocation, catalina:      "2ad2030d4e550a99d8227bed3943fe85042b136fdfa1328cb25ae444d8eb0458"
-    sha256 cellar: :any_skip_relocation, mojave:        "e6d45fc77924cf614b7516f2771f9111e75a56ea778cf9b378d2a849488466cb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ed9779fa2a2cc0141debd2c61501681dcd2c78741ee47ea90726e65f52515d81"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d6454296ad369bb59d89724a04b36374946d5880eaaefc9690f617f5a74ff310"
+    sha256 cellar: :any_skip_relocation, catalina:      "b005b2342165d9c7dbd528d57659fa4bbe6615c2fc6f7ea87fbec39cdb7857a5"
+    sha256 cellar: :any_skip_relocation, mojave:        "802003979b630f36bfce119b8cd8a05ce34a006e19d94bbceb2040944167233b"
   end
 
   depends_on "node"
