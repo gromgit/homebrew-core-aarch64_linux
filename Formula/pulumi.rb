@@ -8,10 +8,10 @@ class Pulumi < Formula
   head "https://github.com/pulumi/pulumi.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d4402df0189e33c9f72d232e8ce0cd123acbf92f1cdbd2f721b382511e57c567"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a3bbd55fba0761e7c523c7eb4f4aa6260f1231531310615168aeaedadcce828d"
-    sha256 cellar: :any_skip_relocation, catalina:      "652b82433a44da52b9522dfa331c6847baca1722cd97030e8ffe39b924968050"
-    sha256 cellar: :any_skip_relocation, mojave:        "6c5197e7b9199619ab9f8abb58d0c878def9ade8f3e6d59c82f5c999b3f3e3e9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bc47e1b10ecd1beedc3eebae4ea33483488980e8f2740cc1111d090044c242ad"
+    sha256 cellar: :any_skip_relocation, big_sur:       "791812adaec16e1c14b1a47d0dfa0967873f0a0d7fdfe6cdaca54961d2ca9fc1"
+    sha256 cellar: :any_skip_relocation, catalina:      "0bfec476175bf9dbde3c460ad894e5e7bee5289508b38e3fd46df133fd52c70d"
+    sha256 cellar: :any_skip_relocation, mojave:        "49685943fe6f9cc87468386e206d4eae41c7cd064021eac016827f58d4c32d8c"
   end
 
   depends_on "go" => :build
