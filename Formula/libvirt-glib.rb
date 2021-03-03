@@ -19,6 +19,8 @@ class LibvirtGlib < Formula
 
   depends_on "gobject-introspection" => :build
   depends_on "intltool" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
 
   depends_on "gettext"
@@ -26,20 +28,11 @@ class LibvirtGlib < Formula
   depends_on "libvirt"
 
   def install
-    # macOS ld does not support linker option: --version-script
-    # https://bugzilla.redhat.com/show_bug.cgi?id=1304981
-    inreplace "libvirt-gconfig/Makefile.in", /^.*-Wl,--version-script=.*$\n/, ""
-    inreplace "libvirt-glib/Makefile.in",    /^.*-Wl,--version-script=.*$\n/, ""
-    inreplace "libvirt-gobject/Makefile.in", /^.*-Wl,--version-script=.*$\n/, ""
-
-    args = %W[
-      --disable-dependency-tracking
-      --disable-silent-rules
-      --enable-introspection
-      --prefix=#{prefix}
-    ]
-    system "./configure", *args
-    system "make", "install"
+    system "meson", "setup", "builddir", *std_meson_args, "-Dintrospection=enabled"
+    cd "builddir" do
+      system "meson", "compile"
+      system "meson", "install"
+    end
   end
 
   test do
