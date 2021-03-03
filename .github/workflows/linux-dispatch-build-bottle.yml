@@ -36,6 +36,8 @@ jobs:
       - name: Setup git
         uses: Homebrew/actions/git-user-config@master
 
+      - run: brew test-bot --only-cleanup-before
+
       - name: Run brew test-bot --only-formulae
         env:
           HOMEBREW_GITHUB_API_TOKEN: ${{secrets.GITHUB_TOKEN}}
