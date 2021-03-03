@@ -5,6 +5,7 @@ class ManDb < Formula
   mirror "https://download-mirror.savannah.gnu.org/releases/man-db/man-db-2.9.4.tar.xz"
   sha256 "b66c99edfad16ad928c889f87cf76380263c1609323c280b3a9e6963fdb16756"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url "https://download.savannah.gnu.org/releases/man-db/"
@@ -21,6 +22,7 @@ class ManDb < Formula
 
   depends_on "pkg-config" => :build
   depends_on "groff"
+  depends_on "libpipeline"
 
   uses_from_macos "zlib"
 
@@ -28,26 +30,7 @@ class ManDb < Formula
     depends_on "gdbm"
   end
 
-  resource "libpipeline" do
-    url "https://download.savannah.gnu.org/releases/libpipeline/libpipeline-1.5.3.tar.gz"
-    sha256 "5dbf08faf50fad853754293e57fd4e6c69bb8e486f176596d682c67e02a0adb0"
-  end
-
   def install
-    resource("libpipeline").stage do
-      system "./configure",
-        "--disable-dependency-tracking",
-        "--disable-silent-rules",
-        "--prefix=#{buildpath}/libpipeline",
-        "--enable-static",
-        "--disable-shared"
-      system "make"
-      system "make", "install"
-    end
-
-    ENV["libpipeline_CFLAGS"] = "-I#{buildpath}/libpipeline/include"
-    ENV["libpipeline_LIBS"] = "-L#{buildpath}/libpipeline/lib -lpipeline"
-
     args = %W[
       --disable-dependency-tracking
       --disable-silent-rules
