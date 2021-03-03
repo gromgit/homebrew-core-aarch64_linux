@@ -33,10 +33,9 @@ jobs:
           echo issue=${{github.event.inputs.issue}}
           echo upload=${{github.event.inputs.upload}}
 
-      - name: Setup git
-        uses: Homebrew/actions/git-user-config@master
-
-      - run: brew test-bot --only-cleanup-before
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
 
       - name: Run brew test-bot --only-formulae
         env:
