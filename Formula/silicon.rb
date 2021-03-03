@@ -1,8 +1,8 @@
 class Silicon < Formula
   desc "Create beautiful image of your source code"
   homepage "https://github.com/Aloxaf/silicon/"
-  url "https://github.com/Aloxaf/silicon/archive/v0.4.0.tar.gz"
-  sha256 "423c03d9c92cbad8f5a136abaa680e85dfa5b5f31998aab4424c335d4d99b7ab"
+  url "https://github.com/Aloxaf/silicon/archive/v0.4.1.tar.gz"
+  sha256 "43c736dce804f91f05f4fff85aaf6f036827278a5d03f35d7c63581a42e6bff3"
   license "MIT"
 
   bottle do
@@ -13,6 +13,12 @@ class Silicon < Formula
   end
 
   depends_on "rust" => :build
+
+  # Patch the build for big_sur, remove in next release
+  patch do
+    url "https://github.com/Aloxaf/silicon/commit/b3679c4dd4087040950ff9495d76621f2f0f5d0d.patch?full_index=1"
+    sha256 "9d26486421fde04141cba5471910a9d7f7df39f88ef5f58266cdb758f1f88254"
+  end
 
   def install
     system "cargo", "install", *std_cargo_args
