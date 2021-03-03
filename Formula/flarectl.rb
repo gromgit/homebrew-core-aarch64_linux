@@ -1,8 +1,8 @@
 class Flarectl < Formula
   desc "CLI application for interacting with a Cloudflare account"
   homepage "https://github.com/cloudflare/cloudflare-go/tree/master/cmd/flarectl"
-  url "https://github.com/cloudflare/cloudflare-go/archive/v0.13.8.tar.gz"
-  sha256 "a9b599b1bcb190e75c294cc96fe8b476c88dae06f3aad046a388e0c15ab8e149"
+  url "https://github.com/cloudflare/cloudflare-go/archive/v0.14.0.tar.gz"
+  sha256 "c4a7b298d0e5519194278257131c3d51a19b2460e845fa1cfe20bb579b8af08a"
   license "BSD-3-Clause"
   head "https://github.com/cloudflare/cloudflare-go.git"
 
@@ -15,18 +15,12 @@ class Flarectl < Formula
 
   depends_on "go" => :build
 
-  # remove in next release
-  patch do
-    url "https://github.com/chenrui333/cloudflare-go/commit/5c74c62.patch?full_index=1"
-    sha256 "428c3504205af52b90a4d16e07ba7069e71ac2546787f9b6218ccb4784975b09"
-  end
-
   def install
     system "go", "build", *std_go_args, "-ldflags", "-s -w", "./cmd/flarectl"
   end
 
   test do
     ENV["CF_API_TOKEN"] = "invalid"
-    assert_match "Invalid format for Authorization header", shell_output("#{bin}/flarectl u i", 1)
+    assert_match "HTTP status 400: Invalid request headers (6003)", shell_output("#{bin}/flarectl u i", 1)
   end
 end
