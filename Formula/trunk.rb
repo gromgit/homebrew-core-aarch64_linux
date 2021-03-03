@@ -7,10 +7,10 @@ class Trunk < Formula
   head "https://github.com/thedodd/trunk.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2090dffaf1ae8f174aa21b2212b1a5d39b7ac3d3f83d9697dc9ce4d46c4a5260"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3c5418f432e211d6e1a4c4120183c397bd7f2995305a89f3b68a8828a2bdd7dd"
-    sha256 cellar: :any_skip_relocation, catalina:      "b7391e068e182edc6b66ed9422aefd184cc3470afe6d90fdc805945ee1b5abf8"
-    sha256 cellar: :any_skip_relocation, mojave:        "e08467d57b1d4bd383836e3f456a724864aa9926ce6ffa2f634b71e7838e34fd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "12484648f0ab5ed28e60fcc99acb9d3c41539368356f9d6f06683b2c67fd8ae7"
+    sha256 cellar: :any_skip_relocation, big_sur:       "08662902278429cd0e44b8d83ed3b197af206e9db02afe342e6518a46c2059ea"
+    sha256 cellar: :any_skip_relocation, catalina:      "636a9e27fcf1f2242d01200ee381ec6e23a7dd4842747ef29023aa4f29107ad0"
+    sha256 cellar: :any_skip_relocation, mojave:        "fb6c25d1bcfa3c41aac84cd57d140be2a78199e4868b0f52cbbd440dbc801a5a"
   end
 
   depends_on "rust" => :build
