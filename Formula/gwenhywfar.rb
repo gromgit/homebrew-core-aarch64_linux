@@ -11,10 +11,10 @@ class Gwenhywfar < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "2597b3ba0c568ed03b04abf4efe934a1605de3c2c1191fd455aa8cacf7dd14a9"
-    sha256 big_sur:       "2d6b9bf3240a9f942f6bd19e68063bbaa362ebde36e5fd366c86754d81e3167c"
-    sha256 catalina:      "3adaabf47068a95e705f81b591d7925b6d44c051db1861c53c76901bde44475c"
-    sha256 mojave:        "1439d26ec6d62bfe1da89457eb782c2ef1b4b1a2d6a9de99dee9ae3c5bce290c"
+    sha256 arm64_big_sur: "f70cf20a97f43e19eede3af878da91f23fd44b6e60d7e14de80a7a1ffaffa10d"
+    sha256 big_sur:       "baaf15c57cdcf69669b09bb5413cfdbb97232b6707d3091ec71f9f573c495a99"
+    sha256 catalina:      "b1d5dfe78e11d6e4fa221d7d4d22eab385ed4763583fe68895e3106ae5703436"
+    sha256 mojave:        "d33d0fcd0524fcdbf99150eb23dbf0f0482fa47294b24b0f2985c0d27e2a10a2"
   end
 
   depends_on "gettext"
