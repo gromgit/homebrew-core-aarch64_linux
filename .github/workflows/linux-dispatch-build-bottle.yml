@@ -23,6 +23,8 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: homebrew/ubuntu16.04:master
+    env:
+      HOMEBREW_BOTTLE_DOMAIN: https://homebrew.bintray.com/
     steps:
       - name: ${{github.event.inputs.formula}}
         id: print_details
