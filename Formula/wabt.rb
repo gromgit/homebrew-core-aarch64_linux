@@ -12,11 +12,10 @@ class Wabt < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f83360b912798f372cb57827a7b5cc89063f9d79c4eabf845429ccbf49c37e63"
-    sha256 cellar: :any_skip_relocation, big_sur:       "06bedfd798d896d5530c8801f830b1ace48bcce10ff438a393e2e01d4b8d1a7c"
-    sha256 cellar: :any_skip_relocation, catalina:      "910d30dea89023dadf308768eee1f8d186e88ff50210a5603c392e3dc33546b7"
-    sha256 cellar: :any_skip_relocation, mojave:        "e9eba56a16e053365d515a6637a1b12217cf65c2c3f81988a0d80af8fc2f0094"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "77e89094c8a0d95abeb513f6ff3bbfcecab82ed4cc740b7be1445cee79eef6a0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7929c1f87382bdd1c8916ce884316f2f66c019066e372ff8b3ddc2635f2b80e8"
+    sha256 cellar: :any_skip_relocation, big_sur:       "71f8e4e4ec0571b7f4186a639513dc9a7fdd3980c55ebbe7e26dd8702e9d6069"
+    sha256 cellar: :any_skip_relocation, catalina:      "b33133931248f3e603e39e5f195a662a2a3d413b49b0e23d4287e5297e87d21e"
+    sha256 cellar: :any_skip_relocation, mojave:        "247e80525e30121e4fbcfa7431f7f50166456ce147e67e0e45ee5a1d73e66f12"
   end
 
   depends_on "cmake" => :build
