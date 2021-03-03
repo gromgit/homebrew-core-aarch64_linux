@@ -10,11 +10,10 @@ class Quicktype < Formula
   head "https://github.com/quicktype/quicktype.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b821ed4fc0888190e632f424bd75767bdcfabe26bba5b21af7f51a81451de88a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8a722266b1d434cd898838d36e67ed444e8e34699ddeae6ab10367725fd2ed63"
-    sha256 cellar: :any_skip_relocation, catalina:      "0e8a066590d3379759d8d5edde1a572f1c0af2bdbd8b0794e18f574db4c3a567"
-    sha256 cellar: :any_skip_relocation, mojave:        "2905e11643e1f66851b8fda1ff00788b624297726ece95f5a6992a9da1a94766"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "af0fc0f564639712090a95dcb8876710851b56c1af32d6121eac0fdb978b5996"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2fa5aaec1d5d1cb1809dd3ad614dda13af59447772cfa4526945e4fbedcd780e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b2a13d97e30ebcbff8e32903e82ad8857ed108ad84e695cb92df7e870c7948bd"
+    sha256 cellar: :any_skip_relocation, catalina:      "313dd23d76101d388259319a688d84a0cb5d44a16e7d34b4a0b7611048d995a4"
+    sha256 cellar: :any_skip_relocation, mojave:        "81f40f8f11e16c51c4e30881094256be0b9f91228e2ebf131d261c5ee6a8339c"
   end
 
   depends_on "node"
