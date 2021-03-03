@@ -11,10 +11,10 @@ class Libvdpau < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "50169a382bb560230e7e1e5aab6c20e6027773a8557af8623183daa81205586c"
-    sha256 big_sur:       "74a3ea48e33530a014162fab0c6502f7a6be8aff25b05bd5fe971dd9d39e1371"
-    sha256 catalina:      "9b57bf4d53024c75f4a431fd814fa0b6f54163d13dfbb63607d41c1a43b7117d"
-    sha256 mojave:        "59980ec6bf90b676354ddda5e3c93a6240c4564d1c01aa35b1f1aa804d7b949a"
+    sha256 arm64_big_sur: "08dc576dba7a86a6a7fe5b76a3e988f97203b55a7ec52cfa22316cf734960391"
+    sha256 big_sur:       "37a873028601ad2d18ba85aa20c5a0e1b6ffe9bdbce860d4878498d3acd6746e"
+    sha256 catalina:      "bec2b355ee24c1bd5a7c399c073ed99f470ab79adb87bdc4bd739ca70bd7b2db"
+    sha256 mojave:        "e9580c9e952c63e6a4d02fa3e80255f0fb10c71d6b8ff4815769cd4fb80b42e2"
   end
 
   depends_on "meson" => :build
