@@ -7,10 +7,10 @@ class Rswift < Formula
   head "https://github.com/mac-cain13/R.swift.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0336661379cd6634bc68e0d863932724247416c24abd44fa5ad0eff10cbce234"
-    sha256 cellar: :any_skip_relocation, big_sur:       "795ba1b73f962b695dadce31ea8c4a133e1640cb47a3d66e3f1610e120e8d6f0"
-    sha256 cellar: :any_skip_relocation, catalina:      "171e1c4edafbafc0eb0435c237bfb5ede731e76b537d3282e995f5c3fb6b30ad"
-    sha256 cellar: :any_skip_relocation, mojave:        "607dcfb0fb765913d682438997b09ce512c0a5e9c8ae53ae957f4b5997ccd47e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b07728bea1baa0568381b1f41a34d66bbc283e7a1c5813e7078faf30a1c6a102"
+    sha256 cellar: :any_skip_relocation, big_sur:       "495500a61dc7f30d7f00f19a1c427a43990c1beb8cf99bee2b50c373c7d7eab7"
+    sha256 cellar: :any_skip_relocation, catalina:      "4776447ac9845ebd27c5ac2ab8bec3c50e79c8c7105e8702f67393da5a609747"
+    sha256 cellar: :any_skip_relocation, mojave:        "8c46754db5932ecefafee7b4fb665a8697fe72dadf86c6262458946e64e4265c"
   end
 
   depends_on xcode: "10.2"
