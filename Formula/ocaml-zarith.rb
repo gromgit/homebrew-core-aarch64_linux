@@ -1,10 +1,9 @@
 class OcamlZarith < Formula
   desc "OCaml library for arbitrary-precision arithmetic"
   homepage "https://github.com/ocaml/Zarith"
-  url "https://github.com/ocaml/Zarith/archive/release-1.11.tar.gz"
-  sha256 "f996af120a10fd06a8272ae99b7affd57cef49c57a3a596e2f589147dd183684"
+  url "https://github.com/ocaml/Zarith/archive/release-1.12.tar.gz"
+  sha256 "cc32563c3845c86d0f609c86d83bf8607ef12354863d31d3bffc0dacf1ed2881"
   license "LGPL-2.0-only"
-  revision 1
 
   bottle do
     sha256 cellar: :any, arm64_big_sur: "54144ec55af567f0b567f945dac178de3d20ce3dc211b73bbaee75776cd24603"
