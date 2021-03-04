@@ -9,10 +9,10 @@ class Snakemake < Formula
   head "https://github.com/snakemake/snakemake.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "37458b386a57beecf631518a9df3d3f2b78386daffa9ffd526363d3db13f8f73"
-    sha256 cellar: :any_skip_relocation, big_sur:       "2fe199274ef299a0e5870c3fa712cd52c4b8e66711ca7a2f9ebdc9f4af4ccfb2"
-    sha256 cellar: :any_skip_relocation, catalina:      "60cfad860d00a47b6723ccfe15f26539e0205626e264a9a157e25a3832e80ed5"
-    sha256 cellar: :any_skip_relocation, mojave:        "5f55f9291d504a6cc4ff660ff08750d3ad1c68c44a342ed78132190f16b266f7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5dbde52722b2bf7cd3d7f24ccf27b1cdc099f558b2e88d26aea00ea02d33a6d2"
+    sha256 cellar: :any_skip_relocation, big_sur:       "df34b325e4d7e2cb908f0f5b2b5ba55f26ec7cf21ed5fd43002480d959981fbb"
+    sha256 cellar: :any_skip_relocation, catalina:      "c5c6489e6881382500da7cee78f0e65ca8a40341abffe2427418a78504626016"
+    sha256 cellar: :any_skip_relocation, mojave:        "8b1fc536a20e00f512eab2bf1371b9f95a16d5b4d2ee7b2f6d3e846a29bec35e"
   end
 
   depends_on "cbc"
