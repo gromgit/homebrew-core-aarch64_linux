@@ -12,9 +12,10 @@ class OrTools < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:  "7f7b982dc5ef05f671a7054cdc75c3b44d1f45286176c05a2dabce60d153bb7b"
-    sha256 cellar: :any, catalina: "7c32b55ad051a22b0803f977faf76c9dac47d3a4d6b756dec58ae3833441cb14"
-    sha256 cellar: :any, mojave:   "821de8ceea139f1b674190ef66ce25f39bafeb1f92fe64a5168d47a3dae3e2af"
+    sha256 cellar: :any, arm64_big_sur: "54e3a32443a0b8802b76ce806d3203c5967cf153840413191abbc93ea22413db"
+    sha256 cellar: :any, big_sur:       "390ac146a2989012d3e0b52733de51f2f2f738923406ccfb11696d86b7bda6e3"
+    sha256 cellar: :any, catalina:      "c7c2951c6d072664e3e3974fee2a87f6354ad7c9765257999e5ae85d82f8594e"
+    sha256 cellar: :any, mojave:        "88c19f66797c8832956fd3c00e92692a131fd22c64925ddcc46894cba0fc2aae"
   end
 
   depends_on "cmake" => :build
