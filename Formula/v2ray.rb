@@ -4,6 +4,7 @@ class V2ray < Formula
   url "https://github.com/v2fly/v2ray-core/archive/v4.34.0.tar.gz"
   sha256 "b250f569cb0369f394f63184e748f1df0c90500feb8a1bf2276257c4c8b81bee"
   license all_of: ["MIT", "CC-BY-SA-4.0"]
+  revision 1
   head "https://github.com/v2fly/v2ray-core.git"
 
   livecheck do
@@ -31,7 +32,8 @@ class V2ray < Formula
 
   def install
     ldflags = "-s -w -buildid="
-    system "go", "build", *std_go_args,
+    execpath = libexec/name
+    system "go", "build", *std_go_args, "-o", execpath,
                  "-ldflags", ldflags,
                  "./main"
     system "go", "build", *std_go_args,
@@ -39,6 +41,8 @@ class V2ray < Formula
                  "-tags", "confonly",
                  "-o", bin/"v2ctl",
                  "./infra/control/main"
+    (bin/"v2ray").write_env_script execpath,
+      V2RAY_LOCATION_ASSET: pkgshare
 
     pkgetc.install "release/config/config.json" => "config.json"
 
