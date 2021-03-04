@@ -7,10 +7,10 @@ class Citus < Formula
   head "https://github.com/citusdata/citus.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "d1a40bc5b6cad0ddc3c665b4d59a095f27ad653b0e5cf236bf48fde1e4ddec26"
-    sha256 cellar: :any, big_sur:       "53d87358b30badc7bcc3f897cd64967c2a39f48a821a151c221da4e9559ce5ef"
-    sha256 cellar: :any, catalina:      "86fcf354388d050a9186a9c68007125112faea90ec573cfaff2cdc0388c9bdbc"
-    sha256 cellar: :any, mojave:        "ab5ab6d6fa67b9b738a93be967ec935992ea66e1f2eea4b540f43e56eb31e76b"
+    sha256 cellar: :any, arm64_big_sur: "f384af08a00045390e46cf4390015fca3e3f93b987af1afa876ca9eabc5015d6"
+    sha256 cellar: :any, big_sur:       "667481e1bc2f24347a4f59a275f574fd820e88150b88cc9f023d4bb35f1117bd"
+    sha256 cellar: :any, catalina:      "caee2277ccdf2fc3fec2c3e2c20b350f7a596cab87e33f5c4cebb409908e1c85"
+    sha256 cellar: :any, mojave:        "5b7e7f03d391ba0958e9167d7011c352f74c3b07860f774446d6a60d4ae2852d"
   end
 
   depends_on "lz4"
