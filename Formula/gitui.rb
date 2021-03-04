@@ -6,10 +6,10 @@ class Gitui < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "90607a35df37269e87bf2f023a53d6fb70fda7902320b957cca080b286e2f058"
-    sha256 cellar: :any_skip_relocation, big_sur:       "60db2601c6791f28adfa590269af2216b644c0aec57c7b76760fdbd2782c9b4c"
-    sha256 cellar: :any_skip_relocation, catalina:      "58b881c6404ef201a9f386285cad4be06eed6f9da934895d9feb6e813cd9448d"
-    sha256 cellar: :any_skip_relocation, mojave:        "724c0c2e5055cea5d49c376c2b6c8681847cf9f0a45079a3fff103f2e5641028"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4d75781a3ef72fbb1f54e6ddb6d2230ccdbe3268b469bfd9ddbc2c59bff2f11c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ac826a044086c94add4f6a0d57a4459b7393b68455f2f5a94d43bede27acee3c"
+    sha256 cellar: :any_skip_relocation, catalina:      "b49d7b75281a8298841ab91368d30c8d3cb4ef9393d2835e42fb2b69664ba1fe"
+    sha256 cellar: :any_skip_relocation, mojave:        "4f81843188073b2c33217f05151e45fd7c0f0d47fb3b96ca9174ea1e536956da"
   end
 
   depends_on "rust" => :build
