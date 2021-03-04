@@ -11,10 +11,10 @@ class Nano < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "7a7e173f0395b6a45541b07483132c39937d2e4865452f98abb4884c3ac992eb"
-    sha256 big_sur:       "ba510688137e47fc5368278100162b66a42b62b8082853c720d053cbb7d80cc8"
-    sha256 catalina:      "0131a43c34d8689fd71c7b23c5954713808f8f752800d6b4e19c817c6af2f66f"
-    sha256 mojave:        "c4f24cec046e342c6c1e2e46beb1605e6d6e2d26a37dcd8377cb6250eb4f9274"
+    sha256 arm64_big_sur: "5034b239388afcbf85b2cf42c542c8347c748c66eddbf6fb1f83c29ef19ba898"
+    sha256 big_sur:       "f6c6aa9cfc1f0e67695e2ef1b24d8b191291b9e551a8a86583d5a5ceb249ce54"
+    sha256 catalina:      "ecbab1457df82503febdb73caaf7aca750c713f2f55803cb8f31ef89961a398e"
+    sha256 mojave:        "88e884887bd9829c45afa8426cefc247f0fd57faa4985d296a8fc289bf39325e"
   end
 
   depends_on "pkg-config" => :build
