@@ -1,8 +1,8 @@
 class Okteto < Formula
   desc "Build better apps by developing and testing code directly in Kubernetes"
   homepage "https://okteto.com"
-  url "https://github.com/okteto/okteto/archive/1.11.0.tar.gz"
-  sha256 "5ccc467470a9020196c52ff8a8719bdb61e37ccdf579a9f7ce9a8e10d8cbb715"
+  url "https://github.com/okteto/okteto/archive/1.11.1.tar.gz"
+  sha256 "146e94eff3297b6fc9289530ebe2b8b667861c01f1fee6957df5baac3f09cc44"
   license "Apache-2.0"
   head "https://github.com/okteto/okteto.git"
 
@@ -22,21 +22,10 @@ class Okteto < Formula
   end
 
   test do
+    assert_match "okteto version #{version}", shell_output("#{bin}/okteto version")
+
     touch "test.rb"
-    system "echo | okteto init --overwrite --file test.yml"
-    expected = <<~EOS
-      name: #{Pathname.getwd.basename}
-      autocreate: true
-      image: okteto/ruby:2
-      command: bash
-      sync:
-      - .:/usr/src/app
-      forward:
-      - 1234:1234
-      - 8080:8080
-      persistentVolume: {}
-    EOS
-    got = File.read("test.yml")
-    assert_equal expected, got
+    assert_match "error accessing you kubeconfig file: invalid configuration",
+      shell_output("echo | #{bin}/okteto init --overwrite --file test.yml 2>&1", 1)
   end
 end
