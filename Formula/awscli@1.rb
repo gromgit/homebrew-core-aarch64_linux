@@ -4,8 +4,8 @@ class AwscliAT1 < Formula
   desc "Official Amazon AWS command-line interface"
   homepage "https://aws.amazon.com/cli/"
   # awscli should only be updated every 10 releases on multiples of 10
-  url "https://github.com/aws/aws-cli/archive/1.19.10.tar.gz"
-  sha256 "c6fa8b16635d91271589668d0730c7e6d4cbd0a3c24ef0b99b0ce3d8121fe215"
+  url "https://github.com/aws/aws-cli/archive/1.19.20.tar.gz"
+  sha256 "05c53d5282f316786c901b3e05554325b3fd8bc2a7d9050d718f9d7429ea908b"
   license "Apache-2.0"
 
   livecheck do
