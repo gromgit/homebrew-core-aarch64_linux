@@ -6,9 +6,9 @@ class Nift < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "e91f7c5ca5c8562b0c5f21a611387a4c84d0231268e2fb02d9dcab5c5a0028cf"
-    sha256 cellar: :any_skip_relocation, catalina: "566aa80fa3b9b54144ebd2d95e9c8392c23324a061c4d1c443c9b85e9e8ddd5b"
-    sha256 cellar: :any_skip_relocation, mojave:   "e5abb77d1e7ae165e9007926c8df655351259c9130ecab421c25a8ed9db3522d"
+    sha256 cellar: :any_skip_relocation, big_sur:  "58e136b7ecd542408cf98c5891ae1bf48f519b4abdd9c9695ebd4d21903a9ef2"
+    sha256 cellar: :any_skip_relocation, catalina: "b941f64a90996e4b6e98bd379fe30584a0a415210d9c68eb8fbd09d9ddc2c859"
+    sha256 cellar: :any_skip_relocation, mojave:   "3de44044421e8976553478f90db826b778134f3e5f08425af169a3dc67df9fe9"
   end
 
   def install
