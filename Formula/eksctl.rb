@@ -8,10 +8,10 @@ class Eksctl < Formula
   head "https://github.com/weaveworks/eksctl.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5af228921ac8c51fe314816e437ee43c6ede504b565192a38e2574ab65e565ae"
-    sha256 cellar: :any_skip_relocation, big_sur:       "cce84c64f95583217c1efb6720ff2b6116bf02b966838c951d3c171d012839b1"
-    sha256 cellar: :any_skip_relocation, catalina:      "9839e54e7bc5bed981b46bb6a89b60ab2a7c3f69afb39dc0972e490c1ec1adb1"
-    sha256 cellar: :any_skip_relocation, mojave:        "eb0b75e102a4f9f97459fcab28b88d4da6fd61eb7440b51739f65aa449ce2748"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "dfa238228fb8dad5823e5935c2cf390a632fbec5d4d6fe9e528010bc1b981032"
+    sha256 cellar: :any_skip_relocation, big_sur:       "68e953223d6d57fc6bd2026b5c0ca2e835d9931681358c6bfecda4557b39cc05"
+    sha256 cellar: :any_skip_relocation, catalina:      "c5ea78bc3fafae8f4f24e05c2ec262f343ae4e674b192f27ad34db1aef37491d"
+    sha256 cellar: :any_skip_relocation, mojave:        "61128d694d6f9125badc49bc2aab868b27a895cf023cba08bd05931ef256f905"
   end
 
   depends_on "counterfeiter" => :build
