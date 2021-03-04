@@ -9,10 +9,10 @@ class Certbot < Formula
   head "https://github.com/certbot/certbot.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "57aff9376ffebee8dc496452fa160bcf5fa5b640dc9ac062a94da49262507027"
-    sha256 cellar: :any, big_sur:       "10d99154d4f477f963485fd1e346c652a6719a797ee4392f6d7ea6b17ded8e57"
-    sha256 cellar: :any, catalina:      "32a50594c947ede27153dc4eb75653aa66a3ddae546a9d076c782e68b61a0758"
-    sha256 cellar: :any, mojave:        "2e6f5d380da787a79c8c817eb3436a1000ba77885fa124075e980e8285a9a95e"
+    sha256 cellar: :any, arm64_big_sur: "f36f9916fe32e01eb7fce07b71d3ad50a6ff22803f6e499098a7dcc6f7d38fbe"
+    sha256 cellar: :any, big_sur:       "c42e322e8ec5f3893748e7af9177a2d3d6c8cee4ce460644cc61e5ea6d9609bc"
+    sha256 cellar: :any, catalina:      "846dc4edb3a960a11bc042b9281599c9287b27f2d3a9cbe1dde760b24d4da8e7"
+    sha256 cellar: :any, mojave:        "5c7dbe585a460847ad7f92fc240d04b74c885004722ed77a50e319ae25a8b4e4"
   end
 
   depends_on "augeas"
