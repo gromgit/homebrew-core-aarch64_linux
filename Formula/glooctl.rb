@@ -8,10 +8,10 @@ class Glooctl < Formula
   head "https://github.com/solo-io/gloo.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "599459698bf1185471f52598737221bda0891677d7f661abb1fafb3fded4c583"
-    sha256 cellar: :any_skip_relocation, big_sur:       "2f21c941ef6c33a9a578a3de301a6eae911dfb26b47e8d7f4491ba94eb0b076d"
-    sha256 cellar: :any_skip_relocation, catalina:      "1e8412e7c0e5afedbc218cd0658307ab603305dfdabe58587192afb8fc986e08"
-    sha256 cellar: :any_skip_relocation, mojave:        "46ed9d86230b6cdee1b7c6df398e109964b263c9300c7f48faeef1b732b3f63b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0a58c5ed92953b722a0f2bdbf3e8560157f70420589de0e0b1874ac169c6cabd"
+    sha256 cellar: :any_skip_relocation, big_sur:       "639ae5471d420ec6b68ad080e206103771280bcebc22d9095b9fad589adfa415"
+    sha256 cellar: :any_skip_relocation, catalina:      "53a35f626120b51b04a3c419172c37ed5e865b88a1d1bbc5319274b6b2a786ff"
+    sha256 cellar: :any_skip_relocation, mojave:        "8c3fe88f9234807b62c008c3ca0575e7317b4a4331e9c36978038d2e75276383"
   end
 
   depends_on "go" => :build
