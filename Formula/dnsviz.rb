@@ -8,10 +8,10 @@ class Dnsviz < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "a7198e45539b7bbee521cb2433670269c98cce7e47f8d511503323cdfe8c110e"
-    sha256 cellar: :any, big_sur:       "d4f4e549c3184c0e7bf1ab1639e096b5eb53e2ee4f00a2015c84cc2991eb80f6"
-    sha256 cellar: :any, catalina:      "ef016731870649b2f385f19e3f2750fe7a3ec1597232943f6c30539e2a80daec"
-    sha256 cellar: :any, mojave:        "7cba6ba3c4ed08f3dbb8d992077dac4b73cff72a61d6020aa45ccd7c6c0a3c2a"
+    sha256 cellar: :any, arm64_big_sur: "e5a805a5cafe74d1364077901b26f0899538424af771ee4115b5f323344cf5e3"
+    sha256 cellar: :any, big_sur:       "9dbc6cd49867764480cf482dafa8a94eae56c1263b38f649e1e14795abcf1210"
+    sha256 cellar: :any, catalina:      "1add24b1469e000acdbc8da9e4b9272c84d7fc54052e45d50405419f1add8d07"
+    sha256 cellar: :any, mojave:        "5e7c4ffb3e9356299e9ff04efc282b2e809a06313c47b7f0c26628cf785177ee"
   end
 
   depends_on "pkg-config" => :build
