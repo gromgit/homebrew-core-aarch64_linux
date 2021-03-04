@@ -4,6 +4,7 @@ class Gel < Formula
   url "https://github.com/gel-rb/gel/archive/v0.3.0.tar.gz"
   sha256 "fe7c4bd67a2ea857b85b754f5b4d336e26640eda7199bc99b9a1570043362551"
   license "MIT"
+  revision 1
   head "https://github.com/gel-rb/gel.git"
 
   bottle do
@@ -15,6 +16,7 @@ class Gel < Formula
 
   def install
     ENV["PATH"] = "bin:#{ENV["HOME"]}/.local/gel/bin:#{ENV["PATH"]}"
+    inreplace "Gemfile.lock", "rdiscount (2.2.0.1)", "rdiscount (2.2.0.2)"
     system "gel", "install"
     system "rake", "man"
     bin.install "exe/gel"
