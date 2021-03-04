@@ -1,8 +1,8 @@
 class Gitui < Formula
   desc "Blazing fast terminal-ui for git written in rust"
   homepage "https://github.com/extrawurst/gitui"
-  url "https://github.com/extrawurst/gitui/archive/v0.11.0.tar.gz"
-  sha256 "ba32583bb6afc3adac8fe78d8ce10fd127b2fe4f62bc24b301d1ffbfb838bf98"
+  url "https://github.com/extrawurst/gitui/archive/v0.12.0.tar.gz"
+  sha256 "061536ecd2c9f9f52d4aecaece86e1e3c6fd1b88f25ce11483a783b800b9ec9e"
   license "MIT"
 
   bottle do
