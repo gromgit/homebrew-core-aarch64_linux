@@ -11,12 +11,10 @@ class Irrlicht < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, big_sur:     "611abae20f145f6026ddb16b24564fd11599f7ca7e4f59b0971b3b2304fad466"
-    sha256 cellar: :any_skip_relocation, catalina:    "665031602d338528055bfb7dba5c1a4c94c0deaea6c3db8d4d4cddb061a54e7d"
-    sha256 cellar: :any_skip_relocation, mojave:      "e5b9b3d8b58f26c138b9dcd421fad9769e6ab7833bbf668cdeac909fd204a601"
-    sha256 cellar: :any_skip_relocation, high_sierra: "508d300a52f1f1d5b1d5193f07559ca3da5aa3286181ae88b415bf5468c521bc"
-    sha256 cellar: :any_skip_relocation, sierra:      "d2236f351b11847d960909fa0e96d83ab0448228de30cd21014fea47a2c636a5"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, big_sur:  "a4e6536fe5a6e4e497585e5155b909878adc3005ef39f46ce4a5e5fdf4e6b9fd"
+    sha256 cellar: :any_skip_relocation, catalina: "da9222c61d7baf0d863ab4cad94c48342d99fb24cb636a88137d049ec8454c7b"
+    sha256 cellar: :any_skip_relocation, mojave:   "c2cb5b842490ab803c3faaaf4ddd28662ccc67fa72d1af73f95981b0d3371769"
   end
 
   depends_on xcode: :build
