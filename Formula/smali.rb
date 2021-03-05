@@ -6,10 +6,10 @@ class Smali < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "981c11bc45c80e77a6ff26c2bfc8929b777ed143643ecb532a9c6d4b8396c070"
-    sha256 cellar: :any_skip_relocation, big_sur:       "98ab2cc87f4b5e204eb3fa61348c9eed09a446b0b78b97b8e5aa9eb297197fe2"
-    sha256 cellar: :any_skip_relocation, catalina:      "6e4881eb8ab09baa9ecb83587b17465be09e6d75a8ba26cad624078fd633f111"
-    sha256 cellar: :any_skip_relocation, mojave:        "3a7ceafe3219a9de33ab07257f8214a3eab096625a937bb5c365a4485b0314e1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fa384e0623d92232575207c1d393204e05254206e9309b9160be038f698bcb11"
+    sha256 cellar: :any_skip_relocation, big_sur:       "508115afcebb6b4fe2b6491652cc386633144cb48669fd4624eb60542fa43fd8"
+    sha256 cellar: :any_skip_relocation, catalina:      "95c45f88283b8e8e7a4563440bb9e3ed10f93dfe43eac5e927ae1ebae65dac0b"
+    sha256 cellar: :any_skip_relocation, mojave:        "44fc500be24c9cc38b5c7031cf600019083c5385e18bd067eeacb1424061d0c9"
   end
 
   depends_on "gradle" => :build
