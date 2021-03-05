@@ -10,11 +10,10 @@ class PerconaXtrabackup < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "5a745dcfeb0c1b18f06b1f116a1bbfded138331f3d66654b13185a28347025cf"
-    sha256 big_sur:       "cf46ee03c9f8b1f4f2d5ddaae73144aad4f941c1a02e88339859483b716e399d"
-    sha256 catalina:      "2f35a444086da15b1e05ec9ac225f153376abb81546db4490fbf34b4096ec6c0"
-    sha256 mojave:        "a4f1233ebde9ab66010214fa21c739ae9f97cffcb739bdd51fe542511d5571e1"
-    sha256 high_sierra:   "7238c7d0e4977dcdba034ded3aa5ed9cd71884ba060894060755428aa85ea29a"
+    sha256 arm64_big_sur: "8b66f0ee901d903d322b9e95243f0a8ddca7357b4d4882d36be54019117cb0d1"
+    sha256 big_sur:       "e5cfb19cf48aea96afc5dbaf68f80d2004df87be382acb33deeaeacaa1318ea1"
+    sha256 catalina:      "4cbadb373a159de39d5f3a2d23397488602b915d5b2b9e68bf48afe5381ff6c0"
+    sha256 mojave:        "92e81f48bdf16cdc9d30f58265d67a9b5814ad29da723dc8dc3ae1c37f66b92d"
   end
 
   depends_on "cmake" => :build
