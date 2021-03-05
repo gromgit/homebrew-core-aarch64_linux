@@ -11,10 +11,10 @@ class Dovecot < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "6ad349637be542b74629d22b176f95463ce76b2a2222399eca131e7a32a5f153"
-    sha256 big_sur:       "8a4135867d76e1483351627346542c4828aaac3c06b7f3b82a557bf38774c689"
-    sha256 catalina:      "55c17feff666226130fb4b8bd47416bfdb22cc6ca7853a02f7a6f6d25416f440"
-    sha256 mojave:        "5733ac6559b0270d187eba750314195c0c0e469dbeb5541d688ac06ed2db8339"
+    sha256 arm64_big_sur: "b9f839dba9468f7eae88b0dd3fc82b5b874090e36a6acda2bb4213aec9643c0f"
+    sha256 big_sur:       "e2e2f8de6497655aaa4f3500e7daf815039ae7d5f4ab665a24479a93f0268f4f"
+    sha256 catalina:      "5e8f0e607c4ae4db5333adcba429c19c4292ad72512ee05a574ec412df1a066a"
+    sha256 mojave:        "23d56aa20b37f916b2942a2183529b9520072593439bb132c21dd82c91ca4d11"
   end
 
   depends_on "openssl@1.1"
