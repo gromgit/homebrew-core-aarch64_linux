@@ -5,6 +5,13 @@ class Oras < Formula
   sha256 "ace01c2e484ae91f88ecf338daf3a023692acf4e4814c33887f1a66d5a49bb3d"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "db532d4af7454d0ed5764d6d9a778a2d5cf55880e9e8699445e0156bc009aa28"
+    sha256 cellar: :any_skip_relocation, big_sur:       "2835db4161b5cffad26a3a7ada7ac33742371f31312b632b793d7f47252b6619"
+    sha256 cellar: :any_skip_relocation, catalina:      "4be6a79da4194a0e06bb4bb29721a2c7f021979cfd834357840afec7118bb2d9"
+    sha256 cellar: :any_skip_relocation, mojave:        "5dbb620dd9fad1e279d618451890d7989706919526ca968fd6c55137bf2dcf8c"
+  end
+
   depends_on "go" => :build
 
   def install
