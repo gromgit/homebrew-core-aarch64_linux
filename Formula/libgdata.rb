@@ -1,8 +1,8 @@
 class Libgdata < Formula
   desc "GLib-based library for accessing online service APIs"
   homepage "https://wiki.gnome.org/Projects/libgdata"
-  url "https://download.gnome.org/sources/libgdata/0.18/libgdata-0.18.0.tar.xz"
-  sha256 "f0c20112fa5372b62c01256f268aef5131a161dfc23868f393ecf7b8b3752580"
+  url "https://download.gnome.org/sources/libgdata/0.18/libgdata-0.18.1.tar.xz"
+  sha256 "dd8592eeb6512ad0a8cf5c8be8c72e76f74bfe6b23e4dd93f0756ee0716804c7"
   license "LGPL-2.1-or-later"
 
   bottle do
