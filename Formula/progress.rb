@@ -1,8 +1,8 @@
 class Progress < Formula
   desc "Coreutils progress viewer"
   homepage "https://github.com/Xfennec/progress"
-  url "https://github.com/Xfennec/progress/archive/v0.15.tar.gz"
-  sha256 "1ed0ac65a912ef1aa605d524eaddaacae92079cf71182096a7c65cbc61687d1b"
+  url "https://github.com/Xfennec/progress/archive/v0.16.tar.gz"
+  sha256 "59944ee35f8ae6d62ed4f9b643eee2ae6d03825da288d9779dc43de41164c834"
   license "GPL-3.0"
   head "https://github.com/Xfennec/progress.git"
 
