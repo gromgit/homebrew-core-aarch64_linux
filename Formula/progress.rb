@@ -7,11 +7,10 @@ class Progress < Formula
   head "https://github.com/Xfennec/progress.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8e1af2d5097f697d1e07212105ba6c4f90232b40b203ab2b4d984d67bba68d13"
-    sha256 cellar: :any_skip_relocation, big_sur:       "47197bd0c9cde64b7aab94dea80f68da856ee952f11d6999dca9b1ca84c97076"
-    sha256 cellar: :any_skip_relocation, catalina:      "104d62681c513b6c3e7d997245768d7e2e3941ab43dc37fb67b33bb188e4acc4"
-    sha256 cellar: :any_skip_relocation, mojave:        "62ea2e563eac2c9c9ad6f8eb3d5565024b2e303313c6d5cf509901893ee01d32"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "699d0712e633d357dbd853e797e94f85bee3af00f70b9e206fe6335d620b8e5c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "97407ff56c65c8f77371ce073478868eb507742db82c11e107a43413bce646c3"
+    sha256 cellar: :any_skip_relocation, big_sur:       "21a1663abf8e1a60baf99a3ae46d41883cd5136fabbe77dd07987e0730b08ec0"
+    sha256 cellar: :any_skip_relocation, catalina:      "804256c3be440464694fe8f0e9b94f323860f9fa2304c8984dc0e8cbbce43fab"
+    sha256 cellar: :any_skip_relocation, mojave:        "5c834228aa86062624e1d2f6f3c386607d3151842218eb9c70529e1485ee1e5b"
   end
 
   uses_from_macos "ncurses"
