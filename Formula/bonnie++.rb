@@ -11,11 +11,10 @@ class Bonniexx < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4cfba65b86dbc1566cd5a3ef029c11689e2af12290c2135e386ab7366df8c53a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "544f2f49ce8aed650290a8d30f30dbe7e1e1a172fbd458e9695397cf2f9164eb"
-    sha256 cellar: :any_skip_relocation, catalina:      "d6efac6fef771ca5d88fd4f8157e185e120c5e6935f9d940f2c6c3d5c9564ce0"
-    sha256 cellar: :any_skip_relocation, mojave:        "af6277fc9f23e9665b134aa2790dc30ebdaba386492c1832bf88a1f67280c63c"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "50872a4a0cbca4eecb515214f23efe7eb5e421dbbbe406a5e95a7bd62e4f9d34"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "902ceb61db37a6795eee8d7941a44633faa38bcd9c2a4b952bf837bab0ee6d59"
+    sha256 cellar: :any_skip_relocation, big_sur:       "75e1876579c6638c1e4c0509af5c76950ae379b034e6a051d091593cb08c1ddd"
+    sha256 cellar: :any_skip_relocation, catalina:      "83df0761686086ae64a3c08433613908d9c39d85daa7f81011b5bd70d2d5eb3d"
+    sha256 cellar: :any_skip_relocation, mojave:        "c503806d5f1ad449a6943275fa93a3930fbbd7cd63b31ee873590d0219ded5b9"
   end
 
   # Remove the #ifdef _LARGEFILE64_SOURCE macros which not only prohibits the
