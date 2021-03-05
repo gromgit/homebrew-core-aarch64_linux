@@ -6,11 +6,10 @@ class OpenjdkAT11 < Formula
   license "GPL-2.0-only"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "0257d7e29927678e60372f6d34153f9efb9e28d0d9eac7d80cddac131c6129a9"
-    sha256 cellar: :any, big_sur:       "610ed0bd964812cdce0f6e1a4b8c06fd867861c72be7ebff9f674362ba48b7b9"
-    sha256 cellar: :any, catalina:      "c640eade77c3ad69fef4d66872bbccc2e8782fcd5beee84ecb6c5b7dbb28081b"
-    sha256 cellar: :any, mojave:        "facf3c10d2f0183c5f55c2e7aad5bc9ad28da3979712a7fee342bb00b5dbdd5a"
-    sha256 cellar: :any, high_sierra:   "4e92d71376b9e07198245e434ba86c8caa95521f6dcec8454c726cec5a16c0d1"
+    sha256 cellar: :any, arm64_big_sur: "cf3697acc905957c78e2255bea96bd807c29329a8d5dd4cd22603585875c7c8f"
+    sha256 cellar: :any, big_sur:       "327ca0eb47ef48009be2f97b5ad7756ee856d7673d39b9c601715e0f8450686c"
+    sha256 cellar: :any, catalina:      "6dd0a8c323dd861d68d43b6cce0f860225c86ebc6dd583403834b306fbaf1456"
+    sha256 cellar: :any, mojave:        "c5712586d99e91ce98b7375c71b71138e32e9c89559aa42298c087046a47af79"
   end
 
   keg_only :versioned_formula
