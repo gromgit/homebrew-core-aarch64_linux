@@ -8,10 +8,10 @@ class Findutils < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "39ffd40141c1d583f89ffe0c091a76cba9f4ebdbe3035c007e45b37774eb5b84"
-    sha256 cellar: :any_skip_relocation, big_sur:       "4841d8c66138b3f5eb7d6a3c1588ae19e69c4a2561f6a6e2192a51e324022093"
-    sha256 cellar: :any_skip_relocation, catalina:      "86d61877d4c20e5bf2f89939034b0a058526c7f614d454c602fdd5685021f058"
-    sha256 cellar: :any_skip_relocation, mojave:        "34bffcfa0d3924fdc7140ba766615ef66ccd5a0336ce779ff062b66b6f60af3e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "00515eb2dc81769263cbde9066c25807b120e3a25a7dbff3f5a3858c07ba7f6d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ba06afcd59371297f232da8d59a68ebc2d66ce3ffdad3e83f65e2e9abb47a4c0"
+    sha256 cellar: :any_skip_relocation, catalina:      "7e47d6ae1e52d796ce0fd989c17ac169f1b78206e62a28274fe25296185a8a66"
+    sha256 cellar: :any_skip_relocation, mojave:        "78cf4e5b65633636743fd29b7fd3b48aebd20bed727203dc244192fdfa543f62"
   end
 
   def install
