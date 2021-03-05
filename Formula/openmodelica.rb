@@ -8,6 +8,12 @@ class Openmodelica < Formula
   license "GPL-3.0-only"
   head "https://github.com/OpenModelica/OpenModelica.git"
 
+  bottle do
+    sha256 cellar: :any, big_sur:  "e6360f11e4eeaec8010b41b880867f5be1ffe445f60ce46e36ed18108b445954"
+    sha256 cellar: :any, catalina: "f16736174646351d55ad03fd7af8f69b0de282adf343782216259aaf271cba36"
+    sha256 cellar: :any, mojave:   "488cb4da54c5c608d9a835c58484fe7acaab4ec4edcdf258fcf5d084045533d7"
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "cmake" => :build
