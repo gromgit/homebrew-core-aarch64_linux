@@ -10,11 +10,10 @@ class PerconaServer < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "e5c4e639848be2d3c0821c4b53ae5a9d1cff182e31416378b27937c5d8cda47c"
-    sha256 big_sur:       "9047fd11394d720736b4b866be2f62d3e676243b17c10fda3d649eecc2da257d"
-    sha256 catalina:      "156224d81ec50f401b366051de9a5c02b3921f54f61ebed2d6897edb5c313ef0"
-    sha256 mojave:        "ee1f35b9a3817d3cab87034cbfb04867bf5366a0f0ad5cce539d9bb71812f03d"
+    sha256 arm64_big_sur: "6fc23e2340c93784c2b12e712688ef293a81693becb500c742bd7182f08b5429"
+    sha256 big_sur:       "1279dd11e7a27faa7617a517b7ff44a7260d2a2591555c436a326017bd978b83"
+    sha256 catalina:      "290a88ceec94ecd8b6d830df04ec27482887b92b8dc12ae9df491afd6afeb141"
+    sha256 mojave:        "feb100bec9928591c10367c22cf0c041ec317d12377ff3eeb4d8f0eb23bbb39f"
   end
 
   pour_bottle? do
