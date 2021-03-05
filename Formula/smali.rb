@@ -1,8 +1,8 @@
 class Smali < Formula
   desc "Assembler/disassembler for Android's Java VM implementation"
   homepage "https://github.com/JesusFreke/smali"
-  url "https://github.com/JesusFreke/smali/archive/v2.5.1.tar.gz"
-  sha256 "cc7e0e5e8412075ad3c2ec1b3773fa529f0480ca290742c4292ef81e8e8d6f82"
+  url "https://github.com/JesusFreke/smali/archive/v2.5.2.tar.gz"
+  sha256 "2c42f0b1768a5ca0f9e7fe2241962e6ab54940964d60e2560c67b0029dac7bf1"
   license "BSD-3-Clause"
 
   bottle do
