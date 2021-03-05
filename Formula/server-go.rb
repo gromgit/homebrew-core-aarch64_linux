@@ -12,9 +12,9 @@ class ServerGo < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "2641e0d55eea433b6c1f5ac0571328f4c53d202a4f93085da975e561cf338905"
-    sha256 cellar: :any_skip_relocation, catalina: "3b44ef9a5392949b5c432f7cb5505ff1b4a5ba860584d286f846464498916fae"
-    sha256 cellar: :any_skip_relocation, mojave:   "9092c9756a2d7b45fe1ab9bb63d8b0e84c556880369512b4fc86f7b49d0b0109"
+    sha256 cellar: :any_skip_relocation, big_sur:  "be0a3cde54b13813faedea35a570dd7213b46388a688747069cb26f33e0d8d3d"
+    sha256 cellar: :any_skip_relocation, catalina: "9ff5e80e65c20ec3421d9606991ced71dc3c70de4d24a111031f942df4cc7482"
+    sha256 cellar: :any_skip_relocation, mojave:   "27eb76443ae9192d7888f251706446bb496df9e93aa079568930284c41e48428"
   end
 
   depends_on "go" => :build
