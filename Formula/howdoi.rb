@@ -3,8 +3,8 @@ class Howdoi < Formula
 
   desc "Instant coding answers via the command-line"
   homepage "https://github.com/gleitz/howdoi"
-  url "https://files.pythonhosted.org/packages/6a/ce/beb25c37546afd5cb91318ed26c4f19af994cd059bc6d1ed75261422d005/howdoi-2.0.12.tar.gz"
-  sha256 "bab3eab349ec0b534cf1b05a563d45e4d301b914c53a7f2c3446fdcc60497c93"
+  url "https://files.pythonhosted.org/packages/b1/09/8d4752c6497ba09ee8df7257493c2b511a27a00324a6d500f7f44de34028/howdoi-2.0.14.tar.gz"
+  sha256 "9416be3c8a319fc0764a743a2ad05fa374876dab71dbe15ce86c3a05ece44a0a"
   license "MIT"
 
   bottle do
@@ -60,8 +60,8 @@ class Howdoi < Formula
   end
 
   resource "keep" do
-    url "https://files.pythonhosted.org/packages/b9/c5/408a6ef63285639874d433eea0a6a6189837ff2fc7e7cb2f842e47037073/keep-2.10.tar.gz"
-    sha256 "ce71d14110df197ab5afdbd26a14c0bd266b79671118ae1351835fa192e61d9b"
+    url "https://files.pythonhosted.org/packages/6d/f2/2c35a4bb1332d81f2b1d94725a9ede4d44902fa8ec11b25dedd210394c2f/keep-2.10.1.tar.gz"
+    sha256 "3abbe445347711cecd9cbb80dab4a0777418972fc14a14e9387d0d2ae4b6adb7"
   end
 
   resource "lxml" do
