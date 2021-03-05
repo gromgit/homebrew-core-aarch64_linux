@@ -6,10 +6,10 @@ class CloudflareWrangler < Formula
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c49e743e5cd86844ead5b202dfa826151b3432d3cdb9b9d8bdd898a54081d939"
-    sha256 cellar: :any_skip_relocation, big_sur:       "204fcffdf240bd56163b9566680e2966ba56aaf2d6ebda9189f92e106a3c85f3"
-    sha256 cellar: :any_skip_relocation, catalina:      "dc78dcffc04845809392da83c962a30f002675cbe9f126ef0bc4e5c2c544e9de"
-    sha256 cellar: :any_skip_relocation, mojave:        "64b4d6e3303f79e8826b194499726fb8647a1ac37544ae05b2e278172f161777"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "31157dc7dbc35089381582cb8ead021177b2bb4977fd4d06981a9c8b6c769afc"
+    sha256 cellar: :any_skip_relocation, big_sur:       "91933ebfd5eeb560bf72bef8119c0fb2d57d96d6fa476f53eaf3c76b766d3606"
+    sha256 cellar: :any_skip_relocation, catalina:      "8a9a939973a8959d5f0550285d345144d99e52d5372bdff68104e2abb70f8a05"
+    sha256 cellar: :any_skip_relocation, mojave:        "2bf4ec75afe132efe10f38421e6c4be157d32b6bf85a3051f36c378392b66921"
   end
 
   depends_on "rust" => :build
