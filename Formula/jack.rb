@@ -11,9 +11,10 @@ class Jack < Formula
   end
 
   bottle do
-    sha256 big_sur:  "63d190108f0d1265b3e2fa25118bbe1c993dbbf4922fff9d04d6ee1d786eb4bd"
-    sha256 catalina: "526aa853b3738080f6710f957cb213e0ba313f6045270e08ffef775ddea30c3a"
-    sha256 mojave:   "8f3a34b8bb3406174b1c1e2d5f377ec85dec41372f3c772dac4abbde80d18a92"
+    sha256 arm64_big_sur: "30c242528a4d4995027685b6a9dbe0ef588101d8a77449f8b4d0efc11fda4fe0"
+    sha256 big_sur:       "63d190108f0d1265b3e2fa25118bbe1c993dbbf4922fff9d04d6ee1d786eb4bd"
+    sha256 catalina:      "526aa853b3738080f6710f957cb213e0ba313f6045270e08ffef775ddea30c3a"
+    sha256 mojave:        "8f3a34b8bb3406174b1c1e2d5f377ec85dec41372f3c772dac4abbde80d18a92"
   end
 
   depends_on "autoconf" => :build
