@@ -10,10 +10,10 @@ class Buku < Formula
   head "https://github.com/jarun/buku.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "754323aacff4caa8fe20fab1aca7f33131375493ca7d906aa909be037dae723b"
-    sha256 cellar: :any, big_sur:       "ac5450196f6df19e734b6072aa9b6fd315520ffd87de0e58bfc3bd88523a73c9"
-    sha256 cellar: :any, catalina:      "4989cb77e5bc410ad664f5e8904b7815916d334bbfa807992a42dd617f01731e"
-    sha256 cellar: :any, mojave:        "ada22914af378002d0815a8c09cc13ed6068a62c3f8742156753b2cd2be84c22"
+    sha256 cellar: :any, arm64_big_sur: "7c27aa8811abb25446408ae2ff7b9b23a52566de53eb28821f544b342c700618"
+    sha256 cellar: :any, big_sur:       "6337072398171994b7e0bfd0ca8535ba5492fdbb5836573539c283c8ce6ede70"
+    sha256 cellar: :any, catalina:      "5484288da6724aa9d73ce7ca2719e08013235e9cc852e6366b15ec1bc96944f9"
+    sha256 cellar: :any, mojave:        "9c1b39060e8c194c3a0afe38f30d766ffda32acd7e85b1ef70bd7357325348dc"
   end
 
   depends_on "rust" => :build
