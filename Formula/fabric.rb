@@ -10,10 +10,10 @@ class Fabric < Formula
   head "https://github.com/fabric/fabric.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "dcba9dc3326e61575f8465c1975b94f4829ab1300e08ca3ff42e6be7282c169a"
-    sha256 cellar: :any, big_sur:       "39f9ee8ee9147fb0c78eb252af8df4aaed5bee3f81975cda24ca29cae261b882"
-    sha256 cellar: :any, catalina:      "d210d4da6e7512f63b6a5aa639e686075ff0c955878fa70bcf904388b8c4b5b7"
-    sha256 cellar: :any, mojave:        "8428a7b7803f2285f25d066928cc91f53df8dd3bacaefd9642c00b7286d046dd"
+    sha256 cellar: :any, arm64_big_sur: "a1a85887c89e303a76e534797d94e51cb2ded8bb0a17ec42860d992199db3d82"
+    sha256 cellar: :any, big_sur:       "5ce01be4718393b51968a5ccc9437eb0badad44ca2ddef47015fbd68b9c0a4ad"
+    sha256 cellar: :any, catalina:      "0cbd0659af1acc21a578926507419bead5faa3b8d209fd6f81e889399c18ed95"
+    sha256 cellar: :any, mojave:        "1ca741b9f8f491086e767d52fd79cf2de19416dd56a2f40b82d65b7fece64193"
   end
 
   depends_on "rust" => :build
