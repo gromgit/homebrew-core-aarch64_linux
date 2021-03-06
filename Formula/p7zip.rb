@@ -24,7 +24,12 @@ class P7zip < Formula
   end
 
   def install
-    mv "makefile.macosx_llvm_64bits", "makefile.machine"
+    on_macos do
+      mv "makefile.macosx_llvm_64bits", "makefile.machine"
+    end
+    on_linux do
+      mv "makefile.linux_any_cpu", "makefile.machine"
+    end
     system "make", "all3",
                    "CC=#{ENV.cc} $(ALLFLAGS)",
                    "CXX=#{ENV.cxx} $(ALLFLAGS)"
