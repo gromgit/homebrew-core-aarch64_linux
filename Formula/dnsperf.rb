@@ -4,6 +4,7 @@ class Dnsperf < Formula
   url "https://www.dns-oarc.net/files/dnsperf/dnsperf-2.4.2.tar.gz"
   sha256 "be1782ada2bc735b1d3538ed2fa8fb52d917eb32538c2f0612ae60c024101c31"
   license "Apache-2.0"
+  revision 1
 
   livecheck do
     url :homepage
@@ -23,17 +24,6 @@ class Dnsperf < Formula
   depends_on "libxml2"
 
   def install
-    # Fix "ld: file not found: /usr/lib/system/libsystem_darwin.dylib" for lxml
-    ENV["SDKROOT"] = MacOS.sdk_path if MacOS.version == :sierra
-
-    # Extra linker flags are needed to build this on macOS.
-    # Upstream bug ticket: https://github.com/DNS-OARC/dnsperf/issues/80
-    ENV.append "LDFLAGS", "-framework CoreFoundation"
-    ENV.append "LDFLAGS", "-framework CoreServices"
-    ENV.append "LDFLAGS", "-framework Security"
-    ENV.append "LDFLAGS", "-framework GSS"
-    ENV.append "LDFLAGS", "-framework Kerberos"
-
     system "./configure", "--prefix=#{prefix}"
     system "make", "install"
   end
