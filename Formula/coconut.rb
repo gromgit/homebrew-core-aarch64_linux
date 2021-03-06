@@ -8,11 +8,10 @@ class Coconut < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ebbb005b2c3a3848f5593718d8a21a98adade56ef4bb4239fe553a60fc3f9a17"
-    sha256 cellar: :any_skip_relocation, big_sur:       "987bf18d2f7bb2378ae95c21e2a2ede148c02086099c661081040a3b69b6a0d3"
-    sha256 cellar: :any_skip_relocation, catalina:      "4a4707189427a591dde0fd1897af8c31e64e350fbc8598bd2d929aa6df726cc9"
-    sha256 cellar: :any_skip_relocation, mojave:        "088c30ab276e9a04cf3ea31a65f96ca532d6f3870d55673cc0784fe83aaa6652"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "97e617049fd9e250dfd0c3353441595fb1d4a8bacd6a0ec73eefb15fe2a0e63c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7484ead0243f9c769178519ca22664f3697fa0eff7eb33c3f9690a8f6543e572"
+    sha256 cellar: :any_skip_relocation, big_sur:       "17075cb66b596e4e09df6caefa00ed315ae1e9c1699f547f7f23afe101f7140c"
+    sha256 cellar: :any_skip_relocation, catalina:      "d08209403eda81ce889603b3f1d2cb2cbc9a3873567bb9ac8363b40b60005c9a"
+    sha256 cellar: :any_skip_relocation, mojave:        "aa7123b110787c7f77ac38604e748d0b25f03e0da251667c17e634b9cf56e24b"
   end
 
   depends_on "python@3.9"
