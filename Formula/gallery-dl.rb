@@ -9,10 +9,10 @@ class GalleryDl < Formula
   head "https://github.com/mikf/gallery-dl.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d30ac6a9911bf26b388f4dc6d0a20412be5f4d993f3839b4d6eda1327192b6e4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "46f2173d979f6dfe69ba7338122a14348334706ef6161376dc07982252df2433"
-    sha256 cellar: :any_skip_relocation, catalina:      "285699bb04b95bd24a73add942fd1ebeeaaac87de87a32ee0f71a0c26a3d303b"
-    sha256 cellar: :any_skip_relocation, mojave:        "d91eac4e85cfc99832e3376cef732b57c88245acf1c085c35602729b3141652c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8178339bd2e9744aacd86ee169b4d8362d58b76accf1e60892b010bb55f72a3e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "46d0cdc8e6547a4b3ac011db77bf9027e497f0e27fd3970bbd76b228b777c20c"
+    sha256 cellar: :any_skip_relocation, catalina:      "565a950f04286e6e94a62cb228a9d9cb1fdc509b402801e15a7f43de9c7cd852"
+    sha256 cellar: :any_skip_relocation, mojave:        "16e6355a2eda46d1544706e3362acdc076d9cf22ba53c363f5e295c645d4b2f5"
   end
 
   depends_on "python@3.9"
