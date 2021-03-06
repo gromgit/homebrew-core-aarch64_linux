@@ -6,8 +6,8 @@ class Bonniexx < Formula
   license "GPL-2.0-only"
 
   livecheck do
-    url "https://www.coker.com.au/bonnie++/experimental/"
-    regex(/href=.*?bonnie\+\+[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    url "https://doc.coker.com.au/projects/bonnie/"
+    regex(/href=.*?bonnie\+\+[._-]v?(\d+(?:\.\d+)+[a-z]?)\.t/i)
   end
 
   bottle do
