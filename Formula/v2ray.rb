@@ -1,10 +1,9 @@
 class V2ray < Formula
   desc "Platform for building proxies to bypass network restrictions"
   homepage "https://v2fly.org/"
-  url "https://github.com/v2fly/v2ray-core/archive/v4.34.0.tar.gz"
-  sha256 "b250f569cb0369f394f63184e748f1df0c90500feb8a1bf2276257c4c8b81bee"
+  url "https://github.com/v2fly/v2ray-core/archive/v4.35.1.tar.gz"
+  sha256 "ef469a99c7db8596f8556478b478e2701ce2783af9affb7f3cb28201718e7d35"
   license all_of: ["MIT", "CC-BY-SA-4.0"]
-  revision 1
   head "https://github.com/v2fly/v2ray-core.git"
 
   livecheck do
@@ -21,16 +20,6 @@ class V2ray < Formula
 
   depends_on "go" => :build
 
-  resource "geoip" do
-    url "https://github.com/v2fly/geoip/releases/download/202011190012/geoip.dat"
-    sha256 "022e6426f66cd7093fc2454c28537d2345b4fce49dc97b81ddfec07ce54e7081"
-  end
-
-  resource "geosite" do
-    url "https://github.com/v2fly/domain-list-community/releases/download/20201122065644/dlc.dat"
-    sha256 "574af5247bb83db844be03038c8fed1e488bf4bd4ce5de2843847cf40be923c1"
-  end
-
   def install
     ldflags = "-s -w -buildid="
     execpath = libexec/name
@@ -45,15 +34,9 @@ class V2ray < Formula
     (bin/"v2ray").write_env_script execpath,
       V2RAY_LOCATION_ASSET: pkgshare
 
-    pkgetc.install "release/config/config.json" => "config.json"
-
-    resource("geoip").stage do
-      pkgshare.install "geoip.dat"
-    end
-
-    resource("geosite").stage do
-      pkgshare.install "dlc.dat" => "geosite.dat"
-    end
+    pkgetc.install "release/config/config.json"
+    pkgshare.install "release/config/geoip.dat"
+    pkgshare.install "release/config/geosite.dat"
   end
 
   plist_options manual: "v2ray -config=#{HOMEBREW_PREFIX}/etc/v2ray/config.json"
@@ -98,6 +81,13 @@ class V2ray < Formula
             {
               "ip": [
                 "geoip:private"
+              ],
+              "outboundTag": "direct",
+              "type": "field"
+            },
+            {
+              "domains": [
+                "geosite:private"
               ],
               "outboundTag": "direct",
               "type": "field"
