@@ -17,10 +17,10 @@ class Teleport < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "88d22a08f1af717e7d13ffcaf3a884edb59a689c59016de6fe20c69d3153347b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "91642057a55449bdd4ebe14455aaeac3844c9d3200a56417572dd87f8ebfc94e"
-    sha256 cellar: :any_skip_relocation, catalina:      "f6abd2cec2fe0965bf899b98ce06a9fe3f82618d4d540a009c059fa9eb959b4b"
-    sha256 cellar: :any_skip_relocation, mojave:        "d6db0fa21ab1da99f66e2009fc3905c7da70220bc3d305c8d3356fd3fe520148"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "faca3c70b1157c916bd519060e362fda1283a52b587c2f18416651c28806118e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "eb076944ee212726ae9272b09d2f0cba0dcda8c2ffc0dbf09ade8c07d3b7c2b5"
+    sha256 cellar: :any_skip_relocation, catalina:      "c1ab38f830f0f616a1b3af15effb154e69ef81bff4b28387beedace052dde93f"
+    sha256 cellar: :any_skip_relocation, mojave:        "48f7b61ecc4146b3a44744a8097ba9efc8a6675ed6ab9a3e35e01e961ddefabb"
   end
 
   depends_on "go" => :build
