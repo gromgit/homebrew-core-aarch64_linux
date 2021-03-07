@@ -10,11 +10,10 @@ class Ntl < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "145c34c0546556702339547567005c511610875f6817a49ccc8c08eda9cc1086"
-    sha256 cellar: :any, big_sur:       "9e02780202c0a4b9b65080df3a731347b2f8fc1cfdeb4073d68440acba012ecd"
-    sha256 cellar: :any, catalina:      "fc44a358782565b05098a29f2694fe16100c2b5aa096c04875edd093adf78b5d"
-    sha256 cellar: :any, mojave:        "d0739cc2ebea1427d1fae3b0f871105b69d6f9c4c765415ed2f328af1e925598"
-    sha256 cellar: :any, high_sierra:   "5747add8bf85ae5a46d8c12635efbf61a2b5c402e35fdaebcf7499148c682564"
+    sha256 cellar: :any, arm64_big_sur: "2e3fdf3214220bd1c2bad264029df96c1b3e6e6abb73741e4e6cfa1492a79c96"
+    sha256 cellar: :any, big_sur:       "01860b0c0190a6c5a1189ed0b1ab25c5ed06f8ac7025f3d50acccb6c1e134de6"
+    sha256 cellar: :any, catalina:      "3a9dd95ffa5e4467467b0955d9b8eef9cf79a264ac1973f13c088b7cf21d5d93"
+    sha256 cellar: :any, mojave:        "d0fc111707de1403ad34ad27ede466ac1f654287a96749e17398c3c4366a0cf5"
   end
 
   depends_on "gmp"
