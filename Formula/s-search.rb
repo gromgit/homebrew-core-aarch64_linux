@@ -1,10 +1,8 @@
-require "language/go"
-
 class SSearch < Formula
   desc "Web search from the terminal"
   homepage "https://github.com/zquestz/s"
-  url "https://github.com/zquestz/s/archive/v0.5.14.tar.gz"
-  sha256 "c32eedf6a4080cbe221c902cf7f63b1668b3927edfc448d963d69ed66c8ec2fb"
+  url "https://github.com/zquestz/s/archive/v0.5.15.tar.gz"
+  sha256 "d697da32c050d026983a9696d14dace8926838eef9f491937a4f14215b674c6a"
   license "MIT"
   head "https://github.com/zquestz/s.git"
 
@@ -19,20 +17,12 @@ class SSearch < Formula
 
   depends_on "go" => :build
 
-  go_resource "github.com/FiloSottile/gvt" do
-    url "https://github.com/FiloSottile/gvt.git",
-        revision: "50d83ea21cb0405e81efd284951e111b3a68d701"
-  end
-
   def install
-    ENV["GOPATH"] = buildpath
-    ENV["GO111MODULE"] = "auto"
-    Language::Go.stage_deps resources, buildpath/"src"
-    cd("src/github.com/FiloSottile/gvt") { system "go", "install" }
-    (buildpath/"src/github.com/zquestz").mkpath
-    ln_s buildpath, "src/github.com/zquestz/s"
-    system buildpath/"bin/gvt", "restore"
-    system "go", "build", "-o", bin/"s"
+    system "go", "build", *std_go_args, "-ldflags", "-s -w"
+    mv bin/"s-search", bin/"s"
+
+    bash_completion.install "autocomplete/s-completion.bash"
+    fish_completion.install "autocomplete/s.fish"
   end
 
   test do
