@@ -24,7 +24,7 @@ class Docker < Formula
     dir.install (buildpath/"").children
     cd dir do
       commit = Utils.git_short_head
-      build_time = Utils.safe_popen_read("date -u +'%Y-%m-%dT%H:%M:%SZ' 2> /dev/null").chomp
+      build_time = Time.now.utc.strftime("%Y-%m-%dT%H:%M:%SZ")
       ldflags = ["-X \"github.com/docker/cli/cli/version.BuildTime=#{build_time}\"",
                  "-X github.com/docker/cli/cli/version.GitCommit=#{commit}",
                  "-X github.com/docker/cli/cli/version.Version=#{version}",
