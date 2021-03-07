@@ -15,7 +15,7 @@ class Youtubedr < Formula
   depends_on "go" => :build
 
   def install
-    build_time = Utils.safe_popen_read("date -u +'%Y-%m-%dT%H:%M:%SZ' 2> /dev/null").chomp
+    build_time = Time.now.utc.strftime("%Y-%m-%dT%H:%M:%SZ")
 
     ldflags = %W[
       -s -w
