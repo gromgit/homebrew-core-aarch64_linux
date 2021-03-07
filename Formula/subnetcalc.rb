@@ -7,11 +7,10 @@ class Subnetcalc < Formula
   head "https://github.com/dreibh/subnetcalc.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a0bcbd1fecfa6b7e53f87179db7b40d2e1a9103e54897c619b492a7c8af38022"
-    sha256 cellar: :any_skip_relocation, big_sur:       "2e0914221773eb6805b107278fe488525c655afe891d8575bf6123c8716824bf"
-    sha256 cellar: :any_skip_relocation, catalina:      "a75a2bd86939439d349617d4f9bcebfd2cd06fd8521259ae528618de3498ea13"
-    sha256 cellar: :any_skip_relocation, mojave:        "4f04ffbceed2e9f1d9a5f8d04e92303ec8d8cc677d1931670fea0ee7d0c84259"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "a08ec739f53261955b4d4478be8347adb76d7061e0e61b776e2ff42539747159"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "71be3468fb96a18bdc21468d75473e8b2058a96c17aa2fdfd9a094e0a3d11bd7"
+    sha256 cellar: :any_skip_relocation, big_sur:       "bc64b5a8c222bb22e5f3319835b3128fcfc61d3fde5e192b8171b0c212233e10"
+    sha256 cellar: :any_skip_relocation, catalina:      "7af71ce1b492802a1fc88484d6ae8eb95c924dc4363f354dad1693984d60ddd2"
+    sha256 cellar: :any_skip_relocation, mojave:        "f136d2f2959574e52b0431b4c4fe8ebe88724a52911fea8ffe103b915012ed71"
   end
 
   depends_on "cmake" => :build
