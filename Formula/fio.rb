@@ -6,11 +6,10 @@ class Fio < Formula
   license "GPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a613a25dfd5b77c237b75b5e0848d79c216e710629e0e7f29c83cf571c60c139"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c665a3ba50222002863a421fd34d3a7449b63e7e89dff20e3237a63467f2778c"
-    sha256 cellar: :any_skip_relocation, catalina:      "252dd7cba1c767568b9ecb13fbbd891e1ffe47f590ed126cfea8214ff20333f5"
-    sha256 cellar: :any_skip_relocation, mojave:        "2b4b3372f9ad040eb974ba38ecdde11c08b0328fae71d785e5d0b88c77ecffc3"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "89e47c70a1cca2e1acf29b97720da6b968348ea93a5e417fdca7ad86d670114d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "92ab29de16f4c30e39280b99cba069ed03c948b98a2f929acdcab01c35f9cd16"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f1bdc63c280e34e214bc569480d317e957f93fe1d36f68c091f641f83d345b75"
+    sha256 cellar: :any_skip_relocation, catalina:      "3c43bc09449260fe0ce84250b75c9c92dcd441f823542105260c684bf8331003"
+    sha256 cellar: :any_skip_relocation, mojave:        "b1ac6ab2cac3b7833fdd336a5c5a1e811ec071f8b64edab9ac819ea87dc09635"
   end
 
   uses_from_macos "zlib"
