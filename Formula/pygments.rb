@@ -9,10 +9,10 @@ class Pygments < Formula
   head "https://github.com/pygments/pygments.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9bdd43f4f10f9f23bf91a6f7e4b28f89a1616b18909d556137a2170968d62091"
-    sha256 cellar: :any_skip_relocation, big_sur:       "229adb25ab2c136882a0e418628df9eadc34d32b4a2a3757bb423379b443a7d9"
-    sha256 cellar: :any_skip_relocation, catalina:      "0a39997ef2cef1a1457375f92d586605d39fff33a1880fcb98f70cd1bc47a0c4"
-    sha256 cellar: :any_skip_relocation, mojave:        "3aab5b07c744cb7d0721367eaab16e9eafa292c589b97f03e2e0e9cfd8426cf4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1a3f3b461647e5a27f28be74638a0a14f075ecf6c15c3bf86fb8967a574589f1"
+    sha256 cellar: :any_skip_relocation, big_sur:       "fa0453988908f7898bcb6cba2983f0f741c119466a52ce475d3509c21b273029"
+    sha256 cellar: :any_skip_relocation, catalina:      "bbf8057e41df8d871afc02c4dce7904e1e21da7c67b52c03b4e8a8dc39b0b83e"
+    sha256 cellar: :any_skip_relocation, mojave:        "1328dcbfbdd825c547c6bc4e181587afd6a05a8d5e10c11d2c3169d9d452a29a"
   end
 
   depends_on "python@3.9"
