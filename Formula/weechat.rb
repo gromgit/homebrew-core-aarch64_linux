@@ -7,10 +7,10 @@ class Weechat < Formula
   head "https://github.com/weechat/weechat.git"
 
   bottle do
-    sha256 arm64_big_sur: "15f4cfad8bb9b747b3bd1c891bc5d6f311027196811944c65add901d9f0e7359"
-    sha256 big_sur:       "8df326e3e65fac4cb626046fc8742e19e86b1d74ada1bbe976a79037c21c9fbe"
-    sha256 catalina:      "361962d068a97514bde638b03be6855f21c17d78fddfded1338eb12fd0f56eae"
-    sha256 mojave:        "f486f55ee356c1fd21d4c4151588551fd4f3b0620bed54799e76c039e698851b"
+    sha256 arm64_big_sur: "13358880145e64b9abb5aa1b3edd45cbe99fad9513269e71e40015561e274dac"
+    sha256 big_sur:       "2dc092a658d47fa3792106517dbc0c8d067f2a43e47444f9e11a8f6dd4d5841b"
+    sha256 catalina:      "bbe506b6fe5fc7ef054299d35114508e5bef467c9083880a237b76d4d4a078af"
+    sha256 mojave:        "b956b1d6111acfbdeafbeffb42eb715ce39a3fb064238f089f2373d31325c93a"
   end
 
   depends_on "asciidoctor" => :build
