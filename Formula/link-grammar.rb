@@ -33,7 +33,6 @@ class LinkGrammar < Formula
     inreplace "bindings/python/Makefile.am",
       "$(PYTHON_LDFLAGS) -module -no-undefined",
       "$(PYTHON_LDFLAGS) -module"
-    inreplace "link-grammar/link-grammar.def", "regex_tokenizer_test\n", ""
     system "autoreconf", "-fiv"
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
