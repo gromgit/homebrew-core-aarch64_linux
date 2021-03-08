@@ -7,11 +7,10 @@ class Gdbm < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "801b2bf95118871ee206de507131325613a1aa59ab7809032bb456f1b5f01a89"
-    sha256 cellar: :any, big_sur:       "36b492f1b0910367dd394cbdcffe1606f64ab41ec6701210becfb591a8557dee"
-    sha256 cellar: :any, catalina:      "f7b5ab7363961fa6defcb66b4ffdf5365264fcb97d35bc413e754f173a3b1912"
-    sha256 cellar: :any, mojave:        "0f65874bcd50d31aaf8b2e6c8ef414cb65a8d8b9eb6d1fa4ef179c6e0a94983c"
-    sha256 cellar: :any, high_sierra:   "4a644af2fcc2781c3a161209deff7b62d760058bc1bac7c4f91a5ce5738f0798"
+    sha256 cellar: :any, arm64_big_sur: "2eea26ad3d3d013c3ed2e2b985d4749719e8be327bc53b615a1ffbe484264599"
+    sha256 cellar: :any, big_sur:       "3581501b051db1c0d1acccc710fe04453b61777e4d67110485ceca69f30d6d1a"
+    sha256 cellar: :any, catalina:      "a3e43170a1d8413e6817e57b7218828af22a20b2221d804ad529a68248840a51"
+    sha256 cellar: :any, mojave:        "996020d1bc3e8a8060a9fe49b992cd66e7404346a339ae98ef92090724f36fda"
   end
 
   # --enable-libgdbm-compat for dbm.h / gdbm-ndbm.h compatibility:
