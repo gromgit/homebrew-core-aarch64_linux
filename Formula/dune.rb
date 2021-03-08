@@ -7,10 +7,10 @@ class Dune < Formula
   head "https://github.com/ocaml/dune.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "91a8b8257c944a1701090324e761f397a0034996e605a95063ef0ae3e98d95f7"
-    sha256 cellar: :any_skip_relocation, big_sur:       "207990a41328767e8c46a8d3d7d8aa1db494a1243fbdf5bcd8fcca83668d57b1"
-    sha256 cellar: :any_skip_relocation, catalina:      "a3603b422c90d1fa525f5b9581f18b4645aeb39e3ccb7450f11d6e833a92e697"
-    sha256 cellar: :any_skip_relocation, mojave:        "b6906bda3c1557367516849bda5957596a4cc4ca0407c04282a7d3d4ae3d873c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8e8850532c2b926e92f651d89f696176e8313add0b71dc08d2d38a99ce4aa0e8"
+    sha256 cellar: :any_skip_relocation, big_sur:       "03ce60177bd68e88e95cedfeed16d0607cd7d2918448105499100fc04a15880f"
+    sha256 cellar: :any_skip_relocation, catalina:      "16b4cfd6d9ac43fb4505baa012c27202cc219b20d3986e2f03dc9f83b82838eb"
+    sha256 cellar: :any_skip_relocation, mojave:        "a65132d4b1b5928b8cfc2a2c3cfbb55185ae67ca30705ed80bb29a6bd09872a0"
   end
 
   depends_on "ocaml" => [:build, :test]
