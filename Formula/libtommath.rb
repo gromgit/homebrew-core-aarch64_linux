@@ -8,11 +8,10 @@ class Libtommath < Formula
   head "https://github.com/libtom/libtommath.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "efe92758582143141223011809f6f9d243e970a788669a3ba6eb0de6db9772a7"
-    sha256 cellar: :any_skip_relocation, big_sur:       "fde5371efe622e6a4f425e8294e742879b57aa355e2b1a593ff18cac2cb29840"
-    sha256 cellar: :any_skip_relocation, catalina:      "700d1c4dfecd1016215158de7436d02452a149c5882ba3fda1201a72d6c3d5ea"
-    sha256 cellar: :any_skip_relocation, mojave:        "9832ceb97e387a519d6ae9b66bb3a7066c1d112d947667527a5edfcc692e4983"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "26e39af069485ef58c3517fb765db3a5e8dba0f253aac3d0d5968ff2a35e595b"
+    sha256 cellar: :any, arm64_big_sur: "8de5c86d359cd3e99ffa9ebd0648d7c255c7b6e63f3298af76863c99bd6e4660"
+    sha256 cellar: :any, big_sur:       "926fe5c304e1bc15bc32c94fcf11728a98ef6d64c46ea7544dba60ce9aacd1c3"
+    sha256 cellar: :any, catalina:      "16562795b0510326aecc42646ddd1b0dcc212dccb7307eec15fb1d17236085f1"
+    sha256 cellar: :any, mojave:        "5b7fb5610176a90288ea0b6d97e8279a401dd4c627e85a66b623a5f971f3902a"
   end
 
   depends_on "libtool" => :build
