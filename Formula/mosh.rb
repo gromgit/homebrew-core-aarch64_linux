@@ -1,7 +1,7 @@
 class Mosh < Formula
   desc "Remote terminal application"
   homepage "https://mosh.org"
-  license "GPL-3.0"
+  license "GPL-3.0-or-later"
   revision 15
 
   stable do
@@ -30,7 +30,6 @@ class Mosh < Formula
   end
 
   depends_on "pkg-config" => :build
-  depends_on "tmux" => :build
   depends_on "openssl@1.1"
   depends_on "protobuf"
 
