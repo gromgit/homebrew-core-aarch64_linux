@@ -11,10 +11,11 @@ class Verilator < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "21fca68551c495dfb52540ebf1aec6f6b43d7e9af6e41cf3407aa9c350083f69"
-    sha256 big_sur:       "65503e49d92c3be042c5cdf51a020d512f26c089a5fd3d68930fefbfa39a938f"
-    sha256 catalina:      "348d8bce800188559ff7e1e01cfc58345c30438ea3b00c6c4d1eb386851c64b9"
-    sha256 mojave:        "3fe387a52d1ae9763bf681dfd4f0fe3e43a39f2ffa93f3dc9a30a4b2bad8d9ec"
+    rebuild 1
+    sha256 arm64_big_sur: "42901384ef7092b0039c505d2ebbd7586024f25d5578eb2be31b9793a8c92fb0"
+    sha256 big_sur:       "88161464bfe85fa5e711272374a7ff363d56b577ca490eac61165bde531c5543"
+    sha256 catalina:      "a89df25c889c4e7c8333c4ac2072c7e309dd43d93c1405242644cee644041de3"
+    sha256 mojave:        "a2ce7f0df7764dd771586ca7c0ebdb360e1834147c2d7737a5d7ec7adb3a0095"
   end
 
   head do
