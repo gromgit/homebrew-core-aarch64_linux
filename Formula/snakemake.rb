@@ -3,8 +3,8 @@ class Snakemake < Formula
 
   desc "Pythonic workflow system"
   homepage "https://snakemake.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/80/4d/dcc495c6248ce3e8cee09c4578774be31a5429afcc3f2a225a4fac53f1d3/snakemake-6.0.2.tar.gz"
-  sha256 "1fc6ae36615308fed8887844c10d576b39292c508775a0365d2d27a1bb958ee0"
+  url "https://files.pythonhosted.org/packages/57/ff/c1db979f1510204ef8fa67ce46c8398f8ac72598f1c08e90cf3e4df900f5/snakemake-6.0.3.tar.gz"
+  sha256 "d8aa057a77e17044561151c37fb7bffa0f9c2d9c6410707ff7fd3187797ea01f"
   license "MIT"
   head "https://github.com/snakemake/snakemake.git"
 
