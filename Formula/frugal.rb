@@ -1,8 +1,8 @@
 class Frugal < Formula
   desc "Cross language code generator for creating scalable microservices"
   homepage "https://github.com/Workiva/frugal"
-  url "https://github.com/Workiva/frugal/archive/v3.13.1.tar.gz"
-  sha256 "d71b48ba6834b62ae5f52b7f50cd768af5a483283c0deed043ff4c6dde3f2344"
+  url "https://github.com/Workiva/frugal/archive/v3.14.0.tar.gz"
+  sha256 "3846b10ca61956f3e6ee33991620fab1b58b28d9131a55ea0db3a50f301fb263"
   license "Apache-2.0"
 
   bottle do
@@ -13,17 +13,10 @@ class Frugal < Formula
     sha256 cellar: :any_skip_relocation, mojave:        "5e2e9a28e4bfea849d62a88a309082f8ec1c40a6f7db6b68df0ebde1f88aec21"
   end
 
-  depends_on "glide" => :build
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    ENV["GO111MODULE"] = "auto"
-    (buildpath/"src/github.com/Workiva/frugal").install buildpath.children
-    cd "src/github.com/Workiva/frugal" do
-      system "glide", "install"
-      system "go", "build", *std_go_args
-    end
+    system "go", "build", *std_go_args, "-ldflags", "-s -w"
   end
 
   test do
