@@ -11,11 +11,11 @@ class Siege < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "1d2ed2396c11a8637af2c8a5e3f32bac5b2ac9f73c6f5506443eb0270f360c34"
-    sha256 big_sur:       "d9319969845b82b053d675fa125cfce2241c498be7966fca5790af1410d7050e"
-    sha256 catalina:      "ccc545449c2a0bacb0054078faee630f23e4728d1bf137cba9c5d8aa82e02495"
-    sha256 mojave:        "0704038a2995eec4ffacbb3554230b2825ebb21c3c9c612baae24999a620e183"
-    sha256 high_sierra:   "d2793b5aee87ffe4c04fca2c807477c3bcc8c5979888d26db995e0e58bece246"
+    rebuild 1
+    sha256 arm64_big_sur: "77c2687b1ae0baf1d035a369ecc8c2d67eff4d38ee1d84ee434e33702fbce5a4"
+    sha256 big_sur:       "7efea2f148c0b6323fa3b605b57bb5122cbe042626b0e0e059b697cf65c78207"
+    sha256 catalina:      "52d3c7d5f18591e84a8407281a48e5dfb449f2e5c0628edb8b0998470414d4b7"
+    sha256 mojave:        "f505c43ad4aa79798c14ee1df2fdeea2ffe62588e1dfd1928fc0eddb385497a5"
   end
 
   depends_on "openssl@1.1"
