@@ -7,12 +7,10 @@ class IsoCodes < Formula
   head "https://salsa.debian.org/iso-codes-team/iso-codes.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "31ff556939a9d57214d7ad44c1d842d23dfdb3908994a286681df2a8c1dbd46d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "118b191fb44a9620d8c0c354f8ac922792d3e75d54bc39ca1510be016c3a2d92"
-    sha256 cellar: :any_skip_relocation, catalina:      "7188c8c30f91805fb9a57fdb2724372e3c322df32cf429b9aa83947a1fda06be"
-    sha256 cellar: :any_skip_relocation, mojave:        "976ba22be91927b7b3ef72c657b642b3b2c29c78d9c8ae2ce427ffd10fdca830"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "eae28b543407ce32653a9c6611f89c6d7fafee8adbd84e76f4785ec962d5bcd0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3720db3c8b9004255cdd38b9922a551dd13050102fede5691b0aaec6ac5a916f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b187032bee03cffb5e57f2a609f31010b3572a7dc20e74863f5058fe084a59c2"
+    sha256 cellar: :any_skip_relocation, catalina:      "e842954d1e655188d47362cabce2af5585dd5f9f7687f6d70c14e951374918b2"
+    sha256 cellar: :any_skip_relocation, mojave:        "172c9bad5734b7fa56f77c1f2a73e9db2f7d9492c3b40a11941b57b294cc554a"
   end
 
   depends_on "gettext" => :build
