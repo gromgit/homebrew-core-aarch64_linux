@@ -40,16 +40,23 @@ class Netpbm < Formula
 
     inreplace "config.mk" do |s|
       s.remove_make_var! "CC"
-      s.change_make_var! "CFLAGS_SHLIB", "-fno-common"
-      s.change_make_var! "NETPBMLIBTYPE", "dylib"
-      s.change_make_var! "NETPBMLIBSUFFIX", "dylib"
-      s.change_make_var! "LDSHLIB", "--shared -o $(SONAME)"
       s.change_make_var! "TIFFLIB", "-ltiff"
       s.change_make_var! "JPEGLIB", "-ljpeg"
       s.change_make_var! "PNGLIB", "-lpng"
       s.change_make_var! "ZLIB", "-lz"
       s.change_make_var! "JASPERLIB", "-ljasper"
       s.change_make_var! "JASPERHDR_DIR", "#{Formula["jasper"].opt_include}/jasper"
+
+      on_macos do
+        s.change_make_var! "CFLAGS_SHLIB", "-fno-common"
+        s.change_make_var! "NETPBMLIBTYPE", "dylib"
+        s.change_make_var! "NETPBMLIBSUFFIX", "dylib"
+        s.change_make_var! "LDSHLIB", "--shared -o $(SONAME)"
+      end
+
+      on_linux do
+        s.change_make_var! "CFLAGS_SHLIB", "-fPIC"
+      end
     end
 
     ENV.deparallelize
@@ -64,7 +71,7 @@ class Netpbm < Formula
       end
 
       prefix.install %w[bin include lib misc]
-      lib.install Dir["staticlink/*.a"], Dir["sharedlink/*.dylib"]
+      lib.install Dir["staticlink/*.a"], Dir["sharedlink/#{shared_library("*")}"]
       (lib/"pkgconfig").install "pkgconfig_template" => "netpbm.pc"
     end
   end
