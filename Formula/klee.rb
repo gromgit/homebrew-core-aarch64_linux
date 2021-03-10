@@ -6,6 +6,12 @@ class Klee < Formula
   license "NCSA"
   head "https://github.com/klee/klee.git"
 
+  bottle do
+    sha256 big_sur:  "e618dbf37e6a3abfb015f6c9facdf15d5738b68e0d94e538a9b447321029bf92"
+    sha256 catalina: "924b00351eea9e380418b244de739f5660fbf9b9e1f401e5d9ff2d38af404047"
+    sha256 mojave:   "28f00222252796f611e346418e1041466a525c4acaef392a0f065be26b239e00"
+  end
+
   depends_on "cmake" => :build
   depends_on "gperftools"
   depends_on "llvm"
