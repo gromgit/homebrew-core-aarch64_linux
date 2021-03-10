@@ -11,10 +11,9 @@ class RakudoStar < Formula
   end
 
   bottle do
-    sha256 big_sur:     "aeb7eb041a03204bf11a556e24a6da57d0b9eb55ec8c6179f54e6f6b0b8d44cd"
-    sha256 catalina:    "1a9933d90e4c95b895cc712f267bf38ad4bf40c0170869e46ebe9dc35855f9d0"
-    sha256 mojave:      "3d8cb747d9a1c9131637cc25b8fc32c6844a9113096eb3a9ccb28c6d69ea363f"
-    sha256 high_sierra: "6fc9f0fe77b7a692431d85199633353df82b6c409dc754162c04d0ae26843b87"
+    sha256 big_sur:  "d75aee60ff1ad43d4136597cc397479b9e92c03ffe604d6f317fd9d5636a9205"
+    sha256 catalina: "540c25480053a98c4551ed7313693d27852f5492698400caa4369563dd8f9363"
+    sha256 mojave:   "26c6eda9839e94506bcd19894e52b5067e1f22e7457db05e3952e59e79f7ddf4"
   end
 
   depends_on "bash" => :build
