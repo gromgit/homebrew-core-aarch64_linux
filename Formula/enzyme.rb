@@ -6,6 +6,13 @@ class Enzyme < Formula
   license "Apache-2.0" => { with: "LLVM-exception" }
   head "https://github.com/wsmoses/Enzyme.git"
 
+  bottle do
+    sha256 arm64_big_sur: "ef9431ee270b73cbbd721a7993474ca8dbc49d1cf36c84db53bd6add983ed324"
+    sha256 big_sur:       "b8351c059ca3b6fc1f3de0e8a6ccf29fa87820e506bc0cfb03497b18579ab6fd"
+    sha256 catalina:      "cf9a47b84d6f6598fcfb0a048bd99894167821bc08f27b687bf8b58f5ff0b34a"
+    sha256 mojave:        "2233fb600cb1c0d27cf2d2c8abe72e7a4ead4392a244b21500ab079d911c87d9"
+  end
+
   depends_on "cmake" => :build
   depends_on "llvm"
 
