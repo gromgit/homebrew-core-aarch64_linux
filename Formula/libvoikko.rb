@@ -1,9 +1,9 @@
 class Libvoikko < Formula
   desc "Linguistic software and Finnish dictionary"
   homepage "https://voikko.puimula.org/"
-  url "https://www.puimula.org/voikko-sources/libvoikko/libvoikko-4.3.tar.gz"
-  sha256 "e843df002fcea2a90609d87e4d6c28f8a0e23332d3b42979ab1793e18f839307"
-  revision 3
+  url "https://www.puimula.org/voikko-sources/libvoikko/libvoikko-4.3.1.tar.gz"
+  sha256 "368240d4cfa472c2e2c43dc04b63e6464a3e6d282045848f420d0f7a6eb09a13"
+  license "GPL-2.0-only"
 
   livecheck do
     url "https://www.puimula.org/voikko-sources/libvoikko/"
@@ -24,8 +24,8 @@ class Libvoikko < Formula
   depends_on "hfstospell"
 
   resource "voikko-fi" do
-    url "https://www.puimula.org/voikko-sources/voikko-fi/voikko-fi-2.3.tar.gz"
-    sha256 "37b7886a23cfbde472715ba1266e1a81e2a87c3f5ccce8ae23bd7b38bacdcec2"
+    url "https://www.puimula.org/voikko-sources/voikko-fi/voikko-fi-2.4.tar.gz"
+    sha256 "320b2d4e428f6beba9d0ab0d775f8fbe150284fbbafaf3e5afaf02524cee28cc"
   end
 
   def install
@@ -45,6 +45,6 @@ class Libvoikko < Formula
   end
 
   test do
-    pipe_output("#{bin}/voikkospell -m", "onkohan\n")
+    assert_match "C: onkohan", pipe_output("#{bin}/voikkospell -m", "onkohan\n")
   end
 end
