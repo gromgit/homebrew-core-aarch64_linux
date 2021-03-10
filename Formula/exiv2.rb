@@ -12,10 +12,11 @@ class Exiv2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:     "1d3b44a02c0ebe2ee46ced38a59cf81c60f12a0990debb8b14479431195a572e"
-    sha256 cellar: :any, catalina:    "607f8322cba23a92185541c3b8ee245e7ff339becda5364e1ea6c2168015375c"
-    sha256 cellar: :any, mojave:      "f4ed492ccb45b869000b2cc514ae507422624f6413057ee158ea80b772e182fb"
-    sha256 cellar: :any, high_sierra: "cd1d11df6b535b1ccfb3458cef28a7662c1e2b7213382e8292abbe00526c7b52"
+    sha256 cellar: :any, arm64_big_sur: "f3b4f6da40ef2fbb4da84cc592a1fd2618f1007b4104451b0afa214f14e53125"
+    sha256 cellar: :any, big_sur:       "1d3b44a02c0ebe2ee46ced38a59cf81c60f12a0990debb8b14479431195a572e"
+    sha256 cellar: :any, catalina:      "607f8322cba23a92185541c3b8ee245e7ff339becda5364e1ea6c2168015375c"
+    sha256 cellar: :any, mojave:        "f4ed492ccb45b869000b2cc514ae507422624f6413057ee158ea80b772e182fb"
+    sha256 cellar: :any, high_sierra:   "cd1d11df6b535b1ccfb3458cef28a7662c1e2b7213382e8292abbe00526c7b52"
   end
 
   depends_on "cmake" => :build
