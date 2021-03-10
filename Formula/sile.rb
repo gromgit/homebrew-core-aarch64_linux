@@ -7,10 +7,10 @@ class Sile < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "6e4cb6f0234094a58c5acee287639c91aaf6c78a64bc71f9bb98d30f4b6af5fc"
-    sha256 cellar: :any, big_sur:       "11d724e8aa83920fd025266027101c546ff300f06cbc91bb71939504aefddfb9"
-    sha256               catalina:      "da19d65b1c721bce480847fd2d28d5fd66ba6e16a715a90fc81af681304cf8d0"
-    sha256               mojave:        "2e0ae63e6a7a1db891ce18a18fecc5d261168994b239edb298ad68067ff34e29"
+    sha256 cellar: :any, arm64_big_sur: "f768811fa4abe78d42b5ee0649e5cb341c1360d4d846cbf2c86034d58f680da9"
+    sha256 cellar: :any, big_sur:       "13a0eadc5d659744004b803354ac10338afe1042c451072c5edce823dbb2c3a8"
+    sha256               catalina:      "8fb3dfa926b68959d7cdb5ebae7e2552165a199b08667a267067845bc55841b3"
+    sha256               mojave:        "439746d81c4a7395678327038d77f294c6848c31690ee90df592ba93d7a52b62"
   end
 
   head do
