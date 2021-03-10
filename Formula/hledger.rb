@@ -14,9 +14,9 @@ class Hledger < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "3fcdfd761351cc052d8e88477288056592559574bb45605c3fa5674a2df0dc49"
-    sha256 cellar: :any_skip_relocation, catalina: "9d4da9897d54c3d5a92b1462d5583530dc6aaf789bf5248020c93a7469bb4e4d"
-    sha256 cellar: :any_skip_relocation, mojave:   "41634adcf3e65ca93e31ffbfc048ca45e6b6282a546545bf0c1a914ae86c9343"
+    sha256 cellar: :any_skip_relocation, big_sur:  "83d91bd5847275c6e7089b71332015c71272bc24f562a55b595e8c192bfe7285"
+    sha256 cellar: :any_skip_relocation, catalina: "5f812bbfa7a4409166716730edf3fda92bb6a6dcb99572440d926a56e47554b2"
+    sha256 cellar: :any_skip_relocation, mojave:   "0a379919ad9936b1b93b7af1103fd5c98656c43ed879eea8f2e0dcfdcccb2e0a"
   end
 
   depends_on "ghc" => :build
