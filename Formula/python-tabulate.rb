@@ -7,6 +7,13 @@ class PythonTabulate < Formula
   sha256 "eb1d13f25760052e8931f2ef80aaf6045a6cceb47514db8beab24cded16f13a7"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a0c0264bb2566ba54fea39d410ac559adc9bd064a7459590f276f6bc806de18d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a2261b94cbed74c1dd639cfcfcfeb862e36776f9e1c0c7992b77b2598bd277f3"
+    sha256 cellar: :any_skip_relocation, catalina:      "d3cf2f4240d1017a944a2f0853b4e2080ec208c8e4907d47edc2d7549a9da3bc"
+    sha256 cellar: :any_skip_relocation, mojave:        "9b36addf9d6d81022caef2e3ec8b874c2b7463cee9c4098dae3613c8e600900d"
+  end
+
   depends_on "python@3.9"
 
   def install
