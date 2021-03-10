@@ -7,6 +7,13 @@ class Wllvm < Formula
   sha256 "a98dd48350d8aae80fe03b92efb11c3e1b92f6aee482f4331f7c97265ca7a602"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b146448a287a26c086f41c4db6222e2f2969bbc12a4d86c9eaf05e2ce5ed4da2"
+    sha256 cellar: :any_skip_relocation, big_sur:       "fe0b731ecde0d7e66f096f374741fc177fa01c2d866d28d2519b009f7f3f881a"
+    sha256 cellar: :any_skip_relocation, catalina:      "87139d500bf0594a1573a3d6c7f860db22d5608f1556771cf4ae2dd06e45d828"
+    sha256 cellar: :any_skip_relocation, mojave:        "cbaafe80bf7c436c2aca8d8080f1772d5d592836ce05d8b3864345b53bd4f4e2"
+  end
+
   depends_on "llvm"
   depends_on "python@3.9"
 
