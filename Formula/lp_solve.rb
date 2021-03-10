@@ -13,14 +13,23 @@ class LpSolve < Formula
   end
 
   def install
+    target = ""
+    subdir = "ux64"
+
+    on_macos do
+      target = ".osx"
+      subdir = "osx64"
+    end
+
     cd "lpsolve55" do
-      system "sh", "ccc.osx"
-      lib.install Dir["bin/osx64/liblpsolve55.{a,dylib}"]
+      system "sh", "ccc#{target}"
+      lib.install "bin/#{subdir}/liblpsolve55.a"
+      lib.install "bin/#{subdir}/#{shared_library("liblpsolve55")}"
     end
 
     cd "lp_solve" do
-      system "sh", "ccc.osx"
-      bin.install "bin/osx64/lp_solve"
+      system "sh", "ccc#{target}"
+      bin.install "bin/#{subdir}/lp_solve"
     end
 
     include.install Dir["*.h"], Dir["shared/*.h"], Dir["bfp/bfp_LUSOL/LUSOL/lusol*.h"]
