@@ -7,10 +7,10 @@ class KyotoTycoon < Formula
   revision 5
 
   bottle do
-    sha256 arm64_big_sur: "ec2db363d2e03749d1d738ba77750e86c77b8362725767661b46a54ba88e6a6f"
-    sha256 big_sur:       "6718c70e1a6f9095077180661a2fb9649e3c7f36847738ef900bd5565cefb4af"
-    sha256 catalina:      "fb28428ef7f62c2ac86f78e00101ca58940fe875d4c4a0df5cada4cca8dce7a6"
-    sha256 mojave:        "2272eabbc069a844c838aaa501285b475037ebe8a76e1bf1f41ab36974bc035d"
+    sha256 arm64_big_sur: "244a150072e722f1ee861425fdfd1cb12a6a09ee27899b998b0794bd01cd1f12"
+    sha256 big_sur:       "30c5a805f4e4f672814b210a28567424b23af490a8d9555286dae17ee41506c4"
+    sha256 catalina:      "575c025f8a4479503833b3d90c8054ed3b67e8f4a14a96978ec585a76bbf7963"
+    sha256 mojave:        "aafcc936bd17bade9714e200c0e713ec4cd6ddc8f38a08d258cbf09437adec75"
   end
 
   depends_on "lua" => :build
