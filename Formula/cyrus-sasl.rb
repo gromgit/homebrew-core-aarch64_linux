@@ -12,6 +12,8 @@ class CyrusSasl < Formula
     sha256 mojave:        "5db405a2496c27205077235e0074767ae35fab10946325f108b425332f6c5c5e"
   end
 
+  keg_only :provided_by_macos
+
   depends_on "openssl@1.1"
 
   def install
