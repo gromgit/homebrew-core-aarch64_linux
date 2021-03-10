@@ -9,9 +9,9 @@ class Conan < Formula
   head "https://github.com/conan-io/conan.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "b2234c38586bb4f5e7345afbaf7d1a5364393d3b715512ea1b97c5aaeb3eb59e"
-    sha256 cellar: :any_skip_relocation, catalina: "dc0617df3147c4d66e766e1c2b6e6c55cfc9b4320d9d1e5b972254f2e2eff8ee"
-    sha256 cellar: :any_skip_relocation, mojave:   "83601c3c8dba27e83ab686561d30595a64563f960cc0abc43949854cd45944a9"
+    sha256 cellar: :any_skip_relocation, big_sur:  "3f83bff92c8738a8a6a4c04ae5915d329773eb33a9304e63813d1ad94126ee4c"
+    sha256 cellar: :any_skip_relocation, catalina: "4fb04f19e90eb9ca70006451987803bf6add65257da60967cfe36e8e1d3ae613"
+    sha256 cellar: :any_skip_relocation, mojave:   "aeb0763b9fabf8a00d6caf35a4dc9bfb2a296709ecece4068cf7e31c9ca0842b"
   end
 
   depends_on "pkg-config" => :build
