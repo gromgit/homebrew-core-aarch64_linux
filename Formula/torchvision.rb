@@ -6,9 +6,9 @@ class Torchvision < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 big_sur:  "ba517b17bc4e826b96bf22200bff8c3f3f25f282d7298166a0c9dccf10f18910"
-    sha256 catalina: "7d6ff7d9f4c68ef7818d32e3d5b5ddb30f721beb57fa6cff37fe52939da7d1cf"
-    sha256 mojave:   "d5e0eeb3f858cc1683d80ea5724c984a7b613706bd0ae1562524e58b2720307a"
+    sha256 big_sur:  "b84e3746d1b41f1c9b92316426a829b8ff61300e16495f8940108fd4110bd081"
+    sha256 catalina: "8a53cb08c3f8c860726ecbf6b51984812e9ba182775788b459dc8efe5d7376e6"
+    sha256 mojave:   "be405a858ad7de52375c421a30a5f0bdcffe3d5a403577875000375503fd2d2b"
   end
 
   depends_on "cmake" => :build
