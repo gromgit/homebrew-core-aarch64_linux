@@ -10,10 +10,10 @@ class Credstash < Formula
   head "https://github.com/fugue/credstash.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "0158907bb9ea77ca4df22484d8f5706707e395963cedb88c2e8e9269b697c8fb"
-    sha256 cellar: :any, big_sur:       "014126c51fdc447aaf9cd276bcf1e5db3e7f47de375d7df6b5c987e707406fba"
-    sha256 cellar: :any, catalina:      "37f16c3f6d9c37adb3c4923005da62eb0bf76521e1650d414132b2b186cd3768"
-    sha256 cellar: :any, mojave:        "59f8ed1c377249d7732b65bc9b20f17ca440d18ce019a0334d47db8c2cc36d49"
+    sha256 cellar: :any, arm64_big_sur: "7e4514215fac5cf99ec2ba21cc03b842b8bd3d2e8a8524652ef81a5e166bef72"
+    sha256 cellar: :any, big_sur:       "27bc34fa6578e146ca526ff681155adc84b2828e125945c8e50b72c5777cc6d0"
+    sha256 cellar: :any, catalina:      "c2ff23a42764f182a5e9095e7f0f7481c0340bc9880378981a34d11ecd719c36"
+    sha256 cellar: :any, mojave:        "affbd6157312a59711b4b8d853a68885979c8bb230dd46bb983e1c3228d15f78"
   end
 
   depends_on "rust" => :build
