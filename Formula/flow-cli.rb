@@ -7,10 +7,10 @@ class FlowCli < Formula
   head "https://github.com/onflow/flow-cli.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7bb4dd2cbc82c5923c40c114dcdc6a5ac102bb2430a6b78e44ac763ac368ba33"
-    sha256 cellar: :any_skip_relocation, big_sur:       "715af8536626e772b6821f9d5ddcc79f4cd38832b51e05c65c4776c1a14a2726"
-    sha256 cellar: :any_skip_relocation, catalina:      "9814167aa3c6df83bbe7029d4ae58a69d8b02b887187886730be58739346d0de"
-    sha256 cellar: :any_skip_relocation, mojave:        "6fd37b3b61703a76f33ad98cc53d337905c359fe750503ae3637701db0a49ba6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bab0c5544671b385a11b31e74b8377163ed325ead8a6dd3415e960a7e7fcac79"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f373fde61faf3cc62eea0cf7777984200511eb65045fb361c0e069417814ea4b"
+    sha256 cellar: :any_skip_relocation, catalina:      "75b1f1a8fd72e843b3233dd97a09b593dff03d637359c0181355d663cd8daed6"
+    sha256 cellar: :any_skip_relocation, mojave:        "bb169083ad3f07e985232888fcccaa15ad01d06bf9b4f4fdc12021d4db0e1e34"
   end
 
   depends_on "go" => :build
