@@ -5,6 +5,13 @@ class QtMysql < Formula
   sha256 "991a0e4e123104e76563067fcfa58602050c03aba8c8bb0c6198347c707817f1"
   license all_of: ["LGPL-2.1-only", "LGPL-3.0-only"]
 
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "d65de3f51b4e4264497eb6271c1590be0508f155e7fe528054151c50fba81fb7"
+    sha256 cellar: :any, big_sur:       "261c09a1ca5a54aa2945c37d31d667123d044eea84026aa69d436f08e68eb359"
+    sha256 cellar: :any, catalina:      "504e6885056787df19f31de5f22bd360fc6eec27a0fb10dbed2bedaaaa1a0457"
+    sha256 cellar: :any, mojave:        "138855baff7c9500c23f73c6358139c6f1ef925acc229535b2508827dec0fdcd"
+  end
+
   depends_on "cmake" => [:build, :test]
 
   depends_on "mysql"
