@@ -3,8 +3,8 @@ class NicotinePlus < Formula
 
   desc "Graphical client for the Soulseek file sharing network"
   homepage "https://nicotine-plus.github.io/nicotine-plus/"
-  url "https://files.pythonhosted.org/packages/f1/e6/818eb82e9cfe93dcdd769bfe111869a971fb94c2ca7fedbfd44236f9c676/nicotine-plus-3.0.0.tar.gz"
-  sha256 "814d7b8c9a07d211a0b36b21a5b075f38db3840aaae26dd2acd42ac90b71cc60"
+  url "https://files.pythonhosted.org/packages/e6/09/ab23fdd85bd66a69a1ff6baf87953f03b2dcf8e6d6428c46f1c016cbfcd7/nicotine-plus-3.0.2.tar.gz"
+  sha256 "c621d7effec2497cfe2d439146cf1847ffac2b769f3f470362dfb952b4c1cda6"
   license "GPL-3.0-or-later"
   head "https://github.com/Nicotine-Plus/nicotine-plus.git"
 
@@ -17,6 +17,7 @@ class NicotinePlus < Formula
 
   depends_on "adwaita-icon-theme"
   depends_on "gtk+3"
+  depends_on "py3cairo"
   depends_on "pygobject3"
   depends_on "python@3.9"
 
