@@ -7,11 +7,10 @@ class Nqp < Formula
   license "Artistic-2.0"
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "f4b25743bad14ec0cdd1a712f2fc0ceac16e9ffcf3f8122d1ea1aa5ec0c74308"
-    sha256 big_sur:       "da4c1fbeebe3c51d26ae4bff6362cc9acd1bc4bfa0a6f72ec11fc38a08bf887d"
-    sha256 catalina:      "24e1c860b5c9c1bb85a0d20a89788100d24b39408b016acca3fc6f66fc6c37ff"
-    sha256 mojave:        "e52cad208d6c1d12286ae32a11be4371a0d0ec1626b3480a7fc0fa34f1217df7"
+    sha256 arm64_big_sur: "73a1af34da7376ffcf48159792a45df3c8ef7eedcf4d2cc5bfb27f754e0920ac"
+    sha256 big_sur:       "8f4def608ca0adfbd3b334cf1136245a37b643365b6461c9909b65e8386ffcb1"
+    sha256 catalina:      "2e9e529c542c4d90aa4e70989d387d49574d283c66e1fa8d66efd4471066c4fd"
+    sha256 mojave:        "a9fd95bb902d3c46d26758e705aba442fc881b2c8831407de999019c0acbf31f"
   end
 
   depends_on "libtommath"
