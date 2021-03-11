@@ -9,10 +9,10 @@ class Esptool < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "2fb146758042785524015dbe58968da27d78ad916068ea19fad51e91fa29e760"
-    sha256 cellar: :any, big_sur:       "e3c17a512c81223bae4c55166a8fc874a66ea48a5da20815ec1657811f22c42d"
-    sha256 cellar: :any, catalina:      "408f012ae8967304352d8820df10a9af55a3025e0a1cbf8939cb73d4c93bc2f2"
-    sha256 cellar: :any, mojave:        "8c65d474b25e28d3774b46fff5db3480fd36b33fa23fa0edfed50e06cc0a33cd"
+    sha256 cellar: :any, arm64_big_sur: "29caa2064c93bf60c30012081d2f9ff98c7e6a2197613fd19bcb59225e8aa1a5"
+    sha256 cellar: :any, big_sur:       "9d11746f99a1363c06b7fd1f2462d095268c1557dab200f389d66d59bfceecf9"
+    sha256 cellar: :any, catalina:      "5070c01db9a963f97c27265e87e5e5afb52c824aa02fc1c4dc0a69a019e88771"
+    sha256 cellar: :any, mojave:        "8d912a267508314803f308abb07620c80ec0440c84cb93c28357df2366ee037d"
   end
 
   depends_on "rust" => :build
