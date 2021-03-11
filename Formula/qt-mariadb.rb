@@ -5,6 +5,13 @@ class QtMariadb < Formula
   sha256 "991a0e4e123104e76563067fcfa58602050c03aba8c8bb0c6198347c707817f1"
   license all_of: ["LGPL-2.1-only", "LGPL-3.0-only"]
 
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "f3350ff79e85fd0961dcd17fdc3a7379bd04fb4549286ebde107b98b8f393a53"
+    sha256 cellar: :any, big_sur:       "d67e811c29629acbc758031026123f8571fa8f625c18ce6299523675c28c7f57"
+    sha256 cellar: :any, catalina:      "e8e9ea624ed0583591de8d973f9e44bd91747042e0cc2f2c20c5d426f9724fb6"
+    sha256 cellar: :any, mojave:        "269c696ed232965e5cf21d6ebd1517dbbcf67425d91514ec52a72c9614723f15"
+  end
+
   depends_on "cmake" => [:build, :test]
 
   depends_on "mariadb"
