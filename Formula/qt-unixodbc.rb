@@ -5,6 +5,13 @@ class QtUnixodbc < Formula
   sha256 "991a0e4e123104e76563067fcfa58602050c03aba8c8bb0c6198347c707817f1"
   license all_of: ["GPL-2.0-only", "GPL-3.0-only", "LGPL-2.1-only", "LGPL-3.0-only"]
 
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "a7d220cdec6d94c16541af9a375cf2db9a1aaa76f39be565acabfb9c3f2c5dd4"
+    sha256 cellar: :any, big_sur:       "80f1672f638ca8972b49b13fb410028b00fb439cc77d4ba3b2c9770e2053c79d"
+    sha256 cellar: :any, catalina:      "5e0959c56bde944941a99db8a646f38e3fab0b1bf7d9b634785098fa6fb312c0"
+    sha256 cellar: :any, mojave:        "a021f1e0e28c5277d211b7012b58f2b35e87d38564f701e635775a6fcfe44038"
+  end
+
   depends_on "cmake" => [:build, :test]
 
   depends_on "qt"
