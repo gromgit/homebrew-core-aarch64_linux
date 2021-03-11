@@ -2,8 +2,8 @@ class CartridgeCli < Formula
   desc "Tarantool Cartridge command-line utility"
   homepage "https://tarantool.org/"
   url "https://github.com/tarantool/cartridge-cli.git",
-      tag:      "2.6.0",
-      revision: "6d409e4a0139238441420f7fc58453cb21488035"
+      tag:      "2.7.0",
+      revision: "ac1c3c6a7a9893a92fd46ce08817eb5880d20f7d"
   license "BSD-2-Clause"
 
   bottle do
@@ -16,9 +16,6 @@ class CartridgeCli < Formula
   depends_on "mage" => :build
 
   def install
-    # Remove this when upstream ships a go.sum
-    system "go", "mod", "download"
-
     system "mage", "build"
     bin.install "cartridge"
     system bin/"cartridge", "gen", "completion"
