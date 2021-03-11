@@ -5,6 +5,13 @@ class QtLibiodbc < Formula
   sha256 "991a0e4e123104e76563067fcfa58602050c03aba8c8bb0c6198347c707817f1"
   license all_of: ["GPL-2.0-only", "GPL-3.0-only", "LGPL-2.1-only", "LGPL-3.0-only"]
 
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "732b22f49ca9dac967f1bf392d3d01b74502f7d69c4161b56b9269297a8dbdfc"
+    sha256 cellar: :any, big_sur:       "b0c24f96f9269bc37d82ac94f619004743600cbc2eba4bd0aacccd040b2eadff"
+    sha256 cellar: :any, catalina:      "ca34f6affc55e44180857cee79d645093917642de656ed9b1166aeec0f26ff52"
+    sha256 cellar: :any, mojave:        "b673626a451b02fc8ae47b11c4812dea2756ddac7511741467dcafe03979670a"
+  end
+
   depends_on "cmake" => [:build, :test]
 
   depends_on "libiodbc"
