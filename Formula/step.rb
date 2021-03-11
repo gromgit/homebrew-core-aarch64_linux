@@ -1,8 +1,8 @@
 class Step < Formula
   desc "Crypto and x509 Swiss-Army-Knife"
   homepage "https://smallstep.com"
-  url "https://github.com/smallstep/cli/releases/download/v0.15.12/step_0.15.12.tar.gz"
-  sha256 "84f913664519835d204034a4ae47261eda0a651316e663f58fb3af5ca6c997ed"
+  url "https://github.com/smallstep/cli/releases/download/v0.15.13/step_0.15.13.tar.gz"
+  sha256 "d7ab06dc7e6c5703294add4e40f9702de5c63708888c5dd76654028fefe1a608"
   license "Apache-2.0"
 
   bottle do
@@ -20,17 +20,12 @@ class Step < Formula
   end
 
   def install
-    ENV["GOPATH"] = buildpath
-    (buildpath/"src/github.com/smallstep/cli").install buildpath.children
-    cd "src/github.com/smallstep/cli" do
-      system "make", "build"
-      bin.install "bin/step" => "step"
-      bash_completion.install "autocomplete/bash_autocomplete" => "step"
-      zsh_completion.install "autocomplete/zsh_autocomplete" => "_step"
-    end
+    system "make", "build"
+    bin.install "bin/step" => "step"
+    bash_completion.install "autocomplete/bash_autocomplete" => "step"
+    zsh_completion.install "autocomplete/zsh_autocomplete" => "_step"
 
-    resource("certificates").stage "#{buildpath}/src/github.com/smallstep/certificates"
-    cd "#{buildpath}/src/github.com/smallstep/certificates" do
+    resource("certificates").stage do
       system "make", "build"
       bin.install "bin/step-ca" => "step-ca"
     end
