@@ -5,6 +5,13 @@ class QtPerconaServer < Formula
   sha256 "991a0e4e123104e76563067fcfa58602050c03aba8c8bb0c6198347c707817f1"
   license all_of: ["LGPL-2.1-only", "LGPL-3.0-only"]
 
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "e8cac96be21c551591beaf0f0b3db9d236c4d92620ca90566583c415224624e0"
+    sha256 cellar: :any, big_sur:       "7d2301593bfe0133b93feadb819afef0befc687976c15f663b02742f60b7cfa4"
+    sha256 cellar: :any, catalina:      "b31d93758c4e70cb3ddb523b17fce5845cd95f74f516fd29aff083c7e1dcca2d"
+    sha256 cellar: :any, mojave:        "5fd16d09479331b60eaf9de75e34639b00dc2fc3b03d4ae08ce68d1e6ef25ceb"
+  end
+
   depends_on "cmake" => [:build, :test]
 
   depends_on "percona-server"
