@@ -11,10 +11,10 @@ class Aqbanking < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "2fba93154a8edc402f8750354a849e52f2f9a3fa7332abbc650fbaed5793162c"
-    sha256 big_sur:       "ed474ba7d192475de6a01c40c3ca49ae918f37f629ab7f9cf1896de8324dc183"
-    sha256 catalina:      "944fd8c6eecb6b7aa81161e70e0b6d96a41f712563f2e18341086d2c50cef6df"
-    sha256 mojave:        "f10639855d892b343fc6f9530dbfebe2774b5f9c86ca63acb0886629c55dd1b7"
+    sha256 arm64_big_sur: "69e8133dedb8b9225e7af46b5142bce212abb4de9880d7010ba5742d663e5aa6"
+    sha256 big_sur:       "fc7526646a6176477a19123059888ee449a142cde7adc77ced46b0731f6383c8"
+    sha256 catalina:      "080a19210e6a9ac819de72da01b1ef96929420a6b5545f1a480829f169595836"
+    sha256 mojave:        "6b3c49ab2cbe735e9f4cdcb0bc347150908a6f5399a0fa43ea93b80353b11f33"
   end
 
   head do
