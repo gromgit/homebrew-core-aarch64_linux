@@ -9,10 +9,10 @@ class AwsElasticbeanstalk < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "59aae0027adbbd7ec7de9671095696c6ad3cc94fb923e521812370293df8234d"
-    sha256 cellar: :any, big_sur:       "653ea8a1f2d18e3a20b61d7b8916b95a48137504b0011410d82dae008e1e558c"
-    sha256 cellar: :any, catalina:      "047fda58d7dae648cf89f2f26b075eea994052f741ac1550638f4291f005b417"
-    sha256 cellar: :any, mojave:        "39ff2f2ce5316e8a79971674b718d5b08f38372dd52f8359257d9e319bf1c6ef"
+    sha256 cellar: :any, arm64_big_sur: "535238dd10cc19088249e10f326244aaef14e5bdd125c69900eeac4cebeeb566"
+    sha256 cellar: :any, big_sur:       "d00e80d6d174cc1e1d5cbc902c195b0a4f8f6e9da90ba65f0fcbb0d7dd1a9d16"
+    sha256 cellar: :any, catalina:      "1918f626456922f028d760cefe6cbf1bfdd47bcb7dcaf6925d471804fde4ce1b"
+    sha256 cellar: :any, mojave:        "34a94f0ce78c31ddf2c4e4330eec17efc0f7870c400e21a18ded5f5bb405d7d4"
   end
 
   depends_on "rust" => :build
