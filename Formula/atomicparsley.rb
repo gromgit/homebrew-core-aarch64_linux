@@ -16,7 +16,14 @@ class Atomicparsley < Formula
   end
 
   depends_on "cmake" => :build
+
   uses_from_macos "zlib"
+
+  on_linux do
+    depends_on "gcc" => :build
+  end
+
+  fails_with gcc: "5"
 
   def install
     system "cmake", ".", *std_cmake_args
