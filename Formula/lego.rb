@@ -6,10 +6,10 @@ class Lego < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9c8fbe8f8fe9b92627f4acd7b3fd92ec18e0f2aa78e6508fbfc252d44bf39530"
-    sha256 cellar: :any_skip_relocation, big_sur:       "2871b27fe3a4d1fc400825cfa337e68f456df2d0ad0dd5319b3037e81460ad46"
-    sha256 cellar: :any_skip_relocation, catalina:      "8d68c52daaa52e31b9558484470c797994f262fd4434ab46791f4adbfddbdf3b"
-    sha256 cellar: :any_skip_relocation, mojave:        "54edb4620e4c9a8035e46382056e95dc2f06c2d500967880e0b2da5c4e3bf9a3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "98cf7e41c76fcc8f436778c5102d3d813b76fbb38e6d41b890fde18c77a47dd0"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0c5efe9cc6e0888bb78e53e089e7c1ac16f15f71e6894c1cbadab80e12b552db"
+    sha256 cellar: :any_skip_relocation, catalina:      "0304f6caefbffc8376d48aaf77e9de929e9e9036a3f825575660b45cd21db558"
+    sha256 cellar: :any_skip_relocation, mojave:        "84bcdd94d87727e85526053220e2baa01195efc9ef795c9d2ac4e596074dbc18"
   end
 
   depends_on "go" => :build
