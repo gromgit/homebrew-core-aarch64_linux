@@ -13,10 +13,10 @@ class Go < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "c1f259427b953cb5564af663538a696bb79820f1b23b7baa940ab2c4e21bc684"
-    sha256 big_sur:       "f23bdf4231ea64207fd112500f2c1fd9569366b31f6c843a815c5c75e4be6c5c"
-    sha256 catalina:      "dfd8a82a4b7d9f4136eb6af4dca507cc136cebb74e843eeb3ba0ecd1ad94a3a2"
-    sha256 mojave:        "c54706ee25e7ac3006f8d7f9bbb059131eca3b750e03736671d4faaffc399977"
+    sha256 arm64_big_sur: "198bd1091953038e20f96a4567ffaa035adcd66d12c078b6314fd1528dd6816d"
+    sha256 big_sur:       "b2db615d048efcef6745216fc196ceda7c60c46807c9dcdca5c5508305d3cd7f"
+    sha256 catalina:      "4acc6b0ee0d72144e536b27ebe983a646c8ccaa017b3fe25f98eb664d965245a"
+    sha256 mojave:        "ef0720e707893e88bd6ce5c3db10eabdc9b1e5341f3413053fe8e19dbfdbcbe8"
   end
 
   # Don't update this unless this version cannot bootstrap the new version.
