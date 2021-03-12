@@ -1,10 +1,9 @@
 class Root < Formula
   desc "Object oriented framework for large scale data analysis"
   homepage "https://root.cern.ch/"
-  url "https://root.cern.ch/download/root_v6.22.06.source.tar.gz"
-  sha256 "c4688784a7e946cd10b311040b6cf0b2f75125a7520e04d1af0b746505911b57"
+  url "https://root.cern.ch/download/root_v6.22.08.source.tar.gz"
+  sha256 "6f061ff6ef8f5ec218a12c4c9ea92665eea116b16e1cd4df4f96f00c078a2f6f"
   license "LGPL-2.1-or-later"
-  revision 2
   head "https://github.com/root-project/root.git"
 
   livecheck do
@@ -39,9 +38,6 @@ class Root < Formula
   depends_on "gl2ps"
   depends_on "graphviz"
   depends_on "gsl"
-  # Temporarily depend on Homebrew libxml2 to work around a brew issue:
-  # https://github.com/Homebrew/brew/issues/5068
-  depends_on "libxml2" if MacOS.version >= :mojave
   depends_on "lz4"
   depends_on "numpy" # for tmva
   depends_on "openssl@1.1"
@@ -52,9 +48,17 @@ class Root < Formula
   depends_on "xz" # for LZMA
   depends_on "zstd"
 
+  uses_from_macos "libxml2"
+
   conflicts_with "glew", because: "root ships its own copy of glew"
 
   skip_clean "bin"
+
+  # Can be removed post 6.22.08
+  patch do
+    url "https://github.com/root-project/root/commit/d113c9fcf7e1d88c573717c676aa4b97f1db2ea2.patch?full_index=1"
+    sha256 "6d0fd5ccd92fbb27a949ea40ed4fd60a5e112a418d124ca99f05f70c9df31cda"
+  end
 
   def install
     # Work around "error: no member named 'signbit' in the global namespace"
