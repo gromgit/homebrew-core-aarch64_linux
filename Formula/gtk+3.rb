@@ -1,8 +1,8 @@
 class Gtkx3 < Formula
   desc "Toolkit for creating graphical user interfaces"
   homepage "https://gtk.org/"
-  url "https://download.gnome.org/sources/gtk+/3.24/gtk+-3.24.26.tar.xz"
-  sha256 "2cc1b2dc5cad15d25b6abd115c55ffd8331e8d4677745dd3ce6db725b4fff1e9"
+  url "https://download.gnome.org/sources/gtk+/3.24/gtk+-3.24.27.tar.xz"
+  sha256 "f71c067570339f9f8efac7bb87717a2c52279cb50223fb8b5ba7085930757a26"
   license "LGPL-2.0-or-later"
 
   livecheck do
