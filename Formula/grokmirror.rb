@@ -3,8 +3,8 @@ class Grokmirror < Formula
 
   desc "Framework to smartly mirror git repositories"
   homepage "https://github.com/mricon/grokmirror"
-  url "https://files.pythonhosted.org/packages/3f/51/f531d38a320897dd478649f366b3e3d0cfb4d795d14b8c5ea44b2cb5c80f/grokmirror-2.0.7.tar.gz"
-  sha256 "7132cc12602badc22504803b33d4895df976f29ab0727e678a61984c8281bc9c"
+  url "https://files.pythonhosted.org/packages/8c/27/cdbb5f2b6ad0561e5c8b0559579ec4bb31fec0092828babc0d16800b261f/grokmirror-2.0.8.tar.gz"
+  sha256 "a6b9cdba41395970c50fd390b9552c6ae277e256a4fcaf73eab994e882bf7a49"
   license "GPL-3.0-or-later"
   head "https://github.com/mricon/grokmirror.git"
 
