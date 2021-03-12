@@ -5,6 +5,13 @@ class Pyqt3d < Formula
   sha256 "fb797dda5571e169edf60a0fd1443fac0907fb1f147339dbfdcd4a671106a876"
   license "GPL-3.0-only"
 
+  bottle do
+    sha256 arm64_big_sur: "95ab0a23002452ecbd08cd7cabb9c792c44e4a4ca68536db129caca04dca18bd"
+    sha256 big_sur:       "17abdbd823443c6c1ac91831f176edd24cf326479dd9697c0cb4805093eea0fc"
+    sha256 catalina:      "cac038a5b66f6a11ac597759634f06d3e93cf7b70caf8db804df5ef517e6de80"
+    sha256 mojave:        "6f00e93d106c52a4e06fed60299c3d2f4f87f93d95d92841f54333116548c182"
+  end
+
   depends_on "pyqt-builder" => :build
 
   depends_on "pyqt"
