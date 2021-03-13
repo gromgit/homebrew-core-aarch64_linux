@@ -3,10 +3,9 @@ class Yapf < Formula
 
   desc "Formatter for python code"
   homepage "https://github.com/google/yapf"
-  url "https://files.pythonhosted.org/packages/65/44/c2aa8743cada222eaede6b9bd4b644e84f04eaa6dede2258ec7562b705d3/yapf-0.30.0.tar.gz"
-  sha256 "3000abee4c28daebad55da6c85f3cd07b8062ce48e2e9943c8da1b9667d48427"
+  url "https://files.pythonhosted.org/packages/85/60/8532f7ca17cea13de00e80e2fe1e6bd59a9379856706a027536b19daf0d3/yapf-0.31.0.tar.gz"
+  sha256 "408fb9a2b254c302f49db83c59f9aa0b4b0fd0ec25be3a5c51181327922ff63d"
   license "Apache-2.0"
-  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "1e2e3659b521d218c9720c5c81b0a7a8c48b27844acfb391aaf2abc24809e84c"
