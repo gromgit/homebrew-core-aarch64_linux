@@ -7,11 +7,10 @@ class PerlBuild < Formula
   head "https://github.com/tokuhirom/perl-build.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "24d2f050faa5742dacaf94ef1969451d50f868e7deee91b5dc424b9e753c3b51"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5809680fbd6d8c77d5ad2473ab7763a709b664e9ed967becebc16b408da8f9c7"
-    sha256 cellar: :any_skip_relocation, catalina:      "21afa110a4b5fa7ed53d3e79fcf9f602fb8143902a6a0b0ba22be0aeadd9b98c"
-    sha256 cellar: :any_skip_relocation, mojave:        "47c139b2b6d68fdc08742dbda4ebdde55ae23cae474818d7f15fcfa156554fe5"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "3bb5910f082f8936165523306b1762f18277f3aac1cdd4abdfb84dfd5d240e45"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b662afe3c5e833e08c5e0a425f5597ab159b808e6285e90f96ee48e1f8d8d9a8"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a24fadf986032226343c74378f0344b15729687d9b0679f64e859e41a4f165db"
+    sha256 cellar: :any_skip_relocation, catalina:      "e2b99b05c34a89e8706810730e8ac6da7d98c76025b72d86eb2a6003a47a4b85"
+    sha256 cellar: :any_skip_relocation, mojave:        "5ae631c827ab5b58f0e2bafa3b5470f3b2f2236802942c3d4454ab96fd212aa8"
   end
 
   uses_from_macos "perl"
