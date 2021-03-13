@@ -1,8 +1,8 @@
 class Rubberband < Formula
   desc "Audio time stretcher tool and library"
   homepage "https://breakfastquay.com/rubberband/"
-  url "https://breakfastquay.com/files/releases/rubberband-1.9.0.tar.bz2"
-  sha256 "4f5b9509364ea876b4052fc390c079a3ad4ab63a2683aad09662fb905c2dc026"
+  url "https://breakfastquay.com/files/releases/rubberband-1.9.1.tar.bz2"
+  sha256 "fc474878f6823c27ef5df1f9616a8c8b6a4c01346132ea7d1498fe5245e549e3"
   license "GPL-2.0-or-later"
   head "https://hg.sr.ht/~breakfastquay/rubberband", using: :hg
 
@@ -19,6 +19,8 @@ class Rubberband < Formula
     sha256 cellar: :any, high_sierra:   "15082ba72d1f88258739752b4f4a8094d5f931fac1d69aa64d8bf25ecb21648d"
   end
 
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "libsamplerate"
   depends_on "libsndfile"
@@ -31,22 +33,11 @@ class Rubberband < Formula
   end
 
   def install
-    # Pass OPTFLAGS and ARCHFLAGS to avoid Intel-specific flags
-    system "make", "-f", "Makefile.osx",
-                   "OPTFLAGS='-DNDEBUG -ffast-math -O3 -ftree-vectorize'",
-                   "ARCHFLAGS="
-
-    # HACK: Manual install because "make install" is broken
-    # https://github.com/Homebrew/homebrew-core/issues/28660
-    bin.install "bin/rubberband"
-    lib.install "lib/librubberband.dylib" => "librubberband.2.1.1.dylib"
-    lib.install_symlink lib/"librubberband.2.1.1.dylib" => "librubberband.2.dylib"
-    lib.install_symlink lib/"librubberband.2.1.1.dylib" => "librubberband.dylib"
-    include.install "rubberband"
-
-    cp "rubberband.pc.in", "rubberband.pc"
-    inreplace "rubberband.pc", "%PREFIX%", opt_prefix
-    (lib/"pkgconfig").install "rubberband.pc"
+    mkdir "build" do
+      system "meson", *std_meson_args
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
   end
 
   test do
