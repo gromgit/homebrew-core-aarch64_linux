@@ -1,8 +1,8 @@
 class PerlBuild < Formula
   desc "Perl builder"
   homepage "https://github.com/tokuhirom/Perl-Build"
-  url "https://github.com/tokuhirom/Perl-Build/archive/1.31.tar.gz"
-  sha256 "9e4961ad03f920687b60fecef473f524fc8697e10ad4bff87825f8357a6ed6a0"
+  url "https://github.com/tokuhirom/Perl-Build/archive/1.32.tar.gz"
+  sha256 "ba86d74ff9718977637806ef650c85615534f0b17023a72f447587676d7f66fd"
   license any_of: ["Artistic-1.0", "GPL-1.0-or-later"]
   head "https://github.com/tokuhirom/perl-build.git"
 
@@ -17,8 +17,8 @@ class PerlBuild < Formula
   uses_from_macos "perl"
 
   resource "Module::Build" do
-    url "https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4229.tar.gz"
-    sha256 "1fe491a6cda914b01bc8e592faa2b5404e9f35915ca15322f8f2a8d8f9008c18"
+    url "https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4231.tar.gz"
+    sha256 "7e0f4c692c1740c1ac84ea14d7ea3d8bc798b2fb26c09877229e04f430b2b717"
   end
 
   resource "Module::Build::Tiny" do
@@ -47,8 +47,8 @@ class PerlBuild < Formula
   end
 
   resource "CPAN::Perl::Releases" do
-    url "https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-4.20.tar.gz"
-    sha256 "71d3310531a644424be33f22148a582f892eb7b12555bc150dbdac4293abd8ed"
+    url "https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20210220.tar.gz"
+    sha256 "c88ba6bba670bfc36bcb10adcceab83428ab3b3363ac9bb11f374a88f52466be"
   end
 
   resource "CPAN::Perl::Releases::MetaCPAN" do
@@ -73,8 +73,8 @@ class PerlBuild < Formula
   end
 
   resource "Devel::PatchPerl" do
-    url "https://cpan.metacpan.org/authors/id/B/BI/BINGOS/Devel-PatchPerl-1.78.tar.gz"
-    sha256 "93111a37ad7358ea5601444c2e76074b267ca84e4e6aca802547759ed74217e7"
+    url "https://cpan.metacpan.org/authors/id/B/BI/BINGOS/Devel-PatchPerl-2.08.tar.gz"
+    sha256 "69c6e97016260f408e9d7e448f942b36a6d49df5af07340f1d65d7e230167419"
   end
 
   # Pod::Usage dependency
