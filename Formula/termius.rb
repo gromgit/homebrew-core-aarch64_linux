@@ -10,10 +10,10 @@ class Termius < Formula
   head "https://github.com/termius/termius-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "fa292712fc22cc19fd2ee6716eb839f45c32d83078d3b08c3380e573b3ae34fe"
-    sha256 cellar: :any, big_sur:       "cd74bf3ba3fddf669d965fb5e0f8a07a07727792885024b5aa312c6eb83180eb"
-    sha256 cellar: :any, catalina:      "cb60f507f3051501376244fcc55a3f4f241486c59a0af2000c41e0f48d30224b"
-    sha256 cellar: :any, mojave:        "32e846c6ef58534581fcbc895435ca2fa935e3a9c55a005e9ddbb41c33a4a956"
+    sha256 cellar: :any, arm64_big_sur: "61c7d93bc10dda0c678c8c27223541c72b5be0ba25ca9be21823c3277dcc87a1"
+    sha256 cellar: :any, big_sur:       "604a373e98092e951cfd186d5312f0c86d01af48f13d190d7aad3a338863bc5a"
+    sha256 cellar: :any, catalina:      "8b32dde9daefefd5d170966e6a58c8c71a1c125172c80c138fba28cce4826ef6"
+    sha256 cellar: :any, mojave:        "937ccb6f7f995f4be6e8ba6db448333cafa4a49087098a564ca6bf5070a3c5e0"
   end
 
   depends_on "rust" => :build
