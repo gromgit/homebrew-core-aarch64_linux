@@ -12,10 +12,10 @@ class Cadence < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6a6ad7b27304145b5029b5473621e073ccf962d388fd4a2685219026a6f9f385"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b3dbda524a438ff5db8bf40c585c05d8ff29a43df6c36e696cc01b2e966ce9c8"
-    sha256 cellar: :any_skip_relocation, catalina:      "0cd3c4071b3e287cd03226d66da03f93e020800ce07f125c14257108c75226dc"
-    sha256 cellar: :any_skip_relocation, mojave:        "cb034c8a34c2d63bf699e906fb82d0d5dae4314723d3d99444200a8a32f9fb5f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "84fbe4455dabeeedad27400ba961e34aca8cb856a229fb151be34e065d734a02"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d2fc3bb1964e1f8ca05187479a3ae1cdc349159a74383c607f1678d88775a936"
+    sha256 cellar: :any_skip_relocation, catalina:      "f5a7ba83fa1c59bfb998cc92b98364a05a9aa1d0c0c50c9e277c397f4afc6f7b"
+    sha256 cellar: :any_skip_relocation, mojave:        "6890855c13f50132f22bb684b6921ce7d1ab8bf6154c5f2374d32e797fc37cca"
   end
 
   depends_on "go" => :build
