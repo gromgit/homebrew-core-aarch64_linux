@@ -6,10 +6,10 @@ class Imagesnap < Formula
   license :public_domain
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ebfb743c7906551d097ce5847530ae24f8732b0269598cb96d7ac0b9332d78cd"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b8a2f5bf975f5bcc20d37c41881de1fdcb7be16545f57167be1389952b4784e0"
-    sha256 cellar: :any_skip_relocation, catalina:      "05549902e034a23f59473f94c30bacd395f0f0875da6349f24f42fb096ab06ed"
-    sha256 cellar: :any_skip_relocation, mojave:        "32dab2f556c6b7fdea3ef91635ea8527ba50bf58c59002c635c50fcd7d6b698d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "18669a90a51230e2bdd331646376a9d253a70887f7d0bc5026f3ae8d80e99c2c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "9d376efb1d620a467c115484d22472555e630651c7a1b59423d6d4db9879b969"
+    sha256 cellar: :any_skip_relocation, catalina:      "ca0082c02a7b09d664c91cf94bcf1dd9f181fcaf855c4152e2530b44bfd86d75"
+    sha256 cellar: :any_skip_relocation, mojave:        "ebe22a833280f18db1a3c0045660ed59da9873b81b6543c354737c875bcaf2a4"
   end
 
   depends_on xcode: :build
