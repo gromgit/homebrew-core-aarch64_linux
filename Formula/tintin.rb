@@ -11,11 +11,10 @@ class Tintin < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "7a78cec1a95d75d2c20e6c9933392bdaf08dfa841eafc870f60a61c1108d97bf"
-    sha256 cellar: :any, big_sur:       "a69c772325b8928eedd4ff78ec5cb4323f69b4db40fcc359df9c7f17b472d5ca"
-    sha256 cellar: :any, catalina:      "4eefe2f0705d71ad16e7b8a9f1e8fd842491802872e922464596397279733cc4"
-    sha256 cellar: :any, mojave:        "7c12735502e074ad90cd25dc7baefa6af0a9f2aa5b3d21107710f49f0f8e06fd"
-    sha256 cellar: :any, high_sierra:   "c2bb4a0a89b2c1706c5491bf6b62ab14e321822b23bc0c29cc33e6cfd7f1ece4"
+    sha256 cellar: :any, arm64_big_sur: "d83f015d20e728c68ca04c314949a31f9d5c8c036ee680bf7b928f68acc69899"
+    sha256 cellar: :any, big_sur:       "d519dd8c15f67dbc1f8f2d53f5be240d3d2072be570bf8e51c230e36fc186bdf"
+    sha256 cellar: :any, catalina:      "c69afb31c206f6551f1009eca62a6f57845b32a89795c5c6e56a6155c86f232b"
+    sha256 cellar: :any, mojave:        "aa54bff2eec7ad5b8d4bfc7eac365156a98a84f3304516e2ba919006994dfbe9"
   end
 
   depends_on "gnutls"
