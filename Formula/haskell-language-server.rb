@@ -13,6 +13,12 @@ class HaskellLanguageServer < Formula
     strategy :github_latest
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, big_sur:  "ff41767b9a34b033c176518cefcae7c92beab42a2eb100c5ac98b9ffe27d8c5d"
+    sha256 cellar: :any_skip_relocation, catalina: "85c08c2eaa6e16de56173eb17bd3a25d5e7033268ae3215b1ee370931e30998d"
+    sha256 cellar: :any_skip_relocation, mojave:   "76a05d6b7ee7ef5f37a308afa8f6cb8a6c5da9f58c50e98c520e7fdae9c152df"
+  end
+
   depends_on "cabal-install" => [:build, :test]
   depends_on "ghc" => [:build, :test]
 
