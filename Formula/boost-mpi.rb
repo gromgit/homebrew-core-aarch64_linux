@@ -47,7 +47,12 @@ class BoostMpi < Formula
     args << "cxxflags=-stdlib=libc++" << "linkflags=-stdlib=libc++" if ENV.compiler == :clang
 
     open("user-config.jam", "a") do |file|
-      file.write "using darwin : : #{ENV.cxx} ;\n"
+      on_macos do
+        file.write "using darwin : : #{ENV.cxx} ;\n"
+      end
+      on_linux do
+        file.write "using gcc : : #{ENV.cxx} ;\n"
+      end
       file.write "using mpi ;\n"
     end
 
@@ -61,14 +66,16 @@ class BoostMpi < Formula
     lib.install Dir["install-mpi/lib/*mpi*"]
     (lib/"cmake").install Dir["install-mpi/lib/cmake/*mpi*"]
 
-    # libboost_mpi links to libboost_serialization, which comes from the main boost formula
-    boost = Formula["boost"]
-    MachO::Tools.change_install_name("#{lib}/libboost_mpi-mt.dylib",
-                                     "libboost_serialization-mt.dylib",
-                                     "#{boost.lib}/libboost_serialization-mt.dylib")
-    MachO::Tools.change_install_name("#{lib}/libboost_mpi.dylib",
-                                     "libboost_serialization.dylib",
-                                     "#{boost.lib}/libboost_serialization.dylib")
+    on_macos do
+      # libboost_mpi links to libboost_serialization, which comes from the main boost formula
+      boost = Formula["boost"]
+      MachO::Tools.change_install_name("#{lib}/libboost_mpi-mt.dylib",
+                                       "libboost_serialization-mt.dylib",
+                                       "#{boost.lib}/libboost_serialization-mt.dylib")
+      MachO::Tools.change_install_name("#{lib}/libboost_mpi.dylib",
+                                       "libboost_serialization.dylib",
+                                       "#{boost.lib}/libboost_serialization.dylib")
+    end
   end
 
   test do
