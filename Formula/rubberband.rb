@@ -12,11 +12,10 @@ class Rubberband < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "b7436d1a91b540cc384f15f3c4416f229635c5412b5939ae0037ceb8158bf451"
-    sha256 cellar: :any, big_sur:       "f5b7d05107fadeca115e0ab09130178ede93fb6f0e18c7b392bdd77e3587b966"
-    sha256 cellar: :any, catalina:      "4598d98fb8994cd6545f5858a38beae10b43968317b53ec0916542d95355f27c"
-    sha256 cellar: :any, mojave:        "487182397781621580ecb07f51d301d84b46c6f2f8458880cb8213044f5181cb"
-    sha256 cellar: :any, high_sierra:   "15082ba72d1f88258739752b4f4a8094d5f931fac1d69aa64d8bf25ecb21648d"
+    sha256 cellar: :any, arm64_big_sur: "b5c746daacac9890ebec61ba76db168a7a43a9ea68855ef0c11e705a94458050"
+    sha256 cellar: :any, big_sur:       "f5d703f2e955366c0ad84ef1893e10720b8be81fb58d8df5e7636d4c04952278"
+    sha256 cellar: :any, catalina:      "7ccc9bb3c852f79538337c46b9e6fa9aefc7693190c0ddd67fbfba76717c91df"
+    sha256 cellar: :any, mojave:        "3d1587253220e488765f4ad6d86cae2fdbb351a539ef9525c4b981d8bd49af6c"
   end
 
   depends_on "meson" => :build
