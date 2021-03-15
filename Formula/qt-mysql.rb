@@ -7,10 +7,10 @@ class QtMysql < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "d65de3f51b4e4264497eb6271c1590be0508f155e7fe528054151c50fba81fb7"
-    sha256 cellar: :any, big_sur:       "261c09a1ca5a54aa2945c37d31d667123d044eea84026aa69d436f08e68eb359"
-    sha256 cellar: :any, catalina:      "504e6885056787df19f31de5f22bd360fc6eec27a0fb10dbed2bedaaaa1a0457"
-    sha256 cellar: :any, mojave:        "138855baff7c9500c23f73c6358139c6f1ef925acc229535b2508827dec0fdcd"
+    sha256 cellar: :any, arm64_big_sur: "951d25dadcb1287dc662f7a1689e225fd1f9bbc767b50c147b7b5a8a8aaef442"
+    sha256 cellar: :any, big_sur:       "037e5083aee6127145237cc0efff87ac61c77b369632e3c69f1c81d134b92488"
+    sha256 cellar: :any, catalina:      "73316258ac4a78cba3219d5ea26bc8790744e1fa77b528cda8c9c9930703ed8c"
+    sha256 cellar: :any, mojave:        "420801ea0f6ed3e0d912c6d8389099ab9f41f06e8b88e684496b539b3f7e48ed"
   end
 
   depends_on "cmake" => [:build, :test]
