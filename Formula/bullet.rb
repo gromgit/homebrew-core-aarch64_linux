@@ -49,8 +49,13 @@ class Bullet < Formula
       }
     EOS
 
+    cxx_lib = "-lc++"
+    on_linux do
+      cxx_lib = "-lstdc++"
+    end
+
     system ENV.cc, "test.cpp", "-I#{include}/bullet", "-L#{lib}",
-                   "-lLinearMath", "-lc++", "-o", "test"
+                   "-lLinearMath", cxx_lib, "-o", "test"
     system "./test"
   end
 end
