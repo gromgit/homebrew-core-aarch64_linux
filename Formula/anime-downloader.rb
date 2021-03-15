@@ -10,10 +10,10 @@ class AnimeDownloader < Formula
   head "https://github.com/vn-ki/anime-downloader.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3a202b4257f5b6b0a5eb94ae86cdae3980ac4a2ecd3d806e91c8750ac5ab8c2c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8000f581b43794240687ae2792a266b1a61929d561e02388c90edccaf0f4b406"
-    sha256 cellar: :any_skip_relocation, catalina:      "e76e47b8fd7b2feb747f78b5e58c33c8a2c52daac637eccfe88cae6fd1fccb2f"
-    sha256 cellar: :any_skip_relocation, mojave:        "4ef176a388883c4fae8202f28023b6548ca6b12dfaf7e8ccf2821198edb8e859"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e29856982e4dda0beffac1302df093fe1aba0cdf588dc87728a4c8a4c863dce9"
+    sha256 cellar: :any_skip_relocation, big_sur:       "33549b9969e534604540fb413f7b3774cb9a2f8184528537069478141eaac808"
+    sha256 cellar: :any_skip_relocation, catalina:      "831ca154b2339fa4f3452450d2861f495b8111541eed7bde94bbf3c860b9c857"
+    sha256 cellar: :any_skip_relocation, mojave:        "dde85947e12a9b53c8ae101daa4b7f6f5503a04c4c9fada4e8e721edc307b34c"
   end
 
   depends_on "aria2"
