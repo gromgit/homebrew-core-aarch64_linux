@@ -3,21 +3,10 @@ class Libgusb < Formula
 
   desc "GObject wrappers for libusb1"
   homepage "https://github.com/hughsie/libgusb"
+  url "https://people.freedesktop.org/~hughsient/releases/libgusb-0.3.6.tar.xz"
+  sha256 "13277948a2ee06861234938089aea21bce6ad862f14c81a2efa85340ed701efd"
   license "LGPL-2.1-only"
-  revision 2
   head "https://github.com/hughsie/libgusb.git"
-
-  stable do
-    url "https://people.freedesktop.org/~hughsient/releases/libgusb-0.3.5.tar.xz"
-    sha256 "5b2a00c6997cc4b0133c5a5748a2e616e9e7504626922105b62aadced78e65df"
-
-    # Patch accepted upstream to allow for building without meson-internal
-    # Remove on next release
-    patch do
-      url "https://github.com/hughsie/libgusb/commit/b2ca7ebb887ff10314a5a000e7d21e33fd4ffc2f.patch?full_index=1"
-      sha256 "a068b0f66079897866d2b9280b3679f58c040989f74ee8d8bd70b0f8e977ec37"
-    end
-  end
 
   bottle do
     sha256 arm64_big_sur: "934cca2fcf888878cf8da4b40cdbd6548d060f09318242c2818ee3686104ee72"
