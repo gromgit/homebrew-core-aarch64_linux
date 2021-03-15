@@ -7,10 +7,10 @@ class QtPostgresql < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "cdb24bf5fe174d484438d265095fd6c38614e55f11dd0be543dead6b1abbbe20"
-    sha256 cellar: :any, big_sur:       "d497f050cb6530bf28f409a84093bb875f8d60e8842b30ba1e465527cb5e0fb4"
-    sha256 cellar: :any, catalina:      "778231dc3ffc60418545ca8530550908723090b3b2ea4e6bbfeaeceae2f16e21"
-    sha256 cellar: :any, mojave:        "ae857493cde2aa599959fb887b76c502ef925b2a11fbe713b5f43393b25687d8"
+    sha256 cellar: :any, arm64_big_sur: "724401fca766c5392a43fd45f4b51abdbba9e025f794aba8b0368c1838acf9a2"
+    sha256 cellar: :any, big_sur:       "a651810e0b2ad115fd4b97848b594c77d9ae17bc7a66f37ce6bace93a343fa41"
+    sha256 cellar: :any, catalina:      "c66fa835bd9207a3250e156e02c2759e2307bc736aacff50aace947eb1a9db9d"
+    sha256 cellar: :any, mojave:        "295410a53ddf994afccdec41b4da015d5d39df28bb987d349b336221b32b7495"
   end
 
   depends_on "cmake" => [:build, :test]
