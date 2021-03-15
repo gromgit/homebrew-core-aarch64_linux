@@ -10,10 +10,10 @@ class Checkov < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "708e38c5d4c7e3ca3b930bd5284ad437d07731871ede97d25afdc2085d013370"
-    sha256 cellar: :any_skip_relocation, big_sur:       "625cacdde637cef61c190657e77c3f5921ff9f5d9fccdc14b1f95aabb8239be6"
-    sha256 cellar: :any_skip_relocation, catalina:      "fa5ec7ba3a10f03396acba3ef370d3a3a08ad00eb8b5b210ef81ce33270f8bab"
-    sha256 cellar: :any_skip_relocation, mojave:        "6f18977f74649798f8ea61415599cfa84965e5ddec43cdfa21953c823ea19992"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "20970fbffffe5ddfc9a9c433ed2464ebf11f1307c4f041dccd6d04fa308b44b5"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7fa492aabe437f2604d2a0e2a5abb9c653adfa81a453cda773f25854dee00167"
+    sha256 cellar: :any_skip_relocation, catalina:      "b4afb899bb6fe5bdf5b0161ab59052f634e93198454d93a4d192b688e6c68b2f"
+    sha256 cellar: :any_skip_relocation, mojave:        "497a85215338c0daf9e7f25e327dbe46edfca36cbe8f088db087ab9c8c51b34a"
   end
 
   depends_on "python-tabulate"
