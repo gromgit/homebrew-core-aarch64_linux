@@ -51,10 +51,17 @@ class BoostPython3 < Formula
 
     pyver = Language::Python.major_minor_version Formula["python@3.9"].opt_bin/"python3"
     py_prefix = Formula["python@3.9"].opt_frameworks/"Python.framework/Versions/#{pyver}"
+    on_linux do
+      py_prefix = Formula["python@3.9"].opt_prefix
+    end
 
     # Force boost to compile with the desired compiler
+    compiler_text = "using darwin : : #{ENV.cxx} ;"
+    on_linux do
+      compiler_text = "using gcc : : #{ENV.cxx} ;"
+    end
     (buildpath/"user-config.jam").write <<~EOS
-      using darwin : : #{ENV.cxx} ;
+      #{compiler_text}
       using python : #{pyver}
                    : python3
                    : #{py_prefix}/include/python#{pyver}
@@ -94,7 +101,7 @@ class BoostPython3 < Formula
     pylib = shell_output("#{Formula["python@3.9"].opt_bin}/python3-config --ldflags --embed").chomp.split
     pyver = Language::Python.major_minor_version(Formula["python@3.9"].opt_bin/"python3").to_s.delete(".")
 
-    system ENV.cxx, "-shared", "hello.cpp", "-L#{lib}", "-lboost_python#{pyver}", "-o",
+    system ENV.cxx, "-shared", "-fPIC", "hello.cpp", "-L#{lib}", "-lboost_python#{pyver}", "-o",
            "hello.so", *pyincludes, *pylib
 
     output = <<~EOS
