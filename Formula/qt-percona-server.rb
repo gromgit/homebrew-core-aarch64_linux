@@ -7,10 +7,10 @@ class QtPerconaServer < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "e8cac96be21c551591beaf0f0b3db9d236c4d92620ca90566583c415224624e0"
-    sha256 cellar: :any, big_sur:       "7d2301593bfe0133b93feadb819afef0befc687976c15f663b02742f60b7cfa4"
-    sha256 cellar: :any, catalina:      "b31d93758c4e70cb3ddb523b17fce5845cd95f74f516fd29aff083c7e1dcca2d"
-    sha256 cellar: :any, mojave:        "5fd16d09479331b60eaf9de75e34639b00dc2fc3b03d4ae08ce68d1e6ef25ceb"
+    sha256 cellar: :any, arm64_big_sur: "48be34d2a450bfb7e10cf1ae2538b8305cc5dea1be0e85514a1b3b05155bb143"
+    sha256 cellar: :any, big_sur:       "67f8445d8208957d04bd26cfef81ee92654176f15a9c08991d14679cb733f934"
+    sha256 cellar: :any, catalina:      "3fb67b8e2b22c8ec55b7a26b6ef58fb3aec381658e09d5c0ddd92312ce078e80"
+    sha256 cellar: :any, mojave:        "0aaa102db1d6d4df3bd5a50b0ae42dbd8ff56e8e10c96365cefcb0557fbac8fd"
   end
 
   depends_on "cmake" => [:build, :test]
