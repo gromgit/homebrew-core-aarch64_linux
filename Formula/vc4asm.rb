@@ -5,14 +5,10 @@ class Vc4asm < Formula
   sha256 "f712fb27eb1b7d46b75db298fd50bb62905ccbdd7c0c7d27728596c496f031c2"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "86cda7631f6e50ef12f26198ec3810684b9d74599b12b1e68af2ae77857119ae"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f7899b26e3ad1fc2dd969b8178f24ddad5049164e30d6039443c9eac691b29a6"
-    sha256 cellar: :any_skip_relocation, catalina:      "d8a425ef7d84c5a1ba477c07e3b04f5fddb0dce92e5cf67a963ecfbc12b3caec"
-    sha256 cellar: :any_skip_relocation, mojave:        "fc0a060875dd9233a3675b034055b1ae23d8775701529024b91f184a7e97521e"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "db9bbf5ee3cb47a0f3ffa1d9bf355205873237e9f2dbd26777546935401ef4b0"
-    sha256 cellar: :any_skip_relocation, sierra:        "2547c982e3fde40316d01d802bd01bf49af208e6737ecafeaeb8ad988ea3255d"
-    sha256 cellar: :any_skip_relocation, el_capitan:    "72d54a4237c4e0f952fd1a3d913725d84814ed5b657affa1d6dcafa19e1cdc44"
-    sha256 cellar: :any_skip_relocation, yosemite:      "871b3b109ac49b09056f83e4488105196060d2388dc5052c679776b43fab5927"
+    sha256 cellar: :any, arm64_big_sur: "64082d8d1fd7f2a360f9ffdd29a9fbde0a24b600f38806bc4556e4ea9b5175bc"
+    sha256 cellar: :any, big_sur:       "1eefbd03ec375b8021eb783af2fdf5e343c5548201eddbb29e6cf9b6db47e80c"
+    sha256 cellar: :any, catalina:      "cd4f683e1e968cb0577b7e6d9b054c503719b10f9bd37442feb8481a19d75fd7"
+    sha256 cellar: :any, mojave:        "5d806a353310bda8308cc207ff165541253d7a7ea39189ce156d066e5d7b4514"
   end
 
   depends_on "cmake" => :build
