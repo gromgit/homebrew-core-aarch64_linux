@@ -7,10 +7,10 @@ class Kubevela < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d677af5b105432ef6a071692c605318e6e06e5f8b91dc8fcc968817b52781ea6"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3b033c0b1fd0f94d78bc886037c551bc16a447408428033767605a7eddea78da"
-    sha256 cellar: :any_skip_relocation, catalina:      "5cca706366b66834dadfc3feaf1ad3353b594bfc74410cc540bb79fec7ddc30c"
-    sha256 cellar: :any_skip_relocation, mojave:        "e338ccdfca542819cddf3fd56668cc34108ce6d87d09fd9c21d6ebaed1332b24"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1409808a47e2dac8675a095fa9f827af0bd5997497225681818e5893619fc39a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ddb64bf6a9bbf6f0d7a26cdfff455f42b899b3823c7f3864541c9220bad283f6"
+    sha256 cellar: :any_skip_relocation, catalina:      "863d146ee3114f10f98828d3815c2893ad533e559c1e1c64d83bcc3edf33999f"
+    sha256 cellar: :any_skip_relocation, mojave:        "b8436e5ad3ea0ff5fa94d3a46bfa7a5c2936fab441585d47d1c1107daa542812"
   end
 
   depends_on "go" => :build
