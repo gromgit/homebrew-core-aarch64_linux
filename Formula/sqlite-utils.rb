@@ -8,10 +8,10 @@ class SqliteUtils < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9e37e4cee6496ffc04f0baa54e9cd053be627329cbae5a1c3e9cfb31bd8a2b25"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f44bcf9d53ce1f616563ecebaa46a56fd5c5b67496980c20bdc957b11b10f01e"
-    sha256 cellar: :any_skip_relocation, catalina:      "19086ce7bce1db596f95a2c9c56b256a4a4a455daaf40a2050803cafba883fc2"
-    sha256 cellar: :any_skip_relocation, mojave:        "e2ab94b6a41c963426c3bd51107625871ce931d788674d1c32791ff20a9ce0db"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e90efc9ccf7a756ae54730efb14f292cf560c0b19f7e0e9bd09adbdedd067faf"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b31059d3c5919e38195baab3580f5e867030e2f0defde97c9af88b8446d6cde0"
+    sha256 cellar: :any_skip_relocation, catalina:      "cdd58ddff8316de85d4b7b024444d13632279312e5fef6bc1121cd47a72a19b3"
+    sha256 cellar: :any_skip_relocation, mojave:        "af4e691a4c3fcf2687b1c587469b9e926507a760a8e716cc4712089eceb45a18"
   end
 
   depends_on "python-tabulate"
