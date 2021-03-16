@@ -3,8 +3,8 @@ class Parliament < Formula
 
   desc "AWS IAM linting library"
   homepage "https://github.com/duo-labs/parliament"
-  url "https://files.pythonhosted.org/packages/7e/82/26b58070877848c21c59a7c8325117941ec136552425212daa0968e8afcd/parliament-1.3.1.tar.gz"
-  sha256 "2359299fb09a495faee2622c03c6d3765660656fbc0a4f197c309dbd7a6e2ba6"
+  url "https://files.pythonhosted.org/packages/1a/29/e8c814819571c78c1f1e25dbe20f995fb86b854aa59db4fbab20a641a346/parliament-1.4.0.tar.gz"
+  sha256 "cf40d5f5732bcf831fdb1a13f71c3cf4f3bdb8c8d9685592ecdd6d84675b947e"
   license "BSD-3-Clause"
   head "https://github.com/duo-labs/parliament.git"
 
@@ -18,13 +18,13 @@ class Parliament < Formula
   depends_on "python@3.9"
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/e4/00/a0e3d95ecbd78f3a7bc89cce4c94c2fca4820536f513bf8aba35b36bb79b/boto3-1.16.59.tar.gz"
-    sha256 "550a513315194292651bb6cc96e94185bfc4dc6b299c3cf1594882bdd16b3905"
+    url "https://files.pythonhosted.org/packages/f4/ba/150dd700298b386152dc17582f4d62b0ccd1cb0431a6f0bb63c37cb76b8a/boto3-1.17.29.tar.gz"
+    sha256 "31396fcaffdfc0f465b4de76e1ecae53894eb869b000ffa54aa1693a98db3a3c"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/b9/87/c28866fd15cb87d893048ff16d08b179db9a1b8f5119c22562b564ff59ad/botocore-1.19.59.tar.gz"
-    sha256 "33959aa19cb6d336c47495c871b00d8670de0023b53bbbbd25790ba0bc5cefe9"
+    url "https://files.pythonhosted.org/packages/d3/9b/98602d3e056a4294e05ff46d21a6fd44c2f4f310e057c711010f6eb5817f/botocore-1.20.29.tar.gz"
+    sha256 "184b7d26b0669fd65ac8193662376d1267d800e005b69412b57cc82c5ffbe935"
   end
 
   resource "jmespath" do
@@ -63,8 +63,8 @@ class Parliament < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/29/e6/d1a1d78c439cad688757b70f26c50a53332167c364edb0134cadd280e234/urllib3-1.26.2.tar.gz"
-    sha256 "19188f96923873c92ccb987120ec4acaa12f0461fa9ce5d3d0772bc965a39e08"
+    url "https://files.pythonhosted.org/packages/cb/cf/871177f1fc795c6c10787bc0e1f27bb6cf7b81dbde399fd35860472cecbc/urllib3-1.26.4.tar.gz"
+    sha256 "e7b021f7241115872f92f43c6508082facffbd1c048e3c6e2bb9c2a157e28937"
   end
 
   def install
