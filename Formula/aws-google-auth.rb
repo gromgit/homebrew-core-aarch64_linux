@@ -10,10 +10,10 @@ class AwsGoogleAuth < Formula
   head "https://github.com/cevoaustralia/aws-google-auth.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "8918c50c8e591f42b1a1fb0e941c531bcda1066420bbaa0809ea25382813c17d"
-    sha256 cellar: :any, big_sur:       "e188f97fd6a29f327951b32ebfd67e369e88343d601fd8f97d6c0ad7e2e1b2a2"
-    sha256 cellar: :any, catalina:      "758d857031ff550cacb3fabeecea7d417eb0211d846ad771c809bb0dcb1b1e6d"
-    sha256 cellar: :any, mojave:        "ae52982f6a6feba48846321484581d3c2959b05f2e95e886cb0ff8620adf3f52"
+    sha256 cellar: :any, arm64_big_sur: "b3505a5a5991890399602c8ad46b27c28bac5f3a53ac44592c467cd39d43581e"
+    sha256 cellar: :any, big_sur:       "3589bde7757ffc1a99c89e23f2262f15cf91a7238c8caef1a41bd4d0e3b80f9a"
+    sha256 cellar: :any, catalina:      "ced4f01986457520cccd65f0aa77a3e229798dab20f8488ca96b92d1187d494f"
+    sha256 cellar: :any, mojave:        "b089e1e1e63eabe258206f60a958b25f935e2c24751d63d581526e972de5f16a"
   end
 
   depends_on "rust" => :build
