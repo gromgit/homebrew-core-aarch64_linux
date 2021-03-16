@@ -9,10 +9,10 @@ class Mycli < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "aad6208689be93e576aa644dc64e9061910e871f4cb216baea2591cca3f96b49"
-    sha256 cellar: :any, big_sur:       "4237880fc1388a1b17ed7e813e783b413d6d40e7c3bca817719ef576576112dc"
-    sha256 cellar: :any, catalina:      "d37482f02d1f3968be57af82721c3fbba236a4442624282cf0704215355a5594"
-    sha256 cellar: :any, mojave:        "c54b9870efd72db6fd9a1df7dda6d07a530c3cd88e31362da16cc2543c178497"
+    sha256 cellar: :any, arm64_big_sur: "94c3e0e52e871078cea956a1432d18a4ddb4784158f11176bbca5899fd3fdbf2"
+    sha256 cellar: :any, big_sur:       "06ebeca7331a42b285c8aeb600a80e435b616df96ee6ffa2f789a989e64eb8e6"
+    sha256 cellar: :any, catalina:      "5a422d46352babae1bbcb8c529a2bd0885c79d85878eb43ce71818a53fcd1ff6"
+    sha256 cellar: :any, mojave:        "2c85021224eb11cfc16e9275f798f48202f0f8c450eb05efd6b1e5eeaf4135bb"
   end
 
   depends_on "rust" => :build
