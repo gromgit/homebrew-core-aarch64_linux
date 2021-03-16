@@ -9,11 +9,10 @@ class Athenacli < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "15e64a49fa18a2f1cfb3362798db1da722a4cfd087c99a285f7fd21461613655"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f9015e9c1f932668753f0baa32565678228a5d595f7ba9e9c8038a5293096fab"
-    sha256 cellar: :any_skip_relocation, catalina:      "bbefb72db4429e6ae24b8b46c08a3e111120c4fdbe095bcde854c0a5425de55d"
-    sha256 cellar: :any_skip_relocation, mojave:        "96fe18bb34aef559076a8469eea261f536b5aa45dac14caba01417b0bef175a4"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "ceb054bb0f34917b0b8dd71cd4c5a7024d2f253c84bb82db05e9f15a8e28f342"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6db3f2fdd625a044792b43ca4045cd46b90129ac434d016a8ef4c57588def83b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "114a4beea048448d7100400faf480f14d1d5a889cc728fdc68f74b807a390609"
+    sha256 cellar: :any_skip_relocation, catalina:      "c9ea8ee331d859051ae251b06c2d1641a255f28ad076b9788ea448ef7f79593d"
+    sha256 cellar: :any_skip_relocation, mojave:        "eb32ca8c930eefd152a7f052f9b2e48dd153f49dcfd94df7a152d0fcfb709e1d"
   end
 
   depends_on "python-tabulate"
