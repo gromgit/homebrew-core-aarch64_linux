@@ -9,10 +9,10 @@ class GstDevtools < Formula
   head "https://gitlab.freedesktop.org/gstreamer/gst-devtools.git"
 
   bottle do
-    sha256 arm64_big_sur: "a3662cb83ba270a922c7d9c24567583ed71554519f4f9e763c29d2a3ffbbd82a"
-    sha256 big_sur:       "4c90295c25a0601c35262ee438eaaf9693cc0beb879fa8caab7c30be4115064c"
-    sha256 catalina:      "51eca8aaf936f56140cc632f242a3124e49c4a9fcb8b44f5ae5eaf25e7936bfa"
-    sha256 mojave:        "2bc663d80768ec5c2b2ddcbbc689eea373179d2a8388f093dc2b90232fd31653"
+    sha256 arm64_big_sur: "8eb42ba8a37c3148ddb08bac4f6da532079cfd2b48f7a60fee705ba553eaa533"
+    sha256 big_sur:       "c9112da83d65e0993e5b5ce4a87ae72e85093c57ad21c7b99e52a69cc36a8b1a"
+    sha256 catalina:      "b01a80a014c19658e7a3d8b3a8f54db3f98bec9314ba887690b632a28b492fbb"
+    sha256 mojave:        "4537802ab817fc7b4c74f9968363bec97aafdabc8439935fc905dc46dd473a60"
   end
 
   depends_on "gobject-introspection" => :build
