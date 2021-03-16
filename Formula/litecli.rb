@@ -9,10 +9,10 @@ class Litecli < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "39ffe359f5228519abc663377291de0984f89e2c44c1745ca199c292c821ea1e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c3eca4cb7815933a095fd3fd873d4f389d38940cf7cdad95c4e12e980208db39"
-    sha256 cellar: :any_skip_relocation, catalina:      "787c7ab063f0ea5219d7fb1ff22d0a96898dce05442df1fe7bc08f4318e41eb9"
-    sha256 cellar: :any_skip_relocation, mojave:        "1e979870e8020280d4c6fd401e172e81b63f574a46ec67f7179067c09d59fb37"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "591572bf8fcd7d124c64f366a53b074a07e41a4760956a19f706a4cea2eff12a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "067894f8589f99267bc854d8e9a91548a34d8d82ec6ae0da5c6cbbfd920986a1"
+    sha256 cellar: :any_skip_relocation, catalina:      "69f3b054df850abe321e5381ed8c7dd16846e5179aa40a062ca6f41bb800c98c"
+    sha256 cellar: :any_skip_relocation, mojave:        "db28e5a3202088f5b48bd39af1e7e98015fe9eebcac3223277fdfa10ae2abe5d"
   end
 
   depends_on "python-tabulate"
