@@ -3,8 +3,8 @@ class Snakemake < Formula
 
   desc "Pythonic workflow system"
   homepage "https://snakemake.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/57/ff/c1db979f1510204ef8fa67ce46c8398f8ac72598f1c08e90cf3e4df900f5/snakemake-6.0.3.tar.gz"
-  sha256 "d8aa057a77e17044561151c37fb7bffa0f9c2d9c6410707ff7fd3187797ea01f"
+  url "https://files.pythonhosted.org/packages/de/6b/3d88bcee211cf826a760a54a045322e3e36c17c5d5389fd9d2fcb5500492/snakemake-6.0.5.tar.gz"
+  sha256 "9441169034cce46086a8b45486d75175db645b932e766d28fed312ec837792d3"
   license "MIT"
   head "https://github.com/snakemake/snakemake.git"
 
@@ -44,8 +44,8 @@ class Snakemake < Formula
   end
 
   resource "ConfigArgParse" do
-    url "https://files.pythonhosted.org/packages/3f/75/ca907906cd6c4c7097a037f7adaee36b3f32a08b66baed51b86d1fcc6398/ConfigArgParse-1.3.tar.gz"
-    sha256 "0428b975ab6c48bb101ccb732e1b5cb616296e28268e032aa806f32b647a1cc1"
+    url "https://files.pythonhosted.org/packages/5d/c3/17846950db4e11cc2e71b36e5f8b236a7ab2f742f65597f3daf94f0b84b7/ConfigArgParse-1.4.tar.gz"
+    sha256 "abef9ff44fb0091f0e3bb2ee7e5b26a02b5b62d45408a5272a9bd461f5b59b4b"
   end
 
   resource "datrie" do
@@ -159,8 +159,8 @@ class Snakemake < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/d7/8d/7ee68c6b48e1ec8d41198f694ecdc15f7596356f2ff8e6b1420300cf5db3/urllib3-1.26.3.tar.gz"
-    sha256 "de3eedaad74a2683334e282005cd8d7f22f4d55fa690a2a1020a416cb0a47e73"
+    url "https://files.pythonhosted.org/packages/cb/cf/871177f1fc795c6c10787bc0e1f27bb6cf7b81dbde399fd35860472cecbc/urllib3-1.26.4.tar.gz"
+    sha256 "e7b021f7241115872f92f43c6508082facffbd1c048e3c6e2bb9c2a157e28937"
   end
 
   resource "wrapt" do
