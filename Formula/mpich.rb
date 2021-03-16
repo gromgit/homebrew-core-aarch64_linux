@@ -5,6 +5,7 @@ class Mpich < Formula
   mirror "https://fossies.org/linux/misc/mpich-3.4.1.tar.gz"
   sha256 "8836939804ef6d492bcee7d54abafd6477d2beca247157d92688654d13779727"
   license "mpich2"
+  revision 1
 
   livecheck do
     url "https://www.mpich.org/static/downloads/"
@@ -52,10 +53,7 @@ class Mpich < Formula
                           "--enable-g=dbg",
                           "--enable-romio",
                           "--enable-shared",
-                          "--enable-sharedlibs=gcc-osx",
                           "--with-pm=hydra",
-                          "CC=gcc-#{Formula["gcc"].any_installed_version.major}",
-                          "CXX=g++-#{Formula["gcc"].any_installed_version.major}",
                           "FC=gfortran-#{Formula["gcc"].any_installed_version.major}",
                           "F77=gfortran-#{Formula["gcc"].any_installed_version.major}",
                           "--disable-silent-rules",
