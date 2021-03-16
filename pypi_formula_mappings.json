@@ -62,6 +62,9 @@
   "poetry": {
     "extra_packages": ["importlib-metadata", "typing-extensions"]
   },
+  "regipy": {
+    "exclude_packages": ["tabulate"]
+  },
   "salt": {
     "extra_packages": ["M2Crypto", "pygit2"]
   },
