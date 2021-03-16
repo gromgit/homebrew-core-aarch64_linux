@@ -1,8 +1,8 @@
 class Fio < Formula
   desc "I/O benchmark and stress test"
   homepage "https://github.com/axboe/fio"
-  url "https://github.com/axboe/fio/archive/fio-3.25.tar.gz"
-  sha256 "d8157676bc78a50f3ac82ffc6f80ffc3bba93cbd892fc4882533159a0cdbc1e8"
+  url "https://github.com/axboe/fio/archive/fio-3.26.tar.gz"
+  sha256 "8bd6987fd9b8c2a75d3923661566ade50b99f61fa4352148975e65577ffa4024"
   license "GPL-2.0-only"
 
   bottle do
@@ -13,14 +13,6 @@ class Fio < Formula
   end
 
   uses_from_macos "zlib"
-
-  # Fix build on macOS
-  # Remove in the next release
-  # See https://github.com/axboe/fio/pull/1154
-  patch do
-    url "https://github.com/axboe/fio/commit/b6a1e63a1ff607692a3caf3c2db2c3d575ba2320.patch?full_index=1"
-    sha256 "bedfdb7d75f07c154d6008c78eb11f51e30d2d8d00ed4f9fe00e705a3c0446e5"
-  end
 
   def install
     system "./configure"
