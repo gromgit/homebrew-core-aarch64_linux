@@ -12,10 +12,10 @@ class Gstreamer < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "760ba2b158b164beb570455fdca6540957ccbde2b2eab5a37ed430ae63ec1150"
-    sha256 big_sur:       "f5ddbdbbee54212f4a7ea77df78f7444591416290de476b1241955d258b1da19"
-    sha256 catalina:      "bc7d7022010b0208963c624b9310814b3be2c87fea16f567091a4517c771bfda"
-    sha256 mojave:        "b073cef5157e71dc3c7ff1ada4296dd64ac1e81ec2b94a5095e7135f9c1333f5"
+    sha256 arm64_big_sur: "d62ea2ea98bd22267eabf676f8ec577df5eac27e7656e56545767b909d2224d5"
+    sha256 big_sur:       "a2d62c11bf92e6d4f2d02d1dff4558e945f6dc10b27f435c14824de9d2fdba48"
+    sha256 catalina:      "9fcc5eb54cebede4c30ed3bacbf82fb8272471bd0a80cbc0a63b503a79994371"
+    sha256 mojave:        "259ae892b842f10c590240abfc97e2af6d6c93f67d1362da1d858e913d3ddbd1"
   end
 
   depends_on "bison" => :build
