@@ -7,10 +7,10 @@ class Rdkit < Formula
   head "https://github.com/rdkit/rdkit.git"
 
   bottle do
-    sha256 arm64_big_sur: "049c8a2845019025f26effd08e0b2565054d67380d8d1eca17402a3b54e30486"
-    sha256 big_sur:       "92ac239f24a9dc64b46272f0c37cad922a8f87adaf5b6b63c24b660158b39ab2"
-    sha256 catalina:      "bc789aede5a44347bf9e83ff98f7097fa1c8713834a0b0d29f4ea5d0bfccf2b5"
-    sha256 mojave:        "23078b78af79a9b369746b759803691adeeb88a402f3d3dd7d635653fd07da2f"
+    sha256 arm64_big_sur: "15c4901321cbac4403a635b34951b561ac89dfbf042a938ecf34de9b0a88ed76"
+    sha256 big_sur:       "4f294a38e82fd6935e34afcd91cfea1866efd4c2da26cb5348edeb325a64b6f0"
+    sha256 catalina:      "a0b671abaead16cda99e30d9a490894c2ef3dd19a1233a18d40c04a34c6c0772"
+    sha256 mojave:        "f6bbf7d54231caa43b0161109fef2a62a5cad30da94932f04bd11450a44303fc"
   end
 
   depends_on "cmake" => :build
