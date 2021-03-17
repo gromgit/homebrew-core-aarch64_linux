@@ -6,10 +6,10 @@ class Hcloud < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8e979c538e706e84e25148794aa1970498cbf2aed180940331ba86f2f6f710cc"
-    sha256 cellar: :any_skip_relocation, big_sur:       "69ab4535cc08cc2782a1b47c87870636feb74968c7ff08e7f53004edff98c4cc"
-    sha256 cellar: :any_skip_relocation, catalina:      "bcef1926ff4ad60929385b105623dfa243a5e6dfa0f0c7771e9b86f7c39a9373"
-    sha256 cellar: :any_skip_relocation, mojave:        "638d494051cca42ec0368c33b298995f7fa347a56bf69dc01321434cafad4ac9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "336d97f3367bc86fb70d1d686c8cd7e88fe5a5825f66135fda8163cdc12a0314"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e89c1faf24d0d7ab8b48653edf4c1bb62df9e24112ff790370a8b43fcd136ffe"
+    sha256 cellar: :any_skip_relocation, catalina:      "1ed62a48deacae7016bf9a9245e5d0f0435167e5fd02dd8c0031ceb0bff8e239"
+    sha256 cellar: :any_skip_relocation, mojave:        "3544a27377c5bccf5e375dea2a24429c76406bdf8fcdcc9862f522be54439e09"
   end
 
   depends_on "go" => :build
