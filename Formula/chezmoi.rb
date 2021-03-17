@@ -35,7 +35,7 @@ class Chezmoi < Formula
 
   test do
     # test version to ensure that version number is embedded in binary
-    assert_match "version #{version}", shell_output("#{bin}/chezmoi --version")
+    assert_match "version v#{version}", shell_output("#{bin}/chezmoi --version")
     assert_match "built by homebrew", shell_output("#{bin}/chezmoi --version")
 
     system "#{bin}/chezmoi", "init"
