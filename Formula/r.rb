@@ -4,6 +4,7 @@ class R < Formula
   url "https://cran.r-project.org/src/base/R-4/R-4.0.4.tar.gz"
   sha256 "523f27d69744a08c8f0bd5e1e6c3d89a4db29ed983388ba70963a3cd3a4a802e"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url "https://cran.rstudio.com/banner.shtml"
@@ -46,7 +47,6 @@ class R < Formula
       "--with-aqua",
       "--with-blas=-L#{Formula["openblas"].opt_lib} -lopenblas",
       "--enable-R-shlib",
-      "SED=/usr/bin/sed", # don't remember Homebrew's sed shim
       "--disable-java",
     ]
 
@@ -54,6 +54,11 @@ class R < Formula
     ["gettext", "readline", "xz"].each do |f|
       ENV.append "CPPFLAGS", "-I#{Formula[f].opt_include}"
       ENV.append "LDFLAGS", "-L#{Formula[f].opt_lib}"
+    end
+
+    on_macos do
+      # Enable binaries on macos
+      ENV.append "CPPFLAGS", "-DPLATFORM_PKGTYPE='\"mac.binary\"'" unless Hardware::CPU.arm?
     end
 
     system "./configure", *args
