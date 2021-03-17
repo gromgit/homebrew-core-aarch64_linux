@@ -2,8 +2,8 @@ class Standardese < Formula
   desc "Next-gen documentation generator for C++"
   homepage "https://standardese.github.io"
   url "https://github.com/standardese/standardese.git",
-      tag:      "0.4.1",
-      revision: "93c122b38f3f816be6f8c31e46320570f8879e0a"
+      tag:      "0.5.0",
+      revision: "e7a7fb8f59ba4b1cf59347ac016ec558e5d72ac3"
   license "MIT"
   head "https://github.com/standardese/standardese.git"
 
@@ -17,20 +17,26 @@ class Standardese < Formula
 
   depends_on "cmake" => :build
   depends_on "boost"
+  depends_on "cmark-gfm"
   depends_on "llvm" # must be Homebrew LLVM, not system, because of `llvm-config`
 
   def install
-    mkdir "build" do
-      system "cmake", "../", *std_cmake_args
-      system "cmake", "--build", ".", "--target", "standardese_tool"
-      cd "tool" do
-        bin.install "standardese"
-      end
+    system "cmake", "-S", ".", "-B", "build",
+                    "-DCMAKE_INSTALL_RPATH=#{opt_libexec}/lib",
+                    "-DCMARK_LIBRARY=#{Formula["cmark-gfm"].opt_lib/shared_library("libcmark-gfm")}",
+                    "-DCMARK_INCLUDE_DIR=#{Formula["cmark-gfm"].opt_include}",
+                    *std_cmake_args
+    system "cmake", "--build", "build", "--target", "standardese_tool"
+    system "cmake", "--install", "build"
+
+    cd "build" do
+      (libexec/"lib").install "src/#{shared_library("libstandardese")}"
+      (libexec/"lib").install "external/cppast/#{shared_library("lib_cppast_tiny_process")}"
+      (libexec/"lib").install "external/cppast/src/#{shared_library("libcppast")}"
     end
     cd "include" do
       include.install "standardese"
     end
-    doc.install "README.md", "CHANGELOG.md", "LICENSE"
     (lib/"cmake/standardese").install "standardese-config.cmake"
   end
 
