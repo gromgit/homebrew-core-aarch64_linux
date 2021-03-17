@@ -3,8 +3,8 @@ class TwinePypi < Formula
 
   desc "Utilities for interacting with PyPI"
   homepage "https://github.com/pypa/twine"
-  url "https://files.pythonhosted.org/packages/61/ac/44da2609e4ec5c7a2328fd71d862f40dcd045601cb5197830b52a60513d7/twine-3.4.0.tar.gz"
-  sha256 "101f1c43ea4587ab19261d09157c63b6f37a0e55b215f0dd26304df1d49b620c"
+  url "https://files.pythonhosted.org/packages/ac/5c/e12811190a3560c85dfb4caea752635abea59c53390592493549d88f086a/twine-3.4.1.tar.gz"
+  sha256 "a56c985264b991dc8a8f4234eb80c5af87fa8080d0c224ad8f2cd05a2c22e83b"
   license "Apache-2.0"
   head "https://github.com/pypa/twine.git"
 
