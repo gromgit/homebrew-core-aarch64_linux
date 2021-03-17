@@ -15,9 +15,10 @@ class Semgrep < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:  "d25e76dc4c537c99e5653c27b6e28e1a8f21ef46370db11ace061fd556f5ef20"
-    sha256 cellar: :any, catalina: "ef395b54dca1954eddd823799c5d38224b32a2cf666fac6e687ef34752015aa8"
-    sha256 cellar: :any, mojave:   "a1f9b8056f0ad8f14f0e227fa5657c42a3c7f789244cf8f9b0d012098dcef910"
+    sha256 cellar: :any, arm64_big_sur: "64c6cc089d8e53a43b075003e3c070b92709e9213d07f38f88e00e4df639e0a1"
+    sha256 cellar: :any, big_sur:       "e30423d1fa75b62ce77ff8b212fa888715e8c94a6851d7c7924418afe042d6f0"
+    sha256 cellar: :any, catalina:      "f07df906aed697c7c325f4efe3877be1441b6682b5af68845c3116407dc910fc"
+    sha256 cellar: :any, mojave:        "8ccf5e761244c2817d0eccd4feaffcd77c2d34dfcb30e3334a179cc3b0f73ea1"
   end
 
   depends_on "cmake" => :build
