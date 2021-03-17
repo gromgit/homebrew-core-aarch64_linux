@@ -7,10 +7,10 @@ class Xray < Formula
   head "https://github.com/XTLS/Xray-core.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9765e7df071e456ea09873a40530b6d4ee8333079e54b068c8673d58984e27e6"
-    sha256 cellar: :any_skip_relocation, big_sur:       "bb471e2bc6dd18290c0e8011a28dc1d63d2ef615b661f2dca2d8820f9ed782be"
-    sha256 cellar: :any_skip_relocation, catalina:      "f357ebc653a5c6a87d29526f8d03fb3fd31f936b78a3d0bb1f3e80bf53564876"
-    sha256 cellar: :any_skip_relocation, mojave:        "ff1bd3ebc1b39a1f513cf9bf6e71488190557b503c5f3ddc5551d450aa5d6163"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "57de60b05b48e005338b6109a67d9ff37d26221b5e16d8564df800ddc01c5d4d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "578b31c235ca19f47fabb2cc0cf370f7876386f3e5a0cce19de48885c3656ced"
+    sha256 cellar: :any_skip_relocation, catalina:      "c1dbfa4e54681f415f44a81045c8b82a48d81136f89ea8888fd4aaab6950274b"
+    sha256 cellar: :any_skip_relocation, mojave:        "fba7e730baf36cfa04a4b1843faa45bdd66204a0e4c1a9ffb33be24f4718278a"
   end
 
   depends_on "go" => :build
