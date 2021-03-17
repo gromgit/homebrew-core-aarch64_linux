@@ -11,10 +11,10 @@ class Kubie < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7fb90fb9c74a84c23eec5f0ae63e708424daedde033cd8d5eb56a194dc4fb73c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "022810888739180a44133cdd5fc282919d0fc91e3ed8e1d050acedf93afd6760"
-    sha256 cellar: :any_skip_relocation, catalina:      "3bda881f3b8e4997d87afae28479adbf64bea01a503fb0ec0f666b617188a8b9"
-    sha256 cellar: :any_skip_relocation, mojave:        "457189a7fcc468f00e212fa136274e218f5d9b082302fcb4ebcc5b5e9452b85c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "08fde7c8daffaa4593a98b00938ec2381718e0145e43a8db5b66ca85f0efe5fb"
+    sha256 cellar: :any_skip_relocation, big_sur:       "9b25ed65de9eeeaa7195e70098da2113556f40c1455a50fefc011a61c2213452"
+    sha256 cellar: :any_skip_relocation, catalina:      "b5c0a89416edf9ba0a50b2a79c1340d1ab1af74f8a99174e16a744aa754573e5"
+    sha256 cellar: :any_skip_relocation, mojave:        "1cce6b540a9699bdb4ba0292877183f5155d6bf231f22d4b6b3c427f7a4b637d"
   end
 
   depends_on "rust" => :build
