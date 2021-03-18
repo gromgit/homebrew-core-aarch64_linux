@@ -22,10 +22,10 @@ class Bind < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "defb57d18f896cf7c124808b07126a0db2cf8fbfecf7af1e16ad0930f64ed588"
-    sha256 big_sur:       "f86da30695af86463799dcfa0d6efe12497e5095cdff498057bd0796db5184a3"
-    sha256 catalina:      "a0d971cc2b9469a29287c4871bd9130889ed91d698673e4882264d8b96128078"
-    sha256 mojave:        "19f25056c8e200658e50e5e7b03ed79b533f839984d16565c49ef9ac1a1233a7"
+    sha256 arm64_big_sur: "dee2c7bb245dcc7a66ae9fa14dee894e24fcc60e7157928b054726a039dcafd8"
+    sha256 big_sur:       "eef1dd04f87d227b1947a8ffbd3ad5130a7b8e81f75033fb3de868a9ab1dc874"
+    sha256 catalina:      "3f7b4343b60ee6593d2add35ed9054de526944f940c73b2bd3524419937674d5"
+    sha256 mojave:        "8b452b574c48e49d79d457fdcfd8da7f5afb1f26c5c085de07bd70dc69ec9f57"
   end
 
   depends_on "pkg-config" => :build
