@@ -12,10 +12,10 @@ class Telegraf < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2e274b39110c9cec062d724e00531043bc2ed2f1a9990c9722ef3e2653a7e352"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0895ff4a3277b65b34d9da6ffacf3363d0c5ca5f60fae84ba60b07d867d651d2"
-    sha256 cellar: :any_skip_relocation, catalina:      "8217c64da0084d8a4e741e157f33f576e40c3c9e26c738f54bd6ba0cf00a56ad"
-    sha256 cellar: :any_skip_relocation, mojave:        "387c98576c1b705e296057eb555d489feaa6865042c85e22eb682a577891be1a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e0782b87c04d3474e56130d3c3a2abd550212a67009594d517c0b13e9e377f1e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "39e24702d24f060c4f60f38e74927fee31100db102a9ff79906f742871cfc33b"
+    sha256 cellar: :any_skip_relocation, catalina:      "f6db80359b136bdd5c232e342f66791b1554cce85132e817f5646e2d93839a23"
+    sha256 cellar: :any_skip_relocation, mojave:        "183346639a7cc8d3c264d86e267d8748f90cde49ac0bf5181fc32daac69e3da6"
   end
 
   depends_on "go" => :build
