@@ -6,10 +6,10 @@ class BitGit < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "62a8615987cccc28a3d89fe6e5045e4d482d629d5d35ff2a02d1007c04a5a834"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0006b168d26dfe3781c0bcf688b2ccd2ddc130e21527a387ef3aa5a4ef79b39e"
-    sha256 cellar: :any_skip_relocation, catalina:      "18244cda0a8ff95f46899f1c88029a1a26c3aff6daee9769fceb843e75b61501"
-    sha256 cellar: :any_skip_relocation, mojave:        "cb409436628d95f5c299c8cbe6207e014fc506543db77c53c91811dfb92c0753"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "687fc0b96f9eacceec5dba5014397eb5a9fa2efad47a770914df65a34339921b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e1c634bb430bb01cf111ffcf136482751af401d9cb9c6542b2f7534247c53f38"
+    sha256 cellar: :any_skip_relocation, catalina:      "06c1ee6d6ddfc04c8e40524a46dc70e0adb866fbfa6d4702dc1055b430c3a72b"
+    sha256 cellar: :any_skip_relocation, mojave:        "b9ed1472241f09279f4ff6371d04f91263fe118d6349173173434ec39609c23d"
   end
 
   depends_on "go" => :build
