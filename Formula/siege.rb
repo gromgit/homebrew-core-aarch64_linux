@@ -11,11 +11,10 @@ class Siege < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "77c2687b1ae0baf1d035a369ecc8c2d67eff4d38ee1d84ee434e33702fbce5a4"
-    sha256 big_sur:       "7efea2f148c0b6323fa3b605b57bb5122cbe042626b0e0e059b697cf65c78207"
-    sha256 catalina:      "52d3c7d5f18591e84a8407281a48e5dfb449f2e5c0628edb8b0998470414d4b7"
-    sha256 mojave:        "f505c43ad4aa79798c14ee1df2fdeea2ffe62588e1dfd1928fc0eddb385497a5"
+    sha256 arm64_big_sur: "4f93b61eabd869d80f3f80ca225431306df2019062d36491f2e95093fb18427c"
+    sha256 big_sur:       "997b04a9f4df46949d94083e7fac44a5afa5438fb859d628616aef63b512c4bc"
+    sha256 catalina:      "c169a9b9736160b844b4b387077574a83187a7cc1760d940e405a08ee75a279b"
+    sha256 mojave:        "5a73790fcc3737011e48c621266d7d29be8327983ea5aae4b8763d64e68b72dc"
   end
 
   depends_on "openssl@1.1"
