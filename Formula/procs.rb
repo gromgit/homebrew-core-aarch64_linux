@@ -7,10 +7,10 @@ class Procs < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "197d9df98f18130c417b90864018e382c5b2237890bec9283a7a4cff57c4383b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "44c7ab94d61b0046b581dd89d1c4cca542212a1a3b97c3192463e03692472387"
-    sha256 cellar: :any_skip_relocation, catalina:      "922ae4411101a6edf61a87d40d581847bef955865285dd319b37de975be534c4"
-    sha256 cellar: :any_skip_relocation, mojave:        "920049d40859ca273f310813ec77514e92b79c05c042151708820b72e12f16de"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f2faa660438e5d5d6d8291d1e77cf22f8c39cf89d0dd98bab93dbcc89b5b9f38"
+    sha256 cellar: :any_skip_relocation, big_sur:       "25764d841a4d9e8bcd94c13fe41cc9d1d7ad0273e7f73950d3a8dae3d5eeb927"
+    sha256 cellar: :any_skip_relocation, catalina:      "d55bf5484f2ab55df73710e7e63a46377201dd0f78f0b77ec14cd478d226934c"
+    sha256 cellar: :any_skip_relocation, mojave:        "77d97badab934370b5b38f04f6ee9107f316d3884399bdf00df779384dd5b9b3"
   end
 
   depends_on "rust" => :build
