@@ -8,10 +8,10 @@ class Chezmoi < Formula
   head "https://github.com/twpayne/chezmoi.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a22a2ae48a4cb64701583e32bab37f3de394476c11eadf944311401d83af325f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "dbde2b34b6e8b27ed77dc53d618e1edcd52361f8a5a63bda16186d052db76cff"
-    sha256 cellar: :any_skip_relocation, catalina:      "4d356c5fd5e2872f7f20516fee039ab20aa74876b8b48251e6f45ca33bcf4314"
-    sha256 cellar: :any_skip_relocation, mojave:        "c4ecdb5a6e1ab76a79f1ec6c522576e7e6b1eb1a4c9435eaf8b8edf80304f478"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f16b7e710c8e2bd49e272e7d5800c1561a65a3f3c92ccc3beb72c080f99d667a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a8dac0cddec9b8a6c4260d9460bf1c635ecb0633957431b9e336e2e574679c1b"
+    sha256 cellar: :any_skip_relocation, catalina:      "8d1fa3982b87cf5ee866feec985d9feb8a8c4ab3e12721fdc4b9ea1dac32fbf0"
+    sha256 cellar: :any_skip_relocation, mojave:        "91ee46018d541604ae171b0c5ef521fdec79d175a925aefdc8b63b2add643598"
   end
 
   depends_on "go" => :build
