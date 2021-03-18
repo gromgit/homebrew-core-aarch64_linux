@@ -5,6 +5,13 @@ class ZlibNg < Formula
   sha256 "8599893f9b78bf979c1a1d6549b730367c9186560c6879590354998cc55428cf"
   license "Zlib"
 
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "0637bd04747c1e7e3724d4e5dd88c80623b1781bb59bfac53e7c154c4dbdb33a"
+    sha256 cellar: :any, big_sur:       "ab60e9528909ce0f2ee5564510eb5e8a31c78a6129f3ad515ec2428ebcd4e896"
+    sha256 cellar: :any, catalina:      "9c661fe9cd0ad02455ac8acb29215cc5e32c44e8ccdc30af59ddd268b761a3e5"
+    sha256 cellar: :any, mojave:        "c8341f77f2c9c45ec5560ded89c258978935c6ce2040bb0390b12095ddc771cf"
+  end
+
   # https://zlib.net/zlib_how.html
   resource "test_artifact" do
     url "https://zlib.net/zpipe.c"
