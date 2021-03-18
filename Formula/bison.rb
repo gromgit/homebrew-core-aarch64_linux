@@ -9,10 +9,11 @@ class Bison < Formula
   version_scheme 1
 
   bottle do
-    sha256 arm64_big_sur: "05d792ec204c66eb1f38e4d4374df2534999546212e3e91a7b57e6d1a956c325"
-    sha256 big_sur:       "2c1e18a4cc7a16cf2b2ec53a1a8a1946268b9e3dee188049790c462ba9490795"
-    sha256 catalina:      "10aed89a3e041fea22157a87f37d46c1cdfba1e2b02ab6e6dbee995b033046ec"
-    sha256 mojave:        "589567242c46e728e28818ea075044b8443f5c37e85e35a84da4b008aa3db237"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ee20f2693b08afe6bf50abad5e9a6adf60b629360c64fb580f0512283d87846f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "9f57b6c53d6595330adf79112e72034895f061769ebc8906a9b5afe9f4f873d0"
+    sha256 cellar: :any_skip_relocation, catalina:      "2276ffa48c694379540f63a5241c39b738f1dcb7424aceec54beb2e7be172489"
+    sha256 cellar: :any_skip_relocation, mojave:        "0dca09521f16b6e49e2c21ae9dec6069fee065a9ffd4b8191dca66b1957937d6"
   end
 
   keg_only :provided_by_macos
