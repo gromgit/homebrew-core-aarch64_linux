@@ -14,10 +14,11 @@ class OpensslAT11 < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "f8b99ea0ad2a19855aab784122271fbc811c69b03c53c0e8b959b02977e4444a"
-    sha256 big_sur:       "5725361adcd088a5b4fb278aa37b12964008f9ceb3892ceef558fb5de3c95896"
-    sha256 catalina:      "ecfbca86c18eb819222ae13aa2e4148d89c9dc15e1172545352b6fcf29d40d0c"
-    sha256 mojave:        "ffbc4252535f6073ff109cfa87e50847e6d44051a7ff374b8ad3b455477e7d1a"
+    rebuild 1
+    sha256 arm64_big_sur: "39a86fd4fe2e3739b60c4f9ca81752c38e32178b141dd884de197a3f284538a6"
+    sha256 big_sur:       "a5a8d1d00e26e9159d154f030cc92cf33ed3e55da470afea990773b98013b438"
+    sha256 catalina:      "ac861861a5e35505ae43b7ac8a7323494f30407263ec4ca91c457ba428126580"
+    sha256 mojave:        "dc49f2728d9358e78f8b22978c722ee0a991379d99b879183d5d40a98e6996be"
   end
 
   keg_only :shadowed_by_macos, "macOS provides LibreSSL"
