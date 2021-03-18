@@ -3,8 +3,8 @@ class Jupyterlab < Formula
 
   desc "Interactive environments for writing and running code"
   homepage "https://jupyter.org/"
-  url "https://files.pythonhosted.org/packages/28/6e/e1b2c99dbba669b71a9165b19be7e27845fb69b7d55d4ac87aaf03261e0f/jupyterlab-3.0.10.tar.gz"
-  sha256 "fdc6020d81e8888755ac4b30a08a89520c210d2eda400cfea0c0972d2591cfec"
+  url "https://files.pythonhosted.org/packages/3d/1f/194afde443decbba199d971516542a32fadd9a8e509391e643e8175b7af1/jupyterlab-3.0.11.tar.gz"
+  sha256 "ce4cf4f31163ce51aed013c01a857c05d43a93c46ed690166e48644f6e7947de"
   license "BSD-3-Clause"
 
   bottle do
@@ -122,8 +122,8 @@ class Jupyterlab < Formula
   end
 
   resource "jupyter-client" do
-    url "https://files.pythonhosted.org/packages/6e/12/beb24fccdb337873a550ff8355237043e159b5d56d0a903039ebfd17d6be/jupyter_client-6.1.11.tar.gz"
-    sha256 "649ca3aca1e28f27d73ef15868a7c7f10d6e70f761514582accec3ca6bb13085"
+    url "https://files.pythonhosted.org/packages/de/05/6b1809dbe46e21c4018721c14a989a150ff73b4ecf631fe6e22d02cac579/jupyter_client-6.1.12.tar.gz"
+    sha256 "c4bca1d0846186ca8be97f4d2fa6d2bae889cce4892a167ffa1ba6bd1f73e782"
   end
 
   resource "jupyter-core" do
@@ -222,8 +222,8 @@ class Jupyterlab < Formula
   end
 
   resource "prompt-toolkit" do
-    url "https://files.pythonhosted.org/packages/b1/32/2a6b734dc25b249467bfc1d844b077a252ea393d1b90733f4e899aa56506/prompt_toolkit-3.0.16.tar.gz"
-    sha256 "0fa02fa80363844a4ab4b8d6891f62dd0645ba672723130423ca4037b80c1974"
+    url "https://files.pythonhosted.org/packages/3e/8c/9b93fd9ae393a41c92c1a5b9042a048ef4650853ca6ff9e0818781a01e2f/prompt_toolkit-3.0.17.tar.gz"
+    sha256 "9397a7162cf45449147ad6042fa37983a081b8a73363a5253dd4072666333137"
   end
 
   resource "ptyprocess" do
@@ -287,8 +287,8 @@ class Jupyterlab < Formula
   end
 
   resource "terminado" do
-    url "https://files.pythonhosted.org/packages/ec/5b/89a4611dd76bc15a692232716ce961cba6268137ab8b2f349635629a1a2d/terminado-0.9.2.tar.gz"
-    sha256 "89e6d94b19e4bc9dce0ffd908dfaf55cc78a9bf735934e915a4a96f65ac9704c"
+    url "https://files.pythonhosted.org/packages/0c/1c/87da0904d945475305773653adbc7e47977037df4a2e4ce1a6ad5d7b87e1/terminado-0.9.3.tar.gz"
+    sha256 "261c0b7825fecf629666e1820b484a5380f7e54d6b8bd889fa482e99dcf9bde4"
   end
 
   resource "testpath" do
