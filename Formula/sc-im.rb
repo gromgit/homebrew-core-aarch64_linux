@@ -7,13 +7,10 @@ class ScIm < Formula
   head "https://github.com/andmarti1424/sc-im.git", branch: "freeze"
 
   bottle do
-    sha256 arm64_big_sur: "f7ad6c86caf94bf75c40da5422ac4eeaef52e7c5b6065f32981dec2c54bef5c9"
-    sha256 big_sur:       "d419452946bad457347ca8c59b3d53a90f3976af74d1e652de8e1ad4d0982f9a"
-    sha256 catalina:      "24cb0ad706b03a9933cdb24dba862b38a3fcb59f96f9942227d8f9f79ff93ea5"
-    sha256 mojave:        "67180ab11eedd56f8eaffb0d2f12a90ca9636bbd93ff693914450be8248702ce"
-    sha256 high_sierra:   "275a0a9dbd1a1271119e36b2767a54587aae57a65ee92278e701e0e1236a192c"
-    sha256 sierra:        "f346970ef805cec01ae6485365d8fb5002533255c01e81bdd44d072058d00081"
-    sha256 el_capitan:    "50e8d50e0373ac626ad617057eb1246c779e1e3b05171f4be2aa547c5b8ddf4c"
+    sha256 arm64_big_sur: "d62fcbf7991ec40f521e475f89352aaa377ebbdd0f855d4873cb05c6dbc7a612"
+    sha256 big_sur:       "20aa7d533af3006637e41c0d321fc962a699192cafed8b4412ba5fd636ed87c1"
+    sha256 catalina:      "853ebd92243deb555e37b98fe07336182fff4b733981d871a2df45420b6ecece"
+    sha256 mojave:        "6527827b290f1a40a154d2fd32a7142720c1413c801b9bb9bc49ddaa845915ed"
   end
 
   depends_on "ncurses"
