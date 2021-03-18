@@ -1,8 +1,8 @@
 class Chapel < Formula
   desc "Emerging programming language designed for parallel computing"
   homepage "https://chapel-lang.org/"
-  url "https://github.com/chapel-lang/chapel/releases/download/1.23.0/chapel-1.23.0.tar.gz"
-  sha256 "7ae2c8f17a7b98ac68378e94a842cf16d4ab0bcfeabc0fee5ab4aaa07b205661"
+  url "https://github.com/chapel-lang/chapel/releases/download/1.24.0/chapel-1.24.0.tar.gz"
+  sha256 "77c6087f3e0837268470915f2ad260d49cf7ac4adf16f5b44862ae624c1be801"
   license "Apache-2.0"
 
   bottle do
@@ -11,6 +11,8 @@ class Chapel < Formula
     sha256 mojave:      "123c5824b82621b4984e1afbf4f01f5c20af8cbc03e7b1266af396f8eaa80f79"
     sha256 high_sierra: "101b6a940e07d3e86ec809b3f7737950e0ef12c61daf43ef92c00e95047333c5"
   end
+
+  depends_on "python@3.9"
 
   def install
     libexec.install Dir["*"]
