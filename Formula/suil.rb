@@ -4,6 +4,8 @@ class Suil < Formula
   url "https://download.drobilla.net/suil-0.10.10.tar.bz2"
   sha256 "750f08e6b7dc941a5e694c484aab02f69af5aa90edcc9fb2ffb4fb45f1574bfb"
   license "ISC"
+  revision 1
+  head "https://gitlab.com/lv2/suil.git"
 
   livecheck do
     url "https://download.drobilla.net/"
@@ -19,10 +21,21 @@ class Suil < Formula
 
   depends_on "pkg-config" => :build
   depends_on "gtk+"
+  depends_on "gtk+3"
   depends_on "lv2"
+  depends_on "qt@5"
+
+  # Disable qt5_in_gtk3 because it depends upon X11
+  # Can be removed if https://gitlab.com/lv2/suil/-/merge_requests/1 is merged
+  patch do
+    url "https://gitlab.com/lv2/suil/-/commit/33ea47e18ddc1eb384e75622c0e75164d351f2c0.patch"
+    sha256 "10dddc02f0a61f03babb4d9692a63aaa2dc9e66e364a2c3098ec5710822002fd"
+  end
 
   def install
-    system "./waf", "configure", "--prefix=#{prefix}"
+    ENV.cxx11
+    system "./waf", "configure", "--prefix=#{prefix}", "--no-x11",
+        "--gtk2-lib-name=#{shared_library("libgtk-quartz-2.0.0")}", "--gtk3-lib-name=#{shared_library("libgtk-3.0")}"
     system "./waf", "install"
   end
 
