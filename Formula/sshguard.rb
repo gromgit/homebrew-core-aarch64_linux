@@ -6,11 +6,10 @@ class Sshguard < Formula
   version_scheme 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "24aa4cab661aa1ecdf1c2f20e80de6cd7bc90ec928a7d251dbd0d45b0983e0b1"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9a11ca09ad3478fbd84a62c21e94c4f9997fedd210fd3ac271a8abb9fc006267"
-    sha256 cellar: :any_skip_relocation, catalina:      "77cd7948bbc56730642e7698416d00b8313cb1273919d762f55d6054c1631e25"
-    sha256 cellar: :any_skip_relocation, mojave:        "6b817c8751e409999328cdf22aba24701af0ab9c02d1d9c652285dacaa4968bd"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "0f006d36404600cb1053df6073142d394cbe166525ab37cb62a4a8c56b7f369f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bcbb7ce2c093e35cf9494102e4a110e67a0026838c28770d7880cfcd8d17bb10"
+    sha256 cellar: :any_skip_relocation, big_sur:       "1ef26616b9c9967b8e8749af6c92d97d534b18a411d312ce07d61ddfc7ee0a8e"
+    sha256 cellar: :any_skip_relocation, catalina:      "287d98f822a15178d2cdb3f6cc11189e8ab13d9acd783f2a9b499768617b3ed4"
+    sha256 cellar: :any_skip_relocation, mojave:        "ab2bdc696ad7cc7f8ea83ea2819743699f8229e5bdb842aed39eb26b6840e46e"
   end
 
   head do
