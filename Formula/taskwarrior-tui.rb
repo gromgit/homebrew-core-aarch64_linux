@@ -12,10 +12,10 @@ class TaskwarriorTui < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d598914134637645544c31b057cfff92aa54036a300fe9b665315173e07bf687"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5b1b73ec1fc1bf3e2ebd2a6a5b789345f81a60e57a18605936aad3a6a461bdc6"
-    sha256 cellar: :any_skip_relocation, catalina:      "c5c0b74a3903c10f5e544a46f221ee178f6bc13c9c8911552367d7caa3542276"
-    sha256 cellar: :any_skip_relocation, mojave:        "30a0baec2dda9e297116b844839786b6e2b30b7c6fe7f7cba514525f9e443fd2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f5b24a42e1a4b8db84c3fefd65a7ee11539a8fe2e7e0c914cf544797994e9dab"
+    sha256 cellar: :any_skip_relocation, big_sur:       "132c8589c12db8fb140cca42ab9e9e096100c20c1659f369b9a2fc08b95f7d90"
+    sha256 cellar: :any_skip_relocation, catalina:      "3fa5876a0669976d390b68643c7d74e42720d825f5d1dbcb85027bc802e1e1e2"
+    sha256 cellar: :any_skip_relocation, mojave:        "9a5a0f08fa9671fdd3e977b4f69be13c88af6148207338e20e0769ae7ee412e9"
   end
 
   depends_on "pandoc" => :build unless Hardware::CPU.arm?
