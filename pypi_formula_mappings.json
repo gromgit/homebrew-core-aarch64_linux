@@ -10,9 +10,6 @@
     ],
     "exclude_packages": ["textfsm", "pycrypto"]
   },
-  "ansible-lint": {
-      "extra_packages": ["ansible-base"]
-  },
   "ansible@2.8": false,
   "ansible@2.9": {
     "extra_packages": [
