@@ -11,11 +11,10 @@ class Htslib < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "064702cff6bf08fcde27f3315ee3f252d4ab402cec419165bc9c3a29b0ff88f1"
-    sha256 cellar: :any, big_sur:       "041b57665a510b5f997378bf3e3ce77c514dd3d926bb657b8ed51c5d3d12428d"
-    sha256 cellar: :any, catalina:      "f28d03e151afa13f70ed32382fe39dfbd519b94684bffc1351e38c928156f678"
-    sha256 cellar: :any, mojave:        "e32ece4437430fb982ab295b6efaa9bed569dd5a661adcf1bc4240b48ae72914"
-    sha256 cellar: :any, high_sierra:   "b0fd73dc104edc3fc591a998ce27fe99e8086873b0ac29775532374213225a1f"
+    sha256 cellar: :any, arm64_big_sur: "7df497b0d0ffc8370403fb973ebd143e8c2776978f7f6aaeed045e1ff17c3121"
+    sha256 cellar: :any, big_sur:       "337d53e97fef7ccad36110c39283f261d377442573182743ac892fa6bf2e0ed5"
+    sha256 cellar: :any, catalina:      "884b19991c4f1ac91b4ece1979a1585947283dc8eaa2ac12275b8e44e14d4e4b"
+    sha256 cellar: :any, mojave:        "1c65a9f4187196a2bc689a5a0299e7b9eafd0a192ca1b0e6ae924a9d13e8974b"
   end
 
   depends_on "xz"
