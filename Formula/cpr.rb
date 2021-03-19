@@ -2,8 +2,8 @@ class Cpr < Formula
   desc "C++ Requests, a spiritual port of Python Requests"
   homepage "https://whoshuu.github.io/cpr/"
   url "https://github.com/whoshuu/cpr.git",
-      tag:      "1.5.2",
-      revision: "41fbaca90160950f1397e0ffc6b58bd81063f131"
+      tag:      "1.6.0",
+      revision: "aac5058a15e9ad5ad393973dc6fe44d7614a7f55"
   license "MIT"
   head "https://github.com/whoshuu/cpr.git"
 
@@ -19,19 +19,11 @@ class Cpr < Formula
 
   uses_from_macos "curl"
 
-  # Fix system curl detection
-  # See https://github.com/whoshuu/cpr/pull/428
-  #
-  # Remove in the next release
-  patch do
-    url "https://github.com/whoshuu/cpr/commit/451fd1a896c963367ebb3d77cfe4550b2d5636f3.patch?full_index=1"
-    sha256 "74349209c5d28d9261871080341c735517b3e64e91ac6cc6884abb2767f14b33"
-  end
-
   def install
-    args = std_cmake_args
-    args << "-DUSE_SYSTEM_CURL=ON"
-    args << "-DBUILD_CPR_TESTS=OFF"
+    args = std_cmake_args + %w[
+      -DCPR_FORCE_USE_SYSTEM_CURL=ON
+      -DCPR_BUILD_TESTS=OFF
+    ]
 
     system "cmake", ".", *args, "-DBUILD_SHARED_LIBS=ON"
     system "make", "install"
