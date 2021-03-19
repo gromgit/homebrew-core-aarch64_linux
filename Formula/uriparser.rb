@@ -1,8 +1,8 @@
 class Uriparser < Formula
   desc "URI parsing library (strictly RFC 3986 compliant)"
   homepage "https://uriparser.github.io/"
-  url "https://github.com/uriparser/uriparser/releases/download/uriparser-0.9.4/uriparser-0.9.4.tar.bz2"
-  sha256 "b7cdabe5611408fc2c3a10f8beecb881a0c7e93ff669c578cd9e3e6d64b8f87b"
+  url "https://github.com/uriparser/uriparser/releases/download/uriparser-0.9.5/uriparser-0.9.5.tar.bz2"
+  sha256 "dd8061eba7f2e66c151722e6db0b27c972baa6215cf16f135dbe0f0a4bc6606c"
   head "https://github.com/uriparser/uriparser.git"
 
   bottle do
@@ -17,7 +17,10 @@ class Uriparser < Formula
   conflicts_with "libkml", because: "both install `liburiparser.dylib`"
 
   def install
-    system "cmake", ".", "-DURIPARSER_BUILD_TESTS=OFF", "-DURIPARSER_BUILD_DOCS=OFF", *std_cmake_args
+    system "cmake", ".", "-DURIPARSER_BUILD_TESTS=OFF",
+                         "-DURIPARSER_BUILD_DOCS=OFF",
+                         "-DCMAKE_INSTALL_RPATH=#{opt_lib}",
+                         *std_cmake_args
     system "make"
     system "make", "install"
   end
