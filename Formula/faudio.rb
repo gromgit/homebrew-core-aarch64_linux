@@ -7,10 +7,10 @@ class Faudio < Formula
   head "https://github.com/FNA-XNA/FAudio.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "b19b83eefa112fbee0cdd315c49a7d6424fdbead34880e1c37b881bcc7c2c27c"
-    sha256 cellar: :any, big_sur:       "c745166deea7e82d53273d27bb81207888863e7b204500ca4288a1b9ea55e29b"
-    sha256 cellar: :any, catalina:      "9be31c43ed68f1ada03078b0920b405c4e9045692218711acc24c0a14672841b"
-    sha256 cellar: :any, mojave:        "33cb8da3ded7c582363660427fe2571145b028c9a3b8bd10e55bf7a4cd1f17a6"
+    sha256 cellar: :any, arm64_big_sur: "e6350d3789161f242690e229d954709828086dcbaa3c262d16c0f09b33afdc26"
+    sha256 cellar: :any, big_sur:       "039ba15b7ded7053e756f37c0367bd4dd9f2927fd9c351b877f7c7881c6a4653"
+    sha256 cellar: :any, catalina:      "40b0458bdacb14449cf088256af3a70cd72c588a8f3685dc41c20b79e3a505f2"
+    sha256 cellar: :any, mojave:        "63c501811295f287f37c3588e5a6dbbcd2da89839c3481eb7de6ef9465b2fdf4"
   end
 
   depends_on "cmake" => :build
