@@ -6,6 +6,13 @@ class MinizipNg < Formula
   license "Zlib"
   head "https://github.com/zlib-ng/minizip-ng.git", branch: "dev"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8ad8c82b45731b2bf0c2ab381a03ca1ee04b2a0b77d1a82cf9c96e943aded479"
+    sha256 cellar: :any_skip_relocation, big_sur:       "1e9ce92109dfe17d988a2007bb488cba82e7840e4432589c3d3ebd99d4c73fa4"
+    sha256 cellar: :any_skip_relocation, catalina:      "4f2dfbfa9b7adb2bcde15d974ca0285887a1d148a47d1c7800b9b3ca294d68ff"
+    sha256 cellar: :any_skip_relocation, mojave:        "ec319bfa442812f8c5ac517d7f1eb231725a6b3e24449d1acc48700168376ced"
+  end
+
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "xz"
