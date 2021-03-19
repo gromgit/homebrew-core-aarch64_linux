@@ -7,10 +7,10 @@ class AvroCpp < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "a0483d513cf45e07a900217f40380f2877f24d76bed80eca97c3a1847d319f00"
-    sha256 cellar: :any, big_sur:       "ca9e68702c6db225ae771e492cf3ad1ea810ab325fbb9909b4c4dd6db7134076"
-    sha256 cellar: :any, catalina:      "26406c1a5d27a8f5d73a444ff79ed97f975764e178074c8093edcb0322292e43"
-    sha256 cellar: :any, mojave:        "46756dffcea14bc4cc3f264f8a33e99eb553470423ca53f58c0499b80a16f1f4"
+    sha256 cellar: :any, arm64_big_sur: "d9fdbe9ff1518660f724042a38482903b76d0846ccc9da1c6604a02f3dccfa8f"
+    sha256 cellar: :any, big_sur:       "4d6f750dfc9eef39e2162dfcbe2b58d1e6eeb5dfc009b8588670ce507055e0e0"
+    sha256 cellar: :any, catalina:      "fbb5bc2cd39d90593999508803ab578b99816d013d7a1893dfb6451d1ce8d150"
+    sha256 cellar: :any, mojave:        "c78681f2af65e8f8468de1a8397b3d9bbd6a95285357eec25fc34e9b853b53a0"
   end
 
   depends_on "cmake" => :build
