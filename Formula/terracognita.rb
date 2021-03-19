@@ -7,10 +7,10 @@ class Terracognita < Formula
   head "https://github.com/cycloidio/terracognita.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "53bf006ea48142eaf015dc5b1a2ab975d14ffc7b185e43df110425d3d580e7d6"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5ba9130b7d087ec215f1923f94a8f996e9fb3f0f15ddeea7bd0c5671f5f1fd75"
-    sha256 cellar: :any_skip_relocation, catalina:      "742b962704c5aaec5a00f8c199245b1e65e86897a2cae3fc198def5d2e8714d8"
-    sha256 cellar: :any_skip_relocation, mojave:        "73ffb4cbe1327d3286a07330a0db083f45f00244ebf4c520e1c108cc283cfd30"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a4e695dd8b2250319a71c3133d7f25409af6f0efc18737defa60e0dc0e3c1f19"
+    sha256 cellar: :any_skip_relocation, big_sur:       "248a9f4ff82c9d71b42de68ae5a7992b24b547c917193a13c2cac9dc3a001910"
+    sha256 cellar: :any_skip_relocation, catalina:      "d99e0fdb6574512b75d359969466672c67ce5d10cb34e5471a6c33357975c8c2"
+    sha256 cellar: :any_skip_relocation, mojave:        "c0f566e26c52a835e0f4eb4c58d9a18a02d67dd4a02552c0a0c0c12e4491e0d3"
   end
 
   depends_on "go" => :build
