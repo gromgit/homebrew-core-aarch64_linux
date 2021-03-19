@@ -65,6 +65,9 @@
   "regipy": {
     "exclude_packages": ["tabulate"]
   },
+  "robot-framework": {
+    "extra_packages": ["robotframework-archivelibrary", "robotframework-selenium2library", "robotframework-sshlibrary"]
+  },
   "salt": {
     "extra_packages": ["M2Crypto", "pygit2"]
   },
