@@ -1,4 +1,4 @@
-class KdeKi18n < Formula
+class Ki18n < Formula
   desc "KDE Gettext-based UI text internationalization"
   homepage "https://api.kde.org/frameworks/ki18n/html/index.html"
   url "https://download.kde.org/stable/frameworks/5.79/ki18n-5.79.0.tar.xz"
@@ -11,17 +11,10 @@ class KdeKi18n < Formula
   revision 1
   head "https://invent.kde.org/frameworks/ki18n.git"
 
-  bottle do
-    sha256 arm64_big_sur: "3ebf24ce99afed3f6d8bc8127321611413fd88f5ccac67bd54ebfd5bfd97110d"
-    sha256 big_sur:       "3fab49671721c2ae1ef5dbeb4f39930d81dc0b9f4dc5b53e264ed43edd70b209"
-    sha256 catalina:      "99f6a40be017e93847a60d571b5493b124d132920de2d8bdf4a2d6fd2bfbe4f1"
-    sha256 mojave:        "40bab468d976d14924e62eb899f8b3300505960a51001d3bc2ed9348358d0d7d"
-  end
-
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
+  depends_on "extra-cmake-modules" => [:build, :test]
   depends_on "graphviz" => :build
-  depends_on "kde-extra-cmake-modules" => [:build, :test]
   depends_on "gettext"
   depends_on "qt@5"
 
