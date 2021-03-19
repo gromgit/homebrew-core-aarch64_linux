@@ -3,8 +3,8 @@ class NameThatHash < Formula
 
   desc "Modern hash identification system"
   homepage "https://nth.skerritt.blog/"
-  url "https://files.pythonhosted.org/packages/fc/55/bee2efcd3f44b0dd7d6bb155f19e29e9cb9d7ac4a92ba74e5f7b15c3c72e/name-that-hash-1.4.0.tar.gz"
-  sha256 "ebe1595978fe1b8ada053225541c23fb90e7c4e78255549ded0799e6eae03e01"
+  url "https://files.pythonhosted.org/packages/3b/4f/bc009cb4f008a0f8a7d42f7b3cbb5a3a66a49c558b6ff745c94539b0fff1/name-that-hash-1.5.0.tar.gz"
+  sha256 "3466b0e618b1b7577de3eb57b6b87f55f07b592be378dc127b3ef0f01482fd46"
   license "GPL-3.0-or-later"
   head "https://github.com/HashPals/Name-That-Hash.git", branch: "main"
 
