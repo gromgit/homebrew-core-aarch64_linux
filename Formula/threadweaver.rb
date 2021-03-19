@@ -1,4 +1,4 @@
-class KdeThreadweaver < Formula
+class Threadweaver < Formula
   desc "Helper for multithreaded programming"
   homepage "https://api.kde.org/frameworks/threadweaver/html/index.html"
   url "https://download.kde.org/stable/frameworks/5.79/threadweaver-5.79.0.tar.xz"
@@ -7,17 +7,10 @@ class KdeThreadweaver < Formula
   revision 1
   head "https://invent.kde.org/frameworks/threadweaver.git"
 
-  bottle do
-    sha256 arm64_big_sur: "4e2cc8b16301bc9e2fc14fda3748bf5c6806f1a5354fd8975bffe543afd609ac"
-    sha256 big_sur:       "14e86bf2b254bf6cc4a03eef9ce8fd440172befc09987963c06490bc5fb71475"
-    sha256 catalina:      "4ed11a2a30e6c38fb227c7b0177e7759c155320d4b3dd7de9a64386f3fbf9ed4"
-    sha256 mojave:        "47d34ce1fc476cbbbad3c8d7344a202a3169d450163e33cbf8d389dcf5f4bcf9"
-  end
-
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
+  depends_on "extra-cmake-modules" => [:build, :test]
   depends_on "graphviz" => :build
-  depends_on "kde-extra-cmake-modules" => [:build, :test]
   depends_on "qt@5"
 
   def install

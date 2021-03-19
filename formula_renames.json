@@ -72,6 +72,7 @@
   "kde-karchive": "karchive",
   "kde-kdoctools": "kdoctools",
   "kde-ki18n": "ki18n",
+  "kde-threadweaver": "threadweaver",
   "kibana@6.8": "kibana@6",
   "kibana@7.8": "kibana@7",
   "kotlin-compiler": "kotlin",
