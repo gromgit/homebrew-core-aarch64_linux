@@ -13,9 +13,9 @@ class Logstash < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:  "847ead527113ab2220c3d0dedf8414f6342ef27e654fc3ad628ceb8af4674c8a"
-    sha256 cellar: :any, catalina: "8add2aa6e8ff0086a9bf38bc87bd5027f7290e0f39ca0faffe41049e0eca2737"
-    sha256 cellar: :any, mojave:   "88f1c72bffc4b7c2002ac38bcbf5bd211215aa5defdae0f69ababd5c5da84829"
+    sha256 cellar: :any, big_sur:  "af7c25b0c02e96b6302811f51ea3f2f813199a56b690ec7ae630da1d870ca836"
+    sha256 cellar: :any, catalina: "e82b244a40d28d1e0fba43e861b47d9013dfca81b835c6518702ff260920679b"
+    sha256 cellar: :any, mojave:   "b6a39e3a8e0894d9ee054042512126f0fe980d72378c1d5028eb97c9412818b0"
   end
 
   depends_on "openjdk@11"
