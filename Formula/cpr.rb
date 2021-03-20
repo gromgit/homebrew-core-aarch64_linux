@@ -8,10 +8,10 @@ class Cpr < Formula
   head "https://github.com/whoshuu/cpr.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "b93aecd08cd2c187694a572c2c9c8d4cdb0ed181b4387fd3e7a68f67a4847d6a"
-    sha256 cellar: :any, big_sur:       "0f3457ec4a948fb235d26d9bfdd0c1b3f53297c0e7c505a1f34a3d853907ddc8"
-    sha256 cellar: :any, catalina:      "51bbf276165a820d37e9d9dfc829e7dae6f100b57bbb4095283955924027a7e8"
-    sha256 cellar: :any, mojave:        "66cfe69826f724c686417117ba2ef710e7765a35c39b648d6d239867f6c47473"
+    sha256 cellar: :any, arm64_big_sur: "148fe92c19acedf327f3391d9d27cfdcbc9827402d7c19792711279fab011900"
+    sha256 cellar: :any, big_sur:       "01d2a7feccbd41e4c1031f4949abdd32219ecd4c352ce7b422ff3a5b9a4acabb"
+    sha256 cellar: :any, catalina:      "20cbfb4275787989ed99d346281a14b033703b53dcd1c81e3870d085e6a4002b"
+    sha256 cellar: :any, mojave:        "d9125cf69063f36f241a66160bac0143c0602e66251326900b31053cfa2bae72"
   end
 
   depends_on "cmake" => :build
