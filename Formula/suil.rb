@@ -13,10 +13,10 @@ class Suil < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "ae9df00545cf2e938ad3a580e92b96b18b29de83645ca5f77c4f1e92e22f4df1"
-    sha256 big_sur:       "77388b3a76d608319f011867cf66d6e212cc75b325654f892af85a952fdf39a0"
-    sha256 catalina:      "7ae30ca6e4c23a5f0a8b47eb1ddbf20ac6c06896cc181aaf53f344be72a11abe"
-    sha256 mojave:        "f21210f03d28fdd33d48e16094011aa4e1e0aa6f474eedb36932b2b0e1eabd32"
+    sha256 arm64_big_sur: "11af96a8cd470b08da0bd49cb3b620ae81d89e9589c5ed44a533e2cb93d5133f"
+    sha256 big_sur:       "02a8eed42b15c099954dce4741c71b0e5f9ae652fce48921e4920a3efc779e01"
+    sha256 catalina:      "4a74f4c1cbf9b1e67c7fbda45e5ca67b5163757b70ee62c33a7e66b136a2d4c1"
+    sha256 mojave:        "2bc87e39cf2cb0a66c983c01834d39c2f1cccdddbe4db28331e0dcb6cf64c3fb"
   end
 
   depends_on "pkg-config" => :build
