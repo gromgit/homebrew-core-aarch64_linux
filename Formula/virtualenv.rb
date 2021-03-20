@@ -8,6 +8,13 @@ class Virtualenv < Formula
   license "MIT"
   head "https://github.com/pypa/virtualenv.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "00881fbdbea68d16f933d16665258d98de7794fea4b78335219bcd3fc1a8f4fc"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7d5a8e93ed2690dcda326480d52565a603b2b3ece9bc39c705edfbaf69cb842b"
+    sha256 cellar: :any_skip_relocation, catalina:      "1b2314e8b79c6b760377d2c374d5e6e9c9a4bd907c019874bb90134943b97880"
+    sha256 cellar: :any_skip_relocation, mojave:        "ff6dac3b56950648b93a27642f6f551afd645c93ec737081e77b2a79d5d74b94"
+  end
+
   depends_on "python@3.9"
 
   resource "appdirs" do
