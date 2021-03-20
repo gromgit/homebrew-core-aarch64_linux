@@ -12,6 +12,13 @@ class Kdoctools < Formula
   revision 1
   head "https://invent.kde.org/frameworks/kdoctools.git"
 
+  bottle do
+    sha256 arm64_big_sur: "c2495fefca3981cc0a77d78057a9084fc76e5fcf1ff491d2287ecd43fbe85822"
+    sha256 big_sur:       "2f905aa2df6b6035a7379cf4d907b2ed013a8b2f1d06fa7698484372660114b6"
+    sha256 catalina:      "dccc858a4d796bc7e6cf25ef7904c95525728527d4a369992ad48d8c587fcabf"
+    sha256 mojave:        "5152d9d4b82dd95a4f871e81afa8a8fd2617cd59f718bbd3ac1d3901f08dd23f"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "docbook-xsl" => [:build, :test]
   depends_on "doxygen" => :build
