@@ -6,11 +6,10 @@ class Libpeas < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "665cf2215ffd3be1079233e2f825790dd0a000b3171deafd4547c76f8e900830"
-    sha256 big_sur:       "e16499f8ca12b73b560186938cc435ebb57b9ad5b212f402bfef5fb1817d086f"
-    sha256 catalina:      "32809467a203d5da8fe2168c50a773c950ea906ab06a3010fc4287de0b8f407d"
-    sha256 mojave:        "a9e812e0fb512c3a6716deca92a1c58fd4a1f4ee5f6af3e0fa255c97dd08d294"
-    sha256 high_sierra:   "bfe333e7b1268b37d498a15087e07a6f09e736ed338dc4f694d40475ab736f40"
+    sha256 arm64_big_sur: "826333c759333b483af3466322a0c7f21cb723674f4a71e118ca8ad78ade4a70"
+    sha256 big_sur:       "204fd26d92f3a9585d6823fff5df8a8108a0ed904c80a845e0bfd5173152c934"
+    sha256 catalina:      "cddddc6a29c533bbff776cb2635a4494f3d7024f0c4aeb80e4e378427f790100"
+    sha256 mojave:        "1df3679b835916a8c135edbbfa246e27cfdeac82717250505363f117130f9832"
   end
 
   depends_on "meson" => :build
