@@ -7,6 +7,13 @@ class Threadweaver < Formula
   revision 1
   head "https://invent.kde.org/frameworks/threadweaver.git"
 
+  bottle do
+    sha256 arm64_big_sur: "154d556bd5be092fbf3c52bbe727d71391ac9f4a7f0b9ff5ac556c4168006299"
+    sha256 big_sur:       "08783647078fee1ef75cdc951014d6a85b4ce8d6cd0eeaf23b8b40a9c3ad995a"
+    sha256 catalina:      "8260e7bc8e7b4313a37d0c04d53950066d6c2560d4787d3540f03d7046b034ae"
+    sha256 mojave:        "ff1911156f274c60621ea84d2c4747c3342240281a0047c33669562a063c0b87"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
   depends_on "extra-cmake-modules" => [:build, :test]
