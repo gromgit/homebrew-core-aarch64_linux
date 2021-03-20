@@ -53,7 +53,7 @@
     "exclude_packages": ["tabulate"]
   },
   "openstackclient": {
-    "extra_packages": ["python-heatclient"]
+    "extra_packages": ["python-heatclient", "python-octaviaclient"]
   },
   "nicotine-plus": {
     "exclude_packages": ["pycairo", "PyGObject"]
