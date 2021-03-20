@@ -6,11 +6,10 @@ class Libdazzle < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "ef5f9dca4635b3347a8fda8285b55bd63b274ed51e6df5320ed3d61780b3bbab"
-    sha256 cellar: :any, big_sur:       "fa2282bdb8556341d8fdb814ced63d41a5936b7c2905c8e6f0f3e98c4d0b54da"
-    sha256 cellar: :any, catalina:      "889b2107f7efceabc760c6e96f1a55c00765cf67a7d5d54a821f1d33e5b0db01"
-    sha256 cellar: :any, mojave:        "53c268508a5ef7ff874bb1b52069c240f80f99fd26fd2074066556b6ce095a81"
-    sha256 cellar: :any, high_sierra:   "837eb4ed3f32a9512d6d7efde4ef1ea858009ab7db9a5093285b41387a538e9d"
+    sha256 cellar: :any, arm64_big_sur: "bd3d5fe0c3f40cc3046d824af353bd7c8a333a88fb28893df41854a7c9b551d5"
+    sha256 cellar: :any, big_sur:       "05b5ef35b6edbae5dee76b55549de030b1876e75a7d2caa3d5f877a6c64c26c8"
+    sha256 cellar: :any, catalina:      "28328021ecdcf4eeabc6146a73a4c61652ea214036705a6b0441fabc81c5196b"
+    sha256 cellar: :any, mojave:        "0a9f674293a1df2ef75d633392309cd759654f39e973600bc19276763c1290d5"
   end
 
   depends_on "gobject-introspection" => :build
