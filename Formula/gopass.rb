@@ -1,8 +1,8 @@
 class Gopass < Formula
   desc "Slightly more awesome Standard Unix Password Manager for Teams"
   homepage "https://github.com/gopasspw/gopass"
-  url "https://github.com/gopasspw/gopass/releases/download/v1.12.3/gopass-1.12.3.tar.gz"
-  sha256 "3b38ef45df8caed208cd1d34cbf69fa640cd44908f60042b8d3f0e318d1dd62d"
+  url "https://github.com/gopasspw/gopass/releases/download/v1.12.4/gopass-1.12.4.tar.gz"
+  sha256 "779f2ce5e85e5366200c488b506adf5bfefa955d28bcc81e14c4a5758e7625f8"
   license "MIT"
   head "https://github.com/gopasspw/gopass.git"
 
@@ -18,14 +18,6 @@ class Gopass < Formula
 
   on_macos do
     depends_on "terminal-notifier"
-  end
-
-  # Patch to fix build failure with BSD install
-  # Remove at next release
-  # https://github.com/gopasspw/gopass/pull/1859
-  patch do
-    url "https://github.com/gopasspw/gopass/commit/39c4c31e155ea3df0c5a538db56afca9c6f61525.patch?full_index=1"
-    sha256 "e73bd361f1f63dca46340145663ea7c3704554001bda14827a047701afcfe331"
   end
 
   def install
