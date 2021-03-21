@@ -27,11 +27,10 @@ class Unison < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0d8067436f39ee938090e49ccabbd11f038065a27db1f6ad7cefa695a14fc04d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c9abac8ba99bb85b7b2cbadf76dedcf1d786f047dc4e37aecc0cd80751fd8ed2"
-    sha256 cellar: :any_skip_relocation, catalina:      "cea7b5893ed3a5f39b599b98f244e8d6146cb7700fb19883667e61f9a4390b4c"
-    sha256 cellar: :any_skip_relocation, mojave:        "3c49a17f14f649b88c1188e43a6f82b05e233b79ba567b1ca702c147ba1e5950"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "1cdf5ae09de5f39426ef22f01284d7b4a1a5a792812b5fa14f76ba188b33ed55"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a09892d1f3d40211f21a6a38a737861fe7729ba749099d85e8febc63d68206aa"
+    sha256 cellar: :any_skip_relocation, big_sur:       "37c7719d8dba2927cf8b2a9159e430a6e1f54a71bb0238f471d5ed78ca903c80"
+    sha256 cellar: :any_skip_relocation, catalina:      "e441bbd34b0931b31d12080d16ef301429b79621fc3e81edfd4fa04352894dc0"
+    sha256 cellar: :any_skip_relocation, mojave:        "2ef33d3de8fec085d1349178f7efae7e37837b72cd84442bf7fbf491cfdedb22"
   end
 
   depends_on "ocaml" => :build
