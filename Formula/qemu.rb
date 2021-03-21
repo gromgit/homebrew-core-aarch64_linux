@@ -2,6 +2,7 @@ class Qemu < Formula
   desc "Emulator for x86 and PowerPC"
   homepage "https://www.qemu.org/"
   license "GPL-2.0-only"
+  revision 1
   head "https://git.qemu.org/git/qemu.git"
 
   stable do
@@ -37,6 +38,7 @@ class Qemu < Formula
   depends_on "gnutls"
   depends_on "jpeg"
   depends_on "libpng"
+  depends_on "libslirp"
   depends_on "libssh"
   depends_on "libusb"
   depends_on "lzo"
@@ -63,6 +65,7 @@ class Qemu < Formula
       --disable-guest-agent
       --enable-curses
       --enable-libssh
+      --enable-slirp=system
       --enable-vde
       --extra-cflags=-DNCURSES_WIDECHAR=1
       --disable-sdl
