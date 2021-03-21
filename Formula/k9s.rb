@@ -8,11 +8,10 @@ class K9s < Formula
   head "https://github.com/derailed/k9s.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4b97e560c2791134ed747798643bc013b6714b4d8470cee0b353c9460c305918"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f1abfe7adcb179fae34191080e448524b45f94ee23d602bcc3c045e119731451"
-    sha256 cellar: :any_skip_relocation, catalina:      "de85ed24992be74b62bb7ba5c1585d8cf486b1c89f517f2934e207bfcd2a6f56"
-    sha256 cellar: :any_skip_relocation, mojave:        "bd05c90c7a7cd58cf29419c0562b2e08213fe528b9e6af99e8ab40201f1a2cc4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "997f22647bd8a020c031adb2c4caff1b65981e3697571f9adc5305983bb0336e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "24d311946e8d7333642c0e261cdf6f59253a9738b2e363c0033f399fe2f31893"
+    sha256 cellar: :any_skip_relocation, catalina:      "c54e82c272fc987294ecb71818384a03a3cdd1fe9696836699796c4c9298f41d"
+    sha256 cellar: :any_skip_relocation, mojave:        "883b11293bd0453ce1d50161cf00525b84f700e32e24dc98c2d077b707c2dede"
   end
 
   depends_on "go" => :build
