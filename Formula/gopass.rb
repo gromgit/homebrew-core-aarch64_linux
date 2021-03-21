@@ -7,10 +7,10 @@ class Gopass < Formula
   head "https://github.com/gopasspw/gopass.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1c2b02bffd63fb5008ca569a24aa86cdc12ef5366f2c46633d3c7b7632f9bf5f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "04394dc68f5c568040cc8229109ce3cf713d2c90cb935b680e4d27af6aa1aa93"
-    sha256 cellar: :any_skip_relocation, catalina:      "056573c87af5913fddd64aad1e92c862abc3a2f13573b2c224524e63b9282238"
-    sha256 cellar: :any_skip_relocation, mojave:        "99bc5fff2572a669e924e1130bdfa7142e8f2ecff38b70ac3ccfb95fd4855d4e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "394e0609baf7392eb37206e662d7ad06c126e12c6b500e7b791ad5649d76446a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c6a1e5fddf989795ce7620b979dbb05489650f51e2cd38e664425557057c9f6d"
+    sha256 cellar: :any_skip_relocation, catalina:      "b1382266a2616e7294d905d5a55b2996eea1b86c479cb369590af4895d47c53f"
+    sha256 cellar: :any_skip_relocation, mojave:        "352982b80a0e184d61911ed9e4fc5023e327757bee8228a3cdf6c9d8cba4f8e4"
   end
 
   depends_on "go" => :build
