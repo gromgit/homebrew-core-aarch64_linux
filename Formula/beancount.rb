@@ -9,11 +9,10 @@ class Beancount < Formula
   head "https://github.com/beancount/beancount.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fbe766a3453274b51a4625bb8dad8f681738104678c144bd599970d535e828da"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0fdc75aafcace75a90c5373164f511e8a168e5fbc185a1ed99743734456340f2"
-    sha256 cellar: :any_skip_relocation, catalina:      "bc589eb10389f56fc454ae28226d3df9fd36a01586a7c52e60ff11d0d339d0ca"
-    sha256 cellar: :any_skip_relocation, mojave:        "d2b827c73743e2b5760160504ca3c44ad47695968b20c3272e8efd9d644a7ffe"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "38d554a9feb78c7e4af47dff69557593835e1a9a829dea637b7dd1b1615f811a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b595ea37250c19e9e90091f20e939d8f6c829e516eba6c300f119c9f1231ba6f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ec32f748bf839bc50fb311038a3eb92e7face57899f2f95da1da38d920092295"
+    sha256 cellar: :any_skip_relocation, catalina:      "02b64e301e10fa05cae697fa0d89f8b7401b355bdcb88c2576b780bcaa3942af"
+    sha256 cellar: :any_skip_relocation, mojave:        "3ae7fb4a729070f5caeeae26e4e53f862322b86dcbe5b6d403fc4082d062ea7a"
   end
 
   depends_on "python@3.9"
