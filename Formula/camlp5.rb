@@ -13,10 +13,10 @@ class Camlp5 < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "c63da0050857853010307c7c20ea8642dcee10d4e574a1e0fc9b58517f31f597"
-    sha256 big_sur:       "f848f21e1d3fdead2126c51499a35412f3fe42248a6b639d88a8183affe14050"
-    sha256 catalina:      "625b0c1b99bc64c224e257419529172a0b84e762d80b330153d61abbeebd67d6"
-    sha256 mojave:        "bb908676387d9d1b8d87a5948a1d12b36ca46868802cd6b32f9f7fa2d970a3db"
+    sha256 arm64_big_sur: "549ee3a8bfbc3b3d6f466087562d15fd1e1b1b092786c488ae3109c19b1ca50d"
+    sha256 big_sur:       "a01dea02114f9eb35e8d151ea3b61c34c7fcf5c2db09583cc3480a010211e7b3"
+    sha256 catalina:      "14d9affdc0d1aaeef2a2e122523acba47d3b271f7002c66e407e02387f48b1fe"
+    sha256 mojave:        "6b753cfd90a18e4d813cfc9ce3d3345547a0424527c15d51304621c9f6689b14"
   end
 
   depends_on "ocaml"
