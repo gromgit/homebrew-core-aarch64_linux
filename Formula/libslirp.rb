@@ -4,6 +4,7 @@ class Libslirp < Formula
   url "https://gitlab.freedesktop.org/slirp/libslirp/-/archive/v4.4.0/libslirp-v4.4.0.tar.gz"
   sha256 "43513390c57bee8c23b31545bfcb765200fccf859062b1c8101e72befdabce2e"
   license "BSD-3-Clause"
+  revision 1
 
   bottle do
     sha256 cellar: :any, arm64_big_sur: "3cd403d0ace2d57d506d64ce0bfcc27d3f7adb3e5113481a585a2f8ab0e53f9c"
@@ -16,6 +17,13 @@ class Libslirp < Formula
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "glib"
+
+  # Fix QEMU networking
+  # https://gitlab.freedesktop.org/slirp/libslirp/-/issues/35
+  patch do
+    url "https://gitlab.freedesktop.org/slirp/libslirp/-/commit/7271345efe182199acaeae602cb78a94a7c6dc9d.patch"
+    sha256 "9b6fa60ad5ea251dda70c898078cbbc25b1dad035d1530d0cb5ae7db16333f92"
+  end
 
   def install
     system "meson", "build", "-Ddefault_library=both", *std_meson_args
