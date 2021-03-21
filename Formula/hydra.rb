@@ -7,11 +7,10 @@ class Hydra < Formula
   head "https://github.com/vanhauser-thc/thc-hydra.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "39d8556d476a03ffb86a748f00f8202767169f0fc0ee65cf46f16b4ee2208dc2"
-    sha256 cellar: :any, big_sur:       "a7190616a3532667f98baf9d8834f38869060499d0bc6ed8edbb49451e084c84"
-    sha256 cellar: :any, catalina:      "1db4a290bf2b7d04019c081f151676916e2f97f9cf2443ddfd1081cddddb193b"
-    sha256 cellar: :any, mojave:        "144dbb541e91c9443026136998ea4c30d6b556674b4f429c148f1df88ce0e82c"
-    sha256 cellar: :any, high_sierra:   "ca89ea37aa86dfa419ce97c414b72c9c154580cce4ccc8a4ed75fd6faa4ec826"
+    sha256 cellar: :any, arm64_big_sur: "17478cc89073f649064ce5ed78103261eef8543df11a2601fdcfb6d19ad44154"
+    sha256 cellar: :any, big_sur:       "e3077504146989bf221da7acd53224ecec02d95349682c98f3132e9795d79481"
+    sha256 cellar: :any, catalina:      "310e71af53f35765106b99e890a4989f9b3856e09822f68201e288ebe0c91ff9"
+    sha256 cellar: :any, mojave:        "61dce3743fe0b7ce2db21bd833c3a99fea8c571f2c97ce57930ffb078516af4d"
   end
 
   depends_on "pkg-config" => :build
