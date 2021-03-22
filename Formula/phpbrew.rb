@@ -7,6 +7,8 @@ class Phpbrew < Formula
 
   bottle :unneeded
 
+  depends_on "php"
+
   def install
     chmod "+x", "phpbrew.phar"
     bin.install "phpbrew.phar" => "phpbrew"
