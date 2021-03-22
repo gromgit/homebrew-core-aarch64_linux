@@ -6,11 +6,10 @@ class GsettingsDesktopSchemas < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a19a6b6a472566b10ceee4ee1d91c498097cd4e55ed56bfb875cf99e2223cc35"
-    sha256 cellar: :any_skip_relocation, big_sur:       "abb92dac931cdbbe96c43137c3df3173b41c86565c1053a5578e4b36312de480"
-    sha256 cellar: :any_skip_relocation, catalina:      "0bcc0f743e141beb151ad2b400c40a4d30e317d1080437e359095fb53da3c8e4"
-    sha256 cellar: :any_skip_relocation, mojave:        "dd69129d87fd0b0c435b29b19e2ac9cea2d1a72d557aed9b3db1202afb49578d"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "63a1370fe1e1e58eabb9e608cb992a8391e2ba11c0940899d4c37c3c43088ff2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f98030c66d5023f9fd91a7700dff2372a9becd02514bd291139d56c32b2c06c1"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a7f5b4fc71c5dfdd9418823c6252872b6e6ecc7bab2e5828dcdcf7d484223178"
+    sha256 cellar: :any_skip_relocation, catalina:      "24379b6ab7c18f2d682d59ef7c8f94eaf67a41d0ed3156deb5f0f9bc99919cd4"
+    sha256 cellar: :any_skip_relocation, mojave:        "1350e64db550d9db2f48be5495f4da335b324b9b6c87ce4f073cf52cdbe3f790"
   end
 
   depends_on "gobject-introspection" => :build
