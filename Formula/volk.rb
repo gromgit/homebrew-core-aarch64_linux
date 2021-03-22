@@ -11,9 +11,9 @@ class Volk < Formula
   revision 1
 
   bottle do
-    sha256 big_sur:  "0324fc38e4ca9a378fa863af8543af8dbfd2eb83a4a22e008f5df434857b655a"
-    sha256 catalina: "96cdb958c8c97d9ddc96b3aee4aff3101952183c034f9a4d5b750a157756e693"
-    sha256 mojave:   "2cc90d04c112cf63c00b8f39c6e3ba297f963b3266ddd144b2924df7519e6e56"
+    sha256 big_sur:  "610c013ef274b1d760bfa8759d6499612e5cd2164ab9fc1afff5d1ea4663b755"
+    sha256 catalina: "cfaaedf9ff299ff8d6da4b73b1bdcc842e15c008d087483a38a6fa30529c1356"
+    sha256 mojave:   "c517239567cd00327372b732c1fa04300d566eddb13779f9736a6435eee9ec1d"
   end
 
   depends_on "cmake" => :build
