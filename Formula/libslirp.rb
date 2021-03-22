@@ -7,10 +7,10 @@ class Libslirp < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "3cd403d0ace2d57d506d64ce0bfcc27d3f7adb3e5113481a585a2f8ab0e53f9c"
-    sha256 cellar: :any, big_sur:       "c246bdd605b4dd938e1973e3cc6e9855bfac88d2387aa40d41a85180554dc4ab"
-    sha256 cellar: :any, catalina:      "1e17da7e87c39a76d7597c6030d2ae12d3b2a79742b4533e0113e7442e610833"
-    sha256 cellar: :any, mojave:        "a2f636ece566472a1eb9db4761399a0a68bf1c2ca8b901a34d4205858704be90"
+    sha256 cellar: :any, arm64_big_sur: "cec97ae53546763da4c377038f43c5a72d2ed14288a0c13441a57ae419bd0ac2"
+    sha256 cellar: :any, big_sur:       "911888d8a0ac274363a629b94c07d7b46d2b1eae5fdbf1131f95b0f16684d45a"
+    sha256 cellar: :any, catalina:      "f168f09b9cf07d04dbb1a1d5d1a6f5c845a00ace46388ba366846fdcacee7e45"
+    sha256 cellar: :any, mojave:        "4dbfe6f24dbac45a0c5d2796d350752ea25ebff528f0ccc1e29f3d476ec51104"
   end
 
   depends_on "meson" => :build
