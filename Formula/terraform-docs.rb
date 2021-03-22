@@ -6,10 +6,10 @@ class TerraformDocs < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "397b1e57c3f486b715067a4d033d1d4aed1a4087fd9125e640eb172fa9a911da"
-    sha256 cellar: :any_skip_relocation, big_sur:       "217078eb92ae040da5e32a587cf06f78390ce575a467bed0381748128c55a298"
-    sha256 cellar: :any_skip_relocation, catalina:      "2d461a60cca9cd8c10ca1b596b210cdaf2a5e4d9b808cff2cfedf262185d5457"
-    sha256 cellar: :any_skip_relocation, mojave:        "dbfa96439adb5d07f9b7e18b4ecd8d32c66d3c24e55500de086483ed2f3f9033"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "20bec97d2769cbaffcd754981e27f9551e966af9d373bfe7e8b0acbe544b4312"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3839c33cccff8401af9b20a95a368c8b7f098e72fb7360d859584f608e4b0ee4"
+    sha256 cellar: :any_skip_relocation, catalina:      "33a1e7d096506deca112879aebea08a85689615e386a5b76ac10599e37ec75b7"
+    sha256 cellar: :any_skip_relocation, mojave:        "50b07a5e1c2bf069d01af5d5910eda7877cf734233f000eb47914e9e878b2c3c"
   end
 
   depends_on "go" => :build
