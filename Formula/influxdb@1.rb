@@ -10,6 +10,13 @@ class InfluxdbAT1 < Formula
     regex(/^v?(1(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a089bd67453af32565e814768b87264694dbf97a82f4101589300cb0909eb04e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4e33ea228a0bc92c10ad144bb24c0d04cf6e32a5252471d95280848e38fdb74f"
+    sha256 cellar: :any_skip_relocation, catalina:      "8497170c48a51e6e671542133be31b7726161f4938ace1dea052d31256c127a8"
+    sha256 cellar: :any_skip_relocation, mojave:        "32e374e9ed7eca812ab6313d4a5718fa47a7f3d608a6b44697d78e3afdb452af"
+  end
+
   keg_only :versioned_formula
 
   depends_on "go" => :build
