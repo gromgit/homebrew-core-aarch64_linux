@@ -11,10 +11,10 @@ class NanopbGenerator < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "df771d601248c905f5da80f48cbac0c50d636fb0cb7d81e0fb655c9cda15ac87"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ee9dd36ebeaaec92ff043fdf57f5ef380da93b7dfac6295c5d37b600da5f314d"
-    sha256 cellar: :any_skip_relocation, catalina:      "9ad5efdcf92dde1e8fd3b1757b404840daada3eaed6dc1eb73be2de253542c7b"
-    sha256 cellar: :any_skip_relocation, mojave:        "4df510967a8882043092a084a019f27ef3b3c5730ad677ff777b0afdd86cace6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6e52f0be723f759324edec9d1f9fcffafbe7c84f2d3547d592d606f2f330b061"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3619dec5a99713f7b2afcccb631e04b4a6cfd4cf07b140fda95d32e7405038a1"
+    sha256 cellar: :any_skip_relocation, catalina:      "fc7ebaa9f8ba1b2360c5cdfe36d08db127abfce401bbecba1797b1bf2047a236"
+    sha256 cellar: :any_skip_relocation, mojave:        "b9c33b74a6363131e3e0e9ffc1e91a71a53433e470c78703726ccbd7e2050caa"
   end
 
   depends_on "protobuf"
