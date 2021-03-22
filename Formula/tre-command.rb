@@ -7,10 +7,10 @@ class TreCommand < Formula
   head "https://github.com/dduan/tre.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "83da54c1ec093bdcf15dcae90b2b43e13b2657e0b54a7b4223a8fb2b043d1c26"
-    sha256 cellar: :any_skip_relocation, big_sur:       "268c11fcd92b83f9e0d063d3874503185fc3781f12d03c2f4b37f47c4f8608ae"
-    sha256 cellar: :any_skip_relocation, catalina:      "68fb625fb0215e2c5922cef0bd1655987f1543ff9b602aba0f8a5ed05802d87f"
-    sha256 cellar: :any_skip_relocation, mojave:        "5d8d70e8cb16b59c6a6ad8361129dd432f31d5abbab2d6d97c11279330e1aebb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "13668b5bbeaf1145c86689c0b93e35113b6e2ac57746e8265a53e5949992c778"
+    sha256 cellar: :any_skip_relocation, big_sur:       "55bcd8b82d878b8ff7202d07dd5b5e8351a404aa2a689994a01b8e19307e5dd0"
+    sha256 cellar: :any_skip_relocation, catalina:      "3b20822d27a85e70deef6b1dcc1c3704de8f1e31cc6dbf231df106807c1d214c"
+    sha256 cellar: :any_skip_relocation, mojave:        "0fc2c04062fea68f557b07f128eb84c2c6bb6191e56674c0ff75ba653bbd09d7"
   end
 
   depends_on "rust" => :build
