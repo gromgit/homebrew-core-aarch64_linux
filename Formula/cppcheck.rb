@@ -1,8 +1,8 @@
 class Cppcheck < Formula
   desc "Static analysis of C and C++ code"
   homepage "https://sourceforge.net/projects/cppcheck/"
-  url "https://github.com/danmar/cppcheck/archive/2.3.tar.gz"
-  sha256 "3c622628ebf46f68909c7a96743b07b6207894a0772fbe802603732152ab1035"
+  url "https://github.com/danmar/cppcheck/archive/2.4.tar.gz"
+  sha256 "d1ac6a1eaf24f2f54df5a164c7e37d1e0624cc094a4622e226a73b53ede1eeb8"
   license "GPL-3.0-or-later"
   head "https://github.com/danmar/cppcheck.git"
 
