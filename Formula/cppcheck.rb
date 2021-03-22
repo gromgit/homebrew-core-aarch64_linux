@@ -7,10 +7,10 @@ class Cppcheck < Formula
   head "https://github.com/danmar/cppcheck.git"
 
   bottle do
-    sha256 arm64_big_sur: "48ddb6efdcb51f6bd829057f467e4b8cf99fabefe9be834a17fc0bcfc58ad9f9"
-    sha256 big_sur:       "d43b72a935d69d6a170289be18dc91677021ce79e3a9b3098d185e74f86a76ef"
-    sha256 catalina:      "e5e9dcaa609ee6d13d4a49597bde145f7264cf9ea18b9bd4f8b3bd6733c6f56f"
-    sha256 mojave:        "fc7ad924b5ab15d44cd6496d8fad5a5e1df639541bc04a67c9f68cd0ab909409"
+    sha256 arm64_big_sur: "f15d1c5b9ba3cb0a413a8f7d23182d0a81ddbb444d4d7dcb1ff940799965e32e"
+    sha256 big_sur:       "755d0e70d7541cbfea47ca5792499e3f140d3c7a0d2796430829210497057bed"
+    sha256 catalina:      "8f677e37fa53f6432cd763370375781986a6d97706d3a3c50561e465b70a0287"
+    sha256 mojave:        "316ad7e3082e78e9316b943c7adcce849cd02b0e0b0096e0ea8faf4b8eccf6aa"
   end
 
   depends_on "python@3.9" => :test
