@@ -7,7 +7,7 @@ class Phpbrew < Formula
 
   bottle :unneeded
 
-  depends_on "php"
+  uses_from_macos "php"
 
   def install
     chmod "+x", "phpbrew.phar"
