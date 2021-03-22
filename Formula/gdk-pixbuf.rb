@@ -6,10 +6,10 @@ class GdkPixbuf < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "f5ba72b880262c20ef7fd5fd21232662b0b9d76d40c51b1f574483b63b1fb886"
-    sha256 big_sur:       "30685ea260245bc1a4e6c5e3b1301f7b603e64c98a83386e1b71515787e1a130"
-    sha256 catalina:      "fe5c2b2bc7a942a6cab4d091be0c9f88703919cc75b6ec92d51ef0ed24ebcdbc"
-    sha256 mojave:        "a76668fe271e79d4a74ed56657130dda2012c4cf78e9d7e5c417f010ca35ad8c"
+    sha256 arm64_big_sur: "dde3cffcf21497db2473a1f916100a714e714cf59b802623d3e3917d9728a870"
+    sha256 big_sur:       "e322f11d0196713acd20b5bf4e14857de05a0cdd37499efc1cb4b6896b1c8026"
+    sha256 catalina:      "c465612de5e4ffec59a0d78f793d5a701fff51a35a2bb73fb1b18410a3433dfd"
+    sha256 mojave:        "2a37cb607621f83d20cd091723bdcd400040e5d3a726761b22a043699bd0b9aa"
   end
 
   depends_on "gobject-introspection" => :build
