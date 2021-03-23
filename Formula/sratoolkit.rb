@@ -7,9 +7,9 @@ class Sratoolkit < Formula
   head "https://github.com/ncbi/sra-tools.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "2e6ba6ca7df3d84b405aa1f2f8f198a30428ad7c8b4b0e4f17c9b90499851e94"
-    sha256 cellar: :any_skip_relocation, catalina: "4a0110b9f08743369503f72bbfcd24aec64f87a820e61ad75652f85ea058203d"
-    sha256 cellar: :any_skip_relocation, mojave:   "bf46b5e1ba3fb51cc2ef92dd6bc3a3b30946cf505fb3c5262b826e04c5a09604"
+    sha256 cellar: :any_skip_relocation, big_sur:  "87602a3b77c5d58a037bf2e93423e6cb925bd586fe424680035885894359aeb0"
+    sha256 cellar: :any_skip_relocation, catalina: "15a8306c7a3b550ee120a0eb6ab7c87e0e53a3f33549a0a0f3c5a218c6e75d13"
+    sha256 cellar: :any_skip_relocation, mojave:   "b9b36c564d65e79d3726e4de473e18d892f109221f45dbb91768ecac5758df59"
   end
 
   depends_on "hdf5"
