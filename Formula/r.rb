@@ -12,10 +12,10 @@ class R < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "0f8cacca9775b00c37c4dee0f9626aa7b922a42df2f1b498dfcbcddb0dbf3107"
-    sha256 big_sur:       "d38786d5b6073873d31f5633dc185b513d143b2e52760c8ebe1dd4b0add3a337"
-    sha256 catalina:      "5d71ef98748a84ef45e27cf08cca5bd908e0551f61a1120703c1e1c406d4fc1b"
-    sha256 mojave:        "327f9840ab1fe7793f87d598b5908d0ecb8cb573975af037de592a77c1fd8aac"
+    sha256 arm64_big_sur: "2b851c986d4ef3a025712d812600d4181f689615e9c30d2cafc77b0197f10c68"
+    sha256 big_sur:       "95fb57f520dfa8cee05e57d84ab43c0e792798dbf44a568a53494ba08a069f54"
+    sha256 catalina:      "56cfae8e38488d4a13f86698a7ecc3751587f19d16a295c66ade02ef6d347871"
+    sha256 mojave:        "4fc98cea9026fb700f5c9c19a31bc75528165cf7daf5b0c64612cd31f03a5e91"
   end
 
   depends_on "pkg-config" => :build
