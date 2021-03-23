@@ -1,8 +1,8 @@
 class Wangle < Formula
   desc "Modular, composable client/server abstractions framework"
   homepage "https://github.com/facebook/wangle"
-  url "https://github.com/facebook/wangle/releases/download/v2021.03.01.00/wangle-v2021.03.01.00.tar.gz"
-  sha256 "3314c0cf79325b48610dac805b9a161c48f11dfb5e31b6c50c3cb1612a1266b2"
+  url "https://github.com/facebook/wangle/releases/download/v2021.03.22.00/wangle-v2021.03.22.00.tar.gz"
+  sha256 "de7998c927c15f0859316b94596d2a17074e8b2b6843f2b402c859231cbc6ebe"
   license "Apache-2.0"
   head "https://github.com/facebook/wangle.git"
 
@@ -24,6 +24,8 @@ class Wangle < Formula
   depends_on "libevent"
   depends_on "libsodium"
   depends_on "lz4"
+  # https://github.com/facebook/folly/issues/1545
+  depends_on macos: :catalina
   depends_on "openssl@1.1"
   depends_on "snappy"
   depends_on "zstd"
