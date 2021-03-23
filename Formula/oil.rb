@@ -11,10 +11,10 @@ class Oil < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "efa230c838f08708379180132ebc6a4ef7ceb3f621b7976ec983826df621eea8"
-    sha256 big_sur:       "3c5a97efe79952d35796bd6bbe42da9c409a96cd30f0778c4b740775db3a59c1"
-    sha256 catalina:      "50a478f15af8bd3d5e04aa3ad7e76089f03b80cc2ad2d45f7dbe78797112df6c"
-    sha256 mojave:        "265b248b82d7a7c410ee0545c3fa210362f7616b97e5623975fe269c03ef3985"
+    sha256 arm64_big_sur: "e20b14abe68ed567c8c8dbcc56bf2bd9f603b4de00d05d48d0c4918a620b90fd"
+    sha256 big_sur:       "42218a5220582a34f86ff83050ca14c6b149f000c414e588140fffca340a3470"
+    sha256 catalina:      "ecadf5766ba0d9111fdd5e0e91151ae4d3ba7f8527b65e4c772a8a167f1f3fd0"
+    sha256 mojave:        "dd104737645bc99e0e024eca84a1b460de5d39a42a05fafffb5d8e6bd7041b1d"
   end
 
   depends_on "readline"
