@@ -6,10 +6,10 @@ class PyqtNetworkauth < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 arm64_big_sur: "e030e90dcfebb133cf2b63e68c2e5d3ac5e02a6bf92556f0635a75ed58743875"
-    sha256 big_sur:       "999d21309897cb785a202c58cc9d5a887265526218bdd996d214632b731b5706"
-    sha256 catalina:      "030504e723d97a3dd04a919a6b540c73f44fec280718518080a1efda222c0bb9"
-    sha256 mojave:        "95dfccb61e147d87c38cfe810ec56603ad2e105275c3d5d4eb181afef98c9a8c"
+    sha256 arm64_big_sur: "d198cfd91b4d84758fd496bdbd5b309c12f5f8951497faeee77d09899cb03ab4"
+    sha256 big_sur:       "9b407dccafe9653a51d1498c08b1346cc5c0287b9e53cf98f67cd8d13c5612e7"
+    sha256 catalina:      "b04e6105e03e14be91b363407cc7f7c882be07931c134cdac04ae537485f70b4"
+    sha256 mojave:        "e769cc30eab94ba9f78d1f820103b55c5060a169ec03c7f13c28b3aa51bceded"
   end
 
   depends_on "pyqt-builder" => :build
