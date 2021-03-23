@@ -9,10 +9,10 @@ class Auditbeat < Formula
   head "https://github.com/elastic/beats.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9870723f061237445a919c8247a0ce0094d7bea88fd51377fc710d7797e98433"
-    sha256 cellar: :any_skip_relocation, big_sur:       "cb67b5d882f1ee837951def344826ddd80876bd48fe7e285bdc5fc4a93485d7f"
-    sha256 cellar: :any_skip_relocation, catalina:      "113d7f2683c6b1562603a0f8573a08ba75f44d2059cc5ac87bcbd55f839d452b"
-    sha256 cellar: :any_skip_relocation, mojave:        "d39b684a038cf540578de2298c599109e838103030488f9411b279bdb448cb78"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "11ba0e238a5c9814a1ef09f8a85abcd0bdd2fa757a4480e370186f5cf96a75e3"
+    sha256 cellar: :any_skip_relocation, big_sur:       "1604153de8345144d61b9ee2693a10406e27a7cdadbe4ca5dc63f2e899de8fa1"
+    sha256 cellar: :any_skip_relocation, catalina:      "86c2a087584d402582c3e14268d5b2efbaba4a4273342da9f57d132edc803322"
+    sha256 cellar: :any_skip_relocation, mojave:        "d050139a503acee57dcfb323d2716b0b842de19f0164385af2d7b02b8872be37"
   end
 
   depends_on "go" => :build
