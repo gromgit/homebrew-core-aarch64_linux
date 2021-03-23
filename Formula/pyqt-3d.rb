@@ -1,8 +1,8 @@
 class Pyqt3d < Formula
   desc "Python bindings for The Qt Company’s Qt 3D framework"
   homepage "https://www.riverbankcomputing.com/software/pyqt3d/"
-  url "https://files.pythonhosted.org/packages/98/f7/74014643c22166277ca46056afb262828a1fbc88933c20a3bb5dca393641/PyQt6_3D-6.0.2.tar.gz"
-  sha256 "fb797dda5571e169edf60a0fd1443fac0907fb1f147339dbfdcd4a671106a876"
+  url "https://files.pythonhosted.org/packages/86/a8/91f76584146250da04d9f2c33355a119279928ed8cfc04a8b1baf9c2c667/PyQt6_3D-6.0.3.tar.gz"
+  sha256 "6981d25d7fe850a036d75c0fb1eb58331d7e1c51eda305b40081d1d2c4db0e82"
   license "GPL-3.0-only"
 
   bottle do
@@ -23,10 +23,13 @@ class Pyqt3d < Formula
     pyqt = Formula["pyqt"]
     xy = Language::Python.major_minor_version Formula["python@3.9"].opt_bin/"python3"
 
-    inreplace "pyproject.toml", "[tool.sip.project]", <<~EOS
-      [tool.sip.project]
-      sip-include-dirs = ["#{pyqt.opt_lib}/python#{xy}/site-packages/PyQt#{pyqt.version.major}/bindings"]
-    EOS
+    open("pyproject.toml", "a") do |f|
+      f.puts <<~EOS
+        [tool.sip.project]
+        sip-include-dirs = ["#{pyqt.opt_lib}/python#{xy}/site-packages/PyQt#{pyqt.version.major}/bindings"]
+      EOS
+    end
+
     system "sip-install", "--target-dir", prefix
     (lib/"python#{xy}/site-packages").install %W[#{prefix}/PyQt#{pyqt.version.major} #{prefix}/PyQt#{pyqt.version.major}_3D-#{version}.dist-info]
   end
