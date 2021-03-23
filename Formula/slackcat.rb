@@ -6,11 +6,10 @@ class Slackcat < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f9a013fef9bfc12b384cee438b7d6fed60eda90b5d047b2cd574661ae7ee6b73"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d23ba4edd9c5a4009eab83933837add4ed2623016d5380d32509ba2a88ade346"
-    sha256 cellar: :any_skip_relocation, catalina:      "c2aeed6d82c38d56f4f1875db98543d06b225568c0c619d63ebac1885092b033"
-    sha256 cellar: :any_skip_relocation, mojave:        "10da5931d1023b2c34b82c96bbd059edacf8986f7d47dcbc60097ecbf765e429"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "573b9dc9cab32f434893b448785d50e3d91e6db1ea9a6366b3a36717ce5b2bc4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e1d26c211de44c839088eb8e20ad1b52d80582b7f4c51f72dec6a010550c6887"
+    sha256 cellar: :any_skip_relocation, catalina:      "eefe126445524877fc420ca4b0b02f81279f80f7fc96d9eb35950fc69c2ca1db"
+    sha256 cellar: :any_skip_relocation, mojave:        "01c1b98eb844950c4df1140ea7b4ed1e0e53ee742bb8e1d7675435350dbe056f"
   end
 
   depends_on "go" => :build
