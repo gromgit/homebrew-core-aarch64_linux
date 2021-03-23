@@ -8,10 +8,10 @@ class AnsibleLint < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "7474171d15adac679c56c3f2e770ab2194f1efc4e501ae5777fbe7ef65745a47"
-    sha256 cellar: :any, big_sur:       "215686b16f7273d5676743702b9d473de155ad3c59964ef04423ced7feb93c5f"
-    sha256 cellar: :any, catalina:      "096181b53d26cab2d4f125792bfee4874eb2a891cdd5c97ba8240bd0600a20af"
-    sha256 cellar: :any, mojave:        "0b4989fcff9bba4587bb2e304d3a54a0d79b7cb7cee29c945495667618532257"
+    sha256 cellar: :any, arm64_big_sur: "8e59d5789d7ec5f8cca79a1f7dbad1a297815d41ed5d376f639add67e44bcd09"
+    sha256 cellar: :any, big_sur:       "f032e1d8a3624b898c3b77015662a60ae504011be85c3fb510cf7e97e35b0fd5"
+    sha256 cellar: :any, catalina:      "4444e0b0d293799f91c287730720313c9090b0bbc08214d7b194ed8f58fb0012"
+    sha256 cellar: :any, mojave:        "7d7e4320dda2dab23b7d42b9f1a4ca76b5e14c91869ff544458f9f37124ed008"
   end
 
   depends_on "pkg-config" => :build
