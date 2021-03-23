@@ -1,10 +1,10 @@
 class Enzyme < Formula
   desc "High-performance automatic differentiation of LLVM"
   homepage "https://enzyme.mit.edu"
-  url "https://github.com/wsmoses/Enzyme/archive/v0.0.8.tar.gz"
-  sha256 "96349054789cca84a6f94e8d4c4a9a0f7f4677f31ccceed1cd5bfda9e07ed2b7"
+  url "https://github.com/wsmoses/Enzyme/archive/v0.0.9.tar.gz"
+  sha256 "c6f906747f1d32f92c70f6f9e0b8d94f38fc43fdb8633db09281b360b97a1421"
   license "Apache-2.0" => { with: "LLVM-exception" }
-  head "https://github.com/wsmoses/Enzyme.git"
+  head "https://github.com/wsmoses/Enzyme.git", branch: "main"
 
   bottle do
     sha256 arm64_big_sur: "ef9431ee270b73cbbd721a7993474ca8dbc49d1cf36c84db53bd6add983ed324"
