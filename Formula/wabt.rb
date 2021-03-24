@@ -12,10 +12,10 @@ class Wabt < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7929c1f87382bdd1c8916ce884316f2f66c019066e372ff8b3ddc2635f2b80e8"
-    sha256 cellar: :any_skip_relocation, big_sur:       "71f8e4e4ec0571b7f4186a639513dc9a7fdd3980c55ebbe7e26dd8702e9d6069"
-    sha256 cellar: :any_skip_relocation, catalina:      "b33133931248f3e603e39e5f195a662a2a3d413b49b0e23d4287e5297e87d21e"
-    sha256 cellar: :any_skip_relocation, mojave:        "247e80525e30121e4fbcfa7431f7f50166456ce147e67e0e45ee5a1d73e66f12"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1b087005390228a32cec6a572e977baa497a16a6316d2064f6319a406e8aba9e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "12a054364d20466125b3a44837e61cea381e338ab52f39fec39fd1620821aa4d"
+    sha256 cellar: :any_skip_relocation, catalina:      "194483f64d7cbc55867fe2a28a212b68d178ef54ee71f3aed821f3fed4ec2f6c"
+    sha256 cellar: :any_skip_relocation, mojave:        "3357aeea2079d849c26feaef863a5ffa527aa2c054cf813ad25d6afc116cf118"
   end
 
   depends_on "cmake" => :build
