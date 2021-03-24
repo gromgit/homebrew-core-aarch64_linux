@@ -17,10 +17,10 @@ class Hcxtools < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "7203d4127bf7bffe5ef0ce0ac53bf06ef4d3d46f5acad23eb084268a1fd68df1"
-    sha256 cellar: :any, big_sur:       "99013be82236937ee4f100fc0e52b19d45a6e2c15952e116fcf1394873b8af9d"
-    sha256 cellar: :any, catalina:      "d8f6de053a88b742ac743f88d8f22f49e4f01fe6ea3f3be2fa235b2db80cd38f"
-    sha256 cellar: :any, mojave:        "57d98cd8c5744413822fd26bd3445c076a22c24a664451a2b64d413e8a2a5ca5"
+    sha256 cellar: :any, arm64_big_sur: "7562b2f0cef1710c74d5e0fadfa3c1af96ae9efb377047ddfdb12458d1e6fbdd"
+    sha256 cellar: :any, big_sur:       "0c554af41156ff6960244494343c41a5847cd25eaeb503029220b4bb5e29fcc6"
+    sha256 cellar: :any, catalina:      "31d5436dd03434c52eb41d9624ef83f16fbdb17067d801d9f04c7f86928d258b"
+    sha256 cellar: :any, mojave:        "30d1a53db076b0bd9056e5daf2eebde64f97c977fa31de06461dfcaa04e4407b"
   end
 
   depends_on "pkg-config" => :build
