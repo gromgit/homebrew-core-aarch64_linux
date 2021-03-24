@@ -7,10 +7,10 @@ class Miller < Formula
   head "https://github.com/johnkerl/miller.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ad86c3dd3e1776c793a9b7365644f76822cc744f47883368f5a20d29f75cd366"
-    sha256 cellar: :any_skip_relocation, big_sur:       "20d101c9cc9a042e5e26f7d64716329fea37bf5a4c59b7ab4fdc3d83b391ec9f"
-    sha256 cellar: :any_skip_relocation, catalina:      "f204a76fc153915c89916ba5e137a759120d5983798734970d7e0951949a2909"
-    sha256 cellar: :any_skip_relocation, mojave:        "cad85f31fc5fd2107246a7bbbf03670b189734c4d8040a3455b9224e69be34b3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "43dbaa91eb0f047f2189f6108860b7fcf572315186e21ad3f32e753ed9826969"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f6a4e253c2f653c0d988aca0a2ed81cf8b8e2ce4040cc43a27582759ba8759f6"
+    sha256 cellar: :any_skip_relocation, catalina:      "5538dc76e119ce1507806b67eaa7612af4c68a9a491257a10844545ee2d5a669"
+    sha256 cellar: :any_skip_relocation, mojave:        "c04494a29315e246aaa9a553eff17ee4ab4e83a1dfe9a46995ea6e0eebc1221a"
   end
 
   depends_on "autoconf" => :build
