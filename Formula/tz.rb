@@ -6,6 +6,13 @@ class Tz < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/oz/tz.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3b53e889b310602a755fab23839c9134c994ee02ea118df21fb81040a520d50d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a882631f9882b6c00f7882f19cbfb1fbb9fead69338b00be57a99a739eb14d6e"
+    sha256 cellar: :any_skip_relocation, catalina:      "9fb0b941d372b44767aa8751effeb114a05b5a77b59898a66e57cc6edf19ec1f"
+    sha256 cellar: :any_skip_relocation, mojave:        "390307fc57faca9a2b4caea72fefc55d1ae5e332cc880434d67be95e0ca4b6b5"
+  end
+
   depends_on "go" => :build
 
   def install
