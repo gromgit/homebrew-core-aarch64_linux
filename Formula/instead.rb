@@ -1,8 +1,8 @@
 class Instead < Formula
   desc "Interpreter of simple text adventures"
   homepage "https://instead.syscall.ru/"
-  url "https://github.com/instead-hub/instead/archive/3.3.3.tar.gz"
-  sha256 "1425c559ab91c8ec3e02ad74f6989a4408ee7141d69361d17aeff174d194fe57"
+  url "https://github.com/instead-hub/instead/archive/3.3.4.tar.gz"
+  sha256 "6577235e42a22d8f7f628fedc998d718e65da9e1a3cb61f09be6d1cd648fc061"
   license "MIT"
 
   bottle do
@@ -27,7 +27,7 @@ class Instead < Formula
       system "cmake", "..", "-DWITH_GTK2=OFF",
                             "-DWITH_LUAJIT=ON",
                             "-DLUA_INCLUDE_DIR=#{luajit.opt_include}/luajit-2.1",
-                            "-DLUA_LIBRARY=#{luajit.opt_lib}/libluajit.dylib",
+                            "-DLUA_LIBRARY=#{luajit.opt_lib}/#{shared_library("libluajit")}",
                             *std_cmake_args
       system "make", "install"
     end
