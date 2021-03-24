@@ -6,9 +6,9 @@ class Hadolint < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "b1c8f84a503573878f54555eb078267fca55f264fda86623ced0978d802ea9f9"
-    sha256 cellar: :any_skip_relocation, catalina: "5e7a1bedb379a03f47feac56d9e618a92c2d7127c93d6f2c19fa3241ab8c438c"
-    sha256 cellar: :any_skip_relocation, mojave:   "aa26d65c5fec4c688e6f313e0179547b2f0d96b289b28dbd7134a02d5ca33ba5"
+    sha256 cellar: :any_skip_relocation, big_sur:  "3c6cc1fb4733be6d6a326dd08609c1afa65cda5bff6117f2b28574e4ca724f2e"
+    sha256 cellar: :any_skip_relocation, catalina: "e6c611ce654ab63465cd87a52583ce8e2478e861ce06bf563ac1a05ca1581f69"
+    sha256 cellar: :any_skip_relocation, mojave:   "e7db9635f6fcd06fefed2a51ca4b67b8b0826c0d1af14e4bce7fbe90c90c1bf5"
   end
 
   depends_on "ghc" => :build
