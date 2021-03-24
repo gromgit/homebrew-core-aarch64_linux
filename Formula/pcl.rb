@@ -13,11 +13,10 @@ class Pcl < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 arm64_big_sur: "1c063e5e8337be6c1f6f5ae157d667c35975f71f6fae04a442b8e744d3107d32"
-    sha256 big_sur:       "28d8084197443d83e2c645397f1ac02424a23a796d43c83818fc776504c5ff7e"
-    sha256 catalina:      "6fd5dffa364e69965ddc84b2567a9b5652c88f2fb9014f6a3bbc1d8fb612f089"
-    sha256 mojave:        "53a69083aa676db47ad798d9d519f6c7db2fd85e6eed02c463add06a7c0485ea"
+    sha256 arm64_big_sur: "198a4310035fb316ad2519391327ca0788e5961103bf95c37c2e8a662a7f20f9"
+    sha256 big_sur:       "0151798b4a13ab326f3df30d454cdc34a430760fee942e93672e5e7ea3678735"
+    sha256 catalina:      "8b8eb46953987960629d6a2241f356891a7f069ab088637ab31b3519c2cfc485"
+    sha256 mojave:        "0917ef7fd1deed11b1ded50a8324eb787dad309c734812d774f049cb4e6e52fc"
   end
 
   head do
