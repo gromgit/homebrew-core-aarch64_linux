@@ -7,6 +7,13 @@ class Orgalorg < Formula
   license "MIT"
   head "https://github.com/reconquest/orgalorg.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "eb6b1f905b621322ab83f1517ac65c88e34de880c66049829faea18bd228128a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ec490bdeb7b6dddc4d38abb305b768c5b84ea4ec4af13765cb08a4f1476e20dc"
+    sha256 cellar: :any_skip_relocation, catalina:      "6c835354a9fcffa0207c4826f40dacc0cead942e1a364c70a632008803ab2201"
+    sha256 cellar: :any_skip_relocation, mojave:        "fe684a04e1e0b0344d1268e68a7cca2af12ea6fdb633dd44524f8eef6a4800ad"
+  end
+
   depends_on "go" => :build
 
   def install
