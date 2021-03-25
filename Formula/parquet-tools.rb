@@ -2,10 +2,9 @@ class ParquetTools < Formula
   desc "Apache Parquet command-line tools and utilities"
   homepage "https://parquet.apache.org/"
   url "https://github.com/apache/parquet-mr.git",
-      tag:      "apache-parquet-1.11.1",
-      revision: "765bd5cd7fdef2af1cecd0755000694b992bfadd"
+      tag:      "apache-parquet-1.12.0",
+      revision: "db75a6815f2ba1d1ee89d1a90aeb296f1f3a8f20"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/apache/parquet-mr.git"
 
   bottle do
@@ -26,27 +25,16 @@ class ParquetTools < Formula
     sha256 "5caf572cb0df5ce9d6893609de82d2369b42c3c81c611847b6f921d912040118"
   end
 
-  # based on https://github.com/apache/parquet-mr/pull/809
-  patch do
-    url "https://github.com/apache/parquet-mr/commit/b6d07ae0744ba47aa9a8868ef2d7cbb232a60b22.patch?full_index=1"
-    sha256 "200999012f743454cd525572bf848cd48b26051916a2d468474823a0aa2ccf61"
-  end
-
   def install
-    # Mimic changes from https://github.com/apache/parquet-mr/pull/826
-    # See https://issues.apache.org/jira/browse/PARQUET-1923
-    inreplace "pom.xml", "<hadoop.version>2.7.3</hadoop.version>", "<hadoop.version>2.10.1</hadoop.version>"
-
-    cd "parquet-tools" do
-      system "mvn", "clean", "package", "-Plocal"
-      libexec.install "target/parquet-tools-#{version}.jar"
-      bin.write_jar_script libexec/"parquet-tools-#{version}.jar", "parquet-tools"
+    cd "parquet-tools-deprecated" do
+      system "mvn", "clean", "package", "-Plocal", "-DskipTests=true"
+      libexec.install "target/parquet-tools-deprecated-#{version}.jar"
+      bin.write_jar_script libexec/"parquet-tools-deprecated-#{version}.jar", "parquet-tools"
     end
   end
 
   test do
-    resource("test-parquet").stage(testpath)
-    system "#{bin}/parquet-tools", "cat", testpath/"homebrew.parquet"
+    resource("test-parquet").stage testpath
 
     output = shell_output("#{bin}/parquet-tools cat #{testpath}/homebrew.parquet")
     assert_match "values = Homebrew", output
