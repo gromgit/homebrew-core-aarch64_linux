@@ -4,7 +4,7 @@ class Tz < Formula
   url "https://github.com/oz/tz/archive/refs/tags/v0.4.tar.gz"
   sha256 "79764c29b66c2d5a158967e58ae0ca413f1af590b63920016ad7f0767f8c8494"
   license "GPL-3.0-or-later"
-  head "https://github.com/oz/tz.git"
+  head "https://github.com/oz/tz.git", branch: "main"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "3b53e889b310602a755fab23839c9134c994ee02ea118df21fb81040a520d50d"
@@ -20,10 +20,10 @@ class Tz < Formula
   end
 
   test do
-    # If https://github.com/oz/tz/issues/9 is fixed we can test this more
-    # directly; right now it only runs in interactive mode.  Also bubbletea
-    # apps don't respond well to PTY.spawn (or driving them under expect)
-    # so not much gets printed.  Just make sure we get some ANSI out of it.
+    # Bubbletea-based apps are hard to test even under PTY.spawn (or via
+    # expect) because they rely on vt100-like answerback support, such as
+    # "<ESC>[6n" to report the cursor position.  For now we just run
+    # the command for a second and see that it tried to send some ANSI out of it.
     require "pty"
     r, _, pid = PTY.spawn "#{bin}/tz"
     sleep 1
