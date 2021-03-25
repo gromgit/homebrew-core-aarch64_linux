@@ -1,9 +1,9 @@
 class Mavsdk < Formula
-  desc "API and library for MAVLink compatible systems written in C++11"
+  desc "API and library for MAVLink compatible systems written in C++17"
   homepage "https://mavsdk.mavlink.io"
   url "https://github.com/mavlink/MAVSDK.git",
-      tag:      "v0.35.0",
-      revision: "0a556e5bf418937dceef9c45a2ba75f2d36f62fe"
+      tag:      "v0.38.0",
+      revision: "9126237b1f354e1b45426541d881407c2707328f"
   license "BSD-3-Clause"
 
   livecheck do
@@ -18,12 +18,40 @@ class Mavsdk < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "abseil"
+  depends_on "c-ares"
+  depends_on "curl"
+  depends_on "grpc"
+  depends_on "jsoncpp"
+  depends_on macos: :catalina # Mojave libc++ is too old
+  depends_on "openssl@1.1"
+  depends_on "protobuf"
+  depends_on "re2"
+  depends_on "tinyxml2"
+
+  uses_from_macos "zlib"
+
+  # Fix build error on Catalina
+  # error: use of undeclared identifier 'MSG_NOSIGNAL'
+  # Remove when the following PR has landed in a release:
+  # https://github.com/mavlink/MAVSDK/pull/1382
+  patch do
+    url "https://github.com/mavlink/MAVSDK/commit/43f8713d3793955d6fe4793592e81b5a1f998439.patch?full_index=1"
+    sha256 "6219405c44c7c78ab843734afa1ab708d96a376c49708f3cbf686f7edb5f46c3"
+  end
 
   def install
+    # Source build adapted from
+    # https://mavsdk.mavlink.io/develop/en/contributing/build.html
     system "cmake", *std_cmake_args,
                     "-Bbuild/default",
-                    "-DBUILD_BACKEND=ON",
+                    "-DSUPERBUILD=OFF",
+                    "-DBUILD_SHARED_LIBS=ON",
+                    "-DBUILD_MAVSDK_SERVER=ON",
+                    "-DBUILD_TESTS=OFF",
+                    "-DCMAKE_INSTALL_RPATH=#{lib}",
                     "-H."
+    system "cmake", "--build", "build/default"
     system "cmake", "--build", "build/default", "--target", "install"
   end
 
@@ -39,14 +67,14 @@ class Mavsdk < Formula
           return 0;
       }
     EOS
-    system ENV.cxx, "-std=c++11", testpath/"test.cpp", "-o", "test",
+    system ENV.cxx, "-std=c++17", testpath/"test.cpp", "-o", "test",
                   "-I#{include}/mavsdk",
                   "-L#{lib}",
                   "-lmavsdk",
                   "-lmavsdk_info"
     system "./test"
 
-    assert_equal "Usage: backend_bin [-h | --help]",
+    assert_equal "Usage: #{bin}/mavsdk_server [-h | --help]",
                  shell_output("#{bin}/mavsdk_server --help").split("\n").first
   end
 end
