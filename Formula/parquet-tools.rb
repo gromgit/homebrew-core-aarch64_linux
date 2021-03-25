@@ -8,11 +8,10 @@ class ParquetTools < Formula
   head "https://github.com/apache/parquet-mr.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d9b85d31e4b7d62fe66178eb6e1c16f1ef21672cdefee382492eee1a30cc5934"
-    sha256 cellar: :any_skip_relocation, big_sur:       "1c92af57c5d3e5df830feb8143737a6bddbe986169a80b6457fbd725c7509d06"
-    sha256 cellar: :any_skip_relocation, catalina:      "9a8d696b41cd9b0c06a79aefeab6f1c8dd3124dec409390563adc2a2976e3a9b"
-    sha256 cellar: :any_skip_relocation, mojave:        "90f8b4dc30bb841afe9a1e1654d95a4e7fe6fd3338196ea7c82e503c8a88b1d8"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "3fba4dc621d0ddb6e8cb648dba43398d98e37e0f954130353f368b6f849e6f06"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "72bdfcf0a71023b65def0a02b1b581ba7a9b228ea5a1594923fddb2d1eb098d6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c84021c2e6e9475380715420dec0edc741c59edb525e197a1c355fd3679187e6"
+    sha256 cellar: :any_skip_relocation, catalina:      "0bb7bd347b698537ef9b8690648aa6b13c328fd3c60eec5c6614b94c8d770835"
+    sha256 cellar: :any_skip_relocation, mojave:        "17e6ad97c0d0fcab7989305eabd2b853cdc694f059f29d36cda5d94422de4e33"
   end
 
   depends_on "maven" => :build
