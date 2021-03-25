@@ -9,10 +9,10 @@ class Streamlink < Formula
   head "https://github.com/streamlink/streamlink.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a8526e84f9253b832e0d492ea06753154158280368300fbfea09c3c56cacb434"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0778ce009052e9794cb2358311d581838263f1428ee1b9fe4d7d57b622eaf799"
-    sha256 cellar: :any_skip_relocation, catalina:      "e9dd952122b054f853723125d2e1f709eceabdb7c372df10a53acaadff3b2850"
-    sha256 cellar: :any_skip_relocation, mojave:        "9d28758a0128d507c6ef7b0c00ead0a7fa3b8b7b875db18b65838bf856101bd2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "34490553a64507813bfe99f63cc131bd1ec77f6cc749e17c6018e20d59a640da"
+    sha256 cellar: :any_skip_relocation, big_sur:       "8080b7207dfc83bbbee4b1a838c85b8c54ddccb0d216b01c71cf78fed54e78ca"
+    sha256 cellar: :any_skip_relocation, catalina:      "c2a92e7c8f46ab22539720815a0d56f80859644e0d3e9c35fb517834eb427c03"
+    sha256 cellar: :any_skip_relocation, mojave:        "7e6001675b7bf52099e8bc56d9f76c50cb2487486fea4826742dbf57c90eece5"
   end
 
   depends_on "python@3.9"
