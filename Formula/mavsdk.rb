@@ -12,9 +12,9 @@ class Mavsdk < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:  "16e3e80a65b84f409ee3631881277e8a5a471a114b3d678a57cb54dcf1d94e0e"
-    sha256 cellar: :any, catalina: "d5da90b3f15d68022aa5e2b10f834017691cee5670da5bdd70d9a8d8bbb26423"
-    sha256 cellar: :any, mojave:   "6ba8c322043d8c6110b85f7b98bc5f9dcbc48e7e1796ff0640f37c667d700036"
+    sha256 arm64_big_sur: "d7eebb0410419df45f444d1f82b1e865134d130d1edc65303ab49c5d89898a38"
+    sha256 big_sur:       "b562750790c3fdeebe9efc8f1e58bb59246815b7de7390bcb9d3f1ca03c3b10d"
+    sha256 catalina:      "398ec74acdd09c6afe120912a9971af0f7d708431a192ad430330fce756c9c32"
   end
 
   depends_on "cmake" => :build
