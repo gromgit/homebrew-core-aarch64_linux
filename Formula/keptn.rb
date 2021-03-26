@@ -1,8 +1,8 @@
 class Keptn < Formula
   desc "Is the CLI for keptn.sh a message-driven control-plane for application delivery"
   homepage "https://keptn.sh"
-  url "https://github.com/keptn/keptn/archive/0.8.0.tar.gz"
-  sha256 "91fb9dee635f446c8a3adf8cb1cf1a3c80ade96230a4e994247aed42f176f489"
+  url "https://github.com/keptn/keptn/archive/0.8.1.tar.gz"
+  sha256 "d64a39bfad897d8e3016b66768dc7650132028fa9d30abeccadd0f96eaa8e140"
   license "Apache-2.0"
 
   bottle do
@@ -37,7 +37,7 @@ class Keptn < Formula
       Timeout.timeout(5) do
         assert_match "Warning: could not open KUBECONFIG file", r.gets.chomp
         Process.wait pid
-        assert_equal 0, $CHILD_STATUS.exitstatus
+        assert_equal 1, $CHILD_STATUS.exitstatus
       end
     rescue Timeout::Error
       puts "process not finished in time, killing it"
