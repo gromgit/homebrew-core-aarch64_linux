@@ -11,10 +11,10 @@ class Haproxy < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "4e5685fc07ff9b71ff5b4b7e508df05d93e9aa68d7b2a89648de18db6f02603a"
-    sha256 cellar: :any, big_sur:       "cf39ccab107014fee5c4320580787a78f4aac35af273ce5f28c79d3bdeb9cf7e"
-    sha256 cellar: :any, catalina:      "bb24a0972b9987d8e71cf8018fbfcfa19eb9d32d5aa891371ec7c0952af83252"
-    sha256 cellar: :any, mojave:        "093bd702b26a0df5a9958d97b8e8857985c1e88c84724f2c00deea563e9a1863"
+    sha256 cellar: :any, arm64_big_sur: "f3dfc1b11675562422d4984e758d76ba82a0924480c2a89ffe4a1997d82a142a"
+    sha256 cellar: :any, big_sur:       "c8dc51619206f4d514b4db4a45a16a9b9671bccd5552dbf113b4fc064f5b5ddf"
+    sha256 cellar: :any, catalina:      "053ec0872fe76063dc2c41fddf440a1dca40ffeb875bafd226b81ae6ed26d20f"
+    sha256 cellar: :any, mojave:        "4b0e9fd292cb816311ed3e42aafedc6b890d643b90847457e77edd1383dcaec5"
   end
 
   depends_on "openssl@1.1"
