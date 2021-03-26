@@ -271,6 +271,7 @@ class Salt < Formula
   end
 
   test do
-    assert_match "abababa", shell_output("#{bin}/salt-call --local test.version")
+    mkdir testpath/"etc"
+    assert_match "abababa", shell_output("#{bin}/salt-call --local --config-dir=#{testpath}/etc --log-file=/dev/null test.version")
   end
 end
