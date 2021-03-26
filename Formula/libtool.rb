@@ -8,11 +8,10 @@ class Libtool < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "c4f95f52617ef0d9a6ec19b5c581241be4593497cd120e42621f55b0ae9548b6"
-    sha256 cellar: :any, big_sur:       "b5dba5a59ae66f42b012998e08edbeaed9e2456c0d1670307b8f46be5ef3b9fa"
-    sha256 cellar: :any, catalina:      "af317b35d0a394b7ef55fba4950735b0392d9f31bececebf9c412261c23a01fc"
-    sha256 cellar: :any, mojave:        "77ca68934e7ed9b9b0b8ce17618d7f08fc5d5a95d7b845622bf57345ffb1c0d6"
-    sha256 cellar: :any, high_sierra:   "60c7d86f9364e166846f8d3fb2ba969e6ca157e7ecbbb42a1de259116618c2ba"
+    sha256 cellar: :any, arm64_big_sur: "904c534919bf6dc14fb561dc56012b44af838f8c21fa4e948ff7a7a773b11f20"
+    sha256 cellar: :any, big_sur:       "a70ed5b9d74ec3b06bfc202ab36491c3ecd3da4ff2b602478675ba0c533aa466"
+    sha256 cellar: :any, catalina:      "9e4b12c13734a5f1b72dfd48aa71faa8fd81bbf2d16af90d1922556206caecc3"
+    sha256 cellar: :any, mojave:        "0aa094832dfcc51aadc22056ebf72af91144cb69369043fc6ccc6a052df577aa"
   end
 
   depends_on "m4"
