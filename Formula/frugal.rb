@@ -6,10 +6,10 @@ class Frugal < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2fa597a3769988ab6a79b4fcd9b48c31c4bec93545415d08bb453a8eff981b6f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5d53d24d102c398bc0fc5b226d9c8284d84482bbe8ef6963a7a112832b1013db"
-    sha256 cellar: :any_skip_relocation, catalina:      "f4f07cafd63a7ca49b9a19124b4da8ed882306b0654452dbf1f427a8264ff136"
-    sha256 cellar: :any_skip_relocation, mojave:        "a527e0a1ba3c50214fd09a0de4eaa09290620ab6f3d460ed4b35a2840f572404"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ac5149308798a4a55d01818373525d46ccd996c301ea7329a670e983350ee5d6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ae388f2aef1545924508d4e59adbfe3e86e4c1ad40fc016020273b8cbea5825a"
+    sha256 cellar: :any_skip_relocation, catalina:      "8317d00269934a4ba7e233826000b3b6bdc6b05e34fe7aebc8c35491c42e182d"
+    sha256 cellar: :any_skip_relocation, mojave:        "5f1baf3635e5bbfdb71d31717799a0c1afc6f4e1cfc77d7ab6f3370bc2419ed7"
   end
 
   depends_on "go" => :build
