@@ -27,7 +27,7 @@ class Salt < Formula
     depends_on "pkg-config" => :build
   end
 
-  # Homebrew installs optional dependencies: M2Crypto, pygit2
+  # Homebrew installs optional dependencies: pycryptodome, pygit2
   #
   # Plase do not add PyObjC (pyobjc* resources) since it causes broken linkage
   # https://github.com/Homebrew/homebrew-core/pull/52835#issuecomment-617502578
@@ -271,7 +271,11 @@ class Salt < Formula
   end
 
   test do
-    mkdir testpath/"etc"
-    assert_match "abababa", shell_output("#{bin}/salt-call --local --config-dir=#{testpath}/etc --log-file=/dev/null test.version")
+    output = shell_output("#{bin}/salt-call --local --config-dir=#{testpath} --log-file=/dev/null test.versions")
+    assert_match "Salt: #{version}", output
+    assert_match "Python: #{Formula["python@3.9"].version}", output
+    assert_match "ZMQ: #{Formula["zeromq"].version}", output
+    assert_match "libgit2: #{Formula["libgit2"].version}", output
+    assert_match "M2Crypto: Not Installed", output
   end
 end
