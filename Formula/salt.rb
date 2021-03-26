@@ -2,7 +2,7 @@ class Salt < Formula
   include Language::Python::Virtualenv
 
   desc "Dynamic infrastructure communication bus"
-  homepage "https://s.saltstack.com/community/"
+  homepage "https://saltproject.io/"
   url "https://files.pythonhosted.org/packages/c7/5d/5e4913197397fe0a8da43a93afa0981dda72c016710deb458d5c0e963c77/salt-3002.6.tar.gz"
   sha256 "ffc478569363e1d17b6a3a0c421eaae9c079bbeabc4c7725a222d0fbf903a0a5"
   license "Apache-2.0"
@@ -271,10 +271,9 @@ class Salt < Formula
   end
 
   test do
-    output = shell_output("#{bin}/salt-call --local --config-dir=#{testpath} --log-file=/dev/null test.versions")
+    output = shell_output("#{bin}/salt --config-dir=#{testpath} --log-file=/dev/null --versions")
     assert_match "Salt: #{version}", output
     assert_match "Python: #{Formula["python@3.9"].version}", output
-    assert_match "ZMQ: #{Formula["zeromq"].version}", output
     assert_match "libgit2: #{Formula["libgit2"].version}", output
     assert_match "M2Crypto: Not Installed", output
   end
