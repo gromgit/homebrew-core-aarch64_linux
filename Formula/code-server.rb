@@ -1,8 +1,8 @@
 class CodeServer < Formula
   desc "Access VS Code through the browser"
   homepage "https://github.com/cdr/code-server"
-  url "https://registry.npmjs.org/code-server/-/code-server-3.9.1.tgz"
-  sha256 "cfd8c6d7ed646fb7efe18a889757352a1271e25749df3519ed51f7c3988f0d3f"
+  url "https://registry.npmjs.org/code-server/-/code-server-3.9.2.tgz"
+  sha256 "73bec476696540fc729bd10f0d7cb991e4a0119fdce240b82cb354a928d2acc6"
   license "MIT"
 
   bottle do
@@ -14,7 +14,7 @@ class CodeServer < Formula
 
   depends_on "python@3.9" => :build
   depends_on "yarn" => :build
-  depends_on "node"
+  depends_on "node@14"
 
   on_linux do
     depends_on "pkg-config" => :build
@@ -24,9 +24,10 @@ class CodeServer < Formula
   end
 
   def install
+    node = Formula["node@14"]
     system "yarn", "--production", "--frozen-lockfile"
     libexec.install Dir["*"]
-    env = { PATH: "#{HOMEBREW_PREFIX}/opt/node/bin:$PATH" }
+    env = { PATH: "#{node.opt_bin}:$PATH" }
     (bin/"code-server").write_env_script "#{libexec}/out/node/entry.js", env
   end
 
@@ -66,9 +67,9 @@ class CodeServer < Formula
   end
 
   test do
-    # See https://github.com/cdr/code-server/blob/master/ci/build/test-standalone-release.sh
-    system bin/"code-server", "--extensions-dir=.", "--install-extension", "ms-python.python"
-    assert_match "ms-python.python",
-      shell_output("#{bin/"code-server"} --extensions-dir=. --list-extensions")
+    # See https://github.com/cdr/code-server/blob/main/ci/build/test-standalone-release.sh
+    system bin/"code-server", "--extensions-dir=.", "--install-extension", "wesbos.theme-cobalt2"
+    assert_match "wesbos.theme-cobalt2",
+      shell_output("#{bin}/code-server --extensions-dir=. --list-extensions")
   end
 end
