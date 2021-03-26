@@ -2,8 +2,8 @@ class Mavsdk < Formula
   desc "API and library for MAVLink compatible systems written in C++17"
   homepage "https://mavsdk.mavlink.io"
   url "https://github.com/mavlink/MAVSDK.git",
-      tag:      "v0.38.0",
-      revision: "9126237b1f354e1b45426541d881407c2707328f"
+      tag:      "v0.38.2",
+      revision: "be7640a45f956ea715f830b502ba172b951989c4"
   license "BSD-3-Clause"
 
   livecheck do
@@ -30,15 +30,6 @@ class Mavsdk < Formula
   depends_on "tinyxml2"
 
   uses_from_macos "zlib"
-
-  # Fix build error on Catalina
-  # error: use of undeclared identifier 'MSG_NOSIGNAL'
-  # Remove when the following PR has landed in a release:
-  # https://github.com/mavlink/MAVSDK/pull/1382
-  patch do
-    url "https://github.com/mavlink/MAVSDK/commit/43f8713d3793955d6fe4793592e81b5a1f998439.patch?full_index=1"
-    sha256 "6219405c44c7c78ab843734afa1ab708d96a376c49708f3cbf686f7edb5f46c3"
-  end
 
   def install
     # Source build adapted from
