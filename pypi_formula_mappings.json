@@ -87,7 +87,8 @@
     "extra_packages": ["robotframework-archivelibrary", "robotframework-selenium2library", "robotframework-sshlibrary"]
   },
   "salt": {
-    "extra_packages": ["M2Crypto", "pygit2"]
+    "extra_packages": ["pycryptodome", "pygit2"],
+    "exclude_packages": ["pyobjc"]
   },
   "scipy": {
     "exclude_packages": ["numpy"]

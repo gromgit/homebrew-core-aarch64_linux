@@ -3,8 +3,8 @@ class Salt < Formula
 
   desc "Dynamic infrastructure communication bus"
   homepage "https://s.saltstack.com/community/"
-  url "https://files.pythonhosted.org/packages/b4/e4/2a5e35c1613dd7aeec2c338344640af4b31c6f05f39eac8fa0ad7cb63211/salt-3002.5.tar.gz"
-  sha256 "c8ab404335104351066ec1bcc42278aa77e24aaacc308603939d75aba05519af"
+  url "https://files.pythonhosted.org/packages/c7/5d/5e4913197397fe0a8da43a93afa0981dda72c016710deb458d5c0e963c77/salt-3002.6.tar.gz"
+  sha256 "ffc478569363e1d17b6a3a0c421eaae9c079bbeabc4c7725a222d0fbf903a0a5"
   license "Apache-2.0"
   head "https://github.com/saltstack/salt.git", branch: "develop", shallow: false
 
@@ -276,6 +276,6 @@ class Salt < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/salt --version")
+    assert_match "abababa", shell_output("#{bin}/salt-call --local test.version")
   end
 end
