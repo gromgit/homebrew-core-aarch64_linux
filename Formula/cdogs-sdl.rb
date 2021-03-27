@@ -12,10 +12,10 @@ class CdogsSdl < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "4f2edb88b56c462e440ec9a7a28878b110512d9afafa2be8f69d2726df9d63c7"
-    sha256 big_sur:       "b5f985db36af5e627bf39534f1b12773ca83caf96b26965adea3824a7e939313"
-    sha256 catalina:      "2b0bc41a233dd6843ccdcf95badf04472e1e728d5bc36bd606aad7c5c1c3701a"
-    sha256 mojave:        "a344081267233c5d78d4e03ce5eb8c1a3410da4e229a9b3758b61f7480cce693"
+    sha256 arm64_big_sur: "7feec1f90645b5f0d406f9def13136e6d47684408140d082148d6312214beede"
+    sha256 big_sur:       "1f5859a0f9e609e5a52acab23689ecacb6da597c5a3b6704fe78e1ab3a362224"
+    sha256 catalina:      "0225ae38c33d204cc790842c9ccea96ed14794a8995810ac82207aa0d825d07d"
+    sha256 mojave:        "4ede0386ee8cb4bc5f0dfd1c2fc2b310f631e7fa7a5383979a84dd56c98e3380"
   end
 
   depends_on "cmake" => :build
