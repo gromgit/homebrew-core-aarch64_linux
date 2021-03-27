@@ -7,10 +7,9 @@ class DhallLspServer < Formula
   head "https://github.com/dhall-lang/dhall-haskell.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, big_sur:  "5527e7912597fa0f7a243e56abf4ca7d1314f11a7b3f3d20e657352aa92ddf17"
-    sha256 cellar: :any_skip_relocation, catalina: "ddb16a6b5f23877ce240ed1fb00fced177c9d4839a5110acceda749723366da6"
-    sha256 cellar: :any_skip_relocation, mojave:   "5d8295828215b009bdf19784fde2b79feb13bfbfc7831a1a41278c9ea07b0fd7"
+    sha256 cellar: :any_skip_relocation, big_sur:  "4e52b159845ab3d3f0c38b1513925dc71229384f1fbd2e1f3af93fb95a5a547c"
+    sha256 cellar: :any_skip_relocation, catalina: "c90bfdc825ded77c2d78f7cc348c34ce9085c2133921be93badc461cd838ff3e"
+    sha256 cellar: :any_skip_relocation, mojave:   "6a75796367fa4e48806035d13b1b4403ed31ad592e7df7992b9cb959c8b27011"
   end
 
   depends_on "cabal-install" => :build
