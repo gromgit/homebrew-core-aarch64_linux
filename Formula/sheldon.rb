@@ -7,10 +7,10 @@ class Sheldon < Formula
   head "https://github.com/rossmacarthur/sheldon.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "f18834a296da8975d65628f31dfacaf661c3797dd883d971616ed3083391af4a"
-    sha256 cellar: :any, big_sur:       "eed38c13b48c789d3b80314c81a79b454937b4898e4c8ea01aca8e6033d4eccf"
-    sha256 cellar: :any, catalina:      "4969320a627be9cc5795fe54ae4b5064685cc0d28a73fdfb743e87d2a34e4a6c"
-    sha256 cellar: :any, mojave:        "09af95d2e7ed90c97b72cf23b25b5991749f2224a8316bd2ac188d766ccd29a2"
+    sha256 cellar: :any, arm64_big_sur: "4abfeddfd1546805770130b4eba4480ca749bf8fcdf7b6692c5c2ef4c2ec7c7c"
+    sha256 cellar: :any, big_sur:       "c7ef56ae60df786192350f36dcad87d3c2c9c446d1c490aa1f6e5e3d6924dd3e"
+    sha256 cellar: :any, catalina:      "87b5befd0a415b0f98f3c8fa87ace35e3c6e08bda40d7851609f8e89e2ec9e15"
+    sha256 cellar: :any, mojave:        "1c79640519f0f272a3924534b6ad988bea566c4cca4941ed865c5466324108b6"
   end
 
   depends_on "rust" => :build
