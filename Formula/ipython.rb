@@ -9,10 +9,10 @@ class Ipython < Formula
   head "https://github.com/ipython/ipython.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "d7b91cdb3e2ea291f4f779ab6ac2f22f5c093ad780fda5a44a5bdcb36af24016"
-    sha256 cellar: :any, big_sur:       "35687288840717dd70a5b13699401b34d52643e5f8b11d5b84fbcc36d3fe5a9c"
-    sha256 cellar: :any, catalina:      "a46fcdf59b0412edc3ba87f1f95d26501a560e5b1e375770c71889441f962045"
-    sha256 cellar: :any, mojave:        "10726ba870d8510884b4f2307342348465086462e17995cbdbd3d162ca58ee23"
+    sha256 cellar: :any, arm64_big_sur: "84b8dc8e8f724f9204edb5654a4454090dacfc32e48fca43d34bb1698170c2ae"
+    sha256 cellar: :any, big_sur:       "22068bcaefefcc7a53e24a44a5c9e1993c940b57243824d9c7966b8f1b8f8b2f"
+    sha256 cellar: :any, catalina:      "13f902b04df85a4103e997119da3c10df3d803687416888f158f8a42ec640f3b"
+    sha256 cellar: :any, mojave:        "4120bccd6cba7319fd1b016771546e4932d6c3d02b55c47ced72f9d6979e4b9a"
   end
 
   depends_on "python@3.9"
