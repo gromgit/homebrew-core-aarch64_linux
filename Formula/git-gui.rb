@@ -8,10 +8,10 @@ class GitGui < Formula
   head "https://github.com/git/git.git", shallow: false
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4a3bd222c3edf48528d77e7807d3b4723abd8ff3243361aafe964212c813ade0"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0d8803003a68cff4fe56dc8244b491af4d26c9ac9df76136fa826462925aeed7"
-    sha256 cellar: :any_skip_relocation, catalina:      "60cb252e34234b9749fa9c757ad9b92a02ccd163896e36d90e99892d3d9407b0"
-    sha256 cellar: :any_skip_relocation, mojave:        "e82720dcc0caeee5c7f8569d446969fe0a4cfd918cfc5c8a994259b32817cd26"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f6941b6984b73e4f89c9635a6113a0401461821febd431116dd06cf4971ec469"
+    sha256 cellar: :any_skip_relocation, big_sur:       "430d3e73a3d07bb170c1bd3eb3db3a5cbb283e1fd72671e9607f00cce23982eb"
+    sha256 cellar: :any_skip_relocation, catalina:      "603bf37ef37e46f4ec88855d44bd61a227299638dda5690c367b55c733ba3cf7"
+    sha256 cellar: :any_skip_relocation, mojave:        "59df29678a0fa2c9546ee91ec1c8d4061ad3ae7436ecb4beef92fecd6c62de41"
   end
 
   depends_on "tcl-tk"
