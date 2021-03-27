@@ -7,6 +7,13 @@ class Moto < Formula
   sha256 "4610d27ead9124eaa84a78eca7dfa25a8ccb66cf6a7cb8a8889b5ca0c7796889"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "2f5064cc8b91c162d70e39adabe4e110af84fc828399c203bc5621eead63d1b6"
+    sha256 cellar: :any, big_sur:       "46d2c1c0ba30393872638d51dc8f51b349742f88af60e44d071eaf273f2424ad"
+    sha256 cellar: :any, catalina:      "0aadbef98662121140350bee045269161d3f74678f048644e92986c9ba269e5a"
+    sha256 cellar: :any, mojave:        "cfda102cfc4b25b5244a5a914d2b3d536781a1d83bd11bb082bb25640d8a92f1"
+  end
+
   depends_on "rust" => :build  # for cryptography
   depends_on "python@3.9"
 
