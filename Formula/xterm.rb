@@ -12,10 +12,10 @@ class Xterm < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "a0905279eba3ea5f5ad2de0b454df07f1217c368eec8b381bb686cff25b6421b"
-    sha256 big_sur:       "6cd76cbed59699793cdce801808a8722101671e0e6a94f495b10b2065a30d83a"
-    sha256 catalina:      "b98220391a962aa74f56eb5f6c7389497e954cf9999f4e89949f39d13f6f3eb8"
-    sha256 mojave:        "535e30142bb419de69f5bd9af69ad08ea0972ec783a8cf1d276992e1b9159788"
+    sha256 arm64_big_sur: "ded2f89424402fd1c80609c83cf8aaec6d19bbd45a3a7689949c1cfc3f42bb73"
+    sha256 big_sur:       "599bab961c5731b31d87df0800a16238e67d437092cd6f5d75de990e0fb23736"
+    sha256 catalina:      "3ca1ebfd5e334791f3f8d36388fe5856cc37dc337a36f51d1d12e7a1124e0e6a"
+    sha256 mojave:        "0a52f271e119b5c0a27f2a3ec384b7c212a8f85f297377742af86dd861881b26"
   end
 
   depends_on "fontconfig"
