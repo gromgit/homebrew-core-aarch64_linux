@@ -7,9 +7,9 @@ class DhallJson < Formula
   head "https://github.com/dhall-lang/dhall-haskell.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "a1e0cb4f7e4a7e0994b43ecd783240356631d36655cfbf59a903cc3f6a799242"
-    sha256 cellar: :any_skip_relocation, catalina: "050f219d8050cf46a54487e0cad414374a5d2b4a6422d1e2e2c7a682149c3afb"
-    sha256 cellar: :any_skip_relocation, mojave:   "56007f50e5a52a3062973574ddc1e888d74698e3ac9310ed223ce5c131834cb9"
+    sha256 cellar: :any_skip_relocation, big_sur:  "d1dd64ef3b551cb9bd3ec4de1ddc336457ca588421b2b5dab1f6ecbc609fd4b0"
+    sha256 cellar: :any_skip_relocation, catalina: "b75a7ef02eefee86b173f6e8c7b6eff5e3247a319b86a2d3f37abc86e7230cee"
+    sha256 cellar: :any_skip_relocation, mojave:   "004e35525351878b319875287e858d58b4f0acad0839fc3a00122364c8048c2d"
   end
 
   depends_on "cabal-install" => :build
