@@ -6,11 +6,10 @@ class Libvmaf < Formula
   license "BSD-2-Clause-Patent"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "dbea75752e42a27c01676f942b44110c522c167e482123d0db223f4ea5e94fd3"
-    sha256 cellar: :any, big_sur:       "42337edc375b2eaebf63621360edc0bf827c03f2c5f6e07ffe472a65a7603a29"
-    sha256 cellar: :any, catalina:      "e7b3a833cd602d12291441709a60808e89d6d48c00232fdea155e96fe91911fa"
-    sha256 cellar: :any, mojave:        "45d4ff0d068b03980d6192e2a636f6ca37fa429fa0c0aecdc8d5d55dcd8b06bd"
+    sha256 cellar: :any, arm64_big_sur: "0fd8b244f5af275a57821309bcc2642c9462ea2036f352eeca9e1d1483eecbad"
+    sha256 cellar: :any, big_sur:       "ea59729308a5b85828585e7b595ef71f012423542869742e050de3129c4724b1"
+    sha256 cellar: :any, catalina:      "87e4303e5885e6084a7757d40344d808e6a4aafa24570d98301c940b61abc383"
+    sha256 cellar: :any, mojave:        "c72c463e289f60c067861d0993894cfdc65a34a88435ced1506dac9066d008f6"
   end
 
   depends_on "meson" => :build
