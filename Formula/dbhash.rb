@@ -12,10 +12,10 @@ class Dbhash < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5c1f600e1c3b9a4dffda17d135c5451a6370a66e929907cd542482bd9b78c00d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0749d1a47c9c62364004e492687b7e884d6beae636a16b310400074d6ab412ad"
-    sha256 cellar: :any_skip_relocation, catalina:      "33915e5efb31f85f70b224a895ec7d559ace851bb2db908e1ad9dfd7e7e48689"
-    sha256 cellar: :any_skip_relocation, mojave:        "58bdc1479bae920500e6f3193094b08ee4ccbbf34d209a4aaf89b86bec2b449d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "43ad6434d731d97f7e23758655335d66129a4534e0b63b69c14a3356fb23aa5c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d21cc2dfeaaf7589c64415765fc1b1f4497fc5fe20775bc9f206da6822df4557"
+    sha256 cellar: :any_skip_relocation, catalina:      "c9f22cd366e4d8423451219b22ab169a67de031245da6efc089555701cfc5095"
+    sha256 cellar: :any_skip_relocation, mojave:        "f722c75c491e3801a025c1fc5d2cd80a16ef5eda9691b69bac1b33a61a06a1b7"
   end
 
   uses_from_macos "tcl-tk" => :build
