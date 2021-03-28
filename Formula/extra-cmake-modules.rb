@@ -14,10 +14,10 @@ class ExtraCmakeModules < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "73af52ca8f90dc4a66c543ed896d97cf7820fc016e486d1f9a05d3f662883959"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3b53cf2a416928afe6bf92bce808a6816ab7c9e8fa08f1c9b7efeb74be7647e8"
-    sha256 cellar: :any_skip_relocation, catalina:      "63f12faa74b40544530ca7a674de660fd545b746a8ee0a215649abe1cf43985b"
-    sha256 cellar: :any_skip_relocation, mojave:        "a4c91e88ecd0abc7875bc3fcfaaf8680503f49b327a5bef11354e96fb24a6cc2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "62c98704716218b86400a27d692c76a87adfc5f36601ade2f6e30329799d8836"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0e426f7010c34f5c6a849b91d2554e40d652d159bac1aeabc6c0dd5c12dc5974"
+    sha256 cellar: :any_skip_relocation, catalina:      "219a0b0c84c3bf6a2665397e16f857edca27e38bbebb8d93421a7faf248a4371"
+    sha256 cellar: :any_skip_relocation, mojave:        "a60d655c7c7c75aeda3f0739dc17ad2281efbcaf55e093b60ce7ef794ea8c903"
   end
 
   depends_on "cmake" => [:build, :test]
