@@ -12,10 +12,10 @@ class Sqldiff < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d22e2cf46795c3d2aedb8642872654785a6d4ec5821d64afec135e2709eb33c2"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d30fa8ad97b1ca4bdfc6467cdc111ff02dc8c2741e887e9f52beaefc28c05503"
-    sha256 cellar: :any_skip_relocation, catalina:      "15fc4fb8ae26ea6c8147870c8991822bcc8382388ad9619aee66c0e026e33bc0"
-    sha256 cellar: :any_skip_relocation, mojave:        "345f5db0eed6d366c52778f5aa373e3c1fcc03ca7244ba2ba09cbb1d63da3ccf"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a1f7137a288f60017ee75a622ade4d9217a5dc95221fd91173cf73b53b98b9ea"
+    sha256 cellar: :any_skip_relocation, big_sur:       "bc5834f925f547dd1af5f9ae7a51e609858f7b33a4fe2e661f4257334a9dbea7"
+    sha256 cellar: :any_skip_relocation, catalina:      "1e8f84f839b02b4758e6b2f2bfa50dfa9d7240d29befd4fd1bb72a71cef2e149"
+    sha256 cellar: :any_skip_relocation, mojave:        "c45db4be0569ea85e6777701a9d89597a7d797b08b56d457d19bc5c6401a0e51"
   end
 
   uses_from_macos "tcl-tk" => :build
