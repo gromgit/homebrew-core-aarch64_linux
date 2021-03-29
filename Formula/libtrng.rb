@@ -12,11 +12,10 @@ class Libtrng < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "fbf1971402ee149d4a60e6dec96a2c44ca500871848e0a5bd4974ce4f8b11369"
-    sha256 cellar: :any, big_sur:       "8eff7623b750819d2bc64e993601623805898bc279b0790841485e4c089735cb"
-    sha256 cellar: :any, catalina:      "b0e5af117a32d265de30662de4d7ef61e412853f262949e86ac1ff91dfd69875"
-    sha256 cellar: :any, mojave:        "4b753374a4fb6305e417ea5d89237f6e62b47b8c9e2c034c76e26475184de48c"
-    sha256 cellar: :any, high_sierra:   "4f269f561d5b8b692189e90cba163578ad68b2fa83a84660d8da4d367c4a2e93"
+    sha256 cellar: :any, arm64_big_sur: "9cfa0851919690b182b5cd227c71e77b7f07f5179ff5d06b52894fb98ca131df"
+    sha256 cellar: :any, big_sur:       "c97a7c825b5a6614dd771cef5f0aebdadb70f5b619e19aa446afff5072ec236d"
+    sha256 cellar: :any, catalina:      "044b708b751a88a22b95e4b75c47a8125fe017d6e69ea39c1177c9bc06c0de85"
+    sha256 cellar: :any, mojave:        "85e7a9b91ec9df836ce6127af7ca09deffd9052136c34ae1b0d3e310467eddc9"
   end
 
   depends_on "cmake" => :build
