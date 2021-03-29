@@ -11,10 +11,10 @@ class TraefikAT1 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "34c1ced84f74a815d10048832232bc46acba74b149271365f1178de9f3ad7ddc"
-    sha256 cellar: :any_skip_relocation, big_sur:       "2ebc160c9500db7fe90b9f3312a8d43bcdac819a16a4c1e641702b61c3e948a6"
-    sha256 cellar: :any_skip_relocation, catalina:      "4225edf0cb5466dd6031cb8bf149c764f8614c0fc97aa799c8271e373268a3f5"
-    sha256 cellar: :any_skip_relocation, mojave:        "a014d6c20348aab5eaf4a775906bf7b450d89edb16373328840d4f3a3d9e80cb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "84119d62162983c5a6b7a3b35d5864eeb1a4e42f052874a31ca7f1611782f511"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4ce707044c11072ba591ef4431f51fdce81d3ae7f73a00e3651ca72c4a618b82"
+    sha256 cellar: :any_skip_relocation, catalina:      "27ef5eba2d59c3a2e47636e58604375194e7e83a9abf4903e339541d70d3163d"
+    sha256 cellar: :any_skip_relocation, mojave:        "c46f07f1dbb607812847c7724f3c5323dec7319f86457559c18af27aa597aa32"
   end
 
   keg_only :versioned_formula
