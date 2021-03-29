@@ -7,10 +7,10 @@ class Numpy < Formula
   head "https://github.com/numpy/numpy.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "9279b94988655c47bdb9edc39b979aa5db413b20c5f3a779361ac4a7f9fa7e3c"
-    sha256 cellar: :any, big_sur:       "2a6db741eeeb0bcc43abf0140035b2e1d5ffe5a9c56aefbd465113dce180afd1"
-    sha256 cellar: :any, catalina:      "6ed8007be92b08b16ae5a7614628f58414772adbf7357fde99160023adffb15f"
-    sha256 cellar: :any, mojave:        "cd3b07c7bbaca5aa08394c579440c0e2c691adfb53b055d319d1f54a69be6250"
+    sha256 cellar: :any, arm64_big_sur: "c2904e46fb22bc5d067c1c26deb07747f488721f734dce29d5cd049ce9684701"
+    sha256 cellar: :any, big_sur:       "ae10cdd3dc05c9c76feef50b2ee8365b49b2c1b6efbe3e134d4390c4e82ed602"
+    sha256 cellar: :any, catalina:      "e839ede282c17544b4905ad6c1c6cb89333ecf5ce15624bffeac153684e6497c"
+    sha256 cellar: :any, mojave:        "877c88acd1d80ec7d5c4f6fe5fbe1f41b0d1f987ced4f7e4a5b968544ba7f17c"
   end
 
   depends_on "cython" => :build
