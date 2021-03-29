@@ -8,10 +8,10 @@ class Automake < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b989d3db71b5bc3456f52edd92b818d1fcb5c03e62ab5c6ffeb5bf404dc22aa5"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b19be0f4672d3ed2c258eee5f676d27429e5da189c80dc04ba8d01bc44ead320"
-    sha256 cellar: :any_skip_relocation, catalina:      "25fe47e5fb1af734423e1e73f0dc53637e89d825ef8d8199add239352b5b974e"
-    sha256 cellar: :any_skip_relocation, mojave:        "6e25193e573d0e11376322018c9cdf96ddd68ad7e4fe7bb464212380d5e6b9cf"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "91656222dff012c7434026ff250fcd92fd5746e60a383ef27547559b6bbfe4f5"
+    sha256 cellar: :any_skip_relocation, big_sur:       "11f09c63a49b30078f91bd00b8bed2408422100764cb7b039e8f96941aec3dfc"
+    sha256 cellar: :any_skip_relocation, catalina:      "5f83d4723ee9f33c4a90d62c4bce9d200c4c74cc32d207e4f4d2bdaaede9fb7f"
+    sha256 cellar: :any_skip_relocation, mojave:        "52796a1b6c737797964b119a5cf170a24fc55e32a43841e4690cce1cc24fed1a"
   end
 
   depends_on "autoconf"
