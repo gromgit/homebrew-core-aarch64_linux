@@ -1,8 +1,8 @@
 class Lua < Formula
   desc "Powerful, lightweight programming language"
   homepage "https://www.lua.org/"
-  url "https://www.lua.org/ftp/lua-5.4.3.tar.gz"
-  sha256 "f8612276169e3bfcbcfb8f226195bfc6e466fe13042f1076cbde92b7ec96bbfb"
+  url "https://www.lua.org/ftp/lua-5.4.2.tar.gz"
+  sha256 "11570d97e9d7303c0a59567ed1ac7c648340cd0db10d5fd594c09223ef2f524f"
   license "MIT"
 
   livecheck do
@@ -26,8 +26,8 @@ class Lua < Formula
   # Be sure to build a dylib, or else runtime modules will pull in another static copy of liblua = crashy
   # See: https://github.com/Homebrew/legacy-homebrew/pull/5043
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/defdcae1eeabf5e4db7ba899b6a9103ccb356dda/lua/lua-dylib.patch"
-    sha256 "833d9c629ed2440a74d15169deb851b504dc8ec34115bef0715dda55261f01a9"
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/5f9caed58b85c52ffb400a9ee0e9cc7f5b8e9736/lua/lua-dylib.patch"
+    sha256 "9fb49101f84cfd4a0bb6f050af5ff1fa57bdeadb5549d20e44c877e83d38defa"
   end
 
   def install
@@ -35,7 +35,7 @@ class Lua < Formula
     # Use our CC/CFLAGS to compile.
     inreplace "src/Makefile" do |s|
       s.remove_make_var! "CC"
-      s.change_make_var! "MYCFLAGS", ENV.cflags
+      s.change_make_var! "CFLAGS", "#{ENV.cflags} -DLUA_COMPAT_5_3 $(SYSCFLAGS) $(MYCFLAGS)"
       s.change_make_var! "MYLDFLAGS", ENV.ldflags
     end
 
