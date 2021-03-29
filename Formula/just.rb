@@ -6,10 +6,10 @@ class Just < Formula
   license "CC0-1.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4b4b9269eb124f07100faf26eee1beff27e77aac3435c78a9ea8399b38801a86"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d75a38323372399c75b1bb71b68e27c92eb42613dec35d72d3e6c85f3618689c"
-    sha256 cellar: :any_skip_relocation, catalina:      "01d1102c0288a7657a24932f29a8573ed460ae06247c21d336aa871bdf032a10"
-    sha256 cellar: :any_skip_relocation, mojave:        "e0c6f01b3349130f19748dff15a63ca90aa53aa10ff0451cc4cd1de6bcd9b61c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1eebf04d4decf6ce18204b0175439989c590e1e96e15569c65e12457a4bd4f5f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4ba638cbf677306d133c40306467bbca28cac9885491877bd11aba87a1c93ea4"
+    sha256 cellar: :any_skip_relocation, catalina:      "a36550958769b325b8edb7463e038d6ef4f2abdfed66381f544469293bb97c9e"
+    sha256 cellar: :any_skip_relocation, mojave:        "9694353cd6f0aa8570fb65cfecb9a18bc8b55d3bca738794f672f2da9a27e554"
   end
 
   depends_on "rust" => :build
