@@ -11,10 +11,10 @@ class Csvq < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0c8b2112b0512f13d458a9dc2c538e3f3281dd6fd84719dd4a950655ca56604b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8cda072a643e88bec457457f62bae6d2815cf9408e7cb2a3b018842825d200fa"
-    sha256 cellar: :any_skip_relocation, catalina:      "00f9d35784e9435fad78dceeef4db80b290de5bff9cba2fdbc5f17bc39bf74b3"
-    sha256 cellar: :any_skip_relocation, mojave:        "7f76dce3c04cab5203f4710594a984d08c2062395b5d06e5a104907896768c17"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e24f11524a3b39f9ae2f171f4059cd74d02c8223915a01c88975ba1fd9631fa0"
+    sha256 cellar: :any_skip_relocation, big_sur:       "172d710dcaeab1edd2fdadd22019c3680395da5cedb3a9089ebae89968413995"
+    sha256 cellar: :any_skip_relocation, catalina:      "d26444b44444f31706bba553015e06ee42a0430fad18493193c07f05888dd50a"
+    sha256 cellar: :any_skip_relocation, mojave:        "f91e044075488c92c663c50f0ed28530cdf375f60e582bd4e569ad7f4740a4a1"
   end
 
   depends_on "go" => :build
