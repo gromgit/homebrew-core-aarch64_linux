@@ -9,9 +9,9 @@ class Salt < Formula
   head "https://github.com/saltstack/salt.git", branch: "develop", shallow: false
 
   bottle do
-    sha256 cellar: :any, big_sur:  "13f0e941e53bf2a481be69867aeab6f5809c19daa6fb18ce53add4f97b7913ab"
-    sha256 cellar: :any, catalina: "8010cac3181773d09776753e9ab953e791c0807daac9dd116cfc0b4a37cdd263"
-    sha256 cellar: :any, mojave:   "e35ae2359164320aa801e2a7f8f5d10b877f9a1e56380ba5580e4196cfd69651"
+    sha256 cellar: :any, big_sur:  "5b34dd2ac430f9945887586fe783b6ccafede5561e00848437570e48878fd3b8"
+    sha256 cellar: :any, catalina: "9dfb520da58dc85e2dbe23bce4c6dcb5fba574ffe8114cac36895b7c21a3993b"
+    sha256 cellar: :any, mojave:   "6fdc0409e980bf9a01ba379b08952d032b84826e0347d1d0c1be6bd3816c3673"
   end
 
   depends_on "swig" => :build
