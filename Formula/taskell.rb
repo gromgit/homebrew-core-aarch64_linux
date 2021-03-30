@@ -6,10 +6,9 @@ class Taskell < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:     "4a093b7024da7e64fa5f4cdb1be1ebca5006fda0f0513412dcdd4df2505edf3c"
-    sha256 cellar: :any_skip_relocation, catalina:    "d224f2ea895ced6b1a8cc761e3d3c79478a9e210df68f3cbcdb65debacd8a246"
-    sha256 cellar: :any_skip_relocation, mojave:      "6733a5756ba481343d132064e22a6a6447eef1e374ad4a9d4915d8951fe5ccb0"
-    sha256 cellar: :any_skip_relocation, high_sierra: "d7fbd709e7713e2f08a1d75a64c2527dfa87f8d935a872054119bedc4338d652"
+    sha256 cellar: :any_skip_relocation, big_sur:  "e61c059369ca603626eb2eb196d7f13d9796a5e7c1ec2ccf4b8ed848138807cb"
+    sha256 cellar: :any_skip_relocation, catalina: "87d75501a9fa9a36b4e4e5c10d056a7b62419a697399272e18fccda61056a1ec"
+    sha256 cellar: :any_skip_relocation, mojave:   "d31fedb601fbda5ebb84c9c05208dda2d2fc2312b21b981fad97ceb40ee7c4e6"
   end
 
   depends_on "cabal-install" => :build
