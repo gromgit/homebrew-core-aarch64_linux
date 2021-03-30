@@ -2,8 +2,8 @@ class Argo < Formula
   desc "Get stuff done with container-native workflows for Kubernetes"
   homepage "https://argoproj.io"
   url "https://github.com/argoproj/argo.git",
-      tag:      "v2.12.10",
-      revision: "f1e0c6174b48af69d6e8ecd235a2d709f44f8095"
+      tag:      "v3.0.0",
+      revision: "46628c88cf7de2f1e0bcd5939a91e4ce1592e236"
   license "Apache-2.0"
 
   bottle do
@@ -36,6 +36,6 @@ class Argo < Formula
     # Since it is an empty file we expect it to be invalid
     touch testpath/"kubeconfig"
     assert_match "invalid configuration",
-      shell_output("#{bin}/argo lint --kubeconfig ./kubeconfig 2>&1", 1)
+      shell_output("#{bin}/argo lint --kubeconfig ./kubeconfig ./kubeconfig 2>&1", 1)
   end
 end
