@@ -11,6 +11,13 @@ class GoBoring < Formula
     regex(/>go[._-]?(\d+(?:\.\d+)+b\d+)[._-]src\.t/i)
   end
 
+  bottle do
+    sha256 arm64_big_sur: "5331c496ac45b0db7ecd75e42ba57679785665dfecc394bb621b7a153a6c7e56"
+    sha256 big_sur:       "12fb5d792b66e2a15c3e91a15384a82529e38f91fec78309ac303186f2adebe6"
+    sha256 catalina:      "bde128f58f456a72b3e7b5b6d4e8386cdbb5c3c2b9173aee0056a1b3d19ffd2d"
+    sha256 mojave:        "aab4af70585789c3e6c983f41b86b5d939a7b70c5abeecce31456d4625b654cb"
+  end
+
   keg_only "it conflicts with the Go formula"
 
   # Don't update this unless this version cannot bootstrap the new version.
