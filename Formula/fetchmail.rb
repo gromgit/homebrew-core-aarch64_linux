@@ -17,10 +17,10 @@ class Fetchmail < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "69091941fb702f47d95d5dc0b93978df4455c2f4df19382a66ec3d2775c32935"
-    sha256 cellar: :any, big_sur:       "18f8ad0233c864ef7df0af47fbd001b7facb0c393666226b70c76077921f52ab"
-    sha256 cellar: :any, catalina:      "8bb5a567c7f6a5b9adf489b40dbccdb47b9ecc1a2fbdcb284058751f85fdc5aa"
-    sha256 cellar: :any, mojave:        "b41e5ea60d50061719aa5d9366384655bce4e0af4026e9e3b772a0f81a7dc266"
+    sha256 cellar: :any, arm64_big_sur: "a5b54bb2ed9604db58d4700f10fa5262b2229a1e94d61d9ee17c83e2b846fe16"
+    sha256 cellar: :any, big_sur:       "72e602538312c10a90fd93802c277c3daeb09d47fd3bf4f38fd5147261ea34a5"
+    sha256 cellar: :any, catalina:      "3e08bfd4efe2465349d622121fc7ac9d9e220f55fd5033b490e0a549bd62d86c"
+    sha256 cellar: :any, mojave:        "da04bc6368c92a41930a719137ce9dbd5dd7156eeb17c50e17f66391a9456514"
   end
 
   depends_on "openssl@1.1"
