@@ -7,10 +7,10 @@ class Prestd < Formula
   head "https://github.com/prest/prest.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9ced6ca37e5bb761ce0a9c9193cb708256c562cdd40a61175c0baa15fa8eaaf9"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c101c96f4fd8d3b06e0cfc54a69bdc0642edfe332798c405a03d3e2e31f1b070"
-    sha256 cellar: :any_skip_relocation, catalina:      "928c4bedf740e8175a043f897127f91e6d2dd05ce2db6082a17d08e860cebe22"
-    sha256 cellar: :any_skip_relocation, mojave:        "71dbc89a3c45c6a900f66683150e10b9d8e989d34abfa49d5f9ced013b227e36"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e320adf08e40dcedf77c47cdcf49cfdd323602ed26b14f00cf482dcb6fb0db39"
+    sha256 cellar: :any_skip_relocation, big_sur:       "55607f36399575f2cfd7714cf519c5cdac435944ecbd61cc415d6876b195d1a6"
+    sha256 cellar: :any_skip_relocation, catalina:      "e006dabbaa0ba8c86a51ef0c4441519bfc099ff04719c89abde91a433b16cee1"
+    sha256 cellar: :any_skip_relocation, mojave:        "f2c5b3cb1e143efd66fd1c89056ce78d69f5e961afa88076075d971a8ec07f06"
   end
 
   depends_on "go" => :build
