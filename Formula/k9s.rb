@@ -2,8 +2,8 @@ class K9s < Formula
   desc "Kubernetes CLI To Manage Your Clusters In Style!"
   homepage "https://k9scli.io/"
   url "https://github.com/derailed/k9s.git",
-      tag:      "v0.24.6",
-      revision: "0b965ebf4b1d871fd6486d6176839afff61e7104"
+      tag:      "v0.24.7",
+      revision: "303de07663dcb20899852a98d3ebf6ce2f1c7922"
   license "Apache-2.0"
   head "https://github.com/derailed/k9s.git"
 
@@ -15,6 +15,12 @@ class K9s < Formula
   end
 
   depends_on "go" => :build
+
+  # remove in next release
+  patch do
+    url "https://github.com/derailed/k9s/commit/82b1c8a.patch?full_index=1"
+    sha256 "50dfe6931023e45fd630d4b12d64e3a9aeae1ade7ed5ee7e87222e6d79fc9f35"
+  end
 
   def install
     system "go", "build", "-ldflags",
