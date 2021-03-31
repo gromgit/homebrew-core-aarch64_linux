@@ -7,10 +7,10 @@ class Pyqt < Formula
   revision 1
 
   bottle do
-    sha256 arm64_big_sur: "23c1f68ec3d0ef27f80b5d8a5393beaea4de181e98e697fae3126e4e1befd08a"
-    sha256 big_sur:       "859346fba309a2215e628612c1a73acb8ceed9260b1b50cb3e27086778a65ad1"
-    sha256 catalina:      "b4addd472da0e2d50c0720db5875d887869a9672100309483933e55bea8a7861"
-    sha256 mojave:        "97f06b498b40a0be5609cbfb673dcb0ec98a3fdab8a6e27a7169bfb2796a8fdc"
+    sha256 arm64_big_sur: "61444a7551a7bddf664aab92a43cfeecb59f050a9fe80d0822843ca5ec432bef"
+    sha256 big_sur:       "e175afb8de06d947e4926bcea2590acd41c8a763353863d92895a226588ca44f"
+    sha256 catalina:      "fddc360c28607fca03d74f6cc091f958a2243f34b9aeb1888c055df7712fea0c"
+    sha256 mojave:        "cdb9e6b67c56f66953beae5c5882bd718dfdf17c7a77036d7aadf3c86a4f676d"
   end
 
   depends_on "pyqt-builder" => :build
