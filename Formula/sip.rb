@@ -10,10 +10,10 @@ class Sip < Formula
   head "https://www.riverbankcomputing.com/hg/sip", using: :hg
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "128a69e2ff44621829a057172e11ef461f0f2f8dc1aba8df83e7d6ab395c78fd"
-    sha256 cellar: :any_skip_relocation, big_sur:       "18d190cbeb993b540375051525a6e0dee8e1bdd835b6eff6222a29543b1e6407"
-    sha256 cellar: :any_skip_relocation, catalina:      "03fe5d7975493dbbcda97fe6b9ab809701685ff5f7cc911d03d3bebb67ed5b08"
-    sha256 cellar: :any_skip_relocation, mojave:        "c951ba79d94171362eb346f70847e36c97876ffede598b253ca70f357e39b27b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7d014c77da8de72d9e329e3c1128a8f0efa031eabe8c4b8cb921935e35d724de"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a837368bc4d0e64107acb61b064bc27c1635beadd2cc2ddd12c0802624a81fb2"
+    sha256 cellar: :any_skip_relocation, catalina:      "dcad44f2a371e168ea960b42e91b745afb2f36a7199644830e37d128af4fecfc"
+    sha256 cellar: :any_skip_relocation, mojave:        "8a9516100d8af37bae956d3e3c5495b66504f1098acefa7906aa75662b5ace89"
   end
 
   depends_on "python@3.9"
