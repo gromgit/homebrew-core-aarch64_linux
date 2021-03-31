@@ -6,10 +6,10 @@ class TektoncdCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0d57f90252780dee21605ded4c56ed0da02841e7e1e7e7b68cd42baf152502f2"
-    sha256 cellar: :any_skip_relocation, big_sur:       "2b796cdfc635b3b3b87cdcf3e96cc619a3d42fc9765e2da352f07d1db44e1d1a"
-    sha256 cellar: :any_skip_relocation, catalina:      "db667dae01d659dff9cb3323b3736f0af234f8e930c2b3f54652b13bfc1247b7"
-    sha256 cellar: :any_skip_relocation, mojave:        "e8576ecadc6ccf12345c04c17a22438e965ef2b5492422e5b260e40f512e9130"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fdac9d99a78ed23ffbb13397027493e0296964b1747e2e08c8d9673e8113c6cc"
+    sha256 cellar: :any_skip_relocation, big_sur:       "108cae7a645a8e18a08a2152ecfe853b0df1a1f635b13209f190c45484da198d"
+    sha256 cellar: :any_skip_relocation, catalina:      "628597d1784087456f98f3aaa5dc8bdeb763b24d7579e3cd58154904f5fadcd0"
+    sha256 cellar: :any_skip_relocation, mojave:        "7e6589646e8a24d63e07a0218dc83ed0fff2541e49fadf4d40e47a01aaa453ad"
   end
 
   depends_on "go" => :build
