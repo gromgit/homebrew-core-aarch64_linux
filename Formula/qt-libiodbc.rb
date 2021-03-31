@@ -6,10 +6,10 @@ class QtLibiodbc < Formula
   license all_of: ["GPL-2.0-only", "GPL-3.0-only", "LGPL-2.1-only", "LGPL-3.0-only"]
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "fd6503fa1719e5a13cb78e6d24cf32f5755b1f044af2d6b9f1948f81944065b3"
-    sha256 cellar: :any, big_sur:       "8c14a7ada334ed501cb98f553321e9166fc5ff80992a5b6097b5d02d63cb7090"
-    sha256 cellar: :any, catalina:      "b7fa09b7959cd60b75f842491de9cd1bcefef014d925231a47480e9e12d20589"
-    sha256 cellar: :any, mojave:        "ced668cc6761004c8f58aab2905a39d0980ca9e6c3ce51a698fd1f02e67eb86b"
+    sha256 cellar: :any, arm64_big_sur: "a135cbf5e6cca7801a34f95e04c0cde6809233f205c950c6e91f3e9efc3c06ce"
+    sha256 cellar: :any, big_sur:       "7eb43de91c6fa37a6ec6ebf97752f16126a395e20d9d19fec2f11ad3bbcabe29"
+    sha256 cellar: :any, catalina:      "b334a48f21e7281a1d1b714a4daf8d8ccfbfe086b379c5292ca823ab1b341279"
+    sha256 cellar: :any, mojave:        "69568c999cf1595cc5fee0d37c014ddae6dc055ecacc89b90d550dc58bec2666"
   end
 
   depends_on "cmake" => [:build, :test]
