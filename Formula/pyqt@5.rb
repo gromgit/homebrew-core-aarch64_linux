@@ -7,10 +7,10 @@ class PyqtAT5 < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "213f50aaf7e3d11d41799431b5303791114a158a0db6db0d6ea61e0410c6af16"
-    sha256 cellar: :any, big_sur:       "fb6b6568ef31f8acf69288c2d2def7e919e2ea052b83abf2e35a2c0f439b0020"
-    sha256 cellar: :any, catalina:      "b6be23fb0704f405dc3e09a3711629a145081e0adaec99c50f78c6e55971e8e2"
-    sha256 cellar: :any, mojave:        "b86645249f0bf56ea3fcb9ae5738d32ad49d0974c2a78cd77ec0f7f99e6424b5"
+    sha256 cellar: :any, arm64_big_sur: "def5e1c4db90419439be7ac44ff3d11e6042590e3ef2e2f0586db5870b1b68fb"
+    sha256 cellar: :any, big_sur:       "4346a1891f5a34b2a1b6e426609e44c05f1b892de539ac5eadf0d0deff5e93d1"
+    sha256 cellar: :any, catalina:      "04e2f9b7627b65824026e005a4471d5179ec869d92ee87456e2afdeeead18a1d"
+    sha256 cellar: :any, mojave:        "e0e324b2b9cca6dff32fa0cf68b353b3a2a85957ef8c8a0fb686f8f6cbcdffc1"
   end
 
   depends_on "pyqt-builder" => :build
