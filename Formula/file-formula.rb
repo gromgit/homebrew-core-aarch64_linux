@@ -2,10 +2,10 @@
 class FileFormula < Formula
   desc "Utility to determine file types"
   homepage "https://www.darwinsys.com/file/"
-  url "https://astron.com/pub/file/file-5.39.tar.gz"
-  sha256 "f05d286a76d9556243d0cb05814929c2ecf3a5ba07963f8f70bfaaa70517fad1"
-  license "BSD-2-Clause"
-  revision 1
+  url "https://astron.com/pub/file/file-5.40.tar.gz"
+  sha256 "167321f43c148a553f68a0ea7f579821ef3b11c27b8cbe158e4df897e4a5dd57"
+  # file-formula has a BSD-2-Clause-like license
+  license :cannot_represent
   head "https://github.com/file/file.git"
 
   bottle do
