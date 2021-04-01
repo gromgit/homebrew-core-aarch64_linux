@@ -7,10 +7,10 @@ class Nuclei < Formula
   head "https://github.com/projectdiscovery/nuclei.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7834cbf11429c67e1e3a238a03d469304f2584ab412bb51c1b3710c2972dccad"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c1bf0daf8a64e11ea4a1aabfd16c059ef7741182c80ecad32e5c0934fdf974b4"
-    sha256 cellar: :any_skip_relocation, catalina:      "638e535ff2d2991141bbf0606878bcda8155092f40ac0d80c62f887bb2b84aed"
-    sha256 cellar: :any_skip_relocation, mojave:        "811e8811abff7ec008dc8647386e7f8bbf8de5cd7cd6cd8c23b38b378a3916bd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4023a5b6dae604baa3f04dac795eca5304b512c93213b6c6d293ad1f72935d46"
+    sha256 cellar: :any_skip_relocation, big_sur:       "9f02d752d77c5cd00138b65c04549a7e1a35980fc860823673c6250b33de2c2c"
+    sha256 cellar: :any_skip_relocation, catalina:      "7c33e9725a1d12b48bae43b0768e73672f49c380d9dcdd855983c3829ee1357e"
+    sha256 cellar: :any_skip_relocation, mojave:        "33497519bf103cf4d4abf799c4ce419664965d43b6864e2691b6604f544ed845"
   end
 
   depends_on "go" => :build
