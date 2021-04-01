@@ -11,10 +11,10 @@ class Ooniprobe < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8febc99962cd25a8a448198c8837f62a82add56b7011505ba487ca4bfc4450fd"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5f34b6c2d134075598168d4865a2e44bea47a7320f27a4a352b33c3000e5547a"
-    sha256 cellar: :any_skip_relocation, catalina:      "cf2c12e4144baa698d11f121b3f862b9b07a0691ee23aae2b2c8e330269f9376"
-    sha256 cellar: :any_skip_relocation, mojave:        "310bb173502552cf62532c82d5cfa888f0ff6d1550b2377bd612bc6e8dfe92b1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bad116f0a1d3f6de4a2f9a65b9cda01776919f799972610f3e459f28643261c0"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c635d255fdd1194a8b08aea3639b61ae018eada93147fb73415a057804d51016"
+    sha256 cellar: :any_skip_relocation, catalina:      "ea85a87296e858c208ab0872cf990d1fdbc087b54cafbbb9465920cffb7f028f"
+    sha256 cellar: :any_skip_relocation, mojave:        "68c6b38d402c83e264b36e17fec2c32557f2fb84b0a37418da83f3261af0a65e"
   end
 
   depends_on "go" => :build
