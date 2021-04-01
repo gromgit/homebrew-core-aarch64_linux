@@ -3,8 +3,8 @@ class B2Tools < Formula
 
   desc "B2 Cloud Storage Command-Line Tools"
   homepage "https://github.com/Backblaze/B2_Command_Line_Tool"
-  url "https://files.pythonhosted.org/packages/e3/62/feca720e7541356844c93fcf4d6b99c038158c10683a2f7f8456048ece85/b2-2.2.0.tar.gz"
-  sha256 "7e924724a8946caaf60a17a27fc1deaebe704734b80c4f526cdd5fb2457a92c1"
+  url "https://files.pythonhosted.org/packages/73/f3/466c6d097df5cd325ab6cd1379831641e48e48d80355ced0109c9d939c0b/b2-2.3.0.tar.gz"
+  sha256 "9b3fa855e564815ddbb6e7815bd9b0b761a41f70d49e5c0d6785639f9217c122"
   license "MIT"
 
   bottle do
@@ -18,19 +18,14 @@ class B2Tools < Formula
 
   conflicts_with "boost-build", because: "both install `b2` binaries"
 
-  resource "wheel" do
-    url "https://files.pythonhosted.org/packages/ed/46/e298a50dde405e1c202e316fa6a3015ff9288423661d7ea5e8f22f589071/wheel-0.36.2.tar.gz"
-    sha256 "e11eefd162658ea59a60a0f6c7d493a7190ea4b9a85e335b33489d9f17e0245e"
-  end
-
   resource "arrow" do
     url "https://files.pythonhosted.org/packages/ec/74/1cf2d9912921cebdba3fa954949206c8aa159c9cc803b88140fb227f8a0e/arrow-0.17.0.tar.gz"
     sha256 "ff08d10cda1d36c68657d6ad20d74fbea493d980f8b2d45344e00d6ed2bf6ed4"
   end
 
   resource "b2sdk" do
-    url "https://files.pythonhosted.org/packages/11/a9/b817612749e01b2450fa96d66cd2547e3de93aeb0e78dfe70887f48648e3/b2sdk-1.4.0.tar.gz"
-    sha256 "fb82cbaef5dd7499b62622010fc8e328944ca8cbdd00b485530ab6600de1129d"
+    url "https://files.pythonhosted.org/packages/f1/bc/3363e4e5cb3f96b116bee03f590874b390fdd50010a8914a671f9cbdd5a0/b2sdk-1.5.0.tar.gz"
+    sha256 "d85a74cb7f60db676119572085cd44a61d3c383ab8e3c6836d46a15ac669db74"
   end
 
   resource "certifi" do
