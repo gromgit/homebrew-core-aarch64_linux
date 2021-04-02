@@ -151,18 +151,18 @@ jobs:
           cd ~/bottles
           brew pr-upload --verbose --keep-old --committer="$BREWTESTBOT_NAME_EMAIL"
 
+      - name: Push commits
+        uses: Homebrew/actions/git-try-push@master
+        with:
+          token: ${{secrets.HOMEBREW_GITHUB_API_TOKEN}}
+
       - name: Upload bottles to GitHub Packages
         env:
           HOMEBREW_GITHUB_PACKAGES_USER: brewtestbot
           HOMEBREW_GITHUB_PACKAGES_TOKEN: ${{secrets.HOMEBREW_GITHUB_PACKAGES_API_TOKEN}}
         run: |
           cd ~/bottles
-          brew pr-upload --verbose --keep-old --no-commit --root-url="https://ghcr.io/v2/Homebrew/homebrew-core"
-
-      - name: Push commits
-        uses: Homebrew/actions/git-try-push@master
-        with:
-          token: ${{secrets.HOMEBREW_GITHUB_API_TOKEN}}
+          brew pr-upload --verbose --keep-old --root-url="https://ghcr.io/v2/Homebrew/homebrew-core"
 
       - name: Post comment on failure
         if: ${{!success() && github.event.inputs.issue > 0}}
