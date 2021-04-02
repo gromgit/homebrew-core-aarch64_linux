@@ -8,10 +8,10 @@ class Jhipster < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "edf9a4827d0ba3e318dcdbe37e691d1dae0f9a83d74ee2aae58184934b6ce2e8"
-    sha256 cellar: :any_skip_relocation, big_sur:       "383a62d2521975cde135e326f678ea3b636271bdad39f6b36c53e261d5e413ad"
-    sha256 cellar: :any_skip_relocation, catalina:      "d18017c4fb21fc3076b0360372f9ff8e14260399f00caddd948ef3220fa77f78"
-    sha256 cellar: :any_skip_relocation, mojave:        "a5f8fcb7dfd53f388d8866976fb296a4772bd8d6ef5b751bc9344fe75e73c189"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "37810f4f38600d90a53173949ba3eb8adb25820dd568d99e82f286f815ae38e6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f349ed13bdf8df18006d534fb6d7ff4829eaa718de2d70b64bc81729991186ef"
+    sha256 cellar: :any_skip_relocation, catalina:      "87c266c3e874222e0d4b5323514c05e0b65bd30c46656c84d39658354ee87286"
+    sha256 cellar: :any_skip_relocation, mojave:        "13daac9bfb8bbb368fdd4d4670c870e6ceb2d43c10990219a790a41e697aaa4c"
   end
 
   depends_on "node"
