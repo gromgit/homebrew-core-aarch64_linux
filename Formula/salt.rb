@@ -3,8 +3,8 @@ class Salt < Formula
 
   desc "Dynamic infrastructure communication bus"
   homepage "https://saltproject.io/"
-  url "https://files.pythonhosted.org/packages/c7/5d/5e4913197397fe0a8da43a93afa0981dda72c016710deb458d5c0e963c77/salt-3002.6.tar.gz"
-  sha256 "ffc478569363e1d17b6a3a0c421eaae9c079bbeabc4c7725a222d0fbf903a0a5"
+  url "https://files.pythonhosted.org/packages/e9/e8/4c23ba10ae61f04bf15837c659af9623663d6e3d2917700ae07ed9645629/salt-3003.tar.gz"
+  sha256 "c4689733dfe738cf287e31cb3fdd3cb8d1606295202b18d8e66d48d372d5ca77"
   license "Apache-2.0"
   head "https://github.com/saltstack/salt.git", branch: "develop", shallow: false
 
@@ -33,8 +33,8 @@ class Salt < Formula
   # https://github.com/Homebrew/homebrew-core/pull/52835#issuecomment-617502578
 
   resource "apache-libcloud" do
-    url "https://files.pythonhosted.org/packages/b9/3e/adfe316292bd2f5ff2556ea09887515c09974483c3028ae39563734e145b/apache-libcloud-2.4.0.tar.gz"
-    sha256 "125c410996b84464b426922f1398a317869f27173a6461e32f3b1dfe671d5235"
+    url "https://files.pythonhosted.org/packages/b6/a0/707142df518a602a2e36f9aa4f6dcc2cc9981843ffb7ba1207f7a084819d/apache-libcloud-2.5.0.tar.gz"
+    sha256 "8f133038710257d39f9092ccaea694e31f7f4fe02c11d7fcc2674bc60a9448b6"
   end
 
   resource "cached-property" do
@@ -48,8 +48,8 @@ class Salt < Formula
   end
 
   resource "cffi" do
-    url "https://files.pythonhosted.org/packages/cb/ae/380e33d621ae301770358eb11a896a34c34f30db188847a561e8e39ee866/cffi-1.14.3.tar.gz"
-    sha256 "f92f789e4f9241cd262ad7a555ca2c648a98178a953af117ef7fad46aa1d5591"
+    url "https://files.pythonhosted.org/packages/66/6a/98e023b3d11537a5521902ac6b50db470c826c682be6a8c661549cb7717a/cffi-1.14.4.tar.gz"
+    sha256 "1a465cbe98a7fd391d47dce4b8f7e5b921e6cd805ef421d04f5f66ba8f06086c"
   end
 
   resource "chardet" do
@@ -73,8 +73,8 @@ class Salt < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/1c/15/aceb9a2535c9fa805316b49e42fde0a83d1a0492b4e3608a4a5dc9b04b46/cryptography-3.2.tar.gz"
-    sha256 "e4789b84f8dedf190148441f7c5bfe7244782d9cbb194a36e17b91e7d3e1cca9"
+    url "https://files.pythonhosted.org/packages/d4/85/38715448253404186029c575d559879912eb8a1c5d16ad9f25d35f7c4f4c/cryptography-3.3.2.tar.gz"
+    sha256 "5a60d3780149e13b7a6ff7ad6526b38846354d11a15e21068e57073e29e19bed"
   end
 
   resource "distro" do
@@ -82,24 +82,19 @@ class Salt < Formula
     sha256 "0e58756ae38fbd8fc3020d54badb8eae17c5b9dcbed388b17bb55b8a5928df92"
   end
 
-  resource "gitdb2" do
-    url "https://files.pythonhosted.org/packages/c5/62/ed7205331e8d7cc377e2512cb32f8f8f075c0defce767551d0a76e102ce2/gitdb2-2.0.6.tar.gz"
-    sha256 "1b6df1433567a51a4a9c1a5a0de977aa351a405cc56d7d35f3388bad1f630350"
+  resource "gitdb" do
+    url "https://files.pythonhosted.org/packages/d1/05/eaf2ac564344030d8b3ce870b116d7bb559020163e80d9aa4a3d75f3e820/gitdb-4.0.5.tar.gz"
+    sha256 "c9e1f2d0db7ddb9a704c2a0217be31214e91a4fe1dea1efad19ae42ba0c285c9"
   end
 
   resource "GitPython" do
-    url "https://files.pythonhosted.org/packages/8a/79/d18495e6af62ef08b48a19d37c3c15f8e41c9ec4d05cc5ab491d2601702c/GitPython-2.1.15.tar.gz"
-    sha256 "838c38d882a97b2fd146dbd4eb9baaf857cb65ebaa64e4c06fca48aaa491e1c6"
+    url "https://files.pythonhosted.org/packages/ec/4d/e6553122c85ec7c4c3e702142cc0f5ed02e5cf1b4d7ecea86a07e45725a0/GitPython-3.1.12.tar.gz"
+    sha256 "42dbefd8d9e2576c496ed0059f3103dcef7125b9ce16f9d5f9c834aed44a1dac"
   end
 
   resource "idna" do
     url "https://files.pythonhosted.org/packages/ad/13/eb56951b6f7950cadb579ca166e448ba77f9d24efc03edd7e55fa57d04b7/idna-2.8.tar.gz"
     sha256 "c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407"
-  end
-
-  resource "ipaddress" do
-    url "https://files.pythonhosted.org/packages/97/8d/77b8cedcfbf93676148518036c6b1ce7f8e14bf07e95d7fd4ddcb8cc052f/ipaddress-1.0.22.tar.gz"
-    sha256 "b146c751ea45cad6188dd6cf2d9b757f6f4f8d6ffb96a023e6f2e26eea02a72c"
   end
 
   resource "jaraco.functools" do
@@ -133,8 +128,8 @@ class Salt < Formula
   end
 
   resource "msgpack" do
-    url "https://files.pythonhosted.org/packages/e4/4f/057549afbd12fdd5d9aae9df19a6773a3d91988afe7be45b277e8cee2f4d/msgpack-1.0.0.tar.gz"
-    sha256 "9534d5cc480d4aff720233411a1f765be90885750b07df772380b34c10ecb5c0"
+    url "https://files.pythonhosted.org/packages/59/04/87fc6708659c2ed3b0b6d4954f270b6e931def707b227c4554f99bd5401e/msgpack-1.0.2.tar.gz"
+    sha256 "fae04496f5bc150eefad4e9571d1a76c55d021325dcd484ce45065ebbdd00984"
   end
 
   resource "portend" do
@@ -143,8 +138,8 @@ class Salt < Formula
   end
 
   resource "psutil" do
-    url "https://files.pythonhosted.org/packages/73/93/4f8213fbe66fc20cb904f35e6e04e20b47b85bee39845cc66a0bcf5ccdcb/psutil-5.6.7.tar.gz"
-    sha256 "ffad8eb2ac614518bbe3c0b8eb9dffdb3a8d2e3a7d5da51c5b974fb723a5c5aa"
+    url "https://files.pythonhosted.org/packages/e1/b0/7276de53321c12981717490516b7e612364f2cb372ee8901bd4a66a000d7/psutil-5.8.0.tar.gz"
+    sha256 "0c9ccb99ab76025f2f0bbecf341d4656e9c1351db8cc8a03ccd62e318ab4b5c6"
   end
 
   resource "pyasn1" do
@@ -222,11 +217,6 @@ class Salt < Formula
     sha256 "b46d3fc69ba5f367df96d91f8271e8ad667a198d5a28e215a6c3d9acd133a911"
   end
 
-  resource "smmap2" do
-    url "https://files.pythonhosted.org/packages/88/77/b1542b654fa594580fa82a1e0af4bf81074323d272a50a838c943e3de7b4/smmap2-3.0.1.tar.gz"
-    sha256 "44cc8bdaf96442dbb9a8e2e14377d074b3d0eea292eee3c95c8c449b6c92c557"
-  end
-
   resource "tempora" do
     url "https://files.pythonhosted.org/packages/2f/b5/5b0464385454c5ca93a39a1c6acefdf574aeb10ef45fa8958b3832cc7d96/tempora-1.14.1.tar.gz"
     sha256 "cb60b1d2b1664104e307f8e5269d7f4acdb077c82e35cd57246ae14a3427d2d6"
@@ -254,6 +244,10 @@ class Salt < Formula
 
   def install
     ENV["SWIG_FEATURES"]="-I#{Formula["openssl@1.1"].opt_include}"
+    xy = Language::Python.major_minor_version Formula["python@3.9"].bin/"python3.9"
+
+    inreplace buildpath/"requirements/static/pkg/py#{xy}/darwin.txt", /^pyobjc.*$/, ""
+    inreplace buildpath/"requirements/darwin.txt", /^pyobjc.*$/, ""
 
     virtualenv_install_with_resources
 
