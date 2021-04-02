@@ -6,10 +6,10 @@ class Velero < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e38bd17473efe454d815194e52ca516ce08ca1623e0d0a2f33a7043ac22f51d1"
-    sha256 cellar: :any_skip_relocation, big_sur:       "48533b571d22497df4c10e6ec43a356e060923ebdeebf79d4294bb06ac4dd222"
-    sha256 cellar: :any_skip_relocation, catalina:      "e88af008dbe0f1aacd927c9d1d545cb4377b1bbcbdefd8ea7ef60d29eb52fae5"
-    sha256 cellar: :any_skip_relocation, mojave:        "d8c95c53579e629b85ad556d49f01fc9b669e97d5a0d08158af20faaf1fe2702"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d04cf9ea27c5d22b4b0a3c58fcdd5402875ed170f0c02be02fd7ba55cae2f66a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "584b98c46c1e6b3bfbf2a94e96f2fc207b8cc972da055bc7edc1f0b633627968"
+    sha256 cellar: :any_skip_relocation, catalina:      "e63e4913effdf88cc9159d043179db47cfd5599ce714c98e4571abbd57a61564"
+    sha256 cellar: :any_skip_relocation, mojave:        "622d2e462a17ddac1d064a16bc7f46c0c05cb5ae45be98ba025bc2067deb83fe"
   end
 
   depends_on "go" => :build
