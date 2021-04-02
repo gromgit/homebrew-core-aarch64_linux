@@ -8,9 +8,9 @@ class Datalad < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "110b3f6fce5af249a4d1fce62675cad76ff2ae7746924536a7686525f96c0242"
-    sha256 cellar: :any_skip_relocation, catalina: "5092a669ce9958c62d5a2bb0a142462e1839c9789e952ad8556e9cb00543e4a3"
-    sha256 cellar: :any_skip_relocation, mojave:   "29671dd544ba8c61421eb1016056d6e173cae8df3e8c61b3a82ef0ccbc1d3e72"
+    sha256 cellar: :any_skip_relocation, big_sur:  "95adde10b03f74c1d82a7b1a21e021b13ade3bd29aa84f2570f325abe1d91255"
+    sha256 cellar: :any_skip_relocation, catalina: "a28537d8f6fda34c262cc553f33a8bbad266bf084382b257d8628e6e76a2c65a"
+    sha256 cellar: :any_skip_relocation, mojave:   "dac1dbe18051ed8cda28adff6ee25b2ba66f4cfe7a98b0387932ee6edce1e293"
   end
 
   depends_on "git-annex"
