@@ -1,8 +1,8 @@
 class Tz < Formula
   desc "CLI time zone visualizer"
   homepage "https://github.com/oz/tz"
-  url "https://github.com/oz/tz/archive/refs/tags/v0.4.tar.gz"
-  sha256 "79764c29b66c2d5a158967e58ae0ca413f1af590b63920016ad7f0767f8c8494"
+  url "https://github.com/oz/tz/archive/refs/tags/v0.5.tar.gz"
+  sha256 "185445537bd8dee92d6419419a141c38c49643c8dcf507f27d41190629f32f69"
   license "GPL-3.0-or-later"
   head "https://github.com/oz/tz.git", branch: "main"
 
@@ -25,7 +25,7 @@ class Tz < Formula
     # "<ESC>[6n" to report the cursor position.  For now we just run
     # the command for a second and see that it tried to send some ANSI out of it.
     require "pty"
-    r, _, pid = PTY.spawn "#{bin}/tz"
+    r, _, pid = PTY.spawn "#{bin}/tz", "-q"
     sleep 1
     Process.kill("TERM", pid)
     assert_match(/\e\[/, r.read)
