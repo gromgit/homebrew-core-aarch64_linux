@@ -7,11 +7,10 @@ class Driftctl < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b1570cf0fad1d8b447c3836c6554a625f10d435dda82b8f3a9ce300d85203759"
-    sha256 cellar: :any_skip_relocation, big_sur:       "2f6f3d8466074e6ff69009b04863a53c5b575a85f88b27a3be9f6e9444279303"
-    sha256 cellar: :any_skip_relocation, catalina:      "5aed6939f3ec8d301e100b3848e777d0825d4690419c728561799d22ba6e1e22"
-    sha256 cellar: :any_skip_relocation, mojave:        "c28109541d8b1be9edcb8775003651e104db174a060c04e3091f2eaa1bd8113c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b3e1149bf29e9d0c166008614284792999923eaa28784f5c7b65c9df5103bdb8"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7577a4120aa43dadadcc973b5fe17825e89199dc9d86e83fd0d81b35a748c685"
+    sha256 cellar: :any_skip_relocation, catalina:      "a3da299d167b148cf52ccec98eb0826dfdc87c32c2bbc6fc129b2c7f0257ce5b"
+    sha256 cellar: :any_skip_relocation, mojave:        "b61798625c193ec39740f7b7f5c26d83b9c6594ee62a784992f74e0ff0788952"
   end
 
   depends_on "go" => :build
