@@ -7,10 +7,10 @@ class Duf < Formula
   head "https://github.com/muesli/duf.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3556473b7f52a6e0827c7081010f17400929542c35470b0d8c8960fe5f5f0528"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ecb3b0d979a756c9e3551b7052a1d16a9d46fdf8310fa0472fde2400452abba8"
-    sha256 cellar: :any_skip_relocation, catalina:      "afc2b4a8a42ab1d1f59f3cac6b77522e5c2ac66366a1121aa32b75f6ddfd99be"
-    sha256 cellar: :any_skip_relocation, mojave:        "1412849b86eddeff3f933ce283eceaf07f9916a41a6b772cfc34b3fcf0bb339e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2a71c40e8e3fa589804c5dbf0db6902fb975dda4d041a2a4b71807154eb5c067"
+    sha256 cellar: :any_skip_relocation, big_sur:       "532553ff3bc0b3e1a3102043eab1f02560741f6e41d284738bc2906e92bef55f"
+    sha256 cellar: :any_skip_relocation, catalina:      "7a2781e6da9734ce9fd6a902a66306c9afdf7f31796479f63bc24e0ea1626d22"
+    sha256 cellar: :any_skip_relocation, mojave:        "4016e727433f48e0c1730bff8f82a6c9ef2595b5912aac1e92ca0c74dbb51bf5"
   end
 
   depends_on "go" => :build
