@@ -12,10 +12,10 @@ class Exa < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b5fc2d5300cbd6ab2d3c113ce011c6ac187e8e774f3d3e4d1f1592b109206d39"
-    sha256 cellar: :any_skip_relocation, big_sur:       "2ea88382cf3e9906bc27cd37f3f57c953cce9fcd686d958824ccb27093c5c8da"
-    sha256 cellar: :any_skip_relocation, catalina:      "979193384c57b8858b592d1200468cb6584ffa7df7833d6777eb8637e0ecfc97"
-    sha256 cellar: :any_skip_relocation, mojave:        "af7d2f089dc99cab221dbc57c33c443e112a843911d561588621e60378f56a46"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "17c9a2d3b8dfbe891e75273cc5168c8aaf2637ce5dfa8e4eea8597f87444ccaa"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7eb1810c90baefdb929cc0da8c49c6c31c54c68edf6bc28e357294127a439506"
+    sha256 cellar: :any_skip_relocation, catalina:      "b57beae48897bdc664fe487d97a5fd2117c898fd1c89903786ffd8214be42020"
+    sha256 cellar: :any_skip_relocation, mojave:        "4d6c09c544afcf8fcebc9a18fbaef262e8da65de7c916ccfa5df8c5d55a764b6"
   end
 
   depends_on "pandoc" => :build unless Hardware::CPU.arm?
