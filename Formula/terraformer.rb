@@ -1,8 +1,8 @@
 class Terraformer < Formula
   desc "CLI tool to generate terraform files from existing infrastructure"
   homepage "https://github.com/GoogleCloudPlatform/terraformer"
-  url "https://github.com/GoogleCloudPlatform/terraformer/archive/0.8.11.tar.gz"
-  sha256 "d3f3710d15fcb75cda82d1c3d51e7ce37eeb059bc22351449d84f3b6d3fa2e43"
+  url "https://github.com/GoogleCloudPlatform/terraformer/archive/0.8.12.tar.gz"
+  sha256 "d60ffd0ec8c852cfea85c8e4f5274403f2f1049a5c758e45060c45d9544f05a8"
   license "Apache-2.0"
   head "https://github.com/GoogleCloudPlatform/terraformer.git"
 
@@ -14,12 +14,6 @@ class Terraformer < Formula
   end
 
   depends_on "go" => :build
-
-  # remove in next release
-  patch do
-    url "https://github.com/chenrui333/terraformer/commit/106ab51.patch?full_index=1"
-    sha256 "a222bcee9f1532f6adc75715f83baa9cc4a032cfbc258afca953dfede4ee8649"
-  end
 
   def install
     system "go", "build", *std_go_args, "-ldflags", "-s -w"
