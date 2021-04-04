@@ -3,8 +3,8 @@ require "language/node"
 class GruntCli < Formula
   desc "JavaScript Task Runner"
   homepage "https://gruntjs.com/"
-  url "https://registry.npmjs.org/grunt-cli/-/grunt-cli-1.4.1.tgz"
-  sha256 "8fd8d2f880025da726adfdff427805c55a43c06e86121223818a1485e1d02a4b"
+  url "https://registry.npmjs.org/grunt-cli/-/grunt-cli-1.4.2.tgz"
+  sha256 "27e8008b092a6107d8b1074e33492f1a940eef7db6151d6fab04329c9ce5eb76"
   license "MIT"
 
   bottle do
