@@ -33,7 +33,8 @@
     "extra_packages": ["wheel"]
   },
   "checkov": {
-    "exclude_packages": ["tabulate"]
+    "exclude_packages": ["tabulate", "junit-xml"],
+    "extra_packages": ["junit-xml-2"]
   },
   "diffoscope": "diffoscope[cmdline]",
   "dvc": {
