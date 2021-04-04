@@ -1,8 +1,8 @@
 class Shellz < Formula
   desc "Small utility to track and control custom shellz"
   homepage "https://github.com/evilsocket/shellz"
-  url "https://github.com/evilsocket/shellz/archive/v1.5.0.tar.gz"
-  sha256 "870bcc2d6e4fd20913556f95325bc3e1876f3243ef67295c33e2bcc990126e97"
+  url "https://github.com/evilsocket/shellz/archive/v1.5.1.tar.gz"
+  sha256 "ff7d5838fd0f8385a700bd882eab9f6e5da023899458c9215e36e2244cc11bfd"
   license "GPL-3.0-only"
 
   bottle do
@@ -13,20 +13,16 @@ class Shellz < Formula
     sha256 cellar: :any_skip_relocation, sierra:      "b659a90bd79e516d71679e68d36a35038937f23ee9d1de1dfee313fd11b0169e"
   end
 
-  depends_on "dep" => :build
   depends_on "go" => :build
 
-  def install
-    ENV["GOPATH"] = buildpath
-    ENV["GO111MODULE"] = "auto"
-    (buildpath/"src/github.com/evilsocket/shellz").install buildpath.children
+  # remove in next release
+  patch do
+    url "https://github.com/chenrui333/shellz/commit/10bd430.patch?full_index=1"
+    sha256 "c23d375e7ea2b20e3c2c0fec39adda384a0ce34482c7d97f8aa63c1526bf80f3"
+  end
 
-    cd "src/github.com/evilsocket/shellz" do
-      system "dep", "ensure", "-vendor-only"
-      system "make", "build"
-      bin.install "shellz"
-      prefix.install_metafiles
-    end
+  def install
+    system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/shellz"
   end
 
   test do
