@@ -1,8 +1,8 @@
 class P7zip < Formula
   desc "7-Zip (high compression file archiver) implementation"
   homepage "https://github.com/jinfeihan57/p7zip"
-  url "https://github.com/jinfeihan57/p7zip/archive/v17.03.tar.gz"
-  sha256 "bb4b9b21584c0e076e0b4b2705af0dbe7ac19d378aa7f09a79da33a5b3293187"
+  url "https://github.com/jinfeihan57/p7zip/archive/v17.04.tar.gz"
+  sha256 "ea029a2e21d2d6ad0a156f6679bd66836204aa78148a4c5e498fe682e77127ef"
   license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
 
   bottle do
@@ -15,13 +15,6 @@ class P7zip < Formula
 
   # Remove non-free RAR sources
   patch :DATA
-
-  # Fix AES security bugs
-  # https://github.com/jinfeihan57/p7zip/pull/117
-  patch do
-    url "https://github.com/jinfeihan57/p7zip/commit/6106df26ff64fa8147bfc9abdc0a14908b5d3871.patch?full_index=1"
-    sha256 "5fcce7293ba017b4aa3ba5afbe6f2a847d60a785ea0966c31ac33da4bdf3ef6e"
-  end
 
   def install
     on_macos do
