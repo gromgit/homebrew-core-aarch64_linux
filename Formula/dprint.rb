@@ -7,9 +7,10 @@ class Dprint < Formula
   head "https://github.com/dprint/dprint.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "4bf75bff51dcfd67c9fefc8497e655f943a2943fa01bec056f7ef5fadb46ecf8"
-    sha256 cellar: :any_skip_relocation, catalina: "cac486128a7aacc852a30da4a180f11e0cc45e27ed0536c86db954bf265d9a00"
-    sha256 cellar: :any_skip_relocation, mojave:   "65256fc4f360485ec6450b4117e6f9a497054afdb650cd986f78126ebb4e9411"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a7afde55dcfa9592219d4f75c1aa6289b5b8f79919290253c0d1ae0dae6e9f12"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4bf75bff51dcfd67c9fefc8497e655f943a2943fa01bec056f7ef5fadb46ecf8"
+    sha256 cellar: :any_skip_relocation, catalina:      "cac486128a7aacc852a30da4a180f11e0cc45e27ed0536c86db954bf265d9a00"
+    sha256 cellar: :any_skip_relocation, mojave:        "65256fc4f360485ec6450b4117e6f9a497054afdb650cd986f78126ebb4e9411"
   end
 
   depends_on "rust" => :build
