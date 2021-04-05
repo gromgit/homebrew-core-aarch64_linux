@@ -1,8 +1,8 @@
 class Grokj2k < Formula
   desc "JPEG 2000 Library"
   homepage "https://github.com/GrokImageCompression/grok"
-  url "https://github.com/GrokImageCompression/grok/archive/v8.0.2.tar.gz"
-  sha256 "ab16fee0d804fc0bf8e18d36a6ba6564d95881c5cc1d7139f9860a54f260f4d8"
+  url "https://github.com/GrokImageCompression/grok/archive/v8.0.3.tar.gz"
+  sha256 "31a432810270fdd952bcb31749e6167ac62f4f1c86c56f238f0de63227671392"
   license "AGPL-3.0-or-later"
   head "https://github.com/GrokImageCompression/grok.git"
 
@@ -29,11 +29,12 @@ class Grokj2k < Formula
   def install
     system "cmake", ".", *std_cmake_args, "-DBUILD_DOC=ON"
     system "make", "install"
+    include.install_symlink "grok-#{version.major_minor}" => "grok"
   end
 
   test do
     (testpath/"test.c").write <<~EOS
-      #include <grok.h>
+      #include <grok/grok.h>
 
       int main () {
         grk_image_cmptparm cmptparm;
@@ -46,7 +47,7 @@ class Grokj2k < Formula
         return 0;
       }
     EOS
-    system ENV.cc, "-I#{include.children.first}", "-L#{lib}", "-lgrokj2k", "test.c", "-o", "test"
+    system ENV.cc, "-I#{opt_include}", "-L#{opt_lib}", "-lgrokj2k", "test.c", "-o", "test"
     # Linux test
     # system ENV.cc, "test.c", "-I#{include.children.first}", "-L#{lib}", "-lgrokj2k", "-o", "test"
     system "./test"
