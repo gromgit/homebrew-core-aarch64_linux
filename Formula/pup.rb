@@ -33,7 +33,7 @@ class Pup < Formula
 
     cd dir do
       system "gox", "-arch", "amd64", "-os", os, "./..."
-      bin.install "pup_darwin_amd64" => "pup"
+      bin.install "pup_#{os}_amd64" => "pup"
     end
 
     prefix.install_metafiles dir
