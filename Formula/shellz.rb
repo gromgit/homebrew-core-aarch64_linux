@@ -6,11 +6,10 @@ class Shellz < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:     "901aa899dffdce56b40da9b622acd01acb15103cbae6d06cb35320fc85ffa626"
-    sha256 cellar: :any_skip_relocation, catalina:    "1c1eabfee3228f25f75b4838f3d0a8a49e84c87eb2926e78cdf05dff094aa0e8"
-    sha256 cellar: :any_skip_relocation, mojave:      "aa5043471c26fba80ba9db128f5ff3e8b60051bd76a8d26c3ad114b59b24c8b3"
-    sha256 cellar: :any_skip_relocation, high_sierra: "83b7e5e52243efe75e302853574243667a8e9cf9899d480c12c27886e77a9788"
-    sha256 cellar: :any_skip_relocation, sierra:      "b659a90bd79e516d71679e68d36a35038937f23ee9d1de1dfee313fd11b0169e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4e891a0581c95cdbe2b0736a921e97fef50b702fcd445dc9c2c26d6acd529ccd"
+    sha256 cellar: :any_skip_relocation, big_sur:       "85f5058492ebd2e7d64347418f3a66267da72800ba6ff94682fbcd23d1c1614e"
+    sha256 cellar: :any_skip_relocation, catalina:      "5f0e41d34454419df76d6a4bd7213b4c20297bf0a6732bddbebce8fbfbc2ba5a"
+    sha256 cellar: :any_skip_relocation, mojave:        "3200f4361fc2d855b7417d48bf853f16346c14d0745fc831758120a427f81cef"
   end
 
   depends_on "go" => :build
