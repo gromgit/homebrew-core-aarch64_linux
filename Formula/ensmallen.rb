@@ -8,10 +8,10 @@ class Ensmallen < Formula
   head "https://github.com/mlpack/ensmallen.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "423eada321432c1c8dd765bc75b811e04547b269dff6bd210a349d362a498e3b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e1f7354fa4e31a5312961d8c47c1b45f81d590f3074a5214a6c0ccf2e9e71b8f"
-    sha256 cellar: :any_skip_relocation, catalina:      "bde043315aa52c771e43a628a9282de67e3599f982364da216dca51ca3db0966"
-    sha256 cellar: :any_skip_relocation, mojave:        "03ff20db9a165c237b5ef647fa7fefad606d7ae2f422ec52294d64bd254a5d9d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "67c958656b94df83c91d9afb093d63b68cd0d64c78925a82c036a60646407e1d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "1de9180257369d90837377afc898ef254ae9a9d5e2ca96d2ba03e8a1f70e325c"
+    sha256 cellar: :any_skip_relocation, catalina:      "bf27a3835fbb2600d76a3e9f7271303e09518738bbe4179349d2fce5af4e45d6"
+    sha256 cellar: :any_skip_relocation, mojave:        "6efbf38dff5223316e4edc0aa28d6d660aa6aa7c2a9407f6e59bd46ac6109855"
   end
 
   depends_on "cmake" => :build
