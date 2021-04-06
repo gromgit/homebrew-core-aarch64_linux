@@ -1,8 +1,8 @@
 class LeafProxy < Formula
   desc "Lightweight and fast proxy utility"
   homepage "https://github.com/eycorsican/leaf"
-  url "https://github.com/eycorsican/leaf/archive/v0.2.13.tar.gz"
-  sha256 "4688bf50d3e8c27babe174a09ef2fff66a8843ae33f010081182bac6380b9977"
+  url "https://github.com/eycorsican/leaf/archive/v0.2.14.tar.gz"
+  sha256 "8760b74f1a9231ca736a4d533fa08ea4982f89d2781753c09cf0ce1b14658cd1"
   license "Apache-2.0"
   head "https://github.com/eycorsican/leaf.git"
 
@@ -19,7 +19,7 @@ class LeafProxy < Formula
 
   resource "lwip" do
     url "https://github.com/eycorsican/lwip-leaf.git",
-        revision: "0c189c0fffa52354738ebba6033d365bc0d096fd"
+        revision: "86632e2747c926a75d32be8bd9af059aa38ae75e"
   end
 
   def install
