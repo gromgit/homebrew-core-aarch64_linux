@@ -1,8 +1,8 @@
 class CloudNuke < Formula
   desc "CLI tool to nuke (delete) cloud resources"
   homepage "https://gruntwork.io/"
-  url "https://github.com/gruntwork-io/cloud-nuke/archive/v0.1.27.tar.gz"
-  sha256 "484d56fa848964bd1f351a344de0aab4886a781b9c8141e1860080641486cc5a"
+  url "https://github.com/gruntwork-io/cloud-nuke/archive/v0.1.28.tar.gz"
+  sha256 "0b340e5225d701bac9107374b8341b0f50e06e0dddbeab710bf8b97128d59f1b"
   license "MIT"
   head "https://github.com/gruntwork-io/cloud-nuke.git"
 
@@ -14,12 +14,6 @@ class CloudNuke < Formula
   end
 
   depends_on "go" => :build
-
-  # remove in next release
-  patch do
-    url "https://github.com/chenrui333/cloud-nuke/commit/5f2919c.patch?full_index=1"
-    sha256 "049a8e9dfc5715c8cb322b53ea76f17192ba46342a0d09cd39d78324ba138cfa"
-  end
 
   def install
     system "go", "build", "-ldflags", "-s -w -X main.VERSION=v#{version}", *std_go_args
