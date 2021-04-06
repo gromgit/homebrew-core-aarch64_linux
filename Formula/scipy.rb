@@ -7,10 +7,10 @@ class Scipy < Formula
   head "https://github.com/scipy/scipy.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "77db460fd4323ed36fe928a1bdec4dee2e03aff74190f7d4771fd423d100e6e2"
-    sha256 cellar: :any, big_sur:       "b7fa6bd0b970993177b67d5801b7d1a6a0b21ac26a9fa106da136b930a8a9834"
-    sha256 cellar: :any, catalina:      "3312dead60fc9c8be4356c669be35fc6df547f79e5ad7d2205d51c07183c865e"
-    sha256 cellar: :any, mojave:        "869a09d250583791715494cf5b15ab1d00060f8e9213eec08321826259fba796"
+    sha256 cellar: :any, arm64_big_sur: "8f4aaff457cb372a16ee2c45655cc52a5ab7f7198d655c2c882213335abf705c"
+    sha256 cellar: :any, big_sur:       "66b4d9e02d62584d06db10df8f774705ad98604a16b1b0f2f2c20d16ed751f43"
+    sha256 cellar: :any, catalina:      "c31feca2fe5c4f88b142e4afbcf84c8fd8e7e590edeb14da5700cc4a3099b604"
+    sha256 cellar: :any, mojave:        "0ee946c47ba5f056ec8d430cb4f5c88d9afe3ee72522c2ec43d5661e3470d7e6"
   end
 
   depends_on "swig" => :build
