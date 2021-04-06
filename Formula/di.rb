@@ -11,10 +11,10 @@ class Di < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a48d716bb48256f028b7d25f4cebef804946833b4778619bb7bcb3a18856bf66"
-    sha256 cellar: :any_skip_relocation, big_sur:       "50ce1db9a6fcc59b37e873b62750c82a1bc8ed36af64342afa533f39a52046d7"
-    sha256 cellar: :any_skip_relocation, catalina:      "2ad832b9d2eba7c3c197e67828d41b4ff112dca9af8db7fe71b2fd745f983b74"
-    sha256 cellar: :any_skip_relocation, mojave:        "7381006ae44f23fab65ddb4da6aad65e1aca43180cc212a3bf12e51bbc808503"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d4135217bb9c6a8141be9af407c421299441c2bd4d0e3304c45b3a9203ba57dc"
+    sha256 cellar: :any_skip_relocation, big_sur:       "2ea8c9f4d3cc6f05716b53fce8686536e9cbcb873e915227cba240e8e0ae81f6"
+    sha256 cellar: :any_skip_relocation, catalina:      "250f47d6e8b6ffe545cc3bf5421bde97e342f901e66ac4deb4b59aeaf1c5c308"
+    sha256 cellar: :any_skip_relocation, mojave:        "c0c124d45daab04a22e0d831b0288d39141ad7cd335fb60fea8662c6992f8b9b"
   end
 
   def install
