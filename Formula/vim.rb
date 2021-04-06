@@ -5,6 +5,7 @@ class Vim < Formula
   url "https://github.com/vim/vim/archive/v8.2.2725.tar.gz"
   sha256 "a8aca906cf63fdc4264f86c1c39f8164989de0be3dc18553cb23bd6226c361a9"
   license "Vim"
+  revision 1
   head "https://github.com/vim/vim.git"
 
   bottle do
@@ -16,11 +17,10 @@ class Vim < Formula
 
   depends_on "gettext"
   depends_on "lua"
+  depends_on "ncurses"
   depends_on "perl"
   depends_on "python@3.9"
   depends_on "ruby"
-
-  uses_from_macos "ncurses"
 
   conflicts_with "ex-vi",
     because: "vim and ex-vi both install bin/ex and bin/view"
