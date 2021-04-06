@@ -6,10 +6,10 @@ class Promtail < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "684dd470bba1ab702428bcc768e3ced16060837293ba9f12e34823215b5b138e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3bc21b34bb977a87c4e8fe2bcd365db6e21b42233fc100d49bb60dd7a5bd71ed"
-    sha256 cellar: :any_skip_relocation, catalina:      "8016c41a0ab1eeccbe0a79ee4c71fde464bdab004c62f4c6c6d8c165ad65a6f8"
-    sha256 cellar: :any_skip_relocation, mojave:        "687056a4e2c498755da1c54af3cafc5d57743496772cfad92db615f3c1801362"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "cd1c8a80055b249865bc16ef4f2244e50fac22ab2ff408454deb1bf23c001664"
+    sha256 cellar: :any_skip_relocation, big_sur:       "96b089d1cf25ce0638b5bde8532313d31e13007e7e1395f5bbb576cb43596823"
+    sha256 cellar: :any_skip_relocation, catalina:      "1e1ef057e6531655bd9c719d6a9bb0ae37d642b047a95d930d37f3169357258b"
+    sha256 cellar: :any_skip_relocation, mojave:        "0ea6d2a1505803ca144e4f8d3574e5be38e82ff068ec207d4ff27bfaea9ac4ad"
   end
 
   depends_on "go" => :build
