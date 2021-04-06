@@ -12,10 +12,10 @@ class SqliteAnalyzer < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c7ce1b6b5e65f146261cc11d3104ea38070e42bf96b51998d50e5576e0ac2749"
-    sha256 cellar: :any_skip_relocation, big_sur:       "512191b5c3ca145bab8daab7407826b3ff6ff843b1c9a5bfa8133e6f1a749b35"
-    sha256 cellar: :any_skip_relocation, catalina:      "d78a7067cdb519c7fd1bdb450173fc5549ba4cd01c16f64618aaa64b3843b6cf"
-    sha256 cellar: :any_skip_relocation, mojave:        "65c16d45b0afc3bd942cd1b69728bd1db83942e1593218b2a329a0cda7bb4e61"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "83aec45fa8fc0e93016bc9448ced3e3df5cde9c50a8c2182139a33c0841d0288"
+    sha256 cellar: :any_skip_relocation, big_sur:       "9179d9837d8fb46777f716a6c6c56dd900bfd0ed84d530a030f24d197ac67204"
+    sha256 cellar: :any_skip_relocation, catalina:      "15117fbba7169feee9f0ec8b0ac813ebb7b9e9ccdc678b705c901874330fce14"
+    sha256 cellar: :any_skip_relocation, mojave:        "ed86244c5844bd978f4f243efad83ac21caf469f5450e98913d68b523987c2dc"
   end
 
   def install
