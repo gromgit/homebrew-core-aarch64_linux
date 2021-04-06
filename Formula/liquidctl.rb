@@ -3,8 +3,8 @@ class Liquidctl < Formula
 
   desc "Cross-platform tool and drivers for liquid coolers and other devices"
   homepage "https://github.com/jonasmalacofilho/liquidctl"
-  url "https://files.pythonhosted.org/packages/2b/08/7e2ef5744d6c56a5ceb79fdc1bf280fff53111859a554f41ecb56f80e77c/liquidctl-1.5.1.tar.gz"
-  sha256 "9480e2dfbb0406fa8d57601a43a0f7c7573de1f5f24920b0e4000786ed236a8b"
+  url "https://files.pythonhosted.org/packages/f1/47/fcdf947dc9edfce97bf2d91cbbe2b6b1cd979d8dbbae76e4d1b7a59a0793/liquidctl-1.6.0.tar.gz"
+  sha256 "486dc366f10810a4efb301f3ceda10657a09937e9bc936cecec792ac26c2f186"
   license "GPL-3.0-or-later"
   head "https://github.com/jonasmalacofilho/liquidctl.git"
 
