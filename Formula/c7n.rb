@@ -13,10 +13,10 @@ class C7n < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a2c557f8b99a4cb78e4f505c8c530b1032e9cb3ccd7b1d7ea71e52f013fd0a24"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b620cf92b010f74bcbd593aa4ad2bb214fc6409a811211e2a4a886558dd1ae2f"
-    sha256 cellar: :any_skip_relocation, catalina:      "4e912eacec68187bb8995f42a98bb8228204039e9d7a20384ac9aeaee019fbb8"
-    sha256 cellar: :any_skip_relocation, mojave:        "3503b3d947cc8763e6ec2254f28b0d877b008ed662878858e4c34d237dba2ce2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2c8882d52e1eaabd2df446e7b6bbe91979fb8a6d110852d9c44ac3da976f2cb6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5b04c9aed7f6ea764ab0322fb0a6f3e7e58737a9f031a5cf7ad85cb408f834f0"
+    sha256 cellar: :any_skip_relocation, catalina:      "36dba24d4fc6d75b84c56f6e57af83843064dafae3b86e512b3a3c21c8e1e208"
+    sha256 cellar: :any_skip_relocation, mojave:        "96b4249641926857ee779ab8d00c37515b3ed61836688526737706ac379fbd9d"
   end
 
   depends_on "python-tabulate"
