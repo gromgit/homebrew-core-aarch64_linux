@@ -11,11 +11,10 @@ class Ruby < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "501ba0c0968ccebdc18cb781820e401764243b536c30821909dcd5049b5a73d2"
-    sha256 big_sur:       "60f0b39ab2714afc942145c00684fae27c6388cafdb59fd9c8f1dca97fcfc773"
-    sha256 catalina:      "b869f4edd6b14d7c54e8994d77b5d92f935ca67c746babbda910471de21ac6aa"
-    sha256 mojave:        "efdb21d54bd759a1862140d61ab83b49221aa02fc9e1891972053da7edfb855b"
+    sha256 arm64_big_sur: "860b8b8d1642a66577df16a442ade6d7b21c0d66c14f8963c9bd4ad11bae790a"
+    sha256 big_sur:       "00daa93e4b30d3bbeac5089c1c34355315774e0d9fd1d9588402b2e755089c53"
+    sha256 catalina:      "1af6edba23ff9aa12fcab0fee9246cf46110263bf962e46e800152096b0c7017"
+    sha256 mojave:        "c3e943ccbe925a3c624952e249b06083947e5025dcca09511ec85a88bd47ac3c"
   end
 
   head do
