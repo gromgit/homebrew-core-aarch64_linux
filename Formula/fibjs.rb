@@ -1,8 +1,8 @@
 class Fibjs < Formula
   desc "JavaScript on Fiber"
   homepage "https://fibjs.org/"
-  url "https://github.com/fibjs/fibjs/releases/download/v0.31.0/fullsrc.zip"
-  sha256 "e5111ece8e6350f5d530d4b17003c2019be27017c5dec75c488587e942c502a0"
+  url "https://github.com/fibjs/fibjs/releases/download/v0.32.1/fullsrc.zip"
+  sha256 "e4fbe79ab8cfe9d33cb56771524a67d1231770b312bc677165344a0a9efb72dd"
   license "GPL-3.0-only"
   head "https://github.com/fibjs/fibjs.git"
 
@@ -19,6 +19,7 @@ class Fibjs < Formula
     # the build script breaks when CI is set by Homebrew
     begin
       env_ci = ENV.delete "CI"
+      system "./build", "clean"
       system "./build", "release", "-j#{ENV.make_jobs}"
     ensure
       ENV["CI"] = env_ci
