@@ -7,10 +7,10 @@ class Libfabric < Formula
   head "https://github.com/ofiwg/libfabric.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "5ff8006f95b58535cccc2ad7b2f2b4ba66888c103dfb459d96dde05feee8c4ff"
-    sha256 cellar: :any, big_sur:       "cc6aa253fb948b77386ce7fdc5c64ced7fa2a0d31c1b248c39f3815e5cc577eb"
-    sha256 cellar: :any, catalina:      "2309aec7c76635a8cdd18f79e0abac6cf8ff1813857958d9dfab280e5245a244"
-    sha256 cellar: :any, mojave:        "1b854ecd4b7a50023f7c96f5e3784aae452f48eb02ee84e427d2cb72691263a0"
+    sha256 cellar: :any, arm64_big_sur: "576fc78599d5f8f83a21d1181227055b2b7c714d42b23729399241040bfc9c6e"
+    sha256 cellar: :any, big_sur:       "a3a811958cc96b20969fac9962aa22e48d9542b9edae5d714a227803afa79db4"
+    sha256 cellar: :any, catalina:      "60b69d42dbcaadaabe396a32352b54b003149997f1dfc325d0ec8c101b2fee86"
+    sha256 cellar: :any, mojave:        "d4367f6c53c99f49fed8bff092d6e6101bd61e2be6e26893c324d5a2a84a71ce"
   end
 
   depends_on "autoconf" => :build
