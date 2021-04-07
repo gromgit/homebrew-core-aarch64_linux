@@ -5,6 +5,13 @@ class Kickstart < Formula
   sha256 "f15f09467bf13f89dced49ba621c478857e2ee96fa87377ef0e922aae52e4677"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1ac3f6c4f7c97bffa22c87b810fe651b83921526b8542dc163865d5582ffdea8"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6f4c84c9b1cde4eb73d3c3a2fff74bb68e54dda1fecc761b417ff81cf874ea3f"
+    sha256 cellar: :any_skip_relocation, catalina:      "1ef6bda928d825729f0f981f4b49d9cb39dc445fabf46c49b4bddb660e1c58f8"
+    sha256 cellar: :any_skip_relocation, mojave:        "f06252c5f976a68a14056198525ba08977920c786de1d3969e3bc14ca202e1ae"
+  end
+
   depends_on "rust" => :build
 
   def install
