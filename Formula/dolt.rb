@@ -11,10 +11,10 @@ class Dolt < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fe473d41a348b6cb78bd44205575b7171d63256443a2a50e00b6344db8c89578"
-    sha256 cellar: :any_skip_relocation, big_sur:       "488e23130823ab57bf95fbe3a1c53ff8dec85dacd4689db6ca788cc78f8174d9"
-    sha256 cellar: :any_skip_relocation, catalina:      "43e33caeda6bd1deacfaad6388892d8f02d0811cec19aa1ad1d9e24abec1ef22"
-    sha256 cellar: :any_skip_relocation, mojave:        "3a57af08ae456207325ee0617ae7cf1cd62d26a6236351c7f4029f4e41a782c2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0f9336512d7093c14ebcb939f160f5c821caf5aab563560234d1336f1b671a06"
+    sha256 cellar: :any_skip_relocation, big_sur:       "93e271ca938cc8ddfd9f39dd8d9fbce2c56677b18f8398143b64f7ca0abab274"
+    sha256 cellar: :any_skip_relocation, catalina:      "b7926054b9e413e8f8ed95fe63344ff01a2d143bc583730ba78422b3c05d6d9d"
+    sha256 cellar: :any_skip_relocation, mojave:        "68594ac9563dec7077e770f1ffb0f58cd21da3fe4d9f1295c651477c77f5cb79"
   end
 
   depends_on "go" => :build
