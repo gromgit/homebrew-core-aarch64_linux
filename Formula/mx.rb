@@ -5,6 +5,12 @@ class Mx < Formula
   sha256 "18c2a8d1af4afd7245fab7fe60f46d6b80a984d23596b053da71f7ef53f68caa"
   license "GPL-2.0-only"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, big_sur:  "dd671091cb445364e11ea8765b21cebfecb0d4f587520ebfdabae5fada44827a"
+    sha256 cellar: :any_skip_relocation, catalina: "36514ea834b5d34abd5f0a0f180aff3284b833449fed7bdea731c62e2dbde712"
+    sha256 cellar: :any_skip_relocation, mojave:   "a58e3e75ce71e9e813c9074cf2db80a9a57385668b239d88747f338b54a1d5d4"
+  end
+
   depends_on "openjdk" => :test
   depends_on arch: :x86_64
   depends_on "python@3.9"
