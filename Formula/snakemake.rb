@@ -3,8 +3,8 @@ class Snakemake < Formula
 
   desc "Pythonic workflow system"
   homepage "https://snakemake.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/11/c4/d3530daa80f28582e85334e6dde3cf2dad5dcf4456a44caba1433226124f/snakemake-6.1.0.tar.gz"
-  sha256 "6b8dd2018940679438e84d772cce19814bb1c4e68265dc5e0efe6bb07cf71fb4"
+  url "https://files.pythonhosted.org/packages/8c/77/13851db5365ac2535916dbd493acf82975a190f4dfbda5b7de24a214e789/snakemake-6.1.1.tar.gz"
+  sha256 "d43c1f3c64f064bf4ca988ef274db0abe8ec4912b934a831ed3e7bd71e4023f8"
   license "MIT"
   head "https://github.com/snakemake/snakemake.git"
 
@@ -54,8 +54,8 @@ class Snakemake < Formula
   end
 
   resource "docutils" do
-    url "https://files.pythonhosted.org/packages/2f/e0/3d435b34abd2d62e8206171892f174b180cd37b09d57b924ca5c2ef2219d/docutils-0.16.tar.gz"
-    sha256 "c2de3a60e9e7d07be26b7f2b00ca0309c207e06c100f9cc2a94931fc75a478fc"
+    url "https://files.pythonhosted.org/packages/8e/5a/85e35f8692abd8dcd00a67e79c1e45caa6019b8d49d3bee5b2482583d81d/docutils-0.17.tar.gz"
+    sha256 "e2ffeea817964356ba4470efba7c2f42b6b0de0b04e66378507e3e2504bbff4c"
   end
 
   resource "filelock" do
@@ -94,8 +94,8 @@ class Snakemake < Formula
   end
 
   resource "nbformat" do
-    url "https://files.pythonhosted.org/packages/4e/4d/36023eaabe8ec48635178558015d14572835c24adbf7c3cd1107b748317b/nbformat-5.1.2.tar.gz"
-    sha256 "1d223e64a18bfa7cdf2db2e9ba8a818312fc2a0701d2e910b58df66809385a56"
+    url "https://files.pythonhosted.org/packages/e5/bd/847367dcc514b198936a3de8bfaeda1935e67ce369bf0b3e7f3ed4616ae8/nbformat-5.1.3.tar.gz"
+    sha256 "b516788ad70771c6250977c1374fcca6edebe6126fd2adb5a69aa5c2356fd1c8"
   end
 
   resource "psutil" do
