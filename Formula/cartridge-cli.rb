@@ -7,10 +7,10 @@ class CartridgeCli < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2fdfa02042d6f8c9577662d71f03a3b10788da8bf5453a3571ffc1627489c145"
-    sha256 cellar: :any_skip_relocation, big_sur:       "4e1ce39892c0fd886d6eef83a7cfd3b0d3d1da7053163d89eb74d2fae51e106c"
-    sha256 cellar: :any_skip_relocation, catalina:      "8d4133786be94cbfe6a2b036c17751461c5d97fc4991dcdc0055dd3d42deeda6"
-    sha256 cellar: :any_skip_relocation, mojave:        "6e86c4eb3020be61d23a3f68d35f50d35fb95e38b30d2389fde6d0371bbab5a6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6f30ae36e39757a217274b9b0aebb2a30510764e49fe89c315f421db9b212d7c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ef6c940e204492247c90baf942931a681e0fd47c1e3c1613a0646956214eb6a4"
+    sha256 cellar: :any_skip_relocation, catalina:      "48bebb906f118f7e1c98c53f0bbe47ffd00227f427c2c21de08a0e1a497a813a"
+    sha256 cellar: :any_skip_relocation, mojave:        "1728106730b9c39fb5fbd3b61c88cee9824e32e4a8537057ca09c13c3312117f"
   end
 
   depends_on "go" => :build
