@@ -3,8 +3,8 @@ class HomeassistantCli < Formula
 
   desc "Command-line utility for Home Assistant"
   homepage "https://github.com/home-assistant/home-assistant-cli"
-  url "https://files.pythonhosted.org/packages/7d/2c/17453eda0e2799d735bfbb654fdf25fd4faae724dc8d7f47c8aa877338d3/homeassistant-cli-0.9.2.tar.gz"
-  sha256 "99118e62b6a251b306932cbf902f438f5e1ae419d4ee599b79c062b2c6f80d47"
+  url "https://files.pythonhosted.org/packages/f0/f5/a90000b810751a6094761ed5fed3a6cb746c3c8be3bd1c5ed525e77be69a/homeassistant-cli-0.9.3.tar.gz"
+  sha256 "daf9c2a256cd2e63fc173c7c96b3462211f045a66639778302eb4f9d125b06a2"
   license "Apache-2.0"
   head "https://github.com/home-assistant/home-assistant-cli.git"
 
