@@ -9,10 +9,10 @@ class DockerCompose < Formula
   head "https://github.com/docker/compose.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "def888cda0498bf1e9236386ed287cd65fa8dcf314f7803de31bfe8b77bdb0ff"
-    sha256 cellar: :any, big_sur:       "42453957a2a31dc1ae31877e5ff284941a548726e1ca54dc8327f3621e40d561"
-    sha256 cellar: :any, catalina:      "ce5c763c78095a91d0acb65c61ababff31764a5455361f0459520d95283bfd83"
-    sha256 cellar: :any, mojave:        "78054b1fe088d704a358b96e416ac163afe60efc26560d97e902fd0e4b35e1ef"
+    sha256 cellar: :any, arm64_big_sur: "27cc4dd3b3ea63f108319406615b051a626da2fac7a0f146a8e558e7725e49f0"
+    sha256 cellar: :any, big_sur:       "175c5280e6fb2a8c55415cce7eb978994daccbec6ce8ed917e7acac04371f413"
+    sha256 cellar: :any, catalina:      "62a86593128d8668bf21c79fe53b51a5967374838ac6a2b909d45740579a51b2"
+    sha256 cellar: :any, mojave:        "0f852f2c6f113a662cec212a6f52878c5e5a26c9c44b4461a3495be21ab13222"
   end
 
   depends_on "rust" => :build
