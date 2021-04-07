@@ -9,10 +9,10 @@ class HomeassistantCli < Formula
   head "https://github.com/home-assistant/home-assistant-cli.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8ed17e134b719015152b816c69b91ce073ebaba2a008c253255bce97dedd3d6b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "71a6c08dcf8892fc3427b531e7ec246103d131dab61a69e0916251a6feefada1"
-    sha256 cellar: :any_skip_relocation, catalina:      "cb3825ec501fbc9ccfe058dbc4f922caffe850289d6ec5d96092281c56d166f0"
-    sha256 cellar: :any_skip_relocation, mojave:        "6841e17d34261b3762860b81fb2c34c747881d379234ceb53061c610cbf61cf2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "49b6cbed6efc6519e46174ca5995cdec46de5a5befd2aaf1a00189ce38ea7825"
+    sha256 cellar: :any_skip_relocation, big_sur:       "abed34f4e38b3e9e73eacf758d0b9f5eb796d35fa3a494b73f1d5d5797ebf228"
+    sha256 cellar: :any_skip_relocation, catalina:      "fd4ea47f108cb6af299188af230dda775c1888ae25835f030cdac86970c2ed97"
+    sha256 cellar: :any_skip_relocation, mojave:        "c6374c6c62160c99c8e889b96286b6f65382dca2b06e5f6f328c1ffdbcb85918"
   end
 
   depends_on "python-tabulate"
