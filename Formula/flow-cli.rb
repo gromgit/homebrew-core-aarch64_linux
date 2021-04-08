@@ -7,7 +7,6 @@ class FlowCli < Formula
   head "https://github.com/onflow/flow-cli.git"
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles"
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "e5125a987757ca3814566b39b61049813ccc8832ec83b3afcdfab17923ab239f"
     sha256 cellar: :any_skip_relocation, big_sur:       "27b43fff23a2ce268a1fd3d67e2d314d52ab0869cd7cccc932cb69470dc5a92d"
     sha256 cellar: :any_skip_relocation, catalina:      "8795993de27fa7049245730cdb14297b787b95ee8212a64d3129f0b3619b3325"
