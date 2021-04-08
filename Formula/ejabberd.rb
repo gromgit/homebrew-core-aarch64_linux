@@ -6,7 +6,6 @@ class Ejabberd < Formula
   license "GPL-2.0-only"
 
   bottle do
-    root_url "https://ghcr.io/v2/homebrew/core"
     sha256 cellar: :any, arm64_big_sur: "e724d35c5572f8c4b4249b4986cfd9641af633c0498247f098b2d84391ecb52f"
     sha256 cellar: :any, big_sur:       "48160b33cfecd42b409ab92d25301ce7136dd95afbef0ff81ea7ed356030bc71"
     sha256 cellar: :any, catalina:      "9d168b77adb8fefc6859d7fbad6478c7faaf3aa395d71bd46e3865bcd85407a5"
