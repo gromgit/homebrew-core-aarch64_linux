@@ -8,9 +8,10 @@ class Jupyterlab < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, big_sur:  "4e9cd863ff14a60a7c74ce075a6cf182cea2b16e6c450d168e664b4c51755769"
-    sha256 cellar: :any, catalina: "4c8ee897567efdf692b021237cef295edea0ec8120758fb51e5c67ac05f81d20"
-    sha256 cellar: :any, mojave:   "ca75d8e31b77e89d04d9bd394439bc7b7954951617f275e5f8e982ee8beb2d3a"
+    root_url "https://ghcr.io/v2/homebrew/core"
+    sha256 cellar: :any, big_sur:  "6c6188a2f37eb72d6020dbeba6eeb473473bdf226260ea1acd3a5d50e73ff05d"
+    sha256 cellar: :any, catalina: "be0f5dc3819477e1502403a945e197cea0414d5d8ba7c9446f1ed8b7416e1288"
+    sha256 cellar: :any, mojave:   "8ae73ca9e9c688afb379b4cff5d302d2579992edd94ad144fb14e147b244548a"
   end
 
   depends_on "ipython"
