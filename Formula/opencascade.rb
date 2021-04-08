@@ -12,7 +12,6 @@ class Opencascade < Formula
   end
 
   bottle do
-    root_url "https://ghcr.io/v2/homebrew/core"
     sha256 arm64_big_sur: "c3d77a1512b8174f092084426a9b7cfb64e539032c05fbe1cbc02f090f2aff4a"
     sha256 big_sur:       "f2a959da9687c5751d4b495314a2012e00bc7540e8e3f2e5ef27170e7b1af9e9"
     sha256 catalina:      "c8ea1d7020c634be8551478a869622c2f778b14b2a1ed1a90a471ccf6562dbce"
