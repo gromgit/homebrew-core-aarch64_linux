@@ -12,11 +12,10 @@ class Conserver < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a036894fc4d2c15c84b62906e56bd65a1d4b6354d57195f232c5112dbaaf59b1"
-    sha256 cellar: :any_skip_relocation, big_sur:       "35fc01a42164ba7af8f73497fbd25c0f4193580e2ca93d0e33683a0d0c1d0ffa"
-    sha256 cellar: :any_skip_relocation, catalina:      "eaa811a62521fd8f6f33af9837d03f42dedb218021d64390b8e9ece105e928c1"
-    sha256 cellar: :any_skip_relocation, mojave:        "03290cfe6fffbbb28d16b526a9667bc321cf048f32c947fbc9c20787bd67ed7b"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "71080dd0b8f5cf10c4c2e9aa935d48cf6f458f7bd926c59a7087108129a83ac7"
+    sha256 cellar: :any, arm64_big_sur: "818c726d7aef2b761e3ae88b39650e01f74f757acf899f7f351bdd2815d27875"
+    sha256 cellar: :any, big_sur:       "84d3aa85edeae0dc29cf8e9f4dded552ab0f9b82dac3b711ecdb8a2bba94115a"
+    sha256 cellar: :any, catalina:      "59eded66b17cf4854626060c9c012efa25fe09c5fed47c0c162047a5aac1171e"
+    sha256 cellar: :any, mojave:        "ff0421a6796b9913159a910628f97878d2b22956f18e23e8d27bd400e6b611a8"
   end
 
   depends_on "openssl@1.1"
