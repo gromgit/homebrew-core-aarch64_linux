@@ -12,11 +12,11 @@ class Opencascade < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "ca21853b2cb26e34cf5c3aa6b755689327e023c0b04e4a6d9ff4466a94d8b48e"
-    sha256 big_sur:       "51fd6769b4b4e75062fe5a6486dfe17166471519e1ea8bcb71d5b1f1756d28af"
-    sha256 catalina:      "fb7225acbf5c42a431a30667f5f7e227bf1f68fa1583ea987f0b3caf946c4cab"
-    sha256 mojave:        "1155bf50f284adb9ea20ffa2429a896505f2b7cdec1fe9a24654fb3b94a1f2e8"
+    root_url "https://ghcr.io/v2/homebrew/core"
+    sha256 arm64_big_sur: "c3d77a1512b8174f092084426a9b7cfb64e539032c05fbe1cbc02f090f2aff4a"
+    sha256 big_sur:       "f2a959da9687c5751d4b495314a2012e00bc7540e8e3f2e5ef27170e7b1af9e9"
+    sha256 catalina:      "c8ea1d7020c634be8551478a869622c2f778b14b2a1ed1a90a471ccf6562dbce"
+    sha256 mojave:        "8e64a1430d98aaa46a752b6479b9ddd986df497d4d00850bd02d609e59053e06"
   end
 
   depends_on "cmake" => :build
