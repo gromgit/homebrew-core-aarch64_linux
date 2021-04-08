@@ -7,10 +7,11 @@ class FlowCli < Formula
   head "https://github.com/onflow/flow-cli.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "26c7c123f83961a75158d63da79adaf96213e84587ca0731d059fd33f2dbd2d7"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d1e94cf96a7d275a8030a36b706a944fc9d5381480a6408815e1818cc52ddc51"
-    sha256 cellar: :any_skip_relocation, catalina:      "cb30122dd4e8d9f44216daa94daf6a151b41139468e1f73c54e211f19e351178"
-    sha256 cellar: :any_skip_relocation, mojave:        "63c52b9842ef08534dad724b0a29232705b855489f21f5b6c13c5ebebbb64596"
+    root_url "https://homebrew.bintray.com/bottles"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e5125a987757ca3814566b39b61049813ccc8832ec83b3afcdfab17923ab239f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "27b43fff23a2ce268a1fd3d67e2d314d52ab0869cd7cccc932cb69470dc5a92d"
+    sha256 cellar: :any_skip_relocation, catalina:      "8795993de27fa7049245730cdb14297b787b95ee8212a64d3129f0b3619b3325"
+    sha256 cellar: :any_skip_relocation, mojave:        "a2818b231e4606a7273e4b6861fd642a343e34965c57efc82382e9f04ee49a7e"
   end
 
   depends_on "go" => :build
