@@ -6,10 +6,11 @@ class OpencvAT3 < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 arm64_big_sur: "7dd060aad31743521ecf989ede57662ea41be3c6b7f6ac0895a5464bc5972615"
-    sha256 big_sur:       "2ea165b4cd7d978e974cbc8fb744244fcbd268ac662a537c59ea73680f0afc54"
-    sha256 catalina:      "0495c3d542d2dceaa17bf4cb0333446e41593b824f12f38fdba1ca2e586e907a"
-    sha256 mojave:        "c254a86ae7e18312c4a036c4ca105c19a2e39ce437303a234fe057d519f22639"
+    root_url "https://homebrew.bintray.com/bottles"
+    sha256 arm64_big_sur: "6bb9a152098b93bd81b594aeaf44d39be4fc3d033c4631a47a2ea022122ce7a5"
+    sha256 big_sur:       "2e229c18d4468d51f8570b5d55840bf74da38fec0e3809808a607b911882aea8"
+    sha256 catalina:      "a1dff798d5148ee35395352e8ced32d930952735b1c39f1fe972ed2f82e025ec"
+    sha256 mojave:        "a3102fa35856d17a1bb7d0def6e4b23ed5f48af202f7138f2fd382db773fea39"
   end
 
   keg_only :versioned_formula
