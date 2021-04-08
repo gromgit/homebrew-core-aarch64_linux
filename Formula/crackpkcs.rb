@@ -5,6 +5,13 @@ class Crackpkcs < Formula
   sha256 "9cfd0aa1160545810404fff60234c7b6372ce7fcf9df392a7944366cae3fbf25"
   license "GPL-3.0-or-later"
 
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "c78cddbd0a61219de5e403a5cf43c710a5a50141ccb3c66767823f0fb8941a70"
+    sha256 cellar: :any, big_sur:       "6616b50b8bdc80f28a69184fe91d3c191c39f8259f539cab29009c65a79d2a99"
+    sha256 cellar: :any, catalina:      "32c0e6b6e178c8afd6cf5e98807d1f165a5fccf41d2120f57036653fef1952c7"
+    sha256 cellar: :any, mojave:        "ba3ab6f7c683ebf8f4eedb1528bb88941b31a52c69c4139c16f2388ea2b504f7"
+  end
+
   depends_on "pkg-config" => :build
   depends_on "openssl@1.1"
 
