@@ -6,10 +6,10 @@ class Glow < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1eae4d2edadf09016118ba6ef4220acade395c455ad997857eab3dc0803ff82d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c379ca5e4ac4a0e5e4fce06b5615e11a349d891cad0c6b1d7c3084fca4da2082"
-    sha256 cellar: :any_skip_relocation, catalina:      "bd1c7fe06a82180bc34e136ca27ae1681555d5fb7b0bc9f4e374bfe6fd0ff0c9"
-    sha256 cellar: :any_skip_relocation, mojave:        "4c3069a7e719ab28a236df5fedc2a7f57a9e6429d9c6c1d606f3a827e44e0a7f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c7e15ba449c8f2720d93f8bde3f80fa3e27c82cf5bacc2944114ec4650a25d45"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c76069ff642658ed8b51fd903b1a5a5892247de72f7f62f29e10d46cae3e6caf"
+    sha256 cellar: :any_skip_relocation, catalina:      "4e713fa69e7d61139e8e7f904c675d2bfbabba9977316c22b4868f3bf5e0c77e"
+    sha256 cellar: :any_skip_relocation, mojave:        "22926fb845a37fd3dd9bee91e5af5575204480c5dfa2a6826cdb70fed07a80d1"
   end
 
   depends_on "go" => :build
