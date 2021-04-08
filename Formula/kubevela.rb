@@ -7,7 +7,6 @@ class Kubevela < Formula
   license "Apache-2.0"
 
   bottle do
-    root_url "https://ghcr.io/v2/homebrew/core"
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "62f039257a380c0c7c26b8630f7153865e80f4fad3ffa51adbd00d09befd36c0"
     sha256 cellar: :any_skip_relocation, big_sur:       "4610fde53315e961b80df7f6aac1e42a30bdefcb565c29e9c6d12a0ae28f230c"
     sha256 cellar: :any_skip_relocation, catalina:      "f50f99008e1648e088bb4b67cd9dd1bfa58c31f47664d6b24c433e4bf4fd076f"
