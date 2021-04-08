@@ -12,7 +12,6 @@ class Ethereum < Formula
   end
 
   bottle do
-    root_url "https://ghcr.io/v2/homebrew/core"
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "3debd58540f0e5d0f3e9cae30faf1a6d16d722b838b57da1ac4851f056c22c69"
     sha256 cellar: :any_skip_relocation, big_sur:       "b8da134f4d24b93c85be03c98174c212e4b6fe32ea665e5817ebe845bba29c14"
     sha256 cellar: :any_skip_relocation, catalina:      "7f809af99211ee59173006551b3c11b78e2c55e8270dbfb3bd4097dea56270a5"
