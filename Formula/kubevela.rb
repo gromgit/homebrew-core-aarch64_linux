@@ -7,10 +7,11 @@ class Kubevela < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ff53a1b763ba02bfdd0ba708c6e61c182f52533bdf82128dadaf3042c71602de"
-    sha256 cellar: :any_skip_relocation, big_sur:       "2be99be5cca26877dc3db3da3ab6f7da4ac3b89439cf617d653706e6a048a930"
-    sha256 cellar: :any_skip_relocation, catalina:      "0c5ff9bb16df941887019a3053d68505761a6eda839e01ed69c615578b033bec"
-    sha256 cellar: :any_skip_relocation, mojave:        "9592a5b2a438c98103fa5e546ca19fe375887eba1842d0fd5d26734eacab6c1d"
+    root_url "https://ghcr.io/v2/homebrew/core"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "62f039257a380c0c7c26b8630f7153865e80f4fad3ffa51adbd00d09befd36c0"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4610fde53315e961b80df7f6aac1e42a30bdefcb565c29e9c6d12a0ae28f230c"
+    sha256 cellar: :any_skip_relocation, catalina:      "f50f99008e1648e088bb4b67cd9dd1bfa58c31f47664d6b24c433e4bf4fd076f"
+    sha256 cellar: :any_skip_relocation, mojave:        "d4553e87e0128475549eebaa3d90805c81184492d001811d8388cdb4d58307c0"
   end
 
   depends_on "go" => :build
