@@ -6,7 +6,6 @@ class Terragrunt < Formula
   license "MIT"
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles"
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "1d463c77d1678f5d28f9d683e2246236250e0a28108f0f9ac9ba34aab0bc3ce7"
     sha256 cellar: :any_skip_relocation, big_sur:       "edc9c4437684e82b5c9e82c670c39f4edb29c7fbe9fc4d41c10fbef1db33e235"
     sha256 cellar: :any_skip_relocation, catalina:      "cdddabf9f50c5ddec825383eebacbcdc7df80d4bc1ad386c6d72a8e419291495"
