@@ -9,10 +9,10 @@ class ContentfulCli < Formula
   head "https://github.com/contentful/contentful-cli.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "79c006b3e1080c0c3ab656ddbee763c396cf51c8bbe92f501c2fd27b6f582746"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8a18ff7059abaea9c2e2891ea068cc3d383fbf1c10364497155448fe1c495f00"
-    sha256 cellar: :any_skip_relocation, catalina:      "bd78afc86bebf0552969959876d84f27a8517932ad01d0446402d5cba66688da"
-    sha256 cellar: :any_skip_relocation, mojave:        "b6bd46afc3a16e6d04679c0ded378b582efe8168f367f2bd955e499f619d468d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e225559215ba72f0308e5e5be5c90863492efd7982a478cac7866e76dec354fe"
+    sha256 cellar: :any_skip_relocation, big_sur:       "556d8185bb07b9704402637065c2ca20e35288305eda37c68aa2fe970238b97b"
+    sha256 cellar: :any_skip_relocation, catalina:      "4a17cc2907e2020c86d913d401c90ce97ea4ee3141b09ea07d42878d2ffaadfb"
+    sha256 cellar: :any_skip_relocation, mojave:        "bebc36c86286256cfc437b1f431fad91eb7f3c3773c9db178145bd03e1ed1095"
   end
 
   depends_on "node"
