@@ -6,7 +6,6 @@ class Vala < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    root_url "https://ghcr.io/v2/homebrew/core"
     sha256 arm64_big_sur: "f780e829e33fcabc75877ca11accf3f4bc2e701d9fa7e462f4f68a1919cb64a7"
     sha256 big_sur:       "6e19554cd3e3a0aa59d708b38ec94cd879108f4ac38a63be88b6b148d2687ad5"
     sha256 catalina:      "ce923b04aaaf05d594b1a881fcfa7ab4a9cbcbec191c9754c4e328d490b95625"
