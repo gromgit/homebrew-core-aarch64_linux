@@ -12,7 +12,6 @@ class Cadence < Formula
   end
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles"
     rebuild 1
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "113fce0a55b0e9d26cd2b4bbf6f91eeab87d9812b6d9c2e86b7f899e053b9610"
     sha256 cellar: :any_skip_relocation, big_sur:       "3c3d94b209fd65d1fca3ac48a4693bb1df181daa79b3315cca9cea4fe38425d8"
