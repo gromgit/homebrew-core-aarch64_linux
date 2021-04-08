@@ -6,7 +6,6 @@ class OpencvAT3 < Formula
   license "BSD-3-Clause"
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles"
     sha256 arm64_big_sur: "6bb9a152098b93bd81b594aeaf44d39be4fc3d033c4631a47a2ea022122ce7a5"
     sha256 big_sur:       "2e229c18d4468d51f8570b5d55840bf74da38fec0e3809808a607b911882aea8"
     sha256 catalina:      "a1dff798d5148ee35395352e8ced32d930952735b1c39f1fe972ed2f82e025ec"
