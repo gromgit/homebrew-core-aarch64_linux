@@ -6,10 +6,11 @@ class Vala < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "7823d7fa1c4ac8ba4440c98c957195d4917286df454ec29e1a427be205c1b356"
-    sha256 big_sur:       "b60aed09e71856f4c6bb223fe849addf665a9b7988f64bc1ca10e5a6eed39526"
-    sha256 catalina:      "a05c6b96de4d59fd6949674e70b28b622a82df803765075983ee10a53bc58919"
-    sha256 mojave:        "56248e465d184e85f7f459795d6c034731aa8c4f4dcd3890b72eec28dd79dcf3"
+    root_url "https://ghcr.io/v2/homebrew/core"
+    sha256 arm64_big_sur: "f780e829e33fcabc75877ca11accf3f4bc2e701d9fa7e462f4f68a1919cb64a7"
+    sha256 big_sur:       "6e19554cd3e3a0aa59d708b38ec94cd879108f4ac38a63be88b6b148d2687ad5"
+    sha256 catalina:      "ce923b04aaaf05d594b1a881fcfa7ab4a9cbcbec191c9754c4e328d490b95625"
+    sha256 mojave:        "aa5b565524f3713b0bc09efdd9d70714348cbd1b7e76d47898e2623297790897"
   end
 
   depends_on "gettext"
