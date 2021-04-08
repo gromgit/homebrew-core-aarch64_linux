@@ -12,7 +12,6 @@ class Sqlite < Formula
   end
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles"
     sha256 cellar: :any, arm64_big_sur: "ecb945b9df98160dd9c935fc128e862fbc7d4593ff5088916fc01f20ebd8f592"
     sha256 cellar: :any, big_sur:       "861dc044ea531c39a2105010107feb95cf10977c3da94a4c4fce6aa1b3041c34"
     sha256 cellar: :any, catalina:      "a1aee82c8dec9baf0073f52d89ecc2ec3003a49afaa4180315ebf533e08a152b"
