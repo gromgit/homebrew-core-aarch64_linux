@@ -12,10 +12,12 @@ class Cadence < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3795f124d27f498bf1307a0796f2ca1ac7df855be04127725d8837d4c8da52b3"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a8f38ba5d8f702d583fe47dcc112cf814125a43c0f7e3840a4e019e91d3eb95e"
-    sha256 cellar: :any_skip_relocation, catalina:      "4cedb2dbdb03e962e9b687fdb5bdcae13723755c125b84fb41e37500468510e7"
-    sha256 cellar: :any_skip_relocation, mojave:        "da80d1e83cba3293039fd768c3667b614673dae7728cfbf3dc2b646c5ea0790c"
+    root_url "https://homebrew.bintray.com/bottles"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "113fce0a55b0e9d26cd2b4bbf6f91eeab87d9812b6d9c2e86b7f899e053b9610"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3c3d94b209fd65d1fca3ac48a4693bb1df181daa79b3315cca9cea4fe38425d8"
+    sha256 cellar: :any_skip_relocation, catalina:      "66469e7c018a22218b69288c7f530f35a87efc1f22660164d07d593ce2e7af37"
+    sha256 cellar: :any_skip_relocation, mojave:        "f9e1efc43abe672768c366cbc788ea3fab07a9fd28378b704cce4e6c40c2b5cb"
   end
 
   depends_on "go" => :build
