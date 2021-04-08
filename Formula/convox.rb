@@ -12,10 +12,10 @@ class Convox < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "384d9c2da4b3445db66fa4495744bc6e09c11e2add61bec4f91dfbe44c889f9e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8e847f3cb7d868112c6a05569e0566f92d207ee0cfbdf4aedb2ef905a501b072"
-    sha256 cellar: :any_skip_relocation, catalina:      "91f718cf481a343bc3df6062c6accede9811e66980a296b0674135e55bb724d1"
-    sha256 cellar: :any_skip_relocation, mojave:        "3c5d49aaf101cf984fd0dbbcf88d45acd193a56d22bb2e52d23ad92f6e04255e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b740523173869753a3b43ec76ec8e028eef6af39c1f90a0149954c93f9200e7a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e2bb3e77077bc4c94f82f1f4bfc10128518fb18b3aaa16145fe315111e828efd"
+    sha256 cellar: :any_skip_relocation, catalina:      "28f76e47ecc9b86f98a1d5c229bc8ad24c0d9863ac74c67ef823480df7465e04"
+    sha256 cellar: :any_skip_relocation, mojave:        "58d17a811bc76d9f4f5c668eb42163ee38eefbd4bd1eaaf352965653e65f3a55"
   end
 
   depends_on "go" => :build
