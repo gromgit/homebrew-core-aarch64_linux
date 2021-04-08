@@ -6,7 +6,6 @@ class Lazygit < Formula
   license "MIT"
 
   bottle do
-    root_url "https://ghcr.io/v2/homebrew/core"
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "57b612f1e76754ebcd459b1f8b477a621af82df9c14ee94cc792f091a83f3393"
     sha256 cellar: :any_skip_relocation, big_sur:       "9d9cd26d2a1909de53a9afa6bc06c9277bf02181216f2476021f505d22262c16"
     sha256 cellar: :any_skip_relocation, catalina:      "e66dbef10c732cf088cb7a2b3038a8344fc1739f9b8cd550cad39eb3d9ee41d3"
