@@ -18,7 +18,6 @@ class Raptor < Formula
     sha256 cellar: :any, sierra:        "dba42ee8efa54c0b5722f0e12a7a585c2a9fe07a22aea6aec9124aaf09860f1d"
     sha256 cellar: :any, el_capitan:    "cc2feb9cd1d6f9eb0f511853f19c43bc96d143de6a73edfd3cdb854647d1d14a"
     sha256 cellar: :any, yosemite:      "c23392012fb5edffbe800771eaee6ae81d288e62c477c27332474f2ed342d1b3"
-    sha256 cellar: :any, mavericks:     "5e640e01d5cdd6899ca00704ba581358d254f7cfb9b81d62c901c825bb347681"
   end
 
   uses_from_macos "libxml2"
