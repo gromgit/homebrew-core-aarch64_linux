@@ -12,10 +12,10 @@ class Fastlane < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "4297d2444c76a61cba3f4a938bac8044d4d32eb5ecbea34b3c3ac6c91f667b7f"
-    sha256 cellar: :any, big_sur:       "848bc8072a07ba1f02ed513f7e5e33a85c9d074c96fd345abb3390c00258660c"
-    sha256 cellar: :any, catalina:      "150fc65c16a5946c2709f145ff40e51e0b5deeec5bf75ada50078ea76fb7f014"
-    sha256 cellar: :any, mojave:        "42425e2bd0d5322fee4ec9e788bf12822e82c677bb3989cdb48bb004020c588e"
+    sha256 cellar: :any, arm64_big_sur: "0ebef11885e9d42706f3a7eaf67d64b4ee2dbf410f3e7cd16c37c55040c90d82"
+    sha256 cellar: :any, big_sur:       "142d0d96c909b4d5e3d72a8195409237a41e09e1b160b79f2abc47f99230e635"
+    sha256 cellar: :any, catalina:      "b80f4590f99c5e04846a922962c49552233699a8339f8c4dac6ca5f852464633"
+    sha256 cellar: :any, mojave:        "73aaa47abe9c23fe4918c4a210fa89c2e3686449d4fbf9d0fc863c40c0ff1bc2"
   end
 
   # Issue with Ruby 2.7 not finding gems correctly
