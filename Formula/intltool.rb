@@ -14,7 +14,6 @@ class Intltool < Formula
     sha256 cellar: :any_skip_relocation, sierra:        "e587e46b6ebdebb7864eb4f9cb17c221024d9167ae0148899adedb6127b2bdfb"
     sha256 cellar: :any_skip_relocation, el_capitan:    "14bb0680842b8b392cb1a5f5baf142e99a54a538d1a587f6d1158785b276ffc6"
     sha256 cellar: :any_skip_relocation, yosemite:      "da6c24f1cc40fdf6ae286ec003ecd779d0f866fe850e36f5e5953786fa45a561"
-    sha256 cellar: :any_skip_relocation, mavericks:     "5deeef3625d52f71d633e7510396d0028ec7b7ccf40c78b5d254bdf4214e6363"
   end
 
   on_linux do
