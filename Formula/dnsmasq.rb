@@ -11,10 +11,11 @@ class Dnsmasq < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "b0f7102eba226a09aaef674363b43cca83a4b23e55484274bbdfb254ac984f11"
-    sha256 big_sur:       "7f1fc77f23b6c757cd0229e54a13f51a65831c9d2d23fd8d2588ca443d0644bb"
-    sha256 catalina:      "de0f040e7115293c40d40dab2b18b84b37c40221b4da3fa408e64cc93397873c"
-    sha256 mojave:        "26db9d0e62d3a2385e528f660d740784b2321d0c83b5b775bac561955885b54c"
+    rebuild 1
+    sha256 arm64_big_sur: "a5dff893836bb30d9dd1b2ae17a3b5c57936a570014babd188d6d6935fb8cd25"
+    sha256 big_sur:       "d277d696e1432881e4bbbc0d68443fbdec125d0dd83c9041d5d58bcab0acae5e"
+    sha256 catalina:      "945ab265756b63a2040d5bdcc4f8c2c24e379d60ed2e21249b77eade885630ff"
+    sha256 mojave:        "6054ac54814f919df6733c9f8180444b3b199321cbb0616b5ae084afa0ceaf66"
   end
 
   depends_on "pkg-config" => :build
