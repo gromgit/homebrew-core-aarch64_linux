@@ -6,10 +6,10 @@ class Evernote2md < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4db79a590dcde9423b01f3e6cb6035121e78c73850b1cbb3ff277c2226a41616"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f4b2f93ca3a8d6ab5821a8da025d48c97c6f1ea88a7e18274c31a1dbd516fa7c"
-    sha256 cellar: :any_skip_relocation, catalina:      "0bf0d3d24a59ec90f717c6b36c6fcfc6a8874b47ac45b603c533520b9a833f9a"
-    sha256 cellar: :any_skip_relocation, mojave:        "6ade81031fc09a19e69d42d25325dd3489f0353aafd66dc8163030ee1d153157"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fd6cff53e09a195b69e0aa9e6791e63d8061a8fd5bede2dc1fef7a2efc0a31c3"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7ca2df5264e267256e71030f4ae58c689c92410e83a3c5d207b0477c98eab1d3"
+    sha256 cellar: :any_skip_relocation, catalina:      "d77083a0f94473f2884e182a2bcd3773c0829bfa933e9a2a964a91bde1dcb0c9"
+    sha256 cellar: :any_skip_relocation, mojave:        "6236e184395b9e307600e41fbfef4dc35f7e9124940545367acb6a5ad5db48ed"
   end
 
   depends_on "go" => :build
