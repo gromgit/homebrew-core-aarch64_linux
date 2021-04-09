@@ -12,8 +12,9 @@ class Pypy3 < Formula
   end
 
   bottle do
-    sha256 catalina: "856c421f1051e802767e23bdfd58727fb168dcffff904ab1eb486a57fc614f47"
-    sha256 mojave:   "a2f43940fe3fb2604aa01c9f7720c26c74b3cb9e09b7bf0846f4341ded919e17"
+    sha256 big_sur:  "5c75fdfbe4b07c5b71710d78c9385588e8e47834668944ddfb8035482e27464b"
+    sha256 catalina: "8563d2632d5715059ed80f55072373dbcf300760a1eb0b84606aa61c61c16e8f"
+    sha256 mojave:   "9788f01a03f858049a94376dcc657e1e8dd07b40c3e528acfee7f72384de8d2c"
   end
 
   depends_on "pkg-config" => :build
