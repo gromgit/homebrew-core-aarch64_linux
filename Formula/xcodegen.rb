@@ -1,8 +1,8 @@
 class Xcodegen < Formula
   desc "Generate your Xcode project from a spec file and your folder structure"
   homepage "https://github.com/yonaskolb/XcodeGen"
-  url "https://github.com/yonaskolb/XcodeGen/archive/2.18.0.tar.gz"
-  sha256 "1b14e338d3005a716d856352ae012b30f67632e232601ac0890619377ae481bd"
+  url "https://github.com/yonaskolb/XcodeGen/archive/2.20.0.tar.gz"
+  sha256 "747d833b469bd48f7bd2f286c69efc6ee79a3921446235dc491548acfba5da20"
   license "MIT"
   head "https://github.com/yonaskolb/XcodeGen.git"
 
@@ -14,10 +14,12 @@ class Xcodegen < Formula
   end
 
   depends_on xcode: ["10.2", :build]
-  depends_on :macos
+  depends_on macos: :catalina
 
   def install
-    system "make", "install", "PREFIX=#{prefix}"
+    system "swift", "build", "--disable-sandbox", "-c", "release"
+    bin.install ".build/release/#{name}"
+    pkgshare.install "SettingPresets"
   end
 
   test do
