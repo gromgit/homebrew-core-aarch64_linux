@@ -7,10 +7,10 @@ class Okteto < Formula
   head "https://github.com/okteto/okteto.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "11a9940bfed06c9c809902cfa5b3d711713997aa928071d79ea8ed9f117a2726"
-    sha256 cellar: :any_skip_relocation, big_sur:       "86f9733cd1e3a90a85c9f965e0519fe26d20ee2de3710f880f1b0f38e392f557"
-    sha256 cellar: :any_skip_relocation, catalina:      "d406666816b380e0fd395b21d4343ff0568eef2e555dee0be58344d539e1591d"
-    sha256 cellar: :any_skip_relocation, mojave:        "21d0dbe334f139e1727875b628795f59eaf406e2f23aadc5f2e17d2905ab8dba"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c3cc6eecc2d001a8088d08e1976a3c7a37b0dc2a48d56c7fd36cf3892849bf75"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d1360aa4ce80650d966785b6a9699c70e4c58666c210b2a79357f27258b818df"
+    sha256 cellar: :any_skip_relocation, catalina:      "93f622c23fe79ba0c4310f2f55ba1f4a0988ffd32af9033fa0681cb7a06f33ee"
+    sha256 cellar: :any_skip_relocation, mojave:        "6f30f3716283ebc61573b38c429304f82324e8b13bb431008119513d8f1078a7"
   end
 
   depends_on "go" => :build
