@@ -6,10 +6,10 @@ class Navi < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d4d7330da91c8993867b2c2443cad374b07d063a1ea4587e404fe6b99705f83b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "85d58e075944fcde015a3e45ed06668e64d72cd0b49afd5e719877da83863392"
-    sha256 cellar: :any_skip_relocation, catalina:      "2aa8fa7b3e54b886bcdec48fc5985ec0ad5f839f60e3ceeee385ba440277106b"
-    sha256 cellar: :any_skip_relocation, mojave:        "b03eabbab9d70619bbbef6a6b97cf86f46cf6f64f3dca444ea7da818813693cb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "142e4f63fddb60751221dc616e65e648c70f3f6ba5c00a7494c25d2f747d89f6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4eadb3ffacf68d6b6d5a975a3b5aa7bfa6c387be4afdf1d4b35e0807c988d634"
+    sha256 cellar: :any_skip_relocation, catalina:      "0cf7416070e50df2d77c2fe884d9aef7efddb45712ca25297ef1c309add000b4"
+    sha256 cellar: :any_skip_relocation, mojave:        "f8d57cd8fa62b6d4028bfe55f2a4af5e072bca0e31da6e3cf529d0c6d06bec58"
   end
 
   depends_on "rust" => :build
