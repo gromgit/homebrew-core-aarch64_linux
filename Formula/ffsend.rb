@@ -6,10 +6,10 @@ class Ffsend < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2e9aafcb0d0f8d814380e66ba0683b1d6c01cb8d43dc11b31a1f910cf2bcb485"
-    sha256 cellar: :any_skip_relocation, big_sur:       "2a7a8b305ba7565092063295174c02b94dd84fd5b7c2c0f200237a70bec234f7"
-    sha256 cellar: :any_skip_relocation, catalina:      "a17eeed601899a63bcbad6527af1cb5abf76f3589d2d72a04c2347092e62451e"
-    sha256 cellar: :any_skip_relocation, mojave:        "2ffef18d2670ee9ddb27dc8d488781e07c110115834b18c4c416a72dc3a01a6c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "96b27f48cb3af455d1cf1cb55f1937cd57cdd2547b553071033220f0dbdfcc19"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7a5a7b82d5333a28928ec3db6f6e4237aac7da03e130f60e432178dcdc1d4434"
+    sha256 cellar: :any_skip_relocation, catalina:      "703588356d6c5f2858d2b188662b154fca3241bd87dedb80608ffb5621af8039"
+    sha256 cellar: :any_skip_relocation, mojave:        "05813ca207189c09603c4b763bfd6cef2ccda537c37b642e136b8e24f4d9f5cc"
   end
 
   depends_on "rust" => :build
