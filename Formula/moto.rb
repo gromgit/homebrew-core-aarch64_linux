@@ -3,8 +3,8 @@ class Moto < Formula
 
   desc "Mock AWS services"
   homepage "http://getmoto.org/"
-  url "https://files.pythonhosted.org/packages/aa/3b/ba7ee7f28e0ba3df77b85079f432df1fb3913260fec9040bae0e0ee7e6a0/moto-2.0.4.tar.gz"
-  sha256 "9117775d3a8e4ec7e6341415f6a3678a01fe86723163ff5eac5177d03179b303"
+  url "https://files.pythonhosted.org/packages/41/8a/91ddacb5c8f6d302dbbe2b5dca515dc28aaca670b847a5d8a7807d06a140/moto-2.0.5.tar.gz"
+  sha256 "17219c9e8d79bc7450615896b37e5bd639c2038d4672bcab114ac4661e27f8ae"
   license "Apache-2.0"
 
   bottle do
@@ -33,13 +33,13 @@ class Moto < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/9e/19/20a0d00e8cd7b812aaf408ce512c7ad41fc0bca4a2206674e9d6bc0c058d/boto3-1.17.43.tar.gz"
-    sha256 "b86aaa96ccbdba1aaca0a321dbe4be480a39b7d6fe85dcd7ee5d7c44c9b32726"
+    url "https://files.pythonhosted.org/packages/7a/1e/570e2446e97bac3d348d0bc6cbf8ac28997ddbef3d97c052f1c476ff48bb/boto3-1.17.49.tar.gz"
+    sha256 "a482135c30fa07eaf4370314dd0fb49117222a266d0423b2075aed3835ed1f04"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/ed/aa/733f6f7ad81aa93e837422c85ba3d146aefd78b6048255c8a8a2c9efe254/botocore-1.20.43.tar.gz"
-    sha256 "7630d734260babdc34dc53c704d937f53c362bb15ccd3863ccf1b1b26be04df8"
+    url "https://files.pythonhosted.org/packages/49/95/afb61cbea75fb2ba846d5ed4fcc364fbc7b59a998adfe379409a4ee36231/botocore-1.20.49.tar.gz"
+    sha256 "f7f103fa0651c69dd360c7d0ecd874854303de5cc0869e0cbc2818a52baacc69"
   end
 
   resource "certifi" do
@@ -53,8 +53,8 @@ class Moto < Formula
   end
 
   resource "cfn-lint" do
-    url "https://files.pythonhosted.org/packages/84/ff/faf42bf99eb284ec90833bbe610d621e4f9d5f1d6dc9b15f8fa715a3b6c4/cfn-lint-0.48.1.tar.gz"
-    sha256 "251ac66365ccdc736994111c8b77bda5ed89466527e3e00d460899a4019985a1"
+    url "https://files.pythonhosted.org/packages/bc/9a/d0ed07130759ecbf84ea5e05cb4713286ab8c1b7ea2fc26ecd216d396be9/cfn-lint-0.48.2.tar.gz"
+    sha256 "67dc1687ccb68f76341a75f1a35f3074e6ac21169208d1ee1f658ed06134b213"
   end
 
   resource "chardet" do
@@ -78,8 +78,8 @@ class Moto < Formula
   end
 
   resource "docker" do
-    url "https://files.pythonhosted.org/packages/fd/46/6f6116c30cb859a0cdb95444140e9fe0be0de455c9c83748ee421aec8274/docker-4.4.4.tar.gz"
-    sha256 "d3393c878f575d3a9ca3b94471a3c89a6d960b35feb92f033c0de36cc9d934db"
+    url "https://files.pythonhosted.org/packages/fa/a2/e46d7c1b51394a09271a3b07c3a68deb3a669429beafd444d9553ed52868/docker-5.0.0.tar.gz"
+    sha256 "3e8bc47534e0ca9331d72c32f2881bb13b93ded0bcdeab3c833fb7cf61c0a9a5"
   end
 
   resource "ecdsa" do
@@ -152,19 +152,14 @@ class Moto < Formula
     sha256 "29872e92839765e546828bb7754a68c418d927cd064fd4708fab9fe9c8bb116b"
   end
 
-  resource "mock" do
-    url "https://files.pythonhosted.org/packages/e2/be/3ea39a8fd4ed3f9a25aae18a1bff2df7a610bca93c8ede7475e32d8b73a0/mock-4.0.3.tar.gz"
-    sha256 "7d3fbbde18228f4ff2f1f119a45cdffa458b4c0dee32eb4d2bb2f82554bac7bc"
-  end
-
   resource "more-itertools" do
     url "https://files.pythonhosted.org/packages/fd/2d/90ea8e03076d46166b14c24c87b07ef8cf3d4e0df9a59aefbbd4db3bef7b/more-itertools-8.7.0.tar.gz"
     sha256 "c5d6da9ca3ff65220c3bfd2a8db06d698f05d4d2b9be57e1deb2be5a45019713"
   end
 
   resource "networkx" do
-    url "https://files.pythonhosted.org/packages/ef/d0/f706a9e5814a42c544fa1b2876fc33e5d17e1f2c92a5361776632c4f41ab/networkx-2.5.tar.gz"
-    sha256 "7978955423fbc9639c10498878be59caf99b44dc304c2286162fd24b458c1602"
+    url "https://files.pythonhosted.org/packages/b0/21/adfbf6168631e28577e4af9eb9f26d75fe72b2bb1d33762a5f2c425e6c2a/networkx-2.5.1.tar.gz"
+    sha256 "109cd585cac41297f71103c3c42ac6ef7379f29788eb54cb751be5a663bb235a"
   end
 
   resource "pyasn1" do
