@@ -10,10 +10,10 @@ class Lldpd < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "c475f38dcea75255aa2df6792414614255a40c57ee854fc7728578151ead8375"
-    sha256 big_sur:       "5246b398857a85349cc40f613a6e16f0fffb0400e9b3c4c82591c1c92241be25"
-    sha256 catalina:      "effea0d36c0599effc62eb6e7c1f33df0eb9e789b6f58fe961e7868b3f7fd448"
-    sha256 mojave:        "7bac04a91bb39536244ee9b0824ea8d68d16a7b547051f0aa294e5514a0343b3"
+    sha256 arm64_big_sur: "c24d9aa6fe8d72855a2cfde02ff1ba717ba4b68af7c852a6a0472429a27b3d9e"
+    sha256 big_sur:       "76a660028f5152fc8c486b52060bcffb046c7352e8c1f2ca215ef4ca7603dff0"
+    sha256 catalina:      "9928a32762dd288a992c7a263b48c40659f7ace9434da3e6754dde7836510003"
+    sha256 mojave:        "7894f1bb83e55ddf6c7f469b5987bbb3638fb8a6f30ea15cc24ddc60acd72dd8"
   end
 
   depends_on "pkg-config" => :build
