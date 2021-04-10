@@ -8,10 +8,10 @@ class Wllvm < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b146448a287a26c086f41c4db6222e2f2969bbc12a4d86c9eaf05e2ce5ed4da2"
-    sha256 cellar: :any_skip_relocation, big_sur:       "fe0b731ecde0d7e66f096f374741fc177fa01c2d866d28d2519b009f7f3f881a"
-    sha256 cellar: :any_skip_relocation, catalina:      "87139d500bf0594a1573a3d6c7f860db22d5608f1556771cf4ae2dd06e45d828"
-    sha256 cellar: :any_skip_relocation, mojave:        "cbaafe80bf7c436c2aca8d8080f1772d5d592836ce05d8b3864345b53bd4f4e2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0e2d0379de94210ef4627ba7093361c994bc44d732a9c8c3abe56237b37a792e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "15cfa5f572614f6f4c3cd2bc30f3983830b5cae8736f08e1514bc9608cef0dc1"
+    sha256 cellar: :any_skip_relocation, catalina:      "860faf0ed34adee6eeedbed016b90f0dc53cf2d74c7a2a68685ce7c49e6e2ce6"
+    sha256 cellar: :any_skip_relocation, mojave:        "c953b8c3d45d6df5a67e5d334fe279a50cef7ccf9d67e7d53db995285da433c3"
   end
 
   depends_on "llvm"
