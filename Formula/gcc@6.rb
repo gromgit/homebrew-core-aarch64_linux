@@ -4,7 +4,7 @@ class GccAT6 < Formula
   url "https://ftp.gnu.org/gnu/gcc/gcc-6.5.0/gcc-6.5.0.tar.xz"
   mirror "https://ftpmirror.gnu.org/gcc/gcc-6.5.0/gcc-6.5.0.tar.xz"
   sha256 "7ef1796ce497e89479183702635b14bb7a46b53249209a5e0f999bebf4740945"
-  revision 6
+  revision 7
 
   livecheck do
     url :stable
@@ -66,7 +66,6 @@ class GccAT6 < Formula
     ENV["gcc_cv_prog_makeinfo_modern"] = "no"
 
     args = [
-      "--build=x86_64-apple-darwin#{OS.kernel_version}",
       "--prefix=#{prefix}",
       "--libdir=#{lib}/gcc/#{version_suffix}",
       "--enable-languages=#{languages.join(",")}",
@@ -76,7 +75,6 @@ class GccAT6 < Formula
       "--with-mpfr=#{Formula["mpfr"].opt_prefix}",
       "--with-mpc=#{Formula["libmpc"].opt_prefix}",
       "--with-isl=#{Formula["isl"].opt_prefix}",
-      "--with-system-zlib",
       "--enable-stage1-checking",
       "--enable-checking=release",
       "--enable-lto",
@@ -89,22 +87,29 @@ class GccAT6 < Formula
       "--disable-nls",
     ]
 
-    # Xcode 10 dropped 32-bit support
-    args << "--disable-multilib" if DevelopmentTools.clang_build_version >= 1000
+    on_macos do
+      args << "--build=x86_64-apple-darwin#{OS.kernel_version}"
+      args << "--with-system-zlib"
 
-    # System headers may not be in /usr/include
-    sdk = MacOS.sdk_path_if_needed
-    if sdk
-      args << "--with-native-system-header-dir=/usr/include"
-      args << "--with-sysroot=#{sdk}"
+      # Xcode 10 dropped 32-bit support
+      args << "--disable-multilib" if DevelopmentTools.clang_build_version >= 1000
+
+      # System headers may not be in /usr/include
+      sdk = MacOS.sdk_path_if_needed
+      if sdk
+        args << "--with-native-system-header-dir=/usr/include"
+        args << "--with-sysroot=#{sdk}"
+      end
+
+      # Ensure correct install names when linking against libgcc_s;
+      # see discussion in https://github.com/Homebrew/homebrew/pull/34303
+      inreplace "libgcc/config/t-slibgcc-darwin", "@shlib_slibdir@", "#{HOMEBREW_PREFIX}/lib/gcc/#{version_suffix}"
     end
 
-    # Avoid reference to sed shim
-    args << "SED=/usr/bin/sed"
-
-    # Ensure correct install names when linking against libgcc_s;
-    # see discussion in https://github.com/Homebrew/homebrew/pull/34303
-    inreplace "libgcc/config/t-slibgcc-darwin", "@shlib_slibdir@", "#{HOMEBREW_PREFIX}/lib/gcc/#{version_suffix}"
+    on_linux do
+      # Fix Linux error: gnu/stubs-32.h: No such file or directory.
+      args << "--disable-multilib"
+    end
 
     mkdir "build" do
       system "../configure", *args
