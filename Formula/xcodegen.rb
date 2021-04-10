@@ -7,10 +7,9 @@ class Xcodegen < Formula
   head "https://github.com/yonaskolb/XcodeGen.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3943c560dbe8bae0c4e75b43920711219e4f1e1c80b8455ea488e8029d9864cb"
-    sha256 cellar: :any_skip_relocation, big_sur:       "954d8df6e5e76c59471482dce21df05bed22382e30d1b5cc9bfa6e024508106c"
-    sha256 cellar: :any_skip_relocation, catalina:      "72a74170b8b457db6bce90da3daaa6520a24bef3d46d4dfbfd3599bfe45a8b5b"
-    sha256 cellar: :any_skip_relocation, mojave:        "1d64fc7e6f3ade59a08eb9b9105c3b1d20d8d9cb4b4de2539590733fd203e014"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "eb61cff1fb28fbaf2a1d3052258f4dbef8647f5138aa96bd5293c7ca6e8b9222"
+    sha256 cellar: :any_skip_relocation, big_sur:       "8ea416bc2a25638a2a9341c6da1bfd8fa17ed38ced74513a2628430f0151dbee"
+    sha256 cellar: :any_skip_relocation, catalina:      "9334f33f98e242842896f388a44dadd6582491086e56261e04a083765ef86e08"
   end
 
   depends_on xcode: ["10.2", :build]
