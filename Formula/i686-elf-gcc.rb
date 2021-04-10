@@ -7,10 +7,9 @@ class I686ElfGcc < Formula
   license "GPL-2.0"
 
   bottle do
-    sha256 big_sur:     "774bb133598e76c19daa758e533132d632e6b541a4f6c348bc1428b573bb5c58"
-    sha256 catalina:    "8e258af70b398807c115631de8a1dc8c6ebdb3be870fe26410c14e91a7659a58"
-    sha256 mojave:      "4c14d4308435c164f92de628f8e1b97a63692fb0b3ff083c083a64fed1c72870"
-    sha256 high_sierra: "c8d9a65d529d5c9219b451dfd724c7df0275df5f9c6138eb3db173b783c07372"
+    sha256 big_sur:  "b08b99ff3b7ae42ef378cc46b614170f232098dcc0a650d7557637d2135809e2"
+    sha256 catalina: "3c71adb21e1e28dbcb124437cdd0f1de8a1d5fab8aa834ccfe67735f6af55fe9"
+    sha256 mojave:   "486dc517f6e1e21d96f3483eb7f8ab12a6e989c251cab9cd07d70fa01f4574e6"
   end
 
   depends_on "gmp"
