@@ -7,10 +7,10 @@ class Httpx < Formula
   head "https://github.com/projectdiscovery/httpx.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "49f5fc7c8fb62842e036f6472eb0984b3f4bb48ad9ca261cf036bcc534cc5a0e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6fb826ba5b50342020967a632b6755e06f18d7c6849804b5dacbae58289ae3c2"
-    sha256 cellar: :any_skip_relocation, catalina:      "42d5fe4c47e5d9f8e07043aaf46336e05a965c0980438c0c33b810e191807c90"
-    sha256 cellar: :any_skip_relocation, mojave:        "bfccd9a888d28ddc135760dd3d783369709dff1c5f8f49bbc268edad8f5d789f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "aef5709cf5a736198839a50ded0bd5dcd66e49288c198592e7a6d6d8e9655b7c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ef305ebc0d2d351d38db6a0ded45bfe9bdef4ac5e3ba475f68eef2e985cf3fca"
+    sha256 cellar: :any_skip_relocation, catalina:      "514fea44fbfdbfe8e21c7ebd4f4f9b20e854c5077924c9576236c210cb61eda0"
+    sha256 cellar: :any_skip_relocation, mojave:        "595784ab06f9bfc22e3049eb7afb50db35abf47175330d6e751b95efab9713d7"
   end
 
   depends_on "go" => :build
