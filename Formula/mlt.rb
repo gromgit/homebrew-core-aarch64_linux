@@ -7,9 +7,9 @@ class Mlt < Formula
   head "https://github.com/mltframework/mlt.git"
 
   bottle do
-    sha256 big_sur:  "768152c19d7f31edf5e3c1ed2a3e8f687d8bf655bb6b9877b0bc3cdf4aadb92d"
-    sha256 catalina: "3dfeb31325eaa6dc6665be06488a4edfa0a89b77b9b4390f3b18ac9842d06250"
-    sha256 mojave:   "a6eec67fd8692b5abef46cea80f2fd8396bae6799bcf63607c3006685e665892"
+    sha256 big_sur:  "5f7ce6e78b706afbbf416f7f21764e452acdf19321025e6d2276df85bc30d127"
+    sha256 catalina: "69ad1e141b078fa1273906f3c2f7b1395252ced7285e31af28d66460658b6695"
+    sha256 mojave:   "af2b1432a879a371ff539ffa694b362aef19bd907c31594c045e59f9fb804d0c"
   end
 
   depends_on "pkg-config" => :build
