@@ -12,9 +12,9 @@ class GccAT8 < Formula
   end
 
   bottle do
-    sha256 big_sur:  "f8d2856e05a7b6e6eed981bdc4ea722a93594a6cdaa8f5529910eb11f6103d01"
-    sha256 catalina: "adbc2af7732229438dcc29decaa1c1e25292c39ba21aaf1bd49453f1a8d7bfa9"
-    sha256 mojave:   "1be90ef0660203d2f578a6bd66fdb6f24c99e47ea1f785e738287e34f5d4a123"
+    sha256 big_sur:  "a835ceb445a4b4019e14fda6fb4a984a7f633faf5ef5f9f49bddbe23cae1e7fc"
+    sha256 catalina: "4ef99da615886fab55a27d34bfa4ac88761c9cb73ebcb5ed199d6a0fe6997fd3"
+    sha256 mojave:   "6e73d66113184f35f91c285f3754cc0c67797876cf0a97c75bdce4d92d6af074"
   end
 
   # The bottles are built on systems with the CLT installed, and do not work
