@@ -71,7 +71,7 @@ class KnotResolver < Formula
   end
 
   test do
-    assert_path_exist var/"knot-resolver"
+    assert_path_exists var/"knot-resolver"
     system sbin/"kresd", "--version"
   end
 end
