@@ -6,10 +6,10 @@ class Fennel < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0788bd23559bd563680467e304418284cdd49ddab92163fd37dffb311dcf941a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0f0b625343d03ec4bcf21f7e42713fa626f69c4c091e5759f371c07554fe0ed8"
-    sha256 cellar: :any_skip_relocation, catalina:      "7ac0a1b970ae41dff3042920221c3ffd3fc60ca52a926f1f9efea76b43a6049d"
-    sha256 cellar: :any_skip_relocation, mojave:        "dac8476bb6659b3c1b389c27de95e7792a993600a9c78ce2bd693c1701676622"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bf79c94551f3aff22a1a817d1309c3bced68e11fb5053e3c10cec83d78a1e37f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d6f6dcceb6eb8cbd5194a9cbb0a8aa7e945edf567fdbdf300aaff7a64ce31583"
+    sha256 cellar: :any_skip_relocation, catalina:      "b82322722a1721123bc711a537d7588a8407112baca4299cc1f21790a1619eed"
+    sha256 cellar: :any_skip_relocation, mojave:        "3aec2e7184f24ca615307c1f6cc20c9565ba303f3009ae6c5982891b0fc117c8"
   end
 
   depends_on "lua"
