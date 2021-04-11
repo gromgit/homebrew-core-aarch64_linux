@@ -22,10 +22,17 @@ class Splint < Formula
 
   def install
     ENV.deparallelize # build is not parallel-safe
-    system "./configure", "--disable-debug",
-                          "--prefix=#{prefix}",
-                          "--infodir=#{info}",
-                          "--mandir=#{man}"
+
+    args = ["--disable-debug",
+            "--prefix=#{prefix}",
+            "--infodir=#{info}",
+            "--mandir=#{man}"]
+
+    on_linux do
+      args << "LEXLIB=#{Formula["flex"].opt_lib}/libfl.so"
+    end
+
+    system "./configure", *args
     system "make"
     system "make", "install"
   end
