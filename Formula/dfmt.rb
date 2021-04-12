@@ -8,9 +8,9 @@ class Dfmt < Formula
   head "https://github.com/dlang-community/dfmt.git", branch: "v0.x.x", shallow: false
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "1bc5497e78eab3c0bb8922f1cd9838ee230b09523d96d26735ce7eeec865dd46"
-    sha256 cellar: :any_skip_relocation, catalina: "f548f11c95dbb62c34cc6479693e662bcf200eb84c56928f29749cae6caf9155"
-    sha256 cellar: :any_skip_relocation, mojave:   "7ede9b79a313b17cd4820832c6cf0eb7140247f78a243403dc667519d431e96b"
+    sha256 cellar: :any_skip_relocation, big_sur:  "00eceeab6157c27c75002f5239183b3902071c0aefe0b8892831115897edf197"
+    sha256 cellar: :any_skip_relocation, catalina: "a545590d0222235eb45c81f82d62b66a26aeb2156217d2c010bbb6b90201fd26"
+    sha256 cellar: :any_skip_relocation, mojave:   "27d62a6329e0c0b3d3e18d05600ad4fecf6dcd1cdd07eb150e292df593c7d92c"
   end
 
   depends_on "dmd" => :build
