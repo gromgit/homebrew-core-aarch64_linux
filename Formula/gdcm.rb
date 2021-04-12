@@ -12,10 +12,10 @@ class Gdcm < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "de5bc6a184d5a6b702b2c64f53dfbc01dba7001f88b19c41d0b4caf1eb204ab0"
-    sha256 big_sur:       "378001b94f05d471f2bda00ce0bb95c453c28541670b485e43048d4ac82a1db6"
-    sha256 catalina:      "f9cd528ff74597443915c745ee9703de355088b1f0fc9cc63b781f5ae71fba4c"
-    sha256 mojave:        "1848bb8978888ab810ac142636f403b3b5763954a412f770085730c7b2953894"
+    sha256 arm64_big_sur: "87c8a3362d3784d43959aaf3b165e6e76f12d973218e03cdcee828cf90ee1487"
+    sha256 big_sur:       "8e441a9aa21a943c91ef545607f22a2b893d32ceea0405a227477011d9d8cbbe"
+    sha256 catalina:      "0711caa5fad5624b41ac9f923ed6d1ac0510695fedaee7146233625b38fb0f20"
+    sha256 mojave:        "529d7a857599247949f3dafc1bddf73bfe76d2672bfefd5d1604dfce359cc81c"
   end
 
   depends_on "cmake" => :build
