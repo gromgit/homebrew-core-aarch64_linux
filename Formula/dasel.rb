@@ -7,10 +7,10 @@ class Dasel < Formula
   head "https://github.com/TomWright/dasel.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "28d3798b5889a79cce6ff8163d0b4ed44807d526d6d40cf7dfccb3018ac5280b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "44cd2b36191489e859f2fd37afd5c204ae903230d067cb79189a0b09d7b82044"
-    sha256 cellar: :any_skip_relocation, catalina:      "7146ae0ca3fbc3b8ab1b6caa7144056627a5ffed43264e813924f7e0f4943881"
-    sha256 cellar: :any_skip_relocation, mojave:        "3dd463e7c21fa1d19fc0cdea8cbe112d93dd9b50555178417abbc4ee56716953"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ea5dba645e69331c5053943da0c734a05616abf09b3952c98dfcc74406d81e86"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b3cdd166ef14bfd26e371b8f0d53d1890a4007daf12e673daf099a46b8dc45f2"
+    sha256 cellar: :any_skip_relocation, catalina:      "b2f1bd818158566caf8c25c77acc2ac6a889022f5338f7d32ab02cc54f3575bc"
+    sha256 cellar: :any_skip_relocation, mojave:        "dfc4db26a1ebcac490026cf5549ed2765ca4c31f4ac96bf3badbd4918ee5fb4d"
   end
 
   depends_on "go" => :build
