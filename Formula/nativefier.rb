@@ -8,10 +8,10 @@ class Nativefier < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f0bebd3923d1ec5cec8496a2c7b64d5058fd1767024d0726e397da640215d6e8"
-    sha256 cellar: :any_skip_relocation, big_sur:       "4a1b13ffb971dcccc22ca9399268d5f743ad4878972f16f876d12c7d450feac5"
-    sha256 cellar: :any_skip_relocation, catalina:      "52dcbf36dbe9463ea95a68dc3308bc17169af4b74db6664a88208175b6517a72"
-    sha256 cellar: :any_skip_relocation, mojave:        "ad1d0bf3905d55bb2c43f1ad89ff3526f6c1e83152d62e8e5cde1593dd12e644"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "11ff0d048015f27901ba0a3e18c225652b988d3aed75d6d3dec1bd20cf68b18c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "babbea6809c58629630be76c15fff61864bbdd1e51e3ab054276372e5a0930a0"
+    sha256 cellar: :any_skip_relocation, catalina:      "1c0034635b3b9c883c6ba7dcda5b5125636688cb0fe5f6a7d081dfcfcc8644eb"
+    sha256 cellar: :any_skip_relocation, mojave:        "cb6eed10054a611beca9e70817feee8a41c652d40a557084544d34bed8b1f295"
   end
 
   depends_on "node"
