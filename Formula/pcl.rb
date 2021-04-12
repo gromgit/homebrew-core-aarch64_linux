@@ -13,10 +13,10 @@ class Pcl < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "198a4310035fb316ad2519391327ca0788e5961103bf95c37c2e8a662a7f20f9"
-    sha256 big_sur:       "0151798b4a13ab326f3df30d454cdc34a430760fee942e93672e5e7ea3678735"
-    sha256 catalina:      "8b8eb46953987960629d6a2241f356891a7f069ab088637ab31b3519c2cfc485"
-    sha256 mojave:        "0917ef7fd1deed11b1ded50a8324eb787dad309c734812d774f049cb4e6e52fc"
+    sha256 arm64_big_sur: "a39839fa94d2b186beba36a22e6160167bf521f4f7bb46cb7c095fe2604c7f5b"
+    sha256 big_sur:       "f174cdcda4a169701e46c8c6eb13eb71febc73ad39a625a01a174d1d96548ced"
+    sha256 catalina:      "7509cc24de7ba27d81346e25ee232c5e68b2f0bf2645addc13671ab3e93f5471"
+    sha256 mojave:        "7ab97c02ed7569d33470de4661345c33a37e020266f4d0a1fb139abaee09acb9"
   end
 
   head do
