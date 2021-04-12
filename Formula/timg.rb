@@ -1,8 +1,8 @@
 class Timg < Formula
   desc "Terminal image and video viewer"
   homepage "https://timg.sh/"
-  url "https://github.com/hzeller/timg/archive/refs/tags/v1.3.2.tar.gz"
-  sha256 "80efc260b1550e7e179ffa3bbdaf9306fc84744021d1bee32c46dd6ff57fae3e"
+  url "https://github.com/hzeller/timg/archive/refs/tags/v1.4.0.tar.gz"
+  sha256 "99ea217643c506afce2cb5c9aa8cbc0848669677b3236815acb823fd7fcce3fa"
   license "GPL-2.0-only"
   head "https://github.com/hzeller/timg.git", branch: "main"
 
@@ -19,6 +19,7 @@ class Timg < Formula
   depends_on "jpeg-turbo"
   depends_on "libexif"
   depends_on "libpng"
+  depends_on "openslide"
   depends_on "webp"
 
   def install
