@@ -6,10 +6,10 @@ class Kcgi < Formula
   license "ISC"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3fc4230160aa06daffdf7ecf1d163c7ef51f251f8a0af41895dce2758e17d8ec"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9d3c70c055debc2d11e7bbd7b5df4730e22c59d5476a937c55283c4925d29799"
-    sha256 cellar: :any_skip_relocation, catalina:      "0f50618443011bede00b008698b0fa954660771e0970dd744d625ffca9295095"
-    sha256 cellar: :any_skip_relocation, mojave:        "27eb935afbc082aee20734a400d229f96d24a54a0e703fb2dc251923852a0ea0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "cf19665f8b909fc185747aeda39a2eccb74cbd5159cd8b16a4d170055001ffce"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ffce6f2eb26e7855808b3528077921b371cbded63bc54ba4f640d90ff766d888"
+    sha256 cellar: :any_skip_relocation, catalina:      "b215aed52ae23d42a8cb74d75195443cfff9666503863403f910b5be9fe844e3"
+    sha256 cellar: :any_skip_relocation, mojave:        "ba732464c3b7a7e1c511ee93b4b03460df9979a72846511962385cc642af36fb"
   end
 
   depends_on "bmake" => :build
