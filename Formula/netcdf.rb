@@ -13,10 +13,11 @@ class Netcdf < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "26eaaca9d9cf3bddea87d982c76c31df6df91b198d04ac62f0084141109457dd"
-    sha256 big_sur:       "55caff29df9b25ee906d2dcce6c78e02b6e9ac163b42e06f53c45aa0f6ade645"
-    sha256 catalina:      "b3aeca909a91b47e8e0d3fdc9d209dd13ecfb2b1879bab5ea49d3dcfd6404ddd"
-    sha256 mojave:        "9504a25d84dd6afb80553576474420cc074c64821aa346a58271dad26982b187"
+    rebuild 1
+    sha256 arm64_big_sur: "0be981ad85709be8c0afa1d3a80c7c2bf2907544f738baa6f7fd2052c7747d2b"
+    sha256 big_sur:       "280c7067606a716fad3e605ec990b25c15b45346895988234d3a255e87751188"
+    sha256 catalina:      "d416cc6a508b5303101125ca0703480b15e028cf3b7f126bb2415f8416cf6634"
+    sha256 mojave:        "addbaebb433ab43a9dda69aab665831e98de0302eeb0c8e78de41666c21de5d3"
   end
 
   depends_on "cmake" => :build
