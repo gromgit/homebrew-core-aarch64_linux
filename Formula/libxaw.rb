@@ -1,8 +1,8 @@
 class Libxaw < Formula
   desc "X.Org: X Athena Widget Set"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/lib/libXaw-1.0.13.tar.bz2"
-  sha256 "8ef8067312571292ccc2bbe94c41109dcf022ea5a4ec71656a83d8cce9edb0cd"
+  url "https://www.x.org/archive/individual/lib/libXaw-1.0.14.tar.bz2"
+  sha256 "76aef98ea3df92615faec28004b5ce4e5c6855e716fa16de40c32030722a6f8e"
   license "MIT"
 
   bottle do
