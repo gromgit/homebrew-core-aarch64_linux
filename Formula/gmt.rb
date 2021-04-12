@@ -9,9 +9,9 @@ class Gmt < Formula
   head "https://github.com/GenericMappingTools/gmt.git"
 
   bottle do
-    sha256 big_sur:  "7b32212c3675eac929fe82815dd61d8b885d4160e74f88d384b7f0d9855e0642"
-    sha256 catalina: "5aa76a9a110fb27785fa1217cd90e099ab58d420fdff8c52fb4f6270e8581545"
-    sha256 mojave:   "571ba573a249aa02a8c1bd2909b87a0552dd234a75ada7d23ecb289c51b384f3"
+    sha256 big_sur:  "938fd4d45e539dad96b0f8f12cec5d2a791e55ced1c2e027bdb970aed2e44ecf"
+    sha256 catalina: "894136f2754d3677ef41ac95d9087771a98502c8988a6742ce6c16832b873a92"
+    sha256 mojave:   "5ec74190adc6306423223b377b20950c6343847c5620429b17aedf7dfdbe7327"
   end
 
   depends_on "cmake" => :build
