@@ -9,9 +9,9 @@ class GmtAT5 < Formula
   revision 10
 
   bottle do
-    sha256 big_sur:  "57284c711b15ccbc3bd5b7f9d6e34d89b0476025d69106ef1cac0b37ae31b963"
-    sha256 catalina: "0a68232508487f1437b5c04edc86ca122cba781435fbfdb3b05ef6cbf24ab699"
-    sha256 mojave:   "99954d018be706225bbb71532a51cea50df01955e9844bcbd5a7cf2b8fce881c"
+    sha256 big_sur:  "bb60664f6ce9083687a9d8d619bcf35c0f092e086d583cc58f89f5adb8abc136"
+    sha256 catalina: "e2640c064fd9307bc23013ad206010e132d98636a531c575ac4e897910847e75"
+    sha256 mojave:   "96bb3ff62e4f3b2a8e842af362023b8cb64e452600acfc248f39544f22d2d005"
   end
 
   keg_only :versioned_formula
