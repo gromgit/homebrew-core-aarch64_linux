@@ -4,7 +4,7 @@ class Hdf5 < Formula
   url "https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.12/hdf5-1.12.0/src/hdf5-1.12.0.tar.bz2"
   sha256 "97906268640a6e9ce0cde703d5a71c9ac3092eded729591279bf2e3ca9765f61"
   license "BSD-3-Clause"
-  revision 2
+  revision 1
 
   # This regex isn't matching filenames within href attributes (as we normally
   # do on HTML pages) because this page uses JavaScript to handle the download
@@ -48,7 +48,6 @@ class Hdf5 < Formula
       --enable-build-mode=production
       --enable-fortran
       --enable-cxx
-      --with-default-api-version=v110
     ]
     on_linux do
       args << "--with-zlib=#{Formula["zlib"].opt_prefix}"
