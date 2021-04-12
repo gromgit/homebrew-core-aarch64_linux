@@ -11,9 +11,10 @@ class CvsFastExport < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "74b0b5e12bc9a958ff35fd2d57801a2836fb4f6f1678dc8f7cc0f17ba9285565"
-    sha256 cellar: :any_skip_relocation, catalina: "2258571d35114e999d5328116ef53ab16fd2d2a4ccc9954fafd544703aeb0ae5"
-    sha256 cellar: :any_skip_relocation, mojave:   "ebec60a0595f07b7e363bafff0cd726030a1d4c073dd6f699293fc20defa078c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d31f1687da024aa388bc293984a302d558b3041c5f86c737e457f9325fd240eb"
+    sha256 cellar: :any_skip_relocation, big_sur:       "74b0b5e12bc9a958ff35fd2d57801a2836fb4f6f1678dc8f7cc0f17ba9285565"
+    sha256 cellar: :any_skip_relocation, catalina:      "2258571d35114e999d5328116ef53ab16fd2d2a4ccc9954fafd544703aeb0ae5"
+    sha256 cellar: :any_skip_relocation, mojave:        "ebec60a0595f07b7e363bafff0cd726030a1d4c073dd6f699293fc20defa078c"
   end
 
   head do
