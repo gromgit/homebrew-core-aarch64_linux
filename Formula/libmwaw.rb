@@ -1,8 +1,8 @@
 class Libmwaw < Formula
   desc "Library for converting legacy Mac document formats"
   homepage "https://sourceforge.net/p/libmwaw/wiki/Home/"
-  url "https://downloads.sourceforge.net/project/libmwaw/libmwaw/libmwaw-0.3.17/libmwaw-0.3.17.tar.xz"
-  sha256 "8e1537eb1de1b4714f4bf0a20478f342c5d71a65bf99307a694b1e9e30bb911c"
+  url "https://downloads.sourceforge.net/project/libmwaw/libmwaw/libmwaw-0.3.18/libmwaw-0.3.18.tar.xz"
+  sha256 "fc5d051680f8000be64ffebc0b0c58716b1c9bf06003ec399387b109d1ed1e0f"
   license any_of: ["LGPL-2.1-or-later", "MPL-2.0"]
 
   bottle do
