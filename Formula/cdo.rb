@@ -11,10 +11,10 @@ class Cdo < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "dcf57d42bdb632af57ee2f922b2b8b5171f570abdc9e6568eb1df5387d83d237"
-    sha256 cellar: :any, big_sur:       "20f3e0909566e7ed883d8d17d486e4ea9322ed23df2a6c75990bc2949b8ee518"
-    sha256 cellar: :any, catalina:      "bebfa9ddae406d28b86712fd40cd7aee676cfb1e5631024f60c088feafc698a0"
-    sha256 cellar: :any, mojave:        "6c44e60f89cee42100f29328b50aa3242b571663abe4d55209bfca450bdc4cc3"
+    sha256 cellar: :any, arm64_big_sur: "3d7b530430215b221d425f561c801d46cdd53a55d2386a816d1101cb9d1aa62a"
+    sha256 cellar: :any, big_sur:       "bfc4a37a38a61186ca6e8426899136d65bb7d66ab9987c16e5d422e6a955874d"
+    sha256 cellar: :any, catalina:      "955ae6b0e69ba8c32530c732011da18da59088f9758b84e8733ca3be9d973212"
+    sha256 cellar: :any, mojave:        "93c32ad2e784fec206d157300a97bab63cf934ad6da881f2f880fe97133493e4"
   end
 
   depends_on "eccodes"
