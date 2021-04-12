@@ -6,6 +6,13 @@ class Minisat < Formula
   license "MIT"
   head "https://github.com/stp/minisat.git"
 
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "b802117d6cc0fa96bedac9eaa086908687ad87c7a368558e47c2417d3d2b7146"
+    sha256 cellar: :any, big_sur:       "ecc424ea3cde4f1a8d7056802d384ce1ab9823393301cac432dc26260685437a"
+    sha256 cellar: :any, catalina:      "0940a0cb0c4c4d6130d1eb7aa698561d6b01904044ee57731ad2c12092e30e46"
+    sha256 cellar: :any, mojave:        "cc7b59b30490175c56a6068c97956c39da31068df2522376da99998761972319"
+  end
+
   depends_on "cmake" => :build
 
   uses_from_macos "zlib"
