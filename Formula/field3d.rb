@@ -7,10 +7,10 @@ class Field3d < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "6a5d7eb6b91567ebe0082b1170583bf7035fa2c0c8dd0c360bd9bcea11dc1d5c"
-    sha256 cellar: :any, big_sur:       "fd226f9edf79d0ea4f135568c60ab222c34ca001042f9dc20bc9f654e4bbcb1c"
-    sha256 cellar: :any, catalina:      "d1133d0d7528ed082ef3b6ac8fb81da79682592826d0cfb9fd0ac8208b9ed98f"
-    sha256 cellar: :any, mojave:        "0e3066f2e84a3573f468119b60f3c854fe738519cb2e2aef29a2fb0830a9f1b1"
+    sha256 cellar: :any, arm64_big_sur: "6781d411f8cc234b6882e768bcbed5ae6dbb827a61083dff16d964fdf40e6622"
+    sha256 cellar: :any, big_sur:       "46354c04b0cebfc7b54880b3e4ed3f9e57726dc773b4d8a0143f113c2c178da1"
+    sha256 cellar: :any, catalina:      "b781b7f40b7aaff0ec9b05979ad9698f86c23ecc270a3ffa90475e7450088cbd"
+    sha256 cellar: :any, mojave:        "4563833cb30bcb0194f018c9f9bf3f3b90c6f5ee803b414f33f4cf1df4f6889e"
   end
 
   depends_on "cmake" => :build
