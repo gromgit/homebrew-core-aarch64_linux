@@ -7,10 +7,10 @@ class Radare2 < Formula
   head "https://github.com/radareorg/radare2.git"
 
   bottle do
-    sha256 arm64_big_sur: "2164d2363e441386b36d49a6455f1fc3fb6fd808d18a9e30c6f5133ab2506e17"
-    sha256 big_sur:       "cb71e445c259388b012c91ad4af4a72c9414a7e1e1b4efe62be0d9c88c62b0b3"
-    sha256 catalina:      "ca7774db81bc1f44c699befad82e046deb82efdc7ef4362e66036b820e792b94"
-    sha256 mojave:        "37b7618e90dc2289e69da94fc3e0836130a5eb6f009f26502d6aef614c1562d6"
+    sha256 arm64_big_sur: "df9a9c4dfecbbcb2ad9148baae13f18f454e2b1bab31f0990864b7c87c490080"
+    sha256 big_sur:       "bafe329e19f419f23e0b5eb9da2b1aea609f8f288c9e9f5c6470781176aca0a4"
+    sha256 catalina:      "a78871f5bfa3ba4c2cffb7cb10f8dfd37046ead21333c265235b821688586731"
+    sha256 mojave:        "05c40bc3a243caf720945ab2dcd1c5de49605502d57572415667f5941078e59d"
   end
 
   def install
