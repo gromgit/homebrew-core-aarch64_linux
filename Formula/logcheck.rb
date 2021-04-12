@@ -1,8 +1,8 @@
 class Logcheck < Formula
   desc "Mail anomalies in the system logfiles to the administrator"
   homepage "https://packages.debian.org/sid/logcheck"
-  url "https://deb.debian.org/debian/pool/main/l/logcheck/logcheck_1.3.22.tar.xz"
-  sha256 "7bb5de44d945b1ec6556c90ad8e9cb4e6355fc44b6c5653effe00495ec55e84e"
+  url "https://deb.debian.org/debian/pool/main/l/logcheck/logcheck_1.3.23.tar.xz"
+  sha256 "a2188ba549fff4412c82074b271884ff66d25f3fdb2a41916e817ce676855b29"
   license "GPL-2.0-only"
 
   livecheck do
