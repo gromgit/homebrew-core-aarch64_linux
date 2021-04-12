@@ -2,9 +2,9 @@ class Puzzles < Formula
   desc "Collection of one-player puzzle games"
   homepage "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/"
   # Extract https://www.chiark.greenend.org.uk/~sgtatham/puzzles/puzzles.tar.gz to get the version number
-  url "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/puzzles-20201208.84cb4c6.tar.gz"
-  version "20201208"
-  sha256 "fd49aabdd7c7e521c990991dab59700a40719cca172113ac8df693afe11d284d"
+  url "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/puzzles-20210409.69b5e75.tar.gz"
+  version "20210409"
+  sha256 "6efc4939f8731d0613e47f9efdb01f0481d0a0c29c85435f59d78eae0fc444d1"
   head "https://git.tartarus.org/simon/puzzles.git"
 
   # There's no directory listing page and the homepage only lists an unversioned
@@ -23,18 +23,35 @@ class Puzzles < Formula
     sha256 cellar: :any_skip_relocation, mojave:        "aaf4ab9bb3026b8749235052b2f82eb7fb3f4eb8ad4ff418ebe35256f0421d99"
   end
 
-  depends_on "halibut"
+  depends_on "cmake" => :build
+  depends_on "halibut" => :build
+
+  on_linux do
+    depends_on "imagemagick" => :build
+    depends_on "pkg-config" => :build
+    depends_on "cairo"
+    depends_on "gdk-pixbuf"
+    depends_on "glib"
+    depends_on "gtk+3"
+    depends_on "pango"
+  end
 
   def install
-    # Do not build for i386
-    inreplace "mkfiles.pl", /@osxarchs = .*/, "@osxarchs = ('x86_64');"
+    system "cmake", ".", *std_cmake_args
+    system "make", "install"
 
-    system "perl", "mkfiles.pl"
-    system "make", "-d", "-f", "Makefile.osx", "all"
-    prefix.install "Puzzles.app"
+    on_macos do
+      bin.write_exec_script prefix/"Puzzles.app/Contents/MacOS/Puzzles"
+    end
   end
 
   test do
-    assert_predicate prefix/"Puzzles.app/Contents/MacOS/Puzzles", :executable?
+    on_macos do
+      assert_predicate prefix/"Puzzles.app/Contents/MacOS/Puzzles", :executable?
+    end
+
+    on_linux do
+      assert_match "Mines, from Simon Tatham's Portable Puzzle Collection", shell_output(bin/"mines")
+    end
   end
 end
