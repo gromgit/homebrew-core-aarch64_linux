@@ -7,10 +7,10 @@ class Mapcidr < Formula
   head "https://github.com/projectdiscovery/mapcidr.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9e89dbcd3bcf789e2606bdfd6db02eca549a2cf886fc01f6028afe0bc2b0805e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "229957ffa6a357e5e87cb8263aadd3a79b412f8a6fd451db15eca2c9f41c89a6"
-    sha256 cellar: :any_skip_relocation, catalina:      "af6be26588640dd3c96d746fe6bb1c29d64aab8de00bac71db13d5243df8f10d"
-    sha256 cellar: :any_skip_relocation, mojave:        "7a20aa6d05fd86d72486b8369c48936ccc07e0477c5d9ccc83e83af2d9a96779"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "72a5c2b27c8aed320b478eae7eff5690bc88be096b90f718355180b68d825d55"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a9ebfe1291a2a6892cf8c785530c2a34e8d7eadb009056e2de85985c2eb63b4a"
+    sha256 cellar: :any_skip_relocation, catalina:      "eae3bfeaff3972701fbae550245f0273b406e11d780e7ea53ee744c564062df7"
+    sha256 cellar: :any_skip_relocation, mojave:        "1fbaceadcc332f73082af3af29bfb1b03e33a33a72a0320e326e024c1fc6c10b"
   end
 
   depends_on "go" => :build
