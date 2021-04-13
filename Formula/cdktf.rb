@@ -3,8 +3,8 @@ require "language/node"
 class Cdktf < Formula
   desc "Cloud Development Kit for Terraform"
   homepage "https://github.com/hashicorp/terraform-cdk"
-  url "https://registry.npmjs.org/cdktf-cli/-/cdktf-cli-0.2.1.tgz"
-  sha256 "d73c146975b704a1159026247fd81b43301b0013812d410946abb16e782b3e76"
+  url "https://registry.npmjs.org/cdktf-cli/-/cdktf-cli-0.2.2.tgz"
+  sha256 "48fbd5896b936bcae1506fa2076f44790c06a862ec9321fd7bb7fff56de68adf"
   license "MPL-2.0"
 
   bottle do
