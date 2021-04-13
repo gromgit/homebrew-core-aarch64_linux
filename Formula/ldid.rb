@@ -8,10 +8,10 @@ class Ldid < Formula
   head "https://git.saurik.com/ldid.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "db38fe4c61c5c311ecb18ec102f9dc43425860109045e673d3a3ebb8626f1cb2"
-    sha256 cellar: :any, big_sur:       "7a37796f816c64f2f7423411f735bc9a9a309d18fb40346b69770682061fb734"
-    sha256 cellar: :any, catalina:      "78249bd4fdaaeef269905c5dde76a2a97470b1a562e6ad6b54dcba0eab7f9d82"
-    sha256 cellar: :any, mojave:        "6cf13876ed160a27192924a2cb52bcde777f9d9378a66b18073ee35456665576"
+    sha256 cellar: :any, arm64_big_sur: "429a183d6d31024971e5df4b36dcada47d2ac7e57006bcce8b20ea191c7e8c01"
+    sha256 cellar: :any, big_sur:       "15505f156e2d6f768119b849b8b1db1c374eb2f882abde35589c77aef6114f39"
+    sha256 cellar: :any, catalina:      "70d4f9704e7e4338eb63c0c8033954fdd7630bfd46d589c47a97167572e009ea"
+    sha256 cellar: :any, mojave:        "53f3d9fad6a5ba4f440fed19b6402742d3a01a68bb3370751704663ae7d55101"
   end
 
   depends_on "libplist"
