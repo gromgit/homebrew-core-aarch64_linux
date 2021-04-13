@@ -11,10 +11,10 @@ class Irssi < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "668c92b2a9730bd0617bb17ee6f3b405706d13d2c88678da082a55a13a9149f0"
-    sha256 big_sur:       "4b3a1a552013ec99c97142d07b596d6dd2bdec87b52190179e5a3bdc9fd99f59"
-    sha256 catalina:      "6962eb1f607332ce8319c55febe94c419376878b1fc30738f3e05aaa24355ea4"
-    sha256 mojave:        "1da2e8798d530cbc6c7f901651df3f9a24168b61b856fc8b8100796fd66e239f"
+    sha256 arm64_big_sur: "26e7ffc0a387626910476fe4c4fbed5a5006ff718edd9f087067adfe2dfb537a"
+    sha256 big_sur:       "029b203b01fdde27b18fc9646980d45df551048614e14f5879a90d8914ae9255"
+    sha256 catalina:      "954cd682c20c4a32ecc2f877b7e92202d58299a825c3910867223703f0e2c402"
+    sha256 mojave:        "d8b4a41cf599842e56b1eacf4cc0557395e117cbf20ff733a3f764e457b6b296"
   end
 
   head do
