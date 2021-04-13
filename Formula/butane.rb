@@ -11,6 +11,13 @@ class Butane < Formula
     strategy :github_latest
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9e6ae4008af9fb8dda9996a611a89933c070ea957cb82238238b93169ebc89c0"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b48f545690f7676ce59117fe3fec9c3a89872241c788081c1e828a62d5e93195"
+    sha256 cellar: :any_skip_relocation, catalina:      "9a412c89813d6f51a694557d4b38b849e3133af9b2707b4a77f648ab3b7bb32d"
+    sha256 cellar: :any_skip_relocation, mojave:        "bfceadc7c496f1d78b65f725ae01572eefdd74e6b8080b539c285033fffbcbf8"
+  end
+
   depends_on "go" => :build
 
   def install
