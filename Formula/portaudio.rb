@@ -1,9 +1,9 @@
 class Portaudio < Formula
   desc "Cross-platform library for audio I/O"
   homepage "http://www.portaudio.com"
-  url "http://www.portaudio.com/archives/pa_stable_v190600_20161030.tgz"
-  version "19.6.0"
-  sha256 "f5a21d7dcd6ee84397446fa1fa1a0675bb2e8a4a6dceb4305a8404698d8d1513"
+  url "http://files.portaudio.com/archives/pa_stable_v190700_20210406.tgz"
+  version "19.7.0"
+  sha256 "47efbf42c77c19a05d22e627d42873e991ec0c1357219c0d74ce6a2948cb2def"
   version_scheme 1
   head "https://github.com/PortAudio/portaudio.git"
 
