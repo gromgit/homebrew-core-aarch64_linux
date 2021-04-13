@@ -12,10 +12,10 @@ class Imagemagick < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "87fd9f93911df4e835c4fa834156dfcb44e566f174cbe7eedac45e1295719d39"
-    sha256 big_sur:       "b0c53beb07428f427f028b0bcb686557fc9fcf2cfc740d561f46e7ccb3e8bc3b"
-    sha256 catalina:      "ea2c012b69f2940b62f75cfdcd8467422a3b98dea4b3ce69a8484c461c3d94ee"
-    sha256 mojave:        "9c58326a3a5762f94ec86ef5ae6d3b56f38f1eb2effafb155b5c8758f07b84e5"
+    sha256 arm64_big_sur: "7e64250013923bc161640564bc7e538c43adef53bf108e9b2abf01406c3808fb"
+    sha256 big_sur:       "e16193b5a62fd5f41d60711db75cde49132f01f5ee098de8d73eeef189a9e72a"
+    sha256 catalina:      "3845d2710a722bd5935aadcb5f49d45bb5dfdc35caa3b235eb2c8c24fde7df8f"
+    sha256 mojave:        "57789a0daf39b05c32cd98f7e5bebefd5db99b9d6e3abcbe3784caf4f3128ab7"
   end
 
   depends_on "pkg-config" => :build
