@@ -12,10 +12,10 @@ class Gopls < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d9f71b730b2a49d5b1248e9695d07410e980bb2ac539336b47a2eafab118ae88"
-    sha256 cellar: :any_skip_relocation, big_sur:       "29c406b7357ab2082b95110ee9d96f3ce322293ccd248ed611a13fadc56aa88f"
-    sha256 cellar: :any_skip_relocation, catalina:      "3f5a24b417b7a52ebe3f9b6095d5e2414636c28c523ba42cf0b1f49f7efe4a3c"
-    sha256 cellar: :any_skip_relocation, mojave:        "fc452dcf3a2ba8068ac6e301e90f25addfc1a3022d0621bbf0b8fec8ffab8433"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f4c4680554644e0832a23551ef612085ec6db4c8323d6e51f51d57f7e4a45af6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6180f46a4470cf6124fae44378b9c7198cf65fa7e76403862883176c4f2b808e"
+    sha256 cellar: :any_skip_relocation, catalina:      "d104154f509a89fd317db2b3b0791fe6d27f6c99b207aae1f29b21abadc65726"
+    sha256 cellar: :any_skip_relocation, mojave:        "bcd1962a85584f900d30984d0a0d13198aee05aaa5582f53fd18d86324d48f59"
   end
 
   depends_on "go" => :build
