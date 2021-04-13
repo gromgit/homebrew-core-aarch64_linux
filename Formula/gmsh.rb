@@ -7,10 +7,10 @@ class Gmsh < Formula
   head "https://gitlab.onelab.info/gmsh/gmsh.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "c6b9e4bf4674060c57665d5ef9aac06a1e03df462aa191003c2c8035210d927c"
-    sha256 cellar: :any, big_sur:       "0d54d3321b9232d064a508726c01fbec6ac6a2a007913ee68525345245a22264"
-    sha256 cellar: :any, catalina:      "c5e547b974a76682f0f0f4cf1f6bd337f61aa21e83d8f7e25d44b4b1fec252be"
-    sha256 cellar: :any, mojave:        "d1cdc112e555b030189d27992a52336b09013ce0b30d90225c34856c157bb08d"
+    sha256 cellar: :any, arm64_big_sur: "5e2a01c4dcc89ad08d22b52e035348de870de7dce3df929483b1d62e189ab98e"
+    sha256 cellar: :any, big_sur:       "74c50799f197a99043c69d6ccc57956fb833aa0a2afc1957a144fe1b0a76faa0"
+    sha256 cellar: :any, catalina:      "fa0ac31134b06b06d7b017c527ead99107a09062d12c36b515748f30fcfbfe83"
+    sha256 cellar: :any, mojave:        "3e16f3d507c7b61e30592c152c4b66d361be3b00ab001db868b90a91b2ed6b79"
   end
 
   depends_on "cmake" => :build
