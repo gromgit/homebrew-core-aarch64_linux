@@ -1,8 +1,8 @@
 class Nnn < Formula
   desc "Tiny, lightning fast, feature-packed file manager"
   homepage "https://github.com/jarun/nnn"
-  url "https://github.com/jarun/nnn/archive/v3.6.tar.gz"
-  sha256 "875094caebcc22ecf53b3722d139b127d25e1d5563a954342f32ded8980978b5"
+  url "https://github.com/jarun/nnn/archive/v4.0.tar.gz"
+  sha256 "a219ec8fad3dd0512aadae5840176f3265188c4c22da3b17b133bac602b40754"
   license "BSD-2-Clause"
   head "https://github.com/jarun/nnn.git"
 
@@ -30,9 +30,12 @@ class Nnn < Formula
     # Testing this curses app requires a pty
     require "pty"
 
-    PTY.spawn(bin/"nnn") do |r, w, _pid|
-      w.write "q"
-      assert_match testpath.realpath.to_s, r.read
+    (testpath/"testdir").mkdir
+    cd testpath/"testdir" do
+      PTY.spawn(bin/"nnn") do |r, w, _pid|
+        w.write "q"
+        assert_match "~/testdir", r.read
+      end
     end
   end
 end
