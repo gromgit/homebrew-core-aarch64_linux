@@ -7,6 +7,13 @@ class OrganizeTool < Formula
   sha256 "368a265f66f2d5cb2f01e6c76a3d98cac1b1ff6a82c2f5d534f3abb5ca95ad44"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "5e04f6251cd1b5bf8043b83ff1899c28178c0e1c805d175a17d5f7aa7f48af3f"
+    sha256 cellar: :any, big_sur:       "3a551091686c9306a4b7c046ba5c475f5fc50a3715d5bd3986d5108254c6eee8"
+    sha256 cellar: :any, catalina:      "14f62b30d9da18324858e2fd669920b55bf52d507c9b1bb8a606eb902fa58e14"
+    sha256 cellar: :any, mojave:        "abc7d2b9792baad6b58d389f7d8ec334358994883318d7b4e2a7d95729d86878"
+  end
+
   depends_on "freetype"
   depends_on "openjpeg"
   depends_on "python@3.9"
