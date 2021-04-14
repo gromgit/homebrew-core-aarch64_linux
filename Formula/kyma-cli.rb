@@ -1,8 +1,8 @@
 class KymaCli < Formula
   desc "Kyma command-line interface"
   homepage "https://kyma-project.io"
-  url "https://github.com/kyma-project/cli/archive/1.20.0.tar.gz"
-  sha256 "e82c40d0202cb177be07a068e7926d825210f830c7a55fc860685596db3f4f87"
+  url "https://github.com/kyma-project/cli/archive/1.21.1.tar.gz"
+  sha256 "f5177b73aa49dc28e14fc47ec1fb654a1dd5da41ea0676d11a35983a17e0e2e3"
   license "Apache-2.0"
   head "https://github.com/kyma-project/cli.git"
 
@@ -12,7 +12,8 @@ class KymaCli < Formula
     sha256 cellar: :any_skip_relocation, mojave:   "571e5fa55baf08581a01e9f2fde9769e72c7acfa70baa7a0459a552b2dcfa6a3"
   end
 
-  depends_on "go@1.14" => :build
+  depends_on "go" => :build
+  depends_on macos: :catalina
 
   def install
     ldflags = %W[
