@@ -7,10 +7,10 @@ class Luarocks < Formula
   head "https://github.com/luarocks/luarocks.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2dc31789a37d4d1af62912076a88d985a6b3e223cfbf0301edf80583454c68a1"
-    sha256 cellar: :any_skip_relocation, big_sur:       "cc1a0cf24af052f5f0c05c2a3a3ce928b193f6fb7c67c82ef458a25338f07254"
-    sha256 cellar: :any_skip_relocation, catalina:      "0e976588a495ed84e45d0b76b8622148d6b401ab94e262b604d8759d1cdcec2d"
-    sha256 cellar: :any_skip_relocation, mojave:        "8fd471acf58802ac4237674d499d295720171008eaa4bdcbaa3cf02633ddeacf"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "884ff51dc8c4b1009ce40d3a6f4a1306566ff9da8417ea4c03dce4c38a136807"
+    sha256 cellar: :any_skip_relocation, big_sur:       "631971f2bc3585dc67d7b5c7b07391489442564a0f111ae358008a02e3b8d73d"
+    sha256 cellar: :any_skip_relocation, catalina:      "b7d91bbc4ec33e19953bc1ed4127557c530b66c0e0ff7eec1a188268b486b594"
+    sha256 cellar: :any_skip_relocation, mojave:        "bcd1442f092e25f04eac3270b5a468d911716a50a3af716ce3f4f9c44a46920e"
   end
 
   depends_on "lua@5.1" => :test
