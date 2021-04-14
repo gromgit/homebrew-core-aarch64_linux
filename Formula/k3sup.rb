@@ -14,6 +14,7 @@ class K3sup < Formula
   end
 
   bottle do
+    rebuild 1
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "5dba59d4f75027783dae204b77940a49f9698049bb0410bccd528b3333930a33"
     sha256 cellar: :any_skip_relocation, big_sur:       "0a61dac1155673a17a07d454c19b3f477888c7288571fc661624458182e93ef6"
     sha256 cellar: :any_skip_relocation, catalina:      "02aa3ab948053108d81112168c9059eb0f746fb74fec676d70a33a0f947b3609"
