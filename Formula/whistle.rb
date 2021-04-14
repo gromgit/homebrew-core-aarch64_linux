@@ -8,10 +8,10 @@ class Whistle < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e6e0fd47f55eddd68d727c59e4b50c670d6efdd55214fd5c46bca6ac61347bc8"
-    sha256 cellar: :any_skip_relocation, big_sur:       "293e1983459f089ed1cf3965edc439b01b593a5ac5204aa3fcde33d3ad3a1c8e"
-    sha256 cellar: :any_skip_relocation, catalina:      "85cf5906eba467a032449ad8a0675b070427045b1d1dc7d089ad05e88e065df5"
-    sha256 cellar: :any_skip_relocation, mojave:        "3c991dd8a9256490df8280504757ef3ef8421593c4d5d012f496ee1216435719"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2486b25eedc48b6605c7602dadeb2600464d97ecb172ab47c8745dee0e8bbc91"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5673a37283548a128e978b08c35889ce8f4d8243381c973aa60343eb8d5812cd"
+    sha256 cellar: :any_skip_relocation, catalina:      "39051cfd070da7be97b54ec21a40f9dd05dcf5a2066b1e357c4281d796f4aa1a"
+    sha256 cellar: :any_skip_relocation, mojave:        "087509bf3ec2ed729f0a20a0a8a0dc59e181f6a1d2e8b5b9260d6ba259f0a106"
   end
 
   depends_on "node"
