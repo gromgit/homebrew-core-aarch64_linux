@@ -7,10 +7,10 @@ class Wownero < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "d80890e7ee1eb581b34b03499d02b2448dcedd1f8a1f995328a2c0900d43de9a"
-    sha256 cellar: :any, big_sur:       "9c6e61cdf77def4a409b44b0ca5f7a18f05d761f900dd3ceb3b99b4499d6d245"
-    sha256 cellar: :any, catalina:      "20768518c25c2477ee4719547d763e50286c7bace569e39ad9fb4f2d1d3df971"
-    sha256 cellar: :any, mojave:        "0d5accab8bb0c88ce97f9b215b16c91305474b5d4e6f9fdb73bdf2993a33693e"
+    sha256 cellar: :any, arm64_big_sur: "245bc1c600664500c357e8b02a9bcf7351b38f2477b18a1c778a1c3e5f7e10e2"
+    sha256 cellar: :any, big_sur:       "63011b93c68205b9d03da25aeab91978744fd67a26564a25d328fe7e1b733ae6"
+    sha256 cellar: :any, catalina:      "91eaa2b9ee3477f138338af4eb6cac33a4df8c8f83358efea712ebd34f8dfb7d"
+    sha256 cellar: :any, mojave:        "279b66f4e04abf8bf62e95a95547b2d5c371216db97d4c1c292c421b759937f7"
   end
 
   depends_on "cmake" => :build
