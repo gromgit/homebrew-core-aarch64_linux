@@ -11,6 +11,7 @@ class Dolt < Formula
   end
 
   bottle do
+    rebuild 1
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "bc8dd62c305a68894dfb96dbf7410cbd1455fbb2efaf9436709da25a087e115b"
     sha256 cellar: :any_skip_relocation, big_sur:       "043c2bfb7a5232061a3835069da9cbfb19563b640bd5db71a2cb779489c6deac"
     sha256 cellar: :any_skip_relocation, catalina:      "2dbca5bd86b0847e959b40c992f8587ddf82a4d5229874dc649a151ae19cac8f"
