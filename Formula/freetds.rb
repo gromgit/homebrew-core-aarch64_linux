@@ -11,10 +11,10 @@ class Freetds < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "521ce9efc9f53e89fcdb010b217df0f0347ee87b82a37a604a53c473a154e3bf"
-    sha256 big_sur:       "fdabe9c7b3941c97bbe742f9a3807b40e708b930e2433444942cccfb6599bb08"
-    sha256 catalina:      "f2254a22e731bdb0cbcff133e5237a9d962c561208dd7fbe55edd02db6702486"
-    sha256 mojave:        "dbc342082bd4b9cb8fcdd0a8e722c59ad08213ed75b11ad5c1c14fd30b337c8c"
+    sha256 arm64_big_sur: "4ccd778e4acfa7aaa1a8747a5cdf9bbc9e440518f59f0357910e1c47a135fec5"
+    sha256 big_sur:       "69d954c0e4ac3a606fc82f591f7ed7c1f28d34fb284a47e28cb4e9dc8e813ca7"
+    sha256 catalina:      "1f66406bd2a80abcab6c67f4931bc04b167d6bf5c3c0bff529cfbb1af1698ba7"
+    sha256 mojave:        "c4f5917d776f671fe6847ab4c36bc7fac44139e510e30f584ba93ee55a29377b"
   end
 
   head do
