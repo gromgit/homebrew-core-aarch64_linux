@@ -6,10 +6,10 @@ class Arturo < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "50953778128a490881a216c3251970d668bc1c063e143ee8351decef0fd28e4c"
-    sha256 cellar: :any, big_sur:       "b8210de3c8a54baca944a808583ba79046db3016c43f0ab56c88e5119998d304"
-    sha256 cellar: :any, catalina:      "4b45bd192ec76edb3fb5d3947281f9920d52972349f959fc173ef4ddec2c74c3"
-    sha256 cellar: :any, mojave:        "9a6519eb0a7784b0eea50e2239738985989f310eca8a2923f65237372dacea1c"
+    sha256 cellar: :any, arm64_big_sur: "7379fd044433d4a3315868ce97a6c9b772ddb70394e3a9f8464b9e6015c5d08b"
+    sha256 cellar: :any, big_sur:       "d122702a08e1b5d6e5c0251d0e38311bd6f40964659e9472366bc68fa662c888"
+    sha256 cellar: :any, catalina:      "c5efd116535312d8d130bed4522be42fa796bd56c81f50f4ec334927b3e8fd9d"
+    sha256 cellar: :any, mojave:        "33e9eabfcdcf5157c991163096eb844eb4f4212c63171e68da2cc110942cbf21"
   end
 
   depends_on "nim" => :build
