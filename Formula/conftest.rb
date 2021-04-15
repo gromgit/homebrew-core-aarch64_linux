@@ -6,6 +6,13 @@ class Conftest < Formula
   license "Apache-2.0"
   head "https://github.com/open-policy-agent/conftest.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "13b15a48a40b4e2abc93bcc71bee8f544c15c5f76ee7cdfef90dd9da771aa3c0"
+    sha256 cellar: :any_skip_relocation, big_sur:       "259a6e4fffe0e3af142d1a98a6090b206828e8cef5fb0b809d05a4129ffb1516"
+    sha256 cellar: :any_skip_relocation, catalina:      "e7a72ec05406e510ed89b963ac0f5072b744fb5bec2d6d172f6ec8de00d3c6fc"
+    sha256 cellar: :any_skip_relocation, mojave:        "04ced2986480ad994f1c34254f8f946e6c33ddf19432a3bcc3077cb31af31d1d"
+  end
+
   depends_on "go" => :build
 
   def install
