@@ -6,9 +6,9 @@ class Chapel < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 big_sur:  "31a99c8d05a4f7b15fe4304e28c19afc649d383f3067cec248e1b53e83aa419e"
-    sha256 catalina: "0a8b6f467f3bcc5e3c8c9f5f6f4bf69224df6fdd63c930b6638f393194e474fd"
-    sha256 mojave:   "8a9bb9ed268f74bf9fac32456b36a73847e6f98aea8e0c8c76531c2aad5356a4"
+    sha256 big_sur:  "e792266fb772218ca4acfc90910d4d26836e2c1fe1faa60ffc104bd7baf31046"
+    sha256 catalina: "7a06d32c992460337aa0af964803ace53465ecd90727c6ca57392017d5fb1890"
+    sha256 mojave:   "c048b2189f4900731fbbfb76efc70bc8e4d85809759ac80b2de7bdeb6db76acf"
   end
 
   depends_on "python@3.9"
