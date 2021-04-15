@@ -9,9 +9,10 @@ class ConjureUp < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any, big_sur:  "1d755ca87d77ebcbc5d9f7d5fbb4e3287c5190a6373bb7d3d36c318606fa0b10"
-    sha256 cellar: :any, catalina: "25e7e461528cf9c56ccdb4c286d38cc72c2843a7ba2310f65276f3c104ad3b80"
-    sha256 cellar: :any, mojave:   "e722d4d340ff170432a12a97b0de57de13f774d439831989fc1286920d087376"
+    sha256 cellar: :any, arm64_big_sur: "3e516b5c4a0d71ed5d32332fc12703605654c93127e45c8754455e84b4cab93e"
+    sha256 cellar: :any, big_sur:       "869c705b0f4392a57afd2ba7e4f7b5260640b5130c47dbb3aeb77bc142296d6c"
+    sha256 cellar: :any, catalina:      "2112383857f9f865eff1a9528dd6ab2ace8a7b34be1d4ed3ac4fe80b014f9241"
+    sha256 cellar: :any, mojave:        "b36c8bb8462705691744403cdcf6b2da77e7d1391249dba3857297cc950e6b97"
   end
 
   deprecate! date: "2021-04-15", because: :repo_archived
