@@ -8,10 +8,10 @@ class Poetry < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "cccae39561b6bc567a685f8a806085040f8946bec7518c1d054358bd10ee47a8"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e68f6f7785813ec099a342ed213cbb4dbaef3aa36dacdc1d610056142e8e301e"
-    sha256 cellar: :any_skip_relocation, catalina:      "d27c5e145742f3f3f0158eee45295da787bbac393417fedd39d3d9e113cafc75"
-    sha256 cellar: :any_skip_relocation, mojave:        "6d056d95767f30d51b744bfbc0f63f6c49fbdf73fcbeabdf0abd19c0bdd1019f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "48b5e7b458e9cc95f3589596eca9e8efd24366c56bbe513373d97e329cc84c0f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3f412fc0cfb9d53d3797012a0e646435e9642694bcb18653c68a0ea53897b47a"
+    sha256 cellar: :any_skip_relocation, catalina:      "1067ae52e2a5734932564aee1f3d6d6c610fe6eb1ede7586208aeb534b709730"
+    sha256 cellar: :any_skip_relocation, mojave:        "60d1de7c1c6db5046e1e12d9e74c298c82e438278b073fe085d12aef53ebce06"
   end
 
   depends_on "python@3.9"
