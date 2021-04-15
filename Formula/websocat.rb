@@ -11,10 +11,10 @@ class Websocat < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9ffdb0bd4e66151c2cc813555e7928f08a82e79f399e4d6c039c3da15ae4a4a6"
-    sha256 cellar: :any_skip_relocation, big_sur:       "230d40f194ed076de696840cb2f7d56132da9ade368b89f9bc45048137c7852c"
-    sha256 cellar: :any_skip_relocation, catalina:      "72040f8ecb961dcd3a88d561d63b4ee1a204bdd790bf379674d57ac47db31087"
-    sha256 cellar: :any_skip_relocation, mojave:        "b96be1b018e195db5433a33db0b75ff6b34da210f3ee402f30e929bb0ee84e46"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c1532c9c0f121e3167c1e065a139f31a353a2d1a3bece24c4a7b1e42a36851f6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c5d81e79d8f886a77dbee4ef883e775ea1661cbf38b340bd44d534293b712348"
+    sha256 cellar: :any_skip_relocation, catalina:      "62e92da265ed936418268bc363fe990788593d33ef62d980d0bbc7aba440d418"
+    sha256 cellar: :any_skip_relocation, mojave:        "dfc401622752756049f39b46cfcc9b3e7d66acfd6a0f4252d41d317ad2f8ec73"
   end
 
   depends_on "pkg-config" => :build
