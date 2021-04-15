@@ -7,6 +7,13 @@ class Six < Formula
   sha256 "30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "23e2fecb3df6d6b474a1bc65d1ba03d9512dd797be4d2fac1ccfd0f1f99499c2"
+    sha256 cellar: :any_skip_relocation, big_sur:       "269efcb8c4551c623dbeab039dc890174b6f6dc17a387cd7bb59e5646f32fb24"
+    sha256 cellar: :any_skip_relocation, catalina:      "be23fc6cc8ad85469db1650f9fbf42cd57e537bbe431dfbdfd6e18bcddd45cbd"
+    sha256 cellar: :any_skip_relocation, mojave:        "427c2793a3ba839d8546934b7c1f20d009b6c6e2cd1d703d33f3c0b943f2e904"
+  end
+
   depends_on "python@3.9"
 
   def install
