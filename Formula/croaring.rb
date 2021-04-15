@@ -7,10 +7,10 @@ class Croaring < Formula
   head "https://github.com/RoaringBitmap/CRoaring.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "57e5e5d947cd1e8f80e9f1efc689ad0318cce9550200e49d2658ce02036604e1"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ebea156039a3e6c492587169b7cc99888f23c685b6c628ee1f9528cfc12612f5"
-    sha256 cellar: :any_skip_relocation, catalina:      "9992c65ddb9f441596c980a9934d95ac98e28ff5847c6070ca866b31d59355b0"
-    sha256 cellar: :any_skip_relocation, mojave:        "ab1186abca985af61bd8a915886d2a06b59597071503e9bdd55fa48de81caa40"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6b9b5a2a974922065b6532dee72f1d0eef18d0acc974d140b341c357c6d22e68"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0fb31a81cdf29a48b64c2145e22a7807fbeef260b90ebfb33b69792e600d1a91"
+    sha256 cellar: :any_skip_relocation, catalina:      "876be0d01194b15d750d331d6aa3ca38600e0c027892bd665417cd8e9ae5ebf0"
+    sha256 cellar: :any_skip_relocation, mojave:        "1e3f2c5daacd9fa4a9895b4cd989b5d3443884e6db0a854491759c5464a1ae1e"
   end
 
   depends_on "cmake" => :build
