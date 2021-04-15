@@ -7,10 +7,10 @@ class Step < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "326725f61a6d58ba6890f2a84f4563f9b0a1085d466c36cfba9a4a3d53792780"
-    sha256 cellar: :any_skip_relocation, big_sur:       "1deb6261588731e6041e9c5a6862f5b10b949242e773acc0ffc17261b3198244"
-    sha256 cellar: :any_skip_relocation, catalina:      "db09a4a82f4fbd8f39848a1ffc47f5c846d68c8c40d78f87aa5b5bb1d6c8c207"
-    sha256 cellar: :any_skip_relocation, mojave:        "954b9a13275812f80e554f28fc213a53e28cf07355adbf720b466ebf81c1b3fb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "20e23488ea11296ba932b2094cf800d91d5ee0ed81e79f82e938c3f15591f50b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f8ca91e422e4cdd007189a31bda7a56328299ddeb6693513673ffd7db4e20f55"
+    sha256 cellar: :any_skip_relocation, catalina:      "05f2e702be3ee0a6da36e7c4cdaf970162cbf4e92bb250d9b24e543ab856e94c"
+    sha256 cellar: :any_skip_relocation, mojave:        "a2f647f014461963f5d3e8568a2f22a0dd9f9fcd8657e6326401a39ee0a97fd6"
   end
 
   depends_on "go" => :build
