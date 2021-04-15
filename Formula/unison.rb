@@ -25,10 +25,10 @@ class Unison < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a09892d1f3d40211f21a6a38a737861fe7729ba749099d85e8febc63d68206aa"
-    sha256 cellar: :any_skip_relocation, big_sur:       "37c7719d8dba2927cf8b2a9159e430a6e1f54a71bb0238f471d5ed78ca903c80"
-    sha256 cellar: :any_skip_relocation, catalina:      "e441bbd34b0931b31d12080d16ef301429b79621fc3e81edfd4fa04352894dc0"
-    sha256 cellar: :any_skip_relocation, mojave:        "2ef33d3de8fec085d1349178f7efae7e37837b72cd84442bf7fbf491cfdedb22"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "886bb7cc21d57ba77aa8fd33c316868f97c1a4a6e2912d29773d73f79b2cf902"
+    sha256 cellar: :any_skip_relocation, big_sur:       "9e558f5f50d452b848b7a1720610e774f1fb3a866e24ee1d106e06f03ce1a24d"
+    sha256 cellar: :any_skip_relocation, catalina:      "4c929941f77578e5d78f791078d71d5b8b6553118fa40b1738f433f7af81f486"
+    sha256 cellar: :any_skip_relocation, mojave:        "ca5cfeddcf93825743a793623de463d64f393eddfc0740cd530779af782c07d7"
   end
 
   depends_on "ocaml" => :build
