@@ -3,8 +3,8 @@ class Datalad < Formula
 
   desc "Data distribution geared toward scientific datasets"
   homepage "https://www.datalad.org"
-  url "https://files.pythonhosted.org/packages/cd/52/b1aca3e4d952dab11db09c458a1f3d20d03f9bba065bb3240a72cd39e0fc/datalad-0.14.1.tar.gz"
-  sha256 "33a9c321ad067d7307c878d350c2278e2a637ce489d4f88ef355a4a6ba176ec0"
+  url "https://files.pythonhosted.org/packages/4f/92/f08abe321f7a286185f887efc55701cd718dd343b2ab1100f2c6ee87db8d/datalad-0.14.2.tar.gz"
+  sha256 "24fb31baf6843daef3f69d80f997a5687279858b49cf11aefcf39eed0b900d0b"
   license "MIT"
 
   bottle do
@@ -63,8 +63,8 @@ class Datalad < Formula
   end
 
   resource "humanize" do
-    url "https://files.pythonhosted.org/packages/be/e1/21af503f314e09f75012be6a03c19051efd417a3a4134200645d71cc2129/humanize-3.3.0.tar.gz"
-    sha256 "8bf7abd672b867f38b8b04593829b85b9b6199a61ef6586bf3629cc06458ff35"
+    url "https://files.pythonhosted.org/packages/ff/4a/634124b01f5d2003203746e38e6be86f42e99143e49a4d721da2c36f8d23/humanize-3.4.1.tar.gz"
+    sha256 "6e04cdd75d66074c34ff93c30a2ad6d19d91202a65c1bd400b2edeedae399bda"
   end
 
   resource "idna" do
@@ -73,8 +73,8 @@ class Datalad < Formula
   end
 
   resource "importlib-metadata" do
-    url "https://files.pythonhosted.org/packages/8e/33/d54eacc679af34dc7c03fe9f3383669095b27fa17bd820cd33ec957cb249/importlib_metadata-3.10.0.tar.gz"
-    sha256 "c9db46394197244adf2f0b08ec5bc3cf16757e9590b02af1fca085c16c0d600a"
+    url "https://files.pythonhosted.org/packages/a0/d1/93d2dec161192f8ec90e9ef7fd31c26fe55d0226684e9dde35b1e2586def/importlib_metadata-3.10.1.tar.gz"
+    sha256 "c9356b657de65c53744046fa8f7358afe0714a1af7d570c00c3835c2d724a7c1"
   end
 
   resource "iso8601" do
@@ -133,8 +133,8 @@ class Datalad < Formula
   end
 
   resource "tqdm" do
-    url "https://files.pythonhosted.org/packages/ef/58/60cc1e9af5714d1b86062f6dc00c5dd6973c902da6259f930b9c6e7a3430/tqdm-4.59.0.tar.gz"
-    sha256 "d666ae29164da3e517fcf125e41d4fe96e5bb375cd87ff9763f6b38b5592fe33"
+    url "https://files.pythonhosted.org/packages/35/35/bd5af89c97ad5177ed234d9e79d01a984f8b5226b8ffc8b5d3c4fc8e157d/tqdm-4.60.0.tar.gz"
+    sha256 "ebdebdb95e3477ceea267decfc0784859aa3df3e27e22d23b83e9b272bf157ae"
   end
 
   resource "urllib3" do
