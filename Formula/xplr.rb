@@ -6,6 +6,13 @@ class Xplr < Formula
   license "MIT"
   head "https://github.com/sayanarijit/xplr.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b995057f911af00a6356cab3e178f56a2c1428b35d131cf07acea4e7c61f3464"
+    sha256 cellar: :any_skip_relocation, big_sur:       "1b1563c02424988f3f535d13f16fd9f85ef7e7415472806f7a7b373a7c52a80d"
+    sha256 cellar: :any_skip_relocation, catalina:      "c5202bf034f5073e1f29fd9940eb1305465e3e60b75e8bbc96b45a49c5b2590d"
+    sha256 cellar: :any_skip_relocation, mojave:        "5f43b8d52c5a9ae0c2902ae1af431bbecae54cda2a604fe2b87b4be96f701439"
+  end
+
   depends_on "rust" => :build
 
   def install
