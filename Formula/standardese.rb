@@ -8,10 +8,10 @@ class Standardese < Formula
   head "https://github.com/standardese/standardese.git"
 
   bottle do
-    sha256 arm64_big_sur: "a95f3ade20f806aa6d68048bd636353cbc3031e95c642907bc7a7f9f0fb12674"
-    sha256 big_sur:       "31285e0f92c6c1c81ef37b5b7769b8427c5fc4679201bfacf520d04e7a72e9c5"
-    sha256 catalina:      "40af188953816d174b0c181b4bdb99a3d3d903ccd04790a7c631807e333e8a79"
-    sha256 mojave:        "d86f50330c0a194de9daedf8eb7e673914c23d423dfa5637bb9f4569ea38c7ac"
+    sha256 arm64_big_sur: "aace9836b47c276189ea2e575a7f7b069088a71cfad820b9a49b19327dcbe419"
+    sha256 big_sur:       "24ca9c472abc6507f5c58a2ab15d3cf7a6b22f17b446eb6597c2f9913374a208"
+    sha256 catalina:      "63fd4337cc37346ecd2356a82672f73955241bd80b3c1c60d000a4a240dde1ff"
+    sha256 mojave:        "22cac0cf74bfec8ee30342b360a8eb391fbdb8b18516bf204990ecdee880a37e"
   end
 
   depends_on "cmake" => :build
