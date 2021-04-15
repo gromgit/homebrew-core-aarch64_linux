@@ -4,7 +4,7 @@ class JohnJumbo < Formula
   url "https://openwall.com/john/k/john-1.9.0-jumbo-1.tar.xz"
   version "1.9.0"
   sha256 "f5d123f82983c53d8cc598e174394b074be7a77756f5fb5ed8515918c81e7f3b"
-  license "GPL-2.0"
+  license "GPL-2.0-or-later"
 
   livecheck do
     url "https://github.com/magnumripper/JohnTheRipper.git"
@@ -53,12 +53,25 @@ class JohnJumbo < Formula
     sha256 "65a4aacc22f82004e102607c03149395e81c7b6104715e5b90b4bbc016e5e0f7"
   end
 
+  # Upstream M1/ARM64 Support.
+  # Combined diff of the following four commits, minus the doc changes
+  # that block this formula from using these commits otherwise.
+  # https://github.com/openwall/john/commit/d6c87924b85323b82994ce01724d6e458223fd36
+  # https://github.com/openwall/john/commit/d531f97180a6e5ae52e21db177727a17a76bd2b4
+  # https://github.com/openwall/john/commit/c9825e688d1fb9fdd8942ceb0a6b4457b0f9f9b4
+  # https://github.com/openwall/john/commit/716279addd5a0870620fac8a6e944916b2228cc2
+  patch do
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/50a00afbf4549fbc0ffd3855c884f7d045cf4f93/john-jumbo/john_jumbo_m1.diff"
+    sha256 "6658f02056fd6d54231d3fdbf84135b32d47c09345fc07c6f861a1feebd00902"
+  end
+
   def install
     ENV.append "CFLAGS", "-DJOHN_SYSTEMWIDE=1"
     ENV.append "CFLAGS", "-DJOHN_SYSTEMWIDE_EXEC='\"#{share}/john\"'"
     ENV.append "CFLAGS", "-DJOHN_SYSTEMWIDE_HOME='\"#{share}/john\"'"
 
-    ENV.append "CFLAGS", "-mno-sse4.1" unless MacOS.version.requires_sse4?
+    # Apple's M1 chip has no support for SSE 4.1.
+    ENV.append "CFLAGS", "-mno-sse4.1" if Hardware::CPU.intel? && !MacOS.version.requires_sse4?
 
     ENV["OPENSSL_LIBS"] = "-L#{Formula["openssl@1.1"].opt_lib}"
     ENV["OPENSSL_CFLAGS"] = "-I#{Formula["openssl@1.1"].opt_include}"
