@@ -6,10 +6,10 @@ class Kumactl < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a8e011758dfcd83868326a3c1fa7684f2b5c3f93df33db07d4333f3e61d729a9"
-    sha256 cellar: :any_skip_relocation, big_sur:       "179a1258c908dabf17e2e412cd32120514e0258b8ac6008aad3b0623faf2d6c5"
-    sha256 cellar: :any_skip_relocation, catalina:      "f147de4ba6bdddac2b3aca4fbe88c93406301c58aab61e5ace3a65dd7ae07b09"
-    sha256 cellar: :any_skip_relocation, mojave:        "a007c0b8e94d16bb3b47293a6303b21082728f3291d98381814075db36b889e4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bcdf662d4abc2927bd4e58a38e61509f07304e30f514fd249b0cf13d0d4ee2aa"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3ac16f985843955c4ab6258555a65fe1d6c952a236984e4257003daae43a6afc"
+    sha256 cellar: :any_skip_relocation, catalina:      "b83ee105380e931f00a120cea36c3703fc05a70c5744fb0352d8f981b09bce60"
+    sha256 cellar: :any_skip_relocation, mojave:        "d4dda98e648a396daf88ae9c99c7aeddeb6717f9e27221ab22262c5b499d17ff"
   end
 
   depends_on "go" => :build
