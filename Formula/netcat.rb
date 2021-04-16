@@ -3,7 +3,7 @@ class Netcat < Formula
   homepage "https://netcat.sourceforge.io/"
   url "https://downloads.sourceforge.net/project/netcat/netcat/0.7.1/netcat-0.7.1.tar.bz2"
   sha256 "b55af0bbdf5acc02d1eb6ab18da2acd77a400bafd074489003f3df09676332bb"
-  license "GPL-2.0"
+  license "GPL-2.0-or-later"
 
   bottle do
     rebuild 1
@@ -15,7 +15,13 @@ class Netcat < Formula
     sha256 cellar: :any_skip_relocation, el_capitan:  "1f346605e0236ea7880258da2abf0bde1d7d8d8735a07d6d32feaf12425ff6da"
   end
 
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+
   def install
+    # Regenerate configure script for arm64/Apple Silicon support.
+    system "autoreconf", "--verbose", "--install", "--force"
+
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
