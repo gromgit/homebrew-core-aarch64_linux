@@ -6,10 +6,10 @@ class Clusterctl < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ca3f4853053d72589f01c5b0bdda95804289bb8da7183a7d4cebd27c36d68777"
-    sha256 cellar: :any_skip_relocation, big_sur:       "088ae26c24231585de6c7027357f3d654f15f338e3dddbdbf7a9b273889acce8"
-    sha256 cellar: :any_skip_relocation, catalina:      "fdf4d76eac31c88b12c546157ac3a90c834aa03d84f90235ac418f8cdc3f8067"
-    sha256 cellar: :any_skip_relocation, mojave:        "72a8443517ef0a44922b8200496c5d40e43e21d75b981064d2d1dc24e4776234"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c9d431c82b44e2fbffd942cd109122c26647596bf1308f016ab91c1364af3313"
+    sha256 cellar: :any_skip_relocation, big_sur:       "394bcb29c3a32b3c6f9ab6d2b307970f099ea6eab792c5f5238dad05be986b06"
+    sha256 cellar: :any_skip_relocation, catalina:      "ffb6b062b6d1199b54de0f08ec2109f30994819b1ebf627f571e91b07ccdd816"
+    sha256 cellar: :any_skip_relocation, mojave:        "bd04ca87ea4fbcb7a6d96ae0525701f9ce858775bc7c82cce063cbea50fd9e8d"
   end
 
   depends_on "go" => :build
