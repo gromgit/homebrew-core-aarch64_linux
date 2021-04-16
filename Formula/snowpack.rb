@@ -8,10 +8,10 @@ class Snowpack < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "166866001d67e5544955b3a012d459f9a0898f675173b673a3be5e74a87c76d9"
-    sha256 cellar: :any_skip_relocation, big_sur:       "1648572b322ea689a1097ac534b1f91efabef57af05d57d19161d0aca1d7edf4"
-    sha256 cellar: :any_skip_relocation, catalina:      "f0a1077ea7078aebda3e4fefd989054aed9d264ce0890d329506ceadfd110010"
-    sha256 cellar: :any_skip_relocation, mojave:        "f5778f96245acf1357074cc10f7f1af4aa8c7efab5dd9ae5e506521af3b260db"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "509c84a18de66f706451e386a6eeec61ea05dfd53009d542524e8aff7a5c821d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f3e765c42beb7ded32fcd94b79db1cc6af5658f4e0de805f9c023f3f07b2812d"
+    sha256 cellar: :any_skip_relocation, catalina:      "f3e765c42beb7ded32fcd94b79db1cc6af5658f4e0de805f9c023f3f07b2812d"
+    sha256 cellar: :any_skip_relocation, mojave:        "f3e765c42beb7ded32fcd94b79db1cc6af5658f4e0de805f9c023f3f07b2812d"
   end
 
   depends_on "node"
