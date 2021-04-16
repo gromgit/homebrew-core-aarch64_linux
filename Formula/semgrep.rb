@@ -4,8 +4,8 @@ class Semgrep < Formula
   desc "Easily detect and prevent bugs and anti-patterns in your codebase"
   homepage "https://semgrep.dev"
   url "https://github.com/returntocorp/semgrep.git",
-      tag:      "v0.46.0",
-      revision: "6a5868db83f4fbafb576eb7f6af2dc16f7b62932"
+      tag:      "v0.47.0",
+      revision: "df9065596ebbde9647944b2458500b7ad413de81"
   license "LGPL-2.1-only"
   head "https://github.com/returntocorp/semgrep.git", branch: "develop"
 
@@ -141,10 +141,6 @@ class Semgrep < Formula
 
       # Install tree-sitter
       cd "ocaml-tree-sitter" do
-        cd "tree-sitter" do
-          system "opam", "exec", "--", "make"
-          system "opam", "exec", "--", "make", "install"
-        end
         system "opam", "install", "-y", "."
       end
 
