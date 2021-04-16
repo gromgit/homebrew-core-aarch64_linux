@@ -9,10 +9,10 @@ class Flake8 < Formula
   head "https://gitlab.com/PyCQA/flake8.git", shallow: false
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "21984464d73424bf014891c85318682610e5f6d975e5df18c3f5107937e6cd51"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8d8886893eb6326f968b8adc0e9cb863329012903dbefe0ee251a9d5e861f10b"
-    sha256 cellar: :any_skip_relocation, catalina:      "c800bc9078ba5dfe566d3d52055089c3c59cd42729a1580e4884b94b9669d0bd"
-    sha256 cellar: :any_skip_relocation, mojave:        "8773e31daeb655f6fc113e939de4a796f67fdb614324aa2cd965a082f3bdb151"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "cfcd85bd6cf40febb7b50671e6403dd4b79185acbb635357c005ae4e969736fa"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5938b607d307dd79e4a1b90561fd2ea8bacc4b6b039eb530316f8badc9a95ffc"
+    sha256 cellar: :any_skip_relocation, catalina:      "5938b607d307dd79e4a1b90561fd2ea8bacc4b6b039eb530316f8badc9a95ffc"
+    sha256 cellar: :any_skip_relocation, mojave:        "5938b607d307dd79e4a1b90561fd2ea8bacc4b6b039eb530316f8badc9a95ffc"
   end
 
   depends_on "python@3.9"
