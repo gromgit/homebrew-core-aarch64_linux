@@ -9,10 +9,10 @@ class Gitlint < Formula
   head "https://github.com/jorisroovers/gitlint.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8131d633d12e717a5cffd63fcd8717d1f7de4660c0ecea17e39a35cee982d9ca"
-    sha256 cellar: :any_skip_relocation, big_sur:       "52ac0738eaf1ee717e838a7a2d2c2e8c4745f281bafc846a054be2526567c411"
-    sha256 cellar: :any_skip_relocation, catalina:      "79dacaaf2f45dedcca1fb05efbf8c84d37f85996db920a4a675ceff724a8110f"
-    sha256 cellar: :any_skip_relocation, mojave:        "dbb9d4e5bbabaa3a75ea7d38df6cb46ad51f95e5378591068f397884cee9ceb6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "415d16b4b9224c4f35e7e9d1157b369080b215757e841a1b1580e47736fe75ab"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5d5cca443df3d7a86db359642f404da3236983165ed3bf59471b9d1262c95be7"
+    sha256 cellar: :any_skip_relocation, catalina:      "102fd40cb4d4e8d5f1e1b2c23164e327dc9506f59aea5a79a81a963249c3ce50"
+    sha256 cellar: :any_skip_relocation, mojave:        "427ca21ef9d7d31b021c13889b2f291e3a70740ab45d3aff36de8dec04338b08"
   end
 
   depends_on "python@3.9"
