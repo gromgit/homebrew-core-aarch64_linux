@@ -6,10 +6,10 @@ class Libical < Formula
   license any_of: ["LGPL-2.1-or-later", "MPL-2.0"]
 
   bottle do
-    sha256 arm64_big_sur: "92dff71359989b5e1d9b393ad32577a1cb7462ce96654292d5a4694a93230010"
-    sha256 big_sur:       "76add0e5fce6a528dc2ab84b226524f587e663ad349dfad726b2d4915e8f1c91"
-    sha256 catalina:      "53c30edf307bf09de5f04d83d4772a27073aae375e4ffb3157f6e4f20e8af9b0"
-    sha256 mojave:        "dbb77478aea20be00b83f170849d064b0ee870a9481ad2abf93c56d16c680dc7"
+    sha256 arm64_big_sur: "78820f4354ff775e64e9c513b55f5e5a40db58705642bcf59a1e55ae822a83ef"
+    sha256 big_sur:       "aeb2152eb974ac69926bbcb5b1b8f2180cf144ebb840a59fcb835dc1a2a749d5"
+    sha256 catalina:      "b024a7bd0873db2015f36a5ea332cb4edf3fe31b0780b622f024cda0347a7560"
+    sha256 mojave:        "e417dc1981f7baaaa0acf469e65fff9d14843efe64d7b62537b26e3f484724d2"
   end
 
   depends_on "cmake" => :build
