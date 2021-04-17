@@ -8,10 +8,10 @@ class NodeSass < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4b718fb39c3ee21e39da390239c2e9cba9e637277b376a26a3615c7810ad08ce"
-    sha256 cellar: :any_skip_relocation, big_sur:       "218e0e4bcec8520ba13c479804fba2ff296411b34d9376b570d8c4e8593c38ca"
-    sha256 cellar: :any_skip_relocation, catalina:      "218e0e4bcec8520ba13c479804fba2ff296411b34d9376b570d8c4e8593c38ca"
-    sha256 cellar: :any_skip_relocation, mojave:        "68f8e6548ed2a68a73a6ba54615c3f649783c3435a12c7ed575f0f4ea39149a0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "dca45ec84ded721fc6ea1e3b8c229794926af43a6cd6f235ef3137b4ce0f8bc4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f6754640f58de86e4c4ba4cb0371a2fd89dc582e8758fbecddb6cdcf24db3dbb"
+    sha256 cellar: :any_skip_relocation, catalina:      "f6754640f58de86e4c4ba4cb0371a2fd89dc582e8758fbecddb6cdcf24db3dbb"
+    sha256 cellar: :any_skip_relocation, mojave:        "d4b4afa68e4ded344d28e377457a69f3de8be9277a2d938f9c5e13f22fe50c2c"
   end
 
   depends_on "node"
