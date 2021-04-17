@@ -7,10 +7,10 @@ class Leiningen < Formula
   head "https://github.com/technomancy/leiningen.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5bd84d71583cc06ab837b857db70e16a8061abdb44c6855bd66fd06b021b88aa"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f9aface1f4c962c0e00bf8300b33eb453734972dc11cc299c1ca0851de7b1940"
-    sha256 cellar: :any_skip_relocation, catalina:      "7c29f1583ec0deb5b873547b3d9366d9d90f00728dd24e52d2538d5131f0dedb"
-    sha256 cellar: :any_skip_relocation, mojave:        "c1df069aa1d80a6005c7536a88ecb28440c1a8d1e8b82314784f63f033002831"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "df641c65df341caa49d31b82e2f41c754f9b4bea31d104a4af7236d9ec7a8463"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c6a3bca012d22ac2bfd31f2d63e1205f3e8b14a1a9c273efc4b812233adc1920"
+    sha256 cellar: :any_skip_relocation, catalina:      "c6a3bca012d22ac2bfd31f2d63e1205f3e8b14a1a9c273efc4b812233adc1920"
+    sha256 cellar: :any_skip_relocation, mojave:        "d144459a1bff33c0adbc0de79e97135be0b6fd768a3a7468f5ad484a3c1486f9"
   end
 
   depends_on "openjdk"
