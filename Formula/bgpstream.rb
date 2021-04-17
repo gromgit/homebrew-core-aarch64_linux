@@ -6,10 +6,10 @@ class Bgpstream < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "d94daceac3ccf6fc4a59d532dfb1a4205b49002bebb7052e9488057d09c53d81"
-    sha256 cellar: :any, big_sur:       "2ef31b4b6155966b7ebb5bea8fef499e5a75e40bb0b4cc827387c20e1710908c"
-    sha256 cellar: :any, catalina:      "4879ed386a49e62ff13e465d822f0d6b6ea126cd7ef95add1fc8b4c0bfeb2dc6"
-    sha256 cellar: :any, mojave:        "ed2c647b81542296080d2235d292598c9b654e4cd7a310024ea6758e2cb41aa4"
+    sha256 cellar: :any, arm64_big_sur: "5c28bee02acc7bc557119b71bc714a9a505aa91ef58d2e390c6d7f75753d0f25"
+    sha256 cellar: :any, big_sur:       "950968b0578b8d4131574c5fd985f56a1e10abd2d4aabdeeb408db2b323d6567"
+    sha256 cellar: :any, catalina:      "a684f4249475c2c0531fda4467adbba15b8e07c4e49b8ffc0366cae16fc76888"
+    sha256 cellar: :any, mojave:        "80262121246eb9431bedf0a64a12448ca1f2387caf17a8c1c7f20eaca6ca1069"
   end
 
   depends_on "librdkafka"
