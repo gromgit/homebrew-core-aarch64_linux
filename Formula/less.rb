@@ -11,11 +11,10 @@ class Less < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_big_sur: "c7bc35b8debbb322fc3bdd644ba526eeec3ab8d5f982c76442995a763c77c739"
-    sha256 cellar: :any, big_sur:       "431d227c11a0d52bb4d4392244615933d9f04265f36faedc93f5406226d38076"
-    sha256 cellar: :any, catalina:      "491fc7dc78848cd91c85c4a6a1ff5457166c0ad83dda9f05145489c2aa2828eb"
-    sha256 cellar: :any, mojave:        "d03e895349d8503cea9c8da326015298bf64d80796ab9ee62138a4a072e4559f"
+    sha256 cellar: :any, arm64_big_sur: "95b4a2d6ccbcadca7bb39d9b86997d92945c56d7ba421ba5a24fad5e456aa012"
+    sha256 cellar: :any, big_sur:       "2732e9582beafecf6084067ec39d547e2c6259dee8884c6dbb0ab083a9d32168"
+    sha256 cellar: :any, catalina:      "908e9936ade67b803ba14ab6c85ffae16a804baae405ffcf017f327828c8d096"
+    sha256 cellar: :any, mojave:        "55c3665b219f38f3a4bea7be9961d6c13e513cebd935408fda11bd6d84582b74"
   end
 
   head do
