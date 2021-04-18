@@ -12,10 +12,10 @@ class Rgbds < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "683197419321366aa097980b0c982698fca0082c72ddafc09f0679404c322e9d"
-    sha256 cellar: :any, big_sur:       "6c4d8fece0d52778f3d939832bfcb46f3e339248228ed166f7e604339c1b2833"
-    sha256 cellar: :any, catalina:      "4ffdbfb56810ee5ab1d54c647fe5a232954b78b024b2ecbcc3ff009f48d38f8e"
-    sha256 cellar: :any, mojave:        "a61753b345b81f0378916971fdf7629744556fe6d3c04c85afdec27669641e48"
+    sha256 cellar: :any, arm64_big_sur: "67fbe0746e879838e5a9ad6999bec6f45889a650b29b2d97e3766630d6de2103"
+    sha256 cellar: :any, big_sur:       "b202aecfdd3276b36c0dfff5434074753b19a298db6de61a0d6efefa341975fd"
+    sha256 cellar: :any, catalina:      "94c1c67c1589868066218924f006f457436504cf49ebaaac36947d333b34cc3f"
+    sha256 cellar: :any, mojave:        "0799a1f702a1333d592c97c093ba1096ce22766a60aca9870c5c6294e023b9a6"
   end
 
   depends_on "bison" => :build
