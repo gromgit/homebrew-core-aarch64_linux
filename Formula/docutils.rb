@@ -7,10 +7,10 @@ class Docutils < Formula
   sha256 "686577d2e4c32380bb50cbb22f575ed742d58168cee37e99117a854bcd88f125"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "252d181f5b4eb0c502d9a0bf7c70d7ce7e4d52c18f274cc978227ebc223c4ad9"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f7e3b4495a340aa0f7c6564d469f10311fc23b0b3e9d78f0d7c241542eee9c28"
-    sha256 cellar: :any_skip_relocation, catalina:      "12cab4d54dc321757da38bebd43ab58855902e4fd17c3a163802b5d93f357cce"
-    sha256 cellar: :any_skip_relocation, mojave:        "6a66c7b7c241c6057d66df9f5bbf7eb62642d4a3437d207b8b28035bdcc774ce"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8c6f650a9ceec0e34b6d1463d40448e171027c230cfeba1d7bfa971c15d3ed0e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "97a939a036851c96bc4ac17d1a9fbf8bd8053f0c3c49402698963e32026985aa"
+    sha256 cellar: :any_skip_relocation, catalina:      "97a939a036851c96bc4ac17d1a9fbf8bd8053f0c3c49402698963e32026985aa"
+    sha256 cellar: :any_skip_relocation, mojave:        "954e70f84cb70b5e77478043ddf5784074015dfd11dbaf3e8906b83020e4a08b"
   end
 
   depends_on "python@3.9"
