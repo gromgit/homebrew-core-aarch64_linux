@@ -30,6 +30,6 @@ class UserspaceRcu < Formula
 
   test do
     cp_r "#{doc}/examples", testpath
-    system "make", "-C", "examples"
+    system "make", "CFLAGS=-pthread", "-C", "examples"
   end
 end
