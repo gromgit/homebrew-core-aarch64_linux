@@ -7,10 +7,10 @@ class Eigen < Formula
   head "https://gitlab.com/libeigen/eigen.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f174be279eca5ab7df15c762ee5b7562b1d921496616127c7805b14b7282fea2"
-    sha256 cellar: :any_skip_relocation, big_sur:       "60e2816081c5ac57028ab360ba682b2cabce5d04dd942f9c19d9b9cb26a0fcd6"
-    sha256 cellar: :any_skip_relocation, catalina:      "60e2816081c5ac57028ab360ba682b2cabce5d04dd942f9c19d9b9cb26a0fcd6"
-    sha256 cellar: :any_skip_relocation, mojave:        "18c46f8fd607822f8da37d684f7e8c40e45567c89cd31a3008cfa6b78b43783b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e03d900e18903478875f1c354ee169373be0fdc49996da784e4a55f7b3c3594a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c3305d00c64e0bd6f53e45858b92be3d72827c02b2e2f71d4edd01f1efaa1080"
+    sha256 cellar: :any_skip_relocation, catalina:      "172a99d2e904ece3409ae56304beb77ff638313e52b7f1eb00ce58d8a11a3a68"
+    sha256 cellar: :any_skip_relocation, mojave:        "dada92aa488d06af18fbf589a46c490a5b9090ae75d0027d5dae109ddad792e5"
   end
 
   depends_on "cmake" => :build
