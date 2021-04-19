@@ -6,10 +6,10 @@ class Jasper < Formula
   license "JasPer-2.0"
 
   bottle do
-    sha256 arm64_big_sur: "71e7ff8e942a88baa807484a5f0d0160b66ddc5f37d2164072d400aa5a067865"
-    sha256 big_sur:       "adec70da00a25292537178182308b7d78ff730b4e0b8f80e4c000f147a53057e"
-    sha256 catalina:      "22f7db62bfc894c3836dc6c170399f767363efb589b9057a754238be5563f7aa"
-    sha256 mojave:        "2376a32bbfdcddc6f1893ae0e9a5832860fcc1c647397e32830576d8ef1a4d1e"
+    sha256 arm64_big_sur: "b3d001bfed26a9aba810a8b65ef0ccd01500d81afefca702c202f809c7e0fc24"
+    sha256 big_sur:       "3b56f3d1d584df4483b5d35d5d75235bd621201ae7678f58d624b86f523ab6d2"
+    sha256 catalina:      "fce68cb17b6de9af96e493e97091bd4679701884da4f2f413ead6985f511497d"
+    sha256 mojave:        "5e9f20212c7caa5aafd9f12ee56d1e73d179ad62f9a3ac45a8843d09f6e24aea"
   end
 
   depends_on "cmake" => :build
