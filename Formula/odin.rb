@@ -13,10 +13,9 @@ class Odin < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, big_sur:  "9679cdd8b54d7331d4b8d7e386426402246c8e098e9245397d9fc48fa88c8034"
-    sha256 cellar: :any, catalina: "10b41130ce2877bbbbb44226206170c5d710b81dd72335f22f781120848c295a"
-    sha256 cellar: :any, mojave:   "940a412200b5b40246d9fd5a7775add5ea88e9fe8b8c0f7a4563b89d38c47314"
+    sha256 cellar: :any, big_sur:  "8756628900882ce7b6492cd63a16192c66420c792c4ae6bc625104f10cd4ad91"
+    sha256 cellar: :any, catalina: "a3ae074bcf9f1b096fd0ff73ec3e4169580cbd9c992eaf96df00381fb4bc4aab"
+    sha256 cellar: :any, mojave:   "4f2a22f846642e17dd24a44ec9bd5e00a768facbeba1ea76f2b528f1407c6669"
   end
 
   # Check if this can be switched to `llvm` at next release
