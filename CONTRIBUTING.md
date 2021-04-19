@@ -2,6 +2,8 @@
 
 First time contributing to Homebrew? Read our [Code of Conduct](https://github.com/Homebrew/.github/blob/HEAD/CODE_OF_CONDUCT.md#code-of-conduct).
 
+Ensure your commits follow the [commit style guide](https://docs.brew.sh/Formula-Cookbook#commit).
+
 ### To report a bug
 
 * run `brew update` (twice)
