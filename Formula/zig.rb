@@ -8,9 +8,9 @@ class Zig < Formula
   head "https://github.com/ziglang/zig.git"
 
   bottle do
-    sha256 cellar: :any, big_sur:  "f088607533abf8e77c38ad57b5c068b7c975d31d3558eda5ff9ef23221278650"
-    sha256 cellar: :any, catalina: "f1168c13a73d6677a8d6eb04ecd0d67e93038bd33218bafadd9aac9a23045e7d"
-    sha256 cellar: :any, mojave:   "eb2e0de16f666b740fb67529910712c517fed8ae3fd6e14d27acbbf19a41018a"
+    sha256 cellar: :any, big_sur:  "36024d6e9270699221abc2fe0d49b9f16e9bfc62636b33750f94d89a07e0e308"
+    sha256 cellar: :any, catalina: "167c21243552b1b309c4cf83bfb8e678a14b5a3e3adf66e7f2501b36d027d693"
+    sha256 cellar: :any, mojave:   "63643cea7d45ce511f4cd0a4e7089a64e2dedecc9cd900eaff805c011b299cda"
   end
 
   depends_on "cmake" => :build
