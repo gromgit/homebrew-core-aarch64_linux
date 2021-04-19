@@ -2,8 +2,8 @@ class V8 < Formula
   desc "Google's JavaScript engine"
   homepage "https://github.com/v8/v8/wiki"
   # Track V8 version from Chrome stable: https://omahaproxy.appspot.com
-  url "https://github.com/v8/v8/archive/8.9.255.25.tar.gz"
-  sha256 "b6ad45e2d15691d6c9cf73d10853ac4beb43689dfe5a85aca26ae232c5d0d103"
+  url "https://github.com/v8/v8/archive/9.0.257.17.tar.gz"
+  sha256 "7b7e421fef178eb220fb135c9a4ae55beb0b5a2639c2896143fa1a9960ef00a4"
   license "BSD-3-Clause"
 
   livecheck do
@@ -27,28 +27,28 @@ class V8 < Formula
   # e.g. for CIPD dependency gn: https://github.com/v8/v8/blob/8.9.255.20/DEPS#L50
   resource "gn" do
     url "https://gn.googlesource.com/gn.git",
-        revision: "595e3be7c8381d4eeefce62a63ec12bae9ce5140"
+        revision: "dfcbc6fed0a8352696f92d67ccad54048ad182b3"
   end
 
   # e.g.: https://github.com/v8/v8/blob/8.9.255.20/DEPS#L91 for the revision of build for v8 8.9.255.20
   resource "v8/build" do
     url "https://chromium.googlesource.com/chromium/src/build.git",
-        revision: "d5995537211ebc4d1bc37f215c25fa3781ba9d6e"
+        revision: "446bf3e5a00bfe4fd99d91cb76ec3b3a7b34d226"
   end
 
   resource "v8/third_party/icu" do
     url "https://chromium.googlesource.com/chromium/deps/icu.git",
-        revision: "899e18383fd732b47e6978db2b960a1b2a80179b"
+        revision: "e05b663d1c50b4e9ecc3ff9325f5158f1d071471"
   end
 
   resource "v8/base/trace_event/common" do
     url "https://chromium.googlesource.com/chromium/src/base/trace_event/common.git",
-        revision: "eb94f1c7aa96207f469008f29989a43feb2718f8"
+        revision: "7af6071eddf11ad91fbd5df54138f9d3c6d980d5"
   end
 
   resource "v8/third_party/googletest/src" do
     url "https://chromium.googlesource.com/external/github.com/google/googletest.git",
-        revision: "1b0cdaae57c046c87fb99cb4f69c312a7e794adb"
+        revision: "1e315c5b1a62707fac9b8f1d4e03180ee7507f98"
   end
 
   resource "v8/third_party/jinja2" do
@@ -63,7 +63,7 @@ class V8 < Formula
 
   resource "v8/third_party/zlib" do
     url "https://chromium.googlesource.com/chromium/src/third_party/zlib.git",
-        revision: "2c183c9f93a328bfb3121284da13cf89a0f7e64a"
+        revision: "348acca950b1d6de784a954f4fda0952046c652c"
   end
 
   def install
