@@ -7,10 +7,10 @@ class BoostBcp < Formula
   head "https://github.com/boostorg/boost.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "aa6a534d72f1dcc51cb69fe2fe1fe42a201da205dcb70f025255446f810e56a0"
-    sha256 cellar: :any_skip_relocation, big_sur:       "237fce500e3799cd93f53c5221448c915c9836a18b7b239dc19ec006e4291f80"
-    sha256 cellar: :any_skip_relocation, catalina:      "2b679e21d034b4a68c4d1eeaaf6b4f8bbc6b5d456f396ef292009bdd874dda5b"
-    sha256 cellar: :any_skip_relocation, mojave:        "78e095ee35b6a0821b1211d0a9e126b8dc62628531f6ed7180bcf3fc598550f1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bf348b4c85bb27b40dc95fb19f63aa8963ef93734b722fb6712bd413ca590af9"
+    sha256 cellar: :any_skip_relocation, big_sur:       "16fbea4de8f872bac006d526c2bac139b04d0f1bf72741902c7f78825f8945a6"
+    sha256 cellar: :any_skip_relocation, catalina:      "8dcc84a022e19a58ac5c7b3ab161cfc544c33607b81de0a0c80037d1f1050081"
+    sha256 cellar: :any_skip_relocation, mojave:        "e592d4d8ef2d288683c39193ccdb35e9ef451f5217b7089c21ad7dae012f2084"
   end
 
   depends_on "boost-build" => :build
