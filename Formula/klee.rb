@@ -8,9 +8,9 @@ class Klee < Formula
   head "https://github.com/klee/klee.git"
 
   bottle do
-    sha256 big_sur:  "e618dbf37e6a3abfb015f6c9facdf15d5738b68e0d94e538a9b447321029bf92"
-    sha256 catalina: "924b00351eea9e380418b244de739f5660fbf9b9e1f401e5d9ff2d38af404047"
-    sha256 mojave:   "28f00222252796f611e346418e1041466a525c4acaef392a0f065be26b239e00"
+    sha256 big_sur:  "68926d21ba91e49e600c58329c81ffbe552ceac655b9c57ae6043e0df4ca926a"
+    sha256 catalina: "d601b6ef40172702659f7efe267d766fe1c82a627afed9017467c4714e3aac52"
+    sha256 mojave:   "30147bcef9d3993cb28f0e4235d0e0cb061b1f03dbfd6d698d7fd3ab214dc712"
   end
 
   depends_on "cmake" => :build
