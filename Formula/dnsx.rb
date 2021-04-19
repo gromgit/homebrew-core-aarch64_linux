@@ -7,10 +7,10 @@ class Dnsx < Formula
   head "https://github.com/projectdiscovery/dnsx.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "47bdf35382eae8ff57668d10cfff9b9bc385b03ec8e945fc82bb1113518a2c1a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7590a203a15703313b3e6d6b57108a994cb3293157b789ff38ac36bd99d0a7ce"
-    sha256 cellar: :any_skip_relocation, catalina:      "8e7f6f5530ddb2f399f2d2ed3c5765a5246cdea1460d96533a349d4257fc40f3"
-    sha256 cellar: :any_skip_relocation, mojave:        "c9dcba9a117a204a47a88c6e8abf7f241ac9647eeb12f5a35c93042c756cd2a2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "49ca88c99f74eeace8a0c9198fd168c8569eef5f0a2f3f9ed13526eccc3a10d5"
+    sha256 cellar: :any_skip_relocation, big_sur:       "43ea937cb73d403f2a8ba3bdd1cdcbbb3314757bda512e14c8c7e8f49b927f42"
+    sha256 cellar: :any_skip_relocation, catalina:      "7db2f8e4c29a063bbeb746dee6a5cec986f460743d7667dcc831a59664871263"
+    sha256 cellar: :any_skip_relocation, mojave:        "3af7bfc48d5d89a04c00b6ef5cd96e9a3a052fadbc4d263c51ed840f9a49a2ef"
   end
 
   depends_on "go" => :build
