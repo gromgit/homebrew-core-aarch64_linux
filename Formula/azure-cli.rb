@@ -3,8 +3,8 @@ class AzureCli < Formula
 
   desc "Microsoft Azure CLI 2.0"
   homepage "https://docs.microsoft.com/cli/azure/overview"
-  url "https://github.com/Azure/azure-cli/archive/azure-cli-2.22.0.tar.gz"
-  sha256 "44a47e6a3432dfb6c81045c571304c26109acaff7b63e3793d93fd4127b4f074"
+  url "https://github.com/Azure/azure-cli/archive/azure-cli-2.22.1.tar.gz"
+  sha256 "c9bc47a1ffe74e8d676b533d576593e5ed539626d4fa7c399a280a0aa220c016"
   license "MIT"
   head "https://github.com/Azure/azure-cli.git"
 
