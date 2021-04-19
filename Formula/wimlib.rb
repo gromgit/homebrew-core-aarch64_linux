@@ -11,11 +11,10 @@ class Wimlib < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256               arm64_big_sur: "a2ff0fc910f2cd3925474e7f7ea700d1f4dd9df724df1c634a47e733752393cf"
-    sha256 cellar: :any, big_sur:       "2e0597a2e987116627df9c6d3a7cb7aed0bd8ed507f5f13b530df685a9e0fe9b"
-    sha256 cellar: :any, catalina:      "51512426e7836eb9a204f036993ef023bf260129fadde73761c1ff487cfa2518"
-    sha256 cellar: :any, mojave:        "479dd4c3bb4eade0c59f92c776aab3bcceba107f6ed7e65ab1ba6006dce1823e"
+    sha256               arm64_big_sur: "2acbaa6a363897c9c46fd5e058e11c1b234287367d192e31422103c4b467d323"
+    sha256 cellar: :any, big_sur:       "055f311cbc8a3ac7e36978a9ad0c69a6825c6ba78136492765a7c2b3ba3fc84f"
+    sha256 cellar: :any, catalina:      "1db7b55e58b89d67b1365788c595bd08d13c04c9f7c218d488ec3edd7bdd67a2"
+    sha256 cellar: :any, mojave:        "a78ad3433ec595db6568099566f9b15d4919a70a462260afc3f89560bbbb4d2f"
   end
 
   depends_on "pkg-config" => :build
