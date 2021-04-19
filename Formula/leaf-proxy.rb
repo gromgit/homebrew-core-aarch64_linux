@@ -1,8 +1,8 @@
 class LeafProxy < Formula
   desc "Lightweight and fast proxy utility"
   homepage "https://github.com/eycorsican/leaf"
-  url "https://github.com/eycorsican/leaf/archive/v0.2.14.tar.gz"
-  sha256 "8760b74f1a9231ca736a4d533fa08ea4982f89d2781753c09cf0ce1b14658cd1"
+  url "https://github.com/eycorsican/leaf/archive/v0.3.0.tar.gz"
+  sha256 "72cc8e6ba62016ab9ae9272dd4aadc2d00e0067387ab3ddb71e415b4603d82d9"
   license "Apache-2.0"
   head "https://github.com/eycorsican/leaf.git"
 
@@ -38,7 +38,7 @@ class LeafProxy < Formula
       [Proxy]
       SS = ss, 127.0.0.1, #{free_port}, encrypt-method=chacha20-ietf-poly1305, password=123456
     EOS
-    output = shell_output "#{bin}/leaf -c #{testpath}/config.conf -t SS", 1
+    output = shell_output "#{bin}/leaf -c #{testpath}/config.conf -t SS"
 
     assert_match "dispatch to outbound SS failed", output
   end
