@@ -7,6 +7,13 @@ class Archey4 < Formula
   sha256 "18113b18282ea0ab31acd74d22d2830160ddf0efc82438e328b3ca9823e15666"
   license "GPL-3.0-or-later"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b028fd2cb8db0f6e3aad92358612898f7caa096989c895414860870d373fdc0d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "43e8e72c61372aea737b852c1f78d3085fc51c7af6fd14f3dc0ce8fb49f2c410"
+    sha256 cellar: :any_skip_relocation, catalina:      "94925f9669187217e3e9000dcf95d9333096cdbc0dc98e953906eac94dcfb754"
+    sha256 cellar: :any_skip_relocation, mojave:        "cea0bd5bb7adf281dd231ea9ae3e12d33914aff934eabe11568e3ae7794fbf05"
+  end
+
   depends_on "python@3.9"
 
   resource "distro" do
