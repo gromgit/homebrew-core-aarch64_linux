@@ -12,10 +12,10 @@ class Xmrig < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "64a32461c1efc3f7599337721324b7c150767a67e898568d5eeb32ce2bb93fd5"
-    sha256 big_sur:       "5739f8ca8982a9453de39731e21896c8533b5ccb98ab1abd0090ec19b19e3729"
-    sha256 catalina:      "ebbec16c0db86546a6a17a52682d9474c903c22498454336722c5ba086f14406"
-    sha256 mojave:        "4c6f40e92943a15755277e602904092c0fce11431cee65c2db4164322870ad9d"
+    sha256 arm64_big_sur: "62aa016c35c8398d2ea9050eb567ff3869576ccb0b2a15e68e360974494d680e"
+    sha256 big_sur:       "66905192d63be76a6e6e02142c989cf5dada23242581a7e0cbb3747c4eb505b0"
+    sha256 catalina:      "125989a3738c56d55793c9b697add575e9c8878405c8553ce90f905d2aeef2de"
+    sha256 mojave:        "29f69aeab1c28d7f7424c6da93b31dc3d8bbf041787b257332e0c628079a8a24"
   end
 
   depends_on "cmake" => :build
