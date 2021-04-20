@@ -9,10 +9,10 @@ class Ykman < Formula
   head "https://github.com/Yubico/yubikey-manager.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "d379ac350760f313a35f754c066c8c7addbcc0275eda6b3edf0a87844f012869"
-    sha256 cellar: :any, big_sur:       "baf09f48223a8de64a99605e9134c89dd6c95d361038d3da669569a05ff4de13"
-    sha256 cellar: :any, catalina:      "ecd3a0e259e8881d53af3496d7bcbb7f0a3d4b7681d0c02f2b042e9297136fd5"
-    sha256 cellar: :any, mojave:        "c78c75b9178c2c57995940da0d5ffb207556dd74d55ef92c440a930a2f406455"
+    sha256 cellar: :any, arm64_big_sur: "2549b4d49538b1634e2ef40fd70a0df6fb0bc92de29aa736c926e8ef09eb20de"
+    sha256 cellar: :any, big_sur:       "1395eb2175ef338f3b4d205fd838161c1242ab0a5778cfa07963dd94eba544d6"
+    sha256 cellar: :any, catalina:      "7679ab9aa2fa8c4f5a220849ef43e1358562c1fabc6f48bd015a4ed0bffbdf1e"
+    sha256 cellar: :any, mojave:        "d5f30c128ef9df005618d69debe043a08691191ff5a0896a2dd47ce1f630d6d7"
   end
 
   depends_on "rust" => :build
