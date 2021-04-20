@@ -11,10 +11,10 @@ class GitInteractiveRebaseTool < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6180d15058ccd520f47d2098b5cc027582cf8ea7ecb1c4a4d64e345c3e902f67"
-    sha256 cellar: :any_skip_relocation, big_sur:       "372e9db83f4c4e47a7268c380e83346884901e3323cab736ba8e6e2a6fd523be"
-    sha256 cellar: :any_skip_relocation, catalina:      "dbb362bd82f3863f68aaa26591cd0754070f91c6573556e86210b63034fe47b0"
-    sha256 cellar: :any_skip_relocation, mojave:        "06a54c67aa4daa0187733cb43a8ce3fcadd0d9a3aa3f8577dbd77f13e1128da5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fd082607eef75ac3382d280c358cf19db42ad11d464ded8a2845734de378937c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4480f59a021edb031a3ef02b5cccae62719dad12f6ae7fc2413b75088be466ac"
+    sha256 cellar: :any_skip_relocation, catalina:      "9223a3f962e2af3897cefb9e221a529be7701e964005d55436f7de9d97d1b573"
+    sha256 cellar: :any_skip_relocation, mojave:        "bfab245c62dd4a37da0c275d8b4642ee86b5912153465da1e312a510fce60b80"
   end
 
   depends_on "rust" => :build
