@@ -6,11 +6,10 @@ class Soci < Formula
   license "BSL-1.0"
 
   bottle do
-    sha256 arm64_big_sur: "3dd152a973084669c4083615a101837067aae6c9b6f703e8148acb62314c6e11"
-    sha256 big_sur:       "1110442edee6672ede9b93dccef0a933508d6aa9936ad7d7c82b9429965092ff"
-    sha256 catalina:      "367f4d37091b11f2e63e220361f9344622a93f8c961122901889c5ef132fb0ec"
-    sha256 mojave:        "c51aea80672de81e7663b36e6ff39ce9cc3025aa3c531539424dd089c1b347a8"
-    sha256 high_sierra:   "6e6fced1aa11defaed5f6ea4461b5bbf763b8f55349035e587c80c4bbd68df27"
+    sha256 arm64_big_sur: "6ab0518edb52f96d06c28fa20fe21eb29551bc933216f36588c87d8f535966fa"
+    sha256 big_sur:       "34a4e4e20bdd5bb3c6d5c8a61badd4d7fc45f99acddb4f8c37ce29eb00dff378"
+    sha256 catalina:      "eaf4f958498990043369a8af4395ff592c58717bc08b38f2905e3d4b4be6e94f"
+    sha256 mojave:        "0cecd3377c20b8bfbd1129d2e10f2aaa8382586881716a7f3b3fb00fc041dc12"
   end
 
   depends_on "cmake" => :build
