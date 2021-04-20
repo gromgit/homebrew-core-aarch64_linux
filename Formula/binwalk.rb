@@ -3,8 +3,8 @@ class Binwalk < Formula
 
   desc "Searches a binary image for embedded files and executable code"
   homepage "https://github.com/ReFirmLabs/binwalk"
-  url "https://github.com/ReFirmLabs/binwalk/archive/v2.3.0.tar.gz"
-  sha256 "62bc314380fc017ffe747e7cbfd7b56103eadaf1730ab499ba8bb5d319025cf9"
+  url "https://github.com/ReFirmLabs/binwalk/archive/v2.3.1.tar.gz"
+  sha256 "7ec9d8fcb8686f4060d37e1096669e3ed8ce1194c91ad80199622448bcc01b19"
   license "MIT"
   head "https://github.com/ReFirmLabs/binwalk.git"
 
