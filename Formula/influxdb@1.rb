@@ -11,10 +11,10 @@ class InfluxdbAT1 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a089bd67453af32565e814768b87264694dbf97a82f4101589300cb0909eb04e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "4e33ea228a0bc92c10ad144bb24c0d04cf6e32a5252471d95280848e38fdb74f"
-    sha256 cellar: :any_skip_relocation, catalina:      "8497170c48a51e6e671542133be31b7726161f4938ace1dea052d31256c127a8"
-    sha256 cellar: :any_skip_relocation, mojave:        "32e374e9ed7eca812ab6313d4a5718fa47a7f3d608a6b44697d78e3afdb452af"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "995eb91ced1cf89dd67db698aaf19c8a383409ea09dee11bc1b65808fb3fc93c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "faf03387f38258cd1e2559d241105cf812c5744212f615a45364330d33d2e60f"
+    sha256 cellar: :any_skip_relocation, catalina:      "a0b6a21ccfa92edc94bf9fe3ecd52f1330537a40d90dd8006546559cc69447d5"
+    sha256 cellar: :any_skip_relocation, mojave:        "8d77ad366087718862cf653c162d1e1c5a035e1baf6c70c3fc7c9b88d367387c"
   end
 
   keg_only :versioned_formula
