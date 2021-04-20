@@ -6,10 +6,10 @@ class Lazygit < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "afc878349425da834b819f76d4c087fd4acf39d17248798f246e498afd36bc65"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a7d6fcf9b61803cd70b3132d8c9c5b32eaf3f6b0961ad257cf20da39d7cc31df"
-    sha256 cellar: :any_skip_relocation, catalina:      "a1eda3ce272ffa227ed403c93fa67e669c672035d4a55fa6c1573ebdb33e91fe"
-    sha256 cellar: :any_skip_relocation, mojave:        "3331bcca8eb4381437277f13ce60d4f1223d43a7e2d362d495e1196f158f5e98"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2d8e772f272f51cf10e4b38e2efa353fcbfbe8b559fd4e7c2f75ad9c3649c9cc"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5668e4220a3c02a5adc34b5a04025f713ada3bb8a6abc985360f1a196230201b"
+    sha256 cellar: :any_skip_relocation, catalina:      "296d79773030099ec042c35b405fc27e9f67f0a63b2346d6f46c271d6a29bd1e"
+    sha256 cellar: :any_skip_relocation, mojave:        "3c39c6b89ade67632f15bb54e4c6fd2d9cecba88b1f6b3186d4811d20c400bc1"
   end
 
   depends_on "go" => :build
