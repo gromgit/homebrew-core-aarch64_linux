@@ -6,10 +6,10 @@ class Xsimd < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c63ea8911c5fc1df0a68893f4611be0550cf3c877004ce4ec86e6e858634995a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "fa6998d360357803e3eb73aa4140d2610f0c0aacd0f88468ae8c8956c44106c2"
-    sha256 cellar: :any_skip_relocation, catalina:      "332df0f1f0266c305be2d776a617bb0a6594c641c85b2ff96f9223acd8487f9f"
-    sha256 cellar: :any_skip_relocation, mojave:        "ae39c2f9ab6c9107917a3da3b3a30ab15e51e77d4758255301d2c787d8650bd3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c8c0550dcc933117abe0a9ac6369dcfa3f5fc67192a5470213200d70e8b34a49"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c8c0550dcc933117abe0a9ac6369dcfa3f5fc67192a5470213200d70e8b34a49"
+    sha256 cellar: :any_skip_relocation, catalina:      "c8c0550dcc933117abe0a9ac6369dcfa3f5fc67192a5470213200d70e8b34a49"
+    sha256 cellar: :any_skip_relocation, mojave:        "c8c0550dcc933117abe0a9ac6369dcfa3f5fc67192a5470213200d70e8b34a49"
   end
 
   depends_on "cmake" => :build
