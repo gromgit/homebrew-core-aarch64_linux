@@ -6,10 +6,10 @@ class Podman < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "086c794c206561e2e2ab2c7431f214ad928953e3f3bb5657463464af09c26380"
-    sha256 cellar: :any_skip_relocation, big_sur:       "be8796688151a6157de4c67dc9ec92d96c67605cd898819dc2185d81b7412031"
-    sha256 cellar: :any_skip_relocation, catalina:      "663484ca9fc2591b3c7787a70c2bef55906a8ddcae651950da5368bed4a21b3e"
-    sha256 cellar: :any_skip_relocation, mojave:        "e87d35f19391e7921773bf64608bd35d3da3d2a127b4424690a469964c2235d9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ad691bceb01eb6b5feaa63ec3ff66cd4419917c9178e26306c0665c98c6a4158"
+    sha256 cellar: :any_skip_relocation, big_sur:       "56504f52fd7058f94899a0ca8ada9428d938cf23995c22caa6e6402b5748d370"
+    sha256 cellar: :any_skip_relocation, catalina:      "5b3c96150a41fb91855739a88230111fe1244ac3e6a65118321c7847dd3a8faf"
+    sha256 cellar: :any_skip_relocation, mojave:        "392bd1082d895878d5ff3b2ba6d399767e01021659524ca752538271a09b6dc8"
   end
 
   depends_on "go" => :build
