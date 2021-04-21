@@ -3,8 +3,8 @@ class Snakemake < Formula
 
   desc "Pythonic workflow system"
   homepage "https://snakemake.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/8c/77/13851db5365ac2535916dbd493acf82975a190f4dfbda5b7de24a214e789/snakemake-6.1.1.tar.gz"
-  sha256 "d43c1f3c64f064bf4ca988ef274db0abe8ec4912b934a831ed3e7bd71e4023f8"
+  url "https://files.pythonhosted.org/packages/41/d0/9dc0babe582e8e8ad2a202482dabe5e2e900fe8e91c5aadc6ad7cfec94c4/snakemake-6.1.2.tar.gz"
+  sha256 "c42b022dd5bb8fe4d3839e5b1694c6a9ee45c4858b14c485e7acf975caad93bf"
   license "MIT"
   head "https://github.com/snakemake/snakemake.git"
 
@@ -54,8 +54,8 @@ class Snakemake < Formula
   end
 
   resource "docutils" do
-    url "https://files.pythonhosted.org/packages/8e/5a/85e35f8692abd8dcd00a67e79c1e45caa6019b8d49d3bee5b2482583d81d/docutils-0.17.tar.gz"
-    sha256 "e2ffeea817964356ba4470efba7c2f42b6b0de0b04e66378507e3e2504bbff4c"
+    url "https://files.pythonhosted.org/packages/4c/17/559b4d020f4b46e0287a2eddf2d8ebf76318fd3bd495f1625414b052fdc9/docutils-0.17.1.tar.gz"
+    sha256 "686577d2e4c32380bb50cbb22f575ed742d58168cee37e99117a854bcd88f125"
   end
 
   resource "filelock" do
@@ -146,6 +146,11 @@ class Snakemake < Formula
   resource "smmap" do
     url "https://files.pythonhosted.org/packages/dd/d4/2b4f196171674109f0fbb3951b8beab06cd0453c1b247ec0c4556d06648d/smmap-4.0.0.tar.gz"
     sha256 "7e65386bd122d45405ddf795637b7f7d2b532e7e401d46bbe3fb49b9986d5182"
+  end
+
+  resource "stopit" do
+    url "https://files.pythonhosted.org/packages/35/58/e8bb0b0fb05baf07bbac1450c447d753da65f9701f551dca79823ce15d50/stopit-1.1.2.tar.gz"
+    sha256 "f7f39c583fd92027bd9d06127b259aee7a5b7945c1f1fa56263811e1e766996d"
   end
 
   resource "toposort" do
