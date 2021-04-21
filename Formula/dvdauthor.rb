@@ -11,11 +11,10 @@ class Dvdauthor < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "2c79f1849a77ee711bfba59c1b44ba6dbe0aeb55e6987612067722781cea6850"
-    sha256 cellar: :any, big_sur:       "0972f90ce00dee3e7449342d73ea5568fa887b887f7f6d112e91171c5193c134"
-    sha256 cellar: :any, catalina:      "669b5fe5348ceb668f9ff55c4942c240f585eb5167e2dfbe1142442fcf7b776b"
-    sha256 cellar: :any, mojave:        "3e4e46c56905c289d31d167e75ee3b033a197fc0dda4b6b56dec752ac9773c51"
-    sha256 cellar: :any, high_sierra:   "55cee6a535eec67fc4f1ea65c2283d69c420d32933d9bcd6106168796ba1af9a"
+    sha256 cellar: :any, arm64_big_sur: "a0b0c601eb1ec9de60de448cab11217c63febd18afd7a9ee6207fdb1427593f5"
+    sha256 cellar: :any, big_sur:       "c6405e471ac402f1b0ec1e2fbbb2ee3eb4be9dd82f0ef5b8991339928ff2fdb0"
+    sha256 cellar: :any, catalina:      "7ebcd748eb4eba1876bd1cb181fa6ec679773dbf753be805845904b69685ee11"
+    sha256 cellar: :any, mojave:        "5da2d90859c186ea0795b18210ef2722f96bfbb16f53d3a0cb0aa89084026ce0"
   end
 
   # Dvdauthor will optionally detect ImageMagick or GraphicsMagick, too.
