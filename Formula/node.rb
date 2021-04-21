@@ -12,10 +12,10 @@ class Node < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "221d1c7c020742aa23c390bdd6392895317b718501aa462686dfc52857647de0"
-    sha256 cellar: :any, big_sur:       "5663d5e86b6e9ff7ffafa9f32060ac60870bfe11cefda8c5f20f8cd4294c3120"
-    sha256 cellar: :any, catalina:      "6bfc60e2d3f32cb0e381c7296bf218144658933e4b8bfb0816350f72986b98a5"
-    sha256 cellar: :any, mojave:        "41aa0ea95e8f4697373cabb84a1d4ff503c12084486cb7791b937098c87a7dcf"
+    sha256 cellar: :any, arm64_big_sur: "12394e6dda1b975663326cf3d3fc1acf4f2bf8c64135655e621338a0a1989e0a"
+    sha256 cellar: :any, big_sur:       "505415a36c64abbc6c6db51dee26da92e3f6acc37a8bb81c1329672ef721fc21"
+    sha256 cellar: :any, catalina:      "2ecf00685d3b91c44f117c78d36884114e426ec6334faf3b2a34325b30926818"
+    sha256 cellar: :any, mojave:        "aef2639f94eae4825cec3012b64c5f76cc43dfcd6a669869b1933c4d47bfca50"
   end
 
   depends_on "pkg-config" => :build
