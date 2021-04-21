@@ -5,6 +5,13 @@ class Mr2 < Formula
   sha256 "3cf2874a5945e79fd9ca270181de1a9d6a662434455c58e2e20e5dbfdebd64c7"
   license "GPL-3.0-only"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3b21b5c834d5d3e9472c21b6fd97a1926f5dbab022ea3fb557165a4aaae50f60"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ae3ea4a30eecaedcf6a29f0fb046510a76282d26a3c7d4cabbb9502588769ab5"
+    sha256 cellar: :any_skip_relocation, catalina:      "6ba779bf8b4ea1385176db98611108ad17aad4319da50cd07db102874f7801b0"
+    sha256 cellar: :any_skip_relocation, mojave:        "a1afbf9aeac7c5fb38e63e138ba06eb254a349923887d5fcd530e91f0332dfc9"
+  end
+
   depends_on "go" => :build
 
   def install
