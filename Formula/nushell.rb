@@ -13,10 +13,10 @@ class Nushell < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "aac6763146aecb86d8380b9529f1faa7120d5fea9325e1a8dac3d451dc21eecb"
-    sha256 cellar: :any_skip_relocation, big_sur:       "05e95f943a3c59dbc3b08436ba21aaadc606d8e8c03bc1650bc8427a575ac2ee"
-    sha256 cellar: :any_skip_relocation, catalina:      "87f350cd6fce9633c2f0abce86fc6ab7f216ca5a47f8d9c9a8dbc737e47ecd46"
-    sha256 cellar: :any_skip_relocation, mojave:        "6b2665736f8a1b9114b1a5abe0ae13c6b2fb1a78b878bda3156ca9459984262d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0c953b0b2680e60ba759340b3ed67c0cfc9c5d2d37537295cf1cb29d1bd51fc3"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3c8b74d01c3bf5c5ebde96351049640dee37e7bd483d63943902d7425df7ad12"
+    sha256 cellar: :any_skip_relocation, catalina:      "1f270e4152e65cbf75832d22fc4edec5dd6564cbfaa6e1d1ba13e25b3cccd8e0"
+    sha256 cellar: :any_skip_relocation, mojave:        "4e0ee5c708926fe52a75d1cc636ad06fc278ca735919db749b17fcc2ae011bad"
   end
 
   depends_on "rust" => :build
