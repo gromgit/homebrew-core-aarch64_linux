@@ -6,11 +6,9 @@ class Mercury < Formula
   license all_of: ["GPL-2.0-only", "LGPL-2.0-only", "MIT"]
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, big_sur:     "2b02e97a19000e9c576fdd5c48b29300e210b9464fff7a0b7b68879555b9723b"
-    sha256 cellar: :any, catalina:    "ede7304ce96165ca6382118eacb3997e0732b875db721640002d203db9e66346"
-    sha256 cellar: :any, mojave:      "ac95cc73104a5621d7a561ae9957561206541633bff5adaf22ed36e21517add1"
-    sha256 cellar: :any, high_sierra: "60240308ebcc05ca33a4d40a787745cd4f60b445c9d94302505253bfd4697f6f"
+    sha256 cellar: :any, big_sur:  "8b37f68829e59efd2127a32dfbcbf80d617196b6f35c970e1d4727b5076abb39"
+    sha256 cellar: :any, catalina: "2b98c59507d6aa72db55b8864d9818f302fef92b5bbdc6630287276494a3bc62"
+    sha256 cellar: :any, mojave:   "e0011e25fa5732a2a271f30c5589c35f1caeb7cbab44ccba2271ab7bd2632243"
   end
 
   depends_on "openjdk"
