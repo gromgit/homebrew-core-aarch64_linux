@@ -10,10 +10,10 @@ class Bcoin < Formula
   head "https://github.com/bcoin-org/bcoin.git"
 
   bottle do
-    sha256 arm64_big_sur: "3f32d6f05ed02b8b45a3b1c052e715b44cf73f22743695e912650606e6432566"
-    sha256 big_sur:       "7f0a2c4421f671b938818178304792dc63b25baac528e0e3504a9d7962e58fe0"
-    sha256 catalina:      "d8341943f3b0189a57ea03af05f87b86c40175399ea55e6ad1ca050edc7de43f"
-    sha256 mojave:        "d2aa943d4b9b2c8e9c633c1b92f8eb3fa33ad22b98c087c2538e1524bec07bfe"
+    sha256 arm64_big_sur: "03cd2231a1a9761a6e55696ac3285930b18193a390a4e327227e0ed71c4ad350"
+    sha256 big_sur:       "f5ea48d98b345f76dba628c6fca49f1202e214a8ed265109d898716b689198f4"
+    sha256 catalina:      "cbc374b70e39ec6954a58f1c69cfb357121df495da3e2e5b51d6ce590b35de92"
+    sha256 mojave:        "4e8b2f111b3643712058823c9af5c1650ce64c7d5757e30c1c58d3d34dcac8ec"
   end
 
   depends_on "python@3.9" => :build
