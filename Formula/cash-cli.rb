@@ -23,6 +23,6 @@ class CashCli < Formula
   end
 
   test do
-    assert_match "Conversion of USD 100", shell_output("#{bin}/cash 100 USD PLN CHF")
+    assert_match "Something went wrong :(", shell_output("#{bin}/cash 100 USD PLN CHF 2>&1", 1)
   end
 end
