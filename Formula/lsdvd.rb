@@ -3,7 +3,7 @@ class Lsdvd < Formula
   homepage "https://sourceforge.net/projects/lsdvd"
   url "https://downloads.sourceforge.net/project/lsdvd/lsdvd/lsdvd-0.17.tar.gz"
   sha256 "7d2c5bd964acd266b99a61d9054ea64e01204e8e3e1a107abe41b1274969e488"
-  revision 3
+  revision 4
 
   bottle do
     sha256 cellar: :any, arm64_big_sur: "0c85243ae07f9fc4f0dba6bea2ca2ae6865b6bb9612f570034dad469c460e7b3"
