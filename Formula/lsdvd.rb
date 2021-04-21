@@ -6,11 +6,10 @@ class Lsdvd < Formula
   revision 4
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "0c85243ae07f9fc4f0dba6bea2ca2ae6865b6bb9612f570034dad469c460e7b3"
-    sha256 cellar: :any, big_sur:       "78c4f868f8b534b59db6820fe0f303d42c0f908c49be6e5a5896da76441d0e0d"
-    sha256 cellar: :any, catalina:      "63e52d4264e765ca6095153de37b08dee02d59676ae98b2f0c36b29c0fdae48e"
-    sha256 cellar: :any, mojave:        "1489bcdd29d86d725cbf76a68ff77335729c676fcf1155555da799d7096ee933"
-    sha256 cellar: :any, high_sierra:   "d5a945ffb9e6172df4625d0ed5b3e5c6aecd2dfc6c9ab5b2a83d88267027edc8"
+    sha256 cellar: :any, arm64_big_sur: "d581725cf2628d8c123d3f6f54d1baf06cb33362d9f6dc7d033a4f7768729474"
+    sha256 cellar: :any, big_sur:       "0d5d1a272ba88ff70ce68ddc35fca9811e2ca5222696373aaf3d2ffc0126a471"
+    sha256 cellar: :any, catalina:      "986e89fe0980a78d7d7ef18fd646d3176edbaa7fd6531c38f698d3bdf2aed5dd"
+    sha256 cellar: :any, mojave:        "66cbfc0e273fc63813c4948638ab849357ef9d3f72ce5b6322a27f5f614507f9"
   end
 
   depends_on "pkg-config" => :build
