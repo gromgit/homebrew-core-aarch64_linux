@@ -11,10 +11,10 @@ class Deark < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1f35652e63074f3e95a766508b3ce264b3e7e5208196124224f9a77768ec059a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "58be36b00198b12edb3ee670a9dd664ce7383fa3e3c439d94905a8b55a24d650"
-    sha256 cellar: :any_skip_relocation, catalina:      "191a4f3431f5c0f937e100249cb6ca24e95813562d45d292afcbd5b824ce6503"
-    sha256 cellar: :any_skip_relocation, mojave:        "dc7c1e91110744973866610fb65368d2b7039562c889e449a5035c28691f1a6b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a907384f204e41ce39db43e23da0047c01a34d17a87e67d9d41ca5859807fb7a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "09ad8b8b146e4df4b0955be83fd168c842e47cb0f5dd94f5ce90df139a6a8831"
+    sha256 cellar: :any_skip_relocation, catalina:      "e4416ed82488c439a1085bb9464abbbd082d6b85e350455c054f31b5978bb728"
+    sha256 cellar: :any_skip_relocation, mojave:        "5667c9616961ca8b8da43979903aaac15a65a27f88bf4242327c2954fa1cb862"
   end
 
   def install
