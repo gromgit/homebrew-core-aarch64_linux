@@ -8,10 +8,10 @@ class OrganizeTool < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "5e04f6251cd1b5bf8043b83ff1899c28178c0e1c805d175a17d5f7aa7f48af3f"
-    sha256 cellar: :any, big_sur:       "3a551091686c9306a4b7c046ba5c475f5fc50a3715d5bd3986d5108254c6eee8"
-    sha256 cellar: :any, catalina:      "14f62b30d9da18324858e2fd669920b55bf52d507c9b1bb8a606eb902fa58e14"
-    sha256 cellar: :any, mojave:        "abc7d2b9792baad6b58d389f7d8ec334358994883318d7b4e2a7d95729d86878"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e60ea32bf5482fe0c5ca74304ea5d9f1872abcdfa221de57be6a7ec99ab4cbd6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "11a276d04ed01edebbd95ef2e0442efbaf5b41df2391314fe7f43cbe30dc9c91"
+    sha256 cellar: :any_skip_relocation, catalina:      "10b35ad339c782773dc3f7b71919d39f03b9a045908ab65c34e7027ff18c4287"
+    sha256 cellar: :any_skip_relocation, mojave:        "36160685dec476b6611bd3adda921654a5a08330682236f7773ce2492446c380"
   end
 
   depends_on "freetype"
