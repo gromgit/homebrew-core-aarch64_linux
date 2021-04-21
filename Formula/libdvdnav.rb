@@ -1,9 +1,8 @@
 class Libdvdnav < Formula
   desc "DVD navigation library"
   homepage "https://www.videolan.org/developers/libdvdnav.html"
-  url "https://download.videolan.org/pub/videolan/libdvdnav/6.1.0/libdvdnav-6.1.0.tar.bz2"
-  sha256 "f697b15ea9f75e9f36bdf6ec3726308169f154e2b1e99865d0bbe823720cee5b"
-  revision 1
+  url "https://download.videolan.org/pub/videolan/libdvdnav/6.1.1/libdvdnav-6.1.1.tar.bz2"
+  sha256 "c191a7475947d323ff7680cf92c0fb1be8237701885f37656c64d04e98d18d48"
 
   bottle do
     sha256 cellar: :any, arm64_big_sur: "8ac6345b54ddac3d399fc3fa22911f1127b3d6130cd223c59158c075e990a00c"
