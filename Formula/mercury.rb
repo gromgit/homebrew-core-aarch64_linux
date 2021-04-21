@@ -1,8 +1,8 @@
 class Mercury < Formula
   desc "Logic/functional programming language"
   homepage "https://mercurylang.org/"
-  url "https://dl.mercurylang.org/release/mercury-srcdist-20.06.tar.gz"
-  sha256 "b9c6965d41af49b4218d2444440c4860630d6f50c18dc6f1f4f8374d114f79be"
+  url "https://dl.mercurylang.org/release/mercury-srcdist-20.06.1.tar.gz"
+  sha256 "ef093ae81424c4f3fe696eff9aefb5fb66899e11bb17ae0326adfb70d09c1c1f"
   license all_of: ["GPL-2.0-only", "LGPL-2.0-only", "MIT"]
 
   bottle do
@@ -16,12 +16,6 @@ class Mercury < Formula
   depends_on "openjdk"
 
   uses_from_macos "flex"
-
-  # Disable advanced segfault handling due to broken header detection.
-  patch do
-    url "https://github.com/Mercury-Language/mercury/commit/37ed70d43878cd53c8da40bf410e0a312835c036.patch?full_index=1"
-    sha256 "f01aca048464341dcf6e345056050e2c45236839cca17ac01fc944131d1641c0"
-  end
 
   def install
     system "./configure", "--prefix=#{prefix}",
