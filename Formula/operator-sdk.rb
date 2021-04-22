@@ -8,10 +8,10 @@ class OperatorSdk < Formula
   head "https://github.com/operator-framework/operator-sdk.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "dfbb540e7ace32511ffdd4afa27f497c398408c1dc0cadb10e9e954cc5c1a710"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7f65de9e688f5d5f96fb53485e4ba22c0d39ac1e7b20377012b2de3d8c9c1223"
-    sha256 cellar: :any_skip_relocation, catalina:      "0deb5ca0aec5983fd5eb0c846503e436d46fe89b484a80583934d63ad2605ae4"
-    sha256 cellar: :any_skip_relocation, mojave:        "e20a53867394681fff6391dec9b1e59975be9484f60f357fe26a4f89e29126ac"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2624193d1a76ece58307fc0532af0434e2f052a9ad8a3ab6ad25245dcadc0a6f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "2a9b646cfd95e1f5f5fa79be1e36166b16c332336f6e5fb88af25926b3deed7c"
+    sha256 cellar: :any_skip_relocation, catalina:      "3ddfffcf30fb489d6d819c840c0a015a8fb49379c89402040e6f10400353ad91"
+    sha256 cellar: :any_skip_relocation, mojave:        "c30655276446c99e07c4e09f0084e64ecdb189f4715ffd1a0ca0a15e68cd8de2"
   end
 
   depends_on "go"
