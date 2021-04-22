@@ -1,9 +1,9 @@
 class Openvpn < Formula
   desc "SSL/TLS VPN implementing OSI layer 2 or 3 secure network extension"
   homepage "https://openvpn.net/community/"
-  url "https://swupdate.openvpn.org/community/releases/openvpn-2.5.1.tar.xz"
-  mirror "https://build.openvpn.net/downloads/releases/openvpn-2.5.1.tar.xz"
-  sha256 "40930489c837c05f6153f38e1ebaec244431ef1a034e4846ff732d71d59ff194"
+  url "https://swupdate.openvpn.org/community/releases/openvpn-2.5.2.tar.xz"
+  mirror "https://build.openvpn.net/downloads/releases/openvpn-2.5.2.tar.xz"
+  sha256 "b12743836901f365efaf82ab2493967e1b21c21eb43ce9a8da1002a17c9c1dc8"
   license "GPL-2.0-only" => { with: "openvpn-openssl-exception" }
 
   livecheck do
@@ -37,12 +37,9 @@ class Openvpn < Formula
                           "--with-crypto-library=openssl",
                           "--enable-pkcs11",
                           "--prefix=#{prefix}"
-    inreplace "sample/sample-plugins/Makefile" do |s|
-      s.gsub! HOMEBREW_LIBRARY/"Homebrew/shims/mac/super/pkg-config",
+    inreplace "sample/sample-plugins/Makefile",
+              HOMEBREW_SHIMS_PATH/"mac/super/pkg-config",
               Formula["pkg-config"].opt_bin/"pkg-config"
-      s.gsub! HOMEBREW_LIBRARY/"Homebrew/shims/mac/super/sed",
-              "/usr/bin/sed"
-    end
     system "make", "install"
 
     inreplace "sample/sample-config-files/openvpn-startup.sh",
