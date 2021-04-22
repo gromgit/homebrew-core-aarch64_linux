@@ -1,9 +1,9 @@
 class Rpm < Formula
   desc "Standard unix software packaging tool"
   homepage "https://rpm.org/"
-  url "http://ftp.rpm.org/releases/rpm-4.16.x/rpm-4.16.1.2.tar.bz2"
-  mirror "https://ftp.osuosl.org/pub/rpm/releases/rpm-4.16.x/rpm-4.16.1.2.tar.bz2"
-  sha256 "8357329ceefc92c41687988b22198b26f74a12a9a68ac00728f934a5c4b4cacc"
+  url "http://ftp.rpm.org/releases/rpm-4.16.x/rpm-4.16.1.3.tar.bz2"
+  mirror "https://ftp.osuosl.org/pub/rpm/releases/rpm-4.16.x/rpm-4.16.1.3.tar.bz2"
+  sha256 "513dc7f972b6e7ccfc9fc7f9c01d5310cc56ee853892e4314fa2cad71478e21d"
   license "GPL-2.0-only"
   version_scheme 1
 
@@ -61,6 +61,10 @@ class Rpm < Formula
                           "__GIT=/usr/bin/git",
                           "__LD=/usr/bin/ld"
     system "make", "install"
+
+    on_macos do
+      inreplace lib/"rpm/macros", "#{HOMEBREW_SHIMS_PATH}/mac/super/", ""
+    end
   end
 
   def post_install
