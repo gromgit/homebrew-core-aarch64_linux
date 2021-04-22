@@ -8,10 +8,10 @@ class Zstd < Formula
   head "https://github.com/facebook/zstd.git", branch: "dev"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "beddf3a858da5063f7a407e5c78c0c83a2efd2595354acb750118da7d87f0974"
-    sha256 cellar: :any, big_sur:       "34a6c2cc25d1a7bca6e2294ec3d024f359a2aaf705798b9cbdd71bccdd5c08bd"
-    sha256 cellar: :any, catalina:      "d3f7b4d61e213d3fae27317d496251768ad8cfe03a4aa1ab11479c632a7e4050"
-    sha256 cellar: :any, mojave:        "685d57a5577f21f89d5ee20aa986c447adf315bcf4daf96d22cb5cf170e4a5ce"
+    sha256 cellar: :any, arm64_big_sur: "1a1b9a78b09d90da95c31dbdc3d4a62ef57f2c1d875d15a62342fc1556bfba4d"
+    sha256 cellar: :any, big_sur:       "eeb8825bb703294879b70a5018efecb08a42863cb56c870fdd7215d886732778"
+    sha256 cellar: :any, catalina:      "9fff3447bc3ca1d239dbb239b37bd70fabd37087bf61c85407bad8d5c47a831a"
+    sha256 cellar: :any, mojave:        "0da410f0a383f7068b51b0e72969496a631b8aeb46b2cbaf431989e9a8646018"
   end
 
   depends_on "cmake" => :build
