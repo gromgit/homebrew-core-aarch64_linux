@@ -8,10 +8,10 @@ class Cdktf < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f010eea2ab21bac1048b27b5202b5cfb9d50c87de73035e98cd07758f8144715"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7699e0581f1a128f9c1658281d1cde56c88be2cc8ba008a1873f6aa9ec901f7a"
-    sha256 cellar: :any_skip_relocation, catalina:      "91f4daf68a3b5d01b7e4e873abb9c3380b72a830185b6dd94f3debfdfbc26163"
-    sha256 cellar: :any_skip_relocation, mojave:        "4f2df03511155efc481b6378eeec8ef43142185b5728aa90c2076e4b640b8a7a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a0bf8e63f821acf34ae121085deb186442cb227e510e0ed79a9138e60c975e00"
+    sha256 cellar: :any_skip_relocation, big_sur:       "86af5928c4bbc02bb02a9eff1d7cabe2bec0b8024cfcc36011bd014727beb7ee"
+    sha256 cellar: :any_skip_relocation, catalina:      "86af5928c4bbc02bb02a9eff1d7cabe2bec0b8024cfcc36011bd014727beb7ee"
+    sha256 cellar: :any_skip_relocation, mojave:        "86af5928c4bbc02bb02a9eff1d7cabe2bec0b8024cfcc36011bd014727beb7ee"
   end
 
   depends_on "node"
