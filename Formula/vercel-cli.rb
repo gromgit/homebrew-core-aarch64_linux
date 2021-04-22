@@ -8,10 +8,10 @@ class VercelCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a8f3c8ef6c2a2ef12137cdcea5cb732628c9c920a8950f9508a4070e39cdd32c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "2d3370861bfb990c207e8cc340e9143822366ca0ff72bdafa5d58fc37969ca41"
-    sha256 cellar: :any_skip_relocation, catalina:      "4f40cc1263dd6d90dc5b78e3bcb27f33592898034fba02eac99583ee893e9c0b"
-    sha256 cellar: :any_skip_relocation, mojave:        "51e052f8d722003f300276ca3bf9f966b116e398a76fbc599fa1cf62df58183a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "08781018d891011a3fa4f8b2f4d51365adad4f64bb02e0e3c6b0dbbfec973ef9"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d1fe9532fd624e6e9e13c393e28217e11d8e72f8200ded254604c45b68cade83"
+    sha256 cellar: :any_skip_relocation, catalina:      "d1fe9532fd624e6e9e13c393e28217e11d8e72f8200ded254604c45b68cade83"
+    sha256 cellar: :any_skip_relocation, mojave:        "d1fe9532fd624e6e9e13c393e28217e11d8e72f8200ded254604c45b68cade83"
   end
 
   depends_on "node"
