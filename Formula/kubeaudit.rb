@@ -7,10 +7,10 @@ class Kubeaudit < Formula
   head "https://github.com/Shopify/kubeaudit.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d5e3fb3c25d7c908ac24c5e99f49c00c5c9a15998110ec3f5f3abc64c149e1e9"
-    sha256 cellar: :any_skip_relocation, big_sur:       "eab5a3f327d8db7b9298bb1abaeba7c866504d077ac524d1b7584038ac1e636a"
-    sha256 cellar: :any_skip_relocation, catalina:      "d1dbba7a528100cd55fb5d477cf6537aef9ee4ba2526f0f3789fc7f9fe574b68"
-    sha256 cellar: :any_skip_relocation, mojave:        "8d9a85b4f5a1de6386d78f9ad79410c4019431de6f9b096c383ec6f8a87c8afb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "54fbc55d9d0bf2a0fdb758305de618febe75cfe1c0f5a71fff1cf9e9124f9f17"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6cdd08c1cb11b3d19164f0a3277ad3840247bf6fd64d2ea8c65d787f00929862"
+    sha256 cellar: :any_skip_relocation, catalina:      "f71c456134a9b55f23670eff99d6190fd7db0ca10bfd72a415e0aa43a8caecfc"
+    sha256 cellar: :any_skip_relocation, mojave:        "e1d85013ccb18da62cee8e8a279c61606cf34038a34b06ed013e068952ce16ee"
   end
 
   depends_on "go" => :build
