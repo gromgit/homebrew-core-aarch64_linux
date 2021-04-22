@@ -1,10 +1,9 @@
 class Tinyproxy < Formula
   desc "HTTP/HTTPS proxy for POSIX systems"
   homepage "https://tinyproxy.github.io/"
-  url "https://github.com/tinyproxy/tinyproxy/releases/download/1.10.0/tinyproxy-1.10.0.tar.xz"
-  sha256 "59be87689c415ba0d9c9bc6babbdd3df3b372d60b21e526b118d722dbc995682"
-  license "GPL-2.0"
-  revision 1
+  url "https://github.com/tinyproxy/tinyproxy/releases/download/1.11.0/tinyproxy-1.11.0.tar.xz"
+  sha256 "c1ec81cfc4c551d2c24e0227a5aeeaad8723bd9a39b61cd729e516b82eaa3f32"
+  license "GPL-2.0-or-later"
 
   bottle do
     sha256 arm64_big_sur: "6a56771b8b4fcfdea0bf0b23565eab216b1369dd5f77aa1bccd2a37cd46c392f"
@@ -19,6 +18,12 @@ class Tinyproxy < Formula
   depends_on "docbook-xsl" => :build
 
   def install
+    # conf.c:412:21: error: use of undeclared identifier 'LINE_MAX'
+    # https://github.com/tinyproxy/tinyproxy/commit/7168a42624fb9ce3305c9e666e44cc8a533af5f6
+    # Patch already accepted upstream, but not usable due to upstream refactor. Remove on next release.
+    inreplace "src/acl.c", "#include <limits.h>\n", ""
+    inreplace "src/common.h", "#  include	<pwd.h>\n", "#  include	<pwd.h>\n#  include	<limits.h>\n"
+
     ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
 
     args = %W[
