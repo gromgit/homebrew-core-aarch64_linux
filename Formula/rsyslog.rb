@@ -11,10 +11,10 @@ class Rsyslog < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "881bebe09c8a02fd07128884954316c8ebc636ca0c98961957d1a9d196d18778"
-    sha256 big_sur:       "43592c8eb73fda51a9e93fbfa954932369d34e75d576cc6cac43aa65cd419e81"
-    sha256 catalina:      "bf7c7f327aced675dfa37cbc86df0106cb9d8e2826155371a4b8ec7fc43a2cea"
-    sha256 mojave:        "95b1f36183b0ec324fd66c7f691ba39305b676dcc46f81ba2aafb841537c855c"
+    sha256 arm64_big_sur: "13b1e937c9c9c3cfeba0b0e57ea39587d23b6162dc19214f9e3913b70cf03af7"
+    sha256 big_sur:       "dd86787cf71a618813d16d0aacf866d8402fdada714050f6f13c6be55911213b"
+    sha256 catalina:      "d3f76c216277d141f713ca6ebe531c82ee58d3573b91a91525c8a74283f6befa"
+    sha256 mojave:        "08c4305668014a2861735ba8d5e468570af66746748a7546876b921c24e0016b"
   end
 
   depends_on "pkg-config" => :build
