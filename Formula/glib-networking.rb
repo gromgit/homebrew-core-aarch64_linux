@@ -6,10 +6,10 @@ class GlibNetworking < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256               arm64_big_sur: "09ef99c0205b593e08ad92dd5e351cd8080b86fff388dcfaf9c0f3091ac36b0f"
-    sha256 cellar: :any, big_sur:       "2b4e055e29296598c3e85fe68b0445c23cf87cd96d9f0703cb181079a745c577"
-    sha256 cellar: :any, catalina:      "28112a720b0fb9a934d3c14f171f2670e6480d01b0910136e2d3e494f682fd77"
-    sha256 cellar: :any, mojave:        "309920b64e42f8211b5b00d7c2439e7325165db1295246afb0d8af3bbc6ed3cf"
+    sha256               arm64_big_sur: "58be10c17da1a361a5f98a5525ff33967d2d17df212e14b622cd1effd6449dee"
+    sha256 cellar: :any, big_sur:       "22288b8ad200b43cc6e6be824457e7d078425aeb9d3c9992a60b7f98bc1d8780"
+    sha256 cellar: :any, catalina:      "cf152dc56f935513958b8807d4a8c7f02b9e6950110ce66609f54df5bff0da59"
+    sha256 cellar: :any, mojave:        "0e4b6128e863ec39780f0750a5057a90013780c47b2438d25b30e4effbbe3609"
   end
 
   depends_on "meson" => :build
