@@ -7,12 +7,10 @@ class Saldl < Formula
   head "https://github.com/saldl/saldl.git", shallow: false
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "b1c1dda8876efb75dde244cd94a70fcb3246b1d8d8818d2d5d83521e5bb4eb96"
-    sha256 cellar: :any, big_sur:       "98f348fdc98c856bce1374e98a0ec917584d2e760af3140429b7e49bcbef5912"
-    sha256 cellar: :any, catalina:      "2b377713f93e2cd853b9ef6a31a881215cffe3a35416309af31a13648cbf6f7d"
-    sha256 cellar: :any, mojave:        "7fd875e38f9506d4ca5cca0e14815cea29ba40bf61385f53f93c8a587d5b50d3"
-    sha256 cellar: :any, high_sierra:   "1c2f3b014669b8a19a1f3be6f654d8c438e62d5ed64e2c72b4f54a33e0f67b88"
-    sha256 cellar: :any, sierra:        "7fbb71dbced4c48d0586f5f58fd4d64b87b39f4e3f78ad1188f11edb7c4af9a5"
+    sha256 cellar: :any, arm64_big_sur: "2b965040a5e53c33801a86f8090a3339b8967903b1a11c3cc5b8bfca9e9de33c"
+    sha256 cellar: :any, big_sur:       "787ac1c4f96155b215ebc0eb06b6fbb404ac4dcca1cd88670c127ec1d504d709"
+    sha256 cellar: :any, catalina:      "9ac9aaa7e2882bcdb821c33c5bf7013b2ba1221242c1ad7d3da4e85d8febb324"
+    sha256 cellar: :any, mojave:        "3384921f2669ccb3e6021260c81b9494165ddf32f8f69dc0d4196910d4afe6be"
   end
 
   depends_on "asciidoc" => :build
