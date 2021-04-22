@@ -11,10 +11,10 @@ class Pod2man < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c5247c23c7441d746207c85b3e2f76f83c4149fcc4ad3bdefa5e41f609820fca"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c5247c23c7441d746207c85b3e2f76f83c4149fcc4ad3bdefa5e41f609820fca"
-    sha256 cellar: :any_skip_relocation, catalina:      "6a46194855951dff9cd5040fb70725947b65a1433868d6fda21fcc6262b598ae"
-    sha256 cellar: :any_skip_relocation, mojave:        "6a46194855951dff9cd5040fb70725947b65a1433868d6fda21fcc6262b598ae"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "342ed828eb46d48381a7a3273a1858cccb0818f893bf1c384508842c49864fc8"
+    sha256 cellar: :any_skip_relocation, big_sur:       "53e3c8c329177d03b2894745c6d679fa752f828daafaff0ef2bc10800b6dbcf5"
+    sha256 cellar: :any_skip_relocation, catalina:      "ca1fb674f4d5ffd23945ec684b4ba2ca48241cb5e273fbd4b4007753277e2e4a"
+    sha256 cellar: :any_skip_relocation, mojave:        "09c560e15e46d7eb4836ced38a0eea6900ddce5d5230a86578c33ed61328ce5b"
   end
 
   keg_only "perl ships with pod2man"
