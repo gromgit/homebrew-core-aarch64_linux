@@ -7,11 +7,11 @@ class NumUtils < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1dd2bf76cfa7fe7266662d3ffa199ef21478dce933958dba08d51adddcee7a13"
-    sha256 cellar: :any_skip_relocation, big_sur:       "50236cf7c8b791ba5663085c16837419d9bdc9452d64ba2f81936094f9f53592"
-    sha256 cellar: :any_skip_relocation, catalina:      "b8aac296053a3fd6811ffdf85cb6f133174e4df5bd47318c02ad1f7298366fd6"
-    sha256 cellar: :any_skip_relocation, mojave:        "476a96d60faaf281b704e6a137a0b4e03bd708e51f07ae97940f7efdba693ebb"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a1d2623cf894f0d8838ee705b922933605c1fa0a43a6a1dc7e38f7f6ff994c3f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a1d2623cf894f0d8838ee705b922933605c1fa0a43a6a1dc7e38f7f6ff994c3f"
+    sha256 cellar: :any_skip_relocation, catalina:      "b2d299fe6c8307ddfaa2207a4e6ea2767e174d56d9b9cd0366ca00718f81e121"
+    sha256 cellar: :any_skip_relocation, mojave:        "b2d299fe6c8307ddfaa2207a4e6ea2767e174d56d9b9cd0366ca00718f81e121"
   end
 
   depends_on "pod2man" => :build
