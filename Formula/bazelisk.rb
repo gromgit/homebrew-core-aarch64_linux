@@ -8,9 +8,9 @@ class Bazelisk < Formula
   head "https://github.com/bazelbuild/bazelisk.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "73266bab3d913f636851157fdc060c8ac6e1001c4dfccab5e0e84dbb94770aa8"
-    sha256 cellar: :any_skip_relocation, catalina: "624a6f20edb7a0f1fe6990320b87478286d721ec0fcff432671350068cb6413d"
-    sha256 cellar: :any_skip_relocation, mojave:   "57e61c1c3fedc11a46a96e7b29cb3fdf0d77b123ac6baadfc9e24c26f4fcee83"
+    sha256 cellar: :any_skip_relocation, big_sur:  "6db240c5ca2ef2f73560596994b36bab3a3b00446886197d485d2503cff5a395"
+    sha256 cellar: :any_skip_relocation, catalina: "732d05ccaf76d20ee1e885e9091fe4e9088135d70962867200ba308168082aa3"
+    sha256 cellar: :any_skip_relocation, mojave:   "f7d2967a71ee83fce951d1e80494a546fc88db8f670cf185a5ba478b1fa7b9bf"
   end
 
   depends_on "go" => :build
