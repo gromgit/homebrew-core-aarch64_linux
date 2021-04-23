@@ -6,6 +6,13 @@ class Rainbarf < Formula
   license any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"]
   head "https://github.com/creaktive/rainbarf.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ef63dec71481ba7ea8f46ebe302945b5d09845825dde684183a2cf2bc65c3684"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ef63dec71481ba7ea8f46ebe302945b5d09845825dde684183a2cf2bc65c3684"
+    sha256 cellar: :any_skip_relocation, catalina:      "cc3cc692fe18a6c757c92ed7c251a2b23dc04df3d2e88acd30fc776620cd8059"
+    sha256 cellar: :any_skip_relocation, mojave:        "cc3cc692fe18a6c757c92ed7c251a2b23dc04df3d2e88acd30fc776620cd8059"
+  end
+
   depends_on "pod2man" => :build
 
   uses_from_macos "perl"
