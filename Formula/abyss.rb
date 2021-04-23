@@ -11,11 +11,10 @@ class Abyss < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "4f653f5b026d1ed8c2b0ced4f47a13bf13cbef542ca1c14d9ef4a9ac2feca90b"
-    sha256 cellar: :any, big_sur:       "9fe0e2f711647eda6cfc6f4dc8ff0259f6fa96534fa1bfa9f895cfc2b62830b6"
-    sha256 cellar: :any, catalina:      "521a584ab5f11e69de3b4b2362bdcf89cf3b541b32694c30eec6e71d334c8232"
-    sha256 cellar: :any, mojave:        "8c473ad4f6d9c3b786069c1d933d1ee8e72fb117f1ddbef65b0696163cf34292"
-    sha256 cellar: :any, high_sierra:   "7fbea49ff3c1cdf2867ceac467be40d16a37cf104ef7fcd478faf0cfdd726eea"
+    sha256 cellar: :any, arm64_big_sur: "bb058d5f870631a365a463928f44d712bf74816d63802afb8d71ef6c25bdd70d"
+    sha256 cellar: :any, big_sur:       "e89a82779e47b75a1a890512101ce337ad1115589452e4aadf4a24a4d0fc64b6"
+    sha256 cellar: :any, catalina:      "9c8439788542b27321fa85a544ad66f3ede713ff4c3b358fa21af74d8b443a40"
+    sha256 cellar: :any, mojave:        "4dc19d24229a313add5756947cb7a236da55c040f91eb9cab8a41d0d201ce0d5"
   end
 
   head do
