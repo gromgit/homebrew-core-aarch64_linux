@@ -7,10 +7,10 @@ class Terrascan < Formula
   head "https://github.com/accurics/terrascan.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d134c7faf143bcee70a7efd729a68aa9d72c4fc6941672b3a98952fc26b84b3d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "660a6ec36404c9e45899249c9f1ac250ac6cdf30a5514dfe52877cbe6954a1e5"
-    sha256 cellar: :any_skip_relocation, catalina:      "f5a93d7392ad8c451a2a6a1379c1d3c9a889583215bfed8b66ca74267b321a5a"
-    sha256 cellar: :any_skip_relocation, mojave:        "be0816e6a545a340880459362b55310674443f2f97f2a7dba7c704a890c4a6d3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "aea4fc921a9bc17806e65a39dacdd9547658eb961db1f1ef0ffef2983583b74a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e17888a492ace8be4e980409ed5c1fbef37f0487c95aeb95a4c3b37d04dbaa8d"
+    sha256 cellar: :any_skip_relocation, catalina:      "a00587f2b704c07f60cc87f1c177806998ed4019b1358866df18731095cf7dd0"
+    sha256 cellar: :any_skip_relocation, mojave:        "9a6b700d6bb49bc1b95e31f2eadfedd37edb574ce2933e935a2ae902c9bf9b90"
   end
 
   depends_on "go" => :build
