@@ -14,10 +14,10 @@ class Parallel < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "70e9f1209b6a70c2832f5e4a90e5eed0a20ca08509612d8d5b4dc52cbd156ef7"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5fbd9a31cd90ab4f822040f0a93498b1717e8adf720862ab818f728dd3f55af9"
-    sha256 cellar: :any_skip_relocation, catalina:      "0f9dbc42951f85bfd4945729347b455e4eccc4bf581182bdaf6412478e27dae4"
-    sha256 cellar: :any_skip_relocation, mojave:        "63f756a786d1cdecb8493abc9da40c9cc07c7e4c16830f971c8031f2bc1f0c37"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "660d5f0736181ea16850569a26ddfab88af83d112e95db0f8f790655bb3cbf51"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7a604a471b0f1e51112a7bdb3a3b6656948082c8ab41c5b5cb651c22e5b5e7eb"
+    sha256 cellar: :any_skip_relocation, catalina:      "7a604a471b0f1e51112a7bdb3a3b6656948082c8ab41c5b5cb651c22e5b5e7eb"
+    sha256 cellar: :any_skip_relocation, mojave:        "7a604a471b0f1e51112a7bdb3a3b6656948082c8ab41c5b5cb651c22e5b5e7eb"
   end
 
   conflicts_with "moreutils", because: "both install a `parallel` executable"
