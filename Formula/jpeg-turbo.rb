@@ -7,11 +7,10 @@ class JpegTurbo < Formula
   head "https://github.com/libjpeg-turbo/libjpeg-turbo.git"
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "ed33cdd98575680b68055415bc8416e4ff84cb5a458e65924027ef1726e37261"
-    sha256 big_sur:       "81e58cf5666e9adc810f1fd7b5ab6a9b45a66d65c7d36d73c94430e1432e9971"
-    sha256 catalina:      "30d3f9a97040a6070c5bf183e4ae5e2f7f7cb1a233a0c987e5cb67f82939c4ad"
-    sha256 mojave:        "4b087792a6794f715924c735882adb54314da0e2927cd810b0449e0ac061f095"
+    sha256 arm64_big_sur: "88c325eabb7b63c8df6c94e2830a61262cd1d1b1578f1e7a18c8a1ec35585a0d"
+    sha256 big_sur:       "d75de3940ae5b5d5117e50b8167aed9cf672bf490a0ef0752f2a092079d64cff"
+    sha256 catalina:      "6896a17259ac12146111d562538ed144a25ed18c704f503294a2043ae0d1e28a"
+    sha256 mojave:        "b917a78fb0222d9423eda3728c4c0ee63a83ef232a7a4f21036307d92a27d68f"
   end
 
   keg_only "libjpeg-turbo is not linked to prevent conflicts with the standard libjpeg"
