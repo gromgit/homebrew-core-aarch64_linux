@@ -6,10 +6,10 @@ class DockerGen < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3c85b99b9c196d88d88f1b841b945581dbf532a535d5ae9eddcba113186479c2"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a8e0c7dc323e6d12139778d740422435c4f7e8c5515ea1fe1b3020cbf570aefa"
-    sha256 cellar: :any_skip_relocation, catalina:      "de774435b70a8ef725753d6f21c53059ff9702e40579eeca873b2bbd58d57e9f"
-    sha256 cellar: :any_skip_relocation, mojave:        "f9fd70bd526ee9deedac3d51b76fc680ab9bd6ff0a15bec040ecec682c8ee000"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fc7b2d7b22a62b6dc5fb591e34ae7dbc552057e23814f2c2ae47d7d3448bf2da"
+    sha256 cellar: :any_skip_relocation, big_sur:       "df088bb6b0762746c6b472ffceafc527aa37ed606518746e12d27a935a353a9c"
+    sha256 cellar: :any_skip_relocation, catalina:      "d0f8f4eaccd1c001ca1c56c66bb554678432296ee1097862d117c9cef4f83087"
+    sha256 cellar: :any_skip_relocation, mojave:        "374691a880904b97fc9dc925ff2fcedaba98a64234cf43a1ef0957b3d535b9cd"
   end
 
   depends_on "go" => :build
