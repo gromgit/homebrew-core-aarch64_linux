@@ -5,11 +5,11 @@ class Unum < Formula
   sha256 "d290070f4be54addacac7318dfb2c0bfde71690bba51f99ecf64671b71801d2a"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "68d0229aa7501537118e7e352c13a37cd5756517f176a7751f9c758e5790c493"
-    sha256 cellar: :any_skip_relocation, big_sur:       "afd2c20350cee5b3af9ae6f0c539be5ae7c3c4c882056671242ac447e655166d"
-    sha256 cellar: :any_skip_relocation, catalina:      "e2ee19c28d058e0874fc5eb6008229305c471eac5a60c88ab99ef0917b907eb7"
-    sha256 cellar: :any_skip_relocation, mojave:        "e2ee19c28d058e0874fc5eb6008229305c471eac5a60c88ab99ef0917b907eb7"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "270c0296d036b4be85368539d895d27f0630e3f6a4106cc8758747e5f2371471"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e0f619918472df38d68814008a4a39238faa5b6dcc7b259486491c96da869f17"
+    sha256 cellar: :any_skip_relocation, big_sur:       "668661702317b0eda68f6e710916536f96c0a459c9500c0ac684359b2a8657b6"
+    sha256 cellar: :any_skip_relocation, catalina:      "7ceee0d5f8227329b325fdbabd54b7c2cd6a1a5ad38a3ab8b860c25036197fcd"
+    sha256 cellar: :any_skip_relocation, mojave:        "7ceee0d5f8227329b325fdbabd54b7c2cd6a1a5ad38a3ab8b860c25036197fcd"
   end
 
   depends_on "pod2man" => :build
