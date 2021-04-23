@@ -10,6 +10,13 @@ class GnupgAT22 < Formula
     regex(/href=.*?gnupg[._-]v?(2\.2(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 arm64_big_sur: "6e52afe96b7c4acf7e83ffcc3904c62b5dee9948f6e18a664285e9b6ed24804f"
+    sha256 big_sur:       "9885e75474b25f2a7d2d1f66fb0ab305c98a8daa3848e41473f60a2f2ff34d3d"
+    sha256 catalina:      "aa2c9d472c019a2ad71a94cbc17753ec051685ace6a7d386fd76efa30c97ada0"
+    sha256 mojave:        "42ef4c3b4758a11c1dbfea5fe5bf47ba150b30f19468ba67882d5ccaf786a5ef"
+  end
+
   keg_only :versioned_formula
 
   depends_on "pkg-config" => :build
