@@ -6,10 +6,10 @@ class Deno < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "96c1e5c309f601a3e273f04442b7e7354659877fe4b0791ea3ad65bc564b6b9b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9f0ad4c79d5994b0bc68b17025baa1a379ffd4ecdd716d1ae9e9b1694c1bbcb8"
-    sha256 cellar: :any_skip_relocation, catalina:      "91043d1c3239c044cff2a9abd9e740e49bfe190ed366cf17d3a8f6034044d5e5"
-    sha256 cellar: :any_skip_relocation, mojave:        "1bc07494c7051f1b0dce4c9cd1484d8cf20c9a14771128ff7974c4c960dac288"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a393a77906a2503961467904046eb61d362177dce13a7eaab77eb8f44558c351"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3922959df0f22cde338c6f9bc8cc2f9275baaa9b718bd9b68940cd5fb8dd3820"
+    sha256 cellar: :any_skip_relocation, catalina:      "6206bda7f074f4175446a9c1cf34f4cc1e93c5a447899f6e9e735083a00f36c0"
+    sha256 cellar: :any_skip_relocation, mojave:        "960a3bf434e0ec0a9094b0b17d23b3aef9db548aa974ff19d39041f18fd1e021"
   end
 
   depends_on "llvm" => :build
