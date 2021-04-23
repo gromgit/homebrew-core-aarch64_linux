@@ -6,12 +6,11 @@ class Rename < Formula
   head "https://github.com/ap/rename.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "44f30a8e1f8b7e3c5f3a194285a2dac494389e837c490d8d8d7137c939fa4ee3"
-    sha256 cellar: :any_skip_relocation, big_sur:       "099d8a8cf234a34790ab0004433c3c83f74ef353ad030f2be14086758d5e3b89"
-    sha256 cellar: :any_skip_relocation, catalina:      "494aba9267348e401431cbcb1193df1c1138fda69d66aaa3c7ee229be51277fd"
-    sha256 cellar: :any_skip_relocation, mojave:        "13c919a8edd4935b7e5462a172b8336c0425a627f76fd3aa72c652c35ea233cc"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "86b4b8a450b749f6fd84d86334d2d9f3a1c57fa3832f6e69d602369b4c6e5300"
-    sha256 cellar: :any_skip_relocation, sierra:        "ed4a9403e533b143f8f1ee307035b28c995a13970c64ed7646719e12688ec7a0"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "308b9f76cf8386eb9c5835204233f0869cc566d9995b383a5215649e8b1c7a48"
+    sha256 cellar: :any_skip_relocation, big_sur:       "308b9f76cf8386eb9c5835204233f0869cc566d9995b383a5215649e8b1c7a48"
+    sha256 cellar: :any_skip_relocation, catalina:      "2f1c70cacb289e2286bc6ec1e47319d197c2f0d74f8474b303aa2cb9aad8bb0e"
+    sha256 cellar: :any_skip_relocation, mojave:        "2f1c70cacb289e2286bc6ec1e47319d197c2f0d74f8474b303aa2cb9aad8bb0e"
   end
 
   depends_on "pod2man" => :build
