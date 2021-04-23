@@ -1,8 +1,8 @@
 class Abyss < Formula
   desc "Genome sequence assembler for short reads"
   homepage "https://www.bcgsc.ca/resources/software/abyss"
-  url "https://github.com/bcgsc/abyss/releases/download/2.2.5/abyss-2.2.5.tar.gz"
-  sha256 "38e886f455074c76b32dd549e94cc345f46cb1d33ab11ad3e8e1f5214fc65521"
+  url "https://github.com/bcgsc/abyss/releases/download/2.3.1/abyss-2.3.1.tar.gz"
+  sha256 "664045e7903e9732411effc38edb9ebb1a0c1b7636c64b3a14a681f465f43677"
   license all_of: ["GPL-3.0-only", "LGPL-2.1-or-later", "MIT", "BSD-3-Clause"]
 
   livecheck do
