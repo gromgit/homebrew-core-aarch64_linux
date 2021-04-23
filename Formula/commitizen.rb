@@ -3,8 +3,8 @@ class Commitizen < Formula
 
   desc "Defines a standard way of committing rules and communicating it"
   homepage "https://commitizen-tools.github.io/commitizen/"
-  url "https://files.pythonhosted.org/packages/f5/4f/172550708c4ecb005ef1a8429319edbc03f1eb375050141fef6efd70e908/commitizen-2.17.3.tar.gz"
-  sha256 "62fb10780c82555bd8780e97b1fddc86aec4912270101e1d8071b9b47af00c00"
+  url "https://files.pythonhosted.org/packages/94/63/8a32c3bd93657bbfaae9dd999dbfc397d0db3903598127bba1dee280884c/commitizen-2.17.4.tar.gz"
+  sha256 "1f6e7fefd3a5ab107ffd7b14116b8f6319acc37231178d96998bdb5ca2727225"
   license "MIT"
   head "https://github.com/commitizen-tools/commitizen.git"
 
@@ -18,8 +18,8 @@ class Commitizen < Formula
   depends_on "python@3.9"
 
   resource "argcomplete" do
-    url "https://files.pythonhosted.org/packages/cb/53/d2e3d11726367351b00c8f078a96dacb7f57aef2aca0d3b6c437afc56b55/argcomplete-1.12.2.tar.gz"
-    sha256 "de0e1282330940d52ea92a80fea2e4b9e0da1932aaa570f84d268939d1897b04"
+    url "https://files.pythonhosted.org/packages/6a/b4/3b1d48b61be122c95f4a770b2f42fc2552857616feba4d51f34611bd1352/argcomplete-1.12.3.tar.gz"
+    sha256 "2c7dbffd8c045ea534921e63b0be6fe65e88599990d8dc408ac8c542b72a5445"
   end
 
   resource "colorama" do
