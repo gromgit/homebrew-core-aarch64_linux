@@ -7,6 +7,13 @@ class Revive < Formula
   license "MIT"
   head "https://github.com/mgechev/revive.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5140eea58dffb9525b63a9d6483e3696662f3f44352fc0555862d23047226e79"
+    sha256 cellar: :any_skip_relocation, big_sur:       "936d94d5807f1b3ca1c110ff51347848875cdc83f077f0c14ac50363d526528c"
+    sha256 cellar: :any_skip_relocation, catalina:      "3c5a1640c8619108a6775da06575c571f1f935b510e2f762b66ec4e8a7100338"
+    sha256 cellar: :any_skip_relocation, mojave:        "f0f79abb069d51418d4ef23f0567ed9ee2c116f3d37d59d5e92eca1c62de94ae"
+  end
+
   depends_on "go" => :build
 
   def install
