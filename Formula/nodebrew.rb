@@ -6,6 +6,10 @@ class Nodebrew < Formula
   license "MIT"
   head "https://github.com/hokaccha/nodebrew.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "5e9e02328f5023fe172b99cca642dc4d4fe89b82ea8d29293d6d7f8853f2a048"
+  end
+
   def install
     bin.install "nodebrew"
     bash_completion.install "completions/bash/nodebrew-completion" => "nodebrew"
