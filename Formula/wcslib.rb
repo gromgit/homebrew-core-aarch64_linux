@@ -11,11 +11,10 @@ class Wcslib < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "c733b73fe01c146992c2fa05865c631907c61cbc26e5c66980471441c5c7910f"
-    sha256 cellar: :any, big_sur:       "14760499e809a0b5878d03b2f22f15975906fea80bb63b173a35c67645c3654a"
-    sha256 cellar: :any, catalina:      "a0e15ea5ee23106c24960feed0c7dad6762d8e75cb9d42445c197fb38f079965"
-    sha256 cellar: :any, mojave:        "d8b3561a7e87031d7d6f8042af1c75f21663874921da17d5061d3ffe558263f1"
-    sha256 cellar: :any, high_sierra:   "941ce001ceb21e53dc6af78e8e09ebc52a24b57efcd51c009f8416789674f8ee"
+    sha256 cellar: :any, arm64_big_sur: "1501d04bd38777379055060545973deadb4b61959291c7f86c48abf16cd20983"
+    sha256 cellar: :any, big_sur:       "f0d3979ff121d5d7429d930f87da36df8b1f2c36c41376d63882def0c042fe05"
+    sha256 cellar: :any, catalina:      "f6c3337cd1ea830d6f7034efefaba694a5e94d9f34e0ca79f29919e3b9128026"
+    sha256 cellar: :any, mojave:        "765fc09c8786be17fdad63cee17bc93b6006be12f5858d38c9095a3370e5afa6"
   end
 
   depends_on "cfitsio"
