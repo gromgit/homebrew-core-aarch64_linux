@@ -9,10 +9,10 @@ class GitReview < Formula
   head "https://opendev.org/opendev/git-review.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9debd3ad5a89634c1bca857954d4779f373bc99399c8db0cff255e311fbebb4e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c58c18e8d55c19ecb4929a18fd312289f50e58bb9b45a63a5fbd7fd29abf31f6"
-    sha256 cellar: :any_skip_relocation, catalina:      "ec3f9cba6b5196e3c0637e557c7412808f35c8707f73b88112938e9da6b0e1fb"
-    sha256 cellar: :any_skip_relocation, mojave:        "ca833fbdf9790089a597b8e52ecccca721b518fd6ac6ca09ae63521d5e1a3ebf"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "496d650aae18c08a27c9a35b2af2402c06817acc44f317c7bb835b98640e38c5"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c0453ff5e5450402026b4480cab678f615673b5cbb7e0bdd066cc601418aff88"
+    sha256 cellar: :any_skip_relocation, catalina:      "c0453ff5e5450402026b4480cab678f615673b5cbb7e0bdd066cc601418aff88"
+    sha256 cellar: :any_skip_relocation, mojave:        "c0453ff5e5450402026b4480cab678f615673b5cbb7e0bdd066cc601418aff88"
   end
 
   depends_on "python@3.9"
