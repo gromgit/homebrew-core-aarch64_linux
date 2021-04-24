@@ -6,10 +6,10 @@ class Qrcp < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "321157141eaf511089d396be585baa8eaea15f43aaae9259d5e7a663d0a764c8"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7038c69582572ca6349b76988869971801c60182fedf579f47998bc47551ad01"
-    sha256 cellar: :any_skip_relocation, catalina:      "f063aace4506bca0113e3dc0210134feb4a9c0f36f76c29327373066aa177451"
-    sha256 cellar: :any_skip_relocation, mojave:        "0709ace3c107c6ad7f23563e085a3ace600d763fc062b108211f60a710a737d6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8286ab8384850578862e84cceebb7aa8efc5d2bafd1d372a0e9e1f6930a7a726"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b90c0f156ce21a2ec39f23405fd1213008d96a8e1d62f17cd0d5c83c17b055ea"
+    sha256 cellar: :any_skip_relocation, catalina:      "954c095b0cd034464bd929a3b28855f932d09e0cb59a741939009221f6fdac94"
+    sha256 cellar: :any_skip_relocation, mojave:        "a319771dea04ac593d2928e8e937ce1fd5a7c55c67999e9505b258cbddbe226c"
   end
 
   depends_on "go" => :build
