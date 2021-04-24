@@ -1,8 +1,8 @@
 class Libwebm < Formula
   desc "WebM container"
   homepage "https://www.webmproject.org/code/"
-  url "https://github.com/webmproject/libwebm/archive/libwebm-1.0.0.27.tar.gz"
-  sha256 "1332f43742aeae215fd8df1be6e363e753b17abb37447190e789299fe3edec77"
+  url "https://github.com/webmproject/libwebm/archive/libwebm-1.0.0.28.tar.gz"
+  sha256 "4df11d93260d3cd9f17c3697b0828d38400a8f87082183368df6a1ae7a9fc635"
   license "BSD-3-Clause"
 
   bottle do
@@ -23,9 +23,12 @@ class Libwebm < Formula
       system "cmake", "..", *std_cmake_args
       system "make"
       lib.install "libwebm.a"
-      bin.install %w[sample sample_muxer vttdemux webm2pes]
+      bin.install %w[mkvparser_sample mkvmuxer_sample vttdemux webm2pes]
     end
     include.install Dir.glob("mkv*.hpp")
+    (include/"mkvmuxer").install Dir.glob("mkvmuxer/mkv*.h")
+    (include/"common").install Dir.glob("common/*.h")
+    (include/"mkvparser").install Dir.glob("mkvparser/mkv*.h")
     include.install Dir.glob("vtt*.h")
   end
 
