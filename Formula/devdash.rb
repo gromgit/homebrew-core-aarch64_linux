@@ -6,10 +6,10 @@ class Devdash < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2cb91a37df9360fcd5905277eb435d739cccf1c00a7bd91e2bd76009c63ea837"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ed3cdf57da86291e75676b7b612c455a76a103a5ccba69a59bf5a2ab4ccdab2b"
-    sha256 cellar: :any_skip_relocation, catalina:      "b52acde2aef763abf398625151e9291b14a65e440e6be766b641fbd2a8e08b1c"
-    sha256 cellar: :any_skip_relocation, mojave:        "e8957a8a3223f928218c5b4fd37b6c8c9a6b37c9c68be2689ad4ec569259d6b0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "688199921a304a5ba1c0ac78096d29c86c63076eafd6288085664a32b7e70056"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e71157c4ff045c0e9330fc916b473b38983af56bef7aefd3cdbfd833d9467c18"
+    sha256 cellar: :any_skip_relocation, catalina:      "5589478caf3652ea9a8ba5dd95ead4a927f5a2d4436abb394113e027b0fea805"
+    sha256 cellar: :any_skip_relocation, mojave:        "a247529d915f53e3d43ea23b017373a905b11a51e8f2f18dc19a8eb90c5e9f96"
   end
 
   depends_on "go" => :build
