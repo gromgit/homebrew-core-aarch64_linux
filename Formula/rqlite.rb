@@ -6,10 +6,10 @@ class Rqlite < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d3dd360988ef54441bfa090c71b32294bf76df7a0eb7a1a69e0d1e7d803c9f36"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e71df6cd1858c721a2eb4e98d668c16bd280d6feaa68f4a1047823fb23841495"
-    sha256 cellar: :any_skip_relocation, catalina:      "fd38b634ef7e878c3b2b9a68d21afb8885731280fc5b96e0fd0c5415b5de4e3d"
-    sha256 cellar: :any_skip_relocation, mojave:        "e0e43dc4463533c9193e54d3fd4344f89c728772155bb1ac99dac92d01794675"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "62986af17fe64d46b6aea5b4611f7159e282e2c59865b40ee0c0284fcd75ca55"
+    sha256 cellar: :any_skip_relocation, big_sur:       "993f8703342dd4485b621002da33c6005e80a032d63d21478dcdaec9f1f0b86c"
+    sha256 cellar: :any_skip_relocation, catalina:      "89597244aa31c497bdf768cb4a0a8bba48ad0452a008dde27a60d83d65dbe81b"
+    sha256 cellar: :any_skip_relocation, mojave:        "d4f5d52a72501b57f5b1029b78ced3625a6e3a2eaeadd31749c5084cc3a0e96b"
   end
 
   depends_on "go" => :build
