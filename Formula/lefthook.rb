@@ -5,6 +5,13 @@ class Lefthook < Formula
   sha256 "643bb3d2a1b67d865285a9cadcad11f2588ba284570ab9924c8e3d2e902301ca"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2529bc65e3faefc7d68a28eae19e1b8b5e8a57bb181d6c19aa08a832f951b7ee"
+    sha256 cellar: :any_skip_relocation, big_sur:       "70b84e2cffc148328a87c184cf34b92d58678c5fde72446547e954168f7ec8e4"
+    sha256 cellar: :any_skip_relocation, catalina:      "dd38c363fb3234d7ad7969402f82434734f5d1e120dbbf278ba0a43838a02c75"
+    sha256 cellar: :any_skip_relocation, mojave:        "722d3c1795576fa2bd54a216d9dfdedde6425b056243f605cf2674aa6bf92b04"
+  end
+
   depends_on "go" => :build
 
   def install
