@@ -12,10 +12,10 @@ class Libmspub < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "45cb1724c6090578335d7ee48cfe590ab469620264ecf16f6f4a7710624c211f"
-    sha256 cellar: :any, big_sur:       "580e4da606a71e3fbeae8323b827ce2c0a524e901c904629017c6f0851644282"
-    sha256 cellar: :any, catalina:      "a14affcde354ef2e23a209d12e92b883f39bb43c362906e12d788adf66b79bb6"
-    sha256 cellar: :any, mojave:        "6d4e9078899e4fb53ef5d08662b752dda10960b4afee8b0bc32bd4ae392f1770"
+    sha256 cellar: :any, arm64_big_sur: "6a5c5caf43755d2fb8acd3cdd99dccccd515d7da9c501e49fddbc5d5e4500190"
+    sha256 cellar: :any, big_sur:       "7a42e31ac599a192f1e58d281b7e075e71d52bee9465c763520f17cc1744b173"
+    sha256 cellar: :any, catalina:      "56aebbd968cdf49b1da3d79233dab4810af0c7c16e03521db8e5e9499e867294"
+    sha256 cellar: :any, mojave:        "f32c702d3d966bc65125394b949999f1789319b2835b45c0638dbb06fbd31b70"
   end
 
   depends_on "boost" => :build
