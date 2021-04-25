@@ -9,9 +9,9 @@ class Tarantool < Formula
   head "https://github.com/tarantool/tarantool.git", shallow: false
 
   bottle do
-    sha256 big_sur:  "2b8e07cad7ef54c58bbd6ff334bf43099489b00e748eff3199b1921770216df2"
-    sha256 catalina: "7e1912a563511f0477922770c4fb459194aea9b59b838e27cad9fbf9f2a588ec"
-    sha256 mojave:   "107064d70651c5512145cccd1fc89a8b734ded525b4b8e906aeee2eec4f60b21"
+    sha256 big_sur:  "5e98389b6a0239a8aeea044669945e4d80ec14dd8dfe6c58f4d1ebd91a28b366"
+    sha256 catalina: "61934bd99237595810bf56a9546f99f20531afd38ef498ab9a7a82e4dfb45fad"
+    sha256 mojave:   "b4c338aeeeadebd49bafc500f8e866a32b6a8f89fc288b005b5a691dfe285529"
   end
 
   depends_on "cmake" => :build
