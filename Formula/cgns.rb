@@ -12,11 +12,10 @@ class Cgns < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "abc3326bddbf58509b5ffb3834d68836ad803abf83f9958ae6a012870e7e9f85"
-    sha256 cellar: :any, big_sur:       "e2e5eb665f0f5c94c7782f0aed3708124705792ff5a7adf945a537369db6d724"
-    sha256 cellar: :any, catalina:      "4371c695cad1aa0bccbaaf0deccb9a8f5ddf7271dcbbddf6307b8d0bc254cec5"
-    sha256 cellar: :any, mojave:        "d9904ca7c839a5d0421b99ba784e98fec047971de47efa5d3cc00725cd892e26"
-    sha256 cellar: :any, high_sierra:   "8bfeb33c22f79c998b31fea6aafc60aecf2edf18ea754799c67c012d90555ec9"
+    sha256 arm64_big_sur: "f9567a6308f239dd3d6d705caea7481e6e5d07a00c00f4b4d2afe210bb423865"
+    sha256 big_sur:       "eeaaba2013f485bd7bdc9e229143c548b0116a6f9875f7b51994c137bcefb504"
+    sha256 catalina:      "a9fe78346df744b791501adcc4e056d637614919f149da1c70190e216825df12"
+    sha256 mojave:        "3be7b41175c8a5187b3eb20b4082b0987081e4b4848ee692e9093ece232ac344"
   end
 
   depends_on "cmake" => :build
