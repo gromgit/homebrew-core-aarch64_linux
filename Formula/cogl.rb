@@ -23,6 +23,11 @@ class Cogl < Formula
   depends_on "glib"
   depends_on "pango"
 
+  on_linux do
+    depends_on "libxcomposite"
+    depends_on "mesa"
+  end
+
   def install
     # Don't dump files in $HOME.
     ENV["GI_SCANNER_DISABLE_CACHE"] = "yes"
