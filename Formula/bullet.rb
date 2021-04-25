@@ -24,7 +24,8 @@ class Bullet < Formula
       -DBUILD_PYBULLET_NUMPY=ON
       -DBT_USE_EGL=ON
       -DBUILD_UNIT_TESTS=OFF
-      -DCMAKE_INSTALL_RPATH=#{lib}
+      -DCMAKE_INSTALL_RPATH=#{rpath}
+      -DCMAKE_INSTALL_NAME_DIR=#{opt_lib}
       -DINSTALL_EXTRA_LIBS=ON
     ]
 
