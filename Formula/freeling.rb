@@ -7,10 +7,10 @@ class Freeling < Formula
   revision 4
 
   bottle do
-    sha256 arm64_big_sur: "c0857913542156ed8eb7ea65fcd8bb5b07f0ca37c6d188e0eded904a6cc42d87"
-    sha256 big_sur:       "f6760d014830eefcee51bd7ab4ef0e966f887bf716ad27ed90381fee71a8a583"
-    sha256 catalina:      "8d531505078e4e6e5fa07c3ba16a06fe003b6dedcde6864099840d46ad296838"
-    sha256 mojave:        "17538a9c8c90936cfda768deaec8104c2e8961de283a3919d4ce6b353439a54c"
+    sha256 arm64_big_sur: "b381f9741689e57db0de8cfa8e71758127fd33aaff347ce650f15669a143ac3c"
+    sha256 big_sur:       "6b1ff3a166a5293d4a83bb3efe2ad5649c2f7ed10b915ddc8dbafffcd05643f6"
+    sha256 catalina:      "2b3fe6a2bb6cd65545a3db34bfa441d31d8195a9aa120acd189c6aee7d4ec6dc"
+    sha256 mojave:        "d503e02b17843adcc24bdd451322602b21274fbd977103e31c7f89ab435890fd"
   end
 
   depends_on "cmake" => :build
