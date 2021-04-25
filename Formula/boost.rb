@@ -13,10 +13,10 @@ class Boost < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "a6ca6c43f67270378ae0400e66095c329ebe90a1989a4a9c4606f1b8e72a692f"
-    sha256 cellar: :any, big_sur:       "be8564844a1e5bb58c26287453617458db6e886f85197c8ce35c21cfa74b1bc0"
-    sha256 cellar: :any, catalina:      "aef0fade9e8159b572907189bb8dfd828dab94c44e036cdd782c2b3834d218f3"
-    sha256 cellar: :any, mojave:        "e24d396d90a8db75738cba4543b678c79ef720a96bf2f93688bd2f35fef66d3a"
+    sha256 cellar: :any, arm64_big_sur: "df216d9ac1aada2283fc5cca14b57381b9243a0743208a2a59201b10ac706bfb"
+    sha256 cellar: :any, big_sur:       "9198af08180876d70b16decb22aa3237272a156b40a4f57e83840a3d30d2ca70"
+    sha256 cellar: :any, catalina:      "3cea2aeddabbdb531b0db467d8d1661ec87a36ddc61a35f6b7dab5b9c75a4ed5"
+    sha256 cellar: :any, mojave:        "705f06d5ac7c2615ae42158816eb3a738a4bff05b0ac18f8ef7d223fdcf9e75e"
   end
 
   depends_on "icu4c"
