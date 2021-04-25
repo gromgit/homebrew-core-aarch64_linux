@@ -9,10 +9,10 @@ class ReorderPythonImports < Formula
   head "https://github.com/asottile/reorder_python_imports.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1ae86ad76f8cba467e4fecf63b16e5a22e55a941550b1f744b8f2b52f5932605"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c8b110e4771ac1e3cfdeecc3fab97ddc93c9d01fdc88a446de90565b5650d38e"
-    sha256 cellar: :any_skip_relocation, catalina:      "c4ca883147663f15683ba9a15cdcf8ce4cf38461b8960b4e9c51c01f46adb858"
-    sha256 cellar: :any_skip_relocation, mojave:        "c874eb234767394d47372378befc196e3c8f51d5ec2e56caec6c3806693e7f56"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d31cccae6f9c49a4b9b411c9f4d45c99524ea2d0c4c2f7fd67663d60ff26f9e2"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5c96193717e9934f863772aadf63dc85be5bb0f32ee55601fd7549e139bfec82"
+    sha256 cellar: :any_skip_relocation, catalina:      "5c96193717e9934f863772aadf63dc85be5bb0f32ee55601fd7549e139bfec82"
+    sha256 cellar: :any_skip_relocation, mojave:        "5c96193717e9934f863772aadf63dc85be5bb0f32ee55601fd7549e139bfec82"
   end
 
   depends_on "python@3.9"
