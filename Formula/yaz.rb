@@ -12,10 +12,10 @@ class Yaz < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "b906d9bcb2853341532644ae7267407cd6ccb90a8c4027ba8d8a7c967c49c221"
-    sha256 cellar: :any, big_sur:       "b76b437a0ebd9ec194f7a21e76ed19e89cb0e3d4c2bfb3ef28f8ebfd97894d2b"
-    sha256 cellar: :any, catalina:      "e8d4407c1ccc973908464faa9c2f3d91f8f7a55cba8d3cadba2875d1bcc977db"
-    sha256 cellar: :any, mojave:        "415ffe9254272f056f57b9860c6785f8d7b2ebaa5ac962c0e9e74ddacb388a33"
+    sha256 cellar: :any, arm64_big_sur: "0f8e1625ff8a952570759b4ae0252c979458212c0ef7a66addbc3444e18ac2cb"
+    sha256 cellar: :any, big_sur:       "14ac635a852f4a987485398ecdd617de5c4c5855b2c6a7759d266f93ac50424a"
+    sha256 cellar: :any, catalina:      "d8e464bd3b31a9adfc2d4288477746cc8f548270dce632bdcf7d69fd0cb7603a"
+    sha256 cellar: :any, mojave:        "d5df6093f4f85f9e13c13c245fc9387e2f9b1fb50fd5096bc894814e8bc0727c"
   end
 
   head do
