@@ -7,11 +7,10 @@ class Stlink < Formula
   head "https://github.com/texane/stlink.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "2318b55d4ebb80eac4b09f76ea89806b33d2662a00a5a7c5a942458a9fb97d5e"
-    sha256 cellar: :any, big_sur:       "28876d237d5ae87630ad88a78c5541687f78a97465c89cf3f9eac64afcc38dc6"
-    sha256 cellar: :any, catalina:      "e24c7913e29b627142d892c8dacfcbb077cea4a8abdb021d2b6624cd7ce61865"
-    sha256 cellar: :any, mojave:        "85fa59905d566f85a1f7b4dc86a2f770181550ac7402907c326b050f09053272"
-    sha256 cellar: :any, high_sierra:   "ca0da39790dc0a876555f19cbf227a05490c126a8f071e971118bdbbd2147787"
+    sha256 cellar: :any, arm64_big_sur: "79683924dac821a1744cf32a96c3296eecd1668b5f2f64dbdcf570f32480459f"
+    sha256 cellar: :any, big_sur:       "9ea7be4ae1c0b91ceeb40c6df9d07ad6a5660be80043895bcf29acc47988d10d"
+    sha256 cellar: :any, catalina:      "e162fb37d4a7e2a0e006c5cb9beae3b86784d6a0b3d371fc33d7ed9ba2140083"
+    sha256 cellar: :any, mojave:        "f112f45203b8c460da03ae840529d4564a677d0621ac0a9576bac510258a9ef5"
   end
 
   depends_on "cmake" => :build
