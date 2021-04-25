@@ -14,11 +14,10 @@ class Php < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "7e8d29455385e507230e1f992002cdfea7e645cb11681a70543f4a092cad6c58"
-    sha256 big_sur:       "747463615874613ec5ea0e07f36e2ed265245341f63d3be9d262d5a493c70bca"
-    sha256 catalina:      "5bd20b018f11952d00911ccf13c1ba95c4d0eb98d5d80dcea109c9e74871bb32"
-    sha256 mojave:        "3b76f3d521e79052c4360ec6f24fea5a5e52fb61f50d17d5259a577deed3cd15"
+    sha256 arm64_big_sur: "4f8a860f38f3716ada5731cf61b83aaee37fd4b77c573d6f4f9ac3bb372b0d59"
+    sha256 big_sur:       "4b2596b7c8e0fea52fef4426a5c41f295203893ac78d0dda6c805d20f17fc4df"
+    sha256 catalina:      "053a0f4b057077525cb0c20e3a6eae9c5f7fdb0b31b907be4beb3bbc580f65b8"
+    sha256 mojave:        "5ff80fa0d79fff9619296e5994bd12113503eaa3da786076e64e0c3976484228"
   end
 
   head do
