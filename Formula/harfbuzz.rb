@@ -8,10 +8,10 @@ class Harfbuzz < Formula
   head "https://github.com/harfbuzz/harfbuzz.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "d48cb4c08e239ac3ed692a1b250ee72ea453333636a5e6e27e2e3e491bd05eb0"
-    sha256 cellar: :any, big_sur:       "e3178e18336e268c4f9e466427beb9004e8b75e265409ffb0c83c3e06f170ca6"
-    sha256 cellar: :any, catalina:      "0b0222167471cb1bd9f0be23a837f410b97ea712d553ba96120f1dcc066a4c6b"
-    sha256 cellar: :any, mojave:        "f67653f523872ddd3b344afd3b1d9ec7109c0c0660e39444012938e084163098"
+    sha256 cellar: :any, arm64_big_sur: "91e0c2a71152c03b8dbd2272bf8fa785831f758161d8b8a6572c05a8783966c4"
+    sha256 cellar: :any, big_sur:       "899db26127544a87d917edb9f9b3c97e0361d94ca5ae80740ce8abc0629c061f"
+    sha256 cellar: :any, catalina:      "0f401b7d12cf09e886114ca46c85d6fd035c33564b1c693507bb1ef196e05b09"
+    sha256 cellar: :any, mojave:        "9416231ccfc95ed28645ec5fcbb1f5dda56222c94c8e47d3281095105d517f19"
   end
 
   depends_on "meson" => :build
