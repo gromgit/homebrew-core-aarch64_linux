@@ -11,10 +11,10 @@ class Libvisio < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "acad0df1dc6b2c642e3de22fa7081cc636f61adfb672399bdcf7488ce6347c94"
-    sha256 cellar: :any, big_sur:       "a21f9f794732dc80cdb1b2bdc20a45239df014b2ca90eb39c88dd3f2c03dd873"
-    sha256 cellar: :any, catalina:      "4ce15c2036192d7a558935d1722775b7f5e1949fb923096584ce76e78cdb77d6"
-    sha256 cellar: :any, mojave:        "b0528215e9046a6e83e9763343ad7311667cfbc7c8852a6ddc2edaf977f7099e"
+    sha256 cellar: :any, arm64_big_sur: "9dbc60f38f0b2cf07e5df55fcc4a67d9d31a8698cfdc8f411b269d1e3daae0bf"
+    sha256 cellar: :any, big_sur:       "09a9e29742cf5667ad9f935a7d686641b54383c1ff8d5581c1a7c145a966760d"
+    sha256 cellar: :any, catalina:      "e431e0e6e96f2ac918d37e4e10f264cf23b7af0dbc54d3f82ab80b309efbd079"
+    sha256 cellar: :any, mojave:        "af67f5b493aebbe8c072fd0254e47bd8b205a00eb29049ea38046a9065fe8876"
   end
 
   depends_on "cppunit" => :build
