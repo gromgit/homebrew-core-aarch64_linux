@@ -3,8 +3,8 @@ class Libsvm < Formula
   homepage "https://www.csie.ntu.edu.tw/~cjlin/libsvm/"
 
   # TODO: Upstream deletes old downloads, so we need a mirror
-  url "https://www.csie.ntu.edu.tw/~cjlin/libsvm/libsvm-3.24.tar.gz"
-  sha256 "d5881a201a4e6227bf8e2f5de7d6eeaef481c6c2bb9540aeca547737844f8696"
+  url "https://www.csie.ntu.edu.tw/~cjlin/libsvm/libsvm-3.25.tar.gz"
+  sha256 "52350e8aa740b176e1d773e9dc08f1340218c37e01bec37ab90db0127e4bb5e5"
   license "BSD-3-Clause"
 
   livecheck do
