@@ -15,10 +15,10 @@ class Qt < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "635a8970ba2a0a33eac8f36a75477fcb0454f955df1f5bd01fa8bb8f1f406338"
-    sha256 cellar: :any, big_sur:       "69f8718c2d528308eb4784e249a9f0b4ccc75ec9408ad0b1151452ec532cf784"
-    sha256 cellar: :any, catalina:      "677e7dab6d7a0c9a9ec6328e68cfaf3adfb0b04acd53df99acc5ed45d6dd0bc5"
-    sha256 cellar: :any, mojave:        "31f6ffd1847621491ea92af60d1e6348b84160b0cf757ca69d5fada250858de5"
+    sha256 cellar: :any, arm64_big_sur: "116f764e72127802e68e245023589c18ba9927b2a42cb765a7492d6c9659523c"
+    sha256 cellar: :any, big_sur:       "1ca55b4fbb61cad22771f70918669564658550e8f21643dd4c961f259577a7bf"
+    sha256 cellar: :any, catalina:      "802a3c018da254bb3e80e4f16ba1491ca92769c6df9a8d7eec2796c2a488f823"
+    sha256 cellar: :any, mojave:        "ede309f16364f3d2ff9e525643289b1e8dadef8ba59f58b853cb9e99e707f8b4"
   end
 
   depends_on "cmake" => [:build, :test]
