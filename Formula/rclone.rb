@@ -7,10 +7,10 @@ class Rclone < Formula
   head "https://github.com/rclone/rclone.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a1885d1fe4b3f3132bed934229a8f3f75a44839dad5136dc7e7dc6b936a60b3e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "96d0bbbaaaeffbe6f80745444f124528f52390c0f96abd7fce059572d30af30e"
-    sha256 cellar: :any_skip_relocation, catalina:      "075931f4b26331aaa6ebfbbaf0ebc074b850800076140dc6bd831398389d4301"
-    sha256 cellar: :any_skip_relocation, mojave:        "8068a9c51af8321602800886c3f0858c8679ea3db0f8bcfefcd9350dcbdc40ac"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "73362c89243f8415e9a41e06600d8526f3957647a25b939fadea9d4d64a5c14a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "77af27ded22554ee61128d8bcb23db9226931cc0c02a7f8f0332f23ba5747cb4"
+    sha256 cellar: :any_skip_relocation, catalina:      "4f6bf2e51a4952f4cc83760c1c732a5b0742ab693e977ae88df71f655b9dee7a"
+    sha256 cellar: :any_skip_relocation, mojave:        "6d0e42bc013481ed943e5aba83ee3800ee03ef24e8d70102480651b89c201414"
   end
 
   depends_on "go" => :build
