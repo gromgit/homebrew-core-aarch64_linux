@@ -6,10 +6,10 @@ class Comby < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "a9df56b11dc6635ed691bf38d5cc1b39ffb2b9f7c3933516ad6b62d0907e48f0"
-    sha256 cellar: :any, big_sur:       "187c14fa6312f3ff02334c10fc6f1b593820e239b4491500ee789bc07ee2b3ef"
-    sha256 cellar: :any, catalina:      "fca67fa512a6e494718e9cf700628e241ec5ea30b16357962533e83417d2940c"
-    sha256 cellar: :any, mojave:        "21927cdbae2884c83fecd4f33715238ae8f78e3bd1dd4262251e7ac4f3de1813"
+    sha256 cellar: :any, arm64_big_sur: "4c1e5628b7ae614142f3631cc44d14351fe732de273d1d60813dacd547706ffa"
+    sha256 cellar: :any, big_sur:       "ab5ac2c9eff849840ef83533faedf536ae1ef9cf97b9291198eca6ccf96a1218"
+    sha256 cellar: :any, catalina:      "b3bd679f9b35ab1018b4c7284442ebf9e03f3bcec6b108268a44ccacbce5a874"
+    sha256 cellar: :any, mojave:        "8b48e82365ad52abb59af1b5c75e28cbac0b782b9dca0c4ac145bcfdf8a8b6d1"
   end
 
   depends_on "autoconf" => :build
