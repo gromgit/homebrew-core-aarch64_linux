@@ -6,10 +6,10 @@ class Watchexec < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6d1f7198fe60bb55a278303f84c6a08cdb9aec1d9906b6d2e22ef86bacba09b2"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8321573d5bc6511b38c568be6d02156f5d8e8bdb1065c246de5af6851f29350a"
-    sha256 cellar: :any_skip_relocation, catalina:      "62f0a852f371f224a91e377971fa98c0e80f1305a19eb015099f77a209cdfc2b"
-    sha256 cellar: :any_skip_relocation, mojave:        "ec6af0281856dd128a19a7d2fc1d1fd14517eee0504bda79540a91dcbdf316b5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "869b2ffb1ed4cabea75876b6c5bb2a346e38794812fb97bcb8ea5e37a96697e6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "00567d7b4de6c23d831b460c24eb24393e06d04def6fe7a6f6db71c73230ae0f"
+    sha256 cellar: :any_skip_relocation, catalina:      "7c08b01a5399f882b4766a013292647d7b1a85b740cf4417dbe62e36fa5379f1"
+    sha256 cellar: :any_skip_relocation, mojave:        "3551d6cdc5fe3b305e3174d98ad26ea07f59fcd17f261391200766aa2cc9a00c"
   end
 
   depends_on "rust" => :build
