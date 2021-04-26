@@ -7,10 +7,11 @@ class Abseil < Formula
   head "https://github.com/abseil/abseil-cpp.git"
 
   bottle do
-    sha256 arm64_big_sur: "b0ac0ff75bf1d9d81ffc8be51ed7d04d773b294f4b4f2ebb2a2d1bd4e8d05dc2"
-    sha256 big_sur:       "3498c9abb8b6ef72700b63604caf8597caa6281d7ac324d9f7ae5e7ae7fd7cb0"
-    sha256 catalina:      "e27ffdb0329487136a912ad4b5d5a3e2d850e294544aa400a133d50744283505"
-    sha256 mojave:        "60698d41a284bbd52a7cc371f3e39114079923e855e80713650bfa1edb023f18"
+    rebuild 1
+    sha256 cellar: :any, arm64_big_sur: "ad68ce866850cfc0f8480a35776aea144d845ae15dad8078f440ed75086b06c9"
+    sha256 cellar: :any, big_sur:       "c9c41cec6d66ea22de32af15521a394fe62fa9607518a59c71ae065293063935"
+    sha256 cellar: :any, catalina:      "a6ba94bc57bc38aebf49794fdfc43ecede6d6f7220da5e2e4e2cda7c86c32c72"
+    sha256 cellar: :any, mojave:        "3307f91e4fca0915eb0b918a3e6beb90dd463904b157a3b4ef3f2481dfc4d698"
   end
 
   depends_on "cmake" => :build
