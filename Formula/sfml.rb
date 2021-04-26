@@ -9,10 +9,11 @@ class Sfml < Formula
   head "https://github.com/SFML/SFML.git"
 
   bottle do
-    sha256 arm64_big_sur: "4ea8183ad7187a6c2f29522d61ff2446f034484fe4341c81c12c2b4fa727e661"
-    sha256 big_sur:       "3acd05aacb9f9f8e87d99ecbaab09d976a7f151d822d6950e4d13697f0297443"
-    sha256 catalina:      "cdc8de4d6d5b63dd4334a33cc6c6f2f57e3686a5305d22b89579748237ac4d67"
-    sha256 mojave:        "311051956872de3bb215c1f4c0bc618157fbfb495f92acc7552b8efb76cf4fe3"
+    rebuild 1
+    sha256 cellar: :any, arm64_big_sur: "ef472896cd55333ffe21c531b3edb055e487f5a675174feacfa6e02269877a6d"
+    sha256 cellar: :any, big_sur:       "3b8efaafe447f0f3a218eb81a65d92715c35e3a703373256031cb0c3d9d21084"
+    sha256 cellar: :any, catalina:      "12898a75c1d21de54fef1ca9c42c2d115d30ffcc9d7b10546c9c8d7428b467fa"
+    sha256 cellar: :any, mojave:        "c45c383d9e0049ad94cbadb1f5bdd7b870bb01a9cdc8804f495e3ac48e8955d3"
   end
 
   depends_on "cmake" => :build
