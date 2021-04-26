@@ -3,10 +3,9 @@ class Gnuradio < Formula
 
   desc "SDK for signal processing blocks to implement software radios"
   homepage "https://gnuradio.org/"
-  url "https://github.com/gnuradio/gnuradio/releases/download/v3.9.0.0/gnuradio-3.9.0.0.tar.xz"
-  sha256 "0a2622933c96a4b22405c7656b8af0db32762834317ec2b90bff0a0a5a4f75cb"
+  url "https://github.com/gnuradio/gnuradio/archive/refs/tags/v3.9.1.0.tar.gz"
+  sha256 "62865cde70c5631b7a4405147476e21461bc4d713f90f6cfac0a24bba36f6b97"
   license "GPL-3.0-or-later"
-  revision 3
   head "https://github.com/gnuradio/gnuradio.git"
 
   bottle do
@@ -73,13 +72,6 @@ class Gnuradio < Formula
     sha256 "964031c0944f913933f55ad1610938105a6657a69d1ac5a6dd50e16a679104d5"
   end
 
-  # patch to fix drag-and-drop in gnuradio-companion, remove after next release
-  # https://github.com/gnuradio/gnuradio/issues/2727
-  patch do
-    url "https://github.com/gnuradio/gnuradio/commit/518dc7eda3a2575292dc67374cad62c887f83d12.patch?full_index=1"
-    sha256 "88f28e204615c1893568cf72c3841cf372f7626e4e5aadd6a099fe4a3caa08a9"
-  end
-
   def install
     ENV.cxx11
 
@@ -118,7 +110,7 @@ class Gnuradio < Formula
 
     enabled = %w[GNURADIO_RUNTIME GR_ANALOG GR_AUDIO GR_BLOCKS GRC
                  GR_CHANNELS GR_DIGITAL GR_DTV GR_FEC GR_FFT GR_FILTER
-                 GR_MODTOOL GR_QTGUI GR_TRELLIS GR_UHD GR_UTILS GR_VOCODER
+                 GR_MODTOOL GR_NETWORK GR_QTGUI GR_TRELLIS GR_UHD GR_UTILS GR_VOCODER
                  GR_WAVELET GR_ZEROMQ PYTHON VOLK]
     enabled.each do |c|
       args << "-DENABLE_#{c}=ON"
