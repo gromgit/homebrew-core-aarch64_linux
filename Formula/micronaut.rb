@@ -1,8 +1,8 @@
 class Micronaut < Formula
   desc "Modern JVM-based framework for building modular microservices"
   homepage "https://micronaut.io/"
-  url "https://github.com/micronaut-projects/micronaut-starter/archive/v2.4.2.tar.gz"
-  sha256 "dffdc386b378ab9fb4367b9802e351216da0e248fff4607123e49cc83b5ed4ed"
+  url "https://github.com/micronaut-projects/micronaut-starter/archive/v2.4.3.tar.gz"
+  sha256 "0d12594e2412c1dba9c40aa92045df701158c7cd39789685e49ab4081efd6480"
   license "Apache-2.0"
 
   livecheck do
@@ -20,7 +20,7 @@ class Micronaut < Formula
   depends_on "openjdk"
 
   def install
-    system "gradle", "micronaut-cli:assemble", "-x", "test"
+    system "./gradlew", "micronaut-cli:assemble", "-x", "test"
 
     mkdir_p libexec/"bin"
     mv "starter-cli/build/exploded/bin/mn", libexec/"bin/mn"
