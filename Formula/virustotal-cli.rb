@@ -6,10 +6,10 @@ class VirustotalCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "eaa827cc780221725ab0a784772f714f5efba9d346f8249167883fa38991f621"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7325dd9a2f1b744bce567fd46e5d0fe345dc0349a8c2c9006a2c3c64119536e2"
-    sha256 cellar: :any_skip_relocation, catalina:      "0b50fa33daf59c8f160dd6b48cd3c742c1037c7874ca1307a6ab7e0dfb1a33b8"
-    sha256 cellar: :any_skip_relocation, mojave:        "b7488fbcf0d95e3cc3ead35947fab271bb5f6408d5622ecad7ea79834cb29c9a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ff3bfa6a99bade68359b1e8fa45a52356cc06ac79a207ed31fd28b2964ca375c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c421dfa169f12c767415d2e1d2a6c0fcfaeb8421144226fc8f2c1625e476fff9"
+    sha256 cellar: :any_skip_relocation, catalina:      "d3c0a0b778ca4359a3d47ebd24d01fb582d12a9b1aaba74c9c92d46ae8adf3dd"
+    sha256 cellar: :any_skip_relocation, mojave:        "4aac3e1b6ba937c47959ca9d8411cc6df9b3f059005db9abff7c316329dbd503"
   end
 
   depends_on "go" => :build
