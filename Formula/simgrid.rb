@@ -12,10 +12,10 @@ class Simgrid < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "483bcf473f05f337322f46d7d9e42f032eec6eea51dbbc9766616f583117a20f"
-    sha256 big_sur:       "e955b530c04845a2411dd827c289ebf3945d45ba00bcc763591f7691ba80becb"
-    sha256 catalina:      "bf748370ffd539df857ae5365563b47a5bf685f6ea7bdcd27c3eaad31bf35d06"
-    sha256 mojave:        "64bc790d3fa33e14d1c9f067f4e047df4fbbcd630a439370adfc8ad39ab5ddd3"
+    sha256 arm64_big_sur: "dbab289fbc454217f97b144d32d441b78fd349da13defaaf504d7f54c663f510"
+    sha256 big_sur:       "49e55f07772e9f9658a37ea9b6a81165b0b21848c9fde408a7ffaec0c1d99a1c"
+    sha256 catalina:      "42ffd1847e81c70671ca4d27e9068366231b3205b329a02d5f1e0a517bcf945d"
+    sha256 mojave:        "d94db131d78f63ff9494f528ca5ae2dff0ad0c9fbc080378080e826dfe368da5"
   end
 
   depends_on "cmake" => :build
