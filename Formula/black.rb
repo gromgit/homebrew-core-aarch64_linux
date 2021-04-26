@@ -6,6 +6,7 @@ class Black < Formula
   url "https://files.pythonhosted.org/packages/d5/46/b60715462dc0d9dd78a565ffc52bfdd4c5ed6716bb9e336088cc904e6955/black-21.4b0.tar.gz"
   sha256 "915d916c48646dbe8040d5265cff7111421a60a3dfe7f7e07273176a57c24a34"
   license "MIT"
+  revision 1
 
   livecheck do
     url :stable
@@ -26,7 +27,7 @@ class Black < Formula
     sha256 "493d3299ebe5f5a7c66b9819eacdcfbbaaf1a8e84911ddffcdc48888497afecf"
   end
 
-  resource "aiohttp-cors" do
+  resource "aiohttp_cors" do
     url "https://files.pythonhosted.org/packages/44/9e/6cdce7c3f346d8fd487adf68761728ad8cd5fbc296a7b07b92518350d31f/aiohttp-cors-0.7.0.tar.gz"
     sha256 "4d39c6d7100fd9764ed1caf8cebf0eb01bf5e3f24e2e073fda6234bc48b19f5d"
   end
@@ -66,7 +67,7 @@ class Black < Formula
     sha256 "25b4e5f22d3a37ddf3effc0710ba692cfc792c2b9edfb9c05aefe823256e84d5"
   end
 
-  resource "mypy_extensions" do
+  resource "mypy-extensions" do
     url "https://files.pythonhosted.org/packages/63/60/0582ce2eaced55f65a4406fc97beba256de4b7a95a0034c6576458c6519f/mypy_extensions-0.4.3.tar.gz"
     sha256 "2d82818f5bb3e369420cb3c4060a7970edba416647068eb4c5343488a6c604a8"
   end
@@ -86,12 +87,7 @@ class Black < Formula
     sha256 "b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"
   end
 
-  resource "typed_ast" do
-    url "https://files.pythonhosted.org/packages/6e/08/c04a49ee26a94c1ec211e7b1e5f2971d692e04818ea67ef70f1e879cf525/typed_ast-1.4.3.tar.gz"
-    sha256 "fb1bbeac803adea29cedd70781399c99138358c26d05fcbd23c13016b7f5ec65"
-  end
-
-  resource "typing_extensions" do
+  resource "typing-extensions" do
     url "https://files.pythonhosted.org/packages/16/06/0f7367eafb692f73158e5c5cbca1aec798cdf78be5167f6415dd4205fa32/typing_extensions-3.7.4.3.tar.gz"
     sha256 "99d4073b617d30288f569d3f13d2bd7548c3a7e4c8de87db09a9d29bb3a4a60c"
   end
