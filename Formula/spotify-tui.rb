@@ -7,10 +7,10 @@ class SpotifyTui < Formula
   head "https://github.com/Rigellute/spotify-tui.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c970396f66b149b3c1d58f3bdf2cdf6d4f7b974473399c9be53b1f0f4258267f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "781396790a6006952bb22f17aa6b03f057c41ec6ecbb7c18156ad392c394bdb2"
-    sha256 cellar: :any_skip_relocation, catalina:      "70ae2722b6dd2bb21d574117a74ecb7812899e418b2cfe9ab2fd23de2014cde5"
-    sha256 cellar: :any_skip_relocation, mojave:        "544761e6ad0758c70e7e24e4b89b319776c973d2aac0bbdbedaa4fd677a2ed59"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f8b013d72cb7c6345a0d2223a30911f94fb1a553de887dc0d339e26f0d5e89db"
+    sha256 cellar: :any_skip_relocation, big_sur:       "23afc6b7fa6b41f7904ff988fb4e8d4c833ff422382867a49dce42b23a980a33"
+    sha256 cellar: :any_skip_relocation, catalina:      "10f47a62a67d0d15dbdad33139c6723c278d698d19386e0a7c5b125eb0200116"
+    sha256 cellar: :any_skip_relocation, mojave:        "ca1264421f176b28c06b197e40fce0f815ea292141b28ceb119bb5ecfdc38c7c"
   end
 
   depends_on "rust" => :build
