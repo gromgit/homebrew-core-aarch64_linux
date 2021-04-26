@@ -6,10 +6,10 @@ class Cointop < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "df8fbb9213b66b7e3c6c553cb835b83807cc38d5c5e746442ee9ff35375847c5"
-    sha256 cellar: :any_skip_relocation, big_sur:       "25ede8217d974d6fbd22394751ec97ffb2c4a3df3d1d439e77e60c9c8da6da63"
-    sha256 cellar: :any_skip_relocation, catalina:      "cee62d35e4d86cc8dce0d8e0af97a2171f49cbe7923dd6a81ba5e8b6388223c1"
-    sha256 cellar: :any_skip_relocation, mojave:        "e9c1e858784a1db4dfe9c1ec028d37d012f1956842c1d1b111440372c7b999a0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ce99c2a52eb9f4484b6dfa2818364f07ebb9c92f5a930105a08126dbd94a5859"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c9350b2dc213f157733a01ce156b5a19eb5a9362d5cd60490bef70e2d8ff515f"
+    sha256 cellar: :any_skip_relocation, catalina:      "66c61859e21c0a1f023876ffef77d54b9a4478de175451f8f02de19263fa9afb"
+    sha256 cellar: :any_skip_relocation, mojave:        "5c5deab64598bbafcfe753de6cc9189c3bd89e1db75ff0097e70281c28496812"
   end
 
   depends_on "go" => :build
