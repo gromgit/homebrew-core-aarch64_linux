@@ -13,9 +13,9 @@ class Rpm < Formula
   end
 
   bottle do
-    sha256 big_sur:  "92fc083ce834a3ac5600b1acec267db2877c57d41a22057aa3bd5bc2924e9ac0"
-    sha256 catalina: "a30f423573c7209e08c2d4ec57b4a545c710549e61b300b041f7720c9c600c05"
-    sha256 mojave:   "96d7d9c474f2efb780ec64a28ee112640be8a37af6246f9f2fb01bfd5dc14280"
+    sha256 big_sur:  "cb96a7acd3064a24034996032a19c451f03ad1fede1c6a672331869220c4bc80"
+    sha256 catalina: "3f7de90218b2fbf8c42e63a4ae14f50244e058aff631e795197ac69e287a1d09"
+    sha256 mojave:   "239cee186295db10924b8bf891a20c36169002d551389f934dec8b107df03ed6"
   end
 
   depends_on "berkeley-db"
