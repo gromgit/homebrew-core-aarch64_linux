@@ -5,6 +5,13 @@ class Seqkit < Formula
   sha256 "1a348c57dafb4ba6c96815ad7298004db1faa120211032dd6e7948908c2a12bf"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "877cc15c035bd31a8559654ec06971f392214f37c5d90cea51363fb8c7d1499e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "bdfd5c531124c243c1657e59544aafc945298f1d34eabbb2b47568d921db9d9f"
+    sha256 cellar: :any_skip_relocation, catalina:      "eb38fcc7dd50615069a6f0ee5e803c28a4adc3985ac77aa8b03f1a575ba028d0"
+    sha256 cellar: :any_skip_relocation, mojave:        "d4b73500720c0e829cf8183417ecddff80f858ebaa6b6792aff4ea52e9da7cca"
+  end
+
   depends_on "go" => :build
 
   resource "testdata" do
