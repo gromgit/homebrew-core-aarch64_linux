@@ -1,8 +1,8 @@
 class Sniffglue < Formula
   desc "Secure multithreaded packet sniffer"
   homepage "https://github.com/kpcyrd/sniffglue"
-  url "https://github.com/kpcyrd/sniffglue/archive/v0.12.0.tar.gz"
-  sha256 "09f10be89311f69a3373cf5abc65fa1d7add1836d6836914b78281a0d94a9e78"
+  url "https://github.com/kpcyrd/sniffglue/archive/v0.12.1.tar.gz"
+  sha256 "a7c7f36b1fdf394baa0123730560f50613b7f7aeab63f60907932fa54b63b2c1"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -23,12 +23,6 @@ class Sniffglue < Formula
   resource "testdata" do
     url "https://github.com/kpcyrd/sniffglue/raw/163ca299bab711fb0082de216d07d7089c176de6/pcaps/SkypeIRC.pcap"
     sha256 "bac79a9c3413637f871193589d848697af895b7f2700d949022224d59aa6830f"
-  end
-
-  # Fix build with Rust 1.51. Remove at next release.
-  patch do
-    url "https://github.com/kpcyrd/sniffglue/commit/e2244ab2616272faa8ebce18308e146f275250c4.patch?full_index=1"
-    sha256 "9eeda436c2a807a891195ff15a0bb29ce3493341d8ae19e5b2b9005a640453b9"
   end
 
   def install
