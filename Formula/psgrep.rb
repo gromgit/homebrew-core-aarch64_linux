@@ -6,6 +6,10 @@ class Psgrep < Formula
   license "GPL-3.0"
   head "https://github.com/jvz/psgrep.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "3ec88e4f8662da264f6312ba3d454887825f21285f39c926f9f2d80f5b035d02"
+  end
+
   def install
     bin.install "psgrep"
     man1.install "psgrep.1"
