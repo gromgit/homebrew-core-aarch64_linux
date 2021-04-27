@@ -13,10 +13,10 @@ class Erlang < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "770da1ebdb9b1a841bf8d954685597510d01b7a31b8604f918a9584e7d712d05"
-    sha256 cellar: :any, big_sur:       "4d17d85cc255934a3cc8786b6d1b0a1b4fed5b52ab2702d3092166cee69bf2e0"
-    sha256 cellar: :any, catalina:      "d4325325c312f87ed81fcf3ee47b946ad6f7be37fcf54bb1e25d8212fbcef6b0"
-    sha256 cellar: :any, mojave:        "644b5e55f50fa4d4eb30034015ae8df3657306ab915860c3c6479039be4c4d4f"
+    sha256 cellar: :any, arm64_big_sur: "685b6113c3851edc9798179927836a60d0d3c6cd4b15f60a4e0eb591c708332d"
+    sha256 cellar: :any, big_sur:       "d6afac2250d3ca3090d417e48815c4dd1a2498c34a7c362577f1c809a88c2dae"
+    sha256 cellar: :any, catalina:      "fcb0e53b00a8b90ab2a4d32cb3afd17187e2e0a36af7ca9eead1d84cdb77e753"
+    sha256 cellar: :any, mojave:        "15f44cde591aa100f2097114b7f7dd8a08c7ba94d1fac5c7f20fa23f8b743838"
   end
 
   depends_on "autoconf" => :build
