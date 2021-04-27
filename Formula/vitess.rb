@@ -1,8 +1,8 @@
 class Vitess < Formula
   desc "Database clustering system for horizontal scaling of MySQL"
   homepage "https://vitess.io"
-  url "https://github.com/vitessio/vitess/archive/v9.0.0.tar.gz"
-  sha256 "14254f423f2472fb48034299cbfc4acc6b767f7497036cf43eb3e7f2a70f7beb"
+  url "https://github.com/vitessio/vitess/archive/v10.0.0.tar.gz"
+  sha256 "bfd49cef10bccdd825ce63c8665e796145637404e7057db28031412fad2a238f"
   license "Apache-2.0"
 
   bottle do
@@ -13,6 +13,13 @@ class Vitess < Formula
 
   depends_on "go" => :build
   depends_on "etcd"
+
+  # Fixes build failure on Darwin, see: https://github.com/vitessio/vitess/pull/7787
+  # Remove in v11.0.0
+  patch do
+    url "https://github.com/vitessio/vitess/commit/7efa6aa4cd3b68ccd45d46e5f1d13a4a7f9bde7d.patch?full_index=1"
+    sha256 "625290343b23688c5ac885246ed43808b865ae16005565d88791f4f733c24ce0"
+  end
 
   def install
     system "make", "install-local", "PREFIX=#{prefix}", "VTROOT=#{buildpath}"
