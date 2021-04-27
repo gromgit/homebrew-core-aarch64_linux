@@ -6,6 +6,10 @@ class Nvm < Formula
   license "MIT"
   head "https://github.com/nvm-sh/nvm.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "f3cd481b024f9e46a56450d6aaf43c83875e8e7796db6838a6441195b039a368"
+  end
+
   def install
     prefix.install "nvm.sh", "nvm-exec"
     bash_completion.install "bash_completion" => "nvm"
