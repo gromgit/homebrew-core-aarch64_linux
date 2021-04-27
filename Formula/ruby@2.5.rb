@@ -6,11 +6,10 @@ class RubyAT25 < Formula
   license "Ruby"
 
   bottle do
-    sha256 arm64_big_sur: "bbae2085587722707f40c1edff065697a150902c171c1c1279ff2d2d54b291d6"
-    sha256 big_sur:       "e1c9a7e1f481bdb5390b911e17616f96e2dd4824ef15d134cb96bf579991fb29"
-    sha256 catalina:      "77c3f363f6d159824f6a6b1b80ac7e1d2bcb79528f79a0bf78ab3feaa837ad94"
-    sha256 mojave:        "bbd75b74d1694bfb1378de37a21d692ca4ecdf3e4c5f6ad7f381ab1ac4942119"
-    sha256 high_sierra:   "cb21f7f22afc2f304a9dc9ab7aba730563656a054b0407943ba0cb1f68b010a2"
+    sha256 arm64_big_sur: "deb2ee5e006f4fc7b3829dfcdb377300f3dc5f339562a6a1c1b4dec48ed21ae6"
+    sha256 big_sur:       "fb6b696623fc988abecbf9fb9f5298219c62c69851123b9d9d69c3f127b0ec3c"
+    sha256 catalina:      "8fab1468c593b5907e027c175dc19e3273b08cc8b344822ce593dcab645e857d"
+    sha256 mojave:        "ef4974800a4417e6251fb548486150157c2f0ff62275170431381480bac1c3ed"
   end
 
   keg_only :versioned_formula
