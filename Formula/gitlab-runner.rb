@@ -51,6 +51,9 @@ class GitlabRunner < Formula
           <key>KeepAlive</key><true/>
           <key>RunAtLoad</key><true/>
           <key>Disabled</key><false/>
+          <key>LegacyTimers</key><true/>
+          <key>ProcessType</key>
+          <string>Interactive</string>
           <key>Label</key>
           <string>#{plist_name}</string>
           <key>ProgramArguments</key>
