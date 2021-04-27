@@ -7,11 +7,10 @@ class Raylib < Formula
   head "https://github.com/raysan5/raylib.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "2411fb0870c9cec11f2f27f4d6f217fd7cff9351b65569970dcc3e27bee00964"
-    sha256 cellar: :any, big_sur:       "079378b95371d4212b9603a41d3d44a838ad7fd07943cc902064251c644d2ef5"
-    sha256 cellar: :any, catalina:      "78ef0455f7b3602829bf81c13dfeb81ca7867cde572bae477e6c2b9355289035"
-    sha256 cellar: :any, mojave:        "ef45020d299bcb5c03f12f05b1a51791e155dce76073a54572ae5da04142fa7e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "45ee54b47e188a2a28d37f9a3b3f20db4c66d797243b5ae4d0d06848b69052a3"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c0769e8dcddbdf6a51a17ef2c2932d599501671b0c635759aaa8b3e92a453849"
+    sha256 cellar: :any_skip_relocation, catalina:      "b69dfaea0d6b4e126041ad6fec2b22566b469d82bc1055ce04a18a1615597afb"
+    sha256 cellar: :any_skip_relocation, mojave:        "727311e42dbd1ecc8d25b0defa49ca674dff953ed868b246eea00bcda9e3a6a1"
   end
 
   depends_on "cmake" => :build
