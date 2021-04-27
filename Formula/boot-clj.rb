@@ -6,6 +6,10 @@ class BootClj < Formula
   license "EPL-1.0"
   revision 2
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "1e055fc4afde1c73066be6a183728ef6c714236c80b65af67723036d83c24041"
+  end
+
   depends_on "openjdk"
 
   def install
