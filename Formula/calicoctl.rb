@@ -8,10 +8,10 @@ class Calicoctl < Formula
   head "https://github.com/projectcalico/calicoctl.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "21df2aba4df956bd81718b6fe7b4abb29be68e84687693b4a81238673e35c9ef"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6cab42414ed377f942ed61ee213b7005808d908acdf92fa5f596bf8a56712f31"
-    sha256 cellar: :any_skip_relocation, catalina:      "8761c4225d2b4684f5365d7170b5b90a63eb9947f82116fac05355edf4b5cfb4"
-    sha256 cellar: :any_skip_relocation, mojave:        "a96d26426d7e69d7f505b150116667bb274037baad63b97a302699f00b4dc35f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1fe83a4bd70f1c40076d642cc6a6083e26cb2c0f83842c12f26792ada6f7d27d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7ac2484cc4e84f7433ea0cba53c96b96d28896f47ced7c306de8976f024a4dcc"
+    sha256 cellar: :any_skip_relocation, catalina:      "93a4a48b02c8164df58f4e4e04f94c01edb8e6133bf4f7c53281e91fb1467a7e"
+    sha256 cellar: :any_skip_relocation, mojave:        "4fe31a97a3bc06f615c2ac51730d304655631a511af50a84c95bee60c646bd4b"
   end
 
   depends_on "go" => :build
