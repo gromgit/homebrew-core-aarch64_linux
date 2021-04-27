@@ -1,8 +1,8 @@
 class MonitoringPlugins < Formula
   desc "Plugins for nagios compatible monitoring systems"
   homepage "https://www.monitoring-plugins.org"
-  url "https://www.monitoring-plugins.org/download/monitoring-plugins-2.3.tar.gz"
-  sha256 "3fd96efaa751c7646fe3ba25f9714859a204176a155d12fe0ee420e39e90f56c"
+  url "https://www.monitoring-plugins.org/download/monitoring-plugins-2.3.1.tar.gz"
+  sha256 "f56eb84871983fd719247249e3532228b37e2efaae657a3979bd14ac1f84a35b"
 
   bottle do
     sha256 cellar: :any, arm64_big_sur: "e96b7ab01d8202e55df025b8570d42d338241b828ede6c2f4eda0f9681fe0b1b"
