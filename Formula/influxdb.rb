@@ -13,10 +13,10 @@ class Influxdb < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "14dc698d715665247ef547cc346583e430f49f4e3db08cbfdcd212e33cce98fd"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3773ee758a006c963e19a05ef6c3c2f643a91e67a08fb4e3b66ff2b2ef331226"
-    sha256 cellar: :any_skip_relocation, catalina:      "b771d55808f9486f6a39fab1435fcbf92741b3290bc8aebe4b40984b9164f741"
-    sha256 cellar: :any_skip_relocation, mojave:        "d18787b5d6650636ce16440dd49d80703b1d7e29f5379e513788448f1466650a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5cc2b66515ba05702f83ff7fece0391ffbc9f48b03f5e225fcc5e06e73562561"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6754ca1e43f64c1f39e2be55c8d090db5fc2790098220512bc1935891ad0fcd7"
+    sha256 cellar: :any_skip_relocation, catalina:      "a2daf3a845cc5b86b31c735d5bc8c16b56e31e881e3413936f18014daa2c9a92"
+    sha256 cellar: :any_skip_relocation, mojave:        "ca4e4651d17d3f42c344a280ba82d418fb77d0702235033b651b75b1b113342a"
   end
 
   depends_on "bazaar" => :build
