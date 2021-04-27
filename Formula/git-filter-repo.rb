@@ -7,6 +7,10 @@ class GitFilterRepo < Formula
   sha256 "eb269f6e9b91fcacf676f7d5b8174d962dab5facce2022cc59cb672cd33cd602"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "86d0107f7525ab77d8f2cc128fb5975684459f425b8bd6d3dd5b121acd266e07"
+  end
+
   # ignore git dependency audit:
   #  * Don't use git as a dependency (it's always available)
   # But we require Git 2.22.0+
