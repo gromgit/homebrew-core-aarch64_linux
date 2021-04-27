@@ -32,4 +32,83 @@ class Libsvg < Formula
     system "./configure", "--prefix=#{prefix}"
     system "make", "install"
   end
+
+  test do
+    (testpath/"test.svg").write <<~EOS
+      <?xml version="1.0" encoding="utf-8"?>
+      <svg xmlns:svg="http://www.w3.org/2000/svg" height="72pt" width="144pt" viewBox="0 -20 144 72"><text font-size="12" text-anchor="left" y="0" x="0" font-family="Times New Roman" fill="green">sample text here</text></svg>
+    EOS
+    (testpath/"test.c").write <<~EOS
+      #include <stdio.h>
+      #include "svg.h"
+
+      int main(int argc, char **argv) {
+          svg_t *svg = NULL;
+          svg_status_t result = SVG_STATUS_SUCCESS;
+          FILE *fp = NULL;
+
+          printf("1\\n");
+          result = svg_create(&svg);
+          if (SVG_STATUS_SUCCESS != result) {
+              printf ("svg_create failed\\n");
+              /* Fail if alloc failed */
+              return -1;
+          }
+
+          printf("2\\n");
+          result = svg_parse(svg, "test.svg");
+          if (SVG_STATUS_SUCCESS != result) {
+              printf ("svg_parse failed\\n");
+              /* Fail if alloc failed */
+              return -2;
+          }
+
+          printf("3\\n");
+          result = svg_destroy(svg);
+          if (SVG_STATUS_SUCCESS != result) {
+              printf ("svg_destroy failed\\n");
+              /* Fail if alloc failed */
+              return -3;
+          }
+          svg = NULL;
+
+          printf("4\\n");
+          result = svg_create(&svg);
+          if (SVG_STATUS_SUCCESS != result) {
+              printf ("svg_create failed\\n");
+              /* Fail if alloc failed */
+              return -4;
+          }
+
+          fp = fopen("test.svg", "r");
+          if (NULL == fp) {
+              printf ("failed to fopen test.svg\\n");
+              /* Fail if alloc failed */
+              return -5;
+          }
+
+          printf("5\\n");
+          result = svg_parse_file(svg, fp);
+          if (SVG_STATUS_SUCCESS != result) {
+              printf ("svg_parse_file failed\\n");
+              /* Fail if alloc failed */
+              return -6;
+          }
+
+          printf("6\\n");
+          result = svg_destroy(svg);
+          if (SVG_STATUS_SUCCESS != result) {
+              printf ("svg_destroy failed\\n");
+              /* Fail if alloc failed */
+              return -7;
+          }
+          svg = NULL;
+          printf("SUCCESS\\n");
+
+          return 0;
+      }
+    EOS
+    system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lsvg", "-o", "test"
+    assert_equal "1\n2\n3\n4\n5\n6\nSUCCESS\n", shell_output("./test")
+  end
 end
