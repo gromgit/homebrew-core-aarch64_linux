@@ -7,10 +7,10 @@ class Gnunet < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "d2e622cc444972bf0fd15a30922f7f853c066eac83c94b18415fa1547fe1aa2c"
-    sha256 cellar: :any, big_sur:       "8f3629373c78f67c8995c3aeb9ec4d27f7576b5f28c1d5b9daac3c8d2ef1796c"
-    sha256 cellar: :any, catalina:      "dce4848ff96012a2169bd768d4112dce18dd658f45fa1ab2dfafb4de6886c5fe"
-    sha256 cellar: :any, mojave:        "cd3507df5abe3ac3832e61caffc487860e98f05b4a16bb629565c1e84d785c7d"
+    sha256 cellar: :any, arm64_big_sur: "913d3a808c3beaacaa7aa0307c200af943f539bc5203a4b2c62e6e6e9919eee8"
+    sha256 cellar: :any, big_sur:       "b97c192441e2b2836c0dfead9f2e85cfea8ae0889e34510436be4b3dc427b944"
+    sha256 cellar: :any, catalina:      "fa620c92930b29e01dc564f14867462126cf508692be8b9c3ca5c716419c6f7c"
+    sha256 cellar: :any, mojave:        "8f032fccf8877f461e5ccf87d059a9649ca056493b984a931ddc97317f45512a"
   end
 
   depends_on "pkg-config" => :build
