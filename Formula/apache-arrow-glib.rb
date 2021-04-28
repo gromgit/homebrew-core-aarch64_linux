@@ -8,10 +8,10 @@ class ApacheArrowGlib < Formula
   head "https://github.com/apache/arrow.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "ba8da1e8724d7ea1c0928b4ce0243c86321b0abfe83e24260eb5f4a5e1a23964"
-    sha256 cellar: :any, big_sur:       "83d1cd2b7e609b2511190646ab24b91e791656515273588172ce240a1354608e"
-    sha256 cellar: :any, catalina:      "7f9bcc0ec7352d6d509232e4e8c84b7165366177ac855bc639247f67153bf2ce"
-    sha256 cellar: :any, mojave:        "409b2858623ac0a4bf06803c26113df6135991bf060a016b3f58dfe1badfa0e3"
+    sha256 cellar: :any, arm64_big_sur: "600724d980ea538d2a018fd29bbab7a8c7b81d54fb406f600e76152e513c16a8"
+    sha256 cellar: :any, big_sur:       "545368f552ce0ed5efcce4e055e47d32a76adf28394e897996e9140e9b179c82"
+    sha256 cellar: :any, catalina:      "18b37c1d11b457939f96c19d13c51d978195735d2d2cedc7ab70134742a86fd4"
+    sha256 cellar: :any, mojave:        "b31ff5ffe9898c5c306b76b956075e882f0f098bf6d2c091bde912a2c6b70cae"
   end
 
   depends_on "gobject-introspection" => :build
