@@ -6,6 +6,10 @@ class Overdrive < Formula
   license "MIT"
   head "https://github.com/chbrown/overdrive.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "9d056c2fed436d64d6269fa28f7cd821a75ee74bb7d8f3240b9509145b4a4c95"
+  end
+
   depends_on "tidy-html5"
   uses_from_macos "curl"
   uses_from_macos "libressl"
