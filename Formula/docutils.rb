@@ -8,10 +8,10 @@ class Docutils < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8c6f650a9ceec0e34b6d1463d40448e171027c230cfeba1d7bfa971c15d3ed0e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "97a939a036851c96bc4ac17d1a9fbf8bd8053f0c3c49402698963e32026985aa"
-    sha256 cellar: :any_skip_relocation, catalina:      "97a939a036851c96bc4ac17d1a9fbf8bd8053f0c3c49402698963e32026985aa"
-    sha256 cellar: :any_skip_relocation, mojave:        "954e70f84cb70b5e77478043ddf5784074015dfd11dbaf3e8906b83020e4a08b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b4f3eca7d4566cbb4ba7ecd31a55c6baf8bf3b6d3ff2574d0b91149e627a3b29"
+    sha256 cellar: :any_skip_relocation, big_sur:       "526706f3668d3ea0cfdab76748a9de32835e4a2e901af6a85ecaee399c910503"
+    sha256 cellar: :any_skip_relocation, catalina:      "526706f3668d3ea0cfdab76748a9de32835e4a2e901af6a85ecaee399c910503"
+    sha256 cellar: :any_skip_relocation, mojave:        "526706f3668d3ea0cfdab76748a9de32835e4a2e901af6a85ecaee399c910503"
   end
 
   depends_on "python@3.9"
