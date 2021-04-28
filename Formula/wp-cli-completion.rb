@@ -6,6 +6,10 @@ class WpCliCompletion < Formula
   license "MIT"
   head "https://github.com/wp-cli/wp-cli.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "145f9334a1d1c301614904ea234d44f4614ea3a45f5b287e71f114f45737f87f"
+  end
+
   def install
     bash_completion.install "utils/wp-completion.bash" => "wp"
   end
