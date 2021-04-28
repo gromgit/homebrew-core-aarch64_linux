@@ -6,6 +6,10 @@ class Pidcat < Formula
   license "Apache-2.0"
   head "https://github.com/JakeWharton/pidcat.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "040e4e6968c1b152d7b25104e3b4cd27c86df790bc0d863f6ad7371c761d5386"
+  end
+
   def install
     bin.install "pidcat.py" => "pidcat"
     bash_completion.install "bash_completion.d/pidcat"
