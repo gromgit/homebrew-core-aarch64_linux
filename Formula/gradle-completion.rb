@@ -6,6 +6,10 @@ class GradleCompletion < Formula
   license "MIT"
   head "https://github.com/gradle/gradle-completion.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "6889d645ade2d3296031a3bdebaec9c2622bf26755fae51024e1692f6872ccb3"
+  end
+
   depends_on "bash-completion"
 
   def install
