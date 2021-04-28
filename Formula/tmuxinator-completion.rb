@@ -6,6 +6,10 @@ class TmuxinatorCompletion < Formula
   license "MIT"
   head "https://github.com/tmuxinator/tmuxinator.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "18bf3bab7756a16057c776f7f29db74c2a0c6ce2f37ec0534cdae64f26f59b72"
+  end
+
   conflicts_with "tmuxinator", because: "the tmuxinator formula includes completion"
 
   def install
