@@ -6,10 +6,10 @@ class Cheat < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0616a7b0ce9a9fd33919390fb29f042eb997d3462917514b283385a9f05fe977"
-    sha256 cellar: :any_skip_relocation, big_sur:       "dbfd6636a4b40dd7b94a400c7888f45ddd87427e855b00dc8119dd7200c49b14"
-    sha256 cellar: :any_skip_relocation, catalina:      "74c8c4a8fc13f0484628ed56dc6d54507f605d271faf844683119f6f46adfa2a"
-    sha256 cellar: :any_skip_relocation, mojave:        "540de221f3d25e9aaa697a078c51f36964d219a565701e06ed5492a02b6d876d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "441d725fd05398bb4bb7010d192acaba572fb422925c838192c284b4a2df4462"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0f6bfd612dd9d9de05ec3ecec8de402383855e1ab8bd10bd26180abc29d39ad6"
+    sha256 cellar: :any_skip_relocation, catalina:      "c635e1e6108ac066791cc64e613906729297a85c3326f5dda876c417c3bd5f02"
+    sha256 cellar: :any_skip_relocation, mojave:        "14f1f0861484d6a340d79779592ade42f3665aad8843ae14ce8b637a61e2a1bb"
   end
 
   depends_on "go" => :build
