@@ -6,6 +6,10 @@ class Swagger2markupCli < Formula
   license "Apache-2.0"
   revision 2
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "462e764f4e4d57ad2f1c0c668c265fa0a57885bb5d97a3578b79e6da5ff8f2f2"
+  end
+
   depends_on "openjdk"
 
   def install
