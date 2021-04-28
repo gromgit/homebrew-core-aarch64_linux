@@ -4,8 +4,8 @@ class Semgrep < Formula
   desc "Easily detect and prevent bugs and anti-patterns in your codebase"
   homepage "https://semgrep.dev"
   url "https://github.com/returntocorp/semgrep.git",
-      tag:      "v0.48.0",
-      revision: "daf6df3b6edb3bfe057c846eae08dd7c9b576c58"
+      tag:      "v0.49.0",
+      revision: "27e430eb24ee1625cd97d5ec8cf975aa37a3e248"
   license "LGPL-2.1-only"
   head "https://github.com/returntocorp/semgrep.git", branch: "develop"
 
@@ -128,6 +128,10 @@ class Semgrep < Formula
 
       system "opam", "init", "--no-setup", "--disable-sandboxing"
       ENV.deparallelize { system "opam", "switch", "create", "ocaml-base-compiler.4.10.2" }
+
+      # Delete OCaml version file since it conflicts with C++20 version header
+      # This can be removed once semgrep upgrades to ocaml 4.12.0
+      rm "#{opamroot}/ocaml-base-compiler.4.10.2/lib/ocaml/version"
 
       system "opam", "exec", "--", "make", "setup"
 
