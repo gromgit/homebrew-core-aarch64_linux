@@ -5,6 +5,10 @@ class Paket < Formula
   sha256 "58185853a390c979aedec9fe2b7b2f81c1131ebfae51c5be4121b670b329deef"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "6b480630a9df01e8916e83f48c51d2b1c9b88a45295d9de8affd94e05f91aa10"
+  end
+
   depends_on "mono"
 
   def install
