@@ -12,10 +12,10 @@ class Pumba < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "23ea7c27073d54ac360deae32dd52388dcda30a72ca7e3f7c34fd715533d9c45"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ab72f222b8eeaadf48320af5f87db33697cafa4a519010d200a377f16f81cef2"
-    sha256 cellar: :any_skip_relocation, catalina:      "9aacdeac788678e480042779b159e00f80f06886d89c5a61f601741349a4cefa"
-    sha256 cellar: :any_skip_relocation, mojave:        "32e9cf47edec277ec8ec83e8a5536018133ab7ba8d2532dc7fdf8c8e624bafc3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0d2b57562ed082742216e8576a8d02cbc9301285aac0159909e611795f3e83b4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6543f05aaa8b1ead7d70a379daca89bce7cdf17f5ba32b751ec6af9d836cba9a"
+    sha256 cellar: :any_skip_relocation, catalina:      "2f68ee710074baa934c3028d8240110053d37c16edb9f813667b879254548d39"
+    sha256 cellar: :any_skip_relocation, mojave:        "0f84af117d6d6dd0224a849875a0cecf27de241654ef7d69fcf76d4bc09dd518"
   end
 
   depends_on "go" => :build
