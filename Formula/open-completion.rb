@@ -6,6 +6,10 @@ class OpenCompletion < Formula
   license "MIT"
   head "https://github.com/moshen/open-bash-completion.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "5ea91a3335f030fb57487c30aa307dee22587db31ff801bb7bc6a121775ba579"
+  end
+
   def install
     bash_completion.install "open"
   end
