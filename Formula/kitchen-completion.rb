@@ -6,6 +6,10 @@ class KitchenCompletion < Formula
   license "MIT"
   head "https://github.com/MarkBorcherding/test-kitchen-bash-completion.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "4477a44357f241518a1ebd61583623cfccee33e67c2046cd85ce6702a2ea54ce"
+  end
+
   def install
     bash_completion.install "kitchen-completion.bash" => "kitchen"
   end
