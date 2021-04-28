@@ -5,10 +5,10 @@ class MonitoringPlugins < Formula
   sha256 "f56eb84871983fd719247249e3532228b37e2efaae657a3979bd14ac1f84a35b"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "e96b7ab01d8202e55df025b8570d42d338241b828ede6c2f4eda0f9681fe0b1b"
-    sha256 cellar: :any, big_sur:       "2affcbde085b468167dbc0806e2b328b2ce8e155e08369e4df0d968e2568723d"
-    sha256 cellar: :any, catalina:      "918135f3648b566cfa9908d0fbbd65079d0a3c0c8794167aebe43aa2dd739fe7"
-    sha256 cellar: :any, mojave:        "c98c17126372176090c58eef202309972dc44f1d34be28ffc96c30a37d3f3217"
+    sha256 cellar: :any, arm64_big_sur: "5044511cc0f5a64f3424d4507559b6ca316669121f4b15d58ef6b9cec5bba3f8"
+    sha256 cellar: :any, big_sur:       "a49576ad287d073c67e0da12be686ba737abe34e5f61813a2e308cd44c427017"
+    sha256 cellar: :any, catalina:      "644b33de5338e00a2103c87aa4b55a39b7a16e2ecee49936f2251a0a97756f0f"
+    sha256 cellar: :any, mojave:        "883707c4b2fe29a6d0b8453d4d19005128761d5d6952b9fe21292ec4b4cb2b11"
   end
 
   depends_on "openssl@1.1"
