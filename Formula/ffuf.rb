@@ -6,10 +6,10 @@ class Ffuf < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "32637322c8b42463adf6b42636cd318c9fd29e09fa8be62ee77a229e161b2a61"
-    sha256 cellar: :any_skip_relocation, big_sur:       "2243d50f59109b79cd9ec47ee45b3bdb002c1f546944f2f46bbc09281ae387be"
-    sha256 cellar: :any_skip_relocation, catalina:      "ab6fee3beb856c25b674e87863a29733f6da5434d3a1b93035b91d42a6ba72e3"
-    sha256 cellar: :any_skip_relocation, mojave:        "3b0edfedd94bbbd378465d24a36258289c4a4b9401eddd673b64568f6da008dd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3bddc7faf7303fc75c6d8aa68969f4f407b0858eb883f6ce770a42066a8d1b9d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ccb35a18f2cdc4b3b0fe847b1a6fc89fce8744701aaf39fec630454c5e72b285"
+    sha256 cellar: :any_skip_relocation, catalina:      "8d2faa6265f9c7703ad6f8d05abdb0d0a711b8e93db162fb205e46cfe577e920"
+    sha256 cellar: :any_skip_relocation, mojave:        "fa307cbcfc231d2016659b76e8542f109377bfc4e865f1cff04825a608240e66"
   end
 
   depends_on "go" => :build
