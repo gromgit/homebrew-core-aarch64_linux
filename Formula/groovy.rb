@@ -10,6 +10,13 @@ class Groovy < Formula
     regex(/href=.*?apache-groovy-binary[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a662b91af3884d93c8bc7a9d318eb82c749ab76750100ba2ff2c4e1be87852f3"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b6e30d0087bd573350b73cef007f45dcf7f0652dbfab3b976150c7b9f5ff53ad"
+    sha256 cellar: :any_skip_relocation, catalina:      "b6e30d0087bd573350b73cef007f45dcf7f0652dbfab3b976150c7b9f5ff53ad"
+    sha256 cellar: :any_skip_relocation, mojave:        "b6e30d0087bd573350b73cef007f45dcf7f0652dbfab3b976150c7b9f5ff53ad"
+  end
+
   depends_on "openjdk"
 
   conflicts_with "groovysdk", because: "both install the same binaries"
