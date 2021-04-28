@@ -11,6 +11,10 @@ class DockerComposeCompletion < Formula
     strategy :github_latest
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "8f57c6232f871ff40bfba037af9870b8da96a43d17c5796d27722df2c5efdb1c"
+  end
+
   conflicts_with "docker-compose",
     because: "docker-compose already includes completion scripts"
 
