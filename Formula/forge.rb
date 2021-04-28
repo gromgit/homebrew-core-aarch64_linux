@@ -11,10 +11,10 @@ class Forge < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "f3a2101af773f47ef9da29e1468f6af7f9a81c418111930e2f88362581249d57"
-    sha256 cellar: :any, big_sur:       "a013b723b0118001a054cb6f0d3d917f90e9823c376718a3057bf9a1ba250ed1"
-    sha256 cellar: :any, catalina:      "5321a0dd20592b5450308b4f527d75c1547b964fb1a7e1eaba9c6facdc46fe1c"
-    sha256 cellar: :any, mojave:        "17d114d5023f66c30cf3378d43031d5847cb85ac4e529cba849752333bad8cbb"
+    sha256 cellar: :any, arm64_big_sur: "4b486382c1785146a5402e58c00b04f558d2658357adc83bd776f2d6723fdd71"
+    sha256 cellar: :any, big_sur:       "fd3aae454ad2558820ab753c0b087b4e70fba247e0291160bb96730a7a1f43c3"
+    sha256 cellar: :any, catalina:      "ceb38edbdffc47e6ff4bf92deccdf71207c6af8dfcdc12b165bc8703ab44ae68"
+    sha256 cellar: :any, mojave:        "044723ff63b38feac035fd16c8938b5f16eb47eebf6f78adadfe3064ca598493"
   end
 
   depends_on "boost" => :build
