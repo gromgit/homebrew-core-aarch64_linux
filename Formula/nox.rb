@@ -7,6 +7,13 @@ class Nox < Formula
   sha256 "58a662070767ed4786beb46ce3a789fca6f1e689ed3ac15c73c4d0094e4f9dc4"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4ce7eed9cc2446ce8fee3a924280813ccc3f7eeb6a104672f76606fa353bcf86"
+    sha256 cellar: :any_skip_relocation, big_sur:       "cc46720ed1ca9e428193b610275fe33e728400e3cc4fd0c475c53005f9d53a91"
+    sha256 cellar: :any_skip_relocation, catalina:      "c29746c5cab8bf759cd839531bb2528fa08d305197e1c891136cdb48fbc8fd4b"
+    sha256 cellar: :any_skip_relocation, mojave:        "d2950d714baca5dd6ec329d2da4d7f79c09211be12f682cacc338e551f90b8ad"
+  end
+
   depends_on "python@3.9"
   depends_on "six"
 
