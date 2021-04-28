@@ -6,6 +6,10 @@ class TCompletion < Formula
   license "MIT"
   head "https://github.com/sferik/t.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "6735212e9fee5e04fce9adaa96e09c20cc7508b8d26e1d85658825b0c50e85c7"
+  end
+
   def install
     bash_completion.install "etc/t-completion.sh" => "t"
     zsh_completion.install "etc/t-completion.zsh" => "_t"
