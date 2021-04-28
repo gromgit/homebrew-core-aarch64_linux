@@ -6,6 +6,10 @@ class PackerCompletion < Formula
   license "MIT"
   head "https://github.com/mrolli/packer-bash-completion.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "e607f862efdc7c44bbf62da84a69d6986251af7e8a030809bcacc3b24804258c"
+  end
+
   def install
     bash_completion.install "packer"
   end
