@@ -5,6 +5,10 @@ class Savana < Formula
   sha256 "608242a0399be44f41ff324d40e82104b3c62908bc35177f433dcfc5b0c9bf55"
   license "LGPL-3.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "bbc333eb6d0c02f820b36f15123a3711a548f52b2985f8a0c0f4c581f73990b0"
+  end
+
   depends_on "openjdk"
 
   def install
