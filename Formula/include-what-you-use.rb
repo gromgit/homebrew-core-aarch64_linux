@@ -16,11 +16,10 @@ class IncludeWhatYouUse < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "34311d77ae37c484df7a818ef824d84b0f3eda7908af4582fefa3a51ecbb05a2"
-    sha256 big_sur:       "b9abdbc61914e1e68e6ea7a08c9511902985a1147e008dae9bbcba5f0c63d80a"
-    sha256 catalina:      "07b4791cd5b04b2a4ded08eefbb2d3ffc03e8a13349460507ae858a381c6a309"
-    sha256 mojave:        "9c7e49a991bbd72a5ff5d970bdf4bcc12336e5b197aba138d5158040b9654b81"
+    sha256 arm64_big_sur: "921f11702bc6b7f053aa9ce19e0c67231736dc70a57a300c6386f982086cbe00"
+    sha256 big_sur:       "2b01505cfa7e2328ba69bb201900bd405092d0cfcd0fbbed935bc105872e79a4"
+    sha256 catalina:      "27c7be4910d197d0670a2f20f980f691576894165726d972421f55c5dec1ae12"
+    sha256 mojave:        "4add4a025d4634dd620f9f6eb61e59084f3d8841ee2ea44e9b37a9f39832269a"
   end
 
   depends_on "cmake" => :build
