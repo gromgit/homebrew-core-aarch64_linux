@@ -9,6 +9,13 @@ class Artifactory < Formula
     regex(/href=.*?jfrog-artifactory-oss[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b601b9bec08834496b2412d3255548ad0f03d3a0305a1c8d879e3735b0d695f5"
+    sha256 cellar: :any_skip_relocation, big_sur:       "1e63e1246239ddcbc0ad1120731b0631d03fab85a546457de4003036a2cb38bf"
+    sha256 cellar: :any_skip_relocation, catalina:      "1e63e1246239ddcbc0ad1120731b0631d03fab85a546457de4003036a2cb38bf"
+    sha256 cellar: :any_skip_relocation, mojave:        "1e63e1246239ddcbc0ad1120731b0631d03fab85a546457de4003036a2cb38bf"
+  end
+
   depends_on "openjdk"
 
   def install
