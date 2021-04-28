@@ -2,10 +2,9 @@ class Kubebuilder < Formula
   desc "SDK for building Kubernetes APIs using CRDs"
   homepage "https://github.com/kubernetes-sigs/kubebuilder"
   url "https://github.com/kubernetes-sigs/kubebuilder.git",
-      tag:      "v2.3.2",
-      revision: "5da27b892ae310e875c8719d94a5a04302c597d0"
+      tag:      "v3.0.0",
+      revision: "533874b302e9bf94cd7105831f8a543458752973"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/kubernetes-sigs/kubebuilder.git"
 
   bottle do
@@ -22,22 +21,22 @@ class Kubebuilder < Formula
     goos = Utils.safe_popen_read("#{Formula["go"].bin}/go", "env", "GOOS").chomp
     goarch = Utils.safe_popen_read("#{Formula["go"].bin}/go", "env", "GOARCH").chomp
     ldflags = %W[
-      -X sigs.k8s.io/kubebuilder/v2/cmd/version.kubeBuilderVersion=#{version}
-      -X sigs.k8s.io/kubebuilder/v2/cmd/version.goos=#{goos}
-      -X sigs.k8s.io/kubebuilder/v2/cmd/version.goarch=#{goarch}
-      -X sigs.k8s.io/kubebuilder/v2/cmd/version.gitCommit=#{Utils.git_head}
-      -X sigs.k8s.io/kubebuilder/v2/cmd/version.buildDate=#{Time.now.iso8601}
+      -X main.kubeBuilderVersion=#{version}
+      -X main.goos=#{goos}
+      -X main.goarch=#{goarch}
+      -X main.gitCommit=#{Utils.git_head}
+      -X main.buildDate=#{Time.now.iso8601}
     ]
-    system "go", "build", *std_go_args, "-ldflags", ldflags.join(" "), "./cmd"
-    prefix.install_metafiles
+    system "go", "build", *std_go_args(ldflags: ldflags.join(" ")), "./cmd"
   end
 
   test do
     assert_match "KubeBuilderVersion:\"#{version}\"", shell_output("#{bin}/kubebuilder version 2>&1")
     mkdir "test" do
+      system "go", "mod", "init", "example.com"
       system "#{bin}/kubebuilder", "init",
-        "--repo=github.com/example/example-repo", "--domain=example.com",
-        "--license=apache2", "--owner='The Example authors'", "--fetch-deps=false"
+        "--plugins", "go/v3", "--project-version", "3",
+        "--skip-go-version-check"
     end
   end
 end
