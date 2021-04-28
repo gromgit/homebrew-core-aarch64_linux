@@ -5,6 +5,10 @@ class Desk < Formula
   sha256 "620bfba5b285d4d445e3ff9e399864063d7b0e500ef9c70d887fb7b157576c45"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "b2da60c73f101b56b6a5ac51ed46427c68cf0194d7229755b4b25a215b1f0c1a"
+  end
+
   def install
     bin.install "desk"
     bash_completion.install "shell_plugins/bash/desk"
