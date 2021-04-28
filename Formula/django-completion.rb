@@ -11,6 +11,10 @@ class DjangoCompletion < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "92e44d165ba155b2a3c28c91cad7b3f5d27f12da69bdd6e7ff7411567a9271d7"
+  end
+
   def install
     bash_completion.install "extras/django_bash_completion" => "django"
   end
