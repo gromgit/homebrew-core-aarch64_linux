@@ -6,6 +6,10 @@ class BoomCompletion < Formula
   license "MIT"
   head "https://github.com/holman/boom.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "041329aa65f67c47539617cd6b7a585d0abd3158b0f1d1c8314807b2b1cdecae"
+  end
+
   def install
     bash_completion.install "completion/boom.bash" => "boom"
     zsh_completion.install "completion/boom.zsh" => "_boom"
