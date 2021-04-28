@@ -6,6 +6,10 @@ class RbenvCommunalGems < Formula
   license "MIT"
   revision 1
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "4cd057a73659f1fdea3a0d266485367b960378c790eef4c6d7b707a4936c8481"
+  end
+
   depends_on "rbenv"
 
   def install
