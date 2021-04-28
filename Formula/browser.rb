@@ -6,6 +6,10 @@ class Browser < Formula
   # This the gist revision number
   version "7"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "6de7d877522742138bb0668ba627cdd166b2e0b1c698cc336ba704e68c6338e4"
+  end
+
   def install
     bin.install "browser"
   end
