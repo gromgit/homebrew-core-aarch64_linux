@@ -22,13 +22,21 @@ class Libsvg < Formula
     sha256 cellar: :any, yosemite:    "05c230ab37e4f4a3b854373b5c71b275414f852d1b776a60351c0fd49c31674a"
   end
 
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "libtool" => :build
   depends_on "pkg-config" => :build
   depends_on "jpeg"
   depends_on "libpng"
 
   uses_from_macos "libxml2"
 
+  # Allow building on M1 Macs. This patch is adapted from
+  # https://cgit.freedesktop.org/cairo/commit/?id=afdf3917ee86a7d8ae17f556db96478682674a76
+  patch :DATA
+
   def install
+    system "autoreconf", "-fiv"
     system "./configure", "--prefix=#{prefix}"
     system "make", "install"
   end
@@ -112,3 +120,32 @@ class Libsvg < Formula
     assert_equal "1\n2\n3\n4\n5\n6\nSUCCESS\n", shell_output("./test")
   end
 end
+
+__END__
+diff --git a/configure.in b/configure.in
+index a9f871e..c84d417 100755
+--- a/configure.in
++++ b/configure.in
+@@ -8,18 +8,18 @@ LIBSVG_VERSION=0.1.4
+ # libtool shared library version
+ 
+ # Increment if the interface has additions, changes, removals.
+-LT_CURRENT=1
++m4_define(LT_CURRENT, 1)
+ 
+ # Increment any time the source changes; set to
+ # 0 if you increment CURRENT
+-LT_REVISION=0
++m4_define(LT_REVISION, 0)
+ 
+ # Increment if any interfaces have been added; set to 0
+ # if any interfaces have been removed. removal has
+ # precedence over adding, so set to 0 if both happened.
+-LT_AGE=0
++m4_define(LT_AGE, 0)
+ 
+-VERSION_INFO="$LT_CURRENT:$LT_REVISION:$LT_AGE"
++VERSION_INFO="LT_CURRENT():LT_REVISION():LT_AGE()"
+ AC_SUBST(VERSION_INFO)
+ 
+ dnl ===========================================================================
