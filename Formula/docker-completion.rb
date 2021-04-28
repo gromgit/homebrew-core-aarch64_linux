@@ -6,6 +6,10 @@ class DockerCompletion < Formula
       revision: "99e3ed89195c4e551e87aad1e7453b65456b03ad"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "64e51f7a4d8adeccea99dec551a376c5c78a5f37ceafeb05fde4fd3dc4f95edf"
+  end
+
   conflicts_with "docker",
     because: "docker already includes these completion scripts"
 
