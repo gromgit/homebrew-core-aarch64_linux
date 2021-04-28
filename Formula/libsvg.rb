@@ -13,13 +13,14 @@ class Libsvg < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any, big_sur:     "96c398556141fc2ad73955de0c52a0217eeeb627102099592d1ccc85250809c9"
-    sha256 cellar: :any, catalina:    "e0f21af595963a7c99ffa098f593f5d46cf5f78facf1df84ffe97858f29fecbe"
-    sha256 cellar: :any, mojave:      "3984d65fa6524a142ad9094aa095f106ca9c8b6857cdd3f62b913e7e3c8f5b65"
-    sha256 cellar: :any, high_sierra: "7cfe0b5417654beb7092afec3389a14a4c67eeaa760eb77c9b28082e40f0b11a"
-    sha256 cellar: :any, sierra:      "c9435455e3fb30ce81d467edf1cf4c15c39fb1d061c21738007d6af2565455a7"
-    sha256 cellar: :any, el_capitan:  "4e7903c15847c2d07a2bdf16d6ddad5a0191ef452cf7733624703fd1b5fd7859"
-    sha256 cellar: :any, yosemite:    "05c230ab37e4f4a3b854373b5c71b275414f852d1b776a60351c0fd49c31674a"
+    sha256 cellar: :any, arm64_big_sur: "4b7fe8ed8d541c65566d01ce26d3d31a6f051c13d24e947000140de55fe01164"
+    sha256 cellar: :any, big_sur:       "96c398556141fc2ad73955de0c52a0217eeeb627102099592d1ccc85250809c9"
+    sha256 cellar: :any, catalina:      "e0f21af595963a7c99ffa098f593f5d46cf5f78facf1df84ffe97858f29fecbe"
+    sha256 cellar: :any, mojave:        "3984d65fa6524a142ad9094aa095f106ca9c8b6857cdd3f62b913e7e3c8f5b65"
+    sha256 cellar: :any, high_sierra:   "7cfe0b5417654beb7092afec3389a14a4c67eeaa760eb77c9b28082e40f0b11a"
+    sha256 cellar: :any, sierra:        "c9435455e3fb30ce81d467edf1cf4c15c39fb1d061c21738007d6af2565455a7"
+    sha256 cellar: :any, el_capitan:    "4e7903c15847c2d07a2bdf16d6ddad5a0191ef452cf7733624703fd1b5fd7859"
+    sha256 cellar: :any, yosemite:      "05c230ab37e4f4a3b854373b5c71b275414f852d1b776a60351c0fd49c31674a"
   end
 
   depends_on "autoconf" => :build
