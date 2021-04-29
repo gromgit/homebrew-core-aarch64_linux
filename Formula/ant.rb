@@ -7,6 +7,10 @@ class Ant < Formula
   license "Apache-2.0"
   head "https://git-wip-us.apache.org/repos/asf/ant.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "d6404e9d7581ec524c8edf8ef776abcbfc99bec1daff38b6ac195e615e58468c"
+  end
+
   depends_on "openjdk"
 
   resource "ivy" do
