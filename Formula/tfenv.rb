@@ -1,8 +1,8 @@
 class Tfenv < Formula
   desc "Terraform version manager inspired by rbenv"
   homepage "https://github.com/tfutils/tfenv"
-  url "https://github.com/tfutils/tfenv/archive/v2.2.0.tar.gz"
-  sha256 "628c55bca9adf96a8d31c3f95b01aab170c3002c150ceb22cadd03366854d071"
+  url "https://github.com/tfutils/tfenv/archive/v2.2.1.tar.gz"
+  sha256 "8de13c82a1e990907ebc52651e13933ea94889aece913e05f6bec76d9516af0f"
   license "MIT"
   head "https://github.com/tfutils/tfenv.git"
 
@@ -10,8 +10,6 @@ class Tfenv < Formula
     url :stable
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
-
-  bottle :unneeded
 
   uses_from_macos "unzip"
 
