@@ -7,10 +7,10 @@ class Timg < Formula
   head "https://github.com/hzeller/timg.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "ba247d391091df8ace17a581841eb7352c061d4f915387fcf89cdb47c2a6daf1"
-    sha256 cellar: :any, big_sur:       "0e61537ebb11a76dc1e9e36d8401eb4bdf6474380987fd98e71bddf1761c7d7a"
-    sha256 cellar: :any, catalina:      "229adbcf4cb368f7d8a03f384782265eafbdb9545e1eeeb330b3116d7e0cedb8"
-    sha256 cellar: :any, mojave:        "4107c2ba151093ed36472e2fd1134b2e0ab6ce6add3e661c8e0cfc975291e437"
+    sha256 cellar: :any, arm64_big_sur: "c0c9b7262c31549a6024d45ff408a7eb4ff4cf6c1df9f24ed7b6cc397158f6a4"
+    sha256 cellar: :any, big_sur:       "497ce8851d225061de1abd4120771dba40a1e40aa3bd1c48cf4999a61b0e25ba"
+    sha256 cellar: :any, catalina:      "4b72b74dadb031d1803aa7bdb158485b789520dba40ddcbacb5b71222f47aba1"
+    sha256 cellar: :any, mojave:        "bdd59841651992bc5967276ddfd16fcf42289204e267c8f43576c2f0337a0852"
   end
 
   depends_on "cmake" => :build
