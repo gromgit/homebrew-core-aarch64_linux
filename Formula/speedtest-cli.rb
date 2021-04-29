@@ -7,6 +7,7 @@ class SpeedtestCli < Formula
   head "https://github.com/sivel/speedtest-cli.git"
 
   bottle do
+    rebuild 1
     sha256 cellar: :any_skip_relocation, all: "ebf51e9de63f99e3fcea09b61015488a25e7769422fd9656fee9c0ecf7ba08b3"
   end
 
