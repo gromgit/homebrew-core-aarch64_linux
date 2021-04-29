@@ -7,10 +7,10 @@ class Sbcl < Formula
   head "https://git.code.sf.net/p/sbcl/sbcl.git", shallow: false
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9dc8adab9c26f487dc1101e27e02dd0101489248cf5dcb2254b402ac122c2f30"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6f2df1f1569626f91d3b6021e052efafa48b78d32d22983fcffe2c4a15ca8da4"
-    sha256 cellar: :any_skip_relocation, catalina:      "7e13324f494491d8dd4256c38ff63ec97deb01b1a07be9dc378945b97b4b43b3"
-    sha256 cellar: :any_skip_relocation, mojave:        "f5dc0e7f9cfe1a156f8d46da3a59f04ee0c71d062aaa7376b86e9f091a1630f7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "cf9727f5b19beaa928a474c0099f4d38522dd47ae86b56d829fbcef620ebc245"
+    sha256 cellar: :any_skip_relocation, big_sur:       "019e21e1de33d751ccc8c1dd6e5dd7cd161d22016fce2624083ef3833189f8bf"
+    sha256 cellar: :any_skip_relocation, catalina:      "ed4fdc4198a634f1d15e1887304a08faa2a1f515b5f8bcf91885f6c8f5854b20"
+    sha256 cellar: :any_skip_relocation, mojave:        "1259d3e38d595738ef04bbd9ddbd6fd6adb3d002316bc5c540ff05568e2fa23b"
   end
 
   depends_on "ecl" => :build
