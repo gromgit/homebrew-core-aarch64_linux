@@ -9,6 +9,10 @@ class AntContrib < Formula
     regex(%r{url=.*?/ant-contrib[._-]v?(\d+(?:\.\d+)+(?:[a-z]\d+)?)-bin\.t}i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "2b3e0ff584bdc78fa47d6f422f1737f2c307d627ba4efe38e9a59548725fd48d"
+  end
+
   depends_on "ant"
 
   def install
