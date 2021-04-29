@@ -6,6 +6,10 @@ class SpacemanDiff < Formula
   license "MIT"
   head "https://github.com/holman/spaceman-diff.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "66c940e56f22cd2f5fdb3cfd2e1ddd741400c0739bb91ded95f5ddf5fa3c9902"
+  end
+
   depends_on "imagemagick"
   depends_on "jp2a"
 
