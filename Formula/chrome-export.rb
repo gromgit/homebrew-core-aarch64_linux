@@ -6,6 +6,10 @@ class ChromeExport < Formula
   license "ISC"
   revision 1
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "f51c4b63ddf95b8e9b317bb52b9ea9be6d1f498fdbe6853f0ec15dabf0f35b26"
+  end
+
   def install
     bin.install "export-chrome-bookmarks"
     bin.install "export-chrome-history"
