@@ -6,6 +6,10 @@ class BashGitPrompt < Formula
   license "BSD-2-Clause"
   head "https://github.com/magicmonty/bash-git-prompt.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "aba8fdb7276afbd19020d92a907102912674172b4ff9d4883e349fd73fd69995"
+  end
+
   def install
     share.install "gitprompt.sh", "gitprompt.fish", "git-prompt-help.sh",
                   "gitstatus.py", "gitstatus.sh", "gitstatus_pre-1.7.10.sh",
