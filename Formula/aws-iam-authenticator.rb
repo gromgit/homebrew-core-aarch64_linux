@@ -2,10 +2,9 @@ class AwsIamAuthenticator < Formula
   desc "Use AWS IAM credentials to authenticate to Kubernetes"
   homepage "https://github.com/kubernetes-sigs/aws-iam-authenticator"
   url "https://github.com/kubernetes-sigs/aws-iam-authenticator.git",
-      tag:      "v0.5.2",
-      revision: "292b9b82df69b87af962b92485b254d9f4b10f00"
+      tag:      "v0.5.3",
+      revision: "a0516fb9ace571024263424f1770e6d861e65d09"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/kubernetes-sigs/aws-iam-authenticator.git"
 
   bottle do
@@ -19,10 +18,10 @@ class AwsIamAuthenticator < Formula
 
   def install
     ldflags = ["-s", "-w",
-               "-X main.version=#{version}",
-               "-X main.commit=#{Utils.git_head}"]
-    system "go", "build", "-ldflags", ldflags.join(" "), "-trimpath",
-           "-o", bin/"aws-iam-authenticator", "./cmd/aws-iam-authenticator"
+               "-X sigs.k8s.io/aws-iam-authenticator/pkg.Version=#{version}",
+               "-X sigs.k8s.io/aws-iam-authenticator/pkg.CommitID=#{Utils.git_head}",
+               "-buildid=''"]
+    system "go", "build", *std_go_args(ldflags: ldflags.join(" ")), "./cmd/aws-iam-authenticator"
     prefix.install_metafiles
   end
 
