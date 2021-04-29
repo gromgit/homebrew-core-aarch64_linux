@@ -11,11 +11,10 @@ class Rgf < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ec708a6c591ac0103bafc39608b3ac287b72c67b99d25929345b727776a96b65"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ce42712fd7c267b9df1de9e869c08b46a33227f416a7986c91bc181deaedf8b9"
-    sha256 cellar: :any_skip_relocation, catalina:      "6de68732658233225c9b6bac4d685e9e11a51748f140e3213dee4bbda47f0a14"
-    sha256 cellar: :any_skip_relocation, mojave:        "4ec45f0308dbbe42ddb35ada76473f5d9cead2fb118fa5d71a5ef3a8ce684435"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "8887ef17fd595310b43d6ef940a28608fced9c828f012a0d991929c8d44a0ab4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "521b1290a8f4c1df387d6a5154ee17cfeb4135b0bc29daffc8233b5d6e050e4c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "88ea31516318953101add3d40fee31904651b93b27b1050650b9ce234ed7c867"
+    sha256 cellar: :any_skip_relocation, catalina:      "8183722939081f3a0fc2d55ced41d873fb77e0fb00573713c9aac0e935e952c8"
+    sha256 cellar: :any_skip_relocation, mojave:        "157d6024686c5333c2789b0f40fe3aa7bbaf5341b39c9ee8fe0654db45543a74"
   end
 
   depends_on "cmake" => :build
