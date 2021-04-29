@@ -5,6 +5,10 @@ class Psql2csv < Formula
   sha256 "f961c3ca980ce4b527a0d86b593c73fbf244829a20ab7df343e1c077818ddba0"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "9c6880c0b5911b3d8bbc35d5076acd31742f1a09238fc8404501dcb5ffb2bc35"
+  end
+
   depends_on "postgresql"
 
   def install
