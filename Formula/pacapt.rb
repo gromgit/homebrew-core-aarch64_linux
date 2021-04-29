@@ -6,11 +6,7 @@ class Pacapt < Formula
   license "Fair"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3b681e481088b2f2279e620e542d46ca666a725515df287fbbfafb18fc398097"
-    sha256 cellar: :any_skip_relocation, big_sur:       "21d766d65cbf0896dc0cd0e21454de7f2aedd1f72ef14aed9310962e8a31184b"
-    sha256 cellar: :any_skip_relocation, catalina:      "88560339524e9f110cb58ddd3e8744cc44d6e24f86c0b9ca05ef01a059c55be2"
-    sha256 cellar: :any_skip_relocation, mojave:        "88560339524e9f110cb58ddd3e8744cc44d6e24f86c0b9ca05ef01a059c55be2"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "88560339524e9f110cb58ddd3e8744cc44d6e24f86c0b9ca05ef01a059c55be2"
+    sha256 cellar: :any_skip_relocation, all: "b56c302d42d411afc589d987acfc7d512832c4b48203b2c95bca9461578ec54d"
   end
 
   def install
