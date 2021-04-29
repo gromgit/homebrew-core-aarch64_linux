@@ -6,6 +6,13 @@ class Autorestic < Formula
   license "Apache-2.0"
   head "https://github.com/cupcakearmy/autorestic.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5244ac8cbd04b7cc52e75e8edbf114db12155ff982de48c4ba14e65b38793220"
+    sha256 cellar: :any_skip_relocation, big_sur:       "79037e1da3f7666e3e50c6375fdad8166c795a9c036efc3420c22ba70e28f733"
+    sha256 cellar: :any_skip_relocation, catalina:      "c2a41089b5742f9d5d5b934c14542406eac30e2cb9944e7fb554feb60a37f1ec"
+    sha256 cellar: :any_skip_relocation, mojave:        "7f7da8655489990e40bd36239bd3cb00c0cd7ef1c94d2159177a2a56d404907e"
+  end
+
   depends_on "go" => :build
   depends_on "restic"
 
