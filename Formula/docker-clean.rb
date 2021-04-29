@@ -5,6 +5,10 @@ class DockerClean < Formula
   sha256 "4b636fd7391358b60c05b65ba7e89d27eaf8dd56cc516f3c786b59cadac52740"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "d23f5d1c32f2bd4a758bf8111008d0f6111080de861ca24abd0f8d5cd6ee6b86"
+  end
+
   def install
     bin.install "docker-clean"
   end
