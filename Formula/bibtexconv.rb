@@ -7,10 +7,10 @@ class Bibtexconv < Formula
   head "https://github.com/dreibh/bibtexconv.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "61628b4d7ad5508ba641b305478fd6f457e30e73c23c22bd69883237c918ce22"
-    sha256 cellar: :any, big_sur:       "00f142e76fa6306e5de3ea352f81c8061119a8abdba4ec678f9c74efae97ca56"
-    sha256 cellar: :any, catalina:      "989c035897f4c7ae44ccffc47b8bfcd7f52cedbe7cdd7bf909c994892a447262"
-    sha256 cellar: :any, mojave:        "d6ebc4679598215456f0c608430b58621b8404f1fb8f467d14da6353b7f8478c"
+    sha256 cellar: :any, arm64_big_sur: "e1695a1a03185cbf7f50c031cfab3d77777a6c8bd47c88ea1799fd097d4b8dfa"
+    sha256 cellar: :any, big_sur:       "aaab664beb497d6f9c7e84e7e3cf72fb68bbd813c3398e7b561b7fd611a5ed8a"
+    sha256 cellar: :any, catalina:      "5b9d6cc6d178116fe7e18d87c807cd4427d105e450feb0bd10a1649d64f61ed7"
+    sha256 cellar: :any, mojave:        "01522a08151261c2fb84298b690e00ad4699285ccfd2e2b021baedb1b6174bb6"
   end
 
   depends_on "cmake" => :build
