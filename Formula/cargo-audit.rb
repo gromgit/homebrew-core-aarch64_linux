@@ -7,10 +7,10 @@ class CargoAudit < Formula
   head "https://github.com/RustSec/cargo-audit.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "94a00879936962e670f0368b378b10ed0f463d290b0e6d86a74c5b01cf6d1bc5"
-    sha256 cellar: :any, big_sur:       "e22d5081a6b6bf512c5b1486ac6d7cab6f49fce8da27e3bdb9b9bba7d812cf3a"
-    sha256 cellar: :any, catalina:      "b5630a5dc10e0b1bd98274c91fc4cd8c2ccca002b0ed5eca2f72c7b5b65d356b"
-    sha256 cellar: :any, mojave:        "68c918a7951990e869829f6d80421aa12968da30e9d93ba1569a6a012b2290ee"
+    sha256 cellar: :any, arm64_big_sur: "5135cd085b6e2a687ac7e64fa7c0c38dc75132f1aeb628cb096e67dc51e5cd20"
+    sha256 cellar: :any, big_sur:       "4e45de8a4031f71511991181b941ce01e77c095020ddee580a2d9acc053ff958"
+    sha256 cellar: :any, catalina:      "1e64730b7d7d3212bc3a6d2095f436d31a6dc3024edf0c2372abd058598472c8"
+    sha256 cellar: :any, mojave:        "c3b4a847138404b1500c94a4eca5d1b3f8a9bda86f7976856306cf5c251e362c"
   end
 
   depends_on "rust" => :build
