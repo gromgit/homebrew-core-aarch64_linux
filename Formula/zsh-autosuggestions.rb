@@ -6,7 +6,8 @@ class ZshAutosuggestions < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "6f79c9ded23bb32288fc81bcb969ee71b2c6cdba4f88c2c999db6eaf3286bb8c"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "e204984ca8abc4d6ca97b0b66acfd0136c3bfac10aba59f55b6f3cc3b189934e"
   end
 
   def install
