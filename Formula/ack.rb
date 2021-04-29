@@ -6,7 +6,8 @@ class Ack < Formula
   license "Artistic-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "1144fb38519900528fc80d71ef1028b6ae3a9bb4b97b465eeb0f03a75c47a280"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "26e3c497d9583d7d8b8bfe60f75b3485bc7f07f0e1ea86ad5b338f58bd88a930"
   end
 
   head do
