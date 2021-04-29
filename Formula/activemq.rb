@@ -6,6 +6,10 @@ class Activemq < Formula
   sha256 "212feca1ee4bc750befd45a735cbfef00c0c9aee451ef5116e991330c1ab105b"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "e9b4d36bb04448419691a35a64a784249748ab2ae57cf73963834a99d31a06da"
+  end
+
   depends_on "openjdk"
 
   def install
