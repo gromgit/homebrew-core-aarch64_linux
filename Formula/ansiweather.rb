@@ -6,6 +6,10 @@ class Ansiweather < Formula
   license "BSD-2-Clause"
   head "https://github.com/fcambus/ansiweather.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "ef34ba57b350fcf65cfd5fbcab88c5209c75d225e2af9a8b9c48bffc99d01b37"
+  end
+
   depends_on "jq"
 
   def install
