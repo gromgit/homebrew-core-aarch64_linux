@@ -6,10 +6,10 @@ class Crane < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "747eb1fde14926d51fb07fed9dd7f3bf34416c39bcf2d3151a3b742f66f7b38e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "319e61c56ca16f9ddb36264ff903c82c90f27023820f9f267d4c569f5f6cb18f"
-    sha256 cellar: :any_skip_relocation, catalina:      "2fb63e2a8355d88d83f02f39c8c088d91d184abb4ac434af43c4e54107e04bee"
-    sha256 cellar: :any_skip_relocation, mojave:        "835e2ec55f5defd87c638af9efb366385b13806aa325085c0befec5a237a1ebd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "581781712828260aba980e48180c017aa8ce251b0873e673bdd562e8a8d968ec"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c4d9827390cbea19f3606d87ee65282304c6ed5e8c0efcba894f84b1d3d05873"
+    sha256 cellar: :any_skip_relocation, catalina:      "7ce4b31487f73180225c6884f172b1f7b513bc381729624308de28f99cd7110b"
+    sha256 cellar: :any_skip_relocation, mojave:        "c2a41d226e4590cff7067e040d7753f5604bf824079bea66bd7a494f87ddb2b2"
   end
 
   depends_on "go" => :build
