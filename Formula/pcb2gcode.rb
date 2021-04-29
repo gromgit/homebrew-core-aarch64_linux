@@ -7,10 +7,10 @@ class Pcb2gcode < Formula
   head "https://github.com/pcb2gcode/pcb2gcode.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "b2913d5e7cd0249a9deced42f32460d53ce041cf722ef596006d52a0ad589e00"
-    sha256 cellar: :any, big_sur:       "2bc5b19eac04e1e705a59e90c797f0bdd942f5d8014e85fce5230ec802db2a76"
-    sha256 cellar: :any, catalina:      "cfbd3a15f30408288d3e7597e1e81a56940a107f5b9b6bc1274bb7b3edb87a1d"
-    sha256 cellar: :any, mojave:        "d29249c9fa2980d6ad5fea05b27e6255a8893be1cacb146606e2cab1b21dd4ed"
+    sha256 cellar: :any, arm64_big_sur: "596ef4d44d9da58ce8ce77fc51605c9a1229a8b763e47f785baf202b0ba2a208"
+    sha256 cellar: :any, big_sur:       "d08a9c3c499b9b9d510942cb8e7f6bae057eb29cadeab474ce0bbd13ae452d43"
+    sha256 cellar: :any, catalina:      "5872fbb4710e05c4ad1795ea8cbb75fe26bc031cd00041156efc30f9fe632101"
+    sha256 cellar: :any, mojave:        "73c321af8bd386af20ec60cf9e0c98600f12681b5bdd8bac70504457ebcc8bad"
   end
 
   # Release 2.0.0 doesn't include an autoreconfed tarball
