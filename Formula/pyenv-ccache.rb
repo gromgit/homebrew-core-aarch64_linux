@@ -6,6 +6,10 @@ class PyenvCcache < Formula
   license "MIT"
   head "https://github.com/pyenv/pyenv-ccache.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "8cb5b918ec485fd99f0af48056be2d00d2c1bf2055f7f5890dbf6335086be4b5"
+  end
+
   depends_on "ccache"
   depends_on "pyenv"
 
