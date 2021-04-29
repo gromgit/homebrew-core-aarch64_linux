@@ -5,6 +5,10 @@ class Vf < Formula
   sha256 "6418d188b88d5f3885b7a8d24520ac47accadb5144ae24e836aafbea4bd41859"
   head "https://github.com/glejeune/vf.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "af5c51ba431bf48386231cb735f98bf038dbf3145ea96d55924e12564748a93f"
+  end
+
   def install
     # Since the shell file is sourced instead of run
     # install to prefix instead of bin
