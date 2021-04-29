@@ -9,10 +9,10 @@ class Mujs < Formula
   head "https://github.com/ccxvii/mujs.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "7776f7200679dc7249828a8458dae80e0301a057926aed713d5770f0104750c9"
-    sha256 cellar: :any, big_sur:       "a4c8d413efbb3b2cc80e796b3690dd0a74fadb47c12f513fd0c54c6258b5739c"
-    sha256 cellar: :any, catalina:      "d054e0dabc7d7a420cb962e279b1a7f78faa9c6933c59a9e93569732c65ea0c6"
-    sha256 cellar: :any, mojave:        "ad3d0b6ffb7c7c0069ea8d31b4f4188e676787d2db6ff0e87f4e71807448df52"
+    sha256 cellar: :any, arm64_big_sur: "4a9c425ba618532c01217ca4b40bc98e6ed3db93694a738da552ddcb5a368e15"
+    sha256 cellar: :any, big_sur:       "232f818ac53dda527860225fa358b2e7aa46f1c1385335406a48c9254dbbcce7"
+    sha256 cellar: :any, catalina:      "7a17de9728ae20735d5ed74719a81aaa5be74c37d726f11dc161a7c5ef8ba8cd"
+    sha256 cellar: :any, mojave:        "d42e999efee733893ea29b4ab71582cd26954d25ee6d258a2eb944d6c69a96dd"
   end
 
   on_linux do
