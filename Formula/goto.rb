@@ -5,6 +5,10 @@ class Goto < Formula
   sha256 "460fe3994455501b50b2f771f999ace77ade295122e90e959084047dbfb1f0dc"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "151a459ba41105325842a700dfca388a6df6512ca3b0b50173cae906cfc78509"
+  end
+
   def install
     bash_completion.install "goto.sh"
   end
