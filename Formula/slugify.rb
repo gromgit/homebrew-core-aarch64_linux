@@ -6,6 +6,10 @@ class Slugify < Formula
   license "MIT"
   head "https://github.com/benlinton/slugify.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "73fa2281dd5bc54549c488774feb2d262b0a4e80c4bedf2e017f90e74293076d"
+  end
+
   def install
     bin.install "slugify"
     man1.install "slugify.1"
