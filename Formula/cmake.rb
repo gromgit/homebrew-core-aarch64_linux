@@ -14,10 +14,10 @@ class Cmake < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b94fa9c13065ce31259621e1ac1ff8f46c0a6ee606a5944f2562ed86c7fcf2a6"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c8b975b0911f9125065459e9b55da2c43fc58485446ec35d8294d2db2ad77972"
-    sha256 cellar: :any_skip_relocation, catalina:      "1875ab07ed5843cdc06368ae851ec1232a72bb679f70f816e549acfe5fff6c31"
-    sha256 cellar: :any_skip_relocation, mojave:        "0af0a3d97a83dcdece0c5a8ba867d6b199b928f1c4e0a325eef785af6b8f2f1e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "cd249c48979cc3df65cc7b1a0cc00a1d702bdf0e95ac616cee16c9daea576c59"
+    sha256 cellar: :any_skip_relocation, big_sur:       "44f432c44eef7f20474002009392ab763be05c1962a086b7c79cb9f9bf4df47c"
+    sha256 cellar: :any_skip_relocation, catalina:      "abf670453c8e7394215bbad68cf11e1bae8e598a86cc7886f4d3a9f48e9ef87a"
+    sha256 cellar: :any_skip_relocation, mojave:        "a60610090a757e36e9799be128d8404330ebd79e6d1e19fe3926dbcb95fd8e3c"
   end
 
   depends_on "sphinx-doc" => :build
