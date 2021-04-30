@@ -11,6 +11,10 @@ class Tfenv < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "ca841a7cdaca4488d09fdee4a0eaa2a1a3cdb5e9837e32183ce0fddbee9d4f6b"
+  end
+
   uses_from_macos "unzip"
 
   conflicts_with "terraform", because: "tfenv symlinks terraform binaries"
