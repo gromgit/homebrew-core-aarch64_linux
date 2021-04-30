@@ -5,6 +5,13 @@ class Imath < Formula
   sha256 "9cd984bb6b0a9572dd4a373b1fab60bc4c992a52ec5c68328fe0f48f194ba3c0"
   license "BSD-3-Clause"
 
+  bottle do
+    sha256 arm64_big_sur: "f69d88d25f012ccdd25c4a7036ebdc5deb2172d2d462cca5795a705d2f0b8a1e"
+    sha256 big_sur:       "d821e18ce9ea2dccf94a43d7facd5a2fd7e3ab327e066ee02d21676d2931262e"
+    sha256 catalina:      "567b606d357b6b959d3ce32e5abe3abcd9b1d43494d7c11a7f48726657a47fb1"
+    sha256 mojave:        "fd2aa308bbed5163af6fc50dbb9c3af3f9a5f3aaff0b29b1e71c4019c661ea87"
+  end
+
   depends_on "cmake" => :build
 
   conflicts_with "ilmbase",
