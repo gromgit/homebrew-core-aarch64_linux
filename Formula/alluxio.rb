@@ -10,6 +10,10 @@ class Alluxio < Formula
     regex(%r{href=["']?v?(\d+(?:[.-]\d+)+)/?["' >]}i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "83bb4aee6c68ca243839d154685f0a37c8e3c8a2eb812d0528d05cc2b32a9e2a"
+  end
+
   # Alluxio requires Java 8 or Java 11
   depends_on "openjdk@11"
 
