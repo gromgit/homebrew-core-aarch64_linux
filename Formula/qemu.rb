@@ -2,23 +2,16 @@ class Qemu < Formula
   desc "Emulator for x86 and PowerPC"
   homepage "https://www.qemu.org/"
   license "GPL-2.0-only"
-  revision 1
   head "https://git.qemu.org/git/qemu.git"
 
   stable do
-    url "https://download.qemu.org/qemu-5.2.0.tar.xz"
-    sha256 "cb18d889b628fbe637672b0326789d9b0e3b8027e0445b936537c78549df17bc"
+    url "https://download.qemu.org/qemu-6.0.0.tar.xz"
+    sha256 "87bc1a471ca24b97e7005711066007d443423d19aacda3d442558ae032fa30b9"
 
     # remove in next release
     patch do
-      url "https://git.qemu.org/?p=qemu.git;a=patch;h=0dbce6efb5ff2e7113734d3a0cabbf87fc56feec"
-      sha256 "8ced33c7f829216544b762d8db0f143dbea04fa5a1ce41b491bbd7808f64a944"
-    end
-
-    # remove in next release
-    patch do
-      url "https://git.qemu.org/?p=qemu.git;a=patch;h=cb7abd8319d19000b57ae6c5c474c2635db054c6"
-      sha256 "818ad42f0cb25ab5df37058e27d7f879e4389489f692da4404c1f15dde5b2c4d"
+      url "https://git.qemu.org/?p=qemu.git;a=patch;h=75eebe0b1f15464d19a39c4186bfabf328ab601a"
+      sha256 "9f4db8c6f80f4a87baf1b778fea62bbad89db9db5fd47548c2d22e5475edd910"
     end
   end
 
