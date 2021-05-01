@@ -27,31 +27,11 @@ class Aliddns < Formula
     pkgetc.install "aliddns.yaml"
   end
 
-  plist_options manual: "aliddns -c #{HOMEBREW_PREFIX}/etc/aliddns/aliddns.yaml"
-
-  def plist
-    <<~EOS
-      <?xml version="1.0" encoding="UTF-8"?>
-      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-      <plist version="1.0">
-        <dict>
-          <key>Label</key>
-          <string>#{plist_name}</string>
-          <key>KeepAlive</key>
-          <true/>
-          <key>ProgramArguments</key>
-          <array>
-            <string>#{opt_bin}/aliddns</string>
-            <string>-c</string>
-            <string>#{etc}/aliddns/aliddns.yaml</string>
-          </array>
-          <key>StandardErrorPath</key>
-          <string>#{var}/log/aliddns.log</string>
-          <key>StandardOutPath</key>
-          <string>#{var}/log/aliddns.log</string>
-        </dict>
-      </plist>
-    EOS
+  service do
+    run [opt_bin/"aliddns", "-c", etc/"aliddns/aliddns.yaml"]
+    keep_alive true
+    log_path var/"log/aliddns.log"
+    error_log_path var/"log/aliddns.log"
   end
 
   test do
