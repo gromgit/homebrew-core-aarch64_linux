@@ -7,10 +7,10 @@ class Dbdeployer < Formula
   head "https://github.com/datacharmer/dbdeployer.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8c01239d6368c41369b860d413f90bed667fda48b709f58abc5e33aa9561fb1b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "987f418e2bbda24daf4d920aef22a09aef24c202f7d007005ec5c7810c820666"
-    sha256 cellar: :any_skip_relocation, catalina:      "7209ee6ca22e01bd6a2526d0069e13dc7918c987d5c3b9925975c5de510face5"
-    sha256 cellar: :any_skip_relocation, mojave:        "e787cc9e52baf19755efc5a481d069a208c7fa4c07df84acab393c4582b482d5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c749e26aeab50d9abb649a90bb3303a429efcedb5f863dd3b2c880b4051a7c02"
+    sha256 cellar: :any_skip_relocation, big_sur:       "2e1c6058d58af524c2c41befc5f1f13240f427c473467a270aee97e0c8d08d76"
+    sha256 cellar: :any_skip_relocation, catalina:      "3870e057b858f77beaab73f15ed720fa44bf80750b7e2b3e7e09989f26259519"
+    sha256 cellar: :any_skip_relocation, mojave:        "5f0644a8ac31e580fe5d4f1454331bac41490b5df8d1354c73533607e42296c3"
   end
 
   depends_on "go" => :build
