@@ -6,11 +6,10 @@ class FdkAac < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "90dee33598510f7bca41e3da463e18f5400d71639af4394668ade28b89dc6175"
-    sha256 cellar: :any, big_sur:       "aacfb5ad63c65fd2a2de00ce2bb20e2b620b26e21e9c76cafbf967327d03a49d"
-    sha256 cellar: :any, catalina:      "526c83a79b7f208f07e8d04ad5ce47c8104d90a76034e42422d124fba128ba3c"
-    sha256 cellar: :any, mojave:        "9353da38e4b43913964f9cdc5fc2a28c4b6c0a19ceef4e2a58db62ba3fdb4d49"
-    sha256 cellar: :any, high_sierra:   "a8812e355f28272c7d8153bcda0e48a58c0bd0a880ed0256a2bc460143d1df78"
+    sha256 cellar: :any, arm64_big_sur: "cf0840a736c0cd0f009e7b3015545ac46fc6c5474163c4f04514065b6cc16454"
+    sha256 cellar: :any, big_sur:       "21df35d8501a3962ae713c598b4c94300938cabe8bded66021d0aff129fe00ef"
+    sha256 cellar: :any, catalina:      "b4e0f2728235e4763c6a4d95b0c4eafdb28119e5f4f22397e23e35dacb88e8a8"
+    sha256 cellar: :any, mojave:        "76e2a579c432470211d10a58284267edce7eae47ccfea7ed334426b9594d309a"
   end
 
   head do
