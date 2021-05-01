@@ -100,33 +100,14 @@ class Black < Formula
     virtualenv_install_with_resources
   end
 
-  plist_options startup: true, manual: "blackd"
+  plist_options startup: true
 
-  def plist
-    <<~EOS
-      <?xml version="1.0" encoding="UTF-8"?>
-      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-      <plist version="1.0">
-      <dict>
-        <key>KeepAlive</key>
-        <true/>
-        <key>Label</key>
-        <string>#{plist_name}</string>
-        <key>ProgramArguments</key>
-        <array>
-          <string>#{opt_bin}/blackd</string>
-        </array>
-        <key>RunAtLoad</key>
-        <true/>
-        <key>WorkingDirectory</key>
-        <string>#{HOMEBREW_PREFIX}</string>
-        <key>StandardOutPath</key>
-        <string>#{var}/log/blackd.log</string>
-        <key>StandardErrorPath</key>
-        <string>#{var}/log/blackd.log</string>
-      </dict>
-      </plist>
-    EOS
+  service do
+    run opt_bin/"blackd"
+    keep_alive true
+    working_dir HOMEBREW_PREFIX
+    log_path var/"log/blackd.log"
+    error_log_path var/"log/blackd.log"
   end
 
   test do
