@@ -10,6 +10,13 @@ class Xfig < Formula
     regex(%r{url=.*?/xfig[._-]v?(\d+(?:\.\d+)+[a-z]?)\.t}i)
   end
 
+  bottle do
+    sha256 arm64_big_sur: "507e8fe60993894dad06f4858efe60688d3af0fcebfd16b64ae49fe37921904c"
+    sha256 big_sur:       "ffb26267062fdf96bc4356bbe0853e86cc1f83b8aedd7e73931bbd6cc3e1dc95"
+    sha256 catalina:      "a0b961545f64c9dbfd9d829c723d1236d71eea43a12ee2ede238cbacb08d73ae"
+    sha256 mojave:        "d9a0b286b4de4609cbee6ce952c58ba8e7a31d8780699c409132da630b4b7916"
+  end
+
   depends_on "fig2dev"
   depends_on "ghostscript"
   depends_on "jpeg"
