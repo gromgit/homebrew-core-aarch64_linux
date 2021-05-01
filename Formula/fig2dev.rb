@@ -11,10 +11,10 @@ class Fig2dev < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "95b7c74801a014788a54d560cfbbcf02097ec130c55741d53bf6736bc6ef0f50"
-    sha256 big_sur:       "09824b751f1163b65751face98b86efe09817f6f5ad70aa5f27122edf2c38366"
-    sha256 catalina:      "5a83656ea1633db4434c171ff87c2207395ad1a21dd96b6fad66fe1017d06d0f"
-    sha256 mojave:        "30502ec9c6c26a00f8e775a515a546cfadb30b5a92e44f06474bca5c1a48dc72"
+    sha256 arm64_big_sur: "8a3e1351d4c8b31e2c538250903ad21cf28e39c2ff4a977f664fb7db5636e30c"
+    sha256 big_sur:       "7ad02c0ad95d91a65a80357fa8ff68c832b3a974e39914d5a15ec7d55f539893"
+    sha256 catalina:      "6399ec140f9170e5a91e36e1186e597761a6c230cec05449be3d27c0d493632a"
+    sha256 mojave:        "ded06a69898ae372ecd05d5a5324f99369fc67876318934a1fd278a5dd03e6bf"
   end
 
   depends_on "ghostscript"
