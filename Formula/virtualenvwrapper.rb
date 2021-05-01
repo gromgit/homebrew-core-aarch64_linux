@@ -7,6 +7,13 @@ class Virtualenvwrapper < Formula
   sha256 "51a1a934e7ed0ff221bdd91bf9d3b604d875afbb3aa2367133503fee168f5bfa"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4847b18e81235ba12d81a8817c081154667ef2afdc1b34bc3a7af12e9ce3ccdb"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0fd8944fc74014f2800ce37b599de8c5255634955d4ef16b7991af051113996c"
+    sha256 cellar: :any_skip_relocation, catalina:      "697b57f6d32966c9ac4a1616ea61b38280e14a6ae7a4f728e64dfc90189893f2"
+    sha256 cellar: :any_skip_relocation, mojave:        "4d4362c4a489e256a3804103464dbf05809f753f92d9918bd82be0f2e8ff88e5"
+  end
+
   depends_on "python@3.9"
   depends_on "virtualenv"
 
