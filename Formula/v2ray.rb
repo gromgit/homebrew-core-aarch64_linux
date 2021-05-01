@@ -12,10 +12,10 @@ class V2ray < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "40f99b12b5b55b47d14349c612d188df63931dca8d483b5da661d8f4fd21af97"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a2f5f1604148a09afe67dc79ad2666fa4b64d21497a7b22f387db1a0619a3929"
-    sha256 cellar: :any_skip_relocation, catalina:      "8c62717111cbe94e31a5d180c78980159ed30c918534929c39841cdc369aecc5"
-    sha256 cellar: :any_skip_relocation, mojave:        "27b44137dd25340c495affb4023cc2c60f7ab0f772183574636f6d2780719008"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6b62a3435c83d8b49147192ce9b6627b4a27705aed17e78b6e0601882ce17621"
+    sha256 cellar: :any_skip_relocation, big_sur:       "22291c2a1266367077d35e129e753279faa023b862fe249fa7e69b4ea948d737"
+    sha256 cellar: :any_skip_relocation, catalina:      "cbbe8abf3cbf92b1860da4a48577676a744bcceb44e66d2cc2307c7414244385"
+    sha256 cellar: :any_skip_relocation, mojave:        "1d26ccd44c19d2eeff908e9c69a2558d4ac682e21506a05ccc3d55bb3ff1295e"
   end
 
   depends_on "go" => :build
