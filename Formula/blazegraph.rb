@@ -20,26 +20,11 @@ class Blazegraph < Formula
     bin.write_jar_script libexec/"blazegraph.jar", "blazegraph", java_version: "1.8"
   end
 
-  plist_options startup: "true", manual: "blazegraph start"
+  plist_options startup: "true"
 
-  def plist
-    <<~EOS
-      <?xml version="1.0" encoding="UTF-8"?>
-      <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN"
-      "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-      <plist version="1.0">
-        <dict>
-          <key>Label</key>
-          <string>#{plist_name}</string>
-          <key>Program</key>
-          <string>#{opt_bin}/blazegraph</string>
-          <key>RunAtLoad</key>
-          <true/>
-          <key>WorkingDirectory</key>
-          <string>#{opt_prefix}</string>
-        </dict>
-      </plist>
-    EOS
+  service do
+    run opt_bin/"blazegraph"
+    working_dir opt_prefix
   end
 
   test do
