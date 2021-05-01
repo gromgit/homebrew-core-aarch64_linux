@@ -13,10 +13,10 @@ class Libepoxy < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "7db980cb3bd2ee6f121cca0d9039965460ed99516fd83bd66beb00a0281f34f1"
-    sha256 cellar: :any, big_sur:       "bbf7d15c4937101479c15e3fcaf5ca9311d4862e2aa26aa69653841f1432ad73"
-    sha256 cellar: :any, catalina:      "634e7833ff644eb9deda3a21a0194b178295d4b120b7f1f7eb6080ddd6325548"
-    sha256 cellar: :any, mojave:        "9b6337f51f9fe1d49b7260f07caee990b1cd7e30c032a41c873eb25d8d1b7751"
+    sha256 cellar: :any, arm64_big_sur: "a6ceb2c71ddc503492f9992a236e82282108968708c59c115b2070ccc090b9fa"
+    sha256 cellar: :any, big_sur:       "db75486d4407ac6ad7555b4aa0ce475b7c6308514142df8345a27e1e6a0095e0"
+    sha256 cellar: :any, catalina:      "bbd5b5e7a51dc98b8309500469e1ba56c0bbfb9804eb8c041d2f994a93830346"
+    sha256 cellar: :any, mojave:        "1e6e1e73f88f5a4e3ffc7b2667994cffdb29a27c2d1ce9014dbb42e61e617d89"
   end
 
   depends_on "meson" => :build
