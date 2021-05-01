@@ -51,30 +51,10 @@ class Apollo < Formula
     EOS
   end
 
-  plist_options manual: "#{HOMEBREW_PREFIX}/var/apollo/bin/apollo-broker run"
-
-  def plist
-    <<~EOS
-      <?xml version="1.0" encoding="UTF-8"?>
-      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-      <plist version="1.0">
-        <dict>
-          <key>KeepAlive</key>
-          <true/>
-          <key>Label</key>
-          <string>#{plist_name}</string>
-          <key>ProgramArguments</key>
-          <array>
-            <string>#{var}/apollo/bin/apollo-broker</string>
-            <string>run</string>
-          </array>
-          <key>RunAtLoad</key>
-          <true/>
-          <key>WorkingDirectory</key>
-          <string>#{var}/apollo</string>
-        </dict>
-      </plist>
-    EOS
+  service do
+    run [var/"apollo/bin/apollo-broker", "run"]
+    working_dir var/"apollo"
+    keep_alive true
   end
 
   test do
