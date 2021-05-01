@@ -1,8 +1,8 @@
 class CargoWatch < Formula
   desc "Watches over your Cargo project's source"
   homepage "https://github.com/passcod/cargo-watch"
-  url "https://github.com/passcod/cargo-watch/archive/v7.7.2.tar.gz"
-  sha256 "395d0ce648010394bc769f93eac521fe3dbf25c317c2c54c9b623b0f23027aac"
+  url "https://github.com/passcod/cargo-watch/archive/v7.8.0.tar.gz"
+  sha256 "9816b102e61c4257d6052ef4b196f67f40bab69143899f0178b5ccd9a29d384e"
   license "CC0-1.0"
   head "https://github.com/passcod/cargo-watch.git"
 
@@ -13,7 +13,7 @@ class CargoWatch < Formula
     sha256 cellar: :any_skip_relocation, mojave:        "ecaaebdc7c44594390ae2bc9067f96e691357d5bd96ec17cfa2db248b22cf0a4"
   end
 
-  depends_on "rust" => :build
+  depends_on "rust" => [:build, :test]
 
   def install
     system "cargo", "install", *std_cargo_args
@@ -21,7 +21,7 @@ class CargoWatch < Formula
 
   test do
     output = shell_output("#{bin}/cargo-watch -x build 2>&1", 1)
-    assert_match "error: failed to start `cargo metadata`", output
+    assert_match "error: project root does not exist", output
 
     assert_equal "cargo-watch #{version}", shell_output("#{bin}/cargo-watch --version").strip
   end
