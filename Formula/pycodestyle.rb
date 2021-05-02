@@ -6,6 +6,10 @@ class Pycodestyle < Formula
   license "MIT"
   head "https://github.com/PyCQA/pycodestyle.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "6d8fc8922c94085c4b7d8b627617468c03b7fa9a3499b2bcde0d6da4005eff6c"
+  end
+
   def install
     bin.install "pycodestyle.py" => "pycodestyle"
   end
