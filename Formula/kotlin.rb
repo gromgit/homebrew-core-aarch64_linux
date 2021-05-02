@@ -10,6 +10,10 @@ class Kotlin < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "08442ba0365a67823f0d4d9fef99c18525ac1f7a429c9fb13a732dd9c86a73ad"
+  end
+
   depends_on "openjdk"
 
   def install
