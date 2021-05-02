@@ -8,10 +8,10 @@ class Autopep8 < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e4b451272fc816df61973e3b9fb6360cb2721d4b433ceac85ede151806220271"
-    sha256 cellar: :any_skip_relocation, big_sur:       "90cffde948ca271a3f1a380a0bfb99663e681c5ee839d81a6c0a62ddddb777bd"
-    sha256 cellar: :any_skip_relocation, catalina:      "abadae93b663e65e97d316b178352ea9495731130218353f5b9d498671e31bbf"
-    sha256 cellar: :any_skip_relocation, mojave:        "d3f976f4106401da5f60fe4251f043c854e15e3aeb08f98a4914f0f5d6c83763"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e01de60b088330ccdf3c99a1144dd2b2e6470d2916490ffd597e170660e2c702"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5e079165ba4d0b9148886ed526d9c8a9be8b637cfd5c74b1ccd52fe87bc6574c"
+    sha256 cellar: :any_skip_relocation, catalina:      "5e079165ba4d0b9148886ed526d9c8a9be8b637cfd5c74b1ccd52fe87bc6574c"
+    sha256 cellar: :any_skip_relocation, mojave:        "5e079165ba4d0b9148886ed526d9c8a9be8b637cfd5c74b1ccd52fe87bc6574c"
   end
 
   depends_on "python@3.9"
