@@ -9,11 +9,10 @@ class Appium < Formula
   head "https://github.com/appium/appium.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "dfdf7b266b87ae1305b59edd974bb6c5c45540f039c1d3ec1fc1a9409ae8e0f4"
-    sha256 cellar: :any, big_sur:       "3b1fb101b829a8c4c94a42c452579c7cd90fd48a42fc0d3c0e8af52390312232"
-    sha256 cellar: :any, catalina:      "05cec8a15e6974dd917aa41ebf3bd9d5df45fb8f4c0b9d0496775257cb2c91a5"
-    sha256 cellar: :any, mojave:        "d3fdc01e23b34d4829f6b1f5d63cbc178448ffdae9a28cca17ca879241b2f63c"
+    sha256 cellar: :any, arm64_big_sur: "4dd71c228058ccb1d8d5228bfe2e185f56b6bf3319bc0eb7a869063061a5d865"
+    sha256 cellar: :any, big_sur:       "23444487c2d7cf59ac07501c52fe8a93811176242d7a46c4a24fa28fe00cf8a6"
+    sha256 cellar: :any, catalina:      "23444487c2d7cf59ac07501c52fe8a93811176242d7a46c4a24fa28fe00cf8a6"
+    sha256 cellar: :any, mojave:        "23444487c2d7cf59ac07501c52fe8a93811176242d7a46c4a24fa28fe00cf8a6"
   end
 
   depends_on "node"
