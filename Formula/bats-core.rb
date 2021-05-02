@@ -5,6 +5,10 @@ class BatsCore < Formula
   sha256 "1d5075e6e712dc15fbe818b9d88605dbc8908269857f054b046321a4b9cba089"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "757a7ba99f6aec5343c4cae561ad68c56ea3e03e7de8309aa4cb7958392291ff"
+  end
+
   depends_on "coreutils"
 
   conflicts_with "bats", because: "both install `bats` executables"
