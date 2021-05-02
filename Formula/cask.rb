@@ -6,6 +6,10 @@ class Cask < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/cask/cask.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "bd85befe31659e948617b988ed604d70199af9e7dd22dcfc8be6d76ecd92ee0b"
+  end
+
   depends_on "coreutils"
   depends_on "emacs"
 
