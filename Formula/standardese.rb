@@ -1,9 +1,10 @@
 class Standardese < Formula
   desc "Next-gen documentation generator for C++"
   homepage "https://standardese.github.io"
+  # TODO: use resource blocks for vendored deps
   url "https://github.com/standardese/standardese.git",
-      tag:      "0.5.1",
-      revision: "22561bfc6a5d9dd371abc999d5ef3594fcc75b80"
+      tag:      "0.5.2",
+      revision: "0b23537e235690e01ba7f8362a22d45125e7b675"
   license "MIT"
   head "https://github.com/standardese/standardese.git"
 
@@ -21,21 +22,18 @@ class Standardese < Formula
 
   def install
     system "cmake", "-S", ".", "-B", "build",
-                    "-DCMAKE_INSTALL_RPATH=#{opt_libexec}/lib",
+                    "-DCMAKE_INSTALL_RPATH=#{rpath}",
                     "-DCMARK_LIBRARY=#{Formula["cmark-gfm"].opt_lib/shared_library("libcmark-gfm")}",
                     "-DCMARK_INCLUDE_DIR=#{Formula["cmark-gfm"].opt_include}",
                     *std_cmake_args
-    system "cmake", "--build", "build", "--target", "standardese_tool"
+    system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
-    cd "build" do
-      (libexec/"lib").install "src/#{shared_library("libstandardese")}"
-      (libexec/"lib").install "external/cppast/#{shared_library("lib_cppast_tiny_process")}"
-      (libexec/"lib").install "external/cppast/src/#{shared_library("libcppast")}"
-    end
-    cd "include" do
-      include.install "standardese"
-    end
+    lib.install "build/src/#{shared_library("libstandardese")}"
+    lib.install "build/external/cppast/external/tpl/#{shared_library("libtiny-process-library")}"
+    lib.install "build/external/cppast/src/#{shared_library("libcppast")}"
+
+    include.install "include/standardese"
     (lib/"cmake/standardese").install "standardese-config.cmake"
   end
 
@@ -71,6 +69,6 @@ class Standardese < Formula
            "--compilation.standard", "c++17",
            "--output.format", "xml",
            testpath/"test.hpp"
-    system "fgrep", "-q", "<subdocument output-name=\"doc_test\" title=\"test.hpp\">", testpath/"doc_test.xml"
+    assert_includes (testpath/"doc_test.xml").read, "<subdocument output-name=\"doc_test\" title=\"test.hpp\">"
   end
 end
