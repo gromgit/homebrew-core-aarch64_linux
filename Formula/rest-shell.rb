@@ -7,6 +7,10 @@ class RestShell < Formula
   sha256 "0ecfa67d005cc0d51e7a3a26c4dacc53aa12012f0e757332a2fa40c5e780c2d6"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "887fccddf93ec8546b97c3a2351b3111d7869eb5576b401b9c19e6ec49147b2f"
+  end
+
   depends_on "openjdk"
 
   def install
