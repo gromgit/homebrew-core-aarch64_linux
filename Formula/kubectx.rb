@@ -6,6 +6,10 @@ class Kubectx < Formula
   license "Apache-2.0"
   head "https://github.com/ahmetb/kubectx.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "30c0b39d23e542bc936994a8c1a47705f0205e42e59cb043adaed21f3e992efa"
+  end
+
   depends_on "kubernetes-cli"
 
   def install
