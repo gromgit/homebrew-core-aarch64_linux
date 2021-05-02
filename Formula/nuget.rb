@@ -10,6 +10,10 @@ class Nuget < Formula
     regex(%r{"url":\s*?"[^"]+/v?(\d+(?:\.\d+)+)/nuget\.exe",\s*?"stage":\s*?"ReleasedAndBlessed"}i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "c9e3754960569fa9ed433aa037c66fff0fef1acc83ce951b33b29002abf8c031"
+  end
+
   depends_on arch: :x86_64
   depends_on "mono"
 
