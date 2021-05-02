@@ -12,10 +12,10 @@ class Notmuch < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "ec4cd07627fdc124d4fce54dc2576f2cde5252019132874db5ec3c5158a80efd"
-    sha256 cellar: :any, big_sur:       "2170961b3adb7ac6c14b0420cd9689aa09c3ee2c5ff82c47b4700545043a7324"
-    sha256 cellar: :any, catalina:      "0c4601ae54da0058336e442102a06e8be58e67d348279b81847868fdb4f95c65"
-    sha256 cellar: :any, mojave:        "e74fa9eac9cc866447412d343de3896a36139894b5cc10db9d02d358d463e9b3"
+    sha256 cellar: :any, arm64_big_sur: "93c6a602428df755145f1ac1830ba8991390af976dfd2b76889011a530602e2d"
+    sha256 cellar: :any, big_sur:       "3a419b3c9233084d44e5a7f18c164e696f9fb8520cea64e7fadcd25c0ffd3a9a"
+    sha256 cellar: :any, catalina:      "44858e39a6d51bf229e7e7ae6b2ca09b631be98a3706c56bf81fb77d1cdd6db9"
+    sha256 cellar: :any, mojave:        "a2835bdcb32a8d376cb4c03735c429e9d584776c23f06913ec625d9480d4b0b7"
   end
 
   depends_on "doxygen" => :build
