@@ -12,6 +12,10 @@ class Frege < Formula
     regex(/href=.*?frege[._-]?(\d+(?:\.\d+)+)\.jar/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "8db1da28b4b5b2a376e5fff8577f3547d4e8c28271e528623e3aa7d8c44fa036"
+  end
+
   depends_on "openjdk"
 
   def install
