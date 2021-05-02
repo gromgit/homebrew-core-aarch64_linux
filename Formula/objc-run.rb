@@ -6,6 +6,10 @@ class ObjcRun < Formula
   license "MIT"
   head "https://github.com/iljaiwas/objc-run.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "e779505f8071d158730517e91004a15c2364dbf03acceebd1643e27338792f98"
+  end
+
   def install
     # Keep bottles uniform before keg-relocation
     inreplace "objc-run", "/usr/local", HOMEBREW_PREFIX
