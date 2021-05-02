@@ -5,6 +5,10 @@ class Ktlint < Formula
   sha256 "438bd098e5e8acc966940480b025af7020bdaa66698c7d76042416314100e183"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "3e579a1c6a074922e7280071c9cbd87f1604d645b8a1b694b9ecc95739e95111"
+  end
+
   depends_on "openjdk"
 
   def install
