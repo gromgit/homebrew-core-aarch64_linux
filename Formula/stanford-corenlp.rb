@@ -5,6 +5,10 @@ class StanfordCorenlp < Formula
   sha256 "984aff1c431311a7dd5b4f0cb3bec4f5ba81da37aecc0d020b270571aafc5385"
   license "GPL-2.0-or-later"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "e1580a6e899a81fa4ff31dc192521b9fe028b8612a2973a9935b3578e999c89e"
+  end
+
   depends_on "openjdk"
 
   def install
