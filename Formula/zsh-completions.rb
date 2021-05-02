@@ -5,6 +5,10 @@ class ZshCompletions < Formula
   sha256 "d2d20836fb60d2e5de11b08f1a8373484dc01260d224e64c6de9eec44137fa63"
   head "https://github.com/zsh-users/zsh-completions.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "a70978173faa1ce102d7a1fe224c4fcc90ef56f414f42781c109d4b4883bcaa9"
+  end
+
   def install
     pkgshare.install Dir["src/_*"]
     inreplace "#{share}/zsh-completions/_ghc", "/usr/local", HOMEBREW_PREFIX
