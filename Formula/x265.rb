@@ -7,10 +7,11 @@ class X265 < Formula
   head "https://bitbucket.org/multicoreware/x265_git.git"
 
   bottle do
-    sha256 arm64_big_sur: "a9fbfb88baa295ff5a3d2d91e474a47a8c129f7b7ec6730e7e6259b64cdd96fa"
-    sha256 big_sur:       "991122bf5989da02883fdecb41630187e53bba6d8a8d8745a1173bf18c041542"
-    sha256 catalina:      "8dd7f134ee375d2f6d0020e63e2455a38a2c235fb738c232189cef5d214724f7"
-    sha256 mojave:        "45a71f2c56450a494f8f1c89f321670d61e8189da9bff60fbb9334c34c45380e"
+    rebuild 1
+    sha256 cellar: :any, arm64_big_sur: "adc617eed2e065af669994fb5b538195fd46db4ac7b13c7ca2490dc8abaf6466"
+    sha256 cellar: :any, big_sur:       "55bb46a5dc1924e59b7fa7bc800a21c0cf21355e48cb38b941d8e786427c70a0"
+    sha256 cellar: :any, catalina:      "5e5bc106e1cf971a176dd5b37a61d28769e353f81102c011b4230cc8732eca7a"
+    sha256 cellar: :any, mojave:        "c61ebdf9dcd4aedf5da2a7eb2b3a5154fd355c105a19a0471d43a3aa67f3cb88"
   end
 
   depends_on "cmake" => :build
