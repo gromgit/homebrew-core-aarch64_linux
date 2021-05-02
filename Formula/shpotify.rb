@@ -6,6 +6,10 @@ class Shpotify < Formula
   license "MIT"
   head "https://github.com/hnarayanan/shpotify.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "e15fab27ffc271dd4fbb5317540b1628e30b79cb5cdaed0f51eb956873876565"
+  end
+
   def install
     bin.install "spotify"
   end
