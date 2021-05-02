@@ -6,10 +6,10 @@ class ReFlex < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "678c0a67b75124655532e2a07ea52d93cd830c89cda3445bd044ef90580861cc"
-    sha256 cellar: :any_skip_relocation, big_sur:       "99f12d3f26babb959243c1f6e1bffc4b82dfaaeb1b2f3f65cd398e851d7b83aa"
-    sha256 cellar: :any_skip_relocation, catalina:      "30157e8b9ad6496ab5e3e61c0bf706ddc264344c525b3d65dc11d2ce6ee861e3"
-    sha256 cellar: :any_skip_relocation, mojave:        "eccffb6c570e488434f57c877bfb2f18e679ca9bfde522144d046a67abbc97ba"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ac67c0676adb730ede83dbe114525d746f937c2b96294d52e6745b4a0a1bece2"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ee9e749782c136056a7edc2507579d879f686a741fe75f4dc2f1e61244b75e15"
+    sha256 cellar: :any_skip_relocation, catalina:      "ad5f139f926fe5755effe22453644731ffd336ffe905906541901597ca0f7ae0"
+    sha256 cellar: :any_skip_relocation, mojave:        "4ede92ed2cc77fd82e7bf281da45ce64c675e40be52d5a0378f61af01799b791"
   end
 
   depends_on "pcre2"
