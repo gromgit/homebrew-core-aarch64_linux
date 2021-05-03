@@ -9,10 +9,10 @@ class Checkov < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d7c8288686bffa1b5922bc983ffe2a5398f490cfa35c41ed8bd26ab77774b697"
-    sha256 cellar: :any_skip_relocation, big_sur:       "4f4f88ffa17cb4b1823eeb6e67c0e614ebddd6303a81358e9cba82310078cd58"
-    sha256 cellar: :any_skip_relocation, catalina:      "5856e76142fec2e0d8740824d25dbbce8329808779c10d750897186446f50cf2"
-    sha256 cellar: :any_skip_relocation, mojave:        "797f2bb9cab65f06d436d01d7b4fe6ebc860d3f90859529bb7d7e38a3e8c4ff0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7e87e76f023030711dd8dd68ea0e9816311ea0e515f0f3fd992f710fc0812d6e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3bc5aa88d0c8d78afd40a5da4609eedec8b682d9068d7e3f227dafb2801b0b38"
+    sha256 cellar: :any_skip_relocation, catalina:      "c8632c48baf9ab3822b0fd93e47e82c20ef3de3c11471d23f73a41a5450d71e6"
+    sha256 cellar: :any_skip_relocation, mojave:        "f69d9e83f71bbdc83f7e458c22ee6fc74770b126108544d47d32059393954f10"
   end
 
   depends_on "python-tabulate"
