@@ -7,10 +7,10 @@ class Autorestic < Formula
   head "https://github.com/cupcakearmy/autorestic.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5244ac8cbd04b7cc52e75e8edbf114db12155ff982de48c4ba14e65b38793220"
-    sha256 cellar: :any_skip_relocation, big_sur:       "79037e1da3f7666e3e50c6375fdad8166c795a9c036efc3420c22ba70e28f733"
-    sha256 cellar: :any_skip_relocation, catalina:      "c2a41089b5742f9d5d5b934c14542406eac30e2cb9944e7fb554feb60a37f1ec"
-    sha256 cellar: :any_skip_relocation, mojave:        "7f7da8655489990e40bd36239bd3cb00c0cd7ef1c94d2159177a2a56d404907e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "63d5a4665eca314d830ffe5875b999995fd2b79fa7e610c069a13ec6a86a0856"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3186dfb8d338205de412465bf2b133e85adca6db367fafc2eb2b2857effba995"
+    sha256 cellar: :any_skip_relocation, catalina:      "e0bc7621e7a2ea7c40605ecbab5f17188be80396d457b032c591b6317e1473f2"
+    sha256 cellar: :any_skip_relocation, mojave:        "219e5017028d6f2e9d5cdf05818574b653ee7c33a5ed15ff279462c32f0883c2"
   end
 
   depends_on "go" => :build
