@@ -12,9 +12,7 @@ class Quex < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "dc866a83867dca24a0126b57d9dfb5b1613d491e6eac63d4f22d7ca2f92368db"
-    sha256 cellar: :any_skip_relocation, catalina: "7a0be7cfed70b009c5e04fef0db429d7e677c74d24659cc3fe33aec1e278f7a0"
-    sha256 cellar: :any_skip_relocation, mojave:   "42e34011b0350928c50d20a4bc12a813e8cdd7934e9879484df46af8de6cfff0"
+    sha256 cellar: :any_skip_relocation, all: "8e53508d74a86c0ec8decef4bf4233f197a8612168cee8707295e22a7ed05b8b"
   end
 
   depends_on "python@3.9"
