@@ -7,10 +7,10 @@ class CloudNuke < Formula
   head "https://github.com/gruntwork-io/cloud-nuke.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b17a2693f46142381893f00f7988d4296c024a7ba4852585aa6cabfa529c6bf1"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d81f003fc6993caaf897faf962124152ada062fb27c5da3b4c9e84736a087d4d"
-    sha256 cellar: :any_skip_relocation, catalina:      "f4f321b0756b3f831e79017b3336a92cd77c572d885f862f5c0213d65fc30134"
-    sha256 cellar: :any_skip_relocation, mojave:        "c86f84dda85f2952a53cde639994392bc19dff6e545eee44ebabcbc2fb100c27"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "af12dea60e894df260e12fb281befdca83ceeb29d95235b6ca7f82e74efeecbf"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6ec739fadc9ae6423b94f400cac632a524d5484f4cf3ec8d198b3622fc6b74fd"
+    sha256 cellar: :any_skip_relocation, catalina:      "20a887ea78779cf126585fd7c0020b36c3d3545c3f57b8d0137d5da5d57aceb2"
+    sha256 cellar: :any_skip_relocation, mojave:        "af204a87970fceee89f2cebe941b4784a78c38a80b84e8c8d5340b5a7b2be26b"
   end
 
   depends_on "go" => :build
