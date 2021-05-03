@@ -1,8 +1,8 @@
 class Quex < Formula
   desc "Generate lexical analyzers"
   homepage "https://quex.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/quex/quex-0.71.0.zip"
-  sha256 "2e8df936f1daea1367f58aabea92e05136f439eea3cd6cbea96c6af1969e4901"
+  url "https://downloads.sourceforge.net/project/quex/quex-0.71.2.zip"
+  sha256 "0453227304a37497e247e11b41a1a8eb04bcd0af06a3f9d627d706b175a8a965"
   license "MIT"
   head "https://svn.code.sf.net/p/quex/code/trunk"
 
@@ -17,20 +17,16 @@ class Quex < Formula
     sha256 cellar: :any_skip_relocation, mojave:   "42e34011b0350928c50d20a4bc12a813e8cdd7934e9879484df46af8de6cfff0"
   end
 
-  # https://sourceforge.net/p/quex/bugs/310/
-  depends_on "python@3.7"
+  depends_on "python@3.9"
 
   def install
-    # Backport one change from https://sourceforge.net/p/quex/git/ci/28c8343c6fe054e5e1a085daebcca43715bc6108/#diff-7
-    # to allow running under Python 3.7
-    inreplace "quex/input/code/base.py", "_pattern_type", "Pattern"
     libexec.install "quex", "quex-exe.py"
     doc.install "README", "demo"
 
     # Use a shim script to set QUEX_PATH on the user's behalf
     (bin/"quex").write <<~EOS
       #!/bin/bash
-      QUEX_PATH="#{libexec}" "#{Formula["python@3.7"].opt_bin}/python3" "#{libexec}/quex-exe.py" "$@"
+      QUEX_PATH="#{libexec}" "#{Formula["python@3.9"].opt_bin}/python3" "#{libexec}/quex-exe.py" "$@"
     EOS
 
     if build.head?
