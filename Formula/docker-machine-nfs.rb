@@ -5,9 +5,8 @@ class DockerMachineNfs < Formula
   sha256 "ecb8d637524eaeb1851a0e12da797d4ffdaec7007aa28a0692f551e9223a71b7"
   license "MIT"
 
-  bottle :unneeded
-
   def install
+    inreplace "docker-machine-nfs.sh", "/usr/local", HOMEBREW_PREFIX
     bin.install "docker-machine-nfs.sh" => "docker-machine-nfs"
   end
 
