@@ -6,9 +6,9 @@ class Vitess < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "5be3ef5ba9d7d9ed144f00ff3a956d75c81609bc8eee17442ab8c320ce2cb36a"
-    sha256 cellar: :any_skip_relocation, catalina: "8de036858b583762a19b4dfe403ef522d41908531d6b06300d36c85415b089f4"
-    sha256 cellar: :any_skip_relocation, mojave:   "2071ac655b1436703474f8da06828bc1975b22cc5fd5c31c89845733a1d641c5"
+    sha256 cellar: :any_skip_relocation, big_sur:  "eceb3111673e616d616f38f479a1e5508a9d1a93c04dfaf269623f006d3f19f4"
+    sha256 cellar: :any_skip_relocation, catalina: "49aebd85d9ffdfa4bab9c3cda7bc8c1680098989718247304125d746a9079814"
+    sha256 cellar: :any_skip_relocation, mojave:   "44ce90c92d9f2ab747c932ed1ff41500cc5ee41a07d357916a9f9fe21a165fc8"
   end
 
   depends_on "go" => :build
