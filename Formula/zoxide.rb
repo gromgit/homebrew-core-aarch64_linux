@@ -6,10 +6,10 @@ class Zoxide < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "01eb64d2102e80ebad17d54160c3b92eecc909e6c29dc7d158f62bc9d9538f96"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3444b476a003119f6a08515b2846585c649a6b031932c1d18a04b7e346e92f32"
-    sha256 cellar: :any_skip_relocation, catalina:      "fca9616931ae7e885cb02c10eeae0e64582d4db3c0f2ba6b8578498e9a2dd231"
-    sha256 cellar: :any_skip_relocation, mojave:        "96040f379d0f9f4e2fe5838a5798565aff85dce06c93194bcf10dd7c20ec2cc3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "94a7c10678903d9dfb66e0fbf8c03811258b07062891ab843c1bb5ac9b437f87"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b64a6b6760c28a3bf15cd9db2119968bc4639a59355529ec7650f0ba216eaac4"
+    sha256 cellar: :any_skip_relocation, catalina:      "3281359d883d9490faac2c11c7da5810101588fa2297ad0d838a75f259742cf9"
+    sha256 cellar: :any_skip_relocation, mojave:        "88641c7715f8c1c7fc67cef24fb69a5976fe77917c5f724d430c505c43ef67dc"
   end
 
   depends_on "rust" => :build
