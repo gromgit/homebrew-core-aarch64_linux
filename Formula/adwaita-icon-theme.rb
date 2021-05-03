@@ -6,10 +6,7 @@ class AdwaitaIconTheme < Formula
   license any_of: ["LGPL-3.0-or-later", "CC-BY-SA-3.0"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "63c2d3f52b20c2232c73d97341e2b8c3e45903a95ee0a0ad46fce22759ed9cd6"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a6a70379a4b6229960f08e4116b95c9b4ed6c21be10cadb22d9196600a04bc4b"
-    sha256 cellar: :any_skip_relocation, catalina:      "a6a70379a4b6229960f08e4116b95c9b4ed6c21be10cadb22d9196600a04bc4b"
-    sha256 cellar: :any_skip_relocation, mojave:        "538d43c64f03df2f26be1b5634a8f2411687d83fc8ff06942d3ced624970c91d"
+    sha256 cellar: :any_skip_relocation, all: "3c050af728fc21559a53caf13950b027e569bdad2aa30ee0a09bcb294e75993b"
   end
 
   depends_on "gettext" => :build
