@@ -58,7 +58,8 @@ class Gitbucket < Formula
   test do
     java = Formula["openjdk"].opt_bin/"java"
     fork do
-      exec "'#{java}' -jar #{libexec}/gitbucket.war --port=#{free_port} > output"
+      $stdout.reopen(testpath/"output")
+      exec "'#{java}' -jar #{libexec}/gitbucket.war --port=#{free_port}"
     end
     sleep 12
     File.read("output") !~ /Exception/
