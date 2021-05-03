@@ -12,10 +12,10 @@ class WireguardTools < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6814c231237dcbfaf07ca6c32a581b8e0c5cb77221a810d49b8ca9d2ea6a9e77"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a430931f6c5e75da8191a52f25d5e596d821fa895ca1cd7cbf6e567baa053411"
-    sha256 cellar: :any_skip_relocation, catalina:      "eeecbb9a6788baaca5d07f6304750f1d9c05c4e10096824e4c297f507ff00d60"
-    sha256 cellar: :any_skip_relocation, mojave:        "71d028421938522d7a435f5c5fd5c4e18dc28bcd53a380466fe05ad844d480c1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "30909b7220b43135eb3a0d37677ffc86245016b6c3f5d672dbffab01673172da"
+    sha256 cellar: :any_skip_relocation, big_sur:       "1f153d66ddac6cbafa6877e29af6ae58b32abd63331c372f86fa72e5d0a6a0e9"
+    sha256 cellar: :any_skip_relocation, catalina:      "59c67c1becf7d8d52f666094c71404e4f1bd133747bfdad717145a14a1c2a04f"
+    sha256 cellar: :any_skip_relocation, mojave:        "99745e645ddbed286defa52eeb6862325a09be2aab48fa04b23dec6686513a1a"
   end
 
   depends_on "bash"
