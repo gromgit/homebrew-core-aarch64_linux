@@ -12,10 +12,10 @@ class RancherCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c622dca7979bbed7ab4213d794200a8aa9eac0bd8ae6991b08e2636f5c974b4a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9573b4250d11f974d15afc78deabc07d8516d053a77d3311411c46f3ef648ab1"
-    sha256 cellar: :any_skip_relocation, catalina:      "7892f574ed7975505315c87cbffb13101f3da5a4763a1e9ac2fcc7fc951e8f1b"
-    sha256 cellar: :any_skip_relocation, mojave:        "c5cbcad2b1f0ec6f179d23b3e4bb5dda5beb6868091ee702ce0ae8ce57400888"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bd57269ac33e17ddbf907d18ef7ef177800689bf4790c48e83d56d6652d9104e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "edfa744550563d18207ef12d174131f7ba0486711bd7ccb252f12850efd2ae81"
+    sha256 cellar: :any_skip_relocation, catalina:      "bfb880e1663556643a7d6c687e2d0d51fefe1ed36163d66d42274046d80f1862"
+    sha256 cellar: :any_skip_relocation, mojave:        "ec162d2372ff7bbc244d2785e33b849fbd4773f37322b586bcc20f2aa9ad08a3"
   end
 
   depends_on "go" => :build
