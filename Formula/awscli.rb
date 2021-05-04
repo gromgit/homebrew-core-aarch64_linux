@@ -9,10 +9,10 @@ class Awscli < Formula
   head "https://github.com/aws/aws-cli.git", branch: "v2"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "58855c7c41b00f69866dad5cc2bc7add21e85ffbe4f043694ad657a2540d75c0"
-    sha256               big_sur:       "c7a92e98537f92f53a9c9ed8d551fa60cae1ccf303c36f5aa1f7b9077984b4f0"
-    sha256               catalina:      "f5a8972e6188061f7a2a3364eb35fd8de7b77f4b92117fb36fe93335e58de642"
-    sha256               mojave:        "dc38c0b30e4853c26fafce8491ee73a5f2f5f17b73acc98fb0e96f3bcf01e28c"
+    sha256 cellar: :any, arm64_big_sur: "a3888c5560f97cf33001d2a93c3cf39de66e8be6d8403f8e6d92574979844d37"
+    sha256               big_sur:       "014d0f7cbcf1ed868dd3d830e263705c42bc67c32eaf42d6be9df49fc87904c9"
+    sha256               catalina:      "fcd38ab41751c211fab39095852dfcef042a4968a893d3059d0a113f7a8f573e"
+    sha256               mojave:        "21a4f64dd97e8b4c5314beb146b8f81a587ac051e590809500bc1880b931ff3a"
   end
 
   depends_on "cmake" => :build
