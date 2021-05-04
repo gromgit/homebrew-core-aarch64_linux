@@ -6,10 +6,10 @@ class Calc < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "c43d4895b54f115c90efd1c443c7fbe5ede27d4e85c9df03486fa933d74238a7"
-    sha256 big_sur:       "8d5a8c3e371edc4c48905bb6f481fdba1eeb7f9123d724283ed92463b620ed51"
-    sha256 catalina:      "0c1d5069406431b8a236c9262675493c6a073c76790607898545b0ed3be51316"
-    sha256 mojave:        "05dcd21cd49e6bda31893e7390d47c27be3893335b67bbdb2d68001ca06636de"
+    sha256 arm64_big_sur: "20a69341f5baf00f5c9fa73998ce3f02939af44146d6eee3177854488e474df4"
+    sha256 big_sur:       "cdc2b4bce30dccf2193ea5a457dfa02e4ae1ba0af97fce660221c5d3882e79a3"
+    sha256 catalina:      "95bce9b12aab68a4d8e30121e0a0be5e0e7447e09bcc11d9d7e371956c724433"
+    sha256 mojave:        "57ac9fb9353e5bd4dd6bf6f62aca96252a064e51d102fd89389934fefa999b2c"
   end
 
   depends_on "readline"
