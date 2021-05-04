@@ -12,10 +12,10 @@ class OpenMpi < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "25d0e0b937bfcbaf91f69da6d56bda31aab1cb9df339221185852f3382bf8b9a"
-    sha256 big_sur:       "005a39311bb1bd8ab0b23706713897816547c6a6e25a2175ad7aad5f94948b4c"
-    sha256 catalina:      "a2a4edb115a7250b8ad9de6642607e97e30a949d073fa39073e483c7723cdc68"
-    sha256 mojave:        "01111108516c36da32dbbdc93e65386c7567ef977f437a001a3fd8c1a3e9d3a4"
+    sha256 arm64_big_sur: "56d00ec16ad3d8b27c2bb2d0f59793802147dbf29dc9913cfa1137b00f5ad6f1"
+    sha256 big_sur:       "6b51e6bf47e0cc347354563337f0d5044d9ada003e8e3f083e4facdd1ae2a5d0"
+    sha256 catalina:      "12d84452255bc13ca6071c1b9d08c27097b88c8556bb72ee1d4dfab6fc3eaae3"
+    sha256 mojave:        "7238c26d4f8b1a2e943de6dcf587ba2151e667649bd811aa213e9ae64f7ab6c4"
   end
 
   head do
