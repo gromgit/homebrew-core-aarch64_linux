@@ -8,10 +8,10 @@ class Howdoi < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8f5000069501a288949e2b593f9eff5ca1d9464c7b7550ef2d7b9b0a2b856961"
-    sha256 cellar: :any_skip_relocation, big_sur:       "16c2dd8c609514d16eca3c670f244190c9cf9afafe714fbc2fd181dd0c457609"
-    sha256 cellar: :any_skip_relocation, catalina:      "ae491a171332e72cdd3e9810c8b9f2946a1b414be4f13faa5efe99f952b565c7"
-    sha256 cellar: :any_skip_relocation, mojave:        "1b4cc852626f8422f13b5c6a0817119bc826ea0c4e87732e3caf6d9322c13894"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "634ece101616892416e218b6b841e5c141365d3935565a37d0d8fd8bec35695b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e4f96d79f2eed73f3531342cfeb7d4bfe914bc5a44966f1c864b984aa14798e5"
+    sha256 cellar: :any_skip_relocation, catalina:      "1d5d52a64b54a242e4a7e6223c81e5d7c2a06edb1f136f0fe42fe5b3ecb55d59"
+    sha256 cellar: :any_skip_relocation, mojave:        "27e15872f2f1e51ee00a2f72358eea97cb9ac723ac660415b7462d91daaadee7"
   end
 
   depends_on "python@3.9"
