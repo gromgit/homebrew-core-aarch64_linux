@@ -11,14 +11,10 @@ class Knock < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c0bf14034959e6593ea34f7ceade85ddff2f9da1ad763c6245f6ab52d713985e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c0ec091e5d5543653ab4edfd6aa2cb8a552d3b50bf0ebddf995dc6c650546e5c"
-    sha256 cellar: :any_skip_relocation, catalina:      "d6d7e20fa46d9587c9e8f6f80cef047cb21997f9bd914f5999c02d345255e760"
-    sha256 cellar: :any_skip_relocation, mojave:        "41badbc87fee76251158416bd506d8ee30e9997e673a64a57e5e039a8facb11e"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "06b02ba999daee09e6588a8edb4af78a41b8ab135ac1b618b4ab2b02b7646acf"
-    sha256 cellar: :any_skip_relocation, sierra:        "5f29acd295f83fadd436423f61c58ad8a2682dd9f9a3f89740eeee1eb55c6373"
-    sha256 cellar: :any_skip_relocation, el_capitan:    "030dc0a7c3ea623eb3d8e11374f744ad79f8aee8b7b75210f1a183b4d6d978de"
-    sha256 cellar: :any_skip_relocation, yosemite:      "aac645d3c392386d99cb19200465a439639c8d3e7f8eac7021dbb677939cf155"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "81bcc7e4f700f88fd52678bcb97fe0eddf0a562e28bd406268ae263e286903dd"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b8d423345658b70c35b16a032ace493f1da244144dbfe0f4c4b0ed79ce0ac560"
+    sha256 cellar: :any_skip_relocation, catalina:      "2c9a3167f4b08e9b4ed890f6cc165eda8e813da9c911e741fd9cdb5d3742de31"
+    sha256 cellar: :any_skip_relocation, mojave:        "5af91e5dcf61f216105c1562c032f2d06decbf6f6653171793d6af2101e27f0b"
   end
 
   head do
