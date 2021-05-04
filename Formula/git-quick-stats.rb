@@ -6,7 +6,7 @@ class GitQuickStats < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "af6dd6341848ad55754a708793390cc4b732977d49b49758139c49746b9e827c"
+    sha256 cellar: :any_skip_relocation, all: "5837978ede49cd03a1519d719ce832dc7e198f5d87575d709661c54702ca0c95"
   end
 
   on_linux do
