@@ -7,10 +7,10 @@ class Oha < Formula
   head "https://github.com/hatoo/oha.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b6fc6998a4ee6c6042fe89fa971b82ed8cd953f87646efc063d3ae149ceab2b2"
-    sha256 cellar: :any_skip_relocation, big_sur:       "948fb9ba126aab229a17dd9c273f01eb62488abf0282f1cbc8e22d4402a6ec2c"
-    sha256 cellar: :any_skip_relocation, catalina:      "3c542d6da4bcaf5acf993f6e775019ca5c9299a8a772c67386f4b988731cbee1"
-    sha256 cellar: :any_skip_relocation, mojave:        "5ad840b9b8d11da27f29a54c7587d4baeb6bffbd36ce86cd17327c8d2b5dfa28"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "361edb589ffb66a5bee902058a9235aa027fee879e09c9c40930d2d031406cb1"
+    sha256 cellar: :any_skip_relocation, big_sur:       "617eb0c53703a471e8d542367560a2aa37c54baf4051301b9a0a133030918978"
+    sha256 cellar: :any_skip_relocation, catalina:      "4566468439bb76337d1f022548c09aaaf37806860583144892255a6466104bdf"
+    sha256 cellar: :any_skip_relocation, mojave:        "4ec5b61c8842d892b4712185922e09824eab582ff6e2f6a1ae44fec01f721160"
   end
 
   depends_on "rust" => :build
