@@ -8,10 +8,10 @@ class Internetarchive < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "25e8b4e563a9457537efaa3a8b62c71e8de046b6deb79db322da553b478fd277"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f132057ac4d048270739bbd10a2e5ef9ba7035d033bd533562977ade209c4afd"
-    sha256 cellar: :any_skip_relocation, catalina:      "9cc622f3fc3eff5776ef614802b026efda1bd805d67923c23e2d8c47434d5349"
-    sha256 cellar: :any_skip_relocation, mojave:        "b31d38254ea3bcc7e55754e4641f7396c75edb3104e7649ab325d77dcc02ea98"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "444c7b0950abc32a994677a26baea3552b38657cc8282850ed3af8400affe40d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4795f5dbef8f8c5e8c07ec878dfe308273b4e346922b76ac128396921071cb56"
+    sha256 cellar: :any_skip_relocation, catalina:      "ff92b8523de18c71521b8245a08d7eae83d33c0292536c3551d9571b40c9adf4"
+    sha256 cellar: :any_skip_relocation, mojave:        "1b7333d8a28ae74c4d20cfa387fa524de5bb2e2b8928db61be9ac51c73dcc97f"
   end
 
   depends_on "python@3.9"
