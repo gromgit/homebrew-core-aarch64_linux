@@ -5,6 +5,10 @@ class Cake < Formula
   sha256 "e556aaf3675728ce349569bd19b32492c36a9d9ad97acf3e1e007bab8f6eddfa"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "dc27c5bfd2d23f266be2027a34cbffddc46f33e70381f663e19269bbdf3e8464"
+  end
+
   depends_on "mono"
 
   conflicts_with "coffeescript", because: "both install `cake` binaries"
