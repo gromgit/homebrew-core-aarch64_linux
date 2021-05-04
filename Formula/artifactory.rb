@@ -13,7 +13,7 @@ class Artifactory < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "ad84e60a20dde72000d39a240a6aacc5612e51383735179946998aa8aa855c55"
+    sha256 cellar: :any_skip_relocation, all: "aeac094e7c8b7b854d7c281d1d0690e77bc96b58e021c14e00d412d24454b2d9"
   end
 
   depends_on "openjdk"
