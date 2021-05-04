@@ -12,9 +12,9 @@ class Carla < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:  "f8ee9fd5b1230b0e4b8e447969a420534d63f735758d21acdea0f52713b4f29a"
-    sha256 cellar: :any, catalina: "3d507dc32add60b1a0eb60eb0cb27fcfa352789c63133229d7881dedaf86779d"
-    sha256 cellar: :any, mojave:   "6d4f42afcb7a94322b8509db1a44dd8859cb46b3c0adda2efa103f4115032a9d"
+    sha256 cellar: :any, big_sur:  "b643eb96e7161a4c3a3275f56dc3ac0e8705979a4f2a86efef5cdbe8353e78a1"
+    sha256 cellar: :any, catalina: "372245304f50bd572ff92c77d0fa0e97f58538075df07890bb1a3c35992e72ee"
+    sha256 cellar: :any, mojave:   "602abd2b87dd217f5cd8ff178baa6c29be51578f05b7a942133cd240a6856beb"
   end
 
   depends_on "pkg-config" => :build
