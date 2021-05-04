@@ -18,10 +18,10 @@ class ClojureLsp < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1719036a888d52fa386d7ea32f573ffc043a6cf707b49881a5ffb9649a58fab7"
-    sha256 cellar: :any_skip_relocation, big_sur:       "970d2e9d03e51e3ea1a99d11405ea211af5181ebd28eb7a2a7cb51ea1c27c35e"
-    sha256 cellar: :any_skip_relocation, catalina:      "95ec5014d85d5f09e97c6193fd6aeff1ea7c29141277a1c553005582e86e3af7"
-    sha256 cellar: :any_skip_relocation, mojave:        "0fbb4c3ee8f634ff495637461bfc30128322a3004022c2f5432b5c507925fe69"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "66b7a4aa04c1e7a74d970f4a408bc8b82146ecc596cb90e9c59c236ecc8546ac"
+    sha256 cellar: :any_skip_relocation, big_sur:       "cc7b1dd38b1d12f2bf091ecfeb271be713807b4a7bc40426f7777a20a7b61506"
+    sha256 cellar: :any_skip_relocation, catalina:      "1c6eec1ae7286dc6ce00af6b5dcfd4253f48c7296bd69f3f74c88e5820bacc0d"
+    sha256 cellar: :any_skip_relocation, mojave:        "0fa06f932cdd0e7dd343d3e0c6f1abdd678e4c87f2b7bebffa5340f49430b11a"
   end
 
   depends_on "clojure" => :build
