@@ -6,10 +6,10 @@ class GhzWeb < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "38c0a6825d50a8a6aa61d1402fa94d0b2f4b446c865c4df8e98b5ee4dbddbeb2"
-    sha256 cellar: :any_skip_relocation, big_sur:       "20d15b3837e09aec7395a2aeb719265bcde0a22a18a472275f8dc35902128598"
-    sha256 cellar: :any_skip_relocation, catalina:      "87bedcabc0ae7c96ba62208e6ea8ca3aa7bb982b05a4dac6a5258dc95f6203f6"
-    sha256 cellar: :any_skip_relocation, mojave:        "90fac8b608f1705748e01667a1be457c9f8025114ad5b83e2a859e26b6ef0747"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8b7ae272239f41f91ed0c9b3d9a1957808d778d0b53486f51703c39d5d576fcc"
+    sha256 cellar: :any_skip_relocation, big_sur:       "29328462152039538f12493e77b0e6aecd9d717d1679707c993e0d44a75e1d8e"
+    sha256 cellar: :any_skip_relocation, catalina:      "3cf03a23253c23bafd386724e8ae5f48eaa4154996a6a0deb9122cb63798d568"
+    sha256 cellar: :any_skip_relocation, mojave:        "98846937b0d70bde0f57498365258dd6e6721c9f482ed0ac2de17e15b6f86963"
   end
 
   depends_on "go" => :build
