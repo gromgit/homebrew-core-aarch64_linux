@@ -1,10 +1,10 @@
 class Manticoresearch < Formula
   desc "Open source text search engine"
   homepage "https://www.manticoresearch.com"
-  url "https://repo.manticoresearch.com/repository/manticoresearch_source/release/manticore-3.5.4-201211-13f8d08-release-source.tar.gz"
-  version "3.5.4"
-  sha256 "efe4b92650d31c89fe892750402e6343c5ee580e723ed6ac1235ca62b1e04b7d"
-  license "GPL-2.0"
+  url "https://repo.manticoresearch.com/repository/manticoresearch_source/release/manticore-3.6.0-210504-96d61d8-release-source.tar.gz"
+  version "3.6.0"
+  sha256 "320a19c837caf827a75e19e11755a9586487435aeb8b8aa80e8bef552fd5e1f5"
+  license "GPL-2.0-only"
   version_scheme 1
   head "https://github.com/manticoresoftware/manticoresearch.git"
 
@@ -31,6 +31,10 @@ class Manticoresearch < Formula
       -DBoost_NO_BOOST_CMAKE=ON
       -DWITH_ODBC=OFF
     ]
+
+    # Disable support for Manticore Columnar Library on ARM (since the library itself doesn't support it as well)
+    args << "-DWITH_COLUMNAR=OFF" if Hardware::CPU.arm?
+
     mkdir "build" do
       system "cmake", "..", *std_cmake_args, *args
       system "make", "install"
