@@ -9,10 +9,10 @@ class Babel < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e42f3a2cc4ce8152fa7d656537ab16a5029cea910b848ee85629edcf4a9df051"
-    sha256 cellar: :any_skip_relocation, big_sur:       "bbcb12cfb38a94909b83d9c16aeffedde08f3dadd9c189a3bc26cbaf986c5a0c"
-    sha256 cellar: :any_skip_relocation, catalina:      "b7a0a0ef11eb7536b96d09ffb320baac23921174ab1d3ef36713ac29b44fbfc4"
-    sha256 cellar: :any_skip_relocation, mojave:        "4d407989c892dbea48bd2c18d7ac3b5187f5f896e1017fbc9edf93b47bb02bf5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "17450dbe68d163d15a7724696b3a160d55fa67bb46dbb098f3fa098f7fdfb811"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a06fc96c6b5d0791b98e94f28d1eef5dbbe1be5817ab1e53bbc283392e99c0b2"
+    sha256 cellar: :any_skip_relocation, catalina:      "a06fc96c6b5d0791b98e94f28d1eef5dbbe1be5817ab1e53bbc283392e99c0b2"
+    sha256 cellar: :any_skip_relocation, mojave:        "a06fc96c6b5d0791b98e94f28d1eef5dbbe1be5817ab1e53bbc283392e99c0b2"
   end
 
   depends_on "node"
