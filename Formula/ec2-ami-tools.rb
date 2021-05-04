@@ -5,6 +5,10 @@ class Ec2AmiTools < Formula
   sha256 "5a45d9f393d2e144124d23d2312b3a8918c5a3f7463b48d55f8db3d56a3fb29f"
   revision 1
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "2410a9e4734c4f4358ed678b90d51f610e0c60ab6dd47797c3b9514be8a95bc3"
+  end
+
   depends_on "openjdk"
 
   def install
