@@ -16,6 +16,12 @@ class Openj9 < Formula
     regex(/^openj9-(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any, big_sur:  "43dfe4513a6b632c7ea74218b0ca1cbbcb025e0147b1763ff92f7e8352c4728b"
+    sha256 cellar: :any, catalina: "1511d86253d5a7213dc21893bee36e119e6e7101a9e430613f4cd97750de261d"
+    sha256 cellar: :any, mojave:   "773bdde15165ffb883e627b54b705677629c3e5233cb9d66e203a1ab658e1454"
+  end
+
   keg_only :shadowed_by_macos
 
   depends_on "autoconf" => :build
