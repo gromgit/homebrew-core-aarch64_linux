@@ -12,11 +12,10 @@ class CernNdiff < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "41ade2330d98fa812fe2e1e89751a8054ab9e9cc4cd9d173f5d9aee55796f3f1"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6cf0cf2abed2d829e8e4f03ef88cbb3f225e42334091bb41bbbce269f7828eb7"
-    sha256 cellar: :any_skip_relocation, catalina:      "2c91f51a18d6d7aaa821c6f7e43d624289ef2d12144a35f9eeb995fbf7263d0a"
-    sha256 cellar: :any_skip_relocation, mojave:        "3398977b827a2f82dac08a2ec7d7b5289e61189bc7747ff2ab77a8f9ef9e23e1"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "87aae51415565cadb2dffdae5dff93b472039b4f1ad90462b282e6fb7c855e76"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "46bb03f5f7bea2e59de7cfe84ca92baad894c1ef19a8bb70cd49f2efcc2e087a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "8b7fdab117eb811c70f44ecedceaf71bd6c1bfcb14930f7d5daa9ed6dd4e41bf"
+    sha256 cellar: :any_skip_relocation, catalina:      "4d90638bad7723e4d1fa90fd3078018eea5472197569a40540c8bcc4f9b05620"
+    sha256 cellar: :any_skip_relocation, mojave:        "0345d6cee16212fd72011a4910c5ffa57b37c6f1768198faf32ff526fbbd630c"
   end
 
   depends_on "cmake" => :build
