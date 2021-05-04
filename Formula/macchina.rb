@@ -6,10 +6,10 @@ class Macchina < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "81795c02dec7c9dacfb7f13e19d78ecad1ad136d85c22906a9e6cecbba6e4ec4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6c28004ad4a39a4197528f351946d38224559e8a332eec5530c8ae7e4d3c7056"
-    sha256 cellar: :any_skip_relocation, catalina:      "f77b37d8ffd61ea1bb485a494f131ac4a49bfd8fa644085ebffb7b5cb8beecf0"
-    sha256 cellar: :any_skip_relocation, mojave:        "99acae50b39051e9f7bf62b1ae9bc98a093a22d54ad074171673424192b68395"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7be0fa31c72dc280fc861bc8c868d403a71cb3142bb984fb8f936104fc3aa795"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0f452397c12728d9c3b70628313cc7ccaa019bbf33c64ee18e102562bff1abd4"
+    sha256 cellar: :any_skip_relocation, catalina:      "733627a56457de483ce7ecb2d0476bf2ec8bc83396a21310978d07b221ff54c5"
+    sha256 cellar: :any_skip_relocation, mojave:        "0d313074c526c1ad2e91f77c6af7d5541ab201e773d41128c9f3dd9f79d4e448"
   end
 
   depends_on "rust" => :build
