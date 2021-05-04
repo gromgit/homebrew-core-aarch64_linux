@@ -6,6 +6,10 @@ class EmacsDracula < Formula
   license "MIT"
   head "https://github.com/dracula/emacs.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "369a09be422633643adec10ee34131689f9c5049615347121bd218654829241c"
+  end
+
   depends_on "emacs"
 
   def install
