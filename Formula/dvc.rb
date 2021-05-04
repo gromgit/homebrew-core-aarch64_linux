@@ -8,10 +8,10 @@ class Dvc < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "a83b620c6d0e88940775bf86783f4bcc48e9caecaace089afb4ad37134f7ef04"
-    sha256 cellar: :any, big_sur:       "4453862aca42e3f070c18d16c8d77742c40c1a161ce4bcf638797cb16bca9cec"
-    sha256 cellar: :any, catalina:      "3b49038eb07c32c433df69969a2b974b974304673da8e923a06059aff2ca7461"
-    sha256 cellar: :any, mojave:        "a91aeb45a6e8268a648b83921f792426295ba6a7484c1e73d3cb0b61fe7595e2"
+    sha256 cellar: :any, arm64_big_sur: "b46bdccddfdba0c66b2347139c6c233ac9ab5c0444fc3a06dd9dbf111b6726da"
+    sha256 cellar: :any, big_sur:       "61dd4903c533d4b02c2847ee3435b0ed6e0e11e8ed6b02e48de8e4e666baf6ce"
+    sha256 cellar: :any, catalina:      "8ca4a65fdf2a7d1ce6e56ace647d573ee5876bbca293208ce2339098655682dc"
+    sha256 cellar: :any, mojave:        "5a876797a39eea2728ab7a0bd66493dcf285c5efd45462023a2eb9f62fefe98e"
   end
 
   depends_on "pkg-config" => :build
