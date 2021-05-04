@@ -14,10 +14,10 @@ class AwscliAT1 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1dde053f44ea33b71f4651286ffe0241aacce5495d5e67b4e46bb9b4e3b3ede7"
-    sha256 cellar: :any_skip_relocation, big_sur:       "1af46d969423f9d2a119bd32c6db7bded3ea912ec8359a173fb73c303a6ec6ed"
-    sha256 cellar: :any_skip_relocation, catalina:      "f4173a6f27541f7ec72b790ee403b83248b81e441fc8b166a1cf45c2a829e921"
-    sha256 cellar: :any_skip_relocation, mojave:        "17452b335f0d86dc60aa90e077a01204b4295e616cd7194f258777ff7343413f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "904b237a5301e759ed769ddecbeaea1392954e6eb4c2f0fac8b57d863050af67"
+    sha256 cellar: :any_skip_relocation, big_sur:       "aa79eda22127a69cc57c51c4a50d0d1f68d5b0d11751365bd0f56c08adf0c4e7"
+    sha256 cellar: :any_skip_relocation, catalina:      "762e68830f45e8042c8c1480830eab0a154573a39130b15a174c1ce8df84c13b"
+    sha256 cellar: :any_skip_relocation, mojave:        "b1dec1c7b8b95cbfad2fd51be690a290dba0c9630246b757ba79a38d845e180c"
   end
 
   keg_only :versioned_formula
