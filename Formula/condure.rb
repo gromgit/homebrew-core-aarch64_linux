@@ -1,8 +1,8 @@
 class Condure < Formula
   desc "HTTP/WebSocket connection manager"
   homepage "https://github.com/fanout/condure"
-  url "https://github.com/fanout/condure/archive/1.1.0.tar.gz"
-  sha256 "28d19110765e78701b512cf81aba23e4a823e3f502c6e87c7e247554da748cfe"
+  url "https://github.com/fanout/condure/archive/1.2.0.tar.gz"
+  sha256 "0372b925558ed966df0657b18c0c91b1e1d1ed789c59e572728722569e504fb0"
   license "Apache-2.0"
 
   bottle do
@@ -21,8 +21,8 @@ class Condure < Formula
   depends_on "zeromq"
 
   resource "pyzmq" do
-    url "https://files.pythonhosted.org/packages/86/08/e5fc492317cc9d65b32d161c6014d733e8ab20b5e78e73eca63f53b17004/pyzmq-19.0.1.tar.gz"
-    sha256 "13a5638ab24d628a6ade8f794195e1a1acd573496c3b85af2f1183603b7bf5e0"
+    url "https://files.pythonhosted.org/packages/a3/7a/561526861908d366ddc2764933a6090078654b0f2ff20c3c180dd5851554/pyzmq-22.0.3.tar.gz"
+    sha256 "f7f63ce127980d40f3e6a5fdb87abf17ce1a7c2bd8bf2c7560e1bbce8ab1f92d"
   end
 
   resource "tnetstring3" do
