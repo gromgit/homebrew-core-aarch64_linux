@@ -16,6 +16,10 @@ class Prestodb < Formula
     regex(/latest_presto_version.*?(\d+(?:\.\d+)+)/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "f3d9c07008001b6a51cca9c12858c7c40e6bd140110785a346941d3ec2993885"
+  end
+
   depends_on "openjdk"
 
   conflicts_with "prestosql", because: "both install `presto` and `presto-server` binaries"
