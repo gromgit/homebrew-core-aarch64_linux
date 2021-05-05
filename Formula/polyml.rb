@@ -7,10 +7,9 @@ class Polyml < Formula
   head "https://github.com/polyml/polyml.git"
 
   bottle do
-    sha256 big_sur:     "f1f5c8dfdf185d5fc562d3fdc80f30cd646bce0dde7cb9381a731372b22ff11b"
-    sha256 catalina:    "22f583ec73be6a469af9adff8eb3e3bc7b7ad7b40db56c16a91569f3d2097dbc"
-    sha256 mojave:      "65a6a917d00e9bfb09705833ac96584f3e503edb3342c7203b083f17c8103d97"
-    sha256 high_sierra: "1f0d015938e838043ab26bffb144a2abe0cf5ad5944514c1a8497d79f02dbede"
+    sha256 big_sur:  "4b68c9e84f40360b1b65444949637bb1f5749f532ad198a44f3bb570854b9900"
+    sha256 catalina: "1517e342bf9c4569b986d1139c063e14a999cacb29597e53e438040090e93424"
+    sha256 mojave:   "fccbd2fc3c3570178c8578475035fbee24ab9280a3366a82b797c1fb7627c588"
   end
 
   def install
