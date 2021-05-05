@@ -6,6 +6,10 @@ class SonarScanner < Formula
   license "LGPL-3.0-or-later"
   head "https://github.com/SonarSource/sonar-scanner-cli.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "2374014b95f24caab6e2df2888f4063257992a8daadab820b558cfdbeab61825"
+  end
+
   depends_on "openjdk"
 
   def install
