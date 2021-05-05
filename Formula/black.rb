@@ -13,10 +13,10 @@ class Black < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0de8dace3ee3d0203d737264a2672cd9c7c208ae2b5ae3a59cc1a4ae37fc61da"
-    sha256 cellar: :any_skip_relocation, big_sur:       "44406cbf892245d5747d12321096dd3efa0d9f92d80db2a30b0cb1b1da0d68ef"
-    sha256 cellar: :any_skip_relocation, catalina:      "cb7d3f3efa39fbbc785cc3db662e9103b2a7ed89bf937c6320a42895dc13b7e1"
-    sha256 cellar: :any_skip_relocation, mojave:        "38733488b96bc7ed327cc934b4270490b39e6c15cc63a48c365a50a96de6bd5f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5a1a80580fec048bb105fe1df5ae1d51e3fe708883802eef515788b490952424"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f7d159b8f1ce3bdff34ee1c46de9fda1eb7bac4dc028cd95e64c8c28f1f0552d"
+    sha256 cellar: :any_skip_relocation, catalina:      "dc578c03b161efa77a02264b29f3a00d1fd8e37ede354412afbd407d8a6df887"
+    sha256 cellar: :any_skip_relocation, mojave:        "abe8f4bc4e374f816fb2ab50459e810d2981f3da5b005a0b79f41c9cfb357351"
   end
 
   depends_on "python@3.9"
