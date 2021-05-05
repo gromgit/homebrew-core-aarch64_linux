@@ -6,10 +6,10 @@ class Igraph < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "85ea5d7a5c7883fe20f4fb4df95cfc580b66ba4e7bea542634273f25365470e2"
-    sha256 cellar: :any, big_sur:       "a0fb6603f3b39eca91218779f1afb8ba517121266ee1ce5212dada981e2c9e22"
-    sha256 cellar: :any, catalina:      "cec4671bb655b9170b72316094d962c5d4ddb153d4846e58a90872b96c43cbee"
-    sha256 cellar: :any, mojave:        "f96fee248c7a1fe69b7da6c7c549b5da90308340ef025719a4579cb6886f98b8"
+    sha256 cellar: :any, arm64_big_sur: "b40a82431e285a5a9785a51efb72e84e560f7c58d9d96fe5a45f04a28c74b099"
+    sha256 cellar: :any, big_sur:       "1f2fb048cbd22c54a606b3799461b17bc0710becdcd542e1bc69bec165bc74a5"
+    sha256 cellar: :any, catalina:      "a960eba0fb364d55fbb9db4205593ad5154ef8c3fb47067931d1170089362a02"
+    sha256 cellar: :any, mojave:        "adc724346d0c95b666305726d7e00e508be634e4b4b0ce912ca13420c0f4547b"
   end
 
   depends_on "cmake" => :build
