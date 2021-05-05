@@ -7,11 +7,7 @@ class ParallelHashmap < Formula
   head "https://github.com/greg7mdp/parallel-hashmap.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "aa3977a35de46f745dc5b8eb8dd4acf1a8f16f7bf18dcb7e4a18c46daf670386"
-    sha256 cellar: :any_skip_relocation, big_sur:       "fd71614a7f2cb919499ae6f7f1bdf6121a7784d85064cfc4cde62d3892704cb0"
-    sha256 cellar: :any_skip_relocation, catalina:      "932e18bb079269506931abfe4722a1eab66bb83f850bb5952c982b21864679a3"
-    sha256 cellar: :any_skip_relocation, mojave:        "d020435a32c4fe59e1bbc0f0e744726b81cade9f89fd871fd49487c5c8a3958f"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "c3e7184629352580841f4e14d032eb09653e2dcc4d36f107113e8784ac45060c"
+    sha256 cellar: :any_skip_relocation, all: "a85127ad3dc77cf767da692834eb0e572631f1fc81c981f6060ac0961fd59134"
   end
 
   depends_on "cmake" => :build
