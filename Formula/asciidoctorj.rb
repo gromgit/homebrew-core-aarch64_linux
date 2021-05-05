@@ -5,6 +5,10 @@ class Asciidoctorj < Formula
   sha256 "9fcf2fef6023257aaac21a3b5d8379c080019b1a408e43419f61d507ecddc95b"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "976fcc5db1ed68453307083a3ad246d7d794265fde1d78ad3fd135ce81cf1fc8"
+  end
+
   depends_on "openjdk"
 
   def install
