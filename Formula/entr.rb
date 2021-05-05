@@ -1,8 +1,8 @@
 class Entr < Formula
   desc "Run arbitrary commands when files change"
   homepage "https://eradman.com/entrproject/"
-  url "https://eradman.com/entrproject/code/entr-4.8.tar.gz"
-  sha256 "f05555cd745b7dc67b61a98cf79971125b7e43931a5772d5bce2d891327425ae"
+  url "https://eradman.com/entrproject/code/entr-4.9.tar.gz"
+  sha256 "e256a4d2fbe46f6132460833ba447e65d7f35ba9d0b265e7c4150397cc4405a2"
   license "ISC"
   head "https://github.com/eradman/entr.git"
 
@@ -32,6 +32,6 @@ class Entr < Formula
       sleep 0.5
       touch testpath/"test.2"
     end
-    assert_equal "New File", pipe_output("#{bin}/entr -p -d echo 'New File'", testpath).strip
+    assert_equal "New File", pipe_output("#{bin}/entr -n -p -d echo 'New File'", testpath).strip
   end
 end
