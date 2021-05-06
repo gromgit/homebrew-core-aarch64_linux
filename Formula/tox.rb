@@ -8,10 +8,10 @@ class Tox < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "45b53cfa3dc89e039f809fa259d99a229a1ab8f8c513b60f8b5f4f8cdbb4f2d4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "dfa2b66bb903c21137f6315f399b1d9a50274a2f00cdd900fadbc51435e00b9e"
-    sha256 cellar: :any_skip_relocation, catalina:      "634d9dff53aa35193606f04d7e79e32d46cd5bb7f7ef42a6a545d42342fa277f"
-    sha256 cellar: :any_skip_relocation, mojave:        "5f37452ae3e840b3c3377f671b9f8fe9847b8db57b9db91553b02a77cc70594c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "82c3544768cffb76ff9fe740e4dbb0453a029b98fb119f6e4f6e77c7033cd708"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e0fa9158ef5822850f2ecb28f5d22f8299235da91fa27d750e935f9b49ef3767"
+    sha256 cellar: :any_skip_relocation, catalina:      "14583e6cd6350417fe8372bf68460e001caa0c240324a3d37c0c475b36f9e589"
+    sha256 cellar: :any_skip_relocation, mojave:        "0f635328e0bd4ff1da98daafd1b825ecf815b7aa65ee0bd40c99c2e568a4001d"
   end
 
   depends_on "python@3.9"
