@@ -21,15 +21,13 @@ class Ipfs < Formula
     sha256 cellar: :any_skip_relocation, mojave:   "868371961578f442159865ff5111d778dbc730cda71058f942cbb354e6a46029"
   end
 
-  depends_on "go@1.14" => :build
+  depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    (buildpath/"src/github.com/ipfs/go-ipfs").install buildpath.children
-    cd("src/github.com/ipfs/go-ipfs") { system "make", "install" }
-    bin.install "bin/ipfs"
+    system "make", "build"
+    bin.install "cmd/ipfs/ipfs"
 
-    cd("src/github.com/ipfs/go-ipfs") { bash_completion.install "misc/completion/ipfs-completion.bash" }
+    bash_completion.install "misc/completion/ipfs-completion.bash"
   end
 
   plist_options manual: "ipfs daemon"
