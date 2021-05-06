@@ -8,9 +8,9 @@ class AnsibleAT28 < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, big_sur:  "6b212e1f43b50242e2bbeefd509c93f0880105fd19aba14cb4e0a1ca9b84bab1"
-    sha256 cellar: :any, catalina: "3208969aef2acafe6cfa93343db58a6126b0c3f0626d82d2d8149594a82168d5"
-    sha256 cellar: :any, mojave:   "5cc5d3513ae3707107895d0ba00db593b00e7a6e8f325f4cad98b9b96ba554f8"
+    sha256 cellar: :any, big_sur:  "abd5d1109b0593d60b05108569a2577d1fd4d7db867d44f3eb9c065026b039b0"
+    sha256 cellar: :any, catalina: "1f0aadb1cec6353c5adcc417b5a2d94017aabaffec889768187d6a421f2b60c3"
+    sha256 cellar: :any, mojave:   "488ac63c1996e2ed2674d6898453518475a38f2c9ca61513f06f5e8d98c79a43"
   end
 
   keg_only :versioned_formula
