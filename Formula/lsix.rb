@@ -5,6 +5,10 @@ class Lsix < Formula
   sha256 "88f1855b0272a307758d344a861370c087432ed8f28cc95696659eb0ed7eb960"
   license "GPL-3.0-only"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "d044177e151389e423fe95b95486f46339e19ca8d99e5cadf2ad56e60c060276"
+  end
+
   depends_on "bash"
   depends_on "imagemagick"
 
