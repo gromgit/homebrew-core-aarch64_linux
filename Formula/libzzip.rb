@@ -7,10 +7,11 @@ class Libzzip < Formula
   revision 1
 
   bottle do
-    sha256 arm64_big_sur: "50ada2e93bb60398e4a65a77c2ae5d3c5010a6d2d00a96a74de06ecf735b38d4"
-    sha256 big_sur:       "5b805b4607fcf22e7b004a24c4b219d735bfbe7ac0387b5595ea1dd1866536fb"
-    sha256 catalina:      "9ded307d1427e930bf5b7720a14b94a63f03d0a10ecb93e00ef695ae98ed7fa2"
-    sha256 mojave:        "430a9fc127c01b7c672a09406c2da7647f2913664f09c4086976cd4c5df977ff"
+    rebuild 1
+    sha256 cellar: :any, arm64_big_sur: "43fbba2b7e506170bf0f03a8c281c142b04cd1b95365392d36dcc014e5f24743"
+    sha256 cellar: :any, big_sur:       "f4471c0801590824b9fa2de9a5f25c14fc42dc8d87a5efcdf16144a116d5b997"
+    sha256 cellar: :any, catalina:      "0d0827679b5108d79b6bcbf8a3f1ede078d547bb1986d4b7808d6cdb77104023"
+    sha256 cellar: :any, mojave:        "f165f79a37ac61eeb25c2f9b4756848f4c3a9ddcb7250b9de0e6cc5640b00598"
   end
 
   depends_on "cmake" => :build
