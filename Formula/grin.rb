@@ -6,9 +6,9 @@ class Grin < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "eafd0bb9f9c719e9dbee669fe661730698f9e0cfac50020226167a9a67c53bb6"
-    sha256 cellar: :any_skip_relocation, catalina: "0025eaac2de30280dd6ce101d60bdc248cb139acebeeba334f31edc0ba952080"
-    sha256 cellar: :any_skip_relocation, mojave:   "51f00cbeaf48f1ba1959a84e7ae962912c590be4263cb5c9ed76fc773adf7040"
+    sha256 cellar: :any_skip_relocation, big_sur:  "bf2f070ac6aea3f7ca867167068684b0279c4f9ed13b02e328e88e5c94fa6f6b"
+    sha256 cellar: :any_skip_relocation, catalina: "aa5d88ba12bae1e7e468d6bfc165b1c105790e391e26493a22d7500c3d13dee5"
+    sha256 cellar: :any_skip_relocation, mojave:   "94e2c97fc9dc4b3f3e1ebb47d1505484052e567d8a04b1bd082c828bce448014"
   end
 
   depends_on "llvm" => :build # for libclang
