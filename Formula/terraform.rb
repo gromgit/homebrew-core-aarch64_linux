@@ -12,10 +12,10 @@ class Terraform < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0f7869b857c16b69c8a763f3a3dde378ce354445df03e6b965f60a80763eab2d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "59046fe843b88927c89b6e1d0008b536fe19bbfb411be98507b8d11e9dc066f0"
-    sha256 cellar: :any_skip_relocation, catalina:      "8fdb8b4cd622bdf4f8503a5f1e53fb3ea3eddb5af5d94b9bb5df716133cda17a"
-    sha256 cellar: :any_skip_relocation, mojave:        "46079e3b1ff04a34902d604dcbdb4cf3f37c6679ca2e4b4b756a053a9628b063"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7c5364fe0c163f5e3136469993e019b83b19723998e96e2f6121afd2349336c8"
+    sha256 cellar: :any_skip_relocation, big_sur:       "62d34801fe8eab3fac1df668a815ee7fe1fe0409875e25f202e894f401d19eeb"
+    sha256 cellar: :any_skip_relocation, catalina:      "3e9edf0bce7c48c19af83e97443e6a71fbb2520a1cb274ac20d8fed1162fd59a"
+    sha256 cellar: :any_skip_relocation, mojave:        "44817412c4e85e04122976897916d25ad2d792ca53002e605f66466453a88188"
   end
 
   depends_on "go" => :build
