@@ -9,10 +9,10 @@ class Manticoresearch < Formula
   head "https://github.com/manticoresoftware/manticoresearch.git"
 
   bottle do
-    sha256 arm64_big_sur: "837c96d0e6944fed2f02ed99672d7e372a2cbba25141e3de7acd096939c6ba35"
-    sha256 big_sur:       "f3f8e3a121f510b81c022c7fcda9563944f9e13c2655ee8b81d50cfc15bdb5bb"
-    sha256 catalina:      "296234167dd9f798c39b8168dba02ac3dff381ad4e61e7f0d4e0558385759af9"
-    sha256 mojave:        "939b0798a3ca5be80832bf1e1e3ebe9dd8b2febe8cf0e84765dfa7caa25f8d89"
+    sha256 arm64_big_sur: "30452ef44c28fa988ed5b8a42b1ef319cad80449e1ee94761b97dd601529faf6"
+    sha256 big_sur:       "97f2d35c667bbf98e830104523659fa070163dca549a1a4437b2cf58d3d31c1d"
+    sha256 catalina:      "1f4bab27f0f29378e6b4edf3b989361d5b0169c4cc06490dafc9afec38b87a7c"
+    sha256 mojave:        "5a6d4ec64e5f6cd8a2a8041b7823a120ee1333a779a3cae11e13972edc89129f"
   end
 
   depends_on "boost" => :build
