@@ -6,10 +6,10 @@ class RustupInit < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f82e459b1ffaf2c3f7d33e0bf3f4044b66a6baecce1e20183009775de549eebf"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3ca4f2a444efa1b2304799b1f2ccc4d835f30b422e1281381d0ef417eecd57ce"
-    sha256 cellar: :any_skip_relocation, catalina:      "bdde9b0a17227a4dbc37c52b66a921f95ac9c760c133c4b401f0abc42c05b1aa"
-    sha256 cellar: :any_skip_relocation, mojave:        "f8501b29816fb534524bd36dc46a679456361a7a0b35e6ebc6f5b0dd75083c00"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "64b2636b20d6ff2fe369cc93f4d9e5ba1ed144fd7b2265aabefe21b54a4bd8f0"
+    sha256 cellar: :any_skip_relocation, big_sur:       "02eee26e1f46a4649e66c90358d1821f5c48379e69ffc90afcac03655b8dda9a"
+    sha256 cellar: :any_skip_relocation, catalina:      "4edb96f7626d6a24750d63965d9a19000035aa01f69907982e89531c1ac1f57e"
+    sha256 cellar: :any_skip_relocation, mojave:        "c34fd99f7a6249f02ac90650a8de7bd78b237f2122629795b8645420c3cdc6e3"
   end
 
   depends_on "rust" => :build
