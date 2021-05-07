@@ -7,10 +7,10 @@ class Conftest < Formula
   head "https://github.com/open-policy-agent/conftest.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b2b07a7e5648f868c9f154169b0c7d0f149f7ce0443a5f32ce1b679eab7f4672"
-    sha256 cellar: :any_skip_relocation, big_sur:       "604ffe150b31007d51cbc79a44229c93dcbc9849246da188b7e84b9ef9186917"
-    sha256 cellar: :any_skip_relocation, catalina:      "5a1c9dc637d851845667c1f57953b2f4c41e2c05501413e7526e7440112d0a6a"
-    sha256 cellar: :any_skip_relocation, mojave:        "41f211bcc4aef7dcdeeb1a7ea4c3f1d33258ceec3bcb2eb8a278b1e0866b4532"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8be3d3469f6843eebaf9e196abb975a14a7e62f584e16bb983f3d9d443e02bc1"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b9432b0b64f963d09698455df0df322d968043e5fdf4a72b4ecd8a1172616a5f"
+    sha256 cellar: :any_skip_relocation, catalina:      "4a7dc940ec6bfd8910edc391264288b757ac498026d30e2e02dca19bb2a14fc0"
+    sha256 cellar: :any_skip_relocation, mojave:        "c13321d7e91dc00669c574cf3255efe47ad17735e6753a80979e51ffd8b359d3"
   end
 
   depends_on "go" => :build
