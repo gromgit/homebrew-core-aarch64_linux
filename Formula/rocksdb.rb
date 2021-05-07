@@ -7,11 +7,10 @@ class Rocksdb < Formula
   head "https://github.com/facebook/rocksdb.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "fc7f96ec1bc79a756b0942f64d3843819924bebc0aacf681975869a4273509c5"
-    sha256 cellar: :any, big_sur:       "1957496aa9652d17dbf5d56e8c21aee82e81e6f6b1fe4bf8feb4ec65096049d4"
-    sha256 cellar: :any, catalina:      "3cfd78fbb26e649b66928fb5209a49409ac0e8219974f50897d4b06d1a8cd876"
-    sha256 cellar: :any, mojave:        "28f1454971da5bf386ec56322b5e3b828696d0185d66a54b922c89dd55dfdb1d"
+    sha256 cellar: :any, arm64_big_sur: "a2587fded0119b3b8cf88ae900c204b4172b6fb24c8908ded8e2a2c961297f08"
+    sha256 cellar: :any, big_sur:       "a8ad63c138140f1917b7959158f1a7a5ff0514431180e1c2c4c36251b5db8b46"
+    sha256 cellar: :any, catalina:      "d317701d793cd9cc5177f4393a8c8066339451d8bb8564b2dc2af20d8c545912"
+    sha256 cellar: :any, mojave:        "278b0478a10c1a4b266af0122422beeae46c9beeaad8c2dab7d862e2e58bc49f"
   end
 
   depends_on "cmake" => :build
