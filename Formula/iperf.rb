@@ -10,10 +10,11 @@ class Iperf < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, catalina:    "0b9b36d65f113055e86b158f62daa64bf5c177e27abec34c51cbb60bf2a7d4d7"
-    sha256 cellar: :any_skip_relocation, mojave:      "8c24a0392dcda9d134c1d1121671875da4b67905321eb6e67053d6e965f92bee"
-    sha256 cellar: :any_skip_relocation, high_sierra: "7cee5824d4c70a302b3830eaf6615f52e5a1b41fdcbfbcabb46c5dd3ee00ec2c"
-    sha256 cellar: :any_skip_relocation, sierra:      "4b29283a8f69c773d307501a5f89af2a0f5804ce62874b7bd2e6ea89145cf73a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7718be6a70d76b120eb4e8891a79e727053ec366f4cdf710ff4d8960a22c62f6"
+    sha256 cellar: :any_skip_relocation, catalina:      "0b9b36d65f113055e86b158f62daa64bf5c177e27abec34c51cbb60bf2a7d4d7"
+    sha256 cellar: :any_skip_relocation, mojave:        "8c24a0392dcda9d134c1d1121671875da4b67905321eb6e67053d6e965f92bee"
+    sha256 cellar: :any_skip_relocation, high_sierra:   "7cee5824d4c70a302b3830eaf6615f52e5a1b41fdcbfbcabb46c5dd3ee00ec2c"
+    sha256 cellar: :any_skip_relocation, sierra:        "4b29283a8f69c773d307501a5f89af2a0f5804ce62874b7bd2e6ea89145cf73a"
   end
 
   def install
