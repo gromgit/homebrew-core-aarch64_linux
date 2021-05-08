@@ -8,10 +8,10 @@ class Archey4 < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b028fd2cb8db0f6e3aad92358612898f7caa096989c895414860870d373fdc0d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "43e8e72c61372aea737b852c1f78d3085fc51c7af6fd14f3dc0ce8fb49f2c410"
-    sha256 cellar: :any_skip_relocation, catalina:      "94925f9669187217e3e9000dcf95d9333096cdbc0dc98e953906eac94dcfb754"
-    sha256 cellar: :any_skip_relocation, mojave:        "cea0bd5bb7adf281dd231ea9ae3e12d33914aff934eabe11568e3ae7794fbf05"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a533ce21021e9fdab9171f8926c07c5a1e7a37199c5cbe939ce6eb9ee38f6d69"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7a61e23a65173021839e70aaf664c7fc92ebdff24b975c685fecd8aa23746453"
+    sha256 cellar: :any_skip_relocation, catalina:      "fdcf88893069bd62b09894b39dc01c1d8fc27e48f14ef9125735db74d44ad86f"
+    sha256 cellar: :any_skip_relocation, mojave:        "8c41763022d97b6780e5de02d9deba4d1e896170951edbfe883d0b5d37be6f59"
   end
 
   depends_on "python@3.9"
