@@ -8,9 +8,9 @@ class Bartycrouch < Formula
   head "https://github.com/Flinesoft/BartyCrouch.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "32a73b5f6efe8401e1aade10a2ac16b0d1116ab9b3c7e2fcc4cadb9dee26cc64"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5b64f40f1dc594b244c0a68eec60332f0bb10b59218a7086832cf8264f958f8c"
-    sha256 cellar: :any_skip_relocation, catalina:      "68b7b0654ff7e0d4d46713d245e180dd547559b8e6065ad0ce2bd0687d8fe4ee"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5ac9b15cd854432a11e43d2e73bafc0146a06107d62c6b8337a407ebc02614ff"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3573c8b0ae2893f825e5979a9f907be682735e29be39d2a3f69e7d6e0374332c"
+    sha256 cellar: :any_skip_relocation, catalina:      "c51eed14bfc9048dfbe4bdf6a2fd49c35b3a4a5f9f2c4a187c6e5a04269c44ca"
   end
 
   depends_on xcode: ["12.0", :build]
