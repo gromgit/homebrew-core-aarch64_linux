@@ -6,6 +6,10 @@ class Sqlmap < Formula
   license "GPL-2.0-or-later"
   head "https://github.com/sqlmapproject/sqlmap.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "6abeaff8a1290c8476e37a4c494c4d63fca25cc162b5352ff56557d5c055bc0a"
+  end
+
   def install
     libexec.install Dir["*"]
 
