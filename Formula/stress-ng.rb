@@ -11,10 +11,10 @@ class StressNg < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "29da01a8baf42d0402de9fa4167a83c6b86e1b274fb522567cde7de3c1962138"
-    sha256 cellar: :any_skip_relocation, big_sur:       "67108fcb436ea35b865d03a8b00388d6e444827b6ff3d0d94ba30df17a70a1a2"
-    sha256 cellar: :any_skip_relocation, catalina:      "369210742c7cf985368e94fe0ad4da7f4c64ef86bc28b128c3c26f49ab364558"
-    sha256 cellar: :any_skip_relocation, mojave:        "6f7a8b19d69c2ed7eef85fbe63510d98a164080f327f09988a9d3fabbd0d21a0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b8b5a14c9c1d09c7c423230737a9d3a8ea310bc348772f34d881e3de915f46e3"
+    sha256 cellar: :any_skip_relocation, big_sur:       "12ec86573083748a993dfcde1c388152428be681ed4be39dbf08f0ed1ac066a6"
+    sha256 cellar: :any_skip_relocation, catalina:      "fc290b71d25b459c6e527145ca2ebd6d24f05fd84bc2a7d68f076c43feec0969"
+    sha256 cellar: :any_skip_relocation, mojave:        "bfa0ec38f5e634160ec49f7aed4646900029d53b6fde7e7db2690aa7595e7236"
   end
 
   depends_on macos: :sierra
