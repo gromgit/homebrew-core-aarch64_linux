@@ -11,10 +11,10 @@ class OryHydra < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ecda15b4e0757d8309540c85cbd953cf8f62704079e5f40b03a9d0bb53b3ad68"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f2f16a3c2706db86f7ae38c8c9c1e2354d8b3da233bc18d30a9e06580453adbc"
-    sha256 cellar: :any_skip_relocation, catalina:      "657c5772b5dc40dbd552803476f8818607dec5b9c9c11f8770ae532eec821ab0"
-    sha256 cellar: :any_skip_relocation, mojave:        "5d9e5f21ee311afdb04ab98212d82477b7354341366c130a3c01e9f0d25a238f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d15c34fb367173ea9b9c91083392ee051298c02fa86043ae2ccdeb833a916f33"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ae797c3cdfefdc13c52d763fcaf49b8532ff41008a54e5d42f96a9f9ed90cffb"
+    sha256 cellar: :any_skip_relocation, catalina:      "e0a603a3b8ea52b0ec88058ac9f31c93e9b7056c13cc0dd890a16ddd6ec8e2ad"
+    sha256 cellar: :any_skip_relocation, mojave:        "1b4f543601ecbccb1f180a413ecd83164769bb12411a9861035865868917bc80"
   end
 
   depends_on "go" => :build
