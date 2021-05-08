@@ -12,10 +12,10 @@ class Cling < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "7c100296feb4998222916d3d3f98f22d1584031ec2115c83c562b53bb4025c91"
-    sha256 cellar: :any, big_sur:       "4f7e4ff0e73858b0fc8f3f3ea004f3118da82108a6087ebdb21973116ff58cee"
-    sha256 cellar: :any, catalina:      "743a41e996097da4d0d309839045c081dee5e2ec94ccb4839413003f632ffb98"
-    sha256 cellar: :any, mojave:        "ccc594737e7a0b777ad5360566a0fa13f0584c6cdb0b4023ed0ff59ebac30112"
+    sha256 cellar: :any, arm64_big_sur: "82134eeea0ba90008355120b137908d828011e302b62ec97de10b152777d9651"
+    sha256 cellar: :any, big_sur:       "e894d9476bc9ed0edb1ca8d3ca1d9fa6cefc8fc50befc93f1d1c25d1f1bee721"
+    sha256 cellar: :any, catalina:      "fd178b38640189a9b096d9c98fe3b1dedc934a504ddc0d3dc1c6bbfea144f09f"
+    sha256 cellar: :any, mojave:        "5135fc901ba316ca0e02f5598af21cd42a264994111252964f239b2576c7829b"
   end
 
   depends_on "cmake" => :build
