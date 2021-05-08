@@ -6,10 +6,10 @@ class TRec < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "da4d71225aa525bac71982d3110ebce3cee54a9a038e69931a31a820ef121b65"
-    sha256 cellar: :any_skip_relocation, big_sur:       "bec63de408b3e5e61352bb61c2ca15b98e6b7181013feef2c74725858c59158e"
-    sha256 cellar: :any_skip_relocation, catalina:      "b52aca2b1b2aaadc38f9ed9515aefe50970ef55ea202b7b243080f94d9af27b2"
-    sha256 cellar: :any_skip_relocation, mojave:        "cd5e8883df8d66b5d18ea8db506946aba6dabcb558c21dcd01451371f41bf6b3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fbde032a894b3e3280bc46e635812595f35e6c27fd12c76efb73050b07bb7fd4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ca5a62f295d80a1a404fc841201567a5477998d9808463de763a864c94b2028c"
+    sha256 cellar: :any_skip_relocation, catalina:      "b34edd8aa8158307bb2456d47d856ab8d1fbd9e3877cef5b31d30f6110ee9ef6"
+    sha256 cellar: :any_skip_relocation, mojave:        "12a269fcd0da0ac0ae6ecb7d336001862f013d928ed31e5a64ff33372f2082db"
   end
 
   depends_on "rust" => :build
