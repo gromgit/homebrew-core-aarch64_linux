@@ -6,10 +6,10 @@ class QtPerconaServer < Formula
   license all_of: ["LGPL-2.1-only", "LGPL-3.0-only"]
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "8ebabd511fa6f259b2770eec6f7d9033db23ae6c298f41476d799353ea5254a7"
-    sha256 cellar: :any, big_sur:       "b73ff97487d45cb706ae6cb8bb48e9c9a63896da26f95ba0d27497c55cf678ad"
-    sha256 cellar: :any, catalina:      "f8bd095e6c22784001362b04f34b153ef1e2fff6f58ea363b9ff514773a7a63d"
-    sha256 cellar: :any, mojave:        "f52e20abc28f09c3dab88f477765e8591b1d346af51946425a3e9e81769e595d"
+    sha256 cellar: :any, arm64_big_sur: "9e2ca61573d47f1f330841b6b718ff26af7dac1efb2056ada80987d27a279a50"
+    sha256 cellar: :any, big_sur:       "8e371d5b0e169f78c0d95c214a3c8586f6ec045010d75ab1996e32c5a1797c90"
+    sha256 cellar: :any, catalina:      "307a8a3122cb737872e508f394b497a1903a41ce78b0690b8418fe452cf6e038"
+    sha256 cellar: :any, mojave:        "b4359fbde8a1cad76188460148881f4ad910c5e511ba60208fa84bb5a8193856"
   end
 
   depends_on "cmake" => [:build, :test]
