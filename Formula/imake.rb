@@ -12,11 +12,10 @@ class Imake < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "7eafaa82ad84b47d8f4bd76bdca5ccfa065f622ea31b1d2c05fb316af8f60015"
-    sha256 big_sur:       "c382f4319ca3b0138c5d20bfeea095d76ca9c972e166550b58f259f03a5d267c"
-    sha256 catalina:      "fadd526555076cbe59ef74e14456c732a084230e3bf23a78df259f222b11b4fc"
-    sha256 mojave:        "211e42f25de025770eae0cf3b5ca2c5f03821a809009e0111115f808cd498ab1"
-    sha256 high_sierra:   "582ea346c5d5caaa38795e2221172358b584e22cfe25ec48cacf78467272b257"
+    sha256 arm64_big_sur: "5e76cebc3734d39273587f3d2d286b15bd1e869b03af84589987f9236062a1b3"
+    sha256 big_sur:       "13f4455b0065bdd06ef93f2be612884dbe9c2196834c0a9ad7d6c67d350759de"
+    sha256 catalina:      "3baa9a70823b7b57ba43df65e54baf7dbd99e6b1615d7b15e22ac8af8746794f"
+    sha256 mojave:        "f71005738d8026816e0407da56a98f06ac96f1ab7dc5e28b155b6a4b39942f46"
   end
 
   depends_on "pkg-config" => :build
