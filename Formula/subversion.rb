@@ -5,6 +5,7 @@ class Subversion < Formula
   mirror "https://archive.apache.org/dist/subversion/subversion-1.14.1.tar.bz2"
   sha256 "2c5da93c255d2e5569fa91d92457fdb65396b0666fad4fd59b22e154d986e1a9"
   license "Apache-2.0"
+  revision 1
 
   bottle do
     sha256 arm64_big_sur: "ca05380632bac6c53ae282050a0ce9a3034ffbb5719684f2d96cc43fbfe1e130"
@@ -21,8 +22,7 @@ class Subversion < Formula
     depends_on "gettext" => :build
   end
 
-  # Do not build java bindings on ARM as openjdk is not available
-  depends_on "openjdk" => :build if Hardware::CPU.intel?
+  depends_on "openjdk" => :build
   depends_on "pkg-config" => :build
   depends_on "python@3.9" => :build
   depends_on "scons" => :build # For Serf
@@ -98,6 +98,7 @@ class Subversion < Formula
       --with-apr-util=#{Formula["apr-util"].opt_prefix}
       --with-apr=#{Formula["apr"].opt_prefix}
       --with-apxs=no
+      --with-jdk=#{Formula["openjdk"].opt_prefix}
       --with-ruby-sitedir=#{lib}/ruby
       --with-py3c=#{py3c_prefix}
       --with-serf=#{serf_prefix}
@@ -107,13 +108,11 @@ class Subversion < Formula
       --without-apache-libexecdir
       --without-berkeley-db
       --without-gpg-agent
+      --enable-javahl
       --without-jikes
       PYTHON=#{Formula["python@3.9"].opt_bin}/python3
       RUBY=/usr/bin/ruby
     ]
-
-    # Do not build java bindings on ARM as openjdk is not available
-    args << "--with-jdk=#{Formula["openjdk"].opt_prefix}" << "--enable-javahl" if Hardware::CPU.intel?
 
     inreplace "Makefile.in",
               "toolsdir = @bindir@/svn-tools",
@@ -132,13 +131,13 @@ class Subversion < Formula
     system "make", "install-swig-py"
     (lib/"python3.9/site-packages").install_symlink Dir["#{lib}/svn-python/*"]
 
-    if Hardware::CPU.intel?
-      # Java and Perl support don't build correctly in parallel:
-      # https://github.com/Homebrew/homebrew/issues/20415
-      ENV.deparallelize
-      system "make", "javahl"
-      system "make", "install-javahl"
+    # Java and Perl support don't build correctly in parallel:
+    # https://github.com/Homebrew/homebrew/issues/20415
+    ENV.deparallelize
+    system "make", "javahl"
+    system "make", "install-javahl"
 
+    if Hardware::CPU.intel?
       perl_archlib = Utils.safe_popen_read("perl", "-MConfig", "-e", "print $Config{archlib}")
       perl_core = Pathname.new(perl_archlib)/"CORE"
       perl_extern_h = perl_core/"EXTERN.h"
