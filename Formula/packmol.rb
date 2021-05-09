@@ -8,11 +8,10 @@ class Packmol < Formula
   head "https://github.com/mcubeg/packmol.git"
 
   bottle do
-    sha256 arm64_big_sur: "9715f53e8c9622194f19b3c38278841a0ae9f7f5d85bbc7d0cb9a487f062cded"
-    sha256 big_sur:       "891b4a635649b6a18cc9f4743ff3c4580dd38deaa6e5b1c17435f0154a528e9b"
-    sha256 catalina:      "2de3ad79e6630d32fe68ac901ab113ba8ae3370e1976909390bcf4eb76a9a1d9"
-    sha256 mojave:        "2db13531577dfafcaa3d654a714e0c44503049b968ae3f6622baf3d53933afec"
-    sha256 high_sierra:   "ccdde7eab41ce8847bc3fcabdb482c68ea3f39c029abe0c146ec9ea370c97bfe"
+    sha256 arm64_big_sur: "3d43d73153e16a136bc8c222e38b04b564d974de27030ea6bc07a854e801b837"
+    sha256 big_sur:       "5e17a008667df7e5bc6bee6d5563dc3972c3f52b4243ab2d92507be35ce9d12b"
+    sha256 catalina:      "3ab1f82f9882aeb3e7fe733e7c375902bb5b9ced8573fcbc90913fcf19407c9a"
+    sha256 mojave:        "d881b332e102b00f5ebfd5f48ad10cb80087a0535d919514fe766e70e7fdf4f7"
   end
 
   depends_on "gcc" # for gfortran
