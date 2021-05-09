@@ -7,9 +7,9 @@ class X8664ElfGcc < Formula
   license "GPL-3.0-or-later" => { with: "GCC-exception-3.1" }
 
   bottle do
-    sha256 big_sur:  "68a66ee578b9657b2bd58170f197ebdf0b119e15685e3cd452fedb8fcfd50a2e"
-    sha256 catalina: "549e05ad005a966dd2600603cd5efe8732842935229aa68f203d60eda21cd2e1"
-    sha256 mojave:   "f1e7d04a8ba94cac9ed262a68b5c2108338ad463876d0f8c5313d828497a653a"
+    sha256 big_sur:  "88534ab7b03901f67f4c35f998b5022a7ae3214db8e30fdcf7c83424b42af292"
+    sha256 catalina: "63c2f1f77439b4e2e452b7fb0d4ae7e69242f7be2df2a01864e0895f93e2dd86"
+    sha256 mojave:   "132bb7c7505c86b8cd4a3e6cee01acff07288034517345b7781771a0b17e5bec"
   end
 
   depends_on "gmp"
