@@ -8,10 +8,10 @@ class Imgproxy < Formula
   head "https://github.com/imgproxy/imgproxy.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "905e251d9cef9e10631b04227ba9a9d9658b5866fed67ba451d7aa163b4b3602"
-    sha256 cellar: :any, big_sur:       "7ff972d4f2fdf466ffbac438b2e657944b2d4c92e991fa3ca763ad2ac0d28781"
-    sha256 cellar: :any, catalina:      "56168ffff3bd3db0b194f079a0a959a2c69a3904e5e4197b583f27b7583a7625"
-    sha256 cellar: :any, mojave:        "665a46fa177f46577e991d8def300eecb3ab7eed44dc4db438b8458c1aeaec1e"
+    sha256 cellar: :any, arm64_big_sur: "d109776b1ca2b530587fdf70f31f5912bc09c80fb40ed5e2f648f3d60357c19d"
+    sha256 cellar: :any, big_sur:       "92a509d0dbe16860c3d834a91d61349a754ee7196c0d0bfad3fad8c1b64cb561"
+    sha256 cellar: :any, catalina:      "651e12c0f5b11ae980201ac91371c10a79a595a1ed6070fdb956f730dcb81bb0"
+    sha256 cellar: :any, mojave:        "417f141d3140bf51e76f507a8c7669bec5243f0c80d1f4c6a30c6224d88bc532"
   end
 
   depends_on "go" => :build
