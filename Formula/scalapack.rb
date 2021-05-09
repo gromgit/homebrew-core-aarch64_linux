@@ -12,11 +12,10 @@ class Scalapack < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "7743ddfe24954d50640db05401637ce8878ffb795c4a991d3ba805a14ea3cca7"
-    sha256 cellar: :any, big_sur:       "da83f379e10c2bcfe543767c7e6a62ccd825e5f9d3cfb7ed066e9dd9c62c8154"
-    sha256 cellar: :any, catalina:      "281e3d5317f1616e8d5a6a3b9c37fbe6ee29a03b2abe14055854902a6c009a87"
-    sha256 cellar: :any, mojave:        "b222f27ffed17605ffca2d1b0b4804f4c66ec916c9d2b5f2dd085ad2427fa791"
-    sha256 cellar: :any, high_sierra:   "ea92d3247883a9e0de28483a34d1ca064d395d28c8a622fbac571f4cd6d0e64d"
+    sha256               arm64_big_sur: "ae872ee54a2f85ef4b8a3e5370751db4d3dd931c10d3222355fa523389592c34"
+    sha256 cellar: :any, big_sur:       "5d33d9c7a1f92b2a30487b6218d0fc248905f7114275fe83e661411343400ada"
+    sha256 cellar: :any, catalina:      "0919c7e1f584fb690ce4d8e395e4b98c21d85858581eef10f1c73612216f863a"
+    sha256 cellar: :any, mojave:        "ff1f14376cb734a26a0d5580d0e58e7107c33def1bcda522ac7af3dfcd129f30"
   end
 
   depends_on "cmake" => :build
