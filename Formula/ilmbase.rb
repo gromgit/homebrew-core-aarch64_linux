@@ -8,11 +8,10 @@ class Ilmbase < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "d89a0bf911406070b04677cc13dafd9b515316a3c1b36df23751b393799fc0fb"
-    sha256 big_sur:       "2ae53d109603c43bd482e2bdae054c10807bf0213525623666132acb104e84bb"
-    sha256 catalina:      "e6b0eac377aefaa114ccaabd5a8ca97decb6c4647750b94ccbc0b7a5d1d16452"
-    sha256 mojave:        "44fe7a276ecbe7699f456bc6f439cb1b073f16246a4631843a7bdc978cd1c526"
+    sha256 arm64_big_sur: "5a95c1ea57a08dde47723507b0406a408664e4170026a5a5771681f42ac3c6df"
+    sha256 big_sur:       "846c944f66f265e002af5f3ba3f2a989fbbc8a175e394d5e597d56b50b480f74"
+    sha256 catalina:      "bdb6dad0ee508d3bd86f50ced1eb15c0d0d25a1ffe1133659493f9cfccc41b52"
+    sha256 mojave:        "7ab7edd363f935a6411b038adea08d1aaf0e8eba1168cdd58fda21182346fc4a"
   end
 
   keg_only "ilmbase conflicts with `openexr` and `imath`"
