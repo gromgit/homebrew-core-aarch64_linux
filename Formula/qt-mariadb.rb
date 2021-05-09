@@ -6,10 +6,10 @@ class QtMariadb < Formula
   license all_of: ["LGPL-2.1-only", "LGPL-3.0-only"]
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "f49782a5bacb334ae80582929d958e2f42d90d583cc8d8b33c6bbce154964438"
-    sha256 cellar: :any, big_sur:       "2dd9171002156345159b8487397b3eb4919d4549118da6f235d660643808e826"
-    sha256 cellar: :any, catalina:      "aa435bd90121d728fb0942feac10de90b909d179d08c0ca1d9dc37411c9399fc"
-    sha256 cellar: :any, mojave:        "9a92cb4697783206c383c39d64f9b563776b511b8618338bff5703efe1968034"
+    sha256 cellar: :any, arm64_big_sur: "a09800f730064b4054c8132a74c0ee4b21879abbee0177be5034c26ce6114025"
+    sha256 cellar: :any, big_sur:       "f34ee2dbba139d421cd4d38a4aa86e1ddd75764e0c9a679a105011c1faded595"
+    sha256 cellar: :any, catalina:      "5d4a547abe99a0d92c59de25b38756275409be3ff4fb998e67abd7f49772a062"
+    sha256 cellar: :any, mojave:        "2201cd1caf3f5fe3a1a09490b0749b202f4a8cd0c2c2040b55643fa9f1894b37"
   end
 
   depends_on "cmake" => [:build, :test]
