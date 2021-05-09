@@ -7,10 +7,10 @@ class Helmsman < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ea86fa8138118dacfbf65a97fbc58fa126e8fb2c3b44464b9bf625c2dc543f7e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "4f4fe4081da0c03f99ebd8c2a1f7ac78f2edf4f17e54ff9c45e04d7a822d6da9"
-    sha256 cellar: :any_skip_relocation, catalina:      "bebf2de10998de4fc09301c2b34b2c52ef758da496152ed00361d404ef511f87"
-    sha256 cellar: :any_skip_relocation, mojave:        "19d57e12783dbcae3107942e13449caf0e8f0abb65d50d2cdc1f65dec2f6c66a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fc2de1279990f7ca275807bf838168c9b476239b7f85029c33611e84ef29899f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5cbc3d88ad87492935e8acfc8ba38930d049f0ddae983d6b0c389321005e7052"
+    sha256 cellar: :any_skip_relocation, catalina:      "46388ac364757215acfa2ca380d059cc0b3b9dd58249c1ccb42f82fb97aeb42d"
+    sha256 cellar: :any_skip_relocation, mojave:        "bfe8e401f747e016e0c292d40217640aed8a89c4f97cf42ce318d52c73418673"
   end
 
   depends_on "go" => :build
