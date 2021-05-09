@@ -8,10 +8,10 @@ class Opencoarrays < Formula
   head "https://github.com/sourceryinstitute/opencoarrays.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "ae408eed3714792c3f7f725971ed131da9ae17606179431c6070bf5617a9644a"
-    sha256 cellar: :any, big_sur:       "c9c5f9e2866851c6d991a636e146e5847632000228f2dff63e8ea64cb6cea621"
-    sha256 cellar: :any, catalina:      "fadee1f47dc7c188886973395667274bd8c5af6e095cc1e6a427758f7d5ed931"
-    sha256 cellar: :any, mojave:        "fd57ea0d2ce0624a7bece27b2b9022d809c9665d899eed7c4840270909514e9c"
+    sha256 cellar: :any, arm64_big_sur: "043b88d4bf48347702c50ba3438389965196d9970216b9464561fb31628a0b71"
+    sha256 cellar: :any, big_sur:       "837d197c743e950acdffe9ee52e63d4191c67226242c53ad7e9a26221a5e73f5"
+    sha256 cellar: :any, catalina:      "245e140d9b5b8301caab320267ab2ff0c83156f60433181afdfce370651292ab"
+    sha256 cellar: :any, mojave:        "cf781f8c51d7b6bf872e1c0879ad22f287ff3c22b49118eb5e1f3a172cfaedad"
   end
 
   depends_on "cmake" => :build
