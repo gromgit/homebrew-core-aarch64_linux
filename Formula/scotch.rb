@@ -11,6 +11,13 @@ class Scotch < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "929c6ad41f026b0b91bcff864ad824e0fabdfb2eb902a4b94378f3513cbbd630"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a20b6a391ef73b1c77a8b2977d734fd310523eed368a96304e2580590c50578d"
+    sha256 cellar: :any_skip_relocation, catalina:      "e7d7f7d2027bb60ab03da59681fa0c01fd4046366e240ac9aa442ff0910ce032"
+    sha256 cellar: :any_skip_relocation, mojave:        "f89d43dd3271fd05fdc3377a00d412992c91e7a66f1a7a4b92c088df67d118e0"
+  end
+
   depends_on "open-mpi" => :build
 
   uses_from_macos "bison"
