@@ -8,10 +8,10 @@ class Giza < Formula
   head "https://github.com/danieljprice/giza.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "481144448b46e0e91687e0204912fed0001e446af9d17398fd5a1d79107c4211"
-    sha256 cellar: :any, big_sur:       "92f73283c143734b3d418bdd45fb44b15ddd90ed6f5a9d0b54205f8a9ac0f1eb"
-    sha256 cellar: :any, catalina:      "52c1a11f3837ee60692665755b4235fc78fa4503feac78e41166b59b62e1180f"
-    sha256 cellar: :any, mojave:        "be4dc2e327046559840cc4d65b9f98aa4b780d642ca7a6d1ebbb1c472ee41249"
+    sha256               arm64_big_sur: "b7d206182dc5e0e0d55ca44cef2853da3450139e709e681e60a74227577a57d7"
+    sha256 cellar: :any, big_sur:       "91ada9adb0cd434916d29fe857d3bdc13510b6cc0477a1d2b4d26484e5c213f1"
+    sha256 cellar: :any, catalina:      "1eac9b01739dc3c8575aec73bd10a3324f8e61a8f97441cce50d879ab2cfe42b"
+    sha256 cellar: :any, mojave:        "64f9257f31d1a62163609fcb874387193cc32f349c81b8e0f2359dee8a118a2c"
   end
 
   depends_on "pkg-config" => :build
