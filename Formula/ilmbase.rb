@@ -7,10 +7,11 @@ class Ilmbase < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 arm64_big_sur: "f465c8e3f824777ab727d17e11c018eff8d8afc12ffe0bb014dbce22522e9b7d"
-    sha256 big_sur:       "c29c6544af5a4b57b14984322b16ab1d7e5e6598f6a999bed1cd757b78d8324c"
-    sha256 catalina:      "9f185fa9c393f463d37002736f4ef0dfdbe347a60193d38371d1b1055fc22a0d"
-    sha256 mojave:        "53b8f2f3e3e1ef9b6c22de5993eec29ab6d9cc46109df39a7eb7b49f0b8e02a2"
+    rebuild 1
+    sha256 arm64_big_sur: "d89a0bf911406070b04677cc13dafd9b515316a3c1b36df23751b393799fc0fb"
+    sha256 big_sur:       "2ae53d109603c43bd482e2bdae054c10807bf0213525623666132acb104e84bb"
+    sha256 catalina:      "e6b0eac377aefaa114ccaabd5a8ca97decb6c4647750b94ccbc0b7a5d1d16452"
+    sha256 mojave:        "44fe7a276ecbe7699f456bc6f439cb1b073f16246a4631843a7bdc978cd1c526"
   end
 
   keg_only "ilmbase conflicts with `openexr` and `imath`"
