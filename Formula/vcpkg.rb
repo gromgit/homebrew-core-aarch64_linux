@@ -9,11 +9,10 @@ class Vcpkg < Formula
   head "https://github.com/microsoft/vcpkg.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "9dcff0e796b3e9b34dd365e79e114a862bc297b289a64703698badf5a9b84cac"
-    sha256 cellar: :any, big_sur:       "b0eeafb5709891c77ab0b05e8b6ce6977b72d30651869dfba98f6b501048fbc3"
-    sha256 cellar: :any, catalina:      "37195113f690360e2e6efd0f4657f5b0e60f4a65e2c37ee25558bf8488d1aeb8"
-    sha256 cellar: :any, mojave:        "f1c8ef840126a72be1ed20a9f032bcfe25fdf4c30f3adb1da0e0905d7075a8d7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0d1d60ffa4f6296a39b11e9324b4ce0e2acf210a95be8da551a6f0bee9a795ee"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0392fae50da34c6beeb52fa58ac63792ec4ac75801285f13ca65aa984af5368f"
+    sha256 cellar: :any_skip_relocation, catalina:      "d4aada87eb2d5b7cb32214e9a328fc54cbbcb208898adb95b75a51f0bcfc6d11"
+    sha256 cellar: :any,                 mojave:        "17881d46973aa1dd96b9fa4e3e5d2b8922febe9be86555639a1f37f8a7eca5cd"
   end
 
   depends_on "cmake" => :build
