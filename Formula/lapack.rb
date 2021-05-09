@@ -8,10 +8,10 @@ class Lapack < Formula
   head "https://github.com/Reference-LAPACK/lapack.git"
 
   bottle do
-    sha256 arm64_big_sur: "d9cb8ec5b3323036392af942ca33f408648fd8c08965653a599d918f5f2790a7"
-    sha256 big_sur:       "b030a88ee8fa327ecdd5b33ba31a5ceaf5137e5f6c1ebb861911cca6d5bd23f3"
-    sha256 catalina:      "6c5f2f1fd02df12472fa05eb39dd7bfd0c8f1a7e367afebef9848c2c4503a97b"
-    sha256 mojave:        "6d637980e356e094bb6f35bc171cdac72ef73d94fe3dc50d3a6ecc1af7eb14a2"
+    sha256 arm64_big_sur: "b452053345423041c19f00b5146eef0d5e75d0482ab96895cadbc9cd80d03cb3"
+    sha256 big_sur:       "898f178395b354f8450d31b5341da9d0e5b54078f39ce8567f7de6b5fe0f6082"
+    sha256 catalina:      "682658f1f6b71fe3c3839da4319a378bcfa1865928e7490485542d2bb77f8e7a"
+    sha256 mojave:        "4f827cef3e1782d497e0e78564dbee89b25c05c856e526f766c7051febbb093b"
   end
 
   keg_only :shadowed_by_macos, "macOS provides LAPACK in Accelerate.framework"
