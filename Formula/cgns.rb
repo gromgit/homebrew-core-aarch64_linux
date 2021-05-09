@@ -13,10 +13,10 @@ class Cgns < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "f9567a6308f239dd3d6d705caea7481e6e5d07a00c00f4b4d2afe210bb423865"
-    sha256 big_sur:       "eeaaba2013f485bd7bdc9e229143c548b0116a6f9875f7b51994c137bcefb504"
-    sha256 catalina:      "a9fe78346df744b791501adcc4e056d637614919f149da1c70190e216825df12"
-    sha256 mojave:        "3be7b41175c8a5187b3eb20b4082b0987081e4b4848ee692e9093ece232ac344"
+    sha256 arm64_big_sur: "990a1aa3109f6738e6f35317bbbea723281d1c1ac4ca79ad59eee7c6e86f7ab2"
+    sha256 big_sur:       "ea9d83f6f0d4385054814f42152993db58582e7acd5dbde4b667aa5c7242207d"
+    sha256 catalina:      "517dfe99a307d2f4d96aa4931707596a6862bcd30b64a798375bcd7ec40cc232"
+    sha256 mojave:        "ee6e9edeb0e1b7d7b630501dd2e76091354a05e0f31c2850ca2288ed159445ce"
   end
 
   depends_on "cmake" => :build
