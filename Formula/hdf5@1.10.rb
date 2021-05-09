@@ -7,11 +7,10 @@ class Hdf5AT110 < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "3097293036aa1fbaa954a0fbe1272ec1169051a8f25dd1e9945978e9b0ccc3f8"
-    sha256 cellar: :any, big_sur:       "4d934f0da235dfe7a1b30ae65ac556e2c84fc15cad284976dfd9561ee580a5db"
-    sha256 cellar: :any, catalina:      "b60cf0990900c97ed302056e8ac51e2def10d6d9972d769f7e22d2e94ae0fe7e"
-    sha256 cellar: :any, mojave:        "ca0304a962af4bc0c0009f13b47ba55c7be49d26c63a39e8a99b37ae544b72cc"
-    sha256 cellar: :any, high_sierra:   "4ecc6d44b4eb1fd71eaa5f2e8d240d8804352643fc3255b18e71fcb3f9e6af80"
+    sha256               arm64_big_sur: "50f558462450a89684bf94338b6a0fe50579457fb73f16aec14b3a14250ea697"
+    sha256 cellar: :any, big_sur:       "aaf4050cbc4a4dea9bf6fae1c54ce4f0a93537eaf3b45f5ed9041f6771e04583"
+    sha256 cellar: :any, catalina:      "d89eb59b029e32ff0689c73245f0dfc3d44a7750a9b84ffbfa05a03ecd24bc2f"
+    sha256 cellar: :any, mojave:        "386f4217757f910b24d2f5b9f931516c0c96d6bf53b7cfbd581f204b7292a524"
   end
 
   keg_only :versioned_formula
