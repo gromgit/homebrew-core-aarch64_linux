@@ -11,9 +11,9 @@ class OpenkimModels < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:  "359a82d6289b65b90e0ab697fd1cd58215c3dd6d4c0235c72495060b604cf13f"
-    sha256 cellar: :any, catalina: "e4c844b70c144d9b0003a98b09110264524fe0215dbc659ec9eb294f89c6ed44"
-    sha256 cellar: :any, mojave:   "e48969cbccc17768708e4e181a2fc81b486e29b8ac831a9c1c9ada5e81b1224f"
+    sha256 cellar: :any, big_sur:  "acf19d2bbfb541de82b65b432ab325ef184d59337d29294ac7e92199b13733e7"
+    sha256 cellar: :any, catalina: "fac77a3d80f5a7a3a7729f7dc2d8ec033cc443e8b88134ed1da35fbc57eccc67"
+    sha256 cellar: :any, mojave:   "d7248765fbc3c62c1073767d2ab0a9fe1b4cc4117d101aee9c8a8e8e6cd6cb15"
   end
 
   depends_on "cmake" => :build
