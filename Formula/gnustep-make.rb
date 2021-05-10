@@ -11,11 +11,10 @@ class GnustepMake < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "dc1e65ba40d7093f887784411861c2ce6056e3a1bbdfffa9f73c7d6255505129"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5b8f96f0d47226cb8f00646acced66850754540352da1b6b682b9a07f80d4b90"
-    sha256 cellar: :any_skip_relocation, catalina:      "0112f9b5cc350a2e8efc7eff2ea1b3e0b13e62877ce02592eac34052b33de00f"
-    sha256 cellar: :any_skip_relocation, mojave:        "4025644721c7902db42e5f63a1d8980056b809bdab7237289b92381e82492cca"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "ff2edab383602c3449f074284f992567b0d072a3a442be898be21da0d484d3c3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f16315c14cfbdab197ea1562749d533ebbf19435b848a8173ae7c3ed08502968"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b0a74dcdffdd9331348c0215f53967dcd4ecd9b2f8c2fdbdff32f27c288136af"
+    sha256 cellar: :any_skip_relocation, catalina:      "3fb00ffefe165c26880819f9d670468d5c874a055792a0a2b25ca47e4dcad43a"
+    sha256 cellar: :any_skip_relocation, mojave:        "449a586b8998cc6e5e45ffde3f518c5352cf5e31bd126b102d1597d4b76d6985"
   end
 
   def install
