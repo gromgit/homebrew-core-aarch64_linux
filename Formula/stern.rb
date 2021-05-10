@@ -7,10 +7,10 @@ class Stern < Formula
   head "https://github.com/stern/stern.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8614847400f9595448f2c4f6bfd10cd2f8843f9c8cb1aedc4aa1f4583b5fe4bb"
-    sha256 cellar: :any_skip_relocation, big_sur:       "dd44a324e930133a7715fc1f40da67ad31dc57d13285ec98df9eca58547eab6f"
-    sha256 cellar: :any_skip_relocation, catalina:      "6e9476bc80077817a88550ce4f9028c9b9cd259d1e89fa3baf938e90144ae201"
-    sha256 cellar: :any_skip_relocation, mojave:        "aa5241c068a8645767324a851dda242d9fba68c042730a4e78ee26fab60598b6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1fe84c0352071e5e298b51b731bf41131933c292c073d7ef0b1819dc0643a2d8"
+    sha256 cellar: :any_skip_relocation, big_sur:       "405567683bac9931fb2d88f6a1c32928d12327b972d9ac585c9d2ebea2eec661"
+    sha256 cellar: :any_skip_relocation, catalina:      "da35f1b0008de6db7de6761f576da73ddc458e66275bebab4bdc40d1179f54e4"
+    sha256 cellar: :any_skip_relocation, mojave:        "a986b92863c0a8ce4fb1f3264dc06ce403ef1e7db61efcde8b9f2837effed3d4"
   end
 
   depends_on "go" => :build
