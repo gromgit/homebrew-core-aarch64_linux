@@ -5,6 +5,12 @@ class SignalCli < Formula
   sha256 "2ead51489d5521ae8c1538936c6a8dcbb22a96227019eb9e826ff5f9146dbbe2"
   license "GPL-3.0-or-later"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, big_sur:  "a928fd093ba6d27f6ddd5da51e042ad5b0a1f800418b91a5c77ab3a65b04f24c"
+    sha256 cellar: :any_skip_relocation, catalina: "0a02a6afead5f5dfe2edb031ed6e213327178d17a17f33621590dd62c912e31d"
+    sha256 cellar: :any_skip_relocation, mojave:   "982528ec459f9b42311e9922c983e590be8d8afe766002043ef5178475a00e3c"
+  end
+
   depends_on "gradle" => :build
   depends_on "protobuf" => :build
   # the libsignal-client build targets a specific rustc (nightly-2020-11-09)
