@@ -6,11 +6,10 @@ class Putty < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0595c24581bb65f29d125f18abd5a5671194114a6f93c9dec43f06470c6ff1d5"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c15a7253a5548f318e45e619e831475ddfb59f314e286b99c9f03164830233f2"
-    sha256 cellar: :any_skip_relocation, catalina:      "d5e454c08c5d06394527aa7141a332eb721097068f25deff3b4affa847837178"
-    sha256 cellar: :any_skip_relocation, mojave:        "5f9844fc7464fefd987780b3579a33b2ca37673be56c2a8249c312a19e20faea"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "6621f31a41a8eedbbb2fda99a0548deed80d432216469105bac8084df66dbcbf"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c133fac55c1f754b779ee81f4b8a5b1e21072c39409edcd0d96a723927dc7ac5"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7c3cd8e013706720ba56fcc38107051dd05eb36daeaac785a46c93695641357b"
+    sha256 cellar: :any_skip_relocation, catalina:      "f7913ffc65271e850f1689f3b5cfa0105cfcb72f06697cc9e66a0850dd4dc9f6"
+    sha256 cellar: :any_skip_relocation, mojave:        "79b879541251665356f72102b11cced22a2ed6c56bf7131235b77ac8a91f555c"
   end
 
   head do
