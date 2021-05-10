@@ -16,9 +16,6 @@ class SwiftProtobuf < Formula
   depends_on xcode: ["8.3", :build]
   depends_on "protobuf"
 
-  conflicts_with "protobuf-swift",
-    because: "both install `protoc-gen-swift` binaries"
-
   def install
     system "swift", "build", "--disable-sandbox", "-c", "release"
     bin.install ".build/release/protoc-gen-swift"
