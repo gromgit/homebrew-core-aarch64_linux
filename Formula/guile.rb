@@ -7,10 +7,10 @@ class Guile < Formula
   license "LGPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "255f1c5e4681e3c99782e8dcaaa41cce0736ec47df586ffa2e87619acb4d17f5"
-    sha256 big_sur:       "a2e04c21e977535787a1ac25f3386766b906d651fc4ee8c35a1446cd3406896b"
-    sha256 catalina:      "71556bfc3938b63392f18c37902e6e029c1c9cf6e1529f8b87e916de67e9d833"
-    sha256 mojave:        "5cc5b20ad2c0022a648235b68c05a04017174908a07beb6de89968d32e0b3a6a"
+    sha256 arm64_big_sur: "1943b7ddae69e16cf1b9f81505bfb20129b988d7bffc40460088d29c518a960a"
+    sha256 big_sur:       "776b3c2922a166b53c4613ff04fcd2d031a5cc34108f753c9b2857a271f89163"
+    sha256 catalina:      "ee1867daea429b0e7867a30890e07f3c7e4a69d6d483c728c912aea34aa4f83d"
+    sha256 mojave:        "4152090b41a47a1a640bb5ade7a40f55e309628b0fde7eb3b87b98976583613d"
   end
 
   head do
