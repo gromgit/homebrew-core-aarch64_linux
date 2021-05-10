@@ -5,7 +5,7 @@ class Subversion < Formula
   mirror "https://archive.apache.org/dist/subversion/subversion-1.14.1.tar.bz2"
   sha256 "2c5da93c255d2e5569fa91d92457fdb65396b0666fad4fd59b22e154d986e1a9"
   license "Apache-2.0"
-  revision 1
+  revision 2
 
   bottle do
     sha256 arm64_big_sur: "cc10a37f931098a527772624566986313996921ef4db503574894e7c879a148e"
@@ -31,17 +31,17 @@ class Subversion < Formula
   depends_on "apr-util"
 
   # build against Homebrew versions of
-  # gettext, lz4, sqlite and utf8proc for consistency
+  # gettext, lz4 and utf8proc for consistency
   depends_on "gettext"
   depends_on "lz4"
   depends_on "openssl@1.1" # For Serf
-  depends_on "sqlite"
   depends_on "utf8proc"
 
   uses_from_macos "expat"
   uses_from_macos "krb5"
   uses_from_macos "perl"
   uses_from_macos "ruby"
+  uses_from_macos "sqlite"
   uses_from_macos "zlib"
 
   resource "py3c" do
@@ -86,7 +86,7 @@ class Subversion < Formula
       system "scons", "install"
     end
 
-    # Use existing system zlib
+    # Use existing system zlib and sqlite
     # Use dep-provided other libraries
     # Don't mess with Apache modules (since we're not sudo)
     args = %W[
@@ -102,7 +102,7 @@ class Subversion < Formula
       --with-ruby-sitedir=#{lib}/ruby
       --with-py3c=#{py3c_prefix}
       --with-serf=#{serf_prefix}
-      --with-sqlite=#{Formula["sqlite"].opt_prefix}
+      --with-sqlite=#{MacOS.sdk_path_if_needed}/usr
       --with-swig=#{Formula["swig"].opt_prefix}
       --with-zlib=#{MacOS.sdk_path_if_needed}/usr
       --without-apache-libexecdir
