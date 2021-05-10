@@ -11,10 +11,10 @@ class LinkGrammar < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "18b6a922a24ebae883a013ee1127a9add635dc03ce45dfc6a72153b2ea6bb26f"
-    sha256 big_sur:       "bb2c97f3f706ee56cce52d63ffb70ee72ecffffc589097ddb123be392d845f4a"
-    sha256 catalina:      "5c915592973452233cfb4f1a059c06b43c9082345ff7094fc62db31d49e3168c"
-    sha256 mojave:        "5055019667d8ae06fadb8481b1f563787daf26245bd0046502f1f009c1aacbdf"
+    sha256 arm64_big_sur: "93066eeefacc4e8095976cd3fc192dd4d9c9f3f6b6d24a7ad49d1de501ba92ac"
+    sha256 big_sur:       "c80d1bef9073e1761f04074d636936036657c7347c12b1f313dbb16d3e3971db"
+    sha256 catalina:      "dbd8dee3d34417e1be978ff916f7159ba77036c9a2af069d8dab23dc11243a38"
+    sha256 mojave:        "8eb72ea314d9e6d5b99df22a0e7635eb5fa26e809010bdcaf2cd5f53ae6ebdc1"
   end
 
   depends_on "ant" => :build
