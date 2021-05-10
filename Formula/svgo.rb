@@ -8,11 +8,7 @@ class Svgo < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "abdbb490e21ec5540881fb2e52025560b870d21d76ce78a6e71358200fe72000"
-    sha256 cellar: :any_skip_relocation, big_sur:       "df7af8e4c6d010ca928f04d14ce34abbe08b1b8249ba42ffc301f6067356e123"
-    sha256 cellar: :any_skip_relocation, catalina:      "48a66950681297bed8bf89dbcfeab2c34147784bccdd5ac92f5664b73f530457"
-    sha256 cellar: :any_skip_relocation, mojave:        "631a5e5bf726f9f3a2c53ddfc7fd5061953bf905208972091c77ea7a10e41599"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "5fe6407fa998ce2431d435e24bd565332d939b680fb624ddbfd5ad2316799305"
+    sha256 cellar: :any_skip_relocation, all: "aa21d84ddda6f26c44fd030631059cd8175cdfd85fff8f821d33a0abe3e9846f"
   end
 
   depends_on "node"
