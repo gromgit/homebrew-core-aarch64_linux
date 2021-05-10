@@ -9,10 +9,10 @@ class NicotinePlus < Formula
   head "https://github.com/Nicotine-Plus/nicotine-plus.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "76c6b9d080f170125331b549cbb496eb3639a757cdcd6b4056ec5a98afeeb533"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0997da63eb74d5138330ef9bd0f82635971b29742f13e2d01e2c0f73fd8d64c3"
-    sha256 cellar: :any_skip_relocation, catalina:      "872762c2cc58bee642e35770637471bc78533c379a15935e62e0d90406767fd2"
-    sha256 cellar: :any_skip_relocation, mojave:        "7c97cf043c4ad24779b9e8f2ac571bcc728044822b482fefaa8f29be663b1cf9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "dbcd856e88efa6227030bf3068d523280a036099f6439f0967904f10f104c126"
+    sha256 cellar: :any_skip_relocation, big_sur:       "9a339a40b2a56caf796f0234a37d3db76d0954c3d2e03ae2fdd13b38198e7ac4"
+    sha256 cellar: :any_skip_relocation, catalina:      "9a339a40b2a56caf796f0234a37d3db76d0954c3d2e03ae2fdd13b38198e7ac4"
+    sha256 cellar: :any_skip_relocation, mojave:        "9a339a40b2a56caf796f0234a37d3db76d0954c3d2e03ae2fdd13b38198e7ac4"
   end
 
   depends_on "adwaita-icon-theme"
