@@ -6,11 +6,10 @@ class Scs < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "dfebdb1b5216ff2e4d159544968c71d408e704d23e35535e584e21839eeebca7"
-    sha256 cellar: :any, big_sur:       "e052505cdf6b6b432484c44b0cce597a029be07d04aeb4993ddc240eca9cd1b6"
-    sha256 cellar: :any, catalina:      "c5a8b9e03c06e7eab32e1934e69ebed0036b2ae7a9a98612f4aab618d665db96"
-    sha256 cellar: :any, mojave:        "2bad6f83534fe6fd7f2f3f4b56ed2c942aa650060090239c458fc3e36c1cea10"
-    sha256 cellar: :any, high_sierra:   "3335a0697e50ea6bf1b38ff0f3a8946d8945a25b8c5731f4afe7b59c965c43c0"
+    sha256 cellar: :any, arm64_big_sur: "31f24806066b7875a7f95449334dc87db7469a8e9bf16e6e3af2e08477a7a18c"
+    sha256 cellar: :any, big_sur:       "02a9439a63388387cde336365b7fa8ce72dee8b007cb5b4738187cc3d8450d15"
+    sha256 cellar: :any, catalina:      "9557d174fd285c18d2196035dad66ad22781727da8ee450d2a1c6a8a591ade72"
+    sha256 cellar: :any, mojave:        "8a0b90a351d6f54549b6aca70f3a19353bf33732d15cbcdb827962bed0f0cc52"
   end
 
   def install
