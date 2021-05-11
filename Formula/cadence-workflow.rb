@@ -1,8 +1,9 @@
 class CadenceWorkflow < Formula
   desc "Distributed, scalable, durable, and highly available orchestration engine"
   homepage "https://cadenceworkflow.io/"
-  url "https://github.com/uber/cadence/archive/refs/tags/v0.18.2.tar.gz"
-  sha256 "1cdffbee29d9455a0ff4e61114f93b1f5fc210366b707b7dd496a90325a21dce"
+  url "https://github.com/uber/cadence.git",
+    tag:      "v0.21.0",
+    revision: "667b7c68e67682a8d23f4b8f93e91a791313d8d6"
   license "MIT"
   head "https://github.com/uber/cadence.git"
 
@@ -18,6 +19,7 @@ class CadenceWorkflow < Formula
   conflicts_with "cadence", because: "both install an `cadence` executable"
 
   def install
+    system "make", ".fake-codegen"
     system "make", "cadence", "cadence-server", "cadence-canary", "cadence-sql-tool", "cadence-cassandra-tool"
     bin.install "cadence"
     bin.install "cadence-server"
