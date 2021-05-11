@@ -5,6 +5,13 @@ class Cadical < Formula
   sha256 "b5990bea7aa5df6002b9bfe782323742d786565b9dfee37bbc0dd0f4b8e65141"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c19d4807b7bc2ea2eff3a15fbf25c6ebe4a660bcd84088d0a17ed8de401e715c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "780dede4d1880b19f2b5675c2de1dcf92aeff4b03cea584181c9dd52acd4ad62"
+    sha256 cellar: :any_skip_relocation, catalina:      "df66f1da5a5d384cf9b90c6c9c93f1546f057d4b21479973115be0a27fc3534e"
+    sha256 cellar: :any_skip_relocation, mojave:        "928b030fa849f45665d3b0cd0b9afb1de01130caab147d51d7b0e8e2416224cf"
+  end
+
   def install
     system "./configure"
     chdir "build" do
