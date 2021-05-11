@@ -1,10 +1,9 @@
 class Jose < Formula
   desc "C-language implementation of Javascript Object Signing and Encryption"
   homepage "https://github.com/latchset/jose"
-  url "https://github.com/latchset/jose/releases/download/v10/jose-10.tar.bz2"
-  sha256 "5c9cdcfb535c4d9f781393d7530521c72b1dd81caa9934cab6dd752cc7efcd72"
+  url "https://github.com/latchset/jose/releases/download/v11/jose-11.tar.xz"
+  sha256 "e272afe7717e22790c383f3164480627a567c714ccb80c1ee96f62c9929d8225"
   license "Apache-2.0"
-  revision 1
 
   bottle do
     sha256 cellar: :any, arm64_big_sur: "2cd4169ce2cfbcee491a79cf4ce414c33e663361ea3203d10f9d7c2cacab6864"
@@ -15,6 +14,8 @@ class Jose < Formula
     sha256 cellar: :any, sierra:        "1669bf780ac07ee9a7d216185139aaa6e5c44add352e6da25f02c079694e7ad1"
   end
 
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "jansson"
   depends_on "openssl@1.1"
@@ -22,12 +23,11 @@ class Jose < Formula
   uses_from_macos "zlib"
 
   def install
-    system "./configure", "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
-    system "make"
-    system "make", "check"
-    system "make", "install"
+    mkdir "build" do
+      system "meson", *std_meson_args, ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
   end
 
   test do
