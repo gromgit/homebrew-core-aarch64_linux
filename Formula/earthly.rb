@@ -1,8 +1,8 @@
 class Earthly < Formula
   desc "Build automation tool for the container era"
   homepage "https://earthly.dev/"
-  url "https://github.com/earthly/earthly/archive/v0.5.11.tar.gz"
-  sha256 "1584495fd8dfa3839f36286fa16bdb611151773033a5e6b936a5df9836c5b06b"
+  url "https://github.com/earthly/earthly/archive/v0.5.12.tar.gz"
+  sha256 "f2742a21d445eb19b1accf85e288f1ada511fe76f42fd2cd4e670fba43f72085"
   license "BUSL-1.1"
   head "https://github.com/earthly/earthly.git"
 
@@ -22,7 +22,7 @@ class Earthly < Formula
 
   def install
     ldflags = "-X main.DefaultBuildkitdImage=earthly/buildkitd:v#{version} -X main.Version=v#{version} " \
-              "-X main.GitSha=4441aa72487b448d1a3e94cb0ae6afc1ad02ce96 "
+              "-X main.GitSha=4d3e378b2f8f68a6ee85beb9c9b891bd381ce323 "
     tags = "dfrunmount dfrunsecurity dfsecrets dfssh dfrunnetwork"
     system "go", "build",
         "-tags", tags,
@@ -43,7 +43,7 @@ class Earthly < Formula
       \tRUN echo Homebrew
     EOS
 
-    output = shell_output("#{bin}/earthly --buildkit-host 127.0.0.1 +default 2>&1", 1).strip
-    assert_match "Error while dialing invalid address 127.0.0.1", output
+    output = shell_output("#{bin}/earthly --buildkit-host 127.0.0.1 +default 2>&1", 6).strip
+    assert_match "buildkitd failed to start", output
   end
 end
