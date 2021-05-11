@@ -8,6 +8,13 @@ class SearchThatHash < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/HashPals/Search-That-Hash.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "167b30792a56859267b04812cd933aa4c5cbe5ae08d4723f6c7b2b59f90a61a4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "bcb3a7b773535ab3969044b9783722b87d284c4c38be70676caf4557b793d055"
+    sha256 cellar: :any_skip_relocation, catalina:      "b184d96cfacc1d6c0d673c01ac99a9493a6218b3a53fdbf7216ef894c6b4ade2"
+    sha256 cellar: :any_skip_relocation, mojave:        "9984fc3702f3a6905dce8bf29733eea99660208cdf5db2701bad7960579e57fa"
+  end
+
   depends_on "python@3.9"
 
   resource "appdirs" do
