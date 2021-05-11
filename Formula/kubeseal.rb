@@ -12,10 +12,10 @@ class Kubeseal < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2b2b04769887b909071e2f02b63e218731e7b1255a5357c4c456688ab27b62fd"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e98da4889c647805e7463902f07853e89a0349abe6bd37e7cf428a5cee47c5bd"
-    sha256 cellar: :any_skip_relocation, catalina:      "ee40961cf27306ed94cb040ad881fd19b07dce624d3a031bdf24122cf41243bd"
-    sha256 cellar: :any_skip_relocation, mojave:        "6913e64b44f9851c656e1789c2118c2038e3dc73f5ce74af381f212f7f33a90d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6657e0cba1258478e3c1e5d5e25a7828cd5d8f242799e69428beb84cc36ae7c6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "2a1ed17105b7150960ad0ff52a8a8af6a19ee68f6d6f0821c63cf5941a8b8f61"
+    sha256 cellar: :any_skip_relocation, catalina:      "b387aff195ecc80147c545e16d68264184bb1a7ab9cf4eac6b8d9b09afcf6faf"
+    sha256 cellar: :any_skip_relocation, mojave:        "57cbf276f5f8e0257692a72efdfab3950fc109d1c33a8f904af66d9d063edb6e"
   end
 
   depends_on "go" => :build
