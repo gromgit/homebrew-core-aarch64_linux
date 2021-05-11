@@ -3,8 +3,8 @@ class Watson < Formula
 
   desc "Command-line tool to track (your) time"
   homepage "https://tailordev.github.io/Watson/"
-  url "https://files.pythonhosted.org/packages/e0/a5/9e29eb31b0a0c2c7a813cfa5a10ba3bf83f8c4d4471155c914fcd41a5d45/td-watson-2.0.0.tar.gz"
-  sha256 "08890779ea5c72ff1a50e039584d11808088a3e2194d8c7e195e5439aa0b2d78"
+  url "https://files.pythonhosted.org/packages/59/fc/cd80b0504fec73821ccbdbb276e0ea2092d1be62f0a7ca7722d8a0cc4368/td-watson-2.0.1.tar.gz"
+  sha256 "a665775a76fb3ac464153e10991577a38ca938adae2142a24c9d1b1234db95f0"
   license "MIT"
   head "https://github.com/TailorDev/Watson.git"
 
@@ -18,8 +18,8 @@ class Watson < Formula
   depends_on "python@3.9"
 
   resource "arrow" do
-    url "https://files.pythonhosted.org/packages/f6/72/e8c899f0eef9c0131ffdb1bc25d79ff65c60411f831ab17d29e3809f5812/arrow-1.0.3.tar.gz"
-    sha256 "399c9c8ae732270e1aa58ead835a79a40d7be8aa109c579898eb41029b5a231d"
+    url "https://files.pythonhosted.org/packages/0a/97/e58a3cd2207cb9cb7aa9b91f3bc4df3b4e13eafc88d75b1a9f4535ea6e1f/arrow-1.1.0.tar.gz"
+    sha256 "b8fe13abf3517abab315e09350c903902d1447bd311afbc17547ba1cb3ff5bd8"
   end
 
   resource "certifi" do
@@ -58,8 +58,8 @@ class Watson < Formula
   end
 
   resource "six" do
-    url "https://files.pythonhosted.org/packages/6b/34/415834bfdafca3c5f451532e8a8d9ba89a21c9743a0c59fbd0205c7f9426/six-1.15.0.tar.gz"
-    sha256 "30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
   resource "urllib3" do
