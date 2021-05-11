@@ -1,8 +1,8 @@
 class Groonga < Formula
   desc "Fulltext search engine and column store"
   homepage "https://groonga.org/"
-  url "https://packages.groonga.org/source/groonga/groonga-11.0.1.tar.gz"
-  sha256 "029e4374e7f73d572d3006023f45ebe158ea3b9c845aaaca5fa15b21df3f14c4"
+  url "https://packages.groonga.org/source/groonga/groonga-11.0.2.tar.gz"
+  sha256 "de29cb5648e3c29873d343747d626a5efcb302357dc7bd82dc4df776e2de558c"
   license "LGPL-2.1-or-later"
 
   livecheck do
@@ -60,8 +60,10 @@ class Groonga < Formula
       system "./autogen.sh"
     end
 
-    system "./configure", *args
-    system "make", "install"
+    mkdir "builddir" do
+      system "../configure", *args
+      system "make", "install"
+    end
 
     resource("groonga-normalizer-mysql").stage do
       ENV.prepend_path "PATH", bin
