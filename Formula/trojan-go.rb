@@ -7,6 +7,13 @@ class TrojanGo < Formula
   license "GPL-3.0-only"
   head "https://github.com/p4gefau1t/trojan-go.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "03d43f0420e1f2288acb96621128db8c929d3bfd6ec9d72878d3fe8e93bbf7f8"
+    sha256 cellar: :any_skip_relocation, big_sur:       "75c5bd22c108fce489ab4e70a66b1f13f895d0ca5e1ed6e438387c9078e2612f"
+    sha256 cellar: :any_skip_relocation, catalina:      "637db51da7c4bc5489c8365f0202bd6b423c8cc1e061eea0561089250855f69f"
+    sha256 cellar: :any_skip_relocation, mojave:        "d504efea5008294948b816a8ee3ef28469537cb0db3b04f2fca9bd1fb0c28c09"
+  end
+
   depends_on "go" => :build
 
   resource "geoip" do
