@@ -3,8 +3,8 @@ class Datalad < Formula
 
   desc "Data distribution geared toward scientific datasets"
   homepage "https://www.datalad.org"
-  url "https://files.pythonhosted.org/packages/e1/c9/59b08526e87e5e0e758300555e91b3368655697497e339a07a014df4bdf0/datalad-0.14.3.tar.gz"
-  sha256 "72f5954414e32cdbe886ecc7365886208d6d33d1d8eec1690dc5951d0edffe7b"
+  url "https://files.pythonhosted.org/packages/0b/9b/df9764069f021117fa45e6f67143a54a9e44d386ee36c1428896a6d774fa/datalad-0.14.4.tar.gz"
+  sha256 "1ff31efe2f922372dfbfc1c4985f0c39ca8c3a210d5e35e2b4a7d55bc64b158c"
   license "MIT"
 
   bottle do
@@ -68,8 +68,8 @@ class Datalad < Formula
   end
 
   resource "humanize" do
-    url "https://files.pythonhosted.org/packages/ff/4a/634124b01f5d2003203746e38e6be86f42e99143e49a4d721da2c36f8d23/humanize-3.4.1.tar.gz"
-    sha256 "6e04cdd75d66074c34ff93c30a2ad6d19d91202a65c1bd400b2edeedae399bda"
+    url "https://files.pythonhosted.org/packages/8e/66/d3ba18aacbfde9360177adedf46b5f7cd728cc34ac0352e69e177866ba05/humanize-3.5.0.tar.gz"
+    sha256 "a0474226e1494923f9106758e11f0c3bb4dbe5e7d84388fa78f90eb7713b5d65"
   end
 
   resource "idna" do
@@ -143,8 +143,8 @@ class Datalad < Formula
   end
 
   resource "six" do
-    url "https://files.pythonhosted.org/packages/6b/34/415834bfdafca3c5f451532e8a8d9ba89a21c9743a0c59fbd0205c7f9426/six-1.15.0.tar.gz"
-    sha256 "30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
   resource "tqdm" do
