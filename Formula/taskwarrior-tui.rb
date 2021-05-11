@@ -1,8 +1,8 @@
 class TaskwarriorTui < Formula
   desc "Terminal user interface for taskwarrior"
   homepage "https://github.com/kdheepak/taskwarrior-tui"
-  url "https://github.com/kdheepak/taskwarrior-tui/archive/v0.13.21.tar.gz"
-  sha256 "ba2222aecfc285a41440d7683370ce789bbfc9484fe9f0322f0ca36e917f82bf"
+  url "https://github.com/kdheepak/taskwarrior-tui/archive/v0.13.22.tar.gz"
+  sha256 "601cb0126284b09c85f1a03f5d08e785391b3fa824ed9b436678ee9e7e695a25"
   license "MIT"
   head "https://github.com/kdheepak/taskwarrior-tui.git"
 
@@ -32,11 +32,14 @@ class TaskwarriorTui < Formula
       system "pandoc", *args, "docs/taskwarrior-tui.1.md", "-o", "taskwarrior-tui.1"
       man1.install "taskwarrior-tui.1"
     end
+    bash_completion.install "completions/taskwarrior-tui.bash"
+    fish_completion.install "completions/taskwarrior-tui.fish"
+    zsh_completion.install "completions/_taskwarrior-tui"
   end
 
   test do
     assert_match version.to_s, shell_output("#{bin}/taskwarrior-tui --version")
     assert_match "The argument '--config <FILE>' requires a value but none was supplied",
-      shell_output("#{bin}/taskwarrior-tui --config 2>&1", 1)
+      shell_output("#{bin}/taskwarrior-tui --config 2>&1", 2)
   end
 end
