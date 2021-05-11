@@ -6,10 +6,10 @@ class Findomain < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c1df9003d6c98961eb055f0514044dfd41478fdfae671b5bc9007794c8ad086d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "256fbc8415d040ea1e52f8c2d7b657668ec0a42887f14089dcb22e5a9cf67803"
-    sha256 cellar: :any_skip_relocation, catalina:      "e683ee1142c5ec0dea303084ca991b7b3a9beeca1c9b5e2fb975d2abfea48a2e"
-    sha256 cellar: :any_skip_relocation, mojave:        "977fe61e3526d8d57f7904ca07f9e3bc6669b465e270738800995da28b8d9056"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c360f31b01c06a0f9edc59d5078427e8cf18329237c57a0bc24041f528db1346"
+    sha256 cellar: :any_skip_relocation, big_sur:       "df909eae7276929eec1fda5e0fa2acf9e024e47d8493f9b4e3cc709a7e4d21a5"
+    sha256 cellar: :any_skip_relocation, catalina:      "6456fa688f3c3ca7e546670bdc2484eefc2204868038d561fb3a4224ace7953a"
+    sha256 cellar: :any_skip_relocation, mojave:        "96e53ac34cd7650d31cb51d5138dc7cd88345f395b2963c40ae6acf09c41564a"
   end
 
   depends_on "rust" => :build
