@@ -9,10 +9,10 @@ class Watson < Formula
   head "https://github.com/TailorDev/Watson.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fe5bd88bf96bfcef8ba85ccd24a980653fa99eb5f2b80a5aeef6e1b0d575a194"
-    sha256 cellar: :any_skip_relocation, big_sur:       "af021b51ef668924064fcea0ce92d752f0a919109d931ce8647b2ee6c5039e29"
-    sha256 cellar: :any_skip_relocation, catalina:      "15fea88df8c5d70f50ff8bf47ed746618acdecc3ab74a029aa60a569c7a462c5"
-    sha256 cellar: :any_skip_relocation, mojave:        "1465938282147eb00a00544702d0195f6f50c16561a890a1c142e9704630c837"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6a801dbfdacc66d2db3bcdc3ec7cd0305e9c0c9e774113e8741dcec56686b7da"
+    sha256 cellar: :any_skip_relocation, big_sur:       "54cc3648f3ad575925332ef0cbb1112a7e988c944f462520143706721dcb1690"
+    sha256 cellar: :any_skip_relocation, catalina:      "5d090380d0f52329f78d37627d991512763e58270d77dd221d724794dfc142c0"
+    sha256 cellar: :any_skip_relocation, mojave:        "6041767d0befeb2912675b1287d7dff6b1b1afc2168d68e60f1390491ba27053"
   end
 
   depends_on "python@3.9"
