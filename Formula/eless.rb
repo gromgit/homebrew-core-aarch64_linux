@@ -6,7 +6,7 @@ class Eless < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "167fd7c8c94c58984300e3873326ddffe55adf563f5640da213746cd83f0080a"
+    sha256 cellar: :any_skip_relocation, all: "cc720394c1e88326fb9a2f76457a1edb4efa081313fe7fc914e1e9375b1e5ade"
   end
 
   depends_on "emacs"
