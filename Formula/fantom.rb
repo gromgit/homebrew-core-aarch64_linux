@@ -5,6 +5,10 @@ class Fantom < Formula
   sha256 "805befd635700ad2d85993ef02abc6c8df4c8be57b688302ce62f45a693117d3"
   license "AFL-3.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "7e9e4d0966690f028f05ffdee9bc2c9f52e1337933da4fe6b4e7c4bd9ff146ff"
+  end
+
   depends_on "openjdk"
 
   def install
