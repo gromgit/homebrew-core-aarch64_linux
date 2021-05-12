@@ -6,12 +6,10 @@ class Jose < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "2cd4169ce2cfbcee491a79cf4ce414c33e663361ea3203d10f9d7c2cacab6864"
-    sha256 cellar: :any, big_sur:       "0ec2b6ee1c5b94c0eee5edd20e8e619cf341afa0c16e5873abb5ba8afb0e6558"
-    sha256 cellar: :any, catalina:      "359c58b36bb631623273a77d13431f29ff467e9602f1500f9e4fa761ed0719be"
-    sha256 cellar: :any, mojave:        "358a06afd49f1390ca917969dbb434a75a91bd0de3d8ac981d3eab969670cfe2"
-    sha256 cellar: :any, high_sierra:   "7a84bdaece281b98dc4a7b0a7fbf05976297126966d14ee2862e007521cdd4ea"
-    sha256 cellar: :any, sierra:        "1669bf780ac07ee9a7d216185139aaa6e5c44add352e6da25f02c079694e7ad1"
+    sha256 cellar: :any, arm64_big_sur: "a3a76d8b25def2f572513ddf580cd35f575a45c1b505c0ac781ea47d0bac4cab"
+    sha256 cellar: :any, big_sur:       "7b5124a9d57f6a8ad4dfb85e706a4061cf52bfd423280198b7dcc0035158a9a8"
+    sha256 cellar: :any, catalina:      "4fd0e6dc8ea1c333814995ba8cb855a6ee49d0db5cfd78272a418e981a4beb20"
+    sha256 cellar: :any, mojave:        "6a6b10dbb8a8f3c6418bc35da20c5847befebcc71e1f96af00a047ccdcaa1752"
   end
 
   depends_on "meson" => :build
