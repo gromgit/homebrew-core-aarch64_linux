@@ -8,10 +8,10 @@ class BitwardenCli < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "540752b708caa92c8ba0000d988702e63e0e2d47a187acaa05368f75924145ea"
-    sha256 cellar: :any_skip_relocation, big_sur:       "4972cd6fd41961b3e7ae47491cf547bf245071950fddffbb2f6389a8c15c9de3"
-    sha256 cellar: :any_skip_relocation, catalina:      "dfbde3dd5cc42200caa86c60322985c460c8ba075080da1eabd0b0f25a883e32"
-    sha256 cellar: :any_skip_relocation, mojave:        "aa07995f70f082dcc662468c7dfbf7f305a832cb6618061e8fccae08927b9c1c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "32b5330b34919c4ab24ed3664ba999653c8709ed8aa746879973976e1ae56d7c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "2c30487ca6325ff18712f84ef2f8352c22eecab3a29a8f225b86fd7959e838b1"
+    sha256 cellar: :any_skip_relocation, catalina:      "2c30487ca6325ff18712f84ef2f8352c22eecab3a29a8f225b86fd7959e838b1"
+    sha256 cellar: :any_skip_relocation, mojave:        "2c30487ca6325ff18712f84ef2f8352c22eecab3a29a8f225b86fd7959e838b1"
   end
 
   depends_on "node"
