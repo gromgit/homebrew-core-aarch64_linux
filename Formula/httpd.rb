@@ -7,11 +7,10 @@ class Httpd < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "4c58ed58ba2e47a10192bffb9bcf067e7d6b947819ee85bd014e9c67cf8be5d8"
-    sha256 big_sur:       "9c6b3d19822ad929ef477fd6936c753e37477315b3011754858013f4a355f7cb"
-    sha256 catalina:      "28299ea97da7c443d880865b5669fd0341e01d2891f91095ebcfd5ad30679452"
-    sha256 mojave:        "d5ef11b940eda27e5fda1addb6b914b76768f3fc0fa5652aa4470d22a87de4d9"
+    sha256 arm64_big_sur: "c920b68cd1d5fc3f190a0736ee6690992c2fa77600f7b0bbcb8249c50fb1f62a"
+    sha256 big_sur:       "5f7ac3264c609c72a563ce7112bf0347e229f1cbfd717b3884c3e77139c8b296"
+    sha256 catalina:      "f5efc2eb76845fb30b15dca64bf090fedfde3a85ce553deab906493cdf0527d2"
+    sha256 mojave:        "5182142b3d05791a094cfe92c0f053114cf15f4fea8a07f90c3867d4d4a16434"
   end
 
   depends_on "apr"
