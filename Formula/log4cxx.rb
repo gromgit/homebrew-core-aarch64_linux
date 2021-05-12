@@ -1,9 +1,9 @@
 class Log4cxx < Formula
   desc "Library of C++ classes for flexible logging"
   homepage "https://logging.apache.org/log4cxx/index.html"
-  url "https://www.apache.org/dyn/closer.lua?path=logging/log4cxx/0.11.0/apache-log4cxx-0.11.0.tar.gz"
-  mirror "https://archive.apache.org/dist/logging/log4cxx/0.11.0/apache-log4cxx-0.11.0.tar.gz"
-  sha256 "c316705ee3c4e5b919d3561d5f305162d21687aa6ae1f31f02f6cdadc958b393"
+  url "https://www.apache.org/dyn/closer.lua?path=logging/log4cxx/0.12.0/apache-log4cxx-0.12.0.tar.gz"
+  mirror "https://archive.apache.org/dist/logging/log4cxx/0.12.0/apache-log4cxx-0.12.0.tar.gz"
+  sha256 "bd5b5009ca914c8fa7944b92ea6b4ca6fb7d146f65d526f21bf8b3c6a0520e44"
   license "Apache-2.0"
 
   bottle do
@@ -14,24 +14,15 @@ class Log4cxx < Formula
     sha256 cellar: :any, high_sierra:   "11478b4f5ece24ec391954cc0538bb28f11ae6256a9499ca1e95103c2eb1d75c"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "libtool" => :build
-
+  depends_on "cmake" => :build
   depends_on "apr-util"
 
   def install
-    # Fixes build error with clang, old libtool scripts. cf. #12127
-    # Reported upstream here: https://issues.apache.org/jira/browse/LOGCXX-396
-    # Remove at: unknown, waiting for developer comments.
-    system "./autogen.sh"
-    system "./configure", "--disable-debug", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}",
-                          # Docs won't install on macOS
-                          "--disable-doxygen",
-                          "--with-apr=#{Formula["apr"].opt_bin}",
-                          "--with-apr-util=#{Formula["apr-util"].opt_bin}"
-    system "make", "install"
+    mkdir "build" do
+      system "cmake", "..", *std_cmake_args, "-DBUILD_SHARED_LIBS=ON"
+      system "make"
+      system "make", "install"
+    end
   end
 
   test do
@@ -67,7 +58,7 @@ class Log4cxx < Formula
       log4j.appender.R.layout=org.apache.log4j.PatternLayout
       log4j.appender.R.layout.ConversionPattern=%p %t %c - %m%n
     EOS
-    system ENV.cxx, "test.cpp", "-o", "test", "-L#{lib}", "-llog4cxx"
+    system ENV.cxx, "-std=c++17", "test.cpp", "-o", "test", "-L#{lib}", "-llog4cxx"
     assert_match(/ERROR.*Foo/, shell_output("./test", 1))
   end
 end
