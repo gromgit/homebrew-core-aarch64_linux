@@ -12,11 +12,10 @@ class ChibiScheme < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "72147f8c2e1d1c000e691fe2d02bef8ba00443f5f5d411abff7415363ca7ce7e"
-    sha256 big_sur:       "4f474285e01e463347b461187271229e345c0a3771642f4dd39b22008be9583e"
-    sha256 catalina:      "75122fe5413f7f206e9fcc717307d3603041a39a93b895c4b89a02845ac4c683"
-    sha256 mojave:        "0ce202e52817dbed3e87e5911a74ad7f85e6f081b45deba0427d5d09b1dcb6ae"
-    sha256 high_sierra:   "c3dac9e5642a0d725ae1d77e0a9139e829b24c7c34e8e85eb58e506d7ba2e240"
+    sha256 arm64_big_sur: "18fc48f1b5623936fd24b7259b4bcb0e611a91ebe2354b2e1ca8b3dc99dd3eb6"
+    sha256 big_sur:       "2547ea8be7276702a7db43cd70ca284d74fd7176d612e4b2bab2837343fd3736"
+    sha256 catalina:      "38846d601710212a1e2769fd7415d176f0ee439798108ca022f86328fd23b42d"
+    sha256 mojave:        "e24e63d2279cdc92dd95d61520c031b8c6ed1f57a3bbe5f7c971376c930112a1"
   end
 
   def install
