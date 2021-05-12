@@ -5,8 +5,8 @@ class PerconaToolkit < Formula
 
   desc "Command-line tools for MySQL, MariaDB and system tasks"
   homepage "https://www.percona.com/software/percona-toolkit/"
-  url "https://www.percona.com/downloads/percona-toolkit/3.3.0/source/tarball/percona-toolkit-3.3.0.tar.gz"
-  sha256 "0a71e3bfa1eec7c9d8941080d2852d4d4354c2c1fe303f2f28f6352627549d16"
+  url "https://www.percona.com/downloads/percona-toolkit/3.3.1/source/tarball/percona-toolkit-3.3.1.tar.gz"
+  sha256 "60fc106b195b6716f1ebb3ca16b401692228c1a2a885da72111a93391fd12090"
   license any_of: ["GPL-2.0-only", "Artistic-1.0-Perl"]
   head "lp:percona-toolkit", using: :bzr
 
@@ -44,8 +44,8 @@ class PerconaToolkit < Formula
   end
 
   resource "JSON" do
-    url "https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-4.02.tar.gz"
-    sha256 "444a88755a89ffa2a5424ab4ed1d11dca61808ebef57e81243424619a9e8627c"
+    url "https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-4.03.tar.gz"
+    sha256 "e41f8761a5e7b9b27af26fe5780d44550d7a6a66bf3078e337d676d07a699941"
   end
 
   def install
