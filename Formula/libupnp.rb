@@ -11,10 +11,10 @@ class Libupnp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "0b2ea47defd1e5c95aa962205741158fa8a57dc07e9148bc547f394b84ecf02a"
-    sha256 cellar: :any, big_sur:       "31da1e0e95056781f80af7179b22082fc8a9a3a343944ef6030517ba706a6dd0"
-    sha256 cellar: :any, catalina:      "635bb6431799dc93fc755eea42f91f69d455741786a71aa932bdf066ede54fa9"
-    sha256 cellar: :any, mojave:        "9a488673951bb9bd81b1112d5c451c329dc1479e12d3d1d7fee3d780d3648364"
+    sha256 cellar: :any, arm64_big_sur: "edb6dcac4526a882c43ff359bd0db338a1333c35a9e6f6d1e128c5d1b068da04"
+    sha256 cellar: :any, big_sur:       "4de43bda6cb5e423e870e4370ba0d27ac405e2aa9a6b2a0cefe85d84db752ed0"
+    sha256 cellar: :any, catalina:      "29a30b62d04826dbf6b534a6309e2b223296f92a5ce11c1a2c13fa0e4eea0fef"
+    sha256 cellar: :any, mojave:        "ceea5e06f6c0fbc313d6b29420ae3bf287aa59cea395536e5b0bd97c62dbee14"
   end
 
   def install
