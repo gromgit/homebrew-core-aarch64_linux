@@ -1,8 +1,8 @@
 class ChibiScheme < Formula
   desc "Small footprint Scheme for use as a C Extension Language"
   homepage "https://github.com/ashinn/chibi-scheme"
-  url "https://github.com/ashinn/chibi-scheme/archive/0.9.1.tar.gz"
-  sha256 "a9ee2afd7671418bc09a4d386448dbfd0662421ea1eb1c5ed3b68c071307854d"
+  url "https://github.com/ashinn/chibi-scheme/archive/0.10.tar.gz"
+  sha256 "ae1d2057138b7f438f01bfb1e072799105faeea1de0ab3cc10860adf373993b3"
   license "BSD-3-Clause"
   head "https://github.com/ashinn/chibi-scheme.git"
 
