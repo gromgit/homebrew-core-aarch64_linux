@@ -7,11 +7,10 @@ class Caddy < Formula
   head "https://github.com/caddyserver/caddy.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "506af0d514605b32b5775cf716d241a5de2e96e8c5a99139573753c4476fbb4d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9564b852006d1a2bbad34dffce96a225b26e258fb9bc34a2202fe2b9dceee397"
-    sha256 cellar: :any_skip_relocation, catalina:      "e3426aa235903fb0d6d25674114e16f05974f719119bec81b443136f8cc1b347"
-    sha256 cellar: :any_skip_relocation, mojave:        "182ffcf9b7bb81f4299897a225848e690605f47126f1a2dd97b69ca5a7f869ee"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fb0c874c527071d616bbb93dd368b78fade161156277345f289038932e2a5bac"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f73e60413d840be6f29c75a8b4df868534bc97816fdccaad5ece3649b41a9f49"
+    sha256 cellar: :any_skip_relocation, catalina:      "f73e60413d840be6f29c75a8b4df868534bc97816fdccaad5ece3649b41a9f49"
+    sha256 cellar: :any_skip_relocation, mojave:        "f73e60413d840be6f29c75a8b4df868534bc97816fdccaad5ece3649b41a9f49"
   end
 
   depends_on "go" => :build
