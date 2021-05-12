@@ -12,7 +12,7 @@ class DockerComposeCompletion < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "1ab2201f38ad9a46439d9ee4cd28855fa46da131292888053fa3aeb0ac4bbf3f"
+    sha256 cellar: :any_skip_relocation, all: "edaaa7562b5ef5255da64daa17a086a2c8c45fe2114e7704047b15f155719c1e"
   end
 
   conflicts_with "docker-compose",
