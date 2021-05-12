@@ -3,10 +3,9 @@ class Sip < Formula
 
   desc "Tool to create Python bindings for C and C++ libraries"
   homepage "https://www.riverbankcomputing.com/software/sip/intro"
-  url "https://files.pythonhosted.org/packages/76/d9/5e1048d2f2fa6714e0d76382810b0fa81400c40e25b1f4f46c1a82e48364/sip-6.0.3.tar.gz"
-  sha256 "929e3515428ea962003ccf6795244a5fe4fa6e2c94dc9ab8cb2c58fcd368c34c"
+  url "https://files.pythonhosted.org/packages/44/76/d9722bb934c7ca31f4bcf471d5f781b7ffed3a60f10c858a676d3a9aa1a0/sip-6.1.0.tar.gz"
+  sha256 "f069d550dd819609e019e5dc58fc5193e081c7f3fb4f7dc8f9be734e34d4e56e"
   license any_of: ["GPL-2.0-only", "GPL-3.0-only"]
-  revision 1
   head "https://www.riverbankcomputing.com/hg/sip", using: :hg
 
   bottle do
@@ -31,18 +30,6 @@ class Sip < Formula
   resource "toml" do
     url "https://files.pythonhosted.org/packages/be/ba/1f744cdc819428fc6b5084ec34d9b30660f6f9daaf70eead706e3203ec3c/toml-0.10.2.tar.gz"
     sha256 "b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"
-  end
-
-  # TODO: remove them after sip 6.1.0
-  # These patch provide the option `--scripts-dir`
-  patch do
-    url "https://www.riverbankcomputing.com/hg/sip/raw-diff/ffd0551c32cc/sipbuild/builder.py"
-    sha256 "2c969dfba2e4b0553d06999a3aa07a93ea4b7ca2cce62635d1418ecdc74a6df2"
-  end
-
-  patch do
-    url "https://www.riverbankcomputing.com/hg/sip/raw-diff/ffd0551c32cc/sipbuild/project.py"
-    sha256 "ea99834ab404583a1a49a05997950758fe95ba473129438117ffa5647028d99a"
   end
 
   def install
