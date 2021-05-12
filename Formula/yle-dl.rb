@@ -7,10 +7,10 @@ class YleDl < Formula
   head "https://github.com/aajanki/yle-dl.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3b8ac46199354be222977452d9327ba4048d08996baa54d937ec08f69ddb0101"
-    sha256 cellar: :any_skip_relocation, big_sur:       "905a9aff686575a766d3ed1cf62d4ad94fabdaae39954d0c32e30b5fbbae13a1"
-    sha256 cellar: :any_skip_relocation, catalina:      "b42f24c8afd188c850cac2708ccd27d7ca3c2d4edbd4cd381305ea565c64558b"
-    sha256 cellar: :any_skip_relocation, mojave:        "3c91fca5131d9fed6faff0a54e809999369f44318eafa990ddec5355dc140299"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fb9308ba39404b4e2e48b2118eab73a6001088957baac9f359e08bab7e2d3d18"
+    sha256 cellar: :any_skip_relocation, big_sur:       "21c8e4e7aad27b2f8c88ee3c75ed4a67da4a80a1c02c086964c663b2e534de30"
+    sha256 cellar: :any_skip_relocation, catalina:      "51b872d7498eff38d926bc67886a53348e6fd5236354f4b6acb757d250ea7c0a"
+    sha256 cellar: :any_skip_relocation, mojave:        "2dce4ec8b32677abf57e72ece6ebb411ce645331d40a6e93ac2cc38810ba01de"
   end
 
   depends_on "ffmpeg"
