@@ -18,11 +18,10 @@ class Exim < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "bf56cde1d89c867b6449952cad6cafa0e84ea8d1a44e3321c01d6f8a754a8481"
-    sha256 big_sur:       "e6dd0ac8d655c88f4a774c3ec49852d7502f56c585f83a0edf247b048344eba3"
-    sha256 catalina:      "831aed4b806adb75d3b510531d47f17ae0c38ea9539c608e68e5013c4508bc9f"
-    sha256 mojave:        "a2341adeb6989c905c6f3cdcb3152bba15c76a9d2678e70c7738dd7e8fbc9c9c"
+    sha256 arm64_big_sur: "27beb8798303a6435aa2d66380dda416d525ec9a148885ffc47a0ea854cce61b"
+    sha256 big_sur:       "db5cb6710964ec20b9a3a0f291241cc3ff9580705e2367aac781caeff626508b"
+    sha256 catalina:      "c090fcc24665c6506ec53fbc46d56b24f51783d6e3325b917c833206413be6e8"
+    sha256 mojave:        "5953883752ecffe5defcb5b337feaf8fd2fdce0ad88b0d02bb5f2723ee7b3cdf"
   end
 
   depends_on "berkeley-db@4"
