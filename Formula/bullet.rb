@@ -7,10 +7,11 @@ class Bullet < Formula
   head "https://github.com/bulletphysics/bullet3.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "fe699b09f7b1015fb07fef9aaf3bb5865baaa055b3cb59b7ebca307f15de350d"
-    sha256 cellar: :any, big_sur:       "b27a9a26227f831ca70d7272475f06fe92e9a1017331e086dd1b84754a1c1af8"
-    sha256 cellar: :any, catalina:      "cad56eb211080988162e997c2480c012c4489549e5137e4bd39b99238ec317d0"
-    sha256 cellar: :any, mojave:        "20b56c89ba98e751bb9d72278e0e4dbd090dba00e16d715ccdfab18d3419e70d"
+    rebuild 1
+    sha256 cellar: :any, arm64_big_sur: "1f2000191b311d231c5e1a949aba892992e533df61cb3cf05cd1ec7ded01cb3f"
+    sha256 cellar: :any, big_sur:       "85bf74ad7500b0bc9b15f212cc45d1d3ad6e2a2e427a1878ac571e7fd7007d97"
+    sha256 cellar: :any, catalina:      "76e1c4ed888700e335545275f080f954071d76164784881488b0b31f295bdbb3"
+    sha256 cellar: :any, mojave:        "3b39c389a9b532dfdbc0f3652bf9530fc68e1d453d1df5e017028b41f448e6c6"
   end
 
   depends_on "cmake" => :build
