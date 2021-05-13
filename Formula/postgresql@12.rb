@@ -11,10 +11,10 @@ class PostgresqlAT12 < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "6531f1d532dc23b6a447ea5f092a5166a63a198b66e646497c08090f9c9bcd69"
-    sha256 big_sur:       "a99c1eee518236dfd60869daede52eb4d9c93008f3ebe49bc8aa4d1718926010"
-    sha256 catalina:      "31715a37b23d57dc5102efe65c4b942d9741e9144e281f59575eb11e46800142"
-    sha256 mojave:        "7d9698441c0ed51ccdde0d103fe0561be39c24c7fad8df980f4320e1aaf3546e"
+    sha256 arm64_big_sur: "e8595744675d3d3ab1a7143198d50942eb74fb31d9eb91361dcbbd7450dc25b4"
+    sha256 big_sur:       "5a08c1b49dcc32f0e4b85b984f5e164eac9c16d98dd95b973b5b4eac57282c1b"
+    sha256 catalina:      "42fe02daa080f0a905fa4434c7af1fe2254fb0e1a3566ffcdcaff1930092d28a"
+    sha256 mojave:        "92693a4b81886203bf1ff8066a19e8b8a604a011db8765643e617e20d7c98e4b"
   end
 
   keg_only :versioned_formula
