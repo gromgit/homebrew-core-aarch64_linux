@@ -11,10 +11,10 @@ class ShibbolethSp < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "8692a9b1f2628e3d4f8357eec50025a3a77f719a3f7dc689447805792461e0e6"
-    sha256 big_sur:       "781bbb7e15b8bd627faebbbba9d0ab953f16b404bc5f038b3922ef9758a93a54"
-    sha256 catalina:      "a1ef4ff3fee2e58592efa0c5ae94e3db23989ca840a4ea5243cba20443b0e756"
-    sha256 mojave:        "3b38d18397b68c481e8872fbd45a3771a45e5278c6f1c2e2540111c18404a865"
+    sha256 arm64_big_sur: "d5513a1d8323699dd8550e7a182f4b92807497f04ab437e8efda22eb9751f654"
+    sha256 big_sur:       "7b89a1e5933cc0682b3e893741eef2300421d1bed3352d4c7a5ca5de17ba4765"
+    sha256 catalina:      "b16c98790433ca78ef9f6bc8a14a70d4f601b8b8079298c4252ed9c5ad0eba6e"
+    sha256 mojave:        "790a6bfb5d5961170a380847a8b808283842bb9357d6b12505fe6123b99a6d1e"
   end
 
   depends_on "apr" => :build
