@@ -7,11 +7,8 @@ class ObjcRun < Formula
   head "https://github.com/iljaiwas/objc-run.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "867a4f8909af9d28d6995738b58132965a62302f867cf7de125144eb04af1d3c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "65be98ab9f851e2184d33c710a7619e6fd55820f0bbd1ad969c77a3f0755dbeb"
-    sha256 cellar: :any_skip_relocation, catalina:      "65be98ab9f851e2184d33c710a7619e6fd55820f0bbd1ad969c77a3f0755dbeb"
-    sha256 cellar: :any_skip_relocation, mojave:        "65be98ab9f851e2184d33c710a7619e6fd55820f0bbd1ad969c77a3f0755dbeb"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, all: "951d50ad3ee4ebb9d0717b4df365870b44626195378b9d5c64bcf7b320e8cc14"
   end
 
   def install
