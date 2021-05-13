@@ -16,10 +16,10 @@ class PerconaToolkit < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "f9a61f98a776a1e43d6019f7624ef1e989e1f7d02003ea50c1347cf8f1e051a9"
-    sha256 cellar: :any, big_sur:       "51840e9c331c1c8268cd2a7e0369a61077994597473fde314e0ebfa57f6ab1d8"
-    sha256 cellar: :any, catalina:      "83b295ee83a59f0bd55db724ee8b9525c62107fe2155cb834f12158d22867f32"
-    sha256 cellar: :any, mojave:        "383bce5fcca7a6b1c3cb7263e149594ea5db49058e7a0fbfe5190e1edd5e97fa"
+    sha256 cellar: :any, arm64_big_sur: "1877facb5a23a5eea41fd11e8f02373d151fbead2a9c6e32249fb83bc15107d3"
+    sha256 cellar: :any, big_sur:       "8da16ad8dae9b642f959763c04f504e8e844f608ad34ecb5c47f8118acec5d81"
+    sha256 cellar: :any, catalina:      "a4a756d4c47f72d67680d33eb3f6e179eb857d5d12aa90cfb4f665a9d7ff10b5"
+    sha256 cellar: :any, mojave:        "d702da603979b5205d7e762e4b7e387a954dd1b987b982730de15b0c44a553ae"
   end
 
   depends_on "mysql-client"
