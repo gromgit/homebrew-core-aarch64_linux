@@ -3,7 +3,7 @@ class Fcrackzip < Formula
   homepage "http://oldhome.schmorp.de/marc/fcrackzip.html"
   url "http://oldhome.schmorp.de/marc/data/fcrackzip-1.0.tar.gz"
   sha256 "4a58c8cb98177514ba17ee30d28d4927918bf0bdc3c94d260adfee44d2d43850"
-  license "GPL-2.0"
+  license "GPL-2.0-or-later"
 
   livecheck do
     url "http://oldhome.schmorp.de/marc/data/"
@@ -20,6 +20,8 @@ class Fcrackzip < Formula
     sha256 cellar: :any_skip_relocation, el_capitan:    "169a5e7ea0e7ee9d04dc7ecce5288ef3a096fc9875d9af134b342878ce8c55fd"
     sha256 cellar: :any_skip_relocation, yosemite:      "1e9a5e3d9d37ce1bf7338d3f12f84bf67b31de4e2a6eb1511f90458c45b1b810"
   end
+
+  uses_from_macos "zip" => :test
 
   def install
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
