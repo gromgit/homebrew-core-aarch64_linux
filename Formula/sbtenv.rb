@@ -7,7 +7,7 @@ class Sbtenv < Formula
   head "https://github.com/sbtenv/sbtenv.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "5bedffe7fd9b6a87d22fbf83e5af740ef630058fececca93ddb9c35c27359e36"
+    sha256 cellar: :any_skip_relocation, all: "47196c92dcfbb7aabc5e2ad084fb93cb49cc346499906504699c80169b94a311"
   end
 
   def install
