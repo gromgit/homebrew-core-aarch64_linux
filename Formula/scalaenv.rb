@@ -7,7 +7,7 @@ class Scalaenv < Formula
   head "https://github.com/scalaenv/scalaenv.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "ce5b172105ba10119874ab9ebc388c1971976133ec475c58cc7b6895a3f59268"
+    sha256 cellar: :any_skip_relocation, all: "624e6252d4af6662c1f3f829d235c7a70fb9ccd35bed10d405ad79cc4aa4dd71"
   end
 
   def install
