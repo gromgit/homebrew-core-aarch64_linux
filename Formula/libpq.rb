@@ -11,10 +11,10 @@ class Libpq < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "be102bcef1030289e73fe3643c9fd575471df27f4b958e1155abb7a76f21107c"
-    sha256 big_sur:       "eae0a60decded85f7b0af6c880f81d746fc0f0e285eba091b75763e63da946ca"
-    sha256 catalina:      "9bf464e2cd8c0c8b07ba1ed8e203427103921ba051fb0db4965c880b0d085339"
-    sha256 mojave:        "51f2ac5acb1e614e6bc005fb2e975040bf72937f4ac1c70edcaeec3a0d396621"
+    sha256 arm64_big_sur: "81801a5428038a98059bc8679d1cc17c580f2c547219c7ff323aa140dfa71350"
+    sha256 big_sur:       "151bc976994fc3373e6bfd47fcacd20b66724066148d6e6774e84608af2e8e51"
+    sha256 catalina:      "a3674fbd50ef933e866f0e28e971c03812f07be661cc50d07a033981e76d87a3"
+    sha256 mojave:        "e16bc609f7001cf004ac76600c58e6d6b4ca321ff106da06e52cf20e66357c5e"
   end
 
   keg_only "conflicts with postgres formula"
