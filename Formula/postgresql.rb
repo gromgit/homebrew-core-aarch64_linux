@@ -12,10 +12,10 @@ class Postgresql < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "5bb80b319443cc57a44a9a9a8507a5255728d2caf359ef7e931c79c2c833b900"
-    sha256 big_sur:       "ee460f1f8beb4d877121faf4ebcbf8069f86a8ef4ae05fa342bc2fcdde75bb47"
-    sha256 catalina:      "1f50565ab7a703d85ecc37179e8d461dc82de4e3e6266ba085dd19a0b95ed5db"
-    sha256 mojave:        "c0a5828cb5caef09e7b4acd99b450b6d4ceb3a0d265a95b147e63e23fb6f7596"
+    sha256 arm64_big_sur: "7c0e1b76d60b428facd521c729323221712d7f6d9954e21da389aeeb2c62348e"
+    sha256 big_sur:       "eaf28965ead970ecfb327b121ec6a07f0a4e39865797a1a0383605a17e5911e3"
+    sha256 catalina:      "74e946503c73cd0efc55ad4b373efbd8f4fb8a9e26a670b878c6db25794aea4a"
+    sha256 mojave:        "36c7bde4788571e5b66ffe05b6174b62c69781d61c53c3ebcd9d278e8f148197"
   end
 
   depends_on "pkg-config" => :build
