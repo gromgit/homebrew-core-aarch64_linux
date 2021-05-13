@@ -13,11 +13,10 @@ class Heimdal < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "16cc4ba36dbbc9750c522eefa8da0a6e7685281f00ef611c982d8dd7b5b4bd69"
-    sha256 big_sur:       "95ad69bc1e08ebbd279062632bdf576982fbcba5c34a4ba83c7e91523952b6e6"
-    sha256 catalina:      "6345879296177a9b33c73bbae4749debb92d20cf6fe951d51bb2c592f9d82b3b"
-    sha256 mojave:        "280f713c88dd355d0c385eaa7e3e4e3ae762854259b1edc801821287f132c15a"
+    sha256 arm64_big_sur: "f029b8d8f63fc37340bce1402fe89626e599f8f8c2b95bab75745c2d0081baef"
+    sha256 big_sur:       "40012a079519d3ae58eb3874f1579b8224e0e2faff48670a0a870012da183c91"
+    sha256 catalina:      "05e2fd4f95a930dd60429f7787f4ef639cb0f417cec33eb120afff30ac5ed65e"
+    sha256 mojave:        "2c61f5b2f59be6f25a61e47514de55a7ae31697b496630de9c590d8b732329e4"
   end
 
   keg_only :shadowed_by_macos, "macOS provides Kerberos"
