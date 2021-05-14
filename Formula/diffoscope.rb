@@ -8,10 +8,10 @@ class Diffoscope < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f3d48fb19545db1672ba8eed24d4e1dab9f7d704458622d41a96446d74c78a34"
-    sha256 cellar: :any_skip_relocation, big_sur:       "833219f8d41ee46482918ebf1b5d5163ff0aef364c76c4b32a6ed7f9010c0d3d"
-    sha256 cellar: :any_skip_relocation, catalina:      "a7c771835293a7f19b5a9583b4dfd6fd9732a8a335f298ba7fd4cbde58ecf41e"
-    sha256 cellar: :any_skip_relocation, mojave:        "21e40526823004fd5400bee823ab5def83bbc343d26f4fe6d605230d7d71633a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ac0075bb0cafdd9f8c56826f4a2c89d121ca7736dc04e7eec0149e61485f2149"
+    sha256 cellar: :any_skip_relocation, big_sur:       "865d95809b9e21e8af9648730bc157db5c15517c8ba18fcd194c0afc071a89be"
+    sha256 cellar: :any_skip_relocation, catalina:      "710a47a9208fd71ca632dac2c9c59e66597aa7cb2fd59ae7980180cfac5913e7"
+    sha256 cellar: :any_skip_relocation, mojave:        "ea155379881388ab64a02f2b368f8bad0fccb24dbf9a8f0e2547204ec296b65e"
   end
 
   depends_on "libarchive"
