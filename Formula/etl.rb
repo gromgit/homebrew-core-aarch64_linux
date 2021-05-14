@@ -1,9 +1,10 @@
 class Etl < Formula
   desc "Extensible Template Library"
   homepage "https://synfig.org"
-  url "https://downloads.sourceforge.net/project/synfig/releases/1.4.0/source/ETL-1.4.0.tar.gz"
-  mirror "https://github.com/synfig/synfig/releases/download/v1.4.0/ETL-1.4.0.tar.gz"
-  sha256 "d43396c0ac356114713469216a9257247c2588d5475590a46db63cf201d1a011"
+  # NOTE: Please keep these values in sync with synfig.rb when updating.
+  url "https://downloads.sourceforge.net/project/synfig/releases/1.4.1/ETL-1.4.1.tar.gz"
+  mirror "https://github.com/synfig/synfig/releases/download/v1.4.1/ETL-1.4.1.tar.gz"
+  sha256 "ecb61942da60dca8e623af8ad03656897d10b03296e8907dd3c6c296390a074c"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -17,6 +18,9 @@ class Etl < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "36399b703008be7d253bbbd1313c22929982319d3e7e52dbeb92a1acbc554cb4"
     sha256 cellar: :any_skip_relocation, mojave:        "3499623804687865757dec0f5df9ae2b8c70ed8d8c8c6cfa2e8bd6bf839b55db"
   end
+
+  depends_on "pkg-config" => :build
+  depends_on "glibmm@2.66"
 
   def install
     system "./configure", "--disable-debug",
