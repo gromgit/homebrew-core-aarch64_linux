@@ -11,10 +11,10 @@ class Txr < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "2fad9653c7b27c23c5460b95a5df90fbdb94a6858ad351750f9a38c40e8b2b60"
-    sha256 cellar: :any, big_sur:       "0f5854cb29da14f1c5001eef0d4ed33f54061478176ce374e254b1f4040c0e08"
-    sha256 cellar: :any, catalina:      "d15d69ba71841d7a82df819a51507930ecae825994ee3a6dd5f041b25126ccad"
-    sha256 cellar: :any, mojave:        "20affda021cfa45909ece3a8871bb00c4dd2b2792c7ca63b3eb7dccf5e65427b"
+    sha256 cellar: :any, arm64_big_sur: "9befc557af5215b583ab2e205a764cc9ba83b342a548e2e5247778809a086f57"
+    sha256 cellar: :any, big_sur:       "2a5a3252a64c86e54bb2bdf58f7308caab91e2ff5639108c8f129cecb9d0db70"
+    sha256 cellar: :any, catalina:      "dcdf89a80c186f04cf11f6d0bf7bd3aa063037b49f1a0244a415807c7337f73b"
+    sha256 cellar: :any, mojave:        "fe297d55a8956f64c3ed083bcfb61ee751aa99bcc67df17668fe88687b22a192"
   end
 
   depends_on "libffi"
