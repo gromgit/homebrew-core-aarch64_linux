@@ -1,9 +1,9 @@
 class Usbredir < Formula
   desc "USB traffic redirection library"
   homepage "https://www.spice-space.org"
-  url "https://www.spice-space.org/download/usbredir/usbredir-0.8.0.tar.bz2"
-  sha256 "87bc9c5a81c982517a1bec70dc8d22e15ae197847643d58f20c0ced3c38c5e00"
-  license "GPL-2.0"
+  url "https://www.spice-space.org/download/usbredir/usbredir-0.9.0.tar.xz"
+  sha256 "a3e167bf42bc7fe02c3c9db27d7767f1b8ce41b99ad14a4b0d0a60abe8bf56a6"
+  license all_of: ["GPL-2.0-or-later", "LGPL-2.0-or-later"]
 
   livecheck do
     url "https://www.spice-space.org/download/usbredir/"
@@ -19,18 +19,15 @@ class Usbredir < Formula
     sha256 cellar: :any, sierra:        "7feac9566048e308877ef3f3d1b93660433dc8f1611e3daf031eaa4dd90c7238"
   end
 
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
   depends_on "libusb"
 
-  # Upstream patch, remove for next release
-  # https://gitlab.freedesktop.org/spice/usbredir/issues/9
-  patch do
-    url "https://gitlab.freedesktop.org/spice/usbredir/commit/985e79d5f98d5586d87204317462549332c1dd46.diff"
-    sha256 "21c0da8f6be94764e1e3363f5ed76ed070b5087034420cb17a81da06e4b73f83"
-  end
-
   def install
+    # Use meson from the release after 0.9.0
+    system "autoreconf", "-fiv"
     system "./configure", "--disable-silent-rules",
                           "--prefix=#{prefix}"
     system "make", "install"
