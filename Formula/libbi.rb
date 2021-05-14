@@ -8,11 +8,10 @@ class Libbi < Formula
   head "https://github.com/lawmurray/LibBi.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7a5c4577cee12ec6de9fda67207c4424d3e48afb6d659cdc876326701f62418e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b802f999b4843d89ef8d2314a11827c8ab925389884feca6b7d4f866140803fb"
-    sha256 cellar: :any_skip_relocation, catalina:      "8a5e07818b7ab072b4ce227a8e9c6fbfe0a944376fe0e7ae718757f552daf6cb"
-    sha256 cellar: :any_skip_relocation, mojave:        "1ccf102c4139efb50411136b936637ca4f353c64660f945044c4056dfaabec5e"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "b0336adbd5aa3122599d729ad9472ec368d74d2a891ce0aee0348e4c5768c162"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "34ee04c96378c8fa73672109a4746b207e18248c61e44dbbaa7d98c2c2c72067"
+    sha256 cellar: :any_skip_relocation, big_sur:       "9c6abc863ba8197d0cdb660a71ea231afdeee7565742ffe3acca1994d35e2723"
+    sha256 cellar: :any_skip_relocation, catalina:      "bd89e2f8ed4bc533bd0b1b56184ef4ae43d6ae9b4cd17b6568b6087123894774"
+    sha256 cellar: :any_skip_relocation, mojave:        "fa7f5e4ae7a170128fdf8ada72551641779fcee8af3c3f7bcf41244f8ece0e0f"
   end
 
   depends_on "automake"
