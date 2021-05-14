@@ -11,11 +11,10 @@ class RxvtUnicode < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "d63da8a963160651a29a24729ff21a071456096706ad59f721b818c322dc889e"
-    sha256 big_sur:       "deebaec714d6b276ef8e7c0bdb89f1872b8dd0eab82b97139e1000fc55098ed9"
-    sha256 catalina:      "6dbe84073a435ced0c6be3646121374155c2b47df89e76e84d0ebd06ea78a59b"
-    sha256 mojave:        "b606c0cc0daa70dc43fad2997af3d11cae5f07d6b5acdd7de0666ce646361876"
+    sha256 arm64_big_sur: "2ad5cfb39d86aff0d7f3b785aee5058ce2b0bf113b13b24f963c1b8d60679ff3"
+    sha256 big_sur:       "5e3a94dc348d57ada5dcb55eafee51b1ffa8bf78e10a8a2b0af9ac56b2d2ff02"
+    sha256 catalina:      "b97c65d257344a16accd34497c77ec3638674c7c596b7f05c190d606975de9af"
+    sha256 mojave:        "ecec482ad2b840b1cdb3945a42bcc31656d61a83ae3d08af2d2dafb1a4002d9d"
   end
 
   depends_on "pkg-config" => :build
