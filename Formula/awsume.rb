@@ -9,10 +9,10 @@ class Awsume < Formula
   head "https://github.com/trek10inc/awsume.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "eb4d2211ecd18c5f2d36cf0ce4f6dbf3a401b50510da00549bcfbbff53963461"
-    sha256 cellar: :any_skip_relocation, big_sur:       "00076be43df907e4bef44b3a108c83ab2c6fbdf44692dd9f6c991aa6738887ef"
-    sha256 cellar: :any_skip_relocation, catalina:      "f47a92943813045524dc4a28434e2b067f872c2bf9b6ad97fd2a8508fe3e3877"
-    sha256 cellar: :any_skip_relocation, mojave:        "56bc2e0a806c80765ecc4a2cd6f86d6b04beaaa502e265fbf761f8c8bce3ef3c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "430313775987ab59b0003c726ce7811f3894f8100856f38fba6f4354e0f2aefd"
+    sha256 cellar: :any_skip_relocation, big_sur:       "2e3463f690806e61a1a0a903f18b6df4011023b958476ddd442f9d338e76cb3c"
+    sha256 cellar: :any_skip_relocation, catalina:      "a8925a0d936e825ce00fa86f9bdfccc710c86c06d33a19d8aaf0d804a9f64f34"
+    sha256 cellar: :any_skip_relocation, mojave:        "6f8cee7614dec442423e8d0070b5e236be421304516a6cf4ab2c2622facdc56d"
   end
 
   depends_on "openssl@1.1"
