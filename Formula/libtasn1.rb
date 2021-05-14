@@ -7,10 +7,10 @@ class Libtasn1 < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "a5a79346194afa5a466d36f07aee16700be211a92e6cbddd522fb252dd6b1b5b"
-    sha256 cellar: :any, big_sur:       "367dc37e3bcb626de815129016cb106aa39ca8c2e8c3c9c5904b8da763b10e9f"
-    sha256 cellar: :any, catalina:      "09f4b0b626425f10665ff506c2dca70101ae9062b284b956197d7e88c91d952c"
-    sha256 cellar: :any, mojave:        "384a48716bc3b0fa7122c2fbd3a1ab4a93087acee7191710fa5bbbfa31e0f24f"
+    sha256 cellar: :any, arm64_big_sur: "8b8ba758c8cb70a6970c69801937090ca5bc3fb68f9fb5358f2183299fbee3fa"
+    sha256 cellar: :any, big_sur:       "a045a7b16828e7c18bad248feb37207815daea23ff313c1cd6e94e94b222bb73"
+    sha256 cellar: :any, catalina:      "0b0b6a4b18ff4aef03772082d153be836b406af22e678a0b61553c70fdf95f10"
+    sha256 cellar: :any, mojave:        "73201deae5a10cd4b4125b4a7c811f48ed861cd6fe2f82d69fed6003115d7bef"
   end
 
   def install
