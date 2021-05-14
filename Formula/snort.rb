@@ -12,9 +12,9 @@ class Snort < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:  "2f7c1e51120e447ac63e19b0f6629e1603c64e223caba26002d7b954cacf6906"
-    sha256 cellar: :any, catalina: "928d091a72cfe6f943b8f9f13e905f988d7ca89189206066c8d0165b2d71ca15"
-    sha256 cellar: :any, mojave:   "2a337db5b70c66b8538b54fab50562467ad6b247e2f1bd818871f2cc647b29e1"
+    sha256 cellar: :any, big_sur:  "b37d8c8359f6a93a00db53db85c4d9dc7d064e508b8d18e7aa9e52d1e564085a"
+    sha256 cellar: :any, catalina: "63ce2a1835beb2c93172672f4c470a7517d040cc31f7075ddb2bee2ca7028355"
+    sha256 cellar: :any, mojave:   "56916b49728b2c9d449b31137bea8daf76e5a300d9197f108f3354a42229d512"
   end
 
   depends_on "pkg-config" => :build
