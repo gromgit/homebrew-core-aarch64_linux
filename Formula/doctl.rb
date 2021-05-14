@@ -7,10 +7,10 @@ class Doctl < Formula
   head "https://github.com/digitalocean/doctl.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "079a0102d1c50dcfe550a8b55325f129663fa571ea203c75b1cd0db4f7a1e730"
-    sha256 cellar: :any_skip_relocation, big_sur:       "57e68cd6e109740b9b6e8ff432cf55f507cc8993cd9800a0511e7e486a2a452a"
-    sha256 cellar: :any_skip_relocation, catalina:      "b762af03b7e7ae10cf83968f4f29582861462de7eec7e61fe0b311f45dc75ca0"
-    sha256 cellar: :any_skip_relocation, mojave:        "6da77128cc1bc907ce0dcbea103601b228201b3564c60c7a0e82590a08e1c316"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3505c0e0b2bf30ba272fdda55b89e8accd5b8ed6da42c63ad8bc87d7346f1c48"
+    sha256 cellar: :any_skip_relocation, big_sur:       "139a9093e92bbf6329ba82c36ac5f868d533fc98ee83c26f3b58fdf37b7d13b9"
+    sha256 cellar: :any_skip_relocation, catalina:      "da5ae950f0f38e15634d7560a2c6432755a3bba903fded26fa257cd94f09ccb0"
+    sha256 cellar: :any_skip_relocation, mojave:        "625febd4d598f78760b3f11b6c7f3f5985afeb80e166a70ba796166b1c928c49"
   end
 
   depends_on "go" => :build
