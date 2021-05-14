@@ -7,11 +7,10 @@ class SwiftProtobuf < Formula
   head "https://github.com/apple/swift-protobuf.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6f02a7be1e42f1c071c66f86e2912706974971d9a694e7308e198b9b9b21101d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7b351f6504a95a3406a2690117414dddd6fd8975b8af9613d4dcf20f72830aa4"
-    sha256 cellar: :any_skip_relocation, catalina:      "9ca635f6bcd44e30783c98b2bd79c9ab14a3a29f9470f148aaae6d2c8ee8b9fc"
-    sha256 cellar: :any_skip_relocation, mojave:        "b1e789bdfd0a2ee45b55e0eed5f60d0aef6184bc015863d8a1143bf839a5fc79"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "cb748802d8003aeb15560b1a4d9f657d1e3bd2d1d11118f7f74783a0b1e3377e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "9b8739dc74b50675ca4c81fa32d1fd143b4f7939b8a89d6c0b92ae7ff82c1edb"
+    sha256 cellar: :any_skip_relocation, catalina:      "878d81a48ecea0fc8141715f757ab63e1a875878a79ce212cbb74d6709a59c41"
+    sha256 cellar: :any_skip_relocation, mojave:        "8e960d436e3cf9f1381da7baef8d0dcca00b78764b5da2f36abcc9ef48f58884"
   end
 
   depends_on xcode: ["8.3", :build]
