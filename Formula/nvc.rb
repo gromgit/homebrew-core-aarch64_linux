@@ -1,10 +1,9 @@
 class Nvc < Formula
   desc "VHDL compiler and simulator"
   homepage "https://github.com/nickg/nvc"
-  url "https://github.com/nickg/nvc/releases/download/r1.5.0/nvc-1.5.tar.gz"
-  sha256 "4da984ba95eb3b8dd2893fb7a676675de869ff114b827a9f5490dfd54bc95fcb"
+  url "https://github.com/nickg/nvc/releases/download/r1.5.1/nvc-1.5.1.tar.gz"
+  sha256 "2c418a19c60ee91c92865700be53907b8fbfaa3ea64bfc32aed996ed2c55df43"
   license "GPL-3.0-or-later"
-  revision 3
 
   bottle do
     sha256 arm64_big_sur: "89ad43a7f12f4bcc1abbe56e571a374fbfea3601b43d05c5175e191ede8457a6"
@@ -22,7 +21,7 @@ class Nvc < Formula
 
   depends_on "check" => :build
   depends_on "pkg-config" => :build
-  depends_on "llvm@11"
+  depends_on "llvm"
 
   resource "vim-hdl-examples" do
     url "https://github.com/suoto/vim-hdl-examples.git",
@@ -31,10 +30,10 @@ class Nvc < Formula
 
   def install
     system "./autogen.sh" if build.head?
-    system "./tools/fetch-ieee.sh"
-    system "./configure", "--with-llvm=#{Formula["llvm@11"].opt_bin}/llvm-config",
+    system "./configure", "--with-llvm=#{Formula["llvm"].opt_bin}/llvm-config",
                           "--prefix=#{prefix}",
-                          "--with-system-cc=/usr/bin/clang"
+                          "--with-system-cc=/usr/bin/clang",
+                          "--enable-vhpi"
     system "make"
     system "make", "install"
   end
