@@ -6,10 +6,10 @@ class Lefthook < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c6ed1732fdb56b182d83b1a4972f62be7a3d6f202cb7740e8b2e6b053127eaed"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f98449b55a8dc41ad16371e7fd85b24d9fbc46387fa3c245463316e50206a32a"
-    sha256 cellar: :any_skip_relocation, catalina:      "732fd05a4e458e2eecfcd75bf51be493a9b4539cc3a2c61736e61d67029bf139"
-    sha256 cellar: :any_skip_relocation, mojave:        "85f85f6ac4ad8335f9483e010301eae52ad1b1e26271a6ac76f8e99e8d5e3ac6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "749d82635559b5d824a2082a2b76a3b75d5cc9158a489f03fabe309863ad0738"
+    sha256 cellar: :any_skip_relocation, big_sur:       "19503e39057ed31a09b5a51f4e8bbc2cc92e8f862f075ef0e10382c39f8620f4"
+    sha256 cellar: :any_skip_relocation, catalina:      "5b8e432d284149b432aca15fbf3a858902cdcb484fbd5344d3986db3769415d5"
+    sha256 cellar: :any_skip_relocation, mojave:        "c973274ba4fe77de6e26c7536da50dc424d2422b873235d61336157ed4575fcd"
   end
 
   depends_on "go" => :build
