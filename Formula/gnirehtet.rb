@@ -42,8 +42,8 @@ class Gnirehtet < Formula
   end
 
   test do
-    gnirehtet_err = "#{testpath}/gnirehtet.err"
-    gnirehtet_out = "#{testpath}/gnirehtet.out"
+    gnirehtet_err = testpath/"gnirehtet.err"
+    gnirehtet_out = testpath/"gnirehtet.out"
 
     port = free_port
     begin
