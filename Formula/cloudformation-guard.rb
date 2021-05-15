@@ -38,6 +38,6 @@ class CloudformationGuard < Formula
     (testpath/"test-ruleset").write <<~EOS
       AWS::EC2::Volume Size == 99
     EOS
-    system "#{bin}/cfn-guard", "check", "-r", "test-ruleset", "-t", "test-template.yml"
+    system bin/"cfn-guard", "check", "-r", "test-ruleset", "-t", "test-template.yml"
   end
 end
