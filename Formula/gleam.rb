@@ -26,7 +26,7 @@ class Gleam < Formula
 
   test do
     Dir.chdir testpath
-    system "#{bin}/gleam", "new", "test_project"
+    system bin/"gleam", "new", "test_project"
     Dir.chdir "test_project"
     system "rebar3", "eunit"
   end
