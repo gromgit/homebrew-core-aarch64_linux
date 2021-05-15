@@ -29,8 +29,8 @@ class Rbspy < Formula
     EOS
 
     (testpath/"recording.gz").write Base64.decode64(recording.delete("\n"))
-    system "#{bin}/rbspy", "report", "-f", "summary", "-i", "recording.gz",
-                           "-o", "result"
+    system bin/"rbspy", "report", "-f", "summary", "-i", "recording.gz",
+                        "-o", "result"
 
     expected_result = <<~EOS
       % self  % total  name
