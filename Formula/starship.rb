@@ -7,10 +7,10 @@ class Starship < Formula
   head "https://github.com/starship/starship.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e0869388fe25d181da663363e4cda5085399ba250bf1bd33e9366c0ea40c5e38"
-    sha256 cellar: :any_skip_relocation, big_sur:       "12f1ff2524fb52afc6be976905975d2b684145a1bd65d4802faad10696925a21"
-    sha256 cellar: :any_skip_relocation, catalina:      "af8151d2b68793c7f9b4a65d6acb061444468227148b3e7a9ecb5032b7879dbf"
-    sha256 cellar: :any_skip_relocation, mojave:        "720ff7cd94703500f7f7286ea11e2f38bed529f3545270e280bf277c780fc3bf"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "31903635888839b61e44b2188f62537d3518f6a843eba736099c6893e1e218e7"
+    sha256 cellar: :any_skip_relocation, big_sur:       "067e82cacc903f629080dfba420ce399746687462ace76b2ff6647b817214b43"
+    sha256 cellar: :any_skip_relocation, catalina:      "925141ca99c499ac594ca573107137dfab155829993bb59e12baddcd95892508"
+    sha256 cellar: :any_skip_relocation, mojave:        "e1a2acdeaafb837ededbeed7aaee2e242fd2433985d6b3fb261858db4a64ad6f"
   end
 
   depends_on "rust" => :build
