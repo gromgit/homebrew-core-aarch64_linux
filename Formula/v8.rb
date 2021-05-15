@@ -12,10 +12,10 @@ class V8 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "53088cb6df741001ff8ef989d73229009d95603ae9d61dabb2362fd782a3bf7d"
-    sha256 cellar: :any, big_sur:       "9076403932bf4e554e51bff63d8ec7b122522fda1e259659c7c1db53e6699b91"
-    sha256 cellar: :any, catalina:      "5e270b464f7d3d2b6ee171d9b481fac7924827632ae84673d03744244b4d37e9"
-    sha256 cellar: :any, mojave:        "78dc0ec1b2ddf1fd185370ce963849bffaf28fa969d32b800b7ba2af0abf0806"
+    sha256 cellar: :any, arm64_big_sur: "dbb2a9b35a9d484b9a9473b3560ead9a53aa2aae70c0cb1a56e4cabf4a6c7b16"
+    sha256 cellar: :any, big_sur:       "a02b360c10b2710d36b728dabc4b833dce4d80040967da0b097771ac2620617d"
+    sha256 cellar: :any, catalina:      "7861616590bf7709f53a022147205153a56231191e0aa6070b03093389d051e8"
+    sha256 cellar: :any, mojave:        "8449adf9e6b06cca4faad182fda9f2eb7b5a358db7acb4809ef2ed24a72394a8"
   end
 
   depends_on "llvm" => :build
