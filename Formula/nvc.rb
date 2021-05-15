@@ -6,10 +6,10 @@ class Nvc < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "89ad43a7f12f4bcc1abbe56e571a374fbfea3601b43d05c5175e191ede8457a6"
-    sha256 big_sur:       "b950d81b34fd6ba099b10c85fc96562190bc8af66f0ba5315f10d325c58f547a"
-    sha256 catalina:      "37aac62a2eb006671e90730ede9016a1f2282caff5f1bb41f95e4c53cb93e297"
-    sha256 mojave:        "4d57ff4df2c881f16e82a57be5af32701729a9cc710e9a7581d688302c3dac72"
+    sha256 arm64_big_sur: "7c05a43adb8e06f4d7c476ee7648c98baf6cba58f964321c9d8035493168e88c"
+    sha256 big_sur:       "d4064f6d3d03798588a886d0c243184169b582d1228f344c97d1d380f4ec6767"
+    sha256 catalina:      "2164b0c823a884279abecb21ed79425cdc910ee472a771f99aa51c5db1134a78"
+    sha256 mojave:        "e6125afeec736628f6f02f3912d8aa0c412049b07b08ca4c2f7a88ca38b194c0"
   end
 
   head do
