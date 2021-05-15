@@ -41,7 +41,7 @@ class Kickstart < Formula
     EOS
 
     # Run template interpolation
-    system "#{bin}/kickstart", "--no-input", testpath.to_s
+    system bin/"kickstart", "--no-input", testpath.to_s
 
     assert_predicate testpath/"myfilename.txt", :exist?
     assert_equal "kickstart is awesome!", (testpath/"myfilename.txt").read
