@@ -22,7 +22,7 @@ class Xplr < Formula
   test do
     input, = Open3.popen2 "SHELL=/bin/sh script -q output.txt"
     input.puts "stty rows 80 cols 130"
-    input.puts "#{bin}/xplr"
+    input.puts bin/"xplr"
     input.putc "q"
     input.puts "exit"
 
