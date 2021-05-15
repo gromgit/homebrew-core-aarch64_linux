@@ -26,13 +26,12 @@ class Sn0int < Formula
   def install
     system "cargo", "install", *std_cargo_args
 
-    system "#{bin}/sn0int completions bash > sn0int.bash"
-    system "#{bin}/sn0int completions fish > sn0int.fish"
-    system "#{bin}/sn0int completions zsh > _sn0int"
-
-    bash_completion.install "sn0int.bash"
-    fish_completion.install "sn0int.fish"
-    zsh_completion.install "_sn0int"
+    bash_output = Utils.safe_popen_read(bin/"sn0int", "completions", "bash")
+    (bash_completion/"sn0int").write bash_output
+    zsh_output = Utils.safe_popen_read(bin/"sn0int", "completions", "zsh")
+    (zsh_completion/"_sn0int").write zsh_output
+    fish_output = Utils.safe_popen_read(bin/"sn0int", "completions", "fish")
+    (fish_completion/"sn0int.fish").write fish_output
 
     system "make", "-C", "docs", "man"
     man1.install "docs/_build/man/1/sn0int.1"
@@ -48,6 +47,6 @@ class Sn0int < Formula
           -- nothing to do here
       end
     EOS
-    system "#{bin}/sn0int", "run", "-vvxf", testpath/"true.lua"
+    system bin/"sn0int", "run", "-vvxf", testpath/"true.lua"
   end
 end
