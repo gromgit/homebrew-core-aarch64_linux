@@ -30,7 +30,7 @@ class Wapm < Formula
     Dir.mkdir ENV["WASMER_DIR"]
     Dir.mkdir ENV["WASMER_CACHE_DIR"]
 
-    system "#{bin}/wapm", "install", "cowsay"
+    system bin/"wapm", "install", "cowsay"
 
     expected_output = <<~'EOF'
        _____________
