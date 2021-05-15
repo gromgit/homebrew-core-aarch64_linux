@@ -22,6 +22,6 @@ class Mdbook < Formula
   test do
     # simulate user input to mdbook init
     system "sh", "-c", "printf \\n\\n | #{bin}/mdbook init"
-    system "#{bin}/mdbook", "build"
+    system bin/"mdbook", "build"
   end
 end
