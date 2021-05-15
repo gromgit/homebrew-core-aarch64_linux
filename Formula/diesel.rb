@@ -28,13 +28,12 @@ class Diesel < Formula
       system "cargo", "install", *std_cargo_args
     end
 
-    system "#{bin}/diesel completions bash > diesel.bash"
-    system "#{bin}/diesel completions zsh > _diesel"
-    system "#{bin}/diesel completions fish > diesel.fish"
-
-    bash_completion.install "diesel.bash"
-    zsh_completion.install "_diesel"
-    fish_completion.install "diesel.fish"
+    bash_output = Utils.safe_popen_read(bin/"diesel", "completions", "bash")
+    (bash_completion/"diesel").write bash_output
+    zsh_output = Utils.safe_popen_read(bin/"diesel", "completions", "zsh")
+    (zsh_completion/"_diesel").write zsh_output
+    fish_output = Utils.safe_popen_read(bin/"diesel", "completions", "fish")
+    (fish_completion/"diesel.fish").write fish_output
   end
 
   test do
