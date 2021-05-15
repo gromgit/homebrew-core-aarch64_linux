@@ -43,7 +43,7 @@ class Kondo < Formula
     #
     # We're going to simulate a user pressing "n" for no.
     # The result of this should be that the dummy file still exists after kondo has exited.
-    Open3.popen3("#{bin}/kondo") do |stdin, _stdout, _, wait_thr|
+    Open3.popen3(bin/"kondo") do |stdin, _stdout, _, wait_thr|
       # Simulate a user pressing "n" then pressing return/enter.
       stdin.write("n\n")
 
@@ -56,7 +56,7 @@ class Kondo < Formula
 
     # The concept is the same as the above test, except this time we will simulate pressing "y" for yes.
     # The result of this should be that the dummy file still no longer exists after kondo has exited.
-    Open3.popen3("#{bin}/kondo") do |stdin, _stdout, _, wait_thr|
+    Open3.popen3(bin/"kondo") do |stdin, _stdout, _, wait_thr|
       # Simulate a user pressing "y" then pressing return/enter.
       stdin.write("y\n")
 
