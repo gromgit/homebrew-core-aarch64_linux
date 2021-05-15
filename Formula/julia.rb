@@ -19,6 +19,12 @@ class Julia < Formula
     end
   end
 
+  bottle do
+    sha256 cellar: :any, big_sur:  "d010756c2b3e9bdc72edda8e27078399d779f3b56a2b1c78b28c47f89f269559"
+    sha256 cellar: :any, catalina: "750cec427377d71a4f8b537a19976e2a63df820216244a0d7d9a8f0a913266f0"
+    sha256 cellar: :any, mojave:   "b5e9f67413ecebdbc92fec00940b84c032ec0f25f1f0a4c1398fad4ed591ef1f"
+  end
+
   depends_on "python@3.9" => :build
   depends_on "curl"
   depends_on "gcc" # for gfortran
