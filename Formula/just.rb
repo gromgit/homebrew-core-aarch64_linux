@@ -28,7 +28,7 @@ class Just < Formula
       default:
         touch it-worked
     EOS
-    system "#{bin}/just"
+    system bin/"just"
     assert_predicate testpath/"it-worked", :exist?
   end
 end
