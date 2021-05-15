@@ -11,6 +11,7 @@ class Iperf < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "7718be6a70d76b120eb4e8891a79e727053ec366f4cdf710ff4d8960a22c62f6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "9cc3f80f4761d70123eb53b490f7922a6373675d4abc4417b0c576433fcfd4d2"
     sha256 cellar: :any_skip_relocation, catalina:      "0b9b36d65f113055e86b158f62daa64bf5c177e27abec34c51cbb60bf2a7d4d7"
     sha256 cellar: :any_skip_relocation, mojave:        "8c24a0392dcda9d134c1d1121671875da4b67905321eb6e67053d6e965f92bee"
     sha256 cellar: :any_skip_relocation, high_sierra:   "7cee5824d4c70a302b3830eaf6615f52e5a1b41fdcbfbcabb46c5dd3ee00ec2c"
