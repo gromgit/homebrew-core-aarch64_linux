@@ -19,6 +19,6 @@ class Oxipng < Formula
   end
 
   test do
-    system "#{bin}/oxipng", "--pretend", test_fixtures("test.png")
+    system bin/"oxipng", "--pretend", test_fixtures("test.png")
   end
 end
