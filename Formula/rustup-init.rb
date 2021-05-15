@@ -23,10 +23,6 @@ class RustupInit < Formula
   end
 
   def install
-    cargo_home = buildpath/"cargo_home"
-    cargo_home.mkpath
-    ENV["CARGO_HOME"] = cargo_home
-
     system "cargo", "install", "--features", "no-self-update", *std_cargo_args
   end
 
