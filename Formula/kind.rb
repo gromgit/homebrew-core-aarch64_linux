@@ -4,7 +4,7 @@ class Kind < Formula
   url "https://github.com/kubernetes-sigs/kind/archive/v0.10.0.tar.gz"
   sha256 "9ede2b77b451417e36a208cc5183a21f0420f7b6a6230146ba7d76ab34b99bc7"
   license "Apache-2.0"
-  head "https://github.com/kubernetes-sigs/kind.git"
+  head "https://github.com/kubernetes-sigs/kind.git", branch: "main"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "4b233d91a8d967dd1c2e0b1cda5abfc9c18d67d7062d74193d6bbb3247726227"
@@ -14,6 +14,7 @@ class Kind < Formula
   end
 
   depends_on "go" => :build
+  depends_on "docker" => :test
 
   def install
     system "go", "build", "-o", bin/"kind"
@@ -33,8 +34,10 @@ class Kind < Formula
   end
 
   test do
+    ENV["DOCKER_HOST"] = "unix://#{testpath}/invalid.sock"
+
     # Should error out as creating a kind cluster requires root
     status_output = shell_output("#{bin}/kind get kubeconfig --name homebrew 2>&1", 1)
-    assert_match "failed to list clusters", status_output
+    assert_match "Cannot connect to the Docker daemon", status_output
   end
 end
