@@ -26,7 +26,7 @@ class SafeRm < Formula
     (testpath/".config/safe-rm").write bar
     touch foo
     touch bar
-    system "#{bin}/safe-rm", foo
+    system bin/"safe-rm", foo
     refute_predicate foo, :exist?
     shell_output("#{bin}/safe-rm #{bar} 2>&1", 64)
     assert_predicate bar, :exist?
