@@ -6,10 +6,10 @@ class ZlibNg < Formula
   license "Zlib"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "ea7326966520b19598a7140a54e86dbbca928709c965fa9743dbbe5b1cd83b0c"
-    sha256 cellar: :any, big_sur:       "9b71cea1b762ba5fee001ecb839f87df698fec276b2dbec5874670cd933631f8"
-    sha256 cellar: :any, catalina:      "8922f3e8564191211ea6533456d415fe5aee007a8242f91988eda666e63bff1b"
-    sha256 cellar: :any, mojave:        "835a757a2ebc46fc9958910737903ecc50f04e9f12541b239076c9e017fbf122"
+    sha256 cellar: :any, arm64_big_sur: "6da07fcefc7d5e5bc8c0e263ef190f40f0dfe4b175bca12905a1dbdf6cc3de4c"
+    sha256 cellar: :any, big_sur:       "a31ce3ccf4d859b63e23df088d565432d2d3e3c97d8962203960dcc295bab81a"
+    sha256 cellar: :any, catalina:      "462f4462fe656f825bb890e2fd1502d285e18ad90eb9749c6587f67f4d3188e8"
+    sha256 cellar: :any, mojave:        "33132308de914dbd6e10cb5c342667ea6dd270914d600a3c1b0c9e2a015975cb"
   end
 
   # https://zlib.net/zlib_how.html
