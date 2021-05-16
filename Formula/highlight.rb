@@ -12,10 +12,10 @@ class Highlight < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "300cc9aaf56190b6114d5dc1a036feb1dbd3958774cdc365c14e9f1d3d90ef00"
-    sha256 big_sur:       "48f8f5490454e944faf513e715136bbf7fbbab0e44f9a1611b868efb8bc95557"
-    sha256 catalina:      "840c759500f9cc2b201c5c886ff9d12d34be7145d1ebbce3bc753c4fec5a2837"
-    sha256 mojave:        "c12e6e363747d0abe0248640a360ace1841cc394bb25e3662944ba71bb4e710d"
+    sha256 arm64_big_sur: "90c97137575b00aaa9050fb14f049e6b1dcfe236ae4266d7e684706f09a58f0f"
+    sha256 big_sur:       "e364d145b581f0622acf1cc9476142b8e318efa60495ca6e9c1f44ed560a2d66"
+    sha256 catalina:      "4238b72def77283c7cedf385639bd9b28b5d0e3fb5d5c0bc6ec6fe6d06ae7bcf"
+    sha256 mojave:        "81057a5898f59793eda32340275cb8bf87da61e6330bb5d0e925690c678b606b"
   end
 
   depends_on "boost" => :build
