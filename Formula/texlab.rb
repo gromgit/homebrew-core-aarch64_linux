@@ -1,9 +1,9 @@
 class Texlab < Formula
   desc "Implementation of the Language Server Protocol for LaTeX"
   homepage "https://texlab.netlify.com/"
-  url "https://github.com/latex-lsp/texlab/archive/v2.2.2.tar.gz"
-  sha256 "04978b118b455607b5debd0a886f0728ca6c498289d2a0c60d8f83b316dc5ebc"
-  license "GPL-3.0"
+  url "https://github.com/latex-lsp/texlab/archive/v3.0.0.tar.gz"
+  sha256 "6ca624104cf9b354badcc3e6304daafca2e022e92dd0d70ac010b6a9b943a5c3"
+  license "GPL-3.0-only"
   head "https://github.com/latex-lsp/texlab.git"
 
   bottle do
@@ -20,20 +20,51 @@ class Texlab < Formula
   end
 
   test do
-    require "open3"
-
-    begin
-      stdin, stdout, _, wait_thr = Open3.popen3("#{bin}/texlab")
-      pid = wait_thr.pid
-      stdin.write <<~EOF
-        Content-Length: 103
-
-        {"jsonrpc": "2.0", "id": 0, "method": "initialize", "params": { "rootUri": null, "capabilities": {}}}
-
-      EOF
-      assert_match "Content-Length:", stdout.gets("\n")
-    ensure
-      Process.kill "SIGKILL", pid
+    def rpc(json)
+      "Content-Length: #{json.size}\r\n" \
+      "\r\n" \
+      "#{json}"
     end
+
+    input = rpc <<-EOF
+    {
+      "jsonrpc":"2.0",
+      "id":1,
+      "method":"initialize",
+      "params": {
+        "rootUri": "file:/dev/null",
+        "capabilities": {}
+      }
+    }
+    EOF
+
+    input += rpc <<-EOF
+    {
+      "jsonrpc":"2.0",
+      "method":"initialized",
+      "params": {}
+    }
+    EOF
+
+    input += rpc <<-EOF
+    {
+      "jsonrpc":"2.0",
+      "id": 1,
+      "method":"shutdown",
+      "params": null
+    }
+    EOF
+
+    input += rpc <<-EOF
+    {
+      "jsonrpc":"2.0",
+      "method":"exit",
+      "params": {}
+    }
+    EOF
+
+    output = /Content-Length: \d+\r\n\r\n/
+
+    assert_match output, pipe_output("#{bin}/texlab", input, 0)
   end
 end
