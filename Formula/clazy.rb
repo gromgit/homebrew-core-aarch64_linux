@@ -11,6 +11,13 @@ class Clazy < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "d2f5bcff669119459a6c4ea01a4e640ac936d78930ffd19a76e37ad7e3a7056a"
+    sha256 cellar: :any, big_sur:       "d5e6536a502e26bdf722dfb33a09c01934054848b8424aac51dc23f9bf405fd8"
+    sha256 cellar: :any, catalina:      "e67252da7ff4a6811b672ff43920b757330c7ed7bf45d754db416c9044fad90e"
+    sha256 cellar: :any, mojave:        "1b2d26176223e0a1ec8cc1f1f4c2b823cb93823aed94858c68ee47fa93cc269f"
+  end
+
   depends_on "cmake"   => [:build, :test]
   depends_on "llvm@11" => [:build, :test]
   depends_on "qt"      => :test
