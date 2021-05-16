@@ -7,10 +7,10 @@ class Cloc < Formula
   head "https://github.com/AlDanial/cloc.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3638341e5639b04660af751d3646c698404636f12903fc7c90cf394d0069dfdb"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6692daba03124d954e7dfd5455df6bda3fd7ba7a847b79f3510ddc03fb739aed"
-    sha256 cellar: :any_skip_relocation, catalina:      "8a91568128c7b0a952688e786eb16c3e7d1f4aecd73bef02ca4e7bc0f155fbae"
-    sha256 cellar: :any_skip_relocation, mojave:        "6db6825b40d19e3df273e692da859cd183284308ca57291a37fb4c59ed89436c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "83f761b258052b7cc8ef375d5b7affa4d17afc372833b09b20695a9168ac6b9f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "bcc059446f6a3c112e4eecf2d5da94531124ca7572cd953138bd9bb636dbd760"
+    sha256 cellar: :any_skip_relocation, catalina:      "62e4eba4fd24d200fea078702f429acd303edfd8211a534362081c9d32283272"
+    sha256 cellar: :any_skip_relocation, mojave:        "31d38191d5377740453d8eee73aaf287df8026bae490297179126a4016665d31"
   end
 
   uses_from_macos "perl"
