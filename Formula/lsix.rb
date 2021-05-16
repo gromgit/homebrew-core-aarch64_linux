@@ -6,7 +6,7 @@ class Lsix < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "d044177e151389e423fe95b95486f46339e19ca8d99e5cadf2ad56e60c060276"
+    sha256 cellar: :any_skip_relocation, all: "074362c7124d1044552aa151366bc7e4146299d5d8320e0b5cda69ddc1be1ce7"
   end
 
   depends_on "bash"
