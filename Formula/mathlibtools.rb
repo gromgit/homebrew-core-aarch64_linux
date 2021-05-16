@@ -7,6 +7,13 @@ class Mathlibtools < Formula
   sha256 "da41c65e206f55b1faea303581fc11215e52d6e6990b827336b2e1eb82aad96c"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "251d0d552236523e472f1f7ea61626b11105e18ade5d6c9a989d0167124d3db7"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b98299d57f99715054cdd87c4038dac6032ceb064ba558a89b15515c8f466838"
+    sha256 cellar: :any_skip_relocation, catalina:      "f09ef15a1725d94592b6fc913752877304a43455ea5ce465141f72fb30784aa3"
+    sha256 cellar: :any_skip_relocation, mojave:        "5316ea5c9e99347fcb42b13542c735867bcbf9848757eea5af19efddf1afb809"
+  end
+
   depends_on "lean" => :test
   depends_on "python@3.9"
   depends_on "six"
