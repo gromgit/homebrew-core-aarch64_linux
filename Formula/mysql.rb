@@ -1,10 +1,9 @@
 class Mysql < Formula
   desc "Open source relational database management system"
   homepage "https://dev.mysql.com/doc/refman/8.0/en/"
-  url "https://cdn.mysql.com/Downloads/MySQL-8.0/mysql-boost-8.0.23.tar.gz"
-  sha256 "1c7a424303c134758e59607a0b3172e43a21a27ff08e8c88c2439ffd4fc724a5"
+  url "https://cdn.mysql.com/Downloads/MySQL-8.0/mysql-boost-8.0.25.tar.gz"
+  sha256 "93c5f57cbd69573a8d9798725edec52e92830f70c398a1afaaea2227db331728"
   license "GPL-2.0-only"
-  revision 2
 
   livecheck do
     url "https://dev.mysql.com/downloads/mysql/?tpl=files&os=src"
@@ -19,10 +18,13 @@ class Mysql < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "libevent"
   depends_on "openssl@1.1"
   depends_on "protobuf"
+  depends_on "zstd"
 
   uses_from_macos "libedit"
+  uses_from_macos "zlib"
 
   conflicts_with "mariadb", "percona-server",
     because: "mysql, mariadb, and percona install the same binaries"
@@ -48,6 +50,9 @@ class Mysql < Formula
       -DWITH_EDITLINE=system
       -DWITH_SSL=#{Formula["openssl@1.1"].opt_prefix}
       -DWITH_PROTOBUF=system
+      -DWITH_LIBEVENT=system
+      -DWITH_ZLIB=system
+      -DWITH_ZSTD=system
       -DWITH_UNIT_TESTS=OFF
       -DENABLED_LOCAL_INFILE=1
       -DWITH_INNODB_MEMCACHED=ON
