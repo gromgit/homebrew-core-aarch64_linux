@@ -1,8 +1,8 @@
 class Zellij < Formula
   desc "Pluggable terminal workspace, with terminal multiplexer as the base feature"
   homepage "https://zellij.dev"
-  url "https://github.com/zellij-org/zellij/archive/refs/tags/v0.8.0.tar.gz"
-  sha256 "850d1a68219debdb4e05f7f58e70b31f440425247caaa1b29b9be1b6c7869207"
+  url "https://github.com/zellij-org/zellij/archive/v0.11.0.tar.gz"
+  sha256 "2a6a21b9dd62bc92ef3484c24ba1d76e07e5a5c67513dd016653df2e2a00e94b"
   license "MIT"
 
   bottle do
@@ -17,16 +17,16 @@ class Zellij < Formula
   def install
     system "cargo", "install", *std_cargo_args
 
-    bash_output = Utils.safe_popen_read(bin/"zellij", "generate-completion", "bash")
+    bash_output = Utils.safe_popen_read(bin/"zellij", "setup", "--generate-completion", "bash")
     (bash_completion/"zellij").write bash_output
-    zsh_output = Utils.safe_popen_read(bin/"zellij", "generate-completion", "zsh")
+    zsh_output = Utils.safe_popen_read(bin/"zellij", "setup", "--generate-completion", "zsh")
     (zsh_completion/"_zellij").write zsh_output
-    fish_output = Utils.safe_popen_read(bin/"zellij", "generate-completion", "fish")
+    fish_output = Utils.safe_popen_read(bin/"zellij", "setup", "--generate-completion", "fish")
     (fish_completion/"zellij.fish").write fish_output
   end
 
   test do
-    assert_match(/keybinds:.*/, shell_output("#{bin}/zellij setup --dump-config", 1))
+    assert_match(/keybinds:.*/, shell_output("#{bin}/zellij setup --dump-config"))
     assert_match("zellij #{version}", shell_output("#{bin}/zellij --version"))
   end
 end
