@@ -5,11 +5,10 @@ class Cubelib < Formula
   sha256 "36eaffa7688db8b9304c9e48ca5dc4edc2cb66538aaf48657b9b5ccd7979385b"
 
   bottle do
-    sha256 arm64_big_sur: "7bcb9029d69ad9a4e15bd3d890b07068b1f8307c54024e4091b3ff44cd4dc0c9"
-    sha256 big_sur:       "1bb7866dcb7fc2ce761bd1b99245f27d5642f7d1aed778f535dbad1f2df3a89e"
-    sha256 catalina:      "038e4978220fae83b1469f2a22f05c3fa01876c9dd6f9d3f7da13b6bc6335a87"
-    sha256 mojave:        "ff5079cb8ddf09f12f73649cea99460b3fd112ba1dfc8791ed315d7b103031ba"
-    sha256 high_sierra:   "8147b72304638d649a1416edca7616f68580af6c60a4b29e4ac2f8057ed258d5"
+    sha256 arm64_big_sur: "6b647d7c7673d0b4b95c7240dc477ee13e0fdd5c9f8952bd9b8d80b0f3f55d4d"
+    sha256 big_sur:       "2680056fa693e78f9f89fcaa55b67888c4aa2d947cc4a2c9d2167e3380782517"
+    sha256 catalina:      "5b03ba168b4d88c74b68409a9d7fc5b6aca796a78b7e55d29a1cba2d29e1595a"
+    sha256 mojave:        "5eca16fc5e707d28e6595f070a49516d65a46aa495b95ab78616777027e36114"
   end
 
   def install
