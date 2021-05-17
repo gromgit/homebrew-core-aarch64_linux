@@ -8,6 +8,13 @@ class NeovimRemote < Formula
   license "MIT"
   head "https://github.com/mhinz/neovim-remote.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "eb32806679e25729e2106e7ee35082d41b460a49305e51402121a21a013f8924"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f94e3d59bc081404b883cd5fa4e8ddd48e33d060fc25099c0070ba52e8ac9682"
+    sha256 cellar: :any_skip_relocation, catalina:      "1bb77fdf6276df0833eed58107681ff725a0b0c6746a5e19c7c98428b903799d"
+    sha256 cellar: :any_skip_relocation, mojave:        "a08d1b3bbae29235c707c59a345ce343a6994e4f9460bbcf16f8279a2e13683e"
+  end
+
   depends_on "neovim"
   depends_on "python@3.9"
 
