@@ -6,11 +6,10 @@ class Libidn < Formula
   sha256 "3c8e970d5cd80a8cb56f59c61611535336343942e3f1c81b0190c69993a692c2"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "c0e93aac7cc1cc6dd1f7a99157e1713d8a05ecead8c8522fbcb631658577fc64"
-    sha256 cellar: :any, big_sur:       "86c6d6ed8d6ad080f9174997ffa8f37196a33d84ea914a6e11654560cc1475b0"
-    sha256 cellar: :any, catalina:      "1c1767101241edbd4141dc100e1c715b021be85e3fcf3657ea3bbdcb1fa884ec"
-    sha256 cellar: :any, mojave:        "61e978964009ca11bb25bb366f47872b306a54bbec468f0eca4924a8155bc8a4"
-    sha256 cellar: :any, high_sierra:   "306d665a4722e8c32da822c5185eba3abfa2ca0f0624e67e28549c44fb83f9f4"
+    sha256 cellar: :any, arm64_big_sur: "79692bf3eba59bf205124de0cce8170c209b0f1f107b100e5f5e0c3147aa8234"
+    sha256 cellar: :any, big_sur:       "87d313494a3bc28a705bb14a7786cd4fe67396138420847f9847cfd3b946a460"
+    sha256 cellar: :any, catalina:      "0666177059ee07be7e9e05a61111e6366771a1cc4816d601726e77e0cc366275"
+    sha256 cellar: :any, mojave:        "037373c763773d8205caf3123f3e4d6bc5ca42099888e786525174f864ac544e"
   end
 
   depends_on "pkg-config" => :build
