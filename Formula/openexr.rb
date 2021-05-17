@@ -8,10 +8,10 @@ class Openexr < Formula
   revision 1
 
   bottle do
-    sha256 arm64_big_sur: "b80c2c86f766b5b165558b748ab12958881063f76d6ed593a1f99c8cdf565254"
-    sha256 big_sur:       "d11e1254a0cd32d9e85ec006107ff3ecd5a1d8468102bc8aafe7fb24d30cc35a"
-    sha256 catalina:      "65fcbe8599da30562d3fed1e1a8060e8107f472cea5c8bb7685f0f2fcc26bed0"
-    sha256 mojave:        "ea015fff421cb98c445b8867b97094a840ddb6ccab2cadc034bfe66aaa298bfa"
+    sha256 cellar: :any, arm64_big_sur: "e0fce86c7d6b0a32c517e5636d13b272a83f34df60b8c1f8a914694c40f0cdbc"
+    sha256 cellar: :any, big_sur:       "b2b31643cf746ad460034df8d020b3a97d070edcd418716259e1bd501f9a8e5f"
+    sha256 cellar: :any, catalina:      "136eb8c771d87ab27dbded4b1381def640342be80a9c5d7a7a16fa43970890bb"
+    sha256 cellar: :any, mojave:        "c87a3697f6d0bc82d901cb11a5563d4e5cfb712f8b9d612f2cd949a06be61a32"
   end
 
   depends_on "cmake" => :build
