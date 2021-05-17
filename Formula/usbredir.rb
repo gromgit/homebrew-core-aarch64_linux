@@ -11,12 +11,10 @@ class Usbredir < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "71845b18ae16c2ebe1a321d8e7bc8916f5fb99917f08d34927c14118ac8e9d12"
-    sha256 cellar: :any, big_sur:       "8f86636870cc889d4a8ef202fdf4d65681e930961e19de50438deb49d1d2065d"
-    sha256 cellar: :any, catalina:      "c7182aed390cc4cf96e9a99a728129367714b954062b7f92471a6e3864aed244"
-    sha256 cellar: :any, mojave:        "579f1db366d50c027cfd6ea92149878b358d86bb6a9d491320e5f7fd62dfd2e8"
-    sha256 cellar: :any, high_sierra:   "0d83ca33451b2c382dcf4b70be515549db139b0960712dc7f213e993ba7973d7"
-    sha256 cellar: :any, sierra:        "7feac9566048e308877ef3f3d1b93660433dc8f1611e3daf031eaa4dd90c7238"
+    sha256 cellar: :any, arm64_big_sur: "e1b386db632be8bb241c1924f0d1ca892c069078f1d1928c7ea1f786e4a834e1"
+    sha256 cellar: :any, big_sur:       "5f2999d6b52b9ccc9aee6efc1417083d6fd3bb10b873cb56c2debcb02e4e9c82"
+    sha256 cellar: :any, catalina:      "a19338a4180caf513da9caeda32403311002715609ef7200d31c0d96f49e4fa1"
+    sha256 cellar: :any, mojave:        "7660673efa01fe1af1337ba2dc290a39c8a45a54287e1cfe5daa5efac583cc14"
   end
 
   depends_on "autoconf" => :build
