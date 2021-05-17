@@ -7,10 +7,11 @@ class MinizipNg < Formula
   head "https://github.com/zlib-ng/minizip-ng.git", branch: "dev"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "add0a71e0619bdb8aa46d5ed69095bd6cc251f21f7ff9416286e8a12c62b1dbe"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d96652562b5dcaa5cdee3758080bf0a5ae25457dba3714d6a16405bf1669c078"
-    sha256 cellar: :any_skip_relocation, catalina:      "e7c535d3e62d4d243fbd82db34f5a0b21697657b6729428941d6eb920d423fae"
-    sha256 cellar: :any_skip_relocation, mojave:        "cb77ebd7d9de22d03a920cfdcb618523e9d08ecd61a9e11c5d7099652c90765f"
+    rebuild 1
+    sha256 cellar: :any, arm64_big_sur: "0bc8e68ed7dcf20dfd58f566ca03861e850754054e377c9ef05ba7cef4ef4fa5"
+    sha256 cellar: :any, big_sur:       "4f631f11f24ba348c72f5458facff917a313248eb9a8365539d79c30e1bb3657"
+    sha256 cellar: :any, catalina:      "e431dc66a25e00ed03478da0440fd63985af97d0f77d1db76739f7075990c089"
+    sha256 cellar: :any, mojave:        "985fec3cb378278cf5b311d1e32669cd63639cfd04e52f55cb0beb34fd55e811"
   end
 
   depends_on "cmake" => :build
