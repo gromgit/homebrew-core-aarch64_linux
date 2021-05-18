@@ -1,8 +1,8 @@
 class FreeradiusServer < Formula
   desc "High-performance and highly configurable RADIUS server"
   homepage "https://freeradius.org/"
-  url "https://github.com/FreeRADIUS/freeradius-server/archive/release_3_0_21.tar.gz"
-  sha256 "b2014372948a92f86cfe2cf43c58ef47921c03af05666eb9d6416bdc6eeaedc2"
+  url "https://github.com/FreeRADIUS/freeradius-server/archive/release_3_0_22.tar.gz"
+  sha256 "833ab5f51f0f42fd3bc7d71b1fc616b0da5b97d6a421f3cad489a2aeebb2dc7c"
   license "GPL-2.0"
   head "https://github.com/FreeRADIUS/freeradius-server.git"
 
