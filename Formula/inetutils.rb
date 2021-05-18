@@ -8,10 +8,10 @@ class Inetutils < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "82b61f26f0dc565334619a3ca34994cfea99088e25db94bd15706037a2c49b61"
-    sha256 cellar: :any, big_sur:       "31f0fdd6e2bdc5ed3e25d46aa8c47c2e0d6c9fe13011fe4c388388eead919676"
-    sha256 cellar: :any, catalina:      "8fd3005c6e2914ee9d3d2f513bfa903827a94a74a232f1553d9a113aba1eddc2"
-    sha256 cellar: :any, mojave:        "85a50b1e624497625bea4c836be1005dfd60c11814778e09153acf256a9e3992"
+    sha256 arm64_big_sur: "67cf68d882126411ce4f2d0dd0aba683170f1c049c01e4fdbb156ace7a6e9ab0"
+    sha256 big_sur:       "6cb6cdaeeddf24484e33d5a90c5380d1004cf34c85604a2620545ec7716bdd86"
+    sha256 catalina:      "dd6368d46eb1e7857dc301ade6377731028d30326d8e7bc010264bdf8590623a"
+    sha256 mojave:        "76c0686105882d914260ad551a78e9954bd08e9757c45c35fa606941a6d36993"
   end
 
   depends_on "libidn"
