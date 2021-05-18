@@ -11,7 +11,7 @@ class Commandbox < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "45b01d0263bf8842d6b060ed23202a77ab6b33d2a3c1c2a89be80eb4c50324ba"
+    sha256 cellar: :any_skip_relocation, all: "7ab51feadd7ba7c1525c98a0d7a96d010a374cc1ea69b7989cb033115a1316eb"
   end
 
   depends_on "openjdk"
