@@ -12,10 +12,10 @@ class Karchive < Formula
   head "https://invent.kde.org/frameworks/karchive.git"
 
   bottle do
-    sha256 arm64_big_sur: "86a66fd97f0950647e3775504d184aedc0c00d2de8e3867fe5d7c74369ca1d5c"
-    sha256 big_sur:       "397eff063d9c760337589af5f4e17a6d5f3e828a2daf034ce96b1cda3cbfd8b0"
-    sha256 catalina:      "b0d71de3b380893bdd605d284415fb87dd6c07c130b2fd9139a1fec440d8bc57"
-    sha256 mojave:        "eeced6ab7c926d935c694ac23a79f617185e04682022aaaa2aef3bdb3a6716bf"
+    sha256 cellar: :any, arm64_big_sur: "190de292af271c60f358eae36a4a72a8aef1848fa19cbfb2683116a71d0f286f"
+    sha256 cellar: :any, big_sur:       "702867a13a203f79d76eadfe8f62aa86c5e3ae3b3661dfb22c12ef9340c88bd4"
+    sha256 cellar: :any, catalina:      "793f77be4310d9d9f949a203d5c9cc4d8c3b1d625206b0deffa02c0830fdcd21"
+    sha256 cellar: :any, mojave:        "04a2ce817c1d4a3db9be9f0094ce3b4563dd1d2a594fbc224c72830b63e31148"
   end
 
   depends_on "cmake" => [:build, :test]
