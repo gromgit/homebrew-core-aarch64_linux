@@ -13,10 +13,10 @@ class Exiftool < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a0d8370ee8da32d13b5deb9acfbfa5e460a17c248b358f44c026690a8d22905f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "25ff309cacd34da2b0e285b0ae6a1eda155afe8fc76270f881127cef9fea9524"
-    sha256 cellar: :any_skip_relocation, catalina:      "8abcffb62ed34374bdb53169396db443b968631904a4450f6b68c9603e9392b9"
-    sha256 cellar: :any_skip_relocation, mojave:        "3faea0b5e1f2c4aba9273949f583e06a3a4cf7624b57883cd87f7889f2265989"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8eead0c1a0eb9987e9ff1c113f081a007b540d242c0f01e378bd58d6bfbe336f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "cc42c22f10a9a50e5bdc051c7ea5f5b1ac91ebe388e82d47cdfb17390afc2c9f"
+    sha256 cellar: :any_skip_relocation, catalina:      "417bf7b2283920446243141a671a8d8af58ccf817f69f3cf06cbd59f20869f00"
+    sha256 cellar: :any_skip_relocation, mojave:        "417bf7b2283920446243141a671a8d8af58ccf817f69f3cf06cbd59f20869f00"
   end
 
   def install
