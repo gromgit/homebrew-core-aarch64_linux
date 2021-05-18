@@ -7,11 +7,10 @@ class Tinyxml2 < Formula
   head "https://github.com/leethomason/tinyxml2.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "dbe26d21724cc71aa66091a73c1d9f6a54e952f7a38877749062a8c5cd4dd4e8"
-    sha256 cellar: :any, big_sur:       "dc187de7b8ecdaae5ca53fb68c940d01dd30d13d635a57dda778f5577ffaaefa"
-    sha256 cellar: :any, catalina:      "de43d8d170826747b593e29cff70f84fba2e35aef5c25bec5c02c406c29bbf84"
-    sha256 cellar: :any, mojave:        "65527a3b8385c01fabbaeef1ff1dc3cc301dcf5f49e0875d210d80fc5181379d"
-    sha256 cellar: :any, high_sierra:   "eaacca900292a86dc5d4e95e2a71042a6e2fe7e766341d0b5078cf99cd25c0da"
+    sha256 cellar: :any, arm64_big_sur: "9155cc428f70afb7d2a321af7abf6cc359ce5093eef63cbcaef70672b6644ae7"
+    sha256 cellar: :any, big_sur:       "da38adaa7c2a3e6386aea80bec19886d02da078fa3c0f7ffe57d1bad2a779727"
+    sha256 cellar: :any, catalina:      "73a91f44b713518ae8080170a2880f095da2e668bd90a89a1ae9c44895ce2a46"
+    sha256 cellar: :any, mojave:        "f6c19f6a994e401fc15d467f2f3c56366a9b0671cd73fc0ecbe872e1c26ce011"
   end
 
   depends_on "cmake" => :build
