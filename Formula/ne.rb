@@ -1,8 +1,8 @@
 class Ne < Formula
   desc "Text editor based on the POSIX standard"
   homepage "https://github.com/vigna/ne"
-  url "https://github.com/vigna/ne/archive/3.3.0.tar.gz"
-  sha256 "77a0c8e8564a29cd18069eebf04cee4855fae183f1e8f25d5fbb0c2651f07e6c"
+  url "https://github.com/vigna/ne/archive/3.3.1.tar.gz"
+  sha256 "931f01380b48e539b06d65d80ddf313cce67aab6d7b62462a548253ab9b3e10a"
   license "GPL-3.0"
   head "https://github.com/vigna/ne.git"
 
