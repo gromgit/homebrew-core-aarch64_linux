@@ -8,10 +8,10 @@ class ProtocGenGogo < Formula
   head "https://github.com/gogo/protobuf.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "49b15e28522708155dc3b0aeb3c6218b7d375664dde48e9c462950ea5829422a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a46b71e8f96d10eb734d07eef8a275b535a3604c605c9b520e7d8aad32267af7"
-    sha256 cellar: :any_skip_relocation, catalina:      "f87726ce55f06e3ca302f8d90df366db7997ed44c2cb5d29be909129f13c5ea6"
-    sha256 cellar: :any_skip_relocation, mojave:        "825ff0c90a2af79858401c668aae6acf85924724f0ec0481d34ec3e50d3c8af2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9ba5d8b674ef61368f7dfdc0f072190ec0927fc3c42fa846535ccd2dfd3030f9"
+    sha256 cellar: :any_skip_relocation, big_sur:       "fd8a46c27fe74626f154ec7ea64183b1dfcfaea1cba6f35ebd91da51383c4122"
+    sha256 cellar: :any_skip_relocation, catalina:      "fd8a46c27fe74626f154ec7ea64183b1dfcfaea1cba6f35ebd91da51383c4122"
+    sha256 cellar: :any_skip_relocation, mojave:        "fd8a46c27fe74626f154ec7ea64183b1dfcfaea1cba6f35ebd91da51383c4122"
   end
 
   depends_on "go" => :build
