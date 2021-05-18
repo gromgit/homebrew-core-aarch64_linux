@@ -6,10 +6,10 @@ class Procs < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3990cf25d9c3fa83169bb30cb5776e88a4fade5bed5a06374b50ffe5d14679ac"
-    sha256 cellar: :any_skip_relocation, big_sur:       "aafca07219f4e6b1fc7281ee7beed8a8e6a55090864598c2c0a115d1310ce6bb"
-    sha256 cellar: :any_skip_relocation, catalina:      "8014350b64db9d4b301bcb832c6afc8e1f45d81857a9e5d0cdbb54520a32de71"
-    sha256 cellar: :any_skip_relocation, mojave:        "eb13ae0064dfebeeba1c48ff7ce9f20bd5a0a73c4f837bcadcb24c55e4711417"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8f99791c8c27ea052c4fef0cbbf171cf38c67d0cce8a0c3170e07549c41ba36c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "cc8857ce6fc3218dc6dfd981e0925897ae226c26f216c7901845cc2616917e7d"
+    sha256 cellar: :any_skip_relocation, catalina:      "6a652f89490701126909c580d5283929afb8737fe9e16d21a7d632b9f97e09da"
+    sha256 cellar: :any_skip_relocation, mojave:        "625fb26a631a2e2693e187beea20521ff6fc17be719b80be7366226f6bd4162e"
   end
 
   depends_on "rust" => :build
