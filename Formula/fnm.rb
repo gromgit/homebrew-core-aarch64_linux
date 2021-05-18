@@ -12,10 +12,10 @@ class Fnm < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "355c9b0648fa069de156d4abf097f699a84e954642d5dd8938fbc47334f002b6"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3e72c6b836f28fc9d58c2caf9ddbc7fa04aa363c7752cf9cf567d689729ca5e8"
-    sha256 cellar: :any_skip_relocation, catalina:      "f3acabfa84fdbef92d68703fcb12a6120f334bfd69c684d576a8e0ac30f45d37"
-    sha256 cellar: :any_skip_relocation, mojave:        "d4567300fc34c94ff65e20449a0bcde63ee069aa6d234f1160ffa88bd896e2ad"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f452f231a5d8c6f3c4795c7cedb1c1069e2c087d71033922e0d0feadbdfab5c7"
+    sha256 cellar: :any_skip_relocation, big_sur:       "1aceb43c8d1cd23b37ef3e5cb39958a3723021b4aa8796226ae5452cdb1648c3"
+    sha256 cellar: :any_skip_relocation, catalina:      "22f971bf095b1c786fc3ac5cd51ed772348cecb518abfd14c14890508418057e"
+    sha256 cellar: :any_skip_relocation, mojave:        "b809a52a73726c35e08d89076123f9dd3978615e229d88bc41257fd3bb434b0b"
   end
 
   depends_on "rust" => :build
