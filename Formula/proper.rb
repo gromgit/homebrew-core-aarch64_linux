@@ -1,8 +1,8 @@
 class Proper < Formula
   desc "QuickCheck-inspired property-based testing tool for Erlang"
   homepage "https://proper-testing.github.io"
-  url "https://github.com/proper-testing/proper/archive/v1.3.tar.gz"
-  sha256 "7e59eeaef12c07b1e42b0891238052cd05cbead58096efdffa3413b602cd8939"
+  url "https://github.com/proper-testing/proper/archive/v1.4.tar.gz"
+  sha256 "38b14926f974c849fad74b031c25e32bf581974103e7a30ec2b325990fc32334"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -14,11 +14,12 @@ class Proper < Formula
     sha256 cellar: :any_skip_relocation, sierra:        "a80e754b0bb2ce17d223034734cd1aa473532ba743cf45cbff89fa154af18220"
   end
 
+  depends_on "rebar3" => :build
   depends_on "erlang"
 
   def install
     system "make"
-    prefix.install Dir["ebin", "include"]
+    prefix.install Dir["_build/default/lib/proper/ebin", "include"]
   end
 
   test do
