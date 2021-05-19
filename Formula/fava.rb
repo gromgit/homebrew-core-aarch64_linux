@@ -9,10 +9,10 @@ class Fava < Formula
   head "https://github.com/beancount/fava.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "040ebf7614c0235d65be5088e3f101d49ddb73453fa384c547b457c979938453"
-    sha256 cellar: :any_skip_relocation, big_sur:       "85a59d132ee21ae7edccc9431b27ca83688b3c8262c682246c2e28019fca2f6d"
-    sha256 cellar: :any_skip_relocation, catalina:      "1eaa8bb9163777e560193835bd642d8ab308b0c337c599191badaa146dd7218f"
-    sha256 cellar: :any_skip_relocation, mojave:        "f67cf66bc5348134346106ba81f493fb492bb873551a0d3affc7d2a4d45d66fa"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "39f5e0b1789ef2064d61b57c8df1388a2c2f1690ae3ecf1728e818fe1c396962"
+    sha256 cellar: :any_skip_relocation, big_sur:       "19d3cb104b4adc01097daf2b937625db6064bd7bf086aa15a094ef8b56192d6d"
+    sha256 cellar: :any_skip_relocation, catalina:      "a794505141c72cba2422fa14b6d4e920c3adc0a6a49f381c95bd6eb3506bd7b6"
+    sha256 cellar: :any_skip_relocation, mojave:        "08ba12fdc47ed16c4e9b161f6e5258c87ea93c7f71879d5604321925ee7cfec9"
   end
 
   depends_on "python@3.9"
