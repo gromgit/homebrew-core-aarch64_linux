@@ -10,9 +10,11 @@ class Bear < Formula
   head "https://github.com/rizsotto/Bear.git"
 
   bottle do
-    sha256 arm64_big_sur: "b1366ee18864d28920459b4b9d65a4166ff3e498030e82617939b6ffcc9fce66"
-    sha256 big_sur:       "9c2c172d9d5873d7c38d3886b49b8836c7994ca55a1a98815a0825640a87c5c7"
-    sha256 catalina:      "311d92869dbfb48a30c949172d42f7f7c26f28b7eaa6e682d1999b9e2657bfe7"
+    rebuild 1
+    sha256 arm64_big_sur: "c48f1cf92b8b1be6c433469d6de1fa27612cf4add52595835b90f2a45c490abc"
+    sha256 big_sur:       "b43ce5dbd5fe126b521766d28ca3a3c94a73cb6dcd7e431abcbd34306dbbba32"
+    sha256 catalina:      "d9e0aa335c566017d373d89d77c4d627c042245e21c9a751d2eeb9eb376eb735"
+    sha256 mojave:        "b18f99eac9cf32923b286ce4d0b8ba4011f4fa1edcf6924c8d767f42e7f0af94"
   end
 
   depends_on "cmake" => :build
