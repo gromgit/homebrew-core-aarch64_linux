@@ -8,11 +8,10 @@ class Heksa < Formula
   head "https://github.com/raspi/heksa.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c4e1fa619ea432a08a79cfcce85ec55ee1fc159ed7b1d46a798d2a0edae5e822"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e48a732eb3825a7cbd0a2b96d6692592f9c15d365d964cce4bb8f92cba432a50"
-    sha256 cellar: :any_skip_relocation, catalina:      "771946a21e72b9d5eea465ca9fd213615b0eba272820691905522bea993ce6a3"
-    sha256 cellar: :any_skip_relocation, mojave:        "7592f466b87e68f8e4f4762bc0ed6cf14ac92a127ef6fdd0cfbe3d4fdb550b05"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "14394cbe0fe767fd205e96ec62b27e7223ad48231f61d30271b5516bc99e652a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "de0c36cdc7215c90ea71792580f298717eeffc2b8d6e7a556cd55e4a9c6fd43e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f58fd184f70cb5601d2da5737aff2add348d98eeb7724460dbdbebef04bd9ea6"
+    sha256 cellar: :any_skip_relocation, catalina:      "98f162aca970fdb91350424f8f4fcf94348b07d598a32355c6e2dfda57b31150"
+    sha256 cellar: :any_skip_relocation, mojave:        "deb7aa04db9d74d1300c7b5bfc85243cc853eb7bf81ca0657b3c7bfa6bf499a9"
   end
 
   depends_on "go" => :build
