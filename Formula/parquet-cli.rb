@@ -7,6 +7,13 @@ class ParquetCli < Formula
   license "Apache-2.0"
   head "https://github.com/apache/parquet-mr.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b3c9cf0f2d194f6ea74d86187d07fea91b26a1dba7911d9648eaefa8b6039c6b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a0b9c8859d7dfb3c6e66cef92b191b7a4861338e02be1694ba70f86c646e56db"
+    sha256 cellar: :any_skip_relocation, catalina:      "1cd95d2c049e2d049e799f27dda903fb6497d4701f86924fec4ac8470455dae2"
+    sha256 cellar: :any_skip_relocation, mojave:        "f1c5eb930f2c094ba7e3ef80856420b01f96ce197705f5da0b39039a54ffa498"
+  end
+
   depends_on "maven" => :build
   depends_on "openjdk"
 
