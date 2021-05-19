@@ -7,9 +7,10 @@ class Carrot2 < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "ddaaa474a26c2928e2a080b41ba93aec4c525e400d81315c4f96ad5eba491863"
-    sha256 cellar: :any_skip_relocation, catalina: "30958bc92829b4baadc8bca3164ea20b2bba51c9c2ff96a55f29edccd27f3fbd"
-    sha256 cellar: :any_skip_relocation, mojave:   "dd82165536db4f4a723d1789f376dca7c1a617fc1ee402818e991ff8734c39d5"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, big_sur:  "8de11252a7b018007a2ba09d912acb2ec5c43d8f07bb9230789084d2a950cdde"
+    sha256 cellar: :any_skip_relocation, catalina: "a7bf7b0100998fd2e78069e7c3be0e8099d8d45192f0277094ba555fe260ed0f"
+    sha256 cellar: :any_skip_relocation, mojave:   "ff58dbebfb493939e5d07f9984fb4a32e34e00cf8b188829703ba6fc04c47658"
   end
 
   depends_on "openjdk"
