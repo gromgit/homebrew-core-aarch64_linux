@@ -6,12 +6,10 @@ class Proper < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6a1d458a2c8a8de933313461c08be393fa6d7fc52dbe97c1408f072af006759a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f2e6928824479ca03e6998758891da6812e1afa7dfa51387fa7857604d3b10b4"
-    sha256 cellar: :any_skip_relocation, catalina:      "34011621b0cd440a49ee2c13d0bd968b7cf8ed8b0b817fbd6793082de5d4728c"
-    sha256 cellar: :any_skip_relocation, mojave:        "a93bfdd9a7558b9ad0cc013f3aca0cadfe86535948730ab6861c10931cae4b92"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "f9f6404b3c025d06fb1b6ab0155716fe5f59f337ac6884b92d4ac01d6677b4c7"
-    sha256 cellar: :any_skip_relocation, sierra:        "a80e754b0bb2ce17d223034734cd1aa473532ba743cf45cbff89fa154af18220"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "51b1bd82ce6b28f81a21d3dd4fc8e451cc1a11f2434d9e8f55121d233414d43a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "61e21e04eaa32a05b64b00906c02ebe92b561d5eb087ca044e95cc529b500fc3"
+    sha256 cellar: :any_skip_relocation, catalina:      "06c64fa31d6e5adcf99fee3f9ed8351adb563404eb8c47bed79e6ba1bf4196f4"
+    sha256 cellar: :any_skip_relocation, mojave:        "b658a49385aabd1ee1c7a081873367a5b2aeb12c9ea0804804cedc38b2731c96"
   end
 
   depends_on "rebar3" => :build
