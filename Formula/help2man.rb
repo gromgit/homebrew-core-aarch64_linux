@@ -8,10 +8,10 @@ class Help2man < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "245bca74657364e44328ea73adba991dc474575fb06e2d7a6265ebefebfc3d4f"
-    sha256 cellar: :any,                 big_sur:       "3427e6a3047c47d3fa9d82e84484c37670a6c4f535e9e5d43a722ca0099854a5"
-    sha256 cellar: :any,                 catalina:      "86c79d4bdae5e7ed98a3c7f12e03e8ae30441671f265039302d8e3bf99b9efa6"
-    sha256 cellar: :any,                 mojave:        "17a7fb449651786f446b6b4baa6a53a0b58ded567c83730b3e6fc2a86a4ff7ed"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8508861b550d6e89b39702beae40a4c3ff78c9c0d248ea642516edb5f74f0f09"
+    sha256 cellar: :any,                 big_sur:       "daa1e20f7225b1b4e64b2b022712a767d238a1dbe07dda53c63dfe1f0f0f8275"
+    sha256 cellar: :any,                 catalina:      "337cedb9b9f97c1a1f4e08f3ff79142501d85da4f997c1859cd1dcb05653a836"
+    sha256 cellar: :any,                 mojave:        "7d2a720ba3e5020ae28f32cc5705ffd9c8ec7b8b52aed3272d7d43e82eb91c3c"
   end
 
   depends_on "gettext" if Hardware::CPU.intel?
