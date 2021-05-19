@@ -6,9 +6,9 @@ class I2pd < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, big_sur:  "d1ddbf435349fc7df74d6cbc9656284920197ea0ef8821e40a424d604a05bc15"
-    sha256 cellar: :any, catalina: "a463b521973d61bd9ef1bf8941e6e24e1afb3d4420d1925aa10294eeb515e674"
-    sha256 cellar: :any, mojave:   "f28fbbf66d5059477b83340a5b6e4d8e7c2140a350003dc8d78ef84300eb8207"
+    sha256 cellar: :any, big_sur:  "4bea71d5c8dde3e276e828b87c9a520318fa8a196baffe47f9a6abfb0b685a1d"
+    sha256 cellar: :any, catalina: "9aaba9ce0fbda3d1df8b21ec9ef63706e20b375e44861594652f943842645eaa"
+    sha256 cellar: :any, mojave:   "9ec34112c5582b03b9016ee599d85ea95c8c69ed2d89d88be7132e68729e668b"
   end
 
   depends_on "boost"
