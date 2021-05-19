@@ -11,7 +11,7 @@ class PicardTools < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "ea8248eb6e1f0c342358915a8ce6d9846c43071a031da75982fd7b8170bfbaf8"
+    sha256 cellar: :any_skip_relocation, all: "bdaf5ca6f12440de58e1513ae29215c776978e33b4093c27daa346d18258068b"
   end
 
   depends_on "openjdk"
