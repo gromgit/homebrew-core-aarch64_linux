@@ -9,7 +9,10 @@ class Six < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "33a1b6980a4636327e204a1d9a0cbf5c7c9286e56e3ba6b1226e63b93fc01fb9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "02ff012017a8eec787fccf3ae46c45b6681faec6a2f2160a5ff15aafb5af0894"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6068e58ff59ea70f491671ad3257b129ed7d5b90a5c678348c3dfdaa14953cdd"
+    sha256 cellar: :any_skip_relocation, catalina:      "6068e58ff59ea70f491671ad3257b129ed7d5b90a5c678348c3dfdaa14953cdd"
+    sha256 cellar: :any_skip_relocation, mojave:        "6068e58ff59ea70f491671ad3257b129ed7d5b90a5c678348c3dfdaa14953cdd"
   end
 
   depends_on "python@3.7" => [:build, :test] unless Hardware::CPU.arm?
