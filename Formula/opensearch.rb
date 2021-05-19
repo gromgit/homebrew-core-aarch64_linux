@@ -5,6 +5,12 @@ class Opensearch < Formula
   sha256 "d23385aa42f636049ae270bdb496843dc8d2dfd88bd7f4761e305e8193b76399"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, big_sur:  "3e76febc9b36676a9eb2ca55cc31ff4723783d74f47924c76d83701fb299c25d"
+    sha256 cellar: :any_skip_relocation, catalina: "a1fe07b1db26074848cca54545c795156dfd26c49493a52605f3809206f7d988"
+    sha256 cellar: :any_skip_relocation, mojave:   "9aac76b813d07a95636df64b4c8b96c6aa5de5a464f728a53568a51d457d92a1"
+  end
+
   depends_on "gradle@6" => :build
   depends_on "openjdk"
 
