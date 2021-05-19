@@ -7,9 +7,9 @@ class Folly < Formula
   head "https://github.com/facebook/folly.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "36e12a54bf77e883544ac7abdd34f5e70ea5af7c96bae5e00b16ebfcc01ae505"
-    sha256 cellar: :any, big_sur:       "61a6f07c6708eb8e6c9702ca4128207e3b85934966817b79dbe2aacfc78a60fe"
-    sha256 cellar: :any, catalina:      "5e09e57612392aed2498dfbf1f397e93b38086fc62e940763fbd728fde854ca0"
+    sha256 cellar: :any, arm64_big_sur: "84ec9fac8e6ed1664dbca08837546af68675336e60342a97e51a2ec0e4b26b8f"
+    sha256 cellar: :any, big_sur:       "f0299acf166e9ba9e5a07253c340d861895b8b031316c54a58d3038a9ad27498"
+    sha256 cellar: :any, catalina:      "6f5596d86b3464e234762344c86c692ee70a7431efc9d9b391624a5e5979c09e"
   end
 
   depends_on "cmake" => :build
