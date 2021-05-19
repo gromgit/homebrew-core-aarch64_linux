@@ -28,6 +28,11 @@ class Cmake < Formula
     depends_on "openssl@1.1"
   end
 
+  patch do
+    url "https://github.com/Kitware/CMake/commit/fa8599e9a6297585513e9849f5ce086b81f42eb0.patch?full_index=1"
+    sha256 "d867b95fc6c9fe185f0fbd3f66fb74c09605d8896a52eafc9c9af0ffe13c3f70"
+  end
+
   # The completions were removed because of problems with system bash
 
   # The `with-qt` GUI option was removed due to circular dependencies if
