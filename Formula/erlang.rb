@@ -12,10 +12,10 @@ class Erlang < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "eb20c6f2f31a73bb7830a56f1513c8a9bb5bb209b72d555146cc3aa10fb1eb9f"
-    sha256 cellar: :any, big_sur:       "841bcaff223387cc95a4687bf59a239defbe6ce1e365d3d303c30878b4b05acb"
-    sha256 cellar: :any, catalina:      "c2f3a456080a1c63cc6533fd06cc99d25ba28d44338d4e801509303cb514db35"
-    sha256 cellar: :any, mojave:        "fbb11e617a4031b77dbc4c2d20ff1c8e471a8f9894959e015bdf8ebc0403268e"
+    sha256 cellar: :any, arm64_big_sur: "f2df681660a91310cd483a6525147c9f04a73423d6b9224b497ce2689d3d514c"
+    sha256 cellar: :any, big_sur:       "1cbd09c9e601cd98aae4d9e44222a0465f59821bbc086a8e9d8b3d4cdaa3a9c3"
+    sha256 cellar: :any, catalina:      "d8de6555c6b7d756563d591ed80e6d6d2ab496795c06ce5dbadbf1da4f9eff89"
+    sha256 cellar: :any, mojave:        "bb0aaada4380b5970e5a62c0d5cf6dc657317b541858c0822a17060c9fd41dd3"
   end
 
   head do
