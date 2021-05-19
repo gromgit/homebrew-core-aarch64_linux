@@ -1,10 +1,9 @@
 class Eccodes < Formula
   desc "Decode and encode messages in the GRIB 1/2 and BUFR 3/4 formats"
   homepage "https://confluence.ecmwf.int/display/ECC"
-  url "https://software.ecmwf.int/wiki/download/attachments/45757960/eccodes-2.21.0-Source.tar.gz"
-  sha256 "da0a0bf184bb436052e3eae582defafecdb7c08cdaab7216780476e49b509755"
+  url "https://software.ecmwf.int/wiki/download/attachments/45757960/eccodes-2.22.0-Source.tar.gz"
+  sha256 "c644a939f9f1fb46c01d7c69b2b3cf988158d03f1c8e11b0494d2b2236ed3448"
   license "Apache-2.0"
-  revision 3
 
   livecheck do
     url "https://software.ecmwf.int/wiki/display/ECC/Releases"
