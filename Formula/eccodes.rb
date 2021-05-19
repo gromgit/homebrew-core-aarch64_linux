@@ -11,10 +11,10 @@ class Eccodes < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "1e5abc64db5fee39068c13ba7f3c793fa85455374418537dff65b95a1d3ac2c7"
-    sha256 big_sur:       "3e5ea15804e66d04fd04974eae397cca9b84348c8a45c206f8f421145e98637d"
-    sha256 catalina:      "f9d24402dd6f55cc7709bb4b80e858826b8ffd2d7571a8832642b959c6dcccbd"
-    sha256 mojave:        "d3132e4511814160ef3e9df97609339d2445eb09b2edbb97eafd8422ecbb18e6"
+    sha256 arm64_big_sur: "6f24b97b7b1d34d33e705983934f362b6c866b451ab49d633c6000ac345f6c5e"
+    sha256 big_sur:       "9b62e4fa0c735bb2a53b342ec94df6b918595bae35e331aca09eba54e75d7f9e"
+    sha256 catalina:      "7e265372d91110d9c9e315ebb711d481761a29d1409e79e59f483d4cd4b7a364"
+    sha256 mojave:        "e460ff92d1f1dde670f787c6b79afd41a043445a5f00ccd13ead2f4d53bd5d5c"
   end
 
   depends_on "cmake" => :build
