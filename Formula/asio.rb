@@ -12,11 +12,10 @@ class Asio < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "f335dcfcae4e9345a6510d06cafe8884a8368a43368d52e53f95e1ca6bb8699c"
-    sha256 cellar: :any, big_sur:       "9cf6b9d1a1cc605977a853af92d5fd65a21f20a6128126ad19d8cceabc766a4b"
-    sha256 cellar: :any, catalina:      "a3eec5329a66d0e7017f407d653adc6234f09f20de691cb4290a5f1ca16c6c94"
-    sha256 cellar: :any, mojave:        "1cbf161c11f1f4863d39d190d61a6c8efc0cdb2932c3763df7ff1111c480aaae"
+    sha256 cellar: :any, arm64_big_sur: "11ab7bb26a9782754a8c872dac4b9cc4c5205fc34061a4678a3eed6d173ab06a"
+    sha256 cellar: :any, big_sur:       "c51769f155b21a0c7c82862c25ece1d40e79fc7db7b919c7daa5437e4060ad85"
+    sha256 cellar: :any, catalina:      "e3fe0bf41ab84047722cb2936c604b13be10723f9a98f006e21db27d82c38d35"
+    sha256 cellar: :any, mojave:        "2f2769fda61b376035b53a8da40860b80566a7725ef294312d4d415ae5aae5e0"
   end
 
   depends_on "autoconf" => :build
