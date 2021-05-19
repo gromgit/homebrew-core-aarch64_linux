@@ -6,10 +6,10 @@ class Libx11 < Formula
   license "MIT"
 
   bottle do
-    sha256 arm64_big_sur: "dcef5a7d1e2ba4b3ce4169f6b7504ca4875ba7e70742609342bcb5f4b8d6001c"
-    sha256 big_sur:       "8663963c8520d669be3a5cf7e49bc253dc39ea3aba8d35b01cdd9103a058041f"
-    sha256 catalina:      "59b7a9aa7a99a4f7257617558c71b1ca0ccf34f065dda785a3616b3c5ec75754"
-    sha256 mojave:        "b3f38839b3b3a024247ffb43324f6a53ecc45ec8bd32de3d7bfbc1142385488a"
+    sha256 arm64_big_sur: "4228b969be7da1401395de4d5f81bc19324a9f3435ff8cf09854ee0c38514388"
+    sha256 big_sur:       "9998bb9f54cc7ee1c11cc5dd645efa2ab07542424dd978c87c2b12a59e736dcd"
+    sha256 catalina:      "5277fde92c0e663e5078428ec590935fbfba1d781bedb03501a0d899f4b6e377"
+    sha256 mojave:        "3528a6e637571a7838976ac7294ebd68f36ad0d1dbffb8214e36c5fc1428cde5"
   end
 
   depends_on "pkg-config" => :build
