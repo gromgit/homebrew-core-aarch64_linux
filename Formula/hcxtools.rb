@@ -7,10 +7,10 @@ class Hcxtools < Formula
   head "https://github.com/ZerBea/hcxtools.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "7562b2f0cef1710c74d5e0fadfa3c1af96ae9efb377047ddfdb12458d1e6fbdd"
-    sha256 cellar: :any, big_sur:       "0c554af41156ff6960244494343c41a5847cd25eaeb503029220b4bb5e29fcc6"
-    sha256 cellar: :any, catalina:      "31d5436dd03434c52eb41d9624ef83f16fbdb17067d801d9f04c7f86928d258b"
-    sha256 cellar: :any, mojave:        "30d1a53db076b0bd9056e5daf2eebde64f97c977fa31de06461dfcaa04e4407b"
+    sha256 cellar: :any, arm64_big_sur: "86ea3336cc5093ebec9fae73aa3ca4479b129ad45be48f95e5905897e4f4a7ed"
+    sha256 cellar: :any, big_sur:       "e62e01f85aeed6210869c83cf55a8a80465c71def942d7a9327e8b321cfb1347"
+    sha256 cellar: :any, catalina:      "558d23ae99efd0692340cd1adaac5ea7069c6add058a5dd0ca1f5cabb564ef35"
+    sha256 cellar: :any, mojave:        "8508059eaf7d76ba6a038b80a6eaf5a5aa0bbbdeff359359b13970593c3a1de8"
   end
 
   depends_on "pkg-config" => :build
