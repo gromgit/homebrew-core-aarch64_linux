@@ -11,6 +11,10 @@ class Gradle < Formula
     regex(/href=.*?gradle[._-]v?(\d+(?:\.\d+)+)-all\.(?:[tz])/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "0d659be86c309f4ac28003a0593d366f3c0fd9e85eb14d34542e6c7545fe5a6a"
+  end
+
   depends_on "openjdk"
 
   def install
