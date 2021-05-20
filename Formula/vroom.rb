@@ -1,8 +1,8 @@
 class Vroom < Formula
   desc "Vehicle Routing Open-Source Optimization Machine"
   homepage "http://vroom-project.org/"
-  url "https://github.com/VROOM-Project/vroom/archive/v1.9.0.tar.gz"
-  sha256 "bd0a0d42e1729bc25527091a523d2f59eb077fb4b7629f2796b057c2c9e30b74"
+  url "https://github.com/VROOM-Project/vroom/archive/v1.10.0.tar.gz"
+  sha256 "6426c32133b9ef7a41f88cf4b506848c34feca74fd3fc9b5bf2bcd96a2f436f1"
   license "BSD-2-Clause"
 
   bottle do
