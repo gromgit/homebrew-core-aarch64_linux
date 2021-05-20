@@ -6,6 +6,10 @@ class Gitwatch < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/gitwatch/gitwatch.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "5957f7e3213426ce3de17562735be772158d30c95fbede147a3952d9816b343c"
+  end
+
   depends_on "coreutils"
   depends_on "fswatch"
 
