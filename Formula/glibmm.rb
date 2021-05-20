@@ -6,10 +6,10 @@ class Glibmm < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "ad82e21e43601e8804150bea12157afa6c38201a441d97a91521ecea93bbfc13"
-    sha256 cellar: :any, big_sur:       "59b86d3d2fe4f28e8a19ba0f5faf0174f7829bb46ae3b04f06bdcf5f3c24935b"
-    sha256 cellar: :any, catalina:      "f4d4326c91b4c573e07a832a0b204bd5a8bc75da331e87f18c044e1397951bc2"
-    sha256 cellar: :any, mojave:        "ff82b1c3e7e8467ac8cd91f01cd97ca2bb4329861b2dd99bda0be89954f730b6"
+    sha256 cellar: :any, arm64_big_sur: "c3b8849a9c84e3d1df3ad04a0d37b0e006d96d9a7e1881e45d1472e0f4a727d6"
+    sha256 cellar: :any, big_sur:       "a19057e4cdbcafddcdf0632c15c68fde2830e290a7516f89e26d5d2dab583b50"
+    sha256 cellar: :any, catalina:      "52fe443b93eacccd6a85ac9fa71fc45b66199a12af4fe313bbed3bceac58a368"
+    sha256 cellar: :any, mojave:        "51230b1f33200cc431c068bf00bc80c76267aacdea2382b4ec9a3d6323774398"
   end
 
   depends_on "meson" => :build
