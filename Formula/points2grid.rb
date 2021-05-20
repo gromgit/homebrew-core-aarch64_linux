@@ -7,9 +7,9 @@ class Points2grid < Formula
   revision 12
 
   bottle do
-    sha256 cellar: :any, big_sur:  "20a3a688d66d5bdad77ee08abaced2afa047e147b5096d6b24530faa21936a1e"
-    sha256 cellar: :any, catalina: "48645a46886d20460d53df48c0ea777ce788e600cd4cab0a5994b89fe253e43c"
-    sha256 cellar: :any, mojave:   "6f7cf1d33b5c66044ecdb7afddf198b96959eb0b7ab6281b9fbcd9dad7f995aa"
+    sha256 cellar: :any, big_sur:  "2f165bbc5c54e67fbe9c0d52875898ef82689a3a5a1e145a4567b60dd440cb19"
+    sha256 cellar: :any, catalina: "1e3ec7e78cd4652a7f43fca2d9917bd61d7dbd66461f3ac428e9d3f62d8bac97"
+    sha256 cellar: :any, mojave:   "d3e4412d6830dc9a2c8bcfc9494497eaeb4d9f606ee0211a74ce10f60382aff8"
   end
 
   deprecate! date: "2021-05-06", because: :repo_archived
