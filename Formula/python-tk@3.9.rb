@@ -12,10 +12,10 @@ class PythonTkAT39 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "3aa77543372cbafcef98df61bb0a87758e2e709e9a0bf2a01e2008b8ae25ce05"
-    sha256 cellar: :any, big_sur:       "435fa1443fa13908afdbdba0f9ba89ad7255be81dc77e0ef0de4ff8ff27df5e7"
-    sha256 cellar: :any, catalina:      "98d863ff3f3906fd5c05980848fd1dd4d33d4fad56f653c9d91f6492777dc968"
-    sha256 cellar: :any, mojave:        "d16ee86c9b5720b80916880d22bea007af2765b2624a1fd0207a3bc4ec4adbc4"
+    sha256 cellar: :any, arm64_big_sur: "add34b7058f6f0652b2ed8ad4d885f923dc4cfe09413d2b64e808200b663a935"
+    sha256 cellar: :any, big_sur:       "4c43cb24ef73143fb457db087ebeaa180017f63073e6ab691fd0fc45f1b728c9"
+    sha256 cellar: :any, catalina:      "93550578b572f2e27ab0a21b96ba8aa24849a8d62cb41e82e233d08ebb3e25ca"
+    sha256 cellar: :any, mojave:        "91932629bcd452735cd840248bfe1ce52ffdbabb7aba5880ee6c910be2aeb77c"
   end
 
   depends_on "python@3.9"
