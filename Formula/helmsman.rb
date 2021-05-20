@@ -2,8 +2,8 @@ class Helmsman < Formula
   desc "Helm Charts as Code tool"
   homepage "https://github.com/Praqma/helmsman"
   url "https://github.com/Praqma/helmsman.git",
-      tag:      "v3.6.11",
-      revision: "039f7145b6bcce3117acedd3a4f8f2cb240c00e9"
+      tag:      "v3.7.0",
+      revision: "995800328cf48b13ccf19f3d459767db269e3823"
   license "MIT"
 
   bottle do
@@ -26,6 +26,6 @@ class Helmsman < Formula
     assert_match version.to_s, shell_output("#{bin}/helmsman version")
 
     output = shell_output("#{bin}/helmsman --apply -f #{pkgshare}/example.yaml 2>&1", 1)
-    assert_match "helm diff plugin is not installed", output
+    assert_match "helm diff not found", output
   end
 end
