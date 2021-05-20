@@ -7,10 +7,10 @@ class Osm < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bf164602266e8f82f9ddb8ec2491cf75b4b6adebc5cf3d95ace5f5b853963a8e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6aa5977df9b542dad5fe9acc8720e68e56f8a354a840bfadc9fccc0516403333"
-    sha256 cellar: :any_skip_relocation, catalina:      "09a93bca5d2d5cd90202d908d27faae8471288e4a37f506164784cbe2ddcade2"
-    sha256 cellar: :any_skip_relocation, mojave:        "dc831b364288ee772128a380990d5b0db3b0330b2cd83fb6da53147c848e324f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4eb537bd502ed21ebec9c130a278ed222c1c2c5b7fccb75eca277cc561cba6ea"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d4bd3b334c8d769abb682cf7c39886a1f6788a7a3dcc4720887a78022eb8e9a5"
+    sha256 cellar: :any_skip_relocation, catalina:      "878289088fb76f829d453916f4a23057dd3e145de96621bd897c889695c9c4ed"
+    sha256 cellar: :any_skip_relocation, mojave:        "5481457927e9d6fca659375c45995d2972e066ba9572dcd04901ffaadd91517a"
   end
 
   depends_on "go" => :build
