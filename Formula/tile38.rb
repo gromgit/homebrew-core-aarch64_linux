@@ -8,10 +8,10 @@ class Tile38 < Formula
   head "https://github.com/tidwall/tile38.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a5468a5b373a5aa59f9e50fc054bc5fb424e21101277e5eb5e8d1b49a6823898"
-    sha256 cellar: :any_skip_relocation, big_sur:       "03fd8b8ee4d25ded40fa216e2497823cd49224d4129a422fbf04923b5ffd551e"
-    sha256 cellar: :any_skip_relocation, catalina:      "1bd80ef965a55f4e9bfa24bb7b0de27a24125f0b1cb4da35140c97b6d3d36741"
-    sha256 cellar: :any_skip_relocation, mojave:        "c36fb3050e3358352fdad7492f13e35059e1aa2d31ad11ab57dc63c1c91df957"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "20847f6cd0c4bcad46b55824ec6b843b6bcb455001e3b6817156d7d197944dde"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d8c666b8c7e4873e97867d102bf6613987c4d45df0a1aaad7b25eafe6a0447ba"
+    sha256 cellar: :any_skip_relocation, catalina:      "ab93c0706488e99a0b8450d0c324fff5a76d8b0aee32784a53630600a03d6bb9"
+    sha256 cellar: :any_skip_relocation, mojave:        "213309d338e0c0fe5bdef114cc2c53bd826b4615503a20f6870fb91774ac9fec"
   end
 
   depends_on "go" => :build
