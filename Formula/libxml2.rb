@@ -1,11 +1,10 @@
 class Libxml2 < Formula
   desc "GNOME XML library"
   homepage "http://xmlsoft.org/"
-  url "http://xmlsoft.org/sources/libxml2-2.9.10.tar.gz"
-  mirror "https://ftp.osuosl.org/pub/blfs/conglomeration/libxml2/libxml2-2.9.10.tar.gz"
-  sha256 "aafee193ffb8fe0c82d4afef6ef91972cbaf5feea100edc2f262750611b4be1f"
+  url "http://xmlsoft.org/sources/libxml2-2.9.12.tar.gz"
+  mirror "https://ftp.osuosl.org/pub/blfs/conglomeration/libxml2/libxml2-2.9.12.tar.gz"
+  sha256 "c8d6681e38c56f172892c85ddc0852e1fd4b53b4209e7f4ebf17f7e2eae71d92"
   license "MIT"
-  revision 2
 
   livecheck do
     url "http://xmlsoft.org/sources/"
@@ -43,23 +42,6 @@ class Libxml2 < Formula
   patch do
     url "https://bugzilla.opensuse.org/attachment.cgi?id=746044"
     sha256 "37eb81a8ec6929eed1514e891bff2dd05b450bcf0c712153880c485b7366c17c"
-  end
-
-  # Resolves CVE-2018-8048, CVE-2018-3740, CVE-2018-3741
-  # Upstream hasn't patched this bug, but Nokogiri distributes
-  # libxml2 with this patch to fix this issue
-  # https://bugzilla.gnome.org/show_bug.cgi?id=769760
-  # https://github.com/sparklemotion/nokogiri/pull/1746
-  patch do
-    url "https://raw.githubusercontent.com/sparklemotion/nokogiri/38721829c1df30e93bdfbc88095cc36838e497f3/patches/libxml2/0001-Revert-Do-not-URI-escape-in-server-side-includes.patch"
-    sha256 "c755e6e17c02584bfbfc8889ffc652384b010c0bd71879d7ff121ca60a218fcd"
-  end
-
-  # Fix compatibility with Python 3.9
-  # https://gitlab.gnome.org/GNOME/libxml2/-/issues/149
-  patch do
-    url "https://gitlab.gnome.org/nwellnhof/libxml2/-/commit/e4fb36841800038c289997432ca547c9bfef9db1.diff"
-    sha256 "318a5e235d4a39579557185f8b80a40a302be49bfaa419c17c8acf52113acb27"
   end
 
   def sdk_include
