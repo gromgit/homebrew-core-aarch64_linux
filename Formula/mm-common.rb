@@ -6,11 +6,10 @@ class MmCommon < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1b2bf5b4980df003eb2917c33583345183dad27ccf27663bf0aead7747ece3c4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a416e9010403d5ee9e6c80ffa384a31b8989613109e9ceb047d48d2538f75ceb"
-    sha256 cellar: :any_skip_relocation, catalina:      "0848953327bb61223c30f3fc08c3cf8845c8e7387cafeaca31001967e990c2ae"
-    sha256 cellar: :any_skip_relocation, mojave:        "82e99d77f2e543ebda262f6bf98cef0cfde5142a95a09a2374358f9ba7d3c781"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "292ce8133ff860d6083d049fa2e6d1cb357e8ce9c41453894fbba742ea7bdc20"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f40a6de3865dbb9c453f82b2eae422bb54ae0e422ee287ad41cea24f4b084937"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f40a6de3865dbb9c453f82b2eae422bb54ae0e422ee287ad41cea24f4b084937"
+    sha256 cellar: :any_skip_relocation, catalina:      "85f048b6c104120336d3d1e727ddef7faca85feaad37bb404f502202437d1a41"
+    sha256 cellar: :any_skip_relocation, mojave:        "85f048b6c104120336d3d1e727ddef7faca85feaad37bb404f502202437d1a41"
   end
 
   depends_on "meson" => :build
