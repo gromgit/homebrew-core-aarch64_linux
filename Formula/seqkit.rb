@@ -6,10 +6,10 @@ class Seqkit < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "877cc15c035bd31a8559654ec06971f392214f37c5d90cea51363fb8c7d1499e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "bdfd5c531124c243c1657e59544aafc945298f1d34eabbb2b47568d921db9d9f"
-    sha256 cellar: :any_skip_relocation, catalina:      "eb38fcc7dd50615069a6f0ee5e803c28a4adc3985ac77aa8b03f1a575ba028d0"
-    sha256 cellar: :any_skip_relocation, mojave:        "d4b73500720c0e829cf8183417ecddff80f858ebaa6b6792aff4ea52e9da7cca"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3f896c3de25e93c1541ec343e9e23bc818cf6163790c824394f2cde4f5a282b6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "35b79c707358f78714916c36474368626d9c901fa1a407dfa8b7409b13f81071"
+    sha256 cellar: :any_skip_relocation, catalina:      "4b28207b5efa495071f8f742034e8513e2157eb8f5609980b8d7aab814c51bcf"
+    sha256 cellar: :any_skip_relocation, mojave:        "a34925843299ca13e59b4a7a8ffed78ab0a6e326b3448d1a0096d68cabd88ae5"
   end
 
   depends_on "go" => :build
