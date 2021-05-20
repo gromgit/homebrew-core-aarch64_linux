@@ -11,10 +11,10 @@ class Tfsec < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d5dbfa03a22d23030cab15745035f3bf98788619a85180589c47ab5816b5c10c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f1bae578a7d825c0e5fc60e862145257034f1b085fd05fde658a0f61fe8b3fad"
-    sha256 cellar: :any_skip_relocation, catalina:      "dc1622fd271db7fccd82db24d3823953805272f16d3dc1f5d80778af1f03cd92"
-    sha256 cellar: :any_skip_relocation, mojave:        "dd7eca55e43b31bc9f5fa20b5aae547492904feaa810277ddbb152cdd0ac076a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "efc3506f1f08784cd21c2dffb2beb5915286390861579b015f9f2b777d9181ed"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6089ce0bbe5cda6b3ae670430441b84f204e1aba31ae7bc9d09694e7a23d54fb"
+    sha256 cellar: :any_skip_relocation, catalina:      "c43c06dfcd16a1f0917995198a59f0f94628efd47d12e69bdff286f4b0a107ae"
+    sha256 cellar: :any_skip_relocation, mojave:        "8e616fa5a3043d0a6cc0030b1b002c9ee37f2c6ff9bff9b9b87c84610e370989"
   end
 
   depends_on "go" => :build
