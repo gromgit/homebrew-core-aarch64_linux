@@ -5,6 +5,11 @@ class Allure < Formula
   sha256 "cb29774639978ed971c18c01ade6ce676a70a275787874fed0d5a9c6163308b1"
   license "Apache-2.0"
 
+  bottle do
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "e86e332615375396adbb57492fbf12d517c3a77589c9d7c4b991a834ba4060fb"
+  end
+
   depends_on "openjdk"
 
   def install
