@@ -6,10 +6,10 @@ class Zellij < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "20b80c378d3cd4e583be3666835ccb5c5340a52977a2c81c9df572464d8bc02e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "cb880aba2e59c61ad0be14f360bbee48911d8814e9604cf56daa29900b6a6df5"
-    sha256 cellar: :any_skip_relocation, catalina:      "9b357757755d585d7529dbd1d5a066673d34e5dea93de84578e7624ff78f8a1a"
-    sha256 cellar: :any_skip_relocation, mojave:        "3b43e7d15946e12710e191411daa026cc618fb531c3ce422821113d4222fc930"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b33f70a025f3828edb8a3549fb65b4599be517b45b9c9dfb6b9c23ff9284990f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "37f4bab5d41a59a499c6a72a01af85047e405bfc1133a1de34e9d44205485088"
+    sha256 cellar: :any_skip_relocation, catalina:      "4a60d0398b30516f5ed48d862337360a6f4302f7d329f1ef7e5c4baf38c7ea5d"
+    sha256 cellar: :any_skip_relocation, mojave:        "a7756ce15390c54b3d98184777f0a398820930b29ad8404658c303c17c8b0384"
   end
 
   depends_on "rust" => :build
