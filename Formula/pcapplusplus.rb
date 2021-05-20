@@ -6,11 +6,10 @@ class Pcapplusplus < Formula
   license "Unlicense"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fb22355c98d5c62862816ed1ed211986cef53c1bfc3debe1eaee2a19c7249d6d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a85939e3b64f246eb7b4c7d0e0c8ec7eac3a108c17b33af1328d6c54a30dfeb0"
-    sha256 cellar: :any_skip_relocation, catalina:      "d0f032c98d420d3b340e5b6421877e5c89dcf31e74b2dbb6fbed33bd153ab6be"
-    sha256 cellar: :any_skip_relocation, mojave:        "30ad1d79f76c841448e3e76bd25c9ddeae2c0ba543d11fbd621799f8da81077f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ebdc93c7ccb4ddb29c1fe4133657cdf9c55740927c85e1568a25a0e42debad66"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c66896b5edabf916a4db8522e38f4b836f63a2b1bb3705a21e9d9309b9fb1307"
+    sha256 cellar: :any_skip_relocation, catalina:      "39ad69b47800c0d0c98f513750f1170e0dd56e0aca9e02eb29cb37e2e75c22f6"
+    sha256 cellar: :any_skip_relocation, mojave:        "098062050ba28c2c168edb8abd60a6fb0f7185df57f12e5aed897b8cd98f0d9d"
   end
 
   def install
