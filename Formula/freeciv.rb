@@ -12,10 +12,10 @@ class Freeciv < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "82f54998dba83d162113b46dd9ac9f2cbba68caae87bc056aea9c26141f29070"
-    sha256 big_sur:       "720e1ba7af296df2b5fcb79b5cb9f880021bf3445aad4972a9122034a3fdaed7"
-    sha256 catalina:      "996c3cf541f982b93dab9d7787133f278085a7e386cdcc1a684102635f20aeef"
-    sha256 mojave:        "312934876eb111c8a413b20aff5733f70da79dba38e3b9b9597eeaf9e464a4cd"
+    sha256 arm64_big_sur: "46ece65b979e2c82edc4b0a4f2ab74ca181974ac6b9935f0ead45b489f9663cf"
+    sha256 big_sur:       "df2c2a53344210424d78c3e1690c1151317b35a652ea38c061e74beb836729e2"
+    sha256 catalina:      "d844fedced4938a09144ea7ee5ff9f18f389cc48fc6a4faba997dd3d45c854ce"
+    sha256 mojave:        "e2f6896da8457c49e3b00433d05a9dce1eaf41d8c2a3de23b027b0224869db0f"
   end
 
   head do
