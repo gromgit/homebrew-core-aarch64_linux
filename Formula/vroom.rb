@@ -6,10 +6,10 @@ class Vroom < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "0317ceb98a3b73d216fd32410d8a55c7dbbb36a97ae84986440156848c1fb0c6"
-    sha256 cellar: :any, big_sur:       "ae81eeaeb51ed32b5a3ba989672f558f5b9fd95c3e16d2d9c215d1441c358124"
-    sha256 cellar: :any, catalina:      "4aba418dd64da25ec0164e6e702279ebce32a8f38f6e35321baa48a203a26ea5"
-    sha256 cellar: :any, mojave:        "10564e6caa19a27c671ed27d077733b8aee338a81d75bab37573c7020928981f"
+    sha256 cellar: :any, arm64_big_sur: "76c2218be30b352eb31c178ab9c25930b0fd80bc1d603defbf1d2ebf92e1875e"
+    sha256 cellar: :any, big_sur:       "59ca347b0dd9ba423ca9006997a8051c0d9e5c98c7d3876302575aa77073dff7"
+    sha256 cellar: :any, catalina:      "637d2de102155f8cf96c3ff168c0503cb3cc0ae8abddcc33ed3fe869213613d0"
+    sha256 cellar: :any, mojave:        "c283fdbd2e5f26ed93fbf56e8aa8501381fdfa3918f4271cd87301a4e890d801"
   end
 
   depends_on "pkg-config" => :build
