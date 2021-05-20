@@ -12,10 +12,10 @@ class Mysql < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "6eb5409662bc0529288f41fcf6fe5b9cc45cf2976477ec94d4531f89789c97a0"
-    sha256 big_sur:       "3b121c1a7dc8628a255b9654bac20b324f49387a19cdab126161066c2f2005d0"
-    sha256 catalina:      "0bd40128bca6ba97aa595dc822f9408c593476c6d86310e9ce36f139ce4328f7"
-    sha256 mojave:        "9aeac3bc140793f5e6a363c16345070efecbb22b4e9b2a64ca27419405f0c145"
+    sha256 arm64_big_sur: "2e4b10e541bb3bdd076139c13bf6df3f729280c795552dd0d2b478de59631d1a"
+    sha256 big_sur:       "db388d333de4224dcc9ca54917069c75805801f00bc1355c9dcfe5bf518c4045"
+    sha256 catalina:      "a20b72150ec1de16c23f749c4dfa65785d5d271b2597d9555f3f355848d02007"
+    sha256 mojave:        "12ec5589ad0cfa9bae8922d10d72671eca10eef0785397f9ec2a92eb9b6a0a9d"
   end
 
   depends_on "cmake" => :build
