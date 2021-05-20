@@ -12,10 +12,10 @@ class GlibmmAT266 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "1199ae1aed0d8ea5245cdab8bc123888948ae5e6ac97a86b85569655af279dc0"
-    sha256 cellar: :any, big_sur:       "8ebe988cf869ff827670bbbe44e7c5e5c917a39c85010aaf0e15eed06bad9847"
-    sha256 cellar: :any, catalina:      "8b3d2f2a50ccdd9999da0f7ff4c519c84cdaa3202b4bd4b877cd4383d29fca03"
-    sha256 cellar: :any, mojave:        "ab3fe7f773300420e75c53c42a4fb69a139b04dae386f5db9425c0b9f420d7ed"
+    sha256 cellar: :any, arm64_big_sur: "654db4cee8b01d7f3a09e4d700ed055badbc83626f152a0015a92c6dcc2e4099"
+    sha256 cellar: :any, big_sur:       "c569e5397d5036d4ba2eb562e9f88113b5be7ef9a631ea867f3426ddf29c5e89"
+    sha256 cellar: :any, catalina:      "972e77c4e4ffaee50813406d0c98524e2f9aa84e8f39075b6cd3d76346604edc"
+    sha256 cellar: :any, mojave:        "09aa0d0e43347d8bf94156004823840c39724d16632a51158a72687e3f707a2e"
   end
 
   depends_on "meson" => :build
