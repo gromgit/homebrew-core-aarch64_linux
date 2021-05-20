@@ -1,8 +1,8 @@
 class NotmuchMutt < Formula
   desc "Notmuch integration for Mutt"
   homepage "https://notmuchmail.org/"
-  url "https://notmuchmail.org/releases/notmuch-0.31.4.tar.xz"
-  sha256 "8661b66567660fd630af10c4647c30327fdd1b34a988cab80d614328a5b74f55"
+  url "https://notmuchmail.org/releases/notmuch-0.32.1.tar.xz"
+  sha256 "a747ca4e8cc919d91feda6cadb97e63b72ff79119491989bbcea79ad47680615"
   license "GPL-3.0-or-later"
   head "https://git.notmuchmail.org/git/notmuch", using: :git
 
