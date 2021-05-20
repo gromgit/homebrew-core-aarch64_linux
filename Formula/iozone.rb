@@ -12,10 +12,10 @@ class Iozone < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4d23cb835d535b2b6a553e5e1bb1a9cceeba50745c45e97b53ce2057b9ef5d77"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a6f0a32d9de27662d82b075d9bb59944a496c2782e5ce3e8b50228fbf48b1749"
-    sha256 cellar: :any_skip_relocation, catalina:      "a9865b6a1f2528acd3734a0833853a26a2b66c53c3f0e7f11be333a526c9d29d"
-    sha256 cellar: :any_skip_relocation, mojave:        "9fd8e8232cb83eaeabc297ec4c89ec264e91fab8991d86c9aa57385f7143bf48"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d4931a6315b1fd26134106f356381f7488824f0e26b39ef1e8d0e967552e5bce"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5eac860da12c9354228065de651c6ad694735d743cc0e103adddeb0410e03fff"
+    sha256 cellar: :any_skip_relocation, catalina:      "16f2d9c8927f2b3c77a386e7fd0e671caae18e0fe537617f89bc62fab59010e7"
+    sha256 cellar: :any_skip_relocation, mojave:        "db9937b87103179af1950657d9f330063194987da6873e6177e759f878fd2949"
   end
 
   def install
