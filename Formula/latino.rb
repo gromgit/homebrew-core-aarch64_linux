@@ -8,10 +8,10 @@ class Latino < Formula
   head "https://github.com/lenguaje-latino/latino.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "dab07196acce245e9876fac1be97127e65d0111ffdbf7e08695cb7468c12b060"
-    sha256 cellar: :any, big_sur:       "3f1d3892f16fd82ce53434d6f0b3d7e27a799e390450f2cc5bb851a47b88aa92"
-    sha256 cellar: :any, catalina:      "cb134d3aef396a2d84acfb1807a2d9735c3252baeab1313dc4d3654823253168"
-    sha256 cellar: :any, mojave:        "73c7c6ce9b5ff470368fb1bb0e54be92aa376577c396428535b79bf1f76aefc1"
+    sha256 cellar: :any, arm64_big_sur: "e7ac6aa7973d222c73097942a233c2998e542358b21aa725dcbbf8e1e6010b06"
+    sha256 cellar: :any, big_sur:       "0848f83a97ae97c615e2a448eb28573fce7c20f20b3b52ddb6d9f487c80524ac"
+    sha256 cellar: :any, catalina:      "46af81ff7b1693cd40465ce5e0defb7a708c918a996db2af775b913cc682a567"
+    sha256 cellar: :any, mojave:        "2a3e48e1a672715eadfc5401ec7683ee91f7acff18ad8e7e600be3f8c09fee06"
   end
 
   depends_on "cmake" => :build
