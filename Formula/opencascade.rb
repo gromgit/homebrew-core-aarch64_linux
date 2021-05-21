@@ -24,6 +24,7 @@ class Opencascade < Formula
     sha256 cellar: :any, arm64_big_sur: "6e9743bf2f4d14d386fae64998a2dc1970d87de03700062560e4f83aabda6fed"
     sha256 cellar: :any, big_sur:       "ad919403c283553abdfdf73aff6dae11dcb61b4033135e92ed5320e3a62a9158"
     sha256 cellar: :any, catalina:      "93c10007c53833aaae139fe70fb4ea77486087d81489496a3e3463adb3d7a502"
+    sha256 cellar: :any, mojave:        "494a2b145f132c19af59a46ebbf5c39d8eebda7e46a41c409f2e7abf3f7bb4a7"
   end
 
   depends_on "cmake" => :build
