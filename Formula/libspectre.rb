@@ -12,11 +12,10 @@ class Libspectre < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "c102e3011101f5a181a88c276fba99d0f2cd1a951fb48d350cfd94bf0a5b3a92"
-    sha256 cellar: :any, big_sur:       "57c4aea04a762a93d7633ea05e15a7b128deedb03ef87a7d2b3c1c429f01bba9"
-    sha256 cellar: :any, catalina:      "3b6f844c11905a3dbe1c5a4b78c62416fd047c399be7dcb5887d9357a79a7802"
-    sha256 cellar: :any, mojave:        "8bbc1229a48f1cedc29c54bd9ef15dca1e9e513e534b648e0ad8300c340e51e9"
-    sha256 cellar: :any, high_sierra:   "53f4b9429b90c0dfe84a759bd21f26e668ea19143424d141bfe83fcc83e76394"
+    sha256 cellar: :any, arm64_big_sur: "569048e256adf2200f0d78bb9e0e69124bfc95d048942a7e7302021d4f26a725"
+    sha256 cellar: :any, big_sur:       "dd24fcf3da06f8020b4c5439ca40d1b2eb17a518b62f205e8d34d4e259b0fd7e"
+    sha256 cellar: :any, catalina:      "b6010400519844d7e3c0ead42e613279dcf301b69775bbc75f8e93c2cadf797b"
+    sha256 cellar: :any, mojave:        "03c755d7c557ed3b53e73f398be9d2a04fd87143fa91d8dcbb010d8a36f313a0"
   end
 
   depends_on "ghostscript"
