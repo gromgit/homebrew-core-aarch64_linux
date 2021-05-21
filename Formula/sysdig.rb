@@ -12,10 +12,9 @@ class Sysdig < Formula
   end
 
   bottle do
-    sha256 big_sur:     "9a5db7570b079c111525694e6aef53bab77f7633fd30550c174fdd0d8b241ce1"
-    sha256 catalina:    "a3343b2e42ca8df82c537170b0338d965bc0c92619f760d86f30d6f898610e5f"
-    sha256 mojave:      "843c5ff29eb7787e1bfc5393f0562e6f97c121504f652f5fd806943dc971b97e"
-    sha256 high_sierra: "f314c5445253bd052d4a7f50b3e879a81514f14c4d44b3887da26e69fbdce17f"
+    sha256 big_sur:  "9caf5620dbeadf8e87bf19a598baa7bae5f6c0d1643666182fe91972806e6d84"
+    sha256 catalina: "7a21384d18bf9848f7fc91b6deb2099b01f44952e9ce88cbee3f53c0b8f1f33e"
+    sha256 mojave:   "e29dcafe2de6f4fecc5e32ceb9d81c6bbab6b252dae5056ee8e617ac5204911a"
   end
 
   depends_on "cmake" => :build
