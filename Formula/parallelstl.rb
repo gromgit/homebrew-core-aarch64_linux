@@ -8,11 +8,7 @@ class Parallelstl < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "944b95b0b94389d981d71def6dd11e676c911c578b680b08c5a176937877a5ac"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a5f7b936a95bd0c34f5dac2deb1d642fdaaaca6a5fef2fa72879a82ceb4e3f84"
-    sha256 cellar: :any_skip_relocation, catalina:      "90737db9c682cbb31c250745bf089fd4f3d72fca3980dad138472c1d6ef8a5ae"
-    sha256 cellar: :any_skip_relocation, mojave:        "c0eb967346b81fa899a348dcc51c5cec898add7384134006bf2335f349b9be4a"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "4e0f682ecd6e591ab1a6d71e4579409485a1a63bbcc1b6d22738eda43e1fd762"
+    sha256 cellar: :any_skip_relocation, all: "3467deb5b4e2b46b8ecdaa4930c6e01ae4f432b01648e04912ff2bd8d9737e4b"
   end
 
   depends_on "cmake" => :build
