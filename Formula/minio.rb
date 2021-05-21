@@ -17,10 +17,10 @@ class Minio < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e77b8a62745cb6960a366b20a2263e660a2848c369fa59bfe1065d78fc9f5414"
-    sha256 cellar: :any_skip_relocation, big_sur:       "add97ef86a336747034ad82cf98877d6eb39469391d43513293f3349d2a1906e"
-    sha256 cellar: :any_skip_relocation, catalina:      "5be57ab7fd445bf6ae1324e5a7bc80c343b0a7442a90c6061893f0d303bdd6bb"
-    sha256 cellar: :any_skip_relocation, mojave:        "665cfd5b1d0bcc557e26f7573b87b84c92f2dc310c8beaefb638c56cfb8599e7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "420b018a06fcc0aaa370a0984db3bdf887a6b6600fff031bc91ebf8dbee29cfa"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ffbe386dfa9bfbef8d0e2d4b3a8a5c73cf40527dfcf77d444f000a60244bfbe5"
+    sha256 cellar: :any_skip_relocation, catalina:      "e471763923ff93cc7f792599399a2b5728bfd9ad75519e7747f6db9c1dcd4aa9"
+    sha256 cellar: :any_skip_relocation, mojave:        "d67b0d6dd01023552a91ac8b4fc77267af377172c88e2b506f64366319320525"
   end
 
   depends_on "go" => :build
