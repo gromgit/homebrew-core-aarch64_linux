@@ -8,10 +8,10 @@ class Caf < Formula
   head "https://github.com/actor-framework/actor-framework.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "9b7bcbe6ec7e16f468f853be4320e4ccfee397ade994d2da330401dd15b96b1a"
-    sha256 cellar: :any, big_sur:       "64cfa3c8937614c409faa29874c150431637a54aab5eba582edc1f89a9aab922"
-    sha256 cellar: :any, catalina:      "258503ddaddf4f4f534e62451474180e9a59d9d44df44bd3057cc937852d53ab"
-    sha256 cellar: :any, mojave:        "d231f7d1d9f650c3349cbaa7e9128ecce32fc95c7b856e1d80bf91daaf0887ce"
+    sha256 cellar: :any, arm64_big_sur: "2eb5251871e94fcab790645d0ade26bdd53405a5c3638378d86a887b1a4c4217"
+    sha256 cellar: :any, big_sur:       "78181544230244ed5103e328e09bc59a67fd9c31a333f492d3278f39646944be"
+    sha256 cellar: :any, catalina:      "6d278d761ac996928c2c26ef5dc30a8bc1b82a7ed112b878a329dbac0641170d"
+    sha256 cellar: :any, mojave:        "2c5155b10c92de8ea6273193175d9d65c32c5eed643d0a3a2adfa72ecef5964b"
   end
 
   depends_on "cmake" => :build
