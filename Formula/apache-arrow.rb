@@ -9,10 +9,10 @@ class ApacheArrow < Formula
   head "https://github.com/apache/arrow.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "3314e62fe651d6b8550c4f002af26f1724e32a6ac51775d96e381b89d585bf9d"
-    sha256 cellar: :any, big_sur:       "2f401b2572ea28a536cdbf6ab8041e57c505fad1583a6ae64de98779c736242b"
-    sha256 cellar: :any, catalina:      "70932b3aabcb3b7e5a28bc9d5aec977ea942938691a424ff2e93392d534cafad"
-    sha256 cellar: :any, mojave:        "58ac1ed5a8e6ede71456211a8a1dfcd92f930583da1afa9b4ea7ff128fc2e8aa"
+    sha256 cellar: :any, arm64_big_sur: "8dcc901158feff3b8acb26796ab6994a021cd503bf25010c48fed98f8f3015cc"
+    sha256 cellar: :any, big_sur:       "2f0a40cf758996e7cbe98f1568cd2efd4cb1c3682bd1750bd1e059aaba5f1054"
+    sha256 cellar: :any, catalina:      "647da248095ab2435f091b2a47c6fe60216065164f62da2ff0df402348a300b6"
+    sha256 cellar: :any, mojave:        "0c71ad2379d5db11edc0cf43949cf2b6325bdf4269b08b7defe9689119836f15"
   end
 
   depends_on "boost" => :build
