@@ -13,10 +13,10 @@ class Root < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "99e96a51de2a2193ee08d988fe876f890b0d62a50e65868dc3cc5ff526fdf282"
-    sha256 big_sur:       "7274beaf20e246262bf07a2bbb1817aade403edb2461ce0e2557d03474b186a7"
-    sha256 catalina:      "748bc1e1ccbfd3e4c0b1fcddad186214cf21fcd2eec06eda3d65093e76fd7227"
-    sha256 mojave:        "ffe05a7d659348883faaefb352eb2c218efc7da7a90bda6e9aa5270ee92189dd"
+    sha256 arm64_big_sur: "17c9442b2c82a2ba1ce3978a7be33d928ed11696874dd9a7593514d79bedcbf8"
+    sha256 big_sur:       "002227927383e2b3361ca8a26b85949f9eaafff657d61cf4bc7aed70dff71e4c"
+    sha256 catalina:      "24d53591f952dfdee8d31fd57a468a008fc512cdb3e823ea8b89da01e8c77c17"
+    sha256 mojave:        "47f7f1c5c2a3215dfbb127cb96b831e73f22a34a708418b5ebe2575d239f4032"
   end
 
   depends_on "cmake" => :build
