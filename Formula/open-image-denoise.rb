@@ -7,10 +7,10 @@ class OpenImageDenoise < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "8489e561617733ecee003ac96bcfd7cf22702e0ccb0f446e9157be8037a8f498"
-    sha256 cellar: :any, big_sur:       "9674c34f67ae48f05ec1790a126b880e0d3d528f6692771cedbb70254f8d1ee5"
-    sha256 cellar: :any, catalina:      "05431f04f40f23e22031894837fdbdafd18e01dee3d1c593a8f7179b8e1f0e17"
-    sha256 cellar: :any, mojave:        "263de10fee2ef765861484b291fd5cc8f24ad625416ea81b1fec604ae5391745"
+    sha256 cellar: :any, arm64_big_sur: "adc80a5739fc95b3b4e5d8c6d0637152e44f9bd78be3456d7c0c5b5709fedcc9"
+    sha256 cellar: :any, big_sur:       "812efb4238f2b348cec46a3ba1ddaeef0cbb827d20e3d72064e2e280c2797d5f"
+    sha256 cellar: :any, catalina:      "3d0c243ebf63e711485b7b22220d20428cbb7bc1da2308fde0ca0d3f0423f6aa"
+    sha256 cellar: :any, mojave:        "2d472aa7cc5a702aa05d312ea0d17b5c5fe87ce784b4cbce9628abd940d8ffe5"
   end
 
   depends_on "cmake" => :build
