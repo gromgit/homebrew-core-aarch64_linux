@@ -7,10 +7,10 @@ class Pagmo < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "4153aa315f2174b1228b4646dbe18711b2a274704e8b9b58cd855f32142c78a2"
-    sha256 cellar: :any, big_sur:       "77cebfa5caa6276de184eb32922c673b6437c1653324bcbdef854a2fec4c917d"
-    sha256 cellar: :any, catalina:      "98e39c1e554b73519443529099df2b1e93cb3e0b755a814be45e8490cc7a739f"
-    sha256 cellar: :any, mojave:        "54089fee37bb382596312ed8664bbc5764c18d925ea75e56351caecdfe2916bd"
+    sha256 cellar: :any, arm64_big_sur: "18181c38174404acd3ec9b853b88de61fa41976151af65dc3b00661c0e52ad02"
+    sha256 cellar: :any, big_sur:       "f925711ad560087a289428805994d0ead7f36908476f0dcb402f6c1530e4dcfc"
+    sha256 cellar: :any, catalina:      "98091a111b8ad43f56c74182745934655a1c8b86a2988b3437e41f69cc432741"
+    sha256 cellar: :any, mojave:        "d9afbf9ba54aef2340a7e19bc4974673b53650307a0da94943e12db993295cae"
   end
 
   depends_on "cmake" => :build
