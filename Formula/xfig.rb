@@ -12,10 +12,10 @@ class Xfig < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "507e8fe60993894dad06f4858efe60688d3af0fcebfd16b64ae49fe37921904c"
-    sha256 big_sur:       "ffb26267062fdf96bc4356bbe0853e86cc1f83b8aedd7e73931bbd6cc3e1dc95"
-    sha256 catalina:      "a0b961545f64c9dbfd9d829c723d1236d71eea43a12ee2ede238cbacb08d73ae"
-    sha256 mojave:        "d9a0b286b4de4609cbee6ce952c58ba8e7a31d8780699c409132da630b4b7916"
+    sha256 arm64_big_sur: "6a43d6e59266c06db6e95d612731dce290baca35ccdc885411ff01224c0dc6b2"
+    sha256 big_sur:       "2f87098117a52ae19f9260f6d0a8413378eb790ced684221dc190a36f7c919a2"
+    sha256 catalina:      "011b226be3e0e49599871b19cb8528a168cb91d5b37557eb6856f7e9d20f3506"
+    sha256 mojave:        "70d31a321c35921fb64a15a0634b6159d4918498d5a2b743659635e3067bfb9a"
   end
 
   depends_on "fig2dev"
