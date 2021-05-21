@@ -6,10 +6,10 @@ class Pangomm < Formula
   license "LGPL-2.1-only"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "64e96cdf092ebfaf872dbe2764208492e3e5a16e08a76c7c251335c72b949812"
-    sha256 cellar: :any, big_sur:       "eb27b7d518bd474bf2fd5a63abba60e1a14c995a858b16ec0dbb4bc51068d1c8"
-    sha256 cellar: :any, catalina:      "5ad6d772ae04e2dd5553367d92052180088798ebb1de6438f0f242aec80dc138"
-    sha256 cellar: :any, mojave:        "e71d9e1eee7e3e9c4846af03f6a45cb4a28cd0afc3cb64bde31ac5610dc1b230"
+    sha256 cellar: :any, arm64_big_sur: "87244c82b6ac45d8de28f5870747b96fe8bded40041dd3de159fd501b7b58754"
+    sha256 cellar: :any, big_sur:       "d8ea58c9fd6cece698a1605b0b3513e5818d8e0c060dc5e7357e1b0aa7325233"
+    sha256 cellar: :any, catalina:      "304b7e078c0c4dcbbf44e30b4912adf475f41eeda5728e65f68d45f3abcd8af4"
+    sha256 cellar: :any, mojave:        "6060adeb759d72e6ce9f6f7c8e076ab736b7a36107d9f1e0346ce9d9a5eaa51b"
   end
 
   depends_on "meson" => :build
