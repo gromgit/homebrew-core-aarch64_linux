@@ -6,10 +6,10 @@ class Thanos < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "dccc88f3eb434ed662690870dc5765a3fe23660473601c9e1d0f503121f398e9"
-    sha256 cellar: :any_skip_relocation, big_sur:       "262fa21cdfc341b92a2769c830ca746bf90ad59b8e4705e6d61ed19a80b932ac"
-    sha256 cellar: :any_skip_relocation, catalina:      "d983ad448244b9f03553a4f6f53d3b46dde61a94ea5d2b8781bfd783433ec68b"
-    sha256 cellar: :any_skip_relocation, mojave:        "f6b2e694992ea871af7b42e9ea9d62d2f9030f24223c8dfba1ffeea4dfc5ab73"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5a28e31dae92966e0d0e87c4ff4aea1ac9f0e8a202ca722138448ca8a3abb7be"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c1187c61fcfefa4e066cbd05d2ccb0ee67137c86eb9302dfdfe3d9c8969e726d"
+    sha256 cellar: :any_skip_relocation, catalina:      "ee93654b10490c333bb660490bf3c2ae23a58a1046e8aa4b9e24027ad7e588d5"
+    sha256 cellar: :any_skip_relocation, mojave:        "915242f01b40da9d7fe22fbc338099c3c3de6158b993f5fd4114b6f37477f604"
   end
 
   depends_on "go" => :build
