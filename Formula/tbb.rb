@@ -6,11 +6,10 @@ class Tbb < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "33b261262efc28bb46c9aa4ff6ae74bc51033cc9f5877c3312a52af07130d534"
-    sha256 cellar: :any, big_sur:       "9a6b1cbf0b9f20d05075d9c7c905f7e06bf91c0dd7f5a0b7d46f0761fdb86097"
-    sha256 cellar: :any, catalina:      "e73f880d133b99c5e30120df768cff884d5d66f93f4e84bfc8937f37f9e0b614"
-    sha256 cellar: :any, mojave:        "b026eb8322c7984cdd1f5313ffd866c6d41a556ad8d7ebf1e713786724d83675"
-    sha256 cellar: :any, high_sierra:   "ccf240dbcb30bfb33736130c77b7afbb12a8ca4208cc8244f66943ce6c0307d1"
+    sha256 cellar: :any, arm64_big_sur: "5d62feb0d5a41fb14d49a133375e39d7712da8c3cd659577b6fa276d9443b315"
+    sha256 cellar: :any, big_sur:       "d0077f75204853eb3cb03edb4b77c7eb480fc0817afbbbbc06c2e062ab3204d6"
+    sha256 cellar: :any, catalina:      "15243389ba219a58819d62be1d90b769cb7e78f0a21860539988e1a6582b781b"
+    sha256 cellar: :any, mojave:        "a0d90c33f249288339767ab72110d44950e82d8cdc1ddd6055c83645ebbfb848"
   end
 
   depends_on "cmake" => :build
