@@ -2,8 +2,8 @@ class Bazelisk < Formula
   desc "User-friendly launcher for Bazel"
   homepage "https://github.com/bazelbuild/bazelisk/"
   url "https://github.com/bazelbuild/bazelisk.git",
-      tag:      "v1.8.1",
-      revision: "97a0d60468dc696cea3cf1d252b526f1ac6a9090"
+      tag:      "v1.9.0",
+      revision: "1b471ee0935ebf91744bac1d7a51b72007167ddc"
   license "Apache-2.0"
   head "https://github.com/bazelbuild/bazelisk.git"
 
@@ -39,7 +39,8 @@ class Bazelisk < Formula
     # This is an older than current version, so that we can test that bazelisk
     # will target an explicit version we specify. This version shouldn't need to
     # be bumped.
-    ENV["USE_BAZEL_VERSION"] = "0.28.0"
-    assert_match "Build label: 0.28.0", shell_output("#{bin}/bazelisk version")
+    bazel_version = Hardware::CPU.arm? ? "4.1.0" : "4.0.0"
+    ENV["USE_BAZEL_VERSION"] = bazel_version
+    assert_match "Build label: #{bazel_version}", shell_output("#{bin}/bazelisk version")
   end
 end
