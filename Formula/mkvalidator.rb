@@ -11,12 +11,10 @@ class Mkvalidator < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:     "73efff490a07afdbccd396bcb5f0411d686757b5ede5d3c1340d76fd3b8d2a1f"
-    sha256 cellar: :any_skip_relocation, catalina:    "ee45e5e5abe82cd60c970947d680a93f6987ee879b0f504ebff40c150b0a58dd"
-    sha256 cellar: :any_skip_relocation, mojave:      "d8ed0ae48b3922549518802148f3687a9bcab9f072624d619e077368a874e71b"
-    sha256 cellar: :any_skip_relocation, high_sierra: "5f0c85894cd7d4a7c5cdce1e26c5cc7c15ac7baa6c32a63e3474632f7727d8af"
-    sha256 cellar: :any_skip_relocation, sierra:      "5f0c85894cd7d4a7c5cdce1e26c5cc7c15ac7baa6c32a63e3474632f7727d8af"
-    sha256 cellar: :any_skip_relocation, el_capitan:  "6c253cdf3c824b6e37af7cca51bf05a930785286bc83ec367e10500d9645519c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "132951513f0022d9a2f8e0b0f81a5d76668b292873df6d6c67b81c4cd304ac31"
+    sha256 cellar: :any_skip_relocation, big_sur:       "cef2881fd23f1e0b7c465080379f8564b00da6db94cf28f5da272ec19f565014"
+    sha256 cellar: :any_skip_relocation, catalina:      "98fa360ee6e7ebc233784d62c599bc07bd92131159bdbc64d233ad99f883a99e"
+    sha256 cellar: :any_skip_relocation, mojave:        "4e2d50be71341f0a47591587ce3cc428da8493af87ea2bcdcca64c86cacd44f4"
   end
 
   depends_on "cmake" => :build
