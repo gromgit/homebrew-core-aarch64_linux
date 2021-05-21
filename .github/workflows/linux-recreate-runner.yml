@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     # Once each 24 hours, at 1 during the night
-    - cron: '0 1 * * *'
+    - cron: "0 1 * * *"
 
 jobs:
   recreate:
