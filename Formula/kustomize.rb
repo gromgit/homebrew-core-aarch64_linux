@@ -13,11 +13,10 @@ class Kustomize < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ae14da636d61ec922730218fb4674d1f69b8f4c4e29b3aaea4f845173ab6723f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a6589eddff020f4c94bb1649750d9c82971d510e2fac70597dfd3bb8e5e236ea"
-    sha256 cellar: :any_skip_relocation, catalina:      "d5582d70c031d76643a1711536e64f0e1c38784090b21d5c24bd383c7e809dc2"
-    sha256 cellar: :any_skip_relocation, mojave:        "dd31681f5009b345f9390a9c0601f3af3d0bb21684f750e372a28e5e5cfe1a09"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c2bc5bcc4b395ba3b3e512a2a9815ae81a5411416380c0520d726db2b8668407"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a5876e31685b13273f268264860af816b4348e8a178d99aea8cf3de01a8d5558"
+    sha256 cellar: :any_skip_relocation, catalina:      "529377a3a884549413e67ff95c159e71d7f62b516009e5c0e8320b3d8a3723ad"
+    sha256 cellar: :any_skip_relocation, mojave:        "1ff7509083a9fefb1d931592318ca1649eb8ed17b28eeec5287a259302a024ec"
   end
 
   depends_on "go" => :build
