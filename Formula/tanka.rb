@@ -13,10 +13,10 @@ class Tanka < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4c38ee4f904e18ea3d68c157ec9c9374868a453539c56ebc6587bb7ace282989"
-    sha256 cellar: :any_skip_relocation, big_sur:       "49f0c4756478a459aa99cc8f67b17c596bee55969ce8d84a49721d7e95c8cf8a"
-    sha256 cellar: :any_skip_relocation, catalina:      "162c1a253a67f26f4bc8926b0fe95766d919ab0012d4ae6dbe32012c9fb51602"
-    sha256 cellar: :any_skip_relocation, mojave:        "45be6711fadccea634347e764816aba38c539d370e592c359a64fb7602d806ce"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7971b7f7c47003505aa3122d425bfda5bb8a6053f49685d48750b8f523f22785"
+    sha256 cellar: :any_skip_relocation, big_sur:       "cef284c7e99f843c362a1832f1d82562039418e40e30d83f206e3ec3be5105a9"
+    sha256 cellar: :any_skip_relocation, catalina:      "2149eedff8ed36c661a1c90523dd06adde44b6ac0b06b99412a4df4841069c64"
+    sha256 cellar: :any_skip_relocation, mojave:        "4d379b005e87e6bd194c0f4ccd943349bbd9dd1876984cdace145c10c01e93d7"
   end
 
   depends_on "go" => :build
