@@ -10,13 +10,10 @@ class Timelimit < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9f890d907623dd9b857710b9d7eb1d3256ba0ba7f620576a28313522343b648f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6660e64fd509f5e3b58a1ce3b6e8dffbdc4cbb35eedefca5b133e5bd3009f378"
-    sha256 cellar: :any_skip_relocation, catalina:      "5a4d896430260125864a8b8e22aabf172e36c8f8942faece7db8d502c568a690"
-    sha256 cellar: :any_skip_relocation, mojave:        "4b868a4ee5bd9e424e6ea4aa36fc828d6efd3f07b1d72063bbdb5a0c59baa276"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "872dbbd21820c6d08513f29bc0c024f8584c7d7b7b6b4b436553414d08fd6950"
-    sha256 cellar: :any_skip_relocation, sierra:        "5fdeeb6ef9c0306f7195187b8068bc4f84de79d6f6716977a262ce26abb3b1db"
-    sha256 cellar: :any_skip_relocation, el_capitan:    "d36206d7c4ba1431fb592ad9335e9ae3bea8b983245cec1e65cc24318088bd86"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "857697f444d4ddc8658970890885230fe12eb21474cb212112a3ccbbbbaf81b3"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3888001f62e0dfdf0573b405dc2c0c5a36ce1274d1091a0cb0f38ee18438cfc4"
+    sha256 cellar: :any_skip_relocation, catalina:      "e083932ebe7fa08f9afaa28254e5a73df07a29bf072cb932065678d708127a87"
+    sha256 cellar: :any_skip_relocation, mojave:        "c0259eec4d6e78c2faf7c3860e5c47dffdef165dff28ef7992f7e9bf0914d0bd"
   end
 
   def install
