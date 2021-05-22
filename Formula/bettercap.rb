@@ -7,10 +7,10 @@ class Bettercap < Formula
   head "https://github.com/bettercap/bettercap.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "21cac594fc9ad940e90acd7c1e2d8c194936b676004a17908c161c84b7c47336"
-    sha256 cellar: :any, big_sur:       "c49bbacb5e4765a8404fd0184506ccbfca2d45be2e6d866548f45bfcf73b4ffe"
-    sha256 cellar: :any, catalina:      "34f21c198abaf051ddefc85c1b42decb5b6cbb1e99cb96a7fcc336ed094eea92"
-    sha256 cellar: :any, mojave:        "64ff9cb3f98d46ea2248f8951868cd45c1d97e7c0f821d89589003a0570930cc"
+    sha256 cellar: :any, arm64_big_sur: "63f4451b9ab250464d26d27d4358c4c0d4f5aaadecb2bbfaac1e8f4b1c411d2b"
+    sha256 cellar: :any, big_sur:       "8fb85b3ad02828d25d5a8fc942ccb6cd9ac95f7fe276768060dd353b27b020ab"
+    sha256 cellar: :any, catalina:      "2fc1f3339e9c4a0143de65c4cdf0a32d6d7ce17c924ac46e71cdc2bebdadd413"
+    sha256 cellar: :any, mojave:        "16fa04f46a97b8919af31d58cb0815c440abb3fec255f4caca073242c05d88d8"
   end
 
   depends_on "go" => :build
