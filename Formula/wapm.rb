@@ -12,9 +12,10 @@ class Wapm < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "ef83086768af8348415cc720b3b4241d20cc7b1c00946d6b4f09ecb4c8242e19"
-    sha256 cellar: :any_skip_relocation, catalina: "b9cecfbe7298d07700898408a94862c6caf0aa69e18322e404df87d0172001d5"
-    sha256 cellar: :any_skip_relocation, mojave:   "15070099aa602582bcc3d701a1a6626f9f17bfce559ffab53c4a62eebcc2f170"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a669b38d7f9d849aea1a16ec1b2b93a3d10cb8d7d64b98e2e89ee774bab23acc"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ef83086768af8348415cc720b3b4241d20cc7b1c00946d6b4f09ecb4c8242e19"
+    sha256 cellar: :any_skip_relocation, catalina:      "b9cecfbe7298d07700898408a94862c6caf0aa69e18322e404df87d0172001d5"
+    sha256 cellar: :any_skip_relocation, mojave:        "15070099aa602582bcc3d701a1a6626f9f17bfce559ffab53c4a62eebcc2f170"
   end
 
   depends_on "rust" => :build
