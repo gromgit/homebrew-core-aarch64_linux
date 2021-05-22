@@ -6,9 +6,9 @@ class PandocPlot < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "916e4cb6d7a0ebbacc030cb93d831ec9284bfe3c266bb97b7a292fa8c23eef7d"
-    sha256 cellar: :any_skip_relocation, catalina: "8cbfc7637c688db43a4ee9a879ed8b37360b7069e8ab72441a42b60a9f1d992e"
-    sha256 cellar: :any_skip_relocation, mojave:   "faafca14fbfeed888d05ae4a715b1b57c386511ee9f9006e405a3a58cf50e5a3"
+    sha256 cellar: :any_skip_relocation, big_sur:  "c619d1d51b5f6141a60316dbd94f4b2b4aae7d5a2555257efffe8333ea89708c"
+    sha256 cellar: :any_skip_relocation, catalina: "64bc7de3331c119367b21f85a697b0d717c64c2336b25571d06dbfc5f683ca29"
+    sha256 cellar: :any_skip_relocation, mojave:   "8187fa7b1ff7c91fecf4a25cce406d8335c19504de80831717a5fb24f6c79221"
   end
 
   depends_on "cabal-install" => :build
