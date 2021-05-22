@@ -12,10 +12,10 @@ class Fastlane < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "7d31cf2ae80a8db7299b1d5216b4a8cda07241fc02e0206b559d0852951c3dc0"
-    sha256 cellar: :any, big_sur:       "ff11047cae3f4f341aa3e57f9b241d5449109af39e54c027a80e8bdb1909eeda"
-    sha256 cellar: :any, catalina:      "5bb57860963ffebd92f43a66d0e519f0163e340af5d4268f05f059f75208c842"
-    sha256 cellar: :any, mojave:        "5e3aad1aafe224a0732dd27f56e6fd25b8ae1055a7a7f43f1a67179170f887f9"
+    sha256 cellar: :any, arm64_big_sur: "f3a7e474a92dfbad3edf3e8644bfd59892e0fd0560cee8b46a53a36057cca243"
+    sha256 cellar: :any, big_sur:       "cd1fb40cf3011d9de1e67bda2d0010f4451fb65703ed0caf421b38d4cc62aeb9"
+    sha256 cellar: :any, catalina:      "3ded77138f02471212781cabaf926961d43da9dae3591f8f7de35a7a81e5a9fe"
+    sha256 cellar: :any, mojave:        "0cbe1320e5eaa9040b1c5bfcbafec05d98d93d074e555a5866544b5200b0dfda"
   end
 
   depends_on "ruby@2.7"
