@@ -11,11 +11,10 @@ class OpenZwave < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "d7ac3272c8e97d579bd7cbf660d0831b282d426344d1c66d1d6273665972c5ac"
-    sha256 big_sur:       "ca1c3e4e29bb19f377f169a015112818ebb69320ff76f05de671a857a28a4670"
-    sha256 catalina:      "28b55791a9d9ab0a1c772e11ba7459d42b5e9cbed50d9e1db4af154b2ad84d5e"
-    sha256 mojave:        "7e79dc03f657d9d92305f036d6118df60b56e2ddcbf8506234aa8b73dd9f4d31"
-    sha256 high_sierra:   "e3bc4eeb04ec86a43d3a63f263db9aa28090123822de81869c44dcef4af08f8d"
+    sha256 arm64_big_sur: "946d78311179280c3460097a1b60331daa782d916b10e819b97fa80a06037c3f"
+    sha256 big_sur:       "e3c9055c54562fc0fc8879f094359263626bb0cbb0b67a1c48999420f2f223c4"
+    sha256 catalina:      "af0ac45b4c07da453526cc464cf777d17cdbb3760c34ddefcfb3435977139d91"
+    sha256 mojave:        "9680488853f6ee6db1f0e299ff1f00597e8652c095ecb411e322a99b8b43caad"
   end
 
   depends_on "doxygen" => :build
