@@ -7,10 +7,10 @@ class Latexindent < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7265b0c8541a8e7af218b26d0fddf2b9a1623a0b478fd9d41729d69a6daa8037"
-    sha256 cellar: :any_skip_relocation, big_sur:       "294186ac91ae21fa4895c7e8ccd0a84007fed08b08eb38366ab4be2fdf949730"
-    sha256 cellar: :any_skip_relocation, catalina:      "3d4359f476024e48d01d62454e21515f4ce5f2d90628255bbfa205cb6480f037"
-    sha256 cellar: :any_skip_relocation, mojave:        "4141a3f4898ae71af2c92532c596b9d2f5cec1c1df11acbf2dd00556d0aeae2d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "abe7cffba6aa66a7b00a2085fb07cb33a81070ab1518085999213b55ce5144be"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6c9ce4682d80651216fd5919c1b608e6394e5d22aa5bf85e40e289a782fb04c5"
+    sha256 cellar: :any_skip_relocation, catalina:      "e8c512228c18b78057b6c96c2142f72c575264314235d9a46a4d298ec654fc97"
+    sha256 cellar: :any_skip_relocation, mojave:        "caca11dc1662f5d2a783eec24399e8495b0330667d0e46c4a3c99c0f1dabd92f"
   end
 
   depends_on "perl"
