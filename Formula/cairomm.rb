@@ -11,10 +11,10 @@ class Cairomm < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "e35cb366d4afd2a5a7153ddf2bd648ef6bdd75a82f79980480ec9c9b71afd821"
-    sha256 cellar: :any, big_sur:       "6177df22ea052d3e7ccd44d621d24837478340ea0d1385ef401a069414f893f1"
-    sha256 cellar: :any, catalina:      "cad19588b9a033b690cd2f1b73cb75282e017e1d32dfd39e29f7a35e2e8d3d91"
-    sha256 cellar: :any, mojave:        "b90f4177caced79c28888be8b38150c22d9a147eaa96493810ddbdf3fee87bf4"
+    sha256 cellar: :any, arm64_big_sur: "70e65e43376e9f2159955ee6ec8db9f4c440c24df8dfebdc06fa10953604eba9"
+    sha256 cellar: :any, big_sur:       "6b0e30e7ed71aed6bf7dfb862eba5d2c62dd0abc7a6d13684448ac6f5430f045"
+    sha256 cellar: :any, catalina:      "e02d87fa8a812686d9a2bf9ccfbe56e2937156e75488ee0795fb061d087cc171"
+    sha256 cellar: :any, mojave:        "53433da3d97a46f2878505f42882162eda2b145e7fbc3380034c79c9626120af"
   end
 
   depends_on "meson" => :build
