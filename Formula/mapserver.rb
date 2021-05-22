@@ -12,9 +12,9 @@ class Mapserver < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:  "0f170fe45b503edfd1c9f962d502cd0458cba0330430713c1be77bad42f13c92"
-    sha256 cellar: :any, catalina: "9f3038c89154620486b8ecceba663e2d47480240248f6fc05ea3604ace6476fd"
-    sha256 cellar: :any, mojave:   "f059b9527ec26034bdaf25ab555c51f0324999469a0881bab334ba315ce3c91d"
+    sha256 cellar: :any, big_sur:  "383800e38f0fca0ce658159e828049b3d1cf1aa74abd39b2a40bacaf0e5f3550"
+    sha256 cellar: :any, catalina: "1078b18f57fccc14a09bdf847738a099eb9fe23b79df904667d3ef4454ea1710"
+    sha256 cellar: :any, mojave:   "0b32e025ea3c5fd55cc6bb7e6fdf91012007d9f5fd7a9866b1ebcb135e94091f"
   end
 
   depends_on "cmake" => :build
