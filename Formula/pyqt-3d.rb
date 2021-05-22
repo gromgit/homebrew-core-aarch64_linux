@@ -6,10 +6,10 @@ class Pyqt3d < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 arm64_big_sur: "f7590022b8a3eb011743eb067338922efc5d63869304d496786f906eacf4c705"
-    sha256 big_sur:       "c71968e68258d734b2167e05067342b4ce58716434a19ca26f2880726b352521"
-    sha256 catalina:      "6de6137c50a524ef598367c2850dd4cf05c519bbe0f98b66014ca965dd577d0f"
-    sha256 mojave:        "3e937bc4e4c6f3d188f5ea8fb5eef6b8f6f39446d314e3e29e9f00fb28d6d38f"
+    sha256 cellar: :any, arm64_big_sur: "1ebc992cfbe773992ac78168d35a613188f2ef568e692d73a64b92f4fe783966"
+    sha256 cellar: :any, big_sur:       "dbedfd03a8d1726ef7cd83d4e99134c5b4557b83f49da2fb6079c8375a2b636c"
+    sha256 cellar: :any, catalina:      "b20343bc989fa856da1d932f69d81b4d20b3260340b43d6bc7a8ef6d7b6be44d"
+    sha256 cellar: :any, mojave:        "5d341e8e1b620672694be46288700363c543324cbc93d1f7fa4cc13b66d17874"
   end
 
   keg_only "pyqt now contains all submodules"
