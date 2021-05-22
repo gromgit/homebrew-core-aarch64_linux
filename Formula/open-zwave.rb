@@ -1,8 +1,8 @@
 class OpenZwave < Formula
   desc "Library that interfaces with selected Z-Wave PC controllers"
   homepage "http://www.openzwave.com"
-  url "http://old.openzwave.com/downloads/openzwave-1.6.1080.tar.gz"
-  sha256 "61c4b1857bb80c67b06f83bbeb956275184e30e12401984587dfe79070218d3c"
+  url "http://old.openzwave.com/downloads/openzwave-1.6.1914.tar.gz"
+  sha256 "c4e4eb643709eb73c30cc25cffc24e9e7b6d7c49bd97ee8986c309d168d9ad2f"
   license "LGPL-3.0"
 
   livecheck do
@@ -34,13 +34,14 @@ class OpenZwave < Formula
   test do
     (testpath/"test.cpp").write <<~EOS
       #include <iostream>
+      #include <functional>
       #include <openzwave/Manager.h>
       int main()
       {
         return OpenZWave::Manager::getVersionAsString().empty();
       }
     EOS
-    system ENV.cxx, "test.cpp", "-I#{include}/openzwave",
+    system ENV.cxx, "-std=c++11", "test.cpp", "-I#{include}/openzwave",
                     "-L#{lib}", "-lopenzwave", "-o", "test"
     system "./test"
   end
