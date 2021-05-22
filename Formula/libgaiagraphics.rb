@@ -11,11 +11,10 @@ class Libgaiagraphics < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "735b5cc5e33f5b3bd886ba97093edc71a4ad2dd02703870f4a8d1b309b2dbf45"
-    sha256 cellar: :any, big_sur:       "71019ebb245fbf75794ffc377be75d4a9731a7cc842a458d630ef7fb9d824741"
-    sha256 cellar: :any, catalina:      "05b3806c31a6e084eeeec2e44c83b8fb728cd0de4cc22dae14888ff52e290cca"
-    sha256 cellar: :any, mojave:        "bfaf50e26b9312c1ef7d9b62677e92099339d14393ce855b870fe9288503c5df"
-    sha256 cellar: :any, high_sierra:   "20a230ae5fccd2d5114e8ab7a128dd57834104461e5a7cbc2f7c7e63075214d9"
+    sha256 cellar: :any, arm64_big_sur: "6623ec87d81dc19a855c81549b00b07cd9a7f931ad40ba0cf2e8f9fcebb03b40"
+    sha256 cellar: :any, big_sur:       "865d8050b42bc24609c47e17347c78b9cbdc0d9b585076931b58b94097076e16"
+    sha256 cellar: :any, catalina:      "7471281583cae58d19538fd2bb5bda8e251a6bee797c4c5191820b61537f4109"
+    sha256 cellar: :any, mojave:        "0c0a8eb90a920ef286d534f0ba81aea1e009c3abc6eaff86be25e906aa5795d9"
   end
 
   depends_on "pkg-config" => :build
