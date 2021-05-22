@@ -5,6 +5,13 @@ class ProjAT7 < Formula
   sha256 "b384f42e5fb9c6d01fe5fa4d31da2e91329668863a684f97be5d4760dbbf0a14"
   license "MIT"
 
+  bottle do
+    sha256 arm64_big_sur: "de4c07c82bb48aaacce06186daaa95e975ec13d9c63978ec74e46d00e29c9b4e"
+    sha256 big_sur:       "85fe28900d71302e7a6a433cf97f6c2bbffd760578a731f502a3dbea2be02917"
+    sha256 catalina:      "34dc4a8dda8470ec24951126171ac370232d215a4623e8c8b67161b52a875706"
+    sha256 mojave:        "cfda390ef15a53e47786071d599ded6ecfb540c3c70ae0174135d50c481f058b"
+  end
+
   keg_only :versioned_formula
 
   deprecate! date: "2020-03-01", because: :unsupported
