@@ -6,10 +6,10 @@ class Proj < Formula
   license "MIT"
 
   bottle do
-    sha256 arm64_big_sur: "943adb4dfac31337c9bbbaf30ae8cf4812455e291abee79a4c22b60aaca8f312"
-    sha256 big_sur:       "dc7c6c5685716e0aa6d2bc58a118ff9767ee90f08a7ab7cf334e41acabbdd5ce"
-    sha256 catalina:      "0e9876b6205673f8f1536dbde4550e303d802c339c68601400575ac7fae4d0de"
-    sha256 mojave:        "998ab40cb3bc023d4d4abd6a2efdcc7e91b1f6018a51bc9db6715ab864c1eb39"
+    sha256 arm64_big_sur: "a4da85e7db113fc2286146cc9a250df2877c36fd766a373915e1b673b3c6ce82"
+    sha256 big_sur:       "2cdcd5418e147d57ec413c5977e05cd56291f138416033810aa075afe873cf1f"
+    sha256 catalina:      "cf990e76cb867cc5896631a6c3c813205676a4c9fbf096d82ec67b7aef764066"
+    sha256 mojave:        "78be51044cce3f368ef821f1adc3e0ae6e353ee67c28d498f32828fb56d46bf2"
   end
 
   head do
