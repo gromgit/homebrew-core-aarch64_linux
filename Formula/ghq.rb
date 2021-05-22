@@ -8,10 +8,10 @@ class Ghq < Formula
   head "https://github.com/x-motemen/ghq.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "415bcc81a4ccc64b2826f4fcce95e38b0ba4da271a25d747459b4edb5e83ec82"
-    sha256 cellar: :any_skip_relocation, big_sur:       "1c10e27ea29c0c826277a547516ed8fc2e764b165656ee64271ae4279c93a5ef"
-    sha256 cellar: :any_skip_relocation, catalina:      "ba1e0aa00eca4fb0861473eb7ae100c69ed3491fb4844f469944763a2aaae99c"
-    sha256 cellar: :any_skip_relocation, mojave:        "c4811a44a52b77365872099ab762a93ef1088686de096ffa1093be1b597b262a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "252b76e8c00bafe3f020b3b25f789f61bed80896ec8f6d36ea7e88401b0c1551"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0754734268513b517299a2f8542db53b5773ba0ad316679c8b95544444181e25"
+    sha256 cellar: :any_skip_relocation, catalina:      "00fb6673acdcdc32f9bfa9902379064428230d69b078e37774758e460bb569f3"
+    sha256 cellar: :any_skip_relocation, mojave:        "057db5b6a8b7a18227bff7279e0719b2df4b55295fe8c415d3f697598afbd685"
   end
 
   depends_on "go" => :build
