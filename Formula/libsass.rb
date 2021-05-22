@@ -13,11 +13,10 @@ class Libsass < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "2b1ac6cc0910f5e738fda693c8981289c465d891f061fb13765ed0a8330fb67f"
-    sha256 cellar: :any, big_sur:       "4c85f5604989fa56a518e2e0fecd1d05e7046e4ea383998710ab5b51e1c83c7c"
-    sha256 cellar: :any, catalina:      "a674d8155125a1659499c689b2c3ecc4d37c8196667a93b4463f65dfa77a686c"
-    sha256 cellar: :any, mojave:        "45e5e4f4eb76253127712dcef15df520064db0bd712e3fea9f349fa6ebee79a5"
-    sha256 cellar: :any, high_sierra:   "85722d303754f2d6d07c4c704cf81c9aa827473f7d6130c66d90da984862c47d"
+    sha256 cellar: :any, arm64_big_sur: "22ecfef684130e0eb31c60574970b5549d4d17eca862304b4603f2ced11e01cb"
+    sha256 cellar: :any, big_sur:       "6b898ecf23182d8510c20cc39f983ff1d032d05f782a860a8bf4f7268144bc8a"
+    sha256 cellar: :any, catalina:      "d3ed514cda1f654bba381f40cefeae9af3dc72b9299a3b55afe08165811eacd6"
+    sha256 cellar: :any, mojave:        "3300df2def4e03dc12a86fca52cd7555c8ce42320cfaf2d143d27129cd4e8bd7"
   end
 
   depends_on "autoconf" => :build
