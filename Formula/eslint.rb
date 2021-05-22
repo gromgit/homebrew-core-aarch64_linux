@@ -8,10 +8,10 @@ class Eslint < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "660bd8effae7380af4af6c2efc1ca7feed8693bfba4f123ba57a2527d9acc01c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "68ab2247338676db29802bcb0b08851d98fc55f7ddc454961f1d18051a514924"
-    sha256 cellar: :any_skip_relocation, catalina:      "68ab2247338676db29802bcb0b08851d98fc55f7ddc454961f1d18051a514924"
-    sha256 cellar: :any_skip_relocation, mojave:        "68ab2247338676db29802bcb0b08851d98fc55f7ddc454961f1d18051a514924"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9296c54d152180b7c8b502cef5f299040ec61bfbfbca31ee50279eccd4fe70cc"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f751b77ef2853782af49f076027d0b70870bd60a9aa678ba0acbd4c64b4cce09"
+    sha256 cellar: :any_skip_relocation, catalina:      "f751b77ef2853782af49f076027d0b70870bd60a9aa678ba0acbd4c64b4cce09"
+    sha256 cellar: :any_skip_relocation, mojave:        "f751b77ef2853782af49f076027d0b70870bd60a9aa678ba0acbd4c64b4cce09"
   end
 
   depends_on "node"
