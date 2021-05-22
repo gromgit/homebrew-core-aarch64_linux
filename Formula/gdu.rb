@@ -1,8 +1,8 @@
 class Gdu < Formula
   desc "Disk usage analyzer with console interface written in Go"
   homepage "https://github.com/dundee/gdu"
-  url "https://github.com/dundee/gdu/archive/v4.11.2.tar.gz"
-  sha256 "e192aad836a67bf810358c548897bd9723a6831ad1a33b255ef4a27e6ad4a8ae"
+  url "https://github.com/dundee/gdu/archive/v5.0.0.tar.gz"
+  sha256 "62312ff82192ffd593af0f40ebe729d9e18b63e4a034a61f2574ec9e96d3f04f"
   license "MIT"
 
   bottle do
@@ -17,17 +17,19 @@ class Gdu < Formula
   conflicts_with "coreutils", because: "both install `gdu` binaries"
 
   def install
-    time = Time.new
+    ENV["TZ"] = "UTC"
+    time = Time.at(ENV["SOURCE_DATE_EPOCH"].to_i)
     user = Utils.safe_popen_read("id", "-u", "-n")
+    major = version.major
 
     ldflags = %W[
       -s -w
-      -X 'github.com/dundee/gdu/v4/build.Version=v#{version}'
-      -X 'github.com/dundee/gdu/v4/build.Time=#{time}'
-      -X 'github.com/dundee/gdu/v4/build.User=#{user}'
+      -X "github.com/dundee/gdu/v#{major}/build.Version=v#{version}"
+      -X "github.com/dundee/gdu/v#{major}/build.Time=#{time}"
+      -X "github.com/dundee/gdu/v#{major}/build.User=#{user}"
     ]
 
-    system "go", "build", *std_go_args(ldflags: ldflags.join(" ")), "github.com/dundee/gdu/v4/cmd/gdu"
+    system "go", "build", *std_go_args(ldflags: ldflags.join(" ")), "github.com/dundee/gdu/v#{major}/cmd/gdu"
   end
 
   test do
