@@ -9,9 +9,10 @@ class ChartTesting < Formula
   head "https://github.com/helm/chart-testing.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "58111c64305e77677e4274eb1befabbbbd531b83f9eac4b1b039fc61c98d0e0c"
-    sha256 cellar: :any_skip_relocation, catalina: "7e7c7511a1c3f67dd49f9a4f7a1e132ef742223b7e6393e2caa5537c34b4df36"
-    sha256 cellar: :any_skip_relocation, mojave:   "c2f94bc1d9d58b6255a76af50139ccabd691846c847a7fd58c943ada70b91705"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "66bd1f0419bfcf97ce06a3a91f107735563ee94e1e5953bcad7e48d5f1a31e9f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a6179e0090f93f5bf67f92cd13fa391f898496211f7e1b58a1d3989f9b37b22c"
+    sha256 cellar: :any_skip_relocation, catalina:      "556430cab62f842bfdcac97db34b96448bad3588a359aec2e2f9f21c5339f363"
+    sha256 cellar: :any_skip_relocation, mojave:        "65760b4336f5f2005cdb7d001d3902c16530ed0dd6eeb68bdaab2d6389f63d0f"
   end
 
   depends_on "go" => :build
