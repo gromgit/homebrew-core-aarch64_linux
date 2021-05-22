@@ -3,8 +3,8 @@ class B2Tools < Formula
 
   desc "B2 Cloud Storage Command-Line Tools"
   homepage "https://github.com/Backblaze/B2_Command_Line_Tool"
-  url "https://files.pythonhosted.org/packages/7c/e6/ec61c1da36a37bf3e0600c0a425aed40167519ac406e70fd54573864a2b4/b2-2.4.0.tar.gz"
-  sha256 "9cd4037528d4a258f73e35919f57cf04012d3e581e7a7b763f1cc7ab01f567ab"
+  url "https://files.pythonhosted.org/packages/a8/5e/04702f83c51ec9a85cf4f8748a6f3a10830da2366ee8157ca8d889dd1238/b2-2.5.0.tar.gz"
+  sha256 "85b4917fa74178883fb3eca442dc81fdd2387b00d514302d6e7e1c695d9a096a"
   license "MIT"
 
   bottle do
@@ -24,8 +24,8 @@ class B2Tools < Formula
   end
 
   resource "b2sdk" do
-    url "https://files.pythonhosted.org/packages/9a/bf/cfb2b3a110f08ce136ab3b279afc0d790b95c336e7c51889e417de8752b1/b2sdk-1.7.0.tar.gz"
-    sha256 "f17e572e1f52c592353fbff66633b2f22a5c1334dcae225f188eca94c5e772fe"
+    url "https://files.pythonhosted.org/packages/df/38/177db217be6b4a435015a859584f7f608fbf41a47be0bf52495cb13baacb/b2sdk-1.8.0.tar.gz"
+    sha256 "07b9cdd9e8f748d043129d3b5e904f83f2dc37810efd15572a740eeac4ca6e71"
   end
 
   resource "certifi" do
@@ -79,8 +79,8 @@ class B2Tools < Formula
   end
 
   resource "six" do
-    url "https://files.pythonhosted.org/packages/6b/34/415834bfdafca3c5f451532e8a8d9ba89a21c9743a0c59fbd0205c7f9426/six-1.15.0.tar.gz"
-    sha256 "30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
   resource "tqdm" do
