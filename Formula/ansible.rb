@@ -9,10 +9,10 @@ class Ansible < Formula
   head "https://github.com/ansible/ansible.git", branch: "devel"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "2a6ddefaf12c539eed135975b0e0703531d87dd421da2dd76c096d5a0355707f"
-    sha256 cellar: :any, big_sur:       "56127400b1d0e14f56df5e04feb1444a136521f630248b1f53577a591031852a"
-    sha256 cellar: :any, catalina:      "cc5e081e6606731106d4e8613123df839bd4da0369312dfe5427245ed1bdfeef"
-    sha256 cellar: :any, mojave:        "2986a2258b456464773ed851a7b933e31b3c0e1e8ee2a223195cc6513a45f355"
+    sha256 cellar: :any, arm64_big_sur: "f3d02ebdc94766be98d831e81a1f8ad78511dd6586a15ef8d0623aeba8cbdc45"
+    sha256 cellar: :any, big_sur:       "333512070bfe45820482f51ffe3242fee0b82aa8bc4717230fc671466d82bf3b"
+    sha256 cellar: :any, catalina:      "b83d560e9bc4d348148de28aa849fec23979e5cea7d8f03974c3949858d23b81"
+    sha256 cellar: :any, mojave:        "f4fa25b71e80ba57757393e3667cc51308faf3cc55828431050414812a9c779c"
   end
 
   depends_on "pkg-config" => :build
