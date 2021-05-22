@@ -6,10 +6,10 @@ class Matplotplusplus < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "1931cf92f8b391d3a193d635314dc20737e3eb706ec5f6d2dc4bfb2b07df84e3"
-    sha256 cellar: :any, big_sur:       "c61f1d125f44e9d58965ef1432cebff43ffac2d8e819f1cc1271459115a591c5"
-    sha256 cellar: :any, catalina:      "7c3b3ea25fa94f5e01cf48086afb821f57b414d4b3572ee7693363ae0e389440"
-    sha256 cellar: :any, mojave:        "bd4c620d7a8f565b53ec83703e1760d96830de15c2ce1877d05c98925ca04be7"
+    sha256 cellar: :any, arm64_big_sur: "19cb7c2dd1eb682773ab6022a5eeeedcfe423765eccba27ab9d5f2124db7fdab"
+    sha256 cellar: :any, big_sur:       "4179a851403a2af2264efa5b766b708c256f66b37680a8ebcf1f5c2f9b4b3866"
+    sha256 cellar: :any, catalina:      "52ae1b2728e95782080b211eef063972aac7751e02f1714a9dc41d57c5ddcdaa"
+    sha256 cellar: :any, mojave:        "4cdcc03dcf7ffaed40caf7e052de33836e195c375585d13e73d3a720bf61cb84"
   end
 
   depends_on "cmake" => :build
