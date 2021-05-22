@@ -6,10 +6,10 @@ class PyqtNetworkauth < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 arm64_big_sur: "d198cfd91b4d84758fd496bdbd5b309c12f5f8951497faeee77d09899cb03ab4"
-    sha256 big_sur:       "9b407dccafe9653a51d1498c08b1346cc5c0287b9e53cf98f67cd8d13c5612e7"
-    sha256 catalina:      "b04e6105e03e14be91b363407cc7f7c882be07931c134cdac04ae537485f70b4"
-    sha256 mojave:        "e769cc30eab94ba9f78d1f820103b55c5060a169ec03c7f13c28b3aa51bceded"
+    sha256 cellar: :any, arm64_big_sur: "0d988ef8d9814b9c2b3ec956b9826eec3ed2cf4928374d99fb8b5fee9023a2fc"
+    sha256 cellar: :any, big_sur:       "73396cbd45e61c6792ec73ffac9a8fb53b5917f008368a655b0b407ebca8447b"
+    sha256 cellar: :any, catalina:      "de12b27c4e572f42701bae3f6914dd9175cb72bdbf96a1d79b555ad8440356d1"
+    sha256 cellar: :any, mojave:        "21d8a3a2fe01a7442ae08adbbe6cc4e8cc396d7402a22932f3e751cda60926eb"
   end
 
   keg_only "pyqt now contains all submodules"
