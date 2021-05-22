@@ -9,10 +9,10 @@ class Todoman < Formula
   head "https://github.com/pimutils/todoman.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "285c8ec230d61d4a1812c11bc381160b9aa9a78ed071cacd02bc508df6eccc05"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ea144b7e1a329ef8fd6ac43440f800c3ffcb1874a5aa1e18f98ab24c2e724e4f"
-    sha256 cellar: :any_skip_relocation, catalina:      "281ee05aec4e119f290513ac67a8b14308492fe4137fa29d721d1288023387c8"
-    sha256 cellar: :any_skip_relocation, mojave:        "ff931185da31a9467fec4d823001da45264e33ead3e2235e10d59fb72cbcbc12"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b7ad318c91c4605aaf963c4649d6b4da7c2b91f02d0a0e82b0237468a81c8ff4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3cff83b0ba438dd9336af01a9fe5a7f25d54749f3192e8ff3a86483df6c4bc08"
+    sha256 cellar: :any_skip_relocation, catalina:      "85c8a6adc87637301cc986d2d044cee74f4503d826803b0effe8d67a214918eb"
+    sha256 cellar: :any_skip_relocation, mojave:        "44ea3d0d4e8e165fbb9905b371c5c411de0f0d94eddc87a93060b60383ab1844"
   end
 
   depends_on "python-tabulate"
