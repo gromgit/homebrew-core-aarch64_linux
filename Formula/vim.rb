@@ -9,10 +9,10 @@ class Vim < Formula
   head "https://github.com/vim/vim.git"
 
   bottle do
-    sha256 arm64_big_sur: "adadf1f27838f47caead6c0e2b8fe69f9ffbc89478bc23d871cd4ec1358b3dac"
-    sha256 big_sur:       "eeb7c1aadb4423a445e7db36790dd6c89de9c3ae46f20e8708a7f30a383a8cc1"
-    sha256 catalina:      "bd5d1c2345d5fc5a508a73991e21972931a558b9c1532d602f8764bf4f102fe6"
-    sha256 mojave:        "b82aa0f4a6b4ece8b117f62e360d0aa48a7ed4fca3bbcdc1df4b1f7b938b687c"
+    sha256 arm64_big_sur: "b48c7460bc512fd1c255f02e070a48e96c5c5a839fa6d6aedda0e1b2825367ca"
+    sha256 big_sur:       "09b226b6e791349c440d7b03524a2b79c7b47bd9b67d093d3cf101939dbe711a"
+    sha256 catalina:      "2b9d14193432ae7e21763d3d7835549813de30cffc38e5b58d3d980f35fe8845"
+    sha256 mojave:        "84580564e5481145c2f485b118343e85c7c246fcbaae74974f888bccba11a5d3"
   end
 
   depends_on "gettext"
