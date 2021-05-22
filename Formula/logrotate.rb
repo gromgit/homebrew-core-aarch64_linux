@@ -6,10 +6,10 @@ class Logrotate < Formula
   license "GPL-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "4302035ee1c9162e650852b38ad0b384cb3ad2f7e74a97ff72f57e2d50d5848e"
-    sha256 cellar: :any, big_sur:       "8074cf8252a19b7be06a4600ab49b38c16b6ac884ca58744c1afc489cc04eac9"
-    sha256 cellar: :any, catalina:      "a8a48494c6d57c20ac9ff7b38d0ca2ed41ec16640928f0f4c83bfb18ea744908"
-    sha256 cellar: :any, mojave:        "c970d6bce04d119e0ba69d925b5230d61fa71b92d51792744d9590a9cb8ead18"
+    sha256 cellar: :any, arm64_big_sur: "7a35f391118adf13094e83d7ab66a0a0842828b6d17bb825a04a2c15ff0cb8b5"
+    sha256 cellar: :any, big_sur:       "6976c5e710c45560e47c8eaba409aaf71e607cec3e86eaa6396df5342685b720"
+    sha256 cellar: :any, catalina:      "82980e80bdd29e8b5d21661e5ffd283c654057912fb0d8621e30397f577dc1e4"
+    sha256 cellar: :any, mojave:        "2aeb1ee2d25cb426a1d7a746c54451afad0d5f00a24c6cf6f38eb5be2a0c4e5a"
   end
 
   depends_on "popt"
