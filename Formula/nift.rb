@@ -1,8 +1,8 @@
 class Nift < Formula
   desc "Cross-platform open source framework for managing and generating websites"
   homepage "https://nift.dev/"
-  url "https://github.com/nifty-site-manager/nsm/archive/v2.4.10.tar.gz"
-  sha256 "3a7292d82471ed19ef6d723f40e4319ca9108275d49f13a583f61f21ff6dbb20"
+  url "https://github.com/nifty-site-manager/nsm/archive/v2.4.12.tar.gz"
+  sha256 "7a28987114cd5e4717b31a96840c0be505d58a07e20dcf26b25add7dbdf2668b"
   license "MIT"
 
   bottle do
@@ -11,8 +11,11 @@ class Nift < Formula
     sha256 cellar: :any_skip_relocation, mojave:   "62b96189d61ca0c360aa7c00718f0995fde9d20ad81c5a700836083800093aef"
   end
 
+  depends_on "luajit-openresty"
+
   def install
-    system "make"
+    inreplace "Lua.h", "/usr/local/include", Formula["luajit-openresty"].opt_include
+    system "make", "BUNDLED=0", "LUAJIT_VERSION=2.1"
     system "make", "install", "PREFIX=#{prefix}"
   end
 
