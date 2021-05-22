@@ -8,10 +8,10 @@ class Richmd < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3521e641dc6d3c36b5684d6f5ef657473a9b180d79a3304eb312ceea3f77f9fe"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ca243de44dc2370660c42603148a4f6b1b988fa68a10f126038ea3a022a3e9f5"
-    sha256 cellar: :any_skip_relocation, catalina:      "472211a076afea7a2d5ccb32690c3aaa60b420c51d8cca09feba6ea4bd7c8573"
-    sha256 cellar: :any_skip_relocation, mojave:        "08299b3bb91e080afa989344d6c877711fd846ef4b5ade60ced8a5889efd12da"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "aa90489ac1e439879689bcd1ae425b6582e1ffe8acd798ceb4dd4282b13d46c6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c65e1689fd0082d084f7cd61f64bcf01c14e00115a34629960c6250511d1decc"
+    sha256 cellar: :any_skip_relocation, catalina:      "8e9368a939e173b68205c6ee3abe06760d34e08f6a27ec94a6985244a4b811fd"
+    sha256 cellar: :any_skip_relocation, mojave:        "a077ebd8564c5716a532e2f560147857d9885441d7fc13bf09244ce1312004ff"
   end
 
   depends_on "python@3.9"
