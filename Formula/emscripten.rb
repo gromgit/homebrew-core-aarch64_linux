@@ -3,8 +3,8 @@ require "language/node"
 class Emscripten < Formula
   desc "LLVM bytecode to JavaScript compiler"
   homepage "https://emscripten.org/"
-  url "https://github.com/emscripten-core/emscripten/archive/2.0.20.tar.gz"
-  sha256 "65523a60a98ece5087afc6653a3618ec6db2ecab40241c645cf708cac8f4e9a0"
+  url "https://github.com/emscripten-core/emscripten/archive/2.0.21.tar.gz"
+  sha256 "d8d57d8642c170778b9f8d7f54252f9f0b12212f88b6fb9aeec81a7553c9e9db"
   license all_of: [
     "Apache-2.0", # binaryen
     "Apache-2.0" => { with: "LLVM-exception" }, # llvm
@@ -33,18 +33,18 @@ class Emscripten < Formula
   # See llvm resource below for instructions on how to update this.
   resource "binaryen" do
     url "https://github.com/WebAssembly/binaryen.git",
-        revision: "14506179e55978d5f8ef4547d05f8d134bdc4c6b"
+        revision: "dc516f10b5fa8fa7bf270eda97950d6e714956d3"
   end
 
   # emscripten needs argument '-fignore-exceptions', which is only available in llvm >= 12
   # To find the correct llvm revision, find a corresponding commit at:
-  # https://github.com/emscripten-core/emsdk/blob/master/emscripten-releases-tags.txt
+  # https://github.com/emscripten-core/emsdk/blob/main/emscripten-releases-tags.txt
   # Then take this commit and go to:
   # https://chromium.googlesource.com/emscripten-releases/+/<commit>/DEPS
   # Then use the listed llvm_project_revision for the resource below.
   resource "llvm" do
     url "https://github.com/llvm/llvm-project.git",
-        revision: "642df18f1437b1fffea2343fa471aebfff128c6e"
+        revision: "6e1c1dac4c72cc57f4cd2bc8554e8ac9f2f50b6e"
   end
 
   def install
