@@ -11,10 +11,10 @@ class Gtkmm4 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "347734f4e95e5edcf93f2a69ddab693d66c2b0cc74880f5080ebef3cc2d1aabc"
-    sha256 cellar: :any, big_sur:       "8f8dcb9eeced9ee633dbb9f5a7e6342b359596f95f7ba3e7f064f92ff91ea113"
-    sha256 cellar: :any, catalina:      "d5108f300f4bc69d6f3e2cd79a7995761fb04c6a0829a023e4aaec886a6f4363"
-    sha256 cellar: :any, mojave:        "1698ed19f44fe423e1c412104c55dcfd701403d773c7c9fbbd017064edb220b1"
+    sha256 cellar: :any, arm64_big_sur: "88cc51b5d7ff82f704b0fd4a1b53d6932ee5aeb3d5319c70226080a502ad7bf9"
+    sha256 cellar: :any, big_sur:       "ac0d436909b6be289508ff5aac82d6ab59c36f144145b7259b77234e2b544116"
+    sha256 cellar: :any, catalina:      "6a67aa2c9ae11a5dea8c142f221a0b6fdaece0f6ceecfd9747aeda99782cea21"
+    sha256 cellar: :any, mojave:        "5f21219575cf773cb21686b592cdf8e05617567490111a7919b87dc5d165fb63"
   end
 
   depends_on "meson" => :build
