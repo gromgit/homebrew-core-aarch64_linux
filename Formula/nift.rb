@@ -6,9 +6,9 @@ class Nift < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "fb6510a7d3eef37e3274009abe1062585c07294c2453d563b70b9501fa70f719"
-    sha256 cellar: :any_skip_relocation, catalina: "613a21f5107f0e099cd32b67779587807686faf7666366ce4cb1f218855a2d4f"
-    sha256 cellar: :any_skip_relocation, mojave:   "62b96189d61ca0c360aa7c00718f0995fde9d20ad81c5a700836083800093aef"
+    sha256 cellar: :any, big_sur:  "643dbd50106a96d8af8e1071c49fb6c41522f7d3384d0e438810d48e5503c7ab"
+    sha256 cellar: :any, catalina: "dbf48067fac536bfe804c35c19c6198bae0c0d29107be3e4512d31a37485fd96"
+    sha256 cellar: :any, mojave:   "d51812440b4e4b8df56ee07b377e2d2a4cee7d84233377218e9ed3fc5e9e68e1"
   end
 
   depends_on "luajit-openresty"
