@@ -7,10 +7,10 @@ class Tvnamer < Formula
   head "https://github.com/dbr/tvnamer.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b3d91f444d524deccd9319224ade466d770fb644ea164dbf9ebbf9052194e6a0"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d8282e3cd4b3809ca646ae7b40f51556e18e497dfbc3f448d3c1b77b0a6e5fc3"
-    sha256 cellar: :any_skip_relocation, catalina:      "d8282e3cd4b3809ca646ae7b40f51556e18e497dfbc3f448d3c1b77b0a6e5fc3"
-    sha256 cellar: :any_skip_relocation, mojave:        "d8282e3cd4b3809ca646ae7b40f51556e18e497dfbc3f448d3c1b77b0a6e5fc3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4491772fd6ec7a015ef66cfdd2e26b017a0954b00dcb6225c05e3918d4ebaf8f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7482d3e40fae7da3a5a738ba27e891ab6313be37e2ca623ce3c6eabe8c07d261"
+    sha256 cellar: :any_skip_relocation, catalina:      "7482d3e40fae7da3a5a738ba27e891ab6313be37e2ca623ce3c6eabe8c07d261"
+    sha256 cellar: :any_skip_relocation, mojave:        "7482d3e40fae7da3a5a738ba27e891ab6313be37e2ca623ce3c6eabe8c07d261"
   end
 
   depends_on "python@3.9"
