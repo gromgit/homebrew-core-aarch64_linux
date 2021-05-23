@@ -9,6 +9,13 @@ class AutoconfAT269 < Formula
     "GPL-3.0-or-later" => { with: "Autoconf-exception-3.0" },
   ]
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f7b28e5cdf538418baea43d1d5638a1df52161ef0cd198ee1f261cdc61ac6636"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e4a0ef0b0b653836a212225fbb5345fb58e898ed7a24cb8386a4169496bbfde3"
+    sha256 cellar: :any_skip_relocation, catalina:      "e4a0ef0b0b653836a212225fbb5345fb58e898ed7a24cb8386a4169496bbfde3"
+    sha256 cellar: :any_skip_relocation, mojave:        "f91f5a4d756aa9f3f73b725578568f5310c40adf702338b656876a5016cca401"
+  end
+
   keg_only :versioned_formula
 
   depends_on "m4"
