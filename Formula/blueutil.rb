@@ -7,10 +7,10 @@ class Blueutil < Formula
   head "https://github.com/toy/blueutil.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "37623a2b8cb631805e0c032cb7dc0f79fa8b96cb15028405ffa553838e7d2c45"
-    sha256 cellar: :any_skip_relocation, big_sur:       "1ee600b762c8198659281e097870d33301fb81455437bf8f9d82f0e0925ffed9"
-    sha256 cellar: :any_skip_relocation, catalina:      "3af0bd6588ba4efd71c0fbe0ff9e69d172c5bf060523e943328ca3cf800d3c71"
-    sha256 cellar: :any_skip_relocation, mojave:        "9b6b091081fe40d752e37e82943d0e55cd0e5ae78a7323a918cd3d25298c3ceb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e29ddccdf7253406a3685f4099f3424ffb6d399ff2643f2d79f281ad97b93a67"
+    sha256 cellar: :any_skip_relocation, big_sur:       "429703e2bae1445d2a6ae2e1f52ed2c1f0bad3a94e80b44bfe36e698ba5ded30"
+    sha256 cellar: :any_skip_relocation, catalina:      "3717d1a6753d4d94c4b4cbc92afa8ce58ed02bc1435806646fba4c7c1d04787a"
+    sha256 cellar: :any_skip_relocation, mojave:        "389cd2270eededef8623fda47663f998cca159b82f17ef030962ac7dbae3522b"
   end
 
   depends_on xcode: :build
