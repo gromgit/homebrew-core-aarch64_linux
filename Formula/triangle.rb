@@ -6,10 +6,10 @@ class Triangle < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "76c9da2eff5ca28d040fe13d3e4d778fc17cfc347845a666d0b7ae1883b22e25"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d2e896b56ebcf1a18cbc0ae67d430ca012b496b6d84fb3264b1f85ef6900d8ee"
-    sha256 cellar: :any_skip_relocation, catalina:      "5e0d957825b095173454e7b83f6921164fe72b406a1b1eb6719309ee24be8251"
-    sha256 cellar: :any_skip_relocation, mojave:        "cf2344c0bad9d2310e508e38c18a10a2a883481708eed5f2ec7ff53bdd35d492"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "704b24d681e71a55c8c6d3888524ace351bb8240cefddf91060f8d6ead3fbf08"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0b51538505ae028c96c122c565345e97257aef8103614afb14ecce0e5feeafe7"
+    sha256 cellar: :any_skip_relocation, catalina:      "5d3948f4093b5bc4f9b5410643eafd26a1d7c1bc87a2eb5ed7126447a46a675b"
+    sha256 cellar: :any_skip_relocation, mojave:        "a2549fdd2296b72dc857cfc4fcb89f07f4cf71f2419133ddb06eef63e3c7a7f8"
   end
 
   depends_on "go" => :build
