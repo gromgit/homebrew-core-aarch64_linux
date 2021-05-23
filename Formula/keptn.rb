@@ -1,8 +1,8 @@
 class Keptn < Formula
   desc "Is the CLI for keptn.sh a message-driven control-plane for application delivery"
   homepage "https://keptn.sh"
-  url "https://github.com/keptn/keptn/archive/0.8.2.tar.gz"
-  sha256 "eb20175aa8e2a56bc4c7311e34fd2d4046382111048f5fdae46a0d3488b13e01"
+  url "https://github.com/keptn/keptn/archive/0.8.3.tar.gz"
+  sha256 "aadd069ca5a47d5c7291d5d6df84a83c8e2cb7021bc4159bf9860372ebb02f77"
   license "Apache-2.0"
 
   bottle do
@@ -14,9 +14,14 @@ class Keptn < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GO111MODULE"] = "auto"
+    ldflags = %W[
+      -s -w
+      -X main.Version=#{version}
+      -X main.KubeServerVersionConstraints=""
+    ].join(" ")
+
     cd buildpath/"cli" do
-      system "go", "build", *std_go_args, "-ldflags", "-s -w -X main.Version=#{version} -X main.KubeServerVersionConstraints=\"\""
+      system "go", "build", *std_go_args(ldflags: ldflags)
     end
   end
 
