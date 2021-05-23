@@ -7,12 +7,10 @@ class Glog < Formula
   head "https://github.com/google/glog.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "8f1417f8d9c708afd66bd4b9ef1b1b1308dcd85d02950b6284ff0f712f92c5e2"
-    sha256 cellar: :any, big_sur:       "ed282046831a2c49077ed7427a4690f2aa95ba80ae2b9902bac8e5bd47ca0d86"
-    sha256 cellar: :any, catalina:      "918710bfd20d088718f33579216eb4574595f27ea234c409dd5848c0b8ad9e15"
-    sha256 cellar: :any, mojave:        "034a4d2272b48fd7655b467b92c78eebfb11efb33cc6cd31f7b13ee085b7169b"
-    sha256 cellar: :any, high_sierra:   "bbe6c4138b5fe8cd58d269a39644176f640fa62e694ffac36337f87661cacc69"
-    sha256 cellar: :any, sierra:        "08408127c37122614811eae2d925d940912c2cb29eb0fb300116ee4813d50095"
+    sha256 cellar: :any, arm64_big_sur: "7cc04172531a192d8783f7d9d7fbaf48b8ab8849c896b089a371bd993726c30c"
+    sha256 cellar: :any, big_sur:       "cf69cacfd059791bf7c9196dfd38a170464cda435257eabe5a80428dbcd191be"
+    sha256 cellar: :any, catalina:      "934918ceea54e2afe84fe04b179cc86fd210e804ed57d3700d2ecd0bcfc784c3"
+    sha256 cellar: :any, mojave:        "8d66cd6d6e718969aa23d9c1fbf442fdb0da2824d40259aae5905074e838507d"
   end
 
   depends_on "cmake" => :build
