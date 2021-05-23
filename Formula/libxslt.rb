@@ -4,7 +4,8 @@ class Libxslt < Formula
   url "http://xmlsoft.org/sources/libxslt-1.1.34.tar.gz"
   sha256 "98b1bd46d6792925ad2dfe9a87452ea2adebf69dcb9919ffd55bf926a7f93f7f"
   license "X11"
-  revision 2
+  revision 3
+  head "https://gitlab.gnome.org/GNOME/libxslt.git"
 
   livecheck do
     url "http://xmlsoft.org/sources/"
@@ -18,21 +19,25 @@ class Libxslt < Formula
     sha256 cellar: :any, mojave:        "6c73651ec7791877fe42675f9de291709300a2c3aa0da3e859d139e4121a5a18"
   end
 
-  head do
-    url "https://gitlab.gnome.org/GNOME/libxslt.git"
-
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
-  end
-
   keg_only :provided_by_macos
 
+  # Move `autoconf`, `automake` and `libtool` to head block in the next release
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "libtool" => :build
   depends_on "libgcrypt"
   depends_on "libxml2"
 
+  # Fix configure script for libxml2
+  # Remove in the next release
+  patch do
+    url "https://gitlab.gnome.org/GNOME/libxslt/-/commit/90c34c8bb90e095a8a8fe8b2ce368bd9ff1837cc.diff"
+    sha256 "0ddf5ec74855e7e2fddcf8c963fe1d83f71462823a0131fc3a76a369d00f1851"
+  end
+
   def install
-    system "autoreconf", "-fiv" if build.head?
+    # Make it only for head builds (if build.head?) in the next release
+    system "autoreconf", "-fiv"
 
     system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",
