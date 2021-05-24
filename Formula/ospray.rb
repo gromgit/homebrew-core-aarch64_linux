@@ -12,9 +12,9 @@ class Ospray < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:  "6b30a204b4d29c01d6298ee85b7cc16d8946339c33644f75548e1fe51aac04d5"
-    sha256 cellar: :any, catalina: "99b50658b861665891450b4e35edf27c222ca8b0b1aea90fdcbbfa072c4c05f4"
-    sha256 cellar: :any, mojave:   "4c690975e60499ab1aa895b032bd3d3a46f7c8d100193d7f9081d760fd83a738"
+    sha256 cellar: :any, big_sur:  "78eaaa0c5dc53e86d5ad519e5475eeb066ce11e960295f0d5e9bef82b67cd976"
+    sha256 cellar: :any, catalina: "f6caf43e4e625be594daf18381722da249bf3ef026684d1f3f14a478ccf63b31"
+    sha256 cellar: :any, mojave:   "e0ca544992116f648bf050690f3604dcf548989480d9ab87a80693a255417af6"
   end
 
   depends_on "cmake" => :build
