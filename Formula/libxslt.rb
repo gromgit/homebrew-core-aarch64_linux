@@ -13,10 +13,10 @@ class Libxslt < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "7f0dcf602ce806db8ce41b1e8d4ef352823f7343f258cd0519e6ad1885f3c593"
-    sha256 cellar: :any, big_sur:       "61c11bb170d9ba4bd079a2c81887b9d82cb34a3de110117d61d75f7f050b90d3"
-    sha256 cellar: :any, catalina:      "7f1626b1ae090f561ed8d7c2a3c7e9067ad29d68b547d91ff5a2e83d346183bc"
-    sha256 cellar: :any, mojave:        "6c73651ec7791877fe42675f9de291709300a2c3aa0da3e859d139e4121a5a18"
+    sha256 cellar: :any, arm64_big_sur: "ec2551bbb89b9544e80586680db51270ccabf53be680b31178a7eb4b7a1fc6d9"
+    sha256 cellar: :any, big_sur:       "2ce7c3f7bbb1ffd73028662afca32211205734c5676ac743e865d9da2426bb5b"
+    sha256 cellar: :any, catalina:      "9afef3e030939882119df041160dbb00437c726101c7047e310abad7c354b2e9"
+    sha256 cellar: :any, mojave:        "a60cb3dba137da40ece1d48ed404adaa62c7a61e5be8618a03a035ac3413f03d"
   end
 
   keg_only :provided_by_macos
