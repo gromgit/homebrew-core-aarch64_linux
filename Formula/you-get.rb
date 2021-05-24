@@ -9,10 +9,10 @@ class YouGet < Formula
   head "https://github.com/soimort/you-get.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bea8c3b1b8d6f19d8f0f3fc9ec499d061a8178e1a068952dd64b1c4f37adb78c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5a5b7e6b35b3050c0034b9c1e8687c833feee4ef1bfaba8a639b1c0ea5b6047d"
-    sha256 cellar: :any_skip_relocation, catalina:      "3e2e928c47300d7585a8c7d6d0a602ca847b32257a543a34e20be1c2e41d2b6b"
-    sha256 cellar: :any_skip_relocation, mojave:        "e8d8cc06b0169589d65bdbcd931141b417ef7a6450ea7734401dfe2f2e074b35"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "61ae27ceb46e418b8be3d42fd09a09aee0a392f1a569d821be945555ddcc990e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "88e9697583588134f388bc1055980f957e2686438f7167fa2994e712eb3f8d1f"
+    sha256 cellar: :any_skip_relocation, catalina:      "88e9697583588134f388bc1055980f957e2686438f7167fa2994e712eb3f8d1f"
+    sha256 cellar: :any_skip_relocation, mojave:        "88e9697583588134f388bc1055980f957e2686438f7167fa2994e712eb3f8d1f"
   end
 
   depends_on "python@3.9"
