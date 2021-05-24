@@ -34,10 +34,24 @@ class Tbb < Formula
 
     cd "python" do
       ENV.append_path "CMAKE_PREFIX_PATH", prefix.to_s
-      ENV["LDFLAGS"] = "-rpath #{opt_lib}"
+      on_macos do
+        ENV["LDFLAGS"] = "-rpath #{opt_lib}"
+      end
 
       ENV["TBBROOT"] = prefix
       system Formula["python@3.9"].opt_bin/"python3", *Language::Python.setup_install_args(prefix)
+    end
+
+    on_linux do
+      inreplace prefix/"rml/CMakeFiles/irml.dir/flags.make",
+                "#{HOMEBREW_LIBRARY}/Homebrew/shims/linux/super/g++-5",
+                "/usr/bin/c++"
+      inreplace prefix/"rml/CMakeFiles/irml.dir/build.make",
+                "#{HOMEBREW_LIBRARY}/Homebrew/shims/linux/super/g++-5",
+                "/usr/bin/c++"
+      inreplace prefix/"rml/CMakeFiles/irml.dir/link.txt",
+                "#{HOMEBREW_LIBRARY}/Homebrew/shims/linux/super/g++-5",
+                "/usr/bin/c++"
     end
   end
 
