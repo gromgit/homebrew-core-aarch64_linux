@@ -7,10 +7,10 @@ class VapoursynthOcr < Formula
   head "https://github.com/vapoursynth/vapoursynth.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "3b6b3405284238de9480db45bafd9a3e73ef6eddc8d23b6de1e629e67dd49bf9"
-    sha256 cellar: :any, big_sur:       "823ad4d448f1ee19d8ba111a6e36a4ac3f1b0064cea6e3ab6e30c0a8f15c6a91"
-    sha256 cellar: :any, catalina:      "ace9bfac33026748bfe2a1465d9a58b597bd85f001153ce3952760889e9aff74"
-    sha256 cellar: :any, mojave:        "268aed99192b8df1d673a6a64a0de4d8289c7a2316b19ed429b330ee3eb110b1"
+    sha256 cellar: :any, arm64_big_sur: "0f47ed98e6b770f53a458c4fa8bb12c38c221de1e864a1227d3b1a08f2557fcf"
+    sha256 cellar: :any, big_sur:       "09c4405c9221feef7fa8a09e8f7a1d8bd6ab7fcc8b9feddc3a9a338d91fe1edf"
+    sha256 cellar: :any, catalina:      "99b1665bc4dea00f8984e748d814cd88f904b9fbe220e3d0bb0d5affde8430fd"
+    sha256 cellar: :any, mojave:        "ec7fa75affd62d2a864e3613a4833981d1d40301d5ea8a95be642bc7969fe5da"
   end
 
   depends_on "autoconf" => :build
