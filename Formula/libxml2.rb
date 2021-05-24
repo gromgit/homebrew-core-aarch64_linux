@@ -12,11 +12,10 @@ class Libxml2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "c2e1bb939465a54e70ac4a6a8c333d00bc01a3738037f77cfd2227e47053ff47"
-    sha256 cellar: :any, big_sur:       "0170a16da823ce77d1aad7db927b23a1adb12285a174f36a918275d7952eaaae"
-    sha256 cellar: :any, catalina:      "2983d5a448504389888720bf951713114ed7f010d96cde9289fdc5c4b539d303"
-    sha256 cellar: :any, mojave:        "7bcd780db5693475c7711eefbbcf703507865e06483e7338ab61027ec375c4bc"
-    sha256 cellar: :any, high_sierra:   "34d84eaef7f80632a6547903d640be06c6d92b9ca2b815b64b74943b4cf73e63"
+    sha256 cellar: :any, arm64_big_sur: "a08e1ca1be7f5d1b1cf4eee4efabf906fb59fec8422292fe124002aa98d11540"
+    sha256 cellar: :any, big_sur:       "fbc422ede343b2bd4047ccdf2f697430da636b66fc550697a2f921b97cebe18f"
+    sha256 cellar: :any, catalina:      "eb2c8a444b4cf1f09e35c23b91e7cc16c11bc63527bfc3e19a4442e41cfd4b4d"
+    sha256 cellar: :any, mojave:        "cf7b2b2ddb047582b9fb5c649d76ab6d4025ea328dff5ad22bcc4d929a8730ff"
   end
 
   head do
