@@ -7,10 +7,10 @@ class Glslviewer < Formula
   head "https://github.com/patriciogonzalezvivo/glslViewer.git"
 
   bottle do
-    sha256 cellar: :any, big_sur:     "f3ce8f0e2fc1954a66507e0035001a53999b3db181800a7e603adb49d2f545e7"
-    sha256 cellar: :any, catalina:    "8af79674f9aec125cac3abaca849ac39aaaf6189685818d95509cec45c026536"
-    sha256 cellar: :any, mojave:      "db43cd0ba38d9cf6a1d73f2be1b4d4d3bc0c8224219ef9a8c15449c89f75bd51"
-    sha256 cellar: :any, high_sierra: "b491ac4f3101dd7c0ba68d66f0df68400522aa1ab9d777f7c1f29ffabb56c3c2"
+    sha256 cellar: :any, arm64_big_sur: "0ec97c2e9044bbfd60b9e3a351ac776f2cda6ac13cf9a4bc126d922e2da2d253"
+    sha256 cellar: :any, big_sur:       "bcaaa427f4cfaf2736c995c24235be606a8e0e83cbaaf495097f684d2f7de069"
+    sha256 cellar: :any, catalina:      "17f665c2d066a6a01023300ed8a1fbad50ef078503978b3e7b4db63e6d483aba"
+    sha256 cellar: :any, mojave:        "94c59b694e9feeeb388aaf5aee69c387e4ea02348f178e34b715167b3af636af"
   end
 
   depends_on "pkg-config" => :build
