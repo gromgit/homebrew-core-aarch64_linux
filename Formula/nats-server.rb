@@ -7,10 +7,10 @@ class NatsServer < Formula
   head "https://github.com/nats-io/nats-server.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ebc7cd83b585031c9ce24bf783ed3d54412663b8e331ae86793dc21fdc1d687e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "931ceeacf3c156e4e84338ecd585438dca7c680289fabb918986e678642b87cf"
-    sha256 cellar: :any_skip_relocation, catalina:      "db509f960f3c7aef9f850c0b9987faf59a4b27a199d1590d920535895373ee50"
-    sha256 cellar: :any_skip_relocation, mojave:        "ec4164cc6323b8b02f2be1e78b85251584d216cecfe81287cf7434c060f11fff"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f41719f33e408ffbdf227f5b6603cfb40764330f380e6b55af130ba0d98001cf"
+    sha256 cellar: :any_skip_relocation, big_sur:       "8d432e07f71dd9dc84502b46c162060e940540ac9cde22f0402bb705c72b364b"
+    sha256 cellar: :any_skip_relocation, catalina:      "ff3b4441ca3b1ad45a46eabfe5cc01510571d0ffd70d89064cdd6db904168f5d"
+    sha256 cellar: :any_skip_relocation, mojave:        "a2ba78057b03278d91b748ced21c6c612e254251b27000059bc55cdee8c61feb"
   end
 
   depends_on "go" => :build
