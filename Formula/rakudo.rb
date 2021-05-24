@@ -7,10 +7,10 @@ class Rakudo < Formula
   license "Artistic-2.0"
 
   bottle do
-    sha256 arm64_big_sur: "3bd6655f7515bb3377031387f862eec4011dca90b1459091749224b668e4b9ac"
-    sha256 big_sur:       "0fd2bf4f14062c986cff5d327d3d4c2cd7d0ee26ab5b4d3fe236050402e9aed4"
-    sha256 catalina:      "0485dd2f40f4cc83f4755751bb30d02b8d34a84512f57cf3c1a9a8880b32f17f"
-    sha256 mojave:        "fe75fa9fedb267ee094d278cfc23564dd221a4dc8a3f470effb5c6d4d305f59d"
+    sha256 arm64_big_sur: "d0a8addc79c688704afeb06c5452457d1f0dc898d50920d4e4a0b8bd1efd9e0b"
+    sha256 big_sur:       "c1648e9fea3bb544db8e3b11a74b21565c9384e4bcaabb09669e95b84791abd1"
+    sha256 catalina:      "5b467dd6574efa7cedbdfc5932495e6d9ed71274c9b867c384b826b953949808"
+    sha256 mojave:        "e081300247c47462beaa31438cb07128731713cc4d41428a2ba3274ddef29377"
   end
 
   depends_on "nqp"
