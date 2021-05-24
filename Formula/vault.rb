@@ -16,9 +16,10 @@ class Vault < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "7e862ac177b6c07ef61532f721d8ca5a2f4ac61ed9321ec0555d1967e00bc9ac"
-    sha256 cellar: :any_skip_relocation, catalina: "d5c7f4c1ce2911fcdc1c310ffe1471f349eb5706529cc0ae03b40ad9c39ac93b"
-    sha256 cellar: :any_skip_relocation, mojave:   "b4279befa1452220235ef77cf875cf69546941163187302471136838db07e478"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "59dcde8e4b205eede07b296deb26892765274932877f92515ae4ccf7e96a108d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "dfb47517e60e62af028fd3f9b6ea44edba13b09b8e6f1f60117b5818eaef8447"
+    sha256 cellar: :any_skip_relocation, catalina:      "2fcf55dd69557596f208d5bd02a5c50bcfb14d8b8eb41b3064f433bc6a02ca4a"
+    sha256 cellar: :any_skip_relocation, mojave:        "ca6bbc64727611cfcec04778a6b8f36ad15db1b71f2b29979c736e9744fd7480"
   end
 
   depends_on "go" => :build
