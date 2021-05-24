@@ -5,8 +5,8 @@ class Vault < Formula
   desc "Secures, stores, and tightly controls access to secrets"
   homepage "https://vaultproject.io/"
   url "https://github.com/hashicorp/vault.git",
-      tag:      "v1.7.1",
-      revision: "917142287996a005cb1ed9d96d00d06a0590e44e"
+      tag:      "v1.7.2",
+      revision: "db0e4245d5119b5929e611ea4d9bf66e47f3f208"
   license "MPL-2.0"
   head "https://github.com/hashicorp/vault.git"
 
@@ -23,7 +23,8 @@ class Vault < Formula
 
   depends_on "go" => :build
   depends_on "gox" => :build
-  depends_on "node@10" => :build
+  # Cannot build with `node` while upstream depends on node-sass<6
+  depends_on "node@14" => :build
   depends_on "yarn" => :build
 
   def install
