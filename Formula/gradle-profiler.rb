@@ -6,6 +6,10 @@ class GradleProfiler < Formula
   license "Apache-2.0"
   revision 1
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "92d79f184d9dff7724d483c56d3ab6822fde8e7b30008fa90b9a3f8b57bc304f"
+  end
+
   # gradle currently does not support Java 17 (ARM)
   # gradle@6 is still default gradle-version, but does not support Java 16
   # Switch to `openjdk` once above situations are no longer true
