@@ -7,6 +7,10 @@ class Sbuild < Formula
   license "Apache-2.0"
   revision 2
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "7c54295e4c98758e18d7d5a5ffd76185e429561e59b4a716d25d3482e2546eeb"
+  end
+
   depends_on "openjdk"
 
   def install
