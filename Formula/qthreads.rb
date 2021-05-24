@@ -6,6 +6,12 @@ class Qthreads < Formula
   license "BSD-3-Clause"
   head "https://github.com/Qthreads/qthreads.git"
 
+  bottle do
+    sha256 cellar: :any, big_sur:  "1b38fc8670cd871f3bcbc3d0f7af6b7a481954d178265fa4000933ea4a081393"
+    sha256 cellar: :any, catalina: "4697fa448afd2b9cf71b618e9978b91399882b10265c04a9606eadb90d4ab9e4"
+    sha256 cellar: :any, mojave:   "0e4094e7737f755ebb39cbea97a3591927ecc8ded4f8654efb6c68dcc73a0928"
+  end
+
   # https://github.com/Qthreads/qthreads/issues/83
   depends_on arch: :x86_64
 
