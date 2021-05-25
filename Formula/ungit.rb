@@ -8,10 +8,10 @@ class Ungit < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3e965990622c195784b91fd0ad01731265843cc512ae80f2d0f9f6d41ca9b4e3"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0d2ebcb0625e8ec112ba65e8f477ad9547b4b349611f3209d150892f21100acb"
-    sha256 cellar: :any_skip_relocation, catalina:      "0d2ebcb0625e8ec112ba65e8f477ad9547b4b349611f3209d150892f21100acb"
-    sha256 cellar: :any_skip_relocation, mojave:        "0d2ebcb0625e8ec112ba65e8f477ad9547b4b349611f3209d150892f21100acb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "54ab4e9703e79db7145005c5f4e8a2b09001bc6a6a4c0ca0e074d20cb71b252a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6768008e7ce0700279019566b2c5fab0a906823696b225e54b883bc30d4b52b7"
+    sha256 cellar: :any_skip_relocation, catalina:      "6768008e7ce0700279019566b2c5fab0a906823696b225e54b883bc30d4b52b7"
+    sha256 cellar: :any_skip_relocation, mojave:        "6768008e7ce0700279019566b2c5fab0a906823696b225e54b883bc30d4b52b7"
   end
 
   depends_on "node"
