@@ -6,12 +6,10 @@ class GtkVnc < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "c4d93c7478a2c290005613240d088189785560435f8c4aa3031ec5af6c1196a3"
-    sha256 big_sur:       "959cf4a7bac1fee4f17fd571222b6bff7a3aa6b172b3abcc7af3088cd927b699"
-    sha256 catalina:      "f6e79e525133ea8c72d4be4b0719299141a8b206b9f547fd27b882b06a817f01"
-    sha256 mojave:        "1e932ef0f54e09e9cf107c6ef386ff49e1b1cfd107eca77e4d1c5569da71909d"
-    sha256 high_sierra:   "efb82f38076361165896bbf906881331c349082464fa8fc0b6b81f4c58b52f0a"
-    sha256 sierra:        "c244ffda67d3e559172ba2b9e2b1015011733630232c203f733f259d8a6dd485"
+    sha256 arm64_big_sur: "b07922526eaea0881a6394907b9cc332fc37852c5206a92692468243d13a2ac8"
+    sha256 big_sur:       "f4961c57ac8d69639f2f0a95d307ec85b0cee23f204666989853382158bf8986"
+    sha256 catalina:      "16cc1407520b9b5a6454507e1db7f7226d78320c353cd9f45130c9ba7883567c"
+    sha256 mojave:        "218453c1fa7ae8b188ecbfe0ca408beefff3fbf168fa1fdd397ac73c4336c031"
   end
 
   depends_on "gettext" => :build
