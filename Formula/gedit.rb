@@ -6,10 +6,10 @@ class Gedit < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "6f097cd4f7daddb9618a909de2ba910153f957cba402c441073846c04526f0e8"
-    sha256 big_sur:       "402c2c860d11d369ca9d176728ec3284937efb5db502a55963f6384306760a5d"
-    sha256 catalina:      "a7f5ddce54a7df117dde380612060a823f28ec881588c200d0190f8387cd872b"
-    sha256 mojave:        "15f7ac940fe92b12f4a34cefbf428ff677e9d12ab870579140bc5679eabec82e"
+    sha256 arm64_big_sur: "944db5b9131011efb9ac1ca370342b21895bc8c2220138c90fd137cc883ccc1e"
+    sha256 big_sur:       "7cee9c8a408d1f8bfc28f05475babd0e9d0236cfb2411042c56112c97d6ccbd7"
+    sha256 catalina:      "f36d6723b16e6271e0c5327b6d7723ed501c51bd1ab07a4c3c125ed877ff4e99"
+    sha256 mojave:        "5a842c19e3ff549f23d6854265423064666686548356d0c188df63b741d49d77"
   end
 
   depends_on "itstool" => :build
