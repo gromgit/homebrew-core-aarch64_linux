@@ -8,10 +8,10 @@ class Triton < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "794b472b3bf4bc30fc1f34c52856d122fcec3fdbf19b027818acee112460bdaf"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b4a13bf55599a12405fe995f6205a5c89650b37edc724d7d6b950c43bd159a09"
-    sha256 cellar: :any_skip_relocation, catalina:      "506183f304838197472fa6012308460e66365386ad38ff9c3cb748d0a9aff934"
-    sha256 cellar: :any_skip_relocation, mojave:        "08bd0a1aad4c30e8086d13db84cdc154caafed7d10122da68b5190adde747a82"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "df4487f4d2822294ed4bde9b4f8af1a67bf23e467dceaba168ecff50c4865b8d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "58babe7098da230bf1daa9b7e7838b683ee97b7a82d6a68e32ac1dc9699f8f84"
+    sha256 cellar: :any_skip_relocation, catalina:      "e3c6ee7a64059050fed8b4577af8711be23d63c0e765371347842a4233b36d3b"
+    sha256 cellar: :any_skip_relocation, mojave:        "de43242aef253303a8303740989570dc99a2ec2a9015668064e14ce4ec4a4d79"
   end
 
   depends_on "node"
