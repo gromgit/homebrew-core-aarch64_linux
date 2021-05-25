@@ -13,11 +13,10 @@ class Gnutls < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "2be786f86b84f77ce5d9c15d4f059a240b4284039109a383b3a1d47f32ace17f"
-    sha256 big_sur:       "72bc4290e20b342e85f6cc0e02f2d780eeff11bb1a9c40a4eb4473512ff09d9b"
-    sha256 catalina:      "774fe85d6dfd00e5882258eeaf5edc81e98bf4d074b7fe49a52bcf116e50bc8a"
-    sha256 mojave:        "0add13d231debe9e8a941f0295c09b87446127ca69bb2c67a069ac17cf6da858"
+    sha256 arm64_big_sur: "f63ca35051efae87447075f5d0ab1fcccb4503c8c94b7fa9c3a0c59710066390"
+    sha256 big_sur:       "49e6f4d5d47e7d241b1c931593a74cbdef02e74ed01788b8b8c8ff2da75e22db"
+    sha256 catalina:      "d9af37a7677414243fc1aa2359c388f090f86d893d50d88c2c5dd66191252980"
+    sha256 mojave:        "80bb92867bb86086d301658ff182b145699c3baa14cbfe83dcb9da48598b0237"
   end
 
   depends_on "autoconf" => :build
