@@ -11,11 +11,10 @@ class ArgyllCms < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "5e8e8a930085732ca5c9b8a2d1c17a3e061a2c0ec808e012cc66a7b1606c8b89"
-    sha256 cellar: :any, big_sur:       "4b35f61daa05c91346c27c6c51a18f3cff08569a70e7520abb93772c6a09fe83"
-    sha256 cellar: :any, catalina:      "e2d28da901faf4c20dc5269a79676cbf4b0a188e0d007100d8bb3945f41c31bc"
-    sha256 cellar: :any, mojave:        "6d5f4584dcbe74982cae2cd8d6162fa27d332508deb7414e9a22f473ac3479d0"
+    sha256 cellar: :any, arm64_big_sur: "3ae919d00b2a8977c21692d8b5a473982085a05a5718f9f15fa8647f2111362a"
+    sha256 cellar: :any, big_sur:       "a33f069f86d63448d1f2b8d04465ea84d902300a1ecb656cbf0808a3b8776791"
+    sha256 cellar: :any, catalina:      "d7fd1d597134461887b6477b4460fcc8fb2143d9c97e49b5dcc7ecf53758fe9a"
+    sha256 cellar: :any, mojave:        "941603de5eacbc65d306339aef0c955cf111679247b710fa8c099ffe82ea5db4"
   end
 
   depends_on "jam" => :build
