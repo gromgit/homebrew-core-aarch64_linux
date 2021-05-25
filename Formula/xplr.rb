@@ -7,10 +7,10 @@ class Xplr < Formula
   head "https://github.com/sayanarijit/xplr.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "083437e9ddb8743fc5b30125e3a8cf3c96df308e2da38d643c50038999d30be0"
-    sha256 cellar: :any_skip_relocation, big_sur:       "09ce7f44f1e1389361f858d088c8f7da3a1eab7eb5305e47947acea2cc40e86d"
-    sha256 cellar: :any_skip_relocation, catalina:      "c6fb62bddce85a5d647d4da666f3c961943fc879402ac684bc2531e09a50d58c"
-    sha256 cellar: :any_skip_relocation, mojave:        "2c45a418924fd06cf7087fcf6864f54a1a4a3c1cad1e948e9155bff85072c87b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7e7033ac4910bebe91b1b442b870719f71fd8fb815ede8dd3a524ba0d0e403d5"
+    sha256 cellar: :any_skip_relocation, big_sur:       "31e39150a0686544583c3b4a455996af6c5efba22dc92ffb8c80287626cd5d1e"
+    sha256 cellar: :any_skip_relocation, catalina:      "3466663841248203876e2e512073e9d6e1c2142ba45c7ed45301e35ee6cf7131"
+    sha256 cellar: :any_skip_relocation, mojave:        "7de37eadf978f6ad9f872c5a25c480c9d0485f27a1023f69ae38e6ec56aa3faf"
   end
 
   depends_on "rust" => :build
