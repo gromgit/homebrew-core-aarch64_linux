@@ -26,11 +26,10 @@ class Gcc < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "2542ede762fa167948115926cd8bd9236e11d5de282ff8d3b4cd8e74209b2ef2"
-    sha256 big_sur:       "041a6c4ec4bee580086bef7aec94a10ef375150d72d9047d28bbb6fb2a797976"
-    sha256 catalina:      "bc05fc7bb80169e21096aca2245b85b7cb7fd131663691af9fc2f6ba9990f61f"
-    sha256 mojave:        "b6516f3ab77f60f6811d403b19de4c6266aa26e5ef009e974211cbdd06b13d15"
+    sha256 arm64_big_sur: "5ad4c157cf19f01c6acfed380db28ff15276f02f4b5d6a20f5a7034583b174aa"
+    sha256 big_sur:       "4ec68e83ce46f4c686a4c9a7f90a748705543826da81e4c74c78d210b6c66c81"
+    sha256 catalina:      "c8405807d9bdab853432100e8d85bf3b4c7d4a4123067f099699a492d40a430b"
+    sha256 mojave:        "cac0a37271b71e40b3df7b9fa83190c11dfcd9640d8b3d02bc2ba2bae5b964ac"
   end
 
   # The bottles are built on systems with the CLT installed, and do not work
