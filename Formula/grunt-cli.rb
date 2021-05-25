@@ -8,10 +8,10 @@ class GruntCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6ec47d9e1a5db09d2c82fcf6cc1151deacab89b8598a229c30f15834ea322ded"
-    sha256 cellar: :any_skip_relocation, big_sur:       "08b79a5bf9fc841e91228912273b55ccc280fe8eca50f11abf9d347a431ee786"
-    sha256 cellar: :any_skip_relocation, catalina:      "923ae552d37cc07daf01370b8a0a631b90010b8f39a2e9d59dfeb57a1cdb020a"
-    sha256 cellar: :any_skip_relocation, mojave:        "62e7fe43b28c574ff3f46df1c3023530dae81d9e1fcae91e276779893a330bf6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8eafad607c94848c1bd74eca2a52b92533f399247c85d4de923ff12367ce2cda"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e1be76f2bb72f2cc111627400cf586487b8515a0051b96c4d8138da773d1ac73"
+    sha256 cellar: :any_skip_relocation, catalina:      "e1be76f2bb72f2cc111627400cf586487b8515a0051b96c4d8138da773d1ac73"
+    sha256 cellar: :any_skip_relocation, mojave:        "e1be76f2bb72f2cc111627400cf586487b8515a0051b96c4d8138da773d1ac73"
   end
 
   depends_on "node"
