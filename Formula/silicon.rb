@@ -6,10 +6,10 @@ class Silicon < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d258ffeb373ddd0d6b6bd36660fdd45a36564536c1fb4f43db5c8f1cc0ae8e28"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ed9e6e76ee8b694818de87106ee9c9608781ac5d18f4744ea8d197ba61664fcb"
-    sha256 cellar: :any_skip_relocation, catalina:      "59cd0ab050ed82e525ea507063e26c025de1b18cc7a5eac82119f6a4e42747b0"
-    sha256 cellar: :any_skip_relocation, mojave:        "4b458312692e17e124910bc35b093da0bf6f45909d3ab0bf06ab74816b27961b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "263754894f746da1464ee4b0f9dcdca0aa36d4d65298fc696794b0dd26a89d41"
+    sha256 cellar: :any_skip_relocation, big_sur:       "723f536f0dbcfaf9d7045d081630f4fe2a6b3fdacf5acb96961dbf163d256914"
+    sha256 cellar: :any_skip_relocation, catalina:      "7310d8a125fd568d0349e18d58341314ba834c5209c4526c6b1cf2496afda185"
+    sha256 cellar: :any_skip_relocation, mojave:        "69c3139d3686b14909f21b0e22a216f372ef2495271046c197a4ff36be7cdcf0"
   end
 
   depends_on "rust" => :build
