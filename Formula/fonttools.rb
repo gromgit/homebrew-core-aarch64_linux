@@ -9,10 +9,10 @@ class Fonttools < Formula
   head "https://github.com/fonttools/fonttools.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "56a35c6887ccfcbe7856dae88062a7a518ea983f45b8f4a734bd5b997ff60b3b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6d33777171d3c51372ebc3f9056b55e8c247e3cd52efe0043815436d0f35546c"
-    sha256 cellar: :any_skip_relocation, catalina:      "6d33777171d3c51372ebc3f9056b55e8c247e3cd52efe0043815436d0f35546c"
-    sha256 cellar: :any_skip_relocation, mojave:        "6d33777171d3c51372ebc3f9056b55e8c247e3cd52efe0043815436d0f35546c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "cce4badd2ebea6ef588b64d50bfe94968effe42fa6375ec84d1201bfad24fb16"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ce61f235ad4d19d9108484bec7cdd80e00f2d8b706480f6f30cea20e407b9a6d"
+    sha256 cellar: :any_skip_relocation, catalina:      "ce61f235ad4d19d9108484bec7cdd80e00f2d8b706480f6f30cea20e407b9a6d"
+    sha256 cellar: :any_skip_relocation, mojave:        "ce61f235ad4d19d9108484bec7cdd80e00f2d8b706480f6f30cea20e407b9a6d"
   end
 
   depends_on "python@3.9"
