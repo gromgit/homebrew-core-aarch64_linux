@@ -6,9 +6,9 @@ class Unicorn < Formula
   head "https://github.com/unicorn-engine/unicorn.git"
 
   bottle do
-    sha256 cellar: :any, big_sur:  "0df92b5a73a27807376ab728337601fabf538e8c94e68e26436f5b4ef76c52c8"
-    sha256 cellar: :any, catalina: "db49e0948f773702635011471c36b5782c47f3b360986cc606050d2ea5d419c5"
-    sha256 cellar: :any, mojave:   "fd6267dea877a4ef1f949397195aff710c8aca8d4473db396731212043f665ac"
+    sha256 cellar: :any, big_sur:  "6b4ac1a8bd225fdc4c495b446d42eea4dee7135120083202661fc04193fa57a3"
+    sha256 cellar: :any, catalina: "d621ffb19b4445c3bbedd344cf7e0e1f1f90f63ccfdb2f3b048aff0405724f22"
+    sha256 cellar: :any, mojave:   "034f10f2367e64a0ec7a36951ad03ae4c122c326d3a48add23654bbff4343ecc"
   end
 
   depends_on "pkg-config" => :build
