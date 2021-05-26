@@ -52,10 +52,6 @@ class Libsigcxx < Formula
       }
     EOS
 
-    on_linux do
-      ENV["CXX"] = Formula["gcc"].opt_bin/"c++-10"
-    end
-
     system ENV.cxx, "-std=c++17", "test.cpp",
                    "-L#{lib}", "-lsigc-3.0", "-I#{include}/sigc++-3.0", "-I#{lib}/sigc++-3.0/include", "-o", "test"
     assert_match "hello world", shell_output("./test")
