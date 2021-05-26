@@ -12,10 +12,10 @@ class Pgrouting < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "287799f4aa536484337fae2c368adb56b956d24f9b8f5000b9de3ac766c3a86d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7424d8d1bdd429b880334d99310c96a818081dbd0ff7e53dba6b9c02d6ff255c"
-    sha256 cellar: :any_skip_relocation, catalina:      "e5405302217126a60aca29ba25e2329dccccce81295f56134e1aeda600502950"
-    sha256 cellar: :any_skip_relocation, mojave:        "ec66fa1e4d1251ddd476aeef4287cfee248991fb094472b7baf41b3e922bcb6b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "01bb1d3dcbec16e438b1dc1491a47b5b8068d4638bbe77e4d23c2abc01ea7c75"
+    sha256 cellar: :any_skip_relocation, big_sur:       "cb2de38ec47a64ffeb7bf1fab3caf7e7936af672f13c1c26bf9911e25107888e"
+    sha256 cellar: :any_skip_relocation, catalina:      "3d8f445a2559cd5aaa03f4b2f082681ad2243ba42d339962f2a8967376e0e1af"
+    sha256 cellar: :any_skip_relocation, mojave:        "1f748c85da5b08ae3c7ceee5ff202a84ec2103fe578ce285f642c116800178f5"
   end
 
   depends_on "cmake" => :build
