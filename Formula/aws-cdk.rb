@@ -8,10 +8,10 @@ class AwsCdk < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5f1b063ca9b0ed0e64f881f2757660f669da1dee896e7daca626676c588e41ee"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7602ae966174baf89296e3ab6136125a6dc612363f6f22da12381eb78fcb6f1d"
-    sha256 cellar: :any_skip_relocation, catalina:      "7602ae966174baf89296e3ab6136125a6dc612363f6f22da12381eb78fcb6f1d"
-    sha256 cellar: :any_skip_relocation, mojave:        "7602ae966174baf89296e3ab6136125a6dc612363f6f22da12381eb78fcb6f1d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e68d2e2624c69299b3fed6b9ae01a9fbf7942bb7d74b136bc28a334d1548e658"
+    sha256 cellar: :any_skip_relocation, big_sur:       "db6c0ef5effb7232cc11d807f3eab7c2a9992a4191a00bc13536180eaeb2f6e8"
+    sha256 cellar: :any_skip_relocation, catalina:      "db6c0ef5effb7232cc11d807f3eab7c2a9992a4191a00bc13536180eaeb2f6e8"
+    sha256 cellar: :any_skip_relocation, mojave:        "db6c0ef5effb7232cc11d807f3eab7c2a9992a4191a00bc13536180eaeb2f6e8"
   end
 
   depends_on "node"
