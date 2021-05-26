@@ -12,10 +12,10 @@ class Goaccess < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "28622dba228f979a25f0e35e6926b359f6bb5cc0ad3f3383baeec7190fb6b86c"
-    sha256 big_sur:       "5415410ba76a1fae2b27883ecdc5b734a306d87cb251eee2cb6cc09548b1676e"
-    sha256 catalina:      "24c96e15f8b60ea0ff6a8b7f140f186c0c6e75f39d7cade67c23722e16a7c66f"
-    sha256 mojave:        "22143fbfcc714d039ea14dcbb9aeb1ea35cc375b9dce5ef22e53c7580723cc6a"
+    sha256 arm64_big_sur: "edf2cae9aee2f04bfed232263351d85ba465d4b4f16f2540cef94dfc7083eafb"
+    sha256 big_sur:       "4fe5025c31c92f254c124a5a57f64728e726d664c1ee9d2360b6f8f1dbb28923"
+    sha256 catalina:      "8843c8f41d07cfd6600d796aa4d03ae7d40e9bb99ad1bcbcd9bbcc542ce0a37a"
+    sha256 mojave:        "52fc0724bfd9ea7b500f49ae4cdfab72c17f8946df1aacb89b79a27e129a7cfa"
   end
 
   depends_on "autoconf" => :build
