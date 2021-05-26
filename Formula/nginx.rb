@@ -14,10 +14,10 @@ class Nginx < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "de4a909768a67c8159115b9c3d2ea6286e32117ab4010c1df863131f38ec4683"
-    sha256 big_sur:       "03ef939ecbbbd4908b330d58917e4236abf895fbebd371e88d5ed48baa60810c"
-    sha256 catalina:      "168a26055a04b21a9068bd722879c7873b7f7f1449cc7372bc9e0a07723f7d04"
-    sha256 mojave:        "680a503b0c1564700b1d6c0e8b36f97516c810adb02353332dbf2f2c852fafb2"
+    sha256 arm64_big_sur: "9d536ee9f8beb5cd1a5b7d72130bf9b17e69ad34e16477f0f55852e3eb4b7fe2"
+    sha256 big_sur:       "d4d16dc1e0c696d0e30a3a636c39528276c5a967a09a0e4be29a813cc01aa3f5"
+    sha256 catalina:      "03f0a7380a44620e47b410dce2da774d5730a8b12cff3b92e1cd064fc3c623bf"
+    sha256 mojave:        "07b8bf7d7e12b3eb92412755690c3c7b58e27f76af1538d13d78b7747a87b584"
   end
 
   depends_on "openssl@1.1"
