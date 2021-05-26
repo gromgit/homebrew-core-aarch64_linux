@@ -6,10 +6,10 @@ class IpinfoCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "136f4062559677cc98b40b1397d18aa07b9082d7b769693c22b3187c689ee236"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8b1f6ae126718d34b543b5a1d249fe474dde0f93dee281e405608089de48f946"
-    sha256 cellar: :any_skip_relocation, catalina:      "215f6613824d7d14ff932d2aa835be7858fe62c046dfe2e22d3bf170f75c0f1c"
-    sha256 cellar: :any_skip_relocation, mojave:        "d7b7be653ec858cc681d5383965e2e0bee4ee12c1b343aef1104ad1175722fe0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5ef6ac74514f04d4f0d8750f976350c34f6dcd4244b5ef1c255682db45ec3756"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c54f63386eae59b5e71138df8a5d11671076056633899d8b32dea27e73aeaf29"
+    sha256 cellar: :any_skip_relocation, catalina:      "880e7f020a5868018be01efc6f38899e1bebeda1cccdf7a3e1382ebbc2f00340"
+    sha256 cellar: :any_skip_relocation, mojave:        "0161fdb7268a3a6e5d0a81360708378bfb32d742ac239125bd9a51f74110711f"
   end
 
   depends_on "go" => :build
