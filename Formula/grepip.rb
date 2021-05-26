@@ -11,10 +11,10 @@ class Grepip < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4649b890194c5b7874efc6d38114072ef1ad52f8420bc213e2a9cfd589924a6e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "597bcefc2ec2bcd53ec06f69bafba7d9fdc8926fd9c04b833ac0ab02da1464bc"
-    sha256 cellar: :any_skip_relocation, catalina:      "de9d0dd22135c02f09364b5f30875ae7d9f32894a33270fd80301ccc53485f74"
-    sha256 cellar: :any_skip_relocation, mojave:        "a29a39e9aca3616d9a5400df48b91cdce2c73d91e8475c0d53de41fea4374b1f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "447eeb29e7bd5f931ea23b35f469de5b0b6f470b801006f36e703ef266d9cc3b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "93b99aeb650377891af7d77c56a4d2a5f8333e992c956feee8f3279cd19da622"
+    sha256 cellar: :any_skip_relocation, catalina:      "799364ae680994843df8998cfd5cbb991e80c7a8eb921923dc688f9811e4d320"
+    sha256 cellar: :any_skip_relocation, mojave:        "28b4231e5188775b6e017f96c5d8e90259c78e2a35c0d720f0a7aede49179423"
   end
 
   depends_on "go" => :build
