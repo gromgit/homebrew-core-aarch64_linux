@@ -7,11 +7,10 @@ class BoostPython3 < Formula
   head "https://github.com/boostorg/boost.git"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_big_sur: "a2c3334993fd0d0b32365afb3b07608e1716a5c558a9e54309d6d96c6a5cea24"
-    sha256 cellar: :any, big_sur:       "5a7b9abda6b57a79fbc3c0a0d1ad92e1955adee6cd88e4ec81a23e8be95d5f8a"
-    sha256 cellar: :any, catalina:      "0e6d214e6a1ca416d64d1d098e767a9429a90323aaaaaadf1ff58f77f1ac22c5"
-    sha256 cellar: :any, mojave:        "a14c587cfc74d561150bfca4884e3b179595dd7f113a2d39a5cb55b9ca7d8d0c"
+    sha256 cellar: :any, arm64_big_sur: "5c5d10ed0373c7e068e2ca80fa98ff39ac444392bbcf0d6932fe92259f0f9f4a"
+    sha256 cellar: :any, big_sur:       "031cfc31e2d655019467833a4c6ba4fcb7ed69f2e28798fead339cf5a1a84681"
+    sha256 cellar: :any, catalina:      "2f905a84c2f81d6037d16215e55e31feff2d5cccedb170e7294726d2ec3f80d9"
+    sha256 cellar: :any, mojave:        "9f4253a35144aabe0056e46b2c11c8c45d2fe4857b7d7cf4e2e728de19b8c044"
   end
 
   depends_on "numpy" => :build
