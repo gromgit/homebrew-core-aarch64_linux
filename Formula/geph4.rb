@@ -6,10 +6,10 @@ class Geph4 < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "02fd995c7ea923e57a6cb38e98e17edde83c0ddd69b43fb4162785e6a60b9550"
-    sha256 cellar: :any_skip_relocation, big_sur:       "1dd11d5679414da046e44cae9db03f58a3e79b8e86bd593245da746ca5081a1c"
-    sha256 cellar: :any_skip_relocation, catalina:      "8038773c1d0bdc37993798d1e4b281ddf40610e68a7b810f946bf08b7de1a68b"
-    sha256 cellar: :any_skip_relocation, mojave:        "9d4d62ece3463d0de12a3de0223044a3b409732b6e5ec833e4d55e7a8b2b6049"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e30d897151ef49f6b3534258a860a17f0c709627b1edbb8f6f6224dda521021a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c3d6fa35643b18acb05924af78a5fb4d25e07366ef5443c83aef8871dbf1afbd"
+    sha256 cellar: :any_skip_relocation, catalina:      "157f30802269827339b068ecc8c7c376b3e527629bd7c1436a5b6ca14b844cf6"
+    sha256 cellar: :any_skip_relocation, mojave:        "4b9a675498f96fa52a89bfbc4259824170cd52c0b8d8c69393b19d722ecbf6b2"
   end
 
   depends_on "rust" => :build
