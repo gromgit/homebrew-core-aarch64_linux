@@ -6,11 +6,10 @@ class Iperf3 < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "e03780161e2186e71eee0c94c9e7e1cf771bf29eba0b7ee0e403e5c5a001ec72"
-    sha256 cellar: :any, big_sur:       "03bc9b67b96e6ce9aaa7a9b42a488821f2ac6aa886a4c705def1a4711040cbc9"
-    sha256 cellar: :any, catalina:      "de2b4908fa73a967a17802a38447db1292e77842635eb905cda9fb776544e4fd"
-    sha256 cellar: :any, mojave:        "a17ff5710f6dd6cf26d85044be605580b4174e03f4b655f37b18279bf072f10c"
-    sha256 cellar: :any, high_sierra:   "ab41072fd6fb38994bbcedd1fa1cd1ad78feef49ecf56e45d0dcc96812cdf666"
+    sha256 cellar: :any, arm64_big_sur: "1372494b86b3d059cbd65e4f5b33db658d3f8a302a1e593f41c5139d56455f05"
+    sha256 cellar: :any, big_sur:       "294200ffa7ed707d26f12b9a9ee12ad7604066e1d3868798f3794569c32526c6"
+    sha256 cellar: :any, catalina:      "3e933685874b7b5a5c6de814e90ddb25afae5c267f9be2cfc16350a1e3469b19"
+    sha256 cellar: :any, mojave:        "49dc7070ba1f1c2ce73795e88e6acb1bca113faf882d3d25cf91c940c4a9a42d"
   end
 
   head do
