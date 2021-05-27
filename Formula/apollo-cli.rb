@@ -8,10 +8,10 @@ class ApolloCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "743cbf5293cb54d0b4f5703aed2c09b1e35152c9dffdad3b58d818ce54e17186"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5ec25f782d02b83e7961f1dd2cee0f23c2f0c3d49bfc4c52c7a558d3cfb43cda"
-    sha256 cellar: :any_skip_relocation, catalina:      "5ec25f782d02b83e7961f1dd2cee0f23c2f0c3d49bfc4c52c7a558d3cfb43cda"
-    sha256 cellar: :any_skip_relocation, mojave:        "5ec25f782d02b83e7961f1dd2cee0f23c2f0c3d49bfc4c52c7a558d3cfb43cda"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "394ce99bc7c26f5690980007a6e92e998acc682378b67fd8dd370655d7e87f39"
+    sha256 cellar: :any_skip_relocation, big_sur:       "177b60ba635cb722708dabf6f29cfdff587b33331e82d27450bba242cca10b5c"
+    sha256 cellar: :any_skip_relocation, catalina:      "177b60ba635cb722708dabf6f29cfdff587b33331e82d27450bba242cca10b5c"
+    sha256 cellar: :any_skip_relocation, mojave:        "177b60ba635cb722708dabf6f29cfdff587b33331e82d27450bba242cca10b5c"
   end
 
   depends_on "node"
