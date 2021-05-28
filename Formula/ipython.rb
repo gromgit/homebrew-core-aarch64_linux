@@ -3,8 +3,8 @@ class Ipython < Formula
 
   desc "Interactive computing in Python"
   homepage "https://ipython.org/"
-  url "https://files.pythonhosted.org/packages/19/36/1dcbe9e13fcdce110f379d1169ba45e15cb4b850a55d95c806444c30194e/ipython-7.23.1.tar.gz"
-  sha256 "714810a5c74f512b69d5f3b944c86e592cee0a5fb9c728e582f074610f6cf038"
+  url "https://files.pythonhosted.org/packages/6d/45/2e3faec0b406a1ee43ea363bec8ce1d629c8e5be9e988e31290a983ce211/ipython-7.24.0.tar.gz"
+  sha256 "a171caa3d3d4c819a1c0742e3abecfd5a2b8ab525ca1c9f114b40b76b0679ab1"
   license "BSD-3-Clause"
   head "https://github.com/ipython/ipython.git"
 
@@ -30,13 +30,13 @@ class Ipython < Formula
   end
 
   resource "decorator" do
-    url "https://files.pythonhosted.org/packages/a9/09/dd085a8afcf48fdaba851fe10956d5dbf1e9091206f7ca717223563f75c2/decorator-5.0.7.tar.gz"
-    sha256 "6f201a6c4dac3d187352661f508b9364ec8091217442c9478f1f83c003a0f060"
+    url "https://files.pythonhosted.org/packages/4f/51/15a4f6b8154d292e130e5e566c730d8ec6c9802563d58760666f1818ba58/decorator-5.0.9.tar.gz"
+    sha256 "72ecfba4320a893c53f9706bebb2d55c270c1e51a28789361aa93e4a21319ed5"
   end
 
   resource "ipykernel" do
-    url "https://files.pythonhosted.org/packages/0f/f8/4d209155eaa3ccf4a419bd5768b50c8b6567d5db15863c18d3e481c4d6a0/ipykernel-5.5.4.tar.gz"
-    sha256 "1ce0e83672cc3bfdc1ffb5603e1d77ab125f24b41abc4612e22bfb3e994c0db2"
+    url "https://files.pythonhosted.org/packages/6a/9d/7b8f426f6ad54303a2bfc080816f6adc48eb9ebab50927bbe65b4d7d587b/ipykernel-5.5.5.tar.gz"
+    sha256 "e976751336b51082a89fc2099fb7f96ef20f535837c398df6eab1283c2070884"
   end
 
   resource "ipython_genutils" do
@@ -105,8 +105,8 @@ class Ipython < Formula
   end
 
   resource "pyzmq" do
-    url "https://files.pythonhosted.org/packages/a3/7a/561526861908d366ddc2764933a6090078654b0f2ff20c3c180dd5851554/pyzmq-22.0.3.tar.gz"
-    sha256 "f7f63ce127980d40f3e6a5fdb87abf17ce1a7c2bd8bf2c7560e1bbce8ab1f92d"
+    url "https://files.pythonhosted.org/packages/99/3b/69360102db726741053d1446cbe9f7f06df7e2a6d5b805ee71841abf1cdc/pyzmq-22.1.0.tar.gz"
+    sha256 "7040d6dd85ea65703904d023d7f57fab793d7ffee9ba9e14f3b897f34ff2415d"
   end
 
   resource "six" do
