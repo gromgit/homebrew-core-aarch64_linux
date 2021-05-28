@@ -8,10 +8,10 @@ class Jc < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "88cba1f06ea999e74ceb8efcd3f93fbfda19892b61b4a8ce9a1e8493e5ff129a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "29730db4a0abf2244a20632034f9f456b432e89a79cc5e1ad78e455c5cf78a58"
-    sha256 cellar: :any_skip_relocation, catalina:      "06d01c9f59fe9ee39cf1195e710c8eeb163568ad2c45845423ed4591e147aa98"
-    sha256 cellar: :any_skip_relocation, mojave:        "383be5fb866c39fd73a1ce2988bb55536db7b34d6bcd27911608da9f031fbd6e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "94746819a6038789fa25b500a8c2dd64b9080b396796fb23e69397f55b60f5fd"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6ed3658511927c0a7d3c2d9f2ca3ab6b23aa91bae01d4523ca1da5cee37986e9"
+    sha256 cellar: :any_skip_relocation, catalina:      "b92b36f428ee87fd7f7235318d33d00c13cdc9f0aa66f1d56cf27a7d7c375aa4"
+    sha256 cellar: :any_skip_relocation, mojave:        "f91594ede4ff7bf770bac6279220d2d06517750b345b4cde1eec4e704d3087bf"
   end
 
   depends_on "python@3.9"
