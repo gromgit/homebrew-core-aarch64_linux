@@ -16,10 +16,10 @@ class Qemu < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "ed35771ec8725d39c1d8113496d3d5eb826c005707166d4d4245414b72917d6c"
-    sha256 big_sur:       "b3e345a9bdf7b44c9250c3a806d30509903a025c6a10e021804e4b0389906a76"
-    sha256 catalina:      "9c2c7f34bdaa6e2398b1a54385b3e25a2b67c19e3f8ceae8ea9b649b5626448c"
-    sha256 mojave:        "06e7e68f8201f7b3345b74ba5fe5582c42a35da5285cf7914b946403b2c7c797"
+    sha256 arm64_big_sur: "3fcae0fc1d2a2f93fb2822fbed398b34170b0c142fadebc149e27988e68bcf3e"
+    sha256 big_sur:       "93b55db46955010ccb2e017bad0b5bcd6cfb663261271fcead604ebfc008a445"
+    sha256 catalina:      "936594517984109e17548df23a38eab142df9d9f2aba2b73db5fc1154d7a2a81"
+    sha256 mojave:        "77413fd07a33641ecaf46a41dd04895d75c0f2cd6e12a9722afa5cecce209b53"
   end
 
   depends_on "libtool" => :build
