@@ -5,6 +5,13 @@ class Authoscope < Formula
   sha256 "977df6f08a2fece7076f362bc9db6686b829de93ed3c29806d7b841a50bd9d1c"
   license "GPL-3.0-or-later"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1d62f93b6ba4ca88798e510ee70fa66c2c4b280ff20eabc5aaacc59166b3a83d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "fb5667604590e7f7aa5675866b03bba8cdb8649dd32f543a6853d70ca2d9ead5"
+    sha256 cellar: :any_skip_relocation, catalina:      "c5c82345a6556076b1dd30e2b80ac51936ce8a910f4013f685b7207a7d9589fc"
+    sha256 cellar: :any_skip_relocation, mojave:        "f618a86f7523021c5ca54730ea6b42bfc74d73a6d5e6a730e7f4d2b0028c2d6c"
+  end
+
   depends_on "rust" => :build
   depends_on "openssl@1.1"
 
