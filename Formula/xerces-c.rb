@@ -7,11 +7,11 @@ class XercesC < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "482e14a0ff78e66b3f701a744411b2144479f69a7d4b876def7723d4683ae81a"
-    sha256 big_sur:       "9707a1e03e5d7b38851d080b2248103ce1780b0ae76d8ad1579187b2178700c0"
-    sha256 catalina:      "3591a0891b6796e46eb12c7ba5fdac497e96e624eae13f0596a3cc58e64d3f29"
-    sha256 mojave:        "3ae5c637d059994fb5549ecd066a16f690a8974dd9284161fa5aa84854b4b9c3"
+    rebuild 2
+    sha256 cellar: :any, arm64_big_sur: "ad9251257543aee28e08fbc5f433a5ad72c0065511c09d19c888bf28b5bbf21f"
+    sha256 cellar: :any, big_sur:       "6a561a0f4175e7da6790b2beaedf185516a118116402a674a6b936d5c3236575"
+    sha256 cellar: :any, catalina:      "743af0adcd563f604bf3f057d1144b9e11bc1b5a9e842f82d430301d2b5fc185"
+    sha256 cellar: :any, mojave:        "cf22a3e57f6e6e279e9eb476bb80c08d18979938f54d19347fd103ccdc7cf78e"
   end
 
   depends_on "cmake" => :build
