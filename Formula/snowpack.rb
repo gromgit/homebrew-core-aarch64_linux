@@ -3,8 +3,8 @@ require "language/node"
 class Snowpack < Formula
   desc "Frontend build tool designed for the modern web"
   homepage "https://www.snowpack.dev"
-  url "https://registry.npmjs.org/snowpack/-/snowpack-3.5.1.tgz"
-  sha256 "d0fb516d730e8c28cf5a5ae78c2ac7bfd58ca12fb67bfe5d6bde49c92bb8916b"
+  url "https://registry.npmjs.org/snowpack/-/snowpack-3.5.2.tgz"
+  sha256 "1f56d7d2ef4aa344a443df02aa9ca91739dc89ad1d531d514782bb93c1ab5695"
   license "MIT"
 
   bottle do
