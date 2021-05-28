@@ -18,11 +18,10 @@ class NestopiaUe < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "21dd1ec76826e208b26d981ebfafbef95d8c2f4a00330cd7556bc366e5bc7745"
-    sha256 big_sur:       "d6a31de30e416aaa7cb365b22c35555947fa4967d3f0d7b334694e63e70c08a8"
-    sha256 catalina:      "19acd9260a874dec614062d0362a5936a0d9322e9fe66f0f8426d0dec67a6dd6"
-    sha256 mojave:        "e41a57949e9ebeffd1fa72de619da0dc2bbc813adf1b83922a0151362a9b9f04"
-    sha256 high_sierra:   "dc7632deb424cbfd112350aa1ddad0d1b0715cce9ebfda0bbbd8e77640cea044"
+    sha256 arm64_big_sur: "788e9075b691d0eb39cd89bd0951fe1510af3dc2838324f8cd7a2a982a80803f"
+    sha256 big_sur:       "0d7aa5be67ed9f42a10b902706cdcb3fbbdf2dbf106f590c9a340f702cf675c5"
+    sha256 catalina:      "e18051d4add14d42cc3056646dc825679718ef8c92338a411a94a5cd97a4b659"
+    sha256 mojave:        "3436bde863064391e63bb7058dd15da362a18470976ed2aebf963d315748834d"
   end
 
   depends_on "autoconf" => :build
