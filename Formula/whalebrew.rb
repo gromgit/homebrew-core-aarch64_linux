@@ -8,10 +8,10 @@ class Whalebrew < Formula
   head "https://github.com/whalebrew/whalebrew.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8353be040989f4bff9fd7817d07d4c2d74865700760101e7063b511bb8c760b9"
-    sha256 cellar: :any_skip_relocation, big_sur:       "81bec2d30d79be2ae2102100ad99ae3c70d1b6729b4b93c32fe6ba743f9a6be8"
-    sha256 cellar: :any_skip_relocation, catalina:      "f901fadcfb4bea48de0317c43b6cbbe292dd58a271f3c42a1731eee964fd6ba1"
-    sha256 cellar: :any_skip_relocation, mojave:        "13cf645f882ac7cb4350af0b607ca0732c83a4260dc41a30b8cf37531c3d11d2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e631a8b2926e1889419048610e4cf971afe61941e03525a1e5658a1da05b10e6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b895a6a75c4018afe7513cb505faddc40cbfb2adc147b9d392d2d78228da5745"
+    sha256 cellar: :any_skip_relocation, catalina:      "76af29939b18de9fa8814ac0a1e22ed180f71ecbea55656bd76057a3f6c133cf"
+    sha256 cellar: :any_skip_relocation, mojave:        "c1ab9e50235621d22b1176896ab682868aeddd81516a4374c485d217c0fb6b55"
   end
 
   depends_on "go" => :build
