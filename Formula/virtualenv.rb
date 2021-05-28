@@ -9,10 +9,10 @@ class Virtualenv < Formula
   head "https://github.com/pypa/virtualenv.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a4579d2d2860d9918f094264785221bb8752328b87e631735ac3b7457d326bd1"
-    sha256 cellar: :any_skip_relocation, big_sur:       "264df06ecfef5fcbd2e7dac6b164a1193c147931113985a9c9069d71878c6eff"
-    sha256 cellar: :any_skip_relocation, catalina:      "9f3f5cd5cc3e7a3ecc8941a4b036cbb50b3f8b3561807a25e694a8ca9da5c907"
-    sha256 cellar: :any_skip_relocation, mojave:        "efd230ea97e150e7a55a8086e96c1ddf86dab38271ad6ee6f5ee34d4dc8d2d78"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1f691389e7674a57173b4fe228a53355300aeb63ebc56b5a5600f38324c5e4a6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "71b72ed55b7c24e18ae6a6cce2e3696421e86932d6e98f1570ed30dd10a84d53"
+    sha256 cellar: :any_skip_relocation, catalina:      "d5bbab08495a5df01a4d20c38016c664d3c53e7008f7b0ff0f365726a5bc3364"
+    sha256 cellar: :any_skip_relocation, mojave:        "cb5d78013036c2f4c3b68fa9b5022d66062ac71ee5ff90b01967809327b55f7a"
   end
 
   depends_on "python@3.9"
