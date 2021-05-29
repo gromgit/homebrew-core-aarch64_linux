@@ -13,10 +13,10 @@ class Calicoctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "622d966ce5503d359a68fb9095840e193e46157d518916fd00e7fe352872edd8"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e89e80c43a6f743530c42bb6b5e371bb449f64dda3bc1671f01f464905be9c18"
-    sha256 cellar: :any_skip_relocation, catalina:      "2f76e3802048775984e9cdd7db889130d158a983d6b52543f22ee58de6b7ea34"
-    sha256 cellar: :any_skip_relocation, mojave:        "53465951c381d8fadcf36894e78dbd92f300785f6562b98bbf519efabcd47aae"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1a0f248d5b5f9059ed24a4cd762adb2e195f7a1c721d4f4ec40f7f707d9c892c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "400e7c298d661badd89ac967a33921297657a6f53a4155ee4fa620c7b71b8040"
+    sha256 cellar: :any_skip_relocation, catalina:      "ad8a82058db04666e990a8963dfa233b5db2d852257b14a7b98d05771d96a38a"
+    sha256 cellar: :any_skip_relocation, mojave:        "a44473b4ee9ce7ca1a4a9444a1a4d06e51f6ecc0142a00b62d2f2c1e0024c1ff"
   end
 
   depends_on "go" => :build
