@@ -1,10 +1,9 @@
 class SwaggerCodegen < Formula
   desc "Generate clients, server stubs, and docs from an OpenAPI spec"
   homepage "https://swagger.io/swagger-codegen/"
-  url "https://github.com/swagger-api/swagger-codegen/archive/v3.0.25.tar.gz"
-  sha256 "3a9b525c8109afaba7333dfc070de148c18c3e8596382b89bba591e0394ac5e0"
+  url "https://github.com/swagger-api/swagger-codegen/archive/v3.0.26.tar.gz"
+  sha256 "01db9839aa443f4c351324c4150af8b5e06eca95452e6195354c3fcd91a052b3"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/swagger-api/swagger-codegen.git"
 
   bottle do
@@ -23,7 +22,7 @@ class SwaggerCodegen < Formula
 
     system "mvn", "clean", "package"
     libexec.install "modules/swagger-codegen-cli/target/swagger-codegen-cli.jar"
-    bin.write_jar_script libexec/"swagger-codegen-cli.jar", "swagger-codegen"
+    bin.write_jar_script libexec/"swagger-codegen-cli.jar", "swagger-codegen", java_version: "11"
   end
 
   test do
