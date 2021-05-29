@@ -6,10 +6,10 @@ class Ncspot < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "2b7eb1a8ca078a4fcc7c82ff6f45dc473c7a2e195bba36d0c106f4e36639942f"
-    sha256 cellar: :any, big_sur:       "1e24de89701b9a3f8472f0d5be8ea9163894654f3f5495f54b88956505c03752"
-    sha256 cellar: :any, catalina:      "6a9d37eca603aa14c7f567851f104db6c36793edcd9f1d452e94401721f698ef"
-    sha256 cellar: :any, mojave:        "a3315bf1170dcea0fdc9e0cadac6793f78f6b6663622dbe01a19636e80459878"
+    sha256 cellar: :any, arm64_big_sur: "47b1ae31cf96c8a265ad98a2b5d5c69a521a94fb0b15c2cb550e9647ee995a8c"
+    sha256 cellar: :any, big_sur:       "5d71fdfe922b2ef8ed1dea34f06fbce1b10f50e7a255f047c9b07f3c4e3d265f"
+    sha256 cellar: :any, catalina:      "b09b77cefddfab774b14cea355a5d8cfca9cbb4b17e8a379af2e415537a9f8e0"
+    sha256 cellar: :any, mojave:        "b86301b5fbc032455434ae2a1382a636db16cb89268a99a0e32151742307eb3b"
   end
 
   depends_on "python@3.9" => :build
