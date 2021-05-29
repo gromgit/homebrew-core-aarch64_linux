@@ -8,10 +8,10 @@ class Revive < Formula
   head "https://github.com/mgechev/revive.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5140eea58dffb9525b63a9d6483e3696662f3f44352fc0555862d23047226e79"
-    sha256 cellar: :any_skip_relocation, big_sur:       "936d94d5807f1b3ca1c110ff51347848875cdc83f077f0c14ac50363d526528c"
-    sha256 cellar: :any_skip_relocation, catalina:      "3c5a1640c8619108a6775da06575c571f1f935b510e2f762b66ec4e8a7100338"
-    sha256 cellar: :any_skip_relocation, mojave:        "f0f79abb069d51418d4ef23f0567ed9ee2c116f3d37d59d5e92eca1c62de94ae"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7470c45d28f504e31687ee0549cf4774d1cb430ef3d45714b74991029ed9595c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ceba55c3db9f94434837c58fc68d64d259de0923bc7950e8ec7894ca29339dcd"
+    sha256 cellar: :any_skip_relocation, catalina:      "038b084e928abb635b08a776e73b8bd198027194c450a03b54bd786f7ee84674"
+    sha256 cellar: :any_skip_relocation, mojave:        "f02d8da6764f5592fc788fc3fc2b4b77b243fdc27b124e018aa41f2aaf6fe74d"
   end
 
   depends_on "go" => :build
