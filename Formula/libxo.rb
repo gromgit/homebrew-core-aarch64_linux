@@ -6,10 +6,10 @@ class Libxo < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 arm64_big_sur: "46b68b40babcce388ba53e357fc204b7ca9077882703328eaa3caa0298a3247f"
-    sha256 big_sur:       "4c3d730c8da43b89a8e7b322d0093f6a8c1d557800278620dd086d022e0ddeb5"
-    sha256 catalina:      "f238413de8067d4a86ddd0e784d033f42effd96f041ac48f97bd1d1e40c55737"
-    sha256 mojave:        "9c8f3a24ae3b83cb1d2b9db171fa83e0d9a77415bed8f4930f7d31a7a506e25d"
+    sha256 arm64_big_sur: "12bbc75f4c8246d85e00617b06bc3ad255e554841f84e1d0ba2cbf2fc0b14ed4"
+    sha256 big_sur:       "a403d9dfd41e92094beddf4ff7d4fd490e2ce7c4dbaeb2ec64095182d171a635"
+    sha256 catalina:      "71eaebeed3f6b9b1d4bb08019929fb0a3fbd68a69923ded21cefa6de1feae8fc"
+    sha256 mojave:        "eb8f873d50703f142665c047e295fb09ffca521106025ba7b3c2404f85521ebf"
   end
 
   depends_on "libtool" => :build
