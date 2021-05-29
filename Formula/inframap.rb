@@ -7,10 +7,10 @@ class Inframap < Formula
   head "https://github.com/cycloidio/inframap.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "80075f243d2551b0c4ca1ee8ef21157b71a979907b92c0dacc112201f28ef35b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "cf1a83d1f799748f6b69a36798e7809478930535cf80e7b3858365f5dc50ddaa"
-    sha256 cellar: :any_skip_relocation, catalina:      "d7365e1fe3d502bd2498addea61dff681e45963915683963fef7674772d8dd08"
-    sha256 cellar: :any_skip_relocation, mojave:        "ff8276a21c1890a3ce7b35aee8400ea2ce42ecfb8d843f495c176572657b46cd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b1c2d65f241fdd96b8f1ce1313d9b842fe3843beba660020d8ae0e67e449e25b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e222c69e1d6d56dce622611002f4ebb32d36167159b100ec6b701decebe09a00"
+    sha256 cellar: :any_skip_relocation, catalina:      "9e1a83033b1d39d0dac35432bdbbaa025e74c056e997c7b2bd753bb595d88c8b"
+    sha256 cellar: :any_skip_relocation, mojave:        "0920f4f8dbc51759de6602275194546f811cbaf292d68f8be0ddb0737c136ddf"
   end
 
   depends_on "go" => :build
