@@ -7,10 +7,10 @@ class Caire < Formula
   head "https://github.com/esimov/caire.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0090dc37161ce7aff26f2fe47f56908355440c59909381c7c2bc420d0a9a02f3"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8ab75ba3776f3325a6e534585a3f0caeca4b7b984337ada3adda768018361484"
-    sha256 cellar: :any_skip_relocation, catalina:      "a330a5bbbc00f82e32950265d39ddb5499b6190f8eb02c500a18d46b5b795bff"
-    sha256 cellar: :any_skip_relocation, mojave:        "5aa3249d567a0e668e2b0437942270a7834868293eceab2a33a1e6335ebdcf2d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9c0ce2451e9cc12885d493f1a378ddf847c9110b46c50b78cffb1e3a573b2c62"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ad8b6545e150fa79d11c5a3fc47d6babb6ffab6c60534cb2bf061c74c4ba1d51"
+    sha256 cellar: :any_skip_relocation, catalina:      "540d8b523e5863f41c8a3bf9aedf0fc5cea694d122a26f60729fa02fd42273ad"
+    sha256 cellar: :any_skip_relocation, mojave:        "dd5095e0999f730dc52cd15ad2eac292ad381d96c668c3a92ba3c84dde7c97cb"
   end
 
   depends_on "go" => :build
