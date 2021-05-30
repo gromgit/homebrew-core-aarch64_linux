@@ -8,11 +8,10 @@ class Molecule < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "1d5de2bc92509056999e4d4b67c45d9cbd6bc3c119ba82f968083fad31df04ea"
-    sha256 cellar: :any, big_sur:       "47ba5fad180a90b63128bd9082ebb9cd36d14c283db7ec1c9ffd16c56f4c9ba6"
-    sha256 cellar: :any, catalina:      "cbe3109e96ef69ac66ced418e9371833b43d56a834fb174cb5ec08e4abc474d7"
-    sha256 cellar: :any, mojave:        "07e705ecd5510ff37ca6b9643213430f48e28e6ca66d75eb5658e566e7567081"
+    sha256 cellar: :any, arm64_big_sur: "a731995fbcebb2bd1bdf806cbaed831d88ff44d7169eee9ea889c8dd3cab4e63"
+    sha256 cellar: :any, big_sur:       "4a8a1bbc92c1a8fa0693796dd6cd9d6c327d13b7a9f9e6f85e17ee6e163bc4c8"
+    sha256 cellar: :any, catalina:      "a9d3783072d71d85d762ee76fd7855f7573c4e7d8d54a2990d901120872958e4"
+    sha256 cellar: :any, mojave:        "89d5bb4655cb63aac298ee253c0002e6e83b52a244cbc116b9313e34c6f74ecc"
   end
 
   depends_on "rust" => :build
