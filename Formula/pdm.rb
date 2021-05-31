@@ -9,10 +9,10 @@ class Pdm < Formula
   head "https://github.com/pdm-project/pdm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1ac5ab7c327a0d046b9dd13566b3b994a4adc8cfdb6cc1fb01c793b936d20ed1"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0d3fd7ab4f4eaea00c0db3a5b7a7b151641360c790b1994ffb38c6443d101a9d"
-    sha256 cellar: :any_skip_relocation, catalina:      "dc111d11108c22f79effd6f229fc4e656ce00aa4d0a9b32a4d5a1d23c2dd6e96"
-    sha256 cellar: :any_skip_relocation, mojave:        "6d00bcf4ac5a1a1a0de109b33ca5cffac9d13edfcd6b8bec8aafbea02448af87"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "af6270ceccbfcb17c17f1953c0af37c6a4a6d41c23c4c8c3ad8fb7ab73bc0e14"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b39ff64712e7e23f0f6a49b97ac18dc5022a8ab235b441b26f98e42e3ab4dd09"
+    sha256 cellar: :any_skip_relocation, catalina:      "2c8dfa071d55a99df894779b576cdf1e4acd4fbd5b1c8f080dd7eac4911a59b1"
+    sha256 cellar: :any_skip_relocation, mojave:        "60c7503ea14b6ad799523368b212baa2e743058773a752b1a6f9cb4566072816"
   end
 
   depends_on "python@3.9"
