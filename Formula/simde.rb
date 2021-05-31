@@ -6,6 +6,10 @@ class Simde < Formula
   license "MIT"
   head "https://github.com/simd-everywhere/simde.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "2b76aa4bfc8e2fe4c0af7a594e7f25aba0575b4f0ca9babef7057215e9cafe74"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
 
