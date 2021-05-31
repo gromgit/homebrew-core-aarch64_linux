@@ -11,10 +11,10 @@ class Dialog < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3426b2e8d639857b7c7b4ff8cfd7d1b907d40e9b52268e3cde2c6fca860bae8f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "38bdd48f63fded5254924dda25fdc060c96bc0cb9181068bc54326212f065ccc"
-    sha256 cellar: :any_skip_relocation, catalina:      "f40fc293690fcda948cec968736b8b08120ad46262a65324ff3ff86f5ef91fae"
-    sha256 cellar: :any_skip_relocation, mojave:        "ce1ff4e4585bd9b656ea533f1fc04ca398ff4d8fc0879389ec7d13470ac74b41"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3c0a2d6c566c6e52b60f89473f2302fc358b5b0e7bdfcb56e68f4156b19935de"
+    sha256 cellar: :any_skip_relocation, big_sur:       "efd474be5a0e0afeabb52e507e04340c6eecda2b27cce99a9c33c0f5ed20e47d"
+    sha256 cellar: :any_skip_relocation, catalina:      "0d0443b814de110ad082853b803476292507d8e069316e2280097ad5985ab768"
+    sha256 cellar: :any_skip_relocation, mojave:        "823a60bde7692ba06fedd66b95fa7eee00d36ad327bfa6c2047018e234eddb1a"
   end
 
   uses_from_macos "ncurses"
