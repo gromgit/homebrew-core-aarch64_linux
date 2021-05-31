@@ -9,7 +9,7 @@ class RestShell < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "887fccddf93ec8546b97c3a2351b3111d7869eb5576b401b9c19e6ec49147b2f"
+    sha256 cellar: :any_skip_relocation, all: "427b112bc4cae3c63c76e6870f7ad2d93954d7a83109c66cd027cb275fb04eba"
   end
 
   depends_on "openjdk@11"
