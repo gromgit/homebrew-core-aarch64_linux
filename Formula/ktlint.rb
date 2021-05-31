@@ -7,7 +7,7 @@ class Ktlint < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "3e579a1c6a074922e7280071c9cbd87f1604d645b8a1b694b9ecc95739e95111"
+    sha256 cellar: :any_skip_relocation, all: "eea9350d3a824457f7ca02d8fc87180e70d55a27622db3c2c25a001ecb3c5164"
   end
 
   depends_on "openjdk@11"
