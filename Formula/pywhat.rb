@@ -8,6 +8,13 @@ class Pywhat < Formula
   license "GPL-3.0-only"
   head "https://github.com/bee-san/pyWhat.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6440cd5a863215e48c456dc4099fac28ec6f2a04eabaff9cf6056ab4bd1713ec"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ba2d674032ed6a2a66dc4b3c013534c453755f4b90dc8cfc760e180cc9b22033"
+    sha256 cellar: :any_skip_relocation, catalina:      "7f381618f1519f65cdd8bac8d3e7a6861f315ef24b7edee1cb2866b1e5feea8c"
+    sha256 cellar: :any_skip_relocation, mojave:        "009fcb324d26813f2661c38138aa9e8e51a00b7505d5cc08d5e2131aca6c0e2d"
+  end
+
   depends_on "python@3.9"
   depends_on "six"
 
