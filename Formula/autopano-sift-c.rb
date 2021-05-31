@@ -22,10 +22,20 @@ class AutopanoSiftC < Formula
     sha256 cellar: :any, yosemite:    "f38fa9a0dc3b30352155bafdad91f18b01ddc11db7c27c164d23def252ec7513"
   end
 
+  # Upstream dropped support due to unclear licensing terms.  See:
+  #   https://groups.google.com/g/hugin-ptx/c/85yJ6SSd7Eo/m/SkxWF3hGBQAJ
+  # Last update was in 2009
+  disable! date: "2021-03-28", because: :no_license
+
   depends_on "cmake" => :build
   depends_on "libpano"
 
   def install
+    # libpano includes Carbon.h which on Big Sur indirectly includes CarbonCore/Components.h
+    # This defines a typedef named "Component" which causes a conflict with a typedef used
+    # internally by this package
+    inreplace %w[APSCpp/APSCpp_main.c MatchKeys.c AutoPanoSift.h AutoPano.c APSCmain.c],
+              /\bComponent\b/, "Pano_Component"
     system "cmake", ".", *std_cmake_args
     system "make", "install"
   end
