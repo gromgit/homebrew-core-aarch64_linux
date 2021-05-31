@@ -7,7 +7,7 @@ class Swagger2markupCli < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "462e764f4e4d57ad2f1c0c668c265fa0a57885bb5d97a3578b79e6da5ff8f2f2"
+    sha256 cellar: :any_skip_relocation, all: "fa6afa6aa54f25247e0cd6f2f10561354603995295d6ea952a9ca971ecae64e6"
   end
 
   depends_on "openjdk@11"
