@@ -7,9 +7,11 @@ class I686ElfGcc < Formula
   license "GPL-3.0-or-later" => { with: "GCC-exception-3.1" }
 
   bottle do
-    sha256 big_sur:  "6d402e313e5bb521f8359dba3805c2e9791f2d660395dda69e13da8e0f118a84"
-    sha256 catalina: "c1f1073df4c6c3b134178abb19e8e35d9b3a5ce50815d8407aca4682fe283018"
-    sha256 mojave:   "6799e72168bcb5f4e14081b64a98eb746e7a699be00bccf9adeead726796ff0e"
+    rebuild 1
+    sha256 arm64_big_sur: "06ffaa046cdc144d56fec59df4c77790fe3dde2cba2e3a11a30c3cf01ee8ce0f"
+    sha256 big_sur:       "714c96b4c9174aaf2945be91156cc273da8f53628b213f51abb905df4a2a077c"
+    sha256 catalina:      "c0305f2b0b27c90931be17c7979c2d7f9dcac05c48781dcf2184014dac17537a"
+    sha256 mojave:        "274ac95b8ddc3b560aedb197ffa54ac51020a09fd7814d31d5273fe68ec15a82"
   end
 
   depends_on "gmp"
