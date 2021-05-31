@@ -7,9 +7,9 @@ class Pandoc < Formula
   head "https://github.com/jgm/pandoc.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "05bed41434d9678edf93ec4d7ffa905f248eb33c2c4cf8cedf89808be252c904"
-    sha256 cellar: :any_skip_relocation, catalina: "b56dfd209f84ae6e7b937f45d819b6065b6bae41e21c2b983b681f695f9379a7"
-    sha256 cellar: :any_skip_relocation, mojave:   "877e64b3618740f71f3685b10df8f63eb5616110b6632d1d405aa308a140aaf3"
+    sha256 cellar: :any_skip_relocation, big_sur:  "b62fcbc0b2edec0566ce554070ebd891f2072576fd2cd38eb98325760958404c"
+    sha256 cellar: :any_skip_relocation, catalina: "193915dd53c8d11863b6c874220fae89e44c3c44a59d60c53190b81e15b89324"
+    sha256 cellar: :any_skip_relocation, mojave:   "2e24634d0c05f6e04ac23bce38fc3c0157fe4a25d7675e47424875f51c33ee8d"
   end
 
   depends_on "cabal-install" => :build
