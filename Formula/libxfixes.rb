@@ -6,11 +6,10 @@ class Libxfixes < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "2535425bfa83ab70f55cd3ee6bbde7f1de590188f07170411d60babe976419af"
-    sha256 cellar: :any, big_sur:       "614e75f3de08e9ce56d47f17a9d293ac9ddecdda1ce08567743a4d4edf03a5bf"
-    sha256 cellar: :any, catalina:      "d811d1d116d0d42f53df60cbae1a9ced87580445a1bcd30005227d43a9fd23e3"
-    sha256 cellar: :any, mojave:        "c784ffa191d81e4a4a0585df94ea4cff0281d813b8ae799283cd79798a769264"
-    sha256 cellar: :any, high_sierra:   "c41141d2f1965ebbdfaea27c0f316fe472e8302dd70beb026bcb5b607dbd6db0"
+    sha256 cellar: :any, arm64_big_sur: "9668a973a8a220609add6d2af60547745b81cb198936930fcd05bfd6b9aca47c"
+    sha256 cellar: :any, big_sur:       "a0317884b16dfd0e391d9ab48b4a9785fa2c4fdf3fd5dca857be98b1ae6fded2"
+    sha256 cellar: :any, catalina:      "916d95deb297ee98b57a87586a90a5a880792efab259c511230844a6ab94d06e"
+    sha256 cellar: :any, mojave:        "5c560e7ae60a53ea414c34a7d5159da0e4fc04a9159baa4ce9d67d942d05b9a4"
   end
 
   depends_on "pkg-config" => :build
