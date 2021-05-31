@@ -20,10 +20,10 @@ class Openjdk < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "063189cdbad2c9ef5ab5e7dc34cea1d2fe68a5405b3728eb87765d6c1b9a3a64"
-    sha256 cellar: :any, big_sur:       "13e7d2b43989b42f0af448ac08fc8ecca1e643ed69e16a9b5f7efdde79d4b23d"
-    sha256 cellar: :any, catalina:      "fca110fb6caad1228156b587a3ca9fa9ab5a0d423dee554e9f57b07081c3aac5"
-    sha256 cellar: :any, mojave:        "25b541c2de04a0ccbe55a2c53ce1c1de32ae0da23e162ecb38ca3ecda630efd9"
+    sha256 cellar: :any, arm64_big_sur: "040b807b1c754ccbb5316484a42089e64d29f0321dc6531017020095b8222c7a"
+    sha256 cellar: :any, big_sur:       "55c120ab6b02ddcf7f3f22678377d70c89ac625239b5af396c60a9b2840f0995"
+    sha256 cellar: :any, catalina:      "04435cc60a4cdf18dade6923a8a039a8ed22ff900068ec95c250f7ea055f381a"
+    sha256 cellar: :any, mojave:        "ea08c6570290923349fa4f908070445c0c4dd5fef9e65b401eb2323f0a8fddd6"
   end
 
   keg_only :shadowed_by_macos
