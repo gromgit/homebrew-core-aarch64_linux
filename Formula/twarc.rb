@@ -8,10 +8,10 @@ class Twarc < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0c340afb350f82993f9d5bdb59c0387cc916ad0459e231c775cecf2ac521cfff"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8d24014f4d2e82f77f937941f462e7502e3b59cd6b1555cbfefdaa242a587dc3"
-    sha256 cellar: :any_skip_relocation, catalina:      "285fbf37c3f0d649644539f0f9ad648913b8a75d92898b806b61f01f97f99133"
-    sha256 cellar: :any_skip_relocation, mojave:        "c411338960cf19b7a8d0151310e9eb67a24b37d79e64fa181266296e33c28a48"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a2f4ddf25cfe935a719962364a0fb74399ea94f26dd21b4fc17d5ba968f80495"
+    sha256 cellar: :any_skip_relocation, big_sur:       "bbe05dfd59b593e64e9be6aa224ace979a5d11410992e48b50718e32747e324c"
+    sha256 cellar: :any_skip_relocation, catalina:      "bf7863b8f0768dc4c885b9b31359e74c04fef0ae9f03a83f58bc92354b14ce75"
+    sha256 cellar: :any_skip_relocation, mojave:        "5cd54e9a9fa656a0dd0b080c0b8977865f569a3af22d14edc8b9d2a79630573d"
   end
 
   depends_on "python@3.9"
