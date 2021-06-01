@@ -21,10 +21,10 @@ class Lanraragi < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "140bb7034a374577fb5a6066e731bc846dab158a055c028f9ad1e43ceb0ceb48"
-    sha256 cellar: :any, big_sur:       "e3a25aaf4566290e4d6bfb9cc4bfa5e13c3e50ca3f1ccbc3a1bebbce2d5590dc"
-    sha256 cellar: :any, catalina:      "ef07ca4b7a88dbb4f02152d7f730cbf78f70c7de7a20153a5f079484df1a00c5"
-    sha256 cellar: :any, mojave:        "6208807c71852e53d463f4190ca70d96555d2b6138cd3f3ad6e957830d3ad4bb"
+    sha256 cellar: :any, arm64_big_sur: "dfb800e786cac097575e60706c4c08df229a2afc32a9fec859ee81b1503f3bb2"
+    sha256 cellar: :any, big_sur:       "5c7b921177cd6e5388f1290006912b6ee86d401f094d0ae90a370f7c83190570"
+    sha256 cellar: :any, catalina:      "d56d80b92723e4358a1cc73385b011b9a1fd0b318cb035326620f5073397e44c"
+    sha256 cellar: :any, mojave:        "5f14d12fbfba4931139ef7b8b02a3beb569bed2d899e24c62069b17d78053fcc"
   end
 
   depends_on "pkg-config" => :build
