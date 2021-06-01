@@ -7,10 +7,10 @@ class NatsStreamingServer < Formula
   head "https://github.com/nats-io/nats-streaming-server.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f1a1bc8fb1115c7a80cb58589aa7f396cad4bf45d73d4c66b7c05046e75c773a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "93168f5dc5e6ec97cbd5caa4d32a5d8a3c68a980ce99bc4db12d65dae7347cd1"
-    sha256 cellar: :any_skip_relocation, catalina:      "38150554defd811c8292a2ff938293f00e508c98e23a71a4ce9e6d8a29c1fda6"
-    sha256 cellar: :any_skip_relocation, mojave:        "9143966d65c08b32b2a66673ece12a560394019b81ae45ebe3db13d74ce5d477"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3d4602a3cda6e52f30f19b7f2f77fa7ba991b2f8823c81ca0babb753d74609b3"
+    sha256 cellar: :any_skip_relocation, big_sur:       "9ddcbd4a6828e27b1a95e72c60459c984504457fd91e9bfb421eb65a31d66706"
+    sha256 cellar: :any_skip_relocation, catalina:      "8338994ba6e7900bd7c1a7037a7c83cac35b79ce5c1090ce62aba1c22b65c493"
+    sha256 cellar: :any_skip_relocation, mojave:        "0ab63e58ea6d7130a687b38c1d67f2917121828ec75605d8a7f06ab1db471638"
   end
 
   depends_on "go" => :build
