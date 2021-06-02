@@ -8,11 +8,10 @@ class YelpTools < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "287755e74068f82a9dd94e60e6ae8fc0a3d38f04c2df3ee44d8f427d403d89bc"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9ecac26d055284b58e3b6220a719d20e3e0e5d4fd6c091bb649945b76df6ca69"
-    sha256 cellar: :any_skip_relocation, catalina:      "c4dde1e77132df114dfd4b19faeae2b8604a3557ac97a0f2caf47954fcfc0def"
-    sha256 cellar: :any_skip_relocation, mojave:        "4eec970808d0b15187fc1bfb976999b52ae0f13b6ae004f7ca9d65d15e6b07a8"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "906e221bce54f03db236aee3738c047e3d836a4f124aa3460b9d224a9d0c547b"
+    sha256 cellar: :any, arm64_big_sur: "08a72b2e030951fa5100ac9da0bb00cd5b9da79ab32eec4c6ee755a3790faabd"
+    sha256 cellar: :any, big_sur:       "4cbc2bd14f9fd508715bba8e1d92a624e75bb044a624c1722f56dca10962439d"
+    sha256 cellar: :any, catalina:      "a5ddc4d177f70d6e6f3eefc2562efd1be935bf541bd625c28d934b21d0b95a15"
+    sha256 cellar: :any, mojave:        "016bb96482e49cdbb5431dc0dccc66b7b8a0277b32e4c335fd8fe39cd770d660"
   end
 
   depends_on "gettext" => :build
