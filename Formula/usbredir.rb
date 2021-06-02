@@ -1,8 +1,8 @@
 class Usbredir < Formula
   desc "USB traffic redirection library"
   homepage "https://www.spice-space.org"
-  url "https://www.spice-space.org/download/usbredir/usbredir-0.9.0.tar.xz"
-  sha256 "a3e167bf42bc7fe02c3c9db27d7767f1b8ce41b99ad14a4b0d0a60abe8bf56a6"
+  url "https://www.spice-space.org/download/usbredir/usbredir-0.10.0.tar.xz"
+  sha256 "76de718db370d824a833075599a8a035ab284c4a1bf279cca26bb538484d8061"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.0-or-later"]
 
   livecheck do
@@ -17,18 +17,23 @@ class Usbredir < Formula
     sha256 cellar: :any, mojave:        "7660673efa01fe1af1337ba2dc290a39c8a45a54287e1cfe5daa5efac583cc14"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "libtool" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
+  depends_on "glib"
   depends_on "libusb"
 
+  # See https://gitlab.freedesktop.org/spice/usbredir/-/merge_requests/32
+  # Remove when the MR has been merged and included in the release.
+  patch do
+    url "https://gitlab.freedesktop.org/spice/usbredir/-/commit/be1078847e4e05fffea888544457ef6a75c8f330.diff"
+    sha256 "052b9352625cfefd96a4ef491b3f40b64cee5ddaca0ed0b5205ab6ef2f8882c5"
+  end
+
   def install
-    # Use meson from the release after 0.9.0
-    system "autoreconf", "-fiv"
-    system "./configure", "--disable-silent-rules",
-                          "--prefix=#{prefix}"
-    system "make", "install"
+    system "meson", *std_meson_args, ".", "build"
+    system "ninja", "-C", "build", "-v"
+    system "ninja", "-C", "build", "install"
   end
 
   test do
