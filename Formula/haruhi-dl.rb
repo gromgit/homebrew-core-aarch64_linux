@@ -8,10 +8,10 @@ class HaruhiDl < Formula
   license "LGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "74dc7e58a265c64127e4c7db0e3532c504c8b1d52a2bfd6296d419bafe6292d3"
-    sha256 cellar: :any_skip_relocation, big_sur:       "20540e0bbc073a1c3e2cc37f46e537cb2952ae3e1125f2229bff0bb82d82afa3"
-    sha256 cellar: :any_skip_relocation, catalina:      "307d026e98537305bd6ea425582212d6dec8efc318b3a0bac281033d37e54bef"
-    sha256 cellar: :any_skip_relocation, mojave:        "9c8795b77635086b45641e6590ae51f41c6aa8d9a496e8c2ecfa8a3bada0f640"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fc3aa6938b942b48f5449ee5d1b6ae8cf25912ad4f7647f22e2b61296c339fc5"
+    sha256 cellar: :any_skip_relocation, big_sur:       "fe067db3e867b03e593b8fee77276216e0db7ad79f3001115e1d8e1d95d213d0"
+    sha256 cellar: :any_skip_relocation, catalina:      "fe067db3e867b03e593b8fee77276216e0db7ad79f3001115e1d8e1d95d213d0"
+    sha256 cellar: :any_skip_relocation, mojave:        "fe067db3e867b03e593b8fee77276216e0db7ad79f3001115e1d8e1d95d213d0"
   end
 
   depends_on "python@3.9"
