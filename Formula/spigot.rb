@@ -1,9 +1,9 @@
 class Spigot < Formula
   desc "Command-line streaming exact real calculator"
   homepage "https://www.chiark.greenend.org.uk/~sgtatham/spigot/"
-  url "https://www.chiark.greenend.org.uk/~sgtatham/spigot/spigot-20200901.9910e5b.tar.gz"
-  version "20200901"
-  sha256 "bada3eb5766c5bb804572b257b588362f8357bb38ec229561cca5f3c43501127"
+  url "https://www.chiark.greenend.org.uk/~sgtatham/spigot/spigot-20210527.7dd3cfd.tar.gz"
+  version "20210527"
+  sha256 "1014b79607cbb6cc8143c9b3a093f266144124d9a4552785e5779c1a072faadc"
   license "MIT"
 
   livecheck do
@@ -19,16 +19,17 @@ class Spigot < Formula
     sha256 cellar: :any_skip_relocation, high_sierra:   "885c712c8e738092e669b36cdbeadb354057bf8eb3f9af572a2716e61bab1d8c"
   end
 
+  depends_on "cmake" => :build
+
   on_linux do
     depends_on "gmp"
   end
 
   def install
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
-    system "make", "install"
+    mkdir "build" do
+      system "cmake", "..", *std_cmake_args
+      system "make", "install"
+    end
   end
 
   test do
