@@ -3,8 +3,8 @@ class Flawfinder < Formula
 
   desc "Examines code and reports possible security weaknesses"
   homepage "https://dwheeler.com/flawfinder/"
-  url "https://dwheeler.com/flawfinder/flawfinder-2.0.15.tar.gz"
-  sha256 "0a65cf93b1d380669476e576abbb04ea0766a557ce2bf75d9e71f387fcd74406"
+  url "https://github.com/david-a-wheeler/flawfinder/archive/refs/tags/2.0.16.tar.gz"
+  sha256 "31e6405ceb3d6802522cf55f17747501ed79dd29474b9f5d0c9e5fc9c5d76a5a"
   license "GPL-2.0-or-later"
   head "https://github.com/david-a-wheeler/flawfinder.git"
 
@@ -24,7 +24,7 @@ class Flawfinder < Formula
   depends_on "python@3.9"
 
   def install
-    rewrite_shebang detected_python_shebang, "flawfinder"
+    rewrite_shebang detected_python_shebang, "flawfinder.py"
     system "make", "prefix=#{prefix}", "install"
   end
 
