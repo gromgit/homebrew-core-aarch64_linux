@@ -6,10 +6,10 @@ class Asciidoctor < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5f9ca51b3374baec623240ec160ef48bf04d0cb49d734b1018b012431a0fda02"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8f92b4d6c5f6b8e67a70384ec47550fbe421cefbc6b5a308a36350f17f798efe"
-    sha256 cellar: :any_skip_relocation, catalina:      "003e71e052e20ad5ab951416aee18a722e2b613a0c5813199a03d80e531b12d2"
-    sha256 cellar: :any_skip_relocation, mojave:        "d42f558cba47e63b7bc75ec85f6124baad63395ee46ce812bac635be4e64d1ad"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bc6c3e1d9c0f14fbd70d179edb751892dcb1d44b4b8ab05758688ad1a78443d2"
+    sha256 cellar: :any_skip_relocation, big_sur:       "98db0df78c00fe59499f5c5eed17b57f09406c9222b0f83878ac9a12cc5ffb8c"
+    sha256 cellar: :any_skip_relocation, catalina:      "98db0df78c00fe59499f5c5eed17b57f09406c9222b0f83878ac9a12cc5ffb8c"
+    sha256 cellar: :any_skip_relocation, mojave:        "d50077e74c31d0f910fed2352e3ae5eca7c731b9b84752d1e1e8bf7ef3a59f78"
   end
 
   depends_on "ruby@2.7" if MacOS.version <= :mojave
