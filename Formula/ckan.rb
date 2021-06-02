@@ -10,6 +10,10 @@ class Ckan < Formula
     strategy :github_latest
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "ef445fe525dcb9ddece0844663621a439e6cf159889d00005aa86e7ab1c20583"
+  end
+
   depends_on arch: :x86_64
   depends_on "mono"
 
