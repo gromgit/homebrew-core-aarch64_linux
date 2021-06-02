@@ -6,10 +6,10 @@ class Oras < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7df64201010ee88df6b42e9b4c7366c584db8f661f3892327333bc1d2b72b1b6"
-    sha256 cellar: :any_skip_relocation, big_sur:       "58f25965a9deb06395e3c73b6526ce48c65b837c9173b56780084501626d038e"
-    sha256 cellar: :any_skip_relocation, catalina:      "4a71d2ffb060d9b66c3c21ebad5f40433cb544ef406714d0756eb5a72a639c13"
-    sha256 cellar: :any_skip_relocation, mojave:        "008def6b863c4c2d40408d6298f89146149bfa67d6845a8fe8990329b19f59fb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0b3b53df6013d9b3ad1ab832a8d0daad2ae4fbb017adf387b7f6d13e5e2d76bd"
+    sha256 cellar: :any_skip_relocation, big_sur:       "18d86fcc6965357bb00cc945ef6ee888f874eb487bb341a1389cf8f9cac626d1"
+    sha256 cellar: :any_skip_relocation, catalina:      "d08f9849ddb604f0fd61574afd8f2dad30fc38022b14b547c2abd50bb6ef97d9"
+    sha256 cellar: :any_skip_relocation, mojave:        "ef76f4634fe95c6c000f90c3ddb323b8edf694f60e5e6eed4e416bef3b874f15"
   end
 
   depends_on "go" => :build
