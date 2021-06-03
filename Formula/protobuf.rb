@@ -11,10 +11,10 @@ class Protobuf < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "8f4c051499f9b36cc77c81020b81a04ceb659664d9a91bd568df261adf993862"
-    sha256 cellar: :any, big_sur:       "19460dee81320b5bab161eaaa66af0b9667cb9361fb62b75c3b914f1c09a0208"
-    sha256 cellar: :any, catalina:      "2c46097731cc4074dbf64e18fb986f4f90eaa72c2e762ea8323a27403acb9e5f"
-    sha256 cellar: :any, mojave:        "fc3a0cd08f3a038d821c010b8eea8de3183aa1e4715449c82a3c861a2a4638aa"
+    sha256 cellar: :any, arm64_big_sur: "6128bdadb84923d51c3a747b4c1ea1a10e03db5afb4b292500b3b3b95418feaf"
+    sha256 cellar: :any, big_sur:       "72c6dfdc47c6bfc53f184795602300daddefdc85a129379d58ef61b1208f3c22"
+    sha256 cellar: :any, catalina:      "b8ce14f97cdee69d3d91928e655e1a8250d76b1dc7c67f5f06c0464e6f43b75b"
+    sha256 cellar: :any, mojave:        "d9fe451840d739939d36060353295ec3cd83c50224de4bfb00e88bcf29861bbe"
   end
 
   head do
