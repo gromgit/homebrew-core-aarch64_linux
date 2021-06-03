@@ -6,10 +6,10 @@ class GnuGetopt < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ae1263956351e0cc6482a31d4950008804c2a1bd72567d06759fcf81884271c0"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ca1fed65658b4bc72775636b6cb21e30dd0ff3e0521b80eda2ed37119f89838d"
-    sha256 cellar: :any_skip_relocation, catalina:      "e923cad6e80e57326467d08fecdda7150bb3a6a05c8d1d1b33dac1ef54b19e70"
-    sha256 cellar: :any_skip_relocation, mojave:        "9418bd6b173a0af13f89d10487129b7bfcd5690eb58fb3a1e253f5eadf03acdc"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "079587e59cd2e4061082a2582c4b57a61a76945c5520ef342408445ac454aed4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e9b50df1befbbee936eda326aae7479e0a0557964eb29e5ae6ba68cd15f93a0e"
+    sha256 cellar: :any_skip_relocation, catalina:      "f496f191c9e3d5dd178255bf2baac2e9933ff7aeef4904a10539e8b98e80df4c"
+    sha256 cellar: :any_skip_relocation, mojave:        "804cd9ab8706b9aed9b2ebc7bccfbdbea97cc261bf0f0cb70ef9788070d8685a"
   end
 
   keg_only :provided_by_macos
