@@ -6,10 +6,10 @@ class Dssim < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "454288860d0a84578dc831b45e2c2edc901a5f9e275d5ecf26d88eb90f3a3f61"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a1c5c83958163239faa9fc6be6df3b22b5b3f22e73d592550a0644673748bbaa"
-    sha256 cellar: :any_skip_relocation, catalina:      "79e984e37783117cbc3923f5f5dc98ec8f65d0f9c550e64ce32135f48cbc04bb"
-    sha256 cellar: :any_skip_relocation, mojave:        "78f969b1a8b31bd99305cc9b43e91e3e2e5c39f71ed4083fd7bfbcfcef36a00c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "664834c24f8facd8540cdce6284bd9e978ab5a06a2bc84ffd7ece97cb74fc4fd"
+    sha256 cellar: :any_skip_relocation, big_sur:       "30fb8ac36dbfb09df6482d9e396108d6570ffea6aa72abce8a290dcc3e1b8b33"
+    sha256 cellar: :any_skip_relocation, catalina:      "b87f31b0fecae87122840dc0390114087c6cf55d1e1117f57860a4eb5fa052bb"
+    sha256 cellar: :any_skip_relocation, mojave:        "f98d8778ae6fffbac0c30aaf5e9062a19c507b2c71fe40fc2e3aeef4df970784"
   end
 
   depends_on "nasm" => :build
