@@ -11,10 +11,10 @@ class Ispell < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "206bac064616192692a52cd0fb8f64138cc685a0d2765ce21ba1889672a3558b"
-    sha256 big_sur:       "bb31a94a6248a8298f8f93ba6175336aa4b7e1297440d9cea7af22be117170f9"
-    sha256 catalina:      "d588636ea56a940732b17181ad84b1b22b906314f5cbc2171aad5bce76812903"
-    sha256 mojave:        "9fe86ce46da93f3f73b2c7ad3bd079d5a4eae7dd86c7ab638841eb5a21895ea7"
+    sha256 arm64_big_sur: "f48b72490babfc3d3debf6eeeb34fb27516dd7a360322e05217f75f9a060642d"
+    sha256 big_sur:       "ed399105823ef8d4c978b9f29675fe52766cefb3c33e969a36fc0ff0e33dba13"
+    sha256 catalina:      "bd78389107e1457352b3c9eb88a73d434cffae5764455ea461e4c201f5180b85"
+    sha256 mojave:        "85bb0fb8d13a18cffdc0ddd2e9ed1d4d007b884967d0952a7a174135ea5cc416"
   end
 
   uses_from_macos "bison" => :build
