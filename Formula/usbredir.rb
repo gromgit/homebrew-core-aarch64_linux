@@ -11,10 +11,10 @@ class Usbredir < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "e1b386db632be8bb241c1924f0d1ca892c069078f1d1928c7ea1f786e4a834e1"
-    sha256 cellar: :any, big_sur:       "5f2999d6b52b9ccc9aee6efc1417083d6fd3bb10b873cb56c2debcb02e4e9c82"
-    sha256 cellar: :any, catalina:      "a19338a4180caf513da9caeda32403311002715609ef7200d31c0d96f49e4fa1"
-    sha256 cellar: :any, mojave:        "7660673efa01fe1af1337ba2dc290a39c8a45a54287e1cfe5daa5efac583cc14"
+    sha256 cellar: :any, arm64_big_sur: "6b3470eeeccaa4755b997102cee313d879e8b91df61c076ecbbc18c4fc572d47"
+    sha256 cellar: :any, big_sur:       "26d2040e073333ad5e1aba9594f88c4450e7a9ee9780c8cc458267bea7e8c7c6"
+    sha256 cellar: :any, catalina:      "1986f37f4c043ee0822fb0cc61049ab57a73871e94e3e64ad1896861be49890b"
+    sha256 cellar: :any, mojave:        "04d2e58a8479304dba8f207283c5f740ea1a74440ecb3780aa4182025b268384"
   end
 
   depends_on "meson" => :build
