@@ -7,10 +7,10 @@ class Passenger < Formula
   head "https://github.com/phusion/passenger.git", branch: "stable-6.0"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "b2862efafcd44adc719d51835ac6755faf340ae8955a2ee87f123646afbed42d"
-    sha256 cellar: :any, big_sur:       "42f31eb53a4d48926ece55e0b2b19f544b35f906d1dc3a9f9eac15ea5a544e7a"
-    sha256 cellar: :any, catalina:      "6c05593da009bc7010bcdc63b1ee379c28b9f62fa16541b6a2f71b5d4fd3182d"
-    sha256 cellar: :any, mojave:        "fdd10cd816b0d2013946f8b9e15592a48b6f2968be8ba09c9b3b84ce70291b7f"
+    sha256 cellar: :any, arm64_big_sur: "d8c82351b6a62382b8076b94f610bbd8eaeb76b4174c54fbe99831c373dcb65f"
+    sha256 cellar: :any, big_sur:       "efff10122f69ccb49f5f401c0049921e65896fe404c92e1c42c9b6bc20445999"
+    sha256 cellar: :any, catalina:      "18e60ed2009e5b3d068bc40f7938a2d34a6a93640b717a17ba508681fd3aaf86"
+    sha256 cellar: :any, mojave:        "18f4579b13cdb0315aa6184569a9631c57f5c2ee1be4cdc10fe39b398bff5358"
   end
 
   # to build nginx module
