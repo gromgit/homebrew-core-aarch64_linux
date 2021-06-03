@@ -13,10 +13,10 @@ class RosaCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a8c678701d01455e37834825e97e5653c1ed55c131798271374d185e7124523b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e3078b9b539cdd15cf752b41e531ce6294820764d98f191e3b42aedfe4b6f6ee"
-    sha256 cellar: :any_skip_relocation, catalina:      "90f6907318724ca1b7e5e62ce3c857df811c85d79086efbaca12a66cae668513"
-    sha256 cellar: :any_skip_relocation, mojave:        "51cf1246dfddbf42516676b40eec810165f15574ecb6d585d62adab52f0a2994"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "491a3e038387651dbf37f6e0f3853ef98000a606032d748e206a1d03d06c2f16"
+    sha256 cellar: :any_skip_relocation, big_sur:       "522cea288d30fe29f0d6742178b8d16535216607c71afe3b02ff9615b6d54fd8"
+    sha256 cellar: :any_skip_relocation, catalina:      "acca0895d84e1cd534ec6ee2ce9c2f28473c605cbe7bfe6b1455df11b8ab3bdc"
+    sha256 cellar: :any_skip_relocation, mojave:        "8c689bb98d089df7d2c3988e7ee42970e2a086eccab90267305bbafe7ea6b316"
   end
 
   depends_on "go" => :build
