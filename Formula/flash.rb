@@ -6,7 +6,7 @@ class Flash < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "921d89c4e79695dc2ca1daa343c4be623cbbe64020d1d1d277892b5145a2f627"
+    sha256 cellar: :any_skip_relocation, all: "7ba28ca5b0372393c667b70b7841d4b9b6f587e9ce0c0c1a6bf9bb67dddec577"
   end
 
   def install
