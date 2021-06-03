@@ -6,6 +6,10 @@ class Kerl < Formula
   license "MIT"
   head "https://github.com/kerl/kerl.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "ff7a18c24da7d338e817534fb22fd60a797e5472795531a4605f706a51517771"
+  end
+
   def install
     bin.install "kerl"
     bash_completion.install "bash_completion/kerl"
