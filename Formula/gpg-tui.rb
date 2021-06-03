@@ -6,10 +6,10 @@ class GpgTui < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "a9775e6c21edac62cc8bbdcfec8f858ee0694fa17dc7ccad47c6d636f1414221"
-    sha256 cellar: :any, big_sur:       "e15ed192dc093a8eaf2aa76459e729e8901a9ccecaf957b53eb41a4a88aa668e"
-    sha256 cellar: :any, catalina:      "6c05eaf37cbbc14b204642cb69de853772ad14fadb9fcc1789dabd4e283c46c6"
-    sha256 cellar: :any, mojave:        "dfc772db8af73ce6208f3af0a9da3c0f2d4799d2c771f0ff2bb670b2d0a2063c"
+    sha256 cellar: :any, arm64_big_sur: "d7e62f3e5c5c574ddd1f24faaddb11b9f30629462f53ff58ff63b412d28ff174"
+    sha256 cellar: :any, big_sur:       "114f34d7b5f0c8bdd9340fef52878532d5e979cc12a9a2b01b80e2350b9862d6"
+    sha256 cellar: :any, catalina:      "8a64444ec2cfdd203f81f4ed4aa5f1ef18bbc056eaf27e263088a8641e91b4f9"
+    sha256 cellar: :any, mojave:        "eca92bd17197ecd2c7725ab5227a0cb627d95a0cfd34a6680c36e667502dd670"
   end
 
   depends_on "rust" => :build
