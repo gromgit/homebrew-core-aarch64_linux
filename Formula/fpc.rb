@@ -1,8 +1,8 @@
 class Fpc < Formula
   desc "Free Pascal: multi-architecture Pascal compiler"
   homepage "https://www.freepascal.org/"
-  url "https://downloads.sourceforge.net/project/freepascal/Source/3.2.0/fpc-3.2.0.source.tar.gz"
-  sha256 "d595b72de7ed9e53299694ee15534e5046a62efa57908314efa02d5cc3b1cf75"
+  url "https://downloads.sourceforge.net/project/freepascal/Source/3.2.2/fpc-3.2.2.source.tar.gz"
+  sha256 "d542e349de246843d4f164829953d1f5b864126c5b62fd17c9b45b33e23d2f44"
   license "GPL-2.0-or-later"
 
   # fpc releases involve so many files that the tarball is pushed out of the
@@ -26,9 +26,6 @@ class Fpc < Formula
     url "https://downloads.sourceforge.net/project/freepascal/Mac%20OS%20X/3.0.4/fpc-3.0.4a.intel-macosx.dmg"
     sha256 "56b870fbce8dc9b098ecff3c585f366ad3e156ca32a6bf3b20091accfb252616"
   end
-
-  # Help fpc find the startup files (crt1.o and friends) with 10.14 SDK
-  patch :DATA
 
   def install
     fpc_bootstrap = buildpath/"bootstrap"
@@ -66,21 +63,3 @@ class Fpc < Formula
     assert_equal "Hello Homebrew", `./hello`.strip
   end
 end
-
-__END__
-diff --git a/compiler/systems/t_bsd.pas b/compiler/systems/t_bsd.pas
-index b35a78ae..61d0817d 100644
---- a/compiler/systems/t_bsd.pas
-+++ b/compiler/systems/t_bsd.pas
-@@ -465,7 +465,10 @@ begin
-   if startupfile<>'' then
-     begin
-      if not librarysearchpath.FindFile(startupfile,false,result) then
--       result:='/usr/lib/'+startupfile;
-+       if sysutils.fileexists('/usr/lib/'+startupfile) then
-+         result:='/usr/lib/'+startupfile
-+       else if sysutils.fileexists('/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/') then
-+         result:='/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/'+startupfile;
-     end;
-   result:=maybequoted(result);
- end;
