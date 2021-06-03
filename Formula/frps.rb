@@ -7,10 +7,10 @@ class Frps < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e52e5b2ffe0dc01337c2fbd6c63b659a24f31a500e24c681961109b36a634f79"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3d9c0bacd4f1f672add64c8dd9937cf8ff3bff67558a207d98e3f875e0d25bdc"
-    sha256 cellar: :any_skip_relocation, catalina:      "b49d5a557a572d1b8c1ca27756bc7cfca5a210c207acb08565632c320a162f12"
-    sha256 cellar: :any_skip_relocation, mojave:        "04f9dda053b3752d2d082224061154003e19094f0f9f201e261e384684ae66da"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "236a4b01aaaeb4e9fb088a23153b49cc14c25b5fc29e95f9354875e5c95d933a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0f0aa7c413cce11341f70b0bb9c701ad22403251b12d1a1c329fc03141601d00"
+    sha256 cellar: :any_skip_relocation, catalina:      "0f0aa7c413cce11341f70b0bb9c701ad22403251b12d1a1c329fc03141601d00"
+    sha256 cellar: :any_skip_relocation, mojave:        "0f0aa7c413cce11341f70b0bb9c701ad22403251b12d1a1c329fc03141601d00"
   end
 
   depends_on "go" => :build
