@@ -6,10 +6,10 @@ class Matterbridge < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0f7d48db4c678ee01d7641ca23783123afd2abe4cada84dd0fe42b6fbfc0cecd"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9f401ee30df6117685ecff3f77218aad5d6967292eec2e3654d53dba7940d5d1"
-    sha256 cellar: :any_skip_relocation, catalina:      "c645a03c31460a503da13fe3273a8591e60f912a8e88d8e4f4bd6bf788598602"
-    sha256 cellar: :any_skip_relocation, mojave:        "c5cf1f479e6fa88acebd2367160fba769cef7d6d7a5779340496948fb5ae04e6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8db9ccd73a5d02ef58a1ee6fa7d57170bb12f5e2c8023889e73c58e2d07582f5"
+    sha256 cellar: :any_skip_relocation, big_sur:       "06f7efe69aa0856a433b8dbeaa7f938b9095ed5bbe52dd754ffd1911e3c5c6af"
+    sha256 cellar: :any_skip_relocation, catalina:      "729c8c25957af43a7d69e51ff1f80dc68bc082f69f46ecc55ae2767bdcd96987"
+    sha256 cellar: :any_skip_relocation, mojave:        "d1975a2a13ef3b2234833b4f031829d9ca536ce0fd5cf19632203ab33e01def0"
   end
 
   depends_on "go" => :build
