@@ -6,10 +6,10 @@ class Cgal < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "00811edefae1e9b979e3cde3ff859bf55bbcbc644dc0e89b2bf60b7b7e5c71ca"
-    sha256 cellar: :any_skip_relocation, big_sur:       "40bcc1e1968fa833605899ff1a2903ab3147373de334a82fc1fdcbf7434f61bf"
-    sha256 cellar: :any_skip_relocation, catalina:      "6dc0ebe58539402c39302b3f641a111afa4acf5e4f4a17f2c14e454875d2a791"
-    sha256 cellar: :any_skip_relocation, mojave:        "5aa96c6cce4757ee120283b4d9396a50c40ff1b539203da3175f20546d2efcda"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "39d8e1234f08860e0fd53131654a3986e093e21a2ce0a268241acdf119d82e12"
+    sha256 cellar: :any_skip_relocation, big_sur:       "25fdaa548ad0599f97ead357fa87b98e7074c90a4643e7e36f8cd84e15c0d5ed"
+    sha256 cellar: :any_skip_relocation, catalina:      "25fdaa548ad0599f97ead357fa87b98e7074c90a4643e7e36f8cd84e15c0d5ed"
+    sha256 cellar: :any_skip_relocation, mojave:        "25fdaa548ad0599f97ead357fa87b98e7074c90a4643e7e36f8cd84e15c0d5ed"
   end
 
   depends_on "cmake" => [:build, :test]
