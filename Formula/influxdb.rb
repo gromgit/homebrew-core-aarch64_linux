@@ -1,10 +1,9 @@
 class Influxdb < Formula
   desc "Time series, events, and metrics database"
   homepage "https://influxdata.com/time-series-platform/influxdb/"
-  url "https://github.com/influxdata/influxdb/archive/v2.0.6.tar.gz"
-  sha256 "b8f019cfb85f7fdcdd5399dc2418cdc1ac302f99da0d031c2e307ecb62e129cd"
+  url "https://github.com/influxdata/influxdb/archive/v2.0.7.tar.gz"
+  sha256 "8b0ac2b5b2f8c4a78bf5eef5111576dd3beb1a7596c20ec6ccc4bb15026dec8e"
   license "MIT"
-  revision 2
   head "https://github.com/influxdata/influxdb.git"
 
   # The regex below omits a rogue `v9.9.9` tag that breaks version comparison.
@@ -36,8 +35,8 @@ class Influxdb < Formula
   # NOTE: The version/URL here is specified in scripts/fetch-ui-assets.sh in influxdb.
   # If you're upgrading to a newer influxdb version, check to see if this needs upgraded too.
   resource "ui-assets" do
-    url "https://github.com/influxdata/ui/releases/download/OSS-v2.0.5/build.tar.gz"
-    sha256 "37ffbc072ba801ec5a0abdd76a3f19a8cd75f59856274e20630929f73cedaf55"
+    url "https://github.com/influxdata/ui/releases/download/OSS-v2.0.7/build.tar.gz"
+    sha256 "5aebccacb2e13d9fffd1cbca567f63791f3c19be2088045bdbcd38100381101a"
   end
 
   def install
