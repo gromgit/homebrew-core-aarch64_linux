@@ -7,10 +7,10 @@ class SqliteUtils < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7039347e1f69e054b19871ed46f361b5ee960ec854527d3133e2c2b50850dddb"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a4e75bc4e45a483b71cbed7a3f2f088a10aef5508873e6d7391aedca16bc25fc"
-    sha256 cellar: :any_skip_relocation, catalina:      "a4e75bc4e45a483b71cbed7a3f2f088a10aef5508873e6d7391aedca16bc25fc"
-    sha256 cellar: :any_skip_relocation, mojave:        "a4e75bc4e45a483b71cbed7a3f2f088a10aef5508873e6d7391aedca16bc25fc"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1202471b7e030dfc79c47bf92e1a427948e44cbbde7bf39c650d8be562b76cc1"
+    sha256 cellar: :any_skip_relocation, big_sur:       "bd6521f08bc83b7675f935a147910bdc0e0ea4877bb3ab6033fe46559b70e3a1"
+    sha256 cellar: :any_skip_relocation, catalina:      "bd6521f08bc83b7675f935a147910bdc0e0ea4877bb3ab6033fe46559b70e3a1"
+    sha256 cellar: :any_skip_relocation, mojave:        "bd6521f08bc83b7675f935a147910bdc0e0ea4877bb3ab6033fe46559b70e3a1"
   end
 
   depends_on "python-tabulate"
