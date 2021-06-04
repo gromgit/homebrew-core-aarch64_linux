@@ -5,6 +5,13 @@ class Himalaya < Formula
   sha256 "07359cc9827ecda8052a23428f642e06da5a899c40fe887acc5a880c76676131"
   license "BSD-3-Clause"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b9f1a4782b7eccff169258d151394248048c3d87383091464ee2f81c6f95b82e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b312c3288de354c72d4fdeaffe0cad976b4e0b05fd8c07232b5b39bd2eeeff3a"
+    sha256 cellar: :any_skip_relocation, catalina:      "32e04cd25c7c15f041ffbbb835d789b4d90aa1368d26478011d91d79e6303d7d"
+    sha256 cellar: :any_skip_relocation, mojave:        "155a6e3097c420a9b48a6136778fc35b1deadec83047da7c1f5b4d92a81f32f8"
+  end
+
   depends_on "rust" => :build
 
   def install
