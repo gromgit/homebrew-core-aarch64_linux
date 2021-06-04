@@ -12,11 +12,10 @@ class Sfk < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d65ccb8005b80f6235715be44e61d94489bb54215d6fc4e83151447a78742573"
-    sha256 cellar: :any_skip_relocation, big_sur:       "246205fa0015ce9b38f100079140aad24fdd215f4efce266e2e4b8f8390c9ea7"
-    sha256 cellar: :any_skip_relocation, catalina:      "3d77c49b96cce970358341e21d96d77229c5de7c903baa212fbdc7cbfc1f0a22"
-    sha256 cellar: :any_skip_relocation, mojave:        "ca1b6bf3302da32e47f2d1235262a1b64107351f833a8fca2bd0326c2747954f"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "8588d84e1d7b52d017a3f5417351eb28f025a8c2cdc31334b67361541d57aee8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7ee72add140bb65a9a321ecc7995f9569faf1a781a414e6c29150160e714e577"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a02c2a0af4647ecc3ac769d65bf7f3b380986fc6ce86a0abf443b8b1da6084f5"
+    sha256 cellar: :any_skip_relocation, catalina:      "a48c5b3fca272552ace60bc3a8a10636cb54da3c79f9fbf98314504582ba9546"
+    sha256 cellar: :any_skip_relocation, mojave:        "4070b917ef0c60cee55d29f6c563069e2eb23793e3024f008e1a76c15f476bb3"
   end
 
   def install
