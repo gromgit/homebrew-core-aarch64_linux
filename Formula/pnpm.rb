@@ -8,10 +8,10 @@ class Pnpm < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "243d08bffbe5ea4a9048f7b5271de9e0605172ef22b9919463b399720820b259"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7230b68b8de579e9c0a612304142956b7e43e3572a52f7f8e5b0089b940e4973"
-    sha256 cellar: :any_skip_relocation, catalina:      "7230b68b8de579e9c0a612304142956b7e43e3572a52f7f8e5b0089b940e4973"
-    sha256 cellar: :any_skip_relocation, mojave:        "7230b68b8de579e9c0a612304142956b7e43e3572a52f7f8e5b0089b940e4973"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "65b1a37d705666048bb964ee9bcad28494d897ef5880cb6e15568b083162690d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "434314a9f2b0f37da47e658f81daca5f173bf6aad2f758dbd2cdab4b9c200b66"
+    sha256 cellar: :any_skip_relocation, catalina:      "434314a9f2b0f37da47e658f81daca5f173bf6aad2f758dbd2cdab4b9c200b66"
+    sha256 cellar: :any_skip_relocation, mojave:        "434314a9f2b0f37da47e658f81daca5f173bf6aad2f758dbd2cdab4b9c200b66"
   end
 
   depends_on "node"
