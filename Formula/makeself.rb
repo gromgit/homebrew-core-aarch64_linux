@@ -7,7 +7,7 @@ class Makeself < Formula
   head "https://github.com/megastep/makeself.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "620fe1bac044be0d0cc0c37bd3683151f90ce479fcd2736bf27fcf59b0da2edc"
+    sha256 cellar: :any_skip_relocation, all: "021212c284a4bc65cd332a2863d54ddadd73db4439c13366159fc88c95e5a18a"
   end
 
   def install
