@@ -13,10 +13,10 @@ class Epic5 < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "7e6dfb759ac3bfd707d5b9cc048c115a17489e5e9813fdd249023fe302e3a218"
-    sha256 big_sur:       "b26ced9316978f9414cbd97fb0a120dee2b8c66775761b70433e8bb4093e76cb"
-    sha256 catalina:      "763db60447f783b7266cc2e4c7bf0199b01419d2db5755d5649c3b5d576bfe09"
-    sha256 mojave:        "a45d59473cbaab0e995edc804e615f2ea3708a3f147dc9397d93816c91fc43b9"
+    sha256 arm64_big_sur: "5bb21db35131a0fde56142e748c958d42b425c864739fa1707be11d7e7f39bdb"
+    sha256 big_sur:       "5aba4e571c8827f29799b6d74f7b21eeb722bd1e8a5527c77c1ac482f448ae8f"
+    sha256 catalina:      "101619ba687707c62ad66e26bc6a5c607996ca18146730bea9a6367ac9eaeb75"
+    sha256 mojave:        "33233d7cd4cbadfb333079083a746791797402df481411568b99c874582fd440"
   end
 
   depends_on "openssl@1.1"
