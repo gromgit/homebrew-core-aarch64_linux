@@ -11,10 +11,10 @@ class Lxc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "58e629fd4511c94d5e7154702469ff7f5f6f750ac52b6519451ef85f39a41973"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8a709dda8aa696938a790ce6b7db9aff9cc48e36ce7c11091ba0675370c0d02e"
-    sha256 cellar: :any_skip_relocation, catalina:      "05ec66edb2dea57ea24bf40c287e0470f44309562b94ccef6d947b054950050b"
-    sha256 cellar: :any_skip_relocation, mojave:        "8a125f62ea0a6c852f63d25905e17e9b8fa553a44364b07a5c30ec48525a893c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4c89df746a069cd2fee3a0100827536fecd272508ce1e1e608a693c164b4ec02"
+    sha256 cellar: :any_skip_relocation, big_sur:       "52bf281ff8c4d8ac221df798cecfd85f99bffcf76c546a9d1f44518abfe52388"
+    sha256 cellar: :any_skip_relocation, catalina:      "e369d0085e38262e363d6d924571a32a01a175236ff9b365be594fe0b6f9af13"
+    sha256 cellar: :any_skip_relocation, mojave:        "26ab120b923dad16975efeb53507598f4573edc7f07d61d52d6d2c6e1306cbd6"
   end
 
   depends_on "go" => :build
