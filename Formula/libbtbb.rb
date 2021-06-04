@@ -10,12 +10,10 @@ class Libbtbb < Formula
   head "https://github.com/greatscottgadgets/libbtbb.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "45af5280dbcd75c003d97e75350a8aa409750686ecad10a5dc38b99e9a63790d"
-    sha256 cellar: :any, big_sur:       "79cd35b4013959310c4a2bfc09512ea30814edc9d2a186cababe4f854ae11364"
-    sha256 cellar: :any, catalina:      "a44e009e65047628a6d6c1e355ab19ca43410eaec83a557c907b277de361b98e"
-    sha256 cellar: :any, mojave:        "835f6edfd8143b29d96eeeed66dd443d837cc8a117519fdca30637c417c9b8d9"
-    sha256 cellar: :any, high_sierra:   "b2be1cc3b707870e022401656041307bfde41035659db8eee563647f0dce5873"
-    sha256 cellar: :any, sierra:        "e09299efc9ea3b989a2b1ceda4d123e6cebec6b28aa8ff08cf3052dfa6a65c3d"
+    sha256 cellar: :any, arm64_big_sur: "3f24dbcd8136188fe1ae8d8ff41dc5f228674b25bd0b4cd81c37a5e67528212d"
+    sha256 cellar: :any, big_sur:       "49bf40e0711721bffda654f8d1bb61912cb130b64dcee74d05918a70079d5caa"
+    sha256 cellar: :any, catalina:      "eaed5fcee578de521f01fca38fa0975b5c0f56a80f9391840bd7f815550d9f75"
+    sha256 cellar: :any, mojave:        "8378b76f21bc170c9def4e0fab0d7af8caaccb1afe4fd59e6e9fc3a1cd549c7a"
   end
 
   depends_on "cmake" => :build
