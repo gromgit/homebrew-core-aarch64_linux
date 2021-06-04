@@ -13,10 +13,10 @@ class Openmsx < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:     "891284f2b5294dee367eb2db61f34f7940d2dd4ba26bcfa5e287a58b6419d019"
-    sha256 cellar: :any, catalina:    "10c3e39c22efbd11e11b352f8fabfcea03633088cb16fe24611ed631325ed05c"
-    sha256 cellar: :any, mojave:      "ed24d06d8f8913236fa619f0d92396e2a2a8d2f40afb5e56c609ecdf332b4ca4"
-    sha256 cellar: :any, high_sierra: "86fff1a90fff96cb0398184ef7ebdeb804edda4c9d34ee5e7278159df64b10e3"
+    sha256 cellar: :any, arm64_big_sur: "1a4c53f573b29eaef8b6454622bd18e02b0369b8bc9c5e51493d0b2022b10b9b"
+    sha256 cellar: :any, big_sur:       "7204df7abcba41b2a74ba2d6b969b610a56bf36e332a9f25c280bd74c88ddc87"
+    sha256 cellar: :any, catalina:      "1a5c7befdf1a6faa24d6a1043c6bc2ee722cb118b8bb788323f01434d15e94b3"
+    sha256 cellar: :any, mojave:        "57e29bb1e9e2ed95d628b7933c1929eb99da46f9bfc4885bc9b072a94afd6c0e"
   end
 
   depends_on "python@3.9" => :build
