@@ -13,9 +13,10 @@ class Openimageio < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:  "b693110c296435405b50537061bf9b8ca21e4693ea27121519ba89b2fcb62c1a"
-    sha256 cellar: :any, catalina: "d1153da148ac890bdf42ab17bd41c76563a867f8686fe548e1fde28b897a77cc"
-    sha256 cellar: :any, mojave:   "784d117c38635f58d1072262f21c510ca19614e4caa52d440bc6110a9152b17a"
+    sha256 cellar: :any, arm64_big_sur: "234df6f7b3eda72c108f81838a5541e7e3a69f04328e502c62a64ac2a93f621d"
+    sha256 cellar: :any, big_sur:       "a0807afc887f880005465c91d0ed6c37801ff316dda04c81a1c1432243b75588"
+    sha256 cellar: :any, catalina:      "62b267f53517973e8c018057eba39c751553fa1839362c8b95aede135b669bd2"
+    sha256 cellar: :any, mojave:        "cdd0daa342392f8de170d30443731a31d40c9c338a8758d80130e3c9c951eb11"
   end
 
   depends_on "cmake" => :build
