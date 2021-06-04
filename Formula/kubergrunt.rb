@@ -6,10 +6,10 @@ class Kubergrunt < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "03fc971c4895ea40964ee5e8c2fd6e321bc516d2b143741cdb66b086178c1ca6"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0399649037fe94e1a8d84e3e560f3e557b678dc6a466dca0878a8b9141dc526b"
-    sha256 cellar: :any_skip_relocation, catalina:      "80866a3fed8dcf7c81a974ae408cf2d66e3911edd7ecbfb6b67545a2c45e4c7f"
-    sha256 cellar: :any_skip_relocation, mojave:        "15ab134be6b6005ac0b0a48d48cd3521e57ca9b4a55278353e3dd70adc1b5e1b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0bf557aa7b31ea6ca9723217a63d581dfde761b4d9e02a2eb58d4344d61ed210"
+    sha256 cellar: :any_skip_relocation, big_sur:       "322cd875b445e043edbb9dfc32f76288369b2f88fa936e06a98742bc8a569d11"
+    sha256 cellar: :any_skip_relocation, catalina:      "251293b1635b3aab783f2116eb26bf8e3d64f92aa4da2d88addaf27cae3c015e"
+    sha256 cellar: :any_skip_relocation, mojave:        "3d501cdfb1409d49dd811686d6a17aa226acea2cca81455c40660d91e6f5880c"
   end
 
   depends_on "go" => :build
