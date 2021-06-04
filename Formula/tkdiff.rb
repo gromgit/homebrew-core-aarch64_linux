@@ -11,6 +11,10 @@ class Tkdiff < Formula
     regex(%r{url=.*?/tkdiff/v?(\d+(?:\.\d+)+)/[^"]+?\.zip}i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "93b6ec3f509020b353acdbe67041c2fab28d08e4e80e0471c3742a6174740b6f"
+  end
+
   def install
     bin.install "tkdiff"
   end
