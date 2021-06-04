@@ -8,10 +8,10 @@ class Pipgrip < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "dbf57bc17a8c9d5439a2b841c3c5c108529641eaac2be2870e347eb92983336e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b26968f1a6cc06f5220b1ea52d68b3a0e42bfa0a772cf32505a3b84f6ce3b49d"
-    sha256 cellar: :any_skip_relocation, catalina:      "6b91571022671213ecfc3b10911ccd5eb1603658285e13f7b5e32371e1479bb7"
-    sha256 cellar: :any_skip_relocation, mojave:        "4b677cfd3e6f639d0c20eec9a2fce714c785013381eadd6321882422a010cdae"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "186e5d20f5e9efad4af13796d0e0ac79caec559051913fe472e0e7aa1e0986ff"
+    sha256 cellar: :any_skip_relocation, big_sur:       "fe945bd47c9f216c2d0a792cd8e285eb997a3b6f029ecb7b6c7a8db71610f675"
+    sha256 cellar: :any_skip_relocation, catalina:      "0f18bb4595009bba0811ece3c86e74caa1c84799818298431aa9cba38527ef12"
+    sha256 cellar: :any_skip_relocation, mojave:        "d4dad1ab2fa11622134520609287f74ca26f87c7abc12895348318da20852517"
   end
 
   depends_on "python@3.9"
