@@ -6,10 +6,10 @@ class Gau < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a9715612609171ea02e2c249134f24d4135dd9840811f8ec22683163004efbb1"
-    sha256 cellar: :any_skip_relocation, big_sur:       "370fe80090847f4a6ada292142b8b5f591b3cdf6d7c69e73a61b5fe93ab26b24"
-    sha256 cellar: :any_skip_relocation, catalina:      "5ed0722411249cadab5035cec15abb31700401404ec1faead6f8ba61be569bff"
-    sha256 cellar: :any_skip_relocation, mojave:        "b0d9e8d3425c55a20cb3df80644704d280de21949e019ade9ba4fd572a7bf14e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7377ed366bd992706f59143c8e471cdc0cf3a69b9c440e2db3be73f02ee7802a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e07435d1b92a2249a588a6937a153cb3bc8e35ca3cdf137ed5d181242a1c8c41"
+    sha256 cellar: :any_skip_relocation, catalina:      "0e7265809d066b9c6d6d1e79b320038307b7b7f666e9e3bae6324a34bd58b357"
+    sha256 cellar: :any_skip_relocation, mojave:        "8ab1292a808320aa1223f50d9975749a58eac7c579cb5ecbfbad0bbbcbfcc5a5"
   end
 
   depends_on "go" => :build
