@@ -7,10 +7,10 @@ class Vcpkg < Formula
   head "https://github.com/microsoft/vcpkg.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0d1d60ffa4f6296a39b11e9324b4ce0e2acf210a95be8da551a6f0bee9a795ee"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0392fae50da34c6beeb52fa58ac63792ec4ac75801285f13ca65aa984af5368f"
-    sha256 cellar: :any_skip_relocation, catalina:      "d4aada87eb2d5b7cb32214e9a328fc54cbbcb208898adb95b75a51f0bcfc6d11"
-    sha256 cellar: :any,                 mojave:        "17881d46973aa1dd96b9fa4e3e5d2b8922febe9be86555639a1f37f8a7eca5cd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e58d2e3fbf843883563579ec544828788ca051c9b5bd46edc0e5df71c35b90dc"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d963bef9ed861e8e67c4ef2080f04adf3a91bb971776f60f3f40bd5a6a875e07"
+    sha256 cellar: :any_skip_relocation, catalina:      "143a0c4e50b0d96bdaa7ed913105654188664ac105500c74f66add89fe1cf098"
+    sha256 cellar: :any,                 mojave:        "301a0c5460bebfa3f05fb2ed8d264fce2a9fe9f261853fed991a59d1c1cd58ad"
   end
 
   depends_on "cmake" => :build
