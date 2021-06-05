@@ -7,9 +7,10 @@ class Osm2pgrouting < Formula
   head "https://github.com/pgRouting/osm2pgrouting.git"
 
   bottle do
-    sha256 cellar: :any, big_sur:  "b3a5695ec0da3196e6a0db7fff372f4792e9b1afc8b1cd2f7608973deba24916"
-    sha256 cellar: :any, catalina: "fc5653e1d1c6f002603fb38aa117260feff5c4784e0c5cb04d9cc0a72f331d0d"
-    sha256 cellar: :any, mojave:   "1a09c4bd948c742744f6dc377cbacf03281ae0bd705341b05ada202e540ef43d"
+    sha256 cellar: :any, arm64_big_sur: "aee032629018b2a5b6ff95094e549727a5e288d44723515b87fe8995f5dcbdc0"
+    sha256 cellar: :any, big_sur:       "e52d508d8bb1fd160e5d940fdb27ef7989f001ed5fe1e98be654aa693264ce5f"
+    sha256 cellar: :any, catalina:      "3152527b2ea1cbac663a018e5b3b70a1c466234aa94a74ec6c9f58e783891c2f"
+    sha256 cellar: :any, mojave:        "a5a34b5dc9ea3e2661903bb43dc76ece8196fe0bb4b34fc70a4979ec8027e981"
   end
 
   depends_on "cmake" => :build
