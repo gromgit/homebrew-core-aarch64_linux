@@ -8,10 +8,10 @@ class Rtl433 < Formula
   head "https://github.com/merbanan/rtl_433.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "8cad78e933133a7488445c11a33047b4ea33d7ff5518ca5ec6c3080d847f75f5"
-    sha256 cellar: :any, big_sur:       "9c1f16a45e2527a266e94c5e6885edb47e8b1e11a72672488e19a323f664dd93"
-    sha256 cellar: :any, catalina:      "90bd9710694e5dea8a4847db255bd27b62310af0c207b19125728b9402707bfe"
-    sha256 cellar: :any, mojave:        "785f8aa3ea271d615a5a89e440aac3ee4ab3f0312ddf88576f389cc4eec57889"
+    sha256 cellar: :any, arm64_big_sur: "e6583ff3156f6862160b728a95b1fbb279c6f5a7dd2636200354596057050d15"
+    sha256 cellar: :any, big_sur:       "d9d81361c72f07d50c0f28552e15190fbcfc91fe862403511be883a72df3c744"
+    sha256 cellar: :any, catalina:      "da1f6e7c5930ed4b98e34fb44d62dd1cefd22225366e35612688a74086afc38e"
+    sha256 cellar: :any, mojave:        "421233496a91d2efb4310ac47557d7d4e75d91116dc829c20c96f36283f60d34"
   end
 
   depends_on "cmake" => :build
