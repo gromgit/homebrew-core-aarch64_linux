@@ -6,10 +6,10 @@ class Proxytunnel < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "222f0244f92ca6e2ce051db0da342cd72ae5072a69757a92c20c0423fa017e02"
-    sha256 cellar: :any, big_sur:       "5e8d043da430d8ecc266bf8411e29832f84e0aaa753eec116448826d74f356ce"
-    sha256 cellar: :any, catalina:      "f8aa1e88ac9c787e87bdfb82f4d20af89d86cb3f1cbc479b14efa09e5edcd97f"
-    sha256 cellar: :any, mojave:        "4583ebc48440fc29779b781490b598ae5acc09e9fcc00752284a26cd831c5e01"
+    sha256 cellar: :any, arm64_big_sur: "97ccd9b616094e055755979daed8216f418d2aeb4639cf978b5df289d1c7e4ea"
+    sha256 cellar: :any, big_sur:       "88027c4126895fb5c1f25b1045df6bd3e79dd9d4c3e0e7c9623c0538f72d0df7"
+    sha256 cellar: :any, catalina:      "b69ed34113341b0c25778b0b10af2079d17e32e2f7288fa2feed80677124ec15"
+    sha256 cellar: :any, mojave:        "9f941a568397ae9ec164cde36aaafe90237f36b516e1403985e10687601cf15a"
   end
 
   depends_on "asciidoc" => :build
