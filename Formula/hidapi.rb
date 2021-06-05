@@ -13,7 +13,10 @@ class Hidapi < Formula
     sha256 cellar: :any, mojave:        "e9c2bec30d5d1e9e0f9f91c43510071ba17234cd968b33f161c56cbee23a4d8d"
   end
 
-  depends_on "autoconf" => :build
+  # autoconf 2.70 fails with: configure.ac:16: error: AC_CONFIG_MACRO_DIR can only be used once
+  # See https://github.com/libusb/hidapi/issues/264#issuecomment-830914402
+  # Move to "autoconf" when updating to the next release
+  depends_on "autoconf@2.69" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
@@ -27,7 +30,11 @@ class Hidapi < Formula
     system "./bootstrap"
     system "./configure", "--prefix=#{prefix}"
     system "make", "install"
-    bin.install "hidtest/.libs/hidtest"
+
+    # hidtest/.libs/hidtest does not exist for Linux, install it for macOS only
+    on_macos do
+      bin.install "hidtest/.libs/hidtest"
+    end
   end
 
   test do
