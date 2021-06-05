@@ -13,10 +13,10 @@ class ManDb < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "17a3f7d1314e32d74725f1f4bfcf7b715d60d8aff9b5a61d0ed5bbde2840f103"
-    sha256 big_sur:       "767c60fc61f4af286f60753ffca8297baaad41696e38eac2c9e12dc442ffb822"
-    sha256 catalina:      "b7f2d5cebcfe7727be74347a05d8d95da9759710f8f25703dd753f4c44af4158"
-    sha256 mojave:        "fb26c658449765651d30d47d08f60bd647195e35ff7afbe1bbcc48c1ec2748dd"
+    sha256 arm64_big_sur: "6a96017a3bbef997608f6f6fd6e03e5106ae99c5058566be8e7115e4966f6641"
+    sha256 big_sur:       "4529e4902e85caf37876458918ce7eac6513f28d4893834da88b1b772b3f22a9"
+    sha256 catalina:      "297439323c747e9fcfc6f27aca5c465affe33a614685cd4d90b32901d4a9a61f"
+    sha256 mojave:        "727b00709a5bde708f039abd8bcad7f861b4815301a5773d1fabc79fbeac2645"
   end
 
   depends_on "pkg-config" => :build
