@@ -7,12 +7,10 @@ class Stubby < Formula
   head "https://github.com/getdnsapi/stubby.git", branch: "develop"
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "c6223325a50e383b95f7658d15040027b2d45898aac7a4bc47d21393fdf43939"
-    sha256 big_sur:       "d158abd2fb311a487794a26f180426a98bd1c2e07b577196b43144d294e4bc71"
-    sha256 catalina:      "aaa2e665539768e5095b04cdbbf61b8b865334770e4608f144096f010631d47c"
-    sha256 mojave:        "be2d27bc1ceb52f5728c34b179ba4b57593ded2e66c87c4ab26fa6e89ac26ece"
-    sha256 high_sierra:   "437687f0eebd8218424dbefd61988a5ebb9c2a4487c779c36a329deaf2c2ad92"
+    sha256 arm64_big_sur: "f2df8ba554f68e3624bacf30a8ed767975a768e723b653ec120382ec9e442737"
+    sha256 big_sur:       "a02d951dfa4c022685c11f3e9e43cb382ea12411fba226ae552b55cfaaf92e23"
+    sha256 catalina:      "66ef743ee60c426ca0b4108787a8b05df9456da7ab5e9dc48616c4ac3b8cd4e0"
+    sha256 mojave:        "13a42fa05c297dbd0f5c058836f7b59651b87d69a1071b36845c8710d84fc4c5"
   end
 
   depends_on "cmake" => :build
