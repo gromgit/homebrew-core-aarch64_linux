@@ -6,11 +6,10 @@ class Libgweather < Formula
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
 
   bottle do
-    sha256 arm64_big_sur: "ea89b381f0cb180a44a1ab0d106693a8874fb785221cc6840092da07ed4960ec"
-    sha256 big_sur:       "fbed23f116de31b6c729671e719bb88246ed66007f779fef5289be3519de3223"
-    sha256 catalina:      "46c6e704f4d42d0032888a87cd2d0ce2fd2ce0a9b8027123976857d242c1b0f3"
-    sha256 mojave:        "b8db1057908c9723c708b919330b9a58cdbdb9e6a6c7b053242fb8c965171eff"
-    sha256 high_sierra:   "267bff5a8951012a4df193baed3816552028de9c44ae26d977e932a75a655d88"
+    sha256 arm64_big_sur: "bbe49cb0dd95750275208f4fa95369c3acbd03bdafe50a582a501b61141092a8"
+    sha256 big_sur:       "4f178ade88811f2a868a3d7e07c3d323f6277f91b70230c4fd0295598eed534a"
+    sha256 catalina:      "e66d6757c99298133ca9de4bcb28429a126de2ec9172f11d05bb86bcf037ccca"
+    sha256 mojave:        "5b0afebfe3d3307607ccedac1fdedbc768c73971261a0169f57808249f49ad47"
   end
 
   depends_on "gobject-introspection" => :build
