@@ -7,9 +7,9 @@ class Ngs < Formula
   head "https://github.com/ngs-lang/ngs.git"
 
   bottle do
-    sha256 cellar: :any, big_sur:  "0c479302f362f5a29d560cb329fdd23f661029ad21ca572aa77bae7d4d6329ca"
-    sha256 cellar: :any, catalina: "d7635955a01a24e1873b3f2b525cb23a1ad0053210da2a651bf04c4a66bc593c"
-    sha256 cellar: :any, mojave:   "f4592f29a531af5e177e3e3c4f823f61f74101524f52794771bc3c841661b4b2"
+    sha256 cellar: :any, big_sur:  "f92d46bbd5c75caadce87ba7856fd49367cdeae26f94f9875cad7bc3f87187db"
+    sha256 cellar: :any, catalina: "56844fed9b44e5d1cca3634051245eb43f6758f995e1a0ffd8b919e17df51510"
+    sha256 cellar: :any, mojave:   "d5d04636b7d4a6de1028fedbe36fe15c1938d7dd5d5e09a9bfda0680e39d17ad"
   end
 
   depends_on "cmake" => :build
