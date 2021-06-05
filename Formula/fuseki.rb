@@ -6,6 +6,10 @@ class Fuseki < Formula
   sha256 "a3fe94b1f4cc4b15fcb11f2984aefd2499e797c6f53fcc71b5cb3731b1518a43"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "c057f97eae45ddb5e1bfddca879bbbf755093b4c1a7cad1f03e22839d8b116b1"
+  end
+
   depends_on "openjdk"
 
   def install
