@@ -8,10 +8,10 @@ class CfnLint < Formula
   license "MIT-0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1adeec5c4b3b1469d3f9ff45a8cada804ec349d00207e5dda72a751c6eed0e92"
-    sha256 cellar: :any_skip_relocation, big_sur:       "1d0d17c77e4dc8b9392e995c1772d5ad3cd94feee12ea0dd322924f510fe23dd"
-    sha256 cellar: :any_skip_relocation, catalina:      "0ab32dd101a80a85e66fdb5e09905a76586b12d018f2fb4615845a8f255aeeb0"
-    sha256 cellar: :any_skip_relocation, mojave:        "2a80b303754e72d0d7830d8d441c31748201b9e414212959057c193776ef606c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d49a6c78234106970cbe8155d4d553c9cbc8065c0887a4e0c25f39aa7a18998d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "259b7345bf3f832948981b86dcfa08f0fd364293e5589cc3b8977a4bd11e7ad1"
+    sha256 cellar: :any_skip_relocation, catalina:      "d91f25b68b21af7104870458f58f865be3589b2ee834e33962e9c1c782638f64"
+    sha256 cellar: :any_skip_relocation, mojave:        "8e7b34da9cf4b13fa764306558ceb4a58838d373997b4e0c87fc568352b1b9d7"
   end
 
   depends_on "python@3.9"
