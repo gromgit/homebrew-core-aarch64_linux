@@ -6,6 +6,10 @@ class Jena < Formula
   sha256 "ff423a57823a7c948cda6b41ec131fc64472bc1337aa8683733ca053a4420488"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "b1a07fdf2b0c57f9dcf6eaddc97e2dd1bbb3086e7d79ea101673089fa03d7b0c"
+  end
+
   depends_on "openjdk"
 
   def install
