@@ -6,10 +6,10 @@ class JfrogCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "338811ed866249597d60688148a1da08430a98fe6847e16ad473f755d25cb35b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "269b3862510a48c65e402eafe20f66721c94e5378f2aa7b8c0af0a93d174e117"
-    sha256 cellar: :any_skip_relocation, catalina:      "12df2ff895bf4c91e2f0a223a7f59edbcdd2fb99f6095f1b37f075a463554c0e"
-    sha256 cellar: :any_skip_relocation, mojave:        "adcd50f8562441cb43af4c047c3a54bbee7dc33ce5fa9573359db18f9647dab8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1ce41d58517afb008b098402f25e705f04f7a25391b5a1445995cfb687b605bb"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c5d3c20e3f6b3ac23dfd13aa19a6115e50265e7be358fadc1e940d2f0c7052b8"
+    sha256 cellar: :any_skip_relocation, catalina:      "807c6bd2e19b7daf706f59dbe56498240dbb6be274e56d77a5c8c53a6008532e"
+    sha256 cellar: :any_skip_relocation, mojave:        "92823f362dfda4476bd11b51c29e057a383032236f38b1db46c558f06442a766"
   end
 
   depends_on "go" => :build
