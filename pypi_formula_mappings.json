@@ -84,6 +84,9 @@
   "mycli": {
     "exclude_packages": ["tabulate"]
   },
+  "nox": {
+    "exclude_packages": ["six"]
+  },
   "openstackclient": {
     "extra_packages": ["python-heatclient", "python-octaviaclient"]
   },
