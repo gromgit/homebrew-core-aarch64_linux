@@ -3,8 +3,8 @@ class Pywhat < Formula
 
   desc "🐸 Identify anything: emails, IP addresses, and more 🧙"
   homepage "https://github.com/bee-san/pyWhat"
-  url "https://files.pythonhosted.org/packages/32/18/94ed2965c98f2577826bf642bd496516738c3056c824687c1453c2e88944/pywhat-1.1.0.tar.gz"
-  sha256 "445cfe9ac2ccffd8438d4d4197fc5ec0ebbfac1ec241a75cd2e65ea5ed68e615"
+  url "https://files.pythonhosted.org/packages/3f/ac/58bbf32079d781e37f38340110c922787f61d1c9cc61640e3f716c47bd5e/pywhat-1.2.0.tar.gz"
+  sha256 "d87f5e368c8bbc50921867caebe03873b775f3c3953d955d40747bfd977ec503"
   license "GPL-3.0-or-later"
   head "https://github.com/bee-san/pyWhat.git", branch: "main"
 
@@ -58,6 +58,6 @@ class Pywhat < Formula
   end
 
   test do
-    assert_equal "Possible language (ISO-639-1 code): et 100% probability.", shell_output("#{bin}/pywhat test").strip
+    assert_match "Internet Protocol (IP)", shell_output("#{bin}/pywhat 127.0.0.1").strip
   end
 end

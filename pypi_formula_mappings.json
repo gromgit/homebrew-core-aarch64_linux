@@ -105,6 +105,9 @@
   "protobuf": {
     "exclude_packages": ["six"]
   },
+  "pywhat": {
+    "exclude_packages": ["six"]
+  },
   "regipy": {
     "exclude_packages": ["tabulate"]
   },
