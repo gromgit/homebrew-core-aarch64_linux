@@ -8,10 +8,10 @@ class Gupnp < Formula
   license "LGPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "a038e42c79ea3c83c1e4490ed9cd1d5c1a8a432ef7a209ad184be22c7c4ca464"
-    sha256 cellar: :any, big_sur:       "4ef33bf7fad586b473257332ea570ad89930030a3ba21e3f6fb0cd1bb5645e1d"
-    sha256 cellar: :any, catalina:      "67f05d8099650442d73a256991109f45c7c9f4f342d5351be4682da39233e704"
-    sha256 cellar: :any, mojave:        "9ae23797186a16d35ec22742167433d9f94a0b8342026b01a4c53333967bfba5"
+    sha256 cellar: :any, arm64_big_sur: "d9eb370676152358aab46a6eb4a2113c35393da0532e8777758fe86c58cfe68d"
+    sha256 cellar: :any, big_sur:       "2e6e2cf75b268a9b15ba5ab0218feb821b8fcfd3484b0392d1a61fbfb7b4024f"
+    sha256 cellar: :any, catalina:      "ad1eb9712b22a8cf129e2b1e655da5024904fbb4d9d05ac4642a74a169437e44"
+    sha256 cellar: :any, mojave:        "7a4029599f45eba6591d4dc62cfb4327e38ad97cd95f846ebc603b217d0e8939"
   end
 
   depends_on "docbook-xsl" => :build
