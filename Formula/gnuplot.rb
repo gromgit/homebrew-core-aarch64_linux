@@ -6,10 +6,10 @@ class Gnuplot < Formula
   license "gnuplot"
 
   bottle do
-    sha256 arm64_big_sur: "b716ef439ed271b604f1f62a921f4134e25e10f4145eea6ba5fdb1f10e3369e9"
-    sha256 big_sur:       "71b95705ec9b7a5e03668d6491b75e66dbee794b4c7a02f20d54e4dfcbf4fa4e"
-    sha256 catalina:      "88f18dff95d0609b0cbf6eb53446869b1639998c69180b34a18c45c8a6bae520"
-    sha256 mojave:        "906aa3c73c481c21e252ace7653703f815ed15c71717baa1ff299f4004624368"
+    sha256 arm64_big_sur: "27a1fe2a1a18339f161cf3e8e5798864265bea2e7c826d2c4f73f644656b0098"
+    sha256 big_sur:       "c2ee49f0e0df611f3955e6380a30020d2d4a2b7cfff4a769d32f20b9bf46b250"
+    sha256 catalina:      "8419141f6d01b54a0df20e6f1606f8555fbb915bf236a0a225711eaea4886ac5"
+    sha256 mojave:        "a617cb5b3bcc7f961f1b107ee56d5da12108b51797f92b11081b2c1ff54c279e"
   end
 
   head do
