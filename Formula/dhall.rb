@@ -6,9 +6,9 @@ class Dhall < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "ba724dd03858c6e1cbfef358b50a48c2df7c3298b1ad3e3ff6af14ac282475ac"
-    sha256 cellar: :any_skip_relocation, catalina: "d91c78ee735fec577fe621c73c56a00e803c0bf130c98ef90f0cd21bdb977b08"
-    sha256 cellar: :any_skip_relocation, mojave:   "5b9c420c1f2f1a9f24561c172977912852104d986e8243ec21ade06ad155ebd1"
+    sha256 cellar: :any_skip_relocation, big_sur:  "3033cf19e4ae915221dbe28210be943c3f4dc29e0b06d6835ad1385ddb74e0be"
+    sha256 cellar: :any_skip_relocation, catalina: "1d5b510e3ae69e57f7b4579d568a11c5074fc6ff12ebb7f7bd406180a0f13bc6"
+    sha256 cellar: :any_skip_relocation, mojave:   "0b7b23cff6a700ecbf39d33fa2d1f1217f94c05123c18106e6acb22ba4024025"
   end
 
   depends_on "cabal-install" => :build
