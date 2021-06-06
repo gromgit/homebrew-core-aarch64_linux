@@ -6,10 +6,10 @@ class Cp2k < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "32eb4f7cffffe7f0690918d5d0d112d3d914c623b9a22cf56845c7a2b917eb49"
-    sha256 big_sur:       "53e46178fc2fc84eb58ffd165aac614bc2cb6912145b40d4447716245b4234bc"
-    sha256 catalina:      "5d329a2fa68e818f75237fefd4749a590c115a4ca1330fd20782c49fd0b9793d"
-    sha256 mojave:        "9b05551c6ba11e1f7144c23ca35d687793cb0fa219c7fb4fc4d55aa7ea793c5a"
+    sha256 cellar: :any, arm64_big_sur: "1e8685848a4ecfafb4174a5efe06f50d09d40ff15f2be857bcdcd6107537a18b"
+    sha256 cellar: :any, big_sur:       "39aa87e7eaecb9eeda029c243e46a4e06ac55290b7c0f4ac412d2db920257747"
+    sha256 cellar: :any, catalina:      "6047da892ce42081ea33d78a733f48f76c85dd93a07acadf896d7ae6cb33f147"
+    sha256 cellar: :any, mojave:        "595431e7d8e76f526ae482074b49666d2b59e18feef73ed39d59b61bc669b01b"
   end
 
   depends_on "python@3.9" => :build
