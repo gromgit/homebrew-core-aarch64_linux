@@ -1,8 +1,8 @@
 class Treefrog < Formula
   desc "High-speed C++ MVC Framework for Web Application"
   homepage "https://www.treefrogframework.org/"
-  url "https://github.com/treefrogframework/treefrog-framework/archive/v1.31.1.tar.gz"
-  sha256 "282197f1735f7766a804e1f06e29b45754e082db2eb596edcd929f8e308b2887"
+  url "https://github.com/treefrogframework/treefrog-framework/archive/v2.0.1.tar.gz"
+  sha256 "a45f0d55682e4f184efbe678d38d35c092ce72108ca550bce669c811fb0276ff"
   license "BSD-3-Clause"
   head "https://github.com/treefrogframework/treefrog-framework.git"
 
@@ -19,7 +19,7 @@ class Treefrog < Formula
 
   depends_on xcode: :build
   depends_on "mongo-c-driver"
-  depends_on "qt@5"
+  depends_on "qt"
 
   def install
     system "./configure", "--prefix=#{prefix}", "--enable-shared-mongoc"
@@ -41,7 +41,7 @@ class Treefrog < Formula
     assert_predicate testpath/"hello", :exist?
     cd "hello" do
       assert_predicate Pathname.pwd/"hello.pro", :exist?
-      system Formula["qt@5"].opt_bin/"qmake"
+      system Formula["qt"].opt_bin/"qmake"
       assert_predicate Pathname.pwd/"Makefile", :exist?
       system "make"
       system bin/"treefrog", "-v"
