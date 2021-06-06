@@ -8,10 +8,7 @@ class GitGui < Formula
   head "https://github.com/git/git.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f6941b6984b73e4f89c9635a6113a0401461821febd431116dd06cf4971ec469"
-    sha256 cellar: :any_skip_relocation, big_sur:       "430d3e73a3d07bb170c1bd3eb3db3a5cbb283e1fd72671e9607f00cce23982eb"
-    sha256 cellar: :any_skip_relocation, catalina:      "603bf37ef37e46f4ec88855d44bd61a227299638dda5690c367b55c733ba3cf7"
-    sha256 cellar: :any_skip_relocation, mojave:        "59df29678a0fa2c9546ee91ec1c8d4061ad3ae7436ecb4beef92fecd6c62de41"
+    sha256 cellar: :any_skip_relocation, all: "4c74f3625ae0a40d8fe38346045b635aa0489e7a92239c7fed3b33c16867c613"
   end
 
   depends_on "tcl-tk"
