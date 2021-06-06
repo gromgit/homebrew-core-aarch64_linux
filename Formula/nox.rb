@@ -8,10 +8,10 @@ class Nox < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4ce7eed9cc2446ce8fee3a924280813ccc3f7eeb6a104672f76606fa353bcf86"
-    sha256 cellar: :any_skip_relocation, big_sur:       "cc46720ed1ca9e428193b610275fe33e728400e3cc4fd0c475c53005f9d53a91"
-    sha256 cellar: :any_skip_relocation, catalina:      "c29746c5cab8bf759cd839531bb2528fa08d305197e1c891136cdb48fbc8fd4b"
-    sha256 cellar: :any_skip_relocation, mojave:        "d2950d714baca5dd6ec329d2da4d7f79c09211be12f682cacc338e551f90b8ad"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ac8600a1ac8f9f1c5032a18d701e96abab4718d0f4c70398beb0661db3930a37"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0ded487819aeff6271ddcafe0855864f4aad847f9a8a7cca3929890823089e8e"
+    sha256 cellar: :any_skip_relocation, catalina:      "7acff0a39615a1f6283eda27b9ba0e6016ff46780f5e9688f2b175fdbb47c60a"
+    sha256 cellar: :any_skip_relocation, mojave:        "b577bf4ff88cc8c8f7e3a04afa724fcfa1710a41980328a684fe8fc3b47dc579"
   end
 
   depends_on "python@3.9"
