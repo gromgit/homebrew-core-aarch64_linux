@@ -8,11 +8,10 @@ class X8664ElfGdb < Formula
   head "https://sourceware.org/git/binutils-gdb.git"
 
   bottle do
-    sha256 arm64_big_sur: "922a0ed485b4ff144fcf876db7c50465e1a60566b9ea1ee25b57bd356f159a59"
-    sha256 big_sur:       "d9c893cd48502f675e5ccfbf139c70dc811683ff8427ee12053af00d63800d4b"
-    sha256 catalina:      "fc5398cdb8a918f3e0153c3467074145e69112fd42866c3dc8fee5a66869e8da"
-    sha256 mojave:        "7f6d20cc6f1d7f23834614f2f159d8438732e31bb3375c380d64e8dd010232c1"
-    sha256 high_sierra:   "bc725f791779a9400ab2b11d485ebba7e71aced9e6cef3365db614dbb273205c"
+    sha256 arm64_big_sur: "aaf1e1739a1952b92509c11e254003deb7998586cb9a3b5157bd421889e89b50"
+    sha256 big_sur:       "9eb516b13ed1eb3e5f8539c773c6ca81f268288b06271bb4b3f714ff07eea23b"
+    sha256 catalina:      "fb1509dd4c987e9fe4c61cdc6516bd8fac8eedac3bb31c86e33091306af7ccf6"
+    sha256 mojave:        "239d1cf2f6f90cde6360b5d9466b1e5187433779c3f986581acdf56823d766fb"
   end
 
   depends_on "x86_64-elf-gcc" => :test
