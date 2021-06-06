@@ -3,8 +3,8 @@ class Localstack < Formula
 
   desc "Fully functional local AWS cloud stack"
   homepage "https://github.com/localstack/localstack"
-  url "https://files.pythonhosted.org/packages/cb/63/ba0ebe47079dc742fd0db42d8d4a48ca580911cc53393f8f60a2127e37ff/localstack-0.12.10.tar.gz"
-  sha256 "abd7be7d7997f6532941fb0f976a3d2729287ccdb69b8b4ad3a10853e7e5d9f2"
+  url "https://files.pythonhosted.org/packages/15/2f/891c11a5d32d28b96f662d5232e8084d08274197b1cd3264dd6e8b24f153/localstack-0.12.12.tar.gz"
+  sha256 "bfea5abd060b111dbe4e758cc19f1cb97f7e347e7d54161ace50c2fa45652ccf"
   license "Apache-2.0"
 
   bottle do
@@ -18,18 +18,18 @@ class Localstack < Formula
   depends_on "python@3.9"
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/6a/cf/dec2280225bfb6495b349187f5c7d2e7502dc793d265a46e3f477d5e7fd3/boto3-1.17.57.tar.gz"
-    sha256 "6b4a79691a48740816f03c4cb1e8ef46f8335ad2019d9c4a95da73eb5cb98f05"
+    url "https://files.pythonhosted.org/packages/e4/0e/54e8dfd1e642682e4ec94834929e620a308241390ddecd30260efb85bdb1/boto3-1.17.88.tar.gz"
+    sha256 "a715ca6c4457d56ea3e3efde9bdc8be41c29b2f2a904fbd12befdb9cb5e289e4"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/35/03/8c1ae5e74d461cd1a8ac5a82e5e6c24bbd5c94f967c2d9cb96d984ba172f/botocore-1.20.57.tar.gz"
-    sha256 "ae4ac72921f23d35ad54a5fb0989fc00c6fff8a39e24f26128b9315cc6209fec"
+    url "https://files.pythonhosted.org/packages/90/57/1143198da9bfdb1a3d24efa2817bfe866998805bb3a42c9c233c5037dfaf/botocore-1.20.88.tar.gz"
+    sha256 "bc989edab52d4788aadd8d1aff925f5c6a7cbc68900bfdb8e379965aeac17317"
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/06/a9/cd1fd8ee13f73a4d4f491ee219deeeae20afefa914dfb4c130cfc9dc397a/certifi-2020.12.5.tar.gz"
-    sha256 "1a4995114262bffbc2413b159f2a1a480c969de6e6eb13ee966d470af86af59c"
+    url "https://files.pythonhosted.org/packages/6d/78/f8db8d57f520a54f0b8a438319c342c61c22759d8f9a1cd2e2180b5e5ea9/certifi-2021.5.30.tar.gz"
+    sha256 "2bbf76fd432960138b3ef6dda3dde0544f27cbf8546c458e60baf371917ba9ee"
   end
 
   resource "chardet" do
@@ -38,8 +38,8 @@ class Localstack < Formula
   end
 
   resource "dnslib" do
-    url "https://files.pythonhosted.org/packages/07/ec/611036f948b362e1155e68521c2e8f589f919b51fa361157e8808faffbe3/dnslib-0.9.14.tar.gz"
-    sha256 "fbd20a7cd704836923be8e130f0da6c3d840f14ac04590fae420a41d1f1be6fb"
+    url "https://files.pythonhosted.org/packages/46/fa/8aa9993017d381cff0908ef72c0e339733709e167557fbfb73eec4c2c9ed/dnslib-0.9.16.tar.gz"
+    sha256 "2d66b43d563d60c469117c8cb615843e7d05bf8fb2e6cb00a637281d26b7ec7d"
   end
 
   resource "dnspython" do
@@ -53,8 +53,8 @@ class Localstack < Formula
   end
 
   resource "dulwich" do
-    url "https://files.pythonhosted.org/packages/31/02/791c17b92e6d04c43f9b318c95a3f3c3e1ea718aa72ad95b9dac147895fa/dulwich-0.20.21.tar.gz"
-    sha256 "ac764c9a9b80fa61afe3404d5270c5060aa57f7f087b11a95395d3b76f3b71fd"
+    url "https://files.pythonhosted.org/packages/85/f1/eab86c0058d2195ec084dd200c3e4179871e13e4f38f17ff3f6c7dee3c56/dulwich-0.20.23.tar.gz"
+    sha256 "402e56b5c07f040479d1188e5c2f406e2c006aa3943080155d4c6d05e5fca865"
   end
 
   resource "idna" do
@@ -68,13 +68,13 @@ class Localstack < Formula
   end
 
   resource "localstack-client" do
-    url "https://files.pythonhosted.org/packages/2a/b5/c4bf6f0eb9753d08622ebaf1459c618487a95f0e0c81166eed69e803f243/localstack-client-1.17.tar.gz"
-    sha256 "b5094e92db5797bc7490fd40edcc76f12e6324f1bad1a461efb157d4b3257c13"
+    url "https://files.pythonhosted.org/packages/9f/68/1f6c4aeac934363c8cf3732d69c530bdfbe85f40ef0d6d1573d54a86c8ea/localstack-client-1.20.tar.gz"
+    sha256 "7f147caede58b758271106fcbb58161ed517959fb75b522e97fa848697755eb6"
   end
 
   resource "localstack-ext" do
-    url "https://files.pythonhosted.org/packages/38/b6/31400456db998d78edc329480268a1b97f2e413f2fa313443d99c6dac013/localstack-ext-0.12.7.26.tar.gz"
-    sha256 "6c8973207c5d4d6b9e6547d1b9daaa9c4d79f8b6a1635d9a970ce8b02f373fe8"
+    url "https://files.pythonhosted.org/packages/3e/8d/9514fcbb561580f1dc6166d83f5135fcf09a7b884f6fe45b6a1cfab207be/localstack-ext-0.12.9.30.tar.gz"
+    sha256 "a8e48c192efbba6c364fc6a38f5e81bff484992ad5c114437d347cf2fa802f3f"
   end
 
   resource "pyaes" do
@@ -103,13 +103,13 @@ class Localstack < Formula
   end
 
   resource "six" do
-    url "https://files.pythonhosted.org/packages/6b/34/415834bfdafca3c5f451532e8a8d9ba89a21c9743a0c59fbd0205c7f9426/six-1.15.0.tar.gz"
-    sha256 "30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/cb/cf/871177f1fc795c6c10787bc0e1f27bb6cf7b81dbde399fd35860472cecbc/urllib3-1.26.4.tar.gz"
-    sha256 "e7b021f7241115872f92f43c6508082facffbd1c048e3c6e2bb9c2a157e28937"
+    url "https://files.pythonhosted.org/packages/94/40/c396b5b212533716949a4d295f91a4c100d51ba95ea9e2d96b6b0517e5a5/urllib3-1.26.5.tar.gz"
+    sha256 "a7acd0977125325f516bda9735fa7142b909a8d01e8b2e4c8108d0984e6e0098"
   end
 
   def install
