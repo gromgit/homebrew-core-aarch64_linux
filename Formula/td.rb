@@ -1,8 +1,8 @@
 class Td < Formula
   desc "Your todo list in your terminal"
   homepage "https://github.com/Swatto/td"
-  url "https://github.com/Swatto/td/archive/1.4.1.tar.gz"
-  sha256 "fe81605196e9c1f9c5f930adf5067d0c0cb90e9c83c6a2d846e12dc0a18dd7e3"
+  url "https://github.com/Swatto/td/archive/1.4.2.tar.gz"
+  sha256 "e85468dad3bf78c3fc32fc2ab53ef2d6bc28c3f9297410917af382a6d795574b"
   license "MIT"
 
   bottle do
