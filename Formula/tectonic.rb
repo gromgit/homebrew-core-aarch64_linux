@@ -1,10 +1,9 @@
 class Tectonic < Formula
   desc "Modernized, complete, self-contained TeX/LaTeX engine"
   homepage "https://tectonic-typesetting.github.io/"
-  url "https://github.com/tectonic-typesetting/tectonic/archive/tectonic@0.4.1.tar.gz"
-  sha256 "5a2c910f822d59ddaf9d32a0e5f7f34ce30f44e4129513b3a0c50425cf48ac8f"
+  url "https://github.com/tectonic-typesetting/tectonic/archive/tectonic@0.5.1.tar.gz"
+  sha256 "8f38b6e377d0bedc71a4348e3ed44974d87bd83e8147ec28803eb42c0816f91e"
   license "MIT"
-  revision 2
 
   # As of writing, only the tags starting with `tectonic@` are release versions.
   # NOTE: The `GithubLatest` strategy cannot be used here because the "latest"
@@ -39,7 +38,7 @@ class Tectonic < Formula
     # https://crates.io/crates/openssl#manual-configuration
     ENV["OPENSSL_DIR"] = Formula["openssl@1.1"].opt_prefix
 
-    system "cargo", "install", *std_cargo_args
+    system "cargo", "install", "--features", "external-harfbuzz", *std_cargo_args
   end
 
   test do
