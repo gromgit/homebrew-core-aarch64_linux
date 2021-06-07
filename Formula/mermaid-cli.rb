@@ -8,10 +8,10 @@ class MermaidCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "dbbd92838b1d11bd4e11eb5535fbd0c6f5b92c0afb411558a7c75116b71062dd"
-    sha256 cellar: :any, big_sur:       "95ef7d2a52850f2074addcfd742ba346f737d1d25a6aeb250f7b222d4ea68c71"
-    sha256 cellar: :any, catalina:      "95ef7d2a52850f2074addcfd742ba346f737d1d25a6aeb250f7b222d4ea68c71"
-    sha256 cellar: :any, mojave:        "95ef7d2a52850f2074addcfd742ba346f737d1d25a6aeb250f7b222d4ea68c71"
+    sha256 cellar: :any, arm64_big_sur: "264827be1fe94cdfac09ce7cad82583d1ecdb77ae91e7ff93c037847ba59b5fc"
+    sha256 cellar: :any, big_sur:       "93ef1ae2c5d8e279f25031776a6b2d4745ba5c495da6c440de2318f52b051cbc"
+    sha256 cellar: :any, catalina:      "93ef1ae2c5d8e279f25031776a6b2d4745ba5c495da6c440de2318f52b051cbc"
+    sha256 cellar: :any, mojave:        "93ef1ae2c5d8e279f25031776a6b2d4745ba5c495da6c440de2318f52b051cbc"
   end
 
   depends_on "node"
