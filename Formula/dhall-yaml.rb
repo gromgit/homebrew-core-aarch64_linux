@@ -7,9 +7,9 @@ class DhallYaml < Formula
   head "https://github.com/dhall-lang/dhall-haskell.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "db34193b71b55daf2bf85c70681f79a50f75e16f6c4085b6bd42a9925e730a0e"
-    sha256 cellar: :any_skip_relocation, catalina: "e126e3a891a0c5e492a2af446974d4d06a8500ae658b26714cd8e474a1da8da8"
-    sha256 cellar: :any_skip_relocation, mojave:   "26300f99283556cf9531aedb46ccc45927ecc603d3b9aa4b2150bd1e775566cd"
+    sha256 cellar: :any_skip_relocation, big_sur:  "8345b848010e3920b06d53cbd271b572bf7d1f6d74219b6e81fb4f8a438de578"
+    sha256 cellar: :any_skip_relocation, catalina: "e4022dec09fd40dde84c6699be5b82d058937ec290383e405c2da70f53df208d"
+    sha256 cellar: :any_skip_relocation, mojave:   "8404c619dac4c59dec00546088de2b0e8580368210b8a31fdfd0781ba58d0fd4"
   end
 
   depends_on "cabal-install" => :build
