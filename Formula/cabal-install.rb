@@ -8,9 +8,9 @@ class CabalInstall < Formula
   head "https://github.com/haskell/cabal.git", branch: "3.4"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "2c0c5cc90d4739515721557f8e9c02783b3b5f106033c5c09241657b4418b21f"
-    sha256 cellar: :any_skip_relocation, catalina: "14be4fa563d51c78f570a4d58746fea563e33f94fdd288f907d4892b2a763eec"
-    sha256 cellar: :any_skip_relocation, mojave:   "7b0fdd86bd545b19defa1b89e98f31aff6d3b7519b98cd76f52c1641b50a92ad"
+    sha256 cellar: :any_skip_relocation, big_sur:  "2278e214a2049f3c96f6e7a331db424f4318fddd16112eadd0327ba09d5ff706"
+    sha256 cellar: :any_skip_relocation, catalina: "2d413e0af2bd35e151423a1ad764c471a397bdab5f04a337c31adb96480bdb84"
+    sha256 cellar: :any_skip_relocation, mojave:   "ce70ecbdf305bbefa6bfe41dab1d5e3087e5062e64d500277c7ec9aa71d792bc"
   end
 
   depends_on "ghc" if MacOS.version >= :catalina
