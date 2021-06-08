@@ -14,10 +14,10 @@ class Tectonic < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "f4c9848b087634dc44e65c279704735867c8cd9ceeaf1b223db5eb86d016931b"
-    sha256 cellar: :any, big_sur:       "6e813d832a36c1bd5cbe050671195898c95b3c34693d7475335d01558ca99586"
-    sha256 cellar: :any, catalina:      "3219998fb7f3cb1b9aeb56f28c2261259166356e6cf5a84224253edc442cc7cd"
-    sha256 cellar: :any, mojave:        "ee346b94c8386bb0fe34983c55152761856ab695061f6d21d762a9b9fae8dcd3"
+    sha256 cellar: :any, arm64_big_sur: "1206c99fb1b8e0421b150c06f120e03666260266c9a64f55264141e4b0215a63"
+    sha256 cellar: :any, big_sur:       "acb41fea71818bb4aa39cb185f8a61b9c984ffe71300f3b975fc9e1960a709cb"
+    sha256 cellar: :any, catalina:      "72e14d07689f555d225030d1823708987bbaef62d6952e7868d251f438499e22"
+    sha256 cellar: :any, mojave:        "f47ae2406831bdc1e4d5b6b0444e4b5eadc73e9d4d37b508833b8a3ae3503f3a"
   end
 
   depends_on "pkg-config" => :build
