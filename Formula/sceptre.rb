@@ -9,10 +9,10 @@ class Sceptre < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "26f8ed58058ca751e85b3b05c06ed3641ce3990808f65f1b390bcc5476177a04"
-    sha256 cellar: :any_skip_relocation, big_sur:       "514534fe3b3bc01e2db9858b1d9a58b15e3e0a87fd86c109d0420897a6d81095"
-    sha256 cellar: :any_skip_relocation, catalina:      "fd468b6d8cb0ff2583e2a396fd5fe49cde82cb5c16f1dcb34ed452646716139b"
-    sha256 cellar: :any_skip_relocation, mojave:        "a48375a0271b441d4d3df4dc2ff430b27aba357e58df5dae6ee3e5cf38ea1d82"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f29a291f075c15bbaba3d724d54297fc0e05f5381893392fba9d1c905758d0d9"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f1fab4d3b3a1cb26b74c789c3d455293475737524fa466d6c8b87cd329f64764"
+    sha256 cellar: :any_skip_relocation, catalina:      "b67b5d8825e9b965a387142edd92b87b4c71f2593b1fa7fce76065bd27aeaffe"
+    sha256 cellar: :any_skip_relocation, mojave:        "6682173f333a2737013ad52d426c8519593a71112f8cde087b24a29e6d9ffadf"
   end
 
   depends_on "python@3.9"
