@@ -11,6 +11,10 @@ class TodoTxt < Formula
     strategy :github_latest
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "5396d70e5a225d90e57ab5f159579bb47c062d263c6a94294984314d3e7d011a"
+  end
+
   def install
     bin.install "todo.sh"
     prefix.install "todo.cfg" # Default config file
