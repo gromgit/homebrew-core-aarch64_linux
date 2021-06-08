@@ -9,10 +9,10 @@ class NetlifyCli < Formula
   head "https://github.com/netlify/cli.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "35a017831e6f2cdef875b3f84c10c93e0dab39d195406f909ec646d5645859cc"
-    sha256 cellar: :any_skip_relocation, big_sur:       "402605b442b43b463d495b34f325bf11c0e3c4dc63c574d18c9fb0ad77b01304"
-    sha256 cellar: :any_skip_relocation, catalina:      "402605b442b43b463d495b34f325bf11c0e3c4dc63c574d18c9fb0ad77b01304"
-    sha256 cellar: :any_skip_relocation, mojave:        "402605b442b43b463d495b34f325bf11c0e3c4dc63c574d18c9fb0ad77b01304"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f94e383d240c3e9487820fe9e2fe5f9ba1ebe024fd09dcb5676b488815292228"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a79304738c8ff5d8a5923bbd4090fe840c700725be625ff5b4af9e53325991c4"
+    sha256 cellar: :any_skip_relocation, catalina:      "a79304738c8ff5d8a5923bbd4090fe840c700725be625ff5b4af9e53325991c4"
+    sha256 cellar: :any_skip_relocation, mojave:        "a79304738c8ff5d8a5923bbd4090fe840c700725be625ff5b4af9e53325991c4"
   end
 
   depends_on "node"
