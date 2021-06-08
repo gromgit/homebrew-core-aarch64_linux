@@ -6,10 +6,10 @@ class CloudformationGuard < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "cfae801ef1fa761b9a680003aab842dd144547cf1545a8edfe0ef89308d608a0"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b4a4261ff5d1cb01a57952e0a708a82db9f4b0a20a2058f99fbd00eeeb285ef5"
-    sha256 cellar: :any_skip_relocation, catalina:      "51f2da33dfa429ac853feb9fc6122d7ff402c8bbd1e4e0ad7729e9a0dbff9a68"
-    sha256 cellar: :any_skip_relocation, mojave:        "b8bf78098c262aaeccba2b574925e6539fd78174a1dcfd7d27d2810952558ea9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7c43d1e9cce5d3aa581a9060e442e65f889593426f59c3cd10b7daff7ef1eb28"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c9f566d3b02500d89fe7782547ad4661dd9cdd0db90cb8f742183220af1801d2"
+    sha256 cellar: :any_skip_relocation, catalina:      "97f0bf373f9cc106660bbff1f8e3aac3e86906b15d11633788520b6670f44eb9"
+    sha256 cellar: :any_skip_relocation, mojave:        "8b485665e86453b38df8baa6c0715b53aca87129128878384fd62652cf04cacf"
   end
 
   depends_on "rust" => :build
