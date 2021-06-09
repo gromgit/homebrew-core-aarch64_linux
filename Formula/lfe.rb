@@ -7,12 +7,10 @@ class Lfe < Formula
   head "https://github.com/lfe/lfe.git", branch: "develop"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "056b4f7b13b58355e0b8b24a6fc192bcb6da3fa69b599f366eabc17ea4c5eefb"
-    sha256 cellar: :any_skip_relocation, big_sur:       "26ac196800954a35b70ff8b1244f8d62e9f8f4cd29b312743e3026e5407745b3"
-    sha256 cellar: :any_skip_relocation, catalina:      "7dd076c48d565d4d0b686224178c1ee98a121529544633af3b13c71565f1f9e5"
-    sha256 cellar: :any_skip_relocation, mojave:        "f05f9f0affc3bba078432f5822f85549ea905ce0dc4271f501e0d38e113dd09f"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "4a2aff7e038f97050cbd8beb84023c9c9c093078ba4233ead520513bd708b3c5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "774daa834a0a07aa33104c7f4bc24665dba32de41e82ca9743e300643f1a6838"
+    sha256 cellar: :any_skip_relocation, big_sur:       "062c812692d43ea404a44414a764bb9ad6e3622559fa64a200246d2443fdc5c9"
+    sha256 cellar: :any_skip_relocation, catalina:      "0025ffc2a3ca8ee49509ada4103a28a32142208c13e1b7841f0f33f529daac2b"
+    sha256 cellar: :any_skip_relocation, mojave:        "16d8e8a9f9ab091b1184dac366bb9d83cfccfdb728f79c035362b7b86940a7af"
   end
 
   depends_on "emacs" if MacOS.version >= :catalina
