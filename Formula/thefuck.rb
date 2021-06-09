@@ -9,11 +9,10 @@ class Thefuck < Formula
   head "https://github.com/nvbn/thefuck.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3bc7586bc2ff253689bfe24ff35af100c6659605dddaefbec92cec29e2a25389"
-    sha256 cellar: :any_skip_relocation, big_sur:       "00fb2bb9fbd724cf47c75e99ffc44a356587cd34d423feefe21ec1b57f954133"
-    sha256 cellar: :any_skip_relocation, catalina:      "7f8ecd031ae58cc414d695058d7332b4b93c8e2959cf5114c82609d5676b24a7"
-    sha256 cellar: :any_skip_relocation, mojave:        "b7ff0b5553c12c27d3311d557604b708e0e4ea0c315b03198f354667b057a1c8"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "e2d94b4c4d959f39370227a2a029956f85b5ef6e739bb0b55969ca2b0c034bb5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7dbd33a054ec30e827dd7147a624d0334a8ea3b2dbf829969ce001c319488306"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f1160909978920c2818a8368c3386ecbfc60049d9367078817701967f41dc94d"
+    sha256 cellar: :any_skip_relocation, catalina:      "b69bb2d139c3aae2ea6896a25a73b3e7d05fa86c04255354d2529ecfb87abd3b"
+    sha256 cellar: :any_skip_relocation, mojave:        "796e2b1d7f8a69760c9366d2c4f66cf24ec0fbef916a3f0dcea1fa567b46617d"
   end
 
   depends_on "python@3.9"
