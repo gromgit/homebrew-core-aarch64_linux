@@ -9,10 +9,10 @@ class GatsbyCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e5ef7218ebfc33a0985eead1feda6670cfdfe383eda7f4bef0e5fad838c2854b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b3be394ca8b02fd405c6ec34faabecc960fb444562c8850a7ef4676744d182f2"
-    sha256 cellar: :any_skip_relocation, catalina:      "b3be394ca8b02fd405c6ec34faabecc960fb444562c8850a7ef4676744d182f2"
-    sha256 cellar: :any_skip_relocation, mojave:        "7993b95bf0dc288a8c56cf779a96b6984b70f772bf4a9df986d0f0be1b04f004"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d184cbd41f1475b9236ba6b60a75bb3fbd4bfd80eb002a000db798300524d4b2"
+    sha256 cellar: :any_skip_relocation, big_sur:       "2ab75c0d4ba5f47ac8af7ce550910124588bf0bbb108ece50679d7a288f5eaae"
+    sha256 cellar: :any_skip_relocation, catalina:      "2ab75c0d4ba5f47ac8af7ce550910124588bf0bbb108ece50679d7a288f5eaae"
+    sha256 cellar: :any_skip_relocation, mojave:        "2ab75c0d4ba5f47ac8af7ce550910124588bf0bbb108ece50679d7a288f5eaae"
   end
 
   depends_on "node"
