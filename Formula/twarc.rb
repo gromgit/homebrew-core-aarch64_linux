@@ -3,8 +3,8 @@ class Twarc < Formula
 
   desc "Command-line tool and Python library for archiving Twitter JSON"
   homepage "https://github.com/DocNow/twarc"
-  url "https://files.pythonhosted.org/packages/f0/e7/41a880e9e30533941a6c001cdcfd5f6b7700015a41e691cb96456d35e8a8/twarc-2.1.2.tar.gz"
-  sha256 "e39d04743c8c1c58457e23e9c6c41f1b1f7282f2915f25f6594719e262ed9223"
+  url "https://files.pythonhosted.org/packages/2c/43/852f4761699ba0467b0f57632d55d4a061dddc06a108257c73fa7976aba2/twarc-2.1.3.tar.gz"
+  sha256 "3d11628eeac7299befcdecb7f5a90b45ac533ad97649d310d5643b59af8e8acd"
   license "MIT"
 
   bottle do
