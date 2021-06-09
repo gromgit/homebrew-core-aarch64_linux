@@ -169,6 +169,9 @@
   "sqlite-utils": {
     "exclude_packages": ["tabulate"]
   },
+  "theharvester": {
+    "exclude_packages": ["six"]
+  },
   "todoman": {
     "exclude_packages": ["tabulate"]
   },
