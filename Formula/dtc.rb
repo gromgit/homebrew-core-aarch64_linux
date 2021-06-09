@@ -1,8 +1,8 @@
 class Dtc < Formula
   desc "Device tree compiler"
   homepage "https://www.devicetree.org/"
-  url "https://www.kernel.org/pub/software/utils/dtc/dtc-1.6.0.tar.xz"
-  sha256 "10503b0217e1b07933e29e8d347a00015b2431bea5f59afe0bed3af30340c82d"
+  url "https://www.kernel.org/pub/software/utils/dtc/dtc-1.6.1.tar.xz"
+  sha256 "65cec529893659a49a89740bb362f507a3b94fc8cd791e76a8d6a2b6f3203473"
   license any_of: ["GPL-2.0-or-later", "BSD-2-Clause"]
 
   livecheck do
