@@ -1,8 +1,8 @@
 class Libiodbc < Formula
   desc "Database connectivity layer based on ODBC. (alternative to unixodbc)"
   homepage "http://www.iodbc.org/dataspace/iodbc/wiki/iODBC/"
-  url "https://github.com/openlink/iODBC/archive/v3.52.14.tar.gz"
-  sha256 "896d7e16b283cf9a6f5b5f46e8e9549aef21a11935726b0170987cd4c59d16db"
+  url "https://github.com/openlink/iODBC/archive/v3.52.15.tar.gz"
+  sha256 "f6b376b6dffb4807343d6d612ed527089f99869ed91bab0bbbb47fdea5ed6ace"
   license any_of: ["BSD-3-Clause", "LGPL-2.0-only"]
 
   bottle do
