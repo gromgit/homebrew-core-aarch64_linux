@@ -1,8 +1,8 @@
 class Lego < Formula
   desc "Let's Encrypt client and ACME library"
   homepage "https://go-acme.github.io/lego/"
-  url "https://github.com/go-acme/lego/archive/v4.3.1.tar.gz"
-  sha256 "98b5d267a491cacdb901311acf3c360a2f2d03c389a700917c5ca0e43374b508"
+  url "https://github.com/go-acme/lego/archive/v4.4.0.tar.gz"
+  sha256 "3c1261fe1a774a9aea2f1bcacd9cb5fea8213cd343c6e5e68f78bff90cfd5b16"
   license "MIT"
 
   bottle do
@@ -19,7 +19,7 @@ class Lego < Formula
   end
 
   test do
-    output = shell_output("lego -a --email test@brew.sh --dns digitalocean -d brew.test run", 1)
+    output = shell_output("lego -a --email test@brew.sh --dns digitalocean -d brew.test run 2>&1", 1)
     assert_match "some credentials information are missing: DO_AUTH_TOKEN", output
 
     output = shell_output("DO_AUTH_TOKEN=xx lego -a --email test@brew.sh --dns digitalocean -d brew.test run 2>&1", 1)
