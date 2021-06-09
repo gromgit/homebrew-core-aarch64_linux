@@ -8,10 +8,10 @@ class Skaffold < Formula
   head "https://github.com/GoogleContainerTools/skaffold.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8c576cb42da81301818117430b886c98ef7b5a82438cbeb5a0e92c46085e734c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "4472bdd350046b588adbc2a9db6e2bc9a1e869950235620b63213eaa2ac0e6df"
-    sha256 cellar: :any_skip_relocation, catalina:      "664520cd6fbe309fb552841303364b3577d36dde3e83625f9720b92f264cacc2"
-    sha256 cellar: :any_skip_relocation, mojave:        "09bb5c79e2009da7bc53e88fa90679f7a1eee5684c25464265aa751d07d8eb09"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7566111ef2db7367e11b6810d11e38c0f93047a703bdd84f4f45c566cc3b9435"
+    sha256 cellar: :any_skip_relocation, big_sur:       "75d176a1c964392659e698079ce98d4aef8bbfd1021fba53d474d37faf0734ca"
+    sha256 cellar: :any_skip_relocation, catalina:      "843793b86b449821cc549c6d34570e2621659b12bd957c0627ee02ae8103bf29"
+    sha256 cellar: :any_skip_relocation, mojave:        "f69975915448eb510495ca893b32a248211ebde8fa86f626099f421d510bdcaa"
   end
 
   depends_on "go" => :build
