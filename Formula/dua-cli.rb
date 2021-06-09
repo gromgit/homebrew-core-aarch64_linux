@@ -6,10 +6,10 @@ class DuaCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "446104ccf0859d02cfd5c54ff77c16e4e36243902b12e3b5f89add68ef9f3827"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ca4f98add4eaee39ad3d1f6e3aa8c4359c739da3877f567b07c9d018774dc9c8"
-    sha256 cellar: :any_skip_relocation, catalina:      "8f237c54d9e7287884ca08bd0f5db7dfe605c2a22cdffc1c195d6a262c324ceb"
-    sha256 cellar: :any_skip_relocation, mojave:        "5e2d79061e2d6bc6aa03f1d928fff78055d2ef1f48161429fed763b28b7bbd44"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3ae0317e5df332baca066b6bba88094ba9977fed34c408775a789dba07227774"
+    sha256 cellar: :any_skip_relocation, big_sur:       "47b2d8ee9906bcf7846572ddb65f7de5fd9c3267c4434a775e8e61e5bf2a91e4"
+    sha256 cellar: :any_skip_relocation, catalina:      "be7b296e0176be9a512b8708da428f77d31f01c3e644f955d0b593d7ae813751"
+    sha256 cellar: :any_skip_relocation, mojave:        "6db05f74eb9753ab9662684f74369ec1071d48a2a4f021219b6cddc141d68f2f"
   end
 
   depends_on "rust" => :build
