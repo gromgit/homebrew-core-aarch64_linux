@@ -11,6 +11,13 @@ class PhoronixTestSuite < Formula
     strategy :github_latest
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e6ef9090b342a82df1e6127d2b77e3a7cef93c943f469a7a0e7ea4a63b1d6ff4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "021e080cf334bf2a07774987010e2ea1047e81348f4b020069c4c016522947de"
+    sha256 cellar: :any_skip_relocation, catalina:      "021e080cf334bf2a07774987010e2ea1047e81348f4b020069c4c016522947de"
+    sha256 cellar: :any_skip_relocation, mojave:        "021e080cf334bf2a07774987010e2ea1047e81348f4b020069c4c016522947de"
+  end
+
   def install
     ENV["DESTDIR"] = buildpath/"dest"
     system "./install-sh", prefix
