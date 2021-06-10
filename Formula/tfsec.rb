@@ -1,8 +1,8 @@
 class Tfsec < Formula
   desc "Static analysis powered security scanner for your terraform code"
   homepage "https://github.com/tfsec/tfsec"
-  url "https://github.com/tfsec/tfsec/archive/v0.39.42.tar.gz"
-  sha256 "838b5ebd69e2046d3bd06f87915ce30ef25fe469da5d27b2f9ff519c0cb0d719"
+  url "https://github.com/tfsec/tfsec/archive/v0.40.1.tar.gz"
+  sha256 "d00881a6e84ca97c687bd820520beee4c67380e049af9a0f8e296fdb79d7d50a"
   license "MIT"
 
   livecheck do
@@ -32,13 +32,16 @@ class Tfsec < Formula
       }
     EOS
     (testpath/"bad/brew-validate.tf").write <<~EOS
+      resource "aws_security_group_rule" "world" {
+        description = "A security group triggering tfsec AWS006."
+        type        = "ingress"
+        cidr_blocks = ["0.0.0.0/0"]
       }
     EOS
 
     good_output = shell_output("#{bin}/tfsec #{testpath}/good")
     assert_match "No problems detected!", good_output
-    refute_match("WARNING", good_output)
-    bad_output = shell_output("#{bin}/tfsec #{testpath}/bad 2>&1")
+    bad_output = shell_output("#{bin}/tfsec #{testpath}/bad 2>&1", 1)
     assert_match "WARNING", bad_output
   end
 end
