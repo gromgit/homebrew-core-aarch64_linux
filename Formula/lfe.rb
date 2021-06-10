@@ -8,10 +8,10 @@ class Lfe < Formula
   head "https://github.com/lfe/lfe.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "774daa834a0a07aa33104c7f4bc24665dba32de41e82ca9743e300643f1a6838"
-    sha256 cellar: :any_skip_relocation, big_sur:       "062c812692d43ea404a44414a764bb9ad6e3622559fa64a200246d2443fdc5c9"
-    sha256 cellar: :any_skip_relocation, catalina:      "0025ffc2a3ca8ee49509ada4103a28a32142208c13e1b7841f0f33f529daac2b"
-    sha256 cellar: :any_skip_relocation, mojave:        "16d8e8a9f9ab091b1184dac366bb9d83cfccfdb728f79c035362b7b86940a7af"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7745910e18ebc4dd084e5c39a77e09d423ade2f9b89f84cdfccad58b9a80a22e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "1cbcf0bc43a850e7f57ec9d9447a5bf4c1047aac0d7e2df89f51b169969ed599"
+    sha256 cellar: :any_skip_relocation, catalina:      "e2f25a22dc8d4f3feb6212222d19525779bf424a9e88ae15cfa9fb3cae3c5d1a"
+    sha256 cellar: :any_skip_relocation, mojave:        "d95f508c8a023d77e8e3f3b8f84434c0282b9279cca2fd478c172c2ee1214b2b"
   end
 
   depends_on "emacs" => :build if MacOS.version >= :catalina
