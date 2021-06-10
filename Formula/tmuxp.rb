@@ -7,6 +7,13 @@ class Tmuxp < Formula
   sha256 "14296b62db260420d4600dcd805408ea908b3a78d4ea0a6a403d092fdbf6d075"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f5b388d9259be4de8674124ef0b3b6ca23ff2b72d73a87a8e59dc85a410f02ad"
+    sha256 cellar: :any_skip_relocation, big_sur:       "8ff5a3324672681da0f52a92f418ad1f4bfc59de6342ba391f1b1a8ae63fcbe4"
+    sha256 cellar: :any_skip_relocation, catalina:      "5016ad7f0da2622d3624517a1944dd79e2497053a1d5aa28f6aa95f31cfaed55"
+    sha256 cellar: :any_skip_relocation, mojave:        "cad92b1d32803c9730cbe3e264ec5b15738fe8a0673b5b735fa949e58d54d337"
+  end
+
   depends_on "python@3.9"
   depends_on "tmux"
 
