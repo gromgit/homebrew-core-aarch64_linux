@@ -12,10 +12,10 @@ class Butane < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9e6ae4008af9fb8dda9996a611a89933c070ea957cb82238238b93169ebc89c0"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b48f545690f7676ce59117fe3fec9c3a89872241c788081c1e828a62d5e93195"
-    sha256 cellar: :any_skip_relocation, catalina:      "9a412c89813d6f51a694557d4b38b849e3133af9b2707b4a77f648ab3b7bb32d"
-    sha256 cellar: :any_skip_relocation, mojave:        "bfceadc7c496f1d78b65f725ae01572eefdd74e6b8080b539c285033fffbcbf8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f4add137734630309ba525c1f823f91b5b06f86a6d5c1f1b58254bfb21534e91"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7ca478b3e3ef5803411e9548a5ca43ebcde9145cca69f97333ad5d7d5b72a423"
+    sha256 cellar: :any_skip_relocation, catalina:      "a8eed121c371c702e2b9cd454aa9713fb4620285baa024dcf191d6ce19bd7cec"
+    sha256 cellar: :any_skip_relocation, mojave:        "8593c1916fe93e00624d22cbd3699cdd0592fa4d57e846e8badee55a4f257ed5"
   end
 
   depends_on "go" => :build
