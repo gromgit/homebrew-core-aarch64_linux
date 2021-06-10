@@ -11,10 +11,10 @@ class Clusterctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bba5f5b36679c99d98ff5bb88fefa3c5b2989f99e71482f67e587ddf62238a17"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3b0f5c3ff6333687ca5f81617e6e05b16e0f49b678f4a2c7ef4acd44923faef9"
-    sha256 cellar: :any_skip_relocation, catalina:      "5d2ab997c76b6ff2fadfefcc32c94f94ff0ef57aaff98a5a5e07db208b44b508"
-    sha256 cellar: :any_skip_relocation, mojave:        "f2ec07a48f69bbd812acbd53768ec8a0da5ab090fe493a899c10a48555e6ad4c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "20a813817660bfc45c70d01fec814fa1155febbc6d917e3c55d8e058ea0a2603"
+    sha256 cellar: :any_skip_relocation, big_sur:       "fce4aed624f692146b54755af147e3b40b97226aec1bfe7cef36752b67dd0ef6"
+    sha256 cellar: :any_skip_relocation, catalina:      "ee868f60877c705914e9db906b1990c33d35aebf91db26f4e65117087cc6e66f"
+    sha256 cellar: :any_skip_relocation, mojave:        "8a1ed5fbdf08a7928612a5dfb0d6fd082c013b03f552fdc51728b70df5dc827f"
   end
 
   depends_on "go" => :build
