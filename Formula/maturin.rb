@@ -6,6 +6,13 @@ class Maturin < Formula
   license "MIT"
   head "https://github.com/PyO3/maturin.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0b96d6bfd69d0b1726a021667888053153b9c4cc6cb254227ec9b0c185ddf233"
+    sha256 cellar: :any_skip_relocation, big_sur:       "369ba476ac12b625603e681735bb3799c3792ab84fbf95f39487d0f2b68e1ee6"
+    sha256 cellar: :any_skip_relocation, catalina:      "de6c2b01d717d2b5b425d8e3ac0ef9dde44db034f4ec47eefb8799b9562d45bf"
+    sha256 cellar: :any_skip_relocation, mojave:        "adf82a913822b390f34720b5ca060ee28eabd427761e8b6414f639ffb8528eff"
+  end
+
   depends_on "python@3.9" => :test
   depends_on "rust"
 
