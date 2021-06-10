@@ -12,10 +12,10 @@ class Gnupg < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "ad1799d3b4483929a125ae72dc7af4bb3015ca1e03cba98a14b24ffc275848df"
-    sha256 big_sur:       "dfd024ae4c3b74b275cd44ec0a95b9063eb3f270ea5eaa402932657421736176"
-    sha256 catalina:      "fcaf082ce7bf9165ac17efb53fa078b623794fe062f041b495041ab72f65de5d"
-    sha256 mojave:        "808efd7a7f741e67f293a75aed1934203cdc5ca779907882503f4325cb459181"
+    sha256 arm64_big_sur: "fd27ef93bf469e8f5689c372f6b6dba70f2fb777b8056b22e5688b67a146b902"
+    sha256 big_sur:       "d1459dc52e4360dd6d812a833218e5ced1f08c10b131981a3ec2aab9fc5d7f9c"
+    sha256 catalina:      "fbdc50f45c45b3444b7d4dd48334e91b8a0c9dbf84da85f379981bbb2ee1a5a3"
+    sha256 mojave:        "bbbcdf26abc4cb46557b59ba60320317d457e7f794ed3092891df29153b5d807"
   end
 
   depends_on "pkg-config" => :build
