@@ -4,6 +4,7 @@ class Lfe < Formula
   url "https://github.com/lfe/lfe/archive/v2.0.tar.gz"
   sha256 "373ad033bb74679766ed7414bfd6d69fbf6dd0a2337019eb117840384b9fada0"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/lfe/lfe.git", branch: "develop"
 
   bottle do
@@ -13,7 +14,7 @@ class Lfe < Formula
     sha256 cellar: :any_skip_relocation, mojave:        "16d8e8a9f9ab091b1184dac366bb9d83cfccfdb728f79c035362b7b86940a7af"
   end
 
-  depends_on "emacs" if MacOS.version >= :catalina
+  depends_on "emacs" => :build if MacOS.version >= :catalina
   depends_on "erlang"
 
   def install
