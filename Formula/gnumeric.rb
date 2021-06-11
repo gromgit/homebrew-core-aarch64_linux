@@ -6,10 +6,10 @@ class Gnumeric < Formula
   license any_of: ["GPL-3.0-only", "GPL-2.0-only"]
 
   bottle do
-    sha256 arm64_big_sur: "2017f502250fc654acf20956ffa1894c8dd04fdaba9759eb0862c05a2047df3c"
-    sha256 big_sur:       "72d9127c0c9ab4e661d42b4c885b85de3469a06bbf1cc8012cb198c9b338cca5"
-    sha256 catalina:      "fdbffb8faa080825c809e8384ebbd7e8624b46de1fbd677dcf4dd5bddd377cec"
-    sha256 mojave:        "29408d0f90f55698c76afe425564151764faf3670c298ec7415e86f9ed0a3752"
+    sha256 arm64_big_sur: "e35e87954fd36d10ba7d5eb67eb55cda22480501b0244d11d73227efac32eb84"
+    sha256 big_sur:       "308986adac6fc8ee0439f78fc88b3800dec488f3c19059e188d7b89703976517"
+    sha256 catalina:      "c6629015a88979e534383df04b19b371e4f579670538abd057159371d769d9f6"
+    sha256 mojave:        "783045a4b518267f8dad893ba2768701065af8d3f170d37cb2ae1658d96d5474"
   end
 
   depends_on "intltool" => :build
