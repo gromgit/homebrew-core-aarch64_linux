@@ -1,9 +1,9 @@
 class Libbinio < Formula
   desc "Binary I/O stream class library"
-  homepage "https://libbinio.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/libbinio/libbinio/1.4/libbinio-1.4.tar.bz2"
-  sha256 "4a32d3154517510a3fe4f2dc95e378dcc818a4a921fc0cb992bdc0d416a77e75"
-  license "LGPL-2.1"
+  homepage "https://adplug.github.io/libbinio/"
+  url "https://github.com/adplug/libbinio/releases/download/libbinio-1.5/libbinio-1.5.tar.bz2"
+  sha256 "398b2468e7838d2274d1f62dbc112e7e043433812f7ae63ef29f5cb31dc6defd"
+  license "LGPL-2.1-or-later"
 
   bottle do
     sha256 cellar: :any, arm64_big_sur: "242943ef59b0240db7e61f8ba587bafcb68f080d66dea8b8bb461d2e292fdaaa"
@@ -20,5 +20,26 @@ class Libbinio < Formula
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
                           "--prefix=#{prefix}", "--infodir=#{info}"
     system "make", "install"
+  end
+
+  test do
+    (testpath/"test.cpp").write <<~EOS
+      // test
+      // do not change the line above!
+      #include <libbinio/binfile.h>
+      #include <string.h>
+
+      int main(void)
+      {
+        binifstream     file("test.cpp");
+        char            string[256];
+
+        file.readString(string, 256, '\\n');
+
+        return strcmp (string, "// test");
+      }
+    EOS
+    system ENV.cxx, "test.cpp", "-I#{include}", "-L#{lib}", "-lbinio", "-o", "test"
+    system "./test"
   end
 end
