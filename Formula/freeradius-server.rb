@@ -12,10 +12,10 @@ class FreeradiusServer < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "96aa638cd4c28b6876bed8ebd236d5276f6b72add6a9bed3ec889a3a15b82de9"
-    sha256 big_sur:       "ab19adc5c1021e8d6ef924afff07f32010e17bc4cc8eb4c98f9807d7d3b1cc82"
-    sha256 catalina:      "725f71cf758fe8f21eb53317b516260a9d38337ce4d28172cc5c65c6b337a5b1"
-    sha256 mojave:        "666a6ac614e06cb9d03cc2c8b4a2279153db994c76975d6a735d8596b87d7996"
+    sha256 arm64_big_sur: "0ec020d5681af819217e88d69b32847374d2c741bc6c014019d9eab7c115f826"
+    sha256 big_sur:       "2391ba3cd210a510891422e50436c6d9f6f6da3e7a98b3db3d2c8ea0f3bba310"
+    sha256 catalina:      "ecbed108fde03090c41450fd0faab9ad0c6f5a1727a43d4c4b6e3519d9b607d9"
+    sha256 mojave:        "da0356738b1575a928df644cd554876510ff45ea1c0ead6e86ccc9a0aa70bc11"
   end
 
   depends_on "openssl@1.1"
