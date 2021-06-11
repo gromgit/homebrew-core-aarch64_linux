@@ -7,7 +7,10 @@ class Sqlmap < Formula
   head "https://github.com/sqlmapproject/sqlmap.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "6abeaff8a1290c8476e37a4c494c4d63fca25cc162b5352ff56557d5c055bc0a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b2c9fed5611150a0e2f8767ddcb7f7f11482da54beb04d9f3d672acaa0a89040"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a463242243dabbce67c7f5c134da0c9ec62acd8a22188a28ff2a12895de8a36a"
+    sha256 cellar: :any_skip_relocation, catalina:      "a463242243dabbce67c7f5c134da0c9ec62acd8a22188a28ff2a12895de8a36a"
+    sha256 cellar: :any_skip_relocation, mojave:        "a463242243dabbce67c7f5c134da0c9ec62acd8a22188a28ff2a12895de8a36a"
   end
 
   def install
