@@ -7,10 +7,10 @@ class Glab < Formula
   head "https://github.com/profclems/glab.git", branch: "trunk"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "46477cff1e24166244b55ded06c09a663bf73b00c5f98b896805f19e39434156"
-    sha256 cellar: :any_skip_relocation, big_sur:       "00a723ef606c69a93706e30dcbd49503a20e2ee943e16d7a01990e12b638da92"
-    sha256 cellar: :any_skip_relocation, catalina:      "00a723ef606c69a93706e30dcbd49503a20e2ee943e16d7a01990e12b638da92"
-    sha256 cellar: :any_skip_relocation, mojave:        "00a723ef606c69a93706e30dcbd49503a20e2ee943e16d7a01990e12b638da92"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fff5889ab3af5aa55245a1889a44d3cec2942ce0f6fe0a66cf13fc3e6fdbe0fa"
+    sha256 cellar: :any_skip_relocation, big_sur:       "cc2a306d76662947ab14955df6e4732bd2cbabf1c8457320f7ba6bb70d697be1"
+    sha256 cellar: :any_skip_relocation, catalina:      "cc2a306d76662947ab14955df6e4732bd2cbabf1c8457320f7ba6bb70d697be1"
+    sha256 cellar: :any_skip_relocation, mojave:        "cc2a306d76662947ab14955df6e4732bd2cbabf1c8457320f7ba6bb70d697be1"
   end
 
   depends_on "go" => :build
