@@ -8,10 +8,10 @@ class Mypy < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3431f26f0169f49a0ae59bda497200e4600147c3fea10758240502a26e5489fe"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9ba87b13588d288d57662e09042b6eb9a1e8e94df8ecfaa168ce4b1434830b75"
-    sha256 cellar: :any_skip_relocation, catalina:      "af1bf5cc2d54b803b3e99aa52db6973c8e3ddd4df2b0537c7b351e75af1b4ab3"
-    sha256 cellar: :any_skip_relocation, mojave:        "669127d6d83cb3e88972a0c165866633c9aa17f1bd0596a4e4fddb64a822a1ff"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c08365f466c9d27053ffe3551dd9511fe551e6f83cb380715794b15e87ef59a8"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c4d7bf6b83329484ba963903f474f2cf2b020800edff593e8de4ebf1df56c7ae"
+    sha256 cellar: :any_skip_relocation, catalina:      "9ff4fa4cd983eaf963f2eac420bdc73912bd77bd4d0b2a471b0dcb0cf72942e5"
+    sha256 cellar: :any_skip_relocation, mojave:        "50b7730ac35e1a23a145ef8dd65fea31a18943d40a2e18653284214a165faacf"
   end
 
   depends_on "python@3.9"
