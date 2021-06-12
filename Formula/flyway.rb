@@ -10,6 +10,10 @@ class Flyway < Formula
     regex(/&lt;version&gt;.*?v?(\d+(?:\.\d+)+)&lt;/im)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "14411fe642af5ae38b5f3e247b82ca7a7a0e6b8ce41f5eff1661cbf675bc77d9"
+  end
+
   depends_on "openjdk"
 
   def install
