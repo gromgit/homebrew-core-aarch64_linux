@@ -7,10 +7,10 @@ class GoogleBenchmark < Formula
   head "https://github.com/google/benchmark.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e9bdbe5745c883116f03215a3ee95322109d7ba1d84fe169ce35a4e2f8830861"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0cee370c53f105e333d4442c6c3d639937943e066fe3efd2ab000af4d96de148"
-    sha256 cellar: :any_skip_relocation, catalina:      "86dd7f5118758882564547c788e96cbb424a49e2808dd02fa31d731d2a88e7e8"
-    sha256 cellar: :any_skip_relocation, mojave:        "885d097c80a99675a56d730ca2b59279537b6fa5239bc771c5150312f0d9abd5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7bc5b628badef224d2d38b09c0377a0be6c1e99c801b04c936c2eb2c6e29b5d4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "261bdc680fff541ab76c925e8b341ed32b74e541c5e47e3acc6d51a880d3bac2"
+    sha256 cellar: :any_skip_relocation, catalina:      "522669df4933866790f71fdb233af934c3ed2c3ad40ea7b1aa3c0c6aec3d7c3a"
+    sha256 cellar: :any_skip_relocation, mojave:        "dbc6f828f0efa63470d1d1da080efc890c6ce5150a839d2e025ba531de867028"
   end
 
   depends_on "cmake" => :build
