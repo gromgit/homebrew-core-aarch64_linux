@@ -7,11 +7,10 @@ class Rsnapshot < Formula
   head "https://github.com/rsnapshot/rsnapshot.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "debc885727c81ec84b780d5ebf84e94531a96a45a1c5b6151f5e4cc9cbe7f162"
-    sha256 cellar: :any_skip_relocation, big_sur:       "58392bc53c467eaab2d62cf6ffbf6598f0a709e679c92430ed8583209da7cccf"
-    sha256 cellar: :any_skip_relocation, catalina:      "e195b17e2c28a787e6bc183c3f57397256fba91c8d5c490f3c24576033d39a74"
-    sha256 cellar: :any_skip_relocation, mojave:        "e195b17e2c28a787e6bc183c3f57397256fba91c8d5c490f3c24576033d39a74"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "e195b17e2c28a787e6bc183c3f57397256fba91c8d5c490f3c24576033d39a74"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d3b962467213ee16410bc0e619994698c176ca9795ddb6f6087dbba934687144"
+    sha256 cellar: :any_skip_relocation, big_sur:       "18ba069ea2a52a986acf2027299e9ae5d85593c011361e2448f3b54752e42078"
+    sha256 cellar: :any_skip_relocation, catalina:      "9d5272a4186bd3d895a5491bac76e66e3cac54e906bf03022d6ea7ad421b8fd8"
+    sha256 cellar: :any_skip_relocation, mojave:        "9d5272a4186bd3d895a5491bac76e66e3cac54e906bf03022d6ea7ad421b8fd8"
   end
 
   uses_from_macos "rsync" => :build
