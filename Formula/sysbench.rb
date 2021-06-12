@@ -8,10 +8,10 @@ class Sysbench < Formula
   head "https://github.com/akopytov/sysbench.git"
 
   bottle do
-    sha256 cellar: :any, big_sur:     "81f4b5aa43833246f85567c964707b1741b85439c7f85e41e9d7bad7b922f7b6"
-    sha256 cellar: :any, catalina:    "2ca0e854823e63ecf84b27d81d0ea722aeae784fed39b436fed738fcd4450489"
-    sha256 cellar: :any, mojave:      "ec55acf85be8a3cfbd57a72f1d67aad2104e545ec32464010d673c205075c809"
-    sha256 cellar: :any, high_sierra: "84363a4b7267f936a6e168fb4ed30fa21970ff1483bb81a5fba2bbe25d611cfc"
+    sha256 cellar: :any, arm64_big_sur: "8f5fd6827291b2eb5f3a5b4c842a059182802d2ad97dcbd894046e5b2750914f"
+    sha256 cellar: :any, big_sur:       "a9c638a46ddda6841018ad7354673315882a83e2aad7a480f46663db25e3c553"
+    sha256 cellar: :any, catalina:      "f85e28b078ef05d9a155d0655275e6a9418494d94ab3dd524607a9c6ca84806b"
+    sha256 cellar: :any, mojave:        "a29e37acd73943d5a1d72e6a5cb2f0812e2be3aeb061f919d271a8b31f2ac412"
   end
 
   depends_on "autoconf" => :build
