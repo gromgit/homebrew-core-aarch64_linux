@@ -5,6 +5,10 @@ class Mill < Formula
   sha256 "0246eba6c743d17003f31916c83d74a7fd95898423c95abcc549dbad3546f7b6"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "f3566d48b5acef9f7a349550dfe0a184b79a2bf4bbf70b0a3e2873ce9737ef8f"
+  end
+
   depends_on "openjdk"
 
   def install
