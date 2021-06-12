@@ -7,10 +7,10 @@ class Texlab < Formula
   head "https://github.com/latex-lsp/texlab.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "aa01f020ce432547ba9b88510359868860cd79403eb7934edcc4321c37663596"
-    sha256 cellar: :any_skip_relocation, big_sur:       "10fcd4d803c4b2df5185ae5e65b2f98b91e7518f302e8fa89e1cfa3e3b9e436f"
-    sha256 cellar: :any_skip_relocation, catalina:      "9065345367fa53592dd9fb282d9b91abbece52937718e7d1ed18de9dc403b2d6"
-    sha256 cellar: :any_skip_relocation, mojave:        "058addfe3c8997d291b1d4ca58714a7988449c3c88c6ec18195d0d4e5e57795d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ace13aa023a0f469b5a8d6f84866df772aec49df9da25ed8f3956655178ebf4e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "bc5bbf32d1c5faf7dd0996b992a2f9c78b27c3ed6187850521917ea61849b6e1"
+    sha256 cellar: :any_skip_relocation, catalina:      "f8801c58a8bf07e9a4a9b506b11ce538fa17db718338f0fd1d962378a3791e8b"
+    sha256 cellar: :any_skip_relocation, mojave:        "662267d2e6bd6d36cc5066b36807625d0de0fc03cb5c4709434872d51700803c"
   end
 
   depends_on "rust" => :build
