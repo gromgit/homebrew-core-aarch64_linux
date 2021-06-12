@@ -6,11 +6,10 @@ class Googletest < Formula
   license "BSD-3-Clause"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b31c1f09e496782c536ece5a805b12e7d5db3250bf89657d55885366c37bb6df"
-    sha256 cellar: :any_skip_relocation, big_sur:       "66021a83c2dfe2a3baba769a76babde2f7224e9d6b555d8909995765bc555231"
-    sha256 cellar: :any_skip_relocation, catalina:      "f9819a67ff4c54bfde932f1d83d9db44f8ca0e7b65e77dd812d4f71931d3deed"
-    sha256 cellar: :any_skip_relocation, mojave:        "58f238b7d2fea41af22c3e4bc6b52d79510c84adba6b6145f548a248a2687f16"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "53a1b277842358ceae62800c9af78271a0a33043eff7f007110353941ace54d6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7ff36ee689017d9f973acbc0407eaf8135d983028e85d1e6375a6a144c829e7e"
+    sha256 cellar: :any_skip_relocation, catalina:      "38290ffd89c69da85af50bb3e1c1e670440b59a342865a64ce50b7abb1e424aa"
+    sha256 cellar: :any_skip_relocation, mojave:        "0581f86b3dd88e39339b4cf3b6b0174109491e2d4aa97cd49369381c6611cff0"
   end
 
   depends_on "cmake" => :build
