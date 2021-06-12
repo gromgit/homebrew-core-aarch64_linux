@@ -3,8 +3,8 @@ class Pywhat < Formula
 
   desc "🐸 Identify anything: emails, IP addresses, and more 🧙"
   homepage "https://github.com/bee-san/pyWhat"
-  url "https://files.pythonhosted.org/packages/3f/ac/58bbf32079d781e37f38340110c922787f61d1c9cc61640e3f716c47bd5e/pywhat-1.2.0.tar.gz"
-  sha256 "d87f5e368c8bbc50921867caebe03873b775f3c3953d955d40747bfd977ec503"
+  url "https://files.pythonhosted.org/packages/59/e7/f8ecea5b09bf3e1ef74b0d61ed5ad2fb17e00188f31947a7bc9f9f9d7853/pywhat-2.0.0.tar.gz"
+  sha256 "bf0fb5637441566c23868a1ed349209d673dfa477cc11bb5f5bc7390d04c9ed1"
   license "GPL-3.0-or-later"
   head "https://github.com/bee-san/pyWhat.git", branch: "main"
 
@@ -49,8 +49,8 @@ class Pywhat < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/1e/cc/ced09195051b5384e9a82d6de7fc1a3917017fe214d30d41a9935cea465d/rich-10.2.2.tar.gz"
-    sha256 "17b3f486c38e79cc219d8848974b277ef532a82d12b3ad6eb37bb8c6f22ab5fc"
+    url "https://files.pythonhosted.org/packages/42/6e/549283c6f8b9fff54ee8bd35558eb51d3796b1f71509d3385011d9a8c857/rich-10.3.0.tar.gz"
+    sha256 "a83bff83309687e1859c75b499879738b135d700738dd2721c22965497af05bd"
   end
 
   def install
