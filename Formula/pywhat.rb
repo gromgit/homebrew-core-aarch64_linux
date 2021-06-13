@@ -3,8 +3,8 @@ class Pywhat < Formula
 
   desc "🐸 Identify anything: emails, IP addresses, and more 🧙"
   homepage "https://github.com/bee-san/pyWhat"
-  url "https://files.pythonhosted.org/packages/59/e7/f8ecea5b09bf3e1ef74b0d61ed5ad2fb17e00188f31947a7bc9f9f9d7853/pywhat-2.0.0.tar.gz"
-  sha256 "bf0fb5637441566c23868a1ed349209d673dfa477cc11bb5f5bc7390d04c9ed1"
+  url "https://files.pythonhosted.org/packages/94/ae/5f02bb71baba179c5978b9c81a9a79b072845ea08e92f29aee89655ff674/pywhat-3.0.0.tar.gz"
+  sha256 "ab709ee56505ff15afdaf4af4b6629b03250df5b24dbfd6c0265adeb851e37d3"
   license "GPL-3.0-or-later"
   head "https://github.com/bee-san/pyWhat.git", branch: "main"
 
@@ -31,11 +31,6 @@ class Pywhat < Formula
   resource "commonmark" do
     url "https://files.pythonhosted.org/packages/60/48/a60f593447e8f0894ebb7f6e6c1f25dafc5e89c5879fdc9360ae93ff83f0/commonmark-0.9.1.tar.gz"
     sha256 "452f9dc859be7f06631ddcb328b6919c67984aca654e5fefb3914d54691aed60"
-  end
-
-  resource "langdetect" do
-    url "https://files.pythonhosted.org/packages/0e/72/a3add0e4eec4eb9e2569554f7c70f4a3c27712f40e3284d483e88094cc0e/langdetect-1.0.9.tar.gz"
-    sha256 "cbc1fef89f8d062739774bd51eda3da3274006b3661d199c2655f6b3f6d605a0"
   end
 
   resource "name-that-hash" do
