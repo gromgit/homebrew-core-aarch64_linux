@@ -6,10 +6,10 @@ class PythonYq < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d3d413c423a4369a7d722ca9b97d9b0dd07ec0952c0662af027abafe2f6d2869"
-    sha256 cellar: :any_skip_relocation, big_sur:       "77a3b59a07dcd9856282bc7c863672227be02a1b7d84cde9bd7d2577c1cb1b2c"
-    sha256 cellar: :any_skip_relocation, catalina:      "ad8ad7411f3d147443ec64697b696e63dce6286c26288676de64a105a1845af9"
-    sha256 cellar: :any_skip_relocation, mojave:        "97f1278c54c24044b19496a8ea1dd0cdd37ebed7fffd9e9824635b096854e4a2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6f7369da386d517f765231a0f2c44950821857474f745c5093a640681efc7257"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3598941278045e43a5129d58e81f112ea35f3871a7354c8247bf598f7435d797"
+    sha256 cellar: :any_skip_relocation, catalina:      "3598941278045e43a5129d58e81f112ea35f3871a7354c8247bf598f7435d797"
+    sha256 cellar: :any_skip_relocation, mojave:        "3598941278045e43a5129d58e81f112ea35f3871a7354c8247bf598f7435d797"
   end
 
   depends_on "jq"
