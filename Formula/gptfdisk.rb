@@ -6,10 +6,10 @@ class Gptfdisk < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "3535bc75dd24cedf66a610a704c79ec076f310afab49144cb14c888cc2bca658"
-    sha256 cellar: :any, big_sur:       "09ca482952e2537ad9fd35f7f29fea209229e5598a9dcf76b0bae66ba0dd23c5"
-    sha256 cellar: :any, catalina:      "fd7441f59bb4ec83893e163d98c5b0ccf6a6685d6956feace396851341f02c89"
-    sha256 cellar: :any, mojave:        "ce9c53f927d62937990612de247e725bf0d72e533acae25b73d7383481ded82a"
+    sha256 cellar: :any, arm64_big_sur: "9ddfc62f39c786868b5bcafb0cc949a89977ece0bf27eac038a70dbcd7772b8f"
+    sha256 cellar: :any, big_sur:       "a16cd2748dcf4ce4a18caf1d09e04e077a456fe323553685ab07dc7b628567a7"
+    sha256 cellar: :any, catalina:      "e5c8a8a789a75e2ff5cd3120922c0fa205ef3e9aec23fd77558a04b349283aea"
+    sha256 cellar: :any, mojave:        "8ea2978e8d5612e21cef00d747ac24e0c5f44eeb5c9c2edcf926752bd389523a"
   end
 
   depends_on "popt"
