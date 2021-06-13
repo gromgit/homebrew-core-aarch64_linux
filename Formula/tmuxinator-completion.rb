@@ -7,7 +7,7 @@ class TmuxinatorCompletion < Formula
   head "https://github.com/tmuxinator/tmuxinator.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "18bf3bab7756a16057c776f7f29db74c2a0c6ce2f37ec0534cdae64f26f59b72"
+    sha256 cellar: :any_skip_relocation, all: "04cc6188159ca13ace4c51b4f8f5c4b8525039ad94ae9b8f48bc0747567c3cd5"
   end
 
   conflicts_with "tmuxinator", because: "the tmuxinator formula includes completion"
