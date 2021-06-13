@@ -8,10 +8,10 @@ class Flintrock < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "7db4812f7c3c8e267c7a51e0e16d3d7fbb1121f164bce98dba0d0eb8c571885c"
-    sha256 cellar: :any, big_sur:       "9fe7ca088a970afb0e7112b44ea942e86370684926dc61a15e8c6b15dc823b7f"
-    sha256 cellar: :any, catalina:      "2ea56159856bf5aa6dabbeb60e6353db2c08de216ed7e4eeaadfddd7ebdac627"
-    sha256 cellar: :any, mojave:        "233e8b6b2ddab2030df615ead9d4074da5d79328b4210d329434558bce1b9808"
+    sha256 cellar: :any, arm64_big_sur: "9df97b2e3124596a9f3d48b7795eed8266bb16fc74f2ea7c0ab0f01b8e876645"
+    sha256 cellar: :any, big_sur:       "6c982aa66f903a3b26917adf4767700e69f693e416d8fa022300fe9e4704314b"
+    sha256 cellar: :any, catalina:      "fef1cc66b6cd31298a9b5c40dcc3319d1b463952ca20c26e677fd81a9bfcaf7d"
+    sha256 cellar: :any, mojave:        "db9ec55e170efd550bb91a0f9ca330384b7edeb1703dd88572619a0f888879d6"
   end
 
   depends_on "rust" => :build
