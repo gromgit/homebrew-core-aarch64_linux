@@ -3,8 +3,8 @@ class Nox < Formula
 
   desc "Flexible test automation for Python"
   homepage "https://nox.thea.codes/"
-  url "https://files.pythonhosted.org/packages/fa/2c/418121898a0262d6acd5af46286e741dac50c3e4037231e55bdee3516124/nox-2021.6.6.tar.gz"
-  sha256 "ff894d2a134b0163147b43a72d5abb4348f307f100a52665a32a98a9ab8f244a"
+  url "https://files.pythonhosted.org/packages/29/6c/e3dc69ea5ef8150f859315e2abf56cb5bb110d65d628d727bd67df514432/nox-2021.6.12.tar.gz"
+  sha256 "955dbeb8e657a08226f8c1c8f8d1e2a40fe5438a792056314f351e504639a80f"
   license "Apache-2.0"
 
   bottle do
