@@ -11,10 +11,10 @@ class K3d < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4b07b0034c923b8a79d981facc2568562bb97c6095140c0cf4e7157476faae9d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b18fc787ae363c081ae88e6a11fe0f1d8dedf1e704bf2182ae84cf4fb7dd3803"
-    sha256 cellar: :any_skip_relocation, catalina:      "b9c0f0fdcde9d98bebb1a636ec886f08998305e5ba8cebe672b7886f9baf5ef3"
-    sha256 cellar: :any_skip_relocation, mojave:        "7b09ef709b2b39ac1208ff42bfd2a435e1ec0a0e43960fd1887fff84a0ed1866"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "76de9b7ec9c33e4f81749dfd76570198d31a60b7338b987a910cdba446e554e5"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5d411297b1f4f83c3dbba933149c6e9cda2fe35ccfe6d57dca93475b9f750aba"
+    sha256 cellar: :any_skip_relocation, catalina:      "64d04ad5070af929ab2919419227e327afb97b22c25f1473f0980f9fb70ab967"
+    sha256 cellar: :any_skip_relocation, mojave:        "ac8967c7e9281de0cefe28565c006e45b5f002d3bcd9410cad681cbc0c81d4d2"
   end
 
   depends_on "go" => :build
