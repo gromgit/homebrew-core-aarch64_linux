@@ -7,9 +7,10 @@ class Libffcall < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, big_sur:  "bb1f926fad9495f329bf5c6145621cb03102588514955cb05e715fb9ac840dd6"
-    sha256 cellar: :any, catalina: "1564bcd5a3bb302cfeea526eedf0c32659b1d53cbda0e5147255475aeffef5a3"
-    sha256 cellar: :any, mojave:   "02f3edcd52369a0b2aa5e209f600e686042c695a075161b94138c62207f04db2"
+    sha256 cellar: :any, arm64_big_sur: "d7ace5f73fe02c38febe33718fbb293e765f7d1909763b39dc280d410e2a1488"
+    sha256 cellar: :any, big_sur:       "61cb42231c842a5559808582e374420e058fe76cc60b47f08b383c2751536caa"
+    sha256 cellar: :any, catalina:      "1412d8bb030690981a6322f18a3ef686aaa3f7b1ab3e390be2767e83cb5160a5"
+    sha256 cellar: :any, mojave:        "093534e26c77187ebd27234802635357c458cfe6956edc618d6292e707bc5fdc"
   end
 
   def install
