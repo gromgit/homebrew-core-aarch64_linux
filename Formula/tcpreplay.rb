@@ -6,10 +6,9 @@ class Tcpreplay < Formula
   license all_of: ["BSD-2-Clause", "BSD-3-Clause", "BSD-4-Clause", "GPL-3.0-or-later", "ISC"]
 
   bottle do
-    sha256 cellar: :any, big_sur:     "772815bcf05a81fb36acf09acb31bc2eb467cf3b90815461e94fc7babd584d2d"
-    sha256 cellar: :any, catalina:    "a4b41c27929bfd52016d1cc576089a9cb42dfd0e595c3078a40b26bd39fbd65f"
-    sha256 cellar: :any, mojave:      "0ec1b2260c108d103d4d594a8fff9482656833e5308690b90c5ef0a05a155546"
-    sha256 cellar: :any, high_sierra: "439ed368cf28fb710cefec00f88de8d32e0d039abed0f8761f1a1ae4731dac53"
+    sha256 cellar: :any, big_sur:  "c089911edcc55dc9126528b5843358a7b748bb4d0ef155812f84b097c5a6df08"
+    sha256 cellar: :any, catalina: "ffe406994fdd18db4219b9a96908cd49c76dda59b7b6d6a0e7e27acc04d5f046"
+    sha256 cellar: :any, mojave:   "f55a4af6cbc64fcf75fd5967ae13f9babd24472c4f1ce659beeaa8754a317fda"
   end
 
   depends_on "libdnet"
