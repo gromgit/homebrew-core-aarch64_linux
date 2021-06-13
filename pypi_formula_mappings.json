@@ -67,6 +67,9 @@
       "exclude_packages": ["numpy"],
       "extra_packages": ["wheel"]
   },
+  "flintrock": {
+    "exclude_packages": ["six"]
+  },
   "homeassistant-cli": {
     "exclude_packages": ["tabulate"]
   },
