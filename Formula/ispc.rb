@@ -6,10 +6,10 @@ class Ispc < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "b1fd77e27b4fd504055bbea55c86129ff2505f5346af0704df2b9d040c0a90f1"
-    sha256 cellar: :any, big_sur:       "330a383d69b4a7c35bc69c5fd189991026a12d0fb08e3eadd867b16167225107"
-    sha256 cellar: :any, catalina:      "7ce54472561f37b0c2c565dca1e584bf7ed9f0ea27129abd81a69a1f59daadb6"
-    sha256 cellar: :any, mojave:        "47d4032998ea5cdd8bc3732abb7ca7b4d16ea329cfb1197734bbdc72d0b1d7ad"
+    sha256 cellar: :any, arm64_big_sur: "de0632493d1334c9ceaaca224a6be694dc8f5467a385f4c8b615b15ee4414b85"
+    sha256 cellar: :any, big_sur:       "35fd6fccc755ce60f51b9c86eb0c858cb1f5629b1b8860089ba78b6a62ca152a"
+    sha256 cellar: :any, catalina:      "a10f0f931208cf025e41d3128b83521407f01a660c44cb29deca6c6e8ae4243d"
+    sha256 cellar: :any, mojave:        "4c2b2edfa26e441cb9f48807f9fc567c865c00ede1b17232d85d7a18dcc7b2e1"
   end
 
   depends_on "bison" => :build
