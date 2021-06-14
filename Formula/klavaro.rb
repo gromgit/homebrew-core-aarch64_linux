@@ -4,6 +4,7 @@ class Klavaro < Formula
   url "https://downloads.sourceforge.net/project/klavaro/klavaro-3.11.tar.bz2"
   sha256 "fc64d3bf9548a5d55af1ba72912024107883a918b95ae60cda95706116567de6"
   license "GPL-3.0-or-later"
+  revision 1
 
   livecheck do
     url :stable
@@ -20,6 +21,7 @@ class Klavaro < Formula
 
   depends_on "intltool" => :build
   depends_on "pkg-config" => :build
+  depends_on "adwaita-icon-theme"
   depends_on "gtk+3"
 
   def install
