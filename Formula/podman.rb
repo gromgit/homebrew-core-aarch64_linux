@@ -1,8 +1,8 @@
 class Podman < Formula
   desc "Tool for managing OCI containers and pods"
   homepage "https://podman.io/"
-  url "https://github.com/containers/podman/archive/v3.2.0.tar.gz"
-  sha256 "1206377b12c11d4065bc4789fa104ca139ba77bb5b33541f07e8e95ae4d2932a"
+  url "https://github.com/containers/podman/archive/v3.2.1.tar.gz"
+  sha256 "140cbe8d6cb7807cbd3ef6d549d888e1c0e44d32dcff3a27453630fc52e7f5b8"
   license "Apache-2.0"
 
   bottle do
