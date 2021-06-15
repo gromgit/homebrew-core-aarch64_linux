@@ -34,36 +34,12 @@ class Gpsd < Formula
     EOS
   end
 
-  plist_options manual: "#{HOMEBREW_PREFIX}/sbin/gpsd -N -F #{HOMEBREW_PREFIX}/var/gpsd.sock /dev/tty.usbserial-XYZ"
-
-  def plist
-    <<~EOS
-      <?xml version="1.0" encoding="UTF-8"?>
-      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-      <plist version="1.0">
-      <dict>
-        <key>Label</key>
-        <string>#{plist_name}</string>
-        <key>ProgramArguments</key>
-        <array>
-          <string>#{opt_sbin}/gpsd</string>
-          <string>-N</string>
-          <string>-F</string>
-          <string>#{var}/gpsd.sock</string>
-        </array>
-        <key>RunAtLoad</key>
-        <true/>
-        <key>KeepAlive</key>
-        <true/>
-        <key>WorkingDirectory</key>
-        <string>#{HOMEBREW_PREFIX}</string>
-        <key>StandardOutPath</key>
-        <string>#{var}/log/gpsd.log</string>
-        <key>StandardErrorPath</key>
-        <string>#{var}/log/gpsd.log</string>
-      </dict>
-      </plist>
-    EOS
+  service do
+    run [opt_sbin/"gpsd", "-N", "-F", var/"gpsd.sock"]
+    keep_alive true
+    error_log_path var/"log/gpsd.log"
+    log_path var/"log/gpsd.log"
+    working_dir HOMEBREW_PREFIX
   end
 
   test do
