@@ -19,36 +19,12 @@ class CassandraReaper < Formula
     inreplace Dir[etc/"cassandra-reaper/*.yaml"], " /var/log", " #{var}/log"
   end
 
-  plist_options manual: "cassandra-reaper"
-
-  def plist
-    <<~EOS
-      <?xml version="1.0" encoding="UTF-8"?>
-      <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-      <plist version="1.0">
-        <dict>
-          <key>Label</key>
-          <string>#{plist_name}</string>
-          <key>ProgramArguments</key>
-          <array>
-            <string>#{opt_bin}/cassandra-reaper</string>
-          </array>
-          <key>RunAtLoad</key>
-          <true/>
-          <key>KeepAlive</key>
-          <true/>
-          <key>StandardErrorPath</key>
-          <string>#{var}/log/cassandra-reaper/service.log</string>
-          <key>StandardOutPath</key>
-          <string>#{var}/log/cassandra-reaper/service.err</string>
-          <key>EnvironmentVariables</key>
-          <dict>
-            <key>JAVA_HOME</key>
-            <string>#{Formula["openjdk@8"].opt_prefix}</string>
-          </dict>
-        </dict>
-      </plist>
-    EOS
+  service do
+    run opt_bin/"cassandra-reaper"
+    environment_variables JAVA_HOME: Formula["openjdk@8"].opt_prefix
+    keep_alive true
+    error_log_path var/"log/cassandra-reaper/service.err"
+    log_path var/"log/cassandra-reaper/service.log"
   end
 
   test do
