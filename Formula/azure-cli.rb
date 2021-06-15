@@ -15,10 +15,10 @@ class AzureCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "0dcf60c128aacc7e20d5b27adc8103592fb2b96517e71a8264af7de1d69367e7"
-    sha256 cellar: :any, big_sur:       "57f242081b4b941484931fda37de40c19bdcbed53c7fd89f0727a6599ac9e70f"
-    sha256 cellar: :any, catalina:      "729c856974e1a85e065101cfde17eea9f8f4619fb63cc79fb3f9b50e056b2bc6"
-    sha256 cellar: :any, mojave:        "0e5d8bb176281864ce6ac62eddac021ce867f91057e49c1ff0b96a550a7d39dc"
+    sha256 cellar: :any, arm64_big_sur: "9092d2c0a503634c5cd6f8b19d37ff886975abd31abab32414897ee539c84232"
+    sha256 cellar: :any, big_sur:       "9625e91b1ac1df6d7aedd055bc78008386a719999abd763b0e0b75d4147ecb63"
+    sha256 cellar: :any, catalina:      "0d0fa89c46ae79b21726bdee63a6dc7d2b960366d2f2b22ee689cd77d7ab91b3"
+    sha256 cellar: :any, mojave:        "95a14a0f61dfbf237f5b9639adf7341a8a952d53e35a42607e21a7f476300e24"
   end
 
   depends_on "openssl@1.1"
