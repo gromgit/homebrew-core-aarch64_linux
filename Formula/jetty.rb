@@ -1,17 +1,15 @@
 class Jetty < Formula
   desc "Java servlet engine and webserver"
   homepage "https://www.eclipse.org/jetty/"
-  url "https://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-distribution/9.4.41.v20210516/jetty-distribution-9.4.41.v20210516.tar.gz"
-  version "9.4.41.v20210516"
-  sha256 "845402d548aa65b6efc8c7f5142ddeaaf5606b741d3d68747dba2d6ad9151c12"
+  url "https://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-distribution/9.4.42.v20210604/jetty-distribution-9.4.42.v20210604.tar.gz"
+  version "9.4.42.v20210604"
+  sha256 "c6182553e19dd6d40e043e38315a74be1b5e3f627ef367a3c8bc45cd199cc912"
   license any_of: ["Apache-2.0", "EPL-1.0"]
 
   livecheck do
     url "https://www.eclipse.org/jetty/download.php"
     regex(/href=.*?jetty-distribution[._-]v?(\d+(?:\.\d+)+(?:\.v\d+)?)\.t/i)
   end
-
-  bottle :unneeded
 
   depends_on "openjdk"
 
