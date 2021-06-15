@@ -8,7 +8,7 @@ class ZshCompletions < Formula
   head "https://github.com/zsh-users/zsh-completions.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "2579cab8a4d96ce2a7d179bf36fb2898d4f3611823c6392f5eac2014ff4d7d1f"
+    sha256 cellar: :any_skip_relocation, all: "eab228532a15b1c8eddfd38f46306cf723e6f331d38c8874d0305d6fe888ab70"
   end
 
   def install
