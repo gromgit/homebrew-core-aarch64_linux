@@ -34,43 +34,12 @@ class GitlabRunner < Formula
     system "go", "build", *std_go_args(ldflags: ldflags.join(" "))
   end
 
-  plist_options manual: "gitlab-runner start"
-
-  def plist
-    <<~EOS
-      <?xml version="1.0" encoding="UTF-8"?>
-      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-      <plist version="1.0">
-        <dict>
-          <key>SessionCreate</key><false/>
-          <key>KeepAlive</key><true/>
-          <key>RunAtLoad</key><true/>
-          <key>Disabled</key><false/>
-          <key>LegacyTimers</key><true/>
-          <key>ProcessType</key>
-          <string>Interactive</string>
-          <key>Label</key>
-          <string>#{plist_name}</string>
-          <key>ProgramArguments</key>
-          <array>
-            <string>#{opt_bin}/gitlab-runner</string>
-            <string>run</string>
-            <string>--working-directory</string>
-            <string>#{ENV["HOME"]}</string>
-            <string>--config</string>
-            <string>#{ENV["HOME"]}/.gitlab-runner/config.toml</string>
-            <string>--service</string>
-            <string>gitlab-runner</string>
-            <string>--syslog</string>
-          </array>
-          <key>EnvironmentVariables</key>
-            <dict>
-              <key>PATH</key>
-              <string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
-          </dict>
-        </dict>
-      </plist>
-    EOS
+  service do
+    run [opt_bin/"gitlab-runner", "run", "--syslog"]
+    environment_variables PATH: std_service_path_env
+    working_dir ENV["HOME"]
+    keep_alive true
+    macos_legacy_timers true
   end
 
   test do
