@@ -12,10 +12,10 @@ class Rlwrap < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "e554125cd5514710000e5e136d1b7716eeadc45e8ea39c5e8c34f2eee4ae0149"
-    sha256 big_sur:       "5aa36fd44d1c68156a84976aed20853c622adce1191284aad551688609b997c8"
-    sha256 catalina:      "f44bcd80462e7db08a7e7312a76252a14f92dc387b073ec8ec3787beb79a78d6"
-    sha256 mojave:        "92c8c3488cb36b079f6ea9781724f1b86c9a9feb7aac6728be0e06eaec16cdf7"
+    sha256 arm64_big_sur: "d7f6b7527f6b090fe587c18ba314460a84949a81158399ff143521c2bf949e91"
+    sha256 big_sur:       "4776bfe5bf3753463d331b150b37be72f4729aa144d9bb45030c56e9ad16c6a0"
+    sha256 catalina:      "ca0fa52e2eb8649716938dd6d21a15652a7eeaf2ba0acfcb9cbd6cb9a5dae490"
+    sha256 mojave:        "fcfe56a0eac619bcf9d9d1f8f5ddda648e09719c8c78c0db3d599f7edb7a59b7"
   end
 
   depends_on "autoconf" => :build
