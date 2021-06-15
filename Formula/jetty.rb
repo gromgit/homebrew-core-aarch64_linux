@@ -11,6 +11,13 @@ class Jetty < Formula
     regex(/href=.*?jetty-distribution[._-]v?(\d+(?:\.\d+)+(?:\.v\d+)?)\.t/i)
   end
 
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "70a8d29158747ea3514ed7a27ad09242ef962d6242b640f57b9dfe2f846105e3"
+    sha256 cellar: :any, big_sur:       "2575222cd99db83ae6f6ba936887898558cdeece5018cef7c757b09b0baa1ff0"
+    sha256 cellar: :any, catalina:      "2575222cd99db83ae6f6ba936887898558cdeece5018cef7c757b09b0baa1ff0"
+    sha256 cellar: :any, mojave:        "2575222cd99db83ae6f6ba936887898558cdeece5018cef7c757b09b0baa1ff0"
+  end
+
   depends_on "openjdk"
 
   def install
