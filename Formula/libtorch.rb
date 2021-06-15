@@ -14,9 +14,9 @@ class Libtorch < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:  "a75babc0b489a7deebcf506e072e8085770a9fcd5067423ddce19a8c69fe8a0d"
-    sha256 cellar: :any, catalina: "3c93d969a7e91694aecc1926750d77471dcf75f306d515c867d32cdb9ac662f3"
-    sha256 cellar: :any, mojave:   "44dacf7dfa70fd3397a34598493014e383138131f8b7286146fde661ce922ec2"
+    sha256 cellar: :any, big_sur:  "a51bfd1cc532abeabea070676f04ef4650fd087371307fabc8ffac3a7b212d30"
+    sha256 cellar: :any, catalina: "ca0ddb068dd09872cfe9f7bcfdb264fd01a61347dba7660eecab45840535ad53"
+    sha256 cellar: :any, mojave:   "3e9191a6c5dcc80856aded5542387830bfcf6c6047790775b51e901324e37494"
   end
 
   depends_on "cmake" => :build
