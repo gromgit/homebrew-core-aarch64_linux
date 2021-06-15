@@ -19,31 +19,11 @@ class Clash < Formula
     system "go", "build", *std_go_args
   end
 
-  plist_options manual: "#{HOMEBREW_PREFIX}/opt/clash/bin/clash"
-
-  def plist
-    <<~EOS
-      <?xml version="1.0" encoding="UTF-8"?>
-      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-      <plist version="1.0">
-        <dict>
-          <key>Label</key>
-          <string>#{plist_name}</string>
-          <key>ProgramArguments</key>
-            <array>
-                <string>#{opt_bin}/clash</string>
-            </array>
-            <key>RunAtLoad</key>
-            <true/>
-            <key>KeepAlive</key>
-            <true/>
-            <key>StandardOutPath</key>
-            <string>#{var}/log/clash.log</string>
-            <key>StandardErrorPath</key>
-            <string>#{var}/log/clash.log</string>
-          </dict>
-      </plist>
-    EOS
+  service do
+    run opt_bin/"clash"
+    keep_alive true
+    error_log_path var/"log/clash.log"
+    log_path var/"log/clash.log"
   end
 
   test do
