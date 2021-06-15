@@ -27,31 +27,11 @@ class GatewayGo < Formula
     (etc/"gateway-go").install "gateway-go.yaml"
   end
 
-  plist_options manual: "gateway-go -c #{HOMEBREW_PREFIX}/etc/gateway-go/gateway-go.yaml"
-
-  def plist
-    <<~EOS
-      <?xml version="1.0" encoding="UTF-8"?>
-      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-      <plist version="1.0">
-        <dict>
-          <key>Label</key>
-          <string>#{plist_name}</string>
-          <key>KeepAlive</key>
-          <true/>
-          <key>ProgramArguments</key>
-          <array>
-            <string>#{opt_bin}/gateway-go</string>
-            <string>-c</string>
-            <string>#{etc}/gateway-go/gateway-go.yaml</string>
-          </array>
-          <key>StandardErrorPath</key>
-          <string>#{var}/log/gateway-go.log</string>
-          <key>StandardOutPath</key>
-          <string>#{var}/log/gateway-go.log</string>
-        </dict>
-      </plist>
-    EOS
+  service do
+    run [opt_bin/"gateway-go", "-c", etc/"gateway-go.yaml"]
+    keep_alive true
+    error_log_path var/"log/gateway-go.log"
+    log_path var/"log/gateway-go.log"
   end
 
   test do
