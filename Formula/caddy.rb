@@ -28,34 +28,11 @@ class Caddy < Formula
     end
   end
 
-  plist_options manual: "caddy run --config #{HOMEBREW_PREFIX}/etc/Caddyfile"
-
-  def plist
-    <<~EOS
-      <?xml version="1.0" encoding="UTF-8"?>
-      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-      <plist version="1.0">
-        <dict>
-          <key>KeepAlive</key>
-          <true/>
-          <key>Label</key>
-          <string>#{plist_name}</string>
-          <key>ProgramArguments</key>
-          <array>
-            <string>#{opt_bin}/caddy</string>
-            <string>run</string>
-            <string>--config</string>
-            <string>#{etc}/Caddyfile</string>
-          </array>
-          <key>RunAtLoad</key>
-          <true/>
-          <key>StandardOutPath</key>
-          <string>#{var}/log/caddy.log</string>
-          <key>StandardErrorPath</key>
-          <string>#{var}/log/caddy.log</string>
-        </dict>
-      </plist>
-    EOS
+  service do
+    run [opt_bin/"caddy", "run", "--config", etc/"Caddyfile"]
+    keep_alive true
+    error_log_path var/"log/caddy.log"
+    log_path var/"log/caddy.log"
   end
 
   test do
