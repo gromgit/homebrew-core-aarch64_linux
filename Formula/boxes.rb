@@ -7,10 +7,10 @@ class Boxes < Formula
   head "https://github.com/ascii-boxes/boxes.git"
 
   bottle do
-    sha256 arm64_big_sur: "55cf78c7eacc25c92a2a3539ca41b5d2ecac2b4be70ad97e124a6f76f5d4b01b"
-    sha256 big_sur:       "363c7bf4f446e84c86263dc0784bfa38a8d8064e076aafa198c4b8f1ee53ac42"
-    sha256 catalina:      "1f367bd90dec50e191ba8884749d0e9c926bff63913e9e70ed4b18a887a66d69"
-    sha256 mojave:        "7d2bf5e65b67fbacc15bbf366decb57486393b5f53732627f09c286557e7cb74"
+    sha256 arm64_big_sur: "8a84a206ca3a46d2364dd51f3e025762545645ff161e593a60149fc55e7a1f97"
+    sha256 big_sur:       "eba500de77351541b21e68725366e61c7f6452cf097d72d7098ebb752d9d6f8f"
+    sha256 catalina:      "26564383c477c7e9e77ae94ab8d4fdb26cbaf2d530b768d01f93b72c1567b0c8"
+    sha256 mojave:        "e42c888a34141a1cff3b52404f0e35d1de820f64b2d7d7bf973684a8e234b1bd"
   end
 
   depends_on "bison" => :build
