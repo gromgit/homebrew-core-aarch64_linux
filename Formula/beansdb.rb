@@ -33,43 +33,13 @@ class Beansdb < Formula
     (var/"log").mkpath
   end
 
-  plist_options manual: "beansdb"
-
-  def plist
-    <<~EOS
-      <?xml version="1.0" encoding="UTF-8"?>
-      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-      <plist version="1.0">
-      <dict>
-        <key>KeepAlive</key>
-        <dict>
-          <key>SuccessfulExit</key>
-          <false/>
-        </dict>
-        <key>Label</key>
-        <string>#{plist_name}</string>
-        <key>ProgramArguments</key>
-        <array>
-          <string>#{opt_bin}/beansdb</string>
-          <string>-p</string>
-          <string>7900</string>
-          <string>-H</string>
-          <string>#{var}/db/beansdb</string>
-          <string>-T</string>
-          <string>1</string>
-          <string>-vv</string>
-        </array>
-        <key>RunAtLoad</key>
-        <true/>
-        <key>WorkingDirectory</key>
-        <string>#{var}</string>
-        <key>StandardErrorPath</key>
-        <string>#{var}/log/beansdb.log</string>
-        <key>StandardOutPath</key>
-        <string>#{var}/log/beansdb.log</string>
-      </dict>
-      </plist>
-    EOS
+  service do
+    run [opt_bin/"beansdb", "-p", "7900", "-H", var/"db/beansdb", "-T", "1", "-vv"]
+    run_type :immediate
+    keep_alive true
+    error_log_path var/"log/beansdb.log"
+    log_path var/"log/beansdb.log"
+    working_dir var
   end
 
   test do
