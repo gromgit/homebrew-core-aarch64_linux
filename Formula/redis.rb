@@ -36,38 +36,12 @@ class Redis < Formula
     etc.install "sentinel.conf" => "redis-sentinel.conf"
   end
 
-  plist_options manual: "redis-server #{HOMEBREW_PREFIX}/etc/redis.conf"
-
-  def plist
-    <<~EOS
-      <?xml version="1.0" encoding="UTF-8"?>
-      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-      <plist version="1.0">
-        <dict>
-          <key>KeepAlive</key>
-          <dict>
-            <key>SuccessfulExit</key>
-            <false/>
-          </dict>
-          <key>Label</key>
-          <string>#{plist_name}</string>
-          <key>ProgramArguments</key>
-          <array>
-            <string>#{opt_bin}/redis-server</string>
-            <string>#{etc}/redis.conf</string>
-            <string>--daemonize no</string>
-          </array>
-          <key>RunAtLoad</key>
-          <true/>
-          <key>WorkingDirectory</key>
-          <string>#{var}</string>
-          <key>StandardErrorPath</key>
-          <string>#{var}/log/redis.log</string>
-          <key>StandardOutPath</key>
-          <string>#{var}/log/redis.log</string>
-        </dict>
-      </plist>
-    EOS
+  service do
+    run [opt_bin/"redis-server", etc/"redis.conf", "--deamonize no"]
+    keep_alive true
+    error_log_path var/"log/redis.log"
+    log_path var/"log/redis.log"
+    working_dir var
   end
 
   test do
