@@ -37,33 +37,12 @@ class CodeServer < Formula
     EOS
   end
 
-  plist_options manual: "code-server"
-
-  def plist
-    <<~EOS
-      <?xml version="1.0" encoding="UTF-8"?>
-      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-      <plist version="1.0">
-      <dict>
-        <key>KeepAlive</key>
-        <true/>
-        <key>Label</key>
-        <string>#{plist_name}</string>
-        <key>ProgramArguments</key>
-        <array>
-          <string>#{HOMEBREW_PREFIX}/bin/code-server</string>
-        </array>
-        <key>RunAtLoad</key>
-        <true/>
-        <key>WorkingDirectory</key>
-        <string>#{ENV["HOME"]}</string>
-        <key>StandardOutPath</key>
-        <string>#{var}/log/code-server.log</string>
-        <key>StandardErrorPath</key>
-        <string>#{var}/log/code-server.log</string>
-      </dict>
-      </plist>
-    EOS
+  service do
+    run opt_bin/"code-server"
+    keep_alive true
+    error_log_path var/"log/code-server.log"
+    log_path var/"log/code-server.log"
+    working_dir ENV["HOME"]
   end
 
   test do
