@@ -40,38 +40,12 @@ class Coturn < Formula
     man1.install Dir["man/man1/*"]
   end
 
-  plist_options manual: "turnserver -c #{HOMEBREW_PREFIX}/etc/turnserver.conf --userdb=#{HOMEBREW_PREFIX}/opt/coturn/var/db/turndb --daemon"
-
-  def plist
-    <<~EOS
-      <?xml version="1.0" encoding="UTF-8"?>
-      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-      <plist version="1.0">
-        <dict>
-          <key>KeepAlive</key>
-          <dict>
-            <key>SuccessfulExit</key>
-            <false/>
-          </dict>
-          <key>Label</key>
-          <string>#{plist_name}</string>
-          <key>ProgramArguments</key>
-          <array>
-            <string>#{opt_bin}/turnserver</string>
-            <string>-c</string>
-            <string>#{etc}/turnserver.conf</string>
-          </array>
-          <key>WorkingDirectory</key>
-          <string>#{HOMEBREW_PREFIX}</string>
-          <key>RunAtLoad</key>
-          <true/>
-          <key>StandardErrorPath</key>
-          <string>#{var}/log/coturn.log</string>
-          <key>StandardOutPath</key>
-          <string>#{var}/log/coturn.log</string>
-        </dict>
-      </plist>
-    EOS
+  service do
+    run [opt_bin/"turnserver", "-c", etc/"turnserver.conf"]
+    keep_alive true
+    error_log_path var/"log/coturn.log"
+    log_path var/"log/coturn.log"
+    working_dir HOMEBREW_PREFIX
   end
 
   test do
