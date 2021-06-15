@@ -1,8 +1,8 @@
 class Ghr < Formula
   desc "Upload multiple artifacts to GitHub Release in parallel"
   homepage "https://tcnksm.github.io/ghr"
-  url "https://github.com/tcnksm/ghr/archive/v0.13.0.tar.gz"
-  sha256 "53933c6436187f573128903701ce74ac341793e892d3c2f57c822c0ce3c49e11"
+  url "https://github.com/tcnksm/ghr/archive/v0.14.0.tar.gz"
+  sha256 "e48f6080f81960ec12dad0d104cb0afe876134bab862a229c9aed91f9f618c1e"
   license "MIT"
 
   bottle do
@@ -17,12 +17,7 @@ class Ghr < Formula
   depends_on "go" => :build
 
   def install
-    # Avoid running `go get`
-    inreplace "Makefile", "go get ${u} -d", ""
-
-    system "make", "build"
-    bin.install "bin/ghr" => "ghr"
-    prefix.install_metafiles
+    system "go", "build", *std_go_args(ldflags: "-s -w")
   end
 
   test do
