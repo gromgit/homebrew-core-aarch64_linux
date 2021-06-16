@@ -7,10 +7,9 @@ class Click < Formula
   head "https://github.com/databricks/click.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:     "910783b8fcee53ee4e4773e7aec55599906c8f5dfde6cc4773c127f180229d5d"
-    sha256 cellar: :any_skip_relocation, catalina:    "6bced21af1d4a16b96986fccbab5781f1aae9d9816ce12fdbb299f70b8711229"
-    sha256 cellar: :any_skip_relocation, mojave:      "7ac283d05682f3cf9698b324fc749c7a3281048e3789ab0af61f01c649eebf7d"
-    sha256 cellar: :any_skip_relocation, high_sierra: "e1b015903b819bc7f0bde965ca968457f2cac039001abc040ed9652e642fabe7"
+    sha256 cellar: :any_skip_relocation, big_sur:  "aa74cec2f0d6854791b46d54adbdb96bff085b67278629695f0ac266eef54717"
+    sha256 cellar: :any_skip_relocation, catalina: "59c72a4b00a3bf477cd3d65573175d6009112273b715b30d49be7bc694fdcf80"
+    sha256 cellar: :any_skip_relocation, mojave:   "b7f4b485ff0eb502694555d0f85096880e6a0355b7e69adf2bb5075d2396ade1"
   end
 
   depends_on "rust" => :build
