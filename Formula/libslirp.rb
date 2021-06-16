@@ -6,10 +6,10 @@ class Libslirp < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "c194843e4b0002808b5b7de69d68c50108e314ee907df514ec67f5046918fd97"
-    sha256 cellar: :any, big_sur:       "82f89a12087d2c4f4a023d390b34a092339f7112bf4f32ad9bb4e157a0857781"
-    sha256 cellar: :any, catalina:      "c2b9dca7029b6605fada2f34ea4cca91fece1959daa1cb9e970c2a3143d3b945"
-    sha256 cellar: :any, mojave:        "d74adebfe1d982be140295e6f7ebc739fea376d7689cc9f21e6fa868097a3a3c"
+    sha256 cellar: :any, arm64_big_sur: "9f2e35cd0ca207f33cad11d421509ac7c07430f1ab2297975bcc37cb5e7ffdff"
+    sha256 cellar: :any, big_sur:       "d1a5e21056a3e549feb9eaf6062a837e7627a2d06163e18e3ff84f7cd27508ea"
+    sha256 cellar: :any, catalina:      "0217c0ff05bd25096aa219d4936aad3182b1cad41887434eeba02d5e0f0c4280"
+    sha256 cellar: :any, mojave:        "0c2b2a7c49e23354ce4c9717ad7fb52f0d60f40012725fd1c1055eb9fca31871"
   end
 
   depends_on "meson" => :build
