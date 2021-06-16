@@ -9,10 +9,10 @@ class Pipgrip < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "186e5d20f5e9efad4af13796d0e0ac79caec559051913fe472e0e7aa1e0986ff"
-    sha256 cellar: :any_skip_relocation, big_sur:       "fe945bd47c9f216c2d0a792cd8e285eb997a3b6f029ecb7b6c7a8db71610f675"
-    sha256 cellar: :any_skip_relocation, catalina:      "0f18bb4595009bba0811ece3c86e74caa1c84799818298431aa9cba38527ef12"
-    sha256 cellar: :any_skip_relocation, mojave:        "d4dad1ab2fa11622134520609287f74ca26f87c7abc12895348318da20852517"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c52cb1d2e5972128efe598fcc62745b5e1fa6f066901d1366dbbbea4c0a9fe62"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c9e14ba251606734a6d88de7594d82e4d62a843800772058275707c291c07fc8"
+    sha256 cellar: :any_skip_relocation, catalina:      "7dfd7fe685e31aba9deace2a2d4d51c21bab66ac74ed2876a822c10356223150"
+    sha256 cellar: :any_skip_relocation, mojave:        "09a8db46fa81ece85eb5819d911447e9feaf4c5b36da8650a7a59ef0f937806f"
   end
 
   depends_on "python@3.9"
