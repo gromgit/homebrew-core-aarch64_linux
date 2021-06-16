@@ -8,6 +8,13 @@ class Px < Formula
       revision: "aea41c2a67a8b83e644e11d8ac152e2c123d0ee1"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d7e2be47d32349f708eeda8ddfa0de14ecc1f5097843b6717afc73087be1b164"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4ea324770c4222519f8bb6b4c73b5fa4e28269fcb5b090fec5b7225d8345f45b"
+    sha256 cellar: :any_skip_relocation, catalina:      "2f642acd87d987208873406708253959f554722d68061aa3a4a7fb5d8c296d4c"
+    sha256 cellar: :any_skip_relocation, mojave:        "10957e4df4bb14fcab4bc4dd3437f0051eab9a9a1f4d7d61f732f3651f06cb1e"
+  end
+
   depends_on "python@3.9"
   depends_on "six"
 
