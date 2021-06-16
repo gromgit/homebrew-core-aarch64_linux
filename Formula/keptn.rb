@@ -6,9 +6,10 @@ class Keptn < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "9c08935654a5ba37098d6bbe74ae148824cdcc21889f22f171e6b9c4a44a4ffe"
-    sha256 cellar: :any_skip_relocation, catalina: "59a1ffc854e5420805254a0b2fbc47139d2b8ffb7cae810a86c53982a43d8cef"
-    sha256 cellar: :any_skip_relocation, mojave:   "ae383c334b33874359c6bc054b2e132da3e3e97b0d2d17b935cfed145cfbdc34"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "96b9060be1fc7ad8522d52f043c382e9f6563ca52fd40984088a30a7514a8137"
+    sha256 cellar: :any_skip_relocation, big_sur:       "9c08935654a5ba37098d6bbe74ae148824cdcc21889f22f171e6b9c4a44a4ffe"
+    sha256 cellar: :any_skip_relocation, catalina:      "59a1ffc854e5420805254a0b2fbc47139d2b8ffb7cae810a86c53982a43d8cef"
+    sha256 cellar: :any_skip_relocation, mojave:        "ae383c334b33874359c6bc054b2e132da3e3e97b0d2d17b935cfed145cfbdc34"
   end
 
   depends_on "go" => :build
