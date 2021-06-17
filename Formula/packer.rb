@@ -1,9 +1,8 @@
 class Packer < Formula
   desc "Tool for creating identical machine images for multiple platforms"
   homepage "https://packer.io"
-  url "https://github.com/hashicorp/packer.git",
-      tag:      "v1.7.2",
-      revision: "1f834e229aa722ea1279ec32503a2ea011f24e03"
+  url "https://github.com/hashicorp/packer/archive/v1.7.3.tar.gz"
+  sha256 "f08e52321cc5a3ef6651107f8dff29f23cfc6e75f2fdfa87da33d2b5d73e0267"
   license "MPL-2.0"
   head "https://github.com/hashicorp/packer.git"
 
@@ -22,9 +21,9 @@ class Packer < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args
+    system "go", "build", *std_go_args(ldflags: "-s -w")
+
     zsh_completion.install "contrib/zsh-completion/_packer"
-    prefix.install_metafiles
   end
 
   test do
