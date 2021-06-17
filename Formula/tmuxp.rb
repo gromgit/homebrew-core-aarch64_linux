@@ -8,10 +8,10 @@ class Tmuxp < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "adb61801748cbfa449a90bc830a8146f307bd68411fb78182697ecd364722160"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3076ab1df50dfc4728aa05e667c57355a84dc862565684bd8dff462a00b49f85"
-    sha256 cellar: :any_skip_relocation, catalina:      "ba9fa5dc41e15b4305725b695eb0b86abcf4e46d0b151772cfec58e07d808f70"
-    sha256 cellar: :any_skip_relocation, mojave:        "e8641e8b91ce59d848918322b20e03856e729138b9da5f618f52d0272019bcff"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "11c9d785237a7c0a01853ae55bfa37126e334eafb14b1a4189fca4ea51d88875"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e407ec516f82f1ee9c1c32e18237ebfeb7b311c91d8f1495a6ef065af27d1e78"
+    sha256 cellar: :any_skip_relocation, catalina:      "9c52ecb1ef2c94a17992896e8f91493cffa63cdf111948d3a9b153f4aab6be61"
+    sha256 cellar: :any_skip_relocation, mojave:        "31fddee1eae3fec1ea9d5ae8954a9e99b7e81f0a8495f3ae727178936ce23065"
   end
 
   depends_on "python@3.9"
