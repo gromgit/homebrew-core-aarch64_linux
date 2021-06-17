@@ -1,8 +1,8 @@
 class Kumactl < Formula
   desc "Kuma control plane command-line utility"
   homepage "https://kuma.io/"
-  url "https://github.com/kumahq/kuma/archive/1.1.6.tar.gz"
-  sha256 "946bc6d06d1fc2a0ab4bca431496134c3dab050fb7a85d6073273f918aed899a"
+  url "https://github.com/kumahq/kuma/archive/1.2.0.tar.gz"
+  sha256 "898410d11d6b905bf010832a02b6b16bfe94e57205be736188130329404e6fb2"
   license "Apache-2.0"
 
   livecheck do
@@ -20,13 +20,13 @@ class Kumactl < Formula
   depends_on "go" => :build
 
   def install
-    srcpath = buildpath/"src/kuma.io/kuma"
-    srcpath.install buildpath.children
+    ldflags = %W[
+      -s -w
+      -X github.com/kumahq/kuma/pkg/version.version=#{version}
+      -X github.com/kumahq/kuma/pkg/version.buildDate=#{Date.today}
+    ].join(" ")
 
-    cd srcpath do
-      system "make", "build/kumactl", "BUILD_INFO_VERSION=#{version}"
-      bin.install Dir["build/artifacts-*/kumactl/kumactl"].first
-    end
+    system "go", "build", *std_go_args(ldflags: ldflags), "./app/kumactl"
 
     output = Utils.safe_popen_read("#{bin}/kumactl", "completion", "bash")
     (bash_completion/"kumactl").write output
