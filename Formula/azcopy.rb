@@ -6,10 +6,10 @@ class Azcopy < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6de1123c7e65b5d895f8a75b3fdec4fa6ec0a2f186d88d24d294454cc8a67e9b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a1209b5036d3931d64c5039667a7f34e00b3f8c0dcd54ca07e68545ecf25dbe7"
-    sha256 cellar: :any_skip_relocation, catalina:      "742bd1595080b20b83c042320e7d009e260daa42f9af10250c3817a2bac57e37"
-    sha256 cellar: :any_skip_relocation, mojave:        "43775ba24e0083f7a9cbc8bc588c0185fc3e10f93b08b2c57144fe415a167895"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "474b27d1ccdd417f7fe1d75fe69311e76ec16f8fef56ccba1ed35f323318fd70"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a2e2649c4fdbc5453e6b33536af505a9747d59413d6314fc1171d68d96c0156c"
+    sha256 cellar: :any_skip_relocation, catalina:      "4eca8b06dde2477846598d23d0dbc08a7c18de91b6185656f0dd0b9f7c0b5302"
+    sha256 cellar: :any_skip_relocation, mojave:        "908b48e69521aa5b29eb1e300d21e9b9212b1930dd860a7caf7b4b2ef4191138"
   end
 
   depends_on "go" => :build
