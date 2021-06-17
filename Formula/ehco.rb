@@ -1,8 +1,8 @@
 class Ehco < Formula
   desc "Network relay tool and a typo :)"
   homepage "https://github.com/Ehco1996/ehco"
-  url "https://github.com/Ehco1996/ehco/archive/refs/tags/v1.0.6.tar.gz"
-  sha256 "326c468c3790ad01031e52ccb4efcfa5e331d2198fdb13137749c67e8eaacf38"
+  url "https://github.com/Ehco1996/ehco/archive/refs/tags/v1.0.7.tar.gz"
+  sha256 "d6384cdb31befcf9a198dd1be6c0073e9fabb6823f2f92df63bb50fb14ec6ff1"
   license "GPL-3.0-only"
 
   livecheck do
@@ -29,12 +29,12 @@ class Ehco < Formula
 
     # run nc server
     nc_port = free_port
-    nc_pid = spawn "nc", "-l", "-p", nc_port.to_s
+    nc_pid = spawn "nc", "-l", nc_port.to_s
     sleep 1
 
     # run ehco server
     listen_port = free_port
-    ehco_pid = spawn bin/"ehco", "-l", "localhost:#{listen_port}", "-r", "localhost:#{nc_port}", "-web_port", nil.to_s
+    ehco_pid = spawn bin/"ehco", "-l", "localhost:#{listen_port}", "-r", "localhost:#{nc_port}"
     sleep 1
 
     system "nc", "-z", "localhost", listen_port.to_s
