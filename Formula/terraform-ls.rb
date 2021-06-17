@@ -1,8 +1,8 @@
 class TerraformLs < Formula
   desc "Terraform Language Server"
   homepage "https://github.com/hashicorp/terraform-ls"
-  url "https://github.com/hashicorp/terraform-ls/archive/v0.18.0.tar.gz"
-  sha256 "37d9bbf36a9c4a181c16135abe3c45853d6672a3667ebb93dd7950a7950045fa"
+  url "https://github.com/hashicorp/terraform-ls/archive/v0.18.1.tar.gz"
+  sha256 "d3f198ce29f22c1629165287d9b6596a8d77c402c870d281a33ffefada1620ac"
   license "MPL-2.0"
   head "https://github.com/hashicorp/terraform-ls.git", branch: "main"
 
@@ -21,7 +21,7 @@ class TerraformLs < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args, "-ldflags", "-s -w"
+    system "go", "build", *std_go_args(ldflags: "-s -w")
   end
 
   test do
