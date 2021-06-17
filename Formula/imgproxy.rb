@@ -1,10 +1,9 @@
 class Imgproxy < Formula
   desc "Fast and secure server for resizing and converting remote images"
   homepage "https://imgproxy.net"
-  url "https://github.com/imgproxy/imgproxy/archive/v2.16.3.tar.gz"
-  sha256 "484de4e863bbaf4aafb52c581102a24c21b046722c94f382000fbd3e6a4db3bc"
+  url "https://github.com/imgproxy/imgproxy/archive/v2.16.4.tar.gz"
+  sha256 "28dcc116b029df27532c631beb1c85810695561c34465caa36b2c62eda601aa1"
   license "MIT"
-  revision 1
   head "https://github.com/imgproxy/imgproxy.git"
 
   bottle do
@@ -17,12 +16,6 @@ class Imgproxy < Formula
   depends_on "go" => :build
   depends_on "pkg-config" => :build
   depends_on "vips"
-
-  # patch build, remove in next release
-  patch do
-    url "https://github.com/imgproxy/imgproxy/commit/488d786.patch?full_index=1"
-    sha256 "4d1b3646c8b61883fe35bf9da37ce2f6e2e128643b4c22ba831d0bc9aa96c9dd"
-  end
 
   def install
     ENV["CGO_LDFLAGS_ALLOW"]="-s|-w"
