@@ -2,10 +2,10 @@ require "language/node"
 
 class Copilot < Formula
   desc "CLI tool for Amazon ECS and AWS Fargate"
-  homepage "https://github.com/aws/copilot-cli/wiki"
+  homepage "https://aws.github.io/copilot-cli/"
   url "https://github.com/aws/copilot-cli.git",
-      tag:      "v1.7.1",
-      revision: "c2d143dfe781a865ed823984c88065a92836b4c6"
+      tag:      "v1.8.0",
+      revision: "a486bacac9a7c5ffe82df29f16c80946ba815e4a"
   license "Apache-2.0"
   head "https://github.com/aws/copilot-cli.git"
 
