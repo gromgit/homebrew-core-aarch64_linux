@@ -113,6 +113,9 @@
   "platformio": {
     "exclude_packages": ["tabulate"]
   },
+  "pdm": {
+    "exclude_packages": ["six"]
+  },
   "poetry": {
     "extra_packages": ["importlib-metadata", "typing-extensions"]
   },
