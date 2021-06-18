@@ -6,10 +6,10 @@ class Enchant < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "a18ef73a8b2164aa221d4d9a35e5e2986b8beea6005401ac4ae2f940f1fc9300"
-    sha256 big_sur:       "fa2be4ac2134abd0e26253fec654924b0331abe62588a48840e3a467ec4c20c2"
-    sha256 catalina:      "822040f225a771c940f4595a3b7e7c592c6a794828bbc34bce8b8f3143c70443"
-    sha256 mojave:        "cb7f88089f5fb746127ad384c7f3cd813f16b1ff9b7b263872bc75b1a9293916"
+    sha256 arm64_big_sur: "b5a33d94c354cef749a27ba33708d75df4e5155b477bde01692a75f89bc18120"
+    sha256 big_sur:       "bf3bfe2bd2d71bf787c84db5ab1141961b66a6cfc98438555da70162fb0a1f9c"
+    sha256 catalina:      "446db311b0f9926c31b38c7663f4598940ce87aa5871416b3aa229d4b0294dcd"
+    sha256 mojave:        "06c3c748e6c955c17d8611c7067a40df9547ea9fc3e70a53171d8dd0d874a488"
   end
 
   depends_on "pkg-config" => :build
