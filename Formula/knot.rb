@@ -11,10 +11,10 @@ class Knot < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "6fa5ddb12c889c909b0d5332fc44be17ae04d94848b43f1554ad8963b4280ae0"
-    sha256 big_sur:       "f34422566603b1323dbd74a9dc7f942e7fd978bd81f2ad5e35cfe6377b4b4b7d"
-    sha256 catalina:      "e4125e75e67016fad7872d0eb272fd888ec94528ad56878dbcbf0244e1ecdba5"
-    sha256 mojave:        "b9eab6187e032e181a2f96da4f80775351f18f51b2d9a62a98ab3b58e8db8906"
+    sha256 arm64_big_sur: "f442578a4ccd1dfeedb50ee16378ebe6af88a9bca5f69b83bff3dfe22553baa6"
+    sha256 big_sur:       "70f9eee3b8dd11f6b28a3a448c8b4e4c9dc462cf18042e64289defa3688c1f66"
+    sha256 catalina:      "5f7dd1207561127110ab2780dba763c72de2922f7fda9ce91ebdaa1ce5af3a08"
+    sha256 mojave:        "c893d2df228231ad0e514857d03c967d2d2cd4b5d66030da2abf59f9fbfb5684"
   end
 
   head do
