@@ -10,6 +10,13 @@ class Jruby < Formula
     regex(%r{href=.*?/jruby-dist[._-]v?(\d+(?:\.\d+)+)-bin\.t}i)
   end
 
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "e0182e32a400fc7f6e5f18c897c4e8f9ca0f9a7013cbbf4ba07a975eab0ab4e8"
+    sha256 cellar: :any, big_sur:       "74486e1c636a83f12ee42b200b1ffb44a8205ce4962616a212bc270223200093"
+    sha256 cellar: :any, catalina:      "74486e1c636a83f12ee42b200b1ffb44a8205ce4962616a212bc270223200093"
+    sha256 cellar: :any, mojave:        "74486e1c636a83f12ee42b200b1ffb44a8205ce4962616a212bc270223200093"
+  end
+
   depends_on "openjdk"
 
   def install
