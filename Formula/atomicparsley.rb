@@ -9,11 +9,10 @@ class Atomicparsley < Formula
   head "https://github.com/wez/atomicparsley.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b13b47c39fe2d69a9aef32280da1529e5e70c02b35fbb7add9c2d0ad25dc36fb"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7030626fea429aab956442a66f630639ea17c44c05d948ad1c2c91cde5eefb53"
-    sha256 cellar: :any_skip_relocation, catalina:      "9fb54fe0aa1faeef942d48c139bb7e003aaf795c8a47b0d9c6d046bafc3b3fb0"
-    sha256 cellar: :any_skip_relocation, mojave:        "b58fc8376ed3e18b7207ede4825c34256854b3abc390260f5f6759e0eb329013"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1f9c50e5dee5eb4d340f8b6832317f5198b2c5fdcc5b71edf76361a32e009dd2"
+    sha256 cellar: :any_skip_relocation, big_sur:       "fbc58b5b09449e0bbf23d23fa3d9d15a1022afaa851833edfba6dbfcf07cb8aa"
+    sha256 cellar: :any_skip_relocation, catalina:      "741669e14e97f59e4a44603b19cd1c7d624eae96f4d8a93903dfb7cfc9a00502"
+    sha256 cellar: :any_skip_relocation, mojave:        "5e8bdbb474c090d4bf96f02ca4a40a3d3b74acb7e846d58dc90386ba8a740e18"
   end
 
   depends_on "cmake" => :build
