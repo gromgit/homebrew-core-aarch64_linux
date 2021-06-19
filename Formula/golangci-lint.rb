@@ -2,8 +2,8 @@ class GolangciLint < Formula
   desc "Fast linters runner for Go"
   homepage "https://golangci-lint.run/"
   url "https://github.com/golangci/golangci-lint.git",
-      tag:      "v1.41.0",
-      revision: "eed344f619dea041f87bcbaf200cdba1af2c859e"
+      tag:      "v1.41.1",
+      revision: "a20748098fb3cb4b69f6b6ebb7809e7741122ef8"
   license "GPL-3.0-only"
   head "https://github.com/golangci/golangci-lint.git"
 
@@ -24,7 +24,7 @@ class GolangciLint < Formula
       -X main.date=#{Time.now.utc.rfc3339}
     ].join(" ")
 
-    system "go", "build", *std_go_args, "-ldflags", ldflags, "./cmd/golangci-lint"
+    system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/golangci-lint"
 
     output = Utils.safe_popen_read("#{bin}/golangci-lint", "completion", "bash")
     (bash_completion/"golangci-lint").write output
