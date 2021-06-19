@@ -11,6 +11,10 @@ class Byteman < Formula
     regex(/href=.*?byteman-download[._-]v?(\d+(?:\.\d+)+)-bin\.zip/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "641417737526f28532015727aaa9f025f8869f68f7fdf4aec116cd34bde8b013"
+  end
+
   depends_on "openjdk"
 
   def install
