@@ -10,6 +10,10 @@ class HapiFhirCli < Formula
     strategy :github_latest
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "d4b76b90a1600c2356dd8a5d5746421317b72adddef280a7786c9a77657d68b0"
+  end
+
   depends_on "openjdk"
 
   resource "test_resource" do
