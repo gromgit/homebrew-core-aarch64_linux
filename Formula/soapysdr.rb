@@ -6,6 +6,13 @@ class Soapysdr < Formula
   license "BSL-1.0"
   head "https://github.com/pothosware/SoapySDR.git"
 
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "d93fdc3756fd6036c4e429e48e29df9dae3ba201fe049814fbd56d420a8cd3db"
+    sha256 cellar: :any, big_sur:       "3c548da2b3d9c65c3a57a96a7cf4c0750a897ed813b44cb3b1af9364803e38c8"
+    sha256 cellar: :any, catalina:      "87d3d2fd8d8b76cd01151395a9fa8c482db9508933c991cbdd29dcdf07ce5b68"
+    sha256 cellar: :any, mojave:        "fdb7072edfc170aa7aa5bff1411f6797701500968f318be6ea7b2bfc119198e2"
+  end
+
   depends_on "cmake" => :build
   depends_on "swig" => :build
   depends_on "python@3.9"
