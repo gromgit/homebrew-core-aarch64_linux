@@ -11,11 +11,10 @@ class Mytop < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "1b5b8d90532a1d9712a2f0212374975af97603ccdcf7e452bc13178aedfce966"
-    sha256 cellar: :any, big_sur:       "ea2f5229c929cb23466f75964d1bf294130381b27efd55cf2ce91cb248c43732"
-    sha256 cellar: :any, catalina:      "69930f7d5c68b0d6ce75c89820732f269d3b3c6651358875b0db58ae1ead38f0"
-    sha256 cellar: :any, mojave:        "ac13ecf239ff9d4bb1d39ad584c46ac9a5c95f3b96b3991bf9108280b30c0a19"
-    sha256 cellar: :any, high_sierra:   "2862de7630947648898e1ef348a8357fdd25622310c9af03450c40ea33fc925c"
+    sha256 cellar: :any, arm64_big_sur: "0443f8710ab6f1be3e60afc59c15546091982df6f76e31855ff16a1bd86fcb4b"
+    sha256 cellar: :any, big_sur:       "7bbece0e0eeb32f4c8217c232d190990290625e16fa9e542fd6c68dd8aad1727"
+    sha256 cellar: :any, catalina:      "8ec423770dabfb5da68e626af379f73290cd7e04c118db9608d2ce5decf0e489"
+    sha256 cellar: :any, mojave:        "a7512239e490916ef7753a380e638e383b2dd0e0967b6b560c48adf6597b491b"
   end
 
   depends_on "mysql-client"
