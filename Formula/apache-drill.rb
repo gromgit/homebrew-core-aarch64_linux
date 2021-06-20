@@ -11,6 +11,10 @@ class ApacheDrill < Formula
     regex(/href=.*?apache-drill[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "28861dd0b660caf226c095344b4d5bbfba86d35fb69d68ab589f968628f23c66"
+  end
+
   depends_on "openjdk@11"
 
   def install
