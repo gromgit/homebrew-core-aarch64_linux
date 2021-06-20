@@ -6,6 +6,10 @@ class CypherShell < Formula
   license "GPL-3.0"
   version_scheme 1
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "d0feb61b9ddf8a28c96f029727b1ce694fe6cfce030e9ba2be96da616c001bb9"
+  end
+
   depends_on "openjdk@11"
 
   def install
