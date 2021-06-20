@@ -7,11 +7,9 @@ class Ccextractor < Formula
   head "https://github.com/ccextractor/ccextractor.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:     "d728849547605c278baea4db869d73a585f79504923b0456819155f1b15a739d"
-    sha256 cellar: :any_skip_relocation, catalina:    "aaba08da14a3266a7b60bcd232c24d121ba9aa1741e768f54e77fd09f6c67fcc"
-    sha256 cellar: :any_skip_relocation, mojave:      "87a9b43c6ac20b2dc270cc35b1da0df4a92758bc722882407dcacbacb7e806d7"
-    sha256 cellar: :any_skip_relocation, high_sierra: "35be2be5fd71b1784b85a7bd5ba7ccf35f987fd6ed0548df7864cd686e28c5c0"
-    sha256 cellar: :any_skip_relocation, sierra:      "9c78ad6dd2f3c02ef7ca508af88114f8deffa691cf3a546e6ca09ed279b80758"
+    sha256 cellar: :any_skip_relocation, big_sur:  "85a8a4d0137ec1f12e98ad39156d1ee95874b037d432c9620d65f695dcbb3daa"
+    sha256 cellar: :any_skip_relocation, catalina: "22e12e434b2a59c0ee63db41e876add7ab686d7e015c7319bf3cecd01ae2de1e"
+    sha256 cellar: :any_skip_relocation, mojave:   "f389af83990016793f29329e7de8ca7d58c09a25c7faff62bc61d0100d9ee425"
   end
 
   def install
