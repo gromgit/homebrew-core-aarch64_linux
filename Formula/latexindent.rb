@@ -6,10 +6,10 @@ class Latexindent < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "abe7cffba6aa66a7b00a2085fb07cb33a81070ab1518085999213b55ce5144be"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6c9ce4682d80651216fd5919c1b608e6394e5d22aa5bf85e40e289a782fb04c5"
-    sha256 cellar: :any_skip_relocation, catalina:      "e8c512228c18b78057b6c96c2142f72c575264314235d9a46a4d298ec654fc97"
-    sha256 cellar: :any_skip_relocation, mojave:        "caca11dc1662f5d2a783eec24399e8495b0330667d0e46c4a3c99c0f1dabd92f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f398b0e856b73a0b1f266b7682b6eeb7446d60be96debc95598fdb90dbe118d7"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4fcc64f5d5ece8a2323c017f846ae3fe5e22523949e1f37decddce5525bd5959"
+    sha256 cellar: :any_skip_relocation, catalina:      "5d4d8b44a5df93d70c317e8d1065693b12a9e1793859a0cfa949b0caff23455d"
+    sha256 cellar: :any_skip_relocation, mojave:        "0dbee2129f88c6bc369d1f0c5afe645ce27a6f7f4bf1146a8bcfd5cf787add64"
   end
 
   depends_on "perl"
