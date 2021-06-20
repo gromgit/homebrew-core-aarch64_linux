@@ -7,6 +7,10 @@ class ScalaAT212 < Formula
   sha256 "fd7e3e4032288013a29c0a1447c597faf7b0e499762c0d981db21099e9780426"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "cdf530f84277789ecac9c149fe5b3c13e68dcabfef366194b02b463a5ac1ae1d"
+  end
+
   keg_only :versioned_formula
 
   depends_on "openjdk"
