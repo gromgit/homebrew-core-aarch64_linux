@@ -6,6 +6,13 @@ class Waypoint < Formula
   license "MPL-2.0"
   head "https://github.com/hashicorp/waypoint.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "853847353a7ad6cd452a7af521f734f41af3fa746dde461e13a3d69e9eee42a0"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5a1cdcd71b43977ffa8df6eaa7c83f132d398ca75fa260764daa80e6afa5e806"
+    sha256 cellar: :any_skip_relocation, catalina:      "652081285932b97d7e4caaeb8d8ffdc970378083f8d0847fd4574b92128ed9ed"
+    sha256 cellar: :any_skip_relocation, mojave:        "afd733c68296f2d3048452c8a605a0b5d9d6203fec276ab1c89fa3c3d8a76814"
+  end
+
   depends_on "go" => :build
   depends_on "go-bindata" => :build
 
