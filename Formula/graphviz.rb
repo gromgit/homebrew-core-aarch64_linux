@@ -9,10 +9,10 @@ class Graphviz < Formula
   head "https://gitlab.com/graphviz/graphviz.git"
 
   bottle do
-    sha256 arm64_big_sur: "f3db60eb9049bc17b17eb5a53cca5f2fcf64de6cfef0629641f934cea047c263"
-    sha256 big_sur:       "c3b4be8016797f935d210e12b365313d7770643e464563f05377a3209132ec13"
-    sha256 catalina:      "ca40b79d8f77230ed87fd8524ea491ffe97c922dc0c087c4a7f5d06deb19c0ae"
-    sha256 mojave:        "a53d11962ebc9f0c99e8827da3dd0a00c234661a0923d56ed0e5b6601431ea8b"
+    sha256 arm64_big_sur: "11e293a72d98ed531b5d8ee2b9e644acd0d4755750f7cdb2474c55c8d4b7692d"
+    sha256 big_sur:       "beeecb70dee18e74a42f5d511381a1b17b946a95f821ea18b489071d07f279b4"
+    sha256 catalina:      "432e8fc6232e6bd5c8d9d31c80a2cb9b1aab453ef13ea7b109043c117db2271c"
+    sha256 mojave:        "5327470d2ef23770fc7227c82f527ed3f5cd41c6d418cc2ffd167b8f05423204"
   end
 
   depends_on "autoconf" => :build
