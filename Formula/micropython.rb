@@ -7,9 +7,10 @@ class Micropython < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, big_sur:  "7189071c553ab2ea57ae669e94eea6a24f3d2f942a95c37a2ffeece24f87b290"
-    sha256 cellar: :any, catalina: "85748d870424a6f6d30d2e921e613419f8d46320576d86ca6a563dbe3f8e69ca"
-    sha256 cellar: :any, mojave:   "00fe3b2e6e7373ee4528fa536c23352c85a4f8c135da0c7066fd3cabefcd711f"
+    sha256 cellar: :any, arm64_big_sur: "e9fa695e69a3d93b60289e8e4698cb99cf909f69af7b62565a8a16d32c9e40c5"
+    sha256 cellar: :any, big_sur:       "dd7d21cbe5e6eeaf4c898269dcbbddf7f77470bc6cc30cd14a1ab710f0f07d06"
+    sha256 cellar: :any, catalina:      "4db83fc025b9bf91be5ee37b4093b66ccf6e796c73e13cfdb4ac03ebedda489f"
+    sha256 cellar: :any, mojave:        "3bc0210fa2b0f6de0218db02a596e385d57850cd5b8b84f92b3af0d93711876c"
   end
 
   depends_on "pkg-config" => :build
