@@ -5,6 +5,13 @@ class Pyflow < Formula
   sha256 "c29ee89255446b9e50024f749d32b5dbe7e19ecdfbbe382bf518ace271ebc402"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8bf0ab452a96728d8ae1224b87c5a829a1baead24cffeaefd49458b806e3f70e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "479bb582e912848fd7d1b7e5a68bedef006fee399cd4ef2411cdbe68be4dc734"
+    sha256 cellar: :any_skip_relocation, catalina:      "154a512756d034be9fee4e57de8327c7c759a80dd10e330b9961ad08a430664b"
+    sha256 cellar: :any_skip_relocation, mojave:        "04c33c1225ebdf590edbc3cb6c399f53e799d29535cf777baed2413b2ea0f773"
+  end
+
   depends_on "rust" => :build
   depends_on "python@3.9" => :test
 
