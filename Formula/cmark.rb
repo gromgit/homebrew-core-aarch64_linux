@@ -6,11 +6,10 @@ class Cmark < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "ca089ca505933fd9e99555cbb8674994e622300a772a602edc31b670cabd6a50"
-    sha256 cellar: :any, big_sur:       "ebd4950efccf01f8289486df7fa7ccb4af6fa851f3780d8684089015ca312fe4"
-    sha256 cellar: :any, catalina:      "bac8513461f194c42c622ad7ec947e29c12ad297e7d8a484e1fbe85ebc34e68b"
-    sha256 cellar: :any, mojave:        "1a539a85b286c90328c6369631229e479129587b2fe7787dc023d983b9773788"
-    sha256 cellar: :any, high_sierra:   "08672a685877aab6625cb400fc56b73cc370f0006eb9b0befbd7e6a11569ceae"
+    sha256 cellar: :any, arm64_big_sur: "2a6421e2a5c12e65151d7ee68588825f4989e446c02a331178d9cf80da959cdb"
+    sha256 cellar: :any, big_sur:       "e62c5f9e7b4e142d7fc333f74a37e9f7369edf99e3311f104921d55063dd46d9"
+    sha256 cellar: :any, catalina:      "aad5f683d644f5a1197f735d7b3af3dc4764f8ad7e19c3de87974d3a80cf3645"
+    sha256 cellar: :any, mojave:        "2c610141e4791ff7407b12065a492a058da98f9a4841ff65be6a998c603006e6"
   end
 
   depends_on "cmake" => :build
