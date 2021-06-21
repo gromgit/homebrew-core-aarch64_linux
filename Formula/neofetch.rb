@@ -7,8 +7,8 @@ class Neofetch < Formula
   head "https://github.com/dylanaraps/neofetch.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "3e914c528b75e3057342e16b096aec7ea835347cba55c045d9d8f6ec288c7ab6"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, all: "78eb3e99dfde7f5fb1c3b192804a6d345f428c9effa6ea6ba54d7e5b7254387f"
   end
 
   depends_on "screenresolution"
