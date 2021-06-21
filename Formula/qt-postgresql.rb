@@ -6,10 +6,10 @@ class QtPostgresql < Formula
   license all_of: ["GFDL-1.3-only", "GPL-2.0-only", "GPL-3.0-only", "LGPL-2.1-only", "LGPL-3.0-only"]
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "ce09ac797fb05b6216217c81fe740433f264a77ae950e5d24c6e1ee801f5db4c"
-    sha256 cellar: :any, big_sur:       "9db62a83caf0bf3355557e92de90eb105dd5270652d31b42bca7ee91fcb7e705"
-    sha256 cellar: :any, catalina:      "c87f17807ac40a2db5c7bd43286c93eaef0288a00f91c09a5fa6f62a60da0212"
-    sha256 cellar: :any, mojave:        "b33cd87bdb302989abe299fee46d353c1eec34388b69af39db70bd9844e06d3c"
+    sha256 cellar: :any, arm64_big_sur: "792d15d1c9ae9f07719fdb46f2b52e5a22867a4a0bc3f3a04202bb384cd81754"
+    sha256 cellar: :any, big_sur:       "83d2458de45ad9a57e94f61c50a7e326abae16878b8ee0464caf26fc3a939af3"
+    sha256 cellar: :any, catalina:      "8119a6c729db9bcd3f621708379dfc6f08411aebd9f4d5d8a7e5570fd041ca4f"
+    sha256 cellar: :any, mojave:        "d1d5041bff3e3a39419ca559057773ece7332c07ea2f14c9fc4ab27073179f9f"
   end
 
   depends_on "cmake" => [:build, :test]
