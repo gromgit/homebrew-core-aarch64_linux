@@ -52,7 +52,7 @@ class Putty < Formula
 
   test do
     (testpath/"command.sh").write <<~EOS
-      #!/usr/bin/expect -f
+      #!/usr/bin/env expect
       set timeout -1
       spawn #{bin}/puttygen -t rsa -b 4096 -q -o test.key
       expect -exact "Enter passphrase to save key: "
