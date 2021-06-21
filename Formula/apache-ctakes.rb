@@ -5,6 +5,10 @@ class ApacheCtakes < Formula
   sha256 "37ca2b8dfe06465469ed1830fbb84dfc7bcc4295e5387d66e90a76ad2a5cdeaf"
   revision 1
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "f0a2c1e6dec845462d1a7e242985b66c09428ade31830eafda02561a2d243a1e"
+  end
+
   depends_on "openjdk"
 
   def install
