@@ -7,10 +7,10 @@ class CargoWatch < Formula
   head "https://github.com/passcod/cargo-watch.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a41457079f156fbf5a53d6037c6cdf92c6c644d00392a923f85d16bbd7b769f8"
-    sha256 cellar: :any_skip_relocation, big_sur:       "789c2ef8304a9e8149bf19fe19e596452680fdb765f89f47e6e2d4f7f4d773ac"
-    sha256 cellar: :any_skip_relocation, catalina:      "2b4795d6ccfd29eec17e9199867683dc77977b43e7178936fbf205e123be68d3"
-    sha256 cellar: :any_skip_relocation, mojave:        "ecaaebdc7c44594390ae2bc9067f96e691357d5bd96ec17cfa2db248b22cf0a4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bb1111dc0d3cb395b88ce0213da3dae7019f908f6d89ae0f598126d1359c1bea"
+    sha256 cellar: :any_skip_relocation, big_sur:       "311f7f929ca790a0c091471bfd34157906b6d7a4a78bd4786162cf9fe512205e"
+    sha256 cellar: :any_skip_relocation, catalina:      "e81d05e4010d3ecdddd31e109871b849e1ebedf02241b8053b80b7ab343ba70a"
+    sha256 cellar: :any_skip_relocation, mojave:        "fd9f1123d863da4ad81fc80ba0a22a5e7b02cb2e14f6c700621e9c7c9ca1bb09"
   end
 
   depends_on "rust" => [:build, :test]
