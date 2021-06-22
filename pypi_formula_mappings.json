@@ -83,6 +83,9 @@
   "litecli": {
     "exclude_packages": ["tabulate"]
   },
+  "localstack": {
+    "exclude_packages": ["six"]
+  },
   "magic-wormhole": {
     "extra_packages": ["wheel"]
   },
