@@ -6,10 +6,10 @@ class PandocCrossref < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "516ff01abd57816446425c2ed1fb9af61921b36ec6a1e8f7299ad3c0853624ce"
-    sha256 cellar: :any_skip_relocation, big_sur:       "42d899a340c57df84dad28e52a1e3eeb91520c6842be17bb6fe29ac99b5cfbd8"
-    sha256 cellar: :any_skip_relocation, catalina:      "ad0bee2803a212f0447be6071d64ddfb83a89265e82fc225d18bbe06e5467167"
-    sha256 cellar: :any_skip_relocation, mojave:        "ba49887843f71a964526ae9d00101250c77fe8f80432f92627dbde5b37640243"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3b525d5593fc8e35259c94fe0352ac89ae51564d2681a69e08e66915f8c0dd7d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "777c6def219f6ce20fc702ff5b9da4cf404c083b4376947c46a98da6cfeae046"
+    sha256 cellar: :any_skip_relocation, catalina:      "57d4c7b20861051984b105ffce52e3e7716ddd3484dd34b2068da1851ad35547"
+    sha256 cellar: :any_skip_relocation, mojave:        "f5b01586f853381399a67e203a95e404184916cc6fe81edc5c3a0844b6762337"
   end
 
   depends_on "cabal-install" => :build
