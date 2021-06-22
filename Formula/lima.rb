@@ -5,6 +5,13 @@ class Lima < Formula
   sha256 "482e4cff30103aac5bf93feb76721f1ada26a7618e503365040c4adae2a28043"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "62efeacf2b93d8682f5d5484e9fddae5375c6bbb4b79a4152b84f7cefc4801a9"
+    sha256 cellar: :any_skip_relocation, big_sur:       "985f4cac8603f1f84ece40cdf5dff7c855db7c92190df8aaebf3c2e0e0f047c7"
+    sha256 cellar: :any_skip_relocation, catalina:      "ea3b36d9be47834c2b57898b75e4f122e9ee9066b3226adecdf3eb2a2836e149"
+    sha256 cellar: :any_skip_relocation, mojave:        "6e78a4a150b2c0043227bfa008bad25308881b9174e432cb08ee6d64cd5818b3"
+  end
+
   depends_on "go" => :build
   depends_on "qemu"
 
