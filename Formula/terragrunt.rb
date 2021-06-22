@@ -6,10 +6,10 @@ class Terragrunt < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3c5b5d8b74a9a940d4ca5a28691bf98b421b30e3b1e57b6a4ff18eb5fd267a0f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5c872d1ea512685db8b1ffe541e955542c0edb4df5e387926949187ccac40eef"
-    sha256 cellar: :any_skip_relocation, catalina:      "ecdf4ee3b655b2603bf9a6f0ae62026222b08de1362073c4bf5da767b16917d1"
-    sha256 cellar: :any_skip_relocation, mojave:        "620aa3237977725d6b96e18c1699d0eab8996c2a1508644a3502959030b50045"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4d066c3cbfed15778e734eae7fcce07297eeee1467da4198f9e46ee0ccfb166c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7b8dc70aa56b19ceefe0a6769f14607b7d905d2d85921284a42745a7c7fdc550"
+    sha256 cellar: :any_skip_relocation, catalina:      "7b5b37c16d92f8f7a47ccb64350ed13c43d4aeaeae70f3724a032402898b4f11"
+    sha256 cellar: :any_skip_relocation, mojave:        "210453c49031412cfe2b3030f84195fedb926376f5dd5bd91cf8b7d7779decda"
   end
 
   depends_on "go" => :build
