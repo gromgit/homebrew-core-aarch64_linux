@@ -1,8 +1,8 @@
 class Libcoap < Formula
   desc "Lightweight application-protocol for resource-constrained devices"
   homepage "https://github.com/obgm/libcoap"
-  url "https://github.com/obgm/libcoap/archive/v4.2.1.tar.gz"
-  sha256 "29a0394a265d3febee41e5e2dc03d34292a0aede37f5f80334e529ac0dab2321"
+  url "https://github.com/obgm/libcoap/archive/v4.3.0.tar.gz"
+  sha256 "1a195adacd6188d3b71c476e7b21706fef7f3663ab1fb138652e8da49a9ec556"
   license "BSD-2-Clause"
 
   bottle do
@@ -18,7 +18,7 @@ class Libcoap < Formula
   depends_on "doxygen" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
-  depends_on "openssl@1.1" if MacOS.version <= :sierra
+  depends_on "openssl@1.1"
 
   def install
     system "./autogen.sh"
@@ -27,5 +27,23 @@ class Libcoap < Formula
                           "--disable-manpages"
     system "make"
     system "make", "install"
+  end
+
+  test do
+    %w[coap-client coap-server].each do |src|
+      system ENV.cc, pkgshare/"examples/#{src}.c",
+        "-I#{Formula["openssl@1.1"].opt_include}", "-I#{include}",
+        "-L#{Formula["openssl@1.1"].opt_lib}", "-L#{lib}",
+        "-lcrypto", "-lssl", "-lcoap-3-openssl", "-o", src
+    end
+
+    port = free_port
+    fork do
+      exec testpath/"coap-server", "-p", port.to_s
+    end
+
+    sleep 1
+    output = shell_output(testpath/"coap-client -B 5 -m get coap://localhost:#{port}")
+    assert_match "This is a test server made with libcoap", output
   end
 end
