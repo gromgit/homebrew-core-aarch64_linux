@@ -6,6 +6,13 @@ class Pillow < Formula
   license "HPND"
   head "https://github.com/python-pillow/Pillow.git"
 
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "edbe60eed19bc463e465538c877749cf3b85196ecaa2279b8bbcdaeaccef3fcc"
+    sha256 cellar: :any, big_sur:       "c4782627d43206f0d898a4502de8ce497ab1f785bad5f48407d3e4a6d9a68ee9"
+    sha256 cellar: :any, catalina:      "fe025bfeb7f8ff899c01c38b152aeba7256d74c9db811cab958fbbdafce15047"
+    sha256 cellar: :any, mojave:        "34815debfe6d381097c5fe36fa94b18a2e5f18b20348eda380378c25070d0497"
+  end
+
   depends_on "pkg-config" => :build
   depends_on "python@3.7" => [:build, :test] unless Hardware::CPU.arm?
   depends_on "python@3.8" => [:build, :test]
