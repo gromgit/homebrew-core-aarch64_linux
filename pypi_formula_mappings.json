@@ -43,6 +43,9 @@
     "exclude_packages": ["tabulate", "junit-xml"],
     "extra_packages": ["junit-xml-2"]
   },
+  "datalad": {
+    "exclude_packages": ["six"]
+  },
   "diffoscope": "diffoscope[cmdline]",
   "duplicity": {
     "extra_packages": [
