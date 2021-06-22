@@ -7,12 +7,10 @@ class Libconfig < Formula
   head "https://github.com/hyperrealm/libconfig.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "4f8ed5fc70f9240873fa41d407fb56b21b3d528609c3c66246faee586196a8d9"
-    sha256 cellar: :any, big_sur:       "3b66cbc5fae338f422386f6a2eecd650a64391da8d2f7fba259af614729844da"
-    sha256 cellar: :any, catalina:      "5133affbfe2df2eccf05017748542e521e70a8db8763c8d8e39e00aec78fe3f8"
-    sha256 cellar: :any, mojave:        "b1c005fc0d3a811efcef915d8e84d9cc2828d6c35c5649f71fab3c714b2ae1ea"
-    sha256 cellar: :any, high_sierra:   "5762b7106a3e4ecc470193cd8abcfd40de090c456d42b413e545402246d73f69"
+    sha256 cellar: :any, arm64_big_sur: "e675d6e4c47ca13fe8a8faaf02364c5e09c43f7212b33040aa49c06a808c077c"
+    sha256 cellar: :any, big_sur:       "90fad29e719a3bd1b8ebe4eb857299b8a78a229543c3062d370bcdcfa0b8cd5c"
+    sha256 cellar: :any, catalina:      "88689325264c406acb9f624b0c66cae10e2c7b5874b4d78335751b4627a5496c"
+    sha256 cellar: :any, mojave:        "f5470e709146445744e2f9a200e0ea8042be9cd144a3e0b9f0a664b07e1aadc9"
   end
 
   depends_on "autoconf" => :build
