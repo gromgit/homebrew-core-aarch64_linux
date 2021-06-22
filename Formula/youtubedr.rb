@@ -6,10 +6,10 @@ class Youtubedr < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "49a9468a04249f10a66e8aed8abf64b32da95d5202d6aaea79478ac33ef06168"
-    sha256 cellar: :any_skip_relocation, big_sur:       "756028c572cb2f9ce42f240cddaea1843cfea25382cac0216db10a6592e39431"
-    sha256 cellar: :any_skip_relocation, catalina:      "a4f0105dbe605fc4321289cf5394fa03a4396e65ceba4a60243021603bded693"
-    sha256 cellar: :any_skip_relocation, mojave:        "4098635dc27ed2b2edd9409e8943539d14fe7c97de4a6963faececed9c90e38a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "27fd51f30d5cc9ac035005b26b2a5d5a63a2ac1340065c91ba966556a234b4df"
+    sha256 cellar: :any_skip_relocation, big_sur:       "034b62787ee92478925e250d8f72f4adc69c7a487816caa2bc806dc717f6d9fc"
+    sha256 cellar: :any_skip_relocation, catalina:      "dea572476854f16504a38505df56878dfd85e3566a7cab0e9d3e1d27196f2874"
+    sha256 cellar: :any_skip_relocation, mojave:        "53a16b328f2b1bd0a6562c5123ccd70ad97c4887bec91479a03156b477c2c369"
   end
 
   depends_on "go" => :build
