@@ -6,10 +6,10 @@ class Gleam < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "49259d27c5d75651157c5ec31a3a4c3b571664123f6df421263aba2684ef350e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3c36f3e3b129cdc7dfbc3ffb5ea8a01fd036028d2c41710125aec194e25343ea"
-    sha256 cellar: :any_skip_relocation, catalina:      "7f51992236957bbc6da1c73ba1779b6831f8aac27a389c84e4289ad2836ef230"
-    sha256 cellar: :any_skip_relocation, mojave:        "9f9b3467b162621d987e641ccb8ab76ec5cb969eaa2b44277c5a565d4ddfa7b2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "396555316a6b09c357ae75c25961febc20465e3d9728d1cb71f6081f9a3ccd01"
+    sha256 cellar: :any_skip_relocation, big_sur:       "70d4e606d7f33c752d07fbc3b192cac067df730f7ff19c5a421c64c718eb1aef"
+    sha256 cellar: :any_skip_relocation, catalina:      "d1e870e3224a9105c696c567dacf71874a83d5420f5fa88034939d0e15305f16"
+    sha256 cellar: :any_skip_relocation, mojave:        "7c89e151a87885c77ea26788e9672eeaa300f8da7276a244536b114db9b17434"
   end
 
   depends_on "rust" => :build
