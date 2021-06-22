@@ -4,6 +4,7 @@ class Singular < Formula
   url "https://service.mathematik.uni-kl.de/ftp/pub/Math/Singular/src/4-2-0/singular-4.2.0.tar.gz"
   sha256 "5b0f6c036b4a6f58bf620204b004ec6ca3a5007acc8352fec55eade2fc9d63f6"
   license "GPL-2.0"
+  revision 1
 
   bottle do
     sha256 arm64_big_sur: "51ede0e2a1ab0fbdef4bfd7fd9136865bf10c9378a01a7f2517c469d90bc8ef8"
