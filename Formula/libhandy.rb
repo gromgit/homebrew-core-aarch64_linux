@@ -6,10 +6,10 @@ class Libhandy < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "77d84c76983108e91ac0c046c015a849effb0050ad6301f5a1f1a295512f9772"
-    sha256 big_sur:       "d8f5de54f43a158e7cd1e722cfb66d27e20ba73d149e19216960fbfd63956dd3"
-    sha256 catalina:      "d1091de69a0bb535fd94ec47cf46f7750aa77fa7ce9b5c955a3d552336156b39"
-    sha256 mojave:        "880084f90ca3cd8023c79ec1d511b0a7f4ef585a8ef61464bd79a757add25abc"
+    sha256 arm64_big_sur: "5d2dbb845cf88133e1ef430f457127b4101534612a8b80b8830dea4e29432439"
+    sha256 big_sur:       "a6aa6e6042f4be52b6771e90ca9a35f4792bc8ae3cf0e2a641285ea7c7b6b35b"
+    sha256 catalina:      "094c9ab75ad36b5ea16fddebf1280cd7a2a70ffd513a98ba80cae27d540a9d36"
+    sha256 mojave:        "e23bf85ef855b2fa9bde7dabc8ef4ae651f0c1d3157ee5578b46a319c9910d47"
   end
 
   # NOTE: The glade catalog is disabled due to a bug that has been fixed but
