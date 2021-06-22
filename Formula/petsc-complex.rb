@@ -11,10 +11,10 @@ class PetscComplex < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "241001a99e42943db2790681ccbecbbad4a7fc24a5e1581a7382312fd37b89fb"
-    sha256 big_sur:       "c3a1e0a5eef41a9af588eb485eeaef7fa7b917c10b8dda6d5e9fa1ef41ed050d"
-    sha256 catalina:      "f829fd5f01d5d7a5018ff7c2efadcee33c30aa9b4724db1176a84cf308d3703e"
-    sha256 mojave:        "4ef2eb92c98a1c357333202fb03a13d7fd639526cee560e1addb538b9440fe63"
+    sha256 arm64_big_sur: "763f6985df02961c028a2dbe25909b75cea9196ac7fde7ede681f88b4f8fdec5"
+    sha256 big_sur:       "7082a043dbf860203f98d5a2324ebc2388b07eb2e8b78887a166120a3e38a08b"
+    sha256 catalina:      "1e449ba2c9778b68566b8c5df86e123da845f36b397696e8812e5dabd8b53eff"
+    sha256 mojave:        "ac8e29136f5da15e2b4c44468a4336c6dc602d0c29350fd53c76eb0095e06456"
   end
 
   depends_on "hdf5"
