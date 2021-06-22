@@ -1,12 +1,10 @@
 class Solr < Formula
   desc "Enterprise search platform from the Apache Lucene project"
-  homepage "https://lucene.apache.org/solr/"
-  url "https://www.apache.org/dyn/closer.lua?path=lucene/solr/8.8.2/solr-8.8.2.tgz"
-  mirror "https://archive.apache.org/dist/lucene/solr/8.8.2/solr-8.8.2.tgz"
-  sha256 "16b43f25192ab0c3165e86cf6e6f1fda5e5895c15208b7fb7ad0db95bfdecf7e"
+  homepage "https://solr.apache.org/"
+  url "https://www.apache.org/dyn/closer.lua?path=lucene/solr/8.9.0/solr-8.9.0.tgz"
+  mirror "https://archive.apache.org/dist/lucene/solr/8.9.0/solr-8.9.0.tgz"
+  sha256 "c9c970e0603318eac1ca5bae24e9a85e917d012266159237e572e636c5a3da62"
   license "Apache-2.0"
-
-  bottle :unneeded
 
   depends_on "openjdk"
 
