@@ -1,8 +1,8 @@
 class Ntl < Formula
   desc "C++ number theory library"
   homepage "https://libntl.org"
-  url "https://libntl.org/ntl-11.4.4.tar.gz"
-  sha256 "9d7f6e82e11a409f151c0de2deb08c0d763baf9834fddfd432bf3d218f8021db"
+  url "https://libntl.org/ntl-11.5.0.tar.gz"
+  sha256 "4f89c417699a3be541eb919f7af2d7c030ea17bc51146052d724ef66288f0078"
 
   livecheck do
     url "https://libntl.org/download.html"
