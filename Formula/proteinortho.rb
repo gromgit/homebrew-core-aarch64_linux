@@ -6,10 +6,10 @@ class Proteinortho < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "e708a2b5fb988519555a12d3b19f8bda467f80d75d5ce7c4689f79731f8fbb50"
-    sha256 cellar: :any, big_sur:       "ad81597e67d53cc98ee58d403d5b14ced7f1b15f0fadd753c9c8d5dcadf0fd03"
-    sha256 cellar: :any, catalina:      "d08b2626e480eed75452c12eb70081f3097befb2f97bfa9ed2cf070c03db5ffd"
-    sha256 cellar: :any, mojave:        "cf6facc85e0125bdb1b4ccf7d6051f89391b26e6fec8551cc9ac41a98b6a8c3c"
+    sha256 cellar: :any, arm64_big_sur: "765899e2a19ba1d3db3aca66172946123ebfde61e1d33982f15af260b15792df"
+    sha256 cellar: :any, big_sur:       "c75afcf372564f4b5f22bbed0bcce9cdb7ec6fef91cd0fcf7e1aba153ecaaf32"
+    sha256 cellar: :any, catalina:      "090b08218718cb955e4ee1044fc337394d9dc8f745eb83af5dbb4beb7615c153"
+    sha256 cellar: :any, mojave:        "3861fa61d70fac1b647864001254a196fcd135f435af0d816a87c2605bb538e7"
   end
 
   depends_on "diamond"
