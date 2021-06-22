@@ -11,9 +11,9 @@ class Micronaut < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "c0b1768ca7cfca0affcd1d899546ed1a5711dbc7d585620e94f972451609fee0"
-    sha256 cellar: :any_skip_relocation, catalina: "f68adbee84c552cfb5bc4b5fc63a49dcfca6949aa1f5b21e6eae7b8339bd5df9"
-    sha256 cellar: :any_skip_relocation, mojave:   "1a700958ff2cd4e563480860d487aea05af460794b1c8ecfd718d840773dbe3a"
+    sha256 cellar: :any_skip_relocation, big_sur:  "8752ff18522e1880924b31229392f020fdc39c5583964c9c93358e86598762ec"
+    sha256 cellar: :any_skip_relocation, catalina: "560ca9a9c949b43e60dc1a75bd972870d8756d6cdbc34d324d572e7e8d146a98"
+    sha256 cellar: :any_skip_relocation, mojave:   "c8a99c0394d59af7dc97a47e2b0deeec3c7534d10b42218122797d03aa95e6c6"
   end
 
   depends_on "gradle" => :build
