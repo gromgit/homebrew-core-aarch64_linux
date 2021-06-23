@@ -12,9 +12,10 @@ class Treefrog < Formula
   end
 
   bottle do
-    sha256 big_sur:  "c398259d9a89c8f220d8430ff564a7be4933b18d78037a24bc017240f0199099"
-    sha256 catalina: "c5c2c646ab038f2086ed2814bc79992ae4ff8b9885af204e1bf1c167f0ad1903"
-    sha256 mojave:   "fff4424d879c5b7f9e823e6c62484a84a1484ff08e451939cd2de87d3f55a72c"
+    sha256 arm64_big_sur: "1d360984e43004f5b22d5354116c51d151ef1cd84d80f82fb1a09a956145b510"
+    sha256 big_sur:       "aaa3208b6c9f7534c1c9e74aecb28f886bd8f8ff32b389cffbb132b95b317f15"
+    sha256 catalina:      "967507adb9e26f05f9b7e290b44e7a4ba19e711ce0f995e3fd841a0fcd6e1e1d"
+    sha256 mojave:        "d6e058393eb60b8a96d0b4bc7135fba39de517b049aec6e4777e0902b0ed5de2"
   end
 
   depends_on xcode: :build
