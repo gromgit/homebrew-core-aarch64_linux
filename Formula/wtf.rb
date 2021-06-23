@@ -10,6 +10,10 @@ class Wtf < Formula
     regex(%r{url=.*?/wtf[._-]v?(\d{6,8})\.t}i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "ea228852e63cc2acf592ec70ff706d20fe252c4363214d772f4d6bdc45301255"
+  end
+
   def install
     inreplace %w[wtf wtf.6], "/usr/share", share
     bin.install "wtf"
