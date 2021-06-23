@@ -6,11 +6,10 @@ class Geographiclib < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "9c9fcfba39ac076e5681018ffd222742f6d813e156f44389bbffae7f54a9c602"
-    sha256 cellar: :any, big_sur:       "330b858cbb533864caa4324b2385399e49807ce93671be290ec6b16c09c874d6"
-    sha256 cellar: :any, catalina:      "a8d601014c3a569b8b0ebb48e0f92055c57c2f915354a1e4030a7cda4a1afcfe"
-    sha256 cellar: :any, mojave:        "145e83f5076511c2d86ec4d8ff4de7536f909411d70b8ba81fa976f7c756d11d"
+    sha256 cellar: :any, arm64_big_sur: "302202edfb516879e561d78a6cf81a3476aba292f1a6cf23bb272c9a60bc301c"
+    sha256 cellar: :any, big_sur:       "13facfd20eec2fe0a6ad291a0090a4e66b38e74830306b69cca5ac54674c0072"
+    sha256 cellar: :any, catalina:      "beeca9653f64dc20bdd907fdeae179d53c9b1cf58590b452f5f02f1d70a7905b"
+    sha256 cellar: :any, mojave:        "c10d4bb46beafe818efa240b7dd7916e0dc2a9567dcef0a26823e564e1e679b4"
   end
 
   depends_on "cmake" => :build
