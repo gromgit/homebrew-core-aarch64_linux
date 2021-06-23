@@ -11,10 +11,10 @@ class Byacc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "651946ffc2c12bbd541d7abcfa0679bf390e9478a8d01f1933ec29723e883c53"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e12e6e46d3fdf86b1ad7831b1abea455fad76cc036758912dab27cfbe9ce9eeb"
-    sha256 cellar: :any_skip_relocation, catalina:      "4d6c32e17bea48b6835cb6b1a091f39a55a047900d25b1e898573685b9209bf5"
-    sha256 cellar: :any_skip_relocation, mojave:        "694539f58ff6b4949adb90b697aa90bd9463a5c6062a61f8622f27006f02605e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "65a66cf10f66fd03e87115464f198593a4ff109bd8271ac0dd8827cc225bb24c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3ace0af560e8b91c4d6b4755c6701d13b7f4757a9e7d523f44ae0cba45e8bdb5"
+    sha256 cellar: :any_skip_relocation, catalina:      "4c074897b184addd2e0ae251c39901c4099fd92b194240c5d22c010226c0ce55"
+    sha256 cellar: :any_skip_relocation, mojave:        "49a84ba13ab75461bd8b116f42f3217dd554a425f343d17900ea60007cd4b29f"
   end
 
   def install
