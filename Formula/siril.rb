@@ -1,8 +1,8 @@
 class Siril < Formula
   desc "Astronomical image processing tool"
   homepage "https://www.siril.org"
-  url "https://free-astro.org/download/siril-0.99.8.1.tar.bz2"
-  sha256 "45b73ee8d1e1bd7ff184478f90da59c729ca1bd5285fb2f7ac0237c6b5cdbdb2"
+  url "https://free-astro.org/download/siril-0.99.10.1.tar.bz2"
+  sha256 "a0b3debc1efb313a84958fb1819b3a5d0a1395b096db54cce7e3e34a463a5c79"
   license "GPL-3.0-or-later"
   head "https://gitlab.com/free-astro/siril.git"
 
@@ -37,13 +37,6 @@ class Siril < Formula
   depends_on "netpbm"
   depends_on "opencv"
   depends_on "openjpeg"
-
-  # Fix build with glib 2.68.
-  # Remove with the next release.
-  patch do
-    url "https://gitlab.com/free-astro/siril/-/commit/d319fceca5b00f156e1c5e3512d3ac1f41beb16a.diff"
-    sha256 "dd3593a8158bf661382995859665546d9fbf8b29822ad100e6a06c44f57d6013"
-  end
 
   def install
     # siril uses pkg-config but it has wrong include paths for several
