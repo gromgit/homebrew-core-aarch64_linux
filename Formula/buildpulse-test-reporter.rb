@@ -6,6 +6,13 @@ class BuildpulseTestReporter < Formula
   license "MIT"
   head "https://github.com/buildpulse/test-reporter.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d99ea6ed02c4778603f873bf3022c9855fa94cb5f50c424359a86b3952a0707c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "58b20d5b344f9eb1f1f0ec9dc0f7bf3593f070097d575afb8e3e500a66053d60"
+    sha256 cellar: :any_skip_relocation, catalina:      "afc2be1dc54b07069ea86809ce6ac3f6b2a7f2f1c6d9b25edad1019180e762af"
+    sha256 cellar: :any_skip_relocation, mojave:        "b663883aabeccfc1f035fbcbe8eb437d97e8c75dd798aa1293155ef9eecf4998"
+  end
+
   depends_on "go" => :build
 
   def install
