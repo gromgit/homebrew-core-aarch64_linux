@@ -7,10 +7,10 @@ class Mg < Formula
   version_scheme 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5f981515a969a53ba0a0dfa6eb180d73a0e094d8dca0490edf0a7785ab49a2a8"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d953ff7efb6a4fffedc3021dc85397ada7062a5af02a27ccd6480235c808d9f5"
-    sha256 cellar: :any_skip_relocation, catalina:      "3dba473bffce8dbbd93c3b73e989348873317705b768cd9e920c8d4365caa5e6"
-    sha256 cellar: :any_skip_relocation, mojave:        "c81adc2432c2e5f07faac951fe0f07407d0abc24234e6302acd55ac7e99bb501"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c795e184150e4e26b69ee7f9a862ff93ed3b7db6cda9dbc46c6671d65ae51ef0"
+    sha256 cellar: :any_skip_relocation, big_sur:       "de2654a08096b3d8dd824c2204b85a32986ff035e2132e28706c9cf9a3b207e0"
+    sha256 cellar: :any_skip_relocation, catalina:      "e620ee1c1ec65e5713c8c477fac02f6f52fa4f1c0ab85261034c45a602a41d32"
+    sha256 cellar: :any_skip_relocation, mojave:        "13c778ce17746ad6531448eb48c23b8d882d7a203dcf9dda04d3fd61d0b0a28d"
   end
 
   def install
