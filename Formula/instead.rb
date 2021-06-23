@@ -6,10 +6,10 @@ class Instead < Formula
   license "MIT"
 
   bottle do
-    sha256 arm64_big_sur: "dd4cd0a7efdc8cc8fe7ea6c7bc85b357624167eb2f292d8fc870102253367d8f"
-    sha256 big_sur:       "c027c9549578e0fbfb7258bfcfd516a4e56ed5386062151f538d2d19265a6527"
-    sha256 catalina:      "6b7ab908bf9fb25b0f1196f367bef74d79d8580f032d063abd1235c66fd9fce8"
-    sha256 mojave:        "028d118f6b7d3d918092c413630e4d782015ff11b7a69c63115e3ed832d8b0e2"
+    sha256 arm64_big_sur: "e6e268294d2e4b933f453d1aeb5ad801d59ab8ef8144ec399e8a6102e39708ec"
+    sha256 big_sur:       "ffa9dcb750b0f27eef50b6355576611b5f277703b5ff00e14b19902efc41198e"
+    sha256 catalina:      "52a08ffd79ed516f100689cf22dcbb2dc6aac7226a0aa2799db5d71796e66402"
+    sha256 mojave:        "3fe9ec0aff8e487fdb3685c6e00793b8922b5fb80ad62e7a4b48ae4d8b4cf51f"
   end
 
   depends_on "cmake" => :build
