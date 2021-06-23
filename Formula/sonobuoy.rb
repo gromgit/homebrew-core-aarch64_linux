@@ -6,10 +6,10 @@ class Sonobuoy < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "17675e5924fc9de1e33762c5c8297756a28f07e232bf503df838f793ba4c1c22"
-    sha256 cellar: :any_skip_relocation, big_sur:       "4706ac565a6cb2a298bc283e1f34dcbf59be5077b1df2ff1f669cbae88291591"
-    sha256 cellar: :any_skip_relocation, catalina:      "27862e0a090a4a4cf6749b75c02c0c32cd41b34a524d6be3e2fdfb25c06586c1"
-    sha256 cellar: :any_skip_relocation, mojave:        "e63854a03a4817c6cc49966bd115f6fa0ac4989d2a309df052eda43891404eb8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "738955bb8364fefd0acc8ede9b947c8b3fb0cd5d3cffe7632a3d1df45027261b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5379ec22891dc0b59fad157930cdf06cd25373df7cc21b32aa5afc455a7b6d5d"
+    sha256 cellar: :any_skip_relocation, catalina:      "c63b03ff49f4da13f1fcf7fcfc27c915ea102fd613446be05aa886723d5b0d7d"
+    sha256 cellar: :any_skip_relocation, mojave:        "524b636a5c49187945d811d7b97f162205251b65aeac173618d57e70c30e4145"
   end
 
   depends_on "go" => :build
