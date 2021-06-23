@@ -14,11 +14,10 @@ class Sslmate < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "98c1d69f485322c03fb5edab0ecdba7a358386093cd4656985fc95ac5c956540"
-    sha256 cellar: :any_skip_relocation, big_sur:       "61d7abbfa341a9d07f7c8b3f078d24f3b951e9d0093b57e662ef92c5d30767ae"
-    sha256 cellar: :any_skip_relocation, catalina:      "91ed7cfa14d48f01dae1c4d5d672ee43a0b3e769b938a1a6d53d8e2ba31df379"
-    sha256 cellar: :any_skip_relocation, mojave:        "39507ab1185187781a82869d1604f24f75cee165c64671ce7d003fac75e343db"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "5833c9efa844a9ba89f435581700186842dd484aed4a3f9e62bb92199e1ae906"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "663bd104378e805e195f861d33e509b1110ca6f3719b30050cf98121256594bf"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7835b2f312003a5520eaa288d00cb2ca73384f4e38a0bae60adb5800f8a869cb"
+    sha256 cellar: :any_skip_relocation, catalina:      "7835b2f312003a5520eaa288d00cb2ca73384f4e38a0bae60adb5800f8a869cb"
+    sha256 cellar: :any_skip_relocation, mojave:        "7835b2f312003a5520eaa288d00cb2ca73384f4e38a0bae60adb5800f8a869cb"
   end
 
   depends_on "python@3.9"
