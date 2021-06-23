@@ -14,10 +14,10 @@ class Snapcraft < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "a33965ce047935f104c84a20dfc1eb4bac83bc0fc532bff8d2136a63623762c5"
-    sha256 cellar: :any, big_sur:       "b2554e6aeff33459eaf27bd837511dad1c8143c25902bf7a4b3ce99f23378104"
-    sha256 cellar: :any, catalina:      "b18c980b95b8f548133b554e0f16911297674dad37a62c0aecec2ea6624173d2"
-    sha256 cellar: :any, mojave:        "05165a0f326f67d07e6ea23f8b45267604342c6be1eda2cf37a7c186a01b3e29"
+    sha256 cellar: :any, arm64_big_sur: "24f002cb2c9c39a0898d72dacae4b3c64a98268c41a10448eaa0446ab45f28d4"
+    sha256 cellar: :any, big_sur:       "f00e73d4d5d28d70dbdc0972f5427f7d2dbb76d37109207bd685aa17de90b611"
+    sha256 cellar: :any, catalina:      "427eb46a6b43f7da4e45e726c958ea6ad937e845928b10c5ac347685f6a36421"
+    sha256 cellar: :any, mojave:        "1f711efb1de28dcf981f2cb787825614346c2a8e53db3b35a9984a22b28a49d7"
   end
 
   depends_on "rust" => :build
