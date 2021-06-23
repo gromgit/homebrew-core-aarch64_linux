@@ -7,9 +7,10 @@ class DroneCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "5eb1960f5073fe2dbe0cebb658c9b31b905d9b77f9dea41a1e65cb01331875e9"
-    sha256 cellar: :any_skip_relocation, catalina: "b0f855c942279e6f28de3fd52611f6e88f5d9a7feb008f49d1f66a00752f2b25"
-    sha256 cellar: :any_skip_relocation, mojave:   "1d6f199fd82f2da5bef17f40640011b69c3c1ba67816c2db6f5bbcbb1da52ba0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d78b6434793f9d71b197330f7bd1e021d9a6c348700d2d518daa8a348288ab6e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ce7174f76b2f79ea085e3297ef10f01ae13d057c84133079da16e72ec91563c3"
+    sha256 cellar: :any_skip_relocation, catalina:      "a3bb9a627f909962bc99c5248b9b211edeb848bb758f1adbdf8b65716f6f6dba"
+    sha256 cellar: :any_skip_relocation, mojave:        "0a5e2ff711da8547c2466675fe42104015b6032702db19ae4d0688646b72dec0"
   end
 
   depends_on "go" => :build
