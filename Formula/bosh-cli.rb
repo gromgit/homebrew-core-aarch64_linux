@@ -6,6 +6,13 @@ class BoshCli < Formula
   license "Apache-2.0"
   head "https://github.com/cloudfoundry/bosh-cli.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "750abacbf96ac11668086f5ed9c53ac4fa83ffea19c1b95d46753ad10b94dc71"
+    sha256 cellar: :any_skip_relocation, big_sur:       "fc0dfe5f6e06be0f3a76f9648e9c43a2d5e1de5ec51ea7ed0691359b8b2c33c9"
+    sha256 cellar: :any_skip_relocation, catalina:      "91f00e9bd5e20330c8be9cc13a2a62e2cc205645d2d5e08dea91dd800c76eba2"
+    sha256 cellar: :any_skip_relocation, mojave:        "5176e503a56dc61fd3e3458e10ef7a7fff24698adea343ad48d5a889b7c3e419"
+  end
+
   depends_on "go" => :build
 
   def install
