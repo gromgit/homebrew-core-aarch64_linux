@@ -1,8 +1,8 @@
 class Idris2 < Formula
   desc "Pure functional programming language with dependent types"
   homepage "https://www.idris-lang.org/"
-  url "https://github.com/idris-lang/Idris2/archive/v0.3.0.tar.gz"
-  sha256 "2b1a921c3b46eec629936579a93319b2adb1c66a61302cd5f0b53017a07b1b74"
+  url "https://github.com/idris-lang/Idris2/archive/v0.4.0.tar.gz"
+  sha256 "e06fb4f59838ca9da286ae3aecfeeeacb8e85afeb2e2136b4b751e06325f95fe"
   license "BSD-3-Clause"
   head "https://github.com/idris-lang/Idris2.git"
 
@@ -13,8 +13,10 @@ class Idris2 < Formula
     sha256 cellar: :any, mojave:   "665843c6266b26615af0b5792684f53b217116c83aff310ff36f538e837f070f"
   end
 
+  depends_on "gmp" => :build
   depends_on "chezscheme"
   depends_on "coreutils"
+  uses_from_macos "zsh" => :build, since: :mojave
 
   def install
     ENV.deparallelize
@@ -30,11 +32,13 @@ class Idris2 < Formula
     (testpath/"hello.idr").write <<~EOS
       module Main
       main : IO ()
-      main = putStrLn "Hello, Homebrew!"
+      main =
+        let myBigNumber = (the Integer 18446744073709551615 + 1) in
+        putStrLn $ "Hello, Homebrew! This is a big number: " ++ ( show $ myBigNumber )
     EOS
 
     system bin/"idris2", "hello.idr", "-o", "hello"
-    assert_equal "Hello, Homebrew!",
+    assert_equal "Hello, Homebrew! This is a big number: 18446744073709551616",
                  shell_output("./build/exec/hello_app/hello.so").chomp
   end
 end
