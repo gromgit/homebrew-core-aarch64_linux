@@ -12,10 +12,10 @@ class FlowCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "64f2cbf5b9acacd891263c1e342576e7112ca64f70abd314223b46e864fdee82"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e09258cfe9c579df196c5efc66c2010bf6d579d794a00a30281818d730b8138a"
-    sha256 cellar: :any_skip_relocation, catalina:      "0443c5fa6ef93d583b4ed6a7e45ea27088c0d02833c2dd0b9d5b04ac2441096f"
-    sha256 cellar: :any_skip_relocation, mojave:        "6df1475aac8f4f587acf5029d6beec7f654eb55bc54e147830819b57e1e8bd57"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7b40c87874b36f64415aee36f1fd92c7e9918a25667938a4df650aa5cb3b3bea"
+    sha256 cellar: :any_skip_relocation, big_sur:       "97695dd1afa2de4a2584329866f2eff5a8b6c74cf1506e8d82ab7feaeb1c041c"
+    sha256 cellar: :any_skip_relocation, catalina:      "721241cb81c98e618b4b9befc4651174472335251a57b12bff76b8af7c687658"
+    sha256 cellar: :any_skip_relocation, mojave:        "32485788410a15f90b7361312b127606a14981d303fc969c9c0f62a836986eee"
   end
 
   depends_on "go" => :build
