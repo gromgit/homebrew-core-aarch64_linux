@@ -3,8 +3,8 @@ class HaruhiDl < Formula
 
   desc "Fork of youtube-dl, focused on bringing a fast, steady stream of updates"
   homepage "https://haruhi.download"
-  url "https://files.pythonhosted.org/packages/50/b6/4834af1bac4d81802a8407d918b8d70df41c49f01aa0721104fcf5652c9e/haruhi_dl-2021.6.20.tar.gz"
-  sha256 "c35e10f8c1c691520a4df4b74a45c8d5beca3f83c121277bc0eef132475770a6"
+  url "https://files.pythonhosted.org/packages/e8/67/09bb10e1892c5d8183107981711e9f2db87db33e376e253f3a7340ea3246/haruhi_dl-2021.6.24.tar.gz"
+  sha256 "906ec9b8046183cfe097c086c91c91969fd883dbc482ccd5ed8ab67118bede00"
   license "LGPL-3.0-or-later"
 
   bottle do
