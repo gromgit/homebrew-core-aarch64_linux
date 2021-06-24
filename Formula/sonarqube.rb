@@ -10,6 +10,13 @@ class Sonarqube < Formula
     regex(/href=.*?sonarqube[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3dcee2d9de05efa6019ea3b84e2b5625f9408663b91fa23b6a4aab10abee52f4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e7a9bee29eccc49d0743752a9aa98193de3f299e0f1d5f7727de020664957df0"
+    sha256 cellar: :any_skip_relocation, catalina:      "e7a9bee29eccc49d0743752a9aa98193de3f299e0f1d5f7727de020664957df0"
+    sha256 cellar: :any_skip_relocation, mojave:        "4c49c9acea99203b6595d05b3125b99fdc4e63e473d1ee5b21b0494c70a84890"
+  end
+
   depends_on "openjdk@11"
 
   conflicts_with "sonarqube-lts", because: "both install the same binaries"
