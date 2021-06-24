@@ -8,10 +8,10 @@ class Newman < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "32b48aec1fb46467349b12f7330b2be84c626442fc84c51422026bb013b630cf"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e2b0ff57bf37306d4b826dfaeb0492f21ff967602ce613590a6fa50996dda84a"
-    sha256 cellar: :any_skip_relocation, catalina:      "e2b0ff57bf37306d4b826dfaeb0492f21ff967602ce613590a6fa50996dda84a"
-    sha256 cellar: :any_skip_relocation, mojave:        "e2b0ff57bf37306d4b826dfaeb0492f21ff967602ce613590a6fa50996dda84a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "21130a928c057859222d1902adfa6429daa2e34a596505bbbd304284257f6d54"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ed2748b227245376f268f0d0b560fefe96b560e284acf5976068e900abfddcb6"
+    sha256 cellar: :any_skip_relocation, catalina:      "ed2748b227245376f268f0d0b560fefe96b560e284acf5976068e900abfddcb6"
+    sha256 cellar: :any_skip_relocation, mojave:        "ed2748b227245376f268f0d0b560fefe96b560e284acf5976068e900abfddcb6"
   end
 
   depends_on "node"
