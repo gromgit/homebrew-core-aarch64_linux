@@ -8,10 +8,11 @@ class SphinxDoc < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "70faf2c90cc4c183a7838a208ac4e71bdf0e3985c832da751834b811b22aca02"
-    sha256 cellar: :any_skip_relocation, big_sur:       "df254b910ef155cbf68f614a903a7601c583b108252dd2d3a21d304577ceec42"
-    sha256 cellar: :any_skip_relocation, catalina:      "ecdf8c749944856efd460851f87beddf74961a123aa4cab3fb8268bf5d0fd45f"
-    sha256 cellar: :any_skip_relocation, mojave:        "4dfea79f48ca925d52a5f5846236d4ac19d2a09b0bc4e112d19b27079b3b1e7e"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0a32ebed931f785bce12623ec4b1bed4d46db784b9c660b92b5cc6cc93bba467"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c67429e4346655620ba705246577a10c03d6c1cd3bfd0c478571e2c9d1171272"
+    sha256 cellar: :any_skip_relocation, catalina:      "b1b76f43316d51f9a1379b2dc61f9bac0e2d694fa390c44557acbee61b521190"
+    sha256 cellar: :any_skip_relocation, mojave:        "3b7ee7057af1727786eb096ee727e021c5a1cbb7f344124638453733d3662117"
   end
 
   keg_only <<~EOS
