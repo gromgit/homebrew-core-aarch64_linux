@@ -10,6 +10,13 @@ class WxmacAT30 < Formula
     regex(/^v?(\d+\.\d*[02468](?:\.\d+)*)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "781881c92fcaadcfea66e7d33a36ae1d9b55d26839738f44248f39d187f46a3c"
+    sha256 cellar: :any, big_sur:       "42385ebead8045f2f4b1ac40f13f15c18b84b78ffa7110d69ebf8a798cd29dc0"
+    sha256 cellar: :any, catalina:      "d3d18b83d84b79735bda4497ebd92f763ed7cf4200c8ce8d651070ccd1b2719d"
+    sha256 cellar: :any, mojave:        "319f6ca3509265ace16fae3aaab777ae932130b741ba51d99702c0391da7833f"
+  end
+
   depends_on "jpeg"
   depends_on "libpng"
   depends_on "libtiff"
