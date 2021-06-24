@@ -8,10 +8,10 @@ class Jello < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a9405c6a0354e8007cf25dd40b460f91fe477f20e80e7a24270d044e3ff6b1a7"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8c342af99e9ad5e4ede36050bad7d8fc63a3a24bc4776e12f1fb41d7ad634a5f"
-    sha256 cellar: :any_skip_relocation, catalina:      "8c342af99e9ad5e4ede36050bad7d8fc63a3a24bc4776e12f1fb41d7ad634a5f"
-    sha256 cellar: :any_skip_relocation, mojave:        "8c342af99e9ad5e4ede36050bad7d8fc63a3a24bc4776e12f1fb41d7ad634a5f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d3c1e5243cc3b8ea7b6c627fd43c139bb2a5a39e25c3c4dc271cae40ee766f04"
+    sha256 cellar: :any_skip_relocation, big_sur:       "45601eaf044c94f9a2a8998bd6171d0a02368aff686f28f86ecbf73442a868dd"
+    sha256 cellar: :any_skip_relocation, catalina:      "45601eaf044c94f9a2a8998bd6171d0a02368aff686f28f86ecbf73442a868dd"
+    sha256 cellar: :any_skip_relocation, mojave:        "45601eaf044c94f9a2a8998bd6171d0a02368aff686f28f86ecbf73442a868dd"
   end
 
   depends_on "python@3.9"
