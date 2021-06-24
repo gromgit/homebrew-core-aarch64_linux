@@ -6,9 +6,10 @@ class Tcpreplay < Formula
   license all_of: ["BSD-2-Clause", "BSD-3-Clause", "BSD-4-Clause", "GPL-3.0-or-later", "ISC"]
 
   bottle do
-    sha256 cellar: :any, big_sur:  "c089911edcc55dc9126528b5843358a7b748bb4d0ef155812f84b097c5a6df08"
-    sha256 cellar: :any, catalina: "ffe406994fdd18db4219b9a96908cd49c76dda59b7b6d6a0e7e27acc04d5f046"
-    sha256 cellar: :any, mojave:   "f55a4af6cbc64fcf75fd5967ae13f9babd24472c4f1ce659beeaa8754a317fda"
+    rebuild 1
+    sha256 cellar: :any, big_sur:  "55ffb5347204c187b5151181efef39586b052340e8dc40635809fc8eb36ed0e6"
+    sha256 cellar: :any, catalina: "2268f0760672a512de278ea4c686b976e75589bb374663c1b9ecbf49ada784ca"
+    sha256 cellar: :any, mojave:   "7724d4f1f79cd07a77b430e63e541486d8f666785215dfd898ba54ff2aa35186"
   end
 
   depends_on "autoconf" => :build
