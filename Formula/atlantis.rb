@@ -7,10 +7,10 @@ class Atlantis < Formula
   head "https://github.com/runatlantis/atlantis.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "08bc8856ba37553d5c57785991a2b25671d617e8abfa43f23505453409bd987f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ebf1cffe6c5210965706e51752a819935659b8dd558d0e6658c5f990ff68deeb"
-    sha256 cellar: :any_skip_relocation, catalina:      "e2f76c522af443d89b42acde39ecda5f1fe5c337ec313f7860971a89cc0b4853"
-    sha256 cellar: :any_skip_relocation, mojave:        "0535a413cfd9b36fd3a9fa1fdddebb75589f6d18fdc7f8b55c09f663db4b77b3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "34592b2c07eea9c65c835d5136f740e34b8cbcf8ca6866ea52460d0f7421274e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "acdb2f74b2514924567ba6987b3699f98a9ff0a51d9437c10bb7c104bdd074c2"
+    sha256 cellar: :any_skip_relocation, catalina:      "72415d2f9a2c21f285d491bdfa7cb62175c78fdf3d7539182062d73640d391b1"
+    sha256 cellar: :any_skip_relocation, mojave:        "fa399e5ef91bcc8ee236e70977153d457f26eaf816069fa36eda8e3e13e55f68"
   end
 
   depends_on "go" => :build
