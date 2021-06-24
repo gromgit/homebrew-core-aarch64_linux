@@ -7,10 +7,10 @@ class Yaegi < Formula
   head "https://github.com/containous/yaegi.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4737aa16b1b43cf11fd3bfaea436e398c079d1e7d226070acab5badfb952fb67"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d07e091f6496ede6c1cb2dff42ae55e82a856218d16c7cdba311c3da9e959f7c"
-    sha256 cellar: :any_skip_relocation, catalina:      "8bf87d8fb7b91104f3f35c15e42bc9d02d73ab600ceb1f1cb21e4d5eb4b624e3"
-    sha256 cellar: :any_skip_relocation, mojave:        "853ba8ae9497dd1ddeb839d9c3d71042fbea4b7ef9cda551672fcc397fb057cf"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6c7f987465c1d526182e791aee574e968304fed724af2317602ac1be24517911"
+    sha256 cellar: :any_skip_relocation, big_sur:       "bc2df034ac820460dd80129a5602953ea17c1cdf3e16f1900cdffc3bd73cff3a"
+    sha256 cellar: :any_skip_relocation, catalina:      "5c57000bc6385e53b22456f85d0ee56580ead57498101dea276c2d686f97b7f8"
+    sha256 cellar: :any_skip_relocation, mojave:        "8eabf6538bccf4350bdf5b2e609e9cb83dd5f951490f92f91c445f2a4a971a78"
   end
 
   depends_on "go" => :build
