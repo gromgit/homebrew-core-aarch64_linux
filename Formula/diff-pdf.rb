@@ -7,10 +7,10 @@ class DiffPdf < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "3abff1045972a9a20e5c151ffbb7a0bb9793b39374485987ffd00f8c0c8e9ebd"
-    sha256 cellar: :any, big_sur:       "09483c6a3648a715a8e1fda4d3c89658b59835af35ee075a767b919c94ff19ef"
-    sha256 cellar: :any, catalina:      "3b5b2064c54199351340d4a41a54cadc075daa683065c57eaaf98bdee4af3eca"
-    sha256 cellar: :any, mojave:        "807edca0450757b34c5524fd83b307ab55481095f09d7674c5e9f623596702f0"
+    sha256 cellar: :any, arm64_big_sur: "1a8643c9b3c96ce72d46ba82acb0fa764dc930fced4b3172a42d3578019f775d"
+    sha256 cellar: :any, big_sur:       "392a18bee5ad1cac37e7ab20fa1c012cc29833d9f8809706fde26d398208c5a7"
+    sha256 cellar: :any, catalina:      "a9a6fd8505c8eae372b8ea9bec2a69c97daaa966cd82e7e27fdcbbe27d2f82be"
+    sha256 cellar: :any, mojave:        "bf124415504f5f60524b85f5ae8e1c13095afdad0bd483493c6f2af6f3c9470e"
   end
 
   depends_on "autoconf" => :build
