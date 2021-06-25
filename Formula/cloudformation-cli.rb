@@ -8,10 +8,10 @@ class CloudformationCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7eaa68ce607b53279993f0dc5e040547645115ac4688f3f24726d7050095987d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ccc40327beb9fbc5a79be28ef30de117afb963bb37e61e1b80060653be1f7908"
-    sha256 cellar: :any_skip_relocation, catalina:      "8298336f0aebd0985c46d54f6f01814159b165358188ba8513eaec0eb5ec8612"
-    sha256 cellar: :any_skip_relocation, mojave:        "30f966c0f837f5190187cb3d10bc3d46c2b6a18e60fe0ac9f317fa86a7276af1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a258bae4946fb0ac7d49dacffc07029b1ddb5e64c2eff4248842dc891a7e6c04"
+    sha256 cellar: :any_skip_relocation, big_sur:       "bc806b4d0df0be93ea7e5ead44ae03d2574a825e18318c1a2c06268846242305"
+    sha256 cellar: :any_skip_relocation, catalina:      "16f357ffb8550315c153fb14a1c4c343728844e673222e95ce790033d8275664"
+    sha256 cellar: :any_skip_relocation, mojave:        "cff2691e7b67bea582a6ae86941578158a88e10ccb56e45c230c93207ae6d333"
   end
 
   depends_on "go" => :test
