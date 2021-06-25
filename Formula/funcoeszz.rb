@@ -10,6 +10,10 @@ class Funcoeszz < Formula
     regex(/href=.*?funcoeszz[._-]v?(\d+(?:\.\d+)+)\.sh/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "f2c2872df39cc30fc4cf4c277a2b37d299d27eb038d079584e4774cf146476ee"
+  end
+
   depends_on "bash"
 
   def install
