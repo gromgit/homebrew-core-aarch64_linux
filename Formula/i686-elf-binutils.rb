@@ -8,10 +8,10 @@ class I686ElfBinutils < Formula
   revision 1
 
   bottle do
-    sha256 arm64_big_sur: "1250e2e488a22f422b981a5b38602b1269568020c167c491894a7d984a3fbea8"
-    sha256 big_sur:       "3531f2d1d0ca60c8f6adc3b01f1eefb06013772753a5d897d25ff519e6e3a46f"
-    sha256 catalina:      "70089cd3999c348b635336714145c516ae12d11d6ff8cfb600143f6828fe0f97"
-    sha256 mojave:        "158c9edec23673109178a80eb05faa007e7230e94ee489e4d427211c11263e96"
+    sha256 arm64_big_sur: "668698ca23b0707a9faa869d3d20160ce402fde86b7d38e9dd762b73da95f656"
+    sha256 big_sur:       "b4b69b92b71ff9fa78a45e1f5c6082f68b427a40d6fd1e6a03d3e6fcad8106ba"
+    sha256 catalina:      "806493e1e1060fc49682d2414d59d866c2850233ee19edc31354e30627deb2b6"
+    sha256 mojave:        "55bc73ee9368c4cea0af5ed9262facc48745425c8c04d06bf579a083d512f978"
   end
 
   def install
