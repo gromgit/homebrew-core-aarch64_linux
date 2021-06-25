@@ -7,13 +7,10 @@ class Bamtools < Formula
   head "https://github.com/pezmaster31/bamtools.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9d1822ce76a951623ebae2d1c9019dd302272de8a5183903ebd2d70f720b16b4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "215573370903476d0d16d63153e5fb57ee94274e57277d43672babb60508f244"
-    sha256 cellar: :any_skip_relocation, catalina:      "e06e5350260683c40d522ea80415d67bad57be49c30e5b534256aeac0bc5e3d8"
-    sha256 cellar: :any_skip_relocation, mojave:        "5c1195094d84ce0e5ec63660597029dad111639e7212537c1d083444714ac294"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "cd3886cfb77b71ef9924d5475e4dbae2d42c4c66ef3880de33ca202855ce92b0"
-    sha256 cellar: :any_skip_relocation, sierra:        "5e72d5b1b5b18551bbd91c7f3b7a2dd6e763b13add38b9a3a798bb5a450be64e"
-    sha256 cellar: :any_skip_relocation, el_capitan:    "920e533776328d79f47bb562af5cfa00d855223818916e00614ee81d821f211c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "cad31e2a176762fdaa4aa0b311509b30a339395b6da469f005c667b75ce99296"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5c213c66de8e7ed7a13b07b41b6ed3b71509a28121cf942c3b76cd735efa6c3d"
+    sha256 cellar: :any_skip_relocation, catalina:      "e978a4b284e0905486557a2a3ccc224303900d38970e4c0a9b6ee6886c9fd743"
+    sha256 cellar: :any_skip_relocation, mojave:        "4459a3ddde44539d67dec67bd40f3f7f38f98fbaa883db7b786aad410bd9cff4"
   end
 
   depends_on "cmake" => :build
