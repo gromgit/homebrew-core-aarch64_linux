@@ -10,6 +10,10 @@ class Fastqc < Formula
     regex(/href=.*?fastqc[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "ae41c7f995b1200ba6dddc708af5b5ced03a817515b7d2fb2a6ec6104ed7c94b"
+  end
+
   depends_on "openjdk"
 
   def install
