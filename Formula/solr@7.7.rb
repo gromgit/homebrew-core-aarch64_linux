@@ -15,6 +15,10 @@ class SolrAT77 < Formula
     regex(/href=.*?solr[._-]v?(7(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "44a7fe1bbc1463445524b02f34752f20536b943012c4f0bb10ce1cde9680f792"
+  end
+
   keg_only :versioned_formula
 
   depends_on "openjdk@11"
