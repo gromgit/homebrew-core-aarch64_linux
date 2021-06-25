@@ -11,10 +11,10 @@ class Gpgme < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "cb5bc3ae542bb57f6eb2ba0ec5e2980f34d43cfbaa1349a77c50b0caba2d2b69"
-    sha256 cellar: :any, big_sur:       "b7db3dbcd653200ed5f08789582d27f5ada1d70373fc0deaa908167869415362"
-    sha256 cellar: :any, catalina:      "d2f6e379b0c47d4b62275a588a69bd08fb1c79e153b348c96280f3162548a1e4"
-    sha256 cellar: :any, mojave:        "4a783a98f9f37a905e5864a628fcbb955ee9f3fa5ddab7c95edad62abe38697f"
+    sha256 cellar: :any, arm64_big_sur: "a6408468cf32338ff783f685eea507a779b63f21aa1074e8be250088832de2fb"
+    sha256 cellar: :any, big_sur:       "93ef1638eedcb613c2d4992917c081409985aba3d20db3a3c5bbd9b02e008ee3"
+    sha256 cellar: :any, catalina:      "4d51fe3ce646233005f33c6f53fd50e2111dfa21891b03d4cce9ce3845da2373"
+    sha256 cellar: :any, mojave:        "5f69a086be935cd7f1994bc709a1510e5c3182865240bf32c9ef1d7ea8cd82dd"
   end
 
   depends_on "python@3.9" => [:build, :test]
