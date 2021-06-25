@@ -77,7 +77,7 @@ jobs:
             --name ${{github.sha}} \
             --env-file <(env | egrep 'HOMEBREW|GITHUB') \
             --workdir /tmp/bottles \
-            ${{github.event.inputs.wheezy ?  'homebrew/debian7:latest' : 'ghcr.io/homebrew/ubuntu16.04:master'}} \
+            ${{github.event.inputs.wheezy && 'homebrew/debian7:latest' || 'ghcr.io/homebrew/ubuntu16.04:master'}} \
             sleep inf
           # Fix working directory permissions
           docker exec --user root ${{github.sha}} chmod 777 /tmp/bottles
