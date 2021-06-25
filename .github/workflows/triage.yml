@@ -118,7 +118,7 @@ jobs:
                       "path": "Formula/.+",
                       "content": "system \"swift\", \"build\""
                   }, {
-                      "label": "automerge-skip",
+                      "label": "CI-linux-wheezy",
                       "path": "Formula/(patchelf|binutils).rb",
                       "keep_if_no_match": true
                   }, {

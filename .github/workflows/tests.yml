@@ -42,6 +42,7 @@ jobs:
     needs: tap_syntax
     outputs:
       runners: ${{ steps.check-labels.outputs.runners }}
+      container: ${{ steps.check-labels.outputs.container }}
       syntax-only: ${{ steps.check-labels.outputs.syntax-only }}
       force-arm: ${{ steps.check-labels.outputs.force-arm }}
       force-linux: ${{ steps.check-labels.outputs.force-linux }}
@@ -101,6 +102,14 @@ jobs:
               core.setOutput('test-bot-skip-recursive-dependents', '')
             }
 
+            if (label_names.includes('CI-linux-wheezy')) {
+              console.log('CI-linux-wheezy label found. Running Linux wheezy builds.')
+              core.setOutput('container', 'homebrew/debian7:latest')
+            } else {
+              console.log('No CI-linux-wheezy label found. Not requiring Linux wheezy builds.')
+              core.setOutput('container', 'ghcr.io/homebrew/ubuntu16.04:master')
+            }
+
             /* RUNNERS */
 
             const runners = ["11-arm64", "11", "10.15", "10.14"]
@@ -131,19 +140,17 @@ jobs:
           if [ "$RUNNER_OS" = 'macOS' ]; then
             echo 'PATH=/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin' >> $GITHUB_ENV
             echo 'GITHUB_ACTIONS_HOMEBREW_MACOS_SELF_HOSTED=1' >> $GITHUB_ENV
+            if [ '${{needs.pre_tests.outputs.force-arm}}' = 'false' ]; then
+              echo 'HOMEBREW_SKIP_UNBOTTLED_ARM_TESTS=1' >> $GITHUB_ENV
+            fi
           else
             # No PATH needed on Linux as set by Docker
             echo 'HOMEBREW_CORE_GIT_REMOTE=${{github.event.repository.html_url}}' >> $GITHUB_ENV
             echo 'HOMEBREW_FORCE_HOMEBREW_ON_LINUX=1' >> $GITHUB_ENV
+            if [ '${{needs.pre_tests.outputs.force-linux}}' = 'false' ]; then
+              echo 'HOMEBREW_SKIP_UNBOTTLED_LINUX_TESTS=1' >> $GITHUB_ENV
+            fi
           fi
-
-      - name: Check whether ARM tests will be forced
-        if: runner.os == 'macOS' && needs.pre_tests.outputs.force-arm == 'false'
-        run: echo 'HOMEBREW_SKIP_UNBOTTLED_ARM_TESTS=1' >> $GITHUB_ENV
-
-      - name: Check whether Linux tests will be forced
-        if: runner.os == 'Linux' && needs.pre_tests.outputs.force-linux == 'false'
-        run: echo 'HOMEBREW_SKIP_UNBOTTLED_LINUX_TESTS=1' >> $GITHUB_ENV
 
       - name: Set up Homebrew
         id: set-up-homebrew
@@ -164,23 +171,23 @@ jobs:
           docker run \
             --detach \
             --user linuxbrew \
-            --name linuxbrew \
+            --name ${{github.sha}} \
             --env-file <(env | egrep 'HOMEBREW|GITHUB') \
             --workdir /tmp/bottles \
-            ghcr.io/homebrew/ubuntu16.04:master \
+            ${{needs.pre_tests.outputs.container}} \
             sleep inf
           # Fix working directory permissions
-          docker exec --user root linuxbrew chmod 777 /tmp/bottles
+          docker exec --user root ${{github.sha}} chmod 777 /tmp/bottles
 
       - name: Set up Homebrew in container
         if: runner.os == 'Linux'
         env:
           TAP_PATH: /home/linuxbrew/.linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-core
         run: |
-          docker exec --workdir "$TAP_PATH" linuxbrew git remote set-url origin ${{github.event.repository.html_url}}
-          docker exec --workdir "$TAP_PATH" linuxbrew git fetch origin ${{github.sha}} '+refs/heads/*:refs/remotes/origin/*'
-          docker exec --workdir "$TAP_PATH" linuxbrew git remote set-head origin --auto
-          docker exec --workdir "$TAP_PATH" linuxbrew git checkout --force -B master FETCH_HEAD
+          docker exec --workdir "$TAP_PATH" ${{github.sha}} git remote set-url origin ${{github.event.repository.html_url}}
+          docker exec --workdir "$TAP_PATH" ${{github.sha}} git fetch origin ${{github.sha}} '+refs/heads/*:refs/remotes/origin/*'
+          docker exec --workdir "$TAP_PATH" ${{github.sha}} git remote set-head origin --auto
+          docker exec --workdir "$TAP_PATH" ${{github.sha}} git checkout --force -B master FETCH_HEAD
 
       - name: Run brew test-bot --only-json-tab --only-formulae ${{ needs.tap_syntax.outputs.test-bot-fail-fast }} ${{ needs.tap_syntax.outputs.test-bot-skip-recursive-dependents }}
         run: |
@@ -189,12 +196,12 @@ jobs:
             cd bottles
             brew test-bot --only-json-tab --only-formulae ${{ needs.pre_tests.outputs.test-bot-fail-fast }} ${{ needs.pre_tests.outputs.test-bot-skip-recursive-dependents }}
           else
-            docker exec linuxbrew brew test-bot --only-json-tab --only-formulae ${{ needs.pre_tests.outputs.test-bot-fail-fast }} ${{ needs.pre_tests.outputs.test-bot-skip-recursive-dependents }}
+            docker exec ${{github.sha}} brew test-bot --only-json-tab --only-formulae ${{ needs.pre_tests.outputs.test-bot-fail-fast }} ${{ needs.pre_tests.outputs.test-bot-skip-recursive-dependents }}
           fi
 
       - name: Copy bottles from container
         if: always() && runner.os == 'Linux'
-        run: docker cp linuxbrew:/tmp/bottles .
+        run: docker cp ${{github.sha}}:/tmp/bottles .
 
       - name: Output brew test-bot --only-json-tab --only-formulae ${{ needs.pre_tests.outputs.test-bot-fail-fast }} ${{ needs.pre_tests.outputs.test-bot-skip-recursive-dependents }} failures
         if: always()
@@ -253,13 +260,12 @@ jobs:
           name: bottles
           path: bottles
 
-      - run: brew test-bot --only-cleanup-after
-        if: always() && runner.os == 'macOS'
-
-      - name: Post Cleanup
+      - name: Post cleanup
         if: always()
-        run: rm -rvf bottles
-
-      - name: Remove container
-        if: always() && runner.os == 'Linux'
-        run: docker rm -f linuxbrew
+        run: |
+          if [ "$RUNNER_OS" = 'Linux' ]; then
+            docker rm -f ${{github.sha}}
+          else
+            brew test-bot --only-cleanup-after
+          fi
+          rm -rvf bottles
