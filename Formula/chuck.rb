@@ -1,9 +1,9 @@
 class Chuck < Formula
   desc "Concurrent, on-the-fly audio programming language"
   homepage "https://chuck.cs.princeton.edu/"
-  url "https://chuck.cs.princeton.edu/release/files/chuck-1.4.0.1.tgz"
-  mirror "http://chuck.stanford.edu/release/files/chuck-1.4.0.1.tgz"
-  sha256 "11a20c34b385e132bf43d5ae6a562c652f631828cc6b1562a4c029bc9a850ed4"
+  url "https://chuck.cs.princeton.edu/release/files/chuck-1.4.1.0.tgz"
+  mirror "http://chuck.stanford.edu/release/files/chuck-1.4.1.0.tgz"
+  sha256 "74bf99ad515e3113c55b833152936fad02a3cf006a54105ff11777c473194928"
   license "GPL-2.0-or-later"
   head "https://github.com/ccrma/chuck.git"
 
@@ -21,12 +21,6 @@ class Chuck < Formula
   end
 
   depends_on xcode: :build
-
-  # Big Sur compile fix https://github.com/ccrma/chuck/pull/158
-  patch do
-    url "https://github.com/ccrma/chuck/commit/51f8dfa2a6d0cf2fc8f39760cae8a754ccdaaee5.patch?full_index=1"
-    sha256 "f3853d6d107fe7ccd235ef5e02eb396f58ce55bb9e7ac7bd4043146af9d08536"
-  end
 
   def install
     system "make", "-C", "src", "osx"
