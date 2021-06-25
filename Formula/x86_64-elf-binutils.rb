@@ -8,10 +8,10 @@ class X8664ElfBinutils < Formula
   revision 1
 
   bottle do
-    sha256 arm64_big_sur: "a5584ba07f4f488096061f8f11c5d2fad72b87f42526aae902ba24b2dded7e13"
-    sha256 big_sur:       "98a1c41b67cda5c8552edf16e826aada8f29409da4477301db7ce861c6e93295"
-    sha256 catalina:      "0911b52c58f70ea3fd24861c10f22b1f65a8f3ee08ec4c57f90a47cc19f529af"
-    sha256 mojave:        "0b82544bb76a74993fa3a663b6ced46dd48e3f5afb61df97653cf46581f5c317"
+    sha256 arm64_big_sur: "2fdad9be777477e25e48f0f445c1ce0a751f41d8f12f011bb0f03b196e5da38c"
+    sha256 big_sur:       "35bad9983b807b3dbbf640efad0e7e05651b3970cf03007b3e32213b8ee8332e"
+    sha256 catalina:      "9770ee8f2705cb05cb9364097af357810756c128ca9ced34abbde2a98fbd0136"
+    sha256 mojave:        "190ee3a8bc927c44be285a89df32bc889270a3169737d114ef97f2f1b4be9937"
   end
 
   uses_from_macos "texinfo"
