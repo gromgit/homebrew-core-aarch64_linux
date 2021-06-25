@@ -6,6 +6,13 @@ class Inxi < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/smxi/inxi.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8b73c5f42d790f29d92980369bae01bca56ce8b63ff77648f30d2ea3238c2bc2"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ae0178948f7f5f7ab4a70754e4f95cb7ed665c1fdffa94643ae9496bad625788"
+    sha256 cellar: :any_skip_relocation, catalina:      "ae0178948f7f5f7ab4a70754e4f95cb7ed665c1fdffa94643ae9496bad625788"
+    sha256 cellar: :any_skip_relocation, mojave:        "ae0178948f7f5f7ab4a70754e4f95cb7ed665c1fdffa94643ae9496bad625788"
+  end
+
   def install
     bin.install "inxi"
     man1.install "inxi.1"
