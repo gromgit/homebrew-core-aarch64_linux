@@ -7,6 +7,10 @@ class Fpp < Formula
   revision 2
   head "https://github.com/facebook/pathpicker.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "2a149cfef3d217abcd20e567872aa5930c47b959b1e9647ec7bb48c2041e5a07"
+  end
+
   depends_on "python@3.9"
 
   def install
