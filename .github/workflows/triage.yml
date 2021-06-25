@@ -24,7 +24,7 @@ jobs:
               [
                   {
                       "label": "workflows",
-                      "path": "\.github/workflows/.+"
+                      "path": ".github/workflows/.+"
                   }, {
                       "label": "new formula",
                       "status": "added",
