@@ -37,7 +37,8 @@ jobs:
       - run: brew test-bot --only-tap-syntax
 
   pre_tests:
-    if: github.event_name == 'pull_request' && github.repository == 'Homebrew/homebrew-core'
+    if: github.event_name == 'pull_request' && github.repository == 'Homebrew/homebrew-core' && needs.pre_tests.outputs.syntax-only == 'false'
+
     runs-on: ubuntu-latest
     needs: tap_syntax
     outputs:
