@@ -6,10 +6,10 @@ class Tctl < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "37924da5783ef2e2d98e2f3a4b9234b3d897f8c1953ef897bc4bcd8be79acf05"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8a7a41fc295e403dac9ffe4d1d64bf9acfc608141f357aefff02d6f17dcd5708"
-    sha256 cellar: :any_skip_relocation, catalina:      "b2e731ae35e8be8f7487e036d8f12dd00004945e93b251b578a9957092792d02"
-    sha256 cellar: :any_skip_relocation, mojave:        "e58aead6843469fa73e27cafd97f960cc0c546f031424c95063f7fb4532e7fb9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b3d4c6a85d7a556543fd9bf5014fe697140a9135770e490b0ada119cbaf3ec57"
+    sha256 cellar: :any_skip_relocation, big_sur:       "61c675934e3bce6e86fe3900b5d7c6b8f7bc7cd45b8cec31d537180ec8f7b5ef"
+    sha256 cellar: :any_skip_relocation, catalina:      "9c3a60dca46ff5dbe020a9b09daef15f20aa4bc6dc4509d814e7d38cb9087fd3"
+    sha256 cellar: :any_skip_relocation, mojave:        "c09a4f2d31bfb81fa432aa03859bf6a7e260bde8607c325fd0ab618b7b6557f9"
   end
 
   depends_on "go" => :build
