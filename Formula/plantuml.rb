@@ -11,6 +11,10 @@ class Plantuml < Formula
     regex(%r{url=.*?/plantuml[._-]v?(\d+(?:\.\d+)+)\.t}i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "122b87bb56a535de568427e34d28ea5ba8421d00b7fcd3c41eedfd4387c98431"
+  end
+
   depends_on "graphviz"
   depends_on "openjdk"
 
