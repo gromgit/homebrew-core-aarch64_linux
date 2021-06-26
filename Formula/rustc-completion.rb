@@ -15,6 +15,10 @@ class RustcCompletion < Formula
     end
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "c4f9d8b0d48e56ed56ccf9a3124dda1868afc003326defce3e9d6ededc7b4468"
+  end
+
   def install
     bash_completion.install "etc/bash_completion.d/rustc"
   end
