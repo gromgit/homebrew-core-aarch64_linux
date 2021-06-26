@@ -6,6 +6,10 @@ class Autoenv < Formula
   license "MIT"
   head "https://github.com/kennethreitz/autoenv.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "657fdd3a35ac9967764be96cd948ad27ac9eb3160120ff16d77c24b7ab15cd09"
+  end
+
   patch :DATA
 
   def install
