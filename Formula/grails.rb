@@ -10,6 +10,10 @@ class Grails < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "91ae9492204373e5180cd66da98f0699e734a886e5160c3e5a44faf1841d7b46"
+  end
+
   depends_on "openjdk@11"
 
   def install
