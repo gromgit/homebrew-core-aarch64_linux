@@ -5,6 +5,10 @@ class Davmail < Formula
   version "5.5.1"
   sha256 "34dfd350e7142227cdceb267666b5886ce94564b6395fa0e6098d868c110a48e"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "7ea76cccd6a1e4bd10dd82ba2e55e345bf9fbb932fda9c5f9dd6a4d1d7aeab52"
+  end
+
   depends_on "openjdk"
 
   def install
