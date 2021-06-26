@@ -7,6 +7,10 @@ class MavenAT33 < Formula
   license "Apache-2.0"
   revision 1
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "01312f11ae26710bfc86299357e9adb760bd6177ebe5d2f85d3e53bee572d19f"
+  end
+
   keg_only :versioned_formula
 
   deprecate! date: "2017-04-07", because: :unmaintained
