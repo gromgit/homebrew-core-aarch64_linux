@@ -6,6 +6,10 @@ class ZLua < Formula
   license "MIT"
   head "https://github.com/skywind3000/z.lua.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "5e81f502f0d1aa8fcc350be77777e7dc6ee05bd04906762f4ce9a3fc285ceba5"
+  end
+
   depends_on "lua"
 
   def install
