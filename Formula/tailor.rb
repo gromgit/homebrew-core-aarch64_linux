@@ -6,6 +6,10 @@ class Tailor < Formula
   license "MIT"
   revision 1
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "44e1ad8a024ce513684ef98d5cf0087a0c89b7aebbbc3cf2d5905ab71771db54"
+  end
+
   depends_on "openjdk"
 
   def install
