@@ -6,6 +6,10 @@ class ApacheArchiva < Formula
   sha256 "01119af2d9950eacbcce0b7f8db5067b166ad26c1e1701bef829105441bb6e29"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "7be56a181bec0957d8f4f2936e99a98f737b3f7e146a3f7384b13d9e824919ad"
+  end
+
   depends_on "openjdk"
 
   def install
