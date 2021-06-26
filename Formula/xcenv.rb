@@ -6,6 +6,10 @@ class Xcenv < Formula
   license "MIT"
   head "https://github.com/xcenv/xcenv.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "21f8af03157f7f8e815d0efe4c99f9cc4a62cabbabf94fc500c0ac39fb37e537"
+  end
+
   depends_on :macos
 
   def install
