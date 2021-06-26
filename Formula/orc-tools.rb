@@ -10,6 +10,10 @@ class OrcTools < Formula
     regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "81d7a46308c0ea93e2e53bef225a20a37fd7e4cb6a1dde28d62964813020c07a"
+  end
+
   depends_on "openjdk"
 
   def install
