@@ -6,6 +6,10 @@ class CssCrush < Formula
   license "MIT"
   head "https://github.com/peteboere/css-crush.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "06eec82e0757d06c7780b1695c31946d52e02e17af3566434023ac8262ddc28b"
+  end
+
   def install
     libexec.install Dir["*"]
     (bin+"csscrush").write <<~EOS
