@@ -8,6 +8,10 @@ class Csshx < Formula
   license "GPL-1.0"
   head "https://github.com/brockgr/csshx.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "d073f3e8d11762fe8b72a3110d88a031b8f19c671f400827b68bba2adfb8b4ae"
+  end
+
   def install
     bin.install "csshX"
   end
