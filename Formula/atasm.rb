@@ -12,11 +12,10 @@ class Atasm < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5e039ac5553f6b2dc4e02871041ce1cc7fb4030f90d6601c381ff3060f9c8f2a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "88e14d4779b2bd0437988d9525b5a5f7cca8ce76334bc89780a19acb539de225"
-    sha256 cellar: :any_skip_relocation, catalina:      "8f142806b05036e541ef3fec3009d481423f451cbcd99e6be68ae5095cfa205e"
-    sha256 cellar: :any_skip_relocation, mojave:        "7a2437b5a0adf8047fc75a20fb669d2d80b15d261eab0ec0ad5c7d74b9123a2b"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "b9eb26201949590ab8fce80ee3feabe7f0be2f611e7c60b6b456c8d78480680c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f4c812d6e1cc7f0b02d3c00160d7656779fe163f62c55da63ae2359bc472585b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "8d7eba0c0fa5194201d4fac69466c807bf01d3676424a1501d3bc35cec2e43c1"
+    sha256 cellar: :any_skip_relocation, catalina:      "d89f9e6ccd622ec72be4e8c3e5c01fa1b70abc1cf79b8cd5379ff986aae6d616"
+    sha256 cellar: :any_skip_relocation, mojave:        "0f123b8ac337d96f5f528bdcd31fdd44b1cde57227c5f3451b83a15918b5cc79"
   end
 
   uses_from_macos "zlib"
