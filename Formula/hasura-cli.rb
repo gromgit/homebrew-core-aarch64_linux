@@ -8,10 +8,10 @@ class HasuraCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "90f9efbf8a5ac77e1b95f3f9c27b47434466945001c53967bb3b76574187f10c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6762f5df7daeac39d1cfc97c3359c411c47e01c78eaf1c1f255949157b8107fe"
-    sha256 cellar: :any_skip_relocation, catalina:      "1ec67a4ca2d2aba2bfff2292d7020bfeef5539a0ee8eda025e7d7f7837706adf"
-    sha256 cellar: :any_skip_relocation, mojave:        "88431c7dd38c9d117228b1c0d87355760bb8ea0fcfc4bbfc7f9125e3381905ce"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6c283d8141f7a1d6de2357d8f726af74ff90f961b4fea7d5ef0e3f721c0fe446"
+    sha256 cellar: :any_skip_relocation, big_sur:       "108701916af25e5784ccd3fc38aaf12437b67f5c41c88fdd04b4ac9988602c1b"
+    sha256 cellar: :any_skip_relocation, catalina:      "72522aad16ec52ae3130492fc69a17c9385176aae6c71adf15558b0981c2fe7d"
+    sha256 cellar: :any_skip_relocation, mojave:        "fb281d38c15b2214d4ca888ab09631fc2d7f5d73347af09b74f13f9f02ce311a"
   end
 
   depends_on "go" => :build
