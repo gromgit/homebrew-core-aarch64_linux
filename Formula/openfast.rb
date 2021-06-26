@@ -1,8 +1,8 @@
 class Openfast < Formula
   desc "NREL-supported OpenFAST whole-turbine simulation code"
   homepage "https://openfast.readthedocs.io"
-  url "https://github.com/openfast/openfast/archive/v2.6.0.tar.gz"
-  sha256 "39e9f12ee41639b46ce317396fe88a6232ce362e63f56ec5e7ecdfc27e3d02e4"
+  url "https://github.com/openfast/openfast/archive/v3.0.0.tar.gz"
+  sha256 "9af57af054e4128b6e257a76da368dc4ad0c7fbb2b22d51fc7ea63cdf999c530"
   license "Apache-2.0"
 
   bottle do
@@ -15,17 +15,9 @@ class Openfast < Formula
   depends_on "gcc"
   depends_on "openblas"
 
-  # Fix build on ARM
-  # https://github.com/OpenFAST/openfast/pull/744
-  patch do
-    url "https://github.com/OpenFAST/openfast/commit/2f5cb69efcaeebce099a814d6a338171b828ae0d.patch?full_index=1"
-    sha256 "77611167b092e8daef0650db82dab24127f829d060199bae8b191cac9e3c0b9a"
-  end
-
   def install
     args = std_cmake_args + %w[
       -DDOUBLE_PRECISION=OFF
-      -DCMAKE_BUILD_TYPE=RelWithDebInfo
       -DBLA_VENDOR=OpenBLAS
     ]
 
