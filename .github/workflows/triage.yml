@@ -122,7 +122,7 @@ jobs:
                       "content": "system \"swift\", \"build\""
                   }, {
                       "label": "CI-linux-wheezy",
-                      "path": "Formula/(patchelf|binutils).rb",
+                      "path": "Formula/(zlib|patchelf|binutils).rb",
                       "keep_if_no_match": true
                   }, {
                       "label": "CI-linux-self-hosted",
