@@ -11,6 +11,10 @@ class Dex2jar < Formula
     regex(%r{url=.*?/dex2jar[._-]v?(\d+(?:\.\d+)+)\.(?:t|zip)}i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "d46040686d7dee6a12faa0877a80d4d8cfb285c98681d081eb5a05e31098586c"
+  end
+
   depends_on "openjdk"
 
   def install
