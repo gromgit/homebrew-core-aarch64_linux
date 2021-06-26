@@ -6,6 +6,10 @@ class Titlecase < Formula
   license "MIT"
   head "https://github.com/ap/titlecase.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "27a6bbb0ade7749f3ac3f72871f7f9f611a61e8af02046511d33f723881fba0d"
+  end
+
   def install
     bin.install "titlecase"
   end
