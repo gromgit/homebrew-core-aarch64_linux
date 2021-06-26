@@ -7,6 +7,13 @@ class BrewCaskCompletion < Formula
   revision 1
   head "https://github.com/xyb/homebrew-cask-completion.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a058f8dd7fb25aa2ca8452d32f7d419b3b461b0f3b1dfe4f2f2e6d0e79b014ab"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a5256bbd0456fc15083d843e7cc3778fd45dfd3562b14bf076e0a08bcc04948a"
+    sha256 cellar: :any_skip_relocation, catalina:      "a5256bbd0456fc15083d843e7cc3778fd45dfd3562b14bf076e0a08bcc04948a"
+    sha256 cellar: :any_skip_relocation, mojave:        "a5256bbd0456fc15083d843e7cc3778fd45dfd3562b14bf076e0a08bcc04948a"
+  end
+
   def install
     fish_completion.install "brew-cask.fish"
   end
