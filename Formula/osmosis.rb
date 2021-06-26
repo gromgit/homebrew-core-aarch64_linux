@@ -5,6 +5,10 @@ class Osmosis < Formula
   sha256 "b24c601578ea4cb0ca88302be6768fd0602bde86c254a0e0b90513581dba67ff"
   license "LGPL-3.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "03b25119fbe3db2e9ebde3b6752951ef2aa84501e9e68e1a9d39ac30fde7ed0b"
+  end
+
   depends_on "openjdk"
 
   # need to adjust home dir for a clean install
