@@ -10,6 +10,10 @@ class Maxwell < Formula
     strategy :github_latest
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "9c6da6b07e524eae16c853982ee49d4a79543cac6c1e033ede083ecf2faa83f2"
+  end
+
   depends_on "openjdk@11"
 
   def install
