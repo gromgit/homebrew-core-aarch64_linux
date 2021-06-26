@@ -12,6 +12,10 @@ class Redpen < Formula
     regex(%r{href=.*?/tag/(?:redpen[._-])?v?(\d+(?:\.\d+)+)["' >]}i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "a64e713c28e2030248d5bca045bbda57f33c876de674a89d6f9585101b570587"
+  end
+
   depends_on "openjdk@11"
 
   def install
