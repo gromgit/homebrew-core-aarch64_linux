@@ -10,6 +10,10 @@ class Sdedit < Formula
     regex(%r{url=.*?/sdedit[._-]v?(\d+(?:\.\d+)+)\.jar}i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "a92bee655dd6bf28edde96603e762b443c3f6ed48430efb53b93e58dafa3f575"
+  end
+
   depends_on "openjdk"
 
   def install
