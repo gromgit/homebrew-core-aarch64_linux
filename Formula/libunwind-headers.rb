@@ -10,6 +10,10 @@ class LibunwindHeaders < Formula
     regex(/href=.*?libunwind[._-]v?(\d+(?:\.\d+)*)\.t/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "f4e338982c769a851a7a3083e7cb9f99931436bcc85b767550e260688733b0b0"
+  end
+
   keg_only :shadowed_by_macos, "macOS provides libunwind.dylib (but nothing else)"
 
   def install
