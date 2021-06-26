@@ -6,6 +6,10 @@ class KubePs1 < Formula
   license "Apache-2.0"
   head "https://github.com/jonmosco/kube-ps1.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "686ec71211705bf86fd229811e89ee26f5714654d4b09de2eca68b36e8b987c3"
+  end
+
   depends_on "kubernetes-cli"
 
   def install
