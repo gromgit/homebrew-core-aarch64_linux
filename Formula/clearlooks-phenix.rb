@@ -7,6 +7,10 @@ class ClearlooksPhenix < Formula
   revision 1
   head "https://github.com/jpfleury/clearlooks-phenix.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "0b785c8577696a7fdaa9d1c8f1130e7653972d7b1a497d0ae37ebbf1cb79cf30"
+  end
+
   depends_on "gtk+3"
 
   def install
