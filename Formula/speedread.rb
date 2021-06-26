@@ -16,6 +16,10 @@ class Speedread < Formula
     end
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "98128adedcde823bb5ac289120ae88f07d3d041b778cd5cf0c100eb87df303d2"
+  end
+
   def install
     bin.install "speedread"
   end
