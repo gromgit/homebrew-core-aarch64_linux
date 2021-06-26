@@ -7,10 +7,10 @@ class Singular < Formula
   revision 2
 
   bottle do
-    sha256 arm64_big_sur: "1ba750353503ae44faf66d3bbe2a053e55435e3436d553547fc5612a7bc2cf82"
-    sha256 big_sur:       "01b988c4cbe59013fbb08965a4fe6dbcd6c18f0fdf3d8d6cbb38beefde2decfc"
-    sha256 catalina:      "a4ee70e0a68e0d9f7c60878584b9381717b7f433c301df26f081a2ad554ced26"
-    sha256 mojave:        "df6f9254612f058a8dccc21482451b78b71792916ffed970972fb35becc05f00"
+    sha256 arm64_big_sur: "b3bcbed0cffc2751cb4e7422987dae763c7bb5fefb6da4e172182296f56d3f1d"
+    sha256 big_sur:       "a344fa6e1ecd01461fa59ddb95863581b85749ef9802f3d6f7d79032b26cf9e8"
+    sha256 catalina:      "7b9172e57c84672c1aa97a2a09e075a193a064fa3af3678df79b33e0fb0565ef"
+    sha256 mojave:        "9bfe6a7938e60280130ba2042a6c1a95840dcadaf65832b5aa6906e738263fe3"
   end
 
   head do
