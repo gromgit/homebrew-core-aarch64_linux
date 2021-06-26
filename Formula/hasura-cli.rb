@@ -1,9 +1,10 @@
+require "language/node"
+
 class HasuraCli < Formula
   desc "Command-Line Interface for Hasura GraphQL Engine"
   homepage "https://hasura.io"
-  url "https://github.com/hasura/graphql-engine/archive/v1.3.3-patch.1.tar.gz"
-  version "1.3.3-patch.1"
-  sha256 "a53d9dbbe127a2fe6a2693d9a00ed351d607c227507f563eb75fd81fcb17b7b9"
+  url "https://github.com/hasura/graphql-engine/archive/v2.0.1.tar.gz"
+  sha256 "b541041b0fb42b663987ac23c00bca1b7a1cde43378119f4c7339ff7b6cf0ccb"
   license "Apache-2.0"
 
   bottle do
@@ -14,22 +15,28 @@ class HasuraCli < Formula
   end
 
   depends_on "go" => :build
+  depends_on "node" => :build
 
   def install
+    Language::Node.setup_npm_environment
+
     ldflags = %W[
       -s -w
-      -X github.com/hasura/graphql-engine/cli/version.BuildVersion=#{version}
-      -X github.com/hasura/graphql-engine/cli/plugins.IndexBranchRef=master
-    ]
+      -X github.com/hasura/graphql-engine/cli/v2/version.BuildVersion=#{version}
+      -X github.com/hasura/graphql-engine/cli/v2/plugins.IndexBranchRef=master
+    ].join(" ")
 
     cd "cli" do
-      system "go", "build", *std_go_args, "-ldflags", ldflags.join(" "), "-o", bin/"hasura", "./cmd/hasura/"
+      with_env(CI: "false") do
+        system "make", "build-cli-ext"
+        system "make", "copy-cli-ext"
+      end
+      system "go", "build", *std_go_args(ldflags: ldflags), "-o", bin/"hasura", "./cmd/hasura/"
 
-      system bin/"hasura", "completion", "bash", "--file", "completion_bash"
-      bash_completion.install "completion_bash" => "hasura"
-
-      system bin/"hasura", "completion", "zsh", "--file", "completion_zsh"
-      zsh_completion.install "completion_zsh" => "_hasura"
+      output = Utils.safe_popen_read("#{bin}/hasura", "completion", "bash")
+      (bash_completion/"hasura").write output
+      output = Utils.safe_popen_read("#{bin}/hasura", "completion", "zsh")
+      (zsh_completion/"_hasura").write output
     end
   end
 
