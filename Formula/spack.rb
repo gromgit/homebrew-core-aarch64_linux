@@ -11,6 +11,13 @@ class Spack < Formula
     strategy :github_latest
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fcc821aadb5b5ec99c3d3e59609b5902bae2e7ab1925c62de9c23cb6f09da45a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f15804975042d0283321011b5066461813cbc8944bcf0d71aaffbe28daf3d0f7"
+    sha256 cellar: :any_skip_relocation, catalina:      "f15804975042d0283321011b5066461813cbc8944bcf0d71aaffbe28daf3d0f7"
+    sha256 cellar: :any_skip_relocation, mojave:        "f15804975042d0283321011b5066461813cbc8944bcf0d71aaffbe28daf3d0f7"
+  end
+
   depends_on "python@3.9"
 
   def install
