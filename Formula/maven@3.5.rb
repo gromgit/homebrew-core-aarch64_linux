@@ -7,6 +7,13 @@ class MavenAT35 < Formula
   license "Apache-2.0"
   revision 1
 
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "395084c1ae2cf3ccfa343ed12c100155bb289658c0f82daa6dd1fd3b215c458d"
+    sha256 cellar: :any, big_sur:       "395c556575fb1c0d7b89559350c449ded3809b4f711efed178a559cd4d4cc535"
+    sha256 cellar: :any, catalina:      "395c556575fb1c0d7b89559350c449ded3809b4f711efed178a559cd4d4cc535"
+    sha256 cellar: :any, mojave:        "395c556575fb1c0d7b89559350c449ded3809b4f711efed178a559cd4d4cc535"
+  end
+
   keg_only :versioned_formula
 
   deprecate! date: "2018-10-24", because: :unmaintained
