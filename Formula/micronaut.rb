@@ -11,9 +11,10 @@ class Micronaut < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "8752ff18522e1880924b31229392f020fdc39c5583964c9c93358e86598762ec"
-    sha256 cellar: :any_skip_relocation, catalina: "560ca9a9c949b43e60dc1a75bd972870d8756d6cdbc34d324d572e7e8d146a98"
-    sha256 cellar: :any_skip_relocation, mojave:   "c8a99c0394d59af7dc97a47e2b0deeec3c7534d10b42218122797d03aa95e6c6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2606af973b6285b56dc4391802b67011173e213f1e715106b5471f09f7db3e78"
+    sha256 cellar: :any_skip_relocation, big_sur:       "527c4672ad95f7a9648afc51aaef352f2d2f4c8614603c2770d76156f58a867a"
+    sha256 cellar: :any_skip_relocation, catalina:      "2198fd9de75e213ba610de94229b609765dfca01f80a45b0d0a2bd347522b8cf"
+    sha256 cellar: :any_skip_relocation, mojave:        "a99c9da5ef8e114bbc7ca11fde8f1ab332ab6c9192d6ab660117157dc287a38a"
   end
 
   if Hardware::CPU.arm?
