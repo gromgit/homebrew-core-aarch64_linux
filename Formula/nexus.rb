@@ -14,9 +14,9 @@ class Nexus < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "28a030e540c9bb246db41dc8808abe4ebbc7a3d7a99f02ed7626e80338ec9332"
-    sha256 cellar: :any_skip_relocation, catalina: "63584db54560a691e364aac6ed26dfecfcfd4105eddb3276cbf04bd426aa7db0"
-    sha256 cellar: :any_skip_relocation, mojave:   "efdfe9ab642e82cf94e98c01f6c19a60e8e2849b32be411dde7c1ae79f6a382a"
+    sha256 cellar: :any_skip_relocation, big_sur:  "c20857fcd052822fa8f0b5cbf6be9a62687ba04f0df7b1097238c8818ad319bb"
+    sha256 cellar: :any_skip_relocation, catalina: "a9b814c63b91113b4a1bba841661ff208b345355393839ac384a0ff938b2210f"
+    sha256 cellar: :any_skip_relocation, mojave:   "319f19a3d0e00895179d3c1a914948226c66a48c08eb156b78e099ce7d27dbc0"
   end
 
   depends_on "maven" => :build
