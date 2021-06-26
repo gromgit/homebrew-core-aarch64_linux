@@ -6,6 +6,10 @@ class Rmate < Formula
   license "MIT"
   head "https://github.com/textmate/rmate.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "f17a839cae2678598895cdbd94ecceb0197ddd0c6e94e17768a5580c3cf9cc98"
+  end
+
   def install
     bin.install "bin/rmate"
   end
