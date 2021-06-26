@@ -7,6 +7,10 @@ class RbenvChefdk < Formula
   revision 1
   head "https://github.com/docwhat/rbenv-chefdk.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "43558c05b45ae34900651355579bbcac63771e75f98c501059233f4f1d832d5f"
+  end
+
   depends_on "rbenv"
 
   def install
