@@ -6,6 +6,10 @@ class TomeeWebprofile < Formula
   sha256 "13b0817a17e54069c39c3878d7a271b52fe5adceb6ddef3fe1147f2cea2d78ac"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "425353239d0d5855848309939aaaaba63b9d4d17e275d1c6fd52cdb28523e15d"
+  end
+
   depends_on "openjdk"
 
   def install
