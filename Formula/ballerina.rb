@@ -10,6 +10,10 @@ class Ballerina < Formula
     regex(%r{href=.*?/downloads/.*?ballerina[._-]v?(\d+(?:\.\d+)+)\.}i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "26a2f31a91b8d3a0d62c0ce5c10eb9e204a0426343fb2ec0f47ddd83e956fca7"
+  end
+
   depends_on arch: :x86_64 # openjdk@8 does not have ARM support
   depends_on "openjdk@8"
 
