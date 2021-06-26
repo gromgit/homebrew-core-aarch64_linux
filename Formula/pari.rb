@@ -11,10 +11,10 @@ class Pari < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "bce28f4a6d89eccbed6c8a2a314c1eda9e600eaf924d56c45fe3e219974d59f6"
-    sha256 big_sur:       "683db9ffc99f148aa417d3679b8a2f4fa1e9c35ea0e9d657eac258a3b3ddcba7"
-    sha256 catalina:      "40b9dcb1426e44c03657c10af167be08c1ff1d1e1cbfe99d5c3ac724801b3e2e"
-    sha256 mojave:        "d7f12a7d997767b7eca8e93a29b5e82f5bb00a7ffd4c4b341968e1442b563872"
+    sha256 arm64_big_sur: "ded4bc8651cbbab6d1c13f1209b3d013c39d712dee28ed38e2e927052d4acd77"
+    sha256 big_sur:       "84b7739fcd41c82756c2610a6b6e7686d52d9b338b9cd23b9bc7405aea3b8901"
+    sha256 catalina:      "6eafc6e4947af844a2984f78ee3769df27be397d2beeab046595c87cf54a0576"
+    sha256 mojave:        "6f745e024e7cd4acbea3db05f8942c843549aa0003c621bb597ac9982a65e56d"
   end
 
   depends_on "gmp"
