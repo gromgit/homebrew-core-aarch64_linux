@@ -10,6 +10,13 @@ class Lynis < Formula
     regex(%r{href=.*?/lynis[._-]v?(\d+(?:\.\d+)+)\.t}i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a22fbdbfc60985e0a634cbef0b4083666064b8e314ed79c2773f145204235ea5"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d22239d086c798e7836147217ee7f60488275300bea1a3132d862a06b0c7ab9e"
+    sha256 cellar: :any_skip_relocation, catalina:      "d22239d086c798e7836147217ee7f60488275300bea1a3132d862a06b0c7ab9e"
+    sha256 cellar: :any_skip_relocation, mojave:        "d22239d086c798e7836147217ee7f60488275300bea1a3132d862a06b0c7ab9e"
+  end
+
   def install
     inreplace "lynis" do |s|
       s.gsub! 'tINCLUDE_TARGETS="/usr/local/include/lynis ' \
