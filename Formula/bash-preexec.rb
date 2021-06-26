@@ -6,6 +6,10 @@ class BashPreexec < Formula
   license "MIT"
   head "https://github.com/rcaloras/bash-preexec.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "72f047a0bb9e083b3c2a2bf491f8b3db94caa40f01710c03083ee005e2aa4454"
+  end
+
   def install
     (prefix/"etc/profile.d").install "bash-preexec.sh"
   end
