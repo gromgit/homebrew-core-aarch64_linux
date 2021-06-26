@@ -11,6 +11,13 @@ class Maven < Formula
     regex(/href=.*?apache-maven[._-]v?(\d+(?:\.\d+)+)-bin\.t/i)
   end
 
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "bb95e2849040358e1e30b918c5cfdcfb78535915d834f32f0f5fcb39231a87f6"
+    sha256 cellar: :any, big_sur:       "f894602e16a46f6d40a259c860d8f9d5103baac5681d1803349eaf5b6771f527"
+    sha256 cellar: :any, catalina:      "f894602e16a46f6d40a259c860d8f9d5103baac5681d1803349eaf5b6771f527"
+    sha256 cellar: :any, mojave:        "f894602e16a46f6d40a259c860d8f9d5103baac5681d1803349eaf5b6771f527"
+  end
+
   depends_on "openjdk"
 
   conflicts_with "mvnvm", because: "also installs a 'mvn' executable"
