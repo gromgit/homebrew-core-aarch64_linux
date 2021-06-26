@@ -6,10 +6,10 @@ class Gravity < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "85ef605bd023af84e0db85b35c75cba699b168d9c5f21ab8d5346716060228af"
-    sha256 cellar: :any_skip_relocation, big_sur:       "49f19ce7992a5e087b879beaf9a4a8fb875a0d063b283e5aadfc320cb2b41f79"
-    sha256 cellar: :any_skip_relocation, catalina:      "73e493759b7928d8a557fb194f3fd4b9d4b700fcc2fdb85953f273f68350e31d"
-    sha256 cellar: :any_skip_relocation, mojave:        "1ad9606bdd5ff83b24b1220cdde9adfa70ff2b92c887d5cf4a67141cfd1e24c4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e4bbcd21021ce0ea675f4e89eb7ee5e7891a76329397045f391c1fc66fc29ac6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "45fa429c501fbc6bed4df03f4bd42d843eb9a0c2178c38e91463c5be23d8c559"
+    sha256 cellar: :any_skip_relocation, catalina:      "b5c92698d98471fd098e09fafbc39cfac3fbde7f445e5fadde854fab8aa8f658"
+    sha256 cellar: :any_skip_relocation, mojave:        "dca9c51bdb7adbc1310c28ac630b19f12567d3110af64a7a0e4821ea61c31e8b"
   end
 
   def install
