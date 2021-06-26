@@ -9,6 +9,10 @@ class Xmlsh < Formula
     regex(%r{url=.*?/v?(\d+(?:\.\d+)+)/xmlsh}i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "e9a08dc3cd955e21c5e170cb205584b19cf67d10f062a597bc6284ffca9dbc70"
+  end
+
   depends_on "openjdk@11"
 
   def install
