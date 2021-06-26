@@ -14,6 +14,13 @@ class Z < Formula
     strategy :github_latest
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7709d155cd48933c2d72b4de368972a8925c45100da27739f1a41121c9882abf"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3f9c920ff5f5e5d8e0f298e94ecb18d62c2605451c67a5d5ba8a2a318dbd1b6c"
+    sha256 cellar: :any_skip_relocation, catalina:      "3f9c920ff5f5e5d8e0f298e94ecb18d62c2605451c67a5d5ba8a2a318dbd1b6c"
+    sha256 cellar: :any_skip_relocation, mojave:        "3f9c920ff5f5e5d8e0f298e94ecb18d62c2605451c67a5d5ba8a2a318dbd1b6c"
+  end
+
   def install
     (prefix/"etc/profile.d").install "z.sh"
     man1.install "z.1"
