@@ -11,11 +11,10 @@ class MesaGlu < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "00b310b416ecb09febaca37fb246881c561ebea6dbe8676e7c46df7f76527261"
-    sha256 cellar: :any, big_sur:       "24874c910bd660366bdc961cf94cfc96a32b372993cffc02e6de5cfb2f14fe05"
-    sha256 cellar: :any, catalina:      "977fc1911d5d0334c56b9d287de0ee2f716fc23b5fde21404415bf89ce46cfce"
-    sha256 cellar: :any, mojave:        "ddfad217be6c1f0ea8f22d17348d901ad999365a01f824ab6f51a911eee654e1"
-    sha256 cellar: :any, high_sierra:   "598992b552b004eb5e06460a3c84de6ff39f6d7a7112be2819f99280d33f3fa9"
+    sha256 cellar: :any, arm64_big_sur: "07d2c0050058be9863654a240e70e838d8d497851f1f2bc116adc423b39fd247"
+    sha256 cellar: :any, big_sur:       "3fb17496bb13be70cbe441a71f77e61162bb8b01a3464d2792e8c72b1cfd31c5"
+    sha256 cellar: :any, catalina:      "191fec3a0b20031d5197dadf5cd64b6e2412db945e1ae5538fd324f3d98b483b"
+    sha256 cellar: :any, mojave:        "ea8524776d19e7dd04be3961865efae25e775fc252c9b28585f3da502a4b3d5b"
   end
 
   head do
