@@ -6,6 +6,10 @@ class Luaver < Formula
   license "MIT"
   head "https://github.com/DhavalKapil/luaver.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "423d7c791335f69639c53e2eb5ccbfd0120deeb61984a2744a72d0ab635317af"
+  end
+
   depends_on "wget"
 
   def install
