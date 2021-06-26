@@ -6,6 +6,10 @@ class Winetricks < Formula
   license "LGPL-2.1-or-later"
   head "https://github.com/Winetricks/winetricks.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "8a0d789f5afc57d083be7483626af1f80ac2a56055288d9c7dab572a9f1ae929"
+  end
+
   depends_on "cabextract"
   depends_on "p7zip"
   depends_on "unzip"
