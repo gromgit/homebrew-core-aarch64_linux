@@ -6,6 +6,10 @@ class Liquidprompt < Formula
   license "AGPL-3.0-or-later"
   head "https://github.com/nojhan/liquidprompt.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "3d340371ccc05ab79605f67c144681c8d36513d67573874d99236ba154cfbec3"
+  end
+
   def install
     share.install "liquidpromptrc-dist"
     share.install "liquidprompt"
