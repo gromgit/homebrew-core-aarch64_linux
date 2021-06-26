@@ -10,6 +10,10 @@ class Umlet < Formula
     regex(/href=.*?umlet-standalone[._-]v?(\d+(?:\.\d+)+)\.(t|zip)/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "9cd3614267bd39f308b58b4f2b9cd9b6f9c3c7d5bc1baac28e592517d08cf76b"
+  end
+
   depends_on "openjdk"
 
   def install
