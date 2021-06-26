@@ -12,11 +12,12 @@ class PkgConfig < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "ffd4491f62201d14b7eca6beff954a2ab265351589cd5b3b79b8bbb414485574"
-    sha256 big_sur:       "0040b6ebe07f60549800b211343fd5fb3cf83c866d9f62e40f5fb2f38b71e161"
-    sha256 catalina:      "80f141e695f73bd058fd82e9f539dc67471666ff6800c5e280b5af7d3050f435"
-    sha256 mojave:        "0d14b797dba0e0ab595c9afba8ab7ef9c901b60b4f806b36580ef95ebb370232"
-    sha256 high_sierra:   "8c6160305abd948b8cf3e0d5c6bb0df192fa765bbb9535dda0b573cb60abbe52"
+    sha256                               arm64_big_sur: "ffd4491f62201d14b7eca6beff954a2ab265351589cd5b3b79b8bbb414485574"
+    sha256                               big_sur:       "0040b6ebe07f60549800b211343fd5fb3cf83c866d9f62e40f5fb2f38b71e161"
+    sha256                               catalina:      "80f141e695f73bd058fd82e9f539dc67471666ff6800c5e280b5af7d3050f435"
+    sha256                               mojave:        "0d14b797dba0e0ab595c9afba8ab7ef9c901b60b4f806b36580ef95ebb370232"
+    sha256                               high_sierra:   "8c6160305abd948b8cf3e0d5c6bb0df192fa765bbb9535dda0b573cb60abbe52"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3d9b8bf9b7b4bd08086be1104e3e18afb1c437dfaca03e6e7df8f2710b9c1c1a"
   end
 
   def install
