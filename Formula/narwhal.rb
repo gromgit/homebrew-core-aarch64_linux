@@ -6,6 +6,10 @@ class Narwhal < Formula
   license "MIT"
   head "https://github.com/280north/narwhal.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "74667a2b115b6ee5a337b291882a06a3df9b4292a5a2b11fb5470e38abd228bc"
+  end
+
   conflicts_with "spidermonkey", because: "both install a js binary"
   conflicts_with "elixir-build", because: "both install `json` binaries"
 
