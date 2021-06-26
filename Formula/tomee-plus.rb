@@ -6,6 +6,10 @@ class TomeePlus < Formula
   sha256 "5837e910f6095524ba9d31b0e78dc77779f4f1477c153df85263d8009bda06b8"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "22caa716db782e1fee20c043d26642c3e4654a9562fca2bdda0f7440a260b34b"
+  end
+
   depends_on "openjdk"
 
   def install
