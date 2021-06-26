@@ -5,6 +5,10 @@ class VirtualhostSh < Formula
   sha256 "75d34b807e71acd253876c6a99cdbc11ce31ffb159155373c83a99af862fffcc"
   head "https://github.com/virtualhost/virtualhost.sh.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "69fa9f84d063cdb79b54c2e198110a9ee786851f8ff9174e43a2565ccd5fbc7e"
+  end
+
   def install
     bin.install "virtualhost.sh"
   end
