@@ -10,6 +10,13 @@ class WpCli < Formula
     strategy :github_latest
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ae62ac60656fe354a25fe4a143e58801a037ab76243218e6e2bc1eac4f5f1345"
+    sha256 cellar: :any_skip_relocation, big_sur:       "67acd9816806eef402f59f1904fcebd2e23e6d6cb7657604430e299cf21bd300"
+    sha256 cellar: :any_skip_relocation, catalina:      "67acd9816806eef402f59f1904fcebd2e23e6d6cb7657604430e299cf21bd300"
+    sha256 cellar: :any_skip_relocation, mojave:        "67acd9816806eef402f59f1904fcebd2e23e6d6cb7657604430e299cf21bd300"
+  end
+
   def install
     bin.install "wp-cli-#{version}.phar" => "wp"
   end
