@@ -6,6 +6,10 @@ class TomeePlume < Formula
   sha256 "fff4d98606f023b11c37bb7b4ceb74600552ff2953dc90fb484456236da34663"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "c95a98b18cab3b17572987e3c9c644519f7603118c073c4e0d68efe7f08398cf"
+  end
+
   depends_on "openjdk"
 
   def install
