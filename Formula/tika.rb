@@ -6,6 +6,10 @@ class Tika < Formula
   sha256 "6ed7332f02e8d80cebafb59907e6d370d9db3e9a81d547e4fc0d071d2cf0dc26"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "1cfc903c9d42479276b3faadd9510cd9d14f6b07857c1115fdd1152f26020fd7"
+  end
+
   depends_on "openjdk"
 
   resource "server" do
