@@ -6,6 +6,10 @@ class Hr < Formula
   license "MIT"
   head "https://github.com/LuRsT/hr.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "01e0e362b30cb5eb92751375426626c3eb8d6bfd05aa61d3cbba188a12bd1b92"
+  end
+
   def install
     bin.install "hr"
     man1.install "hr.1"
