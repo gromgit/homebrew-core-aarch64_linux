@@ -12,6 +12,10 @@ class PyenvVirtualenv < Formula
     strategy :github_latest
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "0e3bfba31c3d4bc538ff156e225ca3dbb1fd15e27cd8fd5885706eb0efdb4405"
+  end
+
   depends_on "pyenv"
 
   def install
