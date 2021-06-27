@@ -12,6 +12,10 @@ class JbossForge < Formula
     regex(/["']latestVersion["']:\s*["']([^"']+?)["']/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "e7212ece08c895006863fa1998ebfe5c089e5708a83b0d86c364eaaffeb700aa"
+  end
+
   depends_on "openjdk"
 
   def install
