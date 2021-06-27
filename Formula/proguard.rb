@@ -10,6 +10,10 @@ class Proguard < Formula
     strategy :github_latest
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "74e5253042a7f6792445a1f52b224bc7fb81363061ef1285894886d511396c25"
+  end
+
   depends_on "openjdk"
 
   def install
