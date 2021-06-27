@@ -11,6 +11,13 @@ class Phplint < Formula
     regex(/href2?=.*?phplint[._-]v?(\d+(?:\.\d+)+(?:[._-]\d{6,8})?)\.t/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "14f43ce602719839c32da02be3464239085fbe253a38617305a51e5619cbb9b4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5191083b9faf95df4815a425a2b0e3a991bc578c5fef05f804663adcb057d1da"
+    sha256 cellar: :any_skip_relocation, catalina:      "5191083b9faf95df4815a425a2b0e3a991bc578c5fef05f804663adcb057d1da"
+    sha256 cellar: :any_skip_relocation, mojave:        "5191083b9faf95df4815a425a2b0e3a991bc578c5fef05f804663adcb057d1da"
+  end
+
   depends_on "php@7.4"
 
   def install
