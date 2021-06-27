@@ -7,6 +7,10 @@ class Predictionio < Formula
   license "Apache-2.0"
   revision 1
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "483dfcfe76371f6e4ecc93cd47c905cddce97b0db57c015cefa3fda6dbc80392"
+  end
+
   deprecate! date: "2020-09-01", because: :unmaintained
 
   depends_on "apache-spark"
