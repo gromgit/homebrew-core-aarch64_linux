@@ -11,10 +11,10 @@ class Glslang < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "eb51f24a65ecfb2cd5080f2c562300268c08fe0e107d49521a2ea86f3a7865e5"
-    sha256 cellar: :any_skip_relocation, big_sur:       "4db24bbba60de0fd354c7f4de436ea330d7cd3f3e5ffca3db262db2ba0e924a0"
-    sha256 cellar: :any_skip_relocation, catalina:      "ca0171811150b46b0c4a69792582e6e82337c6b9a0d94bc5f69e441acb26e7ee"
-    sha256 cellar: :any_skip_relocation, mojave:        "a13c9cb21459616831c6d676c233b7899ee9ec1c398b79d3bea9425ff038dba4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "112df1a4b0cea8b4a1260e30f357ca6fcbe4d78139a7e2540fe579e62f1c1382"
+    sha256 cellar: :any_skip_relocation, big_sur:       "1a6c187d34130acbc0da05869d045fd28ebb58a7665160bbb629cf44385e39d8"
+    sha256 cellar: :any_skip_relocation, catalina:      "138cdfa0948e7b98a1f9cfec590002abd883ce0c4ce9a1e463769a78c39e1087"
+    sha256 cellar: :any_skip_relocation, mojave:        "32bdbcf7595e0a5cd83e84117caca3dd210c0f2a0de4cad1a18a6ee33086c8db"
   end
 
   depends_on "cmake" => :build
