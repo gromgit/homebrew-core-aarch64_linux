@@ -12,6 +12,10 @@ class Golo < Formula
     regex(/href=.*?golo[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "56c7edecb768b85203fceed00211d56196d49f18d2af60f7f5cb44d138eba3f2"
+  end
+
   depends_on "openjdk@11"
 
   def install
