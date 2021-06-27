@@ -10,6 +10,10 @@ class H2 < Formula
     url "https://github.com/h2database/h2database.git"
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "f8e33c35df1ec248000e6dfba9db2bf3994517444ba9dc0d5ec6344a29ad2bac"
+  end
+
   depends_on "openjdk"
 
   def install
