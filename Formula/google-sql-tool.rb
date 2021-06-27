@@ -5,6 +5,10 @@ class GoogleSqlTool < Formula
   version "r10"
   sha256 "b7e993edab12da32772bfa90c13999df728f06792757c496140d729d230b03c3"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "a8a2db726882c0e8ce9a5dec8c040e9a6fbc66217a969cf4cede54df93f3c76b"
+  end
+
   depends_on "openjdk"
 
   def install
