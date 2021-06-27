@@ -5,6 +5,13 @@ class Phpbrew < Formula
   sha256 "0fdcda638851ef7e306f5046ff1f9de291443656a35f5150d84368c88aa7a41a"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "99b8cb5b36039f9ea05b31f33f040ac83833835b75e1bf3148c36940d805324c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "2665bd49848a852a87abfc444f8ef708e3ec8364b3e5c04f21c3d7ef7ed8bdde"
+    sha256 cellar: :any_skip_relocation, catalina:      "2665bd49848a852a87abfc444f8ef708e3ec8364b3e5c04f21c3d7ef7ed8bdde"
+    sha256 cellar: :any_skip_relocation, mojave:        "2665bd49848a852a87abfc444f8ef708e3ec8364b3e5c04f21c3d7ef7ed8bdde"
+  end
+
   uses_from_macos "php"
 
   def install
