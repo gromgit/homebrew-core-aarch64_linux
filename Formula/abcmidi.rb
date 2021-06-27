@@ -11,10 +11,10 @@ class Abcmidi < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "707f9c6e1486d2151c5a17d747e3cc5da36a5287cb8c57d45214676563dcf2fa"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c59cf2b0d04dfe6404079dbb49cc0a53632d4a0afb61a12c8c1d6ef54c07fe92"
-    sha256 cellar: :any_skip_relocation, catalina:      "b2f63b1ce2fa576dd723955ab9f6bfab657b6899ce49e8b5b47a90a11848cbea"
-    sha256 cellar: :any_skip_relocation, mojave:        "012223e8738c3ad72cc75afd219c3badbab1c822fd53c168baa4a445e86efee5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "309575c221d6195a13aa77b95235fc6e11cad5153ebc74b8baed5e9252c92deb"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7240f1f7c440845ed966a4cc4f0f163af65627591411efd6753f82cd6e3f39f0"
+    sha256 cellar: :any_skip_relocation, catalina:      "3d3b7913725363d966cc6d115a7601352110281f78c2efd30c396a4d3edf3516"
+    sha256 cellar: :any_skip_relocation, mojave:        "d79407deb993baa511a74a8b63985ca9d5467a3d236f6b408acf38f8f05e2c4e"
   end
 
   def install
