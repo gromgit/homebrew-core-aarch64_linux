@@ -5,6 +5,10 @@ class GoogleJavaFormat < Formula
   sha256 "9d404cf6fe5f6aa7672693a3301ef2a22016ba540eca5d835be43104b71eb5d6"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "be92665b363b4b564f4182cf25a7ff4eb9a5306b5b95d11ec6bd385613fb4c78"
+  end
+
   depends_on "openjdk"
 
   def install
