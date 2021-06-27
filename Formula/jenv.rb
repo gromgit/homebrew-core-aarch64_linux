@@ -7,6 +7,10 @@ class Jenv < Formula
 
   head "https://github.com/jenv/jenv.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "521a1ad6e28b90f1e37893d279950e35957a0580464d639ec74c398f8da6d466"
+  end
+
   def install
     libexec.install Dir["*"]
     bin.write_exec_script libexec/"bin/jenv"
