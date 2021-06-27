@@ -6,6 +6,10 @@ class ImgurScreenshot < Formula
   license "MIT"
   head "https://github.com/jomo/imgur-screenshot.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "938fd215acee5d33c41263cd86d05eec350574c671df2eb16adf724f522e30c4"
+  end
+
   depends_on "bash"
   depends_on "jq"
   depends_on "terminal-notifier"
