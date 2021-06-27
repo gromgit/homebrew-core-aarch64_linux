@@ -6,6 +6,10 @@ class PyenvPipMigrate < Formula
   license "MIT"
   head "https://github.com/pyenv/pyenv-pip-migrate.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "a8b8a8f1c522ac7425a4ada017386a97558038c858fe209e60cd1392e6c0ea6c"
+  end
+
   depends_on "pyenv"
 
   def install
