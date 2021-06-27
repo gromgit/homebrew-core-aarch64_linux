@@ -5,6 +5,13 @@ class Phpstan < Formula
   sha256 "3ad1c61a494de84fb88c14a14b43f49fcc58c13345a1efdad0419095382a0839"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "000b992c4a497d4e0f202b43adc26abb503d971198b50e61fd386b57d957a51d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d3faddf8c86cb9c9fedfc8be42cf2f2201695af647a0aeec9f1f7c406ff6ad1a"
+    sha256 cellar: :any_skip_relocation, catalina:      "d3faddf8c86cb9c9fedfc8be42cf2f2201695af647a0aeec9f1f7c406ff6ad1a"
+    sha256 cellar: :any_skip_relocation, mojave:        "d3faddf8c86cb9c9fedfc8be42cf2f2201695af647a0aeec9f1f7c406ff6ad1a"
+  end
+
   depends_on "php" => :test
 
   def install
