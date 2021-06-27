@@ -8,6 +8,10 @@ class Icdiff < Formula
   license "PSF-2.0"
   head "https://github.com/jeffkaufman/icdiff.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "6527bb074c26002e16e014b6e887549a9303dad523ffee000229907360130e43"
+  end
+
   depends_on "python@3.9"
 
   def install
