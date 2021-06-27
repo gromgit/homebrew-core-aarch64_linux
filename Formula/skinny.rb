@@ -5,6 +5,10 @@ class Skinny < Formula
   sha256 "4c5661f73bda7d5ccb5a8966efe801951e2a343cf152ac6e9a06d287c5c8712d"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "3599c215671ecb68ec4f067b69d130635d3b10fb3e28c562641683886ba02d13"
+  end
+
   depends_on "openjdk"
 
   def install
