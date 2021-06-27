@@ -6,6 +6,13 @@ class Plenv < Formula
   license any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"]
   head "https://github.com/tokuhirom/plenv.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8003aaa1404beacb1ef33010bbf1ed82abb2436e9a3764a6d5f2cac83aa085ba"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ae532487be7748372f5e4af1f5f5543ea98c2821ae63a28b85fe5a47c17734a2"
+    sha256 cellar: :any_skip_relocation, catalina:      "ae532487be7748372f5e4af1f5f5543ea98c2821ae63a28b85fe5a47c17734a2"
+    sha256 cellar: :any_skip_relocation, mojave:        "ae532487be7748372f5e4af1f5f5543ea98c2821ae63a28b85fe5a47c17734a2"
+  end
+
   depends_on "perl-build"
 
   def install
