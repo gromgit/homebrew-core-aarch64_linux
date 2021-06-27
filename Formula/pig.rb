@@ -7,6 +7,13 @@ class Pig < Formula
   license "Apache-2.0"
   revision 1
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "05975bde330ef940fa753ee188f16b3a4136e22e05cb98d2aa0f566c0db08cda"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a5d6bc2bec7cfb14e8a398b3ff04ef5583a7c1a31d809ede5e2f7c5f2ae394fa"
+    sha256 cellar: :any_skip_relocation, catalina:      "a5d6bc2bec7cfb14e8a398b3ff04ef5583a7c1a31d809ede5e2f7c5f2ae394fa"
+    sha256 cellar: :any_skip_relocation, mojave:        "a5d6bc2bec7cfb14e8a398b3ff04ef5583a7c1a31d809ede5e2f7c5f2ae394fa"
+  end
+
   if Hardware::CPU.arm?
     depends_on "openjdk@11"
   else
