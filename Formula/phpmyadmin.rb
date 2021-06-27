@@ -9,6 +9,13 @@ class Phpmyadmin < Formula
     regex(/href=.*?phpMyAdmin[._-]v?(\d+(?:\.\d+)+)-all-languages\.zip["' >]/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f9a046e5d63966741a5dc84e52af4b6cce94cada8bcc445e847bc2d9727623ad"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3cfa3633d65f13cc01ea68e30138f4cba9d11f0f2335db7c92b49e441e80e76f"
+    sha256 cellar: :any_skip_relocation, catalina:      "3cfa3633d65f13cc01ea68e30138f4cba9d11f0f2335db7c92b49e441e80e76f"
+    sha256 cellar: :any_skip_relocation, mojave:        "3cfa3633d65f13cc01ea68e30138f4cba9d11f0f2335db7c92b49e441e80e76f"
+  end
+
   depends_on "php" => :test
 
   def install
