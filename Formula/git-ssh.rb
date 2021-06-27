@@ -6,6 +6,10 @@ class GitSsh < Formula
   license "GPL-2.0"
   head "https://github.com/lemarsu/git-ssh.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "007874faaa60f5b915535437baa27a99a5b85df9abb319f7fd6703b8c8db41d8"
+  end
+
   def install
     # Change loading of required code from libexec location (Cellar only)
     inreplace "bin/git-ssh" do |s|
