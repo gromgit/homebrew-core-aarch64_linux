@@ -12,10 +12,11 @@ class Yash < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "b9f491ea8170c99d1d2218644043acbceb12c118c64c5c2f415230ffff3d2eb6"
-    sha256 big_sur:       "0148513daad07ea6867715f97d04d8f2eb66b4efe937d51bc7616d99d1aaef58"
-    sha256 catalina:      "f9d79d098c75b321288c45626bec895e2ce35f8c68fcbd1d6405a0b6614226fb"
-    sha256 mojave:        "0eec194f969eb03add9615ed1f4569749ff423007552fdf40b12b7df82c72024"
+    rebuild 1
+    sha256 arm64_big_sur: "22128619892f2aa774cc6774c5041bcde2b711f0b3874455f565272c397d2503"
+    sha256 big_sur:       "ff18cba8b4398b1ee3aa6542c27d0a925846d44ee25de4ffae836294024f8cea"
+    sha256 catalina:      "a24fa6d8baa80ff63a770c93d15adef2f3d9fcb624fd6304aa16a763c20aab28"
+    sha256 mojave:        "052617d9d5aab039e7e814b3d822e9c66ab4b9f3d8fd0c3b59cc5faf24e0ecd2"
   end
 
   head do
