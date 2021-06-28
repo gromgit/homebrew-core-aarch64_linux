@@ -7,10 +7,11 @@ class Pipx < Formula
   head "https://github.com/pypa/pipx.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3d2f7c5ed804dffb92b4d08a9f72f1581046df4c39492ab5742153843d7592cf"
-    sha256 cellar: :any_skip_relocation, big_sur:       "65efd93e3f5b999df2d9b65774c71a3d0945e8b394a22623c110a274c283e714"
-    sha256 cellar: :any_skip_relocation, catalina:      "65efd93e3f5b999df2d9b65774c71a3d0945e8b394a22623c110a274c283e714"
-    sha256 cellar: :any_skip_relocation, mojave:        "65efd93e3f5b999df2d9b65774c71a3d0945e8b394a22623c110a274c283e714"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9fc7275f1378c5b8de804fe4567aa291388f9655b98785a04bcff767ef5ed618"
+    sha256 cellar: :any_skip_relocation, big_sur:       "18a5233a0e711c55d9b6eb1e71fd5665004fd52de354d05005a73c767c9d7c80"
+    sha256 cellar: :any_skip_relocation, catalina:      "18a5233a0e711c55d9b6eb1e71fd5665004fd52de354d05005a73c767c9d7c80"
+    sha256 cellar: :any_skip_relocation, mojave:        "18a5233a0e711c55d9b6eb1e71fd5665004fd52de354d05005a73c767c9d7c80"
   end
 
   depends_on "python@3.9"
