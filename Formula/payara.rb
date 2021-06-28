@@ -13,6 +13,10 @@ class Payara < Formula
     regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "892bc43ac078ad066e143db8d1d6ea16b46cfcad85e51acd686a5ffb15041183"
+  end
+
   depends_on "openjdk@11"
 
   conflicts_with "glassfish", because: "both install the same scripts"
