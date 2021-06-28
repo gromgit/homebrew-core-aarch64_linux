@@ -7,10 +7,8 @@ class Couchpotatoserver < Formula
   head "https://github.com/CouchPotato/CouchPotatoServer.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d627b16a937b075e2a3615b1a33fb0e250674b8e541390a577fb14f6fc14b2b9"
-    sha256                               big_sur:       "d4e28b8587a9e0dc167013da20cef7bad006f856e0b34e69a7e34c0065b08f2b"
-    sha256                               catalina:      "d4e28b8587a9e0dc167013da20cef7bad006f856e0b34e69a7e34c0065b08f2b"
-    sha256                               mojave:        "d4e28b8587a9e0dc167013da20cef7bad006f856e0b34e69a7e34c0065b08f2b"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "f8c2e92a584c48ec2a693d5e7e4cf48ef29fe40b3501668d0205357b4c901c8c"
   end
 
   def install
