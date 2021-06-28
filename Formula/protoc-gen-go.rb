@@ -7,10 +7,10 @@ class ProtocGenGo < Formula
   head "https://github.com/protocolbuffers/protobuf-go.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "66a055296f1284d23b625e3864c55df6389c8aff6315de3021ae538ec4d9cc1e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "db8d23c9a2a2e42898968dcaab47ba2700ec17125a889aa064dd7c74014502ac"
-    sha256 cellar: :any_skip_relocation, catalina:      "db8d23c9a2a2e42898968dcaab47ba2700ec17125a889aa064dd7c74014502ac"
-    sha256 cellar: :any_skip_relocation, mojave:        "db8d23c9a2a2e42898968dcaab47ba2700ec17125a889aa064dd7c74014502ac"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "577196328ed1d829d999d7eb7a1fbdcd340831619b5e53db1e9ff880bb0514cb"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3990c0be0447ef4cebc03575c737a01a8a7af9e3766cb014addc4c932eeb4228"
+    sha256 cellar: :any_skip_relocation, catalina:      "3990c0be0447ef4cebc03575c737a01a8a7af9e3766cb014addc4c932eeb4228"
+    sha256 cellar: :any_skip_relocation, mojave:        "3990c0be0447ef4cebc03575c737a01a8a7af9e3766cb014addc4c932eeb4228"
   end
 
   depends_on "go" => :build
