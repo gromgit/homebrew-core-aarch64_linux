@@ -10,6 +10,10 @@ class Gwt < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "aa7923025737fa93944f4373b92544bacdc5e191b679f1b615b65b0455c2e7a8"
+  end
+
   depends_on "openjdk"
 
   def install
