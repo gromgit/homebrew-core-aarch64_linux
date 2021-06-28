@@ -7,10 +7,10 @@ class Hugo < Formula
   head "https://github.com/gohugoio/hugo.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b74c37d81d099cc019cdef1ecc62a94de79039a5c3bf137aafdb662ffec2d39d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7fa4e9ee392a9640f1adc3efb227cea0c0a095bd15e2ea837c81e0c86ec883b8"
-    sha256 cellar: :any_skip_relocation, catalina:      "41ec11394dd5af51bc034a14037fec49fb143bb199796ab5c1ef7189f4072ceb"
-    sha256 cellar: :any_skip_relocation, mojave:        "c786f9faef0269fe36d8f0b5486d829822d004ef05ba2c2ed396e80d8b5c274e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ebcf2612cb2c49917931cf636f42eadeae6b3d0bf62e9d4000d4dafe822f1ac2"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0086d1869019b81d643fb437042056759585cd98a19597406015ce4f53bde3bc"
+    sha256 cellar: :any_skip_relocation, catalina:      "45b19e6085ba0caea1b32448d2e6f70504d09d688f21d4fbdfd32e1a4ed60a71"
+    sha256 cellar: :any_skip_relocation, mojave:        "ff3d3c240a17a820fefe2a601b71bfd0d9ba041eb0620018bc83a3dfedd6a994"
   end
 
   depends_on "go" => :build
