@@ -10,11 +10,10 @@ class Q < Formula
   head "https://github.com/harelba/q.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "959e08b1f6b453fa0088b5f02fc605c6c4ba270cad1f31231d7364c4e8b6d76d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9f7a46b1e6d3709e1d4a39c5dc42b6c4024df2d4f4e70c565caf18af38f4583d"
-    sha256 cellar: :any_skip_relocation, catalina:      "9f7a46b1e6d3709e1d4a39c5dc42b6c4024df2d4f4e70c565caf18af38f4583d"
-    sha256 cellar: :any_skip_relocation, mojave:        "9f7a46b1e6d3709e1d4a39c5dc42b6c4024df2d4f4e70c565caf18af38f4583d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b3d4d40c7c4eacc8abe3ea9d3ab9e34ea0019d93b696a8660d092507c16bfa07"
+    sha256 cellar: :any_skip_relocation, big_sur:       "df0790f33e2fc35de6454f038789eeeb51db774ff1c96f1fdf73da2291b13d64"
+    sha256 cellar: :any_skip_relocation, catalina:      "df0790f33e2fc35de6454f038789eeeb51db774ff1c96f1fdf73da2291b13d64"
+    sha256 cellar: :any_skip_relocation, mojave:        "df0790f33e2fc35de6454f038789eeeb51db774ff1c96f1fdf73da2291b13d64"
   end
 
   depends_on "ronn" => :build
