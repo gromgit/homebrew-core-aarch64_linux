@@ -10,6 +10,10 @@ class Idnits < Formula
     regex(/href=.*?idnits[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "3a1aed2b767aa561204f4144e19ddf7b9b5712fffe406b44e2702fea7b469648"
+  end
+
   resource "test" do
     url "https://tools.ietf.org/id/draft-tian-frr-alt-shortest-path-01.txt"
     sha256 "dd20ac54e5e864cfd426c7fbbbd7a1c200eeff5b7b4538ba3a929d9895f01b76"
