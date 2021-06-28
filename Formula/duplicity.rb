@@ -8,10 +8,10 @@ class Duplicity < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "ef70b5e8533352041e04bd58efc18a0aed666a3d948bd9b5b2c1657b1bdc399a"
-    sha256 cellar: :any, big_sur:       "71a76c1232f57037b85a2229c3b3f8e25ffdf4d3f669d2b4e3a7a42760d1759a"
-    sha256 cellar: :any, catalina:      "a14741b9caee921aaa52154ca4a5cfdbba395e3e63c8f58df84a3bcedc2e85df"
-    sha256 cellar: :any, mojave:        "cafdfc7246a75b8401d335b0b6863383c0a936576a4e42fa6004db1b7e2a2587"
+    sha256 cellar: :any, arm64_big_sur: "a22ceba5faf6094b718f687ed6062e69a95f9c1828f63be3d59e23488f659ba7"
+    sha256 cellar: :any, big_sur:       "e97c58230094d6e4e56c9f54dbe20669f784a1e73ff82f680218030ec162e02d"
+    sha256 cellar: :any, catalina:      "0f791e784e0eb7ee2914f28352f84edb85445b463809e6cea45e6307f7e9202a"
+    sha256 cellar: :any, mojave:        "92858efda72b4712cda38fb120982bfce8f32b8297bb1fddcf4429c3572a1534"
   end
 
   depends_on "rust" => :build # for cryptography
