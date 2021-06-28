@@ -11,6 +11,10 @@ class Civl < Formula
     regex(/href=.*?CIVL[._-]v?(\d+(?:[._-]\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "c6c4de30805b69e53aacb7fb0069b67f42c48983418b3d23c97b9ef7013fe715"
+  end
+
   depends_on "openjdk"
   depends_on "z3"
 
