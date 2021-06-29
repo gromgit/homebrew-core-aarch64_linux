@@ -3,8 +3,8 @@ class Localstack < Formula
 
   desc "Fully functional local AWS cloud stack"
   homepage "https://github.com/localstack/localstack"
-  url "https://files.pythonhosted.org/packages/39/ca/51a1c42b09a1953ed2f4a09ce6f0a48462236379bb75335bbda6c593cb10/localstack-0.12.13.1.tar.gz"
-  sha256 "8e1359c1d7d56919a19293258898232cede4e93c2646aba1323c238bd1642f1e"
+  url "https://files.pythonhosted.org/packages/0b/48/f800a42152da89de03d87d34df7d1316a027a94b43870994490f5f30c195/localstack-0.12.14.tar.gz"
+  sha256 "5feab5d5e6bf5eb25f9d8dc928fc5d8eed514436db9f1a4b1fad45e4b182d763"
   license "Apache-2.0"
 
   bottle do
@@ -19,13 +19,13 @@ class Localstack < Formula
   depends_on "six"
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/51/07/4a40d0188a51398138d4abff7b3c26da476b139a19f24299e71626d98091/boto3-1.17.101.tar.gz"
-    sha256 "77ebaa3645ae153978a0f2c492502fef3804fe0e693abc7dc74620e4884afe67"
+    url "https://files.pythonhosted.org/packages/d8/69/bcb3615fe66a3df98c15406b13f30a242c622beb26fd6da5a1c00f33bd5a/boto3-1.17.102.tar.gz"
+    sha256 "be4714f0475c1f5183eea09ddbf568ced6fa41b0fc9976f2698b8442e1b17303"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/73/37/27b163e4bb3da2356ba826481c573dddee19616a5f5871e9cade3b211378/botocore-1.20.101.tar.gz"
-    sha256 "f7a44fab1a3739ca54e7f72e8625b71574f8218f05349e59d3b871c887444edd"
+    url "https://files.pythonhosted.org/packages/30/4a/1e3ba30b338301adf9ca45ac1bb303d15aa5c67901c66eef984b98ee830b/botocore-1.20.102.tar.gz"
+    sha256 "2f57f7ceed1598d96cc497aeb45317db5d3b21a5aafea4732d0e561d0fc2a8fa"
   end
 
   resource "certifi" do
@@ -74,8 +74,8 @@ class Localstack < Formula
   end
 
   resource "localstack-ext" do
-    url "https://files.pythonhosted.org/packages/cd/49/94001d0000dcf32766d6743babe8678a385685a68479bbe39fa129263e06/localstack-ext-0.12.10.15.tar.gz"
-    sha256 "de7fcdb6d5c9f2607bae08934c76bba439365514a6171936babbeff774fea807"
+    url "https://files.pythonhosted.org/packages/5c/65/bc199fdd48f5dab2b409a7f0492e58a46f3a22eec573f2d08abe03fcac09/localstack-ext-0.12.10.18.tar.gz"
+    sha256 "d546e826b0b687fbc3e130ce0a0f8d68e6b7be4f0b30203d76e6835b21f60297"
   end
 
   resource "pyaes" do
