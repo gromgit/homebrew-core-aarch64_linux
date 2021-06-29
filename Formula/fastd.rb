@@ -2,8 +2,8 @@ class Fastd < Formula
   desc "Fast and Secure Tunnelling Daemon"
   homepage "https://github.com/NeoRaider/fastd"
   url "https://github.com/NeoRaider/fastd.git",
-      tag:      "v21",
-      revision: "2ce6095b2795052e34110599c484205468fb9fa6"
+      tag:      "v22",
+      revision: "0f47d83eac2047d33efdab6eeaa9f81f17e3ebd1"
   license "BSD-2-Clause"
   head "https://github.com/NeoRaider/fastd.git"
 
@@ -25,9 +25,10 @@ class Fastd < Formula
   depends_on "libuecc"
   depends_on "openssl@1.1"
 
+  # remove in next release
   patch do
-    url "https://github.com/NeoRaider/fastd/commit/0d4045fb85d85903ebb9afe03a08d9b089300062.patch?full_index=1"
-    sha256 "bb0d62e40575408497c6a285e6443c8386b4b85427463dd29df7736f3fe4ae9f"
+    url "https://github.com/NeoRaider/fastd/commit/89abc48e60e182f8d57e924df16acf33c6670a9b.patch?full_index=1"
+    sha256 "7bcac7dc288961a34830ef0552e1f9985f1b818aa37978b281f542a26fb059b9"
   end
 
   def install
