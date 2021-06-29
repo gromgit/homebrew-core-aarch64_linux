@@ -161,6 +161,7 @@ jobs:
             --name ${{github.sha}} \
             --env-file <(env | egrep 'HOMEBREW|GITHUB') \
             --workdir /tmp/bottles \
+            --pull always \
             ${{needs.pre_tests.outputs.container}} \
             sleep inf
           # Fix working directory permissions
