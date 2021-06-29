@@ -12,11 +12,10 @@ class Poco < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "d62b52377c0bfb785ad2e05ef8007a63e8518542891180c564d257fa07500307"
-    sha256 cellar: :any, big_sur:       "a2483cf9eaff5857285e2ec3cc4086f74a7edfb240815e75bca7ba153861f1c5"
-    sha256 cellar: :any, catalina:      "0755dff1346ea80aa6202ce3e8269c608960abd4bf0a4566e56075cc99364b57"
-    sha256 cellar: :any, mojave:        "7abccb2c17823c6dda9dee9e5918fa28ef846d8095252681c83c47bbb674f5c8"
-    sha256 cellar: :any, high_sierra:   "70cea3a570e187c3e70a8dbbe1ad2e43be1c159d0d9118c1bfc1a8cc6441e2a4"
+    sha256 cellar: :any, arm64_big_sur: "a9b4b2d1c1c24b81acea5947325bffd2af88426291857c3c23592659ce3957ca"
+    sha256 cellar: :any, big_sur:       "ec8ca74c0085ccb363451475afd0913463730f5129205ff1e76edf43bcafae1d"
+    sha256 cellar: :any, catalina:      "15372ab13fe7e6269b7038532c0a05675b12f71df5f5a69c4930d57a16a598c1"
+    sha256 cellar: :any, mojave:        "2bb42c67ece76fde31d9dd8d79fad23fecbf9ae33231f1601a335829b1f6f3c6"
   end
 
   depends_on "cmake" => :build
