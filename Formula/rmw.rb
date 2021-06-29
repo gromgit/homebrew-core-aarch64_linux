@@ -12,10 +12,10 @@ class Rmw < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "383d2b2a02e8fcfd416e4b2ba106049bef27bdb3fc3f37f8fcaeea62b827b2f4"
-    sha256 cellar: :any, big_sur:       "0f7135823daa0e0da7f172b24a173b31f39f9f44224fb0b1d623cdc9ef9a2077"
-    sha256 cellar: :any, catalina:      "1d7ad66efc9a6b312b58ba471ed53a7de0ef30e879a6b02d321794d0856a61e5"
-    sha256 cellar: :any, mojave:        "9ae98484dc5bc1bc0ecea7ef1c1edc42249a9841844283bac995cb5c6817375b"
+    sha256 arm64_big_sur: "ecedc9da74bf7f1924e0ae29d4d6e1fea649be52a8be434d288c8f8c83903486"
+    sha256 big_sur:       "2a9bbccdfb0dd9448defa52f1e3460902e3ee8df6081c96393479da407578ff6"
+    sha256 catalina:      "4ba6f35da856f75f91eee16b0fd132ca8740a43187b0851937bbaeb5071457de"
+    sha256 mojave:        "223b542bc2cec8a057be459ccdb45ec166f0c7112ba62310191c4a93b2f9f054"
   end
 
   depends_on "meson" => :build
