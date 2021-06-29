@@ -1,10 +1,9 @@
 class Luvit < Formula
   desc "Asynchronous I/O for Lua"
   homepage "https://luvit.io"
-  url "https://github.com/luvit/luvit/archive/2.17.0.tar.gz"
-  sha256 "80657aa752322560fcde780212b6807b626b45d65aca3f3dae254e5c4fb0ee78"
+  url "https://github.com/luvit/luvit/archive/2.18.0.tar.gz"
+  sha256 "3c6824878189ca41059d6d4cd8b1646de0ec6b4be1de71b2084f98c36c38e84e"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/luvit/luvit.git"
 
   bottle do
@@ -25,16 +24,16 @@ class Luvit < Formula
   # https://github.com/luvit/luvit/blob/#{version}/Makefile
   resource "lit" do
     url "https://github.com/luvit/lit.git",
-        tag:      "3.8.1",
-        revision: "27114d94b9299437b2229eac6a6c3a9ef41fa83a"
+        tag:      "3.8.5",
+        revision: "84fc5d729f1088b3b93bc9a55d1f7a245bca861d"
   end
 
   # To update this resource, check LUVI_VERSION in
   # https://github.com/luvit/lit/raw/$(LIT_VERSION)/get-lit.sh
   resource "luvi" do
     url "https://github.com/luvit/luvi.git",
-        tag:      "v2.11.0",
-        revision: "9da12caaf01337ef0609d07b2af9a5296c13922a"
+        tag:      "v2.12.0",
+        revision: "5d1052f11e813ff9edc3ec75b5282b3e6cb0f3bf"
   end
 
   def install
