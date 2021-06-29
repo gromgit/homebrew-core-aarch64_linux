@@ -37,7 +37,7 @@ class Redis < Formula
   end
 
   service do
-    run [opt_bin/"redis-server", etc/"redis.conf", "--deamonize no"]
+    run [opt_bin/"redis-server", etc/"redis.conf"]
     keep_alive true
     error_log_path var/"log/redis.log"
     log_path var/"log/redis.log"
