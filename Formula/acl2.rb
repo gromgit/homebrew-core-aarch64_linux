@@ -7,9 +7,9 @@ class Acl2 < Formula
   revision 9
 
   bottle do
-    sha256 big_sur:  "2df7db4f8b6fe7f9303e03eac535bf3477d11642678c34bb7b20360cd6f595b3"
-    sha256 catalina: "c0da576058488d92bde3ccb70974b895862b5141ffb610505967a288a357d592"
-    sha256 mojave:   "c9f92f82667649a4de4ace022baed5598ca46b97216e5655299b1cdec7b2afde"
+    sha256 big_sur:  "ababf82e5f4c87c9954593bd98cd617c8807df128532a8369a934e00fdd235b1"
+    sha256 catalina: "f7a1fc195ffda669b84af40fdabbb81b684f9e029bb8fb85afb0d27e2ff9cbc9"
+    sha256 mojave:   "c13ccb5f9a334217b28238df651d418660fc99a377aadcde34a61040b0ca60c8"
   end
 
   depends_on "sbcl"
