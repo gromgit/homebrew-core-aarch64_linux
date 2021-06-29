@@ -12,10 +12,10 @@ class Maxima < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "00cf3fb4eaf3e194c6bb0175614c16a4ba465fc33299dbd6eaf54632769aead8"
-    sha256 cellar: :any_skip_relocation, big_sur:       "2443561d225319adccf304ff87c4066239eff87244e3c292bed3c3fe7fe2f30e"
-    sha256 cellar: :any_skip_relocation, catalina:      "28fee58de710306017aa69b449d3929c7a73feb4dbb4b381760ce2a5e1fcc91d"
-    sha256 cellar: :any_skip_relocation, mojave:        "de037bb4344f9d6b82b62700f022d990fd567f397c8e300ccd08a5c3abef087e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "24edc61f9292c23bab83aae27656e0d5616ce52465a53ab8e4031fd20852d674"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0c8f7bc39372848d209eb00de8b47c02ffb0dced554957206d6448e3ce7e69bf"
+    sha256 cellar: :any_skip_relocation, catalina:      "0451e81a6af74d3837c66aacfe6324343f562d60e0d44630ddd90400827772bd"
+    sha256 cellar: :any_skip_relocation, mojave:        "dcd67a08d1b42c2c0c1c21ed1f95c25fadabf1685fd8386845c486708208bd07"
   end
 
   depends_on "gawk" => :build
