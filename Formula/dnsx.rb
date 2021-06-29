@@ -1,8 +1,8 @@
 class Dnsx < Formula
   desc "DNS query and resolution tool"
   homepage "https://github.com/projectdiscovery/dnsx"
-  url "https://github.com/projectdiscovery/dnsx/archive/v1.0.4.tar.gz"
-  sha256 "9b98fd691670b922c036bac5fcfc1a89afe244eab7d6d1f5689d3a96749876a2"
+  url "https://github.com/projectdiscovery/dnsx/archive/v1.0.5.tar.gz"
+  sha256 "63ad35f8508d434d686bf41fd8372d5ece1f24bed242b9697f1b583f79b4977a"
   license "MIT"
   head "https://github.com/projectdiscovery/dnsx.git"
 
@@ -16,7 +16,7 @@ class Dnsx < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args, "-ldflags", "-s -w", "./cmd/dnsx"
+    system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/dnsx"
   end
 
   test do
