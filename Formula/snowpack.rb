@@ -3,8 +3,8 @@ require "language/node"
 class Snowpack < Formula
   desc "Frontend build tool designed for the modern web"
   homepage "https://www.snowpack.dev"
-  url "https://registry.npmjs.org/snowpack/-/snowpack-3.6.2.tgz"
-  sha256 "600189376bd30203ea6d4b1ff18b8689132e40bb6b8d29d7d84f97e2eae95d08"
+  url "https://registry.npmjs.org/snowpack/-/snowpack-3.7.1.tgz"
+  sha256 "ac13f33efd2ae9b6210d4b41d2b045c7c6c97d4b391391271b3ed874e449cf95"
   license "MIT"
 
   bottle do
@@ -23,6 +23,7 @@ class Snowpack < Formula
 
   test do
     mkdir "work" do
+      system "npm", "init", "-y"
       system bin/"snowpack", "init"
       assert_predicate testpath/"work/snowpack.config.js", :exist?
 
