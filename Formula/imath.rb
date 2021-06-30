@@ -6,10 +6,10 @@ class Imath < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "d566baed11c63ab4a459fae705f97886ad32a3e568b54c323dd56ba27aef258a"
-    sha256 cellar: :any, big_sur:       "b959374888c1cc36b4133da024076bffa52ffdf9c9832ce16abf5201fd0ee568"
-    sha256 cellar: :any, catalina:      "aec5a5567cfa9df3ae811b55d7fd987d4cdee8e6c4cf13c42e2858dad1815242"
-    sha256 cellar: :any, mojave:        "b0364f416a66f09f4908ec029a5c1ef2bb1f3bbb0a2c463bccffe349568756a6"
+    sha256 cellar: :any, arm64_big_sur: "380189584c4b8acd2e776ac157c5c4d40fde86361e27913a2f35cef8027a6cf4"
+    sha256 cellar: :any, big_sur:       "dc1caaac49ebc5c4cd0f8a120102c513a101bf6f2cef0ff45972db5d8a2a6a5c"
+    sha256 cellar: :any, catalina:      "799ecbff5b86f6c8167c41e5abbaebf41acade96d9c311ff53fa2af8244c44c4"
+    sha256 cellar: :any, mojave:        "3280110f29ee186b8ab8463c81dd8305de8c8388815ceda75ba27ae21666704a"
   end
 
   depends_on "cmake" => :build
