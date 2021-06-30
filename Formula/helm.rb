@@ -8,10 +8,10 @@ class Helm < Formula
   head "https://github.com/helm/helm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7fbaacd5974e34eb482d7e8daf5d7361c7611a0b2800d9d69ee237325c278c1c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "79d8c1607e85268a5b8940a1537fef39e838258e74f1fc5033ca45cada755f70"
-    sha256 cellar: :any_skip_relocation, catalina:      "132464270967aa216a3e21a27fc8372d1d6b23e1ef9c289dc922512737f00ccd"
-    sha256 cellar: :any_skip_relocation, mojave:        "590ed30cc0502d3dee218dda8ca81b565b8aa3f853685468c24d5454563478cd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "449dee347b17a3d23c91446ba928174cf3017a61a3fa940631af9fb5d64a25f4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "fd6be8f1be7a5c70d2e405661ad113329b4bee963761913d6d86d66858b410a1"
+    sha256 cellar: :any_skip_relocation, catalina:      "2952ac5a7616cde0fdb055a8d3cc1e5d7895134689c7f49c064b32eedcc72d9a"
+    sha256 cellar: :any_skip_relocation, mojave:        "6f08477f73cbe14ec64701ad5813f76937f042e61252f7bc5fc3baf1c371e720"
   end
 
   depends_on "go" => :build
