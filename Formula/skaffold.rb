@@ -2,8 +2,8 @@ class Skaffold < Formula
   desc "Easy and Repeatable Kubernetes Development"
   homepage "https://skaffold.dev/"
   url "https://github.com/GoogleContainerTools/skaffold.git",
-      tag:      "v1.26.1",
-      revision: "438dae66fbf35a1c9ee23f21a6f6e8d991c3edc6"
+      tag:      "v1.27.0",
+      revision: "1f46f249c832bb2a99e3285ad327647c95ff4bb9"
   license "Apache-2.0"
   head "https://github.com/GoogleContainerTools/skaffold.git"
 
@@ -28,6 +28,6 @@ class Skaffold < Formula
   test do
     (testpath/"Dockerfile").write "FROM scratch"
     output = shell_output("#{bin}/skaffold init --analyze").chomp
-    assert_equal '{"dockerfiles":["Dockerfile"]}', output
+    assert_equal '{"builders":[{"name":"Docker","payload":{"path":"Dockerfile"}}]}', output
   end
 end
