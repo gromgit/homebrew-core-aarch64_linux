@@ -9,10 +9,10 @@ class TreeSitter < Formula
   head "https://github.com/tree-sitter/tree-sitter.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "0603c56e132ccd652a5eb07ebf951315590aa970e4d8a8571f884ac02ddf614f"
-    sha256 cellar: :any, big_sur:       "613460d86e0ed0472d024a0f9cf2fabb7da11f2487e96f00d1a9030f1bb29a55"
-    sha256 cellar: :any, catalina:      "5fe4891129581e6e910a6a4a6e9d57a163a0a06a25db66e84db65a367144a6e9"
-    sha256 cellar: :any, mojave:        "d76b4f8b94b91201d2e95de5254964ea4ca66421f3e801947a5bff31ddd6baf8"
+    sha256 cellar: :any, arm64_big_sur: "cde3ebc240632b22ebb43e06e5a01016f1e90e77e740ef3df0ce0bfcc9d5d3ca"
+    sha256 cellar: :any, big_sur:       "5b790b15e898a45d27aadd9e513f46aef3c0de96dce110eced8ffc4bef37af37"
+    sha256 cellar: :any, catalina:      "11d66cc7ce50df263c5acae45b334520c7a3314422da3c7050ff9c511f860196"
+    sha256 cellar: :any, mojave:        "1bf537d6e22c72586f41cc75cb0f9a496243c5daab3f406f4849e69851ba09fd"
   end
 
   depends_on "emscripten" => [:build, :test]
