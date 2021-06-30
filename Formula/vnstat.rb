@@ -7,9 +7,10 @@ class Vnstat < Formula
   head "https://github.com/vergoh/vnstat.git"
 
   bottle do
-    sha256 big_sur:  "817351cc1ffa85d14ea28c820837e9077d77302f0e2439a9686e22d0ebbc1093"
-    sha256 catalina: "5167bdbf374cb87411a3b3aa5b431f2777a90bff8fec599079794f06f0511dbb"
-    sha256 mojave:   "7c13d764a6f0fc06d1ea7a7800c568c2cab8f02ed2f50b12d62cef720c7baad9"
+    sha256 arm64_big_sur: "31160d2bd7a24af3e788d29b9465399ec27bcfe5b44bdf9a9d2176b540245fe9"
+    sha256 big_sur:       "817351cc1ffa85d14ea28c820837e9077d77302f0e2439a9686e22d0ebbc1093"
+    sha256 catalina:      "5167bdbf374cb87411a3b3aa5b431f2777a90bff8fec599079794f06f0511dbb"
+    sha256 mojave:        "7c13d764a6f0fc06d1ea7a7800c568c2cab8f02ed2f50b12d62cef720c7baad9"
   end
 
   depends_on "gd"
