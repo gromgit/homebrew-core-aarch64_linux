@@ -11,10 +11,10 @@ class Katago < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "8bb8afdfaae50c20643913c718895c64ffdd8752db97ee5f2389c0189ff04796"
-    sha256 cellar: :any, big_sur:       "788f1355623bff7e5aacda4bf692247dccfc6b9268d249887cfafb0cc4248202"
-    sha256 cellar: :any, catalina:      "096231d436c9d7291641e2597c42bcee2295424e7e018643583050dc53423ffe"
-    sha256 cellar: :any, mojave:        "f010ddc233b549f97b8f118117bc6ba7352c6f7e7b2c7c40471d80f4e6eac8f2"
+    sha256 cellar: :any, arm64_big_sur: "e959fd8773e9f01135e5a1573c02669594d8cd47f0ba05f990229610790df8fe"
+    sha256 cellar: :any, big_sur:       "bb76c2e9a26ffa268570a94764ec523c1f0a09800401b51609af457dc0c6569e"
+    sha256 cellar: :any, catalina:      "3121216dc8e50d68f3ba9398eeb89387ac7f8a25af0e200c576a536e6806e1ae"
+    sha256 cellar: :any, mojave:        "d683d128d4ecb2efb0e11b6d04bebb50c0157d2375bb1411007e81694cc4044c"
   end
 
   depends_on "cmake" => :build
