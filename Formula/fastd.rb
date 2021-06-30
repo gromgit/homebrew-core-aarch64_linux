@@ -8,11 +8,10 @@ class Fastd < Formula
   head "https://github.com/NeoRaider/fastd.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "a8f1263ce16085e5b01e6ffca44731ab1600332666bac3eafed55dc83e22bc4f"
-    sha256 cellar: :any, big_sur:       "a05e3210aecdfddd308b8ea828bbd32bd7d016deb7cca77dfaf07f4d981506c4"
-    sha256 cellar: :any, catalina:      "33e3a81748094389e5d7bd4cc894a75a01f40891f1a4693c4ea3e16014e912cb"
-    sha256 cellar: :any, mojave:        "eb48fd5b2eab89e016223dbbfdf5faaf6a4e0194f0a3e5711218c4f3d83727f5"
-    sha256 cellar: :any, high_sierra:   "5064081410018559132b1f2a970f897130474fa3f9919bd51c5e17253a67ed76"
+    sha256 cellar: :any, arm64_big_sur: "0c9a053904d99b504199894884c1bf8726d37a8d615e39f7241ca0288a1db48b"
+    sha256 cellar: :any, big_sur:       "80cb41c2885f7dea9a880de2a373f1643a9a204dcd1fbe7e865c7cb4fe2069f9"
+    sha256 cellar: :any, catalina:      "b26819307ac8f58961adcb171eaffcbb06dc4758667aca30ce726befc861523c"
+    sha256 cellar: :any, mojave:        "74193caa95dbb4e885eca705ce72b0fc3e708222e914448081752eee6c4051d9"
   end
 
   depends_on "bison" => :build
