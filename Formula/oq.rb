@@ -6,9 +6,9 @@ class Oq < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, big_sur:  "408b97fbe4ccc86dbeed6ae05820245caadae204441c2174bb578c22e13a5aae"
-    sha256 cellar: :any, catalina: "d2534a3698eca04b9f436a4c0afab849a97d827fd189df0246d36ab4c69c5ee8"
-    sha256 cellar: :any, mojave:   "527afb12eb240fd2d12e47d970802d5878801d4aa399897cfd1d611811ea8cf9"
+    sha256 cellar: :any, big_sur:  "d2103ce8be5e0323e7b3a05be2f8ddd87a8b1dab4a738bb8b4910d218d405330"
+    sha256 cellar: :any, catalina: "a0cfe0c660845ce97db5870370f0d7d8b456471d4cf78c4ab01dadae6e59d9c7"
+    sha256 cellar: :any, mojave:   "4163e9f867d0b15c64f522f2319185d5d1085426171cea15cd0e7654644d54bc"
   end
 
   depends_on "crystal" => :build
