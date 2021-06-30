@@ -9,10 +9,10 @@ class OciCli < Formula
   head "https://github.com/oracle/oci-cli.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "a33a28f5706d8676a2c96517da51eb3d283ac51947923538c1525065444ceb73"
-    sha256 cellar: :any, big_sur:       "9745e3afaf58f84fcd9a78f4a2e23cfaa20dae41804bb99a70f96abe7bab97e3"
-    sha256 cellar: :any, catalina:      "ba5bf40f89e60825539b8b830119d8b4d8651765c68e6d216dcd04e6ccebb5e7"
-    sha256 cellar: :any, mojave:        "855e843d8cff715a5c097db08bf4ad666e23802b5118dc77037758e6f3c3e439"
+    sha256 cellar: :any, arm64_big_sur: "20a70419c1126a509fed70fcb5c9334dfded322897c8c2f0e7c236ca05323642"
+    sha256 cellar: :any, big_sur:       "d3de63495e9f08629a38d57818d38db8ca573c46db7de0eab5603285f8ed155c"
+    sha256 cellar: :any, catalina:      "c4d1fee044f049b4958c0754d944ae046c0754785a48dcceaa72fa63cc0d36a1"
+    sha256 cellar: :any, mojave:        "3c2275c02f0392ec5ae183eafeae7e73fb947d40fd841602f99993e2e137218b"
   end
 
   depends_on "rust" => :build
