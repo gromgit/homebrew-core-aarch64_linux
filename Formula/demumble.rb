@@ -6,6 +6,13 @@ class Demumble < Formula
   license "Apache-2.0"
   head "https://github.com/nico/demumble.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b43c1b4396d845e300f9f5c7746fb6a393ea8a3189c822ba96c35cb1ddd7786b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f7dc50c58c1188bd07b90c0ecb57031f24ad3b463f41befd78ea5b5cfd1577e0"
+    sha256 cellar: :any_skip_relocation, catalina:      "c79b46404de20da59fb13b225006147666199f6a03b56e43820d20ae818dafff"
+    sha256 cellar: :any_skip_relocation, mojave:        "f843e7116cf05d2a7dff4fb8351d0609e8120d49aad84e810f44cc85d6b62811"
+  end
+
   depends_on "cmake" => :build
 
   def install
