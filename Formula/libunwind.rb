@@ -5,6 +5,10 @@ class Libunwind < Formula
   sha256 "90337653d92d4a13de590781371c604f9031cdb50520366aa1e3a91e1efb1017"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "01d88381315b99c187e8351a10764ff2e38872bd178fe51bf3ddedba3d6418ee"
+  end
+
   depends_on :linux
 
   uses_from_macos "xz"
