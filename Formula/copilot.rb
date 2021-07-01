@@ -15,10 +15,10 @@ class Copilot < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "00bb3d3cefc2e9f28a6ccc0e8edf7f4eede495b9bfbd14291ef77a23545af5c1"
-    sha256 cellar: :any_skip_relocation, big_sur:       "776ebf226370b5fa82ccfa98e635477c34c8e1efaac5c55f160edb41ccae05cd"
-    sha256 cellar: :any_skip_relocation, catalina:      "e093da32cdbd3e12fa39d85de968877b1aa8f8bd53fd1674931262f93447fc05"
-    sha256 cellar: :any_skip_relocation, mojave:        "5b053e65f70e6bd8b7871bee753948e0772ba27197caab88d504e787079d1a46"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d1daae8e25927025866e1ea6bb2ffe80458ceb5bb7530166beaaa9f7f5c067b4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3f014a96bf88088a04ce15b5c819f51a7837d63d05c0ed24e5892c6836148a1d"
+    sha256 cellar: :any_skip_relocation, catalina:      "15d6d9df85b83158108f992e81b95a63c342eefb42861764f0ec06ca2404f71e"
+    sha256 cellar: :any_skip_relocation, mojave:        "db0aa281480f7d4bf4b8bb2046b7563edb24fb2a03dba1fbadfd6530a4cd02bd"
   end
 
   depends_on "go" => :build
