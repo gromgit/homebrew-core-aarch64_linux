@@ -8,6 +8,13 @@ class S4cmd < Formula
   license "Apache-2.0"
   head "https://github.com/bloomreach/s4cmd.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f74b744af2e66f08ed24a849997fddf69f335833ae4e1491051ab2965f620677"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d53e697f8e5deb40ebb6bec040e02557cdc9789939fcd1bd202f6cac299aee62"
+    sha256 cellar: :any_skip_relocation, catalina:      "f381fd7d18bf02b9310987a7c6bab7e856648328764ea339700be2c5ff740a8c"
+    sha256 cellar: :any_skip_relocation, mojave:        "9bdd1cc24f552c01e5cdd0258cbfc64c7d585dcc3972efc345d127ea72a65e23"
+  end
+
   depends_on "python@3.9"
   depends_on "six"
 
