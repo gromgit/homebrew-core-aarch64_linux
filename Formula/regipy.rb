@@ -9,10 +9,10 @@ class Regipy < Formula
   head "https://github.com/mkorman90/regipy.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8fae411c31d51aa2e0438caef5399f141ae186047a341a689ba59cf86b34626c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8ebb9bd9b48cd477553257982fe0f6195a7edcb23c901cb3a79c78b10286b880"
-    sha256 cellar: :any_skip_relocation, catalina:      "b9b6615dfda260300715401165fc484a32c7405ab0f86898914812e3e013d440"
-    sha256 cellar: :any_skip_relocation, mojave:        "d76123625de70664978336ce0a3999225bcf52a4850d31425f51a3436903b32b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "91257770e12748b2294b18fb70712f846a2c218ea1892a4926a1552e5949a103"
+    sha256 cellar: :any_skip_relocation, big_sur:       "616104e4288483c21b232489b8794635f0ff64fb7421455fcbc0aa327ad512ff"
+    sha256 cellar: :any_skip_relocation, catalina:      "e7dff587bcebd61dc189997e5a46e74dc31874083b363c2be235cad38c95af3b"
+    sha256 cellar: :any_skip_relocation, mojave:        "631e3096dd01ecd93df8eb40955a3652fec372542b342cd4bff346b874de192b"
   end
 
   depends_on "python-tabulate"
