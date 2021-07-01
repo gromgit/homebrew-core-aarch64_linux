@@ -7,11 +7,11 @@ class Jabba < Formula
   head "https://github.com/shyiko/jabba.git"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, big_sur:     "a730868e347cb89b50393f96062b2c076f1d501b137ead1a795aa39e54ad4611"
-    sha256 cellar: :any_skip_relocation, catalina:    "7eddb409c7bb2784db21756e624a18b19977bb4df53ab547eaedd8abe876651e"
-    sha256 cellar: :any_skip_relocation, mojave:      "3101ea25ce49c3ed96b3c8595a5441fec3aeb536b56eca21c1dea56f6c1fd86b"
-    sha256 cellar: :any_skip_relocation, high_sierra: "8454f5aa9b8832908b1c889531118ea058b2e675ef7f7f37eeb282f454aeec1e"
+    rebuild 3
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "72cd725e75b0d214c6cbc03bc87fcb15d9b824ea24eba43f267cdfc768edf460"
+    sha256 cellar: :any_skip_relocation, big_sur:       "72c397a12fe10181efb7fca300d78d3244160c9a0a4dcbe2cd17c179df678db4"
+    sha256 cellar: :any_skip_relocation, catalina:      "146e37a3138b919c497da279eecd2d282d5f6f5e0f1b9aa94257df2fbf19efba"
+    sha256 cellar: :any_skip_relocation, mojave:        "6f2d27333e0b8d73ba2166c4abb960642d64a3efcd394ee5683e6c71b8d0c305"
   end
 
   depends_on "glide" => :build
