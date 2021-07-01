@@ -1,8 +1,8 @@
 class Easyengine < Formula
   desc "Command-line control panel to manage WordPress sites"
   homepage "https://easyengine.io/"
-  url "https://github.com/EasyEngine/easyengine/releases/download/v4.2.0/easyengine.phar"
-  sha256 "a091c0ae193cc0861628c18be0da4ab8a32b6e4287d5f07f50e6fa44b72ac503"
+  url "https://github.com/EasyEngine/easyengine/releases/download/v4.3.0/easyengine.phar"
+  sha256 "424cf6a7ebaa96b089f059cfd28563973170002df2c78cb93a893cb1c7732cfe"
   license "MIT"
 
   bottle do
@@ -13,7 +13,7 @@ class Easyengine < Formula
   end
 
   depends_on "dnsmasq"
-  depends_on "php@7.4"
+  depends_on "php"
 
   def install
     bin.install "easyengine.phar" => "ee"
