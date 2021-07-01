@@ -6,10 +6,10 @@ class Plow < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "55a57d56fb4121d4f031566e97a512606f086b31d22a8d77e82d3de1e7abec58"
-    sha256 cellar: :any_skip_relocation, big_sur:       "440d03556132b76a806c5dffef901daa5898ac914584c0e3852599f3506f8b86"
-    sha256 cellar: :any_skip_relocation, catalina:      "c8cd64bf0745ef4b2af1c62d0b04f5c10c8ae37ddaa6f66947e3b6f7fee4d13c"
-    sha256 cellar: :any_skip_relocation, mojave:        "21eea8db9f2eec92d56993651a482b4f4942434825d8c6da6a1e255a576078fe"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "eb13e15c3cb95c4e9ae36c498f5eafbbe2401bba7846e3eef7764e56927bafb2"
+    sha256 cellar: :any_skip_relocation, big_sur:       "35efcee910b6391bcb00a74e174bd2c7961742c75b7ce5d81cf739f5f8907e41"
+    sha256 cellar: :any_skip_relocation, catalina:      "d30cae49b41472ed81c454b2e5ef2031e1e46307f8b838b4892fedd80c41d318"
+    sha256 cellar: :any_skip_relocation, mojave:        "beb6ba83885124eb4ba8e2e4bb5bcaf8951bb574ef8d9b94c2c48307b92caff6"
   end
 
   depends_on "go" => :build
