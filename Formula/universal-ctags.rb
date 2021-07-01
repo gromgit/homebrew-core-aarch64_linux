@@ -13,10 +13,10 @@ class UniversalCtags < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "5632da55343589f261b5bd82581009a54d5a8e53a44c689f1a02f87a3c2251be"
-    sha256 cellar: :any, big_sur:       "7b1c55a1b6c7d08c0b965f3c87d12027e8bfb1905f18f3e00ceb53c025cabef6"
-    sha256 cellar: :any, catalina:      "b377c06540006c2abea0cea609adee1c5208ec9df29261e910d93ef2707346c6"
-    sha256 cellar: :any, mojave:        "8f96d9c527d3a76afae3c08f7da8fb30e7daea27789b270827af0e96f98cd955"
+    sha256 cellar: :any, arm64_big_sur: "35e9d2d17d249d990d004e833102d38f1152af5f217f7d4fbafd8c0c3fffe9df"
+    sha256 cellar: :any, big_sur:       "040ed8e3bd8763935f26d9171fb71ec3e3d9b0eaa4648175c9fa1bbc27f3b5d7"
+    sha256 cellar: :any, catalina:      "af2708e6e86ce02dc780448affdf42117fcd977e36260119656871b737912418"
+    sha256 cellar: :any, mojave:        "300fe7c6626914a338bbdd985b9fba389c8abfb245152ac019278104a7181648"
   end
 
   depends_on "autoconf" => :build
