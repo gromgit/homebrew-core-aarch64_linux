@@ -7,10 +7,10 @@ class Grafana < Formula
   head "https://github.com/grafana/grafana.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "feb8ca6c54a08d3aec98c8e528659fd2972c115ae4f7a7a06c994c272d86d548"
-    sha256 cellar: :any_skip_relocation, big_sur:       "eb4a1e345784b4d8cef6783f54a97b31931a2db0bdaa11e0d680adb0cc502abd"
-    sha256 cellar: :any_skip_relocation, catalina:      "1a9a19c6867393e2b69baf63242ed02a973bab9e5300d330ef159308c75b51d0"
-    sha256 cellar: :any_skip_relocation, mojave:        "43c8c61cf9ff5ee5a7ca6f558bb6770629fe2015a202bd89e6cb5cf4bf13c67f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bf15386e865b6d782274eccaf017996acb3ebe2540b1cc77835c694b2624140a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c1300536fb43531680407deb37659092e019a4b9906d50fc2c6ef203ef3f3cdc"
+    sha256 cellar: :any_skip_relocation, catalina:      "51111ec101ab87f3e6f06d32f01e6effb3ccdc8b5146ca1e3ce81f223dbd3452"
+    sha256 cellar: :any_skip_relocation, mojave:        "5d561e128c626c67d5b609033076fcd98ba64bb2d5b43def029d6d1e8e8dfacc"
   end
 
   depends_on "go" => :build
