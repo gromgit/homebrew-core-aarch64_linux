@@ -8,10 +8,10 @@ class Pylint < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c807803d27d773be113e277c47cab0351a36cde7558d2e8022326e542b933a8a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "850ddef1357ddd7e85d45bc1ad2395f4a635b298fcd0de54c3bf46cc490724fb"
-    sha256 cellar: :any_skip_relocation, catalina:      "5ec750ed5fc5cd989f6ffd7ea2909ab534a12ba83ae6231be0f5c1d173a791e3"
-    sha256 cellar: :any_skip_relocation, mojave:        "621da5947e7f1b54bf213363cb4651b859081ac6b4127f1be9b33316635c74a2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3ff41a5e93520b7cc174439913d6c247a8a2e18343993f5a46721f28d2b008b3"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3c45fef23411e00bb55e339c02dd878faab695eb035465d5dd3b25862a6bd1f4"
+    sha256 cellar: :any_skip_relocation, catalina:      "170b472a9d4129dc4a3e167617bb5f87e3a20036269278334b3175d55a263453"
+    sha256 cellar: :any_skip_relocation, mojave:        "2bdd3a79a765e777ee2e1d093c4af0558584f13fd69d737ff6577d93f8cdcfc9"
   end
 
   depends_on "python@3.9"
