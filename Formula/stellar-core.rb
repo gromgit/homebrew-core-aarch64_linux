@@ -2,8 +2,8 @@ class StellarCore < Formula
   desc "Backbone of the Stellar (XLM) network"
   homepage "https://www.stellar.org/"
   url "https://github.com/stellar/stellar-core.git",
-      tag:      "v17.1.0",
-      revision: "fbc0325759ff75dd250cb5e175978669cdb4e90a"
+      tag:      "v17.2.0",
+      revision: "e47d483433ce4f7eaf0a0512e2556beb482c8851"
   license "Apache-2.0"
   head "https://github.com/stellar/stellar-core.git"
 
@@ -23,6 +23,7 @@ class StellarCore < Formula
   depends_on "libpq"
   depends_on "libpqxx"
   depends_on "libsodium"
+  depends_on macos: :catalina # Requires C++17 filesystem
 
   uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
