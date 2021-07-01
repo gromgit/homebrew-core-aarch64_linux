@@ -7,10 +7,10 @@ class Xmake < Formula
   head "https://github.com/xmake-io/xmake.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5a38b802c57b6190760971adcb76f4cbdffb6c382dcd506648977c66a00d67d2"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c9d543ef49194fca52d4a8003d13d146cbe831da6e99c17e3cdb5230a13f4c4a"
-    sha256 cellar: :any_skip_relocation, catalina:      "d537ab687c86483e8c1913b2478728091df6cbcf634759e0be661c1fbdab9089"
-    sha256 cellar: :any_skip_relocation, mojave:        "4c90845f661ae1a80606cb1eb887220d258dd4a1c2450577472f438ad046ad98"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "92d5686c98e90835b2088117c4895bd6042874d8bb1dc453619bf7146d344462"
+    sha256 cellar: :any_skip_relocation, big_sur:       "460449a9f8a6eb606a0253668b3764dd06bf3c523dbce8580a72b3841c542cd2"
+    sha256 cellar: :any_skip_relocation, catalina:      "b46dc87d438d09c8f855997357afabbad0a5491d4ff8bd99c323bb25cdc3f666"
+    sha256 cellar: :any_skip_relocation, mojave:        "e0b91549983c6ea9fd8c6949eebadd7eba13762889e066b8bed1d9f3b88e4f67"
   end
 
   on_linux do
