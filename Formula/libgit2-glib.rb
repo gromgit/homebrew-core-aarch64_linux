@@ -13,9 +13,10 @@ class Libgit2Glib < Formula
   end
 
   bottle do
-    sha256 big_sur:  "bffdfd6183ae4bdb486f40f9a449ab0582387b40be36c356ce6f83642011bec7"
-    sha256 catalina: "335de71224cede561e05645cde3709acf3763e168d2da11b13586d3c3605d67e"
-    sha256 mojave:   "308f244da46a0a70ab9e1fb9cf2eae8dd24e26c363b344f5872f5ee65ef9043a"
+    sha256 cellar: :any, arm64_big_sur: "65222d2fafdeba76b0faf2735b616202a49f8361188a308b6a392e5f963600bd"
+    sha256               big_sur:       "bffdfd6183ae4bdb486f40f9a449ab0582387b40be36c356ce6f83642011bec7"
+    sha256               catalina:      "335de71224cede561e05645cde3709acf3763e168d2da11b13586d3c3605d67e"
+    sha256               mojave:        "308f244da46a0a70ab9e1fb9cf2eae8dd24e26c363b344f5872f5ee65ef9043a"
   end
 
   depends_on "gobject-introspection" => :build
