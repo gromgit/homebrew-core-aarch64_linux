@@ -12,6 +12,13 @@ class Woob < Formula
     regex(/^v?(\d+(?:\.(?:\d+|[a-z])+))$/i)
   end
 
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "495c9cea5e51223cad576f1b697e7507350e191d86d940c70796af8f6d653d33"
+    sha256 cellar: :any, big_sur:       "f75d147b1c16d0113e8f7dc707b286e1fc318a900951117ba1b2d69b1fc81d19"
+    sha256 cellar: :any, catalina:      "ead1bc5c9332e176ec53591a0bf2fcc923054692704259b3497f79d8d4c89ed2"
+    sha256 cellar: :any, mojave:        "934dedacec0cb8384854e63fa42b0d4c7fc84bb613fc250b066b14c33c8d6e56"
+  end
+
   depends_on "gnupg"
   depends_on "libyaml"
   depends_on "pillow"
