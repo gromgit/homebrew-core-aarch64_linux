@@ -11,10 +11,10 @@ class Kumactl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4097fa948ca7e4ade21154b3a3fab634fa6246e660fd43e17f394884d01f1510"
-    sha256 cellar: :any_skip_relocation, big_sur:       "280fcc2a498ef63eb8c7819b837c85e7886b99400687a2daa386eae4ae074122"
-    sha256 cellar: :any_skip_relocation, catalina:      "a4d492b6a3bcdf9dd545f55535769674f1bfd321ba38a9579841da1f2cfee0c0"
-    sha256 cellar: :any_skip_relocation, mojave:        "01c86cf43ef4a8b37f5f7ec4dd2c1db96f87f48908a07315092e26074f83c4b3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bfa40edc648e108d3fd498b5317211f0d1d6118c911cfd77b02b0a7f7f5a4a79"
+    sha256 cellar: :any_skip_relocation, big_sur:       "950d8dd21239d7c4a819ee99a7826ea6df10b8bd7a12e32c70e7eaa2881b1955"
+    sha256 cellar: :any_skip_relocation, catalina:      "b998b38934d6d7e599c3815fa706473d3a0424bbcbe5eb25618c98a788d0555c"
+    sha256 cellar: :any_skip_relocation, mojave:        "bfec9c7375d179e3cd1ca55b964cbb8227e5178d48939ccef30c70656ae1a312"
   end
 
   depends_on "go" => :build
