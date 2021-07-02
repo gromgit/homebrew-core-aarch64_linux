@@ -1,8 +1,8 @@
 class Elixir < Formula
   desc "Functional metaprogramming aware language built on Erlang VM"
   homepage "https://elixir-lang.org/"
-  url "https://github.com/elixir-lang/elixir/archive/v1.12.1.tar.gz"
-  sha256 "96167d614b9c483efc54bd7898c3eea4768569a77dd8892ada85d7800d5e3ea4"
+  url "https://github.com/elixir-lang/elixir/archive/v1.12.2.tar.gz"
+  sha256 "701006d1279225fc42f15c8d3f39906db127ddcc95373d34d8d160993356b15c"
   license "Apache-2.0"
   head "https://github.com/elixir-lang/elixir.git"
 
