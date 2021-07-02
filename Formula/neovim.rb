@@ -1,28 +1,16 @@
 class Neovim < Formula
   desc "Ambitious Vim-fork focused on extensibility and agility"
   homepage "https://neovim.io/"
+  url "https://github.com/neovim/neovim/archive/v0.5.0.tar.gz"
+  sha256 "2294caa9d2011996499fbd70e4006e4ef55db75b99b6719154c09262e23764ef"
   license "Apache-2.0"
-  revision 2
-
-  stable do
-    url "https://github.com/neovim/neovim/archive/v0.4.4.tar.gz"
-    sha256 "2f76aac59363677f37592e853ab2c06151cca8830d4b3fe4675b4a52d41fc42c"
-
-    # Patch for Apple Silicon. Backported from
-    # https://github.com/neovim/neovim/pull/12624
-    patch :DATA
-  end
+  head "https://github.com/neovim/neovim.git"
 
   bottle do
     sha256 arm64_big_sur: "9e24789f21eba59817331f583622d5594598162de01eeac4abfdeacdee67f7a9"
     sha256 big_sur:       "33fd21ea56ff618b9840e4ca87ddf2b0450f73dff8f39eed163052e171395bdb"
     sha256 catalina:      "e2d64684c43eb19390975d6434e2845f98f9e0f0f91c00b1277750c36bdf0676"
     sha256 mojave:        "e6e9437addbf446ed88518784f461a0bdb9c578b6779f3353e066a4491b52465"
-  end
-
-  head do
-    url "https://github.com/neovim/neovim.git"
-    depends_on "tree-sitter"
   end
 
   depends_on "cmake" => :build
@@ -35,6 +23,7 @@ class Neovim < Formula
   depends_on "luajit-openresty"
   depends_on "luv"
   depends_on "msgpack"
+  depends_on "tree-sitter"
   depends_on "unibilium"
 
   uses_from_macos "gperf" => :build
@@ -97,26 +86,3 @@ class Neovim < Formula
     assert_equal "Hello World from Neovim!!", (testpath/"test.txt").read.chomp
   end
 end
-
-__END__
-diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 6b3a8dc..f3370e3 100644
---- a/CMakeLists.txt
-+++ b/CMakeLists.txt
-@@ -358,16 +358,6 @@ if(CMAKE_C_COMPILER_ID STREQUAL "GNU" OR CMAKE_C_COMPILER_ID STREQUAL "Clang")
-   add_definitions(-D_GNU_SOURCE)
- endif()
- 
--if(CMAKE_SYSTEM_NAME STREQUAL "Darwin" AND CMAKE_SIZEOF_VOID_P EQUAL 8)
--  # Required for luajit.
--  set(CMAKE_EXE_LINKER_FLAGS
--    "${CMAKE_EXE_LINKER_FLAGS} -pagezero_size 10000 -image_base 100000000")
--  set(CMAKE_SHARED_LINKER_FLAGS
--    "${CMAKE_SHARED_LINKER_FLAGS} -image_base 100000000")
--  set(CMAKE_MODULE_LINKER_FLAGS
--    "${CMAKE_MODULE_LINKER_FLAGS} -image_base 100000000")
--endif()
--
- include_directories("${PROJECT_BINARY_DIR}/config")
- include_directories("${PROJECT_SOURCE_DIR}/src")
- 
