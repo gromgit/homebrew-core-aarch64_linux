@@ -8,10 +8,10 @@ class Fdroidserver < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "ab60544b3cad381e7a238b21a894f8f7071a5f7472a143887cea59e2394f15f8"
-    sha256 cellar: :any, big_sur:       "5a8587dca17252d8606cfe95576d42a472abaa6dccd63a05a17111f4087d7062"
-    sha256 cellar: :any, catalina:      "3c811ae6452e2a3414253697d6485106852ea58dfb98835ec3d8ca98aead0c0b"
-    sha256 cellar: :any, mojave:        "34d6924287d6d4bf4cfd02d348c9e6005245e0bf1033c214c5bcac592d91ad84"
+    sha256 cellar: :any, arm64_big_sur: "5a4f935b95b28201b5ffbbf47402958491e3524d411783a2d5d1a9e30c44852c"
+    sha256 cellar: :any, big_sur:       "5799adb8ba71950515dbdb64e0c922b5079545a8586c85db34712e650da9716d"
+    sha256 cellar: :any, catalina:      "6008e2771da315cf355403c8c7d4728ad8b761be1fb1ebd60542ce1b1782b9f1"
+    sha256 cellar: :any, mojave:        "0f78af7898292217484adc0e1a2d56005df991def5be954a87440fa485fc97f3"
   end
 
   depends_on "pkg-config" => :build
