@@ -7,10 +7,9 @@ class WasmPack < Formula
   head "https://github.com/rustwasm/wasm-pack.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:     "d36864923f58bf85f064b46990765d4087c6a8b00b305b98ed408db7d8d5e56a"
-    sha256 cellar: :any_skip_relocation, catalina:    "349d47601c15c1639f9a2c303544addd05b6178a0ae9c3dff15ce53f74d2dfc6"
-    sha256 cellar: :any_skip_relocation, mojave:      "3fa2dd4e71144a07b14323486a31ef12065d31b90e30c30394f2833b205781db"
-    sha256 cellar: :any_skip_relocation, high_sierra: "f6bc091f507521b82e308a1f1aabdaa1e6afdae80e3beaa0c097bf5702e55c1e"
+    sha256 cellar: :any_skip_relocation, big_sur:  "49e5f6aec0c98af3fe8d3145ea5e70d036823a173a4f16ec0829504239c2f0e0"
+    sha256 cellar: :any_skip_relocation, catalina: "e3d7080de0f2a638a92818bceb7d744461bc4876f61c9e4432b23daae7c586ad"
+    sha256 cellar: :any_skip_relocation, mojave:   "29fab21c9cff3ce852b31580c4cd6777918fdaabd16124f0cfb9fdfdc02c3a60"
   end
 
   depends_on "rust" => :build
