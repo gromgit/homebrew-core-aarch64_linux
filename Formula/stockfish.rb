@@ -12,10 +12,10 @@ class Stockfish < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a695ec759970fee9683ea548aaa9d90a0e355965f813d6eb3561b15a15ad4390"
-    sha256 cellar: :any_skip_relocation, big_sur:       "76291e5d29db6a4c5c9bd3fe6ca728294cc5f6bc67610831a214e7d98ab7d47f"
-    sha256 cellar: :any_skip_relocation, catalina:      "2786e7ccf04a15f45861c6949caa3b11219353bf3c2aadc03e8bbc2114ecbc67"
-    sha256 cellar: :any_skip_relocation, mojave:        "e375b405f0d4f38eb8b9fa73156817a62777e80d350b9ef46b0088bf3cf739fe"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "81b4c0a9df6cc42255c8795430e990ddf47a42831c5e54b1273e7b3a9221e316"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c5483261810c53e7600cf7739e046253951413b22bfe480d522ad63bd796d4e6"
+    sha256 cellar: :any_skip_relocation, catalina:      "31819d40841821593f27ab92a021ae03458b251e91c80bd0d099af2062fa6a51"
+    sha256 cellar: :any_skip_relocation, mojave:        "684d804597360a5a7bc70b9392ef51b54627fdd864148eaaa10d6a3ddcbc5f8d"
   end
 
   def install
