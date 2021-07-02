@@ -8,10 +8,10 @@ class AngularCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f755f4ef5c2960dabf41f55c757bf51a3b888b6c003b44c8509dbb8c5d29b35b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0fee2bdc30bf37e1504563ef41221d5ae57a14a516bff015f95c5d00ec26cbbf"
-    sha256 cellar: :any_skip_relocation, catalina:      "0fee2bdc30bf37e1504563ef41221d5ae57a14a516bff015f95c5d00ec26cbbf"
-    sha256 cellar: :any_skip_relocation, mojave:        "0fee2bdc30bf37e1504563ef41221d5ae57a14a516bff015f95c5d00ec26cbbf"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "86f7b99a8799e8a0ff384074418409f83a674989c84d8ca220f9db00a45ca314"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e680bf4fb93924b180d3fc27b047e43f739b382dcc019c9b9b100d55e8396fa4"
+    sha256 cellar: :any_skip_relocation, catalina:      "e680bf4fb93924b180d3fc27b047e43f739b382dcc019c9b9b100d55e8396fa4"
+    sha256 cellar: :any_skip_relocation, mojave:        "e680bf4fb93924b180d3fc27b047e43f739b382dcc019c9b9b100d55e8396fa4"
   end
 
   depends_on "node"
