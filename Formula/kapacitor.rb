@@ -13,10 +13,10 @@ class Kapacitor < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6840ff3ad3bbd7eb8500d7035f7724d278ffd4fa8059c8f00a72471f1daff4a1"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8e0bd768594327baa91874afc5aeaf9eebe310e50554a2c9a02f486312a278f1"
-    sha256 cellar: :any_skip_relocation, catalina:      "4551fac2fe167dacce08c19c4bec7649697cb2a5736b2c6b9bcdff81218d8f53"
-    sha256 cellar: :any_skip_relocation, mojave:        "9f08dac43c3173f7a1847ce86e12d39461df159f0f5f97f21815758cfb785aba"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e936a84319bfb8fd945be0ffa50fdd7c35597edbd71b83ece8ba5e2b12a9efc6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "64c374648abca9d3bfcdbc77d7fabab2bf6c1adcc57091e4641e58cfe1a5769f"
+    sha256 cellar: :any_skip_relocation, catalina:      "da7b770877b1b6377c9444a3e21f3c7f5d948171365b5234b6f6437466906b86"
+    sha256 cellar: :any_skip_relocation, mojave:        "d4267beafd64a2e8c84611390e80af7086154fcb361873c6a69e8751e0c177fa"
   end
 
   depends_on "go" => :build
