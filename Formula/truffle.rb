@@ -8,10 +8,10 @@ class Truffle < Formula
   license "MIT"
 
   bottle do
-    sha256 arm64_big_sur: "d94c9ec49b979c868b660af7190a0eac986921fc92be0c6cf0ea3a352d300098"
-    sha256 big_sur:       "c632535a837bc429389b9d41a58be4121f85ff333bc27b394d393306b3612453"
-    sha256 catalina:      "4070875c9df6e2d15efc7c74e94f52a017488399a30bd5909a770a3b244ee39a"
-    sha256 mojave:        "b66e42ca3a4f897e6ea92e2bc4733f9f4622b62d4048f86f30c3837f151b587a"
+    sha256 arm64_big_sur: "412e37c91f24057b8619fda14f03c9ee422aa614be629b28e0c8a9004537be90"
+    sha256 big_sur:       "69e9ff5ca5ead347a2b8856e92b26e15ed852913ef692e98b7a0171003e2263b"
+    sha256 catalina:      "e689658d4817e997f6cb4edd988decbe92762134cb9ae1387be5e8f34b79c6b5"
+    sha256 mojave:        "5cfffd42dee39e1ac94a63ef6c8e070ac46a82d4bb734fc29ef3d653b199d8c0"
   end
 
   depends_on "node"
