@@ -7,10 +7,10 @@ class Neovim < Formula
   head "https://github.com/neovim/neovim.git"
 
   bottle do
-    sha256 arm64_big_sur: "9e24789f21eba59817331f583622d5594598162de01eeac4abfdeacdee67f7a9"
-    sha256 big_sur:       "33fd21ea56ff618b9840e4ca87ddf2b0450f73dff8f39eed163052e171395bdb"
-    sha256 catalina:      "e2d64684c43eb19390975d6434e2845f98f9e0f0f91c00b1277750c36bdf0676"
-    sha256 mojave:        "e6e9437addbf446ed88518784f461a0bdb9c578b6779f3353e066a4491b52465"
+    sha256 arm64_big_sur: "8c2031ed12ca5a2af5d317f74a3878b2acdfc8b8bd61f8c58ca99b52bfc2f29a"
+    sha256 big_sur:       "c5e9addc65899936e06676db8a4c0239ca6e6c44936b21df1ade343dfe860995"
+    sha256 catalina:      "13d31cb537237f3b9245c6c2de0e55ae4d7730d06742aec5a3e98a5365934eae"
+    sha256 mojave:        "8f7a519050bf438143c4f7933f63d6aa1ccb1c062f4ae76ccaa7bf22d35f2f6e"
   end
 
   depends_on "cmake" => :build
