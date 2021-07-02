@@ -12,6 +12,7 @@ class Help2man < Formula
     sha256 cellar: :any,                 big_sur:       "daa1e20f7225b1b4e64b2b022712a767d238a1dbe07dda53c63dfe1f0f0f8275"
     sha256 cellar: :any,                 catalina:      "337cedb9b9f97c1a1f4e08f3ff79142501d85da4f997c1859cd1dcb05653a836"
     sha256 cellar: :any,                 mojave:        "7d2a720ba3e5020ae28f32cc5705ffd9c8ec7b8b52aed3272d7d43e82eb91c3c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3df16786bbbf321fa53130eade6395de200c6c2b03d5eefc48968bdd9ce5f817"
   end
 
   depends_on "gettext" if Hardware::CPU.intel?
