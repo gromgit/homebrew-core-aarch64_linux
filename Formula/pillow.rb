@@ -7,10 +7,10 @@ class Pillow < Formula
   head "https://github.com/python-pillow/Pillow.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "edbe60eed19bc463e465538c877749cf3b85196ecaa2279b8bbcdaeaccef3fcc"
-    sha256 cellar: :any, big_sur:       "c4782627d43206f0d898a4502de8ce497ab1f785bad5f48407d3e4a6d9a68ee9"
-    sha256 cellar: :any, catalina:      "fe025bfeb7f8ff899c01c38b152aeba7256d74c9db811cab958fbbdafce15047"
-    sha256 cellar: :any, mojave:        "34815debfe6d381097c5fe36fa94b18a2e5f18b20348eda380378c25070d0497"
+    sha256 cellar: :any, arm64_big_sur: "31de7d0b73ab00c1552d9d0303203a984950f6c65e5b157b2fd539ffd102a2bf"
+    sha256 cellar: :any, big_sur:       "f56f60cef2b8bb7c3d5457b48adf5a8d4422117521e3745e8884e80db2f9ee3d"
+    sha256 cellar: :any, catalina:      "30f22c9c5b96ae0d74bb77f968b04aba54c2905170664ae8e261d784c6232e7e"
+    sha256 cellar: :any, mojave:        "3127367c5ec2f26a577b9b2b1e7d57079e5fda1ea360c04789e88dc30c784e05"
   end
 
   depends_on "pkg-config" => :build
