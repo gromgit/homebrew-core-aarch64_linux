@@ -7,8 +7,9 @@ class KymaCli < Formula
   head "https://github.com/kyma-project/cli.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "d29d9c8e01195ba6a693b7700c93337fbb0bbc218c94699f03480eb2d96904fa"
-    sha256 cellar: :any_skip_relocation, catalina: "c9c75c10ca31b346ac9d713370dd172e3ba77745520c6b1134f654b4ea0058cd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f77ea7dbfdafcd9763f8fe4fe2dbb0399a3aec2f7b16c8422173d1392026f886"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d29d9c8e01195ba6a693b7700c93337fbb0bbc218c94699f03480eb2d96904fa"
+    sha256 cellar: :any_skip_relocation, catalina:      "c9c75c10ca31b346ac9d713370dd172e3ba77745520c6b1134f654b4ea0058cd"
   end
 
   depends_on "go" => :build
