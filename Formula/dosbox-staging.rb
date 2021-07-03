@@ -1,10 +1,9 @@
 class DosboxStaging < Formula
   desc "Modernized DOSBox soft-fork"
   homepage "https://dosbox-staging.github.io/"
-  url "https://github.com/dosbox-staging/dosbox-staging/archive/v0.76.0.tar.gz"
-  sha256 "7df53c22f7ce78c70afb60b26b06742b90193b56c510219979bf12e0bb2dc6c7"
+  url "https://github.com/dosbox-staging/dosbox-staging/archive/v0.77.0.tar.gz"
+  sha256 "85e1739f5dfd7d96b752b2b0e12aad6f95c7770b47fcdaf978d4128d7890d986"
   license "GPL-2.0-or-later"
-  revision 1
   head "https://github.com/dosbox-staging/dosbox-staging.git"
 
   bottle do
@@ -14,8 +13,8 @@ class DosboxStaging < Formula
     sha256 cellar: :any, mojave:        "403eba84e98409729480a474508c66b259b4125a80efede453da0021f6893611"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "fluid-synth"
   depends_on "libpng"
@@ -24,16 +23,11 @@ class DosboxStaging < Formula
   depends_on "sdl2_net"
 
   def install
-    args = %W[
-      --prefix=#{prefix}
-      --disable-dependency-tracking
-      --disable-sdltest
-      --enable-core-inline
-    ]
-
-    system "./autogen.sh"
-    system "./configure", *args
-    system "make", "install"
+    mkdir "build" do
+      system "meson", *std_meson_args, "-Duse_mt32emu=false", ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
     mv bin/"dosbox", bin/"dosbox-staging"
     mv man1/"dosbox.1", man1/"dosbox-staging.1"
   end
