@@ -6,10 +6,10 @@ class Onefetch < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0a11932b3795555ff253f46390d64d6926c9603883929c8b5dcc07ed5dfd7f9e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "460853143bb40faf7de7d49c64616d4eeea29b0de22e9c153f31af3f7c1605db"
-    sha256 cellar: :any_skip_relocation, catalina:      "0e9069d562ca1b387472e961493b8cc6f962bfa81d8de3cc86f06bc40bcd4d85"
-    sha256 cellar: :any_skip_relocation, mojave:        "1a6342771b768a51b042f1978b360a374cec75ac4ed2a9dd7317db6aff552127"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3b34a0c5e5b96f6f4a9d291987768f92052ea180daaac3eb618b6dfff7619062"
+    sha256 cellar: :any_skip_relocation, big_sur:       "8b177010dd910134a1e3bde7e6c3949a6be21fc09f27e5c69e4d97972eef2d31"
+    sha256 cellar: :any_skip_relocation, catalina:      "2766a40c10e0e4a0dcca6045964698238a8497cb3120b8679fe488cacd0934e4"
+    sha256 cellar: :any_skip_relocation, mojave:        "0830e9a9e0b6e20b6b0f48fab6600fce1de884d6a7b5d3b29c8c5aa4fabe24a7"
   end
 
   depends_on "rust" => :build
