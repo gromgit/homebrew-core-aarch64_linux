@@ -6,10 +6,10 @@ class Clash < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8aef958297b8b5830956a7ddc5963612e9e2c740352edd38c25df56a5580cb0b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "929218c5e3d4f4298354d4f472d2d23d74c1fa646c4314ef9dd59806c7a19d85"
-    sha256 cellar: :any_skip_relocation, catalina:      "48a4822d2b73eb0c26b40c556206768e0f622b19e419f496802118fabd6b98d3"
-    sha256 cellar: :any_skip_relocation, mojave:        "6f48c8bbb360d16ac86763d0114c2f03bece2bcd0295c2e8ce8344b806f873ba"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5804c6175628e8360fc20e187d1283fd9915448968b5bb29d3f2910614df22d9"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f07f34ebd6750c2df7120cda275b02a12315d27e8a6ac2cdd5af81fe507a410a"
+    sha256 cellar: :any_skip_relocation, catalina:      "3bbce471b72391bce052279f861d1b8ea642b34e84c44ee8f6c9482b7ccf7add"
+    sha256 cellar: :any_skip_relocation, mojave:        "0f1e0e2c3eab1bad6cf974e113a5c0114d6a38d1189211fb28cb64ca45652e6f"
   end
 
   depends_on "go" => :build
