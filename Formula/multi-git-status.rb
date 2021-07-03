@@ -5,6 +5,10 @@ class MultiGitStatus < Formula
   sha256 "13ce21fc087354cd7e0fd16f332bcff7e8c42c0315d3f27803159926aff3360f"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "f7fede3a899bdff2736d9aa78be4efca5ec614f9983c3fb45a1f8a71abbf0dfe"
+  end
+
   def install
     # This is what the included 'install.sh' script does, except that
     # we use Homebrew's preferred location for 'man1'.
