@@ -14,10 +14,10 @@ class Spack < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fcc821aadb5b5ec99c3d3e59609b5902bae2e7ab1925c62de9c23cb6f09da45a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f15804975042d0283321011b5066461813cbc8944bcf0d71aaffbe28daf3d0f7"
-    sha256 cellar: :any_skip_relocation, catalina:      "f15804975042d0283321011b5066461813cbc8944bcf0d71aaffbe28daf3d0f7"
-    sha256 cellar: :any_skip_relocation, mojave:        "f15804975042d0283321011b5066461813cbc8944bcf0d71aaffbe28daf3d0f7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6a57e46cd9b0a498705657cc666892f031e57fd42bfdfbc2561165ded9582d37"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ab713b17720b8b02b22c0d2070e6b27d498d552c420e73bd7cf246e565bf7eae"
+    sha256 cellar: :any_skip_relocation, catalina:      "ab713b17720b8b02b22c0d2070e6b27d498d552c420e73bd7cf246e565bf7eae"
+    sha256 cellar: :any_skip_relocation, mojave:        "ab713b17720b8b02b22c0d2070e6b27d498d552c420e73bd7cf246e565bf7eae"
   end
 
   depends_on "python@3.8"
