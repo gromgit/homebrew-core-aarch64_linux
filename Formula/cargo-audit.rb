@@ -12,10 +12,10 @@ class CargoAudit < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "5135cd085b6e2a687ac7e64fa7c0c38dc75132f1aeb628cb096e67dc51e5cd20"
-    sha256 cellar: :any, big_sur:       "4e45de8a4031f71511991181b941ce01e77c095020ddee580a2d9acc053ff958"
-    sha256 cellar: :any, catalina:      "1e64730b7d7d3212bc3a6d2095f436d31a6dc3024edf0c2372abd058598472c8"
-    sha256 cellar: :any, mojave:        "c3b4a847138404b1500c94a4eca5d1b3f8a9bda86f7976856306cf5c251e362c"
+    sha256 cellar: :any, arm64_big_sur: "5e8059900b81f49fedfe479e72848540cb6039f0d2a936f7ac88beb0d3628773"
+    sha256 cellar: :any, big_sur:       "b744c2fec00f884a3d519852109e95ca059ab196eb3c8ec961cde2beff18a5af"
+    sha256 cellar: :any, catalina:      "e2e898ca14b04941aa3156a559a6d206c30b702e15f357e1f0ce80cd05e8243b"
+    sha256 cellar: :any, mojave:        "23d7b5280e15a08a5581a681616b1b1310ab2ad92bd99c7c180abf5b053c8688"
   end
 
   depends_on "rust" => :build
