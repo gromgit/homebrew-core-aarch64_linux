@@ -9,10 +9,10 @@ class Awscurl < Formula
   head "https://github.com/okigan/awscurl.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "6d4e4d520be807811aeef9f0eafc1b2f2baf08e251c66c3593a9cc0c728a74d7"
-    sha256 cellar: :any, big_sur:       "10536d83b8e8bc939df88ac89a6a8d702bf49fa4d0939788283564e5b544c6bc"
-    sha256 cellar: :any, catalina:      "eac472d7f48b0bc10fcc6fcfa3632d3038e61184adca3d2c7219120cce224d35"
-    sha256 cellar: :any, mojave:        "107eb0abf391c2e3cdc2ab2e74e4482cc018bb81d596141ff330583c469c7343"
+    sha256 cellar: :any, arm64_big_sur: "adad9b16b9ba0446ca1b984d20ba8eaf00173ffd2e86fb5d8644c05ace467169"
+    sha256 cellar: :any, big_sur:       "acee4c8f1abe9c5fd79537e3047252a1e463d3500d7d0991b0f27b1422a48a62"
+    sha256 cellar: :any, catalina:      "88c5978dea4124ccf5e1501e0077bdf4b070bce69450af2a80189e63f87f3a04"
+    sha256 cellar: :any, mojave:        "4222129e83e93919b8759bbc1dc49b9a6e80a182bc72bcbd3d117d19b2c11135"
   end
 
   depends_on "rust" => :build
