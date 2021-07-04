@@ -14,10 +14,11 @@ class Llvm < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "4c8e51f4be4bd897f7eff223409c7215afa87dc6dfe943b90f6a719fa99505b0"
-    sha256 cellar: :any, big_sur:       "a72f029b6c0dbb708b1da7a0fee2ff771adce0141f891145d4cd04dcc74c8f08"
-    sha256 cellar: :any, catalina:      "647ff05ed5d5edcf5be265a731bdfbae67ff2a3a1c4d077bbe3084c9319838f0"
-    sha256 cellar: :any, mojave:        "9231c5c2edb2c0d5226bec12cf1fe40b92beedbdf2fcc03585aa1f0a5d9ae2bc"
+    sha256 cellar: :any,                 arm64_big_sur: "4c8e51f4be4bd897f7eff223409c7215afa87dc6dfe943b90f6a719fa99505b0"
+    sha256 cellar: :any,                 big_sur:       "a72f029b6c0dbb708b1da7a0fee2ff771adce0141f891145d4cd04dcc74c8f08"
+    sha256 cellar: :any,                 catalina:      "647ff05ed5d5edcf5be265a731bdfbae67ff2a3a1c4d077bbe3084c9319838f0"
+    sha256 cellar: :any,                 mojave:        "9231c5c2edb2c0d5226bec12cf1fe40b92beedbdf2fcc03585aa1f0a5d9ae2bc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dd289b18765330d4f6494cc325fc15c4654bfcd7f27cec81ba54dfe1c3886e0e"
   end
 
   # Clang cannot find system headers if Xcode CLT is not installed
