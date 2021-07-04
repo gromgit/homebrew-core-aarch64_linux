@@ -6,10 +6,11 @@ class OpenMesh < Formula
   head "https://www.graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh.git"
 
   bottle do
-    sha256 cellar: :any, big_sur:     "1162cfaad47a077402ef01854605a5fe5ab7e696ea56ab9352f753c25df231d6"
-    sha256 cellar: :any, catalina:    "40eabd6160d88b74bb3298b42dfce249c327bee9a596b5911a4015462b457dfb"
-    sha256 cellar: :any, mojave:      "3c523efbed147ef236ba22b7fdfc8fddae883b4ce7b9f03e970af199416adbe5"
-    sha256 cellar: :any, high_sierra: "a1b6514505ea011f01e8a61fd20dec9f31b900a42e8581e24a23beca738dc5f3"
+    sha256 cellar: :any, arm64_big_sur: "4602ad1fc42a6aa33f4198ad3a3ea165e65303936d16444a5002821d013463cb"
+    sha256 cellar: :any, big_sur:       "1162cfaad47a077402ef01854605a5fe5ab7e696ea56ab9352f753c25df231d6"
+    sha256 cellar: :any, catalina:      "40eabd6160d88b74bb3298b42dfce249c327bee9a596b5911a4015462b457dfb"
+    sha256 cellar: :any, mojave:        "3c523efbed147ef236ba22b7fdfc8fddae883b4ce7b9f03e970af199416adbe5"
+    sha256 cellar: :any, high_sierra:   "a1b6514505ea011f01e8a61fd20dec9f31b900a42e8581e24a23beca738dc5f3"
   end
 
   depends_on "cmake" => :build
