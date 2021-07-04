@@ -8,6 +8,13 @@ class Pythran < Formula
   license "BSD-3-Clause"
   head "https://github.com/serge-sans-paille/pythran.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4056653834555c454541d238ee682662947b616b434cad92de4c6b94af9a8cd8"
+    sha256 cellar: :any_skip_relocation, big_sur:       "54adeffab0bcc6785b85521ba761ceee881be84749eaa4463234651dc69ed664"
+    sha256 cellar: :any_skip_relocation, catalina:      "54adeffab0bcc6785b85521ba761ceee881be84749eaa4463234651dc69ed664"
+    sha256 cellar: :any_skip_relocation, mojave:        "54adeffab0bcc6785b85521ba761ceee881be84749eaa4463234651dc69ed664"
+  end
+
   depends_on "gcc" # for OpenMP
   depends_on "numpy"
   depends_on "openblas"
