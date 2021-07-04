@@ -7,6 +7,13 @@ class Ciphey < Formula
   sha256 "302a90261e9acc9b56ea29c313192f0c6f6ce112d37f4f9d404915052e19bf09"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "113ac680f31175402967ca0c068ca1c25aa4920983749e16ee8978dfd0dc281b"
+    sha256 cellar: :any, big_sur:       "42fdf7cbf98607e785727268be58e2aa8a6c2b5d25f3fa790eb4d2d08b2935b4"
+    sha256 cellar: :any, catalina:      "e6fce300a66cbfdec79b6026b42374b42fca432307cfe59482c28e43fd2be73d"
+    sha256 cellar: :any, mojave:        "604e9f29f6dcd6cfa51b0e5580d91a293d7e5ed15296d540d3d305a47fe65197"
+  end
+
   depends_on "boost" => :build
   depends_on "cmake" => :build
   depends_on "poetry" => :build
