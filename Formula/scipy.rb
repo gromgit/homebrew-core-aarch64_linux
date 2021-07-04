@@ -7,10 +7,10 @@ class Scipy < Formula
   head "https://github.com/scipy/scipy.git"
 
   bottle do
-    sha256               arm64_big_sur: "dca16789fc4b99cb12658372f146ef839ab64ba3c838a0aad047af8f72cf52fe"
-    sha256 cellar: :any, big_sur:       "23f22153d382559a089df4cbae73ff5c4b1329add5230d135b71e8447285b952"
-    sha256 cellar: :any, catalina:      "0882b3e88eb307215e7c7867716e987ddd829bbec6709b295955679a19962e82"
-    sha256 cellar: :any, mojave:        "7ce61d050e7d244c9c3405dfa25c31efe50e0d7a5448003bff395aff5bd4e262"
+    sha256 cellar: :any, arm64_big_sur: "d741913cb81d77ff7e9b1b6a926e3ac49f9971c49267331fce0b6070f7042dde"
+    sha256 cellar: :any, big_sur:       "beab14d43846f01df17df652134b294f610f5168c7ee15aa704a9b694627d2f7"
+    sha256 cellar: :any, catalina:      "d903e85c46fb8bb667bdf0433491fd2a335870ff79c02bd9392ea09e6704e74d"
+    sha256 cellar: :any, mojave:        "b81ef93026ddb9110681de09d83f26de17c20ce3129361a9d685b80c49135dc5"
   end
 
   depends_on "cython" => :build
