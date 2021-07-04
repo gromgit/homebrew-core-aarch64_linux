@@ -11,10 +11,10 @@ class Lynis < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a22fbdbfc60985e0a634cbef0b4083666064b8e314ed79c2773f145204235ea5"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d22239d086c798e7836147217ee7f60488275300bea1a3132d862a06b0c7ab9e"
-    sha256 cellar: :any_skip_relocation, catalina:      "d22239d086c798e7836147217ee7f60488275300bea1a3132d862a06b0c7ab9e"
-    sha256 cellar: :any_skip_relocation, mojave:        "d22239d086c798e7836147217ee7f60488275300bea1a3132d862a06b0c7ab9e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "95cb69f97cc81e243cbe80d8a95088b45350d0255f84e5dd6161261271554ff3"
+    sha256 cellar: :any_skip_relocation, big_sur:       "196d3cb1f508777b2773bffa721cb20d41e3b51a3dcf0279a7ad831c64e9d69a"
+    sha256 cellar: :any_skip_relocation, catalina:      "196d3cb1f508777b2773bffa721cb20d41e3b51a3dcf0279a7ad831c64e9d69a"
+    sha256 cellar: :any_skip_relocation, mojave:        "196d3cb1f508777b2773bffa721cb20d41e3b51a3dcf0279a7ad831c64e9d69a"
   end
 
   def install
