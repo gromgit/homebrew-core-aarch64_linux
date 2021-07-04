@@ -7,10 +7,10 @@ class Waypoint < Formula
   head "https://github.com/hashicorp/waypoint.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "853847353a7ad6cd452a7af521f734f41af3fa746dde461e13a3d69e9eee42a0"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5a1cdcd71b43977ffa8df6eaa7c83f132d398ca75fa260764daa80e6afa5e806"
-    sha256 cellar: :any_skip_relocation, catalina:      "652081285932b97d7e4caaeb8d8ffdc970378083f8d0847fd4574b92128ed9ed"
-    sha256 cellar: :any_skip_relocation, mojave:        "afd733c68296f2d3048452c8a605a0b5d9d6203fec276ab1c89fa3c3d8a76814"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6ea54d34460a33b285ca8494ed0541ac8b82af208c54a47ec53d77920754bada"
+    sha256 cellar: :any_skip_relocation, big_sur:       "91575e5943be424c2f409b853624781dce463f7eaa5868bbe4535874b20ab559"
+    sha256 cellar: :any_skip_relocation, catalina:      "934abf7abbce2a1ef1650652049c641229b39ea152a79e6b5c798daaf9574705"
+    sha256 cellar: :any_skip_relocation, mojave:        "1563ed86517a0ed586586d24d0fc48dd28d7ea28daff7fd30ae2c886429d53ca"
   end
 
   depends_on "go" => :build
