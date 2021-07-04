@@ -10,6 +10,10 @@ class Libva < Formula
     strategy :github_latest
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "6e5ca66515ec13a0209c29e5c60464ea0bc2bacb3964da4c2113ae80cbf77e79"
+  end
+
   depends_on "pkg-config" => [:build, :test]
   depends_on "libdrm"
   depends_on "libx11"
