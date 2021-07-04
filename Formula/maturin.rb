@@ -7,10 +7,10 @@ class Maturin < Formula
   head "https://github.com/PyO3/maturin.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0b96d6bfd69d0b1726a021667888053153b9c4cc6cb254227ec9b0c185ddf233"
-    sha256 cellar: :any_skip_relocation, big_sur:       "369ba476ac12b625603e681735bb3799c3792ab84fbf95f39487d0f2b68e1ee6"
-    sha256 cellar: :any_skip_relocation, catalina:      "de6c2b01d717d2b5b425d8e3ac0ef9dde44db034f4ec47eefb8799b9562d45bf"
-    sha256 cellar: :any_skip_relocation, mojave:        "adf82a913822b390f34720b5ca060ee28eabd427761e8b6414f639ffb8528eff"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "082243e05496c2b78edf9e0327663236d5ba2beb21d47615bff6bb742e285958"
+    sha256 cellar: :any_skip_relocation, big_sur:       "1640a1aeba079a87f05cb97386a2bd154143559bce7fb86461191693c9de40fc"
+    sha256 cellar: :any_skip_relocation, catalina:      "8851765dfa64f6e3ec6b65c83e8f6db7c3103f3f10f928438d4df3bcd318f472"
+    sha256 cellar: :any_skip_relocation, mojave:        "dd0873e9bf03784e0fecde129ffabe9dd03ce3486832d9a5be7b53f7d29ebfc2"
   end
 
   depends_on "python@3.9" => :test
