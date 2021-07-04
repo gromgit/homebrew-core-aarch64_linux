@@ -6,10 +6,10 @@ class Pyflow < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8bf0ab452a96728d8ae1224b87c5a829a1baead24cffeaefd49458b806e3f70e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "479bb582e912848fd7d1b7e5a68bedef006fee399cd4ef2411cdbe68be4dc734"
-    sha256 cellar: :any_skip_relocation, catalina:      "154a512756d034be9fee4e57de8327c7c759a80dd10e330b9961ad08a430664b"
-    sha256 cellar: :any_skip_relocation, mojave:        "04c33c1225ebdf590edbc3cb6c399f53e799d29535cf777baed2413b2ea0f773"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "88f8e4c0528d6b4eea13d4bda9cabd3dafc7fb85b044bc0fe660530fb00f77e5"
+    sha256 cellar: :any_skip_relocation, big_sur:       "619d1a1095428a7dc3ba1367c4ca5a64dd49eff8d5a91cbfd7e9966b9be2cc5a"
+    sha256 cellar: :any_skip_relocation, catalina:      "2658cf76995468b62f16119d3b6288081a0ab95ca410bc445754ee67099567bd"
+    sha256 cellar: :any_skip_relocation, mojave:        "f25d6af683f972dbdc918433965c7b589356fd4323766b1b778120ef5bdce6fe"
   end
 
   depends_on "rust" => :build
