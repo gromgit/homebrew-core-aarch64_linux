@@ -6,6 +6,11 @@ class EnvoyAT117 < Formula
       revision: "46bf743b97d0d3f01ff437b2f10cc0bd9cdfe6e4"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, big_sur:  "e82ae3a1c65513df10b3db1a8e77d28cd213b694cd25d0e0c5315e7437269407"
+    sha256 cellar: :any_skip_relocation, catalina: "e5ad329ea6f0e29890db94a5fe57ba9be76bc9c033eda6a2e4f41e08a3f3311f"
+  end
+
   keg_only :versioned_formula
   # https://github.com/envoyproxy/envoy/blob/main/RELEASES.md#release-schedule
   deprecate! date: "2022-01-11", because: :unsupported
