@@ -6,7 +6,7 @@ class Spotbugs < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "c3bb166d2efed9e301939ebf063c11e53088268cf877e01bde8d4ef244c256f2"
+    sha256 cellar: :any_skip_relocation, all: "a0e93bc511da9cf697523a283d1a36a8220cd60c0b27c2399477297238bb713a"
   end
 
   head do
