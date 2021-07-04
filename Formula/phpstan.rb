@@ -6,10 +6,10 @@ class Phpstan < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "000b992c4a497d4e0f202b43adc26abb503d971198b50e61fd386b57d957a51d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d3faddf8c86cb9c9fedfc8be42cf2f2201695af647a0aeec9f1f7c406ff6ad1a"
-    sha256 cellar: :any_skip_relocation, catalina:      "d3faddf8c86cb9c9fedfc8be42cf2f2201695af647a0aeec9f1f7c406ff6ad1a"
-    sha256 cellar: :any_skip_relocation, mojave:        "d3faddf8c86cb9c9fedfc8be42cf2f2201695af647a0aeec9f1f7c406ff6ad1a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0be119b1a69c5caf69f8f5f46b563bdc5d415ef376c2ded62f81662519dc66d9"
+    sha256 cellar: :any_skip_relocation, big_sur:       "2ab5ea2de9514ee3ab0f8c29ce04a3704dd5cad418aa205c71152e66e3bf0081"
+    sha256 cellar: :any_skip_relocation, catalina:      "2ab5ea2de9514ee3ab0f8c29ce04a3704dd5cad418aa205c71152e66e3bf0081"
+    sha256 cellar: :any_skip_relocation, mojave:        "2ab5ea2de9514ee3ab0f8c29ce04a3704dd5cad418aa205c71152e66e3bf0081"
   end
 
   depends_on "php" => :test
