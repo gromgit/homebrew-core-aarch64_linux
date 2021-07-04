@@ -7,10 +7,10 @@ class Kubeconform < Formula
   head "https://github.com/yannh/kubeconform.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bbd290a66a1e16396dde64e9f0b639b175dc7f12911ef81ad59590bff36b2fb3"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f0c3ae03b3f4f7f1a96b86d07406a9f55ccc4524279be707831bc9c6f4282a03"
-    sha256 cellar: :any_skip_relocation, catalina:      "da7c83f396b4d3a7ecdf86db2889a4af5698a83d51c0097aa4ae231951be4771"
-    sha256 cellar: :any_skip_relocation, mojave:        "7d0cd77dac537693225ae5e26e2849fbdba6028e8ce42a1d78af15e2f5c1caf0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5fa7f07d067c4df8e111eab2798d8c8a6ca7723065f129f439d35bc2b9f6c301"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c8ffc95322b81fb66750c6b14207605223e06912f833b7adbaef72e153168bd6"
+    sha256 cellar: :any_skip_relocation, catalina:      "a7dd7127131858fe2156a3500a656c459bd14be2160fd042cedd70728b7f3dd9"
+    sha256 cellar: :any_skip_relocation, mojave:        "7d6b9529ffc641fd952c1d3c10dea988aa5daf5a7a3ae6241586ce79e5e78d1c"
   end
 
   depends_on "go" => :build
