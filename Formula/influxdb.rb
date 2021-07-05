@@ -5,7 +5,7 @@ class Influxdb < Formula
       tag:      "v2.0.7",
       revision: "2a45f0c0375a7d5615835afa6f81a53444df9cea"
   license "MIT"
-  revision 1
+  revision 2
   head "https://github.com/influxdata/influxdb.git"
 
   # The regex below omits a rogue `v9.9.9` tag that breaks version comparison.
@@ -61,7 +61,7 @@ class Influxdb < Formula
       -w
       -X main.version=#{version}
       -X main.commit=#{Utils.git_short_head(length: 10)}
-      -X main.date=#{Time.now.utc.iso8601}
+      -X main.date=#{Time.at(ENV["SOURCE_DATE_EPOCH"].to_i).utc.iso8601}
     ].join(" ")
 
     system "go", "build", *std_go_args(ldflags: ldflags),
