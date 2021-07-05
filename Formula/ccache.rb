@@ -7,10 +7,11 @@ class Ccache < Formula
   head "https://github.com/ccache/ccache.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "77ef6571b788e52f9f90d95911955ce9cfedf8a971c7634a3d5ae9014ae7777c"
-    sha256 cellar: :any, big_sur:       "017d4408111c3f5146c95a18aaa11d9dc623af7d257386f28b80076a98798bcd"
-    sha256 cellar: :any, catalina:      "4e905bb6bba1479b2cdf3c93c10f21684f50ac7dbdbada7d292aaaa58e87f7a2"
-    sha256 cellar: :any, mojave:        "8001d6a3ff290c51eccc358c465d652758243540a9647606b608d6b6312b34e3"
+    sha256 cellar: :any,                 arm64_big_sur: "77ef6571b788e52f9f90d95911955ce9cfedf8a971c7634a3d5ae9014ae7777c"
+    sha256 cellar: :any,                 big_sur:       "017d4408111c3f5146c95a18aaa11d9dc623af7d257386f28b80076a98798bcd"
+    sha256 cellar: :any,                 catalina:      "4e905bb6bba1479b2cdf3c93c10f21684f50ac7dbdbada7d292aaaa58e87f7a2"
+    sha256 cellar: :any,                 mojave:        "8001d6a3ff290c51eccc358c465d652758243540a9647606b608d6b6312b34e3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dc256b5d4b2d714d918d5d4fad95bfd060b0844b5504fae42bc09b2697a520e4"
   end
 
   depends_on "cmake" => :build
