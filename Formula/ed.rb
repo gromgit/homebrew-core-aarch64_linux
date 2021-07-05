@@ -11,6 +11,7 @@ class Ed < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "57c700308a2ae32fb9a161f33665e040432a0bce4eafc746ece9c1a515b4097d"
     sha256 cellar: :any_skip_relocation, catalina:      "7ed89b34fe7b4120255d4a6bd493a924c07c3ad31f3e8099a81ef526dc60b704"
     sha256 cellar: :any_skip_relocation, mojave:        "2de3bede199b9f95bb617315e8eb8c8e30276dfcda7f17836c9fcc2dc5253580"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ecd2f65aa59dc4a5748db7e74fe2e840df872b271c31859e2b5991e586a9b47a"
   end
 
   keg_only :provided_by_macos
