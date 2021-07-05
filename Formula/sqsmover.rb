@@ -7,10 +7,10 @@ class Sqsmover < Formula
   head "https://github.com/mercury2269/sqsmover.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "af88364e07133113f9edd4fb5d93dce01ef57c934a79a61c9b631193fa5df55e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a22d1ea6a666d648d77fc688a8757be60125a66b3c9250b7e04b96f66c7bbda1"
-    sha256 cellar: :any_skip_relocation, catalina:      "2e0cd9bde59865a7a1c8900999698135845017d76ba359a07ccac8554d0fb937"
-    sha256 cellar: :any_skip_relocation, mojave:        "7fbc42e0fbb2e7fb96d13aef9a50c75e1cd9f80240d0e978ee6a58a1e3b38724"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "070d45a4448af507da69445d83084a38a8ba1d7ecad6d1d7596b2a5cba2d8b14"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e92a20b5b57e04747e869551f42d86bba14acb26c0ef88acf1a73f12429f43c3"
+    sha256 cellar: :any_skip_relocation, catalina:      "964183c1530b7ec057849d57a9c63b188c2b5aab4f1bf3fe0db6073d4063c086"
+    sha256 cellar: :any_skip_relocation, mojave:        "0874e450ddbdfa8b1a4d364ed7467a50d7f79d90ae33e0a147c3f291b055d20e"
   end
 
   depends_on "go" => :build
