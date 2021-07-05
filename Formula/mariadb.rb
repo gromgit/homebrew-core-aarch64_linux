@@ -11,10 +11,10 @@ class Mariadb < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "f890f360f7d595dd0beaf6495d86248e97e9c450ee09c20ec99f231de97d22c9"
-    sha256 big_sur:       "a976c60a001d2dacd4a9106a667cdcc0292a78da794d39e81cf86944c4f8010b"
-    sha256 catalina:      "990603eb3ef9ed5228c31572c35bd4324e9c1c790286b1b850474b671becc386"
-    sha256 mojave:        "15b7c70995f293db109b71e125b069c5d3b675c08b196c31932574f7ffc42545"
+    sha256 arm64_big_sur: "661e7a2f051ef8456fc0aac57199b70e4229f9a8e0924bcd98d4c29e96df868b"
+    sha256 big_sur:       "4bb853a14062c9f043e3e7f9c42fbb22e1bb43fdc1b70e3fa98d72644707b322"
+    sha256 catalina:      "f41f7892b79e30cc08e76d5be0c87f3aef1932cc67b16939f50a7fe994987a1d"
+    sha256 mojave:        "1b5adcab2cd663265ea5ca2ebfd502e42f146f74d790d35d03bdad8e6d89a5a3"
   end
 
   depends_on "bison" => :build
