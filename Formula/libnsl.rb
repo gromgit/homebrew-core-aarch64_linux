@@ -5,6 +5,10 @@ class Libnsl < Formula
   sha256 "8e88017f01dd428f50386186b0cd82ad06c9b2a47f9c5ea6b3023fc6e08a6b0f"
   license "LGPL-2.1-or-later"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "4794fb7b02da1ebd7115e081ac230d670d732164992fb0b29a5b4dea2829af6a"
+  end
+
   keg_only "it conflicts with glibc"
 
   depends_on "autoconf" => :build
