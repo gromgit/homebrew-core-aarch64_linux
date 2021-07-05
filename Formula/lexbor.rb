@@ -5,6 +5,13 @@ class Lexbor < Formula
   sha256 "e9ba3db87b077cde8ee189eb0851e8b11823c778c6844adcce537357dcca8ae1"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "101be3010f94da5bd1d1a73570ef113b4c8cbb00811c6e85e5e3651362c0617a"
+    sha256 cellar: :any, big_sur:       "1531d24359e5ab1a8f02c54b779a987b84ca75e2389076d701f641471c549b19"
+    sha256 cellar: :any, catalina:      "53fe30aaa102edf50663e465c0bb4c5107113c2d304934d457b084bfc11a6c06"
+    sha256 cellar: :any, mojave:        "d8975317af905c54d37cf93d82428627202dcfaaec81472022dc8f566cf2e738"
+  end
+
   depends_on "cmake" => :build
 
   def install
