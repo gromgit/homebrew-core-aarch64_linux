@@ -1,10 +1,9 @@
 class PythonAT37 < Formula
   desc "Interpreted, interactive, object-oriented programming language"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/3.7.10/Python-3.7.10.tar.xz"
-  sha256 "f8d82e7572c86ec9d55c8627aae5040124fd2203af400c383c821b980306ee6b"
+  url "https://www.python.org/ftp/python/3.7.11/Python-3.7.11.tar.xz"
+  sha256 "ddb4196ab5c4f69e895920a422cb60d42b46e2de2b173ce7fd57f1435459a734"
   license "Python-2.0"
-  revision 3
 
   livecheck do
     url "https://www.python.org/ftp/python/"
@@ -44,18 +43,18 @@ class PythonAT37 < Formula
              "bin/easy_install-3.6", "bin/easy_install-3.7"
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/12/68/95515eaff788370246dac534830ea9ccb0758e921ac9e9041996026ecaf2/setuptools-53.0.0.tar.gz"
-    sha256 "1b18ef17d74ba97ac9c0e4b4265f123f07a8ae85d9cd093949fa056d3eeeead5"
+    url "https://files.pythonhosted.org/packages/cf/79/1a19c2f792da00cbead7b6caa176afdddf517522cb9163ce39576025b050/setuptools-57.1.0.tar.gz"
+    sha256 "cfca9c97e7eebbc8abe18d5e5e962a08dcad55bb63afddd82d681de4d22a597b"
   end
 
   resource "pip" do
-    url "https://files.pythonhosted.org/packages/b7/2d/ad02de84a4c9fd3b1958dc9fb72764de1aa2605a9d7e943837be6ad82337/pip-21.0.1.tar.gz"
-    sha256 "99bbde183ec5ec037318e774b0d8ae0a64352fe53b2c7fd630be1d07e94f41e5"
+    url "https://files.pythonhosted.org/packages/4d/0c/3b63fe024414a8a48661cf04f0993d4b2b8ef92daed45636474c018cd5b7/pip-21.1.3.tar.gz"
+    sha256 "b5b1eb91b36894bd01b8e5a56a422c2f3838573da0b0a1c63a096bb454e3b23f"
   end
 
   resource "wheel" do
-    url "https://files.pythonhosted.org/packages/75/28/521c6dc7fef23a68368efefdcd682f5b3d1d58c2b90b06dc1d0b805b51ae/wheel-0.34.2.tar.gz"
-    sha256 "8788e9155fe14f54164c1b9eb0a319d98ef02c160725587ad60f14ddc57b6f96"
+    url "https://files.pythonhosted.org/packages/ed/46/e298a50dde405e1c202e316fa6a3015ff9288423661d7ea5e8f22f589071/wheel-0.36.2.tar.gz"
+    sha256 "e11eefd162658ea59a60a0f6c7d493a7190ea4b9a85e335b33489d9f17e0245e"
   end
 
   resource "importlib-metadata" do
