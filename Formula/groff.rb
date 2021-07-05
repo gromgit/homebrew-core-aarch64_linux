@@ -12,6 +12,7 @@ class Groff < Formula
     sha256 big_sur:       "1e46ef402875ec8cc1bc1fc05b748607822ed6c2a58508dc83d3f0c8cf7f5c4e"
     sha256 catalina:      "623edd28279abd071901f92502fd3a388aaf4357113f26b37ee715a9d11d05ab"
     sha256 mojave:        "4fed5ee8032eb7957bd964b0eb873f8954a4d427f0c602284992daca52e7cb6d"
+    sha256 x86_64_linux:  "6c0636f4e166293501c0d689d78313c1f0db97daa9655926c35075db216095d5"
   end
 
   depends_on "pkg-config" => :build
