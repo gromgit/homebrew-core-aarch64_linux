@@ -14,10 +14,11 @@ class Wolfssl < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "d3c1a0238f4bff3d6bbe97c95f28c0b48eba899acc86fdf780611f26ccb5f790"
-    sha256 cellar: :any, big_sur:       "d01ee339331c0c96fe0512667e879a442790e5c9af2a7629a8458a43901c1b9d"
-    sha256 cellar: :any, catalina:      "4bc15cd6d682ab0319e44bb002e33277e749764b13c1333d0c2f61fee8599eb0"
-    sha256 cellar: :any, mojave:        "495873f14e34b81d5d4e56b131b70678f1445495de50dc8fc897463b16e3652a"
+    sha256 cellar: :any,                 arm64_big_sur: "d3c1a0238f4bff3d6bbe97c95f28c0b48eba899acc86fdf780611f26ccb5f790"
+    sha256 cellar: :any,                 big_sur:       "d01ee339331c0c96fe0512667e879a442790e5c9af2a7629a8458a43901c1b9d"
+    sha256 cellar: :any,                 catalina:      "4bc15cd6d682ab0319e44bb002e33277e749764b13c1333d0c2f61fee8599eb0"
+    sha256 cellar: :any,                 mojave:        "495873f14e34b81d5d4e56b131b70678f1445495de50dc8fc897463b16e3652a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1dea8541fd0245e4d0a6cbde71459e3be23e6afa5eabb248e9a0954d6b0da27d"
   end
 
   depends_on "autoconf" => :build
