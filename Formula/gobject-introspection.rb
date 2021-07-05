@@ -13,6 +13,7 @@ class GobjectIntrospection < Formula
     sha256 big_sur:       "f2838a38fcc1c1fd675d9fb25d7076875498cf1374b9f4d6f7164174a0384f86"
     sha256 catalina:      "9cc1e1379832e2f14a6e5b4ceab54e3c144f3653ebf9b28d367b472f8bfaf47a"
     sha256 mojave:        "9bc64021f82a4ecddbfc6103d966ba0730bff8689e82c1285a31ccf1aa12a526"
+    sha256 x86_64_linux:  "cf067ec268af77b2f2c9132ea33fb714a65fbfc304013f229947ce8ebfa1b7fd"
   end
 
   depends_on "bison" => :build
