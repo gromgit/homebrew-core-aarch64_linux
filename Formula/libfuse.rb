@@ -6,6 +6,10 @@ class Libfuse < Formula
   license any_of: ["LGPL-2.1-only", "GPL-2.0-only"]
   head "https://github.com/libfuse/libfuse.git"
 
+  bottle do
+    sha256 x86_64_linux: "3c29166263e8832d89605ebb8c66d89ec3ed3473cc05f5e2a0fb5c0fc2f5c571"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on :linux
