@@ -6,6 +6,10 @@ class Spectra < Formula
   license "MPL-2.0"
   head "https://github.com/yixuan/spectra.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "94ec682e71349c61a98833532eff13ccd1242f0c1aed9100b3de5fb6cb76fa45"
+  end
+
   depends_on "cmake" => :build
   depends_on "eigen"
 
