@@ -12,6 +12,7 @@ class Breezy < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "5e752e52c7483cf0bb746b39767e3d993e0625f1cff5d8d5136a9a739c10c8de"
     sha256 cellar: :any_skip_relocation, catalina:      "749d279b1025328b55c6cdefab609d7c783d08c776b2d9b36c8c3b47aa893779"
     sha256 cellar: :any_skip_relocation, mojave:        "6f121c4a7496b887843277ea099ac7980cfdcc786df32ebc2f48de1e18220f7e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c1fff68b0d54a433b39b656c441daaf6680f5973c185bbc194852dff44bc42bc"
   end
 
   depends_on "cython" => :build
