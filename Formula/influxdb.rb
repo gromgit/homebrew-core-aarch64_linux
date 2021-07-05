@@ -1,9 +1,11 @@
 class Influxdb < Formula
   desc "Time series, events, and metrics database"
   homepage "https://influxdata.com/time-series-platform/influxdb/"
-  url "https://github.com/influxdata/influxdb/archive/v2.0.7.tar.gz"
-  sha256 "8b0ac2b5b2f8c4a78bf5eef5111576dd3beb1a7596c20ec6ccc4bb15026dec8e"
+  url "https://github.com/influxdata/influxdb.git",
+      tag:      "v2.0.7",
+      revision: "2a45f0c0375a7d5615835afa6f81a53444df9cea"
   license "MIT"
+  revision 1
   head "https://github.com/influxdata/influxdb.git"
 
   # The regex below omits a rogue `v9.9.9` tag that breaks version comparison.
@@ -54,9 +56,18 @@ class Influxdb < Formula
     system "make", "generate"
 
     # Build the CLI and server.
-    ldflags = "-s -w -X main.version=#{version}"
-    system "go", "build", *std_go_args(ldflags: ldflags), "-o", bin/"influx", "./cmd/influx"
-    system "go", "build", *std_go_args(ldflags: ldflags), "-tags", "assets", "-o", bin/"influxd", "./cmd/influxd"
+    ldflags = %W[
+      -s
+      -w
+      -X main.version=#{version}
+      -X main.commit=#{Utils.git_short_head(length: 10)}
+      -X main.date=#{Time.now.utc.iso8601}
+    ].join(" ")
+
+    system "go", "build", *std_go_args(ldflags: ldflags),
+           "-o", bin/"influx", "./cmd/influx"
+    system "go", "build", *std_go_args(ldflags: ldflags),
+           "-tags", "assets", "-o", bin/"influxd", "./cmd/influxd"
 
     data = var/"lib/influxdb2"
     data.mkpath
