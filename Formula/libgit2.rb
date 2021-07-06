@@ -12,10 +12,11 @@ class Libgit2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "71ddae10a8e81012cdfb6877791ffeefef8421efcc7077e61d995aca5cc85275"
-    sha256 cellar: :any, big_sur:       "86c3794bf3890b7cbe622a1838517a93c4ee380682dae5da9f24c24d9256c094"
-    sha256 cellar: :any, catalina:      "9284d9a772c9bc29b52a0eef78f5c4f8a5f1ad659eb4024c53ebe6286a50facd"
-    sha256 cellar: :any, mojave:        "f8c6f89c82c013531e7355d79643dff7c7bf658bedaa9ff3fdfa44ee440b2abe"
+    sha256 cellar: :any,                 arm64_big_sur: "71ddae10a8e81012cdfb6877791ffeefef8421efcc7077e61d995aca5cc85275"
+    sha256 cellar: :any,                 big_sur:       "86c3794bf3890b7cbe622a1838517a93c4ee380682dae5da9f24c24d9256c094"
+    sha256 cellar: :any,                 catalina:      "9284d9a772c9bc29b52a0eef78f5c4f8a5f1ad659eb4024c53ebe6286a50facd"
+    sha256 cellar: :any,                 mojave:        "f8c6f89c82c013531e7355d79643dff7c7bf658bedaa9ff3fdfa44ee440b2abe"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "06a55904d78e73ea93567d825fbca98102abb496cfcbeb05bfc1a464672bdf53"
   end
 
   depends_on "cmake" => :build
