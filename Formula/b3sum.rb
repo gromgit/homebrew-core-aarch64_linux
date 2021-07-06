@@ -10,6 +10,7 @@ class B3sum < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "4dcaea454f3dff3b9a2d7fe6840e106d9f54c542f98e8b1316ae23910c275d61"
     sha256 cellar: :any_skip_relocation, catalina:      "a2999c341c1bd27544632d41e1de65cb6004c2ecca684a1fe5e6013d3d670c18"
     sha256 cellar: :any_skip_relocation, mojave:        "a5b935ad1560e09877f2ff0f2daeb8c990c8104eface1c985b81c7f80ea8ca4f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "aee5df307b842811f97f7045adffc3b4dd34c510da1a3ae87d02bfccd64abc8c"
   end
 
   depends_on "rust" => :build
