@@ -17,6 +17,7 @@ class Exa < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "d0c809ae7a8d3a43e0c907854b46725f5ad6bb14fa40a9857ff4e74f15c0b961"
     sha256 cellar: :any_skip_relocation, catalina:      "dc183942b94bac912f4e0a6ca5c8859fa755a95de2808bd978dde3911690f0ae"
     sha256 cellar: :any_skip_relocation, mojave:        "62fac977958ef8a9856e7a28fceac53d4f6e327e11764d1a077fb34ac83aced0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fad8013ab85b04c039c1b1be716bd621370dfcf810e3eb714e53711701b9aa45"
   end
 
   depends_on "pandoc" => :build
