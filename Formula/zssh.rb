@@ -19,6 +19,9 @@ class Zssh < Formula
     sha256 cellar: :any_skip_relocation, yosemite:    "94280569f9e1c1deb9d8c3be4256cd501399fd51758f8e2ea6d77fd9f1b6ef2e"
   end
 
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "libtool"  => :build
   depends_on "lrzsz"
 
   on_linux do
@@ -27,11 +30,17 @@ class Zssh < Formula
   end
 
   def install
+    system "autoreconf", "-fvi"
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
                           "--prefix=#{prefix}"
     system "make"
 
     bin.install "zssh", "ztelnet"
     man1.install "zssh.1", "ztelnet.1"
+  end
+
+  test do
+    require "pty"
+    PTY.spawn "#{bin}/zssh -V"
   end
 end
