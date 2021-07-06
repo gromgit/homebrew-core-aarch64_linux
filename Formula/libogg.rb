@@ -6,10 +6,11 @@ class Libogg < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "86f7182a3e7ad1a6cbc0520424875fcad195c97ee62db95d7b5e863be95eee95"
-    sha256 cellar: :any, big_sur:       "b28fe3ad76ad6caafbedb2587deac3b4f03f79cb1466e6f76a06724eaae346ee"
-    sha256 cellar: :any, catalina:      "e6c116ef9fa7ebac93b5b22fb1208d1d1f4b000fdfdae4b0ae9ec18fe5a5412c"
-    sha256 cellar: :any, mojave:        "f416f50ef34e470f690e27f3c29f65d6fe5b1aec56f16a2a312ba6011e809720"
+    sha256 cellar: :any,                 arm64_big_sur: "86f7182a3e7ad1a6cbc0520424875fcad195c97ee62db95d7b5e863be95eee95"
+    sha256 cellar: :any,                 big_sur:       "b28fe3ad76ad6caafbedb2587deac3b4f03f79cb1466e6f76a06724eaae346ee"
+    sha256 cellar: :any,                 catalina:      "e6c116ef9fa7ebac93b5b22fb1208d1d1f4b000fdfdae4b0ae9ec18fe5a5412c"
+    sha256 cellar: :any,                 mojave:        "f416f50ef34e470f690e27f3c29f65d6fe5b1aec56f16a2a312ba6011e809720"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "db517cc6e922b1d3a7c845bad5dd4c78d48b170aa94187d6281f8577f228a180"
   end
 
   head do
