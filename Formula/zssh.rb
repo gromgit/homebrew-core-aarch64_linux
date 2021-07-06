@@ -12,6 +12,7 @@ class Zssh < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "9b567d08589f3ba595994ca4906bfde9fe2651ef246bbd872f332e9cc8993a60"
+    sha256 cellar: :any_skip_relocation, big_sur:       "54bb3ff51405eda0900361c829fad63f988c21e685645fe5c8076c456567bd0b"
     sha256 cellar: :any_skip_relocation, catalina:      "6b9bce24c13dd2e979cdae57892e1b595bfcbd1d342bb81419dda378b8439495"
     sha256 cellar: :any_skip_relocation, mojave:        "0b1567c1d4aef681ff463f058a884eead039fb0c50a1c03820a03c9f67786b52"
     sha256 cellar: :any_skip_relocation, high_sierra:   "9cb26f1bd359977406fae945abd311b2cdc5770570e6350f2ac278bfbe458f5b"
