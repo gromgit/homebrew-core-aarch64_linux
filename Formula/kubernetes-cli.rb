@@ -17,6 +17,7 @@ class KubernetesCli < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "fce2a718033ac99a93e8cef1df27911fa8d5c29af5e3e84dc71592bb91706629"
     sha256 cellar: :any_skip_relocation, catalina:      "ad2967ad171d58c6428763152b0742794bf6569ea3db607be015f7f9859a929a"
     sha256 cellar: :any_skip_relocation, mojave:        "fd8cbec16fda8a06c97e16838e4749ba0279910a2365f926cd4ee398c43a18bb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "81f5720058f91ed0aeb6aa94c2656c4c8c33b3a2f8dbd420db30ccd2ff193d1f"
   end
 
   depends_on "bash" => :build
