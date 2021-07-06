@@ -72,7 +72,7 @@ class BdwGc < Formula
       }
     EOS
 
-    system ENV.cc, "-I#{include}", "-L#{lib}", "-lgc", "-o", "test", "test.c"
+    system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lgc", "-o", "test"
     system "./test"
   end
 end
