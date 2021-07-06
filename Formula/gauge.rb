@@ -7,10 +7,10 @@ class Gauge < Formula
   head "https://github.com/getgauge/gauge.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "43a9f3609c07ead13d8796150822823b581232df077b0348806ed314d4e9d78c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "40fdf987c03683e24eb643fb2c822e976bebb38c71c280cd106bd2142168265d"
-    sha256 cellar: :any_skip_relocation, catalina:      "fd296bdc448217725fac72ef38e688fbf67ca0a6cca3300313cdc55800563029"
-    sha256 cellar: :any_skip_relocation, mojave:        "93422569fd4ae31b8eb9d4a568f45758bb9eff0f3f36c82082b249608a26a0aa"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "571362c12c48900fc53a8e898f2cf4c7fdca02ed20808e456a91235691936dbc"
+    sha256 cellar: :any_skip_relocation, big_sur:       "005cbc0be81d61a78109cb9987403f07b3e70bfc298f1427b167c23f73b137d9"
+    sha256 cellar: :any_skip_relocation, catalina:      "4ae99ffca72f63f41097fa089d5a530df6d0768717126f42d906703542265fcd"
+    sha256 cellar: :any_skip_relocation, mojave:        "d264f669c99b83305f195d9532f88c3588eb85f591b40b0253c07ac460a9bf61"
   end
 
   depends_on "go" => :build
