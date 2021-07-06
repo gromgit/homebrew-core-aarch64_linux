@@ -17,6 +17,7 @@ class RmImproved < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "6b404b0fe096447d90c21c15140ee9295fdea4060771723e818625e8dcde8e2f"
     sha256 cellar: :any_skip_relocation, mojave:        "cd164204efca72560dcb8d39db760d7e9efbeab5e9bfd0718c6cccd5b022a7f3"
     sha256 cellar: :any_skip_relocation, high_sierra:   "27fa7c0976c9361fae1638f05a0c756603a509a16459db688d2e787ceb123de2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c18e2bf1095530f1d2d566bc707d503caa78357afa826ac17e2f1d624369fb91"
   end
 
   depends_on "rust" => :build
