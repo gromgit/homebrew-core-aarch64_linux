@@ -11,6 +11,7 @@ class Bandwhich < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "424d3eff3b11609ad4645c028b3806babf18d9457749486fceff2522e2dd703d"
     sha256 cellar: :any_skip_relocation, mojave:        "99d4980e850a91edc9e12749150151a0803aa0f2591a790f7236bc7031d1f8da"
     sha256 cellar: :any_skip_relocation, high_sierra:   "5ca8f58d406af543ec3833c190472cbefaa8fb614cd5f42cfc42392e3139283c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0dfeb11084a21c529d74299c699089df7689f2b3d62439acea0bea1f0f9a3aa3"
   end
 
   depends_on "rust" => :build
