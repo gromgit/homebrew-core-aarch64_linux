@@ -11,6 +11,7 @@ class Dune < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "0f09b1e8ddf82fe3a684b4b770ef559dc65d63c3d8a3bae9472ab53c7de0011b"
     sha256 cellar: :any_skip_relocation, catalina:      "d5104b9a1a15dcf219e96fe3c51f55f9c22d13dabcf5b20fc6355b19613ca688"
     sha256 cellar: :any_skip_relocation, mojave:        "eff381531b552f4ca7b11a4e2e560a87175e7488ded036a4a95b6ca2e69303a1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "45799372a97201b95b0928303067cfbf6d4ee904a7111235a4c3bb70779cc162"
   end
 
   depends_on "ocaml" => [:build, :test]
