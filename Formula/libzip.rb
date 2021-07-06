@@ -11,10 +11,11 @@ class Libzip < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "1634e10d0fbece803c007a5af63f3fbc9244ef4082640830039faeb7284a7ae1"
-    sha256 cellar: :any, big_sur:       "f5b0d74305b2f249a8389bbee71ab51e446fcc824c950b2a954860d21e4d61b4"
-    sha256 cellar: :any, catalina:      "cb8041e52eb6bdf4e06aa56823e4fe0ab8b008c25a84a8048b59e6c025cd2666"
-    sha256 cellar: :any, mojave:        "5c0afe4c42e50e695446433cc8f0de47592f207281a01e30b4b39bd6b43096ff"
+    sha256 cellar: :any,                 arm64_big_sur: "1634e10d0fbece803c007a5af63f3fbc9244ef4082640830039faeb7284a7ae1"
+    sha256 cellar: :any,                 big_sur:       "f5b0d74305b2f249a8389bbee71ab51e446fcc824c950b2a954860d21e4d61b4"
+    sha256 cellar: :any,                 catalina:      "cb8041e52eb6bdf4e06aa56823e4fe0ab8b008c25a84a8048b59e6c025cd2666"
+    sha256 cellar: :any,                 mojave:        "5c0afe4c42e50e695446433cc8f0de47592f207281a01e30b4b39bd6b43096ff"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4cff3dfdbd2565f16d6504215a03dd55bb9cd587051e89ce44bb1c326f7152fb"
   end
 
   depends_on "cmake" => :build
