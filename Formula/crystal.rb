@@ -20,9 +20,10 @@ class Crystal < Formula
   end
 
   bottle do
-    sha256 big_sur:  "2b3ed35fef1b42c1d2acc740edbdc72eb6849ec658f8680fef3f2c1c2a7d5378"
-    sha256 catalina: "2f270445145ad381faf1e5a2d35d5400c084a38099c4ffb4b6a861dd712ee6ff"
-    sha256 mojave:   "00a853fa0bae01d2acf4013f4e5acc75db736145bf0e9b07719909e31b1401b0"
+    sha256 big_sur:      "2b3ed35fef1b42c1d2acc740edbdc72eb6849ec658f8680fef3f2c1c2a7d5378"
+    sha256 catalina:     "2f270445145ad381faf1e5a2d35d5400c084a38099c4ffb4b6a861dd712ee6ff"
+    sha256 mojave:       "00a853fa0bae01d2acf4013f4e5acc75db736145bf0e9b07719909e31b1401b0"
+    sha256 x86_64_linux: "55af7f38763fe23f2decfaa9f895b05e3510cffbd7a1ecd669c48366bb83dbe5"
   end
 
   head do
