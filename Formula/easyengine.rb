@@ -6,10 +6,10 @@ class Easyengine < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a740d8428e4e0e892c3525441c88f5e3b7eac4427ae0de65c9e8fe8a4b12d203"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e20e75b71748d161591793a2dea9ae347e18bebc8ee407b54dc6d7287995845c"
-    sha256 cellar: :any_skip_relocation, catalina:      "e20e75b71748d161591793a2dea9ae347e18bebc8ee407b54dc6d7287995845c"
-    sha256 cellar: :any_skip_relocation, mojave:        "e20e75b71748d161591793a2dea9ae347e18bebc8ee407b54dc6d7287995845c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6dadda808adbe3b36846613fcd9940ac087159aff9688452bf570df183eff6e7"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e01550e56cc525492532558f554856f7925cd431234319715ee8a2a3caa0d32f"
+    sha256 cellar: :any_skip_relocation, catalina:      "e01550e56cc525492532558f554856f7925cd431234319715ee8a2a3caa0d32f"
+    sha256 cellar: :any_skip_relocation, mojave:        "e01550e56cc525492532558f554856f7925cd431234319715ee8a2a3caa0d32f"
   end
 
   depends_on "dnsmasq"
