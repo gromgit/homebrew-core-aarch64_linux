@@ -8,10 +8,11 @@ class AwsElasticbeanstalk < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "9848b1c7e0c9a391d31824a2aa04c75322a22460a9e588c78d78800cdc674114"
-    sha256 cellar: :any, big_sur:       "5a8269756245372ef47b8367d95e22dea139a6bf75ef7bddb9e0f68f328a8274"
-    sha256 cellar: :any, catalina:      "02e0394235b4bd7f92c9b2bf35e7e51cd48ccc735818ce466bb09b9db12420ee"
-    sha256 cellar: :any, mojave:        "b754539b9e405acece1a34a9f2f812ade33fc07d6ef1aeade1d1e2e388603f0c"
+    sha256 cellar: :any,                 arm64_big_sur: "9848b1c7e0c9a391d31824a2aa04c75322a22460a9e588c78d78800cdc674114"
+    sha256 cellar: :any,                 big_sur:       "5a8269756245372ef47b8367d95e22dea139a6bf75ef7bddb9e0f68f328a8274"
+    sha256 cellar: :any,                 catalina:      "02e0394235b4bd7f92c9b2bf35e7e51cd48ccc735818ce466bb09b9db12420ee"
+    sha256 cellar: :any,                 mojave:        "b754539b9e405acece1a34a9f2f812ade33fc07d6ef1aeade1d1e2e388603f0c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "186086a71673aa75cb4563ff7f6c8e09910ea65e117bee5ee22b1cbb2a73892e"
   end
 
   depends_on "rust" => :build
