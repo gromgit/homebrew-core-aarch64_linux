@@ -8,10 +8,10 @@ class Serverless < Formula
   license "MIT"
 
   bottle do
-    sha256 arm64_big_sur: "8d767792113181bf1d0a99be33bb9e400b285903652633cb9f1a35ef73ea4848"
-    sha256 big_sur:       "f6d6e08bddaf741041767d7ced80475c88bf0ac1d35fc67b95d40269dc5de973"
-    sha256 catalina:      "26cafee94be6382df0702d2fc1b042a187bb6ad3cc0cb441bab3c967906afee3"
-    sha256 mojave:        "f8677c55463a88035a3c49108e248f7116dc7851fa82fb86a2df5deb65a65bb9"
+    sha256 arm64_big_sur: "991ac4debc74abe84b62be286b5d7cfacdef0ea41af4c8b3395d9f3650e6a7ff"
+    sha256 big_sur:       "1e8707900a6a6f52fe848ee6ae4a1c65d12fe98ccc18d734235a8370b7a39e20"
+    sha256 catalina:      "5e8a36976730d959fa13ca01e9c8c2b1ef6b598aa4bb627b432f1eda588cfd3f"
+    sha256 mojave:        "a0d8a2823c80ddd658ab57c39c330d79dd3794582172cd279ddd711392986971"
   end
 
   depends_on "node"
