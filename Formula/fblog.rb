@@ -12,6 +12,7 @@ class Fblog < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "18a0a07a3af24fa74b4590385f297441379005a0e4e3f6c79895b38c5cef6ccf"
     sha256 cellar: :any_skip_relocation, mojave:        "b8da5a81c66d27b82d8e604444dd31807b4c567e73c8c80a84704df402e6ec56"
     sha256 cellar: :any_skip_relocation, high_sierra:   "8e7bf6bf388b11ebcf78a0f6442b2dd2673ca7e99b93282f59a38103e2ee3293"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e2672eb2839cade14d1702c5aaf2a5e4c3192b5294562d5ea43ed6ae3741a122"
   end
 
   depends_on "rust" => :build
