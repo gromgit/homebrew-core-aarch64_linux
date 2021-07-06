@@ -15,6 +15,7 @@ class Mariadb < Formula
     sha256 big_sur:       "4bb853a14062c9f043e3e7f9c42fbb22e1bb43fdc1b70e3fa98d72644707b322"
     sha256 catalina:      "f41f7892b79e30cc08e76d5be0c87f3aef1932cc67b16939f50a7fe994987a1d"
     sha256 mojave:        "1b5adcab2cd663265ea5ca2ebfd502e42f146f74d790d35d03bdad8e6d89a5a3"
+    sha256 x86_64_linux:  "828d5ccc7fcf54e52765a9ea7e09f3dc08cd0f33e979b0a45310a7274642b13c"
   end
 
   depends_on "bison" => :build
