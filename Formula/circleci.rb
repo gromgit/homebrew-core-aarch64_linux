@@ -9,10 +9,10 @@ class Circleci < Formula
   head "https://github.com/CircleCI-Public/circleci-cli.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5f9731efd6131c48b7ca1beaea4f0d87a857bb2902648121fc942c798f8572f4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a661fcd82c8704d4232379bd7e7f507084ca5d622ec84855b4bfbf13a6388d54"
-    sha256 cellar: :any_skip_relocation, catalina:      "10526439610c545e20052e4af1eae59c52d591781cea415d7b15db4d1375ecff"
-    sha256 cellar: :any_skip_relocation, mojave:        "d2108c5308ec544c39353e9e44a01cf9756f7afe0a7c435becfc7e49dbea3ecf"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3004e164839cc0215ed249a58f51f39250430153af7d9840677679cad3d66ade"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ec696c44c1fa9a3c351f63da60b524b4801f5a8b91e8a89cec36abb6eeb49ce6"
+    sha256 cellar: :any_skip_relocation, catalina:      "6d0fc192edf2af07b559caad0188084da339629b9f5fb7d469d759be99f1d0ba"
+    sha256 cellar: :any_skip_relocation, mojave:        "783766866d1f618591b5926979f546406349bbf66f6bc0c8a4f4a2a35c0ea7ca"
   end
 
   depends_on "go" => :build
