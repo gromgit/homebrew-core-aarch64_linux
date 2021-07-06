@@ -11,10 +11,11 @@ class Nspr < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "69c39b2f0a2d93ea5969a9906d0e5063caa34ad495cd56cef7e22b8b8628a67a"
-    sha256 cellar: :any, big_sur:       "fa4089b067d319a827833747ed64c0e9ed9ce1c95aa54d77fb1dabffd52436ed"
-    sha256 cellar: :any, catalina:      "f5a4e62a6d63a398ce0d14af9aa25ad1c33c8eb9ff64de988551ee0791aae69b"
-    sha256 cellar: :any, mojave:        "fd4bc5953ceff865f0a3e049fbb06ccb07015c4369a7aa4c67e820af6b7cc53b"
+    sha256 cellar: :any,                 arm64_big_sur: "69c39b2f0a2d93ea5969a9906d0e5063caa34ad495cd56cef7e22b8b8628a67a"
+    sha256 cellar: :any,                 big_sur:       "fa4089b067d319a827833747ed64c0e9ed9ce1c95aa54d77fb1dabffd52436ed"
+    sha256 cellar: :any,                 catalina:      "f5a4e62a6d63a398ce0d14af9aa25ad1c33c8eb9ff64de988551ee0791aae69b"
+    sha256 cellar: :any,                 mojave:        "fd4bc5953ceff865f0a3e049fbb06ccb07015c4369a7aa4c67e820af6b7cc53b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e96c1aec46c06a8fb7644697cc962e75278a325e17d39622163b51bdb003d850"
   end
 
   def install
