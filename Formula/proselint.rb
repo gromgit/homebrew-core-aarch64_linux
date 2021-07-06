@@ -9,10 +9,10 @@ class Proselint < Formula
   head "https://github.com/amperser/proselint.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1eaeb5e24e02cb17c1f84512d6b7c593a17b6e8ad95d26988dc416c4c5828cc4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e37af822aa0833431e772755d68911bac5c9ce1a2cad4d995d0238e8925039aa"
-    sha256 cellar: :any_skip_relocation, catalina:      "50971786c55a1fd46196f16a2a838b2fc328863b32fcdd479a82d8d3640dc339"
-    sha256 cellar: :any_skip_relocation, mojave:        "7c4d539da946b87e93d3b198d971ef4146bcaacfbad1b735923c300a8382a245"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3b1c20bd0b59fd486ad26ae6e1e0d2b880c5f179be56afad5933b691de2a134f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "431e17c8890af9a48429e217c2a40e14fbc056c852525d9292622cfa848e69cf"
+    sha256 cellar: :any_skip_relocation, catalina:      "03fc6a15ddd559ff73537a6dee97be1bbba8f22b8f9fd602f97c0d4c533d83a4"
+    sha256 cellar: :any_skip_relocation, mojave:        "421135829a1cd5991fde1ab1cf82739fbe0f9d4a6d375c51b41dabfdc85dffd2"
   end
 
   depends_on "python@3.9"
