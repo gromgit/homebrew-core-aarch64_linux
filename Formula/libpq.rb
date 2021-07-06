@@ -15,6 +15,7 @@ class Libpq < Formula
     sha256 big_sur:       "151bc976994fc3373e6bfd47fcacd20b66724066148d6e6774e84608af2e8e51"
     sha256 catalina:      "a3674fbd50ef933e866f0e28e971c03812f07be661cc50d07a033981e76d87a3"
     sha256 mojave:        "e16bc609f7001cf004ac76600c58e6d6b4ca321ff106da06e52cf20e66357c5e"
+    sha256 x86_64_linux:  "ddcf71d287da27b5d14ba05636a4b87def286f61ad6e4b0c4a54e7245e9daeee"
   end
 
   keg_only "conflicts with postgres formula"
