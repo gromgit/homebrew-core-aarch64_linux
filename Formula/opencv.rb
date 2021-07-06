@@ -1,10 +1,9 @@
 class Opencv < Formula
   desc "Open source computer vision library"
   homepage "https://opencv.org/"
-  url "https://github.com/opencv/opencv/archive/4.5.2.tar.gz"
-  sha256 "ae258ed50aa039279c3d36afdea5c6ecf762515836b27871a8957c610d0424f8"
+  url "https://github.com/opencv/opencv/archive/4.5.3.tar.gz"
+  sha256 "77f616ae4bea416674d8c373984b20c8bd55e7db887fd38c6df73463a0647bab"
   license "Apache-2.0"
-  revision 4
 
   livecheck do
     url :stable
@@ -38,8 +37,8 @@ class Opencv < Formula
   depends_on "webp"
 
   resource "contrib" do
-    url "https://github.com/opencv/opencv_contrib/archive/4.5.2.tar.gz"
-    sha256 "9f52fd3114ac464cb4c9a2a6a485c729a223afb57b9c24848484e55cef0b5c2a"
+    url "https://github.com/opencv/opencv_contrib/archive/4.5.3.tar.gz"
+    sha256 "73da052fd10e73aaba2560eaff10cc5177e2dcc58b27f8aedf7c649e24c233bc"
   end
 
   def install
