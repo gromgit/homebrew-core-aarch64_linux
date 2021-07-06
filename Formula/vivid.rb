@@ -10,6 +10,7 @@ class Vivid < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "9ac9d9ca0cc06b51e932e8e1447659848fb6ddc38f522fc6fa4df9bbc894c868"
     sha256 cellar: :any_skip_relocation, catalina:      "a3e8186f762051a6cf1b3c7dcfbea4a47761653fd282bbfe43fbd563ff168dc9"
     sha256 cellar: :any_skip_relocation, mojave:        "5198e3c4ece298eeb42895d0961d74976890ef422d29dfa8e23ade3ba58ade02"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3bf8009e9771733833317fee2810b482a569265732d22539446ba8d2a67a78bd"
   end
 
   depends_on "rust" => :build
