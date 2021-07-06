@@ -7,10 +7,10 @@ class Jrsonnet < Formula
   head "https://github.com/CertainLach/jrsonnet.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ecc44b14e9e1d6b12ef3eab6f8d90930d5671d099b19b6242d790077ca986139"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b2578d9a53ff9449f8673fe75e448d9d94f63275047d91be2b9ff8fd00a53730"
-    sha256 cellar: :any_skip_relocation, catalina:      "5fdb422182ccecaae6e07e654efc7a9cf612e251c2ecf1c16427d2edec4f64b5"
-    sha256 cellar: :any_skip_relocation, mojave:        "70f069a8f7fc8d73ed57c30efa82b4351068c32c73ac915eb540618450cdbecc"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "059cd2549df2910dcc08b405fe9a927057d44cad1f63ebf222304cb3489c8ff2"
+    sha256 cellar: :any_skip_relocation, big_sur:       "88dca211837dfb36ffbcb6b5b5efb0d7245f82f2885e3c537b7ca96ff856ffe6"
+    sha256 cellar: :any_skip_relocation, catalina:      "dddef69f27bd0ed421cc3d2458ee98dc236b0348b9592f8bc199e8db00100cfe"
+    sha256 cellar: :any_skip_relocation, mojave:        "2aa7a841332b726e21ea560d3b62f9c35b17e42da6b464fca0099dee0d432fb2"
   end
 
   depends_on "rust" => :build
