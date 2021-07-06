@@ -11,6 +11,7 @@ class Annie < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "8c608e9147c4f83c6ba931d16967d688e71afb82aaa1a1ba9807e7a23fde0437"
     sha256 cellar: :any_skip_relocation, mojave:        "5da3e7ca14e3f6305f4b104490656e6d0edc94ec6e73d8d3eb5a6cf237819680"
     sha256 cellar: :any_skip_relocation, high_sierra:   "2187f28963dc9493cf35d9014eead0919e27ef77072f705787b6bd7d446ce03f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "759aff3b06afe590513ec26419cf8eade0a85ec954ca9064ae414154ab5256d6"
   end
 
   depends_on "go" => :build
