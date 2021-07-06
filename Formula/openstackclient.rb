@@ -8,10 +8,11 @@ class Openstackclient < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "2f29787b721969574fd33180a44413ca53716ba6398abd393a786e912580136a"
-    sha256 cellar: :any, big_sur:       "bccccc98d1077c9fbabb2a01016b8f9c69dba2d4aba4950ba31e57f617f997eb"
-    sha256 cellar: :any, catalina:      "03d89b5f94e1d72df64ccf3b5b616d0a085cc787fcf8b0d15144a010f5d16c4d"
-    sha256 cellar: :any, mojave:        "1d9ebfa870d73deb2de20e96320ee401f56794443f3ff722476e52727324adda"
+    sha256 cellar: :any,                 arm64_big_sur: "2f29787b721969574fd33180a44413ca53716ba6398abd393a786e912580136a"
+    sha256 cellar: :any,                 big_sur:       "bccccc98d1077c9fbabb2a01016b8f9c69dba2d4aba4950ba31e57f617f997eb"
+    sha256 cellar: :any,                 catalina:      "03d89b5f94e1d72df64ccf3b5b616d0a085cc787fcf8b0d15144a010f5d16c4d"
+    sha256 cellar: :any,                 mojave:        "1d9ebfa870d73deb2de20e96320ee401f56794443f3ff722476e52727324adda"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "40c9240b80bb5112328f205bed489a40187097d48fa234de0512595c57b50e70"
   end
 
   depends_on "rust" => :build
