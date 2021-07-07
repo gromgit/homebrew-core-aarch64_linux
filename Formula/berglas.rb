@@ -10,6 +10,7 @@ class Berglas < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "aaa3598f118b10a7dc122231860e4174cee65ff92cdedd5b0fa621146870e2cd"
     sha256 cellar: :any_skip_relocation, catalina:      "87acc0322aa1d691763b631e3138d90d9d8ff0dc10e2383eb736506cfcb21b30"
     sha256 cellar: :any_skip_relocation, mojave:        "4edd184d04304be53ddc3b45a78c7659e4367b8e7d87fc294c5218d6e341a18a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bae684b7cf750807d14327d34c65639a72eb1363572bc1d97fc5bf28e28dba75"
   end
 
   depends_on "go" => :build
