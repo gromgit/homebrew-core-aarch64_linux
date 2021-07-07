@@ -17,6 +17,7 @@ class Octant < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "ef9b2457589f04448bf7969f40a8e5824834dc3857ea08b8ab5bfc970c3c60fa"
     sha256 cellar: :any_skip_relocation, catalina:      "e2b974107b34a4e8ba570476c9c7accf5dd590d9d616c6344d77b49367ac0751"
     sha256 cellar: :any_skip_relocation, mojave:        "5588293186d9bb1332ceb06b5c095e983c6d630fa2918d2d3cf7c3f89fec6cc8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2d9ef4d5836790749356c7f59e1e61a55ecdf60d92119c29c7721ee5f7c787cb"
   end
 
   depends_on "go" => :build
