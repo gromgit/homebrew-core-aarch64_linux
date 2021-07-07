@@ -8,7 +8,7 @@ class NodeSass < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "bc072ce4b476e16372fab6db3d7dff952dd1044d6dc17b4f9546a414ce634f9c"
+    sha256 cellar: :any_skip_relocation, all: "a092fc458b3c6759fd3a5f140e6d9e9e732cce3c0c4f658a0057f520854ea06c"
   end
 
   depends_on "node"
