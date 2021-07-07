@@ -1,8 +1,8 @@
 class Pillow < Formula
   desc "Friendly PIL fork (Python Imaging Library)"
   homepage "https://python-pillow.org"
-  url "https://files.pythonhosted.org/packages/dc/c2/72349bb3a995fda8f4a064ee5dc92903b21886f27be4f5f1ed8c7b7174e4/Pillow-8.3.0.tar.gz"
-  sha256 "803606e206f3e366eea46b1e7ab4dac74cfac770d04de9c35319814e11e47c46"
+  url "https://files.pythonhosted.org/packages/8f/7d/1e9c2d8989c209edfd10f878da1af956059a1caab498e5bc34fa11b83f71/Pillow-8.3.1.tar.gz"
+  sha256 "2cac53839bfc5cece8fdbe7f084d5e3ee61e1303cccc86511d351adcb9e2c792"
   license "HPND"
   head "https://github.com/python-pillow/Pillow.git"
 
