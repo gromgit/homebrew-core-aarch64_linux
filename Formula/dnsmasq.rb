@@ -16,6 +16,7 @@ class Dnsmasq < Formula
     sha256 big_sur:       "d277d696e1432881e4bbbc0d68443fbdec125d0dd83c9041d5d58bcab0acae5e"
     sha256 catalina:      "945ab265756b63a2040d5bdcc4f8c2c24e379d60ed2e21249b77eade885630ff"
     sha256 mojave:        "6054ac54814f919df6733c9f8180444b3b199321cbb0616b5ae084afa0ceaf66"
+    sha256 x86_64_linux:  "942087bde70b4afff2bd59105ab5e0b17fb025745034b7baaafaa4c337be150f"
   end
 
   depends_on "pkg-config" => :build
