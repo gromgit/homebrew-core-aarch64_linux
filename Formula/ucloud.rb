@@ -6,11 +6,10 @@ class Ucloud < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "23eb0647583f539f176bb8110df100b14496817b7fc5da1860060bea4a1e72bf"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c7652d227d29011105ab15ff1bbdce3d3a176afc2ae27c1003746c7a1000f4e7"
-    sha256 cellar: :any_skip_relocation, catalina:      "0e447115650b1cfc4a6149dd83f39c7ca849d740ec430a581be09e8e21adbff5"
-    sha256 cellar: :any_skip_relocation, mojave:        "e5a5bcfec828253269cd75c1f0e7f6d606748a4b4d5ef987088581f7b5425e17"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "e7208d9e0dc5db081191c336d4e11ad44fb39d98221253a9577f6c2b7de3a374"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4369a8339dfade60520aa14d54f228aa50eaa477131b0cb930d26d49fd1c6cab"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a6501723daea0bcf02429ebbe424acbcd03b3e26529be6396cda2d31099f4607"
+    sha256 cellar: :any_skip_relocation, catalina:      "a402128a3fba94e3c08cd67e716c3f33852d138af48897db5cdf883b0de59441"
+    sha256 cellar: :any_skip_relocation, mojave:        "92bfe9c9fd15143c837bece7bc88296a4287977e156173248b6903dc4e6b817c"
   end
 
   depends_on "go" => :build
