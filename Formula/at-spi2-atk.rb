@@ -5,6 +5,10 @@ class AtSpi2Atk < Formula
   sha256 "901323cee0eef05c01ec4dee06c701aeeca81a314a7d60216fa363005e27f4f0"
   license "LGPL-2.1-or-later"
 
+  bottle do
+    sha256 x86_64_linux: "e4a4750d255df8365d68956650e1869c8b16a2d423e7fb80a597fc83635425fa"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
