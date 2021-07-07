@@ -17,10 +17,6 @@ class Hadolint < Formula
 
   uses_from_macos "xz"
 
-  on_linux do
-    depends_on "gmp"
-  end
-
   def install
     # Let `stack` handle its own parallelization
     jobs = ENV.make_jobs
