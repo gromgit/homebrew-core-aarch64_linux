@@ -1,8 +1,8 @@
 class IamPolicyJsonToTerraform < Formula
   desc "Convert a JSON IAM Policy into terraform"
   homepage "https://github.com/flosell/iam-policy-json-to-terraform"
-  url "https://github.com/flosell/iam-policy-json-to-terraform/archive/1.7.0.tar.gz"
-  sha256 "caba6d14c1f05f778f6928977f33bd0df0a1eef6266b667fc3a31512566f235a"
+  url "https://github.com/flosell/iam-policy-json-to-terraform/archive/1.8.0.tar.gz"
+  sha256 "428ee4c7c40a77c3f2c08f1ea5b5ac145db684bba038ab113848e1697ef906dc"
   license "Apache-2.0"
   head "https://github.com/flosell/iam-policy-json-to-terraform.git"
 
@@ -17,7 +17,7 @@ class IamPolicyJsonToTerraform < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args, "-ldflags", "-s -w"
+    system "go", "build", *std_go_args(ldflags: "-s -w")
   end
 
   test do
