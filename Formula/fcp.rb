@@ -11,10 +11,10 @@ class Fcp < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "dead76c3970ca3234354847c718ccefb8b1ec6b5316e7b0dad386a907a531665"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a1ab4eee959861298d34c1d83b20bc5ed75013d28d5b35bedfd773b08e80c13c"
-    sha256 cellar: :any_skip_relocation, catalina:      "89c5d3ff8c34dbbc6052b68b4eb1a58420d08e0fc6cb1b4ffbac60126ba85091"
-    sha256 cellar: :any_skip_relocation, mojave:        "70db6ca6787f72fee1020d0c5c0b3a3070a6cd3c269ce6f4aecf5e9db6609114"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c75727a5e1b12878e6b87d7fe02c93fc1ef83fdbfefdf86c0b1dbb6954734289"
+    sha256 cellar: :any_skip_relocation, big_sur:       "87520494288bf64154cea98f5f63dd4ff0d7b8d1b8084d6ebd0f416bf6d4b45b"
+    sha256 cellar: :any_skip_relocation, catalina:      "23280cce3a5305571eba38dd7d935259295a273bb95e5ee9e21687cc7f78a783"
+    sha256 cellar: :any_skip_relocation, mojave:        "cbb1bb6442ca303c9a81ded3c8c536238619857421a329f48fbb0ac2a62e8738"
   end
 
   depends_on "rust" => :build
