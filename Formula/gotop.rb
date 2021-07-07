@@ -11,6 +11,7 @@ class Gotop < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "dca175fc5fcd6cca0cdb2438adc60a5399aade2c3e1fe695261975692d5b2dd5"
     sha256 cellar: :any_skip_relocation, catalina:      "e3d3c32d0ff9c302f30354fcccbf781b630efa580e8d6dba751b879ee0f8882e"
     sha256 cellar: :any_skip_relocation, mojave:        "d72850a6aa640acce8e1df11168747586e791817042a2b73f183a341182e0a91"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "11508939c0b39983e6e7046094889c23763979b2c80db779868843a0fb1f2058"
   end
 
   depends_on "go" => :build
