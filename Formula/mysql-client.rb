@@ -15,6 +15,7 @@ class MysqlClient < Formula
     sha256 big_sur:       "b142f4a32fa04b62d4742a91b0e6b9322e709af367d692769012994e963f35c1"
     sha256 catalina:      "a2ff68b37407c8d189792925c7bb6dbbcdd2c78021a9121946bbfa9c8f37ec99"
     sha256 mojave:        "2a0463370835a04d6270113c31d6a4a6f2dd6fc8a845f9fa4c092c0f4c2ac49e"
+    sha256 x86_64_linux:  "babec714db36052706b8fa562a5b16f9ec76e48f54adaf89a92e8c25785adbb2"
   end
 
   keg_only "it conflicts with mysql (which contains client libraries)"
