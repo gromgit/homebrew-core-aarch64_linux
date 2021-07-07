@@ -10,6 +10,7 @@ class Grpcurl < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "be03266644292007336a1927e1a3c32c26132c10e6cdddf24f2be2db723616ad"
     sha256 cellar: :any_skip_relocation, catalina:      "cc7aa37de783837e837c441575df7f6b5ef169b83a5017b2b62fc1ce4c4c09c3"
     sha256 cellar: :any_skip_relocation, mojave:        "a4cf31d2358f4d8e36a695a2a9c401672cd7d80f0be54dda2d4d7fb62702b49c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0194feb338628f7d93738c784833ccd7fec1d1efd0c8d021b2ff2e0e3a3b61c3"
   end
 
   depends_on "go" => :build
