@@ -6,10 +6,10 @@ class Step < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b488bf4f0ce687ba91bce50f4dd37563dfb0cdc41aeef6a6fc58708309283c63"
-    sha256 cellar: :any_skip_relocation, big_sur:       "2a42a0742849f428c0f50115ea665ad3b99b1680e063b2fdf50c896eb6fe818a"
-    sha256 cellar: :any_skip_relocation, catalina:      "107841d1447a1acce30135b12c4b9f3dc490d28d8db29cd408ea00aac9e4abf8"
-    sha256 cellar: :any_skip_relocation, mojave:        "579cf95e326aa4de5fde7be9ee71bce0260da14662e451e6468991104b4386e1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5cbd9299a0424604902f3840e65c7c7e2b1aea3075134a13d21319c77162cad2"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d7db2c221fe378e0b8fc472f61bc6c00b0f6fe4730666757e270f32047c78b05"
+    sha256 cellar: :any_skip_relocation, catalina:      "3b8a7844a590fe48826da595b3691278f621c32fbcbe956978bdad885e7a7522"
+    sha256 cellar: :any_skip_relocation, mojave:        "e2590f209a8c45079bb7aa3afc6003bb17fcbecc9c190335f4957fa1f76f19ee"
   end
 
   depends_on "go" => :build
