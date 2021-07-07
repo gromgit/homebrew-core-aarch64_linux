@@ -12,6 +12,7 @@ class Confd < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "34d59b3c47493cd00685c62997ac0385f52f90a5d99adb9ed5c98576c6c02452"
     sha256 cellar: :any_skip_relocation, mojave:        "6c83fe2e7e744917d241e8fd51d76b83838ac08dcab31c2663c7b2c7703140cc"
     sha256 cellar: :any_skip_relocation, high_sierra:   "8605d52c611da0530d31178fbb9805592113d70b3d496d21a34696ff499aac70"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a67a6ca1953e416e2d1278d6426f8c98e778d829cbff9485d6e12cddd0067b50"
   end
 
   depends_on "go" => :build
