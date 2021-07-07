@@ -9,10 +9,12 @@ class Ipython < Formula
   head "https://github.com/ipython/ipython.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "3add12cfc5cc3aed5ea37da9eb901ee5c66803ccbf0be5f6d592543447634594"
-    sha256 cellar: :any, big_sur:       "898c6725202a6d7e8c086aa2a5d1cf0041a01642ae138cb28e4d8684696c1c32"
-    sha256 cellar: :any, catalina:      "51763ab53bd44b00bf45e2efe804a6f15388f4e2ac3d35086d9c0f6109263f94"
-    sha256 cellar: :any, mojave:        "171e4f4266cd4d1407c00638d2744e4b25fffd0408ecf8d7a655ab70137ff5e7"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_big_sur: "41896d9958a84aad343e09cd769d87ed34e44af446723afa5b375e926b1ae614"
+    sha256 cellar: :any,                 big_sur:       "2afedad750d6a2da248f4b9404179a4373e9ed02f0f62aafa3f85fd3b250a9f1"
+    sha256 cellar: :any,                 catalina:      "5a3cfa0026e00cfe945de6b4ff13263d224aef153dcd93fdb544c9358a0bdb6f"
+    sha256 cellar: :any,                 mojave:        "1309a31faf75575c91cf6ed8c5a34f504515d03774cea6af64ac1713a218f917"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "943163dbe355a211e3886505e71660ec25a2ddb8acc94dcd4638e970cbd7be21"
   end
 
   depends_on "python@3.9"
