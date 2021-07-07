@@ -17,6 +17,7 @@ class Calicoctl < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "400e7c298d661badd89ac967a33921297657a6f53a4155ee4fa620c7b71b8040"
     sha256 cellar: :any_skip_relocation, catalina:      "ad8a82058db04666e990a8963dfa233b5db2d852257b14a7b98d05771d96a38a"
     sha256 cellar: :any_skip_relocation, mojave:        "a44473b4ee9ce7ca1a4a9444a1a4d06e51f6ecc0142a00b62d2f2c1e0024c1ff"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "af530644558d1fcf213d9d08c4f98d7cfe8dc1483ecc80f2a0dfde44ac0f10eb"
   end
 
   depends_on "go" => :build
