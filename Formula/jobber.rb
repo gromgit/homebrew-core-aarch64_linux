@@ -12,6 +12,7 @@ class Jobber < Formula
     sha256 catalina:      "f34fec60aef5e18cfc6f5bb8f1e0dbb00a866a01e3e0041d6c8e055ee7c4e27e"
     sha256 mojave:        "6bb3016d2f4200636cd51c237d04039b8bbf285d473acb37589e45fc602caf30"
     sha256 high_sierra:   "1fafbf17e64ac28355dd28758441f97fbe8b7e633bde0cf48a744918c281f8da"
+    sha256 x86_64_linux:  "bc19ce8f05dbf03e3f40ea37bd27ccb9e49377ec3aae867547dce5fa3ee7b670"
   end
 
   depends_on "go" => :build
