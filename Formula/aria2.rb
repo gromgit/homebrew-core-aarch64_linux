@@ -11,6 +11,7 @@ class Aria2 < Formula
     sha256 cellar: :any, catalina:      "9cc5e04be8b0a58d1f2b60b8abfc636168edbf23e7018003c40f1dd6952aab0c"
     sha256 cellar: :any, mojave:        "761836ac608eb0a59d4a6f6065860c0e809ce454692e0937d9d0d89ad47f3ce4"
     sha256 cellar: :any, high_sierra:   "70cc7566a23c283015368f92dfeaa0d119e53cfc7c1b2276a73ff9f6167b529d"
+    sha256               x86_64_linux:  "eabc120a6c75a7efc537d6b6716d2a15b3e946c86ea69cebaa4e613309134b7c"
   end
 
   depends_on "pkg-config" => :build
