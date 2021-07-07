@@ -11,6 +11,7 @@ class Sops < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "786527c0a00ac74579e50623298aef7f5a996d63211c08d14b87999255f41809"
     sha256 cellar: :any_skip_relocation, catalina:      "f95b128d36ffb171695376d011dbf1fc971117152367c109f6232949b45e710a"
     sha256 cellar: :any_skip_relocation, mojave:        "edc533e3636e05deb0a854a1c3950dfdbeb01ac38f7ef6d8857426d55991a542"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7f81bba58cecb22d7d6f08383e77c7c137bfb93b76860fdf5e5da788ed6b7be2"
   end
 
   depends_on "go" => :build
