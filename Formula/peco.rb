@@ -11,6 +11,7 @@ class Peco < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "dd707346be0be24e7f91aeca1bb9520a17d9632758e427dde0b66c4638944be2"
     sha256 cellar: :any_skip_relocation, catalina:      "8c6e6459743f08e90e73f9b826505807b8d0d3f2ad2d818f580bcb2addf7c115"
     sha256 cellar: :any_skip_relocation, mojave:        "7abf9bc7b046f07d3f2c53599c2f41cac7196945cda79f10295db4e61aa50397"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ddca8855e36be24dbb661a5b306932f23fa3f29b6bbd831926d0548e025ba3c4"
   end
 
   depends_on "go" => :build
