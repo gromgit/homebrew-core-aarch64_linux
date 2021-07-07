@@ -11,6 +11,7 @@ class Cloc < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "bcc059446f6a3c112e4eecf2d5da94531124ca7572cd953138bd9bb636dbd760"
     sha256 cellar: :any_skip_relocation, catalina:      "62e4eba4fd24d200fea078702f429acd303edfd8211a534362081c9d32283272"
     sha256 cellar: :any_skip_relocation, mojave:        "31d38191d5377740453d8eee73aaf287df8026bae490297179126a4016665d31"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0d229ef534159ffc17ed62d294abcb7a4b68702bfceaf17c0f4fd2504afeecf5"
   end
 
   uses_from_macos "perl"
