@@ -12,6 +12,7 @@ class Graphqurl < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "5300156ac1794e98e8e9e8f261f469ae7a6749631dfd55c8374054f425e83cb4"
     sha256 cellar: :any_skip_relocation, catalina:      "5300156ac1794e98e8e9e8f261f469ae7a6749631dfd55c8374054f425e83cb4"
     sha256 cellar: :any_skip_relocation, mojave:        "5300156ac1794e98e8e9e8f261f469ae7a6749631dfd55c8374054f425e83cb4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c0c19d5f82887b811d0b9f5cdaad5efcfb8da33e970c253af8af63faae597f02"
   end
 
   depends_on "node"
