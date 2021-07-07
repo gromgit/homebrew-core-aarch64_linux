@@ -11,6 +11,7 @@ class Gitql < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "07a4599ecd1fc45a843b0b4b0e4ec417ee2815417ca89641c7a04f34ba95e7b6"
     sha256 cellar: :any_skip_relocation, catalina:      "f335da354c07c2bc904f7646cff64fd1b4dcf4efaf71f1d4c41b0dc956dead1a"
     sha256 cellar: :any_skip_relocation, mojave:        "f8dc93d9074d600de7be7afe5ac9e9947824bdda18eab6fdda87ba1455fa6488"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eb1b0e2266de96e0eb1e27459b83158e39b8fe0c3620f4cbc49149f192b455ae"
   end
 
   depends_on "go" => :build
