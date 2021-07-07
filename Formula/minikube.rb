@@ -8,11 +8,11 @@ class Minikube < Formula
   head "https://github.com/kubernetes/minikube.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "771f87cd33cea144340252f06615b4d7fbbe2a24cf8650422f92980dc750ed52"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ee8a9463cfba15edeb279dad222091c22999b0163456c949a00739aac7ac24ff"
-    sha256 cellar: :any_skip_relocation, catalina:      "32ff0622ea10902be0d68057e3d4a61e7cff7eecdd0e3a3a61fb48a4637c635c"
-    sha256 cellar: :any_skip_relocation, mojave:        "0cdc4efab315f963cf7957626597025c0599caf300831ce32d32d03dcc3fe4fd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "043d3f48e48a4b76d41c4883d7b98ddb91dcd21888445fd260f9073f75bd7454"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d1ea963733dda06b43df6c1b34b87c4365ee055ce01cca8eb8bf90f2a7904468"
+    sha256 cellar: :any_skip_relocation, big_sur:       "476bb6663d4bd767e914c24b8c72cdbf3c12641aab6ac8fa59adb6b56cbe91f7"
+    sha256 cellar: :any_skip_relocation, catalina:      "5d3c3706be8d9f71cb9505fb10abb239a8dc491b68ef803030a83d431f1b1113"
+    sha256 cellar: :any_skip_relocation, mojave:        "b56e75f3f8c29eef6457c7c0d01eceb6623c5630f63f5fd2d3277cf40e08a016"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8b2596238b1a4b9e7219ea490436075cb2b80f2ba2b855e3875a38496beb5574"
   end
 
   depends_on "go" => :build
