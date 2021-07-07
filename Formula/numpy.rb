@@ -11,6 +11,7 @@ class Numpy < Formula
     sha256 cellar: :any, big_sur:       "303ca5f3bfe16812f0f2fead2b29230906752032d45014a6e972a698ff8922f4"
     sha256 cellar: :any, catalina:      "66b7372569ec253cb81ab172903dbed96495cbca2452d41119867161bfd4433a"
     sha256 cellar: :any, mojave:        "f34cc0cd3046377a5640147f4adc26be75dcfc36dbeee92dc71147cc9e85c5f9"
+    sha256               x86_64_linux:  "55238d0ac9a1dd50de3eca4586c5bdeb327fbdb3f3e0a2d9db5d63e86b64b570"
   end
 
   depends_on "cython" => :build
