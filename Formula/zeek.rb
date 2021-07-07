@@ -9,10 +9,10 @@ class Zeek < Formula
   head "https://github.com/zeek/zeek.git"
 
   bottle do
-    sha256 arm64_big_sur: "dbde69af2058d6c96d8f98839815dc39edec143d5af0993745a5626f33492d0a"
-    sha256 big_sur:       "2aaf6c7bc8aa2fe1c780e1f0bff2d2788ecc81a870b71a61a469ddf1f33171dc"
-    sha256 catalina:      "4a57ec4cd82b19120c66dcea345c76b4174ffc13e0dbcab6d773d5ec8ea3d382"
-    sha256 mojave:        "a3c670373f6dfddbd5ed8260998931025968c8e3eec005196a32fc431dd56a6e"
+    sha256 arm64_big_sur: "d1dca303e52b624d30980091076c1d5e3c1a47a773a54a7213ac30051bafe644"
+    sha256 big_sur:       "726838d541a6496b8beec4f46ca743dad39bc34e76f3cd3267761a95edb5a43f"
+    sha256 catalina:      "cfac892b4e156c6bb48cb15b08183c955b80246529a5d4a4d000d7c97c8ddbbe"
+    sha256 mojave:        "9a1087cfc39f8c0d52c44d03ff16587ea72b9bacdb0233a5dfd47c6622916e62"
   end
 
   depends_on "bison" => :build
