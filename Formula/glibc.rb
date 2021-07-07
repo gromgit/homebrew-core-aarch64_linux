@@ -89,6 +89,10 @@ class Glibc < Formula
     skip "glibc is pinned to the version present in Homebrew CI"
   end
 
+  bottle do
+    sha256 x86_64_linux: "8f5509c5a5fe85b923c196da5bb969d759a70a6a0e228110c5440a8719dc4c8e"
+  end
+
   depends_on "binutils" => :build
   depends_on GawkRequirement => :build
   depends_on "linux-headers" => :build
