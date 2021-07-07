@@ -13,10 +13,11 @@ class Libarchive < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "70d00c2b7edaa2e7e84d8831edddfc07490f19016f7899bcde581d5d71040d67"
-    sha256 cellar: :any, big_sur:       "88826e185e60eba60ad004889a76dae4354a15533a5ba8254ecf0323075b34cd"
-    sha256 cellar: :any, catalina:      "616792d4660cc153ce5868fd612980af9b8b9e18d54c4199eb11e08bc9bb45da"
-    sha256 cellar: :any, mojave:        "b231516d40d35180e1f61a50175324e4ce28f71aec27769ecc4661dbe6e883d0"
+    sha256 cellar: :any,                 arm64_big_sur: "70d00c2b7edaa2e7e84d8831edddfc07490f19016f7899bcde581d5d71040d67"
+    sha256 cellar: :any,                 big_sur:       "88826e185e60eba60ad004889a76dae4354a15533a5ba8254ecf0323075b34cd"
+    sha256 cellar: :any,                 catalina:      "616792d4660cc153ce5868fd612980af9b8b9e18d54c4199eb11e08bc9bb45da"
+    sha256 cellar: :any,                 mojave:        "b231516d40d35180e1f61a50175324e4ce28f71aec27769ecc4661dbe6e883d0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "43c2f61ef3f0fd5af5366626f4b5325f1ad0b044456fce10cb0f67e02e60f538"
   end
 
   keg_only :provided_by_macos
