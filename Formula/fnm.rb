@@ -16,6 +16,7 @@ class Fnm < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "1aceb43c8d1cd23b37ef3e5cb39958a3723021b4aa8796226ae5452cdb1648c3"
     sha256 cellar: :any_skip_relocation, catalina:      "22f971bf095b1c786fc3ac5cd51ed772348cecb518abfd14c14890508418057e"
     sha256 cellar: :any_skip_relocation, mojave:        "b809a52a73726c35e08d89076123f9dd3978615e229d88bc41257fd3bb434b0b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1f6f17e0702f2efdd2cebe887f304b4d679d5e6ddcb08173e0ce66e13231f9d5"
   end
 
   depends_on "rust" => :build
