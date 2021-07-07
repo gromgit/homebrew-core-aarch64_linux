@@ -6,10 +6,11 @@ class Samtools < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "90bb0238ac2b339a77305494d4be5413a446cc3f74276215834b4464c5c1e13f"
-    sha256 cellar: :any, big_sur:       "91e903cb284e1ea536117a1c583ab66d40691251dc23fe2904c43548b0759c9b"
-    sha256 cellar: :any, catalina:      "1ba9234ba9de00494f56515347be7027161fddd0ae7f44e88db9809cfa9440a2"
-    sha256 cellar: :any, mojave:        "441bf778fce091ac24cfca18b967b1693e54bea5cd44e217f7427597c8a38271"
+    sha256 cellar: :any,                 arm64_big_sur: "90bb0238ac2b339a77305494d4be5413a446cc3f74276215834b4464c5c1e13f"
+    sha256 cellar: :any,                 big_sur:       "91e903cb284e1ea536117a1c583ab66d40691251dc23fe2904c43548b0759c9b"
+    sha256 cellar: :any,                 catalina:      "1ba9234ba9de00494f56515347be7027161fddd0ae7f44e88db9809cfa9440a2"
+    sha256 cellar: :any,                 mojave:        "441bf778fce091ac24cfca18b967b1693e54bea5cd44e217f7427597c8a38271"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6c2cd108ce9fc26996ed786b1fb794f86c154aa9fc4c078d9fe25070fe1fdb93"
   end
 
   depends_on "htslib"
