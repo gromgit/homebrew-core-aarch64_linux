@@ -12,10 +12,11 @@ class Vapoursynth < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "79987efc9aa04472c4567b9ad708ef4e939a367099f9ed824d901649cbdc4214"
-    sha256 cellar: :any, big_sur:       "1405ff1797a5bc77132d25f04ad1d67c54dea3f472f692445be9d68f96b55bce"
-    sha256 cellar: :any, catalina:      "ae8eabe048ec75da1b9b28ee0aaf745aa098b60fe21340aaa89c104886fc4a13"
-    sha256 cellar: :any, mojave:        "a42f53e1ac5f7d008e1685e02b6a9b94a9e466f19572ad8f7695df38349d4f37"
+    sha256 cellar: :any,                 arm64_big_sur: "79987efc9aa04472c4567b9ad708ef4e939a367099f9ed824d901649cbdc4214"
+    sha256 cellar: :any,                 big_sur:       "1405ff1797a5bc77132d25f04ad1d67c54dea3f472f692445be9d68f96b55bce"
+    sha256 cellar: :any,                 catalina:      "ae8eabe048ec75da1b9b28ee0aaf745aa098b60fe21340aaa89c104886fc4a13"
+    sha256 cellar: :any,                 mojave:        "a42f53e1ac5f7d008e1685e02b6a9b94a9e466f19572ad8f7695df38349d4f37"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c50077a10fae4285afb93503c08f529788854d9ee3746015504661a739b04417"
   end
 
   depends_on "autoconf" => :build
