@@ -18,6 +18,7 @@ class Hledger < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "28545d37d7a0865c9558e54e7696afa35d308c6c31867654da34348ea90b9d2e"
     sha256 cellar: :any_skip_relocation, catalina:      "62edd2f9008af2754bcf6a592d605107311c367907ea958ae1684e51fee655cc"
     sha256 cellar: :any_skip_relocation, mojave:        "8898689adf32582f4c63a0b9ac4ece89286af7e5307fbe02653675a18b343da9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "78ed219dc0cf536391bc99e30ce0fd42cf9b96a669e7b6179db8b12f7aac2df3"
   end
 
   depends_on "ghc" => :build
