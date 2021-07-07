@@ -10,6 +10,7 @@ class Onefetch < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "3c478262017e9e019e0c2c42f8cef1be31ff8d336afdcf77476d0c72afe43810"
     sha256 cellar: :any_skip_relocation, catalina:      "a79b95318ad14dbea71093af6dce7c2f5c945b2bfc6c5b44e2f0b54805e90d4f"
     sha256 cellar: :any_skip_relocation, mojave:        "af8f091e15c4ffc30bd74e55b23710eabedd6f3217a7eb4afb5fc261687de42d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "de7373759f68650076a23bf98cafc9910f22362b84fb2f001aca4d7c6e47383c"
   end
 
   depends_on "rust" => :build
