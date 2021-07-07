@@ -16,6 +16,7 @@ class MidnightCommander < Formula
     sha256 big_sur:       "2035ff99bbb38fe1f12f4cf5c311b453c89d295a988ff570a5c4cab2834a4232"
     sha256 catalina:      "9de49345aabc060d430d444b0b94b7e00593253ac1f21a3718c483303621abdf"
     sha256 mojave:        "959dfb0d8538524172c68cb394046fb4c3be78803e8307a759bdc564ff86b783"
+    sha256 x86_64_linux:  "e346f397da1f25b9eef69eb7e5011742d1cb59c091832f4080aec8ceee2fb485"
   end
 
   head do
