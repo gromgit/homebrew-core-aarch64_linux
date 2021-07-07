@@ -15,6 +15,7 @@ class MysqlAT57 < Formula
     sha256 big_sur:       "baf50315c60aef1b4598999f95f280e23d98151ca29e02884ea78e5b99126e0e"
     sha256 catalina:      "9a6ff5cda60fefb428cb3799f1869d16f69f9a29718dbd8d64692465bd13082d"
     sha256 mojave:        "542dc7e4c5e567828a5db948b08baa4e02c0a511515ad2d7d973e065132c488e"
+    sha256 x86_64_linux:  "0fbe59e5bc670ec019c9d0c11aa06b0b5087a73e55d9c8ff795459463bd8f467"
   end
 
   keg_only :versioned_formula
