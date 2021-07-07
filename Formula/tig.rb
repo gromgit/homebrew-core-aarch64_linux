@@ -6,10 +6,11 @@ class Tig < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "ca3273a9bb53f6b060ce4ccbffaf82308d90d833a7120505a55f877b6f197592"
-    sha256 cellar: :any, big_sur:       "506b2d47105b97ba9d04f3b91a45e9a164dd409fc1fd58655bf3015bb1403e0b"
-    sha256 cellar: :any, catalina:      "5afa0c1a9dcb4d851f88db05b0f911e70014abb6d64b43d1b1e56f12452d233a"
-    sha256 cellar: :any, mojave:        "c2dff759957d7b62f5ab947e6637c428c9352c244faeb6f8e02918f8c9587771"
+    sha256 cellar: :any,                 arm64_big_sur: "ca3273a9bb53f6b060ce4ccbffaf82308d90d833a7120505a55f877b6f197592"
+    sha256 cellar: :any,                 big_sur:       "506b2d47105b97ba9d04f3b91a45e9a164dd409fc1fd58655bf3015bb1403e0b"
+    sha256 cellar: :any,                 catalina:      "5afa0c1a9dcb4d851f88db05b0f911e70014abb6d64b43d1b1e56f12452d233a"
+    sha256 cellar: :any,                 mojave:        "c2dff759957d7b62f5ab947e6637c428c9352c244faeb6f8e02918f8c9587771"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a71079791b2ff79c307250f00163c3320ba6c242f4115892fa490d78a71196f9"
   end
 
   head do
