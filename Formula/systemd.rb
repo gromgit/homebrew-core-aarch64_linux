@@ -6,6 +6,11 @@ class Systemd < Formula
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
   head "https://github.com/systemd/systemd.git"
 
+  bottle do
+    rebuild 1
+    sha256 x86_64_linux: "b25b499f5620249c7676a4ba6cd8b575bdc4c1a6125574298e39a20034033ac1"
+  end
+
   depends_on "coreutils" => :build
   depends_on "docbook-xsl" => :build
   depends_on "gettext" => :build
