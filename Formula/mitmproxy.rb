@@ -12,10 +12,11 @@ class Mitmproxy < Formula
   head "https://github.com/mitmproxy/mitmproxy.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "38532a465e64e70d10c3ae915e8b1ad94bc737859744f84f51f7cca9c4821ebe"
-    sha256 cellar: :any, big_sur:       "0147699f750b68e7b99bd2787a9f12bc7bfbd67072c7993b924645343da7687a"
-    sha256 cellar: :any, catalina:      "ae1a8a9ce9cae1261dba035f21dcc76495d9ad52db35c84c88bf3d8a46de9a26"
-    sha256 cellar: :any, mojave:        "e875f4b63ff4a62fa36669090c70e44084d69a08f041e650476d02425ea50495"
+    sha256 cellar: :any,                 arm64_big_sur: "38532a465e64e70d10c3ae915e8b1ad94bc737859744f84f51f7cca9c4821ebe"
+    sha256 cellar: :any,                 big_sur:       "0147699f750b68e7b99bd2787a9f12bc7bfbd67072c7993b924645343da7687a"
+    sha256 cellar: :any,                 catalina:      "ae1a8a9ce9cae1261dba035f21dcc76495d9ad52db35c84c88bf3d8a46de9a26"
+    sha256 cellar: :any,                 mojave:        "e875f4b63ff4a62fa36669090c70e44084d69a08f041e650476d02425ea50495"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1d49d50f9af6bfdd6e03d15ec7f88709887e9cddc5c22e3a3b48e88480e7834e"
   end
 
   depends_on "openssl@1.1"
