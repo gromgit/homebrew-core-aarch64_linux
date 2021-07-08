@@ -9,10 +9,11 @@ class Xdotool < Formula
 
   bottle do
     rebuild 1
-    sha256 arm64_big_sur: "a1b51b06df321f1fb0b43d81536bd0833579a0282aa6db5aab0d966c7ddcfd17"
-    sha256 big_sur:       "341d016062ad7e0ffe416e8d70636a912ea62e8cfeae6bfd420935ed740c70a2"
-    sha256 catalina:      "2a11b0772f3ae332186d8d257c9687e759772d4e3fbe8a42e6fa07e9a5f11329"
-    sha256 mojave:        "fd132f4ad55f7e709179a027878df3ee13d497d82ada355f323e2dd0b8f12409"
+    sha256                               arm64_big_sur: "a1b51b06df321f1fb0b43d81536bd0833579a0282aa6db5aab0d966c7ddcfd17"
+    sha256                               big_sur:       "341d016062ad7e0ffe416e8d70636a912ea62e8cfeae6bfd420935ed740c70a2"
+    sha256                               catalina:      "2a11b0772f3ae332186d8d257c9687e759772d4e3fbe8a42e6fa07e9a5f11329"
+    sha256                               mojave:        "fd132f4ad55f7e709179a027878df3ee13d497d82ada355f323e2dd0b8f12409"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7380416d48181a9594dcdfc6b62819d02419c2df17e5a8cbe4e7c9dec8359024"
   end
 
   depends_on "pkg-config" => :build
