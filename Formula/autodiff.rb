@@ -1,8 +1,8 @@
 class Autodiff < Formula
   desc "Automatic differentiation made easier for C++"
   homepage "https://autodiff.github.io"
-  url "https://github.com/autodiff/autodiff/archive/v0.5.13.tar.gz"
-  sha256 "a73dc571bcaad6b44f74865fed51af375f5a877db44321b5568d94a4358b77a1"
+  url "https://github.com/autodiff/autodiff/archive/v0.6.0.tar.gz"
+  sha256 "b76e6a96e539f173a2a24eefa6f4e7cff54b1144cc51c51eba44ac3779a14013"
   license "MIT"
   head "https://github.com/autodiff/autodiff.git"
 
@@ -14,9 +14,10 @@ class Autodiff < Formula
 
   depends_on "cmake" => :build
   depends_on "eigen"
+  depends_on "pybind11"
 
   def install
-    system "cmake", ".", *std_cmake_args
+    system "cmake", ".", *std_cmake_args, "-DAUTODIFF_BUILD_TESTS=off"
     system "make", "install"
     (pkgshare/"test").install "examples/forward/example-forward-single-variable-function.cpp" => "forward.cpp"
     (pkgshare/"test").install "examples/reverse/example-reverse-single-variable-function.cpp" => "reverse.cpp"
