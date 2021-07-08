@@ -82,11 +82,13 @@ class Libhttpseverywhere < Formula
       -lglib-2.0
       -lgobject-2.0
       -lhttpseverywhere-0.8
-      -lintl
       -ljson-glib-1.0
       -lsoup-2.4
       -lxml2
     ]
+    on_macos do
+      flags << "-lintl"
+    end
     system ENV.cc, "test.c", "-o", "test", *flags
     system "./test"
   end
