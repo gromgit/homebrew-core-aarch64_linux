@@ -6,13 +6,10 @@ class Cgit < Formula
   license "GPL-2.0-only"
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "7a87dcf5cb65728d597942a23bca28ae960a54023b08728408adc099460661cb"
-    sha256 big_sur:       "50e62177e147660e5a1c94892208381903a96f4b0b2771f05d63025ac83ec8a5"
-    sha256 catalina:      "6ddf371689a429df59b81cc75ef3c491c58fa1536aeafb41eef0df89196405c6"
-    sha256 mojave:        "0a8124c41a3e891d8ac8a9dc9391a1048deecb3b82a785d604bbf1d59125b010"
-    sha256 high_sierra:   "b5dd8fcf3e81b7d320ea39d9de0b7a3b20b6522978e01f2527e14845d80454c4"
-    sha256 sierra:        "7b21a1dd7536c3354280089b4521fa64e36c2d177303bf5f9ea7994b77a25f2d"
+    sha256 arm64_big_sur: "1d94a449229b9550a5d76b9d1f0140ea6b267fcd982539d6537fce21447aae12"
+    sha256 big_sur:       "43d5a3249276dc89f9b8730b775fab358f9a04adac63fc18dc1257cecb0de2a8"
+    sha256 catalina:      "c5317498aefba5a04343b14929249e42a9ecc1c5da227ae06728102418bf5e49"
+    sha256 mojave:        "261aa49e87d8d4147b0ec838e22d6149f0aa41ee27751df15277b1cdb1df8bd3"
   end
 
   depends_on "gettext"
