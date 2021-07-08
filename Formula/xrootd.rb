@@ -13,10 +13,11 @@ class Xrootd < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "ec10800dc260fe5f5d3d2c8eaf59bcc4dd66b26e5ef6711d5d69cbdfa127890b"
-    sha256 cellar: :any, big_sur:       "175899de5aa39c513c96846122deb2d39ce36a337a3bac290a8aab6b5e12df77"
-    sha256 cellar: :any, catalina:      "6d8692b31b1075069e7e91f3544761fca89cc61bebcf196990b80cfc858be647"
-    sha256 cellar: :any, mojave:        "e4b86a28028400f6e4f152af77b0784adaf7f0b65c4b2bdf6dece891cf45268a"
+    sha256 cellar: :any,                 arm64_big_sur: "ec10800dc260fe5f5d3d2c8eaf59bcc4dd66b26e5ef6711d5d69cbdfa127890b"
+    sha256 cellar: :any,                 big_sur:       "175899de5aa39c513c96846122deb2d39ce36a337a3bac290a8aab6b5e12df77"
+    sha256 cellar: :any,                 catalina:      "6d8692b31b1075069e7e91f3544761fca89cc61bebcf196990b80cfc858be647"
+    sha256 cellar: :any,                 mojave:        "e4b86a28028400f6e4f152af77b0784adaf7f0b65c4b2bdf6dece891cf45268a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "84f6581e02191e39a07c533711d2e9de50ef15931e2ccd253d739fadc224e35e"
   end
 
   depends_on "cmake" => :build
