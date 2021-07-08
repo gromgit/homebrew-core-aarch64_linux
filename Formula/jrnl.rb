@@ -8,10 +8,11 @@ class Jrnl < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "8e35532250e8864b1b81559f6e675b794ffb20a301f6874dd8cc469df2b12de9"
-    sha256 cellar: :any, big_sur:       "75de14f6e281c827e06e3317a68c06fa680b1fff15d7ad63c9f4a991b1ac48e3"
-    sha256 cellar: :any, catalina:      "1819fb9d1ac45a4ac4ea688ab7269f89e66c7f505ece4dedcaaa64c268cbc152"
-    sha256 cellar: :any, mojave:        "64ff4066d306e04755e8f1fafbbc8806f42a10d63ca31d23d88f4123299f61b0"
+    sha256 cellar: :any,                 arm64_big_sur: "8e35532250e8864b1b81559f6e675b794ffb20a301f6874dd8cc469df2b12de9"
+    sha256 cellar: :any,                 big_sur:       "75de14f6e281c827e06e3317a68c06fa680b1fff15d7ad63c9f4a991b1ac48e3"
+    sha256 cellar: :any,                 catalina:      "1819fb9d1ac45a4ac4ea688ab7269f89e66c7f505ece4dedcaaa64c268cbc152"
+    sha256 cellar: :any,                 mojave:        "64ff4066d306e04755e8f1fafbbc8806f42a10d63ca31d23d88f4123299f61b0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "369d83264052d3a8617084e71e61ed5411d0058934f301ca9d19e3bd40f25f86"
   end
 
   depends_on "rust" => :build
