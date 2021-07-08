@@ -124,6 +124,18 @@ jobs:
                     "path": "Formula/.+",
                     "content": "system \"swift\", \"build\""
                 }, {
+                    "label": "CI-long-timeout",
+                    "path": "Formula/(boost|qt).rb",
+                    "keep_if_no_match": true
+                }, {
+                    "label": "CI-build-dependents-from-source",
+                    "path": "Formula/(cabal-install|docbook-xsl|emscripten|erlang|ghc|go|ocaml|ocaml-findlib|ocaml-num|openjdk|rust).rb",
+                    "keep_if_no_match": true
+                }, {
+                    "label": "CI-skip-recursive-dependents",
+                    "path": "Formula/(gettext|openssl).rb",
+                    "keep_if_no_match": true
+                }, {
                     "label": "CI-linux-wheezy",
                     "path": "Formula/(zlib|patchelf|binutils).rb",
                     "keep_if_no_match": true

@@ -1,4 +1,4 @@
-name: Dispatch build bottle
+name: Dispatch build bottle (for a single OS/version)
 
 on:
   workflow_dispatch:
@@ -8,6 +8,10 @@ on:
         required: true
       formula:
         description: Formula name
+        required: true
+      timeout:
+        description: "Build timeout (in minutes, default: 60 minutes)"
+        default: "60"
         required: true
       issue:
         description: Issue number, where comment on failure would be posted
@@ -29,7 +33,7 @@ env:
 jobs:
   bottle:
     runs-on: ${{github.event.inputs.runner}}
-    timeout-minutes: 4320
+    timeout-minutes: ${{fromJson(github.event.inputs.timeout)}}
     defaults:
       run:
         shell: /bin/bash -e {0}
@@ -59,6 +63,8 @@ jobs:
 
       - name: Run Docker container
         if: runner.os == 'Linux'
+        env:
+          TAP_PATH: /home/linuxbrew/.linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-core
         run: |
           docker run \
             --detach \
@@ -72,11 +78,6 @@ jobs:
           # Fix working directory permissions
           docker exec --user root ${{github.sha}} chmod 777 /tmp/bottles
 
-      - name: Set up Homebrew in container
-        if: runner.os == 'Linux'
-        env:
-          TAP_PATH: /home/linuxbrew/.linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-core
-        run: |
           docker exec --workdir "$TAP_PATH" ${{github.sha}} git remote set-url origin ${{github.event.repository.html_url}}
           docker exec --workdir "$TAP_PATH" ${{github.sha}} git fetch origin ${{github.sha}} '+refs/heads/*:refs/remotes/origin/*'
           docker exec --workdir "$TAP_PATH" ${{github.sha}} git remote set-head origin --auto
@@ -98,21 +99,21 @@ jobs:
             docker exec ${{github.sha}} brew test-bot --only-setup
           fi
 
-      - name: Run brew test-bot --keep-old --only-json-tab
+      - name: Run brew test-bot --keep-old --only-json-tab --only-formulae --skip-dependents ${{github.event.inputs.formula}}
         run: |
           if [ "$RUNNER_OS" = 'macOS' ]; then
             mkdir bottles
             cd bottles
-            brew test-bot --keep-old --only-json-tab --only-formulae ${{github.event.inputs.formula}}
+            brew test-bot --keep-old --only-json-tab --only-formulae --skip-dependents ${{github.event.inputs.formula}}
           else
-            docker exec ${{github.sha}} brew test-bot --keep-old --only-json-tab --only-formulae ${{github.event.inputs.formula}}
+            docker exec ${{github.sha}} brew test-bot --keep-old --only-json-tab --only-formulae --skip-dependents ${{github.event.inputs.formula}}
           fi
 
       - name: Copy bottles from container
         if: always() && runner.os == 'Linux'
         run: docker cp ${{github.sha}}:/tmp/bottles .
 
-      - name: Output brew test-bot --keep-old --only-json-tab failures
+      - name: Failures summary for brew test-bot --keep-old --only-json-tab --only-formulae --skip-dependents ${{github.event.inputs.formula}}
         if: always()
         run: |
           cat bottles/steps_output.txt
