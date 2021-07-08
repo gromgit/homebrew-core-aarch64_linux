@@ -8,11 +8,11 @@ class Breezy < Formula
   license "GPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "346e68c4f53bd4dbafca6cc99b506aec39e7832404e8b71ed14a1aecff098d53"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5e752e52c7483cf0bb746b39767e3d993e0625f1cff5d8d5136a9a739c10c8de"
-    sha256 cellar: :any_skip_relocation, catalina:      "749d279b1025328b55c6cdefab609d7c783d08c776b2d9b36c8c3b47aa893779"
-    sha256 cellar: :any_skip_relocation, mojave:        "6f121c4a7496b887843277ea099ac7980cfdcc786df32ebc2f48de1e18220f7e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c1fff68b0d54a433b39b656c441daaf6680f5973c185bbc194852dff44bc42bc"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "91ac24be8f4fc563cff558d5d4d08e176235a9ad5510c0ecf2af6790e4ecf27c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b83446c114ad82d91da5614176a13a4991da60179e83d2f24e17c3d004a30e46"
+    sha256 cellar: :any_skip_relocation, catalina:      "4cd007f23c658ae903a52be4454c29b82abd70d5a43aabc61b71ef6b2dd710c9"
+    sha256 cellar: :any_skip_relocation, mojave:        "7643ca66430fec0bb7d285f76a0912622fb50b171b264a6beb695f414c765796"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c375279c3a764e7a63935d7f3d838916bbcfab732c61cf2ff6dc3fc085b63ac2"
   end
 
   depends_on "cython" => :build
