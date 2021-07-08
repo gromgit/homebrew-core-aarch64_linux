@@ -17,6 +17,7 @@ class BoostBuild < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "a3115a74eee73792fa4c7b2dcd025c2a254f66a87a1427b8382c77f62aac61b5"
     sha256 cellar: :any_skip_relocation, catalina:      "045128c087f35b78de73c5723385607a9a5ba061a076cd646a61f9240e6a2b50"
     sha256 cellar: :any_skip_relocation, mojave:        "37ca4bbff9b1d54b04141cc63f9fc3ccbfe3b6fc875ed66a83456600b79aed7d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8ee01029c5ebfa4012102049946d63357ad8c3ad08710ad7a68d74f662133ba1"
   end
 
   conflicts_with "b2-tools", because: "both install `b2` binaries"
