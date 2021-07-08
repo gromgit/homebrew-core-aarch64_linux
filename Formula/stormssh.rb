@@ -12,6 +12,7 @@ class Stormssh < Formula
     sha256 cellar: :any, big_sur:       "e2519c5c0c796e4fa0a5f63a7bcbe4f17c188616c10abf6aee4921c2670a7f7e"
     sha256 cellar: :any, catalina:      "91c073021a2155e31ecfc09a7e5e2e03172c34408f31c725895b0ddd1bcf9a31"
     sha256 cellar: :any, mojave:        "ffeaf80fd8e4ff994985be761d55d90fd4a60a4198b3aa87983b8933dab8b4b4"
+    sha256               x86_64_linux:  "456a6e6e5491fafd52ed3fea8954302ff048c2a8e3b080d9186e4b1a8a0af540"
   end
 
   depends_on "python@3.9"
