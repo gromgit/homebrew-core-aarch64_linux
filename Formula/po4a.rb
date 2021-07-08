@@ -12,10 +12,11 @@ class Po4a < Formula
   head "https://github.com/mquinson/po4a.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "4cf546fc79d0aeb9c75c3fdea4130c1d0d9cfc82d3970681d4994f7cf1c24170"
-    sha256 cellar: :any, big_sur:       "220aecaeb38f1e07661d8c73d8768fcdb61c747f7da530c4bffbdb508a7a2a31"
-    sha256 cellar: :any, catalina:      "87ba2758545027e71dbf025dc647c26c4fe24ced01e3db58f54b99b7ff2427c6"
-    sha256 cellar: :any, mojave:        "8d6f320c3c41fdc9b1d5c501cb14393ab2100b6a2f6875d1de97ea3cd23cbf58"
+    sha256 cellar: :any,                 arm64_big_sur: "4cf546fc79d0aeb9c75c3fdea4130c1d0d9cfc82d3970681d4994f7cf1c24170"
+    sha256 cellar: :any,                 big_sur:       "220aecaeb38f1e07661d8c73d8768fcdb61c747f7da530c4bffbdb508a7a2a31"
+    sha256 cellar: :any,                 catalina:      "87ba2758545027e71dbf025dc647c26c4fe24ced01e3db58f54b99b7ff2427c6"
+    sha256 cellar: :any,                 mojave:        "8d6f320c3c41fdc9b1d5c501cb14393ab2100b6a2f6875d1de97ea3cd23cbf58"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "646513735eda2d4be0b1ff81f027952c69357556ca079480716552e65444c8e3"
   end
 
   depends_on "docbook-xsl" => :build
