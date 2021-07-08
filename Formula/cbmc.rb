@@ -7,9 +7,9 @@ class Cbmc < Formula
   license "BSD-4-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "056fc492b03722d78de3b0d53d33b838d3a4c58a3d4369f38c271258b64cd8e1"
-    sha256 cellar: :any_skip_relocation, catalina: "16a3c14b58aa88328b695ffb5e14b1c98182956bcca56367d5475be6df846ab9"
-    sha256 cellar: :any_skip_relocation, mojave:   "31c76c05ad7d37f6096e5e9bc31d2004a9882b7c186f012f63134e7033029a07"
+    sha256 cellar: :any_skip_relocation, big_sur:  "82da4d0340b92cec36d9978e24818c66a5a70df14c6933fb21271c1a10f4bac8"
+    sha256 cellar: :any_skip_relocation, catalina: "af5e7c5e7c0ef5009bebdbb11077943567ff7b0d6ed395483e8870eea1964fec"
+    sha256 cellar: :any_skip_relocation, mojave:   "a2e7203419d8f70291f0c9e2cb16cd95601abebfcd1180008f0477216240ae8f"
   end
 
   depends_on "cmake" => :build
