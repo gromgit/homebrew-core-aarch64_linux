@@ -18,11 +18,10 @@ class Proftpd < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "69ababb50c7eeb1f86521b9835620354a88b7f68b2eaeaf0f89a9ca86893c052"
-    sha256 big_sur:       "2f410eb0a7911309e27bdf9a9af1528561f9f5f32f80967b6727a100020bd6bc"
-    sha256 catalina:      "18815adf6ee8958854a6962afb377e00642eafde5b8ac1d89cd69f211914343b"
-    sha256 mojave:        "d24f1a6000fb47caf68ef104770b1ed66d284439a5d8cf9c9b5688fae073b47d"
+    sha256 arm64_big_sur: "469d2909145df007d34b0a44f93d1b09a0d20d20ccf5d9afaba1bb4d4c6b45d7"
+    sha256 big_sur:       "0497946296c3f5d5a50fb87b35d0520488121f3fba13287e71a3078f507167c8"
+    sha256 catalina:      "e169c92a92a8ba51c155c5a4010724ac8c657dc3820f7545c1cf4d2deac8454c"
+    sha256 mojave:        "9ead7ace3404b1a4dbe464f4dea92ec59b00b57c24a7ba19bea6de51a5a334eb"
   end
 
   def install
