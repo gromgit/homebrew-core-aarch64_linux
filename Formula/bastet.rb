@@ -14,6 +14,7 @@ class Bastet < Formula
     sha256 high_sierra:   "188658452934d4ef5d48d6837fb0c6bf3e3875488e0c1da8dcf62ca37c1ee998"
     sha256 sierra:        "8133c13d1b98d96eacf5d420d30378fbfcd9cbe898b0f13b188112618f4338f5"
     sha256 el_capitan:    "e3745b716c09ce7f3834f4fc30163fa132f93feeec4c301dc9d46b0bc9ca564f"
+    sha256 x86_64_linux:  "02918b45d68fad9e1ee1e3e4f520107398e2f7df1501dce5f3a7e0052ebde359"
   end
 
   depends_on "boost"
