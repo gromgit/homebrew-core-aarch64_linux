@@ -7,7 +7,7 @@ class VagrantCompletion < Formula
   head "https://github.com/hashicorp/vagrant.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "325bfccadee57150fad636b0ed58536dc47659556fbf34c9ca8ac88dde686e7d"
+    sha256 cellar: :any_skip_relocation, all: "53de835d380914ef8fd1d99e922f965bce477edbf8701a0da9c900a7b2f71c69"
   end
 
   def install
