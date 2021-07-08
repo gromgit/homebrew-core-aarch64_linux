@@ -11,6 +11,7 @@ class Wget < Formula
     sha256 big_sur:       "277577a3a30ff9bf60d0e4b819570ca356aade39a3a5973065e89b0ad4b752f3"
     sha256 catalina:      "261ea49956e98d62975c1706cb839c6411473a7ec50ae8101526010275fe70c0"
     sha256 mojave:        "df85a11661c551e9fe30445b6173e82c83d80a0622191a9c57f0edf6b21782d1"
+    sha256 x86_64_linux:  "d867d78ce4327653990116aad3cbeeba1a3aee1530eb3cf17f5de1441849e834"
   end
 
   head do
