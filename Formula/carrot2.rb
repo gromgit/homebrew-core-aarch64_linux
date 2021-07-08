@@ -2,8 +2,8 @@ class Carrot2 < Formula
   desc "Search results clustering engine"
   homepage "https://project.carrot2.org"
   url "https://github.com/carrot2/carrot2.git",
-      tag:      "release/4.2.1",
-      revision: "936bcf7fa48e03fafffdf4e6f15b36074d161e6e"
+      tag:      "release/4.3.1",
+      revision: "5ee1bc852738bce97fe8be355720f5809fb4cdec"
   license "Apache-2.0"
 
   bottle do
@@ -15,7 +15,7 @@ class Carrot2 < Formula
 
   # Switch to `gradle` when carrot2 supports Gradle 7+
   depends_on "gradle@6" => :build
-  depends_on "openjdk"
+  depends_on "openjdk@11"
 
   def install
     # Make possible to build the formula with the latest available in Homebrew gradle
@@ -31,7 +31,7 @@ class Carrot2 < Formula
     end
 
     (bin/"carrot2").write_env_script "#{libexec}/dcs/dcs",
-      JAVA_CMD:    "exec '#{Formula["openjdk"].opt_bin}/java'",
+      JAVA_CMD:    "exec '#{Formula["openjdk@11"].opt_bin}/java'",
       SCRIPT_HOME: libexec/"dcs"
   end
 
@@ -64,7 +64,7 @@ class Carrot2 < Formula
   test do
     port = free_port
     fork { exec bin/"carrot2", "--port", port.to_s }
-    sleep 5
+    sleep 20
     assert_match "Lingo", shell_output("curl -s localhost:#{port}/service/list")
   end
 end
