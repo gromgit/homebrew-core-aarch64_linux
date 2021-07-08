@@ -37,6 +37,7 @@ jobs:
       - run: brew test-bot --only-tap-syntax
 
       - run: brew test-bot --only-formulae-detect
+        if: github.event_name == 'pull_request'
         id: formulae-detect
 
   setup_tests:
