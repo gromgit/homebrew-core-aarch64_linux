@@ -6,10 +6,11 @@ class Libfido2 < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "fe17a918d775bae8edc3979fd738e74facfe1f8973abdfcd61156d9d4a434c1f"
-    sha256 cellar: :any, big_sur:       "d8c08675127341e5722cc32655264db3302452236b8cf0f2c50df3482c3aa4fa"
-    sha256 cellar: :any, catalina:      "23f50861ba90e4741bb83ef2eb0528d5c857ae8d1de3b419c76ffb4605244b7e"
-    sha256 cellar: :any, mojave:        "2c8b902da49a858e8c6ab479e63bf2138515ceb3d98c0ae4e36631bf06901c9e"
+    sha256 cellar: :any,                 arm64_big_sur: "fe17a918d775bae8edc3979fd738e74facfe1f8973abdfcd61156d9d4a434c1f"
+    sha256 cellar: :any,                 big_sur:       "d8c08675127341e5722cc32655264db3302452236b8cf0f2c50df3482c3aa4fa"
+    sha256 cellar: :any,                 catalina:      "23f50861ba90e4741bb83ef2eb0528d5c857ae8d1de3b419c76ffb4605244b7e"
+    sha256 cellar: :any,                 mojave:        "2c8b902da49a858e8c6ab479e63bf2138515ceb3d98c0ae4e36631bf06901c9e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fbe8a5da78ebe47369bb59c850f4390a6b8c5771ff3b2fac4fbd7f94226e0950"
   end
 
   depends_on "cmake" => :build
