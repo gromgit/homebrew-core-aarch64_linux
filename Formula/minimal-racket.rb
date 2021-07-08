@@ -20,6 +20,7 @@ class MinimalRacket < Formula
     sha256 cellar: :any, big_sur:       "a14efabedba4ab25fa1caceed9dca519a14209320973d01a98124450537eab01"
     sha256 cellar: :any, catalina:      "949d23dbde6f1be019e5ddd6e0400dea79b9a4967104308b6dec9af8a5ee2947"
     sha256 cellar: :any, mojave:        "bbfce452b9bed295d01e0efb309e8ad0016b810659a9ce9220dc699e13e6eee7"
+    sha256               x86_64_linux:  "2e86beb552928b433dd604e140123ef784ea55bdb81857a11cd1ac2bf6bf46fb"
   end
 
   depends_on "openssl@1.1"
