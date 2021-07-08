@@ -7,10 +7,11 @@ class Travis < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "8f1ccd0d3968312e30c5451e80704472d9b717275ad09d64c2d475fc92666d3e"
-    sha256 cellar: :any, big_sur:       "99dc7883369970404609ba84dae65605c9c53be3deda72591fe19ffc67c06ef7"
-    sha256 cellar: :any, catalina:      "cd76462008b4094ecc79d7b715bc8bbe25c16648c2ae4be0a939415fa61b6d02"
-    sha256 cellar: :any, mojave:        "23356035200869589c3cf664a6d137477529a27c60bc1ce2a68e6fc6f084693d"
+    sha256 cellar: :any,                 arm64_big_sur: "8f1ccd0d3968312e30c5451e80704472d9b717275ad09d64c2d475fc92666d3e"
+    sha256 cellar: :any,                 big_sur:       "99dc7883369970404609ba84dae65605c9c53be3deda72591fe19ffc67c06ef7"
+    sha256 cellar: :any,                 catalina:      "cd76462008b4094ecc79d7b715bc8bbe25c16648c2ae4be0a939415fa61b6d02"
+    sha256 cellar: :any,                 mojave:        "23356035200869589c3cf664a6d137477529a27c60bc1ce2a68e6fc6f084693d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9c1d5934c77e544e698fe91a52e9739dcd2e3d8b463e8dc0a10c8a2d01f219df"
   end
 
   depends_on "pkg-config" => :build
