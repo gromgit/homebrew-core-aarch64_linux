@@ -18,6 +18,7 @@ class Gtkx < Formula
     sha256 big_sur:       "8ead5b96878ad431ac3e23dc3bd20bb4eac509c63c231e594986a0fa331e157f"
     sha256 catalina:      "3900f64476d7988670b5d0c855f072fba0af2b1bb323acf4f126f70c95a38616"
     sha256 mojave:        "10d1f2a81a115b9cf1e8c76fbd6cdc58f5b4593eb7f9e15cbe0127e14221dd06"
+    sha256 x86_64_linux:  "aac750f0c7081619c9f3a403bfbc47ac58cd6300733b2d31dc2b0384b1500066"
   end
 
   head do
