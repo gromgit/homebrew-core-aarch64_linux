@@ -15,6 +15,7 @@ class Fltk < Formula
     sha256 big_sur:       "ec58967d86a8068d770f5c1f8a5650ff7a4c334d952b51220564e1539b1c54de"
     sha256 catalina:      "94960f1fd2d833812056ef8d8be09b563331277b6b30b49e527d2a28d1454fb8"
     sha256 mojave:        "137faeafeb34fe3517d79aebb9c3fcfb2c959729e46d59d62be6203c2a520f39"
+    sha256 x86_64_linux:  "51aeebe6988201f1acdc00c02d9e1c11a54d7abf77bcf32357b70cd16cd78d9d"
   end
 
   head do
