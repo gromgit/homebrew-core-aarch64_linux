@@ -15,6 +15,7 @@ class TmuxMemCpuLoad < Formula
     sha256 cellar: :any_skip_relocation, sierra:        "8743cb844ff2a55657f2f1eb7bfae300c02a3fdf255fdd5e8242d1a60103838d"
     sha256 cellar: :any_skip_relocation, el_capitan:    "9e2c7e5fd03feb98cead3f366a9cc35375cee80c30fd570c742440d69319c296"
     sha256 cellar: :any_skip_relocation, yosemite:      "abd6293238671268ea1f0362518cd82c4b3133cb42b0327d579c93768ea81110"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "af2421568eaf229efa298ebf6bdc0ac7df668c9653bbe5e35f8624fdb47b9adf"
   end
 
   depends_on "cmake" => :build
