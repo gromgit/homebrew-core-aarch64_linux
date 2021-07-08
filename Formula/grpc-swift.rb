@@ -7,9 +7,9 @@ class GrpcSwift < Formula
   head "https://github.com/grpc/grpc-swift.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "79ace37e7a57b0d8b475bd4d151950ede41c44bd8ed5def7f6ec2fa3872ab66f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "fc0cad5b1c3caff003eb838b7cc37032f9f7416c823941f304a09705f5bab174"
-    sha256 cellar: :any_skip_relocation, catalina:      "8a1ee1b56aae8427016a3f9a5b0c62ad2e7808ed5104f71e735b4bdb54f6221d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8c458c0f9cc1c3241a77fbe7c1c040a7382cdd1d44c56f4e11805bf9e0aa1c5b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "fd7850786f7d0ade8e78efd516204ac052a15edaf21a7e7ac6fc76fb5cde38a6"
+    sha256 cellar: :any_skip_relocation, catalina:      "e20794d763ad566abb787523804cb0a66207800e57e70bf21adfd39bedd73c43"
   end
 
   depends_on xcode: ["12.0", :build]
