@@ -12,10 +12,10 @@ class Jetty < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "70a8d29158747ea3514ed7a27ad09242ef962d6242b640f57b9dfe2f846105e3"
-    sha256 cellar: :any, big_sur:       "2575222cd99db83ae6f6ba936887898558cdeece5018cef7c757b09b0baa1ff0"
-    sha256 cellar: :any, catalina:      "2575222cd99db83ae6f6ba936887898558cdeece5018cef7c757b09b0baa1ff0"
-    sha256 cellar: :any, mojave:        "2575222cd99db83ae6f6ba936887898558cdeece5018cef7c757b09b0baa1ff0"
+    sha256 cellar: :any, arm64_big_sur: "02ca9582b60cb87f4a41e9498d10b5e8f2d0ad62cf801b2312ffead4ec6f58eb"
+    sha256 cellar: :any, big_sur:       "48ad1144981f0fe4371ef1324e00e75dd0eabc5b595f38655d2a47de1cee4720"
+    sha256 cellar: :any, catalina:      "48ad1144981f0fe4371ef1324e00e75dd0eabc5b595f38655d2a47de1cee4720"
+    sha256 cellar: :any, mojave:        "48ad1144981f0fe4371ef1324e00e75dd0eabc5b595f38655d2a47de1cee4720"
   end
 
   depends_on "openjdk"
