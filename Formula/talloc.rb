@@ -11,10 +11,11 @@ class Talloc < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "0075bc00e43000ac1e6aa959e7a0942a16e0097209be856cbe66b452fc937e27"
-    sha256 cellar: :any, big_sur:       "52c7fce48dc4d2a7f9a9d04c6728df1ca6ef485f7e7f4db7a7f381d1069ae48b"
-    sha256 cellar: :any, catalina:      "da325e962398aecb598415cbc629e3066c07904d3a7ac0e86d73a996ce44629c"
-    sha256 cellar: :any, mojave:        "d16cc6d63e86849c6aad4bf0479dd245e20d488662845c4df41ffea359242995"
+    sha256 cellar: :any,                 arm64_big_sur: "0075bc00e43000ac1e6aa959e7a0942a16e0097209be856cbe66b452fc937e27"
+    sha256 cellar: :any,                 big_sur:       "52c7fce48dc4d2a7f9a9d04c6728df1ca6ef485f7e7f4db7a7f381d1069ae48b"
+    sha256 cellar: :any,                 catalina:      "da325e962398aecb598415cbc629e3066c07904d3a7ac0e86d73a996ce44629c"
+    sha256 cellar: :any,                 mojave:        "d16cc6d63e86849c6aad4bf0479dd245e20d488662845c4df41ffea359242995"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "78b9ebf59fd6affc380001d4e60d3f0663e5da6c1a8c6f2786fa29d6f037167b"
   end
 
   depends_on "python@3.9" => :build
