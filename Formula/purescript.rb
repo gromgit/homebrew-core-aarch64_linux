@@ -7,10 +7,10 @@ class Purescript < Formula
   head "https://github.com/purescript/purescript.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1396d1c16143ed7e3c362ae15637826bbe9300aa66e977b453cb30a743aa3b59"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6852d9fbbebd8cc8511cb2c97b0f77606cda026f397e1790cf216a6bcacedc6b"
-    sha256 cellar: :any_skip_relocation, catalina:      "a79c6ce5756e2e67a158746d00eccc20e2b219f83d6a11beb4dcb53f84d99dd3"
-    sha256 cellar: :any_skip_relocation, mojave:        "6e3bf108982f98270f201e4ef67e3533e3c57b932656f4b8ee187d756efd2541"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "343622a265f66e7215f07b123360e90bc97193d65469dca3ff6e91277cf60c40"
+    sha256 cellar: :any_skip_relocation, big_sur:       "278de2e34af5d97c2c98065ab0c91008a1c63f37c43f90cffc2241c19c5c5100"
+    sha256 cellar: :any_skip_relocation, catalina:      "1fd8a122d9ae081b9a059e589d99db3f323d14800d99d4fc52cdc76e3315bb7d"
+    sha256 cellar: :any_skip_relocation, mojave:        "f49b7ba780c3a83c9b8d6c4420c56639860980dfd20273cd915326cd13778f9b"
   end
 
   depends_on "ghc" => :build
