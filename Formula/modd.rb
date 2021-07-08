@@ -12,6 +12,7 @@ class Modd < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "87423ac35521b65b0d45d6d7a1b0589bbfa57a14b62e3b9dcbb4e1e2a6e2f874"
     sha256 cellar: :any_skip_relocation, catalina:      "0657ac604def86ff2bfac4797944290d0fc4afabee8855506901437d2870ce61"
     sha256 cellar: :any_skip_relocation, mojave:        "c7a4a376466ad627e747c4054e6398fa4a8637e5542c2cf496740ea2b0db79ff"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4ecbbb67e695368d3830b5c273f6abf7f659b73bcfe47c3f18332cf76fedf997"
   end
 
   depends_on "go" => :build
