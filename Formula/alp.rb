@@ -7,11 +7,11 @@ class Alp < Formula
   head "https://github.com/tkuchiki/alp.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2df000fecb7c29c2b9d158f34a8fb240aaf5e869344f1bd0c1198baa86dde890"
-    sha256 cellar: :any_skip_relocation, big_sur:       "18a9319a938d6487ceaf2722e0c1bf8946bea913d354525e8724d627798d72a8"
-    sha256 cellar: :any_skip_relocation, catalina:      "a17ba6a8050888df615444a4dc0cdf8ed02abfec90b7fd3a6cfcd31790f14b72"
-    sha256 cellar: :any_skip_relocation, mojave:        "379cdf3e18b9793172f86003e97995a5cdbc86ebb1c17a7e15ab41ee3bd2384f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b1369480ff9bd1a73c973aa2071eb187c043241c5a526d599b2ca9a4b4cd579a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e4abbcf01b31d48bd81c327c1acd663c40853fe47c44a942b332b3a64b0f9119"
+    sha256 cellar: :any_skip_relocation, big_sur:       "2b020ae2a1c367a167fe1a31869fe17b9e375c83acaca4804f67c8f2db896cfd"
+    sha256 cellar: :any_skip_relocation, catalina:      "52f4d77379ee812aad5aafb3782e2044080eb22f98adfbad89292d0e93c08ad7"
+    sha256 cellar: :any_skip_relocation, mojave:        "b68bff7b34d5291fd536fe94d5dd0611dcc6283f93336522ea7995c591b40d85"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eeb99e4ad45ebce3e5c3c832a2662c8f5487c1088385db8500d48914f0671077"
   end
 
   depends_on "go" => :build
