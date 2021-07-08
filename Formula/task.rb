@@ -16,6 +16,7 @@ class Task < Formula
     sha256 big_sur:       "13cbe306b15eda0b1a2edd707f3c1e2a18759bfa2613a4a5909f5945c7ac367c"
     sha256 catalina:      "6b15062cfa4e67ba49cd6bcb88a1be453e49b86f4ab680acb171fe98e01e256b"
     sha256 mojave:        "8ea578cb22e2a379478111ca18c735482c264a46d3733a866cfc959ce344c4f4"
+    sha256 x86_64_linux:  "5a49c893cd9178dd134c79f67b1da3890deee73d11915f2b24472c8ca13a55bb"
   end
 
   depends_on "cmake" => :build
