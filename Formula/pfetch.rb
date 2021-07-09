@@ -12,6 +12,7 @@ class Pfetch < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "f93914feee7f4e3cda77341c3bddf2cf51eb4b2aed01f6ace771db75078da570"
     sha256 cellar: :any_skip_relocation, mojave:        "f93914feee7f4e3cda77341c3bddf2cf51eb4b2aed01f6ace771db75078da570"
     sha256 cellar: :any_skip_relocation, high_sierra:   "f93914feee7f4e3cda77341c3bddf2cf51eb4b2aed01f6ace771db75078da570"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dfa6a98908cbd7ac49f1fd4813011ee6f18849130d84b4c4fa3c01282a33c568"
   end
 
   def install
