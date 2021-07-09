@@ -14,7 +14,7 @@ env:
   HOMEBREW_RELOCATE_RPATHS: 1
 
 concurrency:
-  group: "${{ github.ref }}"
+  group: "tests-${{ github.ref }}"
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
