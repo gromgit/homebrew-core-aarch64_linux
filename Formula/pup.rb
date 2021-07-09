@@ -15,6 +15,7 @@ class Pup < Formula
     sha256 cellar: :any_skip_relocation, high_sierra:   "f470de75187b994ef9612c5404dc7622a356c8ee6af21f6b2549b5d7c5d88d32"
     sha256 cellar: :any_skip_relocation, sierra:        "4ba84cffa7cfd01bd252223055abdf5fd8b6cfc27474131cf313e688ea8eeecf"
     sha256 cellar: :any_skip_relocation, el_capitan:    "a1aa49640871c127c76f4aea6db65487db964a055e2aa4d86ee2d8b7f5dcb561"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7e6763550ae658953ea405ba11d5b0da841a6e50b826b59f9690227fb7ba3beb"
   end
 
   depends_on "go" => :build
