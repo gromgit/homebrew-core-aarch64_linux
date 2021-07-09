@@ -13,6 +13,7 @@ class Yj < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "918450aaf162067fe6fa7979518a7fc998853a4ab215c01f2c69e756739fb710"
     sha256 cellar: :any_skip_relocation, mojave:        "918450aaf162067fe6fa7979518a7fc998853a4ab215c01f2c69e756739fb710"
     sha256 cellar: :any_skip_relocation, high_sierra:   "918450aaf162067fe6fa7979518a7fc998853a4ab215c01f2c69e756739fb710"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "229cf652c16b0285d26f043c5f3197a8fad33b6099bd2d6377916aadc1855886"
   end
 
   depends_on "go" => :build
