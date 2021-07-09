@@ -11,11 +11,11 @@ class Mariadb < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "661e7a2f051ef8456fc0aac57199b70e4229f9a8e0924bcd98d4c29e96df868b"
-    sha256 big_sur:       "4bb853a14062c9f043e3e7f9c42fbb22e1bb43fdc1b70e3fa98d72644707b322"
-    sha256 catalina:      "f41f7892b79e30cc08e76d5be0c87f3aef1932cc67b16939f50a7fe994987a1d"
-    sha256 mojave:        "1b5adcab2cd663265ea5ca2ebfd502e42f146f74d790d35d03bdad8e6d89a5a3"
-    sha256 x86_64_linux:  "828d5ccc7fcf54e52765a9ea7e09f3dc08cd0f33e979b0a45310a7274642b13c"
+    sha256 arm64_big_sur: "41fbb0bbd394de4750e1e9101a94f8a1827d59f0fbf27df76ccc0fd5eeab6da7"
+    sha256 big_sur:       "84e53555d27789852d405f63f45e06afc4918c654ae996c3989c05b326cc75db"
+    sha256 catalina:      "b9bba3532b154650e8c7e58e55c59a4cdda9918cd6b89840d0efa3f0533f2372"
+    sha256 mojave:        "824e0648cffd64e39f994bfd9392678d2c59c39d5f9c7b049b1deefb1cdb8166"
+    sha256 x86_64_linux:  "7c9862232af1b8bdb0bd0d25a4afeb90a04616edc8552e5c7b346cb76e645d95"
   end
 
   depends_on "bison" => :build
