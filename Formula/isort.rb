@@ -17,6 +17,7 @@ class Isort < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "f9d947b55140ca255b947f96e77bb796619f4fc3e974e57f4defde87764e677a"
     sha256 cellar: :any_skip_relocation, catalina:      "7ca3e49c222871b0bb91520b180abf4ebf953b4f3aac7eab36cb67e710cbc24e"
     sha256 cellar: :any_skip_relocation, mojave:        "f9527c060b4d71740227719b26a43637d309d6c59c0567253aeca048508ba923"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2f923b3f1c41608e28549de5c00406419434841f981f96a7e2a2e08c2de4ae13"
   end
 
   depends_on "python@3.9"
