@@ -12,6 +12,7 @@ class Whalebrew < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "b895a6a75c4018afe7513cb505faddc40cbfb2adc147b9d392d2d78228da5745"
     sha256 cellar: :any_skip_relocation, catalina:      "76af29939b18de9fa8814ac0a1e22ed180f71ecbea55656bd76057a3f6c133cf"
     sha256 cellar: :any_skip_relocation, mojave:        "c1ab9e50235621d22b1176896ab682868aeddd81516a4374c485d217c0fb6b55"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b59f9c4635e9e1e469cfee07e7698c332313282f2ac01b1846a265fc5219394b"
   end
 
   depends_on "go" => :build
