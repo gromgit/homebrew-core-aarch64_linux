@@ -11,10 +11,11 @@ class YubicoPivTool < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "a4819de1638f828cbd2e9c5e50f9830a91ed578fb42ae2fbb073d5bc66fbb38c"
-    sha256 big_sur:       "446b3d63b270dd3bdd27adec31503c02553a0e0d4fb2610082e392e85061d528"
-    sha256 catalina:      "72474492baf278c59ec478cb24f2c8730ff9f59f0e1963a473a6d7ad94df4e12"
-    sha256 mojave:        "395ffe7d667fab0964b4544bb9cc4476ddcbc77eedce706c3f4c5fa4524d0e14"
+    sha256                               arm64_big_sur: "a4819de1638f828cbd2e9c5e50f9830a91ed578fb42ae2fbb073d5bc66fbb38c"
+    sha256                               big_sur:       "446b3d63b270dd3bdd27adec31503c02553a0e0d4fb2610082e392e85061d528"
+    sha256                               catalina:      "72474492baf278c59ec478cb24f2c8730ff9f59f0e1963a473a6d7ad94df4e12"
+    sha256                               mojave:        "395ffe7d667fab0964b4544bb9cc4476ddcbc77eedce706c3f4c5fa4524d0e14"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "898354a02524f6f5a1480c96f83d6c3c101c9c7908fd9c65c6430841e84c0e21"
   end
 
   depends_on "check" => :build
