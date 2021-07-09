@@ -18,6 +18,7 @@ class AwscliAT1 < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "42ac73057de7687a31cf220b18c8eabac4cb7d431b3b247f3e54486bdc8b134d"
     sha256 cellar: :any_skip_relocation, catalina:      "e5ea21ff85261f415a52029640cf90693ab1df11043b90af9e145d3dbe85f471"
     sha256 cellar: :any_skip_relocation, mojave:        "999a9d989515774d691f965a932adc0340141b5187cebf60f499f172d0039b38"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "387a64947cbbb8cb5add7c1d9476ea63e317e97b449f2d6531df724db12dc795"
   end
 
   keg_only :versioned_formula
