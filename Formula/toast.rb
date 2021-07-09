@@ -6,11 +6,11 @@ class Toast < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "731c05efe262d9bb46c951a9aaad10288bfc4d61c7387834ed8ac1379f966f2a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f5474253963b95a4a6b4d1e7f59cab369cce83aa261d41c969753e17f598b46c"
-    sha256 cellar: :any_skip_relocation, catalina:      "1be132097522b56ba715bb4fce8a34c4602a0be324266c8ffeb5c66f74b1ed8f"
-    sha256 cellar: :any_skip_relocation, mojave:        "fb1ae196bfef5e59e4a659d0a2697791c3ca0d75c7ccd07e53895ce750a9535c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a0feb7190772cddb5abe7cadfcec04077bec8d96ed9ce83ad44be48d190327f0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a8cf7712f0996b7fe116afb208e874fd14da2fd6f0651052d2b5b77894b5901b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "63f32de44e88fbc8ec7baa8e801767f012f5cef9c7e83d233073346c6f883dcd"
+    sha256 cellar: :any_skip_relocation, catalina:      "79a4129a24fa78a863eb5ef9e759cc8dc2f2014b6d3021ab1f690897b24c80c1"
+    sha256 cellar: :any_skip_relocation, mojave:        "3fe5fafd1c5fb50a30996c7779ebc53c5cd3ad588c3fd49a58447ba8063e4519"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fc111f146a51adf74960ab1da9700952bf6568b2bd10d143bebbb8c1a43cbf15"
   end
 
   depends_on "rust" => :build
