@@ -14,6 +14,7 @@ class Csvkit < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "28ca16e9f55957f60f3232bf41438cbda76377ef9d8a9e0777e62b4a4a098112"
     sha256 cellar: :any_skip_relocation, mojave:        "1dfc57c5959b07aa05e887cf092d86ac9313c9c6483887769813160486752987"
     sha256 cellar: :any_skip_relocation, high_sierra:   "bfd1c74b64412f63e290d9a4146ee3131eb71fc3acb354484e2e4520e293180b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2c3e9c11d78519cc40e8ecb4174b37831181b0ed228c3cff421e7afa625a0bac"
   end
 
   depends_on "python@3.9"
