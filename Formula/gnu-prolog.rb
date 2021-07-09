@@ -11,10 +11,9 @@ class GnuProlog < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, big_sur:  "e3825d38dac91ef3dbb9d7b67a6e3352dcc27fb1f897332ba39e5a0b97caad25"
-    sha256 cellar: :any_skip_relocation, catalina: "25b07a365e6907466222e64d10458a9006830b3061698eaf6af101f3355d43f9"
-    sha256 cellar: :any_skip_relocation, mojave:   "76ed18b57bf7719b1212adc6fd323b184a9ed496c0ebc7f588ee8e172e887696"
+    sha256 cellar: :any_skip_relocation, big_sur:  "d0a8099131295fb00e49b1921a544e5cf0564593f52a35cccdae8fe239785c2c"
+    sha256 cellar: :any_skip_relocation, catalina: "7d5b67ea483e7b80e2a2d1ff30874d53afe0d5f416ef6d7e4480beaa3be6153a"
+    sha256 cellar: :any_skip_relocation, mojave:   "b89f575f9b32a43180b7ad527e2ac9f71b9de4440285cccb1a326752a12ef7c3"
   end
 
   def install
