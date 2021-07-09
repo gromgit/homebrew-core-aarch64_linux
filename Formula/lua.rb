@@ -20,22 +20,40 @@ class Lua < Formula
 
   uses_from_macos "unzip" => :build
 
-  on_linux do
-    depends_on "readline"
+  on_macos do
+    # Be sure to build a dylib, or else runtime modules will pull in another static copy of liblua = crashy
+    # See: https://github.com/Homebrew/legacy-homebrew/pull/5043
+    patch do
+      url "https://raw.githubusercontent.com/Homebrew/formula-patches/11c8360432f471f74a9b2d76e012e3b36f30b871/lua/lua-dylib.patch"
+      sha256 "a39e2ae1066f680e5c8bf1749fe09b0e33a0215c31972b133a73d43b00bf29dc"
+    end
   end
 
-  # Be sure to build a dylib, or else runtime modules will pull in another static copy of liblua = crashy
-  # See: https://github.com/Homebrew/legacy-homebrew/pull/5043
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/11c8360432f471f74a9b2d76e012e3b36f30b871/lua/lua-dylib.patch"
-    sha256 "a39e2ae1066f680e5c8bf1749fe09b0e33a0215c31972b133a73d43b00bf29dc"
+  on_linux do
+    depends_on "readline"
+
+    # Add shared library for linux. Equivalent to the mac patch above.
+    # Inspired from http://www.linuxfromscratch.org/blfs/view/cvs/general/lua.html
+    patch do
+      url "https://raw.githubusercontent.com/iMichka/formula-patches/c20f0fbc7a647129025911410d42100d0c38a7ab/lua/lua-so.patch"
+      sha256 "da80df731a9b03f346fb6582a176f1b5d6d02bc36faa93d046cdf60dc44d4eca"
+    end
   end
 
   def install
+    on_linux do
+      # Fix: /usr/bin/ld: lapi.o: relocation R_X86_64_32 against `luaO_nilobject_' can not be used
+      # when making a shared object; recompile with -fPIC
+      # See http://www.linuxfromscratch.org/blfs/view/cvs/general/lua.html
+      ENV.append_to_cflags "-fPIC"
+    end
+
     # Substitute formula prefix in `src/Makefile` for install name (dylib ID).
     # Use our CC/CFLAGS to compile.
     inreplace "src/Makefile" do |s|
-      s.gsub! "@OPT_LIB@", opt_lib
+      on_macos do
+        s.gsub! "@OPT_LIB@", opt_lib
+      end
       s.remove_make_var! "CC"
       s.change_make_var! "MYCFLAGS", ENV.cflags
       s.change_make_var! "MYLDFLAGS", ENV.ldflags
@@ -44,8 +62,13 @@ class Lua < Formula
     # Fix path in the config header
     inreplace "src/luaconf.h", "/usr/local", HOMEBREW_PREFIX
 
+    os = "macosx"
+    on_linux do
+      os = "linux"
+    end
+
     # We ship our own pkg-config file as Lua no longer provide them upstream.
-    system "make", "macosx", "INSTALL_TOP=#{prefix}"
+    system "make", os, "INSTALL_TOP=#{prefix}"
     system "make", "install", "INSTALL_TOP=#{prefix}"
     (lib/"pkgconfig/lua.pc").write pc_file
 
@@ -58,6 +81,10 @@ class Lua < Formula
     lib.install_symlink "liblua.#{version.major_minor}.dylib" => "liblua#{version.major_minor}.dylib"
     (lib/"pkgconfig").install_symlink "lua.pc" => "lua#{version.major_minor}.pc"
     (lib/"pkgconfig").install_symlink "lua.pc" => "lua-#{version.major_minor}.pc"
+
+    on_linux do
+      lib.install Dir[shared_library("src/liblua", "*")]
+    end
   end
 
   def pc_file
