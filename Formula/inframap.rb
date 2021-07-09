@@ -7,11 +7,11 @@ class Inframap < Formula
   head "https://github.com/cycloidio/inframap.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9a7bb3f525440891ce100f3d847ca7f06df2c94d6ce3e0c4dc621e72171dd1c1"
-    sha256 cellar: :any_skip_relocation, big_sur:       "958f736b7e0c02a142ec51bd43291e9bebca1abcfbd4afce02c74432ee1f838a"
-    sha256 cellar: :any_skip_relocation, catalina:      "00f393f750d9ba38730b3ec3a3292b1cf6ddecd54ee113bc8102b74dca6bf655"
-    sha256 cellar: :any_skip_relocation, mojave:        "636171542156a61576550bb3bf5d47de02d59a8baef3af71a4a86254837b1bd6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dd6bee164aeca5ad224f59777ef59ae1cc0b6a4564ac67b53e905b6cd86dcdda"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ee096fc9fe0909cc34675dbd7a7269c8092ffee0d6ba71fa333e75afc4ff28c1"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0a4fe8ae6b7fcf419ab21ea31beb6b90dbeedd73ba2a771672e41c7a30ff4d0d"
+    sha256 cellar: :any_skip_relocation, catalina:      "ba85244090ace0d6a94dbb41c9693f11647cb8e949acc5511c8d9c25a3f74c1b"
+    sha256 cellar: :any_skip_relocation, mojave:        "d7bb58c695d390162b9a5376decf76acf02929d9b4421137ccbb7e91f940bdd2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d4d90d38dfbdddf34bdeea89493f6c76874392166e777d42f6d477690cb880c6"
   end
 
   depends_on "go" => :build
