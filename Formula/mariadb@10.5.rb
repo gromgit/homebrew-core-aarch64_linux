@@ -10,6 +10,13 @@ class MariadbAT105 < Formula
     regex(/Download v?(10\.5(?:\.\d+)+) Stable Now/i)
   end
 
+  bottle do
+    sha256 arm64_big_sur: "860b99cdb9a1c49452e98faa38edcce7c27e499c3802872cad3e701d7c2aa266"
+    sha256 big_sur:       "331ea03fb2ba8e83003bcbd7b2bbaab58e7502b18e9780525533762f333d49a2"
+    sha256 catalina:      "5db1bdff46cb07a979bc027edf55e9bbbb9a56f884931ffd48264c7bba2ccb46"
+    sha256 mojave:        "c9c1cf5daec11db466928c9177bb4d661543bc2c250f046e32bfb3d9414f6da6"
+  end
+
   keg_only :versioned_formula
 
   # See: https://mariadb.com/kb/en/changes-improvements-in-mariadb-105/
