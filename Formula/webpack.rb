@@ -10,10 +10,10 @@ class Webpack < Formula
   head "https://github.com/webpack/webpack.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "154db5b4ee93f8bed3b6cdf809150bacd8ad2d7fbaa785b9472de41d5af6c0d2"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a18d3dc5f602e92e9fb12ed6a7e45b123b0da4073a9a09d25bc76719c7f51996"
-    sha256 cellar: :any_skip_relocation, catalina:      "a18d3dc5f602e92e9fb12ed6a7e45b123b0da4073a9a09d25bc76719c7f51996"
-    sha256 cellar: :any_skip_relocation, mojave:        "a18d3dc5f602e92e9fb12ed6a7e45b123b0da4073a9a09d25bc76719c7f51996"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f9d745fb42cd817d72aa82365df1246c1c4ef2eccfae3e8885f7b60fd4f59fc3"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ae914e3e5467e6d240f3db9aa00f9f07c5e71a6a7c4da7486ebe5c0738a39496"
+    sha256 cellar: :any_skip_relocation, catalina:      "ae914e3e5467e6d240f3db9aa00f9f07c5e71a6a7c4da7486ebe5c0738a39496"
+    sha256 cellar: :any_skip_relocation, mojave:        "ae914e3e5467e6d240f3db9aa00f9f07c5e71a6a7c4da7486ebe5c0738a39496"
   end
 
   depends_on "node"
