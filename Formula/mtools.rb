@@ -7,10 +7,10 @@ class Mtools < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4729d29ebbee602d9d2e08d3f3c2a3c8f5d6046d9f5022aea6e6dc31ae5ebdac"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f800c846a3d0c54bf973d5ea9705923b112e0cafbea95b8702b6191a735ad91e"
-    sha256 cellar: :any_skip_relocation, catalina:      "c81917c79a0551c2edebea61112fbb0a1161066392366e16e9881c28873f86c3"
-    sha256 cellar: :any_skip_relocation, mojave:        "b0c2c049dedeac135038a45304497086356eb109347018e5a0a0d0bc932fd81d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c4a2c598ecc8fa73fc8b3aaa9bd56b91c3137c1cfb431ce9c795ee69d9cab3ba"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a38b210941937a9424d92096af7fa3470b9664460ba19d17631675b88889c4e8"
+    sha256 cellar: :any_skip_relocation, catalina:      "9561b64f4c3ca6d11fe5f13e7fa205a777dbecbb4c150b936dbb97eed15c9e8b"
+    sha256 cellar: :any_skip_relocation, mojave:        "0178acec6b4cb1d206534712d0304de310d8887ef4733998387286f46137c16a"
   end
 
   conflicts_with "multimarkdown", because: "both install `mmd` binaries"
