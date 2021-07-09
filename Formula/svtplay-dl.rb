@@ -8,10 +8,10 @@ class SvtplayDl < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "378fb39d06b89f14c9c54b1789360f59d74aba1d2bc09ee8a26ead41b9062986"
-    sha256 cellar: :any, big_sur:       "d6aaac9ed5209e2d2b5602e207ce76517e849f793af45daffebb55d91e5d13ce"
-    sha256 cellar: :any, catalina:      "cd156056a3f727382da25ec6140303fb0b67c98875e888b4d5d6786015ee1c17"
-    sha256 cellar: :any, mojave:        "7a5a38f468b0fed3908dcc9bfb384e1743226ae521f017f02c863816fa4f35e8"
+    sha256 cellar: :any, arm64_big_sur: "6603a914496ed9440732749ed09c7e19ac1c188f4d62756ba0aeead76fc3b40d"
+    sha256 cellar: :any, big_sur:       "b0e0cd6b8be16a4c84edd6f3885b83648cb5c9c74f7690c85ab4f383184ea296"
+    sha256 cellar: :any, catalina:      "a92a0ee9c59b111a931d001b547cbc359dad3911c48e1ecaa296d25461f8b9d4"
+    sha256 cellar: :any, mojave:        "107e5d04abd27b617f11699eeee42c46e5e666e271cb2ea7fca19c37f79d6c20"
   end
 
   depends_on "rust" => :build
