@@ -15,6 +15,7 @@ class Amfora < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "f6701ae1c9412787d6e41e7792b0f78016fe1157948995707b6c41b1b33d0e1e"
     sha256 cellar: :any_skip_relocation, catalina:      "edc5b5c87ac6afe8434e1aeffa9672a17e4ca3ce0b9579c758f27d531c75f146"
     sha256 cellar: :any_skip_relocation, mojave:        "f9246c3f85984e0b1d57daef632186b8e04a2a06350f92ed9562b914e1e80ce4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "34814dc0a1da5f88b639b084ac819fafc2ed49824b28166317bfc9bbce68d840"
   end
 
   depends_on "go" => :build
