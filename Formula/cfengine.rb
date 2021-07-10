@@ -21,19 +21,31 @@ class Cfengine < Formula
   depends_on "openssl@1.1"
   depends_on "pcre"
 
+  on_linux do
+    depends_on "linux-pam"
+  end
+
   resource "masterfiles" do
     url "https://cfengine-package-repos.s3.amazonaws.com/tarballs/cfengine-masterfiles-3.18.0.tar.gz"
     sha256 "968faee4920936739f914b5fcae441cd03354e909bb26c5dcdeb6750f1fde156"
   end
 
   def install
-    system "./configure", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}",
-                          "--with-workdir=#{var}/cfengine",
-                          "--with-lmdb=#{Formula["lmdb"].opt_prefix}",
-                          "--with-pcre=#{Formula["pcre"].opt_prefix}",
-                          "--without-mysql",
-                          "--without-postgresql"
+    args = %W[
+      --disable-dependency-tracking
+      --prefix=#{prefix}
+      --with-workdir=#{var}/cfengine
+      --with-lmdb=#{Formula["lmdb"].opt_prefix}
+      --with-pcre=#{Formula["pcre"].opt_prefix}
+      --without-mysql
+      --without-postgresql
+    ]
+
+    on_linux do
+      args << "--with-systemd-service=no"
+    end
+
+    system "./configure", *args
     system "make", "install"
     (pkgshare/"CoreBase").install resource("masterfiles")
   end
