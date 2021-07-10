@@ -15,6 +15,7 @@ class Cfengine < Formula
     sha256 big_sur:       "369f0b971ef4b7968d2e1a8934ce03e4d841b88c9c0a789ca52e8e5d3b619acd"
     sha256 catalina:      "397a614052632c146a1a8668a5e0a1e8ab1569296d6bd94b411b5bf15a61c736"
     sha256 mojave:        "bc4f67e00fa8dc773ab0fcc1b9bb1376513f507fa958bceae50ef943ef5ff670"
+    sha256 x86_64_linux:  "c0182838df4ece465cc5e1084657b650bc1190c1272a0cd50a6af1f7562dae32"
   end
 
   depends_on "lmdb"
