@@ -6,10 +6,11 @@ class Mongoose < Formula
   license "GPL-2.0-only"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "93d2adfd1d2316c0e6273684448fc25c4a97bd79a7e029595835904cb4f0c11c"
-    sha256 cellar: :any, big_sur:       "3db2441ef347bea923f2f1a10a0741b4099e6fe0efd77ba965b4221b962a9158"
-    sha256 cellar: :any, catalina:      "0598f7de19af511a4c5ff070e1d3e26b3b9068e985c3c60dbe97f54cd8b56f9b"
-    sha256 cellar: :any, mojave:        "dc4899fd032e6e1c2c128df7e2ce21d3fdfe90ea93bb40aaeed88cd9ffe329e6"
+    sha256 cellar: :any,                 arm64_big_sur: "93d2adfd1d2316c0e6273684448fc25c4a97bd79a7e029595835904cb4f0c11c"
+    sha256 cellar: :any,                 big_sur:       "3db2441ef347bea923f2f1a10a0741b4099e6fe0efd77ba965b4221b962a9158"
+    sha256 cellar: :any,                 catalina:      "0598f7de19af511a4c5ff070e1d3e26b3b9068e985c3c60dbe97f54cd8b56f9b"
+    sha256 cellar: :any,                 mojave:        "dc4899fd032e6e1c2c128df7e2ce21d3fdfe90ea93bb40aaeed88cd9ffe329e6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ad3b052bc7f7f27d2533fd05f53f68f3e70bf93cafb40b51be1b6e4a60a41cb6"
   end
 
   depends_on "openssl@1.1"
