@@ -16,6 +16,7 @@ class Elektra < Formula
     sha256 big_sur:       "fbaacf726a77ec94ebf835aa77bc3db5c6fd7bec4f0895a58a70be8718c7ee9e"
     sha256 catalina:      "c3ec4af92a0e63e565ca517535c3b3306806bddf1b88878cbf731831ad61b6d0"
     sha256 mojave:        "e293f9a80501d0435021aa7acbfd6117afcc7928f8fe492bf48e1261064889b0"
+    sha256 x86_64_linux:  "801cebd1353b5a54bf5712ca59f03ea0a8f0110e3e3aeed0dc2c678a5440224f"
   end
 
   depends_on "cmake" => :build
