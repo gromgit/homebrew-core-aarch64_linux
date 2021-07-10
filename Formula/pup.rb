@@ -7,15 +7,12 @@ class Pup < Formula
   head "https://github.com/EricChiang/pup.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9593a0417aaaa3ae4f906b0996e7cecd5c14f38d6e59c729a7d20f82b5b5db08"
-    sha256 cellar: :any_skip_relocation, big_sur:       "adf4c73c13c8066e9aa9c9acae07a6d4f84965dff901919a2f718ef898d1bcb7"
-    sha256 cellar: :any_skip_relocation, catalina:      "b543d371442c8a14f8113396523d65f1775f4b61ca55d4b61b859c180eb20777"
-    sha256 cellar: :any_skip_relocation, mojave:        "baeef002d46ed4c9872242419ed991b9d9f26d8e5b296f54b2ffb9e1e6bcfc84"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "f470de75187b994ef9612c5404dc7622a356c8ee6af21f6b2549b5d7c5d88d32"
-    sha256 cellar: :any_skip_relocation, sierra:        "4ba84cffa7cfd01bd252223055abdf5fd8b6cfc27474131cf313e688ea8eeecf"
-    sha256 cellar: :any_skip_relocation, el_capitan:    "a1aa49640871c127c76f4aea6db65487db964a055e2aa4d86ee2d8b7f5dcb561"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7e6763550ae658953ea405ba11d5b0da841a6e50b826b59f9690227fb7ba3beb"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8933d95f5318154ec8f9e7d2080c24c3657d2c850935f9c165e485ad98ad6bff"
+    sha256 cellar: :any_skip_relocation, big_sur:       "929baa98965ce865620bc15bf4f5951dff558b0ad1f9e439d47faf92798f5405"
+    sha256 cellar: :any_skip_relocation, catalina:      "f5f4f5c09cc76054eac2b96357f4b2aca8501daa8c805801d17079aa7e5395f8"
+    sha256 cellar: :any_skip_relocation, mojave:        "1801647618fe8e2367ce3d739513c1811259bf1db3fb9ddfbc9301e559102d9b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "984ec42bb2a863b2afec7954b8b1c706a5474e0cbd278ed5e4f5439c13f02bb2"
   end
 
   depends_on "go" => :build
