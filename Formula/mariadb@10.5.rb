@@ -15,6 +15,7 @@ class MariadbAT105 < Formula
     sha256 big_sur:       "331ea03fb2ba8e83003bcbd7b2bbaab58e7502b18e9780525533762f333d49a2"
     sha256 catalina:      "5db1bdff46cb07a979bc027edf55e9bbbb9a56f884931ffd48264c7bba2ccb46"
     sha256 mojave:        "c9c1cf5daec11db466928c9177bb4d661543bc2c250f046e32bfb3d9414f6da6"
+    sha256 x86_64_linux:  "ee4ac662ab2842504fb9e431a560bcf46b120c3c2331fbcc9d9c839079e0b914"
   end
 
   keg_only :versioned_formula
