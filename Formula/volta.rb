@@ -16,6 +16,7 @@ class Volta < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "b05113b680e109746163c3bf082ca7a2b2a00da1dcebb899416d7822e68d3a67"
     sha256 cellar: :any_skip_relocation, catalina:      "dc76e1f95915f42a5289f7f368cdd970771f002992200e19160d7ae89651ebd2"
     sha256 cellar: :any_skip_relocation, mojave:        "4f7ad7853a922751e34e48ac78656beea5fcb51b1c0c65f1d30010f2acbc85dc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b6716f92c0a3051e3b153a2ce005d7609cf787b57336b3afe1d387e3074e3861"
   end
 
   depends_on "rust" => :build
