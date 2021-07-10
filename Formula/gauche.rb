@@ -13,10 +13,10 @@ class Gauche < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "39e73449557616fcdbe0da0e6795b16fdc35a17618e5a9c26db5acb247a5c588"
-    sha256 big_sur:       "946cf4fb5df28115150e9e8fef530885dea4ea78a141340b76a3696813c5ceb5"
-    sha256 catalina:      "3242db5cccc130802f125d27c51b447b1f52a43d2a4d8a4819f52b71d88d08e5"
-    sha256 mojave:        "c278ec5a5c34957a9e75b386aad28736a4a64864c4f1a156486e6b4959e4aed5"
+    sha256 arm64_big_sur: "86f3f5bd68346eee408d1500bff6782b3d3fff937a96dff80f93022b695acc94"
+    sha256 big_sur:       "88d426f92baff2b17011fcf645fab3384bd9057c9bf71ca3976fd68a24c5d865"
+    sha256 catalina:      "827634eb03776d2a21ae7a0d90ee0d18c0f4dba034f50149dd4aed4f343bb906"
+    sha256 mojave:        "44dac5484933886fc49e0e3e02140c44e6189ae65c7ab32f2f3ad24521740ec8"
   end
 
   depends_on "mbedtls"
