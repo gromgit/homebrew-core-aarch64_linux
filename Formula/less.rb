@@ -11,11 +11,11 @@ class Less < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "f23024af4d1356f53bb5878fbbb41bd5da0943db524e9317a5f1e90a3ae88af2"
-    sha256 cellar: :any,                 big_sur:       "3a13526e660b8d2b6725a48000be76f4d79e4178e516c137b807968e0faabdd8"
-    sha256 cellar: :any,                 catalina:      "e92c22994edb092737b72ea43911063ae2fdafe8b98692fbcadaced1f0b31f74"
-    sha256 cellar: :any,                 mojave:        "ac57fc123c84d43490749f55e7e6ed0605821fbbe62fc0d503c71c00f568137b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7e9ca3d9ff14379dd9083cb9c44883f15059bcf53ee75774e45edb40593d6e1d"
+    sha256 cellar: :any,                 arm64_big_sur: "bc5f182ccbe6676c1647939b2dd1b66e4f66eb920bb865f94d041fccdb2bd493"
+    sha256 cellar: :any,                 big_sur:       "7b8ea7c58b438ef80d6b13fd988061543ab3413a40113cd30644cb22fa6f1081"
+    sha256 cellar: :any,                 catalina:      "ccbcf747eac1e0a8338be43a6be0e4f3fb241394a6bc0c921b6e51b4ca32c042"
+    sha256 cellar: :any,                 mojave:        "916e88216d17654f290affa519d85ad295696dc6c753d3311ed71fb4cc2f9268"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1d3b89016d59864389e96b2c234f9f8e98254374c1b1d20847a03a8fa8bce6d2"
   end
 
   head do
