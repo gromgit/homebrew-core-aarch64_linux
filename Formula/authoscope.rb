@@ -10,6 +10,7 @@ class Authoscope < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "fb5667604590e7f7aa5675866b03bba8cdb8649dd32f543a6853d70ca2d9ead5"
     sha256 cellar: :any_skip_relocation, catalina:      "c5c82345a6556076b1dd30e2b80ac51936ce8a910f4013f685b7207a7d9589fc"
     sha256 cellar: :any_skip_relocation, mojave:        "f618a86f7523021c5ca54730ea6b42bfc74d73a6d5e6a730e7f4d2b0028c2d6c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "88bd1d09f07bd61e3c66f4eb6ee4cdfe8c2a46a453d18dfbf0fa8484885ea9af"
   end
 
   depends_on "rust" => :build
