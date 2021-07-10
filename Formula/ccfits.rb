@@ -6,11 +6,12 @@ class Ccfits < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "957e2589c467c78c2e134476b0fe123d470a3e402e37ddef27965d706c1fdbe7"
-    sha256 cellar: :any, big_sur:       "c15ddcdce98436a8c8dfb72a43586d23061b7199953aec9b1b5a0a2c544eb1d0"
-    sha256 cellar: :any, catalina:      "bcf673522fe7245b6ca8c93139793acf10c0fb3e351de96cfd634e296a5be813"
-    sha256 cellar: :any, mojave:        "22aa452875d79f09825a87f9f3e384552e7fd92e5d954cd361a1b92cd9e52513"
-    sha256 cellar: :any, high_sierra:   "b527e857acac1d749786f44a06af0cfa5f19f34c568c5f21c65675fa04b97f26"
+    sha256 cellar: :any,                 arm64_big_sur: "957e2589c467c78c2e134476b0fe123d470a3e402e37ddef27965d706c1fdbe7"
+    sha256 cellar: :any,                 big_sur:       "c15ddcdce98436a8c8dfb72a43586d23061b7199953aec9b1b5a0a2c544eb1d0"
+    sha256 cellar: :any,                 catalina:      "bcf673522fe7245b6ca8c93139793acf10c0fb3e351de96cfd634e296a5be813"
+    sha256 cellar: :any,                 mojave:        "22aa452875d79f09825a87f9f3e384552e7fd92e5d954cd361a1b92cd9e52513"
+    sha256 cellar: :any,                 high_sierra:   "b527e857acac1d749786f44a06af0cfa5f19f34c568c5f21c65675fa04b97f26"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "be3d352318c337fb70e7369d09ad269a352a986e1a7c40ce901bea4535bc96e8"
   end
 
   depends_on "cfitsio"
