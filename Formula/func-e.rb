@@ -5,6 +5,13 @@ class FuncE < Formula
   sha256 "17fc6c5c0f7bea8ce59e0bfb315198cc9f9ecfda98d51909149d42ffd125d72f"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, big_sur:      "baae422ab7b137ae4eb74e977cf21a9faff0b481ffd733787d478915498fcaff"
+    sha256 cellar: :any_skip_relocation, catalina:     "6955fb6b70ecd1f6873bec2163fdebeb289d3ae2fdd41c341a97febdf7442f85"
+    sha256 cellar: :any_skip_relocation, mojave:       "6cda002dd536d9cb34ad93864344930adac7b12f62f9408711190f6c7a4d4069"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "51db1eb03d9b595353cb3119ec22bb4839d81da9456a28ee24d29f8afbeb1871"
+  end
+
   depends_on "go" => :build
 
   def install
