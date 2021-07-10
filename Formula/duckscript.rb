@@ -7,10 +7,10 @@ class Duckscript < Formula
   head "https://github.com/sagiegurari/duckscript.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a3ca2f6c89a1c90f840eeb06b7803dff21d6f84ff974a9848f8efe0c0bb91248"
-    sha256 cellar: :any_skip_relocation, big_sur:       "78113fd5721e77136e5716028dd64364d0250915638ae83566417341e5fc9ff1"
-    sha256 cellar: :any_skip_relocation, catalina:      "31c479e8f139af03ca9869778c0fa7ff01131bf8100fb62c5f08a961d1881324"
-    sha256 cellar: :any_skip_relocation, mojave:        "35949284d8a22eb7187266077ece7bfc557b77749165e6d37ed03581161ca49f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "457cb8ac4b5777a2b78b847156481f5f6932c4ced7392c0f0a2aa47035d1e893"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0af766d26a7972d7a1804d67d9625a465dfed139d1445da25256bee834cb9881"
+    sha256 cellar: :any_skip_relocation, catalina:      "1e247fe73d4e6843332133b68d25251bb5914710db148750f977fc702a109587"
+    sha256 cellar: :any_skip_relocation, mojave:        "935f8ffeac8f5173fda5eaa0fd25db04f3ff831dd814d9fe146a87854f2f5d97"
   end
 
   depends_on "rust" => :build
