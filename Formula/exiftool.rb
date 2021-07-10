@@ -18,6 +18,7 @@ class Exiftool < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "4d2164b47c21c2bc512a51e356350acd2e3c3eab476625678772ca20c4290a30"
     sha256 cellar: :any_skip_relocation, catalina:      "dcecf0acae250788ce5a32aec3e45a11a45af51a92109f78a560b6d896cc21a7"
     sha256 cellar: :any_skip_relocation, mojave:        "dcecf0acae250788ce5a32aec3e45a11a45af51a92109f78a560b6d896cc21a7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5fe3943d30b3a01a76465d736c9d5f0594889b57bae96ef15e22cdcc7499cd07"
   end
 
   def install
