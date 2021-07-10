@@ -8,10 +8,11 @@ class Esptool < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "e2916044d6ce93795993340af2904bc088324c54b238f0663f672b35d5d2ff01"
-    sha256 cellar: :any, big_sur:       "286a2dbf4c4243d0fc244c07d9e41d2eea34e1b60d686b310eb1246f216854b2"
-    sha256 cellar: :any, catalina:      "c88e132957e5b312946aea44eb0aded7dab11a64fa629190af16ab4f317d496b"
-    sha256 cellar: :any, mojave:        "0905b46bbefd70aa8a0666651cd51b0664b8390f85c1353d087aab0de5559a1a"
+    sha256 cellar: :any,                 arm64_big_sur: "e2916044d6ce93795993340af2904bc088324c54b238f0663f672b35d5d2ff01"
+    sha256 cellar: :any,                 big_sur:       "286a2dbf4c4243d0fc244c07d9e41d2eea34e1b60d686b310eb1246f216854b2"
+    sha256 cellar: :any,                 catalina:      "c88e132957e5b312946aea44eb0aded7dab11a64fa629190af16ab4f317d496b"
+    sha256 cellar: :any,                 mojave:        "0905b46bbefd70aa8a0666651cd51b0664b8390f85c1353d087aab0de5559a1a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b719d2fdc74b53c3bcb4bf507120d00dd08ae4562e2a1ebcccd752164cfdf8c5"
   end
 
   depends_on "rust" => :build
