@@ -16,6 +16,7 @@ class Irrlicht < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "e6de4ddb816d9c40b176e8a8688ae8763058f1f4ae166e0d2b28f5560f451b8f"
     sha256 cellar: :any_skip_relocation, catalina:      "aebe37e4576e3bb2e0d7ba9e5dcad1561db44b093ac97fb30edf4cb0b01192e6"
     sha256 cellar: :any_skip_relocation, mojave:        "44aa81c059704060641612ff44097bcb48f2c5fdc8685aa8ebd12bdc3a7ffa29"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "36f1afffe3a9567106b3ba656bbebc414b64b6ca8689a012775a0a5f55aafc70"
   end
 
   depends_on xcode: :build
