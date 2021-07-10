@@ -36,7 +36,7 @@ jobs:
                 }, {
                     "label": "bottle unneeded",
                     "path": "Formula/.+",
-                    "content": "\n  (bottle :unneeded|depends_on :linux)\n"
+                    "content": "\n  (bottle :unneeded)\n"
                 }, {
                     "label": "no ARM bottle",
                     "path": "Formula/.+",
