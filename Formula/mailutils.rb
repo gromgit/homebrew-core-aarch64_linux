@@ -11,6 +11,7 @@ class Mailutils < Formula
     sha256 big_sur:       "e341518e551aed3c4ffb4b3fa72ea6725834fdc6fab187218b31eaf11b7e3e47"
     sha256 catalina:      "710553bf2b8f3946adf42cbe918df0d6bc83fe93d9a6134a863e95e73c1b009b"
     sha256 mojave:        "fdc180f3df9812370849499c0946d548910a97c5c2a1875f6796916a5b341d2a"
+    sha256 x86_64_linux:  "05e0cc9e36bc232b3ff85294da1e5a3f8d3a651987a6daad75f63996b3d121ee"
   end
 
   depends_on "gnutls"
