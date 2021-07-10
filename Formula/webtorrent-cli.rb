@@ -8,10 +8,10 @@ class WebtorrentCli < Formula
   license "MIT"
 
   bottle do
-    sha256 arm64_big_sur: "7d1af4299dfafdc66adc1dd7d0f12cf1b852e094586c77974f703610121182d1"
-    sha256 big_sur:       "cfd6f86031ba394886c9dd05b42d338170bd02880bf6e8df93f10beacaab631a"
-    sha256 catalina:      "20603de85a9c75267a8371717d99bb9d407bb98afb034d1ee20e1af90788c613"
-    sha256 mojave:        "7fea3d8455de1f96f6df67ad06182beb354ade9a8803461af71d5aaf92912b28"
+    sha256 arm64_big_sur: "5e66c53b50aca2d52d459aa3689bec111773ac177dfadc30f151a63bcea4c2b0"
+    sha256 big_sur:       "32fd20bc3ed48f3058aa96365ff67f82d928319a820f9a1deb008a7c50d3094b"
+    sha256 catalina:      "64a42c8bb84df5376c2c9d075b9cafa20c4b4f30abf348b51813bd5a6c330380"
+    sha256 mojave:        "5bcea35b2ff4c65bb4ede15928781cbd8de63cc72f8a46ef99e7ccb3f369d240"
   end
 
   depends_on "node"
