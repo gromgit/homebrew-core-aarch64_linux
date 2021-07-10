@@ -18,6 +18,7 @@ class Quilt < Formula
     sha256 cellar: :any_skip_relocation, mojave:        "5d7f412108ec8831b8b6bfbc8e41d8b577523ffd66f9d095853a4680ec23b04f"
     sha256 cellar: :any_skip_relocation, high_sierra:   "691a01a091194910f0848aea529b331559fb98d44e9821c1ebafba51d2a2d62c"
     sha256 cellar: :any_skip_relocation, sierra:        "2305addd5b8f4b256701b2ec89ec9caffa4699dae48e63f8cac0478545b5d860"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6b672985441c4f512f4572fc240818504ea91bca96b67f1fcb2e88dbd4c8b0d1"
   end
 
   depends_on "coreutils"
