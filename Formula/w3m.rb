@@ -31,6 +31,7 @@ class W3m < Formula
     sha256 big_sur:       "9865fb7a43e8732bb7d309502c3de3410d05aeb093ba8916462b5aab36563a5a"
     sha256 catalina:      "5b752461983a608c684bae9efa13a0a5e37a456def0b368c8b0706b35fd480a3"
     sha256 mojave:        "a77f9a7ceee4dbb2a7288ecfad9c903c489ce4a60ff10056cd735433986df901"
+    sha256 x86_64_linux:  "425cc2d1f5e1c4dff0f4f70c916322e55e95d50b18a003c9ff065cb982fc90e9"
   end
 
   depends_on "pkg-config" => :build
