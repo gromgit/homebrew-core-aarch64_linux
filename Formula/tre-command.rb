@@ -11,6 +11,7 @@ class TreCommand < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "95b74502a71f06fd0d836710b7fb706cc32348fe2db788b4ea4b58a39690e840"
     sha256 cellar: :any_skip_relocation, catalina:      "65fd03a686ac215dcf9228312238b4c0447823f99c9a45074387d3322b9452df"
     sha256 cellar: :any_skip_relocation, mojave:        "f1f321409d7785cf56267748682eae4572a99382bebf1fd187ac30e70c5cebda"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6c63f6f75340e4dc28ee40123dfb50f58208d65a70b6405a9673562947edc039"
   end
 
   depends_on "rust" => :build
