@@ -8,10 +8,10 @@ class LizardAnalyzer < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6f448055736149c8292402df3e40cef3e45a6799dba306607a503a42992ca3f4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d63deffcff2ad35e8ddf2ad9c47e6c0ee7817e215ba9ad23639a46b6ab25b678"
-    sha256 cellar: :any_skip_relocation, catalina:      "d63deffcff2ad35e8ddf2ad9c47e6c0ee7817e215ba9ad23639a46b6ab25b678"
-    sha256 cellar: :any_skip_relocation, mojave:        "d63deffcff2ad35e8ddf2ad9c47e6c0ee7817e215ba9ad23639a46b6ab25b678"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "765a8533f5c18bc3dbb303f2d467ae8e79b0310181e55ef795211a6d954bd8df"
+    sha256 cellar: :any_skip_relocation, big_sur:       "722eaa1f668eb868d48be1e9ec9980ecb5e79e54f3bdae2e4e491e750198f4a0"
+    sha256 cellar: :any_skip_relocation, catalina:      "722eaa1f668eb868d48be1e9ec9980ecb5e79e54f3bdae2e4e491e750198f4a0"
+    sha256 cellar: :any_skip_relocation, mojave:        "722eaa1f668eb868d48be1e9ec9980ecb5e79e54f3bdae2e4e491e750198f4a0"
   end
 
   depends_on "python@3.9"
