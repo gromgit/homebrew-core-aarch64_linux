@@ -13,6 +13,7 @@ class Gcovr < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "04ecfd6d451d6d3e87a76d2eef8a47e6a6ce7157431055a1cf4debaf0afef246"
     sha256 cellar: :any_skip_relocation, catalina:      "2b21a8fc40832eb069b0183329d9b6848fdab864d25b9cb8c2ca5d6c43f14ccd"
     sha256 cellar: :any_skip_relocation, mojave:        "b5f15221d9e6689e617aa31a56cb8e4ea17b6969941a0c26fe28e9cd94d49831"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "aba343a506313d94d5291969fdc4dc055a93b7b5a71563d024843ec657aa0616"
   end
 
   depends_on "python@3.9"
