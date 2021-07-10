@@ -16,6 +16,7 @@ class Xa < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "82ac5a005305bb5fd7ff181e2f9aae95ad5f865574ed4cb8f936948cce406a72"
     sha256 cellar: :any_skip_relocation, mojave:        "6dfd866eea2c29d98aabbe4b9a0821ad9b808b0d2b7754b3400f5bb4f4cb4184"
     sha256 cellar: :any_skip_relocation, high_sierra:   "40334865dd2af12409a5c52ed9a8d3a5bd6b781da28375509e2481bd885c87e4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8e2307408fb7c597ccda244fb3b8ade5b5ba1388acaddca5e8607c9400f08b36"
   end
 
   def install
