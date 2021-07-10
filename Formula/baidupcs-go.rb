@@ -11,6 +11,7 @@ class BaidupcsGo < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "57ade07be37404c68a016fed277677e09259f75efcc88b90c26ca2027977a8c0"
     sha256 cellar: :any_skip_relocation, catalina:      "80e4dfe983b5d5afeaa6c3706813965b56633d957efc050f9f6c6559bf82c232"
     sha256 cellar: :any_skip_relocation, mojave:        "3cfda0f5181e860ac54a09ca3401e19f51b6bc57ea725bd96c73442f640bb594"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0ca7064321bcb68769e1714a222dc30dda5d71410ac990af2a95f253bfc648d3"
   end
 
   depends_on "go" => :build
