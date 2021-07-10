@@ -16,6 +16,7 @@ class Pumba < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "6543f05aaa8b1ead7d70a379daca89bce7cdf17f5ba32b751ec6af9d836cba9a"
     sha256 cellar: :any_skip_relocation, catalina:      "2f68ee710074baa934c3028d8240110053d37c16edb9f813667b879254548d39"
     sha256 cellar: :any_skip_relocation, mojave:        "0f84af117d6d6dd0224a849875a0cecf27de241654ef7d69fcf76d4bc09dd518"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7464ec1bd96ad6ae17ad1bbce764b3392bed09da440cccddf70f23f8a0534597"
   end
 
   depends_on "go" => :build
