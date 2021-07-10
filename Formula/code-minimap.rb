@@ -10,6 +10,7 @@ class CodeMinimap < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "34a54ec8b3e68ada2fe286dc61f7626de51b1ee29360be034566f34bc468a24e"
     sha256 cellar: :any_skip_relocation, catalina:      "27b9629e0fb3cdc4e2629ae150ffc13ce8cb6c5448f02f888395d53219b2ec59"
     sha256 cellar: :any_skip_relocation, mojave:        "490595ba892b4bfd1170af45ca829af08015a371f0eedb7e41d7b9db51c9e8a4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7bf1ebd18938f21a4fe695f78325e128374c6a5d7d35a47f42cb45e2b451a7f6"
   end
 
   depends_on "rust" => :build
