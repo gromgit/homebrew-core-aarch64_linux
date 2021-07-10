@@ -18,10 +18,11 @@ class Portaudio < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "50a45425f5c6026788791370b1ba30b0dcc82b6cedacd2240168f57f9abe6484"
-    sha256 cellar: :any, big_sur:       "f9ae97164b4101048870c761b15998e46f40da666c3f0e20c33cf6ce2f7319d0"
-    sha256 cellar: :any, catalina:      "8b87696f44cf2220cff66b9bcfa105f6a58dfec4eb2a881409e37773494c84b4"
-    sha256 cellar: :any, mojave:        "a2cab0bc4fee9757af7269408eb91df07ddeddfa6dd35c9740aae93816622b0b"
+    sha256 cellar: :any,                 arm64_big_sur: "50a45425f5c6026788791370b1ba30b0dcc82b6cedacd2240168f57f9abe6484"
+    sha256 cellar: :any,                 big_sur:       "f9ae97164b4101048870c761b15998e46f40da666c3f0e20c33cf6ce2f7319d0"
+    sha256 cellar: :any,                 catalina:      "8b87696f44cf2220cff66b9bcfa105f6a58dfec4eb2a881409e37773494c84b4"
+    sha256 cellar: :any,                 mojave:        "a2cab0bc4fee9757af7269408eb91df07ddeddfa6dd35c9740aae93816622b0b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "db0f24a3a3f52c1bc32fa7a36bab6b1b7ae0e3b936bc857ce973ab8666b2eb6a"
   end
 
   depends_on "pkg-config" => :build
