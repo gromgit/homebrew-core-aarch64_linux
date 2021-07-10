@@ -13,10 +13,11 @@ class Libepoxy < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "af3bc3c7e7710cff30fdebbe386f52fab7cd5083b41d6d9a043eba4b2b1c049a"
-    sha256 cellar: :any, big_sur:       "4a6a1766bb7ff4a4c9dbd5136f655685141a3c3eae8b082edc94cada21f613ec"
-    sha256 cellar: :any, catalina:      "2af927d87affad9ff2ba2bce8b9410f1a7b131ddbd82ba157ffd0ec6a31b15b9"
-    sha256 cellar: :any, mojave:        "9ff86759f0fce587b7063d2f2b156c3da556d54d6e40a108f72e1813580329bf"
+    sha256 cellar: :any,                 arm64_big_sur: "af3bc3c7e7710cff30fdebbe386f52fab7cd5083b41d6d9a043eba4b2b1c049a"
+    sha256 cellar: :any,                 big_sur:       "4a6a1766bb7ff4a4c9dbd5136f655685141a3c3eae8b082edc94cada21f613ec"
+    sha256 cellar: :any,                 catalina:      "2af927d87affad9ff2ba2bce8b9410f1a7b131ddbd82ba157ffd0ec6a31b15b9"
+    sha256 cellar: :any,                 mojave:        "9ff86759f0fce587b7063d2f2b156c3da556d54d6e40a108f72e1813580329bf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bc9eb2e98145c2132f84df724881c2d0b2e79461a55d3ab9e89c9242f57e9089"
   end
 
   depends_on "meson" => :build
