@@ -12,10 +12,10 @@ class Elektra < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "b246eb7351b10188c76762094e9e6bd08a8a6119cb8589fd244b304c54355608"
-    sha256 big_sur:       "4bcef10484817f1cad4335703c2714f6e5dac109766bb7f403fc3ed16103b5f9"
-    sha256 catalina:      "be7504905eaae104e3f59fc90adad96c2ea845d8f4f95ca0fbb261760afe45f1"
-    sha256 mojave:        "18dc59bc3c7dbbea60eae22d88f89157413c35fe285ea46fe0cbd884e5d3535d"
+    sha256 arm64_big_sur: "5ed421b12c2ead45ba45c7807cd0916ef87f0eda49eab27693bb1077c1cb9fb5"
+    sha256 big_sur:       "fbaacf726a77ec94ebf835aa77bc3db5c6fd7bec4f0895a58a70be8718c7ee9e"
+    sha256 catalina:      "c3ec4af92a0e63e565ca517535c3b3306806bddf1b88878cbf731831ad61b6d0"
+    sha256 mojave:        "e293f9a80501d0435021aa7acbfd6117afcc7928f8fe492bf48e1261064889b0"
   end
 
   depends_on "cmake" => :build
