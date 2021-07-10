@@ -9,10 +9,11 @@ class RobotFramework < Formula
   head "https://github.com/robotframework/robotframework.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "a0e20933f1824479aa59768ad01588e7de9221227c4e0684ff6904bd40f427c3"
-    sha256 cellar: :any, big_sur:       "6049e2e09ad5bff3c406d2fc53b5274ea44a8d8f5b32f50ea6d480a7f16d9b67"
-    sha256 cellar: :any, catalina:      "1d34cd445b028f3477338f6ccce56267491139fd14d9c45389e6905eb2e6374a"
-    sha256 cellar: :any, mojave:        "6bea33bdab5c5cb74afde044975094803e387e61be5ce4077fb4d87ec7a4a1cb"
+    sha256 cellar: :any,                 arm64_big_sur: "a0e20933f1824479aa59768ad01588e7de9221227c4e0684ff6904bd40f427c3"
+    sha256 cellar: :any,                 big_sur:       "6049e2e09ad5bff3c406d2fc53b5274ea44a8d8f5b32f50ea6d480a7f16d9b67"
+    sha256 cellar: :any,                 catalina:      "1d34cd445b028f3477338f6ccce56267491139fd14d9c45389e6905eb2e6374a"
+    sha256 cellar: :any,                 mojave:        "6bea33bdab5c5cb74afde044975094803e387e61be5ce4077fb4d87ec7a4a1cb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "16bb29de8a591e970187e147f26ff6aec0912fd812a04c3f7074c15a5a683b03"
   end
 
   depends_on "rust" => :build
