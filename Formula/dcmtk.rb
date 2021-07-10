@@ -11,9 +11,10 @@ class Dcmtk < Formula
   end
 
   bottle do
-    sha256 big_sur:  "14f0ad1188c09414ce0c38a5b1daad58031c490dedcb0e602d3a9d8946a7513c"
-    sha256 catalina: "b7169841e5ae53c3641392130e2d72190a859eb566e0445d16f58131a0bfe34a"
-    sha256 mojave:   "ba2af245944fd723362c4fd758aaa90a9f3b651e3422ce1326078bcdc4cad093"
+    sha256 big_sur:      "14f0ad1188c09414ce0c38a5b1daad58031c490dedcb0e602d3a9d8946a7513c"
+    sha256 catalina:     "b7169841e5ae53c3641392130e2d72190a859eb566e0445d16f58131a0bfe34a"
+    sha256 mojave:       "ba2af245944fd723362c4fd758aaa90a9f3b651e3422ce1326078bcdc4cad093"
+    sha256 x86_64_linux: "b7835228c2d0f5a9fb9a87970d75b34415f1629e24ee0c10dc953722595163af"
   end
 
   depends_on "cmake" => :build
