@@ -16,6 +16,7 @@ class Spigot < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "daf9a73394d08cdfc2b5746b367112ea1790f924169d36e2ec288b201433b148"
     sha256 cellar: :any_skip_relocation, catalina:      "7a78a2d6416a800148fbd44f269865c3baacf150164f757459f9dbf622b41fa9"
     sha256 cellar: :any_skip_relocation, mojave:        "f7f31fcf972afaecdb231e4b7e413a98a7ec8f05f7d3e4717cc9128c7cae0fab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b0e15ff42ceacf124df8655ee07bebb44dcb0ee0a5f8785ab4da5c8b27ea1467"
   end
 
   depends_on "cmake" => :build
