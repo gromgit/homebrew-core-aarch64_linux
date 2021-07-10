@@ -7,11 +7,11 @@ class NewrelicCli < Formula
   head "https://github.com/newrelic/newrelic-cli.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "986533096a36ac919231df0105f9f85fab9637593c40d08060c9457b140af1b0"
-    sha256 cellar: :any_skip_relocation, big_sur:       "bd98907f971de9eb4682e64dd4718ce3a1517058037e843cf0c7cc814a0732e3"
-    sha256 cellar: :any_skip_relocation, catalina:      "7bb496a802887fa0139ecc7d1d8d96c4cf9cd7b0c9424fd3993fab5b94dfb90a"
-    sha256 cellar: :any_skip_relocation, mojave:        "4f17c54970466ee5b1617dabcf5f2f0c39cf84d5eafa1438690283b847dce2aa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "549befaf288c969623839c9fb57c20009fae66fd17ba84ada4baba56eee84d0e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "31be3281e0b9a7fdf030ca8198611a3cf79a76017b23dc269d1f6c5910827172"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6b6a667272a2fb5ba9bdac8362ad90dc58efba2f8b2e1e5ded9175f0077df003"
+    sha256 cellar: :any_skip_relocation, catalina:      "fbc23c786578100c72168022d78950be758640f07c27e580c0afed19c62581b1"
+    sha256 cellar: :any_skip_relocation, mojave:        "d34559b94e0be211339113189b9ee4b22d44d706b168a787d289cbad363f0a8e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "06ebbf342410258291c9a80c6267351526849fdff3df3be0815de1c6069614fd"
   end
 
   depends_on "go" => :build
