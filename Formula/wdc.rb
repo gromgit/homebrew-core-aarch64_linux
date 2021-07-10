@@ -10,6 +10,7 @@ class Wdc < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "18365f76dafd05a312e9a7862f2fa747caa8c63e881469719a8ef45d07dce3c6"
     sha256 cellar: :any_skip_relocation, mojave:        "fbcaccbaa2440ac38f9efa41a342eef4d883e522fa5df7d642aaa1563d38f28b"
     sha256 cellar: :any_skip_relocation, high_sierra:   "92dcb68d02f64ff51446052bf5c41fa178cc48ade406a9533199461476f7c849"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "540ee4f07372f9080c4cf88d17a067379fbef4af4f69240cfced99f4944c07df"
   end
 
   depends_on "cmake" => :build
