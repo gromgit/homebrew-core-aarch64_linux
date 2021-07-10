@@ -7,10 +7,11 @@ class Micropython < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "e9fa695e69a3d93b60289e8e4698cb99cf909f69af7b62565a8a16d32c9e40c5"
-    sha256 cellar: :any, big_sur:       "dd7d21cbe5e6eeaf4c898269dcbbddf7f77470bc6cc30cd14a1ab710f0f07d06"
-    sha256 cellar: :any, catalina:      "4db83fc025b9bf91be5ee37b4093b66ccf6e796c73e13cfdb4ac03ebedda489f"
-    sha256 cellar: :any, mojave:        "3bc0210fa2b0f6de0218db02a596e385d57850cd5b8b84f92b3af0d93711876c"
+    sha256 cellar: :any,                 arm64_big_sur: "e9fa695e69a3d93b60289e8e4698cb99cf909f69af7b62565a8a16d32c9e40c5"
+    sha256 cellar: :any,                 big_sur:       "dd7d21cbe5e6eeaf4c898269dcbbddf7f77470bc6cc30cd14a1ab710f0f07d06"
+    sha256 cellar: :any,                 catalina:      "4db83fc025b9bf91be5ee37b4093b66ccf6e796c73e13cfdb4ac03ebedda489f"
+    sha256 cellar: :any,                 mojave:        "3bc0210fa2b0f6de0218db02a596e385d57850cd5b8b84f92b3af0d93711876c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c0a2ca49e0b12e56a45fa5f98555a4bb35fb882f392aa1246db91be60de3e792"
   end
 
   depends_on "pkg-config" => :build
