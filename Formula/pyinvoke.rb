@@ -13,6 +13,7 @@ class Pyinvoke < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "a2603322a31663ae178003c4df6c6b22e9623a870244231288f5bfc8404e1eb9"
     sha256 cellar: :any_skip_relocation, catalina:      "a2603322a31663ae178003c4df6c6b22e9623a870244231288f5bfc8404e1eb9"
     sha256 cellar: :any_skip_relocation, mojave:        "a2603322a31663ae178003c4df6c6b22e9623a870244231288f5bfc8404e1eb9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7347fdf05d5924430baa47e9936cda6d96f7c873200c7516fa81ac9888938339"
   end
 
   depends_on "python@3.9"
