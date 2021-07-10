@@ -12,10 +12,10 @@ class Kdoctools < Formula
   head "https://invent.kde.org/frameworks/kdoctools.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "aaec47ae8121fd2e68585d330f0a6bd2ee1ea6caa83279065f8d5ea15aabfef6"
-    sha256 cellar: :any, big_sur:       "e03564786cb521df5cd7aa5d024c8951493dd49c25061d39ed0f256a9d6d6ee8"
-    sha256 cellar: :any, catalina:      "33ddc698c24e960c617ee312a169c4398852ed56c37c86509ba99975dda6f95b"
-    sha256 cellar: :any, mojave:        "31fed6390bd7ef02254157e85dc02136a7eef7c68f37e8fd41d7400eb0ba13d4"
+    sha256 cellar: :any, arm64_big_sur: "9085698fb2ca37ae54ba15c50ebb540ba583ff77995f48465de026f71af90b87"
+    sha256 cellar: :any, big_sur:       "ec16d91d935f0a11a696daf03cb09c883675f04ddf771986bd45fdaa37d312a9"
+    sha256 cellar: :any, catalina:      "64ccad155a9b355244d6a6e6117b97d03d2c05a59742c02817f3bef38c67188c"
+    sha256 cellar: :any, mojave:        "dc5752b5b7911a498a7f9650c809bffee6576f16fa256f97f204ca56d4b0c7e1"
   end
 
   depends_on "cmake" => [:build, :test]
