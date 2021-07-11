@@ -13,6 +13,7 @@ class Watson < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "54cc3648f3ad575925332ef0cbb1112a7e988c944f462520143706721dcb1690"
     sha256 cellar: :any_skip_relocation, catalina:      "5d090380d0f52329f78d37627d991512763e58270d77dd221d724794dfc142c0"
     sha256 cellar: :any_skip_relocation, mojave:        "6041767d0befeb2912675b1287d7dff6b1b1afc2168d68e60f1390491ba27053"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "781861e077399e7ccd716de21800e741749f50f44c0be1e774159b943560f09f"
   end
 
   depends_on "python@3.9"
