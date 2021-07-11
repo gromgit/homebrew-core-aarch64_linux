@@ -30,6 +30,7 @@ class BandcampDl < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "ee51b1cdb255665578251bd7081ae2a01abcca24d48d72eed076b9a8794af58c"
     sha256 cellar: :any_skip_relocation, mojave:        "d416f44eae62f3a83be9ea4312cb244581772df264c9c8156165dde038144f56"
     sha256 cellar: :any_skip_relocation, high_sierra:   "f1d7e4a182af86854f3218cf6812fa7975d922a0ee3e8c3b5c9ee16741b0eb1c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5a605f8c202f0bb0e6609af7f934ef378c544752417aa20a2a33fad1173a6f54"
   end
 
   depends_on "python@3.9"
