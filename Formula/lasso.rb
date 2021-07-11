@@ -11,11 +11,10 @@ class Lasso < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "aef8a4d9b81790ff84aad53da1c7d9a582ac69db8d775d930a30444174e186dc"
-    sha256 cellar: :any, big_sur:       "83fa7671b9b8635dbf79c5db616d72c0f8d53ca543a508effd4bf628f46af26e"
-    sha256 cellar: :any, catalina:      "bc1f4dc6fccff1c5631d37b4539d2d9a657357445488ce892756feccf98f660b"
-    sha256 cellar: :any, mojave:        "d4bfe838fe8fd0b32ff7e19a4601c85a3b98a49ed8e1f05dc796ed5adf89005b"
-    sha256 cellar: :any, high_sierra:   "8256178a39f08386db515226b334a93f895cb8d96c043acfe1a8d420efbb668f"
+    sha256 cellar: :any, arm64_big_sur: "9fa2831bd4c741367805ff5621489c3cc2ea3f19bafc5252817851cf9d5c0bde"
+    sha256 cellar: :any, big_sur:       "600c3e0dad28c4dadfd3c8aa880b3b652e6d7cf8d2bdeb22aa17f97eeb8bf43b"
+    sha256 cellar: :any, catalina:      "1b5faa0de1a45cb6d4965d17a1f8480716ab5e5af97ed6eeafa65d69a482e4e6"
+    sha256 cellar: :any, mojave:        "226e925072fb12e5009690fa8426c68dfad03fa9633464627a33b0991d29a5be"
   end
 
   depends_on "pkg-config" => :build
