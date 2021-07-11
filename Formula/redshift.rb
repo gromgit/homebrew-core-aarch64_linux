@@ -13,6 +13,7 @@ class Redshift < Formula
     sha256 mojave:        "197ca4060616fbb79a6e64b93760f60ef581d5d76f838ab099b97076e3e569fe"
     sha256 high_sierra:   "f07311c326eb8c2310d509ffbcb5424d7783a1b0b675d47ac32026116086a39d"
     sha256 sierra:        "89ab02396a2d3694923f8496217a5d5a47c1cc35e167205cf4bb74033de92ab3"
+    sha256 x86_64_linux:  "fff94aa80f8912cc75336f1b89431d457f123340d162a1b408ed9d5d512cb202"
   end
 
   head do
