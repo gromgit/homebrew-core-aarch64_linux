@@ -15,6 +15,7 @@ class Cdk < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "ef4d022fd2b85806ca3f5d39974ebfec3a15840adc2ec8afac23fe3591d24626"
     sha256 cellar: :any_skip_relocation, catalina:      "da1e033bf75a24554fd51c1c255434d8b25759ec728f9371b9fe65651ef65db7"
     sha256 cellar: :any_skip_relocation, mojave:        "ae5301085365b01984a54f22ed421ed6c249afb2d7ba8426aed2d4c54111fbe5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a80b1c112364df9b80d2146bdfeabbd1d9c25af3189a257cfc776f9efb59f76e"
   end
 
   uses_from_macos "ncurses"
