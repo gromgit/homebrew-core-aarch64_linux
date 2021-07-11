@@ -11,6 +11,7 @@ class Screenfetch < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "ab904d997e7f65041ea053d21da1b9acc385913f7d4051c7338bea85353a390b"
     sha256 cellar: :any_skip_relocation, catalina:      "ab904d997e7f65041ea053d21da1b9acc385913f7d4051c7338bea85353a390b"
     sha256 cellar: :any_skip_relocation, mojave:        "ab904d997e7f65041ea053d21da1b9acc385913f7d4051c7338bea85353a390b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6f7e61ea4717eef72e68b006bcef5d6ff1aab08f7ba25f0a5c6b8e014ffb530b"
   end
 
   def install
