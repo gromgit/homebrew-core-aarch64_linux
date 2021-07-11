@@ -11,6 +11,7 @@ class Neovim < Formula
     sha256 big_sur:       "c5e9addc65899936e06676db8a4c0239ca6e6c44936b21df1ade343dfe860995"
     sha256 catalina:      "13d31cb537237f3b9245c6c2de0e55ae4d7730d06742aec5a3e98a5365934eae"
     sha256 mojave:        "8f7a519050bf438143c4f7933f63d6aa1ccb1c062f4ae76ccaa7bf22d35f2f6e"
+    sha256 x86_64_linux:  "31f3eed841555c4d2027bc9dd9b7aefde33708231fa6166e0cdb5ab215960767"
   end
 
   depends_on "cmake" => :build
