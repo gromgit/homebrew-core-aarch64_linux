@@ -12,6 +12,7 @@ class Pig < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "a5d6bc2bec7cfb14e8a398b3ff04ef5583a7c1a31d809ede5e2f7c5f2ae394fa"
     sha256 cellar: :any_skip_relocation, catalina:      "a5d6bc2bec7cfb14e8a398b3ff04ef5583a7c1a31d809ede5e2f7c5f2ae394fa"
     sha256 cellar: :any_skip_relocation, mojave:        "a5d6bc2bec7cfb14e8a398b3ff04ef5583a7c1a31d809ede5e2f7c5f2ae394fa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "12c02619e8fbfee0603e8d11ffa0facfed80717df4eae3f4176a9fe5b33a4076"
   end
 
   if Hardware::CPU.arm?
