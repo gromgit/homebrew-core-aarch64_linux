@@ -16,6 +16,7 @@ class Bibclean < Formula
     sha256 catalina:      "15dbbabace79aafd93546976d8a899a393c6489d7951ce2bd2bb148a45f262a3"
     sha256 mojave:        "82a7919c9d5054012b54d53eacf5a9c0785105071c4c65c83bc2ff428642b3e5"
     sha256 high_sierra:   "9a2beadc688b6b12a22359890a6a85f20f3c79af561b5d4268e86069b806f585"
+    sha256 x86_64_linux:  "aaa0f6d1a73e08748f359b402b12bd0a648eeccc854cfa7175bbbdfef2057b77"
   end
 
   def install
