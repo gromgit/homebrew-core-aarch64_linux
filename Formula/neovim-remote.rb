@@ -13,6 +13,7 @@ class NeovimRemote < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "f94e3d59bc081404b883cd5fa4e8ddd48e33d060fc25099c0070ba52e8ac9682"
     sha256 cellar: :any_skip_relocation, catalina:      "1bb77fdf6276df0833eed58107681ff725a0b0c6746a5e19c7c98428b903799d"
     sha256 cellar: :any_skip_relocation, mojave:        "a08d1b3bbae29235c707c59a345ce343a6994e4f9460bbcf16f8279a2e13683e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "21360429be62c3459f9181cf4ea899bd8cc077de3758f7efed86e2b7d92d3f5e"
   end
 
   depends_on "neovim"
