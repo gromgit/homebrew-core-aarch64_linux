@@ -14,10 +14,10 @@ class Hdf5 < Formula
   end
 
   bottle do
-    sha256               arm64_big_sur: "5e67d9ee1a3f93f344ea580fb4ada1c8139d91506745496e2286c488403dd214"
-    sha256 cellar: :any, big_sur:       "3302a30ba82ab91f4027f61ce82c867edbbcbe57dd4ce90ad56b91ecec826f82"
-    sha256 cellar: :any, catalina:      "910ff4f301ca334408938af25b11a6c13889a1d2b760c61ff3226deeb7914c7c"
-    sha256 cellar: :any, mojave:        "ce8acca1605e0b59b3438c045fac49179a0fdf2b1a17ba027979b159a082d8c6"
+    sha256 cellar: :any, arm64_big_sur: "d049cea334b8a8c27cc83f58dc69a795f66b59f7b395666d4128ca457ab69e50"
+    sha256 cellar: :any, big_sur:       "6c31504f6a44ef682977a38ef9327efce7e6ba9264add1965b1a76e8fddc2647"
+    sha256 cellar: :any, catalina:      "aa4930768cb12d3a2a82e3670c0d9c5cf4089e487d0cbf4865880a5520b375d0"
+    sha256 cellar: :any, mojave:        "d2bc09835f0613bff558588829f2e48d8c2ed32386976ac18ff1c0f8eef3ed36"
   end
 
   depends_on "autoconf" => :build
