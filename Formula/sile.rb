@@ -7,10 +7,11 @@ class Sile < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "0d5b8c5f5ef896aa9a86754a4b32b06a57d3093ee6d4d0753759e489e71ee0a5"
-    sha256 cellar: :any, big_sur:       "a0842ed2090150467336ca6b92e7980a082bbcdbd29d60f496796d561e64bccc"
-    sha256 cellar: :any, catalina:      "a2c779829ff7c3b266a138b625abf0edf1a57e32f1b3d8591d1ab4992f64dd7e"
-    sha256 cellar: :any, mojave:        "360263738c4e15900b1396dc54b1a632e512047e65b77cc128d76b63a9f0083f"
+    sha256 cellar: :any,                 arm64_big_sur: "0d5b8c5f5ef896aa9a86754a4b32b06a57d3093ee6d4d0753759e489e71ee0a5"
+    sha256 cellar: :any,                 big_sur:       "a0842ed2090150467336ca6b92e7980a082bbcdbd29d60f496796d561e64bccc"
+    sha256 cellar: :any,                 catalina:      "a2c779829ff7c3b266a138b625abf0edf1a57e32f1b3d8591d1ab4992f64dd7e"
+    sha256 cellar: :any,                 mojave:        "360263738c4e15900b1396dc54b1a632e512047e65b77cc128d76b63a9f0083f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0c151d0a981166b39131d7fd32960e4ec5e97b3e9d4a3e4c0a6c663c44555fd7"
   end
 
   head do
