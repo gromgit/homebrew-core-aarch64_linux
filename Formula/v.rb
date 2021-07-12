@@ -10,6 +10,7 @@ class V < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "bbee3c584bca388ac94dcd3dc701c395fc4f44418dcd0f213033cec8f4f41b17"
     sha256 cellar: :any_skip_relocation, catalina:      "bbee3c584bca388ac94dcd3dc701c395fc4f44418dcd0f213033cec8f4f41b17"
     sha256 cellar: :any_skip_relocation, mojave:        "bbee3c584bca388ac94dcd3dc701c395fc4f44418dcd0f213033cec8f4f41b17"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "18eed94d7a0d343a527a6a77355a0e46106b79710a29c3faf835a8acf6fe777e"
   end
 
   uses_from_macos "vim"
