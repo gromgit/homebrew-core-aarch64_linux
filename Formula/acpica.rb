@@ -16,6 +16,7 @@ class Acpica < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "be80e8afae9ba18c0c99947feaabad58d99307c8dacae431e6f107f437f344ad"
     sha256 cellar: :any_skip_relocation, catalina:      "60ab88557d60cad5f69ef2909a4870b2bc9b9b31aaa5f5e2e51236d734d9aae9"
     sha256 cellar: :any_skip_relocation, mojave:        "cc1aa5177a3b6734225d42af684200266fc9e03771954907d6ced096742f0fe1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "85cffa0f37b3f57e4e951b66e30e5c519a2c4d76eaf566bbbe5c4076e3cbd015"
   end
 
   uses_from_macos "bison" => :build
