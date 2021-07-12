@@ -6,11 +6,11 @@ class Step < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1e70160dd268bb2b6afb129533958a504484d9def8d0dcbcc50764d1b7e0e979"
-    sha256 cellar: :any_skip_relocation, big_sur:       "14fb35434ca1944d1e14cc8822abe7684de1a582686dc62a5e614ed7f1d64b5a"
-    sha256 cellar: :any_skip_relocation, catalina:      "732f474f73dbe25c3e43eb32484c9e1b732ddef29428ebb13e9d700c097b3203"
-    sha256 cellar: :any_skip_relocation, mojave:        "20ac4238b2523f406174ec5177cb25e3f31251baed6c555cb7fc092190b342a1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "79cca85f1fa608c6e526b3444adc74d59357626026a2e02b543085cdbd4150e6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e3150b89b4c083e63b7330417b7d5ebc4e1ac884fced45cefa251a9058f5c2f9"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ffc856f090795a346911b0ec07ee654ae142d7fa7beca51d91e54ab0233f481b"
+    sha256 cellar: :any_skip_relocation, catalina:      "7cb397f326d74fcb368d4fcd76653fd5cc6d0c334d79f3afe2d1fbbeb030ffd3"
+    sha256 cellar: :any_skip_relocation, mojave:        "d248be3b4c75184c52f5937381c544898b97ea08017b22f669603e6ae7b8670e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "867edbfb1f69e5128fed3cbdaf343a4691b16db576bec6f7df8531d9f8973c91"
   end
 
   depends_on "go" => :build
