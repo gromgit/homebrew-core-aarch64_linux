@@ -7,10 +7,10 @@ class SshVault < Formula
   head "https://github.com/ssh-vault/ssh-vault.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "899d6b9dc54456774fd31aa01dbffa3c7c054f5792524a62f1af479775693ae8"
-    sha256 cellar: :any_skip_relocation, big_sur:       "4756846a8d3c600174697c14690d4a58153aca8a3ed091a7d50f8f879a91cbfa"
-    sha256 cellar: :any_skip_relocation, catalina:      "8527d8a5b043f0cbac3be3baf52fa9e98957e4be715e6ce3ba5dbde6be167c4e"
-    sha256 cellar: :any_skip_relocation, mojave:        "4022c12c0a3f06ca6c3ea6a9ca5188b8b7f8962afd1baf4510da3e660b28e563"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3d31b872e937be5b52e321628ff7f05471c25f42e72dc3e4566580d919613c30"
+    sha256 cellar: :any_skip_relocation, big_sur:       "fcb7faca3f1ac56161e9ea91a7e543cf705222d1432d866a7127746f869b79ba"
+    sha256 cellar: :any_skip_relocation, catalina:      "8f4fc6e1e12a6eb2cff23b48c34568f2643d6c4570160c459e3ce79b66c5d7a5"
+    sha256 cellar: :any_skip_relocation, mojave:        "b3d07f9f64964782d4bc5d1b20218e016f8d4ee07bbb99a35fc5b1b0a0baa903"
   end
 
   depends_on "go" => :build
