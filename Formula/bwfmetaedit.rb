@@ -15,6 +15,7 @@ class Bwfmetaedit < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "bc4935bced4e3226e4e0fb61dbf8821ee25fb36126c494e4e93f084728032be3"
     sha256 cellar: :any_skip_relocation, catalina:      "c5168b4682ae67f6ad9618761706b4589d6ad45fb55df851602dab205a8a7299"
     sha256 cellar: :any_skip_relocation, mojave:        "836a3ad812aaeb0128ac0e3fe75eee3d33c6f2c2a98f92138af02cf74173c665"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "08a47ae2efd7c64a5a5eb5cc9ecdd2046d0b0f20169257af529dd9ae0e3891d3"
   end
 
   def install
