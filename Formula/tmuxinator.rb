@@ -11,6 +11,7 @@ class Tmuxinator < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "0735adc0586540e832e281dcbc9e43179fb89b6f50045f253a77f6914afea273"
     sha256 cellar: :any_skip_relocation, catalina:      "0735adc0586540e832e281dcbc9e43179fb89b6f50045f253a77f6914afea273"
     sha256 cellar: :any_skip_relocation, mojave:        "0735adc0586540e832e281dcbc9e43179fb89b6f50045f253a77f6914afea273"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8d0233e824befa21871fa4ba3578be8e30bf952ca3fe46c6155cb2f03120d174"
   end
 
   depends_on "ruby"
