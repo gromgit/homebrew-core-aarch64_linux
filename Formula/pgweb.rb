@@ -6,12 +6,11 @@ class Pgweb < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "44278bc4332ff3f952272fd8a9ddbc3ea33f540c869e41e168245c942e0c1ef5"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e078e2a62bdd3c7d203895cae1c0fcaacf8b26a9dcd40d1f88b760667adc9d1d"
-    sha256 cellar: :any_skip_relocation, catalina:      "38ad603da0bc035e5a905f44e22e70335d965a4ca62a2019d08a03cde3fe7f8c"
-    sha256 cellar: :any_skip_relocation, mojave:        "7230e2f2ef476b2768a25796c3f20d45654eb8fa33ff171e70d91188df7e6527"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "536cc0ae5680a2c6316c569e2989868108f4b6626e496ec99c93e1ea823a7ba5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "16f88cd19d5e122e19d5258c724726d154e9bcece00de7b84f64d4273165c91c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6f12b6b5957c31af8f22c5ab8df4fa094ce594aa15207f0d29f2a390499ee96d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a02d31f0e35883aa3bf87d2644f8d2388bb93c5009c91c59bfc04382bd4282c3"
+    sha256 cellar: :any_skip_relocation, catalina:      "4f8da0cec857035c52cb0d867f11dfeb9b25713079f4d5b1837e6123ea741f47"
+    sha256 cellar: :any_skip_relocation, mojave:        "ca983073d0229389be16276d51550a2d2a52cc9fa80dbddeca1a0821d790e989"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f712d2198798bca0e0788f6aa65a9d95bb2b609f34d53983685b7153341a21e3"
   end
 
   depends_on "go" => :build
