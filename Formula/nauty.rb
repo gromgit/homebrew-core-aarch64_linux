@@ -16,6 +16,7 @@ class Nauty < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "5d118260b6fdabceb476c1421e4b4dd41d3027943b623ff7a4dc81baf6e284b9"
     sha256 cellar: :any_skip_relocation, mojave:        "2fa3783663f6e67d9a6e42c492c68412fdeeff7201d81e557b75927ff50b78f1"
     sha256 cellar: :any_skip_relocation, high_sierra:   "a5333c52eecb023c23be9638ebd916606db43f8f7ef1d7ada4877ca00355d65a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ec5559817e20258d6940c16e36c2b38b2c62430f4d786a2215de9eaae302de5a"
   end
 
   def install
