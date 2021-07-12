@@ -12,6 +12,7 @@ class Bnfc < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "0f3c56a6f814bc0625000b7341ffdb6e6b9fbc60f9e9bef4819214e836b9abd8"
     sha256 cellar: :any_skip_relocation, catalina:      "33421a59619bb8911362221d25dc6b4b857be514a63795df2ea0bd297eb5bc8a"
     sha256 cellar: :any_skip_relocation, mojave:        "dced427e3ffcc7bdffe354025d2e19d45f31c87e8e687d243cd1505108dadc24"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3716b9a49f6a62197755414097a0af56ffe4bfda0a2fbbf898ea4d921af1b534"
   end
 
   depends_on "cabal-install" => [:build, :test]
