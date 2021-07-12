@@ -14,6 +14,7 @@ class Bchunk < Formula
     sha256 cellar: :any_skip_relocation, high_sierra:   "d6183607b5b987345ee3380263819f1d5e12f2f3cc9f6fd55accfbf92c26d5ef"
     sha256 cellar: :any_skip_relocation, sierra:        "95ef5fddc2234902187dde834690fb5957bd99ce11403e3d0f8881a705bb8f27"
     sha256 cellar: :any_skip_relocation, el_capitan:    "665af973709071e982939f37ba39c79c6e41f7f18277d65670475ba9d8315f94"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "97b11f40a695dccaf6033a9911a9377984ffa7d3ed59bc1272fce7b3a0958edf"
   end
 
   def install
