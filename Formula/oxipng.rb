@@ -6,11 +6,11 @@ class Oxipng < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "264f1ab92ac0dc6595d395a52fb32c0fe0711a9592d80d2e7c00584ce5f15e63"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9de887c99b435d7f3c8a5567b0ea9bd68b2eb3a9e7095fc6f68261325aeefc4f"
-    sha256 cellar: :any_skip_relocation, catalina:      "84295509fae9c40435518c4fa5ba2e2b8ed45b271e70a2ecefb21de5c091e177"
-    sha256 cellar: :any_skip_relocation, mojave:        "9278cd1e4ce418514c4c34b3898371c360ed770ed583c6b9acfbd39c447c5103"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a2c295bcc7da7fbd8c82e2a53b1826fb0e8b408c7a3d2809b9abd997e7c01c24"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6e8b30db2b822ae1302ddb7e5491f6b41197395604aea8d3a390e6ae2f5b5491"
+    sha256 cellar: :any_skip_relocation, big_sur:       "28bed379e7c13681208027dfb2e3f5af489c7fbb8818e9285f8326c669705ac9"
+    sha256 cellar: :any_skip_relocation, catalina:      "a1ac61f28ff069dda9d2554f2e682e80ddbf927668de174c8faa1effcf09e0b4"
+    sha256 cellar: :any_skip_relocation, mojave:        "f2a4d6a15d5571ddf64a010fd0531326c8f97ea01563ae47035e15cd7dbd3ca3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a81dd2adb511b1174c68c324f46c4ea26ed9d4f0d874fd9c600ddb55f5dfbcae"
   end
 
   depends_on "rust" => :build
