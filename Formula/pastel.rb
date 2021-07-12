@@ -7,12 +7,11 @@ class Pastel < Formula
   head "https://github.com/sharkdp/pastel.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5063fbbdfeae431e7522f8a66d48999e5ef0dc3d7dae922ffc088a227b90e1c4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "fdae83eea8c1c098ddc551cbd18f010683b266fbffb111a93f3812709f581403"
-    sha256 cellar: :any_skip_relocation, catalina:      "e2478748ed0561c76af8f68b4067f42cd365ad7735a9d44dda159e9bd35a1c1d"
-    sha256 cellar: :any_skip_relocation, mojave:        "3d9fcb9c4f2e70010681b88f0ceca5795773b849e7bc6f59689e90ad969a673c"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "06f87da95e1d1b0f53fbcd9c9ff36e4c8a0d3ea85825ac7bc648b3ab445e61ee"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "992b762abb742746510b2b005ba31f255a28ed3021b57d6bb6ab225f2fe894f7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d0acfb78bf2984605f33eff15d1514482f2f15920d3d93aa054f565beaa83dec"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d8732bd4a5f40bab0c9ac933227d75890ca70ab4f8641d6c7e6bd06327d76a22"
+    sha256 cellar: :any_skip_relocation, catalina:      "1651b1afc8a63413679b2779317d3d0617edf72bdee29baf92b74dd865f1d146"
+    sha256 cellar: :any_skip_relocation, mojave:        "a0e9bd8535cb95385d081c1bf657068adb5bf2cf4b2aaf00df5f7ad6cbaf512f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cfc649b121ef6db213d2ccf0d852ac60436ffaebe1b59d8c8b7a287bcb8788be"
   end
 
   depends_on "rust" => :build
