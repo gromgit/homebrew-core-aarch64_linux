@@ -7,11 +7,11 @@ class Spaceship < Formula
   head "https://github.com/spaceship-prompt/spaceship-prompt.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "eb03d37977136c8608375c41f20674c6771277a36b9aa28ba2c7080c28b52bb0"
-    sha256 cellar: :any_skip_relocation, big_sur:       "eb03d37977136c8608375c41f20674c6771277a36b9aa28ba2c7080c28b52bb0"
-    sha256 cellar: :any_skip_relocation, catalina:      "eb03d37977136c8608375c41f20674c6771277a36b9aa28ba2c7080c28b52bb0"
-    sha256 cellar: :any_skip_relocation, mojave:        "eb03d37977136c8608375c41f20674c6771277a36b9aa28ba2c7080c28b52bb0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d4a62fdd9210d1c41e61a952d84ad15da1d2ede3aa9497ae696c62db72f5dd9c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b30de1432f2653eeb7bb7fe26467e9117cfe31af469544d35c2e2a4f9bc71e9f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b30de1432f2653eeb7bb7fe26467e9117cfe31af469544d35c2e2a4f9bc71e9f"
+    sha256 cellar: :any_skip_relocation, catalina:      "b30de1432f2653eeb7bb7fe26467e9117cfe31af469544d35c2e2a4f9bc71e9f"
+    sha256 cellar: :any_skip_relocation, mojave:        "b30de1432f2653eeb7bb7fe26467e9117cfe31af469544d35c2e2a4f9bc71e9f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "26cf92c2f5ee75b2d1fe64590b003df7464e3c97ca98ac4da8e18682b9a2217d"
   end
 
   depends_on "zsh" => :test
