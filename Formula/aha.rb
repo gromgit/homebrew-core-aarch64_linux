@@ -12,6 +12,7 @@ class Aha < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "bcd5f7ea0e30795e05719351823769f9a7ac434e57bf09cb738eeef50c0f0f85"
     sha256 cellar: :any_skip_relocation, mojave:        "b8def8fe2809928ffbf3ae5746f1157bacfef12e720d0eef798b4d77902d8f4f"
     sha256 cellar: :any_skip_relocation, high_sierra:   "9de609b23501a93b6fc39422bc51f4b79c31eba3c39272a06f2710aa7e2d6a3f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c018344a8a20792dbcc444893c62279ea87a97539e1cf0141ddf7b2cf538a9fb"
   end
 
   def install
