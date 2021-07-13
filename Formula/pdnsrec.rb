@@ -15,6 +15,7 @@ class Pdnsrec < Formula
     sha256 big_sur:       "f49c224c33ed279bcb5b932401b69448dcbb8d6738413bddf67e6380685b3844"
     sha256 catalina:      "f788ecc3c854cae9a7b5ea0f4a72c7a6631d60ae8f7d1d87c3fd24ca84a89f6b"
     sha256 mojave:        "fe84e72a0968bbcad84bf3cfb8d46c1676801c8808b9084b9bc580e22d727c4d"
+    sha256 x86_64_linux:  "fdae24f7ccc5dcb221f5a6d544e508b9de96f9dcf388f9b81335dcfa6790ab65"
   end
 
   depends_on "pkg-config" => :build
