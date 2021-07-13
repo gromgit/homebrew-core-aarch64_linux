@@ -13,6 +13,7 @@ class Cppp < Formula
     sha256 cellar: :any_skip_relocation, sierra:        "af58094ee1d80d6d09163b42755d827aa5b8be15b636a6ad087b334978ad2e38"
     sha256 cellar: :any_skip_relocation, el_capitan:    "3bb773301b97402f783e506f3ccc339d7363df6e292d255d6b3209e5be8d1c1a"
     sha256 cellar: :any_skip_relocation, yosemite:      "7c18c1844a89ca3a0ee7084b06c908de2288378eaeac09c7872b0eae97129fc3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "506ed1937e454dfd18842feaa90e2873eacad66b4920cfae8cba78f5b323f874"
   end
 
   def install
