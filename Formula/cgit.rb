@@ -10,6 +10,7 @@ class Cgit < Formula
     sha256 big_sur:       "43d5a3249276dc89f9b8730b775fab358f9a04adac63fc18dc1257cecb0de2a8"
     sha256 catalina:      "c5317498aefba5a04343b14929249e42a9ecc1c5da227ae06728102418bf5e49"
     sha256 mojave:        "261aa49e87d8d4147b0ec838e22d6149f0aa41ee27751df15277b1cdb1df8bd3"
+    sha256 x86_64_linux:  "27e5543ed8c84782d48241262c483a0bec68f27fa09534ff616cda09bfec7098"
   end
 
   depends_on "gettext"
