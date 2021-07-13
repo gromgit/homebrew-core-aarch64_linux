@@ -19,6 +19,7 @@ class Dbhash < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "23eccd9d6af0e7e0e23e708bd4697cb3334299a5d7127d763fe53a90aab6d064"
     sha256 cellar: :any_skip_relocation, catalina:      "f7e686231f1748f5655b27cf334fe972a7be8d029a284f291ea2daa8f94c51af"
     sha256 cellar: :any_skip_relocation, mojave:        "56404056dd0a9b8ece371576e64a1b3ad8c9b19f129dd500c38edfbe58c5cccf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "036505f744fca371174119931c174fc1bfd73d4772a46983fe40e8cfb7b4d90e"
   end
 
   uses_from_macos "tcl-tk" => :build
