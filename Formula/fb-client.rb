@@ -12,10 +12,11 @@ class FbClient < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "202db4557ba4a133b92ae0d2ced7c1c63e04190bb3a3dac7b8219daa798f8f16"
-    sha256 cellar: :any, big_sur:       "76cab48a5e41ea108da84e1228ddea7c23ee92727206d0e0ef00aa11e65167ae"
-    sha256 cellar: :any, catalina:      "0f2e6cd24defedab9ce9b5a843b75a7082592808035f00082008c47f5ba26024"
-    sha256 cellar: :any, mojave:        "9a7adf6509265cf7c9ae67d68b108685d49e35f44ab00bdfe1c77be073942596"
+    sha256 cellar: :any,                 arm64_big_sur: "202db4557ba4a133b92ae0d2ced7c1c63e04190bb3a3dac7b8219daa798f8f16"
+    sha256 cellar: :any,                 big_sur:       "76cab48a5e41ea108da84e1228ddea7c23ee92727206d0e0ef00aa11e65167ae"
+    sha256 cellar: :any,                 catalina:      "0f2e6cd24defedab9ce9b5a843b75a7082592808035f00082008c47f5ba26024"
+    sha256 cellar: :any,                 mojave:        "9a7adf6509265cf7c9ae67d68b108685d49e35f44ab00bdfe1c77be073942596"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8f999f87eeb6a0de9001044d85bc10c6c8d9ed2e1449fff1c51da2bae134c20f"
   end
 
   depends_on "pkg-config" => :build
