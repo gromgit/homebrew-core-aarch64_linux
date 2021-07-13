@@ -8,10 +8,10 @@ class Borgbackup < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "1f09de37b5fe3241769883419c428101d33527d69a12fb87dd04d9a58f46e642"
-    sha256 cellar: :any, big_sur:       "ee9ea1c3ed3f90c2eeeed0b94d39045798c346b44a86f44cd23d2d1df071246c"
-    sha256 cellar: :any, catalina:      "bd51e4780ef2add38d62ab7ae288ae0c667520c86a7c271abbd380333b8ed029"
-    sha256 cellar: :any, mojave:        "f623b6ba4c9606d1b89bc1195ad0dc12695d126f37d47446e27f3c5f66b02fc0"
+    sha256 cellar: :any, arm64_big_sur: "2407cbfb1d2e093d34812a56bb1c8c48d0dab15d34e1663849916dc47a00e771"
+    sha256 cellar: :any, big_sur:       "077adc5c673ec0c7f8bcb629afa5f21f46393048db0e7e98e035fbccb5f7006f"
+    sha256 cellar: :any, catalina:      "0804ae6e2cedcfb94246eb2b93e765b338b7bb6eb971559cbf2b8118cf8bd532"
+    sha256 cellar: :any, mojave:        "f3187778ef7a0181b5d8ee731a8f2595a09fcf9aa19f726ee2a9cc9fc2c8e763"
   end
 
   depends_on "pkg-config" => :build
