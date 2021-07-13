@@ -5,6 +5,10 @@ class LibfuseAT2 < Formula
   sha256 "d0e69d5d608cc22ff4843791ad097f554dd32540ddc9bed7638cc6fea7c1b4b5"
   license any_of: ["LGPL-2.1-only", "GPL-2.0-only"]
 
+  bottle do
+    sha256 x86_64_linux: "b13b4780fa7d33cd2e6fb7f55d44e693579264923381f934d417d108c0a246cc"
+  end
+
   keg_only :versioned_formula
 
   depends_on :linux
