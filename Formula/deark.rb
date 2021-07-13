@@ -15,6 +15,7 @@ class Deark < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "09ad8b8b146e4df4b0955be83fd168c842e47cb0f5dd94f5ce90df139a6a8831"
     sha256 cellar: :any_skip_relocation, catalina:      "e4416ed82488c439a1085bb9464abbbd082d6b85e350455c054f31b5978bb728"
     sha256 cellar: :any_skip_relocation, mojave:        "5667c9616961ca8b8da43979903aaac15a65a27f88bf4242327c2954fa1cb862"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f4637a49630e6b17c56580067507ef4fa95f5413d46c10ff2fbf810434389fa1"
   end
 
   def install
