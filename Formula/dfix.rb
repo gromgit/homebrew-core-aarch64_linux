@@ -14,10 +14,11 @@ class Dfix < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any_skip_relocation, big_sur:     "bb047ac32131d3ec25b60ca86e77959f7b9625ad469d9e0a1ada3fefe8525d9d"
-    sha256 cellar: :any_skip_relocation, catalina:    "ff3b76977bcbfb5b7a04bbebb53a794cc522b64987f724fe5f8a8236812eb1f8"
-    sha256 cellar: :any_skip_relocation, mojave:      "24d234e206efa754f8bd900102720280d8efb1af6ec93059a467589acddca3ee"
-    sha256 cellar: :any_skip_relocation, high_sierra: "13a2621737c198bd0540f507293a9b015a0ebe36cd3373589a69ec834a863d8d"
+    sha256 cellar: :any_skip_relocation, big_sur:      "bb047ac32131d3ec25b60ca86e77959f7b9625ad469d9e0a1ada3fefe8525d9d"
+    sha256 cellar: :any_skip_relocation, catalina:     "ff3b76977bcbfb5b7a04bbebb53a794cc522b64987f724fe5f8a8236812eb1f8"
+    sha256 cellar: :any_skip_relocation, mojave:       "24d234e206efa754f8bd900102720280d8efb1af6ec93059a467589acddca3ee"
+    sha256 cellar: :any_skip_relocation, high_sierra:  "13a2621737c198bd0540f507293a9b015a0ebe36cd3373589a69ec834a863d8d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "18eaa549250f741f4459b82c5425b4378587006db96f83f76ffd3967df9eaefd"
   end
 
   depends_on "dmd" => :build
