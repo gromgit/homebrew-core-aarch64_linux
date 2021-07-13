@@ -5,6 +5,11 @@ class Avahi < Formula
   sha256 "c15e750ef7c6df595fb5f2ce10cac0fee2353649600e6919ad08ae8871e4945f"
   license "LGPL-2.1-or-later"
 
+  bottle do
+    rebuild 1
+    sha256 x86_64_linux: "bcd10354c4c18f283268b681b80f33262163d4d12ff4ccd55361c19b1b2005cf"
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "intltool" => :build
