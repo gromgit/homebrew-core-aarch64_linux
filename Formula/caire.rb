@@ -11,6 +11,7 @@ class Caire < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "fc1c2ff0a4e00e2fc4005515bd2720ecdd2abba2c0e36a0f2396d52a0ff127aa"
     sha256 cellar: :any_skip_relocation, catalina:      "869c6ff4fc5cabbc85b87f37afef6df1ea7fab98aaf98d779daf5e5c506b803f"
     sha256 cellar: :any_skip_relocation, mojave:        "22072fce690001b8cb981244ce84ce0f1c0aba0323e372cb992a8bc0b067aafa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a43af22ecd706f96c3566792561e1a267cbf983bb8dc54f28a70788ec9d8ff0d"
   end
 
   depends_on "go" => :build
