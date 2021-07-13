@@ -13,11 +13,11 @@ class MariadbConnectorC < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "e27d0730e73863cb95fa2b3560349f7eb24020c98d43f2b503e5388f5892be25"
-    sha256 big_sur:       "099ba88bc3bf0daa6f374888570e6b8bbc272ec631b2e06acd55f48489bd2361"
-    sha256 catalina:      "84e0f32d9d23c8ada92f4758b27ea2ce09c6022f792a9cca9549adec68f8c16d"
-    sha256 mojave:        "500d2d6eeda98ff48fdd69600637406e292e2d5b0da5b8466050ebc41956b919"
-    sha256 x86_64_linux:  "9e22d74589f8c37afeea55888e5d741b16ad4a35bc341b8c138037388ba1e8f5"
+    sha256 arm64_big_sur: "ed5e5cfae975c148bf18db33cab2b2763399b1909c921e213c5ad3ad5f23abac"
+    sha256 big_sur:       "78f04f9c5b00aa98a85e8b6ba25532fa69e8a343ab9fecdc5288cba267e13a0d"
+    sha256 catalina:      "8b80541bacc80391c6966a017eadb32ae621293c9c38a7e2bebc66cdb306e2fd"
+    sha256 mojave:        "906e69c8690c78a5571932f927d40eee87385a861cd0dc2983c92bdd62f6c617"
+    sha256 x86_64_linux:  "c5c5385b1661b29894e8baa513d2a507cf87bff2752ac9ff3b27af6f662b317c"
   end
 
   depends_on "cmake" => :build
