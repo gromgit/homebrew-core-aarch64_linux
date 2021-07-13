@@ -8,9 +8,10 @@ class Ccextractor < Formula
   head "https://github.com/ccextractor/ccextractor.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "85a8a4d0137ec1f12e98ad39156d1ee95874b037d432c9620d65f695dcbb3daa"
-    sha256 cellar: :any_skip_relocation, catalina: "22e12e434b2a59c0ee63db41e876add7ab686d7e015c7319bf3cecd01ae2de1e"
-    sha256 cellar: :any_skip_relocation, mojave:   "f389af83990016793f29329e7de8ca7d58c09a25c7faff62bc61d0100d9ee425"
+    sha256 cellar: :any, arm64_big_sur: "a7e9e2088a8fa3602c973e2813974815459efb7cc9a1fd9c73c750e237eeae9b"
+    sha256 cellar: :any, big_sur:       "1d4cd6930431fd7ce56192bb53bb46d14a01867ecdafc1cb37f6e8dbda373e2e"
+    sha256 cellar: :any, catalina:      "110a63c1f4a0ac8749418f2158aa15c4e3bbace5ee4820506d4c7b4e489e9a30"
+    sha256 cellar: :any, mojave:        "0c3e69d834f8e4abfcab5f5c0069534707634ebae7d4bc356c8ac10207358762"
   end
 
   depends_on "pkg-config" => :build
