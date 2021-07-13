@@ -11,6 +11,7 @@ class Crcany < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "3b798deff0f0bc2c2a472cff81f6ad172f847385908efd95a6affefe7d55b719"
     sha256 cellar: :any_skip_relocation, catalina:      "302ec3819e25f3478ebdd9dc50e539d3ba7602f479ee9d8bb08c0cc97ccd9d39"
     sha256 cellar: :any_skip_relocation, mojave:        "7f75a8e8101a52045412398dcc1a1ba26229373251131af3b0cf76bd9d5acae2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "355bda35990fb514c66ec9a0dcd517f3fc7a2668728336160894ac35c94ffdc4"
   end
 
   def install
