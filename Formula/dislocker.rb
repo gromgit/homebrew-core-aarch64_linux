@@ -6,6 +6,11 @@ class Dislocker < Formula
   license "GPL-2.0-only"
   revision 5
 
+  bottle do
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "b1784d64cd680875fef331fcf995c64399e0bb96f7f6ab5dd721c535c235f9b6"
+  end
+
   depends_on "cmake" => :build
   depends_on "mbedtls"
 
