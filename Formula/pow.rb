@@ -9,6 +9,7 @@ class Pow < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "148533a078c8f6675c9994a2118fc27e5e4f60882844f9dfed2f756c2a26e926"
     sha256 cellar: :any_skip_relocation, catalina:      "148533a078c8f6675c9994a2118fc27e5e4f60882844f9dfed2f756c2a26e926"
     sha256 cellar: :any_skip_relocation, mojave:        "148533a078c8f6675c9994a2118fc27e5e4f60882844f9dfed2f756c2a26e926"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8f1172eca858ea568c110ef3dc88bd840c3b36378fa6ca238ba44a072e89fb6e"
   end
 
   # The related GitHub repository (basecamp/pow) was archived sometime between
