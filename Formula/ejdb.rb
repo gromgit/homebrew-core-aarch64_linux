@@ -7,10 +7,11 @@ class Ejdb < Formula
   head "https://github.com/Softmotions/ejdb.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "dc8b457b1eb0935776d6b2ecc9d0f2ff54a37c4512865e2edd645bc47dd7fc82"
-    sha256 cellar: :any, big_sur:       "643fb65248e8195d24a75295ec2229c19d6a3aa0cadf9e1270bbbf033171d5c9"
-    sha256 cellar: :any, catalina:      "7effbf0d5d8de63bd886f964a62c742dc4edeaf6f4c79ccdfb436f13604bf9ce"
-    sha256 cellar: :any, mojave:        "57add67ccf732e856325adbc945c8626addaac15418a0ff25e2401f720ca2034"
+    sha256 cellar: :any,                 arm64_big_sur: "dc8b457b1eb0935776d6b2ecc9d0f2ff54a37c4512865e2edd645bc47dd7fc82"
+    sha256 cellar: :any,                 big_sur:       "643fb65248e8195d24a75295ec2229c19d6a3aa0cadf9e1270bbbf033171d5c9"
+    sha256 cellar: :any,                 catalina:      "7effbf0d5d8de63bd886f964a62c742dc4edeaf6f4c79ccdfb436f13604bf9ce"
+    sha256 cellar: :any,                 mojave:        "57add67ccf732e856325adbc945c8626addaac15418a0ff25e2401f720ca2034"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "59d40b6e2ef86bffe4a552ba902aedbc1fa7ba87c1932c4f757571972bcff9ba"
   end
 
   depends_on "cmake" => :build
