@@ -12,6 +12,7 @@ class CppGsl < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "ba5b32881db75527872525bcde6bef641bdb6c89dff511ccf5105229f1ba1e7c"
     sha256 cellar: :any_skip_relocation, mojave:        "262709d81631cc7aa7477b03bd1904320da93b12cecf4aded01e3cc59917287f"
     sha256 cellar: :any_skip_relocation, high_sierra:   "262709d81631cc7aa7477b03bd1904320da93b12cecf4aded01e3cc59917287f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e3caa95f07cbba5c285cdecdfedb44c7768a9f4d99258ad5c1b16b12fa040ef3"
   end
 
   depends_on "cmake" => :build
