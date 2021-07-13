@@ -7,13 +7,11 @@ class Gdrive < Formula
   head "https://github.com/gdrive-org/gdrive.git"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4e4e3ac736173da5aaa2106ad3eb505cbb83e68f8a78b19a8b10c7bf2de50b3b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0a22953fde6b318c5a658b639176d3bb445e8cd162cd1c28cebbb3984d652227"
-    sha256 cellar: :any_skip_relocation, catalina:      "c89785f7d95e16fe113f649f47c80261ce7d335427d60c6543a3bd8d58eee522"
-    sha256 cellar: :any_skip_relocation, mojave:        "e26ef4bec660913f42aa735c28f58393912d2d0293bf98a351fa2b27a1baee01"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "8fc5917762cd0b7622d35053931b41315606be97ba38ae34c9a67bf7ff87a1d3"
-    sha256 cellar: :any_skip_relocation, sierra:        "b03e82ba9bb723b7f6225607b3127b9d515f0d79271f76b375b74324aecfb057"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f991723008683908cb3a37497348e9813314807b9000e90de1e2130f2342554d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3d96fff9fcee61b32a8185cae41d1f5b21f36dd22f235852f283b46fcd3b066e"
+    sha256 cellar: :any_skip_relocation, catalina:      "08947085778a3414d976c4dbda157b58704c60700621348f621d74a589c68149"
+    sha256 cellar: :any_skip_relocation, mojave:        "a1f4a672700f4348173b184e04aa6da8196ad93d44efbd5122aa304c88d0cce1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2d687e4d537911f156c2f5cfd0a88fe8c44793eef89c497849e2130ab138d70e"
   end
 
   depends_on "go" => :build
