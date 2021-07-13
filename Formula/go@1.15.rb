@@ -12,10 +12,10 @@ class GoAT115 < Formula
   end
 
   bottle do
-    sha256 big_sur:      "caf2c111b55f3700ebdc6e4d95b69d7e6c8e69e2a64fd6426f379bb4747ca720"
-    sha256 catalina:     "aa31ffb0298a88a45e1aaf69daa3d8d49373b7353b9ca5e2d38e6c800fb346eb"
-    sha256 mojave:       "29bc93a49c4453e3cff32b2d26dbb9be1c3be6a5e7589b85a8da2c16e58dac4e"
-    sha256 x86_64_linux: "5a88cc30c3471acbd4f57a4582ec20ecf1bbc3a1c7655d303878b8a5ba233eab"
+    sha256 big_sur:      "4b7fd6ddbe755f924fd0c5509ed9c638445b2cfc973f96ecf1537430710ead3e"
+    sha256 catalina:     "b916522c4dc3929e9370f3306476b100b0a42cac514b713eb507a47c7a843d4a"
+    sha256 mojave:       "f7d745f62de99ef286c5d0f554964a2242bd0be29ee954be09a0ef9419d6ac2a"
+    sha256 x86_64_linux: "c1ff74df94ea43dfb4e4d8a29889938a4179bcfd4315a3805536b0b10bd4399c"
   end
 
   keg_only :versioned_formula
