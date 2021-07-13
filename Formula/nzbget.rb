@@ -12,9 +12,10 @@ class Nzbget < Formula
   end
 
   bottle do
-    sha256 big_sur:  "58bdb9f03b4fd13f12a8ae0eaad6c4a020843ee63458b7309350d84dd1507679"
-    sha256 catalina: "9a83ad81e63662db998f945f0a3531615332eed2d8b26bf035559aca133d52b6"
-    sha256 mojave:   "6a63b3f3645d5f03333db43d5e216a8bcc2a8d97935ae79423a892af1f452855"
+    sha256                               big_sur:      "58bdb9f03b4fd13f12a8ae0eaad6c4a020843ee63458b7309350d84dd1507679"
+    sha256                               catalina:     "9a83ad81e63662db998f945f0a3531615332eed2d8b26bf035559aca133d52b6"
+    sha256                               mojave:       "6a63b3f3645d5f03333db43d5e216a8bcc2a8d97935ae79423a892af1f452855"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "7181a81344fa3ca15bd73a984257bf3dd5f7ad75af25dd4e2c54128edb0050ce"
   end
 
   depends_on "pkg-config" => :build
