@@ -11,6 +11,7 @@ class Conftest < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "b9432b0b64f963d09698455df0df322d968043e5fdf4a72b4ecd8a1172616a5f"
     sha256 cellar: :any_skip_relocation, catalina:      "4a7dc940ec6bfd8910edc391264288b757ac498026d30e2e02dca19bb2a14fc0"
     sha256 cellar: :any_skip_relocation, mojave:        "c13321d7e91dc00669c574cf3255efe47ad17735e6753a80979e51ffd8b359d3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6361f05a899442883f46fafb9e1de4d50a7cb3b1510d551d79d53680df081144"
   end
 
   depends_on "go" => :build
