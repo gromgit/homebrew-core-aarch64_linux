@@ -22,6 +22,7 @@ class Screen < Formula
     sha256 catalina:      "f3787a0e1c889106ab14d89c4f1bed001716ce1eb79e44e56b20e71b7448e172"
     sha256 mojave:        "30dfe7b1bc6c74d64be57224852e50ebd5d4c6d4939872eaceac5f06d9935208"
     sha256 high_sierra:   "1e63b4fd4ae798111980a7d9ed47c3fcb867cbad2c4253164b55722efc65d53e"
+    sha256 x86_64_linux:  "a9c0638b44b8fc6852effac19a000d7f75f5901631e5336891e805b969e34145"
   end
 
   head do
