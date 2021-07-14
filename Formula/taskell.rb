@@ -6,11 +6,10 @@ class Taskell < Formula
   license "BSD-3-Clause"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "099eb4452b9addf669f80528aafb535c2da0b54f8ff96338c9c2de793dad57df"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c295e3baa31965d1bf983efef6caf99c646a86d0a9c6566d818f43688f2d6cb1"
-    sha256 cellar: :any_skip_relocation, catalina:      "9836cdf38c84e87446dc020c397291465b780c3ae1f89eecdb993369f196b12c"
-    sha256 cellar: :any_skip_relocation, mojave:        "7c997322a2675e39457a1d4884bbf44d4721df57e8608cda93f4dfd5ecb730d9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9fad32c49602fdb5149a64a0ae7dce11f3d0cfd3c8a955df86322fc4ceed78a2"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c95a88da66c6183220d8ec6d7894eba3be90a9b6a84b0164dca643ec1815e0a1"
+    sha256 cellar: :any_skip_relocation, catalina:      "714ff7f48235b81bb89b9cdae12513e9c4667622bd00423f8f9efa5715d34efa"
+    sha256 cellar: :any_skip_relocation, mojave:        "cfe418dcc1fc8858d25cc1b83a71a4bbb37d82c7c541b0a487c72fb629f4f035"
   end
 
   depends_on "cabal-install" => :build
