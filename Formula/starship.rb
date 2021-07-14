@@ -7,11 +7,11 @@ class Starship < Formula
   head "https://github.com/starship/starship.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "566f8ce22709faf4b7984482b1379c6481540b4d904c285feccc6894a15d1a26"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e64f01ffb5fa4ac17f9cc5a66ef3a23f8009701af186bdd3b713641250dc278d"
-    sha256 cellar: :any_skip_relocation, catalina:      "1c1f66391875a83830b383691dbca271746acd08a7603102f2af6fdaf6b03b99"
-    sha256 cellar: :any_skip_relocation, mojave:        "d1818c378fe6916aea8c58a0bbcda9877da07db26610079771269bfa58807e62"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b3318dd9618ffbde59dc0e83304352ee283df1c4882ca17091b990959dead702"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ee220286072f0ad9b7b9c336c7cb5287f3000d1a5d32e468bb1622e2247813e7"
+    sha256 cellar: :any_skip_relocation, big_sur:       "99d37a1d5a512c50de12c8cb8b4ea2d20c90c686f4b5dd11b16c3af01b65175a"
+    sha256 cellar: :any_skip_relocation, catalina:      "b466d0da340b348c1b43cab52006bf6731d1bc7bf79e062e88135637804d6c55"
+    sha256 cellar: :any_skip_relocation, mojave:        "bc1fac2b4e6ceeef39cde3863b8d267255432b3089eae2c352cefec2ee9bada4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "037b26bb05cd527e60b27671581656d195ab1ca9733f9ccf3d91a057b32ea39b"
   end
 
   depends_on "rust" => :build
