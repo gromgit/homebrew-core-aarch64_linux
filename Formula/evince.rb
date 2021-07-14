@@ -6,10 +6,10 @@ class Evince < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "7ee19ddeb17483a20af46196e737ab22c4d99d71bbe4ef8a3bda580ccbd1167b"
-    sha256 big_sur:       "c674d4c58ad1567dc7347f01a40507b26f71831fbeaad011c3ce49185843cbeb"
-    sha256 catalina:      "00c7846c099779d59558f25851b647d5f5da50c6d4b1fad11bc4268b04d307e0"
-    sha256 mojave:        "3d6e92d06a93a93d378ab8700ebf1759593949ecbd15b807f7ea82bd33bc2fb7"
+    sha256 arm64_big_sur: "0dc6fbdb1feba692a69d2e622efff3708709129ff8a274e00d0ad0c1dd263641"
+    sha256 big_sur:       "c688724a9ee9f2580566bc64ed1d98bae5c6a0c3926d4ebd89213863764c804b"
+    sha256 catalina:      "bc0a8a9978a6d278ddac4e4f8314c9439f72b905e8c35c4442989a9c007798ef"
+    sha256 mojave:        "3b9f0701893aceb56079a8b648828ee943bf76d7a90e7371937e2210b7fc3777"
   end
 
   depends_on "gobject-introspection" => :build
