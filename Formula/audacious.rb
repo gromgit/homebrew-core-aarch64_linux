@@ -15,10 +15,10 @@ class Audacious < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "6b34c0f40150465828af36152ce2bced63ee27c4fe488f64f63f699648cc1f43"
-    sha256 big_sur:       "1343e3cb7f51a3885cef9fde5c81aca7833f2c94d8a2c933bafb23046861ac51"
-    sha256 catalina:      "e213d649e83a181aa0996996bd7455435c00bcc3bb87850c5571d27bc6a9333e"
-    sha256 mojave:        "c1c64e34044dff95f4db265a541aa7f979b36580de6a63ce86bf3b13434f7058"
+    sha256 arm64_big_sur: "0a7a6d08b3f5e431152195e85cd073742885fa2866ee78da5d75d936cc90bc23"
+    sha256 big_sur:       "c439d889df3e04bea1eb6260a07a62fa837549ecb27fd5a00cf984768ea7f231"
+    sha256 catalina:      "d91c25c904352bb6e316f455ebf81b3141fc2e33658f57d6447e92def99ac805"
+    sha256 mojave:        "5fb824614d82b9e9b158c86a445d91a970a04fd82348335d773128c66ae3b9f0"
   end
 
   head do
