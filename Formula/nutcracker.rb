@@ -7,14 +7,11 @@ class Nutcracker < Formula
   head "https://github.com/twitter/twemproxy.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "88e41fafc9595aa7c4b1274d9168b9ef5455393f37ba3ea278b375180d1fd0bd"
-    sha256 cellar: :any_skip_relocation, big_sur:       "52b41a5455e35d0002ab058b42205c2d0df6a58797e8f5cbf1dc294ededf4ffb"
-    sha256 cellar: :any_skip_relocation, catalina:      "ffac57428129de09b69d1cff52add5e369dc61a7ff70882c44bebe05d1705ae0"
-    sha256 cellar: :any_skip_relocation, mojave:        "e089d40fa4c225d6d8a2f5d7aec22d073fabdcd99d38ad3f99fd292fed534d8a"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "8d4ab58ba04b1c0622915d080a4b12e6c70b2c338df40ad357b217a6a8ac43e5"
-    sha256 cellar: :any_skip_relocation, sierra:        "4987e6e2ef6fffb2fe05a65795cb513d628edda38f0e0ee69cea05159d16a4b5"
-    sha256 cellar: :any_skip_relocation, el_capitan:    "1f3714c4459185e9002ea87f4fc4a4de429f028df957615ee9876c61a7c89a6d"
-    sha256 cellar: :any_skip_relocation, yosemite:      "73698710fa026b8585665a9b730626df444dabe6acf118cc4f0c2f57c27e214c"
+    sha256 cellar: :any,                 arm64_big_sur: "1de200c6883d487250e2bcd80c0eaa0b7b661be7e60f4f5afd7b300e5a093d8c"
+    sha256 cellar: :any,                 big_sur:       "ea277cd62fb6eacc902dbffafa0d05ac3b7ef30c118bbaa164c5112c2dc4838e"
+    sha256 cellar: :any,                 catalina:      "a0f29dfef521df43e6fe73cda13cadf95aab2ccd88a006d29eb91272fcb87deb"
+    sha256 cellar: :any,                 mojave:        "e725be8c70ed22541146d804adb0fc0cc748a0152effd2565bdbc7a45655aeff"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cfc6c7d6529e63fc4b1d2843d8b0d928ab2cd7aa11dbcfe3b449e81b2af92f51"
   end
 
   depends_on "autoconf" => :build
