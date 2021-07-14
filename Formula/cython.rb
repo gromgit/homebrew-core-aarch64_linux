@@ -6,11 +6,11 @@ class Cython < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8d3b5c2c36883c93b7c4ecded2348d4f819bcd52403fd12683cd3e2a25f4494e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d9b9a6c55d7152dffda4bf7c4e65157050072ef8f2625b4222671bd6a6fa2615"
-    sha256 cellar: :any_skip_relocation, catalina:      "b0cc1cbfe42e3b9dfde63adb41da2533723a5e84ee4a3b36130889aa58009656"
-    sha256 cellar: :any_skip_relocation, mojave:        "e2eed460453e818d913014dae5c19686bbf48aa6aa6f4d808da726153de712c5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e677ff64528b66543551cbf1ebec67e18b23edd4ee70a87fdc65518b6a8594de"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "980ed66e30d5adf3dd2102f3a536a09c935fa058f9fef8915a8c14f24d6757a3"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3ea67bcf72c2fb408a9bfdc74052f17793fe86d463dbb09b50074e8e3bc229aa"
+    sha256 cellar: :any_skip_relocation, catalina:      "854687421737032cf7a531a2957f55537e74e3bb3ae2b778ffa73acf3703ce13"
+    sha256 cellar: :any_skip_relocation, mojave:        "fd84920b5a706cf47bd9b927137b99f24549608fe3eb3cca4d50757e80589984"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "84aa64f585372c910dbac840f6164502a1fdb887f79b2f38e222672988c8585c"
   end
 
   keg_only <<~EOS
