@@ -12,7 +12,7 @@ class AntAT19 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "1c7356c21ac4fae5d88d28099325a5b991fedef1423a11856cb8f0ac1415ead6"
+    sha256 cellar: :any_skip_relocation, all: "94ee3db86c4f18ca79a37125ad2bfeb56298a46ae197f9ac570c1364b6dac3da"
   end
 
   keg_only :versioned_formula
