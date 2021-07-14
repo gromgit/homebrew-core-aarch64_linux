@@ -15,6 +15,7 @@ class Feh < Formula
     sha256 big_sur:       "3b21f38fd89c25256e2a94cfc1f4fc66689d6239f239404413ca28cbd2d4e43e"
     sha256 catalina:      "d836e8070c43a927319cab0f715c87a0fd595400b0abf0ae32f4414c1b68842b"
     sha256 mojave:        "eee2a818e7347b3b2a3c8a092ca53852eb747dc334442d85e4c0e1cf7a9b1eaf"
+    sha256 x86_64_linux:  "c921a3f2e027bf6eb997da1c78847e7aad8e51968a0e22b5d66a919a2436fb08"
   end
 
   depends_on "imlib2"
