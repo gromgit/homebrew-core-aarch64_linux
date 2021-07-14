@@ -9,10 +9,10 @@ class Commitizen < Formula
   head "https://github.com/commitizen-tools/commitizen.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9d4c7f9356676b1c960a29b652f788ef31f15c23a30ac40f6c6e01e6114923b6"
-    sha256 cellar: :any_skip_relocation, big_sur:       "14ebe1936c9216b082d0a40d29a08cd7b54ef2bf657da0fe2dd2d1c896233917"
-    sha256 cellar: :any_skip_relocation, catalina:      "c76fc57ef954a334010a175f2b55fbd57f9cacb52deb34891d3782bed550537b"
-    sha256 cellar: :any_skip_relocation, mojave:        "010819373fbdc280105291a586efdb3a7422a3f1745a760a1d15332ca16d488c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "25a449f84f0291f8e45fc6a39e17e90850b9e219560dd849bfc6af3ad16542e1"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3a7f8892e7c013c535481d674c1c2952c7d370e3c159d00b7ec53a9f6127b174"
+    sha256 cellar: :any_skip_relocation, catalina:      "d501718a1c016e84ca7b7da3459fadf1b3f5b52f622d4a5e780cc67d5a5dcf36"
+    sha256 cellar: :any_skip_relocation, mojave:        "26719c2268cdb7a5222831a9665fb728915290be30810aa720cff455039747dc"
   end
 
   depends_on "python@3.9"
