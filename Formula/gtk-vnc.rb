@@ -10,6 +10,7 @@ class GtkVnc < Formula
     sha256 big_sur:       "f4961c57ac8d69639f2f0a95d307ec85b0cee23f204666989853382158bf8986"
     sha256 catalina:      "16cc1407520b9b5a6454507e1db7f7226d78320c353cd9f45130c9ba7883567c"
     sha256 mojave:        "218453c1fa7ae8b188ecbfe0ca408beefff3fbf168fa1fdd397ac73c4336c031"
+    sha256 x86_64_linux:  "9ac4316ffc6dca96ef488bac50dae54d5a733f9bdd4f11da945fc90fc2f47981"
   end
 
   depends_on "gettext" => :build
