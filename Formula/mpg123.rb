@@ -12,11 +12,11 @@ class Mpg123 < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "19ab71d0f5b0445b06256f129b971464071504d00da53031653721449e831f3f"
-    sha256 big_sur:       "9e64bf29f8b4ae1cbd7f66c26802f0b358cf1dce6562c9905c036f9b1138d483"
-    sha256 catalina:      "3e03a2915dad7b439afe28a3c37a9bf32ed5f0eabaa56d4ceb1ef9929a0262b8"
-    sha256 mojave:        "84227846875d35bcbeba9980a90b2086c6d929f503986458cd98b5bf37723c05"
-    sha256 x86_64_linux:  "cfdde128c6c9bb0a3471c11fc936853a6bcc1b90d9186e011072b6e00df20121"
+    sha256 arm64_big_sur: "9da7a8249c0b232c766cf1efab8e956a62a7d3e84889c4f94b7571918246476f"
+    sha256 big_sur:       "2d7805fe21b9178ca7a4df40fb05b7b01f22b95be6b5cdc1a94c014f1d9aa50d"
+    sha256 catalina:      "6fd71cfdf237aa77246851ef9401d10fe91f9e13ef7817c7e66d73c86b4f745d"
+    sha256 mojave:        "281d8863a9b1af6d2e9024b8ebc7041206ed3f3a84e5469ec9a9feec1a3b92b0"
+    sha256 x86_64_linux:  "59a245a3fbf56ea367ce412a04d804b809699b3266b0010da393451e8f6f4b7f"
   end
 
   def install
