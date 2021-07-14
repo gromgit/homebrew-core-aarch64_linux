@@ -8,9 +8,10 @@ class Gdbgui < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "01ab2720fb16cd45b07f7f64cacc395122ed74002914a7e49501a86676ccd12f"
-    sha256 cellar: :any_skip_relocation, catalina: "083fcf08771cf6fffe1a2dd0a11ab0aaa2b430dee8f89a38bc67abbc4ee92b40"
-    sha256 cellar: :any_skip_relocation, mojave:   "2e142057b5aac7280b532045372a1c3f86d9af8e18aa3f9461be23ac6a2afef9"
+    sha256 cellar: :any_skip_relocation, big_sur:      "01ab2720fb16cd45b07f7f64cacc395122ed74002914a7e49501a86676ccd12f"
+    sha256 cellar: :any_skip_relocation, catalina:     "083fcf08771cf6fffe1a2dd0a11ab0aaa2b430dee8f89a38bc67abbc4ee92b40"
+    sha256 cellar: :any_skip_relocation, mojave:       "2e142057b5aac7280b532045372a1c3f86d9af8e18aa3f9461be23ac6a2afef9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "7d77cd499601e0a9a931dd94b7337a0f546a7ce85e1f83883dacc3389f7f7fde"
   end
 
   depends_on "gdb"
