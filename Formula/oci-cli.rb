@@ -9,11 +9,11 @@ class OciCli < Formula
   head "https://github.com/oracle/oci-cli.git"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "544148f367f5288e4fda21a3c10ca5fed4843600bf0c37f973192de5cbc7ca5d"
-    sha256 cellar: :any,                 big_sur:       "fb88ad6a12768992cc06bf2472824260927dab9a590d659959281c22ae82ba75"
-    sha256 cellar: :any,                 catalina:      "ca1be3ec3cf77d8281ce4e8d49dcdfdf2b61cc8362c9b52ad7252dd2137b5c08"
-    sha256 cellar: :any,                 mojave:        "592f03829b05398af75fe9b149a1dfb2d4bb5701f6d2b303ee7f6152756b23f1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a8dfe4de51f3f952ed733db827f9d53a014356698843242a75d9c2e35a8eafb0"
+    sha256 cellar: :any,                 arm64_big_sur: "8a1721315bbcb90baa35f403c79fede19f516c9c73ce293456bb3b906418af5c"
+    sha256 cellar: :any,                 big_sur:       "eda914bd85c31c2e39db9b911a173e2d51eafb9bc5e7e661cc45f76426f90381"
+    sha256 cellar: :any,                 catalina:      "68571e1f39cec3a36497b405dd77c9522bf5eb942bdb393012c04b60db01be00"
+    sha256 cellar: :any,                 mojave:        "8bab8e2a94d679331a81f8c3ca3a7ff75fda80e433694faea01638568c86317a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "424fdb47f8cc308cb11cc0cff197b42a8e52c0e6584f181e4b91518518fb4f57"
   end
 
   depends_on "rust" => :build
