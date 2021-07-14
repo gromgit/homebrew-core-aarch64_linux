@@ -15,10 +15,11 @@ class Getdns < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "98a47841711b19d9dffd76486574d639b8721342356dffa55cf98f6b4777a7cf"
-    sha256 cellar: :any, big_sur:       "f59ad5922a0249bd68bdf0241446d1762210899fbbdf9d927c03410e0d8a4e15"
-    sha256 cellar: :any, catalina:      "6598dce2c0208622854555338ac788bdc78ec74b9368861008e2a110ef01581c"
-    sha256 cellar: :any, mojave:        "0abd0fddbea51c1e89c1588e95a5f384e1c9fcde09385075d1f3999ae387d29e"
+    sha256 cellar: :any,                 arm64_big_sur: "98a47841711b19d9dffd76486574d639b8721342356dffa55cf98f6b4777a7cf"
+    sha256 cellar: :any,                 big_sur:       "f59ad5922a0249bd68bdf0241446d1762210899fbbdf9d927c03410e0d8a4e15"
+    sha256 cellar: :any,                 catalina:      "6598dce2c0208622854555338ac788bdc78ec74b9368861008e2a110ef01581c"
+    sha256 cellar: :any,                 mojave:        "0abd0fddbea51c1e89c1588e95a5f384e1c9fcde09385075d1f3999ae387d29e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "059a87084efb2922630ae77970844cfd61cc11324627b1de8674d26723e72e08"
   end
 
   depends_on "cmake" => :build
