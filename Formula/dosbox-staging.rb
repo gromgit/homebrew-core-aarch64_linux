@@ -8,10 +8,10 @@ class DosboxStaging < Formula
   head "https://github.com/dosbox-staging/dosbox-staging.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "15d72077feefaaf2e52006dfe7a7bbdb7c6db192e7629a87d078f3502a650618"
-    sha256 cellar: :any, big_sur:       "15b83b2a8599ee8d1924d07ade8962288f54d6c64b485aede8ea7d725cd9490d"
-    sha256 cellar: :any, catalina:      "aa250a2af78f35583af39b1f5582d2675b62a91a786670448cee33cce392b7e8"
-    sha256 cellar: :any, mojave:        "eb6ea54266e0584bf06f7666f4cfaa1ea4e19988fecf14dadcc1e1472a210820"
+    sha256 cellar: :any, arm64_big_sur: "c78a913ee0090ab3529008a820ea8884484d374f173449da27c2d4049e77c3c8"
+    sha256 cellar: :any, big_sur:       "94200db2433f162408a309db31ac3f9a38c517a0d4d1a81102f2dd10949f1a46"
+    sha256 cellar: :any, catalina:      "16d067fe9d67563350c6321284496be2594db58faadb9a9f3b5b001ec106fd88"
+    sha256 cellar: :any, mojave:        "2861ee737fb11f2772f1de3ea8f8235c360b8064946c6c070a214c98b510482c"
   end
 
   depends_on "meson" => :build
