@@ -14,9 +14,9 @@ class Csound < Formula
   end
 
   bottle do
-    sha256 big_sur:  "b5061dd95393c8842771c8735ca05e4d25174eaf3191a5832d75ea1794428745"
-    sha256 catalina: "db71effecc78529caaca63111dbc18965e36d47c381f13efb129bdab74e13353"
-    sha256 mojave:   "6eb6c096652be833ae8c44e3ece12456246130fd923f553485fbfff560aa041d"
+    sha256 big_sur:  "a931a7d204d82f3d77cd59a4422f76b0c35104b98af921e1126657abe566e47c"
+    sha256 catalina: "22465d89add1b1ac88aba011f604cabfa4d5e561aa6c961bb0ca8370b7cf0c04"
+    sha256 mojave:   "d2fe5d9ff5667c7456649c49ec626f6c731fc1a728705152576b1f51d006eec6"
   end
 
   depends_on "asio" => :build
