@@ -8,12 +8,11 @@ class Csvkit < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8812320438211d768b409cf59c399ca917f753154bc296d0d85101676296477e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a13d662245da9f94026619ff3b2ffa4871e2b726243905f3a56c98af1097da49"
-    sha256 cellar: :any_skip_relocation, catalina:      "28ca16e9f55957f60f3232bf41438cbda76377ef9d8a9e0777e62b4a4a098112"
-    sha256 cellar: :any_skip_relocation, mojave:        "1dfc57c5959b07aa05e887cf092d86ac9313c9c6483887769813160486752987"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "bfd1c74b64412f63e290d9a4146ee3131eb71fc3acb354484e2e4520e293180b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2c3e9c11d78519cc40e8ecb4174b37831181b0ed228c3cff421e7afa625a0bac"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c1f559d761fdd6c4ba7aa8fa884d256774ffd1c68493c54457b4b3d589f8f476"
+    sha256 cellar: :any_skip_relocation, big_sur:       "67a3a2f6a49ee30d64c1c231a153ac6149a06c356ac98bd5651f3aefa8487136"
+    sha256 cellar: :any_skip_relocation, catalina:      "260b44371362ff818835f9f38c0beeaff83848a08e1097fbd20414131544f46a"
+    sha256 cellar: :any_skip_relocation, mojave:        "cad9ebb425d3c77facf6cc5ea273cced3ceb1dedde4ff0886abb9440ce5e4e48"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "04bbe89bbbef203b8871128d7be0f376c6258f77e07efe2116527b925df6d42c"
   end
 
   depends_on "python@3.9"
