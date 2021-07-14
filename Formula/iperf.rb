@@ -11,10 +11,10 @@ class Iperf < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "203e5df71610330a6231993f1a5d4deca0b8823e2446b0d8591dc70ca15b333e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "51d36957db899b5874635ad613f987b6408851f25938ec7e3f1102f870c90e36"
-    sha256 cellar: :any_skip_relocation, catalina:      "17d334f6f387019ece93659873fb119606bc8e2dfcaa6744619c5fe7b5578b36"
-    sha256 cellar: :any_skip_relocation, mojave:        "2cea58afd7a790763636b5dca9dbf21d508db231239ae39573c37c13a70cc739"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d7cb2118e915fb26add136ecd34ae01640cfac4a88995aaa5b9c4b43ed58fed5"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4de3b6eb51e2b07ce9e17e14bc4a3910d30724f92ea638bab8c4432aa9ca35f3"
+    sha256 cellar: :any_skip_relocation, catalina:      "27d6c19f6aed53b840469f13c313176fcff9dec60a822d8b5313136dabae9565"
+    sha256 cellar: :any_skip_relocation, mojave:        "34bf83971e9544ca56a0f134d4f332f136dc8e186ad493e837f1a1c89cbd045e"
   end
 
   def install
