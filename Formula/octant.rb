@@ -13,11 +13,11 @@ class Octant < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1949aa2595c3ff1c8efe4ccef8eb84ccf28305c08e0b80f765e1b21c3994126a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ef9b2457589f04448bf7969f40a8e5824834dc3857ea08b8ab5bfc970c3c60fa"
-    sha256 cellar: :any_skip_relocation, catalina:      "e2b974107b34a4e8ba570476c9c7accf5dd590d9d616c6344d77b49367ac0751"
-    sha256 cellar: :any_skip_relocation, mojave:        "5588293186d9bb1332ceb06b5c095e983c6d630fa2918d2d3cf7c3f89fec6cc8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2d9ef4d5836790749356c7f59e1e61a55ecdf60d92119c29c7721ee5f7c787cb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3cc3381d17da6e978da8f398c45922ecafbbdc9801cdae60b02e758d10871b60"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4b45f0bc6949efb7dc9c7620392a2176795bf0b7d4f943d2c1994090d39653fe"
+    sha256 cellar: :any_skip_relocation, catalina:      "c681f72376bff4283f9c73214f6f26c41458c42295a1bf28107dc31e1a5c4929"
+    sha256 cellar: :any_skip_relocation, mojave:        "24c965290843891de8e5ab97aa1824187986fbe47093dbea644a9ff4a2f3e843"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "72d0cefc011d27ee2f2275c59ee566a17d47999fbcc10612b8055e7083387df9"
   end
 
   depends_on "go" => :build
