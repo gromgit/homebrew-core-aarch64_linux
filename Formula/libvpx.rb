@@ -11,6 +11,7 @@ class Libvpx < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "d6c6de387100ba036862042e1d1bfa81faff8dd6668e9b7b35c89dbdc13796f4"
     sha256 cellar: :any_skip_relocation, catalina:      "41c24761694b0bc761d98e6e2c37e711fb0ea30cc39ef6a07e14b9957297c2d5"
     sha256 cellar: :any_skip_relocation, mojave:        "951073a889dd7e072aac6241b70a6b415fef0b8a9f92dc93962eaceb139b3f79"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "53cf8bdab9ef3ffc696ffd0ff400e914ad21bf10ca0794d024d122ba61290595"
   end
 
   depends_on "yasm" => :build
