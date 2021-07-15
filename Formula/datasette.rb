@@ -8,11 +8,11 @@ class Datasette < Formula
   head "https://github.com/simonw/datasette.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7db807bbeb23f60aae55f3759c1a134ea2eb2894611eaf1dc148e6700348a152"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3368136f4e8ffe85c672031573de08fd2af0142fa432a7af417006540d7d702a"
-    sha256 cellar: :any_skip_relocation, catalina:      "bd6784ab7efc3b25da25625fc77c89a93abbbb721789adf58d25dfb88da1bb58"
-    sha256 cellar: :any_skip_relocation, mojave:        "2435b6212a11160c0fee4564ed0946a1b3b923560716b3b9f8212e1cc831235b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4f8b8c2ab39e9eb1836e43a793ba00d68aec3a3231e10979564726abc14c5476"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "af6adb2cfbdc8c2b5d967efea9734b06cdbf6d6ced9fdf203a63e2f387118d67"
+    sha256 cellar: :any_skip_relocation, big_sur:       "1afd7b2c5e9a928c482a797977470775b7926e22bf1494b81ad08383482f9b11"
+    sha256 cellar: :any_skip_relocation, catalina:      "0b0a84c2f35f395d94152313bf3934ffd1fe2fbef2cc9755ea3e0c240dbb156b"
+    sha256 cellar: :any_skip_relocation, mojave:        "e166799b0819cb17c231b65d8db659a5032805417fd53fca0eb81acb90e259a7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "db8e59641c2d4cc7192cd8196e3d1480516c858503ad949e22473ae4bbee6410"
   end
 
   depends_on "python@3.9"
