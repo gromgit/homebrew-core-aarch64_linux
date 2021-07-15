@@ -8,10 +8,10 @@ class Julia < Formula
   head "https://github.com/JuliaLang/julia.git"
 
   bottle do
-    sha256 cellar: :any,                 big_sur:      "12789369a2c3d2895878988c5fa9df1d67b549b610f3b267c679aea03ce2696a"
-    sha256 cellar: :any,                 catalina:     "ef7cf3d431b5c86925476572f23c59727994075f45d3d7f588a5480d6d4abf36"
-    sha256 cellar: :any,                 mojave:       "e60c0c6d0a2ff16570b5274ab133677a1dddb23055a92726548f4fc2cec12413"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "5b9d304b2235171a35ef491842a3c30c2cae030ec6b0eaf686c6df8da1b6d446"
+    sha256 cellar: :any,                 big_sur:      "509c679f0483659c834d51ae9bdba9ade92a255ca0425cdb1f0ff15d72d5e061"
+    sha256 cellar: :any,                 catalina:     "bfb96894e006b6d6c57e6cf3bc7d1346fd0c296c5abe119a6f00f05d4bc3295b"
+    sha256 cellar: :any,                 mojave:       "2ccb7f8d191304ee98bc3476d3002712c79366e10eb13bcad7353c35f107bace"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "5df0d5d9752527d000b5d0df4b0cd02b760adedfcb4d00a59010bf20694ce9aa"
   end
 
   depends_on "python@3.9" => :build
