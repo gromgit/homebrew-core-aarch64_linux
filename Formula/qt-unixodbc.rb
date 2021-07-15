@@ -6,10 +6,10 @@ class QtUnixodbc < Formula
   license all_of: ["GPL-2.0-only", "GPL-3.0-only", "LGPL-2.1-only", "LGPL-3.0-only"]
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "c42ab97ef5e2b8bb66ed3c3889aa2d81f282f25a2c3ce4e4901167039e0aef06"
-    sha256 cellar: :any, big_sur:       "821398c95e6af9aaf0af7a889c1f1d62a87ee3910d3113a266da0361e25050fa"
-    sha256 cellar: :any, catalina:      "ad1a8d04c97160d3437690b8f4c2a189a6c1283b1c2af51723332f8f4387c4f1"
-    sha256 cellar: :any, mojave:        "9c837bb8e4d2cf5ac887f950b57c5eddab88eacf0197dc5b9d545afc47f4d43f"
+    sha256 cellar: :any, arm64_big_sur: "dda2ec85a656a261f84710d94d43cbfc35cc87a95e4744dccaec09593a772e6a"
+    sha256 cellar: :any, big_sur:       "09412fe6f7cf8fe711e780d6fbec34ab22f94596e0a204b9160a16ade7dc2038"
+    sha256 cellar: :any, catalina:      "fb89301696b25f0ae10d1e38a4297fa7702e5829cae236e19c3ef2517d2c85e2"
+    sha256 cellar: :any, mojave:        "bc5f3f451d46b00f07f3c62807bc6cdb9055378242f16a57fd9dc9a10255b38f"
   end
 
   depends_on "cmake" => [:build, :test]
