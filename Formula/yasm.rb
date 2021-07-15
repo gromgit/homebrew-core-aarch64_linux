@@ -13,6 +13,7 @@ class Yasm < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "9aa61930f25fe305dc5364e72f539b0a225702b5f1dc222a9dde1216e901f7ab"
     sha256 cellar: :any_skip_relocation, mojave:        "0dc797b72ee3bad9c6a52276c871ac745207b5626722e805fa642d7a872847fc"
     sha256 cellar: :any_skip_relocation, high_sierra:   "7f31deeff91c5929f2cd52eca6b636669f9c8966f6d4777e89fa4b04e541ad85"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d6d46adb6213bba936b7d62ef9564f752cc5b4268e19e91f0b67e136408ab30e"
   end
 
   head do
