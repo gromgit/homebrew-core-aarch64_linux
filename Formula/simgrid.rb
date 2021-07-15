@@ -3,8 +3,8 @@ class Simgrid < Formula
 
   desc "Studies behavior of large-scale distributed systems"
   homepage "https://simgrid.org/"
-  url "https://framagit.org/simgrid/simgrid/uploads/b95690ca814bc12e905115e51e45112d/simgrid-3.27.tar.gz"
-  sha256 "51aeb9de0434066e5fec40e785f5ea9fa934afe7f6bfb4aa627246e765f1d6d7"
+  url "https://framagit.org/simgrid/simgrid/uploads/5d171dff8b988c639fe52baa24952a2c/simgrid-3.28.tar.gz"
+  sha256 "558276e7f8135ce520d98e1bafa029c6c0f5c2d0e221a3a5e42c378fe0c5ef2c"
 
   livecheck do
     url :homepage
@@ -30,30 +30,11 @@ class Simgrid < Formula
     inreplace "src/smpi/smpicc.in", "@CMAKE_C_COMPILER@", "/usr/bin/clang"
     inreplace "src/smpi/smpicxx.in", "@CMAKE_CXX_COMPILER@", "/usr/bin/clang++"
 
-    # FindPythonInterp is broken in CMake 3.19+
-    # REMOVE ME AT VERSION BUMP (after 3.25)
-    # https://framagit.org/simgrid/simgrid/-/issues/59
-    # https://framagit.org/simgrid/simgrid/-/commit/3a987e0a881dc1a0bb5a6203814f7960a5f4b07e
-    inreplace "CMakeLists.txt", "include(FindPythonInterp)", ""
-    python = Formula["python@3.9"]
-    python_version = python.version
-    # We removed CMake's ability to find Python, so we have to point to it ourselves
-    args = %W[
-      -DPYTHONINTERP_FOUND=TRUE
-      -DPYTHON_EXECUTABLE=#{python.opt_bin}/python3
-      -DPYTHON_VERSION_STRING=#{python_version}
-      -DPYTHON_VERSION_MAJOR=#{python_version.major}
-      -DPYTHON_VERSION_MINOR=#{python_version.minor}
-      -DPYTHON_VERSION_PATCH=#{python_version.patch}
-    ]
-    # End of local workaround, remove the above at version bump
-
     system "cmake", ".",
                     "-Denable_debug=on",
                     "-Denable_compile_optimizations=off",
                     "-Denable_fortran=off",
-                    *std_cmake_args,
-                    *args # Part of workaround, remove at version bump
+                    *std_cmake_args
     system "make", "install"
 
     bin.find { |f| rewrite_shebang detected_python_shebang, f }
