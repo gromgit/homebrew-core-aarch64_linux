@@ -11,6 +11,7 @@ class Lc0 < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "0966b60547f4f559ed7bd03cdd0bbe41abfed8e8a69b8553eb790e120aac0e24"
     sha256 cellar: :any_skip_relocation, catalina:      "ca05132c5b944255ce14f18960a59fa657d3dae1b9c088ff526b8763af793efc"
     sha256 cellar: :any_skip_relocation, mojave:        "7578de28c6a91e884166aa033e4682a3d4992390c85fd74c811acb584b1b3f45"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f827ee54a8c9ccd546720c78b71dae3af5cde850ebeb5483ca7e04fae09cdc2c"
   end
 
   depends_on "cmake" => :build
