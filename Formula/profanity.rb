@@ -1,8 +1,8 @@
 class Profanity < Formula
   desc "Console based XMPP client"
   homepage "https://profanity-im.github.io"
-  url "https://profanity-im.github.io/profanity-0.10.0.tar.gz"
-  sha256 "4a05e32590f9ec38430e33735bd02cfa199b257922b4116613f23912ca39ff8c"
+  url "https://profanity-im.github.io/profanity-0.11.0.tar.gz"
+  sha256 "3fc9809816f69186dbb860b27183f6cd2aef0a52a7d14e20e4ef6c3a7f0f3606"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -23,6 +23,7 @@ class Profanity < Formula
 
   depends_on "pkg-config" => :build
   depends_on "python@3.9" => :build
+  depends_on "curl"
   depends_on "glib"
   depends_on "gnutls"
   depends_on "gpgme"
@@ -31,8 +32,6 @@ class Profanity < Formula
   depends_on "libstrophe"
   depends_on "openssl@1.1"
   depends_on "readline"
-
-  uses_from_macos "curl"
 
   on_macos do
     depends_on "terminal-notifier"
