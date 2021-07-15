@@ -6,6 +6,13 @@ class PySpy < Formula
   license "MIT"
   head "https://github.com/benfred/py-spy.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "60f64ee1e23c1555051741dab484fb42b01af95b9f0e6fb688f63cdca1e4d3ea"
+    sha256 cellar: :any_skip_relocation, big_sur:       "90ae7759bccfacfdc8ef74841433b499a459db0078203924222da77bc0336179"
+    sha256 cellar: :any_skip_relocation, catalina:      "ab26fd2d9cb6ec5a72ea7ff9d83b912c305ec9e4d3080073ecf39361b649cf68"
+    sha256 cellar: :any_skip_relocation, mojave:        "f425133a9a9ee7f9565df6f9f4ce9ce6e5afa6eedbc2d2bafac0d055f4938018"
+  end
+
   depends_on "rust" => :build
   depends_on "python@3.9" => :test
 
