@@ -22,12 +22,11 @@ class Openblas < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_big_sur: "b31f9c8f4548ed99e457e5a022d16e70f3b890797bc8c00142f67f6f3f879327"
-    sha256 cellar: :any,                 big_sur:       "7fcddea45a233d6b8dcb14191acdb1ae9d141f7b90d7c26c506490c15bf3396f"
-    sha256 cellar: :any,                 catalina:      "1cebbd37f62b6089124eeefa019414e421f9191b9a1941765600834974c22945"
-    sha256 cellar: :any,                 mojave:        "a7637fc404144f939928f690fe569530a6fa72373748121cb2a990addc9a6721"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dc690e3941664c18e69518fa82f16fce21ff5c40d7d2c7038db3b19f5a7b20db"
+    sha256 cellar: :any,                 arm64_big_sur: "fd2c647969bf063725696d997da33f77ec34f9cdd29d843e773d92950b215f5a"
+    sha256 cellar: :any,                 big_sur:       "c575d881694813369515f2cb3b5583bd4ef10d056b57f1675fae769f01b140ef"
+    sha256 cellar: :any,                 catalina:      "a76fb8aaf91f7442bc2a5e9ac96fda9787e769363f7385b93b909bd3a77d62d5"
+    sha256 cellar: :any,                 mojave:        "2b9d5b5f695cf202e89274b94109d8b20acee6e25ff34039d355e2a867efba61"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "db593feefb8198cf5c213afe5f702b8fdad67be16fc8c11857ab1c9abe039cb7"
   end
 
   keg_only :shadowed_by_macos, "macOS provides BLAS in Accelerate.framework"
