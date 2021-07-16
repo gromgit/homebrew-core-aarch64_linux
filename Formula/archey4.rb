@@ -12,6 +12,7 @@ class Archey4 < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "7a61e23a65173021839e70aaf664c7fc92ebdff24b975c685fecd8aa23746453"
     sha256 cellar: :any_skip_relocation, catalina:      "fdcf88893069bd62b09894b39dc01c1d8fc27e48f14ef9125735db74d44ad86f"
     sha256 cellar: :any_skip_relocation, mojave:        "8c41763022d97b6780e5de02d9deba4d1e896170951edbfe883d0b5d37be6f59"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1169e3370902278f58eef29a5da616dcf0852b91639ced4dccb6f74fe5d81b2b"
   end
 
   depends_on "python@3.9"
