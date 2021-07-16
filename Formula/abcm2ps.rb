@@ -6,11 +6,11 @@ class Abcm2ps < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "5a56794cc9fa9e49f3c8850f94ef7f1954832cfb6a0df0444b534e63b77962ba"
-    sha256 big_sur:       "576ceb67099499b4456a08434a9638a792eee8d12df2db9d957c80a48fb004e3"
-    sha256 catalina:      "294a1b897cd3224cfb9c03053c9a7826c9e7cdbe07065ff17f5f9a9f1608a0f8"
-    sha256 mojave:        "5bbc737b7c7b864e6490431cab5359b6193b75faa23ac6d5b5a1d78eda906b1c"
-    sha256 x86_64_linux:  "4fdf57caa61187f98ddd257561fb66ff44e1bb6fbd3c8d450280f9621ee325ac"
+    sha256 arm64_big_sur: "42abb1e6c0889e0954242008cc5fd30c84f627e4e518b6be27703853845c0672"
+    sha256 big_sur:       "144623cb4260d663db5784b43ba99c2d5aa0edf37929c4ac2d8b95ddde58fb8c"
+    sha256 catalina:      "ec684f5aaf53d8a83439b0dcc59d4cedec82083713d97394391e8d2fa182b14e"
+    sha256 mojave:        "0fdb3f48ed874b1c5e7797db126bbbb19baf6567dd0677569c69795459dfa431"
+    sha256 x86_64_linux:  "f2cac2669a5cb1a506d6506abdcc9834eaa17efd991c769e5273b0fbe7950456"
   end
 
   depends_on "pkg-config" => :build
