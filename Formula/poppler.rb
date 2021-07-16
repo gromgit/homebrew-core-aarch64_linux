@@ -13,10 +13,10 @@ class Poppler < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "78cb5c6ee43a21211bec472d44427466aeb3c38f4cfcd2af2d7a52fd4d0cf29a"
-    sha256 big_sur:       "1e001399365909097d98084d12ea1d7b08255b55e09b576c1085176fa623d1a7"
-    sha256 catalina:      "d4bf221bb7ca73bf61bfc27c4cbea3d024b3081b98110e9d06a8cf1a08264576"
-    sha256 mojave:        "8382678d6eba917cf144bfa7d6801f9d483b2eb1247f8489cafafb974e6b33ba"
+    sha256 arm64_big_sur: "b1f809972b45ccb9451754583498c029c18185a04c0b7644dfb265d4dc7237e4"
+    sha256 big_sur:       "56b7a19df93c1d6ce76d82950b031bcbaec2e7befa8a6fd4d89f716c8d6b30cc"
+    sha256 catalina:      "5b60064c0a5a632c422eccfc20e8f6a41ffda225e8ea0d16e9d5e218bcbbc76f"
+    sha256 mojave:        "c284411dcbecfc39f87da71ee4f37d92543702438dceef3d383f27e764fcfc66"
   end
 
   depends_on "cmake" => :build
