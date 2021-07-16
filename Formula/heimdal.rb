@@ -20,7 +20,7 @@ class Heimdal < Formula
     sha256 x86_64_linux:  "8f51d8684fcefa7c46bf6de1e982e3880b7834608d2d6628d505610cf67fe369"
   end
 
-  keg_only :shadowed_by_macos, "macOS provides Kerberos"
+  keg_only "conflicts with Kerberos"
 
   depends_on "bison" => :build
   depends_on "berkeley-db"
