@@ -11,12 +11,11 @@ class Kumactl < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6f51f664c4067ca52902beab8570039c54af52b977541c480e010078130f3507"
-    sha256 cellar: :any_skip_relocation, big_sur:       "94628da2fbc2a059404014b0a123571805cdfdc9c15078ca87e8fc58f173a096"
-    sha256 cellar: :any_skip_relocation, catalina:      "531bb550e64a0c45c3310a28222c409bdbbc364dacbff2ebd9eb1d92e845b2ee"
-    sha256 cellar: :any_skip_relocation, mojave:        "3172d5cf04ee572c99c93edae5f10449e21eb2302ac309c497c093ac4af34c99"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5292aaf720cd2ebe35f614584644117401ff2e14a8cc1312401897132adfac84"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "af500337a48e0d71d01042f8f6fb775e3acacbbfa383afccded67df8418a4f12"
+    sha256 cellar: :any_skip_relocation, big_sur:       "241ff2c52fad0df096dd5acc80664c1303eea8f93c69f13b96eb1c401b1bf55f"
+    sha256 cellar: :any_skip_relocation, catalina:      "29314f57a125f4df57b9ebdc7d385381f26b2e6bcda100cb5500097f3c4c312f"
+    sha256 cellar: :any_skip_relocation, mojave:        "fb48f21dcb351bddf5dc97e3612041015809292f02a60704309a09cb081daacd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ab73a33a9d4387172613d8abc7f9e9dab7daefadca194ef301df7394fc1f755e"
   end
 
   depends_on "go" => :build
