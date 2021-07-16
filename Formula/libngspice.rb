@@ -14,6 +14,7 @@ class Libngspice < Formula
     sha256 big_sur:       "a317cf13dd747369eb178e18f932ee4b0e3eebf8ffdb697f19cdaa1d100e20e8"
     sha256 catalina:      "82d6d7ad4cf74d36b1f11741edc123b76bdd48279cb0af38d5eacfe155c8b7de"
     sha256 mojave:        "908c45d65d80ad97d76a721ece430e09f8b828197999ee71152b2c12c5a4b231"
+    sha256 x86_64_linux:  "3bbac9c897c726c039900860bae496dcadfa922dfaffc7a0ccd660d5324fc598"
   end
 
   head do
