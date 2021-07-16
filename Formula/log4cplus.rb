@@ -11,10 +11,11 @@ class Log4cplus < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "6b39cf87d24dccbbcd063c7d3cc21b3392c9676f2fd5c7ea7a3b2b98a294385a"
-    sha256 cellar: :any, big_sur:       "3c50bcc0856327c8224074fc5f11d62e4f9033209aad12ceacd64010e1a51a80"
-    sha256 cellar: :any, catalina:      "462843dd835da767dd0b422bdbe2f601db45b5fd8dbe1fcc8cdf99291592a9cd"
-    sha256 cellar: :any, mojave:        "dffec0954dd25101569d672c5b07b454c80f3ee8ab4ab4cdb1d5c224395fb412"
+    sha256 cellar: :any,                 arm64_big_sur: "6b39cf87d24dccbbcd063c7d3cc21b3392c9676f2fd5c7ea7a3b2b98a294385a"
+    sha256 cellar: :any,                 big_sur:       "3c50bcc0856327c8224074fc5f11d62e4f9033209aad12ceacd64010e1a51a80"
+    sha256 cellar: :any,                 catalina:      "462843dd835da767dd0b422bdbe2f601db45b5fd8dbe1fcc8cdf99291592a9cd"
+    sha256 cellar: :any,                 mojave:        "dffec0954dd25101569d672c5b07b454c80f3ee8ab4ab4cdb1d5c224395fb412"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a44d978ffd4477599405214de6186ed6a7942d4aa409be968a17f058ea71f2b3"
   end
 
   def install
