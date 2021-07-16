@@ -8,6 +8,13 @@ class Iredis < Formula
   license "BSD-3-Clause"
   head "https://github.com/laixintao/iredis.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f0e463c20c1c268a67a1fde50395cfcc6c74baba53e8356c57b0f261d3e6ebf1"
+    sha256 cellar: :any_skip_relocation, big_sur:       "252d788ae97b897ef6746fb0d926def25c0be0f46a2bfe094483da8f9ecf933f"
+    sha256 cellar: :any_skip_relocation, catalina:      "86396d3fca30b99c9522e3e62adbde7822bfbe836c25c20bd457c121be90556d"
+    sha256 cellar: :any_skip_relocation, mojave:        "01730609934362b5a1a75e021af671efe2d5d6afc4d3a3bbcdf90680ee4abc18"
+  end
+
   depends_on "python@3.9"
   depends_on "six"
 
