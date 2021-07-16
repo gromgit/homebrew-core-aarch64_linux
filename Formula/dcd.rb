@@ -8,10 +8,10 @@ class Dcd < Formula
   head "https://github.com/dlang-community/dcd.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:      "3f78982cca3087697d53cf0e240dfcd8d601f9b25d80f01ad6ff237a1604ea16"
-    sha256 cellar: :any_skip_relocation, catalina:     "4a77f9bb6025a0ea9c30372dad8bb548226100f81391340a39cdde29e9a9ae13"
-    sha256 cellar: :any_skip_relocation, mojave:       "a6ad4603f6ca68b68be9ca7716875f38a537c3dea00f15dcfa8b4f0edbe9dc07"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "939caee4982289c0531c1a74e0360a37de0e63edbe1e00a63c6d5d1f0413425b"
+    sha256 cellar: :any_skip_relocation, big_sur:      "80150a1144639d87e282d8bbae2586a9530ed9aea22d71ba87b693a753947481"
+    sha256 cellar: :any_skip_relocation, catalina:     "f8410040eb2862fe4e4eb1c81db06e771f2264975a0b3a1aab86a3afaf862203"
+    sha256 cellar: :any_skip_relocation, mojave:       "06741cfea8cacf2c13ed861fdef7b5db9e9500fd2b309f7286b92eb1b1974f42"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "b47af3d85e3087be8a424316db75a06f8c0a7974491f6684f597b921f1f56d09"
   end
 
   depends_on "dmd" => :build
