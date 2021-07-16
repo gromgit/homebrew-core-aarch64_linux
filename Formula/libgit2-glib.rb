@@ -17,6 +17,7 @@ class Libgit2Glib < Formula
     sha256               big_sur:       "bffdfd6183ae4bdb486f40f9a449ab0582387b40be36c356ce6f83642011bec7"
     sha256               catalina:      "335de71224cede561e05645cde3709acf3763e168d2da11b13586d3c3605d67e"
     sha256               mojave:        "308f244da46a0a70ab9e1fb9cf2eae8dd24e26c363b344f5872f5ee65ef9043a"
+    sha256               x86_64_linux:  "3f29a9b332d0fb19261fce4f23197e24674ba8dca9bae4ef3733e492263f5c3d"
   end
 
   depends_on "gobject-introspection" => :build
