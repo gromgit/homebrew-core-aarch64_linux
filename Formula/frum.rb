@@ -16,6 +16,7 @@ class Frum < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "96a6ceaa6e60dba09a0ab0440fb57cf9adccae016f62ad5cba90f7c885bcf38a"
     sha256 cellar: :any_skip_relocation, catalina:      "d8881e709692489994009e29f63584a45fe7a2db6f2a26655438c904db1578ce"
     sha256 cellar: :any_skip_relocation, mojave:        "8d0206951f833358562a04282c8bc58e1e9e5dce2783099c4b62e60dfda822fa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4e32fac7765e42b18d97730ab100c7ed68ee6a55f5a6f1a1848682ed424603e7"
   end
 
   depends_on "rust" => :build
