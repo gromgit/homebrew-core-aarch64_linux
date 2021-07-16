@@ -1,8 +1,8 @@
 class Yq < Formula
   desc "Process YAML documents from the CLI"
   homepage "https://github.com/mikefarah/yq"
-  url "https://github.com/mikefarah/yq/archive/v4.9.8.tar.gz"
-  sha256 "a7b68382ea04da47c1ef0486140f093ee4578525a89f33c3ba457d424e316cc2"
+  url "https://github.com/mikefarah/yq/archive/v4.10.0.tar.gz"
+  sha256 "69f2f8de1e0c5a2d6e529b471f47c2cfacf072ee751e936fd81d645a09346f30"
   license "MIT"
 
   bottle do
@@ -18,7 +18,7 @@ class Yq < Formula
   conflicts_with "python-yq", because: "both install `yq` executables"
 
   def install
-    system "go", "build", "-ldflags", "-s -w", *std_go_args
+    system "go", "build", *std_go_args(ldflags: "-s -w")
 
     (bash_completion/"yq").write Utils.safe_popen_read("#{bin}/yq", "shell-completion", "bash")
     (zsh_completion/"_yq").write Utils.safe_popen_read("#{bin}/yq", "shell-completion", "zsh")
