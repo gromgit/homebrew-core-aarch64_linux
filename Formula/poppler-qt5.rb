@@ -11,6 +11,13 @@ class PopplerQt5 < Formula
     regex(/href=.*?poppler[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 arm64_big_sur: "c104b0aba5f0eec2c713d1192b7822c160b71051c5bb8453439fc39e5674980a"
+    sha256 big_sur:       "bfa51786ea434ca43c1548c52a5f4da3c8b1160ed1a34d32ad5f51b77c4391a6"
+    sha256 catalina:      "5f216359df7b981e349447e8353195b5d6c517b0b151df32b3eb9fbc2503b9e9"
+    sha256 mojave:        "6d82df4d7e2ba2400747e69560beaed9588ff4210b7915fa4da6c720e818e124"
+  end
+
   keg_only "it conflicts with poppler"
 
   depends_on "cmake" => :build
