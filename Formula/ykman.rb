@@ -9,11 +9,11 @@ class Ykman < Formula
   head "https://github.com/Yubico/yubikey-manager.git"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "e8f7b0f43cddea4340ef004a655b9266c54fc7de654da661e9fa021339c72089"
-    sha256 cellar: :any,                 big_sur:       "c1b30a71bba7dcd8c5fc71e35ef011b4665586de129762a72afe00a551f0672b"
-    sha256 cellar: :any,                 catalina:      "46aca102b3c8cdad01b5366849893f8476f78c37bef9853b8f22d4e2eda50b88"
-    sha256 cellar: :any,                 mojave:        "66b2cfd1a7c3fc74f75d450eb114e128f8fe2c9c2721d905e74ada4515f0599f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cffd972d98ec1ccfaccbd5156fe94945d5b3fd8ca5bceb8d1ef8242f13275bb3"
+    sha256 cellar: :any,                 arm64_big_sur: "a6bed330081df5479a2e8e048a58cb0ea7d6a69c353d27c3aa70b03efee0854e"
+    sha256 cellar: :any,                 big_sur:       "aee3deffd75f037c2b24d313108ac150318415f4772483b223145ca7e3f0fe3d"
+    sha256 cellar: :any,                 catalina:      "5d97f3733d772750722edd7ed27273adba0253989d18eee10d68dea2bb51b0cb"
+    sha256 cellar: :any,                 mojave:        "15faaedb93a0d15fa0e119d70b391c15d906abcea24f11bf45aa81568ca67004"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c6b1fe4ffa846acb30a26b0dc04c2ac90f893cd480cca49760bcbe61cefc71d4"
   end
 
   depends_on "rust" => :build
