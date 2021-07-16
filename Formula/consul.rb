@@ -12,11 +12,11 @@ class Consul < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7a3369f9f96d35fbfa18d04c3e9e38c82cbb79e6bd0d58dd14bf65e282f510af"
-    sha256 cellar: :any_skip_relocation, big_sur:       "428501ad054c955587c9630f611ad317c45c07c20981e70bc746a4dab427c554"
-    sha256 cellar: :any_skip_relocation, catalina:      "63138480100a43016bbdd31daf45aa179bff8a80b2175bd606934b640dede838"
-    sha256 cellar: :any_skip_relocation, mojave:        "bdab7d79a9f4198e2ae4328687ee10815100ed47346bed66738316745fd8b8a2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4bc3a46a05bdce03cc41795203df5d9682502e315d9b3b862053f1dd7596c9fb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d1094c6e229b6dc82a1ef5b873ca1efe53de937ba289afd428858b3cc3b5076c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "2fb39f2b2122c2bb9b0f29b19ab8e7aaf33c263b74fc3b76a4779fe68c5d7037"
+    sha256 cellar: :any_skip_relocation, catalina:      "279f93c35defe207c789d6643b15762d33ca67365691a6b1c22377825771263a"
+    sha256 cellar: :any_skip_relocation, mojave:        "5b55eeaaef28b9c3bf356807049fe0ba5f4c090e810f3e291d976697ad1425c0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "17e2e9e442d7e8c306bd06add0189ed964fba340e754197d5a64eb1f9ae7e319"
   end
 
   depends_on "go" => :build
