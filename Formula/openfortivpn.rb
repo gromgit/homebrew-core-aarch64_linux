@@ -6,11 +6,11 @@ class Openfortivpn < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "fe329fa78d439d21525954fcfe7e4b5181d818314fb198bfb43302a6935c7b4f"
-    sha256 big_sur:       "2b8aa8b10b0df068e05972daf48054f3a05716a7d5936824f87ef59f90492bf3"
-    sha256 catalina:      "2461050389b1e6ca991b92ca1baed5efa4f913f4dfaf4b356083d4c6a7a2a0b4"
-    sha256 mojave:        "f70377cd7929889951bce6216b25e5429aba924d111be44a1c24904a46adcd91"
-    sha256 x86_64_linux:  "8ee11ec6d56507404cb560b462347b3ed950559386036bebd0df32a45a7f3b74"
+    sha256 arm64_big_sur: "f35d76428149ed87f5402620e7116231e6a1434eaa64f798cf0d3607183270ff"
+    sha256 big_sur:       "15cc82983644ac3e9abac3c5886877cf8cb434c9bfc5eb2c0fdac89844c06bd5"
+    sha256 catalina:      "ad40158d78850d26983abe3d87550aacd5f06f48480338a74202dbb1c0b8b7fe"
+    sha256 mojave:        "1de4a819a55e66ab4d90d738b1b8ee644949fa184683583201a423a2a8cc0bf8"
+    sha256 x86_64_linux:  "74c86dcb84898ec512231e13f3d96047de42b6b693c4fd57b3ac9ff8c042f599"
   end
 
   depends_on "autoconf" => :build
