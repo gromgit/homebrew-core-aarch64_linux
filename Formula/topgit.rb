@@ -12,6 +12,7 @@ class Topgit < Formula
     sha256 cellar: :any_skip_relocation, mojave:        "30c348bcfbdcfc5fe3a91b0bb8889841a5e492f2fed7626577cda1523d815dc2"
     sha256 cellar: :any_skip_relocation, high_sierra:   "30c348bcfbdcfc5fe3a91b0bb8889841a5e492f2fed7626577cda1523d815dc2"
     sha256 cellar: :any_skip_relocation, sierra:        "ec7f9140e122265f34c03469803cf7eb932006d240ab158cb9ee5a27f53b3b38"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6f23ef839b0ae19ef10ca2baf5dae69164a93086bfb981d24c643f533bc9b063"
   end
 
   def install
