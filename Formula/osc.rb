@@ -9,10 +9,11 @@ class Osc < Formula
   head "https://github.com/openSUSE/osc.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "45441960ddc65f31038defce4cf7f0076f0b1fec4f60f68ce7a65d5e88ad7693"
-    sha256 cellar: :any, big_sur:       "3c84a1c831e92feb2b15bdac1fec6eb42b1bfffabab32fc2d4094dfac49d37ac"
-    sha256 cellar: :any, catalina:      "3da92871b821363036565c492d208e24fa3fe1132f14c24c00f1b41994d88abe"
-    sha256 cellar: :any, mojave:        "20244925520f2da62da2f484bbf154abbe89d1bb51764635b7324a614b3e6ad2"
+    sha256 cellar: :any,                 arm64_big_sur: "45441960ddc65f31038defce4cf7f0076f0b1fec4f60f68ce7a65d5e88ad7693"
+    sha256 cellar: :any,                 big_sur:       "3c84a1c831e92feb2b15bdac1fec6eb42b1bfffabab32fc2d4094dfac49d37ac"
+    sha256 cellar: :any,                 catalina:      "3da92871b821363036565c492d208e24fa3fe1132f14c24c00f1b41994d88abe"
+    sha256 cellar: :any,                 mojave:        "20244925520f2da62da2f484bbf154abbe89d1bb51764635b7324a614b3e6ad2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bfbea02d2d0e71810c128370c530ca7a6bfc7a8079808c511782ad52d45a2b2c"
   end
 
   depends_on "swig" => :build
