@@ -15,6 +15,7 @@ class Talisman < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "534badd4c595a32338bfa1627cf8530b5eec96ac24388e5b6080e57e89f3bd19"
     sha256 cellar: :any_skip_relocation, catalina:      "d8ef7bc535c99083c1e2426ddb99fa107a8b287f389bfd5b882c9239762e17a7"
     sha256 cellar: :any_skip_relocation, mojave:        "6bd79dcc54fe7c42a7834cbde657b4b96edf2fa5a8121536b7f17fe9a6a8cfe8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d9f03e7dd99740c5792b14f6d92e33a9d8686eb56c282b12035a8b59a494bc2c"
   end
 
   depends_on "go" => :build
