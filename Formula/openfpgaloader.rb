@@ -11,6 +11,7 @@ class Openfpgaloader < Formula
     sha256 big_sur:       "023de89dec4bdccd8222433be4d20587288d4c30aeadec27c71ac9192e992bee"
     sha256 catalina:      "7399ee5c7f0d1693867a33b423a55f2c6968bdcedfeb1d0c88c27e50c4d091cb"
     sha256 mojave:        "6d2efdb166f86a10ae3a3c7b25989859159b2be2b63dc6cc69e874b2b6febaa1"
+    sha256 x86_64_linux:  "1fbca000552a9bb330257c05ce2c173c65d82c544699457e25d2939198da9fe3"
   end
 
   depends_on "cmake" => :build
