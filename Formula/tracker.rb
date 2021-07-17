@@ -11,6 +11,13 @@ class Tracker < Formula
     regex(/tracker[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 arm64_big_sur: "22d7bddd7ef62d58620d9590664d5d954b1985bf5ac2f348dc4e5b85aeeb2180"
+    sha256 big_sur:       "b5480a9ef45026bd14856f34bec78aba56235e187c340dacd0b981077bab3b48"
+    sha256 catalina:      "a632269a8bae5af05e365a08766e60219657940035d7383bedf81afcf16ca143"
+    sha256 mojave:        "68bc5591c3593ad5d9b03d25ccb0c6958f7919e783d822ae723ae76594dfe6a7"
+  end
+
   depends_on "gobject-introspection" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
