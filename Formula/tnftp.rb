@@ -15,6 +15,7 @@ class Tnftp < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "1411f5fe465b0952891ff141431a5d09140c7d53bb3cf689054a2580bd1031fc"
     sha256 cellar: :any_skip_relocation, mojave:        "ae4beaa65c5f258152fefeeaa196c9e2d70cf3bda2af4e387ddcf807476c7401"
     sha256 cellar: :any_skip_relocation, high_sierra:   "900f2ece9b7a6a9edd0d96dc6c061ef6380c0fc99177119e73db65e5d8c012e0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "41370171f86ffd6f700cc06b3110c587444253dc136c86813a1eeafd0d5988e2"
   end
 
   uses_from_macos "bison" => :build
