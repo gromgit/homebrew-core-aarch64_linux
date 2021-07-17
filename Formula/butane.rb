@@ -12,11 +12,11 @@ class Butane < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c0b0fedb580b6eb107172bb425b3de3a3ced9f6e2d68d206a80e3cd9ae63c2fc"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ee6687d81be057506a3e5820319c95451aa577a92a5ba28d0f2008812610336a"
-    sha256 cellar: :any_skip_relocation, catalina:      "8478d8cb15794328cdfbb4385a2aa809256205f243d7baf77bb1bfebcbbc7e10"
-    sha256 cellar: :any_skip_relocation, mojave:        "6fc9ad566d96eebbac7539661e986aa0078d6aff8a417eec1bfb4722f7361058"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "70d2820caef8ab8d2984fc528b2f5779bec0dcb43e80f1f17bfe6a4147196446"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "01b950bf19e7a641e36c582e375d97330ff86f7807896fa0747dea34f048740a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c37098f716920c611cb6fe1563a5e68b5db4db8db4ea4969718d3f8a590f0ef2"
+    sha256 cellar: :any_skip_relocation, catalina:      "a45fa205eb69ef31e27dfaacd10595e9c4e81792206ad8e14c5af38d1a7aac46"
+    sha256 cellar: :any_skip_relocation, mojave:        "4eaa42f7da213f2243506d00259cc40a49e1b6795fa17b90a24426f1b566946d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5fa4a3d814252c992f15225f24c4ccdb28517cf1c6e9a9d91c68111223958436"
   end
 
   depends_on "go" => :build
