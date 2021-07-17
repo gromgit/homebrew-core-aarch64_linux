@@ -11,6 +11,7 @@ class Sdns < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "82ae1e7bea85f50fcf84de51fb0fb790faf88d0cefaf8532f587047e8fe842a5"
     sha256 cellar: :any_skip_relocation, catalina:      "b1dd23b40afd486a0343af0b6e2b738d5c4a19869484e01de28889e7abc6ae5b"
     sha256 cellar: :any_skip_relocation, mojave:        "aa9dd1a91d45ddcc4574ca51084f6d57885541d6e495230e2870e60bf1d2395a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c7f8696ee4f9832f746ef504e348b1c3e45eefa15101b25e00e9c7102d3defac"
   end
 
   depends_on "go" => :build
