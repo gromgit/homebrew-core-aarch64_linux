@@ -12,6 +12,7 @@ class ParquetTools < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "c84021c2e6e9475380715420dec0edc741c59edb525e197a1c355fd3679187e6"
     sha256 cellar: :any_skip_relocation, catalina:      "0bb7bd347b698537ef9b8690648aa6b13c328fd3c60eec5c6614b94c8d770835"
     sha256 cellar: :any_skip_relocation, mojave:        "17e6ad97c0d0fcab7989305eabd2b853cdc694f059f29d36cda5d94422de4e33"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c27c4802070eea520a2a140569b8f0ec16591786caf4b87c7e8ccb9ee9414d15"
   end
 
   # See https://issues.apache.org/jira/browse/PARQUET-1666
