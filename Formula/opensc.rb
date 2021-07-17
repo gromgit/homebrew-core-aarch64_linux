@@ -17,6 +17,7 @@ class Opensc < Formula
     sha256 big_sur:       "c65a43909f56d856d4a3dea6ff2010d0f4933dd8508e6cc0ee1898884e802df9"
     sha256 catalina:      "483b47da8bd5a8339fc4dc6b2498b6c662cb0783801e5dfa2651602d7153fd86"
     sha256 mojave:        "32df51660a704109b38931903b89c88ca79e98ce806f83d59fff486275edfdab"
+    sha256 x86_64_linux:  "f958a474641861b3a404dce4b482045a6ae7760ff3e4b8ad8d11b4164b07681c"
   end
 
   depends_on "autoconf" => :build
