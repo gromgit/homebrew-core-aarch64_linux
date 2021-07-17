@@ -11,6 +11,7 @@ class Singular < Formula
     sha256 big_sur:       "a344fa6e1ecd01461fa59ddb95863581b85749ef9802f3d6f7d79032b26cf9e8"
     sha256 catalina:      "7b9172e57c84672c1aa97a2a09e075a193a064fa3af3678df79b33e0fb0565ef"
     sha256 mojave:        "9bfe6a7938e60280130ba2042a6c1a95840dcadaf65832b5aa6906e738263fe3"
+    sha256 x86_64_linux:  "37c4ecf472f68670c963b85fb8271aa8e9baabd274e77872af5aa2aa185ec477"
   end
 
   head do
