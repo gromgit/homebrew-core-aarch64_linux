@@ -5,6 +5,13 @@ class Psalm < Formula
   sha256 "896246540c669c8d21e62e7c3865bc23cf1e7980caa920cd04b4e38a60354faf"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "eda9a66bdc4eceb127868bbdaf7a2b0fe9cea0226b7912f2be1149d91cc14179"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a54b71a894f31a2c1e5cae10fb0e394fcdc5f874c7d4ce6c66533a4a13605241"
+    sha256 cellar: :any_skip_relocation, catalina:      "a54b71a894f31a2c1e5cae10fb0e394fcdc5f874c7d4ce6c66533a4a13605241"
+    sha256 cellar: :any_skip_relocation, mojave:        "a54b71a894f31a2c1e5cae10fb0e394fcdc5f874c7d4ce6c66533a4a13605241"
+  end
+
   # Keg-relocation breaks the formula when it replaces `/usr/local` with a non-default prefix
   pour_bottle? do
     on_macos do
