@@ -13,6 +13,7 @@ class PandocIncludeCode < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "63300eec1d6a9e05208917453d202436384beaa35a50c9e46cff101bac589849"
     sha256 cellar: :any_skip_relocation, mojave:        "707af9306e01c8f183bad3232797c9220583a9cdba3baf7d99d77add6faccd87"
     sha256 cellar: :any_skip_relocation, high_sierra:   "46561ef2e3dbbc9b15cb84ca1b82f7c6510ed900ca3c6e7252d45eb00ac8c991"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ab22b3df53ac6762dcc8b564ebbefdc96a814ba31f93fc4dd701bbb28bacb958"
   end
 
   depends_on "cabal-install" => :build
