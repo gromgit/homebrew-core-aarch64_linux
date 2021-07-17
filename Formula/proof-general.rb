@@ -14,6 +14,7 @@ class ProofGeneral < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "ccc115760830d046c9e53277a571f451eb251c9b10c09589c627f146f4a9a4dd"
     sha256 cellar: :any_skip_relocation, mojave:        "ccc115760830d046c9e53277a571f451eb251c9b10c09589c627f146f4a9a4dd"
     sha256 cellar: :any_skip_relocation, high_sierra:   "ccc115760830d046c9e53277a571f451eb251c9b10c09589c627f146f4a9a4dd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "277a264e49e065837b17eb67754b58e1447cf1e44c3b8b1ef65075d914b7e9f7"
   end
 
   depends_on "texi2html" => :build
