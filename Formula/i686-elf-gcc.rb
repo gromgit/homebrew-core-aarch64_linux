@@ -12,6 +12,7 @@ class I686ElfGcc < Formula
     sha256 big_sur:       "f90e0015f48d6801c2baecff35f1f585424736886c61df900d6a16d3a6ca0f58"
     sha256 catalina:      "653e014807bf4321c23e9e5375d489065bee7cd3e67e0b48bbfb8583420b6d66"
     sha256 mojave:        "ed1638bf912983d96fd04d43f5a56a542a6cd9dc927ca2dbac028238f1b6f7de"
+    sha256 x86_64_linux:  "09af3648758f172b4726c8111943303833c6523e4fb1702f3011248aae818d4d"
   end
 
   depends_on "gmp"
