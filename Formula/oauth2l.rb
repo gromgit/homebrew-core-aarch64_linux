@@ -11,6 +11,7 @@ class Oauth2l < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "4dca4d631a0388afbd9131b4b158447cedafc4633a304b1efe70f05e1f61abb4"
     sha256 cellar: :any_skip_relocation, catalina:      "3b1a5b18dd885380288d7fe05cccb1a4928583e645b0923a32035311ac7ee88e"
     sha256 cellar: :any_skip_relocation, mojave:        "4bbc795be26dc48c91cf5ed9393d65e66f410e742b99ac532919ed0c547f5e95"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "787b63c251f4f0a96c338711322712f7d3411dd2e1c4b32312cca88a94497399"
   end
 
   depends_on "go" => :build
