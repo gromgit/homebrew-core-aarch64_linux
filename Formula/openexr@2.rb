@@ -7,10 +7,11 @@ class OpenexrAT2 < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 arm64_big_sur: "50b8cf3f50c439e8a96c01ba4a899f82c0e287f144c5216bdd8ecb8b7da5c957"
-    sha256 big_sur:       "152fc852e2e933cc5e9eb87090ef68dfc22727937dc9812bdfe9f47c8ff55c1b"
-    sha256 catalina:      "cd219a2ea44a1c0db8dd195fac4f81998c5b453b01b6ba3f98f0868266c7918d"
-    sha256 mojave:        "2d642d93482b12a3339ddb9fc9ff9914feb32ace5fcfebd6550598f4c8dd72bb"
+    sha256                               arm64_big_sur: "50b8cf3f50c439e8a96c01ba4a899f82c0e287f144c5216bdd8ecb8b7da5c957"
+    sha256                               big_sur:       "152fc852e2e933cc5e9eb87090ef68dfc22727937dc9812bdfe9f47c8ff55c1b"
+    sha256                               catalina:      "cd219a2ea44a1c0db8dd195fac4f81998c5b453b01b6ba3f98f0868266c7918d"
+    sha256                               mojave:        "2d642d93482b12a3339ddb9fc9ff9914feb32ace5fcfebd6550598f4c8dd72bb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "187e224f8af042ba3e3a0522e11a1b1b9d0e3d42129c0c1d4b838328a7ac8802"
   end
 
   keg_only :versioned_formula
