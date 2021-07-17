@@ -3,8 +3,8 @@ class Liquidctl < Formula
 
   desc "Cross-platform tool and drivers for liquid coolers and other devices"
   homepage "https://github.com/jonasmalacofilho/liquidctl"
-  url "https://files.pythonhosted.org/packages/3c/98/df8a6481d5b7dee73c12327acb0ec18364275ba85b1e6d3faa29c45463a9/liquidctl-1.7.0.tar.gz"
-  sha256 "053675aca9ba9a3c14d8ef24d1a2e75c592c55a1b8ba494447bc13d3ae523d6f"
+  url "https://files.pythonhosted.org/packages/cb/53/6edf9da254d2e80580b116c45a7c50edaf055917bf6d771185a5adf52d2a/liquidctl-1.7.1.tar.gz"
+  sha256 "10f650b9486ddac184330940550433685ae0abc70b66fe92d994042491aab356"
   license "GPL-3.0-or-later"
   head "https://github.com/jonasmalacofilho/liquidctl.git"
 
@@ -34,8 +34,8 @@ class Liquidctl < Formula
   end
 
   resource "pyusb" do
-    url "https://files.pythonhosted.org/packages/b8/5a/d5d54813eb18ca8d0a03c51c5248c8564d422b4c35a9b7b0fd1b4f1b8154/pyusb-1.2.0.tar.gz"
-    sha256 "d68597d2cf7df766bdf816b1a337b72ab8233c19825e170ae18714f16b838cbc"
+    url "https://files.pythonhosted.org/packages/d9/6e/433a5614132576289b8643fe598dd5d51b16e130fd591564be952e15bb45/pyusb-1.2.1.tar.gz"
+    sha256 "a4cc7404a203144754164b8b40994e2849fde1cfff06b08492f12fff9d9de7b9"
   end
 
   def install
