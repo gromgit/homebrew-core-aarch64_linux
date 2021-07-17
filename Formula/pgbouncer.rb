@@ -10,10 +10,11 @@ class Pgbouncer < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "8107249d240e1a53f6ae84587c08129acf5c294c4022f92d5f1c731ea6956ea3"
-    sha256 cellar: :any, big_sur:       "09f21ff3e7b2c125d793da2ba64110392227650ae8157ef987f041959af8fe7c"
-    sha256 cellar: :any, catalina:      "fad76f523bac43aaf7859fa0085ab7c6582f9d4aeb682e677db8f5acd9c4159a"
-    sha256 cellar: :any, mojave:        "4187ceded551fad5801a26f790e61dd7d654acc675de73a1b4bf2858920d0734"
+    sha256 cellar: :any,                 arm64_big_sur: "8107249d240e1a53f6ae84587c08129acf5c294c4022f92d5f1c731ea6956ea3"
+    sha256 cellar: :any,                 big_sur:       "09f21ff3e7b2c125d793da2ba64110392227650ae8157ef987f041959af8fe7c"
+    sha256 cellar: :any,                 catalina:      "fad76f523bac43aaf7859fa0085ab7c6582f9d4aeb682e677db8f5acd9c4159a"
+    sha256 cellar: :any,                 mojave:        "4187ceded551fad5801a26f790e61dd7d654acc675de73a1b4bf2858920d0734"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1ccfa644aaba6da6067f31485cdbef1d1a5978b8f093e02eee5078a84569891d"
   end
 
   depends_on "pkg-config" => :build
