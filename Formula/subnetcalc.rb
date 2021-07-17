@@ -11,6 +11,7 @@ class Subnetcalc < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "bc64b5a8c222bb22e5f3319835b3128fcfc61d3fde5e192b8171b0c212233e10"
     sha256 cellar: :any_skip_relocation, catalina:      "7af71ce1b492802a1fc88484d6ae8eb95c924dc4363f354dad1693984d60ddd2"
     sha256 cellar: :any_skip_relocation, mojave:        "f136d2f2959574e52b0431b4c4fe8ebe88724a52911fea8ffe103b915012ed71"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d7ef77fb816335301824c254a8d433441345c7a40f9bf977646cf1bf28312293"
   end
 
   depends_on "cmake" => :build
