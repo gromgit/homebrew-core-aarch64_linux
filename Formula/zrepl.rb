@@ -11,6 +11,7 @@ class Zrepl < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "53d35518fa3e7f5d671ac4841553d1df38c613f5634fc4d0e2962280c8ec7328"
     sha256 cellar: :any_skip_relocation, catalina:      "c43b04d0dbd41086de940ca96f4da40b907a517ff17c83e984569e888aff2448"
     sha256 cellar: :any_skip_relocation, mojave:        "5116f00b9e4666ba6059123d0632e118bd217d95c10d7e2a507c42ed8b1600ce"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1665c106829de67d9f5c5519398e3efdff849b451c7421cc4049afc5c2f0482f"
   end
 
   depends_on "go" => :build
