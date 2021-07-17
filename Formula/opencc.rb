@@ -11,6 +11,7 @@ class Opencc < Formula
     sha256 big_sur:       "9d31934fcd9abeebb3c0c6a36b7e7aa7c7a658b579da5b1533e02bcd530a6f6f"
     sha256 catalina:      "f740a308d7ebe1d4091e9e7ee412606353efd8a1d6ef653937613279fb08d63d"
     sha256 mojave:        "505d227dc8e6acaddaf1c7bbb0b1a367c8eccbadb3d66a44e9d310054f13478b"
+    sha256 x86_64_linux:  "a16376776339777af7a9876272f1e01d0b086fe7bd357f9a6bd44825e18f4ea1"
   end
 
   depends_on "cmake" => :build
