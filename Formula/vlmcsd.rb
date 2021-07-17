@@ -18,6 +18,7 @@ class Vlmcsd < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "db9dac6f35e4d788365c03ba7163b011b1739e3db5f484b22d4351439e878f0f"
     sha256 cellar: :any_skip_relocation, catalina:      "ec02827a4a07215d0b3b5a4d06a8a0f811ddac4ab78a877a3248edc3021593b5"
     sha256 cellar: :any_skip_relocation, mojave:        "7ba71a7fb0a00bf5f654f324d00e93f431d25c40455dd0bcda19edc23b8de945"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4ed89ce4bff9d1f1dd54d7d8aa214f72c3aa8e4b2c17bce7333f18deff864e2e"
   end
 
   uses_from_macos "llvm" => :build
