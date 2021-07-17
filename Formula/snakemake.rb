@@ -13,6 +13,7 @@ class Snakemake < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "32416b352d960480b910e36135a47e8f3b5f5f826ef85deddcc5e9835519c662"
     sha256 cellar: :any_skip_relocation, catalina:      "f9083217eca7194c120886490507eb43b8e05194f99e4a9bcfc42244d3acf5f4"
     sha256 cellar: :any_skip_relocation, mojave:        "1285b349b8a21563e54415fe40387c18658b0aa1da17a78eaa6ce0b7491e6629"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "897d8ebc00b6384ebae39a97ef3ffc9945e02f0dcc87ed7d17af7363fb13a779"
   end
 
   depends_on "cbc"
