@@ -15,6 +15,7 @@ class Rsyslog < Formula
     sha256 big_sur:       "21e025ccdcdc24d2d402b44f5b7c2445247352a0d98d514bd985059e81082ae8"
     sha256 catalina:      "0f8b40ee417bd484f5ae1490771cc238d25dc5e8aa2e38327ce4abeae3b1a68b"
     sha256 mojave:        "0f5c35591f1d6ff652a26c795f3ba3d2daf49269801059ef13305254e4b3fa55"
+    sha256 x86_64_linux:  "c672af1bce9342a56c9b8974fc99f68d7e355ed3a2a477a076b272f951b0d283"
   end
 
   depends_on "pkg-config" => :build
