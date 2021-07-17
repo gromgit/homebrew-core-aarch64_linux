@@ -11,6 +11,7 @@ class SshVault < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "fcb7faca3f1ac56161e9ea91a7e543cf705222d1432d866a7127746f869b79ba"
     sha256 cellar: :any_skip_relocation, catalina:      "8f4fc6e1e12a6eb2cff23b48c34568f2643d6c4570160c459e3ce79b66c5d7a5"
     sha256 cellar: :any_skip_relocation, mojave:        "b3d07f9f64964782d4bc5d1b20218e016f8d4ee07bbb99a35fc5b1b0a0baa903"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8ccdc30d8485aca427e4d4603c22604d53fde4e5dcce3f6b0dd84770e82c272a"
   end
 
   depends_on "go" => :build
