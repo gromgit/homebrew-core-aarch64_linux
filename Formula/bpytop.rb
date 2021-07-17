@@ -10,10 +10,11 @@ class Bpytop < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b82bd9c9b4e1eaa8ca06c1de80a791b66c7b250dd50d062326db0b53390da793"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7476adb29b33fadcbc402edc7e19a511af60ee95870785342703c4c103d2fe84"
-    sha256 cellar: :any_skip_relocation, catalina:      "b292c129d613342fb9bf3d8a8ff63578a4c4cd6c928bb0a2a205f3f4e980a270"
-    sha256 cellar: :any_skip_relocation, mojave:        "e4e3977fa3294c1cb76b57c968b02ffe6b511ce91799da78c1872ca22431633f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2628a4b51b898319842f449e0e6ccc33eca3559b4a828cb72713cc7523c42e08"
+    sha256 cellar: :any_skip_relocation, big_sur:       "9767462c51c491bf1b4e4b0b1098f75edded649990cce5e5813d73d415dac4e0"
+    sha256 cellar: :any_skip_relocation, catalina:      "73f93ec6992cfa6aa5f5e5b77482ced3b3a94297f5976fc14f3773eaf59707ac"
+    sha256 cellar: :any_skip_relocation, mojave:        "4c0fa73e1f3a1e947d4238804553d7e2b29339a15ce25ea4515be65480e5a9e2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c2e9a290e3973226449e28ea5a41e388a5bb9e3548a65c29837b00206e6e91dc"
   end
 
   depends_on "python@3.9"
