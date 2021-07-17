@@ -2,8 +2,8 @@ class Datasette < Formula
   include Language::Python::Virtualenv
   desc "Open source multi-tool for exploring and publishing data"
   homepage "https://docs.datasette.io/en/stable/"
-  url "https://files.pythonhosted.org/packages/7b/60/6666a31cac4e8fad4b7b2d83f09884b7cb58fb7a077c1e04c5f380810437/datasette-0.58.tar.gz"
-  sha256 "406f329ae1072294affb9975be31d69d6f779d9d46affdacc956531a3ec8eef6"
+  url "https://files.pythonhosted.org/packages/4b/9a/37a1ee041ffdbd2b25793bfe487e71d7def794adf3bb17d0bc82742814e4/datasette-0.58.1.tar.gz"
+  sha256 "6a798cd11d15bfaa9cd25c3ccee8ef4b6a1ad91dda517a1dd9b39bbb6b727896"
   license "Apache-2.0"
   head "https://github.com/simonw/datasette.git"
 
