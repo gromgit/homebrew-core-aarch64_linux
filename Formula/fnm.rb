@@ -12,11 +12,11 @@ class Fnm < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f452f231a5d8c6f3c4795c7cedb1c1069e2c087d71033922e0d0feadbdfab5c7"
-    sha256 cellar: :any_skip_relocation, big_sur:       "1aceb43c8d1cd23b37ef3e5cb39958a3723021b4aa8796226ae5452cdb1648c3"
-    sha256 cellar: :any_skip_relocation, catalina:      "22f971bf095b1c786fc3ac5cd51ed772348cecb518abfd14c14890508418057e"
-    sha256 cellar: :any_skip_relocation, mojave:        "b809a52a73726c35e08d89076123f9dd3978615e229d88bc41257fd3bb434b0b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1f6f17e0702f2efdd2cebe887f304b4d679d5e6ddcb08173e0ce66e13231f9d5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f222bc246bb34b6e6b01287cbdcb52f78fd1cf9c0220ca79e0db2307c84cd8ed"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ef6680b7f1c89f9864e8fbbb7ceed6dac81d237ddf001f4808200a2524c3e005"
+    sha256 cellar: :any_skip_relocation, catalina:      "3e6d64efd270f7d081de052f6380ded8a1ebb436cba26fbb41d1a32098652f5b"
+    sha256 cellar: :any_skip_relocation, mojave:        "ce025c6632c739424486532bcd3c460571366e9933392b31d153bc5a8084eae4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "75b4b360ff4565c3a6ceed6381373702b3cec7b842d5170fe6d39b57116618d5"
   end
 
   depends_on "rust" => :build
