@@ -17,6 +17,7 @@ class Wal2json < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "ec25d4dffbb7b4205565f2ec5ad6c17fa62a965d841a75b475b11bd7ff759c51"
     sha256 cellar: :any_skip_relocation, mojave:        "fbe884982b54b6d4c17a608f8f861368322cc7f74024b20516632f83ccc7fbe4"
     sha256 cellar: :any_skip_relocation, high_sierra:   "f382e783fbba2a97a79f0bda4db61211e3fbc4b5d2d859daa777ffa6845dc8ac"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c02e9cc9347afb28c8328ac77ac7aa16b1ea637c1a720a6d20586312b2edeec5"
   end
 
   depends_on "postgresql"
