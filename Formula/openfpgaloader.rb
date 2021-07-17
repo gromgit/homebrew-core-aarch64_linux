@@ -6,6 +6,13 @@ class Openfpgaloader < Formula
   license "Apache-2.0"
   head "https://github.com/trabucayre/openFPGALoader.git"
 
+  bottle do
+    sha256 arm64_big_sur: "0b0ff606f9c897ac366cda2c8f4aeb297d235910a3e94a3fe75c6c477dac2c4a"
+    sha256 big_sur:       "023de89dec4bdccd8222433be4d20587288d4c30aeadec27c71ac9192e992bee"
+    sha256 catalina:      "7399ee5c7f0d1693867a33b423a55f2c6968bdcedfeb1d0c88c27e50c4d091cb"
+    sha256 mojave:        "6d2efdb166f86a10ae3a3c7b25989859159b2be2b63dc6cc69e874b2b6febaa1"
+  end
+
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "libftdi"
