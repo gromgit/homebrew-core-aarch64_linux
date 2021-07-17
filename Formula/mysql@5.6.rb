@@ -6,9 +6,10 @@ class MysqlAT56 < Formula
   license "GPL-2.0-only"
 
   bottle do
-    sha256 big_sur:  "f11cd8885dc59020425bbdad88911471bc24de21810cbfbbcb6d9dd936473a85"
-    sha256 catalina: "bbdc569f29b12fbcf5e877b15598b6adbbfa551df4ffdf8047832335b6dc829f"
-    sha256 mojave:   "d254901fc740ede4295f3ff7323a5d142772caf6144f04480634e5a9bacab7cb"
+    sha256 big_sur:      "f11cd8885dc59020425bbdad88911471bc24de21810cbfbbcb6d9dd936473a85"
+    sha256 catalina:     "bbdc569f29b12fbcf5e877b15598b6adbbfa551df4ffdf8047832335b6dc829f"
+    sha256 mojave:       "d254901fc740ede4295f3ff7323a5d142772caf6144f04480634e5a9bacab7cb"
+    sha256 x86_64_linux: "e8d140578516bb77f7b3870de3ce9f7ae839a4419926d6a15d7737d647487c2e"
   end
 
   keg_only :versioned_formula
