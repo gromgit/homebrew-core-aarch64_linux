@@ -12,12 +12,12 @@ class Packer < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ce7fa76aebf2cd8e73214ef7ac51f262addd7baa037839752b195a2a76f4f90c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3e317dfd6bc295c247f6d31fb6bbb159156709fd1a6c1f7383f01e979e259586"
-    sha256 cellar: :any_skip_relocation, catalina:      "840fb5bbc4c541debdf7083d5683f4c46f4ff3025a21055ee0e393a1562046f6"
-    sha256 cellar: :any_skip_relocation, mojave:        "da3cfaa2a21c2c94381f7e8c8c6e5bf28b046a62f53dc539dccf9a83518c3842"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e9062232c9659dc6c5feef4ce187181a23dc86c86cd783bb95dbef51d794886f"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c420d6c430d72786c47b6f0c296cabc888e9bdd94a95148f1d1838142ac3011c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "85681babd5919e3cb8e7fb6fac274e435ac1fdeb5c4e7a7e68c64eb1559baf2c"
+    sha256 cellar: :any_skip_relocation, catalina:      "8a5b93cedd735bbd9fe8d3168b0354acc8fe66be5ae7e52d39e62d411f4c8795"
+    sha256 cellar: :any_skip_relocation, mojave:        "17a71d103cd6ed2b6382cbe3b32d3eefda9ff1f8885540f2e77391f595219057"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b415033ebc7882ce0a19852c8cdea5b462367d6fcfb0f38c39b7d518a33cb937"
   end
 
   depends_on "go" => :build
