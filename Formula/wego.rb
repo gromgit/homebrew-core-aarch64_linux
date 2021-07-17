@@ -17,6 +17,7 @@ class Wego < Formula
     sha256 cellar: :any_skip_relocation, sierra:        "504d831a34c22ec006a610f7af4d11000708570513e5391e2077d021ca6b3758"
     sha256 cellar: :any_skip_relocation, el_capitan:    "ccdba75878ffe9b62b49265f6f4b375da80f44e6c5b7c5a40294501fda8903b1"
     sha256 cellar: :any_skip_relocation, yosemite:      "97e7c2edfa9b1a312a0f4f4bce9553b1c8e884409aca3f7acfed2dc99fcef05d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "48f143251c87b71fcfaedb410aace7b51d56127c882bc023a7c8f28458d8ef89"
   end
 
   depends_on "go" => :build
