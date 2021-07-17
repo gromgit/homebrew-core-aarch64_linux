@@ -11,6 +11,7 @@ class Pkger < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "5e8e1ed6fb7d25ba269bc5aff1a0669f745abbc3131960f82f5ea8590fe21ccd"
     sha256 cellar: :any_skip_relocation, catalina:      "6fff2fd267b9f7b73cd88251b61d823a6ea92c318fbbb2de16f4a21aa8c7ee59"
     sha256 cellar: :any_skip_relocation, mojave:        "ef5c45bad9d022fe1752b831e7162f196f3c76f3b4c28a5e880d6638a6e6acfd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2acb57080e1a2243cfccf44fbd731915fdc02a29d2b33e9b587d4df9783f28cf"
   end
 
   depends_on "go"
