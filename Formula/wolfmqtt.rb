@@ -7,10 +7,11 @@ class Wolfmqtt < Formula
   head "https://github.com/wolfSSL/wolfMQTT.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "e3e66f284473f7e646646a7383f41fe09a939b160151692756600f790755df0a"
-    sha256 cellar: :any, big_sur:       "70cc3493f685ea09b9bda05688cfcdd9fb8dd7bbfd386ad1c4c6f58b29769dad"
-    sha256 cellar: :any, catalina:      "495e994e80e47776f4f58c9e87a6b8cc74d0cc91abe4981bf1fca314e0d0ad83"
-    sha256 cellar: :any, mojave:        "a6a39104cd27c320b7e99a303e191fca638a54aca69cdbd10b9ca9a8e26b8a8d"
+    sha256 cellar: :any,                 arm64_big_sur: "e3e66f284473f7e646646a7383f41fe09a939b160151692756600f790755df0a"
+    sha256 cellar: :any,                 big_sur:       "70cc3493f685ea09b9bda05688cfcdd9fb8dd7bbfd386ad1c4c6f58b29769dad"
+    sha256 cellar: :any,                 catalina:      "495e994e80e47776f4f58c9e87a6b8cc74d0cc91abe4981bf1fca314e0d0ad83"
+    sha256 cellar: :any,                 mojave:        "a6a39104cd27c320b7e99a303e191fca638a54aca69cdbd10b9ca9a8e26b8a8d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1509e7e189db1ffcee76522f947d674db99afe17dcfbd8b223ab4fdf6e3b4c1a"
   end
 
   depends_on "autoconf" => :build
