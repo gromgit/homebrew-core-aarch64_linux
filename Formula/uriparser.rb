@@ -8,10 +8,11 @@ class Uriparser < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "3506704f47f1a78c9bb09c8b95fb5a0d3a99f6d0b55d8d9537ed1d3ce1d2dd0a"
-    sha256 cellar: :any, big_sur:       "850d83c937b7bef0e5008f58ecee310a788cd0e3a450e8d2f86eae406c2c82d4"
-    sha256 cellar: :any, catalina:      "aa27111b6106992b4324389e45bef8fc4da6bcba0ceaa94d867eeb320680e71c"
-    sha256 cellar: :any, mojave:        "b5c0c029eaf64eb39cd4b67be8fff8fff2ccb4dac09cda0bf42bbabd0ab39b3b"
+    sha256 cellar: :any,                 arm64_big_sur: "3506704f47f1a78c9bb09c8b95fb5a0d3a99f6d0b55d8d9537ed1d3ce1d2dd0a"
+    sha256 cellar: :any,                 big_sur:       "850d83c937b7bef0e5008f58ecee310a788cd0e3a450e8d2f86eae406c2c82d4"
+    sha256 cellar: :any,                 catalina:      "aa27111b6106992b4324389e45bef8fc4da6bcba0ceaa94d867eeb320680e71c"
+    sha256 cellar: :any,                 mojave:        "b5c0c029eaf64eb39cd4b67be8fff8fff2ccb4dac09cda0bf42bbabd0ab39b3b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1574e225d8e1ba59d30cbd072b8ea37f472e9bb60dc11e679dde6df2b7617c0c"
   end
 
   depends_on "cmake" => :build
