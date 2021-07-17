@@ -11,6 +11,7 @@ class Prestd < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "d4a50947520487dbbf46ba8bff98dd8f7c7bde1ce6727475e9c65a9fa9ce3720"
     sha256 cellar: :any_skip_relocation, catalina:      "ac3cea50b2fa14605264ce90485a11dcca772c92456c1b2b7aad359dfcef78ef"
     sha256 cellar: :any_skip_relocation, mojave:        "1145fec603b57b5323f6499812f5aa84151c9d0f519788bfe23758a2d88cfb5e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ab7308f6fff0a5e750f6b742052506beb73d0c68bd351e1ac018abd557f2f993"
   end
 
   depends_on "go" => :build
