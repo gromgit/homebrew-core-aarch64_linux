@@ -7,10 +7,11 @@ class Libpulsar < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "c6ff21f91a74df5c179821426340067bebe045663d8626a1ad4a1c9cb21cb912"
-    sha256 cellar: :any, big_sur:       "bc0154f9f3f130b793a9ddbf2ede2c8084b658e8ea3948d15dd90c1068339e60"
-    sha256 cellar: :any, catalina:      "bc49897ed00c8229f49cc89ad6a24ea49b0e8e5017e4de129165b66ea3d62da0"
-    sha256 cellar: :any, mojave:        "7248e726666cd83133242b715b9e71208337a22c9c56e7ce9fe71fec03b596fc"
+    sha256 cellar: :any,                 arm64_big_sur: "c6ff21f91a74df5c179821426340067bebe045663d8626a1ad4a1c9cb21cb912"
+    sha256 cellar: :any,                 big_sur:       "bc0154f9f3f130b793a9ddbf2ede2c8084b658e8ea3948d15dd90c1068339e60"
+    sha256 cellar: :any,                 catalina:      "bc49897ed00c8229f49cc89ad6a24ea49b0e8e5017e4de129165b66ea3d62da0"
+    sha256 cellar: :any,                 mojave:        "7248e726666cd83133242b715b9e71208337a22c9c56e7ce9fe71fec03b596fc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0aaf450cd1d09ac982c4e6073fcbecf6183a5a5edf283b7bbb66467d8975a588"
   end
 
   depends_on "cmake" => :build
