@@ -10,6 +10,7 @@ class Tinyproxy < Formula
     sha256 big_sur:       "ca40240c415c22ec760fcde6c735add7b3831ff8b1758d24d8821b7d04ef1299"
     sha256 catalina:      "e9d1db2c5652ccb5a0d5d22f7683208798dd3db7e310b71c5dd3e9fda7ccd57d"
     sha256 mojave:        "2c8d5680d40811fb8a9947015336624a7d3361c44f6381433cb81bab0f7d0179"
+    sha256 x86_64_linux:  "411df733acf01888815fab31d85c217baf60610d0ead1d322c9792a18e87731e"
   end
 
   depends_on "asciidoc" => :build
