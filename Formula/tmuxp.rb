@@ -12,6 +12,7 @@ class Tmuxp < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "e407ec516f82f1ee9c1c32e18237ebfeb7b311c91d8f1495a6ef065af27d1e78"
     sha256 cellar: :any_skip_relocation, catalina:      "9c52ecb1ef2c94a17992896e8f91493cffa63cdf111948d3a9b153f4aab6be61"
     sha256 cellar: :any_skip_relocation, mojave:        "31fddee1eae3fec1ea9d5ae8954a9e99b7e81f0a8495f3ae727178936ce23065"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "30ea646558acd8928c40e5f68f4f27851036a399f953442c3af7b214cb31b212"
   end
 
   depends_on "python@3.9"
