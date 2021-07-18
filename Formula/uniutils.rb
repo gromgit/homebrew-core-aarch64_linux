@@ -14,6 +14,7 @@ class Uniutils < Formula
     sha256 cellar: :any_skip_relocation, sierra:        "5f6609e92596f48fbb20bd0245437f4e967ebc9d06d9fc5e130584f394dce21a"
     sha256 cellar: :any_skip_relocation, el_capitan:    "9e83bffe9268c4be17f6e37254da13d2edfeee19869bd075580eeaa8f770078b"
     sha256 cellar: :any_skip_relocation, yosemite:      "8707e4003370e82a9dc93f928f35f7160b4fa52d6954df916f292020bf9a790b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8cf517fda500768eb4c44d1595e4f49bd4b9bb20c94981a11db42ac8aded62d7"
   end
 
   # Allow build with clang. This patch was reported to debian here:
