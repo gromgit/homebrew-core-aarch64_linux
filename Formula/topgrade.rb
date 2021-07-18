@@ -10,6 +10,7 @@ class Topgrade < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "5c74ee10cb5f589b2ac046e069d45da0158b811c91c95cf9b262d910eceb4641"
     sha256 cellar: :any_skip_relocation, catalina:      "c80e6e22e08a017e07804e068e068dc95720aaf2e5e3d8865fface332321364e"
     sha256 cellar: :any_skip_relocation, mojave:        "b1eb2fab57fa99740f05a2c2e9b31a8ad41c0b9e5e1ddd7906eb44fccf53a946"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "179215981744c07f1f76b0ecba3d5a07f1b1315c0304a60956a04ed7b995f397"
   end
 
   depends_on "rust" => :build
