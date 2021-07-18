@@ -16,6 +16,7 @@ class Phplint < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "5191083b9faf95df4815a425a2b0e3a991bc578c5fef05f804663adcb057d1da"
     sha256 cellar: :any_skip_relocation, catalina:      "5191083b9faf95df4815a425a2b0e3a991bc578c5fef05f804663adcb057d1da"
     sha256 cellar: :any_skip_relocation, mojave:        "5191083b9faf95df4815a425a2b0e3a991bc578c5fef05f804663adcb057d1da"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ecb11516875f096c647e254ef2451687ead874112397779abdb1afeafd8e0563"
   end
 
   depends_on "php@7.4"
