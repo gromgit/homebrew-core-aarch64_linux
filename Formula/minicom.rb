@@ -15,6 +15,7 @@ class Minicom < Formula
     sha256 big_sur:       "ac0a7c58888a3eeb78bbc24d8a47fa707d7e3761c4b28f46527434d49e254b55"
     sha256 catalina:      "9cee8e5839a3e19aa732307ee70246b1567ddc3a643ef39aa91b6d888301f6e5"
     sha256 mojave:        "e2b702dec206101120ce947ca2a999c9f5fe7e8c62f95b65091146b865acb268"
+    sha256 x86_64_linux:  "7d1b0aae1f169968d42e4dea644dff5a4f18010b59b334439aa2bd276c6e913a"
   end
 
   uses_from_macos "ncurses"
