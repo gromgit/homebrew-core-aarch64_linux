@@ -12,6 +12,7 @@ class Pgxnclient < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "90daeaa33dc73e7a0c9694ecf93f24d13ea7fb182590d2ad5c60969ad0f1281a"
     sha256 cellar: :any_skip_relocation, catalina:      "eeb6087b532a991ee65bfc78c83d06463be1150c8330d9c0f2c593cbd961a205"
     sha256 cellar: :any_skip_relocation, mojave:        "1561677627ceb505dc7c5cc15cbefc686a696e574b5dd34a0414ee02fcb0c7ad"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a2e647eaaf9e8c0d0afc0e6ee62d83ec29151c487f922ef6b3d3abf9959f7e55"
   end
 
   depends_on "python@3.9"
