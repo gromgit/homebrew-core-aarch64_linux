@@ -10,6 +10,7 @@ class Taskell < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "c95a88da66c6183220d8ec6d7894eba3be90a9b6a84b0164dca643ec1815e0a1"
     sha256 cellar: :any_skip_relocation, catalina:      "714ff7f48235b81bb89b9cdae12513e9c4667622bd00423f8f9efa5715d34efa"
     sha256 cellar: :any_skip_relocation, mojave:        "cfe418dcc1fc8858d25cc1b83a71a4bbb37d82c7c541b0a487c72fb629f4f035"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dbd5cd50b7b69021a0d8e1cbec409027ea92f7c032559bd0bd07056189945ad3"
   end
 
   depends_on "cabal-install" => :build
