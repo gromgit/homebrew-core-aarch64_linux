@@ -5,6 +5,13 @@ class Alda < Formula
   sha256 "82227e04dd70f43b34af00350387844a38c1317eadbc0daf1267a8933d7b5c64"
   license "EPL-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "665fabe9c4477b28f9f5827c9e39d281d9292e4fe4f9101bca87d5027afebe31"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a8b2c3d3183cd45fee48aed3685129b0040fc59ab827bfa99313becd23079211"
+    sha256 cellar: :any_skip_relocation, catalina:      "551e411211cf0d745de515b2c98a9060d891bfb0aac540c87f2eb18715f0e5cf"
+    sha256 cellar: :any_skip_relocation, mojave:        "8bb3ffcd2139b6192bb8659d3f28db0625ef97a7d0da320bae34f3d7098f92e5"
+  end
+
   depends_on "go" => :build
   depends_on "gradle" => :build
   depends_on "openjdk"
