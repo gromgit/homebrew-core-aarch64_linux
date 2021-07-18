@@ -10,6 +10,7 @@ class Moar < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "d521a4923cde3e7834bbc4daf247125a3a2d3fa30fe2a72f969c3bde51e588b8"
     sha256 cellar: :any_skip_relocation, catalina:      "d521a4923cde3e7834bbc4daf247125a3a2d3fa30fe2a72f969c3bde51e588b8"
     sha256 cellar: :any_skip_relocation, mojave:        "d521a4923cde3e7834bbc4daf247125a3a2d3fa30fe2a72f969c3bde51e588b8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "20a9c46dc7d5db9d17691e874feba8ed275a57249aa4827edfd749af9ebf175b"
   end
 
   depends_on "go" => :build
