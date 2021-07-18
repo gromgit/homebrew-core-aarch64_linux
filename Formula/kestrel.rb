@@ -9,6 +9,7 @@ class Kestrel < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "8106b504796e7c73733c4206d00e2d7f7213e998729a9fe6c56a6016b14b822d"
     sha256 cellar: :any_skip_relocation, catalina:      "8106b504796e7c73733c4206d00e2d7f7213e998729a9fe6c56a6016b14b822d"
     sha256 cellar: :any_skip_relocation, mojave:        "8106b504796e7c73733c4206d00e2d7f7213e998729a9fe6c56a6016b14b822d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "57b8c7f3a898f32a556efc9f79f1944f8739a458f07b671664357239d6a5b7e8"
   end
 
   def install
