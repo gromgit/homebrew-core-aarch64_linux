@@ -11,6 +11,7 @@ class Pachi < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "d14dec70d5fedd0d7ba63b05f175b06b12c40e1da71d24da64712ce63858dae1"
     sha256 cellar: :any_skip_relocation, catalina:      "9a2adc64bf7dbfbaf9e3d9ff940d6c5bcb0e4040160ed62f57751ec87281132e"
     sha256 cellar: :any_skip_relocation, mojave:        "c88f24dd1e7a267848eab540dc2b0961962825ab6e7088fc24b335159dacf31c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e0fc26989c0cf90b6fa2256e129b0b87993464ec27ad88fefe569abdd9702292"
   end
 
   resource "patterns" do
