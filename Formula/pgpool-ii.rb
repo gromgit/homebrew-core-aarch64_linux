@@ -14,6 +14,7 @@ class PgpoolIi < Formula
     sha256 big_sur:       "f32afd6fc0f3c89085a10e84f8bb228bbfb73c915090c2e177bc98b0e64f1e54"
     sha256 catalina:      "2fae0f2d0ed2d7fa2557737b3d12ff24aaaabc478f0d6b97977c75b8abb04165"
     sha256 mojave:        "72ba77fd27a7bc1f16b0bb348874b7c8698f64f51e6cea2292da06d6fc328d16"
+    sha256 x86_64_linux:  "8f393ebbb8433ded6d3b81e5f7475d4c83b1220943ede0693ae9d18c01297f7f"
   end
 
   depends_on "postgresql"
