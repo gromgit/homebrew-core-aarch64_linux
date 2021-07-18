@@ -17,6 +17,7 @@ class RosaCli < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "d91d264307b1ab814bd4deb5ed34a13999420d859288d3a9e88fdfc6362a7f8a"
     sha256 cellar: :any_skip_relocation, catalina:      "02978ca867911741f210a58d6a518eaa443ae0b4c7776165dfd31b062b254d3e"
     sha256 cellar: :any_skip_relocation, mojave:        "1c77eb6e2ce4d27fbe09dafbf6e2d5cbedb79cd8420b1cf40c300202ed055825"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4cf41d1dbfc39507f78ae6c1f0a908f56ba97456d205490058ce745f0c2be67d"
   end
 
   depends_on "go" => :build
