@@ -16,6 +16,7 @@ class Scotch < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "54e1182e94e87f15ba4671dd4611efd9aaf6dfa4c480fc304f40633032a70a19"
     sha256 cellar: :any_skip_relocation, catalina:      "47642fe1c6bfc3da89aa509ac9220d9e27071e30327fb6c607e6473d4cc4d7d4"
     sha256 cellar: :any_skip_relocation, mojave:        "ec79906f2bc0c47ac0989a7d4dcc6a3a7a49021e8a330b1f04a973ed09d01b0e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f93fe6e8bcdb31271f7d082915061d6fa2b9e415611a6f52929dbb45a48dd847"
   end
 
   depends_on "open-mpi" => :build
