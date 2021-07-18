@@ -14,6 +14,7 @@ class Lldpd < Formula
     sha256 big_sur:       "ae966214024578b49cc642d8fbd141446d3321b3ce3a6ef360db2b9acda5509d"
     sha256 catalina:      "e34ca3a997738dcf2e0d3fa8a549c6c503a9e8119c2173293c0de24c612c4873"
     sha256 mojave:        "9e72bb2d06eb3035026d4c3731c1fc71e72e9fe18009ed89b1946eea7ac6c390"
+    sha256 x86_64_linux:  "cdecef66cd30283cd88c61eeafc1ccb70a58e6f78bc3941d1ce72bcbbeaa3436"
   end
 
   depends_on "pkg-config" => :build
