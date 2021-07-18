@@ -8,10 +8,11 @@ class Pacparser < Formula
 
   bottle do
     rebuild 3
-    sha256 cellar: :any, arm64_big_sur: "1999482c32deaa8c6b9a38800b6dbc4f6d18076177f6a8a0dad49c21c4327781"
-    sha256 cellar: :any, big_sur:       "55ce66921189d2ba41d3cf58f7548237442c5387372b8cc4bab891cf1ed7766f"
-    sha256 cellar: :any, catalina:      "ca13d2507c9c6616bc6c3604c19a7f6f1652bb3b3c1fed3168c4d832a10b0174"
-    sha256 cellar: :any, mojave:        "3544e7aed8d310d3407997f46b8b51cbbc2b1d962f90535175baff72301e375e"
+    sha256 cellar: :any,                 arm64_big_sur: "1999482c32deaa8c6b9a38800b6dbc4f6d18076177f6a8a0dad49c21c4327781"
+    sha256 cellar: :any,                 big_sur:       "55ce66921189d2ba41d3cf58f7548237442c5387372b8cc4bab891cf1ed7766f"
+    sha256 cellar: :any,                 catalina:      "ca13d2507c9c6616bc6c3604c19a7f6f1652bb3b3c1fed3168c4d832a10b0174"
+    sha256 cellar: :any,                 mojave:        "3544e7aed8d310d3407997f46b8b51cbbc2b1d962f90535175baff72301e375e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "171b897e20fc774db40f8d7e3a61e6367216cd485894f8b04c8a0d14a7bae9ed"
   end
 
   # Fix build for MacOS 11.1
