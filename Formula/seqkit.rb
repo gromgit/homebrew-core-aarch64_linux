@@ -10,6 +10,7 @@ class Seqkit < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "35b79c707358f78714916c36474368626d9c901fa1a407dfa8b7409b13f81071"
     sha256 cellar: :any_skip_relocation, catalina:      "4b28207b5efa495071f8f742034e8513e2157eb8f5609980b8d7aab814c51bcf"
     sha256 cellar: :any_skip_relocation, mojave:        "a34925843299ca13e59b4a7a8ffed78ab0a6e326b3448d1a0096d68cabd88ae5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "aa4538440a2919c83721b2760d4846313913a612b2e12b58ef8cbf9b5842879a"
   end
 
   depends_on "go" => :build
