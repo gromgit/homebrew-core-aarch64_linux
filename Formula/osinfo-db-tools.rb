@@ -15,6 +15,7 @@ class OsinfoDbTools < Formula
     sha256 big_sur:       "460a75b81da6d76332f29596cecc9bcf543262e8d5848c7fb1bf627b5c5645ad"
     sha256 catalina:      "8a572a5e4559404c4ee8b293d934286a155debc374c6e9acbb19decf480e7d5e"
     sha256 mojave:        "784931937986f8132ca5f742ce7d966fe08eb11742d1bbf48d5253ecbcff3bfb"
+    sha256 x86_64_linux:  "95a2338adb2f05354a14fcf5bec97cd5a0bdb03e5f1d3b1f9664e829d9b911bf"
   end
 
   depends_on "meson" => :build
