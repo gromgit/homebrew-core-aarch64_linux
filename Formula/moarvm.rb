@@ -16,6 +16,7 @@ class Moarvm < Formula
     sha256 big_sur:       "a89e2efc2219b8d4a382b31cedb58996a75f8055cc53b2d9ee602152e57e92b0"
     sha256 catalina:      "e2e3d3ffaf9dc1b3df5432d90692f405b4b9c7464b4caca42da75ce5f85cb698"
     sha256 mojave:        "2db8f7e21c00dd56d7389806db9468d019f14dbad337d7194a8994276d71a984"
+    sha256 x86_64_linux:  "b7316813d31849202726cd973b027f0f01cb422e41a6d29e8c012b5255872c81"
   end
 
   depends_on "libatomic_ops"
