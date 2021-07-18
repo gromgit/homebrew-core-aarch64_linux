@@ -10,6 +10,7 @@ class Matterbridge < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "6f9b08c117721b2b1d5bd4500fe89cb5df4fd518c9f21c4ddd6ff8e9b6810cf3"
     sha256 cellar: :any_skip_relocation, catalina:      "8ca1c58e290c072b57ee2a743a59790bafddd58a761adc9cb4ccce2c2514f89b"
     sha256 cellar: :any_skip_relocation, mojave:        "f5dce95c9872d43d61edf07ae27d8d7cdbf551ef53dac9885fc504671f6a60ac"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8ea2db093cc24b871ce0cfab44781681d6ff1e171065467d106109e74d01fa1c"
   end
 
   depends_on "go" => :build
