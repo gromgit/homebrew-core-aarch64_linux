@@ -51,7 +51,7 @@ class Speex < Formula
           return 0;
       }
     EOS
-    system ENV.cc, "-L#{lib}", "-lspeex", "test.c", "-o", "test"
+    system ENV.cc, "test.c", "-L#{lib}", "-lspeex", "-o", "test"
     system "./test"
   end
 end
