@@ -6,6 +6,10 @@ class Onedpl < Formula
   # Apache License Version 2.0 with LLVM exceptions
   license "Apache-2.0" => { with: "LLVM-exception" }
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "5c09dcadf4308512478900387b6cb785cf95af41aaa280487341120d765a1842"
+  end
+
   depends_on "cmake" => :build
 
   depends_on "tbb"
