@@ -7,11 +7,11 @@ class ArmLinuxGnueabihfBinutils < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "5a659a38444d82e79e8f6257fc1d5c7356f17089ce294b2ff843ea3000bb3e60"
-    sha256 big_sur:       "00bc33303a003f4b14b68a4ffedf08ad6d271a90701ac3fe1f4c826a315ec017"
-    sha256 catalina:      "90b2ed05b009b7e4f62e7eb123dbe16caa6feab3bef16b60617136b1c834cad7"
-    sha256 mojave:        "583c8e1990736b9b6e7ccf5b6a1b6042bf6a63e4de45bb840a247434dfedd923"
-    sha256 x86_64_linux:  "73438210ebc0a798c7607dd7366cfb3cd2321691a6d52d4201d0d0349587a085"
+    sha256 arm64_big_sur: "f090259411ea17662b23b08700cc6bb63116624932ef17388e80cb88ec431fa5"
+    sha256 big_sur:       "6fae8a0bdc7ef15c1f6dcfac0ae2a8bd533f0e5cbbdb44e857f48c5412b90a0c"
+    sha256 catalina:      "1ab534b59889553b9880a283d78800e5a334e3b883d896879f2f2a8d0f2e9531"
+    sha256 mojave:        "3d2a120a2968b69da655591646fe673023631e237e197c00e8e6301bcc1a6dad"
+    sha256 x86_64_linux:  "8d75311051fcd313c68ff04c1bdef32d740177f259dad09dc4fdea83584e706b"
   end
 
   uses_from_macos "texinfo"
