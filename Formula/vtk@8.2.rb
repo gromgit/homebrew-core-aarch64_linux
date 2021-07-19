@@ -7,10 +7,10 @@ class VtkAT82 < Formula
   revision 7
 
   bottle do
-    sha256 arm64_big_sur: "81fc6d19a33fa38e234b7d18bbbbc81fbd0b2996e402ba774c69193b53c358ba"
-    sha256 big_sur:       "8bc79eb0816f3fcbe54ffd10f6db58094aa8814e15e7fb6a7402ea65a1885be4"
-    sha256 catalina:      "b8b797c6faf44ded4565bfb887c14d915f3997fc646aef250c273d2cfbc5d7d8"
-    sha256 mojave:        "228d62e2e0f9933c9a967aa71394d062a23611e7fea37e430daeb49a70df4250"
+    sha256 arm64_big_sur: "8a001dca2e5878f669a252c1e84ca87944c4251aba881e591180a5378d54ce83"
+    sha256 big_sur:       "1ed6e5ba0461c769d63c956dbcb171c0e511dfc538a8f2eb932050a0344858d3"
+    sha256 catalina:      "3d776b859879687ff1344482f120e463bab4074df900b6bc7061fd12b631a333"
+    sha256 mojave:        "0b07673d56b58197760644ff74c99519073539b8bbf1602d9b40e5f29fbb991d"
   end
 
   keg_only :versioned_formula
