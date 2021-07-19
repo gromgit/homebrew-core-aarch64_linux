@@ -5,12 +5,14 @@ class NetTools < Formula
   sha256 "b262435a5241e89bfa51c3cabd5133753952f7a7b7b93f32e08cb9d96f580d69"
   license "GPL-2.0-or-later"
 
-  depends_on "gettext" => :build
   depends_on "libdnet"
   depends_on :linux
 
   def install
-    system "yes '' | make config"
+    # Support non-interactive configuration
+    inreplace "configure.sh", "IFS='@' read ans || exit 1", ""
+
+    system "make", "config"
     system "make"
     system "make", "DESTDIR=#{prefix}", "install"
   end
