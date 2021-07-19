@@ -15,12 +15,11 @@ class MinimalRacket < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "6234285fe74146dfa7077605ae98569ccfa46990120216454c8484a100ce7308"
-    sha256 cellar: :any, big_sur:       "a14efabedba4ab25fa1caceed9dca519a14209320973d01a98124450537eab01"
-    sha256 cellar: :any, catalina:      "949d23dbde6f1be019e5ddd6e0400dea79b9a4967104308b6dec9af8a5ee2947"
-    sha256 cellar: :any, mojave:        "bbfce452b9bed295d01e0efb309e8ad0016b810659a9ce9220dc699e13e6eee7"
-    sha256               x86_64_linux:  "2e86beb552928b433dd604e140123ef784ea55bdb81857a11cd1ac2bf6bf46fb"
+    sha256 arm64_big_sur: "2fcbd22adcdf16e1a8a1618f3c06022cc4081752b0802767b4e48469b22f4f36"
+    sha256 big_sur:       "2549795768caa35126b4464af7dd15bd4d3f11755f9853ffc3f248d061e7b457"
+    sha256 catalina:      "a79ff7f036256aae9159f89897e32629641d889b4bd37c98e91b216a7f3085f5"
+    sha256 mojave:        "56d2c05a1f17765404dad099fa7565883447be394f2ecbe2b74a19c13d6b7ded"
+    sha256 x86_64_linux:  "5649130e99166343b0147b8fc992d1004f1dfd8529e8de0f284c0912217aa0c8"
   end
 
   depends_on "openssl@1.1"
