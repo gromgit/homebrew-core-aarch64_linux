@@ -6,11 +6,12 @@ class Cjson < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "1fa282ceccaeb65e3af86a5787cc5ff413ce6b97ecca802c9c562b85b1850804"
-    sha256 cellar: :any, big_sur:       "9d85bfec25eec9244a4e99807bcb976b72afd47e3c740f37f3d7033b910d6abc"
-    sha256 cellar: :any, catalina:      "19da0211d4aabe7a2bf7cf489682d8a9ec57f7d5749cdd39f81491354017a9b9"
-    sha256 cellar: :any, mojave:        "32192c80f7a8dea4988342342dd80aabba292e8200e52f9cd2a2a35fc202b671"
-    sha256 cellar: :any, high_sierra:   "0dfc85831529da5d33e07b46c08fbca4ed673f3879c4025a982b7612a0a05b7c"
+    sha256 cellar: :any,                 arm64_big_sur: "1fa282ceccaeb65e3af86a5787cc5ff413ce6b97ecca802c9c562b85b1850804"
+    sha256 cellar: :any,                 big_sur:       "9d85bfec25eec9244a4e99807bcb976b72afd47e3c740f37f3d7033b910d6abc"
+    sha256 cellar: :any,                 catalina:      "19da0211d4aabe7a2bf7cf489682d8a9ec57f7d5749cdd39f81491354017a9b9"
+    sha256 cellar: :any,                 mojave:        "32192c80f7a8dea4988342342dd80aabba292e8200e52f9cd2a2a35fc202b671"
+    sha256 cellar: :any,                 high_sierra:   "0dfc85831529da5d33e07b46c08fbca4ed673f3879c4025a982b7612a0a05b7c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a54c340a88a468174fada6874deb252f43cb08bdcfdecf69615c3b987f278dda"
   end
 
   depends_on "cmake" => :build
