@@ -6,10 +6,10 @@ class Zola < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3578486fdec183e82c51c5c489e9a78f9f997cbc05ebcb541fc60059163a9b44"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d4ecc13ce735449bbba5e83c57617ce03b939e69493e9e65d2c23a294ff6ea2e"
-    sha256 cellar: :any_skip_relocation, catalina:      "aaccf8b7fe4e9256c38021902dcffca291d02de1ac662ce0219a1fca0e8fac0a"
-    sha256 cellar: :any_skip_relocation, mojave:        "d883c9f8439ee6226f1392f1350ce974b4312367e026c1ae756fd7c1765d5bf5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1ca07c70636c4e522960376758427ccaf5ac06771fbd20c5dad4f9e0fbbd8d92"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5a192bd23baa5ca550f13f2e0d6886ee678f47eac3317268c72b10382c54fc03"
+    sha256 cellar: :any_skip_relocation, catalina:      "d70e314ad7e829bbc6aa3a06cd7a0092cf957b8ec3bedc6f91eba6dfed402971"
+    sha256 cellar: :any_skip_relocation, mojave:        "deb06f0987009ec46ed28b0c6ea7b1470f80ad84fbe44f62662833f949c973b8"
   end
 
   depends_on "cmake" => :build
