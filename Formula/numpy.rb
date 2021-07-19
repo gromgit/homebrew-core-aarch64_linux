@@ -7,11 +7,11 @@ class Numpy < Formula
   head "https://github.com/numpy/numpy.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "88df8a9ea03e217ed2d648eaacd541003f15437bbe9a575ed3b4c0c8a123efd0"
-    sha256 cellar: :any, big_sur:       "303ca5f3bfe16812f0f2fead2b29230906752032d45014a6e972a698ff8922f4"
-    sha256 cellar: :any, catalina:      "66b7372569ec253cb81ab172903dbed96495cbca2452d41119867161bfd4433a"
-    sha256 cellar: :any, mojave:        "f34cc0cd3046377a5640147f4adc26be75dcfc36dbeee92dc71147cc9e85c5f9"
-    sha256               x86_64_linux:  "55238d0ac9a1dd50de3eca4586c5bdeb327fbdb3f3e0a2d9db5d63e86b64b570"
+    sha256 cellar: :any, arm64_big_sur: "5b16358f9ed92c54d021da08b84cdd7246672cfd170371e8c0be78dd48d991c7"
+    sha256 cellar: :any, big_sur:       "4e70f201e52c031492ad3389eb24f6c65803335de40224074467c3a7a31d13f8"
+    sha256 cellar: :any, catalina:      "afd60142de082369b0ee822f4554d1478db244801c2003b2376143287eb4f417"
+    sha256 cellar: :any, mojave:        "71b47356e79bc9b28f8126017278923a636325115da97e125da340ba6a90626c"
+    sha256               x86_64_linux:  "65bcb382295c1c72eac8f597edc3debc6b0f272270109abbef6875eea9603bc3"
   end
 
   depends_on "cython" => :build
