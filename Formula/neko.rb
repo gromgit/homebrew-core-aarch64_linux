@@ -8,10 +8,11 @@ class Neko < Formula
   head "https://github.com/HaxeFoundation/neko.git"
 
   bottle do
-    sha256 arm64_big_sur: "db3b62ea32c9b528423997eb79bab7b96463f3074e5452499a1ea87f742129f0"
-    sha256 big_sur:       "ca0a54255e775f29b6867eda77f2ff115424c77293755847eb8edf4a8d5bb142"
-    sha256 catalina:      "f1adf8d28ac342d233f018c7263c66072969e97ff4efd7c1e0645b80083332dd"
-    sha256 mojave:        "49ecf3a704be8b5451af12ce5ccb8bf921141e3243ac525794a61e22c987f18e"
+    sha256                               arm64_big_sur: "db3b62ea32c9b528423997eb79bab7b96463f3074e5452499a1ea87f742129f0"
+    sha256                               big_sur:       "ca0a54255e775f29b6867eda77f2ff115424c77293755847eb8edf4a8d5bb142"
+    sha256                               catalina:      "f1adf8d28ac342d233f018c7263c66072969e97ff4efd7c1e0645b80083332dd"
+    sha256                               mojave:        "49ecf3a704be8b5451af12ce5ccb8bf921141e3243ac525794a61e22c987f18e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "935a76e8f012f4f1522bfaf901cf85bddf875bd22be300e220d59c5bd3ef18c5"
   end
 
   depends_on "cmake" => :build
