@@ -7,10 +7,10 @@ class Clarinet < Formula
   head "https://github.com/hirosystems/clarinet.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "08ecf876acbdc24bc33660bdd8843ff052539ae2c3e0ec52f4eb81ec067ae589"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c9b7178b4f219f4c64d8f154ad320d74f19a543ac91a3b4d0a4c1012a19dd74e"
-    sha256 cellar: :any_skip_relocation, catalina:      "40b66cb01751c17a517b640bd15251f2f56f2124b77e4c40e699459e6e71a191"
-    sha256 cellar: :any_skip_relocation, mojave:        "899590f8a38475a7aea5c82de8b3e680157ab24c1adf4adc1643ac7f1d45312d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "27d4a6740525955d6ae284e5a31c767121576d1465fa2b3163ce397cf3380433"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f370e6bd23ccd8a6525ab94814536510d6db99503a718e7677f0c46c8d9bb9e2"
+    sha256 cellar: :any_skip_relocation, catalina:      "b249798ce2310d1bbbc2ca6b0260ef0e46b0f06ad32e80c3aec67b1021232de0"
+    sha256 cellar: :any_skip_relocation, mojave:        "26f6b854d18eda7155f802d982ca16d465b16ed594b6d50283c039e9e83b9743"
   end
 
   depends_on "rust" => :build
