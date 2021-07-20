@@ -12,11 +12,11 @@ class Dust < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1a8fd300c0636347e98ae22025c13477094feaf6d2812a510c440eb311981a16"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b9211d15bd64b618d8c055916f62586619a812c0365c6bebfdaf12408f63aeaf"
-    sha256 cellar: :any_skip_relocation, catalina:      "aa1ae392db8649baa12180724f746ed4e217cee48598f5c62e7e9bcf3eaf35a1"
-    sha256 cellar: :any_skip_relocation, mojave:        "047f772ba838c1c1677c37132cb12bf67a574c05a6b1a7038d5606ea595b2dda"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "38182f4623cc3c4b1919d1fd988c1fa053bcc3a2a93cbd7f9a939e87b454c0d1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ba89a8ce4968565f44b159fd38dca9491f95bb1f8fcd9a39d19fb67a75b9bb76"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6f84112c0ad67a6f3098d672e01529d26be71df0ab6bbe60c8becafa8f8d9d81"
+    sha256 cellar: :any_skip_relocation, catalina:      "6d025629e4db12253d716caa7c4a26b7a4dd575cd14474846fa71f506ad6f24c"
+    sha256 cellar: :any_skip_relocation, mojave:        "19f98e79ccaccda3d58483fbc59c345b3833b62d61254b663ad28f4e56cf2bf8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8686d1ba2941e40dc66fad27fc7ee97a1cb2474a6becd94e35d81f3fc88a1a7b"
   end
 
   depends_on "rust" => :build
