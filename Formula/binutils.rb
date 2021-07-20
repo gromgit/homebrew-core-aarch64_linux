@@ -7,11 +7,11 @@ class Binutils < Formula
   license all_of: ["GPL-2.0-or-later", "GPL-3.0-or-later", "LGPL-2.0-or-later", "LGPL-3.0-only"]
 
   bottle do
-    sha256 arm64_big_sur: "f0c23d8672a107f94bb46eec9cae654b1a9abf663e6d25ec82467f0dfa45dff1"
-    sha256 big_sur:       "993ab1e0149a47224c4e7063be178ff5d551b2ea6d2a79805f03ca40cd5f1279"
-    sha256 catalina:      "d3112607a4820d58df8d1fc0fd3ac998ba9ba8563245e72c9e197c50b333748c"
-    sha256 mojave:        "06de25d200fd389ee4157a278abe261e20c18f8f6ad28d9519a4a4001b5b027e"
-    sha256 x86_64_linux:  "962546ef27972295920564cfae8007b7e98ae66c08f2621b49e6aad3ae53f82a"
+    sha256 arm64_big_sur: "2bf192cb717e8e107e61899218d8d25db92d8c07d164b2dea9c50a3d41b0dca9"
+    sha256 big_sur:       "9757e5cac1e7fd0046d02671d31f608e57c2398a2d3a0042518707a5fe6fb30c"
+    sha256 catalina:      "0c90a75475fc973066ace915f8f58f83bf5009181e42c9c8140dc72453d53d0f"
+    sha256 mojave:        "58bf91ff243d080224bd9f7170307788d4319ccdd96d17e7afbf0f326a639f97"
+    sha256 x86_64_linux:  "7dcdd47b180a4dfcc838fa0a047f6fbfac0cd37bd867170ac026e6b8ae93af5d"
   end
 
   keg_only :shadowed_by_macos, "Apple's CLT provides the same tools"
