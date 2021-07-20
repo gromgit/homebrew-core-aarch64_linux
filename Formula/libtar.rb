@@ -21,6 +21,8 @@ class Libtar < Formula
   depends_on "automake" => :build
   depends_on "libtool" => :build
 
+  uses_from_macos "zlib"
+
   def install
     system "autoreconf", "--force", "--install"
     system "./configure", "--disable-debug",
