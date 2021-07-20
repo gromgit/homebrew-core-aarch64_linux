@@ -7,11 +7,11 @@ class Libcouchbase < Formula
   head "https://github.com/couchbase/libcouchbase.git"
 
   bottle do
-    sha256 arm64_big_sur: "72815d6444601b6ffb4961321669a6c806e1efce92c76e6f14a3773eb7c17c30"
-    sha256 big_sur:       "53e18993450e62ce593f0562e954dd62157cf82f2279c44b984fb13a34cf76ac"
-    sha256 catalina:      "1a7d3d96544331a8e43df4400a8e4bd4451350d7a0fe6dcb91fae05bf41ca50c"
-    sha256 mojave:        "d457d270cd478f5a52c33b2de47041033a13da57d618febc98d8c0c152392bfc"
-    sha256 x86_64_linux:  "a67d0059bd7ee71a42d21524833d8b2e920094caf308c97a736769b6f82b0f39"
+    sha256 arm64_big_sur: "24436faa98e02fab372bd21f259f7887a3625bdb65af748468093f82decf260a"
+    sha256 big_sur:       "e292812ed36b3fe83dee5d078bc422b6229f8c5c9444ed29fe673db8f59cd40e"
+    sha256 catalina:      "5b993514ce5131ad43f3945e3867c787e5b595f946b7d372be14b246aef9aa3b"
+    sha256 mojave:        "098f4cc393cc05652042d7c2218d5c2c07d36f125a73d8982737e09433b34d2e"
+    sha256 x86_64_linux:  "0298aae906be4eeb4298f4e7c976060d34dc7e6aeb2a58062f384cc99d39fbbc"
   end
 
   depends_on "cmake" => :build
