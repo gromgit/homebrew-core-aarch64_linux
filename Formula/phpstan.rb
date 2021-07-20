@@ -13,15 +13,12 @@ class Phpstan < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "b537c335364b0b4fd401341c96827e989c2e11fff8de267ead317b5f65ff3257"
   end
 
-  # Keg-relocation breaks the formula when it replaces `/usr/local` with a non-default prefix
-  pour_bottle? do
-    on_macos do
-      reason "The bottle needs to be installed into `#{Homebrew::DEFAULT_PREFIX}` on Intel macOS."
-      satisfy { HOMEBREW_PREFIX.to_s == Homebrew::DEFAULT_PREFIX || Hardware::CPU.arm? }
-    end
-  end
-
   depends_on "php" => :test
+
+  # Keg-relocation breaks the formula when it replaces `/usr/local` with a non-default prefix
+  on_macos do
+    pour_bottle? only_if: :default_prefix if Hardware::CPU.intel?
+  end
 
   def install
     bin.install "phpstan.phar" => "phpstan"
