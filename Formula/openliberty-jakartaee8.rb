@@ -10,6 +10,10 @@ class OpenlibertyJakartaee8 < Formula
     regex(/openliberty[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "9a125db84e711f0d6bbd80db0b829716249a15311524a7759f825b8ea0fb1371"
+  end
+
   depends_on "openjdk"
 
   def install
