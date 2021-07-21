@@ -5,10 +5,11 @@ class Makensis < Formula
   sha256 "9b5d68bf1874a7b393432410c7e8c376f174d2602179883845d2508152153ff0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:     "aa8a346937316765bf9ffe7d532b08212fab4ae697aad7e23185baeabe280249"
-    sha256 cellar: :any_skip_relocation, catalina:    "889d630bf8637f68e90a9591a373ee44bde8d9d6a9395171e024fdced27f26ef"
-    sha256 cellar: :any_skip_relocation, mojave:      "b40f5a388f0dddeb2c3d274bdc43fbba6cc0a9f613d056f0981bc60350252448"
-    sha256 cellar: :any_skip_relocation, high_sierra: "fe92934c874a27ead142b769d1c1258c6fd3baa66f2f005cad3f57ccd759734f"
+    sha256 cellar: :any_skip_relocation, big_sur:      "aa8a346937316765bf9ffe7d532b08212fab4ae697aad7e23185baeabe280249"
+    sha256 cellar: :any_skip_relocation, catalina:     "889d630bf8637f68e90a9591a373ee44bde8d9d6a9395171e024fdced27f26ef"
+    sha256 cellar: :any_skip_relocation, mojave:       "b40f5a388f0dddeb2c3d274bdc43fbba6cc0a9f613d056f0981bc60350252448"
+    sha256 cellar: :any_skip_relocation, high_sierra:  "fe92934c874a27ead142b769d1c1258c6fd3baa66f2f005cad3f57ccd759734f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "39ae544951ae954b512686ba78c4f191ca29bd0de88a427bf8c39c49816f01b6"
   end
 
   depends_on "mingw-w64" => :build
