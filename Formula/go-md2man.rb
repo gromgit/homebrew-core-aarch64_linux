@@ -7,13 +7,11 @@ class GoMd2man < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c8228c62cba90dfcda781325c0cd8709ee32e31f5ec7eb3471e822e7bb7627b4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c6f05023662243e7c46d5206a1a2af2db7c2bc584086608f18388e1a05ecc755"
-    sha256 cellar: :any_skip_relocation, catalina:      "1ff2123c31e56bc183a1b9b0e270c01ee31e16efc34c060e0d4ecbde87d9e16e"
-    sha256 cellar: :any_skip_relocation, mojave:        "1ff2123c31e56bc183a1b9b0e270c01ee31e16efc34c060e0d4ecbde87d9e16e"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "1ff2123c31e56bc183a1b9b0e270c01ee31e16efc34c060e0d4ecbde87d9e16e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "267262bbebe51ae5c1ab8a53ee6d0a260751ae09f11685a7afbc7a1c6c6eda8c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "29c6f41dc0d4cfb59a80b55f84b2329ba00d75576cf1a95c050dd372044e30f5"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ec0e280e3b7f68c5f0c7415aab6bf202f18080ff87750584a446be1a5636fa97"
+    sha256 cellar: :any_skip_relocation, catalina:      "ec0e280e3b7f68c5f0c7415aab6bf202f18080ff87750584a446be1a5636fa97"
+    sha256 cellar: :any_skip_relocation, mojave:        "ec0e280e3b7f68c5f0c7415aab6bf202f18080ff87750584a446be1a5636fa97"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8b39e17cacacb31eecfc3412dd251b536c717384c4634fe252691a1e0f305706"
   end
 
   depends_on "go" => :build
