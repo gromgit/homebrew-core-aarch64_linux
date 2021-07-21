@@ -10,11 +10,11 @@ class Global < Formula
   revision 1
 
   bottle do
-    sha256 arm64_big_sur: "ffba636507257bfb9dffd90dc114f1ad3528edf724beae0d200e3b5817f642bf"
-    sha256 big_sur:       "598cb4071a8d708c46becd27983443b6c14259c797d8a61718b0f1bb9094ae6f"
-    sha256 catalina:      "c476c6bee46e116a6dbe93754221132f8cc1cfbdb88d10c08d38b65c4e77b460"
-    sha256 mojave:        "37c6a139a405bbd869bcd8175e20a0e488ce0176646a0dbbfed3d9ede030977f"
-    sha256 x86_64_linux:  "13177da144e43810cbd458e90c24e160bf297b59db34208274973891f64da974"
+    sha256 arm64_big_sur: "f2481ae1cb5d8077d7ac769ca1cda9c34a6cb8d0e89eeb831a452f3992dab6e0"
+    sha256 big_sur:       "7d48a07430d1c4197c031dbbeb2c9993e3470f67ef1b2148e76f433039cebd4d"
+    sha256 catalina:      "3814876d5cb67f8e914415fd2ff09b7ebf62ce272af19e9e4c03baebfbb3aa02"
+    sha256 mojave:        "cf6c674b4656adca75cfd7d34af6aa48c9c7f9ce9498137babe2f69a71bb429d"
+    sha256 x86_64_linux:  "0c8e848c0df6aff47f4db8d28784ea2384c1d60c304287e142895807aa9f6736"
   end
 
   head do
