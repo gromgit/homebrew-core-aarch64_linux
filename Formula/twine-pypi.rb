@@ -9,10 +9,10 @@ class TwinePypi < Formula
   head "https://github.com/pypa/twine.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0130c1cd6ff804491d6407f5a569bab56cfefb7c2919f564568fc5a063a3216e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "98f342bb6a0a4f94a43e7535070e76a03bed2ac3151765fff590421381e479c8"
-    sha256 cellar: :any_skip_relocation, catalina:      "1dcdf32e0078c12a98db047c30835dba6a56d17c301b8c496df90de0b0ca39df"
-    sha256 cellar: :any_skip_relocation, mojave:        "2353266442d6e26ef38a7d1efb0c4c2afb7cdffe6ca933f51ef4b47c63b2ba76"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "17db2a243c02dda25e5c936c345496615fa0797dcbfebd3763aa398188e4cf3c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "1605e431587fd0a0d520b356e62bfa7ba994b1164437fb26aa4c1973c39d9dc1"
+    sha256 cellar: :any_skip_relocation, catalina:      "7a51b947fecc43679957ace05b03fb2bb7330abed200f66181e4f12853b4736d"
+    sha256 cellar: :any_skip_relocation, mojave:        "36051d4deaae15faafbe9e803b0a1fa90932876f822030b499d09c5a1d62f073"
   end
 
   depends_on "python@3.9"
