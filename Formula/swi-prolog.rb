@@ -16,6 +16,7 @@ class SwiProlog < Formula
     sha256 big_sur:       "1a5384ec31ca1088eff1e16d1977a4120f12e8c15e3703ef3c80c564848e2e5c"
     sha256 catalina:      "06c31b007436027785e73cdbf16d82dd6356766b821580a4fceda8db5eb4c86c"
     sha256 mojave:        "1deeaab4064bf3da632a28e539f46790252cfec839ae932bc729ecc239e347c3"
+    sha256 x86_64_linux:  "ff38c8fe29849c427abfaa36dcf7193f379c0b0fe1e498ba597f7a44404351bf"
   end
 
   depends_on "cmake" => :build
