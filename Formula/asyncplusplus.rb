@@ -63,10 +63,10 @@ class Asyncplusplus < Formula
           int r = async::parallel_reduce({1, 2, 3, 4}, 0, [](int x, int y) {
               return x + y;
           });
-          std::cout << "The sum of {1, 2, 3, 4} is " << r << std::endl;
+          std::cout << "The sum of {1, 2, 3, 4} is" << std::endl << r << std::endl;
       }
     EOS
-    system ENV.cxx, "-I#{include}", "-L#{lib}", "-lasync++", "--std=c++11", "test.cpp", "-o", "test"
-    system "./test"
+    system ENV.cxx, "test.cpp", "-I#{include}", "-L#{lib}", "-lasync++", "--std=c++11", "-o", "test"
+    assert_equal "10", shell_output("./test").chomp.lines.last
   end
 end
