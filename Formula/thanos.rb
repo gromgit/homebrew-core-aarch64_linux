@@ -6,11 +6,11 @@ class Thanos < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "dc0d0653d316182d3337117ed6d139ca0610c6ae3cfb984ccb9bfff53b86bb32"
-    sha256 cellar: :any_skip_relocation, big_sur:       "56961cbfcb49226f7ecee46c1225a013a34dcd76167952a20e90b853bebc2e74"
-    sha256 cellar: :any_skip_relocation, catalina:      "69166b1da6ee07d6257fb3334f992ef168e83012dea18a011ab786eccf670277"
-    sha256 cellar: :any_skip_relocation, mojave:        "9fa302ae777114c48f92e3347b09e26157098465b860a26496763e0d9218272f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "42414e4b433bc5f3774b6fed59c44c47c02cf1d1fd14027f760f037dc7045e67"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2880c66594b2c4932fdba9d90b6ce301b94efa44d86b2e8fee3dad1f4cc4797a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5cccad8e8adad38d8369aaae9f1df6ee11caa88a478b45d415d3980774cd3a45"
+    sha256 cellar: :any_skip_relocation, catalina:      "16e895b9bfee9ab77b11bc0d3637088dd1e0e72e127b3aa3a45aa34ff6f31f1c"
+    sha256 cellar: :any_skip_relocation, mojave:        "0cae3c6b0145d195576eec2d90540d894a495fe990eadb177dfac760aaa61f83"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "440d556924f3826b62f0f5a4814a5b52cbf3b9c22ec5eb0b423007e61a23cb67"
   end
 
   depends_on "go" => :build
