@@ -11,11 +11,11 @@ class Fcp < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c75727a5e1b12878e6b87d7fe02c93fc1ef83fdbfefdf86c0b1dbb6954734289"
-    sha256 cellar: :any_skip_relocation, big_sur:       "87520494288bf64154cea98f5f63dd4ff0d7b8d1b8084d6ebd0f416bf6d4b45b"
-    sha256 cellar: :any_skip_relocation, catalina:      "23280cce3a5305571eba38dd7d935259295a273bb95e5ee9e21687cc7f78a783"
-    sha256 cellar: :any_skip_relocation, mojave:        "cbb1bb6442ca303c9a81ded3c8c536238619857421a329f48fbb0ac2a62e8738"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f4efd3f5556bf69f0692af9630a92e65d9a61879920e00de6761185b0138996e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2694de15f2cc9a32797a01cfde7f79a235a195fc65409582577a0c98977b1494"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5e60b6a0d189ab71e4411a719ebdb2a7d8e15db7bc54c5a74ff47b2676a09cca"
+    sha256 cellar: :any_skip_relocation, catalina:      "890ab9d94808f3b3534a9f2610f9502ac35a57ff827f9b12363ec9a5de52d50f"
+    sha256 cellar: :any_skip_relocation, mojave:        "e54a5a79e09a561e2693dcef311856bfac90ae9221ebd30452d2812637fcea63"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "28c1e011bfdcb00954015a72ab6b8b24f2eeffb48ad95199fd169730e1235b28"
   end
 
   depends_on "rust" => :build
