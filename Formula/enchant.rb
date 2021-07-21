@@ -10,6 +10,7 @@ class Enchant < Formula
     sha256 big_sur:       "bf3bfe2bd2d71bf787c84db5ab1141961b66a6cfc98438555da70162fb0a1f9c"
     sha256 catalina:      "446db311b0f9926c31b38c7663f4598940ce87aa5871416b3aa229d4b0294dcd"
     sha256 mojave:        "06c3c748e6c955c17d8611c7067a40df9547ea9fc3e70a53171d8dd0d874a488"
+    sha256 x86_64_linux:  "4551d289c1443bff64a0fab2146d597616e4e27bb30bb774608b77a9eb34676d"
   end
 
   depends_on "pkg-config" => :build
