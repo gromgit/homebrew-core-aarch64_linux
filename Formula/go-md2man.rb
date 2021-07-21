@@ -2,8 +2,8 @@ class GoMd2man < Formula
   desc "Converts markdown into roff (man pages)"
   homepage "https://github.com/cpuguy83/go-md2man"
   url "https://github.com/cpuguy83/go-md2man.git",
-      tag:      "v2.0.0",
-      revision: "f79a8a8ca69da163eee19ab442bedad7a35bba5a"
+      tag:      "v2.0.1",
+      revision: "b1ec32e02fe539480dc03e3bf381c20066e7c6cc"
   license "MIT"
 
   bottle do
@@ -19,10 +19,9 @@ class GoMd2man < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", bin/"go-md2man"
+    system "go", "build", *std_go_args(ldflags: "-s -w")
     system bin/"go-md2man", "-in=go-md2man.1.md", "-out=go-md2man.1"
     man1.install "go-md2man.1"
-    prefix.install_metafiles
   end
 
   test do
