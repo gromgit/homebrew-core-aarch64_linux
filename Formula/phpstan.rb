@@ -6,11 +6,11 @@ class Phpstan < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ccb47d073983130326a6d3c4353ddab10a2ea29b5a5dfc3bd83965fc0c3a7194"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8ab74f29406da1f00022587e468ffe43600016682bc5a5aec5db34d7f2521ed4"
-    sha256 cellar: :any_skip_relocation, catalina:      "8ab74f29406da1f00022587e468ffe43600016682bc5a5aec5db34d7f2521ed4"
-    sha256 cellar: :any_skip_relocation, mojave:        "8ab74f29406da1f00022587e468ffe43600016682bc5a5aec5db34d7f2521ed4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ccb47d073983130326a6d3c4353ddab10a2ea29b5a5dfc3bd83965fc0c3a7194"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b537c335364b0b4fd401341c96827e989c2e11fff8de267ead317b5f65ff3257"
+    sha256 cellar: :any_skip_relocation, big_sur:       "00be2413cfa16c2a2a1ae4eef3b9be5b49ce2000d081fb85e456b30ed36ad3ef"
+    sha256 cellar: :any_skip_relocation, catalina:      "00be2413cfa16c2a2a1ae4eef3b9be5b49ce2000d081fb85e456b30ed36ad3ef"
+    sha256 cellar: :any_skip_relocation, mojave:        "00be2413cfa16c2a2a1ae4eef3b9be5b49ce2000d081fb85e456b30ed36ad3ef"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b537c335364b0b4fd401341c96827e989c2e11fff8de267ead317b5f65ff3257"
   end
 
   # Keg-relocation breaks the formula when it replaces `/usr/local` with a non-default prefix
