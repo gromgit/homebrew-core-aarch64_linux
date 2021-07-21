@@ -1,8 +1,8 @@
 class Thanos < Formula
   desc "Highly available Prometheus setup with long term storage capabilities"
   homepage "https://thanos.io"
-  url "https://github.com/thanos-io/thanos/archive/v0.21.1.tar.gz"
-  sha256 "db8e6fc27f6dbaae59efe73c08ddc2bc79cc10c331aafd42ee93d03a7a6459d1"
+  url "https://github.com/thanos-io/thanos/archive/v0.22.0.tar.gz"
+  sha256 "dd3b86719efee738402c6b9ce0686055447ae9ab5ce9a64c3a357c914c651073"
   license "Apache-2.0"
 
   bottle do
@@ -16,7 +16,7 @@ class Thanos < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args, "./cmd/thanos"
+    system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/thanos"
   end
 
   test do
