@@ -1,8 +1,8 @@
 class Gotop < Formula
   desc "Terminal based graphical activity monitor inspired by gtop and vtop"
   homepage "https://github.com/xxxserxxx/gotop"
-  url "https://github.com/xxxserxxx/gotop/archive/v4.1.1.tar.gz"
-  sha256 "314dcfc4b0faa0bb735e5fa84b2406492bf94f7948af43e2b9d2982d69d542ed"
+  url "https://github.com/xxxserxxx/gotop/archive/v4.1.2.tar.gz"
+  sha256 "81518fecfdab4f4c25a4713e24d9c033ba8311bbd3e2c0435ba76349028356da"
   license "BSD-3-Clause"
 
   bottle do
@@ -15,12 +15,6 @@ class Gotop < Formula
   end
 
   depends_on "go" => :build
-
-  # Apply https://github.com/xxxserxxx/gotop/pull/183 to build on M1
-  patch do
-    url "https://github.com/xxxserxxx/gotop/commit/5efc6ec054a65c3ec63ed5eb67631ca3becdeb50.patch?full_index=1"
-    sha256 "1dd66fc5e25d49396c2be000f35f2b7fe57083a63e093f54d3565a6d43467771"
-  end
 
   def install
     time = `date +%Y%m%dT%H%M%S`.chomp
