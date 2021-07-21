@@ -23,6 +23,7 @@ class Dmg2img < Formula
   depends_on "openssl@1.1"
 
   uses_from_macos "bzip2"
+  uses_from_macos "zlib"
 
   # Patch for OpenSSL 1.1 compatibility
   patch :p0 do
