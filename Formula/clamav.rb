@@ -16,6 +16,7 @@ class Clamav < Formula
     sha256 big_sur:       "0336a74d46b95394919ed3de66e3fe02a1e58993892f3e5221dea29ad56c301b"
     sha256 catalina:      "5b0e6cc76e434d7ebfb9301f4b6de21b647f7c0cb3a89d7ca7d6d92c37c34600"
     sha256 mojave:        "a7ebd59427dddd39419a5dceb5f6c85f55d6040d41878e4fca931e384f906fe2"
+    sha256 x86_64_linux:  "f921185f5319873958091bd65bd535d33cb9230a3a9a94fd73041b42d7ed4074"
   end
 
   head do
