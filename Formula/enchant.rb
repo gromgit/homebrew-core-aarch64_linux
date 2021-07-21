@@ -30,6 +30,10 @@ class Enchant < Formula
     enchant_result = text.sub("fox ", "").split.join("\n")
     file = "test.txt"
     (testpath/file).write text
+
+    # Explicitly set locale so that the correct dictionary can be found
+    ENV["LANG"] = "en_US.UTF-8"
+
     assert_equal enchant_result, shell_output("#{bin}/enchant-2 -l #{file}").chomp
   end
 end
