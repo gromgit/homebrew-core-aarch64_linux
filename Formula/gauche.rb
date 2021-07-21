@@ -17,6 +17,7 @@ class Gauche < Formula
     sha256 big_sur:       "6edbe6e3edd503033d3feb3ff8a0bd1cfb4c16abbfa15328e2ccdd309656b017"
     sha256 catalina:      "dc953fd8f622b64409d2dc6808d5cfd3828c3a36e5fd4fdbccde6db8529800e1"
     sha256 mojave:        "06bcbbd5523d45e098d3e9f9c3c59d8e4858d66ad63f1cdb08bba8a804a08114"
+    sha256 x86_64_linux:  "6078ffcd2dea9f757643dec70b13ac66536c0dfd7f96a8ae1e86b0170c5aea53"
   end
 
   depends_on "mbedtls@2"
