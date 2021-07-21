@@ -13,10 +13,11 @@ class Flashrom < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any, big_sur:     "aa5c0856318732adf6a2bb4b980cef8a21829bd6a606beb357cae3ca71561217"
-    sha256 cellar: :any, catalina:    "301d0aafe8b31a53e6ee77217ce2280d1e998ceb7c8bc1a54a85c88afa940a33"
-    sha256 cellar: :any, mojave:      "69131a69023cd0336b8c9c9f1a56cafb28509f1e8eb5ada0bd45ff48357df38c"
-    sha256 cellar: :any, high_sierra: "08d74d59cb4a56347de27465cc289b6494199951e2d251fafc328b4dc2f3e1e3"
+    sha256 cellar: :any,                 big_sur:      "aa5c0856318732adf6a2bb4b980cef8a21829bd6a606beb357cae3ca71561217"
+    sha256 cellar: :any,                 catalina:     "301d0aafe8b31a53e6ee77217ce2280d1e998ceb7c8bc1a54a85c88afa940a33"
+    sha256 cellar: :any,                 mojave:       "69131a69023cd0336b8c9c9f1a56cafb28509f1e8eb5ada0bd45ff48357df38c"
+    sha256 cellar: :any,                 high_sierra:  "08d74d59cb4a56347de27465cc289b6494199951e2d251fafc328b4dc2f3e1e3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "6a894f6e3ec7f6eaaf960b53ec6539b6bdd5c778acd9de461e8b787c9f3d4670"
   end
 
   depends_on "pkg-config" => :build
