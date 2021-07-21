@@ -22,6 +22,7 @@ class ClojureLsp < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "edc2a4d6e3914895683c101f92e887b0d573feb9215972f0f178473b0f786b4c"
     sha256 cellar: :any_skip_relocation, catalina:      "166cbb7fbfe32ac69f9f77669df0ccef5f9fc4c161b7678e7c90c1d4585cc141"
     sha256 cellar: :any_skip_relocation, mojave:        "faa438a6e4f69f39e45c5b21686ed2d926cad60e0c3a0e380126b18675ee7517"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2920102efcd31062c39b3830e25d287e04797bb81eec0f51f8707f43a0e4144f"
   end
 
   depends_on "clojure" => :build
