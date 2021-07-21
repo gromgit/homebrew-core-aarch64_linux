@@ -15,6 +15,7 @@ class Composer < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "4c852f706d4ead18bb1cf79a972783b169fa52ce24c348a1d5dd349db5b6f404"
     sha256 cellar: :any_skip_relocation, catalina:      "4c852f706d4ead18bb1cf79a972783b169fa52ce24c348a1d5dd349db5b6f404"
     sha256 cellar: :any_skip_relocation, mojave:        "4c852f706d4ead18bb1cf79a972783b169fa52ce24c348a1d5dd349db5b6f404"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f03e0d0234b121c7e2e0085ad8dd21110c68d088018d9bd8e602e87bef77fd27"
   end
 
   # Keg-relocation breaks the formula when it replaces `/usr/local` with a non-default prefix
