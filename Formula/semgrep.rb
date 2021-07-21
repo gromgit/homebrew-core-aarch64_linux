@@ -15,11 +15,11 @@ class Semgrep < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "35a5cd61b7c9477e891c95c49eef9c508cdd48d534a2e6d8dfccf63d268e1a3b"
-    sha256 cellar: :any, big_sur:       "131d35dac7fdb53d97803384cdf683d3fe9592aa3e37b01e5d160a21d44435d1"
-    sha256 cellar: :any, catalina:      "c474195dad3f2c489dc9b580c8aa4a8f07fa3e9268d7140807a2dec7c72ff83c"
-    sha256 cellar: :any, mojave:        "fd6b2da12950e9f468c9a6f4215ce609a8b7aa3ba31490132485014ab2ee0ed1"
-    sha256               x86_64_linux:  "50b353832038713d13228c8ff688d87a9bcebe433ff33a3f1b55e5350f3a736f"
+    sha256 cellar: :any, arm64_big_sur: "46cd55a4775c9a415a4841ede024fb46173792744415e19edd086b0fbe7d5057"
+    sha256 cellar: :any, big_sur:       "640bd2d7c808b07e7b6cc93a84bdd3f63c86929e445bbb96778a79bce19810c4"
+    sha256 cellar: :any, catalina:      "d713a986b978f8506c4b3b50f56017303cb2745466a31943a3a0f88e4c259cd3"
+    sha256 cellar: :any, mojave:        "4068942693e4c7215d48dc4cd4fe1870f6427cde74365a803297a59f409259f7"
+    sha256               x86_64_linux:  "aff53af8da6fd4e64e3c6e2f26dd4edd7e2b24cdc3d1f71a0944a7337b351976"
   end
 
   depends_on "cmake" => :build
