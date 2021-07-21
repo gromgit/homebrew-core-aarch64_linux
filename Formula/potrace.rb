@@ -3,7 +3,7 @@ class Potrace < Formula
   homepage "https://potrace.sourceforge.io/"
   url "https://potrace.sourceforge.io/download/1.16/potrace-1.16.tar.gz"
   sha256 "be8248a17dedd6ccbaab2fcc45835bb0502d062e40fbded3bc56028ce5eb7acc"
-  license "GPL-2.0"
+  license "GPL-2.0-or-later"
 
   livecheck do
     url "http://potrace.sourceforge.net/"
@@ -18,6 +18,8 @@ class Potrace < Formula
     sha256 cellar: :any, mojave:        "3ad69cce4edecea6e5170b766201845b703a98bbac3c5272ef6a045f828643e2"
     sha256 cellar: :any, high_sierra:   "56d821a4d3579bedf64ebf5357fc04f214cb2efbea7ddb681b202e684e71d97e"
   end
+
+  uses_from_macos "zlib"
 
   resource "head.pbm" do
     url "https://potrace.sourceforge.io/img/head.pbm"
