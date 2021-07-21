@@ -1,9 +1,9 @@
 class OpenjdkAT8 < Formula
   desc "Development kit for the Java programming language"
   homepage "https://openjdk.java.net/"
-  url "https://openjdk-sources.osci.io/openjdk8/openjdk8u282-ga.tar.xz"
-  version "1.8.0+282"
-  sha256 "e5c0000d54fea680375ab06e6d477713fb5c294d84baf0ed6224498bde811b7c"
+  url "https://openjdk-sources.osci.io/openjdk8/openjdk8u302-ga.tar.xz"
+  version "1.8.0+302"
+  sha256 "ab50669afd85086ba451cbc1560ae76e9bc7fc3c9c46e3d37ee5c6a48bb30124"
   license "GPL-2.0-only"
 
   bottle do
@@ -21,20 +21,13 @@ class OpenjdkAT8 < Formula
   # Oracle doesn't serve JDK 7 downloads anymore, so use Zulu JDK 7 for bootstrapping.
   resource "boot-jdk" do
     on_macos do
-      url "https://cdn.azul.com/zulu/bin/zulu7.42.0.13-ca-jdk7.0.282-macosx_x64.tar.gz"
-      sha256 "37767a8ec40ff63dd43020365cf6c3e95841213cfe73aaa04ee0cffca779b2e7"
+      url "https://cdn.azul.com/zulu/bin/zulu7.48.0.11-ca-jdk7.0.312-macosx_x64.tar.gz"
+      sha256 "303ccd606307ce37f48ffbaeccaaee72fa3445eb1503c99ae181b372b72701e3"
     end
     on_linux do
-      url "https://cdn.azul.com/zulu/bin/zulu7.42.0.13-ca-jdk7.0.282-linux_x64.tar.gz"
-      sha256 "38ec78e7f41f9130cecce5c8c9963d066f7deee5b3ba4dfcca32e197fd933bf9"
+      url "https://cdn.azul.com/zulu/bin/zulu7.48.0.11-ca-jdk7.0.312-linux_x64.tar.gz"
+      sha256 "c21e30c6a7c0bba75bb9b5ab7933a6ca65db1947e03842278a363f582445c890"
     end
-  end
-
-  # Apply this upstreamed patch to build on newer Xcode.
-  # https://github.com/AdoptOpenJDK/openjdk-jdk8u/pull/10
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/9976a857d574de2927c580f1f61bcd647fb795fe/openjdk%408/xcode.patch"
-    sha256 "f59a82f2e83c97a7496ba71c811ee0849d7df6b45e32fb3da0f0078386eebd80"
   end
 
   def install
@@ -59,11 +52,6 @@ class OpenjdkAT8 < Formula
       s.gsub! "$(subst .,,$(MACOSX_VERSION_MIN))", ENV["HOMEBREW_MACOS_VERSION_NUMERIC"]
       s.gsub! "MACOSX_VERSION_MIN=10.7.0", "MACOSX_VERSION_MIN=#{MacOS.version}"
     end
-
-    # Fix to permit building with Xcode 12
-    inreplace "common/autoconf/toolchain.m4",
-              '"${XC_VERSION_PARTS[[0]]}" != "4"',
-              '"${XC_VERSION_PARTS[[0]]}" != "12"'
 
     args = %W[--with-boot-jdk-jvmargs=#{java_options}
               --with-boot-jdk=#{boot_jdk}
