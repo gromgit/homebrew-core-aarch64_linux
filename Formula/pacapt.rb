@@ -6,7 +6,7 @@ class Pacapt < Formula
   license "Fair"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "e4c4bd5edea42dd8e0ad6a5315b3960daa84b360e87619e7843599d63b79758c"
+    sha256 cellar: :any_skip_relocation, all: "2fbf3f83c03f7d01205a46e1ffeeec36608bc0a45da4ce1a1a8902a1cfaa704d"
   end
 
   def install
