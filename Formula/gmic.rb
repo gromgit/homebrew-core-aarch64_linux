@@ -12,11 +12,11 @@ class Gmic < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "2a684946ab82b40f48894bac5628fd568555c79e412154415149c559b8855439"
-    sha256 cellar: :any,                 big_sur:       "fa3a9f34a4e6af5756037d3d0085cc95192fd2cf133e14985cd98314b46c0d2d"
-    sha256 cellar: :any,                 catalina:      "28d193071d9c956bb8002584cbd7e9439cb3b4fbbce4fb37106345dfcc3898e8"
-    sha256 cellar: :any,                 mojave:        "8a24235a837b3972a6f8b39b3ca219e676c7807ed83daf613576f1acb813faa2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dcbd95fd0abcd042ed27b1a964c9c70a3ec9cb89a7e04111d4b955d9c218fa52"
+    sha256 cellar: :any,                 arm64_big_sur: "b4ca938c13a0d48444a68b260556af081c92c7155f837ee967ab325687f97cd1"
+    sha256 cellar: :any,                 big_sur:       "aaf9c8289fca869eb689a3c8df531c88d06a7f20e66834476040b28bda1d8f27"
+    sha256 cellar: :any,                 catalina:      "2393fee531477a0737818b367e8a7fd1bf5b2d1834c9f71d0424d9fdfe35289d"
+    sha256 cellar: :any,                 mojave:        "06c829f95058ad32cd4c851fef13238008215252775cd35218428d440b8d3eb7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5a575f45f76d9652e38f78982d5a5edb053191f99a4125805971f7cc2441332c"
   end
 
   depends_on "cmake" => :build
