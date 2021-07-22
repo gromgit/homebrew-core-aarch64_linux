@@ -12,6 +12,7 @@ class HopenpgpTools < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "b6bbc4e108cb054f5723c0196bfffbef88ccd30242f01ea223525ed30efd83a9"
     sha256 cellar: :any_skip_relocation, catalina:      "11ee2dc0b5f625cef483385dea031640b8762367281f7382989d999ac4719655"
     sha256 cellar: :any_skip_relocation, mojave:        "0bd4820b9761e5e89d6751ade75a1d2ff6d7b192b71189294a78fe7f8215d95b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "25189440b68e211dcb2ab3cd04349a761e461462e21691305b6c0217e6984f96"
   end
 
   depends_on "cabal-install" => :build
