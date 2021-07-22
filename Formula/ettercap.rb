@@ -13,6 +13,7 @@ class Ettercap < Formula
     sha256 catalina:      "e52f75a8579926652f5c53ef77db1eeab39f0ff388ad77fbbe70a17a52554c2b"
     sha256 mojave:        "c49b5293922b69715b05c1bc1374cec3cfe72a63750ab0fb08d559683d253afc"
     sha256 high_sierra:   "3ab1aa27eef60cb9099bdd95ca330c0fd63dad10c169c968672bb44d97ae32e1"
+    sha256 x86_64_linux:  "58d95c7e206ac3c4f3ccb46f8427b40e63b70bf068239211a1e15656244a0b85"
   end
 
   depends_on "cmake" => :build
