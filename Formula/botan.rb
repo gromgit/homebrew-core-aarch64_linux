@@ -11,6 +11,7 @@ class Botan < Formula
     sha256 big_sur:       "c95c511ab524fe403fb6ca322e1e4b1075d010e1ed6fe8523589297157ef1209"
     sha256 catalina:      "de7d2bcd91abe81ef297b2134e1aa4bd622f5c9764614e3af0fc04b4a39ad75a"
     sha256 mojave:        "281575e69fdacaa33127379de2da8d4a5e1951fd98da54ed448655cb959d8149"
+    sha256 x86_64_linux:  "7200ca14e74e28d77a3438458be6a4f71c6c06de62c53613aeb5596e79910c1d"
   end
 
   depends_on "pkg-config" => :build
