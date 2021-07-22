@@ -16,11 +16,11 @@ class Ipfs < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "082d26de8a7fb59d605f9d041bb60c73e018bc8d68bdb261ad96bfcb84cde64a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "cf27a87766f08ae1164b07e4764cc23022c90e61a7a09ef4933772ba780cf7be"
-    sha256 cellar: :any_skip_relocation, catalina:      "25fed340fbbb800032ade9a9b8e336dd1a281677d212b0045ad3ac5d25c8230b"
-    sha256 cellar: :any_skip_relocation, mojave:        "99ecea05edda6979e511ef1a81064beb45469b258d9ae6ddf9a551b1bbb44ed5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c2d5b7e1972348264bab5bf9e0e656f032788bfddbb34c3b96f287b3a41ccfad"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "231298d145992a014cbb51f662441680df8f3770454c72bb6190d8324a78667b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e378ee908d60a07630e6825480c88e4d622131c313a4e12e239f0b19dad4e0ad"
+    sha256 cellar: :any_skip_relocation, catalina:      "60c16d40c1350166baf81c50b420504c4cf75af958da803383cc6f7b74b7f1fc"
+    sha256 cellar: :any_skip_relocation, mojave:        "567aeeb741ac0e393b848bf01c1015ac471cb0d0049478493a22b2b6dc732006"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0a778ad8f01d55f6857cb5e6159584331936ea573a8d3a0586c5637a921c89ba"
   end
 
   depends_on "go" => :build
