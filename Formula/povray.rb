@@ -1,8 +1,8 @@
 class Povray < Formula
   desc "Persistence Of Vision RAYtracer (POVRAY)"
   homepage "https://www.povray.org/"
-  url "https://github.com/POV-Ray/povray/archive/v3.7.0.9.tar.gz"
-  sha256 "c273f75864ac98f86b442f58597d842aa8b76e788ea5e9133724296d93fb3e6b"
+  url "https://github.com/POV-Ray/povray/archive/v3.7.0.10.tar.gz"
+  sha256 "7bee83d9296b98b7956eb94210cf30aa5c1bbeada8ef6b93bb52228bbc83abff"
   license "AGPL-3.0-or-later"
   head "https://github.com/POV-Ray/povray.git"
 
@@ -21,12 +21,11 @@ class Povray < Formula
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "boost"
+  depends_on "imath"
   depends_on "jpeg"
   depends_on "libpng"
   depends_on "libtiff"
-  # Check whether this can be switched to `openexr` at version bump
-  # Issue ref: https://github.com/POV-Ray/povray/issues/408
-  depends_on "openexr@2"
+  depends_on "openexr"
 
   def install
     ENV.cxx11
@@ -38,7 +37,7 @@ class Povray < Formula
       --prefix=#{prefix}
       --mandir=#{man}
       --with-boost=#{Formula["boost"].opt_prefix}
-      --with-openexr=#{Formula["openexr@2"].opt_prefix}
+      --with-openexr=#{Formula["openexr"].opt_prefix}
       --without-libsdl
       --without-x
     ]
