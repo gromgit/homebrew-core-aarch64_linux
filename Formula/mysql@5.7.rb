@@ -11,11 +11,11 @@ class MysqlAT57 < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "4ad418db08f4499bb0462a178ea8a7b5262cc55b1f1c4f7ded4df252537f8bb6"
-    sha256 big_sur:       "baf50315c60aef1b4598999f95f280e23d98151ca29e02884ea78e5b99126e0e"
-    sha256 catalina:      "9a6ff5cda60fefb428cb3799f1869d16f69f9a29718dbd8d64692465bd13082d"
-    sha256 mojave:        "542dc7e4c5e567828a5db948b08baa4e02c0a511515ad2d7d973e065132c488e"
-    sha256 x86_64_linux:  "0fbe59e5bc670ec019c9d0c11aa06b0b5087a73e55d9c8ff795459463bd8f467"
+    sha256 arm64_big_sur: "91e49378fe45b90275c58685ad29ba77b62ab6993597e2436c6bfa1ec160365d"
+    sha256 big_sur:       "b926b1d4c78ae82a20758d40c1a0ca472feae13095c293114ddcefde679f8c98"
+    sha256 catalina:      "8821d67ae0a2a21ab99a4b69bc5551244365d20fcf942e3b4ae792d174536253"
+    sha256 mojave:        "bc9a49d7e64518277596abeb007a5a129251245c7c63dbfcd1c99fc557c04df9"
+    sha256 x86_64_linux:  "34293e451ebc08a20aae04ddf26c1cc2788cf4604f7f79774523f9d5e0d91d8a"
   end
 
   keg_only :versioned_formula
