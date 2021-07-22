@@ -2,10 +2,9 @@ class Ilmbase < Formula
   desc "OpenEXR ILM Base libraries (high dynamic-range image file format)"
   homepage "https://www.openexr.com/"
   # NOTE: Please keep these values in sync with openexr.rb when updating.
-  url "https://github.com/openexr/openexr/archive/v2.5.5.tar.gz"
-  sha256 "59e98361cb31456a9634378d0f653a2b9554b8900f233450f2396ff495ea76b3"
+  url "https://github.com/openexr/openexr/archive/v2.5.7.tar.gz"
+  sha256 "36ecb2290cba6fc92b2ec9357f8dc0e364b4f9a90d727bf9a57c84760695272d"
   license "BSD-3-Clause"
-  revision 1
 
   bottle do
     sha256                               arm64_big_sur: "5a95c1ea57a08dde47723507b0406a408664e4170026a5a5771681f42ac3c6df"
