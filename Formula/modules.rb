@@ -11,10 +11,10 @@ class Modules < Formula
   end
 
   bottle do
-    sha256               arm64_big_sur: "8cc933f4ad6ffd306c36f080228d326181ac471e56b92e0c32c75e2c3e95eb9b"
-    sha256               big_sur:       "5d63553037af74beab1d31831b3880622eb2bdf4e981ac67ba20afbfc7b33b02"
-    sha256 cellar: :any, catalina:      "a6257daf6e36156bc6bbde38622778b2b3dabe4681eead1fd238e3aa7b5a71e9"
-    sha256 cellar: :any, mojave:        "9a2dc8c4e84f0c33dfa5c60210fd5716a5f087f5c0624bfd4ad3e6e492bff19b"
+    sha256               arm64_big_sur: "1e68e132bea8d5133661124ada2eb86e28b2df6f02add99a8db81f0372f7ebf6"
+    sha256               big_sur:       "f7db523c25f10422709babd29da071fb844fb8207ccd0c8e0ba54948e4119cd3"
+    sha256 cellar: :any, catalina:      "ad84ed490ed2640a32799c5fb3ca7d815c45989f90bf246e087354e60ae23537"
+    sha256 cellar: :any, mojave:        "92b00fca6d79e453bf2231d10783912342aa45c7c9ef926998c2ff39e2cc3160"
   end
 
   depends_on "tcl-tk"
