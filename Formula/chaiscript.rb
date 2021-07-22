@@ -34,7 +34,7 @@ class Chaiscript < Formula
       }
     EOS
 
-    system ENV.cxx, "test.cpp", "-L#{lib}", "-std=c++14", "-o", "test"
+    system ENV.cxx, "test.cpp", "-I#{include}", "-L#{lib}", "-ldl", "-lpthread", "-std=c++14", "-o", "test"
     system "./test"
   end
 end
