@@ -7,10 +7,10 @@ class Corsixth < Formula
   head "https://github.com/CorsixTH/CorsixTH.git"
 
   bottle do
-    sha256 arm64_big_sur: "9cb15180b7b5b1ce5a5cc8db33bc51e86d99d4f31f85cafc798732e936a8c43b"
-    sha256 big_sur:       "4383665253bff0c2b2bd48ad55c9834f49e4718656ddadfdb70a8cb440d47196"
-    sha256 catalina:      "611611a2db4ba0265ca31748dd5ba61b3b43f3bd996e42bef75bbb8ad99c5e85"
-    sha256 mojave:        "c6b63dfbf4056ddf0fd48ad3538906ec0a2bfbc31ef8fe8301e04e12cf6792f3"
+    sha256 arm64_big_sur: "85159ab0c32c43fbe98e88181abd47c941acec95b5760646237d350f18ac403a"
+    sha256 big_sur:       "7e0c673a852830521e8c5bf1edd8c0c55a73eb8e3fff9dd32e6939bbcf239620"
+    sha256 catalina:      "4e32cf5b1460d07b4e354fec82d0a5267be4c03e1d3af92fc5d96046c44f8f8c"
+    sha256 mojave:        "edb9df35dc84bddd751ecc716c37f7ef7f6f832a1b1613905214a8af6f507ea6"
   end
 
   depends_on "cmake" => :build
