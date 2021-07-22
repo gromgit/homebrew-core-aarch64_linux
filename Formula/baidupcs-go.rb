@@ -7,11 +7,11 @@ class BaidupcsGo < Formula
   head "https://github.com/qjfoidnh/BaiduPCS-Go.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "44c0d9f421ac131574538bc0c2d5f7828a0df65a351bcb6c35adfa65f15d821c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "57ade07be37404c68a016fed277677e09259f75efcc88b90c26ca2027977a8c0"
-    sha256 cellar: :any_skip_relocation, catalina:      "80e4dfe983b5d5afeaa6c3706813965b56633d957efc050f9f6c6559bf82c232"
-    sha256 cellar: :any_skip_relocation, mojave:        "3cfda0f5181e860ac54a09ca3401e19f51b6bc57ea725bd96c73442f640bb594"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0ca7064321bcb68769e1714a222dc30dda5d71410ac990af2a95f253bfc648d3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a460bee52819fd273daa240a4e9f388961220721bf6a18fc36d8e465c5c93e36"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3fc71def3bc7c2a8b94eb565e3f3ba6c92ba16677393b4fd2d960771bb1e5e8b"
+    sha256 cellar: :any_skip_relocation, catalina:      "ec7b7010f8b8faf8aed8309e2b96e667cc3dbec4014d799a8dd4747ff7c73fa2"
+    sha256 cellar: :any_skip_relocation, mojave:        "c48c4342d15b86b0fcdac3928ef8c2f55b8066e0413375c1ea8fc84914bab97e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c9ef03e94941c849fb0e1930b05919c27864d145007d161262dab03bc15fe0be"
   end
 
   depends_on "go" => :build
