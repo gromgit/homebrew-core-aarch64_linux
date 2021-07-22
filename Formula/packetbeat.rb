@@ -8,10 +8,10 @@ class Packetbeat < Formula
   head "https://github.com/elastic/beats.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2dd8a29450ff92b9923243bcecf3ee44f62c8cdcd589b84bb94433483d27532e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ccabde5aa8b8c78d5b528b1e90156c16d45056056774a0b38ad4c2b35cb46600"
-    sha256 cellar: :any_skip_relocation, catalina:      "95cead78641c1b9d13f135b1dd8ed96d713aa6ad42867dbbff3eb9bf8830a78b"
-    sha256 cellar: :any_skip_relocation, mojave:        "556412b730be822282d0ebf142d4e59a6b6de14594852d7ca1fd6f13d67832d8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "74842e87c168d883bbbe3fd8700e1e83bdf8759bc6e3be25d1315be2c7287f1e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a92df4b10f036748a052ebd0abcb0c16cb4deef4ef4702a3a840629c72b62e50"
+    sha256 cellar: :any_skip_relocation, catalina:      "8084133b356072ee7785e49ba9dc8cabca83994ab1c17d2817c2f93a45228f77"
+    sha256 cellar: :any_skip_relocation, mojave:        "4a9dff0f9d07a5a773e436400a301d702f3d1545761fa20f1b2931402b90bed9"
   end
 
   depends_on "go" => :build
