@@ -10,6 +10,7 @@ class Vte3 < Formula
     sha256 big_sur:       "80db6f9c0b62cd99beaf9eaadde7be8cfe3c09a54eb9b385bd103891d7a12af8"
     sha256 catalina:      "ad7a7e195ce43afdf30eff81f83e606b79e78db8e6ed39f0370ef34ebeeb39e4"
     sha256 mojave:        "2404d321dc1eb3e61c5f6282c214395beae288e97ae62d6d6b5afe3edd9b7adf"
+    sha256 x86_64_linux:  "fb813f9bc1317086d4e1374aa003f0796084aeabc85fa077a40e0a785b877a54"
   end
 
   depends_on "gobject-introspection" => :build
