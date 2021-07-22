@@ -22,11 +22,11 @@ class Bind < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "f2c34afdb879aefda5512ec66dc730089ddd515e0c6a7dce344875597a1a19f3"
-    sha256 big_sur:       "362d39db88df45d981596ecc9b2d9404d96a394228742b2762ee56eeb59dc558"
-    sha256 catalina:      "2015acd35604eb86f9d8fb58a8f18e5fbff5c6e414886578015870b604429fa0"
-    sha256 mojave:        "981698f4c1136e45ee1af16dc4cbea0f4be1ddc4d43f02d62aa4ccd7a0d9424b"
-    sha256 x86_64_linux:  "e31ef295cea402a78e8435bb2e01690fbc6240b4dec691b2ad5773eaab8b0142"
+    sha256 arm64_big_sur: "e902ad6a130f6e5d83fb1d25ac8e8104024a16fcdc82e72ef3461f6624e3433a"
+    sha256 big_sur:       "9cd29c57a9ddc16b18690bb4334af3d1e960f2ca1b7579f26270295aa3136b7b"
+    sha256 catalina:      "f91c6e280b12f36d2a6579f7819213a8bdcb245cf3ed4485bb14c01c1dd4d261"
+    sha256 mojave:        "438cf2980919b97faf763445dd86024c67309ea113428467ec8c22e851cc3ba2"
+    sha256 x86_64_linux:  "3def6f6a1bbfa75cb7136aa0c3f2756270841a5fe7279d350abb3225a32cfcab"
   end
 
   depends_on "pkg-config" => :build
