@@ -11,10 +11,10 @@ class Cherrytree < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "7ab37082920cc336b2dec0380eba94cb0c0d777f095357cf7e5cf32452cfd603"
-    sha256 big_sur:       "03b521744828c72049eaa6da515f2d231c31f264a39f6e5fe573e678c0394c7b"
-    sha256 catalina:      "944dfa361bc1dd35775f1ce5fa523edfcfcaedbfd50148671cbb03f6e4102c5d"
-    sha256 mojave:        "b646c2dc2c0ee5f1a1140a5746e47a27b9a8e36f7ba3b367c30858ac78b165ca"
+    sha256 arm64_big_sur: "df5ecd2dcc5c62ed57094331f5b2f4f2cb087da8c24b748273ff2910cdc5f929"
+    sha256 big_sur:       "2544c79c1eb7e89e306a812a30ad3c9ac8120ee6a0b1b93c7cb9048edc6f90a8"
+    sha256 catalina:      "65ae157c78ca653337a590ba60f2adb957675e2dfc1c8ee241de48889d9be347"
+    sha256 mojave:        "1aaa5b1acc993603bd62f5b70020fc72f36601ac69e30f9d086d55fa678b1680"
   end
 
   depends_on "cmake" => :build
