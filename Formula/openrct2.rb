@@ -8,10 +8,10 @@ class Openrct2 < Formula
   head "https://github.com/OpenRCT2/OpenRCT2.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "d3a351c2d6aa10bf29a52e950e16ba6bb603ec63edad749a7b663f891e875f7b"
-    sha256 cellar: :any, big_sur:       "0acb51b57719189dbb397b8d7db9975cfbfe3718542feb6607fe13426b645fd3"
-    sha256 cellar: :any, catalina:      "77f493be0b0d0dabba21d4854dd635e3ddc16c373a82057c95b3efe997003fa7"
-    sha256 cellar: :any, mojave:        "cef2d857349baf66d0e561eb87e8dc027bba51f58af72cfa88af52320efe12b9"
+    sha256 cellar: :any, arm64_big_sur: "398b1d23b464b782af6636995d50709d96178dc7e2a9014630df8ee0c9278413"
+    sha256 cellar: :any, big_sur:       "82b39d32eccfa28691e05c0bcda33ce440374cb912d07a1e25a045cdfd04de5c"
+    sha256 cellar: :any, catalina:      "ba8effccd58cdf90cd4159124629a9e7e291b595beee7390fae2bbd7148ade9c"
+    sha256 cellar: :any, mojave:        "361a0c120975f6b1ac632226895d34172269245d3306da0dadde030c3f96adbb"
   end
 
   depends_on "cmake" => :build
