@@ -7,11 +7,11 @@ class BuildpulseTestReporter < Formula
   head "https://github.com/buildpulse/test-reporter.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "cd217a21725c625a0be884331d25575d6bd74133c9db4cd1854d81cae949b637"
-    sha256 cellar: :any_skip_relocation, big_sur:       "86c52c1845b4e7894a65f9fd85e41a7ca4d1f4ea714f8bfaaa7f875e4276f2fa"
-    sha256 cellar: :any_skip_relocation, catalina:      "176687c30628ebbb76deb9702c531ed268cc5ca8ef9e880eea9051e50a075355"
-    sha256 cellar: :any_skip_relocation, mojave:        "b6d26dd9eb76960b45d3d20b368cf9e1de5f8f0d98d4e739d872e10aeb9d10f9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bd6c52adef469e4716c37851b852b98e2bd1cd178c94bcf69cf90fb13627a624"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0cb6602b09e1f55acc92f6bd1a466064bc7a87785ddd22ef8ee0b4db4ff3946e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "15b578b8212ee55c591eb2ce13daecd396dfd15d4d13f341dbb3089670e02030"
+    sha256 cellar: :any_skip_relocation, catalina:      "84911c146f7a62a4d1044084d540e46926a27a0a5570944f92e34371a9565448"
+    sha256 cellar: :any_skip_relocation, mojave:        "fa39de65060f5554e42b68d6807167614ed4981ef4d7eec657df6e38148ba945"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2a098ea6a0caa562d2ef283605bc9cf4956ddc49409570c8f1f2a828f8093fac"
   end
 
   depends_on "go" => :build
