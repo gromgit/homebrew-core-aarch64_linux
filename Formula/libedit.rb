@@ -1,9 +1,9 @@
 class Libedit < Formula
   desc "BSD-style licensed readline alternative"
   homepage "https://thrysoee.dk/editline/"
-  url "https://thrysoee.dk/editline/libedit-20210522-3.1.tar.gz"
-  version "20210522-3.1"
-  sha256 "0220bc2047e927c0c1984ef5f7b4eb2a9469a5b7bf12ba573ca3b23ca02bbb6f"
+  url "https://thrysoee.dk/editline/libedit-20210714-3.1.tar.gz"
+  version "20210714-3.1"
+  sha256 "3023b498ad593fd7745ae3b20abad546de506b67b8fbb5579637ca69ab82dbc9"
   license "BSD-3-Clause"
 
   livecheck do
