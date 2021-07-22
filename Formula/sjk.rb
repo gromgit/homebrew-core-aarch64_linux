@@ -6,7 +6,7 @@ class Sjk < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "c59ab026f8a809a25156e0acf7bcb487439d842e5dc8426a39d01a01a1744511"
+    sha256 cellar: :any_skip_relocation, all: "2bc1c9dadeff20643d36e42a6f018a80c6df288fa5e3bbaf557b611007142b14"
   end
 
   depends_on "openjdk"
