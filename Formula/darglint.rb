@@ -8,6 +8,13 @@ class Darglint < Formula
   license "MIT"
   head "https://github.com/terrencepreilly/darglint.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9c9b15a285b22cf03670850d24c7896246acb333c0d548d9d252bcf1f1f242aa"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b02d50b5140296e947def3daa60b5c85814de8b2801ac8b467ba98667f1a8bf1"
+    sha256 cellar: :any_skip_relocation, catalina:      "7baab8fba04fc191938885ff7e86990d94dce84ff3c7407ede352fbdd7d3456b"
+    sha256 cellar: :any_skip_relocation, mojave:        "4df445fe8a9aeb76d8ea3da5eaedca03f42bf39f4c227064e8ab447ab68ba362"
+  end
+
   depends_on "python@3.9"
 
   def install
