@@ -8,11 +8,11 @@ class Pnpm < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b54a1905d3729936b6ca54ddce172ac7a00ff54381a1711e99ee7a1e28963414"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e8db4c63c5d688293e9a4e39de51310e87fd76f33fb0a279e6fdeb27847e980f"
-    sha256 cellar: :any_skip_relocation, catalina:      "e8db4c63c5d688293e9a4e39de51310e87fd76f33fb0a279e6fdeb27847e980f"
-    sha256 cellar: :any_skip_relocation, mojave:        "e8db4c63c5d688293e9a4e39de51310e87fd76f33fb0a279e6fdeb27847e980f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b54a1905d3729936b6ca54ddce172ac7a00ff54381a1711e99ee7a1e28963414"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5e39cef7fd1b8e8715d678470b119052843d59fd7421c407fcdff24af3011044"
+    sha256 cellar: :any_skip_relocation, big_sur:       "cbb69e29ac9cd2b924e9e1e8768a22798465e35ec48e0da244df1c8d57d4ddf6"
+    sha256 cellar: :any_skip_relocation, catalina:      "cbb69e29ac9cd2b924e9e1e8768a22798465e35ec48e0da244df1c8d57d4ddf6"
+    sha256 cellar: :any_skip_relocation, mojave:        "cbb69e29ac9cd2b924e9e1e8768a22798465e35ec48e0da244df1c8d57d4ddf6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5e39cef7fd1b8e8715d678470b119052843d59fd7421c407fcdff24af3011044"
   end
 
   depends_on "node"
