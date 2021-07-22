@@ -10,10 +10,10 @@ class Samba < Formula
   revision 1
 
   bottle do
-    sha256 arm64_big_sur: "5825541d678648183fe2d19a49a63cb08d1b0686e6834390c39046442b945f52"
-    sha256 big_sur:       "31ea52ccf74617338ed0037dc4a759cd8a723fc5fe15352daaa2300b9f4d6c30"
-    sha256 catalina:      "76ddd1be9396e5fa9063e919fb2ead0a6a870ef02fd59d6029b9e47e3153da7d"
-    sha256 mojave:        "14465ea48a8aa067a205dc4461ff27254ca138bcc113fddd52a53089295897a8"
+    sha256 arm64_big_sur: "1a70bc9b661f27f9c9b9cab545e504f479c87b367fb78a2ee9d68ad77f687a8c"
+    sha256 big_sur:       "cbe5d63987f3afff71ed29f63b077a3c8f33f1eab38cc0a4419d4bbd0e01509e"
+    sha256 catalina:      "82f62e5d2f0b43d99caf957c63a0459ba741cb40aebb6ec1e96396448ae44b4d"
+    sha256 mojave:        "9364ca7435734f573707560b874f2296712c476d833e842a2153615d32285611"
   end
 
   # configure requires python3 binary to be present, even when --disable-python is set.
