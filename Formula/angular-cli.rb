@@ -8,11 +8,11 @@ class AngularCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "01dd03fa9e2e514e99964ec3d70330c5f908557cc9c07d368ba826fe30a5d9be"
-    sha256 cellar: :any_skip_relocation, big_sur:       "228ca30be9c64fad1311b773860758cb3a9538fc25b5bf0fdee51e24b2f8b122"
-    sha256 cellar: :any_skip_relocation, catalina:      "228ca30be9c64fad1311b773860758cb3a9538fc25b5bf0fdee51e24b2f8b122"
-    sha256 cellar: :any_skip_relocation, mojave:        "228ca30be9c64fad1311b773860758cb3a9538fc25b5bf0fdee51e24b2f8b122"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "01dd03fa9e2e514e99964ec3d70330c5f908557cc9c07d368ba826fe30a5d9be"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5ca8f15d73f12ed1ffc4954890a7d146070052f9ff20a117b5d53968cb200ddf"
+    sha256 cellar: :any_skip_relocation, big_sur:       "02b0917f66a03ca32840de73daa3651fd311dbb6d8f14f0456405d0121100e07"
+    sha256 cellar: :any_skip_relocation, catalina:      "02b0917f66a03ca32840de73daa3651fd311dbb6d8f14f0456405d0121100e07"
+    sha256 cellar: :any_skip_relocation, mojave:        "02b0917f66a03ca32840de73daa3651fd311dbb6d8f14f0456405d0121100e07"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5ca8f15d73f12ed1ffc4954890a7d146070052f9ff20a117b5d53968cb200ddf"
   end
 
   depends_on "node"
