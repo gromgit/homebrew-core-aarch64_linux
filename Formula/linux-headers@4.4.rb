@@ -5,6 +5,10 @@ class LinuxHeadersAT44 < Formula
   sha256 "291d844619b5e7c43bd5aa0b2c286274fc5ffe31494ba475f167a21157e88186"
   license "GPL-2.0-only"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "b3821c05a871c143c38d75b7494380f8f7a5725090528d849d2c066956a93344"
+  end
+
   depends_on :linux
 
   def install
