@@ -5,6 +5,10 @@ class FuseOverlayfs < Formula
   sha256 "5606c5c1e4e0d7063f3f50a72c906f23b7a505784d20dc40fff9e4b2b802d5f4"
   license "GPL-3.0-or-later"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "ac9998b322ee4feca49fdd048eefbb87f30afe9c00ec75d67aca2cbffcf30539"
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "pkg-config" => :build
