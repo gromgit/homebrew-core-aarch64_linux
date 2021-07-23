@@ -8,6 +8,13 @@ class Pydocstyle < Formula
   license "MIT"
   head "https://github.com/PyCQA/pydocstyle.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8de054460c03ef2ae090e16de96d5555673f615a0cc66926c23b71cd67b1f2c6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "271f7fbfd202df294424111730f3fa7b29b9e07602a13b06239f4c9216635a45"
+    sha256 cellar: :any_skip_relocation, catalina:      "3658ffaa56d1bc1b0da49974e889e3b37e09a069fca1a3facc789d5293fb457d"
+    sha256 cellar: :any_skip_relocation, mojave:        "66244942f557879c00ed156a7f9bd70a70230ece72b6e22d5f0ef9800e4a07e5"
+  end
+
   depends_on "python@3.9"
 
   resource "snowballstemmer" do
