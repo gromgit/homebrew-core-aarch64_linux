@@ -12,10 +12,11 @@ class Sleuthkit < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "2019d39f5f7125a51c9b355d1106fb87a7ff69dd8468e4a7ac862f5ef4c63199"
-    sha256 cellar: :any, big_sur:       "c24c26b12e348409df732b847a5bf889dc9be429a0cb102595dc90576e0de320"
-    sha256 cellar: :any, catalina:      "be14b5b898b736334e74427335411f5ccaf05c462e45c367a61a1399155293f0"
-    sha256 cellar: :any, mojave:        "fa11e725245a2b893d8f781afc5b9e80e9e0c064a0030f87f45ac907fb2fb839"
+    sha256 cellar: :any,                 arm64_big_sur: "2019d39f5f7125a51c9b355d1106fb87a7ff69dd8468e4a7ac862f5ef4c63199"
+    sha256 cellar: :any,                 big_sur:       "c24c26b12e348409df732b847a5bf889dc9be429a0cb102595dc90576e0de320"
+    sha256 cellar: :any,                 catalina:      "be14b5b898b736334e74427335411f5ccaf05c462e45c367a61a1399155293f0"
+    sha256 cellar: :any,                 mojave:        "fa11e725245a2b893d8f781afc5b9e80e9e0c064a0030f87f45ac907fb2fb839"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "81704d55ba8566b62471c56ec6e2110a8ac0d1fc9f7de3d6e84967602a353e9d"
   end
 
   depends_on "ant" => :build
