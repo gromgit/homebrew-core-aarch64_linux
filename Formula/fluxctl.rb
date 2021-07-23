@@ -12,11 +12,11 @@ class Fluxctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1b4775744fa8e75249d90eea1ee851e67d3f1793c3286466e55fd8e41a732c0d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "091dce033b92404641a50ef83ce0b9543432c4975d832303af2dbe3aa5b3aad5"
-    sha256 cellar: :any_skip_relocation, catalina:      "9d1b109d5eb2b54672b80c0964a125d64f14b275c5b868e36cc59e4892f797cd"
-    sha256 cellar: :any_skip_relocation, mojave:        "a15f548797baf170fd2aebb6a005e98c1d12f66126b35ede0845687910f0aeab"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0147eaef10b49056a1121213607aa86e19e841f114ad0be517ad6f4230303ff5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "92b30058c4f25a2a54cd87cf85da8ebc3c3031f1da6718697985a35d6d38370f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a34f23001a65e4b825f9530c9fdeab01fc460e35514a88edb68827ddd7e8c81a"
+    sha256 cellar: :any_skip_relocation, catalina:      "e0d79334b34f6ebc096e859dca4ba9e5d0fe5dbceaf40f25531f6ee0fd160885"
+    sha256 cellar: :any_skip_relocation, mojave:        "b7aa54b9bddad2e5a11853ea04a5b301888af88990e414466d00fec8e20a8585"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "57425da095d46dd789d9f96ad87c0402add627bac2cf28f0a67d0e7abc5dbde0"
   end
 
   depends_on "go" => :build
