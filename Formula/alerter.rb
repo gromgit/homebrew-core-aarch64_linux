@@ -5,6 +5,13 @@ class Alerter < Formula
   sha256 "c4c16735e1a57ce04a5acfa762bd44ab8ef10884308725ab886b984b1de17bfe"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3cf062e21dfc3c797838b9f8e7c47888aebb931358501929310756c9b692eb13"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c1fb85ecc81cf1e4e76b25f5847fa44dc76b8406787633a50e9fb612c93a191e"
+    sha256 cellar: :any_skip_relocation, catalina:      "1651d372410551bb8d723b1d1bc98ded7bc15b4708be3a849e34929807f5fb81"
+    sha256 cellar: :any_skip_relocation, mojave:        "894f1e5649ce05f1413d4bab20b9faf97dc19800698472535907811b930fc498"
+  end
+
   depends_on xcode: :build
 
   def install
