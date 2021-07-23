@@ -12,10 +12,10 @@ class Clazy < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "a8ddb146d2b1a6058a8a86772e24b6f4bcbb76d9ff254557a4bbc4bd152acb0e"
-    sha256 cellar: :any, big_sur:       "c81f75e0c903da26f703002ecc1377a0b393ed7cfe5803c6351fadf6c131318d"
-    sha256 cellar: :any, catalina:      "d0f860fc174f54e0b0022a995f556fe7aa4f2cb3ed016863d4fe970e57112c57"
-    sha256 cellar: :any, mojave:        "7d16a3e2c951be1d7bc818a12efb4e8af98050e846d367fd9e505c10a556c72b"
+    sha256 cellar: :any, arm64_big_sur: "51cc440a6eabd7f55f7b48bc21a68ac00b37d58138f2fb1d26a66fab0ad7e6a6"
+    sha256 cellar: :any, big_sur:       "3ed04ec0befe409bcaf793f94a67ddba1b2d9e989db5ed99a9b6c961d4eaf555"
+    sha256 cellar: :any, catalina:      "99c1942c31a3cffdd3d0ffac942820e50e8d0ebac98dff0b3aa36f1edfcfa733"
+    sha256 cellar: :any, mojave:        "9164dd65ef8f08643b0f3825bc933bcef835d9b7d2c294c8fa4318537010d2ac"
   end
 
   depends_on "cmake"   => [:build, :test]
