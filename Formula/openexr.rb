@@ -2,10 +2,9 @@ class Openexr < Formula
   desc "High dynamic-range image file format"
   homepage "https://www.openexr.com/"
   # NOTE: Please keep these values in sync with imath.rb when updating.
-  url "https://github.com/openexr/openexr/archive/v3.0.5.tar.gz"
-  sha256 "7aa6645da70e9a0cce8215d25030cfd4f4b17b4abf1ceec314f7eae15674e8e4"
+  url "https://github.com/openexr/openexr/archive/v3.1.0.tar.gz"
+  sha256 "8c2ff765368a28e8210af741ddf91506cef40f1ed0f1a08b6b73bb3a7faf8d93"
   license "BSD-3-Clause"
-  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "43a4a1b108ced9e47e56a9b928ef8584451208b6488c3d836ddc825a4af93534"
@@ -24,6 +23,13 @@ class Openexr < Formula
   resource "exr" do
     url "https://github.com/openexr/openexr-images/raw/master/TestImages/AllHalfValues.exr"
     sha256 "eede573a0b59b79f21de15ee9d3b7649d58d8f2a8e7787ea34f192db3b3c84a4"
+  end
+
+  # Patch to fix ARM build failure. Remove at next release.
+  # https://github.com/AcademySoftwareFoundation/openexr/pull/1112
+  patch do
+    url "https://github.com/AcademySoftwareFoundation/openexr/commit/69ee64ca99d63f747ccfb8b6f4356ea463ffaa74.patch?full_index=1"
+    sha256 "7b4f18d30496283a841afe74c5cf2cbf14d3380f91f61bd53159e54df360d85f"
   end
 
   def install
