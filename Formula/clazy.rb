@@ -1,10 +1,9 @@
 class Clazy < Formula
   desc "Qt oriented static code analyzer"
   homepage "https://www.kdab.com/"
-  url "https://download.kde.org/stable/clazy/1.9/src/clazy-1.9.tar.xz"
-  sha256 "4c6c2e473e6aa011cc5fab120ebcffec3fc11a9cc677e21ad8c3ea676eb076f8"
+  url "https://download.kde.org/stable/clazy/1.10/src/clazy-1.10.tar.xz"
+  sha256 "4ce6d55ffcddacdb005d847e0c329ade88a01e8e4f7590ffd2a9da367c1ba39d"
   license "LGPL-2.0-or-later"
-  revision 2
   head "https://invent.kde.org/sdk/clazy.git"
 
   livecheck do
@@ -22,7 +21,7 @@ class Clazy < Formula
   depends_on "cmake"   => [:build, :test]
   depends_on "qt"      => :test
   depends_on "coreutils"
-  depends_on "llvm@11"
+  depends_on "llvm"
 
   uses_from_macos "libxml2"
   uses_from_macos "ncurses"
@@ -66,7 +65,7 @@ class Clazy < Formula
       int main() { return 0; }
     EOS
 
-    ENV["CLANGXX"] = Formula["llvm@11"].opt_bin/"clang++"
+    ENV["CLANGXX"] = Formula["llvm"].opt_bin/"clang++"
     system "cmake", "-DCMAKE_CXX_COMPILER=#{bin}/clazy", "."
     assert_match "warning: qgetenv().isEmpty() allocates. Use qEnvironmentVariableIsEmpty() instead",
       shell_output("make VERBOSE=1 2>&1")
