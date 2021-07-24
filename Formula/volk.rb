@@ -9,9 +9,10 @@ class Volk < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 big_sur:  "13397948c2762d27f80e47fa13ef95930aea8a1b9221ca266f34de6f052890e8"
-    sha256 catalina: "e1fce59ef2e0308beb2688319d62cce2086159f792838e97d82315fab965c24c"
-    sha256 mojave:   "7e2e2549521877c836c6b2c806f52c6256a9bc43c1d82b1f0edbbce0338bd512"
+    sha256 big_sur:      "13397948c2762d27f80e47fa13ef95930aea8a1b9221ca266f34de6f052890e8"
+    sha256 catalina:     "e1fce59ef2e0308beb2688319d62cce2086159f792838e97d82315fab965c24c"
+    sha256 mojave:       "7e2e2549521877c836c6b2c806f52c6256a9bc43c1d82b1f0edbbce0338bd512"
+    sha256 x86_64_linux: "676c8cf00523f1c0771276bbcb9c99e2d465b2bf8d9d887b4fe03b8a3a524618"
   end
 
   depends_on "cmake" => :build
