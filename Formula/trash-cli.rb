@@ -9,11 +9,11 @@ class TrashCli < Formula
   head "https://github.com/andreafrancia/trash-cli.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f67830940753ba946de47afcff2dd0a2a6bd5b4c665cbbf4fe25264b89022efb"
-    sha256 cellar: :any_skip_relocation, big_sur:       "16ffdf6c7f458ea55eb8139dc67c5f65116bb4d76b4f40f68705525d6e8c0ded"
-    sha256 cellar: :any_skip_relocation, catalina:      "c6d062d4f298bab84722d8365eb428d4bd4f0fe6c317a9e6c13a7fcbf0ae08bc"
-    sha256 cellar: :any_skip_relocation, mojave:        "c6767dea374173883c805b91c53c103b694bacca19b7b5452a95d851ed1b87c2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e631a6f59594c8d8718d39c34f85ee95bc6a0de702136c07ec26306c53731f79"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b888dba8addd6a5f2ad4fdc9fa8aca111727568aeaee605762a100ea91ae2178"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f55385d97429ccf5a951ed573cde5730a0f673c9a9321c75961057446bd9845e"
+    sha256 cellar: :any_skip_relocation, catalina:      "7a8e747674c4bec7976110fabffcb361761543950f3f6cac15c27e753e323dd1"
+    sha256 cellar: :any_skip_relocation, mojave:        "620fae73a3540e5d9751225455a95b03b609acb05c3ae44b9f8be757cfd9344b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dd48d148c010b625d65ad048e7afad91afdd2e7c566a11b88e1b827b8218c3fc"
   end
 
   depends_on "python@3.9"
