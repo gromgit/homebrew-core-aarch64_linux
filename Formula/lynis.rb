@@ -11,11 +11,11 @@ class Lynis < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "95cb69f97cc81e243cbe80d8a95088b45350d0255f84e5dd6161261271554ff3"
-    sha256 cellar: :any_skip_relocation, big_sur:       "196d3cb1f508777b2773bffa721cb20d41e3b51a3dcf0279a7ad831c64e9d69a"
-    sha256 cellar: :any_skip_relocation, catalina:      "196d3cb1f508777b2773bffa721cb20d41e3b51a3dcf0279a7ad831c64e9d69a"
-    sha256 cellar: :any_skip_relocation, mojave:        "196d3cb1f508777b2773bffa721cb20d41e3b51a3dcf0279a7ad831c64e9d69a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a30702d97528660fa6d82abcbee4031c466e31950061dcfe7852d07e6f47a364"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fc0a9524b52fc385fe438af0ec82772adffd8eb80fe8e54207130cb2945b1102"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f22d1062214334e29b63165f7246ee32c64e9981ddc2ef15c9610f40da7e457c"
+    sha256 cellar: :any_skip_relocation, catalina:      "f22d1062214334e29b63165f7246ee32c64e9981ddc2ef15c9610f40da7e457c"
+    sha256 cellar: :any_skip_relocation, mojave:        "f22d1062214334e29b63165f7246ee32c64e9981ddc2ef15c9610f40da7e457c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fc0a9524b52fc385fe438af0ec82772adffd8eb80fe8e54207130cb2945b1102"
   end
 
   def install
