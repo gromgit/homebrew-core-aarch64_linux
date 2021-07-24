@@ -11,6 +11,7 @@ class Gspell < Formula
     sha256 big_sur:       "ca7552734c97645c5b9c37ba06533c3a6b671e2b0a3c4c34c208cc3a3ec49353"
     sha256 catalina:      "6843801c766f244f4d831e589c940c481f71310e67b744b6029b22c5c65adc28"
     sha256 mojave:        "fd9ac81aebe4786bca2c0c4175c74514ffa26cf8a1d79142ebc96bd5c48ff86d"
+    sha256 x86_64_linux:  "082fe2398c8ef172627cede4645d7c211e7c447b315716a66e81b0dc636b96b3"
   end
 
   depends_on "autoconf" => :build
