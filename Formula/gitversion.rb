@@ -4,6 +4,7 @@ class Gitversion < Formula
   url "https://github.com/GitTools/GitVersion/archive/5.6.10.tar.gz"
   sha256 "5a4cdca526241f322e51fc307a5be2ef236281b6c5cca833fa04bc8eecd9f725"
   license "MIT"
+  revision 1
 
   bottle do
     sha256 cellar: :any, big_sur:  "5e99b09d02ac3aa3074a179782ad8fcca9ca6c93a9188d83e5f6e1a05abbb985"
@@ -14,13 +15,11 @@ class Gitversion < Formula
   depends_on "dotnet"
 
   def install
-    system "dotnet", "build",
+    system "dotnet", "publish",
            "--configuration", "Release",
            "--framework", "net#{Formula["dotnet"].version.major_minor}",
-           "--output", "out",
+           "--output", libexec,
            "src/GitVersion.App/GitVersion.App.csproj"
-
-    libexec.install Dir["out/*"]
 
     (bin/"gitversion").write <<~EOS
       #!/bin/sh
