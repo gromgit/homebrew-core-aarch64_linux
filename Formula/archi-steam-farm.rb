@@ -5,6 +5,7 @@ class ArchiSteamFarm < Formula
     tag:      "5.1.0.9",
     revision: "31a06a8af36360c0f2afaf1bc3e41fdec6d2831b"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/JustArchiNET/ArchiSteamFarm.git"
 
   livecheck do
@@ -21,7 +22,7 @@ class ArchiSteamFarm < Formula
   depends_on "dotnet"
 
   def install
-    system "dotnet", "build", "ArchiSteamFarm",
+    system "dotnet", "publish", "ArchiSteamFarm",
            "--configuration", "Release",
            "--framework", "net#{Formula["dotnet"].version.major_minor}",
            "--output", libexec
