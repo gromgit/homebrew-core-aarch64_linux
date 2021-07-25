@@ -12,10 +12,11 @@ class SpatialiteGui < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "e1c8f91baf7afb92406e70a732d5af5c16f8671f3e8fb51aa5e8113b61790f9f"
-    sha256 cellar: :any, big_sur:       "6ab3c3a9ca5849231279f2651685f45ec0543d545f033f16906fe5af65fecbe4"
-    sha256 cellar: :any, catalina:      "7894a76f911b9bc9b0a0322983601a42845915a99945f642820d8a07e13a8a16"
-    sha256 cellar: :any, mojave:        "2123985cc139f7b5962879c9731094be26053bd3596bb689f2138a800d295f20"
+    sha256 cellar: :any,                 arm64_big_sur: "1798e180ff29ec05b186eaae415e7277ec7d1779b0a97cf06b5c311102e0c35b"
+    sha256 cellar: :any,                 big_sur:       "04e3fce9bfefa6945a34adef96ccacd6c66bcaad8a1607bc9de447677580bda8"
+    sha256 cellar: :any,                 catalina:      "670a668e9560d58127746708338d809a59f4961af89f917affc60ba8c32633e9"
+    sha256 cellar: :any,                 mojave:        "3a3678ffccb6de1b99a2bf2f1f4a0b918a854bbf39d415b6e6e1c6971274c8ab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c3ec2a26e83e966f207cc694dab91470d8215dcc650f50866f59ea20834a465c"
   end
 
   depends_on "pkg-config" => :build
