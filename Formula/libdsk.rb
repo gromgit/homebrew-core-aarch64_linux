@@ -19,6 +19,8 @@ class Libdsk < Formula
     sha256 el_capitan:    "b14fb001603c2ba33a26c0f49c7b008659ca5aa05ffaa01ab8147bac4da40d46"
   end
 
+  uses_from_macos "zlib"
+
   def install
     # Avoid lyx dependency
     inreplace "Makefile.in", "SUBDIRS = . include lib tools man doc",
