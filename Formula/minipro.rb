@@ -11,6 +11,7 @@ class Minipro < Formula
     sha256 big_sur:       "0590a42c14ad858823a7839a745a812b921d0e458b64568a81ca17c6f0a5bb45"
     sha256 catalina:      "c949912791a3b9c40f049a8c10f289062bbd9ede15da2f37a597c6c40c4d5f43"
     sha256 mojave:        "d54e9413a92b7bd5118b1938215d61152ea06055f0860ddcb167d74924a828f9"
+    sha256 x86_64_linux:  "14ce0851d54333937203d4c75be5ec68b2f3635604b13eafe60d3d0889c33e10"
   end
 
   depends_on "pkg-config" => :build
