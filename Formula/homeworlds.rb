@@ -8,10 +8,11 @@ class Homeworlds < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "c094bde41b9eeccc8c9d62b2e7e808f4ca9addfeb19f81a2e2e41f26f3871363"
-    sha256 cellar: :any, big_sur:       "6b3e8e07aa49deb2996591fe781c0442f1812c8425665da5f83bb857428e57e4"
-    sha256 cellar: :any, catalina:      "bc82b3b105c956df5e7f629c0ac69f29cb861992b2476a8228692f333f12854a"
-    sha256 cellar: :any, mojave:        "85ac4667ac133f9a45870166c29a7c0dc1ed7cbb51216db987fb8601a001ebf6"
+    sha256 cellar: :any,                 arm64_big_sur: "3abc2449ee3237a932c4250e0c36dbf76de53babb12a6cdfaac8b08e19552c20"
+    sha256 cellar: :any,                 big_sur:       "81327f370fe9de62e68197c054d5929788aa4b32731769b053d4ab893f0aa631"
+    sha256 cellar: :any,                 catalina:      "b7bf80945586bd38e4f2a7a888d55ab46dd6210a069d327d536713fb20e985c3"
+    sha256 cellar: :any,                 mojave:        "34c292eab868e7e49b00653f1f8022e8636370ee2510e50e44720b37c6774bba"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3766f96986bd5604d0d4cefd0a07f3a6e527fdf6f70e70d3e22dac01198a2879"
   end
 
   depends_on "wxwidgets"
