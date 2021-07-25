@@ -14,6 +14,7 @@ class Cifer < Formula
     sha256 cellar: :any_skip_relocation, sierra:        "875e676d7866fd3ba2c8b70806838068775ffbc1102c56ca52d041155b2ade43"
     sha256 cellar: :any_skip_relocation, el_capitan:    "86cbc00f11a5818f48ee67bdc0fa5f2692cc7f37ae6c2c5eb237338c7dc6919b"
     sha256 cellar: :any_skip_relocation, yosemite:      "bde7d97d9ef2a07c481ff8c5ec717fb2ec455fdef864db2a1a7b3056aa1934d2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "58a55640d9031cea1c50d8ad9db0128993f4e5895ccf7a9069f762c34682e165"
   end
 
   on_linux do
