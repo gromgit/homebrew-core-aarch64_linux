@@ -17,6 +17,7 @@ class Yaws < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "79fe292028db08b81a2f66f80cbc2fd7c52e9801692c416ea275663c61dd4533"
     sha256 cellar: :any_skip_relocation, catalina:      "99c7e7a4fb01e682a1f1cf513ac6b4202f9f030fea64836a0b71354802fde033"
     sha256 cellar: :any_skip_relocation, mojave:        "f8b43c32a42426bc2e0b774e8abde8c7b32206ad19c230231ba22f32a1312eb5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "30dbc3c5951396f785b714bcf486d0247d399ecae66903a7e3a1872b3165d01f"
   end
 
   depends_on "autoconf" => :build
