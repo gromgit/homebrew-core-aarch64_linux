@@ -7,10 +7,11 @@ class Gambit < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8baa71e381f33562fc0580da41d111451900d28d20e162d0d86b82d10a8e21a8"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c036470f1e05014eb81ed12d66897c67501e51aa82569e928bf645ff273f6d98"
-    sha256 cellar: :any_skip_relocation, catalina:      "4847905d44b80902b4d059b37bbf22aff4f1a4a760270aea1db539b3632a93ab"
-    sha256 cellar: :any_skip_relocation, mojave:        "34ab61a2b2a66ee44a9098e49c519eab78e90d11029abe027844f7d3a341ab22"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "067cb4ce13d125296e4db92c28c63ae90c6107079b8cd4a6e1fc935565bf864f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c99a930bc6bd33cd8ccd07602c472c9a64006b8a6ca2a846081c0faecaf39bf7"
+    sha256 cellar: :any_skip_relocation, catalina:      "ca119805ce3e9aa8a02d91362ba8cab410762b34e84c67616c78006acebd7d44"
+    sha256 cellar: :any_skip_relocation, mojave:        "0ed6547bd2c50529879b3f1d19dcd1afa685dcc3ed030866d6cbd104c6402dc6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "946f395529bd8d582781d198adac36c2617b0636db95b8b7b5337d0542f0f7eb"
   end
 
   depends_on "autoconf" => :build
