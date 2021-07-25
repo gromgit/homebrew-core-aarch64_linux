@@ -14,11 +14,11 @@ class Nsd < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "5086e23660cc73659c74de90e45e37294b7a225059dfeb020015bd9e1310a4f8"
-    sha256 big_sur:       "a86eb5d78001daa6a01bed25c6230703f5aacc7fdccca441e2752cd6be9b656f"
-    sha256 catalina:      "d15af228defea21a4d66b72ba48548a91358f32f96cf3acfe9f8c6d5816ae049"
-    sha256 mojave:        "1cdc33a7d9c500222beb60116709c8e6df85b555e65048982d7cf7aeedc6cf25"
-    sha256 x86_64_linux:  "1a3dc2aa75fc6026bf7b9b48ecb0540571a5efd692d3e3ed23b61c4e7b75f06e"
+    sha256 arm64_big_sur: "1e0473c4f7aa04a657fc961695785f3141e096a9492a0325325aa913384eaeb8"
+    sha256 big_sur:       "d47418395b19b1d079cc1c15dbb0984dbc8c9e0dfcd2d4003f571c0dfaa6702d"
+    sha256 catalina:      "af75943145733afcb9d40b08ac04f3f27387ec5ecbd9feb642f659d688269f39"
+    sha256 mojave:        "c443e9e09186eca5e52e7fe24847913de0f2faa21d83f44ffb47f50ef2a974f9"
+    sha256 x86_64_linux:  "831286168eae3f0c4d3c2ec18cbfd4b962b593fc5ce03664d8bce614a62768c2"
   end
 
   depends_on "libevent"
