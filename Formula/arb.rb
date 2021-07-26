@@ -1,10 +1,9 @@
 class Arb < Formula
   desc "C library for arbitrary-precision interval arithmetic"
   homepage "https://arblib.org"
-  url "https://github.com/fredrik-johansson/arb/archive/2.19.0.tar.gz"
-  sha256 "0aec6b492b6e9a543bdb3287a91f976951e2ba74fd4de942e692e21f7edbcf13"
+  url "https://github.com/fredrik-johansson/arb/archive/2.20.0.tar.gz"
+  sha256 "d2f186b10590c622c11d1ca190c01c3da08bac9bc04e84cb591534b917faffe7"
   license "LGPL-2.1-or-later"
-  revision 1
   head "https://github.com/fredrik-johansson/arb.git"
 
   bottle do
