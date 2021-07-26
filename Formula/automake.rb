@@ -1,11 +1,10 @@
 class Automake < Formula
   desc "Tool for generating GNU Standards-compliant Makefiles"
   homepage "https://www.gnu.org/software/automake/"
-  url "https://ftp.gnu.org/gnu/automake/automake-1.16.3.tar.xz"
-  mirror "https://ftpmirror.gnu.org/automake/automake-1.16.3.tar.xz"
-  sha256 "ff2bf7656c4d1c6fdda3b8bebb21f09153a736bcba169aaf65eab25fa113bf3a"
+  url "https://ftp.gnu.org/gnu/automake/automake-1.16.4.tar.xz"
+  mirror "https://ftpmirror.gnu.org/automake/automake-1.16.4.tar.xz"
+  sha256 "80facc09885a57e6d49d06972c0ae1089c5fa8f4d4c7cfe5baea58e5085f136d"
   license "GPL-2.0-or-later"
-  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "91656222dff012c7434026ff250fcd92fd5746e60a383ef27547559b6bbfe4f5"
