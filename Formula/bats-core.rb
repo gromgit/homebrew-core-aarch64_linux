@@ -6,7 +6,7 @@ class BatsCore < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "757a7ba99f6aec5343c4cae561ad68c56ea3e03e7de8309aa4cb7958392291ff"
+    sha256 cellar: :any_skip_relocation, all: "483259b5fb07dab08336816777a08467303bf3da7828f2ff75a7d08ccf9cfc73"
   end
 
   depends_on "coreutils"
