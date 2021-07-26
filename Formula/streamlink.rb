@@ -9,11 +9,11 @@ class Streamlink < Formula
   head "https://github.com/streamlink/streamlink.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "87bfadd51f100d7f1914ecd59b0d35f8e3639d378808345c1d3519760520c5a4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "706004ef9dff21ac210cf5a8c34e5eab8fcd86af347924a0199dd66042a6d46c"
-    sha256 cellar: :any_skip_relocation, catalina:      "d412c0d1ce032b198a80170db3d5de61bf5ecdaeb00585af5b057cdfaa6f5596"
-    sha256 cellar: :any_skip_relocation, mojave:        "19527f54378088eef2dc47db26944bb5342b4110b960eab96e71a0c04c286a35"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "300a0c1dfbc26071fb14799c69e0f5cfaee3a1a28b224d2e199714038a567958"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "89726b5936aed2a0b452181559191844d622574beba35c93026af450d2bfed48"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6730a2cce18653bbb2c6fdeea8b87bd270d355de68ba1dc9ab2128149152cae4"
+    sha256 cellar: :any_skip_relocation, catalina:      "d9a280cf58a18e0cb8b86beda544362fb477150d6ca54d07d486a6726367ffd6"
+    sha256 cellar: :any_skip_relocation, mojave:        "87ba357b77549c6e644d5b3847dbb86e305bf389f60c84eb0eb780825095f3f5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "61e145fd95269cd976ee99f2385056c0bfca3445a7bfc30aef3f32aa76968702"
   end
 
   depends_on "python@3.9"
