@@ -6,6 +6,13 @@ class Licensefinder < Formula
       revision: "ced7de9f22a627cb7bd2f11f18e41ffb914ec0b0"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "171e1492cd68d3bd895a9e15357861438be00e738e9b75131765fbe8c0a95568"
+    sha256 cellar: :any_skip_relocation, big_sur:       "9b1614bad0259f5924ae095dba5a0ef29dc7f7fdcf43e4aa832b4ee00c4ffe67"
+    sha256 cellar: :any_skip_relocation, catalina:      "9b1614bad0259f5924ae095dba5a0ef29dc7f7fdcf43e4aa832b4ee00c4ffe67"
+    sha256 cellar: :any_skip_relocation, mojave:        "217b3fca89c5ad77e84b0b20aca1daae8872b674d628c7c86d6f46b478c808c3"
+  end
+
   depends_on "ruby@2.7" if MacOS.version <= :mojave
 
   def install
