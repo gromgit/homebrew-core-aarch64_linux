@@ -8,11 +8,11 @@ class Goreleaser < Formula
   head "https://github.com/goreleaser/goreleaser.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e614d3181eefcafa59ed0ffcf284eb6a0167aa8d3093f174d2c0898a97714917"
-    sha256 cellar: :any_skip_relocation, big_sur:       "57f04caf7f03244520160f6523d651ebf286a121f37039d6b5a1c5741f17c79f"
-    sha256 cellar: :any_skip_relocation, catalina:      "59d336f7b3ecfb31c588ec8ca68da2dd36042bf5cbe1276a44e6434b0036b120"
-    sha256 cellar: :any_skip_relocation, mojave:        "51322565423f29f601cd5db88a3fa3204e32e9b73825e792efa135099593cd31"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cb6e7fd630389679efe463d613254dd1fa14593660504a4495217308dd8b42ae"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fef525a00fb37a049e5474003ff2d4856e2538327814f36042d5d049c21228f5"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5abe15175a38143be0f41aa8380a30443cef0b523880783248e54eb02fa57925"
+    sha256 cellar: :any_skip_relocation, catalina:      "05e292889eb74863a2a647f9a6dd4a3393b7843035b2c20c34dcb784be667df0"
+    sha256 cellar: :any_skip_relocation, mojave:        "57e6d3bdbabb826952a5b22e5294a9deaadad30e6b9a800293a6bbd1d46f22d0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "01e02d0a48e6b111bf2d4635a5bffa1abaaa5a26dd66dbff9a15e5d6565c4b14"
   end
 
   depends_on "go" => :build
