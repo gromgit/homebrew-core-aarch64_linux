@@ -13,10 +13,11 @@ class AflFuzz < Formula
   end
 
   bottle do
-    sha256 big_sur:     "9a6b82b91f72a781d576a0b79b43869577c2f2c16d8d7e56a8c0830f8f7aa11e"
-    sha256 catalina:    "9d9406abfd60163bea04281f6f3746a4f1a1c138c980fa28ace79869b1097052"
-    sha256 mojave:      "7c539dbcb692e99baa85a2edbb11f2945d7bc820d14a454a99594ba3e5321638"
-    sha256 high_sierra: "8e64a9a77f39a8803058381cc80396a4ca7e5104c212d5ef1bd3d9513f9753ab"
+    sha256 big_sur:      "9a6b82b91f72a781d576a0b79b43869577c2f2c16d8d7e56a8c0830f8f7aa11e"
+    sha256 catalina:     "9d9406abfd60163bea04281f6f3746a4f1a1c138c980fa28ace79869b1097052"
+    sha256 mojave:       "7c539dbcb692e99baa85a2edbb11f2945d7bc820d14a454a99594ba3e5321638"
+    sha256 high_sierra:  "8e64a9a77f39a8803058381cc80396a4ca7e5104c212d5ef1bd3d9513f9753ab"
+    sha256 x86_64_linux: "f5d1ccfa91754283abf27bc096aeb33ac130dfab750b9e3547cb59a584c5b6c7"
   end
 
   def install
