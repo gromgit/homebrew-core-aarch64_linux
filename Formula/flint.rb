@@ -1,10 +1,9 @@
 class Flint < Formula
   desc "C library for number theory"
   homepage "https://flintlib.org"
-  url "https://flintlib.org/flint-2.7.1.tar.gz"
-  sha256 "186e2fd9ab67df8a05b122fb018269b382e4babcdb17353c4be1fe364dca481e"
+  url "https://flintlib.org/flint-2.8.0.tar.gz"
+  sha256 "584235cdc39d779d9920eaef16fe084f3c26ffeeea003a3fff64a20a0f33449e"
   license "LGPL-2.1-or-later"
-  revision 2
   head "https://github.com/wbhart/flint2.git", branch: "trunk"
 
   bottle do
