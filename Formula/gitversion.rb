@@ -7,9 +7,9 @@ class Gitversion < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, big_sur:  "5e99b09d02ac3aa3074a179782ad8fcca9ca6c93a9188d83e5f6e1a05abbb985"
-    sha256 cellar: :any, catalina: "f241568286448f027878bd1f1adf1900377d6b064651a19b4632c65f295f7046"
-    sha256 cellar: :any, mojave:   "e0bb3d487d3960d9aabcd20f8a305759d5d03afb95e3e8e0e4e78c21730fd204"
+    sha256 cellar: :any, big_sur:  "225dc04b6f73fdcfca5cbfa1f4739e846903f202bc72eb4467876b90327d2465"
+    sha256 cellar: :any, catalina: "4514224dccee7332547608f7319161703cc39c9ebd720bb613cccb7018152f17"
+    sha256 cellar: :any, mojave:   "6b9fb13372bb96df48231e2ee33b88ac3a112bb78ffb45a23111ff358783eecf"
   end
 
   depends_on "dotnet"
