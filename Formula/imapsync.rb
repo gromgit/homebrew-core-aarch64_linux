@@ -17,6 +17,7 @@ class Imapsync < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "292fd066f1f52cc748bf30395cc117b32c0e3ee62d4646e8d5aa4c9d620ba34e"
     sha256 cellar: :any_skip_relocation, catalina:      "ec79e8b2d77dea4bcf156ae5566f7c9ec3bed6157b62fc7543b93ca276e98b94"
     sha256 cellar: :any_skip_relocation, mojave:        "231ad4b8c618aea36959211b811e678ab9979afb483eb5f6508ffc3bd2a9f42f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d7e11b2c0dc44b342eda66d083d19ee75460af9c17026a43989a13e9f5c39957"
   end
 
   depends_on "pod2man" => :build
