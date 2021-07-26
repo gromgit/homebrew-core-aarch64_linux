@@ -6,12 +6,11 @@ class Makensis < Formula
   license "Zlib"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e189ee20201ab5362625cb677875aed597ad56b85da29ca4b67dbe21396c9f4a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "aa8a346937316765bf9ffe7d532b08212fab4ae697aad7e23185baeabe280249"
-    sha256 cellar: :any_skip_relocation, catalina:      "889d630bf8637f68e90a9591a373ee44bde8d9d6a9395171e024fdced27f26ef"
-    sha256 cellar: :any_skip_relocation, mojave:        "b40f5a388f0dddeb2c3d274bdc43fbba6cc0a9f613d056f0981bc60350252448"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "fe92934c874a27ead142b769d1c1258c6fd3baa66f2f005cad3f57ccd759734f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "39ae544951ae954b512686ba78c4f191ca29bd0de88a427bf8c39c49816f01b6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b59325614e77c44159365a8539eedc26321f7fbefa85d93a3bb1088ad3fee817"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7a677ad617fbb58ca25a087f0fbd1463c794796029dd244cb005698799ca83af"
+    sha256 cellar: :any_skip_relocation, catalina:      "60ed29983ad57340f1eed7556a844bbb09781da190bd27bb16c59aeb5ba8a2b2"
+    sha256 cellar: :any_skip_relocation, mojave:        "6295b3cfb71161a0642636a711a2ca2b691f2c0e317caaa014f17484eebfa603"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8aa50401f56ef67140d2538187216bb1af05483af0eb96494e82e7ce79cd1700"
   end
 
   depends_on "mingw-w64" => :build
