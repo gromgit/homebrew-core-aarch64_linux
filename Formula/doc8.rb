@@ -8,6 +8,13 @@ class Doc8 < Formula
   license "Apache-2.0"
   head "https://github.com/PyCQA/doc8.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0cfc81cb18f6a918b73f3a45860295ecf9dd8117202b0d73737d530906287d4f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d66cdc77b805d511adc0c78ca69589e956c187d3382acb21ef2bfcab92e7f9fb"
+    sha256 cellar: :any_skip_relocation, catalina:      "d66cdc77b805d511adc0c78ca69589e956c187d3382acb21ef2bfcab92e7f9fb"
+    sha256 cellar: :any_skip_relocation, mojave:        "d66cdc77b805d511adc0c78ca69589e956c187d3382acb21ef2bfcab92e7f9fb"
+  end
+
   depends_on "python@3.9"
 
   resource "docutils" do
