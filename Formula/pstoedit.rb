@@ -11,6 +11,7 @@ class Pstoedit < Formula
     sha256 catalina:      "f048d902c088f0625c0c9e18d84b159493775b40e742812b040e7b517900260a"
     sha256 mojave:        "1f3ec91e58d95e08081694b43e031ed83f13a73cecff15c55c532268282b0ad1"
     sha256 high_sierra:   "22710dd8997d40cec3492c40960a9966b80b386bdbd3fed46515c66bb25053d7"
+    sha256 x86_64_linux:  "ffd83f20edd888753d7c981c90ebfd5d590078e93551c44d4ead593fe1b37371"
   end
 
   depends_on "pkg-config" => :build
