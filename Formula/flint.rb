@@ -7,11 +7,11 @@ class Flint < Formula
   head "https://github.com/wbhart/flint2.git", branch: "trunk"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "76a41ad303e485cad7795c7668a488945a4aa1e15b31d0cf60aa67417d818ea8"
-    sha256 cellar: :any,                 big_sur:       "6b6b6fe83f4e2827f57c673598791048b364efe8c554dc7293bfc1594d5aa9e9"
-    sha256 cellar: :any,                 catalina:      "a98cb754d82e32e1072548661fe76bf4ba37388a0497ca5ca7466c45679faab4"
-    sha256 cellar: :any,                 mojave:        "6d223d4c47e57d7080d3e9c70aee75256153268cd75682972dcdc43b8a8eda6d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2daf8784bcb28bff46223174582587e1fe712504ca391a1877c3e14c0e898b2e"
+    sha256 cellar: :any,                 arm64_big_sur: "10023af4f5d4d32a49fea846b7880866f0d36905cd0214f32e4c01d201cc0992"
+    sha256 cellar: :any,                 big_sur:       "ec2e3cd85a3ad16d78e96d9389c40a61e14efb2656d07c38f260a11c73c9c80e"
+    sha256 cellar: :any,                 catalina:      "b9493593bead69bf91df54b1432da6e333143cde6550f0bb19f412464efa6a82"
+    sha256 cellar: :any,                 mojave:        "4fe70d7fbf3d9d7e0ba26bd1773870b1e85418385e55046ae9a1eca21707502c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d9770df8d1e3843a4c47c2835fd266315de1e16801043d57e003f68fa273c343"
   end
 
   depends_on "gmp"
