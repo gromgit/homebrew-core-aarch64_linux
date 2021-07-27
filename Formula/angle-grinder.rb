@@ -6,10 +6,10 @@ class AngleGrinder < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "15d4fb499d5ba409e212603382bfa5277d24d84ab53561fb78bbb14ac1e6bfaa"
-    sha256 cellar: :any_skip_relocation, big_sur:       "25e2cec189b99c508be9de6ef7076028e49dfb8c806bb2c0637071c4c4479f6a"
-    sha256 cellar: :any_skip_relocation, catalina:      "567fb4aea30314ed1ff6b5bfe07b84ccdebaadf5de7e150c849fd2bd59fe020b"
-    sha256 cellar: :any_skip_relocation, mojave:        "003d5093badf3df2e29df03a0098d1ad346f788979e03568638c5c7067168112"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "782939f8ddc8b9c0c15e0a45b0f36d546a6771a27f6273cfb7fbbe580d6e8149"
+    sha256 cellar: :any_skip_relocation, big_sur:       "74c4ae3251570186fe78ad4f55355e006a268d9eeab81405b61cd719aa931316"
+    sha256 cellar: :any_skip_relocation, catalina:      "fd9b197c1537ef416c48ff759fb7889f4061aaca877b40f1b424c872e63e4dc8"
+    sha256 cellar: :any_skip_relocation, mojave:        "29b8a96121053b1b604a21f93819c4ee9e6bfeafba7de24b7798d2367ab69b30"
   end
 
   depends_on "rust" => :build
