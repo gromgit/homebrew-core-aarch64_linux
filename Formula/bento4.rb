@@ -1,9 +1,10 @@
 class Bento4 < Formula
   desc "Full-featured MP4 format and MPEG DASH library and tools"
   homepage "https://www.bento4.com/"
-  url "https://www.bok.net/Bento4/source/Bento4-SRC-1-6-0-638.zip"
-  version "1.6.0-638"
-  sha256 "e9cb2d60ca681663c071e6552c5c570ba45fde558654d8b40f0d5e627d867948"
+  url "https://www.bok.net/Bento4/source/Bento4-SRC-1-6-0-639.zip"
+  version "1.6.0-639"
+  sha256 "3c6be48e38e142cf9b7d9ff2713e84db4e39e544a16c6b496a6c855f0b99cc56"
+  license "GPL-2.0-or-later"
 
   livecheck do
     url "https://www.bok.net/Bento4/source/"
@@ -19,6 +20,8 @@ class Bento4 < Formula
   end
 
   depends_on xcode: :build
+  # artifact does not produce arm64 native binaries
+  depends_on arch: :x86_64
   depends_on "python@3.9"
 
   on_linux do
