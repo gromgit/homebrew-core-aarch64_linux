@@ -1,9 +1,9 @@
 class ProxychainsNg < Formula
   desc "Hook preloader"
   homepage "https://sourceforge.net/projects/proxychains-ng/"
-  url "https://github.com/rofl0r/proxychains-ng/archive/v4.14.tar.gz"
-  sha256 "ab31626af7177cc2669433bb244b99a8f98c08031498233bb3df3bcc9711a9cc"
-  license "GPL-2.0"
+  url "https://github.com/rofl0r/proxychains-ng/archive/v4.15.tar.gz"
+  sha256 "c94edded38baa0447766f6e5d0ec1963bb27c7b55b2a78b305d6f58e171388f8"
+  license "GPL-2.0-or-later"
   head "https://github.com/rofl0r/proxychains-ng.git", branch: "master"
 
   bottle do
@@ -16,6 +16,13 @@ class ProxychainsNg < Formula
     sha256 high_sierra:    "42ba51b1578ff901987212d74e8b3a83ec6313f5ccfe3d554a9b32766f9b65c4"
     sha256 sierra:         "4c8e8c69bd10529a33b3f70e1a55504f79e3358fe834d521c95adafb2f4eea4a"
     sha256 x86_64_linux:   "017e3132cf30e9d01e736d96e17201671cbf7bc3a802a7c842e663b36082714d"
+  end
+
+  # Fix regression in detecting linker options, resulting in build failure for v4.15
+  # Patch included upstream, remove on next release
+  patch do
+    url "https://github.com/rofl0r/proxychains-ng/commit/7de7dd0de1ff387a627620ac3482b4cd9b3fba95.patch?full_index=1"
+    sha256 "dd38fec48f675e17207e320d6f708d7c0c747de57cdd8aafb59bbb0ab805a984"
   end
 
   def install
