@@ -7,10 +7,10 @@ class Pioneer < Formula
   head "https://github.com/pioneerspacesim/pioneer.git"
 
   bottle do
-    sha256 arm64_big_sur: "a3151605aa2a2b4a8a5ac8266105d2293a7f06f594791fed4629340b8f819a71"
-    sha256 big_sur:       "8b59ff2ff180ccdd5485d063d8a46038bc7ae2fb77c70a9a6aec891aba40c7b7"
-    sha256 catalina:      "abeb86c374fa69e433e548cd1189105206cfd3859a1dd06d0ea2b45a15092b9f"
-    sha256 mojave:        "bd448dc95f9f104637263a4e9aea398177b502938a969b766db8229ddc89860a"
+    sha256 arm64_big_sur: "f81b47bad4f1c6cef0655b91da3c805735c75c3111495eba83bda3bc917ce3bb"
+    sha256 big_sur:       "dedb56a9bf9ed68885724b45c5ff371247d9e42acbf1376bdf283e1b2bb2f301"
+    sha256 catalina:      "caf101b903a64522ee78327951b73b76499a110a9a32cea3ca1de699ff1e2574"
+    sha256 mojave:        "713fe514265cdbb7ed9f4c21fea203ba479aea835c75ac34be191f901c06eb12"
   end
 
   depends_on "cmake" => :build
