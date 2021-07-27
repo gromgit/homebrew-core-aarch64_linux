@@ -6,11 +6,11 @@ class Rke < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c673c76ac1f6228f2efce19a547178e02695779c99471cb804d9475969f319b7"
-    sha256 cellar: :any_skip_relocation, big_sur:       "46b14a501ff279fe76d374385c21e642f035d242fd1adb32ad8012b8f179c7b1"
-    sha256 cellar: :any_skip_relocation, catalina:      "87c8b3a81aeb17e12d6acbc0df6ddf22eb6928e559662504aa45dc3241e63dfa"
-    sha256 cellar: :any_skip_relocation, mojave:        "595ab8255201b2e20a3f4e1e01586c4d6120783a69471da22c3715fbf5f5d5a9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "63e799e25c00407b2a076f5690800c393c2139dabcbeacb4e7398050b7ad1c09"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f2fdb55a02a3130740dcb7b14043752f5ec5fce8275686bd9d7f8e7c52697f29"
+    sha256 cellar: :any_skip_relocation, big_sur:       "507c37b5cf8677c97131c555f66db1f3a4f67941b2b45fbe08624a2b057f5440"
+    sha256 cellar: :any_skip_relocation, catalina:      "4dad8009eb32f1dd8422315fc37adfe6418fad14c2d6fa6575c1cadd85d044fa"
+    sha256 cellar: :any_skip_relocation, mojave:        "374f959e627e16e46936a4a08fa49672c9e3aa3fe669bd7e55f3b6d140408954"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "35dd3de9cc36b7ce89bf2c6a03c3f509fe5870e7d4998393c319f5f3caa08aed"
   end
 
   depends_on "go" => :build
