@@ -6,6 +6,14 @@ class Umple < Formula
   sha256 "11523494f9f4f360cce9226ed7f68641aa733fa13d4009f871060f9fe54c6a52"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bd41188baf2192be2d75e098a45efa7a7d83e7c8a76daad5b059bdff6f859071"
+    sha256 cellar: :any_skip_relocation, big_sur:       "bd41188baf2192be2d75e098a45efa7a7d83e7c8a76daad5b059bdff6f859071"
+    sha256 cellar: :any_skip_relocation, catalina:      "bd41188baf2192be2d75e098a45efa7a7d83e7c8a76daad5b059bdff6f859071"
+    sha256 cellar: :any_skip_relocation, mojave:        "bd41188baf2192be2d75e098a45efa7a7d83e7c8a76daad5b059bdff6f859071"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c80a927eb6c67b19974ded86bca1daca1e2ad6d41e6e0a5c56b8f2e409b89730"
+  end
+
   depends_on "ant"
   depends_on "ant-contrib"
   depends_on "openjdk"
