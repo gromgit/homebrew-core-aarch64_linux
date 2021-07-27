@@ -9,6 +9,10 @@ class Gitfs < Formula
   revision 5
   head "https://github.com/presslabs/gitfs.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "638b675aefc6f064d3549d78273b4d28a9b6e2fd6ce1ed5e5c8fe32c1cc0fe0e"
+  end
+
   depends_on "libgit2"
   depends_on "python@3.9"
 
