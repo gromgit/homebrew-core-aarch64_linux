@@ -12,10 +12,10 @@ class Libgnt < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "fb95e81366fa30eeba4c475a6ceb3a3b10e627f479dd5bc32b1d4ed55785a98a"
-    sha256 cellar: :any, big_sur:       "8af4cf0b8e2727ad0db525084fa644d80df9d1c3fbbada9700a988a5c651dc39"
-    sha256 cellar: :any, catalina:      "69c11afb2957571a907a82545da6ea8bed0f9d35193c9cc15d0e2063f82f976b"
-    sha256 cellar: :any, mojave:        "d805104397225f4c57b8f5c5310f3c77f5eea4f5870332b15c84717c465fb384"
+    sha256 cellar: :any, arm64_big_sur: "9f69a2025fb154ec282f75ea1adcfdaefcacc62d493c966b1febf8b52eac2f88"
+    sha256 cellar: :any, big_sur:       "4f5d3a4eac1bc6ced4b77e166d17c69ae675aafab501a1c6a160d96fb4d16767"
+    sha256 cellar: :any, catalina:      "97281ee7db978e4a605173bd5abf7fa88db1d641f374189f534db8072afa4e82"
+    sha256 cellar: :any, mojave:        "066da1b998539c7f36e25b57606d20621ca02be456b708ae9e6b59b99eccb7e5"
   end
 
   depends_on "gtk-doc" => :build
