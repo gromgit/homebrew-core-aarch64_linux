@@ -7,11 +7,10 @@ class Pcl < Formula
   head "https://github.com/PointCloudLibrary/pcl.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "6ba5d120dd629c8fe294cfcfd75817024935e4901807732ec3ecb4404430ca63"
-    sha256 cellar: :any, big_sur:       "e26ac7c25e8d1cd5581b0c25a4a5abcfdc49938784696f988c606cd4248294a8"
-    sha256 cellar: :any, catalina:      "4c25e37d19f4f7e300be112a6ef5dcfeaa9523b1e4aa0457a4873e478663dc54"
-    sha256 cellar: :any, mojave:        "ee7e82622e783b380752ed27eeb65f6a33bc843c30a633c73bde7db2a5f3a304"
+    sha256 cellar: :any, arm64_big_sur: "dcaa7b792b192a7f0032ba29f9fd6958ec9ff8d436ac3ddbf38c7d6472928ae4"
+    sha256 cellar: :any, big_sur:       "734d0e3bb156a42f02a50f5aeddd825b11384f00915ac5c0a50e22ae38d3df9e"
+    sha256 cellar: :any, catalina:      "7259cc6d04a3c34726ae749cc36cbd108bef21f2e40d2d7b2629cb5773e71a0f"
+    sha256 cellar: :any, mojave:        "810e7a8c44c5ea132186cc9303efb6db5a65501d7513095b0e3a5f03e1b8df2c"
   end
 
   depends_on "cmake" => [:build, :test]
