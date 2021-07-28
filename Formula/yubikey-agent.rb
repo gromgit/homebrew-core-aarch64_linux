@@ -7,10 +7,10 @@ class YubikeyAgent < Formula
   head "https://filippo.io/yubikey-agent", using: :git
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "950c6257f3a78028a23798ec38fc13b21b70c7995246d6bce8ab142b0467014f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c039d2e64526ae2c7e488cdcf5c104579fecd447886cc857892c1efd28bf7b63"
-    sha256 cellar: :any_skip_relocation, catalina:      "41bfe241c1ee1424ccee14ba04b583c71cb0dbf481db311fd1f12f552258f941"
-    sha256 cellar: :any_skip_relocation, mojave:        "4ec8a15bca487e38310100533e787d8e7bcc80ab9f6d4285f49f9df58fbee5b3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "efffadb45cd18617afdd4ba682d8a198c17f37a45c4daceffe4233b1eb2b7cb4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b6848be5e33c4a19beab0d30667e943eae86ebada5f411645e13216568e366fb"
+    sha256 cellar: :any_skip_relocation, catalina:      "4610af306fa6ea29b93a290e3605822483cfd484c1ee2228dbed8a4c7eeff8f7"
+    sha256 cellar: :any_skip_relocation, mojave:        "2b0c46b8938baa3fba070a23da7475e4d502cf9142330a8c42f102e782a90f64"
   end
 
   depends_on "go" => :build
