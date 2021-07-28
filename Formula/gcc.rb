@@ -7,14 +7,13 @@ class Gcc < Formula
     # backported with his help to gcc-11 branch. Too big for a patch.
     url "https://github.com/fxcoudert/gcc/archive/refs/tags/gcc-11.1.0-arm-20210504.tar.gz"
     sha256 "ce862b4a4bdc8f36c9240736d23cd625a48af82c2332d2915df0e16e1609a74c"
-    version "11.1.0"
+    version "11.2.0"
   else
-    url "https://ftp.gnu.org/gnu/gcc/gcc-11.1.0/gcc-11.1.0.tar.xz"
-    mirror "https://ftpmirror.gnu.org/gcc/gcc-11.1.0/gcc-11.1.0.tar.xz"
-    sha256 "4c4a6fb8a8396059241c2e674b85b351c26a5d678274007f076957afa1cc9ddf"
+    url "https://ftp.gnu.org/gnu/gcc/gcc-11.2.0/gcc-11.2.0.tar.xz"
+    mirror "https://ftpmirror.gnu.org/gcc/gcc-11.2.0/gcc-11.2.0.tar.xz"
+    sha256 "d08edc536b54c372a1010ff6619dd274c0f1603aa49212ba20f7aa2cda36fa8b"
   end
   license "GPL-3.0-or-later" => { with: "GCC-exception-3.1" }
-  revision 1
   head "https://gcc.gnu.org/git/gcc.git"
 
   # We can't use `url :stable` here due to the ARM-specific branch above.
