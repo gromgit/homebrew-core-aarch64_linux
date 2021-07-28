@@ -7,11 +7,11 @@ class Nuclei < Formula
   head "https://github.com/projectdiscovery/nuclei.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a7c9a0c24f4dccbe40763673069ee75443e81e4d941f64ffc9d03712f09105b8"
-    sha256 cellar: :any_skip_relocation, big_sur:       "56a64bdbb2bafd0712465c4f7f7dea756fbfb017318759351a19977681a61f4a"
-    sha256 cellar: :any_skip_relocation, catalina:      "ec6fe90f74f1b0bb21b8639630cc9c2123106413eef4d43a8786577ebea9a5f0"
-    sha256 cellar: :any_skip_relocation, mojave:        "cb57069391c746c6f7730d388a1f3103c5902defa35648b993cebbbb74d409cb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6cf36d3ab8afb643df9ad5be5e86006d8365b2aedc0411af2cf92e34f64173e7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "706faf964fa58518987d65199e58f7ccf3cd3d3352c620b2022d40c0ac280c19"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e44b70f479aeb656608e57715b990d9a1b86df4f072e5120959f457448662cf0"
+    sha256 cellar: :any_skip_relocation, catalina:      "69c808b122008847f06a2f98e2a9ea302202f1a4c6b051eb63620fbeb2038917"
+    sha256 cellar: :any_skip_relocation, mojave:        "a6827455a294840c24dca0ac0a154c5f927e2fcef4718934793a6c99890e7e14"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "80d19505839db16524ff9e7f2bf60a886c211e63c68080702a6a1a862776d04b"
   end
 
   depends_on "go" => :build
