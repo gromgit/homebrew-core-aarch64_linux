@@ -7,11 +7,11 @@ class Gauge < Formula
   head "https://github.com/getgauge/gauge.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8ae89fe6cd6b11394020100411dfbb7cea4f53d90235cbc2ddaf26fe58b29753"
-    sha256 cellar: :any_skip_relocation, big_sur:       "779c2e041fd7f5e0b7535bbb6ff6da4771c0808bb028f552fbc8e13fedf75a98"
-    sha256 cellar: :any_skip_relocation, catalina:      "9bd288a71e471daa07164838780675b8e6669162bbb2b659ba2da7aa7c972a02"
-    sha256 cellar: :any_skip_relocation, mojave:        "2daa3523bd3e92c0b6aa5ed0d4954329833f4424a3a96dbc907c2ce4475f9317"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6cc9e798767cba30256b7ac7f8201bb45d019f81dbb88ba60852acf83e9cb76a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5ea86ebd8862c1e43ad136df5f06e3468c7eeeaac8abe4b322f74e79467a3928"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e5c5de95e30c97fb49d97360aafe1a3b84615a7a5f091fa794cc8e50c17fae95"
+    sha256 cellar: :any_skip_relocation, catalina:      "8c2e9ae82bdb314e93798356d05e077374e783d517132a90622fb712dd8d770d"
+    sha256 cellar: :any_skip_relocation, mojave:        "c1c37c68fdd18a382b2c4e3d6114fa9a658edd6c7ad802f437189e30bde09f31"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "53218e3981d09b19b2729da95bb018a3a6d407bb59c1216d9382360309a1e2c5"
   end
 
   depends_on "go" => :build
