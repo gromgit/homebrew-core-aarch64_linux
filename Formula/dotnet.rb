@@ -12,9 +12,10 @@ class Dotnet < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:  "614cf7d93f8028b3ef76d5c7a62eb715ee1220de555cd3d03b9f1f6d92766763"
-    sha256 cellar: :any, catalina: "14539181400c8e2a729a13646a8315fe2983b069509bb9e177540f3730efd7e3"
-    sha256 cellar: :any, mojave:   "c6249aa4a3c1a7db037fda9b7d7e40085dbbd2555dd195b03f2c767bc9381d90"
+    sha256 cellar: :any,                 big_sur:      "506a88b54fd7728c722c7824055458df93c271d87298b81979257457646dec08"
+    sha256 cellar: :any,                 catalina:     "01b623ce85fb1e0bcf78de25193f3778956d62f601b233509999c1d08c1a4c57"
+    sha256 cellar: :any,                 mojave:       "6bc5fad76c9f9f3523c3a77d9a03f86ffd25d34c48f54a86b12ae075ab0bca7b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "483fc8bab6ee7421f6fe1746c87e3f3db576a8a4a291f22b63fab4556c4863be"
   end
 
   depends_on "cmake" => :build
