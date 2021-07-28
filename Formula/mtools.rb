@@ -7,11 +7,11 @@ class Mtools < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c4a2c598ecc8fa73fc8b3aaa9bd56b91c3137c1cfb431ce9c795ee69d9cab3ba"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a38b210941937a9424d92096af7fa3470b9664460ba19d17631675b88889c4e8"
-    sha256 cellar: :any_skip_relocation, catalina:      "9561b64f4c3ca6d11fe5f13e7fa205a777dbecbb4c150b936dbb97eed15c9e8b"
-    sha256 cellar: :any_skip_relocation, mojave:        "0178acec6b4cb1d206534712d0304de310d8887ef4733998387286f46137c16a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e4b1ee8a2faead2c2a4ca5be1534e28f2b0872a012808e7a9a352a98f3ec6a30"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a4732fac3050d08cb7645158f7a695c6b1131863797f9522ef24816873e6ee6f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6b788824e4d9a861db566caae41dc0d7290232db79f434ca63c871bdd637913b"
+    sha256 cellar: :any_skip_relocation, catalina:      "bbf3f0335de4eb86bc042691965bd8a494cbb828701c760a620d2e3b1c945900"
+    sha256 cellar: :any_skip_relocation, mojave:        "ff61db59edf8286c99b002480db699fcdce81ae5f3570470fe59dbed24847ed4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "29c75e28e06f1ccac38e687e1b7885544e105bc3e7f674a87c92d241771b9ca3"
   end
 
   conflicts_with "multimarkdown", because: "both install `mmd` binaries"
