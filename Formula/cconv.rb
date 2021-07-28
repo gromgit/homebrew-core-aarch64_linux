@@ -21,7 +21,9 @@ class Cconv < Formula
   depends_on "libtool" => :build
 
   def install
-    ENV.append "LDFLAGS", "-liconv"
+    on_macos do
+      ENV.append "LDFLAGS", "-liconv"
+    end
 
     system "autoreconf", "-fvi"
     system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}"
@@ -30,6 +32,7 @@ class Cconv < Formula
   end
 
   test do
-    system bin/"cconv", "-l"
+    encodings = "GB2312, GBK, GB-HANS, GB-HANT, GB18030, BIG5, UTF8, UTF8-CN, UTF8-TW, UTF8-HK"
+    assert_match encodings, shell_output("#{bin}/cconv -l")
   end
 end
