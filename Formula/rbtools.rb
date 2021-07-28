@@ -9,10 +9,11 @@ class Rbtools < Formula
   head "https://github.com/reviewboard/rbtools.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ca6d136337a4d895e9d333aa65ab9ae70cf218950a2e236f26c466ba1d926a21"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e133d75d705c8d4ce84ced1ecbd790d9364f9e2fadbed907e3800b8cf0a37742"
-    sha256 cellar: :any_skip_relocation, catalina:      "0f188ab6170680509af56eb3c35acc9caa58362189336f58b33488f096f5b372"
-    sha256 cellar: :any_skip_relocation, mojave:        "13551bbfc8f9307821306832b2f7858b95c6c8bd77c90a6eeafefe66d0f0f2a7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5504ff84a269ba3b4a0817377d0b306013dfe4d96dc87b6e72767a52e6ec7b92"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7d897e1759a0661306a7609c10a137c10b95790bb30c9552277451aeaea7ba1c"
+    sha256 cellar: :any_skip_relocation, catalina:      "46a6d20314cc563d58cf07194883676214e0d789f38c45c7d144e77f91c28797"
+    sha256 cellar: :any_skip_relocation, mojave:        "0f82c0b16a9ca6c1844b270702d51eb41315f51ab7ac938aa179a33a44907d2b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dad0b80439778e3a82edf03958b1b9c86465609800c0e3105be39e1a354c1c25"
   end
 
   depends_on "python@3.9"
