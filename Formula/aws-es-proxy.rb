@@ -6,12 +6,11 @@ class AwsEsProxy < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "37e07ca5ebf1c86eb72d08cd90df85771c5ab8b496f269bcdc06a0bc526d15fc"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c04f0887348bdf1fd322eae80681657ccb57beef3449b62c2e10092f4e1a0964"
-    sha256 cellar: :any_skip_relocation, catalina:      "4ea34f837d16948e94a2e612c9d257e553b37f60c305172ea8e34798347f2dbe"
-    sha256 cellar: :any_skip_relocation, mojave:        "cc4f13aa9d1aee4a1667a60e5a5a161ae78289fb9a587d12597c379e5c0a9b05"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "a3804611f47815c7ba21ea108cb0e077fbfe59c2f52b85c1f778758babbb5a92"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a5bd051be108c1ce8e425800c094eb78095e9c94e6b7560e6109ba0a1fc757c2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9ae9e19bb22445be989da3b8407bc42fba17a3f512d692bd8d727751b1703757"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5d172bf29028041152acbd6635aee845193fc19f0b8d4e086ed4a28ee9354a37"
+    sha256 cellar: :any_skip_relocation, catalina:      "1e1cb5b16185e9948621055c4960b608973110c5d68ab10cc07c61f52d456010"
+    sha256 cellar: :any_skip_relocation, mojave:        "a30caee0acb5d3c89764be328025d84c9cbeb2adce32a97b78048c399576bff0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "927e9fcca53a19b16b22d363737b24111ecfd333dc9f969086b0e312c3d30a74"
   end
 
   depends_on "go" => :build
