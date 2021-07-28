@@ -11,11 +11,11 @@ class MysqlClient < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "0a0869ca642cde40c30e34546709866dffca6f8572357be1b0eaf6addae98a5b"
-    sha256 big_sur:       "b142f4a32fa04b62d4742a91b0e6b9322e709af367d692769012994e963f35c1"
-    sha256 catalina:      "a2ff68b37407c8d189792925c7bb6dbbcdd2c78021a9121946bbfa9c8f37ec99"
-    sha256 mojave:        "2a0463370835a04d6270113c31d6a4a6f2dd6fc8a845f9fa4c092c0f4c2ac49e"
-    sha256 x86_64_linux:  "babec714db36052706b8fa562a5b16f9ec76e48f54adaf89a92e8c25785adbb2"
+    sha256 arm64_big_sur: "d18591b0da1378331d9bf4a05a3ab32aa11a4de378a74a8658e0dd61ae19ca67"
+    sha256 big_sur:       "a7904ebb20e476aaae9cdacbe747591aebc9a12f1bf9dcde05c428a2680983cd"
+    sha256 catalina:      "9cc3a6250aa0ef10fe984c6cb7c2339e2261e0f478cb37c4d0aa9ac097e24bb5"
+    sha256 mojave:        "508a393ba7f4085fe2912aca915af65413a7372e2fee74ece6f8556f0c85e82e"
+    sha256 x86_64_linux:  "e29ad59ea5a0f27d2cd0867595f67045385b86baa26ec473206c060546a39986"
   end
 
   keg_only "it conflicts with mysql (which contains client libraries)"
