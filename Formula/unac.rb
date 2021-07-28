@@ -21,8 +21,10 @@ class Unac < Formula
   depends_on "gettext" => :build
   depends_on "libtool" => :build
 
-  # configure.ac doesn't properly detect Mac OS's iconv library. This patch fixes that.
-  patch :DATA
+  on_macos do
+    # configure.ac doesn't properly detect Mac OS's iconv library. This patch fixes that.
+    patch :DATA
+  end
 
   patch :p0 do
     url "https://bugs.debian.org/cgi-bin/bugreport.cgi?msg=5;filename=patch-libunac1.txt;att=1;bug=623340"
