@@ -56,7 +56,8 @@ class Cmake < Formula
     end
 
     system "./bootstrap", *args, "--", *std_cmake_args,
-                                       "-DCMake_INSTALL_EMACS_DIR=#{elisp}"
+                                       "-DCMake_INSTALL_EMACS_DIR=#{elisp}",
+                                       "-DCMake_BUILD_LTO=ON"
     system "make"
     system "make", "install"
 
