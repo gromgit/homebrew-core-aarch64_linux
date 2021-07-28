@@ -1,8 +1,8 @@
 class Fastlane < Formula
   desc "Easiest way to build and release mobile apps"
   homepage "https://fastlane.tools"
-  url "https://github.com/fastlane/fastlane/archive/2.188.0.tar.gz"
-  sha256 "5a096f0e7682845845a082e5d041a7ad53a0277c8cbe379d6de106cd7f360c58"
+  url "https://github.com/fastlane/fastlane/archive/2.189.0.tar.gz"
+  sha256 "ad3cf267c098be640f1912b86c37ed7dc3ea5a3d58470eb75b05ca28aef91f32"
   license "MIT"
   head "https://github.com/fastlane/fastlane.git"
 
@@ -21,6 +21,10 @@ class Fastlane < Formula
 
   depends_on "ruby"
 
+  on_macos do
+    depends_on "terminal-notifier"
+  end
+
   def install
     ENV["GEM_HOME"] = libexec
     ENV["GEM_PATH"] = libexec
@@ -33,6 +37,17 @@ class Fastlane < Formula
       FASTLANE_INSTALLED_VIA_HOMEBREW: "true",
       GEM_HOME:                        libexec.to_s,
       GEM_PATH:                        libexec.to_s
+
+    # Remove vendored pre-built binary
+    terminal_notifier_dir = libexec.glob("gems/terminal-notifier-*/vendor/terminal-notifier").first
+    (terminal_notifier_dir/"terminal-notifier.app").rmtree
+
+    on_macos do
+      ln_sf(
+        (Formula["terminal-notifier"].opt_prefix/"terminal-notifier.app").relative_path_from(terminal_notifier_dir),
+        terminal_notifier_dir,
+      )
+    end
   end
 
   test do
