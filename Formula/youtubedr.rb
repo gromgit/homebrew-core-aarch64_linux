@@ -6,11 +6,11 @@ class Youtubedr < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "27fd51f30d5cc9ac035005b26b2a5d5a63a2ac1340065c91ba966556a234b4df"
-    sha256 cellar: :any_skip_relocation, big_sur:       "034b62787ee92478925e250d8f72f4adc69c7a487816caa2bc806dc717f6d9fc"
-    sha256 cellar: :any_skip_relocation, catalina:      "dea572476854f16504a38505df56878dfd85e3566a7cab0e9d3e1d27196f2874"
-    sha256 cellar: :any_skip_relocation, mojave:        "53a16b328f2b1bd0a6562c5123ccd70ad97c4887bec91479a03156b477c2c369"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ceb56faf9ad068bf586e12ac5347c258f9affd6383875b03faee8b32346ab493"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fb9c432ff75ff208c5f7ab51498c0b7ae31fc45799be08445615af46ee21e67b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "480c6f9b88c445c06bd11d893ef166aac2dd872b9940ffdd377d3d11f37a2570"
+    sha256 cellar: :any_skip_relocation, catalina:      "480c6f9b88c445c06bd11d893ef166aac2dd872b9940ffdd377d3d11f37a2570"
+    sha256 cellar: :any_skip_relocation, mojave:        "480c6f9b88c445c06bd11d893ef166aac2dd872b9940ffdd377d3d11f37a2570"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1b65c32cafe012c0ec3abfc8c51ab0d4a4fdb268d3d9fef0c20f244e8e0e33db"
   end
 
   depends_on "go" => :build
