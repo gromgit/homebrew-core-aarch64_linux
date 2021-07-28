@@ -6,10 +6,10 @@ class Mydumper < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "1f86c0904c414620fd5f7223ce325e728901ff4d1c75f84ac253dfeb88f88ad4"
-    sha256 cellar: :any, big_sur:       "c680a5cd0368a1a62d0aeb5aa5d36de2535cb2b67bc46621db3020323fb5ba86"
-    sha256 cellar: :any, catalina:      "3d7e7785f6e0a456b5fe251ec2887cb66d3b9cf7a02668ba522ae49226cd7fca"
-    sha256 cellar: :any, mojave:        "816b1dd45636deeb227bebd1387db705d16bb9bcb702ae81862b99edb01e8801"
+    sha256 cellar: :any, arm64_big_sur: "1921386bcc29a182633c60e570e8cd2fe64bc657a8fd043094bfdaba3066e1d1"
+    sha256 cellar: :any, big_sur:       "50437e47484abc3294969b9eeffcd8373bc62b53e59636d2e56d2c386192d00e"
+    sha256 cellar: :any, catalina:      "4bccea5099be96d94719a79360b48ef71876c57c7836a17455d4612817e34888"
+    sha256 cellar: :any, mojave:        "9e4ca09a18d4bc8d44b64748445bf3dafc32b0d84092e74cb460acac5e898fb8"
   end
 
   depends_on "cmake" => :build
