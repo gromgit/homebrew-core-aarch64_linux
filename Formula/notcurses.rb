@@ -5,6 +5,12 @@ class Notcurses < Formula
   sha256 "ce042908fac11f7df1f9eaa610e46e9c615f53ab036b7c27ae2396292512407b"
   license "Apache-2.0"
 
+  bottle do
+    sha256 arm64_big_sur: "9abe0a85c0d90276b6e9f646d2566ad84a9266c0bb4d4c6260973a6a99e45c57"
+    sha256 big_sur:       "0a847ac9d89b4b5920ede3d1b564d56f57961e315e3389673c646f12bd3b11af"
+    sha256 catalina:      "371bfe4517d062ff1c3746d57ad2dce3766ce4407474cdc24987935200c28261"
+  end
+
   depends_on "cmake" => :build
   depends_on "doctest" => :build
   depends_on "pandoc" => :build
