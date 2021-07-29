@@ -1,8 +1,8 @@
 class NodeAT12 < Formula
   desc "Platform built on V8 to build network applications"
   homepage "https://nodejs.org/"
-  url "https://nodejs.org/dist/v12.22.3/node-v12.22.3.tar.gz"
-  sha256 "30acec454f26a168afe6d1c55307c5186ef23dba66527cc34e4497d01f91bda4"
+  url "https://nodejs.org/dist/v12.22.4/node-v12.22.4.tar.gz"
+  sha256 "613b5a895d85d72b4aa495bdf0ffa483ad8b33635a173c4beb94d2842db740f5"
   license "MIT"
 
   livecheck do
@@ -24,11 +24,8 @@ class NodeAT12 < Formula
   depends_on "python@3.9" => :build
   depends_on "icu4c"
 
-  # Patch for compatibility with ICU 69. Backported from
-  # https://github.com/v8/v8/commit/035c305ce7761f51328b45f1bd83e26aef267c9d
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/9eb96c36ff61c76c809c975f3b4463e826eae73c/node%4012/node%4012-icu69.patch"
-    sha256 "c23163cc26c784479471f904fb47f1c16ec4177c687fd9c3988a8208a3faa583"
+  on_macos do
+    depends_on "macos-term-size"
   end
 
   def install
@@ -37,6 +34,16 @@ class NodeAT12 < Formula
 
     system "python3", "configure.py", "--prefix=#{prefix}", "--with-intl=system-icu"
     system "make", "install"
+
+    term_size_vendor_dir = lib/"node_modules/npm/node_modules/term-size/vendor"
+    term_size_vendor_dir.rmtree # remove pre-built binaries
+
+    on_macos do
+      macos_dir = term_size_vendor_dir/"macos"
+      macos_dir.mkpath
+      # Replace the vendored pre-built term-size with one we build ourselves
+      ln_sf (Formula["macos-term-size"].opt_bin/"term-size").relative_path_from(macos_dir), macos_dir
+    end
   end
 
   def post_install
