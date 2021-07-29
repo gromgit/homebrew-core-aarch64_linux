@@ -7,11 +7,11 @@ class Zabbix < Formula
   head "https://github.com/zabbix/zabbix.git"
 
   bottle do
-    sha256 arm64_big_sur: "f652cbabdf0e19818847e22c7a976060297ea96f099b26f969e3d7b18a7fcbc7"
-    sha256 big_sur:       "28f7230bb8ebbdc989edd13bc1e0f1056c5d6616a81e5a1d0d1781636c9edf94"
-    sha256 catalina:      "e04e30bcd523d19f9dbc1597e5ce62530e68a560b988e413725f41269c295dd9"
-    sha256 mojave:        "6949f2cf1de7bc49943904c8f9dfec6524e9e1eed01de43a72351c8fa6b1c09b"
-    sha256 x86_64_linux:  "542a037dd7a7b1b443c60462536620362d03ecfd28da2cb144e14c5192b9e24a"
+    sha256 arm64_big_sur: "035570354333169d9f8e7a43ca0a0707e9adb004c9709dc00b4b2e02a7977436"
+    sha256 big_sur:       "343653c7f8968a11db3355add8bc11883f20f9765a38ead4d452321b97cba19a"
+    sha256 catalina:      "7de5a411b7e986fbd88abfcd91bfcd0a9f946d184b042441b4e25674786ec42a"
+    sha256 mojave:        "c6c99115c81c102471826b0f61c4f95ee47d386bafca3859177a5456b986d886"
+    sha256 x86_64_linux:  "ff7e59909b33853b63a02c3afbd5f26c72f0c984aa8a69b0da8ccd1c4c1d7c7e"
   end
 
   depends_on "openssl@1.1"
