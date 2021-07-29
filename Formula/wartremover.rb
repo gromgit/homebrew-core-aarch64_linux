@@ -7,9 +7,7 @@ class Wartremover < Formula
   head "https://github.com/wartremover/wartremover.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "01e5f3a7df0d0565a77eb618f0e8096f61c1f638a5eacd91d8d9aaadff210fce"
-    sha256 cellar: :any_skip_relocation, catalina: "56415ad54c5ea4cfe7c031408a49e06d5bc971cc767f5e0df2c177be41d6b705"
-    sha256 cellar: :any_skip_relocation, mojave:   "92d53eea1122fd6bf2d55983ed52751a436da82050bb4078fa68b4cc3f45b3df"
+    sha256 cellar: :any_skip_relocation, all: "32f5fefead8cc719ca13583ccf42faf976a33f3b45914767a014d667c167eaf2"
   end
 
   depends_on "sbt" => :build
