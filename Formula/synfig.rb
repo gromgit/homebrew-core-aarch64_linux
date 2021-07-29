@@ -15,10 +15,10 @@ class Synfig < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "ae131b47118ba5ae9ace5e06844b634172501adb7273e276c01a3b3a8a45bad1"
-    sha256 big_sur:       "ffab19726543e7993cb210a0fbe4a7907e21178883a93e40149e390cb181f7a2"
-    sha256 catalina:      "5c4901b7f940ed7b206981f8d509156a058798a10e80e65ab4d2a5a63547c83b"
-    sha256 mojave:        "bfeb451ed59c8d6ef2d3f268d51eb6f73db622d4c61bc9562fca044213d074b4"
+    sha256 arm64_big_sur: "d6677fc102a82187089fac81ed1e3b934580b542b3f3c533dbde470690f1e8a0"
+    sha256 big_sur:       "001fb43af0d7dde8e368c40c85daf1b8d3a69ada735c71151314506a0c7dd251"
+    sha256 catalina:      "a5707a244eb077e7c1b3fa6ebc02d90957bb45c02e6f2fdd78582b85038b3479"
+    sha256 mojave:        "bc43b4bba17b2ba137139acc797e79066850d210cd94a6eff35946fb0aa0691f"
   end
 
   depends_on "intltool" => :build
