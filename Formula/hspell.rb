@@ -16,6 +16,7 @@ class Hspell < Formula
     sha256 big_sur:       "426c87d91350f33392c862296b5d1b0081bc953adae5c04a9769ebb2a626213f"
     sha256 catalina:      "a0406d5a4d5adefa40b5e820510a9b7f461fcea6a61112103c112775fff49ae8"
     sha256 mojave:        "32e8037e9d494241b975c7558635456991285d53c9bbc89005cd6c86744f30e3"
+    sha256 x86_64_linux:  "fd7cae8024a97aadce0f713008dba1f27e7254969f689a21c9501d42be84fcdb"
   end
 
   depends_on "autoconf" => :build
