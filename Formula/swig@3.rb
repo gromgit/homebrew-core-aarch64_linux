@@ -11,6 +11,7 @@ class SwigAT3 < Formula
     sha256 mojave:        "28e5c0a5e8aac0c0d5f58e4dd69c590f57d3a450d92aa35b18aee037ab7d8b60"
     sha256 high_sierra:   "730bd728981cc1534664ef35d08d0b285e79756c286913d868af6afa43f60f4d"
     sha256 sierra:        "23275971784bb9272a734f44c9689dafecd5e6c4be917cd3d621064858cd76db"
+    sha256 x86_64_linux:  "8ba7debca7e99a4b12be8eef984ef4bf0826ad37baf171cd2ce36e55f23ee3da"
   end
 
   keg_only :versioned_formula
