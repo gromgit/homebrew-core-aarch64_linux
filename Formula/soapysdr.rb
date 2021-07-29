@@ -7,10 +7,10 @@ class Soapysdr < Formula
   head "https://github.com/pothosware/SoapySDR.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "d93fdc3756fd6036c4e429e48e29df9dae3ba201fe049814fbd56d420a8cd3db"
-    sha256 cellar: :any, big_sur:       "3c548da2b3d9c65c3a57a96a7cf4c0750a897ed813b44cb3b1af9364803e38c8"
-    sha256 cellar: :any, catalina:      "87d3d2fd8d8b76cd01151395a9fa8c482db9508933c991cbdd29dcdf07ce5b68"
-    sha256 cellar: :any, mojave:        "fdb7072edfc170aa7aa5bff1411f6797701500968f318be6ea7b2bfc119198e2"
+    sha256 cellar: :any, arm64_big_sur: "a6fdf172d9d0bc7338b9792211cd9b5f945656908b1d642b987b84d68e1c7704"
+    sha256 cellar: :any, big_sur:       "43f22365e9bc1ecb07cc3c4ee22c198f25c3465ae5cf72f2681223aee30f357b"
+    sha256 cellar: :any, catalina:      "befa2166bf6dd66c45cb2aa00a439d480c227972a5a17242b5a11f50ffdbc25e"
+    sha256 cellar: :any, mojave:        "73f853d0e804e3b3253bd0e23a2387254d8a178850f989f9a7c7cb87e6bafc7c"
   end
 
   depends_on "cmake" => :build
