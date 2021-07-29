@@ -1,8 +1,8 @@
 class Node < Formula
   desc "Platform built on V8 to build network applications"
   homepage "https://nodejs.org/"
-  url "https://nodejs.org/dist/v16.5.0/node-v16.5.0.tar.xz"
-  sha256 "3f37e38dd1129b6905f8d184616d41b3ab8433fa54cadce8a8c18b7a8bbcaa99"
+  url "https://nodejs.org/dist/v16.6.0/node-v16.6.0.tar.xz"
+  sha256 "5c5714a08b0881f37b57ab1f1b4801a1af316a2aea17faedc9c2d43247c7b9d9"
   license "MIT"
   head "https://github.com/nodejs/node.git"
 
@@ -29,6 +29,12 @@ class Node < Formula
   depends_on "openssl@1.1"
 
   uses_from_macos "zlib"
+
+  on_linux do
+    depends_on "gcc" => :build
+  end
+
+  fails_with gcc: "5"
 
   # We track major/minor from upstream Node releases.
   # We will accept *important* npm patch releases when necessary.
