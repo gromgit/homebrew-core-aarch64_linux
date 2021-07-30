@@ -1,8 +1,8 @@
 class Libkeccak < Formula
   desc "Keccak-family hashing library"
   homepage "https://github.com/maandree/libkeccak"
-  url "https://github.com/maandree/libkeccak/archive/1.2.tar.gz"
-  sha256 "a9fa976a601b749499f24975756f98c28edddfb5e6828c681ccde7cfcb95d5f8"
+  url "https://github.com/maandree/libkeccak/archive/1.2.2.tar.gz"
+  sha256 "ed77d762199e9a2617325d6fe1ab88dbf53d8149a9952622298835e8c39bb706"
   license "ISC"
 
   bottle do
@@ -15,13 +15,16 @@ class Libkeccak < Formula
   end
 
   def install
-    system "make", "install", "OSCONFIGFILE=macos.mk", "PREFIX=#{prefix}"
+    args = ["PREFIX=#{prefix}"]
+    on_macos { args << "OSCONFIGFILE=macos.mk" }
+
+    system "make", "install", *args
     pkgshare.install %w[.testfile test.c]
   end
 
   test do
     cp_r pkgshare/".testfile", testpath
-    system ENV.cc, "-std=c99", "-O3", "-o", "test", pkgshare/"test.c", "-L#{lib}", "-lkeccak", "-s"
+    system ENV.cc, pkgshare/"test.c", "-std=c99", "-O3", "-I#{include}", "-L#{lib}", "-lkeccak", "-o", "test"
     system "./test"
   end
 end
