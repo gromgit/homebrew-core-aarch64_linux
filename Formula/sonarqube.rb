@@ -15,6 +15,7 @@ class Sonarqube < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "b26f126b981440dbfd0bcecf145fbb48b548f46c93d0c26e8d02b63bd8347103"
     sha256 cellar: :any_skip_relocation, catalina:      "b26f126b981440dbfd0bcecf145fbb48b548f46c93d0c26e8d02b63bd8347103"
     sha256 cellar: :any_skip_relocation, mojave:        "476709c0932f4bb2fb01df928b4ee49534833347c2709339bb0ad32ffad943d0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "27759a532884e3d571a16a818f68a6dd7b160f48ea42374716d7248f7ae4fef2"
   end
 
   depends_on "openjdk@11"
