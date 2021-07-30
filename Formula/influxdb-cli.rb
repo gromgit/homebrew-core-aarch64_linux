@@ -12,6 +12,13 @@ class InfluxdbCli < Formula
     regex(/^v?((?!9\.9\.9)\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6cca0d7713416283475fe3fbeacd2b4e9d469c604583c14e3a405667e11d1980"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c80bf2710eb7f7dd31d298040eb25aa5f4a85ee7fc0c541c791695f7cf9ab393"
+    sha256 cellar: :any_skip_relocation, catalina:      "ae54b73f3987ed34ab7900017945cf2a493011dc40113f3ad064535f9bb01a28"
+    sha256 cellar: :any_skip_relocation, mojave:        "11edb46b688e44bec5a372d551a92ef23c18e4656443c5d767609d384f4243ec"
+  end
+
   depends_on "go" => :build
   depends_on "influxdb" => :test
 
