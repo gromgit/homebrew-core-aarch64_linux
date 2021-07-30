@@ -1,8 +1,8 @@
 class Forge < Formula
   desc "High Performance Visualization"
   homepage "https://github.com/arrayfire/forge"
-  url "https://github.com/arrayfire/forge/archive/v1.0.7.tar.gz"
-  sha256 "d7dbef8106ded73e515f38ca573b1bd79d93f233722f26b4ad5b4d184ace5384"
+  url "https://github.com/arrayfire/forge/archive/v1.0.8.tar.gz"
+  sha256 "77d2581414d6392aa51748454b505a747cd63404f63d3e1ddeafae6a0664419c"
   license "BSD-3-Clause"
 
   livecheck do
