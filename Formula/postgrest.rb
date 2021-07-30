@@ -7,11 +7,10 @@ class Postgrest < Formula
   head "https://github.com/PostgREST/postgrest.git"
 
   bottle do
-    sha256 cellar: :any,                 big_sur:      "bb885e5c86b0e997b660b0ab3975d59c458f0db4436bce9ea158b89c65dcd6e2"
-    sha256 cellar: :any,                 catalina:     "691546e89701fd582d47c697dc27551ef3284ee21933a5912f406e6fee4dd272"
-    sha256 cellar: :any,                 mojave:       "34c0413e71a41bc8550b7ea5286e0330aa888990d2e2a8fe6d81b57152c83d61"
-    sha256 cellar: :any,                 high_sierra:  "6ca3bb9cd14c9ab4ddd028493e4ffd70ddae571be74723997b677c6c67542c87"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "19d9eb67047672cbe7327feba36f70f8e85c85690fc9a73b8970998eee85b8bf"
+    sha256 cellar: :any,                 big_sur:      "86fa2836b2d7547599f35eb3722277567cd987a9147a4b954d81952d14d053f2"
+    sha256 cellar: :any,                 catalina:     "8a89348403a8b4006a3060c58a690d23e616386cd960e36c9d317866626afe9f"
+    sha256 cellar: :any,                 mojave:       "6292a68089f055e64a4b249f73a595d51f25c4c2797dee6a1d449734192cc174"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "731760b75d6beacce4dfed219012665bc210e4a8bc78d769366a9f9cef768667"
   end
 
   depends_on "cabal-install" => :build
