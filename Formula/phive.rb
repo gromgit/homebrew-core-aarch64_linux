@@ -6,7 +6,7 @@ class Phive < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "2764cdd6bfa222886599a50fb2d433f4ca09bcc08f2e5a0db3c3898e01c26050"
+    sha256 cellar: :any_skip_relocation, all: "acc459cd355ad9cfbece1263871399d7d319447038848cb83571e47682d60d5a"
   end
 
   depends_on "php"
