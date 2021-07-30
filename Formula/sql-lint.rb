@@ -7,6 +7,13 @@ class SqlLint < Formula
   sha256 "af38df9ffdea1647fa677b1fae1897c91c787455b1be8654f07c6866da09798e"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "913a8c82424f7f0795cc2acb9a207d915e7ce41408324dcd0f1035bc4144dd9b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "8a7c08631d9f1d905fb44fcf587cee1f9e947b682695f4f698fa42b76d7acc6c"
+    sha256 cellar: :any_skip_relocation, catalina:      "8a7c08631d9f1d905fb44fcf587cee1f9e947b682695f4f698fa42b76d7acc6c"
+    sha256 cellar: :any_skip_relocation, mojave:        "8a7c08631d9f1d905fb44fcf587cee1f9e947b682695f4f698fa42b76d7acc6c"
+  end
+
   depends_on "node"
 
   def install
