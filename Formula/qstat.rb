@@ -6,11 +6,10 @@ class Qstat < Formula
   license "Artistic-2.0"
 
   bottle do
-    sha256 arm64_big_sur: "57bf44e063bb7b5473ae34b3ec82c2fc09864ac2f9f41ccf62aecbd6c8b72bcc"
-    sha256 big_sur:       "f66049d57069d1219f9472d1c221f9732e985c31ef97f5a848e2e248ad3c029d"
-    sha256 catalina:      "5bc0a1ad5cab40a918bddf42ffc58283177914ceca264b2cfd1e0687a033185f"
-    sha256 mojave:        "4f97be89fba9e19e7a0d1285c6c3c8abb12021c0729e45295431072439841bb9"
-    sha256 high_sierra:   "d6f890c9c0b11e038d1cf332437efef0ca9fe8e0a57cd8d78f1d68152e96ec44"
+    sha256 arm64_big_sur: "6fe71871f75091ad1ceb3cdbfd10888917d886f7aafbe50e9cebc64f6c2fd438"
+    sha256 big_sur:       "36be7f0db1783921f8f3273467eab54cb13a2b0280004e48c3fa4ad9dae11ca7"
+    sha256 catalina:      "211cbd7cc45766390d9f16f1e3c49a174af9729d73de551ac66121518f44db40"
+    sha256 mojave:        "0325cc3af11f7a59bd3cf8c3e01f26fcea70abb8aa8982a17e6e18e95515d123"
   end
 
   depends_on "autoconf" => :build
