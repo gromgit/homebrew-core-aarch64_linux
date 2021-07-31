@@ -6,10 +6,10 @@ class Psalm < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "eda9a66bdc4eceb127868bbdaf7a2b0fe9cea0226b7912f2be1149d91cc14179"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a54b71a894f31a2c1e5cae10fb0e394fcdc5f874c7d4ce6c66533a4a13605241"
-    sha256 cellar: :any_skip_relocation, catalina:      "a54b71a894f31a2c1e5cae10fb0e394fcdc5f874c7d4ce6c66533a4a13605241"
-    sha256 cellar: :any_skip_relocation, mojave:        "a54b71a894f31a2c1e5cae10fb0e394fcdc5f874c7d4ce6c66533a4a13605241"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c44dbcf5c22806dd08485ba8ce137b68e529beb4c2fbc053e52f7b3a2ebd48cd"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b79f1325cb120651665caf4a39a434bcdac7d58038c4445ea9b6be3e018e81c1"
+    sha256 cellar: :any_skip_relocation, catalina:      "b79f1325cb120651665caf4a39a434bcdac7d58038c4445ea9b6be3e018e81c1"
+    sha256 cellar: :any_skip_relocation, mojave:        "b79f1325cb120651665caf4a39a434bcdac7d58038c4445ea9b6be3e018e81c1"
   end
 
   depends_on "composer" => :test
