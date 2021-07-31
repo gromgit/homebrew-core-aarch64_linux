@@ -1,8 +1,8 @@
 class Sonobuoy < Formula
   desc "Kubernetes component that generates reports on cluster conformance"
   homepage "https://github.com/vmware-tanzu/sonobuoy"
-  url "https://github.com/vmware-tanzu/sonobuoy/archive/v0.52.0.tar.gz"
-  sha256 "933ea49489bfe77599f3b1b6981250c0e341c11ff293bcf9818644803726506f"
+  url "https://github.com/vmware-tanzu/sonobuoy/archive/v0.53.0.tar.gz"
+  sha256 "379b12216d5d153b5f9ad051087f512d08f3603b6f7aed100111cf1fc32f1ff7"
   license "Apache-2.0"
 
   bottle do
@@ -21,15 +21,12 @@ class Sonobuoy < Formula
   end
 
   def install
-    system "go", "build", "-ldflags",
-                   "-s -w -X github.com/vmware-tanzu/sonobuoy/pkg/buildinfo.Version=v#{version}",
-                   *std_go_args
-    prefix.install_metafiles
+    system "go", "build", *std_go_args(ldflags: "-s -w -X github.com/vmware-tanzu/sonobuoy/pkg/buildinfo.Version=v#{version}")
   end
 
   test do
     resources.each { |r| r.verify_download_integrity(r.fetch) }
-    assert_match "Sonobuoy is an introspective kubernetes component that generates reports on cluster conformance",
+    assert_match "Sonobuoy is a Kubernetes component that generates reports on cluster conformance",
       shell_output("#{bin}/sonobuoy 2>&1")
     assert_match version.to_s,
       shell_output("#{bin}/sonobuoy version 2>&1")
