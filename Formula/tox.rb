@@ -8,11 +8,11 @@ class Tox < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "10ff06d5dbe8f4c04ea35eee33d23c900dc052380cb971202d7750c1d0adc720"
-    sha256 cellar: :any_skip_relocation, big_sur:       "cea9142833bd65dfe9ca41ed69aeafa40bd33cad0b4ccff4d2cc56382816b34c"
-    sha256 cellar: :any_skip_relocation, catalina:      "ed71a0ffc7cd20ed6797fd6df10f00f6a1a483c03686d65113c1945d65dbfa6e"
-    sha256 cellar: :any_skip_relocation, mojave:        "6e2ddb1b9d1d0e5a4e03a04522465926df7b1289647b2bbb0c53eff6dbf13e62"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "47636fd83a9465d285ac58ccf1709dea09fd23253a976c6b856670815a567e84"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d5ea3dd534e5e5ee01f1e0008010cb0959a72ab199eceafe56ba7fd5ad4a13b8"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0760296f2c8ce6368be4f911d1471cdc993383f7b98392a8253e7bee1b966041"
+    sha256 cellar: :any_skip_relocation, catalina:      "93453a5818dd4a79d2b7cb1b5549dca6f13e97390a1682f25982ba03d2bddadd"
+    sha256 cellar: :any_skip_relocation, mojave:        "768782aa66f0e324a0df19f951ea923d0607b979dfd1d01aa6d2d9f9f162e93f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d6a6d5a527e731bd76fc97777dcf90725645b3653be05fe05d81ebeed839e922"
   end
 
   depends_on "python@3.9"
