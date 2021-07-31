@@ -17,6 +17,8 @@ class Minisign < Formula
   depends_on "pkg-config" => :build
   depends_on "libsodium"
 
+  uses_from_macos "expect" => :test
+
   def install
     system "cmake", ".", *std_cmake_args
     system "make"
@@ -25,8 +27,7 @@ class Minisign < Formula
 
   test do
     (testpath/"homebrew.txt").write "Hello World!"
-    (testpath/"keygen.sh").write <<~EOS
-      #!/usr/bin/expect -f
+    (testpath/"keygen.exp").write <<~EOS
       set timeout -1
       spawn #{bin}/minisign -G
       expect -exact "Please enter a password to protect the secret key."
@@ -38,23 +39,20 @@ class Minisign < Formula
       send -- "Homebrew\n"
       expect eof
     EOS
-    chmod 0755, testpath/"keygen.sh"
 
-    system "./keygen.sh"
+    system "expect", "-f", "keygen.exp"
     assert_predicate testpath/"minisign.pub", :exist?
     assert_predicate testpath/".minisign/minisign.key", :exist?
 
-    (testpath/"signing.sh").write <<~EOS
-      #!/usr/bin/expect -f
+    (testpath/"signing.exp").write <<~EOS
       set timeout -1
       spawn #{bin}/minisign -Sm homebrew.txt
       expect -exact "Password: "
       send -- "Homebrew\n"
       expect eof
     EOS
-    chmod 0755, testpath/"signing.sh"
 
-    system "./signing.sh"
+    system "expect", "-f", "signing.exp"
     assert_predicate testpath/"homebrew.txt.minisig", :exist?
   end
 end
