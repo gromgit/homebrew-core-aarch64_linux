@@ -10,7 +10,7 @@ class ApacheCtakes < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "f0a2c1e6dec845462d1a7e242985b66c09428ade31830eafda02561a2d243a1e"
+    sha256 cellar: :any_skip_relocation, all: "99b42543678adc7a3d3ae931e52130a48fda2f46df7b5de143f7efb708de31ef"
   end
 
   depends_on "openjdk"
