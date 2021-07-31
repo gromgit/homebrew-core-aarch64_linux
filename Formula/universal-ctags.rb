@@ -13,11 +13,11 @@ class UniversalCtags < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "9ff4b3e0eb16ab0899b899cf835b0dc9a537f29616831b135ce13b76d1a6a769"
-    sha256 cellar: :any,                 big_sur:       "6916c96a4cc8ddcc226750edac2193cc01c5c32012bbd0dd49ef99c11c537909"
-    sha256 cellar: :any,                 catalina:      "ad7e7d6be8182f77c57677b8599bd5cb6b6ab33e7ec05a17bad185ea4b379ba1"
-    sha256 cellar: :any,                 mojave:        "09329630ec33c4811995d04f22b27951bb860f3717ffbcfbd238550ed4e19462"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e54a50e7f51752f62b8cd076d7d5d335bdc06bc96be222a68615974972df63d4"
+    sha256 cellar: :any,                 arm64_big_sur: "8934978ea59ec3d66c5aa1da60184f79320a078f6150a5dbe429b14595368612"
+    sha256 cellar: :any,                 big_sur:       "6cb65c4857f709c6cc0e9cfb4dfe7b13c1bf360f1413a18967b88d47914ab506"
+    sha256 cellar: :any,                 catalina:      "74f315678cf5c7b79548c4aa66b444b9f051f0045bbb0aa6cb247e9021fe97f8"
+    sha256 cellar: :any,                 mojave:        "f9821197853cc7fc8b7f80bec992124e3a3f2b033735942e0590eaf3b9c44421"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b17e03083ff3bfb1ce6150bbe2e90d16c20eb976e37e2427884362da8c6e348b"
   end
 
   depends_on "autoconf" => :build
