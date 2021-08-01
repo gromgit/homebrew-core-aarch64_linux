@@ -18,6 +18,7 @@ class Gpredict < Formula
     sha256 mojave:        "952941a2ecdb5f75805888dfd020acce48c4f1b29a9c2e3ec8742d35fcd9c829"
     sha256 high_sierra:   "189249444c490bc7984506a3d041de1d057fff671ff774871f549f6b32efa042"
     sha256 sierra:        "9a0a4b0e63b3b1f84830f508d60ee3fc5b5fd0b9a5731241873168baa88209cf"
+    sha256 x86_64_linux:  "e87f34490c8549a80627a714275d1ab1f9b73285ea76f28c91b6f45a360963bc"
   end
 
   depends_on "intltool" => :build
