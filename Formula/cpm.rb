@@ -7,10 +7,10 @@ class Cpm < Formula
   head "https://github.com/skaji/cpm.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5c5647bdfac179a43aa9275ea4e98d3518d6b2e8eefd3e34ad45414a9bdbacb0"
-    sha256 cellar: :any_skip_relocation, big_sur:       "87c5db7eb413d24f80b450dc52bba0b8486a3efff4c9cfb03fd41d0a2845973c"
-    sha256 cellar: :any_skip_relocation, catalina:      "87c5db7eb413d24f80b450dc52bba0b8486a3efff4c9cfb03fd41d0a2845973c"
-    sha256 cellar: :any_skip_relocation, mojave:        "87c5db7eb413d24f80b450dc52bba0b8486a3efff4c9cfb03fd41d0a2845973c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8ae7304a9f908a3a623b0d5ae9abd756eb6c04874be680059f693d051411642d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "36777566d2453ce79f3b0886a325ac34a4be13be841ded79f7cbc432af8a4550"
+    sha256 cellar: :any_skip_relocation, catalina:      "36777566d2453ce79f3b0886a325ac34a4be13be841ded79f7cbc432af8a4550"
+    sha256 cellar: :any_skip_relocation, mojave:        "36777566d2453ce79f3b0886a325ac34a4be13be841ded79f7cbc432af8a4550"
   end
 
   depends_on "perl"
