@@ -88,6 +88,11 @@ class Node < Formula
     ]
     args << "--tag=head" if build.head?
 
+    # Enabling LTO errors on Linux with:
+    # terminate called after throwing an instance of 'std::out_of_range'
+    # LTO is unpleasant if you have to build from source.
+    args << "--enable-lto" if OS.mac? && build.bottle?
+
     system "./configure", *args
     system "make", "install"
 
