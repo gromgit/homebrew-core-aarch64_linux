@@ -6,11 +6,11 @@ class Re2c < Formula
   license :public_domain
 
   bottle do
-    sha256 arm64_big_sur: "66d9bb165a554be7a2eda77188b965378ef3de63d73caa026019295edf21a517"
-    sha256 big_sur:       "92542633618857c419aad645a7b772bf42cae681a7e19e351e1d9b49c95fdac5"
-    sha256 catalina:      "5d03da5d1265e3169f34f5c70a08f96dbee0dc0e617363f16db2a516e2f5c76b"
-    sha256 mojave:        "7235fbeb0e362988b5137e7c3be85e9af7742848bff96f69135d38d9ebb1bc04"
-    sha256 x86_64_linux:  "ab7b995d963a52008acc12c0a389074ad00b84eb13c16a0ad70aa94343c9d928"
+    sha256 arm64_big_sur: "9f32566ee362b6ebf98674a7bc9d642c03a120c105b32b28efd16ec1fdfe1dbc"
+    sha256 big_sur:       "622c04bf38ad6f7ff7f9ca272cf9dcbde186f0b16e3e51eed1ffc108db56adb7"
+    sha256 catalina:      "8dd19c7d8532026141d42d6893faf18e86b97053fd113f9f30a1271662108e25"
+    sha256 mojave:        "7092db76fdd568e0c162ffe2066e8318ec4102aab85b361098908ca49f535a0e"
+    sha256 x86_64_linux:  "f8ae38af6e0ef9a4131174fc66750498c1a3cca66e896ef2392632ef16a0e9a4"
   end
 
   def install
