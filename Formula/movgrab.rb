@@ -7,11 +7,12 @@ class Movgrab < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "9921657b5d558018c44f82963a3cc6a6ba7008ad131796ca703595d19df2e216"
-    sha256 cellar: :any, big_sur:       "3562cee832a2ddfb6d3b52c98d9eab3aa9667271356fde90f2dffe38b229e648"
-    sha256 cellar: :any, catalina:      "b3032648e55b090ca256192c989683f3b0a26942f38f0460dce9457548c14fe0"
-    sha256 cellar: :any, mojave:        "b0e5153f5147c8d256685dfa8be4ac67bc863bb472afcaf769caa133fb94b889"
-    sha256 cellar: :any, high_sierra:   "7702b7817fc398f4901014bd6162578294da414a18b1ae4e5f10ef8cf05a678c"
+    sha256 cellar: :any,                 arm64_big_sur: "9921657b5d558018c44f82963a3cc6a6ba7008ad131796ca703595d19df2e216"
+    sha256 cellar: :any,                 big_sur:       "3562cee832a2ddfb6d3b52c98d9eab3aa9667271356fde90f2dffe38b229e648"
+    sha256 cellar: :any,                 catalina:      "b3032648e55b090ca256192c989683f3b0a26942f38f0460dce9457548c14fe0"
+    sha256 cellar: :any,                 mojave:        "b0e5153f5147c8d256685dfa8be4ac67bc863bb472afcaf769caa133fb94b889"
+    sha256 cellar: :any,                 high_sierra:   "7702b7817fc398f4901014bd6162578294da414a18b1ae4e5f10ef8cf05a678c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d0d9127b4c721a3db10697aec56ea4fd7406ff1fa328e3fc9b8ab1b932b6cd02"
   end
 
   depends_on "libressl"
