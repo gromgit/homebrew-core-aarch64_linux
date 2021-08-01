@@ -6,9 +6,10 @@ class Gitversion < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, big_sur:  "40640f290fe8127679c87abcc704592eebaf0eae52ca55fc20cb5d5faa37c72d"
-    sha256 cellar: :any, catalina: "b004bbcba66e5dbf4dca5b66974e65f5b49e9a12b97724a91a2b029e0e4406f3"
-    sha256 cellar: :any, mojave:   "85042a5e5f3791e1b07e9ee944c8a1217f3403836e7bac14793d1b37bb1fa906"
+    sha256 cellar: :any,                 big_sur:      "40640f290fe8127679c87abcc704592eebaf0eae52ca55fc20cb5d5faa37c72d"
+    sha256 cellar: :any,                 catalina:     "b004bbcba66e5dbf4dca5b66974e65f5b49e9a12b97724a91a2b029e0e4406f3"
+    sha256 cellar: :any,                 mojave:       "85042a5e5f3791e1b07e9ee944c8a1217f3403836e7bac14793d1b37bb1fa906"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "e7a37855fa2f2e65521a480b30c6037939118a1094938a84029b74f2dd239502"
   end
 
   depends_on arch: :x86_64 # dotnet does not support ARM
