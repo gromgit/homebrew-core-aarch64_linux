@@ -7,10 +7,10 @@ class Ortp < Formula
   head "https://gitlab.linphone.org/BC/public/ortp.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "c56822e5d44021bb25a0bc95045624d92f1d445b25dffdc35686869571f8b0c2"
-    sha256 cellar: :any, big_sur:       "b48c4bb9ba4dd1dd15b7df0854b627d63cce033637aec930d345bd6b9dcf6a29"
-    sha256 cellar: :any, catalina:      "1a178b29896e490484183ef3ffa7f53ae7a86eaf7a48fd1e96eb57ae6d384c85"
-    sha256 cellar: :any, mojave:        "116971d671d3c6e2114f062baa43754b33759949c6b49d337d536ba87a8f61fe"
+    sha256 cellar: :any, arm64_big_sur: "bd78fecdcafbcde38d8e0c4fafe7bc63c95528e1d5b5f549282a174544f54c60"
+    sha256 cellar: :any, big_sur:       "ba82c1b311372c4a4edc319acfd9c8b49ea8e668076bd67e5cfc5f18184bf492"
+    sha256 cellar: :any, catalina:      "3b3ef5c8abe87a81483839c059c4190667745d42d75ac81344689422dfd5b380"
+    sha256 cellar: :any, mojave:        "2cd99b724e859ac59291c16e9f3f8cb9b6572b1273d402296635c4eae024a7fc"
   end
 
   depends_on "cmake" => :build
