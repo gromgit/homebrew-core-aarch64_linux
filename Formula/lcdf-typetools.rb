@@ -18,6 +18,7 @@ class LcdfTypetools < Formula
     sha256 mojave:        "0fd983396dbcf027e560753e6f25797500d085762edcf59a1a2034cd55c24cfd"
     sha256 high_sierra:   "cdff1c16d03fd920033f85dd2e2180f91791057729fbd26b6f193ac7cd0ce9f4"
     sha256 sierra:        "2bfe28f9e869eec676cada56bcf6efe97024e0e1f93b126a7b26ac2a292db2af"
+    sha256 x86_64_linux:  "ba34cee40d5450d1deba4434cc43458d5407ef47b9f0563530b04dfac8fadc7a"
   end
 
   def install
