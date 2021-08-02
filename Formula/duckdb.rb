@@ -2,8 +2,8 @@ class Duckdb < Formula
   desc "Embeddable SQL OLAP Database Management System"
   homepage "https://www.duckdb.org"
   url "https://github.com/duckdb/duckdb.git",
-      tag:      "v0.2.7",
-      revision: "8bc050d05b25a379efdaa537bd801b712671a83b"
+      tag:      "v0.2.8",
+      revision: "a8fd73b37bfc249b76b2aaa488d52dfdb39bb3d9"
   license "MIT"
 
   bottle do
@@ -17,13 +17,7 @@ class Duckdb < Formula
 
   depends_on "cmake" => :build
   depends_on "python@3.9" => :build
-
-  # Upstream PR to fix Linux amalgamation build: https://github.com/duckdb/duckdb/pull/2060
-  # Revisit for removal on next release
-  patch do
-    url "https://github.com/duckdb/duckdb/commit/405c21760dbad0940aa5ea1d9c121ac4cd866ab1.patch?full_index=1"
-    sha256 "184139de9cc7b696d5a0ef28f4f76ef5552f904198473f4e1ed7bdedfd93a535"
-  end
+  depends_on "utf8proc"
 
   def install
     on_linux do
