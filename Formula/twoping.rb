@@ -3,7 +3,7 @@ class Twoping < Formula
   homepage "https://www.finnie.org/software/2ping/"
   url "https://www.finnie.org/software/2ping/2ping-4.5.1.tar.gz"
   sha256 "b56beb1b7da1ab23faa6d28462bcab9785021011b3df004d5d3c8a97ed7d70d8"
-  license "GPL-2.0-or-later"
+  license "MPL-2.0"
   head "https://github.com/rfinnie/2ping.git", branch: "main"
 
   bottle do
@@ -26,35 +26,12 @@ class Twoping < Formula
     bash_completion.install "2ping.bash_completion" => "2ping"
   end
 
-  plist_options manual: "2ping --listen", startup: true
-
-  def plist
-    <<~EOS
-      <?xml version="1.0" encoding="UTF-8"?>
-      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-      <plist version="1.0">
-        <dict>
-          <key>Label</key>
-          <string>#{plist_name}</string>
-          <key>ProgramArguments</key>
-          <array>
-            <string>#{opt_bin}/2ping</string>
-            <string>--listen</string>
-            <string>--quiet</string>
-          </array>
-          <key>UserName</key>
-          <string>nobody</string>
-          <key>StandardErrorPath</key>
-          <string>/dev/null</string>
-          <key>StandardOutPath</key>
-          <string>/dev/null</string>
-          <key>RunAtLoad</key>
-          <true/>
-          <key>KeepAlive</key>
-          <true/>
-        </dict>
-      </plist>
-    EOS
+  plist_options startup: true
+  service do
+    run [opt_bin/"2ping", "--listen", "--quiet"]
+    keep_alive true
+    log_path "/dev/null"
+    error_log_path "/dev/null"
   end
 
   test do
