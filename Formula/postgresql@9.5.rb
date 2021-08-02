@@ -6,11 +6,12 @@ class PostgresqlAT95 < Formula
   license "PostgreSQL"
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "09faf681c2893c716e88000a1e83b1beb497be61fc3b1cc1f5716192cc7ff564"
-    sha256 big_sur:       "072df838f2bffda7ebd83ebef615fd39b2dab0c01724a7750a9286c7fce5c99f"
-    sha256 catalina:      "d02c0da57a7e2ca6419f72d3feee3c80feff11d3a63e58ae96cf37fb73ad4d47"
-    sha256 mojave:        "ffa3da3b26c1591dd5a18d28c0393584513fdeaca3670357b6f0e5225155e512"
+    rebuild 2
+    sha256 arm64_big_sur: "8f45d54de15389a0d9b0c95170116a9cd67eba05640fdf4bdfda2c5e045f64dc"
+    sha256 big_sur:       "b6e7f2c53abe33e98e76f91226060b907a4eab3392c64573846ae649b668a924"
+    sha256 catalina:      "d26af40f35158c68fb779e61ffdf91d185c4c287249622b4a3dddd05d14a738c"
+    sha256 mojave:        "be39a1cdcd44fbebdd13ddbf0ec41bd2e32bb30d3c45d492da4d38e88c525f91"
+    sha256 x86_64_linux:  "3ba513c432cefa749b70540dc4b3de0064a5f2646f808e2b6c43df681daf32ea"
   end
 
   keg_only :versioned_formula
