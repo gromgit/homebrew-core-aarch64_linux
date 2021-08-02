@@ -17,11 +17,11 @@ class Mu < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "84c9e4fa4d966cd1e35c67ec32723e6c344df1c4e814eeb54f41a3d728a0d45b"
-    sha256 cellar: :any,                 big_sur:       "dd708df4e14844d73575e452fcac5b8d38c27fa7bf76f145f1423912ac5abaab"
-    sha256 cellar: :any,                 catalina:      "ddef632d36b40bf878bdfc2459c16265c2d9da0411f524b528ca455fddb6ae04"
-    sha256 cellar: :any,                 mojave:        "81a86e6594b71c8c24ded94553d93ef4fa0016df5bbde58d383eb556693dd3f9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "61373ef18d8411bee486d371f484ab584d4f315e6093de6f16eab908ae8dbcd6"
+    sha256 cellar: :any,                 arm64_big_sur: "0a7e8d2e1e3707ce399de9100cee99ea7951bdef65428ef987114a4aebd6f9e2"
+    sha256 cellar: :any,                 big_sur:       "d3108fd5a22eeb006e6cf06fbc6f080be238abfedeb836d0a7baec31cf10f168"
+    sha256 cellar: :any,                 catalina:      "df8cd2e0b7ee1b83a01a2eb6aea828f58846344a0ed8c54b99872fe5d66f5e50"
+    sha256 cellar: :any,                 mojave:        "f17db67ad593debad20757ed641f8c9aea99867cb17ee55346aa47f4e4bd6e2d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "aeb73aade9114a1a61cf16473eff75f6baa3fc5c16d061045882569a5b674724"
   end
 
   head do
