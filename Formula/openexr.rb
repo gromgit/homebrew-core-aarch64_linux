@@ -7,11 +7,11 @@ class Openexr < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "b7dc2383d60ba2218f62dfcbca42f27b9237c611a3c7eb1cafde5e7d576e8bbf"
-    sha256 cellar: :any,                 big_sur:       "e4069533b0e8040b39f75f6a12e5015143efb1d89748b2904dfb7db260fd1375"
-    sha256 cellar: :any,                 catalina:      "7cab58e014d67301c1aff5fb4dc833fb935d7e4129b18cc3c146ea9d72051a1a"
-    sha256 cellar: :any,                 mojave:        "4af915067fa26e56d8dd2bdfa34cbbd1475516339bbd0d0e65444bc902efedde"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fc9475ab05d9dfbe2f71c787b823dfa05c8bbfb9b235a7f8a0d7eac6c682201e"
+    sha256 cellar: :any,                 arm64_big_sur: "3d3257d9750eb7a66a3e161f3e8bfa7cfb405937325f5b91bc02fd7ac9a89c35"
+    sha256 cellar: :any,                 big_sur:       "92108b32e13d57e30e48d5bfa4adbe360b303cc19e78b7b7cb8df7865d66c449"
+    sha256 cellar: :any,                 catalina:      "40d2ebcc43006954145c03e9636b471484aaf613a48adb8558f3d3f005a22c80"
+    sha256 cellar: :any,                 mojave:        "3261656535c6449dd4b1d4a4a52d91c571127bc58ab40374510d2891cdea2cbe"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8e9cca16104e95abea8c3db9a00adb783bc08f6694d8015a291987a5da8048c1"
   end
 
   depends_on "cmake" => :build
