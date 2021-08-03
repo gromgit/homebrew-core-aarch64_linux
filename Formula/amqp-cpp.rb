@@ -1,8 +1,8 @@
 class AmqpCpp < Formula
   desc "C++ library for communicating with a RabbitMQ message broker"
   homepage "https://github.com/CopernicaMarketingSoftware/AMQP-CPP"
-  url "https://github.com/CopernicaMarketingSoftware/AMQP-CPP/archive/v4.3.12.tar.gz"
-  sha256 "0a927532ec3869004e4baffc264e65c3f8a0ae2846ee1f7ac60478c760487d36"
+  url "https://github.com/CopernicaMarketingSoftware/AMQP-CPP/archive/v4.3.14.tar.gz"
+  sha256 "6ac69a407c0edf9f8f56fdbb56acb4e5e9b331e3243cb95f26b861ae794549f4"
   license "Apache-2.0"
   head "https://github.com/CopernicaMarketingSoftware/AMQP-CPP.git"
 
@@ -21,6 +21,12 @@ class AmqpCpp < Formula
 
   depends_on "cmake" => :build
   depends_on "openssl@1.1"
+
+  # Fix missing include. Patch accepted upstream, remove on next release.
+  patch do
+    url "https://github.com/CopernicaMarketingSoftware/AMQP-CPP/commit/1dc169810d31110e134fbe032be009f5f8e98d73.patch?full_index=1"
+    sha256 "6b47988b4746c021f31b5772761776f8607645a79fab9ec403adae8a2b64883c"
+  end
 
   def install
     ENV.cxx11
