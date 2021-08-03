@@ -9,11 +9,11 @@ class Fonttools < Formula
   head "https://github.com/fonttools/fonttools.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "145697157c56c7205a1c5bd75dd4d361b1239963dabb8b907489ff13e582b01b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d29741c1cec8303792bb8be461f3747fe7c47ad9fa8f9845f26858acd1f3101f"
-    sha256 cellar: :any_skip_relocation, catalina:      "d29741c1cec8303792bb8be461f3747fe7c47ad9fa8f9845f26858acd1f3101f"
-    sha256 cellar: :any_skip_relocation, mojave:        "d29741c1cec8303792bb8be461f3747fe7c47ad9fa8f9845f26858acd1f3101f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7aae8e422485e99a417215fc2366363de5dd126a638919855f1d4d81bb828ef5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "720ce3b06614ada6acbd7f53751b8d5409d85696960e5660aedc66de5fb63d90"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b8c387e3216ae6cf3756690b52acf240f4ac4d088f0300f3392aded6c2e733e7"
+    sha256 cellar: :any_skip_relocation, catalina:      "b8c387e3216ae6cf3756690b52acf240f4ac4d088f0300f3392aded6c2e733e7"
+    sha256 cellar: :any_skip_relocation, mojave:        "b8c387e3216ae6cf3756690b52acf240f4ac4d088f0300f3392aded6c2e733e7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b12e4a0b93c421d67451e27f12a5e77126710d751570f1fe3ce9965e3a9ffe1b"
   end
 
   depends_on "python@3.9"
