@@ -9,11 +9,11 @@ class Yamllint < Formula
   head "https://github.com/adrienverge/yamllint.git"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "221c2e2a16a472df48e1c34e5d3601378c1269dea73355d6e661ee7d6fbf59c5"
-    sha256 cellar: :any,                 big_sur:       "22fb22e74df2350b9785f914d016fa070c2002c662dd660e73acc3cb361e010c"
-    sha256 cellar: :any,                 catalina:      "a6df81f340082bd40685bd955826e32bddaf47645dc38be92fca8a71e8f253b8"
-    sha256 cellar: :any,                 mojave:        "1541161a955a3dff2da13c21596a6778361375202563a2e393b1511d3a396afc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5fcb8b2aff84f043648b681412ac46f0de6f9ba14f9e21f2e8a197a44558f7ac"
+    sha256 cellar: :any,                 arm64_big_sur: "ec081da4389f0be3a24fe64d789291aa91d3e085661c0e728c512dec0dc168e4"
+    sha256 cellar: :any,                 big_sur:       "e10a5e22a725acbb86a6b76a98b507a5c308333c7b31e366756ab8ca7e2c2305"
+    sha256 cellar: :any,                 catalina:      "1d7a3eb846a89b904f0c9c9a973577996c63556ac919e3c96bd47c0477fe6322"
+    sha256 cellar: :any,                 mojave:        "4f16379fcb5e3142113a3c122e835b131b04e1d99348de9cf1bd7c5608006276"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "57cba42a91db5d04438f9823810635751f5c65ce8a5c15b874de3113a2bd6b91"
   end
 
   depends_on "libyaml"
