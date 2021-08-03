@@ -12,10 +12,10 @@ class R < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "e2698e6a62bc23a35988deec5b396f15d0b3ecc3e63225f6b08168dc6f8807ce"
-    sha256 big_sur:       "0e3ff1a7cde7eddd79e50bb45b039afeac4d3bd179487ddf533acb29217866f1"
-    sha256 catalina:      "4d93ec0474f3954e825603629324a868cf6f541ed331a85d14c6a8a1de4c5f29"
-    sha256 mojave:        "874d8ee5c9bedbe47e67ce1a38cd5fc75a78b25133fcb6651b776f858cc83e8f"
+    sha256 arm64_big_sur: "bb731e6ec573c08d37da048a4a69411177b58f9d7ad4f340728fcef2e4c3c06e"
+    sha256 big_sur:       "4803c5d4e8888494d62c078b658174a23815efbef798c307f565431fe52eed12"
+    sha256 catalina:      "452a71839e33b5f1868845f54953ddcecfaca5c1cb61e58290130d9b3d9abda1"
+    sha256 mojave:        "cf4d202d1bfd57554ab37830308517045f7841d7061957cf7555600b57917928"
     sha256 x86_64_linux:  "108194171cb76d1eaa1bd82934bbf354e6b1288636afc52f3cf27bbc5153c625"
   end
 
