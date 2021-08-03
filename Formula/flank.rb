@@ -11,7 +11,7 @@ class Flank < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "f114cf62e968f881e6eba2dfb5ce6fc07655c69f9ca0beaac44678575e9486bf"
+    sha256 cellar: :any_skip_relocation, all: "93914257ad13de079d618356646d1b5170e250660d5492a81f10a829fc032358"
   end
 
   depends_on "openjdk"
