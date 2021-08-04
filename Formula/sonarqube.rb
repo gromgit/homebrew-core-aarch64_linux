@@ -11,11 +11,10 @@ class Sonarqube < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9e70fe81f87e9b1b9d3ba69f02e987d47505c1c49e0163f1a1f91aee1d35655c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b26f126b981440dbfd0bcecf145fbb48b548f46c93d0c26e8d02b63bd8347103"
-    sha256 cellar: :any_skip_relocation, catalina:      "b26f126b981440dbfd0bcecf145fbb48b548f46c93d0c26e8d02b63bd8347103"
-    sha256 cellar: :any_skip_relocation, mojave:        "476709c0932f4bb2fb01df928b4ee49534833347c2709339bb0ad32ffad943d0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "27759a532884e3d571a16a818f68a6dd7b160f48ea42374716d7248f7ae4fef2"
+    sha256 cellar: :any_skip_relocation, big_sur:      "25ed99650ddba6303a40c641d9a63d235ed69d159688c158195924743fdcd3c0"
+    sha256 cellar: :any_skip_relocation, catalina:     "25ed99650ddba6303a40c641d9a63d235ed69d159688c158195924743fdcd3c0"
+    sha256 cellar: :any_skip_relocation, mojave:       "c0b6fb89e3a481c89fcc5f67bdfa59898530831de4937833424a79a4c8ababe5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "22f5ad737ec068adbb0653a92209adaf193bcfec395fa496c879fffbc08de56d"
   end
 
   # sonarqube ships pre-built x86_64 binaries
