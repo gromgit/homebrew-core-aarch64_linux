@@ -6,10 +6,10 @@ class Cmusfm < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8469d430a7f80f217b6c3fc18a94dd621031a99e1ad0c0a4625b2c6e897b2fd0"
-    sha256 cellar: :any_skip_relocation, big_sur:       "bf89db2bf4bc6d4beb35f909c7b6f5d555618b0bd64f29970d16a935c233c651"
-    sha256 cellar: :any_skip_relocation, catalina:      "ee559b020876516d44248b576176bf06fca2119ce0522cc373297f7425455037"
-    sha256 cellar: :any_skip_relocation, mojave:        "354392dce04c448c932b74c983a832d8f21faf21ec4309cbe33dee4fdfbd5930"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6aa58d8aaaf982d09847ca12fa1d90a29d9697d3c396445345d6151f7268ab3e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "fb3118b55ecf198907e43466587b28d328d2f41337f75701c4288ea72759ee7b"
+    sha256 cellar: :any_skip_relocation, catalina:      "c5f5828389cb7aad8fbc5ffb15dcd522f3e9f70718de08bbc5425f7c33118d56"
+    sha256 cellar: :any_skip_relocation, mojave:        "00e046ccd67253bfc0f9031fc7746ef03e4a66d0e1df2fa5aabc64e537863048"
   end
 
   depends_on "autoconf" => :build
