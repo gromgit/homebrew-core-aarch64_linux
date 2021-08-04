@@ -7,10 +7,10 @@ class Scorecard < Formula
   head "https://github.com/ossf/scorecard.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a747fe3a71d3465f73216e7734072600efbbba57e6697090987c1760cf477a89"
-    sha256 cellar: :any_skip_relocation, big_sur:       "df8bce028f6c950331399680a3b66e089935272f2425fd3ab259cef718416c81"
-    sha256 cellar: :any_skip_relocation, catalina:      "565e522419b7f7e3da759c8d20da2213309fbd1cc43ceedfa7a8efa4f4a1f894"
-    sha256 cellar: :any_skip_relocation, mojave:        "4320ab74ea78752e4c296147e1388b243f5d46640a2ed5efb174c7f6b8f4f478"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d9ca05a8f8cc8829a7373138a55c669a5410e204697d5d988fe4123beb5f74ff"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0b014909fa2964508aa1925957c52467bae5d92c0c97ec5ade25b16f16558741"
+    sha256 cellar: :any_skip_relocation, catalina:      "f9f27172f2817fc621c70a6103b4141226130f0e44f1f5cf5345dbf23b3ee719"
+    sha256 cellar: :any_skip_relocation, mojave:        "695fa2f073e4a34a08e8ea5ead9afa9444be6dc21b1a921c9d8448ca2c5e061f"
   end
 
   depends_on "go" => :build
