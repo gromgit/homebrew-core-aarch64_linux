@@ -9,11 +9,11 @@ class Mitmproxy < Formula
   head "https://github.com/mitmproxy/mitmproxy.git"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "c9d561098a35467391e24f03c869a5bc567477c65079829d777a5fd9a244aa1d"
-    sha256 cellar: :any,                 big_sur:       "49bde1f73082119f48a60b8f00b02c6682d3148492635bc1d1440c2662b88b32"
-    sha256 cellar: :any,                 catalina:      "7f23f18d70a8f821d62e4ab3b5a1a572f662e59a51adb09486e10d2de743cc62"
-    sha256 cellar: :any,                 mojave:        "2566afefb0f2c727e986958fa5226ee34eef8f84ff8076275451f5c504dc7fd8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "69e0f6336abd56de05cfeba0cd60658f8bf199642f06fd1687fdb5eb9dd59405"
+    sha256 cellar: :any,                 arm64_big_sur: "887078de6e841b680db4e1cf816918b137029188b16952347892bcad7cc74a0a"
+    sha256 cellar: :any,                 big_sur:       "6bef9a2f1a387a9c8b0fdf9ec62d4df1a26ebe8a75176752052333cad2cae11b"
+    sha256 cellar: :any,                 catalina:      "eb0b4d7bffc0ab97742ec98b650683af48141dcb8665056dfad2fdf3ce37aa71"
+    sha256 cellar: :any,                 mojave:        "01890a63d88c65fd2d74e03fef98e7843890bf51461eeef6201140ee0df22f56"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b0fc973e2918c1a3d574e765bcd4f6e6e24a29e07033cd9b811f6b30cf9b21cf"
   end
 
   depends_on "rust" => :build # for cryptography
