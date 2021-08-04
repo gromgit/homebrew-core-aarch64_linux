@@ -1,8 +1,8 @@
 class Sonarqube < Formula
   desc "Manage code quality"
   homepage "https://www.sonarqube.org/"
-  url "https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.0.0.45539.zip"
-  sha256 "b5a8a5330527515ddf34cbd4f6284b5ccec1d9c4384c46eb1786101ee7e2c065"
+  url "https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.0.1.46107.zip"
+  sha256 "cb27f3230c8126f7082b89a7d018734b59321821e150a50c016e5cb887e68c5c"
   license "LGPL-3.0-or-later"
 
   livecheck do
@@ -18,6 +18,8 @@ class Sonarqube < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "27759a532884e3d571a16a818f68a6dd7b160f48ea42374716d7248f7ae4fef2"
   end
 
+  # sonarqube ships pre-built x86_64 binaries
+  depends_on arch: :x86_64
   depends_on "openjdk@11"
 
   conflicts_with "sonarqube-lts", because: "both install the same binaries"
