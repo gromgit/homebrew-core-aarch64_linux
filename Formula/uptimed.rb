@@ -6,12 +6,11 @@ class Uptimed < Formula
   license "GPL-2.0-only"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_big_sur: "3bf60bc86d6e026496d8e576b5fec6bf863b6c247f73c8b168120277cd8aedac"
-    sha256 cellar: :any,                 big_sur:       "692c1896e82820e296004bc510cc368221528914f93b8e178041fb06399c7473"
-    sha256 cellar: :any,                 catalina:      "5549cf3cf61a32a71c6258108317d3a779aca1b23d7ac7a714cbf5db5ca233af"
-    sha256 cellar: :any,                 mojave:        "8e63ad1975e1d8d36adbe624228441b07c6acbbf144e2d0a66fd76cc168b5d8b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "84b78ecf328840104126dd6e69da148c4d5eea9b1b46a01b9b4d1fff1b189dfb"
+    sha256 cellar: :any,                 arm64_big_sur: "4e1ae62985ae67f3733325ee8c87c8aafcc3702f58d8e97257eaca2c19367e96"
+    sha256 cellar: :any,                 big_sur:       "a7b8ccdc3076867427de19187190942d9403468a6d793de109d1207f9dab873e"
+    sha256 cellar: :any,                 catalina:      "8c30d6732c2ce84262b94e38df3a6eaa6a9412d7a35faff593167fb5cdec8450"
+    sha256 cellar: :any,                 mojave:        "309c440655a5166596facdcbcdd2035fd7fa5a6b1263f4bd10a8d1aa1be612b7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bd27de8d758ab4c321995dcef58b156ecd302e70089bc6aa6e14bb802d8cb177"
   end
 
   depends_on "autoconf" => :build
