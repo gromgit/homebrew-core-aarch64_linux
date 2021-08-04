@@ -8,11 +8,11 @@ class Sceptre < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "53683656d191aa629b8676dd878cc810ad9f0dd7cf6f9ebb4547d00a79be0908"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b6c032a50662f441b8ba462caed35478a7b350ca88d054dfc7f6491c83ee36ec"
-    sha256 cellar: :any_skip_relocation, catalina:      "a6a28cf5d9f7e9ab5e3a3d93617f623817b651db9d106b7b4e3c7826f8173fb4"
-    sha256 cellar: :any_skip_relocation, mojave:        "574f140eb0fb541a5993c649fde9c67a56d1f56d50416f45496bfc6457541ce0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "af9bda902b32b823ca8526fdab1009c35d65feb6364f68dd3707aa990145b278"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5a11706feb6fa2185baba4616ee4ae325b84ae04c104ecac2d825197754bb8dd"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6f02698f5fe7241cc8d0ab5f4373da61a7203e89a79b3942c277775251d0ae0d"
+    sha256 cellar: :any_skip_relocation, catalina:      "7fcf1b2925fe6c38b59b3c3dade9062fcac2c7a89e94abf56ff7363ffcaf9ee3"
+    sha256 cellar: :any_skip_relocation, mojave:        "c6cf95c7080f527d91677fc5e1333c29cafb18357a7ddfa532800e8e6e47aaa1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "64db34e76eb34afc6dff6c54a36e4d47332c54b71b607d2c52a6b5ca08fe4d98"
   end
 
   depends_on "python@3.9"
