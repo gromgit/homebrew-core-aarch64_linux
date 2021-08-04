@@ -7,15 +7,11 @@ class TmuxMemCpuLoad < Formula
   head "https://github.com/thewtex/tmux-mem-cpu-load.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ebad3961141c5ef92cda90430a594587454b06464e4b386e7f5dae7158a18e97"
-    sha256 cellar: :any_skip_relocation, big_sur:       "4c40768aa4599ae044cace8455205f9503441c64adaabb8f5c4c9fc221f89b27"
-    sha256 cellar: :any_skip_relocation, catalina:      "5006666230be68b50c097cdb4ce12e20c37ae565cb1de9163861918d42910834"
-    sha256 cellar: :any_skip_relocation, mojave:        "6da11cf3e7664d4b75de9a276c9b3823072a9d46855e2aaa2caeaa57ffdb9221"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "ac291740dbf05c7cae025836caf5c2ad1f375f9060fc871dfc5adf51abe2a4c2"
-    sha256 cellar: :any_skip_relocation, sierra:        "8743cb844ff2a55657f2f1eb7bfae300c02a3fdf255fdd5e8242d1a60103838d"
-    sha256 cellar: :any_skip_relocation, el_capitan:    "9e2c7e5fd03feb98cead3f366a9cc35375cee80c30fd570c742440d69319c296"
-    sha256 cellar: :any_skip_relocation, yosemite:      "abd6293238671268ea1f0362518cd82c4b3133cb42b0327d579c93768ea81110"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "af2421568eaf229efa298ebf6bdc0ac7df668c9653bbe5e35f8624fdb47b9adf"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "dbb889c3e0ec08b5df100218c625f65681c3381d654a4ae010597a9303a4d89e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4431aaf5a11cff153ac1c2ace3f664704f6c0cbd735c85d1ee5f5e0102149a27"
+    sha256 cellar: :any_skip_relocation, catalina:      "725b9b17bf012ca94e469852c5144f7c427ac88076fb53f1c5af860677882151"
+    sha256 cellar: :any_skip_relocation, mojave:        "f5398f18c016a0bc376918dc3e57eb0a4406dd3b01dc98c18d64f4406ad61830"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "37649e0ec8e25e2b5f20b2e6e5f02b19eebb78a98fcae833f9de99f3e711f567"
   end
 
   depends_on "cmake" => :build
