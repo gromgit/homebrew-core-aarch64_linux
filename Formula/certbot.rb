@@ -9,12 +9,11 @@ class Certbot < Formula
   head "https://github.com/certbot/certbot.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_big_sur: "dc869d88200b948cf99cfe7c4ac3c9b04fe5c675c72bf708f8a03f0843119a24"
-    sha256 cellar: :any,                 big_sur:       "3ab93846f067274c34d9b2cecf9a0cdc0d40cd237fc6882f97f283a1f5627419"
-    sha256 cellar: :any,                 catalina:      "a8e2bdf1de1a321ef9d11027a447e20d847466a584197d0f908233f1d48904c7"
-    sha256 cellar: :any,                 mojave:        "2d10079b551d694ff10f6ac1c99bbec52bb362ea91eea30908e85d13710aaf5d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e761812f5bce4339fe77e6db674a4ee1be52d417694a2000072a2852c3368d2d"
+    sha256 cellar: :any,                 arm64_big_sur: "1fd1ea900f5d564ac45a3527f3bbbfa0b169f3b4ad5f979b29c23b06ccff081d"
+    sha256 cellar: :any,                 big_sur:       "12c58b953afe52eaad7fc677891cd470429482e3843a2bc6db9911a147eaeea7"
+    sha256 cellar: :any,                 catalina:      "aa0351343176306ca5c4ef553b5f7d47703d0a6b58ae282addf1cd3fe98febf8"
+    sha256 cellar: :any,                 mojave:        "f37e12bbc9eaf9323466f20abd6de667f451fe6f51c2c8305f921d29a234e9fa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0da0ab44a982afab08a242770bdfc6f500d2a8b4bc2cde8b90f53110beda9c66"
   end
 
   depends_on "rust" => :build # for cryptography
