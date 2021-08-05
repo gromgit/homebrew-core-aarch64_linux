@@ -7,6 +7,13 @@ class Fanyi < Formula
   sha256 "0f80edeac5e727a299c2a0807f463231143d59b46fd8308ef794390b9d88052c"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2456b0530f3fb65613ec1a5911a8f76970a8f7f0f41344df91675ebf1943d755"
+    sha256 cellar: :any_skip_relocation, big_sur:       "002883ae0d734a5ea67d80931311a5d8c7b9360a6415ca70f26f41e66dc4d307"
+    sha256 cellar: :any_skip_relocation, catalina:      "002883ae0d734a5ea67d80931311a5d8c7b9360a6415ca70f26f41e66dc4d307"
+    sha256 cellar: :any_skip_relocation, mojave:        "002883ae0d734a5ea67d80931311a5d8c7b9360a6415ca70f26f41e66dc4d307"
+  end
+
   depends_on "node"
 
   on_macos do
