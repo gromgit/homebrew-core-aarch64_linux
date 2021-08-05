@@ -7,7 +7,7 @@ class DockerCompletion < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "1354d7231c8fa1cc3e9808060e82df0fd2c9039a54a492b36981fcdee28eb7c8"
+    sha256 cellar: :any_skip_relocation, all: "90ed4550064c756f9cc165649143b5daf88a32af7c254ee20410cb1b26e7c064"
   end
 
   conflicts_with "docker",
