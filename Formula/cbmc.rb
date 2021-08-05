@@ -11,6 +11,7 @@ class Cbmc < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "a15c21cc088d7c24ef82bfc21f7dfe6d623970eab6adf15d47af9ea9b01b682f"
     sha256 cellar: :any_skip_relocation, catalina:      "7da20351c1e2581bc09ea723a99339d9d4a40f24e73476f2c187ba7bf92c7166"
     sha256 cellar: :any_skip_relocation, mojave:        "73f956a3042c0e78c7c3049a55264325655e6c11c43e6dddc338c6bb1089e44f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "707f3faca6daddcfd9d7eeee89647e214ebf856d6c05d1cec62a590e00bf701a"
   end
 
   depends_on "cmake" => :build
