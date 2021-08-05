@@ -7,10 +7,11 @@ class TbbAT2020 < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "60d6f53048879cec2af79648d56cc206c7bdd6044259244e8523ab2f49c8152b"
-    sha256 cellar: :any, big_sur:       "596f3f92c1765f24b9dc9cd866e8068c505428c9dcb9941df7b5f0ea4e10cde9"
-    sha256 cellar: :any, catalina:      "65adefc9242c9bcadfa22eeb8fbe67c8ac750d59107b7ea69da3715d1c2cbd78"
-    sha256 cellar: :any, mojave:        "7016ea351af4cab641ab86faa3f0cd50a3cc9f262ea4afdcc70b058e3d467e99"
+    sha256 cellar: :any,                 arm64_big_sur: "60d6f53048879cec2af79648d56cc206c7bdd6044259244e8523ab2f49c8152b"
+    sha256 cellar: :any,                 big_sur:       "596f3f92c1765f24b9dc9cd866e8068c505428c9dcb9941df7b5f0ea4e10cde9"
+    sha256 cellar: :any,                 catalina:      "65adefc9242c9bcadfa22eeb8fbe67c8ac750d59107b7ea69da3715d1c2cbd78"
+    sha256 cellar: :any,                 mojave:        "7016ea351af4cab641ab86faa3f0cd50a3cc9f262ea4afdcc70b058e3d467e99"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6349e928b34634e00408e762ab7fbe6f77da5586c61251080a677e7e0209d766"
   end
 
   keg_only :versioned_formula
