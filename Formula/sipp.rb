@@ -7,11 +7,11 @@ class Sipp < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "449c55fa3ed88cbbd0ec9f1034d93df5b9affe4e168c7d332fc4a41b4b9f6d0a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "334632e3c7eb535151bb272f1dd3b5f8679682ed6930313fc91f51366a2cebe6"
-    sha256 cellar: :any_skip_relocation, catalina:      "b5363f025eb4ab69bd4a5d255396115d16ec5740a7de7cc810cffaed2b6e8b7a"
-    sha256 cellar: :any_skip_relocation, mojave:        "43d25e09e529be8802eca6fcc67ea3a9b50927acf71ecc3095a074b8f693afb5"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "41183e24e41ad9d05017652d0e1ed94e3aeb74883daa165210eafc7f6e034ab7"
+    sha256 cellar: :any,                 arm64_big_sur: "75316a2ff92ad29fb3d2ab4c660f3d4ef2901982826ee269f37a9e58df5cefe2"
+    sha256 cellar: :any,                 big_sur:       "4867d847435ee04cf0eccb7e13c27eb93ef8dfe23d8e7aedf5efd702231a4ca4"
+    sha256 cellar: :any,                 catalina:      "1744c7e93cab7d3780e4ab24b8d469895ea5086f3f5db6f73a7105e3d784e0fe"
+    sha256 cellar: :any,                 mojave:        "0d3578497ed3bce6047dfc90e6d3a4c5b1e80d74b0ff24d3d6d949668ad6e0c1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2dd10c5ab222c6cd9749752ec07d29d8bd0af9cba09a8b2ecaa2f5bd9167ff63"
   end
 
   depends_on "cmake" => :build
