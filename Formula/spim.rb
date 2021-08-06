@@ -13,6 +13,7 @@ class Spim < Formula
     sha256 catalina:      "553aee29312b5b491d20c139652f87d8bd1547abd078285c5c80a13e02a868ff"
     sha256 mojave:        "429ed6272e9255d16227b58bbc405c58d19ecb360540d2d228a91029b62506ab"
     sha256 high_sierra:   "dfb4e24f378665fee30af8a3c362b1bc13e83b33196b66b4102c400fcee99b2e"
+    sha256 x86_64_linux:  "deaec14a9d199bef4831d6301a295c0c1598417ddd99ff1641c60a045827998a"
   end
 
   uses_from_macos "bison" => :build
