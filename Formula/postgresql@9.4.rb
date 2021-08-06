@@ -6,10 +6,10 @@ class PostgresqlAT94 < Formula
   license "PostgreSQL"
 
   bottle do
-    rebuild 3
-    sha256 catalina:    "15217a46087cd4bef0227f5ca941ed843a4e024aafa4e7c7a3ebf746ca8a1344"
-    sha256 mojave:      "4d24193f0f0931c246a86407d3d8208a48b514b8969dc4567b7d62de2becc3ec"
-    sha256 high_sierra: "2e09355d0bf2f70b5ea9c202f15aadee823902caad5cf35b64c882e4b969e70f"
+    rebuild 4
+    sha256 big_sur:  "0331cf3d1dcb6311ad144916317c520c0a442832d038c6d11da6f42c670e263f"
+    sha256 catalina: "a72c3df7772799a0870db56245b192b655c7691984224f6eb0b9a3f839edb8a3"
+    sha256 mojave:   "64558f09195403c05cea3f52cb7c7162a61a0a01e24a40aaf297021fadf11fc9"
   end
 
   keg_only :versioned_formula
