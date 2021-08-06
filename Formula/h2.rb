@@ -11,7 +11,8 @@ class H2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "f8e33c35df1ec248000e6dfba9db2bf3994517444ba9dc0d5ec6344a29ad2bac"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "95b75dbd44a9a1ed9ca0279e66b7993282b0a6161539de582042dcc806b9f2c7"
   end
 
   depends_on "openjdk"
