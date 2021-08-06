@@ -5,6 +5,13 @@ class Rsc2fa < Formula
   sha256 "d8db6b9a714c9146a4b82fd65b54f9bdda3e58380bce393f45e1ef49e4e9bee5"
   license "BSD-3-Clause"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6db5849c61249766bb9ac2168f2570c87b0893e19c7600e9749f375c6934ffa5"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7c0d499b3ee3fa0a1d2934e05fd36cdcf75f10710ec3fdc9192d07f74074262b"
+    sha256 cellar: :any_skip_relocation, catalina:      "7c0d499b3ee3fa0a1d2934e05fd36cdcf75f10710ec3fdc9192d07f74074262b"
+    sha256 cellar: :any_skip_relocation, mojave:        "7c0d499b3ee3fa0a1d2934e05fd36cdcf75f10710ec3fdc9192d07f74074262b"
+  end
+
   depends_on "go" => :build
 
   def install
