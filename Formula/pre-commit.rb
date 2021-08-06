@@ -8,11 +8,11 @@ class PreCommit < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "d8ab4750b9cb4664110f3dcdd16055213288668875606eb46055ef808cfc728d"
-    sha256 cellar: :any,                 big_sur:       "97c940a2a3a1493397bec46a482ff24dfb83dad9387c460ab160dc9b7503bdfd"
-    sha256 cellar: :any,                 catalina:      "7eeaa76280ea81ef706e4c5647ffca236c1b80b88fbb53eb3c4959c906b75353"
-    sha256 cellar: :any,                 mojave:        "48265fcaac458ddf895d55433b1c5faaa0d01fa295a46155d95794a2cfa335d9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fa4081f4dd1768fa9c40f5c78f9a5cf75963d61e34653bf4fa20a0c20a72cc57"
+    sha256 cellar: :any,                 arm64_big_sur: "8fef2c846b54e2c86e6771c6ba52da2e5738a14075e0e662caadd76d39a19619"
+    sha256 cellar: :any,                 big_sur:       "8920011bc2d9d95f802209690dd75439ee333d8a7fc22bea64137c8bdbb504aa"
+    sha256 cellar: :any,                 catalina:      "2d74f77df1df0c02e84df456701cf1047637e943d8f4146f3b34539a3567973f"
+    sha256 cellar: :any,                 mojave:        "74975456522e5c893f235c02a789539527f7a6255a81d071f6024f43e04be342"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "94a2af98dab0d6e736f143432f0a176633333885c9d8beb86894c27d8e4ef867"
   end
 
   depends_on "libyaml"
