@@ -10,6 +10,10 @@ class I2cTools < Formula
     regex(/href=.*?i2c-tools[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "59e657b8e5a828460b17193ea440bef1229d9e74d73d193a66045526b738e95c"
+  end
+
   depends_on "python@3.9" => [:build, :test]
   depends_on :linux
 
