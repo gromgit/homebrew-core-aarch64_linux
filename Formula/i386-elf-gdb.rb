@@ -13,6 +13,7 @@ class I386ElfGdb < Formula
     sha256 big_sur:       "dbf60ac8e71d01328d134cb1eaa47cd734dd612cd67cc7b730d56afc138ea969"
     sha256 catalina:      "4ca5521aab0566367e9a72767225d08667efb40e609c0b8e9e4ff7464f755052"
     sha256 mojave:        "85a64a23e61b011e32cff2c56e7915f32a8d8d669be09e4698b431412e8ea7b0"
+    sha256 x86_64_linux:  "919e6534fce532ad0395fe4fd756004e3ebe25fd653aff1df825455b68643f7c"
   end
 
   depends_on "i686-elf-gcc" => :test
