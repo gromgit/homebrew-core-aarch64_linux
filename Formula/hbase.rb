@@ -7,10 +7,11 @@ class Hbase < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 arm64_big_sur: "7a0178466daa5ac2956269e16b2ef14b47b8ef6acae03f9926ae78697cd562ec"
-    sha256 big_sur:       "88c89d28ecdecf7787a1f89450a54d9446cd412fc58d8a8459cc554ccda5893b"
-    sha256 catalina:      "a292c7c6a3cdaea1f58a721c6dbc6dff80fc9cb0b9882dc7136da028c80aa3d1"
-    sha256 mojave:        "619e320c7a40c49bdd24f5b319d8dae72c7afffbfca0841872bb12f123865d0e"
+    rebuild 1
+    sha256 arm64_big_sur: "81780e60d8e593165365fd5113d5602a0438482db4983da90c37aabd473e403e"
+    sha256 big_sur:       "b794e8d9c358441726196a905f0ece2136f8a91ee3c9e91f1a1c31e8a5a63aed"
+    sha256 catalina:      "316f0a2cfd4cbfd04e78a7dae813e386651082e9437ef957946b9d1cafd72de7"
+    sha256 mojave:        "ee24a9af687b09c40138cf6b11007616681b19ed5f1279edd2325465285e7d08"
   end
 
   depends_on "ant" => :build
