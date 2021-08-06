@@ -6,10 +6,10 @@ class Alda < Formula
   license "EPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "665fabe9c4477b28f9f5827c9e39d281d9292e4fe4f9101bca87d5027afebe31"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a8b2c3d3183cd45fee48aed3685129b0040fc59ab827bfa99313becd23079211"
-    sha256 cellar: :any_skip_relocation, catalina:      "551e411211cf0d745de515b2c98a9060d891bfb0aac540c87f2eb18715f0e5cf"
-    sha256 cellar: :any_skip_relocation, mojave:        "8bb3ffcd2139b6192bb8659d3f28db0625ef97a7d0da320bae34f3d7098f92e5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d8ab9a5e7529dbc9347798c81d2381ae98e8306747785a1b8df3878f56dfba99"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0c3631104a5028ae030de802445d63260ad25e3d4f5feb34288c17d43371959e"
+    sha256 cellar: :any_skip_relocation, catalina:      "86fd08213de8b025627969372c129777d43b7de2505f792bb22541dee4c3a84b"
+    sha256 cellar: :any_skip_relocation, mojave:        "391b8188cc57612b2d6275e1e0a714f267cc84c3fd893309a8ba929f6d6b191b"
   end
 
   depends_on "go" => :build
