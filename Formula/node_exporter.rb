@@ -12,11 +12,11 @@ class NodeExporter < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a2d0f58a7507651d8d9c130413af92470635acfca6513582e48c7c030c9775c4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "661b7f371988c70cefe9cf852b4541e61581c558d2d0cc3eef09661d0f9211fb"
-    sha256 cellar: :any_skip_relocation, catalina:      "0ea107911c1a5c5537ed4c4e9b762615380baff2be4bafcfdd9596ccaa911a22"
-    sha256 cellar: :any_skip_relocation, mojave:        "9ab5a47bacb3f65b457030995ebd6579490931516fe3b8b86b5583e76d1cda67"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "acbcdf3ac39fb1596159f043cd6fe8dd6f5bb41e37f0bba3207d404dd1b5f85b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bb54142bf7bbec82fa2e61401aea8f2d52bc0daa072f799dea944b4ef76ef456"
+    sha256 cellar: :any_skip_relocation, big_sur:       "51e8055b0532fed44e76081c3af03666e11cd09cfbda040e8883e6b46b7556d8"
+    sha256 cellar: :any_skip_relocation, catalina:      "22d0556f9cac4d74560d035c77bc83a8c1a3c537c6d13dfa31005a865fc8d31a"
+    sha256 cellar: :any_skip_relocation, mojave:        "17b789627b808c2a7d0db53276f6daae97fb674dcd6e2b5be8c845866fa865b5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "64610c8b27e3cd02539871d559dcff67ed413f81c7b67d4417843f3f60ad8eb2"
   end
 
   depends_on "go" => :build
