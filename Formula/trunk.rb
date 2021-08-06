@@ -7,11 +7,11 @@ class Trunk < Formula
   head "https://github.com/thedodd/trunk.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "35a2a5d15c734e550e3c19f992317f7bd56eefe010a578a9064cdf0b2b9fc422"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ad02044660a3f1f9ee3ad972c650022107ae982c46cef836c0c27d22b44494e6"
-    sha256 cellar: :any_skip_relocation, catalina:      "7066418172fcc946a5ccdf6ab3c1ffbf74939efa38c41e4448c81903c286f44a"
-    sha256 cellar: :any_skip_relocation, mojave:        "fa07e6fa4721154019890ed0545be12d49adef5c3c4d57410fb49d2c04cb3582"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b1eb0bef5e59651f1fcd2625e02ff63e7a996faa8d488539aeb6866c97045454"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8010495d9acd5e7455d2128807a08d5bd8c17ac0b6b4e1b522c72d0746f73e3d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6f6f785a22f0c8367b2f864b186a3cdd896b0b254d1e4fd765e1c0f5b39378c3"
+    sha256 cellar: :any_skip_relocation, catalina:      "c981e1cf06e39c4eb70a17ee6bb7046517b071af8ca22b8bc998f8c876792bb8"
+    sha256 cellar: :any_skip_relocation, mojave:        "3df71d613bda3ce9d2b24f4fa3511101cae904104773363917b39808b31eec14"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "38f55ccdb9c142e810eeb2a67a5d2fd7cfac887eb2cfc6069a5343aa838085bf"
   end
 
   depends_on "rust" => :build
