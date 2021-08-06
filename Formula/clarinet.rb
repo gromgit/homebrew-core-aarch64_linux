@@ -1,8 +1,8 @@
 class Clarinet < Formula
   desc "Command-line tool and runtime for the Clarity smart contract language"
   homepage "https://github.com/hirosystems/clarinet"
-  url "https://github.com/hirosystems/clarinet/archive/v0.14.2.tar.gz"
-  sha256 "a3335960bd7c2529b7a11744205030ce849ccaa539f34da57d13c1fff1379d38"
+  url "https://github.com/hirosystems/clarinet/archive/v0.15.0.tar.gz"
+  sha256 "e8be9e2fd8a6382cadebd9fda452b3580f16118a30f4d972acd2dea5baf3dcd8"
   license "GPL-3.0-only"
   head "https://github.com/hirosystems/clarinet.git", branch: "main"
 
@@ -18,10 +18,17 @@ class Clarinet < Formula
     sha256 cellar: :any_skip_relocation, mojave:        "26f6b854d18eda7155f802d982ca16d465b16ed594b6d50283c039e9e83b9743"
   end
 
-  depends_on "rust" => :build
+  depends_on "rustup-init" => :build # clarinet needs nightly channel for this release
 
+  # Nightly rust toolchain will be changed to stable on next release.
+  # See https://github.com/hirosystems/clarinet/blob/main/Dockerfile#L7
   def install
-    system "cargo", "install", *std_cargo_args
+    # This will install a nightly rust toolchain to be used with clarinet.
+    system Formula["rustup-init"].bin/"rustup-init", "-qy", "--no-modify-path",
+           "--default-toolchain", "nightly-2021-08-05", "--profile", "minimal"
+    with_env(PATH: "#{HOMEBREW_CACHE}/cargo_cache/bin:#{ENV["PATH"]}") do
+      system "cargo", "install", *std_cargo_args
+    end
   end
 
   test do
