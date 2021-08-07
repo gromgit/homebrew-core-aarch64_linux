@@ -7,12 +7,11 @@ class M4 < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1db2471add366dde3b52f8d2d32e6d118584f91d1390d8efd6c10c41c9d6a45c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0df9083b268f76a3cda0c9f0d2ce84b51d21a8618d578740646fb615b00c7e7b"
-    sha256 cellar: :any_skip_relocation, catalina:      "2fdf452c94c6b63ea0a45608c19a4477acaf79853a298d337360971c5d51413b"
-    sha256 cellar: :any_skip_relocation, mojave:        "2c0f28d612ba588cd6bf8380c6e286c9d3e585dcd8c4ad198b955c9e8cd1d817"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0d49a50f79a4ad2f74f96496f4ea672354610de3da4cedf426145838ae574300"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ea1be04e51645f9e31c8d2cab6d144bb7f47efb1f35214b9f1014e27db5a3bc1"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b22472f659112cf12163bba770d891618b3ada5aaf5baa01516d80fef6214617"
+    sha256 cellar: :any_skip_relocation, catalina:      "e0fec6a49fd80cc7279c71f319d70d01ed49e894b53cd91e39f170288232fa93"
+    sha256 cellar: :any_skip_relocation, mojave:        "0cf53207764a2311db75b19628e2395ac6655ea1f7fdac97a33a0de34f315018"
+    sha256                               x86_64_linux:  "f6d1087a51e0ff2e582b3043a25a51b67971b2246cf65167ef3abf1230160f04"
   end
 
   keg_only :provided_by_macos
