@@ -6,10 +6,10 @@ class Logcli < Formula
   license "AGPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "575dca679106ab8ce08f4424a1b56222cec4f95ac593beb058846c6333363ce4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7fb693fd292ab4918059c8c24d638ec9739273a75489e211a79fbbeaa06d19f9"
-    sha256 cellar: :any_skip_relocation, catalina:      "112e29ca1fcc7d1814c720711c9d065bd861065bf47c613d2b5be2bc8e6c0e39"
-    sha256 cellar: :any_skip_relocation, mojave:        "bd651c8a96c2fc1f3b56a4519b3880e54929962e1e49fb9122ace4ff0fde0ad9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7f8431ea1c5b8556ae75c572eae2d20c044da0a1c3bb44395ba4b13f5916e667"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7c266f64a13b0e2c96d8fc394a4cc59b4f406e3071a41aaf5d19cdf085ed560a"
+    sha256 cellar: :any_skip_relocation, catalina:      "9e7bbd622f31cf1dd86251c795df0eb284a07ceb73606de61746da0e8ac0edcd"
+    sha256 cellar: :any_skip_relocation, mojave:        "0c6f9f70266f6b196d78d1efa3fee4047b58a22065b14da39399fee2f717a64c"
   end
 
   depends_on "go" => :build
