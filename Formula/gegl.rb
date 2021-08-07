@@ -17,6 +17,7 @@ class Gegl < Formula
     sha256 big_sur:       "eedaaa6ecd792ab4bb261a7e9cbce4aaff9ee88a94996170b440fae6288c5440"
     sha256 catalina:      "df877db7d35be4bfac5b6e59f6ecdebe11c4e4fc4625e866ca84597ee195b9af"
     sha256 mojave:        "cd242392d31ef7a597f520713742cb25e4c02f0e46ed5c8306f9a080746ae511"
+    sha256 x86_64_linux:  "c194073b1f4f3a5a0ff10e1ed0c25256b90dfce0a40425a48364665d1dd5f4e3"
   end
 
   depends_on "glib" => :build
