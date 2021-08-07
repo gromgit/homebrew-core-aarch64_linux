@@ -5,6 +5,13 @@ class Docuum < Formula
   sha256 "001eb166900b6dba89abc4ed76640455e98090bbca321fadc7811225830f336b"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1d31a9e6c05c8386800f6d318e926f03d8e451e6d86bd8c58adb1b1484fd4e0e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5642aab3274b0bfb112c55f91e84004f9fae06196c85c11db299ba13ae25349c"
+    sha256 cellar: :any_skip_relocation, catalina:      "3d3cc389fb68c4a90c8ab7276303a4ccf5aeeaa2aa25094450b49e50d750579e"
+    sha256 cellar: :any_skip_relocation, mojave:        "0381a4f8be35a1bdf85af1cc10b5be22560ff44529b63bff32011d7362c78909"
+  end
+
   depends_on "rust" => :build
 
   def install
