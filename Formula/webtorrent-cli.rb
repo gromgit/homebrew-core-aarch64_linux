@@ -3,8 +3,8 @@ require "language/node"
 class WebtorrentCli < Formula
   desc "Command-line streaming torrent client"
   homepage "https://webtorrent.io/"
-  url "https://registry.npmjs.org/webtorrent-cli/-/webtorrent-cli-3.5.3.tgz"
-  sha256 "96d2d1c412aa35ca782d89f01c3b8780f5fee0b1ec6f8ea1a08b4f32aef6d93a"
+  url "https://registry.npmjs.org/webtorrent-cli/-/webtorrent-cli-3.5.4.tgz"
+  sha256 "017d2880e88f64984cec5be4387f03bbd425f20b3adf599e8d2e2e37a31b3d50"
   license "MIT"
 
   bottle do
@@ -20,6 +20,14 @@ class WebtorrentCli < Formula
   def install
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
     bin.install_symlink Dir["#{libexec}/bin/*"]
+
+    # Remove incompatible pre-built binaries
+    modules_dir = libexec/"lib/node_modules"/name/"node_modules"
+    modules_dir.glob("*/prebuilds/{win32-,linux-arm}*").map(&:rmtree)
+
+    arch_to_remove = Hardware::CPU.intel? ? "arm64" : "x64"
+    on_linux { arch_to_remove = "*" }
+    modules_dir.glob("*/prebuilds/darwin-#{arch_to_remove}").map(&:rmtree)
   end
 
   test do
