@@ -10,7 +10,7 @@ class Kettle < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "8a8e3c43fbd47754f52ebae5e565de00bec85917022d1b0c3ee029e991c47317"
+    sha256 cellar: :any_skip_relocation, all: "cdd9fda5c818bf2c51a61b508a21c20b93a036d1c2bce66d98ee3185b499b561"
   end
 
   depends_on arch: :x86_64
