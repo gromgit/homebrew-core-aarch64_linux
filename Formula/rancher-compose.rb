@@ -6,6 +6,7 @@ class RancherCompose < Formula
   license "Apache-2.0"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, big_sur:      "e3993eaca43eae5d57bbe0f2eb6dda444e30f490cf7b1165f723ec086cd0f149"
     sha256 cellar: :any_skip_relocation, catalina:     "50da809ea2a33343eda8099715391efc6c730b6996476d7c5366fba0d52ab853"
     sha256 cellar: :any_skip_relocation, mojave:       "bf318932b401481ee6e3a94c82c617b21e558406ebef9739c1c7bb42441e9eda"
     sha256 cellar: :any_skip_relocation, high_sierra:  "63f6da5eb59cb86c8f84975b3d3ee41f0bfc1456b239d1a6cc06a648d57e1967"
