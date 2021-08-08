@@ -8,6 +8,7 @@ class Spdylay < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "1edca89e855c54de431b99ab1f0a083438b56d56a770ef019f3638b69a3cbfae"
+    sha256 cellar: :any,                 big_sur:       "667267cd379da8478b31574c5e25bf3f8e150c6f80ab59c2278bec042c71c7aa"
     sha256 cellar: :any,                 catalina:      "5607031eb5776de5b4a68e8c50f312771cae89e8b2266df60718b2e07e35d070"
     sha256 cellar: :any,                 mojave:        "9906d0abfcd17c86df23c18b1ed112de0266ccbc7a50c24f741f78bffa552540"
     sha256 cellar: :any,                 high_sierra:   "c89edde9d9229dbe524d28b661265349af72a2dac0b85f066751d4716effe1ab"
