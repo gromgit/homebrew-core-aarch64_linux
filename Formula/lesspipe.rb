@@ -6,11 +6,11 @@ class Lesspipe < Formula
   license "GPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "08c1fcfdfcd4a94b7958f21bb1c4d0b9a200e9584b4be49d757fdb0087942502"
-    sha256 cellar: :any_skip_relocation, big_sur:       "08c1fcfdfcd4a94b7958f21bb1c4d0b9a200e9584b4be49d757fdb0087942502"
-    sha256 cellar: :any_skip_relocation, catalina:      "08c1fcfdfcd4a94b7958f21bb1c4d0b9a200e9584b4be49d757fdb0087942502"
-    sha256 cellar: :any_skip_relocation, mojave:        "08c1fcfdfcd4a94b7958f21bb1c4d0b9a200e9584b4be49d757fdb0087942502"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "81a1ae192c8cbfed97adf85cb35b0f1c39fc3c58e52cf5fece5403365ede0c78"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d64f78aa39d7efe3b82a8ed8d73dab156d835471d9a828231e5543ef6b2ee63c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d64f78aa39d7efe3b82a8ed8d73dab156d835471d9a828231e5543ef6b2ee63c"
+    sha256 cellar: :any_skip_relocation, catalina:      "d64f78aa39d7efe3b82a8ed8d73dab156d835471d9a828231e5543ef6b2ee63c"
+    sha256 cellar: :any_skip_relocation, mojave:        "d64f78aa39d7efe3b82a8ed8d73dab156d835471d9a828231e5543ef6b2ee63c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "78d4d1153a3e7ba606da746a311c539c82c64bc65bfd824a9aa4e483bd3c596a"
   end
 
   def install
