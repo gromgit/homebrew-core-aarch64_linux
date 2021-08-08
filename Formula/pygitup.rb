@@ -12,6 +12,7 @@ class Pygitup < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "241451119588df0aedbcf3bfb4084a930a22644629ec2544554f17723cb40110"
     sha256 cellar: :any_skip_relocation, catalina:      "24d563dbed328cc4a3267b547e0f7d29d198a6ee17f246c7d5d3b5d0ac7378a3"
     sha256 cellar: :any_skip_relocation, mojave:        "99ea13e47193752b83c7ac7751d1ab44cc1c2b549c2b4662ce54cf9ac6fe4255"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6d990547b1c7f25c141cfe593869ab84225013e0e189dd35c3b4301c8b243995"
   end
 
   depends_on "poetry" => :build
