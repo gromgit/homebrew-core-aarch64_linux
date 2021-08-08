@@ -16,6 +16,7 @@ class Resty < Formula
     sha256 cellar: :any_skip_relocation, high_sierra:   "e65c38b826157c35f2e3acd50846be691b6b1a6231a23c62567c24a052d0dc7e"
     sha256 cellar: :any_skip_relocation, sierra:        "fb754eb95b4cb573eef1807f5dcddab59e021a4326022a9fb8126fb8e80ff247"
     sha256 cellar: :any_skip_relocation, el_capitan:    "435854dd9bc54f09e46f3f895fc0801ce90a30b23b8d9f109f361f89666fcfe1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0407ee9d0d4ed110872714b36ba8abc7f95568edddd649b4969be978ca3d2826"
   end
 
   uses_from_macos "perl"
