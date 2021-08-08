@@ -9,12 +9,7 @@ class HttpServer < Formula
   head "https://github.com/http-party/http-server.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f1bbe9f7419b215d86dfb4a144e6250a3ab18f54a54dbc641c821be8b1cc43c2"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b4c7352df68e5821c56ac58a44f73272a5196f51c12d5ef73b7e34a90749c889"
-    sha256 cellar: :any_skip_relocation, catalina:      "11f0b3f7fc0975e2eb7c911fe1555c13527f75ea5468215e6d6340e11bf36f33"
-    sha256 cellar: :any_skip_relocation, mojave:        "fcc2086b4000cc47077413c116c09ee4b60fe9b064f7d95ff7c19c966a181d4f"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "1b3f5212bc710e5ae053bbd9fb3bd279d763ad03e6c550425ab95534e309a9ef"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "31c2f53da1d60ee2752ffc66e22e7b7e706a8659afdbdaa2cb1686de9377aedf"
+    sha256 cellar: :any_skip_relocation, all: "4f754a7268fe26f330053fbf3b15aa00e99f01e05c4691f3f54c1e5902f46955"
   end
 
   depends_on "node"
