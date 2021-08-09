@@ -8,10 +8,10 @@ class Reposurgeon < Formula
   head "https://gitlab.com/esr/reposurgeon.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "28135b31b2a2a3340107e0773c4edb46a58216131529f4ae5349c06df3e8d854"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b90757c1fa826ff66296c4b3150758448b5a7972e4688fe137583b5274f44d4a"
-    sha256 cellar: :any_skip_relocation, catalina:      "7afe781fbea234675b80909026416003e5c39f27d1c32f16670bcb25182ce657"
-    sha256 cellar: :any_skip_relocation, mojave:        "ec2899c973fac83e3b67ba5326b9c7b9d0f23bf381373ed4d0f3fac763586baf"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "eba17e8a1089183edd74c77a5ea5bdfdf9a6fcbdb2e635b9e2f5c3a71817876c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "39edee4019e83fa40aad6882903d63f263fc79372b7e5c091c331b3dccf5a703"
+    sha256 cellar: :any_skip_relocation, catalina:      "0ca0fe2611d1794509f8a1e3749d10689ab9bebbbbe6121b1245021a75781466"
+    sha256 cellar: :any_skip_relocation, mojave:        "53a6eb93265db0a19b72adafc802bec5bbc70d85d23709931e9a6571821643dc"
   end
 
   depends_on "asciidoctor" => :build
