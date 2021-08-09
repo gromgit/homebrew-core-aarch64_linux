@@ -6,11 +6,11 @@ class Goose < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7a4098e939b398cd06ccac9823e1a8cf4b5ba4a48d02c7107db2c290254f4e78"
-    sha256 cellar: :any_skip_relocation, big_sur:       "1407a16971b246018e4972126f720f1e18b98423cd25a47264b1b82c5656ec06"
-    sha256 cellar: :any_skip_relocation, catalina:      "46e6b4b88d7040d25915ebf03a11aab7a5e5963d985b2773231cbc208617c633"
-    sha256 cellar: :any_skip_relocation, mojave:        "2aabf2ca4b1e124a6f2837379bbfbcbda6e75265535769921b22aa36eff68f2a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "97bd752caa86d45671e9654dc041d05c6007c9292269438ecf5bd7d4e56a50d7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3def952ad2ed85310f60466d350b65160044df5e9c3d7b7a715a177c9e0f7761"
+    sha256 cellar: :any_skip_relocation, big_sur:       "51ceb50cb44e2a3907bbf7fb01398a6f2150ba20f7b110c668e73afccc9dfad2"
+    sha256 cellar: :any_skip_relocation, catalina:      "d67b3467e39bf391088ee9c0deaf7781478ba269c4cf45fe5c542f3f854752e8"
+    sha256 cellar: :any_skip_relocation, mojave:        "abf9f68a0c1e32a140b7d877bc89f69592bca2a00f1d1ae7fe722b6b18aa817a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bc3e7d0b692cc6f134cf1a8fe264f2c507d0b33d3047babdd4069f6038cde652"
   end
 
   depends_on "go" => :build
