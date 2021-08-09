@@ -8,10 +8,11 @@ class Cosi < Formula
   license "AGPL-3.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, catalina:     "30bbb457c0fb67ee264331e434068a4a747ece4cbc536cb75d289a06e93988e2"
-    sha256 cellar: :any_skip_relocation, mojave:       "2ddd695441977b1cd435fbae28d9aa864d48b7a90ec24971348d91b5d0e551df"
-    sha256 cellar: :any_skip_relocation, high_sierra:  "00663999a04ee29f52e334022cc828d7ebe89a442f1e713afb2167112f4ebf75"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "b0af35c14fbdff8b9ddf46a325903d87fd3d5e7c4d7ea6d26ba2d4c8c4ac8201"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5b529b010f6c26cb971f84630f3fdf1fcf185991d7606e5eeee985d086cc7e33"
+    sha256 cellar: :any_skip_relocation, catalina:      "30bbb457c0fb67ee264331e434068a4a747ece4cbc536cb75d289a06e93988e2"
+    sha256 cellar: :any_skip_relocation, mojave:        "2ddd695441977b1cd435fbae28d9aa864d48b7a90ec24971348d91b5d0e551df"
+    sha256 cellar: :any_skip_relocation, high_sierra:   "00663999a04ee29f52e334022cc828d7ebe89a442f1e713afb2167112f4ebf75"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b0af35c14fbdff8b9ddf46a325903d87fd3d5e7c4d7ea6d26ba2d4c8c4ac8201"
   end
 
   # Deprecated in favor of the Cothority `blcosi` package.
