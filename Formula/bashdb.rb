@@ -21,6 +21,7 @@ class Bashdb < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "0ab6de48ce871bc7b6abc582154b425350a70b7f2ecadd3b303c7a91dafc3c41"
     sha256 cellar: :any_skip_relocation, mojave:        "0ab6de48ce871bc7b6abc582154b425350a70b7f2ecadd3b303c7a91dafc3c41"
     sha256 cellar: :any_skip_relocation, high_sierra:   "0ab6de48ce871bc7b6abc582154b425350a70b7f2ecadd3b303c7a91dafc3c41"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f53afdb7dc83b30c3347c729b38ee0da913198c9c5afc6e67727e36960602f1e"
   end
 
   depends_on "autoconf" => :build # due to patch
