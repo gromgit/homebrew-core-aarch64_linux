@@ -1,8 +1,8 @@
 class Hledger < Formula
   desc "Easy plain text accounting with command-line, terminal and web UIs"
   homepage "https://hledger.org/"
-  url "https://hackage.haskell.org/package/hledger-1.22.1/hledger-1.22.1.tar.gz"
-  sha256 "112cb975488157418bd96c1b820022ca5705a404c02bc75075533bf6a4eb405e"
+  url "https://hackage.haskell.org/package/hledger-1.22.2/hledger-1.22.2.tar.gz"
+  sha256 "6f2c1cb7a596158a2a6a0acd73da044525a2f3e37909413d52fee8d79d293bbc"
   license "GPL-3.0-or-later"
 
   # A new version is sometimes present on Hackage before it's officially
@@ -28,18 +28,18 @@ class Hledger < Formula
   uses_from_macos "zlib"
 
   resource "hledger-lib" do
-    url "https://hackage.haskell.org/package/hledger-lib-1.22.1/hledger-lib-1.22.1.tar.gz"
-    sha256 "6be4d07e117b15e7534bd3dbbe46c2aac0b21f6c8bd850c10d643815face1f24"
+    url "https://hackage.haskell.org/package/hledger-lib-1.22.2/hledger-lib-1.22.2.tar.gz"
+    sha256 "b4c54f11e7efdc0fcb01050300f02899c8a96dc88061821fc5984aecbb796877"
   end
 
   resource "hledger-ui" do
-    url "https://hackage.haskell.org/package/hledger-ui-1.22.1/hledger-ui-1.22.1.tar.gz"
-    sha256 "376e266f9c9b1cc46fbfb75cf94da4b9112310f62bbe952bf37441f0b2ce1b60"
+    url "https://hackage.haskell.org/package/hledger-ui-1.22.2/hledger-ui-1.22.2.tar.gz"
+    sha256 "3c93c9da258a6c5e87a8b0ca0354a964582cfd3fd0cd8946057dfb4171a1aa1e"
   end
 
   resource "hledger-web" do
-    url "https://hackage.haskell.org/package/hledger-web-1.22.1/hledger-web-1.22.1.tar.gz"
-    sha256 "ed325b267f549498f87041b74133c74c4cce298b6d1dbe2a249f4511c0e09309"
+    url "https://hackage.haskell.org/package/hledger-web-1.22.2/hledger-web-1.22.2.tar.gz"
+    sha256 "8c6047c28c30ba7d9db7a02ab299c3d075f82246a9c8480b4a813293050c41c5"
   end
 
   def install
