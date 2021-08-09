@@ -7,13 +7,14 @@ class Veraxx < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any_skip_relocation, big_sur:     "f28290171b8cc68f972b3cdbf811c1491d4be7dd8307fe1551dbfbdbc38269ba"
-    sha256 cellar: :any_skip_relocation, catalina:    "985e75bcd4c9a559fd2e2841d10d0cb3d73fdc940a76aa3d3050514017d61560"
-    sha256 cellar: :any_skip_relocation, mojave:      "41254f89a2510f8c3f39718a2068a9000658ca714ee104fd426a1cc4d7afd8e7"
-    sha256 cellar: :any_skip_relocation, high_sierra: "73b49e98703b820ffc65213f2e14d0932c5b08851165042811b3e3318bbc84f6"
-    sha256 cellar: :any_skip_relocation, sierra:      "3a261328afd43c8c38f33802ced93557c58ae8903dab90e0ca4546004003447f"
-    sha256 cellar: :any_skip_relocation, el_capitan:  "76dcb0b9340b8fc9413fc848dff27e8805d7b2a9c63d5128fc83ce5bd3bd1cd5"
-    sha256 cellar: :any_skip_relocation, yosemite:    "a2620392e9204964ecd0ec0bc6b90268d27e5e2a28ef304aff3d3719ed058b80"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fb1646c3a9cb8a0707a2674d546b6db25dcbea0fffd7461358c43247ae35ddcc"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f28290171b8cc68f972b3cdbf811c1491d4be7dd8307fe1551dbfbdbc38269ba"
+    sha256 cellar: :any_skip_relocation, catalina:      "985e75bcd4c9a559fd2e2841d10d0cb3d73fdc940a76aa3d3050514017d61560"
+    sha256 cellar: :any_skip_relocation, mojave:        "41254f89a2510f8c3f39718a2068a9000658ca714ee104fd426a1cc4d7afd8e7"
+    sha256 cellar: :any_skip_relocation, high_sierra:   "73b49e98703b820ffc65213f2e14d0932c5b08851165042811b3e3318bbc84f6"
+    sha256 cellar: :any_skip_relocation, sierra:        "3a261328afd43c8c38f33802ced93557c58ae8903dab90e0ca4546004003447f"
+    sha256 cellar: :any_skip_relocation, el_capitan:    "76dcb0b9340b8fc9413fc848dff27e8805d7b2a9c63d5128fc83ce5bd3bd1cd5"
+    sha256 cellar: :any_skip_relocation, yosemite:      "a2620392e9204964ecd0ec0bc6b90268d27e5e2a28ef304aff3d3719ed058b80"
   end
 
   depends_on "cmake" => :build
