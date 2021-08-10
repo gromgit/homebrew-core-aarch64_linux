@@ -6,6 +6,13 @@ class Firefoxpwa < Formula
   license "MPL-2.0"
   head "https://github.com/filips123/FirefoxPWA.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "34bde79a2cbafaedf07c7e8934146ffba5e1e67a4c274c4e2f3ff0201e1917c3"
+    sha256 cellar: :any_skip_relocation, big_sur:       "1c14a9904573549af2671f3eb32b490fa18c42605c86f4ac07256bd56c742fca"
+    sha256 cellar: :any_skip_relocation, catalina:      "b5b49d08ef4c23e877dd93d9116f5a15128343953bbd2a62f30986a5ae8c5f66"
+    sha256 cellar: :any_skip_relocation, mojave:        "3a0f52cd72431ec43f842c66bc63a1ac6de21ed2671518074a9eea74301cd870"
+  end
+
   depends_on "rust" => :build
 
   def install
