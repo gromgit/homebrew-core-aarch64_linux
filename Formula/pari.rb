@@ -4,6 +4,7 @@ class Pari < Formula
   url "https://pari.math.u-bordeaux.fr/pub/pari/unix/pari-2.13.2.tar.gz"
   sha256 "1679985094a0b723d14f49aa891dbe5ec967aa4040050a2c50bd764ddb3eba24"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url "https://pari.math.u-bordeaux.fr/pub/pari/unix/"
@@ -28,6 +29,12 @@ class Pari < Formula
                           "--with-gmp=#{gmp}",
                           "--with-readline=#{readline}",
                           "--graphic=ps"
+
+    # Explicitly set datadir to HOMEBREW_PREFIX/share/pari to allow for external packages to be found
+    # We do this here rather than in configure because we still want the actual files to be installed to the Cellar
+    objdir = Utils.safe_popen_read("./config/objdir").chomp
+    inreplace %W[#{objdir}/pari.cfg #{objdir}/paricfg.h], pkgshare, "#{HOMEBREW_PREFIX}/share/pari"
+
     # make needs to be done in two steps
     system "make", "all"
     system "make", "install"
