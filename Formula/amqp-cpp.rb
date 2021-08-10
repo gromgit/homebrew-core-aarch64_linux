@@ -12,11 +12,11 @@ class AmqpCpp < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0e63fe2e0fc7f090bf5c1cfd3bbe0be4f882b6bed5370c380664cbf830bcc820"
-    sha256 cellar: :any_skip_relocation, big_sur:       "333179f73aa48640012f917e74d4a81ba2b5bec984aa4891be8b250659e39900"
-    sha256 cellar: :any_skip_relocation, catalina:      "10705f95a5801071dedc5aa540dbdd4ddd7760828af1d8a9d6893fb23f5f27aa"
-    sha256 cellar: :any_skip_relocation, mojave:        "7d73220c151d2a9565d126492cf82d9d8849d82dc9323557d97a0f0ce01d6823"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dedcb0785ba3e7e063b4d8db6947496984447a833c7e1eb91cea45bfc8f82d15"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c464e68f11d1ce2c3d96aca7833c473d9dc708f417064bf0f8118c55eaa0fbcd"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a91e81891937789703c6a4cb22536dcaeb0a8e933e0ca20a8db32067dd919bf4"
+    sha256 cellar: :any_skip_relocation, catalina:      "010b745ff538b044ecb43bd0bb18e1cbe374589e4bc4ca45b906eee52138c34f"
+    sha256 cellar: :any_skip_relocation, mojave:        "c1d2d2a4a73a08ad98cfdaa6d08d581398780481a74ecc928a5e7aa356d25ac1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2ece40b3b1174cd90632f48759a931c515f79267330c9578c03889eb6fb60c5d"
   end
 
   depends_on "cmake" => :build
