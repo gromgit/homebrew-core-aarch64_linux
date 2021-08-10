@@ -14,6 +14,7 @@ class ApacheForrest < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "53aed268e732c00ae5d57d4b98287c59f12c124f5a1b925d02aefacdc6dc5132"
     sha256 cellar: :any_skip_relocation, mojave:        "53aed268e732c00ae5d57d4b98287c59f12c124f5a1b925d02aefacdc6dc5132"
     sha256 cellar: :any_skip_relocation, high_sierra:   "53aed268e732c00ae5d57d4b98287c59f12c124f5a1b925d02aefacdc6dc5132"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "83d565eb783378de1f2650fbd678d197ee0538eac17d186c22c0e8cb4957d230"
   end
 
   deprecate! date: "2020-02-01", because: :unmaintained
