@@ -26,9 +26,10 @@ class Blis < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:  "ad2e6862fd4b5a425769c108e7a36e33ac7e7fc77ce699756fe051e68524518d"
-    sha256 cellar: :any, catalina: "b26e5e7deb7b85319fa539a061ff84df842378a902e3695a4f6df63eba9f5cdb"
-    sha256 cellar: :any, mojave:   "333cceec593098d68f438ddcfc6415d44cf0af565601c0163496e23bdf4a8aec"
+    sha256 cellar: :any, arm64_big_sur: "971251c831592d168e0ccafb67e47de2430433ea395663c788db7223a5ac6f3e"
+    sha256 cellar: :any, big_sur:       "ad2e6862fd4b5a425769c108e7a36e33ac7e7fc77ce699756fe051e68524518d"
+    sha256 cellar: :any, catalina:      "b26e5e7deb7b85319fa539a061ff84df842378a902e3695a4f6df63eba9f5cdb"
+    sha256 cellar: :any, mojave:        "333cceec593098d68f438ddcfc6415d44cf0af565601c0163496e23bdf4a8aec"
   end
 
   on_linux do
