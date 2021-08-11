@@ -11,11 +11,10 @@ class Bochs < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "6d5a614bcdfd6fd732e1d970a20cf41ef138544c2fc83c01e40fa76d182d4e7c"
-    sha256 big_sur:       "9fc8197b7d04be3b5eafcc970ea167d3a91997ad5e4b30a7d56c0725f61190d4"
-    sha256 catalina:      "b6d43a6a60360e0d84ebd2ad9ae7724c413a1f2332c59065fb09c2004d76b723"
-    sha256 mojave:        "74fb37178645c4d2b52eec5684931ca215dc2f75794e1cf45b3f6e2b85263819"
-    sha256 high_sierra:   "f8c79923292849eebece21d9c5ed1028db729d4d25dc1e045a7c8e0f0dcf450b"
+    sha256 arm64_big_sur: "413baabcb17f8a7da9b41306215280ef7fe9e898477c31eed66f483cfb15475a"
+    sha256 big_sur:       "6e644ff1b857016a22941d01d7136a94c39a790dd6ce0f358da5b5b5ab14af78"
+    sha256 catalina:      "a903d4549d08e804de103c69866708ac5a993f7a4006687e9465e67991494cb4"
+    sha256 mojave:        "8428e13cd552af48b539231826a222f4b74801688aa0e74c2de40c201cb68e30"
   end
 
   depends_on "pkg-config" => :build
