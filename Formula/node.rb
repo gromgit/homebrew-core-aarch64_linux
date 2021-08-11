@@ -1,8 +1,8 @@
 class Node < Formula
   desc "Platform built on V8 to build network applications"
   homepage "https://nodejs.org/"
-  url "https://nodejs.org/dist/v16.6.1/node-v16.6.1.tar.xz"
-  sha256 "79b1ea058cc67f2a69462cd5f2467a1efe08c64299c053da70384ce1a0e3e557"
+  url "https://nodejs.org/dist/v16.6.2/node-v16.6.2.tar.xz"
+  sha256 "8794cba1f971e4200a38690c76d7cc0a3bd1cba96fbf4305dfbe21fc459d79eb"
   license "MIT"
   head "https://github.com/nodejs/node.git"
 
@@ -41,6 +41,13 @@ class Node < Formula
   resource "npm" do
     url "https://registry.npmjs.org/npm/-/npm-7.20.3.tgz"
     sha256 "bf73538dbcd933e5a9d9575c0c39539aee3e70b32e27837037681662d3bc2c0b"
+  end
+
+  # Fix build with brewed c-ares.
+  # https://github.com/nodejs/node/pull/39739
+  patch do
+    url "https://github.com/nodejs/node/commit/8699aa501c4d4e1567ebe8901e5ec80cadaa9323.patch?full_index=1"
+    sha256 "678643c79258372d5054d3da16bc0c5db17130f151f0e72b6e4f20817987aac9"
   end
 
   def install
