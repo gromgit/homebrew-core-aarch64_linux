@@ -11,6 +11,7 @@ class Vis < Formula
     sha256 big_sur:       "4aeb0308a6d979940de003d4c2013c5c5b85eecf600b5f44351f5dae5bdfa99d"
     sha256 catalina:      "801a96b4aa47cbe0196af84017177d9e3bde18561a75bcf3e7bee970c491973a"
     sha256 mojave:        "4abbde51b5cf5b4451678d2d4a6d8c1279c64cac44970b3715416beffb726b0f"
+    sha256 x86_64_linux:  "d8e0518e1be04971a161c1e7dee27f5ba311b702743c865d23e61121c4b720ae"
   end
 
   depends_on "luarocks" => :build
