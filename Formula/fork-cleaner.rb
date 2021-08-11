@@ -6,11 +6,11 @@ class ForkCleaner < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "829de991792fb888129edc45f53e1cfd3dd7c3b416d9d224dfd20fd104e3de01"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6c38ca3c1fdd113fa6cab6275b0b8ac09dd58c003b65b736d07525fdfcf20128"
-    sha256 cellar: :any_skip_relocation, catalina:      "755110dfb469caf2412b848dc34a2f888306fe99bdd785404314e934f71314c1"
-    sha256 cellar: :any_skip_relocation, mojave:        "df5b5612adc55c88a3b3eefe80f0d02ee407bacaf07ff76c24dac6bfd382086e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4636f005612e28594325f6da8d85f35e2c48e6225a127f16bcaa1d3fa05dc3b2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "83f76a38e1962eeb871e00a3171791e70af5f3f0ab5d134fa6437b875f577bc6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4d89ad868b65bb6375a39376ff4470e435df3250d5b6295d7c27040814bf9876"
+    sha256 cellar: :any_skip_relocation, catalina:      "5f369eaafb9f81888458504d90b0cb5a3f6f822c3617168031c183310350a579"
+    sha256 cellar: :any_skip_relocation, mojave:        "48a456d3a6483c5b4b5200c5e08d2e3093ae7dc4adf265d56042a80f35f19da3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c4a4d8ca76c6c6f33697a07a3486f9518f782c6b841789fb8e641ee0edf204c0"
   end
 
   depends_on "go" => :build
