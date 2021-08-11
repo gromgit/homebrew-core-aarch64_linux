@@ -7,11 +7,11 @@ class Vala < Formula
   revision 1
 
   bottle do
-    sha256 arm64_big_sur: "980295e63a373da1594e5148ee9e5c24b58e43438ca56d3adf6fdf17706d79bc"
-    sha256 big_sur:       "41790eff047d0c56c7ffd9c77d3023e932de790418b0035ee7012acb5445586e"
-    sha256 catalina:      "ce7947b5fc4ba26282a5866dcc5ccd74f944826b630070cfbc1ebffc1577a5cd"
-    sha256 mojave:        "371a985d1f55593678aa4bfa96209e33bba5f8ffd476af12368d702a5d2e1ee9"
-    sha256 x86_64_linux:  "df7f07bb5ee279fdb9acb23f6062339d274f834e1e7fcbdf33b9e85572d6bef6"
+    sha256 arm64_big_sur: "5aeae5a53ae70dbb63c2bb31aa7112960584eae16a098ed13a525607f1d18aaf"
+    sha256 big_sur:       "a032e72a210fc8f541fbe6e2ba131c172cc57f5f1773f767ab6b1ebc81d8b8dd"
+    sha256 catalina:      "08dfe77ba56c3205f304c3543fdc18705d4a3abd15e0e20ef6c2c7194142185d"
+    sha256 mojave:        "07eb45b1047e84e43defbfdc684ac559f40b329ac6fa0ccaf94c57473eda65c6"
+    sha256 x86_64_linux:  "7d866ddc8aff4700e8652b2136deaae5a7b4eb2d9c8da70852a73a06761ad278"
   end
 
   depends_on "gettext"
