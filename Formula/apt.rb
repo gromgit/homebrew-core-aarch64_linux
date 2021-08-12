@@ -10,6 +10,10 @@ class Apt < Formula
     regex(/href=.*?apt[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 x86_64_linux: "fe9e3e31765c549dd65ea029333224a4e5fd2321fda80a2e7874ccebcc89d9d1"
+  end
+
   depends_on "cmake" => :build
   depends_on "docbook" => :build
   depends_on "docbook-xsl" => :build
