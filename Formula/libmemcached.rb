@@ -3,6 +3,7 @@ class Libmemcached < Formula
   homepage "https://libmemcached.org/"
   url "https://launchpad.net/libmemcached/1.0/1.0.18/+download/libmemcached-1.0.18.tar.gz"
   sha256 "e22c0bb032fde08f53de9ffbc5a128233041d9f33b5de022c0978a2149885f82"
+  license "BSD-3-Clause"
   revision 2
 
   bottle do
@@ -35,7 +36,8 @@ class Libmemcached < Formula
       #include <libmemcached-1.0/memcached.h>
 
       int main(int argc, char **argv) {
-          const char *conf = "--SERVER=localhost:11211";
+          char conf[50] = "--SERVER=127.0.0.1:";
+          strncat(conf, argv[1], 5);
           memcached_st *memc = memcached(conf, strlen(conf));
           assert(memc != NULL);
 
@@ -64,10 +66,10 @@ class Libmemcached < Formula
     system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lmemcached", "-o", "test"
 
     memcached = Formula["memcached"].bin/"memcached"
-    # Assumes port 11211 is not already taken
-    io = IO.popen("#{memcached} --listen=localhost:11211")
+    port = free_port
+    io = IO.popen("#{memcached} -l 127.0.0.1 -p #{port}")
     sleep 1
-    system "./test"
+    system "./test", port
     Process.kill "TERM", io.pid
   end
 end
