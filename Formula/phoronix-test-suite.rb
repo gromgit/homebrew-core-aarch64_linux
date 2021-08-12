@@ -16,6 +16,7 @@ class PhoronixTestSuite < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "021e080cf334bf2a07774987010e2ea1047e81348f4b020069c4c016522947de"
     sha256 cellar: :any_skip_relocation, catalina:      "021e080cf334bf2a07774987010e2ea1047e81348f4b020069c4c016522947de"
     sha256 cellar: :any_skip_relocation, mojave:        "021e080cf334bf2a07774987010e2ea1047e81348f4b020069c4c016522947de"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f3154fe9595db4a8e3e35c64c703bfde266c9625c6ddd06df63a26f2438bf3ec"
   end
 
   uses_from_macos "php"
