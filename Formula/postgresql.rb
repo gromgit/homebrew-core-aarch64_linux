@@ -1,8 +1,8 @@
 class Postgresql < Formula
   desc "Object-relational database system"
   homepage "https://www.postgresql.org/"
-  url "https://ftp.postgresql.org/pub/source/v13.3/postgresql-13.3.tar.bz2"
-  sha256 "3cd9454fa8c7a6255b6743b767700925ead1b9ab0d7a0f9dcb1151010f8eb4a1"
+  url "https://ftp.postgresql.org/pub/source/v13.4/postgresql-13.4.tar.bz2"
+  sha256 "ea93e10390245f1ce461a54eb5f99a48d8cabd3a08ce4d652ec2169a357bc0cd"
   license "PostgreSQL"
   head "https://github.com/postgres/postgres.git"
 
@@ -37,14 +37,6 @@ class Postgresql < Formula
   on_linux do
     depends_on "linux-pam"
     depends_on "util-linux"
-
-    # configure patch to deal with OpenLDAP 2.5
-    # (revisit on next release)
-    depends_on "autoconf@2.69" => :build
-    patch do
-      url "https://raw.githubusercontent.com/Homebrew/formula-patches/10fe8d35eb7323bb882c909a0ec065ae01401626/postgresql/openldap-2.5.patch"
-      sha256 "7b1e1a88752482c59f6971dfd17a2144ed60e6ecace8538200377ee9b1b7938c"
-    end
   end
 
   def install
@@ -80,12 +72,6 @@ class Postgresql < Formula
     # PostgreSQL by default uses xcodebuild internally to determine this,
     # which does not work on CLT-only installs.
     args << "PG_SYSROOT=#{MacOS.sdk_path}" if MacOS.sdk_root_needed?
-
-    on_linux do
-      # rebuild `configure` after patching
-      # (remove if patch block not needed)
-      system "autoreconf", "-ivf"
-    end
 
     system "./configure", *args
     system "make"
