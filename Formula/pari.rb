@@ -12,11 +12,11 @@ class Pari < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "8b7ed66542790052cdf4a5792ac3686fedc43e69b5d643f6e8fbbc04d3d7c6aa"
-    sha256 cellar: :any,                 big_sur:       "789d72fe3f7a8b53bb4f95735f1f3849e479050d1f8ddcdedc35f96bc3ed8e16"
-    sha256 cellar: :any,                 catalina:      "56a92398748eb0ab496165049096e138a6d5e7f18f44bbfe18c94743c25f9893"
-    sha256 cellar: :any,                 mojave:        "db4da067cb412e1ed6125d847e566dd70ec834f6fa81fc7854881e66cc42fd5e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "67676d86e22365ec431d7c87433657c21db5126263429967e1a5210a66ccc83d"
+    sha256 cellar: :any,                 arm64_big_sur: "ad45cc834d4454d84412e62628c85afbc2364748c1ddbbd9faeced13741e3ce7"
+    sha256 cellar: :any,                 big_sur:       "a895d0124e8e155a943598c6e487da9c2695f4fe176bb6387ebd94b59db673ba"
+    sha256 cellar: :any,                 catalina:      "c3345af4b6b315eb0ba121a96b0b475c9ce9ecf299529cba821e406d20deb666"
+    sha256 cellar: :any,                 mojave:        "729e94c8cb530d7169c49569faa30c55a00cb799deffc3764b83c58386747879"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "92b1ef4819c3b0de0dd757f047949cf771ebf596e57aabed790824d14c61d8a0"
   end
 
   depends_on "gmp"
