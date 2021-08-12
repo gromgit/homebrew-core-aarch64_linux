@@ -7,11 +7,11 @@ class Libcds < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, big_sur:     "8933bb8f315e15e385985ba2ddd4b1ebecbcce970fa434afb8648d1d95b34e5d"
-    sha256 cellar: :any, catalina:    "d2ac7fe9c424707b1a2698fabed2a81645bb4f79f9fb943a279aee1cfc5d38d9"
-    sha256 cellar: :any, mojave:      "ed2baad62fe26da2891255221ee90a8d69f84214431dce923dd7c55aafa39668"
-    sha256 cellar: :any, high_sierra: "9723b22f7a6e84ef208226241ed3b19dd02b4c9aed9c01284f55bd9b825e216e"
-    sha256 cellar: :any, sierra:      "fdc30046c9f96c04d7c52d43e948d2e238fb93eee5514101a0dd0ca4de3f2b32"
+    sha256 cellar: :any,                 arm64_big_sur: "52e6bee0d1b0f1dfea3ae69573b6a3a92c0ff42ddb41634c464fc35672e94bf4"
+    sha256 cellar: :any,                 big_sur:       "029e18020211d4f155d07a9716303309c1b3f8d685cbd167d87f476dfe8f77a1"
+    sha256 cellar: :any,                 catalina:      "9962a58f2df627f74d0c248397cc8bb8a501f0380d99bfc3a84365070ab902fc"
+    sha256 cellar: :any,                 mojave:        "1667d75383b82cd2365808502c9468ca1e47aad4d6c5943b02e1aa258cad3fe4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "403e15797cf8fd6c2caea7427e964fe4e3392eb1685d7ff9203a0d72cde26aac"
   end
 
   depends_on "cmake" => :build
