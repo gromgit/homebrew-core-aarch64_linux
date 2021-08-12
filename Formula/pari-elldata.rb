@@ -7,6 +7,14 @@ class PariElldata < Formula
   sha256 "dd551e64932d4ab27b3f2b2d1da871c2353672fc1a74705c52e3c0de84bd0cf6"
   license "GPL-2.0-or-later"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "14d4b536fee818631a347a24bc5fa176f2a82bae24a9aa5fbe2db690315b1c74"
+    sha256 cellar: :any_skip_relocation, big_sur:       "14d4b536fee818631a347a24bc5fa176f2a82bae24a9aa5fbe2db690315b1c74"
+    sha256 cellar: :any_skip_relocation, catalina:      "14d4b536fee818631a347a24bc5fa176f2a82bae24a9aa5fbe2db690315b1c74"
+    sha256 cellar: :any_skip_relocation, mojave:        "14d4b536fee818631a347a24bc5fa176f2a82bae24a9aa5fbe2db690315b1c74"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3650db70fd22fd44bad2ce00e8990a830659748de3449c39ce546a32d7643e43"
+  end
+
   depends_on "pari"
 
   def install
