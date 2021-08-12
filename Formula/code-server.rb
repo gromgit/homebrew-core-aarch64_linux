@@ -6,10 +6,10 @@ class CodeServer < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a290c75a70f56c20b06bba441f86576c9af3d7fe0a616f2f68935a583ba5904a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "19badfca26fe460122acce27cff6111bcc04663125044c03b499880dc61f9250"
-    sha256 cellar: :any_skip_relocation, catalina:      "b22e92f4642485a24c292201c03fb842360e917a3ca26c08ba7871c280009e3c"
-    sha256 cellar: :any_skip_relocation, mojave:        "d9405b5546a725ed18a5b11ba59132ab7980ab75c162526604cd2d9c1404035f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b47db3bc805926588a135ac1a6845ffb0170f7ff91c5f3506073f0b0a71b9c36"
+    sha256 cellar: :any_skip_relocation, big_sur:       "827327008ad5f42a147ea889be1c569513b4b37f08b87de3ea6af7f6f8521c45"
+    sha256 cellar: :any_skip_relocation, catalina:      "c16c18a1df9ba25ad8a3434478ccf4778508eb50028e844a5256aad20fea5b5c"
+    sha256 cellar: :any_skip_relocation, mojave:        "7d910cc1a6d45040268e8ccbf2d9a5b6aaad85675bb1291a3e73f268236ba143"
   end
 
   depends_on "python@3.9" => :build
