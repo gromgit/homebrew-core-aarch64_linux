@@ -50,6 +50,14 @@ class Xsel < Formula
     end
   end
 
+  bottle do
+    sha256 cellar: :any,                 arm64_big_sur: "b32e829803d81ea7d09bb0911b31a20ac6c75fdbc67fa3c4c9184458e3d3ecb3"
+    sha256 cellar: :any,                 big_sur:       "f596d08cffadf2bff12804cc18fc61ddb4cdf47599f869d938c7ebd860e1950d"
+    sha256 cellar: :any,                 catalina:      "18f72e215611df386415475668dd769e37c6b715715e477ba39866f17a95c1f2"
+    sha256 cellar: :any,                 mojave:        "8fd34073cf958d18b31d51f0e3d05f7a93e0a71b00cc696bdf4d4018409b3c46"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "81062fbb7f2a56e6510ab0103c795e5f0091dafa810100d03a83b3295b3f577f"
+  end
+
   head do
     url "https://github.com/kfish/xsel.git"
 
