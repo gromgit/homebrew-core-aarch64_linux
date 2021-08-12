@@ -4,7 +4,7 @@ class Pari < Formula
   url "https://pari.math.u-bordeaux.fr/pub/pari/unix/pari-2.13.2.tar.gz"
   sha256 "1679985094a0b723d14f49aa891dbe5ec967aa4040050a2c50bd764ddb3eba24"
   license "GPL-2.0-or-later"
-  revision 1
+  revision 2
 
   livecheck do
     url "https://pari.math.u-bordeaux.fr/pub/pari/unix/"
@@ -28,7 +28,8 @@ class Pari < Formula
     system "./Configure", "--prefix=#{prefix}",
                           "--with-gmp=#{gmp}",
                           "--with-readline=#{readline}",
-                          "--graphic=ps"
+                          "--graphic=ps",
+                          "--mt=pthread"
 
     # Explicitly set datadir to HOMEBREW_PREFIX/share/pari to allow for external packages to be found
     # We do this here rather than in configure because we still want the actual files to be installed to the Cellar
