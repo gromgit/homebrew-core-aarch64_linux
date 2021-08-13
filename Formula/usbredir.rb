@@ -1,8 +1,8 @@
 class Usbredir < Formula
   desc "USB traffic redirection library"
   homepage "https://www.spice-space.org"
-  url "https://www.spice-space.org/download/usbredir/usbredir-0.10.0.tar.xz"
-  sha256 "76de718db370d824a833075599a8a035ab284c4a1bf279cca26bb538484d8061"
+  url "https://www.spice-space.org/download/usbredir/usbredir-0.11.0.tar.xz"
+  sha256 "72dd5f3aa90dfbc0510b5149bb5b1654c8f21fdc405dfce7b5dc163dcff19cba"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.0-or-later"]
 
   livecheck do
@@ -24,13 +24,6 @@ class Usbredir < Formula
   depends_on "glib"
   depends_on "libusb"
 
-  # See https://gitlab.freedesktop.org/spice/usbredir/-/merge_requests/32
-  # Remove when the MR has been merged and included in the release.
-  patch do
-    url "https://gitlab.freedesktop.org/spice/usbredir/-/commit/be1078847e4e05fffea888544457ef6a75c8f330.diff"
-    sha256 "052b9352625cfefd96a4ef491b3f40b64cee5ddaca0ed0b5205ab6ef2f8882c5"
-  end
-
   def install
     system "meson", *std_meson_args, ".", "build"
     system "ninja", "-C", "build", "-v"
@@ -38,13 +31,13 @@ class Usbredir < Formula
   end
 
   test do
-    (testpath/"test.cpp").write <<~EOS
+    (testpath/"test.c").write <<~EOS
       #include <usbredirparser.h>
       int main() {
         return usbredirparser_create() ? 0 : 1;
       }
     EOS
-    system ENV.cc, "test.cpp",
+    system ENV.cc, "test.c",
                    "-L#{lib}",
                    "-lusbredirparser",
                    "-o", "test"
