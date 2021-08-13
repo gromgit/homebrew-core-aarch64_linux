@@ -5,12 +5,11 @@ class Mpi4py < Formula
   sha256 "134fa2b2fe6d8f91bcfcc2824cfd74b55ca3dcbff4d185b1bda009beea9232ec"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "0f4729ca14721e02e752fa831f91c0463d32163e86c7097896843c553d0b8f30"
-    sha256 cellar: :any, big_sur:       "3b761d6032292468252ff3c8aa01c61f4e71cf945235a88e18eebd97d9bfd957"
-    sha256 cellar: :any, catalina:      "c6163dd690053dc5adcca25c63c54c5feb34d46248685e3d448ef673e907de36"
-    sha256 cellar: :any, mojave:        "e3bec47030124ee25c7d8d0bc31f24f6c317e81da4878e008ae8bb4cb26fb017"
-    sha256 cellar: :any, high_sierra:   "3c73ed25e9e29e5232bfe258147ebe87dd78ae5d295d4de6a1ec4f93475635a6"
-    sha256               x86_64_linux:  "190ce71d76f4db5d11db61b7f7f06225cb58a93f12c0059da421c86b4e523707"
+    sha256 cellar: :any, arm64_big_sur: "f826004fe6522e3eb1b839a150f1e568b17c0ee121bd790b5d7f3e824eab34ad"
+    sha256 cellar: :any, big_sur:       "0504f3a4ba92bba6d776b6328bf21a04d319421b0b15d531f6d01eb62cf3d57b"
+    sha256 cellar: :any, catalina:      "82793e2826ec25f36758488071071383f963928acfccb3661cbd8e702de34529"
+    sha256 cellar: :any, mojave:        "b51dac4f1d8b24d10de17c13728ef0c61ff28ac17340570c715dce74cb2ca221"
+    sha256               x86_64_linux:  "c000d6591c02d4b6b155c55343c2c5a9d37ce2f19ba19e657e1c924de1959390"
   end
 
   depends_on "cython" => :build
