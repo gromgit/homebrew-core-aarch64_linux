@@ -6,10 +6,10 @@ class FuncE < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:      "8ae211ca3d4d4fd50639739296063159ca13dc3fa360b217a2f63f1a194bc589"
-    sha256 cellar: :any_skip_relocation, catalina:     "241862609747afe310a5f5808df369b934a7f50e49cdcae99734a03377a0b0e2"
-    sha256 cellar: :any_skip_relocation, mojave:       "515a5d570cedfe8e1098db431193d3d5e5e9b5a6f0acc1763ffbea6355408309"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "a84ccff7c0ccef38b8ad9c8473ca111360345134eb5a0900f1ff4fbb0ff10bd3"
+    sha256 cellar: :any_skip_relocation, big_sur:      "35ee30e4ca621052dd0e01698325b2c3853d6f47597f1d280411cbc1ee87c04c"
+    sha256 cellar: :any_skip_relocation, catalina:     "2dd53f22ddf7d626c6b0f24284f1254fded2617d9d43d70098cf6e04ac30ad01"
+    sha256 cellar: :any_skip_relocation, mojave:       "0d930314dee7edc64c5e2cb24e089d79a39464a47bd1f9a5493c9ae9615ed5de"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "4fd94b1130fad111778526b9af45b9fd7ed9f4eac7c4f744aa26e1b7df495fd7"
   end
 
   depends_on "go" => :build
