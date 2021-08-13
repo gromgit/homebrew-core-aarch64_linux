@@ -11,11 +11,11 @@ class Usbredir < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "6b3470eeeccaa4755b997102cee313d879e8b91df61c076ecbbc18c4fc572d47"
-    sha256 cellar: :any, big_sur:       "26d2040e073333ad5e1aba9594f88c4450e7a9ee9780c8cc458267bea7e8c7c6"
-    sha256 cellar: :any, catalina:      "1986f37f4c043ee0822fb0cc61049ab57a73871e94e3e64ad1896861be49890b"
-    sha256 cellar: :any, mojave:        "04d2e58a8479304dba8f207283c5f740ea1a74440ecb3780aa4182025b268384"
-    sha256               x86_64_linux:  "01398edf07804566c8b618707679e37d8ef1b485349ee7d4eccb8a7cb2613913"
+    sha256 cellar: :any, arm64_big_sur: "301a06eaf3c9f51d349f92b75d898857aeebb882ec2a1a83cbe1101cc2c3a58f"
+    sha256 cellar: :any, big_sur:       "1d29697803e3eec97d1d8ebe00d9dba354b1ad51122913414752380c0eedacd7"
+    sha256 cellar: :any, catalina:      "ac6f36424efd438cd495ac1f2309b3d058541a43a71cdd0477cd5d4f602c130e"
+    sha256 cellar: :any, mojave:        "16c79281da519d94bf5f10c1521e84f38e1465bc4f2835fa8ab9eb576af479cc"
+    sha256               x86_64_linux:  "73ba4b4154c70fb9e65a95c36e6cf6e2eb7cd09c90c8aa5f2d844bcfb8502694"
   end
 
   depends_on "meson" => :build
