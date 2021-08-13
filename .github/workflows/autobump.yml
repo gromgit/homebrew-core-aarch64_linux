@@ -78,6 +78,7 @@ jobs:
             nomad
             nushell
             okteto
+            skaffold
             skopeo
             starship
             stress-ng
