@@ -27,11 +27,6 @@ jobs:
         with:
           username: BrewTestBot
 
-      - name: Set up commit signing
-        uses: Homebrew/actions/setup-commit-signing@master
-        with:
-          signing_key: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY }}
-
       - name: Bump formulae
         uses: Homebrew/actions/bump-formulae@master
         continue-on-error: true
