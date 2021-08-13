@@ -6,11 +6,11 @@ class Pandocomatic < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a10d18e6e50807a796a89566d5a5cc16ecf976af445b895d242b5278c6d228ad"
-    sha256 cellar: :any_skip_relocation, big_sur:       "1236328c4bec43942120f816ba96fba584e5324df24b14d2f94aad6ad6a4ddcc"
-    sha256 cellar: :any_skip_relocation, catalina:      "fc8ec0244c32608753851a3cded8a10fb569ab39794a96f7a5a665b1bacc7fa9"
-    sha256 cellar: :any_skip_relocation, mojave:        "b5ec22ce7c10ce2f01a9a044eb200b61e00d7c551ca3847b738ad2e632978d83"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "70a6db51be1750d6e075d4cce5e15f33152afbac9d04882b66d571dace54f049"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a7049bd282b595c4b5f8b8bf2ae1142d3f36081b316360f0e3235dc6e5500757"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a7049bd282b595c4b5f8b8bf2ae1142d3f36081b316360f0e3235dc6e5500757"
+    sha256 cellar: :any_skip_relocation, catalina:      "a7049bd282b595c4b5f8b8bf2ae1142d3f36081b316360f0e3235dc6e5500757"
+    sha256 cellar: :any_skip_relocation, mojave:        "1c51680618ae42fe46954499c83137ad5fa1ecee95030b66015aafb0ddd2f9e6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1c51680618ae42fe46954499c83137ad5fa1ecee95030b66015aafb0ddd2f9e6"
   end
 
   depends_on "pandoc"
