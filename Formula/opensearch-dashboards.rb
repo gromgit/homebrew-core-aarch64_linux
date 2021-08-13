@@ -6,6 +6,10 @@ class OpensearchDashboards < Formula
     revision: "b15ad258e6960003e609a70889cda5fb39f90947"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "efa4bc0a61f9f760ff91337eb2f703e546dc03659210c136c4dbba85146f8ae3"
+  end
+
   depends_on "python@3.9" => :build
   depends_on "yarn" => :build
   depends_on "node@10" # Switch to `node` after https://github.com/opensearch-project/OpenSearch-Dashboards/issues/406
