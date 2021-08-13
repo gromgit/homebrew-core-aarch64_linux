@@ -2,10 +2,9 @@ class Zeek < Formula
   desc "Network security monitor"
   homepage "https://www.zeek.org"
   url "https://github.com/zeek/zeek.git",
-      tag:      "v4.0.3",
-      revision: "0ef59aa853dd0497316091a5a65a698b7ea6e4d1"
+      tag:      "v4.1.0",
+      revision: "73783cc8a62017835208b54753dd69ea5667ef2f"
   license "BSD-3-Clause"
-  revision 2
   head "https://github.com/zeek/zeek.git"
 
   bottle do
@@ -39,11 +38,9 @@ class Zeek < Formula
   def install
     # Remove SDK paths from zeek-config. This breaks usage with other SDKs.
     # https://github.com/corelight/zeek-community-id/issues/15
-    # Remove the `:` in each `inreplace` when this lands in a release:
-    # https://github.com/zeek/zeek/commit/ca725c1f9b96c8eb33885a29d24eefddf28e16ab
     inreplace "zeek-config.in" do |s|
-      s.gsub! ":@ZEEK_CONFIG_PCAP_INCLUDE_DIR@", ""
-      s.gsub! ":@ZEEK_CONFIG_ZLIB_INCLUDE_DIR@", ""
+      s.gsub! "@ZEEK_CONFIG_PCAP_INCLUDE_DIR@", ""
+      s.gsub! "@ZEEK_CONFIG_ZLIB_INCLUDE_DIR@", ""
     end
 
     mkdir "build" do
