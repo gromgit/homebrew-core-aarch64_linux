@@ -1,9 +1,8 @@
 class OpenkimModels < Formula
   desc "All OpenKIM Models compatible with kim-api"
   homepage "https://openkim.org"
-  url "https://s3.openkim.org/archives/collection/openkim-models-2021-01-28.txz"
-  sha256 "8824adee02ae4583bd378cc81140fbb49515c5965708ee98d856d122d48dd95f"
-  revision 1
+  url "https://s3.openkim.org/archives/collection/openkim-models-2021-08-11.txz"
+  sha256 "f42d241969787297d839823bdd5528bc9324cd2d85f5cf2054866e654ce576da"
 
   livecheck do
     url "https://s3.openkim.org/archives/collection/"
