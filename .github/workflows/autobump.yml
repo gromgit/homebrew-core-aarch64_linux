@@ -1,10 +1,14 @@
 name: Bump formulae on schedule
 
 on:
+  workflow_dispatch:
   schedule:
     # Every day at 5am
     - cron: '0 5 * * *'
-  workflow_dispatch:
+
+concurrency:
+  group: autobump
+  cancel-in-progress: true
 
 env:
   HOMEBREW_FORCE_HOMEBREW_ON_LINUX: 1
@@ -20,6 +24,8 @@ jobs:
 
       - name: Configure Git user
         uses: Homebrew/actions/git-user-config@master
+        with:
+          username: BrewTestBot
 
       - name: Set up commit signing
         uses: Homebrew/actions/setup-commit-signing@master
