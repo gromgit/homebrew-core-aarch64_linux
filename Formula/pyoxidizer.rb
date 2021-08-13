@@ -11,6 +11,12 @@ class Pyoxidizer < Formula
     regex(%r{^pyoxidizer/v?(\d+(?:\.\d+)+)$}i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b43bf79a894e38941f7736be15b88a0bd9def143b3e8ae6a82eeb73f0bb7c9b4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a3119a31eb9aaa47247c3838fc5a87917a30eb39b7244027a986951798ffeaeb"
+    sha256 cellar: :any_skip_relocation, catalina:      "6e18726f0d0defa36648e0682695ff6a40a29c7db7974ab0552c8a7ae7bb0a45"
+  end
+
   depends_on "rust" => :build
   # Currently needs macOS 11 SDK due to checking for DeploymentTargetSettingName
   # Remove when issue is fixed: https://github.com/indygreg/PyOxidizer/issues/431
