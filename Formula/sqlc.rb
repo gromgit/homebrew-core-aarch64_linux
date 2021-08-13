@@ -1,8 +1,8 @@
 class Sqlc < Formula
   desc "Generate type safe Go from SQL"
   homepage "https://sqlc.dev/"
-  url "https://github.com/kyleconroy/sqlc/archive/v1.8.0.tar.gz"
-  sha256 "6374c213c0edce9a4f852ce6ef737784d1623189b724160e0429d84519f7744f"
+  url "https://github.com/kyleconroy/sqlc/archive/v1.9.0.tar.gz"
+  sha256 "8cb54ade4125602ea7adeb783efdd73de698c62c67b3e8ab4bd60371f425f30d"
   license "MIT"
   head "https://github.com/kyleconroy/sqlc.git"
 
