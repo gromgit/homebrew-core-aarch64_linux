@@ -1,8 +1,8 @@
 class Dnsperf < Formula
   desc "Measure DNS performance by simulating network conditions"
   homepage "https://www.dns-oarc.net/tools/dnsperf"
-  url "https://www.dns-oarc.net/files/dnsperf/dnsperf-2.6.0.tar.gz"
-  sha256 "7d5e0a41798b02b634ad80401b71efe51ff5cfe3c07e1030149cf5772c45b72e"
+  url "https://www.dns-oarc.net/files/dnsperf/dnsperf-2.7.0.tar.gz"
+  sha256 "6e38c182bfa9b33d7708dd59c33355fb5184af975a55fc9de91a2728f5342a6a"
   license "Apache-2.0"
 
   livecheck do
@@ -21,6 +21,7 @@ class Dnsperf < Formula
   depends_on "pkg-config" => :build
   depends_on "concurrencykit"
   depends_on "ldns"
+  depends_on "nghttp2"
   depends_on "openssl@1.1"
 
   def install
