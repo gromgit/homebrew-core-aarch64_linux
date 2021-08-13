@@ -8,11 +8,11 @@ class MarpCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e26d6dd770e30bc23efb8eb80f14d487c0eb8895bbda16cc935e56866a92e1bb"
-    sha256 cellar: :any_skip_relocation, big_sur:       "923196c727bc3b5b6a0c6eb695a9956460c88b66df5c2084c68155b7a8329b4e"
-    sha256 cellar: :any_skip_relocation, catalina:      "923196c727bc3b5b6a0c6eb695a9956460c88b66df5c2084c68155b7a8329b4e"
-    sha256 cellar: :any_skip_relocation, mojave:        "923196c727bc3b5b6a0c6eb695a9956460c88b66df5c2084c68155b7a8329b4e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "350e742a8306fa576ed9be835d166dd1a12a5ee471899a68e6a42294e78ce2e7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "09b3ff38e986a3ed85f822f104f46233a459be462e9d57d415d530c7bbf793d3"
+    sha256 cellar: :any_skip_relocation, big_sur:       "75248eb7558bea82bc196679f42d5634fea39d8e9f3c43749767ecf02c0a14b6"
+    sha256 cellar: :any_skip_relocation, catalina:      "75248eb7558bea82bc196679f42d5634fea39d8e9f3c43749767ecf02c0a14b6"
+    sha256 cellar: :any_skip_relocation, mojave:        "75248eb7558bea82bc196679f42d5634fea39d8e9f3c43749767ecf02c0a14b6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6693f754c48a19c7c6a9184c975f922a5eead83351cfd8e308aa4a8c4f620b68"
   end
 
   depends_on "node"
