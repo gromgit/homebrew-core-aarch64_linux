@@ -8,10 +8,10 @@ class Mpd < Formula
   head "https://github.com/MusicPlayerDaemon/MPD.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "cbbaf68744b2a65387bb78469195d24577308d5567e79da03955c0a186eef19f"
-    sha256 cellar: :any, big_sur:       "4966bd65becc050ba0c185b50e8e6b618c96260c4ee274f8524ee80a6a4609bc"
-    sha256 cellar: :any, catalina:      "80ebb540598404a35941a6190b72004966e7d67c26454560a42c4a1c3c2d28e4"
-    sha256 cellar: :any, mojave:        "8f4adc3e4353beb9203891447de6c678c4975b2ed08228b6f6ddf668a5c35699"
+    sha256 cellar: :any, arm64_big_sur: "f6fb3f7ad664842f96daa9a2b03db803a45f97d933900e423b8cef2e64764184"
+    sha256 cellar: :any, big_sur:       "eefe243a50735d653bb7df1a98ff8061381d3f246397072afe7f8f15cf24e03c"
+    sha256 cellar: :any, catalina:      "308d71f62a303b9f6908bbd4d0181ea5e7d39bde2d31351b8ccc39b1928f5233"
+    sha256 cellar: :any, mojave:        "b49269c41077c195c1a5d7d215e44bb86915634bdddbb27fcb7b53458531c554"
   end
 
   depends_on "boost" => :build
