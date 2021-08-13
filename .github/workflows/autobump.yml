@@ -27,7 +27,7 @@ jobs:
           signing_key: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY }}
 
       - name: Bump formulae
-        uses: Homebrew/actions/bump-formula@master
+        uses: Homebrew/actions/bump-formulae@master
         continue-on-error: true
         with:
           token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
