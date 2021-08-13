@@ -12,10 +12,10 @@ class Clarinet < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "27d4a6740525955d6ae284e5a31c767121576d1465fa2b3163ce397cf3380433"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f370e6bd23ccd8a6525ab94814536510d6db99503a718e7677f0c46c8d9bb9e2"
-    sha256 cellar: :any_skip_relocation, catalina:      "b249798ce2310d1bbbc2ca6b0260ef0e46b0f06ad32e80c3aec67b1021232de0"
-    sha256 cellar: :any_skip_relocation, mojave:        "26f6b854d18eda7155f802d982ca16d465b16ed594b6d50283c039e9e83b9743"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "26a7909e40e2232d572a4b41fccb6671bc3a1fd3fa2e8633f6e945cae9c2f538"
+    sha256 cellar: :any_skip_relocation, big_sur:       "8ee56ae00501b7b75ddd7d81fd55bf49e7bf46d68a4317d9cd96a665bc07e8e5"
+    sha256 cellar: :any_skip_relocation, catalina:      "670a6387e3c38e647ba11cc6cf28cfb3b941839058da995193731b10d76ea997"
+    sha256 cellar: :any_skip_relocation, mojave:        "afb7b74aaf3668902f6b3e1023503ac39a190269c0ab6267a4f81f4316a979d0"
   end
 
   depends_on "rustup-init" => :build # clarinet needs nightly channel for this release
