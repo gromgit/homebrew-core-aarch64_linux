@@ -31,7 +31,7 @@ jobs:
         uses: Homebrew/actions/bump-formulae@master
         continue-on-error: true
         with:
-          token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
+          token: ${{secrets.HOMEBREW_CORE_REPO_WORKFLOW_TOKEN}}
           formulae: |
             ack
             apidoc
