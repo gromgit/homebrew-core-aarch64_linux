@@ -10,11 +10,11 @@ class GhzWeb < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "65b251c68ed2e2b623139665ff9ff927943d775f0711edea521c8afc5d3a3478"
-    sha256 cellar: :any_skip_relocation, big_sur:       "49430e8edeb2e79fb259a57375a6d281654d59a7285f8b3f1058836bfb0e2cea"
-    sha256 cellar: :any_skip_relocation, catalina:      "403f019ffd0bdb4a6fa51bacbc0c68614bde02ed64bcfe898215a73b89450d23"
-    sha256 cellar: :any_skip_relocation, mojave:        "575666e2e170252b28bb342736462e6489f855ee6f9432ed2080c3d78d3fe722"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9371b033eb686c3d7bf2647c1af88f203fa6cd70cb60adcc303fe925c47eb4fa"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2fb863d76bd1ba2ce75f4c3458cac031320567b3615da1902e44286331947980"
+    sha256 cellar: :any_skip_relocation, big_sur:       "50f110f346d2917bbf2c75f4a89289d0402ad8c194acb7a31cdaf47404903dcc"
+    sha256 cellar: :any_skip_relocation, catalina:      "22b7a6e36ad835bb9d9aa5d7a1b1d8118bd69755591c23f3e07eca936b86a421"
+    sha256 cellar: :any_skip_relocation, mojave:        "3325ec9804f4419f546afc2ad9653b7185126ef2c78ca763f0ee04a16f346c91"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6c741364e81c880751060f905ff68c0dec52548f33b0203cb5e15a214630a007"
   end
 
   depends_on "go" => :build
