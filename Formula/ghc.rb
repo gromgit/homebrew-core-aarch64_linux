@@ -1,14 +1,13 @@
 class Ghc < Formula
   desc "Glorious Glasgow Haskell Compilation System"
   homepage "https://haskell.org/ghc/"
-  url "https://downloads.haskell.org/~ghc/8.10.5/ghc-8.10.5-src.tar.xz"
-  sha256 "f10941f16e4fbd98580ab5241b9271bb0851304560c4d5ca127e3b0e20e3076f"
+  url "https://downloads.haskell.org/~ghc/8.10.6/ghc-8.10.6-src.tar.xz"
+  sha256 "43afba72a533408b42c1492bd047b5e37e5f7204e41a5cedd3182cc841610ce9"
   # We bundle a static GMP so GHC inherits GMP's license
   license all_of: [
     "BSD-3-Clause",
     any_of: ["LGPL-3.0-or-later", "GPL-2.0-or-later"],
   ]
-  revision 2
 
   livecheck do
     url "https://www.haskell.org/ghc/download.html"
@@ -43,42 +42,32 @@ class Ghc < Formula
     depends_on "gmp" => :build
   end
 
-  # https://www.haskell.org/ghc/download_ghc_8_10_4.html#macosx_x86_64
+  # https://www.haskell.org/ghc/download_ghc_8_10_6.html#macosx_x86_64
   # "This is a distribution for Mac OS X, 10.7 or later."
   # A binary of ghc is needed to bootstrap ghc
   resource "binary" do
     on_macos do
-      if Hardware::CPU.intel?
-        # We intentionally bootstrap with 8.10.4 on Intel, as 8.10.5 leads to build failure on Mojave
+      if Hardware::CPU.intel? && MacOS.version > :mojave
+        url "https://downloads.haskell.org/~ghc/8.10.6/ghc-8.10.6-x86_64-apple-darwin.tar.xz"
+        sha256 "32ab41da04d56cae2297d6e45caa88180f99cec0e33f2756cfbc48c0c60b5721"
+      elsif Hardware::CPU.intel? && MacOS.version <= :mojave
+        # We intentionally bootstrap with 8.10.4 on Intel, as 8.10.{5,6} leads to build failure on Mojave
+        # ref: https://github.com/Homebrew/homebrew-core/pull/78821#issuecomment-857718840
         url "https://downloads.haskell.org/~ghc/8.10.4/ghc-8.10.4-x86_64-apple-darwin.tar.xz"
         sha256 "725ecf6543e63b81a3581fb8c97afd21a08ae11bc0fa4f8ee25d45f0362ef6d5"
       else
-        url "https://downloads.haskell.org/ghc/8.10.5/ghc-8.10.5-aarch64-apple-darwin.tar.xz"
-        sha256 "03684e70ff03d041b9a4e0f84c177953a241ab8ec7a028c72fa21ac67e66cb09"
+        url "https://downloads.haskell.org/ghc/8.10.6/ghc-8.10.6-aarch64-apple-darwin.tar.xz"
+        sha256 "9e43fc3a39d2f2762262c63868653984e381e29eff6386f7325aad501b9190ad"
       end
     end
 
     on_linux do
-      url "https://downloads.haskell.org/~ghc/8.10.5/ghc-8.10.5-x86_64-deb9-linux.tar.xz"
-      sha256 "15e71325c3bdfe3804be0f84c2fc5c913d811322d19b0f4d4cff20f29cdd804d"
+      url "https://downloads.haskell.org/~ghc/8.10.6/ghc-8.10.6-x86_64-deb9-linux.tar.xz"
+      sha256 "c14b631437ebc867f1fe1648579bc1dbe1a9b9ad31d7c801c3c77639523a83ae"
     end
-  end
-
-  # fix ghci lib loading
-  # https://gitlab.haskell.org/ghc/ghc/-/issues/19763
-  patch do
-    url "https://github.com/ghc/ghc/commit/296f25fa5f0fce033b529547e0658076e26f4cda.patch?full_index=1"
-    sha256 "20556b7b4ffd6cf3eb35d274621ed717b46f12acf5084d4413071182af969108"
   end
 
   def install
-    # Fix doc build error. Remove at version bump.
-    # https://gitlab.haskell.org/ghc/ghc/-/issues/19962
-    inreplace "docs/users_guide/conf.py" do |s|
-      s.gsub! "'preamble': '''", "'preamble': r'''"
-      s.gsub! "\\setlength{\\\\tymin}{45pt}", "\\setlength{\\tymin}{45pt}"
-    end
-
     ENV["CC"] = ENV.cc
     ENV["LD"] = "ld"
     ENV["PYTHON"] = Formula["python@3.9"].opt_bin/"python3"
