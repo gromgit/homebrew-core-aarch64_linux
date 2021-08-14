@@ -12,11 +12,11 @@ class Patchelf < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d600655f0357e24341513f4688532d920baca6c302ba8be53b4a8b84a9db1bb0"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d83931e807f58c62f0b321b9523d16de6602415f0e19b3702d072b4dec382cb6"
-    sha256 cellar: :any_skip_relocation, catalina:      "344c4459a5b03099308520eb7ef906242bca77f08ac1660ac61b74ccd7871b1c"
-    sha256 cellar: :any_skip_relocation, mojave:        "906cd9171c62947d8133b990bbc15ad7803bb5623f5b72332fa792a01c9634ac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a73b17a4a11801b06958235f32423bd735be9a9bf126b43499c552f2c9ac489f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d2c5ae0910087e5d745179a034d334b994d48a54398deab50c7efa389d0ad5de"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6ce62acab3314332cc248a08ba8285882a8d33d976196f1cfb8b1d6553035635"
+    sha256 cellar: :any_skip_relocation, catalina:      "5a42eb843bb076dd938eb114e8e751ee871ca04f1db023051e0ae546b5e9fc79"
+    sha256 cellar: :any_skip_relocation, mojave:        "d2f37f5a48c8054def582fd9cfda48b114a6f4f3287d45719d0d9a58adf6d5de"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e2d839514014027d8222d5de10868a4ba754c3b4cf5f502bfc791fc4d2eaa705"
   end
 
   resource "helloworld" do
