@@ -7,10 +7,11 @@ class LibreadlineJava < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any, big_sur:     "73b6dbaa9a738c05b8195665829637d9c4e5c1be74f7059ee17e97e2ab879e01"
-    sha256 cellar: :any, catalina:    "cc49470dde32faf6c0621944621af9684366e6897a4994b5b021e63a8422f78e"
-    sha256 cellar: :any, mojave:      "65444e90dded6862954e3105db11a2918554c866a1a3a344e0414d0db810f55d"
-    sha256 cellar: :any, high_sierra: "3dc9c829727655f811d50c6ae215b2ae3130e8c4f13c0be8e48fd5b2d62349f3"
+    sha256 cellar: :any,                 big_sur:      "73b6dbaa9a738c05b8195665829637d9c4e5c1be74f7059ee17e97e2ab879e01"
+    sha256 cellar: :any,                 catalina:     "cc49470dde32faf6c0621944621af9684366e6897a4994b5b021e63a8422f78e"
+    sha256 cellar: :any,                 mojave:       "65444e90dded6862954e3105db11a2918554c866a1a3a344e0414d0db810f55d"
+    sha256 cellar: :any,                 high_sierra:  "3dc9c829727655f811d50c6ae215b2ae3130e8c4f13c0be8e48fd5b2d62349f3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "d9f6b20007e15205e93081e1e21d2656915c84213b64af7c4f6c0f394018138d"
   end
 
   depends_on "openjdk@8"
