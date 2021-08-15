@@ -11,7 +11,7 @@ class Detekt < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "7c848f383fc59fff74a13e62dfea31cc53a51bbc6e429f909df4a27b9dbe6040"
+    sha256 cellar: :any_skip_relocation, all: "0cdb94ed18d87d37cd112e2dcf042662830c929ec58de57e5823936ded9cef2a"
   end
 
   depends_on "openjdk@11"
