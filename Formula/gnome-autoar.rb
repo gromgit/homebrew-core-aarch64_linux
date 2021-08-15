@@ -1,8 +1,8 @@
 class GnomeAutoar < Formula
   desc "GNOME library for archive handling"
   homepage "https://github.com/GNOME/gnome-autoar"
-  url "https://download.gnome.org/sources/gnome-autoar/0.3/gnome-autoar-0.3.3.tar.xz"
-  sha256 "272400f73a375a7e88fdf1e12591bfb8f3f03edf01780cadcd74f70b613e5c04"
+  url "https://download.gnome.org/sources/gnome-autoar/0.4/gnome-autoar-0.4.0.tar.xz"
+  sha256 "ea8c6d524babc712ac59e1d0e3ac8bf0137482dadf33c94fe9113794a1bc4474"
   license "LGPL-2.1-or-later"
 
   # gnome-autoar doesn't seem to follow the typical GNOME version format where
@@ -20,18 +20,17 @@ class GnomeAutoar < Formula
     sha256 mojave:        "81cf65e7c5a708728565785c9ebb3cb9fb3558a3031964e37657961b613fd184"
   end
 
-  depends_on "pkg-config" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "gtk+3"
   depends_on "libarchive"
 
   def install
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}",
-                          "--disable-glibtest",
-                          "--disable-schemas-compile"
-    system "make", "install"
+    mkdir "build" do
+      system "meson", *std_meson_args, ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
   end
 
   def post_install
