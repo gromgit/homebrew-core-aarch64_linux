@@ -6,6 +6,10 @@ class Procps < Formula
   license "GPL-2.0-or-later"
   head "https://gitlab.com/procps-ng/procps.git"
 
+  bottle do
+    sha256 x86_64_linux: "873b1756b34961702aa8eb6a69271b0d9e1b33ac76d4d0b37a238d4d825fc048"
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "gettext" => :build
