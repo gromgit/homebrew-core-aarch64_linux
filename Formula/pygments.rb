@@ -9,11 +9,11 @@ class Pygments < Formula
   head "https://github.com/pygments/pygments.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e4808dcffb3c6d546a56d04ec28b96eb27345f54d0c146b3bcadf6b617fabaff"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3b47aad9d600099fcc9d88bb76d2762c7e7af5c83d8d7bae1330d7a165e2c47f"
-    sha256 cellar: :any_skip_relocation, catalina:      "3b47aad9d600099fcc9d88bb76d2762c7e7af5c83d8d7bae1330d7a165e2c47f"
-    sha256 cellar: :any_skip_relocation, mojave:        "3b47aad9d600099fcc9d88bb76d2762c7e7af5c83d8d7bae1330d7a165e2c47f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6b55e1bd3d8a36ef13ced971208ed46485c6d760d1cc7f08cc4d02f835fc5554"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bbbc9b45672d492c1690b3528b4801088698f3aa37507daa00b9c6e734bd7867"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3017eabf88cae57480f64eb286b085b657d82d786c3164dcc0a9ae7c364f28a5"
+    sha256 cellar: :any_skip_relocation, catalina:      "3017eabf88cae57480f64eb286b085b657d82d786c3164dcc0a9ae7c364f28a5"
+    sha256 cellar: :any_skip_relocation, mojave:        "3017eabf88cae57480f64eb286b085b657d82d786c3164dcc0a9ae7c364f28a5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eb7f8e59cb96f9ecef4e262dcc90f8e550b267f88bfeb47d7d68b54746e221c8"
   end
 
   depends_on "python@3.9"
