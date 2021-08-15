@@ -10,16 +10,16 @@ class Gitbucket < Formula
   end
 
   head do
-    url "https://github.com/gitbucket/gitbucket.git"
-    depends_on "ant" => :build
+    url "https://github.com/gitbucket/gitbucket.git", branch: "master"
+    depends_on "sbt" => :build
   end
 
   depends_on "openjdk"
 
   def install
     if build.head?
-      system "ant"
-      libexec.install "war/target/gitbucket.war", "."
+      system "sbt", "executable"
+      libexec.install "target/executable/gitbucket.war"
     else
       libexec.install "gitbucket.war"
     end
