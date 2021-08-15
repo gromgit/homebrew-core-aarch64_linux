@@ -9,11 +9,11 @@ class YouGet < Formula
   head "https://github.com/soimort/you-get.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "533ca85c6e53acb70051ed35aab5da9d80a2fb5fcbad97b60ceac15e11d3d66a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c30b6cecfc20d8305d977b17b2dab359c5858d84aa4b75085fd5075269ec237b"
-    sha256 cellar: :any_skip_relocation, catalina:      "c30b6cecfc20d8305d977b17b2dab359c5858d84aa4b75085fd5075269ec237b"
-    sha256 cellar: :any_skip_relocation, mojave:        "c30b6cecfc20d8305d977b17b2dab359c5858d84aa4b75085fd5075269ec237b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "91d946939ea49141bb3e58f1e46cfb75a7db871b15ec03bfb539a4bb66b16501"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6574d777066ea14a49addf18a3c4e140e0418661924f4f5be114773774dbf5fb"
+    sha256 cellar: :any_skip_relocation, big_sur:       "705131867a8133378007676f4dd32e48f81604c06e2f45f1913d18c027730400"
+    sha256 cellar: :any_skip_relocation, catalina:      "705131867a8133378007676f4dd32e48f81604c06e2f45f1913d18c027730400"
+    sha256 cellar: :any_skip_relocation, mojave:        "705131867a8133378007676f4dd32e48f81604c06e2f45f1913d18c027730400"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f334ada5d5ee92a53bd314ffc0d911cf408c869585bec064c1a656851a83a7a6"
   end
 
   depends_on "python@3.9"
