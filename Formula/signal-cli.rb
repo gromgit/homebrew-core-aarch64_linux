@@ -6,9 +6,9 @@ class SignalCli < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "d7b81bb970d3b3405b78306125081d5c72dce3469b60e81d0d4438623e51d011"
-    sha256 cellar: :any_skip_relocation, catalina: "21afac88b610cde1221d44247556cf80dcfced2d44d60ea1ff529b9f6133ee1a"
-    sha256 cellar: :any_skip_relocation, mojave:   "c1ff1e88c38fccf4f2935f4eb66436596d27da0dd02310b8a9781336594d55a3"
+    sha256 cellar: :any_skip_relocation, big_sur:  "91e965d7fd5503abac2dabbacb446bb907c314bb2b525db248e006f0cc3524de"
+    sha256 cellar: :any_skip_relocation, catalina: "bb047f149ca74d57c93156f43c62007cb5d5e9dcd8e143c25bdf3ed0bb79f87c"
+    sha256 cellar: :any_skip_relocation, mojave:   "1bd352f48bd3b9c4bf592c66722d50cda5c72f5918a22ada762ef84206c2d928"
   end
 
   depends_on "gradle" => :build
