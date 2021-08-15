@@ -36,18 +36,26 @@ jobs:
             ack
             apidoc
             argo
+            artifactory
             b3sum
             buildkit
+            bundletool
             chezmoi
+            cliclick
             consul
             consul-template
+            detekt
+            detox
             devspace
+            dnscrypt-proxy
             docker
             docker-compose
             docker-slim
             doctl
             envconsul
             etcd
+            fennel
+            fuse-overlayfs
             gitleaks
             gofish
             golang-migrate
@@ -56,23 +64,29 @@ jobs:
             hcloud
             helm
             helmfile
+            ircd-hybrid
             jfrog-cli
             just
             k3d
             k9s
+            keydb
             kubeaudit
             kumactl
             kustomize
             lazydocker
+            lexbor
+            liboqs
             mdbook
             mdcat
             micro
             minikube
             mmctl
             neofetch
+            nng
             nomad
             nushell
             okteto
+            pnpm
             skaffold
             skopeo
             starship
