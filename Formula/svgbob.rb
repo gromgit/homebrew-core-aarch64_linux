@@ -7,10 +7,10 @@ class Svgbob < Formula
   head "https://github.com/ivanceras/svgbob.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6ed22da6dfde874e2e2b9ce2d09b73fc187305f172dbc51292e3857f278dd5c1"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ce82936b22dba523554e1a8aeba55dd977d69cc0ad592ac5bf28d856689e0dfa"
-    sha256 cellar: :any_skip_relocation, catalina:      "4ea928e1c3adb704ada860b4c147e4fc2f93ce98dbbef1d9908a193c0b9dfccd"
-    sha256 cellar: :any_skip_relocation, mojave:        "f3cf2070512602d245dbbbe88b1f09e31cb6bcf1bc3810e543492dadfef4ce34"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a66b078159c77efc8fa7fa5c8a438fc2cf33a8f2cc1628ea0e988e5dbe87c278"
+    sha256 cellar: :any_skip_relocation, big_sur:       "1229410e6279a5b12445d877f9176ae622ad0131339234df09a7864e855028aa"
+    sha256 cellar: :any_skip_relocation, catalina:      "9c9fe19884dc7532c4de3fa64a46924953b0afe89861479e79e55b553bf690f1"
+    sha256 cellar: :any_skip_relocation, mojave:        "79fa98122b1032707e00436415ab7e555a3900475632f650ac36496845513581"
   end
 
   depends_on "rust" => :build
