@@ -15,6 +15,7 @@ class Veraxx < Formula
     sha256 cellar: :any_skip_relocation, sierra:        "3a261328afd43c8c38f33802ced93557c58ae8903dab90e0ca4546004003447f"
     sha256 cellar: :any_skip_relocation, el_capitan:    "76dcb0b9340b8fc9413fc848dff27e8805d7b2a9c63d5128fc83ce5bd3bd1cd5"
     sha256 cellar: :any_skip_relocation, yosemite:      "a2620392e9204964ecd0ec0bc6b90268d27e5e2a28ef304aff3d3719ed058b80"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ad710a6d70551b2d74732c9774a926f8a3c63f2db1aa87373701cfc90039d996"
   end
 
   depends_on "cmake" => :build
