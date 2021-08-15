@@ -11,7 +11,7 @@ class Idnits < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "3a1aed2b767aa561204f4144e19ddf7b9b5712fffe406b44e2702fea7b469648"
+    sha256 cellar: :any_skip_relocation, all: "c6ad8398fb0962f27699d3cdbc897d636d8a118d18902f24a0d61bda419f6c29"
   end
 
   resource "test" do
