@@ -7,12 +7,10 @@ class Unar < Formula
   head "https://github.com/MacPaw/XADMaster.git"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_big_sur: "bac059a80b30bd4ab2290e31bff0e93f933ddb6631252d6e1fab50b8f3c1736d"
-    sha256 cellar: :any, big_sur:       "7b7680e174418478cb59d65815d7fb0799888247013eee04fc1bd88c43d3d49e"
-    sha256 cellar: :any, catalina:      "366fc5e1d3587148e089214a91cd23a96eae1b0aefebcd2e9813b1cc2f6593c2"
-    sha256 cellar: :any, mojave:        "7bc711ae9affa86d2bc6b29df427dbc900afa6f18bcf13dc4fcf0518f0a50ffa"
-    sha256 cellar: :any, high_sierra:   "311cdc91d8897b3ebe20ea6b9e62bb2e4bc4bc15c9d2f321567cd010031df78a"
+    sha256 cellar: :any, arm64_big_sur: "16091256fd3c0d13a774fc1900b7b21584fb9eee669a65de56906e188fbcc665"
+    sha256 cellar: :any, big_sur:       "a92a0fd33d7598591efa5dc01692221053cdc612bb218f46df422af0bd5082c6"
+    sha256 cellar: :any, catalina:      "6207848baad1fda03e3bdda9a8cd621ef2d226a02fcf4219fec64c9f418b9a0e"
+    sha256 cellar: :any, mojave:        "f09e3c1eb465cec023037048305b493e3ed57696a775eb121076951b8ae63e76"
   end
 
   depends_on xcode: :build
