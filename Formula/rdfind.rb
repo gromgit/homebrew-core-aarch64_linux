@@ -1,9 +1,9 @@
 class Rdfind < Formula
   desc "Find duplicate files based on content (NOT file names)"
   homepage "https://rdfind.pauldreik.se/"
-  url "https://rdfind.pauldreik.se/rdfind-1.4.1.tar.gz"
-  sha256 "30c613ec26eba48b188d2520cfbe64244f3b1a541e60909ce9ed2efb381f5e8c"
-  revision 1
+  url "https://rdfind.pauldreik.se/rdfind-1.5.0.tar.gz"
+  sha256 "4150ed1256f7b12b928c65113c485761552b9496c433778aac3f9afc3e767080"
+  license "GPL-2.0-or-later"
 
   livecheck do
     url :homepage
@@ -22,6 +22,7 @@ class Rdfind < Formula
   depends_on "nettle"
 
   def install
+    ENV.cxx11
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--prefix=#{prefix}"
