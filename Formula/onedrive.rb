@@ -5,6 +5,10 @@ class Onedrive < Formula
   sha256 "6cb903ec14be249caa13c04a4fbba9a431041c224e7d815798a94f7b93861263"
   license "GPL-3.0-only"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "f75d1d472950cd24ba3fdaa1c59db77583888435cd2969bd268679e906d3b769"
+  end
+
   depends_on "ldc" => :build
   depends_on "pkg-config" => :build
   depends_on "curl"
