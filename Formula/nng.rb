@@ -11,11 +11,11 @@ class Nng < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "2d9e7358d8ab743e62129359d95a0a2d21cff3634cb7bfc8f292dc0258b494e3"
-    sha256 cellar: :any,                 big_sur:       "589abea5f8ba1c541582fe61559743b428b37674ff61ddfe0848903c6dd6ed77"
-    sha256 cellar: :any,                 catalina:      "c447a6e93b03585ccf3aea04c47c462a511909887f71cbd41181ed637e2f6d14"
-    sha256 cellar: :any,                 mojave:        "b4c6e981cc319d9e0039fd64cdeb2a9c7f2a1573229de71eb792000eca09553f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d6962f4662614ccb5a497f432548aeae3310f8700b14d01b106f94f0a2a04c15"
+    sha256 cellar: :any,                 arm64_big_sur: "65e87ec5195f73dd28ac038232cfd97f726e39d6420ee3eb8b09043fb6bbaf74"
+    sha256 cellar: :any,                 big_sur:       "4f8669a031bc81bcbee803c873ef1d97f2725d4a6fea722e5774b211edb7d6a5"
+    sha256 cellar: :any,                 catalina:      "268c52493195599b0ab12c36ed1c3473ec170b10cad96b8a0117d3fdb3b17b50"
+    sha256 cellar: :any,                 mojave:        "d2ef1609e6562912c88a0e8c5b9cb57058db7ef4f07d11b0ca881a114830d9a6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d94d20ba5021ba6f36508194a103c89398fdef130a57c79b1f1935d08db19c75"
   end
 
   depends_on "asciidoctor" => :build
