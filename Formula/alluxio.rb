@@ -11,7 +11,10 @@ class Alluxio < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "83bb4aee6c68ca243839d154685f0a37c8e3c8a2eb812d0528d05cc2b32a9e2a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1b8fa5b516188db1fbc1d055d02f096720c0632e678e2d668423f9dac93e4d5a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4aa99996180a918ff39d5be5a7c2acf4badd0e05475b61f65e637f7d1ac7b75c"
+    sha256 cellar: :any_skip_relocation, catalina:      "4aa99996180a918ff39d5be5a7c2acf4badd0e05475b61f65e637f7d1ac7b75c"
+    sha256 cellar: :any_skip_relocation, mojave:        "4aa99996180a918ff39d5be5a7c2acf4badd0e05475b61f65e637f7d1ac7b75c"
   end
 
   # Alluxio requires Java 8 or Java 11
