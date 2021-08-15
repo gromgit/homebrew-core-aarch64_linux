@@ -2,6 +2,10 @@ name: Bump formulae on schedule
 
 on:
   workflow_dispatch:
+    inputs:
+      formulae:
+        description: Custom list of formulae to livecheck and bump if outdated
+        required: false
   schedule:
     # Every day at 5am
     - cron: '0 5 * * *'
@@ -12,43 +16,23 @@ concurrency:
 
 env:
   HOMEBREW_FORCE_HOMEBREW_ON_LINUX: 1
-
-jobs:
-  autobump:
-    if: github.repository == 'Homebrew/homebrew-core'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set up Homebrew
-        id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@master
-
-      - name: Configure Git user
-        uses: Homebrew/actions/git-user-config@master
-        with:
-          username: BrewTestBot
-
-      - name: Bump formulae
-        uses: Homebrew/actions/bump-formulae@master
-        continue-on-error: true
-        with:
-          token: ${{secrets.HOMEBREW_CORE_REPO_WORKFLOW_TOKEN}}
-          formulae: |
-            ack
-            apidoc
-            argo
-            artifactory
-            b3sum
-            buildkit
-            bundletool
-            chezmoi
-            cliclick
-            consul
-            consul-template
-            detekt
-            detox
-            devspace
-            dnscrypt-proxy
-            docker
+  FORMULAE: |
+    ack
+    apidoc
+    argo
+    artifactory
+    b3sum
+    buildkit
+    bundletool
+    chezmoi
+    cliclick
+    consul
+    consul-template
+    detekt
+    detox
+    devspace
+    dnscrypt-proxy
+    docker
             docker-compose
             docker-slim
             doctl
@@ -98,3 +82,24 @@ jobs:
             traefik
             vale
             virgil
+
+jobs:
+  autobump:
+    if: github.repository == 'Homebrew/homebrew-core'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Configure Git user
+        uses: Homebrew/actions/git-user-config@master
+        with:
+          username: BrewTestBot
+
+      - name: Bump formulae
+        uses: Homebrew/actions/bump-formulae@master
+        continue-on-error: true
+        with:
+          token: ${{secrets.HOMEBREW_CORE_REPO_WORKFLOW_TOKEN}}
+          formulae: ${{github.event.inputs.formulae || env.FORMULAE}}
