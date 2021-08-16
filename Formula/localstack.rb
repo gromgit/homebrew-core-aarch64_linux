@@ -8,11 +8,11 @@ class Localstack < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "98b969d3fa3677f52984fd322fac83a5c1a311762d939aacb4d13768817cb69f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b2788dcd741a9025ae833cfba8f7e4f2ee7c9b7b653101fc46fa475975d8cab0"
-    sha256 cellar: :any_skip_relocation, catalina:      "6548491075563f907896e3fb4512f704651446966ffeca58da28eb479be1c992"
-    sha256 cellar: :any_skip_relocation, mojave:        "8d528350c46d2587aac9c81bf962c122e4cb69546befeb168566004da31a6d2e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "119482cd25f4b963420fec893de1b80e3096771df57a2b528d9478078dfa0e70"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0a66ecdd8878c0fbcb9a013730218016cf79b660feefc9667e1d1931e9e3137d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "befc500ea48e68a612514150a15446a141d5bead33b584545aba58871a6b65ca"
+    sha256 cellar: :any_skip_relocation, catalina:      "a35e966ab775e098c3aa56b3b2a7be3b84af2fa959215aef402c475c6741fbb9"
+    sha256 cellar: :any_skip_relocation, mojave:        "e121b1f900a5574779a52f17ba5af348d8648faed271c723b0e4cfff14e5d563"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e135adb62d356e5582070b01091b2b7168cbf6c5c743fd7fdedab50b869548cd"
   end
 
   depends_on "docker" => :test
