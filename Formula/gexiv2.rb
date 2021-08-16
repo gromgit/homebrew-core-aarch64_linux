@@ -6,11 +6,11 @@ class Gexiv2 < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "34a026a5141ad0f252332d7e7c2a594f9436673068e6cc555eff0c0e537f750d"
-    sha256 cellar: :any, big_sur:       "281c26fef197eba6584e3250aeb131c0ab5daf8afbdc1d702de71ba1e664ccf3"
-    sha256 cellar: :any, catalina:      "b96f01c0d637c9b4e16bf0f4d3dc4d072d0d672396152893b5afcbc0ae60cd3a"
-    sha256 cellar: :any, mojave:        "35e12c640ea61bd4659a86afb45e03efa8f81bfb46cb3a5119cb34f445f2dff2"
-    sha256               x86_64_linux:  "98c238fd0959ee7867f7053fee31b7632431f4bd57a223782ba735187251d14a"
+    sha256 cellar: :any, arm64_big_sur: "d447c68667fbbe6c2fbc805d1a5500df516e349113b125a124b70ecce67320db"
+    sha256 cellar: :any, big_sur:       "43b23687a2eda051948ca9cac9ec330fb1a68da5df5f1d902e19b6db4d13eef5"
+    sha256 cellar: :any, catalina:      "2f66ad539032cd727aa9c61c61418aac3fea4488215d33d1b1360740527f73d1"
+    sha256 cellar: :any, mojave:        "a5522b4ac7e5063ea54d66b16fd485f493680be08819fe789a53988b25346ecf"
+    sha256               x86_64_linux:  "5d462920a64731dec1282ce9e56b28945ad233ea550bc826215c639be7fab49f"
   end
 
   depends_on "gobject-introspection" => :build
