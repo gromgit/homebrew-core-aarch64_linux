@@ -5,6 +5,14 @@ class Mailcatcher < Formula
   sha256 "c40105f63407efc3fb18c2b1e2408896e4b86b0c8ba4e53ea17e087cbb2d7fee"
   license "MIT"
 
+  bottle do
+    sha256                               arm64_big_sur: "886937a559985918c13c1b1e20725805228c502bdac5d584d35e42a48413a2a6"
+    sha256                               big_sur:       "175d33b300625d0e2ac4dbf63d6d7c12c3f05d620e0dfd1f16797b94ed2ebcba"
+    sha256                               catalina:      "60c806b04e43ab4cc3172cb7bd5b1d8709ae76454fd6f9041d04cd59d8f6c237"
+    sha256                               mojave:        "34da0d86540d8995cdc9ccfef8178da7745a043e529f24898cee6991be541c12"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dbb2d1622c4043d3093abba9de45ed3dfbb6cbe01615936f6b4e9cc32a8be8e9"
+  end
+
   depends_on "pkg-config" => :build
 
   uses_from_macos "curl" => :test
