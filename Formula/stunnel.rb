@@ -35,11 +35,16 @@ class Stunnel < Formula
     # This programmatically recreates pem creation used in the tools Makefile
     # which would usually require interactivity to resolve.
     cd "tools" do
-      args = %w[req -new -x509 -days 365 -rand stunnel.rnd -config
-                openssl.cnf -out stunnel.pem -keyout stunnel.pem -sha256 -subj
-                /C=PL/ST=Mazovia\ Province/L=Warsaw/O=Stunnel\ Developers/OU=Provisional\ CA/CN=localhost/]
       system "dd", "if=/dev/urandom", "of=stunnel.rnd", "bs=256", "count=1"
-      system "#{Formula["openssl@1.1"].opt_bin}/openssl", *args
+      system "#{Formula["openssl@1.1"].opt_bin}/openssl", "req",
+        "-new", "-x509",
+        "-days", "365",
+        "-rand", "stunnel.rnd",
+        "-config", "openssl.cnf",
+        "-out", "stunnel.pem",
+        "-keyout", "stunnel.pem",
+        "-sha256",
+        "-subj", "/C=PL/ST=Mazovia Province/L=Warsaw/O=Stunnel Developers/OU=Provisional CA/CN=localhost/"
       chmod 0600, "stunnel.pem"
       (etc/"stunnel").install "stunnel.pem"
     end
