@@ -14,10 +14,10 @@ class GnomeAutoar < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "f807cdbfa1846ce767f5da3f9963d23ad06cc76265d513826bbae251d1640f36"
-    sha256 big_sur:       "6d3385e2abadeed4cb9eee7cd106fe2606d34283a1b377898f0ca5bb8581c473"
-    sha256 catalina:      "68285e5d4bb577d383397ea433eb689d2056a1a8ca2802afbf9c259989c19fc9"
-    sha256 mojave:        "81cf65e7c5a708728565785c9ebb3cb9fb3558a3031964e37657961b613fd184"
+    sha256 cellar: :any, arm64_big_sur: "c878f58ddccf4f6ccb9fb21f85284434072706235dca4dcd281b02fe3206ca4c"
+    sha256 cellar: :any, big_sur:       "28531f6dadc4e792c3689da6c041a65134a5f9a3eeb8cefdddba3e91dbc2fddc"
+    sha256 cellar: :any, catalina:      "0de2d5a412701bd644080e47c4dcae47f262f76a6f5762477f3497f42202d647"
+    sha256 cellar: :any, mojave:        "93261513fc4078cecc0e921d809de1f549e5c39e83cf06fbbeaea194fe83b850"
   end
 
   depends_on "meson" => :build
