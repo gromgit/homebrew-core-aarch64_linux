@@ -36,6 +36,10 @@ class Apt < Formula
   depends_on "xxhash"
   depends_on "zlib"
 
+  on_linux do
+    keg_only "not linked to prevent conflicts with system apt"
+  end
+
   fails_with gcc: "5"
 
   resource "SGMLS" do
