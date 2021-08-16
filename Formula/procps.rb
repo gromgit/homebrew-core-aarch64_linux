@@ -7,7 +7,7 @@ class Procps < Formula
   head "https://gitlab.com/procps-ng/procps.git"
 
   bottle do
-    sha256 x86_64_linux: "873b1756b34961702aa8eb6a69271b0d9e1b33ac76d4d0b37a238d4d825fc048"
+    sha256 x86_64_linux: "11f662e9854db3017ac6b6f1ba3182088e4f8271ac29412d4e7914b5c240a094"
   end
 
   depends_on "autoconf" => :build
