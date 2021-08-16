@@ -3,8 +3,8 @@ require "language/node"
 class NetlifyCli < Formula
   desc "Netlify command-line tool"
   homepage "https://www.netlify.com/docs/cli"
-  url "https://registry.npmjs.org/netlify-cli/-/netlify-cli-6.3.5.tgz"
-  sha256 "1ac5c273d62293050cc059a38c461cd6a34f3aaf6a7305a070f9b251814e0bc9"
+  url "https://registry.npmjs.org/netlify-cli/-/netlify-cli-6.5.0.tgz"
+  sha256 "f191d0224b5e50a8a63ef75c171131a1f26369c0b38827e5b32803f400f4d590"
   license "MIT"
   head "https://github.com/netlify/cli.git"
 
@@ -20,23 +20,9 @@ class NetlifyCli < Formula
 
   uses_from_macos "expect" => :test
 
-  on_macos do
-    depends_on "macos-term-size"
-  end
-
   def install
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
     bin.install_symlink Dir["#{libexec}/bin/*"]
-
-    term_size_vendor_dir = libexec/"lib/node_modules/#{name}/node_modules/term-size/vendor"
-    term_size_vendor_dir.rmtree # remove pre-built binaries
-
-    on_macos do
-      macos_dir = term_size_vendor_dir/"macos"
-      macos_dir.mkpath
-      # Replace the vendored pre-built term-size with one we build ourselves
-      ln_sf (Formula["macos-term-size"].opt_bin/"term-size").relative_path_from(macos_dir), macos_dir
-    end
   end
 
   test do
