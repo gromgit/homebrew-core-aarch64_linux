@@ -7,8 +7,8 @@ class Trafficserver < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 catalina: "0f039f9a474488e1520747acb00bc7d216a1489a3965ec95233e7b6f7db301db"
-    sha256 mojave:   "f7ebd269befc2707764d2ed1e77ffa49d05e0277f1d80557d0f9316497d444a8"
+    sha256 catalina: "8eca27b1c4f7ac994d609270b426eaeb270f11fcedd450c37dcfc47a008a7fc1"
+    sha256 mojave:   "68a187aa4f2895fd19805775f874ed20ac3cfe5f37df74d30c1969429dae0d33"
   end
 
   head do
