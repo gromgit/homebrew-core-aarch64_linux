@@ -7,13 +7,11 @@ class Nsq < Formula
   head "https://github.com/nsqio/nsq.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b3085b1fbf198c51c7afb142f709bcaa183337b7cb7dbb59c2b5ef9991c2df88"
-    sha256 cellar: :any_skip_relocation, big_sur:       "105dd8083fcde66eb333a1495a8e06da2701f2e9cc6e17ed434dce0a7c38e162"
-    sha256 cellar: :any_skip_relocation, catalina:      "2aae6c19e55ebd926426301fa85dd5716bce20a04bfbc11a5519dbada6a67368"
-    sha256 cellar: :any_skip_relocation, mojave:        "bffff40b52e50eb181b9a02c8650b51924e45e8d650a5ed17051b8b1c0ce46cc"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "96ead21ddbb8f6f004141aac2e7c5a23d8740eaa5d4730eb4b0d6d94a0b63683"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "239affa65e2bb7032ed29ca2ae8afd3cc5b2d30507a77685c3321c6a6bdb192f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8064f75c106ac7f5e38ce70dff06d018fa22a481e11d9c67dfac68231596bf9e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e0ab534bb29ef8aa87ec70991763ec4b91e7c445e5ae980a992c7f0c392b17c2"
+    sha256 cellar: :any_skip_relocation, catalina:      "9ec55f85df4dc5d5061faab19e8f8385518f5251aa53a72bc723a72123495bbb"
+    sha256 cellar: :any_skip_relocation, mojave:        "c9fd1a756550b9bc325c1e8e88ddbc22da23d5a52cc0c11dd2669f5ec650ef90"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0ab9010a1df5113e0bb93211eda7033f5b9c528b517a2da61c99906b2a10af6e"
   end
 
   depends_on "go" => :build
