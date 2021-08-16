@@ -10,6 +10,10 @@ class Trino < Formula
     regex(%r{href=["']?v?(\d+(?:\.\d+)*)/?["' >]}i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "8dfd61e34f50f01f90c7ea51f93cfce06da99ab5008e66bb63768b293647370e"
+  end
+
   depends_on "gnu-tar" => :build
   depends_on arch: :x86_64
   depends_on "openjdk"
