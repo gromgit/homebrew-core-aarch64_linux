@@ -99,12 +99,12 @@ class OpenjdkAT11 < Formula
       args += ["--with-sysroot=#{MacOS.sdk_path}", "--enable-dtrace=auto"]
 
       if Hardware::CPU.arm?
-        args += %W[
-          --openjdk-target=aarch64-apple-darwin
-          --with-build-jdk=#{boot_jdk}
-          --with-extra-cflags=-arch\ arm64
-          --with-extra-ldflags=-arch\ arm64\ -F#{framework_path}\ -headerpad_max_install_names
-          --with-extra-cxxflags=-arch\ arm64
+        args += [
+          "--openjdk-target=aarch64-apple-darwin",
+          "--with-build-jdk=#{boot_jdk}",
+          "--with-extra-cflags=-arch arm64",
+          "--with-extra-ldflags=-arch arm64 -F#{framework_path} -headerpad_max_install_names",
+          "--with-extra-cxxflags=-arch arm64",
         ]
       else
         args << "--with-extra-ldflags=-headerpad_max_install_names"
