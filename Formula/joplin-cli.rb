@@ -7,6 +7,13 @@ class JoplinCli < Formula
   sha256 "15b932b51632dbcf8dfa0c39541af49b7e072b1a7c204e304d0fbdea6f1d787a"
   license "MIT"
 
+  bottle do
+    sha256 arm64_big_sur: "737d8e92d1a6a69650704bbe54a469d65d5f5c00d25f41207137e88f56d690e9"
+    sha256 big_sur:       "285bb0d87c467021358f9446fa7e23be996dda465789fee0cc7bf4cdaaaacfc2"
+    sha256 catalina:      "381ff38930df7996d29d972c8eee3785524273e2f20ef411575a33d61d236c96"
+    sha256 mojave:        "6ff8a5eea10a3b871d41c3df388fc76b5e255606c765c2aae16d3c1b408e6c53"
+  end
+
   depends_on "pkg-config" => :build
   depends_on "node"
   depends_on "sqlite"
