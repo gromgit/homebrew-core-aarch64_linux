@@ -6,9 +6,9 @@ class Gjs < Formula
   license all_of: ["LGPL-2.0-or-later", "MIT"]
 
   bottle do
-    sha256 big_sur:  "d4e8b86038f300ba1cddf791d40b0ccf96f0ef9507f8edc4bef1a03ef15712ec"
-    sha256 catalina: "89bbd0ffaf69b849e42a7d49558bf311e4e1669a39c2d622cd36159468c90353"
-    sha256 mojave:   "efc170f9c06a89b46f6e75f396a434b3c6ad4867446b0e51f4f833b152e37e47"
+    sha256 big_sur:  "895a1fd43b095dc790ed323733da4cc6bfcffbcf66c665b0936e9cda1597d4fb"
+    sha256 catalina: "cca0c61978c5bc68b939519de12e608754a9d0fec50685d29be0af0cf3a6ca5f"
+    sha256 mojave:   "c2e0750012d24e80e5585aefc529b96b5eff4c02ae8f5d7e62a22b04e113dc9b"
   end
 
   depends_on "autoconf@2.13" => :build
