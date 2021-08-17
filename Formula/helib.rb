@@ -15,7 +15,20 @@ class Helib < Formula
 
   depends_on "cmake" => :build
   depends_on "bats-core" => :test
+  depends_on "gmp"
   depends_on "ntl"
+
+  on_linux do
+    depends_on "gcc" # for C++17
+  end
+
+  fails_with gcc: "5"
+
+  # Fix missing <optional> header include. Merged upstream, remove on next release.
+  patch do
+    url "https://github.com/homenc/HElib/commit/9973ccc68a292d5c52388eca40eac08ae11d0263.patch?full_index=1"
+    sha256 "fa4451567a7d3b4b09e44d0659d9e41615ea9d44c8228f64a5dc21b45390bd1c"
+  end
 
   def install
     mkdir "build" do
@@ -28,8 +41,8 @@ class Helib < Formula
   test do
     cp pkgshare/"examples/BGV_country_db_lookup/BGV_country_db_lookup.cpp", testpath/"test.cpp"
     mkdir "build"
-    system ENV.cxx, "-std=c++17", "-L#{lib}", "-L#{Formula["ntl"].opt_lib}",
-                    "-lhelib", "-lntl", "test.cpp", "-o", "build/BGV_country_db_lookup"
+    system ENV.cxx, "test.cpp", "-std=c++17", "-L#{lib}", "-L#{Formula["ntl"].opt_lib}",
+                    "-pthread", "-lhelib", "-lntl", "-o", "build/BGV_country_db_lookup"
 
     cp_r pkgshare/"examples/tests", testpath
     system "bats", "."
