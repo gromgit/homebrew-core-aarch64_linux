@@ -11,11 +11,11 @@ class Gradle < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a30f2e4362856a01278ada0f4925f4a4f4cb83482537baf6ece5bc85d4939fb7"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9c764404819ef3b7c27610d8ceea7adfb3e005a5fc672c26ba6a25876714b2f8"
-    sha256 cellar: :any_skip_relocation, catalina:      "9c764404819ef3b7c27610d8ceea7adfb3e005a5fc672c26ba6a25876714b2f8"
-    sha256 cellar: :any_skip_relocation, mojave:        "9c764404819ef3b7c27610d8ceea7adfb3e005a5fc672c26ba6a25876714b2f8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b2abb388779ce3bc1919284ec5dfcc2f1c4439ec220cf5e3538b95f9b31058e2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "303a0a5cc54ee43b085f1b8a7cb2753ca2b21305b05628b3bf03383d71080cc2"
+    sha256 cellar: :any_skip_relocation, big_sur:       "271f05a8828d3e763fc615ce1d709d1e01d5957f7a001f0723303ffe130a8251"
+    sha256 cellar: :any_skip_relocation, catalina:      "271f05a8828d3e763fc615ce1d709d1e01d5957f7a001f0723303ffe130a8251"
+    sha256 cellar: :any_skip_relocation, mojave:        "271f05a8828d3e763fc615ce1d709d1e01d5957f7a001f0723303ffe130a8251"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "15d4fa8e444f0127ea833fcb53099b3a92e13a0a39e7bffc5dd824a029f60736"
   end
 
   # gradle currently does not support Java 17
