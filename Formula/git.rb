@@ -13,11 +13,11 @@ class Git < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "74d2f8e5376eb204c5f812bbefc77c81d500fca1295e6571f7c680a36f98a73b"
-    sha256 big_sur:       "c73ff9436e9642d745a612ed1071ae770d57fdca95589539d63e1e0c9f428f3b"
-    sha256 catalina:      "0f303c5f3bb53ff24d0ba10d7c2612b0f4bc8e384eb082b51a8aff62e4aace72"
-    sha256 mojave:        "4610c1e22e2df2e7f0c70146f630675a041064ac904702cbd492b7845be4f88e"
-    sha256 x86_64_linux:  "7c2cd04e51354d63daeccae11ec4c4a7f2b532044d462ba89c16f2577851a937"
+    sha256 arm64_big_sur: "06e9cc3e274380b2494451ed2e3c6acf1e091facdf2ce02da57921fbc6a3115a"
+    sha256 big_sur:       "1b89ec39f7a4b865b3c671f9b2495ec85992595112b74a5dc3ac78beae33ff0d"
+    sha256 catalina:      "4aaced15f34f02a7a965f9cee42b78ef471034e4d9cf3bbbe8bf2ab8f4f72678"
+    sha256 mojave:        "5e85e4d8c9aaa398420993cb9c2561db79d3a71a12b79b8631ee0de5b0d86c67"
+    sha256 x86_64_linux:  "06340f727c9e234bbe7fb940307c7ec2545b8186ed1bfbb9c20cf9763cb2d22c"
   end
 
   depends_on "gettext"
