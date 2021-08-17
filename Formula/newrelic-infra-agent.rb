@@ -6,6 +6,13 @@ class NewrelicInfraAgent < Formula
   license "Apache-2.0"
   head "https://github.com/newrelic/infrastructure-agent.git"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, big_sur:      "ac813242b7d7adee1382611d5ff0b25bf12c98ead33fd5fda0474a143b79fa29"
+    sha256 cellar: :any_skip_relocation, catalina:     "6f8b942d9f1b02383027bc790352b5bb24e8b500389555f05b7060cf820c3761"
+    sha256 cellar: :any_skip_relocation, mojave:       "be96279cf0596779f75172306d88fd6bf8138d40051190c775bb805bdf811924"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "dfc811b08b78f09bfca30f7cc64f8590854219ddd6461eabb8db4b61a9ea0941"
+  end
+
   depends_on "go" => :build
   # https://github.com/newrelic/infrastructure-agent/issues/695
   depends_on arch: :x86_64
