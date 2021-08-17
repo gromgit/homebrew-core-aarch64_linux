@@ -11,10 +11,10 @@ class MariadbAT104 < Formula
   end
 
   bottle do
-    sha256 big_sur:      "5d4587b6925d11da019efae8bcaa305c549a1a1c7520599dffae972531c28302"
-    sha256 catalina:     "51d055bed3d91b808bd954a5a68429defc4f2c5fdf59f66076c0c5ad7d201805"
-    sha256 mojave:       "9b56ea790363004775716cefe69acb1b7f1ff2f9fbfd9144f17d475a848519b8"
-    sha256 x86_64_linux: "2d31fa206235260af0f25557b2769b71a44e2645646b0e49a126fb2c12711218"
+    sha256 big_sur:      "25b7b5e85331b332c06696b4020f0966ce45fe96538a578c4b81a427b82d7f4f"
+    sha256 catalina:     "b3a1dab92b593bd07e24c4e6a979176d31cfb42854179717718e0669a5e672ce"
+    sha256 mojave:       "66ac3ce9505f6adfec4faa798a9b2ce068770602cc7d3e9271ea96f3ba1b9399"
+    sha256 x86_64_linux: "1beb39adb2120a30bfbd19f32b605a611222e97c789d032f429a803257e10964"
   end
 
   keg_only :versioned_formula
