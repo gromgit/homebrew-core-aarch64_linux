@@ -10,11 +10,11 @@ class Remarshal < Formula
   head "https://github.com/dbohdan/remarshal.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b0c1b75665dca786bde756d4af9c520a8663cc940a9c7b10a105d447e14ec2c2"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8521482cf34a60440f479a03265a6e7d8620ccf100496a6720f92eed4af11145"
-    sha256 cellar: :any_skip_relocation, catalina:      "204004c532be6254a8366067b285e5d900c0cb6961ad47e589d03f7cbd4eed55"
-    sha256 cellar: :any_skip_relocation, mojave:        "608a1f16ab92f54dc4fd3479633b86e62de3bf51df2f8f7b111f9312141576df"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "1a671dcd4a208faf7e12bc97154d6f67137b2463d2f4d17ed1841785c4cf41c6"
+    sha256 cellar: :any,                 arm64_big_sur: "5dbc82f8251611f4d764d4207a222e1c577004f8be4b068edac392a822e275e0"
+    sha256 cellar: :any,                 big_sur:       "e80acb98ffa9b1810221849012cbb256fb576c2eaa7751a15d837f51b3e753a1"
+    sha256 cellar: :any,                 catalina:      "c565d849e47622eb7a95f5a4dbbc560aeb706c4ebef9f916096137d316a544ed"
+    sha256 cellar: :any,                 mojave:        "0eeefb705f7d7c83e76004df5c907b643b4ee296c24ee383c39e75490762523f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c2abab456e063ee532c1ae5a4634a93a8d2309b4b746ba1666efe25bc91ce0bf"
   end
 
   depends_on "poetry" => :build
