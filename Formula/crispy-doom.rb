@@ -8,10 +8,10 @@ class CrispyDoom < Formula
   head "https://github.com/fabiangreffrath/crispy-doom"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "334d6f54742cb84bed5ae85562400b5660232788c59772e8b4a2c8e7bc7f1107"
-    sha256 cellar: :any, big_sur:       "e7ff93c49ac5d85a501bf4e12afb56bda7e503f5bf066503a327b35a36f08d32"
-    sha256 cellar: :any, catalina:      "9a2d4aeab66d80bef35da79c594c3623ac9fc1e82301e456a9660a57ab857a11"
-    sha256 cellar: :any, mojave:        "f36bac4833379ff5e57eb6e87b2375f2c1a7e1b43100fda8abf7a89a23124455"
+    sha256 cellar: :any, arm64_big_sur: "6d9000bd5ee7e800eecf8748c419ea4f8d42dc1e5c78ec5e49e91ab095e34895"
+    sha256 cellar: :any, big_sur:       "cbd514df66ecb0eb170169ce1f099fedefafa17f79cdeb2dfe00120d7e2fa03a"
+    sha256 cellar: :any, catalina:      "07ab97bfe589f66a63007f32ab6f5a937aec221fb3528ab33259fc3c6652bb60"
+    sha256 cellar: :any, mojave:        "ae4f7e635129aa417d47826af76123678ae786c0889b4baad08c59b3c730c36a"
   end
 
   depends_on "autoconf" => :build
