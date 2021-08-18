@@ -17,9 +17,10 @@ class Cpprestsdk < Formula
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
-
   depends_on "boost"
   depends_on "openssl@1.1"
+
+  uses_from_macos "zlib"
 
   def install
     system "cmake", "-DBUILD_SAMPLES=OFF", "-DBUILD_TESTS=OFF",
@@ -33,18 +34,16 @@ class Cpprestsdk < Formula
       #include <iostream>
       #include <cpprest/http_client.h>
       int main() {
-        web::http::client::http_client client(U("https://github.com/"));
+        web::http::client::http_client client(U("https://example.com/"));
         std::cout << client.request(web::http::methods::GET).get().extract_string().get() << std::endl;
       }
     EOS
-    flags = ["-stdlib=libc++", "-std=c++11", "-I#{include}",
-             "-I#{Formula["boost"].include}",
-             "-I#{Formula["openssl@1.1"].include}", "-L#{lib}",
-             "-L#{Formula["openssl@1.1"].lib}", "-L#{Formula["boost"].lib}",
-             "-lssl", "-lcrypto", "-lboost_random", "-lboost_chrono",
-             "-lboost_thread-mt", "-lboost_system-mt", "-lboost_regex",
-             "-lboost_filesystem", "-lcpprest"] + ENV.cflags.to_s.split
-    system ENV.cxx, "-o", "test_cpprest", "test.cc", *flags
-    system "./test_cpprest"
+    system ENV.cxx, "test.cc", "-std=c++11",
+                    "-I#{Formula["boost"].include}", "-I#{Formula["openssl@1.1"].include}", "-I#{include}",
+                    "-L#{Formula["boost"].lib}", "-L#{Formula["openssl@1.1"].lib}", "-L#{lib}",
+                    "-lssl", "-lcrypto", "-lboost_random-mt", "-lboost_chrono-mt", "-lboost_thread-mt",
+                    "-lboost_system-mt", "-lboost_filesystem-mt", "-lcpprest",
+                    "-o", "test_cpprest"
+    assert_match "<title>Example Domain</title>", shell_output("./test_cpprest")
   end
 end
