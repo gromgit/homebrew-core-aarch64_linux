@@ -6,10 +6,10 @@ class SqlxCli < Formula
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e41d0e307e9d17e8966aed83c29fad8373e82bb9d5a6a3dc6f37a133032277b8"
-    sha256 cellar: :any_skip_relocation, big_sur:       "11f11e3eda3869c7cd10e8fd10625f6db88b558e9bc631727dd2b41b6ae6ac7e"
-    sha256 cellar: :any_skip_relocation, catalina:      "cbbc676a115e5d2ddf94ec8c78fc83e50898a3189c51079608baa72f039792d4"
-    sha256 cellar: :any_skip_relocation, mojave:        "5ce17dc84ca3c80c39e379d2f3e9d7f6bf8d612af07850dc3188d1bfd7edcb10"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2eb117f2ab7901a954cfdadf03390afa93d9bbde91551b7d0aa7053b62d45e69"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6bb3192ed5f6152ee269b5aa5a03f4b89d7c882a8b52dc38688a5c819bcd7a8c"
+    sha256 cellar: :any_skip_relocation, catalina:      "ee845da2da501390d08bb5a368a960ad8c635503698cfa6025dd53cec5b65afa"
+    sha256 cellar: :any_skip_relocation, mojave:        "3b2622c19d45c07fb81796a159799499b711afb0feef5a63f1a5d7f57da56aa8"
   end
 
   depends_on "rust" => :build
