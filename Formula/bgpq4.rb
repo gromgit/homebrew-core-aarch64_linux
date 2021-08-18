@@ -1,8 +1,8 @@
 class Bgpq4 < Formula
   desc "BGP filtering automation for Cisco, Juniper, BIRD and OpenBGPD routers"
   homepage "https://github.com/bgp/bgpq4"
-  url "https://github.com/bgp/bgpq4/archive/refs/tags/0.0.7.tar.gz"
-  sha256 "c39af7d2a8b0f4cf61543e776677baaf067aa087181851572211d168258f7f9f"
+  url "https://github.com/bgp/bgpq4/archive/refs/tags/1.0.tar.gz"
+  sha256 "2ccddebb402c99d6dc09b71e88e6ce01c5d087dbf8953f3b86d92377d45d331e"
   license "BSD-2-Clause"
   head "https://github.com/bgp/bgpq4.git", branch: "main"
 
@@ -21,6 +21,7 @@ class Bgpq4 < Formula
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+  depends_on "libtool" => :build
 
   def install
     system "./bootstrap"
