@@ -10,6 +10,7 @@ class Libhandy < Formula
     sha256 big_sur:       "a6aa6e6042f4be52b6771e90ca9a35f4792bc8ae3cf0e2a641285ea7c7b6b35b"
     sha256 catalina:      "094c9ab75ad36b5ea16fddebf1280cd7a2a70ffd513a98ba80cae27d540a9d36"
     sha256 mojave:        "e23bf85ef855b2fa9bde7dabc8ef4ae651f0c1d3157ee5578b46a319c9910d47"
+    sha256 x86_64_linux:  "62d3bc37a45613506fcb1d93491423a0de7697603815dafc1931c7ef56c0d676"
   end
 
   # NOTE: The glade catalog is disabled due to a bug that has been fixed but
