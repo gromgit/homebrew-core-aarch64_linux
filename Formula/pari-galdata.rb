@@ -7,6 +7,10 @@ class PariGaldata < Formula
   sha256 "b7c1650099b24a20bdade47a85a928351c586287f0d4c73933313873e63290dd"
   license "GPL-2.0-or-later"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "0955aa684155ddba3d65a6ba99b05a7e0e02fdc3b6f5cf3b9da11e0a102ca37e"
+  end
+
   depends_on "pari"
 
   def install
