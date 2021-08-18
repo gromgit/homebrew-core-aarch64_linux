@@ -8,10 +8,10 @@ class JoplinCli < Formula
   license "MIT"
 
   bottle do
-    sha256 arm64_big_sur: "737d8e92d1a6a69650704bbe54a469d65d5f5c00d25f41207137e88f56d690e9"
-    sha256 big_sur:       "285bb0d87c467021358f9446fa7e23be996dda465789fee0cc7bf4cdaaaacfc2"
-    sha256 catalina:      "381ff38930df7996d29d972c8eee3785524273e2f20ef411575a33d61d236c96"
-    sha256 mojave:        "6ff8a5eea10a3b871d41c3df388fc76b5e255606c765c2aae16d3c1b408e6c53"
+    sha256 arm64_big_sur: "4b8aa6190a7409da64a4239d008e3c31068904d9617a21c7139d29a6f639a331"
+    sha256 big_sur:       "f269cd3f83524e80de3030ebc5b9e94f1985b4f7233851244039f9f78b043536"
+    sha256 catalina:      "c0bf82e586aa6131b1c4b47e5f19fbcf2f19a18e7a47eb75f4f04c96ad49c6df"
+    sha256 mojave:        "ca05cebc82bb8d9b3e2fe815d64e608edf2fbb5c333477f580a6300390bb5f46"
   end
 
   depends_on "pkg-config" => :build
