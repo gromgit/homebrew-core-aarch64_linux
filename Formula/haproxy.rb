@@ -1,8 +1,8 @@
 class Haproxy < Formula
   desc "Reliable, high performance TCP/HTTP load balancer"
   homepage "https://www.haproxy.org/"
-  url "https://www.haproxy.org/download/2.4/src/haproxy-2.4.2.tar.gz"
-  sha256 "edf9788f7f3411498e3d7b21777036b4dc14183e95c8e2ce7577baa0ea4ea2aa"
+  url "https://www.haproxy.org/download/2.4/src/haproxy-2.4.3.tar.gz"
+  sha256 "ce479380be5464faa881dcd829618931b60130ffeb01c88bc2bf95e230046405"
   license "GPL-2.0-or-later" => { with: "openvpn-openssl-exception" }
 
   livecheck do
@@ -21,6 +21,8 @@ class Haproxy < Formula
 
   depends_on "openssl@1.1"
   depends_on "pcre"
+
+  uses_from_macos "zlib"
 
   def install
     args = %w[
@@ -41,7 +43,7 @@ class Haproxy < Formula
     end
 
     # We build generic since the Makefile.osx doesn't appear to work
-    system "make", "CC=#{ENV.cc}", "CFLAGS=#{ENV.cflags}", "LDFLAGS=#{ENV.ldflags}", *args
+    system "make", *args
     man1.install "doc/haproxy.1"
     bin.install "haproxy"
   end
