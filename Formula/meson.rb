@@ -7,11 +7,11 @@ class Meson < Formula
   head "https://github.com/mesonbuild/meson.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7cd3369471574d895b0fa4b5f918ee0f0768082783df8b1030536e1fe435f7a0"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a4a69b17bb926a1e1f2c909adb1f4ba58a536c0f742dd40c4e2fb451859fb4a3"
-    sha256 cellar: :any_skip_relocation, catalina:      "a4a69b17bb926a1e1f2c909adb1f4ba58a536c0f742dd40c4e2fb451859fb4a3"
-    sha256 cellar: :any_skip_relocation, mojave:        "a4a69b17bb926a1e1f2c909adb1f4ba58a536c0f742dd40c4e2fb451859fb4a3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7cd3369471574d895b0fa4b5f918ee0f0768082783df8b1030536e1fe435f7a0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "18e2e5fedef3e9853ab12b8e9f0e0b486b8d53837346f8025bf35ff2e58f308e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c5a6b1422db1ea301dd5da6cbe25731baca4e030d939ce688f7c7cee1a4b55e8"
+    sha256 cellar: :any_skip_relocation, catalina:      "c5a6b1422db1ea301dd5da6cbe25731baca4e030d939ce688f7c7cee1a4b55e8"
+    sha256 cellar: :any_skip_relocation, mojave:        "c5a6b1422db1ea301dd5da6cbe25731baca4e030d939ce688f7c7cee1a4b55e8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "18e2e5fedef3e9853ab12b8e9f0e0b486b8d53837346f8025bf35ff2e58f308e"
   end
 
   depends_on "ninja"
