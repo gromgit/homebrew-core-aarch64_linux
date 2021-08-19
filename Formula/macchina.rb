@@ -6,11 +6,11 @@ class Macchina < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c7d83200c0a892f600487054b4d177c85565db88c3086c5213456ad621ae74a4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "07783179d4fa09142731337bfc4cf053b64daf6d1062fa9b822d7cf5ab4af401"
-    sha256 cellar: :any_skip_relocation, catalina:      "556670ff3ebd99d5ba897cb634104a98b74e3c23aad6e99113bb7c08a130da2f"
-    sha256 cellar: :any_skip_relocation, mojave:        "163c3c266eb2112acc0535827ca55f73467a59ca9e68f808805bebd360773760"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4186da39adb2e09bfe11ae343099a6abdb656610e1a45f8cd39f27ea8000ddc9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6513b4c13754f0a1e987b0eb973dd0838a84b52e201c2a83c3f8927d452c62fd"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c867963a1f4da0ad388c04f2e9ad0ff321b01ade266cf6ff265759a9141f428a"
+    sha256 cellar: :any_skip_relocation, catalina:      "fb2a3cdb9c7b7a016587a0261698a5175e71772692a78753d74abd8545b1c657"
+    sha256 cellar: :any_skip_relocation, mojave:        "0d2fe76fc227fb46261611d6fb7ecabc0cd3d9f48b126747dfda1bfd39c4a898"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3ccc7fa30ebe1acf5350810af00c059c5b4a5392e907b14bb48186a5e0ee8997"
   end
 
   depends_on "rust" => :build
