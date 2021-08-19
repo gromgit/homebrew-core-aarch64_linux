@@ -12,6 +12,7 @@ class Amp < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "db4b6bdf3468476c2f2b6696f755c05b2471f6d09bc47bf783fbd6c65b1b1aac"
     sha256 cellar: :any_skip_relocation, catalina:      "6b886491460ff6245f9f6ecd22d0a856f51afbd06ec7adf13e2c8be974693656"
     sha256 cellar: :any_skip_relocation, mojave:        "8d11d70c1a7ae6bb4cf3c4460ad93a303a7ec4bdc63166ce0796f4025c05d517"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3c6bbda9b197a6d0e83923d15d82cee7e0f72cd5d7416dc32dd3bd993c8a8fc4"
   end
 
   depends_on "cmake" => :build
