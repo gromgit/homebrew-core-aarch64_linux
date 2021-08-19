@@ -11,7 +11,7 @@ class DyldHeaders < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "90dbbbc915962b9c063da9a85b993c4266eddf80c1c36ff69917e9ca49424afb"
+    sha256 cellar: :any_skip_relocation, all: "221d2dec7a44925607f6ed07474cc044333c8f93e14a769bfdd4c4131cd27909"
   end
 
   keg_only :provided_by_macos
