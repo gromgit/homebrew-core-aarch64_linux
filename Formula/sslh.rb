@@ -1,8 +1,8 @@
 class Sslh < Formula
   desc "Forward connections based on first data packet sent by client"
   homepage "https://www.rutschle.net/tech/sslh.shtml"
-  url "https://www.rutschle.net/tech/sslh/sslh-v1.21c.tar.gz"
-  sha256 "3bfe783726f82c1f5a4be630ddc494ebb08dbb69980662cd7ffdeb7bc9e1e706"
+  url "https://www.rutschle.net/tech/sslh/sslh-v1.22.tar.gz"
+  sha256 "50ea47f8a52e09855e4abcba00e2d6efa3b100faef4b7a066582dfb9bd043b6e"
   license all_of: ["GPL-2.0-or-later", "BSD-2-Clause"]
 
   head "https://github.com/yrutschle/sslh.git"
@@ -17,7 +17,7 @@ class Sslh < Formula
   end
 
   depends_on "libconfig"
-  depends_on "pcre"
+  depends_on "pcre2"
 
   uses_from_macos "netcat" => :test
 
