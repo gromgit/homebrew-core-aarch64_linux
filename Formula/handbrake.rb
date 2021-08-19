@@ -7,9 +7,10 @@ class Handbrake < Formula
   head "https://github.com/HandBrake/HandBrake.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "5bb8e03dae1aa55d317425c029259de5b89b488f4a701d06baa2c3a1d1f7e98c"
-    sha256 cellar: :any_skip_relocation, catalina: "ab4f6d98eb86afd4c71f74310867a8e919c827ea44c5aea52d56c9de33884ac8"
-    sha256 cellar: :any_skip_relocation, mojave:   "7dd630c2fb5ea87ab59bd0e3c161b8091906484d7c286438cea86faaef2961cb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "037e8b1be2b8264f233aef92208ba264072a66cfdf26591dedd8a40ad44c5796"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6d8f7a87b12e402d23142a3b4940170126a9e85ed6e218fe9af93aaf57f8eba2"
+    sha256 cellar: :any_skip_relocation, catalina:      "3fe4097ce9a1f0ef6c22212eba9059ee3d181eb8a1875577994efff1d8be4d57"
+    sha256 cellar: :any_skip_relocation, mojave:        "e4cedfb355baeed4c7b9ad6017db1be6f6cf2c666f4120a1a8eb95066b23a88b"
   end
 
   depends_on "autoconf" => :build
