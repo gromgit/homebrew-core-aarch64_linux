@@ -1,8 +1,8 @@
 class Shellz < Formula
   desc "Small utility to track and control custom shellz"
   homepage "https://github.com/evilsocket/shellz"
-  url "https://github.com/evilsocket/shellz/archive/v1.5.1.tar.gz"
-  sha256 "ff7d5838fd0f8385a700bd882eab9f6e5da023899458c9215e36e2244cc11bfd"
+  url "https://github.com/evilsocket/shellz/archive/v1.6.0.tar.gz"
+  sha256 "3a89e3d573563a0c2ccb1831ff41fc0204c8b4efb011c10108ab98451a309b1c"
   license "GPL-3.0-only"
 
   bottle do
@@ -14,12 +14,6 @@ class Shellz < Formula
   end
 
   depends_on "go" => :build
-
-  # remove in next release
-  patch do
-    url "https://github.com/chenrui333/shellz/commit/10bd430.patch?full_index=1"
-    sha256 "c23d375e7ea2b20e3c2c0fec39adda384a0ce34482c7d97f8aa63c1526bf80f3"
-  end
 
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/shellz"
