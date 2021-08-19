@@ -17,12 +17,34 @@ class Podman < Formula
   depends_on "go-md2man" => :build
   depends_on "qemu" if Hardware::CPU.intel?
 
-  def install
-    system "make", "podman-remote-darwin"
-    bin.install "bin/darwin/podman"
+  resource "gvproxy" do
+    url "https://github.com/containers/gvisor-tap-vsock/archive/v0.1.0.tar.gz"
+    sha256 "e1e1bec2fc42039da1ae68d382d4560a27c04bbe2aae535837294dd6773e88e0"
+  end
 
-    system "make", "install-podman-remote-darwin-docs"
-    man1.install Dir["docs/build/remote/darwin/*.1"]
+  def install
+    os = if OS.mac?
+      "darwin"
+    else
+      "linux"
+    end
+
+    system "make", "podman-remote-#{os}"
+    on_macos do
+      bin.install "bin/#{os}/podman" => "podman-remote"
+      bin.install_symlink bin/"podman-remote" => "podman"
+    end
+    on_linux do
+      bin.install "bin/podman-remote"
+    end
+
+    resource("gvproxy").stage do
+      system "make"
+      bin.install "bin/gvproxy"
+    end
+
+    system "make", "install-podman-remote-#{os}-docs"
+    man1.install Dir["docs/build/remote/#{os}/*.1"]
 
     bash_completion.install "completions/bash/podman"
     zsh_completion.install "completions/zsh/_podman"
@@ -30,11 +52,11 @@ class Podman < Formula
   end
 
   test do
-    assert_match "podman version #{version}", shell_output("#{bin}/podman -v")
-    assert_match(/Error: Cannot connect to the Podman socket/i, shell_output("#{bin}/podman info 2>&1", 125))
+    assert_match "podman-remote version #{version}", shell_output("#{bin}/podman-remote -v")
+    assert_match(/Error: Cannot connect to the Podman socket/i, shell_output("#{bin}/podman-remote info 2>&1", 125))
     if Hardware::CPU.intel?
-      machineinit_output = shell_output("podman machine init --image-path fake-testimage123 fake-testvm123 2>&1", 125)
-      assert_match "Error: open fake-testimage123: no such file or directory", machineinit_output
+      machineinit_output = shell_output("podman-remote machine init --image-path fake-testi123 fake-testvm 2>&1", 125)
+      assert_match "Error: open fake-testi123: no such file or directory", machineinit_output
     end
   end
 end
