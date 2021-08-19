@@ -6,11 +6,12 @@ class Libcec < Formula
   license "GPL-2.0"
 
   bottle do
-    sha256 cellar: :any,                 big_sur:      "1a9bd5bc7213eef94c4bb9c1c3cfeffeb6dba606f0cbd227de515c04968bbc8f"
-    sha256 cellar: :any,                 catalina:     "eef61bc6c5647a5b26f8949b53973e02ec44640d82ceff633183da7b20eac212"
-    sha256 cellar: :any,                 mojave:       "c64dda68a5e5d00d6867aff92b576a71b8550d7250bbe7f86d0c1a9b1b861613"
-    sha256 cellar: :any,                 high_sierra:  "2d7d295151c68aeaea3a269d66156b2d29f08a619d60079e79386d100c0adc1c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "9176ee164819109787720e7e67537b18ff52363f7d4ac41b3ef5fd936aed74c3"
+    sha256 cellar: :any,                 arm64_big_sur: "56ba06a96084c73cc8bd5bec4be5aff675702cadeb91b9aba710de25aeb20e2e"
+    sha256 cellar: :any,                 big_sur:       "1a9bd5bc7213eef94c4bb9c1c3cfeffeb6dba606f0cbd227de515c04968bbc8f"
+    sha256 cellar: :any,                 catalina:      "eef61bc6c5647a5b26f8949b53973e02ec44640d82ceff633183da7b20eac212"
+    sha256 cellar: :any,                 mojave:        "c64dda68a5e5d00d6867aff92b576a71b8550d7250bbe7f86d0c1a9b1b861613"
+    sha256 cellar: :any,                 high_sierra:   "2d7d295151c68aeaea3a269d66156b2d29f08a619d60079e79386d100c0adc1c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9176ee164819109787720e7e67537b18ff52363f7d4ac41b3ef5fd936aed74c3"
   end
 
   depends_on "cmake" => :build
