@@ -8,10 +8,11 @@ class Daq < Formula
   head "https://github.com/snort3/libdaq.git"
 
   bottle do
-    sha256 cellar: :any, big_sur:     "97b4ba11a541dc9720410792b363be14a190e5fbdb4f7ed473aef94f99dc0751"
-    sha256 cellar: :any, catalina:    "3b1f25eab6e2c04f4b5e609a1d3e72c3eb55eb12d4a7acb61f43ae815bd10347"
-    sha256 cellar: :any, mojave:      "8d57a1f8536259612d6ce312b54a96e8d0fd5527000593d11765baf095d1fd2d"
-    sha256 cellar: :any, high_sierra: "861fbfd197f0cef898687b427cfa259d6dbf15b2eace0036477910177b8c4c16"
+    sha256 cellar: :any,                 arm64_big_sur: "59174c893c54717c09ba73f6d3455cddf42e9ef8b9de405b6e7b115dd08961b7"
+    sha256 cellar: :any,                 big_sur:       "add510dd1048bd47451b086020aa64326cbb272e317598ac35394cd74ec36fe1"
+    sha256 cellar: :any,                 catalina:      "c9b6281bb8e20fd935b734f9cacdca7f2528356a90b2614ad8dc164870dcc4cc"
+    sha256 cellar: :any,                 mojave:        "4d3f5ade023a0021385619c66507cdf5b322d837c99d0eec4b1778c78fbbdd77"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4b16f5e49e6ba2ddb8c4a078f9139cc5f64bc953f60c909efd519c9da088f522"
   end
 
   depends_on "autoconf" => :build
