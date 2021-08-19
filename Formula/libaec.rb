@@ -6,6 +6,13 @@ class Libaec < Formula
   license "BSD-2-Clause"
   head "https://gitlab.dkrz.de/k202009/libaec.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "eb75225b84ef78247e6313d9898d42f257012d406900b13a10e796150129d6e5"
+    sha256 cellar: :any, big_sur:       "2b7e11d1e50b73f63081c492a25a9778c82d552ef49d9738d716402c22278a44"
+    sha256 cellar: :any, catalina:      "f710bc0d08883c62af1d6021ec59294bd495fa1a9bf5411b533c058492949061"
+    sha256 cellar: :any, mojave:        "bfa7e201aaf1d16c44ca6607b553d5c2b6671eecc9d14fd70b9eb957033afd06"
+  end
+
   depends_on "cmake" => :build
 
   def install
