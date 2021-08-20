@@ -8,10 +8,10 @@ class ElmFormat < Formula
   head "https://github.com/avh4/elm-format.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:     "f7f6bb421efb3969733d33c7f6200af334bcd768d2128b14ba0280270b2fff30"
-    sha256 cellar: :any_skip_relocation, catalina:    "dca23c0c1e66cfc6208ff891611ba8c38fdddd1d90d2a8b32bafe69dc3701b91"
-    sha256 cellar: :any_skip_relocation, mojave:      "0e196d773546e0d476c079a434c57f1b49a2966410397bb33747fa2d9e57ffe1"
-    sha256 cellar: :any_skip_relocation, high_sierra: "a8f9aa324518559cdd5b7617f5453f629e90f6897cd72e38f5ab84165e7ddae0"
+    sha256 cellar: :any_skip_relocation, big_sur:      "9066d69a558d83fd34502c7a8949213fbd8c62314d6020e7bf83bf533b48ff87"
+    sha256 cellar: :any_skip_relocation, catalina:     "934eed770e7b19d15cb01906b5e64124b4b6bb0c5a0272d52b70d20d98b3487d"
+    sha256 cellar: :any_skip_relocation, mojave:       "fed548eb02c34faf688a6ac250b69bf4d5c6720e22213ea794542385bccee387"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "122e69e40ba66e45f3cae09c9e8d48a886a9cba6fa91ef10a0acc42134771621"
   end
 
   depends_on "cabal-install" => :build
