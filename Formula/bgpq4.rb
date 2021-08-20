@@ -12,11 +12,11 @@ class Bgpq4 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "816ae6e069e438aa3d96c22c0f0079d09a15e87688590c20b1280a58152a1bbe"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6b6e75aa1810a9bb41f08c6c4728fa2b787b4b0f13f3e57a7ee65dd9dc64ea57"
-    sha256 cellar: :any_skip_relocation, catalina:      "4986d84aca312d6dd1ba2234b7736943d9670142765b08dc8f123a0a23c68b89"
-    sha256 cellar: :any_skip_relocation, mojave:        "d096a3f68b4a4b2ec53c2b9bf35604309f8fe4dce9fb8a30d84cff1f9c73f502"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "596499d38595e439ad347fe7174348d631e4f662339106bcf9241201dc77114c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1a59f7bc0a4f0fb911f6d464f85d3c19b80da94bcc5c50188825f1e9ed6c5208"
+    sha256 cellar: :any_skip_relocation, big_sur:       "370e39599aad59b426c7eac54dc5bae8960ee6d82f494a11191f0d1ff88b95d3"
+    sha256 cellar: :any_skip_relocation, catalina:      "b2549810cc41e269f260ae42096a0b4b3051d10b44d7c94f40d4d26d9d84d73b"
+    sha256 cellar: :any_skip_relocation, mojave:        "9f8ab5fddb0e06cc1ac25d373d9bc0c8b38ebded71b36b8ef7375c51c77e91c3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ac7b84ef5cd3c74b7087488d7b9d3d72ec2c89a6498686d53e2873397448c904"
   end
 
   depends_on "autoconf" => :build
