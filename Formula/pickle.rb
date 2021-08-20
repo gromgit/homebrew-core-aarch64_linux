@@ -6,10 +6,10 @@ class Pickle < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "56cb810f374eeb4752ba6b25e18d14e07a44be86f3052884fcc690edd20f5a9f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6929dde45a9d39e24b03d5b684ed89e5f41f396938483bc619d26b7686a23d02"
-    sha256 cellar: :any_skip_relocation, catalina:      "6929dde45a9d39e24b03d5b684ed89e5f41f396938483bc619d26b7686a23d02"
-    sha256 cellar: :any_skip_relocation, mojave:        "6929dde45a9d39e24b03d5b684ed89e5f41f396938483bc619d26b7686a23d02"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0cb6da56e1d2006229fe4faaedfa70c0e3cd6a0ed54d87a3965175a8831a599d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d32f594be0e7dcbc0d24826ae517081f38fe267f96f7bc2f4e40cb59902ccc05"
+    sha256 cellar: :any_skip_relocation, catalina:      "d32f594be0e7dcbc0d24826ae517081f38fe267f96f7bc2f4e40cb59902ccc05"
+    sha256 cellar: :any_skip_relocation, mojave:        "d32f594be0e7dcbc0d24826ae517081f38fe267f96f7bc2f4e40cb59902ccc05"
   end
 
   depends_on "php"
