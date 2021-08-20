@@ -16,6 +16,7 @@ class SpiceProtocol < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "c1e7d23c49491707d0113d45759756a55fb479ed0cdc6c0d3ec55d68a58a61cd"
     sha256 cellar: :any_skip_relocation, mojave:        "c65655047ff18f1b00ec71a24469409c4483f0be190fdc2735470730cdf95b17"
     sha256 cellar: :any_skip_relocation, high_sierra:   "86145a5c7d8c109671fb9277ac07c56c8f8475c0854b2e2123a3beabd2626f06"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4aa1d60915c8f90d6ce29cc6b26d6dd2b03bee60ae44c63890ba122c57f02c0d"
   end
 
   depends_on "meson" => :build
