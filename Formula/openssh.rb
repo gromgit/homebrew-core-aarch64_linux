@@ -1,10 +1,10 @@
 class Openssh < Formula
   desc "OpenBSD freely-licensed SSH connectivity tools"
   homepage "https://www.openssh.com/"
-  url "https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-8.6p1.tar.gz"
-  mirror "https://mirror.vdms.io/pub/OpenBSD/OpenSSH/portable/openssh-8.6p1.tar.gz"
-  version "8.6p1"
-  sha256 "c3e6e4da1621762c850d03b47eed1e48dff4cc9608ddeb547202a234df8ed7ae"
+  url "https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-8.7p1.tar.gz"
+  mirror "https://mirror.vdms.io/pub/OpenBSD/OpenSSH/portable/openssh-8.7p1.tar.gz"
+  version "8.7p1"
+  sha256 "7ca34b8bb24ae9e50f33792b7091b3841d7e1b440ff57bc9fabddf01e2ed1e24"
   license "SSH-OpenSSH"
 
   livecheck do
@@ -51,7 +51,7 @@ class Openssh < Formula
   end
 
   resource "com.openssh.sshd.sb" do
-    url "https://opensource.apple.com/source/OpenSSH/OpenSSH-209.50.1/com.openssh.sshd.sb"
+    url "https://opensource.apple.com/source/OpenSSH/OpenSSH-240.40.1/com.openssh.sshd.sb"
     sha256 "a273f86360ea5da3910cfa4c118be931d10904267605cdd4b2055ced3a829774"
   end
 
