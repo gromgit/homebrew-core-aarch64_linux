@@ -7,11 +7,11 @@ class Sdns < Formula
   head "https://github.com/semihalev/sdns.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "21793de02e83d10ac51abae2ba85addcbac395b39ee37fc41ca8847974eec92b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "82ae1e7bea85f50fcf84de51fb0fb790faf88d0cefaf8532f587047e8fe842a5"
-    sha256 cellar: :any_skip_relocation, catalina:      "b1dd23b40afd486a0343af0b6e2b738d5c4a19869484e01de28889e7abc6ae5b"
-    sha256 cellar: :any_skip_relocation, mojave:        "aa9dd1a91d45ddcc4574ca51084f6d57885541d6e495230e2870e60bf1d2395a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c7f8696ee4f9832f746ef504e348b1c3e45eefa15101b25e00e9c7102d3defac"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "31d37bbf975d52771e264b5525901451f4c8ab07699f748765f01ac66a97815e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ed0799e9fe671a1f83413865e3edd17c91e7be25cbb3750a1ffd192f1cc5e8b3"
+    sha256 cellar: :any_skip_relocation, catalina:      "743eb7d702801e6f8f9955b39d5ade0910c62f2146b9654af70ea811ab296db2"
+    sha256 cellar: :any_skip_relocation, mojave:        "efd45f52f39c3a66c4ef269ecb0149d563ec3f3ce983b95cf9c3ebfc12cf41f7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b904e1cec53ae97198d246cc6b2d518cdf0e357e3988ad7d40007a2979938243"
   end
 
   depends_on "go" => :build
