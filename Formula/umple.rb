@@ -7,11 +7,11 @@ class Umple < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bd41188baf2192be2d75e098a45efa7a7d83e7c8a76daad5b059bdff6f859071"
-    sha256 cellar: :any_skip_relocation, big_sur:       "bd41188baf2192be2d75e098a45efa7a7d83e7c8a76daad5b059bdff6f859071"
-    sha256 cellar: :any_skip_relocation, catalina:      "bd41188baf2192be2d75e098a45efa7a7d83e7c8a76daad5b059bdff6f859071"
-    sha256 cellar: :any_skip_relocation, mojave:        "bd41188baf2192be2d75e098a45efa7a7d83e7c8a76daad5b059bdff6f859071"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c80a927eb6c67b19974ded86bca1daca1e2ad6d41e6e0a5c56b8f2e409b89730"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b588ed54d528a7301c1450bd03a8651abcb88119e18dd9166631adf3143a2180"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b588ed54d528a7301c1450bd03a8651abcb88119e18dd9166631adf3143a2180"
+    sha256 cellar: :any_skip_relocation, catalina:      "b588ed54d528a7301c1450bd03a8651abcb88119e18dd9166631adf3143a2180"
+    sha256 cellar: :any_skip_relocation, mojave:        "b588ed54d528a7301c1450bd03a8651abcb88119e18dd9166631adf3143a2180"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8290ce892b832b7c4fa229b7ad10b0e2b8f78371f3c23c07a07542f2ae4af18b"
   end
 
   depends_on "openjdk"
