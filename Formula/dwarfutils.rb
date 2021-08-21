@@ -12,11 +12,11 @@ class Dwarfutils < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "feb9ab859e76e35cf9cb542c977f7699b7611494f0a7693b292292027820305a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d87d517978e102343d43762c9272b995ff0e1501d3ae692231a276445c8da55c"
-    sha256 cellar: :any_skip_relocation, catalina:      "168ffbfd98d2c026c607b1cdf4ae556e8fc0da70afc220c1d88ed2140c8592fe"
-    sha256 cellar: :any_skip_relocation, mojave:        "f072dac053dee574c279956d1b072aeeb591a078d207d2d963a745e3553fab26"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9646e9356c7b30e464afbec046633bd985d0f3a97609ae56606321d965f7686f"
+    sha256 arm64_big_sur: "dd08048594fd7f0bfdc02ed06c6c4e44ed4c75eeb8cdcc2adb490036e07f3f4e"
+    sha256 big_sur:       "84941130062830cdf8bb7e724d38704df8fa27cc90a19db76326b391d8c1049b"
+    sha256 catalina:      "1664a1d0bfadf1ee6fdb95229aeea41c7cddae537afa8bdaed398d99f31e8c4b"
+    sha256 mojave:        "89f93e8814b05bfa901aa11a41526d86737f742b4cb150d9df5b0f241aa995fa"
+    sha256 x86_64_linux:  "20d0af399420474afd8c5e3fb24c592aca8d37efbf0e93e49763c9bfcf8ff6fb"
   end
 
   head do
