@@ -7,6 +7,13 @@ class Kn < Formula
   license "Apache-2.0"
   head "https://github.com/knative/client.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fe261babfd9fb7486041fd28a56e647ad30f7b4b7cdde8648de4604c5c62df2a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "87013c10636a08a28c6bbf36426690e5208003f022881b952c06b689e0b529dd"
+    sha256 cellar: :any_skip_relocation, catalina:      "87013c10636a08a28c6bbf36426690e5208003f022881b952c06b689e0b529dd"
+    sha256 cellar: :any_skip_relocation, mojave:        "87013c10636a08a28c6bbf36426690e5208003f022881b952c06b689e0b529dd"
+  end
+
   depends_on "go" => :build
 
   def install
