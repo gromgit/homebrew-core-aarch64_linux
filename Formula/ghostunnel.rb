@@ -6,6 +6,13 @@ class Ghostunnel < Formula
   license "Apache-2.0"
   head "https://github.com/ghostunnel/ghostunnel.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e29c9322e028759b02a968914b4739157d3db6abc6ba367e9a5c9f1995b282b0"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b93ac43836099084bb444f2572886e0925bbe3184160a219cc4ab667c8ca23f8"
+    sha256 cellar: :any_skip_relocation, catalina:      "6e3a12df1cd0d68dc23bd0ebdb73d0fb30e92a8c4cfa56e3601302123a45a908"
+    sha256 cellar: :any_skip_relocation, mojave:        "2b518ddd7d5cba3bf9dfb99980ae5f8fa8cc9ad5b1cd8be8e275408886d20290"
+  end
+
   depends_on "go" => :build
 
   def install
