@@ -14,7 +14,7 @@ class Payara < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "04446f556082c49a4d434354416e9337b89888c2bf0aa23c5cbb455153f9fa5b"
+    sha256 cellar: :any_skip_relocation, all: "f5d1efe0bcf989e75051552ceb9fa310ef0e3c28ae4cc0869aa2876b990603c0"
   end
 
   depends_on "openjdk@11"
