@@ -1,8 +1,8 @@
 class DhallJson < Formula
   desc "Dhall to JSON compiler and a Dhall to YAML compiler"
   homepage "https://github.com/dhall-lang/dhall-haskell/tree/master/dhall-json"
-  url "https://hackage.haskell.org/package/dhall-json-1.7.7/dhall-json-1.7.7.tar.gz"
-  sha256 "94d2ef7ec16a36a5f707e839e883a19c5cc9b921083c2c5f6245119019006698"
+  url "https://hackage.haskell.org/package/dhall-json-1.7.8/dhall-json-1.7.8.tar.gz"
+  sha256 "7034a8367472d92405db9b45052cb0fbc31dc72c524b0597dd268f145b388c3c"
   license "BSD-3-Clause"
   head "https://github.com/dhall-lang/dhall-haskell.git"
 
