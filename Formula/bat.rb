@@ -6,11 +6,11 @@ class Bat < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e5b14836bb035d63dfcf8342e648837812272f16c980d22f17f9f2529fa87bba"
-    sha256 cellar: :any_skip_relocation, big_sur:       "566720155c70fee4a23c7ae07f7e785fde72396464c2b8c67dcf6b5c48f36579"
-    sha256 cellar: :any_skip_relocation, catalina:      "add88b324d4caad18443fe084891f5fa131d9119769b2705663ce0ce28d23b3d"
-    sha256 cellar: :any_skip_relocation, mojave:        "6d6f023db57e9f726c06d20e6cade443da3d63df80027dc4a8f7ac47b5f7a0ae"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f5e85d2128c380d1caedd691acb9772d20e3fc3dd8f41a91e4d26b7aaf6f874f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6edd4db8dc910dde6552aadd68af8933d1cd4b8268a0fcdef5795294de59ca50"
+    sha256 cellar: :any_skip_relocation, big_sur:       "1a075678316a795840e43db540d7465d106860c1db0153d2cabac285dca83fbb"
+    sha256 cellar: :any_skip_relocation, catalina:      "0a8ce5ab853f1408966e23718b408e655b70b2d5d6c3b2ebdb0159eee389f6ef"
+    sha256 cellar: :any_skip_relocation, mojave:        "c564416a4de6fd26eaf03029a1afd47edce0e49919d0fd2821cf3d870ee5f91f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f9d4d8521a1287dc2fb2408d590e6f113b62d5cb430add6ecb3531b856625ffa"
   end
 
   depends_on "rust" => :build
