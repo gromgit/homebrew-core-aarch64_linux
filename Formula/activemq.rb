@@ -7,7 +7,10 @@ class Activemq < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "e9b4d36bb04448419691a35a64a784249748ab2ae57cf73963834a99d31a06da"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "96fea1abd0d9c574c1180eef96b627d25557d76421cbf69d0be648ae5a448eb9"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e0feb1f5e6b47220ddfff5bcb293da5d44d096294c773b3a94cf89fcd9cecab6"
+    sha256 cellar: :any_skip_relocation, catalina:      "e0feb1f5e6b47220ddfff5bcb293da5d44d096294c773b3a94cf89fcd9cecab6"
+    sha256 cellar: :any_skip_relocation, mojave:        "e0feb1f5e6b47220ddfff5bcb293da5d44d096294c773b3a94cf89fcd9cecab6"
   end
 
   depends_on "openjdk"
