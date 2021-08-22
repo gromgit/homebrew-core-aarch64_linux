@@ -6,7 +6,7 @@ class Libnsl < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "4794fb7b02da1ebd7115e081ac230d670d732164992fb0b29a5b4dea2829af6a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "3b5adecb3863612dbba0ab392e1c33b9c69b6e68532c30eaa6b7032181bfc855"
   end
 
   keg_only "it conflicts with glibc"
