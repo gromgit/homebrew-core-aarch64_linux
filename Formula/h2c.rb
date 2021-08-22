@@ -5,6 +5,10 @@ class H2c < Formula
   sha256 "1c5e4d76131abb5151c89cc54945256509dad9d12cab36205aa5bcd7f8a311af"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "6fd6c532ca1267e809b95532aae4a7663fe2c16375266530672ace7602fb2ab4"
+  end
+
   def install
     bin.install "h2c"
   end
