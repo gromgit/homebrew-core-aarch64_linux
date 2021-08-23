@@ -8,11 +8,11 @@ class Pgcli < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "ae1b15213fdd1bd6e82bca428f40488b001c1c88fa640062f5597c8dd2ce0288"
-    sha256 cellar: :any,                 big_sur:       "3ccba71049db5eb854be6050ee53578f58a49322777615d61d7470ff6ae09713"
-    sha256 cellar: :any,                 catalina:      "4345a13484191db2d804c1f3c7d3cb80a1c8c6aa1734171325f6e9ce088f1984"
-    sha256 cellar: :any,                 mojave:        "31ca1bb800f517ffac95520caee3455746ff1b6ee16bc3960dde21721161db4e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "41617ca3d59ee47942c03dc9f5bfe9221ef1e8c84e152c6f8e4abf24c3f4bc27"
+    sha256 cellar: :any,                 arm64_big_sur: "a84512d680d97f3817bca3d15c1aa6f0826cfafc282938d63eeef91df1ac9bd8"
+    sha256 cellar: :any,                 big_sur:       "f4e5249349761c5e95024d8281e29ba0a90799e49fdbb20f4ec7d2654a2aef9c"
+    sha256 cellar: :any,                 catalina:      "0c7a430fdd6d5f1346b4b0028c3540424da4783a089e293e650b3cb570ce7ccc"
+    sha256 cellar: :any,                 mojave:        "7bf0526c0ecc82a745c63bb3c69d26259896592507c5be0b53e6709ccf435764"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "79748adfdc073f5db043f06467f9a722d3df3937c17541cd186c1262ae171b9a"
   end
 
   depends_on "poetry" => :build
