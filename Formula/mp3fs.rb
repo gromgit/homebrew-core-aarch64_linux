@@ -6,9 +6,7 @@ class Mp3fs < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, catalina:    "26d991c2fb34055035c01d12033f28b5a694954ad9b3f650658dfa1ebc9994ea"
-    sha256 cellar: :any, mojave:      "a9f6095147b767a892891bdc0a44b61eef40880e38bc50e54c0a30d96de89985"
-    sha256 cellar: :any, high_sierra: "b3b2e431e9a782dbde9d758505c372a0d6ed60eff44ebc21c9b979c01b0df189"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "6d1586bc27d210c2ee54b09a26b369c48fb932e8aae2be48dc03f577e1299854"
   end
 
   depends_on "pkg-config" => :build
