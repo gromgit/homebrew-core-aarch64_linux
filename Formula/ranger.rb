@@ -9,11 +9,12 @@ class Ranger < Formula
   head "https://github.com/ranger/ranger.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "be8d7714ef29753d07b1b7ca166a674d13543a58b47883f9ed55895bc7e38f62"
-    sha256 cellar: :any_skip_relocation, big_sur:       "89a02ad5b924aa4ea2ae75017ee5449ef5f5be633caaa84530608bc01b005d29"
-    sha256 cellar: :any_skip_relocation, catalina:      "89a02ad5b924aa4ea2ae75017ee5449ef5f5be633caaa84530608bc01b005d29"
-    sha256 cellar: :any_skip_relocation, mojave:        "89a02ad5b924aa4ea2ae75017ee5449ef5f5be633caaa84530608bc01b005d29"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9757fe41fe8386ec511d183afa2262b88d2c6eae261c422f309fb2096492d5d3"
+    sha256 cellar: :any_skip_relocation, big_sur:       "06cd4e35309bd7089184d39db275a1a7b798503312987d18068c1fa729372aa1"
+    sha256 cellar: :any_skip_relocation, catalina:      "06cd4e35309bd7089184d39db275a1a7b798503312987d18068c1fa729372aa1"
+    sha256 cellar: :any_skip_relocation, mojave:        "06cd4e35309bd7089184d39db275a1a7b798503312987d18068c1fa729372aa1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9757fe41fe8386ec511d183afa2262b88d2c6eae261c422f309fb2096492d5d3"
   end
 
   depends_on "python@3.9"
