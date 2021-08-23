@@ -1,8 +1,8 @@
 class CargoInstruments < Formula
   desc "Easily generate Instruments traces for your rust crate"
   homepage "https://github.com/cmyr/cargo-instruments"
-  url "https://github.com/cmyr/cargo-instruments/archive/v0.4.1.tar.gz"
-  sha256 "80eda3959bfe167d9df050df82fdeac0aec5606bb02384e2b4313a472bcb599e"
+  url "https://github.com/cmyr/cargo-instruments/archive/v0.4.2.tar.gz"
+  sha256 "49779536cff114a14a9966203eba1ae5db003fd33dfc6a5f4cb54bcd96bd0f32"
   license "MIT"
 
   bottle do
@@ -15,12 +15,6 @@ class CargoInstruments < Formula
   depends_on "rust" => :build
   depends_on :macos
   depends_on "openssl@1.1"
-
-  # Support rust 1.54, remove with next release after 0.4.1
-  patch do
-    url "https://github.com/cmyr/cargo-instruments/commit/5371c086007e15da55360fdea2e3b8e79cff002b.patch?full_index=1"
-    sha256 "73e4e95de7052d2c9393037a7b6f32dd16933c67615693b3e70722f4cf97c334"
-  end
 
   def install
     system "cargo", "install", *std_cargo_args
