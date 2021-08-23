@@ -8,11 +8,11 @@ class Peru < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "171980304c1aa1545f2397ecc9adcedd3f84b533974265d243a88ba2ccd36de0"
-    sha256 cellar: :any,                 big_sur:       "b8d5f0915d0f6b7a0ce49ffc61a0503b809ac6c074d2057d2f1396ea0788de67"
-    sha256 cellar: :any,                 catalina:      "927f2ddcf69404fde76a587d8797eb6937d206b6f79ee05615bf55788f82dd6c"
-    sha256 cellar: :any,                 mojave:        "8d48227b9184a9f0f623a799a91179e1f24e456507b802c5e620594f7104e940"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "272245907697a938ae81cf9d1f2cec1a5228301f9c26cccb515773e1cfa34b9d"
+    sha256 cellar: :any,                 arm64_big_sur: "aa4a20ed7347ab1cf91c6adc484279ca27d17f7b65f23d25be4b63f283491f7c"
+    sha256 cellar: :any,                 big_sur:       "bcc6478c675786f51934108b92b5e47d2798dc2a4b0ef8bfae99f130fa2f473e"
+    sha256 cellar: :any,                 catalina:      "31220d37966a4dc4edb016b44a80e70ca291c669ed56176dc08b00eeeeafe683"
+    sha256 cellar: :any,                 mojave:        "c0e0c051d79f223765f095524f5fea92fd5275c51d2f59281d12e9456e9ee2c9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fe15d9a12d971f7a0be3ee5a132fc2d4482f70e20578ecacdab13dad15fc8b58"
   end
 
   depends_on "libyaml"
