@@ -7,11 +7,10 @@ class Podman < Formula
   head "https://github.com/containers/podman.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a5fd91154c325f6a9bb7fc32bb9ede9a86ed1bb96997c973a32909c54152270d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7f46857b1181d4cc3000d47c00e214a8902b4607c76c7a36d3a0accb7a2a5d72"
-    sha256 cellar: :any_skip_relocation, catalina:      "a571eb24035439967e96ab3d053a6b2ce9c93510720f7d07e8c101fa9cfc9352"
-    sha256 cellar: :any_skip_relocation, mojave:        "cbd50cf21d05ce5f12e5010ac40822dc33aab2b5c40b25430e926a613a23a243"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2369ccbf5d0f1d552a829c9e9b5435790af2e9ec4bb90814e754105dda1c49b9"
+    sha256 cellar: :any_skip_relocation, big_sur:       "39471294e07770e543e08fc1dffd7fedd035f6e61414a9ec87860fdd1bb14603"
+    sha256 cellar: :any_skip_relocation, catalina:      "7e01025e35e314e119fa43bb4fee159e7f41e3b83673a5c281d3632d8f0fcf51"
+    sha256 cellar: :any_skip_relocation, mojave:        "24f23b569b61e36815856da6cfc29b5742670b7b1d3055fba680e904fdef11a2"
   end
 
   depends_on "go" => :build
