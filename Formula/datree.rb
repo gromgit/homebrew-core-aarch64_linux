@@ -6,6 +6,14 @@ class Datree < Formula
   license "Apache-2.0"
   head "https://github.com/datreeio/datree.git", branch: "staging"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f27bd61923bc32cd4009f430d339da66c3ed1e2f67e4cd280a7e7429688c56d4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "937f49e642d5c7ae00bcc10229bf05597fb3283f67cb4029d11f1acb1c024838"
+    sha256 cellar: :any_skip_relocation, catalina:      "0bc7e64242815f234a5d6863080c3aea5bfc10c567f4695aaf5b71e9f6dc8bb6"
+    sha256 cellar: :any_skip_relocation, mojave:        "11dcd85da14660fbd59130c40d320fa1e972ad71d031f2637d29951dd2db8edd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e7e6bf64c4a4c27777db1ceff1714ead56b146434947aa877246b5c9fadf36fc"
+  end
+
   depends_on "go" => :build
 
   def install
