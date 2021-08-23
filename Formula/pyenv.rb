@@ -1,8 +1,8 @@
 class Pyenv < Formula
   desc "Python version management"
   homepage "https://github.com/pyenv/pyenv"
-  url "https://github.com/pyenv/pyenv/archive/v2.0.4.tar.gz"
-  sha256 "930b51083ac3a9096da742a4fb3621ce249a6dd0556aa71fe39ca2afaa748346"
+  url "https://github.com/pyenv/pyenv/archive/v2.0.5.tar.gz"
+  sha256 "c068072d8e1e61f17b076ee2118f455cef81199a01a078ed05934660f7035a0c"
   license "MIT"
   version_scheme 1
   head "https://github.com/pyenv/pyenv.git", branch: "master"
@@ -47,6 +47,8 @@ class Pyenv < Formula
     %w[pyenv-install pyenv-uninstall python-build].each do |cmd|
       bin.install_symlink "#{prefix}/plugins/python-build/bin/#{cmd}"
     end
+
+    share.install prefix/"man"
 
     # Do not manually install shell completions. See:
     #   - https://github.com/pyenv/pyenv/issues/1056#issuecomment-356818337
