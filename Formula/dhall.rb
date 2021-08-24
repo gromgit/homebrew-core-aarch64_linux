@@ -6,11 +6,11 @@ class Dhall < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "af427f1180f96b9bcd9ff77347f861d19ac67b3b62e3511ffc0c1cb810483143"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d1c36be171b91a50d710af00cd7321d6fadb496a90583f73e6033e28035a143e"
-    sha256 cellar: :any_skip_relocation, catalina:      "ade8c77d54c09576a75f0e2f6bc98e0a2b7cceb4cf3e93c271a24258a3855e74"
-    sha256 cellar: :any_skip_relocation, mojave:        "66ddeb565cc75a33877d69553b1aba1724a3a54e780954f799a45c3c5634ab82"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3c6a0b5b4c1a5901808d503625e0dee108fc221c23c049263dfb544699840a57"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d5813e732f904689c01bd850dacfbadefc7cc7eabc9de698eae354f6da536487"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7419b77dbe5d0c193fee5fcc025b4498093827c49b7bb72cd5a1ea9049df2ace"
+    sha256 cellar: :any_skip_relocation, catalina:      "5237942d82f12c997ed07086c1be7610ce4ba998dc87b24a3dec2d88bd382d71"
+    sha256 cellar: :any_skip_relocation, mojave:        "dad39b07677cd3dc786e269a9160e938f3cdb1cdd7c35d7856293d61c7aad741"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d59fbea133108d39b418633a411f102ab282754d2bccb3164bc43ae2fbf9480d"
   end
 
   depends_on "cabal-install" => :build
