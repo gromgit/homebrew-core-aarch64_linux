@@ -9,11 +9,12 @@ class Supervisor < Formula
   head "https://github.com/Supervisor/supervisor.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "603f334021212060950606136062b072b5a4a36c43c3f6f71000ad090b4ed347"
-    sha256 cellar: :any_skip_relocation, big_sur:       "43bd0271e2b89771f2af347f4e60e6abe001efc55f6425a4d61c7a310398d969"
-    sha256 cellar: :any_skip_relocation, catalina:      "f3a0ae431a6d7c1212eccfdd5b279a37e813b1dd5db7b61ada3e79e1b60e0029"
-    sha256 cellar: :any_skip_relocation, mojave:        "f0fec35c90ad11cef40d70ba02e5ae1ffe846f0849c0555a38d5970e7ab29acc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8ec25e426a16e22a25fbc8710e227e8106f45451989353eeeaa8083848dec9f6"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "eecde9d40da9295eff05db3febece46fe5ca591904221993f9628ecb94e3ed40"
+    sha256 cellar: :any_skip_relocation, big_sur:       "8719a67515fc2e5ceaaf19eb8fc2998343c7001fca4c22f68b0531a7ca26103d"
+    sha256 cellar: :any_skip_relocation, catalina:      "8719a67515fc2e5ceaaf19eb8fc2998343c7001fca4c22f68b0531a7ca26103d"
+    sha256 cellar: :any_skip_relocation, mojave:        "8719a67515fc2e5ceaaf19eb8fc2998343c7001fca4c22f68b0531a7ca26103d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "92246cbda1ce67873519f07455f74dafc55b292f5132d0103dffcd79aa185835"
   end
 
   depends_on "python@3.9"
