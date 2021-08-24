@@ -7,7 +7,7 @@ class SpoofMac < Formula
   sha256 "48426efe033a148534e1d4dc224c4f1b1d22299c286df963c0b56ade4c7dc297"
   license "MIT"
   revision 3
-  head "https://github.com/feross/SpoofMAC.git"
+  head "https://github.com/feross/SpoofMAC.git", branch: "master"
 
   bottle do
     rebuild 1
