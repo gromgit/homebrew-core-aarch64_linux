@@ -5,6 +5,10 @@ class Bubblewrap < Formula
   sha256 "b9c69b9b1c61a608f34325c8e1a495229bacf6e4a07cbb0c80cf7a814d7ccc03"
   license "LGPL-2.0-or-later"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "752a0eda16421e668f27b3b7e35a5931d9cb2a38297017bd9f8ba2244a87a05a"
+  end
+
   head do
     url "https://github.com/containers/bubblewrap.git", branch: "master"
     depends_on "autoconf" => :build
