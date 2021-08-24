@@ -12,10 +12,11 @@ class ShairportSync < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "69aca6973958639950c913bc230b93bf23f200ca4ad4031a2e23f400ae9d9468"
-    sha256 big_sur:       "d789905a7d6a4c93b28b5a5ed07d6b1b5a32ccecdf47c41268525404d406dcb2"
-    sha256 catalina:      "1e284d58843c0bb34a421bb5259b3e81759c77eecd992b0f9e4b66976155bb55"
-    sha256 mojave:        "202eeb58dfed5376c7be58ed53eab101ee9d829d142e374056984db25ce77aa0"
+    rebuild 1
+    sha256 arm64_big_sur: "c62b136c5fcc95dd97a1ac76e100ecf91b546a5ab88a169051d772bedc2e6a20"
+    sha256 big_sur:       "539e6ac514499bb752fa3bc5621f2851abaec22822f9471a59b8520b6f89550e"
+    sha256 catalina:      "1bd4a19140ae1361a0bff75f52a0fd0d44017333d1caffbe9d71a3dbde7e9eee"
+    sha256 mojave:        "87beee235a4af62b1bd7971a97ed011b23ee0d553eccea22e045130c6927e061"
   end
 
   depends_on "autoconf" => :build
