@@ -11,11 +11,12 @@ class Stunnel < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "9f2c646ed7d3a492073980fef97313a964e08a2b3b8eb6f5d4b1058ff10f44e1"
-    sha256 cellar: :any,                 big_sur:       "8998386c03a6e15cd32562ddbbd3b3bad271c5f3017c4f64c6d010b901526f9b"
-    sha256 cellar: :any,                 catalina:      "ef62099d56e9d5bc7f1476c14e0f639a56098da98daf7f9b94e7affaf366d3ae"
-    sha256 cellar: :any,                 mojave:        "1a83cbd2799a173ecbe0055394fac1697a44ea23bce8ddc3bcd6c10da334e6e2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eab8b64e3501bd41c2294d14ff30878465c74342ac49e02e5314b8ebe7810690"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_big_sur: "bfd5b6175001e46acdb8751e59d5de7a13a1222fc09309e85a67f70aa35893db"
+    sha256 cellar: :any,                 big_sur:       "db1410a067d25b6286f78d2e8f78f49440afeeee469e0640014e487a1516cd5a"
+    sha256 cellar: :any,                 catalina:      "b05b0d7872c0ee97edf42d1e9acfe7cc52bc8f2ba3daa06064beee068029ccb3"
+    sha256 cellar: :any,                 mojave:        "f69c90ad1073fc0e2c485e6913d39178331ece8be30a737c9078ca152b1dfed0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b03b0098fe618d67cbfccaa6aa23d09b7d7f490e968f221122ebb2b4d14db3d0"
   end
 
   depends_on "openssl@1.1"
