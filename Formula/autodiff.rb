@@ -7,10 +7,10 @@ class Autodiff < Formula
   head "https://github.com/autodiff/autodiff.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5d115a24200aeaf67131453c70b6082be66d99d2920d43d3857a90f68b54945d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e56abb1cfd0a276322bb136d08b5037285e12fff7cdcd703897928173b997383"
-    sha256 cellar: :any_skip_relocation, catalina:      "15ffb5d75d4993904a407b58a57d2c5dc00898a09ecaaa0047fbbb5c6519bc06"
-    sha256 cellar: :any_skip_relocation, mojave:        "646362ffbcd6dfe2f0822b700483eafe8a6cb939326a30fa7112e893c1495a01"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "cb8dd848ff068721e8c8d0d58e7b62e031ad0eebacfea36d693bc7528264d5be"
+    sha256 cellar: :any_skip_relocation, big_sur:       "12bab4a6f997bd961b1b01c0d37a68f49b50ed5419940dec018dae4837bb5f31"
+    sha256 cellar: :any_skip_relocation, catalina:      "109cfe02558a837c81ec22bd9f77a9a7a9d63fa0f61d4dd21d2a3a8622161f74"
+    sha256 cellar: :any_skip_relocation, mojave:        "6485a71ec52617ecf4ecca6f435376354877896ba21a6b5d5d3514e6da996d97"
   end
 
   depends_on "cmake" => :build
