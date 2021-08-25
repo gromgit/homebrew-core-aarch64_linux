@@ -8,10 +8,10 @@ class Fanyi < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2456b0530f3fb65613ec1a5911a8f76970a8f7f0f41344df91675ebf1943d755"
-    sha256 cellar: :any_skip_relocation, big_sur:       "002883ae0d734a5ea67d80931311a5d8c7b9360a6415ca70f26f41e66dc4d307"
-    sha256 cellar: :any_skip_relocation, catalina:      "002883ae0d734a5ea67d80931311a5d8c7b9360a6415ca70f26f41e66dc4d307"
-    sha256 cellar: :any_skip_relocation, mojave:        "002883ae0d734a5ea67d80931311a5d8c7b9360a6415ca70f26f41e66dc4d307"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bdb5e4c6f216c41688c1e6935433006195eab8846bed9024a332537e73ca2dd6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5548268ec8a85f156de8612bdd8e236d7495fc8e5e3f7f9c96e05b4d54305eff"
+    sha256 cellar: :any_skip_relocation, catalina:      "5548268ec8a85f156de8612bdd8e236d7495fc8e5e3f7f9c96e05b4d54305eff"
+    sha256 cellar: :any_skip_relocation, mojave:        "5548268ec8a85f156de8612bdd8e236d7495fc8e5e3f7f9c96e05b4d54305eff"
   end
 
   depends_on "node"
