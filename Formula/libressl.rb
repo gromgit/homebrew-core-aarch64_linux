@@ -13,11 +13,11 @@ class Libressl < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "f4fa458d148637619331ff2ed9e58cd6af8aa2930d1c05f0deddc066c9decb66"
-    sha256 big_sur:       "580f06f61b53fcbcc66a55e1a176b581701fb7f83c22bd8d1429520dfd314a8c"
-    sha256 catalina:      "1665bf0da8764d6f3e2be97354db769c6f39fd7b2788429e58a81e6172e6185d"
-    sha256 mojave:        "b4eca6067e1ee105ab1798c35f7415a608a4c23baa316a91b6e855ce99885fe7"
-    sha256 x86_64_linux:  "a88a65bab85c2fd2fdd6ee9186412a895c1997295f4141e1f1e0db11787ae2d8"
+    sha256 arm64_big_sur: "9ecfbd5de9cf3cf38da317f9920eff3434a50e89b96d22dd19e89a3d6f6935a6"
+    sha256 big_sur:       "f8cd6129c381324094c0511958dcc66133b7167ac47db4acc345c66da2118e81"
+    sha256 catalina:      "270a0a04a1ef7d365d4fca0eeb343f2566c7dd66214f22f120740f16d79d1545"
+    sha256 mojave:        "ee7a539db2b8a9d9bdfcf91a985582977d84ce7b27575597247bd4c47384ae35"
+    sha256 x86_64_linux:  "ce58b8983a6d82d81355ac7d47ffbd828fd1c4f3e51a81d3ce7b67b0870d9b32"
   end
 
   head do
