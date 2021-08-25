@@ -7,11 +7,12 @@ class Cql < Formula
   head "https://github.com/CovenantSQL/CovenantSQL.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "74a8c72f8d73c53ca3dbfcc443cf4319a9c5b590de766acb53f618063454bafa"
-    sha256 cellar: :any_skip_relocation, big_sur:       "cf8e7615d8f5c837efd97b0d5dfc1c0376522fa8823b3d12242470084e82fd81"
-    sha256 cellar: :any_skip_relocation, catalina:      "56b5f1a6ac0916da4bf79ae54ce6be4d5d7fae8d943cc3bab400e66e79cd0aec"
-    sha256 cellar: :any_skip_relocation, mojave:        "100623450a27784a84597f68cc03956ec715a7121cdffbe33d51126bb681392c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e63e0a586b7c7ffd735aa11519b7a7c2fdb65c34edd3f45339de8753a9616793"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a5f446cb406f5aafce83406573b0a808f718e4e8b3df3d112692b824d4912e45"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ba7c4a2af433caab8ca7d413629cb7a7f16c603bbe982029b0b9cf651e58b3d5"
+    sha256 cellar: :any_skip_relocation, catalina:      "aca52c8e6eb35cda498056f2047efbed677cda2632d9993f19b6b26f558dd82b"
+    sha256 cellar: :any_skip_relocation, mojave:        "aabedbf76babd3b74753cd478fc431a8b4da832de192c9cab733ba92564a4b1c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "35126cd0a047a47d7f08b3dc2a2967eee1d2263ef55c8eccafe4b4bfa9047385"
   end
 
   depends_on "go" => :build
