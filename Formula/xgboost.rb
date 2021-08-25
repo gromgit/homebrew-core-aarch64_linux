@@ -7,11 +7,11 @@ class Xgboost < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "b5365cde699802720656bfa80f19f09f49825fd0f3156a7ce6c5a4cd5ccaf84d"
-    sha256 cellar: :any,                 big_sur:       "42a3ec388bf05959fbd05c6b918cad2fba99a2a1812e9916e7ae9cd92dfb7af8"
-    sha256 cellar: :any,                 catalina:      "b27e1a0394848b9840c09198bda4cae9bc57314ce833082f701336c434bbd4c8"
-    sha256 cellar: :any,                 mojave:        "2a65f86dc8a2d9576c64a94f2296c481880482739d80dca988abf6a96e1ccf34"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1969ae0696e732650a04bbc7b1de2b7ff000b47dfb251d71a8354411ceec7a87"
+    sha256 cellar: :any,                 arm64_big_sur: "5db187f5a6d6c66a3fd546f7d1855cdfa102c67475de1289d3ec04dd7fbedec5"
+    sha256 cellar: :any,                 big_sur:       "e81b8fd6533fce3a66f0b013dfc0d3c0eede4b54d2071dc6933201d22b135f34"
+    sha256 cellar: :any,                 catalina:      "919b6d95848c782d2c330a7abbb273be7dd3babd4e38395b9ab2065bcea793d0"
+    sha256 cellar: :any,                 mojave:        "a0bc2283a8dfd93406e1b9449286eb4153f306c0cdea70fc88349e970ace4bf7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b1cd8501d05de50109670a59d23ad8d079e0b10ad5e43dc431058f02974e75fb"
   end
 
   depends_on "cmake" => :build
