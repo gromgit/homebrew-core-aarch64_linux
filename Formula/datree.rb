@@ -17,7 +17,7 @@ class Datree < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w -X github.com/datreeio/datree/cmd.CliVersion=v#{version}")
+    system "go", "build", *std_go_args(ldflags: "-s -w -X github.com/datreeio/datree/cmd.CliVersion=#{version}"), "-tags", "main"
   end
 
   test do
@@ -38,6 +38,6 @@ class Datree < Formula
     assert_match "k8s schema validation error: error while parsing: missing 'apiVersion' key",
       shell_output("#{bin}/datree test #{testpath}/invalidK8sSchema.yaml 2>&1", 1)
 
-    assert_equal "v#{version}\n", shell_output("#{bin}/datree version")
+    assert_equal "#{version}\n", shell_output("#{bin}/datree version")
   end
 end
