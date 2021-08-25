@@ -7,7 +7,7 @@ class GitFixup < Formula
   head "https://github.com/keis/git-fixup.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "9cba054279af11345ca5277b4984fbe627af6d576d872c0a412d3391a7ed25b7"
+    sha256 cellar: :any_skip_relocation, all: "3868823118314e8a8669fe02c51015ffa7e3d5f9cef9c892dcd464928622d2f6"
   end
 
   def install
