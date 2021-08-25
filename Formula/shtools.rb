@@ -1,8 +1,8 @@
 class Shtools < Formula
   desc "Spherical Harmonic Tools"
   homepage "https://shtools.github.io/SHTOOLS/"
-  url "https://github.com/SHTOOLS/SHTOOLS/releases/download/v4.8/SHTOOLS-4.8.tar.gz"
-  sha256 "c36fc86810017e544abbfb12f8ddf6f101a1ac8b89856a76d7d9801ffc8dac44"
+  url "https://github.com/SHTOOLS/SHTOOLS/releases/download/v4.9.1/SHTOOLS-4.9.1.tar.gz"
+  sha256 "5c22064f9daf6e9aa08cace182146993aa6b25a6ea593d92572c59f4013d53c2"
   license "BSD-3-Clause"
   head "https://github.com/SHTOOLS/SHTOOLS.git", branch: "master"
 
@@ -20,20 +20,11 @@ class Shtools < Formula
   def install
     system "make", "fortran"
     system "make", "fortran-mp"
-
-    pkgshare.install "examples/fortran/", "examples/ExampleDataFiles/"
-
-    lib.install "lib/libSHTOOLS.a", "lib/libSHTOOLS-mp.a"
-    include.install "include/fftw3.mod",
-                    "include/planetsconstants.mod",
-                    "include/shtools.mod",
-                    "include/ftypes.mod",
-                    "include/shtools.h"
-    share.install "man"
+    system "make", "install", "PREFIX=#{prefix}"
   end
 
   test do
-    cp_r pkgshare, testpath
+    cp_r "#{share}/examples/shtools", testpath
     system "make", "-C", "shtools/fortran",
                    "run-fortran-tests-no-timing",
                    "F95=gfortran",
