@@ -30,9 +30,10 @@ class Infer < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:  "e3f2d774f27d1daac2b41ed5cb2bcf1b180f9b6d6440ae5ddfb8d1c001c4413a"
-    sha256 cellar: :any, catalina: "2dcd6c8c088ee88b21f3740a770fd3f73850815aa1f9270d814bfdd4095d2fc4"
-    sha256 cellar: :any, mojave:   "b1e1ea3fd12e96a325ca3a5618032a0f9289caae1704afcab131b87a2104ad84"
+    sha256 cellar: :any, big_sur:      "2c27006c4ccbc05c6bb405c626d188e2dd5ca183a0a2f4441385def480ba4f34"
+    sha256 cellar: :any, catalina:     "7a2816d33cea3053531f51402e0145e4e8ee7537570ba2a580c3ef8aaff379fc"
+    sha256 cellar: :any, mojave:       "2bda6a47ff87c9d79a3f937c9cf24771798107c1bc215823e6156d6ba414f40d"
+    sha256               x86_64_linux: "987d26d95d3e073a96c683710ab0298a1674d2ee6e7a2ee4cb0d8914f2b0139d"
   end
 
   depends_on "autoconf" => :build
