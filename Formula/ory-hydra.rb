@@ -11,11 +11,12 @@ class OryHydra < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "77854c18f822f5542273f516e349dd6d0e348e099e72b958eb9fdbbddafdc05d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9a76c22d363440fe2b8cb6907507fe7ab944961689f8cca84b59668b6911a3f5"
-    sha256 cellar: :any_skip_relocation, catalina:      "bbc3f75a8bb71cc6f9877098ab6d2dffb68c7edb87e7e2cb2d2221d8359aa482"
-    sha256 cellar: :any_skip_relocation, mojave:        "7d281cb2973926ffe5eaacc652622a9dc888a8461fad2fbf14d49538b923faf0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c8d71f7a3455a2eb1848439df7beb1acaec7169f6ad461c229b1909e4f3c8a4e"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "37f660bfd89f1bc766d06397f71087bdbc6ed7cea28f25e1ab282d55fb1ab19e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "db58ee23f24377e5db80a9137b7c30c596540125705292f19bb921d4bb573e4d"
+    sha256 cellar: :any_skip_relocation, catalina:      "fc6c7dda2fee18826f95fecb6740219b090522bc95fe364efe8117dba9954c52"
+    sha256 cellar: :any_skip_relocation, mojave:        "9a9c01bb5fc78a8b2e0ccabc85963687eac4b4251df7be3cf15911553765bef0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "81d3fc4944599a8101e9e0f985f0c3a84632c5bea97b72e6b531f2cdd3bdddbf"
   end
 
   depends_on "go" => :build
