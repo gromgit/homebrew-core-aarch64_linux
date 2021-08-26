@@ -2,8 +2,8 @@ class Lc0 < Formula
   desc "Open source neural network based chess engine"
   homepage "https://lczero.org/"
   url "https://github.com/LeelaChessZero/lc0.git",
-      tag:      "v0.27.0",
-      revision: "6bb93fbd1ac94b8e64943e520630c2f1db9d7813"
+      tag:      "v0.28.0",
+      revision: "3982cc0e74b576476c875da6fa0ff81164287425"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -33,13 +33,6 @@ class Lc0 < Formula
   resource "network" do
     url "https://training.lczero.org/get_network?sha=00af53b081e80147172e6f281c01daf5ca19ada173321438914c730370aa4267", using: :nounzip
     sha256 "12df03a12919e6392f3efbe6f461fc0ff5451b4105f755503da151adc7ab6d67"
-  end
-
-  # Fix compile error due to missing #include <condition_variable>
-  # Remove in the next release
-  patch do
-    url "https://github.com/LeelaChessZero/lc0/commit/997257a16fc74c848ab55e475c4d233d78838506.patch?full_index=1"
-    sha256 "5f4fb6b730a04bfd36567302bc4ad9d22f7f69c55c6fad35047a18d514210758"
   end
 
   def install
