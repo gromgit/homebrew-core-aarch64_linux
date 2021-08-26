@@ -6,6 +6,14 @@ class Airspyhf < Formula
   license "BSD-3-Clause"
   head "https://github.com/airspy/airspyhf.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_big_sur: "687651c9d95e06436df3a43a0dca6e3d39747bbf2d92892edf44bddd964c5345"
+    sha256 cellar: :any,                 big_sur:       "e41261aeca3a632c9c2cb265e321fe2ff88820901ea1d3ea01e42e2a1ba0413a"
+    sha256 cellar: :any,                 catalina:      "d8b783edf8b206ba8228c96bde21a0dfb42771bc5c46e3493f3dd995a0dfe4d1"
+    sha256 cellar: :any,                 mojave:        "bf9f1a8213e873c37f1ebae5b6d986774abcf882c272932badffbf3e23cacddb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e9d30b5b22a4dc96558528d46a73cdb6102b49601f9fe04abfc3f9c812606600"
+  end
+
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "libusb"
