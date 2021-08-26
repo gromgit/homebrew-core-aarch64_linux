@@ -13,10 +13,10 @@ class PhpAT73 < Formula
   end
 
   bottle do
-    sha256 big_sur:      "5932ad49302d7cd20e502eee51cfb091838d90c665e594c4e1c2c9f274c0af4a"
-    sha256 catalina:     "b5057607a78bf0aebbd5f55e8dcbff9835e9f6552228c7b979d626d144e3ec81"
-    sha256 mojave:       "fc756662888e4b7273c08e696c9f8b0f335de82322ed1518a260a5713068c5e8"
-    sha256 x86_64_linux: "234ee1ba07960222370fd6dbaf1b8747d0cacb3efb277ceed14dc37b6b0815bd"
+    sha256 big_sur:      "bad975da7f0a3ceb32f127ab52b75e7ec7d2d652ee2068270533de92aca87571"
+    sha256 catalina:     "f331da566fa7488fcfb77f848e831271c6167141e34fd3267f25f55fd4cb5286"
+    sha256 mojave:       "57892c2b4d244a3eae269241915527a813942496a0b6c746fd33416ae555a0b5"
+    sha256 x86_64_linux: "07b6ac6ed9be7da6262cf112efe61a851ef5160b015c0cd6ba540b653f3c9620"
   end
 
   keg_only :versioned_formula
