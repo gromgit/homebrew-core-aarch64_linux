@@ -7,10 +7,10 @@ class Slides < Formula
   head "https://github.com/maaslalani/slides.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2ad9d282dd70dff8686a1804c6fac087521eaf465b2edd3f745f0dffa78f6174"
-    sha256 cellar: :any_skip_relocation, big_sur:       "420a4a7eb301fe4888d5eba71629e693ef0227017c0d6c548b6200323d3886b2"
-    sha256 cellar: :any_skip_relocation, catalina:      "14d458824951b4254324782a0a4c74c872db3a46604e22405d35d0a9c32147d0"
-    sha256 cellar: :any_skip_relocation, mojave:        "32b13c126a51256d58eaec1fe02d748ed7a6f6a825c7b83ccf31677bab9dd90f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e3b32d0162ec01524c65ea493caf0f85b4deb3f1170db200af192e0b86ffbb0c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "38098f9ad9dad636274924e4455a8a7a014050e23f62b92461159fc94aabc9cb"
+    sha256 cellar: :any_skip_relocation, catalina:      "58c05f8d308375761bf2acb2477103206afe5fbbf721359cc8d387be20edb5b7"
+    sha256 cellar: :any_skip_relocation, mojave:        "c015e54815e32ce310f4743f971bfbb2ef44afc662c7b1714908cdc7254d2b88"
   end
 
   depends_on "go" => :build
