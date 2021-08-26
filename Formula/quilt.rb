@@ -3,7 +3,8 @@ class Quilt < Formula
   homepage "https://savannah.nongnu.org/projects/quilt"
   url "https://download.savannah.gnu.org/releases/quilt/quilt-0.66.tar.gz"
   sha256 "314b319a6feb13bf9d0f9ffa7ce6683b06919e734a41275087ea457cc9dc6e07"
-  license "GPL-2.0"
+  license "GPL-2.0-or-later"
+  revision 1
   head "https://git.savannah.gnu.org/git/quilt.git", branch: "master"
 
   livecheck do
@@ -31,6 +32,7 @@ class Quilt < Formula
     ]
     on_macos do
       args << "--with-sed=#{HOMEBREW_PREFIX}/bin/gsed"
+      args << "--with-stat=/usr/bin/stat" # on macOS, quilt expects BSD stat
     end
     on_linux do
       args << "--with-sed=#{HOMEBREW_PREFIX}/bin/sed"
