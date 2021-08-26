@@ -15,6 +15,7 @@ class Odt2txt < Formula
     sha256 cellar: :any_skip_relocation, sierra:        "88fb433f9e72c6c727f9af5ff017d6bac07f29bc64bfa59f6b53d4ab52f42cb3"
     sha256 cellar: :any_skip_relocation, el_capitan:    "4b86c07be0d96899d76adee3bf65390beb4288eeddbfb531dfcdbc3f17ff5bc8"
     sha256 cellar: :any_skip_relocation, yosemite:      "2005cd3ccfc24aa3c188339a63d48454636ace229cffc6b2add8ecf05eea40a1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2b48cef7a1fb7bf172435fbf6b465ea9fde29785f9be3d088075ad0e5224cfab"
   end
 
   uses_from_macos "zlib"
