@@ -13,10 +13,11 @@ class Openimageio < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "5c28aef2cf25dbf3453719c4712f6783f49b2f2f0e9482cf8bd2b473ef3e34ac"
-    sha256 cellar: :any, big_sur:       "bbad204a431acf7b4dd8f8c9a4106f60aae429b449e5a5981931c4a31ed3f934"
-    sha256 cellar: :any, catalina:      "c348b0fc2f14951144df8eb71f98938f2754be9689023583b6cfe0e21776344f"
-    sha256 cellar: :any, mojave:        "e9a7385f856a14fbceb940cafee67b94c8c50d095f5507a86323eed978d888e3"
+    sha256 cellar: :any,                 arm64_big_sur: "5c28aef2cf25dbf3453719c4712f6783f49b2f2f0e9482cf8bd2b473ef3e34ac"
+    sha256 cellar: :any,                 big_sur:       "bbad204a431acf7b4dd8f8c9a4106f60aae429b449e5a5981931c4a31ed3f934"
+    sha256 cellar: :any,                 catalina:      "c348b0fc2f14951144df8eb71f98938f2754be9689023583b6cfe0e21776344f"
+    sha256 cellar: :any,                 mojave:        "e9a7385f856a14fbceb940cafee67b94c8c50d095f5507a86323eed978d888e3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "86d2bf8a1f265632ef790898411d7add7f9c0753927b4a239fc1f0c5681e162d"
   end
 
   depends_on "cmake" => :build
