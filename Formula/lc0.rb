@@ -7,11 +7,11 @@ class Lc0 < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e9dc041c748fee70f187c04373ca80ba8c274d1b4b9a38ee135e6b4d6ce419fc"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0966b60547f4f559ed7bd03cdd0bbe41abfed8e8a69b8553eb790e120aac0e24"
-    sha256 cellar: :any_skip_relocation, catalina:      "ca05132c5b944255ce14f18960a59fa657d3dae1b9c088ff526b8763af793efc"
-    sha256 cellar: :any_skip_relocation, mojave:        "7578de28c6a91e884166aa033e4682a3d4992390c85fd74c811acb584b1b3f45"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f827ee54a8c9ccd546720c78b71dae3af5cde850ebeb5483ca7e04fae09cdc2c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "36aa6aad76aee88ce231dc5a0aac948f097055351813351876acd08dfc450a03"
+    sha256 cellar: :any_skip_relocation, big_sur:       "994f3b0045579eccda6c5eb1241a4484c202bb9c8528184ba2e4eee770a7e2c5"
+    sha256 cellar: :any_skip_relocation, catalina:      "e37cf24d564b5649d873692e5162a90e7e1840e2346326be86ef0ba25c8b7737"
+    sha256 cellar: :any_skip_relocation, mojave:        "650ff1cdf5e4aad508572322e89010722c92bf30b89ed07f95cdec6dd1fd0140"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4d89547675b9eb3c62073100047d9f9d91e51f9d3063655cf38e7f836dd28063"
   end
 
   depends_on "cmake" => :build
