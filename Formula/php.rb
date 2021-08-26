@@ -13,11 +13,11 @@ class Php < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "486b101dd43b658040a87952d76ee2e7436ff3935bee29621bd87c0ca40e1454"
-    sha256 big_sur:       "6afd14f34982c983f863a1bc281dca48c9de8294cbcd1778eb43bc7fd1e6191a"
-    sha256 catalina:      "e2107f99f687496970c1d820d5d961a9a9f90aa16e8f380edd7b497b99dbc241"
-    sha256 mojave:        "48cf18f9c20f8703113346a367205b9a9f4656354cd269b9e7935605830633a3"
-    sha256 x86_64_linux:  "f0cba6cf42bdafbe348b9837a6a7cd98bc712080d5fc16f3e0b5da87102f0ec8"
+    sha256 arm64_big_sur: "27576c91e718f0a14661eaf5d2825728f75d4ddf40579eb635286b1e6e90139e"
+    sha256 big_sur:       "663433b2ede05cf5017c1b81ccb3d44602f2c23b63a64da85bda64386bc37c8c"
+    sha256 catalina:      "81f26960c0602ebcac8a61c0ab83c5e611d97f8ee5ad3f773826e6edd2bc24d7"
+    sha256 mojave:        "4bb748d4600f2d4a544eeeb5701216816cd5a3e86f17c816ca25990234e43a72"
+    sha256 x86_64_linux:  "4ec65672f4a4579076afdec1d7adaad97313a92ea5fefb51680c38079cd4117a"
   end
 
   head do
