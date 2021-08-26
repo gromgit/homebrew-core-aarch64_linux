@@ -7,11 +7,11 @@ class Watchman < Formula
   head "https://github.com/facebook/watchman.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "896a77c6c7289380d1a173b0c97b2e64418e5a4098cf01c882a8c75748a4b074"
-    sha256 cellar: :any, big_sur:       "c744264cd104d9881b39ae9262305c2ebc788c1914a5228fbe856450e9e07ff4"
-    sha256 cellar: :any, catalina:      "31d96cf969b3827beacae1ae9be47b92adddcede3b2903c51361155d6170f438"
-    sha256 cellar: :any, mojave:        "e8fc3b77dfe13f30a87e2235222f66f91d3f0f313331633d6ccfbcd608086996"
-    sha256               x86_64_linux:  "dad1d7f0d9cc4a79b06fda5d235ab623f4a54558d2cc8999bfad2c3569df364b"
+    sha256 cellar: :any, arm64_big_sur: "9363928d2d8095b9711b6553ba948a1616b91759851ce6cb6abc3f30e5aa1200"
+    sha256 cellar: :any, big_sur:       "201b201993203249c81b3f9fc68335ded5e9eb5463bc08dfb547f45892d0f715"
+    sha256 cellar: :any, catalina:      "2fdc3d25d7b265c293dd318e2d380c4a6b61fcf168c9e25a5da7ea68b5ffd605"
+    sha256 cellar: :any, mojave:        "1f1e6aca01ed8009a0fb4bc408d9b693ceaf81cc037aeb1589e441fa145e9057"
+    sha256               x86_64_linux:  "cfeff58830a5b0a2bbb3fc0f0a0ba58a2a590bceddb906b2198ada4750316276"
   end
 
   depends_on "cmake" => :build
