@@ -15,7 +15,7 @@ class Flex < Formula
   end
 
   head do
-    url "https://github.com/westes/flex.git"
+    url "https://github.com/westes/flex.git", branch: "master"
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
@@ -39,6 +39,12 @@ class Flex < Formula
       ENV.prepend_path "PATH", Formula["gnu-sed"].opt_libexec/"gnubin"
 
       system "./autogen.sh"
+    end
+
+    # Fix segmentation fault during install on Ubuntu 18.04 (caused by glibc 2.26+),
+    # remove with the next release
+    on_linux do
+      ENV.append "CPPFLAGS", "-D_GNU_SOURCE"
     end
 
     system "./configure", "--disable-dependency-tracking",
