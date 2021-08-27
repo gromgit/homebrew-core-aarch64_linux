@@ -13,14 +13,15 @@ class Libfishsound < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "3ec17aed1c22c99831e01e1938bf9b240439f45c130422dd90e06ccd8a57cd74"
-    sha256 cellar: :any, big_sur:       "a1ae8b29698509de3de412402ce463cf32a08573348526dc42020731fdaff314"
-    sha256 cellar: :any, catalina:      "5599c6eaed21c2f66ebb8209ca8e436fd306214de6d9db6ccf21bd9c2710e1b7"
-    sha256 cellar: :any, mojave:        "f232242d49e8c2ae954e282e879e4a4a86b80d3e46364d74247af92efd613d96"
-    sha256 cellar: :any, high_sierra:   "726c79b6e3ce5d71e9cf1d6b556a6daed33b5e8bd7269e2219b1474549dac17d"
-    sha256 cellar: :any, sierra:        "50187bc6adea9322f20e1706d66859c941d6d2e8d1d8bfab091f088b20061760"
-    sha256 cellar: :any, el_capitan:    "9cf94c3c6963895940e8720aef21c29b001257c918fce6b65685c33f8430f0e4"
-    sha256 cellar: :any, yosemite:      "4fcfc4270d73ac2b0e8d8a4d1fe6b94a1093502b802ed327febb5286ad5140b9"
+    sha256 cellar: :any,                 arm64_big_sur: "3ec17aed1c22c99831e01e1938bf9b240439f45c130422dd90e06ccd8a57cd74"
+    sha256 cellar: :any,                 big_sur:       "a1ae8b29698509de3de412402ce463cf32a08573348526dc42020731fdaff314"
+    sha256 cellar: :any,                 catalina:      "5599c6eaed21c2f66ebb8209ca8e436fd306214de6d9db6ccf21bd9c2710e1b7"
+    sha256 cellar: :any,                 mojave:        "f232242d49e8c2ae954e282e879e4a4a86b80d3e46364d74247af92efd613d96"
+    sha256 cellar: :any,                 high_sierra:   "726c79b6e3ce5d71e9cf1d6b556a6daed33b5e8bd7269e2219b1474549dac17d"
+    sha256 cellar: :any,                 sierra:        "50187bc6adea9322f20e1706d66859c941d6d2e8d1d8bfab091f088b20061760"
+    sha256 cellar: :any,                 el_capitan:    "9cf94c3c6963895940e8720aef21c29b001257c918fce6b65685c33f8430f0e4"
+    sha256 cellar: :any,                 yosemite:      "4fcfc4270d73ac2b0e8d8a4d1fe6b94a1093502b802ed327febb5286ad5140b9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5db56944c47f7f4084a4645ef252841be006ad54ee48fb55530eda206e6732c3"
   end
 
   depends_on "pkg-config" => :build
