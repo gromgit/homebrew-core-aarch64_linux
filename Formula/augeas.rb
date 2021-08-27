@@ -4,6 +4,7 @@ class Augeas < Formula
   url "http://download.augeas.net/augeas-1.12.0.tar.gz"
   sha256 "321942c9cc32185e2e9cb72d0a70eea106635b50269075aca6714e3ec282cb87"
   license "LGPL-2.1"
+  revision 1
 
   livecheck do
     url "http://download.augeas.net/"
@@ -22,13 +23,12 @@ class Augeas < Formula
 
   head do
     url "https://github.com/hercules-team/augeas.git"
-
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "bison" => :build
-    depends_on "libtool" => :build
   end
 
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "bison" => :build
+  depends_on "libtool" => :build
   depends_on "pkg-config" => :build
   depends_on "readline"
 
@@ -40,6 +40,9 @@ class Augeas < Formula
     if build.head?
       system "./autogen.sh", *args
     else
+      # autoreconf is needed to work around
+      # https://debbugs.gnu.org/cgi/bugreport.cgi?bug=44605.
+      system "autoreconf", "--force", "--install"
       system "./configure", *args
     end
 
