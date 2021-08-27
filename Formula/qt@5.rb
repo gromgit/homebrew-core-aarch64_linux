@@ -10,10 +10,12 @@ class QtAT5 < Formula
   license all_of: ["GFDL-1.3-only", "GPL-2.0-only", "GPL-3.0-only", "LGPL-2.1-only", "LGPL-3.0-only"]
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "ca6ad27d24c751b85f2b577df3773d52b48f0f286c5b1414ae8d1437ad72a3e4"
-    sha256 cellar: :any, big_sur:       "e7b8af5d4a61e1ab8ec6b564ed998adca00096b0d9253ab1869ffceae386e90e"
-    sha256 cellar: :any, catalina:      "bb2f387b24ff94be3bd555be8201ac8b458bf2927e912cf3d5543fb0057e826d"
-    sha256 cellar: :any, mojave:        "b683d62158780905d1bcf43f4159169db3cd4ca196dd4e12d3fd261dc4825d6f"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_big_sur: "6128558bbf98848bb762d8e1e532303b694bf120d4f9be16e1a969ba62fa3d22"
+    sha256 cellar: :any,                 big_sur:       "a11186f808f81ccae91a1b79d14a1014428f744a0943688e2fd2b95ba989ddc2"
+    sha256 cellar: :any,                 catalina:      "02280e07b5fe37344d834df7901b1040aa9f257d668a8d6b76382bd97bc91a68"
+    sha256 cellar: :any,                 mojave:        "0089f9216563b73d1920ce1c6e359e2a83e97a07ec8e83162e7c7503bcd36318"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "082ee515cd0e4b9f23cf98a6734adf53e73bbb8fd1c1fac1bc8a8d0281902df4"
   end
 
   keg_only :versioned_formula
