@@ -7,7 +7,7 @@ class Winetricks < Formula
   head "https://github.com/Winetricks/winetricks.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "8a0d789f5afc57d083be7483626af1f80ac2a56055288d9c7dab572a9f1ae929"
+    sha256 cellar: :any_skip_relocation, all: "322c2e6e1dd72073bfb03a230820eb039592c016103d0c442739e9f6c9f3470b"
   end
 
   depends_on "cabextract"
