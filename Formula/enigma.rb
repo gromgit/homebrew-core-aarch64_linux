@@ -11,10 +11,11 @@ class Enigma < Formula
   end
 
   bottle do
-    sha256 cellar: :any, catalina:    "38e4eb761c8c03ec2ff3221d576335d60c60ecb5f369e69098d34740118d48e4"
-    sha256 cellar: :any, mojave:      "8011aae1fa4e166dd9fb406844b1efcb246eb26ecc4e29c67dec71a3f8a7b231"
-    sha256 cellar: :any, high_sierra: "9eeb7a516f7188b38bc1a9e9ea2450db22391e65401d1377028881c11acbcc15"
-    sha256 cellar: :any, sierra:      "cdca7a198f3decfc3d387d590f84a7c3125adb06185469afa737eb5d61c150b3"
+    sha256 arm64_big_sur: "5b867b942c96de07f01505e2208cf578f744425346ba180e96ba3d569c4cc15c"
+    sha256 big_sur:       "679839e6002ae198d8f62c1c1379982630fa2173f41b8cf63b7b48b91c606dac"
+    sha256 catalina:      "78472e57abc53c73a637928f6d58b075f387c7e15e140858e4a3b0c59fa1e2ae"
+    sha256 mojave:        "fab7be7e356416ceeb52dd5a078349ef0a40c7f0a2f703ef43c9c7aeeaa1e239"
+    sha256 x86_64_linux:  "7d28c5a21e674b2cbc1627a807370916695ff7feba86230fd4fce2e6cc3cb939"
   end
 
   head do
