@@ -8,10 +8,10 @@ class TrojanGo < Formula
   head "https://github.com/p4gefau1t/trojan-go.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ab04942c62290d5d9a31fb4b8effe4faaec41cfeb1e2488182a81cb3f7b2ade1"
-    sha256 cellar: :any_skip_relocation, big_sur:       "35b6d8e1dfa0b8b7ad6e34c7c7b8a2afd7354734dfabfd5ce4469a258ff23cc5"
-    sha256 cellar: :any_skip_relocation, catalina:      "bdde15ba8bda689976496f1609c23f262d60a97ea83dbea54633e4900e6005db"
-    sha256 cellar: :any_skip_relocation, mojave:        "78eaa763a2eaedcf0521a4b32d51ea179f5e89d6413a6db3b74a659488e60d54"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7a27d4127ade04f1df37610525f60dfe80bb6647fa2bf789c9fb40834a5ca470"
+    sha256 cellar: :any_skip_relocation, big_sur:       "40dc5b734715a7bd6481b35a8a83f7baed65b3c937e6ea448bf572bd1114fe8d"
+    sha256 cellar: :any_skip_relocation, catalina:      "8f861e3af6b0a8ca7f9fbcd051e5ecc2931c1ee140740c704932075f2d063db7"
+    sha256 cellar: :any_skip_relocation, mojave:        "defedd1f45e3317677a9b26ef16d84f171f409ac3a25f173a97358d3583f72f4"
   end
 
   depends_on "go" => :build
