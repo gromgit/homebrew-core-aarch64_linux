@@ -14,6 +14,7 @@ class SNail < Formula
     sha256 big_sur:       "20825afa468b7d368b71dfc73314412eb9e6930cecd5794f71b527422e63d28c"
     sha256 catalina:      "e2dd4f1ede94f221fffffce676a2a605edb49235d5bf875e2cad917c9a4d6c73"
     sha256 mojave:        "1c33bcd338bf27c5f7f3a61e9b6a4070a5cf9e9e7cfefd58afe178959dd35f5a"
+    sha256 x86_64_linux:  "b3331d1cd2c8856e02fc3ba876530df8538ec52dd5bef29ccfdc88cbbe71fe89"
   end
 
   depends_on "awk" => :build
