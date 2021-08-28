@@ -21,6 +21,8 @@ class Vmdktool < Formula
     sha256 cellar: :any_skip_relocation, yosemite:      "f19ae3ac92ae4400c7139771f3a5ec07d32bf2e3ed49bfa7add445f8a680ef0c"
   end
 
+  uses_from_macos "zlib"
+
   def install
     system "make", "CFLAGS='-D_GNU_SOURCE -g -O -pipe'"
 
