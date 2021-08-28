@@ -13,11 +13,11 @@ class FleetCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "787b39973c33b6f384daf4200565a9987a1de43a4fdea793635f508831cd45ef"
-    sha256 cellar: :any_skip_relocation, big_sur:       "774825e3423df7d450093e89b28dad316e771ff70ef9bd9700c6487b9203a61e"
-    sha256 cellar: :any_skip_relocation, catalina:      "ba819e91743e38546b7c84eb0f4fb0a2bc74fd69bdff76e1b86987d7f2d8cd7b"
-    sha256 cellar: :any_skip_relocation, mojave:        "92879bfb176b7f43706852ac3ecb665158e70a777e1d6c143758f507201ccdb9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b05da4f3255a02f0baee3dcc1293491c90a194699183c0c0b44714a7bdd4b7ef"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1741fcb37703fbb31d407fb0a4eb35d32887ff00ef5870ce66f7c9b9fe767384"
+    sha256 cellar: :any_skip_relocation, big_sur:       "257553bb3ee89b4b5b2c9a1afae3ef9a44f3c9c080dc64a5b3eb9a6d5b428ebe"
+    sha256 cellar: :any_skip_relocation, catalina:      "603685447d15afa041674ef58c0695f4f39d475164ccf64c2b93f1bd95aab4a8"
+    sha256 cellar: :any_skip_relocation, mojave:        "32fda21995c1d951e28b199836b868682d284d7bd27138220f3d5990c524d092"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c8070dbeb4fd1f7ee7a78cef4f0642c8bc4f0000e7e02bd94993934f99eddc0b"
   end
 
   depends_on "go" => :build
