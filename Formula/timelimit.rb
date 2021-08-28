@@ -3,6 +3,7 @@ class Timelimit < Formula
   homepage "https://devel.ringlet.net/sysutils/timelimit/"
   url "https://devel.ringlet.net/files/sys/timelimit/timelimit-1.9.2.tar.gz"
   sha256 "320a72770288b2deeb9abbd343f9c27afcb6190bb128ad2a1e1ee2a03a796d45"
+  license "BSD-2-Clause"
 
   livecheck do
     url :homepage
@@ -31,7 +32,7 @@ class Timelimit < Formula
   end
 
   test do
-    assert_equal "timelimit: sending warning signal 15",
+    assert_match "timelimit: sending warning signal 15",
       shell_output("#{bin}/timelimit -p -t 1 sleep 5 2>&1", 143).chomp
   end
 end
