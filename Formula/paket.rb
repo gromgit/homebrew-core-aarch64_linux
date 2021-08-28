@@ -6,7 +6,7 @@ class Paket < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "1c7f7937a464bbfad128b19e263a1496c857eeadd1c2fedad04e1678fc35767b"
+    sha256 cellar: :any_skip_relocation, all: "72f03ee7c364a9b4bbd247743393a1f30256415a1ce2a2d25f1cfbfc66af2dc8"
   end
 
   depends_on arch: :x86_64 # mono is not yet supported on ARM
