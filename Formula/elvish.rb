@@ -1,10 +1,10 @@
 class Elvish < Formula
   desc "Friendly and expressive shell"
   homepage "https://github.com/elves/elvish"
-  url "https://github.com/elves/elvish/archive/v0.16.1.tar.gz"
-  sha256 "3874abf8bfd4aab46f8784678c00e6bb17a4e807208a055cf008994d153e1328"
+  url "https://github.com/elves/elvish/archive/v0.16.3.tar.gz"
+  sha256 "ea9d594070cff58ed9caedf4619ee195bfce179f79b9a8d5e7a635ce5cbba551"
   license "BSD-2-Clause"
-  head "https://github.com/elves/elvish.git"
+  head "https://github.com/elves/elvish.git", branch: "master"
 
   bottle do
     rebuild 1
@@ -16,13 +16,6 @@ class Elvish < Formula
   end
 
   depends_on "go" => :build
-
-  # Support go 1.17, remove when upstream patch is merged/released
-  # https://github.com/elves/elvish/pull/1390
-  patch do
-    url "https://github.com/elves/elvish/commit/aae0174d59f1bb7c54168fc57f71d4c2b8721838.patch?full_index=1"
-    sha256 "b7d04f3684e74a30883258be17a408b1201c7f7cb353d7b0e701c84c02e1b281"
-  end
 
   def install
     system "go", "build",
