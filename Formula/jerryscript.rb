@@ -54,7 +54,7 @@ class Jerryscript < Formula
       }
     EOS
     system ENV.cc, "test.c", "-o", "test", "-I#{include}", "-L#{lib}",
-                   "-ljerry-core", "-ljerry-port-default", "-ljerry-ext"
+                   "-ljerry-core", "-ljerry-port-default", "-ljerry-ext", "-lm"
     assert_equal "1 + 2 = 3", shell_output("./test").strip, "JerryScript can add number"
   end
 end
