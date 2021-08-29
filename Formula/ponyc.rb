@@ -7,10 +7,10 @@ class Ponyc < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:      "86d30578e51e294be0d6b20e4b145ec138a8234555771e675d7d5ae123d3a431"
-    sha256 cellar: :any_skip_relocation, catalina:     "4c167edc07f753e2a118575d4cc3146949fe907993e26fd30ddf0a3ba3d1a8f7"
-    sha256 cellar: :any_skip_relocation, mojave:       "b4a829497a0e202e44640ec71f96ddea2358f518359c95cfabce33a6a0195fa2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "19f2bbdaace1fe667065141d58e12ad0fb6291325d01c89a20ddfff2c6afbf1d"
+    sha256 cellar: :any_skip_relocation, big_sur:      "e99e8ae8b4d547ce9cbb7b04a3081e2769495ce52d7637fcb9b3b9506d5100ec"
+    sha256 cellar: :any_skip_relocation, catalina:     "2cf969c388b4834880b0a766cdf9ecbf9d8a091ec1ea6bba81d2a157dcb99e64"
+    sha256 cellar: :any_skip_relocation, mojave:       "694a5200ac1cb38a5253f4e7f87fed24007a45807048676c463234d65d374eb6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "6b4f18e4af9be02c39e0525b658d630a2db001dac7da0cf059d3c91196a53ce6"
   end
 
   depends_on "cmake" => :build
