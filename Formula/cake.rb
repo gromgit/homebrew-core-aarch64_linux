@@ -6,7 +6,7 @@ class Cake < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "dc27c5bfd2d23f266be2027a34cbffddc46f33e70381f663e19269bbdf3e8464"
+    sha256 cellar: :any_skip_relocation, all: "a6f03c118ac1931711fa751443847e3b4bea3a89a7dfd4fa13c968629342b7c4"
   end
 
   depends_on "mono"
