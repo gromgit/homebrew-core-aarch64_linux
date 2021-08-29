@@ -8,11 +8,11 @@ class Archey4 < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a533ce21021e9fdab9171f8926c07c5a1e7a37199c5cbe939ce6eb9ee38f6d69"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7a61e23a65173021839e70aaf664c7fc92ebdff24b975c685fecd8aa23746453"
-    sha256 cellar: :any_skip_relocation, catalina:      "fdcf88893069bd62b09894b39dc01c1d8fc27e48f14ef9125735db74d44ad86f"
-    sha256 cellar: :any_skip_relocation, mojave:        "8c41763022d97b6780e5de02d9deba4d1e896170951edbfe883d0b5d37be6f59"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1169e3370902278f58eef29a5da616dcf0852b91639ced4dccb6f74fe5d81b2b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e0148a6dd47f4293ae1506680fdfec56d76fdd9bdbfbb4c76da521c79fc55a39"
+    sha256 cellar: :any_skip_relocation, big_sur:       "be860b92249bc5132f9ef0e4ae96acb063e3043de10382794a3dd28d7d8140a8"
+    sha256 cellar: :any_skip_relocation, catalina:      "1ac1530bfc83776938983bf397bf38cc5a5108e2fa4824e457a4ecda882258b8"
+    sha256 cellar: :any_skip_relocation, mojave:        "a75ec9eb60d3c796e5194c27dd5fd3f0de0aac132fea3b9d2509c32a13b078ad"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "379e5d93a626a8dcf02e010efcf80dae9a54030ed89009972197e663c99617ef"
   end
 
   depends_on "python@3.9"
