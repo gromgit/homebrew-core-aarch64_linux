@@ -1,8 +1,8 @@
 class Librealsense < Formula
   desc "Intel RealSense D400 series and SR300 capture"
   homepage "https://github.com/IntelRealSense/librealsense"
-  url "https://github.com/IntelRealSense/librealsense/archive/v2.48.0.tar.gz"
-  sha256 "7eda3332f793c0290d95453e805df81e6ef1ed28e3b3f7d1e274e9901f9ca906"
+  url "https://github.com/IntelRealSense/librealsense/archive/v2.49.0.tar.gz"
+  sha256 "2578ea0e75546aeebd908da732f52e0122bf37750d5a45f3adf92945a673aefd"
   license "Apache-2.0"
   head "https://github.com/IntelRealSense/librealsense.git"
 
