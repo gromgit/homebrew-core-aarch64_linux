@@ -6,9 +6,7 @@ class Mat2 < Formula
   license "LGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "2cf257a8aaf56858e195df29823cb3fdef6b25deb2c7df0a19d17e02044bfc05"
-    sha256 cellar: :any_skip_relocation, catalina: "6134535ba8f2fd9b654df05cb0398eb167140ff636e8988228791102227695c0"
-    sha256 cellar: :any_skip_relocation, mojave:   "130e341149d1005c85efc2b5421b133f8897b98913b27186ef1360c3de138726"
+    sha256 cellar: :any_skip_relocation, all: "d4521aaeb4a33e93180be0d1fe846d4d78ff2d04089219c9c08d1beec69679ff"
   end
 
   depends_on "exiftool"
