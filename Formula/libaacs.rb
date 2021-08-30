@@ -3,7 +3,7 @@ class Libaacs < Formula
   homepage "https://www.videolan.org/developers/libaacs.html"
   url "https://download.videolan.org/pub/videolan/libaacs/0.11.0/libaacs-0.11.0.tar.bz2"
   sha256 "6d884381fbb659e2a565eba91e72499778635975e4b3d6fd94ab364a25965387"
-  license "LGPL-2.1"
+  license "LGPL-2.1-or-later"
 
   bottle do
     sha256 cellar: :any, arm64_big_sur: "dcbccde309919c3349987341fda3259e218549d5ec5c34c38c628ff6ada98bce"
@@ -23,6 +23,11 @@ class Libaacs < Formula
 
   depends_on "bison" => :build
   depends_on "libgcrypt"
+
+  uses_from_macos "flex" => :build
+
+  # Fix missing include.
+  patch :DATA
 
   def install
     system "./bootstrap" if build.head?
@@ -50,3 +55,16 @@ class Libaacs < Formula
     system "./test"
   end
 end
+__END__
+diff --git a/src/devtools/read_file.h b/src/devtools/read_file.h
+index 953b2ef..d218417 100644
+--- a/src/devtools/read_file.h
++++ b/src/devtools/read_file.h
+@@ -20,6 +20,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <errno.h>
++#include <sys/types.h>
+
+ static size_t _read_file(const char *name, off_t min_size, off_t max_size, uint8_t **pdata)
+ {
