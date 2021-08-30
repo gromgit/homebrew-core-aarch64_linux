@@ -12,6 +12,14 @@ class YtDlp < Formula
     regex(%r{href=.*?/tag/v?(\d+(?:[.-]\d+)+)["' >]}i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "96d6684e34d20fa121b4bad4c0706f024bb1a406ece55db3a188e0e4bd8f08c5"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3d5e6d8606ec77e6c992a986ed964a1d8a5b45464d59bbf2d99d7130afba3c76"
+    sha256 cellar: :any_skip_relocation, catalina:      "3d5e6d8606ec77e6c992a986ed964a1d8a5b45464d59bbf2d99d7130afba3c76"
+    sha256 cellar: :any_skip_relocation, mojave:        "3d5e6d8606ec77e6c992a986ed964a1d8a5b45464d59bbf2d99d7130afba3c76"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1b6e65096ceac3c5270ad48b2e5f8381317dbbbe687052f1003b55d927fc6454"
+  end
+
   depends_on "pandoc" => :build
   depends_on "python@3.9"
   uses_from_macos "zip" => :build
