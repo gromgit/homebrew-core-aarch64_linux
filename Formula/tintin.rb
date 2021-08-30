@@ -1,8 +1,8 @@
 class Tintin < Formula
   desc "MUD client"
   homepage "https://tintin.mudhalla.net/"
-  url "https://github.com/scandum/tintin/releases/download/2.02.11/tintin-2.02.11.tar.gz"
-  sha256 "b39289ef1e26d2f5b7f7e33f70bcd894060c95dd96c157bb976f063c59a8b1f5"
+  url "https://github.com/scandum/tintin/releases/download/2.02.12/tintin-2.02.12.tar.gz"
+  sha256 "b6f9fd4f2c1e7cdc8cff4172d7a80014961b0394380ced9182209dc34d781a00"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -21,11 +21,6 @@ class Tintin < Formula
   depends_on "gnutls"
   depends_on "pcre"
 
-  # Fix for `error: use of undeclared identifier 'environ'`.
-  # Already applied upstream.
-  # https://github.com/scandum/tintin/issues/47
-  patch :DATA
-
   def install
     # find Homebrew's libpcre
     ENV.append "LDFLAGS", "-L#{HOMEBREW_PREFIX}/lib"
@@ -43,30 +38,3 @@ class Tintin < Formula
     assert_match version.to_s, shell_output("#{bin}/tt++ -V", 1)
   end
 end
-
-__END__
-diff --git a/src/data.c b/src/data.c
-index 34401f8..cf23f58 100644
---- a/src/data.c
-+++ b/src/data.c
-@@ -27,6 +27,8 @@
-
- #include <limits.h>
-
-+extern char **environ;
-+
- struct listroot *init_list(struct session *ses, int type, int size)
- {
- 	struct listroot *listhead;
-diff --git a/src/scan.c b/src/scan.c
-index 7c46890..b036e9f 100644
---- a/src/scan.c
-+++ b/src/scan.c
-@@ -33,6 +33,7 @@
-   #endif
- #endif
- #include <dirent.h>
-+#include <limits.h>
- 
- #define DO_SCAN(scan) struct session *scan(struct session *ses, FILE *fp, char *arg, char *arg1, char *arg2)
- 
