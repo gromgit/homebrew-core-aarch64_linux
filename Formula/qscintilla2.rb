@@ -16,12 +16,11 @@ class Qscintilla2 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_big_sur: "fe9548ebe70dbd6d1470cf3394878ccae6bc4aa6dec7516fe6ab2e0e79285580"
-    sha256 cellar: :any,                 big_sur:       "e48009d9515d8fd172d77f712867cc703838f10c8d82476b391cc16dbcad3414"
-    sha256 cellar: :any,                 catalina:      "82e1076cc42016998ea0df9c0a699cbc7535cdf800771a2875dabfb392d2e451"
-    sha256 cellar: :any,                 mojave:        "753b282bb8e1251d1db37b171b3ef5d2b16212091e075c6065021c0417ac3f4d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c4b3637ed4b42c909e065082a0d522e7d4901f313c60e4d85e1ae7eee3849f90"
+    sha256 cellar: :any,                 arm64_big_sur: "f1eeb393d30c064ff26b314e477ac04c49c65e1e4f0798eff6511b717be14c5a"
+    sha256 cellar: :any,                 big_sur:       "673822543d6b2469f6dbcf7a7227f070ede7a104f53a09a3ba1aeec6d1c4cc2c"
+    sha256 cellar: :any,                 catalina:      "43c3199750767469f77fb742f40273f9860fcafeef580da2998a055c9aab379c"
+    sha256 cellar: :any,                 mojave:        "a89b1ca10b6df95e3a2d76fb71ff71546f4e8c9a5de6765f950af54394e42f68"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "30a6aa3971a33551be6eecfc449d51a1a84a4b98ea0a97d5a587225dd08f565d"
   end
 
   depends_on "pyqt-builder" => :build
