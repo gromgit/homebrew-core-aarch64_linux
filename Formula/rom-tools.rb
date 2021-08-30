@@ -13,10 +13,12 @@ class RomTools < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "d49345e2d8faf9c2de60a36aa212e4975c30bdbd2f70e58a4a90a90ed400ceea"
-    sha256 cellar: :any, big_sur:       "b79f86bb5daa5c7d0ee6b0b4293f9029957712c6e004f13931461d3a71469ca8"
-    sha256 cellar: :any, catalina:      "94378dc68a867f811eafcf98dfdb2a8fce75dfab25a736bf19b43ac4b1c63dd1"
-    sha256 cellar: :any, mojave:        "74cd7fde93c72f0696f33e802435b0294cb740c2f2864959a28489dfef8564b3"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_big_sur: "e5cfb72ac6f2239d314539628da395c574c13799ab57c0484ca9f41e0e1b3dcb"
+    sha256 cellar: :any,                 big_sur:       "5cfe9f6ad326b909fc46f50831e9786182e80fedc01dd1171d87458f77197905"
+    sha256 cellar: :any,                 catalina:      "759745b4766554b212aba9295fd4ace7bd2091ca301cdc58a5c342e7638adbb9"
+    sha256 cellar: :any,                 mojave:        "ecac9d5e81b7cb3fa4cc7f61bc1a58af4d54c4bc2330539f0a77f657b07f9885"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8ab093629a7dc8477108903041f6ebdebeca03ff2fc428f3af0a4d8a65636f62"
   end
 
   depends_on "pkg-config" => :build
