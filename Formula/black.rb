@@ -13,11 +13,11 @@ class Black < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "97a95202049c18ad1bd83f220492cbe342b06e3ff57ce47fdea2868a22eeec5d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "cab87ba9fcc15b5d43d94a10f0618b31906b34a1e302bcbbda6cc00dd7ac4a13"
-    sha256 cellar: :any_skip_relocation, catalina:      "0e753b1b5e2d4876629911a2d8807da5bb9b4be20fe585853036ff2d46286345"
-    sha256 cellar: :any_skip_relocation, mojave:        "372d2251db51bb0245fa86ddd1b5da89963a3af1ba2392b732df5555a5b4c96e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7f90022601c71213effaed7625ef4c599a85ef155c462d7c1827e92e4ab098fa"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c6d03b10d17d8b535214c823ea079a672d0b9ff1a8a1ae317f3b656753f167ce"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f7d70f82deb8cae4f91e5abeff974f3a612a26559bfaff463f3401e392229975"
+    sha256 cellar: :any_skip_relocation, catalina:      "7e7dcd6b40c9253ae05c7c141ddd3fc9234868397966a0f4e2c66455bc9985e7"
+    sha256 cellar: :any_skip_relocation, mojave:        "14285e5573f258da711d215b72389062143c2420684c4b6dc93abea14c8c1412"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4759d0c5f58f23165560ea44c5ba74d0be721b1fa230f800471888f11fcd14ca"
   end
 
   depends_on "python@3.9"
