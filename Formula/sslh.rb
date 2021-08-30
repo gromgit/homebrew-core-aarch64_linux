@@ -7,11 +7,11 @@ class Sslh < Formula
   head "https://github.com/yrutschle/sslh.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "4e7f76188b8a7e6e4582449b44215be2e81aeae61d0597f8a4fc5019e3e01437"
-    sha256 cellar: :any,                 big_sur:       "f4bca122c45d30d12a09f10415ca2e5eee87b03a5bc20aafd213f1c3b9393402"
-    sha256 cellar: :any,                 catalina:      "e9b7153fafb25bcb3d0421e82ca9c96b17b243bba5968a5b0aa3fc39089ab917"
-    sha256 cellar: :any,                 mojave:        "070dc0b0522e6ceb8a76af229c64d2d00b658277b8aab039d74d2e665673b02a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d9fff717bea206d940cb6639ad7ea1b0d96ff06b17b3ba07925434a3fb7ceaba"
+    sha256 cellar: :any,                 arm64_big_sur: "8360d538e98fcd95eb8e2cdc151631bed5b0004c8c3f57ec1b0458f0e68ccd62"
+    sha256 cellar: :any,                 big_sur:       "24d1ee698d3b2e8b8c88e760e9839371be04b8440ca936209a4869d01d2393a1"
+    sha256 cellar: :any,                 catalina:      "64f1e1f8f49dd800b936a648a319fe85f644ce183db00032314db93e484611a0"
+    sha256 cellar: :any,                 mojave:        "3b5ff13cd57fa71015eda12c607dc180d11f999c0b1b9703419c3eebc54e8087"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d3d9d49219f6926130f5ca51eacd965a9e7ca88f860fa1707cec83ed1b1cb7a2"
   end
 
   depends_on "libconfig"
