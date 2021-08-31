@@ -2,8 +2,8 @@ class Kamel < Formula
   desc "Apache Camel K CLI"
   homepage "https://camel.apache.org/"
   url "https://github.com/apache/camel-k.git",
-      tag:      "v1.5.0",
-      revision: "9355c0808f5368e5c70bd03535ddaaeb85c6b43e"
+      tag:      "v1.5.1",
+      revision: "02dd9e62f7e3f29de2db99ad51304c9ae5db9846"
   license "Apache-2.0"
   head "https://github.com/apache/camel-k.git"
 
@@ -22,12 +22,6 @@ class Kamel < Formula
 
   depends_on "go" => :build
   depends_on "openjdk@11" => :build
-
-  # remove in next release
-  patch do
-    url "https://github.com/apache/camel-k/commit/5385f35485e95197be33cd3684392186fe49db31.patch?full_index=1"
-    sha256 "0ab648244ed6e342ac1a1d6ecc878d78e8d0b64b14d872346d29f897e56e6bd1"
-  end
 
   def install
     ENV["JAVA_HOME"] = Language::Java.java_home("11")
