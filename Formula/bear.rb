@@ -9,11 +9,11 @@ class Bear < Formula
   head "https://github.com/rizsotto/Bear.git", branch: "master"
 
   bottle do
-    sha256 arm64_big_sur: "7278648a98c987fb2ce8ee02b462249f85ece5c9ef3ef7384734e48b393d7e0e"
-    sha256 big_sur:       "c53ddfaa09f58d4790b99bc667a47834d036739a53b7649615593992491e85b5"
-    sha256 catalina:      "6ee1fc96055be042b50ac15488c73788850491b19488721d9bf050f0f1140711"
-    sha256 mojave:        "825035cc614cf0dc110144d4854d98b30875acc99944ec8c8d99cba377f70e1d"
-    sha256 x86_64_linux:  "259ebc26699a118f3caf37e6f42c9b0bfa2038b00e1f4c9b3537d2e69dbd4758"
+    sha256 arm64_big_sur: "86bb1162dc90aac0ffd65f5fc1c85e1d62ec004bf3a901bed33cc32b89d87454"
+    sha256 big_sur:       "e58705a9c3723629fded1756a20bdcfe34a3d45db8880c0f03afbdd8a1958e14"
+    sha256 catalina:      "4d1332c1aa866cd17ff2cb201047b201ff3f110509566cdbfd01ca634b4c41a6"
+    sha256 mojave:        "98e61b99eb53f789d1b20f0ef02c249cbce5806b7eb803e28a7d71d2dca78c00"
+    sha256 x86_64_linux:  "c04061eab576069e9e4cbf525d2b0c00d0ad58eed96023a7becd1206f81120ad"
   end
 
   depends_on "cmake" => :build
