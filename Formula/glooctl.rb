@@ -13,11 +13,11 @@ class Glooctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "47f166d3e35492770bd88ec45b800e6904ee58f8eda912b0a16d55ef3423b0e6"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b959a5d0b93483424df75edbd10d15895d59bbca64e6808c8c437a13059af377"
-    sha256 cellar: :any_skip_relocation, catalina:      "2f6cb7f23f548ef7cd453db5e756f4b857d39387d4177a459d3cf5f2998a515b"
-    sha256 cellar: :any_skip_relocation, mojave:        "547468685cd42d54fcaa3a9aefd580638de00af581d1520c9d6311f80fd941d9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "51aab7ad50649237754f0f1ca12f9e03a29c313d880fec57cb591d5dcecacfa6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b130805ffbb8442a1e9b9d34392bf8348ab6485c412898c5802b97e0a3d639fc"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6cff539c37ebf75a7653796bfab64eefe18aaff537835a7551910d8bbf7744c3"
+    sha256 cellar: :any_skip_relocation, catalina:      "581ae7ead5a4529313083c3e628b7a0184545ea9c797f2f6f4bf7a47578282e2"
+    sha256 cellar: :any_skip_relocation, mojave:        "0ce167d13103691192d1eb6be43f667190ef57fd54d1af7379b0fe40d14c8a78"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "501c218a6a2b2bb3f2fd1b98376860640f654376ee8f82809c72ea83b6dfa5ae"
   end
 
   depends_on "go" => :build
