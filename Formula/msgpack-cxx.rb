@@ -7,7 +7,7 @@ class MsgpackCxx < Formula
   head "https://github.com/msgpack/msgpack-c.git", branch: "cpp_master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "b8e683caac9ea113c626f89f02d4318fb8e71a731890ffcbbea6dd7f55c66f66"
+    sha256 cellar: :any_skip_relocation, all: "5fac8a087e33ac7fa6624da35020a6d15487d75d47d4565639e3c78d72d41b2b"
   end
 
   depends_on "cmake" => :build
