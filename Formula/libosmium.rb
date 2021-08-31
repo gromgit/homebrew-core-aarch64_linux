@@ -10,6 +10,7 @@ class Libosmium < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "71432c9f74dfe76886bbe1e89d128bf5fa80e2e1ef9d3ea15a18fc9d7a739f34"
     sha256 cellar: :any_skip_relocation, catalina:      "71432c9f74dfe76886bbe1e89d128bf5fa80e2e1ef9d3ea15a18fc9d7a739f34"
     sha256 cellar: :any_skip_relocation, mojave:        "3e4d4f6cc29087f12b21f8354c44b0088d7dea65064b9d705d95217ddc9ab248"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5a6340fd662dcc9498a48493fb7124964d250f532ef3d2a75e19de09452b9ff7"
   end
 
   depends_on "boost" => :build
