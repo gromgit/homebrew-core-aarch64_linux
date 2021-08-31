@@ -6,6 +6,10 @@ class MsgpackCxx < Formula
   license "BSL-1.0"
   head "https://github.com/msgpack/msgpack-c.git", branch: "cpp_master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "b8e683caac9ea113c626f89f02d4318fb8e71a731890ffcbbea6dd7f55c66f66"
+  end
+
   depends_on "cmake" => :build
   depends_on "boost"
 
