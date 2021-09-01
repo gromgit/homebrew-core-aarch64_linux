@@ -15,8 +15,10 @@ class Swift < Formula
   end
 
   bottle do
-    sha256 catalina: "26e59645661eaeea4b9c59deea4dd5591dedce7c74b20c772f2e82ab3450d678"
-    sha256 mojave:   "b49fe185bb64ab86515c9b51d43046aad807fa70e49668a403385a72cc4a70b7"
+    sha256 cellar: :any, arm64_big_sur: "f425aed852970268b2b14306094e0227ede33e58d904a9f9a77f629b83c73580"
+    sha256 cellar: :any, big_sur:       "90b1107a0cec3fca7669c15f300718e7c830bad52736bc80fe6f9834c552eaa0"
+    sha256 cellar: :any, catalina:      "2e106032a395de5a62d8b414ddb2d2fd8818a4f90da57d571fb702b032ba47ee"
+    sha256               x86_64_linux:  "7acd57023583fe073ef52ddd35c254f9502d4a5d6e8098269e4e50d8c3313884"
   end
 
   keg_only :provided_by_macos
