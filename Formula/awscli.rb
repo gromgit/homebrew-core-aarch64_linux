@@ -20,11 +20,11 @@ class Awscli < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "ccfd1167dfc33581a31924a5ad72074ef6d2be2e3a0134a1f0826732795355a6"
-    sha256 cellar: :any,                 big_sur:       "609dbaeac49a8902fbdefa64ce77b81080db225100cfee072ac58cc33218c0a1"
-    sha256 cellar: :any,                 catalina:      "434c5747bdbfd0ccb97b7f5f2af1ca1d286c54f733d9d7c510139fd72e9a46fc"
-    sha256 cellar: :any,                 mojave:        "ecf5df323e69b00601096bb40b3c8bce660228324c588f429804138724064ec2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9cae5c44069e59c8379ab17b8d15d10757364adae81038e0118184f8ed794e7f"
+    sha256 cellar: :any,                 arm64_big_sur: "959398ebed8a814bdcf4bf392364e72df7edc630e3726ac389f363e1d8406d1e"
+    sha256 cellar: :any,                 big_sur:       "917a6c21c47aeac38a00ef4c21882ccc89c13e0024d8f77fe323d1efc5d84197"
+    sha256 cellar: :any,                 catalina:      "22ec09a1f44d3bf10dfb0285ac467ebd77dc4fe9965900c83a632934c0e77485"
+    sha256 cellar: :any,                 mojave:        "ed249c7b9632c3d1671d2907501782a6434c9771ac2275b76f80e2a520f5c135"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c0605ca876dfb2f8a6dfcc61af7edb9e64a17ec2b06ac42d8cbc54752c88eabb"
   end
 
   head do
