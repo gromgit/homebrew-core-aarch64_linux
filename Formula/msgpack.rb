@@ -7,11 +7,11 @@ class Msgpack < Formula
   head "https://github.com/msgpack/msgpack-c.git", branch: "c_master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "8b16bfe485fb0bdacd68a14b8a6acb8811e61c50f9178c6dccc63e6e6f32fea3"
-    sha256 cellar: :any,                 big_sur:       "2c29077e763920ec59779a5f1be1a0206fda9f8f8c82447356ff616eb572d7fe"
-    sha256 cellar: :any,                 catalina:      "3cc886ce8752df92a979fb8c3559738fe105379954eb2c2b660abb8769f4e64b"
-    sha256 cellar: :any,                 mojave:        "5e597990ddb6b7044af3deeb1e08a5a1dcce697c14e671d725ad0b041d670099"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1e584e20f25a9142d3cea90accdaf4253c7d4b1fbe72e10337fc480af7b7d21e"
+    sha256 cellar: :any,                 arm64_big_sur: "94519c5e879506abb6e665f65982df1b461e53e83904a4ff88bd9ef34a05db83"
+    sha256 cellar: :any,                 big_sur:       "a6922853180da9206a75c706502c24971bfa73abf6aeed7b8341a6824e179580"
+    sha256 cellar: :any,                 catalina:      "702f8b5c56c9f4111a68111d4e03466894ac98c43a9e3127ddfb74559bad201d"
+    sha256 cellar: :any,                 mojave:        "ae673e0c74680acca0996eba8d4a2d7d6048c1986706f85f12f64a3d53750db8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "542fb3791b98792a25705dd2de670e9d0ac492f4d03246614052a81ed4bc02d4"
   end
 
   depends_on "cmake" => :build
