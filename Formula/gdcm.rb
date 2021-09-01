@@ -16,6 +16,7 @@ class Gdcm < Formula
     sha256 big_sur:       "7bff75beab06c8250e57f71edc9db13deee5e8436b6601f04a5488bb2e1d4f5d"
     sha256 catalina:      "48c5d04a2a95db995522d31e5efffd9a9dcf97afb4896d64610a2347431a3481"
     sha256 mojave:        "6837489e4b3a300a96e15506c6e2bb092bda59f4b1e8d96448ecd923c9568317"
+    sha256 x86_64_linux:  "2e5f00fa60b4278b6546dfc2b580ecf67d675f3aa7256671b52a36d35e6c1d85"
   end
 
   depends_on "cmake" => :build
