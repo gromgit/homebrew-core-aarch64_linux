@@ -16,6 +16,7 @@ class Itk < Formula
     sha256 big_sur:       "b7b30cd49b92cfcbd05404a4d0a592f3623f122354a82e458d5ee01ac2f9aa73"
     sha256 catalina:      "2e87abe07201cd013ac9535b02f3a012e79b049327d5ecc6ff015b1752c0a7f8"
     sha256 mojave:        "d2020a7710d5b42d0d833ff04ee2d821ff8080f34c8d2d00a86feaa39f6dfa25"
+    sha256 x86_64_linux:  "c848dd47f4c45a3def027fac4d9b640f554ceb3ef97e35e6f2d45b3e44f8a73c"
   end
 
   depends_on "cmake" => :build
