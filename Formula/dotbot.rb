@@ -7,6 +7,14 @@ class Dotbot < Formula
   sha256 "29f4a461462a5ff3b1e9929849458e88d827a45d764f582c633237edd373f0af"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e0b6b39ce0e5810579e20cce7a7e2b244f2036eb7203240fd5b97cd03da28844"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e96e9f7e3ae93e6859f13479b586d971958349ca8ee4bb1d5fead64ebdcd1dde"
+    sha256 cellar: :any_skip_relocation, catalina:      "3bc7bf088b33d3c024b3a04b8e89c3339a8d27a780cb1f6f0904141ea84e407d"
+    sha256 cellar: :any_skip_relocation, mojave:        "1a3eea6c83af210a85c83c88460ddfa1d30b644917bbea537015e7682085158a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a49f87edf43be337908b09c6077c574aea3faa466c8a0c266219c5dbafd24187"
+  end
+
   depends_on "python@3.9"
 
   resource "PyYAML" do
