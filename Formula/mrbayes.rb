@@ -11,6 +11,14 @@ class Mrbayes < Formula
     strategy :github_latest
   end
 
+  bottle do
+    sha256 cellar: :any,                 arm64_big_sur: "aad1abf1a6f090d69ae755d2cfc260d5c2e65574cbf23c5235e78097daa64e17"
+    sha256 cellar: :any,                 big_sur:       "e0027c3fc59ebb71bbab154a03976eac6dbae6c97c665355767298d1d03285af"
+    sha256 cellar: :any,                 catalina:      "bc54dc6955c86b3d10ddf446cec0c188c3a8db75505efce4d23b66c24a4dd482"
+    sha256 cellar: :any,                 mojave:        "2349b14afaa49d436cca2c23e62643fc75b231d2ce1a3e572fb4be90448c5fa7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3e8b911053a2c454c03e97e1f8ac89cdce178e30cebf49165dc1b53f1e1a6cbb"
+  end
+
   depends_on "pkg-config" => :build
   depends_on "beagle"
   depends_on "open-mpi"
