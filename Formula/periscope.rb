@@ -8,11 +8,11 @@ class Periscope < Formula
   head "https://github.com/anishathalye/periscope.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "01813fd829e55fd0d5bc2bc6106e80092ecfab94ac72c506e10337485e0e971a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "793f84c0d0fe4d38326526fa31728faf16af4c1f2e94cfcc45b2763454a5ee58"
-    sha256 cellar: :any_skip_relocation, catalina:      "b510565df6b2a98867b7eb70f29c1af5d24e381662de211387108f5e0fe46637"
-    sha256 cellar: :any_skip_relocation, mojave:        "57271c8c3164fd36d667ea2fc4399775607880b1c85dd629f8079dab9c16996d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "706c0df5885586f8ddb26a1697229934ed26583f916d14052d5ed361df81f5fb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a316061e8574f8306a0db428030a80b1d881fa01f44d3fb5e11fbf262eb005dd"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ce293d18056b44958098f6950986676ba6747df28fda897ef6f7f9e83c19b724"
+    sha256 cellar: :any_skip_relocation, catalina:      "b27894c43a915698a3667d5c77ee120e097195bb42f039ad12fc8aabb684f168"
+    sha256 cellar: :any_skip_relocation, mojave:        "175b7fa2671aa807ae3574326c65efec9e2ec7599ce4645ffcbb4ee4b3b14056"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b2998259acfde7a53687bf3f46df9c7258cefe94ee1a7a6e5bfca3ed187f969c"
   end
 
   depends_on "go" => :build
