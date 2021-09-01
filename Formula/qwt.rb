@@ -11,10 +11,11 @@ class Qwt < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "0538bfe404c21c264efe57fbc36d3cff81c39b86679d67c48501166597ab8cad"
-    sha256 cellar: :any, big_sur:       "14a5fd16a5abcf3a04b3f6d097649fbc1dd51e9fbb50d05f885757a9d9f3d9f9"
-    sha256 cellar: :any, catalina:      "c3a727be657b20efdd6a8ddec980bd28f5367ae41a0a7abefb74af86c1f24e83"
-    sha256 cellar: :any, mojave:        "5bb62a4122ade6485247357b22f0619ff35f518d9ea3f454f05c7d5c4b60985e"
+    sha256 cellar: :any,                 arm64_big_sur: "0538bfe404c21c264efe57fbc36d3cff81c39b86679d67c48501166597ab8cad"
+    sha256 cellar: :any,                 big_sur:       "14a5fd16a5abcf3a04b3f6d097649fbc1dd51e9fbb50d05f885757a9d9f3d9f9"
+    sha256 cellar: :any,                 catalina:      "c3a727be657b20efdd6a8ddec980bd28f5367ae41a0a7abefb74af86c1f24e83"
+    sha256 cellar: :any,                 mojave:        "5bb62a4122ade6485247357b22f0619ff35f518d9ea3f454f05c7d5c4b60985e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bd8a743a4dcdef47dd5941eba2feb9f5db4f9a63588ebf97c8ebe36d4c7814e4"
   end
 
   depends_on "qt@5"
