@@ -6,6 +6,10 @@ class Atop < Formula
   license "GPL-2.0-or-later"
   head "https://github.com/Atoptool/atop.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "78ae84b523a0da7ea437ddec04e00a85a26dc41f9421b1c942e3fccd33f98bea"
+  end
+
   depends_on :linux
   depends_on "linux-headers@4.15"
   depends_on "ncurses"
