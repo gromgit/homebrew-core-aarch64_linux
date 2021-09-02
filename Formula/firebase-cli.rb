@@ -9,11 +9,11 @@ class FirebaseCli < Formula
   head "https://github.com/firebase/firebase-tools.git"
 
   bottle do
-    sha256                               arm64_big_sur: "61b400ad650881ec9d6cfea2aeda6bfa8545717b92076811c67e9e0e99d8aeba"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7181546f95f14a2b99fe028017b336cccd67469c10e6353567d057d0657a070b"
-    sha256 cellar: :any_skip_relocation, catalina:      "7181546f95f14a2b99fe028017b336cccd67469c10e6353567d057d0657a070b"
-    sha256 cellar: :any_skip_relocation, mojave:        "7181546f95f14a2b99fe028017b336cccd67469c10e6353567d057d0657a070b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9ac08b574abd6795276fb2affed3c25be11fb6e876d8a2bfd3fdeb2672a030c1"
+    sha256                               arm64_big_sur: "7339fc6effdae86cbe088c0cc85c7d3fb68f88c4d6287d70afd617ea1f71a582"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f00f910a2dc28d46f99d528c71268d352dcebe8bdefa7cedae5b230db5b97f78"
+    sha256 cellar: :any_skip_relocation, catalina:      "f00f910a2dc28d46f99d528c71268d352dcebe8bdefa7cedae5b230db5b97f78"
+    sha256 cellar: :any_skip_relocation, mojave:        "f00f910a2dc28d46f99d528c71268d352dcebe8bdefa7cedae5b230db5b97f78"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4672daf81ff24abc8be5b40c00e4440732eb599c47f1a7713a8158e0733eae45"
   end
 
   depends_on "node"
