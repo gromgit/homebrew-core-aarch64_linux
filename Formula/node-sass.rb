@@ -8,11 +8,11 @@ class NodeSass < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "64b63257353313e60b1c8d90e5f79de42cab062c6ea7ed49ddeadcd95a708987"
-    sha256 cellar: :any_skip_relocation, big_sur:       "64b63257353313e60b1c8d90e5f79de42cab062c6ea7ed49ddeadcd95a708987"
-    sha256 cellar: :any_skip_relocation, catalina:      "64b63257353313e60b1c8d90e5f79de42cab062c6ea7ed49ddeadcd95a708987"
-    sha256 cellar: :any_skip_relocation, mojave:        "64b63257353313e60b1c8d90e5f79de42cab062c6ea7ed49ddeadcd95a708987"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7fa1926ca9a3e7b889a6647cab5733c9bbb7919bafe6a1edd5bc15d82b3bdd46"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2f115bc336a7a81dd3f65ede00af443423b8f9373229f4d5b089523d98e3e1a7"
+    sha256 cellar: :any_skip_relocation, big_sur:       "2f115bc336a7a81dd3f65ede00af443423b8f9373229f4d5b089523d98e3e1a7"
+    sha256 cellar: :any_skip_relocation, catalina:      "2f115bc336a7a81dd3f65ede00af443423b8f9373229f4d5b089523d98e3e1a7"
+    sha256 cellar: :any_skip_relocation, mojave:        "2f115bc336a7a81dd3f65ede00af443423b8f9373229f4d5b089523d98e3e1a7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "867f4cf7e03b5be73d087a7b4c2a8a00b8cbee558c3e83588114be90e1934fbf"
   end
 
   depends_on "node"
