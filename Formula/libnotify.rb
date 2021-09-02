@@ -19,6 +19,7 @@ class Libnotify < Formula
     sha256 cellar: :any, catalina:      "367a8d51cb565452392b9bc92c753ca641c23f91fc4ff93fb6166b63f2beafda"
     sha256 cellar: :any, mojave:        "e6d5a6a87f885bf421e6a70c9cef1c6aaf89db46a98216af6c06754246a8f896"
     sha256 cellar: :any, high_sierra:   "0560e601843a3e42a4823904dd5534212efd823292444a9588f1cf99ea8bc8f5"
+    sha256               x86_64_linux:  "3be2be401ff1fda07663fdeaf8929ca12b92fa136acfedc2a273b1abcd9438bd"
   end
 
   depends_on "docbook-xsl" => :build
