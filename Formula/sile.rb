@@ -1,10 +1,9 @@
 class Sile < Formula
   desc "Modern typesetting system inspired by TeX"
   homepage "https://sile-typesetter.org"
-  url "https://github.com/sile-typesetter/sile/releases/download/v0.10.15/sile-0.10.15.tar.xz"
-  sha256 "49b55730effd473c64a8955a903e48f61c51dd7bb862e6d5481193218d1e3c5c"
+  url "https://github.com/sile-typesetter/sile/releases/download/v0.11.1/sile-0.11.1.tar.xz"
+  sha256 "a3e627d543bf07ff43ff06cacdbceb8f37aa056a31af25e68f706ad33f497d19"
   license "MIT"
-  revision 3
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "0d5b8c5f5ef896aa9a86754a4b32b06a57d3093ee6d4d0753759e489e71ee0a5"
@@ -32,6 +31,7 @@ class Sile < Formula
   depends_on "openssl@1.1"
 
   uses_from_macos "expat"
+  uses_from_macos "git"
   uses_from_macos "zlib"
 
   resource "stdlib" do
@@ -103,14 +103,14 @@ class Sile < Formula
   end
 
   resource "penlight" do
-    url "https://luarocks.org/manifests/tieske/penlight-1.9.2-1.src.rock"
-    sha256 "49e7778ba84a5a8ac67fc2a30357f0975fe11241d7cc86df05a5abb18071d5fb"
+    url "https://luarocks.org/manifests/tieske/penlight-1.11.0-1.src.rock"
+    sha256 "4bc3e5a5869313a326fe39f23a6d02c4e13d1780cb4559f0aed04c414b1297cf"
   end
 
   # Depends on luafilesystem and penlight
   resource "cassowary" do
-    url "https://luarocks.org/manifests/simoncozens/cassowary-2.2-1.src.rock"
-    sha256 "feab102d06f57998915a5945e6742246b5955bb65a69d45c2e572d59e6874f51"
+    url "https://luarocks.org/manifests/simoncozens/cassowary-2.3.1-2.src.rock"
+    sha256 "bf2ac4c04999402aab9bfa3b38868514f625a9e79c6884aa724b9560714aa500"
   end
 
   resource "luautf8" do
