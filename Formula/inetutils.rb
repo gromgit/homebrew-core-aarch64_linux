@@ -7,11 +7,11 @@ class Inetutils < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "4a8140152f9835c3514bc2b6611bcbc9538b8f1cad934293391a4eeec6d6e805"
-    sha256 big_sur:       "f6d9546c6db38817ce79a2f1501bc5aa08f776405bba44e69ec7735f162f03bc"
-    sha256 catalina:      "ebf5775904960cad8ee453c70a7fda0a08cbf7e3d40246a6314a728a12f560bc"
-    sha256 mojave:        "81eb41d9e9e7417d22b81a82833de89e8f7fc4e1fa4251def162c88325824fc5"
-    sha256 x86_64_linux:  "dc846ec369403d37b0355ebb8ba7199a50f0215b88b098472ece04eee19aacaa"
+    sha256 arm64_big_sur: "40b658c6c497bff3c916956203f971517a3c1d0f6bf46f0d675ec25c888fffae"
+    sha256 big_sur:       "4f4ded12f0164096243102d086f95d54ed6def282b758d3b69a88133b3fc2f3d"
+    sha256 catalina:      "274d56c19d93ffb4c32f3a896872cf78222a28bee436ae363c35455d279f4ed7"
+    sha256 mojave:        "077af2b47b07e9c4d2f3f574561ba6d6c90e879e93a4be0b2454a9e13b7842ea"
+    sha256 x86_64_linux:  "d2ef16a78009201d1b6a594cc44bc8fc44c6a730b91c96e23588f1c71de6d234"
   end
 
   depends_on "libidn"
