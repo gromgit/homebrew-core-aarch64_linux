@@ -9,11 +9,11 @@ class Salt < Formula
   head "https://github.com/saltstack/salt.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "0c9560136a756dc33f37da5ab190caee5682d18254c519224b83266ecaed3303"
-    sha256 cellar: :any,                 big_sur:       "e163e8560255b27360a3f6904014783176a0266270766804027b3ea7e888aa7f"
-    sha256 cellar: :any,                 catalina:      "ff6ac3984a6843c64764492bda2e64633534bf95981d8edfef7c7b093a5e798d"
-    sha256 cellar: :any,                 mojave:        "f154f19ff8be5094153b873d0c740918c0197633c033913100b23900b44cc275"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "692a725a67ed2d6fca003d5e4b08d3a730f2b595663cba82e80f275812ed5e03"
+    sha256 cellar: :any,                 arm64_big_sur: "f1e745e222ef7da637aa9b21682d56dc0328047acbcbc70fdb91271f418b498f"
+    sha256 cellar: :any,                 big_sur:       "8042793443c1b94986febb9fcabc85f5e9d5f26a62e420c48df26763d884cf68"
+    sha256 cellar: :any,                 catalina:      "5f2e19f055a3d6ae746c79d7ae641666c0112ca3f35e421cd1b5bb249b6742e6"
+    sha256 cellar: :any,                 mojave:        "5f7d528e5831417cf0b78abc72799dd3c512d44d9df6288f3384659c5bc14e27"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9ef1984085bc2e7c88e98ba285616312d5e555c4e6c947f92ca0bf5f68498fe9"
   end
 
   depends_on "swig" => :build
