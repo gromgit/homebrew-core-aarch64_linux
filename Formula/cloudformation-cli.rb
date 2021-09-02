@@ -8,11 +8,11 @@ class CloudformationCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b4fcadeac8af2a97d800411831c0db1884fbebb013cab1baaa58fb26655041ea"
-    sha256 cellar: :any_skip_relocation, big_sur:       "24e7c91a99cfc32f6895ee6d9807fb7610b30c8340b809d9f2ae939ca26c50a5"
-    sha256 cellar: :any_skip_relocation, catalina:      "13c887a7496b2bd6e1581b2b178f50a07caa05fc9e202c4587b32a6029fbcc84"
-    sha256 cellar: :any_skip_relocation, mojave:        "d339b1fa572bb4b0c8db51271a3b1a111839b8335f56c24e5ce9e35a739410c7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "163e145fa1c522adc658398852401a93c59d03690f922adfde8543bc401f99cc"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "89b07598ddbe4b57282816a260fe461b2650e0a0e20f1de94b2c7d312e3d3aec"
+    sha256 cellar: :any_skip_relocation, big_sur:       "25478ecc94f22e7de7db00c7a7c45b4f18bdcae9b97fb83f51426eea15b0d06f"
+    sha256 cellar: :any_skip_relocation, catalina:      "c9f2680bc874bed7c25930028c0196232f94b830cef3e368e316aa59f7553fbc"
+    sha256 cellar: :any_skip_relocation, mojave:        "9e1e59d33917c94cce39e427c87a7d4b89bfdab77bdabbdaab46b9bf3084680d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "500c9c4299a836e82e8ced6791748d3c4efbf9ea2936e019824f5aadebbe3422"
   end
 
   depends_on "go" => :test
