@@ -6,7 +6,7 @@ class Apktool < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "fea0563807b0211c31f9b5cc32b48dba850311bed253e507315fa2dd815a2bc5"
+    sha256 cellar: :any_skip_relocation, all: "0775f9e77e87d79c4fde722de98b678fcf0f6885bebebf6801a403b6a512688c"
   end
 
   depends_on arch: :x86_64 # openjdk@8 doesn't support ARM
