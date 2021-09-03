@@ -6,9 +6,9 @@ class MoltenVk < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "0ba0530a306310f1c9508d1c87661df6b488ec2db5a32ce35e3613f550b6132e"
-    sha256 cellar: :any, big_sur:       "d0fb5ac702f4119ee0a4c294af47b4621f33da63e872ecfc83c00a57d986cfa3"
-    sha256 cellar: :any, catalina:      "8731818bcaae271c0583867531674e2ef91be1a4c5c87baaf97ac6b6eff60d38"
+    sha256 cellar: :any, arm64_big_sur: "0462e7825b8aa7db2e03e90533b06b1c36ecb10b111d02823d34a1d2fdceffaa"
+    sha256 cellar: :any, big_sur:       "680dc3ea038ea88b96a81ac53f0bcf96b6f492f504deab1d9299de6ad451ae49"
+    sha256 cellar: :any, catalina:      "9d5b04d2112a1d962129effbd808a7a81afb2bbda38cb9e02e8c20029cb84d9d"
   end
 
   depends_on "cmake" => :build
