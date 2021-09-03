@@ -11,7 +11,7 @@ class Ballerina < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "6b6d95eb2d4bee6e81037498f9244bb4c907b4e3f865eb37163ea45126053f87"
+    sha256 cellar: :any_skip_relocation, all: "c4d999de5a09c1d62a7dddc0a59ce84400d355b5adcc276bd0ef371ee997f0dd"
   end
 
   depends_on arch: :x86_64 # openjdk@8 does not have ARM support
