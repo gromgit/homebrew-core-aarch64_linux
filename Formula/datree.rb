@@ -7,11 +7,11 @@ class Datree < Formula
   head "https://github.com/datreeio/datree.git", branch: "staging"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8049ceee983148b6bafc700087954a10f99b8a95eef9eea7e636447ccd62c0b4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c4a0959f1c8da56cde057c5e1424c2ad817d5697803d1d51589a2ed8004cefd9"
-    sha256 cellar: :any_skip_relocation, catalina:      "5fe2c5c822dc48580f97190e50e1e392d49ff34a3bb2566936d7ba376c7ecdb4"
-    sha256 cellar: :any_skip_relocation, mojave:        "24341d1f09991d7e7d115e8897775aa7c5d6602c7036f737b24671e845e2a191"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0fca46a8f5d4d01ec05ab2b9ec942e8e7e72d7581104b7de51c1a7390c5e91aa"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5e4f635d7a30f92153a4102da0cb8a29a4eb2eeca64435c45f9d00c5233c1a2d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d1394c006bbaf48c2f7f76d3b2ec18789b882ff25212255e4f98f0c0e564e943"
+    sha256 cellar: :any_skip_relocation, catalina:      "86c1d8173656ec7654456eb0b151614c9c41f4e51edd4dd7dea0f1203b39cd81"
+    sha256 cellar: :any_skip_relocation, mojave:        "a237ad584c113ce24bf56eec31fbd8c4f8aafa95f00ec2140465f99fd72fdc62"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0d15aa7d05968331c3a8a8accf7394bcd15e7b92ee797e128eb7a5b14dc42fef"
   end
 
   depends_on "go" => :build
