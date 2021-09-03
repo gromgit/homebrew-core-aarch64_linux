@@ -1,13 +1,14 @@
 class Nauty < Formula
   desc "Automorphism groups of graphs and digraphs"
   homepage "https://pallini.di.uniroma1.it/"
-  url "https://pallini.di.uniroma1.it/nauty27r1.tar.gz"
-  version "27r1"
-  sha256 "76ca5d196e402c83a987f90c28ff706bcc5a333bb4a8fbb979a62d3b99c34e77"
+  url "https://pallini.di.uniroma1.it/nauty27r2.tar.gz"
+  version "2.7r2"
+  sha256 "69c16c17da1cca90c25f6fb3bb242798af95f096fc3e2ff3e3398f390fcea768"
+  version_scheme 1
 
   livecheck do
     url :homepage
-    regex(/href=.*?nauty[._-]?v?(\d+(?:\.\d+)*(?:r\d+)?)\.t/i)
+    regex(/Current\s+?version:\s*?v?(\d+(?:\.\d+)+(?:r\d+)?)/i)
   end
 
   bottle do
