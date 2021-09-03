@@ -2,8 +2,8 @@ class Devspace < Formula
   desc "CLI helps develop/deploy/debug apps with Docker and k8s"
   homepage "https://devspace.sh/"
   url "https://github.com/loft-sh/devspace.git",
-      tag:      "v5.14.4",
-      revision: "91f7c4668b383bb579892b7f2401e61c3b4d06da"
+      tag:      "v5.15.0",
+      revision: "cb571e2987658f3d1d1c755e22ab418259b3a2fe"
   license "Apache-2.0"
   head "https://github.com/loft-sh/devspace.git"
 
@@ -22,6 +22,12 @@ class Devspace < Formula
 
   depends_on "go" => :build
   depends_on "kubernetes-cli"
+
+  # remove in next release
+  patch do
+    url "https://github.com/loft-sh/devspace/commit/51ce9934a921c648b34ee550b83f0e6a45f5d936.patch?full_index=1"
+    sha256 "ad0dd665a178099e7457ed71aac9b0dfa998c490233f26b7adb690cfce55b8de"
+  end
 
   def install
     ldflags = %W[
