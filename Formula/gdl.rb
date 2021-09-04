@@ -6,12 +6,11 @@ class Gdl < Formula
   license "LGPL-2.0-or-later"
 
   bottle do
-    sha256                               arm64_big_sur: "ef295dc3cfd05bf245b94552e008acc047e03e2806e93374879e7881b5c94871"
-    sha256                               big_sur:       "30164281abee8e2047138cddc735d9a9e1ec520f673d468a601b6cfbc988cdd3"
-    sha256                               catalina:      "5acba250d8c77d17be5ff312bf11d6aa33cb609c4c351b2a1cd1bf565e73e81a"
-    sha256                               mojave:        "2e2e04543eaf7ee02a791433fbab570d3b5f44651cec8dd56a40a519c2a38d24"
-    sha256                               high_sierra:   "abd9360935baecd914847697e5a21e7b7d91b94c0d5878509921cdb2ba72799c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a8c6f276a6341d271f31979ee5f8b88216d08c2b51495187f621be0fe8d151a9"
+    sha256                               arm64_big_sur: "e96c5e69fc084fd421f08f651e8727fb7a5d28e270c804ebba7e6d860ccec583"
+    sha256                               big_sur:       "98cb1563adec26dea9289d5ad3f5b006c26897cc9c586114efe0dcc2214a1a68"
+    sha256                               catalina:      "11df5d907431165eb6f9a6b8673f413dfd939199940b5a2e3a3f78eab11c2ce8"
+    sha256                               mojave:        "7d91a82fb426e6791aea2e93a9d0fdbf33aa8fb366d375734001614196212564"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "26ae14bf457ab681be21fe8b61fa612af211f80c2d8f52416dbb4a9f55eaa0e7"
   end
 
   depends_on "gobject-introspection" => :build
