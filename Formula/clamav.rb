@@ -1,10 +1,11 @@
 class Clamav < Formula
   desc "Anti-virus software"
   homepage "https://www.clamav.net/"
-  url "https://www.clamav.net/downloads/production/clamav-0.103.3.tar.gz"
-  mirror "https://fossies.org/linux/misc/clamav-0.103.3.tar.gz"
-  sha256 "9f6e3d18449f3d1a3992771d696685249dfa12736fe2b2929858f2c7d8276ae9"
+  url "https://www.clamav.net/downloads/production/clamav-0.104.0.tar.gz"
+  mirror "https://fossies.org/linux/misc/clamav-0.104.0.tar.gz"
+  sha256 "a079d64cd55d6184510adfe0f341b2f278f7fb1bcc080d28d374298160f19cb2"
   license "GPL-2.0-or-later"
+  head "https://github.com/Cisco-Talos/clamav-devel.git", branch: "main"
 
   livecheck do
     url "https://www.clamav.net/downloads"
@@ -19,14 +20,7 @@ class Clamav < Formula
     sha256 x86_64_linux:  "f921185f5319873958091bd65bd535d33cb9230a3a9a94fd73041b42d7ed4074"
   end
 
-  head do
-    url "https://github.com/Cisco-Talos/clamav-devel.git"
-
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
-  end
-
+  depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "json-c"
   depends_on "libtool"
@@ -46,37 +40,21 @@ class Clamav < Formula
   skip_clean "share/clamav"
 
   def install
-    args = %W[
-      --disable-dependency-tracking
-      --disable-silent-rules
-      --prefix=#{prefix}
-      --libdir=#{lib}
-      --sysconfdir=#{etc}/clamav
-      --disable-zlib-vcheck
-      --with-llvm=no
-      --with-libjson=#{Formula["json-c"].opt_prefix}
-      --with-openssl=#{Formula["openssl@1.1"].opt_prefix}
-      --with-pcre=#{Formula["pcre2"].opt_prefix}
+    args = std_cmake_args + %w[
+      -DENABLE_JSON_SHARED=ON
+      -DENABLE_STATIC_LIB=ON
+      -DENABLE_SHARED_LIB=ON
+      -DENABLE_EXAMPLES=OFF
+      -DENABLE_TESTS=OFF
     ]
 
-    on_macos do
-      args << "--with-libiconv-prefix=#{Formula["libiconv"].opt_prefix}"
-      args << "--with-iconv=#{Formula["libiconv"].opt_prefix}"
-      args << "--with-zlib=#{MacOS.sdk_path_if_needed}/usr"
-      args << "--with-libbz2-prefix=#{MacOS.sdk_path_if_needed}/usr"
-      args << "--with-xml=#{MacOS.sdk_path_if_needed}/usr"
-    end
     on_linux do
-      args << "--with-zlib=#{Formula["zlib"].opt_prefix}"
-      args << "--with-libbz2-prefix=#{Formula["bzip2"].opt_prefix}"
-      args << "--with-xml=#{Formula["libxml2"].opt_prefix}"
-      args << "--with-libcurl=#{Formula["curl"].opt_prefix}"
+      args << "-DENABLE_MILTER=OFF"
     end
 
-    pkgshare.mkpath
-    system "autoreconf", "-fvi" if build.head?
-    system "./configure", *args
-    system "make", "install"
+    system "cmake", "-S", ".", "-B", "build", *args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   def caveats
