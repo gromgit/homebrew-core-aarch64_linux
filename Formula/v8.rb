@@ -12,11 +12,11 @@ class V8 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "aad409632509a5f9e4dcf91c7243be1f45ca360326999e0b6c27b550e32516d5"
-    sha256 cellar: :any,                 big_sur:       "3b01fa5a33830ff0f8665f8a990a8f529321272ab47a1688f34b0d2045b0f30e"
-    sha256 cellar: :any,                 catalina:      "0e989e775ac4806be39c86c3bb0da5af78978c69c67694d75b64f8db15eb5ac9"
-    sha256 cellar: :any,                 mojave:        "d1a19c04b038e6b31a6e562dd5cf61b60b5aa3735465e94bcaa200189dbe72a0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b45b5bbb9203cec58e70aaaa20da6aeb882cc6378959850a4b00cc8b4301c424"
+    sha256 cellar: :any,                 arm64_big_sur: "0e063caa124e8b49b8ae85866fa3f02a7eaab102483580df9672a7d1ef604f8e"
+    sha256 cellar: :any,                 big_sur:       "58dc624302bda781779202d4407fe8ffaab72111524caddbc03d7cce5a8c3d85"
+    sha256 cellar: :any,                 catalina:      "28f858b85bb984c1e3801b0884f5c8bbcbc6a52034dea30a2a5c723a815bc386"
+    sha256 cellar: :any,                 mojave:        "a86c6d1a0c7a0fab72649a5f62b21453d8e0da044d989e81e78c8b635f322772"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ac36d1bb35b818515d35d47605c04c26a59428dc10e7318390435c6e7a0b80d6"
   end
 
   depends_on "ninja" => :build
