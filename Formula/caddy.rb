@@ -7,11 +7,11 @@ class Caddy < Formula
   head "https://github.com/caddyserver/caddy.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1f4dd7deb1ee1c337d8bee3e91c522ada5f86bd677113079ff6ce087c915e581"
-    sha256 cellar: :any_skip_relocation, big_sur:       "931f9b62c50c28f28b930bdfd830323834260ad397d78bbdf3609d220dc60bf3"
-    sha256 cellar: :any_skip_relocation, catalina:      "931f9b62c50c28f28b930bdfd830323834260ad397d78bbdf3609d220dc60bf3"
-    sha256 cellar: :any_skip_relocation, mojave:        "931f9b62c50c28f28b930bdfd830323834260ad397d78bbdf3609d220dc60bf3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8c0bef614ad308b3828c08b74e04f5605a4add5d85904443c13f632ad9007908"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "978286796a9e06f3bbaf65ceebeb2ec435756c20f9b1826945207a8539bdd321"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3e0a42061349cbaa0e7c8ebc1999868772f4cde71162c95220c9c202f2f1f932"
+    sha256 cellar: :any_skip_relocation, catalina:      "3e0a42061349cbaa0e7c8ebc1999868772f4cde71162c95220c9c202f2f1f932"
+    sha256 cellar: :any_skip_relocation, mojave:        "3e0a42061349cbaa0e7c8ebc1999868772f4cde71162c95220c9c202f2f1f932"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "559278f9a8219596855c856c8db58e8289c66940e52fcea7ce5b023e0f96400f"
   end
 
   depends_on "go" => :build
