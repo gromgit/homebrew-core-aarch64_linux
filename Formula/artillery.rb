@@ -7,6 +7,14 @@ class Artillery < Formula
   sha256 "6cf667509b8bfd8570ea80df60f03430848d0a0b538ae860ba1061318c13f171"
   license "MPL-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3324fb93bdbf1686c3777ab65d14c42671c24677826603cef224d4e727ea6bcd"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7d3d8a7b102377f06edb47e5ce15769f442670b95c38dd2fe1d8924f5c3aedd3"
+    sha256 cellar: :any_skip_relocation, catalina:      "7d3d8a7b102377f06edb47e5ce15769f442670b95c38dd2fe1d8924f5c3aedd3"
+    sha256 cellar: :any_skip_relocation, mojave:        "7d3d8a7b102377f06edb47e5ce15769f442670b95c38dd2fe1d8924f5c3aedd3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cee92bd41736db594a7d2439fcae1159ecda52ccbcc01399d3be5f17b00c2754"
+  end
+
   depends_on "node"
 
   on_macos do
