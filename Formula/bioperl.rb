@@ -11,6 +11,14 @@ class Bioperl < Formula
     regex(/href=.*?>BioPerl-(\d+\.\d+\.\d+)\.t/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "edad2306b7e911884abc787c59cb8ce91ae5cc59d4fad4373bade3a11fc3806a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c876cdb3cc4f70f3251d57fe47c3fbb6ec9a303df8dbaa276f0b8072ca39d1c9"
+    sha256 cellar: :any_skip_relocation, catalina:      "631f46b74bf805d23a414d34961f8e14fe2f0be2224522dfe3eb6f73a7adbb0d"
+    sha256 cellar: :any_skip_relocation, mojave:        "a284378a572edc991e964002c99b6991d4fb37610dfcd9f6abd8587b16962896"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6baaf72a4d61a3e466ecd8c02a2943e3408d880177df58a45279c16bfe72b2f2"
+  end
+
   depends_on "cpanminus" => :build
   depends_on "pkg-config" => :build
   depends_on "perl"
