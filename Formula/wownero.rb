@@ -8,11 +8,11 @@ class Wownero < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "081e5d143f966063342d63774d83c9e27d9030d692d6e392f58b4d090fc0c8ad"
-    sha256 cellar: :any,                 big_sur:       "268c9bde168c46c08aec0bdb81b380e03ff8715530f57b13ed4ef5cc915c7330"
-    sha256 cellar: :any,                 catalina:      "ba0f3aab8ad49065074b36d8006f6eb4b7ff76d0c876acd1a7bd4eaedc5b5d58"
-    sha256 cellar: :any,                 mojave:        "87774956f2241793c135b8209d1f4c3d03e56e956eec1cb446962ec13a81a1c2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2b8b0cb41bf38dd6b7985b96651e8c955e323476d13c280de215cf240f96c316"
+    sha256 cellar: :any,                 arm64_big_sur: "ef39a53fc330916136257fa2f8e2019063e544770789b09503b53e4505bea918"
+    sha256 cellar: :any,                 big_sur:       "2a7dc81fcfa03e22dfc74d069ccc505a249823ab116ca2f6eabc3e14d25f28f2"
+    sha256 cellar: :any,                 catalina:      "2713015081577274b00955f18eca366944e1557cd89ec00d852470c40a543ded"
+    sha256 cellar: :any,                 mojave:        "549739d9edb69887b6661b5daa670ac310693c44ff8462ece01629277b6aa263"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b25b0804cff6eb8b88df6ecb0c72e836b22fd2bde9e78c7426c7c2cdba661abf"
   end
 
   depends_on "cmake" => :build
