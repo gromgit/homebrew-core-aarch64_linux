@@ -8,11 +8,11 @@ class Snowpack < Formula
   license "MIT"
 
   bottle do
-    sha256                               arm64_big_sur: "77eea0b984d239d3a6cdfa31a1eaa8e13c1f93ba415c945843bdabdaec470f4f"
-    sha256                               big_sur:       "2dc4453caa37175ae40898b2c10e49db9c75cf0b2791111cd66bcea2ff537e0a"
-    sha256                               catalina:      "543b6757d38abf90f2921307a25a644e42ba0903aac87040a62cab54b8adae07"
-    sha256                               mojave:        "8fd7d598faa02e46f7b24d7f542b2f0f85b7d8dcaf378cfa48807dee53d86f07"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1f9a3d9a8e7a73cb4e8b3738c5f0ddb4db9b6c572ff57d4e7864f4637b12d6a7"
+    sha256                               arm64_big_sur: "424c198450962b4be8cf4314d570ff7e8febc23308b22430a47b8aaf0d4f3531"
+    sha256                               big_sur:       "fb13d64f32a7d9bdc58cf4dfd6776bf1254b09029b2778c6b6ae8aa1f3af5897"
+    sha256                               catalina:      "abed65f5debef77a9380822f5612b17933df211375766e800fb9e481f2829178"
+    sha256                               mojave:        "76e0af8a4e5f7fbc2d2095e8c6524c80a8e03ac2c9f9cbc2b8b319fff3dd7056"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "78baacecc857f50f7a6fbe7643c4edad620c4e2c09a0f31e336fcfa52f0576e6"
   end
 
   depends_on "node"
