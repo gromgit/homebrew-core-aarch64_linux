@@ -7,6 +7,14 @@ class Sail < Formula
   sha256 "e851c356353248c5e3bb43ebed1a8e550d80fb20f7a52ebc8f261a4dfe5baa6b"
   license "GPL-3.0-only"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2ffc06ba38aec24ccbf0fd0d64f559c262256d3bd7bf1cbef01e6aa26422cee1"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6e696942b4688bc0af007a0798cbf0e7086278e1616f1241636389811b0de963"
+    sha256 cellar: :any_skip_relocation, catalina:      "6e696942b4688bc0af007a0798cbf0e7086278e1616f1241636389811b0de963"
+    sha256 cellar: :any_skip_relocation, mojave:        "6e696942b4688bc0af007a0798cbf0e7086278e1616f1241636389811b0de963"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fd57fd5fad9148ea4f14e437afd625c870ba6a19b8fa0377d7e61b8fd6e586f5"
+  end
+
   depends_on "python@3.9"
 
   resource "certifi" do
