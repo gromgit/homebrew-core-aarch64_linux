@@ -1,8 +1,8 @@
 class Zimg < Formula
   desc "Scaling, colorspace conversion, and dithering library"
   homepage "https://github.com/sekrit-twc/zimg"
-  url "https://github.com/sekrit-twc/zimg/archive/release-3.0.2.tar.gz"
-  sha256 "b9eadf1df12ae8395ba781f2468965d411b21abbebbebeae3651d492227d4633"
+  url "https://github.com/sekrit-twc/zimg/archive/release-3.0.3.tar.gz"
+  sha256 "5e002992bfe8b9d2867fdc9266dc84faca46f0bfd931acc2ae0124972b6170a7"
   license "WTFPL"
   head "https://github.com/sekrit-twc/zimg.git", branch: "master"
 
