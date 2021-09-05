@@ -6,11 +6,8 @@ class Vcsh < Formula
   license "GPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1cea2a03ee37da016d37fed26f2d5b2a0f83925283ca56d8e79492d7202e4c39"
-    sha256 cellar: :any_skip_relocation, big_sur:       "1cea2a03ee37da016d37fed26f2d5b2a0f83925283ca56d8e79492d7202e4c39"
-    sha256 cellar: :any_skip_relocation, catalina:      "1cea2a03ee37da016d37fed26f2d5b2a0f83925283ca56d8e79492d7202e4c39"
-    sha256 cellar: :any_skip_relocation, mojave:        "1cea2a03ee37da016d37fed26f2d5b2a0f83925283ca56d8e79492d7202e4c39"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "745592d712de7d72f0b4490f8c6253168b15b920e760959120a4fc85daa3072e"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "40f77813b0e23090862c769daaa02a99ddc179ca1dae0e9834827dc02e16ce5b"
   end
 
   def install
