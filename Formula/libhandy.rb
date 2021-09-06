@@ -6,11 +6,11 @@ class Libhandy < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "5d2dbb845cf88133e1ef430f457127b4101534612a8b80b8830dea4e29432439"
-    sha256 big_sur:       "a6aa6e6042f4be52b6771e90ca9a35f4792bc8ae3cf0e2a641285ea7c7b6b35b"
-    sha256 catalina:      "094c9ab75ad36b5ea16fddebf1280cd7a2a70ffd513a98ba80cae27d540a9d36"
-    sha256 mojave:        "e23bf85ef855b2fa9bde7dabc8ef4ae651f0c1d3157ee5578b46a319c9910d47"
-    sha256 x86_64_linux:  "62d3bc37a45613506fcb1d93491423a0de7697603815dafc1931c7ef56c0d676"
+    sha256 arm64_big_sur: "67c5f4982894646b07942c0f387443c2aac2813167aaa3de9197cd760fc93e5b"
+    sha256 big_sur:       "337f9be107164821d8436c443c20dcb79d66bc3268fac909ace2878432bcc652"
+    sha256 catalina:      "2e04f3f8004ac544fea47905a65a6597908b8ced6dadd5c330d87b8a310951d9"
+    sha256 mojave:        "a8972dc9efc8c2d6a6fe0f038ebda941a741c3e0d7be57b51b9c634120d1a479"
+    sha256 x86_64_linux:  "17515106b873bbdbc591ca0daca12c043485e6a52b478cff912f9a835620c825"
   end
 
   depends_on "gettext" => :build
