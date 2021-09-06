@@ -6,6 +6,14 @@ class Abricate < Formula
   license "GPL-2.0-only"
   head "https://github.com/tseemann/abricate.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "703ffd651a6294a775f9136041fdab7b286cf9a5d401f6eb2f1f9ea83380b1fd"
+    sha256 cellar: :any_skip_relocation, big_sur:       "226ad8e8b789110537dc87b7683f2161d47eb660ca61530454dc3da95fe22e7a"
+    sha256 cellar: :any_skip_relocation, catalina:      "f2f639f89bfc29f3f4058e82ef2f1fdbf26e32ff09e3d6b542bcd3d50b26ff8f"
+    sha256 cellar: :any_skip_relocation, mojave:        "40cd402e2eff5bd1988c45f2ed056bd781869e59da139efac5a738990154ca73"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1758175ec977b93b4d9c6ca271a7091d9d90817c74417d00c52ca46d6237e571"
+  end
+
   depends_on "cpanminus" => :build
   depends_on "bioperl"
   depends_on "blast"
