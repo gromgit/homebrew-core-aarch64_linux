@@ -11,12 +11,11 @@ class Pv < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9fa320894a6ae215794b2952ea60165dcfb63bdf3dda557a1998daaf5304df6b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9a0c1c557a100dfb114c8fb3566c97f8d91c436fcc6f9f36a733f462945e4f95"
-    sha256 cellar: :any_skip_relocation, catalina:      "9bb586c4dab67989e7fa800e7c764d1d4ee153db8ad7a5ed3563270ca93a7497"
-    sha256 cellar: :any_skip_relocation, mojave:        "1877dffe8804fac2fe6f77582100e2b5ea3fbb7a305c1cfd025e251ede08c98e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a6d20bf1a091a1c23b508a45903419a4fc87ab02904c3a9f6ceb26587df2bb9f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3bd7779d9b752efbe2630b20372d9cf4d59162ddd007ec03543b80f2101213e9"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4ea237c542c6eded14c7cea0a1cdbfcbd7a08ee5eb3840f17074cf744ed9029e"
+    sha256 cellar: :any_skip_relocation, catalina:      "497f6ce8e29bbf9e0327afede72168c33acfb1ccb6604767862accb98503e909"
+    sha256 cellar: :any_skip_relocation, mojave:        "b2c882e0cd98de9b8db1ded95104239e890fe8e9b1f1c34e4fd57183c2d6afb6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "552be68ca20c0222fc5b9a7973375329b8b79f0bef203def9f118760d6104b91"
   end
 
   # Patch for macOS 11 on Apple Silicon support. Emailed to the maintainer in January 2021.
