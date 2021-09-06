@@ -11,11 +11,11 @@ class Nss < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "6037aab453379137e6943c37f5b90d53222e0c527ef8238803aec2cddbd55a9d"
-    sha256 cellar: :any,                 big_sur:       "63d87629c05162754d71702dba7244054c31e9a1a83059f97885c1d9dbdaac6f"
-    sha256 cellar: :any,                 catalina:      "7564c6985576f77027727394a4e47d90a6144d966de9097624cb9b1a18d75789"
-    sha256 cellar: :any,                 mojave:        "683540bbb7bb5ecc98b44e263b22c6a6e78036ffb50634d410084130733a7576"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5e92c1adabc2287085564ca959682f491b3b6fde79cc0264b6243b26f9e3e343"
+    sha256 cellar: :any,                 arm64_big_sur: "03024d02dc3d7dd24f3157fc08d4b98de3b1496b75ac2bfb7d223c5af4301b63"
+    sha256 cellar: :any,                 big_sur:       "238f33223e0a09ce14313f7e434b6379a727d8c2737a6d676c2d48ee38b9cfa4"
+    sha256 cellar: :any,                 catalina:      "95478e75c9909c3f470956b402fc21775884e5ab35507c79de4c821f44a1c374"
+    sha256 cellar: :any,                 mojave:        "c080c770c52a84fcc426e20e3934d4b5e244207aab071a726a667136881e4c43"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3891b7a2ad945d43e57efae905cd9548ebb7e2145d35b71b0d3dadf85f34b9e7"
   end
 
   depends_on "nspr"
