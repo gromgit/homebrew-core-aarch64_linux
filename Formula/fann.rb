@@ -5,6 +5,14 @@ class Fann < Formula
   sha256 "3d6ee056dab91f3b34a3f233de6a15331737848a4cbdb4e0552123d95eed4485"
   license "LGPL-2.1-or-later"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_big_sur: "2fc8447731fd2a1c7f4957b55e3906041796fd5c9c528c611048f48558e644fc"
+    sha256 cellar: :any,                 big_sur:       "4d7d975ad6d820ce4938ba6235881b11cfebb93ad8f5ac4cb5dabf2356f2ffa0"
+    sha256 cellar: :any,                 catalina:      "61d506a68652f81b0f93120b7ed1fb049510f18381e35a52abe52f0170e589a6"
+    sha256 cellar: :any,                 mojave:        "f4ff7eaa67aad30f4c544b3c9e20d4b4f9204807d97b900004ec65a27a2b6175"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1596e86f9b80da14fc97d5841253dc22c3ffe2e47991ef0c161d4512ef72f65d"
+  end
+
   depends_on "cmake" => :build
 
   def install
