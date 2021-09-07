@@ -5,6 +5,10 @@ class Cppzmq < Formula
   sha256 "4c07600e3ef311e24d9cf1917122067b48bd447cb7de86c5d23a29826a204649"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "e4fb3653d57894d59a77ffc48048e889ce9291e33c08d01376fd1e86b53ad656"
+  end
+
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "zeromq"
