@@ -1,8 +1,8 @@
 class Sparse < Formula
   desc "Static C code analysis tool"
   homepage "https://sparse.wiki.kernel.org/"
-  url "https://www.kernel.org/pub/software/devel/sparse/dist/sparse-0.6.3.tar.xz"
-  sha256 "d4f6dbad8409e8e20a19f164b2c16f1edf76438ff77cf291935fde081b61a899"
+  url "https://www.kernel.org/pub/software/devel/sparse/dist/sparse-0.6.4.tar.xz"
+  sha256 "6ab28b4991bc6aedbd73550291360aa6ab3df41f59206a9bde9690208a6e387c"
   head "https://git.kernel.org/pub/scm/devel/sparse/sparse.git", branch: "master"
 
   bottle do
