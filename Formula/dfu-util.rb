@@ -1,9 +1,9 @@
 class DfuUtil < Formula
   desc "USB programmer"
   homepage "https://dfu-util.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/dfu-util/dfu-util-0.10.tar.gz"
-  sha256 "a03dc58dfc79c056819c0544b2a5970537566460102b3d82cfb038c60e619b42"
-  license "GPL-2.0"
+  url "https://downloads.sourceforge.net/project/dfu-util/dfu-util-0.11.tar.gz"
+  sha256 "b4b53ba21a82ef7e3d4c47df2952adf5fa494f499b6b0b57c58c5d04ae8ff19e"
+  license "GPL-2.0-or-later"
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "387d614558287e0b5b7f6911d30f0f362d37771f21e7ee11f678859c0447ecea"
