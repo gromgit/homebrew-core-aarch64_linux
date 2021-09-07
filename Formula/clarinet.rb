@@ -12,10 +12,10 @@ class Clarinet < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "91a54b5a3c5995ad39649300d7c07a86ca0863de908f8a1b4d5ada5a96b35425"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5f12b034ad92fd41682c01b07dca58ae38f0848aa5f9e7333203e022fec60e46"
-    sha256 cellar: :any_skip_relocation, catalina:      "8cbc4967ccf172be818ae07ec70e9f3dc62884e79ae868eb891fdb63a3c7af21"
-    sha256 cellar: :any_skip_relocation, mojave:        "a0c9c53da41f3c9ac60d65f982fb6dbb07602d79608dc9cae7042b9db465debb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5a9b2e521fe5e66cba644d6dc043800cb3eff7f97a066ef4b6ddd456126a1d34"
+    sha256 cellar: :any_skip_relocation, big_sur:       "87fceee7cbd520036bc3dd933fc8053f6f49e55b904edff11b3e82c2c627869c"
+    sha256 cellar: :any_skip_relocation, catalina:      "5223ca004c271a7b9c99c997736229e66647defaa90b3dbb1635571fbb1a2ecf"
+    sha256 cellar: :any_skip_relocation, mojave:        "95188c7f64a9ad82dbcd0ca36edda7789dc33dd7433dfdc30c22281a37be2a07"
   end
 
   depends_on "rust" => :build
