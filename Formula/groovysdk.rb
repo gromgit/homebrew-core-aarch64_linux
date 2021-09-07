@@ -11,11 +11,11 @@ class Groovysdk < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "22daf0bb0900a5f6201cf692d481d289bb14b8f82ea7bb6e8d584d0345b72b7a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3131d94d95871be2f1656f184b41e1629a5597335cd1403aee3023e9331d9dfd"
-    sha256 cellar: :any_skip_relocation, catalina:      "3131d94d95871be2f1656f184b41e1629a5597335cd1403aee3023e9331d9dfd"
-    sha256 cellar: :any_skip_relocation, mojave:        "3131d94d95871be2f1656f184b41e1629a5597335cd1403aee3023e9331d9dfd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e6be3efaa4fee0cc1a283f08039679270c8e500f54fde12b56fd453fd803e48e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a3103793592e4d8c6392f5bf218e91698ffd2ad53a99002963ca4b8dd3c03fa7"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a0d0761356557724fede393dc0168097b07340a626875936dfca34dacc5a9f71"
+    sha256 cellar: :any_skip_relocation, catalina:      "a0d0761356557724fede393dc0168097b07340a626875936dfca34dacc5a9f71"
+    sha256 cellar: :any_skip_relocation, mojave:        "a0d0761356557724fede393dc0168097b07340a626875936dfca34dacc5a9f71"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a3103793592e4d8c6392f5bf218e91698ffd2ad53a99002963ca4b8dd3c03fa7"
   end
 
   depends_on "openjdk"
