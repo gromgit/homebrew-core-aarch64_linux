@@ -8,10 +8,10 @@ class Firefoxpwa < Formula
   head "https://github.com/filips123/FirefoxPWA.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b41b90f0feec4bd3520111a8562a1ebb3c7a5b028834646054d729c281437546"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f89de5c0477a2176a74c7724031fe4c514c85adc480b065d917abef4228e7215"
-    sha256 cellar: :any_skip_relocation, catalina:      "6a31680b95444147266384d6c66347e9660c3a8f23ed07137c0fa057979be486"
-    sha256 cellar: :any_skip_relocation, mojave:        "c95fcd4867072e9141cf306b0e9e494396e79a0d52639fc61a1e85f363f5343e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4fbf340e22c41fdc52c9930d0e204676e995f30c4c02819b4364a4d98fdc07e2"
+    sha256 cellar: :any_skip_relocation, big_sur:       "9073ea5fe13a7d12483980167eabc5a5df55928d413a3ee971f9436a2badaa56"
+    sha256 cellar: :any_skip_relocation, catalina:      "1620d3c7125ae7375fe32d5fb83e503adc1f6fd4cb99ea9bb7d640808201f6e8"
+    sha256 cellar: :any_skip_relocation, mojave:        "0cd9de8abd4f35d253efee5f27ea3fa48289337e92e492f0ca14620464e1fbf6"
   end
 
   depends_on "rust" => :build
