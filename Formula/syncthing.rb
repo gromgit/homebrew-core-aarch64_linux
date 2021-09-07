@@ -12,11 +12,11 @@ class Syncthing < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "93408ed3d13d1a9b7d4388b7857e43e43c734c3f36d20aabf7f2fb64292116b7"
-    sha256 cellar: :any_skip_relocation, big_sur:       "97cfcafe079181f9a20e0673770d5561cd1dda8d0ee8926069000138c0f8738d"
-    sha256 cellar: :any_skip_relocation, catalina:      "90fc7936bc0cff2f2f72e92ebcc20c1d26cf59fbcc619cecefb7319ed20799c1"
-    sha256 cellar: :any_skip_relocation, mojave:        "134db0b81f91e980ef4308458f36bb752cf26decd5089f1a27194408ab5195d8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "864f0e8513996dd076feddddf35068ea78165951aba089acc5b87dea8abc04b2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "95818c51bf69eab308d3be647a28914d429fa488bc33ebf29b25d55e3737630e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "8b04909a54196383a1bc58e7b6a2aca93ce52b45aa6021c283f6eef17ce86318"
+    sha256 cellar: :any_skip_relocation, catalina:      "3f8c0f6c14c697bf2f209bc8c3a79809d7ca92dc6e9869e9f84d221167557b21"
+    sha256 cellar: :any_skip_relocation, mojave:        "3663bc888dddde7764073352de729bd8b89c9389bc133cc0702df1e5fca60775"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0e1458439f2e6909a7f70dededb7b56899a3990daf8bb873d7b4a5bafabe00aa"
   end
 
   depends_on "go" => :build
