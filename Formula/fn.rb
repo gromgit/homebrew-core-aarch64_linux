@@ -7,11 +7,11 @@ class Fn < Formula
   head "https://github.com/fnproject/cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f05b0e3cd6375632eddb33bebfff9a88529cd203e816a6ea554c87bc50bb0379"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c556a28674afde6a2af8863f7379672c7a34019964b09c9934612586fce548ed"
-    sha256 cellar: :any_skip_relocation, catalina:      "f54b7aac76ce204ff59836c248234f9930f7ab30e3cd312563742869661daafe"
-    sha256 cellar: :any_skip_relocation, mojave:        "ea758f6762f87e6c965c290a59d94d03a13c320f68117e75deb28d54c5ba4b15"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f1086364187f4e5b87e255ab4624cf58d8f044d4541dbdc3af31bdc5e080ac79"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ca67fb44b667930bedc4d70d479cf0898a2959411d72ef27df38e75ceb751cdf"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f9242da69c2ff818effdd57b29441c5b70f919e203fad4ac758d3d53f1368df9"
+    sha256 cellar: :any_skip_relocation, catalina:      "a916fca3a10a3c67c970078901982bf8a9627b6125ae22830e3b093b8e202ddf"
+    sha256 cellar: :any_skip_relocation, mojave:        "31b30385e76a5c3020487e583d1369b414633b038419fd96b43f395277efef8c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e0a90ba76f98db9f8b66786d61b7b7fe9ba53a58702eb91d3fdfb33c1e1f7dce"
   end
 
   depends_on "go" => :build
