@@ -7,9 +7,10 @@ class Fibjs < Formula
   head "https://github.com/fibjs/fibjs.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "e5a997e76a3fa661cbdf75cf61e3e53e093451c2c5e9a1e55a16e6b8742fb55d"
-    sha256 cellar: :any_skip_relocation, catalina: "a93fbe33a0f6feca011ea1f21f69f2d5d72be12cc4b2ca11f217e53ad1a09c72"
-    sha256 cellar: :any_skip_relocation, mojave:   "bef936d8399cb135a7073b6983ee41b0fb41e967c893a92db785f5d319ea453e"
+    sha256 cellar: :any_skip_relocation, big_sur:      "5b94c5a2291ada6c8987b23357ea3c0be4306d2ead6caca2b236a73643947d7f"
+    sha256 cellar: :any_skip_relocation, catalina:     "74a446f80b494dee49981e4fa0dc68fc1653d81ba09dbf316e5bde3100360030"
+    sha256 cellar: :any_skip_relocation, mojave:       "0489b047454da54566d071fddfc011c91ca8c44620631a1aebe359c887fb65fb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "7992458fb9fc9ab2aab41cdf12f7f68896c21202c9499d9a0900b32d1dfc7dd0"
   end
 
   depends_on "cmake" => :build
