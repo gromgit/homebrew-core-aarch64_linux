@@ -10,7 +10,7 @@ class Parallel < Formula
 
   livecheck do
     url :homepage
-    regex(/GNU Parallel v?(\d{6,8}).*? released \[stable\]/i)
+    regex(/GNU Parallel v?(\d{6,8}).*? released/i)
   end
 
   bottle do
