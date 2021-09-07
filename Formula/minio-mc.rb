@@ -2,11 +2,11 @@ class MinioMc < Formula
   desc "Replacement for ls, cp and other commands for object storage"
   homepage "https://github.com/minio/mc"
   url "https://github.com/minio/mc.git",
-      tag:      "RELEASE.2021-07-27T06-46-19Z",
-      revision: "addaf66de8af5d865a6102320727e8a5dbcacdb6"
-  version "20210727064619"
+      tag:      "RELEASE.2021-09-02T09-21-27Z",
+      revision: "f661334f3d61c870fdf55f1db238ea7268175ad5"
+  version "20210902092127"
   license "AGPL-3.0-or-later"
-  head "https://github.com/minio/mc.git"
+  head "https://github.com/minio/mc.git", branch: "master"
 
   livecheck do
     url :stable
@@ -28,12 +28,6 @@ class MinioMc < Formula
   depends_on "go" => :build
 
   conflicts_with "midnight-commander", because: "both install an `mc` binary"
-
-  # Support go 1.17, remove after next release
-  patch do
-    url "https://github.com/minio/mc/commit/855333e4ab24804dd3dcd38988ceaed112ee62f9.patch?full_index=1"
-    sha256 "c00d331fd8d420105356d004aeecd17ef4c6332796f53a3e547218b4de7dbd41"
-  end
 
   def install
     if build.head?
