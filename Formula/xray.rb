@@ -7,11 +7,11 @@ class Xray < Formula
   head "https://github.com/XTLS/Xray-core.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e7bd4ff6c49faa87d273c9cae05a46d4613e7718d192477e44ce34913f4b21a5"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e6045666df8f87a58ded259f67bfea7199eeca12cb0b29f8e697b1c71ae95123"
-    sha256 cellar: :any_skip_relocation, catalina:      "c8e68f1c303bc7dcfd045fc7344183aaf79cf1a836c4781b7e60aacebe312d3c"
-    sha256 cellar: :any_skip_relocation, mojave:        "1a45b3784597260e0659cd0ae2127edeffccf83c5051cecbda6f1b046ff034f1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ce48403bf39cc4c6dc819a0533301e0458f56f16f1f979dfed4754efa83c1577"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "43b04e6616684366cd64de19cfacc1cdc83f47379408429f429071ca93067b21"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3c9ed4fef4835eba3de1e2974c3fc8744bb831f71e3a3f12c557e47e987d2971"
+    sha256 cellar: :any_skip_relocation, catalina:      "7fb5f23761affc9b9c9d7040a381d46879274eb0f05797b0d29ded09af49f932"
+    sha256 cellar: :any_skip_relocation, mojave:        "85a69b6557a3109b28c2c24afd4e459922d54fa66c934c83e58fac4eb5c85a52"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ed8b487c81c23ab1213225aebac6ce0bdf30dad33ca5c9ea8a4cedeede33823c"
   end
 
   depends_on "go" => :build
