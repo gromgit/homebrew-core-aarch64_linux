@@ -1,10 +1,9 @@
 class Wget < Formula
   desc "Internet file retriever"
   homepage "https://www.gnu.org/software/wget/"
-  url "https://ftp.gnu.org/gnu/wget/wget-1.21.1.tar.gz"
-  sha256 "59ba0bdade9ad135eda581ae4e59a7a9f25e3a4bde6a5419632b31906120e26e"
+  url "https://ftp.gnu.org/gnu/wget/wget-1.21.2.tar.gz"
+  sha256 "e6d4c76be82c676dd7e8c61a29b2ac8510ae108a810b5d1d18fc9a1d2c9a2497"
   license "GPL-3.0-or-later"
-  revision 1
 
   bottle do
     sha256 arm64_big_sur: "bedb0887083a2d3ebcfbc03a1fed9919b726810dbbc2cd0efae923ef9d6bd5f4"
