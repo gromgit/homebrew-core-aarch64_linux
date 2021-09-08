@@ -7,7 +7,7 @@ class Singularity < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "565338bfa4b430b4e3de41de908e91b225e98fdcba64db857f2aedfc1c782be2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "5dfd32a73f2c2cd6b5b67b9507bb2ffa738b472d742dd3c8ffdb8557d13afbde"
   end
 
   # No relocation, the localstatedir to find configs etc is compiled into the program
