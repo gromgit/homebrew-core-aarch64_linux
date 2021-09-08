@@ -18,10 +18,10 @@ class Puzzles < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8e772ca4c815b0e53fe8b7b65a551f6bb740b5c7ed100b6f7cd4d86b0f5ba3a4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "73c050a2981303c8f956e59fed4214189a30024e03a90f38f243064e1937d511"
-    sha256 cellar: :any_skip_relocation, catalina:      "e785a5a9733f1f60eed8cb9473e315d216317b2038ba79a5dbc155da97937fab"
-    sha256 cellar: :any_skip_relocation, mojave:        "b073786c86a74549140f5beb24012d697300045907c016443331a5e67df73583"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "320f100c895ac11b07ae06d27f3f6175504f2e73e60f5f9ae67aad8e636c06ba"
+    sha256 cellar: :any_skip_relocation, big_sur:       "8c0b6e15d1c1535640dc292caf28d2fa57ce8e0c1e8ffcf953f6351ceeb59f19"
+    sha256 cellar: :any_skip_relocation, catalina:      "dbe2e28663f7916ddd0c0d0ff9a9935acad93a4439028084ef9690f5006240fe"
+    sha256 cellar: :any_skip_relocation, mojave:        "b25de2654e4a9279d1d28746e52f243cbb3b82e1d65a7d63bcd23e4ea7dc4fa4"
   end
 
   depends_on "cmake" => :build
