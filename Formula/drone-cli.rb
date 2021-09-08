@@ -7,11 +7,11 @@ class DroneCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3b6df453dab028af63df937c08d5a84f6ddc71caa4997b79e859e8538133ffb4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0478ef553b34f2f7d202046239921a67262528b4d432c5f467147401c8900bc3"
-    sha256 cellar: :any_skip_relocation, catalina:      "b00a555ed82c4319864ee32e93fcbabd4840e8ead331ec49e0c40c781c02f85d"
-    sha256 cellar: :any_skip_relocation, mojave:        "2ffef48dce7c0a8dbfd62d11c2beff4753be01b3cdd74bbd2f932f559bf8bc0a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "66f0e2918297680fb63b2359304f1dcb203ac67a3792dee9a340613d50975087"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2506e576a09c124cfe6f6a5eb6906c49b04ce0090b3e05db980df3adb6d06c1c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7a76db340f0fe6269331b081004d40d152dddf8027514cbbbc6c075909bc0669"
+    sha256 cellar: :any_skip_relocation, catalina:      "7e5bfff2d039507cf02fd17ba86b3abd254b531eae177ff40ef4bb998e7e9473"
+    sha256 cellar: :any_skip_relocation, mojave:        "e0545bddd3c764979c708a80e6904c7f1ac5d0e8634da25f70f623098c6c0104"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "13b1ae94776fc650d43968654ad1fceb0f5da1edf98f1af33e1331956be50f14"
   end
 
   depends_on "go" => :build
