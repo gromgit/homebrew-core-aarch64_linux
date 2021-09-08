@@ -11,9 +11,9 @@ class Qmmp < Formula
   end
 
   bottle do
-    sha256 big_sur:  "144bd80fb2a050a68900c40a44f00fc05fb7addc660e7807e900a129f86b8a89"
-    sha256 catalina: "feff3c70d129d608e05e83928031134d9422cfedb52f305617a2c3af62802f19"
-    sha256 mojave:   "7001d36b42beb62f494c03d0e15bf5a153712ad9784af50df1e8042b52d682f6"
+    sha256 big_sur:  "06d9a6cd5339d519d2a01549496c679a40e70cff241c2da8ebe728a5a29a5c1c"
+    sha256 catalina: "ab9a6e9d2613a9f27c706c969d2053f917c67e8137890ba7a370344c1c60035e"
+    sha256 mojave:   "8bdc18b507fc1336db6cfd1d430038467b7244f6c901b52ffe765f9de7338c90"
   end
 
   depends_on "cmake"      => :build
