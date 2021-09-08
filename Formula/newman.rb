@@ -8,11 +8,11 @@ class Newman < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "21130a928c057859222d1902adfa6429daa2e34a596505bbbd304284257f6d54"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ed2748b227245376f268f0d0b560fefe96b560e284acf5976068e900abfddcb6"
-    sha256 cellar: :any_skip_relocation, catalina:      "ed2748b227245376f268f0d0b560fefe96b560e284acf5976068e900abfddcb6"
-    sha256 cellar: :any_skip_relocation, mojave:        "ed2748b227245376f268f0d0b560fefe96b560e284acf5976068e900abfddcb6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4d64accb250a0fee5ebc201230b1a7ffff0f8f4a5c457c614e26211f96d8cb8a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f4cdf08e832543aea81630dfd577e6547897b6782201253803528634d9197a74"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b2f025e48984e411788de3fa5678e4e70ffc84487d61fb37095ab17a498523e0"
+    sha256 cellar: :any_skip_relocation, catalina:      "b2f025e48984e411788de3fa5678e4e70ffc84487d61fb37095ab17a498523e0"
+    sha256 cellar: :any_skip_relocation, mojave:        "b2f025e48984e411788de3fa5678e4e70ffc84487d61fb37095ab17a498523e0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f4cdf08e832543aea81630dfd577e6547897b6782201253803528634d9197a74"
   end
 
   depends_on "node"
