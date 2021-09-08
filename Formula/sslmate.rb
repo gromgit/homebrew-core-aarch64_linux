@@ -15,10 +15,10 @@ class Sslmate < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "663bd104378e805e195f861d33e509b1110ca6f3719b30050cf98121256594bf"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7835b2f312003a5520eaa288d00cb2ca73384f4e38a0bae60adb5800f8a869cb"
-    sha256 cellar: :any_skip_relocation, catalina:      "7835b2f312003a5520eaa288d00cb2ca73384f4e38a0bae60adb5800f8a869cb"
-    sha256 cellar: :any_skip_relocation, mojave:        "7835b2f312003a5520eaa288d00cb2ca73384f4e38a0bae60adb5800f8a869cb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8365c733e5ee8edf15a06ede1010b9cfa54148547818102d8b741d8ea49600e9"
+    sha256 cellar: :any_skip_relocation, big_sur:       "71a327da5a0c78c00fd8abcf364d801ac54c2390110d337c491d645337953aa7"
+    sha256 cellar: :any_skip_relocation, catalina:      "71a327da5a0c78c00fd8abcf364d801ac54c2390110d337c491d645337953aa7"
+    sha256 cellar: :any_skip_relocation, mojave:        "71a327da5a0c78c00fd8abcf364d801ac54c2390110d337c491d645337953aa7"
   end
 
   depends_on "python@3.9"
