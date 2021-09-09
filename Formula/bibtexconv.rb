@@ -1,8 +1,8 @@
 class Bibtexconv < Formula
   desc "BibTeX file converter"
   homepage "https://www.uni-due.de/~be0001/bibtexconv/"
-  url "https://github.com/dreibh/bibtexconv/archive/bibtexconv-1.2.0.tar.gz"
-  sha256 "0ace3aa17eedbc4c4950e5ef8763b1dd58bfa2d33cd00fa2b35f07febb6df940"
+  url "https://github.com/dreibh/bibtexconv/archive/bibtexconv-1.3.0.tar.gz"
+  sha256 "1d15a474f723ef251eb0ad13fc3578dac7b17504b4d8de36bcde7c1584a48852"
   license "GPL-3.0-or-later"
   head "https://github.com/dreibh/bibtexconv.git", branch: "master"
 
@@ -14,10 +14,10 @@ class Bibtexconv < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "5bf8980f28f51667f569e7da89965e97adeffd5aa0212b12b047c84c9a53a8c3"
   end
 
+  depends_on "bison" => :build
   depends_on "cmake" => :build
   depends_on "openssl@1.1"
 
-  uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
   uses_from_macos "curl"
 
