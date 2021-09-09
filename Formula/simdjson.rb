@@ -1,8 +1,8 @@
 class Simdjson < Formula
   desc "SIMD-accelerated C++ JSON parser"
   homepage "https://simdjson.org"
-  url "https://github.com/simdjson/simdjson/archive/v0.9.7.tar.gz"
-  sha256 "a21279ae4cf0049234a822c5c3550f99ec1707d3cda12156d331dcc8cd411ba0"
+  url "https://github.com/simdjson/simdjson/archive/v1.0.0.tar.gz"
+  sha256 "fe54be1459b37e88abd438b01968144ed4774699d1272dd47a790b9362c5df42"
   license "Apache-2.0"
   head "https://github.com/simdjson/simdjson.git", branch: "master"
 
@@ -16,18 +16,18 @@ class Simdjson < Formula
   depends_on "cmake" => :build
 
   def install
-    args = std_cmake_args + ["-DSIMDJSON_JUST_LIBRARY=ON"]
-    system "cmake", ".", *args
-    system "make", "install"
-    system "make", "clean"
-    system "cmake", ".", *args, "-DSIMDJSON_BUILD_STATIC=ON"
-    system "make"
-    lib.install "src/libsimdjson.a"
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args, "-DBUILD_SHARED_LIBS=ON"
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args, "-DBUILD_SHARED_LIBS=OFF"
+    system "cmake", "--build", "build"
+    lib.install "build/libsimdjson.a"
   end
 
   test do
     (testpath/"test.json").write "{\"name\":\"Homebrew\",\"isNull\":null}"
     (testpath/"test.cpp").write <<~EOS
+      #include <iostream>
       #include <simdjson.h>
       int main(void) {
         simdjson::dom::parser parser;
