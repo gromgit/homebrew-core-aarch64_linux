@@ -7,6 +7,14 @@ class OscCli < Formula
   sha256 "fb312c82c73ed4eba7bbb3a028e4d2f53e00e28c576ff2f638258f27a855e7e7"
   license "BSD-3-Clause"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f988fcbfdc3d68c240a83d507d8ae548b4411afdc418f468276fcdfd1c3b89ff"
+    sha256 cellar: :any_skip_relocation, big_sur:       "aa37225fd72496c7872b08a69c39f027a4d37ec9a810dd5ccbe1ce270b2a5b55"
+    sha256 cellar: :any_skip_relocation, catalina:      "aa37225fd72496c7872b08a69c39f027a4d37ec9a810dd5ccbe1ce270b2a5b55"
+    sha256 cellar: :any_skip_relocation, mojave:        "aa37225fd72496c7872b08a69c39f027a4d37ec9a810dd5ccbe1ce270b2a5b55"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "76cf5ec7e2a32e0ce9531a178c53f8a1f56005e10c4de3806c5cccb8e54a2d15"
+  end
+
   depends_on "python@3.9"
   depends_on "six"
 
