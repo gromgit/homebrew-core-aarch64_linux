@@ -2,8 +2,8 @@ class Grpc < Formula
   desc "Next generation open source RPC library and framework"
   homepage "https://grpc.io/"
   url "https://github.com/grpc/grpc.git",
-      tag:      "v1.39.1",
-      revision: "2d6b8f61cfdd1c4d2d7c1aae65a4fbf00e3e0981"
+      tag:      "v1.40.0",
+      revision: "ab6beb3f686857d687bf72e80b1fbaf7d3c3e4a4"
   license "Apache-2.0"
   head "https://github.com/grpc/grpc.git"
 
@@ -34,7 +34,9 @@ class Grpc < Formula
   uses_from_macos "zlib"
 
   on_macos do
-    depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1100
+    # This shouldn't be needed for `:test`, but there's a bug in `brew`:
+    # CompilerSelectionError: pdnsrec cannot be built with any available compilers.
+    depends_on "llvm" => [:build, :test] if DevelopmentTools.clang_build_version <= 1100
   end
 
   fails_with :clang do
@@ -85,6 +87,9 @@ class Grpc < Formula
   end
 
   test do
+    # Force use of system clang on Mojave
+    ENV.clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1100)
+
     (testpath/"test.cpp").write <<~EOS
       #include <grpc/grpc.h>
       int main() {
