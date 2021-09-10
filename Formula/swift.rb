@@ -14,10 +14,10 @@ class Swift < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "f425aed852970268b2b14306094e0227ede33e58d904a9f9a77f629b83c73580"
-    sha256 cellar: :any, big_sur:       "90b1107a0cec3fca7669c15f300718e7c830bad52736bc80fe6f9834c552eaa0"
-    sha256 cellar: :any, catalina:      "2e106032a395de5a62d8b414ddb2d2fd8818a4f90da57d571fb702b032ba47ee"
-    sha256               x86_64_linux:  "7acd57023583fe073ef52ddd35c254f9502d4a5d6e8098269e4e50d8c3313884"
+    sha256 cellar: :any, arm64_big_sur: "58d03383560eb0bdeda91759930be485eb38f8b866c916417ec536170386e46a"
+    sha256 cellar: :any, big_sur:       "4380d9efdda80ed9a3f41f9211615b048cfd34a69d36d3723f3f32deeefdf38a"
+    sha256 cellar: :any, catalina:      "9d963bcf4cecbade2dc5051accbe55ff27b25f31219b5813798969af18778019"
+    sha256               x86_64_linux:  "13687aad935f4b114a02c9c75e3ae3e11515b7a62d777a1b4419c35a1f52e179"
   end
 
   keg_only :provided_by_macos
