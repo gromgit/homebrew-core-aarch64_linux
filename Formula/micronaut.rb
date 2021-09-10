@@ -11,11 +11,11 @@ class Micronaut < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4d092d5a043d479d0a3293fc288fe47d2e6ea65b02a70634d4248237f66a8bba"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d20fb9a3fde239aa7315e26b6ef4a7d2686befa344ae7d6c96a196333755a63b"
-    sha256 cellar: :any_skip_relocation, catalina:      "a8e3ac5e16648912e90bd4070ec564142cee7aa42469a9ddd1ad9ed5e8ce8519"
-    sha256 cellar: :any_skip_relocation, mojave:        "117baf5eb6c8ca4dacab7367bbe58b5a541932d74a9d2b470a3431fbbaa3c11c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e377997493326e7fd19de0e8d9b27da947ce74fc5ca98cba6d8489e107259672"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0f9d85e731f63b5cfb1a1718d8fdd10c5c4492e7322799270c9def222d6ba268"
+    sha256 cellar: :any_skip_relocation, big_sur:       "eab0b936005c6193006e3df8aaf6a53d1ac28ad0d012fca389263ea7efe40e43"
+    sha256 cellar: :any_skip_relocation, catalina:      "9172b51aec0372919f8bbaee10ee210643c1134ee5c9640f5e149227bbff7596"
+    sha256 cellar: :any_skip_relocation, mojave:        "ed5b509b24e0fffd9a2b543ee0b033f22f2ff9a0c1c6538f27b5ccfe72542ef3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eb624d4ca8307aee1aa6a6197a5f5550d185f0d9d85b32ef9b5f77270988c671"
   end
 
   if Hardware::CPU.arm?
