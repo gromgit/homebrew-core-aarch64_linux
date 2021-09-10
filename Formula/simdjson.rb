@@ -15,6 +15,12 @@ class Simdjson < Formula
 
   depends_on "cmake" => :build
 
+  on_linux do
+    depends_on "gcc"
+  end
+
+  fails_with gcc: "5"
+
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args, "-DBUILD_SHARED_LIBS=ON"
     system "cmake", "--build", "build"
