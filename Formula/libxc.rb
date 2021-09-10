@@ -6,11 +6,11 @@ class Libxc < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "d7ebe8ece0132ef0dcaf3acc5bf34d01f937409d955a01589403d30f53a0082c"
-    sha256 cellar: :any,                 big_sur:       "40e57e0cd88761019d4c8448193c7d3c3cbd298266b6d0b5a85b9c4194ce933e"
-    sha256 cellar: :any,                 catalina:      "e54b76bee4a7e70bb69193b7841c8fcc7e90baafb855d59ed7686e67faf044b4"
-    sha256 cellar: :any,                 mojave:        "2ee0c09cfc39c2ab530bb432a80143c6ffa858df0aa8e8677442d6b179736f4b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0cedfd3e3bcbb4088d8a00ad08fa26e65f84ff9b18ea50e02a7bf5421582cf9a"
+    sha256 cellar: :any,                 arm64_big_sur: "bab54fd6f307ac24bc5bd3ab6141daf2149abc990f3d1c2774164a4953d5fe03"
+    sha256 cellar: :any,                 big_sur:       "042fd1f69c5eb656fafb3132e3e74e6243db2d54bb085e825772c78e4ebb1c8e"
+    sha256 cellar: :any,                 catalina:      "e35ea54099046a72da1e9ac35e838b12055aef0c5c81be282e579758c640df00"
+    sha256 cellar: :any,                 mojave:        "eb030e211e6523a252007c84e330bd0e6248ddc14676d61f5daf1b328ca219b0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "59641b78ef6a37cab93991fba107c4a2dd62a610c54adda0766bed0ba7b38ee6"
   end
 
   depends_on "autoconf" => :build
