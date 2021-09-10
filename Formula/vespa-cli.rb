@@ -6,6 +6,14 @@ class VespaCli < Formula
   sha256 "87e309fbdac0bef174ef3ac1bf094d551a54dd2da57ecc52e19880d0d81a9cda"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2545137bd5211b28a97ad6b63b19f5c89abc61512424a05fdb115a07dad0f17b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "04245ebcc2c5c9d2792fc166ad08829c6b4f48281333a4eeeeba8d8b57d5947e"
+    sha256 cellar: :any_skip_relocation, catalina:      "bb874b46718d2512b9cd640bdfd27b935dfcae0975e480b8ff5bf7f013c96e87"
+    sha256 cellar: :any_skip_relocation, mojave:        "886380dfa363e839aaacf41d1f403b9e1eb85af71bcce4796f22de5dd555cbe1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fbb17e116100be24ef0787c66e1baf39a1021f038d3597547819959cf8c7eca9"
+  end
+
   depends_on "go" => :build
 
   def install
