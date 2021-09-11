@@ -4,6 +4,7 @@ class Fpc < Formula
   url "https://downloads.sourceforge.net/project/freepascal/Source/3.2.2/fpc-3.2.2.source.tar.gz"
   sha256 "d542e349de246843d4f164829953d1f5b864126c5b62fd17c9b45b33e23d2f44"
   license "GPL-2.0-or-later"
+  revision 1
 
   # fpc releases involve so many files that the tarball is pushed out of the
   # RSS feed and we can't rely on the SourceForge strategy.
@@ -21,25 +22,29 @@ class Fpc < Formula
   end
 
   resource "bootstrap" do
-    url "https://downloads.sourceforge.net/project/freepascal/Mac%20OS%20X/3.0.4/fpc-3.0.4a.intel-macosx.dmg"
-    sha256 "56b870fbce8dc9b098ecff3c585f366ad3e156ca32a6bf3b20091accfb252616"
+    url "https://downloads.sourceforge.net/project/freepascal/Mac%20OS%20X/3.2.2/fpc-3.2.2.intelarm64-macosx.dmg"
+    sha256 "05d4510c8c887e3c68de20272abf62171aa5b2ef1eba6bce25e4c0bc41ba8b7d"
   end
 
   def install
     fpc_bootstrap = buildpath/"bootstrap"
     resource("bootstrap").stage do
-      system "pkgutil", "--expand-full", "fpc-3.0.4a.intel-macosx.pkg", "contents"
-      (fpc_bootstrap/"fpc-3.0.4a").install Dir["contents/fpc-3.0.4a.intel-macosx.pkg/Payload/usr/local/*"]
+      pkg_path = "fpc-3.2.2-intelarm64-macosx.mpkg/Contents/Packages/fpc-3.2.2-intelarm64-macosx.pkg"
+      system "pkgutil", "--expand-full", pkg_path, "contents"
+      (fpc_bootstrap/"fpc-3.2.2").install Dir["contents/Payload/usr/local/*"]
     end
-    fpc_compiler = fpc_bootstrap/"fpc-3.0.4a/bin/ppcx64"
 
-    # Help fpc find the startup files (crt1.o and friends) with 10.14 SDK
-    args = (MacOS.version >= :mojave) ? ['OPT="-XR/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"'] : []
+    compiler_name = Hardware::CPU.arm? ? "ppca64" : "ppcx64"
+    fpc_compiler = fpc_bootstrap/"fpc-3.2.2/bin"/compiler_name
+
+    # Help fpc find the startup files (crt1.o and friends)
+    sdk = MacOS.sdk_path_if_needed
+    args = sdk ? %W[OPT="-XR#{sdk}"] : []
 
     system "make", "build", "PP=#{fpc_compiler}", *args
     system "make", "install", "PP=#{fpc_compiler}", "PREFIX=#{prefix}"
 
-    bin.install_symlink lib/"#{name}/#{version}/ppcx64"
+    bin.install_symlink lib/name/version/compiler_name
 
     # Prevent non-executable audit warning
     rm_f Dir[bin/"*.rsj"]
@@ -58,6 +63,6 @@ class Fpc < Formula
     EOS
     (testpath/"hello.pas").write(hello)
     system "#{bin}/fpc", "hello.pas"
-    assert_equal "Hello Homebrew", `./hello`.strip
+    assert_equal "Hello Homebrew", shell_output("./hello").strip
   end
 end
