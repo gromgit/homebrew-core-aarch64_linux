@@ -3,8 +3,8 @@ class Binwalk < Formula
 
   desc "Searches a binary image for embedded files and executable code"
   homepage "https://github.com/ReFirmLabs/binwalk"
-  url "https://github.com/ReFirmLabs/binwalk/archive/v2.3.2.tar.gz"
-  sha256 "986162f403547c1d16aad4cfc1f9aab06ab2f8272eb2a5b54d2d1d96cb16b121"
+  url "https://github.com/ReFirmLabs/binwalk/archive/v2.3.3.tar.gz"
+  sha256 "7e32b94dc77632b51d18732b5456e2a3ef85e4521d7d4a54410e36f93859501f"
   license "MIT"
   head "https://github.com/ReFirmLabs/binwalk.git", branch: "master"
 
@@ -49,8 +49,8 @@ class Binwalk < Formula
   end
 
   resource "kiwisolver" do
-    url "https://files.pythonhosted.org/packages/90/55/399ab9f2e171047d28933ae4b686d9382d17e6c09a01bead4a6f6b5038f4/kiwisolver-1.3.1.tar.gz"
-    sha256 "950a199911a8d94683a6b10321f9345d5a3a8433ec58b217ace979e18f16e248"
+    url "https://files.pythonhosted.org/packages/8e/87/259fde8cf07d06677f0a749cb157d079ebd00d40fe52faaab1a882a66159/kiwisolver-1.3.2.tar.gz"
+    sha256 "fc4453705b81d03568d5b808ad8f09c77c47534f6ac2e72e733f9ca4714aa75c"
   end
 
   resource "matplotlib" do
