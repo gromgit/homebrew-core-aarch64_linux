@@ -1,8 +1,8 @@
 class Mdds < Formula
   desc "Multi-dimensional data structure and indexing algorithm"
   homepage "https://gitlab.com/mdds/mdds"
-  url "https://kohei.us/files/mdds/src/mdds-1.7.0.tar.bz2"
-  sha256 "a66a2a8293a3abc6cd9baff7c236156e2666935cbfb69a15d64d38141638fecf"
+  url "https://kohei.us/files/mdds/src/mdds-2.0.0.tar.bz2"
+  sha256 "5a0fb2dd88a6420e0a69ec4c7259bcd1fe8f4a80b232c150e11f3da4c68236d7"
   license "MIT"
 
   bottle do
@@ -22,6 +22,12 @@ class Mdds < Formula
 
   depends_on "autoconf" => :build
   depends_on "boost"
+
+  on_linux do
+    depends_on "gcc" # for C++17
+  end
+
+  fails_with gcc: "5"
 
   def install
     args = %W[
