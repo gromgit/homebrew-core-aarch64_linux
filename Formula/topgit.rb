@@ -6,13 +6,7 @@ class Topgit < Formula
   license "GPL-2.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "cecc5c6c74a94121791b87e8805215ff040072b3c93669d008b5fab7e7f4ec16"
-    sha256 cellar: :any_skip_relocation, big_sur:       "010944d089a8f0c8c3f615dc2e0e550cb63adeb4cb337879b43a18eb882f22ec"
-    sha256 cellar: :any_skip_relocation, catalina:      "4d9aa5c198e91f80f0fbf137e456239a8c1d65e50e6bd851f9333cf4d32d7127"
-    sha256 cellar: :any_skip_relocation, mojave:        "30c348bcfbdcfc5fe3a91b0bb8889841a5e492f2fed7626577cda1523d815dc2"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "30c348bcfbdcfc5fe3a91b0bb8889841a5e492f2fed7626577cda1523d815dc2"
-    sha256 cellar: :any_skip_relocation, sierra:        "ec7f9140e122265f34c03469803cf7eb932006d240ab158cb9ee5a27f53b3b38"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6f23ef839b0ae19ef10ca2baf5dae69164a93086bfb981d24c643f533bc9b063"
+    sha256 cellar: :any_skip_relocation, all: "5f1d4fc904d11ddc99f4a774692587c24e44c210c64a94955ffb9fdd4c53a555"
   end
 
   def install
