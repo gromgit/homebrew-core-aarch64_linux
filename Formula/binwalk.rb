@@ -14,11 +14,11 @@ class Binwalk < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "3fc8cbcf9add11add09cc74d562fc36e58a04bec12280bc595a80070381c2048"
-    sha256 cellar: :any,                 big_sur:       "e507645e9770a43972e475e176ef6aa69282089bbf0153352ea938073630d47f"
-    sha256 cellar: :any,                 catalina:      "7abf42d18500b930ab9536f83663ace9271183c2f39c3d7c55365e71b7d10f7e"
-    sha256 cellar: :any,                 mojave:        "ba9d3ceed857cd1dc3079055b0fba0c54cc7cc82da2a2de0bf33e88efdb38d0c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c5a198a4525f5594b82e894c56638cfb09615bacdfecab5d9e3102d9fa92cf21"
+    sha256 cellar: :any,                 arm64_big_sur: "1e034085ca39b0365e95df6280778c66ef0944e1755bb8b7ad9aa4852a694279"
+    sha256 cellar: :any,                 big_sur:       "5863bab81579b7948fe90f4106ab0b71617088b2c2ebeaf5f41d06322f37a0e5"
+    sha256 cellar: :any,                 catalina:      "a5841b3b76b9ceffe00cbeaa1b09fd47bf36bb7047167bd93cbd4feb9112276d"
+    sha256 cellar: :any,                 mojave:        "a8aa94d921b8ded782cbbbc96458d388d53eaf40d7d7be530a24af4477f01e4d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "96b1f21982d5955fe9e1dd3e7c42b740293bff518cd567c85cc16177c563d2ef"
   end
 
   depends_on "pkg-config" => :build
