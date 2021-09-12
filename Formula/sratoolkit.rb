@@ -23,9 +23,10 @@ class Sratoolkit < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "87602a3b77c5d58a037bf2e93423e6cb925bd586fe424680035885894359aeb0"
-    sha256 cellar: :any_skip_relocation, catalina: "15a8306c7a3b550ee120a0eb6ab7c87e0e53a3f33549a0a0f3c5a218c6e75d13"
-    sha256 cellar: :any_skip_relocation, mojave:   "b9b36c564d65e79d3726e4de473e18d892f109221f45dbb91768ecac5758df59"
+    sha256 cellar: :any, big_sur:      "97051e817f8d0c86278c7b7cebe076cf353e265214f65ec4671f524e2874f96a"
+    sha256 cellar: :any, catalina:     "49b626f70a185e51bea31863302ea355a7667389491a285f981483696dba4627"
+    sha256 cellar: :any, mojave:       "70e233457d44d8f3c320014aeacda5f8f895a5374a89fcf27b0fd66bdf89f4fc"
+    sha256               x86_64_linux: "4f770684c6778372445a3c2568405e17d192f994bdf4892ee596439aeeb9715a"
   end
 
   head do
