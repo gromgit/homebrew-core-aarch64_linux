@@ -11,11 +11,11 @@ class Gwenhywfar < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "cf4318174789a6da02beeb0ae8b2182bc17b14fea0de4ba4ec1d4e2574fefb7d"
-    sha256 big_sur:       "f172c3d2c81e2f75f851a34629baa9c90c389a42e22458dc3352a8368245ef9b"
-    sha256 catalina:      "a04f53d938325ee504611552f46fc606118b54ffcd3b1e8edb67f5f61d3b75fe"
-    sha256 mojave:        "4f83d9bc727e95b68c89a736cb95a7b5f5b0c4c75822cf6043b575d63420002c"
-    sha256 x86_64_linux:  "40b9fb1fe1755cac14ad2c1cac6c42200d4de14dcaee5ae4bd8a6e501430e16b"
+    sha256 arm64_big_sur: "08ea7622b29b304310b6f7c77a2871e2eeea869dd3907d99e5f7f34b84433c41"
+    sha256 big_sur:       "b3d83af3c26135f5b5ce82a82971c10d1a4c63015abde9c787820159d360b488"
+    sha256 catalina:      "88c14dc6e73fa6907e8ed088ba19c2b06add0175e73e0ad870d4640c32bbb5d3"
+    sha256 mojave:        "f8971c8631c02491cbeb7da3d19290b7bbe15e0c9ff8a46957e6ac663d214d46"
+    sha256 x86_64_linux:  "735e07170ed9917be2d19e88f60e3ca1965588912ba77748b72c5662796811c0"
   end
 
   depends_on "autoconf" => :build
