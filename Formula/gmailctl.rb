@@ -7,11 +7,11 @@ class Gmailctl < Formula
   head "https://github.com/mbrt/gmailctl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ca176f471c5358025d9fcdc158a732e9e64232e5c2f7aaab53efbbb846920e57"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e72f9006fd0c10ef79ecd4c2f875d1ee984d6ee40a6a717894b29cae9d3324fb"
-    sha256 cellar: :any_skip_relocation, catalina:      "e191cdefb1f75f799f610aeaadd454c27d3aa90527d3bbf69ee804ca5c94dfa8"
-    sha256 cellar: :any_skip_relocation, mojave:        "57d9dc005423a078971fd79d5c2382c07f17b4536a445d571cef47d025d28ffb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "58ce36e464f9c0d38c8bba1c2bb46bbdcc1e8bb848808da06b04a35007e763e1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "32361886ab245d106bfdabc60eceb43f803636aa5c4db59187396f2dcf80674e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3c9080dfdc290ee0747fbd7d70c786166636d22c0114bdfd8dfe27f8ad0ca330"
+    sha256 cellar: :any_skip_relocation, catalina:      "6239ab2e534e2b0b013bdf0068a75d88aa51abb91fc9f9b8f079dc3c80abdd41"
+    sha256 cellar: :any_skip_relocation, mojave:        "b6a4a9554edec82d0386efa66a88bf4d7503d3cda5d6e96940834afd270c90e4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "388790f3dff736f78e035afd488374cdd8da3f433da2d051e7f0cb67f4a92d5b"
   end
 
   depends_on "go" => :build
