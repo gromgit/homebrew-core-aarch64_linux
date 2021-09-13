@@ -7,11 +7,11 @@ class Okteto < Formula
   head "https://github.com/okteto/okteto.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "01cdb4fc7ca14324fc88fd4a9bb3a457815a58f3ab3b952a2fe92bdf8536e276"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7ed993aea5d84a466f509e49010a37943ccfb4c76201fb3f4d1b46b5a50b270e"
-    sha256 cellar: :any_skip_relocation, catalina:      "a227a63909907f8fc88d116767faa6f1ccfc5e59bfc5cb4359323208df5c756b"
-    sha256 cellar: :any_skip_relocation, mojave:        "103f8eeeb69f72545147b9b25aa509db4290eb94a6f3f86b604f1a4a51f41b37"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d4128995d7421e7d9289343783d21b21cbaa4ce203613e0b27c73b5dda213422"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bf3b8a6a995a2ceb77276e624569b74b66d2b6e06888a9465228c0e2ea52abe1"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d903ac730b86d77e4098a2ab8f0809aa1fe3619de117f3fd241cbdad5718d5e2"
+    sha256 cellar: :any_skip_relocation, catalina:      "9b765eecc84acd0f3264effdbe470f1180f16739f03a9a4e92db5309f1289445"
+    sha256 cellar: :any_skip_relocation, mojave:        "9d85fed99bfa9b3cad7f1be8fc051619dca741a0327d965f7b27a2b50cfd6b95"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1178e86bfc7591142ed6914d88ca4d01203bcfc8299cdc98314fc55488212dd5"
   end
 
   depends_on "go" => :build
