@@ -1,9 +1,9 @@
 class Nauty < Formula
   desc "Automorphism groups of graphs and digraphs"
   homepage "https://pallini.di.uniroma1.it/"
-  url "https://pallini.di.uniroma1.it/nauty27r2.tar.gz"
-  version "2.7r2"
-  sha256 "69c16c17da1cca90c25f6fb3bb242798af95f096fc3e2ff3e3398f390fcea768"
+  url "https://pallini.di.uniroma1.it/nauty27r3.tar.gz"
+  version "2.7r3"
+  sha256 "4f0665b716a53f7a14ea2ae30059f23d064ce3fe4c12c013404ef6e1ee0b88c2"
   version_scheme 1
 
   livecheck do
