@@ -6,11 +6,11 @@ class Libass < Formula
   license "ISC"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "6eb8abbcbba5ca09e35b9ff4c6fac078fbef383392677f42cc28ef735188165c"
-    sha256 cellar: :any,                 big_sur:       "4545a55482e45e533c212e57c8a14660c547456072d68c2d2ed13c819f1300c5"
-    sha256 cellar: :any,                 catalina:      "814ec97150e4fc19142f50a72ad366d6d46857520b20b5d7c20678af440b8dcf"
-    sha256 cellar: :any,                 mojave:        "5178eda1fef01d6ab29af84953a29f00d13bf6cc1ceec05940da017891628970"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e9596147358f8e3d2b7f28b2668a577a17e294325cbe6fd39926a5d08a53a76f"
+    sha256 cellar: :any,                 arm64_big_sur: "03a65a8977885e70b3072ed5b3cbb51178a140107932715f47fee5ee5b574d83"
+    sha256 cellar: :any,                 big_sur:       "d11e2972aa5ae2e763cf4101712fac61421082db4d47720a8adc17b8a3e84a27"
+    sha256 cellar: :any,                 catalina:      "b5f4cf1923f523dcc6faccd7d886c9677555c99d74f0bba2ea6f7aeaccd5511a"
+    sha256 cellar: :any,                 mojave:        "046012d55a33f84e483ac1e080c5698e0b2040b6385b6806ca7867226b91654f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "95e453427bba31a08dfc4908ed2454c2478b687fca0c8be3cf573f01e0e73d0e"
   end
 
   head do
