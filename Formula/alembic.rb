@@ -1,8 +1,8 @@
 class Alembic < Formula
   desc "Open computer graphics interchange framework"
   homepage "http://alembic.io"
-  url "https://github.com/alembic/alembic/archive/1.8.2.tar.gz"
-  sha256 "3f1c466ee1600578689b32b1f2587066d3259704ec7ed1fcf80c324d01274f48"
+  url "https://github.com/alembic/alembic/archive/1.8.3.tar.gz"
+  sha256 "b0bc74833bff118a869e81e6acb810a58797e77ef63143954b2f8e817c7f65cb"
   license "BSD-3-Clause"
   head "https://github.com/alembic/alembic.git", branch: "master"
 
