@@ -1,10 +1,10 @@
 class Dbdeployer < Formula
   desc "Tool to deploy sandboxed MySQL database servers"
   homepage "https://github.com/datacharmer/dbdeployer"
-  url "https://github.com/datacharmer/dbdeployer/archive/v1.62.0.tar.gz"
-  sha256 "a97d91bd319e90122f57b185fa0ba1d64358fa33dab6a859b31bda866ca6cdf8"
+  url "https://github.com/datacharmer/dbdeployer/archive/v1.63.0.tar.gz"
+  sha256 "8d7f554b6cfae8bae07ede9cf56fdb88ba26d84b450f959b9b9c2f734027d841"
   license "Apache-2.0"
-  head "https://github.com/datacharmer/dbdeployer.git"
+  head "https://github.com/datacharmer/dbdeployer.git", branch: "master"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "6969c1f05657328981c0d9f2ad69b126143eee62824f78eda9534c5de14273c0"
@@ -17,13 +17,7 @@ class Dbdeployer < Formula
   depends_on "go" => :build
 
   def install
-    if OS.mac?
-      system "./scripts/build.sh", "OSX"
-      bin.install "dbdeployer-#{version}.osx" => "dbdeployer"
-    else
-      system "./scripts/build.sh", "linux"
-      bin.install "dbdeployer-#{version}.linux" => "dbdeployer"
-    end
+    system "go", "build", *std_go_args(ldflags: "-s -w")
     bash_completion.install "docs/dbdeployer_completion.sh"
   end
 
