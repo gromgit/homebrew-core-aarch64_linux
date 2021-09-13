@@ -9,11 +9,11 @@ class Bison < Formula
   version_scheme 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "77122849bbea244353105d6d820e0ec97f08e511bbef8a5ec9291a77c0f2256e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ac7e42c9d0356549683eef548e969e2107271a4d5b3e2307b22648056b3d8a10"
-    sha256 cellar: :any_skip_relocation, catalina:      "12d1897e723aa58ec33e149eaba1da6385a1faadaaddf71f9ed97f0f7039c395"
-    sha256 cellar: :any_skip_relocation, mojave:        "f20f2029b67798bebb691be2dbdc5bf3ae752e31fa65d7360b9487a83c37f1c2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e249bcde22dd8db752b41ea9f58bbe442cc6f8a630f6afe8fb575b3f5fe40352"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f26eabffa4dd6d453b7c01e0491910bf70af70e400e1d684d3e31a511a7bfcf1"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f3a25f8afa584abf7688824ad8eaa624b4702aa531339599c63947b2234c8dc5"
+    sha256 cellar: :any_skip_relocation, catalina:      "7698f085a806dd977569237a92661673233232acc29803087eb4a8784cc621d8"
+    sha256 cellar: :any_skip_relocation, mojave:        "80ea46ebdade5d5e8c8dbf6ea0c1e275ae669531b18bb06211b1c47bd27f0c42"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a09ac7dc0fce1ee99508401a60528bf1a9b515283577564af64f8ce4d91407b7"
   end
 
   keg_only :provided_by_macos
