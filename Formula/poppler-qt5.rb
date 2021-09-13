@@ -11,11 +11,11 @@ class PopplerQt5 < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "181a35eecaf33701813460d60d71595d9924aee2c2750d42273952428f18c710"
-    sha256 big_sur:       "b90868c632e319845acf6412e280fd9ba07fa25b986415886ccfa95ee69e065c"
-    sha256 catalina:      "7cd81e1ff43fbad733203084ea386bc1d7ecb04a29d958dd873592142dd161be"
-    sha256 mojave:        "73d297ab2e685cb9af25373bf6d19fda06d1ecd20f9bcdd2f73abbc6127b79d0"
-    sha256 x86_64_linux:  "a19e3989ba8f77516a80d71562b5718a1a42b876c413b4017471d54896fc56e4"
+    sha256 arm64_big_sur: "47611c1a3e2fb945e1b47afdcdf74b94c33af97fab35b6e2b367367c5e8673a9"
+    sha256 big_sur:       "9b32c64fba31bbf0708872dcb8d0e0a919bc2b667a9bf30fb0c1bca77e7074c5"
+    sha256 catalina:      "2fbe5e3fdf9292929cc66c6b58326adc39a29de877226738714691bf9ba370a1"
+    sha256 mojave:        "2ad64d685a1967e69f90ae24710a9f0cf49838a68e6471a1fd85126e25f1fb31"
+    sha256 x86_64_linux:  "548a33fd85c591a96786c2d242444474d6c29920a8a49decbbc305a10e4aec3a"
   end
 
   keg_only "it conflicts with poppler"
