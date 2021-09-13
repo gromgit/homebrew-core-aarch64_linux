@@ -6,11 +6,11 @@ class Cocoapods < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "5f4770eb033db211cb78afa026f45aec82a32cc62b6823e4d72c024a1357471b"
-    sha256                               big_sur:       "def97dc0be0678114423091c819134ee289594fdd21cfeccb11ea5f95918dc8c"
-    sha256                               catalina:      "c9d588214f088add95aaa6a520e5de0ad9b7cc1fb15536a350b4b3ca24ad2c36"
-    sha256 cellar: :any,                 mojave:        "cded84974af0757f6c9ffdcf5a61f448e7d1eae9c6168c493ad6b3af312ca118"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "05a7db53b1a4cd397bb84695f41267a8ab8d48bf7305259e2a4cfdcd405d54bf"
+    sha256 cellar: :any,                 arm64_big_sur: "4d468b2e7fdec4d80dfa63c3399e21519c842af012e310f15c0c5b4450642f0b"
+    sha256                               big_sur:       "594546dcde868d93407a2f056f7ee76769b90d4742f9a3b29bdfaba32addb61a"
+    sha256                               catalina:      "ca65ce465468779c6617a6fe27bc5e0768815b3ab49df11762e6a5196febf1b7"
+    sha256 cellar: :any,                 mojave:        "966d3229dc326393b68e8febe77540758650f555e9abcb8d70926be4aa67d3e9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "872f8d21b42f463d7b6f203f78121316b386c456c943425e17ca258bd17602be"
   end
 
   depends_on "pkg-config" => :build
