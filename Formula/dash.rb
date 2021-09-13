@@ -7,11 +7,11 @@ class Dash < Formula
   head "https://git.kernel.org/pub/scm/utils/dash/dash.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c395d7a9947b74cb4dbe37380c47327702d93f40c3379652fdc8172824299fa6"
-    sha256 cellar: :any_skip_relocation, big_sur:       "11cc317053e0f398a3aa14f2dca06e5bc45b215859953e45153d2f4af7853435"
-    sha256 cellar: :any_skip_relocation, catalina:      "a4fd41a1b67977e509ae2612c6d57914d010c4352b606c0a5b49e7c81af8b6e7"
-    sha256 cellar: :any_skip_relocation, mojave:        "7c2387fa98bdb02ae966b055948baf6b911c494f54e996087a5e4c42f173f8bd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "371787f2430df1c94532e4a167e347902e88a1f2efbfa25c3dfa6cd8423af56e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "12e8257cfc5dda342cf5df3579e4d75d6c7da1c3e5188ea2bd632f66ca9291dc"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a7eafa8a473d2bfd1d9fbc207ed863d5765189b6662341420bee8a78cc6d4360"
+    sha256 cellar: :any_skip_relocation, catalina:      "b7ab66d5cea5b77081f58392eb8f8c66341cf20c94739a77c262f0a1f54716a6"
+    sha256 cellar: :any_skip_relocation, mojave:        "b7db705a81f667bde21d234b7241d9e0ae0643e9052aa836196095bbd4e98dbb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "947fffdc8681c896ef07de1dabbd69341458de8d37c106d706d6013942d156c4"
   end
 
   depends_on "autoconf" => :build
