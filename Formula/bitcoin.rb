@@ -1,8 +1,8 @@
 class Bitcoin < Formula
   desc "Decentralized, peer to peer payment network"
   homepage "https://bitcoincore.org/"
-  url "https://bitcoincore.org/bin/bitcoin-core-0.21.1/bitcoin-0.21.1.tar.gz"
-  sha256 "caff23449220cf45753f312cefede53a9eac64000bb300797916526236b6a1e0"
+  url "https://bitcoincore.org/bin/bitcoin-core-22.0/bitcoin-22.0.tar.gz"
+  sha256 "d0e9d089b57048b1555efa7cd5a63a7ed042482045f6f33402b1df425bf9613b"
   license "MIT"
   head "https://github.com/bitcoin/bitcoin.git", branch: "master"
 
@@ -30,7 +30,10 @@ class Bitcoin < Formula
 
   on_linux do
     depends_on "util-linux" => :build # for `hexdump`
+    depends_on "gcc" => :build
   end
+
+  fails_with gcc: "5"
 
   def install
     ENV.delete("SDKROOT") if MacOS.version == :el_capitan && MacOS::Xcode.version >= "8.0"
