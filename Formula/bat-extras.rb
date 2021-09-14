@@ -10,6 +10,14 @@ class BatExtras < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3ef0479ac64740999c67d9ff77067f0d96e9111cfd037cd0ec19605d3b6b0c9b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3ef0479ac64740999c67d9ff77067f0d96e9111cfd037cd0ec19605d3b6b0c9b"
+    sha256 cellar: :any_skip_relocation, catalina:      "3ef0479ac64740999c67d9ff77067f0d96e9111cfd037cd0ec19605d3b6b0c9b"
+    sha256 cellar: :any_skip_relocation, mojave:        "3ef0479ac64740999c67d9ff77067f0d96e9111cfd037cd0ec19605d3b6b0c9b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1c94dd7dd7e3d29f1493267a300b3d6a1f309560f341ec24990d708e3aca3759"
+  end
+
   depends_on "bat"      => :test
   depends_on "ripgrep"  => :test
 
