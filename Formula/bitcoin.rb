@@ -12,10 +12,10 @@ class Bitcoin < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 big_sur:      "c0fc6169ebc38c3ac88562ee05f4e47f8496b4fd132e1f0c2e5f58388b3cbda3"
-    sha256 cellar: :any,                 catalina:     "cece0dd423980991501b1ab1a8d11ea1056df766ccd30dbb1ee09c1e1444a92d"
-    sha256 cellar: :any,                 mojave:       "0ee27408b8cc28d13cb707c376287716369c6ca59d2215f0effb0a8813f3e647"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "c2ec579e0d9767ed4d7574e45415a39359807139a679a8e87c79c9211595bf2d"
+    sha256 cellar: :any,                 big_sur:      "f17b80e2eead1bbd7880688f54705b934c258830dc9a8b6a5d3dfa62f30ba99a"
+    sha256 cellar: :any,                 catalina:     "078bd3d866dd676ea9d0a3168a34c3c2ffc79648d494ddf50034587236271b2e"
+    sha256 cellar: :any,                 mojave:       "2e3528797ce4d82cb53871a7da4aed5eb60aff2c3f8f8a19be5cc92a4f8b0794"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "c6773a767d1cce002bb698cf1aeaee53b43607cbf5ac6e2fc904ac66cd296850"
   end
 
   depends_on "autoconf" => :build
