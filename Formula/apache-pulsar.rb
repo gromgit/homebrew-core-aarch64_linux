@@ -7,6 +7,13 @@ class ApachePulsar < Formula
   license "Apache-2.0"
   head "https://github.com/apache/pulsar.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, big_sur:      "56b01c024746edd357eb7d944ee258a734313afd6b0d1e4f79fcf321a38fd740"
+    sha256 cellar: :any_skip_relocation, catalina:     "8733b6cfe86c7161827db14c5434262c9df80fb292a80ddb900a805c4775d33b"
+    sha256 cellar: :any_skip_relocation, mojave:       "15ff056e732b154fb6b05aad64ea2dce42e5a2e4ee79e03aa52233103307074c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "01e0bb86f62ddd706f7e66f8c6f83ccf3970b10a22d873e018022105bfa53a35"
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "cppunit" => :build
