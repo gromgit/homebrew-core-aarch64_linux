@@ -14,10 +14,10 @@ class HaskellLanguageServer < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f4dee4e09fd2b361738794cfc248b37df2dfcf0baf6329f5823f8b5fbd0098af"
-    sha256 cellar: :any_skip_relocation, big_sur:       "1cce5a8e334f975dd9c8463b60a860e603c0e45e5469cd35f380a170405c01a0"
-    sha256 cellar: :any_skip_relocation, catalina:      "9ea58194ff2a9f6b2559cbdbe6811b46de3c60d7f382ed825483d745879f397e"
-    sha256 cellar: :any_skip_relocation, mojave:        "8783e9129e39ae29c5d7c227becdb9c5138bea3617f2edcb890a802e67e311df"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5fec58d7c3ab8a84979a637f41d0aba636a7a024dfd96582ab2e5ac9374c15e9"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5e3427fde42364771cbfab41b4eeb71889ac3a41737b6f54764fee1ec64c3e60"
+    sha256 cellar: :any_skip_relocation, catalina:      "ba30e3d1544596f125755302d973c5c38975253da11018ad22e51722f32b3316"
+    sha256 cellar: :any_skip_relocation, mojave:        "1eb7824102bc6234c8faf8523e50955f819403f3baf01837c72f79d4393536f1"
   end
 
   depends_on "cabal-install" => [:build, :test]
