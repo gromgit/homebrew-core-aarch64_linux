@@ -1,8 +1,8 @@
 class Libpinyin < Formula
   desc "Library to deal with pinyin"
   homepage "https://github.com/libpinyin/libpinyin"
-  url "https://github.com/libpinyin/libpinyin/archive/2.6.0.tar.gz"
-  sha256 "2b52f617a99567a8ace478ee82ccc62d1761e3d1db2f1e05ba05b416708c35d2"
+  url "https://github.com/libpinyin/libpinyin/archive/2.6.1.tar.gz"
+  sha256 "936c756bf57205f064eb7731772289b2e9769ba5b52d6be957a17a9d3b4d5d0f"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -29,6 +29,9 @@ class Libpinyin < Formula
   end
 
   def install
+    # Fix linker flags used in building/linking libzhuyin: https://github.com/libpinyin/libpinyin/pull/151
+    inreplace "src/Makefile.am", "-exported_symbols_list=$(srcdir)", "-exported_symbols_list,$(srcdir)"
+
     resource("model").stage buildpath/"data"
     system "./autogen.sh", "--enable-libzhuyin=yes",
                            "--prefix=#{prefix}"
