@@ -6,8 +6,7 @@ class Allure < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "e86e332615375396adbb57492fbf12d517c3a77589c9d7c4b991a834ba4060fb"
+    sha256 cellar: :any_skip_relocation, all: "efb901aa364242ecfeec70d5949c5962efffbb6cfe2962aa6a13d627fb1b4116"
   end
 
   depends_on "openjdk"
