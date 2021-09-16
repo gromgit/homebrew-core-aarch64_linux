@@ -1,8 +1,8 @@
 class CloudflareWrangler < Formula
   desc "CLI tool for Cloudflare Workers"
   homepage "https://github.com/cloudflare/wrangler"
-  url "https://github.com/cloudflare/wrangler/archive/v1.19.2.tar.gz"
-  sha256 "e32596b41a52930e69b515fc692dcdd134e1a05fdb9ed2ea4f5b766f5adfd717"
+  url "https://github.com/cloudflare/wrangler/archive/v1.19.3.tar.gz"
+  sha256 "0e1a598c362564395f53d91a1b6225881e55492c3df554475d7d0dbc2a4db06d"
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
@@ -20,6 +20,6 @@ class CloudflareWrangler < Formula
 
   test do
     output = shell_output("CF_API_TOKEN=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA #{bin}/wrangler whoami 2>&1", 1)
-    assert_match(/Code 9109: (?:Invalid access token|Max auth failures reached)/, output)
+    assert_match "Failed to retrieve information about the email associated with", output
   end
 end
