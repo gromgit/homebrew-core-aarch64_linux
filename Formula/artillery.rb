@@ -8,11 +8,11 @@ class Artillery < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6e2d6826445ac2658e775242a95058724fa0e8d1ba2573bb6afc13e487cf01bc"
-    sha256 cellar: :any_skip_relocation, big_sur:       "917c441ab7a5f109f002b42250d42a6065ba93a01dbc379d50ad720f29f08697"
-    sha256 cellar: :any_skip_relocation, catalina:      "917c441ab7a5f109f002b42250d42a6065ba93a01dbc379d50ad720f29f08697"
-    sha256 cellar: :any_skip_relocation, mojave:        "917c441ab7a5f109f002b42250d42a6065ba93a01dbc379d50ad720f29f08697"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1e84b54f7ed0aef5123f9bf03d126f690632a25a644c9ff12a91347622029806"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5b4ca42c0271c2257d1da68652023309cbaf7a45411e59fda3e214f0e2d1e06f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "19009ef3f41fe90b0647df579a1a2065bffe7a1a67d6c32c91b7512225f16da5"
+    sha256 cellar: :any_skip_relocation, catalina:      "19009ef3f41fe90b0647df579a1a2065bffe7a1a67d6c32c91b7512225f16da5"
+    sha256 cellar: :any_skip_relocation, mojave:        "19009ef3f41fe90b0647df579a1a2065bffe7a1a67d6c32c91b7512225f16da5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "09db551a48e31d05654d8510cfb5e2c555fa4ea6b719d9e8899db72f553d2ecf"
   end
 
   depends_on "node"
