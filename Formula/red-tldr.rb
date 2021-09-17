@@ -7,11 +7,11 @@ class RedTldr < Formula
   head "https://github.com/Rvn0xsy/red-tldr.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ac41d14d086161d978917fbff76d3395b880a3893a9f4796739d17c410c9faa5"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3a939af88b73b710341f01874d2fae08b4cce52264cac7622dc92d8716081af7"
-    sha256 cellar: :any_skip_relocation, catalina:      "e167991c8c9d3c9672ed5b0d2d7ecc5bc89f2a27721868b22a2bfa2c6cb26917"
-    sha256 cellar: :any_skip_relocation, mojave:        "0bd47cfa0c3c06d0d5e1790284aa0c2357af8ec1afee06bf9c8cc4c129a0287b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0eef7a08fc5ac0e0158a17e6926b223c4b72f1e1b786ed55f1660edaf24e34b8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "cfea74c461af8105ddeef40028571ae94c0d400314c23ce2c7b688a53d4bbc68"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b2360f47e129d9f7e5a21f8080b4b3a4026f186372a5075772f50335fcc2631e"
+    sha256 cellar: :any_skip_relocation, catalina:      "cf74861e3fafb6015dbc4762d2bc29fd638f76f2e0c3bcf20279221998407e41"
+    sha256 cellar: :any_skip_relocation, mojave:        "2e7b44917e4e21e938de91a8a8ae5b3783e56ebe075eb11be51569e9a0ed4aa8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1e10ad40bdbb6280f3303f43439791ed3f76213111d17441f673374819bc4994"
   end
 
   depends_on "go" => :build
