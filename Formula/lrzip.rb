@@ -1,9 +1,9 @@
 class Lrzip < Formula
   desc "Compression program with a very high compression ratio"
   homepage "http://lrzip.kolivas.org"
-  url "http://ck.kolivas.org/apps/lrzip/lrzip-0.631.tar.bz2"
-  sha256 "0d11e268d0d72310d6d73a8ce6bb3d85e26de3f34d8a713055f3f25a77226455"
-  license "GPL-2.0"
+  url "http://ck.kolivas.org/apps/lrzip/lrzip-0.641.tar.xz"
+  sha256 "2c6389a513a05cba3bcc18ca10ca820d617518f5ac6171e960cda476b5553e7e"
+  license "GPL-2.0-or-later"
 
   livecheck do
     url "http://ck.kolivas.org/apps/lrzip/"
@@ -22,16 +22,36 @@ class Lrzip < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "e2a34d339c06609f3c6db26a7101edbab08699014d06bb3e5886a7c610f534db"
   end
 
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "libtool" => :build
+  depends_on "nasm" => :build if Hardware::CPU.intel?
   depends_on "pkg-config" => :build
+  depends_on "lz4"
   depends_on "lzo"
 
   uses_from_macos "bzip2"
   uses_from_macos "zlib"
 
   def install
-    system "./configure", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}"
-    system "make"
+    # Attempting to build the ASM/x86 folder as a compilation unit fails (even on Intel). Removing this compilation
+    # unit doesn't disable ASM usage though, since ASM is still included in the C build process.
+    # See https://github.com/ckolivas/lrzip/issues/193
+    inreplace "lzma/Makefile.am", "SUBDIRS = C ASM/x86", "SUBDIRS = C"
+
+    # Set nasm format correctly on macOS. See https://github.com/ckolivas/lrzip/pull/211
+    inreplace "configure.ac", "-f elf64", "-f macho64" if OS.mac?
+
+    system "autoreconf", "-ivf"
+
+    args = %W[
+      --disable-dependency-tracking
+      --prefix=#{prefix}
+    ]
+    args << "--disable-asm" unless Hardware::CPU.intel?
+
+    system "./configure", *args
+    system "make", "SHELL=bash"
     system "make", "install"
   end
 
