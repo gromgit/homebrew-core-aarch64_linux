@@ -8,10 +8,11 @@ class Mathlibtools < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "251d0d552236523e472f1f7ea61626b11105e18ade5d6c9a989d0167124d3db7"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b98299d57f99715054cdd87c4038dac6032ceb064ba558a89b15515c8f466838"
-    sha256 cellar: :any_skip_relocation, catalina:      "f09ef15a1725d94592b6fc913752877304a43455ea5ce465141f72fb30784aa3"
-    sha256 cellar: :any_skip_relocation, mojave:        "5316ea5c9e99347fcb42b13542c735867bcbf9848757eea5af19efddf1afb809"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8bec2c2e4e94150e09d5c3c9d5869e79911d8cfcbab4d02f35b87404dc5f7e25"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5cfac18b55bc63b9e1fd58ef4104f7fa3879fc5c25835a5231a78732866a3de8"
+    sha256 cellar: :any_skip_relocation, catalina:      "4658c3e29e67f1d3a874dba4cece2710102d5ef1889682ae953b406e48961153"
+    sha256 cellar: :any_skip_relocation, mojave:        "feb44ff190b93f2bdb6d74c84665df9dc04e0f97794054f85fcf9057423069a9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "88481618d3dc2188f35a167ae9a711d93ffa67e8b7553886ecec080dae9c1320"
   end
 
   depends_on "lean" => :test
