@@ -9,11 +9,11 @@ class Checkov < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a11f7f9a5b1f6b9dce2c8db46eda921d28d48f8db057aaf67b28bdd847bf2315"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8e1a14de5dfac58c32fe458f42c4cda9000fb1bc38718ac007d75d8dbefc7918"
-    sha256 cellar: :any_skip_relocation, catalina:      "dbc2d3cef225fc127a187be00261bde5583386cf3e3019af1f422e67a2fff61d"
-    sha256 cellar: :any_skip_relocation, mojave:        "0fbc55beaebf559c6cd208b610b9176f187e6114088d7b6d6b4225ff3f675cee"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d95fcd1a947991190ec9b34aea5c74530687b39958ae25857e346feecc04be29"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5cb09ab24e072d600698329b61d67249022d6977f4cadf0f7226564627641ca0"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a3a10e0b2a881c6031f8a558eb5c1836e80778dd6599d68f7298dc28bbad6533"
+    sha256 cellar: :any_skip_relocation, catalina:      "20cd1b3f9516fbf4a410773c488208aacf3ab42a0be567ff89c98aac08c6afb3"
+    sha256 cellar: :any_skip_relocation, mojave:        "356080897ec6032a3e7a2224b3e26cbe64d7564ad5b8f4b92767b34fe215f237"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cddebb1e9f95b851211dafaf637d6f9823fa5dfc77e1a7cb6c58bf7356934a64"
   end
 
   depends_on "python-tabulate"
