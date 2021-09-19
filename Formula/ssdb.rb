@@ -7,9 +7,11 @@ class Ssdb < Formula
   head "https://github.com/ideawu/ssdb.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, catalina:    "fd9b492537642a493ee437e27659b605336a5b0be915feba2894e6cdf2479c70"
-    sha256 cellar: :any_skip_relocation, mojave:      "07653a68e92db84536be2a515051dd951c73a46a549532aebdac94dfd4d9028d"
-    sha256 cellar: :any_skip_relocation, high_sierra: "63544af42f2779d149b1ca647d22fc1ce687ed68347ea689df8d8a52d3a72727"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, big_sur:      "f92e221d20ca1a85c7ae555acd1417bba60b208a56091eb3a25d98fc788f25a3"
+    sha256 cellar: :any_skip_relocation, catalina:     "4253e51c8e447b5d4e0ec5f064ee2fcc3ef57b30734df70f3b24d6399abb9363"
+    sha256 cellar: :any_skip_relocation, mojave:       "a10edecc28880cd37e02e75fdc318392ba6bda016f624181a9f4ff10982b211f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "9db77a02bd8c3ed9569919f579d4e3a3d434bfba9f4679aafbc3c2de87993478"
   end
 
   depends_on "autoconf" => :build
