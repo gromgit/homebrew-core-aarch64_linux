@@ -12,11 +12,11 @@ class ImagemagickAT6 < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "00a68448bde33db92f9a4c1ed0a3763380e2344a42835ea921b735b805c78e11"
-    sha256 big_sur:       "4e3b02362059c3e4d66738effc8e7cbb1130bf9f90ab596273e511e5b02cce0d"
-    sha256 catalina:      "e8f656a97171809c2f990a608e694dd8298baa01b5b62aeec8b46ac596465294"
-    sha256 mojave:        "43d0f1ab0b603adc801ecf13d0f9949e07933dd1d45c12e727bbb5739f5336e0"
-    sha256 x86_64_linux:  "179a5b3d5a7f77ef5944f9b4826a342b8666dcef25850bc9a4349f66f17d0edf"
+    sha256 arm64_big_sur: "307331d013b3db7f7fdbda65aef927d0acf87fa6fa4fcae3605a36d1d15856c3"
+    sha256 big_sur:       "24cc0a61fe178c0b04c00f60905db686e114393d261df61d66a104355dfc10b6"
+    sha256 catalina:      "7df5af09d55cf90e0cd033379555c4e87f9ff2d6d7f633c822df7ef0adcd18e1"
+    sha256 mojave:        "f0866842c99b733dfa62c14fc060d8d2dcf4496881cca952f155f7018c5c010d"
+    sha256 x86_64_linux:  "9f58f4d9d9c343b6de62d806fc61d675b992588940508e003e9856ce548737dc"
   end
 
   keg_only :versioned_formula
