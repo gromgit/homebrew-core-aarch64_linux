@@ -7,11 +7,11 @@ class Leiningen < Formula
   head "https://github.com/technomancy/leiningen.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "df641c65df341caa49d31b82e2f41c754f9b4bea31d104a4af7236d9ec7a8463"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c6a3bca012d22ac2bfd31f2d63e1205f3e8b14a1a9c273efc4b812233adc1920"
-    sha256 cellar: :any_skip_relocation, catalina:      "c6a3bca012d22ac2bfd31f2d63e1205f3e8b14a1a9c273efc4b812233adc1920"
-    sha256 cellar: :any_skip_relocation, mojave:        "d144459a1bff33c0adbc0de79e97135be0b6fd768a3a7468f5ad484a3c1486f9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "de0a514ea1a62334532c988bd8d633c65655279073dd80ab8beac826d7dccec4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8803a05aa24fe499ab379d4b02287c9f93579b818edd04e4dd4297564859df43"
+    sha256 cellar: :any_skip_relocation, big_sur:       "8803a05aa24fe499ab379d4b02287c9f93579b818edd04e4dd4297564859df43"
+    sha256 cellar: :any_skip_relocation, catalina:      "8803a05aa24fe499ab379d4b02287c9f93579b818edd04e4dd4297564859df43"
+    sha256 cellar: :any_skip_relocation, mojave:        "8803a05aa24fe499ab379d4b02287c9f93579b818edd04e4dd4297564859df43"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2ed6a7e5716c2767ed17a91144edd06a926a31e6868e45743bc74313cb07530e"
   end
 
   depends_on "openjdk"
