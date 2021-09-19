@@ -12,10 +12,10 @@ class Pidgin < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "fd09b46fab5d0f4e52d6b460081814cbed9dc446cc6cb379976678acf48045a9"
-    sha256 big_sur:       "65c8b20b138eccee7e7a45280080c161f643cb570ba2b8258b9912dfd2784f00"
-    sha256 catalina:      "54287daa973969e51387ebd2cbf46d58d29d010b6f8902a1029852fdb83b20ff"
-    sha256 mojave:        "a1e76cc27f0aec4899968c82c85db0f78fd2f1b9ec9e266799ca83e32d03abd3"
+    sha256 arm64_big_sur: "5a4a12719ba5f0ecf8760a4b924421e53436894c9768aef39ccb746556dea921"
+    sha256 big_sur:       "1818362c8ad056d5527ab78423b8d9439bb1e8cd5008dc0cea99d296e37ed482"
+    sha256 catalina:      "454cf51fead6fb7b37b226b9ffe45ab7af64b327f6a3022fd3c6b89cce93a060"
+    sha256 mojave:        "2940e978897485867020f76745c82069617eac27632421c3e0063e9d6a61ee90"
   end
 
   depends_on "intltool" => :build
