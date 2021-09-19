@@ -8,11 +8,11 @@ class Subversion < Formula
   revision 4
 
   bottle do
-    sha256 arm64_big_sur: "8b21c6fa258c0b6222653e06d7a4e701bfb04845b494039a81058205201bc81a"
-    sha256 big_sur:       "d9c0205d04df5fb25d510b4e9a85de721de17ca152257d8850770f141e1a1f44"
-    sha256 catalina:      "c1a0c5bcf8a1fac3837c34f7bcff1897d8f3074e72f06fc541804599e73a492c"
-    sha256 mojave:        "5fb32f15610da2ab65ffc09ff298a479bf1ef8cd8aa964883e58937e85abe154"
-    sha256 x86_64_linux:  "2c19a4cdc9465a7bfe259153035beac3dba025f19cf678712b233b2c66c342b1"
+    sha256 arm64_big_sur: "34f8d1862f1480c068ff3798c8e1cd90f833b43c33d1731aca15f1d875b16834"
+    sha256 big_sur:       "cfb18266b350bbe5cf81a02d1a27c33da8df832094e366925a50ef7664aba384"
+    sha256 catalina:      "92ef7547ff26e327ac5bd0a544d850e4ca7872493747eecf2220ecf5be0a13bd"
+    sha256 mojave:        "17b0bd35f345453c1401d1c390393525bacaf9f8a767cce31c1f1cb5241e1b17"
+    sha256 x86_64_linux:  "db779f83d616e1d917f2051368babe55d426d86d8ab6ec8ea0daf2be37c7fcdc"
   end
 
   head do
