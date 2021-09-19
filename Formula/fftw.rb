@@ -11,11 +11,11 @@ class Fftw < Formula
   end
 
   bottle do
-    sha256                               arm64_big_sur: "f0bcc63e25061ac29e5d8f2700beab98e8bdf8e2bb428ceb8e77018e004d2473"
-    sha256 cellar: :any,                 big_sur:       "8ee0fe663966dcc2ba924768dc921536873b172b024302f1f06e663237d11a29"
-    sha256 cellar: :any,                 catalina:      "e5c826687292998daa2f2e76d13325fde551b54450846c3190efde540a02650e"
-    sha256 cellar: :any,                 mojave:        "17af7472492ccf0704b958db622505872d7bca0f2d2f05869d07f1b01557c0ab"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4d8acd47e1deb1964882d56f086c31890b3fdbfa7da9699b6ef161dc983f620e"
+    sha256 cellar: :any,                 arm64_big_sur: "bad8b35844e916b0aee957da5f50f1aaf42c400582ca9e0c531d8b1d7cbf831c"
+    sha256 cellar: :any,                 big_sur:       "7f8815d58971d1c38465556b12b2fc2cdd5c1575174984a493080cbb88efb925"
+    sha256 cellar: :any,                 catalina:      "6189ebccb8f84d6aaf8139f877a0fed20605b749404b5e5296c2a673df681841"
+    sha256 cellar: :any,                 mojave:        "694f17490cf119dba54c4ab36fe4c777d916fade8629cc1a728ff2f698c135b6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9857c06bfd9eb89821aec3fe7a5a47283291ef9994b3167e8bbdb7e1f42784c2"
   end
 
   depends_on "open-mpi"
