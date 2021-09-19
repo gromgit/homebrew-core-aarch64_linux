@@ -6,11 +6,11 @@ class Imlib2 < Formula
   license "Imlib2"
 
   bottle do
-    sha256 arm64_big_sur: "007b2a5fe1988a71c0b777005279529fc3ff424e93ddb245506f3e33f65f0d0b"
-    sha256 big_sur:       "094ebe201daab125409112a9ae7b94439409e8bba008fc6aeb47095b90a52ad4"
-    sha256 catalina:      "74a5fbf8693ed51834ff3739d231aa0c9e515b232b5493aaa24936f7ee91173d"
-    sha256 mojave:        "a86557a75ee60e00aa9443bb0aa04832f071b068d8064cf23c78e5c2e76169b5"
-    sha256 x86_64_linux:  "39bc543b39068aaf137b2671e8eb8b8609f0e809a36a445ab85cdfdd24782681"
+    sha256 arm64_big_sur: "7d646f7b6b8cf7f0002d89e0c2735fc16dc711084664d52ea7ad9c4157302b3d"
+    sha256 big_sur:       "5705ac8d8c2aa6bcf8931b310742b3fd99cf0c7a2a7914a1dea50296d921fcae"
+    sha256 catalina:      "0948b05c33a2037b0bd2044acf87eded935de17946139996692e1bba704ad01f"
+    sha256 mojave:        "b0507e4e44035eeaa252add2deb30dc9af1ea1a5d80726a05c4e8698431f9053"
+    sha256 x86_64_linux:  "fe7081af03dbd33b999baa1ead3a68e3d0f27925aec0f828a89a4b503d4cfbbf"
   end
 
   depends_on "pkg-config" => :build
