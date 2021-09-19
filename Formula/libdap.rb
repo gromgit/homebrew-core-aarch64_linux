@@ -11,11 +11,11 @@ class Libdap < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "232beef8fecad3beed966204d1bf42622e637492fc161801ff1c352ae429ce4b"
-    sha256 big_sur:       "660a8cd6c01ce10d30ec4dda70912cefe949b3aa5b56756c14cba5120b0f579e"
-    sha256 catalina:      "7664a9d567e5c0304ce2430cb93d02fd3431ef480105170c130327cb09da014e"
-    sha256 mojave:        "ab8664fda0c8a71409c54315011992d397315c15a5842f83771f7c30d2eafa8c"
-    sha256 x86_64_linux:  "fb03eae4d8b7b9f2adcd5719a5bfcc9350f44e9e9333c12ab6469debcc45317d"
+    sha256 arm64_big_sur: "114b06032e3190ea6af91825f75fc44017bdc474c96b4cd88e4f289ed8f03c9b"
+    sha256 big_sur:       "d8e3d1ea27305a3e49c1dc3902f57eec4fd9ae6dfeb102f0dab709b8c8e27e9b"
+    sha256 catalina:      "7f6ab80b93c32c6cb09e30af1634f1064bcb2e3bec08f500ac7c78b86fda68dd"
+    sha256 mojave:        "433eb5d60160d3ffd96b0e7a8ea215b4b555d9a94001ff6c41c40c13f93e0f42"
+    sha256 x86_64_linux:  "1cfc0be83a99c1c2cfcdf04d22b9e8503e99a638f59b3e504b5b0bd5c87927c9"
   end
 
   head do
