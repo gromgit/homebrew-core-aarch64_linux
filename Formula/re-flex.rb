@@ -6,11 +6,11 @@ class ReFlex < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c54cf215649b0a413d7db580f59ad9b2069df85f0b75575e494cd5471227048d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "48879c2ef8a01bcff4cec2754623ca3c20de1b1f53be24ead610562e65b31273"
-    sha256 cellar: :any_skip_relocation, catalina:      "96866e58df2a4f3ef71e4751b779874582f0990d0cc012054e9070d55a835f72"
-    sha256 cellar: :any_skip_relocation, mojave:        "1dcf84b9f3733aed1dbdd1a51c89aa6e5a13b1d3e93d582839e348bfedc44a8c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "580435afab4101f0d45b74f1473b108c8b3843e77688121cce7bd2475906f0c9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3496ab037320dde290d28351caad2e7e810ddd60910eb5198b16d646a2a4e428"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3fe7162edbdd072be4f74d61f2cbde1b034bdcaed8c879e23c8b1b5f2e917599"
+    sha256 cellar: :any_skip_relocation, catalina:      "9a6da54b6cf93f967e84230fa45b1c917d2d75389073748f524fb70aaef1ff95"
+    sha256 cellar: :any_skip_relocation, mojave:        "1f28c3a74833bc14642071d74c7d441fb93bfa516a4edf0282dc6cf373b70c6d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d95a8b2459e89cc29400263958eae3b3f4d02f506d5c0cc5afa37fa04874222a"
   end
 
   depends_on "pcre2"
