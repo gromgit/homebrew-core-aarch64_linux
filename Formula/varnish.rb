@@ -1,9 +1,9 @@
 class Varnish < Formula
   desc "High-performance HTTP accelerator"
   homepage "https://www.varnish-cache.org/"
-  url "https://varnish-cache.org/_downloads/varnish-6.6.1.tgz"
-  mirror "https://fossies.org/linux/www/varnish-6.6.1.tgz"
-  sha256 "ab1a6884332731f983c8dab675c636deb3883a206c8a0127a7c663af2422e628"
+  url "https://varnish-cache.org/_downloads/varnish-7.0.0.tgz"
+  mirror "https://fossies.org/linux/www/varnish-7.0.0.tgz"
+  sha256 "8c7a5c0b1f36bc70bcbc9a48830835249e895fb8951f0363110952148cbae087"
   license "BSD-2-Clause"
 
   livecheck do
@@ -24,7 +24,7 @@ class Varnish < Formula
   depends_on "pkg-config" => :build
   depends_on "python@3.9" => :build
   depends_on "sphinx-doc" => :build
-  depends_on "pcre"
+  depends_on "pcre2"
 
   def install
     ENV["PYTHON"] = Formula["python@3.9"].opt_bin/"python3"
