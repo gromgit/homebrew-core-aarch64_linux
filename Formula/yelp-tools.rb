@@ -3,8 +3,8 @@ class YelpTools < Formula
 
   desc "Tools that help create and edit Mallard or DocBook documentation"
   homepage "https://github.com/GNOME/yelp-tools"
-  url "https://download.gnome.org/sources/yelp-tools/40/yelp-tools-40.0.tar.xz"
-  sha256 "664bacf2f3dd65ef00a43f79487351ab64a6c4c629c56ac0ceb1723c2eb66aae"
+  url "https://download.gnome.org/sources/yelp-tools/41/yelp-tools-41.0.tar.xz"
+  sha256 "37f1acc02bcbe68a31b86e07c129a839bd3276e656dc89eb7fc0a92746eff272"
   license "GPL-2.0-or-later"
 
   bottle do
@@ -34,8 +34,8 @@ class YelpTools < Formula
   end
 
   resource "yelp-xsl" do
-    url "https://download.gnome.org/sources/yelp-xsl/40/yelp-xsl-40.0.tar.xz"
-    sha256 "361ecd4d33fccdb3bb08a687f60e5c3e909d2e9e3b022d844e049820d0cf62b0"
+    url "https://download.gnome.org/sources/yelp-xsl/41/yelp-xsl-41.0.tar.xz"
+    sha256 "c8cd64c093bbd8c5d5e47fd38864e90831b5f9cf7403530870206fa96636a4a5"
   end
 
   def install
