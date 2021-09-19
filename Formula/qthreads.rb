@@ -7,9 +7,9 @@ class Qthreads < Formula
   head "https://github.com/Qthreads/qthreads.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, big_sur:  "1b38fc8670cd871f3bcbc3d0f7af6b7a481954d178265fa4000933ea4a081393"
-    sha256 cellar: :any, catalina: "4697fa448afd2b9cf71b618e9978b91399882b10265c04a9606eadb90d4ab9e4"
-    sha256 cellar: :any, mojave:   "0e4094e7737f755ebb39cbea97a3591927ecc8ded4f8654efb6c68dcc73a0928"
+    sha256 cellar: :any, big_sur:  "e0f9e60cb18bafc88477533ca65f3c78a821188a3cd2bb077e3a90ad886c2c3d"
+    sha256 cellar: :any, catalina: "0ee47db33538dfea98f384927d9b5e9c9d43b2c7391f6308fb47c740c62bec8c"
+    sha256 cellar: :any, mojave:   "0eb14aec995c438dab677dc3084bf772a5ff083812a5d3a0eac988ed08496a42"
   end
 
   # https://github.com/Qthreads/qthreads/issues/83
