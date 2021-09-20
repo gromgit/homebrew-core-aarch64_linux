@@ -5,12 +5,11 @@ class Gssdp < Formula
   sha256 "8676849d57fb822b8728856dbadebf3867f89ee47a0ec47a20045d011f431582"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "e3bc6dfa4ed41b0629533dbbe8fc4d9132a4349e05aacf0ea8099bf868fd6951"
-    sha256 cellar: :any, big_sur:       "f5b00ceef2fed5c0140a8983fc8fed49cd220d1ad0cf1718125a81a047e370c3"
-    sha256 cellar: :any, catalina:      "9cda1333eede84e831da2553e50989bd5721460b0ab046c95414305c11e29adc"
-    sha256 cellar: :any, mojave:        "de497cd6d3225d91ce49ef33b23928bb8af0d5cdebea072e06c8cf022a7a5dda"
-    sha256 cellar: :any, high_sierra:   "c6c767ccfe0b7220929d94ce06d3c4d5f8f172ab03e2a65900d96e1f2b151595"
-    sha256               x86_64_linux:  "18d28afa706c370dc59f1868cf1141f26918107bfb4aeae8cfa619001ac8b3be"
+    sha256 cellar: :any, arm64_big_sur: "f8d473345a33036b882bf4b5721940b17cdfbacc59c6f6c7bc21b354cebafc77"
+    sha256 cellar: :any, big_sur:       "7e3f746570d185163477dbc29d5d1b52bd9fb1655223d9428817e998c62c57df"
+    sha256 cellar: :any, catalina:      "7ca8d4f29d9d29cb3359116f07062a81410900cf0296d2d1f9e9d8d7a3930cb6"
+    sha256 cellar: :any, mojave:        "fc63d29a1b04887aa478eb7da62593e15ec23efb853533f8ab2e2c11db89a533"
+    sha256               x86_64_linux:  "375c1f636abd720cef920fb12e71fd4628f95eaee83fc8fbcbaf9ae86e1dd68a"
   end
 
   depends_on "gobject-introspection" => :build
