@@ -6,6 +6,14 @@ class ClickhouseCpp < Formula
   license "Apache-2.0"
   head "https://github.com/ClickHouse/clickhouse-cpp.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_big_sur: "5474994e7b1cee4b8a59dd29d1a4d8ebfdca4ae8b950e78b16fba2beaa085ab1"
+    sha256 cellar: :any,                 big_sur:       "b9ad77091970889f729e933ebba966805e24a798077a8b1f7dbedfd03085e4b3"
+    sha256 cellar: :any,                 catalina:      "2ce4a74242a33abc278c17a5fd51f82dfe427a014e06170ed89dedc4c41fc807"
+    sha256 cellar: :any,                 mojave:        "cc2b93d7b7727a606a9554ff0346f8027880c72b5cd95aadb4789fad578d809e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0c98ae1539ce939c7907e4646860067ba29da9265ae581c3bb38cb1feafe7468"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "abseil"
 
