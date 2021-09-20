@@ -7,11 +7,11 @@ class Crcany < Formula
   head "https://github.com/madler/crcany.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6fae645339969bae0ce4cc2af169508a6ace50ccea0c5062ad67706ae573f0ae"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3b798deff0f0bc2c2a472cff81f6ad172f847385908efd95a6affefe7d55b719"
-    sha256 cellar: :any_skip_relocation, catalina:      "302ec3819e25f3478ebdd9dc50e539d3ba7602f479ee9d8bb08c0cc97ccd9d39"
-    sha256 cellar: :any_skip_relocation, mojave:        "7f75a8e8101a52045412398dcc1a1ba26229373251131af3b0cf76bd9d5acae2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "355bda35990fb514c66ec9a0dcd517f3fc7a2668728336160894ac35c94ffdc4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "55fb14e87a929f10fabaf64463015c1cbea366ad0035199802acf5f3871b13de"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c7092bf62c6bcb2e59db55725e0cc5e7fca8135382844bdc8e8e2023d1db5b1c"
+    sha256 cellar: :any_skip_relocation, catalina:      "f84a1c61faf5e8fcf8e411faaa78ab2c6b3e8b0decd12745e895ed854a37775f"
+    sha256 cellar: :any_skip_relocation, mojave:        "508e19628c74e47337d647c79a8c05831250ee2ca9c71d673960d4d0901bf19e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a8ef2be75d86b017a0d85c1abb309cec9bc01695c4ccf9ae9db2ce8fd2d04293"
   end
 
   def install
