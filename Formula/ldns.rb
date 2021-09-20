@@ -14,12 +14,11 @@ class Ldns < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "72df9927c731028f56fbbe9962c6effeec5f8581ede570ea22c2d1c702bd7b5a"
-    sha256 cellar: :any,                 big_sur:       "998f245038aacbe7e2a953bd4ede86f0175c3c00ea71e3b9a14a134c1d2ca4cd"
-    sha256 cellar: :any,                 catalina:      "9143a6b86f643e5d63cf00774619622abaf0f3ee7e7f071f4aab924f15e163ff"
-    sha256 cellar: :any,                 mojave:        "51a0ab78e1788d5a13bc0e14d476a0f9d98b565915b04507df88c8b81c64963d"
-    sha256 cellar: :any,                 high_sierra:   "86c7687436d1ddb2b41392ee6c5e8f235ffe478d7b7b0d912feaa7a89217e8d5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7f0724daccf781f15ad885e3c362adc1eb3c52cd30166d03bedb8633d2a1cbe5"
+    sha256 cellar: :any,                 arm64_big_sur: "8bd8186ef4b0e89f852828f66a99952bb9a6635dae7090fc6a569b33e3d86667"
+    sha256 cellar: :any,                 big_sur:       "311ced9ff7f664b64f10939ba335fb3458d7b020e4f293a36a9fa10c92203620"
+    sha256 cellar: :any,                 catalina:      "014c23349aa56ea585da062b287e19999ed83609e3b75626cdd4b3ca4cdb9555"
+    sha256 cellar: :any,                 mojave:        "8228a7d9fdcb7e6c5210e9b4ce3975a68c36764a6c3025ded8abd2b60bef3c49"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "886bf69bb1a7215a5e9626ac6cbb04fd52cc4ddd2cdec9769ffc77480099a4d3"
   end
 
   depends_on "swig" => :build
