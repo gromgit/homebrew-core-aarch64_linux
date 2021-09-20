@@ -13,11 +13,11 @@ class Pyenv < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "b3046776c81bb534124ca479b4941abbdab36796ebde2bf20579897b6a7161da"
-    sha256 cellar: :any,                 big_sur:       "f0d63a6046a476d4eea73063a0c364d58b0238244301b0895f1b6003edc3bba9"
-    sha256 cellar: :any,                 catalina:      "6a99569ff3150fe2681ffce138d9fe97f6346018c34ccc7a20900e2a83659a41"
-    sha256 cellar: :any,                 mojave:        "dde202a7f252b4959011d7bcd74ebb7cd253c9329466ad028226e93db206ca94"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "37ebe433c3ab130be8e5fab0bfc387f3f50704d77b44f1e7df5b153ace99d193"
+    sha256 cellar: :any,                 arm64_big_sur: "0a10714b40198d0bea81b7dd282bc3565b870cfbcf02309104c0408b570618c2"
+    sha256 cellar: :any,                 big_sur:       "e8f8882207ec4d9d3a6d904ea81afef33e59c9c49dfeed34692e208b857564af"
+    sha256 cellar: :any,                 catalina:      "b6a91e6b68d1951141bafd70d1612cdb369b18874a17cc058671cddb763706f2"
+    sha256 cellar: :any,                 mojave:        "cde37127f8c2179ff34ff2a888e7b95ad299e1139297c958cbc4bfb2b4d9827f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ffe64a4566542b8bdab0c8ad232004409db1fe58b2930dbc26d3de66923a3fbd"
   end
 
   depends_on "autoconf"
