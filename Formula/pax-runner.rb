@@ -11,7 +11,7 @@ class PaxRunner < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "cdaa1633b1cc5310e7e6d5edd558316c794d37869976494d6b1b4d465ce1129d"
+    sha256 cellar: :any_skip_relocation, all: "43997ebe4fabf5728e834d1476e4ce6b47a107548ae532f327d374d266cb39c4"
   end
 
   def install
