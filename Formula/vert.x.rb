@@ -11,7 +11,7 @@ class VertX < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "b796f03d73c930fefda251c6725b25de39114f10834307605d3d46effce6ce14"
+    sha256 cellar: :any_skip_relocation, all: "a1915cef1b2d7af77c9dd20f1009eace2af71e3881c53a0c151561542062cb4c"
   end
 
   depends_on "openjdk"
