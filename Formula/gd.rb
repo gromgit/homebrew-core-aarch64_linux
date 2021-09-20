@@ -1,8 +1,8 @@
 class Gd < Formula
   desc "Graphics library to dynamically manipulate images"
   homepage "https://libgd.github.io/"
-  url "https://github.com/libgd/libgd/releases/download/gd-2.3.2/libgd-2.3.2.tar.xz"
-  sha256 "478a047084e0d89b83616e4c2cf3c9438175fb0cc55d8c8967f06e0427f7d7fb"
+  url "https://github.com/libgd/libgd/releases/download/gd-2.3.3/libgd-2.3.3.tar.xz"
+  sha256 "3fe822ece20796060af63b7c60acb151e5844204d289da0ce08f8fdf131e5a61"
   license :cannot_represent
 
   bottle do
@@ -40,7 +40,28 @@ class Gd < Formula
   end
 
   test do
-    system "#{bin}/pngtogd", test_fixtures("test.png"), "gd_test.gd"
-    system "#{bin}/gdtopng", "gd_test.gd", "gd_test.png"
+    (testpath/"test.c").write <<~EOS
+      #include "gd.h"
+      #include <stdio.h>
+
+      int main() {
+        gdImagePtr im;
+        FILE *pngout;
+        int black;
+        int white;
+
+        im = gdImageCreate(64, 64);
+        black = gdImageColorAllocate(im, 0, 0, 0);
+        white = gdImageColorAllocate(im, 255, 255, 255);
+        gdImageLine(im, 0, 0, 63, 63, white);
+        pngout = fopen("test.png", "wb");
+        gdImagePng(im, pngout);
+        fclose(pngout);
+        gdImageDestroy(im);
+      }
+    EOS
+    system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lgd", "-o", "test"
+    system "./test"
+    assert_path_exists "#{testpath}/test.png"
   end
 end
