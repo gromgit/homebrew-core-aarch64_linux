@@ -13,10 +13,11 @@ class Qcachegrind < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "e463fbfe5a4ef00611f34c0a0e049f96df312a1eddc779a0834741f23da1efdb"
-    sha256 cellar: :any, big_sur:       "c97be1624d3b85d6d2b7b947d28571459026d0aa222224e438d4b6a730d2016b"
-    sha256 cellar: :any, catalina:      "8988bd786e8d2d4c0ac589fd747ccb388ae343ddb262742c2231f94c88c39943"
-    sha256 cellar: :any, mojave:        "996472038ca71170dd567f04a37fc44d1c08dfda365f3ea986e057dda1d4c00c"
+    sha256 cellar: :any,                 arm64_big_sur: "e463fbfe5a4ef00611f34c0a0e049f96df312a1eddc779a0834741f23da1efdb"
+    sha256 cellar: :any,                 big_sur:       "c97be1624d3b85d6d2b7b947d28571459026d0aa222224e438d4b6a730d2016b"
+    sha256 cellar: :any,                 catalina:      "8988bd786e8d2d4c0ac589fd747ccb388ae343ddb262742c2231f94c88c39943"
+    sha256 cellar: :any,                 mojave:        "996472038ca71170dd567f04a37fc44d1c08dfda365f3ea986e057dda1d4c00c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "459804a72f566b4ae5ed724416c741dc301af09029bda5a5e4647c7ee6092327"
   end
 
   depends_on "graphviz"
