@@ -14,11 +14,11 @@ class Samba < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "20bb775d1b544da1c775e080903a1f7a8ab8b30f1b5a254b6537f65f85ba449f"
-    sha256 big_sur:       "31c763e3ff4197649a5aed042ceb1d43de52fa3d3a6fecb56cd02dd1ca10e188"
-    sha256 catalina:      "ca0557e42a691a5098c106ac5e336af492338d80b99b1505bc6b7a5d379caed7"
-    sha256 mojave:        "1b8b305321311c1ebc2783a5d2eff42ceb7ea9f250c156fd9e82751a413ea4e2"
-    sha256 x86_64_linux:  "e6a226ea7bf98915a0c1fcc90a65556af66b1b68dc2a50f45b5bfa8d0d0f27bf"
+    sha256 arm64_big_sur: "3ebb7f73273a7f80d7f3fceddcadd8d5402c2c6488e942fad911f11ad0e41c6d"
+    sha256 big_sur:       "76112aca4b4c50474f3485d5c7444de66fad7570036e557ef87114db31baca5d"
+    sha256 catalina:      "703ed0f1c7f58212ea24a6272d700d847a9d06d4e459843f487c2e559104cf02"
+    sha256 mojave:        "bffc6ff612d37b26ae0a9f1fc3b5d66c78fb6d0e4e31ee096d2d5b749fcb0dfe"
+    sha256 x86_64_linux:  "8b4c8a0cddd2c1ad635a712a5931fd6d9dfe642691cc42bbe4aa940131b447d2"
   end
 
   # configure requires python3 binary to be present, even when --disable-python is set.
