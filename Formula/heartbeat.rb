@@ -8,10 +8,10 @@ class Heartbeat < Formula
   head "https://github.com/elastic/beats.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "641e7059af35f1c202f773e1dd3c324daf413a858e287f22edc696214f6ffa1e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0d847254f75e8cd096c1a3ce68e63aa0ba23d9af5d7208e622fcd4b8057c4239"
-    sha256 cellar: :any_skip_relocation, catalina:      "50d89f3858e6a1422bf2aa8d2e059063240901dda66176c3483dc21b29f0172d"
-    sha256 cellar: :any_skip_relocation, mojave:        "7bdd01eeb8523e60c5ea2925fc216c9f7668203b4ef28e4c1fb783b371f3113e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7c714ce99c9a9ff1422c01230fc53510317a660c01cb266e330eeeb1847fd385"
+    sha256 cellar: :any_skip_relocation, big_sur:       "aa26dcdd586875f7cebd5fb8d5f59fb44d3f9dfa6aa44700fd22ce2d893ec874"
+    sha256 cellar: :any_skip_relocation, catalina:      "7558c0ac4f301a877b536cdb3045ec7f4a6ed48b23f5dd7d82c0fed3b4e37be8"
+    sha256 cellar: :any_skip_relocation, mojave:        "854ac7aca016e88045d4517a900a30d115866c8a04a4cfdecad1f3bbb09b9ef2"
   end
 
   depends_on "go" => :build
