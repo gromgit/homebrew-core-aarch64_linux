@@ -8,11 +8,10 @@ class Openrtsp < Formula
   license "LGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "802f88bf6d8c831a729fdcedcc949d121f9969762f985fd532cd14f2a31c97da"
-    sha256 cellar: :any, big_sur:       "fce2e67f55b717cd6889b5f2bc4e21bcde69acc87ed561f5a5bab17dc1aafe8a"
-    sha256 cellar: :any, catalina:      "4dfd0982dd0e9480a654f8b3d85ac4e66b60ab582306a8aafa9ad060eb86051d"
-    sha256 cellar: :any, mojave:        "c7bc407cea25d6f3a7e89237f8241067622a630903c4649091fcf3843c9820c3"
-    sha256 cellar: :any, high_sierra:   "c99d793ff2f28434edbadc70d466a7316ef7d7b8095002d78090218a9b4abe76"
+    sha256 cellar: :any, arm64_big_sur: "037bd7b7f6b47749662992483a26c35707c8242bddfa35f58f2c7bb8d6d0da2e"
+    sha256 cellar: :any, big_sur:       "d6ae6c46e3e3917d3da47c3dfd1b9cd41830a2383ce561eea8f1270692cc1a6d"
+    sha256 cellar: :any, catalina:      "afa2457a34179559b6e6a107826d22aea0e633543395a3d18a6206b0bf75c8e6"
+    sha256 cellar: :any, mojave:        "3cfb1652550415fd0b7fb9e9c5ea6e1841dbc4b3b70910e0bb34866f8c8500fc"
   end
 
   depends_on "openssl@1.1"
