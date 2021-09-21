@@ -1,8 +1,8 @@
 class Srtp < Formula
   desc "Implementation of the Secure Real-time Transport Protocol"
   homepage "https://github.com/cisco/libsrtp"
-  url "https://github.com/cisco/libsrtp/archive/v2.4.1.tar.gz"
-  sha256 "3cb580928fcd502426809c68406d04aaa5ef1af7ebb0a3a41a52a13576f2fc07"
+  url "https://github.com/cisco/libsrtp/archive/v2.4.2.tar.gz"
+  sha256 "3b1bcb14ebda572b04b9bdf07574a449c84cb924905414e4d94e62837d22b628"
   license "BSD-3-Clause"
   head "https://github.com/cisco/libsrtp.git", branch: "master"
 
