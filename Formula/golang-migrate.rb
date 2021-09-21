@@ -6,11 +6,11 @@ class GolangMigrate < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3565f7a03cfd1eeec3110aa8d56f03baa79b0de2718103c0095e51187ecd37ee"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5c61a106d9970b0f9b14e78e1523894d57b50cd0473f7d5a1fb1a9161dbff159"
-    sha256 cellar: :any_skip_relocation, catalina:      "a77af5282af35e0d073e82140b091eedf0b478c19aea36f1b06738690989cebb"
-    sha256 cellar: :any_skip_relocation, mojave:        "8fa3758e979f09c171388887c831a6518e3f8df67b07668b6c8cebf76b19a653"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fae2f9b6663ac11a178757ecc67a0407a89191efbdb76302a665566951b7ca34"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5eefbb5079926c045bb54d7c39dacdff1f47333537ae117e549a6bf4c0022415"
+    sha256 cellar: :any_skip_relocation, big_sur:       "89331be62af8d09c5488f04bbb9e8bbaaf2f8308fc80b33d0460a59aef8fb933"
+    sha256 cellar: :any_skip_relocation, catalina:      "9e5042348f5365709904256c67be90eb6c58933ba6718f75f0c6fd43fbc284b0"
+    sha256 cellar: :any_skip_relocation, mojave:        "a6d8c96b681088ee7ff2d4e5cf4b486b8731771712bf4ce03234df1a18d5b718"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c830a75556f981d38518261f56847bafe1d478b1180bed16e4cb4a1519827eb5"
   end
 
   depends_on "go" => :build
