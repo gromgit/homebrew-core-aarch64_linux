@@ -12,10 +12,10 @@ class Remind < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8889b0d310444a0dc0172e7f13d50685e0e31bca7e972d52c0201871f3ba8203"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c01cb172254512e7d7b917dd8a99c91fdd73ddd67a09eab9742f318a39fa3c76"
-    sha256 cellar: :any_skip_relocation, catalina:      "bf974275e590f8499d3a1083eb2f4ee65adad59d53d3a6106dc856775fee62c7"
-    sha256 cellar: :any_skip_relocation, mojave:        "e7504ca7732c99321a678add4d98f20efc38e9a503bcb207ab575ad514156ab2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "afca5089ee626813ac35ada41686bf93a3bbd91a816e74c08f8f541e683e8b3c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e89d4e7bbb52603fa5d3685024e6d224058323ddebb3e45ced59aff454758f8c"
+    sha256 cellar: :any_skip_relocation, catalina:      "5a4f3ee32e49c6190d4801b2946926a233f473bd25a78f495781ac24213c6d3c"
+    sha256 cellar: :any_skip_relocation, mojave:        "0f79a1688aa275201660ad40b624ba5bd10cd857d021779a182dfb1ea81b89b8"
   end
 
   conflicts_with "rem", because: "both install `rem` binaries"
