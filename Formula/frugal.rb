@@ -6,11 +6,11 @@ class Frugal < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c48bf2458ba6396f0db25011e095433de34f4b697189a93781a624334058a1a5"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f2050779ecfa4ac1f4f4bb980030635203deff41accfe662c75a8b266abb074b"
-    sha256 cellar: :any_skip_relocation, catalina:      "f2050779ecfa4ac1f4f4bb980030635203deff41accfe662c75a8b266abb074b"
-    sha256 cellar: :any_skip_relocation, mojave:        "f2050779ecfa4ac1f4f4bb980030635203deff41accfe662c75a8b266abb074b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3501e8678664c49becb0b73aa6f1cdbb02c81fb2812d42fc771fd8f876aa4cae"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ddf0882cccedf077a47c9d6f19c1149d2deb2f41b9291877b3c74a9021afde64"
+    sha256 cellar: :any_skip_relocation, big_sur:       "2010feb5c9e7ee315cdb22c94e1ac95336a56a868f553c346f400d297b580db5"
+    sha256 cellar: :any_skip_relocation, catalina:      "2010feb5c9e7ee315cdb22c94e1ac95336a56a868f553c346f400d297b580db5"
+    sha256 cellar: :any_skip_relocation, mojave:        "2010feb5c9e7ee315cdb22c94e1ac95336a56a868f553c346f400d297b580db5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "19674e735af1211a6f7096df85eb6394c950888496df9d3d035304e87fcf52eb"
   end
 
   depends_on "go" => :build
