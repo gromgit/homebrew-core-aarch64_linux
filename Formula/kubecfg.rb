@@ -6,11 +6,11 @@ class Kubecfg < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a03d07c984d4997badcbc1853baa4fd86c86af02dc9209d02ae9b17cc55a9291"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a6e870ecc92677c0994af7e9ea755deedbdd6c0432be82bd3093f4a71cb09eab"
-    sha256 cellar: :any_skip_relocation, catalina:      "9e3d569d70eead295185ca587d0c4252ccfab6755ba55c7197524b0505d7e67c"
-    sha256 cellar: :any_skip_relocation, mojave:        "3c364b5229c2f67ec49e1e31963394b50cad213bc429028501a9c8dd6c1d2578"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d88890aca60bc952255a3c7eacf54af5a0e5390d4f110a5e06c22efe00f57ad8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f8ae382e7b63ec1c2b860e1aee2fd4e6d69a5845e1c0597912ebf9356ba58558"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4f4984ac3a047e7d0d7dc0a45ddd78096320d66d6642aa8e8685bcdad05fbf8b"
+    sha256 cellar: :any_skip_relocation, catalina:      "d8d18d85c19f8537e6905c137f41dbc4afc713486b350a765cdda3bbb9c0c035"
+    sha256 cellar: :any_skip_relocation, mojave:        "bb49c7511c9e2eb764834ace4dc32792cab62199ce80381a76673587093ba680"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "82336212dd3ea4f212cec0b8d0b02019abc750b11c462f526084c9d93d86f97e"
   end
 
   depends_on "go" => :build
