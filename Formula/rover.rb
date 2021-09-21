@@ -7,10 +7,10 @@ class Rover < Formula
   head "https://github.com/apollographql/rover.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "420213adbcf95b0d337acf1501e6f89293010d0b79a90dcc3e8d45740a2042f8"
-    sha256 cellar: :any_skip_relocation, big_sur:       "2c8857515f7f8192cdd84a55407ef8b4ce825640509b5cfa642a8bf5ce69241f"
-    sha256 cellar: :any_skip_relocation, catalina:      "6b84a5d32b68ca4c1f2a57153b3ab395fee39c1172011c771f5f8bea3cce1293"
-    sha256 cellar: :any_skip_relocation, mojave:        "504e11dec505ed4abc3eaf6d10cb6adad8bc9374aa726497b307e22c4cfe6463"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d9ebceb7ed5b175e5134c33e7ce4e83d1ebe9104ba2ddb87a951cebc8777317e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7cbb67e68e28c391110ed4ca72a5fab47dd003a91a802f4fee3fa7d497a1811b"
+    sha256 cellar: :any_skip_relocation, catalina:      "609d8623c9646e2c9e791d51344751b1f5831326a164bd9b8ab4c892158305ba"
+    sha256 cellar: :any_skip_relocation, mojave:        "29a1eb20e01b61fbfb3e96edea45406bb0b8d97aac4b50810580ab68dd44c99e"
   end
 
   depends_on "rust" => :build
