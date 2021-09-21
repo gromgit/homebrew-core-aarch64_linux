@@ -10,6 +10,14 @@ class Lunzip < Formula
     regex(/href=.*?lunzip[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7e4a5428378440f10ff995f1ee3b1a77ccaff3b1094676c0b71ea5da6fd14e70"
+    sha256 cellar: :any_skip_relocation, big_sur:       "bc114966f582d1ad76ebc12d90a41aac605c59c7588eb5e08c172018dc11d214"
+    sha256 cellar: :any_skip_relocation, catalina:      "fa648ae46f4217291d717564a124283340e2cdb51da563ca8f0bd0736282bace"
+    sha256 cellar: :any_skip_relocation, mojave:        "a4e1358d0a41008f763ca03ef69b33b68f1fda5f324f234e8cfddf091a12923f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0754449246874a2cecc5d63962cda9db3c87c1ece9152ef6931d06874eb17a02"
+  end
+
   depends_on "lzip" => :test
 
   def install
