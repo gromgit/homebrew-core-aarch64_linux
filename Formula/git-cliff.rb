@@ -5,6 +5,14 @@ class GitCliff < Formula
   sha256 "a2961e97837c40e3b3b00a31e3221585932ac65981bc31d0c20d061c003e9462"
   license "GPL-3.0-only"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3e5181292cbff03ec772baf3ad8cf54d9e65491e25f6170687b10e1b39ea0cbc"
+    sha256 cellar: :any_skip_relocation, big_sur:       "9303855b2c052e0756f9cee2622a3531308dbfb7d4f369fa6b0f8d53d307ebe9"
+    sha256 cellar: :any_skip_relocation, catalina:      "c434adedbb1683abbf2ec4c4d1a3d1fae793a02fcc8e6bda766d13a56c64095a"
+    sha256 cellar: :any_skip_relocation, mojave:        "12e9bb1e9e4e257d3d1bccbf6ec2a52c44226d2f4cb3f798c6df0d48e27f8f9d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3a9de1bbfb8b9b8e07d60825f1e61586e0247059283b7cb607f7a693cdb64a97"
+  end
+
   depends_on "rust" => :build
 
   def install
