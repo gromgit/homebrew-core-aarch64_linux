@@ -8,11 +8,11 @@ class ScIm < Formula
   head "https://github.com/andmarti1424/sc-im.git", branch: "main"
 
   bottle do
-    sha256 arm64_big_sur: "4fb1503d0621917a3ef0ac7e9e797c170f249d090a97eceb2762be751f102e35"
-    sha256 big_sur:       "218f06c63577dddf1357cf92c8f66f47ef6ff64f082eea98cce94b62c8a1e00f"
-    sha256 catalina:      "3461913e568fce79d103aac72c8edd7e69911f8581133eac8e06759f46b81878"
-    sha256 mojave:        "56cd7dbc8cff16da87cb2cc3206c52bba7961401b03e67d73332862133cf780b"
-    sha256 x86_64_linux:  "fc3af3d6197b5e2c768266c82efe9b55e80a645d1288cfd9caea53ed353516fc"
+    sha256 arm64_big_sur: "fb1822b15198f453e30271bba682a99f691cc40d06a6b579c7a6f7dcc2d369c0"
+    sha256 big_sur:       "73d779f46ea650c13122071a3ffe42c74c041ddc2cba44a7dfcffdf165675e54"
+    sha256 catalina:      "27ba7d0efc18b31798bb241bb8715e3a27c12e85fb6d3d32d71d86d7f238033a"
+    sha256 mojave:        "dfe4dcccf9298bfef23dbb5202ff4cc271146df186ce34b211d569bae8fe7f84"
+    sha256 x86_64_linux:  "8bf0655f44d0c532ef10a05fc234361fd99dbea75919399f0cf5ca98d2718fae"
   end
 
   depends_on "libxlsxwriter"
