@@ -7,11 +7,11 @@ class Gdbm < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "5c3247c107bc2975dec7baecff33bde0b40d50800da0d44eae17b07d4712a27c"
-    sha256 cellar: :any, big_sur:       "ea88ce09e934407b1c7dfcc1b74e2d4f1b409f8264b4475b816369a129c6cd25"
-    sha256 cellar: :any, catalina:      "2c62d9ef89fc346310fe219ce55c37f8673cd95672f21c5c7af6d991a52dc7fb"
-    sha256 cellar: :any, mojave:        "e31aaf7e8d02d811883dba4fd804954f226d8f112974293c6d6b7a8b66648554"
-    sha256               x86_64_linux:  "0cef41f29293302f68aac94fab6d6363217de9c867aad59d41c42e3cab73589a"
+    sha256 cellar: :any, arm64_big_sur: "15e097602373e698a4c89507a781215eac68f83ff28cf8d2a25d637340e1d179"
+    sha256 cellar: :any, big_sur:       "7abb94a713a1e25f5fc4c5218067abf6ad09bbd68967c21f01d5d69f88308dd4"
+    sha256 cellar: :any, catalina:      "4bdb9659a78c19dc10778ecbf078c2c96ae68ab75c75145260b88e95fc80f86f"
+    sha256 cellar: :any, mojave:        "a4e992de96a5f68d72c0d47da69cf70d5e3c315e15f8f77e0554a6758cadb805"
+    sha256               x86_64_linux:  "3c1999d4430a0004c0a333993d32f1fdcc1695ecd23715d4986722d0b6703b13"
   end
 
   # Fix build failure on macOS. Merged upstream as
