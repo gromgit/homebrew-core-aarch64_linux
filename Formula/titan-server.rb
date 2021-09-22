@@ -11,10 +11,11 @@ class TitanServer < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fc2d13173bd41bf1167fdecdff4f638e62cf91c2fbfb20aa19c91163ec465c81"
-    sha256 cellar: :any_skip_relocation, big_sur:       "797828f3d981bb37ad1fcbbdf351f5b1f2aaf2e51d6795a075a2e36b93dc69e9"
-    sha256 cellar: :any_skip_relocation, catalina:      "797828f3d981bb37ad1fcbbdf351f5b1f2aaf2e51d6795a075a2e36b93dc69e9"
-    sha256 cellar: :any_skip_relocation, mojave:        "797828f3d981bb37ad1fcbbdf351f5b1f2aaf2e51d6795a075a2e36b93dc69e9"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d152d5cdf3a9a8f600f9956f9e1687a4cbcccbda4398c69ddde2d44a42d43723"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6e84706c4de8f9288fe11a9c28d0b6901289ce45ddcd7ff51abc1ecfcc6f3ac3"
+    sha256 cellar: :any_skip_relocation, catalina:      "6e84706c4de8f9288fe11a9c28d0b6901289ce45ddcd7ff51abc1ecfcc6f3ac3"
+    sha256 cellar: :any_skip_relocation, mojave:        "6e84706c4de8f9288fe11a9c28d0b6901289ce45ddcd7ff51abc1ecfcc6f3ac3"
   end
 
   def install
