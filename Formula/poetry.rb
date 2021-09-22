@@ -8,11 +8,11 @@ class Poetry < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e02d2533948a6bd4aa12f2b2ad6d4364d1ae0d7787902e00af60ace8b40236a4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "83f53e5f9e741cddaeb77ca55e6728bb16f62d066111d47865103218f7d8d074"
-    sha256 cellar: :any_skip_relocation, catalina:      "a11eb12cc4cfbf5a0548d15d83dcbdc6268834b75bb46f4b6f527f75b2b13f25"
-    sha256 cellar: :any_skip_relocation, mojave:        "3bbf269f53a109d2adda56d80a2807e33d44a067868e292516996fb7d893da5e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7d06c9adaf58001a064c1b2f9c9a75626ee709b900c9635428f04571b02eff80"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3b42588d2c0b6748487e903770d4ac68779e083499bff2c9631e04d4c8c962ab"
+    sha256 cellar: :any_skip_relocation, big_sur:       "8ccf3845b25897d197081582df800bf5f1bc8b04a93c20ca69124ade4a8efc7c"
+    sha256 cellar: :any_skip_relocation, catalina:      "882b6859f5184cf898025d07b85aa73f683f1330cb57d088d2c17acef9141fbe"
+    sha256 cellar: :any_skip_relocation, mojave:        "bd97a668ac5c00d58e6af04582005a2c147dd9165864ab3b6eb98cb5d917211d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a68fe3bf77fb89817f2799e6d4e2ef62d8a3ab3eab252473484aa2c516ddef23"
   end
 
   depends_on "python@3.9"
