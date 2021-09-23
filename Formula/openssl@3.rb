@@ -11,6 +11,14 @@ class OpensslAT3 < Formula
     regex(/href=.*?openssl[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 arm64_big_sur: "f676e5bd999369a98b2e89e4a0fffeac8b5961ac4eba3ad45ef3c5c5e07aa217"
+    sha256 big_sur:       "f279ab1fb5880c36c8b5b7557ab44fd8c6e4b33ed03716bed4d3d69b96097a74"
+    sha256 catalina:      "ec819e57038f4ae11e3a3e083ec1d37c174e44fce08830bda22e7f6d77f063df"
+    sha256 mojave:        "2d6c5b6a1d828d26c4514a557496c64bd445126ea6c10bf81a5660c7690405f6"
+    sha256 x86_64_linux:  "e1ef778855bf72986f5b6acc08afc3e29735a73541cbb92e917cf38431904174"
+  end
+
   keg_only :shadowed_by_macos, "macOS provides LibreSSL"
 
   on_linux do
