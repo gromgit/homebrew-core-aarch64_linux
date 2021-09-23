@@ -1,8 +1,8 @@
 class Bgpq3 < Formula
   desc "BGP filtering automation for Cisco, Juniper, BIRD and OpenBGPD routers"
   homepage "http://snar.spb.ru/prog/bgpq3/"
-  url "https://github.com/snar/bgpq3/archive/v0.1.35.tar.gz"
-  sha256 "571b99dc4186618ad3c77317eef2c20a8e601ce665a6b0f1ffca6e3d8d804cde"
+  url "https://github.com/snar/bgpq3/archive/v0.1.36.tar.gz"
+  sha256 "39cefed3c4f46b07bdcb817d105964f17a756b174a3c1d3ceda26ed00ecae456"
   license "BSD-2-Clause"
   head "https://github.com/snar/bgpq3.git", branch: "master"
 
@@ -37,15 +37,11 @@ class Bgpq3 < Formula
 end
 
 __END__
-diff --git a/Makefile.in b/Makefile.in
-index c2d7e96..afec780 100644
 --- a/Makefile.in
 +++ b/Makefile.in
-@@ -29,9 +29,10 @@ clean:
- 	rm -rf *.o *.core core.* core
-
+@@ -32,8 +32,8 @@
  install: bgpq3
-+	if test ! -d @prefix@/bin ; then mkdir -p @prefix@/bin ; fi
+ 	if test ! -d @bindir@ ; then mkdir -p @bindir@ ; fi
  	${INSTALL} -c -s -m 755 bgpq3 @bindir@
 -	if test ! -d @prefix@/man/man8 ; then mkdir -p @prefix@/man/man8 ; fi
 -	${INSTALL} -m 644 bgpq3.8 @prefix@/man/man8
