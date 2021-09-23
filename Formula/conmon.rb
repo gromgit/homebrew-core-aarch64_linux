@@ -6,7 +6,7 @@ class Conmon < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "fefd7bbd590a91c392a4a2b30d058adec7ffcebcfe024647e11292c20009ca27"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "f86e041731d0ea90f4bfa25afd79334e5faf06d324ecfc4113174ea53d2d6cf3"
   end
 
   depends_on "go" => :build
