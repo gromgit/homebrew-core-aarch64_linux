@@ -4,8 +4,8 @@ class Libtorch < Formula
   desc "Tensors and dynamic neural networks"
   homepage "https://pytorch.org/"
   url "https://github.com/pytorch/pytorch.git",
-      tag:      "v1.9.0",
-      revision: "d69c22dd61a2f006dcfe1e3ea8468a3ecaf931aa"
+      tag:      "v1.9.1",
+      revision: "dfbd030854359207cb3040b864614affeace11ce"
   license "BSD-3-Clause"
 
   livecheck do
@@ -34,8 +34,8 @@ class Libtorch < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/aa/55/62e2d4934c282a60b4243a950c9dbfa01ae7cac0e8d6c0b5315b87432c81/typing_extensions-3.10.0.0.tar.gz"
-    sha256 "50b6f157849174217d0656f99dc82fe932884fb250826c18350e159ec6cdf342"
+    url "https://files.pythonhosted.org/packages/ed/12/c5079a15cf5c01d7f4252b473b00f7e68ee711be605b9f001528f0298b98/typing_extensions-3.10.0.2.tar.gz"
+    sha256 "49f75d16ff11f1cd258e1b988ccff82a3ca5570217d7ad8c5f48205dd99a677e"
   end
 
   def install
