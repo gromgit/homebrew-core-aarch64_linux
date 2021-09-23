@@ -14,11 +14,11 @@ class Mesa < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "e04319312192941e0958a7622eb0ca68fb9cb51d5122affdba32359c7c3a8930"
-    sha256 big_sur:       "322ba38e53336aab63838e86882b478be2fde40204f542215ccaad2a4c654cff"
-    sha256 catalina:      "257bea3d2ee0d5db58f02a454b5fcc6d81ee843d92c3a7964a0aa33e3f8b5775"
-    sha256 mojave:        "3c1bc6f6612fbdcbc80b54ed067a0c40dd54cc51ba24d65325b6ef457dd26060"
-    sha256 x86_64_linux:  "41d0c71f5c264e4a9d952ec32192c1ba380267acb16eed512bc2bae974b436cf"
+    sha256 arm64_big_sur: "b9cd776e06228f8ab10a41fcb4508067d242e3b84764690298b0192c5b577173"
+    sha256 big_sur:       "8242a55cb95ecf089e8719d27bb404b8ccc8a54cd96e57654c799e9bb454bde1"
+    sha256 catalina:      "ebbb6af00f74c47b616ac566c4ce62230a0850a3102a67587d6b271f9115312b"
+    sha256 mojave:        "067ca2014dc31f632439d320502793810926bc4e6a01e1196cdd5c6f02bd5206"
+    sha256 x86_64_linux:  "8168bd1b1815316a35f54526d7f625c376b597d2888f840a95fbb7bd3b53f24f"
   end
 
   depends_on "meson" => :build
