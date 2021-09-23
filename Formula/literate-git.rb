@@ -9,11 +9,11 @@ class LiterateGit < Formula
   revision 7
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "331f2b1125935469948fb649b8ac5a8063bcb63e4a7023aa8db3c6ef63a43b31"
-    sha256 cellar: :any,                 big_sur:       "7cf45d23a0f329ce3a0f4f6dbf714ba2ac6cacdebda0aadecb47cbab3c837296"
-    sha256 cellar: :any,                 catalina:      "3a9b77d11ab5cf7c11ca7c68e87facd315892aeb3b4f39eb2e620642bd0cbce4"
-    sha256 cellar: :any,                 mojave:        "ab1381ddd5dca2639be003b01a67d62a4fe76b1fbf3572859d7b5adaa1e44303"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4c85d495f10a897361091e649540e85f6d6deb14213bbbe874e724750005fc0a"
+    sha256 cellar: :any,                 arm64_big_sur: "9feb9fb043c4f5ab69028b9478d6b8f5bc0059f0d31f0fccbf5c22d63e4d1448"
+    sha256 cellar: :any,                 big_sur:       "01384f677171ddeef94083de2aa681bed34acb27e23c1fd83497720b16397249"
+    sha256 cellar: :any,                 catalina:      "cce3e3935b756d27b7519540faf8aa0ef8a1e2ffe1ac0efbf313ab92b3fddbe1"
+    sha256 cellar: :any,                 mojave:        "0d73ad846855eb50d8c15ab65291ae43c50e76f1c62aacf346934dbf96ab05b7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3ee1df5a312307009829f463277c4e5f69985db41d67bb91cb1189543e3dad10"
   end
 
   depends_on "libgit2"
