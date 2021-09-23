@@ -12,12 +12,11 @@ class Spack < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5998ac2f206013c08914cf2148735ae1537b68126087ab46924074ca563b46d0"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6b453cf306f0b84e3ee72cb6f713e700fd421e0b49f8192ac4df60b272b0b82e"
-    sha256 cellar: :any_skip_relocation, catalina:      "6b453cf306f0b84e3ee72cb6f713e700fd421e0b49f8192ac4df60b272b0b82e"
-    sha256 cellar: :any_skip_relocation, mojave:        "6b453cf306f0b84e3ee72cb6f713e700fd421e0b49f8192ac4df60b272b0b82e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fef7d2d2b484ac32fa9bc1464759b872a280bb730724ea80854eb004accae6c6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "730361d730d684299daec515988a446da828f8c9ce0cbbcb9ca411d22989be4f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "57a313186f3cf80ac7985f1f86fe415a3a9f179044fa5db2333460043b1809f4"
+    sha256 cellar: :any_skip_relocation, catalina:      "57a313186f3cf80ac7985f1f86fe415a3a9f179044fa5db2333460043b1809f4"
+    sha256 cellar: :any_skip_relocation, mojave:        "57a313186f3cf80ac7985f1f86fe415a3a9f179044fa5db2333460043b1809f4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e88b8b7697764e9336ac1f849be0e8647627e38299671b208689949071bb0192"
   end
 
   depends_on "python@3.9"
