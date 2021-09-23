@@ -6,11 +6,11 @@ class Bbtools < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "ac32addd7fdf61b7f0072980a55552fa61ef57c387c633dc7afb25bfeab7b6ff"
-    sha256 cellar: :any,                 big_sur:       "86ad5237c649731c3d776feaa57dcc8a42de27ecbb6f118b88f30e7cfbdb1806"
-    sha256 cellar: :any,                 catalina:      "ec7a14d60ace4d66412f4369e0e70bebf8c4cfe335573587ac5c2b3851b45ebc"
-    sha256 cellar: :any,                 mojave:        "49c3ff880ccfa4eaa2acfaa5bdceef3091b7455f260562c9343406efa67a2e5c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2a741261d9e9930f7c2eb24f7d748d9a711fd90d4115b904d5c7d22cdb7cf5ad"
+    sha256 cellar: :any,                 arm64_big_sur: "d48cb8fda86fc26b8743176a105d971a93fcf6d9c104e17da711af9431176e8b"
+    sha256 cellar: :any,                 big_sur:       "c58e0dd12480d053b2773d379595113306413a1232b8e6f06c16a21200336910"
+    sha256 cellar: :any,                 catalina:      "55871cc98ba20e53a2719d19db44914b0805087b1a07d35dfe3416c34d8a5560"
+    sha256 cellar: :any,                 mojave:        "2f4d3beb9b4a22f244efd09fe6f0fcb3e0fce712e2b82047cf884559a0d65fa7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "69ede7fab3159235bc54da642e9e7f97e5d99c26edcd9700abf9a3b8a9aed71a"
   end
 
   depends_on "openjdk"
