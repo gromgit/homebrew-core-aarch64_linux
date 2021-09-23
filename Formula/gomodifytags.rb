@@ -6,11 +6,11 @@ class Gomodifytags < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "62fe1ce46fb51e4c61c727e21a21df9a30830909e5b6aaa1e41e19a7c45d29d4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "341e1cc756e6e89198f22e45b000dd0503cd615ddb007a00330f5b52b8950633"
-    sha256 cellar: :any_skip_relocation, catalina:      "341e1cc756e6e89198f22e45b000dd0503cd615ddb007a00330f5b52b8950633"
-    sha256 cellar: :any_skip_relocation, mojave:        "341e1cc756e6e89198f22e45b000dd0503cd615ddb007a00330f5b52b8950633"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4e2e993f70344fb828c1b5a212fca9f47366cacf6b9097a0d08dcdeeb3583257"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "dbd3a4c7a66090a7c17afd699b0b35d70663b5e9305085a573a3493a5cc4ebe2"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c3c815e6288c0c3474800937bbb15fa2569e34a7715121b94c713b8575c51203"
+    sha256 cellar: :any_skip_relocation, catalina:      "c3c815e6288c0c3474800937bbb15fa2569e34a7715121b94c713b8575c51203"
+    sha256 cellar: :any_skip_relocation, mojave:        "c3c815e6288c0c3474800937bbb15fa2569e34a7715121b94c713b8575c51203"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a0cdedf095c819f8b5293dbda500958d18ea93339d2cf4340973e3b3141d9317"
   end
 
   depends_on "go" => :build
