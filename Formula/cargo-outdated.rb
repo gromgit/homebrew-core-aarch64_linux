@@ -8,10 +8,10 @@ class CargoOutdated < Formula
   head "https://github.com/kbknapp/cargo-outdated.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "1d852dde7019d1baad9d149f4995cd908645dfe20bd39801f3f2276343da973c"
-    sha256 cellar: :any, big_sur:       "b58751387e96e728ebcd1231fba915b4b241137b3799f3aac092f84af094a88c"
-    sha256 cellar: :any, catalina:      "882148ec48dfe84c54b54c04e81b143579d3c6a15d97fdfc722cd08544a1aa6c"
-    sha256 cellar: :any, mojave:        "97bb7bcd46a8612a496fafdcb701b4992f716438f564001b34be18f43bf3199e"
+    sha256 cellar: :any, arm64_big_sur: "7a5aac375755c44c21e36311cc6d3cb1cf352e71ae22ce2afd2fec244c57982a"
+    sha256 cellar: :any, big_sur:       "b0db95e838d5e83b02bcf88ec6eb6f0aa5c9b2f04c2fa61dcc0e9b1b43debf48"
+    sha256 cellar: :any, catalina:      "ffe12a04cc121da85c970e5c427cd00017f2901faca3690322ed925a15b5a542"
+    sha256 cellar: :any, mojave:        "cbffce2d37bc58ece7635a8a04a815282277d5775166e26c2f6d45e4d17e239b"
   end
 
   depends_on "libgit2"
