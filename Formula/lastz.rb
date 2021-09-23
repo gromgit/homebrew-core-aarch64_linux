@@ -6,6 +6,14 @@ class Lastz < Formula
   license "MIT"
   head "https://github.com/lastz/lastz.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "de52a79ade29a7db8f36ca3e808b9be5900d1839e44a365380a4eb6894c2636f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "57b09f05e5c56455f4d111807f4a2ed93d1d27d2e6549920bfa08dc37655b694"
+    sha256 cellar: :any_skip_relocation, catalina:      "65e45afb94391221588f6abe49ef096a45dec40c7cb23d038aa50c9a238a3c24"
+    sha256 cellar: :any_skip_relocation, mojave:        "42436ebd92ce29d3981ea1d2ccd61a9ade9739866fcbb3e004bb53ab3b45299e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9ebb95d9d902213839542914bcf1dfb2504f6af458a50562214855b39139481d"
+  end
+
   def install
     system "make", "install", "definedForAll=-Wall", "LASTZ_INSTALL=#{bin}"
     doc.install "README.lastz.html"
