@@ -7,11 +7,11 @@ class GitSeries < Formula
   revision 4
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "ccf1c1e9a18629fe874987409d79f84da6e171fe802a6918147c3198b0047cce"
-    sha256 cellar: :any,                 big_sur:       "2193cb415148a398304ae5cde86bd8f672c62fef1028ad78057d66fa3ca0fd36"
-    sha256 cellar: :any,                 catalina:      "e273c21ef68060e010e42bc805bf1a2e5baf9a8e7ecec6338490175857713168"
-    sha256 cellar: :any,                 mojave:        "31c32b8df3a5a2c70c54786a0c222ce4fdeccace4cb3a5bf50f3a27d9f46167d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "30475b793ee6ea3a5a8291796f01628b735e50b2a796ffe47345a519e730fc7c"
+    sha256 cellar: :any,                 arm64_big_sur: "fdac441611169844e14d3493eebede474b613b926744bf2d55f1268107683ed2"
+    sha256 cellar: :any,                 big_sur:       "30077bc67f5175001453e18c38ad3de1662adeca57e4408c753baa19274c7568"
+    sha256 cellar: :any,                 catalina:      "6739bafe09a3232079693b0cb92378e80421cf395577d047fc3f728efda7436e"
+    sha256 cellar: :any,                 mojave:        "13d49cc136dee5bfd78cfbb960af5ee4b5707377aa7e462ff5e98091b28109af"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "59362bcc4945f3b67fe2fc129ee1a6fba8c97fb9fff230b012c276f7992372f2"
   end
 
   depends_on "cmake" => :build
