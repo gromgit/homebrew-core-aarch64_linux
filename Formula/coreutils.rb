@@ -8,12 +8,11 @@ class Coreutils < Formula
   revision 1
 
   bottle do
-    rebuild 2
-    sha256 arm64_big_sur: "e7d88d2b7a91a57dfd37c2ea14752d1bb116f25694eab1161d6e8088f7db5921"
-    sha256 big_sur:       "371ec57703b3646e0113331308b6e03617c2a7f91e15e113380b605455daba20"
-    sha256 catalina:      "7a97ad96dfbe6abbb5c94424518a077e040af8a77d1946ca960a5f33cd237551"
-    sha256 mojave:        "10fbad2e35846c7e835cb979b5beb9edf07f3a9742ddcc3c28d9abd5fe9ccb1b"
-    sha256 x86_64_linux:  "6d0ddc3ead1b8259a9a97b7bc9cc891cbc5a236a82afd51f224de16affea0b54"
+    sha256 arm64_big_sur: "ac951f1e7a4f057fad0fa6d0584959a6e3a7fe21a659d022a42081bf08ab358c"
+    sha256 big_sur:       "cdc8a9cbfbd179f8b6934419740c898b07196aafa0cc973e55cb32c21a6e6673"
+    sha256 catalina:      "6c6ba222ca2dfa19070909f14843ab6f15fa58f832b7ebb0b1c81c44b4b022fb"
+    sha256 mojave:        "873d09592121448c57226810a764da1f4ae7769ada6edffce5c33dc8de1ffbe3"
+    sha256 x86_64_linux:  "513ae166dad2a6ea727606e96c82203876f7007dde59dbb5f086b6f4a7be408e"
   end
 
   head do
