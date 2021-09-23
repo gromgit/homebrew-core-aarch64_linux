@@ -11,7 +11,7 @@ class Maxwell < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "2715efadecef40f96215b8d0f013b6c38d59d2a1cfac4013a0edc4b1dd97b27d"
+    sha256 cellar: :any_skip_relocation, all: "f154915e71dd3c44243a40c16abdfc63841b30e07edcfedf0fa716abd52ed234"
   end
 
   depends_on "openjdk@11"
