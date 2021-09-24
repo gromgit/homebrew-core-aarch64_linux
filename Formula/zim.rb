@@ -7,10 +7,10 @@ class Zim < Formula
   head "https://github.com/zim-desktop-wiki/zim-desktop-wiki.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:      "5fb7a7220942f32c021a72d4ea81134c2b16ef59dc6abc68d7b89be1d215ad1f"
-    sha256 cellar: :any_skip_relocation, catalina:     "5fb7a7220942f32c021a72d4ea81134c2b16ef59dc6abc68d7b89be1d215ad1f"
-    sha256 cellar: :any_skip_relocation, mojave:       "5fb7a7220942f32c021a72d4ea81134c2b16ef59dc6abc68d7b89be1d215ad1f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "50ebef7d2faa7130822d756466683ab3a39b1427499295ecceb393945f6d7a02"
+    sha256 cellar: :any_skip_relocation, big_sur:      "3c8cccfa08db73cd722d8fff32dc5e59c1211adc9ba986550d4641ce17f6f356"
+    sha256 cellar: :any_skip_relocation, catalina:     "3c8cccfa08db73cd722d8fff32dc5e59c1211adc9ba986550d4641ce17f6f356"
+    sha256 cellar: :any_skip_relocation, mojave:       "3c8cccfa08db73cd722d8fff32dc5e59c1211adc9ba986550d4641ce17f6f356"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "67d29ed5139d262e60140aa5ae478156b5170b3f42a7adca78a5561bd0c5312a"
   end
 
   depends_on "pkg-config" => :build
