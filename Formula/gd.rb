@@ -7,11 +7,11 @@ class Gd < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "a3b9c0b7777a4b7d03ffd55dd773a14e0700b5926e70e66d8417de686de0a9a3"
-    sha256 cellar: :any,                 big_sur:       "724abee79175bb635f8709eff2a5d54607d6ec2a4eca129146756c4518affe06"
-    sha256 cellar: :any,                 catalina:      "656f9a427793adf80ccdcd0b0c56a14859773f6ea5e5d2f7a366fd2e9475fa5b"
-    sha256 cellar: :any,                 mojave:        "368e3705affa28335c24419c03af2f02abaeaca87d0285ea14bdda2a93e66604"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "51a4a061dc98cdd207ee1c074f6ee977461759c4a72778d56af34cb1f5ec7f21"
+    sha256 cellar: :any,                 arm64_big_sur: "6ce670e95834eda72a26d28f515f27becfe55b03ede20a3c4ee5f15fd9c0e687"
+    sha256 cellar: :any,                 big_sur:       "35d040a24b8e6a05dee0703bef87a76d6c5d460a4168c749c484ecfc16d9904b"
+    sha256 cellar: :any,                 catalina:      "40ea66d7bca0bb527ba6ffff45b503ef6d6a3bb520d18e12efd15233e41da50d"
+    sha256 cellar: :any,                 mojave:        "33f5ac492e525bdfeb8f7602c1a56ed37e2f6f286e24734e406f568bc1be5d24"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8052fd3f49e14af727cff5f2f2227a0f6a5b3e9f0b1c1418b68cc86edabe5b52"
   end
 
   head do
