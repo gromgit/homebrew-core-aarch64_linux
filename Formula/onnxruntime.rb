@@ -2,8 +2,8 @@ class Onnxruntime < Formula
   desc "Cross-platform, high performance scoring engine for ML models"
   homepage "https://github.com/microsoft/onnxruntime"
   url "https://github.com/microsoft/onnxruntime.git",
-      tag:      "v1.8.2",
-      revision: "430e80e7b6e5e6222b2d90ca5e43609d62082722"
+      tag:      "v1.9.0",
+      revision: "4daa14bc74b5378d5fcb0d6de063a9fa8bd42eac"
   license "MIT"
 
   livecheck do
@@ -21,6 +21,12 @@ class Onnxruntime < Formula
 
   depends_on "cmake" => :build
   depends_on "python@3.9" => :build
+
+  on_linux do
+    depends_on "gcc" => :build
+  end
+
+  fails_with gcc: "5" # GCC version < 7 is no longer supported
 
   def install
     cmake_args = %W[
