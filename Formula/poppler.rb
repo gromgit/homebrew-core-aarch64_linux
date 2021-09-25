@@ -16,6 +16,7 @@ class Poppler < Formula
     sha256 big_sur:       "ac1bbd7709dd6cccbfced46079c03a775c3981b467ee087255fb9f8f1fce4ec0"
     sha256 catalina:      "831a96471fe69af4d86767d162c24c6cb43184229bbe5915105970f9f2b9c6a6"
     sha256 mojave:        "0366441466951432fb7ccebb1cf4a213f858b7ccee3743ad5b05dbe822f43319"
+    sha256 x86_64_linux:  "70be90826c71898e202a3a6cd2da966f8b80b5f2dc1b26f2b2250961df0809ab"
   end
 
   depends_on "cmake" => :build
