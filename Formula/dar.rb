@@ -1,8 +1,8 @@
 class Dar < Formula
   desc "Backup directory tree and files"
   homepage "http://dar.linux.free.fr/doc/index.html"
-  url "https://downloads.sourceforge.net/project/dar/dar/2.7.1/dar-2.7.1.tar.gz"
-  sha256 "76dade8adbeb817ffc78bf592c8200487ab5650234cf539539a9cbc5d346beef"
+  url "https://downloads.sourceforge.net/project/dar/dar/2.7.2/dar-2.7.2.tar.gz"
+  sha256 "973fa977c19b32b1f9ecb62153c810ba8696f644eca048f214c77ad0e8eca255"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -19,11 +19,9 @@ class Dar < Formula
   depends_on "upx" => :build
   depends_on "libgcrypt"
   depends_on "lzo"
+  uses_from_macos "zlib"
 
   def install
-    # Need to set due to upstream issue: https://github.com/Edrusb/DAR/issues/29
-    ENV.append "CXXFLAGS", "-std=c++14"
-
     system "./configure", "--prefix=#{prefix}",
                           "--disable-build-html",
                           "--disable-dar-static",
