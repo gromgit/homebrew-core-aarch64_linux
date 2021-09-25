@@ -4,6 +4,7 @@ class Ncspot < Formula
   url "https://github.com/hrkfdn/ncspot/archive/v0.8.2.tar.gz"
   sha256 "86274e3115d11efc5cd14389f0f52674ef1353f2943304b9b014afd7f16122ab"
   license "BSD-2-Clause"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "8117c43330eb8b31428e6a1bf7b9a310b23ab7f95febb93ae173d49543735d0e"
@@ -30,7 +31,7 @@ class Ncspot < Formula
   def install
     ENV["COREAUDIO_SDK_PATH"] = MacOS.sdk_path_if_needed
     system "cargo", "install", "--no-default-features",
-                               "--features", "portaudio_backend,cursive/pancurses-backend",
+                               "--features", "portaudio_backend,cursive/pancurses-backend,share_clipboard",
                                *std_cargo_args
   end
 
