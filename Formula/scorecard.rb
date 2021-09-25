@@ -1,8 +1,8 @@
 class Scorecard < Formula
   desc "Security health metrics for Open Source"
   homepage "https://github.com/ossf/scorecard"
-  url "https://github.com/ossf/scorecard/archive/v2.2.3.tar.gz"
-  sha256 "4d67321b4cfffd177c3be140b6db058c716a77c433f0cfb590a0f4b4505ca34a"
+  url "https://github.com/ossf/scorecard/archive/v2.2.8.tar.gz"
+  sha256 "8bd59643c535e9bed0980562b20ff5b97079c4330c1fe44fa35b06aa8178d758"
   license "Apache-2.0"
   head "https://github.com/ossf/scorecard.git", branch: "main"
 
@@ -17,7 +17,7 @@ class Scorecard < Formula
 
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w")
-    cd("docs/checks/generate") { system "go", "run", "main.go" }
+    cd("docs/checks/internal/generate") { system "go", "run", "main.go", "../../checks.md" }
     doc.install "docs/checks.md"
   end
 
