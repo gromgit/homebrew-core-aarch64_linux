@@ -9,11 +9,11 @@ class Ipython < Formula
   head "https://github.com/ipython/ipython.git"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "81f529bff48e3d5c7423bef6918c97c5362d31e92608468e7710b0faf892dd9e"
-    sha256 cellar: :any,                 big_sur:       "b6a37ec691440863f0e647a0c6351ba4eeaa09ffee8c9a3387695119edab1453"
-    sha256 cellar: :any,                 catalina:      "95e6c3c6356a6ffbd7eb312894a795457e456d97dfba4a97ee1e470b36611158"
-    sha256 cellar: :any,                 mojave:        "1857ef15aaf56be018a18fafd3e8cade809a43ee4636e64d77d7587c941280b2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5931279883ffd6dde69bdacedf7552e3b87007d73b5cd4ce46a3fa9253658e06"
+    sha256 cellar: :any,                 arm64_big_sur: "ba4e8081625c8d81db16ae9bffc3519473e8a26962d5a810559827561bb69dc5"
+    sha256 cellar: :any,                 big_sur:       "2764cb130f831ae57c44059ac361caec3169c1fe6f014b30e44524453d5b09b1"
+    sha256 cellar: :any,                 catalina:      "4f97b606027536a5b25ccc9a7ec5377670703c425cf2699fe7ffa883e0d27c34"
+    sha256 cellar: :any,                 mojave:        "10859be3e5e33359564d53e65e221028670cda3f6605f0a63bc18d238a196a3f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7ddf1c3ac13561c732b07866f601ea57e0dd2352030a961346df543f14bc808d"
   end
 
   depends_on "python@3.9"
