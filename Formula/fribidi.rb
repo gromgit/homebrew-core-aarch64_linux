@@ -6,12 +6,11 @@ class Fribidi < Formula
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "3a430c4eeb948c10595ffe163455f214f251bdb901f5846a0b67eb4f8aafdc71"
-    sha256 cellar: :any,                 big_sur:       "edc35b607a4be54edba895c367f4f7df356d863fd9abaf34323206ac46fe5655"
-    sha256 cellar: :any,                 catalina:      "c3799c193fb513a5c66a6e9fa950c1bdd15c12f931b9421dbf8e1c8e994f41e3"
-    sha256 cellar: :any,                 mojave:        "a53aef8adec171a839a2ea0f7d90655f385215d4a6c45c0ffc2a97c75a297fb5"
-    sha256 cellar: :any,                 high_sierra:   "83253b57bd1621e9340bfdb86ba147ff0a095e006ef53ad0c5421107557475a0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5401d916ef3e014f60e9273549790a6946901ada7ecf71b37cf19802819732ee"
+    sha256 cellar: :any,                 arm64_big_sur: "d80b767910f47f85b6fefc38a2742d520396f148b8290614b16328704f7c3bf4"
+    sha256 cellar: :any,                 big_sur:       "434c488a27dca39fa4fab0644cb9b2f495ea4f839eef63587d0de715a93a6f12"
+    sha256 cellar: :any,                 catalina:      "9ae1580fef75c9d665f5723200d7987b07674c452e2c236dae33e12a8cf16324"
+    sha256 cellar: :any,                 mojave:        "3ef3b5f32b31fad3fb8dc39a559b24abb04cf46c9b29303285eb160d1f4ed19c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f82a49f101fe666c5085302138ec5899e51c9346733149f4d872a9c468b7dcbe"
   end
 
   def install
