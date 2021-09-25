@@ -1,8 +1,8 @@
 class Jruby < Formula
   desc "Ruby implementation in pure Java"
   homepage "https://www.jruby.org/"
-  url "https://search.maven.org/remotecontent?filepath=org/jruby/jruby-dist/9.2.19.0/jruby-dist-9.2.19.0-bin.tar.gz"
-  sha256 "1f74885a2d3fa589fcbeb292a39facf7f86be3eac1ab015e32c65d32acf3f3bf"
+  url "https://search.maven.org/remotecontent?filepath=org/jruby/jruby-dist/9.3.0.0/jruby-dist-9.3.0.0-bin.tar.gz"
+  sha256 "2dc1f85936d3ff3adc20d90e5f4894499c585a7ea5fedec67154e2f9ecb1bc9b"
   license any_of: ["EPL-2.0", "GPL-2.0-only", "LGPL-2.1-only"]
 
   livecheck do
@@ -27,7 +27,7 @@ class Jruby < Formula
 
     cd "bin" do
       # Prefix a 'j' on some commands to avoid clashing with other rubies
-      %w[ast rake rdoc ri testrb racc].each { |f| mv f, "j#{f}" }
+      %w[ast rake rdoc ri racc].each { |f| mv f, "j#{f}" }
       # Delete some unnecessary commands
       rm "gem" # gem is a wrapper script for jgem
       rm "irb" # irb is an identical copy of jirb
