@@ -9,11 +9,11 @@ class Fava < Formula
   head "https://github.com/beancount/fava.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6e543d115ac68d62d2d7dbd5ebe6e825de191ab5b1023b95a611db9efe9375dc"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c4a7b163bf06e715ff2697fcc530250f90d42cdcf4399a50b45b28ee0619887b"
-    sha256 cellar: :any_skip_relocation, catalina:      "1df57b25ea900ebbefa46392350fe08b9d777df0912cfce48278ed6a3dd6c2ee"
-    sha256 cellar: :any_skip_relocation, mojave:        "73f215d8e4519039fd552a00b969d1e4074549ac6180d8677f39406799261978"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f99809161d2aaf28fd02b3ba83abd832dd3337bd6b6ceae42f3c664fc5d63af7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7a2bbf4a29fe6218ea9167deb2e687703493facdc38e96d80ad1b6a196448c68"
+    sha256 cellar: :any_skip_relocation, big_sur:       "365134b5d78611162e2d382194ed67f918ae5ca769a0587757b539bcd1c672b9"
+    sha256 cellar: :any_skip_relocation, catalina:      "fc63fb3226e979af9ec32278aa59361e18e9679520aac6ccd66e47a69a404a83"
+    sha256 cellar: :any_skip_relocation, mojave:        "a7eb116e79980128268b16d1efdc5198a3eb5dee9c21b43e689629f6fc193539"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "116064e7dd7a2b7b57c00fc111f274c0e0d1309a3540f13fae883fe5dbd690e2"
   end
 
   depends_on "python@3.9"
