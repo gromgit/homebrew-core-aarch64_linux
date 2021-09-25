@@ -7,11 +7,11 @@ class Dprint < Formula
   head "https://github.com/dprint/dprint.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1ff7ec7b2c58f64a1870b56790cb7f4a2b886efefd99257b16de24b5abb062b4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3fa9c531e87046fe8e271984c9010c9d077d48b37eecc9fa659b612176fc3233"
-    sha256 cellar: :any_skip_relocation, catalina:      "b07135b5c5cf0cfeaca1e0ed4646ad5f901bd60d6717a01ecad3576d24ba2d8f"
-    sha256 cellar: :any_skip_relocation, mojave:        "361999b49deb85b38221d12698933aa0ea52e30e753f0254a86477c1bd8e432b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ebe54dbf2cade7955742e3df7f1c96692aa9432ad6607e80839bcec8ec3f3a5d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2274645ef91f18baab7ab1dafc0a0dbcc4bfb5a2dd0b120fa2328f0b644e7733"
+    sha256 cellar: :any_skip_relocation, big_sur:       "45a0b8f82ddf8556487d74d475bfd33bddddf31236885225494ce7bc4e98cf22"
+    sha256 cellar: :any_skip_relocation, catalina:      "a6f3af896729b117b087b80f292031f9ff51b6bcf813bed0ce28e94bea7a1c9e"
+    sha256 cellar: :any_skip_relocation, mojave:        "fb1702cc211c5f4b3ec8faa5401fdc7bdcbd72383a2ef4f3f57f99dc5cfb278a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a365162f62d79035a772629ed3156d94b985b2d5ac5f0553d198362ab7fd2c81"
   end
 
   depends_on "rust" => :build
