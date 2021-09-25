@@ -7,11 +7,11 @@ class Ncspot < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "8117c43330eb8b31428e6a1bf7b9a310b23ab7f95febb93ae173d49543735d0e"
-    sha256 cellar: :any,                 big_sur:       "f1eb987148a0db5acd0f5278851ac5432fabd53687a74f3fda3dbd7bc80dd1bb"
-    sha256 cellar: :any,                 catalina:      "c47a959de1dbfd45396162f4eeadac9cfe2aac41de20ab8e760e4cec589a9d75"
-    sha256 cellar: :any,                 mojave:        "d2bee764837f04d29f050fabf1b1d6430ffe6ec8af2cfb426ac8670c8678549e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "93b312fda3916f507d5b83ce463fa20755164092a8a2bdd2b51598330fa22e20"
+    sha256 cellar: :any,                 arm64_big_sur: "006908520bb2b297ab38570481fd5b2d51a2668549977ae800a9a2d2ad1ff77b"
+    sha256 cellar: :any,                 big_sur:       "05255511d98f0726723947f1ece3a6ea0bc489a19d39deff5d93729ce6462e6a"
+    sha256 cellar: :any,                 catalina:      "e8ba2b94588303c1cdf4719b9f9470a89a8d4b235f9cb3aea32f3376dbc8fb6b"
+    sha256 cellar: :any,                 mojave:        "28aae6e35fe7d5749ab7b2d81d4905e85f821ad97c565e8ab10b2da8f401f545"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "acfb22cd6fb3be1ca6f1d01bd30b376ca86993ff89c57a981ed43df101bcf905"
   end
 
   depends_on "python@3.9" => :build
