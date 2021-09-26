@@ -12,11 +12,10 @@ class Kafka < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, big_sur:      "b3057db03fb73b120e48fb99a2310add57b92427d8f003569a19455fce45c2e8"
-    sha256 cellar: :any_skip_relocation, catalina:     "b3057db03fb73b120e48fb99a2310add57b92427d8f003569a19455fce45c2e8"
-    sha256 cellar: :any_skip_relocation, mojave:       "b3057db03fb73b120e48fb99a2310add57b92427d8f003569a19455fce45c2e8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "f1e857fb03756014713ddeb8c240e10cf57cda6cc58e43879a346836d83cad03"
+    sha256 cellar: :any_skip_relocation, big_sur:      "186f5cb572ee3ab49ad0cbe67b21f14667eb68db025daa6000ee14cd042b6111"
+    sha256 cellar: :any_skip_relocation, catalina:     "186f5cb572ee3ab49ad0cbe67b21f14667eb68db025daa6000ee14cd042b6111"
+    sha256 cellar: :any_skip_relocation, mojave:       "186f5cb572ee3ab49ad0cbe67b21f14667eb68db025daa6000ee14cd042b6111"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "9cb29956bab9e7280c3879a2510d12b9f9ce16ce08b7e1258c102b68efa35fac"
   end
 
   depends_on "openjdk"
