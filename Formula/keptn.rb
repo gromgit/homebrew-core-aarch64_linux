@@ -6,11 +6,11 @@ class Keptn < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "151eccb7ed8900300b420347b0d815cadc503c3568a4ec2463b40fcbd0fc8707"
-    sha256 cellar: :any_skip_relocation, big_sur:       "41b0576f74f2f35573f0a5ea9452998d6cb7c133b9790c2992f2c93abd59c48b"
-    sha256 cellar: :any_skip_relocation, catalina:      "8536865a76351de62977493328319a4c72858b9d1fafb8ad1b4d6147ab8b7aee"
-    sha256 cellar: :any_skip_relocation, mojave:        "ccb7475f5086bbb219979a63bcb772c8139fb5c88649a3568b098911f30ea651"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4467137b6f965d28701ea01d4ce7d7ef3acf4a80154532660c9c4a1401ffd881"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a0face66e81013a059015062aed3855d75c151bd683f3f5b00eec5abd23ae0d6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b8d83d543e45bf2a3287abc268d677cf33c79245a735146f12fec42e07278b1b"
+    sha256 cellar: :any_skip_relocation, catalina:      "718d29d52f0e5780d0067f9b5eafad4a08a648b3bf605ab83ff939c547492b5c"
+    sha256 cellar: :any_skip_relocation, mojave:        "920e3054b80aabed5310763a63c1af4a76ad680943771260cf77f4bffe4ab2b9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bdba46209177a40c557bf9a4a517da9ec045e91065d34c46545b7d0d12f989e8"
   end
 
   depends_on "go" => :build
