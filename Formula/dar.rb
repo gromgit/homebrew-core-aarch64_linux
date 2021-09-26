@@ -11,9 +11,10 @@ class Dar < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:  "89f145997e301eb51ed6fadbd3c0583113499204f56fdf9032b016c4020fa947"
-    sha256 cellar: :any, catalina: "af73f8c79627e84c8d36cb079dfd598d943278f0b73fd68b873f45872124409c"
-    sha256 cellar: :any, mojave:   "ef0298ac3f4143f7b15d3ca7a0e2e873d6ee0b28cb1d0066c9ff46e4fd2144a6"
+    sha256 cellar: :any, big_sur:      "1fdd6b3a1928e14d8f912e37ae55e0e3c86186a5da2bc99c107f2c7b8b977c83"
+    sha256 cellar: :any, catalina:     "da74fe3bf555027687c08c1070ded75381c823063d61e041573cf1b97899ce62"
+    sha256 cellar: :any, mojave:       "a68d869a6b947f9a0d72afb03f11d1fae3a3401e7a4cd12737b272dae8988cb3"
+    sha256               x86_64_linux: "cd8313b7fca09d8045b7f6b318b4668f3a986a8ebfc6d5f801883d079de503a3"
   end
 
   depends_on "upx" => :build
