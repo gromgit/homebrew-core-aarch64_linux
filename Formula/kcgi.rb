@@ -11,10 +11,10 @@ class Kcgi < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f822435b05a2e98b0bef784360c4e323ca7f6e9567673f0f2be4aa2f8e6d07b8"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e3ab6c122f3a35e181334a51e35e7c0b47aeffeba14b70ed976555730a868111"
-    sha256 cellar: :any_skip_relocation, catalina:      "2e3d7ae2a08b52f80bd995ff49f1ffd7c4c00e313555f47e6efe59e6ff587559"
-    sha256 cellar: :any_skip_relocation, mojave:        "f0e30fd8df7fd51a6f1fca3e9067424002c0ddc57d9dfeffa24e55632a6955f4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "477a66993f541e9b595996d577c766c5eb205730b97885853322b32bb3d66285"
+    sha256 cellar: :any_skip_relocation, big_sur:       "aea0950090e27a079ea4f104a726676c13f01de6c56284b2f98e8bfd1a208e21"
+    sha256 cellar: :any_skip_relocation, catalina:      "de0d79ace2d35397df1fa1e8d7e09128372d9c7989992675ae835d2d21a502e8"
+    sha256 cellar: :any_skip_relocation, mojave:        "a4779378456da9d3887e45136c69df85d47bef12d57b7f8903f840f4c2b12002"
   end
 
   depends_on "bmake" => :build
