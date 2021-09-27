@@ -9,10 +9,10 @@ class Doc8 < Formula
   head "https://github.com/PyCQA/doc8.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0cfc81cb18f6a918b73f3a45860295ecf9dd8117202b0d73737d530906287d4f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d66cdc77b805d511adc0c78ca69589e956c187d3382acb21ef2bfcab92e7f9fb"
-    sha256 cellar: :any_skip_relocation, catalina:      "d66cdc77b805d511adc0c78ca69589e956c187d3382acb21ef2bfcab92e7f9fb"
-    sha256 cellar: :any_skip_relocation, mojave:        "d66cdc77b805d511adc0c78ca69589e956c187d3382acb21ef2bfcab92e7f9fb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3ecb41d5f82ae9dba4eb92f836f4f658251dac4cf1fe5e1221c5e2a3b661e89b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "58a049b070b9a53e1584048308bd9983e94c08e237f95afbbe47d07442c0032b"
+    sha256 cellar: :any_skip_relocation, catalina:      "58a049b070b9a53e1584048308bd9983e94c08e237f95afbbe47d07442c0032b"
+    sha256 cellar: :any_skip_relocation, mojave:        "58a049b070b9a53e1584048308bd9983e94c08e237f95afbbe47d07442c0032b"
   end
 
   depends_on "python@3.9"
