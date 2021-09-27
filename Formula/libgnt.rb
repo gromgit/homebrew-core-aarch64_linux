@@ -1,8 +1,8 @@
 class Libgnt < Formula
   desc "NCurses toolkit for creating text-mode graphical user interfaces"
   homepage "https://keep.imfreedom.org/libgnt/libgnt"
-  url "https://downloads.sourceforge.net/project/pidgin/libgnt/2.14.2/libgnt-2.14.2.tar.xz"
-  sha256 "61cf74b14eef10868b2d892e975aa78614f094c8f4d30dfd1aaedf52e6120e75"
+  url "https://downloads.sourceforge.net/project/pidgin/libgnt/2.14.3/libgnt-2.14.3.tar.xz"
+  sha256 "57f5457f72999d0bb1a139a37f2746ec1b5a02c094f2710a339d8bcea4236123"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -40,7 +40,7 @@ class Libgnt < Formula
     end
 
     mkdir "build" do
-      system "meson", *std_meson_args, ".."
+      system "meson", *std_meson_args, "-Dpython2=false", ".."
       system "ninja", "-v"
       system "ninja", "install", "-v"
     end
