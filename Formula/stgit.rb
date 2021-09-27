@@ -7,10 +7,10 @@ class Stgit < Formula
   head "https://github.com/stacked-git/stgit.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "dfe9a7b2c285fbef18c85bd830494b9cf84218451d407ebf129e1eb7b91fb113"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a41c81093c1fe1ef8cfcd326805ee650b2acc307324fed6931ce32346d5b1849"
-    sha256 cellar: :any_skip_relocation, catalina:      "a41c81093c1fe1ef8cfcd326805ee650b2acc307324fed6931ce32346d5b1849"
-    sha256 cellar: :any_skip_relocation, mojave:        "a41c81093c1fe1ef8cfcd326805ee650b2acc307324fed6931ce32346d5b1849"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e3bdca3fa2b8dfd10dd3e89dd08aa7c5760d7fb9159c1abecbb56b53c9241731"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ae08af52ebd73ea02f596294454b6bda5c9efc360e2b03c9806d0f508f4a5282"
+    sha256 cellar: :any_skip_relocation, catalina:      "ae08af52ebd73ea02f596294454b6bda5c9efc360e2b03c9806d0f508f4a5282"
+    sha256 cellar: :any_skip_relocation, mojave:        "ae08af52ebd73ea02f596294454b6bda5c9efc360e2b03c9806d0f508f4a5282"
   end
 
   depends_on "asciidoc" => :build
