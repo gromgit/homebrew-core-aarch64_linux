@@ -11,6 +11,14 @@ class GitCredentialLibsecret < Formula
     formula "git"
   end
 
+  bottle do
+    sha256 cellar: :any,                 arm64_big_sur: "99e10ad70f907d4f710721ba16c5d02a88887c50d056781ce337786437d2e084"
+    sha256 cellar: :any,                 big_sur:       "c54fc5a1f4e8740a1414ed46f6bc6e5577e473625b280fffe516aca4b01bfac5"
+    sha256 cellar: :any,                 catalina:      "9b02365e9e24df3d90d15d0b3b0ee548845b359151605a214bf53f842e48ef78"
+    sha256 cellar: :any,                 mojave:        "c72707b7d79ef3ebb0a2e60bde9c01e70f54b820f2066d2dcafe7c65737eacde"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b5bda152d49e3450802c94d81f27d67dfbf0d436bff9c1309a36140f8ec986db"
+  end
+
   depends_on "pkg-config" => :build
   depends_on "glib"
   depends_on "libsecret"
