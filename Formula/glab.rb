@@ -7,11 +7,11 @@ class Glab < Formula
   head "https://github.com/profclems/glab.git", branch: "trunk"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c37212705c5790ed60ccdfd75e8113fba4cf374ce16e7773e3778ecf3d0ab63d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e0868a98a06b3d35d5f04804e824887b6b75372994f65e1d53f39d7575e91d08"
-    sha256 cellar: :any_skip_relocation, catalina:      "b3cc62044edc1c0556c22952ad806246d3b9d662bcf2462c03c90f9d0e0b6d6c"
-    sha256 cellar: :any_skip_relocation, mojave:        "bc4d1610146aff1867df1c099eb8d546eab62f600918af6a5c3a7674d8f7c274"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d5cf350e914ae5cbb9c2c7c74b8b5843dd9427a0c0658127e6065dbab7309d55"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7fdcd5d7b7f8deea6f21eac3870b07ef745829dd78a12d2a467d601883cc30b8"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d30ee4ac25cc9ec3381b3860ac6689a9536373a854f9bf41acb5c21cb1f9e45d"
+    sha256 cellar: :any_skip_relocation, catalina:      "54e725987a8860074a52377786de60786d9f16605f69e2c7107c740caf74732d"
+    sha256 cellar: :any_skip_relocation, mojave:        "685dd6097fc49199743b317baf7b494e94f076d54a50df91ad845265566df466"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "162bb1538440e9510e531d9a662086e0db62a8395619a48b4bd8cabb6f972b88"
   end
 
   depends_on "go" => :build
