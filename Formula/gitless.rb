@@ -9,11 +9,11 @@ class Gitless < Formula
   revision 9
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "a75cc978953796b096a5b4e1b70c9083f15a600575f86b7df630523dd3518d64"
-    sha256 cellar: :any,                 big_sur:       "0160c5293201da74d25714e4080fc31fed8bbfef159f3977392283861ee427e6"
-    sha256 cellar: :any,                 catalina:      "12f36a1e497e4bdc96bdb298cde13a47f32dabb83c6a795a924ae85ab3ce8768"
-    sha256 cellar: :any,                 mojave:        "008d7fdb94c33b290a8c9a463bda2d9ca3d1f366497aa35a36bd958be5aa1741"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "136308c9a0792f8177942bbdffec2ac036512e68a4e59a1bb08859ed7a4aac33"
+    sha256 cellar: :any,                 arm64_big_sur: "cb04d922aef08494a684909d52f60b091c74022fd98cb36e6aa7d20402359c06"
+    sha256 cellar: :any,                 big_sur:       "c4e4a2afca3b1e30950f86927d914e27d58b0fc43b4bb9cfe7b4038d5740eb79"
+    sha256 cellar: :any,                 catalina:      "771d687e584bfaae2520f7c00681d0bb2ded0e50618b79db0763b0a011ee23be"
+    sha256 cellar: :any,                 mojave:        "fd05318ee73242821b23e304dc27a04408f987e0c3eb92653f041f079310c455"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bff8c36580c134e57bbd51232a7c1f96881c951be3df9574690b8dde5ecf4e3c"
   end
 
   depends_on "libgit2"
