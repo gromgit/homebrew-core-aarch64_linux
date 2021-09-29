@@ -7,10 +7,10 @@ class CargoEdit < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "0a5aa956f016b7259afed58cc085a4d97f45c44f6cdfb5d2ef46275befc04d49"
-    sha256 cellar: :any, big_sur:       "15c29dd25bcd54c5cd73d31aafb61ad369fbe24344052bf0dc5750f95a2efc3f"
-    sha256 cellar: :any, catalina:      "80d6f5fe9b40320c5e3df4515ac3b9738875882c72f4c72e23e751a323735857"
-    sha256 cellar: :any, mojave:        "ede3e81da3f1ef673f61d70a2a7f1732a8c56b08d263164062c4384228e32d09"
+    sha256 cellar: :any, arm64_big_sur: "07774b6873981705e9d7272aa4503ee9adaa23f412c9618339601b511fc1b035"
+    sha256 cellar: :any, big_sur:       "229d3a9bcb2d7a4c8969234b65ffdad50d768de2cef507e8323be69433f708fd"
+    sha256 cellar: :any, catalina:      "8bc8ad260d65f9c236b20d162cf1ff041eb68d6c809a242a1fcc5d87d75bc749"
+    sha256 cellar: :any, mojave:        "b73bdaca55892f47f5dba3ac1107c7dfc8ab64404be70aad843aa9b818756068"
   end
 
   depends_on "libgit2"
