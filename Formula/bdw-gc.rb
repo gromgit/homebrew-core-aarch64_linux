@@ -17,11 +17,11 @@ class BdwGc < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "ee743d115b619b02230863812224a1c33dc1d3430280728eb10990cc86caa994"
-    sha256 cellar: :any,                 big_sur:       "af8bfafe1425f3cc9923bd49a375f85c13255124ed7a952137fe924431adc1c4"
-    sha256 cellar: :any,                 catalina:      "73a3a75a47a0007a772fe229f11bc0710988af6a8603c56a0f7fae3d9a317149"
-    sha256 cellar: :any,                 mojave:        "960f60118f6f5cbf4e04a76e4c2103c7fb446e43e5db08362bca0b13763e137b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "05ea8f4b5dbc0329c01a525ff30a2c00f45bca54c03f2460e88d7f4d39e65686"
+    sha256 cellar: :any,                 arm64_big_sur: "788d86cb322a9409fb6e8117fc6ee48e57e3258a18b77a39f8682730caf2d239"
+    sha256 cellar: :any,                 big_sur:       "e1657498c65d958779349a5b3b2283e52e5c48cde79e26f761340bacfc3627e9"
+    sha256 cellar: :any,                 catalina:      "0473379cc9c7dd97c1d28386e333702af1c2b98ae86b1564e5ef72fda94d395c"
+    sha256 cellar: :any,                 mojave:        "45add006a7a827ea1b1828d2e5edb45b991cbb31906370d8270f511b781acfd6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2de2bd6626902c0c6007c718d9bebdc9f653dcd58058f9f1a8cc0346fee8c8c7"
   end
 
   head do
