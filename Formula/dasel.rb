@@ -7,11 +7,11 @@ class Dasel < Formula
   head "https://github.com/TomWright/dasel.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b494402aad539bf0d8fa23f6c88177119609754eae482ae7dd607c067a205569"
-    sha256 cellar: :any_skip_relocation, big_sur:       "79a945065caddbd3f4d643e2e67e844c32a54ab97c9deb451dd2863f64dc6060"
-    sha256 cellar: :any_skip_relocation, catalina:      "ec290cfe3b50b7c49c9c1438d4f38dc274f119239a94f951df89848dfe133123"
-    sha256 cellar: :any_skip_relocation, mojave:        "969d7e25e12dd1ac7e5bb8bc34f33a63baaaba1ff52f3d2d58573482b370b8bf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dd711603701a1c46765eccb5be8e8992b1c3478bb324ad5c398b620deb45935a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "45a1accda4d6241c29369c9191addb0388118faac185369b243890df02def735"
+    sha256 cellar: :any_skip_relocation, big_sur:       "03804a404d81a056011d9e800187426a0cc34d6201cc9b57a36aa936c7c8cdd7"
+    sha256 cellar: :any_skip_relocation, catalina:      "5b2d62bc1772ae75b8c8e294a4f28572759906fde81784d4165801b8fd237e2b"
+    sha256 cellar: :any_skip_relocation, mojave:        "c6daec8f6718360d85f21c3dc4a44ecc656d2ed3f34ef8a931fd0ecf45e748e4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bcdb4906918aa19478f4cadfef9a563945223cc67c7f0b59988ddb2e30a6662b"
   end
 
   depends_on "go" => :build
