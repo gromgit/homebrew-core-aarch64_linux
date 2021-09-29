@@ -6,11 +6,11 @@ class Pygobject3 < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "ea716cafcd6905b1f49ad50e9e98a1cceb74be3cb641e8a1e2d670d28cc34103"
-    sha256 cellar: :any, big_sur:       "27af5bf268c1c2274d4f97b628b4df0c4fab81c092c8948bf3c6f5e875d6c45b"
-    sha256 cellar: :any, catalina:      "e24bd991a052b651a4d7178dd54b4e6a1e25895c3550cb3b3a1e84dfad66ec34"
-    sha256 cellar: :any, mojave:        "1a57d5580a83038a20d6256f0aa1398f79510c41eaf402cdbf4bba41a9154591"
-    sha256               x86_64_linux:  "87f44a0209b23e685fd8a19a85d76cad5ddfd32e3221c64dc2eaaff3b068c286"
+    sha256 cellar: :any, arm64_big_sur: "b88e26771ff3a798d0fd4d6046740464031ca7da1f0644cf7993c88cfd4f1154"
+    sha256 cellar: :any, big_sur:       "0113cf46c25b6d42fa83dadf97fa696963831dc1695a3561da2c8df25910bf6a"
+    sha256 cellar: :any, catalina:      "08f34eba1892e4b0f9b7471bba718acd5f860afdb3de7694f37fb6d77e73d849"
+    sha256 cellar: :any, mojave:        "fde6fafd1ede8023cf0f0481d5912258610a82a4c97650864fa1c88119a06a43"
+    sha256               x86_64_linux:  "e12a37ac040cb49aa802f1a34d322fd6835b0bb62b3b8c10fbfcae8000b1a2da"
   end
 
   depends_on "meson" => :build
