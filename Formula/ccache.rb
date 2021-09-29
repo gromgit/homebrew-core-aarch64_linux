@@ -1,8 +1,8 @@
 class Ccache < Formula
   desc "Object-file caching compiler wrapper"
   homepage "https://ccache.dev/"
-  url "https://github.com/ccache/ccache/releases/download/v4.4.1/ccache-4.4.1.tar.xz"
-  sha256 "ebd6dfb5b15dfe39310e1f5834bafbe6ab526c71df8ad08a508e8a242bad8159"
+  url "https://github.com/ccache/ccache/releases/download/v4.4.2/ccache-4.4.2.tar.xz"
+  sha256 "9200cafbaa5fd62c2600fccb40a18214e57747825e6cdcd76688b4b61c2dcba0"
   license "GPL-3.0-or-later"
   head "https://github.com/ccache/ccache.git", branch: "master"
 
