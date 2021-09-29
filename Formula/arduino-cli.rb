@@ -13,11 +13,11 @@ class ArduinoCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bced5c9040397a8bac1a68d407331cf7cd27b8ad79514d9931f3e4c18873ae4c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "2f28e331cc9eece46ab63afbd580fa0c6ce55a62e4a598c9dc48970078c7440f"
-    sha256 cellar: :any_skip_relocation, catalina:      "b7a6f3a9e843f5cbcba4410f7c345d2af498677a960343fc27b7c35f7b57ef07"
-    sha256 cellar: :any_skip_relocation, mojave:        "2321ece4cf8dea0dd910c03c879cd5a8ac0a787f343da4c59b52fac28a5355c4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "75b518012a7b7effcb78e7ae232d823e3d8c4223c5a811795e6670e828789e7a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8e794eaa6db5e79a35946f5bf8615ba6f48f78fca948ce4d0425a6a578b43f57"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e2a65d67dd29be70fb79161004015b0c41890e356d215cea377c0d5738f64f24"
+    sha256 cellar: :any_skip_relocation, catalina:      "5a728a8659667494694d8e972a1c4b57d6b293e4cc00ad5f910d86f95de0f469"
+    sha256 cellar: :any_skip_relocation, mojave:        "efe9bc91ee79dcba3e2175383d0c544b1f8b351c8fc86da8cc77a23a6461a084"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b6873b14d4c68f4c12f60aa625dd434e3db5b3a804ca48c794961ea643ab5262"
   end
 
   # Switch to Go 1.17 at version bump
