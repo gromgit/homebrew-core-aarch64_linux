@@ -33,10 +33,10 @@ class Webpack < Formula
     end
 
     # declare webpack as a bundledDependency of webpack-cli
-    pkg_json = JSON.parse(IO.read("package.json"))
+    pkg_json = JSON.parse(File.read("package.json"))
     pkg_json["dependencies"]["webpack"] = version
     pkg_json["bundleDependencies"] = ["webpack"]
-    IO.write("package.json", JSON.pretty_generate(pkg_json))
+    File.write("package.json", JSON.pretty_generate(pkg_json))
 
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
 
