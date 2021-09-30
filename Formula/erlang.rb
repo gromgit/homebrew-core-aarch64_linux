@@ -2,8 +2,8 @@ class Erlang < Formula
   desc "Programming language for highly scalable real-time systems"
   homepage "https://www.erlang.org/"
   # Download tarball from GitHub; it is served faster than the official tarball.
-  url "https://github.com/erlang/otp/releases/download/OTP-24.1/otp_src_24.1.tar.gz"
-  sha256 "72945f5e1b508903fb747e1c903aa2ccdff307843e65426a5e583ea81aa162ef"
+  url "https://github.com/erlang/otp/releases/download/OTP-24.1.1/otp_src_24.1.1.tar.gz"
+  sha256 "bc001c787ad46702edfcdc762da841aaad708f930a4d779807b596524d97accb"
   license "Apache-2.0"
 
   livecheck do
@@ -31,9 +31,9 @@ class Erlang < Formula
   depends_on "wxwidgets" # for GUI apps like observer
 
   resource "html" do
-    url "https://www.erlang.org/download/otp_doc_html_24.1.tar.gz"
-    mirror "https://fossies.org/linux/misc/otp_doc_html_24.1.tar.gz"
-    sha256 "b81e39420e5eda1a9b784bc7e73009dc98a6dca1f669c7e0d1041f9487a76d7c"
+    url "https://github.com/erlang/otp/releases/download/OTP-24.1.1/otp_doc_html_24.1.1.tar.gz"
+    mirror "https://fossies.org/linux/misc/otp_doc_html_24.1.1.tar.gz"
+    sha256 "eda89c1822a32156dfd709ed440010219f40e2c2b8f34a4ad8ea9c2a02d9c082"
   end
 
   def install
