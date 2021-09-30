@@ -14,10 +14,10 @@ class Cataclysm < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "38038c0ee662973336ebff5e1c114cf56970d9c52cc013995d6ba99521969ee1"
-    sha256 cellar: :any, big_sur:       "75e52a9ac89e5e8705fc6be314694c3c1f9ce9b08200bea5834614b7ad524a0e"
-    sha256 cellar: :any, catalina:      "850ad951b4bca48ea91f38655ca91330c5817ae80da85a4e27775ce59e2e79eb"
-    sha256 cellar: :any, mojave:        "b0c25bb24b3780f1722b480519040ccdae52cd34fea85e6bdb50e92253d9c33b"
+    sha256 cellar: :any, arm64_big_sur: "ca14eb2f01555ab74e44e76e939c41d477c675a7b157e34a17f06d5ce3e56fc2"
+    sha256 cellar: :any, big_sur:       "fe3e6ecd6e489a2f3acf6fef68308a40b0ca364f821fbdb138e81849aa52a9b3"
+    sha256 cellar: :any, catalina:      "655026ec19a856b436722efabd34507e6768468a993dc2768f7c1583b86c3641"
+    sha256 cellar: :any, mojave:        "cf4a1e7e99ac3dd4af801918385bafc6b3425b555436086fcaa7e22c371f9ff7"
   end
 
   depends_on "pkg-config" => :build
