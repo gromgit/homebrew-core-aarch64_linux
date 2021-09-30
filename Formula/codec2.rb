@@ -7,11 +7,11 @@ class Codec2 < Formula
   license "LGPL-2.1-only"
 
   bottle do
-    sha256 cellar: :any,                 big_sur:      "c28da7a7d230e8505859eafa28d9238ccadd97c4847f5ee5c269ffa24245ba49"
-    sha256 cellar: :any,                 catalina:     "d41040646585e5b91438818ff4dfdccc94b3a2567d31d6960710f8f2455bab04"
-    sha256 cellar: :any,                 mojave:       "460c2febeb64e913796ee3f161b8fa50bbc00904c99228d5122324ebadd91fe9"
-    sha256 cellar: :any,                 high_sierra:  "5f4530a54adbc38253b993bdbb21da86b4d11725b2edcbec79e43ed739875208"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "eb169319217f165aa027c09ed5591e246db1f357884bd63e26cc86ab0e029814"
+    sha256 cellar: :any,                 arm64_big_sur: "dca98080fb9c5738ffcc298547ce0c92a79349b7f04fea8056d968f63c34c1ca"
+    sha256 cellar: :any,                 big_sur:       "5d4162b5b10568f57c326983cbebfe34c126bca31bd14923b0388d8f4ca785aa"
+    sha256 cellar: :any,                 catalina:      "2834225209e520278515857dcada021ba2cc108f92131e8c6cc786070c336bf9"
+    sha256 cellar: :any,                 mojave:        "a86e0264532c78b083ae12358ba569a43588c589c4f91569f620381e30a471b1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "55802c4923f858e36c73a6d4e7488dd5a99e06b103f3e35c014f1e19f232c83d"
   end
 
   depends_on "cmake" => :build
