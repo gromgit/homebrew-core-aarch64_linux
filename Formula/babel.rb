@@ -28,10 +28,10 @@ class Babel < Formula
     end
 
     # declare babel-core as a bundledDependency of babel-cli
-    pkg_json = JSON.parse(IO.read("package.json"))
+    pkg_json = JSON.parse(File.read("package.json"))
     pkg_json["dependencies"]["@babel/core"] = version
     pkg_json["bundleDependencies"] = ["@babel/core"]
-    IO.write("package.json", JSON.pretty_generate(pkg_json))
+    File.write("package.json", JSON.pretty_generate(pkg_json))
 
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
     bin.install_symlink Dir["#{libexec}/bin/*"]
