@@ -6,11 +6,11 @@ class Libspng < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "6d41eb3e6c1938743b2214d4a18c7bb13a4908582380cf7583e7cfd74ab0f038"
-    sha256 cellar: :any, big_sur:       "8cba8c9454c2d9892b39cd4b4dff9e32974f82ea5c220dc1e0aa90eb19406711"
-    sha256 cellar: :any, catalina:      "9b5f9ce7f8e56210f9cce38d641517f5bf43dc5d9f45b75c6be9bc5ad76c1f1f"
-    sha256 cellar: :any, mojave:        "8c2f036cc0b40a540d0aab26486f8f66b03b075fa78c7b39e912321115007bfd"
-    sha256               x86_64_linux:  "1366686af344099f1a802870d56e7fdf86edb52beec4520f8deb2ed6b6cf7583"
+    sha256 cellar: :any, arm64_big_sur: "191f00d597872763bdd69aee6b28f01d07e0cdd4216d7841589351cd79b4e33a"
+    sha256 cellar: :any, big_sur:       "20343c6622470a53ed19ee893f48e1a1a9c529426204b5b1869e590ce83767c3"
+    sha256 cellar: :any, catalina:      "ddbcbef115498ac21c7ac10006c8d7de824103413754493edf051ab8c13492d1"
+    sha256 cellar: :any, mojave:        "f319bda14642b057ee35abc95ed58bc8529c0028761f8989bdcefb0adf7488b0"
+    sha256               x86_64_linux:  "5f3451f468d58685c26c80f33980d7195f0411d3f4bab347704ca02bf42390b2"
   end
 
   depends_on "meson" => :build
