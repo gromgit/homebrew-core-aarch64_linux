@@ -8,9 +8,9 @@ class StellarCore < Formula
   head "https://github.com/stellar/stellar-core.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "390003521732f0cefecfb504b46fb700e5d8078dbb42b9820d0c6cb2a0fd39e8"
-    sha256 cellar: :any, big_sur:       "10f4bfe3635f709339b1ee60fe3a36a5f1b38f320b1e185a9b692388690f82ad"
-    sha256 cellar: :any, catalina:      "f380985721f94f077c4c0a9f945efa12dc69ad4cc87d428940da97e8a3a79901"
+    sha256 cellar: :any, arm64_big_sur: "8f045778207dc06f198bd8b022efcb113f7e59ea94c19d67f433a84a05b3399b"
+    sha256 cellar: :any, big_sur:       "3e7a0e89654c92d3f99b3b18c94f066b1a292ba5daf7c54102df7b8abdbfeafe"
+    sha256 cellar: :any, catalina:      "25bbe642d601ffd44e776f4b10cf12eb896ec3f4e2b9fc5616885d446876fdc7"
   end
 
   depends_on "autoconf" => :build
