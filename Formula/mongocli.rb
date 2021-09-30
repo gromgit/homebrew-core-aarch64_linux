@@ -6,11 +6,11 @@ class Mongocli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "88e2e6a46be9cafaf8b97433fe0971a9eb84166085ee368038b7ae12f53a3b04"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5541e94b5d4157b77a8b45bd1bd014505458eab74ac080730d19c28959db6026"
-    sha256 cellar: :any_skip_relocation, catalina:      "127792b12f10d83d8bc90d1fc8273831e839409c03258fcc9cc5f8ce6db159f6"
-    sha256 cellar: :any_skip_relocation, mojave:        "6298ac739a2a9b3707b6e4731582e9cc3d0c5d934dda8290421a23bb18a2f4ac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7b94d9346ac7dca647cc2814916ae732d5804ddb5aeb0bbbd52e0f76859e18f4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3d278ad35465e12300daad0e9f70162cbfbf36ecea95085bd62720250e8f9623"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7671eefec6ba2a72d9157d4fbeef109816ec10453edec02b77bf1dd74189b156"
+    sha256 cellar: :any_skip_relocation, catalina:      "d4a207e590dab7f5a79ede0a8390d86dccdc75faa40fe4a6ba04d2128e7295e9"
+    sha256 cellar: :any_skip_relocation, mojave:        "63080bb88ee9c1b8caa310f146ef398ecf4d7ee8479e20866db849c7f4b78f95"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bc9f880ddec22a34522ebcbc4abede3376240ea55c89bbdf4e7fc3ece654e190"
   end
 
   depends_on "go" => :build
