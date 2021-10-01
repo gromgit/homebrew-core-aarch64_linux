@@ -12,7 +12,7 @@ class JettyRunner < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "aa265add8d911704dcc0858e9b2b0ac58743e38275da2a5338198cc20d55c7b7"
+    sha256 cellar: :any_skip_relocation, all: "219c42bcde92667e2f8a0042d11da33682613e2b64ee3d4ff84bb7cee6080a05"
   end
 
   depends_on "openjdk"
