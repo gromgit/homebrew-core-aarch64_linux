@@ -7,13 +7,11 @@ class Davix < Formula
   head "https://github.com/cern-fts/davix.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_big_sur: "29e62d295cee33757abdf95ee7cb4c3aa5b180419e6687bf9347a6a121cab134"
-    sha256 cellar: :any,                 big_sur:       "9e554eb91c81f79781ea0890dd7309fe94010b32787a465f2368a8c0cd9129f9"
-    sha256 cellar: :any,                 catalina:      "e96a673e5adb6b0856928002be86673db1ba3efd3b8b06d5f87b8793d99698bb"
-    sha256 cellar: :any,                 mojave:        "1c863a82c559b2cb4def7b425339edbb5cb31847d21ae886f92e8616bd8af497"
-    sha256 cellar: :any,                 high_sierra:   "41917fcf64168c8f229fe025d77807e2adf7298e2bdfcb2c4b582e9d116faf4b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "53ff6b3564b0acd770f310b295d5c50702f5a124b2ac2c87d3b4e1ed3f3065eb"
+    sha256 cellar: :any,                 arm64_big_sur: "c48fc0895374ecf6c509f59fe07306b717fc34b2e5c4ce0773740ce7a5bf392f"
+    sha256 cellar: :any,                 big_sur:       "4181ed1f39699aace812fdff70a09344abc920c6f4aad9fb61bfb97f3fecbd17"
+    sha256 cellar: :any,                 catalina:      "f5c6cbfd4ed205e39a5401cc890ac0a5c0768e36e9e7a515519278144b0ec95a"
+    sha256 cellar: :any,                 mojave:        "847ba0b1e3227c85215c5eb54a10da5fc9aa231b98059e3e01080f02b5bc9f55"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2e6cb42036948a4128c8b0c6cc04ec459375113ab93b81d20d6708dd8baf6a3b"
   end
 
   depends_on "cmake" => :build
