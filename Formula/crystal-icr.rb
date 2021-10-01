@@ -6,11 +6,10 @@ class CrystalIcr < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 big_sur:      "27aca5fd1d1b212b90575dd385b27cbc215aea9510cab6c24efe18ec15d617cc"
-    sha256 catalina:     "a0683b8dce5fd77b89f4ba6412ad1ad7b793abfd2e703f9cff72e2ffe7248d43"
-    sha256 mojave:       "30bbc4ad85339e27305d4294cf53e3ddc252f137599b7602ca2930f01728cd8c"
-    sha256 x86_64_linux: "722032d357e541908a6d9899a6e77284a4cdeb312c16b3d44485cdfdd0502436"
+    sha256 big_sur:      "8daaa1313d4bde47396ed4f6e0801e937b128b64cc4eb7528325cb27404dd765"
+    sha256 catalina:     "4d419018a1b470514b9ee5833dd8062fa56b954ed8ae255a2062554368f0185f"
+    sha256 mojave:       "19ad5e81e9f9405ebbbf8ed882e77a9e4c0d32965ebda9012126bcc6dfaa2542"
+    sha256 x86_64_linux: "4fba4ea7063d8267fdbb37778f48b020386edc1e7be0268f5dcb42a5b948753c"
   end
 
   depends_on "crystal"
