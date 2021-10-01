@@ -10,11 +10,11 @@ class Webpack < Formula
   head "https://github.com/webpack/webpack.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "83126a628c8efbb6c830f31ec4bb24c1185580414b67b3a30402e21f692abaa3"
-    sha256 cellar: :any_skip_relocation, big_sur:       "4c0ac739d4d0e16510ff1dd03256b7cd42fd0fdef495f9172f57b6eb32a8f259"
-    sha256 cellar: :any_skip_relocation, catalina:      "4c0ac739d4d0e16510ff1dd03256b7cd42fd0fdef495f9172f57b6eb32a8f259"
-    sha256 cellar: :any_skip_relocation, mojave:        "4c0ac739d4d0e16510ff1dd03256b7cd42fd0fdef495f9172f57b6eb32a8f259"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "277f48d5b07bd710bbd2a5885f2576d3209810ff36c3737ea5754f8162cfd452"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b93e2ad83d7c50368ac33175a7986e14fcf16d2390e86f09281ca05cd4b93309"
+    sha256 cellar: :any_skip_relocation, big_sur:       "06d210f92db3a3561148a6397838945774ec7eb754176c66a7fd71ce2a699408"
+    sha256 cellar: :any_skip_relocation, catalina:      "06d210f92db3a3561148a6397838945774ec7eb754176c66a7fd71ce2a699408"
+    sha256 cellar: :any_skip_relocation, mojave:        "06d210f92db3a3561148a6397838945774ec7eb754176c66a7fd71ce2a699408"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5adc83d4c8de4bfa37a2cb760a2bb84b40533f90f51963a0b869139c8117a27f"
   end
 
   depends_on "node"
