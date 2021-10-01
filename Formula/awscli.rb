@@ -6,16 +6,16 @@ class Awscli < Formula
   license "Apache-2.0"
 
   stable do
-    url "https://github.com/aws/aws-cli/archive/2.2.42.tar.gz"
-    sha256 "362e0df7e8fd884a60f2101da2b3e16cefbc1cae457ba381e16d935f56dc7101"
+    url "https://github.com/aws/aws-cli/archive/2.2.43.tar.gz"
+    sha256 "0284c0c33b682d7cf08975d1240838ac99901b744c83490b24a9bbf1ff1a4803"
 
     # Botocore v2 is not available on PyPI and version commits are not tagged. One way to update:
-    # 1. Get `botocore` version at https://github.com/aws/aws-cli/blob/#{version}/setup.py
+    # 1. Get `botocore` version at https://github.com/aws/aws-cli/blob/#{version}/setup.cfg
     # 2. Get commit matching version at https://github.com/boto/botocore/commits/v2
     resource "botocore" do
-      url "https://github.com/boto/botocore/archive/4e6f207fefc900f028be0184657960ee6a44d4c4.tar.gz"
-      sha256 "369a65103d9022c48c657783ff29c2fd44009a91652ca0064b72dabeff04db13"
-      version "2.0.0dev150"
+      url "https://github.com/boto/botocore/archive/ec4c90582ce2b2446dc5c3e259bc5d146ef2973d.tar.gz"
+      sha256 "9243098716e79efb97204414e014db231e6e211fd7f471d3384eafd096232c15"
+      version "2.0.0dev151"
     end
   end
 
@@ -41,9 +41,9 @@ class Awscli < Formula
 
   uses_from_macos "groff"
 
-  # Python resources should be updated based on setup.py. One possible way is:
+  # Python resources should be updated based on setup.cfg. One possible way is:
   # 1. Download source tarball
-  # 2. Remove `botocore` from setup.py
+  # 2. Remove `botocore` from setup.cfg
   # 3. At top of source directory, run `pipgrip . --sort`
   # 4. Ignore old `botocore` v1 and `six`. Update all other PyPI packages
 
@@ -108,8 +108,8 @@ class Awscli < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/4f/5a/597ef5911cb8919efe4d86206aa8b2658616d676a7088f0825ca08bd7cb8/urllib3-1.26.6.tar.gz"
-    sha256 "f57b4c16c62fa2760b7e3d97c35b255512fb6b59a259730f36ba32ce9f8e342f"
+    url "https://files.pythonhosted.org/packages/80/be/3ee43b6c5757cabea19e75b8f46eaf05a2f5144107d7db48c7cf3a864f73/urllib3-1.26.7.tar.gz"
+    sha256 "4987c65554f7a2dbf30c18fd48778ef124af6fab771a377103da0585e2336ece"
   end
 
   resource "wcwidth" do
