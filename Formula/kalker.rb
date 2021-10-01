@@ -6,11 +6,11 @@ class Kalker < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "79ad383108f3c073108c0a0defeba5375e2d59746d5db274fa97db60f587a824"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3c8b07d6feabc9d8d4a813b11999de0bda08e5470140479d0b29eb4506777787"
-    sha256 cellar: :any_skip_relocation, catalina:      "6046b0d6fe943a55fcf34e0ee1aaccb93242df68a463d384656ba39297517e77"
-    sha256 cellar: :any_skip_relocation, mojave:        "0009cbb40dac094063773bdef5f0fedba5b7f633629d1a9b76b5023b6b3eed92"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5f28ab7f6be9b53c2794c38bb800ca1ac692b71a504f17c56ec87a4bda46a640"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e0b74f005a22c3f9dc700d31e34454de9e212f0c3cf712475e220286ae237422"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c4cfe4d277d2566381117a943fb0f8779d118c1e229db37e1f87bf7172a008c9"
+    sha256 cellar: :any_skip_relocation, catalina:      "d756dbc116f55c88490ea1d5424100ba4beca6248d1614e344f46cc87f8c7a90"
+    sha256 cellar: :any_skip_relocation, mojave:        "c391af7964351d031a1fc7f0084a2cded41f1e371c4a0caf1d73c7213b02506c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9707ac9ed288a24c89702ffac6a04dc2eb8b532371830aa8f88ab7b8c9c09626"
   end
 
   depends_on "rust" => :build
