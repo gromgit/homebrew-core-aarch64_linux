@@ -12,11 +12,11 @@ class VespaCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3e71d8106e4cdc77a7961b9f5030296304fbbade4a63e788a901485436e322d3"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f0575e030b2435b12c96e328701e7b810c519e0a96e2218ca8e52b780d94b236"
-    sha256 cellar: :any_skip_relocation, catalina:      "3a9aa9d2bb9b211830fec09da66e7970588c795532d0d4e31c8a0499216ee39b"
-    sha256 cellar: :any_skip_relocation, mojave:        "85c68866f2a650013226439d1f4be8a1e9ee0395aa30b9099ca46a7a538f56e1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cdafe53f223a99c0ebe3f5faaf1d73e0dedff279d1f2a72d107fd7e3028cc86d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "54d226fa0f9d7100472c9859abaa435b02beb4cc9058a6c46f91ccdb9e2aaf13"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e723fbe59f093a30f901653e9b3d21b266233a8a9450f25777409d47c0ddd686"
+    sha256 cellar: :any_skip_relocation, catalina:      "74de4d899740f27ebab35b58bba6b30245a1db2b766b49cfb301b4b81424abfa"
+    sha256 cellar: :any_skip_relocation, mojave:        "6fb1797b5690b8d2228e0d4868804bb2785c739895971b4e2c67465f7ab2a78d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dfc8cabf7105d7e9f98a730894439e07c5abaa7d790eff2bd3b674642f564576"
   end
 
   depends_on "go" => :build
