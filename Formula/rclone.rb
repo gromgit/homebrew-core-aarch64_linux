@@ -1,8 +1,8 @@
 class Rclone < Formula
   desc "Rsync for cloud storage"
   homepage "https://rclone.org/"
-  url "https://github.com/rclone/rclone/archive/v1.56.1.tar.gz"
-  sha256 "15e32033778a010b90aad58cb214bc65fde6e6eff7a7c9a19710549f18799e4c"
+  url "https://github.com/rclone/rclone/archive/v1.56.2.tar.gz"
+  sha256 "a5b0b7dfe17d9ec74e3a33415eec4331c61d800d8823621e61c6164e8f88c567"
   license "MIT"
   head "https://github.com/rclone/rclone.git", branch: "master"
 
@@ -15,12 +15,6 @@ class Rclone < Formula
   end
 
   depends_on "go" => :build
-
-  # Fix build on go 1.17, remove with next release
-  patch do
-    url "https://github.com/rclone/rclone/commit/8bd26c663ab19eaded9769a73dcb956f653276f6.patch?full_index=1"
-    sha256 "59e2af681c8ce6c7b6cb4b673447ff49e5b244411b23fb15f5fbfc0cb6b2fe8d"
-  end
 
   def install
     args = *std_go_args(ldflags: "-s -w -X github.com/rclone/rclone/fs.Version=v#{version}")
