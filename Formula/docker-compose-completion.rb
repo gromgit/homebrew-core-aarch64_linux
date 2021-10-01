@@ -12,7 +12,8 @@ class DockerComposeCompletion < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "edaaa7562b5ef5255da64daa17a086a2c8c45fe2114e7704047b15f155719c1e"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "daddf263b55ef91e97b0fe1eadb0887bce2c3dda6eabce27a30f775dccedf43b"
   end
 
   def install
