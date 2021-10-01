@@ -8,6 +8,14 @@ class AwsSsoUtil < Formula
   license "Apache-2.0"
   head "https://github.com/benkehoe/aws-sso-util.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9bb26fdfdd269567657dff7fbcdf9285cc41e333015d6039996b1ec645628fb6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "577c77af9b28f3017fc29552a1e279235d68afd727ef4747c414a1b1ec77fc66"
+    sha256 cellar: :any_skip_relocation, catalina:      "ce68c609434752b07673db09a891903c62f5b4f87bde3227f6db882f1c5a10bc"
+    sha256 cellar: :any_skip_relocation, mojave:        "4c55fb1fa40d8979de0a17c5fd2c23b7b2b5532a9e03a2081dca5bf7825a250d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b7aa58253c679281872b983ba66fbd81bad09b089c0c676a6b02ad9212ace4cc"
+  end
+
   depends_on "rust" => :build
   depends_on "python@3.9"
   depends_on "six"
