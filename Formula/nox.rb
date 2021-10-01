@@ -8,11 +8,11 @@ class Nox < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "156d54051925ded0549150f0244f2e7838ff42bfbfa3cdbe5d88261b6c17bd95"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5d41fb9c05818d59a72ecde97a964858ade7693b4c90402320d78f3e9a051efb"
-    sha256 cellar: :any_skip_relocation, catalina:      "aa3c2cbb2cd6bfe37ea589769b6d082c6f190a227008b8ba512dfcdd92e4a151"
-    sha256 cellar: :any_skip_relocation, mojave:        "7253bde378bfe741e9272ece70c758c0588adae2b432139a8e5b70c620b1ae46"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d98f9dc8a76e2a7b656edfedbb7b4814bcbfd8ba80892b9890abf652a018daf3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "35d84c9284482eddf64d28fb8058cc78ab5cf51bb056513d0d36f9df1ba33233"
+    sha256 cellar: :any_skip_relocation, big_sur:       "15349b9982cc2ab4f4d7fd036d874dd5206294288396e388243369783dbaaec1"
+    sha256 cellar: :any_skip_relocation, catalina:      "e4b4085c12ddec6eed3f4893ee38fb0163d538bbcb573b7bfbb3912f7bba58f2"
+    sha256 cellar: :any_skip_relocation, mojave:        "5f305da93b120410a73a65a4d011b0426a35f149a167817ef625443fbf356765"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "80dbb04af51196b615b7c22f51d46b2cf142491d8609290633bfc43b7d2a4b06"
   end
 
   depends_on "python@3.9"
