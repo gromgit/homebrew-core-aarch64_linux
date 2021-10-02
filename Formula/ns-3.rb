@@ -1,8 +1,8 @@
 class Ns3 < Formula
   desc "Discrete-event network simulator"
   homepage "https://www.nsnam.org/"
-  url "https://gitlab.com/nsnam/ns-3-dev/-/archive/ns-3.34/ns-3-dev-ns-3.34.tar.bz2"
-  sha256 "a565d46a73ff7de68808535d93884f59a6ed7c9faa94de1248ed4f59fb6d5d3d"
+  url "https://gitlab.com/nsnam/ns-3-dev/-/archive/ns-3.35/ns-3-dev-ns-3.35.tar.bz2"
+  sha256 "946abd1be8eeeb2b0f72a67f9d5fa3b9839bb6973297d4601c017a6c3a50fc10"
   license "GPL-2.0-only"
 
   bottle do
@@ -18,6 +18,13 @@ class Ns3 < Formula
 
   uses_from_macos "libxml2"
   uses_from_macos "sqlite"
+
+  on_linux do
+    depends_on "gcc"
+  end
+
+  # `gcc version 5.4.0 older than minimum supported version 7.0.0`
+  fails_with gcc: "5"
 
   resource "pybindgen" do
     url "https://files.pythonhosted.org/packages/7a/c6/14a9359621000ee5b7d5620af679be23f72c0ed17887b15228327427f97d/PyBindGen-0.22.0.tar.gz"
