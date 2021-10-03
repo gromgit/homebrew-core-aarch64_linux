@@ -1,8 +1,8 @@
 class Notcurses < Formula
   desc "Blingful character graphics/TUI library"
   homepage "https://nick-black.com/dankwiki/index.php/Notcurses"
-  url "https://github.com/dankamongmen/notcurses/archive/refs/tags/v2.4.3.tar.gz"
-  sha256 "3405b0af37820570c808478c7cf0965a5b1117a0394bf95e123a4f05ad3fe15a"
+  url "https://github.com/dankamongmen/notcurses/archive/refs/tags/v2.4.4.tar.gz"
+  sha256 "dcd084b8ff516defd10840936aebec9b822fb622f0232cc79be7b8826252aad5"
 
   license "Apache-2.0"
 
@@ -20,7 +20,6 @@ class Notcurses < Formula
   depends_on "ffmpeg"
   depends_on "libunistring"
   depends_on "ncurses"
-  depends_on "readline"
   uses_from_macos "zlib"
 
   fails_with gcc: "5"
