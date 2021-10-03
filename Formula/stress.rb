@@ -11,12 +11,11 @@ class Stress < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8189828c418971cd3fc6aff2a4b5fbb7ceb8932e989614d5a9aeff29bc54459c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0e595d39f5d02ac50b4ef52311ef96bdd6d669fb1cff4fd9a9e99c105156a1c8"
-    sha256 cellar: :any_skip_relocation, catalina:      "c5da803a76518e3441f5e7da17a6c1972f0db3d8e407edb95a364aee3d9f7c7e"
-    sha256 cellar: :any_skip_relocation, mojave:        "6b20923f6f1f46c8e71b4e6a9546dff1f4b290d94805a35e8f3ddffad9cbbfbd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "72cd939f3cdd4d1982e891bf3b91aadd684cdce764ad9f52711dbe0ada2a0099"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3dc5c125c3eb8cf95cb21bf4ae2efaf114b9b47677747026ba92a5c9eb09ad6e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "00d9ed736381a3967b8eaf0b709328ccb0263640fdc856fe5c2e8f2164ea705d"
+    sha256 cellar: :any_skip_relocation, catalina:      "2fb692ddaa54337dfe07eb71ee647e167bbe41db054556c32d7507cba38caa43"
+    sha256 cellar: :any_skip_relocation, mojave:        "6220e38d281aa1f7933c582711083d2e33bc36071e32776a55a6c8441e3de209"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b303854895396f0b6b5a75e654b5315ae4eccd5d4c7de451d7d1997edb0a7e7a"
   end
 
   depends_on "autoconf" => :build
