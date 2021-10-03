@@ -13,7 +13,7 @@ class ArchiSteamFarm < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "f610d90cc3f7b0a77de8c664f30e217be0b0863250a0ae8683127eaf06aaef9c"
+    sha256 cellar: :any_skip_relocation, all: "5a8ff20de4733c328a07a68ce1e0c5c0bd0816a97026601b4d1f88258867e537"
   end
 
   depends_on arch: :x86_64 # dotnet does not support ARM
