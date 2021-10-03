@@ -16,6 +16,14 @@ class CmakeDocs < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bb9b954ac614fa5a785ef54a98b296deff58f212194759f66cd19afa0b146999"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3341757894ff5a555eb030f048c0d5d2b08e366d9f3327e68672e5a0210dbf2e"
+    sha256 cellar: :any_skip_relocation, catalina:      "3341757894ff5a555eb030f048c0d5d2b08e366d9f3327e68672e5a0210dbf2e"
+    sha256 cellar: :any_skip_relocation, mojave:        "3341757894ff5a555eb030f048c0d5d2b08e366d9f3327e68672e5a0210dbf2e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bb9b954ac614fa5a785ef54a98b296deff58f212194759f66cd19afa0b146999"
+  end
+
   depends_on "cmake" => :build
   depends_on "sphinx-doc" => :build
 
