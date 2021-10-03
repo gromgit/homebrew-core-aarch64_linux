@@ -1,8 +1,8 @@
 class Stress < Formula
   desc "Tool to impose load on and stress test a computer system"
   homepage "https://web.archive.org/web/20190702093856/https://people.seas.harvard.edu/~apw/stress/"
-  url "https://deb.debian.org/debian/pool/main/s/stress/stress_1.0.4.orig.tar.gz"
-  sha256 "057e4fc2a7706411e1014bf172e4f94b63a12f18412378fca8684ca92408825b"
+  url "https://deb.debian.org/debian/pool/main/s/stress/stress_1.0.5.orig.tar.gz"
+  sha256 "1798e49ca365d928fb194ba1b8e8d1e09963b49e9edb0a78bcbba15750bb5027"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -19,7 +19,11 @@ class Stress < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "72cd939f3cdd4d1982e891bf3b91aadd684cdce764ad9f52711dbe0ada2a0099"
   end
 
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+
   def install
+    system "./autogen.sh"
     system "./configure", "--disable-dependency-tracking",
                           "--prefix=#{prefix}"
     system "make", "install"
