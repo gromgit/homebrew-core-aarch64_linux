@@ -6,11 +6,11 @@ class XmlrpcC < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "d2f823ee08ce4b5cf1db9b3c7df182b213c4e4757e89207de1147def940544be"
-    sha256 cellar: :any,                 big_sur:       "a270cdb18af53d135dc5b46e772ebde0b0174aa4edcb334a3522ee79b7301f8b"
-    sha256 cellar: :any,                 catalina:      "8f2f988116b29088d76766843fa5d2eafc2f33d919990baeb31f67fd9b8c0b53"
-    sha256 cellar: :any,                 mojave:        "b058d27a7d2a0ba5a265186a5c4bcb26c9a9a0c9d4a60e639b30a72a2d4a7169"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1e5b7b127d74d52f7301aec65d8f868f8da9c3049113c9a746033995f0f9e261"
+    sha256 cellar: :any,                 arm64_big_sur: "263c197c509a240444d4750945f8d7d079054844439dfa533bc0fd6d49632eac"
+    sha256 cellar: :any,                 big_sur:       "98d8880157242c495ca5f3d2c87066b52fe858d5c14dc4078d1e8c1a63b7481c"
+    sha256 cellar: :any,                 catalina:      "ea46c848e7b738b515733b89338f6e4d3a88f2ca35ba4c2188af5e165a671dac"
+    sha256 cellar: :any,                 mojave:        "88ab4b50934d1d53dc0cc44e7985a2326757883a204c531a22c7d2867293d2b9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b9982d7f0d38a9b87fa13abbfaf64c3b2af31e2dc0361e836a9b41cdd190bf9c"
   end
 
   uses_from_macos "curl"
