@@ -12,10 +12,10 @@ class Qtads < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "435e78a2cbbac2b581aa335b6467a3c6cd89e65e2ecfa3f4b8865049c176b346"
-    sha256 cellar: :any, big_sur:       "1b7ad03b5fc2ceab4f7d8ffa5c6abc5eaef6f1c23152110f4e76b98598b3ca49"
-    sha256 cellar: :any, catalina:      "d9cde41ffc4ee4adf1b026b15bbd22e2bfdc8dd994866b007bff0936c4218608"
-    sha256 cellar: :any, mojave:        "d4db6c775198a2052b34c67255bdc26d18605d80885eacc3a7f596e980f89e0f"
+    sha256 cellar: :any, arm64_big_sur: "efb0917e30907f43e0d75d4593842bc30f89694913d0fa4d6a78b312862cc9cd"
+    sha256 cellar: :any, big_sur:       "d3f92978a0454521d20577fda97c3cef034e60be673f06bcef5db44376e7ed3f"
+    sha256 cellar: :any, catalina:      "16bb2be33f9757e197011ec42652b90e8220203cb6b59a261dfd2658707adc9e"
+    sha256 cellar: :any, mojave:        "01215c3c22a58a47a1b4ff91e7a1558a301d0620c50b553f77f0fb30d75d8ae9"
   end
 
   depends_on "pkg-config" => :build
