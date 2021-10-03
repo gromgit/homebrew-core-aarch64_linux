@@ -11,11 +11,11 @@ class S6 < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "e2ef25cfe9cc6eeb4bb6c44c0b1b887531d582f0a277a60cb912f265198d3247"
-    sha256 big_sur:       "ec0bed5bcbfe3a75e9ad5e6d172b1b5f8bf531d46bfe8d00cfefddaf6477c67c"
-    sha256 catalina:      "827c8b3861623b6495317ecded680984800b3c6d222da2e613e3da7a02e8a502"
-    sha256 mojave:        "bfff5e8f2f1dfb93d87da55e1e1ce1bc8b444e8683f0e861eb7b7dac8952ba42"
-    sha256 x86_64_linux:  "917ae23b2f1333cb04ba3c539d4f67f5b72846094dce3aeb37e61c6df34049e0"
+    sha256 arm64_big_sur: "fd63c8dd93429cdc9930b8c3af149b2eb948d93cab5a7e0735971c6bcc3afad2"
+    sha256 big_sur:       "4d18fc8a563361bdb4cac4b421256e8fa2badb01c82b0692fcddb7d477ed360a"
+    sha256 catalina:      "6b651eb8e448c4a97f3446ea3116a8ef7933b28f57d698b3f24bc92e558791a2"
+    sha256 mojave:        "cdc4ffac93485352efffc1e169f9d1576d52b06afc65b8ea6bbb7f313f69b860"
+    sha256 x86_64_linux:  "09b1f7acbbbcf942f5126ab84cdff586e869a68b3d9a1496cc2aed1af5e07c7c"
   end
 
   resource "skalibs" do
