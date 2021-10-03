@@ -7,7 +7,7 @@ class Tccutil < Formula
   head "https://github.com/jacobsalmela/tccutil.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "2f9f812b661c081405e4dfd04a1c6b22003898d6c978e4af797e6d079ee803ce"
+    sha256 cellar: :any_skip_relocation, all: "71f3e197c76e128e03b07e52d18f523d2ca19fa3f35e680e029175b755d2cef6"
   end
 
   depends_on :macos
