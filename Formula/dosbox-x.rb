@@ -13,10 +13,10 @@ class DosboxX < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "64ef1bc566adea246055e1791d1e8716751f5695ae61bb799ac259909572cc1a"
-    sha256 cellar: :any, big_sur:       "925b7cdba50055e008b04a989dc216c9059032eaf6ac4753a00e1a6affa6370d"
-    sha256 cellar: :any, catalina:      "1194968c068f8fc805b8aaaa997e7c186d6a4c14f6c3cf48fe33c24224fcddc5"
-    sha256 cellar: :any, mojave:        "f90fd6277f496a58e0dcb1fa3f382dc822531b5aaf4067f2538db4b2d2b50970"
+    sha256 cellar: :any, arm64_big_sur: "3c585a4e26c112f5a46dc412a8b073a0e46072fb1c6dd4abdfd647ce59954027"
+    sha256 cellar: :any, big_sur:       "67c16eb7d01f0cfa13d859f095d6441c4c98aa70b0318b81650cd3e355fc9539"
+    sha256 cellar: :any, catalina:      "fc27bbdb6a6a76907062ccd3ddb25ab520b5aeb3d57f45b299210bf6b51b261b"
+    sha256 cellar: :any, mojave:        "d5df91e8cacd5c9b40c0b6b7e0d324a4103d51084005cabc24009273db6f1072"
   end
 
   depends_on "autoconf" => :build
