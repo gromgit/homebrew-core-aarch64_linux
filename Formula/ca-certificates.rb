@@ -6,11 +6,8 @@ class CaCertificates < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e7591c87f8e5709061026036809cd9a25937842b52f7158884b3874d286aa2e7"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e7591c87f8e5709061026036809cd9a25937842b52f7158884b3874d286aa2e7"
-    sha256 cellar: :any_skip_relocation, catalina:      "e7591c87f8e5709061026036809cd9a25937842b52f7158884b3874d286aa2e7"
-    sha256 cellar: :any_skip_relocation, mojave:        "8893b4c3f52f547c723dfab797c8250a27502ad5a14fe52a245889a0aefd455d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e7591c87f8e5709061026036809cd9a25937842b52f7158884b3874d286aa2e7"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "47c9cd6ec69dbbf8a3f697e6b07df409a573c779aa86ceadc7d9575e8c2a5b10"
   end
 
   def install
