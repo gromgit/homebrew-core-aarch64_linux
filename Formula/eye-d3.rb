@@ -18,6 +18,7 @@ class EyeD3 < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "fabd715d3a65c1227ba6f6f0f5f5ef6e4f30311fdb6a81c6ee64f29ab06b6315"
     sha256 cellar: :any_skip_relocation, catalina:      "fac417d9f81abb4a7f9a7c422e166eecafc1d7eedfeb0db93e47d59d9e1894b7"
     sha256 cellar: :any_skip_relocation, mojave:        "9a2595374e19a747a5c5e04bd25cd95d80cf99e3a78c9259fe9b4cd9414f9afc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a85e5aba1fe2b28c9b7587e06cbea8b65585b0d5eb958a22fb760948092b0826"
   end
 
   depends_on "python@3.9"
