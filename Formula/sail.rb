@@ -8,11 +8,11 @@ class Sail < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4119b62e8ee568d46d88cf6e9239b9b92d91fcc20b7830d2bd9152a2ca1967e4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "1326d6e9cc2c18462bdb005f4ed0336b82b9d7f36bf598c940a607bcef2c7b6b"
-    sha256 cellar: :any_skip_relocation, catalina:      "bf0e68d74fa4d1cc2589ef52c4ceb7785e8289582410ed8bb3868b8dde3f07f2"
-    sha256 cellar: :any_skip_relocation, mojave:        "95b6731a8c29094002dc5ce1cf99efd8286657b24c91fd108ab9e76a0f1163fb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6833ab7267c6e7732897eb0f571f2070ae74ea26fd71279ff4de1c6beb66398c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "caecc14745b667baa52f0e13ff01a87f854e17a5fac983a3880366f9e5eaa3ad"
+    sha256 cellar: :any_skip_relocation, big_sur:       "01a2bb6b961820e418ee97c1d2877df04378f928aba8f74a118c55c3dd4dc703"
+    sha256 cellar: :any_skip_relocation, catalina:      "1a21ca0c8f4dd65a7c82683eaf938c069f8bf4d59f40560e1f0d25f418415db5"
+    sha256 cellar: :any_skip_relocation, mojave:        "bb4c18e2443ef18ca0e9516c9cf5ad425f0a516daf11c3f40475a2b7df3cc982"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f26b2051a8588774a9f2d1da5d0e2504fc8a85cbaeb9174edca5155db8594234"
   end
 
   depends_on "python@3.9"
