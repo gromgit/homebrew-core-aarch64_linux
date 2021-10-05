@@ -2,9 +2,10 @@ class Libnghttp2 < Formula
   desc "HTTP/2 C Library"
   homepage "https://nghttp2.org/"
   # Keep in sync with nghttp2.
-  url "https://github.com/nghttp2/nghttp2/releases/download/v1.45.1/nghttp2-1.45.1.tar.xz"
+  url "https://github.com/nghttp2/nghttp2/releases/download/v1.45.1/nghttp2-1.45.1.tar.gz"
   mirror "http://fresh-center.net/linux/www/nghttp2-1.45.1.tar.gz"
-  sha256 "abdc4addccadbc7d89abe27c4d6427d78e57d139f69c1f45749227393c68bf79"
+  mirror "http://fresh-center.net/linux/www/legacy/nghttp2-1.45.1.tar.gz"
+  sha256 "2379ebeff7b02e14b9a414551d73540ddce5442bbecda2748417e8505916f3e7"
   license "MIT"
 
   bottle do
@@ -24,6 +25,13 @@ class Libnghttp2 < Formula
   end
 
   depends_on "pkg-config" => :build
+
+  # These used to live in `nghttp2`.
+  link_overwrite "include/nghttp2"
+  link_overwrite "lib/libnghttp2.a"
+  link_overwrite "lib/libnghttp2.dylib"
+  link_overwrite "lib/libnghttp2.14.dylib"
+  link_overwrite "lib/pkgconfig/libnghttp2.pc"
 
   def install
     system "autoreconf", "-ivf" if build.head?
