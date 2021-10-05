@@ -9,7 +9,7 @@ class Pyright < Formula
   head "https://github.com/microsoft/pyright.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "808553298aca0fa2f42c61c5822e5b50d4395aa94dafcfd34d3e59b9211650ec"
+    sha256 cellar: :any_skip_relocation, all: "0139272b371f024289786e8a8b55542c412446d2303508e304a37e8014d3bbba"
   end
 
   depends_on "node"
