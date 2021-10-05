@@ -14,9 +14,9 @@ class Gnuradio < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:  "169b966d6e031d0270bfc2649ee48220bc54b9d3e5d2b01c29e874bcc06f2c86"
-    sha256 cellar: :any, catalina: "d33ce40c50bd7b50545671e68b9b16c95f425196b6696fce1e77b2d6f12ab727"
-    sha256 cellar: :any, mojave:   "6849a16834c277e9e72021fb2d70a1a7ebab2f0c6ce55eb7ce073f5c33d4421d"
+    sha256 cellar: :any, big_sur:  "a65903558ee54755cc2cb8716ed7213204ce19a8db27a529512d264f8da8d3ab"
+    sha256 cellar: :any, catalina: "8272a1d9328a0daa040d1c0fedc5c05d11028dca906b53d5d513bc537662c8be"
+    sha256 cellar: :any, mojave:   "d9528d4cf8ffb264226ab2acf437a95dfe93e29f90b577a80d04b5297c4263ca"
   end
 
   depends_on "cmake" => :build
