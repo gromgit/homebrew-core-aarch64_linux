@@ -7,6 +7,14 @@ class Libnghttp2 < Formula
   sha256 "abdc4addccadbc7d89abe27c4d6427d78e57d139f69c1f45749227393c68bf79"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_big_sur: "75ed9aea6aad424ff9406f7c8849d340d5f2fb36b05c9352f8416201fe03d1df"
+    sha256 cellar: :any,                 big_sur:       "6edccdb5f700fa3602caa4ed902c18cdab02e64f33bdaf318a867b30b972a472"
+    sha256 cellar: :any,                 catalina:      "f9d462cb615767a7af790b54af5f377ab80c0a993b7938c8743118db52822984"
+    sha256 cellar: :any,                 mojave:        "58aa1edc1bc6d578976ba92fd7356628f660a5a1dcdad72da9d9e6c63f66dd8d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "88cb5305619855077a4f21256f150de396de0d9e3616c52b85bd39ffff1e9344"
+  end
+
   head do
     url "https://github.com/nghttp2/nghttp2.git", branch: "master"
 
