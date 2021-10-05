@@ -10,6 +10,14 @@ class Lilypond < Formula
     regex(/href=.*?lilypond[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 arm64_big_sur: "2c801f4fdde1ed6e006eeae104804f64878d2d87299090b2e24670272dc76f49"
+    sha256 big_sur:       "494460d9f2e9027ef52e8fd6d81869689ebc45d433403c25202e0c9d09c520bd"
+    sha256 catalina:      "1273052a8fb3584c5abbcbfa2492c0de3e1ae62496370fffd6550a22caeaa88b"
+    sha256 mojave:        "0828c31c729f5621d64d554afd01bc5ccf5d604b976b064f5dd5450ed9a3dd59"
+    sha256 x86_64_linux:  "588d9bb3fea1eb39d0f206acd25c517984d149577927c19a1772c2a17bfef63e"
+  end
+
   depends_on "bison" => :build # Lilypond requires bison 2.4.1 or above
   depends_on "fontforge" => :build
   depends_on "gettext" => :build
