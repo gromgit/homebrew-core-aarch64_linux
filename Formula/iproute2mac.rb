@@ -9,7 +9,7 @@ class Iproute2mac < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "e0730da7b695c8ae7a5f08a7c7e49f795e80a444146b21bf80076f7ef7712365"
+    sha256 cellar: :any_skip_relocation, all: "6ae5a1243448e699b5e82c093c9dfcdcdc13b84b586f7d77bc1959c6942ad21c"
   end
 
   depends_on "python@3.10"
