@@ -7,7 +7,7 @@ class Ydiff < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "07268262fb8e3fd7775b5129454d0aa7e08f32af397df64ab0d365d4cbae7cb0"
+    sha256 cellar: :any_skip_relocation, all: "6496ac2da3fe8681060dc732141f174db77cca1f3a8fe7aeffa8201ba2638c1b"
   end
 
   depends_on "python@3.10"
