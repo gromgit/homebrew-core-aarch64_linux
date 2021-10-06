@@ -10,11 +10,11 @@ class Sshuttle < Formula
   head "https://github.com/sshuttle/sshuttle.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d567ae9a98102b13d91ee38945352677712db52539892713315ad0b1c5a3649a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c9e76a2c946a5093591707b85b66c8201b693af597f79534d14d2e6101e20cff"
-    sha256 cellar: :any_skip_relocation, catalina:      "b80986476eb84c3cded3910bb7ef5210407cadf6716b277e8d3341c9413be7a8"
-    sha256 cellar: :any_skip_relocation, mojave:        "5f3e98db1083312557436f54752aa0eb0d300dadb66a73cecb228b892578617c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fc5f1f7e0cff2cfbe0b5f33c7014e3b85e4f24ed040db8f5dc32744edae707a5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b42243ff9ffd1eb0d6e4166ba785c906b481599cd2b2b9565d4904c910aa89ae"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4473c1b22e08070fa71beebecd01c9fdf5d396cf9b56907e6b1e27d32bceb389"
+    sha256 cellar: :any_skip_relocation, catalina:      "f02f3c772af4b221b9469849c315be5c92abbc12f5024bdfc1bb03d12ed2fcac"
+    sha256 cellar: :any_skip_relocation, mojave:        "21d7eff40bde6f0ad2f2003136d934e85867f5d6a5d7c7c669294cbdd378eb3d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5a49ae38bb94abe1487b2982a9058c7c2be134fedee80b9bcc58a6b3829d8135"
   end
 
   depends_on "python@3.10"
