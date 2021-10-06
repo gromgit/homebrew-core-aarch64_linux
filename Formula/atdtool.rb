@@ -9,12 +9,11 @@ class Atdtool < Formula
   revision 5
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e63fb91618eec0e6af69227020acdd1e9b12fedd834fa68dabc34168ec5f4dfe"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ed0bcc8c78addd4e072c55d8476e8ed4d5d5b4942df5c48b359c483a6dc2949f"
-    sha256 cellar: :any_skip_relocation, catalina:      "df0ff285c54b4368cb9e6731a025551c7e73f76a61f38b1e03cf86d8768735fb"
-    sha256 cellar: :any_skip_relocation, mojave:        "267d97304c449f94707c4fac451331d1c9e38e07b774cc4fd78043a0bc94c197"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9cdd57cf16b53626ffb5ad6a7a4f2c93069355665c4799a5922983464895a9a2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "00860b394d9167bc00b8a31a3edf07aa02ecca3434ad379d2b48e1914f0be191"
+    sha256 cellar: :any_skip_relocation, big_sur:       "32171ec53c6f52a2e877ba0b1506be093e42f4d594418a2727675a327daef1c7"
+    sha256 cellar: :any_skip_relocation, catalina:      "32171ec53c6f52a2e877ba0b1506be093e42f4d594418a2727675a327daef1c7"
+    sha256 cellar: :any_skip_relocation, mojave:        "32171ec53c6f52a2e877ba0b1506be093e42f4d594418a2727675a327daef1c7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e982a3e891104e18964da29892efef84c79da560c3c2525467fcaa48bb28819f"
   end
 
   deprecate! date: "2020-11-18", because: :repo_archived
