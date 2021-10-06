@@ -8,12 +8,11 @@ class Goolabs < Formula
   revision 4
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "df1ef2c9f6b3c72ab941aa3445575ecaf95aae6bfa1dd3e1ad96bd468f5d6f52"
-    sha256 cellar: :any_skip_relocation, big_sur:       "529b86998aa6ab3fe97ddef439a2c4959047fa2a44ff552b3cd115c962cbb1b7"
-    sha256 cellar: :any_skip_relocation, catalina:      "cce23cbee7e9db39636fc2fdc023fc24a2790867f3979fff2f2ece8a0580f690"
-    sha256 cellar: :any_skip_relocation, mojave:        "7ec468710694a97546f137e9ebc5e26b124646ea4a0bbe3f1c44b6a4203389e0"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "0c2057e24ee158933764e90ed0dff1a4e2e0f43871329658791c53fef270d185"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "32db89afb1ea07aa25ddcd74c90c8275f414a60b6afe55e83ff78b0b6cf5a226"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1b2a2f54c3bb94503570a607d810f3e6989eebb43a4127a5000390e83a6b09f2"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d1b836eb573e608d930e15ba479a52831cb0c76bc64f047809b807c27b82f215"
+    sha256 cellar: :any_skip_relocation, catalina:      "d1b836eb573e608d930e15ba479a52831cb0c76bc64f047809b807c27b82f215"
+    sha256 cellar: :any_skip_relocation, mojave:        "d1b836eb573e608d930e15ba479a52831cb0c76bc64f047809b807c27b82f215"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "792fe61d50ea9dd2e3f6a8b6431ff3b304c4758f62568c428b10e2f7787d32b9"
   end
 
   depends_on "python@3.10"
