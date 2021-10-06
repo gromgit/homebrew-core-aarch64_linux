@@ -9,11 +9,11 @@ class Richmd < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "84b0b7effcabf0da687498d844ed3f57c3149eb510732a08b71391f1888d3dea"
-    sha256 cellar: :any_skip_relocation, big_sur:       "492a44887bb591e7f70b94486019eaac108de1ecfcfd57eaa1a05fa2748529ef"
-    sha256 cellar: :any_skip_relocation, catalina:      "c62b52ce6464a2a8a543ee5c07308ca6c8beeba738d8311e9c55ce201ce6d886"
-    sha256 cellar: :any_skip_relocation, mojave:        "caa768c8e228d20919186690efd3327b14f65d4f96abc7792a0037f903dbd905"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "69313cfad19790a4eb0905b3e5a22168aef1aca7ba06e5930b758645bd2de912"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "df702c08a5aca056fea99356bf60c6de0b855144bb7d5f68d84eb795c27bc2cd"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0ca92ddcbca02aa64b739b42c4003a1be0bb1c4d4cae82272fc6d1335e105e5c"
+    sha256 cellar: :any_skip_relocation, catalina:      "92ff405d451f98e019371f3448debc0822d3a14497340184271f47097683a097"
+    sha256 cellar: :any_skip_relocation, mojave:        "c04c36c6bb943f7d300284506788d2e262f0e19e7a855327a6dde17ea435b715"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e0fd7ce184e1958e82d873ad584f6bff4db98ce010ad8ca3f68df70fa6698075"
   end
 
   depends_on "python@3.10"
