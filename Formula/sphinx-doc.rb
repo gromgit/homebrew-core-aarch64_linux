@@ -9,11 +9,11 @@ class SphinxDoc < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5bfbec7eece64faf0ed53161357af4bed63bfe30f3937fc25857414ed0f833d9"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9fd018e3c66b1fe29a6e097f1a4609db58c4cf0d2ed397321f28b91dddddb96e"
-    sha256 cellar: :any_skip_relocation, catalina:      "60814b10d58a932560cc6fe41317e1d6ca13c68eeb6e76200470e1486b00f149"
-    sha256 cellar: :any_skip_relocation, mojave:        "a687ef4a3e57edb04ee2310719f6ab9fa36540b780577b2e1e9d8c75150899f2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0ae2bc7995fa9a4bee96121fd2ebf0c58ebfc91c3eb7de0ca713e542a31d5109"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9a37a2fb365abb3792503526787ac3ea7006bc56aea959cc4f76cabb722583d5"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5b9087b423a25d6e215483af01d6ce95c7d9034bfa9f49dbc4c4065d925af9d8"
+    sha256 cellar: :any_skip_relocation, catalina:      "b8f15b176e23210790f3c2bd6048f08c22af4f6b4ba2ae913e6703129e7901b4"
+    sha256 cellar: :any_skip_relocation, mojave:        "c836ebc2d6ee7bbb7166a0eb6408ab47f3b0232def6ad13d26b9ae4393a679a4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f8f3ec363443e66fac25c62f5fcc3603cf6cebeab108391f1e10bca510398e30"
   end
 
   keg_only <<~EOS
