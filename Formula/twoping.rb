@@ -8,8 +8,7 @@ class Twoping < Formula
   head "https://github.com/rfinnie/2ping.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "5da1355d4aa2d6c8729362449bd49b8a726e1daa7d908e68c410818f7a439dfe"
+    sha256 cellar: :any_skip_relocation, all: "e1847c704c33620ee0aa48c1c9d9dd7cbe5adad99acbbe440daecc8ad8b1444d"
   end
 
   depends_on "python@3.10"
