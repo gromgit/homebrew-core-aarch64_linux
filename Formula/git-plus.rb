@@ -10,11 +10,11 @@ class GitPlus < Formula
   head "https://github.com/tkrajina/git-plus.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "27ca4d78d0e0b9442d8aadbe70e62c46512036e20fea16794ebc7b155a4ba55b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "243b9a0bf17f0e8ae3abe57100618440aa785f5f087d214e45732b48bb998dc1"
-    sha256 cellar: :any_skip_relocation, catalina:      "243b9a0bf17f0e8ae3abe57100618440aa785f5f087d214e45732b48bb998dc1"
-    sha256 cellar: :any_skip_relocation, mojave:        "243b9a0bf17f0e8ae3abe57100618440aa785f5f087d214e45732b48bb998dc1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a07a67c06fac3c4de1c84960b38dda0bd3b06476c48e12eaddf0a03f25f7e214"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8bc27d01ae10334384f7bfa583f7cf3558246738d95a15969d234a3744808c61"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c27fdb895dfe71c44fa92aef98ccdf5d3c042e57873c9b6b98c79348199af34a"
+    sha256 cellar: :any_skip_relocation, catalina:      "c27fdb895dfe71c44fa92aef98ccdf5d3c042e57873c9b6b98c79348199af34a"
+    sha256 cellar: :any_skip_relocation, mojave:        "c27fdb895dfe71c44fa92aef98ccdf5d3c042e57873c9b6b98c79348199af34a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ebe89d33926bdb53327c6712fac31d805a47778e103c2bfeeb532803a5f52a4c"
   end
 
   depends_on "python@3.10"
