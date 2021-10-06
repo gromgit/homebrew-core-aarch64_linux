@@ -10,11 +10,11 @@ class GitImerge < Formula
   head "https://github.com/mhagger/git-imerge.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7ec4eb38347a00e2d2bcb20684dc0344ada62ad23ea5849ae2fcefbe39a7d98f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7bc1515b735b68bc1e78e3fb97e7066cb68cba2736d26e4f473a6f79740e834b"
-    sha256 cellar: :any_skip_relocation, catalina:      "da8daf9290c7b730c197112a095d02a22a74b0b0bc3ec191092c11033f85bd89"
-    sha256 cellar: :any_skip_relocation, mojave:        "af808a99347117a8e6b90ab28874a5c27cfb010b1d8bda0c50fe3cce8b340159"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8602c8141fc021386ea95c3b184de32920aa3190ddf30af08feaa51c92bd0ff6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9f53c94437082875ac6cbf092b4cd428d24d8d9e257978e161961f2e47cb43bb"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6a8b30650ee668771ce8cac1011d239979b93d927da57137f5b2b00b2c3257e0"
+    sha256 cellar: :any_skip_relocation, catalina:      "6a8b30650ee668771ce8cac1011d239979b93d927da57137f5b2b00b2c3257e0"
+    sha256 cellar: :any_skip_relocation, mojave:        "6a8b30650ee668771ce8cac1011d239979b93d927da57137f5b2b00b2c3257e0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "83eba26e35804793bfb24d2591b93b4e7f655aa08c09ec5ab067c7668d7ab42c"
   end
 
   depends_on "python@3.10"
