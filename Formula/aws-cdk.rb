@@ -8,11 +8,11 @@ class AwsCdk < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fc0f07b7b69581c3a7c3bde15632eefba8e3669e40c9f50851d04ef3d716cf47"
-    sha256 cellar: :any_skip_relocation, big_sur:       "75580da56bc8a1db63bea9c2a69a4ba7710b3decc8b84dda1605524a14108c25"
-    sha256 cellar: :any_skip_relocation, catalina:      "75580da56bc8a1db63bea9c2a69a4ba7710b3decc8b84dda1605524a14108c25"
-    sha256 cellar: :any_skip_relocation, mojave:        "75580da56bc8a1db63bea9c2a69a4ba7710b3decc8b84dda1605524a14108c25"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fc0f07b7b69581c3a7c3bde15632eefba8e3669e40c9f50851d04ef3d716cf47"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f9d1ffbc638ce2593ea6bc585970ba8a0a364a25660e92f489b5e6f1cdf69470"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0afedd394364291f335a9e2915cd58ccff1fa0d6874309d6fb37e3256b82ed23"
+    sha256 cellar: :any_skip_relocation, catalina:      "0afedd394364291f335a9e2915cd58ccff1fa0d6874309d6fb37e3256b82ed23"
+    sha256 cellar: :any_skip_relocation, mojave:        "0afedd394364291f335a9e2915cd58ccff1fa0d6874309d6fb37e3256b82ed23"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f9d1ffbc638ce2593ea6bc585970ba8a0a364a25660e92f489b5e6f1cdf69470"
   end
 
   depends_on "node"
