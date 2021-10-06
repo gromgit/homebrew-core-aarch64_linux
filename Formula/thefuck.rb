@@ -10,11 +10,11 @@ class Thefuck < Formula
   head "https://github.com/nvbn/thefuck.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7dbd33a054ec30e827dd7147a624d0334a8ea3b2dbf829969ce001c319488306"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f1160909978920c2818a8368c3386ecbfc60049d9367078817701967f41dc94d"
-    sha256 cellar: :any_skip_relocation, catalina:      "b69bb2d139c3aae2ea6896a25a73b3e7d05fa86c04255354d2529ecfb87abd3b"
-    sha256 cellar: :any_skip_relocation, mojave:        "796e2b1d7f8a69760c9366d2c4f66cf24ec0fbef916a3f0dcea1fa567b46617d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a78e51d257dfb6c1c8097bd1178642e40f2c3ffa04335b95bcce638d3e0a5ca3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7246194bfb83392fd64bba4abb52121c909457989178c48bdeb4a1f2131eb982"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b6ff31e6acd33cc8693ec64f77b64ebd5214798602ea897ae0e73de6369a717a"
+    sha256 cellar: :any_skip_relocation, catalina:      "3b6da25b50f07e16fc8b178182eaedf4258cdb27ee7bde746e8d7c91bf79790a"
+    sha256 cellar: :any_skip_relocation, mojave:        "a1d299b1561cae8e6282658f378aa77e9dc4bb8b2750c07af74bab5a1510ee4b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dbe88c05c5339f3eb6d1cf31b56b2555184b2c041ab503ca946f21f1ccf09f4b"
   end
 
   depends_on "python@3.10"
