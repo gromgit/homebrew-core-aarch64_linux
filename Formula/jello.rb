@@ -9,10 +9,10 @@ class Jello < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d3d3e11871eabe0bfe95e772a269adac4a07d1496e627631e71b91d59377ace9"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7b214228da50b700cffea3a060c1345e0e4d0761e5b7c23d47a61cfaf0a1afc4"
-    sha256 cellar: :any_skip_relocation, catalina:      "7b214228da50b700cffea3a060c1345e0e4d0761e5b7c23d47a61cfaf0a1afc4"
-    sha256 cellar: :any_skip_relocation, mojave:        "7b214228da50b700cffea3a060c1345e0e4d0761e5b7c23d47a61cfaf0a1afc4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2cf89b26555543aa7ee63d93e02df14d260fc06ba1dffb9ece2c070fadaaa6f4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e1c991340147788989124b846af28bfa283dccf1af47fcdf9c03f2fd2bd0299c"
+    sha256 cellar: :any_skip_relocation, catalina:      "e1c991340147788989124b846af28bfa283dccf1af47fcdf9c03f2fd2bd0299c"
+    sha256 cellar: :any_skip_relocation, mojave:        "e1c991340147788989124b846af28bfa283dccf1af47fcdf9c03f2fd2bd0299c"
   end
 
   depends_on "python@3.10"
