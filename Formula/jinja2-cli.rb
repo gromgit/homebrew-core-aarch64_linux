@@ -9,12 +9,11 @@ class Jinja2Cli < Formula
   revision 4
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "68e2f4bba1d27a5a75eaabdaf84684ad26867d7281d705e23bc6ed8d96f7da29"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7dd9ea3c9d12a0a9d1d3be2d521d3c7fcefb10843bf62dd7914e35e66a387d63"
-    sha256 cellar: :any_skip_relocation, catalina:      "f87af5f900907686304e0937303eadeb5050d48e3ae85c340ec39e8918177d1e"
-    sha256 cellar: :any_skip_relocation, mojave:        "a64bc73445720cf2a272854643c6f66aa0dfec769bd96f292b134054d5b1f84a"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "6ae50d5282b186cbf0a8b46b44a173a685a8798fec0606efc6d15bccae9b6a92"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b4ed69f0586eaebce610d3d1cbfac7214ce5a1696fd4ce135a3589b245022a01"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "11a23f02be9916f831a4e8639e9c581a1a22495086e36dbc9155d1e02c08ef66"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7fbc8bb7f975a94812101fd094963fd43605e463ca6e18ac524cb292eda60863"
+    sha256 cellar: :any_skip_relocation, catalina:      "9c776168317a1180b6a8f517bba3821f98fb5ff23fda662f1398b98cbab5df2f"
+    sha256 cellar: :any_skip_relocation, mojave:        "5cbea09cdfdc17b06ecd92cb8e209fc1a97996b7a3db2624d86c80da889f6c6d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9f0cc1ad20dc99d07c505ce4a99039f13946bfe0c804e732c0768dbd1482cd9e"
   end
 
   depends_on "python@3.10"
