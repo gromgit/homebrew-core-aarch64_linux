@@ -6,12 +6,11 @@ class Afflib < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "4ebc86660cab0964031b14ee14a710a8d83222389ba9e263463f7b7610582b3b"
-    sha256 cellar: :any,                 big_sur:       "045dd01683d3c1411e493d72a8b4bcd6e71113386f330254252e5876d702429f"
-    sha256 cellar: :any,                 catalina:      "63075bb1473d3342521c6e29fd1c8c628114cef274ec8b7cc572d46068f19f4a"
-    sha256 cellar: :any,                 mojave:        "9a50d803eedfeb45425b1f7a0452e8f7072d87c2b7b5b488dfca6222a18440c6"
-    sha256 cellar: :any,                 high_sierra:   "9367940cd2b04b6a244b00ba0970ab20b23393604689ee45b5b5b2b5274e752c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1efab46d8c360d5836edbd17a19553baa45e53afedcb918c4637219b17f218ac"
+    sha256 cellar: :any,                 arm64_big_sur: "aa8dd52d5800f5ac0464a37b9f456ea830c62ae8a2775373f330ab7d8253bacc"
+    sha256 cellar: :any,                 big_sur:       "d5502071af61c4768c056d6ac7d3f7d1048044e9290b7a3823350b7df05a1e86"
+    sha256 cellar: :any,                 catalina:      "6662001d7ea73f9ec2f36bf94937c84581254ca4637a07d6a696116314a438bb"
+    sha256 cellar: :any,                 mojave:        "360c80c6323ff67028b0154508967eaa5b426675892147ca2d70bb11ce273d9e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "44a7c836a4474870e2e68b88916853703af597798eadde2c5f0c5024a46d41f1"
   end
 
   depends_on "autoconf" => :build
