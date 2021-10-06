@@ -8,12 +8,11 @@ class Autojump < Formula
   head "https://github.com/wting/autojump.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0c57ada4da08511d187b59d225b870c3ebee4c04aeeed9a066980e69a2f1a773"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6a803054ba48635b80cf303c9de79c4b448a6b293168a733c521f3d0b5046dff"
-    sha256 cellar: :any_skip_relocation, catalina:      "6a803054ba48635b80cf303c9de79c4b448a6b293168a733c521f3d0b5046dff"
-    sha256 cellar: :any_skip_relocation, mojave:        "6a803054ba48635b80cf303c9de79c4b448a6b293168a733c521f3d0b5046dff"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "155704b3dbb470bf4b4e21e713e808a6c4aa0428447cd1869c6cc75c56bf0517"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fd70efcdedc3195f8f1a1bdc92d24fd8077e26c848c453de5e3eef2b92f5c8c4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "25469a543ea749b071f258a046449bbbc5ee24630ecc9c3eee91cc26af0cee8a"
+    sha256 cellar: :any_skip_relocation, catalina:      "25469a543ea749b071f258a046449bbbc5ee24630ecc9c3eee91cc26af0cee8a"
+    sha256 cellar: :any_skip_relocation, mojave:        "25469a543ea749b071f258a046449bbbc5ee24630ecc9c3eee91cc26af0cee8a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fd70efcdedc3195f8f1a1bdc92d24fd8077e26c848c453de5e3eef2b92f5c8c4"
   end
 
   depends_on "python@3.10"
