@@ -9,11 +9,11 @@ class Cppman < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "55e96a488b28443bf7f8ab9752d4efaa4dc079fd85517aad50ded2d8d7dd487a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3f09682974f0f72da904d90c58937d640fdb5a5d29514fefdf62ecff2b8ea8e3"
-    sha256 cellar: :any_skip_relocation, catalina:      "dc2eaf5f58fe7ac82917f440b0bed4ac89d241103cda4f0c836d506acaa3be56"
-    sha256 cellar: :any_skip_relocation, mojave:        "a3e6362771f2b46001d4c62e7574647dcf06c3af1af47d6e75ff90340987fc34"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "344ebbdc2433c6c9b47fd8958307d985e6a047c6490a8aac5b44996e18ffd2bf"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c7be03e0509903bce8c018175cffdf173e339456aa555cb91a86e5093feab947"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b8d9a3470010dac2167e6bf34e165a5ed30ade83fd3d435e0ec47ecea37c7391"
+    sha256 cellar: :any_skip_relocation, catalina:      "2604a65f2ec97aa523f1efdb7723fd85009ba2b357891dcfb9a912737fdc1b9b"
+    sha256 cellar: :any_skip_relocation, mojave:        "cb190a51ebdbf7c322627b64665c9384cb2f161a30158e5211aa700fead3b507"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0ee5f9cc3bca54588fa24dafc9379f81c0eeeeb59b3c46dc5587074450b7bf14"
   end
 
   depends_on "python@3.10"
