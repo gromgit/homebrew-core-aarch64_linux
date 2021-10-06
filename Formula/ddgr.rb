@@ -9,12 +9,7 @@ class Ddgr < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "514088d8485c7943c2c4a34654147bc357d0cd1b797cc80b455ec0212ae7d226"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a4d85046d345c5bd1dbb2a5368cef631ac4eef8dfbf3f365019d90da7f31c54a"
-    sha256 cellar: :any_skip_relocation, catalina:      "2e072910ed4e40203156efec17ffd926142f1dcbe452ee975f7bda67bf658e67"
-    sha256 cellar: :any_skip_relocation, mojave:        "e790e6a0175047496f3b81e1226e4e55a1047c9b070dd18ffcd6825d17e840dd"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "57266892ebb4fe452b375f06ad756426eecbe7f144e4c6b79673cfce289d34fc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e8f03229225b4522915949ddd1f83c90112db84ce7c8ff2ede1e3884dcacf0b1"
+    sha256 cellar: :any_skip_relocation, all: "eec5e7fe4cc40ceaba669038d3c7c7ff09ab6203eae500022555adccdf92e4ef"
   end
 
   depends_on "python@3.10"
