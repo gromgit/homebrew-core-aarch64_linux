@@ -8,9 +8,9 @@ class Sourcekitten < Formula
   head "https://github.com/jpsim/SourceKitten.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "28df76e8f1933869199c4d9007e66012de6c3405e8009d387500259f1a0cea8c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c3df0d66fb5d3e5c978b3e0c76b36c3c46d9f63612c99530e8cb1e9a013982b8"
-    sha256 cellar: :any_skip_relocation, catalina:      "f6ba3676e59393e20190e6e04d70cbfab24217109363ec24799b0dd52ba4ac70"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9e286e85a138ce17306a41cd4685c33a1bdfdd8108f3a42b34975b30a2746cc9"
+    sha256 cellar: :any_skip_relocation, big_sur:       "bd867aad2393c0817d7e34f33d6873c540d1bef3fe0223dd2106c7412f10a818"
+    sha256 cellar: :any_skip_relocation, catalina:      "32a08155e2e970e2c56dfe6007d1937366aac7e53f42dbbca2dbba5a5b799506"
   end
 
   depends_on xcode: ["11.4", :build]
