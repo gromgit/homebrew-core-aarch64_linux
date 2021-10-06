@@ -11,6 +11,7 @@ class PscPackage < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "f5baac6c49a67991b2ed0f2a2ba34898317e9cfd6864e8b446fb159f80ae04ec"
     sha256 cellar: :any_skip_relocation, mojave:        "e6cd795e5eade3414e2149f4fe4d529468293b122659ed5bd8b2b4df716c77cf"
     sha256 cellar: :any_skip_relocation, high_sierra:   "0b0411dfd516bac15b2e99cba163dbc3c77742eae9e09038ac85ef1793ce767c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a14a1778082c9aa6660a4a518d6c093a6b99c46c9965d8b8000390823193bcbc"
   end
 
   depends_on "cabal-install" => :build
