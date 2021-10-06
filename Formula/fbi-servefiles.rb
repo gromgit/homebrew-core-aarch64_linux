@@ -9,11 +9,11 @@ class FbiServefiles < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a9fbd3f0ebcc23402e58614577e7973829b471508ad1bf0e00be09ad196f5226"
-    sha256 cellar: :any_skip_relocation, catalina:      "9383ebc1948e403d7fef0e0613063cb1febb62e5b8142c3fe7ab62bf3f3d5c1d"
-    sha256 cellar: :any_skip_relocation, mojave:        "4055c03cc79761271cf0ea70be2f54250fa5b67db91f030f4ac9449e0a2f7307"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "d8d8d483abd92d016d8d1a7f0e4535c51233c83914f1c61d1223b72d750f1b8a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6b495211bb790b4abb9dec8c464aa929ff7e36c64b73c44f3c620c3bd82a7b3e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "82a491cce1b13428f44e1bd6984195dc565b654983376327e0fdbdd28985fd02"
+    sha256 cellar: :any_skip_relocation, big_sur:       "54051b80718b8f581397ea1e58b76161dfabafc6de4a113dd715d422a2a12c02"
+    sha256 cellar: :any_skip_relocation, catalina:      "54051b80718b8f581397ea1e58b76161dfabafc6de4a113dd715d422a2a12c02"
+    sha256 cellar: :any_skip_relocation, mojave:        "54051b80718b8f581397ea1e58b76161dfabafc6de4a113dd715d422a2a12c02"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "093d05e4e564d7dbc6bc426f573389b5ee9d20312f6be354e5dc27f1d9be08bc"
   end
 
   deprecate! date: "2020-11-12", because: :repo_archived
