@@ -8,12 +8,11 @@ class Txt2tags < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0b2ab997932f742fb905ab546a1f12c417d12212f553ecc2be9ddbd49daa3a34"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d6c3f9115b0b82e14d0dd9cf8647c67004c1432e8c4469c8450950bbe29a3a6b"
-    sha256 cellar: :any_skip_relocation, catalina:      "6d2516f5a7e3ac9dd0b87f14aa21689c98fc85cd04133d61feb57f7b67ca815e"
-    sha256 cellar: :any_skip_relocation, mojave:        "91d15a499c27c63bcd94c13a348cba21412a3dd2d67630033d0704a4399ca769"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "2e6484c9e6eacb833e0f1eeac952fa88bf0582c33517d3cba587d8540c0748f2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f33d4937c6b718e193653753656567ff62ebfebfa421238355538830b89760f4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5dfd365914bcf32df61972239ce4e158aa04282f05aefe898b648842b4c37ab0"
+    sha256 cellar: :any_skip_relocation, big_sur:       "2d19d074b099ee8318e3d55f291d6b02de4130a5d643120e03e0dd438c9a6311"
+    sha256 cellar: :any_skip_relocation, catalina:      "2d19d074b099ee8318e3d55f291d6b02de4130a5d643120e03e0dd438c9a6311"
+    sha256 cellar: :any_skip_relocation, mojave:        "2d19d074b099ee8318e3d55f291d6b02de4130a5d643120e03e0dd438c9a6311"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f9b5979bbd085fa0318c11540cf422e3587a9fca6cd51a4eeb4ef2da98d3b27e"
   end
 
   depends_on "python@3.10"
