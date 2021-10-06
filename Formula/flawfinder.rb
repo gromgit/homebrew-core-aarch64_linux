@@ -15,11 +15,11 @@ class Flawfinder < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4d66b65f5681f260ed454465b9b5176d3325e971f8092a1275776c80515d76be"
-    sha256 cellar: :any_skip_relocation, big_sur:       "407c52c1becc39385244c0d877570de07e10daeab69001c675299c16c81e1ea1"
-    sha256 cellar: :any_skip_relocation, catalina:      "407c52c1becc39385244c0d877570de07e10daeab69001c675299c16c81e1ea1"
-    sha256 cellar: :any_skip_relocation, mojave:        "407c52c1becc39385244c0d877570de07e10daeab69001c675299c16c81e1ea1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4d66b65f5681f260ed454465b9b5176d3325e971f8092a1275776c80515d76be"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e1b43fa077ab243f046627e1bf10abeba91b90b58df58fa5e5c1427bf50e0719"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b13d035b39d87e2f9ddfba4c8b03a3d676c8104b40fc882f2faf5473c7e91c78"
+    sha256 cellar: :any_skip_relocation, catalina:      "b13d035b39d87e2f9ddfba4c8b03a3d676c8104b40fc882f2faf5473c7e91c78"
+    sha256 cellar: :any_skip_relocation, mojave:        "b13d035b39d87e2f9ddfba4c8b03a3d676c8104b40fc882f2faf5473c7e91c78"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e1b43fa077ab243f046627e1bf10abeba91b90b58df58fa5e5c1427bf50e0719"
   end
 
   depends_on "python@3.10"
