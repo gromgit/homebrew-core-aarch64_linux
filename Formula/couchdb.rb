@@ -7,9 +7,9 @@ class Couchdb < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, big_sur:  "a5f39bc7837033ef94ce64bd004ab640d0dbcc36723048a5eecbf0fe7f79b83e"
-    sha256 cellar: :any, catalina: "5736d9943ec1ac5935f72eb6fb102a34b9533a796e7701baf4b7e000360b46c6"
-    sha256 cellar: :any, mojave:   "d285b3dccb394ae6e73f6686acb541505f5c3fe31c42fb1d4b9adfcfef6053c3"
+    sha256 cellar: :any, big_sur:  "57473941c98a87c341789db89666d41ec411c76a6c80e1e9cc462e7bb0b53041"
+    sha256 cellar: :any, catalina: "e94cc82a8f2c031afd676b63af754834d6d5b3dd2020f48a1d8e5f259fb5d4d4"
+    sha256 cellar: :any, mojave:   "7d268e19053980bd44b3d7d5b29e5c73f6a105c5589b9145377b018358019439"
   end
 
   depends_on "autoconf" => :build
