@@ -10,11 +10,11 @@ class Grokmirror < Formula
   head "https://github.com/mricon/grokmirror.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c63bcf090ca8b755e84c3cc6050283bd404d62d9a6e0e68faf51d9ee36f4fa59"
-    sha256 cellar: :any_skip_relocation, big_sur:       "de77cf1bd818795884882944ac3bbc340152835a0900566925f92b04dc2c8bcd"
-    sha256 cellar: :any_skip_relocation, catalina:      "de77cf1bd818795884882944ac3bbc340152835a0900566925f92b04dc2c8bcd"
-    sha256 cellar: :any_skip_relocation, mojave:        "de77cf1bd818795884882944ac3bbc340152835a0900566925f92b04dc2c8bcd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "801646256b6ee8e12a5c968818aa7a5de0f83c02012b2014fbb165ee6b80a6ab"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "06b15553ec31d5e3a41c51fa728d7eb6b40c2882c21180ea5cdcefaddf2d42d4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b9c6c6fd6aca9319bbe706881667e1294af1b53573ef3e10e20ab7578498462e"
+    sha256 cellar: :any_skip_relocation, catalina:      "b9c6c6fd6aca9319bbe706881667e1294af1b53573ef3e10e20ab7578498462e"
+    sha256 cellar: :any_skip_relocation, mojave:        "b9c6c6fd6aca9319bbe706881667e1294af1b53573ef3e10e20ab7578498462e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3a9f85ea67686b0e0b307a727aa964f9ebf62eca5d5fa9cdddbd8232fd7c2861"
   end
 
   depends_on "python@3.10"
