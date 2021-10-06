@@ -10,12 +10,11 @@ class MongoOrchestration < Formula
   head "https://github.com/10gen/mongo-orchestration.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "efc5b67df58e64e0a547194ab13c9c66bc4df783b75d0a898537b92d0620b5cf"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e041335f3dbbf6a41a7b23422eee73925811becd1e546e7382322bbc6796aa51"
-    sha256 cellar: :any_skip_relocation, catalina:      "9c1d470d4a8c29025b8dd949da85b47e8e9b6fb25092db6919b61ae990164321"
-    sha256 cellar: :any_skip_relocation, mojave:        "1116172042657ce84ebf4a2a8a53c673d7a7f7f4b2ebf407fc4dfb479f547f8b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c9e71f7fdfe63ac2bcd8ac7646d1cda17bf96e06fe2b780cc04af67ab29eb9a5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3be3d4d3361c13dd72c358ec25226486237b0669b3518dc27094ebb9b5cde0b7"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d2042e1ea1f997f23c01dc88bc5e8cecb2fa08c58e5c641035d8d58c2d013be5"
+    sha256 cellar: :any_skip_relocation, catalina:      "24d106d1c9511112ce1a7c91664ea001d9d8dd074e303afd71b139fdfca6b14d"
+    sha256 cellar: :any_skip_relocation, mojave:        "80b35759af83e1a7effb496027d247cc856363fdad9d34238bf7c58f49b32ff9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "02eb4bd1c6fcd120628f289d72e5caf2e3f7efb20611f44cecb0059eb847b7ef"
   end
 
   depends_on "python@3.10"
