@@ -12,12 +12,11 @@ class Openvpn < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "fbcc7de1a4b69e3f347a572cae9936011af0dfb4f678aa6322a289ae838959cc"
-    sha256 big_sur:       "ebcc6f226ebebc4be9a3ed47e59662731ae7b547dc452c7f5ba37c9775b98f0b"
-    sha256 catalina:      "700335319b2d9491a89f6a4f01fff49510cf02abaa8828735318fa4021e62902"
-    sha256 mojave:        "e986c3cf6d24e6bcb267b847b7167b2ce321798eee90a68194d7b0a3a477b15a"
-    sha256 x86_64_linux:  "26f9cc78641866914d4318a0545e5555b4a5a87513ed6cbead9df091da161caf"
+    sha256 arm64_big_sur: "6666fe4dc8bfa42db9bb92d52962606daacfa284be240e183de86f568ac2af43"
+    sha256 big_sur:       "682a9cd67a9ca4d1f3e98b2278bfb30cba39e30f532cdebbc25258fe7e4e69af"
+    sha256 catalina:      "904507f9c962a7294f67a92e48d0c8cfc12a71bcf91c6d5d924e0f28a4836a3a"
+    sha256 mojave:        "fec0ed2726d148cc96ac6a19a9dfa0e39703fba82c717020f5c6ccc1ee4deef9"
+    sha256 x86_64_linux:  "a8d95b95acf6cdfed376475c0e5265bc97bac433dbb51c7279f0bb76a39db6a2"
   end
 
   depends_on "pkg-config" => :build
