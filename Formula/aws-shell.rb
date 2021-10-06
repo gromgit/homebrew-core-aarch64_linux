@@ -9,12 +9,11 @@ class AwsShell < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9581121be45392c0cc78938f568562f61127966428e08635a8ea69f615d0c477"
-    sha256 cellar: :any_skip_relocation, big_sur:       "aee32db7e96f9239cf9bbb10d59589f9f890757efc73aab1f186dc2989fe211c"
-    sha256 cellar: :any_skip_relocation, catalina:      "d8f0c4ef68861caf28dd575f0f5999a512df996aee959c340fa9d0a7d60dcac0"
-    sha256 cellar: :any_skip_relocation, mojave:        "140dd82c2a4222400fed642d61b13b2b6e4afe76edc4c49a877b3124775e382a"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "2c963b5ee92cdf2a8c272aba8f37b878018794a84ef523532e19b3b55fa9770b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1714b1fefa7ec59ac0259a9a436265468becb30204ffa480ba2081fefbd210dd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "45382f49fe45fde97fafbbd7742fb87d8e0551a59559d4f93558c3f7e9faff49"
+    sha256 cellar: :any_skip_relocation, big_sur:       "10a2ca9388c9c1dab3f9e591e2ac86139cbd9e50b4becce0ba2f28d23cc51b8a"
+    sha256 cellar: :any_skip_relocation, catalina:      "1197cb3c8f0a0450cc1759075a123c5e4c4fab3b22aef31de1e1c386cbba1d1b"
+    sha256 cellar: :any_skip_relocation, mojave:        "05da4e2dd7b13c80aa43dcc6d722be02599f6e22a2b0937282cdd9134240188d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1f1529cff62e2a726e1bfacd3713a5728679f9e56e9c2fe1765b9aee2c1580a7"
   end
 
   depends_on "python@3.10"
