@@ -9,11 +9,11 @@ class Pssh < Formula
   revision 5
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "55cce3be0cd183f6179aeb4b51618774fe98cb3e4df078d1fff9ee3e555d2a54"
-    sha256 cellar: :any_skip_relocation, big_sur:       "94ad17e8296472da13da212b912f9edd9fd849566a21eee7b3ad7686f4500e0b"
-    sha256 cellar: :any_skip_relocation, catalina:      "94ad17e8296472da13da212b912f9edd9fd849566a21eee7b3ad7686f4500e0b"
-    sha256 cellar: :any_skip_relocation, mojave:        "94ad17e8296472da13da212b912f9edd9fd849566a21eee7b3ad7686f4500e0b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2fe66dd066755c80bec5fee0da2348519605663f4d1a2ecd1c52b164e30b4519"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "59a80ba06f64db6ac564b05a91b33cd9dab0d7d9c1a9cd7e932b9afb2b2012c3"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d1c1837c888b3c60e7e5cf3db91660c35b14c39e72d7418317eba99fe30bee0c"
+    sha256 cellar: :any_skip_relocation, catalina:      "d1c1837c888b3c60e7e5cf3db91660c35b14c39e72d7418317eba99fe30bee0c"
+    sha256 cellar: :any_skip_relocation, mojave:        "d1c1837c888b3c60e7e5cf3db91660c35b14c39e72d7418317eba99fe30bee0c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "db241389e508b5db1cf14b6edf01b09b185f95326b8301ba7c04ee38478f7e39"
   end
 
   depends_on "python@3.10"
