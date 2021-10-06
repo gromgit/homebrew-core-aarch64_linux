@@ -9,10 +9,10 @@ class HaruhiDl < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ea81fa790015d19ff63a57e553ca9914399becb582c22aa0afb6c689849eb81b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8a12ef4839c85aaa8a9a895555e4e784d52b18eb285c67ff22632218381f2417"
-    sha256 cellar: :any_skip_relocation, catalina:      "8a12ef4839c85aaa8a9a895555e4e784d52b18eb285c67ff22632218381f2417"
-    sha256 cellar: :any_skip_relocation, mojave:        "8a12ef4839c85aaa8a9a895555e4e784d52b18eb285c67ff22632218381f2417"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "966c61dfcc9b8849d593007e07c3254a5e243093ef7b3b3d74f7f1e06be569b6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "127ff0efc125444133103fd03f0f8b51c2492b1cf9af89db62eb78db12fabc94"
+    sha256 cellar: :any_skip_relocation, catalina:      "127ff0efc125444133103fd03f0f8b51c2492b1cf9af89db62eb78db12fabc94"
+    sha256 cellar: :any_skip_relocation, mojave:        "127ff0efc125444133103fd03f0f8b51c2492b1cf9af89db62eb78db12fabc94"
   end
 
   depends_on "python@3.10"
