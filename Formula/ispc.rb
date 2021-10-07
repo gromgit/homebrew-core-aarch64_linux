@@ -7,10 +7,10 @@ class Ispc < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "774925e3f76b5bc791c697ccb33ba6ddb06263afc42afed3d3b5c042d1e418b2"
-    sha256 cellar: :any, big_sur:       "056f8214241e142cc25f5f0e80a7691676e301d53dd221a3e9f37eacbad9ddbb"
-    sha256 cellar: :any, catalina:      "f6cbc37b4e9288c21009fd9b575a74d201563736e67e9bbd03c3df72ad332e5e"
-    sha256 cellar: :any, mojave:        "b761277279a3b20607c33a0ada33caa467ee4d14dcec08ac96b272fd4b02c75a"
+    sha256 cellar: :any, arm64_big_sur: "816feef4722edd8866c394110c503338eaba0bb373c87ddb9a898dc56b1adac7"
+    sha256 cellar: :any, big_sur:       "a82168d4f3a51a8078eb3603a9e3810f5a81e32e131fce032f4b505d6d0147e7"
+    sha256 cellar: :any, catalina:      "168dcec41346433e47d5478793216c86b96c4e9c2a31673e21de60b5f6a95427"
+    sha256 cellar: :any, mojave:        "d19b58b941d33a38e574e351d85445c5f8aee6c9ca6a164db874a2753138ae1c"
   end
 
   depends_on "bison" => :build
