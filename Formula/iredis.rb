@@ -10,10 +10,10 @@ class Iredis < Formula
   head "https://github.com/laixintao/iredis.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f0e463c20c1c268a67a1fde50395cfcc6c74baba53e8356c57b0f261d3e6ebf1"
-    sha256 cellar: :any_skip_relocation, big_sur:       "252d788ae97b897ef6746fb0d926def25c0be0f46a2bfe094483da8f9ecf933f"
-    sha256 cellar: :any_skip_relocation, catalina:      "86396d3fca30b99c9522e3e62adbde7822bfbe836c25c20bd457c121be90556d"
-    sha256 cellar: :any_skip_relocation, mojave:        "01730609934362b5a1a75e021af671efe2d5d6afc4d3a3bbcdf90680ee4abc18"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5244f3000f4ae1070ef1ff2c4a573010c855dc2bebf49dbcb51c748f12f5e930"
+    sha256 cellar: :any_skip_relocation, big_sur:       "87232e4432a038363d2f82d46432413b552e36f1d102262b44e9313f4c047477"
+    sha256 cellar: :any_skip_relocation, catalina:      "69fdb1735e81cd4c42331482397549920c14c5551459366db23abc87eb31f664"
+    sha256 cellar: :any_skip_relocation, mojave:        "e16b775087fa092b6e03091b4bda5f52e47aaea4323dc1741650d141489f9863"
   end
 
   depends_on "python@3.10"
