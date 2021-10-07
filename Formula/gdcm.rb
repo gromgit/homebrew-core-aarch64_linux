@@ -1,10 +1,9 @@
 class Gdcm < Formula
   desc "Grassroots DICOM library and utilities for medical files"
   homepage "https://sourceforge.net/projects/gdcm/"
-  url "https://github.com/malaterre/GDCM/archive/v3.0.9.tar.gz"
-  sha256 "fcfc50ea8809bd4a173550c7d7bb4f8722ae0781fbf17240ce84a04e90af0e9b"
+  url "https://github.com/malaterre/GDCM/archive/v3.0.10.tar.gz"
+  sha256 "a3fd3579ca0bb4a2a41ee18770e7303b22fd5460c3a2000e51ff0be6799e1d85"
   license "BSD-3-Clause"
-  revision 3
 
   livecheck do
     url :stable
@@ -36,12 +35,6 @@ class Gdcm < Formula
   end
 
   fails_with gcc: "5"
-
-  # Fix build for GCC 11.  Remove with next release.
-  patch do
-    url "https://github.com/malaterre/GDCM/commit/1c971ff1697d29c63e404403d345f869768c0bdb.patch?full_index=1"
-    sha256 "ed6e5b75015b21a17eec55a0ae7bd3d62b39db234fc0d9e462f29b479a9c2c2a"
-  end
 
   def install
     ENV.cxx11
