@@ -7,11 +7,11 @@ class PythonYq < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6f7369da386d517f765231a0f2c44950821857474f745c5093a640681efc7257"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3598941278045e43a5129d58e81f112ea35f3871a7354c8247bf598f7435d797"
-    sha256 cellar: :any_skip_relocation, catalina:      "3598941278045e43a5129d58e81f112ea35f3871a7354c8247bf598f7435d797"
-    sha256 cellar: :any_skip_relocation, mojave:        "3598941278045e43a5129d58e81f112ea35f3871a7354c8247bf598f7435d797"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ad5bf3abe58df999077d0441fe0d2fe2f7ca597913fef62b21af9719abbef934"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "01daaf8e43008c395ccf72223e825a93aa18a123dcb8d5d84209dbb8ecc87c92"
+    sha256 cellar: :any_skip_relocation, big_sur:       "9cf9533ef71e83cc6736a1f20b108895616644a8e437a73fbe45f6fe0670e46e"
+    sha256 cellar: :any_skip_relocation, catalina:      "9cf9533ef71e83cc6736a1f20b108895616644a8e437a73fbe45f6fe0670e46e"
+    sha256 cellar: :any_skip_relocation, mojave:        "9cf9533ef71e83cc6736a1f20b108895616644a8e437a73fbe45f6fe0670e46e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "01daaf8e43008c395ccf72223e825a93aa18a123dcb8d5d84209dbb8ecc87c92"
   end
 
   depends_on "jq"
