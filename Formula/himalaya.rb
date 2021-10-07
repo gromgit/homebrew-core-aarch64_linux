@@ -10,6 +10,7 @@ class Himalaya < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "b312c3288de354c72d4fdeaffe0cad976b4e0b05fd8c07232b5b39bd2eeeff3a"
     sha256 cellar: :any_skip_relocation, catalina:      "32e04cd25c7c15f041ffbbb835d789b4d90aa1368d26478011d91d79e6303d7d"
     sha256 cellar: :any_skip_relocation, mojave:        "155a6e3097c420a9b48a6136778fc35b1deadec83047da7c1f5b4d92a81f32f8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a3f38e475139deecaca7a218e4d38f8864dc65d6ef293379b08b9e707c0ffa9b"
   end
 
   depends_on "rust" => :build
