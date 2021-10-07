@@ -6,16 +6,16 @@ class Awscli < Formula
   license "Apache-2.0"
 
   stable do
-    url "https://github.com/aws/aws-cli/archive/2.2.43.tar.gz"
-    sha256 "0284c0c33b682d7cf08975d1240838ac99901b744c83490b24a9bbf1ff1a4803"
+    url "https://github.com/aws/aws-cli/archive/2.2.44.tar.gz"
+    sha256 "46301647ad1ae9cb11b253b0a69938faa92f67f45b7153f13a80535edea555ff"
 
     # Botocore v2 is not available on PyPI and version commits are not tagged. One way to update:
     # 1. Get `botocore` version at https://github.com/aws/aws-cli/blob/#{version}/setup.cfg
     # 2. Get commit matching version at https://github.com/boto/botocore/commits/v2
     resource "botocore" do
-      url "https://github.com/boto/botocore/archive/ec4c90582ce2b2446dc5c3e259bc5d146ef2973d.tar.gz"
-      sha256 "9243098716e79efb97204414e014db231e6e211fd7f471d3384eafd096232c15"
-      version "2.0.0dev151"
+      url "https://github.com/boto/botocore/archive/a653ad3129a55281758fa7abadf2330f0adea887.tar.gz"
+      sha256 "746edacb7371c16d73e97d56c96268270c2fb82e41560b666e785cc44291b1a3"
+      version "2.0.0dev152"
     end
   end
 
@@ -127,7 +127,21 @@ class Awscli < Formula
       ENV.prepend "CFLAGS", "-I./build/deps/install/include"
       ENV.prepend "LDFLAGS", "-L./build/deps/install/lib"
     end
-    virtualenv_install_with_resources
+
+    # venv.pip_install_and_link cannot be used due to requiring the `--no-build-isolation` flag
+    # See upstream build instructions: https://github.com/aws/aws-cli/blob/2.2.44/requirements-runtime.txt
+    # This should be able to be reversed in future: https://github.com/Homebrew/homebrew-core/pull/86527#issuecomment-936763994
+    venv = virtualenv_create(libexec, "python3")
+    venv.pip_install resources
+
+    system libexec/"bin/pip", "install", "-v", "--no-deps",
+                              "--no-binary", ":all:",
+                              "--ignore-installed",
+                              "--no-build-isolation",
+                              buildpath
+
+    bin.install_symlink Dir[libexec/"bin/aws*"]
+
     pkgshare.install "awscli/examples"
 
     rm Dir["#{bin}/{aws.cmd,aws_bash_completer,aws_zsh_completer.sh}"]
@@ -141,8 +155,6 @@ class Awscli < Formula
         if [[ -f $e ]]; then source $e; fi
       }
     EOS
-
-    system libexec/"bin/python3", "scripts/gen-ac-index", "--include-builtin-index"
   end
 
   def caveats
