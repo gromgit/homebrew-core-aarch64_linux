@@ -6,7 +6,7 @@ class Cake < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "a6f03c118ac1931711fa751443847e3b4bea3a89a7dfd4fa13c968629342b7c4"
+    sha256 cellar: :any_skip_relocation, all: "07296553a62cd35f5c25ab24cd8a36179db132c965ed5c2afd30853aa2313e51"
   end
 
   depends_on arch: :x86_64 # mono is not yet supported on ARM
