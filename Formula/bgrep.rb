@@ -18,7 +18,9 @@ class Bgrep < Formula
   end
 
   def install
-    system ENV.cc, ENV.cflags, "-o", "bgrep", "bgrep.c"
+    args = %w[bgrep.c -o bgrep]
+    args << ENV.cflags if ENV.cflags.present?
+    system ENV.cc, *args
     bin.install "bgrep"
   end
 
