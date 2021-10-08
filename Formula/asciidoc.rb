@@ -15,7 +15,7 @@ class Asciidoc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "6a697842eca38197c1dbf98e0d4948d4712ca71ead18f2d47c31a9b333c68280"
+    sha256 cellar: :any_skip_relocation, all: "c9ddf877047f2b026bc790eb8f7414ea909dbd213c92b50fba336da80e1d8286"
   end
 
   depends_on "autoconf" => :build
