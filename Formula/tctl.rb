@@ -6,11 +6,11 @@ class Tctl < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "030b3ebf05fa1758ba8f02d430eecd3a2769001ed672b5c6deaef1116dd2996f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "14101c2dc8c76f3fff7676783a347077aed55530d4ae349e6ba16315cf269780"
-    sha256 cellar: :any_skip_relocation, catalina:      "886f8b00bc73eaba76a9b2107c8f61b4e960c2c58903dd378440a0a0372cfd0b"
-    sha256 cellar: :any_skip_relocation, mojave:        "7f11ed7e38f57a53a2be8d03699938a5cea98227acaacfb330686fa13afe3c7c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dc61616aca3a4bdd68d9e9be00315d17ac66c37e355ff057b2dd4b6b8bc418c1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3f7c7bc02f74eb2a1a42c7fe9b152b512090acf29cd999da5c4d314712bb5d00"
+    sha256 cellar: :any_skip_relocation, big_sur:       "bc9baee6ccabcf595d07a207afc60eda1cb56d6eeed4efc46b4880143a504f7e"
+    sha256 cellar: :any_skip_relocation, catalina:      "2e5e643ffd01f0fceb0259a1e1dc8fa3d48e44bdbd9ecb1591efd7ddc181d3e7"
+    sha256 cellar: :any_skip_relocation, mojave:        "ebf347dc25bfb6adf5700d96078d4ef273cb36a522bb439ff45d8dc01e3193b2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a2be65b489682c2ab5d5677c9732e8af4f17038c2854a21cf77a1b19d034604c"
   end
 
   depends_on "go" => :build
