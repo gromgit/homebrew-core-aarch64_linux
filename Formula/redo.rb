@@ -9,11 +9,11 @@ class Redo < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b9483fed7aef21d0f5701c800ca7bb5eb98b94ee20f6cc398ec7ef6d6363c2cf"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b4a239a929dba39221ac591987fc1c73ad805858984a2131b6e9bc485cce7ed9"
-    sha256 cellar: :any_skip_relocation, catalina:      "260cb36224abce5771d243c8a042ec1c49854a2c6d88966e5386cec448419e22"
-    sha256 cellar: :any_skip_relocation, mojave:        "3dc4638a8e498c209bb002fa8358929664ccf3c51d50ebbf5dec596b3d25e4de"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cd16170577d9aaecc168b487a58dbcfb466e2247738983a0901066a942c57498"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "22dd0cd4b9d1e945d90a6bce7138c7c0b5e834d74c0be14fd39258b8225dd8af"
+    sha256 cellar: :any_skip_relocation, big_sur:       "db186be965150e95e72d55d47acb86cf4839fa7949149e01522870c7a640edce"
+    sha256 cellar: :any_skip_relocation, catalina:      "ed58682729a217dcbfa7ace51f5ec8a3d57cdb30248173820d1bdbd599999675"
+    sha256 cellar: :any_skip_relocation, mojave:        "653c09646f838dfed31e0f79f3364d2604cc688a8735e098736092a55a631d3e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6e6d7dcf5e439d5a882a2bf480cff8a35b2e3cfe22e967935de67313444d3a46"
   end
 
   depends_on "python@3.10"
