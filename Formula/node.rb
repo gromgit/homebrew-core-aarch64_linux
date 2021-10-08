@@ -1,10 +1,9 @@
 class Node < Formula
   desc "Platform built on V8 to build network applications"
   homepage "https://nodejs.org/"
-  url "https://nodejs.org/dist/v16.10.0/node-v16.10.0.tar.xz"
-  sha256 "97dc1aca232b4911e0b9e5a23a03200ab8ef05157e03c732315b579481bf7912"
+  url "https://nodejs.org/dist/v16.11.0/node-v16.11.0.tar.xz"
+  sha256 "d3f631bd0d215ded26b49b2eae42c84de2ba1b46f00cc2930809900a0f7165ae"
   license "MIT"
-  revision 1
   head "https://github.com/nodejs/node.git", branch: "master"
 
   livecheck do
@@ -21,13 +20,13 @@ class Node < Formula
   end
 
   depends_on "pkg-config" => :build
-  depends_on "python@3.9" => :build
   depends_on "brotli"
   depends_on "c-ares"
   depends_on "icu4c"
   depends_on "libnghttp2"
   depends_on "libuv"
   depends_on "openssl@1.1"
+  depends_on "python@3.9"
 
   uses_from_macos "zlib"
 
@@ -45,8 +44,8 @@ class Node < Formula
   # We track major/minor from upstream Node releases.
   # We will accept *important* npm patch releases when necessary.
   resource "npm" do
-    url "https://registry.npmjs.org/npm/-/npm-7.24.0.tgz"
-    sha256 "d2e8e006bf34a06314d41ad7b23417984d479e9834ce180551047b3ba89a7556"
+    url "https://registry.npmjs.org/npm/-/npm-8.0.0.tgz"
+    sha256 "7b42b3cc7deeda21df3a7e91ce81c6c466bdab99f204e20f2a336f4628366219"
   end
 
   # Fix build with brewed c-ares.
