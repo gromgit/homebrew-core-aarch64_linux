@@ -1,8 +1,8 @@
 class Msmtp < Formula
   desc "SMTP client that can be used as an SMTP plugin for Mutt"
   homepage "https://marlam.de/msmtp/"
-  url "https://marlam.de/msmtp/releases/msmtp-1.8.16.tar.xz"
-  sha256 "c04b5d89f3df0dee9772f50197c2602c97c5cdb439b6af539c37bf81b20f47d8"
+  url "https://marlam.de/msmtp/releases/msmtp-1.8.17.tar.xz"
+  sha256 "0fddbe74c1a9dcf6461b4a1b0db3e4d34266184500c403d7f107ad42db4ec4d3"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -18,19 +18,25 @@ class Msmtp < Formula
     sha256 x86_64_linux:  "8560c7eaed75bbc84f3bd6533864155fdce07e95c3b948663316df3dd5c13d98"
   end
 
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
   depends_on "pkg-config" => :build
+  depends_on "gettext"
   depends_on "gnutls"
+  depends_on "libidn2"
+
+  # Patch is needed on top of 1.8.17 to fix build on macOS.
+  # Remove in next release. Build dependencies autoconf and automake can also
+  # be removed in next release, as well as the autoreconf call in the install block.
+  # See https://github.com/marlam/mpop-mirror/issues/9#issuecomment-941099714
+  patch do
+    url "https://git.marlam.de/gitweb/?p=msmtp.git;a=patch;h=7f03f3767ee6b7311621386c77cb5575fcaa13d0"
+    sha256 "5896a6ec4f12e8c2c56c957974448778bcdf1308654564cdc5672dac642400c3"
+  end
 
   def install
-    args = %W[
-      --disable-debug
-      --disable-dependency-tracking
-      --disable-silent-rules
-      --with-macosx-keyring
-      --prefix=#{prefix}
-    ]
-
-    system "./configure", *args
+    system "autoreconf", "-ivf"
+    system "./configure", *std_configure_args, "--disable-silent-rules", "--with-macosx-keyring"
     system "make", "install"
     (pkgshare/"scripts").install "scripts/msmtpq"
   end
