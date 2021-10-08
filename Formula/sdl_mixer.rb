@@ -58,15 +58,13 @@ class SdlMixer < Formula
 
   test do
     testpath.install resource("playwave")
-    cocoa = ""
-    on_macos do
-      cocoa = "-Wl,-framework,Cocoa"
-    end
-    system ENV.cc, "-o", "playwave", "playwave.c", "-I#{include}/SDL",
+    cocoa = []
+    cocoa << "-Wl,-framework,Cocoa" if OS.mac?
+    system ENV.cc, "playwave.c", *cocoa, "-I#{include}/SDL",
                    "-I#{Formula["sdl"].opt_include}/SDL",
                    "-L#{lib}", "-lSDL_mixer",
                    "-L#{Formula["sdl"].lib}", "-lSDLmain", "-lSDL",
-                   cocoa
+                   "-o", "playwave"
     Utils.safe_popen_read({ "SDL_VIDEODRIVER" => "dummy", "SDL_AUDIODRIVER" => "disk" },
                           "./playwave", test_fixtures("test.wav"))
     assert_predicate testpath/"sdlaudio.raw", :exist?
