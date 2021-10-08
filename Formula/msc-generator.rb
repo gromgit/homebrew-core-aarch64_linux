@@ -1,8 +1,8 @@
 class MscGenerator < Formula
   desc "Draws signalling charts from textual description"
   homepage "https://sourceforge.net/p/msc-generator"
-  url "https://downloads.sourceforge.net/project/msc-generator/msc-generator/v6.x/msc-generator-6.3.10.tar.gz"
-  sha256 "0ed111f00d3638774458fc4fe48314f1223b2c85233d5ed3a8dd3bfbaafdb1f8"
+  url "https://downloads.sourceforge.net/project/msc-generator/msc-generator/v7.x/msc-generator-7.0.4.tar.gz"
+  sha256 "d79db7c6fb262564374301281cc589682c974b6b7872b37329500f6f79767480"
   license "AGPL-3.0-or-later"
 
   bottle do
@@ -18,8 +18,12 @@ class MscGenerator < Formula
   depends_on "help2man" => :build
   depends_on "pkg-config" => :build
   depends_on "cairo"
+  depends_on "gcc"
   depends_on "glpk"
   depends_on "graphviz"
+  depends_on "sdl2"
+
+  fails_with :clang # needs std::range
 
   def install
     system "./configure", "--prefix=#{prefix}"
