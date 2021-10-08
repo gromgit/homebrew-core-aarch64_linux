@@ -12,11 +12,10 @@ class GoBoring < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "af50e7495fa248016283b789a1a8cb01cb3ce1242c76ec18b42e4af11502040a"
-    sha256 big_sur:       "314d56e3de0b807847d3ddddefb467782880de0dc127a8c4df9ba67ca0765ada"
-    sha256 catalina:      "034698fbe3a7292f4c2ce3eb7d6b9ddb92ee20cf23a923cd82fe7010dc030ff9"
-    sha256 mojave:        "3caae2cc1e6a8ea6bdfc6fe2f5da14652f7f9493d3b1f3170d7bc9f72b6936d7"
-    sha256 x86_64_linux:  "909d8305bad25d2f6b3ddd71c2d8dbd2685073396f11fd63c305c839aa8540e1"
+    sha256 arm64_big_sur: "f820157e72b0f0859fa765caf55c1f1358334683aaec12ed0a8f6e351343ea98"
+    sha256 big_sur:       "8e67d20fbe6c3ad175f38e5441a5bce596e5d75c3375e6a16e3a0baa9a3914dc"
+    sha256 catalina:      "d127ed3369a0eda1bf361fd9f9c1fe061f41ec3b77719ede8fc88dd0714efb18"
+    sha256 mojave:        "9c0f907291b602a087563ae5ec1b340150682fcecb9c61056833aef4d4cea66f"
   end
 
   keg_only "it conflicts with the Go formula"
