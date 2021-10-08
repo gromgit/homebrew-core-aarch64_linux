@@ -8,11 +8,11 @@ class Richmd < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "df702c08a5aca056fea99356bf60c6de0b855144bb7d5f68d84eb795c27bc2cd"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0ca92ddcbca02aa64b739b42c4003a1be0bb1c4d4cae82272fc6d1335e105e5c"
-    sha256 cellar: :any_skip_relocation, catalina:      "92ff405d451f98e019371f3448debc0822d3a14497340184271f47097683a097"
-    sha256 cellar: :any_skip_relocation, mojave:        "c04c36c6bb943f7d300284506788d2e262f0e19e7a855327a6dde17ea435b715"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e0fd7ce184e1958e82d873ad584f6bff4db98ce010ad8ca3f68df70fa6698075"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2007a1699b391f8aad831f22994d93ca0b71911f844ad6ffc9c008a6846a088a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4b180be6656c9e37de0c524ebd53d481c71306dc0b8ccb9500b3682ed52850f6"
+    sha256 cellar: :any_skip_relocation, catalina:      "8bfd7eaf8c4749971915e9e6bdd5ce507535a2e9b009c0679d0624eecb1b28d6"
+    sha256 cellar: :any_skip_relocation, mojave:        "d785977634c44d46b4fb2d35569464969eed3e0844e9bbdb2ba9e6b55a70cb55"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "598366c5b63761126bdc0b58b9be03fd9479f860a3d93eda65222f98c738d736"
   end
 
   depends_on "python@3.10"
