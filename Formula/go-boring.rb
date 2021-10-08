@@ -16,6 +16,7 @@ class GoBoring < Formula
     sha256 big_sur:       "314d56e3de0b807847d3ddddefb467782880de0dc127a8c4df9ba67ca0765ada"
     sha256 catalina:      "034698fbe3a7292f4c2ce3eb7d6b9ddb92ee20cf23a923cd82fe7010dc030ff9"
     sha256 mojave:        "3caae2cc1e6a8ea6bdfc6fe2f5da14652f7f9493d3b1f3170d7bc9f72b6936d7"
+    sha256 x86_64_linux:  "909d8305bad25d2f6b3ddd71c2d8dbd2685073396f11fd63c305c839aa8540e1"
   end
 
   keg_only "it conflicts with the Go formula"
