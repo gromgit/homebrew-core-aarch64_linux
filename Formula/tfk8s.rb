@@ -6,6 +6,14 @@ class Tfk8s < Formula
   license "MIT"
   head "https://github.com/jrhouston/tfk8s.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a1b1a9bb816036abc0784dfe452695e60c1c68afd115e67939d3d433e86482b1"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b5f31892d190ba1efd7022a82807897a6425541eb9ac4145d6ee1dec65b9182c"
+    sha256 cellar: :any_skip_relocation, catalina:      "6c59969d1485a8da95fc91f36651f66e408ab914dbbab5de7506c7116984eb18"
+    sha256 cellar: :any_skip_relocation, mojave:        "5719e16f622f7b70c2ddbcab9e3eef4e4039f5c73be904608ac50bc7d515031b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7957afd5e810dca0c340a217f9ddafae13ed173dc10d8b0cc7642607a3ad72be"
+  end
+
   depends_on "go" => :build
 
   def install
