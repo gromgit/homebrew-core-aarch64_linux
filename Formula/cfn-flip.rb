@@ -8,11 +8,11 @@ class CfnFlip < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fa9e0a1f4ef0f98dff5a789bfca9bcc07dbc42b8abd36f29f52152f9908cc5a0"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a91993826fa88ef0dce786d49b3ad6ec66870d8589e77386c3e7ea89fea2a10e"
-    sha256 cellar: :any_skip_relocation, catalina:      "a91993826fa88ef0dce786d49b3ad6ec66870d8589e77386c3e7ea89fea2a10e"
-    sha256 cellar: :any_skip_relocation, mojave:        "a91993826fa88ef0dce786d49b3ad6ec66870d8589e77386c3e7ea89fea2a10e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "06a7855948400b72f52fd405d4f12a0736fc9060890e0c3549e71ac0895e0291"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c30e20ba1e20a93f6c4e0cb15b76f2c7cbd9cf65d0bc4865d933d3a6c8d16aa4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "2fc754ceec0d6bd7964c67c025dd6194396b3c5a8b7e857cffceb80d1d540869"
+    sha256 cellar: :any_skip_relocation, catalina:      "173f26ac0f8cdd2e87e3555dbbab76c30b674b949a07bf27b5b8fe6ffbb406d7"
+    sha256 cellar: :any_skip_relocation, mojave:        "49d83ff2732db641922de273119a56b99d286ef95b489a96a06cd509b004c65d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1956e8bde147547f9b1812bf32964d1f22dd7c512fca7b0ba23c4cadaad31cb4"
   end
 
   depends_on "python@3.10"
