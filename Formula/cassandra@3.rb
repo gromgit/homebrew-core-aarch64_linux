@@ -6,6 +6,12 @@ class CassandraAT3 < Formula
   sha256 "bbe772956c841158e3228c3b6c8fc38cece6bceeface695473c59c0573039bf1"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, big_sur:  "0b1f7fd2d534222aaf07a26540d8464b2733e0a91775e0d85f6292c82bd0e2fa"
+    sha256 cellar: :any_skip_relocation, catalina: "ff2f0d009a5976c8f660bfa5371076ce360df8e26811305116e97f982e95eb2c"
+    sha256 cellar: :any_skip_relocation, mojave:   "4f732fcd032cbb3044bcb71df062470c0c0ac980601278fc84889ea933c8a17f"
+  end
+
   keg_only :versioned_formula
 
   deprecate! date: "2022-04-01", because: :deprecated_upstream
