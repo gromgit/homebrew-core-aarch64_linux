@@ -8,10 +8,10 @@ class CrosstoolNg < Formula
   head "https://github.com/crosstool-ng/crosstool-ng.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "6b511659323ff03bd405c20e8591cacb55dbb081fe8f2416666228d9ed4cf1a8"
-    sha256 cellar: :any, big_sur:       "179cfc5008cbff1c21aba36ba14a9fb76e927035bf2554cdd0761382d70e58ca"
-    sha256 cellar: :any, catalina:      "77abb4c65e4eeabbc3300464367462c9342b6b4a6aa2342d6f92c6a682f91dd9"
-    sha256 cellar: :any, mojave:        "897d58874abdcf5dd4b7e606e8996f16255a996f53df29ff9dfcc2774ca5ef22"
+    sha256 cellar: :any, arm64_big_sur: "254e9876927261a6efc043b3e856efc9c03950dd12e54be66924dd4653683a78"
+    sha256 cellar: :any, big_sur:       "6955331d9b2ba412d96239337c8a46630c351f9081f0193607d89939ac38c66e"
+    sha256 cellar: :any, catalina:      "162c6baa79fd3f140e750d6ec65273c4e9f3b48b82f491937dd53b5debd21a89"
+    sha256 cellar: :any, mojave:        "d0fbd991dd2862f0edeca38ecc360743f78d0d67ec9b4ad41e3a4b2949b39acd"
   end
 
   depends_on "help2man" => :build
