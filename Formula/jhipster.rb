@@ -9,11 +9,11 @@ class Jhipster < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "456d80527406219cc94629f0a5409b0f1c0d4c0939e3b2d8e3eeeb181af6afe9"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e66245e7f20ae029c1575ad8d93521ef8c4bef280a5258334379d41a33c41907"
-    sha256 cellar: :any_skip_relocation, catalina:      "053d27b5a22c1ebea7006a325846f6bb7bc8162681c7a2105498338a773568d2"
-    sha256 cellar: :any_skip_relocation, mojave:        "dd95ce80f3862b6577bbd0fe920cb22691ae04316623285f399316234c506c0f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a12d04782b4a8c5d489125a9a66a4498b4da99bcda87cdf11b03b6839a6fe073"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "23480174aa3ca6b111c7467391a03c47de4eb81e1afb895859d6d9f8fd73780c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "8b8150fdb29447bfc341eecdb4420e55e363b20ba6d855d8dbe1ea196c0fe549"
+    sha256 cellar: :any_skip_relocation, catalina:      "a3e23bd1bb8a5617d52658e66a957702f77366a19901f1a9ce3c5cb102eaa976"
+    sha256 cellar: :any_skip_relocation, mojave:        "dc822516f9a30a7dc214c7b02502f4ebbbe2887892f81a9ac368c888d0724ac4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b9a71d97817ac9dc2c5fa1ca16603df3e99923fc34b7b5fc96c3a684d1cfdb77"
   end
 
   depends_on "node@14"
