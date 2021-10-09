@@ -1,9 +1,9 @@
 class FreeradiusServer < Formula
   desc "High-performance and highly configurable RADIUS server"
   homepage "https://freeradius.org/"
-  url "https://github.com/FreeRADIUS/freeradius-server/archive/release_3_0_23.tar.gz"
-  sha256 "6192b6a8d141545dc54c00c1a7af7f502f990418d780dcae76074163070dbb86"
-  license "GPL-2.0"
+  url "https://github.com/FreeRADIUS/freeradius-server/archive/release_3_0_25.tar.gz"
+  sha256 "493b0b9bef3d9f0e6949fcfd6aa282164f6b8e6404231f2b0d1353739199ffcd"
+  license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
   head "https://github.com/FreeRADIUS/freeradius-server.git"
 
   livecheck do
