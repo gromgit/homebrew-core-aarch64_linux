@@ -9,10 +9,10 @@ class Borgbackup < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "2407cbfb1d2e093d34812a56bb1c8c48d0dab15d34e1663849916dc47a00e771"
-    sha256 cellar: :any, big_sur:       "077adc5c673ec0c7f8bcb629afa5f21f46393048db0e7e98e035fbccb5f7006f"
-    sha256 cellar: :any, catalina:      "0804ae6e2cedcfb94246eb2b93e765b338b7bb6eb971559cbf2b8118cf8bd532"
-    sha256 cellar: :any, mojave:        "f3187778ef7a0181b5d8ee731a8f2595a09fcf9aa19f726ee2a9cc9fc2c8e763"
+    sha256 cellar: :any, arm64_big_sur: "3d823d3a5b30435f09cf44be79f3aa2267fa80a59c099820913ae673f0bf597f"
+    sha256 cellar: :any, big_sur:       "0645cde1b652a418625603b783feb35af47ba987904b7f71604ea429d2eae246"
+    sha256 cellar: :any, catalina:      "4cd0fd62d3dcdd6df8d7cb27e913b0d1e1964814eeb95f0214afdb6687d639a3"
+    sha256 cellar: :any, mojave:        "9722b73c2e68d7d88161c57639044884dea3f7db0c4f5643a9a6b2d9d3c2b3fc"
   end
 
   depends_on "pkg-config" => :build
