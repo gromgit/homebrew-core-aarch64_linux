@@ -10,10 +10,10 @@ class DetectSecrets < Formula
   head "https://github.com/Yelp/detect-secrets.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "f64e0d1c58f4cd62680c3bea81d2cf234642759850ecfc2eac220ca27a045505"
-    sha256 cellar: :any, big_sur:       "8a3b941f5409898b82c9bf270b1b41921b51284d57bea2ee5f0600a3759ed6f8"
-    sha256 cellar: :any, catalina:      "9b7a4c920bf10f885eb285bd44cd06b1715899840d81d524df30e5bb6214fd2b"
-    sha256 cellar: :any, mojave:        "ab2be26f2af7a22984cf65aa06b9dc9a4c0183ccb9f5fee83bf12aae6994cec3"
+    sha256 cellar: :any, arm64_big_sur: "26c83f1239a9a4232991e8c2ac0d7aa5f2657409d647f020a549cf83af96032b"
+    sha256 cellar: :any, big_sur:       "1803df0d2f14fa8eb852f84b1ccf5e7e22da6219f001d1ec5cf617d42c3a095d"
+    sha256 cellar: :any, catalina:      "41e50c5f13445c03b7e3d4f0c97d357c5886011d5fc2dcc8a93e89e387a14345"
+    sha256 cellar: :any, mojave:        "5feaab84d7f0c91d3453f93c019abf3abd5ec04c66d22798925ecd0b27baeeb9"
   end
 
   depends_on "libyaml"
