@@ -10,11 +10,11 @@ class Ansible < Formula
   head "https://github.com/ansible/ansible.git", branch: "devel"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "8240d4268f54d78c7f7bd7a587006252c4303fa9529303c7d49343b243298c56"
-    sha256 cellar: :any,                 big_sur:       "8a1fa9fc52e8cd83f6c49551c43caded21228d242b1bef3e41d4e6ac13f96872"
-    sha256 cellar: :any,                 catalina:      "e26f0877372bebf5e88146ae395700c8e9d9324b8ad4dd70595d8e32026f26f0"
-    sha256 cellar: :any,                 mojave:        "c91475f36834d6c4374101d1ec6a04618ad43f9006186fe690f6abeccbd2adf5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bf1b87c543f8c608505df2df3da17d57ac198a4a642bcc3000e8cf8294668019"
+    sha256 cellar: :any,                 arm64_big_sur: "7fd5f4cb7b62367db142aea66785cf5193a15a1de92d1b6533405d636d95b28d"
+    sha256 cellar: :any,                 big_sur:       "a91bbecad9c90b8a73873d56df7986a02e18c1cc6965fa4d6b57d5e092c93fbd"
+    sha256 cellar: :any,                 catalina:      "ac2e8253af0e52827d3bd12e030abb1f2ab7a74495184e3440d1d08e5916898b"
+    sha256 cellar: :any,                 mojave:        "878cc59240f66e6e40cf67c61ffee9aa4b234f299ffa563834dfc255d03e83bb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "25d8616618bbe963a14d6caaa81c50a99412660370d563417422ebb40d137392"
   end
 
   depends_on "pkg-config" => :build
