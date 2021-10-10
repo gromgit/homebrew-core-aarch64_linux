@@ -10,10 +10,10 @@ class QtMariadb < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "7b978db92185d7d6f52fafe8d196863f2b62fcd86911ed183a24b53363dd417e"
-    sha256 cellar: :any, big_sur:       "596806c9e6de809f6f7e239976073465030714649573148ca56d7e4d044d8364"
-    sha256 cellar: :any, catalina:      "ed81131eab6a4fb46cb80b3605bd7a6889fbb9a9040b6e621620cc3ab2a15470"
-    sha256 cellar: :any, mojave:        "43806eee1b41374e1a2af7eb9f177bb9aa658a02081012c7cdd0494dee773a15"
+    sha256 cellar: :any, arm64_big_sur: "979b1aa0f33965244520ad32e17a701081b0bfe5583de120071128f52da8b91f"
+    sha256 cellar: :any, big_sur:       "44f33cfdee7d0722ec078847541481f89cd7a6c2e8260c1436e424c704b644c0"
+    sha256 cellar: :any, catalina:      "077b39f4be5e47917828585aa4cb81c7426a621d9390116af135a0f6d5dda294"
+    sha256 cellar: :any, mojave:        "0c7cf47c614c7cffbf56b3cc723f34ce1a401d768ea296e092bcb56bf6bf1424"
   end
 
   depends_on "cmake" => [:build, :test]
