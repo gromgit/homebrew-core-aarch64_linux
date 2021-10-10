@@ -10,12 +10,11 @@ class Rtv < Formula
   head "https://github.com/michael-lazar/rtv.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "aa894b5babc332d7d0f0e06e7a82afb6053514515186fe2b35b1c604d545b6e2"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0abf2060366a1e64f0d385649ff8a3ad0f57acec0b07d45bda57456c63a7b91f"
-    sha256 cellar: :any_skip_relocation, catalina:      "c3a4eb9ce139d6d768a8ff6f3dfaaf6c24dee517fd18a8243ba88215df162650"
-    sha256 cellar: :any_skip_relocation, mojave:        "aaffc3c8e0859424697554af41e79b82057e252b1d3ce5eb3e929a0695ed5785"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "76dd530c8986d96aa2417f565beb6b2db7662c84de06ff65e4953ceceff761d8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "06f7013a93251f013cb04c794127df9e731e7605e766c1712a4b3af1a601848c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5e96f33e3c6afc6dab203655e79aeff771de793219477460c290d3c00bcf9049"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d49d1db203bfd3a0c8eb2ac8106f96fdb94cdd4ccfb9f3865ff411c3e6abe3e2"
+    sha256 cellar: :any_skip_relocation, catalina:      "b8ea579f59636f222dc0da828906118a696612de5e689a4cdf273ddf2616e83b"
+    sha256 cellar: :any_skip_relocation, mojave:        "36cbfd834d11711acb05e970207774611f246a124e818a30e1892a3f33d1143b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "927350083466dd294f9391c50b9ed188cfbe213875683267be60d3a8b2740d5e"
   end
 
   deprecate! date: "2019-06-02", because: :repo_archived
