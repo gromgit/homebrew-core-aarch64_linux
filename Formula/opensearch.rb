@@ -6,9 +6,9 @@ class Opensearch < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "d63dcd1023deedb3ad52042cbe8bfce8281a588083ab9e8604d6b8422099a975"
-    sha256 cellar: :any_skip_relocation, catalina: "8aa940605e88e53f7668286ed2bbb3fe408fe3eec540cab45d6b3a708f5adb27"
-    sha256 cellar: :any_skip_relocation, mojave:   "5cb17b2bf8ed9638b91de236ba4ca2a04fe8224fb2d43ee1baf03c7287de79a8"
+    sha256 cellar: :any_skip_relocation, big_sur:  "83484e775335c5c8a2a4c3d791dfd609dbc6e832bf2ae74a0efee22828745fe5"
+    sha256 cellar: :any_skip_relocation, catalina: "7f01418a6721f2b542e3bde40447c1f6b41ba51f370930f2c51544abcd859c8c"
+    sha256 cellar: :any_skip_relocation, mojave:   "6add29af38af0405cdff40dd7fd6fbf656f6d45f502bc32d39f5d538b4d23040"
   end
 
   depends_on "gradle@6" => :build
