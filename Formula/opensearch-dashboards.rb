@@ -7,7 +7,7 @@ class OpensearchDashboards < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "efa4bc0a61f9f760ff91337eb2f703e546dc03659210c136c4dbba85146f8ae3"
+    sha256 cellar: :any_skip_relocation, all: "462dc37bc221e9c30afc971d931c7d0fdd50b66b42675e02056d140d49eaf1b3"
   end
 
   depends_on "python@3.9" => :build
