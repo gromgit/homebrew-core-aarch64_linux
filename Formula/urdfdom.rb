@@ -1,9 +1,9 @@
 class Urdfdom < Formula
   desc "Unified Robot Description Format (URDF) parser"
   homepage "https://wiki.ros.org/urdf/"
-  url "https://github.com/ros/urdfdom/archive/1.0.4.tar.gz"
-  sha256 "8f3d56b0cbc4b84436d8baf4c8346cd2ee7ffb257bba5ddd9892c41bf516edc4"
-  revision 2
+  url "https://github.com/ros/urdfdom/archive/3.0.0.tar.gz"
+  sha256 "3c780132d9a0331eb2116ea5dac6fa53ad2af86cb09f37258c34febf526d52b4"
+  license "BSD-3-Clause"
 
   livecheck do
     url :stable
@@ -23,12 +23,6 @@ class Urdfdom < Formula
   depends_on "console_bridge"
   depends_on "tinyxml"
   depends_on "urdfdom_headers"
-
-  patch do
-    # Fix for finding console_bridge 1.0
-    url "https://github.com/ros/urdfdom/commit/6faba176d41cf39114785a3e029013f941ed5a0e.patch?full_index=1"
-    sha256 "7aa3fdd462b47326bac6f8f94187be18459dcbad568cefb239625103d7b31239"
-  end
 
   def install
     ENV.cxx11
