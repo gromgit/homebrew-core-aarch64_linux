@@ -7,11 +7,11 @@ class MongoCxxDriver < Formula
   head "https://github.com/mongodb/mongo-cxx-driver.git"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "420a8d7b1a441550ba00b2b29c336932527a38c6190747e7eb8e3144ab2eda2e"
-    sha256 cellar: :any,                 big_sur:       "87df7b24f526a69518b53e40c08e01d2b97c049f6ed6e8dda4896584681cc923"
-    sha256 cellar: :any,                 catalina:      "6ea86cfbed1987bf3220c501206777b1393ddc939146ada8171365200518d6f4"
-    sha256 cellar: :any,                 mojave:        "e9ef0c9f9b7db18b26d6bcbe033748d072b614c4994dd1894eb06854861df6b9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3064f7f342547011ebc777a76b4efbafa30af18b1a62f1899376c7cad3e4d7db"
+    sha256 cellar: :any,                 arm64_big_sur: "39739b35a1ea90cbbd5d43e9623adfe38088ef5a19e82d2525e92f6128018923"
+    sha256 cellar: :any,                 big_sur:       "4a4b43266285d03ebc8a084a5c210c97ba845b8fd333eac87f4c395267a6967f"
+    sha256 cellar: :any,                 catalina:      "3376ae78c833751b52cce134f6bd1cfa48e13bc267abf9cb09402b8ccef5dda7"
+    sha256 cellar: :any,                 mojave:        "9936b280f4bdeffa5f2a50c07e860ca2025ac559b2e33e535e3077f97568576b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1bfa9bffbeeea55731cd27d71a64aa9da8e9c9f85e2b54946ff62257f5c55435"
   end
 
   depends_on "cmake" => :build
