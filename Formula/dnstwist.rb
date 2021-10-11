@@ -9,11 +9,11 @@ class Dnstwist < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "4629cbb678e58f68e70750ae9bbd7cf3ff5e133ab40291e1159d1174e48d55ef"
-    sha256 cellar: :any,                 big_sur:       "3d6e28eb3ec27b0c5e519aefa31e88a3d0f3818dd24ee50677c3926120c49299"
-    sha256 cellar: :any,                 catalina:      "a635f0cacdbd797e1cf6d62b0dc885790c9c0efb09d00158a790cc62eb7821c6"
-    sha256 cellar: :any,                 mojave:        "eac085a3319af5d90fef8a6fb2d495d3511b30da0ab118f6e9140b8093fa756c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0ca0289047b51d2ea49682a723c165f0a6865fd76ff5d255d9fdaca34b664e5e"
+    sha256 cellar: :any,                 arm64_big_sur: "bf760c8372a1f9683c4e286e1e33478b1b5cbf34a68161d19c0da008f764343c"
+    sha256 cellar: :any,                 big_sur:       "db37fce3570b0b571f2683c4c088fdfc27df598bb164e4fac250ab208daa2a97"
+    sha256 cellar: :any,                 catalina:      "04921cc3f53ea9e9cad458167fadfcc9f60e1b9c76e81954ee21b8f26ad51a5e"
+    sha256 cellar: :any,                 mojave:        "188c9b6cfd70f1cd4f2921b6b0fe71b224f46949b67d292ba28e9bcf6fd8399b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "63af2a88affd5f0f06ca0d41a5998e3b8d3cb7e206f587a5645861a9e0aa59cb"
   end
 
   depends_on "geoip"
