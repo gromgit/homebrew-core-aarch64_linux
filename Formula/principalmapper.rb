@@ -8,10 +8,10 @@ class Principalmapper < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "81130d1fd5f8317b1b497c522ff931a8f5ca7d845491d3870344ad1df664d889"
-    sha256 cellar: :any_skip_relocation, big_sur:       "451f2750ae0a2fa3f321970faad6d1ada35fb9034480bbbd1d00c92d3953108f"
-    sha256 cellar: :any_skip_relocation, catalina:      "e0974edc02b9a1e1b7c76bd2a5475d090b1cb0cb8081d9006e73fb30a02bfcae"
-    sha256 cellar: :any_skip_relocation, mojave:        "c8cdd19635a85b37574876e583c9c16684658064edad06204da53e6506855c64"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "70c568a9c38cac05d9322b896eee1242e595ee249ced25bfbf7f59a04da4d88b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "10f7fa907a504870d8111c9c6ea3deab55eb8bce87ec7689b22b9a0a18910d17"
+    sha256 cellar: :any_skip_relocation, catalina:      "7dd91fb6b983f5f4c5a4b56143b22c0def678278ec00b422f15c783a967da5c6"
+    sha256 cellar: :any_skip_relocation, mojave:        "4d10def939d3034a6c6aece9ba80ba596ac9ed73afb7417ed157ee3df5b9bced"
   end
 
   depends_on "python@3.9"
