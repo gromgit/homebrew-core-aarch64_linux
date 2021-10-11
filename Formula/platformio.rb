@@ -8,11 +8,11 @@ class Platformio < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "98e10a7d302db33ff1bcf606c15034668db7652e0680bc0b19e8db8fdd6d9bf9"
-    sha256 cellar: :any_skip_relocation, big_sur:       "43811fd6fb95b9e230f93b72015db0f2e7f289b21d061228821873ea28ecdf06"
-    sha256 cellar: :any_skip_relocation, catalina:      "1335a076edb0cdd4b8bf6781d741e14d71249d33bc4b46fde5e305cf28e47424"
-    sha256 cellar: :any_skip_relocation, mojave:        "6dd765ff75ae2247c4f4c940b9e3c791c8768f3cf48cec675fb8c711c897f002"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dc4a3881470f02e703a4a652549896194b7bc9b605b7b6d2bfc594e0520acacd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "54b18d636b489e6d65929d4cf65e0a4b3f4b47e6f0cd864dd3adaa471c100039"
+    sha256 cellar: :any_skip_relocation, big_sur:       "9a7e5242c257380e61a0a1373843afe7eacdbb51e64ffe784c79fbf8454f6d7a"
+    sha256 cellar: :any_skip_relocation, catalina:      "593dd20cb52f1f09c23918b1f0e5f0842df6fe5f16857fc826ef3f770a24a9f0"
+    sha256 cellar: :any_skip_relocation, mojave:        "9c081b87580247ded3a3cb33e4819e43e83805b5f0b1ea9eda9c7b1c2ab5b0e4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dad044e897f596e0175290f03ab91edd2024b91cf6edb31ea43491da9f70b457"
   end
 
   depends_on "python-tabulate"
