@@ -137,6 +137,9 @@
   "jupyterlab": {
     "exclude_packages": ["six"]
   },
+  "keepkey-agent": {
+    "exclude_packages": ["six"]
+  },
   "khard": {
     "exclude_packages": ["six"]
   },
