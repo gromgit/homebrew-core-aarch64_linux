@@ -9,12 +9,11 @@ class Instalooter < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a4a55d13f26a65b0f515babb39cfc643b1e0d27921251cb9f0f0f038d16c8680"
-    sha256 cellar: :any_skip_relocation, big_sur:       "cfee59324b528c7c9987e381a76bbaa246596e8606e90ffefd13741dce12f65b"
-    sha256 cellar: :any_skip_relocation, catalina:      "1ac4f0428acf9da6314fde7734672ce9f7ff5bd68a02f99d862b0ceafe109dee"
-    sha256 cellar: :any_skip_relocation, mojave:        "8e9a6b3f62bf93f9b2c39134b989a5f3cb82f5f52b2b62644b5ca2577da80337"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "6e9b033c6fa3b209d3d4dd6991f2ba3b0202ef2d3a1cf9061db5a597ba082e6f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a9305155251fb62c135df2e422d83c09ba7867bfe70f6fd02c934071320a2392"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "20316dff8da3999d6aa335e8e9d6555e1bdb4f9237421692c67944828ca1e60d"
+    sha256 cellar: :any_skip_relocation, big_sur:       "da5e277f2cd0dbdef07b853b1952de7798195760885dc39185ba20783109a5e3"
+    sha256 cellar: :any_skip_relocation, catalina:      "0f5793e71d06911c8345f2a8e4cb6c47ad92100695862f1e0cf7c0bbc16be5da"
+    sha256 cellar: :any_skip_relocation, mojave:        "76edccfab0fe943afd0754e2bb142fb6eec24462718efc49d915b3f0517058bd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "79d3ab0b25f10c67dbdb77dbd17ffe85fbbdb1a2eeccab0e6ffe6468ee5eeb02"
   end
 
   depends_on "python@3.10"
