@@ -6,10 +6,10 @@ class Pyqt < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "fea01af94d13d9a63aefa5196c41bdb6523ee9540ddab5b74cbdd7b04418d8a6"
-    sha256 cellar: :any, big_sur:       "c69056ae619b4767387d4cc75b5305bdf819fd857c5b72f39530a451202b4eca"
-    sha256 cellar: :any, catalina:      "255395daf91ee3e34ec61519d468ae2020fe2f244ded967dc3523473698a2933"
-    sha256 cellar: :any, mojave:        "04a213318ce8f6b223362d506aec2dbb5240b2a23b523530d97e1ccae7cc0fe9"
+    sha256 cellar: :any, arm64_big_sur: "8596b3e51d9d7c34f0b7808866e9a9a4f24d39f446da3277b833c29dcc271fcc"
+    sha256 cellar: :any, big_sur:       "22d736f182cd8c634cc7a54df46d85ddfd6c539105b79feec69fd1804ed78e63"
+    sha256 cellar: :any, catalina:      "b5d8b96aead59e1f9c7905d6a5841a6da1fd5d4b6b923c8598a9f65f72136715"
+    sha256 cellar: :any, mojave:        "679c7ed82d6a766d5adf794dedf19b499234431629003f45ff265d5f4ac41a6f"
   end
 
   depends_on "pyqt-builder" => :build
