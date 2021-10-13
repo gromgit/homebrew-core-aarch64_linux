@@ -6,7 +6,11 @@ class Spotbugs < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "909bd13daa52ea9f0bd3267c9491f6db74901e4ed7649f70db881db4d5c7aedf"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "073f01f87bc1678ecf70d08d368d1c2ca364246a3541763c82f23951d478080e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "073f01f87bc1678ecf70d08d368d1c2ca364246a3541763c82f23951d478080e"
+    sha256 cellar: :any_skip_relocation, catalina:      "073f01f87bc1678ecf70d08d368d1c2ca364246a3541763c82f23951d478080e"
+    sha256 cellar: :any_skip_relocation, mojave:        "073f01f87bc1678ecf70d08d368d1c2ca364246a3541763c82f23951d478080e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ef7b7973ca86f296ee764214853dd75f2afb6fc4a2a72f733e88fa8d18e17932"
   end
 
   head do
