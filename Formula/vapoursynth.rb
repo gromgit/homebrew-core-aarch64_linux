@@ -1,8 +1,8 @@
 class Vapoursynth < Formula
   desc "Video processing framework with simplicity in mind"
-  homepage "http://www.vapoursynth.com"
-  url "https://github.com/vapoursynth/vapoursynth/archive/R54.tar.gz"
-  sha256 "ad0c446adcb3877c253dc8c1372a053ad35022bcf42600889b927d2797c5330b"
+  homepage "https://www.vapoursynth.com"
+  url "https://github.com/vapoursynth/vapoursynth/archive/R57.tar.gz"
+  sha256 "9bed2ab1823050cfcbdbb1a57414e39507fd6c73f07ee4b5986fcbf0f6cb2d07"
   license "LGPL-2.1-or-later"
   head "https://github.com/vapoursynth/vapoursynth.git", branch: "master"
 
@@ -28,6 +28,12 @@ class Vapoursynth < Formula
   depends_on "python@3.9"
   depends_on "zimg"
 
+  on_linux do
+    depends_on "gcc"
+  end
+
+  fails_with gcc: "5"
+
   def install
     system "./autogen.sh"
     inreplace "Makefile.in", "pkglibdir = $(libdir)", "pkglibdir = $(exec_prefix)"
@@ -39,17 +45,6 @@ class Vapoursynth < Formula
                           "--with-python_prefix=#{prefix}",
                           "--with-python_exec_prefix=#{prefix}"
     system "make", "install"
-    %w[eedi3 miscfilters morpho removegrain vinverse vivtc].each do |filter|
-      rm prefix/"vapoursynth/lib#{filter}.la"
-    end
-  end
-
-  def post_install
-    (HOMEBREW_PREFIX/"lib/vapoursynth").mkpath
-    %w[eedi3 miscfilters morpho removegrain vinverse vivtc].each do |filter|
-      (HOMEBREW_PREFIX/"lib/vapoursynth").install_symlink \
-        prefix/"vapoursynth/lib#{filter}.dylib" => "lib#{filter}.dylib"
-    end
   end
 
   def caveats
@@ -63,15 +58,13 @@ class Vapoursynth < Formula
         brew install vapoursynth-imwri
       To use \x1B[3m\x1B[1mvapoursynth.core.ffms2\x1B[0m, execute the following:
         brew install ffms2
-        ln -s "../libffms2.dylib" "#{HOMEBREW_PREFIX}/lib/vapoursynth/libffms2.dylib"
+        ln -s "../libffms2.dylib" "#{HOMEBREW_PREFIX}/lib/vapoursynth/#{shared_library("libffms2")}"
       For more information regarding plugins, please visit:
         \x1B[4mhttp://www.vapoursynth.com/doc/plugins.html\x1B[0m
     EOS
   end
 
   test do
-    xy = Language::Python.major_minor_version Formula["python@3.9"].opt_bin/"python3"
-    ENV.prepend_path "PYTHONPATH", lib/"python#{xy}/site-packages"
     system Formula["python@3.9"].opt_bin/"python3", "-c", "import vapoursynth"
     system bin/"vspipe", "--version"
   end
