@@ -8,11 +8,11 @@ class Ocrmypdf < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "8332634b42011dc73eb33315035500755b1a58f8407d0f96193063e48be5497f"
-    sha256 cellar: :any,                 big_sur:       "96406d6e816785231f6c8da345b8ccbcb8ba07ced4517c3437ecb7a0120e34e5"
-    sha256 cellar: :any,                 catalina:      "7dee4477161e313ac8f62b649452919a3acb7c472370ea1a48ff0792f0da2b58"
-    sha256 cellar: :any,                 mojave:        "baf66676104168d743f75d99a6cef1851cf1a4592d4d74da23ba85799a658d4d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d98344bba35f07ccb7ab7ea56a6975743892e3c5a7b671f767af3c943cbe0941"
+    sha256 cellar: :any,                 arm64_big_sur: "a6c7743545da420095d8d33ebcf4ff623e3ad2340e01f201b51529cdd6bf6fec"
+    sha256 cellar: :any,                 big_sur:       "ceb8bb78e9081c006546db1eed4acde6be19f5c435311f3c7522f9b37bb284c0"
+    sha256 cellar: :any,                 catalina:      "1347c592068a852e607397c11b2257cf550e50420e29a1427339737af707f115"
+    sha256 cellar: :any,                 mojave:        "ea51b7baf31ea31b417c4ded018e411d973a4c4daa5d16be82358b76f96acdc6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "937840d25fcb0da33fdcb28e067ca0360b3d6ff79fa6162572b7c5cadc702d47"
   end
 
   depends_on "pkg-config" => :build
