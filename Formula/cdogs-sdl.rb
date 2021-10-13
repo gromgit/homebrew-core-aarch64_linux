@@ -1,8 +1,8 @@
 class CdogsSdl < Formula
   desc "Classic overhead run-and-gun game"
   homepage "https://cxong.github.io/cdogs-sdl/"
-  url "https://github.com/cxong/cdogs-sdl/archive/1.1.0.tar.gz"
-  sha256 "c5be3a2d2777f727d7dab505266a952e134d91b8d34d0ba4e21a901316a247ca"
+  url "https://github.com/cxong/cdogs-sdl/archive/1.1.1.tar.gz"
+  sha256 "a1a18efbd128249ac607f7bf04e09e4625d35509209be7e256461f2fabddd98e"
   license "GPL-2.0-or-later"
   head "https://github.com/cxong/cdogs-sdl.git", branch: "master"
 
@@ -25,6 +25,12 @@ class CdogsSdl < Formula
   depends_on "sdl2"
   depends_on "sdl2_image"
   depends_on "sdl2_mixer"
+
+  on_linux do
+    depends_on "glib"
+    depends_on "gtk+3"
+    depends_on "mesa"
+  end
 
   def install
     args = std_cmake_args
