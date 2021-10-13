@@ -8,11 +8,11 @@ class Sail < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0839f86d368574b7416c433ca1651bc6fb6a5a595ceb06c03538d1c7c4b02dbd"
-    sha256 cellar: :any_skip_relocation, big_sur:       "fd29c838ad725d0f9958b038cc2c29e3a8bfd078bdfc1abcfc22b0ea3e830a4d"
-    sha256 cellar: :any_skip_relocation, catalina:      "ea25c5774792b89bb39542b71cc6cec8f0f809fba27af9b81a9f51e2fddeebf2"
-    sha256 cellar: :any_skip_relocation, mojave:        "3fde749bd0c01943e03eb0eb6b6b592dd8b3eeb0bb151e9ee7a16b0acf71e29f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8e872a813abcb28b6eba665d56eb81484399755f61301140cdd098fc2b9565ed"
+    sha256 cellar: :any,                 arm64_big_sur: "e60a3a747b2544948cb8fb34d3b969a28144e2e03849c0fd37a585e4b09aae6e"
+    sha256 cellar: :any,                 big_sur:       "bf27e115f5a7417b887bbc8350a5b97d4e1a7bac52f98576393db9762f428777"
+    sha256 cellar: :any,                 catalina:      "4aa5ef28530b5b28984303e3d6173bdacb402fd703d1361814236f436ce2f4c8"
+    sha256 cellar: :any,                 mojave:        "4e33e87cb71cdce1691b253e6ce5975ed40ec11123aaaf600e092d689fb8961c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "62dbb2bfcf3533d99c572342e5cb4abdf4d6141c7b5a10b2f201d9e278d07f8a"
   end
 
   depends_on "rust" => :build
