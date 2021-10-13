@@ -11,11 +11,11 @@ class Msmtp < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "e3c002f51aad6d5fbe7b63a403c85c4f03357fb9e888b107adc07ebe26b91e88"
-    sha256 big_sur:       "6c263b2417be9fa52e5dd3e191e0ebc01700d1c84a0e1aee74e8627d2bb8667c"
-    sha256 catalina:      "517ec9746a322fccbea429fb43665eb89f8495f65c1c355ca92ca582bf5aea49"
-    sha256 mojave:        "d11af3fb5a135e6f7cd14a680c4cd9e9df021c88321bc3ae7dddb48711340406"
-    sha256 x86_64_linux:  "8560c7eaed75bbc84f3bd6533864155fdce07e95c3b948663316df3dd5c13d98"
+    sha256 arm64_big_sur: "ab15c648729695ee988e5b1442c1ed8e4260cb8fe94c0eca7ad2e7c84ffbe651"
+    sha256 big_sur:       "bc3bbdeb0e3334f9a60a37a24ec28c22f33364a37b53e01ad0a0a625f3eccde5"
+    sha256 catalina:      "de21416d9080c652d1579c71309daa54b41f7ba93414399aeac8f0c83cce8637"
+    sha256 mojave:        "a9cafc6ae8a4e6c0fd8ebc7db4bb6e06f0d4a3a981daf37d1d3deae1c02105e5"
+    sha256 x86_64_linux:  "577cbcb8bf6a7ee660b0d33d3cc6a0aaa1a785478af46bf9d59d242bf3b41bbc"
   end
 
   depends_on "autoconf" => :build
