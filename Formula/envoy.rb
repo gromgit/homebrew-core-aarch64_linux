@@ -10,9 +10,8 @@ class Envoy < Formula
 
   # Apple M1/arm64 is pending envoyproxy/envoy#16482
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:      "5d242c76931465e1bebc4ac62742bcdd68a42334679cc69f8c058e1f7b4147a1"
-    sha256 cellar: :any_skip_relocation, catalina:     "48e53aac4dc4b8c7603141b711730427a5ca94ce4d3e3ce572c1c01cd96ad9f2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "deab2f6221196615ee138102d6496f849b85a11880fcf5b783ec30e07ed78419"
+    sha256 cellar: :any_skip_relocation, big_sur:  "5d3c90329a1c5b7db6189ac8303616b0e6bc80840ecaa9d3f493a333f4f70f58"
+    sha256 cellar: :any_skip_relocation, catalina: "f1f2d674693b2ddc193287090801689231f2e0f1197eb941c45fe711e1632e60"
   end
 
   depends_on "automake" => :build
