@@ -20,10 +20,10 @@ class Podman < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "03f38f5d89276c5b448812e4add56822e9e85c912d8fd078d87c0606b781cc5b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8bce96d8fd2067f0fdd5ea9c1d6d76ddeb9177cfef3309a85a60013b037e0b33"
-    sha256 cellar: :any_skip_relocation, catalina:      "04544f80c3bd97f7da4650822ac0b982335eed1d18032d4e118bd9a181dbdf94"
-    sha256 cellar: :any_skip_relocation, mojave:        "e56623493f090b800054d70a611b087528576b3ba3cb9efd59bcd549497beebe"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6fdf4eb12915bae168469ce3fd67bd4eeb8dc42c446575b28212c4a7474e5fba"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ce482a1d86522f23c4c8ec586b86583d762bc258b6b44a1dc0f5b5d39d5281bc"
+    sha256 cellar: :any_skip_relocation, catalina:      "830294645ed0dd716abb7c1d954ae79e4cc2ba81a498b27465126e119d4a2028"
+    sha256 cellar: :any_skip_relocation, mojave:        "8a23e2dfb4b65ce41539591dacfc606c1701ca678a3d2c09c0d5515ae84ca6f8"
   end
 
   head do
