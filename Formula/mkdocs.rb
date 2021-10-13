@@ -8,11 +8,11 @@ class Mkdocs < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f74b2a2c940eb578a07f934266aaedb4743abf55a382efe276415ff6e53d19f1"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ccf5c6f78321d0df7af0ee6a974f4a958f064c37730a252dc541fe1b15445e0f"
-    sha256 cellar: :any_skip_relocation, catalina:      "4b9eb52b1cfb12a549fd3b3cb0df254ee250ab78f9955f63fabf68671e461386"
-    sha256 cellar: :any_skip_relocation, mojave:        "9b011afdf73c7860ac228ad7cfce495f71d7d8c6e1f74ea3e440383ae33ee255"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e7620bdb6845d059997e0f575a1cf566c488c9165a8c31a176d73fd5fa40bb02"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4ca3b27f84dc4b971b7e1bc1fedc9700bcb98f9ed150a815cd15cf1edbb9625a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3dff60ce3eb047811c3be499dce49c625382b5fa9e0cd49d68012c3b4694412b"
+    sha256 cellar: :any_skip_relocation, catalina:      "b82807f2f342e2620a6564cf19bf6b63013fc82bfae1de1c5e73c500dcd2107a"
+    sha256 cellar: :any_skip_relocation, mojave:        "16b50288230ca4e1c2e2b46f09c49414822835753458eb1dde125fa71be770b5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "77289d233c17b1c64951e6ccca3a78260d65401d7c63d0afe81152e4b2bdcd16"
   end
 
   depends_on "python@3.10"
