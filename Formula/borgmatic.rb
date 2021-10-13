@@ -8,11 +8,11 @@ class Borgmatic < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4878b473eab0b3df714a2ea1535d34f86c20777ec6981fb3a734c5ae3930f384"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3624e4d6f5b2070fada6cb58e4e1ceb9b293907b791f7b5c63985d531a588e44"
-    sha256 cellar: :any_skip_relocation, catalina:      "98b369061ccf3c7eaa068eda2fda8eb753d0abae5634e36f49e87d031ad5ef24"
-    sha256 cellar: :any_skip_relocation, mojave:        "0ffe59404b696738490d87e7e9dd0800779ab09e39a6e5166f2e9412c74ccd0f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "26fcf34f67367b69839a2b0e68d1dbdb8cd70c801b5e20d9908a1f16f3aa3550"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b5bcde7449f3450bec31a93f298f7f8f4810bf73b79b446e5eca620f6d8219e6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0e40ab6cfa84112ce0c030062a3afc999c73a34099ea8c58e42c00d35d99ceb5"
+    sha256 cellar: :any_skip_relocation, catalina:      "db64c0a5db7e2a0d2ad119250011d47c4673a5def8d12dab3c3455cfe68f2bae"
+    sha256 cellar: :any_skip_relocation, mojave:        "ecd4a8fb7679f74bac78df327f189703177bbb02d0f47e75cb027e99f139ac95"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "65093fbe878043b2955faf4bfd072155899269b1d94640e81b9dbe1af6430ea5"
   end
 
   depends_on "libyaml"
