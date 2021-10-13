@@ -1,8 +1,8 @@
 class Libmobi < Formula
   desc "C library for handling Kindle (MOBI) formats of ebook documents"
-  homepage "https://github.com/bfabiszewski/libmobi/"
-  url "https://github.com/bfabiszewski/libmobi/releases/download/v0.7/libmobi-0.7.tar.gz"
-  sha256 "188535dd86f028ba607aae916040ff8e69672dc972eb1e62f0a354d43908e834"
+  homepage "https://github.com/bfabiszewski/libmobi"
+  url "https://github.com/bfabiszewski/libmobi/releases/download/v0.8/libmobi-0.8.tar.gz"
+  sha256 "3116125039493c4a1009e32d014d84cc1808674d49a5aecf89bff6433d8387e4"
   license "LGPL-3.0-or-later"
 
   bottle do
@@ -11,6 +11,9 @@ class Libmobi < Formula
     sha256 cellar: :any, catalina:      "88ac957feb1b298437656e370c79ec851b8e8c4144e2de616f180669452f7423"
     sha256 cellar: :any, mojave:        "4fcf8e0c1355976f7f1bd44d2395e3e67c167b3dca04a9d6a8194c38ea6aa9f8"
   end
+
+  uses_from_macos "libxml2"
+  uses_from_macos "zlib"
 
   def install
     system "./configure", *std_configure_args, "--disable-silent-rules"
@@ -29,7 +32,7 @@ class Libmobi < Formula
         return 0;
       }
     EOS
-    system ENV.cc, "test.cpp", "-L#{lib}", "-lmobi", "-o", "test"
+    system ENV.cxx, "test.cpp", "-I#{include}", "-L#{lib}", "-lmobi", "-o", "test"
     system "./test"
   end
 end
