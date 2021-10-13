@@ -11,11 +11,11 @@ class Mpop < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "ffa7d1d7240b1fe9913f3f7f104cf410325e3e15de646cfc7d508db65c7a4288"
-    sha256 big_sur:       "4b8ef4bdfbc2eb722f2c0698207f4b8380efe396bb2dde01ee9ab15905c77961"
-    sha256 catalina:      "47eb7901c79b0c2c0110d0d536851af477ff5626a8a46a8ba2fc1551ea790a7c"
-    sha256 mojave:        "afaf7fa8399df4285ec412ba7b89f0d19bcbc21fad7029dfb7ae5092c0af8efb"
-    sha256 x86_64_linux:  "0813016d1ca4ea0dbc41c22a58cc675cc6723b87fc0374f6228434277ff3403f"
+    sha256 arm64_big_sur: "2f8a61fece9387f48d48100bd845a5d663c250692a87ea06821d4b6f23f6e2e0"
+    sha256 big_sur:       "23ad8bc64b32e93f151df2005b1160fc46f6c039764e18c4a7a42ce4140c6350"
+    sha256 catalina:      "0555359b5c2935c7646ed26596e4b731b037fcbf49cd01f94d533d7701e39825"
+    sha256 mojave:        "ac8892c6d8ec4142a3bd053ec53b99d678a4069ee070f40a0232c36283641a10"
+    sha256 x86_64_linux:  "d10d8a7e75b2dfd1c05bad7e92a870b934129317fedc3c37ec3f3f195d38f876"
   end
 
   depends_on "autoconf" => :build
