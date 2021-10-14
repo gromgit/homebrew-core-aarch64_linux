@@ -8,12 +8,11 @@ class IkeScan < Formula
   head "https://github.com/royhills/ike-scan.git"
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "80591b7e93871241c3a15afa6c7be4df8df8f2c8fb1b6cc1a54be3a3c93645b3"
-    sha256 big_sur:       "9f721c4e99f22ccbf204f54c78a6b4ff7bef621dc4590673240b5a31dab268ef"
-    sha256 catalina:      "a06543751eec6b9d198c3826ea62743a0ee12a4479bf28efb41209a0edea19be"
-    sha256 mojave:        "acc102b6014ee8216274afb3a0b10460c71f0059a7aeca732dfad848c7dd2846"
-    sha256 x86_64_linux:  "e954d09eee1f1afdf2b70d915559cf804bf97947568fc4972a39af5298e5769e"
+    sha256 arm64_big_sur: "658bb4d7106e572a7d9a0dae2d6cc9abd4e1007d73ef4ab0ab0ec6f2cbaafd1c"
+    sha256 big_sur:       "debe304378fb8939b606d81a1658f95cb71b9edf538f9e2778385341d66bb3e9"
+    sha256 catalina:      "a02fd76ac113a9dc7cb1ed267d221af790abf4f5598a512c1993ea207ad7f6cf"
+    sha256 mojave:        "29f357b9b8a36f43410495f79a87e50fcf45507aee242f670182ea7db6630c1c"
+    sha256 x86_64_linux:  "16769378c139d0abb2a6c4a05fae1cc1929486d8035c3260391cde66b533b089"
   end
 
   depends_on "autoconf" => :build
