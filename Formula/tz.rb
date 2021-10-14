@@ -7,10 +7,10 @@ class Tz < Formula
   head "https://github.com/oz/tz.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b3a0210640c51de3e5d0b6e58e0e1182d940999166fb18cc6f525afa68759ff5"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d6e0297beac8111194c6ff95fe33c9c4798cc97d2fd78e2b7c9ff6522b418a29"
-    sha256 cellar: :any_skip_relocation, catalina:      "2f85be9fa198c26d89ec48494ec7162d2b4ff3940dba342edc65998be658156d"
-    sha256 cellar: :any_skip_relocation, mojave:        "18bac8d9afe7dd3e92cc556bedf34ec20e422b3887bb77936ec1ccdf757c6015"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "095758a0ce88d49b3df127854862d39359ab5449543dc9525609000eb673133f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a2bfa56237ba4a0165ecdf1911cb1afcf68d82357c9bf71afd7c68ae9721c1e6"
+    sha256 cellar: :any_skip_relocation, catalina:      "a2bfa56237ba4a0165ecdf1911cb1afcf68d82357c9bf71afd7c68ae9721c1e6"
+    sha256 cellar: :any_skip_relocation, mojave:        "a2bfa56237ba4a0165ecdf1911cb1afcf68d82357c9bf71afd7c68ae9721c1e6"
   end
 
   depends_on "go" => :build
