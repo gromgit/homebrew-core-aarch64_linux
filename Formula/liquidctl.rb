@@ -9,11 +9,11 @@ class Liquidctl < Formula
   head "https://github.com/liquidctl/liquidctl.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "41155e9da1a11de698cbf51084b667ea4512d81686de7dcfbfac7187e3ab2518"
-    sha256 cellar: :any,                 big_sur:       "e9cc719dcc5f8d3ebaaafd336f25f65a2422241c0c7dff62c504e9ec0a5973ca"
-    sha256 cellar: :any,                 catalina:      "2d2f94f10f294ff5a7d88dc421e93de375570a4d433fe5567142904a6bd62b73"
-    sha256 cellar: :any,                 mojave:        "6c5dcbfeb216269feb853a4b5f00108051f760e46fe4a61e4b6e55637599fcdf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "25cbf3bcada320d6481a7683bbb042b0e32e838d5496045ad92b9101846d21fa"
+    sha256 cellar: :any,                 arm64_big_sur: "f328324cba24b07779199d88ce405d2f6a8a4e023021f71cb8b745b698cd675c"
+    sha256 cellar: :any,                 big_sur:       "bad09035eeea790c15be5d4f888e5e7d289f2e6d826af9e5e568907275503d70"
+    sha256 cellar: :any,                 catalina:      "c20cb061748d4bcc952ed77ab148ca73a4bed576bbe5e1c9b7595eca9a74f8e0"
+    sha256 cellar: :any,                 mojave:        "68edf5e0b19b017ab73a4381525ea5cc9b365c4284ea6ea80e00c09cbbdd7299"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d9def490100759b197a6785a095d322cd9958bbe9ecbe6b09c8da081d7cf7b51"
   end
 
   depends_on "hidapi"
