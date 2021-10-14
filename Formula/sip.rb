@@ -9,11 +9,11 @@ class Sip < Formula
   head "https://www.riverbankcomputing.com/hg/sip", using: :hg
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f600f9c31cac8eaaedbd6b9e4e41a6334911fa812a803a48e59fadcdc6089a4c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0db8a3bc2db45ec99181f435f888711a76fa5316f8a8d2757dc0778836abdda4"
-    sha256 cellar: :any_skip_relocation, catalina:      "334ed2ad3ee30c3e209a5ea4663b5d321aa8d39fce1f9208cabf1b952ec5ad0b"
-    sha256 cellar: :any_skip_relocation, mojave:        "cfd7abf91ec045eb654c4e8b5ddc1a7e6dfea1cdc23a1d82d57badf7fb0fc059"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6b0319ea1fb2a7a66d239dad066eb6b215e1a2af7184ca57863f67df9ad24063"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "933b936d56d79aa7f1f044f0b7cfc53b61fbbba541243bf73d76c1308040fdfc"
+    sha256 cellar: :any_skip_relocation, big_sur:       "78d4beda8f0e902311c19eace9723a805d37aa978053b20198bfc29b2fb43e17"
+    sha256 cellar: :any_skip_relocation, catalina:      "7fdf440cd1060a7a58c686dd7568d9984c9950abd7eb52ac5585badcf878e97d"
+    sha256 cellar: :any_skip_relocation, mojave:        "d34a94def987327458aabd27b6c10dee5efb165f51355ba9987ecf94c80e559b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "03835651221c839d3139c3a67c762985517e10b48da714c69ac4936d3d5e40a1"
   end
 
   depends_on "python@3.9"
