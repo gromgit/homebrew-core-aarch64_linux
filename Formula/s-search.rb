@@ -7,11 +7,11 @@ class SSearch < Formula
   head "https://github.com/zquestz/s.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "04e743860f3014288e42d7194b2d34b88b30dbdf0d47b1362181e87e67ef3585"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3271073adc7ffccc4835afde6ccf5d1098181b064e4ae761a7052e24bd7e1212"
-    sha256 cellar: :any_skip_relocation, catalina:      "218f0203ae8164d878fc80e678c9b726f812c80f9b6b56462e73d6216993ab91"
-    sha256 cellar: :any_skip_relocation, mojave:        "da6d5042d9afbf3b6d313f4defe2b055e268e3049f013fe791e3624367853601"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "53bf8ba8f98766b256717d2c300035e6a9fa15880a7b85e44dcc0bae0075ac39"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f11b7632fb8b306788d486d54b53feed63f7dec7c4f149fc2a6bf716cbe18837"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e37573825550c63f264efaebf0f9331034fa722cbcff2f41480e3f36663b6a70"
+    sha256 cellar: :any_skip_relocation, catalina:      "71ec2554f4cb3b04e2cb4bb871f91b80c102e0d08ea42cc9d9c77c7828b8c20e"
+    sha256 cellar: :any_skip_relocation, mojave:        "437a7566955f6c381b81458428abdae3ae01dd124543cf08212e1617dbbafd65"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6a06b8ed3430c05ce0cd462284da8fdcbdea88f023aeb71f965804bd3d97f95c"
   end
 
   depends_on "go" => :build
