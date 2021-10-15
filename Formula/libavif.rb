@@ -7,11 +7,11 @@ class Libavif < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "eaa0dde55d697b8839bdf9aef55cbcf95149a33d573eb9b6b86fd5eb763a39a7"
-    sha256 cellar: :any,                 big_sur:       "1362b18e8d3ebb22b44ed1527e848376cfa57c27a19707bd69871e92a4bdccf0"
-    sha256 cellar: :any,                 catalina:      "81100a4fd5be5d5ac08d63bf787337e967f1d419fface9563edebec6c5ab3229"
-    sha256 cellar: :any,                 mojave:        "0b1f0404f1c3c787b4db1243884991fb4c42d8f9a040cf0ee1348c3f7af9e119"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2bc07dec2dc59a97cab7272b0b9a406c36f3be030e8b6ffb112f9b599eabbcab"
+    sha256 cellar: :any,                 arm64_big_sur: "795e345bdb87f084d5bfaa3e7b3f59427f616edd5dc813f2390036961f5d4297"
+    sha256 cellar: :any,                 big_sur:       "bcd23dbcfc953ce8316e0136bcfdb56aeb14345afee0fcdf2e106437f2e0dbc0"
+    sha256 cellar: :any,                 catalina:      "474c33552de4bd16b6331ee8d97314877eaa3d84f897983977690cb9f22d834a"
+    sha256 cellar: :any,                 mojave:        "a04c9ee0e1d0e9435e4118ffb837c179244f15b355fbb0480384973dab90fa23"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a405b91c6123f9a11bfedc685fb19db3fa7b607ff5bf2078c93ca64c3c69f34a"
   end
 
   depends_on "cmake" => :build
