@@ -9,11 +9,11 @@ class Tarsnapper < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "507902249b2fe7c3f13b11ce669e12ed78253276e5c37f748922455126dff5cd"
-    sha256 cellar: :any, big_sur:       "bc6193b16d969dd37047b726cf50a243ec08f2f015b85bda59acfd9ec18c9451"
-    sha256 cellar: :any, catalina:      "fce1d4069e55c05f40ec638e27e4b064ae5ed72854b8ddd13268d6baf735cd95"
-    sha256 cellar: :any, mojave:        "aba5962a85058b3468e224b15d0c8f294ba4472f1b29c5d1072c64fc6c6a104b"
-    sha256 cellar: :any, high_sierra:   "810a32cba365609ed7d28dd52d2f68aaded70deccde209849db5be49a3662e68"
+    sha256 cellar: :any,                 arm64_big_sur: "fb9e4083414f5e3c529a444047e4a840fbe008d8e1210ca35183c95e284712c5"
+    sha256 cellar: :any,                 big_sur:       "766dad885fa778bda3d99c853e14d4e3d179b9a1c11131165c4dd7875553d29f"
+    sha256 cellar: :any,                 catalina:      "4e95af80521f93738700549a1683cf9a73c776d637587c065e7c0fa56985168e"
+    sha256 cellar: :any,                 mojave:        "09e4372f39f9cb0d141ebc4d89835ebb6787baa3c0a20e6b791a919168035428"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1f9c0304d01b9274fcd7acb0a8cb66610cac32f1c3aaf7e0b05b36c7ddd1b384"
   end
 
   depends_on "libyaml"
