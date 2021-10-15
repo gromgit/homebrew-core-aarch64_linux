@@ -13,10 +13,11 @@ class VapoursynthSub < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "e00dd437364121c4633ac304e1494bffa20a9fad1e4f4fee4de3cd16015a17f2"
-    sha256 cellar: :any, big_sur:       "40eda0329ae57f8deaac051521a8ee8f1fe6f5106db3ef024f2fce9ce3432f09"
-    sha256 cellar: :any, catalina:      "29204e101abc88a961a53518abc868c67af788b1369e3fc07e8df439442859d7"
-    sha256 cellar: :any, mojave:        "291ec2fad5ccca0b0046b29a2bcb842a700e8395d106747058faf60032735cd4"
+    sha256 cellar: :any,                 arm64_big_sur: "77ff99cf76d94fa5cbcc961e58a739c1af1fce4cd3587a8b7bb34561e7179473"
+    sha256 cellar: :any,                 big_sur:       "9970926b50e25df64e9c8a13e3c575d823cbf5ff93b4244257941af17932bd9b"
+    sha256 cellar: :any,                 catalina:      "dd5762ff060f077b961b229cf4daecb93f5b3130fdcd23d6b0fed8cfbdd49e09"
+    sha256 cellar: :any,                 mojave:        "146a023ced7c207b5b1a054abc25b7587b1e3e6513034e97bf4c57fb7bbbaa22"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6cd479be090c286ebbe0c2e7af858d597d6581b52178748c9b629ed608b771c3"
   end
 
   depends_on "cmake" => :build
