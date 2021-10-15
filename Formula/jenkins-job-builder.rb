@@ -6,11 +6,11 @@ class JenkinsJobBuilder < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "14b196833bb8256b23aebf9995867385b8e7847bd75ff415f0eee9285eccb091"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7e94f45f664e83e88cf4bfcc79ce279458fc9e6635bc4b68d9abe72b30e4bea9"
-    sha256 cellar: :any_skip_relocation, catalina:      "c9d180a084a198db13dcff07da187bd728823ca64e28dddd9ed3b2bda2386223"
-    sha256 cellar: :any_skip_relocation, mojave:        "fd5dc6e524f98e22ae7698eb0211014597fe1d0fd499301c43f6aeac69afc083"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8406739ab6bc19de9c19329d2cae4b4896b9f479fce0b6648119712d618c0c95"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9ba53ae0b7014810b81813161316c9071c86b82600581ff5a70e24bec9f93fca"
+    sha256 cellar: :any_skip_relocation, big_sur:       "110cb98febf8d9ffd03b562cb79f3bf2fa992cb9b036c3e0d74c3a8437e50431"
+    sha256 cellar: :any_skip_relocation, catalina:      "37b7ddb8ab5d198557b9d6000ab2d9210e9686f9f37325973a6ecdbd987673e0"
+    sha256 cellar: :any_skip_relocation, mojave:        "d4ec72cb626e3fd091c3ba0d077ce28914923e85dc6b23e40978faeef6ade89b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2682dcc83eb3304d98410c8844728d78acf496228c912d2b722c2feea4d7c287"
   end
 
   depends_on "python@3.9"
