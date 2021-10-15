@@ -12,11 +12,11 @@ class Clingo < Formula
   end
 
   bottle do
-    sha256                               arm64_big_sur: "45807405ee5094521283506649145a4ba8eb90c0c395345baf6a8073e1915526"
-    sha256                               big_sur:       "b8c3e08ce26ec66358081d0e151f5845eb8337be546fa2686b1bc62fb34e0575"
-    sha256                               catalina:      "076f25a52597e885c64c2f15e1e4ba7628108515f6aff2f295cbe7931a4aaab0"
-    sha256                               mojave:        "35659fc5b9b4572609f8d674a094b735233b7a5fbd8c93411c0d82c9a776aa2e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f56220551aced5b0fc8d8300e7eaf4ab16c0078a955fe37cbaf0bda34feceb4c"
+    sha256 cellar: :any,                 arm64_big_sur: "982e57b5894a3927249e58909dc0f690411ce6ad643915063e3b711ae85ca097"
+    sha256 cellar: :any,                 big_sur:       "def9e572f86af37409a0f4f908e7caee183888b9ea506403464f3ce7d26a0bbc"
+    sha256 cellar: :any,                 catalina:      "472868ff2dbf256f9cf8b01055b6a041b5a4ec1a1ecf83869f82e8367d3de007"
+    sha256 cellar: :any,                 mojave:        "67e741141731249081fd2b4c24fac088f1a5020a6a2028606cd6e1623d51a7b6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e819113cc9c7a5440d8509c654e3592377d9429f7a65ba88e6783dbfe6436138"
   end
 
   head do
