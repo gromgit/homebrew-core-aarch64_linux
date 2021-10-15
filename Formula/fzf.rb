@@ -7,11 +7,11 @@ class Fzf < Formula
   head "https://github.com/junegunn/fzf.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ae9fddf6be0736d872e48199d3f59517b48e4d5fa9fe609e61c6ca9f4dc2e582"
-    sha256 cellar: :any_skip_relocation, big_sur:       "47ca85feb2e71a465580b5dd0912ed365c1015de175c81570309045abb847c96"
-    sha256 cellar: :any_skip_relocation, catalina:      "47ca85feb2e71a465580b5dd0912ed365c1015de175c81570309045abb847c96"
-    sha256 cellar: :any_skip_relocation, mojave:        "47ca85feb2e71a465580b5dd0912ed365c1015de175c81570309045abb847c96"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e2f76540decf6dff782146c728f007651b2b2c150ab7e06373ebdeec3522270e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "950c2b25994b7cdbe3892d0145c4267832ff40659d2bfc5218d686d11b6a8d14"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4eedbd23358ecd58646e57c4807ef72d50b3dc4e8409e1c493a69bee5b012271"
+    sha256 cellar: :any_skip_relocation, catalina:      "4eedbd23358ecd58646e57c4807ef72d50b3dc4e8409e1c493a69bee5b012271"
+    sha256 cellar: :any_skip_relocation, mojave:        "4eedbd23358ecd58646e57c4807ef72d50b3dc4e8409e1c493a69bee5b012271"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f8e7ca3e75119871c3916e866fdf4349bf4fc29cd2b2120ff4e657186e89a0a4"
   end
 
   depends_on "go" => :build
