@@ -9,11 +9,11 @@ class Twarc < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3b923e9ee70b364dedc5d9537234a9ec76c08d67d3425055ef9bbafc7e0763cf"
-    sha256 cellar: :any_skip_relocation, big_sur:       "1b1138937fb9a39bd8bcd7cdd163bfae59473630e15271c8f17354628768d1ad"
-    sha256 cellar: :any_skip_relocation, catalina:      "b6551299e4f03706b16ddcb25c9d60ab88cbcf245825f8ac7dcc9a5a9459dcb9"
-    sha256 cellar: :any_skip_relocation, mojave:        "dcbaf30dda88477b618cec6a7817a4cd67433fd0a54e1a802158a21b3d3c4108"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e314409be61464515c542403e897a6f54043ab088a082d3651f7277cb52f0fa5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "329b9aca9b0929fa03a053d4ee3a1b18de234153cee137f2c2dce1d0696a2256"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d58bd2a921b26b16cea5bf37c290f15c6889352ec4fbcc16879128e76fc1cfbf"
+    sha256 cellar: :any_skip_relocation, catalina:      "4e3d1fcb18f215fd2b73b503174da5d27287db6354f274eee3bb7ef747e8e832"
+    sha256 cellar: :any_skip_relocation, mojave:        "f00a3f63e528bd8288280e9b58b112ab1beab2cd9e970247908dfd0db167fd5a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "07ba867fce44888034edd186f217a255131c782572bc9b4cb26bcb76a7e60456"
   end
 
   depends_on "python@3.10"
