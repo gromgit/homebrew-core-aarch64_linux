@@ -13,11 +13,11 @@ class RosaCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "039abea7239f18a07db3cf86bf22232d37ca3a63b0803330198110f0a1d0f174"
-    sha256 cellar: :any_skip_relocation, big_sur:       "db1f8f387ce620f8ef45f437fd04b2a7bf57eaa64ef6123959ce30b349a573f2"
-    sha256 cellar: :any_skip_relocation, catalina:      "c29d121064a125671d61450e7a297da3c56620a1b7fb4b1ab2c2409380ded133"
-    sha256 cellar: :any_skip_relocation, mojave:        "48cb025288386e887a1f6f31944bfce43caf2fd95a279bb542525c772cb24d44"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1f6004cc281d4bdd78dc7c873b7b0ca710ca0e350c0d2878257a578f59e212bd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ff3ed8c5bdb9c2ca289f067ce1ad5ca9e24345c7f5fd3dec540e3d63424ac14a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "fcb47b8081732e0399f7f7842f959cd3b8aa0fe1933f27c31a63497a137473ab"
+    sha256 cellar: :any_skip_relocation, catalina:      "30ddb37367fd24f9f41a64c36938289edcd9126e6505f6623c614fd3c147517e"
+    sha256 cellar: :any_skip_relocation, mojave:        "15dd53e743fee578dfd6c7a00ae022e69b35b824f3dc3eff66a00a29101e39a1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9528ad1a6d647f47e40496c6c38ce205e0c82aa9b66284ba638f24f14c091dbc"
   end
 
   depends_on "go" => :build
