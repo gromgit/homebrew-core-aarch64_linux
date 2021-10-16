@@ -9,11 +9,11 @@ class Peru < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "aa4a20ed7347ab1cf91c6adc484279ca27d17f7b65f23d25be4b63f283491f7c"
-    sha256 cellar: :any,                 big_sur:       "bcc6478c675786f51934108b92b5e47d2798dc2a4b0ef8bfae99f130fa2f473e"
-    sha256 cellar: :any,                 catalina:      "31220d37966a4dc4edb016b44a80e70ca291c669ed56176dc08b00eeeeafe683"
-    sha256 cellar: :any,                 mojave:        "c0e0c051d79f223765f095524f5fea92fd5275c51d2f59281d12e9456e9ee2c9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fe15d9a12d971f7a0be3ee5a132fc2d4482f70e20578ecacdab13dad15fc8b58"
+    sha256 cellar: :any,                 arm64_big_sur: "10bb71d1c3053196036bf75ea13605541101f74ca00fc27902718d99195e9432"
+    sha256 cellar: :any,                 big_sur:       "d48061587fc2627b0584dcf23438c3097e280564955adb5f556023cad7ca46b1"
+    sha256 cellar: :any,                 catalina:      "4fac7c1d51da92f85bb3b3be8f328d72154a6372cdc59864faae8d6c6f98baa7"
+    sha256 cellar: :any,                 mojave:        "69a0a72326ffa8622569865a8121253e59c071d7d4e04b7a714d613074bd4724"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "edf871502a89345ab82d466d2d99d1e727618273af9c23713da1f2c5eb4a925a"
   end
 
   depends_on "libyaml"
