@@ -11,7 +11,11 @@ class Igv < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "6f0eab595383822a3038d2e5d3e96e09765b74ad5d72e27c99c01d58136a514a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bca9700f55959cc195610c67dd83fd6644c2ac8966d90df476113d3793414b9b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "bca9700f55959cc195610c67dd83fd6644c2ac8966d90df476113d3793414b9b"
+    sha256 cellar: :any_skip_relocation, catalina:      "bca9700f55959cc195610c67dd83fd6644c2ac8966d90df476113d3793414b9b"
+    sha256 cellar: :any_skip_relocation, mojave:        "bca9700f55959cc195610c67dd83fd6644c2ac8966d90df476113d3793414b9b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "977f5d66ce9c94de6648ac1c71006de38da3d912495598b178e0ccad35a53ceb"
   end
 
   depends_on "openjdk"
