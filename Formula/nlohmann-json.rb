@@ -7,11 +7,11 @@ class NlohmannJson < Formula
   head "https://github.com/nlohmann/json.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1e1824588e1a5643207275b23ef42c0f42ed6e28ba133afe3087a03e98e14940"
-    sha256 cellar: :any_skip_relocation, big_sur:       "619c80951621c9132a08cec2f8669b3effa5bddd1e2aad89cf8d23896247b763"
-    sha256 cellar: :any_skip_relocation, catalina:      "619c80951621c9132a08cec2f8669b3effa5bddd1e2aad89cf8d23896247b763"
-    sha256 cellar: :any_skip_relocation, mojave:        "619c80951621c9132a08cec2f8669b3effa5bddd1e2aad89cf8d23896247b763"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c8e978ec38d9b6493905e803d5da3d8a7b6752e6f5bdb3100cbae694e21d00ae"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b5e8791f898a91aba28ea778847695067e46942730be69c8af4383919f5244a3"
+    sha256 cellar: :any_skip_relocation, big_sur:       "9534eff1c002ce96b04b73bec07725e7be801b9677ea7caf167e3a7fec4bdccb"
+    sha256 cellar: :any_skip_relocation, catalina:      "9534eff1c002ce96b04b73bec07725e7be801b9677ea7caf167e3a7fec4bdccb"
+    sha256 cellar: :any_skip_relocation, mojave:        "9534eff1c002ce96b04b73bec07725e7be801b9677ea7caf167e3a7fec4bdccb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0b30492367ffd6f5637b2458b01011e1f139d2270e6f547bd905654503fc24ce"
   end
 
   depends_on "cmake" => :build
