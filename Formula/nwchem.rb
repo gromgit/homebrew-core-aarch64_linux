@@ -5,7 +5,7 @@ class Nwchem < Formula
   version "7.0.2"
   sha256 "d9d19d87e70abf43d61b2d34e60c293371af60d14df4a6333bf40ea63f6dc8ce"
   license "ECL-2.0"
-  revision 1
+  revision 2
 
   livecheck do
     url "https://github.com/nwchemgit/nwchem.git"
@@ -22,8 +22,20 @@ class Nwchem < Formula
   depends_on "gcc" # for gfortran
   depends_on "open-mpi"
   depends_on "openblas"
-  depends_on "python@3.9"
+  depends_on "python@3.10"
   depends_on "scalapack"
+
+  # patches for compatibility with python@3.10
+  # https://github.com/nwchemgit/nwchem/issues/271
+  patch do
+    url "https://github.com/nwchemgit/nwchem/commit/638401361c6f294164a4f820ff867a62ac836fd5.patch?full_index=1"
+    sha256 "20516447b75bde548eb7e40faafcc5d310e8236a7cd3e44f53a753ac1312530e"
+  end
+
+  patch do
+    url "https://github.com/nwchemgit/nwchem/commit/cd0496c6bdd58cf2f1004e32cb39499a14c4c677.patch?full_index=1"
+    sha256 "1ff3fdacdebb0f812f6f14c423053a12f2389b0208b8809f3ab401b066866ffc"
+  end
 
   def install
     pkgshare.install "QA"
