@@ -6,6 +6,7 @@ class ReconNg < Formula
   url "https://github.com/lanmaster53/recon-ng/archive/v5.1.2.tar.gz"
   sha256 "18d05030b994c9b37f624628251d3376d590f3d1eec155f67aca88fa5f3490cc"
   license "GPL-3.0"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "1f46a001a83bde4267cc2790b666f212b13d69f03a52c8b8fd66892e14915063"
@@ -16,7 +17,7 @@ class ReconNg < Formula
   end
 
   depends_on "libyaml"
-  depends_on "python@3.9"
+  depends_on "python@3.10"
 
   uses_from_macos "libxml2"
   uses_from_macos "libxslt"
@@ -100,8 +101,8 @@ class ReconNg < Formula
   end
 
   resource "lxml" do
-    url "https://files.pythonhosted.org/packages/39/2b/0a66d5436f237aff76b91e68b4d8c041d145ad0a2cdeefe2c42f76ba2857/lxml-4.5.0.tar.gz"
-    sha256 "8620ce80f50d023d414183bf90cc2576c2837b88e00bea3f33ad2630133bbb60"
+    url "https://files.pythonhosted.org/packages/e5/21/a2e4517e3d216f0051687eea3d3317557bde68736f038a3b105ac3809247/lxml-4.6.3.tar.gz"
+    sha256 "39b78571b3b30645ac77b95f7c69d1bffc4cf8c3b157c435a34da72e78c82468"
   end
 
   resource "MarkupSafe" do
