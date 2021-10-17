@@ -12,11 +12,11 @@ class KnotResolver < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "e0c8efeb9caa6e6fb4f134ab4d1f246f807a66f72376a43b3ad689a0d7502292"
-    sha256 big_sur:       "31379c500b70b0d70012cf117762936110c690760eaedd0ba6082ada5f31ecd0"
-    sha256 catalina:      "87c4877aaafd7e7840e24d164cc5df4203caafae54956aca01430f4189f35fc7"
-    sha256 mojave:        "fa1691356793d077171f59e9b1fad7462f9b7c26cdaa0246223cafeb9e85cebf"
-    sha256 x86_64_linux:  "01c4d2bca6d3e2ece73bc4754f2774e3065b801db3b56dd075f3f4a7d91e23b4"
+    sha256 arm64_big_sur: "cacea8251a555de1f374ad7a62d4b33bd73181f429e235cedc4de8be00090097"
+    sha256 big_sur:       "91405319bf4bce33774c1ef2c42802d5405c12cb74c87637206266444de3163b"
+    sha256 catalina:      "afe54507119237bae07e93a5f975032db883061e062638dad73489afb1935dde"
+    sha256 mojave:        "d7b924de8d80867a074635aae109dc7af1814425e4a0ba159f271ba9c8b8732d"
+    sha256 x86_64_linux:  "3ac89256654cabe6135e52677a28e133997d832aceeb39e5edd4a21e1a40ed1a"
   end
 
   depends_on "meson" => :build
