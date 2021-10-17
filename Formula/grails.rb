@@ -11,11 +11,11 @@ class Grails < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4799764c46874cafe31135e5aacd2eb34bc0ea92c9cdcc91b4bfc4af05fd15f0"
-    sha256 cellar: :any_skip_relocation, big_sur:       "4799764c46874cafe31135e5aacd2eb34bc0ea92c9cdcc91b4bfc4af05fd15f0"
-    sha256 cellar: :any_skip_relocation, catalina:      "4799764c46874cafe31135e5aacd2eb34bc0ea92c9cdcc91b4bfc4af05fd15f0"
-    sha256 cellar: :any_skip_relocation, mojave:        "4799764c46874cafe31135e5aacd2eb34bc0ea92c9cdcc91b4bfc4af05fd15f0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9aa2b0415a25eb1e13b710234dfe3e30aec2db5c1a6c313bcc273c99132afc0d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "dc5e5f666392bc0ea77f6776c766ed551c75c1489779c907c37ca281554aa3f6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "dc5e5f666392bc0ea77f6776c766ed551c75c1489779c907c37ca281554aa3f6"
+    sha256 cellar: :any_skip_relocation, catalina:      "dc5e5f666392bc0ea77f6776c766ed551c75c1489779c907c37ca281554aa3f6"
+    sha256 cellar: :any_skip_relocation, mojave:        "dc5e5f666392bc0ea77f6776c766ed551c75c1489779c907c37ca281554aa3f6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "02dc079c7119dbb7e0e62c6f27ef0eb38484082e936748cf4b87312f53c84a54"
   end
 
   depends_on "openjdk@11"
