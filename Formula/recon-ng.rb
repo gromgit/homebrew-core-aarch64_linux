@@ -9,11 +9,11 @@ class ReconNg < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "1f46a001a83bde4267cc2790b666f212b13d69f03a52c8b8fd66892e14915063"
-    sha256 cellar: :any,                 big_sur:       "c59a7fe40f66a18e7bf3a1a1209ff8ed4b960742beda6bcb7647e4fd0e339fd3"
-    sha256 cellar: :any,                 catalina:      "cfb08fd27c9735d05c102fdb1f2bf26e4ee4d70d019891ef5145f748832a4ee3"
-    sha256 cellar: :any,                 mojave:        "eb58dafa4f0bb049b6b8cbd52a2481b378b184a4539f888a448bb41cf306fe94"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bd38564af758506cb3fef2faf01d69fbf6e0c16b2be714cf9bccbd24f14b5b28"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0c67a45b9343f19d54224ea3d2d315395e2671e3956230cf773dcdb5809fc74e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b7641d98fbac1452c6bad5e4a07b8901faf28dbd66f7201db11a128f92650f84"
+    sha256 cellar: :any_skip_relocation, catalina:      "d1c3ff3698802850447b16d31118f020479b68e38f6f07a59e6f5ad33cec4da8"
+    sha256 cellar: :any_skip_relocation, mojave:        "52870b6cae825becbad66e89b672790ed2fe4107586e51cdc6fe5e44e40a0092"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f3a1463e334a7e33e84d3c09fff13e8070aa42c7af678d88f65f9ab771a72b32"
   end
 
   depends_on "libyaml"
