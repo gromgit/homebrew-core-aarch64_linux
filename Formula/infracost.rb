@@ -7,11 +7,11 @@ class Infracost < Formula
   head "https://github.com/infracost/infracost.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9e1eb8b2175a85a515d266ec0cec2af3a27dd839aa9a5b9dab6638b88b75557e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f40eede5b0a75c6c96e30d8c49edb760075c1bb418ceab20c684b801ee81511e"
-    sha256 cellar: :any_skip_relocation, catalina:      "f40eede5b0a75c6c96e30d8c49edb760075c1bb418ceab20c684b801ee81511e"
-    sha256 cellar: :any_skip_relocation, mojave:        "f40eede5b0a75c6c96e30d8c49edb760075c1bb418ceab20c684b801ee81511e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4f16cc5c2cd96a73bfc9c37421c24caca691bae5bccb16bbb34c75ef5a6c4828"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fa4f870b1e09495e7adcd9c639bea55e8aeeb0da7c2365a8dc0ca9fa4b81e2f9"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d8bad92116b4a7ffb60b1884d9d37b3c55afdbe97bc53b0dc1fe94591c8dbc3f"
+    sha256 cellar: :any_skip_relocation, catalina:      "d8bad92116b4a7ffb60b1884d9d37b3c55afdbe97bc53b0dc1fe94591c8dbc3f"
+    sha256 cellar: :any_skip_relocation, mojave:        "d8bad92116b4a7ffb60b1884d9d37b3c55afdbe97bc53b0dc1fe94591c8dbc3f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "170fad23d165922751b0132b9f00d396b8010b191bec8448343f2935ce07f9b1"
   end
 
   depends_on "go" => :build
