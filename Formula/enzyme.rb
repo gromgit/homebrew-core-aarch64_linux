@@ -1,10 +1,9 @@
 class Enzyme < Formula
   desc "High-performance automatic differentiation of LLVM"
   homepage "https://enzyme.mit.edu"
-  url "https://github.com/wsmoses/Enzyme/archive/v0.0.19.tar.gz"
-  sha256 "51729ff4b26f988f3204915cae28b3985987c33386ed0338eb03d1974ddbab0a"
+  url "https://github.com/wsmoses/Enzyme/archive/v0.0.20.tar.gz"
+  sha256 "7e2eff7de9d3f9b96e46163e709c9a16a303ac9c2b1dbb7e0628921ae4cf276a"
   license "Apache-2.0" => { with: "LLVM-exception" }
-  revision 1
   head "https://github.com/wsmoses/Enzyme.git", branch: "main"
 
   bottle do
@@ -15,7 +14,7 @@ class Enzyme < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "llvm@12"
+  depends_on "llvm"
 
   def llvm
     deps.map(&:to_formula).find { |f| f.name.match? "^llvm" }
@@ -48,8 +47,9 @@ class Enzyme < Formula
 
     system ENV.cc, testpath/"test.c", "-S", "-emit-llvm", "-o", "input.ll", "-O2",
                    "-fno-vectorize", "-fno-slp-vectorize", "-fno-unroll-loops"
-    system opt, "input.ll", "-load=#{opt_lib/shared_library("LLVMEnzyme-#{llvm.version.major}")}",
-                "-enzyme", "-o", "output.ll", "-S"
+    system opt, "input.ll", "--enable-new-pm=0",
+                "-load=#{opt_lib/shared_library("LLVMEnzyme-#{llvm.version.major}")}",
+                "--enzyme-attributor=0", "-enzyme", "-o", "output.ll", "-S"
     system ENV.cc, "output.ll", "-O3", "-o", "test"
 
     assert_equal "square(21)=441, dsquare(21)=42\n", shell_output("./test")
