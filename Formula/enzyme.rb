@@ -7,10 +7,10 @@ class Enzyme < Formula
   head "https://github.com/wsmoses/Enzyme.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "2e432a472133cabefc02dc4d854107e5fc6f18f9ee86ebbca6046d4cbc7b4379"
-    sha256 cellar: :any, big_sur:       "208b86ee6c5f86f3021d777ee3b7e402ffbca8b0b64201426f038227cd0de746"
-    sha256 cellar: :any, catalina:      "2d22bfc7cd466a0c57acabcdb00c2a21f156315c1aa6f65d820b1c21ca97824c"
-    sha256 cellar: :any, mojave:        "12a621ef588fe38bbc9b4446e3be12158e141569ef6038977e44265a86407af8"
+    sha256 cellar: :any, arm64_big_sur: "8f53eb11a62867f4d22346745fec9deead43bd7b6c6588b439ba369337cd52b8"
+    sha256 cellar: :any, big_sur:       "d6c916a8f6f50e731f17c1d5ea92d1c5020c4e89ac821d6bfcce5348d8acbeb3"
+    sha256 cellar: :any, catalina:      "c670cd0e42cd4a2dbc8cf36538004b5bbab9cb3b4355caf1001a66cc4a09b79c"
+    sha256 cellar: :any, mojave:        "33c96e0aff8f84ccbb79003878381580293fc3d4fd9da8a355bf995ce57c9be6"
   end
 
   depends_on "cmake" => :build
