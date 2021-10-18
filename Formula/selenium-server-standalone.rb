@@ -11,8 +11,11 @@ class SeleniumServerStandalone < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "8c5b22b7674cffc3786029d604abdc89846c57740a67ecc139ceb2c04d3559c5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4b65fc10655486a4b59a0a1f5e850b1920a360463dbd5228a859f803a0e96eea"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4b65fc10655486a4b59a0a1f5e850b1920a360463dbd5228a859f803a0e96eea"
+    sha256 cellar: :any_skip_relocation, catalina:      "4b65fc10655486a4b59a0a1f5e850b1920a360463dbd5228a859f803a0e96eea"
+    sha256 cellar: :any_skip_relocation, mojave:        "4b65fc10655486a4b59a0a1f5e850b1920a360463dbd5228a859f803a0e96eea"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8fef5d9217b4be71f5856639e23b5e8dbb8ac4b36fbe883c6f53fbcd2332e872"
   end
 
   depends_on "geckodriver" => :test
