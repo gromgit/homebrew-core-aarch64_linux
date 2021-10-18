@@ -7,12 +7,11 @@ class Iamy < Formula
   head "https://github.com/99designs/iamy.git"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9ebdffb035a4c24087c7f3a7f9918ab1734fd00c6baa64da4e49fc721d0ea553"
-    sha256 cellar: :any_skip_relocation, big_sur:       "02aa2ecaab3e449d3ca641e88a22dca829a969d6984190146514b807cdf2b3a2"
-    sha256 cellar: :any_skip_relocation, catalina:      "f5b5f5a4db400dc6021f206a23e90fbff7666f92cfdef296efe86b2db3ba9aa4"
-    sha256 cellar: :any_skip_relocation, mojave:        "3f01263009a39e769d8144ba9c284d95421ab919c78f549f0e36cbf56985693c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f6c4629eac1aff33871ecea23af3c61cd3033de783bce867b67269b0e7c28dc5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9b81ec5512ba8332739f653b1c93a4b2118a1e9929329e0e6c4d2dd80c47d5a6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "59dde9a556103175d876fd1fba134133ddd1b162daa491cdbf35bb58bfb4fc85"
+    sha256 cellar: :any_skip_relocation, catalina:      "54c8b998bcfe19443e99f609e34864a39e9d3b49cd5f935c78b9654727a81137"
+    sha256 cellar: :any_skip_relocation, mojave:        "1024d9cc234fb7e94ff17781c2f600ed6d286c5e7b6ab96b20e259e61a56a0ae"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dc26edb3bea1993f7650cce2cfd848318ba19cf3a155ae7838823b4f4c3c8041"
   end
 
   depends_on "go" => :build
