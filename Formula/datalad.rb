@@ -6,6 +6,7 @@ class Datalad < Formula
   url "https://files.pythonhosted.org/packages/36/00/e8a1f0ddc0a899d494aa9694f28ebff3b13c87276bc749ed29a1163ec868/datalad-0.15.2.tar.gz"
   sha256 "1a878cf521270f089ee1f50339e71cfd7eed41e708d895a12d5c483a9b59991b"
   license "MIT"
+  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, big_sur:      "503698b2d43d533b47508cb1e3cbb383d13cbf9905af706762ada230fadd669b"
