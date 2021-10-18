@@ -6,10 +6,10 @@ class Ioctl < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "81cf388198b8795b96620253a592a9d838ff184f9f6a881542d9aa47fc8cbd56"
-    sha256 cellar: :any_skip_relocation, big_sur:       "fbf56004a105cd52f56dd0c23f2a1417c128427cd626d7878c21cc059e1a2e88"
-    sha256 cellar: :any_skip_relocation, catalina:      "b5d5c423019a88bb221cd85d52d76b740909ded277c94e7016459832fdcf85de"
-    sha256 cellar: :any_skip_relocation, mojave:        "6b5eb4269731bbe722105121dd1ea2a3fbf9a51d6c1780a0b2000286b3d8f6e0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d849d8781b04a7012f53ae864b80536b1344acfe8d503a5be6fb60061a41035e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a5622fe4327d11100d51948ec9d5d857a6e936901559b8758debf4ed6f50d40a"
+    sha256 cellar: :any_skip_relocation, catalina:      "a9c59140d682284b834631b491d42d529783406dc1bf1226f82dfdd244ca0c98"
+    sha256 cellar: :any_skip_relocation, mojave:        "b765bba41d70f94be0d1f81163f30b81d3a3d8f5bf8c7c385cab13795d8a663c"
   end
 
   depends_on "go" => :build
