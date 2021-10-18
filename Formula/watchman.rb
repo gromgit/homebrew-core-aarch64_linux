@@ -1,8 +1,8 @@
 class Watchman < Formula
   desc "Watch files and take action when they change"
   homepage "https://github.com/facebook/watchman"
-  url "https://github.com/facebook/watchman/archive/v2021.10.11.00.tar.gz"
-  sha256 "d2a875617adde0eace774299e3d049f1825975cfdcdb4ad78e6b8e3f69a567ae"
+  url "https://github.com/facebook/watchman/archive/v2021.10.18.00.tar.gz"
+  sha256 "2ce07b525096cee2a62219075d07100db73303c53c6a1d01d2c87de7ae8c949b"
   license "MIT"
   head "https://github.com/facebook/watchman.git", branch: "main"
 
@@ -52,6 +52,7 @@ class Watchman < Formula
 
     system "cmake", "-S", ".", "-B", "build",
                     "-DBUILD_SHARED_LIBS=ON",
+                    "-DENABLE_EDEN_SUPPORT=OFF",
                     "-DWATCHMAN_VERSION_OVERRIDE=#{version}",
                     "-DWATCHMAN_BUILDINFO_OVERRIDE=#{tap.user}",
                     "-DWATCHMAN_STATE_DIR=#{var}/run/watchman",
