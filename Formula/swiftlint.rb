@@ -2,8 +2,8 @@ class Swiftlint < Formula
   desc "Tool to enforce Swift style and conventions"
   homepage "https://github.com/realm/SwiftLint"
   url "https://github.com/realm/SwiftLint.git",
-      tag:      "0.44.0",
-      revision: "e820e750b08bd67bc9d98f4817868e9bc3d5d865"
+      tag:      "0.45.0",
+      revision: "99465e659fb91facab5b1d3c0f9229176d086bf1"
   license "MIT"
   head "https://github.com/realm/SwiftLint.git", branch: "master"
 
@@ -13,7 +13,7 @@ class Swiftlint < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "30a53585357da5ada927a71e3ecd03609e6089e8343521e0f8757bcb7f09483f"
   end
 
-  depends_on xcode: ["11.4", :build]
+  depends_on xcode: ["12.5", :build]
   depends_on :macos # Depends on Swift.  May work on Linux once a Swift bottle is available for that OS.
   depends_on xcode: "8.0"
 
