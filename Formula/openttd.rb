@@ -12,9 +12,9 @@ class Openttd < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:  "b6622b443f75f7e3a1ffe8934126abb27015ee411760d8da877915e7510ba87f"
-    sha256 cellar: :any, catalina: "8fcdb977e1c8cccd09f58e76ed7f5d8da68ae4920a1663942eb7254f96acfe7b"
-    sha256 cellar: :any, mojave:   "e319820fb6a08d4d1f7a3ed255c3ba11285aeca31c15d6a9743c0c24830900e1"
+    sha256 cellar: :any, big_sur:  "9cb8cb39bf79d0238d2dc27f38feae95f32a1a04851f9dbc8da9e95b61bf103f"
+    sha256 cellar: :any, catalina: "f9ebc96147147720482c14c3528c294cd1f40b97044731f4a1322800db367df4"
+    sha256 cellar: :any, mojave:   "7bc30bdbb5a9bfa9adbf6a9c948ae4de761f046a69f0b24d088104b72f60f2bd"
   end
 
   depends_on "cmake" => :build
