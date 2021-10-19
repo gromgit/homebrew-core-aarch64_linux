@@ -8,11 +8,11 @@ class SvtplayDl < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "e574e69de27a7b041950dc4650dd34d04ff76eb2658fd7d785abd6b545de1dcc"
-    sha256 cellar: :any,                 big_sur:       "a1a9e655b016e1094c38dee476662122f2297080814f3605dad5ab141b4073df"
-    sha256 cellar: :any,                 catalina:      "cb6c24b81c7360095115979ec8ddc4d09d47c971b2c8385f1bf5f5b928804baf"
-    sha256 cellar: :any,                 mojave:        "1608dc3d9aa010b220fb2850be47e304bd6a9089af99740ab82d41c5ebcd6687"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a6b5982a4b745c79df25b5921ba175961ed06588d206bdf5b640ad9b5da96ce7"
+    sha256 cellar: :any,                 arm64_big_sur: "09058cba1b276052bb1f8fe120865ef86f84c098ec5ab8ba9a999c9ae202a66a"
+    sha256 cellar: :any,                 big_sur:       "20dbaf7f401663d7ac4d39a2af893a44a2937847525f58d8caf7fa8ccf3aab3d"
+    sha256 cellar: :any,                 catalina:      "118c162dc5d05c19646301a72a558fd768bd2dabf7b84ad36c41f93dc422fb4d"
+    sha256 cellar: :any,                 mojave:        "8345828c6ae9c4d0a270ff79306dce62f40d7054e8cce7ab537013fb12f63ab9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "05a03a92f9aa0ae5ce496fd1f1fe25a2b6142c662a23d7e6197a4ffe8dd00131"
   end
 
   depends_on "rust" => :build
