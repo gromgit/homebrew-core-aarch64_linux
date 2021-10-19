@@ -12,7 +12,7 @@ class VaultCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "7d315eb5639e98ff9275c64d0dbfe7cc90362846c80c20f7443c9b465e5ae940"
+    sha256 cellar: :any_skip_relocation, all: "c2b3745c3e84e8c81f3bf88dff37b466b235550b38f0499cc98dc6e819e99d36"
   end
 
   depends_on "openjdk"
