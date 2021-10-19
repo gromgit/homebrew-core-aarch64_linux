@@ -7,7 +7,7 @@ class Solr < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "9993c99cf31c1b08252312261999a15632c7d0db177091bf2a6d8ad07f6a0a16"
+    sha256 cellar: :any_skip_relocation, all: "05fa5d11df5c036aade9a389d1231e159074ab64b8276adf05c675ecd7ddb538"
   end
 
   depends_on :macos # test failed on linux
