@@ -11,11 +11,10 @@ class Bmake < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "d71c622988e64db5539e83abb09914b2cfadd17c7b4a797f8a4b906a4ffd8ee5"
-    sha256 big_sur:       "d8c3cb2430880e38822291e68afc105f7af9418b8bc14a4f923a86ae973cbd49"
-    sha256 catalina:      "29e4ba42d18ce3e974cf9bd402a17519635ba350c371d3da5672fea14e40fe81"
-    sha256 mojave:        "4f0b8d35af1cf7fb1119359a82dffeb84a042e8804f0994b1dd56c8c4a952df1"
-    sha256 high_sierra:   "d0c4003a00e1d40d5273386eb54a0667daa928a78fe5aa03ce4449cead4207e4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "64d434169bc43d70b7c620369abd019e0c2005061e154bb0f8d722e7262267ec"
+    sha256                               big_sur:       "98ff40de4a63d3dc568a577e59089f9e58a06a0b750a5f5adbe4252307d53ae7"
+    sha256                               catalina:      "4c28d9e621ea9b03603ca96d390c9823ca94e3fb4d8049ecf7b32acbe6b1b7c3"
+    sha256                               mojave:        "31f6737e5a2920fcc54736b6dcb140748f491967bc020eae635b52df038c2edf"
   end
 
   def install
