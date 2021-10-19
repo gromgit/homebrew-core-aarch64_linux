@@ -1,8 +1,8 @@
 class Snownews < Formula
   desc "Text mode RSS newsreader"
   homepage "https://github.com/msharov/snownews"
-  url "https://github.com/msharov/snownews/archive/v1.8.tar.gz"
-  sha256 "90d2611b3e3a00bc14a8869365d366ad1dab17ea1687857440159fc7137c3bed"
+  url "https://github.com/msharov/snownews/archive/v1.9.tar.gz"
+  sha256 "d8ef0c7ef779771e2c8322231bdfa7246d495ba8f24c3c210c96f3b6bd3776a7"
   license "GPL-3.0-only"
 
   bottle do
@@ -24,15 +24,8 @@ class Snownews < Formula
 
   # remove in next release
   patch do
-    url "https://github.com/msharov/snownews/commit/448f9e20490dfdb9bde2f7c9928e72c89b203397.patch?full_index=1"
-    sha256 "0f338f63781637c137e0cb0602008e63a6d01e737de11d7e78a498e99a47c4aa"
-  end
-
-  # remove in next release
-  # https://github.com/msharov/snownews/pull/65
-  patch do
-    url "https://github.com/chenrui333/snownews/commit/10a676f5df81d73b38efe8a74d2e8dbb6c003df2.patch?full_index=1"
-    sha256 "3e864e4dddae592558ec99d3ca18e488aa683c4ac5655ffc15ce717104b934dc"
+    url "https://github.com/msharov/snownews/commit/a43c1811c2bd2921b7e44fd4b28b852915b45072.patch?full_index=1"
+    sha256 "cd64cd6d9493019496b100a71a8e6c10f33b63fb3d29b7863434bc2eee7cdd00"
   end
 
   def install
