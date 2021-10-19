@@ -11,10 +11,10 @@ class Findent < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:      "0ee5a1228898bc222f04076546701d067c67c02ae2c22b543838cd10d4b677c7"
-    sha256 cellar: :any_skip_relocation, catalina:     "9ae723ffe700b49e20935ba897d62def51e24cf459ee00a1e770d374bd31cb06"
-    sha256 cellar: :any_skip_relocation, mojave:       "f9a2502784da94f40412d65e488d9e7f0410a1da163b387ced45e030effc4061"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "df6b341648495a84bb298258aacb816d5afb86ddc3058417ecdabe58d805fc49"
+    sha256 cellar: :any_skip_relocation, big_sur:      "f816b5e1e13a2f70c5771b86391200195c0f4589d2b7177b6b76bf058faf0456"
+    sha256 cellar: :any_skip_relocation, catalina:     "c5cf9be6cdac0f66237ffe6eaf7b8dbf9c8b2699ce0b2928fd8f901ed1880baf"
+    sha256 cellar: :any_skip_relocation, mojave:       "889ed0f2d7373de18390c317e7270aa57a394f7796aff07d8ca9d6b7422bc2c8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "62243f247c4ec6581b1cc0bac09cee298e20cc541199f4c273cd6bb33d2b1e65"
   end
 
   def install
