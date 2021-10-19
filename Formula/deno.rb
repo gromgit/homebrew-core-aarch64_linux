@@ -6,11 +6,11 @@ class Deno < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "491fe03952b24100a8980dfe09531eb542b3f4baad97cea80c264ed45b078273"
-    sha256 cellar: :any_skip_relocation, big_sur:       "bca3c5a72a3f1f8bd0f6d25c00d231aa134c4ae928e180b2e9a6bd459c7e4a0b"
-    sha256 cellar: :any_skip_relocation, catalina:      "a4f0c7ea35d863627c9526b579cb69afb4b6ef030bf83221d49b1e38ab7da747"
-    sha256 cellar: :any_skip_relocation, mojave:        "714856413b9402238a26d30e63bf965e30d481ec190911de1f35743d16f4a621"
-    sha256                               x86_64_linux:  "15833c839898bdb8b32e703da36e271e05dbfa699f8900846a68ea2994d0db95"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6c7daa7f0a71bcdd6612216ab7407551be3d005d02e866b3ac8da4e13bac6c62"
+    sha256 cellar: :any_skip_relocation, big_sur:       "b0d045b0a72be775e32c3b6c9589f8e68fc5431a3a49c1cd81a7df802ea13736"
+    sha256 cellar: :any_skip_relocation, catalina:      "13707257af6a348f1ed7bdd624b0d85fe67b0497184acbb81c0e4d41e348e3e1"
+    sha256 cellar: :any_skip_relocation, mojave:        "363a4256c0b6c0fd9e4694e80910e0567c97eb83fd1c976f042cf9da6ee507fc"
+    sha256                               x86_64_linux:  "c7e01236552f171bd5cf1d36f1921c2c7947d827bbc386e9fe2110bdc482da2f"
   end
 
   depends_on "llvm" => :build
