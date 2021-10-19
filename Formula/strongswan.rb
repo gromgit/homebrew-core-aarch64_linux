@@ -1,8 +1,8 @@
 class Strongswan < Formula
   desc "VPN based on IPsec"
   homepage "https://www.strongswan.org"
-  url "https://download.strongswan.org/strongswan-5.9.3.tar.bz2"
-  sha256 "9325ab56a0a4e97e379401e1d942ce3e0d8b6372291350ab2caae0755862c6f7"
+  url "https://download.strongswan.org/strongswan-5.9.4.tar.bz2"
+  sha256 "45fdf1a4c2af086d8ff5b76fd7b21d3b6f0890f365f83bf4c9a75dda26887518"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -30,6 +30,12 @@ class Strongswan < Formula
 
   depends_on "openssl@1.1"
 
+  # Fix -flat_namespace being used on Big Sur and later.
+  patch do
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
+    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
+  end
+
   def install
     args = %W[
       --disable-dependency-tracking
@@ -48,10 +54,8 @@ class Strongswan < Formula
       --enable-ikev1
       --enable-ikev2
       --enable-kernel-pfkey
-      --enable-kernel-pfroute
       --enable-nonce
       --enable-openssl
-      --enable-osx-attr
       --enable-pem
       --enable-pgp
       --enable-pkcs1
@@ -69,6 +73,8 @@ class Strongswan < Formula
       --enable-x509
       --enable-xauth-generic
     ]
+
+    args << "--enable-kernel-pfroute" << "--enable-osx-attr" if OS.mac?
 
     system "./autogen.sh" if build.head?
     system "./configure", *args
