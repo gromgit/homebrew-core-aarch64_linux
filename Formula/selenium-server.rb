@@ -10,6 +10,14 @@ class SeleniumServer < Formula
     regex(/href=.*?selenium-server[._-]v?(\d+(?:\.\d+)+)\.jar/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "edfff3c2a862fc73572c50059c9cda65c52a5e6e53ba36e84b5eccd97c2a5843"
+    sha256 cellar: :any_skip_relocation, big_sur:       "edfff3c2a862fc73572c50059c9cda65c52a5e6e53ba36e84b5eccd97c2a5843"
+    sha256 cellar: :any_skip_relocation, catalina:      "edfff3c2a862fc73572c50059c9cda65c52a5e6e53ba36e84b5eccd97c2a5843"
+    sha256 cellar: :any_skip_relocation, mojave:        "edfff3c2a862fc73572c50059c9cda65c52a5e6e53ba36e84b5eccd97c2a5843"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "99b75acd589404b60ec859ad259bf1f6ab363db9505c21ad62c826216a37375a"
+  end
+
   depends_on "openjdk"
 
   on_linux do
