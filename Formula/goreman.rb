@@ -12,12 +12,11 @@ class Goreman < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b23fc772de996cff73c26a93ba73c826b5f7e56929f0c717c9388066bb689067"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7935ca50f9a9c6fc0caceb81d64a6439aab37c61fb75edbbff99729e3542568b"
-    sha256 cellar: :any_skip_relocation, catalina:      "8985d410d3b9c56064ceb7a01be4fd448e46c414f0a0b8c3a4f6ec7374c2f5b6"
-    sha256 cellar: :any_skip_relocation, mojave:        "d7781e6ce9c1ab5844f06d77dbbb8355a5f749daa5cd3c2b12266385d73b9a77"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "df59dbb8a079d4eaf095b7a807dcbd0a96de11874dec3b6e560454617eed9b2b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "49363f66d05e2aaa57afa85118546980f4dd8be8484f6f862c813613326f83ae"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2f01e123072da262770e58be58d02cd4420109afc60ad4a9b3e40736f252ca91"
+    sha256 cellar: :any_skip_relocation, big_sur:       "379ff164b5c3f6cd46a38fcbee2763bf5720f968999752aa361eb12c9fc280fa"
+    sha256 cellar: :any_skip_relocation, catalina:      "9659197993188b2456b33a701f636bcbde07f8585a8bb3409c13ed85296fe687"
+    sha256 cellar: :any_skip_relocation, mojave:        "81050a32c568ca72e553e74e1758b9767cfe938252c94bffd9c87b7151a6c29a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f2a5eb0ed131894cccafe025849ac67541c18658e4658fb3a33cddc0bb0a71c7"
   end
 
   depends_on "go" => :build
