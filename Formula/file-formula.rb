@@ -14,11 +14,11 @@ class FileFormula < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "707df034d66e4a7e448fd1849f266634d5095f0605a8c7354bf5f0cf4fc5a45f"
-    sha256 cellar: :any,                 big_sur:       "90936b82c5dae98ee47784aea42bb8c085febf2bdc860c5c5d8d553d6b958201"
-    sha256 cellar: :any,                 catalina:      "79a0d7c166aaccfef9c381350dae30f8547a68b99e380f8d542fc92a05d1e8cf"
-    sha256 cellar: :any,                 mojave:        "7c351f1d74d78678bdff2d1ba0f245a7d3e6933e56ce726d60488e5d78cfa631"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "117e35f17ed4d51743b23c336286438c26158521a7e21139ddc5de565b3824d5"
+    sha256 cellar: :any,                 arm64_big_sur: "15e4b048fc9187617a94167c6a380334ba6b007f10c0b2e053f7eb819a07f487"
+    sha256 cellar: :any,                 big_sur:       "23a026b284b4a3b4d35bd2523dd2ff29e7067ba1a9398237f22187ff4b03ea99"
+    sha256 cellar: :any,                 catalina:      "42b22fa1942a019e33f96f30af4e58bbffd586a14d9fba7318973b9d519aa264"
+    sha256 cellar: :any,                 mojave:        "5b11f9096a34a2d37b3fdfc89836936d539b3db6da1e5468fc4d21e25d76160c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0a7e755b89c571f80b085d72602f34faefdaab64f7d879c3bb876c46480e8c69"
   end
 
   keg_only :provided_by_macos
