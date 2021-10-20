@@ -7,11 +7,11 @@ class Argo < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9d3f1d7e5120c83b3431a59c9eef5b1e7a3992f6bcf243d4de9f3d9e3adc72a1"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0976e041a58079e022d35b4c02ee868ec9f603956f8d37e19dc776099ba25abe"
-    sha256 cellar: :any_skip_relocation, catalina:      "34f8d2d0890e013dc0e692f1fa5726b82804a72cd2721c4e6ae0c649e21d3525"
-    sha256 cellar: :any_skip_relocation, mojave:        "42304035d43788460c4020f66ea27c3f49f04a6f25df16e0de71ca05cf6f78d6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1eacf18e79519ac8cb35d3f96a3f62ff9b0f1608368cfff21d39d20d18dd2c0c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6c41053d3a367629aa9685145a608908c62f8ddda930bd1d02ada27a069444ff"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ac8899624efd6b3e1b8c9a886a8f2ad7fd8dcaa7361c3473ec24601f8ccbfcb7"
+    sha256 cellar: :any_skip_relocation, catalina:      "71eb0c7a01cc34e325e379d1851ce0c6e7ee65c785c4174964305061e56f3a8b"
+    sha256 cellar: :any_skip_relocation, mojave:        "8ff152f089385cc8a91ae043816f58c70e6528fb110ea48c881499b5085dc3d1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0d5661c21bcf2def86cfb38909de412f5426cbb943a5ab3bcf4b07d13d226d60"
   end
 
   depends_on "go" => :build
