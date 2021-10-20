@@ -6,6 +6,10 @@ class Iproute2 < Formula
   license "GPL-2.0-only"
   head "https://git.kernel.org/pub/scm/network/iproute2/iproute2.git", branch: "main"
 
+  bottle do
+    sha256 x86_64_linux: "f5d54b7d5e597d1898e2f51be8236b00ad02754bcaf741299ea31e0788ec2505"
+  end
+
   depends_on "bison" => :build
   depends_on "flex" => :build
   depends_on :linux
