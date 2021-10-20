@@ -8,10 +8,10 @@ class ApachePulsar < Formula
   head "https://github.com/apache/pulsar.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:      "56b01c024746edd357eb7d944ee258a734313afd6b0d1e4f79fcf321a38fd740"
-    sha256 cellar: :any_skip_relocation, catalina:     "8733b6cfe86c7161827db14c5434262c9df80fb292a80ddb900a805c4775d33b"
-    sha256 cellar: :any_skip_relocation, mojave:       "15ff056e732b154fb6b05aad64ea2dce42e5a2e4ee79e03aa52233103307074c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "01e0bb86f62ddd706f7e66f8c6f83ccf3970b10a22d873e018022105bfa53a35"
+    sha256 cellar: :any_skip_relocation, big_sur:      "830a4cd96a644df024e9127876c4a11a68af0ca655a20d3a15aaecc133bee023"
+    sha256 cellar: :any_skip_relocation, catalina:     "291d72373020ea60dbbc448d5595c1449cc0171dc3ad7af9ea84aa25614797aa"
+    sha256 cellar: :any_skip_relocation, mojave:       "903b07f8634e992bc7e2e05e8dfa40f8dcfe0a5121769a395092cd6250b37fe4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "c57adf0e9275c1f60f00066253a961d166be2bd053f18e9f8fd236ccdbdb6dda"
   end
 
   depends_on "autoconf" => :build
