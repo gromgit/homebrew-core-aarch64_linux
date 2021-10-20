@@ -8,11 +8,11 @@ class Cdktf < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5211b14565f9dfe36a543aefb50dbf7ffe137916569779bc5988a262e44ad5c2"
-    sha256 cellar: :any_skip_relocation, big_sur:       "4bcdddc9413a3291f1801f8b60390c5a9c63731f07da27fdd27b3f6be5b6405f"
-    sha256 cellar: :any_skip_relocation, catalina:      "4bcdddc9413a3291f1801f8b60390c5a9c63731f07da27fdd27b3f6be5b6405f"
-    sha256 cellar: :any_skip_relocation, mojave:        "4bcdddc9413a3291f1801f8b60390c5a9c63731f07da27fdd27b3f6be5b6405f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f0d52c137caa9d9ae67eb3374c3015ade0a869c915a6ba3077be537e29847c19"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3ad512ddb3d37f0e449631bc2da2a9d3adf73ef909342f1e14e47f6dd244c3ba"
+    sha256 cellar: :any_skip_relocation, big_sur:       "6dd12d395edd05a0fe78fd6b90c017bdf2a7a71b85e8c6cb30af1352f94e0b9d"
+    sha256 cellar: :any_skip_relocation, catalina:      "6dd12d395edd05a0fe78fd6b90c017bdf2a7a71b85e8c6cb30af1352f94e0b9d"
+    sha256 cellar: :any_skip_relocation, mojave:        "6dd12d395edd05a0fe78fd6b90c017bdf2a7a71b85e8c6cb30af1352f94e0b9d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b718800f9a2fc7faebb81dbffe50c2d536e20750d90505aa24092b336cb6bda5"
   end
 
   depends_on "node"
