@@ -4,6 +4,7 @@ class Ninja < Formula
   url "https://github.com/ninja-build/ninja/archive/v1.10.2.tar.gz"
   sha256 "ce35865411f0490368a8fc383f29071de6690cbadc27704734978221f25e2bed"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/ninja-build/ninja.git", branch: "master"
 
   livecheck do
@@ -23,10 +24,10 @@ class Ninja < Formula
   end
 
   # Ninja only needs Python for some non-core functionality.
-  depends_on "python@3.9" => [:build, :test]
+  depends_on "python@3.10" => [:build, :test]
 
   def install
-    py = Formula["python@3.9"].opt_bin/"python3"
+    py = Formula["python@3.10"].opt_bin/"python3"
     system py, "./configure.py", "--bootstrap", "--verbose", "--with-python=python3"
 
     bin.install "ninja"
@@ -49,9 +50,9 @@ class Ninja < Formula
     system bin/"ninja", "-t", "targets"
     port = free_port
     fork do
-      exec bin/"ninja", "-t", "browse", "--port=#{port}", "--no-browser", "foo.o"
+      exec bin/"ninja", "-t", "browse", "--port=#{port}", "--hostname=127.0.0.1", "--no-browser", "foo.o"
     end
     sleep 2
-    assert_match "foo.c", shell_output("curl -s http://localhost:#{port}?foo.o")
+    assert_match "foo.c", shell_output("curl -s http://127.0.0.1:#{port}?foo.o")
   end
 end
