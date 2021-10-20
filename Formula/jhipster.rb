@@ -4,8 +4,8 @@ class Jhipster < Formula
   desc "Generate, develop and deploy Spring Boot + Angular/React applications"
   homepage "https://www.jhipster.tech/"
   # Check if this can be switched to the newest `node` at version bump
-  url "https://registry.npmjs.org/generator-jhipster/-/generator-jhipster-7.3.0.tgz"
-  sha256 "254ec00025dd856e22360a9dc4acceaeeaafb27d5538d4877dbd39959c5e44b1"
+  url "https://registry.npmjs.org/generator-jhipster/-/generator-jhipster-7.3.1.tgz"
+  sha256 "7a8efbf2b5fd03443215462de9018b7cf631457b59efd062dd0ff0d38dc568f1"
   license "Apache-2.0"
 
   bottle do
@@ -16,16 +16,13 @@ class Jhipster < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "b9a71d97817ac9dc2c5fa1ca16603df3e99923fc34b7b5fc96c3a684d1cfdb77"
   end
 
-  depends_on "node@14"
+  depends_on "node"
   depends_on "openjdk"
 
   def install
-    node = Formula["node@14"]
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
     bin.install Dir["#{libexec}/bin/*"]
-    env = { PATH: "#{node.opt_bin}:$PATH" }
-    env.merge! Language::Java.overridable_java_home_env
-    bin.env_script_all_files libexec/"bin", env
+    bin.env_script_all_files libexec/"bin", Language::Java.overridable_java_home_env
   end
 
   test do
