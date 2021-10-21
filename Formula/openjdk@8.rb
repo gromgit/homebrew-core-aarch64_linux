@@ -7,11 +7,10 @@ class OpenjdkAT8 < Formula
   license "GPL-2.0-only"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 big_sur:      "b13d2fe2ec9a4fe98ffcfb9c7b4e7a9307b12d8e999d08b88dac35eed211e459"
-    sha256 cellar: :any,                 catalina:     "2268eefc71327f9784a1a5a7ddbf17e14e50485d78bce0a856763d91dcff4ce0"
-    sha256 cellar: :any,                 mojave:       "c45c00f59218eca6e8ba55a082be6048ac30d7b13236debbc3787d3ca947b55c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "ef63be9c490a22a106579b82d30086d34fc8b5cad1087d0bc5223116c17bb5af"
+    sha256 cellar: :any,                 big_sur:      "5bcb2cbf4502f83cb2bfa439c8b838cc6573a39bd1c230cd51b076ba40d3198d"
+    sha256 cellar: :any,                 catalina:     "3aef1fb4ca615ab2700103502213b4346f1867a95d34a2981689d8bba81faedc"
+    sha256 cellar: :any,                 mojave:       "8f036a79d42e0ea7719ba6cad997cf6aec791c163bef744a929375a2e9c69779"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "fe6095f8af1e870dc2bcc2888cf74a92985431bb4210df9214bcdc991161408a"
   end
 
   keg_only :versioned_formula
