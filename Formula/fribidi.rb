@@ -8,6 +8,7 @@ class Fribidi < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "e7c104d645d36d758001c381266aaa20ac40e0fc1591c02ae8d2310e8ca21109"
     sha256 cellar: :any,                 arm64_big_sur:  "d80b767910f47f85b6fefc38a2742d520396f148b8290614b16328704f7c3bf4"
+    sha256 cellar: :any,                 monterey:       "28ddf160c24bea077a57dbd389a4e0ff44235fd04aa74335fcb043ab36b30fd4"
     sha256 cellar: :any,                 big_sur:        "434c488a27dca39fa4fab0644cb9b2f495ea4f839eef63587d0de715a93a6f12"
     sha256 cellar: :any,                 catalina:       "9ae1580fef75c9d665f5723200d7987b07674c452e2c236dae33e12a8cf16324"
     sha256 cellar: :any,                 mojave:         "3ef3b5f32b31fad3fb8dc39a559b24abb04cf46c9b29303285eb160d1f4ed19c"
