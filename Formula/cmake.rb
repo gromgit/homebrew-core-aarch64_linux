@@ -20,6 +20,7 @@ class Cmake < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "3868f3c5fc69d40799447ecf9ce3742288987101e51c7c70307bc8c88aac5c6a"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "43dcb467effe26a5cca419080e9fded311ecc5badc8339e10fa5b11215131128"
+    sha256 cellar: :any_skip_relocation, monterey:       "66b833031cc98c87d3749e610427686f6f9742a7587cbfdcef038ec8b5182bbc"
     sha256 cellar: :any_skip_relocation, big_sur:        "b9f106823e83911365f96a5f1b4cab26649840f06e1cbc541335143b7e71b237"
     sha256 cellar: :any_skip_relocation, catalina:       "1ab2ae431b90878839404643b926eb81e5b6563d2b59cb860a1ebb03d90a09b7"
     sha256 cellar: :any_skip_relocation, mojave:         "da00844fd5e38040486e1e65c415e92eeab82fcf358d5fe97deceffabc48df80"
