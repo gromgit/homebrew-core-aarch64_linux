@@ -1,10 +1,9 @@
 class Oclgrind < Formula
   desc "OpenCL device simulator and debugger"
   homepage "https://github.com/jrprice/Oclgrind"
-  url "https://github.com/jrprice/Oclgrind/archive/v19.10.tar.gz"
-  sha256 "f9a8f22cb9f6d88670f2578c46ba0d728ba8eaee5c481c2811129dc157c43dc0"
+  url "https://github.com/jrprice/Oclgrind/archive/v21.10.tar.gz"
+  sha256 "b40ea81fcf64e9012d63c3128640fde9785ef4f304f9f876f53496595b8e62cc"
   license "BSD-3-Clause"
-  revision 4
 
   livecheck do
     url :homepage
@@ -18,7 +17,7 @@ class Oclgrind < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "llvm@9"
+  depends_on "llvm"
 
   def install
     system "cmake", ".", *std_cmake_args
@@ -28,6 +27,7 @@ class Oclgrind < Formula
   test do
     (testpath/"rot13.c").write <<~'EOS'
       #include <stdio.h>
+      #include <stdlib.h>
       #include <string.h>
 
       #include <OpenCL/cl.h>
