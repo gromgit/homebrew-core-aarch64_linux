@@ -33,11 +33,11 @@ class Pcre2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "398a435ca747d30a60fce3a4df23a60925cddd997862b8225a7a3123e2209abd"
-    sha256 cellar: :any,                 big_sur:       "c2f04108058a5cf4e9ad6ed127ea2b1195be6e13015241260683466cd49739d9"
-    sha256 cellar: :any,                 catalina:      "1f81c9f906a96b87c922e4901e7f9f0057b259b82974737194f14f767bf437b0"
-    sha256 cellar: :any,                 mojave:        "7eec2912f8a8248933a2c595185c4245b08f32f18b3a1a9dc84838a274aac16e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "502a9b9672c23b60b2a98db567171df17daf7851f8505f933c49b96699c3f64d"
+    sha256 cellar: :any,                 arm64_big_sur: "51b0ff7dc18491f57f470b8b778b3fa148def0dbcafac6e828a68822cb4e203b"
+    sha256 cellar: :any,                 big_sur:       "951e867aec8212de345e44ecae231964a81d9a9b7033b9b43ca74cf41ac43408"
+    sha256 cellar: :any,                 catalina:      "20867bbc297f9419aff9e752f79bf973758a223063d012fc28016e47239bd54b"
+    sha256 cellar: :any,                 mojave:        "74b92c04402808c96f7a42c5dc5a86331e29e81ac9a1fb2f01e3332de4f3d8d2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d26eb6c1d717c081bfa455825c1edca3230c4f007f4334d207bb72ee727c9ff8"
   end
 
   head do
