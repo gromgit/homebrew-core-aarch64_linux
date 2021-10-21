@@ -13,6 +13,7 @@ class Libevent < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "4867e07fed355e41bf50f9f44e29307c0004387dd49f743e3b387478572dc8a8"
     sha256 cellar: :any,                 arm64_big_sur:  "53ca41440aee8d770530b0de6e655d570028afe0a99ed0e4e16f83af29e06ecb"
+    sha256 cellar: :any,                 monterey:       "b08b593fd2ac8480d59038ca46892844a526af8ddaef9788aed93c6aab63cd05"
     sha256 cellar: :any,                 big_sur:        "45758b448d82b82b6bea52bc9a72593ef22f04ebdaa4b4230cadf12768252e22"
     sha256 cellar: :any,                 catalina:       "b5f5e7607d76b9b41ecac6df72ab5797079a9367055bb305514917595e63a323"
     sha256 cellar: :any,                 mojave:         "c52ad284f2bbdd512cd0ddd9fe19dd1b7092f7b967f593a7784098f5a1cdd254"
