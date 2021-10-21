@@ -2,6 +2,7 @@ class Ntopng < Formula
   desc "Next generation version of the original ntop"
   homepage "https://www.ntop.org/products/traffic-analysis/ntop/"
   license "GPL-3.0-only"
+  revision 1
 
   stable do
     url "https://github.com/ntop/ntopng/archive/5.0.tar.gz"
@@ -46,6 +47,12 @@ class Ntopng < Formula
   uses_from_macos "curl"
   uses_from_macos "libpcap"
   uses_from_macos "sqlite"
+
+  on_linux do
+    depends_on "gcc"
+  end
+
+  fails_with gcc: "5"
 
   def install
     resource("nDPI").stage do
