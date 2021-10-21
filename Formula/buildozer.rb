@@ -9,6 +9,7 @@ class Buildozer < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "bc0bb2842071d62eb51c686f2a44e999529577469459ddbe7da00b854ea91add"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d76fd8b4a443568bf18fec9f85303d4ee7470cdd1c90fa8ad6febdfaba4292cd"
+    sha256 cellar: :any_skip_relocation, monterey:       "605cb9341035054b51c201a5f85a47db436f1f1d562438f4e48b720e95b6c52d"
     sha256 cellar: :any_skip_relocation, big_sur:        "0585a97c2d8d5fbaf4bc3624eb22919a16bfeef57aa43334018b1836957c57c1"
     sha256 cellar: :any_skip_relocation, catalina:       "0585a97c2d8d5fbaf4bc3624eb22919a16bfeef57aa43334018b1836957c57c1"
     sha256 cellar: :any_skip_relocation, mojave:         "0585a97c2d8d5fbaf4bc3624eb22919a16bfeef57aa43334018b1836957c57c1"
