@@ -10,6 +10,7 @@ class Bazelisk < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "bc592b8ca05a666976465d3620a7255ddf2cc44cbf5532a7f840477eb7402428"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3aa568fb42d31462693efea8051e7ef2489e1f1f22a07500cfd513b0c7f97cf0"
+    sha256 cellar: :any_skip_relocation, monterey:       "7dfdd39866cb60e9a47d4cbf32396b079fe6b07195017475ec832fdb88eb89df"
     sha256 cellar: :any_skip_relocation, big_sur:        "a0589844659d97147c7fab9b3a623192527cfbaed269bf4a502aee0dc2dcef18"
     sha256 cellar: :any_skip_relocation, catalina:       "4b334992c7b2cd433074e100a3675bc07a7ab64de8fbb35beea250d229d12363"
     sha256 cellar: :any_skip_relocation, mojave:         "f774b348b3e1403522e6a67126b9791f20245ea3002c23c4786094d82c9a9507"
