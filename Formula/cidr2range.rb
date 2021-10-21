@@ -11,11 +11,11 @@ class Cidr2range < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6446f558a9c5e193e0c96135c9b2e14c83bcedd4e584fdf6768f119936d56f07"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c4674bd284ea97c018ae479b439ebe1ec3bf08ca2631e3eb9a27d92479c3bf21"
-    sha256 cellar: :any_skip_relocation, catalina:      "0e761e1ac45563693d03501e82ff1a07a865e55453026cda2895650edbeda503"
-    sha256 cellar: :any_skip_relocation, mojave:        "e76347d9d442df7f4c2335c277ed801c0e4e947e8d38a9c4e0a3e5bf3519430d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0991c9fc45ebee1696c6f65477cffcf03a1ba88223bbfe95b68bb03eaa87ac9b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a2681a24c80b987299ae03be56a7b0e9fde805cfa6ae297140fd15d9f5822e21"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4b60567820427b73945cea5ce77d6a73c10954d36f82c9f0e1d87aa5ae6d6432"
+    sha256 cellar: :any_skip_relocation, catalina:      "89f76772d934321dcf4e6c9417071cce8074a3666946decc12c3d5a861001d31"
+    sha256 cellar: :any_skip_relocation, mojave:        "4ce46a0ca3a2e66f47689ca41a2ba81b6700da689198c025cb724411b35e2fee"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a8d60c39ba96620c8b8cd5f34e81a02365f0c09db476a3e7626670a12e80c2a8"
   end
 
   depends_on "go" => :build
