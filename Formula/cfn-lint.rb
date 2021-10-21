@@ -9,11 +9,12 @@ class CfnLint < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2c7e8d287ec7e24e7752d19d47e8fdddd63da857589956fe00ddf56c4077bcb4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5d8f3fb5f57490660e177c1b1c58c259dd6b93be7dcaf7834fa180ae6a3153ba"
-    sha256 cellar: :any_skip_relocation, catalina:      "f7f4ac217128e07abe36ceae614a614751f1861297c9f21ec9d032d909c24817"
-    sha256 cellar: :any_skip_relocation, mojave:        "f010bb799ba08383429a51cbbbfcfa8735260b69da8728fcbe322dafaf7bf2ac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3a3b9ec6b722d6438de816b0dc66ff1fed80a63a211d4d9e1ea4b4b644af3e1b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3d6c6c6c1e0edb45c9a969b7068e6eb75408129de2519af5f4d5be9c0729548b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2c7e8d287ec7e24e7752d19d47e8fdddd63da857589956fe00ddf56c4077bcb4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5d8f3fb5f57490660e177c1b1c58c259dd6b93be7dcaf7834fa180ae6a3153ba"
+    sha256 cellar: :any_skip_relocation, catalina:       "f7f4ac217128e07abe36ceae614a614751f1861297c9f21ec9d032d909c24817"
+    sha256 cellar: :any_skip_relocation, mojave:         "f010bb799ba08383429a51cbbbfcfa8735260b69da8728fcbe322dafaf7bf2ac"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3a3b9ec6b722d6438de816b0dc66ff1fed80a63a211d4d9e1ea4b4b644af3e1b"
   end
 
   depends_on "python@3.9"
