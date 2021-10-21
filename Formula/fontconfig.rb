@@ -13,6 +13,7 @@ class Fontconfig < Formula
   bottle do
     sha256 arm64_monterey: "7b4e599e0ba2f56b5b3e22b83bebb1dc4e38c10b00d231c9c38319df31c7f65c"
     sha256 arm64_big_sur:  "19dd1db44a74a3fedf20bc6576f81469d0ba6c4301fc865a56c3bbda2733d519"
+    sha256 monterey:       "7c40dab2076798df8b741c132bfc294f1c3fe3535c683d293b6711f2574d8675"
     sha256 big_sur:        "ee5961891c9e943c8bea6ad280d2346caa2d3efafdbd726670e663d0bdfdb010"
     sha256 catalina:       "64ff208b28613dfe2a65b9d74fd9b0129f3ca7e423db78329144cdaf51b36f70"
     sha256 mojave:         "1c704a5a4249252bf42dc4f2a458f911a7858a931858ad257d9ec39978ca5095"
