@@ -11,9 +11,10 @@ class Oclgrind < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:  "34ba4bd89a710096bb746eff73016c717a4ffc256ad12cc9d8b95ed11ae6662e"
-    sha256 cellar: :any, catalina: "8a47a1155a7627d2375dc83221b0e2381cf8776791c414dee9eaaef639fcdf60"
-    sha256 cellar: :any, mojave:   "4dfa4033007637b3c2a76e785659f08cc961c20151cb60e6f86e701277ad876a"
+    sha256 cellar: :any, arm64_big_sur: "7eb82923ede6b708c46585ea8277f4f73ed521f5a9411709f27de4daa9f48bb4"
+    sha256 cellar: :any, big_sur:       "d7e20e1c27a6716a448f9e878f60706490751edfde5296a676776c2ec3d2ef2c"
+    sha256 cellar: :any, catalina:      "3b7f3865bc3ed7ea3f9d4436b9e4a003b8759262347c7a27edf68ae291e804a2"
+    sha256 cellar: :any, mojave:        "f92d8a342ad7d878f2164345e2f8982d8bd6c750ef625e1761f80cee666627fb"
   end
 
   depends_on "cmake" => :build
