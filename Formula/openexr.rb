@@ -9,6 +9,7 @@ class Openexr < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "fced64362706423a154f34267febde96ae7b9400f2461928572e36bbc0a32ba4"
     sha256 cellar: :any,                 arm64_big_sur:  "ab723009a94026ae725e87542aebd00bc69992ac3f672ff6960930eb158819a1"
+    sha256 cellar: :any,                 monterey:       "4e855c669b718fcec2c8755d80fea24a3d600475dc10445870e1aa33e4dfd112"
     sha256 cellar: :any,                 big_sur:        "922846fff4a126532cbba994521b8768f3ad9c6e4d11c175df4a51f333b8da87"
     sha256 cellar: :any,                 catalina:       "f9bf9db8861ba9c96ca5b76a03e986a20c4545528c7770dc1915044b7ef3c25e"
     sha256 cellar: :any,                 mojave:         "e2ab720e00d56143302a0c3af337e7605c8e2768cce9d5dadba3d28dfa28b904"
