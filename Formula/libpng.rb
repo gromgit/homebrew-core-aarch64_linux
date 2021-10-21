@@ -14,6 +14,7 @@ class Libpng < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "40b9dd222c45fb7e2ae3d5c702a4529aedf8c9848a5b6420cb951e72d3ad3919"
     sha256 cellar: :any,                 arm64_big_sur:  "766a7136ee626b411fb63da0c7e5bc1e848afb6e224622f25ea305b2d1a4a0f1"
+    sha256 cellar: :any,                 monterey:       "7209cfe63b2e8fdbd9615221d78201bfac44405f5206f7b08867bcd0c6046757"
     sha256 cellar: :any,                 big_sur:        "a8f1c35f9f004c4f7878c30027e35a9fb9551782df963f88deebd3dc29d94d51"
     sha256 cellar: :any,                 catalina:       "c8e74da602c21f978cd7ee3d489979b4fc6681e71f678a1d99012943ee3a909f"
     sha256 cellar: :any,                 mojave:         "53bbd14cc27c86c16605e256e7646a1b5656c253abca084958c5d80a2961cb01"
