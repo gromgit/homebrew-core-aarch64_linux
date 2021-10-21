@@ -4,6 +4,7 @@ class KitchenSync < Formula
   url "https://github.com/willbryant/kitchen_sync/archive/v2.11.tar.gz"
   sha256 "8755c79d18054ae842b8744575fdfb55b76a8667cea8186fa22cb68bd5fa60ba"
   license "MIT"
+  revision 1
   head "https://github.com/willbryant/kitchen_sync.git"
 
   livecheck do
@@ -22,6 +23,12 @@ class KitchenSync < Formula
   depends_on "cmake" => :build
   depends_on "libpq"
   depends_on "mysql-client"
+
+  on_linux do
+    depends_on "gcc"
+  end
+
+  fails_with gcc: "5"
 
   def install
     system "cmake", ".",
