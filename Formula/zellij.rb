@@ -6,11 +6,11 @@ class Zellij < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ffcefef361baf3ff64e3e7886b06651bf3a61ab7a3cb3c8f5defcc811893632d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8ad1b08cd95fa7c1d2b919ef4b0acc8789e7f6f6ce1cbea5909dc059a2681a70"
-    sha256 cellar: :any_skip_relocation, catalina:      "7e3ffa9ee3535ad5936a16385ff6b16f6fe9539f77b663f8953a1d319a312d3b"
-    sha256 cellar: :any_skip_relocation, mojave:        "d67154fc065bf0b2053edf8f3e35b867a26293848ebe19954bb223b9ab991586"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b7f929541e8d238e703be5ae40715179929cc3a15938a87d2b30c8ac9e750eb3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fd47500097d7b82124edcb28c0ee8c75274a8c8dda16103856b61417da8b6437"
+    sha256 cellar: :any_skip_relocation, big_sur:       "295361169d4b7d89bd7a6c461bf4b816cf6f19ee0d68d0e7b307a3b06603c81a"
+    sha256 cellar: :any_skip_relocation, catalina:      "d97707e0f30b076069378d7fd840f43973d8a2e54387ce1a3065d2ceb44eb5e3"
+    sha256 cellar: :any_skip_relocation, mojave:        "3d579e2b41625a1c2d77c005044a8406eebeefc0c570ab7231968c63b019c935"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "56879448c190de1ae1dd120237801ee90439398f366d2de5c02f415f9daf35b5"
   end
 
   depends_on "rust" => :build
