@@ -67,7 +67,6 @@ class Sysdig < Formula
       args << "-DUSE_BUNDLED_#{dep}=OFF"
     end
 
-    # We need C++17 to use Abseil.
     args << "-DBUILD_DRIVER=OFF" if OS.linux?
 
     system "cmake", "-S", ".", "-B", "build", *args
