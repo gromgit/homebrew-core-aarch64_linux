@@ -29,6 +29,12 @@ class MysqlClient < Formula
   uses_from_macos "libedit"
   uses_from_macos "zlib"
 
+  on_linux do
+    depends_on "gcc"
+  end
+
+  fails_with gcc: "5"
+
   def install
     # -DINSTALL_* are relative to `CMAKE_INSTALL_PREFIX` (`prefix`)
     args = %W[
