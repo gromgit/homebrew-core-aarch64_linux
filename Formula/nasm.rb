@@ -13,6 +13,7 @@ class Nasm < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "b890027bb7fef2cf20c69f3fd38ed0c19c373bce79c949ab6d123601617ae949"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8e3fb019ffdfcd4ce6b418adbe3d1d1d0e1e232a7de3b62fc4872c2401543cb3"
+    sha256 cellar: :any_skip_relocation, monterey:       "d22292dce7f323c908b6774fbc76c4716142e2b73a292556e22d3b42589fd5d4"
     sha256 cellar: :any_skip_relocation, big_sur:        "cc45793ac9f3fedd01dd08bbbf766137a40bf22e18c43742498b0a542aa319e8"
     sha256 cellar: :any_skip_relocation, catalina:       "1875e67160bac1675dd505d66a6b78469767d2dfe8baab2652409f91ac0549ef"
     sha256 cellar: :any_skip_relocation, mojave:         "4b3614f857264edfa9aeab961c523b3910cdef0ceccaf9957888b477c1c512f4"
