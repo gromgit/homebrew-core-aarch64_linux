@@ -28,6 +28,7 @@ class Isl < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "be08c3e9765655ad5bfd227f9b97acb0ef88ad2307dc214ea4064cc1f51db641"
     sha256 cellar: :any,                 arm64_big_sur:  "cf7f8b77fc0e51bc9c9921306737176e6f9e03062255a525d9ab59cf91ed3d36"
+    sha256 cellar: :any,                 monterey:       "6eca22a381c05adc4e33195e5b409bd695e035141d577480876ac22d811ec5bf"
     sha256 cellar: :any,                 big_sur:        "d8c7026042e122143e0729bf3a596be77753b8cfeddcae200cd3a3c18176800c"
     sha256 cellar: :any,                 catalina:       "f33ee49a23fbde05392be23110d14add72aaed390ffd3aefc400645eeb1772d4"
     sha256 cellar: :any,                 mojave:         "34b71567d6bfb7e4cb4aced1d089fe6d72988af02775730be26b5bcea483d065"
