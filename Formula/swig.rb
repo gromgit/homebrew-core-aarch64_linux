@@ -8,6 +8,7 @@ class Swig < Formula
   bottle do
     sha256 arm64_monterey: "9e60e978ae83f0afd63aa8a27d3e418eda0cb75b89c0d22e25a0ccc5f2e00b3e"
     sha256 arm64_big_sur:  "918c070202e0138b64b2e27f262aae3a72ab9f273f14842802d1fbe9169e66fc"
+    sha256 monterey:       "170414d38ab55ef50cb1275fbb0a9e0f0248ad1e23755af8ac2184a6825d514e"
     sha256 big_sur:        "f198353656b61cb35b5c28ed6c9cb10689d2a0fc69529cfbcbc0fbd75a027e27"
     sha256 catalina:       "530e80b7e7dcd28469b52fc3b668683a97b72642ebf2b6d4e6708d14f05e7286"
     sha256 mojave:         "50afb5930cb37af2e400f0369f6da15b1d4922c1f72f45d13e7e3f8bd9d6d27b"
