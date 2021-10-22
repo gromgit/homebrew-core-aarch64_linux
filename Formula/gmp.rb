@@ -24,6 +24,7 @@ class Gmp < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "a43a2ae4c44d90626b835a968a32327c8b8bbf754ec1d2590f8ac656c71dace9"
     sha256 cellar: :any,                 arm64_big_sur:  "491220f1ff2c662b96295d931a80702523eeaee681d7305fb02b561e527dcbb8"
+    sha256 cellar: :any,                 monterey:       "dddc6d8c871c92f6e5fb1249c28768aa2b4b47c38836a69cf787a639cf5eee73"
     sha256 cellar: :any,                 big_sur:        "e566452815d2ff5dc66da160bd1cd3d9cf02a17a07284cf0bac46496133383ae"
     sha256 cellar: :any,                 catalina:       "5ee7a460668864c28e541db15420e1480c3d31c5f216797a453a5310106fbc97"
     sha256 cellar: :any,                 mojave:         "b9d7d36c8d263be0e02e17d435350546f9f7008eb21b6e86bf42f719efcba85e"
