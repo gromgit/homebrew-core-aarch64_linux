@@ -9,6 +9,7 @@ class Cocoapods < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "fa607ac25dd409d479125d25a2fcd97aad4e7ab5759b9dfa24c90b6d461bf801"
     sha256 cellar: :any,                 arm64_big_sur:  "d792e6ff2dbbc51e436000addd1bcf86edb34feb4b53194e64f6889d48527ee0"
+    sha256                               monterey:       "4eb89ca73f311a1e0c52a0b72d2215b4c0201588156faf8fada8b9d595d22aa2"
     sha256                               big_sur:        "a62461a2f591e9a765801d02ea83e0977782839e68a1886920a0928423683501"
     sha256                               catalina:       "560c574cd0a9ae0958ae32ad136476982552186d6d500ac1167d43eff72d2007"
     sha256 cellar: :any,                 mojave:         "f24d3cde3c06c8fd3806979d2c34c9edd8ad67e014c8f3aee69a487ccb1058c8"
