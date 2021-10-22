@@ -6,11 +6,10 @@ class B3sum < Formula
   license "CC0-1.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3c79b2e1a99c15e34a16704464a6da8c0f8192cfbbeb402764ef33b948ad9dde"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c84ed5e1116845343fc0db6cd71acbae101d59fe614e0eb10f584dd2bc85a6aa"
-    sha256 cellar: :any_skip_relocation, catalina:      "b4041a76b7b285d0e08ad2f88bee08864f3c5557aa1d98d24479c5f11e7b063f"
-    sha256 cellar: :any_skip_relocation, mojave:        "a519019495263bc5ecc038829e45bf78495de1ea4e1a04f90a9888198f7b9986"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b710a42418a6d2c530352d301ef405b10f606e02da957726f6f29c28fb3beea3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7410629ac8736ae399089cbc5740f8a3165e7644ccde8175a5002430d1029a76"
+    sha256 cellar: :any_skip_relocation, big_sur:       "92ed7f1c75302ca78d8b03900256769775c4e59a68e4f66fe096e97f8acf4203"
+    sha256 cellar: :any_skip_relocation, catalina:      "e3625b9225421f31986d329c5fcf3967e98f1ddbb97e84e574d89ff4d47108e2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a8059c6780584b5ce84af8da9264af6e1dd9ca8476ae865c8affceefd515bfd8"
   end
 
   depends_on "rust" => :build
