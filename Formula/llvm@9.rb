@@ -8,6 +8,7 @@ class LlvmAT9 < Formula
   revision 4
 
   bottle do
+    sha256 cellar: :any,                 monterey:     "f7d35848ad1b76f358c742719cf3f0fe5cc913a0e04e1a81838ecc30cea22d7f"
     sha256 cellar: :any,                 big_sur:      "611f1a48eaa5ea4abda72ec633671c1ec56541fb2acf9ed8021ac540e863ab33"
     sha256 cellar: :any,                 catalina:     "111e5fdea2179635cb834f62ac0e8e967c4b9e9ad4ed99c8db6a0879f58ff524"
     sha256 cellar: :any,                 mojave:       "de79caa57933b7618c0cb92aad49fdf7f8758d0875466050908737d32f9e5b61"
