@@ -8,6 +8,7 @@ class Dav1d < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "990495bbaf3c78c8de9e21916f8d0ddbcb1ecac54af154d363679ce93d6cc668"
     sha256 cellar: :any,                 arm64_big_sur:  "d03b6fb80959882f28f578b0cadb330a3ebbedd511ed47315990f733c9dd5db4"
+    sha256 cellar: :any,                 monterey:       "77ac78e014a58ba42c630f48ed7bd9a6919d8693cf901b9eeff999603d897be4"
     sha256 cellar: :any,                 big_sur:        "32baa0d1898c4640842e29e743fd7ce4a9bc7c5c3e8937086b1eed267d20c938"
     sha256 cellar: :any,                 catalina:       "6bbb978d3c3b20a7b2df2b27e1a41cbd60a81fe4baa248f128de98133a400576"
     sha256 cellar: :any,                 mojave:         "88b9800aa5a7263d58e690aaf39e51a759f71dd84da49138c9aba23bff80d3a9"
