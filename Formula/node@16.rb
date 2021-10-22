@@ -10,6 +10,13 @@ class NodeAT16 < Formula
     regex(%r{href=["']?v?(16(?:\.\d+)+)/?["' >]}i)
   end
 
+  bottle do
+    sha256 cellar: :any,                 arm64_big_sur: "07f7cf13b5c725bb0e2235cba34d893a7754752054cade38c8c8cc96a929ac7d"
+    sha256 cellar: :any,                 big_sur:       "fe5a4a572aef7c444322b34eb5eb24c15d5bc7337546697e23cd273b57e8661b"
+    sha256 cellar: :any,                 catalina:      "6484fbdd2c0eab6baf8e5053c21e0c2f8f628f61f62658323a28356bf59d3517"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f7a4edf77e97855d3d7d8a6e379c62bf02c4e572dbffe672109b90edeb2731ab"
+  end
+
   keg_only :versioned_formula
 
   depends_on "pkg-config" => :build
