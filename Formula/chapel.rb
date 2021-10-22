@@ -7,10 +7,10 @@ class Chapel < Formula
   revision 1
 
   bottle do
-    sha256 big_sur:      "beda2be8596ab9a15e88cbd19c5b0289ab15b88d7f63c56d61bb863137276c7a"
-    sha256 catalina:     "f4a653976006f3f5c54b57ebada3527f807af9cbc69713591945fa7003a89927"
-    sha256 mojave:       "6be57e2cd756b5cb822bf87ab069bea4915b42c141cda9865b6279c45917c6fb"
-    sha256 x86_64_linux: "9b1816e66d41d06e9be28682a8282c12280e228ed631aad2d97e479f2e006779"
+    sha256 big_sur:      "71be5aaea9c567fd89e7cd0943aa6658200ce880da493f3269221745365d2f4f"
+    sha256 catalina:     "b50729e75a45fdc2b4b350951d82c52b5abeb26813cf5fc6289a01dcde6afbae"
+    sha256 mojave:       "486ff899300cc9ca346603badc31e7812f0ece757c60ae878588068ee7738023"
+    sha256 x86_64_linux: "7cf01213c80d41ed1b20451fd9f11b4b651a1b9a603729826a383e73475918b3"
   end
 
   depends_on "llvm@11"
