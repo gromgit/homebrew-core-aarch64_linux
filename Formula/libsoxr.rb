@@ -14,6 +14,7 @@ class Libsoxr < Formula
     rebuild 1
     sha256 cellar: :any,                 arm64_monterey: "dd14558c84be8ea6b19408a9e3c59cb273b19334fb59220e8681315507d867ed"
     sha256 cellar: :any,                 arm64_big_sur:  "cf7ef980c9553756fa4b267b52e940566dc07b9aecbfea49180dbb2ebdeb433a"
+    sha256 cellar: :any,                 monterey:       "f1a61556ee8195d611cdf735cad6f36a841cf8ef66fe5e49030b8932cd73033d"
     sha256 cellar: :any,                 big_sur:        "616e7ec0eac9aa1322b9c32a1e2ba71ce18c36ee9cbfc854b43c77153006c142"
     sha256 cellar: :any,                 catalina:       "6fc775411464312fe93dff80cf50497d7b412b36c8115eaa91fe65c321da755e"
     sha256 cellar: :any,                 mojave:         "ddd19b9146079827cd9065afe6853961e8b0d0857f5a06888efc500a25f087e6"
