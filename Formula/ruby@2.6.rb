@@ -13,6 +13,7 @@ class RubyAT26 < Formula
   bottle do
     sha256 arm64_monterey: "4f39d27e96dec688c5430545f7a0459d51ae171587af3b5728bf0b4e488160c9"
     sha256 arm64_big_sur:  "db4973da791592864ef717aa6c2df7cd8fd94f077573c07f4d3acebde8c358b5"
+    sha256 monterey:       "cb24396973a2c71d0b1827afac326324d09725fd91cb03fcd9ee2b8df2e8860e"
     sha256 big_sur:        "f468588cf536eb0e87d47802c8b2b72e49804674d17f94364f1bd603787e772c"
     sha256 catalina:       "92f28ded4949798be9f44a3c68624c63e36a6dfb2ab0fbc05f2dee06fc6a28d9"
     sha256 mojave:         "7b0bd8c3357a44fa869beefc973d484107b9fcaeaf0778768a6112742d3539dd"
