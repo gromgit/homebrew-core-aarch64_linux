@@ -9,6 +9,7 @@ class Nghttp2 < Formula
   bottle do
     sha256 arm64_monterey: "dd713ae5e09d42b3565b0948fd710e340231f97c9125d3aaa3aac69b11648140"
     sha256 arm64_big_sur:  "d460789e9fd34f91aa1e9e4ca1b7f19a1d404bfe5a2436137da377316efbea93"
+    sha256 monterey:       "a4c091e6343a0153b4ea4223d8a5f22f598a2cd874ae0080b605e812bce9f131"
     sha256 big_sur:        "da456fbcfd7be04c28fe0882f7ba187db2c584ccc3eabc5ab631ac8278513984"
     sha256 catalina:       "e667dd7d98de20e202058c50faf84645e1379bb60b55a49a8cd7eee6b4adfcc9"
     sha256 mojave:         "961ca4a0fb74c72bd1e184351aa375c60df79410acd0a1f8930e23584c9e6b86"
