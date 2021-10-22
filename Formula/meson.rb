@@ -9,6 +9,7 @@ class Meson < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "591cda9c80329d71ce918e7994a4d5d135ed69ef48ac049a9bb94429d25d59f0"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "591cda9c80329d71ce918e7994a4d5d135ed69ef48ac049a9bb94429d25d59f0"
+    sha256 cellar: :any_skip_relocation, monterey:       "3172bfe6cd74d86311d96c561ff66c0bb7bd3ddc51111728e9d5a83734366acd"
     sha256 cellar: :any_skip_relocation, big_sur:        "3172bfe6cd74d86311d96c561ff66c0bb7bd3ddc51111728e9d5a83734366acd"
     sha256 cellar: :any_skip_relocation, catalina:       "3172bfe6cd74d86311d96c561ff66c0bb7bd3ddc51111728e9d5a83734366acd"
     sha256 cellar: :any_skip_relocation, mojave:         "3172bfe6cd74d86311d96c561ff66c0bb7bd3ddc51111728e9d5a83734366acd"
