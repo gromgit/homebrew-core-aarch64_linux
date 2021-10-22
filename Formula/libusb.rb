@@ -13,6 +13,7 @@ class Libusb < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "715b8ecff2ca68aeb277664cf22e433e33bef7b2a25dfd577b6abb0dd3e6e730"
     sha256 cellar: :any,                 arm64_big_sur:  "1c40f64450705461a5373c3d54257e646d39914d44bffaf9d957bbe063db2129"
+    sha256 cellar: :any,                 monterey:       "e77deec33475ce0a496be778b6fbf1d5e6a656e46fbf4baad52049330b48b01d"
     sha256 cellar: :any,                 big_sur:        "74e0067e968ddbea31e070885ae86bc1db5c66fd157588e84576e653e62894c8"
     sha256 cellar: :any,                 catalina:       "034ae259f17afb5894860cdb1786fd6d391359e8d221c0f765eceed6210b60df"
     sha256 cellar: :any,                 mojave:         "1318e1155192bdaf7d159562849ee8f73cb0f59b0cb77c142f8be99056ba9d9e"
