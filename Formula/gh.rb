@@ -15,6 +15,7 @@ class Gh < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "8007a46892b80289778482989518b44838b8d01b9cb6a36e86c048db73481505"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0c8a4aa91eb91928477e578168a32866098bd9d4dbca17caf39cf1b921925039"
+    sha256 cellar: :any_skip_relocation, monterey:       "69e770d201f89f8c18eea5d4a426852e8b94830c0d9ee40867ddedd9dbcba104"
     sha256 cellar: :any_skip_relocation, big_sur:        "62c1fa920d386d9cf5893643830319abad097e39d798e966c102c64a79f2b859"
     sha256 cellar: :any_skip_relocation, catalina:       "002847accc5930067182092649b6976cbbae09e84c70d9389f25bde1b9dd2ff3"
     sha256 cellar: :any_skip_relocation, mojave:         "242f3cdea693b1f5eb0896120367d9c2db1051b8b475ae48571f9479bba066ed"
