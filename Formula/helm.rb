@@ -10,6 +10,7 @@ class Helm < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "8587566f16cef43b81ae6ab542a864b3960da617d31fb975a85618072f51bcf7"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3ff5c5ebf92f73bf50637c24d5579b7608aa3dc8618244b7389f061bfe4875f1"
+    sha256 cellar: :any_skip_relocation, monterey:       "af30331837e4e38e81c810c1ace2bd81ac153643907b39d4c12c56e14d8b1889"
     sha256 cellar: :any_skip_relocation, big_sur:        "f62c4a77bdf5f912129ed649222eb947fe4abe549163b44fe0d330ef736b6e33"
     sha256 cellar: :any_skip_relocation, catalina:       "9335a6f8906210e2b832e07e6702df4726ae67c42fc017ebebdaab386ba8de2d"
     sha256 cellar: :any_skip_relocation, mojave:         "85f1ddd0cfb9a20a927b1296a1df7a09081665d278893df62cb2ad7c4672a3f0"
