@@ -8,6 +8,7 @@ class Hello < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "482983834d20785200d4c07d8102c040d3385c81f9d8e94b93b3bcedb137800a"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b3b083db0807ff92c6e289a298f378198354b7727fb9ba9f4d550b8e08f90a60"
+    sha256 cellar: :any_skip_relocation, monterey:       "4b0ad8e4347f049e63bc02ee5bc7346dc28a3b28ce78f5487938c1c17f96dfe8"
     sha256 cellar: :any_skip_relocation, big_sur:        "69489ae397e4645127aa7773211310f81ebb6c99e1f8e3e22c5cdb55333f5408"
     sha256 cellar: :any_skip_relocation, catalina:       "449de5ea35d0e9431f367f1bb34392e450f6853cdccdc6bd04e6ad6471904ddb"
     sha256 cellar: :any_skip_relocation, mojave:         "f9d6285eafa4317c5a653bd02832bdabe4df9f6b18702274d551b28cc45d8b23"
