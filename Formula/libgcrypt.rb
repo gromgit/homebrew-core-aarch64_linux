@@ -14,6 +14,7 @@ class Libgcrypt < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "db8ca3ac372b23c25be44950acae40a4bb8faa4312df72023a28959a09cd8ea7"
     sha256 cellar: :any,                 arm64_big_sur:  "ebe24d93edccd91ac094387b74b0c42aeebd44a6bb5f583816c8d1690690cf57"
+    sha256 cellar: :any,                 monterey:       "b8b834ecc967d71931b73f4102ef74be06812358def29cf37700ae1d57494c80"
     sha256 cellar: :any,                 big_sur:        "19f11700630c036864c3acaf39d6b26b8d7f46a96b7eab4cab5d118ce5a0c28a"
     sha256 cellar: :any,                 catalina:       "22b69fca91210d5598644b6164980ea3d53ccbb9a66124314ae3836b9100a4bf"
     sha256 cellar: :any,                 mojave:         "d40e101e9605d7ba2b56fa6c441565192a85b3bb67302ab4feeac4d38a56d261"
