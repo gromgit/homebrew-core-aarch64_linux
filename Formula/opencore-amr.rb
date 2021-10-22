@@ -13,6 +13,7 @@ class OpencoreAmr < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "40cf41052489b327ddbce82d3883138cbd13e121acefcd0a86d2326405987322"
     sha256 cellar: :any,                 arm64_big_sur:  "0bba66cb88f85fa1bd81905d59e807d0329af2e1c0e2c9ccca6177116c7c1d58"
+    sha256 cellar: :any,                 monterey:       "3bc66a9ce05f3eb3666b0e649af799980e44aaae3ed420b686dae15da553757a"
     sha256 cellar: :any,                 big_sur:        "cdde538ce64ce7ed1aa7fc0d5c023978307738a831d6fb8eb717d073b6b085ce"
     sha256 cellar: :any,                 catalina:       "424d294d95aa7539842f1c2402a0be6ba558fa22680a0f5681998b12cf45a152"
     sha256 cellar: :any,                 mojave:         "816d5463797b6412fd8944b98ab79d766dcf886b9eb37d83778fb7648d995603"
