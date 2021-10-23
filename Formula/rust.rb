@@ -16,11 +16,12 @@ class Rust < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "a83ae63ce2f8767921cecccfed2296f573535af2c72ecc729a22ea1b60163cca"
-    sha256 cellar: :any,                 big_sur:       "0703f28e13084ee17a1d6b30754fb839d8f8d8286c51386a689c794ce93f35bf"
-    sha256 cellar: :any,                 catalina:      "3da9d889082cde3a79cfabcb396ec12f0b8b0d661d3d8ab999e71c076f92b7ec"
-    sha256 cellar: :any,                 mojave:        "4486ea172caf99286586f661120b78d8331a6641f27bf9f5a21f9bf7830ac0ef"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1539148555642adfe6d4a80557e3f66c5fe3d23a5d19c7674038585b2bf346d7"
+    sha256 cellar: :any,                 arm64_monterey: "19672f42aa08c3db79a49809752ae3f8a563c6fd4445b7983143b6c0a9747106"
+    sha256 cellar: :any,                 arm64_big_sur:  "a83ae63ce2f8767921cecccfed2296f573535af2c72ecc729a22ea1b60163cca"
+    sha256 cellar: :any,                 big_sur:        "0703f28e13084ee17a1d6b30754fb839d8f8d8286c51386a689c794ce93f35bf"
+    sha256 cellar: :any,                 catalina:       "3da9d889082cde3a79cfabcb396ec12f0b8b0d661d3d8ab999e71c076f92b7ec"
+    sha256 cellar: :any,                 mojave:         "4486ea172caf99286586f661120b78d8331a6641f27bf9f5a21f9bf7830ac0ef"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1539148555642adfe6d4a80557e3f66c5fe3d23a5d19c7674038585b2bf346d7"
   end
 
   head do
