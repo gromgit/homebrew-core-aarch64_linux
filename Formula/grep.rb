@@ -8,6 +8,7 @@ class Grep < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "af56aab63748f26589f0af9fb269df366f526ece09aee13cb73f9705a7664e25"
+    sha256 cellar: :any,                 monterey:      "c71bb5fe05b6dc792ef46eb59b043651ecc6a6bcc5d87c6c529989267363887f"
     sha256 cellar: :any,                 big_sur:       "0ca6e4d8a78798fa84b9bc96be28efb0f815996a2bc3c291773467f016e874e9"
     sha256 cellar: :any,                 catalina:      "f41a618521eb9f55c50de5e6fe0c0e76df83962236cf076deff2107911fb0bdc"
     sha256 cellar: :any,                 mojave:        "180f055eeacb118cd73e2c3dbb0fda9d71fcbe0d4ee613b799a130085d6db76f"
