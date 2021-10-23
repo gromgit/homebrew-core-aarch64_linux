@@ -7,6 +7,7 @@ class Libscrypt < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "1073aa38a72ed089bf6e6a6a4fbddb6e6123b394e7562d1e1ad5b26cc67906dd"
+    sha256 cellar: :any,                 monterey:      "7ead68bfb6c9f5e0d1a6cd6b76e6cfd79d2729031cd5d7b8493cb46a998b481b"
     sha256 cellar: :any,                 big_sur:       "c2c67b09b54467e47709dbe7340c1916e0802a5423b4f2224156ce7bb977e389"
     sha256 cellar: :any,                 catalina:      "66ea017c5361346903add978ce85b09a2a6f2e8eabdf9fb2cfb58809da1d29cd"
     sha256 cellar: :any,                 mojave:        "81c603f27fbda0bde330506d2745f62d3ba16d3290addc5f1eeecbcd110aa801"
