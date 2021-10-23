@@ -14,6 +14,7 @@ class Xmlto < Formula
     rebuild 2
     sha256 cellar: :any_skip_relocation, arm64_monterey: "2947a0d38d964b133b1452fa8277d59b333980c549141b990f3f8cbfe9db5c58"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bec2a4a7797f07fc73a636a40e85cb0504da4c5e34328456c28e78c84ce95324"
+    sha256 cellar: :any_skip_relocation, monterey:       "d86630edcfc8976b0a7a22f314b7a7062814fec16d52b90d8c1b4d850907222e"
     sha256 cellar: :any_skip_relocation, big_sur:        "95502b71000319da58971ea17c0dab0f326d20ce4c09d074fe4c7fe89c66d002"
     sha256 cellar: :any_skip_relocation, catalina:       "d2c21b9b398191e21dcf6e7ac53e4dd46fb59d29173e4d8443ac296101cce58f"
     sha256 cellar: :any_skip_relocation, mojave:         "8fca3be2271ae8e7fb646b011969ba4030f7421118a4ea6b11eca1ac0fe6979b"
