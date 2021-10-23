@@ -11,6 +11,7 @@ class PreCommit < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "f200c9498cf1099d813613a264412a8e51f19fb5dc5793e05b5460f618894c84"
     sha256 cellar: :any,                 arm64_big_sur:  "808230a010f0a1359611878a8cb6e5b4aa14268dbfacaac4fe3cd0767c079d7c"
+    sha256 cellar: :any,                 monterey:       "c967ac89f81d3552a2e814c5c65f9caddb3a90a319cd183a3e05606fadaf9d51"
     sha256 cellar: :any,                 big_sur:        "75a9fc6a83bb0ddc2fd2f82ccabf7cd4c64e3111d3320812dd3e8b1d559a3379"
     sha256 cellar: :any,                 catalina:       "b381c7ba8c92dfcc6c6d52e889cd2d423d0eac456f3f50b5ee5a553a6a0da1fb"
     sha256 cellar: :any,                 mojave:         "acb0fb1bbee09cdbbf64b29fe4236f1e555c34dc7bea9619bdd2c20e2e837072"
