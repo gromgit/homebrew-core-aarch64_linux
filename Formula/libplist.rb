@@ -7,6 +7,7 @@ class Libplist < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "ed9c2d665d5700c91f099bd433a38ba904b63eef4d3cdc47bd0f6b0229ac689a"
+    sha256 cellar: :any,                 monterey:      "fd33860939e18cc5a5c50be2ca667db7d99a191aa445fefdfde51435c0f4453d"
     sha256 cellar: :any,                 big_sur:       "1ac05ef69cc02f4663fbb1c3d6d6e964c70a5ba0743d7e9e242da06864a63a70"
     sha256 cellar: :any,                 catalina:      "20faf60d286c8ceed790a9b6e34245acf7bafacc7fcbcb390d6b62e194b323e6"
     sha256 cellar: :any,                 mojave:        "768453f8710ec1c3e074ad0ebc7723da88c2b8575e5de6962ca6f1d4a85cb61d"
