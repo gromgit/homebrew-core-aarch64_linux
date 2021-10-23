@@ -8,6 +8,7 @@ class Libxext < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "8e09ff59ff55eefc431207d0d6a78d6f098bb07e5a13be1dae3b0514979173b8"
     sha256 cellar: :any,                 arm64_big_sur:  "24e44ef107138f015271fcd5aaa400403594adf7c64cf4a628b0cfe44d4e9fc6"
+    sha256 cellar: :any,                 monterey:       "04101a93002bbd6249ef45d48ff2647d315614a9c0685fcbf3e59e95e80ba5b8"
     sha256 cellar: :any,                 big_sur:        "8a037408ba5c4c95c33af0d022edd631b744823bb9fa522a06b502ed9bf1fbc5"
     sha256 cellar: :any,                 catalina:       "20cc49734eba43e2e9f058fa12f3782c76ac232fada3f6d297f91dca6e0582be"
     sha256 cellar: :any,                 mojave:         "3f2da07d877e158f41231d088f0ffe5551132beaf2f3df683dae0ac2c11817cb"
