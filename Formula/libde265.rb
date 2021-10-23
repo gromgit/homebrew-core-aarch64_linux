@@ -8,6 +8,7 @@ class Libde265 < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "e50069b8cfb753b45940ea5f95d0a44683ccfb582986947b7369d8ec404de46e"
     sha256 cellar: :any,                 arm64_big_sur:  "856e3db9a951f15fc2e3c416ddf64c8336d405fc1e407e4728804009034367e6"
+    sha256 cellar: :any,                 monterey:       "2b6de4ce4fd4899e31114857b06a0993a915ef1eb55e4039b770775372d8ba62"
     sha256 cellar: :any,                 big_sur:        "6c809d037d6fe6c99a4c1492882c1e4ba720c9ead911b587da26dcb352fc5524"
     sha256 cellar: :any,                 catalina:       "774fe5c9c849784aa10648fe3fae971c7d702a47807b6954c8a8763368bce9fc"
     sha256 cellar: :any,                 mojave:         "344e3a6eab4addecd812a51ef0d6e0db5e894c26a455603a6b4f4972757a5994"
