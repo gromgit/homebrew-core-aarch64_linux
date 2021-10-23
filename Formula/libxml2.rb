@@ -23,6 +23,7 @@ class Libxml2 < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "b279b3fe83d85482b13607b051188b256ee9382ffec26230d42fdbb1f96642ae"
     sha256 cellar: :any,                 arm64_big_sur:  "a08e1ca1be7f5d1b1cf4eee4efabf906fb59fec8422292fe124002aa98d11540"
+    sha256 cellar: :any,                 monterey:       "f03e58ff77808c951c61fa10465965a9f71e94e1da8b850d70c335a8f3b9fc12"
     sha256 cellar: :any,                 big_sur:        "fbc422ede343b2bd4047ccdf2f697430da636b66fc550697a2f921b97cebe18f"
     sha256 cellar: :any,                 catalina:       "eb2c8a444b4cf1f09e35c23b91e7cc16c11bc63527bfc3e19a4442e41cfd4b4d"
     sha256 cellar: :any,                 mojave:         "cf7b2b2ddb047582b9fb5c649d76ab6d4025ea328dff5ad22bcc4d929a8730ff"
