@@ -7,6 +7,7 @@ class Md4c < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "1873e516760235dba2670bb63a612b99b51714baf657b99c2c411da40c3162ec"
+    sha256 cellar: :any,                 monterey:      "29d7e311c2821193496c531b4f8bec1d3857d5bd949da3578ee1abc6e9d2d20c"
     sha256 cellar: :any,                 big_sur:       "8b4ae9a5232e84db3d0ab6793a8dd5bd56071fb32832fd94d16fa8162ec08a16"
     sha256 cellar: :any,                 catalina:      "8368b905e33301b5019e8520f7d010e3a57f74855ebd5cbbbf87aa1d8ded50a7"
     sha256 cellar: :any,                 mojave:        "ad888318dd048fc87594ff6a67321b9f9711bafb835f121f46f8f3e31de1931a"
