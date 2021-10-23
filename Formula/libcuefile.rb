@@ -14,6 +14,7 @@ class Libcuefile < Formula
   bottle do
     rebuild 1
     sha256 cellar: :any,                 arm64_big_sur: "2d73e0ee1f734eb35034383fa5e0697ace0684f0a1586832613227a6769b07d6"
+    sha256 cellar: :any,                 monterey:      "06a8a88fee28e5288aa1219f8bc5eb1b6f0a3d153dcb250d453d008dd98cbeab"
     sha256 cellar: :any,                 big_sur:       "2d4ea14db508f6439073daa64338f884249c7479af688ec91e4a286a3c42591e"
     sha256 cellar: :any,                 catalina:      "3069cf9b0261d8cedee8979348227f5c77a5c6dcb8942f9fbea20b3e3f190374"
     sha256 cellar: :any,                 mojave:        "1e64fe68ce178b904ac44a7a2c017a030c6f0ff87fb18b7c943c8c766f23d186"
