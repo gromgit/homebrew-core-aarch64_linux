@@ -14,6 +14,7 @@ class Unzip < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "a6f2e2238d96b078490684ff0eeb6cc0847fe5ea2c8718bb6e5eb9c784587105"
+    sha256 cellar: :any_skip_relocation, monterey:      "ff0667c86b8c30959aa95948367a9fffccf6a9b1bd0cb618d2e3a709c9ed9349"
     sha256 cellar: :any_skip_relocation, big_sur:       "979c8a1705b3822f49391c2402e961e1a66c148017af85b1b54babe6463340c8"
     sha256 cellar: :any_skip_relocation, catalina:      "ab86dd48d398d55a9162032f0e17e6d33111d8807a9f157953fe30483ddf330e"
     sha256 cellar: :any_skip_relocation, mojave:        "76f80f74ec99ec7d8678ed1f8e3d13b495e50a3be65a37cad584804448d932b8"
