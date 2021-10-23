@@ -9,6 +9,7 @@ class Yasm < Formula
   bottle do
     rebuild 1
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "398b7f3d8a22e43b5af2335fe2d39448a3e9cc7a769ef1faf60c25fda0873d50"
+    sha256 cellar: :any_skip_relocation, monterey:      "8348a13c38c499aa114f71e4d46f311105b68dbafbf0e92f6c19d5b492eed569"
     sha256 cellar: :any_skip_relocation, big_sur:       "ca95cb3c02508796ff4e60d54146b03016b93e80837916359912ebf737a37562"
     sha256 cellar: :any_skip_relocation, catalina:      "9aa61930f25fe305dc5364e72f539b0a225702b5f1dc222a9dde1216e901f7ab"
     sha256 cellar: :any_skip_relocation, mojave:        "0dc797b72ee3bad9c6a52276c871ac745207b5626722e805fa642d7a872847fc"
