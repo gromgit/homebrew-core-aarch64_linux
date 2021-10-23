@@ -10,11 +10,10 @@ class Bzt < Formula
   head "https://github.com/Blazemeter/taurus.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "74f43e75579eaac72b2e1edb4ed9916a4b44c382ac0ff7e39a4e9d1c84a85259"
-    sha256 cellar: :any,                 big_sur:       "1e5c8fba04e0a590223e5930c1dd7d82b0c5d3886953a6b5509fe589df096d56"
-    sha256 cellar: :any,                 catalina:      "ba0af87b32de700c761871864520f5051ad564b61331e6923ad0031174a874a3"
-    sha256 cellar: :any,                 mojave:        "2861a7d8cea73f7e60f971ccc2fd820b8fbfe85ad56c48dba1381d36857c61e8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0ca050c502cb7ddadec7ce2ea34bbec2970846ad0531a6387aeda64a00f8efa3"
+    sha256 cellar: :any,                 arm64_big_sur: "ad8b1e275eb1316347115f4d38dce5685a0478bfa320ab9d001d8409f609432c"
+    sha256 cellar: :any,                 big_sur:       "a67cf1fc3c2c2a0d712e888892ed9c98c332ecbd236331acbe910bcfa14e2b8e"
+    sha256 cellar: :any,                 catalina:      "97357518845764ac60d494138448f3e061a73e90a275ea5c2d55e9804583bf8e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4a14814424defacd54f911cda4e8130842363f08df94668bdfe78b3a1ca5eafa"
   end
 
   depends_on "rust" => :build
