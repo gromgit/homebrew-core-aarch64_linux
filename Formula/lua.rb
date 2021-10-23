@@ -14,6 +14,7 @@ class Lua < Formula
     rebuild 2
     sha256 cellar: :any,                 arm64_monterey: "5f129954a5f5f6e33131f9f9d54c035aab8bd6a4bcd2d202b744ed36f9496796"
     sha256 cellar: :any,                 arm64_big_sur:  "2a9741ed654f1062394c3431072711bd3aaa39c1fb45ccf3468ace915a7cd843"
+    sha256 cellar: :any,                 monterey:       "3c49720fae36d2f2e40b001dfd07e6cc5f4a3585ff3a81d1496dae21f8265df0"
     sha256 cellar: :any,                 big_sur:        "b47b9174126bc9bdabb694db4c61cc4d705b06cf7b6f5c19771f447992863bb4"
     sha256 cellar: :any,                 catalina:       "8503086f7311c0c05a12fbad5c49561d066efb8abef9ed3b66c8b35f17e6a5a0"
     sha256 cellar: :any,                 mojave:         "e075a5333160b570cb0532f7124061c44ae58fe33cad382ad2dbbf9f87675712"
