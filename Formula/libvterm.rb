@@ -13,6 +13,7 @@ class Libvterm < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "969c3ccfed1e025aeb191eff20c8942ff54358553c3501bfb270973ec5a00bb0"
+    sha256 cellar: :any,                 monterey:      "6759fe97c9a2b9a0fdd03dc002462c64f0aedcc6b69728337b97d0d389a473f6"
     sha256 cellar: :any,                 big_sur:       "73b78f138e6575528d7f197f63897be167c712698744c5e11852a9e976e8d1d5"
     sha256 cellar: :any,                 catalina:      "b62a78631bca9a723eb25dd924853ced974718df0847820c7c38f7f0d7fdc43c"
     sha256 cellar: :any,                 mojave:        "56946cfa43a7bcf3b47086d61541b2a0541d636a362c788401f51b29cf6fa35f"
