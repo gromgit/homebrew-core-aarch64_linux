@@ -14,6 +14,7 @@ class Zlib < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "b480ed6baf10880f61b5a3097fb0921d44466857e1dde53a09e2ae4e378b1a8c"
+    sha256 cellar: :any,                 monterey:      "7b3c7d2e0992f824cdc9948bc5da8d9e9f739614c13e0c0f94dfcb90fea3f912"
     sha256 cellar: :any,                 big_sur:       "b95aa332dfc7c6dfb5e86fd30068f78e2cf87ee0232e5bef0adddae8215f543d"
     sha256 cellar: :any,                 catalina:      "8ec66cf6faa310712767efc3022fdd16568a79234439f64bf579acb628f893bc"
     sha256 cellar: :any,                 mojave:        "245a43a59c57f83848e7382974bb80a46eac1d53bcaefb1bdebd1f85107d4169"
