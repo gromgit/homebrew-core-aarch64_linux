@@ -10,6 +10,7 @@ class ZshSyntaxHighlighting < Formula
   bottle do
     rebuild 1
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "aebae47a0461de83530eb59106818889fc1a1a0e3cec2ddcefe629c3c8c172bd"
+    sha256 cellar: :any_skip_relocation, monterey:      "ce55800da8e7546b38c17e715c1497cf35069cd76d15da779ae1a12c10173e02"
     sha256 cellar: :any_skip_relocation, big_sur:       "0f75f5893a2179a2b1990bfb1a8e28ff3cf312dde3e11504504e9c32aed91725"
     sha256 cellar: :any_skip_relocation, catalina:      "8b240a93c28b0c190c427afee55b80a0195dc0ed0cdb2ec956871330e0b2f3a5"
     sha256 cellar: :any_skip_relocation, mojave:        "ab57b09a3770c0497b1704ca86bbd285d9bcab439316c0bd7f72ab72e8597d92"
