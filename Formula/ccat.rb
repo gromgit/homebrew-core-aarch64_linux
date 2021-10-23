@@ -7,6 +7,7 @@ class Ccat < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "2203ed8600403a7ebedf60ff3b1f7eac6bdd0793521d759c43f5a4c6ee0d0f42"
+    sha256 cellar: :any_skip_relocation, monterey:      "e099e55ef5f1c7d3c8eaf14c0d5bcb9ec4de6314ea4e992307ea59369a136b37"
     sha256 cellar: :any_skip_relocation, big_sur:       "56555b8a3744a0af29b6bddcab2587457bb8622f78484b38fbbaceab88ea3f5b"
     sha256 cellar: :any_skip_relocation, catalina:      "aec38270a3b41a57fe6d05df08eea67042f2b65a2a5de30b2452afefd81a6d9d"
     sha256 cellar: :any_skip_relocation, mojave:        "0170dc610f0561cd562a2614f5bb0139cad5d37133a4181318a0edc08b3182c9"
