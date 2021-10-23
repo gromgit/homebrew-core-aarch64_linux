@@ -9,6 +9,7 @@ class Argon2 < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "192f3381abe337df8af214cf4dccef2cbfaa9c88df489b5cf9276cea9f8c6080"
+    sha256 cellar: :any,                 monterey:      "decd61f1d853225582aaa70e9f67438c21f45105118d86ddb69a5e494311a841"
     sha256 cellar: :any,                 big_sur:       "a9dd363964a2a633ace13aff04e4c5eac7e720d44faf377456de55396647ff13"
     sha256 cellar: :any,                 catalina:      "f8e550c8597728bb9edc5a548497fd7b1219203932cd0f93ecc97a4fbf0bdad8"
     sha256 cellar: :any,                 mojave:        "a76192a41826619fc399e7f6de5e6cb1c8a5fbe6bea4f2c1554daa830fa0e296"
