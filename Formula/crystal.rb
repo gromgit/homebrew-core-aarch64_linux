@@ -21,6 +21,7 @@ class Crystal < Formula
   bottle do
     sha256 arm64_monterey: "a6007c31aee6ba42c738d10dbab889424e15afdc7e067cd9e854c2f16c3cffac"
     sha256 arm64_big_sur:  "d15da269f1709aa366452de6da5a6f850e98ae1bc66613a02b251145cfa4de8a"
+    sha256 monterey:       "d94ddefba69d4ea2ab997672b3e70181d47d9581f7183c97a53b8c23c283c8f9"
     sha256 big_sur:        "d7bc58fdb974a42911ee545de685fb9e1fb1ee4c444a02d6d801cffed7690225"
     sha256 catalina:       "4af8254887a183155d2e67eb69c293bda143afb85dc501b97cfc4eb2c0800151"
     sha256 x86_64_linux:   "241042d3623bf4ee1318efcd1bee5d78f6cff67a56f19661acbff16d6772bdd8"
