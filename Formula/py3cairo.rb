@@ -8,6 +8,7 @@ class Py3cairo < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "0231b0caa5204cff4c9665a1dcfd5b88dcccc7b88ccb3d06d9d0558dc98e774d"
     sha256 cellar: :any,                 arm64_big_sur:  "a4b8c6a9079f79e22396249ffbdf9f62f895fa8b7af83e038313f96f0dec2c2d"
+    sha256 cellar: :any,                 monterey:       "0eecefe309601a2bf8652415ed2f92d8f6701612a408328d990be55d7693a0e1"
     sha256 cellar: :any,                 big_sur:        "ea6e1887539c142f3b24890521e9181fac8738d5fa2344c9e4c0734ea5b2b9a8"
     sha256 cellar: :any,                 catalina:       "a14c31fed107d6d3b3bf5ef8b067de63c020106be3e71f17285a0f3d028cec78"
     sha256 cellar: :any,                 mojave:         "1751fed8776a62fb799b5d025babe2692cb49647ff061e0527d8f010bab06a36"
