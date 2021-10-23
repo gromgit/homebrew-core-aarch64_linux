@@ -8,6 +8,7 @@ class Libxdmcp < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "9714ed9df45c0edf68903c39bcefabdadb23fc68d9a9a6c3f411c9d1d8c3b48b"
     sha256 cellar: :any,                 arm64_big_sur:  "6c17c65a3f5768a620bc177f6ee189573993df7337c6614050c28e400dc6320c"
+    sha256 cellar: :any,                 monterey:       "5a0eac5c5db298c436007ea257d289710dbe8469ec129e152f7c2bd06c01440d"
     sha256 cellar: :any,                 big_sur:        "87be4ae9085ab662369dfefff8a1c0b2fd24142ecfb905e8dea4efd09e1ecae1"
     sha256 cellar: :any,                 catalina:       "123c77fba2179591f3c1588808f33d231e9e04d8a91c99f6684d2c7eb64626b0"
     sha256 cellar: :any,                 mojave:         "1684eb0ed9e92430971293f58347b9b6de899998bf03be9a19e21f69db65b53f"
