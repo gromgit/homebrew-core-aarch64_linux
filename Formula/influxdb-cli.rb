@@ -13,10 +13,9 @@ class InfluxdbCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c68717a9178651388486b28256fe84fa9537b1412e199fa73e9137f9600d6810"
-    sha256 cellar: :any_skip_relocation, big_sur:       "2dcafad4c721935f50afc5b61e33638af2b0c94cfddb6b03a9bab42530ac3fb5"
-    sha256 cellar: :any_skip_relocation, catalina:      "cf3752b72a1fd20dd08061ea34e27d6043ad366cecb55c397ce3326e032422ae"
-    sha256 cellar: :any_skip_relocation, mojave:        "e902f0bf5027cce2b066ded945a406c6b49c1a6dbcea95d2e26ba223843812a7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "cfc4d3d0f285c28c1368391243fa5a0803123b6a13049f195dcb799ef747917b"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d232cfb24c6e6c07bbd9814dae119de2db51b9b79963d503332231d2628ef85d"
+    sha256 cellar: :any_skip_relocation, catalina:      "99e87a5e302ae73d4695ef8802269ea97c0511c8a3485a2a89598c4630c7f1be"
   end
 
   depends_on "go" => :build
