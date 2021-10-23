@@ -11,6 +11,7 @@ class Awscli < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "60e912f02400d2527008fdb9840b1cb85d39bcded532731776461c9baf79ab58"
     sha256 cellar: :any,                 arm64_big_sur:  "e606d01a803b6eba73d9ca00e49a0837ecb0a430f020ca14415dc598810deb51"
+    sha256 cellar: :any,                 monterey:       "ec655615429d41b8caea5d0a1c5446233adbdc19c23d2be80929892607f7eae9"
     sha256 cellar: :any,                 big_sur:        "8036b5bf8018c3fd4af3f3880e8f9c5df3cc71fd52820814f639b925c570b6ef"
     sha256 cellar: :any,                 catalina:       "52d790f191daa05602711e7c27d2344819fe87b516c5c72994226ab8cc35fe04"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "44bd95c0d3c041ada76168b651b4c9c9ad58677d1f6329e80569411d563618d4"
