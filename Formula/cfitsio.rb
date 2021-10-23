@@ -12,6 +12,7 @@ class Cfitsio < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "afea431a19d9ca7ba8647813f18484fbc29d7f74ab31c5c3090e6c28e5e31b7a"
     sha256 cellar: :any,                 arm64_big_sur:  "663a708c8bc435958830dd4b3e703980a25892712098a53aa1e6cbd812cfecd1"
+    sha256 cellar: :any,                 monterey:       "d02bd49fa97a23ac9b53cef9f49d9eba6545b67455aa98e8f9867126ca6c4d14"
     sha256 cellar: :any,                 big_sur:        "bfc9fd29dd3909123ab1ee9d1c0fa36543bfc4a330690826b8a94c545544888c"
     sha256 cellar: :any,                 catalina:       "63e9df9a5660a778941cc264639547715cd2f264cba7c57731ffe399c2586ec1"
     sha256 cellar: :any,                 mojave:         "d98bbd662f25cc6d961a8ba28c3c743474e0c05aaa8ea83b710c9469669de424"
