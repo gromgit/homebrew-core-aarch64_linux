@@ -9,6 +9,7 @@ class Passenger < Formula
   bottle do
     sha256 cellar: :any, arm64_monterey: "86baa80036d9f8ede8cc220864cade7422e9dc70ee53c1c47bc12c8dafef7419"
     sha256 cellar: :any, arm64_big_sur:  "86970b79223b687b37acfbcc9d8fb33ec2ae707a02e69058d8a7bdead68a338f"
+    sha256 cellar: :any, monterey:       "7c43ddeb5e62d9f8f3367dd75998af8c7ecac8c753181dc3cab9038080f1749e"
     sha256 cellar: :any, big_sur:        "8328fb28e479a87ca1f55334b79445cc316db55cebd8abaebf980cf191f8cc96"
     sha256 cellar: :any, catalina:       "ced9c629734326a59b255e0bd5bc85ed22c8ee35c7c852867b59fce4999759c3"
   end
