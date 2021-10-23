@@ -11,6 +11,7 @@ class YtDlp < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "9187a631e18557310736035daa113086fd03ee35d9f79064d8f9ce05f6696907"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "79eacdf05b2540f29a850a101c9b0fe42460d428f96171fc9903e36cd2380aae"
+    sha256 cellar: :any_skip_relocation, monterey:       "92cb4f22e1e5979d5da3e7b4527cbb321f8bd70c1791d1d1d08d9d867b7c0fd0"
     sha256 cellar: :any_skip_relocation, big_sur:        "59a10a1bf4752b1f67f17775f4dc5d92c4716288029b00907d37a5267541bb0f"
     sha256 cellar: :any_skip_relocation, catalina:       "d157435a586bc3f19b83f4afeef09dab1c444593317f36a107cb2456035ad3f2"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "9b2d64ea8be899c5b59d480f29e3bebfb9768fd187bd7052d847e04b2e08e966"
