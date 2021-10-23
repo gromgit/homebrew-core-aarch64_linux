@@ -8,6 +8,7 @@ class TheSilverSearcher < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "a1fa06a9147b1138f884408f88557357e4a48330373f720ca428aac0f3333221"
+    sha256 cellar: :any,                 monterey:      "613ce2a96feead807bb675c2a72388fdfde47b1f7702031909fc558dc0faf11f"
     sha256 cellar: :any,                 big_sur:       "e0fe6360a649e3a9722d72d258a65a4ec449e76e82166c9d0fc48530e73e952e"
     sha256 cellar: :any,                 catalina:      "6fd80fdd0896dae09c01d3c9785ddd658bb5f2f229e7d011d3fbdde887bc35d0"
     sha256 cellar: :any,                 mojave:        "e57f89664f48c131dfb462dc4be2f5265867d827f82efb1c3841ba71d9156ed0"
