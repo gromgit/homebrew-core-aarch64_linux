@@ -8,6 +8,7 @@ class Gzip < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "d996baa1c8f5384514e0a8ba4945cf07012664cfb481f2c9f7309d30053d5844"
+    sha256 cellar: :any_skip_relocation, monterey:      "30fef75bcd856c7dc7bc2c3e677bd10f0d8837fe26b87ea03277316328038fa4"
     sha256 cellar: :any_skip_relocation, big_sur:       "46d768ebba1aa240540fd620fe856d259b8e316567204b7002052dd6a6241696"
     sha256 cellar: :any_skip_relocation, catalina:      "50c51fd0770177e688cf98f358b2383e2ebe250b0bd8bf25def80a1b8da1c318"
     sha256 cellar: :any_skip_relocation, mojave:        "2eae57977bdfcade27141c865d01aac1ace6be66828e9e0294f12a473fd7a35d"
