@@ -8,6 +8,7 @@ class Libtar < Formula
   bottle do
     rebuild 2
     sha256 cellar: :any,                 arm64_big_sur: "7481da1834936b6237f152fe8b7e22196ad5c76833af39c9e9f74eae6347c9a5"
+    sha256 cellar: :any,                 monterey:      "de9f3cf843c333e94657378a4b551386f81fe9f3afef5b69539de108330c3c4b"
     sha256 cellar: :any,                 big_sur:       "7424cf8229c7aea825592a76227da3355f32a43b9fbc5e140a0cf1eb07d05c8e"
     sha256 cellar: :any,                 catalina:      "35617f312e3c6fb1e473a5d20a559dcbd1815544bdd99c95419ac7e6e8abf9f6"
     sha256 cellar: :any,                 mojave:        "070d9355e6d03dcb64ea33ecf7e3b99972e0b3ca5fc8e60e89616f0a061ee0e5"
