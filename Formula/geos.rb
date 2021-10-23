@@ -13,6 +13,7 @@ class Geos < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "a5dcd4e1d24dfd48b0dfc1427f556e4de872f5c23f8995592860ca6169032755"
     sha256 cellar: :any,                 arm64_big_sur:  "519656b434ab049cd5c977daa8158a1eedd64d235375dd88f79cd4b4ea5a58c5"
+    sha256 cellar: :any,                 monterey:       "869b4929ca8ea97e372a89edc23408eb17d380bcf7e45f1d188f40b3c093e09f"
     sha256 cellar: :any,                 big_sur:        "91d0a50c7c8dd29ae998bedcbddf35c2b6a6a02152c7bdf972478f82d23b99db"
     sha256 cellar: :any,                 catalina:       "0ed110e809dd1261bb07781440bea89eee125fa64d42a50314281e90004498bf"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "853cf091be921d6e91f468023b47eb31ad4958ee89e19bfd576f25f5e63ba46d"
