@@ -7,6 +7,7 @@ class Libvmaf < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "1977b1939d44b8871ef1d856203b364b761872be00c6654fdfd7c4edc53b7513"
+    sha256 cellar: :any,                 monterey:      "0d75fe9a5ee9e1d98ef32302ccbb214bf5116b53533945f87114f7de17833d8d"
     sha256 cellar: :any,                 big_sur:       "8392899eaf6b8b44a5c2da81711928f69f1eb6ebcc2ceedd7552cb63d73e9b11"
     sha256 cellar: :any,                 catalina:      "f98f34e7b0950ef2599c7ec880114a58beb37c4eebe328cbaff29ed9e4f0e839"
     sha256 cellar: :any,                 mojave:        "d1fa30cd6767fb44fdd01d03877ec8fcbd7aa140a243d74b85eb3ab7c49391d9"
