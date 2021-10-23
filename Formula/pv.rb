@@ -12,6 +12,7 @@ class Pv < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "6c800d34963f021bdef3489cc9bc4adc2709ec1a364954d0babdbe532a28a126"
+    sha256 cellar: :any_skip_relocation, monterey:      "d340afd9df619d826d431cdc829226b76a0622bf0135860c44c7848f7e1a0908"
     sha256 cellar: :any_skip_relocation, big_sur:       "99cd5022561f488b19844267da97a2e211fed36d9300661f3a4ef23c923c6178"
     sha256 cellar: :any_skip_relocation, catalina:      "ac11cfd62d2bcd5e7191ce2fef6548269d466e50329e6b9c46887cd95ff1e9fc"
     sha256 cellar: :any_skip_relocation, mojave:        "8dd7e214b710ac5224eb994ee0fec8e5af14f8ce67cff3c343bdeb3443fb2f30"
