@@ -8,6 +8,7 @@ class Bchunk < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "94279b4e400c05770ec6c5cce6fe7ef50a062835508add3e981942944bb3eecc"
+    sha256 cellar: :any_skip_relocation, monterey:      "cbfaaf81653c53be4dbc62fe7eb6e13071ad9961b18d5f0369bd8f003cded841"
     sha256 cellar: :any_skip_relocation, big_sur:       "bf3ec0f873db02e0234790bc8b700e4f1b989877742cf1560854e7b561698f4b"
     sha256 cellar: :any_skip_relocation, catalina:      "b9f7bc758711585d7a016b7b3ddefe3256a368c00b21c51691481c7fbfc2823a"
     sha256 cellar: :any_skip_relocation, mojave:        "232935a7e7291016af594df742848d851ceca12ff9c06e183485c6a184c1df38"
