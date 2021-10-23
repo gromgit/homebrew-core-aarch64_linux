@@ -9,6 +9,7 @@ class Ilmbase < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "3d7b2c18d6ce5020bca1367b97d6cc98592a68b61e26fe42dfed2f990f59469a"
     sha256 cellar: :any,                 arm64_big_sur:  "972c5920255115ab63cc84c699e9cd032d120bbb85095f8a4d1f2865326ceaa8"
+    sha256 cellar: :any,                 monterey:       "c248dbaa4a43933316a046c32a616f1a2ac559f137fe3795e2c18ac323439870"
     sha256 cellar: :any,                 big_sur:        "71c8e6cedb938d2c5ec99fea9343805f293013b070ad561e2fa652194f84a59c"
     sha256 cellar: :any,                 catalina:       "e505a83ecb7ab3aee3f5cb38973612a559ec106a96d7142bc0f245556512a670"
     sha256 cellar: :any,                 mojave:         "a3416415f8a68fc12922080e36e24481833343d89a06aad74ad57034b2200eb0"
