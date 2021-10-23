@@ -14,6 +14,7 @@ class Tmux < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "34ea39085a19233bc1f87bcc360cb3bdd52dd5842399bb7e0ad16bcb1f815234"
     sha256 cellar: :any,                 arm64_big_sur:  "3138a67aceee5eea374c6a61e799073f661ce132f8b8ff2ee2b5cef06fb93725"
+    sha256 cellar: :any,                 monterey:       "7355c39cf84eebe6ac33cf15959ca7867eb50c86791f1e5a053193750810c5fe"
     sha256 cellar: :any,                 big_sur:        "db717e09b9e53769b9bc6f277d25f20c8ec159eb90093a45c0ceefb54105509a"
     sha256 cellar: :any,                 catalina:       "9aa7eba75f4f56f099182ecd7d41cad0117ce1a11f9fcbd8319a22015c317898"
     sha256 cellar: :any,                 mojave:         "fa64cb30acc5300390f65f29ed95b4a816f1431b3dbd94051ee695243cf5c63e"
