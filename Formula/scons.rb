@@ -11,6 +11,7 @@ class Scons < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "e2d4ba2cf999877f61995e55235552997d2236d66d69d29d9e93059876cf7656"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e2d4ba2cf999877f61995e55235552997d2236d66d69d29d9e93059876cf7656"
+    sha256 cellar: :any_skip_relocation, monterey:       "a5e7cc6c2d5dc05d1cd02ca3927425ccaf583cbbe2a8d97760bfa45d8479bd80"
     sha256 cellar: :any_skip_relocation, big_sur:        "a5e7cc6c2d5dc05d1cd02ca3927425ccaf583cbbe2a8d97760bfa45d8479bd80"
     sha256 cellar: :any_skip_relocation, catalina:       "a5e7cc6c2d5dc05d1cd02ca3927425ccaf583cbbe2a8d97760bfa45d8479bd80"
     sha256 cellar: :any_skip_relocation, mojave:         "a5e7cc6c2d5dc05d1cd02ca3927425ccaf583cbbe2a8d97760bfa45d8479bd80"
