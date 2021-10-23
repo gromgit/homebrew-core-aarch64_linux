@@ -8,6 +8,7 @@ class Atk < Formula
   bottle do
     sha256 cellar: :any, arm64_monterey: "2bbb8f77fc0b5cccd3a01e0d1f18e4f7c26a085f8224430b2e5ea094357e91d6"
     sha256 cellar: :any, arm64_big_sur:  "e7d40dbacc2c965c8b23224a5e1cd2a90d6c54758b957dcf3d66c2238feec518"
+    sha256 cellar: :any, monterey:       "52624a3ef69933bcac6b9fd22ce4c0aed8c7d038cc21fc4b7a5d7d5b059c4756"
     sha256 cellar: :any, big_sur:        "8321e0ee7364e1de1a3667c50954b4b4f629cba7c2d8077114c4a5bc38a24655"
     sha256 cellar: :any, catalina:       "1065293046ab2984940dfa0b9c9e724439838e63f685c932d508ccd74bcf921b"
     sha256 cellar: :any, mojave:         "68c7b621339c03964036877987db69806f663612ba275e68554a97d218a2b5b4"
