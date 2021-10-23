@@ -8,6 +8,7 @@ class Libssh < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "d6c0de919fb07df2cc4c637eba40c85f2dd19808fae5d7dcabeeb8c9b8477de2"
+    sha256 cellar: :any,                 monterey:      "5c1830359324ebcaeca495d51af67b9653de39d00dae55c42a9647b98f85a24c"
     sha256 cellar: :any,                 big_sur:       "cf2110fe6b71f0a5d59a2a4a7bc7badfa5bf53c59bfa2968ac1160519aa7285f"
     sha256 cellar: :any,                 catalina:      "3aff6528d21c6844b4592862628ab197bb5e34e4c506008d24b63afacc116900"
     sha256 cellar: :any,                 mojave:        "c230e01e4990691096acce9e33222f51f1db8fa21b93c8998b82efad871afcf3"
