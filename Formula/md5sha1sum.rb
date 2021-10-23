@@ -13,6 +13,7 @@ class Md5sha1sum < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "6d1aa8a6c57e734885363c8c2dec012e52716332706a7695f5d0994e75957fdf"
+    sha256 cellar: :any,                 monterey:      "b06863261442b3ca6bce142c3bd0da8333568324bdc3db17cd739114a9001fb7"
     sha256 cellar: :any,                 big_sur:       "c3ce2a7048d5e035493c2f637249da99f726109a9a643498576441c4c9ec7d58"
     sha256 cellar: :any,                 catalina:      "d498b282ccd1e70d8676184b3eda51eea4e99baacb92e6d69df2fd05a98d511f"
     sha256 cellar: :any,                 mojave:        "b1dc1ded1df513c24b7eab764707b088f42661c2cf53395e42ee4e03c245ac5d"
