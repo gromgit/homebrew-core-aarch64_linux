@@ -13,6 +13,7 @@ class Dash < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "12e8257cfc5dda342cf5df3579e4d75d6c7da1c3e5188ea2bd632f66ca9291dc"
+    sha256 cellar: :any_skip_relocation, monterey:      "0891342216aaba226425c2e27a21082f1096994e6be82cebb08eedb7c4d9fb76"
     sha256 cellar: :any_skip_relocation, big_sur:       "a7eafa8a473d2bfd1d9fbc207ed863d5765189b6662341420bee8a78cc6d4360"
     sha256 cellar: :any_skip_relocation, catalina:      "b7ab66d5cea5b77081f58392eb8f8c66341cf20c94739a77c262f0a1f54716a6"
     sha256 cellar: :any_skip_relocation, mojave:        "b7db705a81f667bde21d234b7241d9e0ae0643e9052aa836196095bbd4e98dbb"
