@@ -13,11 +13,10 @@ class Libshout < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "f1490d2569813b44c082e8e040d0fa89dfbc01e7b85b73a52c37a26415cfc794"
-    sha256 cellar: :any,                 big_sur:       "2af4498af2e733f0362fc204309d0d1aba893e8ebc66c8c65882c9a73f829d3a"
-    sha256 cellar: :any,                 catalina:      "a791567ecf1d73d8f04d643d9698201348c671a118a78f8689b2b558dc10a026"
-    sha256 cellar: :any,                 mojave:        "dc69a84a8e5089f8e8af3e567db1cad3eb0b126ca800c83e371097fa78c1dcdf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9d2f525a9d538ce13d737465420bcf8ee7436a9d1ccb45e173b438e2980af50f"
+    sha256 cellar: :any,                 arm64_big_sur: "306fcd9e630fd90b82c5d58d1f7b07692f2cac16c05556ff3dfeec64c09fdee0"
+    sha256 cellar: :any,                 big_sur:       "7ae2c10ce823cb25566f75911560dbabd691bb818ee38a77c7eb2cba831c63bb"
+    sha256 cellar: :any,                 catalina:      "0cb9a2d80370e8da49143cc896f209ff44f06d903e8050a867851f2dc1c3f3e4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "62ae4123383c7e4a09efb4360c06ce8e06ac48f48a509c4d6d340fedd9085aff"
   end
 
   depends_on "pkg-config" => :build
