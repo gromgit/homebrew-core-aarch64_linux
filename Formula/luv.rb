@@ -9,6 +9,7 @@ class Luv < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "6b40a0433f4f7dbbb321d83600456394491c305a5faefa43626c94751d121db1"
     sha256 cellar: :any,                 arm64_big_sur:  "138d35727357922de60de5e5f3bbfc61eb3d8d31bf2389776b65218fdf2eacb0"
+    sha256 cellar: :any,                 monterey:       "08db7612d37222c7447e9cc6364679d4247dda77dad00937df30d9ace3bc9643"
     sha256 cellar: :any,                 big_sur:        "dabce5b68101043976dac8678d416ff9411a48c39d3f2148295aa3125f5f9b99"
     sha256 cellar: :any,                 catalina:       "546d125b85b7a5b92fe133f11eb31063b5e035936ef8135cad6b27328f23f2fb"
     sha256 cellar: :any,                 mojave:         "8c7f6541f39122b5183c218308b5300558eeffeb88b36bf0def29d1ef99d968e"
