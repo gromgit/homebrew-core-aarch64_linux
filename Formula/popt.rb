@@ -18,6 +18,7 @@ class Popt < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "70cc83818b69346e152c8d0fa10eafff979b0da3e17355d18bb63ee700da5415"
     sha256 cellar: :any,                 arm64_big_sur:  "3ebf58493631c204386f60a189af7cc4127240644a0ce4713dd4af4374e45823"
+    sha256 cellar: :any,                 monterey:       "063b3f00f194a65246b589e74daf0ce30e0797068fea4a93062dc0b251f4d73c"
     sha256 cellar: :any,                 big_sur:        "460da044609e1821375dd248e5bb1a317a0f5e3f0431c4ab19532b2cfa6d7e7a"
     sha256 cellar: :any,                 catalina:       "a5cbf26e1779c73865c7785adc163117465d321338aa6970dd4980cff4a2ec91"
     sha256 cellar: :any,                 mojave:         "5d602602f195811a3ea8c29ce4540cca6e1f36890a08b5a262facf3f74a85cf1"
