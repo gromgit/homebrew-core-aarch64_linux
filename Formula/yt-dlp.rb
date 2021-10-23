@@ -9,11 +9,10 @@ class YtDlp < Formula
   head "https://github.com/yt-dlp/yt-dlp.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ef335c9197c622cd83af07eb3bd104825c954204183c7a3d32b69b15c577de33"
-    sha256 cellar: :any_skip_relocation, big_sur:       "969caabe6681c7ce08a356a9d67db7bb1ac19a54dae806cd039512eca31c8c31"
-    sha256 cellar: :any_skip_relocation, catalina:      "7849aa7938120dbfcdae1e8672fd2e9e597852d6bb76f7c06992a8a3d6fa3119"
-    sha256 cellar: :any_skip_relocation, mojave:        "625ad2e6f9b220e14d8215c9f76f7cf313c0b58549bd9d7cb2e427ea9c031691"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1a5f4e3cd4ec68a7ed436f8912a713be0e893615d4306ede44e8b8b3aeb81ce0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "79eacdf05b2540f29a850a101c9b0fe42460d428f96171fc9903e36cd2380aae"
+    sha256 cellar: :any_skip_relocation, big_sur:       "59a10a1bf4752b1f67f17775f4dc5d92c4716288029b00907d37a5267541bb0f"
+    sha256 cellar: :any_skip_relocation, catalina:      "d157435a586bc3f19b83f4afeef09dab1c444593317f36a107cb2456035ad3f2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9b2d64ea8be899c5b59d480f29e3bebfb9768fd187bd7052d847e04b2e08e966"
   end
 
   depends_on "python@3.10"
