@@ -7,6 +7,7 @@ class Dateutils < Formula
 
   bottle do
     sha256 arm64_big_sur: "329fcec20635c81fa467d609492f7779ec14966333a637de9ccb5b3111b6e837"
+    sha256 monterey:      "92f9b5dfaf92d31e86adf9e9d2fc9a9e739a273e8f63967799ea78953ccd629e"
     sha256 big_sur:       "c7a4363a86d92e2b50d684c92b140a15a1561fe2c3d3893897e2373a4ff69cd1"
     sha256 catalina:      "7063687db254af7470c99f53c9f48e32582339cc30da5e07b366e7dab9914b74"
     sha256 mojave:        "562a3f8290f1d8f9f5ff0471d0e817375aa46914d34c38ea8ac68a22fe00b799"
