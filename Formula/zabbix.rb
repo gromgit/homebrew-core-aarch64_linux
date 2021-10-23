@@ -9,6 +9,7 @@ class Zabbix < Formula
   bottle do
     sha256 arm64_monterey: "574a1da82b64cd125a08567a50f240248ca22d49d91d6388474cb14fce6910ef"
     sha256 arm64_big_sur:  "6373aa84f57907b0cbba8e5754ecf9e03633feb519a45614e6c9db594a2e2088"
+    sha256 monterey:       "b5a04ab526dc8896b1ef86af066fc472101f358fb35e2dcdb35c0cf418a97679"
     sha256 big_sur:        "9609759325276301adab1d0f0268bb9977ad018726908339ea2c3b26c1a93450"
     sha256 catalina:       "a76e1daadb0a51de62de5ae6c102483135d35a80bbfe42359237d954f9515dcb"
     sha256 mojave:         "721b8e34c60e850140cb44a7981afce17d801176a355270b7c9877fc82a6bd4c"
