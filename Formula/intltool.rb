@@ -7,6 +7,7 @@ class Intltool < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "a95b3272a26918e1a92ad548ca72e1b74f5ade8073193c560c418369f9dacb51"
+    sha256 cellar: :any_skip_relocation, monterey:      "bdeafd2b872e89587ccc884208d5ba41ef1ab5131ec6c508039d5f299b753c49"
     sha256 cellar: :any_skip_relocation, big_sur:       "aacf573a663f8c555bfa8163593386046462856392001b9dcad317fcf889fdfe"
     sha256 cellar: :any_skip_relocation, catalina:      "853b0f355c1bb6bdfc41d2ad17026d75c93aecb7581e711d7db3edab4ca6b5d4"
     sha256 cellar: :any_skip_relocation, mojave:        "52ccb5bfce1cda123f30c84335172335cee0706973e6769ec9a5358cb160f364"
