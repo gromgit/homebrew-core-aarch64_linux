@@ -9,6 +9,7 @@ class GnuTime < Formula
   bottle do
     rebuild 2
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "3930463651363f08ca7a90ec25deafd85c57f7a71be8ee236f7e15f20de7ff22"
+    sha256 cellar: :any_skip_relocation, monterey:      "e7b649410f591aa0d0068ae267e7357db99c86c73fd5e992db0f5512614a07a6"
     sha256 cellar: :any_skip_relocation, big_sur:       "f4fc9d2c49b65130d04a476d4cd887b1e1033a7870df9805be28aba09be901f0"
     sha256 cellar: :any_skip_relocation, catalina:      "9a1d1160f85f46b3022dc4d978dfafe6b3a02fc97446bc51f8b1ae4580b7c69a"
     sha256 cellar: :any_skip_relocation, mojave:        "dc007b95e2f9fb0df3380da55d3c9337529b1a4a3cd762972eb88512f567ea1c"
