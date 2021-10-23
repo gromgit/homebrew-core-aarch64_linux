@@ -17,6 +17,7 @@ class Mpfr < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "9df11560dd3650ffae35c134cef6e0e91aad0e862f5c8895c568b828cf0598d5"
+    sha256 cellar: :any,                 monterey:      "7eb2f42b8f39d4f721620d1d54417e27fdb93c993e3ffd7e6ad43310cd84de1b"
     sha256 cellar: :any,                 big_sur:       "1e8eb0326f62d3461d420d98af6fc088daca481cae89fd77a75b420d2e76d776"
     sha256 cellar: :any,                 catalina:      "5fcf57834f58c18761c6c7b0eb961eb7f9fc54325b5361bf3a17c4dee6ebc08a"
     sha256 cellar: :any,                 mojave:        "93c0d2ca093819f125300002cd34c1d1b4dfb7a1403729205861bec21388ff12"
