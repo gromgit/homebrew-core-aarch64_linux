@@ -8,6 +8,7 @@ class Snappy < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "19b5a3afc6646dcec7a1803921b44fb5c57b6734fc0e32f025633f14d1da05ec"
+    sha256 cellar: :any,                 monterey:      "fafb5142d8503a35d03d7db786cbcc44f6c625fefdcfa39a1024d5670c87d56c"
     sha256 cellar: :any,                 big_sur:       "d73fd47c36e1559d49e1c4c4346c754a9d2ff2af9a0bef25631f52763f19f0ef"
     sha256 cellar: :any,                 catalina:      "e62a5ab8aa407d6e7d8ddbecdc66fdd1fb256b87730dfe4abbdf8996b3db2869"
     sha256 cellar: :any,                 mojave:        "b5c89925c1e54ea1e1992d076836092fa754681b373b4834766236abb779cfab"
