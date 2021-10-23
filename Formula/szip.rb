@@ -13,6 +13,7 @@ class Szip < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "9d1e43af5c723d879f5d9a94199a7b6ddf70666a34a78852e5eeedd0edd5d1f1"
     sha256 cellar: :any,                 arm64_big_sur:  "8eaede9ea04a8c106c7f166f0922a1c3907a38b88867a2c51b48f060d51aaf6d"
+    sha256 cellar: :any,                 monterey:       "bb1629583319977f2cdbb0ac259fac0f2befa65fb7bf89b1cb237c577b8258cb"
     sha256 cellar: :any,                 big_sur:        "1779ec8c3312993ef7e22679df6bbcd3adce9db28d3ad98adb54650c018ed294"
     sha256 cellar: :any,                 catalina:       "e27bbc3b0a5d55b33051cb6ca509836e617b6f96361a70a187a6c8d53f2b520b"
     sha256 cellar: :any,                 mojave:         "a6f7b3c066968d98311e0a1af58464562d586f0194f29d78d9ddbee59c96b833"
