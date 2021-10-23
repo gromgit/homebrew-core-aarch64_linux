@@ -9,6 +9,7 @@ class Gawk < Formula
   bottle do
     sha256 arm64_monterey: "d7b02e74ff4139241e646470b8a45ce75ceadae78cc1ccee6f49bc57682f3682"
     sha256 arm64_big_sur:  "9b31b5843e7f156d5af09afb14b9fdbe359ece800222c9fe3fe23a77621491a6"
+    sha256 monterey:       "7d47f7bb7db5569d53deadd96acb70252237fa5578d91e8f0de8e2d9c075f99a"
     sha256 big_sur:        "8ff8108740004ede9c938b8bb42d2768d532d9ac8ee492250bbd23c8dfbef0cb"
     sha256 catalina:       "581b48f781104f0c3233edc30c47628f4eec8c2f1f2e191151f367ce26ec538a"
     sha256 mojave:         "ddbb56c56d66f375147769a27301e2ffd099abdc07f5dfc16389af22028e185b"
