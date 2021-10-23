@@ -6,10 +6,9 @@ class Sfcgal < Formula
   license "LGPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "23a7b9814562a30a7f87e9aa0bfc6a693d1e103acdf8e4879362e1beac292a99"
-    sha256 big_sur:       "d3db5932f5c16c7612a3491fe635aede4c3fdba1dcf4fb46641e13a42bb8242d"
-    sha256 catalina:      "12100fd5f5f69e3a4c3f2bb02190805a8189c3a37d86cf5c915e82dddc7bc239"
-    sha256 mojave:        "125b86231c3f94ab06cb9d300366934d4d168d314c46355399ae9c6711ba9d95"
+    sha256 cellar: :any, arm64_big_sur: "b809fe115553e7ffa0679bd2402f1994cb01a98e646a775c6dfe8ae706566d89"
+    sha256 cellar: :any, big_sur:       "e69bacf0f31e67adb7a5abc3fb358f0cbb2c1406f664bd5683c4f16241392d7c"
+    sha256 cellar: :any, catalina:      "16d0494615f89ec1f418d1e817e894972dbd6497387f2cf714ae9edabac5d3f1"
   end
 
   depends_on "cmake" => :build
