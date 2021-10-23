@@ -7,6 +7,7 @@ class Opencc < Formula
 
   bottle do
     sha256 arm64_big_sur: "c511e94c8ede779f36276e9149f503e88bf9241ed06c15b5f1b667eb66b6a93d"
+    sha256 monterey:      "7c64d8b156a92d9f94b6e10dcfbb065d4cc20024215d348a161970db05bad282"
     sha256 big_sur:       "f03bc24b794a0be72ffeec4b97ad2a7ef350cfbcce48c27480720bfa2b5ddbbe"
     sha256 catalina:      "71a2e9d6df44f77c60ee8bfb22f355dc7cd073ce58a2e990a7e1a9c54039a9a0"
     sha256 mojave:        "d35684ce9298dca475a9f30318e86f8209aef8df8e06a0a930b3d2d500f7bb2f"
