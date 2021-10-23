@@ -8,6 +8,7 @@ class Libexif < Formula
   bottle do
     sha256 arm64_monterey: "07f9ad919f5bdbb2857580549cba37da0aee5c1fb88cd5eb410ac3ec857de11d"
     sha256 arm64_big_sur:  "f2a133f663a82d1d39ba238692f6c56de3c6bae12add2107204a75af2f6d923a"
+    sha256 monterey:       "8765b62cdc2dd20a77ed83f8e4acdfbfea0cb1ad55a53b40372c912a796aa13d"
     sha256 big_sur:        "17a348763e827089c2d2fb2b2c631f38df87d99234d81f2bbbe1c7219577522c"
     sha256 catalina:       "5b2a8266f5236b9fe1921040976c07d9eda3cc178a2c2d82824254de82df0e2e"
     sha256 mojave:         "85e039d08a8668365cd7f71a9012c587028e4e6d6dfe0a9cc082bcc99ca7b643"
