@@ -7,10 +7,11 @@ class Cppcheck < Formula
   head "https://github.com/danmar/cppcheck.git", branch: "main"
 
   bottle do
-    sha256 arm64_big_sur: "b9121917322023b11c62689f0929c462e56e99112b1e1c444a5160c7de2e023f"
-    sha256 big_sur:       "8e7336d855d382e4d9f073d6b60d67373ee9fd084ceb8489fd8388e0971abac5"
-    sha256 catalina:      "7649e26c297454849a7fe4a4d5a10a8d4f91ec610335803d5ca4712abebde530"
-    sha256 x86_64_linux:  "5c682f33124e93bd68fe52bc9655874b6d68fde374a7815403b4f7d00cc587c5"
+    sha256 arm64_monterey: "86cc543edf9d5f8fd3e370905cffd0ce1d2e6cb623f0835f29a89b9e165713cf"
+    sha256 arm64_big_sur:  "b9121917322023b11c62689f0929c462e56e99112b1e1c444a5160c7de2e023f"
+    sha256 big_sur:        "8e7336d855d382e4d9f073d6b60d67373ee9fd084ceb8489fd8388e0971abac5"
+    sha256 catalina:       "7649e26c297454849a7fe4a4d5a10a8d4f91ec610335803d5ca4712abebde530"
+    sha256 x86_64_linux:   "5c682f33124e93bd68fe52bc9655874b6d68fde374a7815403b4f7d00cc587c5"
   end
 
   depends_on "cmake" => :build
