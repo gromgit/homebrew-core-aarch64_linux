@@ -6,10 +6,11 @@ class Lf < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f16e27a50a509db35453fcd2de41c4973da8f1b37131c7de5ef2a8097ea9219b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e76f4582df73496e7957136782b809d450ccac55337b7040776dd6ad48c51d6b"
-    sha256 cellar: :any_skip_relocation, catalina:      "a9ed31146b0ebbd0662b78e58bed48344774a485302ddf080ca1f1aea7cdc7bf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6cc327c457adb1387fbecb627c2adef0de39c18cbcbf0848e0b6b8869a39280d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2ffb9eeddc48dd3a92577d09e4a9a3e487de245d6621a77b659e4956d30f22a3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f16e27a50a509db35453fcd2de41c4973da8f1b37131c7de5ef2a8097ea9219b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e76f4582df73496e7957136782b809d450ccac55337b7040776dd6ad48c51d6b"
+    sha256 cellar: :any_skip_relocation, catalina:       "a9ed31146b0ebbd0662b78e58bed48344774a485302ddf080ca1f1aea7cdc7bf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6cc327c457adb1387fbecb627c2adef0de39c18cbcbf0848e0b6b8869a39280d"
   end
 
   depends_on "go" => :build
