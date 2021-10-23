@@ -9,6 +9,7 @@ class JpegTurbo < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "3575630d2e683f50cdd78c58c3aff47aa9758239b57bde4c7c3fc783682542be"
     sha256 cellar: :any,                 arm64_big_sur:  "f161380b8c804bcfe7471afa6b4f5c8c7ec2c1ce5afb8c124ab9a51c26d18fb6"
+    sha256 cellar: :any,                 monterey:       "eef22a42489ea0375604594018e9b9321dbb32f7b41ef85b36686105238f0b7e"
     sha256 cellar: :any,                 big_sur:        "9651b9878e835689171e01acb7873d0a206b3584fa5fb533560f3ece42d86ed3"
     sha256 cellar: :any,                 catalina:       "f5e38eb0033ecf19ceea50b6fd6fd88d5249ae3db71c74d5afc89cefc6fa105d"
     sha256 cellar: :any,                 mojave:         "45548ea854ed61ff928881829797cc091c455adec26eca2f6922286b475196a0"
