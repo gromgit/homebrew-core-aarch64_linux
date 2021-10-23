@@ -7,12 +7,13 @@ class Gawk < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "9b31b5843e7f156d5af09afb14b9fdbe359ece800222c9fe3fe23a77621491a6"
-    sha256 big_sur:       "8ff8108740004ede9c938b8bb42d2768d532d9ac8ee492250bbd23c8dfbef0cb"
-    sha256 catalina:      "581b48f781104f0c3233edc30c47628f4eec8c2f1f2e191151f367ce26ec538a"
-    sha256 mojave:        "ddbb56c56d66f375147769a27301e2ffd099abdc07f5dfc16389af22028e185b"
-    sha256 high_sierra:   "eac1b8c97c682c32a1b6c589818aa8ffb8f09630258ed6f215c882368540713e"
-    sha256 x86_64_linux:  "9dbdb614ce8517ce0d43f4058ea96bdc9ab172fbb2a60160c3963109f19b3d71"
+    sha256 arm64_monterey: "d7b02e74ff4139241e646470b8a45ce75ceadae78cc1ccee6f49bc57682f3682"
+    sha256 arm64_big_sur:  "9b31b5843e7f156d5af09afb14b9fdbe359ece800222c9fe3fe23a77621491a6"
+    sha256 big_sur:        "8ff8108740004ede9c938b8bb42d2768d532d9ac8ee492250bbd23c8dfbef0cb"
+    sha256 catalina:       "581b48f781104f0c3233edc30c47628f4eec8c2f1f2e191151f367ce26ec538a"
+    sha256 mojave:         "ddbb56c56d66f375147769a27301e2ffd099abdc07f5dfc16389af22028e185b"
+    sha256 high_sierra:    "eac1b8c97c682c32a1b6c589818aa8ffb8f09630258ed6f215c882368540713e"
+    sha256 x86_64_linux:   "9dbdb614ce8517ce0d43f4058ea96bdc9ab172fbb2a60160c3963109f19b3d71"
   end
 
   depends_on "gettext"
