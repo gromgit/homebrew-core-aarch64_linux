@@ -13,6 +13,7 @@ class Libtermkey < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "97c29474c42b54cb9784fe05855b969b7fbb3a20e7b46081f257cff2e149dcb9"
     sha256 cellar: :any,                 arm64_big_sur:  "a9e13d645b016b670bb0d9c79928f5344928685f7d358480210f1af8729480e6"
+    sha256 cellar: :any,                 monterey:       "542c3e6cab8cf06b848f38f4e0453e000b6507d4fadc1f5e8c7a81916a156e64"
     sha256 cellar: :any,                 big_sur:        "afaf585bd31e32a5fd01a5c16a4c37af9e38524b72e03a76b61038c60f2ed113"
     sha256 cellar: :any,                 catalina:       "293f71f6cb8498f734910ada7ffe4e8e2ea2cb6121455318053d2a5951b272a8"
     sha256 cellar: :any,                 mojave:         "efa6360ccb50275ee143410e57b4ff47b2d6bafd97d6f4feeb3cb3ee02050a2c"
