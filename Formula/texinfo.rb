@@ -8,6 +8,7 @@ class Texinfo < Formula
 
   bottle do
     sha256 arm64_big_sur: "d83beb6d79c93216c6f33021cd23aeea041d9691d4d5efc0bf43ab15562a3fed"
+    sha256 monterey:      "0ba38973389c7e3c37241a4d1730c2686feb51ddfd3f275059af268f44302aff"
     sha256 big_sur:       "93c4e7f7aa503611ad5907b1c702bb89d7fc9a5cfc0866b78378b7bef7a72480"
     sha256 catalina:      "8cd8f1a20368b94f4de10dbfc4c39429cc9d1ad7680dcb160635be49afc598af"
     sha256 mojave:        "9d2c152bff37873f4ac78165161c6f3e338599c3ae55782690f3f9a8a6d8d749"
