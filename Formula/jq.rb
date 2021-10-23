@@ -24,6 +24,7 @@ class Jq < Formula
     rebuild 1
     sha256 cellar: :any,                 arm64_monterey: "f70e1ae8df182b242ca004492cc0a664e2a8195e2e46f30546fe78e265d5eb87"
     sha256 cellar: :any,                 arm64_big_sur:  "674b3ae41c399f1e8e44c271b0e6909babff9fcd2e04a2127d25e2407ea4dd33"
+    sha256 cellar: :any,                 monterey:       "7fee6ea327062b37d34ef5346a84810a1752cc7146fff1223fab76c9b45686e0"
     sha256 cellar: :any,                 big_sur:        "bf0f8577632af7b878b6425476f5b1ab9c3bf66d65affb0c455048a173a0b6bf"
     sha256 cellar: :any,                 catalina:       "820a3c85fcbb63088b160c7edf125d7e55fc2c5c1d51569304499c9cc4b89ce8"
     sha256 cellar: :any,                 mojave:         "71f0e76c5b22e5088426c971d5e795fe67abee7af6c2c4ae0cf4c0eb98ed21ff"
