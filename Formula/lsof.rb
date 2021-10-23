@@ -7,6 +7,7 @@ class Lsof < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "3202f83509eefa73603b865ea4aca0433bbbf69d30f43d229a5ee256d1977424"
+    sha256 cellar: :any_skip_relocation, monterey:      "4a7a23611d5ed1fdb24ea4fd8dceec7a51f04d1c582dfe5dc4941323738aafd9"
     sha256 cellar: :any_skip_relocation, big_sur:       "7dbab0c2a35d97381ed52fa32e1507c0fe83bc405fc40c4d00c79e12c79cffe4"
     sha256 cellar: :any_skip_relocation, catalina:      "58d2ee9a7484541a7280f5a139f2d0454b494f54bca3b9f10273e036d8071bde"
     sha256 cellar: :any_skip_relocation, mojave:        "9eb185a83e641bd8bd90fab3a8cde572b23ebb1ce269a8832fb85a66c5037318"
