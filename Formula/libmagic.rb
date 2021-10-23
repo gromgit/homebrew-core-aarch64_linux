@@ -13,6 +13,7 @@ class Libmagic < Formula
 
   bottle do
     sha256 arm64_big_sur: "b851d23643cbb4558264dce05ae04afb67188753ed9631707ba24177f4d8b618"
+    sha256 monterey:      "e77cc066068ef97ec61fdecd1c59229baad49e82aac3be24d8b1cce37cac0045"
     sha256 big_sur:       "90a9c204356d026e45f276ff7466b2afe11593b8992ae2f4e199951d973124a7"
     sha256 catalina:      "bd9af8b940362c68313c49ea0481e8b705514fd558582cfa609548aea3e03b01"
     sha256 mojave:        "ee176ca0e970104d6f4d59c752e9ce94433b1ae4e09ae12bdd5daf45e2a332f1"
