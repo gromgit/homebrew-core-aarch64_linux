@@ -11,6 +11,7 @@ class Pngcrush < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "ba3aa0d156954d41cb43b96bd5529c3a68e56a67a751b3a9cc153e3ed47e2425"
+    sha256 cellar: :any_skip_relocation, monterey:      "f2d01a0b536d81a1db9b094f8cc282e16cfd4a218880b1d12cce67423d5865e6"
     sha256 cellar: :any_skip_relocation, big_sur:       "4f7a3810130d10dc7b448aeb8c53cf8b52da9312863ff12edeb3c1268eaf6ea6"
     sha256 cellar: :any_skip_relocation, catalina:      "f6b31e35011fd69dc4ee678e4529fd5a76ee7be8faba88bb7c9cb0b7cbfafacb"
     sha256 cellar: :any_skip_relocation, mojave:        "904e958b1198e2931ab233981764b1ec66b26da793445c0fa10182588b5369a7"
