@@ -11,6 +11,7 @@ class Sip < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "2496c648391032df635c3c6c8b2696ac2450228ac91d17520aa631338152397b"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "933b936d56d79aa7f1f044f0b7cfc53b61fbbba541243bf73d76c1308040fdfc"
+    sha256 cellar: :any_skip_relocation, monterey:       "b47d4c5e1bea1e9b01208c90e1f37ebe87257b756e7e1a25ec0e75a226149282"
     sha256 cellar: :any_skip_relocation, big_sur:        "78d4beda8f0e902311c19eace9723a805d37aa978053b20198bfc29b2fb43e17"
     sha256 cellar: :any_skip_relocation, catalina:       "7fdf440cd1060a7a58c686dd7568d9984c9950abd7eb52ac5585badcf878e97d"
     sha256 cellar: :any_skip_relocation, mojave:         "d34a94def987327458aabd27b6c10dee5efb165f51355ba9987ecf94c80e559b"
