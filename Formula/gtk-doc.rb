@@ -17,6 +17,7 @@ class GtkDoc < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "31f6f5bc5918792ddece0aca021f8726d1fc88b76ef4e6b6ef40dd865624916f"
     sha256 cellar: :any,                 arm64_big_sur:  "6be94177308c7cb81573af6612f3bfcbf050a1539d2b2de8d8ebbde017fa00f4"
+    sha256 cellar: :any,                 monterey:       "9304600335bd228e2825e875fb8d62e72e2b7d7d9bc2bcd33fe3d41d904f30d9"
     sha256 cellar: :any,                 big_sur:        "b3d2370a6a3fff63341d86c5313e238af04af84dac34a6a19d6f7a1a77acb885"
     sha256 cellar: :any,                 catalina:       "cfaf657a0e2b8ac879deaefbd2361a2fe7a8e9b3234f73d0ad32eaa5be4a6beb"
     sha256 cellar: :any,                 mojave:         "abd68d022b9e19677a00c397fc316370b2106133f3a37c9f9c8b13e2d6b099a0"
