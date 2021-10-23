@@ -10,6 +10,7 @@ class Glew < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "cf63f19bc33bb858c6e4f083c9bb3cfc97b34fe357f7a4cba5bef35341aa1189"
     sha256 cellar: :any,                 arm64_big_sur:  "4ec7d501b56e5e5682f752975340c57a9aca68431d0d2cc9f849e428860f09de"
+    sha256 cellar: :any,                 monterey:       "7e9b5e718e23ae6136cf3fa7651f7ec6e7305bbcfcf49f149be644efebcdc1e6"
     sha256 cellar: :any,                 big_sur:        "9e0b9a17a4d7372d191d377ae63e6bb0070434eefc997299fe708ca12c02bfb5"
     sha256 cellar: :any,                 catalina:       "d3113b746275f48d4f50316c9ddf0ce27e7a11e20ffaac33dd1a2aaf9e59d52a"
     sha256 cellar: :any,                 mojave:         "728dbc75cee45763fcc89605d758de1ed950cf219012a1614808a6abd8883ae8"
