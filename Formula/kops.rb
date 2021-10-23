@@ -12,11 +12,10 @@ class Kops < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "245571005ee67785ddb5b5daf3b5e165bdc41b75a8db623d80bba156e56f9735"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e879db425fa25e33df281fe902cece8f0049fcb7690a38e90ae4c32343c11121"
-    sha256 cellar: :any_skip_relocation, catalina:      "7923d7b4c454def5265e7e83cd7b9ba8db72ba18447ceabf871e43034282b1e5"
-    sha256 cellar: :any_skip_relocation, mojave:        "1cc28c8cf60517fe8304fdba0c8a3ca6d8477c8363690e7bcc6d8b4075204da5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8a78e6c6a0363359e9f1614dbf3bac2dbfd194f0baac744b1f4e4f187a3c5e78"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7ee7828fed2bd73943b205df66999cf07c7ee3d4336f64c8f7f8eec783813130"
+    sha256 cellar: :any_skip_relocation, big_sur:       "76f3897d3cc73a98334294c4f281f09e7a62e66bf41e814f8ba0657fa7d79756"
+    sha256 cellar: :any_skip_relocation, catalina:      "75e1cbda813e2001fc128f071ea51a23a0aa263f87001b2ed613a2a2c30493e2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "570ba96bc239787319e07f49f5f3732354f5ec5198482dca7d85e4d38a9bc998"
   end
 
   depends_on "go" => :build
