@@ -10,6 +10,7 @@ class YoutubeDl < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "3a010e2e9bef8c7bca72c05aeadb4cbad5fc753f055b073ac249da1b32f1ba4a"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c8488b8408d6382b7bce6359cc18f7e14ab5f250152f18f69d250fbc6dd4f081"
+    sha256 cellar: :any_skip_relocation, monterey:       "7c22c8dc98b7f2a4721fe9037419bbd6c11aa8c9124e23958e83cacc04653107"
     sha256 cellar: :any_skip_relocation, big_sur:        "f4c3781a6c30a1da5319e581cac99be7fd533295fa8780ef66c3bf696f755e5f"
     sha256 cellar: :any_skip_relocation, catalina:       "f4c3781a6c30a1da5319e581cac99be7fd533295fa8780ef66c3bf696f755e5f"
     sha256 cellar: :any_skip_relocation, mojave:         "f4c3781a6c30a1da5319e581cac99be7fd533295fa8780ef66c3bf696f755e5f"
