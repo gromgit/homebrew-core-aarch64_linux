@@ -8,6 +8,7 @@ class GsettingsDesktopSchemas < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "d27eabf5d5e5f619418a2b6be7ca9b42de63572e595ab92e6e8960256ca176c4"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d27eabf5d5e5f619418a2b6be7ca9b42de63572e595ab92e6e8960256ca176c4"
+    sha256 cellar: :any_skip_relocation, monterey:       "57cdbf1950a1dea3008b6f4c8ed0a1d7d38a5a9e8cedfa31ca3ac5b4dfbead66"
     sha256 cellar: :any_skip_relocation, big_sur:        "57cdbf1950a1dea3008b6f4c8ed0a1d7d38a5a9e8cedfa31ca3ac5b4dfbead66"
     sha256 cellar: :any_skip_relocation, catalina:       "57cdbf1950a1dea3008b6f4c8ed0a1d7d38a5a9e8cedfa31ca3ac5b4dfbead66"
     sha256 cellar: :any_skip_relocation, mojave:         "57cdbf1950a1dea3008b6f4c8ed0a1d7d38a5a9e8cedfa31ca3ac5b4dfbead66"
