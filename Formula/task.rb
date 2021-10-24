@@ -14,6 +14,7 @@ class Task < Formula
   bottle do
     sha256                               arm64_monterey: "7c498b1efc7a8923f3778488f3e480e8eda87bd7265f21b78283e59d94599072"
     sha256                               arm64_big_sur:  "676b1d1ff1010a1ca30608b7092fb2b38abbea1c2a3241e6ff72d322b7fa48ce"
+    sha256                               monterey:       "4bbf3cb74b79dd440809515a474daf1bbb5bab743c1333bbefa16569bd42e454"
     sha256                               big_sur:        "2d36d56302bd104719d07cf57c4af247ee72af3f1d817367c54a449a539ccb7d"
     sha256                               catalina:       "8e9d4141d866acf6deb820c9c10b498eb40234f93e7100ffa4b9419257fab8f2"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "50e2d1e85ec8408f214a12f5d7346d0e25e72e43ff4c6c17f6321fd6de6649f4"
