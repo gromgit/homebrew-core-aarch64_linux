@@ -14,6 +14,7 @@ class Libressl < Formula
 
   bottle do
     sha256 arm64_big_sur: "41f4e9f8cdf03ae83c8fdff6867bbd36127c389004fb89a410630c74dac315f9"
+    sha256 monterey:      "806d3b611485fab207bbeb7126643240adb8582f985f3e6546815953eb968611"
     sha256 big_sur:       "e3c8dae6f39e42a652df8e66f02a0e581e31697fbfdc7465813306c48f6931d5"
     sha256 catalina:      "4490e48658eab39495b885811d1762666d6c837013c3f990cda1eebf8bb400fc"
     sha256 mojave:        "7ce48d13e2e1cae8569598a6d456c8843263547fc1753f2a5869e61fd50c6fa6"
