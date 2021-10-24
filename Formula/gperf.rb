@@ -9,6 +9,7 @@ class Gperf < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "af16e90596878170e8235696dd8093a4953b2b5948b054e76ccd1741ce0e47d3"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "311e481114105723752e9b8d0f99dda4ad2bbbfd0cf9c75498384c2279d6b94a"
+    sha256 cellar: :any_skip_relocation, monterey:       "95c822396502343d156c6c1548c8486c9163321fca5a876c4a149b720a8fb586"
     sha256 cellar: :any_skip_relocation, big_sur:        "00685e086c83d1d93a856f35ae56106ac5c19cc4541174040d6d6d71e51bbe75"
     sha256 cellar: :any_skip_relocation, catalina:       "fc18781c090c4b8b7bb7305a864eeb4e6f3f458d8daa2fff96da3bda061fa8bb"
     sha256 cellar: :any_skip_relocation, mojave:         "85c9bd450b0a0d7453584c343fe6770c94f8f3941aaa6f95d735f1923209b6ed"
