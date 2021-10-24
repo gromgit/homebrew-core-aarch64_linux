@@ -8,6 +8,7 @@ class Libxmu < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "5ad15776b11e79adc0381fcfc2e45ada0c01e73abbb5527602f4b0b4694de5a3"
     sha256 cellar: :any,                 arm64_big_sur:  "c0efd6d85d0f2738138ce77b3a5eb18cfcc984f8cded38351670a1066f00d732"
+    sha256 cellar: :any,                 monterey:       "2b0a4000ba1637d33b565fbc6af7f125db337485e438a689a2b5eba1364bd362"
     sha256 cellar: :any,                 big_sur:        "2b2e329a7ebf57e09d29296db2763f2ea105ce73082f2c11d4c29f9da32c0070"
     sha256 cellar: :any,                 catalina:       "ff33cd2f865f77d04ad861dd5e10784842511050c754e9bd772ab81b2e1c6918"
     sha256 cellar: :any,                 mojave:         "a437eedd57edefe94c7a4d7cb30ac03d5ea6852f7a6ba6be33e12c839cde6ac6"
