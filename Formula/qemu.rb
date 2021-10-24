@@ -9,6 +9,7 @@ class Qemu < Formula
 
   bottle do
     sha256 arm64_big_sur: "94b094a62401c3384e57c572f1009545bd94765426ba39a7b0878cb883d0220a"
+    sha256 monterey:      "77d4932355c38028915d640bc74936f5a7b4c2bb731177914d0275239b996d22"
     sha256 big_sur:       "5213e72d5dc5641593b415f5e37618cbd3d1e291d25c4e9478c86b5b8a9c8f08"
     sha256 catalina:      "561fa5f3d141ae025fe5e611957af4b33ff9b5df614e9a307fecce1645fb3170"
     sha256 mojave:        "5d938b8949e5d2cf4d41cca27ce4bfd5cfc17dc27f0ec45b6e8b27ab99cc2e87"
