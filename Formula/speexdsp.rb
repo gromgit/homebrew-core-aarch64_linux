@@ -7,6 +7,7 @@ class Speexdsp < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "ae13ab78f1010493141f38f2671a7908545f7144dc266cef4cf78512944f3695"
+    sha256 cellar: :any,                 monterey:      "37ede6a5295e6feca3bb8661d21bc306bc6362cdffa096c28ac1232cbc437710"
     sha256 cellar: :any,                 big_sur:       "6b26ef894b7ecee4b8f4fdbb4415810c25e73cd1ca4c5d4a5040d76b1f7d1d0d"
     sha256 cellar: :any,                 catalina:      "84c7225a9ee78c41bd858d8b52d01a12db6ba358826e45bdc30e42d9e802425c"
     sha256 cellar: :any,                 mojave:        "0d61efd09b255e0856833e51bdbdaabcaaa325824a71ec326da61ffd8e200675"
