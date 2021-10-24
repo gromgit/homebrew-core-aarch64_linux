@@ -13,6 +13,7 @@ class Rubberband < Formula
 
   bottle do
     sha256 cellar: :any, arm64_big_sur: "effbebb6fa0c2fe0ae0dfb034b7f583691391accf39ead4ae0f9a2933cfa747a"
+    sha256 cellar: :any, monterey:      "cd90e0ddab429d9a30879b3ef039a982f538578f93f8e09c667548210d53b131"
     sha256 cellar: :any, big_sur:       "6f8eb3495c3ab95737df9fd81ae7df3ecb122ebc7468df79049ef2b1fd363375"
     sha256 cellar: :any, catalina:      "29fe97d7bb8bb2b23c2409d2465e56ea84326e9568dbcf6533b4bf4aed52b400"
     sha256 cellar: :any, mojave:        "af62a07fc9604c1df76d654b662c949d75a4d4cb52171aa72fb911e8af533aed"
