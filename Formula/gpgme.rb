@@ -13,6 +13,7 @@ class Gpgme < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "b732123358ed02a82a0d42a2a7f4adc0ead134196da5ed522f5d86610cca8e95"
     sha256 cellar: :any,                 arm64_big_sur:  "a6408468cf32338ff783f685eea507a779b63f21aa1074e8be250088832de2fb"
+    sha256 cellar: :any,                 monterey:       "fe3c49857c2badaade514c1e3083542309777916c1a309e97f933043d9dcfd38"
     sha256 cellar: :any,                 big_sur:        "93ef1638eedcb613c2d4992917c081409985aba3d20db3a3c5bbd9b02e008ee3"
     sha256 cellar: :any,                 catalina:       "4d51fe3ce646233005f33c6f53fd50e2111dfa21891b03d4cce9ce3845da2373"
     sha256 cellar: :any,                 mojave:         "5f69a086be935cd7f1994bc709a1510e5c3182865240bf32c9ef1d7ea8cd82dd"
