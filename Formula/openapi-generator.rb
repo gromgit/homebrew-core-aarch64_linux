@@ -6,7 +6,7 @@ class OpenapiGenerator < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "990cfa2b178ecdba850494c6aca3e5aad5e76303f33808d7fc6403c60b80262f"
+    sha256 cellar: :any_skip_relocation, all: "c53d29e0fd67ec7af1423e14cbf230efdc86d4251711179579500a97d6a97eab"
   end
 
   head do
