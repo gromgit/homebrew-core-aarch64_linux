@@ -9,6 +9,7 @@ class N < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "92c3adc465225cedba159c9c7218cf441ef47ba373bea23c2d4aba60426e51f8"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "92c3adc465225cedba159c9c7218cf441ef47ba373bea23c2d4aba60426e51f8"
+    sha256 cellar: :any_skip_relocation, monterey:       "b981f163cebf4eb714b40491fa218d46cb824cfd50fe5fdffd091a38bdf32977"
     sha256 cellar: :any_skip_relocation, big_sur:        "b981f163cebf4eb714b40491fa218d46cb824cfd50fe5fdffd091a38bdf32977"
     sha256 cellar: :any_skip_relocation, catalina:       "b981f163cebf4eb714b40491fa218d46cb824cfd50fe5fdffd091a38bdf32977"
     sha256 cellar: :any_skip_relocation, mojave:         "b981f163cebf4eb714b40491fa218d46cb824cfd50fe5fdffd091a38bdf32977"
