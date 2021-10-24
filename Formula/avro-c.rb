@@ -8,6 +8,7 @@ class AvroC < Formula
 
   bottle do
     sha256                               arm64_big_sur: "a2574fe92f3872c88dba0a8c956f4dab956b9222111a49c9b9ea1d191ed1bd44"
+    sha256 cellar: :any,                 monterey:      "77aa1e2c8a5b7c1d77183dce388ccedcdbbc81b69ba174c5e1d3455b0c5ee880"
     sha256                               big_sur:       "af1c754a9f9e63b2692de3d8dd466dfa44e22d45d5733ea40db9fba4ed7c4437"
     sha256                               catalina:      "3dfd6605930b99e96e1e78c2cbe6860e27d78cac3b1c6889050b7c05fdc32ad9"
     sha256                               mojave:        "e753230392158e5001990d7af043a62bea1156931cb30c7ff5684035fd12eb45"
