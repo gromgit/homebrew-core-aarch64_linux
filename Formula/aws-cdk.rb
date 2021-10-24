@@ -10,6 +10,7 @@ class AwsCdk < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "83f7d05336bbfdf47fa7ccbed5c2d29881556b6a121bf02aa8cc90cea9c9f9bb"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "919458ba739ea375465260cdb35fabb1d5edd47d5b7052e04ed4fcdfd8a92bb2"
+    sha256 cellar: :any_skip_relocation, monterey:       "1433d0cb501a7a94a550079cd8d2c17a02cc4a0b93cd8a931cd7adf2fa3e48b3"
     sha256 cellar: :any_skip_relocation, big_sur:        "3072a643ee022a5e935e4e1f9eeaea969d447b2e6671e70d37da02d46c3abc3d"
     sha256 cellar: :any_skip_relocation, catalina:       "3072a643ee022a5e935e4e1f9eeaea969d447b2e6671e70d37da02d46c3abc3d"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "919458ba739ea375465260cdb35fabb1d5edd47d5b7052e04ed4fcdfd8a92bb2"
