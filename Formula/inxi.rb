@@ -7,10 +7,9 @@ class Inxi < Formula
   head "https://github.com/smxi/inxi.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8de420370541d0cee6a7810ca0fe63191574c321b661bb7ba69381a12b621010"
-    sha256 cellar: :any_skip_relocation, big_sur:       "625833eb573f13a34d9ee32a322a6b21412b565da619eba27d2e545536521c5c"
-    sha256 cellar: :any_skip_relocation, catalina:      "625833eb573f13a34d9ee32a322a6b21412b565da619eba27d2e545536521c5c"
-    sha256 cellar: :any_skip_relocation, mojave:        "625833eb573f13a34d9ee32a322a6b21412b565da619eba27d2e545536521c5c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "3020e98c06282771e24069218af450f06a34be75e872de5ede0785f474881b2e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ead85103f91c94113b2970a4758f14bba35b5ec8508e0107268a38bee719c624"
+    sha256 cellar: :any_skip_relocation, catalina:      "ead85103f91c94113b2970a4758f14bba35b5ec8508e0107268a38bee719c624"
   end
 
   def install
