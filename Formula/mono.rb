@@ -11,6 +11,7 @@ class Mono < Formula
   end
 
   bottle do
+    sha256 monterey: "4a4560ef7bd6dc638600e6fae876c3e27b3443698719a1dae45fe49fc1987f78"
     sha256 big_sur:  "fdd17b0e0eb154047fa8091b52763f1f0df0fc921c216f6633d4d59f7cd62af5"
     sha256 catalina: "428998efcf415948ca793b166d7ed6e242814205238e77111419de828fd33cfe"
     sha256 mojave:   "d25b6982b6bd7af6b001e5f7b53ff0dad68937ce11ba0dce9d1529e2b0608b85"
