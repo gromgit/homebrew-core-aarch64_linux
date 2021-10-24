@@ -14,6 +14,7 @@ class Libshout < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "306fcd9e630fd90b82c5d58d1f7b07692f2cac16c05556ff3dfeec64c09fdee0"
+    sha256 cellar: :any,                 monterey:      "b9b4655de3a51803433b4b4675d82b4371af868b1b440cd7f0a7c61d234979c1"
     sha256 cellar: :any,                 big_sur:       "7ae2c10ce823cb25566f75911560dbabd691bb818ee38a77c7eb2cba831c63bb"
     sha256 cellar: :any,                 catalina:      "0cb9a2d80370e8da49143cc896f209ff44f06d903e8050a867851f2dc1c3f3e4"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "62ae4123383c7e4a09efb4360c06ce8e06ac48f48a509c4d6d340fedd9085aff"
