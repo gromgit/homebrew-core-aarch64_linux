@@ -21,6 +21,7 @@ class Tor < Formula
   bottle do
     sha256 arm64_monterey: "dca9068372aa2e47559b67c9db96f5a0f4eaf4dd53cf95a4882a00078706be22"
     sha256 arm64_big_sur:  "5ff952446a3fa7b577ff894eaf7924c8b4b16408b321ff2d4d4759a8e3b52a75"
+    sha256 monterey:       "509a28471c2631d3de03f62b132ffe48685b3ea1837b4f4c6ce72d12b981d46c"
     sha256 big_sur:        "07b5cb200302bb21aa031f86bf3e00247954c176bcb6c932f86f450a7ad62b67"
     sha256 catalina:       "4446f16f1efce667ceedd801b51cbdf541cdeb52e2311b44d2d12ec5ff95bf91"
     sha256 mojave:         "d64ff6e3ff8b258694d277a805ebe975c8fcdcbc033983974ee09dec01ab14cc"
