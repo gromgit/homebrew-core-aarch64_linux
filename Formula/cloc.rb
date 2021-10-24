@@ -9,6 +9,7 @@ class Cloc < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "0fb81c740ea426be36e5d1cc415a2af3e656ca37b41a7eafae06643a65a516d8"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "83f761b258052b7cc8ef375d5b7affa4d17afc372833b09b20695a9168ac6b9f"
+    sha256 cellar: :any_skip_relocation, monterey:       "97bdf46a497e81167cfd322f1811ced44db0bf433197b1f1a239c6339a0b61d7"
     sha256 cellar: :any_skip_relocation, big_sur:        "bcc059446f6a3c112e4eecf2d5da94531124ca7572cd953138bd9bb636dbd760"
     sha256 cellar: :any_skip_relocation, catalina:       "62e4eba4fd24d200fea078702f429acd303edfd8211a534362081c9d32283272"
     sha256 cellar: :any_skip_relocation, mojave:         "31d38191d5377740453d8eee73aaf287df8026bae490297179126a4016665d31"
