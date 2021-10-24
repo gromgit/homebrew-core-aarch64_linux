@@ -8,6 +8,7 @@ class Libheif < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "11b08393af47fa87c2913bfc2bec1201a5b50a98df5676793c8df142a07cebc7"
     sha256 cellar: :any,                 arm64_big_sur:  "3963465a6971ee520138cd03749c8117f5c804e2631c326d765ee49f7a044517"
+    sha256 cellar: :any,                 monterey:       "d2668df3e51b53ed5e3dba0164231c94ab41d9af96e8a60093250886c86a5ad0"
     sha256 cellar: :any,                 big_sur:        "446b22420364f8914e39777b3c99a7a94035287e0d881e4ca3b0682093f6f2fe"
     sha256 cellar: :any,                 catalina:       "3e852c84854a7beb0dc3e4ece0c5b161e35271c0eb68c1a1f86f2a3f019c2aa7"
     sha256 cellar: :any,                 mojave:         "a03dba57d45f433a2ab7ae145641aea1ef7b1838aeb49c60847be2e529513079"
