@@ -10,6 +10,7 @@ class Libao < Formula
     rebuild 3
     sha256 arm64_monterey: "87276ccd471ed61409cc6b1fc45b33e3b9ae60414695629cb519a2d7f03bb7e4"
     sha256 arm64_big_sur:  "4ffbc11b951c7c833881d1a60d20d8969e30bfb85e817b660e38a3fc581ccb9c"
+    sha256 monterey:       "14bc27effce651df160ad5efbb377773479c6ea28b65f585760aa5316c3dc6ad"
     sha256 big_sur:        "f27a782e33661e2aa75cbfcbe775a2da08f7f781c6e7608e8f1e3a4a354c4cde"
     sha256 catalina:       "b6ccd4915aa272b58f267995ce3c87ad42388926535fedea0243c9b0b9941089"
     sha256 mojave:         "cb57d05c66a19dcfac7e45e6a80f195dfd050ca52a9b316133d131c0c8165cf7"
