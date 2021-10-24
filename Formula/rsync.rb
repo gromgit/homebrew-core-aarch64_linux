@@ -15,6 +15,7 @@ class Rsync < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "821901907a9a035c3b352cf840ceaf358910d47b7ca5642e19a8ff89e5e2aaf2"
     sha256 cellar: :any,                 arm64_big_sur:  "05437fe41f5c05db284cb9b70c14ad47071976d3720d2148b62f83a2bfb0391a"
+    sha256 cellar: :any,                 monterey:       "3aa536da0c3756b25ccee8fbc29840b679d043adeeefa8dd75fc2c16d25f01c8"
     sha256 cellar: :any,                 big_sur:        "def7f5cd96f4abc05ef344a16c084c11879dca54b91ea5dd56a6de63298cc1dd"
     sha256 cellar: :any,                 catalina:       "fd92045e16b9b83ab6c281a1e658e27731ef9af53fcb6bb7ce6b9533851e728e"
     sha256 cellar: :any,                 mojave:         "1be1e9754c4f4a4b043aece33299d90f50d01274682f63c29eca7d9bcb8a2090"
