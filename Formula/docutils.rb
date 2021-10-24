@@ -10,6 +10,7 @@ class Docutils < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "ff5b2092cbe68edf0834516ce550deb95a244274d5a09f858b23e5aecd5a1dad"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ff5b2092cbe68edf0834516ce550deb95a244274d5a09f858b23e5aecd5a1dad"
+    sha256 cellar: :any_skip_relocation, monterey:       "0188bab1d52fd5ad0a96332e696255b1a0dadc212c5150a4084e8323db2fc590"
     sha256 cellar: :any_skip_relocation, big_sur:        "0188bab1d52fd5ad0a96332e696255b1a0dadc212c5150a4084e8323db2fc590"
     sha256 cellar: :any_skip_relocation, catalina:       "0188bab1d52fd5ad0a96332e696255b1a0dadc212c5150a4084e8323db2fc590"
     sha256 cellar: :any_skip_relocation, mojave:         "0188bab1d52fd5ad0a96332e696255b1a0dadc212c5150a4084e8323db2fc590"
