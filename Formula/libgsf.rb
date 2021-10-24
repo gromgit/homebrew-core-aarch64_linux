@@ -8,6 +8,7 @@ class Libgsf < Formula
   bottle do
     sha256 arm64_monterey: "7cc3b9e7b267e2cff1ffa2319e9b607af58076aa1b0d6d9d646181899df77e6b"
     sha256 arm64_big_sur:  "3262a07b0905e7ad4b2fe7558f5fddbe40d4a57e5749312520b171d9b83ad71e"
+    sha256 monterey:       "bd49e7408da16ece6d7fdd9062c81776d9a3aed17987cb490013ff9eb9006690"
     sha256 big_sur:        "190c702ad48598787b9fc72a019cd8f2701d1ae28ed41e3c111acd19b223d139"
     sha256 catalina:       "82a2fce8b091d204302919c7541a0ad21a28a24fe8ad8a5d4ae7f50f3f190349"
     sha256 mojave:         "a051f21e80044277fafb60264c915cb79ce5f64059e9737f7a15795bc79ad3c8"
