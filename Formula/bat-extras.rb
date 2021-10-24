@@ -18,11 +18,12 @@ class BatExtras < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "1c94dd7dd7e3d29f1493267a300b3d6a1f309560f341ec24990d708e3aca3759"
   end
 
-  depends_on "bat"      => :test
-  depends_on "ripgrep"  => :test
+  depends_on "bat" => [:build, :test]
+  depends_on "shfmt" => :build
+  depends_on "ripgrep" => :test
 
   def install
-    system "./build.sh", "--prefix=#{prefix}", "--install"
+    system "./build.sh", "--prefix=#{prefix}", "--minify", "all", "--install"
   end
 
   test do
