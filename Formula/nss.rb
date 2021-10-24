@@ -13,6 +13,7 @@ class Nss < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "45a75ef9f7fe596db57e40e462f72454e929caa1974e801d6b252aa92c944f2f"
     sha256 cellar: :any,                 arm64_big_sur:  "0adb1d87440062452a125b61ba6f1d02ca1fd08a13f16198eb75c6b8fe8316f3"
+    sha256 cellar: :any,                 monterey:       "9063fcb0293f71c9e7e5d0f98bd82dcf0b31f6e6cec3f8518427f38fe6c65680"
     sha256 cellar: :any,                 big_sur:        "4e2903927f44570829cd06b131dd110ea6b56bf0911bbef8e7109a64f86fb1e5"
     sha256 cellar: :any,                 catalina:       "9bf1121a058da249531340e5a1cb22f4eaa3c08921ccaf97fb933dfcf7382d75"
     sha256 cellar: :any,                 mojave:         "1044185d3a60c026f93594fa8f3da8ee2b5db4acecf0585a0d83cc8c0208252f"
