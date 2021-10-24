@@ -10,6 +10,7 @@ class Abseil < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "4e91703b7dacaf6700dde159935d61884633f2d75c0b18b083af9744ab92620d"
     sha256 cellar: :any,                 arm64_big_sur:  "9d952d8755c1a1f6c7841cf34b4490dc472f76938ebee1dce2a65429273be564"
+    sha256 cellar: :any,                 monterey:       "c6c76dc1c68ba3e959e8e785ad60d2b50bde8f1303a2afa29af04a8cbb8346df"
     sha256 cellar: :any,                 big_sur:        "d4373a873275884f01c18161826ae776d0b1d117eb3cf037763b906ccd3a60a6"
     sha256 cellar: :any,                 catalina:       "a087569c2b0fe24bc55d24f4561542955ccb2b95d2cd27ef23f3c86e79c5893d"
     sha256 cellar: :any,                 mojave:         "50fc095da0f1105b9d9edc73251b2ed8abeff974bbb0a604349af6f27ea2826a"
