@@ -8,6 +8,7 @@ class Rapidjson < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "07acf5e89f30f9db3b69ad953bf4490ed02f6e5eec9d5f84987962132373aa6e"
+    sha256 cellar: :any_skip_relocation, monterey:      "3d0b51a74337aee74ad9f17eafba4694dc414aa9f45585607fab67efde2373f8"
     sha256 cellar: :any_skip_relocation, big_sur:       "ab0ca0d82021a22ca8d2e5667f13efc16ea08e18c50e5efadaa1e07ea72f9a31"
     sha256 cellar: :any_skip_relocation, catalina:      "5d8915ade32a25a3c2a973de3536285b2c3d8badd57478c475a9e3eac0f47dc6"
     sha256 cellar: :any_skip_relocation, mojave:        "9871eeed683c9cb7198c00c87225dd44fc4b40dfa20be2301a63c034ecc221e2"
