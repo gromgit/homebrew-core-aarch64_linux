@@ -9,11 +9,12 @@ class Serverless < Formula
   head "https://github.com/serverless/serverless.git", branch: "master"
 
   bottle do
-    sha256                               arm64_big_sur: "b52373941a999233c8c9853a51f83c85c3854d9cbfae67c12ebbd90dc4b93aba"
-    sha256                               big_sur:       "f14d7c11e437f139b833f6147cb79a5378e02f794c8e2c42a7677d4295bbae61"
-    sha256                               catalina:      "98b398f6f9156ee53c87c0ce7ec10b5ca3fe244c0c107827e3b5c56d7c3efa15"
-    sha256                               mojave:        "8997cd1a49b7e22824d896fc299f2ef14869eaad0663d6d4afe80c4320142c8e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bb5ae93a1a8e83802e06cb0502eeed2743e25789a94e46e410a992473968dc05"
+    sha256                               arm64_monterey: "86acb28061b84a873dab209970a58e4c539cb581eb3a0354dad9bdf77720c106"
+    sha256                               arm64_big_sur:  "b52373941a999233c8c9853a51f83c85c3854d9cbfae67c12ebbd90dc4b93aba"
+    sha256                               big_sur:        "f14d7c11e437f139b833f6147cb79a5378e02f794c8e2c42a7677d4295bbae61"
+    sha256                               catalina:       "98b398f6f9156ee53c87c0ce7ec10b5ca3fe244c0c107827e3b5c56d7c3efa15"
+    sha256                               mojave:         "8997cd1a49b7e22824d896fc299f2ef14869eaad0663d6d4afe80c4320142c8e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bb5ae93a1a8e83802e06cb0502eeed2743e25789a94e46e410a992473968dc05"
   end
 
   depends_on "node"
