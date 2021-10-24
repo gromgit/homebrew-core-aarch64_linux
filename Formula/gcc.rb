@@ -24,6 +24,7 @@ class Gcc < Formula
 
   bottle do
     sha256 arm64_big_sur: "23ec727fa684a9f65cf9f55d61d208486d5202fb6112585a01426ac636724e56"
+    sha256 monterey:      "082dd4e4f251a599ea5cc798046cb7d03d3dd26c8943002732f0d07d1d98ce5c"
     sha256 big_sur:       "da675b722172d8866c8c3eed38a107ebdb7fb8c5e9a9a8589382d5537b38c925"
     sha256 catalina:      "79ce1258429ea2a7150e3dd6e517753ecb3b53724f79143ef559f5eb9f955a88"
     sha256 mojave:        "54a56a9e9d4e27353cfa3871048581385fd6591b63baddfaa79b57f999ffc33e"
