@@ -22,6 +22,7 @@ class Gtkx < Formula
   bottle do
     sha256 arm64_monterey: "977f25c376ffbf7785a8a3464e61490c40d7eb940385cae3b205ef9b9d53b693"
     sha256 arm64_big_sur:  "b304a9f2d24f97e179cb5731713fc4876a730b507eb057bba4f9097af46d7708"
+    sha256 monterey:       "84df93d99e85fff484d42ab803a41ca83daec204950e2f2dc32602c718c646f5"
     sha256 big_sur:        "8ead5b96878ad431ac3e23dc3bd20bb4eac509c63c231e594986a0fa331e157f"
     sha256 catalina:       "3900f64476d7988670b5d0c855f072fba0af2b1bb323acf4f126f70c95a38616"
     sha256 mojave:         "10d1f2a81a115b9cf1e8c76fbd6cdc58f5b4593eb7f9e15cbe0127e14221dd06"
