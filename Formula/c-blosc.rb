@@ -6,11 +6,12 @@ class CBlosc < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "1330f5de4f7c9529effbadf7798b73346847d629bf24c8bf90887ed3a6419ab9"
-    sha256 cellar: :any,                 big_sur:       "e7ef0adf43ef181d7645dfd7f6ab74b5c11c07c0b4cebd473a1096bce406b6ac"
-    sha256 cellar: :any,                 catalina:      "feaf08d27a7f27259382d7a67d852b402255e3997daee3dfac0829bd1fc47fd0"
-    sha256 cellar: :any,                 mojave:        "e036c972febeb96fbd84b4d40578e5e49c058e43e789946690d8547bb7358c05"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "19485dcc865d0130c121f9724114d8a320c0724328b5bbf49f4458998f0f860d"
+    sha256 cellar: :any,                 arm64_monterey: "7baccb768cf8ab1252769c5a88fb40d3a4833fb3b110cdbb9e549b5b699f3332"
+    sha256 cellar: :any,                 arm64_big_sur:  "1330f5de4f7c9529effbadf7798b73346847d629bf24c8bf90887ed3a6419ab9"
+    sha256 cellar: :any,                 big_sur:        "e7ef0adf43ef181d7645dfd7f6ab74b5c11c07c0b4cebd473a1096bce406b6ac"
+    sha256 cellar: :any,                 catalina:       "feaf08d27a7f27259382d7a67d852b402255e3997daee3dfac0829bd1fc47fd0"
+    sha256 cellar: :any,                 mojave:         "e036c972febeb96fbd84b4d40578e5e49c058e43e789946690d8547bb7358c05"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "19485dcc865d0130c121f9724114d8a320c0724328b5bbf49f4458998f0f860d"
   end
 
   depends_on "cmake" => :build
