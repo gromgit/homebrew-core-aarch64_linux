@@ -24,6 +24,7 @@ class Theora < Formula
     rebuild 4
     sha256 cellar: :any,                 arm64_monterey: "56008e9450fcf3f712f34ec79407b8e738953d5fc50feaf72a6434dd28fc1101"
     sha256 cellar: :any,                 arm64_big_sur:  "1e5271cb88e3dad8eb5f06460e7f3f2cec0129679c7f7fb4f84db1d09664b827"
+    sha256 cellar: :any,                 monterey:       "0bdb8acd2fafffff1e172c94aa6f67ce20ea67760d5296ac108ca1ec7e9e4c22"
     sha256 cellar: :any,                 big_sur:        "7ba57255df2c2f4563767031c6b9ead9a93883217644e9e64b5523e26d7b1088"
     sha256 cellar: :any,                 catalina:       "1fcbd50039f580bd85554af2d831c28f83613b5d26969f577f7fe87b3c55db67"
     sha256 cellar: :any,                 mojave:         "6fdb09d75fc6e64b266a185e711c2964e803d8f10c0d40ccb8d572c536c24d3a"
