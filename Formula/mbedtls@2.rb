@@ -14,6 +14,7 @@ class MbedtlsAT2 < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "3b7925ff022e9e7a01956ddb2b48d5e4062469feb289b79566fbb380f5b7a2c2"
     sha256 cellar: :any,                 arm64_big_sur:  "ad0abc939b4b50be556177673fe5bb3a08a4a8725936d106c0c2bf599b81387d"
+    sha256 cellar: :any,                 monterey:       "f797ab81818013257851207ce92ea54a2668f6f10c4011699b97c4914be84015"
     sha256 cellar: :any,                 big_sur:        "1ee8bd0e453c70b8751f9f1fb307e7915f0eaf22bfcc2c39c3fc75af9344d310"
     sha256 cellar: :any,                 catalina:       "fb6db7177cbeefc4478a32b1a1a78cc0442db7ec96cfc1760d15d221cea3b92d"
     sha256 cellar: :any,                 mojave:         "8c8611c1a3dec140495803b9dd847e1ef5dc044deab964181124309cd0be950a"
