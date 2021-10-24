@@ -14,6 +14,7 @@ class GoAT116 < Formula
   bottle do
     sha256                               arm64_monterey: "0a8ab58da6c70ef822081d8009935554512ca5941ff2f1d8c5a57d48d0a8f128"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "be131fb3bf7494645b978f60ec191a1bfa721b1ecf492b5c2d5faf4f7aa425c7"
+    sha256                               monterey:       "c26291ac2de328407c6a1a3f3cd9f57965d1151d8a1a9f780865547f2d5de865"
     sha256 cellar: :any_skip_relocation, big_sur:        "cd7cf2ab4fff304367bc25472fdf1c87710735edd16f0dd26e3fee091b00f2b5"
     sha256 cellar: :any_skip_relocation, catalina:       "2f6a5856c9cc124335c1c85d35bfc344bff1aeb88215aa8fa3cde62e62d229b1"
     sha256 cellar: :any_skip_relocation, mojave:         "3c6db9bd28d82d8e8c5e09157faffe667b044c6c9296fe68b5657abe129b5d7a"
