@@ -16,6 +16,7 @@ class Aften < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "a1a669de1fd73431993f57c52603cb68d5794590bb175084de3ffac408d50c13"
     sha256 cellar: :any,                 arm64_big_sur:  "6f4cfa96fbcc6616017d696852e0738796471c24b2bcbd4ee38ce9cd2c01575c"
+    sha256 cellar: :any,                 monterey:       "f4632d08d823d8bda73e319dd6bf3f27651c9df4a61a2e0bfec30a116ed8745f"
     sha256 cellar: :any,                 big_sur:        "86e6506319cdf2eb030d2084663acbabd75dc3ce5f3a6e60fbd9af27c60bad1b"
     sha256 cellar: :any,                 catalina:       "c1f3497bae95d7cd92f28b1a22d2dcfc06c0c7342c6c2993b6f564110f6e8f99"
     sha256 cellar: :any,                 mojave:         "07e80303cd84483b9e86b880feb3885814644b115f161ad10582c6ce99cf192d"
