@@ -9,6 +9,7 @@ class Swiftformat < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "4472d6a696d91edb873b718181d8110fe4d202e91c8ef0ffbf6cb3fe73f29c64"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e19dbc72ddf213203e940708f3de6d9ca9c88663b5176494d04b4c418e16954f"
+    sha256 cellar: :any_skip_relocation, monterey:       "f0a9343a74cdc3f8a3736d0769264feb7e5a4dbdf0ace30eb2a2dea5cadc1c04"
     sha256 cellar: :any_skip_relocation, big_sur:        "90056a4e3b03ef31cecfb5b9e278a44bea2abecdd26a202d00bc390dfbbeb352"
     sha256 cellar: :any_skip_relocation, catalina:       "9647fdbfed2e7e2361974a5bfb99be4a112d914bd3e582afb4cdf7dc81e44cbf"
     sha256 cellar: :any_skip_relocation, mojave:         "83231c218cca811795688e175d88ac4584d1c424566926f9d6ed36e9dbdfed75"
