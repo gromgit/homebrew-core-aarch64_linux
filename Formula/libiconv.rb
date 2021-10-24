@@ -9,6 +9,7 @@ class Libiconv < Formula
   bottle do
     sha256 cellar: :any, arm64_monterey: "23e9b95c2a691a34dfffef65139708ff6211417a849eee921cb002edc212fcec"
     sha256 cellar: :any, arm64_big_sur:  "5d7976b37516995241432ab9c4cb14a0eba03f2e8af5b7bb110147ce045c9e1f"
+    sha256 cellar: :any, monterey:       "012b45c589388c4aec3c8a8124711d12722c561f2ecfe0cfd5a1c14ceb50cd80"
     sha256 cellar: :any, big_sur:        "9253ae6551eb63499fb292b4a65d054c918b93dab8beff0bc12f3290f77bd15c"
     sha256 cellar: :any, catalina:       "24d81638fcd7416a56c3dbdac7e2265d7b0476b17a71b631045425380122e6b1"
     sha256 cellar: :any, mojave:         "7638dd8e2d511a2ce14c6c420762ce7fdbae6a34158e25015c3ffd88de2dd19b"
