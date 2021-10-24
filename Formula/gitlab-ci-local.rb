@@ -8,6 +8,14 @@ class GitlabCiLocal < Formula
   license "MIT"
   head "https://github.com/firecow/gitlab-ci-local.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ed3c05e0d495cb844148f2b20bc8c813ff5debc4126ce32e6bd18cca8e32232f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f9baf713fd0af0e88a1faec18b5d49dffd2674e6f4f2a1268b6675494bc0e6db"
+    sha256 cellar: :any_skip_relocation, catalina:      "f9baf713fd0af0e88a1faec18b5d49dffd2674e6f4f2a1268b6675494bc0e6db"
+    sha256 cellar: :any_skip_relocation, mojave:        "f9baf713fd0af0e88a1faec18b5d49dffd2674e6f4f2a1268b6675494bc0e6db"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ed3c05e0d495cb844148f2b20bc8c813ff5debc4126ce32e6bd18cca8e32232f"
+  end
+
   depends_on "node"
 
   def install
