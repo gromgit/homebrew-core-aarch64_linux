@@ -8,6 +8,7 @@ class Yara < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "a6f6f04d7503f909eebbe1eff4b9735f102a3444d6208eb9f1fead5816e14858"
+    sha256 cellar: :any,                 monterey:      "8b1855554fc0871745886c4dd7c04120c6d880e13033b267ccc269913b6742dd"
     sha256 cellar: :any,                 big_sur:       "97b7631aeb7abca3a54dff991f238cff780daf9fb99463a774214e57ba3e25c4"
     sha256 cellar: :any,                 catalina:      "7aac2ecb50d470c44371d3b57c4820756a0302fbb4e1e035757bc4a9a2793989"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "ef6c8ba77e714a2a1dd40368869b659a934d09d03828903d25fc40dc76f70329"
