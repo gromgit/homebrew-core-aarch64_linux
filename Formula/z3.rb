@@ -13,11 +13,12 @@ class Z3 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "7718352b7b7b7e3cc454892a563212ac8b02259e90005a1d73ba30062b7e7df3"
-    sha256 cellar: :any,                 big_sur:       "ec65441e86922c521bfee1ec48ddcedd7ddcadcaac5b0301ffa5b6ba4cde4895"
-    sha256 cellar: :any,                 catalina:      "55d80044e8f62f8846d787c813fa0da76d20b84e278ea173cec922741854790b"
-    sha256 cellar: :any,                 mojave:        "0c7796128c833fb0a0da6cafb1d3564d8f42484df722b84035ccbc07a737f69a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1ded592aadd4c67db5f1dcee03799d7363e48579882cfd34a4c00b71cb87ca28"
+    sha256 cellar: :any,                 arm64_monterey: "31039deba2b7878cf906aa64b44440193a4940ccfa992aadd0ec0475acf17055"
+    sha256 cellar: :any,                 arm64_big_sur:  "7718352b7b7b7e3cc454892a563212ac8b02259e90005a1d73ba30062b7e7df3"
+    sha256 cellar: :any,                 big_sur:        "ec65441e86922c521bfee1ec48ddcedd7ddcadcaac5b0301ffa5b6ba4cde4895"
+    sha256 cellar: :any,                 catalina:       "55d80044e8f62f8846d787c813fa0da76d20b84e278ea173cec922741854790b"
+    sha256 cellar: :any,                 mojave:         "0c7796128c833fb0a0da6cafb1d3564d8f42484df722b84035ccbc07a737f69a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1ded592aadd4c67db5f1dcee03799d7363e48579882cfd34a4c00b71cb87ca28"
   end
 
   # Has Python bindings but are supplementary to the main library
