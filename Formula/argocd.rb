@@ -9,6 +9,7 @@ class Argocd < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "6d530b6b768016fa136fb7fdc107709a8c4188af68b91c1886d10f6efac17d6b"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "feedeafe60741c8ed499a91f450b2772ef1d6b27c86673d1807652b9bb6b36e7"
+    sha256 cellar: :any_skip_relocation, monterey:       "0d18459693f1e50e4e1516e3fcab2289cf1f222b9d9be4b0f4da6a1ab96fb5f0"
     sha256 cellar: :any_skip_relocation, big_sur:        "58bfa64cffee0c5131ca08b4027a35ae63d0e22e909a14368314865e2687b4bb"
     sha256 cellar: :any_skip_relocation, catalina:       "4d844e4e42f234953cdf782c32f3080a3ccb32b3d538d718fd0bc10d9ca0e392"
     sha256 cellar: :any_skip_relocation, mojave:         "4e920e34167cd5d993256ee6075c6e9efd25519526bb65c4a8cee7cd4f6d88ea"
