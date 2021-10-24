@@ -8,6 +8,7 @@ class Imlib2 < Formula
   bottle do
     sha256 arm64_monterey: "87e224ad574bf8e2d02e5f42a51ed3103a0c02865f385b8a29307fb4e72497f9"
     sha256 arm64_big_sur:  "7d646f7b6b8cf7f0002d89e0c2735fc16dc711084664d52ea7ad9c4157302b3d"
+    sha256 monterey:       "d1ca59cb6dc3ad2fd4b19d19a1ecde321b9dc93d60230a3b19821331aba8fb66"
     sha256 big_sur:        "5705ac8d8c2aa6bcf8931b310742b3fd99cf0c7a2a7914a1dea50296d921fcae"
     sha256 catalina:       "0948b05c33a2037b0bd2044acf87eded935de17946139996692e1bba704ad01f"
     sha256 mojave:         "b0507e4e44035eeaa252add2deb30dc9af1ea1a5d80726a05c4e8698431f9053"
