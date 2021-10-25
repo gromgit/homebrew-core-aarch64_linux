@@ -1,10 +1,9 @@
 class LibjsonRpcCpp < Formula
   desc "C++ framework for json-rpc"
   homepage "https://github.com/cinemast/libjson-rpc-cpp"
-  url "https://github.com/cinemast/libjson-rpc-cpp/archive/v1.3.0.tar.gz"
-  sha256 "cf132ad9697b034f22ff37d12a1f1c6f2647ec2236701de5e76f6036ab664156"
+  url "https://github.com/cinemast/libjson-rpc-cpp/archive/v1.4.0.tar.gz"
+  sha256 "8fef7628eadbc0271c685310082ef4c47f1577c3df2e4c8bd582613d1bd10599"
   license "MIT"
-  revision 2
   head "https://github.com/cinemast/libjson-rpc-cpp.git"
 
   bottle do
@@ -23,12 +22,6 @@ class LibjsonRpcCpp < Formula
   depends_on "libmicrohttpd"
 
   uses_from_macos "curl"
-
-  # Fix for https://github.com/cinemast/libjson-rpc-cpp/issues/298
-  patch do
-    url "https://github.com/cinemast/libjson-rpc-cpp/commit/fa163678134aced775651558f91a006791e26ef8.patch?full_index=1"
-    sha256 "80a8cdfa40aba3dc71fbab77b0137f7f03bb9c969b9845e68f83181b4d8550f6"
-  end
 
   def install
     system "cmake", ".", *std_cmake_args, "-DCOMPILE_EXAMPLES=OFF", "-DCOMPILE_TESTS=OFF"
