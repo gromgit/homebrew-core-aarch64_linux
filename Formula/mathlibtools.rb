@@ -9,10 +9,10 @@ class Mathlibtools < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "344b8645e2d623a7689872ebab7a98bd0213f325d1bdf5d19d9159feae14a6b9"
-    sha256 cellar: :any_skip_relocation, big_sur:       "05bf4e22ff88a927687f3470a5a5f15373419a1a98aaffdf14bf184466bbad19"
-    sha256 cellar: :any_skip_relocation, catalina:      "cb0cc3242f2d2abc49c90e5695d699b5df668ec4be5cf959f2060020e262ab14"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ab32a4d9def330eaed277b29a00f5f7d2e7aff539eeadae7852ff9443ab1e644"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5140d2ecce132a0fffa5b3a40d1d9979c51cf58d1781a06a61c89b1e58671f74"
+    sha256 cellar: :any_skip_relocation, big_sur:       "1063ae5b9dea859173e21e626d053d299bc629d71c6a5d088dbd70bd0b595e16"
+    sha256 cellar: :any_skip_relocation, catalina:      "1a91f500766f5bfb556a052c4c18872d13c109b8bf7b3eab88abc51fef3deea8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "55da764accf8d38e667280d0ec8103ce3040393e9a28644fb09aeb820c01964b"
   end
 
   depends_on "lean" => :test
