@@ -9,6 +9,7 @@ class Mkdocs < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "4ca3b27f84dc4b971b7e1bc1fedc9700bcb98f9ed150a815cd15cf1edbb9625a"
+    sha256 cellar: :any_skip_relocation, monterey:      "1c7c42d4743fd6412cd774cb8927d373e8d12af222f60d29f3fcb98635a5f93f"
     sha256 cellar: :any_skip_relocation, big_sur:       "3dff60ce3eb047811c3be499dce49c625382b5fa9e0cd49d68012c3b4694412b"
     sha256 cellar: :any_skip_relocation, catalina:      "b82807f2f342e2620a6564cf19bf6b63013fc82bfae1de1c5e73c500dcd2107a"
     sha256 cellar: :any_skip_relocation, mojave:        "16b50288230ca4e1c2e2b46f09c49414822835753458eb1dde125fa71be770b5"
