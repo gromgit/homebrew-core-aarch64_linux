@@ -7,6 +7,14 @@ class Charmcraft < Formula
   sha256 "6b5e76403abb7aae2e76c578a9d48e0722268c3254a30adda6d50f9bdbfc31e0"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_big_sur: "9502496e2a35c39a3507a3ec48f29b9af26b77795106b324d3143e64d38960d0"
+    sha256 cellar: :any,                 big_sur:       "b0bdae0a375ef13d35d2d6360d28ef66b6275f5c8d6f43ac3d5f506fca1b547f"
+    sha256 cellar: :any,                 catalina:      "c01277314c572b103653eac0ee8108f0ec6e2632ec38b9242487e2411f60707b"
+    sha256 cellar: :any,                 mojave:        "ebe7aac3dcfa401762faaf339a28e64bb5fb277a7d96bbcfb72bdccde603067b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "30991933579a2a5aac98d21361a13c2205cdf0bf65635052d3f621df25e6c3f2"
+  end
+
   depends_on "rust" => :build
   depends_on "libsodium"
   depends_on "libyaml"
