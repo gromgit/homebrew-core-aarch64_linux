@@ -11,6 +11,7 @@ class Iredis < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "5244f3000f4ae1070ef1ff2c4a573010c855dc2bebf49dbcb51c748f12f5e930"
+    sha256 cellar: :any_skip_relocation, monterey:      "d84ce0b1db3670cb8feda63357891a6ec7dc30ea72dddc994a8c92ea1222bd99"
     sha256 cellar: :any_skip_relocation, big_sur:       "87232e4432a038363d2f82d46432413b552e36f1d102262b44e9313f4c047477"
     sha256 cellar: :any_skip_relocation, catalina:      "69fdb1735e81cd4c42331482397549920c14c5551459366db23abc87eb31f664"
     sha256 cellar: :any_skip_relocation, mojave:        "e16b775087fa092b6e03091b4bda5f52e47aaea4323dc1741650d141489f9863"
