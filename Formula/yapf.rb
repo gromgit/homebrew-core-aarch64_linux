@@ -10,6 +10,7 @@ class Yapf < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "b46a3dbefb7b1e3ff520b32d75744b90eca77200de3201a4be5a95bbd45de65e"
+    sha256 cellar: :any_skip_relocation, monterey:      "a7a417d2b6e9a1c2cea6f5b470ad8e18687780c3c69b354d108baa85a6a50e87"
     sha256 cellar: :any_skip_relocation, big_sur:       "a7a417d2b6e9a1c2cea6f5b470ad8e18687780c3c69b354d108baa85a6a50e87"
     sha256 cellar: :any_skip_relocation, catalina:      "a7a417d2b6e9a1c2cea6f5b470ad8e18687780c3c69b354d108baa85a6a50e87"
     sha256 cellar: :any_skip_relocation, mojave:        "a7a417d2b6e9a1c2cea6f5b470ad8e18687780c3c69b354d108baa85a6a50e87"
