@@ -7,10 +7,8 @@ class Idris < Formula
   head "https://github.com/idris-lang/Idris-dev.git"
 
   bottle do
-    rebuild 1
-    sha256 big_sur:  "cbae5a36e3912cbefc10acc8f6295bf313b8532bbe6eb2a53b2427d68772952e"
-    sha256 catalina: "df17f5104195ea42a489ef6392a3c4ad5f94de7442f38352cdbef31d4abc3799"
-    sha256 mojave:   "ba0945d4c86053b525067f4f1fa8781d72903b4f40522edd7b0e15fd62e7ba4a"
+    sha256 big_sur:  "19ad0c1b5aed35799c1a7199418e96b509b19b5fdad8dcf6492ca0ec10b14676"
+    sha256 catalina: "c38a0f42b48ace8818f060ed26834d9e395e614f12fe6449b1e48513c73dcec8"
   end
 
   depends_on "cabal-install" => :build
