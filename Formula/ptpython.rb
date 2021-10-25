@@ -11,6 +11,7 @@ class Ptpython < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "438056e36eeefefdbe804d950c8861e9178db01fea6df670f83c506a8b7eb0c5"
+    sha256 cellar: :any_skip_relocation, monterey:      "54b237dc070385bbf7ab6fec1f1590440feb3d46ae506efd6cabfd9b048dbe37"
     sha256 cellar: :any_skip_relocation, big_sur:       "916a01805966942286942293e9e3b77c23bd8db91be83803cdcd8c5c5c7a7b20"
     sha256 cellar: :any_skip_relocation, catalina:      "3cbe9de5e60de6754eba2e1631759df14aa6e536e25b44d4665e16841124923e"
     sha256 cellar: :any_skip_relocation, mojave:        "4b2f693efede4f086e5b9042d2a24b5f1bc691f79c7f63dda3f925402356c392"
