@@ -12,11 +12,10 @@ class Onednn < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "1ab17cda20f0f054e9044b38640cc36e21e5a5f0cbc561c3c453c6a426cd0690"
-    sha256 cellar: :any,                 big_sur:       "87190071798f200822a37d47ce82747b47b512c41858a36058c7430be5937ad0"
-    sha256 cellar: :any,                 catalina:      "279d477fea9a61fcc5d61a1d35c6c3b541ceb9f78bafe4306ad36a4bb41e26f4"
-    sha256 cellar: :any,                 mojave:        "2e0856dd5923603cecd829b4a9f02a02b15a48f186873b09ae03b0272a4a8413"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a8417c81363d502e2de1655e67ca6239977d0d47405b5987817728a9b55e6b70"
+    sha256 cellar: :any,                 arm64_big_sur: "10f08b24fbf8446eabec027a28a2161284616fe3b175ec54044138b4fdebea4c"
+    sha256 cellar: :any,                 big_sur:       "7321072e3750241e728c82356af833c79c37733f310d868b9618952f57bd35c1"
+    sha256 cellar: :any,                 catalina:      "93a396beb7dffd8f0bf4571e703e5b1a2752801e905062cb5384ca1a5a360ca6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "76e6f92d861d557bc9f803739f4d96db4d8d2f9a4bad41b3d2efe1f895bf3bec"
   end
 
   depends_on "cmake" => :build
