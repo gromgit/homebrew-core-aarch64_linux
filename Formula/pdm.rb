@@ -10,6 +10,7 @@ class Pdm < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "35da3a059f3372cd6bb94db5279f32ccac4f7dd7b9d04c77c7e9140b49edf40b"
+    sha256 cellar: :any_skip_relocation, monterey:      "9d6265f954f2651ae22798d737e75a9cd441f58e7f60d8cb751c68d2fd0e652c"
     sha256 cellar: :any_skip_relocation, big_sur:       "885b3389c75720a66463e8885bb3f0fcb2c3afb261ec6c7e3a03888312803d0f"
     sha256 cellar: :any_skip_relocation, catalina:      "b8ef3b8bcb952530d70cd93b52b0e5afe220292a07f9d08bf207da6fb27af646"
     sha256 cellar: :any_skip_relocation, mojave:        "10c29403bfa7ed15876d634a6e28c85a0b503674bc2e01bbc34b815bb7b49b87"
