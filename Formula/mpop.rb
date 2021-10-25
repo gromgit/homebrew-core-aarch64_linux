@@ -11,11 +11,10 @@ class Mpop < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "2f8a61fece9387f48d48100bd845a5d663c250692a87ea06821d4b6f23f6e2e0"
-    sha256 big_sur:       "23ad8bc64b32e93f151df2005b1160fc46f6c039764e18c4a7a42ce4140c6350"
-    sha256 catalina:      "0555359b5c2935c7646ed26596e4b731b037fcbf49cd01f94d533d7701e39825"
-    sha256 mojave:        "ac8892c6d8ec4142a3bd053ec53b99d678a4069ee070f40a0232c36283641a10"
-    sha256 x86_64_linux:  "d10d8a7e75b2dfd1c05bad7e92a870b934129317fedc3c37ec3f3f195d38f876"
+    sha256 arm64_big_sur: "fb83315e0e06e5586ef99f2dcbabc7cf248744cd72c736615c08c6c93f5ac809"
+    sha256 big_sur:       "9b42850fdeb9d94c15228333ec8537b0f39ce90f5ad799729706113b97d59ee3"
+    sha256 catalina:      "16273c6c9296a2aeb6724a6c0c023c2c83ae8304f90c78cd8efbd9dacd3475c6"
+    sha256 x86_64_linux:  "a14a672f256617064258a4d0b1dbe96b30e39fb13aef5c1c6397873463766a26"
   end
 
   depends_on "pkg-config" => :build
