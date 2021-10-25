@@ -30,6 +30,13 @@ class Libsigrok < Formula
     regex(/^libsigrok-(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 arm64_big_sur: "a1632041336ea122f3b66426e1fb7ec38acb0f5fefa974afe11bce598fd5f271"
+    sha256 big_sur:       "85145a60cbb7282c1338d9214d91489ef58a409d6884ec9ed55e854634e2dde4"
+    sha256 catalina:      "690126f07d977fe9ae4beb754073405279f35fdcb874b4a10cf7c087a1e9ac01"
+    sha256 x86_64_linux:  "255ef573fec2d17e6a693711db00744e0a0440a060b1db430b00fa638b993bc5"
+  end
+
   head do
     url "git://sigrok.org/libsigrok", branch: "master"
 
