@@ -9,12 +9,13 @@ class Autopep8 < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b4682f9870206a1ba5b2e59d818c9334ae38806a7cf21595db82eb366e83b096"
-    sha256 cellar: :any_skip_relocation, monterey:      "f9cde313894b40e47ca85af6ae16424fa6e0c4877a1d603c6c93a3e14e3b02bb"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f9cde313894b40e47ca85af6ae16424fa6e0c4877a1d603c6c93a3e14e3b02bb"
-    sha256 cellar: :any_skip_relocation, catalina:      "f9cde313894b40e47ca85af6ae16424fa6e0c4877a1d603c6c93a3e14e3b02bb"
-    sha256 cellar: :any_skip_relocation, mojave:        "f9cde313894b40e47ca85af6ae16424fa6e0c4877a1d603c6c93a3e14e3b02bb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a60d671b1cb79995d36d3a84c380111d3b196763434aa2403c800492deae17a7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b4682f9870206a1ba5b2e59d818c9334ae38806a7cf21595db82eb366e83b096"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b4682f9870206a1ba5b2e59d818c9334ae38806a7cf21595db82eb366e83b096"
+    sha256 cellar: :any_skip_relocation, monterey:       "f9cde313894b40e47ca85af6ae16424fa6e0c4877a1d603c6c93a3e14e3b02bb"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f9cde313894b40e47ca85af6ae16424fa6e0c4877a1d603c6c93a3e14e3b02bb"
+    sha256 cellar: :any_skip_relocation, catalina:       "f9cde313894b40e47ca85af6ae16424fa6e0c4877a1d603c6c93a3e14e3b02bb"
+    sha256 cellar: :any_skip_relocation, mojave:         "f9cde313894b40e47ca85af6ae16424fa6e0c4877a1d603c6c93a3e14e3b02bb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a60d671b1cb79995d36d3a84c380111d3b196763434aa2403c800492deae17a7"
   end
 
   depends_on "python@3.10"
