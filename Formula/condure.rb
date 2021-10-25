@@ -6,10 +6,10 @@ class Condure < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "caa02bdd155bdde6f27e0369bd3cf124818d8fec50fbc2392e911876515cdb8e"
-    sha256 cellar: :any,                 big_sur:       "d72e9eedf54ecf7874001ad031ae1f154be3067de7a2ed952233052dce3e2da7"
-    sha256 cellar: :any,                 catalina:      "be6fccb13cf7f7d2c6d680ca7de45b02fcecf0e5d17d85640e993ca8a767b6f9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "50d39aa49a3dcb49f8504fd3b7ed880ef5517a7cb40325c0be1d59710f163e08"
+    sha256 cellar: :any,                 arm64_big_sur: "bdaac9f52ee87fe0efdb4829510ccf3a0c786cd33c289961e5b4b75f8b5f7400"
+    sha256 cellar: :any,                 big_sur:       "76081254666364aeb1cf4d360ba92bf33ebca8b9c2a3d34a1c3448a94efacf5c"
+    sha256 cellar: :any,                 catalina:      "04b81800979389b4e9bcda0cd0d68dbcb48c1e9f52640c243ca94309a36cf124"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1c2fd4b5ef3515f8411ff3211e8ffe4caf815b1384f87c66e27b265cbe7ba06b"
   end
 
   depends_on "pkg-config" => :build
