@@ -11,11 +11,10 @@ class Htslib < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "0f84a4bab64db1ae6333e415bbcba48ef8c659fd3e94182a4cfc4baf2e85d9e7"
-    sha256 cellar: :any,                 big_sur:       "1c18fea212fa8c79639aa73283277a9f38451d8c27b63942ae1d27082f86a712"
-    sha256 cellar: :any,                 catalina:      "f063c7ecbbace5ca9c5110ace1e45ad3629323108bfbd77b3d0cdfbeca7979c5"
-    sha256 cellar: :any,                 mojave:        "291e64099d31bffc8c3151e28702e611a5adf83d47aa123a53a4149a3374ad3a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "38e217917f15baa38f80d718e658b04786c648904a2293a19042489c630deb6a"
+    sha256 cellar: :any,                 arm64_big_sur: "01178faca1c4825644c4f45d719c547d97eea893ece6eaff9aba9ba3e06155c3"
+    sha256 cellar: :any,                 big_sur:       "cf7d3aa06fb89dca0f35f9184d2f431897fc290ed20b90c838cea235c4de814c"
+    sha256 cellar: :any,                 catalina:      "89e858252df0b8fec7e07dc82159bb4a9cb629ff54eb5848b319baef41197e26"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "90d770d787efcc137b83a491385683949861a0c5a9084e8eae66ff4ff47ce432"
   end
 
   depends_on "xz"
