@@ -14,11 +14,10 @@ class Ffmpeg < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "d603441a90e72b165e70ef1787b2045c6e969f077dcadd1529d04162fbd18ab3"
-    sha256 big_sur:       "9da28933b9f1abc3b1cf92382d1a8ea051c98f9dd0f4ef47e8d37d2aa9a4769a"
-    sha256 catalina:      "3fcc129951906c60f6e2130131fde64e449bc562a605f64be74fc950cac930ea"
-    sha256 mojave:        "8becf08fae7806a6365b489c3dcde8f6f0ddb49a64e96386c2c190a15604a486"
-    sha256 x86_64_linux:  "303961f673338cc304e8a13daa7899cb807b6433be9a7bf78ceaed3fd48d5822"
+    sha256 arm64_big_sur: "d355dd07295c6925c387f0c878c6c537e950c1136130064401096dfdfb48b381"
+    sha256 big_sur:       "d234cff0a046603bd092da8f30a19111b2521d011264db58cfaa98994c3a5e68"
+    sha256 catalina:      "662320b99949f9b9ad26505f781d0c8912c2d04dc2497660abf8749c4e832725"
+    sha256 x86_64_linux:  "f0d2a855043eb2dece2b2fe95ea239e48c1d38ae91958a6fdff82856cf4c6015"
   end
 
   depends_on "nasm" => :build
