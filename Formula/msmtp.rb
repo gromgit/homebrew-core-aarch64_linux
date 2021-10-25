@@ -11,11 +11,10 @@ class Msmtp < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "ab15c648729695ee988e5b1442c1ed8e4260cb8fe94c0eca7ad2e7c84ffbe651"
-    sha256 big_sur:       "bc3bbdeb0e3334f9a60a37a24ec28c22f33364a37b53e01ad0a0a625f3eccde5"
-    sha256 catalina:      "de21416d9080c652d1579c71309daa54b41f7ba93414399aeac8f0c83cce8637"
-    sha256 mojave:        "a9cafc6ae8a4e6c0fd8ebc7db4bb6e06f0d4a3a981daf37d1d3deae1c02105e5"
-    sha256 x86_64_linux:  "577cbcb8bf6a7ee660b0d33d3cc6a0aaa1a785478af46bf9d59d242bf3b41bbc"
+    sha256 arm64_big_sur: "b808aa8faa33fd35f611594e650a9b5ec993aeb579d1bae81dc1d72bca9ffff3"
+    sha256 big_sur:       "6ee5aa8e7d52373b8249f9d1e34203beead0cc86163d96dac1854bc6648945ec"
+    sha256 catalina:      "28a120b2fda2c50a4efe60367b5fdd9a4e936f46b1adffb422499c3e610d17ac"
+    sha256 x86_64_linux:  "8337630534e09069a6ca50f4006f564058424f37ea3a4e4977c2a7b61dad184c"
   end
 
   depends_on "pkg-config" => :build
