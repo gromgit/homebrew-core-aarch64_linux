@@ -9,10 +9,10 @@ class Molecule < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "9bb96b8b0697ae3d9cb55a8e5ff38137dd766503f4e3fba9a123332c993092c0"
-    sha256 cellar: :any,                 big_sur:       "5b371c97ed71bffb14f63a619a59cfabdc38de62e3b6f54ba525c8cb993f16b5"
-    sha256 cellar: :any,                 catalina:      "292eff4245ec1706feb9c9008279eab19789836ec86b6107deb60560994bf01e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "46f968c4f3697b6d21cd1411957394739e6b0647af50d4314b9450d5cc7fbdd2"
+    sha256 cellar: :any,                 arm64_big_sur: "fc17e8f9e9370738f4db07572bbb45f156fd18d567867d09414044c12941f73c"
+    sha256 cellar: :any,                 big_sur:       "c9bc121fb5a8455d0b6feed10296133eb124095e70b308e868d5fa53d3ab0ad2"
+    sha256 cellar: :any,                 catalina:      "c2032ce109e7887c94c5efaf9cc84bbbf6d382a43c14c3fdbef46fc9f203b7e4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fa707330580be4313826cd2a1862e58367fb1b49e4ac95ace33a8fcbb3bbf396"
   end
 
   depends_on "rust" => :build
