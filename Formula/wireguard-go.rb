@@ -12,11 +12,13 @@ class WireguardGo < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "cd13831d9e412f6d017dbea6e97b38fc969bd5291ff9c05c5c8f112a37542fc2"
-    sha256 cellar: :any_skip_relocation, big_sur:       "18fcc7e4677df06930a4ccad74386322b6067131f13a493478954da38a4e893c"
-    sha256 cellar: :any_skip_relocation, catalina:      "3a223d5f51f2cd4767526c5f7642d076b01b78468981b6fd996a36104ffc114b"
-    sha256 cellar: :any_skip_relocation, mojave:        "7d5b923175d036e008358de3f15cce66c5317d742cbe22df52bd6bad0f931f59"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5e7c52f5160ff952fc0e27b844ee783eec16ac7d196cb96a29f6900b49421c4d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "615e120fd7feb068f5b9a0e1a67e33ebf402a2b860e33e7cdcdf57a00bf9f0ad"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cd13831d9e412f6d017dbea6e97b38fc969bd5291ff9c05c5c8f112a37542fc2"
+    sha256 cellar: :any_skip_relocation, monterey:       "7e152bb6e2cdc60a5288d40c3baaee7535d784fe6cb47390cb294c126ceb65ad"
+    sha256 cellar: :any_skip_relocation, big_sur:        "18fcc7e4677df06930a4ccad74386322b6067131f13a493478954da38a4e893c"
+    sha256 cellar: :any_skip_relocation, catalina:       "3a223d5f51f2cd4767526c5f7642d076b01b78468981b6fd996a36104ffc114b"
+    sha256 cellar: :any_skip_relocation, mojave:         "7d5b923175d036e008358de3f15cce66c5317d742cbe22df52bd6bad0f931f59"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5e7c52f5160ff952fc0e27b844ee783eec16ac7d196cb96a29f6900b49421c4d"
   end
 
   depends_on "go" => :build
