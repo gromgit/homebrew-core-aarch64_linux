@@ -12,10 +12,9 @@ class S2n < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "69f5f20a7bba16dce6f4a318eef22e04b22966e110cf1953873e746658f7c34d"
-    sha256 cellar: :any, big_sur:       "54dcec4b3b4d3d789f672f776488d6268f20ba165e6a59b0a31cfabb41f1fac4"
-    sha256 cellar: :any, catalina:      "1995a66e8b86e2675cba1c8246e12c4398afcb825b052eb87716c3968e4ebaec"
-    sha256 cellar: :any, mojave:        "5ae985ceb23a932f4fbfcf9aa28ea2ce526c845891ce55a397749fdda73d6f74"
+    sha256 cellar: :any, arm64_big_sur: "353daa077f530a3e0036fc268dc2245bdc93b4ba0e4395f4402ea3c97cd6b188"
+    sha256 cellar: :any, big_sur:       "a02e04a29c405a4071cee02974d32fdae96d419bb1de222f2755169a01cbd4f9"
+    sha256 cellar: :any, catalina:      "76a348442bea725c1a98cac4586ed67fdbfdbe99ed17987a3de4703e66c50c1f"
   end
 
   depends_on "cmake" => :build
