@@ -9,11 +9,10 @@ class CyralGimmeDbToken < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "317198a01a7721ce0d5bd63ead093613cfc1b05ff2ad5e141b0b0a24a21d2132"
-    sha256 cellar: :any,                 big_sur:       "66300b8d807d3a4c836216d1215349cb4187121420da3424e46e72e6d07de51c"
-    sha256 cellar: :any,                 catalina:      "040741f88d93debbb6a7e05683f0708dca22a0c65f90b8df12340e6e953b0190"
-    sha256 cellar: :any,                 mojave:        "380042da028a7c2256439008db9b51918b9c379f48483130a1b56625d1c7d228"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "32bad1be3faf5ba5b444f78d2d484e6a33485fa1b5ddb0ca013d15a4e0292865"
+    sha256 cellar: :any,                 arm64_big_sur: "3c4602760103fdcf28cbd3f484a1aabac4b9c8a954d3d938457d82b8bc066cc7"
+    sha256 cellar: :any,                 big_sur:       "670f0c77da6039eb0ee2be92aaf00acce7e82617ebb8fb85f97f367b4b17cc2e"
+    sha256 cellar: :any,                 catalina:      "935af5a4bd0e2092e58303bcf496f65310d488dedb7ac595a4b84e7ae7154da1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7c7b93c88d9b3fd60f18f6cc949e1fddca86b04d133c1bfb31ec69d815f74914"
   end
 
   depends_on "rust" => :build # for cryptography
