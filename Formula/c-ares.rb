@@ -2,11 +2,11 @@ class CAres < Formula
   desc "Asynchronous DNS library"
   homepage "https://c-ares.org/"
   # Check whether patch for `node.rb` can be removed at version bump
-  url "https://c-ares.org/download/c-ares-1.17.2.tar.gz"
-  mirror "https://github.com/c-ares/c-ares/releases/download/cares-1_17_2/c-ares-1.17.2.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/dns/c-ares-1.17.2.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/dns/legacy/c-ares-1.17.2.tar.gz"
-  sha256 "4803c844ce20ce510ef0eb83f8ea41fa24ecaae9d280c468c582d2bb25b3913d"
+  url "https://c-ares.org/download/c-ares-1.18.0.tar.gz"
+  mirror "https://github.com/c-ares/c-ares/releases/download/cares-1_17_2/c-ares-1.18.0.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/dns/c-ares-1.18.0.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/dns/legacy/c-ares-1.18.0.tar.gz"
+  sha256 "71c19708ed52a60ec6f14a4a48527187619d136e6199683e77832c394b0b0af8"
   license "MIT"
   head "https://github.com/c-ares/c-ares.git", branch: "main"
 
