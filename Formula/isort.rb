@@ -15,6 +15,7 @@ class Isort < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "36eca38b43c2fe314d024a1995d0953cf155862dbc7f00f6d0a34edb742ea513"
+    sha256 cellar: :any_skip_relocation, monterey:      "def6ef28d9b0677a6532156a274d4812e36a39e99ac27f23173761269eb05044"
     sha256 cellar: :any_skip_relocation, big_sur:       "50b4352cc80c9b4064b43889478d62d928fbe4b1046682a75425101008388a07"
     sha256 cellar: :any_skip_relocation, catalina:      "d3b566b024853af9f4b15f21a67e24bfe388d3091d083070e3a0a751d304c97b"
     sha256 cellar: :any_skip_relocation, mojave:        "04253871a201d55662ac4467f41c10154801199b8d751fee858f752681f3335e"
