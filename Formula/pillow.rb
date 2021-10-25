@@ -9,6 +9,7 @@ class Pillow < Formula
   bottle do
     sha256 cellar: :any, arm64_monterey: "5b957e5afdd859268f4451665d142f7b8a1ed9186f6b36f22fe901891affa2dd"
     sha256 cellar: :any, arm64_big_sur:  "b3ef0a8ef99c29d197ff4735a75d5dfcd7dba93d85f6957367da187b65fb5a3d"
+    sha256 cellar: :any, monterey:       "b5ca0c6fb4391f2d9e5e9f5d6984b034b0ccf0051225524ccf029c0ad5cd44e2"
     sha256 cellar: :any, big_sur:        "59e29e62a00a1a7c743af405f5ca86919d4a72c266f03498a035e025a6a9e70c"
     sha256 cellar: :any, catalina:       "7d202a4c71e5c3ecd5508e34a89082496441dcf4cbabd47174edaf1c6fb06dd8"
     sha256 cellar: :any, mojave:         "7d9654f09ff31d8caf4363b25a11da203cd3c2725014fdbb8df6e1a7a9a91399"
