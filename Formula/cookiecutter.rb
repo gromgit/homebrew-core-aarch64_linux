@@ -11,6 +11,7 @@ class Cookiecutter < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "c47bd026d10ec8f3c6267c689189abec6cdf90feb8879ddc498207d282219000"
+    sha256 cellar: :any_skip_relocation, monterey:      "c48e22fb646e36938d0d5f7fe2679e9dde7a8edb8e92537f839e49c21e4f9bee"
     sha256 cellar: :any_skip_relocation, big_sur:       "9db1b7554b40b410f51c337f60f6584cfe63f9d13764d6190976a7f83446aea9"
     sha256 cellar: :any_skip_relocation, catalina:      "ccaafe5436a8eb27c99c924b676de2601ca87413f9c980b6697e6144e32e5392"
     sha256 cellar: :any_skip_relocation, mojave:        "ffbc7736257952c954b380cc13a56c746cacb3991778d2a424eb0ab39129dc3f"
