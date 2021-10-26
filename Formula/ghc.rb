@@ -16,10 +16,12 @@ class Ghc < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "7ddd8e8dabdb5654f167aa079ef9a1290e20aa151ce3580eed24042d95d47b57"
-    sha256                               big_sur:       "68f447996de80ef0aa655b9b0f5cc048503a09366b17edf77b101f9c1a38fe0b"
-    sha256                               catalina:      "14f6f4c4faa2ef0e4de7b225346c3b084de3356f069ac77eed05768046c70e28"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bea0a8011b453e37e99855a6640642303d60c6611db366cb5f2d02a7546da19b"
+    sha256 cellar: :any,                 arm64_monterey: "41e846a0479f930390ae2c65cf7ae0f3ea3755ff26df56822fb999722fb4932e"
+    sha256 cellar: :any,                 arm64_big_sur:  "7ddd8e8dabdb5654f167aa079ef9a1290e20aa151ce3580eed24042d95d47b57"
+    sha256                               monterey:       "c50034c3553a0f6099e2dfc3c7c33ca148256fedc8bc9be492cc942284bb473e"
+    sha256                               big_sur:        "68f447996de80ef0aa655b9b0f5cc048503a09366b17edf77b101f9c1a38fe0b"
+    sha256                               catalina:       "14f6f4c4faa2ef0e4de7b225346c3b084de3356f069ac77eed05768046c70e28"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bea0a8011b453e37e99855a6640642303d60c6611db366cb5f2d02a7546da19b"
   end
 
   depends_on "python@3.9" => :build
