@@ -13,11 +13,13 @@ class VapoursynthOcr < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "abef84d6213651b91d9e60d32ae065b3227de72a2371f97266825b81f50d7148"
-    sha256 cellar: :any, big_sur:       "d31d4f0eb749e5797e856de45e1c1f3e862abe31e897696887e20123330a29ae"
-    sha256 cellar: :any, catalina:      "6c7e3eb62e6cf0a5140b158fce51c5fca682e04b7b1074fd6425c9b0bf8ef40b"
-    sha256 cellar: :any, mojave:        "916f671b1aabc46a37c7197f061bf73c0360a8d3e22a72cce74009802b341351"
-    sha256               x86_64_linux:  "f1f688bb5c6cadf726d4df511ce40d58453839d74185f29a219e7e681b2abb9c"
+    sha256 cellar: :any, arm64_monterey: "a7a6a9f8639cb97e67fb5e6bdd7d8571303adf861e9c509078844594db1b036c"
+    sha256 cellar: :any, arm64_big_sur:  "abef84d6213651b91d9e60d32ae065b3227de72a2371f97266825b81f50d7148"
+    sha256 cellar: :any, monterey:       "1a6aac2710a3c004da08525b72426c1fb0512c302fca6ba488451687bcf34622"
+    sha256 cellar: :any, big_sur:        "d31d4f0eb749e5797e856de45e1c1f3e862abe31e897696887e20123330a29ae"
+    sha256 cellar: :any, catalina:       "6c7e3eb62e6cf0a5140b158fce51c5fca682e04b7b1074fd6425c9b0bf8ef40b"
+    sha256 cellar: :any, mojave:         "916f671b1aabc46a37c7197f061bf73c0360a8d3e22a72cce74009802b341351"
+    sha256               x86_64_linux:   "f1f688bb5c6cadf726d4df511ce40d58453839d74185f29a219e7e681b2abb9c"
   end
 
   depends_on "meson" => :build
