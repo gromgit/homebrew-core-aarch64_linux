@@ -15,10 +15,12 @@ class UtilLinux < Formula
   revision 1
 
   bottle do
-    sha256 arm64_big_sur: "e190bf958aa8232a6a344f75c726457eaf7885144dd650e071b80d480dcdb2d2"
-    sha256 big_sur:       "78816a7ee9d0a448fb83803f95a9e495f2c99d29a697a3419043666fa6d27bce"
-    sha256 catalina:      "82f2fb926262ca95243325d61e53bcd06d6751f9606f5737cb6d7c45d6db77a5"
-    sha256 x86_64_linux:  "6428a98784f5d7b36144907dd4e4a5b767be347fa43533f2af196846e3c08cd3"
+    sha256 arm64_monterey: "d70957ab44697dfc2e2c734b9c3f33ae71d656a04c0489d4c56e8f4f34b3f675"
+    sha256 arm64_big_sur:  "e190bf958aa8232a6a344f75c726457eaf7885144dd650e071b80d480dcdb2d2"
+    sha256 monterey:       "053af101a65713dcd7f7419ac06283bd605e4a2464048f8cc60844d5169a92d7"
+    sha256 big_sur:        "78816a7ee9d0a448fb83803f95a9e495f2c99d29a697a3419043666fa6d27bce"
+    sha256 catalina:       "82f2fb926262ca95243325d61e53bcd06d6751f9606f5737cb6d7c45d6db77a5"
+    sha256 x86_64_linux:   "6428a98784f5d7b36144907dd4e4a5b767be347fa43533f2af196846e3c08cd3"
   end
 
   keg_only :shadowed_by_macos, "macOS provides the uuid.h header"
