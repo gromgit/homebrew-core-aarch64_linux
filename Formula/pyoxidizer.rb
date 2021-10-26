@@ -12,10 +12,10 @@ class Pyoxidizer < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b43bf79a894e38941f7736be15b88a0bd9def143b3e8ae6a82eeb73f0bb7c9b4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a3119a31eb9aaa47247c3838fc5a87917a30eb39b7244027a986951798ffeaeb"
-    sha256 cellar: :any_skip_relocation, catalina:      "6e18726f0d0defa36648e0682695ff6a40a29c7db7974ab0552c8a7ae7bb0a45"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b86c3cfd894bd1687025d2883d516a37f9bbf125c83063cc524c8661f47ccd45"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "98d982131e452efd1d96c2bd6cdcad0304149974a5ef1a6b6ad0aec4df82f7c1"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ba803d295549da039b58e60d507d81529ea965f54240189a669b2d9b4167747f"
+    sha256 cellar: :any_skip_relocation, catalina:      "0e3427609806a42d059c126b63db0d4ef81ed4cd0f89c94f506b12de62bfd923"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8a282e83f9099a362633df3ba787b9986ab83c249ae7f3e929f025e3fc75d19e"
   end
 
   depends_on "rust" => :build
