@@ -9,11 +9,13 @@ class LizardAnalyzer < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8519ce83f386caab0ffda28fa138646b490c914eca8a03ffd32af55f461f5acc"
-    sha256 cellar: :any_skip_relocation, big_sur:       "46dbc9104c475ec2fc78e92e18c7198b30b76b10a670c586b060d02de5a334f5"
-    sha256 cellar: :any_skip_relocation, catalina:      "46dbc9104c475ec2fc78e92e18c7198b30b76b10a670c586b060d02de5a334f5"
-    sha256 cellar: :any_skip_relocation, mojave:        "46dbc9104c475ec2fc78e92e18c7198b30b76b10a670c586b060d02de5a334f5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9f04c3501b9bf82469b4581a9ad11b9d6f1995e72e0034486fe6918251977299"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8519ce83f386caab0ffda28fa138646b490c914eca8a03ffd32af55f461f5acc"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8519ce83f386caab0ffda28fa138646b490c914eca8a03ffd32af55f461f5acc"
+    sha256 cellar: :any_skip_relocation, monterey:       "46dbc9104c475ec2fc78e92e18c7198b30b76b10a670c586b060d02de5a334f5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "46dbc9104c475ec2fc78e92e18c7198b30b76b10a670c586b060d02de5a334f5"
+    sha256 cellar: :any_skip_relocation, catalina:       "46dbc9104c475ec2fc78e92e18c7198b30b76b10a670c586b060d02de5a334f5"
+    sha256 cellar: :any_skip_relocation, mojave:         "46dbc9104c475ec2fc78e92e18c7198b30b76b10a670c586b060d02de5a334f5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9f04c3501b9bf82469b4581a9ad11b9d6f1995e72e0034486fe6918251977299"
   end
 
   depends_on "python@3.10"
