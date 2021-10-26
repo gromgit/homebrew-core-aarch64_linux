@@ -12,7 +12,14 @@ class Pprint < Formula
     sha256 cellar: :any_skip_relocation, high_sierra: "8d6d70f63ecea106323bdd852c1c896f32bf9895c3164680b594c0f8a30c1561"
   end
 
+  depends_on "catch2" => :test
   depends_on macos: :high_sierra # needs C++17
+
+  on_linux do
+    depends_on "gcc"
+  end
+
+  fails_with gcc: "5"
 
   def install
     include.install "include/pprint.hpp"
@@ -22,7 +29,10 @@ class Pprint < Formula
   test do
     cp_r pkgshare/"test", testpath
     cd "test" do
-      system ENV.cxx, "--std=c++17", "-I#{testpath}/test", "main.cpp", "-o", "tests"
+      rm "catch.hpp" # The bundled Catch2 is too old to work on Apple Silicon
+      system ENV.cxx, "main.cpp", "--std=c++17",
+             "-I#{testpath}/test", "-I#{Formula["catch2"].opt_include}/catch2",
+             "-o", "tests"
       system "./tests"
     end
   end
