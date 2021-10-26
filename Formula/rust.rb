@@ -18,6 +18,7 @@ class Rust < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "40e175d1bf768e358aa3b8336fef271c9a64f5c2078584a2dbdfa21a3b0fc3e5"
     sha256 cellar: :any,                 arm64_big_sur:  "5fbc40e3c283504097bccdb42d8f415ebab75e0382c29918ffc3759ffb38862a"
+    sha256 cellar: :any,                 monterey:       "85e557ed9bb6c6abb6911f5f94e20798578a8a02fc1d78f613d7e31348cd43a4"
     sha256 cellar: :any,                 big_sur:        "40a3705fcbacfd5260d0cda543008ba7c2ec291ea61d74bb1a3643e8baaff02f"
     sha256 cellar: :any,                 catalina:       "cc59d78cc7392a75c8cd81388c68bb26fe7a178660b7632194765402670769a4"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "fbdb014a75b4be922a9f5b51e387e5f8a0800533f7c72be6db7c2bc6c0a87765"
