@@ -10,10 +10,12 @@ class AwsGoogleAuth < Formula
   head "https://github.com/cevoaustralia/aws-google-auth.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "628009536555d056af3826e065c8047e1bc302f22c7450ba4fd70bec73050412"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b74276c314d890907b505220f458e4a63de0000326976bcdf0d16ffebb9adae8"
-    sha256 cellar: :any_skip_relocation, catalina:      "f4894c241f651b541171f743fa255946e9134c139de37fd4b732ef56c87a0db6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0af5bbd9774b7548ae82c17d9865f4955d050d7cba56efc6c907500215735598"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "321c82a61fd5bc13bb146381deb4e36f14c4f89c174080978e33b515e6c18891"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "628009536555d056af3826e065c8047e1bc302f22c7450ba4fd70bec73050412"
+    sha256 cellar: :any_skip_relocation, monterey:       "cce4d8d9c5189d80c9c3ca6e4da31eaaae9c3a37089f953fe69c65ea600aef7d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b74276c314d890907b505220f458e4a63de0000326976bcdf0d16ffebb9adae8"
+    sha256 cellar: :any_skip_relocation, catalina:       "f4894c241f651b541171f743fa255946e9134c139de37fd4b732ef56c87a0db6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0af5bbd9774b7548ae82c17d9865f4955d050d7cba56efc6c907500215735598"
   end
 
   depends_on "rust" => :build
