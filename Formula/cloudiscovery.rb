@@ -8,10 +8,12 @@ class Cloudiscovery < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8f0e54433a4e9189761a6b5612ec77eb3f3f09191f94f81cf9661795ad6eb2ef"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c2c1720f3e99c148e387b91114faf4e4dacca3598356a7483ece939228e04dfb"
-    sha256 cellar: :any_skip_relocation, catalina:      "ef172c7675f1107f12560728cae72fca39f1913f5f8628681dc693a1fa333dd2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "07856bd03ec586bdaef2d56cbbda9a34819a349857d219978074daa1979d18f1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "87f23d3b535a5f2905bd8a2d04d03ea8a1354cf46a9bad2f960d3870cf5d730e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8f0e54433a4e9189761a6b5612ec77eb3f3f09191f94f81cf9661795ad6eb2ef"
+    sha256 cellar: :any_skip_relocation, monterey:       "41635d2c7251cf9a027158e64cf845c089a4ac4d1907121d88e8d0db9deac497"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c2c1720f3e99c148e387b91114faf4e4dacca3598356a7483ece939228e04dfb"
+    sha256 cellar: :any_skip_relocation, catalina:       "ef172c7675f1107f12560728cae72fca39f1913f5f8628681dc693a1fa333dd2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "07856bd03ec586bdaef2d56cbbda9a34819a349857d219978074daa1979d18f1"
   end
 
   depends_on "python@3.10"
