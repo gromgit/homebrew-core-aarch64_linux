@@ -9,10 +9,10 @@ class OrganizeTool < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6cae35f5e1884155d0f6ce48b61fb38f466384cf3cb4917c64c0cb65ca1e1695"
-    sha256 cellar: :any_skip_relocation, big_sur:       "ef904cf93ae0dec9f9a11abf9ab2c10154a960a1d8b2cf450d4e00cad8cc8d12"
-    sha256 cellar: :any_skip_relocation, catalina:      "62d3c7c39dc79a1f75d102b7ac65b7cc126fba6faee9490b994640550539167e"
-    sha256 cellar: :any_skip_relocation, mojave:        "bd2d8cb5ecc574f5825342ab778e51b900e13c2b135fe6945d4ac2fa9ee75331"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "02df5246721e303c08490c507c3fcaaba25655ad3787a0293da17b55c6817bb5"
+    sha256 cellar: :any_skip_relocation, big_sur:       "55b0fe21c780ca95bc9e520c2fecaca1817b6602b9fa8549f73e2dac4c011f22"
+    sha256 cellar: :any_skip_relocation, catalina:      "07640c3c2472e15018d8f115772ba68b094e302df023456eb630053238a408af"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "95cbdbed7e5ecfed2e979d4cdf556708b94f576795de502ef89762e3e7103955"
   end
 
   depends_on "freetype"
