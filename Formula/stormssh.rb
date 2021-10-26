@@ -10,10 +10,10 @@ class Stormssh < Formula
   head "https://github.com/emre/storm.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "e3bdeb0bd64c156b74539f8e96eb78a816a6141ec596b2c70714c7f5fd3bd0d4"
-    sha256 cellar: :any, big_sur:       "7030a4fbf837940f834b1625c720f8c8463e0235a2dd74364ac06cc2f03bcf5b"
-    sha256 cellar: :any, catalina:      "15f9c6a49def21ead9541b1358f6ce7714f9a773558b77e9f3a18eb1bcd02ff6"
-    sha256               x86_64_linux:  "c08aeead19d56e41efd0969aecf0b0a67835639f188d84e8694c1b343d89f40f"
+    sha256 cellar: :any,                 arm64_big_sur: "c9cc953d93d1534a753f07f088194514d75fc220f3ad34fc6a0e6324be1604ad"
+    sha256 cellar: :any,                 big_sur:       "ad691ed14359decd9760497aed20b6b0f6d4e54c978e3c191a52b59a8331bf32"
+    sha256 cellar: :any,                 catalina:      "d32420400831851cfc19a8512008eec8cf9d69f60b028a46455394408be367c5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4c0a72be0bad9b3a4a023974ca99c0dea3579d3ba9d00a4c9d0d97201eed75f3"
   end
 
   depends_on "rust" => :build
