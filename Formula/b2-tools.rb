@@ -9,11 +9,10 @@ class B2Tools < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "29ebb7627d56b1e368f39f1996136a344a1390e03ee7f259a809374ca75e823e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c8a0512ecac3fb5ba59f29d7cfa1b73dbb099353b505a708fa9ac824888f1f4f"
-    sha256 cellar: :any_skip_relocation, catalina:      "2cb408b13597fd2df011e69518020539363733031b6195ea44fdbfa4530d5927"
-    sha256 cellar: :any_skip_relocation, mojave:        "ff77471b683a7ba34d6e1e044cf4a50bdc0e882a872fa74e52ba03ac51820ca4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f59c61c7e3d4dec4af4e644bc80ae4e6f78dfa7aa2d570130e93c72db873cbbf"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "cca1acc9c421e3d7d817ccd3b53459f1e9b6acda916ccced3082f987d6c16ee2"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d5a213191db31bad52fa83f5be4f162e3ec18836b84c5e7d15f063ec8ba4fe8b"
+    sha256 cellar: :any_skip_relocation, catalina:      "4e32873810cea585211e0ff0d73f44a5bb8a54b0a7cd91762581d7539541bc93"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a5fc6d1a065fed82c2697a1119add2f38f81e79f304977543c52978f74341ca9"
   end
 
   depends_on "python@3.10"
