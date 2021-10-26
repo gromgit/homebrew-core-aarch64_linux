@@ -8,11 +8,8 @@ class Geogram < Formula
   license all_of: ["BSD-3-Clause", :public_domain, "LGPL-3.0-or-later", "MIT"]
 
   bottle do
-    rebuild 1
-    sha256 big_sur:     "16a2b60356439f3a481677989c256085696690a1599636859bc18a31723e075d"
-    sha256 catalina:    "4345844b616fb74fbb2124a0c7bdaeb222c62704908b358427bce7122cb9404d"
-    sha256 mojave:      "f263799496ffc570463ce635eedd9287f81502b06f72142a7829c0b857185079"
-    sha256 high_sierra: "f0eedab23f61affd89684a7e1492cfc2cc8deffa4ca7ebc8459a5768a05876f3"
+    sha256 cellar: :any, big_sur:  "c31325cc34b205bb39bce490babfd8948dfbea2e5ce3a2c8ee402c8efe50b106"
+    sha256 cellar: :any, catalina: "8766335d1707cf361a1093845f1b35ea15063b06d5bd96bb4f175d7260ff2a2b"
   end
 
   depends_on "cmake" => :build
