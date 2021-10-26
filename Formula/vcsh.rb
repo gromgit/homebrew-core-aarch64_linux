@@ -6,8 +6,10 @@ class Vcsh < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "40f77813b0e23090862c769daaa02a99ddc179ca1dae0e9834827dc02e16ce5b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "59ec05943f6a50ad14e14434e3bb3b19db2e8cd80915c71b2fb3a88d901231ab"
+    sha256 cellar: :any_skip_relocation, big_sur:       "59ec05943f6a50ad14e14434e3bb3b19db2e8cd80915c71b2fb3a88d901231ab"
+    sha256 cellar: :any_skip_relocation, catalina:      "59ec05943f6a50ad14e14434e3bb3b19db2e8cd80915c71b2fb3a88d901231ab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cd41f09582b942c17a326d1a81fc638f72119e77bf33140dc9544cb6106c7877"
   end
 
   # Fix build failure with BSD `install`. Reported upstream at
