@@ -10,11 +10,13 @@ class Awsume < Formula
   head "https://github.com/trek10inc/awsume.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "210b9496cf1db0eb9aee0d7635ea84f68595148a3debf35bda8c7ca53c0f2809"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5eb13db692e829105df6d6a3eed791e592161e888b8e0c03fd58e994db59f78a"
-    sha256 cellar: :any_skip_relocation, catalina:      "f80c5c9be67fe1e07c3402f29c1ca9abe25c52a4d7224327300f59b299e87dcf"
-    sha256 cellar: :any_skip_relocation, mojave:        "9dbe4b489474f9f08896f373c64e5ce1629395aa359715b382a1d376604d6888"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "80d000d19330123c831170857288a486d1687befcb0016b8d2dda72a35288997"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a204015b6e5ae6bc3e41b266a0115d2fe90babcac7e3278fb52c69b13509201d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "210b9496cf1db0eb9aee0d7635ea84f68595148a3debf35bda8c7ca53c0f2809"
+    sha256 cellar: :any_skip_relocation, monterey:       "ceaf3add5b3ff118eccd6b923342e91b113aa9aa89e1bc3c46c33017561a1268"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5eb13db692e829105df6d6a3eed791e592161e888b8e0c03fd58e994db59f78a"
+    sha256 cellar: :any_skip_relocation, catalina:       "f80c5c9be67fe1e07c3402f29c1ca9abe25c52a4d7224327300f59b299e87dcf"
+    sha256 cellar: :any_skip_relocation, mojave:         "9dbe4b489474f9f08896f373c64e5ce1629395aa359715b382a1d376604d6888"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "80d000d19330123c831170857288a486d1687befcb0016b8d2dda72a35288997"
   end
 
   depends_on "openssl@1.1"
