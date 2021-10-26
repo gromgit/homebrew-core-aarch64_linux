@@ -9,10 +9,12 @@ class AnsibleLint < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "6286c5ad0061c9ec9fcdbd14737850a397cd791139751a456932635626301d7e"
-    sha256 cellar: :any,                 big_sur:       "adbff4e4a4809b69aed0161adc7f4fe3ecb99cd0df031ca1d2321b22d1a81f6a"
-    sha256 cellar: :any,                 catalina:      "2afeb4e9ce0cca2b22ab92498fbbad094ee340726680f02872d43791c6ccd852"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b0375c54a57092cf407a98d99c5013e0e765b0c66e4326697966882feca41abf"
+    sha256 cellar: :any,                 arm64_monterey: "488ebdbd306e0f4801f23e83f473248e66ecd441f5b54855c0f99a6459496321"
+    sha256 cellar: :any,                 arm64_big_sur:  "6286c5ad0061c9ec9fcdbd14737850a397cd791139751a456932635626301d7e"
+    sha256 cellar: :any,                 monterey:       "8974f792ff05ef3cef89846e03be87eacb9f8daba62d64e9426c7cf48fd10739"
+    sha256 cellar: :any,                 big_sur:        "adbff4e4a4809b69aed0161adc7f4fe3ecb99cd0df031ca1d2321b22d1a81f6a"
+    sha256 cellar: :any,                 catalina:       "2afeb4e9ce0cca2b22ab92498fbbad094ee340726680f02872d43791c6ccd852"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b0375c54a57092cf407a98d99c5013e0e765b0c66e4326697966882feca41abf"
   end
 
   depends_on "pkg-config" => :build
