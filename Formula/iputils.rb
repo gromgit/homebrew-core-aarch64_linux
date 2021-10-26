@@ -6,6 +6,10 @@ class Iputils < Formula
   license all_of: ["GPL-2.0-or-later", "BSD-3-Clause"]
   head "https://github.com/iputils/iputils.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "19797621e4a456d613be44ea617efc4ed12209525136131b2c640ff82367e403"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "libxslt"
