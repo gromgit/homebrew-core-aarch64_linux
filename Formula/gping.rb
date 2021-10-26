@@ -16,10 +16,12 @@ class Gping < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b7e1e08ebe385455747070b11e9f73c2cf3cbe3ce96860443ba7a709d125ed31"
-    sha256 cellar: :any_skip_relocation, big_sur:       "232fc5425ac0ea4de4860786ffb795a9cc6e1f1e4fe4ce00edbc65c45657164b"
-    sha256 cellar: :any_skip_relocation, catalina:      "0d555937efeae1474a1a187ddeb0db14ba078dd012b4918d262d2e3f569369f9"
-    sha256 cellar: :any_skip_relocation, mojave:        "ce0e519142ae3da1d3d4c9eecce6971bd6fd582c77c0eb8858dc49413d352395"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9a9b6784037c831bb6274931d1bada920ef5d763dcb7b0160aa267ce1c520725"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b7e1e08ebe385455747070b11e9f73c2cf3cbe3ce96860443ba7a709d125ed31"
+    sha256 cellar: :any_skip_relocation, monterey:       "bd5c500528152cf1d4f3bcd5a67d9c7331bfc66058d3052a124b3c30c9e79e6a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "232fc5425ac0ea4de4860786ffb795a9cc6e1f1e4fe4ce00edbc65c45657164b"
+    sha256 cellar: :any_skip_relocation, catalina:       "0d555937efeae1474a1a187ddeb0db14ba078dd012b4918d262d2e3f569369f9"
+    sha256 cellar: :any_skip_relocation, mojave:         "ce0e519142ae3da1d3d4c9eecce6971bd6fd582c77c0eb8858dc49413d352395"
   end
 
   depends_on "rust" => :build
