@@ -7,11 +7,10 @@ class Botan < Formula
   head "https://github.com/randombit/botan.git", branch: "master"
 
   bottle do
-    sha256 arm64_big_sur: "7cf8ee231da3bf5e0714fece84c806b9f1818084b045e5b7b4a28de522cf19eb"
-    sha256 big_sur:       "e96dece29ae8738b7e97252acccad52006c0fc14bd59da5f72f8bfc09849a8f6"
-    sha256 catalina:      "7c9aae0f752f8827c9d68ef503be55164efee19a101f0bd8e2000bee28859863"
-    sha256 mojave:        "f5fcd260558eb589c046e43366e1dd243465c12cc40f09048668f44f937f37d6"
-    sha256 x86_64_linux:  "7c1c471ea99435496326959270c2e25ca6b7058eef776a7f690a87062687536f"
+    sha256 arm64_big_sur: "75e3663e0e99d0ef40a8a62d5f19b738b20f6024845b9f29fc355851a1f382a9"
+    sha256 big_sur:       "53c1d23a7a5bcfda1378d970e6e3140a6f8721c84b92f87c417e01f3fb225124"
+    sha256 catalina:      "f934561950c879723f6fde7fb0a6973c7777c869b1dd54012674c99baf8b9584"
+    sha256 x86_64_linux:  "941492434980b6730375a8b6e5dec25a4781243740d3d532644a521a89a7ab31"
   end
 
   depends_on "pkg-config" => :build
