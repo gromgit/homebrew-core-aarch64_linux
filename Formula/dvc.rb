@@ -6,6 +6,7 @@ class Dvc < Formula
   url "https://files.pythonhosted.org/packages/50/f1/fc4f80b92948f4ec3418c2621fb19609f668b19ed65ebbdc68eadb266ce1/dvc-2.8.2.tar.gz"
   sha256 "4577aa37f2befbeca93e87f6e570a16156ff24101ed1eb95fc5d0606ea114f46"
   license "Apache-2.0"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "99e26dc323c84c81c386b5dfca8aec458756394f98a858fd6d27bab33e540b1a"
@@ -308,6 +309,11 @@ class Dvc < Formula
   resource "googleapis-common-protos" do
     url "https://files.pythonhosted.org/packages/1f/4a/369a8b1cf12089c1a902101b0431729e02cd2dd4e390377c920aa1d3ccab/googleapis-common-protos-1.53.0.tar.gz"
     sha256 "a88ee8903aa0a81f6c3cec2d5cf62d3c8aa67c06439b0496b49048fb1854ebf4"
+  end
+
+  resource "grandalf" do
+    url "https://files.pythonhosted.org/packages/a2/3f/df0618a962a1744e932f2a4547cb786f5a93df7e2476c99e7f7dbd68039f/grandalf-0.6.tar.gz"
+    sha256 "7471db231bd7338bc0035b16edf0dc0c900c82d23060f4b4d0c4304caedda6e4"
   end
 
   resource "h11" do
