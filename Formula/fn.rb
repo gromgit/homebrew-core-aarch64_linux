@@ -7,10 +7,12 @@ class Fn < Formula
   head "https://github.com/fnproject/cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "85d676b361a17ee6208184d8a4ec0305497f118f85a84ee7c682d23d58baa740"
-    sha256 cellar: :any_skip_relocation, big_sur:       "cd951aac2ea949487262df0ed02c76509a6c845fdc154ac11abf169a8c22d080"
-    sha256 cellar: :any_skip_relocation, catalina:      "c2b5b4aa1a0a4bde889dc666d8b11c1a4835834de0e90a9622708ad283f04b67"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "453835cb778d2604c4dab50c6a99f8a1a3578dfd26d510d619902ba45460e660"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "31137e821a4d8a2547cdb83089834252ce72c02ca48502b02fc0793e4bfad455"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "85d676b361a17ee6208184d8a4ec0305497f118f85a84ee7c682d23d58baa740"
+    sha256 cellar: :any_skip_relocation, monterey:       "c4c87002dd9354584de4cea3cd6a27abc4d5357389b701ad66373f83342f0eb1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "cd951aac2ea949487262df0ed02c76509a6c845fdc154ac11abf169a8c22d080"
+    sha256 cellar: :any_skip_relocation, catalina:       "c2b5b4aa1a0a4bde889dc666d8b11c1a4835834de0e90a9622708ad283f04b67"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "453835cb778d2604c4dab50c6a99f8a1a3578dfd26d510d619902ba45460e660"
   end
 
   depends_on "go" => :build
