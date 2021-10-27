@@ -8,10 +8,12 @@ class HopenpgpTools < Formula
 
   bottle do
     rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "28a2c5d4842abe810b28d5e6f4433e8b23308b68ca6c19c8b097fb27c58b5f88"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e8ca61264f0399f95be40c4583b36604b4c64c9cf6ba761d209e4e722d4178e1"
-    sha256 cellar: :any_skip_relocation, catalina:      "6b44cea08ca2095f1dd4a997ff852f862a58c0a18f56e74509061cb173405e5c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3fac0a93a10aa5a26607c224db66c19ab6809776791200d14fb254991af88864"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4fc50e0b7b9c1d941d0b36dae6b6bb975d1635f801cdaa703c1ad8a70108c46a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "28a2c5d4842abe810b28d5e6f4433e8b23308b68ca6c19c8b097fb27c58b5f88"
+    sha256 cellar: :any_skip_relocation, monterey:       "3dda67da3f76b1739fee9f78a1d74702cb693482a4637f53efbbcf277c635351"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e8ca61264f0399f95be40c4583b36604b4c64c9cf6ba761d209e4e722d4178e1"
+    sha256 cellar: :any_skip_relocation, catalina:       "6b44cea08ca2095f1dd4a997ff852f862a58c0a18f56e74509061cb173405e5c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3fac0a93a10aa5a26607c224db66c19ab6809776791200d14fb254991af88864"
   end
 
   depends_on "cabal-install" => :build
