@@ -6,11 +6,13 @@ class Benthos < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "258fa1f0fe1dd1ccfb868076ebdd8e54388dd0769cd8aff738362c4cd629cbaa"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3825412846e2aa3846588e8008e9bab2ad375b4338ff19e9752a9789cae34307"
-    sha256 cellar: :any_skip_relocation, catalina:      "91365a38238a6a87c8a8048ea49f0bbe72fcebbd82db915525928d1460abc6d9"
-    sha256 cellar: :any_skip_relocation, mojave:        "2392b1b5a94e215b568919ad54345fb7f0362ee3f791d20775d7b679a35b96d8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "368a20a3e847c18ddb9581533dd3989c89950fbdf01931265f80f82feebba646"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "13091f4eb875655f22dfff295ea58c8ae46f8f60096ac12322a8b1cca5fb3913"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "258fa1f0fe1dd1ccfb868076ebdd8e54388dd0769cd8aff738362c4cd629cbaa"
+    sha256 cellar: :any_skip_relocation, monterey:       "c3eae40009f4ee8ec631848ff5cb603e6e648ff62bce265dd5984704a5550ddf"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3825412846e2aa3846588e8008e9bab2ad375b4338ff19e9752a9789cae34307"
+    sha256 cellar: :any_skip_relocation, catalina:       "91365a38238a6a87c8a8048ea49f0bbe72fcebbd82db915525928d1460abc6d9"
+    sha256 cellar: :any_skip_relocation, mojave:         "2392b1b5a94e215b568919ad54345fb7f0362ee3f791d20775d7b679a35b96d8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "368a20a3e847c18ddb9581533dd3989c89950fbdf01931265f80f82feebba646"
   end
 
   depends_on "go" => :build
