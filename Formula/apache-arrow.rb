@@ -10,6 +10,7 @@ class ApacheArrow < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "efeb4c5855d330a89b9cb39151d95c9efff12b69fa18808cfbfbcf0760da4d55"
+    sha256 cellar: :any,                 monterey:      "ac317ee2514dcb465b7e8213e714d62b2200809ad5c0fa971147910293151ac1"
     sha256 cellar: :any,                 big_sur:       "029209d3255f648149bf9fd95353b9cd9686aeb578c19dbcbc87e92c1d617bdc"
     sha256 cellar: :any,                 catalina:      "0d547dfdb6451da46222875a0a055d1646309355d76076532332ebc579a012c0"
     sha256 cellar: :any,                 mojave:        "18b9236e13bae6404e1b4011b146811437b4ade27fd1a757a6d4dc5099c27324"
