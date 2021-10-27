@@ -10,6 +10,7 @@ class Pythran < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "fdbcb4eb077761c2c810aab42dec6713be785afacf09ce597d9c7368691888f6"
+    sha256 cellar: :any_skip_relocation, monterey:      "d6f83dfa73268cf39ff35f47326b13554d3f01b58be68aa6fd7652311a360af4"
     sha256 cellar: :any_skip_relocation, big_sur:       "d6f83dfa73268cf39ff35f47326b13554d3f01b58be68aa6fd7652311a360af4"
     sha256 cellar: :any_skip_relocation, catalina:      "d6f83dfa73268cf39ff35f47326b13554d3f01b58be68aa6fd7652311a360af4"
     sha256 cellar: :any_skip_relocation, mojave:        "d6f83dfa73268cf39ff35f47326b13554d3f01b58be68aa6fd7652311a360af4"
