@@ -13,11 +13,13 @@ class Calicoctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5e4e4cd57e69fadead0b8cdb7f85a593ff549002cf83b068673b4fa4b8bb8d31"
-    sha256 cellar: :any_skip_relocation, big_sur:       "bcc5a120315228e579ffc1254ab3466800f6edc87401e028fbb8dc6d320f29ea"
-    sha256 cellar: :any_skip_relocation, catalina:      "51c1ff0e5574b2560f8390b0c6d64c5ef13b1eb82464ffb7082906adc49de49b"
-    sha256 cellar: :any_skip_relocation, mojave:        "51e7407f77307bb658ada8e26463ebe350dce6c883c28fe53d829cde70103818"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7a08c68395c9781fd54d2e066b25b09c257ad6a7e6f61e99ebb0587fd8848340"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "13d0a0a2bb2e3eb536db119e03a53505b0d4218c664fd21968fc5fb7c5ae57db"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5e4e4cd57e69fadead0b8cdb7f85a593ff549002cf83b068673b4fa4b8bb8d31"
+    sha256 cellar: :any_skip_relocation, monterey:       "764f51f9ef803b649323146367fa282c1d039fa5d4d9dd8724e533fa461c9ac4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bcc5a120315228e579ffc1254ab3466800f6edc87401e028fbb8dc6d320f29ea"
+    sha256 cellar: :any_skip_relocation, catalina:       "51c1ff0e5574b2560f8390b0c6d64c5ef13b1eb82464ffb7082906adc49de49b"
+    sha256 cellar: :any_skip_relocation, mojave:         "51e7407f77307bb658ada8e26463ebe350dce6c883c28fe53d829cde70103818"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7a08c68395c9781fd54d2e066b25b09c257ad6a7e6f61e99ebb0587fd8848340"
   end
 
   depends_on "go" => :build
