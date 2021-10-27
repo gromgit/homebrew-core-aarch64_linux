@@ -13,6 +13,7 @@ class Gmic < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "1a578cfffc741545e5b49370a58ffba93d573173c19d81a883b7b0960dc07b73"
+    sha256 cellar: :any,                 monterey:      "98e6604c1a4b6d6634cd8fc3ab7a3440f19d50f946daae731bdae1b65a595e07"
     sha256 cellar: :any,                 big_sur:       "be87829332b36a812cdc929cefcc5d2fdc29d026f7b04fe9ab98d0fb1b17d1d5"
     sha256 cellar: :any,                 catalina:      "da3502b0e4aa8306e4cd46fe3df9a3e0851d5d9e2bfb7a2ca8fa41f23e0b06c0"
     sha256 cellar: :any,                 mojave:        "f91c71752cfb0d544dd70e5ef60ab40de2ca8f47a2ac0b648980220a180528e0"
