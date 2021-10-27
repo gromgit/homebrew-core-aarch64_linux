@@ -8,6 +8,7 @@ class Scipy < Formula
 
   bottle do
     sha256 cellar: :any, arm64_big_sur: "65e79aed434b4c9dc97445916046490023e91a578583089d06cd97b96251f1df"
+    sha256 cellar: :any, monterey:      "80ef5160fa3cdee9f6c66dbcef3ea74e94d17a0eff68b1198f6ab91a06255a50"
     sha256 cellar: :any, big_sur:       "7273e64702e01f65615143059f6af35f5226fc938d1ef7d048a644f329dfb93e"
     sha256 cellar: :any, catalina:      "27ade676309a263bab19e497b66941c18969285318846033213b9af9ea4c2150"
     sha256 cellar: :any, mojave:        "8e2729704d6789206056dc8887dc110d94cda11f2c6b1e8e0a3485d47e4f678b"
