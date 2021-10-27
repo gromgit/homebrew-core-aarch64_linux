@@ -9,11 +9,13 @@ class Openstackclient < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "415b02ee764eafb672868037245cd7a5ac9395a255eb8aca89552e10e07cf21c"
-    sha256 cellar: :any,                 big_sur:       "953f1b08d0d5a62c2f6f1d7c453304e4f72882694e21bdd09fd662d261f818cc"
-    sha256 cellar: :any,                 catalina:      "19ba1bd67e9060f8fa1c1528f943aabdde4e29d978978513547ca7690392dfc3"
-    sha256 cellar: :any,                 mojave:        "25b434146cf86bfcc3cf5745ad331ec5df7aca3e130fa07b688a853b78aa67b2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "19599b31e56cbde386d34b387e5f20198889ba623394e5f7e95f0190c60f4c30"
+    sha256 cellar: :any,                 arm64_monterey: "f53f4f87d36ac23076aa8c0f1f2fc316353701f0c15205571c6b231fda9ab1fb"
+    sha256 cellar: :any,                 arm64_big_sur:  "415b02ee764eafb672868037245cd7a5ac9395a255eb8aca89552e10e07cf21c"
+    sha256 cellar: :any,                 monterey:       "0c6192eb86ef2c9c47a03a8c7722afc9a4e6e86260b26248f55bd56ed58de60b"
+    sha256 cellar: :any,                 big_sur:        "953f1b08d0d5a62c2f6f1d7c453304e4f72882694e21bdd09fd662d261f818cc"
+    sha256 cellar: :any,                 catalina:       "19ba1bd67e9060f8fa1c1528f943aabdde4e29d978978513547ca7690392dfc3"
+    sha256 cellar: :any,                 mojave:         "25b434146cf86bfcc3cf5745ad331ec5df7aca3e130fa07b688a853b78aa67b2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "19599b31e56cbde386d34b387e5f20198889ba623394e5f7e95f0190c60f4c30"
   end
 
   depends_on "rust" => :build
