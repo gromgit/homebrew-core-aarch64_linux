@@ -7,11 +7,10 @@ class Librespot < Formula
   head "https://github.com/librespot-org/librespot.git", branch: "dev"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7dde65331693b26799dc17b83b861a2a28e42fdef5c737ad859dc25d2b18db30"
-    sha256 cellar: :any_skip_relocation, big_sur:       "1926141d397ff6dd7d6af509774e02e55654a40ccd5fed6710c25f808036390a"
-    sha256 cellar: :any_skip_relocation, catalina:      "c1320dd2b002db2981de6fc6733d78826c2a4e8c4ed448761788224307c701c9"
-    sha256 cellar: :any_skip_relocation, mojave:        "176c2bbb02d9550a528c582e84a19b79c1ab82fd5aa5041bf6c635969c592d17"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f27d459c8b985861b710b302ac6c6dd65b86da16741b40e2b786ef989c289176"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6127d387d29a582a1fbb6944c9b5fd18c4febbc483a3711e4248213fa4f01111"
+    sha256 cellar: :any_skip_relocation, big_sur:       "8823b6d1718e2f8d6898c9306501a29ca36204159fd325725e02a187be77e325"
+    sha256 cellar: :any_skip_relocation, catalina:      "bc83caa0485d4dd036f5bdc0643e9b10659799a3f0961442b2dcad349a9f3910"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8a65c6190910c07e93e5151813c1c868b7b7f9d97b0dcb582b9bda88226c87a7"
   end
 
   depends_on "rust" => :build
