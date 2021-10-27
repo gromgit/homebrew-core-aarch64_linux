@@ -11,11 +11,13 @@ class Rebar3 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0501fc018a924c76dcd7248f12f7002296241874162db6ecf3cda0d6516e3ac3"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8b2581dc2365f4dff9d2533e1d8e18fdeab6282740caf47fc37d3c97365f90c9"
-    sha256 cellar: :any_skip_relocation, catalina:      "7ee16a66ce6d611df47abd8118ed08651a237b15f687824ca5711cb2bb734684"
-    sha256 cellar: :any_skip_relocation, mojave:        "311c51419024d8440c99de8c6711964ad329165d4c2bfea02a566549fcc39272"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d0431da6893ab1734b1a69f530b3b9e4e52611785a9c9fab8f993190fecb5117"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f672cc31fcc77f3bf50274b54c4abcc8d1c061c01f5cf32937d2e7470e81954e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0501fc018a924c76dcd7248f12f7002296241874162db6ecf3cda0d6516e3ac3"
+    sha256 cellar: :any_skip_relocation, monterey:       "aa213996443e7164cd29fbc131c000a1cc7a75ea6e41693ba2db8a62cef86349"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8b2581dc2365f4dff9d2533e1d8e18fdeab6282740caf47fc37d3c97365f90c9"
+    sha256 cellar: :any_skip_relocation, catalina:       "7ee16a66ce6d611df47abd8118ed08651a237b15f687824ca5711cb2bb734684"
+    sha256 cellar: :any_skip_relocation, mojave:         "311c51419024d8440c99de8c6711964ad329165d4c2bfea02a566549fcc39272"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d0431da6893ab1734b1a69f530b3b9e4e52611785a9c9fab8f993190fecb5117"
   end
 
   depends_on "erlang"
