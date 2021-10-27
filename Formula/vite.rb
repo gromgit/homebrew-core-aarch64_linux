@@ -8,10 +8,10 @@ class Vite < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "469706d751c3c05f482ae4ead194638dd747b748f370e860c491800a4b3e5297"
-    sha256 cellar: :any_skip_relocation, big_sur:       "473d9c34020ad9c13adbaa79ad18ef049a8677e73893db5c55c00f31deb47347"
-    sha256 cellar: :any_skip_relocation, catalina:      "473d9c34020ad9c13adbaa79ad18ef049a8677e73893db5c55c00f31deb47347"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3e6c2f417aa0cc71058dd5dc029f2a89fa3abc2fd6a65c5e2359e2f3d4aa206b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d03a876f5ce279ed73904af05d105959715ffb1d0497e9fc78248ec592bbc1c4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "9c0ccef307274d0c0a62c50c53f215ac2dfd573b12c0cd357ee5390ab9a42214"
+    sha256 cellar: :any_skip_relocation, catalina:      "9c0ccef307274d0c0a62c50c53f215ac2dfd573b12c0cd357ee5390ab9a42214"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4d56ff9928df21b097ffd0d79ee91e903b04bb7f17f901826980be68eb6fe237"
   end
 
   depends_on "node"
