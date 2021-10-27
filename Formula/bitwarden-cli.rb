@@ -3,8 +3,8 @@ require "language/node"
 class BitwardenCli < Formula
   desc "Secure and free password manager for all of your devices"
   homepage "https://bitwarden.com/"
-  url "https://registry.npmjs.org/@bitwarden/cli/-/cli-1.18.1.tgz"
-  sha256 "60b3d75aa9ac7e624e40d05adf732ccf2a31f0e2678755de750b6cd7ae138ce3"
+  url "https://registry.npmjs.org/@bitwarden/cli/-/cli-1.19.1.tgz"
+  sha256 "20b34a237dd9c93f7fc50e1e216894fc552c95727cdef3688879b83c4b24ffce"
   license "GPL-3.0-only"
 
   bottle do
@@ -21,7 +21,7 @@ class BitwardenCli < Formula
 
   def install
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
-    bin.install_symlink Dir["#{libexec}/bin/*"]
+    bin.install_symlink Dir[libexec/"bin/*"]
   end
 
   test do
