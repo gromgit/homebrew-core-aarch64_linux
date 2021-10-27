@@ -13,6 +13,7 @@ class LibtorrentRasterbar < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "c2c117a2c0c9c2c8df372a7b8d91605096d1dde615c8fb90c4572ff8ffee4a3d"
+    sha256 cellar: :any,                 monterey:      "8544e762eab85086ca9b145a6c30a2233c52d4c807f66f5ce2ab61178021122b"
     sha256 cellar: :any,                 big_sur:       "d48ce0307a32554477f8e726ac48f53452172dd53af279d418d35b47d981c903"
     sha256 cellar: :any,                 catalina:      "427766e035c86318f55b44fe60b740355ddd2f804c3ceef6a15a838857d6efbd"
     sha256 cellar: :any,                 mojave:        "a4d966bc79d6771bdebcdfd55e1f9d8455e9caa0e0d4ed72b1bf562c8197aa21"
