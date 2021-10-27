@@ -16,6 +16,7 @@ class Rdkit < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "28c1c33143235bb0fd8976b09cd9401d5a8017eb0eecdf1c3b7e8160a76899ea"
+    sha256 cellar: :any,                 monterey:      "70011ed02c38c974ed6b3af724ee1f9a47af6f40c6c2bcabc87202acd3993c9f"
     sha256 cellar: :any,                 big_sur:       "ab6b59afc8867d96437797a740359f87bb0c821f76e06c35a11f3759a784e87e"
     sha256 cellar: :any,                 catalina:      "9ef1cd7eb9dab750ce12dcc66af8b04b0552562c25d86e24535625f2a6e5efb4"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "07bc3a29f7e719d700ec3e57fc7446900b665d1663181d15ae694dc7782ea74f"
