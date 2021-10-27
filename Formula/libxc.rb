@@ -7,6 +7,7 @@ class Libxc < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "bab54fd6f307ac24bc5bd3ab6141daf2149abc990f3d1c2774164a4953d5fe03"
+    sha256 cellar: :any,                 monterey:      "ae0fcb2ba73a2128fc10473e26ff9b41a07096f9575d7d04a7fa6b8bbd48a00a"
     sha256 cellar: :any,                 big_sur:       "042fd1f69c5eb656fafb3132e3e74e6243db2d54bb085e825772c78e4ebb1c8e"
     sha256 cellar: :any,                 catalina:      "e35ea54099046a72da1e9ac35e838b12055aef0c5c81be282e579758c640df00"
     sha256 cellar: :any,                 mojave:        "eb030e211e6523a252007c84e330bd0e6248ddc14676d61f5daf1b328ca219b0"
