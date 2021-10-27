@@ -8,10 +8,12 @@ class Colima < Formula
   head "https://github.com/abiosoft/colima.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "81d0c6180696757c3a29e4688128a31ef06b3f3ff6a45a7098e67ca5f2fa0e99"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f03962f3ac2eea17cb4a7c716a86c703a5f17da0ae76517ab8e3bac2002350bf"
-    sha256 cellar: :any_skip_relocation, catalina:      "6ed11d66cfc5537d24f1861bf764d88bfab103fd86b4278bc45c0f01e4ad27a0"
-    sha256 cellar: :any_skip_relocation, mojave:        "96faa5778cd2aaf10f5df4ec89c824f19573955add9cd3da68265d12688297fb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9747ca65ca6be26b4263e1bce95c1a940701c536fd0f87b58832691f74881896"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "81d0c6180696757c3a29e4688128a31ef06b3f3ff6a45a7098e67ca5f2fa0e99"
+    sha256 cellar: :any_skip_relocation, monterey:       "79d53bbe6644ce662a7134c2846cc431731eb37c2cc0ac6fab7943f5fbca6d29"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f03962f3ac2eea17cb4a7c716a86c703a5f17da0ae76517ab8e3bac2002350bf"
+    sha256 cellar: :any_skip_relocation, catalina:       "6ed11d66cfc5537d24f1861bf764d88bfab103fd86b4278bc45c0f01e4ad27a0"
+    sha256 cellar: :any_skip_relocation, mojave:         "96faa5778cd2aaf10f5df4ec89c824f19573955add9cd3da68265d12688297fb"
   end
 
   depends_on "go" => :build
