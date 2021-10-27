@@ -8,11 +8,13 @@ class CadenceWorkflow < Formula
   head "https://github.com/uber/cadence.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "16ff455391768f46b87b3dd99b4728af4ba57595f9bfce7231135899b6fc715c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "be60b97549e05e29a88a707dd70b2be9ad33d237e0ba934ae1beeeacf4101822"
-    sha256 cellar: :any_skip_relocation, catalina:      "be81affc31ea7e805d349b2b79490f71635185327be2a2fb35face1a49d68529"
-    sha256 cellar: :any_skip_relocation, mojave:        "37317f58ab1ee1ea6202646df143c663c83c19774d8e30fca40f621949856d51"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e43c44c10b20e1b68dddd0cf61039ad16a7da3e59e9775642deeb4336a5672cb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2c0e2c06a9a1c82e68113254fed184a6d9d1e5d35f950d548adf6de16387c4fd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "16ff455391768f46b87b3dd99b4728af4ba57595f9bfce7231135899b6fc715c"
+    sha256 cellar: :any_skip_relocation, monterey:       "a4d9276aa7eae376c5713e1536be5067a73abcdd9ce7fc06ab3a0e2e9650d8d0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "be60b97549e05e29a88a707dd70b2be9ad33d237e0ba934ae1beeeacf4101822"
+    sha256 cellar: :any_skip_relocation, catalina:       "be81affc31ea7e805d349b2b79490f71635185327be2a2fb35face1a49d68529"
+    sha256 cellar: :any_skip_relocation, mojave:         "37317f58ab1ee1ea6202646df143c663c83c19774d8e30fca40f621949856d51"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e43c44c10b20e1b68dddd0cf61039ad16a7da3e59e9775642deeb4336a5672cb"
   end
 
   depends_on "go" => :build
