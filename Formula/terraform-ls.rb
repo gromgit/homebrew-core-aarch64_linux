@@ -12,11 +12,13 @@ class TerraformLs < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bd10b203fdd4d588ca5c76f329e6e355978330b756fe0b8c21c06ebf3289c919"
-    sha256 cellar: :any_skip_relocation, big_sur:       "44f5336b26ca42f288abc8b3524180e753d14d667d0483582d3380da7814b0d8"
-    sha256 cellar: :any_skip_relocation, catalina:      "061f5118965ca17ea8295b966429c21397a8e825becb8414ca2ed68446bf26b4"
-    sha256 cellar: :any_skip_relocation, mojave:        "af4f454eed66d6c42c4e7313d3b320fa4664945fe2d0d4364be4b0bf851e79fe"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dc1df976b00f3bceb2443a872f97670537aaf3f850d10af2f4d1708e1c7a687c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cee3c8d91deb2dbe672798e8c227d212a317b91e14434a4ec6f14b779a09870f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bd10b203fdd4d588ca5c76f329e6e355978330b756fe0b8c21c06ebf3289c919"
+    sha256 cellar: :any_skip_relocation, monterey:       "19a5e13164ad55f0043d4d0c3ad03d51746a596fc2de0a131117a4deee2e0ee2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "44f5336b26ca42f288abc8b3524180e753d14d667d0483582d3380da7814b0d8"
+    sha256 cellar: :any_skip_relocation, catalina:       "061f5118965ca17ea8295b966429c21397a8e825becb8414ca2ed68446bf26b4"
+    sha256 cellar: :any_skip_relocation, mojave:         "af4f454eed66d6c42c4e7313d3b320fa4664945fe2d0d4364be4b0bf851e79fe"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dc1df976b00f3bceb2443a872f97670537aaf3f850d10af2f4d1708e1c7a687c"
   end
 
   depends_on "go" => :build
