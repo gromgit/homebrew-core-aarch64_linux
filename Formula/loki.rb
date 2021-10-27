@@ -6,11 +6,13 @@ class Loki < Formula
   license "AGPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "29e269c258de9b5e0f3024db55c8cca0023a372a3f4372adbb82f6d83fc37af1"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8c9c206eaaedb9a6d40f0d0cba0d21118ea3f35bd592b6cfc8d7f7d2862ba49b"
-    sha256 cellar: :any_skip_relocation, catalina:      "e10eda7df50a4f13858e76389bc2d3bf62b86f35926a254266fbb618471ddc08"
-    sha256 cellar: :any_skip_relocation, mojave:        "06307778ef44db3b181461e0f42c31a95796162af5c774c7a0248848e6005fcc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8476435961971f582f3baaf20852c6ea87c4129fd06f25fb13a613443a207153"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "47218a12530e06bb4a3e4d536cc346d21147a695184aebba50fed4d965c23d1f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "29e269c258de9b5e0f3024db55c8cca0023a372a3f4372adbb82f6d83fc37af1"
+    sha256 cellar: :any_skip_relocation, monterey:       "8f5b60ca6389cb2de6ffec269e2d8800050569ceba9b98eb3f781ff093582a4b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8c9c206eaaedb9a6d40f0d0cba0d21118ea3f35bd592b6cfc8d7f7d2862ba49b"
+    sha256 cellar: :any_skip_relocation, catalina:       "e10eda7df50a4f13858e76389bc2d3bf62b86f35926a254266fbb618471ddc08"
+    sha256 cellar: :any_skip_relocation, mojave:         "06307778ef44db3b181461e0f42c31a95796162af5c774c7a0248848e6005fcc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8476435961971f582f3baaf20852c6ea87c4129fd06f25fb13a613443a207153"
   end
 
   depends_on "go" => :build
