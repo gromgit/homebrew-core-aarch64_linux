@@ -14,7 +14,10 @@ class Asciidoc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "c9ddf877047f2b026bc790eb8f7414ea909dbd213c92b50fba336da80e1d8286"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0a2d42fa8688dde1c94c9650ed46fdefc2b7877bc7ccd55271022d7f89820aa3"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e888d83cc14f9a6cda0c71bed44ed1578b116b9b8c3f76f6948c73acb9d1ea7d"
+    sha256 cellar: :any_skip_relocation, catalina:      "e888d83cc14f9a6cda0c71bed44ed1578b116b9b8c3f76f6948c73acb9d1ea7d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a265c232637f028fd9bca2f2e993bce80261a2454b57169b10727cc100cb9363"
   end
 
   depends_on "docbook"
