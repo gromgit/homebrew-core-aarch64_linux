@@ -9,10 +9,12 @@ class CharmTools < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "aa3f36bb378eef041a8d48d81dc8d28d63a77237f8508479399059b595110012"
-    sha256 cellar: :any,                 big_sur:       "9a6298e0447b3d83e540596860b86d5bf44c21bb3e9714d3d203f5f77d774470"
-    sha256 cellar: :any,                 catalina:      "5d52e1f084e5085e5499d9e21704f009d3b31b8de1c26cbea3da9613477ace6f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "05fcfb6cc67603f0b7f063b8a1fadcd4821a17d693d5bfa84c9397ec1c4fa7f0"
+    sha256 cellar: :any,                 arm64_monterey: "cb040120a8318b7b5222eb25e0d842cefe2e36d158fe85630415978de3bca799"
+    sha256 cellar: :any,                 arm64_big_sur:  "aa3f36bb378eef041a8d48d81dc8d28d63a77237f8508479399059b595110012"
+    sha256 cellar: :any,                 monterey:       "82e79cc7ad5a8b8b3305ef716e27c3a5a6d56581c057118cf1360207821b2bc5"
+    sha256 cellar: :any,                 big_sur:        "9a6298e0447b3d83e540596860b86d5bf44c21bb3e9714d3d203f5f77d774470"
+    sha256 cellar: :any,                 catalina:       "5d52e1f084e5085e5499d9e21704f009d3b31b8de1c26cbea3da9613477ace6f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "05fcfb6cc67603f0b7f063b8a1fadcd4821a17d693d5bfa84c9397ec1c4fa7f0"
   end
 
   depends_on "rust" => :build
