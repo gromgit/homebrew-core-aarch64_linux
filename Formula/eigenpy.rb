@@ -8,6 +8,7 @@ class Eigenpy < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "eb11190417c96a928c5e6bafdcf631d6ce5bade0c502daab66e02aaef8203dcd"
+    sha256 cellar: :any,                 monterey:      "7b50326f2b758e021cf09d7cdeee90c7faf68a008787554e2aed44c38c235aee"
     sha256 cellar: :any,                 big_sur:       "6772ede3f8185fdb42833688d971407c54c0d69e78d1962b491ff1c7078cb150"
     sha256 cellar: :any,                 catalina:      "88a10f6d708d135b5df4d59ed5248391105446c7ddf10850fbd911c65c68d82c"
     sha256 cellar: :any,                 mojave:        "653d9c3e87e3a73dd0f6192196656c1f09a15710a3630f19816a2db5926cd7f0"
