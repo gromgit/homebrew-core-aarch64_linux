@@ -6,10 +6,8 @@ class Pprint < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:     "dfe96940a991860fa6b0c3fc1aab207deeea8abe0c3fdf550b062f31a0f2f942"
-    sha256 cellar: :any_skip_relocation, catalina:    "3106733d3d77033431baf9eac61d8cf4b293f48584858ba058d711a045512530"
-    sha256 cellar: :any_skip_relocation, mojave:      "8d6d70f63ecea106323bdd852c1c896f32bf9895c3164680b594c0f8a30c1561"
-    sha256 cellar: :any_skip_relocation, high_sierra: "8d6d70f63ecea106323bdd852c1c896f32bf9895c3164680b594c0f8a30c1561"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "c299956c83c6f1af4511db5e69cad0e678779646c40cebdd03176368510d2c58"
   end
 
   depends_on "catch2" => :test
