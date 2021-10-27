@@ -10,10 +10,12 @@ class Stormssh < Formula
   head "https://github.com/emre/storm.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "c9cc953d93d1534a753f07f088194514d75fc220f3ad34fc6a0e6324be1604ad"
-    sha256 cellar: :any,                 big_sur:       "ad691ed14359decd9760497aed20b6b0f6d4e54c978e3c191a52b59a8331bf32"
-    sha256 cellar: :any,                 catalina:      "d32420400831851cfc19a8512008eec8cf9d69f60b028a46455394408be367c5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4c0a72be0bad9b3a4a023974ca99c0dea3579d3ba9d00a4c9d0d97201eed75f3"
+    sha256 cellar: :any,                 arm64_monterey: "a75b8177eb8ca535665d4e6198b936b0c709c91a8bbc2274f49bbd22d394f677"
+    sha256 cellar: :any,                 arm64_big_sur:  "c9cc953d93d1534a753f07f088194514d75fc220f3ad34fc6a0e6324be1604ad"
+    sha256 cellar: :any,                 monterey:       "22a0178c38fd3644223aac5b7ba6f4e0c766e7aa6fef706a8b703eb9f76d6d5c"
+    sha256 cellar: :any,                 big_sur:        "ad691ed14359decd9760497aed20b6b0f6d4e54c978e3c191a52b59a8331bf32"
+    sha256 cellar: :any,                 catalina:       "d32420400831851cfc19a8512008eec8cf9d69f60b028a46455394408be367c5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4c0a72be0bad9b3a4a023974ca99c0dea3579d3ba9d00a4c9d0d97201eed75f3"
   end
 
   depends_on "rust" => :build
