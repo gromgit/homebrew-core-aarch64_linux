@@ -7,6 +7,7 @@ class SagittariusScheme < Formula
   revision 1
 
   bottle do
+    sha256 cellar: :any,                 monterey:     "0e3bc5c34bd1acc50c8ba8d98b474c329068d3ff1a911bf1d8d7e3c4f02c115e"
     sha256 cellar: :any,                 big_sur:      "a44076e41f030ddccfed6768ada1ff0201ff6ffb86cce425c3fbabda799883a0"
     sha256 cellar: :any,                 catalina:     "aa2fbe6b306de8d985d0e93f12d9f896b4f7ae5403778508d077bdf975868bcb"
     sha256 cellar: :any,                 mojave:       "dccfa0d38b7096e3c27676fd09d8984009128c1017948d711087dc9d66f44f6f"
