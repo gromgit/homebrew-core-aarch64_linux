@@ -7,6 +7,7 @@ class XcbUtil < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "8d86304598d174005688503ce824bd1630482c357aa7de536eafd57d22041054"
+    sha256 cellar: :any,                 monterey:      "d57ff03eb28121c68dc58a0fffe572e881bcd2c9f5a19ec70af907746f25fe37"
     sha256 cellar: :any,                 big_sur:       "ca7b806f016b95c52654a351d966ee86e46dcc36339a44921fccc311c1d607a8"
     sha256 cellar: :any,                 catalina:      "c161b6f0372d40ace1238507365c18a52581b798262c856099cd86eabc38c625"
     sha256 cellar: :any,                 mojave:        "0979f730b01775f3dcb33c093132ec25a49912b99e679e774bae0e995fc3f73c"
