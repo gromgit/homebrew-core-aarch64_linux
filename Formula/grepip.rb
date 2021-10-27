@@ -11,11 +11,13 @@ class Grepip < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6f13b8f833819048b9f9a3b3ae9b06ca2d0f048d5946964713071ce1f24f8b43"
-    sha256 cellar: :any_skip_relocation, big_sur:       "69ca00dbdd25023b426d3dd90c8ed781912ed93a1c22e4584ff63a87db486152"
-    sha256 cellar: :any_skip_relocation, catalina:      "02a9c78883ad37d86b44c1adaeb45941824bb150d6f87f7fc5858f1ac7544db3"
-    sha256 cellar: :any_skip_relocation, mojave:        "c862c4990834b88e3b069bca2d916ee9f27ff15e8a9b5029658ae170f25e0bf0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6c7ff3e474306572d0d62c8b3afda99d755b6794c0045e8de2908277c5689b6f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d143dc0c314ec38964d77b98935fb6bd788557785511cc993b68d026ca949742"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6f13b8f833819048b9f9a3b3ae9b06ca2d0f048d5946964713071ce1f24f8b43"
+    sha256 cellar: :any_skip_relocation, monterey:       "9706fb69d94a3040b3df97ad2bee5cf93deb758391ce0449880fa7574d76ec8e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "69ca00dbdd25023b426d3dd90c8ed781912ed93a1c22e4584ff63a87db486152"
+    sha256 cellar: :any_skip_relocation, catalina:       "02a9c78883ad37d86b44c1adaeb45941824bb150d6f87f7fc5858f1ac7544db3"
+    sha256 cellar: :any_skip_relocation, mojave:         "c862c4990834b88e3b069bca2d916ee9f27ff15e8a9b5029658ae170f25e0bf0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6c7ff3e474306572d0d62c8b3afda99d755b6794c0045e8de2908277c5689b6f"
   end
 
   depends_on "go" => :build
