@@ -23,6 +23,7 @@ class Lammps < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "d42bf4cb9ed9e1daedcb51039d9e6f3bc9c2aa4af2ad733bc1f02bd03a7e0dc0"
+    sha256 cellar: :any,                 monterey:      "80bd301856a578caff37285c4b79e697dbe32cdca9bab7e349631613ed1135de"
     sha256 cellar: :any,                 big_sur:       "a99b5725600ef7c9b071178be53b494912d0deee75ac6b34dc73c11d11021793"
     sha256 cellar: :any,                 catalina:      "6d70939bd07b4792ab42979f6caab22af8a29b6e28405c458f8c5538dc5b281f"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "2b6979a6051a537b774b59692b5425bc6f974fcef2f46b57d27b1f683cb73455"
