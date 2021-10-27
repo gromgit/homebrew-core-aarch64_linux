@@ -10,10 +10,12 @@ class Credstash < Formula
   head "https://github.com/fugue/credstash.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "eb3d91bb0acbb86f65f9ab7b4a92de6dcc56f50af3d0d63899d0a17d420eed80"
-    sha256 cellar: :any,                 big_sur:       "17bbec854f6bb5728c0300213f1cde490b641d83d49ede0900215c76905a344a"
-    sha256 cellar: :any,                 catalina:      "56fb65066289625637f728e37762e9ed12366d6bb3574c6ec51e079e3e8b1582"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2a82749afb4c1fbcd2210f868054b58aeb9f07736f535b9ffa7345d61eae3203"
+    sha256 cellar: :any,                 arm64_monterey: "20933684d1f4dc523373179f028cedf246bc1c38be113083fa56c29c780c39ab"
+    sha256 cellar: :any,                 arm64_big_sur:  "eb3d91bb0acbb86f65f9ab7b4a92de6dcc56f50af3d0d63899d0a17d420eed80"
+    sha256 cellar: :any,                 monterey:       "d26a6f3883011511a2052e7abbe6b1f35bd21e2a68baca5e5afa6750db2f44ca"
+    sha256 cellar: :any,                 big_sur:        "17bbec854f6bb5728c0300213f1cde490b641d83d49ede0900215c76905a344a"
+    sha256 cellar: :any,                 catalina:       "56fb65066289625637f728e37762e9ed12366d6bb3574c6ec51e079e3e8b1582"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2a82749afb4c1fbcd2210f868054b58aeb9f07736f535b9ffa7345d61eae3203"
   end
 
   depends_on "rust" => :build
