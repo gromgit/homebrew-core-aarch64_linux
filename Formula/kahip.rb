@@ -8,6 +8,7 @@ class Kahip < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "7dd775db6db3f292630fef80ed2372b302e6d2caaaa1aa36259f9c9cd316bc42"
+    sha256 cellar: :any,                 monterey:      "b2cf4b11da779414cedf21634c3c8175d6f16ad8036bb7f9c8079147fe35a623"
     sha256 cellar: :any,                 big_sur:       "b020b5b9e72805576099c1a4cd13c5bf0ac07c7451f22150bb8b1213029ac83f"
     sha256 cellar: :any,                 catalina:      "9d37b651ac2a278ec406cdab07d9c61fbc4ee5fc18b299d9fc640d13ddd3e01e"
     sha256 cellar: :any,                 mojave:        "3426ae40721153a746e297e6fc0ceceb6f07fd6df88f2ebdcca830ccc16e9c73"
