@@ -12,11 +12,13 @@ class RancherCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1fe3c03e1c7389f3aa03de802b23d60986c61e91ad275353984effdd41055b6c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "eceff7f2924ce3aa42e3e5cb180b38eb41a2747321d29d6d2588d0b17d5b20cc"
-    sha256 cellar: :any_skip_relocation, catalina:      "d99b09b8067c46c3bad171bfa9998680a2a13ae658641be7c6fd0830f37a8642"
-    sha256 cellar: :any_skip_relocation, mojave:        "f231900ea626c094b98f7620e12921691fe1f86781a66033ae9b07cdd2721bea"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f22314698f65e0c5af34ae3fd342ad57ed052cdc28a684245620a9e1ee364ccc"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "21e24f36638234f843db051bfdf87f5ee8def86345ec38d8056485db5abbef5a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1fe3c03e1c7389f3aa03de802b23d60986c61e91ad275353984effdd41055b6c"
+    sha256 cellar: :any_skip_relocation, monterey:       "877d8cbc3cbd6eca942292c0655f616d685dd23876e5e50960f49007f106eaac"
+    sha256 cellar: :any_skip_relocation, big_sur:        "eceff7f2924ce3aa42e3e5cb180b38eb41a2747321d29d6d2588d0b17d5b20cc"
+    sha256 cellar: :any_skip_relocation, catalina:       "d99b09b8067c46c3bad171bfa9998680a2a13ae658641be7c6fd0830f37a8642"
+    sha256 cellar: :any_skip_relocation, mojave:         "f231900ea626c094b98f7620e12921691fe1f86781a66033ae9b07cdd2721bea"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f22314698f65e0c5af34ae3fd342ad57ed052cdc28a684245620a9e1ee364ccc"
   end
 
   depends_on "go" => :build
