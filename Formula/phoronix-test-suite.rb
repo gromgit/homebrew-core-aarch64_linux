@@ -12,11 +12,11 @@ class PhoronixTestSuite < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "40c22f6775bbaa76dcca519e5ea051b0f358ed8327535170413fbd6355cee6e4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "df7663def4e0040411adf19b081d49382b464620c8aedcdb3e73dbc4f03a68dd"
-    sha256 cellar: :any_skip_relocation, catalina:      "df7663def4e0040411adf19b081d49382b464620c8aedcdb3e73dbc4f03a68dd"
-    sha256 cellar: :any_skip_relocation, mojave:        "df7663def4e0040411adf19b081d49382b464620c8aedcdb3e73dbc4f03a68dd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "40c22f6775bbaa76dcca519e5ea051b0f358ed8327535170413fbd6355cee6e4"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d8249f2433189e0cbec8679cdb7e8409dc6de43529fe578aefa7d1e7c7d6d527"
+    sha256 cellar: :any_skip_relocation, big_sur:       "283b346e8aa480700b3242aadfefa53f25a935ec27cc745540a8aee1e5526a0f"
+    sha256 cellar: :any_skip_relocation, catalina:      "283b346e8aa480700b3242aadfefa53f25a935ec27cc745540a8aee1e5526a0f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d8249f2433189e0cbec8679cdb7e8409dc6de43529fe578aefa7d1e7c7d6d527"
   end
 
   depends_on "php"
