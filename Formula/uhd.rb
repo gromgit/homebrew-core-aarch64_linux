@@ -14,10 +14,12 @@ class Uhd < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "4187dd90c18fa8709dc09087efc235f3fd21db604e082fce43c4d469aa789bc3"
-    sha256 big_sur:       "49bcc2c07aef5d7fa61702c3f52265b4d3557dba27a884784a1748c24ce2fafe"
-    sha256 catalina:      "a44e180043a677bfacbba30f7fffb4ecdf42359672cd5336689e44b57934301b"
-    sha256 mojave:        "30abc4dd1774370d969095ef735b05450785ac68b008cdde2e5d22fa634c65e6"
+    sha256 arm64_monterey: "70594fad59c2faea1b522830123a22765740fc2ced86e2619ee7c83e70784529"
+    sha256 arm64_big_sur:  "4187dd90c18fa8709dc09087efc235f3fd21db604e082fce43c4d469aa789bc3"
+    sha256 monterey:       "dd58c2cfb90bce1ebdfc1f6af3757da33082124217506569b1469d63de2ce8e9"
+    sha256 big_sur:        "49bcc2c07aef5d7fa61702c3f52265b4d3557dba27a884784a1748c24ce2fafe"
+    sha256 catalina:       "a44e180043a677bfacbba30f7fffb4ecdf42359672cd5336689e44b57934301b"
+    sha256 mojave:         "30abc4dd1774370d969095ef735b05450785ac68b008cdde2e5d22fa634c65e6"
   end
 
   depends_on "cmake" => :build
