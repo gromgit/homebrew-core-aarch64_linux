@@ -6,6 +6,7 @@ class Mpi4py < Formula
 
   bottle do
     sha256 cellar: :any, arm64_big_sur: "8b7ad2f636c83307d0e95c1e8810d81072354ca20c49726689fd09d053c671d0"
+    sha256 cellar: :any, monterey:      "5ff152abcac9958fd6f9a2ccf96325d1dd25ab5581aaa4107607f993821ce3fc"
     sha256 cellar: :any, big_sur:       "b7ca05b0d8ddcc698e1ee29e6108f169cff4f4552ca80842469a63c0a6e90de1"
     sha256 cellar: :any, catalina:      "9019d4011822668326aec24352f2a743457e727d83d3903b1bee00a1bbfd6751"
     sha256 cellar: :any, mojave:        "19b22755d25aab224777f996e12cbcb16a8156f1bf98123a607d648b676d7af4"
