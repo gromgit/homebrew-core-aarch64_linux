@@ -9,11 +9,13 @@ class Tmuxp < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4fe8bb7ae7c9a38adb379b3aafd3a4b39ad9a0ba563bd21bf343d905ab784282"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9854047cb7cbfbd4114181615492dd70112b0e3b494aa69c05d1e73be03e65a8"
-    sha256 cellar: :any_skip_relocation, catalina:      "7918cf217ebd16d140cbf4382effcb854477007532e0d5c238267dc86fc21fda"
-    sha256 cellar: :any_skip_relocation, mojave:        "313f346093b0516f4324bf02f1b55c29498d7dd4ab0412184c61f5f4928fcced"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2198e006323b1d058fa51a5fd8e87336ce485fc7ec8a6cf718fcfc2cbad3ddf7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4ebfc50060a48bb6645677513db2fa0df426734ad4fa1f20faf96577ff7a5259"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4fe8bb7ae7c9a38adb379b3aafd3a4b39ad9a0ba563bd21bf343d905ab784282"
+    sha256 cellar: :any_skip_relocation, monterey:       "d8e6efaa62405f67afb315af0fd8fc7cec8c959984d679ec528d9dcac624707e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9854047cb7cbfbd4114181615492dd70112b0e3b494aa69c05d1e73be03e65a8"
+    sha256 cellar: :any_skip_relocation, catalina:       "7918cf217ebd16d140cbf4382effcb854477007532e0d5c238267dc86fc21fda"
+    sha256 cellar: :any_skip_relocation, mojave:         "313f346093b0516f4324bf02f1b55c29498d7dd4ab0412184c61f5f4928fcced"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2198e006323b1d058fa51a5fd8e87336ce485fc7ec8a6cf718fcfc2cbad3ddf7"
   end
 
   depends_on "python@3.10"
