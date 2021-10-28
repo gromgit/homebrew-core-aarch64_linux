@@ -15,12 +15,10 @@ class CAres < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "9795fec1a0b9c71ca86b762fea8a2f8fa85a1633da2017786150e67c50dc0b7d"
-    sha256 cellar: :any,                 arm64_big_sur:  "4b3f66b638dbcbe79f4f4501ea18d8ab8ece1c456dd4224abc832c840b58d25c"
-    sha256 cellar: :any,                 monterey:       "40768dc10237c172151af1215e8081d61238ff82d57438a193088c3060338327"
-    sha256 cellar: :any,                 big_sur:        "18830bd78ca245d689bab0c1e339565d285135172524142a316eda0ba278bf52"
-    sha256 cellar: :any,                 catalina:       "50099cd3d317f25932825dec6683b539ceec5c73078b9933819cc9e005dd9952"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "68029f1953a85a50394d2a1501aeb07f744281cfb669feaf99b0d0a5b233fa7e"
+    sha256 cellar: :any,                 arm64_big_sur: "555cf945221fc8f076919a16e07541a37841bfc63ed2c58e24311f93ac2f2af6"
+    sha256 cellar: :any,                 big_sur:       "d3dd43338a6003320bfc94466887a2336f2a8bb36091326689828dc8a96194e2"
+    sha256 cellar: :any,                 catalina:      "cb7b2f185a1c9e550e0ac6b6e48cca0f521ecf70bee3f04a3e5a878c63d3bb6a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "26c1f594d87832209d59cfcd1d635d9d7ee33c1c11ae31e377c92be1483f08c4"
   end
 
   depends_on "cmake" => :build
