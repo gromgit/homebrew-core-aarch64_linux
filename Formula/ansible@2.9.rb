@@ -16,10 +16,12 @@ class AnsibleAT29 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "0fc476860717605697e0f345221311064d38b36fc8570bfde9f5d823eaaee0fb"
-    sha256 cellar: :any,                 big_sur:       "58159b8e7d3ac1d6b698c5dd0d1c3461db1c938df7df1eb427a319d3aa1473de"
-    sha256 cellar: :any,                 catalina:      "17c279323a6e4d7b4c82bbb47e98a2de591d4990dd1bef806b1b9e4699c843a9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c892261eb5bf221dae9b4400f2f1d9ac12ca440ac9927c65feccbed4dacfb1bd"
+    sha256 cellar: :any,                 arm64_monterey: "3e38efaf5462ce2f1adb3e4e55b6213fe13691351b2affd3dfc04d7f29dcc24b"
+    sha256 cellar: :any,                 arm64_big_sur:  "0fc476860717605697e0f345221311064d38b36fc8570bfde9f5d823eaaee0fb"
+    sha256 cellar: :any,                 monterey:       "03d7c27a97e2abb39b1a701caf8e6ad37b5fc7cc5d70db081f0197bec9b30c87"
+    sha256 cellar: :any,                 big_sur:        "58159b8e7d3ac1d6b698c5dd0d1c3461db1c938df7df1eb427a319d3aa1473de"
+    sha256 cellar: :any,                 catalina:       "17c279323a6e4d7b4c82bbb47e98a2de591d4990dd1bef806b1b9e4699c843a9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c892261eb5bf221dae9b4400f2f1d9ac12ca440ac9927c65feccbed4dacfb1bd"
   end
 
   keg_only :versioned_formula
