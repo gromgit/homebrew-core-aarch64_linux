@@ -9,11 +9,13 @@ class Virtualenvwrapper < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c547ff5d7e2996a3cbdf77bec31bc8bce007344427d8f65fb5c9efc94185b643"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f30e47c1440c9569a3d29c4ef5c7336c96fb2e1acba97b711d1b8f44c1c6b9f4"
-    sha256 cellar: :any_skip_relocation, catalina:      "a212a51c8e9b92ac771f7fe2ef10817d7d50adae826720d67e949c3b1bd8216c"
-    sha256 cellar: :any_skip_relocation, mojave:        "dedc8670462702a9d8e1afae32874b1236e0e2af43b27111cc33408d854cd1e3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f51f71071838cd60dfa30083e48274264acaff68499dbba7922a23dcf50a2e4b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "83295a78a568991b7aa9523018a535d2e18a1fd7a121a971d02e501ca7d9454b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c547ff5d7e2996a3cbdf77bec31bc8bce007344427d8f65fb5c9efc94185b643"
+    sha256 cellar: :any_skip_relocation, monterey:       "c2be7dfb6fcfa7efbb50cc700109a6f5d9f4a43c1a3c1da4be4e70a776fd29cb"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f30e47c1440c9569a3d29c4ef5c7336c96fb2e1acba97b711d1b8f44c1c6b9f4"
+    sha256 cellar: :any_skip_relocation, catalina:       "a212a51c8e9b92ac771f7fe2ef10817d7d50adae826720d67e949c3b1bd8216c"
+    sha256 cellar: :any_skip_relocation, mojave:         "dedc8670462702a9d8e1afae32874b1236e0e2af43b27111cc33408d854cd1e3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f51f71071838cd60dfa30083e48274264acaff68499dbba7922a23dcf50a2e4b"
   end
 
   depends_on "python@3.10"
