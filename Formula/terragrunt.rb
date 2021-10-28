@@ -8,6 +8,7 @@ class Terragrunt < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "5f70a735317b84e80544db228a0c21dab580e79b765d097493063abef2b2a97d"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f37f43ba483f6d88a00b3542c425c685bafbb0976ad333ccaa261e3ca1a65700"
+    sha256 cellar: :any_skip_relocation, monterey:       "f6abc4e32ffdd9d7ef14eabe7923d94a32c36dce5a2b811a2d9070caa9b92c20"
     sha256 cellar: :any_skip_relocation, big_sur:        "e65387285dc98bd882d288a743d49246300f9c42afc2562d1c88bee0c11f27ed"
     sha256 cellar: :any_skip_relocation, catalina:       "afad6878ef5cc58bc106196850ac972aefc0397f72685bcdedfe83ea460083f0"
     sha256 cellar: :any_skip_relocation, mojave:         "9144da54ff3014698c494951beab6dfd3d7508af9b4653aaaf559239cc7eab30"
