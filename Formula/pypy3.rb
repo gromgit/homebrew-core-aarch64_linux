@@ -12,6 +12,7 @@ class Pypy3 < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 monterey:     "d5e18214c56907c960277e72b5d1ab9688e42e3323db29e94789ff6e17be3e38"
     sha256 cellar: :any,                 big_sur:      "f4980891d9687298103d5e53f2f783a106d2de25d3b5187da6e11f307a63464d"
     sha256 cellar: :any,                 catalina:     "a42821d5afbdf003b7f5ad607881713b23f3a098eb452d7351ad0c3f28aa42f5"
     sha256 cellar: :any_skip_relocation, x86_64_linux: "e76f45f6f97329af492c51067b6b9e4dc1835fe9a66eaf41e739f213716d5d98"
