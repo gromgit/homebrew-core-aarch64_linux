@@ -8,11 +8,13 @@ class YubikeyAgent < Formula
 
   bottle do
     rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d00bf8d22edfe56f5352e59ff3c72d91e98dcf64d4acc3d1c7a5edbadd61402d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "29df3472e1a5e57ed20f54cef3a5c4e87662e5c64f55338b01239741795447c3"
-    sha256 cellar: :any_skip_relocation, catalina:      "4e7259eeb5ddd924251e7c73f6ae6904804193e4fee4d49e95fc02f211d3ac2e"
-    sha256 cellar: :any_skip_relocation, mojave:        "bf031ee9b131fa3646b624bb6c84a0fc5b02f3abd6b693c5d5c488e58bb4e89c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cb43a6764a9caa2c39fba8bdd5ebe79c677923b004f8c2280213bb4afc298d17"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "be5cb10b00b668117f846d909914b119313ba79f9d0a7170c81b471f775aeed9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d00bf8d22edfe56f5352e59ff3c72d91e98dcf64d4acc3d1c7a5edbadd61402d"
+    sha256 cellar: :any_skip_relocation, monterey:       "d5c58965efe5beed36e7927edd81cf15446015ddf05a6e35dda1ad7e7c1b8ade"
+    sha256 cellar: :any_skip_relocation, big_sur:        "29df3472e1a5e57ed20f54cef3a5c4e87662e5c64f55338b01239741795447c3"
+    sha256 cellar: :any_skip_relocation, catalina:       "4e7259eeb5ddd924251e7c73f6ae6904804193e4fee4d49e95fc02f211d3ac2e"
+    sha256 cellar: :any_skip_relocation, mojave:         "bf031ee9b131fa3646b624bb6c84a0fc5b02f3abd6b693c5d5c488e58bb4e89c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cb43a6764a9caa2c39fba8bdd5ebe79c677923b004f8c2280213bb4afc298d17"
   end
 
   depends_on "go" => :build
