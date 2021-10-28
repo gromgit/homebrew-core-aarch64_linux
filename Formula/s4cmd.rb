@@ -10,11 +10,13 @@ class S4cmd < Formula
   head "https://github.com/bloomreach/s4cmd.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "40fa599bccc3e6c3a6cdf57d46373921cff6198cd77e849c9ac9749d51d9353a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9d6773e57ecb1cb40e3f5740d3caedf893ac750d1cc6e5d57fd83a1564e8aa96"
-    sha256 cellar: :any_skip_relocation, catalina:      "ed4069e849c2690b19808ea3c8864a52a4798306c39dbc2ce3c511e93334848e"
-    sha256 cellar: :any_skip_relocation, mojave:        "00e511f22fd4827fdcfd37313317d8bca3591801bfaf1a70efb6ca5a99ee7ea1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "52d71474b73d8f249e111f67e6288c7bdf2b74ebcae1150e01b8f7a60169c611"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5f7826d592fb2cd0063944e9d57cedf0176da034315bbd7f08f1455919d9d3ed"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "40fa599bccc3e6c3a6cdf57d46373921cff6198cd77e849c9ac9749d51d9353a"
+    sha256 cellar: :any_skip_relocation, monterey:       "397b415f897596dff9d85c6b7a25ebd4b0d5e9c8b3a37d5a340c2049945b0ef1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9d6773e57ecb1cb40e3f5740d3caedf893ac750d1cc6e5d57fd83a1564e8aa96"
+    sha256 cellar: :any_skip_relocation, catalina:       "ed4069e849c2690b19808ea3c8864a52a4798306c39dbc2ce3c511e93334848e"
+    sha256 cellar: :any_skip_relocation, mojave:         "00e511f22fd4827fdcfd37313317d8bca3591801bfaf1a70efb6ca5a99ee7ea1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "52d71474b73d8f249e111f67e6288c7bdf2b74ebcae1150e01b8f7a60169c611"
   end
 
   depends_on "python@3.10"
