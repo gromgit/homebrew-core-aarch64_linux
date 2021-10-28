@@ -9,11 +9,13 @@ class PassGitHelper < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7a6b1bc4bd28d16ec0b55484f42072fc2458ea043d2354c97cd7272a51160ab2"
-    sha256 cellar: :any_skip_relocation, big_sur:       "3fd61826747bde532d2b9e8898f75776d72b7eec02994d5ed4e2d0c42850cd93"
-    sha256 cellar: :any_skip_relocation, catalina:      "3fd61826747bde532d2b9e8898f75776d72b7eec02994d5ed4e2d0c42850cd93"
-    sha256 cellar: :any_skip_relocation, mojave:        "3fd61826747bde532d2b9e8898f75776d72b7eec02994d5ed4e2d0c42850cd93"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ba4eb72906bbc973d792d2378045213c85df621bca406ce06eb0cf0fce9d7e64"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7a6b1bc4bd28d16ec0b55484f42072fc2458ea043d2354c97cd7272a51160ab2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7a6b1bc4bd28d16ec0b55484f42072fc2458ea043d2354c97cd7272a51160ab2"
+    sha256 cellar: :any_skip_relocation, monterey:       "3fd61826747bde532d2b9e8898f75776d72b7eec02994d5ed4e2d0c42850cd93"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3fd61826747bde532d2b9e8898f75776d72b7eec02994d5ed4e2d0c42850cd93"
+    sha256 cellar: :any_skip_relocation, catalina:       "3fd61826747bde532d2b9e8898f75776d72b7eec02994d5ed4e2d0c42850cd93"
+    sha256 cellar: :any_skip_relocation, mojave:         "3fd61826747bde532d2b9e8898f75776d72b7eec02994d5ed4e2d0c42850cd93"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ba4eb72906bbc973d792d2378045213c85df621bca406ce06eb0cf0fce9d7e64"
   end
 
   depends_on "gnupg" => :test
