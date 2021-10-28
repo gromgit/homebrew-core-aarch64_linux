@@ -8,11 +8,13 @@ class Stgit < Formula
   head "https://github.com/stacked-git/stgit.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "cb37491ac4052c6153e35a1809ea7e54b3a31385112394dde1e56b40568bd720"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9232c43d2b1b93f7a39a292e2fa8c7f4dca5cac9516f1af5b4920728839bfcdb"
-    sha256 cellar: :any_skip_relocation, catalina:      "9232c43d2b1b93f7a39a292e2fa8c7f4dca5cac9516f1af5b4920728839bfcdb"
-    sha256 cellar: :any_skip_relocation, mojave:        "9232c43d2b1b93f7a39a292e2fa8c7f4dca5cac9516f1af5b4920728839bfcdb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cb37491ac4052c6153e35a1809ea7e54b3a31385112394dde1e56b40568bd720"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cb37491ac4052c6153e35a1809ea7e54b3a31385112394dde1e56b40568bd720"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cb37491ac4052c6153e35a1809ea7e54b3a31385112394dde1e56b40568bd720"
+    sha256 cellar: :any_skip_relocation, monterey:       "9232c43d2b1b93f7a39a292e2fa8c7f4dca5cac9516f1af5b4920728839bfcdb"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9232c43d2b1b93f7a39a292e2fa8c7f4dca5cac9516f1af5b4920728839bfcdb"
+    sha256 cellar: :any_skip_relocation, catalina:       "9232c43d2b1b93f7a39a292e2fa8c7f4dca5cac9516f1af5b4920728839bfcdb"
+    sha256 cellar: :any_skip_relocation, mojave:         "9232c43d2b1b93f7a39a292e2fa8c7f4dca5cac9516f1af5b4920728839bfcdb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cb37491ac4052c6153e35a1809ea7e54b3a31385112394dde1e56b40568bd720"
   end
 
   depends_on "asciidoc" => :build
