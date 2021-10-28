@@ -9,6 +9,7 @@ class Wasmer < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "f5b76fec36c982efda40c1fe32298efcc3f773a0407dcfc5df8cfef52ff77b16"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9634700f38301f64d011c3d82b007c125eb485405eb82a4e104dae24ae42a19b"
+    sha256 cellar: :any_skip_relocation, monterey:       "eeaa02d54747124c57919aaaeb2ddbfdaa89ec6866df252861d27f9bd67abb25"
     sha256 cellar: :any_skip_relocation, big_sur:        "b3cafc7fdb29abaab57fcb77b56eb4440886d8494a35afa96fe28bcea6f68cce"
     sha256 cellar: :any_skip_relocation, catalina:       "8fe7313e596a0dde1b09e478e1135077028304a65a3acd9c862c45f9cb22f251"
     sha256 cellar: :any_skip_relocation, mojave:         "472c4c0f35344b0104656ae6f2af41991d4cff8793d1f38b7e6bb597429332c1"
