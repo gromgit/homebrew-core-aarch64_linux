@@ -10,10 +10,12 @@ class Theharvester < Formula
   head "https://github.com/laramies/theHarvester.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "73eb7bef933ca067b0d403bb07ca6fe013fd28a9f5d9248a80c9b3a7c829e66b"
-    sha256 cellar: :any,                 big_sur:       "7f709efa01cd3890e9ff0b03deecba548d4fb7d751e367cd13c4fd02098ebf18"
-    sha256 cellar: :any,                 catalina:      "d085b44cb0e1d0370919c9754a6436f6a0a216079382f080fc99b67c50a8358d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e4c5f6015343b939dc9c4d024496efd4fe718856f5adb33b5b79e563ee37f90a"
+    sha256 cellar: :any,                 arm64_monterey: "028dbb9d7c2896755ef9693191a44f613e5e17132ae96caa6d8cf89a698b9d34"
+    sha256 cellar: :any,                 arm64_big_sur:  "73eb7bef933ca067b0d403bb07ca6fe013fd28a9f5d9248a80c9b3a7c829e66b"
+    sha256 cellar: :any,                 monterey:       "639f3080bf125cbcd1f57777e014a07382b4e747c4fece648aefdeea34192ea1"
+    sha256 cellar: :any,                 big_sur:        "7f709efa01cd3890e9ff0b03deecba548d4fb7d751e367cd13c4fd02098ebf18"
+    sha256 cellar: :any,                 catalina:       "d085b44cb0e1d0370919c9754a6436f6a0a216079382f080fc99b67c50a8358d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e4c5f6015343b939dc9c4d024496efd4fe718856f5adb33b5b79e563ee37f90a"
   end
 
   depends_on "maturin" => :build
