@@ -10,11 +10,13 @@ class Vit < Formula
   head "https://github.com/vit-project/vit.git", branch: "2.x"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1c1e4368f8918aa08a3571bcdfd2f96e0acab05e474040ed5e9f09e9dc809f64"
-    sha256 cellar: :any_skip_relocation, big_sur:       "cc1f63918e6786ff2a803aff29b4b0d5bf7d4790ee971a693ff4145f78eeb3ee"
-    sha256 cellar: :any_skip_relocation, catalina:      "fa97ec6434ae23a90c70ac42e4361b92fe7dbfc0597a5cbb3bddacdb7a95b7c5"
-    sha256 cellar: :any_skip_relocation, mojave:        "7e08b872f1007fb5b47545831cdbcd301417ad0c9a6a85e686f350fa272ac502"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f7e13e260c35eb8fc957abac0aec2b2186df75dcc76eb49b9193210f749d61c2"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d3b9d57ee07d921e32c9958cd179d99bd1884ff437bbbc942553d5f127ebe6ee"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1c1e4368f8918aa08a3571bcdfd2f96e0acab05e474040ed5e9f09e9dc809f64"
+    sha256 cellar: :any_skip_relocation, monterey:       "542201fe84ad1d399fb9a8aff21e60bf27697da6f6be0582414a9fffa6e58b2e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "cc1f63918e6786ff2a803aff29b4b0d5bf7d4790ee971a693ff4145f78eeb3ee"
+    sha256 cellar: :any_skip_relocation, catalina:       "fa97ec6434ae23a90c70ac42e4361b92fe7dbfc0597a5cbb3bddacdb7a95b7c5"
+    sha256 cellar: :any_skip_relocation, mojave:         "7e08b872f1007fb5b47545831cdbcd301417ad0c9a6a85e686f350fa272ac502"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f7e13e260c35eb8fc957abac0aec2b2186df75dcc76eb49b9193210f749d61c2"
   end
 
   depends_on "python@3.10"
