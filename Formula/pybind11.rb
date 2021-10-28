@@ -6,7 +6,7 @@ class Pybind11 < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "2b7261c0bd9680888ad093a8299d6ab8d18358717fa3d62a45ac4e9554b1982a"
+    sha256 cellar: :any_skip_relocation, all: "4bc5d0833740b4ed97059334e9780e398afbe2a65cbb35dea790cccf201e6e40"
   end
 
   depends_on "cmake" => :build
