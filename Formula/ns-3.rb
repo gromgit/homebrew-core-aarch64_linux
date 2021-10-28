@@ -6,11 +6,13 @@ class Ns3 < Formula
   license "GPL-2.0-only"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "dd893b1a986fc45c114d577f7ad34e0ab88c3d87848096a18bcf54070f8f3627"
-    sha256 cellar: :any, big_sur:       "d41f6602cec43fb95b1e7633dc5661509224380f632aed0af5e02e02928c4d1d"
-    sha256 cellar: :any, catalina:      "0cb4ec8959765ef9ad5057370209eb80ff8cc44054c8a780501e2849a2bf446f"
-    sha256 cellar: :any, mojave:        "2159e2209f5605a2b3619e7c56429faa1969bab07e5b939964a2365b4a3685d2"
-    sha256               x86_64_linux:  "190a0c1e80ce2be86042e35c5555a5a3fa035a135fecbe0425c770be6a60f96b"
+    sha256 cellar: :any, arm64_monterey: "d343727db81354f68bbbc2c56550e0d1c5c0c946aa87c5b30e2b0d90bf491a8e"
+    sha256 cellar: :any, arm64_big_sur:  "dd893b1a986fc45c114d577f7ad34e0ab88c3d87848096a18bcf54070f8f3627"
+    sha256 cellar: :any, monterey:       "aa7730331907e010e3ca90966328b16f257abd57d2c4179b0b7e091bedb2bc4d"
+    sha256 cellar: :any, big_sur:        "d41f6602cec43fb95b1e7633dc5661509224380f632aed0af5e02e02928c4d1d"
+    sha256 cellar: :any, catalina:       "0cb4ec8959765ef9ad5057370209eb80ff8cc44054c8a780501e2849a2bf446f"
+    sha256 cellar: :any, mojave:         "2159e2209f5605a2b3619e7c56429faa1969bab07e5b939964a2365b4a3685d2"
+    sha256               x86_64_linux:   "190a0c1e80ce2be86042e35c5555a5a3fa035a135fecbe0425c770be6a60f96b"
   end
 
   depends_on "boost" => :build
