@@ -5,6 +5,13 @@ class ClangFormatAT11 < Formula
   sha256 "ce8508e318a01a63d4e8b3090ab2ded3c598a50258cc49e2625b9120d4c03ea5"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "08840589ede996c8040c994dbf2fd257892fbab226721bd4212f759bb88ecf08"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d05a3e8c962d0170d27dd1cba184cd9fc7fabad7792e60402dc530c1849b33f6"
+    sha256 cellar: :any_skip_relocation, catalina:      "34600b6ed222dfaa3ad410e6abbbc2ec86da0cc8f6906156d443665f57472db0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fd67883368c8948f35545a2bce2356f8af91f1c518b17e5e41fc95d286dc9a00"
+  end
+
   depends_on "cmake" => :build
 
   uses_from_macos "ncurses"
