@@ -9,11 +9,13 @@ class Nox < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a37b99ed15b342899b853ff502449bbb13d4b187a852251771b3acacaa50771e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e9d1c726812f71425e03e25121ffa231a89b976e0092ef16e4b766c91ba81623"
-    sha256 cellar: :any_skip_relocation, catalina:      "49b715ed9d987ffce96e2c407b35350677f41c3ba32ef1a5ca19879273e70763"
-    sha256 cellar: :any_skip_relocation, mojave:        "978481e1a267922b2671d3bed4c0b12f26de52b07f339d568e3179ee66334fe4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "50100e24f771050fc407cb31d69cd8fadaad9a6fb8b7bbbf0456b22f50cfec73"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "67621154abe26b6b170a901820e05f05d0beb01d70d493fa7a96dda7fe1c5d69"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a37b99ed15b342899b853ff502449bbb13d4b187a852251771b3acacaa50771e"
+    sha256 cellar: :any_skip_relocation, monterey:       "a199c50c73de7b2d6cffda034617e8b8fd1d9b1d5455ffc5ab056c1db80530e3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e9d1c726812f71425e03e25121ffa231a89b976e0092ef16e4b766c91ba81623"
+    sha256 cellar: :any_skip_relocation, catalina:       "49b715ed9d987ffce96e2c407b35350677f41c3ba32ef1a5ca19879273e70763"
+    sha256 cellar: :any_skip_relocation, mojave:         "978481e1a267922b2671d3bed4c0b12f26de52b07f339d568e3179ee66334fe4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "50100e24f771050fc407cb31d69cd8fadaad9a6fb8b7bbbf0456b22f50cfec73"
   end
 
   depends_on "python@3.10"
