@@ -9,10 +9,12 @@ class Nbdime < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "711c4f57c629452fa9719d154d2f1006e8714a7c26615123ef94d0e1220520ba"
-    sha256 cellar: :any_skip_relocation, big_sur:       "792a6190b8b30e487f129e79d579561dfd77c97f5b8504f6ce475d34a33bd29e"
-    sha256 cellar: :any_skip_relocation, catalina:      "8596eaba7e86ee3a91ee1bf007a5a3ade64fd64d3fb696c386ccf6b0dea7fe72"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ac96f40d3656335cb6cb60d440d37a76e12ec95186aa4d61ef222a2db1dbf1c5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f46a5d70bb660e89d011bb983484c6a21d9bb10ac347c1b871d73a26c3e40952"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "711c4f57c629452fa9719d154d2f1006e8714a7c26615123ef94d0e1220520ba"
+    sha256 cellar: :any_skip_relocation, monterey:       "4ee3809058758db7cbc46427099770b6c500e8162f935fccd3b099b95565d0a8"
+    sha256 cellar: :any_skip_relocation, big_sur:        "792a6190b8b30e487f129e79d579561dfd77c97f5b8504f6ce475d34a33bd29e"
+    sha256 cellar: :any_skip_relocation, catalina:       "8596eaba7e86ee3a91ee1bf007a5a3ade64fd64d3fb696c386ccf6b0dea7fe72"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ac96f40d3656335cb6cb60d440d37a76e12ec95186aa4d61ef222a2db1dbf1c5"
   end
 
   depends_on "python@3.9"
