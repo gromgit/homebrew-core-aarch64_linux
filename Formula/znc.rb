@@ -7,11 +7,13 @@ class Znc < Formula
   revision 4
 
   bottle do
-    sha256 arm64_big_sur: "f6976cbbb65b4261db7ca3ab26c4f442096dde743a9fd63afe282d551faa07b8"
-    sha256 big_sur:       "5ead56d8a9fd75e5c76cf96ffc0351c4a7a6cb91d6e6ae1dc35e55c8c410e734"
-    sha256 catalina:      "6f51d8c1b693434a4faf554c20bcf05ba98cb147058fd1ba35a666839329dda6"
-    sha256 mojave:        "d8dc6d3095a4fc27d77baa19cf870922374b701a41cf503170f7f99012d44acf"
-    sha256 x86_64_linux:  "38164d05dbeec581b58630e44faec2766290d7e8c50959e8559a5fc317b5bb65"
+    sha256 arm64_monterey: "48bbc131756030fa8073447e12ac4d17dd02ef000510bb60d423bfbdee8618f0"
+    sha256 arm64_big_sur:  "f6976cbbb65b4261db7ca3ab26c4f442096dde743a9fd63afe282d551faa07b8"
+    sha256 monterey:       "557bd2025ab422e1f45779d35ffc7448f2f3be13ec5bdf686f5416c50fe67f46"
+    sha256 big_sur:        "5ead56d8a9fd75e5c76cf96ffc0351c4a7a6cb91d6e6ae1dc35e55c8c410e734"
+    sha256 catalina:       "6f51d8c1b693434a4faf554c20bcf05ba98cb147058fd1ba35a666839329dda6"
+    sha256 mojave:         "d8dc6d3095a4fc27d77baa19cf870922374b701a41cf503170f7f99012d44acf"
+    sha256 x86_64_linux:   "38164d05dbeec581b58630e44faec2766290d7e8c50959e8559a5fc317b5bb65"
   end
 
   head do
