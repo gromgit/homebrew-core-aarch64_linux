@@ -12,10 +12,12 @@ class Pnetcdf < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "e15cc2caf8c4aeffa65126c52e3dceffdf6fc93dee09eed8dae9db2085756f38"
-    sha256 big_sur:       "c2f92ef84469ce44c4b502c72120a750ff64eb06b08e0ed6ebdbf74c11f026d2"
-    sha256 catalina:      "4813fb99e57bd2399fe44683d58cae95638ee4a7837ef00a0fb7ef9e7151842c"
-    sha256 mojave:        "845ad46ce85c49bb2e680fb2f3313bf86bce98d4dc0756be208dc60c678fb429"
+    sha256 arm64_monterey: "2e94a26e3540b4281fce3cef0c1e965447ac4b4bd090eb816f0f91a9b0a238e2"
+    sha256 arm64_big_sur:  "e15cc2caf8c4aeffa65126c52e3dceffdf6fc93dee09eed8dae9db2085756f38"
+    sha256 monterey:       "7c928b2dc13add9556400b02dcc3cfdc39f89d2128896c7f401f7b1ffca16c0d"
+    sha256 big_sur:        "c2f92ef84469ce44c4b502c72120a750ff64eb06b08e0ed6ebdbf74c11f026d2"
+    sha256 catalina:       "4813fb99e57bd2399fe44683d58cae95638ee4a7837ef00a0fb7ef9e7151842c"
+    sha256 mojave:         "845ad46ce85c49bb2e680fb2f3313bf86bce98d4dc0756be208dc60c678fb429"
   end
 
   depends_on "gcc"
