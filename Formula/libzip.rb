@@ -12,11 +12,12 @@ class Libzip < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "c5842b42b9cbec01d11657ce19789f78b3f07e0350add80e894e57682a7ea3ba"
-    sha256 cellar: :any,                 big_sur:       "6f3266d5fd14899d3c67dcc693365fda4531f17dc414039c66a8ad4f0becc819"
-    sha256 cellar: :any,                 catalina:      "d708cee97ad3536abd1c4ab0fc4108477c04d944db47c9a427772bc23027d427"
-    sha256 cellar: :any,                 mojave:        "5e54afd324365a37e9d6f4adec4ac6ea727012eb7b23931c94e2cf59b95b1bc5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "095cf6867438b44257ea4c38e19ad1f26423ad64f9a76c4139983039ee4607ab"
+    sha256 cellar: :any,                 arm64_monterey: "e9e8c08f4a92b59d52825dd58414ef58b59561c02aa68a4081f59b8a426e78ab"
+    sha256 cellar: :any,                 arm64_big_sur:  "c5842b42b9cbec01d11657ce19789f78b3f07e0350add80e894e57682a7ea3ba"
+    sha256 cellar: :any,                 big_sur:        "6f3266d5fd14899d3c67dcc693365fda4531f17dc414039c66a8ad4f0becc819"
+    sha256 cellar: :any,                 catalina:       "d708cee97ad3536abd1c4ab0fc4108477c04d944db47c9a427772bc23027d427"
+    sha256 cellar: :any,                 mojave:         "5e54afd324365a37e9d6f4adec4ac6ea727012eb7b23931c94e2cf59b95b1bc5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "095cf6867438b44257ea4c38e19ad1f26423ad64f9a76c4139983039ee4607ab"
   end
 
   depends_on "cmake" => :build
