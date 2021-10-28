@@ -10,10 +10,12 @@ class Statik < Formula
   head "https://github.com/thanethomson/statik.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "32ece3f4b25e763bf58b788f84eee819d7239f82cca4ecc28a30a72e01b8444f"
-    sha256 cellar: :any,                 big_sur:       "84b192802fd3f44c3601aade2c1d47594c9369d3395534192d71e96ead3e639d"
-    sha256 cellar: :any,                 catalina:      "6595972b52fc9ace266f23ef30cf0b8b1f35738ec6722252b97560801d858a13"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "49cda36e4e735309ce918096589820e44039a1779f34b861646475a31782ab7b"
+    sha256 cellar: :any,                 arm64_monterey: "05ec193de764ecd8fe6c64d674362c70ce131cbe0886e9440b3862c48a97a8d8"
+    sha256 cellar: :any,                 arm64_big_sur:  "32ece3f4b25e763bf58b788f84eee819d7239f82cca4ecc28a30a72e01b8444f"
+    sha256 cellar: :any,                 monterey:       "6df37e96a3831dc17186fee8bad6756163601a06f9dc54b76ae96fb8516e5ab7"
+    sha256 cellar: :any,                 big_sur:        "84b192802fd3f44c3601aade2c1d47594c9369d3395534192d71e96ead3e639d"
+    sha256 cellar: :any,                 catalina:       "6595972b52fc9ace266f23ef30cf0b8b1f35738ec6722252b97560801d858a13"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "49cda36e4e735309ce918096589820e44039a1779f34b861646475a31782ab7b"
   end
 
   depends_on "libpq"
