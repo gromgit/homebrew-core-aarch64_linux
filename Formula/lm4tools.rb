@@ -6,6 +6,7 @@ class Lm4tools < Formula
   license "GPL-2.0"
 
   bottle do
+    sha256 cellar: :any,                 monterey:     "1bef37edda64611296ac2ba9df91d92d082dd2da0cac5673ef8735d0704330a8"
     sha256 cellar: :any,                 big_sur:      "2fca09b10fef4d8304ba4acdce164bbfc5f4fa9b8dd1eb6fcb60b8a58c7ac8d3"
     sha256 cellar: :any,                 catalina:     "5d2e503a9c94226f9d3c6d1da1a54424be1c9a16279bcc94253ab0e2da2a3718"
     sha256 cellar: :any,                 mojave:       "a0bb88705b97875de770b1979b5480521007b25efd627f092e178941b8ecd4ec"
