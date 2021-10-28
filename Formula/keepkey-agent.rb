@@ -9,10 +9,12 @@ class KeepkeyAgent < Formula
   revision 5
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d666d772a79bdf2b128adcc65760f9eb9803d3e7dd17a4aba4bad155f65a1f31"
-    sha256 cellar: :any_skip_relocation, big_sur:       "648c7a6bee2065718586b392941e3881e4d10d7971e785df15b63c3c51806b56"
-    sha256 cellar: :any_skip_relocation, catalina:      "f5c1be64474b731cf09cd8066c0ef6b33c28a00803bef23b856a24fee92fd1f8"
-    sha256 cellar: :any_skip_relocation, mojave:        "900d7ba894e9aa98c285106037db89bf3ddb1a3c08f761781d37f227f2ab960b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9ec1b531c8705fe435f31f16fce8ad100aca11644c5d33e05df1e70056dd3121"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d666d772a79bdf2b128adcc65760f9eb9803d3e7dd17a4aba4bad155f65a1f31"
+    sha256 cellar: :any_skip_relocation, monterey:       "c8dbfb2ce54eacac0cf75615bdf23dd2b5493defc5931ba53825c71a4d53fa71"
+    sha256 cellar: :any_skip_relocation, big_sur:        "648c7a6bee2065718586b392941e3881e4d10d7971e785df15b63c3c51806b56"
+    sha256 cellar: :any_skip_relocation, catalina:       "f5c1be64474b731cf09cd8066c0ef6b33c28a00803bef23b856a24fee92fd1f8"
+    sha256 cellar: :any_skip_relocation, mojave:         "900d7ba894e9aa98c285106037db89bf3ddb1a3c08f761781d37f227f2ab960b"
   end
 
   depends_on "libusb"
