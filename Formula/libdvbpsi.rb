@@ -12,6 +12,7 @@ class Libdvbpsi < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "a61aaac7ff201fdd38a929556c6a64a69993150891690f8ea9532e1b9c9c9ae3"
+    sha256 cellar: :any,                 monterey:      "16bdd90a4f0734be90ab9e7c0a955913f07ee21dc41cf91666be43301661b1a4"
     sha256 cellar: :any,                 big_sur:       "255b960c43fac14b8a50af513ca3b2925cdfa0e71efa61d2eced2fd172fe8dff"
     sha256 cellar: :any,                 catalina:      "b6e6f300bbc36fabf785f74abb083c5cfc3f91fdd51ee7bd058cc579e709c78d"
     sha256 cellar: :any,                 mojave:        "26298540d01f52628385c83cac4b6666543af4cc059fa7ad5b3a8bd458955628"
