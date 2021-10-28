@@ -16,10 +16,12 @@ class Cmake < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "86199f003e396fc43d483dfae6322be8aad0a8b3a6501bb20af916a60027a78f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b7170cb38b7eae4e2b115824984cef98e004366c5910fe7cee189a62dac58d13"
-    sha256 cellar: :any_skip_relocation, catalina:      "2dde258f7e2f20077c79996d0c14a3899b3aa9db34f57ad9aa96d420172fbd80"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "13702d526428c2f42074567af2730c649eb76da686cc22c3a2b5ef7c4464d845"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c86a0bb0e37c293e2d4475519d28f2784c430e871f74969a1a2afeb64b540a7d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "86199f003e396fc43d483dfae6322be8aad0a8b3a6501bb20af916a60027a78f"
+    sha256 cellar: :any_skip_relocation, monterey:       "d6fb0df5818454f9f9074552eb06c34146da91c5212c16057b544a3677a29d9a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b7170cb38b7eae4e2b115824984cef98e004366c5910fe7cee189a62dac58d13"
+    sha256 cellar: :any_skip_relocation, catalina:       "2dde258f7e2f20077c79996d0c14a3899b3aa9db34f57ad9aa96d420172fbd80"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "13702d526428c2f42074567af2730c649eb76da686cc22c3a2b5ef7c4464d845"
   end
 
   uses_from_macos "ncurses"
