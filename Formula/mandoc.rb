@@ -13,13 +13,10 @@ class Mandoc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "841fc0ebdaa5c927fda0ab1e7dea5a882b10dd7a138f546b271328dcef89f00f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "961503c6406f83c6e7969e5dbdfd8788caf68d0ccc613b81d198233f9ca42e60"
-    sha256 cellar: :any_skip_relocation, monterey:       "469b02be461020a0c9c106edddcae127f155f40eef4c37d16b27f73fd4bab2cc"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e5f577c8cbbe699076db1412944b56ee5c9d6537cef4d69bb4988ac3a1be74b1"
-    sha256 cellar: :any_skip_relocation, catalina:       "8a5308647cb76d0c9a2ff8d6c59cb52319fbfd0eba1135fced543e5f9b3a63a7"
-    sha256 cellar: :any_skip_relocation, mojave:         "1b7c8c7c3cdf95bf6dcb0300aecbfbc591ea48588d23fcf65b8f61f0e65cc86c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2c7c708347a1805a8e1482512bd475a50c8ea2f2030fca56819ada67b1b3c513"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1a009788bd3b10af69f0563904143dda9a41f0872514ac7e64e8a08a46fcf5fb"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a4f63ae6f10fe8912986b92fecc22f7421ed0bad4495811f6159b895d5b42f6d"
+    sha256 cellar: :any_skip_relocation, catalina:      "0190c6cc439cedfb1eb83d60b5be68974e12b993bafc87387ced2b948b526a2c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "048e9149279a52292a203c6e6b4fd688b7b32501b8e05d806a5708587526a83c"
   end
 
   uses_from_macos "zlib"
