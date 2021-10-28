@@ -8,6 +8,7 @@ class Click < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "08fffc5fa5f08e292d5ebb07ccbd3d8cfe2b7ec70d06420377c94e849b4bc3c3"
+    sha256 cellar: :any_skip_relocation, monterey:       "c96d461641e892fcf31ce73d018abc1910a479c2d715521dda44c5f2867baba0"
     sha256 cellar: :any_skip_relocation, big_sur:        "aa74cec2f0d6854791b46d54adbdb96bff085b67278629695f0ac266eef54717"
     sha256 cellar: :any_skip_relocation, catalina:       "59c72a4b00a3bf477cd3d65573175d6009112273b715b30d49be7bc694fdcf80"
     sha256 cellar: :any_skip_relocation, mojave:         "b7f4b485ff0eb502694555d0f85096880e6a0355b7e69adf2bb5075d2396ade1"
