@@ -12,11 +12,13 @@ class Kakoune < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "cf56529386ac094bf0cefac9c50a60a7234127c9d1c3ed22e853f8cf917dee91"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6fdb7731b67b916f43c85d1674982a5801af161878446eba999de72a492e586e"
-    sha256 cellar: :any_skip_relocation, catalina:      "cdd59d3c8978b2c8f2ca0899867be322ce4d23eac3600a3b0684e199d5020e42"
-    sha256 cellar: :any_skip_relocation, mojave:        "af3a8f431b72c684b26bbbd115bf08ad9d8c12b95e83f7c0cea3f8881946d6a9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9797d57cd6184e1b12a2c6120ccbfc51bbb369cf932400c0e556d0f9074b5d8e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ff2329b80200561222ad6bda6c937beb0b99c8fc4d7a142be30a4e8572598d18"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cf56529386ac094bf0cefac9c50a60a7234127c9d1c3ed22e853f8cf917dee91"
+    sha256 cellar: :any_skip_relocation, monterey:       "4ebacadf80c19fc0b3dc06d789def5cf7cea0d34679ce189bb9bdc57948292df"
+    sha256 cellar: :any_skip_relocation, big_sur:        "6fdb7731b67b916f43c85d1674982a5801af161878446eba999de72a492e586e"
+    sha256 cellar: :any_skip_relocation, catalina:       "cdd59d3c8978b2c8f2ca0899867be322ce4d23eac3600a3b0684e199d5020e42"
+    sha256 cellar: :any_skip_relocation, mojave:         "af3a8f431b72c684b26bbbd115bf08ad9d8c12b95e83f7c0cea3f8881946d6a9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9797d57cd6184e1b12a2c6120ccbfc51bbb369cf932400c0e556d0f9074b5d8e"
   end
 
   depends_on macos: :high_sierra # needs C++17
