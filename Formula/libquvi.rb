@@ -11,14 +11,16 @@ class Libquvi < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "167718e2a3981fdbfa9b34cddc3c94ed4e0c80f4cbe82749535cd7b7c644d9a5"
-    sha256 big_sur:       "bcabb1b6f7812088c7dce8c919e1200ebc8f726ada4e5dadbf813ae20ec35835"
-    sha256 catalina:      "6f98f88d5f98ef09c1aee13b24e89be731c79170b3bce5af1617a5309eade725"
-    sha256 mojave:        "4916926b6bc9b2180ec1cf06bb24bc76eb9d342c748b4e36ddc65ffad1933cbd"
-    sha256 high_sierra:   "bb5a4201afd814e87ee496b8cefbcf126f0245d7b3c600039e71e7b355115bf7"
-    sha256 sierra:        "9968d412860717f837082f0e9d225b741d8430a99a3d1c4e12b7a1cdc95cd456"
-    sha256 el_capitan:    "d91506a098fa564598b4aecbad97a2fa30728fafd8ad82bf8c4ff4bedb8d6c0a"
-    sha256 x86_64_linux:  "86842f87a749f377843293787a9ce31911d10715e08e783cebe404d8ecd64e21"
+    sha256 arm64_monterey: "c7334e914191fed570ebfb0c19f3d99c2d6558d9e585f6c7618507e8fa768bf4"
+    sha256 arm64_big_sur:  "167718e2a3981fdbfa9b34cddc3c94ed4e0c80f4cbe82749535cd7b7c644d9a5"
+    sha256 monterey:       "f7c71a0bd940fef6b1334b4fe4f3f8022cffb10adffc64a5499b6ca20b420026"
+    sha256 big_sur:        "bcabb1b6f7812088c7dce8c919e1200ebc8f726ada4e5dadbf813ae20ec35835"
+    sha256 catalina:       "6f98f88d5f98ef09c1aee13b24e89be731c79170b3bce5af1617a5309eade725"
+    sha256 mojave:         "4916926b6bc9b2180ec1cf06bb24bc76eb9d342c748b4e36ddc65ffad1933cbd"
+    sha256 high_sierra:    "bb5a4201afd814e87ee496b8cefbcf126f0245d7b3c600039e71e7b355115bf7"
+    sha256 sierra:         "9968d412860717f837082f0e9d225b741d8430a99a3d1c4e12b7a1cdc95cd456"
+    sha256 el_capitan:     "d91506a098fa564598b4aecbad97a2fa30728fafd8ad82bf8c4ff4bedb8d6c0a"
+    sha256 x86_64_linux:   "86842f87a749f377843293787a9ce31911d10715e08e783cebe404d8ecd64e21"
   end
 
   depends_on "pkg-config" => :build
