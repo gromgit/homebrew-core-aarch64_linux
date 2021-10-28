@@ -6,13 +6,10 @@ class Sniffglue < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "516b01be0350955bcf0c629e49968ed80d3318ee4e248bbcde282032e56ffff0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6867fe5fd18b395984786d6b385fe40f7a4e8e2cb445b10160e0b5909c22fb2f"
-    sha256 cellar: :any_skip_relocation, monterey:       "6db7d32caef9742b10ccfac69862148281f4e2384f667eedc128196739613bc8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f5c6e604ff357fc18299d58ee7fabaf5367c96d74ead8eec5e3fe48a3bc5a094"
-    sha256 cellar: :any_skip_relocation, catalina:       "1bd82eb72d4bedc1f6ea571152a56702512aefba276ee91fefa6d615e4d40550"
-    sha256 cellar: :any_skip_relocation, mojave:         "5f5c54123a64a027c297df1bb4cc644aef975dc7d037ca06d02b26995c194b48"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f59cd66e73489c7847a0f3ee6f637eadd86eac9b5f336bc07058a76dfb62b102"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b9dff099e2cbd6d5314cde13f133331d590f42d40743ba69981c269957e5e95e"
+    sha256 cellar: :any_skip_relocation, big_sur:       "572f8ca8ce788d8b12b6585ff01ea28c7c88f919b98d9aada7497afe20c9ce58"
+    sha256 cellar: :any_skip_relocation, catalina:      "ff12c1cf459118bac72b2dc0e27a46acdaeaaa2177d9c87ffb0b4950d6a9c5b8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0a72e4880dc7c5a4017b7c5b05167a88b39ac24d08b286ce6755b92f851a0bcc"
   end
 
   depends_on "rust" => :build
