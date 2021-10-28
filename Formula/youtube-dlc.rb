@@ -18,6 +18,7 @@ class YoutubeDlc < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "d5b0155e1929150e4a35fc02513fc105d25e03fe778edd6db94302d9c50dcdd3"
     sha256 cellar: :any_skip_relocation, catalina:      "d18e35ee7120d9d76932338981585f68f42ff16ef91268d02ef58de4fb9f5c42"
     sha256 cellar: :any_skip_relocation, mojave:        "044a2108153ef9ce3e4e5e7b3e6602c5789ab6f4449511050dbdc4a805e6077e"
+    sha256 cellar: :any_skip_relocation, all:           "4add7c7f13dc728e71280c0c00f7ab7513126539c82da4bbaa076667b6bfc1ee"
   end
 
   depends_on "pandoc" => :build
