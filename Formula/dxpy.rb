@@ -9,10 +9,12 @@ class Dxpy < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "fb3d224e3e660cae2f021232be02ff2ffc258379e20ed9af88cdc65fd7fd9fa5"
-    sha256 cellar: :any,                 big_sur:       "e68d4a02d3470e2ee828736ab73e0c540b43fe72f7aec607dd7d9f9ea87557ad"
-    sha256 cellar: :any,                 catalina:      "f2980530618f221dcb7eb280256e401e44e0ce42e90d348a45eb079a26dc9bdb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d6e86600cd9d1090e051f7c8cc0930d66a1a3a3a36bb94af0a3cb61d974b0bc2"
+    sha256 cellar: :any,                 arm64_monterey: "426b82c2a6d4fe62f9ba88e0c039acb3e12a1d77ef5b8a2032a45d88a97e2d10"
+    sha256 cellar: :any,                 arm64_big_sur:  "fb3d224e3e660cae2f021232be02ff2ffc258379e20ed9af88cdc65fd7fd9fa5"
+    sha256 cellar: :any,                 monterey:       "492b98f476be05f5893630406626f5a7a0ecb5d45561fa466bb878dc0e13c6e4"
+    sha256 cellar: :any,                 big_sur:        "e68d4a02d3470e2ee828736ab73e0c540b43fe72f7aec607dd7d9f9ea87557ad"
+    sha256 cellar: :any,                 catalina:       "f2980530618f221dcb7eb280256e401e44e0ce42e90d348a45eb079a26dc9bdb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d6e86600cd9d1090e051f7c8cc0930d66a1a3a3a36bb94af0a3cb61d974b0bc2"
   end
 
   depends_on "python@3.9"
