@@ -9,10 +9,12 @@ class Pywhat < Formula
   head "https://github.com/bee-san/pyWhat.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "922f5c671360e9194d6db373c66b4dbee61ea0808146a8d19a51b085fc7e6916"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0d05863a537b8c854d38cb45d3d9b7b3463e1268cc5ceba9f25e8437b58dac2f"
-    sha256 cellar: :any_skip_relocation, catalina:      "e8b46ef709fb70dad845cd57abbbc56603c23108de4a459485792b62fedb1ec4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0097a14d0dfedd15ad7fa2a156080dbe69975b207211a658153f33639c0ef236"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d41a324b9fb081caeb2f00123dfc792ab6fa1e9c5bb0dfbb5217ecca08461494"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "922f5c671360e9194d6db373c66b4dbee61ea0808146a8d19a51b085fc7e6916"
+    sha256 cellar: :any_skip_relocation, monterey:       "39f643dee920b765eef26aa0c48a712698321bf3506b51575ac8a156a005be91"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0d05863a537b8c854d38cb45d3d9b7b3463e1268cc5ceba9f25e8437b58dac2f"
+    sha256 cellar: :any_skip_relocation, catalina:       "e8b46ef709fb70dad845cd57abbbc56603c23108de4a459485792b62fedb1ec4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0097a14d0dfedd15ad7fa2a156080dbe69975b207211a658153f33639c0ef236"
   end
 
   depends_on "python@3.9"
