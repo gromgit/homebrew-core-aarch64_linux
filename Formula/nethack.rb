@@ -17,12 +17,14 @@ class Nethack < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "9d9c5a416f9d3c7770a7d6243d504f05d9fbff7bba1340b39f58ba1b61438cd5"
-    sha256 big_sur:       "d4db0fc0aa73dd80ef2e32a521db2f67d597606217713dd5644adec265a7cab5"
-    sha256 catalina:      "69418bfcba43b656118140a7e50992772567c4c2ab4827ce0af343892a149945"
-    sha256 mojave:        "4d186d190dcab9cc719a3868aa73a6c311407f8c1510e1d3bfd185a8070177bc"
-    sha256 high_sierra:   "6b6b5eb3571c69d31ac0c88f42acae3cea5f42ec513bafd03960db8c9f994177"
-    sha256 x86_64_linux:  "dec198f62385da0ed939d44e47a0dad22c5069f146b682200a12b053ce729432"
+    sha256 arm64_monterey: "036088c874f5a27701745acae3082df04828dc9769e1c92b439ff97f45dae67f"
+    sha256 arm64_big_sur:  "9d9c5a416f9d3c7770a7d6243d504f05d9fbff7bba1340b39f58ba1b61438cd5"
+    sha256 monterey:       "071e1e9085c91831f95fe604153629dfcd43c6904e65da35d3a210ae06c281a9"
+    sha256 big_sur:        "d4db0fc0aa73dd80ef2e32a521db2f67d597606217713dd5644adec265a7cab5"
+    sha256 catalina:       "69418bfcba43b656118140a7e50992772567c4c2ab4827ce0af343892a149945"
+    sha256 mojave:         "4d186d190dcab9cc719a3868aa73a6c311407f8c1510e1d3bfd185a8070177bc"
+    sha256 high_sierra:    "6b6b5eb3571c69d31ac0c88f42acae3cea5f42ec513bafd03960db8c9f994177"
+    sha256 x86_64_linux:   "dec198f62385da0ed939d44e47a0dad22c5069f146b682200a12b053ce729432"
   end
 
   uses_from_macos "bison" => :build
