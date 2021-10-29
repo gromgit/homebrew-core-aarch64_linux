@@ -14,10 +14,12 @@ class EmacsClangCompleteAsync < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "9d8ebc3478af3719304ea88c3b782cdc7344df0d76970d705d3c1468d15d5ea3"
-    sha256 cellar: :any,                 big_sur:       "faedcebad555182998cba925ad4bc965d329134320b307f34f17a031e96a3997"
-    sha256 cellar: :any,                 catalina:      "69789c4791f2ea78e6e35b20029994ed58b52ecb93d94d45f71b64db67970494"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "af452df504f3a00eed290079c2e616914a90abc21850de94d769fefb5fa2f572"
+    sha256 cellar: :any,                 arm64_monterey: "527869861adf5cd506ddfdddcd3c6ea99c501f1e6834f6c91f8172064bc03da7"
+    sha256 cellar: :any,                 arm64_big_sur:  "9d8ebc3478af3719304ea88c3b782cdc7344df0d76970d705d3c1468d15d5ea3"
+    sha256 cellar: :any,                 monterey:       "b10b046684973fa4ef52c3e501a8b932f98503e32cd60a90aa813cb8a54b1060"
+    sha256 cellar: :any,                 big_sur:        "faedcebad555182998cba925ad4bc965d329134320b307f34f17a031e96a3997"
+    sha256 cellar: :any,                 catalina:       "69789c4791f2ea78e6e35b20029994ed58b52ecb93d94d45f71b64db67970494"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "af452df504f3a00eed290079c2e616914a90abc21850de94d769fefb5fa2f572"
   end
 
   depends_on "llvm"
