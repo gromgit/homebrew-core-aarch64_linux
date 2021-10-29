@@ -6,10 +6,12 @@ class OsmiumTool < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "bb643b8ff8b55a149f0fb6b57c1abd347fdca943a6a8d44baf34cc123bf47b9a"
-    sha256 cellar: :any, big_sur:       "589eb5fd205fe081a5fa470f44628a186c1ac0c9d6546d7aa02308ad32bd83f8"
-    sha256 cellar: :any, catalina:      "3c8ed5d3feb01942592c9ecbc6e32e5be0fbcce61411e75c7240f0d2d6ff2446"
-    sha256 cellar: :any, mojave:        "0c1d2dcf31540f5a0218d9413dc7b990d3dd9e21d5d261a3ff617365cec6d0ed"
+    sha256 cellar: :any, arm64_monterey: "a1e85864e81239d90e4e0592fcd1fe7eab4118d06f34e4b6ea4560fb9ec66294"
+    sha256 cellar: :any, arm64_big_sur:  "bb643b8ff8b55a149f0fb6b57c1abd347fdca943a6a8d44baf34cc123bf47b9a"
+    sha256 cellar: :any, monterey:       "ae1f3ea8a20597ec99ba4e43d46de8d45c0416dac1fed9464e111a5e6c1d307a"
+    sha256 cellar: :any, big_sur:        "589eb5fd205fe081a5fa470f44628a186c1ac0c9d6546d7aa02308ad32bd83f8"
+    sha256 cellar: :any, catalina:       "3c8ed5d3feb01942592c9ecbc6e32e5be0fbcce61411e75c7240f0d2d6ff2446"
+    sha256 cellar: :any, mojave:         "0c1d2dcf31540f5a0218d9413dc7b990d3dd9e21d5d261a3ff617365cec6d0ed"
   end
 
   depends_on "cmake" => :build
