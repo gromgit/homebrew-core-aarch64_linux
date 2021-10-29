@@ -11,6 +11,7 @@ class Dcmtk < Formula
   end
 
   bottle do
+    sha256 monterey:     "1dc612a4f94de16b6d967b0d7bfddbd887524a38b660d6be77900f74927d5dc8"
     sha256 big_sur:      "14f0ad1188c09414ce0c38a5b1daad58031c490dedcb0e602d3a9d8946a7513c"
     sha256 catalina:     "b7169841e5ae53c3641392130e2d72190a859eb566e0445d16f58131a0bfe34a"
     sha256 mojave:       "ba2af245944fd723362c4fd758aaa90a9f3b651e3422ce1326078bcdc4cad093"
