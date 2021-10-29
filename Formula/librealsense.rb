@@ -12,6 +12,7 @@ class Librealsense < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 monterey:     "bfcc6fb89a8cac2db7fe0d30b84c4d7b1585f02e3216f43435602ea484bb3d8f"
     sha256 cellar: :any,                 big_sur:      "4c696d7911ab9321c26df52208dd433824e855f50b7a019018c980771c53b5ba"
     sha256 cellar: :any,                 catalina:     "e32b24f59e07ceaac9482a1e1e961f4a0713ff045958e2d5f41872899f6bb4b8"
     sha256 cellar: :any,                 mojave:       "6353572f45ee221eea411c12fb1ba1deeb24b9eea1cf8b15e860886012a000c7"
