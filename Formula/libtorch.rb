@@ -15,6 +15,8 @@ class Libtorch < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "afa592ad195e8b109d924bf9a1a22221eaa859a4ef7d172777d3fb0875b1459c"
+    sha256 cellar: :any,                 arm64_big_sur:  "c94d63a5075edcb43031d3114acdd2f9084bb825f9b48a226b5bffa607051985"
+    sha256 cellar: :any,                 monterey:       "4850c8fd3d09c6a4be680c496b3f739c75638c61afc47924cf08d7f31fbfc7e2"
     sha256 cellar: :any,                 big_sur:        "259a9ade3880026cddffbadac967405d7a8900cce1d43739456f4acdd826a864"
     sha256 cellar: :any,                 catalina:       "49c7b2cbd6f18a984be41fe3412a7928e54533acb171abdc89311cff0eb9eab5"
     sha256 cellar: :any,                 mojave:         "65e1c0c4b62cbc28eb547f4139f8f42e007c9ad940475cbae74791b6dcb747a1"
