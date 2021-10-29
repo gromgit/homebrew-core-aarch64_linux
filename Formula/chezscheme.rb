@@ -7,6 +7,7 @@ class Chezscheme < Formula
   revision 1
 
   bottle do
+    sha256                               monterey:     "d2b21e6ec49b1f2130457fb39b5e2e894fa4a8e625474cad53e5decbf1f109af"
     sha256                               big_sur:      "8eae7ff25a1c3b5a7d4192048f53f51904b997eda6c4c7a558e19a0cd461babe"
     sha256                               catalina:     "54d8553a07253c0215f8654f1c54e9ac03734160544ac9823896601e86dd2c81"
     sha256                               mojave:       "a1f551093249b315e309f75e4174995b2d7f475376dc97c78f43e5302ec4b3a6"
