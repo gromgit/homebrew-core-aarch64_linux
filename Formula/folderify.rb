@@ -10,10 +10,9 @@ class Folderify < Formula
   head "https://github.com/lgarron/folderify.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "683eeb71c2dd1f10514d9a7223493d6f99773617ede84ed8b3dfe3f396342b83"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9cd792687f566751d98e81b7a4c0d48ae0099273f4b99fc7743f2337f92dfe0c"
-    sha256 cellar: :any_skip_relocation, catalina:      "ddf121696c9d8a78208377ea2abbba6cd45734b6f1dde623af4f87b2dd6244f8"
-    sha256 cellar: :any_skip_relocation, mojave:        "b83fde65d2dc9eec57207c31ac7e6f89e5bac43426c0ce73776b55c57f0e2eb0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f23140f05c7945a01956c497f99afb19d2311d698ed8517700ff6a9a258440cb"
+    sha256 cellar: :any_skip_relocation, big_sur:       "de3a4f0cf34914c5e213575c455fe118d68817cb8d00646af56974fc95043a89"
+    sha256 cellar: :any_skip_relocation, catalina:      "0b8b02a03816f925f515c998cac99c2c37111e1e329fffe6f1aa413069695af3"
   end
 
   depends_on xcode: :build
