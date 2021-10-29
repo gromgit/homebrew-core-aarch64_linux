@@ -16,10 +16,12 @@ class Czmq < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "f8b5ef84a357ca7fbd03d2a0a5fc5f5714cf28dc5321479f0dc715c348df75c9"
-    sha256 cellar: :any, big_sur:       "b457eb58a8684ba745af98d60a4207aef695bb33531206f2f7c0287523cd9a2a"
-    sha256 cellar: :any, catalina:      "c20bd8fd5e9c223824b1b50e829fb6c1ff1096951b20379f5f070b300d7e67d8"
-    sha256 cellar: :any, mojave:        "e64d0f79d6a05b5648695e3d06331bb34e8b85ae5920f429f3b44b7eee23cf5e"
+    sha256 cellar: :any, arm64_monterey: "15b4dcfff065b04e983def5195f1e2c2e93e985a8b4cb787af6e5b14b30d5d6a"
+    sha256 cellar: :any, arm64_big_sur:  "f8b5ef84a357ca7fbd03d2a0a5fc5f5714cf28dc5321479f0dc715c348df75c9"
+    sha256 cellar: :any, monterey:       "7663b09f0cdc6cb325d2970e364f897b91697990041de6cbb569ca4b0d85e45a"
+    sha256 cellar: :any, big_sur:        "b457eb58a8684ba745af98d60a4207aef695bb33531206f2f7c0287523cd9a2a"
+    sha256 cellar: :any, catalina:       "c20bd8fd5e9c223824b1b50e829fb6c1ff1096951b20379f5f070b300d7e67d8"
+    sha256 cellar: :any, mojave:         "e64d0f79d6a05b5648695e3d06331bb34e8b85ae5920f429f3b44b7eee23cf5e"
   end
 
   head do
