@@ -6,11 +6,13 @@ class Libical < Formula
   license any_of: ["LGPL-2.1-or-later", "MPL-2.0"]
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "96f08215d53d105d1828320cb7992482867be06628892c1d9c38f6513008f4ba"
-    sha256 cellar: :any,                 big_sur:       "f632f09ff759cb8ee10b877bb1e797e577a806d736fe0faeb39400e29e14eaae"
-    sha256 cellar: :any,                 catalina:      "92914c8ae64d8aa71de95e9e9172696389d9978593aae8053dc0ccf2194713a6"
-    sha256 cellar: :any,                 mojave:        "bc6181c6e46bfc8d6ee3683262f52b8948b684d66e060a468cb5d939a85ca950"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "975d3e9c770f30571fe8cce133253cf93f4436127abda56fb63b6419927dc6c1"
+    sha256 cellar: :any,                 arm64_monterey: "a808c0aaeb3d08c784dcb5549f6e3b3c41e558f2a98731e072eb9728ccca127b"
+    sha256 cellar: :any,                 arm64_big_sur:  "96f08215d53d105d1828320cb7992482867be06628892c1d9c38f6513008f4ba"
+    sha256 cellar: :any,                 monterey:       "3c2d986b51e7c14b32d7fbb482e54d09338b059b994c05bbef534c2bdddd3324"
+    sha256 cellar: :any,                 big_sur:        "f632f09ff759cb8ee10b877bb1e797e577a806d736fe0faeb39400e29e14eaae"
+    sha256 cellar: :any,                 catalina:       "92914c8ae64d8aa71de95e9e9172696389d9978593aae8053dc0ccf2194713a6"
+    sha256 cellar: :any,                 mojave:         "bc6181c6e46bfc8d6ee3683262f52b8948b684d66e060a468cb5d939a85ca950"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "975d3e9c770f30571fe8cce133253cf93f4436127abda56fb63b6419927dc6c1"
   end
 
   depends_on "cmake" => :build
