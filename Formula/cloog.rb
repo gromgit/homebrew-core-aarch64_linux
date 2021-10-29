@@ -11,12 +11,10 @@ class Cloog < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_big_sur: "fd2c1ec09cd145694be31a83b63ce8d12a78475a9329337d17c54acf32a5bdab"
-    sha256 cellar: :any,                 big_sur:       "f7c327b7541e01820a0b70ac9877dae9263609de74480aad14568a505ee7af83"
-    sha256 cellar: :any,                 catalina:      "7899742ca2ecd424f8354679f710d86329abf9935017dd0952950b485b0d9967"
-    sha256 cellar: :any,                 mojave:        "604d9bd3eaab93d10f50d3dacf0c9c49b2b986b3a6379a95586fe4c4cbf26622"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3fc2e061afb37bcc0d067989d11dba0997cd840d1ee627ec0be561c6bec4924c"
+    sha256 cellar: :any,                 arm64_big_sur: "e5ee84fdfaf5d6fd364c471d3b9093695b6e89dcb75fe46781b4d5c7ffa054b3"
+    sha256 cellar: :any,                 big_sur:       "92e11cfb0e13ea056e037c3283cc41df3e89eb9f667868c6e2f03bdce52a9044"
+    sha256 cellar: :any,                 catalina:      "fda6ba25882ec08670819d042bbdd437266c968f18ce9a82effb944ca322664b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fd6ad87a11d5161bc19777a133f8b22286ee2df3c4e7c7b48da7ae18b98bd9b1"
   end
 
   depends_on "pkg-config" => :build
