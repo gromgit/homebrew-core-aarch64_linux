@@ -11,11 +11,10 @@ class Composer < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "52ca244e1d7f289ef1bd318d2df34bad9c2d2843ad81e26111c87eab62b32834"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9b23761fd85b7bf513bd30d7dd78aee832045670bd4481f75367f6e0cac75428"
-    sha256 cellar: :any_skip_relocation, catalina:      "9b23761fd85b7bf513bd30d7dd78aee832045670bd4481f75367f6e0cac75428"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "52ca244e1d7f289ef1bd318d2df34bad9c2d2843ad81e26111c87eab62b32834"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "71187cda00a0a72bc2fe2da657f98152d834f957909f8f7db23236ba888eb101"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4dfab6bfb3f4ba36582199cbff36f3cb41bf7630ef21e872a023144aa8c078db"
+    sha256 cellar: :any_skip_relocation, catalina:      "4dfab6bfb3f4ba36582199cbff36f3cb41bf7630ef21e872a023144aa8c078db"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "71187cda00a0a72bc2fe2da657f98152d834f957909f8f7db23236ba888eb101"
   end
 
   depends_on "php"
