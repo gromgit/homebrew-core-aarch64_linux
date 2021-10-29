@@ -14,10 +14,12 @@ class Rtags < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "4031ba7d9c52f3834e868c716b04854d45a234312a55a9e31c26bf18c01cce8c"
-    sha256 cellar: :any, big_sur:       "b27afadc735d740bcb9ca96d1a9ea5fd77f0c07b663b10b7a09f3c10e696614f"
-    sha256 cellar: :any, catalina:      "dcaf7b5babf605732fd9007de2f2196687601f839c4045e9eee26ba4ed641cb7"
-    sha256               x86_64_linux:  "580e835fcc2d725ad8abfa7cd62d653ec100f9c9f84801fa4886ba3b84f6c804"
+    sha256 cellar: :any, arm64_monterey: "21c16d5289676a51fdb9736631ed86d12b27d9c0c8034baa310c79f95dd51497"
+    sha256 cellar: :any, arm64_big_sur:  "4031ba7d9c52f3834e868c716b04854d45a234312a55a9e31c26bf18c01cce8c"
+    sha256 cellar: :any, monterey:       "98d9a9608ab4360ee8aba0269feabada932c622ec2cd1150db8c00c9efe80061"
+    sha256 cellar: :any, big_sur:        "b27afadc735d740bcb9ca96d1a9ea5fd77f0c07b663b10b7a09f3c10e696614f"
+    sha256 cellar: :any, catalina:       "dcaf7b5babf605732fd9007de2f2196687601f839c4045e9eee26ba4ed641cb7"
+    sha256               x86_64_linux:   "580e835fcc2d725ad8abfa7cd62d653ec100f9c9f84801fa4886ba3b84f6c804"
   end
 
   depends_on "cmake" => :build
