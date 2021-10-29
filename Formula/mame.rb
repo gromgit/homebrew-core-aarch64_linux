@@ -18,11 +18,13 @@ class Mame < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "7e682b3e6fb2b30a5197c014f1b3e56e1a0daea0ec859e892d3c05e86f4a2508"
-    sha256 cellar: :any,                 big_sur:       "aa5065164d99e9ae75491395d1180b392e27eafc5209a6bb9d6cb9fc004557b2"
-    sha256 cellar: :any,                 catalina:      "8717ca403b7781452a483b156851009461ece4905609b82d0eb221a91c735cfc"
-    sha256 cellar: :any,                 mojave:        "c67fd7be123e760ef542e57770219423592e896bf7e7d955ea926f4272ee0d0d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "721fd9120323e227a370558bc9e8241d7ca9bdf7577f86686e2c74cf237db275"
+    sha256 cellar: :any,                 arm64_monterey: "99cfe7d8bac493ad59a4e4f1648d93bae194045aaa6fa22481b7eb247f10e312"
+    sha256 cellar: :any,                 arm64_big_sur:  "7e682b3e6fb2b30a5197c014f1b3e56e1a0daea0ec859e892d3c05e86f4a2508"
+    sha256 cellar: :any,                 monterey:       "63137eabb5e1a5175d013a6e16dfb869df4be760ec9affda001c741f9e2d0f4b"
+    sha256 cellar: :any,                 big_sur:        "aa5065164d99e9ae75491395d1180b392e27eafc5209a6bb9d6cb9fc004557b2"
+    sha256 cellar: :any,                 catalina:       "8717ca403b7781452a483b156851009461ece4905609b82d0eb221a91c735cfc"
+    sha256 cellar: :any,                 mojave:         "c67fd7be123e760ef542e57770219423592e896bf7e7d955ea926f4272ee0d0d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "721fd9120323e227a370558bc9e8241d7ca9bdf7577f86686e2c74cf237db275"
   end
 
   depends_on "glm" => :build
