@@ -6,11 +6,13 @@ class Gdl < Formula
   license "LGPL-2.0-or-later"
 
   bottle do
-    sha256                               arm64_big_sur: "e96c5e69fc084fd421f08f651e8727fb7a5d28e270c804ebba7e6d860ccec583"
-    sha256                               big_sur:       "98cb1563adec26dea9289d5ad3f5b006c26897cc9c586114efe0dcc2214a1a68"
-    sha256                               catalina:      "11df5d907431165eb6f9a6b8673f413dfd939199940b5a2e3a3f78eab11c2ce8"
-    sha256                               mojave:        "7d91a82fb426e6791aea2e93a9d0fdbf33aa8fb366d375734001614196212564"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "26ae14bf457ab681be21fe8b61fa612af211f80c2d8f52416dbb4a9f55eaa0e7"
+    sha256                               arm64_monterey: "20a0742ffcaa3bf6a8ee5c1531ed48f2b51a18c7a816f4b96d85192c2906db23"
+    sha256                               arm64_big_sur:  "e96c5e69fc084fd421f08f651e8727fb7a5d28e270c804ebba7e6d860ccec583"
+    sha256                               monterey:       "b1a120f5c6ae1e9f6802be4306f00cc2fc54ca1aaf75c017fa74efd6dec2da0e"
+    sha256                               big_sur:        "98cb1563adec26dea9289d5ad3f5b006c26897cc9c586114efe0dcc2214a1a68"
+    sha256                               catalina:       "11df5d907431165eb6f9a6b8673f413dfd939199940b5a2e3a3f78eab11c2ce8"
+    sha256                               mojave:         "7d91a82fb426e6791aea2e93a9d0fdbf33aa8fb366d375734001614196212564"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "26ae14bf457ab681be21fe8b61fa612af211f80c2d8f52416dbb4a9f55eaa0e7"
   end
 
   depends_on "gobject-introspection" => :build
