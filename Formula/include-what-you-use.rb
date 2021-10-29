@@ -20,11 +20,13 @@ class IncludeWhatYouUse < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "8b4ba730248b474d711ded0a5c713fcf303f5fed1cc476f201cb66dd4aeebd3f"
-    sha256 cellar: :any,                 big_sur:       "4abf6a45d2f3215a71340ebf920af51b6737dd49b536d1c030bab31860616d23"
-    sha256 cellar: :any,                 catalina:      "d7cf6d888dd73d6bf28ea4b455e749d5532ee2647b1168a575efa8107f6831d7"
-    sha256 cellar: :any,                 mojave:        "c2024ce23c44b1a084f144cf378fb56d9c5af4b52eca7502fc7c7961ffa82ed7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "67fb75245fd62d1724bcaebbc22012f19a0721c8d1d661c74e2cf87923732e50"
+    sha256 cellar: :any,                 arm64_monterey: "f15c404e4cfca39e9db2728bc10891e1709497afe6d8d88bca6194f08b0f2f63"
+    sha256 cellar: :any,                 arm64_big_sur:  "8b4ba730248b474d711ded0a5c713fcf303f5fed1cc476f201cb66dd4aeebd3f"
+    sha256 cellar: :any,                 monterey:       "0dcafa706570811b0a93c61f2ef8f40f1561c6a818580b89a1abb13c062d77c9"
+    sha256 cellar: :any,                 big_sur:        "4abf6a45d2f3215a71340ebf920af51b6737dd49b536d1c030bab31860616d23"
+    sha256 cellar: :any,                 catalina:       "d7cf6d888dd73d6bf28ea4b455e749d5532ee2647b1168a575efa8107f6831d7"
+    sha256 cellar: :any,                 mojave:         "c2024ce23c44b1a084f144cf378fb56d9c5af4b52eca7502fc7c7961ffa82ed7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "67fb75245fd62d1724bcaebbc22012f19a0721c8d1d661c74e2cf87923732e50"
   end
 
   head do
