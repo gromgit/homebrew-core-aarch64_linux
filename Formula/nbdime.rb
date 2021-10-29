@@ -8,10 +8,12 @@ class Nbdime < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "05f6456be213cab941f0fac4d89a4e95b1859ee04aa34b18756b27e25edb5f1e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0a6b80d6642a2a030e815bbb7daabda366e80ccf7104f0aadbeb28a026e31185"
-    sha256 cellar: :any_skip_relocation, catalina:      "136bf2a3a733c31d62c88afdf5ad873747d686e7a9b2ee00bb8b29e9669b05f3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "185a9336eda62bfd8747264b6c0bdec5c86d008e0e3601e40a842769fe887b5a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "920a7500122905431670569c488a6323808adf3e40cf23e582b515641ee99b90"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "05f6456be213cab941f0fac4d89a4e95b1859ee04aa34b18756b27e25edb5f1e"
+    sha256 cellar: :any_skip_relocation, monterey:       "6f8720a05435bf74be2020260a4ab453453d792e3b7c2fdefe4c2d27208418dd"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0a6b80d6642a2a030e815bbb7daabda366e80ccf7104f0aadbeb28a026e31185"
+    sha256 cellar: :any_skip_relocation, catalina:       "136bf2a3a733c31d62c88afdf5ad873747d686e7a9b2ee00bb8b29e9669b05f3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "185a9336eda62bfd8747264b6c0bdec5c86d008e0e3601e40a842769fe887b5a"
   end
 
   depends_on "python@3.10"
