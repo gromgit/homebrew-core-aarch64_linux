@@ -8,11 +8,13 @@ class Osm2pgsql < Formula
 
   bottle do
     rebuild 1
-    sha256 arm64_big_sur: "38b8d470e385856ca0a5aeb452c0c5f7714495b9b50bd241a12a3dbf60f8f07c"
-    sha256 big_sur:       "e4d3b73be00cfafd57ef0ba98121a8ffe544aae106c3fe91dfe33195e69a2daa"
-    sha256 catalina:      "1d25fa90f24352efd87936ea0e25a33a55204949e3b360e8eecf5398d5765069"
-    sha256 mojave:        "031cfa9cdda3eb6e2273b0c682058e5d3acddfd197a32aa60967540a3244b6cc"
-    sha256 x86_64_linux:  "95bbcae74853dd3375a2984d6d7ca871e58bac5ebac029d844ac5bb0e6f55b56"
+    sha256 arm64_monterey: "3885a6a5ae3f0bbc1906d19048f0d352f52ca2ff54ab150c437d07b6c8775df0"
+    sha256 arm64_big_sur:  "38b8d470e385856ca0a5aeb452c0c5f7714495b9b50bd241a12a3dbf60f8f07c"
+    sha256 monterey:       "8ac78af9ff2d91016b576e3415c2c019ad58ee53f60ff1dee46e7416b346068d"
+    sha256 big_sur:        "e4d3b73be00cfafd57ef0ba98121a8ffe544aae106c3fe91dfe33195e69a2daa"
+    sha256 catalina:       "1d25fa90f24352efd87936ea0e25a33a55204949e3b360e8eecf5398d5765069"
+    sha256 mojave:         "031cfa9cdda3eb6e2273b0c682058e5d3acddfd197a32aa60967540a3244b6cc"
+    sha256 x86_64_linux:   "95bbcae74853dd3375a2984d6d7ca871e58bac5ebac029d844ac5bb0e6f55b56"
   end
 
   depends_on "cmake" => :build
