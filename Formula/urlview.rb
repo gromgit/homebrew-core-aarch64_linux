@@ -15,10 +15,12 @@ class Urlview < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e108231d44ae30814b4028b79ab3d5cd4a96719baf1fdaf2f6ab37eb0e3a6120"
-    sha256 cellar: :any_skip_relocation, big_sur:       "590b88c35280f2e37daacd2c510afeda9ff90c38361fa9b113a5925136dbdaa7"
-    sha256 cellar: :any_skip_relocation, catalina:      "102860ddd181af6242b7aaae841e39dc05298856e43f4c7d9f8747e6d17ad8d1"
-    sha256 cellar: :any_skip_relocation, mojave:        "2c93e736ee4b39f7567afe60fcb06ec2144ca054a819a3406caaa5c330ab4911"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ec7eb261b52638ccf0a193278d606e3058ce535b977a260f987aae200151e890"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e108231d44ae30814b4028b79ab3d5cd4a96719baf1fdaf2f6ab37eb0e3a6120"
+    sha256 cellar: :any_skip_relocation, monterey:       "bcc1a471d63b9a36ff5a2866d5e7426aca87b511f9bd8020d9be0183d0cbe791"
+    sha256 cellar: :any_skip_relocation, big_sur:        "590b88c35280f2e37daacd2c510afeda9ff90c38361fa9b113a5925136dbdaa7"
+    sha256 cellar: :any_skip_relocation, catalina:       "102860ddd181af6242b7aaae841e39dc05298856e43f4c7d9f8747e6d17ad8d1"
+    sha256 cellar: :any_skip_relocation, mojave:         "2c93e736ee4b39f7567afe60fcb06ec2144ca054a819a3406caaa5c330ab4911"
   end
 
   on_linux do
