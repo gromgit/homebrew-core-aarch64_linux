@@ -7,10 +7,12 @@ class Offlineimap < Formula
   head "https://github.com/OfflineIMAP/offlineimap.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ddd56697d3c6e9caf9ce43cb18b4c8c5e2b71dda041363be7b3f02487700edd0"
-    sha256 cellar: :any_skip_relocation, big_sur:       "022f1f1fb23f151854e050d510398d0c156d71fdb718ac32c5f7061152732b92"
-    sha256 cellar: :any_skip_relocation, catalina:      "022f1f1fb23f151854e050d510398d0c156d71fdb718ac32c5f7061152732b92"
-    sha256 cellar: :any_skip_relocation, mojave:        "8bad1b2782ecd2d85bb388c616d57ad98f10886384711dbf36447269d076f0d9"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e00518eec9664acc605e89da1bbc7c23e790ebef87e48982a2fbc58aa4985467"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ddd56697d3c6e9caf9ce43cb18b4c8c5e2b71dda041363be7b3f02487700edd0"
+    sha256 cellar: :any_skip_relocation, monterey:       "21516cf410d1551232395e78afda6cfff1bffb393e961dbafe2c31e5384262e3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "022f1f1fb23f151854e050d510398d0c156d71fdb718ac32c5f7061152732b92"
+    sha256 cellar: :any_skip_relocation, catalina:       "022f1f1fb23f151854e050d510398d0c156d71fdb718ac32c5f7061152732b92"
+    sha256 cellar: :any_skip_relocation, mojave:         "8bad1b2782ecd2d85bb388c616d57ad98f10886384711dbf36447269d076f0d9"
   end
 
   depends_on :macos # Due to Python 2 (Will never support Python 3)
