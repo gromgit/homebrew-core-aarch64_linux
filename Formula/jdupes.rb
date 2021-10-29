@@ -11,10 +11,12 @@ class Jdupes < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2718e6d037fcd6fb729139ce08e5eaa42ce0a5ade83fb7a335c2d772964638a3"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7cc7eb382f5a1667d1ac84086bb9b115e704fb5fe3f331ec42ac15055e162192"
-    sha256 cellar: :any_skip_relocation, catalina:      "3a3ac1f13b64436a5f1958b6e7cb499e30a37516e0c55b5a46dc895a70b98491"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e45cd7275ff6c14378f4ff66dd237fce54272994ae9d14cc50d0c5a8b6a8f196"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "91c0cc6659ea58e92e96a8c9aa97e2f267582ccf70fd729c27cf6d461679bd24"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2718e6d037fcd6fb729139ce08e5eaa42ce0a5ade83fb7a335c2d772964638a3"
+    sha256 cellar: :any_skip_relocation, monterey:       "73750413e000023bbff46add01f97c5bdfc391284fbc86bcdbdbeaba91f6810e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7cc7eb382f5a1667d1ac84086bb9b115e704fb5fe3f331ec42ac15055e162192"
+    sha256 cellar: :any_skip_relocation, catalina:       "3a3ac1f13b64436a5f1958b6e7cb499e30a37516e0c55b5a46dc895a70b98491"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e45cd7275ff6c14378f4ff66dd237fce54272994ae9d14cc50d0c5a8b6a8f196"
   end
 
   def install
