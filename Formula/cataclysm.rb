@@ -14,10 +14,12 @@ class Cataclysm < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "ca14eb2f01555ab74e44e76e939c41d477c675a7b157e34a17f06d5ce3e56fc2"
-    sha256 cellar: :any, big_sur:       "fe3e6ecd6e489a2f3acf6fef68308a40b0ca364f821fbdb138e81849aa52a9b3"
-    sha256 cellar: :any, catalina:      "655026ec19a856b436722efabd34507e6768468a993dc2768f7c1583b86c3641"
-    sha256 cellar: :any, mojave:        "cf4a1e7e99ac3dd4af801918385bafc6b3425b555436086fcaa7e22c371f9ff7"
+    sha256 cellar: :any, arm64_monterey: "d6ba9bb02eb973e0cf4a2d569d1ea90f28806aa060d59210f2593bbfd1d22754"
+    sha256 cellar: :any, arm64_big_sur:  "ca14eb2f01555ab74e44e76e939c41d477c675a7b157e34a17f06d5ce3e56fc2"
+    sha256 cellar: :any, monterey:       "aec3cf18d974b4fd478673a61c1c31290ce6e465a99ca030b132c61c5dad2c85"
+    sha256 cellar: :any, big_sur:        "fe3e6ecd6e489a2f3acf6fef68308a40b0ca364f821fbdb138e81849aa52a9b3"
+    sha256 cellar: :any, catalina:       "655026ec19a856b436722efabd34507e6768468a993dc2768f7c1583b86c3641"
+    sha256 cellar: :any, mojave:         "cf4a1e7e99ac3dd4af801918385bafc6b3425b555436086fcaa7e22c371f9ff7"
   end
 
   depends_on "pkg-config" => :build
