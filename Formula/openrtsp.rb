@@ -10,6 +10,7 @@ class Openrtsp < Formula
   bottle do
     sha256 cellar: :any, arm64_monterey: "0cf9172bdeaee5b416338e01055474fb564ec224454beeca7286ede40349a1b4"
     sha256 cellar: :any, arm64_big_sur:  "037bd7b7f6b47749662992483a26c35707c8242bddfa35f58f2c7bb8d6d0da2e"
+    sha256 cellar: :any, monterey:       "a365a4f82dc31d142d57fe1bfb5ee910719ce26fe50a30aaa605d028d68ba075"
     sha256 cellar: :any, big_sur:        "d6ae6c46e3e3917d3da47c3dfd1b9cd41830a2383ce561eea8f1270692cc1a6d"
     sha256 cellar: :any, catalina:       "afa2457a34179559b6e6a107826d22aea0e633543395a3d18a6206b0bf75c8e6"
     sha256 cellar: :any, mojave:         "3cfb1652550415fd0b7fb9e9c5ea6e1841dbc4b3b70910e0bb34866f8c8500fc"
