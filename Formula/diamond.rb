@@ -6,11 +6,13 @@ class Diamond < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c60ab9a0136b88b8e4acbaf8b8826f3822f921730f4a5b4317ac205c93f36b94"
-    sha256 cellar: :any_skip_relocation, big_sur:       "cde37828d32153f2ed9501684c519a5c900e142a77154bf283aa8e6214e73bfa"
-    sha256 cellar: :any_skip_relocation, catalina:      "cb016605b352a851fe612198eb1b0a7db3fc03a05a05e5ae418ae76b41cc634a"
-    sha256 cellar: :any_skip_relocation, mojave:        "8f14421cb230d2fcbd42f02854475b431296b09a1a29e23d408dd64badc43a99"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "86d326765512f2d726bacf7a21d7676c1fbb5a6e1bac3836b4e624cecf0e0b7d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bd9e84a3c04d07f2d3f1b8a007768c8dd1f89e85c1cf9c56e2fa6160cbe2e9fb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c60ab9a0136b88b8e4acbaf8b8826f3822f921730f4a5b4317ac205c93f36b94"
+    sha256 cellar: :any_skip_relocation, monterey:       "f8a0e0d0095549c6f1e5a393d6948e0d9577190cb0713d85109640af7f80e97d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "cde37828d32153f2ed9501684c519a5c900e142a77154bf283aa8e6214e73bfa"
+    sha256 cellar: :any_skip_relocation, catalina:       "cb016605b352a851fe612198eb1b0a7db3fc03a05a05e5ae418ae76b41cc634a"
+    sha256 cellar: :any_skip_relocation, mojave:         "8f14421cb230d2fcbd42f02854475b431296b09a1a29e23d408dd64badc43a99"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "86d326765512f2d726bacf7a21d7676c1fbb5a6e1bac3836b4e624cecf0e0b7d"
   end
 
   depends_on "cmake" => :build
