@@ -7,10 +7,12 @@ class Openexr < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "6b2bb42d4a828b364c664883e49680d6867aa76071c87d4e3f71fa43ce295203"
-    sha256 cellar: :any,                 big_sur:       "d48e166e020597151ad259fc62f321ec128777dc6353e951dee014929b47dda4"
-    sha256 cellar: :any,                 catalina:      "6c43a1e10c1def8c49cc63b4cd50c705be7187ecc7d309309d555104ad886c92"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "08dee6134b6115466678e17b91da4e450891b4f0534d3438065594fecdc0dd62"
+    sha256 cellar: :any,                 arm64_monterey: "cb2251482943ccba760aaad07eb478778883261426c0b3e9a59781ab0ec93011"
+    sha256 cellar: :any,                 arm64_big_sur:  "6b2bb42d4a828b364c664883e49680d6867aa76071c87d4e3f71fa43ce295203"
+    sha256 cellar: :any,                 monterey:       "51a90b139c9c9e62267c1d91653e71ff5483017d3137b27f2bd50a095c29b2b6"
+    sha256 cellar: :any,                 big_sur:        "d48e166e020597151ad259fc62f321ec128777dc6353e951dee014929b47dda4"
+    sha256 cellar: :any,                 catalina:       "6c43a1e10c1def8c49cc63b4cd50c705be7187ecc7d309309d555104ad886c92"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "08dee6134b6115466678e17b91da4e450891b4f0534d3438065594fecdc0dd62"
   end
 
   depends_on "cmake" => :build
