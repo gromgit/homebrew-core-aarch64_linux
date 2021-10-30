@@ -12,6 +12,7 @@ class GstPython < Formula
 
   bottle do
     sha256 arm64_monterey: "b4ec598c3bd3e35757da9d86c2b8cb42aa24b08226b15c1d37ab4abc77cfc73f"
+    sha256 arm64_big_sur:  "0141e26cbdf16eab9c46ca9fd95aaa31f1311297d627f18cf677d5440c9a1186"
     sha256 monterey:       "53f99452f853e91551a9775300e1ddc667e6ae10eb3b00a15160e2305e89e0b0"
     sha256 big_sur:        "c5461f496775e0d65ed07bb217d1f12eb68ba633ea9c688add6297fab942fdd6"
     sha256 catalina:       "7de5518b76bea95a7769f1230db57fa03d389483f7800e060db7f2553ac0f856"
