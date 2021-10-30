@@ -6,6 +6,7 @@ class Akamai < Formula
   license "Apache-2.0"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, monterey:     "b54282d66fcf309cbb19dfea87ce87e6cf1756960bbdaf824987f2c638f2f598"
     sha256 cellar: :any_skip_relocation, big_sur:      "ae02bff8cd5f22c2d8c083950de16addf0f008c98bdd104aee2ef4d41fbbb0e6"
     sha256 cellar: :any_skip_relocation, catalina:     "c9873ba7c5c27baa7c9783ce964c5c62d97151c4bd4873d11fae343728d9a245"
     sha256 cellar: :any_skip_relocation, mojave:       "2287e1ca300d155e500392f5628aa8ad953006b1c263caa35c03e4d9591053a1"
