@@ -8,13 +8,10 @@ class Aom < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "35494aa84690adb7953de9a6a83c4438709711e3bf4c35a15932d24d9560c954"
-    sha256 cellar: :any,                 arm64_big_sur:  "9f96e16080d85a7ddf79e6d589a54b0fae4d66a397a417e6aa20ca923e52df54"
-    sha256 cellar: :any,                 monterey:       "d68bcac8c90d2482c9563d2e2c280dc19dcdbc2f9ba44053f8a6301aff6b9c31"
-    sha256 cellar: :any,                 big_sur:        "6032353c0bd07cb5bd4d94696c224d4d6d46315fe809239590f202961d22dba8"
-    sha256 cellar: :any,                 catalina:       "4ccf3a3b28fa2f8dfee933b3e70eac65f2dfb1d4b1ffed8731941687749ea4c3"
-    sha256 cellar: :any,                 mojave:         "a597f10374d065108ce767d7256fefa673bc665439ad4afb35ef4cc02a6e1848"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "446a3c0ca883c00a6870c38f1900b745d088accb2bcde750d5cc1f9ae7599be7"
+    sha256 cellar: :any,                 arm64_big_sur: "fa278187ca95fb4fb6145546465ab8a613d32dc32836ad4733c5a892497932b2"
+    sha256 cellar: :any,                 big_sur:       "fe6e3a5c3a14ce0938afade898d8fe009fcf5115a6d36d6c1a88ab32ba488b29"
+    sha256 cellar: :any,                 catalina:      "96714bc74e2a9ef142f1b9b60a3af3178fb0d8264deaefd219adcafe411d5102"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6cdc42ff566b3919db435259d77934cafc8ecb3f1516b5bc3236b165ef2056e2"
   end
 
   depends_on "cmake" => :build
