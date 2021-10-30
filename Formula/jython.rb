@@ -12,9 +12,10 @@ class Jython < Formula
 
   # This isn't accidental; there is actually a compile process here.
   bottle do
-    sha256 cellar: :any_skip_relocation, catalina:    "ecac33d533e405e4bd45cdf7023cd334fa655e17446cbfa5231dbf1e580166c5"
-    sha256 cellar: :any_skip_relocation, mojave:      "3bd7cbb55035525c113c7608b9e18215b1a214c0f21e45203c900029765ba09f"
-    sha256 cellar: :any_skip_relocation, high_sierra: "644da593101c796e9b39e10ad7cd65f96e8e0d9ccf19109c8337a1f262ef005a"
+    sha256 cellar: :any_skip_relocation, catalina:     "ecac33d533e405e4bd45cdf7023cd334fa655e17446cbfa5231dbf1e580166c5"
+    sha256 cellar: :any_skip_relocation, mojave:       "3bd7cbb55035525c113c7608b9e18215b1a214c0f21e45203c900029765ba09f"
+    sha256 cellar: :any_skip_relocation, high_sierra:  "644da593101c796e9b39e10ad7cd65f96e8e0d9ccf19109c8337a1f262ef005a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "4d646b100ffc6a75064902f9db2918cad5471df3e0e352c37725198b55f0f09f"
   end
 
   depends_on "openjdk"
