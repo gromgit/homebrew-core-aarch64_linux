@@ -7,11 +7,13 @@ class Rmlint < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any,                 arm64_big_sur: "5eae37b1c416a95072b7475cffbbf5a8652c2f3f6c9e3d24b96c13b57ac06c24"
-    sha256 cellar: :any,                 big_sur:       "ce229f94deeb1e91f84db64e71e4c3bd22f2bf0d1236c6093aad80d3685540b2"
-    sha256 cellar: :any,                 catalina:      "b22e86d9727096bb5a73d92e28f03dcb36c7b46d4fbe3289a1105d46eff7d67b"
-    sha256 cellar: :any,                 mojave:        "c31b3ec4510357b5acacf8469311faafb66725bc38d89938227903e33473dfd4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "02e65ca05dd6b4a94f0cf7d02affc88c757bfd52067698e3b4815d0a2813dced"
+    sha256 cellar: :any,                 arm64_monterey: "506515b8e54f1f0023c245b9dd52fa419cedbe5e2f8fb434b7991d49ad6e6dce"
+    sha256 cellar: :any,                 arm64_big_sur:  "5eae37b1c416a95072b7475cffbbf5a8652c2f3f6c9e3d24b96c13b57ac06c24"
+    sha256 cellar: :any,                 monterey:       "668514f9f5d6a28feb7bed3976b10a5daa51384e5e390664854f96f307be281a"
+    sha256 cellar: :any,                 big_sur:        "ce229f94deeb1e91f84db64e71e4c3bd22f2bf0d1236c6093aad80d3685540b2"
+    sha256 cellar: :any,                 catalina:       "b22e86d9727096bb5a73d92e28f03dcb36c7b46d4fbe3289a1105d46eff7d67b"
+    sha256 cellar: :any,                 mojave:         "c31b3ec4510357b5acacf8469311faafb66725bc38d89938227903e33473dfd4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "02e65ca05dd6b4a94f0cf7d02affc88c757bfd52067698e3b4815d0a2813dced"
   end
 
   depends_on "gettext" => :build
