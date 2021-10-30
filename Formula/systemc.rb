@@ -11,6 +11,7 @@ class Systemc < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 monterey:     "23a2ddc1c6a5604f6ead8c7df83786c18d29b7d8f322edbf885711a17fea19e6"
     sha256 cellar: :any,                 big_sur:      "9deac1357ecb0652caa491858a81658cc0ff86317d50d4d511aced6dc62373b0"
     sha256 cellar: :any,                 catalina:     "514a49408461d311e27def414b559298e514df9be6461408e691aa2ba44ff0d5"
     sha256 cellar: :any,                 mojave:       "ed266b79f596258da162637530a1830516ceee6fb4874add5eaa9a84b175cda4"
