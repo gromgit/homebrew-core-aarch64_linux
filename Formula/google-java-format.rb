@@ -9,10 +9,10 @@ class GoogleJavaFormat < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7dccb80af3364f807fd943e8315cd53c4eb6413744245885dd171d820937cd36"
-    sha256 cellar: :any_skip_relocation, big_sur:       "7dccb80af3364f807fd943e8315cd53c4eb6413744245885dd171d820937cd36"
-    sha256 cellar: :any_skip_relocation, catalina:      "7dccb80af3364f807fd943e8315cd53c4eb6413744245885dd171d820937cd36"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b8e32c09781e5e93774ffeb6dd74e05512af27a609989db0bfff26a47eef279a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "62cbfed618c656c42a022ad696844a400f9e42313954221e2a3cf904a4fd9146"
+    sha256 cellar: :any_skip_relocation, big_sur:       "62cbfed618c656c42a022ad696844a400f9e42313954221e2a3cf904a4fd9146"
+    sha256 cellar: :any_skip_relocation, catalina:      "62cbfed618c656c42a022ad696844a400f9e42313954221e2a3cf904a4fd9146"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e4e8aab013584bab460fbdb8393b13d86b95ec2b6ca48298b71ff53f642ba636"
   end
 
   depends_on "openjdk"
