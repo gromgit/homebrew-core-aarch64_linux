@@ -6,6 +6,13 @@ class Uuu < Formula
   license "BSD-3-Clause"
   head "https://github.com/NXPmicro/mfgtools.git", branch: "master"
 
+  bottle do
+    sha256 arm64_big_sur: "3155b7adc7452904671c7da18cbaa59766dfdd567e85a2b242c24cd8dfede40a"
+    sha256 big_sur:       "90095bd9997651cf9ae3a7b50fd4766968913f2652f2ce47a272ce84e3ce4277"
+    sha256 catalina:      "a66ab4d8c2f44e2ed70106f45765591192b74726f6a1bb2e9e2475c3b9741a2d"
+    sha256 x86_64_linux:  "174d6f56a091fc444337cf21fe0b69595ee87d6bf7da58da597f045bb053de3e"
+  end
+
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
 
