@@ -13,6 +13,7 @@ class Chmlib < Formula
 
   bottle do
     rebuild 2
+    sha256 cellar: :any,                 monterey:     "4d4a29e60712457e4ea3838947a95959dbc0f68338514edd3817d6ee122afbf4"
     sha256 cellar: :any,                 big_sur:      "af369d3e427b36281f053f65a0d5be2a269c2a0fb80c87443baa066892d0652c"
     sha256 cellar: :any,                 catalina:     "96d7cb33260c72012f24f383054b7f2505f815f0e3e24298229b5712f8a66cfa"
     sha256 cellar: :any,                 mojave:       "1718a0a9343788718b4207596ebff457f5214879319292cc1608254374720944"
