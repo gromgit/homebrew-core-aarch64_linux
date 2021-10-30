@@ -9,10 +9,12 @@ class GimmeAwsCreds < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "79db99c0fd02f82565098e7a8919a0d30a7941f45a760b6df8bfdc99ae870a83"
-    sha256 cellar: :any,                 big_sur:       "ef2a8e825e256d488ce78ad49da4e7c1c8b0018acd5394f61c782326db0225f6"
-    sha256 cellar: :any,                 catalina:      "d91906e9ffb1fe3354e62ba7de1b2309d8f6dc0a70c4ae63c86609ba3fc3c455"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d66bb53ac6aafbf7c00e612101bf589763a41e56be1c5766c415ac87cd0db8ff"
+    sha256 cellar: :any,                 arm64_monterey: "e821576279fb0e459ef0e85cdc0412912f5305d14ab5791396885c1e8c5210cb"
+    sha256 cellar: :any,                 arm64_big_sur:  "79db99c0fd02f82565098e7a8919a0d30a7941f45a760b6df8bfdc99ae870a83"
+    sha256 cellar: :any,                 monterey:       "fde3e4cdb6aad3a994d2d65a4ff42cc87685b3425755371db113731824ef2951"
+    sha256 cellar: :any,                 big_sur:        "ef2a8e825e256d488ce78ad49da4e7c1c8b0018acd5394f61c782326db0225f6"
+    sha256 cellar: :any,                 catalina:       "d91906e9ffb1fe3354e62ba7de1b2309d8f6dc0a70c4ae63c86609ba3fc3c455"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d66bb53ac6aafbf7c00e612101bf589763a41e56be1c5766c415ac87cd0db8ff"
   end
 
   depends_on "python@3.10"
