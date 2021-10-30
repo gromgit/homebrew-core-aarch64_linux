@@ -9,10 +9,12 @@ class AtomistCli < Formula
   revision 1
 
   bottle do
-    sha256                               arm64_big_sur: "937a87c1bcde6def60a36a358636f550d6328ec2dcdda13002ba1f8ef3989943"
-    sha256                               big_sur:       "99d4af26e3123803de4a2511d721f3ed2765afebe12097682be23c73a6d94cf8"
-    sha256                               catalina:      "6c8e97645aa96025533c4ebf3549bc805b7a7f7b3370560280997ff367306c68"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "78f7f291b352c3dcefae8c8e1f578a19ed7dacb411193702e2b29b3aaafd081e"
+    sha256                               arm64_monterey: "19edfaf9952cadd88d48f7d2e2a195c999c37e6eb4c1531b415d69889f3ce23a"
+    sha256                               arm64_big_sur:  "937a87c1bcde6def60a36a358636f550d6328ec2dcdda13002ba1f8ef3989943"
+    sha256                               monterey:       "ea04ea67623c76cc8362ae0e72c60d406e48fe840bcfa66e5d752cc65a0c18aa"
+    sha256                               big_sur:        "99d4af26e3123803de4a2511d721f3ed2765afebe12097682be23c73a6d94cf8"
+    sha256                               catalina:       "6c8e97645aa96025533c4ebf3549bc805b7a7f7b3370560280997ff367306c68"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "78f7f291b352c3dcefae8c8e1f578a19ed7dacb411193702e2b29b3aaafd081e"
   end
 
   depends_on "node"
