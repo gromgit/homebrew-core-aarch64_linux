@@ -14,6 +14,7 @@ class Mscgen < Formula
   bottle do
     rebuild 1
     sha256 cellar: :any,                 arm64_monterey: "32bd04807a17b5b73bce02204ca643ac9a0071570a115cad2f6b4d50ef1b9a43"
+    sha256 cellar: :any,                 arm64_big_sur:  "9482190b13b0f8f64ddc361d5ba2ed8401490700cb24c2947e47f8182ca10d17"
     sha256 cellar: :any,                 monterey:       "5aeba0e2de0b189cc4027e6c15eb05dca9920883b90c783796157fb8bbc2f790"
     sha256 cellar: :any,                 big_sur:        "662b9da17d8c911e9d24be48def9a222e7068386c0b482eca48248d127467e14"
     sha256 cellar: :any,                 catalina:       "315656cf5f9d72907591b4c8a91e635e6aa9b2116cadefe9fdd76db4cff7ae87"
