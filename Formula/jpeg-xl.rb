@@ -6,10 +6,12 @@ class JpegXl < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "ad8d741fe5ff44ed35f407ff6f692763c937d74e51156563fb3e8245ac534898"
-    sha256 cellar: :any,                 big_sur:       "77882f055f5509900e8f913352386201a3cb57cbae04f7de254416416d9638d7"
-    sha256 cellar: :any,                 catalina:      "ef47fc0d2de7c6623c1504d6df8b9b041763bec532c4f907793f4ffedc6f3050"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "011b3fd5a6bfdd494edaddf64cb4432cadf6ad71adf24201a9555848eb2717c4"
+    sha256 cellar: :any,                 arm64_monterey: "299002d5c10f0009bcdf7b2f5c4d544e4b84fc36dd109a0b3dd5eee780dbb5f7"
+    sha256 cellar: :any,                 arm64_big_sur:  "ad8d741fe5ff44ed35f407ff6f692763c937d74e51156563fb3e8245ac534898"
+    sha256 cellar: :any,                 monterey:       "a311fe41c7dc098c82269b42fd819ef20ce7248f9df444ce4890576005124204"
+    sha256 cellar: :any,                 big_sur:        "77882f055f5509900e8f913352386201a3cb57cbae04f7de254416416d9638d7"
+    sha256 cellar: :any,                 catalina:       "ef47fc0d2de7c6623c1504d6df8b9b041763bec532c4f907793f4ffedc6f3050"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "011b3fd5a6bfdd494edaddf64cb4432cadf6ad71adf24201a9555848eb2717c4"
   end
 
   depends_on "cmake" => :build
