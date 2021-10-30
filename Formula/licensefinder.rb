@@ -7,10 +7,12 @@ class Licensefinder < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "171e1492cd68d3bd895a9e15357861438be00e738e9b75131765fbe8c0a95568"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9b1614bad0259f5924ae095dba5a0ef29dc7f7fdcf43e4aa832b4ee00c4ffe67"
-    sha256 cellar: :any_skip_relocation, catalina:      "9b1614bad0259f5924ae095dba5a0ef29dc7f7fdcf43e4aa832b4ee00c4ffe67"
-    sha256 cellar: :any_skip_relocation, mojave:        "217b3fca89c5ad77e84b0b20aca1daae8872b674d628c7c86d6f46b478c808c3"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b9e8a497f3a5cbda1835486d7d8f1070a5cd812551f7086eaabeb758e97df313"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "171e1492cd68d3bd895a9e15357861438be00e738e9b75131765fbe8c0a95568"
+    sha256 cellar: :any_skip_relocation, monterey:       "41cae9545cd8025af46a4ce748b3a27a7ee7e5314024747ae22664b4dd524383"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9b1614bad0259f5924ae095dba5a0ef29dc7f7fdcf43e4aa832b4ee00c4ffe67"
+    sha256 cellar: :any_skip_relocation, catalina:       "9b1614bad0259f5924ae095dba5a0ef29dc7f7fdcf43e4aa832b4ee00c4ffe67"
+    sha256 cellar: :any_skip_relocation, mojave:         "217b3fca89c5ad77e84b0b20aca1daae8872b674d628c7c86d6f46b478c808c3"
   end
 
   depends_on "ruby@2.7" if MacOS.version <= :mojave
