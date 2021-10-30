@@ -28,13 +28,10 @@ class Pcre2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ae1f05e36d3bb1d441aa3dd25cfaf19646797e946c5ee92e3895d84e12670791"
-    sha256 cellar: :any,                 arm64_big_sur:  "51b0ff7dc18491f57f470b8b778b3fa148def0dbcafac6e828a68822cb4e203b"
-    sha256 cellar: :any,                 monterey:       "02aea26dba4a50219be0d1d6a377641fb7716c64bf9d40062ffcb90f3cba461d"
-    sha256 cellar: :any,                 big_sur:        "951e867aec8212de345e44ecae231964a81d9a9b7033b9b43ca74cf41ac43408"
-    sha256 cellar: :any,                 catalina:       "20867bbc297f9419aff9e752f79bf973758a223063d012fc28016e47239bd54b"
-    sha256 cellar: :any,                 mojave:         "74b92c04402808c96f7a42c5dc5a86331e29e81ac9a1fb2f01e3332de4f3d8d2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d26eb6c1d717c081bfa455825c1edca3230c4f007f4334d207bb72ee727c9ff8"
+    sha256 cellar: :any,                 arm64_big_sur: "935bb0c71f1ab79e0ef2593b519b62b5489d87d4571b320cd8f93050c820c450"
+    sha256 cellar: :any,                 big_sur:       "3b6478346d722d13c9dd556a90949319417224006939b1e46b06a189dc8c5262"
+    sha256 cellar: :any,                 catalina:      "583378673b021a431d4f987ae609fe2a53f834c4e37bca20178e48e94efe77cd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c8b88708df04038ec6e29fbecd7b4c7d1d7fa8792da09aa56401de8117b5e3b5"
   end
 
   head do
