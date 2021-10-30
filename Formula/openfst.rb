@@ -11,11 +11,13 @@ class Openfst < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "6133234e79a10929c05657d79c9f47e8e646b36cf7f023ab9dd8b3151dec7f34"
-    sha256 cellar: :any,                 big_sur:       "d5139b2d98c091cb1d3b5215392b9c84ee94e6d51e0a2a1dad6a4ff05b9dc2c9"
-    sha256 cellar: :any,                 catalina:      "7aea4b496aac30803d9cdb99f90e30ba0b44b240a822f7b9a25df963f845f57b"
-    sha256 cellar: :any,                 mojave:        "1e4d6b330797e513315266073af2647d08b1e5a123d11fc165ace77cd2de43e6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "51f7089734a90d7fabd44553bb4fc87c3be0a5b3541182bc54129b2379bf2df5"
+    sha256 cellar: :any,                 arm64_monterey: "6062e938b92156ce6bf247682bf18755918678333ef4abd079533a3459c950de"
+    sha256 cellar: :any,                 arm64_big_sur:  "6133234e79a10929c05657d79c9f47e8e646b36cf7f023ab9dd8b3151dec7f34"
+    sha256 cellar: :any,                 monterey:       "a99d0befd091c674cb054c07c0c3298ab670bf98f510d05493c9338bc56d69b1"
+    sha256 cellar: :any,                 big_sur:        "d5139b2d98c091cb1d3b5215392b9c84ee94e6d51e0a2a1dad6a4ff05b9dc2c9"
+    sha256 cellar: :any,                 catalina:       "7aea4b496aac30803d9cdb99f90e30ba0b44b240a822f7b9a25df963f845f57b"
+    sha256 cellar: :any,                 mojave:         "1e4d6b330797e513315266073af2647d08b1e5a123d11fc165ace77cd2de43e6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "51f7089734a90d7fabd44553bb4fc87c3be0a5b3541182bc54129b2379bf2df5"
   end
 
   on_linux do
