@@ -8,6 +8,7 @@ class Geogram < Formula
   license all_of: ["BSD-3-Clause", :public_domain, "LGPL-3.0-or-later", "MIT"]
 
   bottle do
+    sha256 cellar: :any, monterey: "c825e078da693cc077b5655eebe374f753dc78620b87a73d6603f787fb248a0d"
     sha256 cellar: :any, big_sur:  "c31325cc34b205bb39bce490babfd8948dfbea2e5ce3a2c8ee402c8efe50b106"
     sha256 cellar: :any, catalina: "8766335d1707cf361a1093845f1b35ea15063b06d5bd96bb4f175d7260ff2a2b"
   end
