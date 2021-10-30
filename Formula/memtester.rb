@@ -13,11 +13,13 @@ class Memtester < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f5ce3dde902d08c7d9a271d327f9eee0c017e07937623cf095856fa8313cd882"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5166f804aa60dda7386e22dee840ca0e65989021bae02d7e9b2b57b66be3e68b"
-    sha256 cellar: :any_skip_relocation, catalina:      "b71fcf7ef390537edfcc94fcbf61c0118461e4f3d845764847d9bf30617fe84a"
-    sha256 cellar: :any_skip_relocation, mojave:        "cb3c13604ee72639b2ef46f0ebdf9dd37e5675a850e92ec5b8f14fa20108c131"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4fc3354dc6b62307ec218bd5f77d41a1fdc8de94056d62407d6a5a6f62a54337"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "805698c2316c9738d9c7c5de7cf7edce56b7e6f481916204bde28fea90475385"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f5ce3dde902d08c7d9a271d327f9eee0c017e07937623cf095856fa8313cd882"
+    sha256 cellar: :any_skip_relocation, monterey:       "8279cf9cb4562df9ffc10a813904a93d0e01bc454a3ed482a9f5bb58b5308140"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5166f804aa60dda7386e22dee840ca0e65989021bae02d7e9b2b57b66be3e68b"
+    sha256 cellar: :any_skip_relocation, catalina:       "b71fcf7ef390537edfcc94fcbf61c0118461e4f3d845764847d9bf30617fe84a"
+    sha256 cellar: :any_skip_relocation, mojave:         "cb3c13604ee72639b2ef46f0ebdf9dd37e5675a850e92ec5b8f14fa20108c131"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4fc3354dc6b62307ec218bd5f77d41a1fdc8de94056d62407d6a5a6f62a54337"
   end
 
   def install
