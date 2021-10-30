@@ -13,6 +13,7 @@ class ServerGo < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "3209d8af70df99fe6e18745742bf1676eb4839a3c15c3fd03ba5416c2ed67234"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9b528abc2bddbaf803d475fbb23758db2c018704c34c9b5c492b0a7f29f3fd9c"
     sha256 cellar: :any_skip_relocation, monterey:       "93b4532f5bd3c808e74225db0deec2aff1bc0f585eaada465dcfb3df70b6602f"
     sha256 cellar: :any_skip_relocation, big_sur:        "48b01c329bbf329c08da2d827c3891659f7a82eb15913b5f666cad9ca835d5eb"
     sha256 cellar: :any_skip_relocation, catalina:       "d0c6e7d29e40bdf3535103019722db0dcfdc787e18747b1b3c72b87f7a52c33a"
