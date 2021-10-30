@@ -13,6 +13,7 @@ class Cxxopts < Formula
     sha256 cellar: :any_skip_relocation, mojave:        "d4a289fb314e5efdb8c889c560340c259c04b19b9d1e7087b58d0d24aafd5ed2"
     sha256 cellar: :any_skip_relocation, high_sierra:   "d4a289fb314e5efdb8c889c560340c259c04b19b9d1e7087b58d0d24aafd5ed2"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "e201e81cc6246a4691bb97168dfab6bd5bcdde73cccd1ac702079be15463715a"
+    sha256 cellar: :any_skip_relocation, all:           "92728eeb20f6e152903be1478ca61b6185d590d3042970c1b6f24a2b9296bde5"
   end
 
   depends_on "cmake" => :build
