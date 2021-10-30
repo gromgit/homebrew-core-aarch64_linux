@@ -8,10 +8,12 @@ class Heartbeat < Formula
   head "https://github.com/elastic/beats.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "745829a48ba97ea0d0face59f6d7b7a34d0aa5d0d8f92fb57b3bcbb97fc116a9"
-    sha256 cellar: :any_skip_relocation, big_sur:       "403338b8b7ec4b7a7a33a06b79106931a0e0cc2a538ad45a326445397cea0936"
-    sha256 cellar: :any_skip_relocation, catalina:      "cb47554cc8455702ada72f9324ebbe27db3b3fdf62d8c57cc92bf682334192fd"
-    sha256 cellar: :any_skip_relocation, mojave:        "5f83bbf5de48d1e862034044ee862868f65d1edcbe323c3b880d66f8138aa3f4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6fbc24a1ee45aff94f696d67b99d8b8dc8c47e83e6a9c1fbc82345a2417c88e5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "745829a48ba97ea0d0face59f6d7b7a34d0aa5d0d8f92fb57b3bcbb97fc116a9"
+    sha256 cellar: :any_skip_relocation, monterey:       "81dc33b28280bd9e2b3fe6906ed4bb5002d516a9b067950072d5544417b2bb4c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "403338b8b7ec4b7a7a33a06b79106931a0e0cc2a538ad45a326445397cea0936"
+    sha256 cellar: :any_skip_relocation, catalina:       "cb47554cc8455702ada72f9324ebbe27db3b3fdf62d8c57cc92bf682334192fd"
+    sha256 cellar: :any_skip_relocation, mojave:         "5f83bbf5de48d1e862034044ee862868f65d1edcbe323c3b880d66f8138aa3f4"
   end
 
   depends_on "go" => :build
