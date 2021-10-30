@@ -7,6 +7,7 @@ class Cryptol < Formula
   head "https://github.com/GaloisInc/cryptol.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, monterey:     "91082565f7096f7eac147693c74f80ec9f661a67bfef7a07c9361c82b32596df"
     sha256 cellar: :any_skip_relocation, big_sur:      "035bb1a575c63a3992a28e2f9adbcbf452ed423704089da835bc4f2b4241eba7"
     sha256 cellar: :any_skip_relocation, catalina:     "fc1c9ccb7aa2fa185a319e1bcf0de1bd7d45cf3a90234b50cb04c1db0f25aec0"
     sha256 cellar: :any_skip_relocation, mojave:       "472d4f5548696c9b0e7c3d512e6630111d7db23f0e37ac21d6193192eda135c8"
