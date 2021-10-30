@@ -6,11 +6,13 @@ class Pcapplusplus < Formula
   license "Unlicense"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ebdc93c7ccb4ddb29c1fe4133657cdf9c55740927c85e1568a25a0e42debad66"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c66896b5edabf916a4db8522e38f4b836f63a2b1bb3705a21e9d9309b9fb1307"
-    sha256 cellar: :any_skip_relocation, catalina:      "39ad69b47800c0d0c98f513750f1170e0dd56e0aca9e02eb29cb37e2e75c22f6"
-    sha256 cellar: :any_skip_relocation, mojave:        "098062050ba28c2c168edb8abd60a6fb0f7185df57f12e5aed897b8cd98f0d9d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a38e0066b0df3ee6a3ee87d0ad9dc33b57f49e65d377b7582cdb2f741bcb7229"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "77db04d2021c287793f415a059df421d0ce01d41fa90610141093f3931576e74"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ebdc93c7ccb4ddb29c1fe4133657cdf9c55740927c85e1568a25a0e42debad66"
+    sha256 cellar: :any_skip_relocation, monterey:       "be079d29adc3d0eef5c5e335e1e87b43eae56509abff09cd2ca2ec68800128d3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c66896b5edabf916a4db8522e38f4b836f63a2b1bb3705a21e9d9309b9fb1307"
+    sha256 cellar: :any_skip_relocation, catalina:       "39ad69b47800c0d0c98f513750f1170e0dd56e0aca9e02eb29cb37e2e75c22f6"
+    sha256 cellar: :any_skip_relocation, mojave:         "098062050ba28c2c168edb8abd60a6fb0f7185df57f12e5aed897b8cd98f0d9d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a38e0066b0df3ee6a3ee87d0ad9dc33b57f49e65d377b7582cdb2f741bcb7229"
   end
 
   uses_from_macos "libpcap"
