@@ -12,6 +12,7 @@ class Picat < Formula
   end
 
   bottle do
+    sha256 cellar: :any_skip_relocation, monterey:     "9a6567ded5a5cdacb7f454715beeca4cae6590b11c28cfe172388751567807c4"
     sha256 cellar: :any_skip_relocation, big_sur:      "aaf2ef1f21a19c8bf60b5ed7b52b91f12693babdaaec8edb458b888e6f748838"
     sha256 cellar: :any_skip_relocation, catalina:     "40e9b771743f9799af5c2abc091a3099faeb0a14be8136d5aa3fea1624c67d83"
     sha256 cellar: :any_skip_relocation, mojave:       "248ac7a621f9b9f860170dd1bf57aafd6f785e35140d58c2a563fbd4e6604a42"
