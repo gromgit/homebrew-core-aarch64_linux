@@ -7,6 +7,7 @@ class Virtuoso < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "80cff43493d2981f14ec84848d5951a239a1ffe307bc030e7fed2ebc48234303"
+    sha256 cellar: :any,                 arm64_big_sur:  "07dd74a255eadcb7bf6cc41d3e07445a992069e5ab9072dc24a8f02fd98dcf74"
     sha256 cellar: :any,                 monterey:       "dfd970140bb4e7a212d2fa8c4be8a45a75d643fa247ed185d1fc6607ff044e76"
     sha256 cellar: :any,                 big_sur:        "d35c507e655a9b900986b609bb232f30c811cbfb4f3ec20d60d1146059ba5305"
     sha256 cellar: :any,                 catalina:       "bb672169382bf5faa77845765420adc91f5af1e46239e1f9d45d187b2f335570"
