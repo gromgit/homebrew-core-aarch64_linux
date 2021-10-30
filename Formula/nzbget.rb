@@ -13,10 +13,12 @@ class Nzbget < Formula
 
   bottle do
     rebuild 1
-    sha256                               big_sur:      "9810dbbf23b06f25ddface9bb1ca1685090d3d69dec8543d525a586dedf7480d"
-    sha256                               catalina:     "cb861d544daebf2727e2f0f870194de496a17e5ba14518d1db9d6e1e1a640479"
-    sha256                               mojave:       "d1e17cf15ec820ff11d114923c57edf57bb2c4cc90fd8106f4d5252442c217f0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "4e65e035d1c6512f7f3d906614af389d27e4c7a020acdadbf841b0377a6a6671"
+    sha256 cellar: :any,                 arm64_monterey: "3f7ef62ade3d391d6a0cbb63b39e75e8c8fca3f07d0525ab291f607d35d94d38"
+    sha256                               monterey:       "609b10863046bd0fc1b354a521644e0cce214240070d516f9c240833ee402b81"
+    sha256                               big_sur:        "9810dbbf23b06f25ddface9bb1ca1685090d3d69dec8543d525a586dedf7480d"
+    sha256                               catalina:       "cb861d544daebf2727e2f0f870194de496a17e5ba14518d1db9d6e1e1a640479"
+    sha256                               mojave:         "d1e17cf15ec820ff11d114923c57edf57bb2c4cc90fd8106f4d5252442c217f0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4e65e035d1c6512f7f3d906614af389d27e4c7a020acdadbf841b0377a6a6671"
   end
 
   depends_on "pkg-config" => :build
