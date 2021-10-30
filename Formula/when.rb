@@ -11,6 +11,7 @@ class When < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "8d8383bec0c3e96f4fa43ba2dc9ef211bd8e0904a5bdca8c55dc1f6a802d3709"
     sha256 cellar: :any_skip_relocation, mojave:        "8d8383bec0c3e96f4fa43ba2dc9ef211bd8e0904a5bdca8c55dc1f6a802d3709"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "4f0d85ac2cb2705e1d733a968530d190fac54796a70ba63d1010026b5ec76a2c"
+    sha256 cellar: :any_skip_relocation, all:           "a81c9f8df331f75089bb37fd5fba3c21b5af8cb78688aa581a0dc68576e6eb30"
   end
 
   def install
