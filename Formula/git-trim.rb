@@ -7,6 +7,7 @@ class GitTrim < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "3cd1f15388555fd2bb5f4fd580f315e1bada283d4f4ce6aa2411bbfbd7c3b079"
+    sha256 cellar: :any,                 arm64_big_sur:  "0fbf3f4908554abfcda3a7b49c8f49bc878152dcbaad4d4fa8c19cce9f6b2f6a"
     sha256 cellar: :any,                 monterey:       "145445f0a7f6267c1490fa94bec8dcf71abc693759bfd129059528e9347a0a12"
     sha256 cellar: :any,                 big_sur:        "5c52fe8dd74e83a4a7048ae8a4f42661c2738718ea40ebede07ecf83771ba5ff"
     sha256 cellar: :any,                 catalina:       "387724382d30ce0ac900da57f737d0f3ba91a57e29242e8b790f4ade97bf7179"
