@@ -18,11 +18,13 @@ class Crfxx < Formula
 
   bottle do
     rebuild 3
-    sha256 cellar: :any,                 arm64_big_sur: "763da462b53ce92f9feae23750b038b96e79b121b7bdfa4c0d1c99701c3345d4"
-    sha256 cellar: :any,                 big_sur:       "fcf0862271c392bc7b69a4e02a74dd9bd85615b6be0273009e7611bb78298f61"
-    sha256 cellar: :any,                 catalina:      "6706e1cb8b242ed58885402da7b41cd1552f206407fc18c200907f3c64a7b9c5"
-    sha256 cellar: :any,                 mojave:        "814479e15702bd1ef9afba98ff5030bbf7cd90810f2561863d1b9085a230ee8f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3cc105b0deaa5661ba6cde2ac18b289ef676aacfad93f569e659d1ce6035127f"
+    sha256 cellar: :any,                 arm64_monterey: "3a9ccdc1221e5b2516710ef51b3b50473d7d580f2676fca2c8f69cabcd7e6f61"
+    sha256 cellar: :any,                 arm64_big_sur:  "763da462b53ce92f9feae23750b038b96e79b121b7bdfa4c0d1c99701c3345d4"
+    sha256 cellar: :any,                 monterey:       "37c3083f194d7a03c220805f33d1469babee06cf05d0938a44f4f47a023dc86c"
+    sha256 cellar: :any,                 big_sur:        "fcf0862271c392bc7b69a4e02a74dd9bd85615b6be0273009e7611bb78298f61"
+    sha256 cellar: :any,                 catalina:       "6706e1cb8b242ed58885402da7b41cd1552f206407fc18c200907f3c64a7b9c5"
+    sha256 cellar: :any,                 mojave:         "814479e15702bd1ef9afba98ff5030bbf7cd90810f2561863d1b9085a230ee8f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3cc105b0deaa5661ba6cde2ac18b289ef676aacfad93f569e659d1ce6035127f"
   end
 
   # Fix -flat_namespace being used on Big Sur and later.
