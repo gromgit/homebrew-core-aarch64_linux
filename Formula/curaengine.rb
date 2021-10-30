@@ -18,11 +18,13 @@ class Curaengine < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "65db3e5bd79cd6d05b9f1b1977f4ac9cd4f5086bc2fb8805a2380cea66336823"
-    sha256 cellar: :any,                 big_sur:       "ecf3e469cedce0fc986b2648df563997806a9156c5cab3db8da2351fa0d0e07e"
-    sha256 cellar: :any,                 catalina:      "ba5a690f2febe148e2fa836a840c996e6e41701379c152f8a32a2b5074e263fa"
-    sha256 cellar: :any,                 mojave:        "bac60b2b7e9c50c1ea5dcb939d4dec14d7dedde5b0d972817a3fd17ba5a08ed4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8d9f51fbe4721b8dc596e4d1b1ae2ac90f27a592f3422d177e538860b3034fc0"
+    sha256 cellar: :any,                 arm64_monterey: "bc036608a190ab251a7ea1cc6e8b581fc9b6af2f23680100a576c238c5d49df3"
+    sha256 cellar: :any,                 arm64_big_sur:  "65db3e5bd79cd6d05b9f1b1977f4ac9cd4f5086bc2fb8805a2380cea66336823"
+    sha256 cellar: :any,                 monterey:       "1efd9cfdf4422d0c4f2476c7365425bb4e7a1ea2d3e7fcf7df5a72961a7edd42"
+    sha256 cellar: :any,                 big_sur:        "ecf3e469cedce0fc986b2648df563997806a9156c5cab3db8da2351fa0d0e07e"
+    sha256 cellar: :any,                 catalina:       "ba5a690f2febe148e2fa836a840c996e6e41701379c152f8a32a2b5074e263fa"
+    sha256 cellar: :any,                 mojave:         "bac60b2b7e9c50c1ea5dcb939d4dec14d7dedde5b0d972817a3fd17ba5a08ed4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8d9f51fbe4721b8dc596e4d1b1ae2ac90f27a592f3422d177e538860b3034fc0"
   end
 
   depends_on "cmake" => :build
