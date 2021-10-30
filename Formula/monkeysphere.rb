@@ -15,6 +15,7 @@ class Monkeysphere < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "3bd12fd46a4c71a6192363e3fcf693be27644a294e4f79d5161fcc6682408595"
     sha256 cellar: :any,                 arm64_big_sur:  "9a63b22184c6039b5e97ce75d7f9aa6168817a6762871636041be765f1f78302"
+    sha256 cellar: :any,                 monterey:       "f7b88043cb09a0c5d318b021448d591f8fcdb4a87d142327eda4a40ff2e36ce2"
     sha256 cellar: :any,                 big_sur:        "f6d43ab1186cc4e12533ec7c7cad460bac24c260a933dde10bc19a4f2f4c625c"
     sha256 cellar: :any,                 catalina:       "072b5372d6b15f27c2330751004f9da2922547eba1944f881412a8b7ded8b8b5"
     sha256 cellar: :any,                 mojave:         "2c2dfe55c8fa2b30e16808c5100379eb1380b3bb8295cb8ba24f515eb02063f9"
