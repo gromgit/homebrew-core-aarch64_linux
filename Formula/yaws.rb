@@ -13,11 +13,13 @@ class Yaws < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "55f35e91696552c9e0240835f8fc02c733b2bd657733c86123ee3d472ef5e9f6"
-    sha256 cellar: :any_skip_relocation, big_sur:       "79fe292028db08b81a2f66f80cbc2fd7c52e9801692c416ea275663c61dd4533"
-    sha256 cellar: :any_skip_relocation, catalina:      "99c7e7a4fb01e682a1f1cf513ac6b4202f9f030fea64836a0b71354802fde033"
-    sha256 cellar: :any_skip_relocation, mojave:        "f8b43c32a42426bc2e0b774e8abde8c7b32206ad19c230231ba22f32a1312eb5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "30dbc3c5951396f785b714bcf486d0247d399ecae66903a7e3a1872b3165d01f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "adb085c84a3b06e605da1dfac3864ccb5831327d3c5f39e7413588a32ab106f2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "55f35e91696552c9e0240835f8fc02c733b2bd657733c86123ee3d472ef5e9f6"
+    sha256 cellar: :any_skip_relocation, monterey:       "e9ad8bff29da32d63e13dfc6a97b0728f8ab2ef1e483d7ca8f21a7b682478730"
+    sha256 cellar: :any_skip_relocation, big_sur:        "79fe292028db08b81a2f66f80cbc2fd7c52e9801692c416ea275663c61dd4533"
+    sha256 cellar: :any_skip_relocation, catalina:       "99c7e7a4fb01e682a1f1cf513ac6b4202f9f030fea64836a0b71354802fde033"
+    sha256 cellar: :any_skip_relocation, mojave:         "f8b43c32a42426bc2e0b774e8abde8c7b32206ad19c230231ba22f32a1312eb5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "30dbc3c5951396f785b714bcf486d0247d399ecae66903a7e3a1872b3165d01f"
   end
 
   depends_on "autoconf" => :build
