@@ -14,6 +14,7 @@ class Bitcoin < Formula
   bottle do
     rebuild 1
     sha256 cellar: :any,                 arm64_monterey: "e8518c5eff6958237409b99a4281e0dcf30c5fbd3a61f6558fa1b51310aaef9f"
+    sha256 cellar: :any,                 arm64_big_sur:  "9421b8a1746299d909b14410991c9d11735dc47b9315d15b5ee38565cad0ae45"
     sha256 cellar: :any,                 monterey:       "8948c2404b7cffd74fe7bf979313a236349d397f92b6c0043c1a249918eb833c"
     sha256 cellar: :any,                 big_sur:        "a326a566321b9f5b8d86499fcabb246fb7bdbded956791d9293a97705c0bdb12"
     sha256 cellar: :any,                 catalina:       "59227888c3021090ea60dda9c54b80447d956e42325abb552e0f343cdaf334cc"
