@@ -12,10 +12,12 @@ class WpCli < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1f99dcae45bc3a8f8ea09d534e1050201391afea5fcd42287a5d24aef303dcc4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5f130b0733ba0765afdb46836875c83e848b5b6bf53990cdb4b1e2282cf03171"
-    sha256 cellar: :any_skip_relocation, catalina:      "5f130b0733ba0765afdb46836875c83e848b5b6bf53990cdb4b1e2282cf03171"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1f99dcae45bc3a8f8ea09d534e1050201391afea5fcd42287a5d24aef303dcc4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1f99dcae45bc3a8f8ea09d534e1050201391afea5fcd42287a5d24aef303dcc4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1f99dcae45bc3a8f8ea09d534e1050201391afea5fcd42287a5d24aef303dcc4"
+    sha256 cellar: :any_skip_relocation, monterey:       "5f130b0733ba0765afdb46836875c83e848b5b6bf53990cdb4b1e2282cf03171"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5f130b0733ba0765afdb46836875c83e848b5b6bf53990cdb4b1e2282cf03171"
+    sha256 cellar: :any_skip_relocation, catalina:       "5f130b0733ba0765afdb46836875c83e848b5b6bf53990cdb4b1e2282cf03171"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1f99dcae45bc3a8f8ea09d534e1050201391afea5fcd42287a5d24aef303dcc4"
   end
 
   depends_on "php"
