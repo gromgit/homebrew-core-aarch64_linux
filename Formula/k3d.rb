@@ -11,12 +11,10 @@ class K3d < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2e68928ecd87209353cf056d69e8ff87cf51832bb69b5acbc33816419e7f747c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8a820c0780c654f8abd1bece0f0535c9ca971fbc0c447750dc32980033013e42"
-    sha256 cellar: :any_skip_relocation, monterey:       "c3ee237e7a217478b327efb039abbad9f1d80dbd4649f4fd7d2623cd594540ba"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e4d6ddbd63d367da00030548fce3e569193a10d9b350e76835c235184122f416"
-    sha256 cellar: :any_skip_relocation, catalina:       "dbed08d2abfe901bc67c50c34aeff8cc482f4768320da3d8f2be55f948f07752"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a0c313a8042ec7b2466a2fff107a71efb3166d1bd5d78406623ccf3a52e4ae06"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e94b60e00ef99c93f8a684dd9de14c6188e301e471113f3156c8ab621270d911"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a1d150c6cf260a17b16a155d305f20a97a80e6d7ae5e35671db8dc4a26c4885e"
+    sha256 cellar: :any_skip_relocation, catalina:      "d7777725eba873299f2344508b907d833973744640973a1201b053a18388d1f2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e117dd2b6ebf56a0def38e790920f5c9ac9bbdbfe1abb617c933f46db8770f40"
   end
 
   depends_on "go" => :build
