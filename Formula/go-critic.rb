@@ -6,6 +6,13 @@ class GoCritic < Formula
   license "MIT"
   head "https://github.com/go-critic/go-critic.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "28c94b91145a1f56d8af958f1990f3b3da574a04be295b91bb6e4d9e0f18dce6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5ba3bc01bb35dc4c87f9f06fa26066cb6065d2a3bd1dbaec5d46a29b71ce4b7e"
+    sha256 cellar: :any_skip_relocation, catalina:      "edded4a1c57798d6b34187e40f4099a8b0118495d9237f91d0f3612430c88461"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7a239aabbb065dd06ed267c954277e8c2435b989366045fe29168600d5fe574b"
+  end
+
   depends_on "go"
 
   def install
