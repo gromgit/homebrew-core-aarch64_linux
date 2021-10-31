@@ -8,11 +8,13 @@ class Triton < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "df4487f4d2822294ed4bde9b4f8af1a67bf23e467dceaba168ecff50c4865b8d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "58babe7098da230bf1daa9b7e7838b683ee97b7a82d6a68e32ac1dc9699f8f84"
-    sha256 cellar: :any_skip_relocation, catalina:      "e3c6ee7a64059050fed8b4577af8711be23d63c0e765371347842a4233b36d3b"
-    sha256 cellar: :any_skip_relocation, mojave:        "de43242aef253303a8303740989570dc99a2ec2a9015668064e14ce4ec4a4d79"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b396ddfa00af45a207b18615542e7d82257ef808da5999c6e3f8a4efc1619940"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e22d64607080616b99cb0d16a81cb4ca2708c383ccda5f2dcdafda20f31d2eea"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "df4487f4d2822294ed4bde9b4f8af1a67bf23e467dceaba168ecff50c4865b8d"
+    sha256 cellar: :any_skip_relocation, monterey:       "73a64c374ae8b9786c2d156df002db3f2ef2110771041cb805891e0949d1734d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "58babe7098da230bf1daa9b7e7838b683ee97b7a82d6a68e32ac1dc9699f8f84"
+    sha256 cellar: :any_skip_relocation, catalina:       "e3c6ee7a64059050fed8b4577af8711be23d63c0e765371347842a4233b36d3b"
+    sha256 cellar: :any_skip_relocation, mojave:         "de43242aef253303a8303740989570dc99a2ec2a9015668064e14ce4ec4a4d79"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b396ddfa00af45a207b18615542e7d82257ef808da5999c6e3f8a4efc1619940"
   end
 
   depends_on "node"
