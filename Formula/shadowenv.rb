@@ -6,11 +6,13 @@ class Shadowenv < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e1385722a4196c36cac9be0f24f41a134031ec800caf336cb52d29beccd1777e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0aa59a919ee173a4f52a792cf8efac267df60233fcd5ea48ea89749dad43f350"
-    sha256 cellar: :any_skip_relocation, catalina:      "a61f75e84322bc9554691f540a53c51042034163d85328c6f1eb78cb4cb0cfd6"
-    sha256 cellar: :any_skip_relocation, mojave:        "cbbfa9a3b1a4850cf12f8f025533edb6c142ed68e75f201061773d0cd6006750"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "17d6affcde8f58c00eabf2bcab526b9b7c54f5a141c68a9e2101cfd6fd7a1b7a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a01d1e377253ea11db6462644f7c3bf88c4476f292e7909f24806ae504100a95"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e1385722a4196c36cac9be0f24f41a134031ec800caf336cb52d29beccd1777e"
+    sha256 cellar: :any_skip_relocation, monterey:       "c94361529245e287adcc3edfce02c916ec242660c308b760b7f299156a6ce6f0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0aa59a919ee173a4f52a792cf8efac267df60233fcd5ea48ea89749dad43f350"
+    sha256 cellar: :any_skip_relocation, catalina:       "a61f75e84322bc9554691f540a53c51042034163d85328c6f1eb78cb4cb0cfd6"
+    sha256 cellar: :any_skip_relocation, mojave:         "cbbfa9a3b1a4850cf12f8f025533edb6c142ed68e75f201061773d0cd6006750"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "17d6affcde8f58c00eabf2bcab526b9b7c54f5a141c68a9e2101cfd6fd7a1b7a"
   end
 
   depends_on "rust" => :build
