@@ -7,11 +7,13 @@ class Reproc < Formula
   head "https://github.com/DaanDeMeyer/reproc.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "d1ca154c6d2d326aaf4a7b6ee1ceb1d938a53bf5f1c781caf2442e168d8e691e"
-    sha256 cellar: :any,                 big_sur:       "45eadbe6fd0d8c7290c841df4382ae7d3856786246aeece1eafbbfac966f1654"
-    sha256 cellar: :any,                 catalina:      "99cea88e4dea75d93cd99dce06affadf03f77a6e930a4757173bff223f700255"
-    sha256 cellar: :any,                 mojave:        "a57ce39842edfdffeb70c5e9f707f6adf4b309d27c7b0e48de21b9c02c803922"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0b8d92c86ead3042691d0b71e41bce3d4c4548139172a6e14c5534bc422050fc"
+    sha256 cellar: :any,                 arm64_monterey: "27e2415191ce6b56c81958ce5eea0811a60b57373aa401cff607515f51a054e1"
+    sha256 cellar: :any,                 arm64_big_sur:  "d1ca154c6d2d326aaf4a7b6ee1ceb1d938a53bf5f1c781caf2442e168d8e691e"
+    sha256 cellar: :any,                 monterey:       "cb4eefba9da6281f5fe474439b4baa73f962c4635bbedd8cf7bad3df48756682"
+    sha256 cellar: :any,                 big_sur:        "45eadbe6fd0d8c7290c841df4382ae7d3856786246aeece1eafbbfac966f1654"
+    sha256 cellar: :any,                 catalina:       "99cea88e4dea75d93cd99dce06affadf03f77a6e930a4757173bff223f700255"
+    sha256 cellar: :any,                 mojave:         "a57ce39842edfdffeb70c5e9f707f6adf4b309d27c7b0e48de21b9c02c803922"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0b8d92c86ead3042691d0b71e41bce3d4c4548139172a6e14c5534bc422050fc"
   end
 
   depends_on "cmake" => :build
