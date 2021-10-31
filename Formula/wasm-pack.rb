@@ -2,7 +2,7 @@ class WasmPack < Formula
   desc "Your favorite rust -> wasm workflow tool!"
   homepage "https://rustwasm.github.io/wasm-pack/"
   url "https://github.com/rustwasm/wasm-pack/archive/v0.10.1.tar.gz"
-  sha256 "d8242567e85f4e9f6e8ce4c8a6c56585c2f4aa5f65f3cf92a878515bf75ce686"
+  sha256 "fe46f54a0fb8372446cc8a6c64049405b9c4ea7bbe5bdee7b1b219c701fa783e"
   license "Apache-2.0"
   head "https://github.com/rustwasm/wasm-pack.git", branch: "master"
 
