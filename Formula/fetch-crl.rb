@@ -17,6 +17,7 @@ class FetchCrl < Formula
     sha256 cellar: :any_skip_relocation, mojave:        "7c4aedc9178b36cf45d9a05ed4213c5c2ede584dc1c2754f2370b91f42a1efe3"
     sha256 cellar: :any_skip_relocation, high_sierra:   "7c4aedc9178b36cf45d9a05ed4213c5c2ede584dc1c2754f2370b91f42a1efe3"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "9b388cc3cce924c20dc770dca8e62dc6cf6117e9150fdf3a614bcbba7db707e8"
+    sha256 cellar: :any_skip_relocation, all:           "ca0ef602b4a737043ba54b9c43324faabc98fc65768a57220afe282571b92826"
   end
 
   uses_from_macos "perl"
