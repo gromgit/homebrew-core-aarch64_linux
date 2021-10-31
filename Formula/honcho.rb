@@ -7,7 +7,7 @@ class Honcho < Formula
   head "https://github.com/nickstenning/honcho.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "9f38c7840c832d8f40eb0c6f025357660e575c0281ccb76c5b123e33968efaca"
+    sha256 cellar: :any_skip_relocation, all: "3dada63778e9ed2ba5ea8afb8a0946f886f378539b5ee07164016026452a4ecf"
   end
 
   depends_on "python@3.10"
