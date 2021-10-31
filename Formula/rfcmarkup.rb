@@ -11,10 +11,11 @@ class Rfcmarkup < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0d97d7f0dd108bd9402c9bb0a22532f1f4f16dd8ebdd2004d865ced971d899ad"
-    sha256 cellar: :any_skip_relocation, big_sur:       "993672e2e414a95a06259ac6960d37ac9cf324093766fbf28adf3579fd450678"
-    sha256 cellar: :any_skip_relocation, catalina:      "993672e2e414a95a06259ac6960d37ac9cf324093766fbf28adf3579fd450678"
-    sha256 cellar: :any_skip_relocation, mojave:        "993672e2e414a95a06259ac6960d37ac9cf324093766fbf28adf3579fd450678"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0d97d7f0dd108bd9402c9bb0a22532f1f4f16dd8ebdd2004d865ced971d899ad"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0d97d7f0dd108bd9402c9bb0a22532f1f4f16dd8ebdd2004d865ced971d899ad"
+    sha256 cellar: :any_skip_relocation, big_sur:        "993672e2e414a95a06259ac6960d37ac9cf324093766fbf28adf3579fd450678"
+    sha256 cellar: :any_skip_relocation, catalina:       "993672e2e414a95a06259ac6960d37ac9cf324093766fbf28adf3579fd450678"
+    sha256 cellar: :any_skip_relocation, mojave:         "993672e2e414a95a06259ac6960d37ac9cf324093766fbf28adf3579fd450678"
   end
 
   depends_on :macos # Due to Python 2
