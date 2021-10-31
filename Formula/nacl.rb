@@ -15,6 +15,7 @@ class Nacl < Formula
 
   bottle do
     rebuild 2
+    sha256 cellar: :any_skip_relocation, monterey:     "925c585e1140b37453c5f7ac60f944221e1de495654aefc70d5352e43fa0f730"
     sha256 cellar: :any_skip_relocation, big_sur:      "89574694f733c8aa852e09e3828f10dd6ce2ece4219bd825e5f6c18253bddb28"
     sha256 cellar: :any_skip_relocation, catalina:     "b9fb1445709388168d0e1c56964a7540e8ff4e6294d31eb23c62368ce56e6d1b"
     sha256 cellar: :any_skip_relocation, mojave:       "bb0b22e1aa3a87657b064def3d19bcad419a4339889046f931a5eac7e5bc8bc1"
