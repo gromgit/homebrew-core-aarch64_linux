@@ -13,11 +13,13 @@ class Pbc < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "ac722f3534f9cf0679f2c999353a524d822d4068d8f9877a5967fe6fbcef9f04"
-    sha256 cellar: :any, big_sur:       "c14c0514c725c35d0dffbc7dc410ddc5be033e061ffc66d9c039033b0ca1e6e4"
-    sha256 cellar: :any, catalina:      "83d464696ab79f463ec2dc930cbd9c3ecbdedde5c578e70a4994b2cd8fec1f6d"
-    sha256 cellar: :any, mojave:        "85855bfe6dfe9a4fc0b0359f74aa7ea587283c1c724a6c4aee77972ecfc1d390"
-    sha256 cellar: :any, high_sierra:   "adc712fd4cc68990b669922be5b8ab15e4d499176c09facb5b129c6d7c847262"
+    sha256 cellar: :any, arm64_monterey: "2397daa1cad88180149983c0f6557b6a48fa2124c24ac78a8d95dd0af9cac8a0"
+    sha256 cellar: :any, arm64_big_sur:  "ac722f3534f9cf0679f2c999353a524d822d4068d8f9877a5967fe6fbcef9f04"
+    sha256 cellar: :any, monterey:       "dfe0e9676dd479513ec0cf524d6a225229de96aa058492a6319cdd914dd3509f"
+    sha256 cellar: :any, big_sur:        "c14c0514c725c35d0dffbc7dc410ddc5be033e061ffc66d9c039033b0ca1e6e4"
+    sha256 cellar: :any, catalina:       "83d464696ab79f463ec2dc930cbd9c3ecbdedde5c578e70a4994b2cd8fec1f6d"
+    sha256 cellar: :any, mojave:         "85855bfe6dfe9a4fc0b0359f74aa7ea587283c1c724a6c4aee77972ecfc1d390"
+    sha256 cellar: :any, high_sierra:    "adc712fd4cc68990b669922be5b8ab15e4d499176c09facb5b129c6d7c847262"
   end
 
   depends_on "gmp"
