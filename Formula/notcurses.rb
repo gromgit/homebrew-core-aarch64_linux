@@ -6,10 +6,9 @@ class Notcurses < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 arm64_big_sur: "0b98b6de24bbb7c4e36507b426948ffc57d07945bdddaf6772a0cf528068bcc5"
-    sha256 big_sur:       "a168682b2465c70e579a146d919dc96f6dbe59991a6a00f45655fa1b565c5252"
-    sha256 catalina:      "2db3428332de5796b7911dc9ed5a7ac92ef7ac8779a8be80bb8e2658723aa556"
-    sha256 mojave:        "f134e6407c98ac8da525a4faddaa153060a5e5f7c3ab022b61ec40c551c0b300"
+    sha256 arm64_big_sur: "2f472bc6be3e450af5870241b25ce4327682ff1461ea34704727cb9e4bdbee57"
+    sha256 big_sur:       "954f4b54782ec2ae31e43a8b7ca023fd58054fbcdf15bb8fd16aee083cf4c8cf"
+    sha256 catalina:      "7794c0373974d63ca1d82427ebcdd3d5bd726d4ece1c2e8f6709f670a219651f"
   end
 
   depends_on "cmake" => :build
