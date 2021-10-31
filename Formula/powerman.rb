@@ -15,12 +15,14 @@ class Powerman < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "fad852bdb968ec275c82d4973145d05cd92103d9b144d622304fd70a18ec1989"
-    sha256 big_sur:       "4bf4916e05827d1274117637d9a76ea3e6cd3c1165db8cfc587ba777dca1e915"
-    sha256 catalina:      "aaa93f0be2fa1d4092c2d06cec0b7fbcc00d4817ff2d6dc4601301a8cb3917fc"
-    sha256 mojave:        "a2d26575a0a9816dc1f8b0b212531c8ea455a6c8322a42d5fb2630e3a2f85b1b"
-    sha256 high_sierra:   "9dd898b2222ba55a6c2aeb4e4414d6eb68d9c9e19794da533b4d1bd6970e6469"
-    sha256 x86_64_linux:  "22d8c104f089a2a5ba9655e2e86cd77929d7f6bab010249884362d6827b25f3a"
+    sha256 arm64_monterey: "0be4dbeddfeb398db2b50b7b6ce1004622927529c603a03427833e9ec00b437b"
+    sha256 arm64_big_sur:  "fad852bdb968ec275c82d4973145d05cd92103d9b144d622304fd70a18ec1989"
+    sha256 monterey:       "1beee0d2dc66fd39addaef18784d2f0db9a85702008fcc058628606d9ea162a7"
+    sha256 big_sur:        "4bf4916e05827d1274117637d9a76ea3e6cd3c1165db8cfc587ba777dca1e915"
+    sha256 catalina:       "aaa93f0be2fa1d4092c2d06cec0b7fbcc00d4817ff2d6dc4601301a8cb3917fc"
+    sha256 mojave:         "a2d26575a0a9816dc1f8b0b212531c8ea455a6c8322a42d5fb2630e3a2f85b1b"
+    sha256 high_sierra:    "9dd898b2222ba55a6c2aeb4e4414d6eb68d9c9e19794da533b4d1bd6970e6469"
+    sha256 x86_64_linux:   "22d8c104f089a2a5ba9655e2e86cd77929d7f6bab010249884362d6827b25f3a"
   end
 
   head do
