@@ -7,6 +7,7 @@ class WasmPack < Formula
   head "https://github.com/rustwasm/wasm-pack.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, monterey:     "59a6f6ada84ec37e2329498b155704eb0a9243956de83d1e4636a013e9598f26"
     sha256 cellar: :any_skip_relocation, big_sur:      "56ee4bb666eb8f2e4ceffeb98ec1fa03d9330cde887c8ed41795a40ef7561c2c"
     sha256 cellar: :any_skip_relocation, catalina:     "fbf74ad3f901a30d0c8d503f033893c5f511aecd460a72ef765f0fe1b6d10d06"
     sha256 cellar: :any_skip_relocation, mojave:       "c24a9c03bdae1f6d6d03a73c4d89ab1c7cf2f2a17df1b01a87fb96ae891e23d2"
