@@ -12,11 +12,13 @@ class Libquantum < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5d0d8ffd59105af7232222c76c283dfe0ea6c117eef683669875c9d3d4fb32cb"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e0c15e357005695499960424b1588ce47b248eb54ba7101cd47d7b0e5427a3b4"
-    sha256 cellar: :any_skip_relocation, catalina:      "d4a76e92f03a3ba478985c12c7a4d5fbe815b7b67d8a2d691eadcf43ed5eb1d6"
-    sha256 cellar: :any_skip_relocation, mojave:        "437375451fc36404181dd6086f662b0305543fc8765042133706755c804c1217"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2a528197ff682bb96434f58a4739f933e9010f7e76b368f43d1788fe22468deb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d18cc1cd910ad5b7a0922bb290b9eb79053144d32dcd2071db5658c1e2a4e2fb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5d0d8ffd59105af7232222c76c283dfe0ea6c117eef683669875c9d3d4fb32cb"
+    sha256 cellar: :any_skip_relocation, monterey:       "17f91015099d89946404b16a8c3eaab238ca4d9f1806942babdf4a6d1bf940a9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e0c15e357005695499960424b1588ce47b248eb54ba7101cd47d7b0e5427a3b4"
+    sha256 cellar: :any_skip_relocation, catalina:       "d4a76e92f03a3ba478985c12c7a4d5fbe815b7b67d8a2d691eadcf43ed5eb1d6"
+    sha256 cellar: :any_skip_relocation, mojave:         "437375451fc36404181dd6086f662b0305543fc8765042133706755c804c1217"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2a528197ff682bb96434f58a4739f933e9010f7e76b368f43d1788fe22468deb"
   end
 
   def install
