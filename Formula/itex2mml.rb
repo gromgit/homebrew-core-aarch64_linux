@@ -12,8 +12,8 @@ class Itex2mml < Formula
   license any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"]
 
   livecheck do
-    url "https://golem.ph.utexas.edu/~distler/code/itexToMML/view/head:/itex-src/itex2MML.h"
-    regex(/#define ITEX2MML_VERSION &quot;v?(\d+(?:\.\d+)+)&quot;/i)
+    url :homepage
+    regex(%r{<b>\s*Current itex2MML Version:\s*</b>\s*(\d+(?:\.\d+)+)[\s(<]}im)
   end
 
   bottle do
