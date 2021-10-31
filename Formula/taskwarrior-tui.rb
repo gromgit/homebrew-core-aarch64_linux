@@ -12,12 +12,10 @@ class TaskwarriorTui < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ff4db06970065146646aa894c9d2b1ab4ed6259e66226fa62c17d422bad8439a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e1b0ecb47a954dfdff2fe69c285ea3c64218852dc81437dfe6b9304c902b2500"
-    sha256 cellar: :any_skip_relocation, monterey:       "4b69631a0b86b3125db152463d2aade1deb4ccdb35043e176209434acb5e0865"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3e61a3555cc85c5b21daf22e2b734a472e82988e74c743ea9b6fb726291d029c"
-    sha256 cellar: :any_skip_relocation, catalina:       "edc138b98b90fed186803568655f1a890d4eaaafd728e36ea020f7f976f9387b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "94f3f6f3aa0c95740656d486f794a44665e2160f252ed53736a2d9c0f44a8bfb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c5600cf3a6b49499460279c4788c90e8ac3919958f8609553401a2cd8ce2a246"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c171629544e12f8ece2f02512767931f9218a454a0ddd95c1ff3ecd62d848cf8"
+    sha256 cellar: :any_skip_relocation, catalina:      "025d330b695035f7659d4c31e07644940a3e5c16f2bcbddfe48261fc6bc7fdb6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "20119e42901f1af6dc8f594ecd8d92ebce3b9fc6e0e2c9a8afa26fce0aed1f48"
   end
 
   depends_on "pandoc" => :build
