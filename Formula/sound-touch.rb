@@ -6,11 +6,11 @@ class SoundTouch < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "f2d7d7c48c12adf23e850993255260d2aa032a154198fce899a3532a27391ba6"
-    sha256 cellar: :any,                 big_sur:       "02cdba33995e5430c1ac8d8c1acb3caa7d512602b8a41c6af472dab4e231a6a1"
-    sha256 cellar: :any,                 catalina:      "f5a5f6ab5b92850d863655568dd33f324fed7c368f5b7ac208e48002aed5eb94"
-    sha256 cellar: :any,                 mojave:        "084549b3a3dcbda208ab26a0ed80c68d71382d17d45ea9ed76dc9f7d56bd21b1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "26b99ba4a7df4e3acf020206cbd5e7c2f26bf7d3203c3da4d3eb0d54b1d63e2f"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_big_sur: "1ccbe6750451a745654c3b00c8f14e1706381074254136278bb4cc1f7b88e009"
+    sha256 cellar: :any,                 big_sur:       "cbc1dd06e73d9712e1b1fa21c4767967f122a40e2cd92097c912084f002cc4d5"
+    sha256 cellar: :any,                 catalina:      "650c953db2306d78bd309a24206c014037584c08a490e05a89ac5294cef36df4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "af9833833154ab73181849ccdb563b1f4146848f69fd3cc4b386c9e46a31d8b8"
   end
 
   depends_on "autoconf" => :build
