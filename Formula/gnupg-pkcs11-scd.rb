@@ -15,6 +15,7 @@ class GnupgPkcs11Scd < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "69450e7c835ff35ed21224b1d25eea6a338df9c0acfa5a9d4ca92c08b5145be0"
     sha256 cellar: :any,                 arm64_big_sur:  "f7d8c8919b4411b11a53c503ae03db90ac561332c3cdb97da4d57ef9165aa352"
+    sha256 cellar: :any,                 monterey:       "e04230f87f16c8b543e8ad45c4263f404abd169c1a2026ffc4cd4af69b7a6f3c"
     sha256 cellar: :any,                 big_sur:        "039a425a56fce6b9495361e626925b46a5c6569ef0bed3512ff12da6148ab221"
     sha256 cellar: :any,                 catalina:       "78f09618378fd89be78ff9e10af2e1d33ac5dc06fcca6474994662434b7b3dc1"
     sha256 cellar: :any,                 mojave:         "78537d1ee3285a604aae1d683db56da1b9ec76bf71262ff234e758efda63f885"
