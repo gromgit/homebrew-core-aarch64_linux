@@ -7,6 +7,7 @@ class Polyml < Formula
   head "https://github.com/polyml/polyml.git", branch: "master"
 
   bottle do
+    sha256 monterey:     "66cfea4838c14363d2e8be74e3e1a6b5f9f7f690a6dabae427a133ea6b05008e"
     sha256 big_sur:      "4b68c9e84f40360b1b65444949637bb1f5749f532ad198a44f3bb570854b9900"
     sha256 catalina:     "1517e342bf9c4569b986d1139c063e14a999cacb29597e53e438040090e93424"
     sha256 mojave:       "fccbd2fc3c3570178c8578475035fbee24ab9280a3366a82b797c1fb7627c588"
