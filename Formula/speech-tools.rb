@@ -13,6 +13,7 @@ class SpeechTools < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any,                 monterey:     "134051b43ceb9d7b0c72cd1ae9c6c2381cd0dd74b8360e45a99879519da2bb63"
     sha256 cellar: :any,                 big_sur:      "cabb028b487d5baa5c9c1bb67a982a285ab2af2194ac429fb80f0675e2bd9f6e"
     sha256 cellar: :any,                 catalina:     "e25823939149f50f343c2e6bd8521b302067a0eb3106df6b40ff96b2d1a70c21"
     sha256 cellar: :any,                 mojave:       "3ede4e21772a17e0c0a109151406ad82943ba77b0cad2249c0cac51e063d24ea"
