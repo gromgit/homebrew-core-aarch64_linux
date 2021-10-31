@@ -12,9 +12,8 @@ class Arangodb < Formula
   end
 
   bottle do
-    sha256 big_sur:  "f895aba7329d3bf1f7dc40c6eac687320d722015fd237a0d61c2f320c5f27bf1"
-    sha256 catalina: "76603e9b4734489f997141b5c378f13cb28a95bd6cd7059ea49b014d0845f994"
-    sha256 mojave:   "3b5326020d7813edbf0fd42c3ed6c5f8a817603f0854778bb4a3cbb0b78e54eb"
+    sha256 big_sur:  "2ae0e56021ed33aad685cbe0b737ab528402ef3ea350adf4160198a57533503a"
+    sha256 catalina: "b8b2f80f9265871b8cae8ced1ac4b3be818d64b341dd7e92d6125d4327f4c900"
   end
 
   depends_on "ccache" => :build
