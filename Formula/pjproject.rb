@@ -13,6 +13,7 @@ class Pjproject < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any,                 monterey:     "f6d983f07dbb557a3ced1e4c94b880a5188c9361773dc0565f82595cc63271d3"
     sha256 cellar: :any,                 big_sur:      "b62ae1e3e6b33e093d69968bf0fa6708634075fb500e6cfb88d07a90d47a85cd"
     sha256 cellar: :any,                 catalina:     "ce9e2f67c5ae7148b7c7883ac3c6dbcc9dd7892695af93c02dc44b3e52f109dd"
     sha256 cellar: :any,                 mojave:       "26c273e3e975fc955f3c8ffb03c8332629fd42f123a4144645adb30817f9f428"
