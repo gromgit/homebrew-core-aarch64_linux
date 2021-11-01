@@ -12,10 +12,11 @@ class Nrpe < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "cec620b7f488a0e443b032921653c3bbf8e43438e8ca8b02b23cf6ea9284da5c"
-    sha256 cellar: :any, big_sur:       "0d5e76f99e6ea435cda18d6476158ced7debd4a4633176bcf1f3d6e721cd9724"
-    sha256 cellar: :any, catalina:      "d142c84ff35a78b7a2705ac915552c617420ff747eb47fd8d3ba27347ec384bc"
-    sha256 cellar: :any, mojave:        "ea0e988a1aef0f1905f0fe807d687096f10389c6b09f415015f713e529af4740"
+    sha256 cellar: :any, arm64_monterey: "81d5307bca972fc7945af1226e9e80e3bd798a2296ef7da9fa16240c27064b28"
+    sha256 cellar: :any, arm64_big_sur:  "cec620b7f488a0e443b032921653c3bbf8e43438e8ca8b02b23cf6ea9284da5c"
+    sha256 cellar: :any, big_sur:        "0d5e76f99e6ea435cda18d6476158ced7debd4a4633176bcf1f3d6e721cd9724"
+    sha256 cellar: :any, catalina:       "d142c84ff35a78b7a2705ac915552c617420ff747eb47fd8d3ba27347ec384bc"
+    sha256 cellar: :any, mojave:         "ea0e988a1aef0f1905f0fe807d687096f10389c6b09f415015f713e529af4740"
   end
 
   depends_on "nagios-plugins"
