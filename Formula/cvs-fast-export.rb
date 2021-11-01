@@ -11,11 +11,12 @@ class CvsFastExport < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8f67f51244e6191a06fad37c03c8f0c19586c2f31a2b3142e547aa1520808ceb"
-    sha256 cellar: :any_skip_relocation, big_sur:       "677fd2515d4ba02e87130f58ac3414ce4f2cb55c91ca024365cbfc2d552a421c"
-    sha256 cellar: :any_skip_relocation, catalina:      "247aed80d2a7ae72a264aebaa9e52901bb23be829645826a026f236ace7fc2e0"
-    sha256 cellar: :any_skip_relocation, mojave:        "baf10f703b56df5adb4e41f60ac5a5c90734b446c0003f49494e983e49229739"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "90ea42813a02d6faaf251b749efa907c5ac0a6c3ebfd5fafafa0d49e584ae3ca"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e5e761e7cd008d32d3635bbd954ce0319a125a278e89df39ba0283b163c2310e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8f67f51244e6191a06fad37c03c8f0c19586c2f31a2b3142e547aa1520808ceb"
+    sha256 cellar: :any_skip_relocation, big_sur:        "677fd2515d4ba02e87130f58ac3414ce4f2cb55c91ca024365cbfc2d552a421c"
+    sha256 cellar: :any_skip_relocation, catalina:       "247aed80d2a7ae72a264aebaa9e52901bb23be829645826a026f236ace7fc2e0"
+    sha256 cellar: :any_skip_relocation, mojave:         "baf10f703b56df5adb4e41f60ac5a5c90734b446c0003f49494e983e49229739"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "90ea42813a02d6faaf251b749efa907c5ac0a6c3ebfd5fafafa0d49e584ae3ca"
   end
 
   head do
