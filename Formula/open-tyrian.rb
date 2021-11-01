@@ -10,6 +10,7 @@ class OpenTyrian < Formula
     rebuild 1
     sha256 arm64_monterey: "9ed480acd179bddda65dd78860b77cb7f4d2fecac5821ba7b6c37b2943059bab"
     sha256 arm64_big_sur:  "ea6b692f0a033ee9312793a19563517010626a790f3111b7a32295b500a90c2f"
+    sha256 monterey:       "6808546de187ebd39a492ab42ab87a99a5ed708f45bc9820b07c76e10d4ff390"
     sha256 big_sur:        "8c265532f9d757adbdad46208a926d6c5216f5f59c0ad2998a756ab6af8d5692"
     sha256 catalina:       "5e66ea919c426dcce63be043164439b258a22a906ece3b3b1ec1e41147ac0b76"
     sha256 mojave:         "f49d2282ee86031f1c1442b6d1eb2fb2753286cb89207b63f03ee98e51e9221f"
