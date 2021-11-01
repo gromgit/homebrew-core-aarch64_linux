@@ -15,10 +15,9 @@ class MariadbConnectorOdbc < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "f5743a56b31fde067ee20a09ad1a9b07599293b93e0e9fe57cd28af1d28e6b18"
-    sha256 cellar: :any, big_sur:       "605a16d0c1f7d05fbb2f509fe638f49797e56302c30b2bf875db4d7b54abaad7"
-    sha256 cellar: :any, catalina:      "78fc1a7690d2bdf25fffe06fb0964873029aa9b312563e1bfc9ceca30abf5cd5"
-    sha256 cellar: :any, mojave:        "952d6b594a1b313175e3e22afd2abfc4c89db5c99b5df31dfa17bc5a1165466f"
+    sha256 cellar: :any, arm64_big_sur: "5cbb94d692b477fc62781e7608ed02cb008540e073a1d5917e990dfb4f0f9078"
+    sha256 cellar: :any, big_sur:       "0cbc9afc47d208947067f0124156c3af9cc72af759c44d045048dec8f32d92b0"
+    sha256 cellar: :any, catalina:      "e9c77b4c4a4073d83c7d4c5acad5aa75b598abe5caae2fa9c8e4bce7d24cf550"
   end
 
   depends_on "cmake" => :build
