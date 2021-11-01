@@ -13,6 +13,7 @@ class Scummvm < Formula
 
   bottle do
     sha256 arm64_big_sur: "90d437657d306794297adcfaf083dd0bd951bbf437e8f7ff40c12413efa32376"
+    sha256 monterey:      "f8d5919d8dfbaffc4b818decb7859fa37b7ad8d2689adaed5e1d8e9de4f67d7a"
     sha256 big_sur:       "f1543bc3553a0bae3a659f4c17412228cf6fb643c460ec3f488354d65ebcd27b"
     sha256 catalina:      "07e6e6c14491af15cb9900691fd60276568bdc66ef423752dbe4cde10d5e8bc7"
     sha256 mojave:        "b83003efb12c36548180f1bb883f02e48276078992b3916196c3495bd80bb9a9"
