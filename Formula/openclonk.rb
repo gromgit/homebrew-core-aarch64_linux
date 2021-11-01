@@ -10,6 +10,7 @@ class Openclonk < Formula
   bottle do
     sha256 cellar: :any, arm64_monterey: "7934144ac831d263bb0c51284f06f2bcac0004cf395d0404c52b1f3bf1c0189b"
     sha256 cellar: :any, arm64_big_sur:  "ebd7f7efa0efc4c70b14071e98a5f2d314c16e5b6f28fe11257738619f0c813b"
+    sha256 cellar: :any, monterey:       "4210b30b0f2c1b7090eee8aa91c325a125f8305f65a3305066ac554ff84619f8"
     sha256 cellar: :any, big_sur:        "1f4cca43144a36b7d6eeb24d9d3cefc84b591fb20abc503ecca7e73fc26b07ca"
     sha256 cellar: :any, catalina:       "95f44dd3686157a5185f1452f46515160347cef55237aac391edfabbbeb0c5de"
     sha256 cellar: :any, mojave:         "688963d2df4cd964a51bed317cf656137d5e8d668b457a7cef89e8302ac02f49"
