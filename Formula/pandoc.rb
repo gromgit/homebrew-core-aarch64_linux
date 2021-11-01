@@ -7,12 +7,10 @@ class Pandoc < Formula
   head "https://github.com/jgm/pandoc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a34e9012e5bf4a5334ec4c6724eb6be0a5de62a80fcf86124dc9a18d632996b7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "95bc299b947b70a0e7833ceb9e338b8f9ca5cfcf824b6629c32a9a7753ede15c"
-    sha256 cellar: :any_skip_relocation, monterey:       "b7251b7ae3b9222d6af04237cb65a52af788b7f3b4e69f7a55074e3661277d6c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e5ec7c3b6b99d2acd3da1a62051d6f186c15b78cbba2d9b79723fbb29069e3a6"
-    sha256 cellar: :any_skip_relocation, catalina:       "0f824c8d2f0a6cfc026e522e98d9870de59f614a3bcef6668971050eb5e91e47"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "30e1ece1bbfa73b67c6abf975a59c267f214a4a56874287bec42e27e5332c27d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d9c37b895ef5f8a88f6eb8b810323ca2c278ac15f36a9167314f79d5d66d6e26"
+    sha256 cellar: :any_skip_relocation, big_sur:       "179216df578900a008b5091f63e55fbe5fbca551dbd774dc9e879ae6d9446ae5"
+    sha256 cellar: :any_skip_relocation, catalina:      "5f3472dc313a4439de298dc6d1f521678e928606103c800b4b4ddb5c06afc6a7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5fe8ad3d8830eda73a8cb40ae392e1c09a63c21f2c30eb35e7b08a484b43b64a"
   end
 
   depends_on "cabal-install" => :build
