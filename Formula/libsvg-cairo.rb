@@ -14,6 +14,7 @@ class LibsvgCairo < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "183ec744f0fb9063a1d1e83518192d460af2486aa53ae7259311205bc43764f3"
     sha256 cellar: :any,                 arm64_big_sur:  "5d4898e15f1a78df7856483ff233fbb38fcd4400c5842742968ed3e999be7171"
+    sha256 cellar: :any,                 monterey:       "a6f189e43606af321b7b83749d538e61b8ff09d6c6970acf01e26796cb448f53"
     sha256 cellar: :any,                 big_sur:        "d2d48b901a9ac8ad056adab1f6483d6ad17afcfeac95362ca7b32d473de84d69"
     sha256 cellar: :any,                 catalina:       "91b325120c82295bea226193e0c0e0a26ffc7a4e6dc07c41bc474676c3aa302c"
     sha256 cellar: :any,                 mojave:         "573c68cc663ad978709b2f82072070e9d12be173665ef057d61c569bae428ad7"
