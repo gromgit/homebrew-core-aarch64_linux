@@ -14,10 +14,11 @@ class HaskellLanguageServer < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5fec58d7c3ab8a84979a637f41d0aba636a7a024dfd96582ab2e5ac9374c15e9"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5e3427fde42364771cbfab41b4eeb71889ac3a41737b6f54764fee1ec64c3e60"
-    sha256 cellar: :any_skip_relocation, catalina:      "ba30e3d1544596f125755302d973c5c38975253da11018ad22e51722f32b3316"
-    sha256 cellar: :any_skip_relocation, mojave:        "1eb7824102bc6234c8faf8523e50955f819403f3baf01837c72f79d4393536f1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "39c4925f9ddd98833fd0566badd7a66f4053e53b3bf14a0ce51b48e348ae431b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5fec58d7c3ab8a84979a637f41d0aba636a7a024dfd96582ab2e5ac9374c15e9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5e3427fde42364771cbfab41b4eeb71889ac3a41737b6f54764fee1ec64c3e60"
+    sha256 cellar: :any_skip_relocation, catalina:       "ba30e3d1544596f125755302d973c5c38975253da11018ad22e51722f32b3316"
+    sha256 cellar: :any_skip_relocation, mojave:         "1eb7824102bc6234c8faf8523e50955f819403f3baf01837c72f79d4393536f1"
   end
 
   depends_on "cabal-install" => [:build, :test]
