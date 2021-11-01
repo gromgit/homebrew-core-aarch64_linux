@@ -13,6 +13,7 @@ class Ssss < Formula
   bottle do
     sha256 cellar: :any, arm64_monterey: "c9ff1f49c619f70ff87833f7060f33543099cb520aa1f1ea15dd034dc0db53b3"
     sha256 cellar: :any, arm64_big_sur:  "c1656cbcd114f1e8269d54fa5b525ceababe178d0fddec508fdb568d747035f0"
+    sha256 cellar: :any, monterey:       "9dc2e5f7a756608b8d979bc325ab16a466aaa650b836231d1cea1c4d816b8ca5"
     sha256 cellar: :any, big_sur:        "5ff50aef8004346c9cf21eb9aecae18ce2b7d4032c7460284b6c1903dc244d6f"
     sha256 cellar: :any, catalina:       "ba1cd924e9aa97d91ff125c082ff9d1b2eb7ce3bea642edc1ae9c4f94340d19d"
     sha256 cellar: :any, mojave:         "96db005b3a278b26b7756c3dde1f94975cd09d901191029cf35649dfc1ac1178"
