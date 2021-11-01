@@ -11,6 +11,7 @@ class Duplicity < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "4d4a669e32edb2f371d1d378cfcea8c4afd0a14c2902481ab130d5b54d93a93b"
     sha256 cellar: :any,                 arm64_big_sur:  "6c6b66266734d719cf06275cc51da33f1250fbdfdecfe925b2ea9cbbbc43075a"
+    sha256 cellar: :any,                 monterey:       "dc9c7cb7a0265b478aea97821aeab7158e7c45ad0065ecb8d5aebfbb1b618bb9"
     sha256 cellar: :any,                 big_sur:        "6a0149ec7cee5ae2b9e94ba3abda42976c1c3930840405d5c4935d294148a9bc"
     sha256 cellar: :any,                 catalina:       "2c1188acf3647c4d69cd838ef872c5510d2a4dde419930e8c9407b8684ef1cf6"
     sha256 cellar: :any,                 mojave:         "9ce160d22e8f610640b7966d06eeec924c15601ee9604f4d72f6c47f420e6508"
