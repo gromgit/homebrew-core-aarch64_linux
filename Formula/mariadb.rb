@@ -22,6 +22,7 @@ class Mariadb < Formula
   bottle do
     sha256 arm64_monterey: "60dbcef58f2dbde95de4461ff84483fee87522bee4cc914f4bc0dfdc97f0e078"
     sha256 arm64_big_sur:  "b68638debac644c1818e23c6b92007c10696dc9ded1bfd57707fec1a5f0b69ea"
+    sha256 monterey:       "6c52a2b4146791f42b3e407bf55e22fb60490ce147d1211bdd731b019e446752"
     sha256 big_sur:        "618039a83fbea4ad919c9062482793ae70103402644fe6466e868209149ce235"
     sha256 catalina:       "cdfde8963d10dfea9d11402720d4151762e41209940fe39eab908f9926656bb4"
     sha256 mojave:         "1e360d01735f007d930a6436eb1880fe159bb35d751d733b62449b28c4d1c246"
