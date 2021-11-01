@@ -12,6 +12,7 @@ class GhcAT88 < Formula
 
   bottle do
     rebuild 1
+    sha256                               monterey:     "ab02ef2f511577a67b72983e39a86593bb58270c3c22a7b7879d38818e91571d"
     sha256                               big_sur:      "b099711b984463a32a073f49ec91e6034519a6140958a6603d3888e565ea2e4e"
     sha256                               catalina:     "38d4abf9ea7ce0ac4c928623a835f39d2d58e4ce8c66e58ff3e245b31d2948a9"
     sha256                               mojave:       "bfa78f1df75b3bd13aae44cd1ccc3a739d75cae0b93f0d060606a75fe1fe9a4e"
