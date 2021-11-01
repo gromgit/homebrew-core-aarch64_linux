@@ -9,10 +9,11 @@ class Mathlibtools < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5140d2ecce132a0fffa5b3a40d1d9979c51cf58d1781a06a61c89b1e58671f74"
-    sha256 cellar: :any_skip_relocation, big_sur:       "1063ae5b9dea859173e21e626d053d299bc629d71c6a5d088dbd70bd0b595e16"
-    sha256 cellar: :any_skip_relocation, catalina:      "1a91f500766f5bfb556a052c4c18872d13c109b8bf7b3eab88abc51fef3deea8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "55da764accf8d38e667280d0ec8103ce3040393e9a28644fb09aeb820c01964b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "540ea970919650b89a0d76d171237ad33c07852f5619c4e39958655cff9004b7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5140d2ecce132a0fffa5b3a40d1d9979c51cf58d1781a06a61c89b1e58671f74"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1063ae5b9dea859173e21e626d053d299bc629d71c6a5d088dbd70bd0b595e16"
+    sha256 cellar: :any_skip_relocation, catalina:       "1a91f500766f5bfb556a052c4c18872d13c109b8bf7b3eab88abc51fef3deea8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "55da764accf8d38e667280d0ec8103ce3040393e9a28644fb09aeb820c01964b"
   end
 
   depends_on "lean" => :test
