@@ -12,10 +12,12 @@ class RomTools < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "849e3d62afd945bc93e92af6b1df8db4c9128143f6c0dea132f6c274e1a005c1"
-    sha256 cellar: :any,                 big_sur:       "1a9cbb2a852d4f4c19e3b80f469b247706cc2c2a519b1555224533c3825f021f"
-    sha256 cellar: :any,                 catalina:      "1e29d4f2c04e28b5dc1da1885d8e9640413ab3decf0bdb927d0cbf990fc9703c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4b7e9ab6debc9cf0d51a9f6dd956a6c26e89e115151099f042820ec4e6bd02d7"
+    sha256 cellar: :any,                 arm64_monterey: "bb5af6d331d9c09640aed010ed0f1da13acfd018627b40e0609aeb500389df8a"
+    sha256 cellar: :any,                 arm64_big_sur:  "849e3d62afd945bc93e92af6b1df8db4c9128143f6c0dea132f6c274e1a005c1"
+    sha256 cellar: :any,                 monterey:       "9d8fae08c46cdcf26af9d54f10248cea23684d0f0c188c246a99143d1533f654"
+    sha256 cellar: :any,                 big_sur:        "1a9cbb2a852d4f4c19e3b80f469b247706cc2c2a519b1555224533c3825f021f"
+    sha256 cellar: :any,                 catalina:       "1e29d4f2c04e28b5dc1da1885d8e9640413ab3decf0bdb927d0cbf990fc9703c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4b7e9ab6debc9cf0d51a9f6dd956a6c26e89e115151099f042820ec4e6bd02d7"
   end
 
   depends_on "pkg-config" => :build
