@@ -9,6 +9,7 @@ class Nfcutils < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "d502000cd5655c0ec554e4789b846582cc8421bf69a79d1df7ffaeb0f497af9c"
     sha256 cellar: :any,                 arm64_big_sur:  "257b8265cf3e136dd2a11c3b26b37f31cc3de371d97401a5fadaf1681330fbd8"
+    sha256 cellar: :any,                 monterey:       "835a1d70f054d1eb3a05947f085331948024d3b2daa75dd7fd8e46e2ec84f9e0"
     sha256 cellar: :any,                 big_sur:        "ae40ef6e8f1d98d6fc6114893715c713c28e0747a5c5a84779c89726970f8a95"
     sha256 cellar: :any,                 catalina:       "963e5bf77bc285e81b9f7480f8b0362c73e5138bced77608043742df6e0992cd"
     sha256 cellar: :any,                 mojave:         "972af2e69529bde17b450d36ccfbb4b9d124c59beb7bb4d69a9c63b76f7cff58"
