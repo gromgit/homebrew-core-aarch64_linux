@@ -19,6 +19,7 @@ class Onetime < Formula
     sha256 cellar: :any_skip_relocation, high_sierra:   "9f73f9cdb465fce1aefc3cf80c00bc8e43b41a33c3e999fb3ec531251cfc3da0"
     sha256 cellar: :any_skip_relocation, sierra:        "9f73f9cdb465fce1aefc3cf80c00bc8e43b41a33c3e999fb3ec531251cfc3da0"
     sha256 cellar: :any_skip_relocation, el_capitan:    "9f73f9cdb465fce1aefc3cf80c00bc8e43b41a33c3e999fb3ec531251cfc3da0"
+    sha256 cellar: :any_skip_relocation, all:           "93ec90f57aaf9235f925eb7146e3446a2265b5e6d573188bc129178aa516b1ad"
   end
 
   # Fixes the Makefile to permit destination specification
