@@ -13,6 +13,7 @@ class ArgyllCms < Formula
   bottle do
     sha256 cellar: :any, arm64_monterey: "9847a3b7f40b2a075b10926264fd60abd6fe38023394aee9338548e36f88bc98"
     sha256 cellar: :any, arm64_big_sur:  "cd01b34b8340af770348c75ba24f241c4165a343fd470e9104ce6680f9a67987"
+    sha256 cellar: :any, monterey:       "1048438b7f241d538952346e4e2f145a52743149f436cdf0b9f7c644dcf1a2f8"
     sha256 cellar: :any, big_sur:        "23d23cf1ec9dd7d5d128ac055031a7dadfe60942cb013b90d40922dfec564ea8"
     sha256 cellar: :any, catalina:       "48ad5563ffb6bdb54671d4e11605a14963c5c0a82e632c710e97086f650b0ae1"
     sha256 cellar: :any, mojave:         "198c516d829ff22b66f948768ec5841228e002ed840f647a799aab79b202657f"
