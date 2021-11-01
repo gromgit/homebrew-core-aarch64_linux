@@ -14,10 +14,12 @@ class V8 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "35837e31a667ed1650e8359ea5987adaa78fedf90ee2a091b21d99b78532aa05"
-    sha256 cellar: :any,                 big_sur:       "a80774979953516b1025ef316d3639494ecde0e502d2ad31e599f86ba12ed7b4"
-    sha256 cellar: :any,                 catalina:      "f3222d7783da193604cd81256b69d9efe1cf1625ac22eaeeb754149cd1364f5e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "92e50af4569f2a489feefc1c3f12f286c9b9e0a7e9a496a36ef7c7db4decfde0"
+    sha256 cellar: :any,                 arm64_monterey: "04f52cffa7fea3d48a3ef791b35ba13bc637c52280636cf9f1b57f0bb702a7ca"
+    sha256 cellar: :any,                 arm64_big_sur:  "35837e31a667ed1650e8359ea5987adaa78fedf90ee2a091b21d99b78532aa05"
+    sha256 cellar: :any,                 monterey:       "c71f014077bd3abef54d4a16ccf8756dc114ffa1e5bf801505147bdb8e141990"
+    sha256 cellar: :any,                 big_sur:        "a80774979953516b1025ef316d3639494ecde0e502d2ad31e599f86ba12ed7b4"
+    sha256 cellar: :any,                 catalina:       "f3222d7783da193604cd81256b69d9efe1cf1625ac22eaeeb754149cd1364f5e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "92e50af4569f2a489feefc1c3f12f286c9b9e0a7e9a496a36ef7c7db4decfde0"
   end
 
   depends_on "ninja" => :build
