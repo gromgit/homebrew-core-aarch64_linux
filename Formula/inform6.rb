@@ -8,11 +8,10 @@ class Inform6 < Formula
   head "https://gitlab.com/DavidGriffith/inform6unix.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "405eb7f9b7210aac100f069acc228a8058013c947961bc3c9ab1a0ede7a24740"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0d546e5f3ad90dec09e480b1be8f6cac0d1cd3a62138444f17b827eb599c169d"
-    sha256 cellar: :any_skip_relocation, catalina:      "dd0c1f7bbc4c07025ceca29441fa6dc8b821c6dfc0224a7576d64f714db34a53"
-    sha256 cellar: :any_skip_relocation, mojave:        "2cdc7aa7871f147452be33738b78ed671e8006def20cd2774cdea610bda04878"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a3712d8dcc5f3ec6edd340e2d88a5d81949463d08c6bfd5883cccc8f02ad585c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5ae97bd7954cb02c476a6857f89aea4e4db36e5f0c41a338826f17d19202b501"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ca7929a2f1d6668132135d1ddb8e13161d82144dbfd17709940306dfd60c1888"
+    sha256 cellar: :any_skip_relocation, catalina:      "57f41060be7805e2e7a9030b418df06124947a943c0e0b25531807e47f6b936e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8d07e532f56b458abffe2d90b464ddea161e7435647dcfd8b409fb0cfcb47cfd"
   end
 
   resource "Adventureland.inf" do
