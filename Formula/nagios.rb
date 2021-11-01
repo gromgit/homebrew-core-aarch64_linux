@@ -14,6 +14,7 @@ class Nagios < Formula
     rebuild 2
     sha256 arm64_monterey: "2b77251a1b5c81fb004289653d2638bc4b48204969ae564da6aba1b1d7934ef4"
     sha256 arm64_big_sur:  "1ed969491c110280e2a679170c7848d78b15eb9a06bcef27a3fef551aad06b9c"
+    sha256 monterey:       "452a9ca237648ee83cace7f6eb1ba098b8bd6d3ccb927301908edb975945d82c"
     sha256 big_sur:        "6472fe7ecf390a6e320619c07c646177667b5f9fc1b142385b24fa07c6577d81"
     sha256 catalina:       "f8e2718a8f2c5bc9041085a9ee8a79f3496330ed1f896cfcc66b84a3de4f08c8"
     sha256 mojave:         "f74727cd114d3afb3b413391e2f34703b243292232de3e1344db43ab6259c7d8"
