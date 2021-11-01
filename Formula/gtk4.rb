@@ -13,6 +13,7 @@ class Gtk4 < Formula
   bottle do
     sha256 arm64_monterey: "dad1b6f4abf268d8837b781c0ba7334c617e4dec300931c3c6434b412949deaa"
     sha256 arm64_big_sur:  "22471fc7fc08a4e66c2443650865a3edabf50bc314ee876cf2baa7db8971e41e"
+    sha256 monterey:       "ea4af09f0bfc53a89c75ce79ff5c345660f8f36fcd18d249fdefe4075b1bca25"
     sha256 big_sur:        "b1cf80bddf3a4189c17446bc0c11a4463a011f431b890b6ef4e0d7bb6046ca0c"
     sha256 catalina:       "ef277cf48fef3b41c4ae365a5e40d0eaaf5aa2047cab688cebfdb8be5a621c4b"
     sha256 mojave:         "f2fda50b0ae4009fc13ee19cb208d7b9e58ce55575070285e49b110630bcd2fd"
