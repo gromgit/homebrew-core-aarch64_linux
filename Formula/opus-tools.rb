@@ -9,6 +9,7 @@ class OpusTools < Formula
     rebuild 1
     sha256 cellar: :any,                 arm64_monterey: "9d41440b3bb51ecad281baffd64487094ab066f6224f69f3d1054cfe7fc4e4ab"
     sha256 cellar: :any,                 arm64_big_sur:  "33c1b089709532f82978e0f0fade8bbbf0c56ef07c81d7d22f8e8b649d0c72ca"
+    sha256 cellar: :any,                 monterey:       "5a55452d95fa21800605af38fae3516f415b78042e975b65ebc152790db1d148"
     sha256 cellar: :any,                 big_sur:        "437d89ccde33e47708506a235fd68e2a3745d7848498dd1ce72e8c77a1e74dcc"
     sha256 cellar: :any,                 catalina:       "964b3493cffeb5e32411c7a34e1813e8e83e940419aca39f50be7db9b0c8fab2"
     sha256 cellar: :any,                 mojave:         "c4059aca471c3b1ec384323c1c801b844a2d2b61f17434ebc43c0accffde9f9b"
