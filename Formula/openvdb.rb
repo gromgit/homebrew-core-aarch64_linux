@@ -12,6 +12,7 @@ class Openvdb < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "31063bc8947d87d94954752809d6ab0a0e84315ba147f9a653e6b6d11200f605"
     sha256 cellar: :any,                 arm64_big_sur:  "3b009e6f335c6dd6264c391ede13d7dcda7731851f8e6bb8d7f1395d1baa1338"
+    sha256 cellar: :any,                 monterey:       "639c5b85b89dda8aeef75fa36e623f33fb9c5554e984adfe85b9a080728f3229"
     sha256 cellar: :any,                 big_sur:        "09b92c96f974aa12123a31b92c5cda3fec0678d6491c5e9895d7cdd8dbfdde50"
     sha256 cellar: :any,                 catalina:       "55ec23082cdec8e584dbacc3b566430a6d83f847b7fbaf58fcc817e05194b255"
     sha256 cellar: :any,                 mojave:         "2a82056566ede58322204b6881cd00600b210d8fd9a781fc46499a39d254830a"
