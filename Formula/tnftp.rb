@@ -11,11 +11,12 @@ class Tnftp < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "70ef6eb17e9644707e16b95e69d9515ed73b8d5e1b965d0d44b8c16e9d36bca4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "543c3b1220913421326418f4fb346cf76332bedc7d5f5e19d4e02e6653833387"
-    sha256 cellar: :any_skip_relocation, catalina:      "10fc0ee307e739bc3a0f617167fe6027cf37573efd47a555239599e226c7e8b7"
-    sha256 cellar: :any_skip_relocation, mojave:        "0bb7b548299599ad06fb746a00a4bc3df48bff90615280c3786d5a0ca04a4089"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9afa6b6d747eea6fa479010921972e5479c1238c5ccd209f75852d83775c6bc4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ab84fe5ac9eff0c7362b22793c3678b427cded2cf30f27dd41799e96039a4b65"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "70ef6eb17e9644707e16b95e69d9515ed73b8d5e1b965d0d44b8c16e9d36bca4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "543c3b1220913421326418f4fb346cf76332bedc7d5f5e19d4e02e6653833387"
+    sha256 cellar: :any_skip_relocation, catalina:       "10fc0ee307e739bc3a0f617167fe6027cf37573efd47a555239599e226c7e8b7"
+    sha256 cellar: :any_skip_relocation, mojave:         "0bb7b548299599ad06fb746a00a4bc3df48bff90615280c3786d5a0ca04a4089"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9afa6b6d747eea6fa479010921972e5479c1238c5ccd209f75852d83775c6bc4"
   end
 
   uses_from_macos "bison" => :build
