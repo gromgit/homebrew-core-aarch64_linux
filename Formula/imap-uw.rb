@@ -16,6 +16,7 @@ class ImapUw < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "518a6148d100fb7e9fb1307614360a7b5561b1587eb3d6aac7e643410876c117"
     sha256 cellar: :any,                 arm64_big_sur:  "c2f21ac938fd8cad640bb7c5ffc7f9fbc74d783485483914554742f0c1fe0cd8"
+    sha256 cellar: :any,                 monterey:       "3f1c9829bc54fac3ee895b1e411f05add6f7f85e0482836483b1f46ef14d29bb"
     sha256 cellar: :any,                 big_sur:        "fe7f15381a9216ce51e4b2e89c9243bc15569948c896ce122e561bde9e85d327"
     sha256 cellar: :any,                 catalina:       "df3de76ba2934218f8f484f2d7e6c760956ba52eecacdb1b623d0b54d872165f"
     sha256 cellar: :any,                 mojave:         "19d971ab778840ba44c24c3eef1316d1c65e6e0b6e1540933ad051c77ee745e0"
