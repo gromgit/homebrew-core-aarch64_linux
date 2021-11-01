@@ -11,6 +11,7 @@ class Orbit < Formula
     rebuild 3
     sha256 arm64_monterey: "19c4db555e259ad9d2c820e95ccea5f15adab1887083021f7507578ea961c5e8"
     sha256 arm64_big_sur:  "42435b23e00c8227cd80af182e39c4f24ea2bd6e50b01c0df0cd171a92ba4c02"
+    sha256 monterey:       "564ab69f0155ea40bd63118434548799463a6817f57eb3296bf553100070becd"
     sha256 big_sur:        "d39f55257c7d7eff2ecb9bb03c596a23d53abf2c081b87bf06f1b93415dda0b4"
     sha256 catalina:       "3108db04a65e53b067b29f700b1360e90badde53e891555f341fabe7c5dd5fe4"
     sha256 mojave:         "638d7bc192d39014137dfe3508e935b0b129b78e1f6971c1342e8ed1a52b2900"
