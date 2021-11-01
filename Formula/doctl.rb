@@ -1,8 +1,8 @@
 class Doctl < Formula
   desc "Command-line tool for DigitalOcean"
   homepage "https://github.com/digitalocean/doctl"
-  url "https://github.com/digitalocean/doctl/archive/v1.65.0.tar.gz"
-  sha256 "b2ab4f123813ee3fdcc750b7c8f7bd9764dfa1647c54514413940449ef78cab5"
+  url "https://github.com/digitalocean/doctl/archive/v1.66.0.tar.gz"
+  sha256 "ac15f584f4ccfbdc2b74ce7d708c71e0e1f201f80ef0f0d39faca6bafc0fda10"
   license "Apache-2.0"
   head "https://github.com/digitalocean/doctl.git"
 
@@ -27,7 +27,7 @@ class Doctl < Formula
       #{base_flag}.Label=release
     ].join(" ")
 
-    system "go", "build", "-ldflags", ldflags, *std_go_args, "github.com/digitalocean/doctl/cmd/doctl"
+    system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/doctl"
 
     (bash_completion/"doctl").write `#{bin}/doctl completion bash`
     (zsh_completion/"_doctl").write `#{bin}/doctl completion zsh`
