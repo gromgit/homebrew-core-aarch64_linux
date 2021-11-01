@@ -13,6 +13,7 @@ class Castget < Formula
   bottle do
     sha256 cellar: :any, arm64_monterey: "dab2c9c9952ce1ecd3263ed1d6c1c002c772c9e7c310bde0b6277c46fd424edf"
     sha256 cellar: :any, arm64_big_sur:  "320ee21622d1bd939ea95055395d84e5d7cb2d6f091d0da9f05c9eb3d0cff7b9"
+    sha256 cellar: :any, monterey:       "e504eb4b4d6c38f21fdb20a8424de8ac6e98ee4dd970c397da89c0f936520be6"
     sha256 cellar: :any, big_sur:        "b91da84bac0b31dfb521f193b519c984cf943f15974f9427fa3e780028ea07aa"
     sha256 cellar: :any, catalina:       "83d589037e4418829134060be140fce4b4b9883b9b68376f20257df68d9fff9a"
     sha256 cellar: :any, mojave:         "fedc8c680b948b9f87cfd3f63f90bd6cb02143120a9c74d5b1bc5a04e84290d9"
