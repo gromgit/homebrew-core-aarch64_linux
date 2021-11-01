@@ -13,9 +13,11 @@ class SyncGateway < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8db243a62dcdd2c9c6b1ddd9bf61ad0072e4ac395b208822fd254077d6973d75"
-    sha256 cellar: :any_skip_relocation, big_sur:       "2bd988cfdd72c00a76eae19e4c347ae79b0c597e34a551add01318fa71645b9b"
-    sha256 cellar: :any_skip_relocation, catalina:      "ad754927fbbec6adc9b31cb726a0457f62719bdfa546260eb768b402b9257bda"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "dc30a79633112d1c6a18e6632f4b1ed95fd78495aba2d8ecfd8fb0f36722dad3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8db243a62dcdd2c9c6b1ddd9bf61ad0072e4ac395b208822fd254077d6973d75"
+    sha256 cellar: :any_skip_relocation, monterey:       "8d97b3bd4148de64835b723feb06d3718b6606b941b9c3661dd464495c3c392a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2bd988cfdd72c00a76eae19e4c347ae79b0c597e34a551add01318fa71645b9b"
+    sha256 cellar: :any_skip_relocation, catalina:       "ad754927fbbec6adc9b31cb726a0457f62719bdfa546260eb768b402b9257bda"
   end
 
   depends_on "gnupg" => :build
