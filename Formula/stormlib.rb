@@ -9,6 +9,7 @@ class Stormlib < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "e53d414b82a05e0b533e487c2f6af493dc19d76e06c43e43c1fe8da18b18f765"
     sha256 cellar: :any,                 arm64_big_sur:  "16d13a201008b0f6c145e80d28ced76f29af97dfcfce05d1bc2dac84ac0dba33"
+    sha256 cellar: :any,                 monterey:       "86406682d4f63e431c8239e885b72410a9b5d25e01e8fe6022f33ed62446aa95"
     sha256 cellar: :any,                 big_sur:        "12177d76e3bac8c67baba52c812a855642e780624d7a75f1e826b10811de35b4"
     sha256 cellar: :any,                 catalina:       "686a27d3793a4a80858f442d1feda9d5880e21e687c152067136b4bb27c6fa50"
     sha256 cellar: :any,                 mojave:         "0270b8a31bf89afd8a81a0b8e36f3a967e196f024a3900fdf24ef5ab1b26a422"
