@@ -22,6 +22,7 @@ class Burp < Formula
   bottle do
     sha256 arm64_monterey: "83b2b4ab24707d1ce623e5b17fc41c28c531efe201082732875155df0bdcd56e"
     sha256 arm64_big_sur:  "c577ab1379ef9343a399ddf347f52ceb5949eb86f68aa24f79aa8f566fbd8e70"
+    sha256 monterey:       "a674c5b0882eb57cfd20f53b84cacf4c02f7bc9c24c468996d3b4f5873a1ccbf"
     sha256 big_sur:        "2b7114e8a7c736749bf2a073c2cd34bd269ce2129c16035ee9d4df4c7faacfef"
     sha256 catalina:       "a028ea604ba4bbb5abe2d9985e94ece9f673cf33e35191063eb91e356923e982"
     sha256 mojave:         "f45062f56a6cc3bc9ba09b84d9f44e599015387d6d31b0ae8a289fa74a904021"
