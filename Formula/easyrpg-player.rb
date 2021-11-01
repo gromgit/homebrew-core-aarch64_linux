@@ -12,6 +12,7 @@ class EasyrpgPlayer < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "750c687ff13d2673ccac55733ac06d6f08025494b0036df2de25eaca4212435f"
     sha256 cellar: :any,                 arm64_big_sur:  "60df6f5b55d829c737c6f534a85db694ca4469586284cd22cab9d50613bda89f"
+    sha256 cellar: :any,                 monterey:       "1ae3259607bd8f4340d3c3a2914b7e646d28f5f9b65ea98e9b4a5a502c347cd5"
     sha256 cellar: :any,                 big_sur:        "481bef5afabcabe0f34eea0586fe8134161bab387c87a32fcc3ca77e69063189"
     sha256 cellar: :any,                 catalina:       "e6b485bfe87e67da97b5bc34c828889286bbac4602db5e04efae54392c60a99b"
     sha256 cellar: :any,                 mojave:         "454cf0e4e8ad0721c52346d26d29b974e568fb0c3b9c12e60d1bc8f88ddc7bc1"
