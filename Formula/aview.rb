@@ -13,6 +13,7 @@ class Aview < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "91d8305546f435e4702c333f28d0ce8590c8b14d8b37707ff2ce398d0b618ff5"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4616c937f328391a9ad212bbdd51818d97c629eeaa649ddcdf97e0332e7964bf"
+    sha256 cellar: :any_skip_relocation, monterey:       "2d671edc613c82993fae031b0a2795aae4a88a19ca4051095ae174aed038b100"
     sha256 cellar: :any_skip_relocation, big_sur:        "7a32c517ba508c6febe9605d4c9f4d8bde9200393cd8e4dd51adeb7c6e85fb6f"
     sha256 cellar: :any_skip_relocation, catalina:       "ad92a0e964ccbebe685edf9c595efd420475490d255caed072985cb128a8230b"
     sha256 cellar: :any_skip_relocation, mojave:         "fe70cf7dbd1d2e1473da3818b96d3a94d811e93d52ecbb6ecfc1c1e1ccb8b12a"
