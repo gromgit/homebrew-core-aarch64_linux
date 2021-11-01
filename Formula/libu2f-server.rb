@@ -14,6 +14,7 @@ class Libu2fServer < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "a85f201ad491b24e25e8e3048885e91fec5c47dc00140b609c00100d2fefeb14"
     sha256 cellar: :any,                 arm64_big_sur:  "f1746f86987f50d9ffaf415b51420dba4dab8e64d620c99d63c6c9aed39d524b"
+    sha256 cellar: :any,                 monterey:       "de7343ed2a419e8fb63c497d1c8487bdad15261f9d5b07b4cc907f6fd2d106c1"
     sha256 cellar: :any,                 big_sur:        "fa0d80a1f6345e7b7323a837ba5acb031f4728eb674c48a590ae1c3b0a6c3a01"
     sha256 cellar: :any,                 catalina:       "3a5038a64a9820c04a4ad1067ebcf8076936474cc5c18a0d93f7c986adcf0169"
     sha256 cellar: :any,                 mojave:         "a1d26284fa87629ecf5bf965433cd6eeba9eb151e064e22a47ca42a115d5e15c"
