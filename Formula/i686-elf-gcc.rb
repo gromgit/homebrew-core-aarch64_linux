@@ -13,6 +13,7 @@ class I686ElfGcc < Formula
   bottle do
     sha256 arm64_monterey: "8ae4f914695514bd00df96e82b12dfa1fe8b20576c0b028fc4e4e3326ecdc921"
     sha256 arm64_big_sur:  "03ea1c0b8db4064c4acd673fb1138d410699bd37c74db3e255479f93fe0f991b"
+    sha256 monterey:       "c7d063f66f7179bd6f54ec8b6c2ee62954f128a73fc9674c3338868e37790bb3"
     sha256 big_sur:        "cbf70ba4c4dcd222b84b9bde4e3f69a8c621959e20facaa8677ebd0b0f14d4da"
     sha256 catalina:       "7aec8ee5b87f0a56236b59c4e796ec8eb5e991b3d2163a745bc9dbc12068592d"
     sha256 mojave:         "b0f9c1aafd4ecaace843bb77ec4062a7dc0f3b61f40506c762ad79d586811a51"
