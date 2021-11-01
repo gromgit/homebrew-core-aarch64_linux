@@ -13,6 +13,7 @@ class Mcabber < Formula
   bottle do
     sha256 arm64_monterey: "e7537262f19fcd123302a9a97d1e22af75f61881dff731375abc421291eb40eb"
     sha256 arm64_big_sur:  "b9660212f5a994bd663e5795d9f707da933f95b8aad23bf11f5e724c2e59a1ef"
+    sha256 monterey:       "0f50f2e71d3afcd45bf61301a9695e4ac58bf3fc7ec13c7d6769c6482f60ba51"
     sha256 big_sur:        "639edfef4ad26bdaea6a714b18acbda1d4d240f658ee8813b9b49f17f85952c4"
     sha256 catalina:       "f5296e7fffbc0702dcce5794e2f47c77a998f002b0852416c8411ac5ad44b31e"
     sha256 mojave:         "301d1883a89bcf494b5ab8c2c6dc4f267b29124d479d47483f562e8c3739d531"
