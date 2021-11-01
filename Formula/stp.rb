@@ -12,10 +12,11 @@ class Stp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "c85797a1bcf17ff2ee089ca7deffb73cb366073342c80805fb5d96f01b6862a8"
-    sha256 cellar: :any, big_sur:       "67c02fd361c644c8b084a169780a08b3a784dc9be52c9526f43c46eedd43fa8b"
-    sha256 cellar: :any, catalina:      "b62659c5952eb16980866fed30cfc8d12dd3b01093470307fc5b1bdbfdd079e1"
-    sha256 cellar: :any, mojave:        "665e74ae3f16e5f0a7f39f968e40a27adbbbe797b9abfabedbeb2105f8b39bb0"
+    sha256 cellar: :any, arm64_monterey: "48ccc2aaaf6df0975dbfc46a822c5c97beb4649f2162909dd7425ed9ab253f77"
+    sha256 cellar: :any, arm64_big_sur:  "c85797a1bcf17ff2ee089ca7deffb73cb366073342c80805fb5d96f01b6862a8"
+    sha256 cellar: :any, big_sur:        "67c02fd361c644c8b084a169780a08b3a784dc9be52c9526f43c46eedd43fa8b"
+    sha256 cellar: :any, catalina:       "b62659c5952eb16980866fed30cfc8d12dd3b01093470307fc5b1bdbfdd079e1"
+    sha256 cellar: :any, mojave:         "665e74ae3f16e5f0a7f39f968e40a27adbbbe797b9abfabedbeb2105f8b39bb0"
   end
 
   # stp refuses to build with system bison and flex
