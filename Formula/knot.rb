@@ -13,6 +13,7 @@ class Knot < Formula
   bottle do
     sha256 arm64_monterey: "0acf011d5f3c191a280c5fdbbcf0322b3df5245573261c6f65b6b381cb40ba11"
     sha256 arm64_big_sur:  "2d62d3adc02993a5a49b65e9ed3ce068792e06edba648271539382094817891c"
+    sha256 monterey:       "16f935b646eb1e39cfbb1043b2702fdc877209dec5f94b50ef08acaaf90c36cb"
     sha256 big_sur:        "b31db591cd4eba1b218ee287172bf7f1d0276397b54f2ad6a5c2a78d9fb19faa"
     sha256 catalina:       "e005766bcda86686e446e2d98004438629a858f42ccfdeedafe5e611e03ead1e"
     sha256 mojave:         "7eb7883638a093d7e7fdf1af6766b5ba73392376110c2a0185a1c3b6496766a2"
