@@ -9,11 +9,12 @@ class ConjureUp < Formula
   revision 4
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "0d392e7fe4c46dcb50da2344dec0a11dc2141bca36c7342b311e813bbd021b03"
-    sha256 cellar: :any,                 big_sur:       "4aa49ccf202ed4bf0ecbb987b04fa30ee28bdc3e4c4bf37c396668269b23537e"
-    sha256 cellar: :any,                 catalina:      "b9c8766c411e1d736d52714678420065071866d795360a5a8e21045d559714f7"
-    sha256 cellar: :any,                 mojave:        "1e8d73fbff45339f18bb6fbbc1b00bd7bba4590feeb6a2980b8c68ddefb56c98"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "941ffccefb435bdb64de4f993b6c946383ef5fb79b399deae3ea76038fb027f7"
+    sha256 cellar: :any,                 arm64_monterey: "e4da8a68d5c475d4432d9706c22b5d8ab8b69cf20e7ced2c26d7686c273d2682"
+    sha256 cellar: :any,                 arm64_big_sur:  "0d392e7fe4c46dcb50da2344dec0a11dc2141bca36c7342b311e813bbd021b03"
+    sha256 cellar: :any,                 big_sur:        "4aa49ccf202ed4bf0ecbb987b04fa30ee28bdc3e4c4bf37c396668269b23537e"
+    sha256 cellar: :any,                 catalina:       "b9c8766c411e1d736d52714678420065071866d795360a5a8e21045d559714f7"
+    sha256 cellar: :any,                 mojave:         "1e8d73fbff45339f18bb6fbbc1b00bd7bba4590feeb6a2980b8c68ddefb56c98"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "941ffccefb435bdb64de4f993b6c946383ef5fb79b399deae3ea76038fb027f7"
   end
 
   deprecate! date: "2021-04-15", because: :repo_archived
