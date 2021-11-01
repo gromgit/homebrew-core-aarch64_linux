@@ -10,6 +10,7 @@ class Zmap < Formula
   bottle do
     sha256 arm64_monterey: "3ea3dd65e8b77906443e60b1fecbaca531493c6b073c0b821116be968d65502e"
     sha256 arm64_big_sur:  "142f0a0643a81aa7c4cd350d60c0879406524e867b8d6891265a2260e22d6ccb"
+    sha256 monterey:       "dc5f4713ce9f3a9df3e6a4008c88dbfcf5e7732cde0ee3fd7e16b8006cbbab62"
     sha256 big_sur:        "4fbcf0453c48feae254c0799fdb38dc489ab435a9fd8f71f4f40490cb61a7272"
     sha256 catalina:       "7f3dce955fb01597407317a81e6d1e0b60d66756e64358f11106adf5335b820a"
     sha256 mojave:         "3014cc393e0d9b5e6705392a10da8588f26d668daa5660aebe252ed514bf176e"
