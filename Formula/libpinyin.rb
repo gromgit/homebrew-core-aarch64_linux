@@ -6,11 +6,12 @@ class Libpinyin < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "318f5f316d2d49d3c0cafac9a911e7e0b4c281e5112e523cab7c7ee9ece570ae"
-    sha256 cellar: :any,                 big_sur:       "758fc82d1e5f0458f23e00cc3b9f38cf4b30099d7ecdef3d969fc40de334787b"
-    sha256 cellar: :any,                 catalina:      "7f84e4aa3ca24a3c722a06aedc7a18a16cb188884e2c665c949dbe160506b8c6"
-    sha256 cellar: :any,                 mojave:        "f2673713072b32704d2017f4643edc1071b49e8766659831287da96e0c29e783"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "abad6e2cc1bd2707aa4cce999da7d924ea075fe3cf6fdc39fa0352ee86288ce2"
+    sha256 cellar: :any,                 arm64_monterey: "0ef181490605aaf65879895f82f5767b541f6ad2c5b82b69be4f769913c3625f"
+    sha256 cellar: :any,                 arm64_big_sur:  "318f5f316d2d49d3c0cafac9a911e7e0b4c281e5112e523cab7c7ee9ece570ae"
+    sha256 cellar: :any,                 big_sur:        "758fc82d1e5f0458f23e00cc3b9f38cf4b30099d7ecdef3d969fc40de334787b"
+    sha256 cellar: :any,                 catalina:       "7f84e4aa3ca24a3c722a06aedc7a18a16cb188884e2c665c949dbe160506b8c6"
+    sha256 cellar: :any,                 mojave:         "f2673713072b32704d2017f4643edc1071b49e8766659831287da96e0c29e783"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "abad6e2cc1bd2707aa4cce999da7d924ea075fe3cf6fdc39fa0352ee86288ce2"
   end
 
   depends_on "autoconf" => :build
