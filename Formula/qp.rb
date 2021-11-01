@@ -8,6 +8,7 @@ class Qp < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "458188f1637fb0dc6f865c73b9dfb5e6146070ad0193507df7979236afc60294"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2c583d1f819ffba8adcc8139efe3366ad4570f3efc7c94fb25742e4da602202e"
+    sha256 cellar: :any_skip_relocation, monterey:       "ff9da9b5b7578cb0a87aeb8dff3aeaec5521952dc0764d1623f7e4241e0e1044"
     sha256 cellar: :any_skip_relocation, big_sur:        "83085c1f8cbeaf59a69f00f779a878ceb78b7aeaaf16278010d5d968c9d94742"
     sha256 cellar: :any_skip_relocation, catalina:       "a65499deed12110ed5a21f3bbd657acdaaf1452dea48877caac93bda55759370"
     sha256 cellar: :any_skip_relocation, mojave:         "f119afd6bacbac5af055c398a2dfb5c4f62c8f113bcb9e12dab825800fd8e744"
