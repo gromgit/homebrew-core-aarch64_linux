@@ -9,6 +9,7 @@ class SimpleAmqpClient < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "7b53ef2193ba97547ba50f2103cdd8817aabf0a5042defcd2b43d7c414bdd796"
     sha256 cellar: :any,                 arm64_big_sur:  "f66fc5dd89e9899a536b516486a88484a9f6e375ff2a452c686812fe2dadbc23"
+    sha256 cellar: :any,                 monterey:       "9a1d90af13c1877a7400c0aff0542d4e9c9fac3d19c154f86be0a1151f74c29c"
     sha256 cellar: :any,                 big_sur:        "f2dd44e2182fa7da6d5e9dcc255ad06138b09be9e0619ecd07135e6fc2c35405"
     sha256 cellar: :any,                 catalina:       "97ceed4ae134cb5f01dc3c5efdafaccf3374aee7c748217eba9bb8624edb74dc"
     sha256 cellar: :any,                 mojave:         "42bf1dcae157dc5e3ad6c274cfff63e0599d1c1fa2ed634696a26ec499e6b18f"
