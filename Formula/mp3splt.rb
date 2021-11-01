@@ -8,6 +8,7 @@ class Mp3splt < Formula
   bottle do
     sha256 arm64_monterey: "546627259a47cde5bbf05b51258a0f3feab02400f6f0d41632d5a4fc0a67a990"
     sha256 arm64_big_sur:  "ffb07bf57273a24cb35a8e2805f34b817f3c90847c05978bc1cb7d9d7a08252d"
+    sha256 monterey:       "efa604ac01664e2a60e1deb11a2ba7a38ed7f46212d34f7fe63e693f9bd94172"
     sha256 big_sur:        "0a597bd74402f6d597569b670cf6c0208d24de58c00e27a7b4a91a1fffeaa689"
     sha256 catalina:       "d2a1ca7bd32f12b0cb152031cf812ab5af2fcef906f4a5d4fc1939f5d6b37e12"
     sha256 mojave:         "fb9ec207370028ac673f0f4e067dbae93d19e567ca80ab46e9e49d895262ac81"
