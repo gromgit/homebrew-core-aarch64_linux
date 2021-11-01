@@ -10,6 +10,7 @@ class ScIm < Formula
   bottle do
     sha256 arm64_monterey: "253e32561f23e30023e0a6392d521c4ef63c6f0b153b6c61c7cbb03ebaedd541"
     sha256 arm64_big_sur:  "4c61408b90b2b5585279e8d19c24028ba13f6f5073589144fc71ae235c25ee2e"
+    sha256 monterey:       "db62195b7e3802fae92b714feb809dca80d460a11e07f62e56332aa76da05c10"
     sha256 big_sur:        "3e73faa966c9b00428d60b741d88e66a64dbe0bd5943145b8f65b75a4172c8ba"
     sha256 catalina:       "bf2a132b303dac493a252b4668796bb27d608e76eeafe4a1f40b01517c5d35cf"
     sha256 mojave:         "ff69fd16113c4e1b85b47275b78d6398bdeaece2afea1db41ca61ab7865c1fbd"
