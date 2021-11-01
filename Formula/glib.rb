@@ -8,10 +8,12 @@ class Glib < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "ddfd674ef914a06ce4689aa5c3d950079968ccdecc1291417d10c29eeff9a3b8"
-    sha256 big_sur:       "5e4badd77c493fd6302636451a90393fa271d9eac1d94f4f4dbd0147c547d0c0"
-    sha256 catalina:      "45d42214c7944c5ad5bf31fa4bd754391df6c1b4eea879475913a8ca08988153"
-    sha256 x86_64_linux:  "66a325d3965670284cb718ff08ab50e5bd17b11e5eca6dbd0065209a86651e0f"
+    sha256 arm64_monterey: "eb2431db765a371d8f42cf08404dac91f6558ce72d9f5e178c5bc7eb5759ac7c"
+    sha256 arm64_big_sur:  "ddfd674ef914a06ce4689aa5c3d950079968ccdecc1291417d10c29eeff9a3b8"
+    sha256 monterey:       "372e65b88c410f6cb1c31ba7c4f7db10ae6e1df409368a9f9d853bd01ad278cb"
+    sha256 big_sur:        "5e4badd77c493fd6302636451a90393fa271d9eac1d94f4f4dbd0147c547d0c0"
+    sha256 catalina:       "45d42214c7944c5ad5bf31fa4bd754391df6c1b4eea879475913a8ca08988153"
+    sha256 x86_64_linux:   "66a325d3965670284cb718ff08ab50e5bd17b11e5eca6dbd0065209a86651e0f"
   end
 
   depends_on "meson" => :build
