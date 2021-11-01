@@ -11,6 +11,7 @@ class Tarsnapper < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "ac8f71359974b87ec296543400b6feed59990d637bb39bd76693f532901a9ba1"
     sha256 cellar: :any,                 arm64_big_sur:  "fb9e4083414f5e3c529a444047e4a840fbe008d8e1210ca35183c95e284712c5"
+    sha256 cellar: :any,                 monterey:       "30725e21171a6c3151f778e5c710ce155aba69a5778610596df6b3b6fe6b944f"
     sha256 cellar: :any,                 big_sur:        "766dad885fa778bda3d99c853e14d4e3d179b9a1c11131165c4dd7875553d29f"
     sha256 cellar: :any,                 catalina:       "4e95af80521f93738700549a1683cf9a73c776d637587c065e7c0fa56985168e"
     sha256 cellar: :any,                 mojave:         "09e4372f39f9cb0d141ebc4d89835ebb6787baa3c0a20e6b791a919168035428"
