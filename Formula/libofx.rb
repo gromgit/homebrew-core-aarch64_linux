@@ -13,6 +13,7 @@ class Libofx < Formula
   bottle do
     sha256 arm64_monterey: "8d46f692bc2952487c01b35a9c5ca8dc3bc4fbb0dd298135001110a6a9ac7a60"
     sha256 arm64_big_sur:  "2bba6b3d799e65cac444879650535b7f683836f5b23c6e5467f5797ff788b460"
+    sha256 monterey:       "cdd9daa3d8dae3abb150707beb2f4f073b93c9973638f87390a8ba8614a08c2a"
     sha256 big_sur:        "3cc86d7824a38ab40a26dc862b9edd8aa927615d98787509a8ce0e53a4970e90"
     sha256 catalina:       "0c13380f3316db596f2bc7da653b66cce4da67a57143152582f2915bc75ffd9e"
     sha256 mojave:         "0c964ef5cb85a5783e5e717e2a74a69d446191237ae7da74a3104eb03c77bb66"
