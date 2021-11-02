@@ -14,6 +14,7 @@ class Blast < Formula
   bottle do
     rebuild 1
     sha256 arm64_big_sur: "2976fc131888183295514f2e2d2ff32c91cc2f15b76361c37d2a9414283c16ff"
+    sha256 monterey:      "414d2727bccb077a0d655d50508c8be5246e429eb9a3285524122846836c6822"
     sha256 big_sur:       "2fd23535ef7180812f7d16abf25590cc99a1689fc3edcfe1fbb84cd79c65e1a3"
     sha256 catalina:      "a044ffeb208ed5b4de37cba25e584b74b571368ad4ed5260155f671981ccd4ae"
     sha256 mojave:        "3ccce772ca8ef7f25343f13bd43cc8f12e0d4288306bf6bcde5d2303e112e378"
