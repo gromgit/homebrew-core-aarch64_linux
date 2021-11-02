@@ -8,6 +8,7 @@ class Cwlogs < Formula
   bottle do
     rebuild 1
     sha256 cellar: :any_skip_relocation, arm64_monterey: "8af6a596d63797973d316cd0d6b8151f939209506242af66fbab37b7a12c2c3c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8af6a596d63797973d316cd0d6b8151f939209506242af66fbab37b7a12c2c3c"
     sha256 cellar: :any_skip_relocation, monterey:       "8768f31395820e0c298fd54ba9889e157c8107bfa0d094fa77bf84de660c9d9e"
     sha256 cellar: :any_skip_relocation, big_sur:        "40fdfc79d6533963798aed789fe8026f30d44e87c3e6e9ecd602d531ed1fb7c2"
     sha256 cellar: :any_skip_relocation, catalina:       "975da66abe1ce9ff42eb63453c52acc31aeeffff435a2c0aab9d1bd3008be280"
