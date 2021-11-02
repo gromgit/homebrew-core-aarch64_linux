@@ -13,6 +13,7 @@ class Nwchem < Formula
   end
 
   bottle do
+    sha256 cellar: :any, monterey: "50e9cc6e3601210e236255ddd9ce51dc68a76fe6f1ac63335b84695eff537c92"
     sha256 cellar: :any, big_sur:  "97b96ea00d1c114e5e01b898f3c3874904bf9fa75325b15f97ea89556a52ab56"
     sha256 cellar: :any, catalina: "f1a523baa98353375c7770fa30b03f8a9bce2c60b9e347e5fe790b0a1274c4fd"
     sha256 cellar: :any, mojave:   "53bdde9b33e8a4ff4d954899bb71371e40a9b2e6a495cb57c169f9df65855863"
