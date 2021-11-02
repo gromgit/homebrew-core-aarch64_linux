@@ -7,6 +7,7 @@ class Idris < Formula
   head "https://github.com/idris-lang/Idris-dev.git"
 
   bottle do
+    sha256 monterey: "704add14a985699c70650b364a9069f1a2b4ad52f9238890067d695744db63e4"
     sha256 big_sur:  "19ad0c1b5aed35799c1a7199418e96b509b19b5fdad8dcf6492ca0ec10b14676"
     sha256 catalina: "c38a0f42b48ace8818f060ed26834d9e395e614f12fe6449b1e48513c73dcec8"
   end
