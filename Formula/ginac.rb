@@ -11,6 +11,7 @@ class Ginac < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 monterey:     "1fab055efe4ce1208e59f0a91dc7f34abd4a2890d07f04fe8dce3e8d7eaee80b"
     sha256 cellar: :any,                 big_sur:      "d1001c3d4a1975402462d266d715a584dc63b8ea9221cd680de70818237785f1"
     sha256 cellar: :any,                 catalina:     "3b28c3417ab90c06f4d86556bc51d51e7c17b05930adba6b71bd7091e22ade48"
     sha256 cellar: :any,                 mojave:       "bb5a12c6fa1e5ad8e5d29304c0ca6e7bef7bf83799545ee45a4b5608a0ef7a88"
