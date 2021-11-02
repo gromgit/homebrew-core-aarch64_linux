@@ -11,6 +11,7 @@ class Hyperestraier < Formula
   end
 
   bottle do
+    sha256 cellar: :any, monterey:    "e97a30177dd2112ae7ef36b2165213874faa7a4ef1e40dd6433ccfdd3eae7ac2"
     sha256 cellar: :any, big_sur:     "98338e8f67c7cba1df436607f09415415e39a38f695805ddd94720326eae9212"
     sha256 cellar: :any, catalina:    "0304cb2db3ed4e35c12ccaac0251ea19f7fd4c0f2a5b9f3ffad0f201f7f4357c"
     sha256 cellar: :any, mojave:      "4275d3ad552f225c5b686532d6cc2703481284fa73eaf3c5b35bc5551dc95761"
