@@ -8,6 +8,7 @@ class Corral < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "32b223b7ffbe3f36302c029b110a5c6292270e4e27795b55a0ea5510664ba8ce"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f2e834fce3e5975278473b0b4feae20fa018e2e69c98b2830de3957117d58bea"
     sha256 cellar: :any_skip_relocation, monterey:       "3692383008fe80f3863cfaf1411ab589d79fa44a591d8da750b67a5c4585455d"
     sha256 cellar: :any_skip_relocation, big_sur:        "bdd3bdc4acaeab7247b76aa1dbe3b319c1a512c2d066ca41d30c03aa69dfef0b"
     sha256 cellar: :any_skip_relocation, catalina:       "8faf06cfba7afa9efee5505a50b3c2490ea2f501085f8a5880dbd00a1f1b6997"
