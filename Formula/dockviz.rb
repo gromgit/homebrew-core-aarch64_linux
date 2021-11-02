@@ -9,6 +9,7 @@ class Dockviz < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "f9d998ff992f496ca6f6dbb2c36f7310a83393144b8710c7d3411296b6bcdf5b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "93bdbefb4ac02faae6a2469b42f619a2abf93e9a5bb86247b7409520c0bc6fe4"
     sha256 cellar: :any_skip_relocation, monterey:       "74728af8afa2044a18f605787802c6754fe3d49be3143f9eb51641217e3c8a0b"
     sha256 cellar: :any_skip_relocation, big_sur:        "54b23a0f096b55794c5612e84615c0265ca6433070946ed6fc06008fe5c6a0d1"
     sha256 cellar: :any_skip_relocation, catalina:       "9307a33a515b07dc168b6494589938442a4d8e5ce9f57d96dfd2678a71fb46dd"
