@@ -6,13 +6,10 @@ class Zoxide < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ec89ce9f1e1176fc1af1be46c666b7b1b64358a55b955186410084ab15105254"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cb85549f67bdb7fc494bf7c1d59bfc595d510c277f01ec8cb1e0dc46a136c387"
-    sha256 cellar: :any_skip_relocation, monterey:       "bdd0215d3ad9d0fe799fdb6d04830e6cef1737c2c3251eb8ce0584f529f90bc4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "498d5a0099ebe151eac10bfc0ccb7c02d56c60683f858ae3656cd2c4ab5b0f8d"
-    sha256 cellar: :any_skip_relocation, catalina:       "ee86e34b0474e1a8a0fd314a6e763707fb014d1556c8b77e2dd9fbc890975bd7"
-    sha256 cellar: :any_skip_relocation, mojave:         "3636dad3d34c0467b719da9191a8991e3fabe728a9e2cef7d5fd9f19d9bfb590"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "adf17c86b20fe4b3c9ab5c37d54bf7e84680073e60ff6e22a47aed6db9545469"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7154297736107b957a8e4e2bf56336833d0997389da5ea6b59bfd90add51e91a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "664fbe640ad0301f452f17aa16533c9ffeb8154209c5741b56c4b21c9a5f3828"
+    sha256 cellar: :any_skip_relocation, catalina:      "6d161a406e087ae16efc384c21d709ffe202e3fe0cf92e31367a36d0d6f38243"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "17d9c54a294be74c878d589acf52729dd4e1644f2adb97691040185cef2c9ff6"
   end
 
   depends_on "rust" => :build
