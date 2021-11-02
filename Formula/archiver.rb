@@ -7,14 +7,10 @@ class Archiver < Formula
   head "https://github.com/mholt/archiver.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a9c7335b7087201aabc61b4a69960a57586c5ef9901f521d6c981f242cf5b82c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d717896d49eb78330bc10d6cb050cc0c3bf7f89d84f1dd5f4fce3529ced17776"
-    sha256 cellar: :any_skip_relocation, monterey:       "edf79204f9f8a40255c791900c4cbfcc355a2af760a297a9f829127c208c9c43"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6bfb5db8669181ff5e16202ae62154973505ff2ee57a67c53aac97409b98e8f0"
-    sha256 cellar: :any_skip_relocation, catalina:       "a61d7f77c7e3a291af4afa1edc6a6059c3f48c4c9828303c805e51e69902caf0"
-    sha256 cellar: :any_skip_relocation, mojave:         "eb27d3455b2ef6e30317f9be5d54e3c15196b8736209ebc5cc8ac95f3058d1ee"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "50d359a1201e04663c8a42b3736c11c9d0f046a814d3ec5af00d0326822474ff"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "313f339111caeb3fb28bd9eb12b6e34030c10bf8d06058f1687174c374b137da"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7a4c576219a90d52a24dec089f2ef3cd900f5d9779d57fc6f6d83c8e2ae7241c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "74fd6ad65f0b92af3a034874d6317065b7805d98cb945006d05dff0117d179d6"
+    sha256 cellar: :any_skip_relocation, catalina:      "b2a0192ed66099721b7662fe5d772f8a99ecb5c8922270cbc825cdcbb7032378"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "461a212b25cc90af84996b43067bbd096cf343bbe04a39b4aa40d10cb235e238"
   end
 
   depends_on "go" => :build
