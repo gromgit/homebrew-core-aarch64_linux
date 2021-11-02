@@ -12,6 +12,7 @@ class FsUae < Formula
   end
 
   bottle do
+    sha256 cellar: :any, monterey:    "2489e7674f0142b9ee3d6af7fd1feec53887449eeb32ca05a9571b4021278b71"
     sha256 cellar: :any, big_sur:     "37e9318b578ea42dbfa769ecc23bfa7bf91a25417a6145db56d415fafece7dd2"
     sha256 cellar: :any, catalina:    "ab0fdecdc3ee1e4ed70baf7a57bc46d92b85b684c97d680c9fbfab5b280a7da4"
     sha256 cellar: :any, mojave:      "223c490857dc42ec051f68531fbcc2ceffd142cd8f56b4b18a0d1c2134c6fb03"
