@@ -6,11 +6,13 @@ class Gucharmap < Formula
   revision 4
 
   bottle do
-    sha256 arm64_big_sur: "f96625e52ea9855f9d4f350e0e61cbc90c352dfd76931dff3fc3503810be0118"
-    sha256 big_sur:       "318ada0ffb5e2b9a2c4ed5968f8d38762a4cc2bb7119e50d6bb13354ca1de47f"
-    sha256 catalina:      "007a3670270b9b8cbc2e0e9f36cb3854ba987d8b8105ec73e236fc56d28c2cbe"
-    sha256 mojave:        "b8f34cbea2db76364e0a4e3a6d2e5ba3110e80ef6b76fa3c165b1ac6b30ee9f1"
-    sha256 high_sierra:   "f8ad1728dd1e0124201e568ad0f69f004245368eb21527dea98ecf045ccad708"
+    sha256 arm64_monterey: "04be31ca892b6d00aabe5025063abb525630883ff1dd1a99f4f6fc1e8de48802"
+    sha256 arm64_big_sur:  "f96625e52ea9855f9d4f350e0e61cbc90c352dfd76931dff3fc3503810be0118"
+    sha256 monterey:       "739f55d1ebe5cb2bbd1cb3e414c9e0e01f6f7d2172aa2cb858e016340da875ea"
+    sha256 big_sur:        "318ada0ffb5e2b9a2c4ed5968f8d38762a4cc2bb7119e50d6bb13354ca1de47f"
+    sha256 catalina:       "007a3670270b9b8cbc2e0e9f36cb3854ba987d8b8105ec73e236fc56d28c2cbe"
+    sha256 mojave:         "b8f34cbea2db76364e0a4e3a6d2e5ba3110e80ef6b76fa3c165b1ac6b30ee9f1"
+    sha256 high_sierra:    "f8ad1728dd1e0124201e568ad0f69f004245368eb21527dea98ecf045ccad708"
   end
 
   depends_on "coreutils" => :build
