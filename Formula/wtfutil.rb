@@ -8,13 +8,10 @@ class Wtfutil < Formula
   head "https://github.com/wtfutil/wtf.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "df932efe3349c025cc6e5cffe1813b2ebb7ebd457555a636af5fa512d28745a4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0087a906e160dce6afde89f20d056c88503c308362576abf23cfc9f7f1ad9943"
-    sha256 cellar: :any_skip_relocation, monterey:       "7edd25490357eaf503404584f82b6a0d5ebb206d117df9fbbeddb891c3eb8b68"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6ca8e81a096523c0ac2265b85e106a1c223015310bd79a774f8fe273647377f6"
-    sha256 cellar: :any_skip_relocation, catalina:       "977b8c6e48a5233ad69973bfc75c6190d3f74d81dfc780b3323675f3f8b96825"
-    sha256 cellar: :any_skip_relocation, mojave:         "267f0d2b52a91e56aaca45429efeda90ad007e4f1877d65dc6e0ccd09f8be9cc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3e1b3187db2b9c39a7908cff30e3438290d9bece81aafc1a264a3e297500bebc"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ac63fe942934b8af64f084dda1386988322f4a46fe31b1895f101799fbf877c9"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5d7ef886196dbaba38ba428a8ae8f39152175475701d89470e97e098eeb33dbe"
+    sha256 cellar: :any_skip_relocation, catalina:      "9b0741c101bec126592e676fcdccd6d962a9b46962e01da7cea719d6b09d5aa4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c0e0764599f54714457a3aa5e72a7b6176f7aa609e5fe6ea7c8b608024ad8820"
   end
 
   depends_on "go" => :build
