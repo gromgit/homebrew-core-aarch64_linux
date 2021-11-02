@@ -11,6 +11,7 @@ class MariadbAT102 < Formula
   end
 
   bottle do
+    sha256 monterey:     "55bfb388572e29a80ef6b83834350a95ae22ebb7e88a0c5ba86c600c86278de0"
     sha256 big_sur:      "73c9a73db7852d59b07da552d5d775f7e2a2adcbcfb815b42b306ed702080e4c"
     sha256 catalina:     "c85b70d15bdb6e2aacaa27940a4edf54d044b3d68f9791eb3fce338b39a6315b"
     sha256 mojave:       "e73586fb778dac70e938b5409914aebf80eda8028d9c4125d71c0da41ba9a9d9"
