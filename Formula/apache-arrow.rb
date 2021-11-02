@@ -1,11 +1,10 @@
 class ApacheArrow < Formula
   desc "Columnar in-memory analytics layer designed to accelerate big data"
   homepage "https://arrow.apache.org/"
-  url "https://www.apache.org/dyn/closer.lua?path=arrow/arrow-5.0.0/apache-arrow-5.0.0.tar.gz"
-  mirror "https://archive.apache.org/dist/arrow/arrow-5.0.0/apache-arrow-5.0.0.tar.gz"
-  sha256 "c3b4313eca594c20f761a836719721aaf0760001af896baec3ab64420ff9910a"
+  url "https://www.apache.org/dyn/closer.lua?path=arrow/arrow-6.0.0/apache-arrow-6.0.0.tar.gz"
+  mirror "https://archive.apache.org/dist/arrow/arrow-6.0.0/apache-arrow-6.0.0.tar.gz"
+  sha256 "69d268f9e82d3ebef595ad1bdc83d4cb02b20c181946a68631f6645d7c1f7a90"
   license "Apache-2.0"
-  revision 4
   head "https://github.com/apache/arrow.git", branch: "master"
 
   bottle do
@@ -19,7 +18,7 @@ class ApacheArrow < Formula
 
   depends_on "boost" => :build
   depends_on "cmake" => :build
-  depends_on "llvm@12" => :build
+  depends_on "llvm" => :build
   depends_on "brotli"
   depends_on "glog"
   depends_on "grpc"
@@ -35,12 +34,18 @@ class ApacheArrow < Formula
   depends_on "utf8proc"
   depends_on "zstd"
 
+  on_linux do
+    depends_on "gcc"
+  end
+
+  fails_with gcc: "5"
+
   def install
     # https://github.com/Homebrew/homebrew-core/issues/76537
     ENV.runtime_cpu_detection if Hardware::CPU.intel?
 
     # link against system libc++ instead of llvm provided libc++
-    ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm@12"].opt_lib
+    ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib
     args = %W[
       -DCMAKE_FIND_PACKAGE_PREFER_CONFIG=TRUE
       -DARROW_FLIGHT=ON
