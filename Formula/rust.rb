@@ -16,10 +16,12 @@ class Rust < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "4ef461b5e0ce1ef9f83308fca7a5da406bdeccee7c8fa19fb9277ebcd75efafb"
-    sha256 cellar: :any,                 big_sur:       "20624f172ed0275e7360facdd5fe0267317d4edfa0fc099264673648ab5cdee6"
-    sha256 cellar: :any,                 catalina:      "7eb748e8f01e64656b23083f20a2887a344a200d28e1cbec6d95407b321f160f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cba480896934378891fdb66d4749470b515c99d773b816be690e7b46d8f3d6bb"
+    sha256 cellar: :any,                 arm64_monterey: "58189da7cb381f3ca4600ac6ce22280faa913befe1c4772b2cb546310b8cf6ee"
+    sha256 cellar: :any,                 arm64_big_sur:  "4ef461b5e0ce1ef9f83308fca7a5da406bdeccee7c8fa19fb9277ebcd75efafb"
+    sha256 cellar: :any,                 monterey:       "18fbf3c9385b2f36384fa14643c723f73fbfa49aeac5fc2cc420dd7ccb712561"
+    sha256 cellar: :any,                 big_sur:        "20624f172ed0275e7360facdd5fe0267317d4edfa0fc099264673648ab5cdee6"
+    sha256 cellar: :any,                 catalina:       "7eb748e8f01e64656b23083f20a2887a344a200d28e1cbec6d95407b321f160f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cba480896934378891fdb66d4749470b515c99d773b816be690e7b46d8f3d6bb"
   end
 
   head do
