@@ -7,6 +7,7 @@ class Torchvision < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "0b1b15f76d7b101c54086361a70a3b66d913468000e5abf11adfb5ecf4de99a0"
+    sha256 cellar: :any,                 arm64_big_sur:  "b4a37607724f528b6a26d390e0b064a06d86f4bb7f5bfb870fbc84382bdc3551"
     sha256 cellar: :any,                 monterey:       "f0bc6094b0db65cd410ca4781ab2c5765c3e606a58a9ccb78999252380314310"
     sha256 cellar: :any,                 big_sur:        "538900976b4d7efd2ebc3be711c5565b2e20b5e504f84eb338e8dff4eb0aad2c"
     sha256 cellar: :any,                 catalina:       "fa859b8881a88ea26dc058759752b318a3d163b38256e3000fa5c61a0674d8f6"
