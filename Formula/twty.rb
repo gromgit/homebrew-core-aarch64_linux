@@ -5,6 +5,13 @@ class Twty < Formula
   sha256 "d1ee544ff31a9a9488ff759da587baf927ab7c31b191b4b5bc010f36ecfb8188"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "847a9c071620d78e35034cd4bd2b373813b9ba31501e13393d32177e7f26df59"
+    sha256 cellar: :any_skip_relocation, big_sur:       "22e65cfb1d7eb35462798abf3795feef19b68d5aa61e90c580153b6d2d3915b5"
+    sha256 cellar: :any_skip_relocation, catalina:      "4619c0ae9427727d3a456142fe9f574ad0f73bddbd24e8a6c194da7f610cf81d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "35503d676346e1ec4f0467cd5851acb3787ce28a7b60849a08aa57ba7ae7bb02"
+  end
+
   depends_on "go" => :build
 
   def install
