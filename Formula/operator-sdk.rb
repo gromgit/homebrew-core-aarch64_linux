@@ -13,13 +13,10 @@ class OperatorSdk < Formula
   end
 
   bottle do
-    sha256                               arm64_monterey: "229d47f04c5c1cc3270443fe389df304f35163d07c08c02ac2450d754f881cf4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1a4b7a71081b00286227b6e41fcb8e38f8802af7eff94e099aabe2f9105f56a4"
-    sha256                               monterey:       "9880af175bee3e3ede7f6519d2f23b4ddbc13e7b96452a7bf61d5e9883ae06db"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8a7c04a325f962c86b5cd7511d94ba179d959307d540665fdf0a2cf1d4679c69"
-    sha256 cellar: :any_skip_relocation, catalina:       "9293b50b9f1aaf743a96d37d43f9943d430f74f16b62add781bb1449f21b7c74"
-    sha256 cellar: :any_skip_relocation, mojave:         "5c43aaeda2865b80c09e371cb51e50aa49e7ce1503ccd075cd4921a5144a434f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "18142a17499611b3473a0a5cc0c89c8e574f3ae4b689c1bbaf7e429e136d0c62"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b1a655dc29c0a58325c63973150a53510ccbaee4201664a0aa2bf11f01f200b7"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d1be722fa2328d3f5cc151536f96c81b83a4959fdb4d4c3eaf657b5cef176d5c"
+    sha256 cellar: :any_skip_relocation, catalina:      "07e98d1347f904a1a6f78aabb981b2fa635ef1754a1275c6830a616d18c29531"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "15d8c53758b7353893a0abe656283a203865d7ca01434b1c82ba699c1931e791"
   end
 
   depends_on "go"
