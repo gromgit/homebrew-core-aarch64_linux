@@ -22,11 +22,13 @@ class OpenshiftCli < Formula
 
   bottle do
     rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2782211e3255bb03ccf0b26f59d7ff859ca0324d45fb76b264cf44a16f3077ad"
-    sha256 cellar: :any_skip_relocation, big_sur:       "870e98712efe5ea045356be3f36525c39e7cdef6239f68ec8c5957d750ae7022"
-    sha256 cellar: :any_skip_relocation, catalina:      "f7a8fafdad3e268d2f8579c0c1500e4b1f45d247159986e0d3eed88f14672ea5"
-    sha256 cellar: :any_skip_relocation, mojave:        "59b89010cda9ee308ff728704dccd919be1a12f3a1ea3454cf3f31e9c900d273"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9aa2fe20e8fb4212f2ee01ea32ff1cfa255e1c5135f50ce27658b699de97ea49"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b1dd03d660dd23ec473ec2277e29f1d373220630544de94dae14eb70f69a350b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2782211e3255bb03ccf0b26f59d7ff859ca0324d45fb76b264cf44a16f3077ad"
+    sha256 cellar: :any_skip_relocation, monterey:       "40e611652049dd41c3146947bd6f16185074b727fd969caa1e5494a0b9440f23"
+    sha256 cellar: :any_skip_relocation, big_sur:        "870e98712efe5ea045356be3f36525c39e7cdef6239f68ec8c5957d750ae7022"
+    sha256 cellar: :any_skip_relocation, catalina:       "f7a8fafdad3e268d2f8579c0c1500e4b1f45d247159986e0d3eed88f14672ea5"
+    sha256 cellar: :any_skip_relocation, mojave:         "59b89010cda9ee308ff728704dccd919be1a12f3a1ea3454cf3f31e9c900d273"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9aa2fe20e8fb4212f2ee01ea32ff1cfa255e1c5135f50ce27658b699de97ea49"
   end
 
   depends_on "coreutils" => :build
