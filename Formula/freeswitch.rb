@@ -44,10 +44,12 @@ class Freeswitch < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "35b3037b7963136bb45b8b520869a78c25a6cf5720f4662e8f0abe48f6f126c6"
-    sha256 big_sur:       "8c0b4e5a7b39262a5e49d4cd292037a7b609fb3eb37cb7429107f36d73aa4a11"
-    sha256 catalina:      "8e5b55e233f7fa78e69debec11374f9d548abf215b4f6e4ee470a975a0caa74b"
-    sha256 mojave:        "148bdaee852aef6d3183d7be15a78b52776b0159db7e65c074065df20d62a7bd"
+    sha256 arm64_monterey: "e84cdfea5eca7f01b7c3387866250d9df544ca36c32edb79ef7ced106d5642b5"
+    sha256 arm64_big_sur:  "35b3037b7963136bb45b8b520869a78c25a6cf5720f4662e8f0abe48f6f126c6"
+    sha256 monterey:       "632538ae2a9c44a380945a15c8f8518da3bbaf00768b90cdd0be2c3e9cb57d31"
+    sha256 big_sur:        "8c0b4e5a7b39262a5e49d4cd292037a7b609fb3eb37cb7429107f36d73aa4a11"
+    sha256 catalina:       "8e5b55e233f7fa78e69debec11374f9d548abf215b4f6e4ee470a975a0caa74b"
+    sha256 mojave:         "148bdaee852aef6d3183d7be15a78b52776b0159db7e65c074065df20d62a7bd"
   end
 
   depends_on "autoconf" => :build
