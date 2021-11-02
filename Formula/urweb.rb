@@ -6,6 +6,7 @@ class Urweb < Formula
   revision 4
 
   bottle do
+    sha256 monterey: "212e90a0f4bdcabdb0920889937ca45487c937446ead67a280ecb427fc89523c"
     sha256 big_sur:  "f50d69d970a627bff0607a8be0766c12bdc49394e457776731a5dfd40531f82f"
     sha256 catalina: "67b57cdddb86a0563bd6199314399c8c2d1ad393b81544193492c5d764ee6eb1"
     sha256 mojave:   "51695995aeb4389c1517a66ed91f07db0a967b7955fea9507a99d70fb4daf856"
