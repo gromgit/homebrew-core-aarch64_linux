@@ -11,13 +11,10 @@ class Websocat < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1accbb003c2f0918fb61f5ba23af89ad64f1452311c15e0e333280d27782adfb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a20941e2f36c8ee448c90728ae412a593ebc75a56dba6cc4cf6d581e580197cf"
-    sha256 cellar: :any_skip_relocation, monterey:       "dd7a78cc9be7c91a731f267339d6d423332e6baf44e0143652ec4af01b984a28"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d451b36b4d3f0aa3b620503526355d3e8caafb61ce2b47a2254ce20946d4927b"
-    sha256 cellar: :any_skip_relocation, catalina:       "3c36b35f1c940eec56fcc8b8dd5bd702ffb1d06d803ddbc1f9f1cae4777ad119"
-    sha256 cellar: :any_skip_relocation, mojave:         "c0d4a665923aeedf7b754935295e4bdf64c44d2e8d08386459148cd061533c98"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eb98539452107609b0e0cd90654ef13b3fc0d4274d74733f3b2208ccdfa93749"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "309a57a8fd36a1ee4cc28d21b30cb9769685cd028ea5a8f161afa95426f7ad19"
+    sha256 cellar: :any_skip_relocation, big_sur:       "dd31927b25c9299ba56b6a24d5f6c2c0c8aca50262e88773ef66c031504dc812"
+    sha256 cellar: :any_skip_relocation, catalina:      "ea7f615a79ec40a4cd93ed14d76fdc12828b0580cdbbfb379a395a447e5a4b8f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "de5cd5ef6f8fb29e5a8238d9b5486083363cff22cf2b96676835a2fca7ca3e14"
   end
 
   depends_on "pkg-config" => :build
