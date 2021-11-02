@@ -16,6 +16,7 @@ class Djvulibre < Formula
     sha256 big_sur:        "6d308b8e5bb791a708926ca46adba3b40c3e3cc68edcc80928eeaca21f08b460"
     sha256 catalina:       "c6d381a0927b5a9cf24b32a0bca2b5aa7481fbc2824fb85460aa846026013e07"
     sha256 mojave:         "2a264a38035e422d9af42adbc64486aa30eb0ed206a03a369f15e07905ca37be"
+    sha256 x86_64_linux:   "aafad0808f56b3b0fd9bc6b05297cbc8b9fe06df2068fb2f0bd87c93aa45e79c"
   end
 
   depends_on "autoconf" => :build
