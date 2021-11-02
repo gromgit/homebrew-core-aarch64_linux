@@ -7,6 +7,7 @@ class ElanInit < Formula
   head "https://github.com/leanprover/elan.git"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, monterey:     "3275394194661ad63cbd04cd3246e8db738e15ecff088e4a74d35adcfced78f6"
     sha256 cellar: :any_skip_relocation, big_sur:      "b273b0d9f3f06d2a2a95ea32932ea31937d6d4f4071c9b30d498b26abd06f463"
     sha256 cellar: :any_skip_relocation, catalina:     "1a30f9ac0bfdee77f9d0f5e429551d241e39ac5796318a09895b5619220c7d79"
     sha256 cellar: :any_skip_relocation, mojave:       "ea9407979be2b4a7d8e917c4173c111994b147190759f3a3f185944158f80ed1"
