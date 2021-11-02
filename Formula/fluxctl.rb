@@ -2,8 +2,8 @@ class Fluxctl < Formula
   desc "Command-line tool to access Weave Flux, the Kubernetes GitOps operator"
   homepage "https://github.com/fluxcd/flux"
   url "https://github.com/fluxcd/flux.git",
-      tag:      "1.24.1",
-      revision: "13b3e660ed198b81a9dcd11457664827294074b8"
+      tag:      "1.24.2",
+      revision: "603cb67333d628b8e297432f5998bc46356cf46e"
   license "Apache-2.0"
 
   livecheck do
@@ -24,7 +24,7 @@ class Fluxctl < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args, "-ldflags", "-s -w -X main.version=#{version}", "./cmd/fluxctl"
+    system "go", "build", *std_go_args(ldflags: "-s -w -X main.version=#{version}"), "./cmd/fluxctl"
   end
 
   test do
