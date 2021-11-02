@@ -11,13 +11,10 @@ class Dovecot < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "3676d5df4ec4c7e2e186e753fad21d58ef91640f86f5c9201aa19927ff5ec740"
-    sha256 arm64_big_sur:  "cf575ab457beca6bc27f67d5044d3b46dd3dfaff7693f0b8306b7a57f96dd7af"
-    sha256 monterey:       "49e81ddd4ecbf7fd682e5f03d51422aecbdd3aa593e50dc9e8d338a35741d565"
-    sha256 big_sur:        "c1feffb201e4febf583cae5597f09ffcb595ed050af95b59f3ef342ef394a60e"
-    sha256 catalina:       "f3c3f3fce439ab75e20fe6fc49f8e186653afb68c0a9779791a31dd8e04b4850"
-    sha256 mojave:         "a8867734064460304e21056d59156f8f01e0b0ec15341e3fac901167eff0bc8f"
-    sha256 x86_64_linux:   "c4c1beb8368da32f6743e58c7a0db23397081c366ceddedf026598a4d215241e"
+    sha256 arm64_big_sur: "97ee2d2b1c2214d6fd00211e4deb99a2476eff51a135bc9e97367fed98c2cbae"
+    sha256 big_sur:       "0e2332671e5df12e9dc1cc947d413b0b4555d7bdb80ceaea944e7623cba1767f"
+    sha256 catalina:      "c047e4e19250f80ae8ed466a6e097ba22e727efa01f349335d51f4925bc731cf"
+    sha256 x86_64_linux:  "4bf69f94e1276372205ea581baa2b2e15baa98ca6b852307c938d5e609edb61c"
   end
 
   depends_on "openssl@1.1"
