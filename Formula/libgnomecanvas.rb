@@ -6,10 +6,12 @@ class Libgnomecanvas < Formula
   revision 5
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "ed9d17d2b7100e9c5ef536c547119eb78e8658bc273f958e673d47383290c3d7"
-    sha256 cellar: :any, big_sur:       "e2ae279ca7759e74bf93ed0577838d7e80fef134ad5f76c671263d023bca3dd1"
-    sha256 cellar: :any, catalina:      "816cd9bf11520fba1126073191c236f2355c45a137905ba978f16a506960fef0"
-    sha256 cellar: :any, mojave:        "bedab86245aa4185fc9c009496ec2d0fc0d1ea53074493db08afc81bdf424a60"
+    sha256 cellar: :any, arm64_monterey: "aef7d6bf446277bc167f620e3cb3da665cbd18a3b118b2234816078525b9d171"
+    sha256 cellar: :any, arm64_big_sur:  "ed9d17d2b7100e9c5ef536c547119eb78e8658bc273f958e673d47383290c3d7"
+    sha256 cellar: :any, monterey:       "496d5c87547b25b2f57f676fd627d58a0663737dbf993e2c11a3d535f87c03d1"
+    sha256 cellar: :any, big_sur:        "e2ae279ca7759e74bf93ed0577838d7e80fef134ad5f76c671263d023bca3dd1"
+    sha256 cellar: :any, catalina:       "816cd9bf11520fba1126073191c236f2355c45a137905ba978f16a506960fef0"
+    sha256 cellar: :any, mojave:         "bedab86245aa4185fc9c009496ec2d0fc0d1ea53074493db08afc81bdf424a60"
   end
 
   deprecate! date: "2021-11-03", because: :repo_archived
