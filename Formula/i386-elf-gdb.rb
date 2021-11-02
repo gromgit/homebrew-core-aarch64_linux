@@ -15,6 +15,7 @@ class I386ElfGdb < Formula
 
   bottle do
     sha256 arm64_big_sur: "b4c91d248b5ba7d765c277903ac03f1f3d35a77079ae3acbdba8768a9dcb4c55"
+    sha256 monterey:      "21b133542f15adac54a0b2b55e7da2ffd584396b1fcd771864742f3811db784a"
     sha256 big_sur:       "dbf60ac8e71d01328d134cb1eaa47cd734dd612cd67cc7b730d56afc138ea969"
     sha256 catalina:      "4ca5521aab0566367e9a72767225d08667efb40e609c0b8e9e4ff7464f755052"
     sha256 mojave:        "85a64a23e61b011e32cff2c56e7915f32a8d8d669be09e4698b431412e8ea7b0"
