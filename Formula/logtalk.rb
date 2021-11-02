@@ -12,9 +12,11 @@ class Logtalk < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:      "a90438cb7197c9b3602a9b4ced05fcf72a88769405e508d9d506b2cbad38e8dd"
-    sha256 cellar: :any_skip_relocation, catalina:     "e64c70973ad23731d66c98d936e02baa0ba4d2e96799db082185cdb3025af053"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "c2bc934c985bf58834c22e5ee95279522eebe19a8f1256bf822df98dadc4276b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "38a164fde20433b8c37f9637347958a82c8dba13e808bc9d63ed7fe7546b7ec1"
+    sha256 cellar: :any_skip_relocation, monterey:       "d65196c7f69a6be87b2e0994c468656d2f182dd460d1c39c1df1178b16ea5939"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a90438cb7197c9b3602a9b4ced05fcf72a88769405e508d9d506b2cbad38e8dd"
+    sha256 cellar: :any_skip_relocation, catalina:       "e64c70973ad23731d66c98d936e02baa0ba4d2e96799db082185cdb3025af053"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c2bc934c985bf58834c22e5ee95279522eebe19a8f1256bf822df98dadc4276b"
   end
 
   depends_on "gnu-prolog"
