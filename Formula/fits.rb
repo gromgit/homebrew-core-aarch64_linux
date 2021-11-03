@@ -7,6 +7,7 @@ class Fits < Formula
 
   bottle do
     sha256 cellar: :any, arm64_big_sur: "18ae09e9e92d45f14502dd3b7a5323be6f1b1ac19fb45fd1c367b2417d9db929"
+    sha256 cellar: :any, monterey:      "6e700d2bab8e41963162e6ac180628f4e9311ed71cae5a3034c756a17628be89"
     sha256 cellar: :any, big_sur:       "70a94bc9728e70e82c57d726ec958880da89dd5af6c2d65ae4351e6cf7543366"
     sha256 cellar: :any, catalina:      "70a94bc9728e70e82c57d726ec958880da89dd5af6c2d65ae4351e6cf7543366"
     sha256 cellar: :any, mojave:        "70a94bc9728e70e82c57d726ec958880da89dd5af6c2d65ae4351e6cf7543366"
