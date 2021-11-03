@@ -12,6 +12,7 @@ class Duck < Formula
   end
 
   bottle do
+    sha256 cellar: :any, monterey:     "545b49db13499efb008a88a38ae8fd1e5dbfd1edc3cef112364ea98f9fbcbce9"
     sha256 cellar: :any, big_sur:      "5d70bd63aa2548899d7be3b5a959ea98344304c810add8c1c4861498ee0fa30f"
     sha256 cellar: :any, catalina:     "8ee06a67b82045075f4b096cf0fb0b89dce1fe89b693894463da0d1525a80069"
     sha256               x86_64_linux: "5a20254d28c656dd2521cd16e03bc658ffa8a6e6d55f644e7e7387f22b59dd52"
