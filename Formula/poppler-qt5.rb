@@ -11,10 +11,11 @@ class PopplerQt5 < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "f18ed9acb1380c09a482af222e26e3bfd6cef24bb50635d602e20338586d423b"
-    sha256 big_sur:       "10d7eaa9579959aaff146a82c780d0dea4e7a966592760b0bc9c8cb1fc8e5244"
-    sha256 catalina:      "56f321088f630328174561c41f64aadf5bd3b560851bbded7db905d17b82205f"
-    sha256 x86_64_linux:  "b60f0d6999b4527e67ac0b989aea8c89c80e7576f0648ea2776684a92fc3ed14"
+    sha256 arm64_monterey: "97ec98ea7bfa55745ffabcf6f5728bcf5ecef7634f7e5e3d5b05436d1d6814fd"
+    sha256 arm64_big_sur:  "f18ed9acb1380c09a482af222e26e3bfd6cef24bb50635d602e20338586d423b"
+    sha256 big_sur:        "10d7eaa9579959aaff146a82c780d0dea4e7a966592760b0bc9c8cb1fc8e5244"
+    sha256 catalina:       "56f321088f630328174561c41f64aadf5bd3b560851bbded7db905d17b82205f"
+    sha256 x86_64_linux:   "b60f0d6999b4527e67ac0b989aea8c89c80e7576f0648ea2776684a92fc3ed14"
   end
 
   keg_only "it conflicts with poppler"
