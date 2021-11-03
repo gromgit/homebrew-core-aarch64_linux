@@ -1,8 +1,8 @@
 class WildflyAs < Formula
   desc "Managed application runtime for building applications"
   homepage "https://www.wildfly.org/"
-  url "https://download.jboss.org/wildfly/24.0.0.Final/wildfly-24.0.0.Final.tar.gz"
-  sha256 "4b510847b41052a2509f78bf4099ef55b1a704dab344f9f433b706f96f62a00a"
+  url "https://github.com/wildfly/wildfly/releases/download/25.0.0.Final/wildfly-25.0.0.Final.tar.gz"
+  sha256 "1cbe9e62107b98d5bdf7c4ebd068372460fbd6b1559de639cf9de143d55d04e1"
   license "LGPL-2.1-or-later"
 
   livecheck do
@@ -17,6 +17,7 @@ class WildflyAs < Formula
     sha256 cellar: :any, mojave:        "8229398830099182e0fc27356056d850e4f0be23722162d154be56687f8ea78c"
   end
 
+  # Installs a pre-built x86_64-only `libwfssl`
   depends_on arch: :x86_64
   depends_on "openjdk"
 
