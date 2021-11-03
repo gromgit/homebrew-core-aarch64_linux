@@ -13,13 +13,10 @@ class Isort < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a4e4920501201a94ee9a6ea4990b9fa8a259797be211f516c092f2ab800a151d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "36eca38b43c2fe314d024a1995d0953cf155862dbc7f00f6d0a34edb742ea513"
-    sha256 cellar: :any_skip_relocation, monterey:       "def6ef28d9b0677a6532156a274d4812e36a39e99ac27f23173761269eb05044"
-    sha256 cellar: :any_skip_relocation, big_sur:        "50b4352cc80c9b4064b43889478d62d928fbe4b1046682a75425101008388a07"
-    sha256 cellar: :any_skip_relocation, catalina:       "d3b566b024853af9f4b15f21a67e24bfe388d3091d083070e3a0a751d304c97b"
-    sha256 cellar: :any_skip_relocation, mojave:         "04253871a201d55662ac4467f41c10154801199b8d751fee858f752681f3335e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4729c47853441bbb0989cf58ebe6be207e8486316f7c9116f9e1595596517bcd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8a47154bfc16591b733dba25c447f9a66c5623f0d79ebcaf761579f2ce1abcb1"
+    sha256 cellar: :any_skip_relocation, big_sur:       "844debc7be1067c96394d2aca0d0b6168c6c7be985ee5410f39deeb0898e971b"
+    sha256 cellar: :any_skip_relocation, catalina:      "89041c73f3da0300871ba0d2777ac7acbdcb6179cbd2e23e1729c9ca47658e4b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dc8dfdb4094129b412849b7f1247dcca83de39c3f774349c9e3509d763678e92"
   end
 
   depends_on "python@3.10"
