@@ -18,6 +18,7 @@ class Umple < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "b588ed54d528a7301c1450bd03a8651abcb88119e18dd9166631adf3143a2180"
     sha256 cellar: :any_skip_relocation, mojave:        "b588ed54d528a7301c1450bd03a8651abcb88119e18dd9166631adf3143a2180"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "8290ce892b832b7c4fa229b7ad10b0e2b8f78371f3c23c07a07542f2ae4af18b"
+    sha256 cellar: :any_skip_relocation, all:           "fd3ee458d75e5ae83f3fcdda38e5ac0687abd1db886a0006a313085463c8691a"
   end
 
   depends_on "openjdk"
