@@ -12,12 +12,10 @@ class Erlang < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "46bd8026c5c219c143e2269c41eba83daadf81ab0ffc9685e112263c4c37a695"
-    sha256 cellar: :any,                 arm64_big_sur:  "61112f79d1e78c566e60266976584d82e2ed2b7660afd7a90192ab66b46dbbbe"
-    sha256 cellar: :any,                 monterey:       "5182deb3359dcb4cdb121ead07f2e28c1b35fc419402d96f4a6e4a895459daa8"
-    sha256 cellar: :any,                 big_sur:        "03ed4af1c1bc97c136d54220138968debe8f7a16bb7d6bb889e1497f62a2aca7"
-    sha256 cellar: :any,                 catalina:       "f54dec949bf8ef44580cae90f297357d285e899c61d173b92808d268bf1c6838"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f35e1f1642c315ec99032c90cd83e358bf17aba1b950640c6f0d0cb124487ced"
+    sha256 cellar: :any,                 arm64_big_sur: "928f65c31447bd232b7c95c1416d8ebef049dc8f977549049616e6a7c8e21603"
+    sha256 cellar: :any,                 big_sur:       "271b5922c5eff9e9512190f046144ccaaf505bd1b8a4e83017c2c65893a22129"
+    sha256 cellar: :any,                 catalina:      "9a457af81bb428276e3cd63f77ee2c3f981ede7b65f7ea612367226d93683368"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "470130a90c6e5461d8fdea83c2ed887c1464ca578feb99c074067f79a45b16a5"
   end
 
   head do
