@@ -16,6 +16,7 @@ class SeleniumServer < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "edfff3c2a862fc73572c50059c9cda65c52a5e6e53ba36e84b5eccd97c2a5843"
     sha256 cellar: :any_skip_relocation, mojave:        "edfff3c2a862fc73572c50059c9cda65c52a5e6e53ba36e84b5eccd97c2a5843"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "99b75acd589404b60ec859ad259bf1f6ab363db9505c21ad62c826216a37375a"
+    sha256 cellar: :any_skip_relocation, all:           "928c2af17b84c75a4ab6ff97a7b23b4217db1ccdd7e5dfd839e4d945cf199e77"
   end
 
   depends_on "openjdk"
