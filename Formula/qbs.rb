@@ -12,10 +12,11 @@ class Qbs < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "92aac9bdcf321990f97af795af823b02b0f3e747e32b96e2f55f2be34ba5e31f"
-    sha256 cellar: :any, big_sur:       "c3d85f2b1e1f08d4f1eafa5635f892d2fd30929b61b78a350904f2e94eb5ccb4"
-    sha256 cellar: :any, catalina:      "13e3ffaf58f1778c57fd83eb8da7949dfadd639a25ca259fab7197411cf16cdb"
-    sha256 cellar: :any, mojave:        "7e224f3dc560b76aef993ed1b72c8dd51a839928fa3351e77cec37b333b3d534"
+    sha256 cellar: :any, arm64_monterey: "67dfbdb18377e3bba450d7e607a4a226ee0ddb813f1bf708508892f8d8468a59"
+    sha256 cellar: :any, arm64_big_sur:  "92aac9bdcf321990f97af795af823b02b0f3e747e32b96e2f55f2be34ba5e31f"
+    sha256 cellar: :any, big_sur:        "c3d85f2b1e1f08d4f1eafa5635f892d2fd30929b61b78a350904f2e94eb5ccb4"
+    sha256 cellar: :any, catalina:       "13e3ffaf58f1778c57fd83eb8da7949dfadd639a25ca259fab7197411cf16cdb"
+    sha256 cellar: :any, mojave:         "7e224f3dc560b76aef993ed1b72c8dd51a839928fa3351e77cec37b333b3d534"
   end
 
   depends_on "cmake" => :build
