@@ -16,6 +16,7 @@ class Igv < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "bca9700f55959cc195610c67dd83fd6644c2ac8966d90df476113d3793414b9b"
     sha256 cellar: :any_skip_relocation, mojave:        "bca9700f55959cc195610c67dd83fd6644c2ac8966d90df476113d3793414b9b"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "977f5d66ce9c94de6648ac1c71006de38da3d912495598b178e0ccad35a53ceb"
+    sha256 cellar: :any_skip_relocation, all:           "5db8b9741ae2a714546427260cc426d89d45018f7abe0b400f9acd121506d38d"
   end
 
   depends_on "openjdk"
