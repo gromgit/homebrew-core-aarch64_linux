@@ -6,12 +6,10 @@ class Matterbridge < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d76fe23a3d466c5ca87218d1ae7f8c0c640c83512ff858ffeea60eb2553c9a56"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7efe7b9e3c85e634a93b0e07a60c32483570919911fd416397c3af8730a558c4"
-    sha256 cellar: :any_skip_relocation, monterey:       "3d3f3f1fea9585649a744e31aa37542bc1dacadff7144b015dbcfe816ab8b043"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2a93d34e2c78869e3d3d560e2ae52864d4d9d01ef2624f2a67e16416f06a8b56"
-    sha256 cellar: :any_skip_relocation, catalina:       "0578b896635d27b1131a127c42038a2c72e4b1e03499aff78749c38c89b5a867"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9d7b403cae984bee4b96f9629b6ee52b751a0f72f86dac80a270927af7635a60"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e1e8132fc4300ea7eb8d10bf32e2f421e8b61aff1ff1eb89fa399d8732d3953f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "56c14f672c316a1710e8438ea2b8ebf3b1f5510acf1eb64c2718a6ad9a1bd73f"
+    sha256 cellar: :any_skip_relocation, catalina:      "ec8d0ba76fded16e615b5c3e1a484e8223dda43d122c76f24117cbe147c08b72"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d0ffbac30e1593eedec4650a3b5cf73a46f14c975230fa3dc970e19566839898"
   end
 
   depends_on "go" => :build
