@@ -7,11 +7,12 @@ class PyqtAT5 < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "587a8a32bab96b5621d7a125c9d30816cc16af7b5bb5b1575324b5fb22ba5fc5"
-    sha256 cellar: :any, big_sur:       "57e1fd479cc069392daab557c213607bcb45fae6494fce0898803be3696bb24b"
-    sha256 cellar: :any, catalina:      "70bc904d9efee5ec5a2e6eec8d5cf7daf1d96790f13b41fa4027d42f62ebd6d4"
-    sha256 cellar: :any, mojave:        "d824441486b767137fcad5620117299a7e3dd1423726a31c637cde4b1fcf2d39"
-    sha256               x86_64_linux:  "7666898e0b34c8e2c204a9ee8a9d50c8daf0f8a82522d77a65e15d639468196f"
+    sha256 cellar: :any, arm64_monterey: "90f347798a5ebddb45d87f5399c47afd7bb4e4b5e735eadf102eed7c14f02af2"
+    sha256 cellar: :any, arm64_big_sur:  "587a8a32bab96b5621d7a125c9d30816cc16af7b5bb5b1575324b5fb22ba5fc5"
+    sha256 cellar: :any, big_sur:        "57e1fd479cc069392daab557c213607bcb45fae6494fce0898803be3696bb24b"
+    sha256 cellar: :any, catalina:       "70bc904d9efee5ec5a2e6eec8d5cf7daf1d96790f13b41fa4027d42f62ebd6d4"
+    sha256 cellar: :any, mojave:         "d824441486b767137fcad5620117299a7e3dd1423726a31c637cde4b1fcf2d39"
+    sha256               x86_64_linux:   "7666898e0b34c8e2c204a9ee8a9d50c8daf0f8a82522d77a65e15d639468196f"
   end
 
   depends_on "pyqt-builder" => :build
