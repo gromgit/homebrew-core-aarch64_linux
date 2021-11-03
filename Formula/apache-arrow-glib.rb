@@ -13,6 +13,7 @@ class ApacheArrowGlib < Formula
 
   bottle do
     sha256 cellar: :any, arm64_big_sur: "99a92493445d77edbb219f48f21af705a59755cfae423d8e6f3591c307b53509"
+    sha256 cellar: :any, monterey:      "aff34c03891097f715c90009775c4c1338c458f53a44d18cdbd6b708b19ca8ac"
     sha256 cellar: :any, big_sur:       "89d2ba16e8ad4c4ba1d868e2b6d004b0afeea7e16a7c5c60484ae63b81c32f83"
     sha256 cellar: :any, catalina:      "a3df595a8b242eb13aef17a3ebb049c4cdcabfc09f8ffcec351d9fd2eb21c35f"
     sha256               x86_64_linux:  "84ab9aff2b0583b5a97538c7f8cbeefdf2b3132fc7b2b9504b9c953d915a6cd5"
