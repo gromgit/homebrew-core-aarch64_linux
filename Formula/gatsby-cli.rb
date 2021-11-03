@@ -9,10 +9,12 @@ class GatsbyCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9a874771802d6d9bc3995c641eb436f478b8385c137c38301b91987c5fa9eedb"
-    sha256 cellar: :any_skip_relocation, big_sur:       "1862d09e7ce05b88312101e98f02f5791b07fc72033e3da8c2c7a91bceefbf9f"
-    sha256 cellar: :any_skip_relocation, catalina:      "1862d09e7ce05b88312101e98f02f5791b07fc72033e3da8c2c7a91bceefbf9f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "688328738da70c4b723d08ed6f2bc3ddd844ba60712cc17a30198e82f08b67d2"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1aec72d70654d908d3812fce152d59a727f5147c1594edd7513d16e67586a499"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9a874771802d6d9bc3995c641eb436f478b8385c137c38301b91987c5fa9eedb"
+    sha256 cellar: :any_skip_relocation, monterey:       "1862d09e7ce05b88312101e98f02f5791b07fc72033e3da8c2c7a91bceefbf9f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1862d09e7ce05b88312101e98f02f5791b07fc72033e3da8c2c7a91bceefbf9f"
+    sha256 cellar: :any_skip_relocation, catalina:       "1862d09e7ce05b88312101e98f02f5791b07fc72033e3da8c2c7a91bceefbf9f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "688328738da70c4b723d08ed6f2bc3ddd844ba60712cc17a30198e82f08b67d2"
   end
 
   depends_on "node"
