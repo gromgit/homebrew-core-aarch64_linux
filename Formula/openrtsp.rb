@@ -13,9 +13,11 @@ class Openrtsp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "b2efe494ce7ea9a932a1988eee80eda484dadf7efe57229daef2a43c78add6df"
-    sha256 cellar: :any, big_sur:       "56f1ebaad15212a06af9a97fad53e8e7a10f2bc5e0bc00ce1688ca3d1be1ae2b"
-    sha256 cellar: :any, catalina:      "1155cae9d2720ff34fc809b59cd2128a9f2a2acd808e675718a49b184a6391a0"
+    sha256 cellar: :any, arm64_monterey: "eb8e6f17f603992db2cefdefd3f453c8fd98aa12c675ff23de34133fba2af3bc"
+    sha256 cellar: :any, arm64_big_sur:  "b2efe494ce7ea9a932a1988eee80eda484dadf7efe57229daef2a43c78add6df"
+    sha256 cellar: :any, monterey:       "73b085518868f56bcfa4810d8b8f5ae1980060ca924c69af78e095dc0e85e12d"
+    sha256 cellar: :any, big_sur:        "56f1ebaad15212a06af9a97fad53e8e7a10f2bc5e0bc00ce1688ca3d1be1ae2b"
+    sha256 cellar: :any, catalina:       "1155cae9d2720ff34fc809b59cd2128a9f2a2acd808e675718a49b184a6391a0"
   end
 
   depends_on "openssl@1.1"
