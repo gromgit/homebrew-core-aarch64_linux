@@ -12,6 +12,10 @@ class Corepack < Formula
     regex(/["']version["']:\s*?["']([^"']+)["']/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "ed62f6ee6221939e59013211dc29a79145a576f5072060d47e0736bc6700d6f2"
+  end
+
   depends_on "node"
 
   conflicts_with "yarn", because: "both install `yarn` and `yarnpkg` binaries"
