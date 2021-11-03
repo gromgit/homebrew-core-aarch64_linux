@@ -13,6 +13,7 @@ class Jetty < Formula
 
   bottle do
     sha256 cellar: :any, arm64_big_sur: "a6be10513ab590b3a3eb6ae631a5480af414a2347dcd194530105f0263d6b967"
+    sha256 cellar: :any, monterey:      "e2d53532f1b42e4722773be37c4f871fc4d4312ed3309764bc0b204f2fc15283"
     sha256 cellar: :any, big_sur:       "e8777d929a1655066acee7b4467241db035911c971da87619bb2df7b68db4b57"
     sha256 cellar: :any, catalina:      "e8777d929a1655066acee7b4467241db035911c971da87619bb2df7b68db4b57"
     sha256 cellar: :any, mojave:        "e8777d929a1655066acee7b4467241db035911c971da87619bb2df7b68db4b57"
