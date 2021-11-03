@@ -6,13 +6,10 @@ class Vitess < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3d7de1a40fc1fa9e6e77e3ae7a795e0155cd82e6e4b00c579813142eb70066fa"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4aa971754b4a25ba92ee044864d45ed528a7247625c4ee02f0593d5be05bf0f2"
-    sha256 cellar: :any_skip_relocation, monterey:       "c4d4555d17a7746fef01ef12af90b591be43d83631ce882e5bf5923ab7e2223d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "223ec20c9812977bfa7b27f4c8bc96543151539d0e290c79e4a77cc5194cb886"
-    sha256 cellar: :any_skip_relocation, catalina:       "fd69b5532c0a3621f749415cc6123b26184393177207d22dbb926f57cda306b2"
-    sha256 cellar: :any_skip_relocation, mojave:         "379e273a0fa00df8967402dbaf3a2ce7d4ee4f34059bed832f22caf1d12a446a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c2c25804ecf48402255647450d13fcefbae378bd00fe84fbab45a13bd36d2708"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8c6af5dd5faf4aa7bf6debc58a3cfb68081745f8f7ebcdcaaf2c004e5cb2bb64"
+    sha256 cellar: :any_skip_relocation, big_sur:       "1fb047b2ff939b8cdc7907b9bc95968b94d6837d40432a31dcb266af20304967"
+    sha256 cellar: :any_skip_relocation, catalina:      "79893cb774f092950a70b8f50fb4b7c9bb418c5c94494263733fcf7fa2841338"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e056f986c71427c43be17ac6f75d3a455255cc1388d3d20f3e78c60c6ca69b0b"
   end
 
   depends_on "go" => :build
