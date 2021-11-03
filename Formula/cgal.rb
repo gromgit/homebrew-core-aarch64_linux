@@ -7,11 +7,12 @@ class Cgal < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4f72321be5057d3b07e5ee332b4574ddc08bb65690291778f87593ce60c1e705"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c8f0d5760001f61ed11d996ea74e94ec73c77cf46d2746e0ff828657c9dd6bab"
-    sha256 cellar: :any_skip_relocation, catalina:      "c8f0d5760001f61ed11d996ea74e94ec73c77cf46d2746e0ff828657c9dd6bab"
-    sha256 cellar: :any_skip_relocation, mojave:        "c8f0d5760001f61ed11d996ea74e94ec73c77cf46d2746e0ff828657c9dd6bab"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4f72321be5057d3b07e5ee332b4574ddc08bb65690291778f87593ce60c1e705"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4f72321be5057d3b07e5ee332b4574ddc08bb65690291778f87593ce60c1e705"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4f72321be5057d3b07e5ee332b4574ddc08bb65690291778f87593ce60c1e705"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c8f0d5760001f61ed11d996ea74e94ec73c77cf46d2746e0ff828657c9dd6bab"
+    sha256 cellar: :any_skip_relocation, catalina:       "c8f0d5760001f61ed11d996ea74e94ec73c77cf46d2746e0ff828657c9dd6bab"
+    sha256 cellar: :any_skip_relocation, mojave:         "c8f0d5760001f61ed11d996ea74e94ec73c77cf46d2746e0ff828657c9dd6bab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4f72321be5057d3b07e5ee332b4574ddc08bb65690291778f87593ce60c1e705"
   end
 
   depends_on "cmake" => [:build, :test]
