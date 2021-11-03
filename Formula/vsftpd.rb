@@ -12,13 +12,11 @@ class Vsftpd < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "750e3cb617fe099bc204db98a2770944b33f4dc994196de8f7ffc824bd45b22a"
-    sha256 arm64_big_sur:  "11589c537eaaaba8cfd68207f078d8d4d0485b40d8553c23ae7caf76ab5104d7"
-    sha256 monterey:       "b4c8c92ebfae999ac77940428f963178110bc3a57d26b68a59702be13e0e19c6"
-    sha256 big_sur:        "1ede9475ee1dc93ad54a413ca82bdd15d3b0f50b9d6f731cf7e3578cae8b0cbd"
-    sha256 catalina:       "79b378cfa6134e01ff2d253578c24601e5bb2d2514e7427da083a9af0446ac14"
-    sha256 mojave:         "d6ebf6f6f786c417698436901442203446bc6c64a9d50e6134b4035e2c0c5002"
-    sha256 x86_64_linux:   "124a191424c1d2f2261a858bc2d2a8319dc91572035f62c9f7065c08cdfd6e5b"
+    rebuild 1
+    sha256 arm64_big_sur: "7978d8b0121a19bee82b3b3f923685fd9ea462c35f3a28ab47e8a665116f6ef8"
+    sha256 big_sur:       "e0ef6c46feb52bbe5e970d5ddd357f38837ddc69a7cd34a74a8c33cb3ccfb398"
+    sha256 catalina:      "b5c7f2c2abd7937bcaccb69160701f46003b5167229a124fa1ea22ff463a04d5"
+    sha256 x86_64_linux:  "afab189ea0991cf4d28552707a50fe005d7cb1b18ec249360f0dae7e3db3a17f"
   end
 
   uses_from_macos "perl" => :build
