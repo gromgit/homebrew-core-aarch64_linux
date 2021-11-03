@@ -11,6 +11,7 @@ class DjlServing < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "c438d15069721e4a5c1d1c34155da406217c14cb06a24f36c1766594b4ca693d"
     sha256 cellar: :any_skip_relocation, mojave:        "c438d15069721e4a5c1d1c34155da406217c14cb06a24f36c1766594b4ca693d"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "399edae507bdaee85fea94f67238a99faab7d666ebe220781991903385cc288e"
+    sha256 cellar: :any_skip_relocation, all:           "c211b2d0f905a4adcc073cb04c9b72fff408474b0422244d26b2a32112169f3b"
   end
 
   depends_on "openjdk"
