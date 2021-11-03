@@ -11,10 +11,7 @@ class WildflyAs < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "325904b87bf110f9724a80bdbd90c3cc4cb838b50b7cc6fc7b4b1c6f97cc2d2e"
-    sha256 cellar: :any, big_sur:       "8229398830099182e0fc27356056d850e4f0be23722162d154be56687f8ea78c"
-    sha256 cellar: :any, catalina:      "8229398830099182e0fc27356056d850e4f0be23722162d154be56687f8ea78c"
-    sha256 cellar: :any, mojave:        "8229398830099182e0fc27356056d850e4f0be23722162d154be56687f8ea78c"
+    sha256 cellar: :any, all: "3641d0a611965b1f4c704fbc3ec112edb9bcfaddb9379edf323b3219cd6e5ec2"
   end
 
   # Installs a pre-built x86_64-only `libwfssl`
