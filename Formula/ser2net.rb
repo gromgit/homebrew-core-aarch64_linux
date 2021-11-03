@@ -11,10 +11,12 @@ class Ser2net < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "1ed19ca1d6bb03df612a6c4c08dc5bfa7774fd40907b9531b2d161c555b4e44b"
-    sha256 cellar: :any,                 big_sur:       "3fc4d4c18aff806463d20e9bbf04cbaa22b648c24d6297ea80cf85ba7b13246d"
-    sha256 cellar: :any,                 catalina:      "042e2c7a57911e1e5510aac5338de9d8f398406104af3ca0c4dfd53e851a7e92"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6cc83b8c9ca812a654d5f6e06464c9593322761ac7066ccb79d39fe354d634c9"
+    sha256 cellar: :any,                 arm64_monterey: "0b47f117e2307438dfd293fcdb119afc19265f88727f71c3edec749e69e50e66"
+    sha256 cellar: :any,                 arm64_big_sur:  "1ed19ca1d6bb03df612a6c4c08dc5bfa7774fd40907b9531b2d161c555b4e44b"
+    sha256 cellar: :any,                 monterey:       "9a608a3f76ca8529eccc91994f337610eb5bfd1afe615d445d5dea958b8b462e"
+    sha256 cellar: :any,                 big_sur:        "3fc4d4c18aff806463d20e9bbf04cbaa22b648c24d6297ea80cf85ba7b13246d"
+    sha256 cellar: :any,                 catalina:       "042e2c7a57911e1e5510aac5338de9d8f398406104af3ca0c4dfd53e851a7e92"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6cc83b8c9ca812a654d5f6e06464c9593322761ac7066ccb79d39fe354d634c9"
   end
 
   depends_on "libyaml"
