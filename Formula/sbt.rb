@@ -18,6 +18,7 @@ class Sbt < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "4ff6b167b5ed75da37702d38836642b870c5ae819b26e64fbbdb670abfb6ccc8"
     sha256 cellar: :any_skip_relocation, mojave:        "4ff6b167b5ed75da37702d38836642b870c5ae819b26e64fbbdb670abfb6ccc8"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "349fea6916cedb16eb1b9c4e96dd7ecbcd6a9db58522a6124f248b68f38c3f30"
+    sha256 cellar: :any_skip_relocation, all:           "71e7470db1315a7bc95402092f0888bf04d1b8548b0f1ea04b1cfd7600402288"
   end
 
   depends_on "openjdk"
