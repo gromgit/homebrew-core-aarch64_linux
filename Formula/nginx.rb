@@ -14,10 +14,12 @@ class Nginx < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "4dd0e6520d694faecd67208c88e02a65e8ea41ddc57d117809f4cb631a6372d9"
-    sha256 big_sur:       "dbae394ff91462356cd7a0c7503310c1978a5d6ffad89eb364a01b3d18cb12d1"
-    sha256 catalina:      "f41c58466bc3104d0b2950227c0a4e17426f08c70e4c2b98513ce0316a329a74"
-    sha256 x86_64_linux:  "3289075c07e1cda0ca9cdc76aea71c54cdfa77ebfd6c4266d78cb640f84c2f9a"
+    sha256 arm64_monterey: "15228cc0e51e265e8aa287f44e09217c5afc44dae0ae61947d950f797ced42e8"
+    sha256 arm64_big_sur:  "4dd0e6520d694faecd67208c88e02a65e8ea41ddc57d117809f4cb631a6372d9"
+    sha256 monterey:       "1705176bc483a5fe2dfaa0872a370f6b7d05f2e3283a49c444276ad72673a71e"
+    sha256 big_sur:        "dbae394ff91462356cd7a0c7503310c1978a5d6ffad89eb364a01b3d18cb12d1"
+    sha256 catalina:       "f41c58466bc3104d0b2950227c0a4e17426f08c70e4c2b98513ce0316a329a74"
+    sha256 x86_64_linux:   "3289075c07e1cda0ca9cdc76aea71c54cdfa77ebfd6c4266d78cb640f84c2f9a"
   end
 
   depends_on "openssl@1.1"
