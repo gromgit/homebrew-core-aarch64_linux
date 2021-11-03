@@ -11,11 +11,12 @@ class QwtQt5 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "8cdb0b030f1a548606531d46dd4f73c0b35da8e8a249ac41e2d0fab0018d87dc"
-    sha256 cellar: :any,                 big_sur:       "5fc9bc6b8d0e715918d4d20e71b4c160000ffc9f72d2d83aad53090da62d95ae"
-    sha256 cellar: :any,                 catalina:      "11319984474db0f6df62deca1cb13f08a67e67277afbe478db4236a1249d1ece"
-    sha256 cellar: :any,                 mojave:        "c0d24a905722acc0d4932e7fff585e3360b99df57bc5183b5b1f121e6ad7212c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0dccc2c24c83ee86c6042c5b9f452637e4b854c71efe9e495e602ef73c5686e3"
+    sha256 cellar: :any,                 arm64_monterey: "3e3063e71abe6a1073e2a126496e80be99e4e91d588a5cdad5663796a9bc1c2c"
+    sha256 cellar: :any,                 arm64_big_sur:  "8cdb0b030f1a548606531d46dd4f73c0b35da8e8a249ac41e2d0fab0018d87dc"
+    sha256 cellar: :any,                 big_sur:        "5fc9bc6b8d0e715918d4d20e71b4c160000ffc9f72d2d83aad53090da62d95ae"
+    sha256 cellar: :any,                 catalina:       "11319984474db0f6df62deca1cb13f08a67e67277afbe478db4236a1249d1ece"
+    sha256 cellar: :any,                 mojave:         "c0d24a905722acc0d4932e7fff585e3360b99df57bc5183b5b1f121e6ad7212c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0dccc2c24c83ee86c6042c5b9f452637e4b854c71efe9e495e602ef73c5686e3"
   end
 
   keg_only "it conflicts with qwt"
