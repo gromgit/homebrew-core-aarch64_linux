@@ -12,11 +12,10 @@ class Libvirt < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "7c105ea503b711342411bcecdb237b6be0c9bdc0007478c86e1eb181f8550d7f"
-    sha256 big_sur:       "5fa6ba649a3e151cb3a98ee397b043f8aca153d24329d1ff00f286de7a58ac9e"
-    sha256 catalina:      "4cb61a8f7c2866797bb89894b72152f39735af0b90bbaddd30a5f475a5955d70"
-    sha256 mojave:        "70946ecc63511165d972462a20b27cbbc743c85aea7ce1bfdcf504122d277f87"
-    sha256 x86_64_linux:  "b304884ef4b54ecbdd974c5ad423862c4b0c4c1e89b4a9a45dfc952e374929bc"
+    sha256 arm64_big_sur: "dbafcc4b737970c148bd250225ac8244199deb48f9c04c0c4803d1ae11fde988"
+    sha256 big_sur:       "4e6e779af1394b7fdcf7d9c04e93d7977067fbcb0489a124e178519f6b044ea9"
+    sha256 catalina:      "da0f91b819fa59872ce93f6f31e0b9f6c579f7a595718728e84ba989a2447ad1"
+    sha256 x86_64_linux:  "69f4a06f0b969e8d704e82b086172850800d835ef12609026e9f7a2850d6b695"
   end
 
   depends_on "docutils" => :build
