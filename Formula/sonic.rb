@@ -6,12 +6,9 @@ class Sonic < Formula
   license "MPL-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, monterey:     "d3d533bcf83c5fea990109ea60926fa8f373066c8051495d7ad60e5db3b6046e"
-    sha256 cellar: :any_skip_relocation, big_sur:      "96cada862d795baf29e21b10735b373117c4c0fa8058cd48f31b9dbe24e954bf"
-    sha256 cellar: :any_skip_relocation, catalina:     "fb2bb9eff6d9c7e20e6c86cd8279772d9d2be7d4969eb93bd8442ffac4a57663"
-    sha256 cellar: :any_skip_relocation, mojave:       "7b2e9de3bed6b681c2b2cb21b784841f5153c55085579fb0598e0c939a033a36"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "a6bced791e9b3429d6cc5cac6848ced5c83f397997d2ade7d8820ba2def863ab"
+    sha256 cellar: :any_skip_relocation, big_sur:      "460b0ff1c31b440347c8fce3afeeb0c8de5d5cda9db011b947bf872020fdb85c"
+    sha256 cellar: :any_skip_relocation, catalina:     "4e626479ab425dfdc1f1dec05c1b46b82b14bf7aaf96bad5bf234b87562d8ed3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "7fc1aac4fbba759534908d4f7810d920e5df118f8d02e74595011cf64c762f2b"
   end
 
   depends_on "rust" => :build
