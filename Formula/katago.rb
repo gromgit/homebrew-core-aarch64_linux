@@ -11,10 +11,12 @@ class Katago < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "b0d8098bff82d54688f0a8ee1737f1c47e9386ed14fe4e81e57d2cc54be78da5"
-    sha256 cellar: :any,                 big_sur:       "2ac6080f0d70def750f21e312a0bb2d7c04d3d610b18d556be65743448cdc244"
-    sha256 cellar: :any,                 catalina:      "5432c54db74beecb6ecffca6fe15d76d2d6fe357ebabc024144aaaa2d10e5818"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "29de134f9ba84efc70589b1a1c93571ebc5b1ef3b9c963f7fbc0b784d889537e"
+    sha256 cellar: :any,                 arm64_monterey: "9f9bb858293b8c8d0582b19cd271ed9156cf4593e592355d274194ae515c2d03"
+    sha256 cellar: :any,                 arm64_big_sur:  "b0d8098bff82d54688f0a8ee1737f1c47e9386ed14fe4e81e57d2cc54be78da5"
+    sha256 cellar: :any,                 monterey:       "9b7a51623e9313186c883e52da686d4608ecc8337132b0669b3df55982e881b4"
+    sha256 cellar: :any,                 big_sur:        "2ac6080f0d70def750f21e312a0bb2d7c04d3d610b18d556be65743448cdc244"
+    sha256 cellar: :any,                 catalina:       "5432c54db74beecb6ecffca6fe15d76d2d6fe357ebabc024144aaaa2d10e5818"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "29de134f9ba84efc70589b1a1c93571ebc5b1ef3b9c963f7fbc0b784d889537e"
   end
 
   depends_on "cmake" => :build
