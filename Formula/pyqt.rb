@@ -6,10 +6,12 @@ class Pyqt < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "8596b3e51d9d7c34f0b7808866e9a9a4f24d39f446da3277b833c29dcc271fcc"
-    sha256 cellar: :any, big_sur:       "22d736f182cd8c634cc7a54df46d85ddfd6c539105b79feec69fd1804ed78e63"
-    sha256 cellar: :any, catalina:      "b5d8b96aead59e1f9c7905d6a5841a6da1fd5d4b6b923c8598a9f65f72136715"
-    sha256 cellar: :any, mojave:        "679c7ed82d6a766d5adf794dedf19b499234431629003f45ff265d5f4ac41a6f"
+    sha256 cellar: :any, arm64_monterey: "6a6d75369b0cb8fe66474e7f8de0671963eb1e84209a5aec979448d4a2d677ef"
+    sha256 cellar: :any, arm64_big_sur:  "8596b3e51d9d7c34f0b7808866e9a9a4f24d39f446da3277b833c29dcc271fcc"
+    sha256 cellar: :any, monterey:       "fa0f0e9dbd2cf86aebb00d68c707b761caaf822a54a6116dc514cd120d795ce9"
+    sha256 cellar: :any, big_sur:        "22d736f182cd8c634cc7a54df46d85ddfd6c539105b79feec69fd1804ed78e63"
+    sha256 cellar: :any, catalina:       "b5d8b96aead59e1f9c7905d6a5841a6da1fd5d4b6b923c8598a9f65f72136715"
+    sha256 cellar: :any, mojave:         "679c7ed82d6a766d5adf794dedf19b499234431629003f45ff265d5f4ac41a6f"
   end
 
   depends_on "pyqt-builder" => :build
