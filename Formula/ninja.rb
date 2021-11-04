@@ -13,10 +13,12 @@ class Ninja < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c2dc001768f9e52e1f5dc30c97e8c18e3b9711075ea68890a74adb4b4a5f2551"
-    sha256 cellar: :any_skip_relocation, big_sur:       "b3e0b14cffa2d227c0b4140c1a3742a2a4e7e3966a429e1d253b0e29acfb6293"
-    sha256 cellar: :any_skip_relocation, catalina:      "11c2a3cf1cd415a81ff7206f48b77dbe851b593bd163979dfdcb11266d24307a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f3837361ee7a7d2646a84db1aee70fff51f957c573e0c7a61b04a91f1ce1ae24"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8efac5a9c8b7028f64f5a092eb029ff40887b9895fe4235e3fb8bade6a24cada"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c2dc001768f9e52e1f5dc30c97e8c18e3b9711075ea68890a74adb4b4a5f2551"
+    sha256 cellar: :any_skip_relocation, monterey:       "7a28d090cbec60072c3df5c35be0fa45761d18ce06567120951aa0ded80ff72d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b3e0b14cffa2d227c0b4140c1a3742a2a4e7e3966a429e1d253b0e29acfb6293"
+    sha256 cellar: :any_skip_relocation, catalina:       "11c2a3cf1cd415a81ff7206f48b77dbe851b593bd163979dfdcb11266d24307a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f3837361ee7a7d2646a84db1aee70fff51f957c573e0c7a61b04a91f1ce1ae24"
   end
 
   # Ninja only needs Python for some non-core functionality.
