@@ -8,11 +8,9 @@ class Mas < Formula
   head "https://github.com/mas-cli/mas.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e3cf07ace9600aaa0ffc10c23bb9990505d1966560ced4bac988f77006421aba"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2826df27bf71c4a1ddde0cbab10b61722d8e288ad05857d7ee25bd7bd36c83a2"
-    sha256 cellar: :any_skip_relocation, monterey:       "00cc26f6008ec18abd114cc4867000c531cbce01230d926873a461da9dd65347"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8b0b015fb1369189534180966db1213bcb46957a2d971ba47d4ac539ac219d4d"
-    sha256 cellar: :any_skip_relocation, catalina:       "a803419d974bae91e6a17c29268aae5733351fcac14f1154c8b30e5966d5e4d5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "446af97db6bcb0f44d61e7486d7c74d14325002ff9918dba7a7db3045bf8b07c"
+    sha256 cellar: :any_skip_relocation, big_sur:       "18fd65b45ff112ca5c80a31202688617a22dec56b28bbb93cf4bdb6ed2d73d56"
+    sha256 cellar: :any_skip_relocation, catalina:      "29d2d552d09ef893c3560d94a01c2985bb53b2e9499400987ad76c9b50b9f0f9"
   end
 
   depends_on :macos
