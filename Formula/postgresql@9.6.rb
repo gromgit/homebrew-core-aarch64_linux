@@ -4,6 +4,7 @@ class PostgresqlAT96 < Formula
   url "https://ftp.postgresql.org/pub/source/v9.6.24/postgresql-9.6.24.tar.bz2"
   sha256 "aeb7a196be3ebed1a7476ef565f39722187c108dd47da7489be9c4fcae982ace"
   license "PostgreSQL"
+  revision 1
 
   bottle do
     sha256 arm64_monterey: "b4c178cade19e673d8cea62c21d42003372f43f36393c717217918386e9f8ecb"
@@ -17,7 +18,7 @@ class PostgresqlAT96 < Formula
   keg_only :versioned_formula
 
   # https://www.postgresql.org/support/versioning/
-  deprecate! date: "2021-11-11", because: :unsupported
+  disable! date: "2021-11-11", because: :unsupported
 
   depends_on "openssl@1.1"
   depends_on "readline"
