@@ -10,10 +10,9 @@ class QtLibiodbc < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "f130372472f56567dfdce7bf74a29a40ae2ad7a5b59ac608b4b49173471f0ced"
-    sha256 cellar: :any, big_sur:       "24d26fe07536865621efe368c9e097463c67554dba32ddd267de05fdddea68a1"
-    sha256 cellar: :any, catalina:      "3ad712614a012cb7a7348366aef99e7b60cb0469e7beb4a7c0eb4abb8318ee73"
-    sha256 cellar: :any, mojave:        "cf397cf602e9d9a8e1d801c99008e7da2141ddbff9e70afd21db88688348cd83"
+    sha256 cellar: :any, arm64_big_sur: "90ace75ce98f53d6f3ba219b3aafc795627085cc3bba5c7d17ba6ab9d640cd7e"
+    sha256 cellar: :any, big_sur:       "dbf03e92421cee1972143c5a4877366076c5fa911326034457ea26f7323f61f1"
+    sha256 cellar: :any, catalina:      "852667c4234305a7469bfff930b514f89ada8ca6272ae8bcdd8b075876f656ce"
   end
 
   depends_on "cmake" => [:build, :test]
