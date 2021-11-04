@@ -11,13 +11,10 @@ class LibgpgError < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "52651d0013588855c79008c9f643490ccfbe6bb19f424f5e2bf7b6d924e382cd"
-    sha256 arm64_big_sur:  "70e6813ed4afc576346a5fb6aa2670f0004bcc67c63b19bc4d83c9d88451ba0a"
-    sha256 monterey:       "620a34647a3c5bb70427b846792674187a39f58e18688cf29d88cf48bacd28bb"
-    sha256 big_sur:        "6fa4b76fb160c8c75d4d1f932c3c920902a97474741397def5d4000201e85436"
-    sha256 catalina:       "b9b74abe24d72b7ffecc89aba01d370d5f60d232af1c4bbeebe4a8fd3f54b907"
-    sha256 mojave:         "1708cb4a9d2a4ac4e49bc37d9b7bbd259e1c5cfb1ffeb070bc956058e3081f47"
-    sha256 x86_64_linux:   "f81788fbebc232e9d57e82ba29dc9e0387be0190f2e9e1fad802ef97b24b5358"
+    sha256 arm64_big_sur: "74ee5137d12831d2264ff4fd919e2f0421ae82554874022a7d347f9353517a75"
+    sha256 big_sur:       "14e9943f082e960a86acb6098f6f327a3bbdb3f24459a883fb4bc51eeaf1cd98"
+    sha256 catalina:      "1ba97571b790787c33916b0a0592905c6426bc84fb6b199c0198bad84e873b91"
+    sha256 x86_64_linux:  "d6ef6b7739695c8058ec65862519f108744359c6e981f8dd218cd5cfaf33a690"
   end
 
   def install
