@@ -10,10 +10,9 @@ class QtUnixodbc < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "9628bd781357995e45f1ecee60445910ea67209d71f196cd42c1b6fb4e4a25c1"
-    sha256 cellar: :any, big_sur:       "bd435d752c6a28d6acb67c91e8beb104f68154f77697a6899756e59485c36391"
-    sha256 cellar: :any, catalina:      "245f37941adc3d7fc83fc547cb51892a2e12aa11c4d999c6b56d22119da8fe8f"
-    sha256 cellar: :any, mojave:        "7b4ce4b0cfe55542594549e4dde71d598a798769508b70ad81acc9a0e7fa5144"
+    sha256 cellar: :any, arm64_big_sur: "b14a7d8e84c41998d5779766fa288a818d8c760ecde3cd3dcaafe2200ca361b8"
+    sha256 cellar: :any, big_sur:       "c7a7e36b0751ab8e70c15f6e9544cb6046501c6983d3d521eeaf857de495069f"
+    sha256 cellar: :any, catalina:      "a327169ede33449d5dd72f8491da227a8466771dff0209f3222c343af62f6ad7"
   end
 
   depends_on "cmake" => [:build, :test]
