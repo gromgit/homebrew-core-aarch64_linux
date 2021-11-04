@@ -9,9 +9,11 @@ class TrezorAgent < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "649504c1157a1d26ab9a62498558c69c68660a4c0d0aee91d9f31df05f050a89"
-    sha256 cellar: :any, big_sur:       "6490433e0dca638943777905fd23a0cd4ea450e2b2f4c2bf9deca0fd48b85f7a"
-    sha256 cellar: :any, catalina:      "480b6bad50684dc8e8786aeafd42720a0b335a39c0f9745f772cf3cb8b585df4"
+    sha256 cellar: :any, arm64_monterey: "aec7613e0e5550c77c53b7f361ceb2a174fded1bf4a9f22ded7dd9ad3617ad22"
+    sha256 cellar: :any, arm64_big_sur:  "649504c1157a1d26ab9a62498558c69c68660a4c0d0aee91d9f31df05f050a89"
+    sha256 cellar: :any, monterey:       "826c736a274a694260f0c5acde787b79ba82c9871a9d809a047fe3861ab317dd"
+    sha256 cellar: :any, big_sur:        "6490433e0dca638943777905fd23a0cd4ea450e2b2f4c2bf9deca0fd48b85f7a"
+    sha256 cellar: :any, catalina:       "480b6bad50684dc8e8786aeafd42720a0b335a39c0f9745f772cf3cb8b585df4"
   end
 
   depends_on "libusb"
