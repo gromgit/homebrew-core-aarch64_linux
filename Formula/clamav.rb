@@ -13,10 +13,12 @@ class Clamav < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "0f48e171c14771e049e9217308fafc1066d481c05bc730d94d34d540a10f4b13"
-    sha256 big_sur:       "53f8691e3afa31188f1e237576e6c11b74f9fd220c7c80e0d8cadb72c0d1c609"
-    sha256 catalina:      "ea7fe519230ed6e685833979038891bbe23e7e0574ec0afb0da284ded05a0f8a"
-    sha256 x86_64_linux:  "a545f4bc983f1a2992751bc62c9651fdf9ce1a930b3a446851b1f8d7122f4dad"
+    sha256 arm64_monterey: "414f077061d6ef76d11af9d4bc5380cea125ccd2f00c2479367856b587df50c9"
+    sha256 arm64_big_sur:  "0f48e171c14771e049e9217308fafc1066d481c05bc730d94d34d540a10f4b13"
+    sha256 monterey:       "03ca4a7b0e05a6f27c297e886bb633d9e7bb7b74a843851de555731ca667eeaf"
+    sha256 big_sur:        "53f8691e3afa31188f1e237576e6c11b74f9fd220c7c80e0d8cadb72c0d1c609"
+    sha256 catalina:       "ea7fe519230ed6e685833979038891bbe23e7e0574ec0afb0da284ded05a0f8a"
+    sha256 x86_64_linux:   "a545f4bc983f1a2992751bc62c9651fdf9ce1a930b3a446851b1f8d7122f4dad"
   end
 
   depends_on "cmake" => :build
