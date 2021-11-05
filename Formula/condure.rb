@@ -6,12 +6,13 @@ class Condure < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "c29560884c7a1f3924f08f7e4485aba3dde2b1305fe1a1cd6ad6d1ef3fb0ca1d"
-    sha256 cellar: :any,                 arm64_big_sur:  "bdaac9f52ee87fe0efdb4829510ccf3a0c786cd33c289961e5b4b75f8b5f7400"
-    sha256 cellar: :any,                 monterey:       "89821560bbe16b7d91bf69681779d47855840ab11376bfcb836462b294883c2f"
-    sha256 cellar: :any,                 big_sur:        "76081254666364aeb1cf4d360ba92bf33ebca8b9c2a3d34a1c3448a94efacf5c"
-    sha256 cellar: :any,                 catalina:       "04b81800979389b4e9bcda0cd0d68dbcb48c1e9f52640c243ca94309a36cf124"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1c2fd4b5ef3515f8411ff3211e8ffe4caf815b1384f87c66e27b265cbe7ba06b"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "e538eaabfae94e53c2805cdcf483f3b2679bfd73282a3b68edd60dc76e26065f"
+    sha256 cellar: :any,                 arm64_big_sur:  "3e1756bea865579f5803300783b22f0e50bb50e9000462ff21f561c2a7e15e25"
+    sha256 cellar: :any,                 monterey:       "7aa533fc9b521bd81b3c69e0a8fb709a5fe154167ffa8fb69572fd9a17efbd7e"
+    sha256 cellar: :any,                 big_sur:        "919ed30c8281ab14d8c66952ec5b29e7485541c655c43464d5a488013d2d842f"
+    sha256 cellar: :any,                 catalina:       "96d852229873b07d090f608d7ad087082c1b0653bf4d52be106edb4d7230561d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9e3c29f8c40503b76813a7e0cd89c9a9404d4c82ecb4d441f7a359f9b94eab34"
   end
 
   depends_on "pkg-config" => :build
