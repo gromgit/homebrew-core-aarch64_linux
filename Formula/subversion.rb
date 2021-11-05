@@ -17,11 +17,13 @@ class Subversion < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "34f8d1862f1480c068ff3798c8e1cd90f833b43c33d1731aca15f1d875b16834"
-    sha256 big_sur:       "cfb18266b350bbe5cf81a02d1a27c33da8df832094e366925a50ef7664aba384"
-    sha256 catalina:      "92ef7547ff26e327ac5bd0a544d850e4ca7872493747eecf2220ecf5be0a13bd"
-    sha256 mojave:        "17b0bd35f345453c1401d1c390393525bacaf9f8a767cce31c1f1cb5241e1b17"
-    sha256 x86_64_linux:  "db779f83d616e1d917f2051368babe55d426d86d8ab6ec8ea0daf2be37c7fcdc"
+    sha256 arm64_monterey: "79c95c7641d560c278633a9af80a8803b4ccbd49b5eeaa2cf1fdaad0e231c4f1"
+    sha256 arm64_big_sur:  "34f8d1862f1480c068ff3798c8e1cd90f833b43c33d1731aca15f1d875b16834"
+    sha256 monterey:       "2bacf41caf7f5a6e581eac9c2b3ebbb84dd11122e1029c1cb17d234c2735a669"
+    sha256 big_sur:        "cfb18266b350bbe5cf81a02d1a27c33da8df832094e366925a50ef7664aba384"
+    sha256 catalina:       "92ef7547ff26e327ac5bd0a544d850e4ca7872493747eecf2220ecf5be0a13bd"
+    sha256 mojave:         "17b0bd35f345453c1401d1c390393525bacaf9f8a767cce31c1f1cb5241e1b17"
+    sha256 x86_64_linux:   "db779f83d616e1d917f2051368babe55d426d86d8ab6ec8ea0daf2be37c7fcdc"
   end
 
   head do
