@@ -8,12 +8,12 @@ class Mongosh < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256                               arm64_monterey: "6b4e08c8fcec4cca588002bac497eaa595790894b0ce70c3e4706ab1a2ab3ddc"
-    sha256                               arm64_big_sur:  "6aa3681f5f8f00e6f729cf13b1f4c0441c581dd4afd04b2f83c13df8dc804fc0"
-    sha256                               monterey:       "88656f02ce2f58a421ef1d74dcccfd1f2813048fe13eeb51bcb26134e56f8d0b"
-    sha256                               big_sur:        "3b052e833a4fb465ea52ff8cb13dd0b28e5d5b4c361c31b29aff6b8fbf7d80db"
-    sha256                               catalina:       "99a8a9c20ed9576dc3bf55704ac488482227d5d43dfd4d585ed2cb15afad0996"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4a47aab9005c35cee091bd0d0e84d0fb688b469bb9a247a0944181e43db2bb37"
+    sha256                               arm64_monterey: "91e2ff61b9bde77c69482095b6f1a8c95eec0e3b20722debb33603e9ed6dc0c1"
+    sha256                               arm64_big_sur:  "e2869abb7725902c30e9cb7ccfad32cbfb729abe8670b945b7966e4bacf83402"
+    sha256                               monterey:       "89b6268a222cfb75daf61e89e20dd2823918de622e081f0911e60b978edbee00"
+    sha256                               big_sur:        "2d5132bdf22c993f0138416c7e0cbefb36fd7a7529a88a6dc67853a63c4a1a05"
+    sha256                               catalina:       "8d2397a2da3f7b76420d336bc1dc4ed871a9852a0b99af04a03b8d884d7580ff"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5961be3fa20026ba5ebd3c2b523b7569f4fd651dcd3cfb708d2a1897b8e93a59"
   end
 
   depends_on "node@14"
