@@ -6,11 +6,10 @@ class Hadolint < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b345719e7030dad180b81669fbf7a967d984c6887b6e880f0c031b38e95e52d3"
-    sha256 cellar: :any_skip_relocation, big_sur:       "abce0685f4b3f1ead842ff06ad3558241df8774f688d47756ecd35ebcfab3269"
-    sha256 cellar: :any_skip_relocation, catalina:      "5eab02ca98f5edb9d0739b3e32a571a2ccc7ff3a1587f6ec551538920e501f63"
-    sha256 cellar: :any_skip_relocation, mojave:        "c0fa969e5b180cf5ddd5f46ddee81bf76bebe902f40e7a248ff235930b37d60f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1f3cc5ceb8966c2ee52d7ff8d5a54ab8c3a6308f0581f909fa933cf86fe83035"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5a8d46bc212a63d51b809a469064bb35456b1922c285da387af600850ae8d40a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "de2645a70e86e2e828912d98e050ebb852a66924e5052d452fd0596a4112373f"
+    sha256 cellar: :any_skip_relocation, catalina:      "4055b2d9f94222a4c8162c0b7ec1d8cf03ec385587f40d571e6446237e061994"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3dd1bfa5cb9bef03ca333213b1df26451c24b697bd6ba7c6b6a34f399416fd18"
   end
 
   depends_on "ghc" => :build
