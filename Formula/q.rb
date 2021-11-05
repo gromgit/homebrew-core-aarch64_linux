@@ -9,10 +9,12 @@ class Q < Formula
   head "https://github.com/harelba/q.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c72ca06a7c9dbe3b3eaee1b8db72811edbf7e64fbee5b694bcf2ed7e8d877d50"
-    sha256 cellar: :any_skip_relocation, big_sur:       "4511c183df36704ec7cb497b4a319409875ea2ef6068255ae2a2e0a2d7293e29"
-    sha256 cellar: :any_skip_relocation, catalina:      "4511c183df36704ec7cb497b4a319409875ea2ef6068255ae2a2e0a2d7293e29"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bed14a331133ff96b85fa37e0729ca695bd273f78ee82e792185d137edf9917a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c72ca06a7c9dbe3b3eaee1b8db72811edbf7e64fbee5b694bcf2ed7e8d877d50"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c72ca06a7c9dbe3b3eaee1b8db72811edbf7e64fbee5b694bcf2ed7e8d877d50"
+    sha256 cellar: :any_skip_relocation, monterey:       "4511c183df36704ec7cb497b4a319409875ea2ef6068255ae2a2e0a2d7293e29"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4511c183df36704ec7cb497b4a319409875ea2ef6068255ae2a2e0a2d7293e29"
+    sha256 cellar: :any_skip_relocation, catalina:       "4511c183df36704ec7cb497b4a319409875ea2ef6068255ae2a2e0a2d7293e29"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bed14a331133ff96b85fa37e0729ca695bd273f78ee82e792185d137edf9917a"
   end
 
   depends_on "ronn" => :build
