@@ -6,11 +6,12 @@ class Libxspf < Formula
   license "BSD-3-Clause"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, big_sur:     "446e41e3c0e23961a20038101bd279e90e552600eaf9363006f82ed9caf5d199"
-    sha256 cellar: :any, catalina:    "2fac98e985ea3242cbce81bbb9e5e37fba44e47204b4a53b868e01199ece71eb"
-    sha256 cellar: :any, mojave:      "76c09682c27449a52128a0aa29de091b907327f71cf320b30be5eb3b37442bcb"
-    sha256 cellar: :any, high_sierra: "ae1e960341fb08826fb30de46f3b1c075c22d9e655acb9e44067327c487328a7"
+    sha256 cellar: :any,                 arm64_monterey: "c3200ce73e78aff6e49838294213ed76c255d451fdc2a16b7afdf726a4113cc8"
+    sha256 cellar: :any,                 arm64_big_sur:  "46c96c913b55106e3d616a0cae41b628bedea1b1226f757ab69505d85a773f38"
+    sha256 cellar: :any,                 monterey:       "fbeb2b06f536534acd8e85c7cd86b0603f85e059dfb0277cf093c4aeb5875dca"
+    sha256 cellar: :any,                 big_sur:        "3bdd88ce60539e5c451fbfbb39d85719b9551965550b5b2937f409f152b08330"
+    sha256 cellar: :any,                 catalina:       "e0047524231105d369ade5acf8110d3e64f5d98f39848df201cfcdc9ded7ec39"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e901fd286da4e617543de36efef5f7e0a115d936eeb3ec01326ae92a02df29d8"
   end
 
   depends_on "cpptest" => :build
