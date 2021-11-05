@@ -65,6 +65,7 @@ class Fontconfig < Formula
     ENV["UUID_CFLAGS"] = "-I#{Formula["util-linux"].include}" if OS.linux?
     system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",
+                          "--disable-docs",
                           "--enable-static",
                           "--with-add-fonts=#{font_dirs.join(",")}",
                           "--prefix=#{prefix}",
