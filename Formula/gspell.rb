@@ -7,11 +7,10 @@ class Gspell < Formula
   revision 4
 
   bottle do
-    sha256 arm64_big_sur: "7dc4740a3245e28caa82c646b1e173336b3a3e2b88de1c87f002767d75938c72"
-    sha256 big_sur:       "7c6b8458c44372ae98e4a0fbcfdfb005e03b011b9ef9f115a91389ec42190b79"
-    sha256 catalina:      "06231d114243cac1944fb29186884abc114b246c3599bb343778cb970d65f246"
-    sha256 mojave:        "68fdf9d35b70a010ad248495e62198a2632bb9b3494455afb285f86c4c49e5d0"
-    sha256 x86_64_linux:  "9186b4ab46a48c6e69989972d2a478fe8db7e196a6aab94f607388ab82dcfcf9"
+    sha256 arm64_big_sur: "b416223cc5ef39e22d9fd2bd38249950887c939d5c8289736ddd83ecde4db36a"
+    sha256 big_sur:       "fcff5951ae4c5e194de05634549b0a8204b32cd7bd68f6c962e5e0916eed7879"
+    sha256 catalina:      "4c226894cf20ba3dfcd3c50ec596f5f7dce6fa6383b1f6b3b78becc4753381d3"
+    sha256 x86_64_linux:  "281e242800bb9f73d4c1889680a329da75e9640131ca58743874f9d2e1d7c354"
   end
 
   depends_on "autoconf" => :build
