@@ -1,8 +1,8 @@
 class Mmark < Formula
   desc "Powerful markdown processor in Go geared towards the IETF"
   homepage "https://mmark.miek.nl/"
-  url "https://github.com/mmarkdown/mmark/archive/v2.2.16.tar.gz"
-  sha256 "268b3da7ce77815f26785dbb95c244231452a9ca5de48bc0a125bfcc0591aee0"
+  url "https://github.com/mmarkdown/mmark/archive/v2.2.17.tar.gz"
+  sha256 "e40ef682b3cdc7a479cfafad3e70261194183eb302c072485e0d656ea3c2963b"
   license "BSD-2-Clause"
 
   bottle do
@@ -18,14 +18,13 @@ class Mmark < Formula
   depends_on "go" => :build
 
   resource "test" do
-    url "https://raw.githubusercontent.com/mmarkdown/mmark/v2.2.10/rfc/2100.md"
-    sha256 "0b5383917a0fbc0d2a4ef009d6ccd787444ce2e80c1ea06088cb96269ecf11f0"
+    url "https://raw.githubusercontent.com/mmarkdown/mmark/v2.2.17/rfc/2100.md"
+    sha256 "0e12576b4506addc5aa9589b459bcc02ed92b936ff58f87129385d661b400c41"
   end
 
   def install
-    system "go", "build", "-ldflags", "-s -w", "-trimpath", "-o", bin/"mmark"
+    system "go", "build", *std_go_args(ldflags: "-s -w")
     man1.install "mmark.1"
-    prefix.install_metafiles
   end
 
   test do
