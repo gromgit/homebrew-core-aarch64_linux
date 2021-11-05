@@ -7,11 +7,13 @@ class Log4cxx < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "56c60d9be7f933a782852a55dd1feb6975a0063a73b14670d27a6c375ece7e49"
-    sha256 cellar: :any,                 big_sur:       "6d1b6f87ea1ffcc38069798e5150ad6523e7d64d2682b1c4afc2e4bd1c5e9294"
-    sha256 cellar: :any,                 catalina:      "8f33426b24d1d711a72ce4ee1328a5c73607d5f1755c8055361aa9f74dbbebae"
-    sha256 cellar: :any,                 mojave:        "14367506f0070f9142b47ca2de95101440ff0b9a6a1ea00dc6095d338c0f2b04"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e640dce6a616b1e0f083069b51f77da795916fde0e17da4a9d1a5a16bbb652df"
+    sha256 cellar: :any,                 arm64_monterey: "92098a38ef9a8734f011e3c5fa207fbd8ec28c4523c40e64d9aabd17f40fa46c"
+    sha256 cellar: :any,                 arm64_big_sur:  "56c60d9be7f933a782852a55dd1feb6975a0063a73b14670d27a6c375ece7e49"
+    sha256 cellar: :any,                 monterey:       "bf15c6f2d2267be76d58096db985e46c8a3af6b3c3e77b1c2fd1750661b27cf4"
+    sha256 cellar: :any,                 big_sur:        "6d1b6f87ea1ffcc38069798e5150ad6523e7d64d2682b1c4afc2e4bd1c5e9294"
+    sha256 cellar: :any,                 catalina:       "8f33426b24d1d711a72ce4ee1328a5c73607d5f1755c8055361aa9f74dbbebae"
+    sha256 cellar: :any,                 mojave:         "14367506f0070f9142b47ca2de95101440ff0b9a6a1ea00dc6095d338c0f2b04"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e640dce6a616b1e0f083069b51f77da795916fde0e17da4a9d1a5a16bbb652df"
   end
 
   depends_on "cmake" => :build
