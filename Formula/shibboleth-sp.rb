@@ -12,10 +12,12 @@ class ShibbolethSp < Formula
 
   bottle do
     rebuild 1
-    sha256 arm64_big_sur: "9419b75809d2dbbfd2bae48ada293865da370f65da27c9dd4c774cc41b54da08"
-    sha256 big_sur:       "bf144be06888e2b528dcb08c5cbc28fbc0b75fe3748da19d4707f00ecef3193a"
-    sha256 catalina:      "99ff6cb2607d142870f44cbcacdfdf88ed57d15e89e8696467bcbd3129e3328a"
-    sha256 mojave:        "55a51d5773d4a186687d905d58d44be92d6fa2ea1e5bbb8598535cc4f8772493"
+    sha256 arm64_monterey: "24226d9df8ff8cdcc52e79a7c223c44c216d78b0c3d30130b97affb014a1d205"
+    sha256 arm64_big_sur:  "9419b75809d2dbbfd2bae48ada293865da370f65da27c9dd4c774cc41b54da08"
+    sha256 monterey:       "38cbd93687f8dcc287dcb6da410b3383c59481369c91ac6eedf7329fa13342e3"
+    sha256 big_sur:        "bf144be06888e2b528dcb08c5cbc28fbc0b75fe3748da19d4707f00ecef3193a"
+    sha256 catalina:       "99ff6cb2607d142870f44cbcacdfdf88ed57d15e89e8696467bcbd3129e3328a"
+    sha256 mojave:         "55a51d5773d4a186687d905d58d44be92d6fa2ea1e5bbb8598535cc4f8772493"
   end
 
   depends_on "apr" => :build
