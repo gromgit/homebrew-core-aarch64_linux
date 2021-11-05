@@ -13,6 +13,7 @@ class PhpAT73 < Formula
   end
 
   bottle do
+    sha256 monterey:     "a803ef87511fd903b8883baf4ea62a81cb6f4cc284831e4810750b631b25e723"
     sha256 big_sur:      "530fcbf0028afe1e191314a19d8c03c341ac50a0ce11354d5ecc5bb3d212bb1e"
     sha256 catalina:     "c8842af6262e0b776c4c50f59892ea847dc41476226ce5c8c149d1aaf156e365"
     sha256 x86_64_linux: "45b9d971ef07e73c83b9f9acf7873f3b13b1c5411c321fa0090864d514590689"
