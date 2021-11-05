@@ -8,11 +8,13 @@ class Pdfgrep < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any,                 arm64_big_sur: "b4bf22a5e3b55fe230c32a72d6d58ff8ba432b976dd74c189999fe0308d49f19"
-    sha256 cellar: :any,                 big_sur:       "626dcfe4a770d5fee8498dcc58aaa5152a4532c06a707b37d81076e6cd4b9ced"
-    sha256 cellar: :any,                 catalina:      "536c672e1e8cad042b151f9d82143b71019aedfea23ab3d34df1c7844fa9e568"
-    sha256 cellar: :any,                 mojave:        "f65e1a759163e3f50429241577b54fefc1b0640369129820979301156883e86d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ca757c071733afdc7b4b791d2fc81a87f48e599cb82e72dec3ea64dd0b458f27"
+    sha256 cellar: :any,                 arm64_monterey: "adfcd59692904387134b794317ee336369046ff154611b58b7f2a766ed84e406"
+    sha256 cellar: :any,                 arm64_big_sur:  "b4bf22a5e3b55fe230c32a72d6d58ff8ba432b976dd74c189999fe0308d49f19"
+    sha256 cellar: :any,                 monterey:       "cc197e6420090feed9a97f021642994beabb47feff2f87a6c172bdf53583983b"
+    sha256 cellar: :any,                 big_sur:        "626dcfe4a770d5fee8498dcc58aaa5152a4532c06a707b37d81076e6cd4b9ced"
+    sha256 cellar: :any,                 catalina:       "536c672e1e8cad042b151f9d82143b71019aedfea23ab3d34df1c7844fa9e568"
+    sha256 cellar: :any,                 mojave:         "f65e1a759163e3f50429241577b54fefc1b0640369129820979301156883e86d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ca757c071733afdc7b4b791d2fc81a87f48e599cb82e72dec3ea64dd0b458f27"
   end
 
   head do
