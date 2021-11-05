@@ -7,9 +7,11 @@ class Tendermint < Formula
   head "https://github.com/tendermint/tendermint.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "c446caa05d5232396ea0efa1fc0181584c318c9076e83d9d6da67675f300780b"
-    sha256 cellar: :any_skip_relocation, big_sur:       "bd49b0bd382275d36982aae65c8b30463666ef1d83456b27538e50be803ef751"
-    sha256 cellar: :any_skip_relocation, catalina:      "bd49b0bd382275d36982aae65c8b30463666ef1d83456b27538e50be803ef751"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c446caa05d5232396ea0efa1fc0181584c318c9076e83d9d6da67675f300780b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c446caa05d5232396ea0efa1fc0181584c318c9076e83d9d6da67675f300780b"
+    sha256 cellar: :any_skip_relocation, monterey:       "bd49b0bd382275d36982aae65c8b30463666ef1d83456b27538e50be803ef751"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bd49b0bd382275d36982aae65c8b30463666ef1d83456b27538e50be803ef751"
+    sha256 cellar: :any_skip_relocation, catalina:       "bd49b0bd382275d36982aae65c8b30463666ef1d83456b27538e50be803ef751"
   end
 
   depends_on "go" => :build
