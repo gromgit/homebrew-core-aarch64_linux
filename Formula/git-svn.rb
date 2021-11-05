@@ -16,7 +16,6 @@ class GitSvn < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "2e59871e0a1767fb6ed63478ce9215d2e125d5d4c28271fee6610417a1a0b96f"
     sha256 cellar: :any_skip_relocation, mojave:        "2e59871e0a1767fb6ed63478ce9215d2e125d5d4c28271fee6610417a1a0b96f"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "7f60df3b6a37a84b205d5c25686dcf9cdbca68d3d59bf6e10e9f67713a16b168"
-    sha256 cellar: :any_skip_relocation, all:           "a5b0ba61fc7f7184dd47546c2258e98ad5026e2ae0c019e7a64cbef1b16092d0"
   end
 
   depends_on "git"
