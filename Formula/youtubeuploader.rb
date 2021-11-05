@@ -6,6 +6,13 @@ class Youtubeuploader < Formula
   license "Apache-2.0"
   head "https://github.com/porjo/youtubeuploader.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f9c2a99f7217b0f608839664fe211648eddba109a8abd6a856996da21d57e4a0"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d91b78ca4c123e211e019c6fb1e2375bb4da1ae8c61a94758c2ff2b1f8e20acf"
+    sha256 cellar: :any_skip_relocation, catalina:      "ee0a39a9643a8d5061fa8335c88b702ee030b60a97b86ea154adc2b455b437f6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cb64847bd8bc39c75aa6d867e8f96c3679c48fab05970b30b43c1e230dcabd75"
+  end
+
   depends_on "go" => :build
 
   def install
