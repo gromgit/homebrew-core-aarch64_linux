@@ -11,11 +11,7 @@ class Jenkins < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "54ff174b8a8ae077680517132e61dec833542c359597baf238a0bbdb5081c66a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "54ff174b8a8ae077680517132e61dec833542c359597baf238a0bbdb5081c66a"
-    sha256 cellar: :any_skip_relocation, catalina:      "54ff174b8a8ae077680517132e61dec833542c359597baf238a0bbdb5081c66a"
-    sha256 cellar: :any_skip_relocation, mojave:        "54ff174b8a8ae077680517132e61dec833542c359597baf238a0bbdb5081c66a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "92cb94ca4b56f7afa43494edbc85acc4360b4b9c487e43bf33b5788697cc606b"
+    sha256 cellar: :any_skip_relocation, all: "9d2a563b1d8874961f6d376208434628382599fa83e3d1e38c63ab3c4f4bba3f"
   end
 
   head do
