@@ -11,7 +11,7 @@ class JenkinsLts < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "dc091c7b1c442ad9d3bda5d365462cc784ede8214bd0f6dda3e781dd3937ac1a"
+    sha256 cellar: :any_skip_relocation, all: "399b5e617e172dd7458617a99838870233a53526350d5bb5399d8b0c7c6f02b0"
   end
 
   depends_on "openjdk@11"
