@@ -11,11 +11,13 @@ class Fig2dev < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "f509f9b6e4a049e2fd051ad5424370466f104f861ae7261b1f538a0f17d09777"
-    sha256 big_sur:       "0f4c7bdbd714559346769c1cb7892bd4fbde2538ce1a1b271d9292b6d7022e2b"
-    sha256 catalina:      "4f25bec7d8a6a3e4e5ace8187edbce236df1617c1b6d47d0542cff6743514864"
-    sha256 mojave:        "5c5cc504f521cc5a02c51bab5e5ea6c83af20e6f9365edf0ad0eda8f2e103470"
-    sha256 x86_64_linux:  "813f3f4d2c12e8af4ec28523efc073ed8ab22ffb57b311fc70fd65202df52c80"
+    sha256 arm64_monterey: "c84a23c86c6cc96b93287deb63dfc2467d7f1fcd5c50b1bb6c89b917dac8e2af"
+    sha256 arm64_big_sur:  "f509f9b6e4a049e2fd051ad5424370466f104f861ae7261b1f538a0f17d09777"
+    sha256 monterey:       "aca36aa485904916b28bb013971ee51c0610f1cea286171b0ea1144174350f04"
+    sha256 big_sur:        "0f4c7bdbd714559346769c1cb7892bd4fbde2538ce1a1b271d9292b6d7022e2b"
+    sha256 catalina:       "4f25bec7d8a6a3e4e5ace8187edbce236df1617c1b6d47d0542cff6743514864"
+    sha256 mojave:         "5c5cc504f521cc5a02c51bab5e5ea6c83af20e6f9365edf0ad0eda8f2e103470"
+    sha256 x86_64_linux:   "813f3f4d2c12e8af4ec28523efc073ed8ab22ffb57b311fc70fd65202df52c80"
   end
 
   depends_on "ghostscript"
