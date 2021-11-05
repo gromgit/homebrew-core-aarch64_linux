@@ -14,12 +14,10 @@ class Podman < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d4984651d23c23952d64afdae629b15c92e1f48c2b9dda7a3a0f04de964d9f68"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8c870ada3226fbce07c85c61e034cf5c4de95982c145cb454eb1ef3ef5689cce"
-    sha256 cellar: :any_skip_relocation, monterey:       "5c675998810646c572bf5fc5c587a6ecdffb791c4508010a9a17956cb60ff41d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "634485b9eb2434314f8e4a16541e32097c38609db6f20317149a7981dcc30b11"
-    sha256 cellar: :any_skip_relocation, catalina:       "948dbdb483e570ee58e2c85ad9738d00c6aa95ddceea3d7d44bb7888e8fcba79"
-    sha256 cellar: :any_skip_relocation, mojave:         "a0e6ca9d6ddced8a61fb48bfca552e1617bc32eea0238b941f02266c317953d4"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f0b683729b4567a5b610c1feddbe2c30b958c3729ec4d4185fb73c6c7cfd2c91"
+    sha256 cellar: :any_skip_relocation, big_sur:       "f70e26a2975741a29c22161559dd176fec1d96b085a76d92ff73756a47be6cb2"
+    sha256 cellar: :any_skip_relocation, catalina:      "a9a7c3f81a6cd794aec724a22c052680e923b88ddc57a746cc0c341fad6ea7d6"
   end
 
   head do
