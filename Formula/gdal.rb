@@ -11,10 +11,10 @@ class Gdal < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "656b46860d8c717398b7ffb4c12dd276bbd85c5daab0f80d05fd92e289f0e85e"
-    sha256 big_sur:       "ceef0fc6a7dff70bf56cde922f84d1ee2009e8c3c3aa3fc31cec5822fd59db5b"
-    sha256 catalina:      "993abd7544bde64601c1ff19ddce422746f386030281a7c65e80cf5618215e34"
-    sha256 x86_64_linux:  "f5576945e9ad1ea26baa9092f59ad6b0bdfc3d48a8316d4a05e1fa5161f56122"
+    sha256 arm64_big_sur: "cf24ff841159ef1e4a4dbcd1c64a543c7c806333fd7ff2ecf9122c1aff2f1560"
+    sha256 big_sur:       "1ff27b4aa2b0d3c7f21921703b95fc56d10c111ad824a8a348f8f9571ab1e7a8"
+    sha256 catalina:      "818ac10ec3a4785e92e09f527aad6c8cf69c14684275d84bfdfc4f53ab77d061"
+    sha256 x86_64_linux:  "2b6aeb16453955940fdfae76dd446bcdcd1a9610af98504077569bcaccb8bd9d"
   end
 
   head do
