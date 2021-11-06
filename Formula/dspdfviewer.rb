@@ -8,10 +8,11 @@ class Dspdfviewer < Formula
   head "https://github.com/dannyedel/dspdfviewer.git"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "906f49e56185764e6bd001cdf165d34a288449d2c7da470d7be578b63d736f59"
-    sha256 cellar: :any,                 big_sur:       "af329c28bb3455247fdd2d3048d75fbbd0b685d97251c4c80acad5c3e1c30404"
-    sha256 cellar: :any,                 catalina:      "afeebf5d866baa9e1c57005c44a359a5b5f409259a296765b4b9234eb80f96fa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f5ea0adb9cfd4fa87f6c653bd8fc6c9b29820a8971e8e18f56a121d2e99e0501"
+    sha256 cellar: :any,                 arm64_monterey: "d3d3383fcb214390beda2e696d2b01ffe97705352ac7486aeae9398f829fe832"
+    sha256 cellar: :any,                 arm64_big_sur:  "906f49e56185764e6bd001cdf165d34a288449d2c7da470d7be578b63d736f59"
+    sha256 cellar: :any,                 big_sur:        "af329c28bb3455247fdd2d3048d75fbbd0b685d97251c4c80acad5c3e1c30404"
+    sha256 cellar: :any,                 catalina:       "afeebf5d866baa9e1c57005c44a359a5b5f409259a296765b4b9234eb80f96fa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f5ea0adb9cfd4fa87f6c653bd8fc6c9b29820a8971e8e18f56a121d2e99e0501"
   end
 
   depends_on "cmake" => :build
