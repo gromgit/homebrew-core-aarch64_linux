@@ -13,6 +13,7 @@ class Hsd < Formula
   end
 
   bottle do
+    sha256 monterey: "3ce9eeb620102eee12e5153ccb3dc4d53d12cb3b9701e1db7a7b1de52c11ba19"
     sha256 big_sur:  "edd5c51a0b30b879e7be8feb6d5a30614249d7b1313743ff6281b3f5e9ea5946"
     sha256 catalina: "32607b1d4de029dfe5be50508b30aca83ee087a5e43fad5e275c4b753ba28c57"
   end
