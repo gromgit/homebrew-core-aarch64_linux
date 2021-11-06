@@ -7,11 +7,12 @@ class Icemon < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "f310aad5e98a7cf3c6fca8a1ddcda9af425cb7b442512b5c540619de0312cb60"
-    sha256 cellar: :any,                 big_sur:       "8db3861063efc1a5e53703b41993328968aa637ae4fed60112ac8ff4e364a422"
-    sha256 cellar: :any,                 catalina:      "6a80f6cbc858fbc942c5845492ca6bfefdf2dd4f0746f97e28704301585f19aa"
-    sha256 cellar: :any,                 mojave:        "34f8c691f2c2d23fc65bc84429f0282c96d47f88036ada6d6f44761287a88441"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8cf76a2e17950f37348b0f29c0f0ac228fa483c432c16240edb5b70b3002dc6d"
+    sha256 cellar: :any,                 arm64_monterey: "3bdc990f8c84ac25b6f68859b54423b26425d08d40b0b91d2dc034b248e8a73a"
+    sha256 cellar: :any,                 arm64_big_sur:  "f310aad5e98a7cf3c6fca8a1ddcda9af425cb7b442512b5c540619de0312cb60"
+    sha256 cellar: :any,                 big_sur:        "8db3861063efc1a5e53703b41993328968aa637ae4fed60112ac8ff4e364a422"
+    sha256 cellar: :any,                 catalina:       "6a80f6cbc858fbc942c5845492ca6bfefdf2dd4f0746f97e28704301585f19aa"
+    sha256 cellar: :any,                 mojave:         "34f8c691f2c2d23fc65bc84429f0282c96d47f88036ada6d6f44761287a88441"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8cf76a2e17950f37348b0f29c0f0ac228fa483c432c16240edb5b70b3002dc6d"
   end
 
   depends_on "cmake" => :build
