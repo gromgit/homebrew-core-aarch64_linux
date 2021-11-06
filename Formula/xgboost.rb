@@ -8,6 +8,7 @@ class Xgboost < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "3f1e8f289733cf64f8adb7a92db18709680659e0a46f42d9f224a56237d5e5ac"
+    sha256 cellar: :any,                 monterey:      "fdae6f196d251432a21e8fb9358db09919cd0252b0c1d06aa92f40ccea509b1f"
     sha256 cellar: :any,                 big_sur:       "fa3a0b06fda339b4df1d9c42d4cb0e2b0645670d08a32a071edd55d512883b96"
     sha256 cellar: :any,                 catalina:      "33ddba64fd315c61d60dabd6eb520b26ea7692e8c50ef361ca150f7f7e26cad4"
     sha256 cellar: :any,                 mojave:        "0e0082761fbb1dada05c3498bae6e329c60b1ad6a4d1c288fa3e3f805412e456"
