@@ -7,13 +7,12 @@ class Loki < Formula
   head "https://github.com/grafana/loki.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "47218a12530e06bb4a3e4d536cc346d21147a695184aebba50fed4d965c23d1f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "29e269c258de9b5e0f3024db55c8cca0023a372a3f4372adbb82f6d83fc37af1"
-    sha256 cellar: :any_skip_relocation, monterey:       "8f5b60ca6389cb2de6ffec269e2d8800050569ceba9b98eb3f781ff093582a4b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8c9c206eaaedb9a6d40f0d0cba0d21118ea3f35bd592b6cfc8d7f7d2862ba49b"
-    sha256 cellar: :any_skip_relocation, catalina:       "e10eda7df50a4f13858e76389bc2d3bf62b86f35926a254266fbb618471ddc08"
-    sha256 cellar: :any_skip_relocation, mojave:         "06307778ef44db3b181461e0f42c31a95796162af5c774c7a0248848e6005fcc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8476435961971f582f3baaf20852c6ea87c4129fd06f25fb13a613443a207153"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bc975249c00e03b4258f5dfd0d067eb2066cc32ec2830a3158635b7fae5dbfa7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "efc36d3d6665a195b681e8d29fa3dafe7193d21fd61c7fbf6fdc8e4208a961f6"
+    sha256 cellar: :any_skip_relocation, monterey:       "b2ad74bd07947ff1b1d3b8c550390ab19d4049b880203d8061d0f41e8ed3615e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0b7d06f6e7b4a753930736044596570a9e94d037fe4d236845692b8540b54415"
+    sha256 cellar: :any_skip_relocation, catalina:       "978d27f479b53c15e38f2c9819afc8f5f75a5ccc20f362203ec0a3f66972a2d3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "670aac9cb89cf42f37c561ea88a47e21cbb5cb0f3bc9a77997ababc2924460d2"
   end
 
   depends_on "go" => :build
