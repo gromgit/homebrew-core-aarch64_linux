@@ -7,11 +7,12 @@ class Libheif < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any, arm64_monterey: "373e6133db16e9627f6f176e031baaf2a988598ca8711d353634aa5c11ef21cf"
-    sha256 cellar: :any, arm64_big_sur:  "d1aff6492a744b9ead267d3385e9b32d8342f0128aedc34d88ba32e0a23da32e"
-    sha256 cellar: :any, monterey:       "22e2cc8cd29654d6da8aa58b851c30b74fcd30cf440bd57f9b4bdb7b6f99cd8f"
-    sha256 cellar: :any, big_sur:        "4aaee988fadc6d0304c3dd0c4136e691c5fb273c27b1a3fe3e3d04cb5336ac7c"
-    sha256 cellar: :any, catalina:       "116f5e5f03aead804ff52f2b74606ad0cf6a78875f95bba734cdc0f4ec654cbc"
+    sha256 cellar: :any,                 arm64_monterey: "373e6133db16e9627f6f176e031baaf2a988598ca8711d353634aa5c11ef21cf"
+    sha256 cellar: :any,                 arm64_big_sur:  "d1aff6492a744b9ead267d3385e9b32d8342f0128aedc34d88ba32e0a23da32e"
+    sha256 cellar: :any,                 monterey:       "22e2cc8cd29654d6da8aa58b851c30b74fcd30cf440bd57f9b4bdb7b6f99cd8f"
+    sha256 cellar: :any,                 big_sur:        "4aaee988fadc6d0304c3dd0c4136e691c5fb273c27b1a3fe3e3d04cb5336ac7c"
+    sha256 cellar: :any,                 catalina:       "116f5e5f03aead804ff52f2b74606ad0cf6a78875f95bba734cdc0f4ec654cbc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a2f5a9392ad524b9643df078238ee3d25dbd60a9952f5e09c68d6885a3264754"
   end
 
   depends_on "pkg-config" => :build
