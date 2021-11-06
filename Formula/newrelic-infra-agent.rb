@@ -8,6 +8,7 @@ class NewrelicInfraAgent < Formula
   head "https://github.com/newrelic/infrastructure-agent.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, monterey:     "ffdb274016361a220fbc8fb21cfae1b90347c03ff7c86e128d20a6c3a0a6053b"
     sha256 cellar: :any_skip_relocation, big_sur:      "bf1f38cc2c2f73370f92c7645eb9c228dbaf5f760b700477f1c40e7de34690b7"
     sha256 cellar: :any_skip_relocation, catalina:     "966da6a25822e35c9e96e518336b3d1bb3ceb9e06c88d9456c19e2305ab45570"
     sha256 cellar: :any_skip_relocation, x86_64_linux: "93328d150756320c4ea4a9aba6c66dd773cdc1b7c63db1165918f64ca8409194"
