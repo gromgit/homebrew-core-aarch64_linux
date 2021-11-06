@@ -7,6 +7,7 @@ class Igraph < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "ffe6765971d065e88c9d58b039b10288f0fa8987136eda974de21c356f4e9b29"
+    sha256 cellar: :any,                 monterey:      "0d65c7fc460a03f4f6183ef0332d23f9aa267b9333a1732427ec607d16528a00"
     sha256 cellar: :any,                 big_sur:       "53d4b26764597f9e640a10f9f3376e42d57edd1ea028eda5462531a53a2777c3"
     sha256 cellar: :any,                 catalina:      "bf6f483a1d959cb0a47a3bdb0bdca8ad097d4fb53b7093253694b6d1f93261f1"
     sha256 cellar: :any,                 mojave:        "f0cb37d933ee52faf99446b21184f4301da5b08aee5ea6d8acfd8c15d0b10279"
