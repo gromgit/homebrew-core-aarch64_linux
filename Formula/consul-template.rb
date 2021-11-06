@@ -8,13 +8,12 @@ class ConsulTemplate < Formula
   head "https://github.com/hashicorp/consul-template.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5c74e7ea43cb2c14d1924dd9a75653c2d3ad1c9c8aeb03d6cf334ab25e10649c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1daf66b8cde3eb1483b130185eccaadd947686a830562d415dc92017f746b04a"
-    sha256 cellar: :any_skip_relocation, monterey:       "4e8db4c90c7112d869dcecf6ed952997ea170451d3a116bdd24052f7f1e72781"
-    sha256 cellar: :any_skip_relocation, big_sur:        "72d06c3eca6b73058c6fc7b35e9c275ab9a9fff8ecd0b1200520f1b711f25c74"
-    sha256 cellar: :any_skip_relocation, catalina:       "5cb5d29ad3beb7cb51e9762f1908924a7a0e8cc8b3ae6bc10d9289818721c090"
-    sha256 cellar: :any_skip_relocation, mojave:         "54d27658a88b49a16dd37995b435a6eb51d55d109e10aa584e39d91142784151"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c0834b775b96acd416a5177f9580fbfd54ff82dff79644ade93e9bde8edc608e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b69ed2c46cd1e25f25ab11616c006d93d30da6e9c4e7da7a7c3dce0d68f834c6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4b474a4a2916237ec59dc707f36c489a4eec3357ecbf3be9d8c9082309ba70c3"
+    sha256 cellar: :any_skip_relocation, monterey:       "824b80e4a9bf23cdf55eb2dcbe19152f503b63ecdf87e3046a2d81c46fd93053"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7df1b1a0c6e6143a37a79bc99e240e84bec86fd32778fea9af7c46e8db1dba46"
+    sha256 cellar: :any_skip_relocation, catalina:       "08678956dec8f5c99e090fc677eea605241d6a0e71fb6d699e664b3d7d77952f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7d38fc173ac90f35cfd01479ce75b241ff8f2abc91841b959820ba748de1fadd"
   end
 
   depends_on "go" => :build
