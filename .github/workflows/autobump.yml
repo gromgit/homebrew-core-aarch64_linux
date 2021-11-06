@@ -20,7 +20,10 @@ env:
     b3sum
     buildkit
     bundletool
+    calicoctl
     chezmoi
+    circleci
+    clair
     cliclick
     consul
     consul-template
@@ -68,6 +71,7 @@ env:
     nushell
     okteto
     pnpm
+    selene
     skaffold
     skopeo
     starship
@@ -76,6 +80,7 @@ env:
     teleport
     termshark
     terraform-ls
+    toast
     traefik
     vale
     virgil
