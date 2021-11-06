@@ -14,6 +14,7 @@ class Openimageio < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "e7a6785e5033dd03bcaea161461c1ddc2c924be7bdc87eeefd4f3663b562850b"
+    sha256 cellar: :any,                 monterey:      "081a46743a87cdb38043f03ff5b778211f83f9103176410a99214f20495aab83"
     sha256 cellar: :any,                 big_sur:       "be5d194fae37392924010b6e5afa6679d41964793444889f79de2be4dd510e02"
     sha256 cellar: :any,                 catalina:      "51057af945d413ef22522150d18ba9c3dede9f20d9920c86e1dbdc5e6f3ac6b6"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "3175d437afc73ca5df30e2fe3ab06e56b55d3bc7c8ea081ebc32d430563ac573"
