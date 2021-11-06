@@ -1,10 +1,9 @@
 class Spack < Formula
   desc "Package manager that builds multiple versions and configurations of software"
   homepage "https://spack.io"
-  url "https://github.com/spack/spack/archive/v0.16.3.tar.gz"
-  sha256 "26636a2e2cc066184f12651ac6949f978fc041990dba73934960a4c9c1ea383d"
+  url "https://github.com/spack/spack/archive/v0.17.0.tar.gz"
+  sha256 "93df99256a892ceefb153d48e2080c01d18e58e27773da2c2a469063d67cb582"
   license any_of: ["Apache-2.0", "MIT"]
-  revision 1
   head "https://github.com/spack/spack.git", branch: "develop"
 
   livecheck do
@@ -34,29 +33,12 @@ class Spack < Formula
 
   test do
     system bin/"spack", "--version"
-    assert_match "zlib", shell_output("#{bin}/spack list zlib")
-
-    # Set up configuration file and build paths
-    %w[opt modules lmod stage test source misc cfg-store].each { |dir| (testpath/dir).mkpath }
-    (testpath/"cfg-store/config.yaml").write <<~EOS
-      config:
-        install_tree: #{testpath}/opt
-        module_roots:
-          tcl: #{testpath}/modules
-          lmod: #{testpath}/lmod
-        build_stage:
-          - #{testpath}/stage
-        test_stage: #{testpath}/test
-        source_cache: #{testpath}/source
-        misc_cache: #{testpath}/misc
-    EOS
-
-    # spack install using the config file
-    system bin/"spack", "-C", testpath/"cfg-store", "install", "--no-cache", "zlib"
-
-    # Get the path to one of the compiled library files
-    zlib_prefix = shell_output("#{bin}/spack -ddd -C #{testpath}/cfg-store find --format={prefix} zlib").strip
-    zlib_dylib_file = Pathname.new "#{zlib_prefix}/lib/libz.a"
-    assert_predicate zlib_dylib_file, :exist?
+    assert_match "zlib", shell_output("#{bin}/spack info zlib")
+    on_macos do
+      assert_match "clang", shell_output("spack compiler list")
+    end
+    on_linux do
+      assert_match "gcc", shell_output("spack compiler list")
+    end
   end
 end
