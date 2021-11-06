@@ -7,13 +7,12 @@ class Toast < Formula
   head "https://github.com/stepchowfun/toast.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cfd6f72e504105e9ce168cedbe4b9bded961a8835a0bc5b4c33fbab50718c62a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cdf36f9b8abeef738ed3a584bb50fc33897ddaacf302cf6682551d70c9a1b11b"
-    sha256 cellar: :any_skip_relocation, monterey:       "e5e26456d67eb4e444827c11fd4e9719f95563b8ddc32616d6cbcfa8436ee9e1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "74a870261664364240618f3e446cd40cb677d91d5ac820b77a27d77ec51fda39"
-    sha256 cellar: :any_skip_relocation, catalina:       "42b22b5eb4f6558430bd7d52992d6cfc24d67bfdd81438c06ddf6f8ebd2d7036"
-    sha256 cellar: :any_skip_relocation, mojave:         "39515aa2829698a5534efc9b146b5a38fef405569daae5668a3e2ebd7598541e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cda3b07a243113f1286751dadfdc23c7fd99e86528cdbb3ca5d381ffa94cd7d4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "69bc7401d9c023c863d8c87dc3e38b3793bd6206c60adea81b810a72e1a175b5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7c3daf4b0825f75b7c491ec2b4945bc6269cbde31dd9b477cbbca22ef60995a5"
+    sha256 cellar: :any_skip_relocation, monterey:       "bfce8f467e7b6e98417c0bbbe36a7e72c11f9b215d374d1754ae99eca2e4cf8a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8d1084151db7080d895b58fc0025d4ec70af5134dd825b8e6a10e1066d15a65b"
+    sha256 cellar: :any_skip_relocation, catalina:       "26d84e3a8b8841b5a74f70f6eca90d79946d44b3ea9401d0d673f33e5fa9f62c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b798e6c86f66ed581cd5656ccc6136070ec131419504ea9f94c8adda4d54ab46"
   end
 
   depends_on "rust" => :build
