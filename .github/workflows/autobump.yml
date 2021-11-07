@@ -99,11 +99,11 @@ jobs:
       - name: Configure Git user
         uses: Homebrew/actions/git-user-config@master
         with:
-          username: ${{ github.event == 'schedule` && 'BrewTestBot' || github.actor }}
+          username: ${{ github.event == 'schedule' && 'BrewTestBot' || github.actor }}
 
       - name: Bump formulae
         uses: Homebrew/actions/bump-formulae@master
         continue-on-error: true
         with:
-          token: ${{secrets.HOMEBREW_CORE_REPO_WORKFLOW_TOKEN}}
-          formulae: ${{github.event.inputs.formulae || env.FORMULAE}}
+          token: ${{ secrets.HOMEBREW_CORE_REPO_WORKFLOW_TOKEN }}
+          formulae: ${{ github.event.inputs.formulae || env.FORMULAE }}
