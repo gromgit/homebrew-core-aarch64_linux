@@ -13,6 +13,7 @@ class OrTools < Formula
 
   bottle do
     sha256 cellar: :any, arm64_big_sur: "9029930836f9fd35b49b3b3ec2a2f3e2dac8bd6879168b84433be3c5119c0536"
+    sha256 cellar: :any, monterey:      "1b6a64ab3510bc8e2e8b578eb8d8a58615d100519bb230007dc8a0aa835f7b1f"
     sha256 cellar: :any, big_sur:       "8c009bad27a131ab9fc5bec04f69ba1ea52c644415448aef82b363f3f94d3a42"
     sha256 cellar: :any, catalina:      "3da9d30729e68264508a4f2015029cb782acf58bd2fbf2a14bfc586fecf1b4f1"
     sha256 cellar: :any, mojave:        "9f6650ce096366942f5de4bf97ca02879303f21aa2562fee137d168eb3d75fc8"
