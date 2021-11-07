@@ -99,7 +99,7 @@ jobs:
       - name: Configure Git user
         uses: Homebrew/actions/git-user-config@master
         with:
-          username: BrewTestBot
+          username: ${{ github.event == 'schedule` && 'BrewTestBot' || github.actor }}
 
       - name: Bump formulae
         uses: Homebrew/actions/bump-formulae@master
