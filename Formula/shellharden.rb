@@ -6,14 +6,12 @@ class Shellharden < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5163964dd7eb7c2f78367aee0affc83a0982381dc275c14c537843b77bd8fd54"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7b16335608271b3e49abfff5382c2c8c6013952c0e5f623e3525cfb8c94084fc"
-    sha256 cellar: :any_skip_relocation, monterey:       "a12ab35740329e155ee6b614694596e405449660bc46d7623a20063885739cba"
-    sha256 cellar: :any_skip_relocation, big_sur:        "954b7364a2db253c1fa0008f414dd8fa4831095ce1268512505e012a9bb1eaaf"
-    sha256 cellar: :any_skip_relocation, catalina:       "85dd6255ff5f3410eafff6f5689bbcb7feac3f3f5d291139fc60597e2f46e5a5"
-    sha256 cellar: :any_skip_relocation, mojave:         "fbe947b5d0596fb32bcbadddd904bf0b0d30c64053e00c13a41cc6ecf89d1e20"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "214a9dca5d9d013ada81c97e204c96815fd3376399c960d73973ffe4c7d653cf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2d115462336b859f378a17b608fcc19a5bffd8d0d4b7755da90ac24081e461c3"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d625041f1fbe3eab74c04270fd05050aaba03aee4cd7327298cc56076b257270"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1fad7048a92304e23fa0b61f52a33a481b9fd4b92d9d05f1fd4c8ae4592adc8a"
+    sha256 cellar: :any_skip_relocation, monterey:       "3ff3866f623e46915cede8a4fae524cd3bc1617bea2b021fd6137e7ed36183ff"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1ac2c0a82a51438f5f9de526e63a962e20e84d31383afe6dd3440d5477d3c1ee"
+    sha256 cellar: :any_skip_relocation, catalina:       "0f61dd945c675db1d7be6cc124ed4af85b1973bcd4a83a58ca76094b88885c62"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d39ca4ad421695d03bc72d815214ead62fb236d96c7c3cad3265fd6998b8c694"
   end
 
   depends_on "rust" => :build
