@@ -1,8 +1,8 @@
 class MinimalRacket < Formula
   desc "Modern programming language in the Lisp/Scheme family"
   homepage "https://racket-lang.org/"
-  url "https://mirror.racket-lang.org/installers/8.2/racket-minimal-8.2-src.tgz"
-  sha256 "6f4dcbb17493898c954973ddde3daee1f18aa3197e6ece0d3e48dc2d4cfa84c7"
+  url "https://mirror.racket-lang.org/installers/8.3/racket-minimal-8.3-src.tgz"
+  sha256 "dc67673f50f45cc5b7e2ee2602ba27c4a5ded3c037b5ac0cf1ca520bb9c37d62"
   license any_of: ["MIT", "Apache-2.0"]
 
   # File links on the download page are created using JavaScript, so we parse
@@ -28,6 +28,12 @@ class MinimalRacket < Formula
 
   # these two files are amended when (un)installing packages
   skip_clean "lib/racket/launchers.rktd", "lib/racket/mans.rktd"
+
+  # fix build error on Monterey, remove it at next release
+  patch :p2 do
+    url "https://github.com/racket/racket/commit/3a8a7102abff334ee4e054c3597bebba32bda307.patch?full_index=1"
+    sha256 "16e0999348e991757b623748386d6ede3462a416cb95c1fa30421432a46f6ae9"
+  end
 
   def install
     # configure racket's package tool (raco) to do the Right Thing
@@ -87,7 +93,7 @@ class MinimalRacket < Formula
     # ensure Homebrew openssl is used
     on_macos do
       output = shell_output("DYLD_PRINT_LIBRARIES=1 #{bin}/racket -e '(require openssl)' 2>&1")
-      assert_match(%r{loaded: .*openssl@1\.1/.*/libssl.*\.dylib}, output)
+      assert_match(%r{.*openssl@1\.1/.*/libssl.*\.dylib}, output)
     end
     on_linux do
       output = shell_output("LD_DEBUG=libs #{bin}/racket -e '(require openssl)' 2>&1")
