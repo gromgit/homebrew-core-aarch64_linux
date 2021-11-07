@@ -7,6 +7,7 @@ class OpencvAT3 < Formula
 
   bottle do
     sha256 arm64_big_sur: "30f24b7ae1e2d3f63072e0abd4cd8c110063766abee4ea59eb885eb9a3137e7f"
+    sha256 monterey:      "58e42ca68cb65ecaf614222e331376be8a50562c705ad790acb73dfc96f88845"
     sha256 big_sur:       "d7430cf4a9378666322b6d5fae8c9804314e7e91e1ceff20739fd133d6968c2b"
     sha256 catalina:      "36a4597c6d285a881ae976f26b31293242865a294d67db9ae91e1c75096bc81d"
     sha256 mojave:        "73d93954772b452010c15441e87ab429cfaed0185478463eb7d601e0fbb521a2"
