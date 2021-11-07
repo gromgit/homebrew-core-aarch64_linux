@@ -1,8 +1,8 @@
 class Promtail < Formula
   desc "Log agent for Loki"
   homepage "https://grafana.com/loki"
-  url "https://github.com/grafana/loki/archive/v2.3.0.tar.gz"
-  sha256 "c71174a2fbb7b6183cb84fc3a5e328cb4276a495c7c0be8ec53c377ec0363489"
+  url "https://github.com/grafana/loki/archive/v2.4.0.tar.gz"
+  sha256 "38e8403e59218cfa81b38af48852e77f6b6be5390190b99bdc0dc157a7e0400b"
   license "AGPL-3.0-only"
 
   livecheck do
@@ -19,6 +19,10 @@ class Promtail < Formula
   end
 
   depends_on "go" => :build
+
+  on_linux do
+    depends_on "systemd"
+  end
 
   def install
     cd "clients/cmd/promtail" do
