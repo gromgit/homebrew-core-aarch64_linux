@@ -1,8 +1,8 @@
 class Hebcal < Formula
   desc "Perpetual Jewish calendar for the command-line"
   homepage "https://github.com/hebcal/hebcal"
-  url "https://github.com/hebcal/hebcal/archive/v4.26.tar.gz"
-  sha256 "71cec27564259981a5ed03173207a577ca8700c368bd3396b37345132bae1025"
+  url "https://github.com/hebcal/hebcal/archive/v4.27.tar.gz"
+  sha256 "a69913029933fccc187ad1243bf57a7e799ce06b8f3d813174af3c8d78054b14"
   license "GPL-2.0-or-later"
 
   bottle do
@@ -16,6 +16,7 @@ class Hebcal < Formula
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+  uses_from_macos "gperf" => :build
 
   def install
     system "autoreconf", "-fiv"
