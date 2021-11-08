@@ -1,9 +1,10 @@
 class Halibut < Formula
   desc "Yet another free document preparation system"
   homepage "https://www.chiark.greenend.org.uk/~sgtatham/halibut/"
-  url "https://www.chiark.greenend.org.uk/~sgtatham/halibut/halibut-1.2/halibut-1.2.tar.gz"
-  sha256 "1aedfb6240f27190c36a390fcac9ce732edbdbaa31c85ee675b994e2b083163f"
-  head "https://git.tartarus.org/simon/halibut.git"
+  url "https://www.chiark.greenend.org.uk/~sgtatham/halibut/halibut-1.3/halibut-1.3.tar.gz"
+  sha256 "aaa0f7696f17f74f42d97d0880aa088f5d68ed3079f3ed15d13b6e74909d3132"
+  license all_of: ["MIT", :cannot_represent]
+  head "https://git.tartarus.org/simon/halibut.git", branch: "main"
 
   bottle do
     rebuild 1
@@ -17,10 +18,12 @@ class Halibut < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "f37d878d7f5d8a0869220fc00abdad12f298da1cdb1d2541b3f66793f749e9b4"
   end
 
+  depends_on "cmake" => :build
+
   def install
-    system "make", "prefix=#{prefix}", "mandir=#{man}", "all"
-    system "make", "-C", "doc", "prefix=#{prefix}", "mandir=#{man}"
-    system "make", "prefix=#{prefix}", "mandir=#{man}", "install"
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
