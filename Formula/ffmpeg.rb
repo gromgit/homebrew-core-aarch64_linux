@@ -15,12 +15,12 @@ class Ffmpeg < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "cab301263c5433c0df3c6bc7d4ee419229bdc7a35ddc96c5d80815fe0db3813a"
-    sha256 arm64_big_sur:  "d51ec18b4c679e5ae330ab60436dc733c659bb85cca6f906c43e9266f6377160"
-    sha256 monterey:       "5000115adeef4c691df55b75a008f13fbb51051eb5539576de81b1b20f868060"
-    sha256 big_sur:        "9ef6ecbb8b81a4cff7216d735f0adea0695298d11378affc5d1b902b1bfe6f5d"
-    sha256 catalina:       "70abaf164641e17382831a931f2bdbb254530bf071f7cd6d52fba12b726f2a10"
-    sha256 x86_64_linux:   "96e688888798d852696c044648400aacafaf2d66c287bc1f528e859049452578"
+    sha256 arm64_monterey: "3f0fd439dab73037bf1577aeef75fe61693a8c7d231db15355685aa27d998503"
+    sha256 arm64_big_sur:  "595897c60fd28be047977306a35e53fc6f6f29b021af7b0ee542719bf892eca4"
+    sha256 monterey:       "d86a545fd61b459c1adafcec61bf1803f8f632fe527a88682af4fb89c37056fd"
+    sha256 big_sur:        "b3e866d21b8a51653e294e08c8be65e5095894f52f6cb6b914025992191c1c50"
+    sha256 catalina:       "ea2431a650ae91eb8ea197d7e1d8e82f50d5dfdaad08a0da7c067609e8b1922f"
+    sha256 x86_64_linux:   "a91fa175c2f2a47c9afd240bf2cf97064b14647077be5804da159b6a4244fe62"
   end
 
   depends_on "nasm" => :build
