@@ -7,13 +7,12 @@ class Viddy < Formula
   head "https://github.com/sachaos/viddy.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d7f8256c6bce33976a1bed52e62b8da0dac15391dffd89631b31ce0300ec870a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1c4e5817f0684e356c2ab09828f76b0d05c0e034408018fa3ae0479b5f4b1849"
-    sha256 cellar: :any_skip_relocation, monterey:       "a6806771097480c1b1852274746546dc3f35b6fe01abd914195e76df6f9a7a30"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a41c2e1195882c2f7742d534b28f0bb43677b262e0e5a66ff8e556296a039f37"
-    sha256 cellar: :any_skip_relocation, catalina:       "1f7190c3d2f026fb06a7b12e1345be3b564de5265d29fadbe89b3d3995869882"
-    sha256 cellar: :any_skip_relocation, mojave:         "6f0d8ea45e9a44c3da562a7e0b7ca230517cc9fd4ab153fe6521e4e8988355b0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "48522eaf53c20f2b5d9fe96cb28843962039d27686c065e0c2eac301aff8fce1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "94203d619dfa11db244cefeea6407b657809ad1758b2b9b9edec988c02ad775c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7ed75fb4678c69f4b17e60b3f7d5d79062f9842d407065c5b8eea2f45408cb46"
+    sha256 cellar: :any_skip_relocation, monterey:       "35004a320ef6ab389a7172546f4b99e56474868fd4cca70a89d39c4b008be374"
+    sha256 cellar: :any_skip_relocation, big_sur:        "42683c3e7bbb2f3b9d9d17e48375ce6672a8b365f3a94f8c833e5058337c33a4"
+    sha256 cellar: :any_skip_relocation, catalina:       "b904656d10800778f242c860c550d5da3508a51d735702c1f779dfc2f3b657ca"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "41afacff33d7f52feda350cfbffe22634cd903e7c141ac8277933d47746417b7"
   end
 
   depends_on "go" => :build
