@@ -13,10 +13,12 @@ class Coccinelle < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "78e87db9e0aabffbddde513ae5100fc015792fd75c5bd1d5ca91bb53342b575c"
-    sha256 cellar: :any, big_sur:       "f050cd80796be603afea32e24bd860c98543162d7e95e195902f5c267c2edaeb"
-    sha256 cellar: :any, catalina:      "61befc08516da9ace4eecc7f4bbd8e8b041ed709ee5f9fc8024bf2667056c3e6"
-    sha256 cellar: :any, mojave:        "4f2ca36bdd4c52eb8a074f047c231f41c941b5a1a4aa1624ec5301735e478c91"
+    sha256 cellar: :any, arm64_monterey: "ec7ef55264ac1fca61319d7f7df11cf3d6cfd4702a53e726209f62555e9b71d3"
+    sha256 cellar: :any, arm64_big_sur:  "78e87db9e0aabffbddde513ae5100fc015792fd75c5bd1d5ca91bb53342b575c"
+    sha256 cellar: :any, monterey:       "bc4160ec45c892d9b0df334eb6830474554d64bc398fc6735d7de7b532f9a663"
+    sha256 cellar: :any, big_sur:        "f050cd80796be603afea32e24bd860c98543162d7e95e195902f5c267c2edaeb"
+    sha256 cellar: :any, catalina:       "61befc08516da9ace4eecc7f4bbd8e8b041ed709ee5f9fc8024bf2667056c3e6"
+    sha256 cellar: :any, mojave:         "4f2ca36bdd4c52eb8a074f047c231f41c941b5a1a4aa1624ec5301735e478c91"
   end
 
   depends_on "autoconf" => :build
