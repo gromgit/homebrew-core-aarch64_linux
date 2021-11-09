@@ -2,8 +2,8 @@ class Influxdb < Formula
   desc "Time series, events, and metrics database"
   homepage "https://influxdata.com/time-series-platform/influxdb/"
   url "https://github.com/influxdata/influxdb.git",
-      tag:      "v2.0.9",
-      revision: "d1233b7951ddf06a3f201c84f4b0915692c22ba5"
+      tag:      "v2.1.1",
+      revision: "657e1839de9e8a734abad1207ca28e7d02444207"
   license "MIT"
   head "https://github.com/influxdata/influxdb.git", branch: "master"
 
@@ -30,15 +30,15 @@ class Influxdb < Formula
   # NOTE: The version here is specified in the go.mod of influxdb.
   # If you're upgrading to a newer influxdb version, check to see if this needs upgraded too.
   resource "pkg-config-wrapper" do
-    url "https://github.com/influxdata/pkg-config/archive/refs/tags/v0.2.8.tar.gz"
-    sha256 "9d3f3bbcac7c787f6e8846e70172d06bd4d7394b4bcd0b8572fe2f1d03edc11b"
+    url "https://github.com/influxdata/pkg-config/archive/refs/tags/v0.2.9.tar.gz"
+    sha256 "25843e58a3e6994bdafffbc0ef0844978a3d1f999915d6770cb73505fcf87e44"
   end
 
   # NOTE: The version/URL here is specified in scripts/fetch-ui-assets.sh in influxdb.
   # If you're upgrading to a newer influxdb version, check to see if this needs upgraded too.
   resource "ui-assets" do
-    url "https://github.com/influxdata/ui/releases/download/OSS-v2.0.9/build.tar.gz"
-    sha256 "ace380b5bd6abef9aa0ca16e95900052b9520399a7b3311a0c366a5d98ad400d"
+    url "https://github.com/influxdata/ui/releases/download/OSS-2.1.2/build.tar.gz"
+    sha256 "7d78d284d25f28dfd940d407a17f7f3aee1706b5dabc237eadc3bef0031ce548"
   end
 
   def install
@@ -65,7 +65,7 @@ class Influxdb < Formula
     ].join(" ")
 
     system "go", "build", *std_go_args(ldflags: ldflags),
-           "-tags", "assets", "-o", bin/"influxd", "./cmd/influxd"
+           "-tags", "assets,sqlite_foreign_keys,sqlite_json", "-o", bin/"influxd", "./cmd/influxd"
 
     data = var/"lib/influxdb2"
     data.mkpath
