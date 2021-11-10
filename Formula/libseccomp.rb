@@ -11,7 +11,7 @@ class Libseccomp < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "34c041a4650d145076471743dcb22bbda8ed8edfbeac4b6fde96bc707fdb07fd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "cb9632f847a27aa62f7e4ce9ec786550ebf2b45d1b9e909ffe74fcb888fa705d"
   end
 
   depends_on "autoconf" => :build
