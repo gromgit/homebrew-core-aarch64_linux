@@ -7,6 +7,15 @@ class PipTools < Formula
   sha256 "65553a15b1ba34be5e43889345062e38fb9b219ffa23b084ca0d4c4039b6f53b"
   license "BSD-3-Clause"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b47371326f06f1c9598058df4212dfd803e5969efdeeed0c7cb9e1fa39146eaa"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f14ebaa026ffc43f0dbf5b039c205ba96bb957a912346d80451ff74bbe1b538e"
+    sha256 cellar: :any_skip_relocation, monterey:       "385978df36d819bfca87b9993a3cb9c17fd8922d9afcaade05eac0c948333a49"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d40c9ae044aed7106dd09fbb0095d7f9bcb872e07872a431aca58f108827b653"
+    sha256 cellar: :any_skip_relocation, catalina:       "7de1775230fc40a2e4b266b8918d048fa825f09f6cf0c60fd9312aacd89d28e0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b957574f88e386d443f05c3e5aae8c5b22d87b595d6357deb38196cbe9bd4995"
+  end
+
   depends_on "python@3.10"
 
   resource "click" do
