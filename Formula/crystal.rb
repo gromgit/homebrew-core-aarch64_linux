@@ -4,8 +4,8 @@ class Crystal < Formula
   license "Apache-2.0"
 
   stable do
-    url "https://github.com/crystal-lang/crystal/archive/1.2.1.tar.gz"
-    sha256 "fd35d4a9b97d5085afd3276693605f59c452c7ab3fd940af9cd4f72faf4c3aa6"
+    url "https://github.com/crystal-lang/crystal/archive/1.2.2.tar.gz"
+    sha256 "6d963a71ef5f6c73faa272a0f81b50e9ddbf814b1ec07e557ce5c95f84d6077e"
 
     resource "shards" do
       url "https://github.com/crystal-lang/shards/archive/v0.16.0.tar.gz"
