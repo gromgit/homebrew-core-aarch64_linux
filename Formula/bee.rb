@@ -6,7 +6,7 @@ class Bee < Formula
   license "MPL-1.1"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "d4224f9390bdaaa778b634dd75e0b5092ba049626b8e9d9dc33f89aa9cfbdefd"
+    sha256 cellar: :any_skip_relocation, all: "f5f2cb99a45afd93e3647d23c8d37b951fd3c01161f7098ccd827eba37b6daf3"
   end
 
   depends_on arch: :x86_64 # openjdk@8 doesn't support ARM
