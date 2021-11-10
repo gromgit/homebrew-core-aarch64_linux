@@ -11,12 +11,7 @@ class Gradle < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "303a0a5cc54ee43b085f1b8a7cb2753ca2b21305b05628b3bf03383d71080cc2"
-    sha256 cellar: :any_skip_relocation, monterey:      "2f27076f3afae272f0737f7774776e33fd340c4166bf31529e3acf48f18e31d3"
-    sha256 cellar: :any_skip_relocation, big_sur:       "271f05a8828d3e763fc615ce1d709d1e01d5957f7a001f0723303ffe130a8251"
-    sha256 cellar: :any_skip_relocation, catalina:      "271f05a8828d3e763fc615ce1d709d1e01d5957f7a001f0723303ffe130a8251"
-    sha256 cellar: :any_skip_relocation, mojave:        "271f05a8828d3e763fc615ce1d709d1e01d5957f7a001f0723303ffe130a8251"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "15d4fa8e444f0127ea833fcb53099b3a92e13a0a39e7bffc5dd824a029f60736"
+    sha256 cellar: :any_skip_relocation, all: "c747e3263f9427eec63221e7e118080d3f927815d2759f52d2840edb8d086d21"
   end
 
   # gradle currently does not support Java 17
