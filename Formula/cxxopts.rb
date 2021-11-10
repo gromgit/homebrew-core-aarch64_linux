@@ -7,13 +7,7 @@ class Cxxopts < Formula
   head "https://github.com/jarro2783/cxxopts.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "dffc57a1cc6de42f042163c6d44e42e24a778bd1cdf7f7e45e96f9b07b64880c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "40c3c76fe2008d8a31f51748970af0873b622d3540ccde6462caac0e1322fbca"
-    sha256 cellar: :any_skip_relocation, catalina:      "d4a289fb314e5efdb8c889c560340c259c04b19b9d1e7087b58d0d24aafd5ed2"
-    sha256 cellar: :any_skip_relocation, mojave:        "d4a289fb314e5efdb8c889c560340c259c04b19b9d1e7087b58d0d24aafd5ed2"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "d4a289fb314e5efdb8c889c560340c259c04b19b9d1e7087b58d0d24aafd5ed2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e201e81cc6246a4691bb97168dfab6bd5bcdde73cccd1ac702079be15463715a"
-    sha256 cellar: :any_skip_relocation, all:           "92728eeb20f6e152903be1478ca61b6185d590d3042970c1b6f24a2b9296bde5"
+    sha256 cellar: :any_skip_relocation, all: "a66fdf03d937520c595c69027c2eede3be5d892f1dadc0888900d84eac0cdd5d"
   end
 
   depends_on "cmake" => :build
