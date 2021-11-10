@@ -1,10 +1,9 @@
 class Liblcf < Formula
   desc "Library for RPG Maker 2000/2003 games data"
   homepage "https://easyrpg.org/"
-  url "https://easyrpg.org/downloads/player/0.6.2/liblcf-0.6.2.tar.xz"
-  sha256 "c48b4f29ee0c115339a6886fc435b54f17799c97ae134432201e994b1d3e0d34"
+  url "https://easyrpg.org/downloads/player/0.7.0/liblcf-0.7.0.tar.xz"
+  sha256 "ed76501bf973bf2f5bd7240ab32a8ae3824dce387ef7bb3db8f6c073f0bc7a6a"
   license "MIT"
-  revision 3
   head "https://github.com/EasyRPG/liblcf.git"
 
   bottle do
@@ -17,31 +16,30 @@ class Liblcf < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "34b0eea36554d5c51a76a48fbb100a302a0986fc38d8cee84df55864c2e57775"
   end
 
-  depends_on "pkg-config" => :build
+  depends_on "cmake" => :build
   depends_on "icu4c"
 
   uses_from_macos "expat"
 
   def install
-    system "./configure", "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
-    system "make"
-    system "make", "install"
+    args = std_cmake_args + ["-DLIBLCF_UPDATE_MIMEDB=OFF"]
+    system "cmake", "-S", ".", "-B", "build", *args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
     (testpath/"test.cpp").write <<~EOS
-      #include "lsd_reader.h"
+      #include "lcf/lsd/reader.h"
       #include <cassert>
 
       int main() {
         std::time_t const current = std::time(NULL);
-        assert(current == LSD_Reader::ToUnixTimestamp(LSD_Reader::ToTDateTime(current)));
+        assert(current == lcf::LSD_Reader::ToUnixTimestamp(lcf::LSD_Reader::ToTDateTime(current)));
         return 0;
       }
     EOS
-    system ENV.cc, "test.cpp", "-I#{include}/liblcf", "-L#{lib}", "-llcf", "-std=c++11", \
+    system ENV.cxx, "test.cpp", "-std=c++14", "-I#{include}", "-L#{lib}", "-llcf", \
       "-o", "test"
     system "./test"
   end
