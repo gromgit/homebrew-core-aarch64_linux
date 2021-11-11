@@ -7,6 +7,14 @@ class Urlwatch < Formula
   sha256 "f0b36db4bccd38923b178b66408c0d80d3103b7257f286b78e87d991283b86d7"
   license "BSD-3-Clause"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0372f489dd672ce1039e8e84b0314b8b107691f9bd5a92bcba6b5a67aae1f33e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f99f62a670d045ebe7108ea5becf75d16075ad1d4db390a9281240d01463fd4a"
+    sha256 cellar: :any_skip_relocation, monterey:       "ed67a5d09962cd875399777a3a58c698e717ee8191106137f48103260715549d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a292d078126a25ed8c65c7184f7b9e64336f176e1422350a85ea45279373c43d"
+    sha256 cellar: :any_skip_relocation, catalina:       "aee5f56d7c32a9aecf926e4767c4afed38aea1a6b7407609cf34ebfc89e281ee"
+  end
+
   depends_on "python@3.10"
 
   resource "appdirs" do
