@@ -9,13 +9,11 @@ class Hashcat < Formula
   head "https://github.com/hashcat/hashcat.git"
 
   bottle do
-    sha256 arm64_monterey: "88e25be640507954e9e03f701c8fc81bd4fc7f3545218b73088f02bb9672e885"
-    sha256 arm64_big_sur:  "0b7ed83aa1cad6c2b763dee4495d2f56cf5d045dfc8df730a81c4ec35cd453a0"
-    sha256 monterey:       "42cc0e8b6cc15bdcaaea34809628108df32ea70bb0f0b1a384623bd39711e81c"
-    sha256 big_sur:        "b0d2f4ed9f9d8450f1d79285869b69909d2a08f9393ec2d8b39cb05dcefb52b9"
-    sha256 catalina:       "dd7e0ba6e2441b0517b55ef243efc8f8be3dfd1550b83033e264057a677e8fa2"
-    sha256 mojave:         "ad145c3ffb0ffb779dbdde3e0c1c0329b2b45d491e76ba0b92c48c02028e51c1"
-    sha256 high_sierra:    "2e1cbf12a3f5ed5fceb622e5f773d102edfaff06a847df925456e92dd6ca91ba"
+    sha256 arm64_monterey: "548332afa0203273e4d9a1a52409236142e24eb7e747a8fd33b4a9b298c9ef46"
+    sha256 arm64_big_sur:  "7b9727bdfbc0a602aa7ce3b0430b0d12fddb46a78e7f9077d79a1cf6dbbc0313"
+    sha256 monterey:       "0736726f1d60e51e6c42b8cf34dd87fda5dfa4924cd3d892eda6f4f698d4da86"
+    sha256 big_sur:        "21a36b5a036e7f52c7bc47427d0451a33abd3ee08066961c33bc0f04494af847"
+    sha256 catalina:       "84636fb6c2606364c8516346782758641c0c5bb5567936ada4fa2504ea75307e"
   end
 
   depends_on "gnu-sed" => :build
