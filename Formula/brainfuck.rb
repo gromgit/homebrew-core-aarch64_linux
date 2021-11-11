@@ -7,14 +7,12 @@ class Brainfuck < Formula
   head "https://github.com/fabianishere/brainfuck.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "f52d2a6b20c727834e0aa1dd54180d13e9c1ef27e3aa2c7112f0bbb7b3c50151"
-    sha256 cellar: :any,                 arm64_big_sur:  "c7c0b45b6d596c3fd5e83156331b7595521249b34c443518d5a757a937551046"
-    sha256 cellar: :any,                 monterey:       "3bc30ee4c21acacd11d589ce31449979c322f4ac3a407abaf9a39a1a6946c543"
-    sha256 cellar: :any,                 big_sur:        "7b128f991009e1e9b4e5ce31b451f49d7aaab01b4a7867ce8709483dee4e8bea"
-    sha256 cellar: :any,                 catalina:       "e6df5d077a5a75d2f350064f7d8aab3ac109759ca330753f974c9bd23043a917"
-    sha256 cellar: :any,                 mojave:         "ede2edc346ff8bfff8829ced2ec99ef0df74edf6978fb2541bbaa7daa53f8d3a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "38510b863336aac8bf1c37a49c74a41451c7cfa7f3cd78de7bc7be27f953f242"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b753b7dd2274926dbd763571f8b922fe270e25ee527ddd3a71cc4a1f7acb94de"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "802734b20ee8e8fc6eed4a1894c10b5e11810d006ff9346897179b085a4d244b"
+    sha256 cellar: :any_skip_relocation, monterey:       "482ca8d67a9fd57c88e24d5763194e8e70f7e9d7c9dd8a7f3b5827097e2dfb6a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3120d4eda67a0cf102317a5e0a4ecb36ca8ab99b75c2f0c8b76eabdffb31e252"
+    sha256 cellar: :any_skip_relocation, catalina:       "3bc5affaa9e6ba7d7dc6c2f94ad1e63f36a6e19553a8f0183077322f4c9e9026"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3554b9a52daf8e246b2459186a891b82c2aa4ce70d900735288903cbc5150152"
   end
 
   depends_on "cmake" => :build
