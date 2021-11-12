@@ -6,6 +6,15 @@ class Tfmigrate < Formula
   license "MIT"
   head "https://github.com/minamijoyo/tfmigrate.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "11c8bb68fb204906912cd0ecaef40dc165769bba6b050c51bfae6328cff40c98"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "11c8bb68fb204906912cd0ecaef40dc165769bba6b050c51bfae6328cff40c98"
+    sha256 cellar: :any_skip_relocation, monterey:       "2704bf5320586f5c9949f98481bacf7f8222d99843ca4a19397c540e4c448fa7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2704bf5320586f5c9949f98481bacf7f8222d99843ca4a19397c540e4c448fa7"
+    sha256 cellar: :any_skip_relocation, catalina:       "2704bf5320586f5c9949f98481bacf7f8222d99843ca4a19397c540e4c448fa7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0ecd4e4b397602cdb999df541341c8e1bc5f5ed56060d415e62ca344ab42a9ff"
+  end
+
   depends_on "go" => :build
   depends_on "terraform" => :test
 
