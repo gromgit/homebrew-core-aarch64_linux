@@ -1,11 +1,10 @@
 class Kcov < Formula
   desc "Code coverage tester for compiled programs, Python, and shell scripts"
   homepage "https://simonkagstrom.github.io/kcov/"
-  url "https://github.com/SimonKagstrom/kcov/archive/38.tar.gz"
-  sha256 "b37af60d81a9b1e3b140f9473bdcb7975af12040feb24cc666f9bb2bb0be68b4"
+  url "https://github.com/SimonKagstrom/kcov/archive/v39.tar.gz"
+  sha256 "1b538fe16acf5ffd886f1fc32e9e803a520d586666e5c90a0b8632f1459291eb"
   license "GPL-2.0"
-  revision 1
-  head "https://github.com/SimonKagstrom/kcov.git"
+  head "https://github.com/SimonKagstrom/kcov.git", branch: "master"
 
   # We check the Git tags because, as of writing, the "latest" release on GitHub
   # is a prerelease version (`pre-v40`), so we can't rely on it being correct.
@@ -27,7 +26,8 @@ class Kcov < Formula
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
-  depends_on "python@3.9" => :build
+  depends_on "python@3.10" => :build
+  depends_on "openssl@3"
 
   uses_from_macos "curl"
   uses_from_macos "zlib"
@@ -37,11 +37,9 @@ class Kcov < Formula
   end
 
   def install
-    mkdir "build" do
-      system "cmake", "-DSPECIFY_RPATH=ON", *std_cmake_args, ".."
-      system "make"
-      system "make", "install"
-    end
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args, "-DSPECIFY_RPATH=ON"
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
