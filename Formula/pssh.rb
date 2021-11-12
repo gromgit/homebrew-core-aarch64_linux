@@ -9,13 +9,12 @@ class Pssh < Formula
   revision 6
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "59a80ba06f64db6ac564b05a91b33cd9dab0d7d9c1a9cd7e932b9afb2b2012c3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "59a80ba06f64db6ac564b05a91b33cd9dab0d7d9c1a9cd7e932b9afb2b2012c3"
-    sha256 cellar: :any_skip_relocation, monterey:       "d1c1837c888b3c60e7e5cf3db91660c35b14c39e72d7418317eba99fe30bee0c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d1c1837c888b3c60e7e5cf3db91660c35b14c39e72d7418317eba99fe30bee0c"
-    sha256 cellar: :any_skip_relocation, catalina:       "d1c1837c888b3c60e7e5cf3db91660c35b14c39e72d7418317eba99fe30bee0c"
-    sha256 cellar: :any_skip_relocation, mojave:         "d1c1837c888b3c60e7e5cf3db91660c35b14c39e72d7418317eba99fe30bee0c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "db241389e508b5db1cf14b6edf01b09b185f95326b8301ba7c04ee38478f7e39"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "436c285c33f75a1cd82f2d6b17065baa9400f13c9b9e1b8ac1baf2155891ed24"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "436c285c33f75a1cd82f2d6b17065baa9400f13c9b9e1b8ac1baf2155891ed24"
+    sha256 cellar: :any_skip_relocation, monterey:       "705c0d12faaee33a41a1ba3ce77d8abfba8a1da5001f9afe9e4bbc434c38289e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "705c0d12faaee33a41a1ba3ce77d8abfba8a1da5001f9afe9e4bbc434c38289e"
+    sha256 cellar: :any_skip_relocation, catalina:       "705c0d12faaee33a41a1ba3ce77d8abfba8a1da5001f9afe9e4bbc434c38289e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "726391939b6cbc3c6e3b8060991db660018dbedbd6be786409cc6e086d2039fc"
   end
 
   depends_on "python@3.10"
