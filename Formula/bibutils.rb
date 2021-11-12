@@ -1,8 +1,8 @@
 class Bibutils < Formula
   desc "Bibliography conversion utilities"
   homepage "https://sourceforge.net/p/bibutils/home/Bibutils/"
-  url "https://downloads.sourceforge.net/project/bibutils/bibutils_7.1_src.tgz"
-  sha256 "b4a4e8e900fe113887a8d9730b47d8bb55926f973486defc233436676271ae6c"
+  url "https://downloads.sourceforge.net/project/bibutils/bibutils_7.2_src.tgz"
+  sha256 "6e028aef1e8a6b3e5acef098584a7bb68708f35cfe74011b341c11fea5e4b5c3"
   license "GPL-2.0-only"
 
   livecheck do
