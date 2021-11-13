@@ -14,13 +14,12 @@ class Irrlicht < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "00bd50ea25930262d3ac3bf5f901555ece0c8ea8363bf8a3262782af5972a533"
-    sha256 cellar: :any,                 arm64_big_sur:  "7c88c45cbe80a489a1881fd3c6bb74d159c9ca7bc7dd5880ad9bb58c91915a19"
-    sha256 cellar: :any,                 monterey:       "ebc699035e32a43326ac25d3f42077c6e67ae65868da08e4693f8be3a9ec3859"
-    sha256 cellar: :any,                 big_sur:        "4140548f2ba1485fe7d374e13b6a70d39d6855cf5bbf463af621288e955706d8"
-    sha256 cellar: :any,                 catalina:       "d9ad006ffc814a0a491d479bfb1232f2d905e8dafebbba1de18ce2c2201a73f8"
-    sha256 cellar: :any,                 mojave:         "45479dc7a13d745a69dccf51c8bf1ebc4cc49fda9fb9e2d0f3a5bd0d67c2a091"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "153ae52b4f2d95488105918318ebdc9e83ae257eed0a04e893063285da3ac15f"
+    sha256 cellar: :any,                 arm64_monterey: "9e1135eb0ccc6348e42bc8fd85612e24ac17a84a2b78df9ec6c68221ceb1d28a"
+    sha256 cellar: :any,                 arm64_big_sur:  "f1b4f3eefb4c1f35fd11f828b05480ea58abd7acceb9343d9cd5a566b0b41b5e"
+    sha256 cellar: :any,                 monterey:       "5896d6a197140a36c3acb1e71271187dd4b181bfaadb3755186fb603983a6dfa"
+    sha256 cellar: :any,                 big_sur:        "a7f35a56aa6b22a5a57744f98a033cd3838fcdd6da3ac371607fddd75c80b3c1"
+    sha256 cellar: :any,                 catalina:       "95e628a7c5aca60faf221a6a4b58fa628187666f164de3d895337d554f181e28"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "623258dd5a7cc16b3369955de891b99163213f175da78d1fd49c6164e3dfe6cd"
   end
 
   depends_on xcode: :build
