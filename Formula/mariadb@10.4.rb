@@ -1,8 +1,8 @@
 class MariadbAT104 < Formula
   desc "Drop-in replacement for MySQL"
   homepage "https://mariadb.org/"
-  url "https://downloads.mariadb.com/MariaDB/mariadb-10.4.21/source/mariadb-10.4.21.tar.gz"
-  sha256 "94dd2e6f5d286de8a7dccffe984015d4253a0568281c7440e772cfbe098a291d"
+  url "https://downloads.mariadb.com/MariaDB/mariadb-10.4.22/source/mariadb-10.4.22.tar.gz"
+  sha256 "44bdc36eeb02888296e961718bae808f3faab268ed49160a785248db60500c00"
   license "GPL-2.0-only"
 
   # This uses a placeholder regex to satisfy the `PageMatch` strategy
@@ -45,15 +45,6 @@ class MariadbAT104 < Formula
   uses_from_macos "bzip2"
   uses_from_macos "ncurses"
   uses_from_macos "zlib"
-
-  on_macos do
-    # Need patch to remove MYSQL_SOURCE_DIR from include path because it contains
-    # file called VERSION
-    # https://github.com/Homebrew/homebrew-core/pull/76887#issuecomment-840851149
-    # Originally reported upstream at https://jira.mariadb.org/browse/MDEV-7209,
-    # but only partially fixed.
-    patch :DATA
-  end
 
   on_linux do
     depends_on "gcc"
@@ -215,19 +206,3 @@ class MariadbAT104 < Formula
     system "#{bin}/mysqladmin", "--port=#{port}", "--user=root", "--password=", "shutdown"
   end
 end
-
-__END__
-diff --git a/storage/mroonga/CMakeLists.txt b/storage/mroonga/CMakeLists.txt
-index 555ab248751..cddb6f2f2a6 100644
---- a/storage/mroonga/CMakeLists.txt
-+++ b/storage/mroonga/CMakeLists.txt
-@@ -215,8 +215,7 @@ set(MYSQL_INCLUDE_DIRS
-   "${MYSQL_REGEX_INCLUDE_DIR}"
-   "${MYSQL_RAPIDJSON_INCLUDE_DIR}"
-   "${MYSQL_LIBBINLOGEVENTS_EXPORT_DIR}"
--  "${MYSQL_LIBBINLOGEVENTS_INCLUDE_DIR}"
--  "${MYSQL_SOURCE_DIR}")
-+  "${MYSQL_LIBBINLOGEVENTS_INCLUDE_DIR}")
-
- if(MRN_BUNDLED)
-   set(MYSQL_PLUGIN_DIR "${INSTALL_PLUGINDIR}")nd
