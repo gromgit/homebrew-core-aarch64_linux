@@ -35,7 +35,7 @@ class Tbox < Formula
         return 0;
       }
     EOS
-    system ENV.cc, "test.c", "-L#{lib}", "-ltbox", "-I#{include}", "-o", "test"
-    system "./test"
+    system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-ltbox", "-lm", "-pthread", "-o", "test"
+    assert_equal "hello tbox!\n", shell_output("./test")
   end
 end
