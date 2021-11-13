@@ -1,8 +1,8 @@
 class Diamond < Formula
   desc "Accelerated BLAST compatible local sequence aligner"
   homepage "https://www.wsi.uni-tuebingen.de/lehrstuehle/algorithms-in-bioinformatics/software/diamond/"
-  url "https://github.com/bbuchfink/diamond/archive/v2.0.12.tar.gz"
-  sha256 "d0468959ea677cc8e90a6fbd9506f3fb1fbd1b415d30bf398ac2524bb5b6f20c"
+  url "https://github.com/bbuchfink/diamond/archive/v2.0.13.tar.gz"
+  sha256 "9b79c3a01913999dfa2543f4dd7a3494397a8723ea587207c14683b24e57eac1"
   license "GPL-3.0-or-later"
 
   bottle do
