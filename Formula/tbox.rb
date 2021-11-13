@@ -7,10 +7,11 @@ class Tbox < Formula
   head "https://github.com/tboox/tbox.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "999ed2823cd0b81af561f0fb16e63f36be40db4e11cf9835e09a75295a3a64eb"
-    sha256 cellar: :any_skip_relocation, big_sur:       "fc5612421cbec4955e8a99ee3cb9e214842cbb942384c4b1cd44d7d302a54137"
-    sha256 cellar: :any_skip_relocation, catalina:      "1993c672049429417dd5e0ccef97be5b8aee4c5120b8d925a90dc708f10d2540"
-    sha256 cellar: :any_skip_relocation, mojave:        "c325bd6d49a9bdbf667af3a15cbcec4c171e2d71b7dc0c21d4f45906912aabaa"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "89d842123d7f547042298dde6663d5a4a8c6731d1ae02e714c88c1628910b63f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8ffdb8f21d12d57dad00390ecbf0bc3cd7872e3de08c50466f6fdcd6e8c1700e"
+    sha256 cellar: :any_skip_relocation, monterey:       "a07d5346d050123b7dcb00bdc11b5e4295dd957a8a05911b6370aac6f8d3214c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1b183ed255da7495acc08c672aa3bbb8196aa66e237f2334a6131def4cb137f8"
+    sha256 cellar: :any_skip_relocation, catalina:       "19fc7b975473de7c23c5f726a36fe7ceb11b2b0dffa6a978619a5fafb5f0f31a"
   end
 
   depends_on "xmake" => :build
