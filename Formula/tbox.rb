@@ -12,6 +12,7 @@ class Tbox < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "a07d5346d050123b7dcb00bdc11b5e4295dd957a8a05911b6370aac6f8d3214c"
     sha256 cellar: :any_skip_relocation, big_sur:        "1b183ed255da7495acc08c672aa3bbb8196aa66e237f2334a6131def4cb137f8"
     sha256 cellar: :any_skip_relocation, catalina:       "19fc7b975473de7c23c5f726a36fe7ceb11b2b0dffa6a978619a5fafb5f0f31a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "08666405afaf5b23af6184050f018a2346e75a2f20cc77477a3af5343c2c5126"
   end
 
   depends_on "xmake" => :build
