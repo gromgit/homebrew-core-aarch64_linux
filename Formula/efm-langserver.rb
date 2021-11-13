@@ -7,13 +7,12 @@ class EfmLangserver < Formula
   head "https://github.com/mattn/efm-langserver.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c5e2cb43fc40718ad085b1ea91d0176621eceee6c20d8604e1e9ca6ff324ef27"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6ef394cfe93aeeec10c28594472509b78c39429fdb5f8df0ad920d7f46a38582"
-    sha256 cellar: :any_skip_relocation, monterey:       "6f78a485e233ee89c4d382fd6da20ac7008798e39fe21b26140d0d5393eb7478"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b9a805baeac648cfe331aad089ba6a6f5580c60277adb656d3a834039a89cdd2"
-    sha256 cellar: :any_skip_relocation, catalina:       "b9a805baeac648cfe331aad089ba6a6f5580c60277adb656d3a834039a89cdd2"
-    sha256 cellar: :any_skip_relocation, mojave:         "b9a805baeac648cfe331aad089ba6a6f5580c60277adb656d3a834039a89cdd2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9de97af411635b491006fbc55bf7dc805b92617f8a38749c90791f5abb2671e7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "44989b027cf13ce82762a9cd41f28088885bcee883d01a7813ad861b8a733243"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "44989b027cf13ce82762a9cd41f28088885bcee883d01a7813ad861b8a733243"
+    sha256 cellar: :any_skip_relocation, monterey:       "7278ffb0b3bf49ef69e7d261c1b105116311c135afbfb691c0ac73d2b8582956"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7278ffb0b3bf49ef69e7d261c1b105116311c135afbfb691c0ac73d2b8582956"
+    sha256 cellar: :any_skip_relocation, catalina:       "7278ffb0b3bf49ef69e7d261c1b105116311c135afbfb691c0ac73d2b8582956"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a7f90427531a6bd50d857d12aaee106f49723933ff54c23a6395b28879f9dbed"
   end
 
   depends_on "go" => :build
