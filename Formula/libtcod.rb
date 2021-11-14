@@ -1,8 +1,8 @@
 class Libtcod < Formula
   desc "API for roguelike developers"
   homepage "https://github.com/libtcod/libtcod"
-  url "https://github.com/libtcod/libtcod/archive/1.18.1.tar.gz"
-  sha256 "6bced6115bc764c0465db96e3553662ae6dc2f9358c5499a1984758a841f8ec7"
+  url "https://github.com/libtcod/libtcod/archive/1.19.0.tar.gz"
+  sha256 "37c9dff5eb61be1aa4dc08f6c7fe910385e12244c14c6b163e2ffab373d779d7"
   license "BSD-3-Clause"
 
   bottle do
@@ -50,7 +50,7 @@ class Libtcod < Formula
       }
     EOS
     system ENV.cc, "-I#{include}", "-L#{lib}", "-ltcod", "version-c.c", "-o", "version-c"
-    assert_equal "#{version}\n", `./version-c`
+    assert_equal version.to_s, shell_output("./version-c").strip
     (testpath/"version-cc.cc").write <<~EOS
       #include <libtcod/libtcod.hpp>
       #include <iostream>
@@ -60,7 +60,7 @@ class Libtcod < Formula
         return 0;
       }
     EOS
-    system ENV.cxx, "-std=c++14", "-I#{include}", "-L#{lib}", "-ltcod", "version-cc.cc", "-o", "version-cc"
-    assert_equal "#{version}\n", `./version-cc`
+    system ENV.cxx, "-std=c++17", "-I#{include}", "-L#{lib}", "-ltcod", "version-cc.cc", "-o", "version-cc"
+    assert_equal version.to_s, shell_output("./version-cc").strip
   end
 end
