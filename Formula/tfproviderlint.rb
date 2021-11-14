@@ -6,6 +6,15 @@ class Tfproviderlint < Formula
   license "MPL-2.0"
   head "https://github.com/bflad/tfproviderlint.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4f3313965207d5d734a6bae3cf26ddfa13eacc242de91ba71d59c2df690f580f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4f3313965207d5d734a6bae3cf26ddfa13eacc242de91ba71d59c2df690f580f"
+    sha256 cellar: :any_skip_relocation, monterey:       "dcfad98559f94d55cb3f7113336cbdd2891b96f66ebedab2ba75704116e6737f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "dcfad98559f94d55cb3f7113336cbdd2891b96f66ebedab2ba75704116e6737f"
+    sha256 cellar: :any_skip_relocation, catalina:       "dcfad98559f94d55cb3f7113336cbdd2891b96f66ebedab2ba75704116e6737f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0e5f0cb5c419b1af23d92730e866b56a7693a7871d2e591bad7826df914d87a8"
+  end
+
   depends_on "go" => [:build, :test]
 
   resource "test_resource" do
