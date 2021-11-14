@@ -1,8 +1,8 @@
 class IpinfoCli < Formula
   desc "Official CLI for the IPinfo IP Address API"
   homepage "https://ipinfo.io/"
-  url "https://github.com/ipinfo/cli/archive/ipinfo-2.4.0.tar.gz"
-  sha256 "cb5a5d7d330d30ae951e871f5451fb7133fae418bd3df3b49d900f9d7978cf07"
+  url "https://github.com/ipinfo/cli/archive/ipinfo-2.4.1.tar.gz"
+  sha256 "a0327d925ae0e0c34451b26e539ffc66fa614a40c933bbbb8fcde2dec82c8fec"
   license "Apache-2.0"
 
   livecheck do
@@ -22,12 +22,6 @@ class IpinfoCli < Formula
   depends_on "go" => :build
 
   conflicts_with "ipinfo", because: "ipinfo and ipinfo-cli install the same binaries"
-
-  # Correct version string. Remove on next release.
-  patch do
-    url "https://github.com/ipinfo/cli/commit/f75931a7af513c8aa3d03b37aa4ab5854db54e89.patch?full_index=1"
-    sha256 "b5796aca4db45b2d05b40e3f96e4bf11c200510b5acc308dedbda0993a25d5b4"
-  end
 
   def install
     system "./ipinfo/build.sh"
