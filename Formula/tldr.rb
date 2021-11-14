@@ -1,8 +1,8 @@
 class Tldr < Formula
   desc "Simplified and community-driven man pages"
   homepage "https://tldr.sh/"
-  url "https://github.com/tldr-pages/tldr-c-client/archive/v1.4.1.tar.gz"
-  sha256 "e0b905db0aceb26046721ba0d755612577ff80f5b19af3376947f1bf82bae89f"
+  url "https://github.com/tldr-pages/tldr-c-client/archive/v1.4.2.tar.gz"
+  sha256 "532cc30b21ea146d23ba880142ae284bd2774c27c247ecc00221d9434bd9343f"
   license "MIT"
   head "https://github.com/tldr-pages/tldr-c-client.git", branch: "master"
 
