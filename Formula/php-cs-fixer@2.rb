@@ -6,8 +6,7 @@ class PhpCsFixerAT2 < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "26e90b07c06b079c668a74f773429d617a896d81fbaa3644ecd1ac43ce0dda64"
+    sha256 cellar: :any_skip_relocation, all: "62f0ceae3aec334450704706f22b62d66dc966347a4a7c3324566e530746ffea"
   end
 
   keg_only :versioned_formula
