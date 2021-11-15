@@ -11,13 +11,11 @@ class Gromacs < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "7eb394d589b30f8842352abe3b0fea9916c4b8105a44e8f1fbfb3936b583f7fc"
-    sha256 monterey:      "71f8e1c418794542f18c1d56af3f3a008a1fc5cf59c00532596448609cd1b69c"
-    sha256 big_sur:       "fdc9c850650ffe6509c8e7e28d6ed4e92de5b967f3ac4ccc3ec5a2feb4aea8fd"
-    sha256 catalina:      "6af6a5ec7c57941799723a3b8777619932105e486b9ffa75920d996123ae9b61"
-    sha256 mojave:        "a01c61b1eb54a9d11d056dce98b60e048dcf4fb744d5c681f3b517f2c5bcb71b"
-    sha256 x86_64_linux:  "dc8e2742a55b1993b481c2ed9c1695c596f92cbac7abe87a24530090eb4b1811"
+    sha256 arm64_big_sur: "6d44ead96dff4f78c2c7e31a6862786a96079f310643c8e04e0557379ddecfbc"
+    sha256 monterey:      "fb13ce47fa8f22941e92495cbcbcc6a2bd629ccfb282dfc005d6e32d0cbf8776"
+    sha256 big_sur:       "fd89af8cd2ebd8f6d782464377118d5183c67b88892a315967a164d4a133e490"
+    sha256 catalina:      "bfc7d70c8556de5421a3203a5c44b653e4fcc24940fe520f53651eb0497a3b08"
+    sha256 x86_64_linux:  "a7bc30f7ad8c3c42a1045326e3b369b64baa639c8711e32a2561e73e6ce9229e"
   end
 
   depends_on "cmake" => :build
