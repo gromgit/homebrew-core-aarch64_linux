@@ -7,7 +7,7 @@ class Iproute2 < Formula
   head "https://git.kernel.org/pub/scm/network/iproute2/iproute2.git", branch: "main"
 
   bottle do
-    sha256 x86_64_linux: "f5d54b7d5e597d1898e2f51be8236b00ad02754bcaf741299ea31e0788ec2505"
+    sha256 x86_64_linux: "1101f8a608be6e4c999c0d2abe3cc980466faca68f7f5b04696b67fadba84c28"
   end
 
   depends_on "bison" => :build
