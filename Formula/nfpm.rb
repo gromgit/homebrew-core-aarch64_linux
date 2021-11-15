@@ -7,12 +7,12 @@ class Nfpm < Formula
   head "https://github.com/goreleaser/nfpm.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2340350346f42424299b45743019fcd016e1446d420d0f8cecb46455c208cc57"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f782c6e482716b8d4410139cd30a0fadc6b7167909a4d92eb4537b6a92b3fbdf"
-    sha256 cellar: :any_skip_relocation, monterey:       "fdc125a3be2f55c758f7fe30ded616ef6287afab27aef3014219a26241afb14f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "69d6b286378426c1bc840a8b2b81e644ce47f89c7647b6f99485e57e6553889d"
-    sha256 cellar: :any_skip_relocation, catalina:       "999111737a6ee5e1d4af43eb14008b3d40055a224e961fa80364a1ee68fd4b59"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f484aff5f03ff5ba496308290e4cd5bacef74ac168b4cdf47f010211dbf27b95"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e198dd863bfaee6301b79057ee901503ead7177baf0650ded5e2ffd7db702a0a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6b2745937b4c880fdafd9aac1723549313924dd90c26add7da5ad8a5ddccc2f8"
+    sha256 cellar: :any_skip_relocation, monterey:       "c99cfb1cbe06490adf256ffdf1c1c3a87663549d2b1f415aea981f96ba028797"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ce20ed4aa1587e0de5cd65cf4cabf17b821c5ccc37b3881722b6f9fb26b3d956"
+    sha256 cellar: :any_skip_relocation, catalina:       "f7fd5479c587f59ecce2d461b227f0756f942c8caf52021ef97dfba7f5d647d5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3ab5554582b86a02a54d13d6a670f548c67ae3e5ae87a347ea71fed6a5e5a4b4"
   end
 
   depends_on "go" => :build
