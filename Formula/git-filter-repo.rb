@@ -8,7 +8,7 @@ class GitFilterRepo < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "2f40e7daa98d667dfdee97ae3ea9e589d42518baabf07d0fc128fe70f41cfe34"
+    sha256 cellar: :any_skip_relocation, all: "4e48f4861bc73a26d9b6b8851d3f12a2b4afef1ba5c6e0278c7843f1696570a5"
   end
 
   depends_on "python@3.10"
