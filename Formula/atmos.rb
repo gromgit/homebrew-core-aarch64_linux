@@ -5,6 +5,15 @@ class Atmos < Formula
   sha256 "dabae8c89e508bd150640ec562f2642854c50a8e6ffbfd881a701ae40394f533"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d2d003fbb7ddb1dc22e773c61ad9c01401a298d25b85d63799efd5a43bf94bd4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4bb014d110aec4558734b9633ad2c100bf405f08da0d551ad51f95fad4cf9662"
+    sha256 cellar: :any_skip_relocation, monterey:       "55ac80b2fca290e274507b030cdc5dc985ebc5ba8b9df429bd33e79ef97822fd"
+    sha256 cellar: :any_skip_relocation, big_sur:        "84de07ee38f35ad20e69bfcc0154b07ffb1953c5f8add55bd8538a0beeb05768"
+    sha256 cellar: :any_skip_relocation, catalina:       "58bdea796f0534bc1fdc5401a7fec949aecde8bf1d994a1a57f820c8242d3c7b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6b45ab6f6547f4bdf25f9a8696c2a61cbd46e0ce15effc87c5199958025c54f7"
+  end
+
   depends_on "go" => :build
 
   def install
