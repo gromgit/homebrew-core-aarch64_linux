@@ -12,6 +12,7 @@ class TRec < Formula
     sha256 cellar: :any_skip_relocation, big_sur:        "77c8c3e8b56d0b2c2e3d6e3c151d7bed827785f095e6289b232fd037c28d69d8"
     sha256 cellar: :any_skip_relocation, catalina:       "a68743209139f17b63fca209046b59b3eec18cf1fb4e97ff0ddcf6ee56c1cf6a"
     sha256 cellar: :any_skip_relocation, mojave:         "49975277f0afd12af94810a14dce5b5ddc9734d8d5dcb26c48652671efa4c38f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5fac6fd3bbd2f96be50814d9fe45de00cc657f2bc602ac3da67ed5741cc6f0f0"
   end
 
   depends_on "rust" => :build
