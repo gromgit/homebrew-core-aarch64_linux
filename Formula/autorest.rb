@@ -8,7 +8,7 @@ class Autorest < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "47002a936c14c2cf121e9ced43a0e352ee1cd51fef64dc4d2b7ac08d9486cbe1"
+    sha256 cellar: :any_skip_relocation, all: "c92b55de7a4de97510988760110201f12be5167efb92c4b6f8833356fa3c9c91"
   end
 
   depends_on arch: :x86_64
