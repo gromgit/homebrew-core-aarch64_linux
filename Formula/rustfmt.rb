@@ -6,6 +6,15 @@ class Rustfmt < Formula
   license any_of: ["MIT", "Apache-2.0"]
   head "https://github.com/rust-lang/rustfmt.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "afb003f601f7e97ce4ef1a4cf23f9e5b35eab087d31757b37c4ea804a278e274"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1047fcdd002ac5189641374ba680ea9cb92d13b52ced30698d8d3d8853ad7dd6"
+    sha256 cellar: :any_skip_relocation, monterey:       "e780b81a82b67a572eb2a46d7392db6f107ce1d4870e5d77ae169c0095d65dac"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2cfa6db0233217adb5d9a0f9ff64253afa137ca9b0983a5d332b0b7c9ca705eb"
+    sha256 cellar: :any_skip_relocation, catalina:       "4a2eae7078777ddb02514994cece25febf9600cc1c107b74a5f616dc93f5ffc6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "24bb85331af1fdf0aa6eebb41ee687254dba63ef921faade71752fa576b34fa1"
+  end
+
   depends_on "rustup-init" => :build
   depends_on "rust" => :test
 
