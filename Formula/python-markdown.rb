@@ -9,12 +9,12 @@ class PythonMarkdown < Formula
   head "https://github.com/Python-Markdown/markdown.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ecc5b68885a95ffd9f15eca4af4dead009d6c281e8b200736463e952d7a5cb70"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5e52a94d22cae9deb7a1acb182857830b6066fba2fd7cc4ff5523652fad99e47"
-    sha256 cellar: :any_skip_relocation, monterey:       "998853b31009384f9169c220c15f24ac6081ba910fa38318970836277c62de67"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6c984fc5878f5c11ccd94c5d135ad2cce0c01229c7f5aa7241b62e9cfb359bd3"
-    sha256 cellar: :any_skip_relocation, catalina:       "28dcd71857340fb4f04769cff395a25c62d4732d9ebade11c9e359a30e0a6e28"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "181c349d810f7be0801bb1611000ef1b428e16e684baaaf7c8a201c3458a5cbc"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a185b719ea180907172dc532619b7d8f537c39b313670caf747ec5cb65b0972e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "206bb9e8d0326b6832ef71e9833aed85427b644aefde375370a03e217c907d23"
+    sha256 cellar: :any_skip_relocation, monterey:       "7b27f2ea884b0a028259baf5d2bb18a3439065b82fc7a1ff7649df9041c9f216"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8693cd64c46b53aad595b4730b47a17cd9ff867e7bab2364aca05c1f83b1dab2"
+    sha256 cellar: :any_skip_relocation, catalina:       "20c03905cf6184166c3b5dc52729712a9fa704ea40f17854aa5431a946c4ed25"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "38987a75010f130e12a1130c01a179a39ad849647ae966a6634e8705b1c855ac"
   end
 
   depends_on "python@3.10"
