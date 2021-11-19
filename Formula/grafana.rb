@@ -7,12 +7,12 @@ class Grafana < Formula
   head "https://github.com/grafana/grafana.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "907f54774013f0d570ad9196f3279529dbb7e5ae9ec9d849ae1ffc795cf3e9dc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b157ec0185413d9a500dd8bfdf4aded71f9d62278a551b1639b800d69498a987"
-    sha256 cellar: :any_skip_relocation, monterey:       "5ed81d3657452d047d96f742b56ce95b12cfda1473d3923826bb1097a7c5b3c3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "94e8d555ec3a60a72556489d5f91f79511fdc2a96e55a85cd03cb61887f4958c"
-    sha256 cellar: :any_skip_relocation, catalina:       "68098c615647eb8d1a30bafa1474e956a12359a96691204e484df5adc1a3a840"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "283d51ec877c8231c41f9c251f89b16684749181fe4bcf3e4718a86a80046e9b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a82b7d31b1426ce2c88552567a1b4be7e7c9e09c50f76e245c6e118d2ec3940a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "657fef1c20bb4b3f2d9e8e16ae985d3ab902899159772bdcdf7a05d989464374"
+    sha256 cellar: :any_skip_relocation, monterey:       "c74796464be95a639f24dff3ac120399e1da3cd7493ed1efacfe3ecdef75a402"
+    sha256 cellar: :any_skip_relocation, big_sur:        "23f9a074b54ccc9d6456a672bf03b2ac2092eeb8160ec32bba5c826280a75360"
+    sha256 cellar: :any_skip_relocation, catalina:       "c22296bc6fb7bf0c21035374a210169d007c5810101ff821974af008f55f0c4c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "216e754d1d3598e0225d34af819d952be15140506f44689668c5a3726071b656"
   end
 
   depends_on "go" => :build
