@@ -5,6 +5,10 @@ class Fisher < Formula
   sha256 "6235cfc636c8d52f11feca9f4931656a9c6602659b06df8dba5a3606d37f8c28"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "958d97d06ad998382f7c9f77d7c4861c6b76542e4438660700fab7b2ddffb5f1"
+  end
+
   depends_on "fish"
 
   def install
