@@ -2,8 +2,8 @@ class Istioctl < Formula
   desc "Istio configuration command-line utility"
   homepage "https://istio.io/"
   url "https://github.com/istio/istio.git",
-      tag:      "1.11.4",
-      revision: "9f6f03276054bb62a1b745630322314ef14969e8"
+      tag:      "1.12.0",
+      revision: "016bc46f4a5e0ef3fa135b3c5380ab7765467c1a"
   license "Apache-2.0"
   head "https://github.com/istio/istio.git"
 
@@ -19,8 +19,15 @@ class Istioctl < Formula
   depends_on "go" => :build
   depends_on "go-bindata" => :build
 
+  # Fix https://github.com/istio/istio/issues/35831
+  # remove in next release
+  patch do
+    url "https://github.com/istio/istio/commit/6d9c69f10431bca2ee2beefcfdeaad5e5f62071b.patch?full_index=1"
+    sha256 "47e175fc0ac5e34496c6c0858eefbc31e45073dad9683164f7a21c74dbaa6055"
+  end
+
   def install
-    # make parallelization should be fixed in version > 1.11.4
+    # make parallelization should be fixed in version > 1.12.0
     ENV.deparallelize
     ENV["VERSION"] = version.to_s
     ENV["TAG"] = version.to_s
