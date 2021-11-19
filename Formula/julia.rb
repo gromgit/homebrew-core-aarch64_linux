@@ -1,10 +1,9 @@
 class Julia < Formula
   desc "Fast, Dynamic Programming Language"
   homepage "https://julialang.org/"
-  url "https://github.com/JuliaLang/julia/releases/download/v1.6.3/julia-1.6.3.tar.gz"
-  sha256 "2593def8cc9ef81663d1c6bfb8addc3f10502dd9a1d5a559728316a11dea2594"
+  url "https://github.com/JuliaLang/julia/releases/download/v1.6.4/julia-1.6.4.tar.gz"
+  sha256 "a4aa921030250f58015201e28204bff604a007defc5a379a608723e6bb1808d4"
   license all_of: ["MIT", "BSD-3-Clause", "Apache-2.0", "BSL-1.0"]
-  revision 3
   head "https://github.com/JuliaLang/julia.git"
 
   bottle do
