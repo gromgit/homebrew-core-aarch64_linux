@@ -7,12 +7,12 @@ class Lychee < Formula
   head "https://github.com/lycheeverse/lychee.git"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "fa5fc60ed01176f34aa9e83eda35fcaa099f338b1dcaf27fbd57fff4b4b0977f"
-    sha256 cellar: :any,                 arm64_big_sur:  "ca051953818fc0225798c9da1386ca123fe703072e663eb536742a16e9a3c8d4"
-    sha256 cellar: :any,                 monterey:       "3a7fefb067f893b85f5a8a41b0eadc9963b2f86763c0eb0732d174f2f7459cf6"
-    sha256 cellar: :any,                 big_sur:        "9cf953e7150a68d289afc6dc2c217a7fde47beba38f36923c56523fed33437de"
-    sha256 cellar: :any,                 catalina:       "1e86fdf493ac7a145f1a1b62eec6534c1912342fae1d3916fe7eee18e4a22fcf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "87922c0bfd94491dfb41c9ee4f4f71145b6f4e56223b4a288bbfc6122c231165"
+    sha256 cellar: :any,                 arm64_monterey: "21adc8780a508fe8b1658ee97c311872c70a4b128e1b418ed6c40dc31cdd8e77"
+    sha256 cellar: :any,                 arm64_big_sur:  "55b37f63dee5c3c3b5d5a9b3538c47353675fc1b073485e8d91b61366c70a16d"
+    sha256 cellar: :any,                 monterey:       "939d18a8a9b6ca1496b24346f7a295de70d3178084867464b306c0e796982885"
+    sha256 cellar: :any,                 big_sur:        "dc2fb24eca3febbc316863cda9eba189fa27114494f39cfe80e8cc4dda887aec"
+    sha256 cellar: :any,                 catalina:       "582e9d11bd9e6aa3ef090e57527639847687927a5cb64b3709c5e1eebbc21a1d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e3a0202d14cb9651be9201f324b5612a6cad5bee0747957b4d4094259583ecc8"
   end
 
   depends_on "rust" => :build
