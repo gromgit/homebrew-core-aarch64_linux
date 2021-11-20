@@ -10,11 +10,12 @@ class Pwntools < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any, arm64_monterey: "abf134f61d284e22cd44501aabccfa7baa5c2adf5faa6d3aaa48fb10cba15919"
-    sha256 cellar: :any, arm64_big_sur:  "5cc358992d6177a428a43659fc69cbd397bd603659d846239f6024c133b0761a"
-    sha256 cellar: :any, monterey:       "74ce5219ab986e793cb3b9dba4f0f0f666fd517218a80f4565f9e750f822813d"
-    sha256 cellar: :any, big_sur:        "966c6739490a9387afefa0d47ebcd6aa8c6ccd884c285c4a4f167880bbafe339"
-    sha256 cellar: :any, catalina:       "882c6972ea268aff52a7d04f558bd5fbae620deed690097c7cf3955ac591560c"
+    sha256 cellar: :any,                 arm64_monterey: "abf134f61d284e22cd44501aabccfa7baa5c2adf5faa6d3aaa48fb10cba15919"
+    sha256 cellar: :any,                 arm64_big_sur:  "5cc358992d6177a428a43659fc69cbd397bd603659d846239f6024c133b0761a"
+    sha256 cellar: :any,                 monterey:       "74ce5219ab986e793cb3b9dba4f0f0f666fd517218a80f4565f9e750f822813d"
+    sha256 cellar: :any,                 big_sur:        "966c6739490a9387afefa0d47ebcd6aa8c6ccd884c285c4a4f167880bbafe339"
+    sha256 cellar: :any,                 catalina:       "882c6972ea268aff52a7d04f558bd5fbae620deed690097c7cf3955ac591560c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8e77978ce54b7e18c9a7eed5e4eb099203a3f0f5caa62fcf572a9353c0cd22fe"
   end
 
   depends_on "rust" => :build
