@@ -12,12 +12,12 @@ class Kops < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4afe9602992c299ec9b1f669db3b531ad759ba9ace95af75dbb1d0e37a35e882"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7ee7828fed2bd73943b205df66999cf07c7ee3d4336f64c8f7f8eec783813130"
-    sha256 cellar: :any_skip_relocation, monterey:       "7f24cfcb67ee089498ca7c468ff50d4e5a93f6cdc2e1efacbae6f669f09ba0f0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "76f3897d3cc73a98334294c4f281f09e7a62e66bf41e814f8ba0657fa7d79756"
-    sha256 cellar: :any_skip_relocation, catalina:       "75e1cbda813e2001fc128f071ea51a23a0aa263f87001b2ed613a2a2c30493e2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "570ba96bc239787319e07f49f5f3732354f5ec5198482dca7d85e4d38a9bc998"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "728f7a598585765379e2c610a64c096bf7d0cfee1e807f1ad2d061c92f6bd207"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0905301963a7533d08b0f549f998165de0cef54f738215e1fe7b52e8ed172769"
+    sha256 cellar: :any_skip_relocation, monterey:       "1bb3648c8bdf1654599601cb8460e8ca87db4326010825355f7c1f2227333564"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e8064049597a3b10d43940bacd1951a69bddc31656a09e257700711a0530e22e"
+    sha256 cellar: :any_skip_relocation, catalina:       "826ebe6554810b9e853fd082acff0c40110dd431e36f362e2e761dde1d2148c3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "81e76844338bff74f110bb805f2d6522554d8b0e3dc47376144998023d60fb3e"
   end
 
   depends_on "go" => :build
