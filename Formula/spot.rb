@@ -1,8 +1,8 @@
 class Spot < Formula
   desc "Platform for LTL and ω-automata manipulation"
   homepage "https://spot.lrde.epita.fr/"
-  url "https://www.lrde.epita.fr/dload/spot/spot-2.9.8.tar.gz"
-  sha256 "b7f404bb90a335a5914384ecc3fc3a2021ff22c57ee97a40c07bb2ab40e20cf9"
+  url "https://www.lrde.epita.fr/dload/spot/spot-2.10.1.tar.gz"
+  sha256 "38002989fc8e3725841a0537665bb2d5dfc259d2e09358100322c38f4c7481ad"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -20,7 +20,13 @@ class Spot < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "24705073b0eafec8b6d70f979ac4fde1d273e7390f5dbacb7c0b1962fb1b9427"
   end
 
-  depends_on "python@3.9" => :build
+  depends_on "python@3.10" => :build
+
+  on_linux do
+    depends_on "gcc"
+  end
+
+  fails_with gcc: "5" # C++17
 
   def install
     system "./configure", *std_configure_args, "--disable-silent-rules"
