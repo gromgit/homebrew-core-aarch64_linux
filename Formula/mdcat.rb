@@ -6,12 +6,12 @@ class Mdcat < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6a0113dc7967322412ae35639aa2b704b3e05a98d19d85767e96c01583aeee54"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cdf9ad9ee87ee18d83029d1baa9cbb63c7317b3c0a9efa092782bb3e8b792e75"
-    sha256 cellar: :any_skip_relocation, monterey:       "1de44e18dd691d287efab8d44646be14965bd2a18514fe130e79618acd6a95d0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "df694ef2d2b10b2637ae41e2212a5314d073932483835731f3204979afd55aa7"
-    sha256 cellar: :any_skip_relocation, catalina:       "76a53e35a66a2e1e78d36ad7e53dc1f3b595c17e361c953dc23818f9f9ca6079"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c53dd8252ff09b44cfb8cf3134cb34159ed8e70aa1a5160088352ee090405450"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f7cf9e3a6c820001d2fee081d0692af92b3d3914dcbe014066435a21399347e7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5866969c2cb5f980e5aca15705777910c191ec4776bf8f66130f5c0ded0dc665"
+    sha256 cellar: :any_skip_relocation, monterey:       "67ec115b2c2339f137f90fd6071261f3a06e309f33a32ee90dc279337bcd1006"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ab32369da90897622719adc11f79f1612173362a631ae667021989dfccda15b1"
+    sha256 cellar: :any_skip_relocation, catalina:       "c0a107b3f597dd9e0777f1f91a4bfec4fd9cf06775d9dfa40f833c5654f667d6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "900aa2913e2dd8193f44930fa01fe48e3c48a66a690f4886d7165c44b9d5fa12"
   end
 
   depends_on "cmake" => :build
