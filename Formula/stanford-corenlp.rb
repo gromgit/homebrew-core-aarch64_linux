@@ -14,7 +14,7 @@ class StanfordCorenlp < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "facf0ff919c6466e09d692053a3774570a0840d766bc11161c1534facbd651fc"
+    sha256 cellar: :any_skip_relocation, all: "e02517aab8c6cf1a2de00f0ff9ae17c88f33237ae556706d35e3edc36d411cec"
   end
 
   depends_on "openjdk"
