@@ -11,13 +11,12 @@ class Opensaml < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "c48af4c61c2a3b0a6c6cb46f56b9b8d05f1f9368d27907319d885ea04a570b0a"
-    sha256 cellar: :any,                 arm64_big_sur:  "28d745aaa6bc776ee02233852c46e2aeb4aceb7bebb18544616636afeb61867a"
-    sha256 cellar: :any,                 monterey:       "c7f9c44ae738326f0366dde99338add598a3e591b884aef5b71989202b5296e8"
-    sha256 cellar: :any,                 big_sur:        "220a34c0915da2d3641b88d96615138e7a5341d4e21cfa654300a6ccab16651d"
-    sha256 cellar: :any,                 catalina:       "09eb04c9b5475a70c1cd95e13e349c30c650433a0908fb078cf99f7126c4c4c5"
-    sha256 cellar: :any,                 mojave:         "24938a715d29e9db821774514452b5b1289ce243c5a48c1a492286234ed8c945"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e53c8826b29cac8c08f2614cbf0bba2327982420ed7f0d3924149740858f21e5"
+    sha256 cellar: :any,                 arm64_monterey: "e6a5d7caddd133a1b4533322a9c2be90a6793f7f88da3727e9de3e84c5b3b4bd"
+    sha256 cellar: :any,                 arm64_big_sur:  "647a2ea6d83c6241687d510a287ba2f1c66d39e81c27662f5e3de493a39313cb"
+    sha256 cellar: :any,                 monterey:       "7088fd876aaca086bb9d4caf6e1a1fb20d13f1852eddaa8d02b20b9d59cc759a"
+    sha256 cellar: :any,                 big_sur:        "9f5d89872645f58df8fc02bf425b310df6353c43940a0df4d7d0cfd20e48afd2"
+    sha256 cellar: :any,                 catalina:       "0a96d46a06f13d8f5a2a0552f28a38122417ac9668a5ac7e261f0d3cef36a5f3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "96605b6bbff2f833df39964dced755d4f059713833c9be5456295dd07073b37a"
   end
 
   depends_on "pkg-config" => :build
