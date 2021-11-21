@@ -7,13 +7,12 @@ class Sqlcipher < Formula
   head "https://github.com/sqlcipher/sqlcipher.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "94ff442a23ddf3c91d50fc62fec0ddda40f5df41d5c4f2600a5a4f1d4ad8ffaf"
-    sha256 cellar: :any,                 arm64_big_sur:  "2395b5999cde9cd6c8f53dd595a2827d8e2bdef8b801879b753378728a3cc94f"
-    sha256 cellar: :any,                 monterey:       "8008b6ce1f68f7144d63ae9bdc26787715740b21c7f1d568c63e58f98384eb39"
-    sha256 cellar: :any,                 big_sur:        "97328f386addff936379b66ae032b3341cc6f047b7453e1a837cdc8a00b06653"
-    sha256 cellar: :any,                 catalina:       "826fa6703434de743eec33ca60db392fe772ace12e4eb3720c106d675c3edc70"
-    sha256 cellar: :any,                 mojave:         "123c63643cec4a0503993ba6f9a124a5f781db317c311103da82d91a895808e9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "994d4f361a64199f7330b1a3018f098ac9237a12580038eddd277f76d4665ac9"
+    sha256 cellar: :any,                 arm64_monterey: "d1ebc849953fce08b1f64fc5e7ccfafa89637c3427737fea0ffb105255c68939"
+    sha256 cellar: :any,                 arm64_big_sur:  "97ceef7f92c22f17d907f9e1aa530b920736c61eabc8355b04d423deac883ab6"
+    sha256 cellar: :any,                 monterey:       "e285802456eb8923bffdeb1bffd55fa244a6e0f1a059c4aef0e62dfe0ecfdac0"
+    sha256 cellar: :any,                 big_sur:        "1c013e2b27b25ad78a5246879d7ee328fce7375ee7ad67a2fe518ea064be3b2c"
+    sha256 cellar: :any,                 catalina:       "ac90cfc14325a2af557d9418d3cf52c74ebda41dab2611aaba3e3e28410252c9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "73aef4b1856454a29f3bc8a50ee75a2b36f92548c113cd04031ca22a665bf1ac"
   end
 
   depends_on "openssl@1.1"
