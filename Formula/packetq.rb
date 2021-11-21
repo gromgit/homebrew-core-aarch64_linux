@@ -11,12 +11,12 @@ class Packetq < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "daad15e1b55f8d9fb135177127a169470374dd5e4c8631b1722586d1c66af8a7"
-    sha256 cellar: :any_skip_relocation, big_sur:       "78b947bf8208aceefdbca0119ed141b5617347ce08f20ce6493157ab4a567c77"
-    sha256 cellar: :any_skip_relocation, catalina:      "e09c6588aa801951e518c10e09339d496fa23ab88c0a837a06b963bf6c6a5ba9"
-    sha256 cellar: :any_skip_relocation, mojave:        "cf369b7e772dd7a390ca50f68e6b8eead2448414353ce313042ecaedb2f6ee88"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "58bfb682012318c49bb013b791771f94896d008d77f0ce1bb189d13ab55b20ea"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c4aabb14f5045620a988da9e36766a4a755b80172bac18e328d6b8c97866b96c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "dd3f007444afb15a38d405e565cc6933820b5bec4b197947c98099209d860280"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "120a699588a29e106ad905ab89ecf695ddf14309b294226367afdfe7f002cde8"
+    sha256 cellar: :any_skip_relocation, monterey:       "ef968250dd6953a82f237a6b31503860ad0c05edf21d65cf8d62a75599e47cca"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b9a4c460d66722daf353e875130983c276a46349ce12ccc34d192f897d015838"
+    sha256 cellar: :any_skip_relocation, catalina:       "a568edf7e7c8ddbdc15ad4fccc1566a33fbf5998a10193c193733377891c9ce6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a86c2ae28e6cf69592d6117143ab7b2776bdaa367bbdb588516876e89e229314"
   end
 
   uses_from_macos "zlib"
