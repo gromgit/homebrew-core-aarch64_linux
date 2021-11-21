@@ -6,13 +6,12 @@ class Packr < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "91ef9a06865cbec47b550341990d78a1a1bc6034cb01ba9804d2c03d01dd1ce4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "42248acc120a492d9732361a70d87760d9041c5156373243170437c464eea152"
-    sha256 cellar: :any_skip_relocation, monterey:       "d4aa0ef71225440066c2fcef6f79f2df4f7b414fb4da12cb7b9232010f169c79"
-    sha256 cellar: :any_skip_relocation, big_sur:        "972c88a953ad8a1932f644f7cccd5c4f0d3909983192ed58f263855f36a28ddf"
-    sha256 cellar: :any_skip_relocation, catalina:       "1cd8e38f05663594e4eb91e994da4f09865121814d4e04ebc414911550c0a02b"
-    sha256 cellar: :any_skip_relocation, mojave:         "88a3cd339688b5ee3f30fe811691241f8daf6285ffaf6b772d216cfb4a961c3b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3b1a3af58213c6725820c48a835ca209f5eef51d1d0e24e47e8a82fc1a21bb08"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "17f7cbbcb3bec0a72bda849bc4aaab8f0cce5ad2ff00eacca19c7c5f23c2d8ec"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "795ec96787f9d2f6b53e074ad3cb13d131672e42dd4abd7f09f69be56f0a03d5"
+    sha256 cellar: :any_skip_relocation, monterey:       "71f0dfcdb4c44dd96d702f6a1244f633ff391ffe6b6626a58f006e418b2a8854"
+    sha256 cellar: :any_skip_relocation, big_sur:        "006868e5cf2c7e3cb2de845fd77be15d5b5c5fcc4c8a444ff69c90b89f507852"
+    sha256 cellar: :any_skip_relocation, catalina:       "ea3edf2b50873a10f88e2356706949fd99882cf16f03f789cf9861a3af8676e7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dd1a47213ff76dce87c982588748502fa04fde7e82392e72cc0f6bd10efd2f14"
   end
 
   depends_on "go" => [:build, :test]
