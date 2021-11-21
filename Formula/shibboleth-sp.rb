@@ -12,13 +12,11 @@ class ShibbolethSp < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "24226d9df8ff8cdcc52e79a7c223c44c216d78b0c3d30130b97affb014a1d205"
-    sha256 arm64_big_sur:  "9419b75809d2dbbfd2bae48ada293865da370f65da27c9dd4c774cc41b54da08"
-    sha256 monterey:       "38cbd93687f8dcc287dcb6da410b3383c59481369c91ac6eedf7329fa13342e3"
-    sha256 big_sur:        "bf144be06888e2b528dcb08c5cbc28fbc0b75fe3748da19d4707f00ecef3193a"
-    sha256 catalina:       "99ff6cb2607d142870f44cbcacdfdf88ed57d15e89e8696467bcbd3129e3328a"
-    sha256 mojave:         "55a51d5773d4a186687d905d58d44be92d6fa2ea1e5bbb8598535cc4f8772493"
+    sha256 arm64_monterey: "738bd343b9f76ecd309ab8ae3376984c01b3a5a8300d4bd91815a4035ac94b97"
+    sha256 arm64_big_sur:  "c809a0f2ce20af11fc0b15fd87146ac1606064c7a6b713b43b6d96723e3dad2b"
+    sha256 monterey:       "d5edc5708519b4dbe5e23f465c19909e9760e9d91970995dc1ecb31c668b438c"
+    sha256 big_sur:        "5d0b4c8fa81c68acba6283b76721979e985730fd8425c12c73b9c66740d7d70d"
+    sha256 catalina:       "2c64a07ede27423b2f21a93a7028c0071a60723280c0da53a1173be2a09268b4"
   end
 
   depends_on "apr" => :build
