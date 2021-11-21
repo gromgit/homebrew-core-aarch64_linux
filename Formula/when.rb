@@ -7,12 +7,12 @@ class When < Formula
   head "https://github.com/bcrowell/when.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a81c9f8df331f75089bb37fd5fba3c21b5af8cb78688aa581a0dc68576e6eb30"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a81c9f8df331f75089bb37fd5fba3c21b5af8cb78688aa581a0dc68576e6eb30"
-    sha256 cellar: :any_skip_relocation, catalina:      "8d8383bec0c3e96f4fa43ba2dc9ef211bd8e0904a5bdca8c55dc1f6a802d3709"
-    sha256 cellar: :any_skip_relocation, mojave:        "8d8383bec0c3e96f4fa43ba2dc9ef211bd8e0904a5bdca8c55dc1f6a802d3709"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4f0d85ac2cb2705e1d733a968530d190fac54796a70ba63d1010026b5ec76a2c"
-    sha256 cellar: :any_skip_relocation, all:           "a81c9f8df331f75089bb37fd5fba3c21b5af8cb78688aa581a0dc68576e6eb30"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f6c3589de949639d5c9c678d0d5c908d6e8a2cc2e582c4c2d748888f10a4a69f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f6c3589de949639d5c9c678d0d5c908d6e8a2cc2e582c4c2d748888f10a4a69f"
+    sha256 cellar: :any_skip_relocation, monterey:       "f6c3589de949639d5c9c678d0d5c908d6e8a2cc2e582c4c2d748888f10a4a69f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f6c3589de949639d5c9c678d0d5c908d6e8a2cc2e582c4c2d748888f10a4a69f"
+    sha256 cellar: :any_skip_relocation, catalina:       "791acd90b191f39a522ad0a9552fd90eec08dead44c2ac83e3430c3984ea333a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2cc448886e9bb194144c4881e6be4e3464601da149e3d5de7805f4af5c8d6559"
   end
 
   def install
