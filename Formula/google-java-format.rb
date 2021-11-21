@@ -3,10 +3,9 @@ class GoogleJavaFormat < Formula
 
   desc "Reformats Java source code to comply with Google Java Style"
   homepage "https://github.com/google/google-java-format"
-  url "https://github.com/google/google-java-format/releases/download/v1.12.0/google-java-format-1.12.0-all-deps.jar"
-  sha256 "85da82b9b71f04afcacda9d008c2d21540bf4fa259269efb5c561da2d4e11252"
+  url "https://github.com/google/google-java-format/releases/download/v1.13.0/google-java-format-1.13.0-all-deps.jar"
+  sha256 "a036ac9392ff6f2e668791324c26bd73963b09682ed4a0d4cbc117fd6ea3fe55"
   license "Apache-2.0"
-  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "62cbfed618c656c42a022ad696844a400f9e42313954221e2a3cf904a4fd9146"
@@ -20,8 +19,8 @@ class GoogleJavaFormat < Formula
   depends_on "python@3.10"
 
   resource "google-java-format-diff" do
-    url "https://raw.githubusercontent.com/google/google-java-format/v1.12.0/scripts/google-java-format-diff.py"
-    sha256 "f6d049b0a9d7cdbeca2d4cf79667ad95da30810ad67cc308f48e75f8565cbb64"
+    url "https://raw.githubusercontent.com/google/google-java-format/v1.13.0/scripts/google-java-format-diff.py"
+    sha256 "4c46a4ed6c39c2f7cbf2bc7755eefd7eaeb0a3db740ed1386053df822f15782b"
   end
 
   def install
