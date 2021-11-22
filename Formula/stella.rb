@@ -7,11 +7,10 @@ class Stella < Formula
   head "https://github.com/stella-emu/stella.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 monterey:     "0c17c5a1afa5fc194644ab3fcd3f71053f68e8bc974fdf4c4facd81288c574a3"
-    sha256 cellar: :any,                 big_sur:      "413ec06db90b9e5fd3f704e8181e50d4d39c88ff579c0e9dc523ee74b2ad3558"
-    sha256 cellar: :any,                 catalina:     "7765c2e205dc182aab86de151356ae6a586585a076cea5f9d0d82708447a0427"
-    sha256 cellar: :any,                 mojave:       "228ac66abf639dce733dce76c6cde14c122c84c12476c1663a64243ac609994a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "6d45dce649baa67cfad4b1f916a059b3c77c012513475afd0b95a13a8f092176"
+    sha256 cellar: :any,                 monterey:     "72e0d2b7a302b102a942fbc30d3b877792e676f2ea28608d874e64bf9cf88020"
+    sha256 cellar: :any,                 big_sur:      "0b8b9b3ea9c9e27a5274adc3a849c19fd41385fbc39a09d3b3af368399f97a06"
+    sha256 cellar: :any,                 catalina:     "bc346d37156a2a5adae7d11e52dfd3d4d0bfad70f68826cba5cd94ced66e59da"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "f5e2f0fe6837b8420b5ba6be490ee02eb965c6c3a129e8df8a6836797601befb"
   end
 
   depends_on xcode: :build
