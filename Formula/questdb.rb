@@ -6,10 +6,10 @@ class Questdb < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e85c4ce91eb9790759fadf401e8663f5cccedadbd1fbb116d914077e07846160"
-    sha256 cellar: :any_skip_relocation, big_sur:       "4b195e795c99440526d0a76c749f2f6bca8da7c2dc546f9b6e18cf2b156629a3"
-    sha256 cellar: :any_skip_relocation, catalina:      "4b195e795c99440526d0a76c749f2f6bca8da7c2dc546f9b6e18cf2b156629a3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e85c4ce91eb9790759fadf401e8663f5cccedadbd1fbb116d914077e07846160"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ed3f10447f582b734c2e053990abc117e28854637bace0488a590a652938b6b9"
+    sha256 cellar: :any_skip_relocation, big_sur:       "bf42676e75b468303fc50faa639ffe8c16e98dd6d1da57f5e523e3cea3a1e43c"
+    sha256 cellar: :any_skip_relocation, catalina:      "bf42676e75b468303fc50faa639ffe8c16e98dd6d1da57f5e523e3cea3a1e43c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ed3f10447f582b734c2e053990abc117e28854637bace0488a590a652938b6b9"
   end
 
   depends_on "openjdk@11"
