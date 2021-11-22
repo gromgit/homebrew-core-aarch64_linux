@@ -11,12 +11,14 @@ class Lcov < Formula
   head "https://github.com/linux-test-project/lcov.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "157d247e5fb878c1b0a4e58387a6f6f868df1e0b1cee820511cad5a34492abd8"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c3fe31eeb887f60b1e349c2fa13c09059cc75dbe49471a7da41a5cfc07dc3c01"
-    sha256 cellar: :any_skip_relocation, catalina:      "1c84487473440a6f7971ecf25f2b8b5022d23a230d16e863825b43944788e3be"
-    sha256 cellar: :any_skip_relocation, mojave:        "41ebe534e6bf4166e88d0eb59ac04d28df457a86fb514fc610ca485386bd06b4"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "9c3a3586283d61ae1f1ce30145b613ebdc50e28a7656cf4b4f4e935408f4c147"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c8ebcc60880b409d88b26b9d2b90938997b2ea6c9b0400684d166d920e547004"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f621d351d785429d067798c0d9a5c007faa2b2b27e17857035bd6ea3c1a18316"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "157d247e5fb878c1b0a4e58387a6f6f868df1e0b1cee820511cad5a34492abd8"
+    sha256 cellar: :any_skip_relocation, monterey:       "01e53a9291771d52ba491c4c616128b13fb6e13c8fbb89f64a6a246e1c9627d0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c3fe31eeb887f60b1e349c2fa13c09059cc75dbe49471a7da41a5cfc07dc3c01"
+    sha256 cellar: :any_skip_relocation, catalina:       "1c84487473440a6f7971ecf25f2b8b5022d23a230d16e863825b43944788e3be"
+    sha256 cellar: :any_skip_relocation, mojave:         "41ebe534e6bf4166e88d0eb59ac04d28df457a86fb514fc610ca485386bd06b4"
+    sha256 cellar: :any_skip_relocation, high_sierra:    "9c3a3586283d61ae1f1ce30145b613ebdc50e28a7656cf4b4f4e935408f4c147"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c8ebcc60880b409d88b26b9d2b90938997b2ea6c9b0400684d166d920e547004"
   end
 
   uses_from_macos "perl"
