@@ -6,7 +6,8 @@ class SpringRoo < Formula
   sha256 "37819adf23b221a4544a7b1e6853b67f695fb915f5a1d433760e04fb4b5d7263"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "a81e84e71bc6ef221f312d8854cd852a7052516d3fbd6ea98820ddcd12e0d061"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "d239f3051323b948718b57a807b27953636aa764d96e4ca8ec94b0e6e83d1514"
   end
 
   deprecate! date: "2021-11-18", because: :repo_archived
