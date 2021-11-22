@@ -7,13 +7,12 @@ class Cpufetch < Formula
   head "https://github.com/Dr-Noob/cpufetch.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "006ea29149309e84f5db5350a2ca1f25e5f677af04a96fa9edc9ac3a517829d4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a9261597d5753e1946399243d1a678ad734d04583769a7c44471f7ce9618cc82"
-    sha256 cellar: :any_skip_relocation, monterey:       "a01d0647f9f17c6721853b1a04545a1552ffa52ef3714e8df07ddd893fda973b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "79a1430cf484b5af27898f13a6cbfa50c45c704b114dc1422f033f540b9c9fdf"
-    sha256 cellar: :any_skip_relocation, catalina:       "38e7cd730de97b753d3c1cbf342d132c62dbc914e9ec17f775e55c2e8d78ad1a"
-    sha256 cellar: :any_skip_relocation, mojave:         "790d979cab962161c6b4e372f67f11c756f9f2f1404f39f61997d64a5dd1215e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "88d4ed1abfb99807493c94f56ed01f1274763c3db9e747c4cdc2bf383e5c40a1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4c67924a56c6098beebbecc16903b45b0893def8a247443054e8805befc3370e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dbb7d74ff6b3a74ab4d3835364e3f08d20b02496166f4b940466ee54d6e4dd80"
+    sha256 cellar: :any_skip_relocation, monterey:       "2f55b89631b7cffb0f9bcc5097fe9b3ecd057fa97291749ab624091e29ea7c96"
+    sha256 cellar: :any_skip_relocation, big_sur:        "436945327d23a07bc8c9802eebcc7b1dc37ff464d599da67be4bc73d30cef0f0"
+    sha256 cellar: :any_skip_relocation, catalina:       "584914bb5e2443fda98fe118b5588e49d13a802933d32229b134b33d30fd5c28"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1d478551d7320d3b977d64d86df98ca181db8ba37aef3654670ce522b378ad83"
   end
 
   def install
