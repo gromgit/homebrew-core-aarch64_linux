@@ -27,11 +27,11 @@ class Lammps < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "d42bf4cb9ed9e1daedcb51039d9e6f3bc9c2aa4af2ad733bc1f02bd03a7e0dc0"
-    sha256 cellar: :any,                 monterey:      "80bd301856a578caff37285c4b79e697dbe32cdca9bab7e349631613ed1135de"
-    sha256 cellar: :any,                 big_sur:       "a99b5725600ef7c9b071178be53b494912d0deee75ac6b34dc73c11d11021793"
-    sha256 cellar: :any,                 catalina:      "6d70939bd07b4792ab42979f6caab22af8a29b6e28405c458f8c5538dc5b281f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2b6979a6051a537b774b59692b5425bc6f974fcef2f46b57d27b1f683cb73455"
+    sha256 cellar: :any,                 arm64_big_sur: "d70926aca441eb764f2bb06fc24ea6668e192d977d938f80d03e36d0ca7edcd0"
+    sha256 cellar: :any,                 monterey:      "5ca9669e6ed7ecacf6071abd43f8864a3255e0bc20b413135e5ca3138513bb3d"
+    sha256 cellar: :any,                 big_sur:       "f76682e33b45cf0a0ce399e15ec84f13c26a43e51ab7ccecc823ac3edc1265b4"
+    sha256 cellar: :any,                 catalina:      "4b875ec8c8e097e9827c81a828f2c6d2c0a0f498060d0238dcff7ed136911170"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "218af2d8d0296d555f87dd1cd28ca62a07b8b3f8733c476844b2e1adaf808248"
   end
 
   depends_on "pkg-config" => :build
