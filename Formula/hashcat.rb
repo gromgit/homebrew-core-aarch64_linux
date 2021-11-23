@@ -9,11 +9,11 @@ class Hashcat < Formula
   head "https://github.com/hashcat/hashcat.git"
 
   bottle do
-    sha256 arm64_monterey: "548332afa0203273e4d9a1a52409236142e24eb7e747a8fd33b4a9b298c9ef46"
-    sha256 arm64_big_sur:  "7b9727bdfbc0a602aa7ce3b0430b0d12fddb46a78e7f9077d79a1cf6dbbc0313"
-    sha256 monterey:       "0736726f1d60e51e6c42b8cf34dd87fda5dfa4924cd3d892eda6f4f698d4da86"
-    sha256 big_sur:        "21a36b5a036e7f52c7bc47427d0451a33abd3ee08066961c33bc0f04494af847"
-    sha256 catalina:       "84636fb6c2606364c8516346782758641c0c5bb5567936ada4fa2504ea75307e"
+    sha256 arm64_monterey: "fa6cfd37e7dcc83390159e971d314cde0af53ab58e41c8f669919d8db1acd1f6"
+    sha256 arm64_big_sur:  "9407d08fda25cba3b7500bb0d6b99823b325f6b1302b96203b44d46052b43df5"
+    sha256 monterey:       "2943213fd5cf7d331331d734c059efca5031ea913f434b9d3e420c9b89d32870"
+    sha256 big_sur:        "50bbfbedcbbefcc4d0bda34f828eca5061a993631a4bae85d78abfe0b119556f"
+    sha256 catalina:       "455a0e164a50caf10908da5ef73322bf19de286601a44a9e6e75d1ebcb010ef5"
   end
 
   depends_on "gnu-sed" => :build
