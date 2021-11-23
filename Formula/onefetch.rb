@@ -6,13 +6,12 @@ class Onefetch < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2ac61a91d933db279540829d7a50eedb3e80b2d93aca42871a96c209defbc400"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "058c97bfad7e60faeed7a6335ea8e9896f90f7a34fd0a17726d455643b16c0d5"
-    sha256 cellar: :any_skip_relocation, monterey:       "1a6195c8a955806f227a0280f386a82b743214c69a2659b4713e75a39760b5cd"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3c478262017e9e019e0c2c42f8cef1be31ff8d336afdcf77476d0c72afe43810"
-    sha256 cellar: :any_skip_relocation, catalina:       "a79b95318ad14dbea71093af6dce7c2f5c945b2bfc6c5b44e2f0b54805e90d4f"
-    sha256 cellar: :any_skip_relocation, mojave:         "af8f091e15c4ffc30bd74e55b23710eabedd6f3217a7eb4afb5fc261687de42d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "de7373759f68650076a23bf98cafc9910f22362b84fb2f001aca4d7c6e47383c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "14329e52884db110cee66f01adcb3b8eacb727ee89168babc58048bb5a5a5d01"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ff6d677011879fe9cd3b8b6dfb6b69bc0e6ff2ab7de8273ced602e243530841e"
+    sha256 cellar: :any_skip_relocation, monterey:       "506ac362844e2abacbd75b5b863309419e2a03eea42c201dd6faed1b8624b4e0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "eeeb2f6e74a243573259be8a8342bac4a6c638063dd2364980423f1fa10f04a8"
+    sha256 cellar: :any_skip_relocation, catalina:       "88c955974088f0ee61033b21b2e8bfb7950964a4993ec8aa1cd0140787db67dc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "370515a1bae2b42bfd0a92d9f9d8ca7127dd752ce0bc936c1aaac20a1cbe71da"
   end
 
   depends_on "rust" => :build
