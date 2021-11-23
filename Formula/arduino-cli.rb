@@ -2,8 +2,8 @@ class ArduinoCli < Formula
   desc "Arduino command-line interface"
   homepage "https://github.com/arduino/arduino-cli"
   url "https://github.com/arduino/arduino-cli.git",
-      tag:      "0.19.3",
-      revision: "12f1afc2c1dee08d988974fe8f80e849f7ce4681"
+      tag:      "0.20.0",
+      revision: "553c63759665c0dcc9cfb2513883085c26f2670b"
   license "GPL-3.0-only"
   head "https://github.com/arduino/arduino-cli.git", branch: "master"
 
@@ -22,8 +22,7 @@ class ArduinoCli < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "9467a330e3df2f50d077c19af97e6a9cfa2e9a4546494f281c306a93450ca672"
   end
 
-  # Switch to Go 1.17 at version bump
-  depends_on "go@1.16" => :build
+  depends_on "go" => :build
 
   def install
     ldflags = %W[
@@ -49,7 +48,7 @@ class ArduinoCli < Formula
     assert File.directory?("#{testpath}/test_sketch")
 
     version_output = shell_output("#{bin}/arduino-cli version 2>&1")
-    assert_match("arduino-cli alpha Version: #{version}", version_output)
+    assert_match("arduino-cli  Version: #{version}", version_output)
     assert_match("Commit:", version_output)
     assert_match(/[a-f0-9]{8}/, version_output)
     assert_match("Date: ", version_output)
