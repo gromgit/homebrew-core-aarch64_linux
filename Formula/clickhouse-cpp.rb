@@ -1,8 +1,8 @@
 class ClickhouseCpp < Formula
   desc "C++ client library for ClickHouse"
   homepage "https://github.com/ClickHouse/clickhouse-cpp#readme"
-  url "https://github.com/ClickHouse/clickhouse-cpp/archive/refs/tags/1.5.0.tar.gz"
-  sha256 "bb6f268f9c788deb9beccb0b05c2caccf77b141afa408343e09993f12bff55a9"
+  url "https://github.com/ClickHouse/clickhouse-cpp/archive/refs/tags/v2.0.0.tar.gz"
+  sha256 "ea9f068f874d4f678dd23aec1bda414df16c9a869101438fc7ec195d0b5678f0"
   license "Apache-2.0"
   head "https://github.com/ClickHouse/clickhouse-cpp.git", branch: "master"
 
@@ -18,6 +18,7 @@ class ClickhouseCpp < Formula
 
   depends_on "cmake" => [:build, :test]
   depends_on "abseil"
+  depends_on "openssl@1.1"
 
   on_linux do
     depends_on "gcc"
@@ -27,7 +28,8 @@ class ClickhouseCpp < Formula
   fails_with gcc: "6"
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build",
+      "-DWITH_OPENSSL=ON", "-DOPENSSL_ROOT_DIR=#{Formula["openssl@1.1"].opt_prefix}", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
@@ -84,6 +86,7 @@ class ClickhouseCpp < Formula
       add_executable (test-client main.cpp)
       target_include_directories (test-client PRIVATE ${CLICKHOUSE_CPP_INCLUDE})
       target_link_libraries (test-client PRIVATE ${CLICKHOUSE_CPP_LIB})
+      target_compile_definitions (test-client PUBLIC WITH_OPENSSL)
     EOS
 
     system "cmake", "-S", testpath, "-B", (testpath/"build"), *std_cmake_args
