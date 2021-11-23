@@ -9,12 +9,12 @@ class Conan < Formula
   head "https://github.com/conan-io/conan.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5b683c7a6e672ca2c1dafa900efa02347113d61db1955401656f842656c324c8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "098e3741c1117221c4d1972a0cfecafc2f62acfd4fb6d307a39cc0929d323c3d"
-    sha256 cellar: :any_skip_relocation, monterey:       "99d008e4c70a5d65eed0f2e5a8be87c5e1ead2447c077a948c042ea65abb4576"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5789e914f6f175cdbe3d8cdb54e48f7cf82940b21f4957b51906f9c441164b4f"
-    sha256 cellar: :any_skip_relocation, catalina:       "d668a6675e693fd73efa599b1b6295e9afac5e7f4badf8859bac547aa384306a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fc8969b98c2bb5f8589ef83a178846722096c5668a0b435bf648929719007eec"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9dbbc80ac722690c6a2572644a4cab192578d41cda97cad82636ac0bd92cbdab"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "705eeff26808fdea957ff40629ef216b8802fa240a293fdac75c27609ab522f5"
+    sha256 cellar: :any_skip_relocation, monterey:       "6d7d99b095099e4564e1f5d6d6236485395db1e5402a8f5601618a59f3626911"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b51cb9046e6aa465ec26e1a01e66693fcb2b8d5af0f35a36405978c37e13e78a"
+    sha256 cellar: :any_skip_relocation, catalina:       "5e9a9651fc3eca22ed969f9bdf0d0ec5c9212069d5056e995bd0cfaea6526bac"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7f70963d2b73ee3e0b4f5ceaef43100d87407126060d02795f988bfa9cbf49b5"
   end
 
   depends_on "pkg-config" => :build
