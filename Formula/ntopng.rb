@@ -15,10 +15,10 @@ class Ntopng < Formula
   end
 
   bottle do
-    sha256 big_sur:      "1f0fc365c6ce9765f3457e3fd610494bb135db0e4970365de6dee02ee6a82ef6"
-    sha256 catalina:     "3f66b1d9932cb383bee198896deec6ebad14af61d84e211a511546505986fe73"
-    sha256 mojave:       "72411fa027ffdbf74e99c030c28f1816df70b3c640cce0465419bf821f0df379"
-    sha256 x86_64_linux: "ceced6dd2af35eabe2d0c0d3f90fd201597f3f6abd5ef483b8cb1da3b3fed7c9"
+    sha256 arm64_big_sur: "e0d1448d1c891f910c2030a8acec578f6b4d3eae74626688584ab472a5884445"
+    sha256 big_sur:       "600e95026b9fe50bf256a1188f3c5488dd8eb2c478aa041a9698796cf2a0ab45"
+    sha256 catalina:      "34241759200243e7ba06a85aff12a02ebe13167fafcfd35e3ab74d202075216d"
+    sha256 x86_64_linux:  "6807697535223ab5df55cb90700f9a7811f9bdb1aa72fa8ef6405be03a279b2e"
   end
 
   head do
