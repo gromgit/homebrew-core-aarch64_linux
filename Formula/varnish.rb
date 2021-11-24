@@ -12,10 +12,9 @@ class Varnish < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "f3430a0d15dcf0f3c49901d836df00802e07e49e50cf843cc60797932105aef6"
-    sha256 big_sur:       "04dab009e3b61c2339cf91324869ac28d48643f24bfb6e7de35fdb714eacc36a"
-    sha256 catalina:      "04a13eafe484743944404dbbe132ba7148bb1a4a44f30a4d6df55e94d709dd89"
+    sha256 arm64_big_sur: "872fa70f10fdd311c2153b21ec78b9c8e2b12e55c9faea6811e5ea0473221ec3"
+    sha256 big_sur:       "be136ac2e37cf3003e9da212df1d3e426cca20933eba4bec7562c7f707f677fd"
+    sha256 catalina:      "dd24b293e7e0067b06cabacd5f4632a6e74585d6fa006e81357451b33266d71c"
   end
 
   depends_on "docutils" => :build
