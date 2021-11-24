@@ -18,6 +18,7 @@ class Libsigrokdecode < Formula
 
   bottle do
     sha256 arm64_big_sur: "0ef77c40a057d58ac1c991d69b86eaae9685f3a06a69f83a7905a0f874c20bd2"
+    sha256 monterey:      "67d2ea9ddcbc9a4fd79fdb1863e9ed20aa0d60fc563af2fb44a6949cf0918e1c"
     sha256 big_sur:       "e28391425f551996a4690bb30fdad8101f61d13593c2e1c58980ba5dd855f927"
     sha256 catalina:      "9f876cea7ee66ad040de81968869f5d9bbc2193f296aa72a43e7ec5617b708c0"
     sha256 x86_64_linux:  "90aa200a27552e7f3f3fb3b7d56e44519add7573a68842da92a3cecbb7550cc3"
