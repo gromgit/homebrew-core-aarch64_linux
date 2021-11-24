@@ -13,13 +13,12 @@ class Alpine < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "561fc8ac4543eda8d811f3105107c3746ad42be24e8496e18c95c22a5c6f1df3"
-    sha256 arm64_big_sur:  "582a949310304de5e5be76778082fbf28b4eaaabe601e47cc9a5fdd8cd5d9d11"
-    sha256 monterey:       "fda6610394675480b16692444e079384b4f4f196cc49a54d141944f0bc93e292"
-    sha256 big_sur:        "665cbc225d2214eec23be609aa4e2bec422b828777bd11b9c64f50b202fc3f6b"
-    sha256 catalina:       "bc7aa25d88c44fc92fe74fbef139588917066a5c0648e4cc03565fe4cd095ff7"
-    sha256 mojave:         "8d2da04c056a637f0e437550e49c3fb4e7d0145a1efc28c59bcfe0e0eee8f519"
-    sha256 x86_64_linux:   "558d4c764c3d6a937a4ff500644909c26a10c783ef2e2d8458c6ab5ee5b33eb5"
+    sha256 arm64_monterey: "3a621168a6ff0929d1c7b96f90dc615d7b2c660ed2265610909d4d9d2936c4d6"
+    sha256 arm64_big_sur:  "5e75a022adadeb7ee0dd88e659d942b3b7f0bafcad8187f047003bfb890b4f57"
+    sha256 monterey:       "eed2a5fd405f54e9a21d46a47420a958ff39ba766b0dccfa943a1539b91b8161"
+    sha256 big_sur:        "05dacac37d8b60fbc1fa0948616ee1d60217d5f875cd565760c8ab15527bad15"
+    sha256 catalina:       "d25bcb132a6750abd2f584c19b8297b57e4439cb4f72f9b38678c499e3346096"
+    sha256 x86_64_linux:   "e3116ae644715c257f63dc8ce743a0a4b7b79de5375c349db0a9e942b8c1cb5f"
   end
 
   depends_on "openssl@1.1"
