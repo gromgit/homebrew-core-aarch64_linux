@@ -5,6 +5,15 @@ class Symengine < Formula
   sha256 "41eb6ae6901c09e53d7f61f0758f9201e81fc534bfeecd4b2bd4b4e6f6768693"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "abe08332bac543566383c8db4f39281f000af279aa0dc49f8ba270f6c2575aba"
+    sha256 cellar: :any,                 arm64_big_sur:  "7326b614f16bfe94f168093b138f8a5ea64d1c26375edc80494c14b2f71919d9"
+    sha256 cellar: :any,                 monterey:       "da5f894beea834d4736105580d896218e62e470e3af4004f46bbdeabf94415e8"
+    sha256 cellar: :any,                 big_sur:        "8797e85c5af2516586b9b2fd3c8510dc714616e08642dff3d9fa6cf49fc969da"
+    sha256 cellar: :any,                 catalina:       "99ef93943b81e12248e9ccc1ae8cd391e28802915ce86567e67b49986efb0a9e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6c6191c7d326ae878fde11604f09887c7b5a6b7aa579755cfc0b4672b752afdb"
+  end
+
   depends_on "cmake" => :build
   depends_on "flint"
   depends_on "gmp"
