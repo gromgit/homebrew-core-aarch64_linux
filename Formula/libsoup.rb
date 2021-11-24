@@ -7,6 +7,7 @@ class Libsoup < Formula
 
   bottle do
     sha256 arm64_big_sur: "9c3deeddccac3804d1e5be29a7b0cf0296b259bbb0be6fdc0443fae3d3f093c6"
+    sha256 monterey:      "e92e936119a97997a43a46aa629fcb9e567f7f60ea6f7acef8a460b047477874"
     sha256 big_sur:       "6e4cbcf5acb86f997c8d954c8a98921654efd397f444ea396552c47937bf6e3e"
     sha256 catalina:      "55204e3bb0b2860855a5cd979484b79e26bb5b88ee4d30336a476ab1d9e90a3f"
     sha256 x86_64_linux:  "2a40268601402ca904087a607d19498bf15c12aef17ef32f938650e64820e01c"
