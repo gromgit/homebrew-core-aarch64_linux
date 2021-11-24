@@ -11,10 +11,9 @@ class Sonarqube < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, big_sur:      "0129761b88551453539aea7dc7267b0d92cb84ee36417b64f650b89ab626d112"
-    sha256 cellar: :any_skip_relocation, catalina:     "0129761b88551453539aea7dc7267b0d92cb84ee36417b64f650b89ab626d112"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "68e8afd0a5f98e6329461fc53a1bdf3012541b45ee67441e0ecafe31dbb623c3"
+    sha256 cellar: :any_skip_relocation, big_sur:      "4ee7fd481ccb4301bb547fb7830ec7dd202959859c2404b753f5ed7ce02ca5aa"
+    sha256 cellar: :any_skip_relocation, catalina:     "4ee7fd481ccb4301bb547fb7830ec7dd202959859c2404b753f5ed7ce02ca5aa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "5bd7b5e142d30a1caf30979e5e077f462e076540c514505d354df4625e2be67d"
   end
 
   # sonarqube ships pre-built x86_64 binaries
