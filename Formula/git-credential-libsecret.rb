@@ -12,6 +12,7 @@ class GitCredentialLibsecret < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "51c13772e5cfa3df13c23d63b3b899d3f0d2bc2ddad87d16d444fb56edc036d5"
+    sha256 cellar: :any,                 monterey:      "555b0697b9e405745296ace58de78add665fc7134cb66b46c68bddbd95af1157"
     sha256 cellar: :any,                 big_sur:       "dcffce8ffe455fee1cbb3c9c7a44ca2dcc64bca6aaac58d22776710e8c16d597"
     sha256 cellar: :any,                 catalina:      "56e851519c6c1f4018ac7971652dd8ad383969f9b27990e1adf74a2581b9e8f9"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "b8512f6163cef92d6f337f977137d3529585c350d0fdd73ce99bf230c11e3d6f"
