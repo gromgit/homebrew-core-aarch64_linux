@@ -18,14 +18,12 @@ class Uwsgi < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 arm64_monterey: "8dddd4ed44cb3daa458eeae7060551bbfd479f8d3863f896f80eb821d24ef877"
-    sha256 arm64_big_sur:  "4326330a1880f7901c4168d85134a37f44de0e786e5fe76a9e9ecd16ed833a58"
-    sha256 monterey:       "fe3556331a8a1b1b20b701de68a214903034fc924c7572ffde6cb47c2c292a57"
-    sha256 big_sur:        "dd093fa094a07dba5ac53f040eaed23a9b61adc80b6cc50de246d160fcff0a34"
-    sha256 catalina:       "8194d4a365e0ce4d3ee5fd9764d008c6d0aabf6c804414d5a6b0733295f9d101"
-    sha256 mojave:         "2def48a9cc74853449722f5dc51a0224956d21906d8ff35e73a45fab3fc3faef"
-    sha256 x86_64_linux:   "acb0c806523fc521f4c703b5fe952b488f473a5eac99d5c877ac2fec2a117782"
+    sha256 arm64_monterey: "8165b1f5c4e155fbb114f1f7dfa02802528531874c5364bb44acb21d13d6f284"
+    sha256 arm64_big_sur:  "26fab6fdc9ceeec301ef5fd5cbcfadfcfbe7166ef327229467ba90c6a787a4e6"
+    sha256 monterey:       "ad2fae7eefbe577c898841750ce6867e73185445730f3ff974e135ab57b00e99"
+    sha256 big_sur:        "a2a58236a725f7b14d68b0cd5defb7b186827b7e1008f6b8ea118f9b5365c524"
+    sha256 catalina:       "32b2ae6a83e6b18be219052bac8dee129eef3aae9881a455486abaa0d3e3c904"
+    sha256 x86_64_linux:   "ba0b90b81f4b8bcb207ccb2b473f47fb0d9facb0520a0af5824adf4ed486a665"
   end
 
   depends_on "pkg-config" => :build
