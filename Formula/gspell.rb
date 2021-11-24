@@ -8,6 +8,7 @@ class Gspell < Formula
 
   bottle do
     sha256 arm64_big_sur: "b416223cc5ef39e22d9fd2bd38249950887c939d5c8289736ddd83ecde4db36a"
+    sha256 monterey:      "28cb639653b29a411a0290558fab64bf136db226b05737ba354f5508dc058a96"
     sha256 big_sur:       "fcff5951ae4c5e194de05634549b0a8204b32cd7bd68f6c962e5e0916eed7879"
     sha256 catalina:      "4c226894cf20ba3dfcd3c50ec596f5f7dce6fa6383b1f6b3b78becc4753381d3"
     sha256 x86_64_linux:  "281e242800bb9f73d4c1889680a329da75e9640131ca58743874f9d2e1d7c354"
