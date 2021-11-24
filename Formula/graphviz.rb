@@ -10,6 +10,7 @@ class Graphviz < Formula
 
   bottle do
     sha256 arm64_big_sur: "4a6dd7890567c6160081eec04780b9de119dfe38daa8eec70ef6928be209ab65"
+    sha256 monterey:      "02b28fe74035eb68b2b6ee5e6e9d7ae16e4c6e705c4e06ba2a5735f80b67b3e8"
     sha256 big_sur:       "208fed06d55c3d75cae101eed31a264cf934d74e47bb5adb6d535e5bf602299f"
     sha256 catalina:      "41bc1b1864e9f41f606684f6cbe6648ee40bf11d81271eb82f64a8faf3edd316"
     sha256 x86_64_linux:  "a7e9e6f7f3fe6fb6997c51cbf267d844ca4076bd655339767395fccfd2b6cfe3"
