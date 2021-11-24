@@ -13,12 +13,12 @@ class Postgresql < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "035d8fe63fd8326dce6a671b1d32f613127dec0cd33b30830642ca309da2f3f2"
-    sha256 arm64_big_sur:  "e905b0b8d4b0681ee61ddd2a1fdf1025268d2cc161e05a3db4dd5a7eddf64d17"
-    sha256 monterey:       "332bbabda4a5562cb23241fb044aa9b54a43c4fc62fe89658a167154baed638e"
-    sha256 big_sur:        "b3df3ebabcc75ab5b7a43f11fc8d0a49d455e40773eed69795acac597851c307"
-    sha256 catalina:       "f665a6eea9351256f1d3b2d0a15d607b3783747f75bcb4956ada75d8762bc855"
-    sha256 x86_64_linux:   "eb8a22f41afeefab9896ab9756cf5db5bf73168685d34c0f2deb2f8738664df8"
+    sha256 arm64_monterey: "6e6f3099ad1e64fbdc9dff2152c33a2f01743d2010330bcb34cefe13052fa228"
+    sha256 arm64_big_sur:  "d75aee6c8beaabf4add33f0f77f150b13523ffc21f6b72fd2a3c1ea0b7095362"
+    sha256 monterey:       "027c8b48406c3d732241426e0f5d2caf9f48cb4d2d38610b8f5d46f0adf7a89f"
+    sha256 big_sur:        "b207e5d55b0696b3b1dd649b4496d8213c933304b2b85e1913270f0834167b7f"
+    sha256 catalina:       "7708c5cd803ce6bc1481527ecff0ad387d7489e71a3da47140768995bed3e145"
+    sha256 x86_64_linux:   "37477f8fd9f0fed2956558ad9f7169123200e6761a65936e8732a3a88d95c3ca"
   end
 
   depends_on "pkg-config" => :build
