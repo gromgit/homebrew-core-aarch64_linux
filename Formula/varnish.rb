@@ -13,6 +13,7 @@ class Varnish < Formula
 
   bottle do
     sha256 arm64_big_sur: "872fa70f10fdd311c2153b21ec78b9c8e2b12e55c9faea6811e5ea0473221ec3"
+    sha256 monterey:      "8f443971234f9e3a6039690af11ad6d8bff8849e12a5501785c079f8941e00ee"
     sha256 big_sur:       "be136ac2e37cf3003e9da212df1d3e426cca20933eba4bec7562c7f707f677fd"
     sha256 catalina:      "dd24b293e7e0067b06cabacd5f4632a6e74585d6fa006e81357451b33266d71c"
   end
