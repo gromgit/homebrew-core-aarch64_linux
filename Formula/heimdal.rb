@@ -13,14 +13,12 @@ class Heimdal < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "264193a55098d1bed1a757b6cba27e314a6f7ded203753661695287e78cf9661"
-    sha256 arm64_big_sur:  "4f9d35b8518b4dc64f3995d55a8afbc532a69d3129723ecda4afcfa874c4f371"
-    sha256 monterey:       "28a1bb65ff722bc70c0b43c87095eaa9a7c3691385cdad1c1a02a6cc81c68e1d"
-    sha256 big_sur:        "8908f59611a4a8140e47e938019691611c5e2c168ae0df3060e3729f941dceab"
-    sha256 catalina:       "dc1ffe6fcbf8522c3c1720c44311fb6f183dfc2cf566a7a5ce0bc7064efa5db5"
-    sha256 mojave:         "8458b10c77f8db149e1c6853aa709c65551b2c00033ddc447e67b8d90665faad"
-    sha256 x86_64_linux:   "27274f62e9071aed890bcf71a83a7ecc8362904432e9e04734f9a0d86fa8cf99"
+    sha256 arm64_monterey: "ca2abda2838279230776bba8fdb40cc49b7b94b0efb604005f7f1a168c9de32f"
+    sha256 arm64_big_sur:  "dca8fd3504c57f0825dbf60ec136292d2861d61b8a5837102689e08c72da0ff8"
+    sha256 monterey:       "ee8a3f90eabe04a9ad5ec050ad0363d1513c632479d7aa2793b77dbf8b88c19b"
+    sha256 big_sur:        "29d91fd8667d520f8061f8f3d6b2d903d916b6cbffc3794b9489172af00bf8d2"
+    sha256 catalina:       "d919e8aa4fd538bec0e26ed00623119e10631eeb2df25796fdb20849cb6e90be"
+    sha256 x86_64_linux:   "cda884fdd14cd54ff9c41866adbc31f86c3165f351b564ab93013c7ab860b8b3"
   end
 
   keg_only "conflicts with Kerberos"
