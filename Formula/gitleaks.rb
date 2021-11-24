@@ -1,8 +1,8 @@
 class Gitleaks < Formula
   desc "Audit git repos for secrets"
   homepage "https://github.com/zricethezav/gitleaks"
-  url "https://github.com/zricethezav/gitleaks/archive/v8.0.0.tar.gz"
-  sha256 "6643ad25a5f5b42df0835b770848aef1993d770f09cfc9a1e6bcadcf71d7a2cc"
+  url "https://github.com/zricethezav/gitleaks/archive/v8.0.2.tar.gz"
+  sha256 "db80329125656dc1c5f733a298c6c8132b81c678662ce89337782e5bb6b57457"
   license "MIT"
 
   bottle do
@@ -15,7 +15,8 @@ class Gitleaks < Formula
   end
 
   depends_on "go" => :build
-  uses_from_macos "git", since: :big_sur # git 2.27+
+
+  uses_from_macos "git"
 
   def install
     ldflags = "-X github.com/zricethezav/gitleaks/v#{version.major}/cmd.Version=#{version}"
