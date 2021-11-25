@@ -12,11 +12,11 @@ class Libosinfo < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "1199868b862e37760d20b26afb666460dd3d3104a9f21861b8265c86085e47c3"
-    sha256 big_sur:       "54aaddce26d9b06828248633b5e1eddfc670ec920c30fcf8bd8b2b7022e5243a"
-    sha256 catalina:      "dbdc6c6b8c1135795a1d160976da8d7c6f95de6cbf0533731e602472330bf92d"
-    sha256 mojave:        "b482b0cd02bf75b2d528cf2d691904ce85826512a0df03aa921564034eb4d1db"
-    sha256 x86_64_linux:  "c5d49269e114512e1a8248673054cf561f0bdbe8e2e15ee591238321496a6164"
+    rebuild 1
+    sha256 arm64_big_sur: "0004d1a28d83410254c210d74f984e0fe3942a538a4b251f6651c0276841360b"
+    sha256 monterey:      "ec171b0891c3ff221daa1f9505df4f658f56533d80901ea161291bcff1ea1114"
+    sha256 big_sur:       "0dab96930b64dea3e2768f43050826f4fdf8246e83b93d6570691e698bc75186"
+    sha256 catalina:      "b2b611924d4682c845381072c7e39f76806aa0f00e3b973aadf943193f6ff999"
   end
 
   depends_on "gobject-introspection" => :build
