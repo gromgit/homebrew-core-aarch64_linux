@@ -17,6 +17,7 @@ class Libosinfo < Formula
     sha256 monterey:      "ec171b0891c3ff221daa1f9505df4f658f56533d80901ea161291bcff1ea1114"
     sha256 big_sur:       "0dab96930b64dea3e2768f43050826f4fdf8246e83b93d6570691e698bc75186"
     sha256 catalina:      "b2b611924d4682c845381072c7e39f76806aa0f00e3b973aadf943193f6ff999"
+    sha256 x86_64_linux:  "b7e0eb43c6c995d960813a26329282cbca7b5cda460a4c7acc6441d00e4012ee"
   end
 
   depends_on "gobject-introspection" => :build
