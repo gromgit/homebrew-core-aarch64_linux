@@ -14,6 +14,7 @@ class Gupnp < Formula
     sha256 cellar: :any, monterey:      "e928003c57d8a36534c56b9ed3a96c9e0f98f4a4a4570adbccb759d4714ec93c"
     sha256 cellar: :any, big_sur:       "fd8883416f1de59ab46c792571554847f1285d3a5c27c893084c56b18170fba6"
     sha256 cellar: :any, catalina:      "e499f57ec7abb5f9e0b88db49d381edf5ade005b71e730aee4d32efc29eb18d9"
+    sha256               x86_64_linux:  "b34977852d61556b06fa2a2d8067df3ffa6fe11fbb1fb90e1745208f0b98a3bc"
   end
 
   depends_on "docbook-xsl" => :build
