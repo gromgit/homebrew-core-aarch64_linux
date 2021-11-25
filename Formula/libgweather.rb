@@ -7,11 +7,11 @@ class Libgweather < Formula
   revision 1
 
   bottle do
-    sha256 arm64_big_sur: "bbe49cb0dd95750275208f4fa95369c3acbd03bdafe50a582a501b61141092a8"
-    sha256 big_sur:       "4f178ade88811f2a868a3d7e07c3d323f6277f91b70230c4fd0295598eed534a"
-    sha256 catalina:      "e66d6757c99298133ca9de4bcb28429a126de2ec9172f11d05bb86bcf037ccca"
-    sha256 mojave:        "5b0afebfe3d3307607ccedac1fdedbc768c73971261a0169f57808249f49ad47"
-    sha256 x86_64_linux:  "4c1aa45018953ff6447ec59900426783c7831a2b067b3e7d74eb9e594742194a"
+    rebuild 1
+    sha256 arm64_big_sur: "b13c7715d841a75ea106450bf14df81648725829b8142a4723ee155901ab8998"
+    sha256 monterey:      "281f8f7f0e9e5ef0c44239f0f404888a61934c8051000293b9ad5a61d92dc4e7"
+    sha256 big_sur:       "c8b80b40fde5432a83885430d0791147ec594e1849420416b47eaa521e679044"
+    sha256 catalina:      "7eb0152cd6f73075a4516f4bf4125417d61a0197cb46d764789d365d9fb4f284"
   end
 
   depends_on "gobject-introspection" => :build
