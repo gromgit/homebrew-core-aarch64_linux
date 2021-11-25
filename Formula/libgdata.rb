@@ -7,10 +7,10 @@ class Libgdata < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "f890b86a1e19fe8c0135094bc869356a6dc6279d84e6267742d2f817994c9708"
-    sha256 cellar: :any, big_sur:       "6afaf2089a648f7c81ceff2e491ab3c059fbe751a521f2756a124f3b64135d18"
-    sha256 cellar: :any, catalina:      "5b6500481c8f15817ecf307b1ab9886fb0caffcd133445ec0cdd06c6bcc605e2"
-    sha256 cellar: :any, mojave:        "0ab77d93d64a4257bd46de5d29543057d050a14aa4bc603ffa79c5e9f99695a4"
+    rebuild 1
+    sha256 cellar: :any, arm64_big_sur: "b5285aafaa3e8096eee5ffebd4c144e01b0a61d9e7d510dbdfbbd7acde33a3d8"
+    sha256 cellar: :any, big_sur:       "02e1ac992638692a58f8bb8313168c8e62117e6bab46ba447fc52b16b3f0127e"
+    sha256 cellar: :any, catalina:      "45066a1abdda5d00f7a6a41f6e1b1a3bc40e9faa2de3701372ac237ce776eb8a"
   end
 
   depends_on "gobject-introspection" => :build
