@@ -12,12 +12,11 @@ class OsinfoDbTools < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "800f45e86f13d9b276e419c7df616033ede3dd8f4a3956c698fe0f09be436035"
-    sha256 monterey:      "24f5eef139dbb0d27f195afb7ac6be48593d956bb62c0d75e540e60179b273b5"
-    sha256 big_sur:       "460a75b81da6d76332f29596cecc9bcf543262e8d5848c7fb1bf627b5c5645ad"
-    sha256 catalina:      "8a572a5e4559404c4ee8b293d934286a155debc374c6e9acbb19decf480e7d5e"
-    sha256 mojave:        "784931937986f8132ca5f742ce7d966fe08eb11742d1bbf48d5253ecbcff3bfb"
-    sha256 x86_64_linux:  "95a2338adb2f05354a14fcf5bec97cd5a0bdb03e5f1d3b1f9664e829d9b911bf"
+    rebuild 1
+    sha256 arm64_big_sur: "16e25d6c6f291ee858eb7d6bce60c75470269317a02c5e94a6b67a7378020177"
+    sha256 monterey:      "a10baa04d411298ffa19ff71899990e29ce7ce4f752a86eb19b97a640e9c6078"
+    sha256 big_sur:       "dc0ff11e571cdceb53a3d581d5259b638726181bb4413ae94106d8754d29de5c"
+    sha256 catalina:      "5f4ba5dfa744e36530bb021d094febe34d788badea61cc8280a7371fab4847c1"
   end
 
   depends_on "meson" => :build
