@@ -6,9 +6,10 @@ class Gitg < Formula
   revision 7
 
   bottle do
-    sha256 big_sur:  "b2451ec4e4ef9126af4cb262d58d03beda0a06fcad12c9200f206af46b277bd2"
-    sha256 catalina: "6f9af292508a1a80622bc544f2aa182a46b63345ed8c9dc89e3034a9e2a2178d"
-    sha256 mojave:   "c771ecd10a224156e0810d46d3834421c548a75080d6d239d30b714875a21065"
+    rebuild 1
+    sha256 arm64_big_sur: "2ded594592e0592f7dfc47f3591e653dd7f6e1855baae68e13de5d88675e1fda"
+    sha256 big_sur:       "15678226c2eb5d7cd620185f0855df633dd68479defee7bb9173b24446adfdd0"
+    sha256 catalina:      "e3b41287764238e5cee518835288ca288ad0b048407b5678a9641a2fab9a34b2"
   end
 
   depends_on "intltool" => :build
