@@ -18,6 +18,7 @@ class GstPluginsGood < Formula
     sha256 monterey:      "8446b963bfac74651a877b4eafc090a4d0e4fe5c77536f71a531382399eccf36"
     sha256 big_sur:       "7a3876fc70f60c58b5ab60e7a4d612be3fb024e1a09185e6e04a54c0e51c20fb"
     sha256 catalina:      "f23b4d37364aae89e8309a67363b91c635cff23eecb06a5cc715d7c7a56e01ee"
+    sha256 x86_64_linux:  "2431f7c189a74763b1ff5f95bd5774e4e8002d5495917843cccad95ebc6b1d67"
   end
 
   depends_on "meson" => :build
