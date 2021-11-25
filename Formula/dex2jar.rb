@@ -6,7 +6,7 @@ class Dex2jar < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "d46040686d7dee6a12faa0877a80d4d8cfb285c98681d081eb5a05e31098586c"
+    sha256 cellar: :any_skip_relocation, all: "19befbca4d509e7895c346200eb08faf8fba035a297760bc6e3f60785901add1"
   end
 
   depends_on "openjdk"
