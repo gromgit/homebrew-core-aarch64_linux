@@ -6,13 +6,11 @@ class Librest < Formula
   revision 4
 
   bottle do
-    sha256                               arm64_big_sur: "a565482a9685164d288df713142f23b91dda71fc9c694ea0c613c64320e4aa0a"
-    sha256                               monterey:      "1f51e9bade1234cd3e5f0d8a791ceb386fb8f69000c3fc2195d23fbdf6b00bd8"
-    sha256                               big_sur:       "366b341df1c40a648f2847b5f1c13efccfaeb4c3c9610c30fe7e5b3087d07186"
-    sha256                               catalina:      "fb2e698cdf400c3f413a707132acd9b55139e2aa26da2f405f5eaebeace6573b"
-    sha256                               mojave:        "dbaf452ac76dbc63e161ffc086aac7f6409614ca573c20fe02bd2e87d473e5b2"
-    sha256                               high_sierra:   "5ab2748f8103ff622b6615f6427f21c7f9313b227824bd91429aa6f4c5c9c982"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "be2f31807cddc48f6979d659856ed2fe5e1d641547e0dca5b8082575bee55952"
+    rebuild 1
+    sha256 arm64_big_sur: "ce82e6e380a02285f90307b8609e63cba7dfa52a3d1fae7092296f49e67f624f"
+    sha256 monterey:      "fc839b0cce9619c5489fe51408792ada7ab2a5569419cd38569ca13fa6ef356b"
+    sha256 big_sur:       "83313f7234d69f6801104ba55c1b60933d8db57d8b8f818b336b8a498043b067"
+    sha256 catalina:      "7616a630b4f286a28c6520917353196f29e5ddbc488bf6880d14cb518271ff26"
   end
 
   depends_on "gobject-introspection" => :build
