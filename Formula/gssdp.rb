@@ -11,6 +11,7 @@ class Gssdp < Formula
     sha256 cellar: :any, monterey:      "0488549919c434068ff0ddc900c5ef4e8fdfb1b58555ab0bc8764f585771e5ae"
     sha256 cellar: :any, big_sur:       "29b4fdb41b3229d620e602a503046e6cf58a7f08fb2f83be4df94fbb8f5ccaac"
     sha256 cellar: :any, catalina:      "f8478c7402cafddb596fbffd2c0f71e425ddda0d06a748064bf003601ead2f47"
+    sha256               x86_64_linux:  "8cf14f9b99a3db106729013d2f557fb18792f2947a8b7cba5edf72fd77f3d9f9"
   end
 
   depends_on "gobject-introspection" => :build
