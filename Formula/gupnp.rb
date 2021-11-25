@@ -9,10 +9,11 @@ class Gupnp < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "74d32f0c86134b6ae8680e88eca4cdf16c0b3c7ad39003f36801e9328832e577"
-    sha256 cellar: :any, big_sur:       "cc65c455a851a56d7724da20529e17b9f6a891d7611b1ace26c91522f2261632"
-    sha256 cellar: :any, catalina:      "dc95e5115ede011c9b59a5f1cc0a669321a11297fdb7e0a2d0fb05267480a7f2"
-    sha256               x86_64_linux:  "7d3212cbd0a5c39317ea485330ed228a0f8a9a02080daf08688ecad592cfd77f"
+    rebuild 1
+    sha256 cellar: :any, arm64_big_sur: "7ea38b22cda285c7d2faae5ab7aad90115cc3e1a230f5a56b804b5f4e58f5393"
+    sha256 cellar: :any, monterey:      "e928003c57d8a36534c56b9ed3a96c9e0f98f4a4a4570adbccb759d4714ec93c"
+    sha256 cellar: :any, big_sur:       "fd8883416f1de59ab46c792571554847f1285d3a5c27c893084c56b18170fba6"
+    sha256 cellar: :any, catalina:      "e499f57ec7abb5f9e0b88db49d381edf5ade005b71e730aee4d32efc29eb18d9"
   end
 
   depends_on "docbook-xsl" => :build
