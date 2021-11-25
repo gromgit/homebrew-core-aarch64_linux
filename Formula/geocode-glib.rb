@@ -8,10 +8,11 @@ class GeocodeGlib < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "21cca31313c96d334bf20a5db535619d0114128474f2f38bb09e4bbf422b721d"
-    sha256 cellar: :any, monterey:      "d25cc02e785d8f10bedca31db01bf00c1cf0f2553f8ab4cac8266ad02fc7ed9e"
-    sha256 cellar: :any, big_sur:       "41432c280b4a1244a1a55466059170cd470d5e86fddf1cf3ca7bc4f5f7d14960"
-    sha256 cellar: :any, catalina:      "a0bdd13a694d1f4ee94de206de6fc03ad01df82ce3ca7ea7850e274eb86772b2"
+    sha256 cellar: :any,                 arm64_big_sur: "21cca31313c96d334bf20a5db535619d0114128474f2f38bb09e4bbf422b721d"
+    sha256 cellar: :any,                 monterey:      "d25cc02e785d8f10bedca31db01bf00c1cf0f2553f8ab4cac8266ad02fc7ed9e"
+    sha256 cellar: :any,                 big_sur:       "41432c280b4a1244a1a55466059170cd470d5e86fddf1cf3ca7bc4f5f7d14960"
+    sha256 cellar: :any,                 catalina:      "a0bdd13a694d1f4ee94de206de6fc03ad01df82ce3ca7ea7850e274eb86772b2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5087451ab0d29991b1760b263802a81a2497f5a157f40ac931570c2146de42a8"
   end
 
   depends_on "gobject-introspection" => :build
