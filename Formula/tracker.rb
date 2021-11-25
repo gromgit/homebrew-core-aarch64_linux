@@ -13,11 +13,11 @@ class Tracker < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "22d7bddd7ef62d58620d9590664d5d954b1985bf5ac2f348dc4e5b85aeeb2180"
-    sha256 monterey:      "26d684c584a8dcff40c9916cacab692b7048be280080565e4ab0d33f4c19cd9b"
-    sha256 big_sur:       "b5480a9ef45026bd14856f34bec78aba56235e187c340dacd0b981077bab3b48"
-    sha256 catalina:      "a632269a8bae5af05e365a08766e60219657940035d7383bedf81afcf16ca143"
-    sha256 mojave:        "68bc5591c3593ad5d9b03d25ccb0c6958f7919e783d822ae723ae76594dfe6a7"
+    rebuild 1
+    sha256 arm64_big_sur: "82ae29dda588ea5ada4ff491d3c8f1bf48e8c26045ccee50dcc1760b591c2ed5"
+    sha256 monterey:      "a2c5115435a203f579b167e26f89b45b5cca4687a4ddce15b8f1110834d9b98c"
+    sha256 big_sur:       "9ad0f16018c66088bf4e8e3a90223ed83c725028c0804669233cbada926b3072"
+    sha256 catalina:      "7361eef0000031ab96819b884fa8a2adaf33f6f2c3d00001f33895a0c7640af6"
   end
 
   depends_on "gobject-introspection" => :build
