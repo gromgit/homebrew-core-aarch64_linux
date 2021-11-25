@@ -6,11 +6,11 @@ class Libsoup < Formula
   license "LGPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "9c3deeddccac3804d1e5be29a7b0cf0296b259bbb0be6fdc0443fae3d3f093c6"
-    sha256 monterey:      "e92e936119a97997a43a46aa629fcb9e567f7f60ea6f7acef8a460b047477874"
-    sha256 big_sur:       "6e4cbcf5acb86f997c8d954c8a98921654efd397f444ea396552c47937bf6e3e"
-    sha256 catalina:      "55204e3bb0b2860855a5cd979484b79e26bb5b88ee4d30336a476ab1d9e90a3f"
-    sha256 x86_64_linux:  "2a40268601402ca904087a607d19498bf15c12aef17ef32f938650e64820e01c"
+    sha256 arm64_big_sur: "e1d69a9438c85ffd4f3a8053a793bd7c0bc1549854a15647323a548af9e89512"
+    sha256 monterey:      "054c4eb1f108323999d2582d2a19ccf4e09eab6612c6f55fb7f983ff3536337f"
+    sha256 big_sur:       "3c9dcd7ceae483d7492f7078d324b7d4c3beb67f7683b71fadf9d50f6c6809c0"
+    sha256 catalina:      "2dbaf27a1f72fd3d4cad39ec405d892d02a1d4e0b4107cf7af5d1eaad81f8f71"
+    sha256 x86_64_linux:  "b673fd74270840cbb437b3b44441eaae3a77284e57cfc7b86cb65f03b489ca31"
   end
 
   depends_on "gobject-introspection" => :build
