@@ -7,11 +7,11 @@ class Libchamplain < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "0d8f75014270cd171c9d059fe9aa9583c5ac7f8d4156d69cf685789218ab8246"
-    sha256 cellar: :any, big_sur:       "b4d05a54fce8efb6482e4dabe54fe8ff184253045c70d76e50b6679915f591fb"
-    sha256 cellar: :any, catalina:      "cb5f211f8fa37e711a6e8888e4dfc873599defae9bad26f2d4310d798d0df98f"
-    sha256 cellar: :any, mojave:        "451b57e103a89cbd80b18fe98012f5ff2a56de6ef0fbca9d0b2e49279c0f06dd"
-    sha256 cellar: :any, high_sierra:   "139ae58e12b28abeeeddedebd802c5183761048c3745f3cb042458f2be3f9602"
+    rebuild 1
+    sha256 cellar: :any, arm64_big_sur: "4c338a3a4dbeec5732e73a531aecaaf1cb862ed9e87030fc05e2c25ed9a1f585"
+    sha256 cellar: :any, monterey:      "be1d7594f805bd7c358011a1669f5eb479c04157330cca2434392fc46eaefa9c"
+    sha256 cellar: :any, big_sur:       "492db68c8120ff8435f6d96b87cdc4db83afe2d47b0da7b1bc164bbb60af015b"
+    sha256 cellar: :any, catalina:      "2b4c4d1e01b47b3598b56d92b27a42b944a56c83b73f1e175e6854210dfe465e"
   end
 
   depends_on "gnome-common" => :build
