@@ -13,6 +13,7 @@ class Root < Formula
 
   bottle do
     sha256 arm64_big_sur: "3422ef3c0940bbc0c4d0fd117410592d78fa7901398b8bc15a1acd705888bd6d"
+    sha256 monterey:      "610a18739dc98dd6fbec130cd84fd84f9c70e2742467264286e7eca51fcd51ee"
     sha256 big_sur:       "a8650bed59d9f3ee1a39e488dc4e59c454803a0a4001cb007160b6079680d3e5"
     sha256 catalina:      "f9444e3459eb93fdbe984efb9b74ad3955688be1177c518b3311f5d9a1f76dc2"
     sha256 x86_64_linux:  "9f92ea828e81a1749c4da6b574d88601f37ed844478286419055d2a8d453ef24"
