@@ -12,6 +12,7 @@ class Cpl < Formula
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "7b2de6ed276784ff0a34ec7386c11539836fe6a8a16b3f9a6fc12062e7593372"
+    sha256 cellar: :any,                 monterey:      "66a825bda5fdebbfd291cdb0be8709057be814308b94c0066900d852af2387bd"
     sha256 cellar: :any,                 big_sur:       "f03c10e6918ff16d484174e91a78e900dc2270237370aa8e448be23f0bb0496a"
     sha256 cellar: :any,                 catalina:      "23a33f0c139d0c56928bd6aa9bc7612c4da460f33468adcdd2ab267c444300ae"
     sha256 cellar: :any,                 mojave:        "8dd0ea688094de418970818c68eada0a5ee6eca74e4a5b09e4ab2864b8d0837c"
