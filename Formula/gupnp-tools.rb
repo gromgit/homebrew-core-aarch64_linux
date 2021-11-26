@@ -7,11 +7,11 @@ class GupnpTools < Formula
   revision 2
 
   bottle do
-    sha256 arm64_big_sur: "d274a21bebdd1eecbb3663acc978b7db9a02fa82dd1bf6a6ae580d6342b41d86"
-    sha256 big_sur:       "43bac77ff6e404437bc158f13f15e041ec557b34d8fe98ce7f83062e145f73ba"
-    sha256 catalina:      "fda7b6fe97dcfa2710e8a0a7065b9c07e208068f7244c1a04a02f1b3d02e3127"
-    sha256 mojave:        "3845534111bcb148335d74b0417ecb0ebf6a0dc328232ed0a74b39e703ad25ef"
-    sha256 x86_64_linux:  "5c4fbc6f649a4d84b29a27dd372d1c2459d5d24fc93c8b64f36468408a07f951"
+    rebuild 1
+    sha256 arm64_big_sur: "36bf2175ee855efffc394ee905804020bd28b2f345ce345b0f86c9f1faae84da"
+    sha256 monterey:      "15d9b56880693e2c80bb77821a307abe95631448915f376d875098c942b15ec1"
+    sha256 big_sur:       "70ed3d849117fd48c18b5d26313b6bb17a73c642e30ef85158e75fe71d90d9ce"
+    sha256 catalina:      "163c7cd5916785f32193cff6543a0533aff92e576a83871c30474607a77d86fe"
   end
 
   depends_on "meson" => :build
