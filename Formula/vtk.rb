@@ -7,10 +7,11 @@ class Vtk < Formula
   head "https://github.com/Kitware/VTK.git", branch: "master"
 
   bottle do
-    sha256                               arm64_big_sur: "8a36ea9bc18cc1dcda17265e9bd57c67d2988182af3fee0299f9c6654fe94f38"
-    sha256                               big_sur:       "b213eef44f72f772a71579a36f94f16d02e4dbfb390e858edb7b66f0672d66fa"
-    sha256                               catalina:      "1a702b1c3def8710fe01b4c61e6b5e17fd7c56e505dc75f54dab687926cf5089"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "194988f3f713541e043db994b6701cbf8d8ae7227ff725280fe208a8af54f688"
+    sha256                               arm64_monterey: "8d643fb283e3da2a2cf20c2787826b139a43d1b27de373dd97f2a59a030d00ee"
+    sha256                               arm64_big_sur:  "8a36ea9bc18cc1dcda17265e9bd57c67d2988182af3fee0299f9c6654fe94f38"
+    sha256                               big_sur:        "b213eef44f72f772a71579a36f94f16d02e4dbfb390e858edb7b66f0672d66fa"
+    sha256                               catalina:       "1a702b1c3def8710fe01b4c61e6b5e17fd7c56e505dc75f54dab687926cf5089"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "194988f3f713541e043db994b6701cbf8d8ae7227ff725280fe208a8af54f688"
   end
 
   depends_on "cmake" => [:build, :test]
