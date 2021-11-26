@@ -7,11 +7,12 @@ class Kahip < Formula
   head "https://github.com/KaHIP/KaHIP.git"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "35aaeb5b6017d06d68cfe54aef25d1a745ef4fdf5f0b41bb5e544e17cc5c49ec"
-    sha256 cellar: :any,                 monterey:      "5bd59728b30733335ccb33cdadface3d183dc2e4e351104a19840495b8952ce6"
-    sha256 cellar: :any,                 big_sur:       "b9be588260c93ea0c0d20a9f96d9b646341955e8842119f6325bcb6c29d4727f"
-    sha256 cellar: :any,                 catalina:      "e71a62e66cf71370faa5108de3e8d1b21babf32974f0fe800e33885cddccaa93"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "76cc24151d1df1ac6eed61bb4f723f2013f3f9c506b790883972b043f1e8412c"
+    sha256 cellar: :any,                 arm64_monterey: "cf5575cbaf6f9d463860d67091e90429c2e368713c2ad1864bddcf47de1d3787"
+    sha256 cellar: :any,                 arm64_big_sur:  "35aaeb5b6017d06d68cfe54aef25d1a745ef4fdf5f0b41bb5e544e17cc5c49ec"
+    sha256 cellar: :any,                 monterey:       "5bd59728b30733335ccb33cdadface3d183dc2e4e351104a19840495b8952ce6"
+    sha256 cellar: :any,                 big_sur:        "b9be588260c93ea0c0d20a9f96d9b646341955e8842119f6325bcb6c29d4727f"
+    sha256 cellar: :any,                 catalina:       "e71a62e66cf71370faa5108de3e8d1b21babf32974f0fe800e33885cddccaa93"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "76cc24151d1df1ac6eed61bb4f723f2013f3f9c506b790883972b043f1e8412c"
   end
 
   depends_on "cmake" => :build
