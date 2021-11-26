@@ -7,10 +7,11 @@ class F3d < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "cbdc7780de867e75ad3b27e42e0935e1ea1ffabc66fa70b1d430af47dcb57456"
-    sha256 cellar: :any,                 big_sur:       "628ad45dba694284d17e2c031b9eba1c3e32fb954b756a63509bdcb60e25ae97"
-    sha256 cellar: :any,                 catalina:      "3d8097faaab4e707dda11b7a5423a0ad81b325a0238367f7e742985ecd7f4333"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e6e025c32b673a96cf60017b98e7fd49e8d0e49246f883defe97fc4e15759f5a"
+    sha256 cellar: :any,                 arm64_monterey: "5847e1bfb2246638f7db1d14732f165563c6cc54323304922f8c9af9e2455092"
+    sha256 cellar: :any,                 arm64_big_sur:  "cbdc7780de867e75ad3b27e42e0935e1ea1ffabc66fa70b1d430af47dcb57456"
+    sha256 cellar: :any,                 big_sur:        "628ad45dba694284d17e2c031b9eba1c3e32fb954b756a63509bdcb60e25ae97"
+    sha256 cellar: :any,                 catalina:       "3d8097faaab4e707dda11b7a5423a0ad81b325a0238367f7e742985ecd7f4333"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e6e025c32b673a96cf60017b98e7fd49e8d0e49246f883defe97fc4e15759f5a"
   end
 
   depends_on "cmake" => :build
