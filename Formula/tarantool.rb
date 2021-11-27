@@ -9,9 +9,12 @@ class Tarantool < Formula
   head "https://github.com/tarantool/tarantool.git", branch: "master"
 
   bottle do
-    sha256 big_sur:  "cbc3b24513ad4118428da7beee0919dd6699af050db5f77ae2deb58eace8385d"
-    sha256 catalina: "7f41f2e11374e81ec970a960f2b939406f995c3410de7209104719a74a89fd0d"
-    sha256 mojave:   "67fde3ce00ec0e0cb4c0fccc0656688773de193e134f313f5da65567dc88986c"
+    sha256 cellar: :any,                 arm64_monterey: "de7b4c495bff9624a7dbf7cc37a7620258a268a74dfcbfc1f156c44532a8d5e1"
+    sha256 cellar: :any,                 arm64_big_sur:  "baade3b1eb4ce24bd5d93faae9c2b349205c8354bb33797f0d3dc3af5f9d8d01"
+    sha256                               monterey:       "c0d05dd63bca5a14ec2571f03c1e9b89db486abd8331c7ccd2eea36b81eb2cb6"
+    sha256                               big_sur:        "10cee819c78efa179feee44d3edf4cb11f665f610ce60fc95cb0816c86d6b07b"
+    sha256                               catalina:       "ad6831afd452a2724c7df1ab9acf56e6e6e3582bdf9868864dcba7ecd1d1d9e9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f319e0625842b831deb7d0ed2ac1402b9301e5663ec94101becd6b59719b7f06"
   end
 
   depends_on "cmake" => :build
