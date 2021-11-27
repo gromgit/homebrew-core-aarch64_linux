@@ -6,11 +6,11 @@ class Swiftplantuml < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f186b050fa2dd9177005dda91cbf8b092531545e563311ff9de205ed10499129"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5fae22f50f3b96544982dd2183d8356c18961af18e02a922e8a07660573ab538"
-    sha256 cellar: :any_skip_relocation, monterey:       "f4993e2733db57a124de7db27e31fb45aa180f2f4baf468a2960cee14d84d213"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1287a6c7d6928e1c2f9e2389ef2ee725608ef5fd35f9b8d2af6a4531c7622cbb"
-    sha256 cellar: :any_skip_relocation, catalina:       "e6fea94225e8b3d83b11510f2c423d850a16922fe2a5c776e88a66ccad8fcdde"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "24c96aab6e49f287c653a88512ed420205287898ee6719130210d8c885ef97f9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e3e756fdbf10e1538d2717d2839394b8bb6f750b5f02d5cf307dfe1de529cbdf"
+    sha256 cellar: :any_skip_relocation, monterey:       "a2a4b4cef3f67034f8d49542da3693583d920ceee3028a1eba6c77eeeab9327f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c49c3ba9e6b91584a1896b394b2573eb92bca43a5d69e5c861e0e291912764c6"
+    sha256 cellar: :any_skip_relocation, catalina:       "84d025a7d4a121cd9244dc7f237bb4b35888f11bc8881b5dba079ec588b227eb"
   end
 
   depends_on xcode: ["12.2", :build]
