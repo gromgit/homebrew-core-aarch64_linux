@@ -12,7 +12,7 @@ class Byteman < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "fd05bdb8caaf686dae2c5117372f4c7b4e9f2e9f97504583aedd6352ba13f189"
+    sha256 cellar: :any_skip_relocation, all: "ea0b256d9b446bd1881395c70dc3dedce8e1553aed493878bb2b450e0854c82a"
   end
 
   depends_on "openjdk"
