@@ -12,6 +12,7 @@ class Cherrytree < Formula
 
   bottle do
     sha256 arm64_big_sur: "f03f0efb686bf5e29a7da55cc6592a5d25b4865717c4ad5950d21c1ebb130d96"
+    sha256 monterey:      "64bd2bfceeb64f7600347a471b3fe7ec126831492cfd19d87fd2a340bf5a8326"
     sha256 big_sur:       "8f48651a7d12e37818ae3eef3bc8d6c0c8c082cb22708e517786cb22ba927d6b"
     sha256 catalina:      "994ee8fc4aa77b4c4d54a2fc44f86d8d2f303da8c83f2820b1dc8f6e03bd92ba"
   end
