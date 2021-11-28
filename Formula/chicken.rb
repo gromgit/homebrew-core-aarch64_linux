@@ -12,14 +12,12 @@ class Chicken < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "34599aaf7d6ed481d71c72085a3f05615a85e30e30920d46ad90aa88b56b1bb8"
-    sha256 arm64_big_sur:  "8245210e28c0dd3ee7605efed72f157e49751e67e4c9eea279e5fc558a413278"
-    sha256 monterey:       "6d357b03ccc4d9f6ef9cb8f61b5385e7d64fee9f1f24e5ea4ff0b9d63e2991cb"
-    sha256 big_sur:        "1d723ed0cb6621708f2123882a05fffa9328f1ebdedb505f60746e5a1740761d"
-    sha256 catalina:       "674b9d864481f15a5b406c1ef2e1dfce8ee584a100edf2501a096afee44ad396"
-    sha256 mojave:         "3d35a95b8296a8e37c5bbaf5d77188684adcccc7f3f3d77e73c6c3e9ac566f86"
-    sha256 high_sierra:    "17b093038bb0845a2687c1294288a11992f4e2279a64c93ef0e2c80977a1d882"
-    sha256 x86_64_linux:   "daa3fa6510943924a6c9429212aba4ca9fe0ae8fe04da2c3cb488f909d1e397d"
+    sha256 arm64_monterey: "e09430040963225492897d7609406819e86fb849d13845ad8087d5d61e31eaca"
+    sha256 arm64_big_sur:  "61ae526015573afb8c25f406a65cdd4b7de3f8eb937e4f7fa6e7348323d89898"
+    sha256 monterey:       "049d9b3aa4cd14369f60989ab423da0b73a1aeab96b15e3c238f904de0293fb0"
+    sha256 big_sur:        "86b3c43930711b19e3270bda4701c3472da23eed410ca33203426e155f7098ff"
+    sha256 catalina:       "6cc05c82270f15d1013cd4d3d63ed7b82ae891c29ff6fc3156be89c3d64973f1"
+    sha256 x86_64_linux:   "cb961e4d3aadeca9ffff40761b866ba766234d9b4ffe87cf4daae445435f5e4d"
   end
 
   def install
