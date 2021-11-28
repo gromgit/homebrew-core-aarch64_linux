@@ -7,8 +7,7 @@ class PhpCsFixerAT2 < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "d8d00d89e8a08ab5aafc11f2c7ebaa496efd73f4fe7336202a2bb4b75ad10946"
+    sha256 cellar: :any_skip_relocation, all: "55e00c9bf800348c73ec404b416b749b35a9a608a4f68380b8a1cb66005832d7"
   end
 
   keg_only :versioned_formula
