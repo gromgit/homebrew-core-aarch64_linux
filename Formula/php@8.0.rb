@@ -12,6 +12,15 @@ class PhpAT80 < Formula
     regex(/href=.*?php[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 arm64_monterey: "e42c50bbacbee96386cd86f818ba1200a150b086c32cd15467e71f7f8f609f44"
+    sha256 arm64_big_sur:  "c527a766d22c34053ecfe6833324a4e73e3ab73820b04a49d31bd4a275ec566d"
+    sha256 monterey:       "5931d64319bc96780441839a0ddc9552a81e3eed979079cfc96b29f00e4b8e3e"
+    sha256 big_sur:        "f8cc14ef5ea3ede6cf78fd926f552bb6bb63208ac904c9dd3533b8e2fc21d357"
+    sha256 catalina:       "2e33a16ab65aec1fd800f6d4f3feb054542387a718f2756b9e27b4d4d3dc1b32"
+    sha256 x86_64_linux:   "b339ad02575a309da36e8e95ed84ee5606c73744ee30aded5ef4f431094e8349"
+  end
+
   keg_only :versioned_formula
 
   deprecate! date: "2023-11-26", because: :versioned_formula
