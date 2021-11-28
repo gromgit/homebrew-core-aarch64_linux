@@ -7,8 +7,7 @@ class PhpCsFixer < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "964e27354e1f618827381479ddebae75cc20b5ab3349f9a636c39eab9e7a3b4b"
+    sha256 cellar: :any_skip_relocation, all: "1c7ae560f6187651f5517778dc71c6e3be71fd4cf50bf49c2091bf7f3f6811d2"
   end
 
   depends_on "php@8.0"
