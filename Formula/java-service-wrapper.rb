@@ -5,6 +5,13 @@ class JavaServiceWrapper < Formula
   sha256 "82e1d0c85488d1389d02e3abe3359a7f759119e356e3e3abd6c6d67615ae5ad8"
   license "GPL-2.0-only"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a60cdd1e6f8abb1d6cd31ae266d53620f5f629bd247bcd492046020aaea7d390"
+    sha256 cellar: :any_skip_relocation, big_sur:       "65408a2f2fda060014437c9be66d54b9f96c95994fbb244ae0d7940030537c15"
+    sha256 cellar: :any_skip_relocation, catalina:      "c0acca607c1675ef56f29faa605bcd0b38b26669f4d667bff96ff8f2e6d587e3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b1c479348d72440037ddc518ce574a30d89b46f32d86da5f163d680ac7416a6a"
+  end
+
   depends_on "ant" => :build
   depends_on "openjdk@11" => :build
   on_linux do
