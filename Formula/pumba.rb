@@ -12,12 +12,12 @@ class Pumba < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d4e195c3e36f7dde3821a76612e9ec9a7eff6ac764e6e11b37970824d17e39a6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3c06d9a93dafd07b20b289c16a233757e195796c58bf6fb4e37485cb73641e83"
-    sha256 cellar: :any_skip_relocation, monterey:       "002f19f642435422f482e87bb784209ebad478026f23cf3f2622456ad8e145d2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c110eb1c6fd9553ccee5327c4c3d556e9c58d120c9a8a3ed7eb1f901e43d25e6"
-    sha256 cellar: :any_skip_relocation, catalina:       "f007ae66a3b66626df7f25c83788728db253f255805920c16db32e1319a6a172"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a9c9e8801b3949b92250902db1fe9cf35913ab937d4aae83504b87f8a9917488"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "81590d64aedce57e3f56411b41132f8796924d6c58a1f4afcabf46d48f1b7fb5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a6afb26ce47dc98f69f63b85f43430eb33dcdfca7db4435139aee986a7d9a466"
+    sha256 cellar: :any_skip_relocation, monterey:       "a7cf571588de2b97f014d8b75153c036527ed4be56b3b2d9cdd0052328fbebe2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5d1d6635edc807dee2eafde699ee9239440b6b6d52fec775e2ce6aee88ea466f"
+    sha256 cellar: :any_skip_relocation, catalina:       "aebb62c90ed44f52fed1d90161159d5a8154528a3e3c2ca486140d8a9067a2fa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "686eaf2862de957dfb581462b6cf01bfbfa3c6901624edf324640b4f257e7d9a"
   end
 
   depends_on "go" => :build
