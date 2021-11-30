@@ -7,11 +7,12 @@ class Zim < Formula
   head "https://github.com/zim-desktop-wiki/zim-desktop-wiki.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, monterey:     "cac5007e5857504e22b3021aa8111798ffacf6a34493210b09d21337d4da81dc"
-    sha256 cellar: :any_skip_relocation, big_sur:      "cac5007e5857504e22b3021aa8111798ffacf6a34493210b09d21337d4da81dc"
-    sha256 cellar: :any_skip_relocation, catalina:     "cac5007e5857504e22b3021aa8111798ffacf6a34493210b09d21337d4da81dc"
-    sha256 cellar: :any_skip_relocation, mojave:       "cac5007e5857504e22b3021aa8111798ffacf6a34493210b09d21337d4da81dc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "1a1e41993dfd0df0bd0396d53c09626df2047106362149db0e25775ff5732355"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1a1e41993dfd0df0bd0396d53c09626df2047106362149db0e25775ff5732355"
+    sha256 cellar: :any_skip_relocation, monterey:      "cac5007e5857504e22b3021aa8111798ffacf6a34493210b09d21337d4da81dc"
+    sha256 cellar: :any_skip_relocation, big_sur:       "cac5007e5857504e22b3021aa8111798ffacf6a34493210b09d21337d4da81dc"
+    sha256 cellar: :any_skip_relocation, catalina:      "cac5007e5857504e22b3021aa8111798ffacf6a34493210b09d21337d4da81dc"
+    sha256 cellar: :any_skip_relocation, mojave:        "cac5007e5857504e22b3021aa8111798ffacf6a34493210b09d21337d4da81dc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1a1e41993dfd0df0bd0396d53c09626df2047106362149db0e25775ff5732355"
   end
 
   depends_on "pkg-config" => :build
