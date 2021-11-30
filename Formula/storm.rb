@@ -9,7 +9,7 @@ class Storm < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "b1d1032db7f3947a29a8631354ba1c0373dff1e019bdacc151d816aed944678b"
+    sha256 cellar: :any_skip_relocation, all: "3fef017e3bad462d37bab431a30e59923a1b7e17a532f01f1080e4586123d8f5"
   end
 
   depends_on "openjdk"
