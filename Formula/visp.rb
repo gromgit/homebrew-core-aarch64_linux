@@ -12,9 +12,10 @@ class Visp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "02781fecb8b2e4b2a7e12b0b2d61f1868faf4b785e39ff79ad098d289394da76"
-    sha256 cellar: :any, big_sur:       "f11e45987df927af5dc575e1ad49b7fb54fcebc1dee5f5f2015049d28abff0d7"
-    sha256 cellar: :any, catalina:      "c66bdf7dc22c9c40639794ff928328b858a87941cf5c545ea109a253e33b73be"
+    sha256 cellar: :any, arm64_monterey: "1a85e4797842033d072254b07e9e97c3bd4a7fb413a5669310bdbdec01bf64b7"
+    sha256 cellar: :any, arm64_big_sur:  "02781fecb8b2e4b2a7e12b0b2d61f1868faf4b785e39ff79ad098d289394da76"
+    sha256 cellar: :any, big_sur:        "f11e45987df927af5dc575e1ad49b7fb54fcebc1dee5f5f2015049d28abff0d7"
+    sha256 cellar: :any, catalina:       "c66bdf7dc22c9c40639794ff928328b858a87941cf5c545ea109a253e33b73be"
   end
 
   depends_on "cmake" => :build
