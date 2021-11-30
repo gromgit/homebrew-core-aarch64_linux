@@ -7,12 +7,12 @@ class Neovim < Formula
   head "https://github.com/neovim/neovim.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "db5ecc86bb0390196da86291fe1ae7dec9f8c7e3c31e63ca92cd4376d41dc68f"
-    sha256 arm64_big_sur:  "d18b2beaa1c98eb011ab6706e6ad5db6e991d30b9d11611f17cac5c7c2eb4dbe"
-    sha256 monterey:       "1c9c88c778bd5033c72e30a1421ded01517b21982885ab5c0b1d7652a41d95aa"
-    sha256 big_sur:        "f58c80dc75a3a255df1704d4b6ef4ef2cfafd27149d61bb97d278f20e7c5a731"
-    sha256 catalina:       "d5a78c8f649c01e238997ab65f2b4782378fc0374f37b8ca4749b793c8a4bf86"
-    sha256 x86_64_linux:   "b302d18def6baf4e3b18ef0ea407183b0d0c694492d40e6a72ae02a52943c35f"
+    sha256 arm64_monterey: "ec4155754605b16da518787995c7ab51e5b163792117f3183ea205cbae5c9e1c"
+    sha256 arm64_big_sur:  "4da15cf92d2cf0f113e190c00e431c06c997391be35b5144b81cc218028dc7c2"
+    sha256 monterey:       "a90d0aec8ef1002ff60c33d14cc7a073f4c16e68587333e4f0e3f8a6d55e1e82"
+    sha256 big_sur:        "c4f758136e1df30f2bfac31474755629af62fcfb084b8c880a3a22f599720d58"
+    sha256 catalina:       "1ccf9e973197b19275709afa60664d4da8e68732e018a9bae57c582bf718fcca"
+    sha256 x86_64_linux:   "be2d90349b6ae9d56f2e365deaf75e9c5122840e7e0bdbd53f4b741274ad159a"
   end
 
   depends_on "cmake" => :build
