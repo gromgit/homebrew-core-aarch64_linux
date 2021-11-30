@@ -7,15 +7,12 @@ class Certigo < Formula
   head "https://github.com/square/certigo.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6ac932347dec1e09093d3799c5ab81be7c8771bf8f65f336c05be410318d166d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9761910b65d0cd920c2f78f3cc3a3231461b15f24f3467d70599bd1398368654"
-    sha256 cellar: :any_skip_relocation, monterey:       "ac22fd7bc83b5780053742d528645946ea585e9cfbd5c3475a228183ab60566d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c2f92814d6ab9339a0e5cf6d1489d92577f9fb422538d3a374c5e24ac7e78459"
-    sha256 cellar: :any_skip_relocation, catalina:       "9cb3d249c87ed65409a4e4a0e7841bbb8ab9192dea06df8f78f28f0fcbec4550"
-    sha256 cellar: :any_skip_relocation, mojave:         "85d39ea2806bbd5ea750486132343d2dc36d5cc37ac0048d4561c40d20826fde"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "0ec7c22fe619af5e5178f4387f2731909ff02d4379ec62784f3625d2a63c358c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "917a031d006d106895ca2da9894087129f9f9d7e58ae11c7c7e49427a433f1be"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8d58d141ec797642a5328639290a50e8af1aab185a38c36be13d4a5e8c7aa0a6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cbb97e3b924fe9c0074b14c885682c3eec696ded881a65db17af607bfeb85c97"
+    sha256 cellar: :any_skip_relocation, monterey:       "b11198a9086c6959be63a5fa0eefa0bc563f013868645a70e7d2a65296949acc"
+    sha256 cellar: :any_skip_relocation, big_sur:        "00a50c8b17d3484987e4aa679b625be5717eda1acead9f4f1e316dc334b04686"
+    sha256 cellar: :any_skip_relocation, catalina:       "d2e94552ffeb15738fa23d6e03a86908fe2ff2487cb9dc787706ecaf1558b01f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f7ea2e7180a7de46d7fcf6cba8027fb8a86b89abf088102ecdd9182224155619"
   end
 
   depends_on "go" => :build
