@@ -8,10 +8,10 @@ class Swiftlint < Formula
   head "https://github.com/realm/SwiftLint.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5acfc58c5c401447183ac281e264c3f7724eeda5a708d49cb20a1618a311184b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "85a35161284914d468563c898babfefcb4010d8de96b843a7f36ad8b55bf996a"
-    sha256 cellar: :any_skip_relocation, monterey:       "52444cc37d10ed0db9edeb4e3500617492b08d768b13198ddb1c6b200f96bc29"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e7213df813a99fa4a310a15f7c4212bf3aad8955adadb2621c86ffdacda00a99"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ddefff405a8c4721e7dfe4de28b461a86bac9eeaf3779bfd1626e314e3d8f36f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "98b0939a4c4c207f58f887d82efd1f0f5e32e75583b75fffa7479bdc61857261"
+    sha256 cellar: :any_skip_relocation, monterey:       "9bad2b2d8af3dd1fc59c81c84636024566ab4aeb9b4fedcc9116497083ad9f33"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f959ec12dbb8eb32cd7379eb8545739a241acfcdf9a56042553a401cab328309"
   end
 
   depends_on xcode: ["12.5", :build]
