@@ -18,6 +18,7 @@ class Go < Formula
     sha256 monterey:       "bcaa5da105a3a23b443a1fd337af22a74db6be59fc0b3f7436994272b36c069b"
     sha256 big_sur:        "dac384a52747bf600adc5e4824bbfb41200d39cf00033a36f5a0f28b893473c2"
     sha256 catalina:       "5dbb80e83f2efca0ae8f177d4cdcf94d39f11d0b5874d53d6b7abdbe839b1e1b"
+    sha256 x86_64_linux:   "81e54483d9cf736252b0a3cdfecb2b0833063b8c96811ce5e3ce60ad6a2fdc2d"
   end
 
   # Don't update this unless this version cannot bootstrap the new version.
