@@ -8,10 +8,10 @@ class Octave < Formula
   revision 1
 
   bottle do
-    sha256 arm64_big_sur: "25dbd28b63a21bbe176111bea2b9234ff1b2f2c4fd2896d54357477ee15e06ed"
-    sha256 big_sur:       "58dd78d16e7a65a6377234623c8f99e19fcecdbf1e076564ebfbe7684831c316"
-    sha256 catalina:      "010b5a81eaa0f915eb4e83b84b43b86613436095cabe6361b7d76fb37b6cff68"
-    sha256 x86_64_linux:  "61a160547f61806c5c7458c7b5cd1e421fa6661c94c0e345e072d1acca10c9ae"
+    sha256 arm64_big_sur: "142423c2700e341d524291d668230a872811cd42a3a474d845912d7c176511e6"
+    sha256 big_sur:       "7d30b44ae67c570f9408414a6f94ccfa1259335ed806ac9c009b6ede9922f559"
+    sha256 catalina:      "31f5f6eaafc15d1f9ee86a7c6b6c5a7576474ae87264e6807109ed28de3977a4"
+    sha256 x86_64_linux:  "372020c01a1f1f8e49cf18fa23c4e12ee259ceb1594a5abed899c4de1f9869ca"
   end
 
   head do
