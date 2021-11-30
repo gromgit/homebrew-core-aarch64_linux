@@ -8,7 +8,10 @@ class ApacheArchiva < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "7be56a181bec0957d8f4f2936e99a98f737b3f7e146a3f7384b13d9e824919ad"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "aaaa03ae8f9cbafef6a26cdc3c25607c79b7706084a4f88a2982a7e145091819"
+    sha256 cellar: :any_skip_relocation, big_sur:       "aaaa03ae8f9cbafef6a26cdc3c25607c79b7706084a4f88a2982a7e145091819"
+    sha256 cellar: :any_skip_relocation, catalina:      "aaaa03ae8f9cbafef6a26cdc3c25607c79b7706084a4f88a2982a7e145091819"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4f813febed2dba705cfd48f49c6350861bf62a1271c8543b1f548c96d47770fe"
   end
 
   depends_on "ant" => :build
