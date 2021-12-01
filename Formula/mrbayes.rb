@@ -13,13 +13,12 @@ class Mrbayes < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "467eac96c818d38375e736c5ad6107bd2a1002ffaf5382ae40e20709a00fff10"
-    sha256 cellar: :any,                 arm64_big_sur:  "aad1abf1a6f090d69ae755d2cfc260d5c2e65574cbf23c5235e78097daa64e17"
-    sha256 cellar: :any,                 monterey:       "d74384286e6d25d36528f53a10758183ed5dec7199c19c744ea4d0b942fce520"
-    sha256 cellar: :any,                 big_sur:        "e0027c3fc59ebb71bbab154a03976eac6dbae6c97c665355767298d1d03285af"
-    sha256 cellar: :any,                 catalina:       "bc54dc6955c86b3d10ddf446cec0c188c3a8db75505efce4d23b66c24a4dd482"
-    sha256 cellar: :any,                 mojave:         "2349b14afaa49d436cca2c23e62643fc75b231d2ce1a3e572fb4be90448c5fa7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3e8b911053a2c454c03e97e1f8ac89cdce178e30cebf49165dc1b53f1e1a6cbb"
+    sha256 cellar: :any,                 arm64_monterey: "7ec10b0d029883853ed249d1f67902459eef0b6e4a80271c9be88422370917b4"
+    sha256 cellar: :any,                 arm64_big_sur:  "d85976c7cecd8c8344b5345858d61e0da354abd69f189a8666175ef3ee6ae1be"
+    sha256 cellar: :any,                 monterey:       "d25a16dece00097ddaeeeba8b094f4baf56bed9e695c310852ad39455d68d800"
+    sha256 cellar: :any,                 big_sur:        "3b7d81480c2cbe7dda28cdf4294bb75ef82739df3398882ab51690b00715b7bf"
+    sha256 cellar: :any,                 catalina:       "c80eace4ebe7e49e7eda28d53d223a78c0717115bbeea0ab887f06eab98b4d9c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2a1a4c724b79f47549f569ae633dd4d9d6d10586cca5284f15c0f4279d4beced"
   end
 
   depends_on "pkg-config" => :build
