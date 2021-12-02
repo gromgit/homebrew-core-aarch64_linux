@@ -1,8 +1,8 @@
 class Bigloo < Formula
   desc "Scheme implementation with object system, C, and Java interfaces"
   homepage "https://www-sop.inria.fr/indes/fp/Bigloo/"
-  url "ftp://ftp-sop.inria.fr/indes/fp/Bigloo/bigloo-4.4b.tar.gz"
-  sha256 "a313922702969b0a3b3d803099ea05aca698758be6bd0aae597caeb6895ce3cf"
+  url "ftp://ftp-sop.inria.fr/indes/fp/Bigloo/bigloo-4.4c.tar.gz"
+  sha256 "6646b76382f56d320135a4f6b8eba3e2133d53256f9ff3646b97866a2576062c"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -29,13 +29,6 @@ class Bigloo < Formula
   depends_on "openjdk"
   depends_on "openssl@1.1"
   depends_on "pcre"
-
-  # Fix a configure script bug. Remove when this lands in a release:
-  # https://github.com/manuel-serrano/bigloo/pull/65
-  patch do
-    url "https://github.com/manuel-serrano/bigloo/commit/e74d7b3443171c974b032fb74d965c8ac4578237.patch?full_index=1"
-    sha256 "9177d80b6bc647d08710a247a9e4016471cdec1ae35b390aceb04de44f5b4738"
-  end
 
   def install
     # Force bigloo not to use vendored libraries
