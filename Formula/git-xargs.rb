@@ -1,8 +1,8 @@
 class GitXargs < Formula
   desc "CLI for making updates across multiple Github repositories with a single command"
   homepage "https://github.com/gruntwork-io/git-xargs"
-  url "https://github.com/gruntwork-io/git-xargs/archive/v0.0.12.tar.gz"
-  sha256 "8d9f83bdc3ddc95f2536d2a437a5b8146c0dc414cf340314313b22674b2de399"
+  url "https://github.com/gruntwork-io/git-xargs/archive/v0.0.13.tar.gz"
+  sha256 "4fbafd770f62154a548937f57727a686891c33b8ae8125a1d3b4b87949fcc1f7"
   license "Apache-2.0"
 
   bottle do
