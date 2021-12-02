@@ -6,8 +6,7 @@ class Riemann < Formula
   license "EPL-1.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "4e28a04a6cd3f4cfec8480ccc4442ae5e9a34315c983aa1b2a0ddc1d9d9cf82b"
+    sha256 cellar: :any_skip_relocation, all: "381f8eafa5f3c7be52f321103634ae6ee1d7f61877a5e59a1f7695bc42e96eb2"
   end
 
   depends_on "openjdk"
