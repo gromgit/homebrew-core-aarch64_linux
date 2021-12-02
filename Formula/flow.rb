@@ -7,12 +7,12 @@ class Flow < Formula
   head "https://github.com/facebook/flow.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "dd5d396c4694642fa520e5032bee729c1793db141f60fc945f94f5ce079e2dbc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "31b43a9e8b6c7ceb6cdec0b079e7b96d2a9dfc560338f55ed85a5823b5b7b9c9"
-    sha256 cellar: :any_skip_relocation, monterey:       "945401fb24b130b96c0be37947dffe38c39529a1b64f755a5ed377588974056b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cd7e639c4392bf88361a0bb6b624bdf0b4699ec20f9314a08c1517847024c4b4"
-    sha256 cellar: :any_skip_relocation, catalina:       "c383654ef072ae080682ee9701fde88dcd6a1bf55568c9c35817d63ac3c924f3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "50685b8811f23fcf9ff0590a65267b25487abda08d469bad5bfd9ec69c13f8c4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9f2f17d3fb2445d5fec63b4ab0f544a840f567353af71827238608007576d67c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d68a03f01ca310a61ddef1fb3880a4d4cc4135cd3feed5f846add78993549917"
+    sha256 cellar: :any_skip_relocation, monterey:       "d55df73fd0f8d3f957385975ef87c95c8eb155fc1550da9710a5ab0a0b1a4619"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d8a488816a92697691c6875ce029bd797925413d4107b9b7d5bc38cba7cc9e16"
+    sha256 cellar: :any_skip_relocation, catalina:       "1078843cbf942e20ab62df6bf64e460a34acb7413938c0d71eeb10c1dcb096ec"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2b2cee636c4ef2e91cf5ea7dfbc4a592253aa620ccb7691b57d85c6a45f0c977"
   end
 
   depends_on "ocaml" => :build
