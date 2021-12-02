@@ -6,6 +6,15 @@ class Goplus < Formula
   license "Apache-2.0"
   head "https://github.com/goplus/gop.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "56114433e2633b93826c47487573d7a7da512346e4c5e406043680ca728f53b6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b71d2629dd115928a2177d4c74a48cf3a425c4399cb61397ced9b08ec66fa4b5"
+    sha256 cellar: :any_skip_relocation, monterey:       "bd26c304c3b0e95b8efac152a1b1840e3e2c790ef9ba6e44a49244cb9ded7ae8"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f88b29efc6f6a05f2f68d8acb821e48886620f168974586c44d44af1b49c1a5d"
+    sha256 cellar: :any_skip_relocation, catalina:       "32ade32cef033f0188765ce59a9fe776c95ed5ac70e7b413a28097f1d53dc5a3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2fd4c3074f477fca0c0c2ece94b8cdb4b58f23a0e664490529d6e543a3f942b2"
+  end
+
   depends_on "go"
 
   def install
