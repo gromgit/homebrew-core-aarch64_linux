@@ -1,8 +1,8 @@
 class FluidSynth < Formula
   desc "Real-time software synthesizer based on the SoundFont 2 specs"
   homepage "https://www.fluidsynth.org"
-  url "https://github.com/FluidSynth/fluidsynth/archive/v2.2.3.tar.gz"
-  sha256 "b31807cb0f88e97f3096e2b378c9815a6acfdc20b0b14f97936d905b536965c4"
+  url "https://github.com/FluidSynth/fluidsynth/archive/v2.2.4.tar.gz"
+  sha256 "83cb1dba04c632ede74f0c0717018b062c0e00b639722203b23f77a961afd390"
   license "LGPL-2.1-or-later"
   head "https://github.com/FluidSynth/fluidsynth.git"
 
@@ -22,7 +22,7 @@ class FluidSynth < Formula
   depends_on "libsndfile"
   depends_on "portaudio"
 
-  resource "example_midi" do
+  resource "homebrew-test" do
     url "https://upload.wikimedia.org/wikipedia/commons/6/61/Drum_sample.mid"
     sha256 "a1259360c48adc81f2c5b822f221044595632bd1a76302db1f9d983c44f45a30"
   end
@@ -46,7 +46,7 @@ class FluidSynth < Formula
 
   test do
     # Synthesize wav file from example midi
-    resource("example_midi").stage testpath
+    resource("homebrew-test").stage testpath
     wavout = testpath/"Drum_sample.wav"
     system bin/"fluidsynth", "-F", wavout, pkgshare/"sf2/VintageDreamsWaves-v2.sf2", testpath/"Drum_sample.mid"
     assert_predicate wavout, :exist?
