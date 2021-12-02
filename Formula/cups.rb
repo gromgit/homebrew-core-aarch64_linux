@@ -14,13 +14,12 @@ class Cups < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "b1ae2e3f161a90bd0e5b38ba2111c924e2d380abcd7119c556a9495d12be1d92"
-    sha256 arm64_big_sur:  "ac83d0ea52bebcdb2eff93c6ccbaf29c14369a7d2643bf3a85780ed34c13e0a4"
-    sha256 monterey:       "d3dcf00c4444dbd1a378f456965c8aba7926144725076bc675b74ce74bc1a164"
-    sha256 big_sur:        "4943fd51e0dcd79d2f02cebe3ff007af6b69252ee6a2bb2ea9cdd2d7c0ec7ebc"
-    sha256 catalina:       "eddaee8d8b01941fc65ff0689424221956c02fa98c09ba056e3f00baac63652f"
-    sha256 mojave:         "a83b539b7e2f0865be0b6f0123c32c82788b8c52ecd5cf972cc15882a7ac0ba5"
-    sha256 x86_64_linux:   "620b3565e32dd74e04321b90559720146ddcc3718d2fda59d202a2b7128c04a7"
+    sha256 arm64_monterey: "bdfa3cea4b54fcd1445143491987f2540dea0e6ace8d6bd67b95e0897c5fcfca"
+    sha256 arm64_big_sur:  "a4b7080abd42693217f8bae06bcda8bd1272a056ba0bbfb6322a5d0ba1f0dbbe"
+    sha256 monterey:       "17456a01b543aa9524a0df4681d72cb068e706dfb08c224aac111cb24297f5d0"
+    sha256 big_sur:        "662c3c00634bc90e607f6de3a82aa795635f1fb3a02e570a5caed2f226c929bd"
+    sha256 catalina:       "3aa5776cc5aa375901ec0059404f2afe86d6b51d7ad4e5538ef9df47ff51fa55"
+    sha256 x86_64_linux:   "8cdccf468e13c5245721ee443f7af8615fec4d4224aefb7cc35422c06c5257da"
   end
 
   keg_only :provided_by_macos
