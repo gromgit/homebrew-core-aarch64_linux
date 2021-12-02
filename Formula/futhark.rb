@@ -7,12 +7,12 @@ class Futhark < Formula
   head "https://github.com/diku-dk/futhark.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "50fea7f91bd11ddcc3a263e9429eab4a4f7cab478c461ab375556feea7ecede3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "edae07f29609ec891b93ee73a8513b4b9f77bb730702a2e5776fe760d200503a"
-    sha256 cellar: :any_skip_relocation, monterey:       "1352d3e4ff197ccbb19f558afc9a6f5533d2dc5b5c4db0ea976030501251d65d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8fd1b723d118d9535d6bf9a0634916f043552cead63d3b17dd024600f020a10e"
-    sha256 cellar: :any_skip_relocation, catalina:       "aaf597d62eacde1e13611c072aa2451fc2162026022bbcb44cef60d2cc79db2c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "08a47ce0d031dd3e165be0d6de04e380cc819a57835956bb1253c345e610744f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3746692e2a1bdb6222a290f5db42f50dadd38b3a6e8f2c46938c319f1dcf77d2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "24d3cea6b0878d73227efb6149d45675225607b339186b8f5527db5b1b32934d"
+    sha256 cellar: :any_skip_relocation, monterey:       "d4a66367a06db8d2540bd9b5d30a18bf67055884d121586fa71de66c2d59a332"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b0349ee3f62f4823f7e99566466f8a348e4ab3d3ae1e61e25d7407f99654d59c"
+    sha256 cellar: :any_skip_relocation, catalina:       "9375b8265cd423f7414ce0a326eca07132936364037d06c40266c29bca694dff"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e93710146a8c568ff9ca4da5198cb2fb2d108525e02a0741880a98f01d4bc5f5"
   end
 
   depends_on "cabal-install" => :build
