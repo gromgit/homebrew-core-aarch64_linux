@@ -7,13 +7,12 @@ class Openfpgaloader < Formula
   head "https://github.com/trabucayre/openFPGALoader.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "648e0b46b3111791b7b30de236fdc8edcb0118e122d87cef7017b64751db5e64"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "77483712fb4bc07885f71696245d13d3bbb34255db2e94188588345b52f81866"
-    sha256 cellar: :any_skip_relocation, monterey:       "6a71a65727b492748b5cb8ded309a519cc0f332eeb43a609b494812266c8ece6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "33f9a2c0324595ab30136b1f83e5b97db844c362f7b5543fa009796145f23f42"
-    sha256 cellar: :any_skip_relocation, catalina:       "01322e5f63e499776d44a32f7752b71c7238f633e51ef46d46a5b8aaebc73929"
-    sha256 cellar: :any_skip_relocation, mojave:         "759abeb1d7b64b34f216518ffebc9584bccd6eef7003c29eb11740cd49c38549"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d30a0f2f57e76b8e667eecdf85281fc619dcddb9d8e6f3b2ba7491bb01ca8fb8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2ccd414071fcf39ba458105556c2e1e60f152417f7e796b821bf5640671ae33f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e457e88cf813303dedb16d9fee8fcc577cac17d3c9276fd7ee21bfa3685c5361"
+    sha256 cellar: :any_skip_relocation, monterey:       "10d1b3a5d8f0245da7952d25cba9191fb4012e110a8e33f88df31f8529bbf691"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c577d1bf83ef0231ad07cc16c8ff1d64354b80fbd1079eb5a3bd85946a7ed7f6"
+    sha256 cellar: :any_skip_relocation, catalina:       "739456515905a9c75676bfc5c0e4c2385d6602d0cc1342df8a042c564c00d8dc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "90ab75ffc9c43013658b46c770b71ad0dc4124c4af79ddcbf397f2ecc6a857e6"
   end
 
   depends_on "cmake" => :build
