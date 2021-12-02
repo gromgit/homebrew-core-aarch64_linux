@@ -11,14 +11,12 @@ class Mpc < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "c86764449bddde59112a1627ff4c6676100afc87a2d39346c2f4a13677bc5bfb"
-    sha256 cellar: :any, arm64_big_sur:  "8062f7af33fe3603b4c625509f4c80570d790b15922287025ef7333748dae279"
-    sha256 cellar: :any, monterey:       "f00ccbb53d1ed598c3de7b2723355debfd5d9bc29e105469150a7ec7f7a3ccfc"
-    sha256 cellar: :any, big_sur:        "cc01508026db65016ee6e2ec1f6663921a5c5ace5c76ea51ffbd1b0b7ade5e63"
-    sha256 cellar: :any, catalina:       "341a4c3cef23004a47f37fa299047e63baedceb07405813d6fc112c9ad7d4ff2"
-    sha256 cellar: :any, mojave:         "29742180fafe0fffeba3fc09c3d355395084ef3d063004347a96bc37c72682db"
-    sha256 cellar: :any, high_sierra:    "84bd2c475a7880bf1f36c560a5696c12c27ff6cdb5cd907082d14ffd094b1081"
-    sha256               x86_64_linux:   "e19c9867bd2852976181a0552b82e1206a9c046f7ce606448ee9289220c39764"
+    sha256 cellar: :any, arm64_monterey: "ab7dca71a458e5df0f35443eb3bcee79318dc8e81d1e6994b3c0fec457c516bd"
+    sha256 cellar: :any, arm64_big_sur:  "18b5ad4dc2effa515f23fca972e6793caa382398122538054992b5d2fd8e7855"
+    sha256 cellar: :any, monterey:       "37c0df291c472821d14b459e08d3e9a65971f049869b9f7dc9a14b5c436005de"
+    sha256 cellar: :any, big_sur:        "040a5ce6e08581306ab2aa274e79860390ccb3f0099b7bc8fe132f9a24ba5956"
+    sha256 cellar: :any, catalina:       "1bcbaf7a78216c6ff9482c1b7d7e5df30ebf5c1137e8b35c22996c1e2dc0dbf3"
+    sha256               x86_64_linux:   "518acb382cf9a16a5fad35023892db930b732d9329a6ffe3e0751c7b7bcb6e3c"
   end
 
   depends_on "meson" => :build
