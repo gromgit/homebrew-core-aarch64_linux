@@ -1,8 +1,8 @@
 class Dwarfutils < Formula
   desc "Dump and produce DWARF debug information in ELF objects"
   homepage "https://www.prevanders.net/dwarf.html"
-  url "https://www.prevanders.net/libdwarf-0.3.0.tar.xz"
-  sha256 "dbf4ab40bfe83787e4648ce14a734ba8b2fd4be57e781e6f5a0314d3ed19c9fe"
+  url "https://www.prevanders.net/libdwarf-0.3.1.tar.xz"
+  sha256 "f2592e56aa5d8f39869367edc80bfe6529c04a5223219f628b6249b5bdd5f721"
   license all_of: ["BSD-2-Clause", "LGPL-2.1-or-later", "GPL-2.0-or-later"]
   version_scheme 1
 
