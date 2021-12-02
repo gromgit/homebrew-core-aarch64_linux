@@ -37,7 +37,7 @@ class K3d < Formula
 
     system "go", "build",
            "-mod", "vendor",
-           *std_go_args(ldflags: ldflags.join(" "))
+           *std_go_args(ldflags: ldflags)
 
     # Install bash completion
     output = Utils.safe_popen_read(bin/"k3d", "completion", "bash")
