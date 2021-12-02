@@ -6,7 +6,7 @@ class VulkanHeaders < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "1e5a8e206582fc6a66975e40cc5d1924823b92e62e588c7d766ba1402cec06ab"
+    sha256 cellar: :any_skip_relocation, all: "c5af9ba5baaae90f9c6178814325b9d0afe4b706b65d8bb6701e6323f9cb716c"
   end
 
   depends_on "cmake" => :build
