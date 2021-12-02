@@ -11,13 +11,12 @@ class Fltk < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "254bcf9ef390fd486067914f90841c0abb2c863de1d245bd4f78997f64bd52eb"
-    sha256 arm64_big_sur:  "ef093c6e98b952c2e3393e124e325ad67a038a08f0ee3d88ca7c6a7b07480567"
-    sha256 monterey:       "745b3f942ec06b482727b81a15da86e938eb82ed6bec27c03055c51b26db8eba"
-    sha256 big_sur:        "d95e5a1b0dcc2537f1ac2964a348728e4a66e774f1aed1f0f5dc84a2f5564430"
-    sha256 catalina:       "691edcc9f9c48a7c5ebaba813719ef4a9bb66dae228be3a2f4ed6d29acf17dea"
-    sha256 mojave:         "550f4a444fd0b0682c154745c5a1b780ce003a3477afaa9ae25a8a846fa05900"
-    sha256 x86_64_linux:   "fa662dc910b37675897d8bee50f77ea1de928f594733f4c4df7f3b4627310486"
+    sha256 arm64_monterey: "4c22c41979d57ab6dd11402ee65d16c13f5b8c8aefc380b3b6df86c8c352726a"
+    sha256 arm64_big_sur:  "cac2d0addf36697d05e1f727abab20bc7eebd7d0e7164e9a165e22114016ae26"
+    sha256 monterey:       "eabc4609af02c26d7e5f7470740063ed57bf8ab9c7b53cc5ff9aaca7d836863a"
+    sha256 big_sur:        "2228c7c23d137b575906abd07f10d54dd232cd3aa89565d69ac6b943134b8854"
+    sha256 catalina:       "b17355d7368662d2fb883651f82647f9e84db9f7e0766d833ffd4f10c7780fdb"
+    sha256 x86_64_linux:   "78cdc8e6ef47cc3406dc4cbd5ccf76dd564ecb4914e23876d01862d2421ce56f"
   end
 
   head do
