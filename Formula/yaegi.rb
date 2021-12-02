@@ -1,8 +1,8 @@
 class Yaegi < Formula
   desc "Yet another elegant Go interpreter"
   homepage "https://github.com/containous/yaegi"
-  url "https://github.com/containous/yaegi/archive/v0.11.0.tar.gz"
-  sha256 "532b4ab12e3e3d808d215b43e65ae225e1030f71c76e2418ab03eda83c36ded6"
+  url "https://github.com/containous/yaegi/archive/v0.11.1.tar.gz"
+  sha256 "2d442f32e3a7beac3d41ef73be96c1e7a8d349c63abbe666adf3038857a7b26d"
   license "Apache-2.0"
   head "https://github.com/containous/yaegi.git", branch: "master"
 
