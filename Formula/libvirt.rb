@@ -1,10 +1,10 @@
 class Libvirt < Formula
   desc "C virtualization API"
-  homepage "https://www.libvirt.org"
-  url "https://libvirt.org/sources/libvirt-7.9.0.tar.xz"
-  sha256 "829cf2b5f574279c40f0446e1168815d3f36b89710560263ca2ce70256f72e8c"
+  homepage "https://libvirt.org/"
+  url "https://libvirt.org/sources/libvirt-7.10.0.tar.xz"
+  sha256 "cb318014af097327928c6e3d72922e3be02a3e6401247b2aa52d9ab8e0b480f9"
   license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
-  head "https://github.com/libvirt/libvirt.git", branch: "master"
+  head "https://gitlab.com/libvirt/libvirt.git", branch: "master"
 
   livecheck do
     url "https://libvirt.org/sources/"
@@ -57,6 +57,7 @@ class Libvirt < Formula
         -Ddriver_qemu=enabled
         -Ddriver_network=enabled
         -Dinit_script=none
+        -Dqemu_datadir=#{Formula["qemu"].opt_pkgshare}
       ]
       system "meson", *std_meson_args, *args, ".."
       system "meson", "compile"
