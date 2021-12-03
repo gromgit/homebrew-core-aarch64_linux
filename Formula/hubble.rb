@@ -6,13 +6,12 @@ class Hubble < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "27608ae503eb9c34fddf6480b11bf5f925fc755446732d47a4bff9464bd0903a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9d6dd5374a95d637215523f98f1e9c247ee6d61cc5174b95240a2321356c2894"
-    sha256 cellar: :any_skip_relocation, monterey:       "70a2bb9ee9ed9c9919a4ae2fb1d347cfd14fb8cca46c100c405de93adb093ed6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "10554f689224ac17005e2acf60ae0f9447dd923251b2968df60d84eeec05bafc"
-    sha256 cellar: :any_skip_relocation, catalina:       "8e7b69d7e5b51709b6c90820bd822d0faf6652166457ec831c12105f7aa47d2b"
-    sha256 cellar: :any_skip_relocation, mojave:         "f4605e76aceb5aedd4fb2e51e8674a3d3c840852c068602d251e1b3c150dc45c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4089201813348a6d45aed60860889501fa43a56d5bea17831893e62a1bc50120"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "96ee50ebdf0b2c30e32d0592525f4a2cf3df70fadce4cb364e3f7f32d678e283"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2389500d861bcb47df9b7c5a159f686bb1ae52261de7e9ead299b98eb48f1464"
+    sha256 cellar: :any_skip_relocation, monterey:       "6921898f83ac3f2cd4416b4ef7b7cd1abef57171f892b357540f173cf68ffe8b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7401646b648ca09c7536c4f84391ee9ed5d6f2dd1a6f862d377a4566e35d1414"
+    sha256 cellar: :any_skip_relocation, catalina:       "dcb62e2b92ad49850a6914ebf1e7325bc9256a4e6bf4c5a3cc37d0cf26f50718"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f4c8ee1f06b389c5d2a132cd8e42898abbe6723e537358999d8e0e492ed346aa"
   end
 
   depends_on "go" => :build
