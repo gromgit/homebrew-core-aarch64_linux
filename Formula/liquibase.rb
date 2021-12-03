@@ -6,7 +6,7 @@ class Liquibase < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "99370e7302eb02c7927604b7c3a8e0f69a2d335715e57e691e3c8c88acbbbb94"
+    sha256 cellar: :any_skip_relocation, all: "f0150e8c3af42f899aa484ea264205c346795711469c29b8e0967ae3bcf77746"
   end
 
   depends_on "openjdk"
