@@ -7,6 +7,15 @@ class PipAudit < Formula
   sha256 "351f7f279ffb20cfad3fe876e84bf524a87aaa2a8830a4cad66f24f30b2a68f6"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1b85be2efd69d045325aba3f8f83f43ed0d6b33d917c65bef25944f75299dbed"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9cdb8ce676b9f5416bb548eadf7a8a8a716657c8bd3e47091c1e4b73b109a1b6"
+    sha256 cellar: :any_skip_relocation, monterey:       "eee15be336e2e0cd69a708084f737655e33898d96816c08a21bb8f1baf6733f4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5f3659c7362d095b5b2f8bd3e06f2514431c2d7ea0c6489e5322b0bcbed1097a"
+    sha256 cellar: :any_skip_relocation, catalina:       "5cceeae6b7d251b5dc621600fd28ca962c1e11d3c0832c861407057397276af7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a6655ade53151bcd5572521b5a88f173915a883145fd0c5e435b208765685c35"
+  end
+
   depends_on "python@3.10"
   depends_on "six"
 
