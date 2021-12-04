@@ -8,12 +8,12 @@ class Pdf2djvu < Formula
   head "https://github.com/jwilk/pdf2djvu.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "70f04cdd0ec4d96021281a2038d7b0681d0383db7c8746ec28a5cd57973c8c97"
-    sha256 arm64_big_sur:  "ae36c7cbed57854173c39b024efa8d1f6aadc3d5089ad5bdea63205eefbf615f"
-    sha256 monterey:       "117247d39fb8bd2c94326e5a2bd250eda403d3d35257ad183f5387a2132e3ee3"
-    sha256 big_sur:        "dccec33cd3662985d4d6605632a78a24c6e73c6c80371e17d47471193e67e1ee"
-    sha256 catalina:       "1e3d479f337cb61df898fe06bce62497cb0408b7fc924a7f463c506991aaaf0e"
-    sha256 x86_64_linux:   "d45308c4972e6175119653dded5770009b152404ed3dd407ae5c47a1ae9b4714"
+    sha256 arm64_monterey: "4012b760e63871b7f3c681ccea0e72e0b2fa74b6392f9497777bf2fdebaf33d2"
+    sha256 arm64_big_sur:  "e88e8f395a0b1ab1ce7dc7b2a6d889bd3667be3c2baf92214645a2aca0de35d3"
+    sha256 monterey:       "c78ccfe45c28a135c64dd8ada36e2588b52c15a51a977eb12d0f00502712a114"
+    sha256 big_sur:        "fb2428fd41105fa3a66d7225869c3b0c0dc6446b893874eed02d956d349bcb7e"
+    sha256 catalina:       "42f3d49aea624b4e86cdae4eedfd975640bb56812fc7f7fd7df10d369245f5d8"
+    sha256 x86_64_linux:   "104808a2fcd37e99dfea5e919fda53595fc755a7ccad24bf72cf203a212a4282"
   end
 
   depends_on "pkg-config" => :build
