@@ -11,13 +11,13 @@ class Urdfdom < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ced2cb8a17221d58fee32a3b5ecedaeef6caf43c4a721b1a543a1db2e9a1d30f"
-    sha256 cellar: :any,                 arm64_big_sur:  "144123d35146a73b2faa6a41d05d5660efbc35d8d19b23bffad4bbe4335a4f26"
-    sha256 cellar: :any,                 monterey:       "cbf83550cba6be1cc2ce3eaf4693872d266ba9effe2c0974581d00c1ffdd5079"
-    sha256 cellar: :any,                 big_sur:        "61bdf95fadfdd5ec951efe254a57068f50037e6ee8a5f9e2a46333aca445c283"
-    sha256 cellar: :any,                 catalina:       "75b9eb3c4cbc6a1f7ba49d9c664895f6b523d1c72c4a0829858e4cb85f36e5b1"
-    sha256 cellar: :any,                 mojave:         "2b50fa0f77d4e0255488e1978f7550d007ac16da5caf7b74b73553673a15d0b4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5ac7538d7996e4e71f976f811dc4b362d40993487dca09ab13dafd4675005b58"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "0119d332e408fcfc79bba65b7f2ead332e309c101d48eeb9587ea9eb3bcb3053"
+    sha256 cellar: :any,                 arm64_big_sur:  "c36ca6d6feeb0bdc9b5a53ab272a78cd5a3e5902fd13bcc7b5ea1edc743a35d7"
+    sha256 cellar: :any,                 monterey:       "71070ede6f57db3c5140144fc0d18ed71d7c159f14b5c7834d4cec7f33fbe8e1"
+    sha256 cellar: :any,                 big_sur:        "da4484607e08e23f56cd1f38df0af861c8fa15de55e128f1c5baf264f58899f6"
+    sha256 cellar: :any,                 catalina:       "9fca3bc7b89402d176cc2ccd392c49acf25274c170c1fd8a26c3b579b134ad30"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b28fad24d464ee6921378d942e409122ba303c642bcdab05e46e50f370e6f6f0"
   end
 
   depends_on "cmake" => :build
