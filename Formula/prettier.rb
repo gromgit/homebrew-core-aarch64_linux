@@ -9,12 +9,12 @@ class Prettier < Formula
   head "https://github.com/prettier/prettier.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "acd996a71b2e1512f07ef7ce3dafef701426ffe0308bf68b524acf83dade813f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "acd996a71b2e1512f07ef7ce3dafef701426ffe0308bf68b524acf83dade813f"
-    sha256 cellar: :any_skip_relocation, monterey:       "92b30ef5c7008873f46908a77a6523be4a22af6bbcca2f3636473a215588e4be"
-    sha256 cellar: :any_skip_relocation, big_sur:        "92b30ef5c7008873f46908a77a6523be4a22af6bbcca2f3636473a215588e4be"
-    sha256 cellar: :any_skip_relocation, catalina:       "92b30ef5c7008873f46908a77a6523be4a22af6bbcca2f3636473a215588e4be"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "acd996a71b2e1512f07ef7ce3dafef701426ffe0308bf68b524acf83dade813f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3b226eeb3f448795140ca2339340b2adc0d67b84b571c0b372642d9539ec0189"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3b226eeb3f448795140ca2339340b2adc0d67b84b571c0b372642d9539ec0189"
+    sha256 cellar: :any_skip_relocation, monterey:       "c1250d366af6a799659dee93c22beeca6f8526d98a1903a03429cd20bb601206"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c1250d366af6a799659dee93c22beeca6f8526d98a1903a03429cd20bb601206"
+    sha256 cellar: :any_skip_relocation, catalina:       "c1250d366af6a799659dee93c22beeca6f8526d98a1903a03429cd20bb601206"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3b226eeb3f448795140ca2339340b2adc0d67b84b571c0b372642d9539ec0189"
   end
 
   depends_on "node"
