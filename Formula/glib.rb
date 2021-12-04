@@ -8,12 +8,12 @@ class Glib < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_monterey: "eb2431db765a371d8f42cf08404dac91f6558ce72d9f5e178c5bc7eb5759ac7c"
-    sha256 arm64_big_sur:  "ddfd674ef914a06ce4689aa5c3d950079968ccdecc1291417d10c29eeff9a3b8"
-    sha256 monterey:       "372e65b88c410f6cb1c31ba7c4f7db10ae6e1df409368a9f9d853bd01ad278cb"
-    sha256 big_sur:        "5e4badd77c493fd6302636451a90393fa271d9eac1d94f4f4dbd0147c547d0c0"
-    sha256 catalina:       "45d42214c7944c5ad5bf31fa4bd754391df6c1b4eea879475913a8ca08988153"
-    sha256 x86_64_linux:   "66a325d3965670284cb718ff08ab50e5bd17b11e5eca6dbd0065209a86651e0f"
+    sha256 arm64_monterey: "bdcd1badbace8ba7d6ffbaec6cfdb300fe96f90f8279a9071b0bbea59890d09b"
+    sha256 arm64_big_sur:  "1bed3e54e8b85fe99a3e88e06ad1da63af0c6fd92cc4081947e385de5b3707d4"
+    sha256 monterey:       "0b628022094b74510047acda21574ca7fad9c667881856f8fb6b4d69f5684b3f"
+    sha256 big_sur:        "85ea450b1a990c33a988c12cea63c25ba3a483465eb9ddc762002dbff588642c"
+    sha256 catalina:       "9bb57ef98e408fe27b70fbaa609ab72845d8e86e6b75e5618eb5a0c467fe2fa6"
+    sha256 x86_64_linux:   "6ebba4d716df96faff8a847a703eb172b8b1001af0b6138d70449bc093d684d2"
   end
 
   depends_on "meson" => :build
