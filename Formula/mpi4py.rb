@@ -5,12 +5,12 @@ class Mpi4py < Formula
   sha256 "f1e9fae1079f43eafdd9f817cdb3fd30d709edc093b5d5dada57a461b2db3008"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "350da7c76c749159e384b65271a7107f5a11f50551d24af50cc12a74f4f435c4"
-    sha256 cellar: :any, arm64_big_sur:  "ffd1fb9532eb300ce207ee90f9639adb66d6a92c04ae858f3e4833f8e45c5e80"
-    sha256 cellar: :any, monterey:       "840c485c2cd77c090e6357e01de11e7d978e07e3af532fd3443616e3c69e595c"
-    sha256 cellar: :any, big_sur:        "373301a51fae0801ddd32dfb31bb78efc33aa2e137440f7cab9968686839cd4b"
-    sha256 cellar: :any, catalina:       "16bd58266cfa05fc6702543dcb39b0a5eba2795db2b01cb3cc5c8ff9186bd2e3"
-    sha256               x86_64_linux:   "8e464b664c635e1a446fa24a0167d1b9bbf97ebfcb0cfe692b0b4bd7d21f145e"
+    sha256 cellar: :any, arm64_monterey: "9e0dc01ca3c56bd8307b84a344531150afdaa466f75579b57755d2a5e2a6dd5f"
+    sha256 cellar: :any, arm64_big_sur:  "5e87a7ce5f7b2e702272c825e1ce772e66d1c9765524d38f8cb0c9650ca505e3"
+    sha256 cellar: :any, monterey:       "8aad47e805537da4625fab7f300fb8be6e3ada89116c134c31e7bba07bfcc0f6"
+    sha256 cellar: :any, big_sur:        "3e42d2f36fba22025e3c7c9a01096e4f79eb0872b449fb00ef0a1cf4a5c703a1"
+    sha256 cellar: :any, catalina:       "f851c6383fabf7db02ed5570a4605d0b1bcb926f27be04ce2cda08b68c87ef4d"
+    sha256               x86_64_linux:   "eef31e997cf6327384c7c9b861dfe7133c91448f30382c45cef0e8e1f4a31b21"
   end
 
   depends_on "cython" => :build
