@@ -6,13 +6,12 @@ class Csvprintf < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "93298c8242cc45869ba715c99354285a56814d9bccc7edd3ea7769b9a13489c4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8afbe3e5b8700c87735bc13b57bfcd617e4fb3a1520fa775c8166fd5ca82281d"
-    sha256 cellar: :any_skip_relocation, monterey:       "3ff3dbb23600a49ba231f0348388c37d62547f466d839ad6a17e1461dd27067b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3a11cedca73677e40d9ce558e0b00e7709574dc2dd631a054121b7607c1261e2"
-    sha256 cellar: :any_skip_relocation, catalina:       "42b91fd076c4f85bc0ec69ba1c9ae4d32a5a64b4070eb5859ee1e71199049f0f"
-    sha256 cellar: :any_skip_relocation, mojave:         "5fb842063d45968a558825af7a4dffcf5ef8258c9bd0c29c1b94657ac8fbab9f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8586df7d62cef4aca13955d98d0b661b2b2c93906060ac564dc4b81ad38d60a4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e815c7eda03c93ead3900d81e9cc6de93d9799cbcf1c6ce5d6627248c9060645"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b2730697c7253ae5e51b4281b43a5eb35a7bcd825b960f895632b944d7259940"
+    sha256 cellar: :any_skip_relocation, monterey:       "a8288e4d1677c30e1c77c31beaaa94a69ba4901e72599aa0e495be74aaadf406"
+    sha256 cellar: :any_skip_relocation, big_sur:        "582604ddedc5e609e67580e54a5da13e9d2537c21cbb17ab4e1b1b246b9fd4b1"
+    sha256 cellar: :any_skip_relocation, catalina:       "5c3336fe86de8ed71ee0c14a2740a8830d3bbb6fe6db8385320eecb383ca0560"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a3ae4b2e4e4ad33dcde1a30482c2cbe4660e96cd23fc60ea057ef31bdc2576be"
   end
 
   depends_on "autoconf" => :build
