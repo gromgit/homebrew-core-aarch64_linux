@@ -6,13 +6,12 @@ class Enchant < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_monterey: "2cf6840a590610ce93c66d0cfc9fe2956fde086768e05695dc4d74917d16c4f2"
-    sha256 arm64_big_sur:  "eb03db081057d7da6ca3b0f6b4e2b1c3b1cdbda2db9d8b6ab8a4af1cdb8a5324"
-    sha256 monterey:       "e2237aec8b2245a2c63c34a39ea78dffe792dd732380d982cd97f67c859aebbd"
-    sha256 big_sur:        "dc7c90e234d16a8a5d120aed18d8128488315e1dde6a2fbfa338da1ae90a618a"
-    sha256 catalina:       "e220a1df14ea2f3532073f35dab0ee2c061fa002660ca85f744d6cc5d068bfe3"
-    sha256 mojave:         "b5879a947bcce1d1162768bea9027fff9d74fad12b45a507306a0c26809c8f20"
-    sha256 x86_64_linux:   "bf93e5908e1bc27d2b7414a0f0d8bab29f7bbcf3193286d021b7146e4c6c6ef4"
+    sha256 arm64_monterey: "869c69a9a1b571303841941f6008f4f0d2cbff36f2c64b80c63174c614019c0e"
+    sha256 arm64_big_sur:  "f60f85a4b58d07f9dfc54105502a1c97dc47070e792075513c146ec823189dd9"
+    sha256 monterey:       "c67c8156619b551a9dc380750b9d8ec7e54b957baa0a7c38fb932aa9b5b6bc97"
+    sha256 big_sur:        "86ea290d09f8a7cb0818cf3783908b6770397fc98a2f3362d75d2c52bb6964f2"
+    sha256 catalina:       "711c56ae3eea07b51b939dabdf5776c98d562732ef2e58e48c8461b89f0c0d0f"
+    sha256 x86_64_linux:   "51c64a8487d3db1bad54d8bbe4e2ae44fd28dabcf2593b17d37e03243de1906e"
   end
 
   depends_on "pkg-config" => :build
