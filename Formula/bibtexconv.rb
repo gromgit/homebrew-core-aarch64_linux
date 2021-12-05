@@ -7,12 +7,12 @@ class Bibtexconv < Formula
   head "https://github.com/dreibh/bibtexconv.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "cb29d459522a8807ad4bcda6d0ad137782794a720d5735506385f3353e9299e7"
-    sha256 cellar: :any,                 arm64_big_sur:  "d7cf921f95e927c2e4a238786d2f4ad1627105a3711167af39fc9d1733064cac"
-    sha256 cellar: :any,                 monterey:       "d6db04dc263581b3a1a826703453ea6678e43ab4d74a68d2c029563c1ed1d835"
-    sha256 cellar: :any,                 big_sur:        "188668f5f42b00871cc8fd81e7856ee94363588f9328dbb4c27f77f251d6a950"
-    sha256 cellar: :any,                 catalina:       "27540958843cd41d831ff19c9def9d9d066b75f43e7345aa9ebe7761c4f3dc92"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "452b47a0b63d4e02abb780b3ce4b2cd1cc031c6d64b2c6b34c53c807e29b75d8"
+    sha256 cellar: :any,                 arm64_monterey: "eae3c4722d3b824dcaeb36ee02f1ab5fbd7e837ca540a98ac37a68a95ca66084"
+    sha256 cellar: :any,                 arm64_big_sur:  "32369759a62181680a6146a975b36f7712ca2dc96a2d645772903d20d1394eb2"
+    sha256 cellar: :any,                 monterey:       "0e738cb15ae6d4c43221401bba7501138159ca03b53f78271e73a0394729697a"
+    sha256 cellar: :any,                 big_sur:        "0e216e19ab0dc2b63c660892b8503f493f101437386da8239ea2c18b5b511ebf"
+    sha256 cellar: :any,                 catalina:       "d1a4b531a508711d1524b89ef21d2a1a1818453548c14d99c4ed09b1d05bbd09"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8d4960851c348c9a2bd2b981fd110ef2de2d1aa0ea6d2ea2a588ad1328a74c10"
   end
 
   depends_on "bison" => :build
