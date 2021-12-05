@@ -11,13 +11,12 @@ class Cfengine < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "ac0c15c47a6565b461d646e26e555f6ec4030f3931fe1408ed7a5dadb2d53e70"
-    sha256 arm64_big_sur:  "3e755d3d93d4f9af8e38a035ae5dc43ee42fd6b5ff11e4dd8d9a42addc193de0"
-    sha256 monterey:       "d8651fb50e8bbb84d089e3ea39918b3636d7668887ac63a429fe977b5df44087"
-    sha256 big_sur:        "369f0b971ef4b7968d2e1a8934ce03e4d841b88c9c0a789ca52e8e5d3b619acd"
-    sha256 catalina:       "397a614052632c146a1a8668a5e0a1e8ab1569296d6bd94b411b5bf15a61c736"
-    sha256 mojave:         "bc4f67e00fa8dc773ab0fcc1b9bb1376513f507fa958bceae50ef943ef5ff670"
-    sha256 x86_64_linux:   "c0182838df4ece465cc5e1084657b650bc1190c1272a0cd50a6af1f7562dae32"
+    sha256 arm64_monterey: "c81d7e7a9eec367bcd794ea9dc4092f3292552fdb1269b1df89c31d24a54abc1"
+    sha256 arm64_big_sur:  "9d1a150197ac82f23e8cc662a1e26019c1d12a47d89409646931911dfb890917"
+    sha256 monterey:       "2abde0aecb5b42972d16b36ac21a4c7c10f6eb010b66a89e3af66ad354677893"
+    sha256 big_sur:        "e4592faa5446d14f19d2deef600ec505f33ccbbe12e4284084e74ea14bf9246d"
+    sha256 catalina:       "1de581c225d466b87d19f3685e422959ad6a0383aa2fae0160cc3cb47c340979"
+    sha256 x86_64_linux:   "6d423a86c4e6b6150c21cd05046da345f8f7ec17be971257b5529559182d1001"
   end
 
   depends_on "lmdb"
