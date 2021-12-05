@@ -7,14 +7,12 @@ class DoubleConversion < Formula
   head "https://github.com/google/double-conversion.git"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "eff0d3c99c62a22fdd77e4dd79975c4e8ab128c49aba526950566eb2403ed14a"
-    sha256 cellar: :any,                 arm64_big_sur:  "928fbd4a31967ec090b4b292b1a212fec7eb75f27443493d0c175ca8bb56a9dc"
-    sha256 cellar: :any,                 monterey:       "3f206ad7966ca4547c40887c107dd03e7ffdb66c22b009268d6f463eb0b01dfb"
-    sha256 cellar: :any,                 big_sur:        "0f7c08daace9fc854f8526a7699102f40de9898fa1e6b05a0199b5da3c9e1a7d"
-    sha256 cellar: :any,                 catalina:       "20b93e20891d48912ffbfbdf3ef470f7305684df2381ef93056a11cedd95c65f"
-    sha256 cellar: :any,                 mojave:         "ec700c89a4f1794170b4466f5a0a100b6eafee7cb0a794e55ea53de18114a1d3"
-    sha256 cellar: :any,                 high_sierra:    "9b54153b09683b8fa40160588792385e04f6be56ba355c5a530a2209b9f0526d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e2796bb25c0134e6c05a40d43f8b417af7ba8d5216838c6e980b429c685d1793"
+    sha256 cellar: :any,                 arm64_monterey: "ba80263bde683392415555020c38aa1d86e81f5ec14f2f7ade34bca13a78d148"
+    sha256 cellar: :any,                 arm64_big_sur:  "021d47d6e30a4e1768cd51f8a9d5cbe0078ba006322b84dda0a7c65c31b00da6"
+    sha256 cellar: :any,                 monterey:       "d389a17b220811792370cfa604aa57dafb176261076d363b5a778d825f1b00da"
+    sha256 cellar: :any,                 big_sur:        "b58094fe44c3a64cfd22c9302ec2816b0df1e6d8a40351f70708d6046a65eda5"
+    sha256 cellar: :any,                 catalina:       "1a2c54c892d245d1ddb3cfe8214f800c36a947df01abe9925754afc0638e05d7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d75bf94e7f5f4bbbd7ee74092985c70954472561aaaad14bb6bafc866352ce69"
   end
 
   depends_on "cmake" => :build
