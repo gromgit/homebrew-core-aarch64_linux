@@ -7,14 +7,12 @@ class Libmpdclient < Formula
   head "https://github.com/MusicPlayerDaemon/libmpdclient.git"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ff2e2dead72db65e09843a2aba5544c9433b99c66ece05090ebd91d2271b3290"
-    sha256 cellar: :any,                 arm64_big_sur:  "b703e7d52c1be39561ae59034cd4574c6a9ef4a06cd98416503a402b01f7cf7a"
-    sha256 cellar: :any,                 monterey:       "4563058613fd0d8265d19259e825dafde7cfc6ee646911ac9632aa01ad177400"
-    sha256 cellar: :any,                 big_sur:        "ee86de4f5298b45cff0b1ba7446a9d9864fd1752184de585bf05e43a16374708"
-    sha256 cellar: :any,                 catalina:       "866e94308617552de97ecb04f824408fa4f849d1ef79ff9bf5467170c80e3a23"
-    sha256 cellar: :any,                 mojave:         "0db8f7c9e7cd6eb5082397e9270989864042e36c187cba2fa61ae43ca996e32f"
-    sha256 cellar: :any,                 high_sierra:    "71c37d5af98688decfe4440ce87e267064a4a71e0b1a4e11455068b5127edae4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "96f6b9b1aec66edeb1646d5bea33cf109c7a46feacde6eecf9dea5653ccb95eb"
+    sha256 cellar: :any,                 arm64_monterey: "cf069d8465152e64482a30cdd9be6d9db373eb6e033e20b36f5ed0c6ff787a81"
+    sha256 cellar: :any,                 arm64_big_sur:  "5b121fcd7d0df82dd8b3f9ee14f2084441e3cf4ad116d7b9deb556ed06fe2244"
+    sha256 cellar: :any,                 monterey:       "c929f3eba925610a9482592c5f541686258facc2ae2a366ef85cddcb42827135"
+    sha256 cellar: :any,                 big_sur:        "118c8e3f7e28a00346eda41e6f7c50a355c250ae797d828cc0a944f87e67767a"
+    sha256 cellar: :any,                 catalina:       "5bc8f8811db3bb6ac41f013c216fde9241674df6c6c8b37543fb1930d907cf28"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "798eacacec842e16efa4e6025c3199132ecb8c5980f82315440ece2748cab7f1"
   end
 
   depends_on "doxygen" => :build
