@@ -1,8 +1,8 @@
 class Assimp < Formula
   desc "Portable library for importing many well-known 3D model formats"
   homepage "https://www.assimp.org/"
-  url "https://github.com/assimp/assimp/archive/v5.1.2.tar.gz"
-  sha256 "17aff648d50dfd8fd07365684fe956812673044d759cfba28f8112bf98a2be7f"
+  url "https://github.com/assimp/assimp/archive/v5.1.4.tar.gz"
+  sha256 "bd32cdc27e1f8b7ac09d914ab92dd81d799c97e9e47315c1f40dcb7c6f7938c6"
   license :cannot_represent
   head "https://github.com/assimp/assimp.git", branch: "master"
 
@@ -16,15 +16,27 @@ class Assimp < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "ninja" => :build
 
   uses_from_macos "zlib"
 
+  on_linux do
+    depends_on "gcc"
+  end
+
+  fails_with gcc: "5"
+
   def install
-    args = std_cmake_args
-    args << "-DASSIMP_BUILD_TESTS=OFF"
-    args << "-DCMAKE_INSTALL_RPATH=#{rpath}"
-    system "cmake", *args
-    system "make", "install"
+    args = std_cmake_args + %W[
+      -GNinja
+      -DASSIMP_BUILD_TESTS=OFF
+      -DCMAKE_INSTALL_RPATH=#{rpath}
+    ]
+
+    mkdir "build" do
+      system "cmake", *args, ".."
+      system "ninja", "install"
+    end
   end
 
   test do
