@@ -6,13 +6,12 @@ class Calc < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_monterey: "7d7667676ed0a0a7dc7cb413fb5f1cb9e47c9eeda5e305e7b85e7f1e8d759149"
-    sha256 arm64_big_sur:  "20a69341f5baf00f5c9fa73998ce3f02939af44146d6eee3177854488e474df4"
-    sha256 monterey:       "59d6596872020d97aad74f8b066e772c4f6e348a201c6fdcd14151ddb0d72267"
-    sha256 big_sur:        "cdc2b4bce30dccf2193ea5a457dfa02e4ae1ba0af97fce660221c5d3882e79a3"
-    sha256 catalina:       "95bce9b12aab68a4d8e30121e0a0be5e0e7447e09bcc11d9d7e371956c724433"
-    sha256 mojave:         "57ac9fb9353e5bd4dd6bf6f62aca96252a064e51d102fd89389934fefa999b2c"
-    sha256 x86_64_linux:   "2caf96b7bf9165d15f2e5bd36226885e499a3b037e3572a845ec353e786a3bbb"
+    sha256 arm64_monterey: "1b85719255e54cab34f03f49ce13bf60c411ff2906fc656c4b01be3da9accad8"
+    sha256 arm64_big_sur:  "27fe2c067679806edd3a6a2befd438d2074b3d80d8f88641e7767edd08b197e2"
+    sha256 monterey:       "5f1da1bae1d178a6c84d3cb6d8e3f99c16fb1ace3fa4cce6bbcb23a1931f7a8e"
+    sha256 big_sur:        "f9d9cf3596d31c19d939fcb37fcd4bbd7f5d4c91960a6db21a8517ee8660c25b"
+    sha256 catalina:       "87f7b121bb153b15171ef29f1a848c9f548b19307382014b58230c6f7c00c67d"
+    sha256 x86_64_linux:   "00b6c48fd779740a875250f822f09985cb2738998313f399d43baeefe68826c8"
   end
 
   depends_on "readline"
