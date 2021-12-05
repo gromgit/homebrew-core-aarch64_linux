@@ -7,13 +7,12 @@ class DhallJson < Formula
   head "https://github.com/dhall-lang/dhall-haskell.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e9d96bc693a02bb5b1910d907b4019f591a59ad9178c8eb146355e0303a83e76"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "758387cdc99b7c74b74afd53d953d288834a91c0e9e34f3823bad458555c2b8c"
-    sha256 cellar: :any_skip_relocation, monterey:       "bf771b4d324e4cfafe6626296f5245e0b9a1b8050d1c3e35618032094dd30c45"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1fe927c9bb161d8280a7f7e4ae7f0c02e981fc1d7e78292d48ded976c496be38"
-    sha256 cellar: :any_skip_relocation, catalina:       "e4d2763620f32d19b77495ff7703835a791f81787b20557b7b29e494969cebcd"
-    sha256 cellar: :any_skip_relocation, mojave:         "782a3471003a7a941e45c635b708cf33a8e12eac2c08c890a6f44d1379e476ce"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "60b0ba1a22370321ab92f86812c2f20862de6f95604e6010dac36a61694893c4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "20fd32c39d1b0fba9c6b65b91419284283ccca19a3e10e492dfe62ae4f31ad9b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "458bc2034b51b4729cba015aeb92cfc7c9e14fb563d944a6b536a4d0d17552d9"
+    sha256 cellar: :any_skip_relocation, monterey:       "2def3dfcf25865481fdee2aa51ecb987d61889c7d0328b73ade5b16525781e03"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a2802e6b1e7cc82c07acb0b7a5bb29508e4905cae741b2f8c0715b577dce1ee7"
+    sha256 cellar: :any_skip_relocation, catalina:       "6e5eb791ef5cb206006257679b4212aa56faeb758c539756c6b4eace2cd8743f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "782f51f037bddc53e194282459854f1192fac51693a7d593200970be00457742"
   end
 
   depends_on "cabal-install" => :build
