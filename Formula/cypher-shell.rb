@@ -12,11 +12,7 @@ class CypherShell < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "496af8aff4fef0049d9858080669ca914b4df32b10c9cf402d896fd296c476fd"
-    sha256 cellar: :any_skip_relocation, big_sur:       "496af8aff4fef0049d9858080669ca914b4df32b10c9cf402d896fd296c476fd"
-    sha256 cellar: :any_skip_relocation, catalina:      "496af8aff4fef0049d9858080669ca914b4df32b10c9cf402d896fd296c476fd"
-    sha256 cellar: :any_skip_relocation, mojave:        "496af8aff4fef0049d9858080669ca914b4df32b10c9cf402d896fd296c476fd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "27991bb1a2895c3391165099d02c6163f00b4fe472f1242e9d2661cfb8f8fca3"
+    sha256 cellar: :any_skip_relocation, all: "d8d6ebf3954dd404e7262f839f4770919b9444ab7371d12f53dcbaeaa99983dd"
   end
 
   depends_on "openjdk@11"
