@@ -1,9 +1,10 @@
 class Agedu < Formula
   desc "Unix utility for tracking down wasted disk space"
   homepage "https://www.chiark.greenend.org.uk/~sgtatham/agedu/"
-  url "https://www.chiark.greenend.org.uk/~sgtatham/agedu/agedu-20200705.2a7d4a2.tar.gz"
-  version "20200705"
-  sha256 "432dd9602df326088956b3e4f5efe656ad09777873d38695e0d68810899941c2"
+  url "https://www.chiark.greenend.org.uk/~sgtatham/agedu/agedu-20211129.8cd63c5.tar.gz"
+  version "20211129"
+  sha256 "ceaee592ef21b8cbb254aa7e9c5d22cefab24535e137618a4d0af591eba8339f"
+  license "MIT"
   head "https://git.tartarus.org/simon/agedu.git", branch: "main"
 
   livecheck do
@@ -20,14 +21,12 @@ class Agedu < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "5079b0c9090045244900e90d0845b3eaef544fa624ba2f5658467ef229201e31"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "halibut" => :build
+  depends_on "cmake" => :build
 
   def install
-    system "./mkauto.sh"
-    system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}"
-    system "make", "install"
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
