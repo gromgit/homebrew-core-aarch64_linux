@@ -7,12 +7,11 @@ class DhallLspServer < Formula
   head "https://github.com/dhall-lang/dhall-haskell.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "79e2124c41514651a7eb1da835e35957ab9aee3958341361f92f9bc258fef064"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "040c4961a15ce28cbfb896a0057b26d5b6ad155df4543d9efc9edcf518343aa1"
-    sha256 cellar: :any_skip_relocation, monterey:       "198b8fc3aaf6a535057e52c075bc3269d60cdf8dfd83276d24f04b4db8875dee"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8fd9acfed2ce6997a2a16435372b7d012a67fcb427a031cf24595c153d13c63a"
-    sha256 cellar: :any_skip_relocation, catalina:       "2ef242fd1a6d231fcfa4cb37df3e58004da2d8e1a98452b0e5e82e3708f424bf"
-    sha256 cellar: :any_skip_relocation, mojave:         "b8d9503c6462a3e0739001212ae5bebaf80d653df9de6b10f788f3f1eb623115"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e2db9ffeec60593d9c34d32bdbb09cb9dab790ab7b8191a5eac77570a7551cb7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3caf64dcaba5d571112de9132bb2817f677385e401aef8c5a13d30165b4f16df"
+    sha256 cellar: :any_skip_relocation, monterey:       "362a4b236a99238db361fc279af5a0a33cbfe6dab34490de42140780554a575a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b25a3d228420a8ca66dc2990dfae8880b6c97f54a1ce7a56214dfff99299e38f"
+    sha256 cellar: :any_skip_relocation, catalina:       "67e5aeb8f75d83eaaa3615ba7e4e8636f5deb2bffba7b6231a30908d6ed1a0be"
   end
 
   depends_on "cabal-install" => :build
