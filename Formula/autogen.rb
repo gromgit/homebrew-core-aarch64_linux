@@ -13,14 +13,12 @@ class Autogen < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "dc64368c53d0eb66c1b093ccbba95d0fddaf2e9fc3053cee87a945309c0641af"
-    sha256 arm64_big_sur:  "5058d3eb0e5520f98914d8d3cc37d941ff260e36d7ccb2733b2b0dd8d7026ad8"
-    sha256 monterey:       "b6478645478663fad015e53f5ce2aa2b6dda32a40fedeb2b8c3b1e0a29a6ddab"
-    sha256 big_sur:        "f648b54769e2022a5801ba90716855fee7c1266b906b8f768934bde0063c05ea"
-    sha256 catalina:       "fa3818d518a214d9798a514e90c461d3a6be2c6fc0758c85ad4ad6b134a28851"
-    sha256 mojave:         "76df021218eb1d338cb8ee2a18c04e1d120166991c94ba64055537beac0e68fb"
-    sha256 high_sierra:    "45fb9e222b8c21729659821aa5565010df9c3f347fae4bc2f0e5fc01680a2c1a"
-    sha256 x86_64_linux:   "459c36573772600aab0085300e551ecbbe224a8b036bc10c15d48db1719a5a52"
+    sha256 arm64_monterey: "002ff8cce7e99ea4013348ada75389cb74804dcf3fa810488aeed5812f160b81"
+    sha256 arm64_big_sur:  "96cccae43990d233afe756eef8b9d700c7fc6ab316b3d119a809df04e04289dc"
+    sha256 monterey:       "ed4a28138185633424aa705f44e1449e5706c40f055b0e86fc58008f7400f0d7"
+    sha256 big_sur:        "a26ab2c3665e3fabb1a3b3ca20f52b0e1ee0c4a0ccd12beea3af97b73d347690"
+    sha256 catalina:       "45b3f716163b29ab1aab05aa9fbcf9e53bcee5c815b505165c52e80d9fa9234c"
+    sha256 x86_64_linux:   "1f564be58133732a4c9a380c85da6cc27dfe1b465c0a29c136c1a7ccb470a105"
   end
 
   depends_on "coreutils" => :build
