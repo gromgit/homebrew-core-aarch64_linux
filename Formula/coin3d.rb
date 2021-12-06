@@ -2,15 +2,15 @@ class Coin3d < Formula
   desc "Open Inventor 2.1 API implementation (Coin) with Python bindings (Pivy)"
   homepage "https://coin3d.github.io/"
   license all_of: ["BSD-3-Clause", "ISC"]
-  revision 1
+  revision 2
 
   stable do
     url "https://github.com/coin3d/coin/archive/Coin-4.0.0.tar.gz"
     sha256 "b00d2a8e9d962397cf9bf0d9baa81bcecfbd16eef675a98c792f5cf49eb6e805"
 
     resource "pivy" do
-      url "https://github.com/coin3d/pivy/archive/0.6.5.tar.gz"
-      sha256 "16f2e339e5c59a6438266abe491013a20f53267e596850efad1559564a2c1719"
+      url "https://github.com/coin3d/pivy/archive/0.6.6.tar.gz"
+      sha256 "27204574d894cc12aba5df5251770f731f326a3e7de4499e06b5f5809cc5659e"
     end
   end
 
