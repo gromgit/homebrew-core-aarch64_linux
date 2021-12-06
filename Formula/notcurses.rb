@@ -11,6 +11,7 @@ class Notcurses < Formula
     sha256 monterey:       "cc70b219fb6d8d484f2ef75c22ebd9b246491c2b1bae7759192eb10b718b0f2e"
     sha256 big_sur:        "f3d7743f9536342395d835f3a053d003d5005c62ed53b1a027357ad865cbd963"
     sha256 catalina:       "54c05406d94551aa9f702e7346b148dcf37aa7d376c6b7ba35bbc94c4aa1e4cf"
+    sha256 x86_64_linux:   "309ac26c730b2faeb2bce1b9d8e631cc168aded7e8b35ef17c691e471e50869f"
   end
 
   depends_on "cmake" => :build
