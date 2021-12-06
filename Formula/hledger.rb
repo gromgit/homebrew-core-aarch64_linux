@@ -14,11 +14,10 @@ class Hledger < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "66912c638ecc6308ab58e7222ef2c3387f59bd5a95dd805d9fd235c6a274fe90"
-    sha256 cellar: :any_skip_relocation, big_sur:       "4fa3b58f845c0578cabe2df90e488b112bb42140232c67e6faf2be22a1559bcd"
-    sha256 cellar: :any_skip_relocation, catalina:      "95c44e6e6addf32e60aedc34281156593ce27e72aa006d66326f3b78c6c99c6a"
-    sha256 cellar: :any_skip_relocation, mojave:        "a24a74b41e073eed1ace75a20c2e7d1c97f47ccd338cff794d959f4ac0ec6058"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7b7e03270cdd22422f3854383bbff4108b5d431422cfb6e1bcf443dc12c1acb1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7751dd2ed9c724738c798dcd4b20bb7988b923e445ef9e9cb16254872775e60a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "21077fbcdcbd900ae5146982658d5c1a08ab83ec42325601cab600458d9bd3d8"
+    sha256 cellar: :any_skip_relocation, catalina:      "d4a47b24b534c9430913e128cb62b714b62ae8e3fcf425f9cdabeb1e8b4156ad"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3ff8fe085d89f6a73a46cd103451a6bfd32c4104ec806404f45ddd3f718f02c3"
   end
 
   depends_on "ghc" => :build
