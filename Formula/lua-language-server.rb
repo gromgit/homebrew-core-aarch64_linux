@@ -8,6 +8,15 @@ class LuaLanguageServer < Formula
   license "MIT"
   head "https://github.com/sumneko/lua-language-server.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8598a4b0ad0dd5e5fb625cf3eeb0d67024d9ca0052f65df74c70c10ea719b111"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9d1138364c82a2017a06117b06cb9a8284770cd08ee732a87feb14458dd849c1"
+    sha256 cellar: :any_skip_relocation, monterey:       "1f1bb72dcffdfb4fce07a8ed30c94c42a251418abe7ed7b16cb19f09c3af6cae"
+    sha256 cellar: :any_skip_relocation, big_sur:        "6ba614b12c571a27101bafa7880daf07b27de32cf334c6fc8c3c3b574c9d2622"
+    sha256 cellar: :any_skip_relocation, catalina:       "91fa44b1c50673e04679304570510d67e2db7b5467e9115d69d224330f2d58d5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2f4af32c4c41f76628c26b4c19be9587ca4cbfefca64cbf7b91453b87c33e4aa"
+  end
+
   depends_on "ninja" => :build
 
   on_linux do
