@@ -17,9 +17,9 @@ class Openj9 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, monterey: "d50f6c688315c420b720fb259c0b18db3a8200470547560abf7cf8e2b2d0f108"
-    sha256 cellar: :any, big_sur:  "80ab779bca1df11eb74e7f7f64752abefcef9ba0017f484f2adc282f0b262566"
-    sha256 cellar: :any, catalina: "760830ffc2bb2cc2b556b413bf149178920a59cb3db511d8cd24795b3264f11e"
+    sha256 cellar: :any, monterey: "19290d492bbc5684b9ea8a66ba478e35c6d7ee3ade64d62770b764654ea29772"
+    sha256 cellar: :any, big_sur:  "75530242133eccf385b0e9f5afbce7652171ec596e8d0ba922ebfab28f87689b"
+    sha256 cellar: :any, catalina: "934fb20d912d385774e529262672c3b9161ccf5b13c3db62ace7657613773b5b"
   end
 
   keg_only :shadowed_by_macos
