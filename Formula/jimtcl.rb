@@ -1,8 +1,8 @@
 class Jimtcl < Formula
   desc "Small footprint implementation of Tcl"
   homepage "http://jim.tcl.tk/index.html"
-  url "https://github.com/msteveb/jimtcl/archive/0.80.tar.gz"
-  sha256 "9e79a960de925552eeb4df51121f0ea017e34409568117b1ac461f4c3071289e"
+  url "https://github.com/msteveb/jimtcl/archive/0.81.tar.gz"
+  sha256 "ab7eb3680ba0d16f4a9eb1e05b7fcbb7d23438e25185462c55cd032a1954a985"
   license "BSD-2-Clause"
 
   bottle do
