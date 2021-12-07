@@ -8,13 +8,12 @@ class Poetry < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6ae280fc23dc2e22b2834dedc7bc6a1e82cda13c5768dccb2978ee2f582a469e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1d5b4426cff6cce5bce2d71bd91f4e6f24dd3b7437dfad54839dc113fe360e7a"
-    sha256 cellar: :any_skip_relocation, monterey:       "bc38c9837be72695c0d850dc8e7415c4c510c540f7562f19fc68a1efedad9270"
-    sha256 cellar: :any_skip_relocation, big_sur:        "109beda4eebb47a07739ee82585b83b33d698fcfc182000dd1c3de48a73e6e0e"
-    sha256 cellar: :any_skip_relocation, catalina:       "df7c08b1afa8c61d53a6178f060c357d986557b0678a795ed6cae940778e35cd"
-    sha256 cellar: :any_skip_relocation, mojave:         "e774a5fa46defd516cee58eb9bcace102b3b8ec9d101dbd796df7b0a55d497fb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e33f71e0e2507519a6f11ecf51fc9657f932d01676ddf98186c55931441d4116"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ee4fa6b7ddecfcf7185c42b3f8e7ddb29fef23587a1408072ca1246b57f50ab0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "191b4a9f4e37240d74e1e4226ee026a9d58199d04df2c386ae584e2dfb6ac98a"
+    sha256 cellar: :any_skip_relocation, monterey:       "46d30d5f79a12ba55e8e48f1348804b19203802f844bf3468fae1d26dfa6022d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "57baa0d49e3cc9f1c141e7f2461f6d2bde78a75cb5ba9c26839991cd1dfbca3b"
+    sha256 cellar: :any_skip_relocation, catalina:       "c6ea236191fce2561dc25585ea45627ce15776d74a710d5e8b01ebc0c878a2c5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0f3be9d90d02183859da5cc63f29f990fa87b05a7f80214c32186018b07f3762"
   end
 
   depends_on "python@3.10"
