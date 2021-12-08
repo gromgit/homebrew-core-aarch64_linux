@@ -9,11 +9,10 @@ class Gdbgui < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, monterey:     "66ab0fe289baa0e06dca98ce2c3fbb6179093da983faab5119967ca33554e372"
-    sha256 cellar: :any_skip_relocation, big_sur:      "62870c658d7305914e55b06977f1bdd3599cdb5678b0a9b92cb8998f561bddea"
-    sha256 cellar: :any_skip_relocation, catalina:     "2f3943c95fd3a2345b6e0da211d4aaaa701dd295ff73c5b0e6ca576e357acc34"
-    sha256 cellar: :any_skip_relocation, mojave:       "419065456561b0783e97f2a556d937b9d171b2869db0a34a5c2216363aee2b48"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "e09f4154e95193c7972f0f55508792397338383125248ef3394cfe17a4a016cc"
+    sha256 cellar: :any_skip_relocation, monterey:     "41aa20f182812d4b36a9a3787248b2e6f2eb6bd280f4dec5b51765efce060bd6"
+    sha256 cellar: :any_skip_relocation, big_sur:      "0f053682295aea85e3b0b1c4ac395a06d681c42598c538c9b3ccd0ecbd8e4bd5"
+    sha256 cellar: :any_skip_relocation, catalina:     "e9caccd71e072398ff7ebaffcff9f00ceff86c6fe6230360b582683ea23929ae"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "a1970650715f513ee5e7c51574f1cb698889df5a509ba79f208782fd5b5d6167"
   end
 
   depends_on "gdb"
