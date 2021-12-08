@@ -15,12 +15,12 @@ class Semgrep < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "5f1eaa8e44be3d73edd4160c34b21269a36daa8fc0aebc21ab73a9d64fcd5d2b"
-    sha256 cellar: :any, arm64_big_sur:  "7c5b6cbdf761cab2bfc285e2874d07fa082ef3e0df98b3848890975096af3d10"
-    sha256 cellar: :any, monterey:       "862546e93481a1f815a874ec0992e9983303e1f7f9ef5aef64334d79309c67cc"
-    sha256 cellar: :any, big_sur:        "22dc5dbdf5c549194ea60b92d03b959cfb14569302286ffda1f321de0d91f508"
-    sha256 cellar: :any, catalina:       "abfb03fa46f8e5d82b0efe16a7a8b91b1c6de95871f461b7a41ffa51cc788a5d"
-    sha256               x86_64_linux:   "e05007ecae77aa863bec312f1a5314a226f0661dfdeb0755ba31c2d1533cc6ab"
+    sha256 cellar: :any, arm64_monterey: "4e82ae84445f501d2ba008f2b1f94af49b5971eb904e6faa2e3059383884ecba"
+    sha256 cellar: :any, arm64_big_sur:  "c33524b3af80b9b442a76a1828d54569b0c1b52c4b42ef226c205bc499a9cfd5"
+    sha256 cellar: :any, monterey:       "b1adf2c4ea179e2cc52417a7ba4034b9054610eb7bcf2ba8dc5805306eb15025"
+    sha256 cellar: :any, big_sur:        "035aa7fe563a8d2bf9a7c65259f6cb6434382aa5733d9e2e62bbb47be874e698"
+    sha256 cellar: :any, catalina:       "3309ed7fa688c91ac62cec231a809c2c72740203e7cf6f9bf52c0a33a38dfd9e"
+    sha256               x86_64_linux:   "9129bd84680640184cecf753713454f4a272d59b75ec22671c35a4a1278eb18e"
   end
 
   depends_on "cmake" => :build
