@@ -2,8 +2,8 @@ class Amfora < Formula
   desc "Fancy terminal browser for the Gemini protocol"
   homepage "https://github.com/makeworld-the-better-one/amfora"
   url "https://github.com/makeworld-the-better-one/amfora.git",
-      tag:      "v1.8.0",
-      revision: "71385e9f4e91ab982076856cac95320173ccea73"
+      tag:      "v1.9.2",
+      revision: "61d864540140f463a183e187e4211c258bd518bf"
   license all_of: [
     "GPL-3.0-only",
     any_of: ["GPL-3.0-only", "MIT"], # rr
@@ -39,6 +39,10 @@ class Amfora < Formula
     input, _, wait_thr = Open3.popen2 "script -q screenlog.txt"
     input.puts "stty rows 80 cols 43"
     input.puts "env TERM=xterm #{bin}/amfora"
+    sleep 1
+    input.putc "1"
+    sleep 1
+    input.putc "1"
     sleep 1
     input.putc "q"
 
