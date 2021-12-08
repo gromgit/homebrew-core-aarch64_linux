@@ -6,6 +6,13 @@ class Mist < Formula
   license "MIT"
   head "https://github.com/ninxsoft/Mist.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "35375786bef6d615bdcb87cb580f18dd0e3825a48eb297b6e18e8a4de0b4c25a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ffcafe421bb04ffa7b4509ae724f900d11a894891e27252398cc198ad330aa89"
+    sha256 cellar: :any_skip_relocation, monterey:       "a385b61b7c5db3f570ad7f004d63fe16e87f8d9e19b5cf12c648f10cdb544f18"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ab75aa8de44adc4fd72be7d70feb92eced0603238c209d0461c25e2341b1cb4e"
+  end
+
   # Mist requires Swift 5.5
   depends_on xcode: ["13.1", :build]
   uses_from_macos "swift"
