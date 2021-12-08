@@ -7,11 +7,11 @@ class Enzyme < Formula
   head "https://github.com/wsmoses/Enzyme.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "075c0ab8b00947778ad2212f10fbd17af50734a44329c395265554b8640cafca"
-    sha256 cellar: :any, arm64_big_sur:  "bf75d152afa4d751187cf264be677dd42af65cdb9e77253a983da3af32f3caf4"
-    sha256 cellar: :any, monterey:       "3d7434b30582befaf9a41d23f0a27976f526269887788623a62c3dea19296a6c"
-    sha256 cellar: :any, big_sur:        "efcf36a8941ced366f358d3ea166fa17a9a185040ffc740e4b1f4c45a8497d2b"
-    sha256 cellar: :any, catalina:       "e5a48739c72c69f13f6a38765ba1bad0651e400f37b448ea20c68a85beb464d6"
+    sha256 cellar: :any, arm64_monterey: "69a05bc8f58648732b1f1062692802ca510ab5cdd3c813f22b6dfc4101582876"
+    sha256 cellar: :any, arm64_big_sur:  "2c2715c8ef330c7d580629642fc278760229aaa3c1547da1baac536873a0734b"
+    sha256 cellar: :any, monterey:       "96b1cd9b18688314cb20f66506fadeeef7fdd7348337c9ecf209541864947ca4"
+    sha256 cellar: :any, big_sur:        "bbf062bbbbfbe7b577891485da5816f192417187a64f1784c9f41f050851db5b"
+    sha256 cellar: :any, catalina:       "82cdad645289807398413ed2ae99b7d85f687d40d48a37a43b2735d5f2ea31c2"
   end
 
   depends_on "cmake" => :build
