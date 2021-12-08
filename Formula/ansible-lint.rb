@@ -8,12 +8,12 @@ class AnsibleLint < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "1eae47c9dfd46fa3c63c3d0e7500a65a93062a280b37b1cf5322fb2a48fb5f3a"
-    sha256 cellar: :any,                 arm64_big_sur:  "be15352a1d8995e60a13e6e058f02e08344d3e62f4efa770b9c4a83e77d87af7"
-    sha256 cellar: :any,                 monterey:       "6a8c73ee22e491fdd4cb86f3608b1063be2b6b5b0253f78fa16c3331a45d22ad"
-    sha256 cellar: :any,                 big_sur:        "878df34429e3aa57c897b355de610ed6e27318d7e2316360b97382eb4881fac5"
-    sha256 cellar: :any,                 catalina:       "5d4df55be7c079772326180051e195a98442cf56e8b57b8bb8c98c65397007f6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4a293bdbafa954661ec5b5455c8685e93da42e909a7eb3c346a7bdf934ba9cc4"
+    sha256 cellar: :any,                 arm64_monterey: "a86343d1d06f2fc281733bc39f905020cd1520c1746876f506de65c32d2e4477"
+    sha256 cellar: :any,                 arm64_big_sur:  "bdada444dce1b3ce2008ee08356dd94614da276b6232b5897bd9f1ac4e1af64f"
+    sha256 cellar: :any,                 monterey:       "94f9b33304675a4ce9f7389a902ef0f19894254e37f7035eb430543bd3008777"
+    sha256 cellar: :any,                 big_sur:        "ab5b77b6ba51c274564411083509b3d7a54dbc737931b951c2a16e8232eed09c"
+    sha256 cellar: :any,                 catalina:       "6e4a43295c520b84d57c14ac7349e6287c051ed94db6b2ad67980e15829b3787"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "215d484be0c842f323bb2a57e7dab152966acab6426a0d7407345969da9e8ea2"
   end
 
   depends_on "pkg-config" => :build
