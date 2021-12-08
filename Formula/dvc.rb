@@ -8,12 +8,12 @@ class Dvc < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "9a467a23ee85724c49b0f40e46fa4e9853d206438fb9acc26c39846bc03d0adc"
-    sha256 cellar: :any,                 arm64_big_sur:  "77de97c6373d8b19eac9f0dc6425c8ece1b1ba1bb2b16e3e99df65b0f0619b46"
-    sha256 cellar: :any,                 monterey:       "3f316ce6a3f0e57ad67f4a4578e06cd6082f687472d7ed32be917c94c9900b0a"
-    sha256 cellar: :any,                 big_sur:        "c106aac33c302dfc5d08399cce7a6c32eb7dffaa6bf38694eb21c3c169ebb515"
-    sha256 cellar: :any,                 catalina:       "ac3b687c7a0e6f95e03b04ec5820fe11ea5d4f8aea84cf402311283345eba124"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2565cbf00eaa0b5d7aa25e8e36242ee1bbadfa4e0c7121365119089430b91dc9"
+    sha256 cellar: :any,                 arm64_monterey: "151c2b32618989db1658fc0beb57d3dc3d74ed980fc14732cc5ff49a5efec3c7"
+    sha256 cellar: :any,                 arm64_big_sur:  "542b8d37cf9cbe50754068beba7928a30296930f3bdc475dff9d580943484ccb"
+    sha256 cellar: :any,                 monterey:       "48113086dbb1a26251a94e5029c9bce79fbbf36fd12d5c4605ecaa9924dbb421"
+    sha256 cellar: :any,                 big_sur:        "c02ba464502da927fec1fb454404eb83cdaacb6f7f9bb37952511195e19d2079"
+    sha256 cellar: :any,                 catalina:       "0c7c36a8e03b2d7dc550523929a230139729eb6eabd4aeefdfd9c39fcaef5ea7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "37fb05e678808fb19da989ac00ccf268b035c6ffa70f10e8e9f4d9044eb68c00"
   end
 
   depends_on "pkg-config" => :build
