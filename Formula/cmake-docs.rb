@@ -16,12 +16,12 @@ class CmakeDocs < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b1612787671f3404142139acf3d989bd137ecb275db19157e907e3a0177edd5e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b1612787671f3404142139acf3d989bd137ecb275db19157e907e3a0177edd5e"
-    sha256 cellar: :any_skip_relocation, monterey:       "01c9bf302e4de6214d93308bffde28837abe58f9f46aa0a53948add4eca632f5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "01c9bf302e4de6214d93308bffde28837abe58f9f46aa0a53948add4eca632f5"
-    sha256 cellar: :any_skip_relocation, catalina:       "01c9bf302e4de6214d93308bffde28837abe58f9f46aa0a53948add4eca632f5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b1612787671f3404142139acf3d989bd137ecb275db19157e907e3a0177edd5e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1fa7655ba0f8617bd2322c216f176a09838ed18f5f3987e41b526c4233ff22de"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1fa7655ba0f8617bd2322c216f176a09838ed18f5f3987e41b526c4233ff22de"
+    sha256 cellar: :any_skip_relocation, monterey:       "eb6f3b077159533e85f19cb6e390804f7adc88a98bcf3cec84049ecae1b3600d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "eb6f3b077159533e85f19cb6e390804f7adc88a98bcf3cec84049ecae1b3600d"
+    sha256 cellar: :any_skip_relocation, catalina:       "eb6f3b077159533e85f19cb6e390804f7adc88a98bcf3cec84049ecae1b3600d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1fa7655ba0f8617bd2322c216f176a09838ed18f5f3987e41b526c4233ff22de"
   end
 
   depends_on "cmake" => :build
