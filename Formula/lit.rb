@@ -9,7 +9,7 @@ class Lit < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "0cc9d6acafc45e2cbf37ec1ec2ad3947d55a805529822db741b4d4d70aedbe6a"
+    sha256 cellar: :any_skip_relocation, all: "306d83ed52347e1f2e8f0781048c20dcd147ba2248d3e1a6458f88a75d6ca8de"
   end
 
   depends_on "llvm" => :test
