@@ -11,12 +11,11 @@ class Ejabberd < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "4b54e5246a1a00c93856d1786eb4067b3883f4293d3fb91a7345441fdc90ba76"
-    sha256 cellar: :any, arm64_big_sur:  "c22a2bd2a9dfcbbdc1e6df1ea63ae25924234f1ddd4cb5f4b016fc2013b97487"
-    sha256 cellar: :any, monterey:       "0e7930fc896f7e8136ed435743502e88820d1463a850537190b3d993aed6f202"
-    sha256 cellar: :any, big_sur:        "61ae3c224f34b18973bca8c311cdf990fe4e1c2be444d69ae5f9e2ecab6984b2"
-    sha256 cellar: :any, catalina:       "e864b717afec626c0a2b1e1038c1dcef082f6ef34d72085581f594d77b7a0ad1"
-    sha256 cellar: :any, mojave:         "8856dec9f546db393d17f66ec8427e0429650658e2622cad22f47347b563495b"
+    sha256 cellar: :any, arm64_monterey: "c4873e5f20dc834c2b31e8a3a0a8e4b2c72ff0cc3f1af5de65236cf2823d6524"
+    sha256 cellar: :any, arm64_big_sur:  "2c0f3a0d99e52c4e25e6844669929f992ee89514847532aa0cfff77aba2b1297"
+    sha256 cellar: :any, monterey:       "2aab8f179a30fb248fd1e07a00ac149bd763451f11a385f916d1950e0dea5858"
+    sha256 cellar: :any, big_sur:        "38f754a3aa6ef9c634104f39fd0c41e5d501525d69b437fd1520ff5544c1d01e"
+    sha256 cellar: :any, catalina:       "383e3974b71e4d572c5f509b3b33f228eef34f18ab607633e632c387a9562863"
   end
 
   head do
