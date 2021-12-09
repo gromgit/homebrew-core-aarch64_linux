@@ -6,12 +6,12 @@ class Zola < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "358cd43ee01981dc2b344fcc8fe96ae180fac36b0926b2145085359ab2e8a814"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "581eaad6733df3dcc4dbebed9df55447bb32e7e2fc847cf6688aaca016eac040"
-    sha256 cellar: :any_skip_relocation, monterey:       "89544b3105438d2c3235ccd86072777826f69d8ee08ac91097be397e49fb75de"
-    sha256 cellar: :any_skip_relocation, big_sur:        "75190c5c0f0d52b1157cb2b32a399ea190ead18f2d807dc02687c67091b3d0a4"
-    sha256 cellar: :any_skip_relocation, catalina:       "92a095f48b3810b1ba5ba3833ae5c4103a11c7333cc04812f524c6a32b09978e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "028a8912a6d99d808017f326f466e96e3e948d0880ee79fed819c484e25a0583"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7795cef21bcedd6719fc727da19594d860c97f35882e927819edba4d6eb12485"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e944388783159ce6fed070193c7b890fa68f97b22999c37475a64f3c95dac088"
+    sha256 cellar: :any_skip_relocation, monterey:       "757bd747e13fa4087d57a8523e595e6f3f9a6611a0f5cfaed3520d7a20c37456"
+    sha256 cellar: :any_skip_relocation, big_sur:        "57724d2b62f884dbb18027470d17f2cc2ae130b0a08484f3cae43d5d94b4e627"
+    sha256 cellar: :any_skip_relocation, catalina:       "852846a202575170847907daaaa47205962825aa4c0ef37fb01f03e65d8c9c87"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b4895480808690bcea005067c13ce47f572ece5c209ea1d2765e9f30ec7976a6"
   end
 
   depends_on "cmake" => :build
