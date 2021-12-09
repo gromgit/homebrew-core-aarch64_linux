@@ -8,6 +8,15 @@ class Jsonschema < Formula
   license "MIT"
   head "https://github.com/Julian/jsonschema.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "62336cdb621bcc2646e1be02bad6ee78b8004c12d633cafd44f340d5f77eebd8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2250940d8c389902740a0a73e84e3018912083ecad3dfdea2967950ee079099a"
+    sha256 cellar: :any_skip_relocation, monterey:       "1833ea0f497fed3106b3e22135c5cc83bc42b712ef7c1f3ea42faf0346924bde"
+    sha256 cellar: :any_skip_relocation, big_sur:        "22898510cec4fb04aa619bfe7174c3faf8769b6960b19b96d1cbe09f491bd52b"
+    sha256 cellar: :any_skip_relocation, catalina:       "30b3ac2062681ac49593397b3fcccf485cdbec05cce26f6156471eefdd23f585"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4e866ab057b96ad911eb27854dd64437c40973f2a1ffa2f873d48ffe81636571"
+  end
+
   depends_on "python@3.10"
   depends_on "six"
 
