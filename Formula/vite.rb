@@ -8,12 +8,12 @@ class Vite < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c69b488498cb1edf98389e9d39be58bfbb13dd0d48d1e15488824b6b0092b767"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c69b488498cb1edf98389e9d39be58bfbb13dd0d48d1e15488824b6b0092b767"
-    sha256 cellar: :any_skip_relocation, monterey:       "b4aa79c18edd38930cf6cb39b61de7cb3cfad66f0f0152f78442f1286d05bfa5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b4aa79c18edd38930cf6cb39b61de7cb3cfad66f0f0152f78442f1286d05bfa5"
-    sha256 cellar: :any_skip_relocation, catalina:       "b4aa79c18edd38930cf6cb39b61de7cb3cfad66f0f0152f78442f1286d05bfa5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bf2afaef3cd73016183fc7595d4f7634833ea015c43fd24cde3c838ad948821c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1ab7391ade85b48a782dd0a64bbf60ee42912b54214335c0653c0f603db673aa"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1ab7391ade85b48a782dd0a64bbf60ee42912b54214335c0653c0f603db673aa"
+    sha256 cellar: :any_skip_relocation, monterey:       "a53e57d7c1fb0b8d4e9be53cf9240a7253baaada4351d8b7bf628c452356e12e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a53e57d7c1fb0b8d4e9be53cf9240a7253baaada4351d8b7bf628c452356e12e"
+    sha256 cellar: :any_skip_relocation, catalina:       "a53e57d7c1fb0b8d4e9be53cf9240a7253baaada4351d8b7bf628c452356e12e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2df1709265c107c86796dba3c7ed080d2ae731b8db62c7423ea5072656e04c2c"
   end
 
   depends_on "node"
