@@ -11,12 +11,12 @@ class Kubie < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6a6f6e13201dc9ee630f54d52b8d772b12705885767d089045a72d6e8e92b54e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1259b162a2c4930cf2cb0258d3c02e1fe90129fb3182aee0d4426c1454bb911b"
-    sha256 cellar: :any_skip_relocation, monterey:       "e0c738567c18ccdfc3e8eda828b009d6963d527f26eea989b59af0b967403fde"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b0c6503d6d2d4d0eb121b3a403cf319dcd30055bb5f6115363a66aedb3be3f45"
-    sha256 cellar: :any_skip_relocation, catalina:       "0be56bbdb904d8fc269a90cc78b47eade6db07a39e2bbb59eec379258a6a9f4d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d58082f93c6d6a680cf537086165e0d2b9a5512c8d8511fb9021b457dda7cb7f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "53d190ca715f75e49c9263e321affe72e8bd6af5519eb63fd9619dd97a230811"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9b259fbad773ba552bd0a89165085bdb63cd3fce450760aebccf9e5aa9636608"
+    sha256 cellar: :any_skip_relocation, monterey:       "d9a4abcc8ac31fbffb012211975ef64ffd8c022afc916899c1ee9788b12bf99f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "03762ab9517cc8ce3b7711608eefa92443dfd7f59f0ead356c78130fa5b6d1a9"
+    sha256 cellar: :any_skip_relocation, catalina:       "5b1745bd373e76bbc6098aadc55c20e5da118e14bcd8f7f33fc8a80cbfbd0bb1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "49ac2a0fee8f007c3c5bdf5ffbec01c22264b6843ac87bc0b840489ea0f2840d"
   end
 
   depends_on "rust" => :build
