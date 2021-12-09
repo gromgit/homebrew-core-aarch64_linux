@@ -5,6 +5,10 @@ class VtableDumper < Formula
   sha256 "6993781b6a00936fc5f76dc0db4c410acb46b6d6e9836ddbe2e3c525c6dd1fd2"
   license "LGPL-2.1-or-later"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "25d515fa79afefdabc3aa8020499f4092815f3857e891e3e5c88328eaa221b27"
+  end
+
   depends_on "elfutils"
   depends_on :linux
 
