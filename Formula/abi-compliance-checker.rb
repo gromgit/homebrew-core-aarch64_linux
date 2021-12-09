@@ -7,10 +7,8 @@ class AbiComplianceChecker < Formula
   head "https://github.com/lvc/abi-compliance-checker.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, monterey:     "b5d622c9b96aaa8fb78ec2702165ba666d881e6188a0a10bb6b941d1107fcde7"
-    sha256 cellar: :any_skip_relocation, big_sur:      "b5d622c9b96aaa8fb78ec2702165ba666d881e6188a0a10bb6b941d1107fcde7"
-    sha256 cellar: :any_skip_relocation, catalina:     "b5d622c9b96aaa8fb78ec2702165ba666d881e6188a0a10bb6b941d1107fcde7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "cfb5f27462a33947ebc2ab18f8a5106446aaaf4322e07556f389df144a9e9d05"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "06af34b7632a01e00b3d6d5ad826d4102e7a840e32b4a0a0bc2a58c3fc799cef"
   end
 
   uses_from_macos "perl"
