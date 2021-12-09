@@ -13,13 +13,12 @@ class Terrahub < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "06c1650e2da7ea8fbde4037d522497d5f5a82e9565983610253723140e43df09"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1258000ba0fcea8aacae546c1623b98858cbcdcf3bef406a58271134bb4b3fe6"
-    sha256 cellar: :any_skip_relocation, monterey:       "795adda61afd8b014682543f6272e14bf269fa91890c33bd0b182f9bfcd5cb3d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c32fed79f29e9f9dfc5ca06ff95fee401fc12be011e424102bb7cdd1fadaeb92"
-    sha256 cellar: :any_skip_relocation, catalina:       "c32fed79f29e9f9dfc5ca06ff95fee401fc12be011e424102bb7cdd1fadaeb92"
-    sha256 cellar: :any_skip_relocation, mojave:         "c32fed79f29e9f9dfc5ca06ff95fee401fc12be011e424102bb7cdd1fadaeb92"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1258000ba0fcea8aacae546c1623b98858cbcdcf3bef406a58271134bb4b3fe6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "789268e0bba0906de4628714931d067d6fa90c8cd5a3f04987546227aa8490fe"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "789268e0bba0906de4628714931d067d6fa90c8cd5a3f04987546227aa8490fe"
+    sha256 cellar: :any_skip_relocation, monterey:       "14e33898a766960658e4c91ab8f86b95259593ee7002a08fc1a9ec7a4383b940"
+    sha256 cellar: :any_skip_relocation, big_sur:        "14e33898a766960658e4c91ab8f86b95259593ee7002a08fc1a9ec7a4383b940"
+    sha256 cellar: :any_skip_relocation, catalina:       "14e33898a766960658e4c91ab8f86b95259593ee7002a08fc1a9ec7a4383b940"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "789268e0bba0906de4628714931d067d6fa90c8cd5a3f04987546227aa8490fe"
   end
 
   depends_on "node"
