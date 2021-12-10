@@ -1,8 +1,8 @@
 class Grafana < Formula
   desc "Gorgeous metric visualizations and dashboards for timeseries databases"
   homepage "https://grafana.com"
-  url "https://github.com/grafana/grafana/archive/v8.3.1.tar.gz"
-  sha256 "b5b818b3aadc2fbe5b083647e803e7bb96ba8df6239502c4dc8431a7ab9ec3a1"
+  url "https://github.com/grafana/grafana/archive/v8.3.2.tar.gz"
+  sha256 "1a8baba2bdb1223aaa7074d579b40c0efa3a3dbfe3fd8d2b15b96ff1c0c28a8b"
   license "AGPL-3.0-only"
   head "https://github.com/grafana/grafana.git", branch: "main"
 
