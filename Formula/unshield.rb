@@ -7,14 +7,12 @@ class Unshield < Formula
   head "https://github.com/twogood/unshield.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "203b32bff779c6547678a76cab4d9c77a94b0772969f7e51a267be0f8fecbea4"
-    sha256               arm64_big_sur:  "d12579d6ed702bf8d4b9a37f45b6d9c527c88e60d648d935d93c969d0b6b78df"
-    sha256 cellar: :any, monterey:       "3e0e5841f8f6a5244f2bc620ce4d2bdd35492fb40d3262c6eac73775e33ac9c7"
-    sha256               big_sur:        "fe9c9710de87f7734c84e3454ba88a2c35b859fb8b8dfae56968c3c0bb4e76fc"
-    sha256               catalina:       "d64e0c93743d7d50858bd5c46c76b8fa79183b5ee4643361202f53378a88cc05"
-    sha256               mojave:         "ec5db176e7f9557645cfdb63062802d37a8e516f39f1e53037e37ed398992b3b"
-    sha256               high_sierra:    "c68a5391b55e5101979c69d174160564d88edc7263afa140fd69ce289c6662ed"
-    sha256               sierra:         "96cc0aa68d191d1bc98d09a48abaa44b58b4e979bfcec3b2abc384c30d56684d"
+    sha256 cellar: :any,                 arm64_monterey: "67ec512a1440cd9789eeaec27ebec1f7d8ac8ca9ba1bf20994f75b880cdd383a"
+    sha256 cellar: :any,                 arm64_big_sur:  "733440cfd3ab30313002e94a0384ddd6d86ae93d2460f9930ff4c7887261dfa0"
+    sha256 cellar: :any,                 monterey:       "61708a9426f9a495a4ced1396ad2d89f9ecbdfea9ceefedf192adf17d0975dde"
+    sha256 cellar: :any,                 big_sur:        "71733479817aa41beb3fe68201a3dbd352e4a0c8843caf92f3265d4d84709a42"
+    sha256 cellar: :any,                 catalina:       "4722f61677e2a089ced4df43d131b827447cbca5eac319b52abec6bc68260a33"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "02c95d26fdd62d2125b26d3f1ceb5db36a7f9ce939ead9172fda18822720acca"
   end
 
   depends_on "cmake" => :build
