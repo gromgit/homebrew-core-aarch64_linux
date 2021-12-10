@@ -1,8 +1,8 @@
 class Ucon64 < Formula
   desc "ROM backup tool and emulator's Swiss Army knife program"
   homepage "https://ucon64.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/ucon64/ucon64/ucon64-2.2.1/ucon64-2.2.1-src.tar.gz"
-  sha256 "e814f427a59866e16fe757bf4af51004ac68be29cabd78944590878f1df73f79"
+  url "https://downloads.sourceforge.net/project/ucon64/ucon64/ucon64-2.2.2/ucon64-2.2.2-src.tar.gz"
+  sha256 "e100ad4a30f6c19abde98e361c6a0ecac4e40477f54cfb75498c5ccd21fb3a18"
   license "GPL-2.0-or-later"
   head "https://svn.code.sf.net/p/ucon64/svn/trunk/ucon64"
 
@@ -24,7 +24,7 @@ class Ucon64 < Formula
   uses_from_macos "unzip" => [:build, :test]
   uses_from_macos "zlib"
 
-  resource "super_bat_puncher_demo" do
+  resource "homebrew-super_bat_puncher_demo" do
     url "http://morphcat.de/superbatpuncher/Super%20Bat%20Puncher%20Demo.zip"
     sha256 "d74cb3ba11a4ef5d0f8d224325958ca1203b0d8bb4a7a79867e412d987f0b846"
   end
@@ -59,7 +59,7 @@ class Ucon64 < Formula
   end
 
   test do
-    resource("super_bat_puncher_demo").stage testpath
+    resource("homebrew-super_bat_puncher_demo").stage testpath
 
     assert_match "00000000  4e 45 53 1a  08 00 11 00  00 00 00 00  00 00 00 00",
                  shell_output("#{bin}/ucon64 \"#{testpath}/Super Bat Puncher Demo.nes\"")
