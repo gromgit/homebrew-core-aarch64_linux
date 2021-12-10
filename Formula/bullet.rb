@@ -7,12 +7,13 @@ class Bullet < Formula
   head "https://github.com/bulletphysics/bullet3.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ed4d4e01d663fe04ff8e27f3f7bf8b85dbd0737c0bdc4cbdd1e397737b257f43"
-    sha256 cellar: :any,                 arm64_big_sur:  "0922421129df15920cc29e38684f6b8ac6dd88fc275eb4afe77f2c244676d827"
-    sha256 cellar: :any,                 monterey:       "7f94b5aa89d25a67477240fbc1d9791498cd6f947c54ec9d98542adcf737f092"
-    sha256 cellar: :any,                 big_sur:        "4dea7d88d2f4e986caafaf55868e5f35148f5727b0c71b135f61001a7621da65"
-    sha256 cellar: :any,                 catalina:       "38141da23a12028cd82b1932b1bf4571058ee690f4f2f248f20c7f0ef5a8e4ca"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "99337f0a712e95589b277d350f50516eac5336653b586b3170d2e77e7633febc"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "30a87e90fe654bae66c48b1992d4626c6ae46b4eefa2c0ce5032527df006d75c"
+    sha256 cellar: :any,                 arm64_big_sur:  "19b6ccc0cbf6aeb43f9ef9eb89f5f74d0c33e0e7d2a4a81e86f93a402bf092e2"
+    sha256 cellar: :any,                 monterey:       "5b24686d6901127967ba097dfa0200c2b17eba48600d480cb310e8d3f1ea554b"
+    sha256 cellar: :any,                 big_sur:        "c9801c68a5705930efd11f8c5a4d07f95d69a36ecf303e0914c50fe2cc5f1dac"
+    sha256 cellar: :any,                 catalina:       "42924c0b6e8d5641fdee26791f7726d8615b568c5eec64207d14836638251677"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c2edebdf03c1345f393e924a68f24b6a92041b9de14ad99bd126d4c57791e23b"
   end
 
   depends_on "cmake" => :build
