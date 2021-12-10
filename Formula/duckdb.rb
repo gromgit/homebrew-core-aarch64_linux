@@ -7,12 +7,13 @@ class Duckdb < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d62b4d92c3161fdbc03bd72ea5353d15d2e7ce7d457240fb1a7ef18e53957f19"
-    sha256 cellar: :any,                 arm64_big_sur:  "0edcf2ae659f36d918cdf3a070b198ec0ec0c2208b0dfe9338bf1aea72ab2c73"
-    sha256 cellar: :any,                 monterey:       "f5351c2f7c5198483042f3acc94f38324138e9d65e48589d584c916144bfc9c9"
-    sha256 cellar: :any,                 big_sur:        "b17d562d33b1f735cff89f08cefb1158aeaf0e42487aee0a691966653fabdbb1"
-    sha256 cellar: :any,                 catalina:       "7109176d3717de319efd7eb4a5b74d282ad593d3325bf36932bedef20b11ddfb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "45ab4e1bbf1d1b744b80e2726a7ae9c32f59fc412e00d197293cae56430cbb95"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "c07a6abae9638a85c29ae922971822e38f701d534b45891d6f30b9245d0a596e"
+    sha256 cellar: :any,                 arm64_big_sur:  "661c449ddd0a85274cc67ee13e3f879bfcabe230eeda89eecf7efe872b2a7a61"
+    sha256 cellar: :any,                 monterey:       "7aa321e06da4a0da135725d1ae7abf488355e8da4fbc5aacd644e25947329acf"
+    sha256 cellar: :any,                 big_sur:        "eeb0655de2512da9dc757c0b1db4dfe8d9a01318a57edb78b1a1dbf3ee7d7d23"
+    sha256 cellar: :any,                 catalina:       "e1b1b561d7b1e90b19d97ec92540d62569534b710ef78910513703ec4feb8261"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b995635848717ace446342a51e8c2d6d25140ad282ac9fd5a5f56abce68011e8"
   end
 
   depends_on "cmake" => :build
