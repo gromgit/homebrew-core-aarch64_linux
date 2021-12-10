@@ -12,12 +12,12 @@ class Tcsh < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "e47c7423c5a1f8bac8d8247dca0c94032a18a08b053f50d9d0754a9778ee6a85"
-    sha256 arm64_big_sur:  "06956d228817f2f2d70e17188e7b1b8d8819ae03c6e5945611a9efdd4b270533"
-    sha256 monterey:       "c95fd96b9bac7314b5e358e6b4b350523f61af3556004a5bb05256ec62f5eb7f"
-    sha256 big_sur:        "7fc2dbe2c64c70e4f041925dcc8a7842f8f62684ff428a1d09c739d311a2e75f"
-    sha256 catalina:       "4c37b7e1d07dea6661ae3f8d7784390d8a20852f3e2110a7f4dc8bb5e8bfd834"
-    sha256 x86_64_linux:   "08962f105120620fbdd5a0c62bf1458edb8e711fd0ac507af92cd386bb326e9b"
+    sha256 arm64_monterey: "cbaf3fe9888cded82e2c8375497203dd8186786acf98db736b838e9be129d4ed"
+    sha256 arm64_big_sur:  "5821651b1356e16446ef60f18012daabf90d85e3bb2174d5f4ef54c2417c1ce4"
+    sha256 monterey:       "05853556fc1069c79655b27b0d33494a1d5d81206279edf570ef5ba5ae49c366"
+    sha256 big_sur:        "ae686d5cf9b7ceff8919b30458a438f20b2c32db38577eecb3faa82a49000c8d"
+    sha256 catalina:       "61890961cd66eca02e3c149af752803f93eedbe7bf2ffb9307eac0a861d91c80"
+    sha256 x86_64_linux:   "57faaeaa3d0772d2893068e3f21ebb81cedbac4dfb2e57e5d09f3db2bd4a3aa5"
   end
 
   uses_from_macos "ncurses"
