@@ -11,11 +11,11 @@ class ShibbolethSp < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "738bd343b9f76ecd309ab8ae3376984c01b3a5a8300d4bd91815a4035ac94b97"
-    sha256 arm64_big_sur:  "c809a0f2ce20af11fc0b15fd87146ac1606064c7a6b713b43b6d96723e3dad2b"
-    sha256 monterey:       "d5edc5708519b4dbe5e23f465c19909e9760e9d91970995dc1ecb31c668b438c"
-    sha256 big_sur:        "5d0b4c8fa81c68acba6283b76721979e985730fd8425c12c73b9c66740d7d70d"
-    sha256 catalina:       "2c64a07ede27423b2f21a93a7028c0071a60723280c0da53a1173be2a09268b4"
+    sha256 arm64_monterey: "e90f7108926a0492b61d482442ca3363e01fe4ee0a5030d3d5128ee7bce62c04"
+    sha256 arm64_big_sur:  "3627b9b94793331278c868f3f50c0feb832db68545ee689445efcb17e56abd99"
+    sha256 monterey:       "3c5fddd0234a1d201aebf7cda85223212e0e3ccbded613e3258cc014d2811c0d"
+    sha256 big_sur:        "6adfa5b54297937bf4bc1a5abba4f57dd5bca91647c3b9cac9a0b7a86c8ca444"
+    sha256 catalina:       "82e21f772932a9edbbefc1288e26e6537b23cbb74dc7eb6d8c814486157789c9"
   end
 
   depends_on "apr" => :build
