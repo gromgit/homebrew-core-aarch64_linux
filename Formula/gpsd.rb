@@ -12,13 +12,13 @@ class Gpsd < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ec8c94a333277ff13aba8916ab3d434dc19de4b55cbf110dc7747a6d62b16366"
-    sha256 cellar: :any,                 arm64_big_sur:  "883c90ed12472d9116910ac3bed524ed400b2c1a7a702fd1e61c281a7689ddca"
-    sha256 cellar: :any,                 monterey:       "cd3594200ba2689bee0aec4aa3dd54036128ea5fe87aed2138867cd6f2eb9471"
-    sha256 cellar: :any,                 big_sur:        "9f7217ce185daeb8e0a596db9aca4fb501eb053c37d043d36ebc7cae51edc806"
-    sha256 cellar: :any,                 catalina:       "7abff1947d861eb50d2f631c5d5ef6930d968d882ac64604111ba0495a86c9d5"
-    sha256 cellar: :any,                 mojave:         "39246316c1b4cefa12a9835f2da96b924a71f48ffadd0a7518c3b6df9f6fbd19"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "68b07cf9cfaf44ccdafbb7096a207f7b57b4ce4d9ba95867c128658f1b45c5a9"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "363e6a7e67b050a027ff46ae2c444c7f1125d39f515fe77e39cc9041656c7977"
+    sha256 cellar: :any,                 arm64_big_sur:  "3b9099d2a71d641a8f1c935fa7a02b9535968fd2edef5584fc7143bc0f04d6b7"
+    sha256 cellar: :any,                 monterey:       "df2284611cbdcd349ba5fdf8d7a0a21b710d41b7f8b770231fd70bdd76e3519f"
+    sha256 cellar: :any,                 big_sur:        "328535be408821bb68bd55cf385c978b28043d4a561168a8f7dd3a200a41ae02"
+    sha256 cellar: :any,                 catalina:       "f38c863774029e15c3a4a17213b470e82f1ca167cd1221d0d3b7efb2c953f92f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e1a8f97e40f3f2bf07d67731dcaee835fa0d9f211a05542a5420e363ef35d266"
   end
 
   depends_on "asciidoctor" => :build
