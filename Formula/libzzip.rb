@@ -7,14 +7,13 @@ class Libzzip < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "460bbbc8e5d56c82fd67e731e7abba29244400566292bbeaed1d67e4bb2a092e"
-    sha256 cellar: :any,                 arm64_big_sur:  "43fbba2b7e506170bf0f03a8c281c142b04cd1b95365392d36dcc014e5f24743"
-    sha256 cellar: :any,                 monterey:       "6866b7cf2364fada4775bb915c9ecd761ea6d909a9bc744e6b93a81796f6957f"
-    sha256 cellar: :any,                 big_sur:        "f4471c0801590824b9fa2de9a5f25c14fc42dc8d87a5efcdf16144a116d5b997"
-    sha256 cellar: :any,                 catalina:       "0d0827679b5108d79b6bcbf8a3f1ede078d547bb1986d4b7808d6cdb77104023"
-    sha256 cellar: :any,                 mojave:         "f165f79a37ac61eeb25c2f9b4756848f4c3a9ddcb7250b9de0e6cc5640b00598"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8360520c0127acc397b30f0aac2213f717d37c023a2aa9a96d265a0d7b77d4ad"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_monterey: "cf74798703189f3c2ecd72118e9e8693379ec1d9a1936ccc9be5cf333cce2d44"
+    sha256 cellar: :any,                 arm64_big_sur:  "a7c81a822e4814e69bc27ee09c6fc7e2bbafbaacdb0337b90406b3ac7d627645"
+    sha256 cellar: :any,                 monterey:       "ecf9e88530bcb24d5f5b531834d3f45a3d6c424e93ec24132ac062114a6d04f7"
+    sha256 cellar: :any,                 big_sur:        "1a3322eea48b54ad64c93e36b3c61cdf3175b96d01b39a35f6a70cb9c079b92d"
+    sha256 cellar: :any,                 catalina:       "8c6c6c3bf2febfc90d54933e232cc64c5adbb3a8afcf7885725190c73ee5d350"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b1ec7a63878216eebf0edda2089ab91a36c44928887f27e995299c75243e3cb6"
   end
 
   depends_on "cmake" => :build
