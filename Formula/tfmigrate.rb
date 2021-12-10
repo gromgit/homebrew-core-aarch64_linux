@@ -7,12 +7,12 @@ class Tfmigrate < Formula
   head "https://github.com/minamijoyo/tfmigrate.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c1a5952e1dc57c11b16819fcd845bbf375669f5899c3d1aed0dd9beae82758ae"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c1a5952e1dc57c11b16819fcd845bbf375669f5899c3d1aed0dd9beae82758ae"
-    sha256 cellar: :any_skip_relocation, monterey:       "32b9120fe137d97857211eea610968fec6a4c2cb1b8c411c78e29aa3c94ca2f2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "32b9120fe137d97857211eea610968fec6a4c2cb1b8c411c78e29aa3c94ca2f2"
-    sha256 cellar: :any_skip_relocation, catalina:       "32b9120fe137d97857211eea610968fec6a4c2cb1b8c411c78e29aa3c94ca2f2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5e9df4706a6c371a6a0adeafff883cb52dd15c1b754186fde67b79cd1282abe8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "43939fce4b807c3ec994b4324e0c5c84ec63394ce8600c92efa7804cce841931"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "43939fce4b807c3ec994b4324e0c5c84ec63394ce8600c92efa7804cce841931"
+    sha256 cellar: :any_skip_relocation, monterey:       "dc29e81837cb994fcf8b2ea851cfa53018b65d36999dea05d55d16c91e7ae439"
+    sha256 cellar: :any_skip_relocation, big_sur:        "dc29e81837cb994fcf8b2ea851cfa53018b65d36999dea05d55d16c91e7ae439"
+    sha256 cellar: :any_skip_relocation, catalina:       "dc29e81837cb994fcf8b2ea851cfa53018b65d36999dea05d55d16c91e7ae439"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e874628816f2c5f83e25fb0191624c7a6ae40a3a9f1d29d0675ad4d9196637b9"
   end
 
   depends_on "go" => :build
