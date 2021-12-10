@@ -5,6 +5,15 @@ class Goawk < Formula
   sha256 "c66a6aecee7d35d6768f2bd826916e0a2c1f77d7c426d5c291a2ad0bc4039136"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ff6c4506e9bb709aa2ba5446745e48d7aae70ef9d29cc327eea7e1f0023ebf2b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ff6c4506e9bb709aa2ba5446745e48d7aae70ef9d29cc327eea7e1f0023ebf2b"
+    sha256 cellar: :any_skip_relocation, monterey:       "c1474c86508e2a95b8e1697cce372a5b5b5860185eb6f4c92cd0f89a4af97014"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c1474c86508e2a95b8e1697cce372a5b5b5860185eb6f4c92cd0f89a4af97014"
+    sha256 cellar: :any_skip_relocation, catalina:       "c1474c86508e2a95b8e1697cce372a5b5b5860185eb6f4c92cd0f89a4af97014"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "998a7c5349c971ac2c4255d7a348b76b282a45ce57aae467783345c54b246b43"
+  end
+
   depends_on "go" => :build
 
   def install
