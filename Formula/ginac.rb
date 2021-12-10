@@ -12,11 +12,10 @@ class Ginac < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 monterey:     "1fab055efe4ce1208e59f0a91dc7f34abd4a2890d07f04fe8dce3e8d7eaee80b"
-    sha256 cellar: :any,                 big_sur:      "d1001c3d4a1975402462d266d715a584dc63b8ea9221cd680de70818237785f1"
-    sha256 cellar: :any,                 catalina:     "3b28c3417ab90c06f4d86556bc51d51e7c17b05930adba6b71bd7091e22ade48"
-    sha256 cellar: :any,                 mojave:       "bb5a12c6fa1e5ad8e5d29304c0ca6e7bef7bf83799545ee45a4b5608a0ef7a88"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "218209fcd3fab207b046dc8bbb781f8cf4831e97df1c38c657258d2ddd517d38"
+    sha256 cellar: :any,                 monterey:     "21cd21883b723b4a4dc0bb4f29ac8a641cf18697be02b95db01a52566da7d287"
+    sha256 cellar: :any,                 big_sur:      "5fc49d7357aed9862cdd9a08ee5bdcf98ee3b396d883685c1fbc246a44c21920"
+    sha256 cellar: :any,                 catalina:     "ce496bf81091b0a051c7e8b1f2f042d71ccc974c462b264d7218f167a44b48c3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "a9751f11eecd351e0b096e58cc66bb6a87452ddae111f01ae4704ae86c5f26c6"
   end
 
   depends_on "pkg-config" => :build
