@@ -7,12 +7,11 @@ class Blockhash < Formula
   head "https://github.com/commonsmachinery/blockhash.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "bb25e5ae4964868f4d3ce33bd622f5639d9dfcde90efdc444cfe1b6701ab283f"
-    sha256 cellar: :any, arm64_big_sur:  "1263f1d1a652f85a0cd026b5f9d1e1df6f1f467aee9a4336dfcacd02d590253b"
-    sha256 cellar: :any, monterey:       "16715363dffbf20fcd63777ee39f46998414fac808c841c5b4e82398ba1df18c"
-    sha256 cellar: :any, big_sur:        "e7dad94beb23855c8bb9b9145da15b74b29f11f5125c3c9cb495d9894a747a3a"
-    sha256 cellar: :any, catalina:       "16fa35be4bfea3e7e71ee26879f2e8508062b3f9684c178bc0204c0cec1e0284"
-    sha256 cellar: :any, mojave:         "b6fd37575c7c00ab516240c916d7af8576655188c4fa830bf04833859d804b7f"
+    sha256 cellar: :any, arm64_monterey: "dcaeb1ce026b0ad868e5520c991639383487e868618753e1a93661c3a1838409"
+    sha256 cellar: :any, arm64_big_sur:  "a82123749fd7e010d731351f4241c2aba1626aa35f2b61952d27fdfecf158e80"
+    sha256 cellar: :any, monterey:       "9ce6377aac08a1e39bbea230dc1d509839835105727821a4ce88d1eacd8c74ef"
+    sha256 cellar: :any, big_sur:        "ab12de7db191f24ea3db308f01de4f46466f4c775ff1dd6c965696ec2dffc370"
+    sha256 cellar: :any, catalina:       "9ae4e348365186b77c5e276ea91dec42f0199bad6075f2d28d8e2a81ff13a71a"
   end
 
   depends_on "pkg-config" => :build
