@@ -6,14 +6,12 @@ class WrenCli < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "417542b9c6d040b8cac7fdfacc034f8956afebfa8019145dbef51bb0d8b58038"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fe12f29f5ae858b05f3069d15c7245ff8126a08cea8e9521f877b7991409eafe"
-    sha256 cellar: :any_skip_relocation, monterey:       "65cd437422c2c26054ed2fd6e6533009c5099abb24d559135351150edce53c67"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a24574abd51e1ddd58d41e2dbbd89fc0a85f27087541e1c9a982daa601bcdb39"
-    sha256 cellar: :any_skip_relocation, catalina:       "bf9368948d1953ceef3246ff6e4d4d142b8d86d9d62d3f0f432a6f5d241f10b2"
-    sha256 cellar: :any_skip_relocation, mojave:         "e11eb478ca480716c938c8f88af228bbdeaf394b6e11738606fbd57dff86a25d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "89cafae2a7e1fe07ae5a6b907e787dc2e4c5487992667c4b423e6ac7731c29f1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "72841b4f7f8562ee72899224e0c1d04c72047be6f86ae00df7aed6c3370320e4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b2f527af8074dda364da8571385473dcaee9b3034d30cd1407ef6a4057e0e4a0"
+    sha256 cellar: :any_skip_relocation, monterey:       "c4abf9f5a795361333ee735c25c0c72754b69c974f1a910af64414ff7912f398"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1eb3fa798b1204360be58481e36921299678ac6da63ab4f30009b2f452fc6baa"
+    sha256 cellar: :any_skip_relocation, catalina:       "726fa674e71292e1474d7f7d68b7b477f797112a1348cdb4a2240e5d48776a95"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2014cc9da16b381e355b12f19a020eaba1cc182c41f07fcb4a17dab5597f6a61"
   end
 
   def install
