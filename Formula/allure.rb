@@ -11,7 +11,7 @@ class Allure < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "74eacc8bb6a1a564ed1f9df4d89973eb9efabae5f228ec195b9c4ba2457be35b"
+    sha256 cellar: :any_skip_relocation, all: "d3e0e6396a82cc09af303b59c3839b9e72ef63c144eafca859d0268b8397d5ee"
   end
 
   depends_on "openjdk"
