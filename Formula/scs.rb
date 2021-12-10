@@ -6,12 +6,11 @@ class Scs < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "314ba6c1d1f05470bdb444d392083c2989cd6391bc525f53d719e5b5f7cd17d8"
-    sha256 cellar: :any, arm64_big_sur:  "fdbe71dc5aff701be00e9629c5ee27cdf0d5942aebea202da39a78217569097e"
-    sha256 cellar: :any, monterey:       "6555694ae2fdca5f72009c124eb7f801ed45bd9b9fdc05945fe9a92bcfaa3308"
-    sha256 cellar: :any, big_sur:        "1d41b23aceb11793eb5fed5caa703818f62636ae23e70134ae064a4d829f59d0"
-    sha256 cellar: :any, catalina:       "37e188ea7df7a55ee087a32743bfce52cdb0acd91ddcffff629659f3c6a326bc"
-    sha256 cellar: :any, mojave:         "99764bf3362d0dd01f78337f1f943e77b48d68ffc8ef18fffa811516f9763e4f"
+    sha256 cellar: :any, arm64_monterey: "d28c5e038575f7c2cff097c87672144ba168787ac856a1ecbb55883cd7d36986"
+    sha256 cellar: :any, arm64_big_sur:  "1ed24f3a880440b3942c883f8185ec1e700af91c9c0884a4d063c4aca033b601"
+    sha256 cellar: :any, monterey:       "7f9d443d83f84b7ed2694e72f1a6a63238d5b802063e3cbe2f332f1e4ab83af6"
+    sha256 cellar: :any, big_sur:        "4d233014f4bc6fdcabf67539f529db91ada67bde50d81135b9ad341593f16603"
+    sha256 cellar: :any, catalina:       "299e64e7238afb223b721ca1586d168128f6981432058f6f76e766954f1fee5f"
   end
 
   def install
