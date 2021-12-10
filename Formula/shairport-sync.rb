@@ -12,12 +12,12 @@ class ShairportSync < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 arm64_big_sur: "5ba3c8e5edb375fc0704715f2af591a95bccc371d30f19d6af77b27069de80c5"
-    sha256 big_sur:       "f901fdd19cf7effc603519cc071703014c52264434d6da2eac51da37323a12ce"
-    sha256 catalina:      "f7e414e4106c07a4ec3db03f1d0219280d47eedbef5c65f30ac3c488e5978cd4"
-    sha256 mojave:        "7258fbd051a45b0fd5524b1017c6435be4471c4ccaef63b4c733c2ed2efb31ac"
-    sha256 x86_64_linux:  "0502a7c91fe4f656ce22633c52de830d1f7a783b31af0740234f808d0ce16dde"
+    sha256 arm64_monterey: "05049c6b445e6b5697a92a40969bff64f7b8b9d4da8c00464a245e6912c9c594"
+    sha256 arm64_big_sur:  "bc1357912acf12b02c1ec752ceb7ca2a888f3d06b104e773c69d05b358d56e58"
+    sha256 monterey:       "e4267faaffe1bad79c0d85a0b14de861be45db92e31d529dc07ca14ef76d5a68"
+    sha256 big_sur:        "f6aee5b85a169e6b6356a4d9c79e961fd057ec9ed47e71dc1a0f2c39f3cc5308"
+    sha256 catalina:       "516e9b4cba222f86f6aee6535840e4185c7c42c35926e881b994c35774be253c"
+    sha256 x86_64_linux:   "4b82128bbe54f55e7a72d16ae694fd62d45bfc35d3382ed4c539cbb620ace2a0"
   end
 
   depends_on "autoconf" => :build
