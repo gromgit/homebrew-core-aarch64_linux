@@ -7,15 +7,12 @@ class Flif < Formula
   head "https://github.com/FLIF-hub/FLIF.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "3562aa4e5c79586e5edd3908ae34bf87cd75d1d9ba35fe270166a0604c3dc6e8"
-    sha256 cellar: :any,                 big_sur:       "7c50517e175d15ba665f2ea5a138a762c017270c38636e55cf1ef1fb6c2d83d2"
-    sha256 cellar: :any,                 catalina:      "0c21811ef5a29e427952afbc57fb657ece17c91fc84e69eba7ab9f97fb439303"
-    sha256 cellar: :any,                 mojave:        "41d1a634a2442550395bd454b84606570cc9f670fa2df158d39fddb70de39367"
-    sha256 cellar: :any,                 high_sierra:   "40b85a93738e195a6eec2b3bf9bfe7b2831f74d464e1e5145681f9ec2c3cfe68"
-    sha256 cellar: :any,                 sierra:        "756f685e55f7c798743756723815fb3f39d82ef92f5cc78eb175d8cea52498a3"
-    sha256 cellar: :any,                 el_capitan:    "3fd4e69366470a6810815d111a8e0188c627fe7d50375cd93c0da00ad6617fb2"
-    sha256 cellar: :any,                 yosemite:      "bbd4e35f6947e3b304469031f42c3720a94c10d9fb7540eed9e7b08bef6ee319"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ff311c649c3357c593fa165175971438c4c5cc5b582307845c722da847579479"
+    sha256 cellar: :any,                 arm64_monterey: "20c8b44c6ce76226aa53c3dc217bfe4ed82e7f181fb6122df515bf86e4e434f9"
+    sha256 cellar: :any,                 arm64_big_sur:  "3d0d4c63012d30413c24e8b5e16829801d53887da55766e8143bbcc837875303"
+    sha256 cellar: :any,                 monterey:       "dfb3655e7c80bec23170595b2188ad897fd2e0e69af28711e6734f25b3c0db4e"
+    sha256 cellar: :any,                 big_sur:        "41d2cd255724005a767991ab0bf3b7ae5f8ad9767a1413c9efa92bf6ba47af9f"
+    sha256 cellar: :any,                 catalina:       "e757a4df0939f225afceae1b632542b9689f3fc9fcee7cf0364e463c1be778bc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4c76e5794a775d5d5d8b0dc8c92960ffdf5641b302132279a1a57a67e3e41550"
   end
 
   depends_on "cmake" => :build
