@@ -8,13 +8,12 @@ class Bup < Formula
   head "https://github.com/bup/bup.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "23515307e36409180b5d316d3c8d2bbb4d512d2001daeca9a42b4e4282604d1f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "301e0ea9de87b821c591dcdc780c5e0ce5bc2964a78fd695f5fd0ad673de5600"
-    sha256 cellar: :any_skip_relocation, monterey:       "89b5ffe09e0d650ef66b2ba76fcff683953f5e80c2a9ec301e5b18d0a6e3132f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "96005e9af68eb9bc01c01025b693bf25a0fe2aeb2318adaadc643c91f824ea3a"
-    sha256 cellar: :any_skip_relocation, catalina:       "0509e26be582f806e50a47b36e3656d0031e852dbac6a9a15f500365860111c5"
-    sha256 cellar: :any_skip_relocation, mojave:         "d88b558267b83a82fd2dcec7a400558224afaf9a2dd30c910766ee62556e0dbd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1a5c533688109a5bb307152dfe32279e4ae8769dbdf96f25d33718b53a940a49"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c16e4a2f85d1e3eebbe77b466955cf0bba468a41fa6336b4f5889cdf708c5e1c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c27f726b938b0d5958310ac1c068797759d883787d50233182290704690c4e07"
+    sha256 cellar: :any_skip_relocation, monterey:       "38791642448b41961ae0d08bb42b06cdafb87f61c10796886f8f8f1df5085862"
+    sha256 cellar: :any_skip_relocation, big_sur:        "86326ccc67782f09e5d4d83c848c6027609a394ae2de9456d74d5d192942c023"
+    sha256 cellar: :any_skip_relocation, catalina:       "0440daa882d222be41e6817735e5df52bbc8154c49623862a2f7fa1deaff8f73"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9d458aeba96d14ee8b561d58130951dbae1fea8e69e7c131ddaa5319d01fb750"
   end
 
   depends_on "pandoc" => :build
