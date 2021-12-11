@@ -13,12 +13,12 @@ class Openmsx < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "8973febf561305e42e379c90018c1f09d5ab18129c36f41fdd07ee1677d017ca"
-    sha256 cellar: :any, arm64_big_sur:  "1a4c53f573b29eaef8b6454622bd18e02b0369b8bc9c5e51493d0b2022b10b9b"
-    sha256 cellar: :any, monterey:       "776c25742abbda02e552f0401268c3ee623cfdf1cca5078fdcb95b9077898fbd"
-    sha256 cellar: :any, big_sur:        "7204df7abcba41b2a74ba2d6b969b610a56bf36e332a9f25c280bd74c88ddc87"
-    sha256 cellar: :any, catalina:       "1a5c7befdf1a6faa24d6a1043c6bc2ee722cb118b8bb788323f01434d15e94b3"
-    sha256 cellar: :any, mojave:         "57e29bb1e9e2ed95d628b7933c1929eb99da46f9bfc4885bc9b072a94afd6c0e"
+    rebuild 1
+    sha256 cellar: :any, arm64_monterey: "f2adab2e188fe3359050eac24577a703a3ca28be607033525b44cee9bc8f48bc"
+    sha256 cellar: :any, arm64_big_sur:  "08121d09a6958b097d45b35f3db2b9cf172c3448ea3cfa1a42d9c5806ab55270"
+    sha256 cellar: :any, monterey:       "4bb067ee6ba11fd48cbe4a97281835bd44df215d4e7b7473cadc6e0a698f4de2"
+    sha256 cellar: :any, big_sur:        "0d2b0c7de2234c34935f11f952ea5ae8b4b818a4d87d83b5617bc28999956ab4"
+    sha256 cellar: :any, catalina:       "39fc0cf97185508d3d107c73495f64cf6f44285f165b17852679e57caf8376b9"
   end
 
   depends_on "python@3.10" => :build
