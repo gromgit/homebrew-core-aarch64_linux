@@ -6,12 +6,13 @@ class SpirvTools < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "c4d6a8fca257d7de1d78168e2dcb1f49056ffbd388c59114ed37ae464b9f085b"
-    sha256 cellar: :any,                 arm64_big_sur:  "a24e7ffaa9c6d57c00b0c8cc93052f07eaa42c0f25b037a4f920109d25d3aab1"
-    sha256 cellar: :any,                 monterey:       "0d4a0adf1357d733f663de0ea622252229b5548e600d6eef590c0f9be7418a4a"
-    sha256 cellar: :any,                 big_sur:        "92b58c54632a083e1dbbe49525e5372015241a65813817e5446b3388fb90b756"
-    sha256 cellar: :any,                 catalina:       "f8c766313e53cd3fdd059ddcdedc88807dd87a2a8dbbb895d061edd4512dfb6a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "19f193bfb2d43bdb75c047431c5c3e605d2526c8121d4e35bd48e01037a57a4e"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "0614a813a7ce60d0058e49fc16efcd7b7cc42aa88cdf24125b6f4d911ca99d83"
+    sha256 cellar: :any,                 arm64_big_sur:  "8295ab8e466b1fb4762e0ed3cf73c319959e09a59576d293eb96e74f7538bcf7"
+    sha256 cellar: :any,                 monterey:       "9f839427e49ce5d0211249157289800927672ca7afeefa8d961649a4704d5052"
+    sha256 cellar: :any,                 big_sur:        "3ee9a3f37165bab272d6a1f4c7d8f58648101974f24759fe5e5b30ada07b7a14"
+    sha256 cellar: :any,                 catalina:       "8c19649797b273df39a4220d293a2c7afc9215e3a308e826f99c945c8f324d97"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a332b0f4241fe4805202f4e255088680ed5c0b84fc2379cf00f169e249a6eea7"
   end
 
   depends_on "cmake" => :build
