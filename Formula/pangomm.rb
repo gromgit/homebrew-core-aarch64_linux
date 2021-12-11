@@ -6,13 +6,12 @@ class Pangomm < Formula
   license "LGPL-2.1-only"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "7e02371fb268fcec2738683d4e9760a692a6ce9a55ff1fa46697abc07a756829"
-    sha256 cellar: :any,                 arm64_big_sur:  "87244c82b6ac45d8de28f5870747b96fe8bded40041dd3de159fd501b7b58754"
-    sha256 cellar: :any,                 monterey:       "e65d3cc4231fad9f057e5000a62c838770575001de6e059907c535820d3274f3"
-    sha256 cellar: :any,                 big_sur:        "d8ea58c9fd6cece698a1605b0b3513e5818d8e0c060dc5e7357e1b0aa7325233"
-    sha256 cellar: :any,                 catalina:       "304b7e078c0c4dcbbf44e30b4912adf475f41eeda5728e65f68d45f3abcd8af4"
-    sha256 cellar: :any,                 mojave:         "6060adeb759d72e6ce9f6f7c8e076ab736b7a36107d9f1e0346ce9d9a5eaa51b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c430e21614121e2c6d80d456f36a36644defc60173ba969557ce58a7f6da73cb"
+    sha256 cellar: :any,                 arm64_monterey: "a21f7c630199d45ac1b8cf9878cf82aaaac75561407e0d239f4308a7ce8b64c5"
+    sha256 cellar: :any,                 arm64_big_sur:  "e7103018de987f68f1760f9e63784ba4ec048efa0f125e488e21bd0a604a40f9"
+    sha256 cellar: :any,                 monterey:       "eb0528f025413ada3a409fbc9bf893062fc37af65d1071a414ca319fe9cdd3d5"
+    sha256 cellar: :any,                 big_sur:        "01d08e7417d287fa932a966c4f6c763c699f33dbb416529ff9f12229e14a182c"
+    sha256 cellar: :any,                 catalina:       "006118a2224607e8bcacc9118a92d82625f8d9f4edcfd502e1b6278fff29a852"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9411ad0f8933a13794ca70d8b4f4e6fde004e627f49e67190203d9fa1c22828c"
   end
 
   depends_on "meson" => :build
