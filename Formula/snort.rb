@@ -8,12 +8,12 @@ class Snort < Formula
   head "https://github.com/snort3/snort3.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e1f0389b9b29ee07af79cc0f66d7a1ec4a77bca93cf05d99c4f246fd0b3f3789"
-    sha256 cellar: :any,                 arm64_big_sur:  "8aac5090cde88cafb6f1ae8c23cb6b8d7fb67071ac93c3e78fb7cc9eff099031"
-    sha256 cellar: :any,                 monterey:       "77abc3336ed594de919da99c3afebdc8ff82ed5f8595108c7278b17aec7de876"
-    sha256 cellar: :any,                 big_sur:        "af29191c8817444870bce698a86dd1a5439cd637bd41a54d9cf91c7b419f1a8b"
-    sha256 cellar: :any,                 catalina:       "93cf672bde17fbc9632c49ad6380a25f02a40e935586211171212bed8cd4f930"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9245f1d80e58cf27dee1a9e2e3b75d4e17a05fc3147d0829182f963174bf7083"
+    sha256 cellar: :any,                 arm64_monterey: "972f0a3ff887f055050169e35b5d32b31a717300f91d70e0f39f51668d592c7c"
+    sha256 cellar: :any,                 arm64_big_sur:  "d77a3d13da44e54317f12610dbdf4c9750d3302adc3d494d2fdcc4e0de300c9b"
+    sha256 cellar: :any,                 monterey:       "8af4f3099ad5528080491555cedf31b0434b877fd4624cb9ec363dceec42de50"
+    sha256 cellar: :any,                 big_sur:        "a5a969dc0473a98fef08a83b78cf5846bd9552fe947a70be2a1d9f049b10ef2d"
+    sha256 cellar: :any,                 catalina:       "173da28ada2c4e1670ce1038deb6dc0ccc17031189ee5d503cfae73e23c2f743"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d3b10da9988a743bb4ab2b390861c70c09ac1e4990d24445ae8891284a35bb97"
   end
 
   depends_on "cmake" => :build
