@@ -7,9 +7,11 @@ class Chakra < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any, big_sur:  "e89bbc179ff9477dcf8589c6b8ac1caedd528f1a4247cb66f20f5af2e3544421"
-    sha256 cellar: :any, catalina: "44f4599ea428559b326091374b7d0bcbcf987496f40e513b9cd4fffba7576d37"
-    sha256 cellar: :any, mojave:   "8e7489e2c043d1669446d5743352ed36ed72a94d8fc9c1bb5e2b666ab404c450"
+    rebuild 1
+    sha256 cellar: :any,                 monterey:     "08ac087ce6235090a9eab40d02fcce9870e09619b61170979e8ddab267dda091"
+    sha256 cellar: :any,                 big_sur:      "fb1728dac033a81c14e4f93d0587b93809c8e5721754c1cf4b57a97e05ed8e0d"
+    sha256 cellar: :any,                 catalina:     "c2a373b2cc611c5d0dfdf9ed306c3e23d4b82ab5acc964445d2d356f93ef8c25"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "52fef75657897bc5319e9eae21b246c97c3bd842a98eae395b76eb39975520b6"
   end
 
   depends_on "cmake" => :build
