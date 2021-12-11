@@ -12,13 +12,12 @@ class Libprelude < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "67d1898db9ecddf2eec804af133dfb7151241ab61d520170bc4778564f12bd4b"
-    sha256 arm64_big_sur:  "62a0baace0727b7e5bbbf6dbb826e54604f18c28a3e2d20dda6bad782b50ffde"
-    sha256 monterey:       "588eee6b571351091d12034016622a2f787e90b26727e83a81a82f0425a89f14"
-    sha256 big_sur:        "c2e8d9d9c831ad24e13cd6d470a08c91c9dad1085ce7fe40e559df77b79a1503"
-    sha256 catalina:       "abd1ed78ae980d13cffbe2f7421179f3e416d63f0263b2df2749219bb4ade1ae"
-    sha256 mojave:         "99b39668c53d9e1514e8168db34402d897bd9159ecafdc3a377b097748945fb0"
-    sha256 x86_64_linux:   "282e13c10a69ba928d5f5597c5e88c33253caef9c5a221eae4f15dc670e125a7"
+    sha256 arm64_monterey: "7af71434befcd84ab6e66bc6d355942a81ff492bf732d53b23babd98afd4e045"
+    sha256 arm64_big_sur:  "0b66c24df4c249e9038f6673ddbd3c813659798e957da9d6c1bfd9fdb67a8316"
+    sha256 monterey:       "9284d8e1a805d7ef1332b2c9d040b8ccc30cdc0b8eb83085d7a4d24811c2a922"
+    sha256 big_sur:        "c52daf8e1e41fb0ad7123761ecc4fb3f9e059a96a6440baba997e0cd2812be59"
+    sha256 catalina:       "42af699d24654a53f69b6eedf42c71fa7ce87f6ee9c2f72d60e5e8bb7c1e4fde"
+    sha256 x86_64_linux:   "7f78270bd579bc35cebe47ffbfe3cb26723f1360edca8482affe7b7ea21904bc"
   end
 
   depends_on "libtool" => :build
