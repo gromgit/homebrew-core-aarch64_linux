@@ -12,13 +12,12 @@ class Onnxruntime < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "1df38efbb3dabf25c4a8a66f0703576a9bd68030a33956cdea6f75701b84f9f0"
-    sha256 cellar: :any,                 arm64_big_sur:  "b201b295f91bb36ea1ddd9a1fc369698466e790d2db462c74adf07cb5a7bd764"
-    sha256 cellar: :any,                 monterey:       "8dcd8c225b6d6947c9fcf6417df6372b975f125237a5fc55496260c78abbc3a9"
-    sha256 cellar: :any,                 big_sur:        "9df210ba239c623f6c0270db7c3e75089007422156be6c35867c37f060ede8f7"
-    sha256 cellar: :any,                 catalina:       "ff4acf5025be335fbb577682f2ba438f749a64d12b6f7167a11c1aff29235dcc"
-    sha256 cellar: :any,                 mojave:         "be2ce9d531cdc938a4587126364fa4fd7b237bc50d183d9aa3359969913e7b77"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "469682bee07c34a201802ba90f228893035f8f16d58ad3a7d9a58f06d4a64427"
+    sha256 cellar: :any,                 arm64_monterey: "5817b21eef47792e11597da08925902336d99fca94125fa80c722d5334f799de"
+    sha256 cellar: :any,                 arm64_big_sur:  "459ee4ff5095d1c8050b17413bdafcf4969b3956e636f84a7c1f98af87e892fd"
+    sha256 cellar: :any,                 monterey:       "3d70898f0aefa81b3431fa2b6349ffac25a6c03aeca09389c6d2a8f4e14cadc7"
+    sha256 cellar: :any,                 big_sur:        "00d77c4048689717574dd1de7c632b5ca7e19573dadf7a0c1195c225316c43a9"
+    sha256 cellar: :any,                 catalina:       "b268057d08855d1b6a720b477eb265a462f2b7bea9bb8c5a67460bf6ac6401be"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "80ed8b1c18469c379c7149bdc733664f2bf56cba4a2a268ef4fe13ddba9c5442"
   end
 
   depends_on "cmake" => :build
