@@ -11,13 +11,12 @@ class Amfora < Formula
   head "https://github.com/makeworld-the-better-one/amfora.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "08ec5163a79f6c92982ee1b99657a052832ad92f787e7347571ec3d20f82434f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4d37d2bfd27691d2b2a69f5ec5ef94b3af3afbca7fe399dc0af3bb3eec4cab3e"
-    sha256 cellar: :any_skip_relocation, monterey:       "3f19f19c2611c9fb2df16c2859d2f6834fdef3b3a86c034d0b90d2f2b555c4b6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f6701ae1c9412787d6e41e7792b0f78016fe1157948995707b6c41b1b33d0e1e"
-    sha256 cellar: :any_skip_relocation, catalina:       "edc5b5c87ac6afe8434e1aeffa9672a17e4ca3ce0b9579c758f27d531c75f146"
-    sha256 cellar: :any_skip_relocation, mojave:         "f9246c3f85984e0b1d57daef632186b8e04a2a06350f92ed9562b914e1e80ce4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "34814dc0a1da5f88b639b084ac819fafc2ed49824b28166317bfc9bbce68d840"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "01501f81b2ededf595e98e5a36ab17f87dc8a21fa7cb29c76a17497ca33ae8f4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "082d3f24c6c13351effa01f68e819b18f7bbf5767c5a106e18ea430c5f880bce"
+    sha256 cellar: :any_skip_relocation, monterey:       "a7edc527c8c5e5d8d177a557d83b5016b67a09f95e2263c20afb2bfacaea6697"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ec71320ee1101a0226f18fb2c6796c96ee5bcd25928e0443c645a8eb1d3065db"
+    sha256 cellar: :any_skip_relocation, catalina:       "47bc30b0e91888d9a0b0581ff4006654b9f59f860226a70cef809fa15145877f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3030cd52c16fd0917db9f0283bf51853b12569ee0bf0ab88ed0625e3b43d4c1d"
   end
 
   depends_on "go" => :build
