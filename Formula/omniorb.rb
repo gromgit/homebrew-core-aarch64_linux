@@ -12,13 +12,12 @@ class Omniorb < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "c3ce41230db50a468d7fc71d8b156ded22c9efdab39407158ccba6e05f82b5e5"
-    sha256 cellar: :any,                 arm64_big_sur:  "af99975268bf9395f8aa6b00521f5dde8e41434a2bc19ee45aa9abba372bad75"
-    sha256 cellar: :any,                 monterey:       "40d15f34a649b54de12d4734d457aca6b87f40a30c7dce363fd00ada55f502ce"
-    sha256 cellar: :any,                 big_sur:        "625e7bb2ca70ac3a1e52d3cc8ef9b1614b498eb24b00cdc78736dcea7c40c9cf"
-    sha256 cellar: :any,                 catalina:       "e25345b167440b0a34a7399a267b487d0e8ffb24ccd5f9c2cbbf874b8a38e729"
-    sha256 cellar: :any,                 mojave:         "5c8d7b0adeca7c70af83d5b13acc4629e8329104562deaea9f329bf7345ad272"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "87fd171d45ee3efaa71a07106b42a1261f1d6ec247fea2331a626137718d395c"
+    sha256 cellar: :any,                 arm64_monterey: "3d2e59fd9deebfea609840039725a28dfec37dcc9094ec9efa5a82bca780c4bd"
+    sha256 cellar: :any,                 arm64_big_sur:  "f3eb8e528df93c3a186e946e3ad0e2331147893cfaa77fa9efba6de8d698f604"
+    sha256 cellar: :any,                 monterey:       "6996a065f43d78f842be1fa839c392966a3863e390ad06abdb9ad4cf64ef7dec"
+    sha256 cellar: :any,                 big_sur:        "707b941b5e395565a7071d1cda7057c634ca5ee2b42ad3b3c4eff6a156888d2d"
+    sha256 cellar: :any,                 catalina:       "452a5534fc3a75f84cecce1caf75316c4b3f91d3306cf5f455ee4f6e0dce3c83"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "12737198e9df6b4c1131c74d50b1fca299227f1818dfa28a766da1e1180c29bf"
   end
 
   depends_on "pkg-config" => :build
