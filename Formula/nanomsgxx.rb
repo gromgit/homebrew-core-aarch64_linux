@@ -7,12 +7,13 @@ class Nanomsgxx < Formula
   revision 2
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any,                 arm64_big_sur: "fdb165ff9a7d677801a5ee1929fb147992636fb65a28a71d1e2733305da4ffb9"
-    sha256 cellar: :any,                 big_sur:       "7b3e805045bb30e815c5c8e5b3385b970ebebb7ade67670e8c053e8f26f68228"
-    sha256 cellar: :any,                 catalina:      "3012511c27bb7d94925a68e468b1316a2b44364ff572533d8cfde94759f53b24"
-    sha256 cellar: :any,                 mojave:        "b1662476ea36dcf91800a55c4e11a54301158a24c7b2bdb501dbaaa7bc1024f7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1a6282a899055fc6ca201ec484aadf25319df19fbae4569e31933865510f8eb7"
+    rebuild 4
+    sha256 cellar: :any,                 arm64_monterey: "d3c9bed1411f07744e9a8ec93f6bf2ddfefc01d52b0a848a71897534c94a9289"
+    sha256 cellar: :any,                 arm64_big_sur:  "f306a0110e35f1e08fbe241993df9c241bb34b02d9f09baeaa3ec3399763e57e"
+    sha256 cellar: :any,                 monterey:       "0d213072aa619131d346310c7f2f02e0d41c51cf52bb53c4b7f8743e1b1d26e7"
+    sha256 cellar: :any,                 big_sur:        "08e27ade48b0c93ca759e7fcdbe0f8270ba7300ad45d14606eb6a959be53f0dd"
+    sha256 cellar: :any,                 catalina:       "6827a58b75548b6146396dff941aa8d891ef739f6077d33f005b5e2161263007"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c4e4084e9d12379b31121f81db0e992f5cc198693cf5d6a9110e949128b94d65"
   end
 
   depends_on "pkg-config" => :build
