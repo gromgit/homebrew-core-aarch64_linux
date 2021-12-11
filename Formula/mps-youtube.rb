@@ -9,12 +9,10 @@ class MpsYoutube < Formula
   revision 12
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, monterey:     "f6a624aa18d27deef6af3a51d5f4bf9aecb8365efe73d7307568bb54fd204725"
-    sha256 cellar: :any_skip_relocation, big_sur:      "2dd08756b9e62a90560e745bc04c143746d814083d4718e8b54907f7afd13403"
-    sha256 cellar: :any_skip_relocation, catalina:     "4e9a341a4d730d6b3ded045d3db8fc3bed53c181c380cb412c8ca87af512cb49"
-    sha256 cellar: :any_skip_relocation, mojave:       "7447cf6a16ec67bcfd0c11ede83ff5c2b91f4c8aebb12cd125f3c242473933e0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "50e8db839abc32629d5defe0b61efb71264de0841d30b3b0f3bb35a14af879a3"
+    sha256 cellar: :any_skip_relocation, monterey:     "4427c42e4efe37f8c550288610f1404a88d3124815cd19d5749eafbf9a9d6272"
+    sha256 cellar: :any_skip_relocation, big_sur:      "4427c42e4efe37f8c550288610f1404a88d3124815cd19d5749eafbf9a9d6272"
+    sha256 cellar: :any_skip_relocation, catalina:     "4427c42e4efe37f8c550288610f1404a88d3124815cd19d5749eafbf9a9d6272"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "c5b3fcc9a61653e8cdaa4ae05ef4c8e2fd4edaec0a79a48481ee625adf080b0e"
   end
 
   depends_on "mplayer"
