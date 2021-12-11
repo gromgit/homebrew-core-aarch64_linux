@@ -7,12 +7,12 @@ class MmCommon < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f40a6de3865dbb9c453f82b2eae422bb54ae0e422ee287ad41cea24f4b084937"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f40a6de3865dbb9c453f82b2eae422bb54ae0e422ee287ad41cea24f4b084937"
-    sha256 cellar: :any_skip_relocation, catalina:      "85f048b6c104120336d3d1e727ddef7faca85feaad37bb404f502202437d1a41"
-    sha256 cellar: :any_skip_relocation, mojave:        "85f048b6c104120336d3d1e727ddef7faca85feaad37bb404f502202437d1a41"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "015f6833761b100ad4610a505700d44fc1db448147f68ae502cc8e9383048ef9"
-    sha256 cellar: :any_skip_relocation, all:           "f40a6de3865dbb9c453f82b2eae422bb54ae0e422ee287ad41cea24f4b084937"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0753684dbf7615426643a2bb78d83b487da30f8274a09c4faf49d6200c5ec14f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0753684dbf7615426643a2bb78d83b487da30f8274a09c4faf49d6200c5ec14f"
+    sha256 cellar: :any_skip_relocation, monterey:       "0753684dbf7615426643a2bb78d83b487da30f8274a09c4faf49d6200c5ec14f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0753684dbf7615426643a2bb78d83b487da30f8274a09c4faf49d6200c5ec14f"
+    sha256 cellar: :any_skip_relocation, catalina:       "3a57404ead5025c9860efdd96a5ce3bca0cc4c577c4a62bed893221f16c954ba"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "54d669050d610b82d1079a9c6a1659c93b76954e23b03ae84d7b1b610d034655"
   end
 
   depends_on "meson" => :build
