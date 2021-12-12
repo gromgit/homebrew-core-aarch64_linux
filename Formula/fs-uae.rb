@@ -11,11 +11,11 @@ class FsUae < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "89a9f14c2a751f08ebdf07bf73a6c2cd3ec4fd9a358c111efeed344b56201874"
-    sha256 cellar: :any, arm64_big_sur:  "d6c6581044c46383f86c80ee5f86d572083440970295fed41568e378e0150aa0"
-    sha256 cellar: :any, monterey:       "1d90387dcc15231beff9906234e1ff14ca7f9cad7f3deab69cea8f5cf80db6fd"
-    sha256 cellar: :any, big_sur:        "df2a583a7fb939da7eba2cd2afb80e9248cd5517770d850a7fba5f7571f0b870"
-    sha256 cellar: :any, catalina:       "d08995c604e6f420f43324ff1dc420dd4baef1f8bac063811555130990624871"
+    sha256 cellar: :any, arm64_monterey: "b972b6b29818a4b75882f429e98f8a9027712d7eb63fb63e9b4212dc050522c2"
+    sha256 cellar: :any, arm64_big_sur:  "83168a16d8944aff930466fdf313c142a2b7952b842115b07a2b263c9a4491c3"
+    sha256 cellar: :any, monterey:       "011dd714921118eb78308fbac4a231c895b7242ed50873e09d842463d3ea0202"
+    sha256 cellar: :any, big_sur:        "3dedcfc5325c16c4c1070baf2eed8fd5ad8763ec47d921e376ecd54b746452e1"
+    sha256 cellar: :any, catalina:       "b0c73c09f5f798a6cfc1f34eb8c84c76e1c4da4a69cfc49d0f7afcd6e511c44d"
   end
 
   head do
