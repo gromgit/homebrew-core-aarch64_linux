@@ -9,14 +9,12 @@ class ShallowBackup < Formula
   head "https://github.com/alichtman/shallow-backup.git", branch: "master"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2daf514bb3dbbff5252a45549b9b4c4f57700040469ab0ba5562554f21312edf"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "54e0db13cd94663dc668a6a219d4eb82146ee203b7734362c25e9d73f3f2b33e"
-    sha256 cellar: :any_skip_relocation, monterey:       "21a89147566ab292b44acda30b0ae2ab9e22bcb886a9a5d7f0fb0076fede0e3b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e1ad3d711a2c18d700033fc80c16f21ebf40a1a0ba40d41352fe5c3e13339a5a"
-    sha256 cellar: :any_skip_relocation, catalina:       "180c2239489893d858f7a12d729d07c47d0eed52bb77b0fc31dedba920697672"
-    sha256 cellar: :any_skip_relocation, mojave:         "84fe6770d371202f7f6bda5e55b7dc1d54744faa38a25ed498d36eab4ef8be5f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b7f06faa5e61303fa3e2442245af5b07b3dfb8830e67a3c130ebe542ad4306f3"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d29c5f55824c6a60f155dbb6920445bf892226d13a15da91d48d7da97b323d58"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4d04ca8458395850f89606442c28243e4677f2969745b3cabaffcdb7ba017a93"
+    sha256 cellar: :any_skip_relocation, monterey:       "a5e096257128a0888ce850265c079876ce0baa37880ce9530dc5271c3b2c5f5d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ec92cdb1245b454a8ed3df44db3619a2843cf62b483268c312f264e439431491"
+    sha256 cellar: :any_skip_relocation, catalina:       "cb356c99f421807322e73ff72e7a54eb66d0499ff27cf0bb409b6e30a48ee539"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "713ee458755ee85c536271cb5788edfdeedfdc05d7ca9030af6b3c0202e6b555"
   end
 
   depends_on "python@3.10"
