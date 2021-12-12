@@ -5,6 +5,15 @@ class Biber < Formula
   sha256 "57111ebc6d0d1933e55d3fe1a92f8ef57c602388ae83598a8073c8a77fd811e2"
   license "Artistic-2.0"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "a5a161e318753ebf4b21ecd228d82338e2fd6a21609da501be32c6dad6cf09e6"
+    sha256 cellar: :any,                 arm64_big_sur:  "7ed7fc1262568e0fd3184610538d8b8fa5670e779f9fe195b7e03274a047ab63"
+    sha256 cellar: :any,                 monterey:       "f1b4fc11d16d5045fbe2f35d7542d221a9e4116003ce02b526be8beae0a038f3"
+    sha256 cellar: :any,                 big_sur:        "3a33c580866d69c6650f76717818948cb4def0df4a6ab6e594b2dd49573ca93e"
+    sha256 cellar: :any,                 catalina:       "2e9fc7a7946103c51e151590d5350710e90f9fd88773a51c0c85bfdac9c15120"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d3952c6340ea72115a694eb5677a749fbf24c41cb9ff43fcfcae96234b927075"
+  end
+
   depends_on "pkg-config" => :build
   depends_on "openssl@1.1"
   depends_on "perl"
