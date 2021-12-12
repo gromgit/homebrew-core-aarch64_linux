@@ -12,13 +12,12 @@ class Libosip < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d4906f9955e78e9d96dff148bfbd46bd39496dabd88b7502e436c479e2217b0b"
-    sha256 cellar: :any,                 arm64_big_sur:  "223cf167c2b2be056352ca25c6c78045f2f319fdee374310286e3e0383aad67e"
-    sha256 cellar: :any,                 monterey:       "a3ad0c1cd8614931026eea4d6ec674c216571c75baefb6f2fe74fe7dd84afd02"
-    sha256 cellar: :any,                 big_sur:        "c3855ed4bae9affb5007127469eda97fb91b395ca17f23639b4f3b08faed24cb"
-    sha256 cellar: :any,                 catalina:       "51a594ab9b9237fadbf236b6b91e7dff12b1d762a9084a9ceefa38e368236175"
-    sha256 cellar: :any,                 mojave:         "398471b49b724ac90cba0c87a44220adc0efbeb64b902429856531c263fa4404"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "56d76f7c03d4eedb0bb87a94fb46380f3c8dc2213863c66ea55ae1d67b9c9464"
+    sha256 cellar: :any,                 arm64_monterey: "10b2ccc4ecbd787145593f7471be07f8d7d337b88f0910c65a90fde3a74c7153"
+    sha256 cellar: :any,                 arm64_big_sur:  "83a8054802766537ac0bf9a7a26a4e058196659d22b3e73fdc4ca1e1465eebd4"
+    sha256 cellar: :any,                 monterey:       "5257a4db4c419617cb61facd541b0dfd065cf65b04522ba129508153f1cba76f"
+    sha256 cellar: :any,                 big_sur:        "c1c218af9476972bd79a997ed6d17b15585a819da6a8f48e465a3a2e0dd46bcb"
+    sha256 cellar: :any,                 catalina:       "1ce96e56712d36f561bceb138de9c2213340f20a22e20ef0d18fcb5d7539ed72"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5250bfa31928e5b25d34dd4a10d2d70d9a8f8e18aec0af8846c3f6c974a13171"
   end
 
   def install
