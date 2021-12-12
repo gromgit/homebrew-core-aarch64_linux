@@ -1,8 +1,8 @@
 class Libmwaw < Formula
   desc "Library for converting legacy Mac document formats"
   homepage "https://sourceforge.net/p/libmwaw/wiki/Home/"
-  url "https://downloads.sourceforge.net/project/libmwaw/libmwaw/libmwaw-0.3.20/libmwaw-0.3.20.tar.xz"
-  sha256 "14c38b06214f277ccd1450e22e6e32648955018d7695896bc560165748c8cd21"
+  url "https://downloads.sourceforge.net/project/libmwaw/libmwaw/libmwaw-0.3.21/libmwaw-0.3.21.tar.xz"
+  sha256 "e8750123a78d61b943cef78b7736c8a7f20bb0a649aa112402124fba794fc21c"
   license any_of: ["LGPL-2.1-or-later", "MPL-2.0"]
 
   bottle do
@@ -16,7 +16,13 @@ class Libmwaw < Formula
   depends_on "pkg-config" => :build
   depends_on "librevenge"
 
-  resource "test_document" do
+  on_linux do
+    depends_on "gcc"
+  end
+
+  fails_with gcc: "5"
+
+  resource "homebrew-test_document" do
     url "https://github.com/openpreserve/format-corpus/raw/825c8a5af012a93cf7aac408b0396e03a4575850/office-examples/Old%20Word%20file/NEWSSLID.DOC"
     sha256 "df0af8f2ae441f93eb6552ed2c6da0b1971a0d82995e224b7663b4e64e163d2b"
   end
@@ -30,7 +36,7 @@ class Libmwaw < Formula
   end
 
   test do
-    testpath.install resource("test_document")
+    testpath.install resource("homebrew-test_document")
     # Test ID on an actual office document
     assert_equal shell_output("#{bin}/mwawFile #{testpath}/NEWSSLID.DOC").chomp,
                  "#{testpath}/NEWSSLID.DOC:Microsoft Word 2.0[pc]"
