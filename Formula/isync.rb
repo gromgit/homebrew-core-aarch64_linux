@@ -7,13 +7,12 @@ class Isync < Formula
   head "https://git.code.sf.net/p/isync/isync.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "1e6f75cc51c2f1d3d0b617da6abe0371bb0d0834929e54ba8064f110f749979e"
-    sha256 cellar: :any,                 arm64_big_sur:  "234460b3dd4674da6104722ae8590a73c67ba595af54e66d2ddaeae54efd4be9"
-    sha256 cellar: :any,                 monterey:       "026e93bf6d455de2aaa6a714e18a4e6b91e626d739e5f8fe8289788805655dcc"
-    sha256 cellar: :any,                 big_sur:        "908d620917e954c55c095b015f4f13475d1ec69022951fc06154a193c6b368b1"
-    sha256 cellar: :any,                 catalina:       "c8c78c50bf5d9070cbd3faaf43555e68bf0c673cb17bd25034ea4e93400f882e"
-    sha256 cellar: :any,                 mojave:         "8e24cd012a3640bf0aaccf003a1682285def1e05580fe70292d2765befb52e5a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f0acc76de8df5cea3da8ac0e6a005b616946ab1ac19d91e09670e19b9fdf7ebe"
+    sha256 cellar: :any,                 arm64_monterey: "c218fe3f0a32e6b92575ea508a02bfd1ad97574526f9c2ed5711aae2c447d26a"
+    sha256 cellar: :any,                 arm64_big_sur:  "7d62490dde63229ca06419e7178e13e8197dba53695c08de3f1a561814d5b808"
+    sha256 cellar: :any,                 monterey:       "d40f4b9b028d2f87b2278fa9f8012dc5262c574041454858de970082059f478a"
+    sha256 cellar: :any,                 big_sur:        "4f688d29553610b29be265fe2078cc53b842b1c466cb72cb266c8c839240e54d"
+    sha256 cellar: :any,                 catalina:       "2d15adbeb9a739af8bf729f08b8277cafcea4d9f031600e01efd8359cef287f8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1a40c0b2101f61fe74f4d724a9763cbd777ee00f82d8276603195988830b6451"
   end
 
   depends_on "autoconf" => :build
