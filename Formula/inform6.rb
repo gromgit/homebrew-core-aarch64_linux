@@ -8,12 +8,12 @@ class Inform6 < Formula
   head "https://gitlab.com/DavidGriffith/inform6unix.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a2a158d3ac51212e117cf6a2513659d665d5f80a1c783649e875ae1f3b52c6ea"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "efa2ab2fcbd736f762b1439e65febdf7eef588fad71bd8e11a53723e9553bba8"
-    sha256 cellar: :any_skip_relocation, monterey:       "465311522f60b2a5d28fbe816d4f56497584164032e50a46e651dacf67969fdb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "765942a2b937d9b43bbab8e8fa3d390237d1935dd44edead8b9c54b4c7ee55d6"
-    sha256 cellar: :any_skip_relocation, catalina:       "8edd7211435924fdf81edb05720c36ef6e037984e6d4e5f0b165236340eda8a7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "43a33f80c3d186855817dae7774121a878a349e46f9c8a7f6cfec3b1d6ebafb1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ac1cb08b86f4c562479c2a6116d1d352802fcc6ccf31364ad783cde9efe0ffab"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5acfe613a88a6e7a969e6b24d8bef5cbef31a22fd14d8db60630177759b5c64c"
+    sha256 cellar: :any_skip_relocation, monterey:       "ce002fdc1c120b30db9685479c9bc51419a33731b168ba01a8d92b0393b1d48c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "361bfb044f663c4baf8c391b3d6ebceea9604edeccfbe9543cc6ef8100ba078e"
+    sha256 cellar: :any_skip_relocation, catalina:       "a56be61e66de57d70e67b07630dd8362209dfc6f24f5797a1f1c3b27dbd8e203"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c65f473b3a41f07535950c37b0adfe3011cbf60a20888e5164655180da6aed1a"
   end
 
   resource "homebrew-test_resource" do
