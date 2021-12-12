@@ -6,10 +6,10 @@ class Qtkeychain < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "ff419e0cddb47f36d42355203426dec0ac362f9acd22de6b34ddbf4aa9d7c17b"
-    sha256 cellar: :any, arm64_big_sur:  "511adb80d2f17ff444968a1d423ff5480722b0e57c1c5f9c7ed97baa9a5eeec5"
-    sha256 cellar: :any, big_sur:        "6a67508572e1cb4b3fa76149a14a2b9d12759b1e7f2de9d0f3e505dfd7e3e19a"
-    sha256 cellar: :any, catalina:       "8ecc8110a025909e6a4523d68e8409e67b0453c812632a01e43bd92f1530da18"
+    sha256 cellar: :any, arm64_monterey: "9f6273da5cdc3a82058af46017b0ac4574e8a20f56849bc16794fe9b3ef945cf"
+    sha256 cellar: :any, arm64_big_sur:  "615cd8a1cfbd5daa8ae059e28917dc55ba419167883c7d8463fb94d5cea2cb7d"
+    sha256 cellar: :any, big_sur:        "356725f06e060f9d4d35428475911611c0f5da9373ab5be3c798233d229a6fd1"
+    sha256 cellar: :any, catalina:       "e7c7b7c43afce3092702f14055dfd48afbdf92aec23adc443fbf31994a7df053"
   end
 
   depends_on "cmake" => :build
