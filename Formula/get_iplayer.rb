@@ -7,13 +7,12 @@ class GetIplayer < Formula
   head "https://github.com/get-iplayer/get_iplayer.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "992a95b7afbdf7f76c3590710ff4c062826d1f69d4121ae16bbdccb4774ddfc1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "316d77e70cbf81e41a2ff460a868ae5864eedf9c5a76b8ec42f520f73233b659"
-    sha256 cellar: :any_skip_relocation, monterey:       "41408b8d612af8288bc43dd61408562f83650266e1f1e106f205d7a82bae1ba5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bbc950186acaa0afb086ad9b8207e7aaa0ee20223a6dd0bc511ce1dab8e706af"
-    sha256 cellar: :any_skip_relocation, catalina:       "126aaeae1f023ba9975c614627a10403f843d320f071edb5cccd5ebe9922ea49"
-    sha256 cellar: :any_skip_relocation, mojave:         "5abba49ca77ad3f725984003a9f1054d7ad98cb2a63e0e10b4f7418bbc77129c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a1ab10118105c950cd3dfe2e5ddcafa16b4877b1ef9f53ad9e7ccd54b5ff890e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fa82c21dcb46edf6c7a027ed1c6d8aba29c8dcce6ae079683b75893e44b225af"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1665b3c06fdb20f64e65dfc3b5797d57ee5c5d5389cebb491028ebfac53e2441"
+    sha256 cellar: :any_skip_relocation, monterey:       "07b328ee6ea86ca846f1263e80f0ce7ec9482c67b485ecd92c920862f4bc083e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a2cb3e9aade0602d13ad367fdc4d383944a2b880a725000d0ea3a493caeea9e6"
+    sha256 cellar: :any_skip_relocation, catalina:       "78274c735f7eb288d87b38ad1a2a5c2cdc09ed174daab435a7d7bc294ad95b0c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6a5e1a033517fd5e0d503a04caaa38d204f11b4afac7e57a839007ba1365d54a"
   end
 
   depends_on "atomicparsley"
