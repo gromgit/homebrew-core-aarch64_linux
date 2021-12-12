@@ -13,13 +13,12 @@ class Libressl < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "b3c161f83a811ebc2d949ebc67d0cc4bf6f93cd89361ac1aeec47ef06dae8532"
-    sha256 arm64_big_sur:  "41f4e9f8cdf03ae83c8fdff6867bbd36127c389004fb89a410630c74dac315f9"
-    sha256 monterey:       "806d3b611485fab207bbeb7126643240adb8582f985f3e6546815953eb968611"
-    sha256 big_sur:        "e3c8dae6f39e42a652df8e66f02a0e581e31697fbfdc7465813306c48f6931d5"
-    sha256 catalina:       "4490e48658eab39495b885811d1762666d6c837013c3f990cda1eebf8bb400fc"
-    sha256 mojave:         "7ce48d13e2e1cae8569598a6d456c8843263547fc1753f2a5869e61fd50c6fa6"
-    sha256 x86_64_linux:   "aa3d726e0bf1159fa3ad3cb1657525e1f37e6fcfafb79ff9be07ccd34d559035"
+    sha256 arm64_monterey: "932d4139fd7c519e637555dcd7646ce074410dfe819cf1e959582e92e9d2629b"
+    sha256 arm64_big_sur:  "0b41497bd24cafddac59ad896f3bd0651f809368ec7a273a9a587c7be25c66ec"
+    sha256 monterey:       "99dcff0a05aa91c512cc84634da127314e18965a5415cfc5bf89cfac2d11f525"
+    sha256 big_sur:        "ab9076500642384eb5af15e8e89e5a2c08c0cbd61286cf7d53770d777995a6cd"
+    sha256 catalina:       "4fbe195f7dd1c0456912892a6dd2f91a3e53601b3f26a8352bbf58951d92eee1"
+    sha256 x86_64_linux:   "2a795ad39e27b921e4afd4e9a2e65cd04ddb86ba49193eaf8826349ab3c4e9e1"
   end
 
   head do
