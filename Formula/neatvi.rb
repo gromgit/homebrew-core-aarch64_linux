@@ -8,13 +8,12 @@ class Neatvi < Formula
   head "https://repo.or.cz/neatvi.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "860f291c9c0b866ccf6e79fea4fae328122e69bc54b50823e68cebd69ef5b791"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "54c65ed58e6d27871850aa722ee40fe2d72af036bb255a41ba9d0299c8b84479"
-    sha256 cellar: :any_skip_relocation, monterey:       "574e00e2508ea4762fbfce35f3690b86533e1128fb299eb3e2f7731f9791218e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bc951c1348db9da286bf7cd1652f2aabe3b98757a834145c61fcf4de30a28b2c"
-    sha256 cellar: :any_skip_relocation, catalina:       "dbfe05d495b19a8ea91806f6894c43502464d422cd4acc178da2e0aa7a824d3e"
-    sha256 cellar: :any_skip_relocation, mojave:         "9e52be034eb7fdc6f6be1ac2bc307791aae1cdb83220783a511e7e3fb0ad6915"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8ae4df608e893ab8f0f0cb74df40081685d51a0c238b7a90f2b50e9afc6911f1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1885311d215041a7fcbe43af2aad4d243a72db131f59bf16d5e8c38833c420f5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4d02348c64815db38c3e52784dcd444bf926a39f5ec45770e417938760a9574b"
+    sha256 cellar: :any_skip_relocation, monterey:       "51b6ff945536b24119c2bdea08b0b383dedf07a30c8bb383ff5325ee50a47f49"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d91af1b2e27813770c80a8011828654f67835f90bdcc371b8f92ccbef65d9ec5"
+    sha256 cellar: :any_skip_relocation, catalina:       "95e2903443c4855bf5930ff40c082914747bd867bd313d016d17d684b4ec630d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6c0afe01b93c3bfd7e437fa8ceb661fee81c81a4c0c0d198bf21767f4a410ee8"
   end
 
   def install
