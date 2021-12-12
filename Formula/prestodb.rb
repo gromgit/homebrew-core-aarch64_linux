@@ -14,7 +14,7 @@ class Prestodb < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "80059e86e78b2eb50ba2730f91733754703088df006dea4a09c6972483604e36"
+    sha256 cellar: :any_skip_relocation, all: "f783260296f4f971d169a7facf5c9c1dc9922a8324b9a5b4a6842794bee232b6"
   end
 
   depends_on :macos # Seems to require Python2
