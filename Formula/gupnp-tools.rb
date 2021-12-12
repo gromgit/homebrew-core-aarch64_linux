@@ -6,11 +6,11 @@ class GupnpTools < Formula
   license all_of: ["GPL-2.0-or-later", "LGPL-2.0-or-later"]
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "36bf2175ee855efffc394ee905804020bd28b2f345ce345b0f86c9f1faae84da"
-    sha256 monterey:      "15d9b56880693e2c80bb77821a307abe95631448915f376d875098c942b15ec1"
-    sha256 big_sur:       "70ed3d849117fd48c18b5d26313b6bb17a73c642e30ef85158e75fe71d90d9ce"
-    sha256 catalina:      "163c7cd5916785f32193cff6543a0533aff92e576a83871c30474607a77d86fe"
+    sha256 arm64_big_sur: "8418c2570591b15a49305251ef6e56a78def7ed72f848f1bd02a303e8416e6e3"
+    sha256 monterey:      "743c63f60784485413f15bf30cbd0a6164ce4f463dab22a2cbb3d5abb8241771"
+    sha256 big_sur:       "512b29e2e56968496991b3ba51952e21bf47353caa4625aceae382969f78047b"
+    sha256 catalina:      "2da164d05b713d158b8e537ee77cbd32546bef71223c23f067205b8e9c750fc0"
+    sha256 x86_64_linux:  "a131f92a504507638f37272d73bfc5d0e546dab25aa2664507e7b1a09bbe7517"
   end
 
   depends_on "meson" => :build
