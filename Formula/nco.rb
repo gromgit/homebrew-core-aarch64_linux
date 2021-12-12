@@ -1,8 +1,8 @@
 class Nco < Formula
   desc "Command-line operators for netCDF and HDF files"
   homepage "https://nco.sourceforge.io/"
-  url "https://github.com/nco/nco/archive/5.0.3.tar.gz"
-  sha256 "61b45cdfbb772718f00d40da1a4ce268201fd00a61ebb9515460b8dda8557bdb"
+  url "https://github.com/nco/nco/archive/5.0.4.tar.gz"
+  sha256 "91c9d191db8c7132489d86727b195c04577f034adf168f9d341ec63b55ea4353"
   license "BSD-3-Clause"
 
   bottle do
@@ -26,7 +26,7 @@ class Nco < Formula
   depends_on "texinfo"
   depends_on "udunits"
 
-  resource "example_nc" do
+  resource "homebrew-example_nc" do
     url "https://www.unidata.ucar.edu/software/netcdf/examples/WMI_Lear.nc"
     sha256 "e37527146376716ef335d01d68efc8d0142bdebf8d9d7f4e8cbe6f880807bdef"
   end
@@ -40,7 +40,7 @@ class Nco < Formula
   end
 
   test do
-    testpath.install resource("example_nc")
+    testpath.install resource("homebrew-example_nc")
     output = shell_output("#{bin}/ncks --json -M WMI_Lear.nc")
     assert_match "\"time\": 180", output
   end
