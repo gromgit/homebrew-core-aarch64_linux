@@ -12,13 +12,12 @@ class KnotResolver < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "452c25e1ae99d18a9a1b46357644b43f0edb0b89460e444dbba49fbed6e39d71"
-    sha256 arm64_big_sur:  "cacea8251a555de1f374ad7a62d4b33bd73181f429e235cedc4de8be00090097"
-    sha256 monterey:       "8b61ef0569ab3a124830b8f0c71106dfdbd490a5e4b130c46cf0597da5f384de"
-    sha256 big_sur:        "91405319bf4bce33774c1ef2c42802d5405c12cb74c87637206266444de3163b"
-    sha256 catalina:       "afe54507119237bae07e93a5f975032db883061e062638dad73489afb1935dde"
-    sha256 mojave:         "d7b924de8d80867a074635aae109dc7af1814425e4a0ba159f271ba9c8b8732d"
-    sha256 x86_64_linux:   "3ac89256654cabe6135e52677a28e133997d832aceeb39e5edd4a21e1a40ed1a"
+    sha256 arm64_monterey: "52f65d3c9bbabfdc92a811ac45bbe2ba1748d9e686c9d5169ac38b170bcb5ef8"
+    sha256 arm64_big_sur:  "4f6e6586cddb3a3d4ac9a6abfdabf021b49e8ecca72f6045845e60b4d4333c25"
+    sha256 monterey:       "2cd27fef96a55ee3b441a5766adc27db908ee7b7356698142a0aec2ae7d46f59"
+    sha256 big_sur:        "8505a179f4b2752c2368f3274fcbbd5f89406e9b0f71202a4738457da5ea00bc"
+    sha256 catalina:       "3dbbb7600e370ab1257cca131062df27f6b91d969516f4c8229281627b346dff"
+    sha256 x86_64_linux:   "f10362034e3e83b3e970edd07e77d2c23ff0bc4392206aad36b5cc8331f66ffe"
   end
 
   depends_on "meson" => :build
