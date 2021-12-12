@@ -7,16 +7,12 @@ class Pgpdump < Formula
   head "https://github.com/kazu-yamamoto/pgpdump.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d47c8e594e8da1e715299908ed6e4de72548176131f396613764a9e39d0f1a86"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e2be885245f927b5cc3203bff8af2f063d60853d2c7627100ef46f8cd4eb730d"
-    sha256 cellar: :any_skip_relocation, monterey:       "41fd68b09f849b1ddc1697f352282b897bf359bc92ca3bb50ae05e9ee0f765e4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c87222c16b88f4f1a34504d503eb7bebd6559da8029cd4cd374d27bb694cbc88"
-    sha256 cellar: :any_skip_relocation, catalina:       "60bbe481621cc653edc834b9d54b910deb3c1634cc7155dd1e9aca9e3f207ca4"
-    sha256 cellar: :any_skip_relocation, mojave:         "8141ac85359c7be7ac5ef51075823612582ecd0e02f0048cace4b4bae2217771"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "2d5ad982f29c20cad30f5a90d4fcd8af3d369432e2c4ab4f35fcfa3b31712a1f"
-    sha256 cellar: :any_skip_relocation, sierra:         "9c2ed5f4eb7e0c833a90d53fc8d96d613b781b36c3524959fa102ae62a4d167e"
-    sha256 cellar: :any_skip_relocation, el_capitan:     "1cfd7cb5b0cdbc7e70031841d7efb1196ddbbd6f11f5af3cce4b38b6f7358ae2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0089ba0d93112995da62e95bc7f3e9483e12394ecfef3a84c5e3181843743cd8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cb05a1dc44518657f2782c5711291b642d1d756324128d16aadf0e8e2c778688"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6e4edf88bafa923e819834e14aa930d28bec5bd5b8ac1e53b2be4d94dcc182ed"
+    sha256 cellar: :any_skip_relocation, monterey:       "c58e12a52f46f1e86327930e6701245c1f4694ad3f2ba3c44cee9ac772c3043e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f5ebd09d9b2d1c41dadfc7350b0db257d7c1e7577ca5229947ebb84b1859fe16"
+    sha256 cellar: :any_skip_relocation, catalina:       "614447213dda6fb53aa1d9b7ffbdeb986cd87648c46a9a68e80c460d9aaaa77c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "37d78f68ee709e17657c2117f9199c07c898a094e80497847e3b49af19cb7d19"
   end
 
   uses_from_macos "bzip2"
