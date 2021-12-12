@@ -12,12 +12,11 @@ class GstPluginsGood < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "17e77ddb78c6d99cf6889bd762f1f7f94d7ec895af70b0c64ee35c7862907336"
-    sha256 monterey:      "8446b963bfac74651a877b4eafc090a4d0e4fe5c77536f71a531382399eccf36"
-    sha256 big_sur:       "7a3876fc70f60c58b5ab60e7a4d612be3fb024e1a09185e6e04a54c0e51c20fb"
-    sha256 catalina:      "f23b4d37364aae89e8309a67363b91c635cff23eecb06a5cc715d7c7a56e01ee"
-    sha256 x86_64_linux:  "2431f7c189a74763b1ff5f95bd5774e4e8002d5495917843cccad95ebc6b1d67"
+    sha256 arm64_big_sur: "23c5545d7dbb05726bef1fc711bffe95c5a337eacb6053dc141fa08523faed53"
+    sha256 monterey:      "28e2bd546fecb0a2e90f632e71d55c67108c88d3324f1db67a99002ea593f6a0"
+    sha256 big_sur:       "34ac73b746d4fc3c962e253fe71ec3a35a3dbed2f20342bd22955aa492a53562"
+    sha256 catalina:      "72ba1c6c4e161443ef3b7913fe5ad6f733d818aef27de007645eb2b6195864df"
+    sha256 x86_64_linux:  "def92a5fff0a77ba3c384bc78cec86756342005a27242fb07e689f6b92440602"
   end
 
   depends_on "meson" => :build
