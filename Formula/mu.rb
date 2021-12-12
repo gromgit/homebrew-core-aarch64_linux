@@ -17,10 +17,10 @@ class Mu < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "abbbacf5eb2983c03fc209bd497bb828cf0c0077f0e1ec2d02710e86145db41a"
-    sha256 cellar: :any,                 big_sur:       "3babbb7a81106cce91530c94be1e66f7184a65e67119d06d14e1641146487eea"
-    sha256 cellar: :any,                 catalina:      "fb0ee00fbe19850a2edf6f88514a7179392f674fff26246a067ea60d2e570626"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "db2624e44332ca7e4a4916786db3129394f21f963f10e7b1c4320df4b6f3a21a"
+    sha256 cellar: :any,                 arm64_big_sur: "073b588a7ebfe1c9139994ac3e1f775b8c3106a41625b9c5c7f0019b9d3a6524"
+    sha256 cellar: :any,                 big_sur:       "984ff5adf341446c8d7741d1413d6943e3ddf6cff86165a9af402f5c1f639bb6"
+    sha256 cellar: :any,                 catalina:      "0299242cd384e4cc8fe2ae4397c8778572fd01e726bf0fe46a756e098ee98343"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ec71ae61fccf1d797994a23bb4db6fa2c28ba11fd1000bcbcc5777f1dd7ca5f2"
   end
 
   head do
