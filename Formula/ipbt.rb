@@ -12,12 +12,12 @@ class Ipbt < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3baee59b5406f9b562725bd917b94a18a8d944f441b4a4d0e8982ef6de729f2f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "78f292ac5378f3b8d1a9bb5260a60a3b40118b944edcdaaca912646407e42d5d"
-    sha256 cellar: :any_skip_relocation, monterey:       "2d314a6081ada6e848ce072328d6da77e36b7ceebd2e9b28a83f8fe5647e8124"
-    sha256 cellar: :any_skip_relocation, big_sur:        "66c701400fe87ae661d959bb9f7558f7658c5d81e71438ec76435ee2943329aa"
-    sha256 cellar: :any_skip_relocation, catalina:       "f08bb4d0b1710cb02f1960c229f137c44505980793251ab81d0222be5f1b61e7"
-    sha256 cellar: :any_skip_relocation, mojave:         "5678b11877df9433ceb47661596d3f0b4d0894e44a4173ae118b746117938e59"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5c6cf8b434be0827f277b9043b15a59a6843bd5937da10af44d1087bdcec9e08"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f60ce7c47f5c64db7a5e1e89dcac05ddeecada4d9dfdbf328f5d0cd45d15c49b"
+    sha256 cellar: :any_skip_relocation, monterey:       "204b2e212223e5133f1657a83e14d2196c5005ab30da463fbab61a6225814dca"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0a5e855dbc1d178cf473944fbd8ec5259afdb848878877466707a001a9f0f861"
+    sha256 cellar: :any_skip_relocation, catalina:       "3cb8c3a7dabcc937b7fd31f1105c8341ecd958d9c8828260eecaae3552f8bd95"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cc48797c6da6992d4e02855e83776571057921f9077407c989b36769fe21535a"
   end
 
   depends_on "cmake" => :build
