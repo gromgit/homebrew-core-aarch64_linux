@@ -7,12 +7,12 @@ class Opam < Formula
   head "https://github.com/ocaml/opam.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a1857425c84f28023915f3c211098a7f278ad39040a1c569a22ccd88a2a6ef10"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9bbb374ac9f15d245e0c7e6f8082ef88aa81a6d808a2cea5dd6a0bd08c21cd4c"
-    sha256 cellar: :any_skip_relocation, monterey:       "8a038c6f7a24ca54295c24d921950d1b42590f7f2e7b343b33ab1b9f1047bf91"
-    sha256 cellar: :any_skip_relocation, big_sur:        "17f550490c8bfe2159fedcd830aac382c6b0bb5a40af26da6ce59c7943d93809"
-    sha256 cellar: :any_skip_relocation, catalina:       "9a2ebda132ee358956a7010a677731f58776d7b6bc33100e3848e900978c2c37"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5fffb9378c88c700679ac7640cd6d0ecd66d36397632baa906b29e5d8cc607eb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5d6d0d434b180b861eb18ffae3b70bc8235479b00956248e5cc485ccae2f8d26"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3c9b2b9d9e17b328ed640a3b656e5cdf917f2854fe2678cf56392199142814a3"
+    sha256 cellar: :any_skip_relocation, monterey:       "316167256d1f2754a45ca9cac05b6c055057902093413f0edd6df736521f70be"
+    sha256 cellar: :any_skip_relocation, big_sur:        "35c725a04e60011bbb4dec521b5dfb66725d363010e995e1a6cffa969c1b2da0"
+    sha256 cellar: :any_skip_relocation, catalina:       "186d8a3aa61e1bab81dda6832f295239fb308ae997dad0727d8170e2fc70b358"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4e30f437ea3e56fee4f7849ebedc5cf27eb09818c1ca5b6fa52485c793a7c678"
   end
 
   depends_on "ocaml" => [:build, :test]
