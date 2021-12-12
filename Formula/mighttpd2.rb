@@ -6,12 +6,12 @@ class Mighttpd2 < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cb4f3d679f45eb1cafeef1382405c56ff3a12163557921f522d04d8515072556"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3a3795338aecf816f75d65a1b94306a7ad10ce00ce06f542ba4ba70c9d6633b3"
-    sha256 cellar: :any_skip_relocation, monterey:       "9b40c73cbea84c5a873d4fb2a42434e21fc78ee605fb034e74be85c1a845cf55"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b47d66f64181fb396631c5d7811a45af16b15fb709b04f877beb1dd53defe2bf"
-    sha256 cellar: :any_skip_relocation, catalina:       "ccf3d9edc4c2f4816fb03a3de973d28d8e19798c696d57eab63cbbebe9064af3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "233acd9876e3aff534a0aadd6f78d6f0f187af11d56a676cc3f15bf3d37c02ec"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e432ae1973470224bb1aaf5ae3ef7b70d20be866560f2ec4c0375c1962e7af30"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3fea445ba4059d1f0babdbf7d2133ae1a6cda242a636285e2fe93a816a6c7e73"
+    sha256 cellar: :any_skip_relocation, monterey:       "483bcb477d2ae4f5de053e35bdfa241797d5f71fa7a1a634ffa796ad293d6574"
+    sha256 cellar: :any_skip_relocation, big_sur:        "483de36504302bc062927309c91e69596f74aad25252bb45cfc771736675f2f0"
+    sha256 cellar: :any_skip_relocation, catalina:       "da5f1934cd56641f992af9e702d5269e70ee960c9ea93a039b974b2aaa0fad5c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5fe18c418eaf8ca67edc56fb5e3c68e0efc2afc4efa8f651d1554a5668aa72fc"
   end
 
   depends_on "cabal-install" => :build
