@@ -7,16 +7,11 @@ class Makefile2graph < Formula
   head "https://github.com/lindenb/makefile2graph.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "fbd6818dca98ad31cba381f503da9757dc4aebc6f450e8eb22b24d5bc2c04841"
-    sha256 cellar: :any_skip_relocation, monterey:      "7fcc20413c191ea330f45992719dada50ca796864d050dc06b6d4df8f7327eae"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c8278a8691b682c5499295a79b73e18e18e87c879384b7d44dbcc0f70178ee58"
-    sha256 cellar: :any_skip_relocation, catalina:      "af7dba0cbb045f067076706310b30c52eddbd6732e60d16017ccbfadd4bc866d"
-    sha256 cellar: :any_skip_relocation, mojave:        "5b5cb69a698628af41b3de70146580bbcb2e88a8b6d87d7fe9b4f58a2f2fdfb2"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "51231ed0ef44fd31a10f4ea0a7500570181332786ddd5a8a9a886958ad1b1408"
-    sha256 cellar: :any_skip_relocation, sierra:        "274ee025c45df9757d608249d64105b9314c8e59fc52a81ad6906f807498b67c"
-    sha256 cellar: :any_skip_relocation, el_capitan:    "ed1939b1b0fd106f3e328e310a887cf454b81481f78fdf57ce75c0480a922d7d"
-    sha256 cellar: :any_skip_relocation, yosemite:      "37aebae489e0f341f80417ec711e5c2817f5b8097c3493dcc11bc754bdd1b1cf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6a5630eecb3e491ce11e781d86526ef8e81dbdcde1a951d4860be458cdc9399f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5eb90095c4579d7d8616732bec7f266164f7b5f7665ef15fd3272720a4577cae"
+    sha256 cellar: :any_skip_relocation, monterey:      "6010cadf93231ec03033a5248ad53ff57b099915ec8a72aa847a9a80a401257f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7018264b838135807ab0a5e062a6315cf20b8de88b8dcff3f71afa03251eb8a2"
+    sha256 cellar: :any_skip_relocation, catalina:      "58d4ab28a477688fb01b4db124c5d7deda3d7c2076e94e4c303ea1e8ab9a65c8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "073d9b3b0eb9ff852a6f3f12aba6e3e2547d84e0d1257382b423a176df567299"
   end
 
   depends_on "graphviz"
