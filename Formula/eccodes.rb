@@ -11,13 +11,12 @@ class Eccodes < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "26f7573565db98d674108f36818dc938e2fe61340fd8ace3535acc0eb4209cde"
-    sha256 arm64_big_sur:  "b16288b8e285a187f91ae6b7cec94face9fc1f28bfc888eb8e1bf50aa74a765b"
-    sha256 monterey:       "7eaf6b6134b71951aa7abb351e10a1a008845e4d4df724be833c66c17d21ebd6"
-    sha256 big_sur:        "b9bda6733d23098c49062f172ab721c2ccc56e37becf133c1e2d88fad17a904a"
-    sha256 catalina:       "0d7e1a89a8631e9683e5303098be30a549f1369b98350d6475020e2708789f71"
-    sha256 mojave:         "ec525f2dc9352dc64c33be76c8e0c6e24913caf6d7ec0302bc3e830305d6f9b9"
-    sha256 x86_64_linux:   "36ade0ba4eb6d09766097abba7d2cd9d76fdf4b2a4233f782deefc265c3a142b"
+    sha256 arm64_monterey: "f3618afa1512d7449b7fd45c850723838ffa9de86c3d2104eb777d7dc4c3ef8d"
+    sha256 arm64_big_sur:  "b6ddb4df495f2bd573aaf0df732617967a1876413e412c3163b54940081379cf"
+    sha256 monterey:       "c5f8650516b0dfd7f4e4a988c7146654b2d99d87d6388396efc18c85bcb4f017"
+    sha256 big_sur:        "9e591567d52b615591e603fedba32805e61115bc5b0128e24fe9a477ca1edf7e"
+    sha256 catalina:       "0b43666c1ef6df3903dbf161ecc1fb7993fd5913b56c2c27d1afcd1e9d7c8a49"
+    sha256 x86_64_linux:   "c6d6b78657ce5c4abcb56a0f987584dc877bd93ba4c746f8c1fded15ac33fff7"
   end
 
   depends_on "cmake" => :build
