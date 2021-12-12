@@ -7,13 +7,12 @@ class Ormolu < Formula
   head "https://github.com/tweag/ormolu.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "acd617cb4100f5d5bacd752db1752bc4dad4449a0b06a39fac61241f000d60ad"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "70cd7434a57c0153d1408a67d8315fe70d6011f9372d9f54d7bedd970cc815f5"
-    sha256 cellar: :any_skip_relocation, monterey:       "9eeaf61e2ea11cbd8d36b11067fd2abbd4d5a884ca4877b53adf0bfe9f7706d0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "db763c64ee0667d536beed9a908ef4d098148bf653e06987304320d9bea7eebe"
-    sha256 cellar: :any_skip_relocation, catalina:       "075fc7b2afa03d4db8d517a3951ba2bd1d28859013b57e107728a2bd75ebf9d0"
-    sha256 cellar: :any_skip_relocation, mojave:         "d990e97bfb7cb25d3090f47a5c1b8e164b8a8a46cfeb2d79216c17337ef339b2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c50a4ad780a90bff58aaa6ddb13b908207b5d6188f059ab5403e64fe3dfe861e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "828054e2764d487af77e04880eff00bbbfb810d2150eb1ea45c0e6bfb7f14d6f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "14450fe96a3025dc81dd53dbe85317b9f660f5983cdbe217b6996306f9a378d1"
+    sha256 cellar: :any_skip_relocation, monterey:       "d5a10db06a3bc92a52516852f1cc8dc984c1c1a3730e3c6c4d9058c5204b65f0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0e28da5886bdb97c288f824071f2de68e4f59c3d5e445492468a4985386db531"
+    sha256 cellar: :any_skip_relocation, catalina:       "d3c334f656ea463f853e223e858825d8a5443ec4d83b2990b83ead818258600c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e6d111b4cbbeba91601a5e4ca3dc28cac17b89a41b8b8270b05e35566af35ca0"
   end
 
   depends_on "cabal-install" => :build
