@@ -12,13 +12,12 @@ class BoostBcp < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "58fa7c3d18b6c5ac8a56475bbb315430e6f4581b39f3c6506879f4adfd8068e0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "416173b54edea43357edb6fdd76cf2c89060015b889a9e1843e33e796b6a97c4"
-    sha256 cellar: :any_skip_relocation, monterey:       "02213b90b218fb2f4d38940a59c3ae82e612405adc7e5cc79c296ea6521273a9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cc527cdb08563bbe1a03fd9d59085d3737ab197e753085e5b3d7c11704d7ca03"
-    sha256 cellar: :any_skip_relocation, catalina:       "5fbf373c4fb07fead636165d863be6ba56f52c929926e6e301796a1f00fca3af"
-    sha256 cellar: :any_skip_relocation, mojave:         "e483b259f0c9b6fb2fb1ff1256c3b3421d5f5c09a807819076200e114f40a0ac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dfa4af82624b089572d76ce463f5fc7c551bd53eeca67d4077e64bc104d28247"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b94358c7073feca948b1c65ba8d5f2f83f9f2d1faea94e71f26ea1bbf205a7f3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c705ee1805c2b72cc152a2e17e2bd095b1621311d4df05e6264aa1f0ba4cb53d"
+    sha256 cellar: :any_skip_relocation, monterey:       "a6b89f26b19cba2576beed6b14663dfdb994bc5723a305d7e26b40e401c8fa7c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "61636de3949e7652cd497d380b39932b8853d35fd2736865eb52eea7ccda8a5a"
+    sha256 cellar: :any_skip_relocation, catalina:       "aa980455feef4a55c85ee15552b5f3e49a1a7a8caacccb71f168da0fc847859d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9e71b1847793712fa48aed2a4c45a2ecd013129d416c221e773696784d455f1f"
   end
 
   depends_on "boost-build" => :build
