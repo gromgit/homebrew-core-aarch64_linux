@@ -1,11 +1,10 @@
 class Druid < Formula
   desc "High-performance, column-oriented, distributed data store"
   homepage "https://druid.apache.org/"
-  url "https://dlcdn.apache.org/druid/0.22.0/apache-druid-0.22.0-bin.tar.gz"
-  mirror "https://archive.apache.org/dist/druid/0.22.0/apache-druid-0.22.0-bin.tar.gz"
-  sha256 "5ce9ba185361a20694fd107ffc818fb42d13a44911d010739227b5c62a8fc1da"
+  url "https://dlcdn.apache.org/druid/0.22.1/apache-druid-0.22.1-bin.tar.gz"
+  mirror "https://archive.apache.org/dist/druid/0.22.1/apache-druid-0.22.1-bin.tar.gz"
+  sha256 "bd83d8f8235c74d47577468d65f96d302e6918b017e6338cfbb040df9157143c"
   license "Apache-2.0"
-  revision 1
 
   livecheck do
     url "https://druid.apache.org/downloads.html"
@@ -22,8 +21,8 @@ class Druid < Formula
   depends_on "openjdk@8"
 
   resource "mysql-connector-java" do
-    url "https://search.maven.org/remotecontent?filepath=mysql/mysql-connector-java/5.1.48/mysql-connector-java-5.1.48.jar"
-    sha256 "56e26caaa3821f5ae4af44f9c74f66cf8b84ea01516ad3803cbb0e9049b6eca8"
+    url "https://search.maven.org/remotecontent?filepath=mysql/mysql-connector-java/5.1.49/mysql-connector-java-5.1.49.jar"
+    sha256 "5bba9ff50e5e637a0996a730619dee19ccae274883a4d28c890d945252bb0e12"
   end
 
   # Fixes: node.sh: source: not found. Remove with next release
