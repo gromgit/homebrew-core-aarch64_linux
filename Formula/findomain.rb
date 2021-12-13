@@ -6,12 +6,12 @@ class Findomain < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1c9041c9951e4bee8bec2cacdb53a7ee9bd0d80069e951b6ce639d0853992c89"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "65564e2fe089095d9d55761b9d883a2395131c1c3cf072db25555999dd04f8e8"
-    sha256 cellar: :any_skip_relocation, monterey:       "54a85518b9883991b5d2d1f01abc45057f75fb667ac2f8204a3d415b8a11ea4a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "11414804127bd42a112d01cc0a817b2b1987ae2acffc7ef25df1b9859a08dac0"
-    sha256 cellar: :any_skip_relocation, catalina:       "f4cb544399f1d92d325551b3caaec9b9de590e932de43020d9bc5a28fce09e44"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3289284e97b4951040433194af545cb8f9946d2ed07717cb1f80d603ae5f43e0"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4339bc0c281c0b64e490fd1e38f67a09418926753a30673a60430e0527cca5a0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2d584f9de7dcbf54709e5e90474fa6ee3f58fdf7c802fcf0eec4c5fd7aa91793"
+    sha256 cellar: :any_skip_relocation, monterey:       "2e408b8ecbe9b156a17ce1de7a80fe07b1d3e305d6b79a1e02852eb1605f6b33"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9a5859739f8f45a00d5d1347630c7939148face0053fcc163303688774999ad6"
+    sha256 cellar: :any_skip_relocation, catalina:       "df19a09cb240ce86e503778c31b21360e504d0ddc5b23d377e199025a5a03edf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "004f8d6e0209254f708f87642374653c3c78dbf943927b94cfeed5554f858f6d"
   end
 
   depends_on "rust" => :build
