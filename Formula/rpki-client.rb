@@ -5,6 +5,14 @@ class RpkiClient < Formula
   sha256 "e956c0af4973539f725d26526669a6d01800436053b0257c1d069a42c384b2ab"
   license "ISC"
 
+  bottle do
+    sha256 arm64_monterey: "802bf2381ed7d568056c986c016517c63072bb33023864ab44e76c07c7d4f4c6"
+    sha256 arm64_big_sur:  "26dc818750a48fbf57983e5ee3148d68e27dc1cbd65d12d892c1fe58333e82e4"
+    sha256 monterey:       "8ad7e8b713feed8d58c76c1cf6541f65cf0fdd9d2658afb4fd4dfd3416432c97"
+    sha256 big_sur:        "6a17e768be73e1f18fe8b84a8ac7fd65afc6871d5b9c8ae594b355b9f67dcf54"
+    sha256 catalina:       "72c502d598e996027bb4efe7bea0d26dd855fbc8783658d0667de01c56274aa6"
+  end
+
   depends_on "pkg-config" => :build
   depends_on "libressl"
   depends_on :macos
