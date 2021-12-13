@@ -4,8 +4,8 @@ class Px < Formula
   desc "Ps and top for human beings (px / ptop)"
   homepage "https://github.com/walles/px"
   url "https://github.com/walles/px.git",
-      tag:      "1.5.5",
-      revision: "489d1a9b53d184cd276a7f8ac4b2bb9eebbfdd59"
+      tag:      "1.5.6",
+      revision: "015793f9ef7b228812a8a887a51c0b2b0604fd4e"
   license "MIT"
 
   bottle do
@@ -18,7 +18,7 @@ class Px < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "47031e425bdd1bd0ad16d43427a40e3b29e1769248df9b0b1450ef422c234c31"
   end
 
-  depends_on "python@3.9"
+  depends_on "python@3.10"
   depends_on "six"
 
   uses_from_macos "lsof"
