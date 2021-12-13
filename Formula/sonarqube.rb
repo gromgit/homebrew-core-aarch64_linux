@@ -11,9 +11,11 @@ class Sonarqube < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:      "4ee7fd481ccb4301bb547fb7830ec7dd202959859c2404b753f5ed7ce02ca5aa"
-    sha256 cellar: :any_skip_relocation, catalina:     "4ee7fd481ccb4301bb547fb7830ec7dd202959859c2404b753f5ed7ce02ca5aa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "5bd7b5e142d30a1caf30979e5e077f462e076540c514505d354df4625e2be67d"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "cab3b89e50e43a64f2948c56cc455d306032437395b509b28174017969e41f9a"
+    sha256 cellar: :any_skip_relocation, big_sur:       "c2df4203aeea613977f05971819dcc78412a1786f992c6930439c985b3d2897a"
+    sha256 cellar: :any_skip_relocation, catalina:      "0b310e3e24c1cdf3bbcb596691cfb7e817e66b3cd1a0edda2740ce99f7b58e07"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "24cd350f3feea6fb8888aeeb8f0764b28a0f60cab6276a84556a9a2a993baf56"
   end
 
   depends_on "java-service-wrapper"
