@@ -11,12 +11,12 @@ class Scamper < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d640605d3a5ab0e7783e9f43dcbcc11ea5d1e0e73c6a3911a386aea3836e8dfe"
-    sha256 cellar: :any,                 arm64_big_sur:  "35fe5995a6581b107914360a1e19ba0c80b12909957575b88a340a46f2fd145d"
-    sha256 cellar: :any,                 monterey:       "be47fb7a5e1600008d73ba8464050f2ef4f088a346a9447202db257b62e9fec2"
-    sha256 cellar: :any,                 big_sur:        "17375cca8a4ea9467d21266204387e917add13123f605a91f5645ecbbc9ba688"
-    sha256 cellar: :any,                 catalina:       "20dfc6f01fe9dde757d1517d7a1f80705e5e73793cfaac92a48edaf7d6ae9751"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "447c9c74ff9ff4142d8aa85dd08b09637507110a9dee0960ad253358f3c81ce5"
+    sha256 cellar: :any,                 arm64_monterey: "ea08ddc851dd29feedbaa0a8f20bb178c268df5c9497e2043b2c916b7434eaa5"
+    sha256 cellar: :any,                 arm64_big_sur:  "1066b95b6fe4fe29362028df661fea8f790465da53f22ac00329be16d3d25e0f"
+    sha256 cellar: :any,                 monterey:       "bb3acac54b6c08565922731332b37642b0c22d9d155e91f788261dc4f4917a92"
+    sha256 cellar: :any,                 big_sur:        "25313db0f5be0e859b56a52fb05ee1ec648ccbc46f15bc17c5bd298a1ba5362d"
+    sha256 cellar: :any,                 catalina:       "581e363f70aa19e814f94e2df445785801be56b30141574bc4a1f625c0cc8cbf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "474e6d68861e2b138f51b8db49ab28c12cfb7e16ec9612e88074e3fcd6ad550b"
   end
 
   depends_on "pkg-config" => :build
