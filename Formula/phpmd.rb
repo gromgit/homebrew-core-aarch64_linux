@@ -6,7 +6,7 @@ class Phpmd < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "5ed3d4023ff0e8fef0b07b838d75f40f42ae3f61f531a47abdb9a100dce84705"
+    sha256 cellar: :any_skip_relocation, all: "72e3ab34aff7457c79ba192d22d8b999329ebb17d7f5bbb98f05fe5476dec577"
   end
 
   depends_on "php"
