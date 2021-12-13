@@ -6,13 +6,12 @@ class TerraformProviderLibvirt < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6d368171de77d235069741c96abf783953366f65bd828ef5107a753febc1d620"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9ab4ad2414c19304136f40737e4106480fa4a9263529b88631033c1a1029943f"
-    sha256 cellar: :any_skip_relocation, monterey:       "c7cff5db890d05e819e26e41909e1a16d00afc1c4fc8414e1f7e7b5a9beaf2d7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a3edd031a2893cad825db3a00140cb6ffb949cd20e1d8c7d7f4de64aafbcd6be"
-    sha256 cellar: :any_skip_relocation, catalina:       "c2783859d88adbd62994dc3a1c81d19ac363429636fff8f6e84658c6ccdab115"
-    sha256 cellar: :any_skip_relocation, mojave:         "a9a2db100d57c0485bb9b807d819c5b942bba212d88b10845cdda1f18bf54e2a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fb290f4b615487538a06594679e884eb06789c707c6ca5fe9626927b4e2392b4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4f09d7b51b1cb82628ed7cda6630f9ca68dc5579946845cf7b6039e8da54f8b3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fb0d4ece745a815f896b18fde87a373a8939748a5b9ea4918787448d5e8f544a"
+    sha256 cellar: :any_skip_relocation, monterey:       "dfa29e63a1cf32331642c8742d30c1b53a16464581216fcef2c833da20e50781"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7503be76ab7aacf2a9f182133e6aa35f28a83891574baf223f05113ffcab76e8"
+    sha256 cellar: :any_skip_relocation, catalina:       "0306bcaa93b009451cf64a10d25d1a2b765e3ccfc6ff7291e790f69240c3b07a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cae29cb654a620d134811eb4b1ef78e0d1391f4a7364b44220af804bc2bd9834"
   end
 
   depends_on "go" => :build
