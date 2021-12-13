@@ -6,11 +6,11 @@ class Nef < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "621c034f7b2d64932fa58d3fe47f1c20a082adb4d1574a2bd6e79ca79d61600b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b5b6f8469fa1102d9e6493f179a51506aacd9aa4c475717a7f4bdeb8faffea0f"
-    sha256 cellar: :any_skip_relocation, monterey:       "dd772e8001aaa5a9a2543e3952a57350207b10879765ef5893e36aebc55a6a1f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "11c4a5eb869ab0e94f430c3ff4104064e0ec3b371ed4e0d6c8673ac9f18915ee"
-    sha256 cellar: :any_skip_relocation, catalina:       "fae01b5b21abe8205e3e42101804f3c6c16bb04d1c14841846766579ce2885d5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9b18b03102e950a93c946b0a92638a22e114e6cf56829e6249acb7a465b0ce0a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ebc41b222f6ec924c8e9cfa96436b35499ef16002169d27d01755655a06ecc4e"
+    sha256 cellar: :any_skip_relocation, monterey:       "8a6cc8c5520d6d300cff4e86ab5076fc628e588c897abd65aab85fad50cf2460"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ce01b5d542de2cc0dde3b16ae7250d238b7a06ef5139c63458dea8918a63c170"
+    sha256 cellar: :any_skip_relocation, catalina:       "770c78fd20020f2a5fa6fc30759d55af95e7aabab81f91680b6113917bdc2457"
   end
 
   depends_on xcode: "11.4"
