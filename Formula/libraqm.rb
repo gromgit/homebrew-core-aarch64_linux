@@ -6,13 +6,12 @@ class Libraqm < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "31633bafe07acbb111d61d6903d1d31fdfa1442017083a656f45cec235b126a2"
-    sha256 cellar: :any,                 arm64_big_sur:  "05c31c92e29b7202d42cb892a327ed2c5ca4e7f211020dcf4b54d1d08937479a"
-    sha256 cellar: :any,                 monterey:       "472153565affc24e276667fb48629d8dabd9908ca23f45e5835889d096a39dac"
-    sha256 cellar: :any,                 big_sur:        "66f14af1e2afb8aa3f89cb6b2bc0e0274a260bf832250364ec691e398296fe8b"
-    sha256 cellar: :any,                 catalina:       "d619aee4f8e198220d88df6c68ab19ad4b4dbb1a16a4c910ffe923281461d4a5"
-    sha256 cellar: :any,                 mojave:         "cd4063f2520edce76e7a53a676508410ba42bdfe34f3a49c58414f94ea2ab647"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9435ed91d1d18865b406874aedd92b2b7c34e211970d19aaccf550b20a68303a"
+    sha256 cellar: :any, arm64_monterey: "23048011f5f6d2fa3873cf87782cba708deb09fe1e5c06e21f4e1dbfb3ab498e"
+    sha256 cellar: :any, arm64_big_sur:  "4d741a5af66aa2e094bb55cd2592ffa2e6ac5f38e064e99eeb16faec7a324866"
+    sha256 cellar: :any, monterey:       "df6c8ca6fb30b138e31e998c646aee64673f5083294d96074f3c094818f2a00f"
+    sha256 cellar: :any, big_sur:        "aa6b25d03cd705846e465ff578a6fea2a2cb2249cef9092cdfb08d79c563cf5e"
+    sha256 cellar: :any, catalina:       "a954e77a4271fb93d16dbeb178913d294fc2eb90370d8367a9bf7b21e373be49"
+    sha256               x86_64_linux:   "0d5b7bb663f0c7325333ddf8c70b53f6fb1124f22afaf4bd67bfd2d3afb9b746"
   end
 
   depends_on "meson" => :build
