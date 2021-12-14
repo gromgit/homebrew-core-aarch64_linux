@@ -7,12 +7,12 @@ class YleDl < Formula
   head "https://github.com/aajanki/yle-dl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7c51e61feb5eccec2b4117329d7ed3e2167bd16e6f70a5ded706282b8f1587d1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6ffb9b7e21539aabc49e2c0ea751fd39af9c065a5f31d18c8c14fa3e75870499"
-    sha256 cellar: :any_skip_relocation, monterey:       "884c9487b3507bfaa54a113a26d13c3ce6a706dbf6626ee1fd9da5418877edc9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ea071ab1528b4b9d17050b313b4c00cb524b77ffe93b61a6fa5fa9b3f0e39569"
-    sha256 cellar: :any_skip_relocation, catalina:       "d66b7727dbfcf6a0347b5e0bec954ae37f092e823e9086fcac0a3bd115f3e054"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "482ed2db37a412c593f34a28599ea1576b76d32f220ba4efcd03490d50a5af7c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c205cde547cae053b939c7adbae2dabee984d77d8a882c46d38f3f8cbd7e65c1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5a8cf459ea5e8a7a580467f940d32e09e7293a8ad20aace05b8641c9237cb146"
+    sha256 cellar: :any_skip_relocation, monterey:       "4f28789d59c483ca58f96f6ae96ccd6c5a6910e896f1feb06e02587e3152450e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "26fd6850f6990ee9d03c5d46868f7ddb88268aca8ceab8f56158c1009ddecd7d"
+    sha256 cellar: :any_skip_relocation, catalina:       "1b32f46525280db1678c2afb61412ec7e45f1c760f49fb4d472b7b85c1efc9c4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a05f3bbb54d9b0297af7a6974f6989a70ac65f7b0816a7601c24562c7c8234c7"
   end
 
   depends_on "ffmpeg"
