@@ -30,10 +30,15 @@ class Opencascade < Formula
   depends_on "cmake" => :build
   depends_on "doxygen" => :build
   depends_on "rapidjson" => :build
+  depends_on "fontconfig"
   depends_on "freeimage"
   depends_on "freetype"
   depends_on "tbb@2020"
   depends_on "tcl-tk"
+
+  on_linux do
+    depends_on "mesa" # For OpenGL
+  end
 
   def install
     tcltk = Formula["tcl-tk"]
@@ -66,7 +71,9 @@ class Opencascade < Formula
   end
 
   test do
-    output = shell_output("#{bin}/DRAWEXE -c \"pload ALL\"")
-    assert_equal "1", output.chomp
+    output = shell_output("#{bin}/DRAWEXE -b -c \"pload ALL\"")
+
+    # Discard the first line ("DRAW is running in batch mode"), and check that the second line is "1"
+    assert_equal "1", output.split(/\n/, 2)[1].chomp
   end
 end
