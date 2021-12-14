@@ -1,8 +1,8 @@
 class Libraqm < Formula
   desc "Library for complex text layout"
   homepage "https://github.com/HOST-Oman/libraqm"
-  url "https://github.com/HOST-Oman/libraqm/archive/v0.7.2.tar.gz"
-  sha256 "eeccbb0bf23ef77d8ff2be24a9c6c1547cc8e443d3d6b57814d73d44758d95c2"
+  url "https://github.com/HOST-Oman/libraqm/archive/v0.8.0.tar.gz"
+  sha256 "6429e35f69f5e7d514877624fb73ae6d07a7e9ac746ae6a1cf2bf1277bb5b68d"
   license "MIT"
 
   bottle do
@@ -15,26 +15,19 @@ class Libraqm < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "9435ed91d1d18865b406874aedd92b2b7c34e211970d19aaccf550b20a68303a"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "gtk-doc" => :build
-  depends_on "libtool" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "freetype"
   depends_on "fribidi"
   depends_on "harfbuzz"
 
   def install
-    ENV["LIBTOOL"] = Formula["libtool"].bin
-    ENV["PKG_CONFIG"] = Formula["pkg-config"].bin/"pkg-config"
-
-    # for the docs
-    ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
-
-    system "./autogen.sh"
-    system "./configure", "--prefix=#{prefix}", "--enable-gtk-doc"
-    system "make"
-    system "make", "install"
+    mkdir "build" do
+      system "meson", *std_meson_args, ".."
+      system "ninja"
+      system "ninja", "install"
+    end
   end
 
   test do
