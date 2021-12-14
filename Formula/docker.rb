@@ -2,8 +2,8 @@ class Docker < Formula
   desc "Pack, ship and run any application as a lightweight container"
   homepage "https://www.docker.com/"
   url "https://github.com/docker/cli.git",
-      tag:      "v20.10.11",
-      revision: "dea9396e184290f638ea873c76db7c80efd5a1d2"
+      tag:      "v20.10.12",
+      revision: "e91ed5707e038b02af3b5120fa0835c5bedfd42e"
   license "Apache-2.0"
   head "https://github.com/docker/cli.git"
 
@@ -52,6 +52,14 @@ class Docker < Formula
 
   test do
     assert_match "Docker version #{version}", shell_output("#{bin}/docker --version")
-    assert_match "ERROR: Cannot connect to the Docker daemon", shell_output("#{bin}/docker info", 1)
+
+    on_macos do
+      assert_match "ERROR: Cannot connect to the Docker daemon", shell_output("#{bin}/docker info", 1)
+    end
+
+    on_linux do
+      assert_match "ERROR: Got permission denied while trying to connect to the Docker daemon socket",
+        shell_output("#{bin}/docker info", 1)
+    end
   end
 end
