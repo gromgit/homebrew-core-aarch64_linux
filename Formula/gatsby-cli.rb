@@ -4,8 +4,8 @@ class GatsbyCli < Formula
   desc "Gatsby command-line interface"
   homepage "https://www.gatsbyjs.org/docs/gatsby-cli/"
   # gatsby-cli should only be updated every 10 releases on multiples of 10
-  url "https://registry.npmjs.org/gatsby-cli/-/gatsby-cli-4.3.0.tgz"
-  sha256 "38259b218da21a6050c5b3686b48a04f049a101ff7f5b2ebf3cfbfa4731c0330"
+  url "https://registry.npmjs.org/gatsby-cli/-/gatsby-cli-4.4.0.tgz"
+  sha256 "4790ad93ace7760a295353210c150ffdc8244fbddc7c8c47f7f4626a85685032"
   license "MIT"
 
   bottle do
