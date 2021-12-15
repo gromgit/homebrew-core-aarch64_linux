@@ -1,8 +1,8 @@
 class Ccextractor < Formula
   desc "Free, GPL licensed closed caption tool"
   homepage "https://www.ccextractor.org/"
-  url "https://github.com/CCExtractor/ccextractor/archive/v0.93.tar.gz"
-  sha256 "0e66d3e360db1b02a88271af11313ca4c9bbda1b03728e264a44c4c9f77192e3"
+  url "https://github.com/CCExtractor/ccextractor/archive/v0.94.tar.gz"
+  sha256 "9c7be386257c69b5d8cd9d7466dbf20e3a45cea950cc8ca7486a956c3be54a42"
   license "GPL-2.0-only"
   head "https://github.com/ccextractor/ccextractor.git", branch: "master"
 
@@ -25,15 +25,15 @@ class Ccextractor < Formula
   depends_on "tesseract"
   depends_on "utf8proc"
 
-  resource "test.mxf" do
+  resource "homebrew-test.mxf" do
     url "https://raw.githubusercontent.com/alebcay/example-artifacts/5e8d84effab76c4653972ef72513fcee1d00d3c3/mxf/test.mxf"
     sha256 "e027aca08a2cce64a9fb6623a85306b5481a2f1c3f97a06fd5d3d1b45192b12a"
   end
 
   # Patch build script to allow building with Homebrew libs rather than upstream's bundled libs
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/9bc4ef5a88b9a4d55dead30130aa79f8eee5faf7/ccextractor/unbundle-libs.patch"
-    sha256 "b610950e4ae54a8fce3f5952be6d909cb9790a9c46ff356f83e8d8255c7f1ed1"
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/e5fddd607fb4e2b6b16044eb47fa3407d4d1fdb0/ccextractor/unbundle-libs.patch"
+    sha256 "eb545afad2d1d47a22f50ec0cdad0da11e875d5119213b0e5ace36488f08d237"
   end
 
   def install
@@ -42,21 +42,21 @@ class Ccextractor < Formula
 
     if OS.mac?
       platform = "mac"
-      build_script = "./build.command"
+      build_script = ["./build.command", "OCR"]
     else
       platform = "linux"
-      build_script = "./build"
+      build_script = ["./build", "-without-rust"]
     end
 
     cd platform do
-      system build_script, "OCR"
+      system(*build_script)
       bin.install "ccextractor"
     end
     (pkgshare/"examples").install "docs/ccextractor.cnf.sample"
   end
 
   test do
-    resource("test.mxf").stage do
+    resource("homebrew-test.mxf").stage do
       system bin/"ccextractor", "test.mxf", "-out=txt"
       assert_equal "This is a test video.", (Pathname.pwd/"test.txt").read.strip
     end
