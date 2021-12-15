@@ -1,8 +1,8 @@
 class Consul < Formula
   desc "Tool for service discovery, monitoring and configuration"
   homepage "https://www.consul.io"
-  url "https://github.com/hashicorp/consul/archive/refs/tags/v1.10.5.tar.gz"
-  sha256 "a8ce6c406be07e5d6fe6caace67b19a9567b8b3cc95220348d530baf8af5ef62"
+  url "https://github.com/hashicorp/consul/archive/refs/tags/v1.11.0.tar.gz"
+  sha256 "ad644802106e9f78a43f13a10569c59cdb16958850e68a85d73b0e31dfec70e8"
   license "MPL-2.0"
   head "https://github.com/hashicorp/consul.git", branch: "main"
 
@@ -21,12 +21,6 @@ class Consul < Formula
   end
 
   depends_on "go" => :build
-
-  # Support go 1.17, remove after next release
-  patch do
-    url "https://github.com/hashicorp/consul/commit/e43cf462679b6fdd8b15ac7891747e970029ac4a.patch?full_index=1"
-    sha256 "4f0edde54f0caa4c7290b17f2888159a4e0b462b5c890e3068a41d4c3582ca2f"
-  end
 
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w")
