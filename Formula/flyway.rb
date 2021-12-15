@@ -11,7 +11,7 @@ class Flyway < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "689b22df4e3020a9020e87c354203f7fddff13567eb6959448e33b1366eee832"
+    sha256 cellar: :any_skip_relocation, all: "e24fc858093d67dd72b6366192b7c85347352bf7d684edeb5d1507e9ef9a4617"
   end
 
   depends_on "openjdk"
