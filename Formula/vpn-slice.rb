@@ -9,13 +9,12 @@ class VpnSlice < Formula
   head "https://github.com/dlenski/vpn-slice.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c7e8122a3a4c573ce3f56a4ea590d8dd624e3d9a77a6ef5c6cc7920264a8c470"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4d573308656014686896eb8f1089b34c80681dcd9f9f236830cc4047fc7b2a95"
-    sha256 cellar: :any_skip_relocation, monterey:       "fd8425b424c9a0ab4f20d520a5161ea6fd4df98dd2abae8167fce85a037f8650"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1c88c94f36629761206f33c6c15fedf999abb119e7cec586c01f1d2fe188ae70"
-    sha256 cellar: :any_skip_relocation, catalina:       "d163cd9ca3fe156de8cdc2b77a36e357cdff7317a145115157b545f0703520c4"
-    sha256 cellar: :any_skip_relocation, mojave:         "4d16aa1912e1c56a359242288d82c5bf0246c7e9cb0d507d1c267b35f176eee4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1c1e691a28af9d74ef1453b1b4b2e782cd5c8271ea1a991694daf3fab7c4dc3a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bbfa2a3a8b8e9152ca48632a00516150c7394df15c4c4d63d92d3237a65b73ac"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "226754aebd7b8bc50e97530258eb5323e6582cafd7c30c6d49d47df3cd516ea1"
+    sha256 cellar: :any_skip_relocation, monterey:       "d7d0824434ded8b59f8d94826750a76982149b717514c45c45c937f7c84e3bf0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d16cdb0c574a5b2908eca30715ad395d130d5abaa63d36dc1e81f1c0fc8c3e93"
+    sha256 cellar: :any_skip_relocation, catalina:       "3ab5f17a948e66f4f387798ad7a92db39901264f183c621e5b316c73a182420a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ef189ff3f708aa43e8574c9b1d6781e099f73acb880a53fdbfb6ead0d1d322d6"
   end
 
   depends_on "rust" => :build # for cryptography, can remove if dnspython has new release
