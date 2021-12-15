@@ -11,11 +11,11 @@ class TraefikAT1 < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0ea0ad8d89150568cc4f33c1cdaf0cc84c7e77bec0374764d4d3882820434d22"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6305adbf2774f44e0bda394fbd0f332309aed8dcf7432ce9eba655f693d90c61"
-    sha256 cellar: :any_skip_relocation, catalina:      "c0caa4ed372cb322cf1bc5f7436206ab19ac3c555cecad63f17ec63b94054f3f"
-    sha256 cellar: :any_skip_relocation, mojave:        "d0f8d61c8c23ce1b8dfd65a9f888a3b00f7f55df9480bde0486cb6176437f70c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1e31f7d05eef29c95084bfca1f7dae694b56a6926e4810e1d151d7a483c1a93a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6e8060b579d2b50e927526da6c8ced95ee5b297a15085e2358651dff21aa41d7"
+    sha256 cellar: :any_skip_relocation, monterey:       "66cc839bf105e161e16aec5b056c5a5c908d7d5fbe2fadb5668614d8c764e783"
+    sha256 cellar: :any_skip_relocation, big_sur:        "95d3b3da8a19aa4cb133c8e5b95b63a957551732c2a81fb4b80015dc84df0237"
+    sha256 cellar: :any_skip_relocation, catalina:       "a1f090529ee3ed1646d872898219662f76d215c5cf7389cb84d4f22e540b7afd"
   end
 
   keg_only :versioned_formula
