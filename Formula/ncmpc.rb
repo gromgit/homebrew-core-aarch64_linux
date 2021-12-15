@@ -12,12 +12,12 @@ class Ncmpc < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "3ac0f3c2f9faa033508319e8304d6bd625f204c611eb3e9a2b17546bfde5df42"
-    sha256 cellar: :any, arm64_big_sur:  "58cdd18e870c3eac90a8cf734204245b8cc06485fd3bbd668ad9f23deec171d8"
-    sha256 cellar: :any, monterey:       "ffc421190d8df527832f6c1fa14f7241e1a4b44b0bd3259583489298cb637630"
-    sha256 cellar: :any, big_sur:        "23a47c6cba9cbb3e9a770bfcea731903fe4c80a75a2164584af2c41e6268e838"
-    sha256 cellar: :any, catalina:       "aa0ca12987c52d39bae2885c4aed18aab6bbe2a4a1fa7d28fd04edbcdcfe4745"
-    sha256               x86_64_linux:   "85023bee5a8507de34238665f02f68c7c43142d76b63d3337d515e1ffeb28a0b"
+    sha256 cellar: :any, arm64_monterey: "4eb2980aba45b5bf5fb6bf163339162bdac5ec8288ec6038c5d7f2943e86da6f"
+    sha256 cellar: :any, arm64_big_sur:  "e8c3093bbf5a5a74509de958d6360d1d2f7f0b84644478fff6dcf99c00991e4e"
+    sha256 cellar: :any, monterey:       "d7410a532844d96c9333e67ee2ffdb94d8b3cf8fb1e13fc410f9662ae8bee7e1"
+    sha256 cellar: :any, big_sur:        "60305f8697125534ad15dc71be02288fb4a2c2d156889ab04f1eb9d5a3bc72f9"
+    sha256 cellar: :any, catalina:       "b62c625ca3703f653837ffacbc98b4aa1a799ec39ce7992aae6a10d6da7bbb59"
+    sha256               x86_64_linux:   "2b3dd68e87e15a8794481b7a442fefe80c44525985eb2a447af3c5de998813c1"
   end
 
   depends_on "boost" => :build
