@@ -12,12 +12,12 @@ class Kubeseal < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b3228247b370a1853879a1e8c904bb34ade32c4b75261f339a5f329b300aec3a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8a04108bc852dd0e7ae229497e936d65d503514d56c4cdb25964a9b984d7fedf"
-    sha256 cellar: :any_skip_relocation, monterey:       "d7215b2fb78d69731b84a2b9157e9e0cea06a21873d808a2aab83258be7c7b2e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "53df6a14ef55d2a3b073172c8fcca3f57aac614f4906075a6088642aeadf1217"
-    sha256 cellar: :any_skip_relocation, catalina:       "3ff405bbcf0e2444dad98869c4d90c3f26a5dca1fb080f923bed982a403f2fd9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ae74d15cf7899448047bb2ddf55f3f415ec994c141808a60aacf6599c397bc36"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "56db8387e921f3f066d93c82bd48bc589920678f07a405c07498b810bf391eba"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "00e36b96d74661b52a72892da2213800f32a56649a5f8317d51ccb0cebf30ab5"
+    sha256 cellar: :any_skip_relocation, monterey:       "7b8c603552b3709faf307b77c2090dd4175227956643d57a53c8fad00d40aa78"
+    sha256 cellar: :any_skip_relocation, big_sur:        "cd60b3b0734a7b74233a113467e97a1be9e3dbe06eea773b7a38d2f5b9eed153"
+    sha256 cellar: :any_skip_relocation, catalina:       "848c410211f9af41b2d491e05b5f136c884b1c5c29e0d35ca80b5512222a2334"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3274d567bd574601b43f9b69c41498c4f75c675ed4abbc8f788b9fddc292bd08"
   end
 
   depends_on "go" => :build
