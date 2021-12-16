@@ -6,12 +6,12 @@ class Driftctl < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f614ebddab26fc5e705f5255df1518e5179ae47d5ce0ee285c3b720026c28bdb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f614ebddab26fc5e705f5255df1518e5179ae47d5ce0ee285c3b720026c28bdb"
-    sha256 cellar: :any_skip_relocation, monterey:       "4f4162df486ebbc4ecd50d9f9a4e20dee7c5f006adf1099be53cf07f002a54bb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4f4162df486ebbc4ecd50d9f9a4e20dee7c5f006adf1099be53cf07f002a54bb"
-    sha256 cellar: :any_skip_relocation, catalina:       "4f4162df486ebbc4ecd50d9f9a4e20dee7c5f006adf1099be53cf07f002a54bb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "96b56ea96b17258f97ccb36e1ab34e96f08053d6d77262611eb824ceb4a273cb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "454ebd1e34ffd71df3b5d6fc42f1bf34da4a1164e8db90af33d3024f0ca04775"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "454ebd1e34ffd71df3b5d6fc42f1bf34da4a1164e8db90af33d3024f0ca04775"
+    sha256 cellar: :any_skip_relocation, monterey:       "8b073bfbf77b5eafc9ca57fb706e9d07c11cd2873e55b9971ebb1457bfff2c9a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8b073bfbf77b5eafc9ca57fb706e9d07c11cd2873e55b9971ebb1457bfff2c9a"
+    sha256 cellar: :any_skip_relocation, catalina:       "8b073bfbf77b5eafc9ca57fb706e9d07c11cd2873e55b9971ebb1457bfff2c9a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "afb61bbf054384b0381ac9f5f80f8fd16a63f8b11d129ce5a7b0d61c75828297"
   end
 
   depends_on "go" => :build
