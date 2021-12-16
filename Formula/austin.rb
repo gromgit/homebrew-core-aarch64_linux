@@ -7,12 +7,11 @@ class Austin < Formula
   head "https://github.com/P403n1x87/austin.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "08d4e88d3c9120c1a7ac772e0a6721ab3bb22baf4e7b0d290622922b5b327994"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8518c4eba263717f2e9a7ef064a1f8705b9912d5e6f100938bcc39697d37584a"
-    sha256 cellar: :any_skip_relocation, monterey:       "2d99b1c5f140bd2acf9307059ef9e5b79449d60e9d29fa735300a001238a9d64"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e2e5e713ff069787934d451ef095fa018a76ee0b21b4269ea0ba7ed1660e8e66"
-    sha256 cellar: :any_skip_relocation, catalina:       "7902abd05301381f1f335db81b44ecf6659c20d82d957fc13a0989ca07e95eb7"
-    sha256 cellar: :any_skip_relocation, mojave:         "a07f0785ccbe654e3351d7ca620e93c40efb520a92be20b3d7b88a62099afe9d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4b8a24d0ce7618eb414ff833f0243b9337815ce5da3908a26442e0123ef2f3b5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d02458c0f25b9571a03697c0853ca65c4fff0d8d12b136accb9f995ea186db2b"
+    sha256 cellar: :any_skip_relocation, monterey:       "9813ea951582bc395949ecb56d9239aaab36610fd15910265d3b17588fba32d2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2b2778178193276c1bb16f3ae3655e187a37c790472c24adee2bf4794f7f51b8"
+    sha256 cellar: :any_skip_relocation, catalina:       "14ce3fc17ec66e20adab82505e37717eced9f2a81636de1947c927f239dd6da8"
   end
 
   depends_on "autoconf" => :build
