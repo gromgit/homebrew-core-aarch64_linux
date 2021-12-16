@@ -7,13 +7,12 @@ class Ccextractor < Formula
   head "https://github.com/ccextractor/ccextractor.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2bff9205c6edf2abfc0dc1190f174e986e41163850611972b64c2feba4938a65"
-    sha256 cellar: :any,                 arm64_big_sur:  "6efaaf1c5561ca5b8111ec6d5c4a218478b1ab516879eeed63c253413c29a0fd"
-    sha256 cellar: :any,                 monterey:       "b222085a66cd8bf4c5dddeb77f24c79c7137eda6cc22d109aecf58cc9f07ba15"
-    sha256 cellar: :any,                 big_sur:        "0a1b989824260d96acce3c9e918d931b59cd3ccebb4be4a3b076d6b7b0829d8a"
-    sha256 cellar: :any,                 catalina:       "ca8aa899175221e1fe2bd7a1fb2fe5b955e130f0abf0ab9ae6d03c99732b7a3a"
-    sha256 cellar: :any,                 mojave:         "196b7762b3ca019d7a99b678759a0b317e29f15cdd64e19ca7512dd6cd25a6ec"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9ff529cb0ced01ab4a410bb3e28f51cedaec71394560fabad5f6060522090ddf"
+    sha256 cellar: :any,                 arm64_monterey: "0e159214a166b4a94b01af8132843ab7d965a1eac9ab381a4c32218928dabb73"
+    sha256 cellar: :any,                 arm64_big_sur:  "4499ba31cb70fb44486f740f40c737fea8ee4b9c5f8bd6a4339769c5d7f8f498"
+    sha256 cellar: :any,                 monterey:       "eb8ca60f26962005c03c1585564acd0b6bfbf9e831c2926be7189ebbe963702a"
+    sha256 cellar: :any,                 big_sur:        "3451b54658fb17d68a8cf869529f23877420d9684ab3da21998db11a8b4f2762"
+    sha256 cellar: :any,                 catalina:       "a65daeb04e584ce5adb862e3f26878be5adb72dd9cf802e1ab4c3a782554f88a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f71cb35f1a330e06b1a6477170c00f843ef0cdbf52898bfd4fc182d44365c25d"
   end
 
   depends_on "pkg-config" => :build
