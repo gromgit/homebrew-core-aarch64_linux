@@ -6,13 +6,12 @@ class Wrk < Formula
   head "https://github.com/wg/wrk.git", branch: "master"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, big_sur:      "39f3b454a93381e9350a3650745039deec765bff1f72eb7b6f3d449f1cabed3a"
-    sha256 cellar: :any_skip_relocation, catalina:     "9efb9a6a4f0dcd7298e048b750b1c6b3606d15d59ce7ce859663ef65925ee69f"
-    sha256 cellar: :any_skip_relocation, mojave:       "65f16f71cfb120d12f0f993044db92b767c728274aa046917bee7ad4deacfd3e"
-    sha256 cellar: :any_skip_relocation, high_sierra:  "ccc1cc4303847b70f940b765a9229476e7018328fbf202c02a00d9a13c63919e"
-    sha256 cellar: :any_skip_relocation, sierra:       "82fd1323ac999e23107dcd1cdae9635ff047afd15532f42f8cb4e82dad0db257"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "12af637f910bcdb74321e372ebf0d2b11206cc1dde29938cc48cb3eb3b4a03b1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "105d8b08ec6d0931a3f781f80590ce9d8f4cb6b916a16739acabd7b935c4df98"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ad9927f8d62c05e5b7b0e81a8d0cd055d3489957d64c8313f77e4f7520455154"
+    sha256 cellar: :any_skip_relocation, monterey:       "4579ff219025872daf408da70f8ca45f496bc3f768b6baad68bd04a6e555ff10"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bfdae1263316f4d65344b2c7890e3d4bfe14938146aad47eba5598e93f6ef0c4"
+    sha256 cellar: :any_skip_relocation, catalina:       "e589229b31a5b4d71028c39dbacd91b392ccfc88e548868fd227b35495761230"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "971a44b8fc296eb7148763277306af8e022210f4ed518a0a290c82730bd1bfef"
   end
 
   depends_on "openssl@1.1"
