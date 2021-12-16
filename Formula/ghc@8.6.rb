@@ -11,12 +11,11 @@ class GhcAT86 < Formula
   revision 2
 
   bottle do
-    sha256                               monterey:     "f8935d48a1813d6b4b6b515a447abbbff2a82ad6b297cdecb89cbce7edebab51"
-    sha256                               big_sur:      "d8cc7eb020495417a2674bb0b4129720fef30fd9c5688713501dd5ca6c1dea0f"
-    sha256                               catalina:     "af21e24b89361083a6cd5a27268e0470cdbf2e8616d1d95355df603f58f4e30d"
-    sha256                               mojave:       "ccbe2725d127cc1ddd2142294fd62981d6cd7ab110f56b1faa2560c28276b822"
-    sha256                               high_sierra:  "67a54e9d669e51b8018d064b771d31079421b777b03077dc7f02949ecdf8b0c0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "01c58d9164965d31c6b66f6063f4ff4d451348d4d3f143a2aa8886249f1c1a8b"
+    rebuild 1
+    sha256                               monterey:     "5449cd08c2d622390a65332c3c817e6866c2a9f4fab45d56c5159231ba99a4df"
+    sha256                               big_sur:      "ff771fbe5b187198b2a49df9db019468b77b01205b6fd26a275fb04bba9ea30b"
+    sha256                               catalina:     "d3ddfea33754da6f983910a29b93e59c2419e2fef672fe3b850faf88d1da279e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "b4088be267fc4a0f8470cad02ec6b17384784ca3db973879523e4a6c54e7adc3"
   end
 
   keg_only :versioned_formula
