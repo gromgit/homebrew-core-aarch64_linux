@@ -8,12 +8,12 @@ class K9s < Formula
   head "https://github.com/derailed/k9s.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "71beb766a54ee3cf16b0630bf740749861520165b62ec45e2b5f3d30450820ba"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f77de4eb89b24d3187c5a71f93bfe15ba9d4b1f1db52362e437f9cb187902cee"
-    sha256 cellar: :any_skip_relocation, monterey:       "9b5266f90469582ef3aeac5a949e0d616c81fcaa632d29f4ac11ee322431fd52"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a0f41b4d6b05be906c61f256bb76db25e25ece58cf8f044a50d86357144a226e"
-    sha256 cellar: :any_skip_relocation, catalina:       "9c02bdf5c910d4b67beeef13e203db27f30391f0d2b94ef2f049cb353666919a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fb469bce5b8dda63889972746536236588c0673b21031bb47997632f9338933e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "741452a19c1a9acbe8cb8b507fc3e7fbe6c09cca1d97bf7757c596e5f9912cf4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "802e6aff56b6294aa929f1176f6eb98453de97e5d3371f684811dd8ba7b700c0"
+    sha256 cellar: :any_skip_relocation, monterey:       "f391fa0a504dda6eb871b9066f5add7b5fd86521352b369fb4c726c05150de16"
+    sha256 cellar: :any_skip_relocation, big_sur:        "eb54ea186e7a20891e8656eb351f1cf8d894e234a269d96cf2779af229820be8"
+    sha256 cellar: :any_skip_relocation, catalina:       "fa09c34962af3eddc36862194bb1eed7c7792fa6df1d3b78e5e0593b67364730"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f05229543253ab07108731c0cbdce68b9ef4e551b9a5f6d588f426a767c61773"
   end
 
   depends_on "go" => :build
