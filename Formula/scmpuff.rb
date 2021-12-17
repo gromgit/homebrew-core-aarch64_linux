@@ -6,14 +6,12 @@ class Scmpuff < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4fd31e89412b581366fcf2f09979020a7a70eb541240353df38b116c7a6ea3be"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "152725eafc16f39267d4ffc3bf99953be7fe024b01593721fc5adadc244ddbfe"
-    sha256 cellar: :any_skip_relocation, monterey:       "4f2ebd7ab904f7659fca8b16029aed4b6df6f62dc77eabe8c5bb81aa40b77a4c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0741427c472b244575c9d7735e85f971677645107ea91ae99f32cc0377dc93ca"
-    sha256 cellar: :any_skip_relocation, catalina:       "0d673b2326d88ca0b4c952122f37d8c2cc269bf687e62f0161a9a75288b6ccbb"
-    sha256 cellar: :any_skip_relocation, mojave:         "30853a0768a6b6c65bdd0522854ae335f50f80ea24bbc64fd16a5411fcd7f2d6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "96bc8fa5f1eb00d5214537d40ada1aca04ee64e4b9f6ca887f70d9cb1836bddf"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6fb55c67fdaedbce13f78ac544a998fed18dc96038e3b0e68dbe14b758f02e14"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d14133971e78b28d3c1c6531b2bd6b30553301fcae87cd7ff8b6adfc09cd5677"
+    sha256 cellar: :any_skip_relocation, monterey:       "590f950e4e67a3f87c7eafd1e028bd22213f7e106d140d35f3270fdd8dd0f12b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "08cd314e495b756c9a76621a10f2b53264b9f9983f80ac265362e068c878d647"
+    sha256 cellar: :any_skip_relocation, catalina:       "736e0f055819fc55cfaf66435781ebb824758f3e88d8ae6c098fc0181f92ae83"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "06e98d0e836cc48d1080f3bb4229a1981fd7b90abd9e31673c0144f91b5bf3b9"
   end
 
   depends_on "go" => :build
