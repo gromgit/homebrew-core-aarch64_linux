@@ -11,12 +11,11 @@ class Liboqs < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "d1ad7ba88ddfa6fcca40f6d25ab51dfee332da4668d6ac16dca8a759aeacb96e"
-    sha256 cellar: :any, arm64_big_sur:  "7f970fb9bebb1c552ddd4c0e7abb2916a023bf530f7f53356574e80443d63acc"
-    sha256 cellar: :any, monterey:       "34676cda65de128c716eab909eb98203715bf2444ae1d9e56cb02a3723985525"
-    sha256 cellar: :any, big_sur:        "db585740f314adb4728ac5964e2a65495c77b5db01f260b3eb6140d61cfb29d3"
-    sha256 cellar: :any, catalina:       "4580d66dbd428f4851200f1800331b5b33b534677026312bfac4731a6d94f29c"
-    sha256 cellar: :any, mojave:         "c621f7603b90315a0605d56c6373f6d8542117e03512585153a7696e2349559e"
+    sha256 cellar: :any, arm64_monterey: "ae18883dbc2f1a7cef2be0fa53639b3d3622d20989865050372fe5facaced6ee"
+    sha256 cellar: :any, arm64_big_sur:  "19c321ef0d8849fd71bf1f559cab3eab9ddb312ef15de2af5eeb40b6d07b8dd6"
+    sha256 cellar: :any, monterey:       "413c2c6b86b61989e040d7c3652863ccf37552d9479cecdf4ded3f7b787768f2"
+    sha256 cellar: :any, big_sur:        "7ae518ce5f8519e009182f88f6365b306ef6940c892c938312ff82f0dcd4bef4"
+    sha256 cellar: :any, catalina:       "c304ee2212e895d3a5e0622aeb0dd9c4ee182a4042463b43ef71270ba369e5ca"
   end
 
   depends_on "cmake" => :build
