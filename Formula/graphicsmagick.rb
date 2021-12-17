@@ -6,13 +6,12 @@ class Graphicsmagick < Formula
   head "http://hg.code.sf.net/p/graphicsmagick/code", using: :hg
 
   bottle do
-    sha256 arm64_monterey: "00d636c922ae51de90a6b80fcf86a349a54e4f1f26bbab3dc4b0192824dda0b9"
-    sha256 arm64_big_sur:  "baae9073b2475351eb1d53d23fa0c2fcf75a1611649b3be229a71b693881436e"
-    sha256 monterey:       "671c7fccbc081328ef68e28fe6e129463a2855d7cc4da12e438a5bf5094d63c2"
-    sha256 big_sur:        "e8423e130f6dcdf83c501db944a341257e5b774cd007e1300f8b3cd3d32cafcb"
-    sha256 catalina:       "a09639dfb381b06df090e595f6f1bc343c3619c9643de26c6cfea4073c9527cd"
-    sha256 mojave:         "40b04368925d79d6e6fbe76014e5db18c7378eda414beb1b41de9bb8db6a69a0"
-    sha256 x86_64_linux:   "c8be14cb6bc71dd149d6ad2b49941b9192d375e66b011c99decba30e8dae6438"
+    sha256 arm64_monterey: "423213e0b36e1c6cef66354fe96f3c1c13f0836a4c5bb8ef299fc5ae90740ace"
+    sha256 arm64_big_sur:  "05f9bae927f523a7caf3361fa586f50de4e0eb55ae2a7a0f10d53f595955399f"
+    sha256 monterey:       "384b3a9c79ff6f43dba2aa78901508e1da83613186bb5be62a5e919f51bbf861"
+    sha256 big_sur:        "aadaac4b71080d30c8b0f739daf79e30dd90242026f6135ae8768813b77d7126"
+    sha256 catalina:       "60bad058e0b8f8b8cc435d9137438af97e8882a412a350041174a6c810592c05"
+    sha256 x86_64_linux:   "3fec9becdeecbae0e6a912756a5a1b87c1323ab9308b05263bccd67e25cb7cba"
   end
 
   depends_on "pkg-config" => :build
