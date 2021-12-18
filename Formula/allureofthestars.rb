@@ -7,12 +7,12 @@ class Allureofthestars < Formula
   head "https://github.com/AllureOfTheStars/Allure.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "cde6ae4feb79ecd891aafa2d4d0ebbbbe140a2d71b86770a8f46479c2165f0e2"
-    sha256 arm64_big_sur:  "d5e1044e0fc88046d9a25881d4474f1b717aa45351e88c3a2cb468a7b963351b"
-    sha256 monterey:       "39a6422266e1c94f31bc3b58554f8e2558e27bd37e9c3a884a5e3d7166e9014f"
-    sha256 big_sur:        "3cdd74a916009522c1311f9c5652b14b9fbd3b6efd2f5bceed76e4e38ee83d08"
-    sha256 catalina:       "9cce7401b41c975014dffb656baa00077e71ee580c25773725f57ce79acec98c"
-    sha256 x86_64_linux:   "e3926e9981b416b9bd8698ea5ab721b5b38b1fd374e228d4ec6e3e3ecbe34e5c"
+    sha256 arm64_monterey: "9bd3f439b8be07f96b479607cbfa0c09a05341ee185eb2b2f8cb535ea07949e7"
+    sha256 arm64_big_sur:  "7ef16dbc819f8d30a4d1c903c9c0f0c463b9ee020966587ff14ab5c06447cd33"
+    sha256 monterey:       "f755a0392edfa915f1f2f09ae15fbc5928539d1cf73c1a8f0dedb047e716e32e"
+    sha256 big_sur:        "d2b692c624297b9fc02d985f0f1a760f269c5d8a2b0a6b822b6ef1c80a416a51"
+    sha256 catalina:       "94c49064f02785a6da670e54ab38691b35af533a525395a3c9523fd156acf97f"
+    sha256 x86_64_linux:   "9a273be68a0480534a4f6fff161837deba8cab1b23f3c4d1ec762a578137374b"
   end
 
   depends_on "cabal-install" => :build
