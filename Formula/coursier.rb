@@ -5,6 +5,10 @@ class Coursier < Formula
   sha256 "fda87fc2d52b96a338b38c3b1c69a33fb0a0dd57fb2ab5d7880164c0ea9234f2"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "5096cf898c56949605292c2054a673746622ff424cd6baaac4b52c52791d93bd"
+  end
+
   depends_on "openjdk"
 
   def install
