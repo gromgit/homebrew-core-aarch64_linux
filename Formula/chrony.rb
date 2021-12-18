@@ -11,13 +11,12 @@ class Chrony < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "089aa389bea9d6408b8e3f8e681af3648b37b2d5a6245fcebbe15fbf0c2dea93"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "90fcce18cd0b68629e37023124cb961ac67c2f36da2bdfaeeeb2f6b146a49b9c"
-    sha256 cellar: :any_skip_relocation, monterey:       "4c45d8bb188a7b081c14ad95e166ed201690104817b09385b3a1d3c2ecbd7c07"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ecba024c1c74b0f2d8094b06043a6ceafbc4bcd4cba944e3600792789adcfb4b"
-    sha256 cellar: :any_skip_relocation, catalina:       "dfe728a9f5ecc085ba6582a2791e1e6a2f5d2ef609ee4f3da237e4442d016dbe"
-    sha256 cellar: :any_skip_relocation, mojave:         "b908fae19168cb50d7d1fe33e2885ad19ff8bb1e190442aa3ee6ea6c47f4c72f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d7f08010b437e23b4debb9f0d278adf3eb84972a6810f2cb6daa0b81077084cc"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cb83f99b7e12d8f5ad1b734f2b7566a8c8c866981b6c296dad5d2edec6b12d22"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2c8a63cf7644533253ee6b80d5e3b93622a953dd7521f13c2f843ad97a4c63f5"
+    sha256 cellar: :any_skip_relocation, monterey:       "9c72a415e288c845f5491f9b8243a5b50a78f6f82afecb458d201968f5de40db"
+    sha256 cellar: :any_skip_relocation, big_sur:        "40792ab0bc8e915469e9ec32972b1fc0f829a19daa808fbae999ec56da850040"
+    sha256 cellar: :any_skip_relocation, catalina:       "57851e6d80dc3512bb0060c0338b5de0c12ad74d200a0dd7276264c85275f04a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e54104a016acbd42cae4b92ea71ea898ec2b4401858f13894a3c0feca8d12779"
   end
 
   depends_on "nettle"
