@@ -12,11 +12,10 @@ class Mgba < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "abaec6f38393e67a34ae5608a96b87b6cfa79c897ed6604e9eed580a1b124f01"
-    sha256 cellar: :any, arm64_big_sur:  "748990bd29b7c677472169b38a191bb6845e0380332f674b18acae32bc872a28"
-    sha256 cellar: :any, big_sur:        "bbd6ee9c4ef3698e28e58da996235b1c51b085f79f8f9042aff9d9b25950f6dc"
-    sha256 cellar: :any, catalina:       "c3719a69184da453cbab9569ca328bde05a46b157fc1b8f1668e7c481e1b161c"
-    sha256 cellar: :any, mojave:         "ae8283ff8e328160830007d48d4b1338ffa17e01dd41e3fc9438c447f18c473d"
+    sha256 cellar: :any, arm64_monterey: "b43e9bc82af3fad71b480d17382d77f230f3cdaefa51ff2414a554d6669e4c2d"
+    sha256 cellar: :any, arm64_big_sur:  "2dfa4c952ae73dc9d4bcd06b633b42b3845ffe57961d454fd8ad31262b9deae6"
+    sha256 cellar: :any, big_sur:        "1dce1e0a22091d6286bf1fc130808d4b9a15e0fb1929aceda6882cdd7f88f672"
+    sha256 cellar: :any, catalina:       "462850dbac48418582caa81bde7c007ed0d1f07635496de1ee3def21317ac0b9"
   end
 
   depends_on "cmake" => :build
