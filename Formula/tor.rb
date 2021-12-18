@@ -19,12 +19,12 @@ class Tor < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "c3762e94997d6b6f2ecb16aacc3764737b766e29f919803d3e53922d8742bbcb"
-    sha256 arm64_big_sur:  "efc314a687bb144fd4a655c7c9555d7688071749c2ceacb758c103cc30125b49"
-    sha256 monterey:       "90e8e0f7e240541020b1d425ba7ea312ca7f5c7721813396fcb151c57777d1d0"
-    sha256 big_sur:        "d075f702a798d00bed7bdfeead10ec0e6ef2be5953f7e62382840cd0eefab7d5"
-    sha256 catalina:       "d797c5390176cac9edbc7df042fa3421dc93dca3f291fa2340d37c97292c6d00"
-    sha256 x86_64_linux:   "34220f2e859a6d3d22f47a59fb4134d28ffe3c0b50b5d0badb8d217e70bbd167"
+    sha256 arm64_monterey: "08bfc322ae48bb84db09a2144970798f5c3bc2272893dfdc5af76f4c58597d73"
+    sha256 arm64_big_sur:  "bd2ec2355cc218d2253f5a8db72d4fd7e1bed7e5c8cd0fdb44408585e9d72f86"
+    sha256 monterey:       "f516bab5247fdcf8182e7c8c8c7908d2c6c1149c2b2edfabf51e9317a7ef34db"
+    sha256 big_sur:        "97e0a400a62090bafb297fe765d4911d8ca6db9d619e63af2e80f9670741b65e"
+    sha256 catalina:       "1ae528203260d363d7ce4d0227122fa2cf4816eebdbccb3c7a15a0b226ece73c"
+    sha256 x86_64_linux:   "a4b4dd2721cf20bb87ad06bf92806c833019d51db30bcb5fd0ab5986ed9f4126"
   end
 
   depends_on "pkg-config" => :build
