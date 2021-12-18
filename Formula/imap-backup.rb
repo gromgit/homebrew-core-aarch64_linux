@@ -7,12 +7,12 @@ class ImapBackup < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e1e8b91a3c8688a2fe313160c4d9c892f6b92e37753bf1e0a0607c2f1e64af24"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3eebc9979f79e2c8f6eec6067b60896ec1ff76bb83a488f252688420d9650c7a"
-    sha256 cellar: :any_skip_relocation, monterey:       "e1e8b91a3c8688a2fe313160c4d9c892f6b92e37753bf1e0a0607c2f1e64af24"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3eebc9979f79e2c8f6eec6067b60896ec1ff76bb83a488f252688420d9650c7a"
-    sha256 cellar: :any_skip_relocation, catalina:       "3eebc9979f79e2c8f6eec6067b60896ec1ff76bb83a488f252688420d9650c7a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "995d0850aee450f3f7cd208c6d048aacb264ef7f28fafd19d90a6f48a91f346a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "35bae1e10bfb8cd0ade9520e4822653721a9fa4571e29c5c7cbb63f178ccb849"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "876347b7a37e2e7db1bf45ffea4ee86d642e32906e9160c9330ae6881c58d886"
+    sha256 cellar: :any_skip_relocation, monterey:       "35bae1e10bfb8cd0ade9520e4822653721a9fa4571e29c5c7cbb63f178ccb849"
+    sha256 cellar: :any_skip_relocation, big_sur:        "876347b7a37e2e7db1bf45ffea4ee86d642e32906e9160c9330ae6881c58d886"
+    sha256 cellar: :any_skip_relocation, catalina:       "876347b7a37e2e7db1bf45ffea4ee86d642e32906e9160c9330ae6881c58d886"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c2f4f0f591cc0947dcb826a67ea47959a04402e5db5ce7814a3c11c17ac508e5"
   end
 
   uses_from_macos "ruby"
