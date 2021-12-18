@@ -11,12 +11,12 @@ class Rsyslog < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "48e89ef9252a064de42846814a2c40fd195494af3aa74f9371d127bb0700bed5"
-    sha256 arm64_big_sur:  "29a457decc396b03135fff75be382f5d7457b1323998c2a859ae2cd6d316eaf1"
-    sha256 monterey:       "ae95e416383a788583587efb27fcb97e7fd43cd36fe6e27b8b5604997aa66662"
-    sha256 big_sur:        "6aa8ba08c656a824f68ca02d720e1410527ea75f8b3656aa3df11518aa968061"
-    sha256 catalina:       "9cad25d665e05db565854957bd9bb18ff430443d6523220d7b68f10a05a907ad"
-    sha256 x86_64_linux:   "a3e183feeb6580fe4daafccd7db73735d95195dcdf9638866aa4c80288c2d4b0"
+    sha256 arm64_monterey: "5b5ad8fe75e4d1c4b4ce173c3cdde2fed8d3b208fa40eceaab622d7288aa0b21"
+    sha256 arm64_big_sur:  "a6510d81d3199a3c0ca3c8b54a2231e90551dd6b31b7e230bc78160949bcd5af"
+    sha256 monterey:       "4fee85d2052620ae51cea97be0d467fc02f3f0445267e3cd5e25ec0dc0d6f569"
+    sha256 big_sur:        "27d2c05b98abe4614b4f191946d4a4420e556504785f7adedd8828cc6a6f4797"
+    sha256 catalina:       "3bffe649152d125520bde16a5f80b00487a2b2dbd4c4bfe058b9211ecbca1cf2"
+    sha256 x86_64_linux:   "148a18a831153087026d22e90cac97f7a9c2c9be8b0ffac67221bc73d3a1c1a9"
   end
 
   depends_on "pkg-config" => :build
