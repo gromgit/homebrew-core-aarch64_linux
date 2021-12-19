@@ -7,11 +7,11 @@ class MacosTrash < Formula
   head "https://github.com/sindresorhus/macos-trash.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ed00d717efd706e9374bc871080b23242ce5da40d3c0cedbad2f224f0825926d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "def2ebfb6f6dfd00122d680cfa770a59d495eb4dec459a8ed9160c20286df732"
-    sha256 cellar: :any_skip_relocation, monterey:       "3f1f7d73fa1c94356c4dde9d3686ab376e832f15ef0559026fb1abae01f8fb6c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "049e44820f9e1477adb355c009528157e3489c398729a0a5a40809061ebd365a"
-    sha256 cellar: :any_skip_relocation, catalina:       "420db6ae6caa28451dff5a1e1469f33ac07059ff82221274fbe8dbcbe690bb60"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0cff573086ce20b6b3c1ace838570390605cd758965e455c1b36b097b3130ccb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "557c7c851c37f3cc90607e0565ee96e01f346ea675dcd2d894d5949471c90375"
+    sha256 cellar: :any_skip_relocation, monterey:       "14e572ed0ed3b36e475357e7fe67b2a575da6f17b190350c9aec51fb08f45e7f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "42e5185162cd75cb1e660beacfff18fa404dc98dcb5c5249d117c8dfe5fa6a53"
+    sha256 cellar: :any,                 catalina:       "bee0b6a9d5e1f9b23a9513a58d89b924ab3343613e94a62846eed2f9df8108d4"
   end
 
   depends_on xcode: ["12.0", :build]
