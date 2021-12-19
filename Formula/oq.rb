@@ -6,13 +6,12 @@ class Oq < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "89e3b3a0e14c9d26556ba8fe0e518b2fd48f021ba4286ad1db4690c9a0d18953"
-    sha256 cellar: :any,                 arm64_big_sur:  "e28f2b92624cade03207c8ebec0b8b0afa96af680b53f46cf0bed65afd82d2af"
-    sha256 cellar: :any,                 monterey:       "6620d58995e30101ea8721883d91d35dbe9e475771828eb264c6cfa2a1a49ee0"
-    sha256 cellar: :any,                 big_sur:        "6dac9a710d4e0d51d68488aebd186aae114c05ffc8b62726d79338b016041ac7"
-    sha256 cellar: :any,                 catalina:       "2d0d73c1c9db23f83e66e2a1e2e1c2950246e108773adcce5b09c63c585cc781"
-    sha256 cellar: :any,                 mojave:         "9d66884fa4c1a1b605acc19e42f4f0e4aa6b768e329f1a28b2e28337570b2288"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "43537a23936df709ba4fd6a25008c80a41b7914e5ef6f447965b0059e1039a14"
+    sha256 cellar: :any,                 arm64_monterey: "c2aa2e6eeb0a32d97326ba67d7e34f5a14c5e961be521ab50f51743844a41e31"
+    sha256 cellar: :any,                 arm64_big_sur:  "4f2af5393a47a2bfb894c1632babc3caba61e8b9c567643abd58d8f048f3927a"
+    sha256 cellar: :any,                 monterey:       "dc0e9507afa4c44bd1de1fdc9c324a2c1b69cda80cbaeb79d06ada8f31cb808d"
+    sha256 cellar: :any,                 big_sur:        "fd56db70a681092920947b5bef4a081626d0e415c1292f477c81e8b722497084"
+    sha256 cellar: :any,                 catalina:       "82243f591855cfccad6379fccd5c61738ede5cda01a9fd6bdc891693dc50f788"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2431f3e1bbd66dfa2651be2bbae21e197d87fbe0d524ede8236606c5c76a9da5"
   end
 
   depends_on "crystal" => :build
