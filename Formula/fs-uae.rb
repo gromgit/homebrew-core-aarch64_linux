@@ -1,8 +1,8 @@
 class FsUae < Formula
   desc "Amiga emulator"
   homepage "https://fs-uae.net/"
-  url "https://fs-uae.net/files/FS-UAE/Stable/3.1.62/fs-uae-3.1.62.tar.xz"
-  sha256 "57581355fe5cb9a01c2cd2289c1dce50e42694d7105454fd9d75206fdf91c467"
+  url "https://fs-uae.net/files/FS-UAE/Stable/3.1.66/fs-uae-3.1.66.tar.xz"
+  sha256 "606e1868b500413d69bd33bb469f8fd08d6c08988801f17b7dd022f3fbe23832"
   license "GPL-2.0-or-later"
 
   livecheck do
