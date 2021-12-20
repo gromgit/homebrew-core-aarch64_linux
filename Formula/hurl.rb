@@ -6,6 +6,15 @@ class Hurl < Formula
   license "Apache-2.0"
   head "https://github.com/Orange-OpenSource/hurl.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "13bb91c14e37c6204cec38cffc6a651bdcaaad9ffaba793ec090c3ef03e81369"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4910354f6e9409404925ea409868103ca613a815086c4b34b6479dfc1e88606e"
+    sha256 cellar: :any_skip_relocation, monterey:       "fe6aad9e358ec2e5ff1719373813823e07c6536b8b4162fa8906bdc3480a11a4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9dafc5f5809350975b0961a429c91a4929ae12289a72f5e46c7c3af221be7bee"
+    sha256 cellar: :any_skip_relocation, catalina:       "088e037542a1900027f1315878aa707090e261664cf7a43f847cea5c2dff3655"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e6d9da7f2583875f9eee5f1518dc63156257557bf6e727d0fa2b260279a2a230"
+  end
+
   depends_on "python@3.10" => :build
   depends_on "rust" => :build
 
