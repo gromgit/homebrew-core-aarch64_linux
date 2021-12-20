@@ -8,13 +8,12 @@ class Xxh < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1568bf8ddbffef649c1184ab8fd1c8e1add294b15333c2eaba896bc0e3ba4390"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d9d1f7e84ff619ffc721847256a3cb6621f73d0f50e8a3a9b05b1070faadcbc4"
-    sha256 cellar: :any_skip_relocation, monterey:       "c6b94cf93576f3e0c36af9a7214ca791588e3d743560c9cd8ec9419ac460c8c9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "eef06592cabd88edf515e64b7814c6a235081522c5789557151b210990b4bb98"
-    sha256 cellar: :any_skip_relocation, catalina:       "89a119013535bc9e651ae15037cc926c54d7086acdd66bf0c2490fd189e38b72"
-    sha256 cellar: :any_skip_relocation, mojave:         "bad0b4899fb415178eb58559fe81dcf1eb4013431fede475ceea423d14d058f6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3684ca87a1a2cba24227fe9615c9a0afdc6de1e80004911d10021a790beb7b98"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "639a6aed5f3aa286bcbce5259504aa6edb3b9d1620c753b07e21c715f493fc45"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f396bc52bd61b46c139ea378b0e38dd3137a2772cfc0ed43fc98a3be59693f61"
+    sha256 cellar: :any_skip_relocation, monterey:       "1c5f2a2a841e545cf824876b8d7d1ef3ab583d168f52b2753b3ec19231a67123"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f38b8f4b5c4716c241347cbd945c0aed4e98585e04dca8bef5d55aca53268d02"
+    sha256 cellar: :any_skip_relocation, catalina:       "ed4fdb6cb0e7b4191631b7c92fd51cac5047dc5d299e7a7e09e0522e294830ad"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ce4f48ddd84c4fc23d39007230c1e3cc9734f391b8c749258fc577ec55635215"
   end
 
   depends_on "python@3.10"
