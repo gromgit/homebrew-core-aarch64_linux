@@ -24,11 +24,10 @@ class Dmd < Formula
   end
 
   bottle do
-    sha256 monterey:     "8618eddb935558875b1c57bbf023334c6767b27d7e915bcfa07f38a91e2cdc47"
-    sha256 big_sur:      "b2c95835a1295b25169b3e96eacfddc479cd24efc6d58285e42a1436c2b097ce"
-    sha256 catalina:     "ec5dec4305424b179a815a4d15a8f85591bfb73d5cc92ca34b4ada0f05c34743"
-    sha256 mojave:       "82a178b02a4001d6a7f0e466d33bc6479be456b27bd29b124973164a164fde5f"
-    sha256 x86_64_linux: "1e65207b55d3c04987dd3679145db28e5952aa6cb2cc5bbf8aa227eb3cfd7b5a"
+    sha256 monterey:     "457cb28e9d385206839caaeb58947c48e4d0464c929ac95d0629e2bb36541d74"
+    sha256 big_sur:      "ed58ff99df165dcc5966439e6a995dd466ffefb33d5abbc78d44834088fb43ae"
+    sha256 catalina:     "0e178214333d26fd2bf1b7ee694f73addea32df304464c962ed73c4670e9240e"
+    sha256 x86_64_linux: "002fdd7680c3ed0a2dc12276df79c3a08216cb7ebcc3b949986c36f210810757"
   end
 
   head do
