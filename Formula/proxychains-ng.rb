@@ -7,15 +7,12 @@ class ProxychainsNg < Formula
   head "https://github.com/rofl0r/proxychains-ng.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "3d9160bad88b034c0cafa375ce9c8b0f1ad727ca13952ce6622c85e23b3c28c9"
-    sha256 arm64_big_sur:  "389c32c6e5a4a5226812a2b0136ec040f909580b144140594445327e2fc2ebbf"
-    sha256 monterey:       "63b4f0288b83e6b0cf9ab1a340d5196606c54bca403eaf29930cc315e7d2929b"
-    sha256 big_sur:        "168ca0ce8129eb8739bebf9ddea8cbc7ca594a18ec96c3d70a5e9a5868e3b7d8"
-    sha256 catalina:       "1b8b781209633d9c4c45249b78865311e9853c36ba8522146a95cf4793d166b1"
-    sha256 mojave:         "4b41340fc2a68c579b3ab30affbe82f9be545537f727507d19977b1b67193a96"
-    sha256 high_sierra:    "42ba51b1578ff901987212d74e8b3a83ec6313f5ccfe3d554a9b32766f9b65c4"
-    sha256 sierra:         "4c8e8c69bd10529a33b3f70e1a55504f79e3358fe834d521c95adafb2f4eea4a"
-    sha256 x86_64_linux:   "017e3132cf30e9d01e736d96e17201671cbf7bc3a802a7c842e663b36082714d"
+    sha256 arm64_monterey: "99ceac372f00a1ce0834d400e58a2f22719bbd0c6cf97c1e522ca978cd8dc1bc"
+    sha256 arm64_big_sur:  "6a8e236352cf019230c9c65845b76263018b25f1a05317752eab45b2055b2140"
+    sha256 monterey:       "c1c7e76c78d7f5e0917a17605caf2f4109491df05322faa7a056d65f72a928cd"
+    sha256 big_sur:        "1672e57460c43b61c1b40b18db1015a9a2e4156d202687bb8480b76d1d987df0"
+    sha256 catalina:       "afdbb2881164696d82c98f03cb24f299d06cd1cd8bc42ae2e7554215f2576a55"
+    sha256 x86_64_linux:   "999f3b69f901f7f5d1604e28193a0fd585f4e4e92346e1876c25313a6c1202b8"
   end
 
   # Fix regression in detecting linker options, resulting in build failure for v4.15
