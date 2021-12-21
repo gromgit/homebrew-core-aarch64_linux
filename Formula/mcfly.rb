@@ -7,12 +7,12 @@ class Mcfly < Formula
   head "https://github.com/cantino/mcfly.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "87a80331cc0bcd4f12b120d4a3b56f4fbdb38a0b0ade2c53567160fda52121cd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d89ec399d5c6f2e421e155aadf6371c1f48360095ddd0f779b0984ad2ac1a2af"
-    sha256 cellar: :any_skip_relocation, monterey:       "d796e0e4e3c657f9fd1e70be46a2aced985d1f5ec28137b469d1982246a6af38"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bed3aa51e4faa9aac608055ab6bbd7116a9456c5336ad946f5dc0217cdd0a01d"
-    sha256 cellar: :any_skip_relocation, catalina:       "a94e9dfd4d32838fdf29fab47a4cd9d27ff084940d7ffe93f24d01df612806ef"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "63ebce6d0c84c0488fd517cbe49d4a080a249d3361800542a4fe8041d48fd8c1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b75a6c4b6186088ec112ea402745b5b3f98c0403db119b3bdb3a44f86efe205a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a9109df57981d90223868a1c3339d2202c312f463dc100a4d8732621a21dfa84"
+    sha256 cellar: :any_skip_relocation, monterey:       "d166de1dde689c2df29035667e101f0139eb23a59dce69a0ceca02fb8fee06a9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4f2a08a6e2bdb25ff33cc29eaaa46218bab4604d4e0b1ed89576f864010946a1"
+    sha256 cellar: :any_skip_relocation, catalina:       "7fb0ba37f9ea3264afa5d288880b803185683fefe58d6f0eecccf9261024bede"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0a39f923facb47f83f2045532e0555fc554bd9f21f1bd1b2c5bf4407fdc89b67"
   end
 
   depends_on "rust" => :build
