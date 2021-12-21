@@ -8,13 +8,12 @@ class Neko < Formula
   head "https://github.com/HaxeFoundation/neko.git", branch: "master"
 
   bottle do
-    sha256                               arm64_monterey: "b39a3edb01683b6c22fbd00a87c428d05b3a57be7cefa30e8a4ac7929120e2c9"
-    sha256                               arm64_big_sur:  "db3b62ea32c9b528423997eb79bab7b96463f3074e5452499a1ea87f742129f0"
-    sha256                               monterey:       "2a46e1f22b62c7d0f7f714d22b2d6f11a56925907dd8af05b6be0d4aaf435466"
-    sha256                               big_sur:        "ca0a54255e775f29b6867eda77f2ff115424c77293755847eb8edf4a8d5bb142"
-    sha256                               catalina:       "f1adf8d28ac342d233f018c7263c66072969e97ff4efd7c1e0645b80083332dd"
-    sha256                               mojave:         "49ecf3a704be8b5451af12ce5ccb8bf921141e3243ac525794a61e22c987f18e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "935a76e8f012f4f1522bfaf901cf85bddf875bd22be300e220d59c5bd3ef18c5"
+    sha256                               arm64_monterey: "5c98fefc1af0c5b4391c48c2c28957f3b11e635b4f6fdf2b8a274a9b3d71c6fc"
+    sha256                               arm64_big_sur:  "7dc2386e227172ce35a3c01583bcac98793e3477f23ac0dd764514fb1ad8126d"
+    sha256                               monterey:       "25484b429d41aba93aed15be888c59bcf33247936c2fc0bfc4aa657324aaee7e"
+    sha256                               big_sur:        "c58be5fa39965347a20657f83e980e6a8b92c055b47e2425c1cd4ee228d76f9b"
+    sha256                               catalina:       "a6d4dfa77a8de46e49eb8cad58fd2423f6e0c57fc6788941bef81ea9abc02ad2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6b85cdf1112098a5bb933676765efd29c446cf58a994f02e914b113681e84009"
   end
 
   depends_on "cmake" => :build
