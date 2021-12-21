@@ -13,13 +13,12 @@ class BoostBuild < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6fb227d41528da0ad8b768ac8309fca2bccaf7cd0ccca5f88f065e483ef9058a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e73b2881104b13fef6c2c6a0fff30bd2bf41ff998936850a0d9cbc7cac5b86b1"
-    sha256 cellar: :any_skip_relocation, monterey:       "b6464291fef11c710998a570f88eaba5ed1b66000336ef975b6be24c858a7795"
-    sha256 cellar: :any_skip_relocation, big_sur:        "651353d33f97fa5183c9acde956f7cfd67e36f288a4a35afaf907838e69dca36"
-    sha256 cellar: :any_skip_relocation, catalina:       "bc8909293558dd1d3c55a9d2d5cdfa155e63b3540da63a719a33fa872f371921"
-    sha256 cellar: :any_skip_relocation, mojave:         "26da04379b8dd9506778273f12277eb00b257653c11502d8ff50d3218587cc10"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9119799f6a153292e094509fdce67cb553b83cb8f32db717324b7a529cf99939"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "142474f896f7a560ee534c85c8a8eff41f9a4b42cd973155e4810b838876e3a0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "de245309a18531b9cc7a6e2b08645db3906afcab9e10dfac32794135943a0e03"
+    sha256 cellar: :any_skip_relocation, monterey:       "054792cb57117e2fb2c68ee64e8dbcef7fd7a6f40e927569926b90ebf067ab8d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f9b7815f9ffdce7af7e8c6e960b59107180f8e1c382eec9fe910e99b2484a9e9"
+    sha256 cellar: :any_skip_relocation, catalina:       "37fd5254f99dfb48577ace484d9be2f69dc67655119842fc32d34179cba41c97"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c8ed1bbc9683ecb2b9fd7b29cfaae6bc84cf699c7a487c18a293280865f2d271"
   end
 
   conflicts_with "b2-tools", because: "both install `b2` binaries"
