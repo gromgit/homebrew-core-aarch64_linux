@@ -7,12 +7,12 @@ class Goplus < Formula
   head "https://github.com/goplus/gop.git", branch: "main"
 
   bottle do
-    sha256 arm64_monterey: "182857f41722e0223f0758e141d833c7a4834caf5f219ed9c0ab7805b9b1f94a"
-    sha256 arm64_big_sur:  "da84a32df9bb0cc93a92f4bb51f0c62f9a1cbd5924ca2d52064f5952763bcb7b"
-    sha256 monterey:       "b8ca30a9f894b819e0fe1ca3d1e47735b060a5998de720531d2dd09cb1260f7d"
-    sha256 big_sur:        "46d2e38a02ad048973c079bfd558496b90c421c95e2b6eb1ca7c5ebd04c8a47b"
-    sha256 catalina:       "c4bb661a6e32d70532ef679a041d38a02e8e9459c7d99c925b99d46e6b553576"
-    sha256 x86_64_linux:   "85a68dcb21af69102ea244409e328fec517b7638f74f1241c1132d3bb3460b81"
+    sha256 arm64_monterey: "76d275b7edf313f7722f3ddb09baae84f93210865d7ec11bd5415474cf28d130"
+    sha256 arm64_big_sur:  "6c2590effa547a2873d7b4c32525d8744c4eadd37a357b283316b9d1d2ea5528"
+    sha256 monterey:       "40314b64ccb6e576d242c7d0087883f29d1535172d633d919d6a35954b22d4e7"
+    sha256 big_sur:        "cf964aee4566b404f9746f0a8ae5b39252dbe27307f782d873c34682d985a57f"
+    sha256 catalina:       "f8aa83924359bd6583f25fc15444dd5c49e956621b3cb19e316a2875eabd0c43"
+    sha256 x86_64_linux:   "8b5b512b8a61821ff653cbe4ede1f5c699ece7f1e9cf641b475fb69aef9fd23c"
   end
 
   depends_on "go"
