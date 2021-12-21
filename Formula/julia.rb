@@ -8,10 +8,10 @@ class Julia < Formula
   head "https://github.com/JuliaLang/julia.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 monterey:     "63b4f101a3d62f67611a1a8a659ad99e3fe5a8661205e3782e44629a7be4590b"
-    sha256 cellar: :any,                 big_sur:      "acaa7396fd0225d69b5e3f9ac4d5c55c6b533df1d3acc83a1cbdd7f1ab6d0db9"
-    sha256 cellar: :any,                 catalina:     "4591e7f2de89f6020a489fef1aac9b5e64da5085a0e9208cebde3d5a2d7f1fc5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "88dd58acd4270c56f1c92efe59e30725d7b92ee622470a0865438708ea5faaa2"
+    sha256 cellar: :any,                 monterey:     "165cc7a2b4f9af7cd9ccdeddece98ab652940a696812c1dc2885ffa4999b987c"
+    sha256 cellar: :any,                 big_sur:      "db5a20cacadb495f3f3f6413b808ca0f87de752de8b336fd3b1c3d24c99dbac8"
+    sha256 cellar: :any,                 catalina:     "0a1edede0916e05044d77b4b524fcbac210794a4ebfa7dc8f751da4a0487225f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "8f2370bcfa1c77c7dbe82779224aa5bceb061de74bf41e7765b84a42789d27eb"
   end
 
   # Requires the M1 fork of GCC to build
