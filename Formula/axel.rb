@@ -7,13 +7,12 @@ class Axel < Formula
   head "https://github.com/eribertomota/axel.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "79fd0691a6cc82c1b9cb54a016532154890a8f491c0aedc1bae7f241d73d3680"
-    sha256 cellar: :any, arm64_big_sur:  "43a36bca363fd2a2700dbaca686de5d92793ae79b1813e26e6ba1965e9d0acc7"
-    sha256 cellar: :any, monterey:       "27626cb6a5926e25177e6e2e0f7751e322e1fd1297c4d46c40216cf6b85a3164"
-    sha256 cellar: :any, big_sur:        "94b9f93614705dab7c202df271f9bb1bcd30b4e1170f4ab4b160378e8e5c3a2f"
-    sha256 cellar: :any, catalina:       "32832dd93a31589c7f98e510a2edc54e918ee6bab8eab18f4f4a1b953030f3f1"
-    sha256 cellar: :any, mojave:         "2df5f78ceaccbdede61b29a191c514a5b86dfb3ab1fd5057506377299d9f8c65"
-    sha256               x86_64_linux:   "62718ba4c83d09d0c5b04150c9684aace1e805601b8f58da5b13db32123d8910"
+    sha256 cellar: :any, arm64_monterey: "483732a5fda41e8592d78ce2d4df86362e60f61bbeb41081beaf382f211edea3"
+    sha256 cellar: :any, arm64_big_sur:  "8eeafff7031764fcc18d94121c6889a7bc3224ecf3f20225ef5cd96f09c6bfb3"
+    sha256 cellar: :any, monterey:       "c5e9ea169ba1985bb10ce39e1c11237bbe4d2c9a1f14b62f38756dcb87456cb9"
+    sha256 cellar: :any, big_sur:        "7ce859bfaebd9429851f7b8fcdaf8983c542c91bbcaec2e2d789e8c0e496306f"
+    sha256 cellar: :any, catalina:       "a9938c2a4753dcc84631739c7ddba105933ab110995b296c7e4a6da2bd9207fc"
+    sha256               x86_64_linux:   "145f3f4fec5782251254a8dd1adbd989118d1be0fe3d4808dce962a586f68119"
   end
 
   depends_on "autoconf" => :build
