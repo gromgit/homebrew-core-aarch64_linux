@@ -7,10 +7,13 @@ class Dungeon < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any, monterey: "0006884c95751a0b5075a416e73d7082c5c7d458df79eac1f486aecd42aab6ec"
-    sha256 cellar: :any, big_sur:  "23739a563a06cb0d42b43fd034b423cd9218ec99919c4ac1bb0869d71f1bf89a"
-    sha256 cellar: :any, catalina: "aa2177395fa3363eb9bc0de0de2da7d93ac3b78b5ce86c14daff6f19c69a9e4f"
-    sha256 cellar: :any, mojave:   "f5dd94642da0883ada9e1ac9f93e91a0c47b02b48226d2318be67028b97402f9"
+    rebuild 1
+    sha256                               arm64_monterey: "7b1e99eb8093ed7abf3f8675d73f3a2037a3f290a12940d6075708f161ea86c5"
+    sha256                               arm64_big_sur:  "7486b92b9095713ce8b13ffd23975859f87e0aabd41a25d54d7b888e76229eb9"
+    sha256 cellar: :any,                 monterey:       "453e0f5f0226b78ff6ed0d07181b829839a72100cc06f3f061660a7844c8fe22"
+    sha256 cellar: :any,                 big_sur:        "0abe715ad699601ac7c7452ae0cf5919db535f8402e01e8ed9de9e4ec18c7622"
+    sha256 cellar: :any,                 catalina:       "c6d5bc787bba88658003a4e7bd1fd56c0fbdf485468dd30f41566f06fba56a64"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ff530460a2ad3a514894694f78a30e60b2f3683b28f35dd4b61feb055a8343f7"
   end
 
   depends_on "gcc" # for gfortran
