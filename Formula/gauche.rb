@@ -13,13 +13,12 @@ class Gauche < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "f45d98a92e9ccf661db53a84fd768580848fa8e93733ca2934b426058b0a9589"
-    sha256 arm64_big_sur:  "0fac8847033124e7ca5108de62cb3d08a573d8dc33715c911af85a668c50dfef"
-    sha256 monterey:       "3173cffb21e9c6929a09fe5623b919241af7c9c6c1d5c606460a5f2dc3540f06"
-    sha256 big_sur:        "6edbe6e3edd503033d3feb3ff8a0bd1cfb4c16abbfa15328e2ccdd309656b017"
-    sha256 catalina:       "dc953fd8f622b64409d2dc6808d5cfd3828c3a36e5fd4fdbccde6db8529800e1"
-    sha256 mojave:         "06bcbbd5523d45e098d3e9f9c3c59d8e4858d66ad63f1cdb08bba8a804a08114"
-    sha256 x86_64_linux:   "6078ffcd2dea9f757643dec70b13ac66536c0dfd7f96a8ae1e86b0170c5aea53"
+    sha256 arm64_monterey: "0eb649b466977e44393c3eb90cef8881d47e5f8614546d1a5658be2eb32096fb"
+    sha256 arm64_big_sur:  "bb12debe2a6d30c6d97f14641600aacf0220cf3f50fcf9437dec29c8b6e3b9c8"
+    sha256 monterey:       "664e1c541fc7cf1d2bc0692d09e116f4986350f53850430e975328b3b7129ece"
+    sha256 big_sur:        "b1d8f0dd8a2454b25745e91c5ead4bc228597bf1efed91d0dc92580a3e953827"
+    sha256 catalina:       "9a1f381af1d275946aee6655b14387c547f20d82f5ea92f5e32221221d0f0647"
+    sha256 x86_64_linux:   "45f73c386af54c74febe68a0c0e022eb534e6d521ff8190789cd01cd185b07ab"
   end
 
   depends_on "mbedtls@2"
