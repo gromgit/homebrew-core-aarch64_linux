@@ -7,12 +7,12 @@ class Libpulsar < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e295fc24519a70da5840225d1c180cd66b95f31afc276cf6c6dee35a6eb3b470"
-    sha256 cellar: :any,                 arm64_big_sur:  "a2f24969d81ac812665dc753de8c6d260ee1f5c2af9d9071e598a2f7236b49a0"
-    sha256 cellar: :any,                 monterey:       "b0932dccc80943241142c38e9469aa2c80a6c270f00475f0c17443e134e08aac"
-    sha256 cellar: :any,                 big_sur:        "b3523ce63550f6ec38549ba9a05d50339144247c9d53c6c3dd48ac7a92794bc5"
-    sha256 cellar: :any,                 catalina:       "38f4cb6e64445494c8eb41f9b86b88eebb70a50df9d76efe2afe50297070d891"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "36d2b81115963ffa50d379ff5af267912910d0fdc781ab1e0b63b88ec66337eb"
+    sha256 cellar: :any,                 arm64_monterey: "560f3649ed47b674cee37b48f578f594581a67b22d8da5c8c50acb4a74314166"
+    sha256 cellar: :any,                 arm64_big_sur:  "9bf2c9af3f6b3374f0e4efd8aa4598cbf5d8fc5a3c0bd2a7762de0fe4515f20b"
+    sha256 cellar: :any,                 monterey:       "2c22c0156a621b7348026420a996bc4878627a922f14a6c64c050ce6ae9f7418"
+    sha256 cellar: :any,                 big_sur:        "56dd6a3ca53194b5ec8b787b9ff29e0a0a4f8af3ffc4b642773d318c8cd48959"
+    sha256 cellar: :any,                 catalina:       "75dbc70d58a0b5ee8af17e93a6ddb6459902680574527aeac4b03ed3fd4c3332"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "59eab1b87d05d294489dc87ea61a9528778a877687197f2050ea5bd37f0ccd0e"
   end
 
   depends_on "cmake" => :build
