@@ -2,13 +2,12 @@ class Zig < Formula
   desc "Programming language designed for robustness, optimality, and clarity"
   homepage "https://ziglang.org/"
   license "MIT"
-  revision 1
 
   stable do
-    url "https://ziglang.org/download/0.8.1/zig-0.8.1.tar.xz"
-    sha256 "8c428e14a0a89cb7a15a6768424a37442292858cdb695e2eb503fa3c7bf47f1a"
+    url "https://ziglang.org/download/0.9.0/zig-0.9.0.tar.xz"
+    sha256 "cd1be83b12f8269cc5965e59877b49fdd8fa638efb6995ac61eb4cea36a2e381"
 
-    depends_on "llvm@12"
+    depends_on "llvm"
   end
 
   bottle do
@@ -27,6 +26,8 @@ class Zig < Formula
 
   depends_on "cmake" => :build
 
+  fails_with gcc: "5" # LLVM is built with GCC
+
   def install
     system "cmake", ".", *std_cmake_args, "-DZIG_STATIC_LLVM=ON"
     system "make", "install"
@@ -43,6 +44,9 @@ class Zig < Formula
     system "#{bin}/zig", "build-exe", "hello.zig"
     assert_equal "Hello, world!", shell_output("./hello")
 
+    # error: 'TARGET_OS_IPHONE' is not defined, evaluates to 0
+    # https://github.com/ziglang/zig/issues/10377
+    ENV.delete "CPATH"
     (testpath/"hello.c").write <<~EOS
       #include <stdio.h>
       int main() {
