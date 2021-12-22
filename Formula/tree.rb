@@ -1,8 +1,8 @@
 class Tree < Formula
   desc "Display directories as trees (with optional color/HTML output)"
   homepage "http://mama.indstate.edu/users/ice/tree/"
-  url "https://deb.debian.org/debian/pool/main/t/tree/tree_1.8.0.orig.tar.gz"
-  sha256 "715d5d4b434321ce74706d0dd067505bb60c5ea83b5f0b3655dae40aa6f9b7c2"
+  url "http://mama.indstate.edu/users/ice/tree/src/tree-2.0.0.tgz"
+  sha256 "782cd73179f65cfca7f29326f1511306e49e9b11d5b861daa57e13fd7262889f"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -24,7 +24,7 @@ class Tree < Formula
 
   def install
     ENV.append "CFLAGS", "-fomit-frame-pointer"
-    objs = "tree.o unix.o html.o xml.o json.o hash.o color.o file.o strverscmp.o"
+    objs = "tree.o list.o hash.o color.o file.o filter.o info.o unix.o xml.o json.o html.o strverscmp.o"
 
     system "make", "prefix=#{prefix}",
                    "MANDIR=#{man1}",
