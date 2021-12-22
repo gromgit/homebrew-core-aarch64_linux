@@ -7,13 +7,12 @@ class OsmPbf < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "6e00971648b567f59830ad7c3aea99aea9ca4df72a534a5d2bcc5ed6a4b06962"
-    sha256 cellar: :any,                 arm64_big_sur:  "45bb201c1bf6e6b4917b61c1cf350d8468f64d5759ed679ab9a0d9827d6d4747"
-    sha256 cellar: :any,                 monterey:       "d88403c2a959f4fecf3c9617ea96ce3c392d42db2a52c3973ae49cb5277cbff0"
-    sha256 cellar: :any,                 big_sur:        "f0dd295bba1bb4671d2dd4621c0781e1919f1920625a048c71353ed3e077c748"
-    sha256 cellar: :any,                 catalina:       "d8ad7c5004b502d94d8e0e2f57376075354844261bd707af422d8fea2923f3e5"
-    sha256 cellar: :any,                 mojave:         "5936f90c3c9c6a7ed4a673acb4bf621b213aca053912aff1a3b85f8129879fd4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a67a2803ba2744abbcafcc421f1a568a1956f5cd77289c1e2aba050cca6f2436"
+    sha256 cellar: :any,                 arm64_monterey: "7c54ae6cece29667791513344f8ca1f07412dbf7c0030eb000c835864dda96b7"
+    sha256 cellar: :any,                 arm64_big_sur:  "91108e1f36a68528f39a4c90a15b21de280f25e1846b7b7d2014e056d8373308"
+    sha256 cellar: :any,                 monterey:       "df65cb7860d85aaf7f2b0273cd4bd36438440120e275580c72cb118051bf63ee"
+    sha256 cellar: :any,                 big_sur:        "3e563c0635212cdbad3330addbbbb32e054ccb64267d8dc28b2c79ce223d1c2a"
+    sha256 cellar: :any,                 catalina:       "4e43efc37899fb2ea13d831f24ac192fec230a9265e25337fbbffdb4c5196914"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "72f304c07b272e036f0aea9601c22d1e06cb44376bebb4d26cdefdf994c1d429"
   end
 
   depends_on "cmake" => :build
