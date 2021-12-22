@@ -12,12 +12,12 @@ class AnycableGo < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b726157cdfbd5ec8a52f64a79f31d56b17087102e0aef4e14a1c68ab102171e8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9ea4de387eaae1a0731e3e5df76455ddd027e76f5cd8d9d313b6329622821c6c"
-    sha256 cellar: :any_skip_relocation, monterey:       "107efe7cb0d3ed62a8295bb28602a4bd6e48fc8d42e37a84c3c128abb9a35d13"
-    sha256 cellar: :any_skip_relocation, big_sur:        "91d22bec92d9c266febeb88cb4729922444917d560d96aadd9b706091e3decf2"
-    sha256 cellar: :any_skip_relocation, catalina:       "6764ce391e0e78cd115890d09e59021de2a3aae9a71902eed4d730f68ecb2b8c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "730c420e2b9805d6fe56873c6cd1c3bd8552a139783dabf56a685c736cb04a3a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "dbb6bea87e378580ae10593bdfbf55b4a488348e75d29ae354461bacd7245ded"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ed7c9befcb24175ed31dced0fb7cbfc24c6afc8b878f236a9a84819ef259eb98"
+    sha256 cellar: :any_skip_relocation, monterey:       "fd109c24e5407068d5352fbd8ac7643a62dcba47a4c1f44b215f880a42c680ea"
+    sha256 cellar: :any_skip_relocation, big_sur:        "73fbdd129544f14df687c4f77d60d8e7ee66c008526f2e184065eeca18215624"
+    sha256 cellar: :any_skip_relocation, catalina:       "67acf8def8551f823001dc792ccf81fa145179cd526699d3783c85a7cbbe9320"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "335920268709ce85f3101047512f67c320415783913d9de8eb3c735bbba83bd9"
   end
 
   depends_on "go" => :build
