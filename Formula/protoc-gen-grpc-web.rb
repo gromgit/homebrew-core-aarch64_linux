@@ -9,13 +9,12 @@ class ProtocGenGrpcWeb < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "cd5787730c11925a5631829a46ea8e691f3b60d8260625f8e5ce4f492fc3a61f"
-    sha256 cellar: :any,                 arm64_big_sur:  "2da48dc258aef815fe598868ff75acf4f123b232aace297eaaf5fda0d1b564f0"
-    sha256 cellar: :any,                 monterey:       "ba88fc45253b9d7a1e126f5f96ce3e016b2ec62f109391bbd43f43ea4914a835"
-    sha256 cellar: :any,                 big_sur:        "d4938bcd3c7efd330b9d13be4e3e7db2525b4bec8571e8d8b843c6c6d3fd40af"
-    sha256 cellar: :any,                 catalina:       "ec20d43ded4c5b202a4d245e239d4cc1d8fc50aad459534f5e882fb9cf184119"
-    sha256 cellar: :any,                 mojave:         "e234dcb68737d09bd4e73271e1efb8284078bd60770fc6711319be342e966672"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1a13ee2791266209e25e607fd578303cd5ccc30d7da5156f1f6573ef34c20fa6"
+    sha256 cellar: :any,                 arm64_monterey: "694f70b69029f55a659d0981473b025467dc9f88ec84195f6b88d6ca2d67c3cf"
+    sha256 cellar: :any,                 arm64_big_sur:  "b8c378b553e2ac95659369ada0af31198ef30e72391c3ac867faa999be965ede"
+    sha256 cellar: :any,                 monterey:       "25779d4c29e4c1f8299db7ada86e4d568cd8d6a5ce8bbce2956d1f6a2785e347"
+    sha256 cellar: :any,                 big_sur:        "f4ffae6839a5a559e198d61c79bc567a714fa0fc884f0f6f031ebd9c78c83115"
+    sha256 cellar: :any,                 catalina:       "7480b35d0d8e6e280da6824c70a8e0c58308a51511f4010fdf2c165f1d8e14ed"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ae7d825f02135ab092f592229bea5a3d0dff5ae02374bebb3ff6920efcd9b7f0"
   end
 
   depends_on "cmake" => :build
