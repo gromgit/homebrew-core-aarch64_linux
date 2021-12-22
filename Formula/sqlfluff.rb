@@ -7,6 +7,15 @@ class Sqlfluff < Formula
   sha256 "e48db0e1f7775c4609aa843cc8fa7fbc4a42d38fef640a78cc33d335ad385c62"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b840e1df11871207838a16a9b0175d6a54344a6a92c7edfcef3430b3f5455f7a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6744f48b026bed70220087c8fa4d6c2feeb98d4919d5471f0311e7941d5442f5"
+    sha256 cellar: :any_skip_relocation, monterey:       "59566f41257209b4f0f561f2c8004b025706784782aecc5c60181c562bc40f8f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "91cfc601b02c262f1f2eec5214ff7c7e2e25641be59367dffd5a5786b7ae4afa"
+    sha256 cellar: :any_skip_relocation, catalina:       "3aa7795d3dca8901b07f3f638d47f1b53e9438196edae12227f9efe2e8650c71"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cf8d7b842325bf97c3b33685b5e65cced5b9ccabfb16880217c4186988fee0ec"
+  end
+
   depends_on "python@3.10"
 
   resource "appdirs" do
