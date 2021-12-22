@@ -11,13 +11,12 @@ class ProtocGenGoGrpc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9df609a95b094515a048eba3d1621d6c15a156a72b8cecf94b06caf1df9f46a5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ad604447808fa88d386c5864726985220ec03a5cb7dd17f2c8deb1de3b1ba86e"
-    sha256 cellar: :any_skip_relocation, monterey:       "6e8af04c3d408dd6312792a3f4eed2ce511846debbe83c4145b644e5d283b2da"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c288d0096bfeff80418f468a0a1c92aaa43dd31f62a3e2f37f14ad5577ebbcc8"
-    sha256 cellar: :any_skip_relocation, catalina:       "c288d0096bfeff80418f468a0a1c92aaa43dd31f62a3e2f37f14ad5577ebbcc8"
-    sha256 cellar: :any_skip_relocation, mojave:         "c288d0096bfeff80418f468a0a1c92aaa43dd31f62a3e2f37f14ad5577ebbcc8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dd8411b9523d4ece4a2ce08e2be463ec09b2873f50a5c46744420962a0a2f8fb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cd352d68303c62b39a576046b4a68684b9fcf2785a4cf7fb7da623366a5c0c9c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cd352d68303c62b39a576046b4a68684b9fcf2785a4cf7fb7da623366a5c0c9c"
+    sha256 cellar: :any_skip_relocation, monterey:       "750b1205aabb9ff53f834fdb0927fe001e7a96c7a069ada4a78d5cef92103e45"
+    sha256 cellar: :any_skip_relocation, big_sur:        "750b1205aabb9ff53f834fdb0927fe001e7a96c7a069ada4a78d5cef92103e45"
+    sha256 cellar: :any_skip_relocation, catalina:       "750b1205aabb9ff53f834fdb0927fe001e7a96c7a069ada4a78d5cef92103e45"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5c83e40e7f5813fbe2b7e8468394e423f0ca814c219d70c73054f48ac4f642d4"
   end
 
   depends_on "go" => :build
