@@ -5,6 +5,15 @@ class EtcdCppApiv3 < Formula
   sha256 "f74607eebffce8391b5355ed7d12d46f6627f2882687cd0f5574c90b275f77fd"
   license "BSD-3-Clause"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "2ec5ea68f63edb6f091d38dd0b19834b79d5c1c20648486b7385928b24070e29"
+    sha256 cellar: :any,                 arm64_big_sur:  "b33155872a0e15d8ee6ed9282abf274f857de12b5f4f7e300a6cc25f7bd6ce8e"
+    sha256 cellar: :any,                 monterey:       "d50fbcb3c8461af3e5bf7a137db856804db2592fc9d8079281876169fd5df157"
+    sha256 cellar: :any,                 big_sur:        "c9ced0f21e91b8e3be9677a259cfb5081bd5c96bc9421e0a6d27c8dc88a96615"
+    sha256 cellar: :any,                 catalina:       "2d5bb34215ba9174c1c33262bf860d0aec8a479e4186e873c90721dbca74f734"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7ac834a3f623e9dbd3896069e3cf84051ecf42732aed75232a12420e7311faba"
+  end
+
   depends_on "cmake" => :build
   depends_on "etcd" => :test
 
