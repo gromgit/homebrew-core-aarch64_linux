@@ -12,14 +12,12 @@ class Jack < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 arm64_monterey: "2741e332d2f3c3bf82d78e724cc33f029c20e60f2f3aef9a22255f7ceb356951"
-    sha256 arm64_big_sur:  "8460ec59472c5dc1d7f1196dcb68578539054cfb597390793f91c99eb0b9596a"
-    sha256 monterey:       "51cb7f7e929c43eaa1f6db9fac1ff1b6acec8ca074eb83b276f1ac70bfdf3f7e"
-    sha256 big_sur:        "939c93be6d821e73abe360c69c57b0786086b03bcf95233a0ef1836e18c472f7"
-    sha256 catalina:       "fbec3032a541f3e9ce3b327994d4bd305f3f849d1cb3831ec460b2bd2e029c08"
-    sha256 mojave:         "b2974079582c370b9056ac2f98308cb321dc767ac3f67229e891e1de6bc86c8f"
-    sha256 x86_64_linux:   "2a209c4eaf03a6bb1ca47b15acb8f18cbe3fe4d395859f83e31df688bec0b891"
+    sha256 arm64_monterey: "3e003f8a5b0737f6e02c603ca2bcbd4f17ed7640b1e54840527f0b7e370c10e7"
+    sha256 arm64_big_sur:  "987152c55ae1bd6ecbe4783d74f6e0ad10897e4fe1122ba49bc7e3931dcb5c3f"
+    sha256 monterey:       "11cc08d274a8cef42b346cec82514bfa24b207160bf875d7937a632faddd0eda"
+    sha256 big_sur:        "0d00463dc1e48a853b39cc49416544af34049aff6f34963379588f72d5d58968"
+    sha256 catalina:       "3ae34c7eb978f5a9eae20c4dc02668f0ada755cc9ead3b37ef14edb203903e19"
+    sha256 x86_64_linux:   "d6ba9e708d13f9261b09ddfc26b8250147225cec8f01ae814eaa525efaeb5749"
   end
 
   depends_on "autoconf" => :build
