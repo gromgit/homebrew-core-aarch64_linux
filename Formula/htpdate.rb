@@ -11,12 +11,12 @@ class Htpdate < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "78c68887a6ac97efa12172c58829b9c1301d5c9a969e3baa9b989e98fcad14b5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "22e54986276ba5c5ae9a50b9abc4fff16d88c8337e999c93be624a8e8eb8929f"
-    sha256 cellar: :any_skip_relocation, monterey:       "46ff5d789f918121962cb7cfcac5a6c04bb935a968964e07d71d7a55d4eb47ce"
-    sha256 cellar: :any_skip_relocation, big_sur:        "591a9e0f427f5a4eb8aa453bc0205be281a76cb6e73567357b397a7b1940a5aa"
-    sha256 cellar: :any_skip_relocation, catalina:       "67277cc508c0f6eb530202145c5c11a1314c361c3374f9bd1193d134f36fbeac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ef386106d8bfb5971790ab2e9266873cedf31ffa21fb80e6c48c531319df15e6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "16089cd196df79f5db3703d6e32069a804b84f771fee8f01f967f1016faa7f4b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7b4ad019f0bbb8fc27660db35d8624e74fcf674eae974f0f29b583a8c22a0933"
+    sha256 cellar: :any_skip_relocation, monterey:       "44d98742235f59acdb4a317d6182b8f78c95ebbc3d0bea50cfa0b4923ffd203f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1e30049fa3866261ee2d20e41988e9db9ec50571be7cfd1ace56d231219fde77"
+    sha256 cellar: :any_skip_relocation, catalina:       "3fe2ec701b229874425e2794221fa7740bcbd3dec4f988b5469d067db9f102ca"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e8f689a5fc8281aded19911218b02501c17ce75df1eae2ca2a98c09fa77b2cc0"
   end
 
   depends_on macos: :high_sierra # needs <sys/timex.h>
