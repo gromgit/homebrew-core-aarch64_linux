@@ -3,8 +3,8 @@ class Clarinet < Formula
   homepage "https://github.com/hirosystems/clarinet"
   # pull from git tag to get submodules
   url "https://github.com/hirosystems/clarinet.git",
-      tag:      "v0.20.0",
-      revision: "6ff00f8df2d49122c95c2ba0d93a303a663b59c1"
+      tag:      "v0.21.0",
+      revision: "e966edbfb1ce025a9d43c6270f02f32a4d850026"
   license "GPL-3.0-only"
   head "https://github.com/hirosystems/clarinet.git", branch: "main"
 
@@ -34,7 +34,7 @@ class Clarinet < Formula
   end
 
   test do
-    system bin/"clarinet", "new", "test-project"
+    pipe_output("#{bin}/clarinet new test-project", "n\n")
     assert_match "name = \"test-project\"", (testpath/"test-project/Clarinet.toml").read
     system bin/"clarinet", "check", "--manifest-path", "test-project/Clarinet.toml"
   end
