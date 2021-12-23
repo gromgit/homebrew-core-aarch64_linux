@@ -11,17 +11,12 @@ class Lout < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "b5c17e1a84234c943468eac4a3ba86051231fdd72abf8761e9206182f8a3303a"
-    sha256 arm64_big_sur:  "3164a9e3f8d721f43d2596518c15493ee8d0ab9817f799c2cbcb72f9ca3e5a67"
-    sha256 monterey:       "df5fe36cb680e0575d183d0d7bf6c94e17e74b696507fbb70839d0607d839812"
-    sha256 big_sur:        "744551b3b7479af62015ceb2f54736ea4f4c68f4c87862a0fb0af62c731ed454"
-    sha256 catalina:       "67aec968bd2e1957d7b4fe7a2ae201b701ef45dd98c9766ffbc7a0ae3ca1af70"
-    sha256 mojave:         "2f69e0d4097fbf53f05855b5eeb2def0efcaf08c3a5b2487b1fa041031c2eacc"
-    sha256 high_sierra:    "2de1b1b7526f7427b8a57b6239a5a8c199ee05365ead7ed8d722a9e7e3123a0e"
-    sha256 sierra:         "2cfc68ddba21e6f485a4a57df9e810b6996d5364374c66e77b06d41ce230f060"
-    sha256 el_capitan:     "2fbc90ffc3f12312dc11e31996ba94da3b8a4ba1c55f33ca60a5d81aef4e137f"
-    sha256 yosemite:       "366023d41536d0220a3d226a9f7a5e65b89fcf8ec212bfd6e53f8c2b4110abce"
-    sha256 x86_64_linux:   "3b6e15578cc9b6dbe6f4b0ea9e18fce710974e552381b0b61a931577bb6c384f"
+    sha256 arm64_monterey: "3a87b31938c939e6462d9ac00da2d3763fc2559c82b52141260ab4e8f94e0dee"
+    sha256 arm64_big_sur:  "83b6f34bde01cfc2a8aa909d5e68dba9427c9bd1700859c83d0b57e4e8567dfd"
+    sha256 monterey:       "2fa62e7fb290e445eea34f2a7d8db547f0a8cacfd6b8189e277a3fc34586f293"
+    sha256 big_sur:        "890eb00501a3a7cf541dd546fd601b37a6d4e7500cff774db1889b8b5161a2fc"
+    sha256 catalina:       "16763515f05d7c6020a3b7a49e8ccac80c90363a792d3bc2d554f61f4f8e1a10"
+    sha256 x86_64_linux:   "f76b5af425172f298d3f79cd56ae6a2d74d67c2990c4951e52bcdc2b57cdc1f0"
   end
 
   def install
