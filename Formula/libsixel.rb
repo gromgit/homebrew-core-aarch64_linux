@@ -5,14 +5,12 @@ class Libsixel < Formula
   sha256 "028552eb8f2a37c6effda88ee5e8f6d87b5d9601182ddec784a9728865f821e0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "80163296378ee5b0ccd87b51f414f7a328ce48383d550f7a5cec641219d0efed"
-    sha256 cellar: :any,                 arm64_big_sur:  "7e366d97fff08d175c3da3380ec8ac35da1a8dcd5f3fccb002f6e1e5c783b5c5"
-    sha256 cellar: :any,                 monterey:       "9f03af39f51c3632c365a2af1cd92fd96370dba4445731f7bdb943086237576f"
-    sha256 cellar: :any,                 big_sur:        "b2963fe42a38cea1521ac653c7009f278bd4ed1931ea567380b860d62edef0b7"
-    sha256 cellar: :any,                 catalina:       "520fa6d77af3c6cc84fb84b1a5b8797bb6e44396b70ad7654eb3362d2174d0ab"
-    sha256 cellar: :any,                 mojave:         "716d90122f113bd1c6b2ad7e872a476923981b4c26830c94ca68724437e860b1"
-    sha256 cellar: :any,                 high_sierra:    "9e061ce67b22c8ad8760bccc7e954ee46852285bc078087712538e102ce8215c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "753e5b3da8b5137258aaa7a2645caae3024ab6d41e8fe980642a2be114a5e965"
+    sha256 cellar: :any,                 arm64_monterey: "2e12a4b625632cd3eb3eeead931b300dbf743ea67d34e9ca046c56c70d260eed"
+    sha256 cellar: :any,                 arm64_big_sur:  "ca3a3b1a9f9369271138c0e22d538e405b4804f481cd75cae2ce7b81bd02324d"
+    sha256 cellar: :any,                 monterey:       "403618069640d51e6c2b6d32bdd909318668cef7878064054c64e67f9e8e3c5e"
+    sha256 cellar: :any,                 big_sur:        "e47a3603e25d8f58593cb20438d1a49eae52a69660dedc06190bf67a7467c722"
+    sha256 cellar: :any,                 catalina:       "ce396e62152d7ecb357d5a3c49254bd1c0ac446da262be84b7b76492dd25b440"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0e16c474f371c89589255512c6e840080222b9388bb8eb9acd8252ca03567e68"
   end
 
   depends_on "meson" => :build
