@@ -1,8 +1,8 @@
 class Systemd < Formula
   desc "System and service manager"
   homepage "https://wiki.freedesktop.org/www/Software/systemd/"
-  url "https://github.com/systemd/systemd/archive/v246.tar.gz"
-  sha256 "4268bd88037806c61c5cd1c78d869f7f20bf7e7368c63916d47b5d1c3411bd6f"
+  url "https://github.com/systemd/systemd/archive/v249.tar.gz"
+  sha256 "174091ce5f2c02123f76d546622b14078097af105870086d18d55c1c2667d855"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
   head "https://github.com/systemd/systemd.git", branch: "main"
 
@@ -16,6 +16,7 @@ class Systemd < Formula
   depends_on "gettext" => :build
   depends_on "gperf" => :build
   depends_on "intltool" => :build
+  depends_on "jinja2-cli" => :build
   depends_on "libgpg-error" => :build
   depends_on "libtool" => :build
   depends_on "libxslt" => :build
@@ -23,6 +24,7 @@ class Systemd < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
+  depends_on "python@3.10" => :build
   depends_on "rsync" => :build
   depends_on "expat"
   depends_on "libcap"
@@ -40,6 +42,8 @@ class Systemd < Formula
   end
 
   def install
+    ENV["PYTHONPATH"] = Formula["jinja2-cli"].opt_libexec/Language::Python.site_packages("python3")
+
     args = %W[
       --prefix=#{prefix}
       --libdir=lib
