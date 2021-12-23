@@ -11,13 +11,12 @@ class Sponge < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "29cd7099471ec99361f0960dd460d428ed68a152fe360265e465773a55840d88"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4cc701ce73bfceca71d73a7736a588772f4f3987f577763e5abb9c462d25a78f"
-    sha256 cellar: :any_skip_relocation, monterey:       "59439f71fc93d7c0b1e943dcd78a11b7a9eba39da4befa0015a10e066dd0dc75"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1e1d78aae23a4a4468c44eaa1941ebda24cfeb739044e1b47e4b28d1e1471ca6"
-    sha256 cellar: :any_skip_relocation, catalina:       "81ba802eac1d5423220408709176ae92641b156b661b1f6821c91a18d7f20bed"
-    sha256 cellar: :any_skip_relocation, mojave:         "f5580c82edb4d175d1285ff3320606785820b65e7c04e912a15b6405d34fc303"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4f179a9c9f9215497e21595315fb13dd834caab7cd750ef77ec2c2e9626ff37e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a57254622412effd18a9e7d88753c708c02cb6081d6e899b96daa3eec759a957"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "17b9a2476a46979dcebe8a8902946e1d03554dd197df116ebeaba653aaabbac9"
+    sha256 cellar: :any_skip_relocation, monterey:       "4f9f96e4c0aeda3b3e7902a4154442ee6273a2a439e3ba06786b4ece8754b2ed"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9a4fdc2bfe3320b1e048dbc449e0db5399400428cdfed8d8715fef75efbb9255"
+    sha256 cellar: :any_skip_relocation, catalina:       "152ec9fb508d0b368bc9d217f424236c45ef1766dd8d56d9a17eda638e8b38e9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "96b0fb51813140afe463f01ef509665eb4fa8e46b4bbbb6baaa42796101f8d33"
   end
 
   conflicts_with "moreutils", because: "both install a `sponge` executable"
