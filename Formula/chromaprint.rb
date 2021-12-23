@@ -6,14 +6,12 @@ class Chromaprint < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "11a79e898ccfdc16613d411903e3bcb4ba8dee2d65d94b253d99a7f1c6c1d18f"
-    sha256 cellar: :any,                 arm64_big_sur:  "7bab5925c514da172d5e0be59a8460155adb6e2fc37fe5bb6e5e1f767c2fbd83"
-    sha256 cellar: :any,                 monterey:       "678524ca5ece22cdbfee40561f4d4e4fded8c96cd1dd1b8f0cccc625b71f7480"
-    sha256 cellar: :any,                 big_sur:        "ec8dfe9d09099386fdea8b6728b2053fef7e9d29b76a488157fb347e93889751"
-    sha256 cellar: :any,                 catalina:       "f29e1e551b155aa74c43a6a7d200ccb13841727efba1f304eea914fa1c68b89d"
-    sha256 cellar: :any,                 mojave:         "8ed4d7976e0262efe480a6da3456bfb9344aac15119bce2fa594bcc0a828f5e0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b8ae4ca34ec11a20168dc3ff040144adce01a12f10898e57f7ef8df4b64889fa"
+    sha256 cellar: :any,                 arm64_monterey: "26dc9a1ce770ef8efe048f194d785e773a2da16b1cfe7403c9266e53f7a917c3"
+    sha256 cellar: :any,                 arm64_big_sur:  "63b9b5fd1b84a9ef5b07b52e345df2b4a0802316eb24b70d59ab13519497d256"
+    sha256 cellar: :any,                 monterey:       "d0b826d0914eafce9b64cd18ee118cf41f97119f644e039fb6a91f1de3e43e4a"
+    sha256 cellar: :any,                 big_sur:        "02bf8ea8cea0398faa3f78383e46f7036ea572cf98f9ffe4dfe6d4580af186eb"
+    sha256 cellar: :any,                 catalina:       "4d56eefb86910204094735bc1a8271136081f874bdeb30227bf03d2996951cf1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ef289dd77b9835de98f22c0ebf9c3f6611cefbc0d13524f15acac0d8926782cd"
   end
 
   depends_on "cmake" => :build
