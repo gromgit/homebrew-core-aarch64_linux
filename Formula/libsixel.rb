@@ -1,8 +1,8 @@
 class Libsixel < Formula
   desc "SIXEL encoder/decoder implementation"
   homepage "https://github.com/saitoha/sixel"
-  url "https://github.com/saitoha/libsixel/releases/download/v1.8.6/libsixel-1.8.6.tar.gz"
-  sha256 "9f6dcaf40d250614ce0121b153949c327c46a958cfd2e47750d8788b7ed28e6a"
+  url "https://github.com/libsixel/libsixel/archive/refs/tags/v1.10.3.tar.gz"
+  sha256 "028552eb8f2a37c6effda88ee5e8f6d87b5d9601182ddec784a9728865f821e0"
 
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "80163296378ee5b0ccd87b51f414f7a328ce48383d550f7a5cec641219d0efed"
@@ -15,15 +15,16 @@ class Libsixel < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "753e5b3da8b5137258aaa7a2645caae3024ab6d41e8fe980642a2be114a5e965"
   end
 
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "jpeg"
 
   def install
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--with-jpeg=#{Formula["jpeg"].prefix}",
-                          "--prefix=#{prefix}"
-    system "make", "install"
+    mkdir "build" do
+      system "meson", *std_meson_args, "..", "-Dgdk-pixbuf2=disabled", "-Dtests=disabled"
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
   end
 
   test do
