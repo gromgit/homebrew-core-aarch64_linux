@@ -11,7 +11,8 @@ class ApacheCtakes < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "99b42543678adc7a3d3ae931e52130a48fda2f46df7b5de143f7efb708de31ef"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "4c6af60f27e2795e09763b88aa81e00faa80ba6d46e6f6cac3d2cd0b72b9f69f"
   end
 
   deprecate! date: "2021-12-21", because: "installs binaries and does not build from source"
