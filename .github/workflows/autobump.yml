@@ -15,6 +15,7 @@ env:
   FORMULAE: |
     ack
     angular-cli
+    apache-archiva
     apidoc
     argo
     artifactory
@@ -23,6 +24,7 @@ env:
     aws-cdk
     b3sum
     bcoin
+    bottom
     broot
     buildkit
     bundletool
@@ -38,12 +40,15 @@ env:
     cargo-watch
     cdk8s
     chezmoi
+    chromaprint
     circleci
     clair
     cliclick
     cloudflare-wrangler
+    composer
     consul
     consul-template
+    crun
     cubejs-cli
     deno
     detekt
@@ -55,16 +60,21 @@ env:
     docker-slim
     doctl
     docuum
+    double-conversion
     dprint
+    dvc
     envconsul
     esbuild
     eslint
     etcd
+    ethereum
     exploitdb
     fennel
     firebase-cli
+    flarectl
     flux
     fuse-overlayfs
+    futhark
     gatsby-cli
     git-cliff
     git-delta
@@ -80,54 +90,76 @@ env:
     hcloud
     helm
     helmfile
+    htmldoc
+    hugo
+    imagemagick
+    imagemagick@6
+    imap-backup
     ircd-hybrid
+    jenkins
     jfrog-cli
     jql
+    jsonnet
     just
     k3d
     k9s
+    keptn
     keydb
     kubeaudit
+    kubecfg
     kumactl
     kustomize
     lazydocker
     lexbor
     liboqs
     localstack
+    lout
     macchina
     marked
     marp-cli
     mdbook
     mdcat
+    meson
     metabase
     micro
     minikube
     mmctl
     moto
+    murex
+    mypy
     nativefier
     navi
     ncc
     neofetch
     netlify-cli
+    nfpm
     nng
     node-sass
     nomad
+    notcurses
     nushell
+    oauth2_proxy
     oci-cli
     octant
     okteto
+    opensearch
     oxipng
+    pickle
     pnpm
     pocsuite3
     procs
+    protoc-gen-go-grpc
     rbw
     rollup
+    s2n
     selene
     serverless
     skaffold
     skopeo
     solana
+    sponge
     starship
+    stdman
     stress-ng
     svgo
     svtplay-dl
@@ -139,16 +171,20 @@ env:
     topgrade
     traefik
     vale
+    vault-cli
     vercel-cli
     virgil
     vite
     vpn-slice
+    vsearch
     vue-cli
     wasmtime
     webpack
     webtorrent-cli
     whistle
+    xcbeautify
     xplr
+    yaegi
     zellij
 
 jobs:
