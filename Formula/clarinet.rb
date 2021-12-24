@@ -14,12 +14,12 @@ class Clarinet < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "bbbb54652a57cf74add0db7fa5cb8627c79b37997783eb65ab5182b25f030a48"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5170ccae1c3a532210d7df6d6503f38f778ae0d39c3a3b52e273d4978fab138f"
-    sha256 cellar: :any_skip_relocation, monterey:       "94641bad4d7a62169b7d4a3381a0ecd9384ceeb94509b6403d3f8afd29e0bdaf"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a7663b9433be0efb68ba1abac902f08bf8760c3ee2551f6abc7ab8791e999ffc"
-    sha256 cellar: :any_skip_relocation, catalina:       "5a99c5999e61d1cf2b511142c2187d42e98c5d36223e3137d948a40468004707"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6b8b8cb76151c9cf4857f5735c3e3695f7002f726fb3f199de6143d8c3b12447"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "921482ebe720415852fc1dfb78e125f01bf7382a50a33ba47e96d75cd11c67ac"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3fd48897493511367b544494159f8b77dc76cf5375e054acd8246e43f891a877"
+    sha256 cellar: :any_skip_relocation, monterey:       "03c52d328cf8569f79f1e7570525efa8ade092de4839255fbca7bacf9183a106"
+    sha256 cellar: :any_skip_relocation, big_sur:        "41013a90f7e3906a418f83b555972483dedd9c3354117a06404d6ea5087b8411"
+    sha256 cellar: :any_skip_relocation, catalina:       "8754ca69e10adc73bee986a2e907c9690881c44c98c70d86a44485978a6d3ef3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "927da21edda357ecb9137f96aedab0f85defc92c610cb189904cfc09b112e33d"
   end
 
   depends_on "rust" => :build
