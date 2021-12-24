@@ -11,12 +11,12 @@ class Zig < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "018b275bd4e61525d19dc95f065622cac2deeb83a562d6d779414b056db989ce"
-    sha256 cellar: :any,                 arm64_big_sur:  "4b06b5abf72a311162138a852dcadb863974d4c69573dfa13d9857b312010165"
-    sha256 cellar: :any,                 monterey:       "d882ab923be5da7adf934d5ad34f3b6c90907411c896ad78f87841f513afcbfc"
-    sha256 cellar: :any,                 big_sur:        "18e6b29f749642d8a01ce2d9657e206c9b7d3f130264f39f7afde9b9b072e03b"
-    sha256 cellar: :any,                 catalina:       "80fa8f4df5ccc5e0f8b190a8ec86eabd223ec56c756fa5e1821ef8d75d93934f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "effb69c4ee99ffa28c7a927c786565c03f56f99da437026f3788218d962c3ab8"
+    sha256 cellar: :any,                 arm64_monterey: "3d388804326dc5475ce377832327cbae7c32d3468255c462394feb89d3ed743d"
+    sha256 cellar: :any,                 arm64_big_sur:  "894049ce2d60bba662770aa28bc8c52347f039840172c291f848ab5a7e11776c"
+    sha256 cellar: :any,                 monterey:       "5825b4b6610cad3d73eac8ff5915c01609a82a58bde9cf9309c6dc1fa32c9feb"
+    sha256 cellar: :any,                 big_sur:        "937d9e3adbfddfa2f7cb2902d9410b5636bd33f4cf47341b935bb68e87893d88"
+    sha256 cellar: :any,                 catalina:       "1b0c7260cfcd87901ad399f1082d59c0a8e8f87da521807eb8e6641c7e12c890"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8fd87d8186cb47914cdc179cb28e789cb59999f6e1b11d79f2ca9e701ac43e23"
   end
 
   head do
