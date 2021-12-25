@@ -7,13 +7,12 @@ class Ncdu < Formula
   head "https://g.blicky.net/ncdu.git", branch: "zig"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "68eb33234f67d014f1bb2edfd2750df4b96398af51063b135dd7c19de2caa8ab"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "110f61c5159ce8982f2086aebd7e55a1631c958c88fd69eec611242a83bd4577"
-    sha256 cellar: :any_skip_relocation, monterey:       "d99f3365fc9733b3274b45e6312b933fea3847e89f0bcef401ed10805c35e5d7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "af3c3320ea08a93b0cb7bd260a297305d7c0283f8a9881971ecfa2dcb5c270b0"
-    sha256 cellar: :any_skip_relocation, catalina:       "b201c2573ed203bbd41c801be8d0b63045e33b36b601bcf6b8c03b5598c9301f"
-    sha256 cellar: :any_skip_relocation, mojave:         "4f0851785b40c0035a3d60687bdb180d46f8ec364508220c36bc40dda90ba25f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "48c1a3244bf54b0ea5246bfa45130f18710f4943a30b897c9c104435585d26ca"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "55eb407cd2f1cdb3ba6e13c7d8b201a261bd35edd146a0d2464b652c2256fd1c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "51ff65b2939cb4869696821685d533ce332f8107fec25c7a6584881f1459448d"
+    sha256 cellar: :any_skip_relocation, monterey:       "f8699b3b9b9a9c292eb93583dad97b9d4ceeefd7e6fbf4c8525cbfa3cc08e21b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "500e070b5d64261035b16ab91d164952f282db7616f8e17c1c4f5e8b2b8a8b3b"
+    sha256 cellar: :any_skip_relocation, catalina:       "0a782ed37f28f1104e1ad8aa94272819e8f53cf3602b3ab949642fc9bf537903"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3527f58dc6bd833572043f4867ee9d51884eac64a36fe49b2ca78ad4195c181f"
   end
 
   depends_on "pkg-config" => :build
