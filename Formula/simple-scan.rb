@@ -6,10 +6,10 @@ class SimpleScan < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "f97c15f31b2e0b01343e8a2a592bc58c72af004eb0ece145758f281ec89f7517"
-    sha256 monterey:      "afe2be4194d85e537dcdcaa6513b1bc1b24524d653a5e40fb205758834bc59c4"
-    sha256 big_sur:       "5b871f8048b6a573e95a63b36f354892ccf0f36e0ec091d69e5021ae7c414896"
-    sha256 catalina:      "c1e3a573b9caf82b04e8646111c6bbe596af0f8c16b8d28f8a12388bbb431310"
+    sha256 arm64_big_sur: "4bae5ca76e7dcf4ce042001134926e693df7130cfc818c86f6e2d60b1b3cdd13"
+    sha256 monterey:      "292f3703162d805bdaa178c94810a2d32092310520f4d5fdaac24a430cc3e85f"
+    sha256 big_sur:       "e0c98f814d427e8841231d9c497def9b7e3a8a8f0dc9adb7842e27e9dc560c29"
+    sha256 catalina:      "2e71257a943ada0dfe2e4fec0ed8ac14c996e64a817ce6f952e7a1968335f06b"
   end
 
   depends_on "itstool" => :build
