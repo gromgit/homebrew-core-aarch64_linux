@@ -6,12 +6,12 @@ class Sniffer < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1a3c6378f7b77b4bfc62dc48df343f73fb7641c545b14a176e4fc69ba0618dd1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e0803026712c591a78aa9f2833faf20cffc5c1e6f855422fc866fad008ff127a"
-    sha256 cellar: :any_skip_relocation, monterey:       "4f9b40007a1197bd6e4414fe790f1f4bf1d680236fa334a633b9aa1c02b95918"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fcc192fa769f31050962e6c1521c4fd168f4afde940bdcc4ae812859b630f0e4"
-    sha256 cellar: :any_skip_relocation, catalina:       "b87c1d0582ffd7ac1eb02bc3c783818649675b54e9f4316499484f848f261f0a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e71af3474affa2c2308e7d3a4f38a4203ce68bc456e35768cb86629bc3e5d985"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "616c6339cae6e6440e3f0665eb19d75fcb1f4ffa8512332b5b21b99f2d58c15e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8e8c25962d47038ff3397b6c3e9a43d068b4ada3dc2d6a74edd4694bfb570c9e"
+    sha256 cellar: :any_skip_relocation, monterey:       "69c2d55b41d8a6be60ca7926bfee1fb26c6ca731d4e686b55398c3e064a83e01"
+    sha256 cellar: :any_skip_relocation, big_sur:        "161cf99bfb9acbdba01eb3e92ec443340631aef80b387c5189650c5b882523f3"
+    sha256 cellar: :any_skip_relocation, catalina:       "592beebb4a380730e58cdcd33f306bb75b113108dca42405b96feab0d67345a0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5eb37ea9f4b54aea4452ef17509a373dfff54b1c0356fc68a8b2a4f3f934396c"
   end
 
   depends_on "go" => :build
