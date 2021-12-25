@@ -1,8 +1,8 @@
 class ZlibNg < Formula
   desc "Zlib replacement with optimizations for next generation systems"
   homepage "https://github.com/zlib-ng/zlib-ng"
-  url "https://github.com/zlib-ng/zlib-ng/archive/2.0.5.tar.gz"
-  sha256 "eca3fe72aea7036c31d00ca120493923c4d5b99fe02e6d3322f7c88dbdcd0085"
+  url "https://github.com/zlib-ng/zlib-ng/archive/2.0.6.tar.gz"
+  sha256 "8258b75a72303b661a238047cb348203d88d9dddf85d480ed885f375916fcab6"
   license "Zlib"
 
   bottle do
@@ -16,7 +16,7 @@ class ZlibNg < Formula
   end
 
   # https://zlib.net/zlib_how.html
-  resource "test_artifact" do
+  resource "homebrew-test_artifact" do
     url "https://zlib.net/zpipe.c"
     sha256 "68140a82582ede938159630bca0fb13a93b4bf1cb2e85b08943c26242cf8f3a6"
   end
@@ -28,7 +28,7 @@ class ZlibNg < Formula
 
   test do
     # Test uses an example of code for zlib and overwrites its API with zlib-ng API
-    testpath.install resource("test_artifact")
+    testpath.install resource("homebrew-test_artifact")
     inreplace "zpipe.c", "#include \"zlib.h\"", <<~EOS
       #include \"zlib-ng.h\"
       #define inflate     zng_inflate
