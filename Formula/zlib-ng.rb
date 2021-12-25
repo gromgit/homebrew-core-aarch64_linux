@@ -6,13 +6,12 @@ class ZlibNg < Formula
   license "Zlib"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "7db02600535bac3c8d4425b572cc4edddfb8a80048b15d8445da72e6784dfa55"
-    sha256 cellar: :any,                 arm64_big_sur:  "6774c82888cdb156bff87776b470decf161279e3b349a7ceecb2ff6540e47086"
-    sha256 cellar: :any,                 monterey:       "83ac999adf4b2279e8ba5f19156bb3c13da5c4ba418472a0c458c570f5dc4e9c"
-    sha256 cellar: :any,                 big_sur:        "16b590ffbf23919316ff04b0687493aa124d125fd417d97f2f1b9ef9bb020bf1"
-    sha256 cellar: :any,                 catalina:       "1028a7aded6cdcaf9053500fc7ce0b07e9801429249bc13d859463941b4e83c7"
-    sha256 cellar: :any,                 mojave:         "6716bf16e0c48b26a5452c040d205e1dda8c418648eb115a6ecabddd253ce4d7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e5b8ac18de50fd8b34f2d99dbcf93b1d58670b9c1a2789e8a94433c78c20909b"
+    sha256 cellar: :any,                 arm64_monterey: "27e2439642448477e9e0100c025242af1c136c8314d6f8cae85ba5ad1101cd0d"
+    sha256 cellar: :any,                 arm64_big_sur:  "68c5eb10ccca6d24f04b9d1544c00bfadfddc2e668b1ebfc1b884f73a0ba2056"
+    sha256 cellar: :any,                 monterey:       "f9d1492435a2216b3b9009f3850821a5cad24598d7fe324154b3ff4351d2d4a9"
+    sha256 cellar: :any,                 big_sur:        "c144f0a15009955bc6c00ff887f52263166e69fd76faf4f68521460839f3c086"
+    sha256 cellar: :any,                 catalina:       "e73656cc12181b5c35df40e579420d7f93eec7c8536bf044f3ddae9703e10b99"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ee344d5250258b2e2f9cdaebbdba9b6f6f01ae881ad5aa976d2fc9a629af5548"
   end
 
   # https://zlib.net/zlib_how.html
