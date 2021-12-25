@@ -9,12 +9,12 @@ class Ciphey < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "2a3bc8da84e2bf093629eedaf0e499373fc5a8583a6266d462bd7525c44f286d"
-    sha256 cellar: :any, arm64_big_sur:  "113ac680f31175402967ca0c068ca1c25aa4920983749e16ee8978dfd0dc281b"
-    sha256 cellar: :any, monterey:       "b8c336658367dd5a0793699255f37b954daf6d46ac47935ffb1e7064f2c95881"
-    sha256 cellar: :any, big_sur:        "42fdf7cbf98607e785727268be58e2aa8a6c2b5d25f3fa790eb4d2d08b2935b4"
-    sha256 cellar: :any, catalina:       "e6fce300a66cbfdec79b6026b42374b42fca432307cfe59482c28e43fd2be73d"
-    sha256 cellar: :any, mojave:         "604e9f29f6dcd6cfa51b0e5580d91a293d7e5ed15296d540d3d305a47fe65197"
+    sha256 cellar: :any,                 arm64_monterey: "19e54cff97fbbb9e081780f1ed09ae9ef57e2c6573e9ffae85b38952616aeb74"
+    sha256 cellar: :any,                 arm64_big_sur:  "178c40048edf7ae7e6618232e8cb581ded67ae8376df57ab8647ef74799aec7a"
+    sha256 cellar: :any,                 monterey:       "6ef6845258ea2443a6538add5f0ec28752912f099e4ddfaabc91ad9b2f868b16"
+    sha256 cellar: :any,                 big_sur:        "ae4a78427f954c23303a176bf10c9b88da5c5c777be7dbe32c88e55333f05d26"
+    sha256 cellar: :any,                 catalina:       "24b34a2fc144f9bb9a91c01b598102701526210189edac8456deb4b01a51fc5e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4acb866e4e7cd4f17a08771fa63d0dc4370a96b3f9e7710c0eb64216a793815b"
   end
 
   depends_on "boost" => :build
