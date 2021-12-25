@@ -1,10 +1,9 @@
 class Vice < Formula
   desc "Versatile Commodore Emulator"
   homepage "https://sourceforge.net/projects/vice-emu/"
-  url "https://downloads.sourceforge.net/project/vice-emu/releases/vice-3.5.tar.gz"
-  sha256 "56b978faaeb8b2896032bd604d03c3501002187eef1ca58ceced40f11a65dc0e"
+  url "https://downloads.sourceforge.net/project/vice-emu/releases/vice-3.6.tar.gz"
+  sha256 "65bfe55cce627db9b5a0ac7876a90c087e9fe86e9f5517e809446c4064a2d3fd"
   license "GPL-2.0-or-later"
-  revision 1
   head "https://svn.code.sf.net/p/vice-emu/code/trunk/vice"
 
   livecheck do
@@ -40,11 +39,6 @@ class Vice < Formula
   depends_on "librsvg"
   depends_on "libvorbis"
 
-  # Fix build against jpeg.
-  # https://sourceforge.net/p/vice-emu/code/40001/
-  # Remove with next release.
-  patch :DATA
-
   def install
     configure_flags = %W[
       --prefix=#{prefix}
@@ -73,16 +67,3 @@ class Vice < Formula
     assert_match "cycle limit reached", shell_output("#{bin}/x64sc -console -limitcycles 1000000 -logfile -", 1)
   end
 end
-
-__END__
---- a/configure.ac
-+++ b/configure.ac
-@@ -3186,7 +3186,7 @@
- dnl check for jpeg support
- if test x"$with_jpeg" = "xyes" ; then
-   dnl Check for the JPEG library.
--  AC_CHECK_HEADER(jpeglib.h,,)
-+  AC_CHECK_HEADER(jpeglib.h,,,-)
- 
-   if test x"$ac_cv_header_jpeglib_h" = "xyes" ; then
-     AC_CHECK_LIB(jpeg, jpeg_CreateCompress, [
