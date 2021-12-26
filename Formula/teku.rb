@@ -5,6 +5,15 @@ class Teku < Formula
   sha256 "fdd2e23ee8228b0bcb883f3bdfb4c24b82b21346a0444309e933ff019d5c3f39"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4bdb86599a5102ce0bbd8ee05a098b79984ed3b5e0282ca1e19c96362dae98ad"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "84e498231cd8f34ffe9a805824934cb21c2b1d5e42ba429ad8ac1cd6d52f8bea"
+    sha256 cellar: :any_skip_relocation, monterey:       "1fe8a4709b1417f64a05a0743ee685a0480b2b20bdf40543b3d877baa8c2e714"
+    sha256 cellar: :any_skip_relocation, big_sur:        "cfdbfac65edae03a4a54343aa5a04cfc33c3e038af65b174d6e3b329a2839a59"
+    sha256 cellar: :any_skip_relocation, catalina:       "81b7c2f8b657cc7ad95b448a4320c3c382e5f68375f61028f45161511a301617"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "650bcdbcc039721899dca388a83b79ead91fce8d035db9d6921d961a9331bd6a"
+  end
+
   depends_on "gradle" => :build
   depends_on "openjdk"
 
