@@ -2,8 +2,8 @@ class Asymptote < Formula
   desc "Powerful descriptive vector graphics language"
   homepage "https://asymptote.sourceforge.io"
   # Keep version in sync with manual below
-  url "https://downloads.sourceforge.net/project/asymptote/2.70/asymptote-2.70.src.tgz"
-  sha256 "f5cc913a858c33e92f79ab421d354c0fe2babd87f452ae9dff729a902aa80c3f"
+  url "https://downloads.sourceforge.net/project/asymptote/2.73/asymptote-2.73.src.tgz"
+  sha256 "36817b6ce9e1f748d5d551ab51a46d5fd7ce09c937fb01b01465cd427b3406f9"
   license "LGPL-3.0-only"
 
   livecheck do
@@ -29,13 +29,17 @@ class Asymptote < Formula
 
   uses_from_macos "ncurses"
 
+  on_linux do
+    depends_on "freeglut"
+  end
+
   resource "manual" do
-    url "https://downloads.sourceforge.net/project/asymptote/2.69/asymptote.pdf"
-    sha256 "d87538cadf1af08ef2217165de6b88b0520eeb67a9e5f1a6bb8f9e3f67e09704"
+    url "https://downloads.sourceforge.net/project/asymptote/2.73/asymptote.pdf"
+    sha256 "306f3c4fbb71e0cd2b1830b6e55e9de32b9d47595679feca453c96bbb4e79803"
   end
 
   def install
-    system "./configure", "--prefix=#{prefix}"
+    system "./configure", *std_configure_args
 
     # Avoid use of MacTeX with these commands
     # (instead of `make all && make install`)
