@@ -8,13 +8,12 @@ class Yapf < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b46a3dbefb7b1e3ff520b32d75744b90eca77200de3201a4be5a95bbd45de65e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b46a3dbefb7b1e3ff520b32d75744b90eca77200de3201a4be5a95bbd45de65e"
-    sha256 cellar: :any_skip_relocation, monterey:       "a7a417d2b6e9a1c2cea6f5b470ad8e18687780c3c69b354d108baa85a6a50e87"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a7a417d2b6e9a1c2cea6f5b470ad8e18687780c3c69b354d108baa85a6a50e87"
-    sha256 cellar: :any_skip_relocation, catalina:       "a7a417d2b6e9a1c2cea6f5b470ad8e18687780c3c69b354d108baa85a6a50e87"
-    sha256 cellar: :any_skip_relocation, mojave:         "a7a417d2b6e9a1c2cea6f5b470ad8e18687780c3c69b354d108baa85a6a50e87"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3f401553a61944a8b9aad2059b04aac3c4e9cec64786736f5e8f39108782fb93"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a25c9162e29ad3b06cde091efdfabc4181b24256bcd50091eabd5ed534c45161"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a25c9162e29ad3b06cde091efdfabc4181b24256bcd50091eabd5ed534c45161"
+    sha256 cellar: :any_skip_relocation, monterey:       "7ad8f128e5f4f718b996176bb36d47b3f32083f1e60b58793a82a6530b2eb56c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7ad8f128e5f4f718b996176bb36d47b3f32083f1e60b58793a82a6530b2eb56c"
+    sha256 cellar: :any_skip_relocation, catalina:       "7ad8f128e5f4f718b996176bb36d47b3f32083f1e60b58793a82a6530b2eb56c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8781942adadad33fecf2bb9e527116939c2c51a9674ceab4ec97d48d91da3748"
   end
 
   depends_on "python@3.10"
