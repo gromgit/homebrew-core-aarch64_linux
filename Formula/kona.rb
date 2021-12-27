@@ -13,14 +13,12 @@ class Kona < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "944e33948686c29eb0da929fdc9582c22bf1754412d9dc529200c03aaa0306da"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "69c7319589e0875a896e82df7a92fcb6be310dd0ce9cd431efb5e975234098e6"
-    sha256 cellar: :any_skip_relocation, monterey:       "72f3b37d7af56059e60fcb6bc218c1016664cce6bc466740753da6a32e16b08c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ec3ffc9d3cbedb40a58f9932aa77d11126aa9d0415e4cabf19f367e250f30296"
-    sha256 cellar: :any_skip_relocation, catalina:       "4d0adcc97354ca21c78d666906a718fa2dca47ca5cade99387750e8bf74f12c8"
-    sha256 cellar: :any_skip_relocation, mojave:         "47267596e8da2d49e5f9527896a81cc5987cb993991d7e10e941bd5839fbc2e7"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "e40a7ad668c3363a1ae1ab4fbc29729d2eff833b8975e1f40239c9d071adc64d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e1d6b7bfd8399741bd995d1dd4d010fe4d30071d05545c62126f07e15ae9f983"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8b1a6b849baa2c0423981e8a528551d49ce8a18f0772a6381038e0b3f27adb9f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "97493e1f57dc878702ebf3a34af7621a5f655104d684e7c50ef316c8cb30f97d"
+    sha256 cellar: :any_skip_relocation, monterey:       "73330e436e416c19f9a4abdd920173c99725bc5e8ca4b18ef3ebf1df20a561c5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bc727b02b917dc2a6b81d8ad679618ed7128320bbb177cbba4967ff75d35a810"
+    sha256 cellar: :any_skip_relocation, catalina:       "39a59be89532f96362eeeef2d5be14770da588944666ce3a178926f04b0f6e1c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2e0418f26e5be870a8be5747b920ae20db61707f110c3e63c992ab397b8b87dc"
   end
 
   def install
