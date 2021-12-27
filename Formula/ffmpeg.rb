@@ -6,7 +6,7 @@ class Ffmpeg < Formula
   # None of these parts are used by default, you have to explicitly pass `--enable-gpl`
   # to configure to activate them. In this case, FFmpeg's license changes to GPL v2+.
   license "GPL-2.0-or-later"
-  revision 3
+  revision 4
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   livecheck do
@@ -65,7 +65,10 @@ class Ffmpeg < Formula
 
   on_linux do
     depends_on "libxv"
+    depends_on "gcc" # because rubbernand is compiled with gcc
   end
+
+  fails_with gcc: "5"
 
   def install
     args = %W[
