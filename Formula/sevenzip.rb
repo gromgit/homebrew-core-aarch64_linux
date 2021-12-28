@@ -7,12 +7,12 @@ class Sevenzip < Formula
   license all_of: ["LGPL-2.1-or-later", "BSD-3-Clause"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c5174e685a52d70c63f50c88155b390c06ba17cc9e6ca8722f4f25cb24642aa2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a2bfd173b41f769a90bdaaab4f7e3a36d8d51e27d4e21d4306404da69933e173"
-    sha256 cellar: :any_skip_relocation, monterey:       "6416645cca5a7d283e30195382a57b8795443c89d893fc630ea34dd74c294cac"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f05f9a07c8336445fc759c45b983c90d6aa2ab6caa3d0368ffc1f0b58513e79c"
-    sha256 cellar: :any_skip_relocation, catalina:       "b82b08afb32d7b42bc1cbd4011f27612b73e8e8cf971ab006a594bdd2fc83ec4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a8464c7f14fcc179f0fc022aac54f1ad290aa52d2da3dadaf50d602c8af59bde"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "979b01b5e8c9c9918a0f3c5a611462fc4aae591ffbe960675bc3970f81549333"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "05d509acd57fc81dddea1662f11d87cb7ed35ed53e0a69da9d3119793cb4a206"
+    sha256 cellar: :any_skip_relocation, monterey:       "76952c80ac0f3cec5616904f959679d5e56fdc507725da735030d74eec71d2a0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3e5d28a486b4e10407f4b27ea1608092a2e91fafa0c63830e7a11bf534f6174f"
+    sha256 cellar: :any_skip_relocation, catalina:       "798b0be8c9dd1a95a09d22d3d32af9a3b07ea8e089afa07eb6277b0f278c042b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "966bd2bb908e43a34a94df6b92ab97879b91ff0924adae57caa8c3babb3f0c8d"
   end
 
   def install
