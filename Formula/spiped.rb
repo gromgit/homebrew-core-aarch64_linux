@@ -10,13 +10,11 @@ class Spiped < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "27a4be44c3532d6c5fd3c35ad01b6d7b8aeba9430e97cd684f51b386843dd7e4"
-    sha256 cellar: :any, arm64_big_sur:  "74e0d5955ee9754f9a88798d8d0c5a2b425756d3359378c312874ccb3959421d"
-    sha256 cellar: :any, monterey:       "6bf6ffda856ddf718d621df5810af8b7c7cb2afc7f6d4df8f7b35d5c3a746b6c"
-    sha256 cellar: :any, big_sur:        "c245e8cf440207b8a2d229b8f8644ebe25da6999b52f2b8b16835c55b7f04b6e"
-    sha256 cellar: :any, catalina:       "efe2a93770708c9a8c1474651b7b0b221d263b7fbb7dc75e014ff21caf084510"
-    sha256 cellar: :any, mojave:         "44c1509c5faf96f0be69fd905525e2070cf25445afddfaf45584bd9c4a1d702c"
-    sha256 cellar: :any, high_sierra:    "b5615b6afbc743c7b8b2776c3537ec42a4f1519f1f2f3e12bd06ae4e96ce5f14"
+    sha256 cellar: :any, arm64_monterey: "63451c713c91962ed596254ff1924de72d6adc4bb7d950082d420cafa70596a0"
+    sha256 cellar: :any, arm64_big_sur:  "3df7565403ad24361e05d3661242f8724bde49bdee1124bcc07aa234dbdcecf2"
+    sha256 cellar: :any, monterey:       "b343cf4da6e41a3c30d76ea2e25bf18c1e63d0479e7ceb13e8764232a035b727"
+    sha256 cellar: :any, big_sur:        "4e78ef161701b82728993c1107fbb155bb9a17cea82df586c9a1df520ec8d656"
+    sha256 cellar: :any, catalina:       "f3edfef25280658dbeaee09e50d2b284a5d9768ffb2632502b3bfc050590e073"
   end
 
   depends_on "bsdmake" => :build
