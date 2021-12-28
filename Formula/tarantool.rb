@@ -8,12 +8,12 @@ class Tarantool < Formula
   head "https://github.com/tarantool/tarantool.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "de7b4c495bff9624a7dbf7cc37a7620258a268a74dfcbfc1f156c44532a8d5e1"
-    sha256 cellar: :any,                 arm64_big_sur:  "baade3b1eb4ce24bd5d93faae9c2b349205c8354bb33797f0d3dc3af5f9d8d01"
-    sha256                               monterey:       "c0d05dd63bca5a14ec2571f03c1e9b89db486abd8331c7ccd2eea36b81eb2cb6"
-    sha256                               big_sur:        "10cee819c78efa179feee44d3edf4cb11f665f610ce60fc95cb0816c86d6b07b"
-    sha256                               catalina:       "ad6831afd452a2724c7df1ab9acf56e6e6e3582bdf9868864dcba7ecd1d1d9e9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f319e0625842b831deb7d0ed2ac1402b9301e5663ec94101becd6b59719b7f06"
+    sha256 cellar: :any,                 arm64_monterey: "449362fd95727d7bdd16fe236a0d7e568e28c93c6a689143b7ba6d3789b87477"
+    sha256 cellar: :any,                 arm64_big_sur:  "14a8805adc1acce67d1d8ad4a8058f0a91d830eb777196094bd7b6051c9022e3"
+    sha256                               monterey:       "c7c0b6de9a12a78c35a79284cfa7fe2fd06d700b27eef5e34b2c5b9f0044a1b7"
+    sha256                               big_sur:        "0ae949f642f828b42470057ac2573c693df046ccacdab1ba451b632b766ed24c"
+    sha256                               catalina:       "2dd055342cc0a398c0d594a272de9f1b677bec8c50b4187dd9f930aa3a3be441"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "129548b8d0ac6e99d44bca684e15df76078068267e5e3db1efba91761fa0900f"
   end
 
   depends_on "cmake" => :build
