@@ -6,13 +6,12 @@ class Libkeccak < Formula
   license "ISC"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "7ba646f17c5ba7327716839dbf33b1c6ec270a20c9a987bc8e26a1cc9c0bbb78"
-    sha256 cellar: :any,                 arm64_big_sur:  "bce1f455cd7594f5f8c9681b54b06fe169ee72acc7825726bbe536405c4eef4b"
-    sha256 cellar: :any,                 monterey:       "cbb00c8a160918c4be3dc9d4bd6d73625e58ef3b9215583d59a7f8eef4fc39bf"
-    sha256 cellar: :any,                 big_sur:        "57c3066f8d5fd20faff6aa81dfbd926cb60fbdfeacc26770ddfae0f46b6872da"
-    sha256 cellar: :any,                 catalina:       "9e1a251941325262eeeb42b3f30404150d794e7a3f223bba1b7557a1458b99aa"
-    sha256 cellar: :any,                 mojave:         "bbacd3d46362bb80a2ead391e7f5f614b5be9c89ef3967b1aa287d00e48deba3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1e84e22d037e4b81b753523341be53590c805682ff723089a00c89e974df250f"
+    sha256 cellar: :any,                 arm64_monterey: "f28fb5ca876283d73bd88bd89cdddebfdd7d8d528109f5f5230ecde499b656b3"
+    sha256 cellar: :any,                 arm64_big_sur:  "fe51ee5012e9c87930e363196c8feb5cc08705713b36019da1df103172d38c9e"
+    sha256 cellar: :any,                 monterey:       "97c02772e8702b9bc0f99560ac85baeea09f462e4b6d69cd7268af65efe3483e"
+    sha256 cellar: :any,                 big_sur:        "d891d274be5655fb37f4527a0a6ae39dec9dffb8d07f9822fe068f2ad47b87a0"
+    sha256 cellar: :any,                 catalina:       "cb4d4e1aad574126594225fc5fb55f8bed0ba8c70d3c3de504e752ed703e6d85"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e67e083ddd95ffdcf6e6055a3b9233bc8f5acb48e7aa96a37b525fda97946af7"
   end
 
   def install
