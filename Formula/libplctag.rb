@@ -11,12 +11,12 @@ class Libplctag < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "cba1c97b2ef7672526345d3185c5ba012015f063be710a12ec2f57add022434b"
-    sha256 cellar: :any,                 arm64_big_sur:  "9240709f2e2b5bdc78ba4241c74aa01a2eb910028b5cf2f6152a0faba16367ee"
-    sha256 cellar: :any,                 monterey:       "8a6a4acfdce2432d097251a5937a0430855893342c48604fe0d145ce5aaea8f6"
-    sha256 cellar: :any,                 big_sur:        "5f9db3022156243dd9a24d1ef2f8927ba7ee8ed2b8df2989f1a7ace4b958f6f9"
-    sha256 cellar: :any,                 catalina:       "2603157268370b115fdf7dbb5b1f54163685723f29372bee55e6133c1eaab0e3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2e137249891c24f0a350b3adddb8d643b15e98e4a6faf8fa50d7a2cf6c4c1d17"
+    sha256 cellar: :any,                 arm64_monterey: "6190f338bc0bc7aa02a0fdff8fc9ec23d2e773c5e490cf896e2e50fcfdd16617"
+    sha256 cellar: :any,                 arm64_big_sur:  "de3eff490a7a3226e6c9206642d02203b6694010353ef3e2d5ff3242da77b8fa"
+    sha256 cellar: :any,                 monterey:       "b41939c877037da1728ac30c062f829cad3133ef6e4954ad7398d033005ed5ee"
+    sha256 cellar: :any,                 big_sur:        "4286b889c5297dbb036e2776c60f8ec5de2e8b36a554e7cb5b5e95d45d001330"
+    sha256 cellar: :any,                 catalina:       "0cbf016052e8a5a2c283e4546f74535501e194099b87e592133ef260939c4d0e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "acfa15324294b703788462a9674f2327e753a4c4d074817630ac94cace3602e2"
   end
 
   depends_on "cmake" => :build
