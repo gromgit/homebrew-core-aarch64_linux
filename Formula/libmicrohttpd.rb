@@ -7,12 +7,12 @@ class Libmicrohttpd < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "27173d173ac9236460f76ae869714b343de910778910778bd4f71d499ee77aed"
-    sha256 cellar: :any,                 arm64_big_sur:  "0cdce2d115093cb02248dcc267f64c042f0ff970006117b36398a47ae2cf19f2"
-    sha256 cellar: :any,                 monterey:       "f609d60ca98f6495b97b3aae1a6c11c915f8e728dbf3c190b3227a964743b82f"
-    sha256 cellar: :any,                 big_sur:        "c572f415dcb2407855683e5345395dc31532920a1f7520de5d972657258b883a"
-    sha256 cellar: :any,                 catalina:       "ba52cc7d9ad91ae2d64afdb956c75d946d80bcfc82a996705298e5896ee8c95a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3a47274d9b84b32a2c7b3328a7201aa86d8399f4e00941f5461498f527fb44ae"
+    sha256 cellar: :any,                 arm64_monterey: "719b89039fa6d2a7bf46e3e41d092854fcf7a2192bff60dcc6d307416f67758d"
+    sha256 cellar: :any,                 arm64_big_sur:  "0ca1f7a5751af784f3ec1afc2fa85bde3487be08a7b5fc17a07335c0d399b13c"
+    sha256 cellar: :any,                 monterey:       "96833590a2b4173f35f25eaf23c589f856eaa2780fabd66f646335508555a95f"
+    sha256 cellar: :any,                 big_sur:        "a540b019ab53255a0ddec65ddc85c5d891f75a51305b63c81808925c55556b50"
+    sha256 cellar: :any,                 catalina:       "4b7505f1f572a3052d356f639d7d25cb77c1b1ffae9378b4bed3789d70778986"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4ed9838a0a467888b3012b2c2979accdb9cfc27422c5ffd769408e3afe0cd5c5"
   end
 
   depends_on "gnutls"
