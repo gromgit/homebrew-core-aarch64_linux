@@ -12,12 +12,12 @@ class Ehco < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "58b3a1bcdc7f9aadc08965c587b3d6fa877075d62b639c90f94a0016a94ed657"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bc4c8b91493e822d5068ae6d02068f5c5e7790d8d1b776b1fb1bea9a077c4fbb"
-    sha256 cellar: :any_skip_relocation, monterey:       "1cedf54dd057b2341cd5d553427dc7109ef6b07fd028d5739c6ddde38d8f999a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bbfc3978b9a69b1f381ad64231606dfaeef27f8d3d9e9b433ecc879828ea0280"
-    sha256 cellar: :any_skip_relocation, catalina:       "039a8b48a139e971b5c8587ed75fb4f44fd4b117f824157e2cc50f85ac08ef33"
-    sha256 cellar: :any_skip_relocation, mojave:         "a790f96ce6704e4cc4d0fcc3e962ae8d6d79711d8b72bb2eb788d37db9b73b8b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "24d028b47e3f21743bb8e9ae6f02c60247806d7657e140ce4ba25c254e31f832"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "285974a17e80b0dc06803316d71f694ef0e0cef7449641e76738b18768b7f9a8"
+    sha256 cellar: :any_skip_relocation, monterey:       "955b7bcfb6681ca0c733d02afcb50bf848d340c9f74b3ff01733160e585581e9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c3081decea0e987e9115f3a0e67412372eb2fb7d6301992a62f3c3040bdd0bea"
+    sha256 cellar: :any_skip_relocation, catalina:       "ca1802dc805cfe09c4ab7a06ab27592cf46c83eb708af4c399c35627af2a099b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b78ea30d2249f5c29e3642016edc43fde0e2ae4895cb6b7ae7ff80ef6e108a92"
   end
 
   depends_on "go" => :build
