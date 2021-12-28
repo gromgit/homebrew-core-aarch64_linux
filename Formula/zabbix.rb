@@ -7,12 +7,12 @@ class Zabbix < Formula
   head "https://github.com/zabbix/zabbix.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "173136dbcbf1e52e04c326837865a1d3b3b2d4bb0da9e1bc1e60b3a0b336b510"
-    sha256 arm64_big_sur:  "d412ee9ec8756e860c92735468fe6708a8ce1f1de9b7be640b727b5611248cf4"
-    sha256 monterey:       "86b2dceab1a0653699cd8c3a1629e0a8d745ce51010f3f7c9666bcf543e9c9cc"
-    sha256 big_sur:        "774a042f14c60b6f09e58850b4daff0792612df1622da0f0ac5c8476bc5a7fe2"
-    sha256 catalina:       "b9329270de541dfdf2039526ad8be27bf136923728b3df57798694152623216c"
-    sha256 x86_64_linux:   "c0309382bf3fbeda4651c911f58e3e839b8b65962ec08ab25e33e79e2675ea07"
+    sha256 arm64_monterey: "7b2a4a6b8b76a05c3715fb97fd63880015372da3f706d5486299e8c141e580d4"
+    sha256 arm64_big_sur:  "e6243079ba8cc2e8b897472b12d9487cf7358e6e355d862ceed1420b5bb9434c"
+    sha256 monterey:       "bd9ddfee43eaa57a4a0a9f774423d6ca862010d644b89d35934b771ed97934dd"
+    sha256 big_sur:        "4030456db52f5c1b30ad5a0ff036c82af008e23683d444df80feef1125c7a75c"
+    sha256 catalina:       "c074d5aee35a3695245b0e85907488f2a91218a7f10754815d24342386933ea3"
+    sha256 x86_64_linux:   "f6c4d0316876e8123da73c418390e30c8dfef6d23dc1f3aca74cb4c1a63637fb"
   end
 
   depends_on "openssl@1.1"
