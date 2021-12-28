@@ -1,10 +1,9 @@
 class Gauche < Formula
   desc "R7RS Scheme implementation, developed to be a handy script interpreter"
   homepage "https://practical-scheme.net/gauche/"
-  url "https://github.com/shirok/Gauche/releases/download/release0_9_10/Gauche-0.9.10.tgz"
-  sha256 "0f39df1daec56680b542211b085179cb22e8220405dae15d9d745c56a63a2532"
+  url "https://github.com/shirok/Gauche/releases/download/release0_9_11/Gauche-0.9.11.tgz"
+  sha256 "395e4ffcea496c42a5b929a63f7687217157c76836a25ee4becfcd5f130f38e4"
   license "BSD-3-Clause"
-  revision 4
 
   livecheck do
     url :stable
@@ -21,12 +20,12 @@ class Gauche < Formula
     sha256 x86_64_linux:   "45f73c386af54c74febe68a0c0e022eb534e6d521ff8190789cd01cd185b07ab"
   end
 
-  depends_on "mbedtls@2"
+  depends_on "mbedtls"
 
   uses_from_macos "zlib"
 
   def install
-    system "./configure", "--prefix=#{prefix}", "--disable-dependency-tracking",
+    system "./configure", *std_configure_args,
                           "--enable-multibyte=utf-8"
     system "make"
     system "make", "install"
