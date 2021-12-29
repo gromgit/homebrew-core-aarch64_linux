@@ -12,12 +12,12 @@ class Rav1e < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "5929f9b74a52e6a798d9a6b572622c401cd046811535823b50b31160eb190e4f"
-    sha256 cellar: :any,                 arm64_big_sur:  "5d525f7b54988d3d3ca552abc7cfec45f9c069f726db42a44af9ceb3be148ae4"
-    sha256 cellar: :any,                 monterey:       "d647df0d16f1e2975b7dcc557824b7549005a8a9057e839b39aaf38e5b81c986"
-    sha256 cellar: :any,                 big_sur:        "e1b17e0a7dd036cdc8075f6af8b19ae976bb28f24209f9ed387f43efa2e1448c"
-    sha256 cellar: :any,                 catalina:       "c16266957db69346464e39967d41d5198f3550423d6aabfb62919975cf52ea19"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "26610d706c2bdb477747126731405918b207233b90b13797afc3dcfe1155b3bb"
+    sha256 cellar: :any,                 arm64_monterey: "9d48bd483e2d92e70f329a6adf29c93d67af0d6510c3d7163e49000067be4a26"
+    sha256 cellar: :any,                 arm64_big_sur:  "f87657ce277bf69054832d9e628edd18a4f4ea39df298a2e81db0a85f5da0e56"
+    sha256 cellar: :any,                 monterey:       "4cc9765faec8aeca62be987bbcd113fd6227f4ed027dcc64e9b197ec52663c23"
+    sha256 cellar: :any,                 big_sur:        "4464e4eec498522d840e1ef3b919bba86ca7a2eb04d12a9b939005382437b201"
+    sha256 cellar: :any,                 catalina:       "9ce2a8b3dff9374e3a9603fc51e5b26bee38450ad91df06681fcb02f2844f5cd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6e3d6e1b0f3b5e7c1b2a8936eeeb59a24257fa0c71f6c8f70aaf647b4c694cfc"
   end
 
   depends_on "cargo-c" => :build
