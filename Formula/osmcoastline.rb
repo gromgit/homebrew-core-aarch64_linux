@@ -7,10 +7,11 @@ class Osmcoastline < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "e0820b1a6cd6e77dfdd742f29404c5f1b78f9b198a59c7019152e4e9d9608d72"
-    sha256 cellar: :any, big_sur:       "f4de31702d99101baff041d2b96bc4bd58f1bd728c07353f5c9f753551ba3d31"
-    sha256 cellar: :any, catalina:      "eb5bba76581312e9b070eb5f83b8d98e9862d0f33b13808f5a6f0a33ce3c0973"
-    sha256 cellar: :any, mojave:        "37f1b4c9d9fb60ed418eb69292c7f3b9de2cc3b7599f2ba8fed69a1b1ee88d13"
+    sha256 cellar: :any, arm64_monterey: "eafdd4eb3ac17b514218a3c67b8f4562ada4b7cb2b8db9985619c4357855477e"
+    sha256 cellar: :any, arm64_big_sur:  "2c6dfbe9ff1bad2df1d96f5be762aea19993d20ae33cfaaa30e1fabf47d245e1"
+    sha256 cellar: :any, monterey:       "2d74a18bfb2dacb243fdcb689ba2a65f451bec7946472440b0325dd4b5f5dac3"
+    sha256 cellar: :any, big_sur:        "58e35c2d3e36a65e2de913efd7d223db355d0be6bc79b8b34d0d7a6735deea84"
+    sha256 cellar: :any, catalina:       "6f6b48082bc6f9f60cadc80a40737ffe37c24a1efb9e9f1ab6fcbf1e314d257c"
   end
 
   depends_on "cmake" => :build
