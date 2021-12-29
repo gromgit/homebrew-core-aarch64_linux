@@ -8,10 +8,11 @@ class SimpleTiles < Formula
   head "https://github.com/propublica/simple-tiles.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "69b3202a2133624649d9bdeaf11a948a3868f388162f3fa45e876b29fe9a6818"
-    sha256 cellar: :any, big_sur:       "fe498ae4895ef92fe4bbe9089bbb1286687bd71c5328465862bcf1c34edda0e0"
-    sha256 cellar: :any, catalina:      "b0dd435ef5d6b254f681809018fd650004c1b59ef76cbf3d3a6eaffe255947ba"
-    sha256 cellar: :any, mojave:        "2d1e85dde8f09ec695679fba96a38e2494b2ddc21462ad463b689fd63e98c61a"
+    sha256 cellar: :any, arm64_monterey: "8d09ede3891adf6d32df74873d5365d864858a1ad1eb80a905186efd8f35996b"
+    sha256 cellar: :any, arm64_big_sur:  "48cde5e0f3f7db77717a96c6f72878b65f49dee17d21cc9a0dda8758879d9e6c"
+    sha256 cellar: :any, monterey:       "beb9fc72f05678da06c5eada56a6e2b113e288a9692817258a334d7f1adc1712"
+    sha256 cellar: :any, big_sur:        "745550aa590b1eaf83c24f02812fcf5f6f6989057c81cee02ad31e680dabb42b"
+    sha256 cellar: :any, catalina:       "fe567eb488eaa8d8f39b5e76804bdf4ddbc96c6ca11bf77dadcc340869a83abf"
   end
 
   depends_on "pkg-config" => :build
