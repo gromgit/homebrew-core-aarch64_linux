@@ -6,14 +6,12 @@ class Libgsf < Formula
   license "LGPL-2.1-only"
 
   bottle do
-    sha256 arm64_monterey: "7cc3b9e7b267e2cff1ffa2319e9b607af58076aa1b0d6d9d646181899df77e6b"
-    sha256 arm64_big_sur:  "3262a07b0905e7ad4b2fe7558f5fddbe40d4a57e5749312520b171d9b83ad71e"
-    sha256 monterey:       "bd49e7408da16ece6d7fdd9062c81776d9a3aed17987cb490013ff9eb9006690"
-    sha256 big_sur:        "190c702ad48598787b9fc72a019cd8f2701d1ae28ed41e3c111acd19b223d139"
-    sha256 catalina:       "82a2fce8b091d204302919c7541a0ad21a28a24fe8ad8a5d4ae7f50f3f190349"
-    sha256 mojave:         "a051f21e80044277fafb60264c915cb79ce5f64059e9737f7a15795bc79ad3c8"
-    sha256 high_sierra:    "c2cb9985014c2c727abe935f113ab827e5a7af1e4376c27261897381fc87a2ba"
-    sha256 x86_64_linux:   "8b124567389a546101a177fb6d53322316102ae8192fb47f0c4011652f116dbb"
+    sha256 arm64_monterey: "0f68d9e85cc01cf4ddde476019363836b5e1cb3d913c259c35297868dd2c53a2"
+    sha256 arm64_big_sur:  "ac636909e945c9f23f3c572fee770d10da012fb98b2ce8264efac8746c5b94b2"
+    sha256 monterey:       "6ecd62d5c077353d2870f6d6edb965662cdbc8ba6bbafa665078a2ed4386adaa"
+    sha256 big_sur:        "91f9dbc9298d4912a5253e58745be39eac1ae5bf52c9c8bfaffed501386f391b"
+    sha256 catalina:       "506784ec0575361b52ab434531167a7fe664ec6fe6fd1bfd6b038a8404b8226b"
+    sha256 x86_64_linux:   "896243a1484bdefe58bfe9e686ed17686897d584efd28acd8e6d73e7c28fa726"
   end
 
   head do
