@@ -7,6 +7,15 @@ class YamlLanguageServer < Formula
   sha256 "c5413137ec0ebf79a4368fd97611f2ae6d08a0c4ee2d6efb28763982a7e05e2a"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9263e1c32411bccec08e034997088e8911139704992e5eb427992f1bfdb3198c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9263e1c32411bccec08e034997088e8911139704992e5eb427992f1bfdb3198c"
+    sha256 cellar: :any_skip_relocation, monterey:       "47dccc5d1968883137593117fc16944ae29edb65ffce2ef0782a9de2526a56f4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "47dccc5d1968883137593117fc16944ae29edb65ffce2ef0782a9de2526a56f4"
+    sha256 cellar: :any_skip_relocation, catalina:       "47dccc5d1968883137593117fc16944ae29edb65ffce2ef0782a9de2526a56f4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9263e1c32411bccec08e034997088e8911139704992e5eb427992f1bfdb3198c"
+  end
+
   depends_on "node"
 
   def install
