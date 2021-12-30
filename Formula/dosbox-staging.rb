@@ -7,11 +7,11 @@ class DosboxStaging < Formula
   head "https://github.com/dosbox-staging/dosbox-staging.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "1582c58614778487dbd1db8865f4d48da778b8b705d86b4e1a5a0a9b138007ae"
-    sha256 cellar: :any, arm64_big_sur:  "ea91d5a56b9629996f80724521195de779fbcfc1866ec65a0a9bf4aecc0e5126"
-    sha256 cellar: :any, monterey:       "bf526bfb6ff092be2c906fc3639e951fc1c4a38256790e91680ba0f5c789b74a"
-    sha256 cellar: :any, big_sur:        "1bcf72092ca21df66b7f20fdcb21b78120e6e593ca6172012c87dc7e85df9395"
-    sha256 cellar: :any, catalina:       "f4d2f3d4b924d7835efef8edad01c04eb585f2b2a1538e1004909ac8591ee4da"
+    sha256 cellar: :any, arm64_monterey: "f634764b7cefa11e450bcfe29dcecbb82d8125cc2cec86d22a10128a1ff74b19"
+    sha256 cellar: :any, arm64_big_sur:  "6f4dc4d1961d8b03023989407c0f6e87a78e61717bc02dabeb5f5cc3c7c094a0"
+    sha256 cellar: :any, monterey:       "ef7a5a75fe9a3832876bfba92fb436bfc901955e569e1b6834fb220579c6f361"
+    sha256 cellar: :any, big_sur:        "d7f4608edc91ddc0e74dbff45251f6b8e8539fd4994dfa1326f2880c22b4f620"
+    sha256 cellar: :any, catalina:       "8c21190904606a6cc0c6cf0e937cc3ef748298bb4982eb096443d3d1a928ab06"
   end
 
   depends_on "meson" => :build
