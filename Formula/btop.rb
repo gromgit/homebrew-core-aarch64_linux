@@ -6,12 +6,12 @@ class Btop < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "69e3fe9db40a2199d27cdfc7a8069d91a9b6cefa17cfe16d724baca524675c3e"
-    sha256 cellar: :any,                 arm64_big_sur:  "c157912f312710af3ad2fd0e085ae129cd25779171f71b63c7f09f5a065c838b"
-    sha256 cellar: :any,                 monterey:       "d0a341938d3cf88ecadae9cdda08e9459f976ff69803206b71ac1bcb8590e969"
-    sha256 cellar: :any,                 big_sur:        "4086644601c63cab3623b6c04fca98b64b59890fe5aaa7762e6ec5cb2e995311"
-    sha256 cellar: :any,                 catalina:       "2c68f6617e40eca4e8214930cfc2e093b4d6791c5d40e1a98bc76fcdc5846d99"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5b665fe653262fcfbcfd19868f60fc378c524a047d5062db8fa853ac8bd76794"
+    sha256 cellar: :any,                 arm64_monterey: "9f6eb37d75b01b22db80d6588efdf7b54f4da46014b77011cadf40c066765540"
+    sha256 cellar: :any,                 arm64_big_sur:  "4025f975437407ca14fdf443a9fafeb3e9b608d995174b692916cf8364769d3b"
+    sha256 cellar: :any,                 monterey:       "6372ffb8ef569fdee3a9c2d6844656a22488632fc00c242b182fc1cef471b17b"
+    sha256 cellar: :any,                 big_sur:        "97bcb3fbadef609666ccec59416b49fa11b2df99c8bfde0f755e073a5aa727b3"
+    sha256 cellar: :any,                 catalina:       "9a7d75b5fab9dced68695fd77babe2e9fe8b4e0968d6255e6edaef47851ef8cb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4e48afdc303d124af378973459f8c3f3b469a8f97867e3d18f2ea0687305f63d"
   end
 
   depends_on "coreutils" => :build
