@@ -1,10 +1,9 @@
 class Supertux < Formula
   desc "Classic 2D jump'n run sidescroller game"
   homepage "https://www.supertux.org/"
-  url "https://github.com/SuperTux/supertux/releases/download/v0.6.2/SuperTux-v0.6.2-Source.tar.gz"
-  sha256 "26a9e56ea2d284148849f3239177d777dda5b675a10ab2d76ee65854c91ff598"
+  url "https://github.com/SuperTux/supertux/releases/download/v0.6.3/SuperTux-v0.6.3-Source.tar.gz"
+  sha256 "f7940e6009c40226eb34ebab8ffb0e3a894892d891a07b35d0e5762dd41c79f6"
   license "GPL-3.0-or-later"
-  revision 2
   head "https://github.com/SuperTux/supertux.git", branch: "master"
 
   livecheck do
@@ -22,24 +21,26 @@ class Supertux < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "glm" => :build
   depends_on "pkg-config" => :build
   depends_on "boost"
   depends_on "freetype"
   depends_on "glew"
   depends_on "libogg"
+  depends_on "libpng"
   depends_on "libvorbis"
+  depends_on "physfs"
   depends_on "sdl2"
   depends_on "sdl2_image"
-  depends_on "sdl2_mixer"
+
+  uses_from_macos "curl"
+  uses_from_macos "zlib"
+
+  on_linux do
+    depends_on "openal-soft"
+  end
 
   def install
-    unless build.head?
-      # Fix for `external/findlocale/VERSION` is trying to be compiled (on case-insensitive FS)
-      # This mimics behaviour of https://github.com/SuperTux/supertux/commit/afbae58a61abf0dab98ffe57401dead8f7f1c0dd
-      # Remove in the next release
-      File.rename "external/findlocale/VERSION", "external/findlocale/VERSION.txt"
-    end
-
     ENV.cxx11
 
     args = std_cmake_args
@@ -47,17 +48,18 @@ class Supertux < Formula
     args << "-DINSTALL_SUBDIR_SHARE=share/supertux"
     # Without the following option, Cmake intend to use the library of MONO framework.
     args << "-DPNG_PNG_INCLUDE_DIR=#{Formula["libpng"].opt_include}"
-    system "cmake", ".", *args
-    system "make", "install"
+    system "cmake", "-S", ".", "-B", "build", *args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
 
     # Remove unnecessary files
     (share/"applications").rmtree
     (share/"pixmaps").rmtree
-    (prefix/"MacOS").rmtree
+    (prefix/"MacOS").rmtree if OS.mac?
   end
 
   test do
-    (testpath / "config").write "(supertux-config)"
+    (testpath/"config").write "(supertux-config)"
     assert_equal "supertux2 v#{version}", shell_output("#{bin}/supertux2 --userdir #{testpath} --version").chomp
   end
 end
