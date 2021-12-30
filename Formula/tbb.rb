@@ -6,13 +6,12 @@ class Tbb < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ab51e857beba9a5eaa3a8e265bb39443f6be0af06ce0e637b37d2c322b5b0eed"
-    sha256 cellar: :any,                 arm64_big_sur:  "562dbe3727195b7d22f5750f720ab8719e84dd557f120af380fe65ebf1de0f71"
-    sha256 cellar: :any,                 monterey:       "dcbc8429653c9953eeb40e73f228ebbdfca7e86bbcc13ddc9078fc67531660cc"
-    sha256 cellar: :any,                 big_sur:        "292efca6f88d8dc0dd396593ec9cd7fffee60457968f3bf4911e595e67b0e4e5"
-    sha256 cellar: :any,                 catalina:       "ceab79696162f301977698d1274dfc220de372ba473845c0b89ce29572e2c54b"
-    sha256 cellar: :any,                 mojave:         "d5c1155379f21962bc47d172a9b673c4a72b24656b5f7fed5990d3e34b909c98"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5dfbbb5d279074f2bc885ef3fa4c8e28faf69115434f1e58212bc3b027e36fcf"
+    sha256 cellar: :any,                 arm64_monterey: "804b72c51e22dfa98d7252a3e187b06c22244ac09ddcdee8aa78ece343083f18"
+    sha256 cellar: :any,                 arm64_big_sur:  "f869d3475a70d54683b257434dfdb7496b7872e7aa4e214287b69777515692e0"
+    sha256 cellar: :any,                 monterey:       "b0b026ab6a6cacf1be163f6344862a3102efe93627cc71c8da38443e1c43bb70"
+    sha256 cellar: :any,                 big_sur:        "4d2baf8e746cc56b7564207865ca491313262904a414c281f6b32c15160b74a2"
+    sha256 cellar: :any,                 catalina:       "8853e627df0ac701d1378531e2eaf2cee7bc6f7e6f07f904e49e405aa1175315"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b80392a4505b4116bb4d551c95d12fd3c1ad59162950024b03a48b2e29edaf1b"
   end
 
   depends_on "cmake" => :build
