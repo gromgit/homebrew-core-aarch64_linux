@@ -12,13 +12,12 @@ class Bgpq3 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "db88fa2c41b636282c34347b28a55030bd04d9f7ba4518a0e006f152251e7523"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "472157a36cb85bb858b6687a6fccb1dc32221b93545190459c6441f8644977ba"
-    sha256 cellar: :any_skip_relocation, monterey:       "01caeccb3693d6122821255d90952bf9007ce3b5529d26ec6a48045e31452bd4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "21400e8e71cc8647ec4acbf90d4dbe1ed01dc483bae6c5fd422ce7856c922bb0"
-    sha256 cellar: :any_skip_relocation, catalina:       "20323444446909aa9892ea16f3a2cbdc8ce6665be3270713dc01c3cb0163d35a"
-    sha256 cellar: :any_skip_relocation, mojave:         "19d8b27219ecd0988603200ad428df266bacfddea15a4570de15ddfd2a017190"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "55ff963a23fb548d055ae5bea489108a00caeca54c3308db10eb399c400a049d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "890ade49fae97d8e9967362b464b57cc172fb5305e05dee84d7c3b5ab5e869bd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b9edea14c24ccca9986d9dbf14cedd8e245fc49ecffb07a3079deff2b6576448"
+    sha256 cellar: :any_skip_relocation, monterey:       "7a130fc4a82b1ab7255290dc18058a369ba604905386a32ac7f76a6bab543ee7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "6d04e58f086891a0a8f1bd8c91e813afb4de0fff26f61a8bc30d3c82d2829a42"
+    sha256 cellar: :any_skip_relocation, catalina:       "4294f76491ed0fe10c6df11b695489e2765b7eb8bd4ccfe0adcabced418968a2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ee8fc268ac1e1293ee27d9b8a82411c7dc98f2a4df8e4a88efed3635699bc4ba"
   end
 
   # Makefile: upstream has been informed of the patch through email (multiple
