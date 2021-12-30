@@ -12,12 +12,12 @@ class Supertux < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "c43cf071cc0f131af3b0e21d82eb18ef691e23905b8bd0a851218d1221a7221d"
-    sha256 cellar: :any, arm64_big_sur:  "a43aa28db1ce468178567d76e8d62ecc90b7059efebf09e7486adeb7fb4fa22e"
-    sha256 cellar: :any, monterey:       "416ca52bb2f3184cb76c3afd0d56429fb204f9d627d013f19c922b6418b712e5"
-    sha256 cellar: :any, big_sur:        "b2a5292147a6d0f84589d699a2c5f0ffb196602640c5302f82281d021274c506"
-    sha256 cellar: :any, catalina:       "59c8ea513385b6d4785c28cca54864ebdcc415d5ece4fe724d11a4a74f7f95cc"
-    sha256 cellar: :any, mojave:         "2b0b76de7aa2d930df7d8b22eb3389c4dcaea132a45de9eb88907ded500c7cb3"
+    sha256 cellar: :any,                 arm64_monterey: "f9677deb13c19bdd3e76c135e2fb2d961ddbf6f98d4e305fc1605e3c4a2bf103"
+    sha256 cellar: :any,                 arm64_big_sur:  "9a68b3e319f61d99118584fd5a007291db8d5c8d076c5a643b541b33eda928cf"
+    sha256 cellar: :any,                 monterey:       "63ef627b954b70207338d052603dbcc6135421549dcecd01324d10a8e9e6165e"
+    sha256 cellar: :any,                 big_sur:        "a767e80bf9819fa11cafdd3083f9e263cf10049410a3133efbcb8b112854ce35"
+    sha256 cellar: :any,                 catalina:       "1807232df5b7acccfe300a8e79353c076a9031f3056e24bf653492cf2df37472"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "201ebccb650519184532f54602b2e51911dfa079e60152bfadca5ea07b901f1c"
   end
 
   depends_on "cmake" => :build
