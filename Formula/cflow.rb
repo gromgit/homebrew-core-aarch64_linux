@@ -1,10 +1,10 @@
 class Cflow < Formula
   desc "Generate call graphs from C code"
   homepage "https://www.gnu.org/software/cflow/"
-  url "https://ftp.gnu.org/gnu/cflow/cflow-1.6.tar.bz2"
-  mirror "https://ftpmirror.gnu.org/cflow/cflow-1.6.tar.bz2"
-  sha256 "34487b4116e9b7ecde142b24480ce036887921ed5defb2958068bb069c1fedd7"
-  license "GPL-3.0"
+  url "https://ftp.gnu.org/gnu/cflow/cflow-1.7.tar.bz2"
+  mirror "https://ftpmirror.gnu.org/cflow/cflow-1.7.tar.bz2"
+  sha256 "d01146caf9001e266133417c2a8258a64b5fc16fcb082a14f6528204d0c97086"
+  license "GPL-3.0-or-later"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "ea9bd9605326d36b0f744b380a235e9f34c2dc50fc5e771e95d3aaf1abfdbf36"
