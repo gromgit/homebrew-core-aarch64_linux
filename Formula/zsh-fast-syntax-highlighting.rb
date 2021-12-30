@@ -6,6 +6,15 @@ class ZshFastSyntaxHighlighting < Formula
   license "BSD-3-Clause"
   head "https://github.com/zdharma-continuum/fast-syntax-highlighting.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5491428e00739fd9a4f66c979e2a1cd132b42279c2088052e071797a88fb9f28"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5491428e00739fd9a4f66c979e2a1cd132b42279c2088052e071797a88fb9f28"
+    sha256 cellar: :any_skip_relocation, monterey:       "196df85afadfaeac5121915b914bab28a77e6fdbf6d4bb3e5d0fc6f7e8c4dbbb"
+    sha256 cellar: :any_skip_relocation, big_sur:        "196df85afadfaeac5121915b914bab28a77e6fdbf6d4bb3e5d0fc6f7e8c4dbbb"
+    sha256 cellar: :any_skip_relocation, catalina:       "196df85afadfaeac5121915b914bab28a77e6fdbf6d4bb3e5d0fc6f7e8c4dbbb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5491428e00739fd9a4f66c979e2a1cd132b42279c2088052e071797a88fb9f28"
+  end
+
   uses_from_macos "zsh" => [:build, :test]
 
   def install
