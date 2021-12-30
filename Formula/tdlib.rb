@@ -7,13 +7,12 @@ class Tdlib < Formula
   head "https://github.com/tdlib/td.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "65a4a0f8e819d3098b6d27a25094cbdd8f0b52b8b5634d61bc56cab322c69808"
-    sha256 cellar: :any,                 arm64_big_sur:  "15d07ea3abe99c9c65e1e74fa43aa6c2be758e84dc5f8657ef68fc47d8540a36"
-    sha256 cellar: :any,                 monterey:       "0d8bf2d9dc9fe1cbf2e14e09edad4b925e3c9364dee634a06c91665e9a9885a5"
-    sha256 cellar: :any,                 big_sur:        "79dc39f41a2ad6d8272887c0564f043e9c362b1073ba2ceeb338f50e717c97dc"
-    sha256 cellar: :any,                 catalina:       "fc606ff0b78fd6ad52f0449dfd1380e646b4de63ff36756546838b783a088ca2"
-    sha256 cellar: :any,                 mojave:         "007b08aced0aa457830daaade4299c979ee97db6b420bdfe5d0e6bdd416925c6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b31b608f51cf0bf440570fe2eaf172a55816c378a8bfedc69e7625b55f2004b8"
+    sha256 cellar: :any,                 arm64_monterey: "00e02b03043acd904f3a6422f32e1cef717262c802b1a26bafd392384c392feb"
+    sha256 cellar: :any,                 arm64_big_sur:  "8be24a3d5ff903fb42d8a50e1cdf74d15222cecd602f1b94fdf1ca1767ed0937"
+    sha256 cellar: :any,                 monterey:       "a2c1f2879ca86f6fc3621b097ebead6145a87d9c4404ceaa52a4506fc8e6d8b5"
+    sha256 cellar: :any,                 big_sur:        "7de0871fcfc2f560f2737a017d4466ac9924a275b8b1f812328e23a590eea183"
+    sha256 cellar: :any,                 catalina:       "4f83585dd6cc3635b37e93e89db0c939ab0d0e47dff327d2ad5a5357a038777f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2741ee46f0de27c0a2bf4be6ce0c6a0d07d4ef5f7ad51ff5ca726598fb114418"
   end
 
   depends_on "cmake" => :build
