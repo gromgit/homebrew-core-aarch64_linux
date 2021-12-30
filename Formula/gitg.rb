@@ -5,10 +5,9 @@ class Gitg < Formula
   sha256 "7fb61b9fb10fbaa548d23d7065babd72ad63e621de55840c065ce6e3986c4629"
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "2ded594592e0592f7dfc47f3591e653dd7f6e1855baae68e13de5d88675e1fda"
-    sha256 big_sur:       "15678226c2eb5d7cd620185f0855df633dd68479defee7bb9173b24446adfdd0"
-    sha256 catalina:      "e3b41287764238e5cee518835288ca288ad0b048407b5678a9641a2fab9a34b2"
+    sha256 arm64_big_sur: "a2bf23c4cb3fdfdcdb05f250b5bf62d33bc60d01072f182f1209a40b604674df"
+    sha256 big_sur:       "45de0fdc63fdd84c90e4ccfcbd99e7f2338b5d5510f7b8364fc32b49d6335528"
+    sha256 catalina:      "6243ae261e1994f5b72c79bb469c23270c67e25a1e0f1a4a1fa39f1f248fd3f4"
   end
 
   depends_on "intltool" => :build
