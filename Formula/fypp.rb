@@ -8,6 +8,15 @@ class Fypp < Formula
   license "BSD-2-Clause"
   head "https://github.com/aradi/fypp.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d335abdb9f9abb8cb73a5b37e98c0d0369b82f292e872669d5d0173760e124e9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d335abdb9f9abb8cb73a5b37e98c0d0369b82f292e872669d5d0173760e124e9"
+    sha256 cellar: :any_skip_relocation, monterey:       "20d62a61da2cc4ff53250237b0545572ace9952699dcb23783ca398714e9beff"
+    sha256 cellar: :any_skip_relocation, big_sur:        "20d62a61da2cc4ff53250237b0545572ace9952699dcb23783ca398714e9beff"
+    sha256 cellar: :any_skip_relocation, catalina:       "20d62a61da2cc4ff53250237b0545572ace9952699dcb23783ca398714e9beff"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "598f4d49aa3bd0280943d70fa2b1f3b3de3c5686bbafdf84e40e5359963a33bd"
+  end
+
   depends_on "gcc" => :test
   depends_on "python@3.10"
 
