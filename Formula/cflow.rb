@@ -7,15 +7,12 @@ class Cflow < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ea9bd9605326d36b0f744b380a235e9f34c2dc50fc5e771e95d3aaf1abfdbf36"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d0b017a7e277a9ba4d337df8318c0e9154c235329a846151d8be03bdef75c58e"
-    sha256 cellar: :any_skip_relocation, monterey:       "32312d230803f862d7fb53cb2a2e32892351a7ff530a94e3a3756494eb81946d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b131f52fdaf1658378dbcc134be8c2d713e2e1d66002df05ef8d1ccfcac132e8"
-    sha256 cellar: :any_skip_relocation, catalina:       "a8b7329845d3c42a17efc7af96025a1a2839ae129afd7126e977d0a245853f45"
-    sha256 cellar: :any_skip_relocation, mojave:         "a96f9cf3cb35851c27ed602f6a05489da2d64e75ab6daccecc3e23156d9fe968"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "50a816924cb91e1c4055923285ea3ceb0d815b4641477906ae5f6abdae337d52"
-    sha256 cellar: :any_skip_relocation, sierra:         "5e88f5310c34255947032f24227cf779aa8a42fe595f585605e814f001f4a151"
-    sha256                               x86_64_linux:   "06ad443c55fb5979f0986088dcf96b22b739d7c12d51d593c063bc70018de5d9"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "775aa08b6d73ae6aa6eaeef7e1b187acc8b78daf87c7be6771914213d3907b4d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c243b38883f723c09ea4ebadc5cca19ede2f3210fd75379f4636fa7320fb0e0e"
+    sha256 cellar: :any_skip_relocation, monterey:       "3631370161b2fe088572eb63e1653c9d591184870cbf5e6ec31187f919082cd8"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ca4cbcfa33c53ff166dced09c73683076a112b6053ae4667abf3f97fd0aaf1be"
+    sha256 cellar: :any_skip_relocation, catalina:       "aa461817268ac09391a88903ab13a8a13852c943a4d38dfe5342c202f1daf5d6"
+    sha256                               x86_64_linux:   "62e41fe118da0de3ee5bbf3a85273d53aec1ada3b389f2e4b7876f4aa9f9ee0a"
   end
 
   def install
