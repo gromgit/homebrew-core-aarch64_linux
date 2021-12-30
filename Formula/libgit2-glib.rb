@@ -12,12 +12,11 @@ class Libgit2Glib < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "14f4f4a3b09727ca9993953c5fa7e0b9d0dd991cd9f782cdd42d254e6317b974"
-    sha256 cellar: :any, monterey:      "f0882a1094ecc41ffba0e08d64de5681e7a71a0ad5126789c854d38c755cf58b"
-    sha256 cellar: :any, big_sur:       "88a012ad27e2056c313cad08039c2c2ac534ff6f383baae09363b357fcbf5e7e"
-    sha256 cellar: :any, catalina:      "804db5cc23243985293b05e7ab18c54a52e36cb4f339c5d9bbaaee5ac6ebdd39"
-    sha256 cellar: :any, mojave:        "bf0aacd695af9b723be16caaba4252e87bb1001ff4710872d4b5eceff7efe8f5"
-    sha256               x86_64_linux:  "95b4558001af9d732a9d9ab29bcb0cc096af93f7b495e196db9fb0b16a9f399a"
+    sha256 cellar: :any, arm64_big_sur: "530b3deff6ef24fe1a321506397ba429c78b94428f7bad5e4872de193a4e74de"
+    sha256 cellar: :any, monterey:      "845aa584a3d3a5fd98962a6932a4335de2ac1360342afcf71e343a66707a4745"
+    sha256 cellar: :any, big_sur:       "1b218cf212c7839c4600bc23de7d0b604ac4c6e1c556f4dbd7c8d6dceea14bf5"
+    sha256 cellar: :any, catalina:      "8152d6025203f78acb73bb29ad95c4e102c6294d4f0d1731bd61a4c78613cef2"
+    sha256               x86_64_linux:  "35959d73799fdc5052e3b7ac33b67e72176e0a084f8fc08bdd11dfc1c6b189dd"
   end
 
   depends_on "gobject-introspection" => :build
