@@ -14,12 +14,12 @@ class Nginx < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "15228cc0e51e265e8aa287f44e09217c5afc44dae0ae61947d950f797ced42e8"
-    sha256 arm64_big_sur:  "4dd0e6520d694faecd67208c88e02a65e8ea41ddc57d117809f4cb631a6372d9"
-    sha256 monterey:       "1705176bc483a5fe2dfaa0872a370f6b7d05f2e3283a49c444276ad72673a71e"
-    sha256 big_sur:        "dbae394ff91462356cd7a0c7503310c1978a5d6ffad89eb364a01b3d18cb12d1"
-    sha256 catalina:       "f41c58466bc3104d0b2950227c0a4e17426f08c70e4c2b98513ce0316a329a74"
-    sha256 x86_64_linux:   "3289075c07e1cda0ca9cdc76aea71c54cdfa77ebfd6c4266d78cb640f84c2f9a"
+    sha256 arm64_monterey: "2ec54f127e49deb1ed17946bc0e8a777e7d3c85eeb729cbd79ccf457ddacd4af"
+    sha256 arm64_big_sur:  "73f1935935271909fd5639376a05ffc2ec58d9fd9c7ce09fe143fb3480b9a777"
+    sha256 monterey:       "a802faf81a6346a929963f56a7c6316014eaa93cce626c060b78574c36609322"
+    sha256 big_sur:        "9398d23d0f2cdaecdffd6e7e1d0c27e4f785e11adff3a2fa270a39ab019fe685"
+    sha256 catalina:       "2f90927e81f6beeb764f997afd48eb60af07aa53d5d58e93a5b17fb1b174e270"
+    sha256 x86_64_linux:   "46ad84954a043642d56dce152cebd7975c20526c81d7e2625f77ebbb10610377"
   end
 
   depends_on "openssl@1.1"
