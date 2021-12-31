@@ -9,12 +9,12 @@ class Esptool < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "9c52ff396b766dc0d886049143a1e07ae5a4ae66fd9324d8d7086e4cc4300278"
-    sha256 cellar: :any,                 arm64_big_sur:  "dd42a3301e863b412b9a51a73359b6f3cc030abc0aee8a7b02a6432e0bceeb11"
-    sha256 cellar: :any,                 monterey:       "f0c4671413f88b73105da8362db9aaf9bc41a6b21a26b60a9bb8d6bd06ea8d25"
-    sha256 cellar: :any,                 big_sur:        "0cfc27468d292253ff44cb4a51176b68e472fa3bad740235eaaa419d7bcb3eec"
-    sha256 cellar: :any,                 catalina:       "06d4d81d98e1bb77bd2c975658179b9a1c13b01a51ef5d44c887c13401a0e8d9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0a83eeba0b8aa49af1da4af3f3c21b3396221a5b0b9100df7bf7a4170d943b68"
+    sha256 cellar: :any,                 arm64_monterey: "74011061e4a4653c2f249402f7b6c2eb8e00fcda4b4e8355bea1c20487096ce0"
+    sha256 cellar: :any,                 arm64_big_sur:  "7ff5d0f1168c00e6793634b93fefaddfee5ecd8a473b829a854f9c5f203f42b6"
+    sha256 cellar: :any,                 monterey:       "f558be94d16775ef52d65784dfa9522e37b19fc6414d3de892c5c9e80eaf937c"
+    sha256 cellar: :any,                 big_sur:        "18bd6da1c6043223de47829a32cba269279aa725b4b901c75e393db69af946d1"
+    sha256 cellar: :any,                 catalina:       "75820854327d3f002f2c3e75bba6f56e85d2d57e0f83ec088c564290bf6089c8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e3b6a1c7d875fbbb1f225b45f886f6230f5bbc639f71be8832f989f6f82e18cf"
   end
 
   depends_on "rust" => :build
