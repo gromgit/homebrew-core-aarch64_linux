@@ -12,10 +12,11 @@ class PerconaServer < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "c2077bde58f094279772039ce25def268384e3554654f8688ede559d72a5c9c6"
-    sha256 big_sur:       "24af341e7ef3ae18b08b71f768fe4d0a2e2c2865fa5596b8fa777563c84d486c"
-    sha256 catalina:      "327a0d0ab6e27fcc3eb7ffac026737d389e8d8c885aaa7e1eac8cbb1cd0eac81"
-    sha256 x86_64_linux:  "d444e36e30dc23b1a4c844f7d8ac5dfe506ca2ee3b4fd5a0c7cc6dbc4716ac9f"
+    rebuild 1
+    sha256 arm64_big_sur: "8901fe53207419d45a41741cbe5409b567b20364555a8cbf15414c7888832134"
+    sha256 big_sur:       "8f96dcfb077909e8296a52d5515932f0ff443247d3f9d1775133faeed1dac992"
+    sha256 catalina:      "3b81df8d00df849a2fdb93e74714b6fb269629a4bad48f5d0fa04fa949d84bc3"
+    sha256 x86_64_linux:  "9be2d41b8dae532002c477f8ad7f69c0ab24169c40e98089d1c69466bb4d5885"
   end
 
   depends_on "cmake" => :build
