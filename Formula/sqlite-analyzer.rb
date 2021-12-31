@@ -11,11 +11,11 @@ class SqliteAnalyzer < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "29364e244d788411686ee37506dd78203b78427b7174336a17bee7c443399f00"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e271dd370a114ec628cd33c59d77f84bbade320d203f3844170008ec0e90d3be"
-    sha256 cellar: :any_skip_relocation, monterey:       "22f11f2929aae2189c0745d2479f2d22886c21ba1b40d6a623654883b00f34fa"
-    sha256 cellar: :any_skip_relocation, big_sur:        "312e36ce70eaeda6c1f91549278ed0eefcacc1f73ec354ee5694d90a8c3263b0"
-    sha256 cellar: :any_skip_relocation, catalina:       "4f1cbfaa4da2437bace58bbfe34134a61761a926a6a795510a1b02515f45a0de"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "33d6e3527ccf4ef9d2a0f58f47952293125d18d5b94830cc488ce33eddcb2fe4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2e0fdaef71d3f0a605249145ac03f5d6b5372cc019e225956e652bc7f8df9b13"
+    sha256 cellar: :any_skip_relocation, monterey:       "823769e2a778e9b36c7714859874a261e295f701354a7ed1f56773d274b6334e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e79007af69d9f5cbb831ee410d10daae21875d75a2e15a93d241a18108566c9b"
+    sha256 cellar: :any_skip_relocation, catalina:       "a6052e4c2c43c900d8cd541ccf21495c4e82ab1f3b952c16aca584d82570c69a"
   end
 
   def install
