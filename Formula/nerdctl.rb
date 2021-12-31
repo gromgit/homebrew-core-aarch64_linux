@@ -6,6 +6,10 @@ class Nerdctl < Formula
   license "Apache-2.0"
   head "https://github.com/containerd/nerdctl.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "4e1a743a2022cf387cf749926608e90bb8c606e86b9580b05fc0bd6642a2f143"
+  end
+
   depends_on "go" => :build
   depends_on :linux
 
