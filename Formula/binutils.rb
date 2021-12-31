@@ -5,6 +5,7 @@ class Binutils < Formula
   mirror "https://ftpmirror.gnu.org/binutils/binutils-2.38.tar.xz"
   sha256 "e316477a914f567eccc34d5d29785b8b0f5a10208d36bbacedcc39048ecfe024"
   license all_of: ["GPL-2.0-or-later", "GPL-3.0-or-later", "LGPL-2.0-or-later", "LGPL-3.0-only"]
+  revision 1
 
   bottle do
     sha256                               arm64_monterey: "688777b47a3ccd4bf77ba9fa46c0ed66dd0c8a662dbd9c0021e574df5c87a783"
@@ -19,32 +20,45 @@ class Binutils < Formula
 
   uses_from_macos "zlib"
 
+  on_linux do
+    depends_on "glibc@2.13" => :build
+  end
+
   def install
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--enable-deterministic-archives",
-                          "--prefix=#{prefix}",
-                          "--infodir=#{info}",
-                          "--mandir=#{man}",
-                          "--disable-werror",
-                          "--enable-interwork",
-                          "--enable-multilib",
-                          "--enable-64-bit-bfd",
-                          "--enable-gold",
-                          "--enable-plugins",
-                          "--enable-targets=all",
-                          "--with-system-zlib",
-                          "--disable-nls"
-    system "make"
-    system "make", "install"
-    bin.install_symlink "ld.gold" => "gold"
+    # Fix error: 'LONG_MIN' undeclared
+    ENV.append "CFLAGS", "-DHAVE_LIMITS_H -DHAVE_FCNTL_H" unless OS.mac?
+
+    args = [
+      "--disable-debug",
+      "--disable-dependency-tracking",
+      "--enable-deterministic-archives",
+      "--prefix=#{prefix}",
+      "--infodir=#{info}",
+      "--mandir=#{man}",
+      "--disable-werror",
+      "--enable-interwork",
+      "--enable-multilib",
+      "--enable-64-bit-bfd",
+      "--enable-plugins",
+      "--enable-targets=all",
+      "--with-system-zlib",
+      "--disable-nls",
+      "--disable-gold",
+    ]
+    system "./configure", *args
+    # Pass MAKEINFO=true to disable generation of HTML documentation.
+    # This avoids a build time dependency on texinfo.
+    make_args = OS.mac? ? [] : ["MAKEINFO=true"]
+    system "make", *make_args
+    system "make", "install", *make_args
+
     if OS.mac?
       Dir["#{bin}/*"].each do |f|
         bin.install_symlink f => "g" + File.basename(f)
       end
     else
       # Reduce the size of the bottle.
-      system "strip", *Dir[bin/"*", lib/"*.a"]
+      system "strip", *bin.children, *lib.glob("*.a")
     end
   end
 
