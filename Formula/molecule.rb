@@ -9,12 +9,12 @@ class Molecule < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f50236a201bb2cffd2a8d51294f5a40146fcffeaff8a660ce3466f270fc9165a"
-    sha256 cellar: :any,                 arm64_big_sur:  "fc17e8f9e9370738f4db07572bbb45f156fd18d567867d09414044c12941f73c"
-    sha256 cellar: :any,                 monterey:       "eb43ca07c9efb0540a2cb4258d2bc681c0f141cf39854d65179c6bedb3553370"
-    sha256 cellar: :any,                 big_sur:        "c9bc121fb5a8455d0b6feed10296133eb124095e70b308e868d5fa53d3ab0ad2"
-    sha256 cellar: :any,                 catalina:       "c2032ce109e7887c94c5efaf9cc84bbbf6d382a43c14c3fdbef46fc9f203b7e4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fa707330580be4313826cd2a1862e58367fb1b49e4ac95ace33a8fcbb3bbf396"
+    sha256 cellar: :any,                 arm64_monterey: "dd0aaacde70a9a379a538e494e764d407058ba273a0b00b82e293e09f3ef911f"
+    sha256 cellar: :any,                 arm64_big_sur:  "226302b5cd463436a305b8bd4cf404f86a6946dce56a8ebf52546a253d89be0c"
+    sha256 cellar: :any,                 monterey:       "fcae23a7b06f91575b41ff6cfba7108acd9733b38ec0d1881847c58c94ca9454"
+    sha256 cellar: :any,                 big_sur:        "9d5c6bf10db90c1bd2e3822b8c0d5b7aad83bc945e501defef6f2b79177aa915"
+    sha256 cellar: :any,                 catalina:       "f39c6f0006a4e782b89451fe35e153d6886c50a3151be8ffdab05299148cf0e5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "645eb700e8d9a85b00cc4d3a86675093e70328d561f6dc27f2b47c8b7b3fd3a1"
   end
 
   depends_on "rust" => :build
