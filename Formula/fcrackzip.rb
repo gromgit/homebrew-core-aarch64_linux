@@ -35,7 +35,7 @@ class Fcrackzip < Formula
   test do
     (testpath/"secret").write "homebrew"
     system "zip", "-qe", "-P", "a", "secret.zip", "secret"
-    assert_equal "PASSWORD FOUND!!!!: pw == a",
-                 shell_output("#{bin}/fcrackzip -u -l 1 secret.zip").strip
+    assert_match "possible pw found: a ()",
+                 shell_output("#{bin}/fcrackzip -c a -l 1 secret.zip").strip
   end
 end
