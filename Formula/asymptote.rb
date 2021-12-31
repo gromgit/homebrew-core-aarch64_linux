@@ -12,13 +12,12 @@ class Asymptote < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "e922efa8bd5a20f0904538590ab9a16bb1ace1098b310b738abb2d4420ee4a3e"
-    sha256 arm64_big_sur:  "51b5992d115848c87754a30dc0341c73119294eb80f882b2ccf363215b276715"
-    sha256 monterey:       "43fee389478b409929b52ae0bbf32ca37d3dbd6628f2b041aa9d9ce9527caf2d"
-    sha256 big_sur:        "d6631cfaf7909cfd8a38c7e655411b69248d395531589f7562b66b36ad9ccedf"
-    sha256 catalina:       "b906f3cbeda2861975792c6279df7c2e22738c8ae232bfb5e4cf4ec1a37c0725"
-    sha256 mojave:         "c7d65e0093978726a703585d8155862b1b7e10ba47f531f907c106b65bead23c"
-    sha256 x86_64_linux:   "f3918cb9c194f0eb86d9b86d5ce4d6fcb721214a70b9e9e7658a547d6490e635"
+    sha256 arm64_monterey: "35dd1e97fca7edb69bde626f1f503c10275f8b221f71c1840953d4299ca081aa"
+    sha256 arm64_big_sur:  "baae14036da02db6e2c5cc8ca637d759d1af8e13a6330bac953c802dc0e00190"
+    sha256 monterey:       "a4f10101d0dc819abd76a2150d7bcb429f9eb136e8d83b4faae7a2ac0e34e19f"
+    sha256 big_sur:        "8f3a6e7b6baacc43cf517168994b84626484c8f73f75655be5254a616e6ffde4"
+    sha256 catalina:       "2ec57ee257c0706bfd1143d27e37c2179dd99a54e33aa882ba522ea13903f07c"
+    sha256 x86_64_linux:   "e1765dd33095e894b1ca5879e9480defcf5132249dedd35caf5c85b237e573a5"
   end
 
   depends_on "glm" => :build
