@@ -5,6 +5,15 @@ class Zoro < Formula
   sha256 "5e78704f4d955cc4fd6dcc3395392e52516f00296cb65454f6959d4b7b54e319"
   license "GPL-3.0-only"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8a527ad3a8feeb3f659d75f0146843339e4377a63a72cd14e987c77bbebd3647"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "62e51e52666b734d3ab5bf05d39f2af1fa5bc657cc96c5c34e25fcddc2e0689c"
+    sha256 cellar: :any_skip_relocation, monterey:       "93d7641309e5826897e9407ed9f528240c68a22d7a8f0ac272321078718477fa"
+    sha256 cellar: :any_skip_relocation, big_sur:        "edbb86277a41769277b24643ec1b19652ab615b40d0760023477530a928535e0"
+    sha256 cellar: :any_skip_relocation, catalina:       "b018bcf6de41f3323380fe85ba6181e26540c61a46b9faa28a3fd845e04855a8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0e5c2f190710ef2be7b10d20f89d3db1cecdad89ed9fc40e3de57e0aebdcad01"
+  end
+
   depends_on "go" => :build
 
   def install
