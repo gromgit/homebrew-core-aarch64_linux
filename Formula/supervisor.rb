@@ -9,12 +9,12 @@ class Supervisor < Formula
   head "https://github.com/Supervisor/supervisor.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "282f314e020d32fb6b8d50b727f36a2c92f787b6512df9b1f041f7a67f7a97f8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "282f314e020d32fb6b8d50b727f36a2c92f787b6512df9b1f041f7a67f7a97f8"
-    sha256 cellar: :any_skip_relocation, monterey:       "6739662cead4e3fcd898cf529dd8213e73ef7146e0a1c5c60fc254e3299dcd18"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6739662cead4e3fcd898cf529dd8213e73ef7146e0a1c5c60fc254e3299dcd18"
-    sha256 cellar: :any_skip_relocation, catalina:       "6739662cead4e3fcd898cf529dd8213e73ef7146e0a1c5c60fc254e3299dcd18"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a92cc6ede49769260375e5464d022cc9b72629ac5419076dff3a5610bf8fde6e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "893ca89b1845c7b24681ab3587c756256c6dc34f7beaaa4e8d6796875ca8f2e6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "893ca89b1845c7b24681ab3587c756256c6dc34f7beaaa4e8d6796875ca8f2e6"
+    sha256 cellar: :any_skip_relocation, monterey:       "7831c5348e5af718d21a3f806c1fd9c35da9a75c8a61a3aa91c639c17cf7989f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7831c5348e5af718d21a3f806c1fd9c35da9a75c8a61a3aa91c639c17cf7989f"
+    sha256 cellar: :any_skip_relocation, catalina:       "7831c5348e5af718d21a3f806c1fd9c35da9a75c8a61a3aa91c639c17cf7989f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c4a68ad7bd4a43edb63c43c6a5a9746d6787f4cc4faec7265bac1fdbd10b66f4"
   end
 
   depends_on "python@3.10"
