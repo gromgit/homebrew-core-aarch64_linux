@@ -11,10 +11,12 @@ class Inspircd < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "33f3cd972d8ab19d4bac2325993d190c0af3e88b9656f4637186cacb0819a881"
-    sha256 big_sur:       "25ee9b4d13e8cfcfcc6e74ed5b3f936a220670a5a7220f1b870900a75f86dc2c"
-    sha256 catalina:      "f0694ead1168a43f793f83ddac4cfa9e173c8a236c9fd4e5b78b2d2230a27250"
-    sha256 mojave:        "b94389bfdd3396598b3f0ef09ce775540a42f0edc94618c2d56578bf9d2ec9bc"
+    sha256 arm64_monterey: "b482ea556af3c350dc3b8227312f8e883f7a751952884c78c553e9884ea8cec1"
+    sha256 arm64_big_sur:  "ec29f2309f31327aa68fc12f5ffe8b2c56231dab58886399ddd759c40f3348e9"
+    sha256 monterey:       "e8b83e4b26e9942ee0e6b52cf7f029b6aebab6d41ab25390ca704aa1c4880f5a"
+    sha256 big_sur:        "7774e0b1cec9d0facc75e33cb1a0e32e126821cf4eb1964e4e2a5b78cb519479"
+    sha256 catalina:       "7cdb8110691d79209e2366cceeb4353924e8d6fc7e422d8d756b8c9217571e55"
+    sha256 x86_64_linux:   "5f92f268e08a27f8013667603414a3d664d175096dfb44c1ae157b875f43a77b"
   end
 
   depends_on "pkg-config" => :build
