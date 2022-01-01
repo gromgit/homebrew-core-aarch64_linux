@@ -9,12 +9,12 @@ class TreeSitter < Formula
   head "https://github.com/tree-sitter/tree-sitter.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "97339409b6fc51f5db33633fa563f60de778b5bce732ab2079e43cd2fcbc2132"
-    sha256 cellar: :any,                 arm64_big_sur:  "a2de5338a614bea1152bab80d9545fc43681a422c84bb69520a8bbefc35b8d1d"
-    sha256 cellar: :any,                 monterey:       "ec802e84633532f8524b56c68956d6e5fb8bca8e06eb8340e2d8b04a6174d12b"
-    sha256 cellar: :any,                 big_sur:        "d4c89927faf3a4cc8bdff8a610728286f364a874db4779a87b9a6954dac246a4"
-    sha256 cellar: :any,                 catalina:       "1b0b0a0b17deee94650445012f00e38cc53bb8bab01c95343f5efded43343c92"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ef83da037ec0ae5d47d57d50d3bed4903b4691184caa04e8a378cd1b808d4617"
+    sha256 cellar: :any,                 arm64_monterey: "62290038fce550e4a6cbc75f33f1925d95ad5bad439ce6cf8fa216c81d0be075"
+    sha256 cellar: :any,                 arm64_big_sur:  "cc4079bdc9f104093d0d6be38401f16dd63a627e7cef19d9f08b538b7cc28edc"
+    sha256 cellar: :any,                 monterey:       "9d19226d411fcec7da5eecadfcd6a656f7ea48c0ad3a2cf2929b5cfd16cad9a0"
+    sha256 cellar: :any,                 big_sur:        "254d85b978cb88de52b5898f812a3142ff0472891dc08178da24234ed2f9781e"
+    sha256 cellar: :any,                 catalina:       "37c323429d67d1cb9171c9c380937a611a16d30a16fa501e5dc85ab0cb14fad3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b74cec2b7fe30ad688384f90a6389aecefdcdfde8a967dd360558bb7b0b99f60"
   end
 
   depends_on "emscripten" => [:build, :test]
