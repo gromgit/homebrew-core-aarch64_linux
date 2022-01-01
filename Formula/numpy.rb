@@ -7,12 +7,12 @@ class Numpy < Formula
   head "https://github.com/numpy/numpy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "92f6b5f147bd1295ab1d64bba9451a251c6326607d53c8e9a62c3895f0523ffb"
-    sha256 cellar: :any, arm64_big_sur:  "659651fbcb92c17f4466787747055774cc27fac0236e0fb718969a19bf005513"
-    sha256 cellar: :any, monterey:       "6eb881aed76b7ef92b369a5bf4999adb3e5028b75d29e379663d7de64b337bb4"
-    sha256 cellar: :any, big_sur:        "dc648aa1b370d08c950d423ec8de4276de0ffaf0af65ebd8fc3b1aa0e3919f37"
-    sha256 cellar: :any, catalina:       "9085bbdc6b07cb35083ad8d21eb8d7f2329e985809e016b38f5943939490e80e"
-    sha256               x86_64_linux:   "a4bce872c432d8db7d0277f6c5c6f97a61b828408110ab17ee298eb0bf8901f9"
+    sha256 cellar: :any, arm64_monterey: "1c2d8b6b6fb3b6e717c3e360bf35667b5dea5341ca9f30a1ea5d9ea93e206320"
+    sha256 cellar: :any, arm64_big_sur:  "583589487451f41b81fe238c3e1eaa7437fabfd7ffe1ce68917e727ac763a98a"
+    sha256 cellar: :any, monterey:       "bea28b41abc0001c354dc435308eabaf246f132dd369aab26ab4d53c92e5f1e7"
+    sha256 cellar: :any, big_sur:        "954442b9e73986fc548149abd84e9c2a6999186bd673f11c5744e57ac24b6130"
+    sha256 cellar: :any, catalina:       "82051930b6fc4187db9935b9ca6c5070157499ef52aae2fa08afbb417b60b89f"
+    sha256               x86_64_linux:   "2a51cd17e7b25e1639015c0c2009f99a25e9b7c69b8c90934612c5c73bcb7c55"
   end
 
   depends_on "cython" => :build
