@@ -12,15 +12,12 @@ class GnupgPkcs11Scd < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "69450e7c835ff35ed21224b1d25eea6a338df9c0acfa5a9d4ca92c08b5145be0"
-    sha256 cellar: :any,                 arm64_big_sur:  "f7d8c8919b4411b11a53c503ae03db90ac561332c3cdb97da4d57ef9165aa352"
-    sha256 cellar: :any,                 monterey:       "e04230f87f16c8b543e8ad45c4263f404abd169c1a2026ffc4cd4af69b7a6f3c"
-    sha256 cellar: :any,                 big_sur:        "039a425a56fce6b9495361e626925b46a5c6569ef0bed3512ff12da6148ab221"
-    sha256 cellar: :any,                 catalina:       "78f09618378fd89be78ff9e10af2e1d33ac5dc06fcca6474994662434b7b3dc1"
-    sha256 cellar: :any,                 mojave:         "78537d1ee3285a604aae1d683db56da1b9ec76bf71262ff234e758efda63f885"
-    sha256 cellar: :any,                 high_sierra:    "1f4264ac76b36c453a3c5a000d1b1269f331e88420efc5591274ccbb8dc8b85c"
-    sha256 cellar: :any,                 sierra:         "83748a14d87233e8a2cf4744d0353c01176536b5cd9e1b317f741f824416453f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5c2719fdf486929fbc749fbfd017d5d5cc3c4324fbe956c8b9f98a8031e10c45"
+    sha256 cellar: :any,                 arm64_monterey: "c783d038482db57a2d8d2c6752db239b851cd4efdbcd246dcb5be6d72809621f"
+    sha256 cellar: :any,                 arm64_big_sur:  "c66622684e3b7200502f7f900c89db167e86b1886d3ac0f55868af58cb4d7b10"
+    sha256 cellar: :any,                 monterey:       "515f27e4a0f27055fb2f7baab59ef6ec5aae2853e63c3b15f5ec641f994e4022"
+    sha256 cellar: :any,                 big_sur:        "f14a431b4b3a20f193d279afd4aaaba3700af4c1d9cb059ed06e9469f2eb6812"
+    sha256 cellar: :any,                 catalina:       "728f08c91b4137c0472594d0e53ea171e808ab90376b3a8c2e1f9cd65eff452f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "63e019746caec337a340e65ce8fa26a1d02a07837777fa65e863d1e6c51d5de2"
   end
 
   depends_on "autoconf" => :build
