@@ -5,6 +5,15 @@ class Dtm < Formula
   sha256 "79ec193ad5dd28a6bf01290df7e457bc1b0316bc3f153f9f9bafe7daa612d6cf"
   license "BSD-3-Clause"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b430e4e760c116b740b3500ecec75553c4d2d2bb910231f43747329d6e1b6863"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "791d568650f65f3123da5d23d8cfa876401eb591a71042a79ac4f1b0338477b2"
+    sha256 cellar: :any_skip_relocation, monterey:       "463f680270a13253af59203410067417b9c8352f8f2b155cf7c4ce843b08b1c0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "12f97624ea8d4b167ca30a6da20622d36385701704e32d8ffeee8888361d4bfd"
+    sha256 cellar: :any_skip_relocation, catalina:       "4f02349809168abde7c7fe06f8423f612c436074a1b9e105e94aa498aab9b38e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0dd46df68250524222ec007700b8839c5f3e1ed02f5e4b966e7e90f08be014ae"
+  end
+
   depends_on "go" => :build
 
   def install
