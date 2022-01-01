@@ -12,12 +12,12 @@ class Scotch < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "bfbee38afc6f86d5d5d11c73c9f7d05dc39f05665d3168e82c818e9cefebc161"
-    sha256 cellar: :any,                 arm64_big_sur:  "0fbfab5ce2b53368bbe985e8fa52a8795038ceee9aaad672cdd89b1e37a6942f"
-    sha256 cellar: :any,                 monterey:       "4c6bd2a2e725b654d043b763db65ee9341a9a5e0778a21f377a6c6948b507fa5"
-    sha256 cellar: :any,                 big_sur:        "ac8eb11522681a950b2461bbb09c2c4698d9a05c9026e694c1bab11663adddcd"
-    sha256 cellar: :any,                 catalina:       "ba2dce5a5e568d50fe9165b96be0f5c41e9db2e5249cb0a2b48f1603be9c2598"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6b24a501bf3166e4eab44a91fb9c450e4d102209c723aa31fc3804fa8f759b90"
+    sha256 cellar: :any,                 arm64_monterey: "91f03cb1007abbf67a644e735fe443e4169398c3695ba64dff5ecfd4847a5b31"
+    sha256 cellar: :any,                 arm64_big_sur:  "503025cb4b3f0d8db315970a30e4ffe30199913b30ff036aa73624d2201d0907"
+    sha256 cellar: :any,                 monterey:       "ea1a22d651955876079f3c3b15e27359417dd32da4aaa08a31a9d0b8cd475849"
+    sha256 cellar: :any,                 big_sur:        "c0c83373c6fcbe49f01ba2cd8e73ff767671f0e43d00cd666c9005a9286059a0"
+    sha256 cellar: :any,                 catalina:       "8ef12d89d6d2de7ff4495456cb23f5dc89770c834a4d35b604d8ecdd6115c448"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "085ce19d188ae760959d428a7da362de763e74d4d83efc598cef3cb2772df291"
   end
 
   depends_on "open-mpi"
