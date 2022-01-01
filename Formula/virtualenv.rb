@@ -9,12 +9,12 @@ class Virtualenv < Formula
   head "https://github.com/pypa/virtualenv.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f76a3275155e207313a2b5690dfe6497426e6fc60a1f0bc126027b88bf326693"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5d082cd4b8e8241c81d8d42f1775409dad06037659d2569864b0c0f11e091c00"
-    sha256 cellar: :any_skip_relocation, monterey:       "9dbc609d674d78d2ba34081a53fbf3781d5777302a1c3b77297deb38c6e378be"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cffaf048240a9027f7f5b4b1349262c61becdf00edc6ea7525afd4ee7d4b4dfa"
-    sha256 cellar: :any_skip_relocation, catalina:       "9e9714a3937b61c8fd0ad07eedbd7b28986958b7efbbf9539a6c82dca97687a4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0bfafb1c8a427c4970b2b96aef715f5a6bb906cb17f3b5892b84977a61c16ecb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "94345f1c273c558f964788cdb96c82e469debd39b1982e0a395d58781e64535a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1a62688cebe5ce63596c4bd0072c5927c66e0fdd54eabb982ee1f346a0a8377d"
+    sha256 cellar: :any_skip_relocation, monterey:       "df47997a828084ccd463665018c719d4bc62a37565cc24ec78202fbba53022cd"
+    sha256 cellar: :any_skip_relocation, big_sur:        "6e742adf7b686b744136991cdc3af0bf104b1672a6986bb970fbd6a783b91c21"
+    sha256 cellar: :any_skip_relocation, catalina:       "80ca8a2af1cb3055daf1bd77fcdd78b7579732e8ea9f26e5358ea64c4518fc6e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f9ddcf46b8923ca78e35c249b8bc5e865b4bb3b50b39fb6a26e9e601b7a3c627"
   end
 
   depends_on "python@3.10"
