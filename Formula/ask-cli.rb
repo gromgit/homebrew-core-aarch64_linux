@@ -8,11 +8,12 @@ class AskCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6ac3f4a96bd2c79484892e4a7740c72edb6c2141365551ab1402762ca57aa099"
-    sha256 cellar: :any_skip_relocation, big_sur:       "18c34ee050739e525549fa2fe79fc5cd0ed36db58031150802744fc2b010294f"
-    sha256 cellar: :any_skip_relocation, catalina:      "26372a8bfdd117c11e7dce55d2946db943ddd3b035e30671c654a9213dff3551"
-    sha256 cellar: :any_skip_relocation, mojave:        "a8b73172e29b4295b9c780261876f6a57cfb8545474cd0d4205f31d6048bf2ea"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2512f4176778dd8ab682ce80b4112fa0e3762a2b7a4679f2da8923290a405e9a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a64e6da06ed3a1c0f34cca44e25326cd7e6420764feb751b121d6d30453a641d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8175b37b15077fe73f6ab5f321d835fc6b1c6c2aa4c3faf0945211ec05a68369"
+    sha256 cellar: :any_skip_relocation, monterey:       "196cc241cabe2c14328da000d6220e72b6d2a89cabd31c0bc68a710d73ff17ce"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e07ccf3d1b813daa7c3f891a8e92aec6073fa76e64faefb2b03cb81b5daa63a4"
+    sha256 cellar: :any_skip_relocation, catalina:       "947c0f10f91f82ac3824b915c9c08982d6ffb734e33de9f4d2a8af3da9908478"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "63d923267b0892662cdcd435c65603aea6eeff21196ae4f7a064d4bc8511522f"
   end
 
   depends_on "node"
