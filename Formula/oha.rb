@@ -7,13 +7,12 @@ class Oha < Formula
   head "https://github.com/hatoo/oha.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ce139d78d0067b14acbb609a84333f84adbc17331baa52c9f36a907180885446"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a3693c393cbdf6530012618ccc76baa0c097e070a8027a1325053f8acf981eae"
-    sha256 cellar: :any_skip_relocation, monterey:       "6dcff917bd53406a5fdb6e72b9063227c9c87d4310bb0431f5ea9c55bfeb622f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c0fc8e64d2377bdfef80fce6108a88a99fca74eb7351f35340990482fabbbb73"
-    sha256 cellar: :any_skip_relocation, catalina:       "11647d250ab6850ba72e7d7d98e066ac05c71779f2392e6c28d093e55abb5288"
-    sha256 cellar: :any_skip_relocation, mojave:         "94358e4baccec0ba2b96dc17e1bdab41498379a4e7942fc31d02387f275b9ec2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a720e4afa810982b69431c4ebe370555e073b277aaa1f889399aeb36bf272255"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "aca372ab0f9ac3193e6b38ef76c3ed21bbfb5bd787a2013414719e24b8933044"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6a0ec54f97f7cd90c4c3b350d9dceab616aeafccd1d6cb3049dab9da4e2f77f2"
+    sha256 cellar: :any_skip_relocation, monterey:       "8107cd641cf752fae921656ec4f82779c6de7346063b4107a25611603336ee42"
+    sha256 cellar: :any_skip_relocation, big_sur:        "593ffda8687757f843c3bcd3194a71d5b3a427cc9c54e37aa0fac05f60b9077a"
+    sha256 cellar: :any_skip_relocation, catalina:       "02db191b777cbdc5413938e2d57e483e42ddff1246be54c8389507b06d1ec7a4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0091e6a2af176fd1bff10eded3fc6c40c11068314f12b48b9fcd1c328b598b33"
   end
 
   depends_on "rust" => :build
