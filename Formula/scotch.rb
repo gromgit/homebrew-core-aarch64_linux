@@ -1,8 +1,8 @@
 class Scotch < Formula
   desc "Package for graph partitioning, graph clustering, and sparse matrix ordering"
   homepage "https://gitlab.inria.fr/scotch/scotch"
-  url "https://gitlab.inria.fr/scotch/scotch/-/archive/v6.1.3/scotch-v6.1.3.tar.bz2"
-  sha256 "754ad046220939b5dfef625b7d8d898cb82874572846c228c54787aa8f4baf89"
+  url "https://gitlab.inria.fr/scotch/scotch/-/archive/v7.0.0/scotch-v7.0.0.tar.bz2"
+  sha256 "a36a26c89b6eeb0ffcda8378fb29dd98a2589a47be93c67b59e00374c878054a"
   license "CECILL-C"
   head "https://gitlab.inria.fr/scotch/scotch.git", branch: "master"
 
@@ -20,19 +20,42 @@ class Scotch < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "085ce19d188ae760959d428a7da362de763e74d4d83efc598cef3cb2772df291"
   end
 
+  depends_on "bison" => :build
   depends_on "open-mpi"
 
-  uses_from_macos "bison"
-  uses_from_macos "flex"
+  uses_from_macos "flex" => :build
   uses_from_macos "zlib"
 
   def install
+    makefile_inc_suffix = OS.mac? ? "i686_mac_darwin10" : "x86-64_pc_linux2"
+    (buildpath/"src").install_symlink "Make.inc/Makefile.inc.#{makefile_inc_suffix}" => "Makefile.inc"
+
     cd "src" do
-      (buildpath/"src").install_symlink "Make.inc/Makefile.inc.i686_mac_darwin10" => "Makefile.inc"
-      inreplace "Makefile.inc" do |s|
+      inreplace_files = ["Makefile.inc"]
+      inreplace_files << "Make.inc/Makefile.inc.#{makefile_inc_suffix}.shlib" unless OS.mac?
+
+      inreplace inreplace_files do |s|
         s.change_make_var! "CCS", ENV.cc
         s.change_make_var! "CCP", "mpicc"
         s.change_make_var! "CCD", "mpicc"
+      end
+
+      system "make", "libscotch", "libptscotch"
+      lib.install buildpath.glob("lib/*.a")
+      system "make", "realclean"
+
+      # Build shared libraries. See `Makefile.inc.*.shlib`.
+      if OS.mac?
+        inreplace "Makefile.inc" do |s|
+          s.change_make_var! "LIB", ".dylib"
+          s.change_make_var! "AR", ENV.cc
+          s.change_make_var! "ARFLAGS", "-shared -Wl,-undefined,dynamic_lookup -o"
+          s.change_make_var! "CLIBFLAGS", "-shared -fPIC"
+          s.change_make_var! "RANLIB", "true"
+        end
+      else
+        Pathname("Makefile.inc").unlink
+        ln_sf "Make.inc/Makefile.inc.#{makefile_inc_suffix}.shlib", "Makefile.inc"
       end
 
       system "make", "scotch", "ptscotch"
@@ -41,6 +64,10 @@ class Scotch < Formula
       pkgshare.install "check/test_strat_seq.c"
       pkgshare.install "check/test_strat_par.c"
     end
+
+    # License file has a non-standard filename
+    prefix.install buildpath.glob("LICEN[CS]E_*.txt")
+    doc.install (buildpath/"doc").children
   end
 
   test do
@@ -55,15 +82,18 @@ class Scotch < Formula
         return 0;
       }
     EOS
-    system ENV.cc, "test.c", "-L#{lib}", "-lscotch"
+    system ENV.cc, "test.c", "-L#{lib}", "-lscotch", "-lscotcherr",
+                             "-pthread", "-L#{Formula["zlib"].opt_lib}", "-lz", "-lm"
     assert_match version.to_s, shell_output("./a.out")
 
     system ENV.cc, pkgshare/"test_strat_seq.c", "-o", "test_strat_seq",
-           "-I#{include}", "-L#{lib}", "-lscotch", "-lscotcherr", "-lm", "-pthread"
+                   "-I#{include}", "-L#{lib}", "-lscotch", "-lscotcherr", "-lm", "-pthread",
+                   "-L#{Formula["zlib"].opt_lib}", "-lz"
     assert_match "Sequential mapping strategy, SCOTCH_STRATDEFAULT", shell_output("./test_strat_seq")
 
     system "mpicc", pkgshare/"test_strat_par.c", "-o", "test_strat_par",
-           "-I#{include}", "-L#{lib}", "-lptscotch", "-lscotch", "-lptscotcherr", "-lm", "-pthread"
+                    "-I#{include}", "-L#{lib}", "-lptscotch", "-lscotch", "-lptscotcherr", "-lm", "-pthread",
+                    "-L#{Formula["zlib"].opt_lib}", "-lz", "-Wl,-rpath,#{lib}"
     assert_match "Parallel mapping strategy, SCOTCH_STRATDEFAULT", shell_output("./test_strat_par")
   end
 end
