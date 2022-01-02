@@ -6,12 +6,12 @@ class Proj < Formula
   license "MIT"
 
   bottle do
-    sha256 arm64_monterey: "49b63a1a1b2af8b28663788278b9ccfd4c5b85333f6fbcda4435114cc81b75f0"
-    sha256 arm64_big_sur:  "58ecbb4a293eefeddec447b1905b1b6afc0e75287032310390a14fb62b7f9e8f"
-    sha256 monterey:       "c5d228523ab9c1a755e8b50f75d97f44c1ea6b91d95de2bfe91d94ec26130e86"
-    sha256 big_sur:        "4545e76654386d639320ba48ec998ce531911c60a32a8a59d5c0d3709cc1b61e"
-    sha256 catalina:       "3285536e477a5a07a1f553947e47cfd535e6f425a01c1940006e98eacd8d186c"
-    sha256 x86_64_linux:   "a6edf32a6649083586286a4dd07ca9363d744035b8f233d86147cfd97517f2bd"
+    sha256 arm64_monterey: "62cb9712728f6564c3a16dbc0ff0039018190140006a116d859f33d74b25ae97"
+    sha256 arm64_big_sur:  "14de62fb7c0938043e569eeb2bfe0a5f9bc210a1e01cc0fdc6cd5bd1a39fd582"
+    sha256 monterey:       "6e01afdab9239b4acade4884b58b0e7e27621caecdfb8d8f21edc7d77f8c0d42"
+    sha256 big_sur:        "bf91fd3fb71763f796699e3cf8dcfc477c31cc6f9fd579fec6a489d82c7fbcf0"
+    sha256 catalina:       "f6af4ae5830d82a9c9c4aa6f36d91a8949bd025b46a3d778c3ad8a7cdf63c854"
+    sha256 x86_64_linux:   "402f0a4d03f0fc03f8ee6faa81dd13bf7e207d3df58de2790c9e51e950ac1725"
   end
 
   head do
