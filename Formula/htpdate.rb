@@ -1,8 +1,8 @@
 class Htpdate < Formula
   desc "Synchronize time with remote web servers"
   homepage "https://www.vervest.org/htp/"
-  url "https://www.vervest.org/htp/archive/c/htpdate-1.3.0.tar.gz"
-  sha256 "674a2617dc11bc7c1a213e97e3266cb169003e9225843ff107388acf4b05c7ad"
+  url "https://www.vervest.org/htp/archive/c/htpdate-1.3.1.tar.gz"
+  sha256 "f6fb63b18a0d836fda721ae5655ae0b87055db1b582e98c4700f64e1ba5e2d5a"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -19,7 +19,9 @@ class Htpdate < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "e8f689a5fc8281aded19911218b02501c17ce75df1eae2ca2a98c09fa77b2cc0"
   end
 
-  depends_on macos: :high_sierra # needs <sys/timex.h>
+  # https://github.com/twekkel/htpdate/pull/9
+  # remove in next release
+  patch :DATA
 
   def install
     system "make", "prefix=#{prefix}",
@@ -33,3 +35,17 @@ class Htpdate < Formula
     system "#{sbin}/htpdate", "-q", "-d", "-u", ENV["USER"], "example.org"
   end
 end
+
+__END__
+diff --git a/htpdate.c b/htpdate.c
+index e25bb3c..fbed343 100644
+--- a/htpdate.c
++++ b/htpdate.c
+@@ -52,7 +52,7 @@
+ #include <pwd.h>
+ #include <grp.h>
+
+-#if defined __NetBSD__ || defined __FreeBSD__
++#if defined __NetBSD__ || defined __FreeBSD__ || defined __APPLE__
+ #define adjtimex ntp_adjtime
+ #endif
