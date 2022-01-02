@@ -6,12 +6,12 @@ class CodeMinimap < Formula
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cf64df506d3d8c88b5b792b44cd20785c0f89e067a8ea0bdb504313cdc6a93cd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "49047a027d756af8a37fea02c4e79fc8ca6017e420e2393dd7e9b7571e7000f5"
-    sha256 cellar: :any_skip_relocation, monterey:       "d3b17f32cbdc0305b1efebb366bef182d76444442fa7830b8d2ce596dbaafe3b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7fb51c7905b9763fa5e3bf7092e79b63d0735a5b00728ee6b3563c8e01b51f21"
-    sha256 cellar: :any_skip_relocation, catalina:       "8af0b53c06c10b278d1a0fe8e5ad1cdf72d606eaa0afe592a7616f77ca4c5cff"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "593b2d08845099ec900b2c40d970ff8b3fb7495d6265c443d1dfa18d4c37682b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "150f80c5d2cb16d491b4bc445aae8e1577153a5a0dceab8b0afde845b49ae034"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "730ceac5fb901e950ddeb35c32d3122f71eb029dedd77970f728da1af0237942"
+    sha256 cellar: :any_skip_relocation, monterey:       "dd1d8d898b78b22485744f6a38f106a486200aeb9e527fc6c815b48e916f4cc6"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d266fffd350d3b812bd5fd88b82fbb5caccad92c9e322686bb5c15925f7727fa"
+    sha256 cellar: :any_skip_relocation, catalina:       "80847b910d7c23a5c32cd4351a512212622285dddd2bb0249859da9a790c9700"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5a0b74f2f5000cba2c4b90cef89fe3ce9877fc3eee854f808cb000b054aa3235"
   end
 
   depends_on "rust" => :build
