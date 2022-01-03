@@ -8,12 +8,12 @@ class Seaweedfs < Formula
   head "https://github.com/chrislusf/seaweedfs.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "099c96308cf0ee8fbb970dd204171181f84c8f5aae756349d537e05f2e666b6f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cf5ed80a8278577a78d24a8068d7da64b1d7e4cf888046c05e60106c18140638"
-    sha256 cellar: :any_skip_relocation, monterey:       "9496b7e859e06df76a8e24ee66b4154db5876da3f6261f4be71952b18d06149e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "929d09049c810000fb9ea68f7b4ccecbc4c4522e66b12471494e28fa5cef57a0"
-    sha256 cellar: :any_skip_relocation, catalina:       "7a1d23d8317394dff6dfc3b1f8d61607d286bf1134c67186ad1f39b51cd060c5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2c5c1f9f1b8a08751b92e6c0c04c2c0b0c3881b4dd7cf0586ac7e64e7d9f9c70"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5f4cc22403f0210f7bb910f2c7cd71de7fe9ecb00df9c9c291c3f7781f3d4065"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "eb5caeca74bbbf1d06ca0664e2824ae5de3f341f7b5e1a6e4b8f1bef767f3070"
+    sha256 cellar: :any_skip_relocation, monterey:       "ad5002cfb727f8ad5de09836bc4991fca4b21e1101106b87b436525100c3d975"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4883c0c261b2e0f6f209d81c8bd61e1427011a8340e1ebb3ca68553e96be83f7"
+    sha256 cellar: :any_skip_relocation, catalina:       "87a53c7da3c6344f521823f2a77acc581e7eadeee04146cd638dc4bcaab273eb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "32f4253c429f9d7ff2888e0decc4b2c83ecd53f66aa47c6600d3d25744891d8f"
   end
 
   depends_on "go" => :build
