@@ -6,12 +6,12 @@ class Notcurses < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 arm64_monterey: "0be2a01d5a602f1af05d73fcac023853396087d43797fe8a24696e7d56af52ec"
-    sha256 arm64_big_sur:  "0d0658a89ceae0605c6ebfebab0e6dbeeb9b1b1a52e9c8b3b553ba3e974e2413"
-    sha256 monterey:       "0faba8f53d6ca2925a8e4692fa0343db69cc08154c79742caa1df033ace13919"
-    sha256 big_sur:        "9278a339565c8db75d2cbec56fb247f0940b8fa449fe9bfff5fdd545823c1adf"
-    sha256 catalina:       "fbeb556e303bc06f5616fd26683f187b60b111024ce94bba8110cd623098bdf9"
-    sha256 x86_64_linux:   "1b3fd3b7e10807be424ccc29ea4b37bffb84e502258aec7f379e0f23eccb26ee"
+    sha256 arm64_monterey: "b1060b15a7d88ac4fb50f5662338fd6a2ebac623baeb8e179b3bf637ec670441"
+    sha256 arm64_big_sur:  "a4ccec36faede960bb7eb31acf056e1860d3ee4545512d35e29ae06dceac9ced"
+    sha256 monterey:       "0c71881087a0e7738e03d46359f409071ef7c7f29ba13d3090a4c6e9461b345b"
+    sha256 big_sur:        "e4ef60455f7275e82055b8bbc3181f88dce2ae5fcd5b4d6f9f87d97cba94e3dd"
+    sha256 catalina:       "d393ad8b7836de08ae1afb87c61350ed80ebcd236163cd6171bf02b989772080"
+    sha256 x86_64_linux:   "924ff15a1e67e4bc5eb9428968d210e38da2725891176ed0ff79fc8493b166f5"
   end
 
   depends_on "cmake" => :build
