@@ -14,21 +14,45 @@ env:
   HOMEBREW_FORCE_HOMEBREW_ON_LINUX: 1
   FORMULAE: |
     ack
+    activemq
+    alda
+    allure
+    alluxio
+    ammonite-repl
     angular-cli
+    ant
+    ant@1.9
     apache-archiva
+    apache-drill
+    apache-flink
+    apache-geode
+    apache-opennlp
+    apache-spark
     apidoc
+    apktool
     argo
     artifactory
+    asciidoctorj
     atuin
     autorest
     aws-cdk
     b3sum
+    ballerina
+    batik
+    bazel
+    bazelisk
+    bbtools
     bcoin
+    bee
+    bnd
     bottom
     brew-php-switcher
     broot
+    buildifier
     buildkit
+    buildozer
     bundletool
+    byteman
     cadence
     calicoctl
     cargo-audit
@@ -39,22 +63,40 @@ env:
     cargo-llvm-lines
     cargo-outdated
     cargo-watch
+    carrot2
+    cassandra
+    cassandra-reaper
     cdk8s
+    cfr-decompiler
+    checkstyle
     chezmoi
     chromaprint
     circleci
     clair
     cliclick
+    clojurescript
+    closure-compiler
     cloudflare-wrangler
     composer
     consul
     consul-template
+    couchdb
+    cromwell
+    crowdin
     crun
     cubejs-cli
+    cypher-shell
+    dafny
+    davmail
     deno
+    dependency-check
+    derby
     detekt
     detox
     devspace
+    dex2jar
+    digdag
+    djl-serving
     dnscrypt-proxy
     docker
     docker-compose
@@ -63,67 +105,115 @@ env:
     docuum
     double-conversion
     dprint
+    druid
     dvc
     easyengine
+    elasticsearch@6
+    emscripten
     envconsul
     esbuild
     eslint
     etcd
     ethereum
     exploitdb
+    fabric-installer
+    fantom
     fennel
     firebase-cli
+    flank
     flarectl
+    flume
     flux
+    flyway
+    fop
     fuse-overlayfs
+    fuseki
     futhark
     gatsby-cli
     git-cliff
     git-delta
+    gitbucket
     gitleaks
+    glassfish
     gleam
     glooctl
     gofish
     golang-migrate
+    google-java-format
     goreleaser
     gosec
     gostatic
     gpg-tui
+    gradle
+    gradle-completion
+    gradle-profiler
+    grails
+    groovy
+    groovysdk
+    hadoop
+    hapi-fhir-cli
     hcloud
     helm
     helmfile
+    hive
     htmldoc
     hugo
+    igv
     imagemagick
     imagemagick@6
     imap-backup
+    ipopt
     ircd-hybrid
+    ivy
+    jadx
+    java-service-wrapper
+    jena
     jenkins
+    jenkins-lts
+    jetty
+    jetty-runner
     jfrog-cli
+    jhipster
+    jmeter
     jql
+    jruby
     jsonnet
+    jsvc
     just
     k3d
     k9s
+    kafka
     keptn
     keydb
+    ki
+    kotlin
+    ktlint
     kubeaudit
     kubecfg
     kumactl
     kustomize
+    languagetool
     lazydocker
+    leiningen
     lexbor
     liboqs
+    librdkafka
+    liquibase
     localstack
+    log4cxx
     lout
     macchina
     marked
     marp-cli
+    maven
+    maxwell
     mdbook
     mdcat
     meson
     metabase
     micro
+    micronaut
+    mill
     minikube
     mmctl
     moto
@@ -132,8 +222,10 @@ env:
     nativefier
     navi
     ncc
+    neo4j
     neofetch
     netlify-cli
+    nexus
     nfpm
     nng
     node-sass
@@ -143,41 +235,83 @@ env:
     oauth2_proxy
     oci-cli
     octant
+    octave
     okteto
     opensearch
+    orc-tools
+    orientdb
     oxipng
+    payara
+    pdftk-java
     phoronix-test-suite
     php-code-sniffer
     php-cs-fixer
     phpmd
     phpstan
+    picard-tools
     pickle
+    pig
+    plantuml
+    pmd
     pnpm
     pocsuite3
+    presto
     procs
     protoc-gen-go-grpc
     psalm
+    qpid-proton
+    questdb
     rbw
+    riemann
     rollup
+    rubberband
     s2n
+    sbt
+    scala
     selene
+    selenium-server
     serverless
+    sjk
     skaffold
     skopeo
+    sleuthkit
     solana
+    solr
+    solr@7.7
+    sonarqube
+    sonarqube-lts
     sponge
+    spotbugs
+    stanford-corenlp
     starship
     stdman
+    storm
     stress-ng
+    structurizr-cli
+    subversion
     svgo
     svtplay-dl
+    swagger-codegen
+    swagger-codegen@2
     syncthing
     teleport
     termshark
     terraform-ls
+    thrift
+    tika
     toast
+    tomcat
+    tomcat-native
+    tomcat@8
+    tomcat@9
+    tomee-plume
+    tomee-plus
+    tomee-webprofile
     topgrade
     traefik
+    trafficserver
+    trino
+    typedb
     vale
     vault-cli
     vercel-cli
@@ -190,10 +324,16 @@ env:
     webpack
     webtorrent-cli
     whistle
+    wildfly-as
+    wiremock-standalone
+    xalan-c
     xcbeautify
+    xerces-c
+    xgboost
     xplr
     yaegi
     zellij
+    zookeeper
 
 jobs:
   autobump:
