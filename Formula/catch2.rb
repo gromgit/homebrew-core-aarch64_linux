@@ -6,7 +6,7 @@ class Catch2 < Formula
   license "BSL-1.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "f58d2e15949c5af35e53cae90f88307881de8eca4100e0c2ad986950ea57217a"
+    sha256 cellar: :any_skip_relocation, all: "839a57fc5d90bb72b80a47c75683f1c483c4a20befdf33745ccfa00bb6f9f340"
   end
 
   depends_on "cmake" => :build
