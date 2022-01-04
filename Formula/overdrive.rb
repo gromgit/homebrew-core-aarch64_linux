@@ -1,8 +1,8 @@
 class Overdrive < Formula
   desc "Bash script to download mp3s from the OverDrive audiobook service"
   homepage "https://github.com/chbrown/overdrive"
-  url "https://github.com/chbrown/overdrive/archive/2.1.1.tar.gz"
-  sha256 "74ec42df2c5dda56bfe04c0f8b831d21fd1511c0ef2839dd2bd84d1fda2b8b6b"
+  url "https://github.com/chbrown/overdrive/archive/2.2.0.tar.gz"
+  sha256 "5a4666ae75677acb90b593e6d31a12da0addefbdfeda679afcbd536c378500c2"
   license "MIT"
   head "https://github.com/chbrown/overdrive.git", branch: "master"
 
@@ -21,6 +21,7 @@ class Overdrive < Formula
 
   test do
     # A full run would require an authentic file, which can only be used once
-    assert_match "warning: failed to load", shell_output("#{bin}/overdrive download fake_file.odm 2>&1", 1)
+    assert_match "Specified media file does not exist",
+      shell_output("#{bin}/overdrive download fake_file.odm 2>&1", 2)
   end
 end
