@@ -5,6 +5,11 @@ class Ivtools < Formula
   sha256 "8c6fe536dff923f7819b4210a706f0abe721e13db8a844395048ded484fb2437"
   license "MIT"
 
+  bottle do
+    sha256 big_sur:  "a349834ee1394a4dbf95392aebfe1e89a29fb0f28892296a43b0585c55a15703"
+    sha256 catalina: "1d78bb0b1fde4e5487470a26231a0c0ec9f573d5cd91254065ccf1019e7bbc34"
+  end
+
   depends_on "ace"
   depends_on "libx11"
   depends_on "libxext"
