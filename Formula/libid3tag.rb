@@ -6,14 +6,12 @@ class Libid3tag < Formula
   license "GPL-2.0-only"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_monterey: "0820b023a1ccf3d8fdb1270e91c8207b737e725040f94826fd0fe49081279b0e"
-    sha256 cellar: :any,                 arm64_big_sur:  "cd7f36377060c5d16d3ee4d4ef5696ef47be82f4f0807172eef36f589cfad246"
-    sha256 cellar: :any,                 monterey:       "34689cc3eb433e97b321ba57a43182f87cf84b3e2ccbce9614913f9dc84c2d73"
-    sha256 cellar: :any,                 big_sur:        "ef38d5804e95cf7f2096c9e8ec31e568170c6e238e43e7ddc3df914ded26f07b"
-    sha256 cellar: :any,                 catalina:       "93b071dac99b3d85dac56e59af42e28d5de959bed9fd37a9a2178c02c8b20f17"
-    sha256 cellar: :any,                 mojave:         "1186600473728830dbb65189d11912e2abf42dac5fcbf7ee38629784cc83b310"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2f0ac4078c55cddf2f6bdb55ba09e81f32d982b0e62c27301d232627a0f31531"
+    sha256 cellar: :any,                 arm64_monterey: "b2464c33c9031a7de18c5d3328e9f34ec6b8a0d14b83339f8137e9d8ace8689e"
+    sha256 cellar: :any,                 arm64_big_sur:  "5131938bc5b5877f75de69be030893d5b0a31e252d36e9579723f7370f5b8bee"
+    sha256 cellar: :any,                 monterey:       "790f7ef2e0cab3a2c6552728d06843b5c490da42cca1e5ef34e76a110a2ed5f1"
+    sha256 cellar: :any,                 big_sur:        "1f3fba83270f945e708fbe4b935608aac1564c57f04ada6077ef4c73aa12ad37"
+    sha256 cellar: :any,                 catalina:       "203fc54e1c97e801e3a5c38a094217fefc60f5ee613b8dd662981b8a77ed3848"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "82e1a4d5bdf7328cd39d9eab69d04bcbb9d509b1f479a022b30487058898b0cd"
   end
 
   depends_on "cmake" => :build
