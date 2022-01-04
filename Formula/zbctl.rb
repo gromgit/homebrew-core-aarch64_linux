@@ -7,6 +7,15 @@ class Zbctl < Formula
   license "Apache-2.0"
   head "https://github.com/camunda-cloud/zeebe.git", branch: "develop"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d3e371b9cb6a84ef2ff97011c41da59fbab979cf51c471b38ef1577614a44338"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d3e371b9cb6a84ef2ff97011c41da59fbab979cf51c471b38ef1577614a44338"
+    sha256 cellar: :any_skip_relocation, monterey:       "22141eaa052feaddd41c8e2f52677eb6a8eaa7893d18e3e39128974a34d611dd"
+    sha256 cellar: :any_skip_relocation, big_sur:        "22141eaa052feaddd41c8e2f52677eb6a8eaa7893d18e3e39128974a34d611dd"
+    sha256 cellar: :any_skip_relocation, catalina:       "22141eaa052feaddd41c8e2f52677eb6a8eaa7893d18e3e39128974a34d611dd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8da943af497ffe7af297c23478e6e484d475ee86c052b3878dc18b8fc65a239c"
+  end
+
   depends_on "go" => :build
 
   def install
