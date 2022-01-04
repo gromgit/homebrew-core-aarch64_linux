@@ -12,10 +12,10 @@ class Bigloo < Formula
   end
 
   bottle do
-    sha256 monterey:     "ed335d97b009a6203d2bca3c87df2f4ed98c4f79e0a3545b41b98b7844104ded"
-    sha256 big_sur:      "e9db76f06fb4772881892f28ec4fb5a94250182bf6634e2f4580fd8ec4a9f3bf"
-    sha256 catalina:     "1fdadbe6cf4b68c7dc09c47e5af14e3917af3c265338bd387ce4770fb8f63bc7"
-    sha256 x86_64_linux: "4ec5c1d9728e08e76b25363109a7fc23c89791f70f32d256daad990d35c65f18"
+    sha256 monterey:     "006090398ac8d5fce740515e90fc2595f7f4dfc47fe9a552cbc7daa72564d612"
+    sha256 big_sur:      "2de450455ea939cd85b806b65811ddb53f7265ddd705f597caa0c08704091530"
+    sha256 catalina:     "7afa0f7e7688f345db9532c1de33ea1480b1a497becfcaf1c28a78c9f6ef6253"
+    sha256 x86_64_linux: "4f8bc7f55a1eb64c94d3373fdd49d1186886489dbba357dd10890acaa1ac3c1c"
   end
 
   depends_on "autoconf" => :build
