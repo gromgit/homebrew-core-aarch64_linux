@@ -6,14 +6,12 @@ class Jo < Formula
   license "GPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b8208a1f1fee8b3d703b0ce2e795527689d9e95b1eada80569c070298967b874"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ef0996d00e1c8859a597d160af04803aeb7eacc2b8f417f0494979bb9e3de753"
-    sha256 cellar: :any_skip_relocation, monterey:       "b524bfcf6ff1597fe928b7e36f14d669d63b442f3abad05dd2d542c6f4020693"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e7e0509c877e132429eb5cd71b4150c3ea573c9604e92b4bb31c2de4508eb182"
-    sha256 cellar: :any_skip_relocation, catalina:       "15bee62d31331c60c1768949ca11916d242fbe96aafcdc7a66a8359c0f4a9c3c"
-    sha256 cellar: :any_skip_relocation, mojave:         "6741c18bb9a9519e325ac4b30989cdd0c735107ee34772097d3d8fde103880eb"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "bd19a24ded348995844cf428f74729dc91b3c23a9f144ca1b117108c3d3b5401"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cba7692fdbb89e05db0125becd99b851bb1009d1da5fa9f19e6fa42187c02c16"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "43022572a3a5ff871de0e49654370793f67318322b215aa2488a5f22be1942a4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bd21640d777328ff0998078bd87a5eedb60aba137c3005736e649df581b5f836"
+    sha256 cellar: :any_skip_relocation, monterey:       "0bcfda936f7f499a80c242fdaf75b4f2ecdd6d8731c69c1e9ffdab8e2704c2fe"
+    sha256 cellar: :any_skip_relocation, big_sur:        "690450d78ccd65827fe69b0720fec34bed108370f22dbc42c5e319c3e1c161b0"
+    sha256 cellar: :any_skip_relocation, catalina:       "f0f91b17eff7454719e0a7b0572df7c5f5928eee844642d3685053181ff58e89"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "54cb98b552b1405a27f6cb44ec7fac1690d3358b83405c696784431d1dd00fef"
   end
 
   head do
