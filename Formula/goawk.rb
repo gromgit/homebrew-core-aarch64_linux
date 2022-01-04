@@ -6,12 +6,12 @@ class Goawk < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "325dc7f2e4e65dbc964cba75b6d6f463c597dab147630d358f3ec484bc3e4b4b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "325dc7f2e4e65dbc964cba75b6d6f463c597dab147630d358f3ec484bc3e4b4b"
-    sha256 cellar: :any_skip_relocation, monterey:       "2a1042f04d365700aab018101bf82579226c3a7f45f4670bcc2d89f30d80721e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2a1042f04d365700aab018101bf82579226c3a7f45f4670bcc2d89f30d80721e"
-    sha256 cellar: :any_skip_relocation, catalina:       "2a1042f04d365700aab018101bf82579226c3a7f45f4670bcc2d89f30d80721e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3b89dbb0d55dbc5dac7172545659f3b84100db7842c3ccc858b4f21ec15fbeee"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "67bbc974741aa0362d1174d48b33ef2aae9476112c7defbbedab62fe6bd9d5d1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "67bbc974741aa0362d1174d48b33ef2aae9476112c7defbbedab62fe6bd9d5d1"
+    sha256 cellar: :any_skip_relocation, monterey:       "897c731de7a931d22e57d3cf27fb6b5514f9a028c2c658217b6710119cfe7b1e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "897c731de7a931d22e57d3cf27fb6b5514f9a028c2c658217b6710119cfe7b1e"
+    sha256 cellar: :any_skip_relocation, catalina:       "897c731de7a931d22e57d3cf27fb6b5514f9a028c2c658217b6710119cfe7b1e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aa879fda9cbdd1d908c8a75170654a925c8f8003f7627e92f24ec0d9f12a106b"
   end
 
   depends_on "go" => :build
