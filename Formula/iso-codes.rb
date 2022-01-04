@@ -12,8 +12,7 @@ class IsoCodes < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "613c6efbb22e9ca0b242d79edb9c9dd5493dfd484ee737e70da547424a6a6cc7"
+    sha256 cellar: :any_skip_relocation, all: "eec87541cb08d1862596b5768b2ee076259475a2b3d3d966acffdaf91d0f3388"
   end
 
   depends_on "gettext" => :build
