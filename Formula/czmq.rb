@@ -23,13 +23,11 @@ class Czmq < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_monterey: "15b4dcfff065b04e983def5195f1e2c2e93e985a8b4cb787af6e5b14b30d5d6a"
-    sha256 cellar: :any, arm64_big_sur:  "f8b5ef84a357ca7fbd03d2a0a5fc5f5714cf28dc5321479f0dc715c348df75c9"
-    sha256 cellar: :any, monterey:       "7663b09f0cdc6cb325d2970e364f897b91697990041de6cbb569ca4b0d85e45a"
-    sha256 cellar: :any, big_sur:        "b457eb58a8684ba745af98d60a4207aef695bb33531206f2f7c0287523cd9a2a"
-    sha256 cellar: :any, catalina:       "c20bd8fd5e9c223824b1b50e829fb6c1ff1096951b20379f5f070b300d7e67d8"
-    sha256 cellar: :any, mojave:         "e64d0f79d6a05b5648695e3d06331bb34e8b85ae5920f429f3b44b7eee23cf5e"
+    sha256 cellar: :any, arm64_monterey: "2e98cdc427523e0b6557dee75c9c7e02243e6deca7f154511de816a363380ae3"
+    sha256 cellar: :any, arm64_big_sur:  "f038de51f9c505a739ca6d35804e800908e3180684516cd5df36e261207eb1e9"
+    sha256 cellar: :any, monterey:       "659fd630f7a622c2e0677c74c43d0dffb0d6e000c3fd623f154f14534c71dd85"
+    sha256 cellar: :any, big_sur:        "3adaa226cebf483c1f84a58dbc57ba6b75c51213216506d11b7dba6fde9f5ebb"
+    sha256 cellar: :any, catalina:       "b7641290a58b85221b10754a16819de04db2258f852e0debc2e5a3b6581e6f6d"
   end
 
   head do
