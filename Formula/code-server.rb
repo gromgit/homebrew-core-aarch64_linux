@@ -1,8 +1,8 @@
 class CodeServer < Formula
   desc "Access VS Code through the browser"
   homepage "https://github.com/cdr/code-server"
-  url "https://registry.npmjs.org/code-server/-/code-server-3.12.0.tgz"
-  sha256 "3eb48472d18e54cc708bee2f9f481af84edca69af2bf6ee23824361c3e6eaa85"
+  url "https://registry.npmjs.org/code-server/-/code-server-4.0.1.tgz"
+  sha256 "2d10605cb9f390c97efba8ec213194f2d5ea239f05ced2f98098fad69b488d5b"
   license "MIT"
 
   bottle do
@@ -14,6 +14,7 @@ class CodeServer < Formula
     sha256 cellar: :any_skip_relocation, mojave:         "7ca731bd99f09f23567cbead57850f886bed034036d27ca768b83ec5e889037e"
   end
 
+  depends_on "bash" => :build
   depends_on "python@3.10" => :build
   depends_on "yarn" => :build
   depends_on "node@14"
@@ -28,6 +29,11 @@ class CodeServer < Formula
   def install
     node = Formula["node@14"]
     system "yarn", "--production", "--frozen-lockfile"
+    # @parcel/watcher bundles all binaries for other platforms & architectures
+    # This deletes the non-matching architecture otherwise brew audit will complain.
+    prebuilds = buildpath/"vendor/modules/code-oss-dev/node_modules/@parcel/watcher/prebuilds"
+    (prebuilds/"darwin-x64").rmtree if Hardware::CPU.arm?
+    (prebuilds/"darwin-arm64").rmtree if Hardware::CPU.intel?
     libexec.install Dir["*"]
     env = { PATH: "#{node.opt_bin}:$PATH" }
     (bin/"code-server").write_env_script "#{libexec}/out/node/entry.js", env
