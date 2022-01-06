@@ -1,9 +1,9 @@
 class Bigloo < Formula
   desc "Scheme implementation with object system, C, and Java interfaces"
   homepage "https://www-sop.inria.fr/indes/fp/Bigloo/"
-  url "ftp://ftp-sop.inria.fr/indes/fp/Bigloo/bigloo-4.4c-3.tar.gz"
-  version "4.4c-3"
-  sha256 "43bcd0b0a67287f70f1590f4d7b6d61528129e7dac0d858b5a19836b17bb2b68"
+  url "ftp://ftp-sop.inria.fr/indes/fp/Bigloo/bigloo-4.4c-4.tar.gz"
+  version "4.4c-4"
+  sha256 "4ed71a86c6d762c35352e9f04871a11fe90fa5dbc974e728a86d9e8229d7c70f"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -33,20 +33,6 @@ class Bigloo < Formula
 
   on_linux do
     depends_on "alsa-lib"
-  end
-
-  # Fix gmp detection.
-  # https://github.com/manuel-serrano/bigloo/pull/69
-  patch do
-    url "https://github.com/manuel-serrano/bigloo/commit/d3f9c4e6a6b3eb9a922eb92a2e26b15bc5c879dc.patch?full_index=1"
-    sha256 "3b3522b30426770c82b620d3307db560852c2aadda5d80b62b18296d325cc38c"
-  end
-
-  # Fix pcre2 detection.
-  # https://github.com/manuel-serrano/bigloo/pull/70
-  patch do
-    url "https://github.com/manuel-serrano/bigloo/commit/4a5ec57b92fef4e23eb7d56dca402fb2b1f6eeb2.patch?full_index=1"
-    sha256 "d81b3dbc22e6a78b7517ff761d8c1ab5edef828b1a782cb9c4a672923844b948"
   end
 
   def install
