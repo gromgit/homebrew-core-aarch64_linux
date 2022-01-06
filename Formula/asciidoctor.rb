@@ -1,10 +1,9 @@
 class Asciidoctor < Formula
   desc "Text processor and publishing toolchain for AsciiDoc"
   homepage "https://asciidoctor.org/"
-  url "https://github.com/asciidoctor/asciidoctor/archive/v2.0.16.tar.gz"
-  sha256 "8fc1e3947012e22bccabe4d6faa31fee446f3719bb7478c79f45221b64fbd09f"
+  url "https://github.com/asciidoctor/asciidoctor/archive/v2.0.17.tar.gz"
+  sha256 "ca939b978d5d3bfe0cfcf1bcf5513f199aa77813e4a19f568dc6b6f17b892728"
   license "MIT"
-  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "e738bffee5905b12523ba2efa472071161f879333c1c85e06e856bf69cf990a6"
@@ -26,8 +25,8 @@ class Asciidoctor < Formula
 
   # asciidoctor-pdf requires concurrent-ruby ~> 1.1
   resource "concurrent-ruby" do
-    url "https://rubygems.org/gems/concurrent-ruby-1.1.8.gem"
-    sha256 "e35169e8e01c33cddc9d322e4e793a9bc8c3c00c967d206d17457e0d301f2257"
+    url "https://rubygems.org/gems/concurrent-ruby-1.1.9.gem"
+    sha256 "0ec0846d991c38f355b4228ad8ea77aa69c3fdaa320cd574dafedc10c4688a5b"
   end
 
   # prawn 2.4.0 requires pdf-core ~> 0.9.0
@@ -72,8 +71,8 @@ class Asciidoctor < Formula
 
   # prawn-svg requires css_parser ~> 1.6
   resource "css_parser" do
-    url "https://rubygems.org/gems/css_parser-1.9.0.gem"
-    sha256 "a19cbe6edf9913b596c63bc285681b24288820bbe32c51564e09b49e9a8d4477"
+    url "https://rubygems.org/gems/css_parser-1.11.0.gem"
+    sha256 "568926c3193579446ad3e3f9d761c73e2918ee5b3b7757a1a49ec166c67d6de1"
   end
 
   # prawn-svq requires rexml ~> 3.2
@@ -149,8 +148,8 @@ class Asciidoctor < Formula
   end
 
   resource "asciidoctor-pdf" do
-    url "https://rubygems.org/gems/asciidoctor-pdf-1.6.0.gem"
-    sha256 "89c730499bbc4086710ae0c1b9ac1510b8457d6861b9b31495e64871f1f8ae6b"
+    url "https://rubygems.org/gems/asciidoctor-pdf-1.6.2.gem"
+    sha256 "04385376cbc8d4d26e814b655e50189e58ecdeec2a4fa3ce9282943a3d3bd4c6"
   end
 
   resource "coderay" do
