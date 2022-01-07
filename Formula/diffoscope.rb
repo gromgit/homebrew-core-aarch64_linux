@@ -8,12 +8,12 @@ class Diffoscope < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a611e16106b59a7b939f124ddf5310fb49104f6ef62c39fdedcf52ad68828afb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "aebf88f65ba0a4d332b134a1ce62652585fbf6e9ea660e9deafc180d652f9589"
-    sha256 cellar: :any_skip_relocation, monterey:       "fa6e07989901c78be2a7843e223ba509d91d11f9602e5495002e7d87798d9e59"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1f3b4074e4a1dbc5571db956975af442955770a124a5ecfa1052e0cc5cd506d5"
-    sha256 cellar: :any_skip_relocation, catalina:       "3975e92b6aa36c64cbf18fe6619001ea28d33a7de0a2b697a27f7cc14469da1b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ba3a1092fbbbf8a9020a7770db3842ecfe542219ca26c313d28ec84dbd200653"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cb7cf95ff39a7a9e030fb6ed81d8d732377abc13dc3abd5ee17ef4d1daef77fd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8120fb94edf2309bc89c291ed41101591d626bda00fea066f7ff30d86ae00bad"
+    sha256 cellar: :any_skip_relocation, monterey:       "13ad8a9dffad284ebcd74c86e1897fc67f7a56682f3042c19edf1f098fecf436"
+    sha256 cellar: :any_skip_relocation, big_sur:        "25fdeda0c54e57c2dd4022fe3072e34510edf57f959330a19d115401e0397b0f"
+    sha256 cellar: :any_skip_relocation, catalina:       "7ef65176ff67bd6bd0e330023eaefdf9e41fcc2aeedaba9978fe9dada5a0a0ff"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a25f52f7786a98737030f9ac316ba6a959668c680c1196026ced357f50c796b1"
   end
 
   depends_on "libarchive"
