@@ -1,8 +1,8 @@
 class Rizin < Formula
   desc "UNIX-like reverse engineering framework and command-line toolset"
   homepage "https://rizin.re"
-  url "https://github.com/rizinorg/rizin/releases/download/v0.3.2/rizin-src-v0.3.2.tar.xz"
-  sha256 "4fae609b5b5f443edd6522fca9928c4c06d0eb92f1fde72274573d4f56fb7228"
+  url "https://github.com/rizinorg/rizin/releases/download/v0.3.3/rizin-src-v0.3.3.tar.xz"
+  sha256 "86f091db3a65817c389c2f61f88c8facf25c8612a6899146d4fdbd76497c78df"
   license "LGPL-3.0-only"
   head "https://github.com/rizinorg/rizin.git", branch: "dev"
 
@@ -30,15 +30,6 @@ class Rizin < Formula
   uses_from_macos "zlib"
 
   def install
-    # Workarounds for finding Homebrew dependences. Reported at:
-    # https://github.com/rizinorg/rizin/issues/2013
-
-    # Meson looks for `xxhash.pc` but we only have `libxxhash.pc`.
-    (buildpath/"pkgconfig").install_symlink Formula["xxhash"].opt_lib/"pkgconfig/libxxhash.pc" => "xxhash.pc"
-    ENV.prepend_path "PKG_CONFIG_PATH", buildpath/"pkgconfig"
-    # Meson's `find_library` isn't able to find `libmagic` without help.
-    inreplace "meson.build", "cc.find_library('magic',", "\\0 dirs: '#{Formula["libmagic"].opt_lib}',"
-
     mkdir "build" do
       args = [
         "-Dpackager=#{tap.user}",
