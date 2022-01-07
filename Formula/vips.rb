@@ -18,13 +18,19 @@ class Vips < Formula
   end
 
   depends_on "pkg-config" => :build
+  depends_on "cairo"
   depends_on "cfitsio"
   depends_on "cgif"
   depends_on "fftw"
   depends_on "fontconfig"
+  depends_on "freetype"
+  depends_on "gdk-pixbuf"
   depends_on "gettext"
   depends_on "glib"
+  depends_on "harfbuzz"
+  depends_on "hdf5"
   depends_on "imagemagick"
+  depends_on "imath"
   depends_on "jpeg-xl"
   depends_on "libexif"
   depends_on "libgsf"
@@ -35,20 +41,26 @@ class Vips < Formula
   depends_on "librsvg"
   depends_on "libspng"
   depends_on "libtiff"
+  depends_on "libxml2"
   depends_on "little-cms2"
   depends_on "mozjpeg"
   depends_on "openexr"
+  depends_on "openjpeg"
   depends_on "openslide"
   depends_on "orc"
   depends_on "pango"
   depends_on "poppler"
   depends_on "webp"
 
+  uses_from_macos "expat"
   uses_from_macos "zlib"
 
   on_linux do
+    depends_on "gcc"
     depends_on "gobject-introspection"
   end
+
+  fails_with gcc: "5"
 
   def install
     # mozjpeg needs to appear before libjpeg, otherwise it's not used
