@@ -6,12 +6,12 @@ class Phpstan < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f5acbcd30d0a506289259eac9985efbf7fcca785b4ef2cf8808a4f472027d3c1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f5acbcd30d0a506289259eac9985efbf7fcca785b4ef2cf8808a4f472027d3c1"
-    sha256 cellar: :any_skip_relocation, monterey:       "22b9af468ab46a0f106b4cccf78a81137c019ddb5ad47bc01d81b7b228bae9d9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "22b9af468ab46a0f106b4cccf78a81137c019ddb5ad47bc01d81b7b228bae9d9"
-    sha256 cellar: :any_skip_relocation, catalina:       "22b9af468ab46a0f106b4cccf78a81137c019ddb5ad47bc01d81b7b228bae9d9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f5acbcd30d0a506289259eac9985efbf7fcca785b4ef2cf8808a4f472027d3c1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "578073acd0a62c79ac4fde6083d37e3ad024705fd00bfa421bba156cf9a84993"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "578073acd0a62c79ac4fde6083d37e3ad024705fd00bfa421bba156cf9a84993"
+    sha256 cellar: :any_skip_relocation, monterey:       "1da67134265107a6946e6bc48a898a3906279018b94d235530ed38c734c07364"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1da67134265107a6946e6bc48a898a3906279018b94d235530ed38c734c07364"
+    sha256 cellar: :any_skip_relocation, catalina:       "1da67134265107a6946e6bc48a898a3906279018b94d235530ed38c734c07364"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "578073acd0a62c79ac4fde6083d37e3ad024705fd00bfa421bba156cf9a84993"
   end
 
   depends_on "php" => :test
