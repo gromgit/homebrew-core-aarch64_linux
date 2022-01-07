@@ -8,12 +8,12 @@ class Dxpy < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "4dda5024b505c4e2981d428e63af26fabb4455b1669f685a44b5b1513da1e398"
-    sha256 cellar: :any,                 arm64_big_sur:  "3835faa03590b2c96c659d2b8f5069dc128659372c9948d080c81a2a53900e21"
-    sha256 cellar: :any,                 monterey:       "81c8f312bbb76fa96bf86978dd13163ce52de8c9799a733739f518c7a1f56ef6"
-    sha256 cellar: :any,                 big_sur:        "b5d13fd944e60f850cabe7165574f3741cd72b6503d7540cb94404cfd6a888c9"
-    sha256 cellar: :any,                 catalina:       "8080be9140f0e963dbd69bcb574e103b148152d1063f8b977bfbac60ae23b3fc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0ae85c571577c306257b300cc1ae296d3e12698f28dbd7a85e313a4ee7650b73"
+    sha256 cellar: :any,                 arm64_monterey: "90d4c6d3ac5da2d8adcabc2f01bb2a9a9b15bd851c5b3faec3e83118b6bc5e56"
+    sha256 cellar: :any,                 arm64_big_sur:  "c936ab4965a54c9428934cdc86ad437bcdbd32889455e4fdd6080321614ac877"
+    sha256 cellar: :any,                 monterey:       "b1a1402bd690da2df2480201f7c33bc05a8cc58e71ac49ad5bfe88fd069b1095"
+    sha256 cellar: :any,                 big_sur:        "edb9537de4e36972c22dc9af3e9557470e09294994883b366e42cfe88b9c2434"
+    sha256 cellar: :any,                 catalina:       "ff7cab0eb46696f39bce6f45f09c44abcb15d9b7a6bce505a31a91af94f7bb29"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c0c5e6a7d446ecc2e10edfdc741fd2442140296311893655d7e90ed22cf47eb3"
   end
 
   depends_on "rust" => :build # for cryptography
