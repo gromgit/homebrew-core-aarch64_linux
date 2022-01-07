@@ -1,8 +1,8 @@
 class Keydb < Formula
   desc "Multithreaded fork of Redis"
   homepage "https://keydb.dev"
-  url "https://github.com/JohnSully/KeyDB/archive/v6.2.0.tar.gz"
-  sha256 "61a2996c8d56e564930119b115674032d8a1de2b50d67a9c555be6e7975ed567"
+  url "https://github.com/EQ-Alpha/KeyDB/archive/v6.2.1.tar.gz"
+  sha256 "9376b5e14f317840cfd05fee06467e6ad7612e32da98bcb8991f5674d61d550b"
   license "BSD-3-Clause"
 
   bottle do
@@ -19,6 +19,13 @@ class Keydb < Formula
 
   on_linux do
     depends_on "util-linux"
+  end
+
+  # Fix build on macOS (https://github.com/EQ-Alpha/KeyDB/issues/384)
+  # Patch accepted upstream, remove on next release
+  patch do
+    url "https://github.com/EQ-Alpha/KeyDB/commit/7a32ec39fdb738e9c3cd2b73ee18355ced793a65.patch?full_index=1"
+    sha256 "06d29f24ff08032f3c211f1c322ba50f64dda9d40fbbe914ce16d8553fd68870"
   end
 
   def install
