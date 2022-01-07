@@ -4,6 +4,7 @@ class Nebula < Formula
   url "https://github.com/slackhq/nebula/archive/v1.5.2.tar.gz"
   sha256 "391ac38161561690a65c0fa5ad65a2efb2d187323cc8ee84caa95fa24cb6c36a"
   license "MIT"
+  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "ba9506da111fa6b894cb7644a881937ee33f5916db6c4318a2042b3ec8fa6bb9"
@@ -18,7 +19,7 @@ class Nebula < Formula
 
   def install
     ENV["BUILD_NUMBER"] = version
-    system "make", "bin"
+    system "make", "service"
     bin.install "./nebula"
     bin.install "./nebula-cert"
     prefix.install_metafiles
