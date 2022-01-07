@@ -8,12 +8,12 @@ class AwsCdk < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b94708074b857dbe572d928e027d7e0fd08f30c6699355660ae744a46b8a6259"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b94708074b857dbe572d928e027d7e0fd08f30c6699355660ae744a46b8a6259"
-    sha256 cellar: :any_skip_relocation, monterey:       "17e3064c50d2f477ab4ee808da63913cf00097c431aff4798f51ff8a414de005"
-    sha256 cellar: :any_skip_relocation, big_sur:        "17e3064c50d2f477ab4ee808da63913cf00097c431aff4798f51ff8a414de005"
-    sha256 cellar: :any_skip_relocation, catalina:       "17e3064c50d2f477ab4ee808da63913cf00097c431aff4798f51ff8a414de005"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2e96ad206aa38ded728ce602de575a9b5396b2f6380cad53c76272de335d8275"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7f5d82636e6c2fa5f28daba5ed88704880fbb694b3b9f5f6e24e388e24287036"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7f5d82636e6c2fa5f28daba5ed88704880fbb694b3b9f5f6e24e388e24287036"
+    sha256 cellar: :any_skip_relocation, monterey:       "24eab0d3d342be985a49077d9b055ddfb942ad65f6175fd7b48eb96d540c3bd3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "24eab0d3d342be985a49077d9b055ddfb942ad65f6175fd7b48eb96d540c3bd3"
+    sha256 cellar: :any_skip_relocation, catalina:       "24eab0d3d342be985a49077d9b055ddfb942ad65f6175fd7b48eb96d540c3bd3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "52d5e5c22c9ef2f3cb9d29b339278728b33a504b481ee0e70094c33c75b40a01"
   end
 
   depends_on "node"
