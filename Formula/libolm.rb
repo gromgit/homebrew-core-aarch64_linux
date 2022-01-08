@@ -6,12 +6,12 @@ class Libolm < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "35e5fbd3bc69497ccc8e7de8aee6d006abdeaf4c7716d1b0aea9069a3bb74afd"
-    sha256 cellar: :any,                 arm64_big_sur:  "8c7e1f4e371ecc08c4292767862c465443314a7abac6676113610edf580b60b6"
-    sha256 cellar: :any,                 monterey:       "426914a30a06be78449ef8d52d532201afc71177b7127ef7255378facf9db59f"
-    sha256 cellar: :any,                 big_sur:        "3ead0e0ee40b270618d0f850c99d6d889df95408cb9c05838d29bca81339423e"
-    sha256 cellar: :any,                 catalina:       "5428c4b62541f9239d6948492e7990080154d66883d3add129b5c390f7335be5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a9a2b620769063ca9823c1eb1ef3f8cc384add4c7c31299f67f92d53e1897eb4"
+    sha256 cellar: :any,                 arm64_monterey: "23de7a8f72f29a9b386cf529280540acc665bf9cfdf0628c423ca5150d819e2f"
+    sha256 cellar: :any,                 arm64_big_sur:  "0c36ddc7a6452457109a6e4be4f52d54cfdbae3a8726d06aa54ea8e28fb49da3"
+    sha256 cellar: :any,                 monterey:       "6ee3a21a446cccb33a8a857a818f397e21323c97ec895ffe9e2e5aacad20a863"
+    sha256 cellar: :any,                 big_sur:        "10e90f31858d95a6f5bbce5fdac55b7303512930d191545364b74086e0e50a0b"
+    sha256 cellar: :any,                 catalina:       "577c3456b85fb375e2d050a4059faf0edfd4efcc63094708ac08c595ed4cee40"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "42fa0f8ad7df0688413889442ccb2606720067f9f988a93db3c8980b27d594f3"
   end
 
   depends_on "cmake" => :build
