@@ -1,10 +1,9 @@
 class Coinutils < Formula
   desc "COIN-OR utilities"
   homepage "https://github.com/coin-or/CoinUtils"
-  url "https://github.com/coin-or/CoinUtils/archive/releases/2.11.4.tar.gz"
-  sha256 "d4effff4452e73356eed9f889efd9c44fe9cd68bd37b608a5ebb2c58bd45ef81"
+  url "https://github.com/coin-or/CoinUtils/archive/releases/2.11.5.tar.gz"
+  sha256 "771a5647e5fd42e8974b9a56b3edb380a1346c3d3cca1a4262ec02e45ecd9fa9"
   license "EPL-1.0"
-  revision 1
   head "https://github.com/coin-or/CoinUtils.git", branch: "master"
 
   livecheck do
@@ -27,7 +26,7 @@ class Coinutils < Formula
   depends_on "pkg-config" => :build
   depends_on "openblas"
 
-  resource "coin-or-tools-data-sample-p0201-mps" do
+  resource "homebrew-coin-or-tools-data-sample-p0201-mps" do
     url "https://raw.githubusercontent.com/coin-or-tools/Data-Sample/releases/1.2.11/p0201.mps"
     sha256 "8352d7f121289185f443fdc67080fa9de01e5b9bf11b0bf41087fba4277c07a4"
   end
@@ -54,7 +53,7 @@ class Coinutils < Formula
   end
 
   test do
-    resource("coin-or-tools-data-sample-p0201-mps").stage testpath
+    resource("homebrew-coin-or-tools-data-sample-p0201-mps").stage testpath
     (testpath/"test.cpp").write <<~EOS
       #include <CoinMpsIO.hpp>
       int main() {
