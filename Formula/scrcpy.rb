@@ -19,6 +19,13 @@ class Scrcpy < Formula
   depends_on "ffmpeg"
   depends_on "sdl2"
 
+  on_linux do
+    depends_on "gcc" => :build
+    depends_on "libusb"
+  end
+
+  fails_with gcc: "5"
+
   resource "prebuilt-server" do
     url "https://github.com/Genymobile/scrcpy/releases/download/v1.21/scrcpy-server-v1.21"
     sha256 "dbcccab523ee26796e55ea33652649e4b7af498edae9aa75e4d4d7869c0ab848"
@@ -76,7 +83,7 @@ class Scrcpy < Formula
 
     # It's expected to fail after adb reverse step because fakeadb exits
     # with code 42
-    out = shell_output("#{bin}/scrcpy -p 1337 2>&1", 1)
+    out = shell_output("#{bin}/scrcpy --no-display --record=file.mp4 -p 1337 2>&1", 1)
     assert_match(/ 42/, out)
 
     log_content = File.read(testpath/"fakeadb.log")
