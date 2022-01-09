@@ -1,8 +1,8 @@
 class Karchive < Formula
   desc "Reading, creating, and manipulating file archives"
   homepage "https://api.kde.org/frameworks/karchive/html/index.html"
-  url "https://download.kde.org/stable/frameworks/5.89/karchive-5.89.0.tar.xz"
-  sha256 "2b15e8b75c6a1fd604663699100bbd8235e2a8ae56b4039af02ed499b4ad85e8"
+  url "https://download.kde.org/stable/frameworks/5.90/karchive-5.90.0.tar.xz"
+  sha256 "a6e2f3a7cb1aef7db7b4f7dfb9ffb1d929d0d5b147c25a93fbc0b794dfcd2110"
   license all_of: [
     "BSD-2-Clause",
     "LGPL-2.0-only",
@@ -32,6 +32,7 @@ class Karchive < Formula
 
   depends_on "qt@5"
   depends_on "xz"
+  depends_on "zstd"
 
   uses_from_macos "bzip2"
   uses_from_macos "zlib"
@@ -43,11 +44,13 @@ class Karchive < Formula
   fails_with gcc: "5"
 
   def install
-    args = std_cmake_args
-    args << "-DBUILD_TESTING=OFF"
-    args << "-DBUILD_QCH=ON"
+    args = std_cmake_args + %w[
+      -S .
+      -B build
+      -DBUILD_QCH=ON
+    ]
 
-    system "cmake", "-S", ".", "-B", "build", *args
+    system "cmake", *args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
@@ -56,8 +59,10 @@ class Karchive < Formula
 
   test do
     ENV.delete "CPATH"
-    args = std_cmake_args
-    args << "-DQt5Core_DIR=#{Formula["qt@5"].opt_prefix/"lib/cmake/Qt5Core"}"
+    args = std_cmake_args + %W[
+      -DQt5Core_DIR=#{Formula["qt@5"].opt_lib}/cmake/Qt5Core
+      -DQT_MAJOR_VERSION=5
+    ]
 
     %w[bzip2gzip
        helloworld
