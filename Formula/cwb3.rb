@@ -6,6 +6,15 @@ class Cwb3 < Formula
   license "GPL-2.0-or-later"
   head "svn://svn.code.sf.net/p/cwb/code/cwb/trunk"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "58a4e7511ce2b101990a19f53e9c23056ad6bbd1548ea58b35b0d44c18a263a5"
+    sha256 cellar: :any,                 arm64_big_sur:  "6bf55b83b4a38bb31b6725401ee566b483e2d4f9f9e599d7f93fa002b98193a4"
+    sha256 cellar: :any,                 monterey:       "bcbb0414f2a9a9a4289aee4ab440c8d583de77b69453706943f05d60ac4ba152"
+    sha256 cellar: :any,                 big_sur:        "52d7e82f3d7729b12f4eddd19805bdb9444a6613105ef861610b19240b5cd068"
+    sha256 cellar: :any,                 catalina:       "27f369e784f165896c5004724b1ca9a5bc1be64b3d76fb9a0b007e25eb6557a7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "805ab2c59d1fa16ec0de990e9b6283c04ebb4d5e8a2ba54648eb719fc0d39204"
+  end
+
   depends_on "pkg-config" => :build
   depends_on "gettext"
   depends_on "glib"
