@@ -7,12 +7,12 @@ class Newsboat < Formula
   head "https://github.com/newsboat/newsboat.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "9b24fe867f19b4f2f99e74678fb6e41566f41473c957955566616f46b71c36a4"
-    sha256 arm64_big_sur:  "6732cc0827bb42cf727198b750c83e112a0d5fa45eb75d6cc5dc92f271d9f6ca"
-    sha256 monterey:       "00b046b06abaa5938ac12d24e5899057756e118e39bd00c40233594feb3bb1e9"
-    sha256 big_sur:        "77e89b092325533f6477d9c17c11a19d004d2db695b7da75178f7598cc4c05f9"
-    sha256 catalina:       "8177235469de2ac61200e7a53be7848ed135dfe258f2e30ccd2a3357bd09bcae"
-    sha256 x86_64_linux:   "b2549efc1c9e35df367839829c44385a8f69d7a0992227f1941f23020d2503ae"
+    sha256 arm64_monterey: "8737923b1800dc469b6714edb999e0287fb56a8455cd1e4362fd920e4380c71a"
+    sha256 arm64_big_sur:  "7438a9a7faf80e156c409a0631e13c5a1ae33ef6003b4cbd4881dd09faaa617f"
+    sha256 monterey:       "d0813d37c35317a9c454a04098f82d5afd232ce4d30b7e685dce93910f05559c"
+    sha256 big_sur:        "2ca14c38d9d7f6364429fa19412fba0922cdb270b09f2b7335c1c15ad0eec8a3"
+    sha256 catalina:       "bcfff7b4f44afa72a3ee645a0a4e11fc212be936c184867abcf5810702d81050"
+    sha256 x86_64_linux:   "df5b6c0947f0d09ecd72dbe6d95210e3c98ab35bca35de89995613e383cfd397"
   end
 
   depends_on "asciidoctor" => :build
