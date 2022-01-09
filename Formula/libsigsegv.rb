@@ -7,13 +7,12 @@ class Libsigsegv < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e131f8e70ae22c236cf1c3061de2710671b6be977f9c0640c3e3226da0cd395b"
-    sha256 cellar: :any,                 arm64_big_sur:  "709a1a801698a0e0862be0f71d9b15ed8af9b6777956ae2caf0795d418956ce4"
-    sha256 cellar: :any,                 monterey:       "e4d9698e740e043b010752b577c5a0db82db2e26645449ca45cef2906bc01611"
-    sha256 cellar: :any,                 big_sur:        "9bd929ab1b6a2c35bdde0306a2a4c30498a47659ae0877bc89a7b74f67d93425"
-    sha256 cellar: :any,                 catalina:       "0d7f731afff70661df049267de9fe2c34b74d3918a7a7695fbfd1deef664aa68"
-    sha256 cellar: :any,                 mojave:         "95525c7e620743555e44175496c21c57a8cc39b8ca2670bf0fd690cc42a2977c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "61ea7eb4168f98ae1177e9dd5def5bd9883724351d41f805bf996f5482904b80"
+    sha256 cellar: :any,                 arm64_monterey: "e8cae8734eafabb8c3bcfeba2449b1d6e309cea6ca0647ca7bdf62aca7e331db"
+    sha256 cellar: :any,                 arm64_big_sur:  "f37ac4bf1b939f0703029b5143fca0dc8c77ff77f2b860800a5e0028e5fdfea8"
+    sha256 cellar: :any,                 monterey:       "3ceaebb4bf32ec972aa786360dd55fc115fb2890d16da6b2ddaa9ff199160e2c"
+    sha256 cellar: :any,                 big_sur:        "6cefa3529425fcbd306c53d975bc0a727b34d8a3c636c664a1785f67202b2377"
+    sha256 cellar: :any,                 catalina:       "585d16ba5f3b6b2136704ff16e58c620ee2aac3b1f7f9eb15b883efecb1ba6b4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a221904699cd8cefa4d70e72f59bab5282065bc0739428286278898a147b571d"
   end
 
   head do
