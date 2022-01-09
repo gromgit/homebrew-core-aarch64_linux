@@ -1,8 +1,8 @@
 class Kdoctools < Formula
   desc "Create documentation from DocBook"
   homepage "https://api.kde.org/frameworks/kdoctools/html/index.html"
-  url "https://download.kde.org/stable/frameworks/5.89/kdoctools-5.89.0.tar.xz"
-  sha256 "e1319af7ee5d108c651e3acb70ab28328d24be009de174646a233e2d7c2118f5"
+  url "https://download.kde.org/stable/frameworks/5.90/kdoctools-5.90.0.tar.xz"
+  sha256 "1a74ff1d5ac8c0639ff8a3430f5226480844119010605f911ed7a2ca684d4ad0"
   license all_of: [
     "BSD-3-Clause",
     "GPL-2.0-or-later",
@@ -53,11 +53,13 @@ class Kdoctools < Formula
       system "make", "install"
     end
 
-    args = std_cmake_args
-    args << "-DBUILD_TESTING=OFF"
-    args << "-DBUILD_QCH=ON"
+    args = std_cmake_args + %w[
+      -S .
+      -B build
+      -DBUILD_QCH=ON
+    ]
 
-    system "cmake", "-S", ".", "-B", "build", *args
+    system "cmake", *args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
@@ -68,10 +70,10 @@ class Kdoctools < Formula
     (testpath/"CMakeLists.txt").write <<~EOS
       cmake_minimum_required(VERSION 3.5)
       include(FeatureSummary)
-      find_package(ECM 5.71.0 NO_MODULE)
+      find_package(ECM #{version} NO_MODULE)
       set_package_properties(ECM PROPERTIES TYPE REQUIRED)
       set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} "#{pkgshare}/cmake")
-      find_package(Qt5 5.12.0 REQUIRED Core)
+      find_package(Qt5 #{Formula["qt@5"].version} REQUIRED Core)
       find_package(KF5DocTools REQUIRED)
 
       find_package(LibXslt)
@@ -101,10 +103,13 @@ class Kdoctools < Formula
     cp_r (pkgshare/"autotests"), testpath
     cp_r (pkgshare/"tests"), testpath
 
-    args = std_cmake_args
-    args << "-DQt5_DIR=#{Formula["qt@5"].opt_prefix/"lib/cmake/Qt5"}"
+    args = std_cmake_args + %W[
+      -S .
+      -B build
+      -DQt5_DIR=#{Formula["qt@5"].opt_lib}/cmake/Qt5
+    ]
 
-    system "cmake", testpath.to_s, *args
-    system "make"
+    system "cmake", *args
+    system "cmake", "--build", "build"
   end
 end
