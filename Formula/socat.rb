@@ -11,12 +11,12 @@ class Socat < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "bebff01d4a9da5539be0c56064458506ef3c2e098e66e3ecdd81a56b953b18bc"
-    sha256 cellar: :any,                 arm64_big_sur:  "ab41a0fff966fe7d766604de9392c18fb5fb1bbe938fcb13ed2861ba9d7e65bb"
-    sha256 cellar: :any,                 monterey:       "7de63a881d222435b6ea2f416a93f758f265feb87573b2bd8045b6fc383196ee"
-    sha256 cellar: :any,                 big_sur:        "4ee020dff0b50603598022a6d924fffdf105fd175772fbbd84efdd52397ac023"
-    sha256 cellar: :any,                 catalina:       "e45f83eee32c323aca752b3a63075b8d65b4eff1814bcce3cd5fdd01c7a526f7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1f1932cc4004c5f6234de385b59e36ce686d6e7e152526d9b47dd9fd9bfd13c4"
+    sha256 cellar: :any,                 arm64_monterey: "6ec140eff3260a12b045bef839bf7540f7b7a0c9b708403217995f7f084e6423"
+    sha256 cellar: :any,                 arm64_big_sur:  "f3e91fc6dd04e6f5402f18fcd949d883dbd48bd292e24c3861e1a9499781cf0a"
+    sha256 cellar: :any,                 monterey:       "73fd0ea6e6726d59213e04a5e494107dedfab96035a86b0cd1e6393a31e1fb4a"
+    sha256 cellar: :any,                 big_sur:        "ef42488ec3c32855172e0f9c37382fd1023f4217e979ca0284f87a9d5bf9237e"
+    sha256 cellar: :any,                 catalina:       "cac9a7e2cd195b3b95b4698df5f261821adfd12be00fafcd2234526bad7fded6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4f0c6a24f3828789152f08dc17bc86987d3301457173712137ecf0ced9c5bae6"
   end
 
   depends_on "openssl@1.1"
