@@ -9,13 +9,12 @@ class AwsSsoUtil < Formula
   head "https://github.com/benkehoe/aws-sso-util.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "256739dc70865d33fad92925a0532acf5225fa748b6d54c2fd4ee9a3b1d2917b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bed223ea4b5a108ee2f68edd4b9919defc5a838650140a6ee392d18f7f5df4cb"
-    sha256 cellar: :any_skip_relocation, monterey:       "792b8ad5d2b185f3df486bdb0a664b525b796120848ca5667b18a84ac64892c9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6c6e10121c00e11bb4451ffff6dee4abb03cdc610b910624664dc6e949210e63"
-    sha256 cellar: :any_skip_relocation, catalina:       "84649f7a4b165d1625dc80a93a2faad3b289a63770d01231d1651f5d4156be2a"
-    sha256 cellar: :any_skip_relocation, mojave:         "32a8269de9a8cfcd21a7b1c326f9dc05da5849401376d08f2742acc30f5d3594"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d6871b86922c7ff5eaf37bc78578d73b6d5ac64a5ef3c7661bcec452251ab9b7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e7e95936b9e0eca06c4682112f0ac7bcef2676f47941c7ceb1dad2b67b6dcf6b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4b15248c2b07828e0648d2a6bcb559e15854188825410878409c46eff58d5d6b"
+    sha256 cellar: :any_skip_relocation, monterey:       "99f0eac92c4ea804cb715b65dc4337fdf862b8900db2ba192897a483f3db40e2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5fdfb4972dcb323df7ceb70e80289f73958c77d8ba0eea4e5aefb02e7fddd8a5"
+    sha256 cellar: :any_skip_relocation, catalina:       "b71446536c7e9fd4426d4e7880b78a1615ecefb36806f40e94484a96aa40ce58"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "027db2232e778186bd03672115d76aa1e2f2ba8850586cf4ca77cf089acf3589"
   end
 
   depends_on "rust" => :build
