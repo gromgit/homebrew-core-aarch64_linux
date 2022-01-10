@@ -8,13 +8,12 @@ class Newman < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ed8aefe21f414463cf04744841f68216c30aa55d1e3cff0177437d670c047ac0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f4cdf08e832543aea81630dfd577e6547897b6782201253803528634d9197a74"
-    sha256 cellar: :any_skip_relocation, monterey:       "0e441243ce409d13eaa6c7a3914fcfaf37d5f08ada406fb8dd71e2310d16167c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b2f025e48984e411788de3fa5678e4e70ffc84487d61fb37095ab17a498523e0"
-    sha256 cellar: :any_skip_relocation, catalina:       "b2f025e48984e411788de3fa5678e4e70ffc84487d61fb37095ab17a498523e0"
-    sha256 cellar: :any_skip_relocation, mojave:         "b2f025e48984e411788de3fa5678e4e70ffc84487d61fb37095ab17a498523e0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f4cdf08e832543aea81630dfd577e6547897b6782201253803528634d9197a74"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b3b7f441cf27651d0ed0dcd30ff3213a74cbb30cf7a2e108d53fd16df1783b9a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b3b7f441cf27651d0ed0dcd30ff3213a74cbb30cf7a2e108d53fd16df1783b9a"
+    sha256 cellar: :any_skip_relocation, monterey:       "c33c6d3fda315aa45cbff846f51913cd1fddb91f0d4881bec8df898b7270f79f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "90dfa8d17177c032691b65576180edc2bcabafb66f024ea7223bb0d3101dc339"
+    sha256 cellar: :any_skip_relocation, catalina:       "90dfa8d17177c032691b65576180edc2bcabafb66f024ea7223bb0d3101dc339"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b3b7f441cf27651d0ed0dcd30ff3213a74cbb30cf7a2e108d53fd16df1783b9a"
   end
 
   depends_on "node"
