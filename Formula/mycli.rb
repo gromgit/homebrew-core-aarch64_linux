@@ -8,12 +8,12 @@ class Mycli < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "cf3665cd1d8751d998060140e307dca6260466667d8d1e17ce87375bbed38932"
-    sha256 cellar: :any,                 arm64_big_sur:  "6ffb1fc8760d82464ae6de7079972e94b5e3fa00e2daf4aeccb9e31f97c90a3a"
-    sha256 cellar: :any,                 monterey:       "5ebbe9c1b355d894adbcc162609a9c9db8047c30039fbe547df7b45b09a6efca"
-    sha256 cellar: :any,                 big_sur:        "cc7949fae98130ceb2493332f8d15a12c858f2fda97e5159b0195dfde74bf7a0"
-    sha256 cellar: :any,                 catalina:       "e8e933336ab7f85fcc4365fb87f774fc27e69b0801160370bf0687e02088f744"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1f646ef9dd68dd13ed0464a81b613f8a3a3b113e78fab9b7b9bc3d98b46b9365"
+    sha256 cellar: :any,                 arm64_monterey: "24cc52cb2f697daeae573b683c5439d2a158d75b19b6c8bd521a6e55d9ed2096"
+    sha256 cellar: :any,                 arm64_big_sur:  "642a3f88873ddc9957b30d9f5f1cde2e1a9768b7936aeea3f2757fd9b651f100"
+    sha256 cellar: :any,                 monterey:       "86f06a5b910171dc4246ac694479bead0549f6a939a8c281f916ba9286c8b914"
+    sha256 cellar: :any,                 big_sur:        "5b937e7e3f27b0d84c7df791814d7a38c62ea15c33bc458d80eb6477319d5da9"
+    sha256 cellar: :any,                 catalina:       "8700faea44a9de4bd18575a5a99c74a999a0c49d1295536d34f546abc82da1d0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e42daac96cd6bdd2ec10ca4fa82149542f4dd48fbfdd629cdea56337303905e1"
   end
 
   depends_on "rust" => :build
