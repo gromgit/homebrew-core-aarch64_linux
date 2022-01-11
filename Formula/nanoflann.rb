@@ -7,7 +7,7 @@ class Nanoflann < Formula
   head "https://github.com/jlblancoc/nanoflann.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "4d2dec9b2bec558a840870189d0fa5d7af2d9ff0d84d7839381987087cf7008d"
+    sha256 cellar: :any_skip_relocation, all: "d99918c46fed2a8a0d7485fe426bcfdfa50eba09d72579d3001337d4ecc4d3a3"
   end
 
   depends_on "cmake" => :build
