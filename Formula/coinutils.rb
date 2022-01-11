@@ -12,12 +12,12 @@ class Coinutils < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "172fe85fa422e5ea9416830f80d5c68a907048267942cd94f097ac3364d83c4c"
-    sha256 cellar: :any,                 arm64_big_sur:  "07c9fffbca1d97fb058df4a5729ca10b0fd9484e9b3813a9f3dc3635a0bf28d1"
-    sha256 cellar: :any,                 monterey:       "2d664b0d063589d45027253a17dc155c9a451175c8cdd745a6937355351379b2"
-    sha256 cellar: :any,                 big_sur:        "e3d61a9e45ae5cd5bc6c44b29075b1722e4b6058000da1e73232e2972d6446d4"
-    sha256 cellar: :any,                 catalina:       "931ab0523ebfa67ee38bda69013a70592e83ab3a846484ff40bfff5cba316034"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "20fff183db5e3846544f3325dd64a2e210eab5492a9c45277b8dc841bb86e85b"
+    sha256 cellar: :any,                 arm64_monterey: "6944f390ccf74b973faa8dcbc13ff97f6cb8cbeffc3b1c9c415ae24bdeb8b6b5"
+    sha256 cellar: :any,                 arm64_big_sur:  "dd06dd58ad6291f329683d8f96a389c216a41331280a24a0efa61eea6c91f7b8"
+    sha256 cellar: :any,                 monterey:       "a03146ddb16bf6c58ccdbc1da737bd8e797ee1fdf5886dba42239f1c0102cfff"
+    sha256 cellar: :any,                 big_sur:        "d848773a9c4464d789d67fb24130d6fc2b810345f893fef3e59afa486b329559"
+    sha256 cellar: :any,                 catalina:       "194e7c44c08a3078b190887d13327d847062bb38fe89f65d3066b605b533bf1b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "81564519b5159afdda85183c450f6429e340955dff15fab2dbc7f92354ccf5ef"
   end
 
   depends_on "pkg-config" => :build
