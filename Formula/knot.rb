@@ -12,12 +12,12 @@ class Knot < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "32328bcb82ad635eaa41cd9f9827a8d932afbc661bbc24775a405e5af9e57df7"
-    sha256 arm64_big_sur:  "4b4b67241a382475c0546f2a664518436ab13bb73f5544aff1dfcb6015187d43"
-    sha256 monterey:       "27a112ffc321fbef90baa55f937e8b2d17c84ddbf39466bd6a6a2fe1daffdfd8"
-    sha256 big_sur:        "065fab3a80f305b392d5096bc3d87193d3ce8baf34f8d399489d1afdd654cd79"
-    sha256 catalina:       "f41b04cf5103cae87d31adeedd7ee54cc948ad9bce58bd79cadb1ce32e3e6be8"
-    sha256 x86_64_linux:   "026821bc22babd0f8a589ab43fd7bb13de3fee779640854123599a9cb1af02cf"
+    sha256 arm64_monterey: "27486d93321bb8959de52457ccb66094323746c8629c991ed9aeac88dfff2f6f"
+    sha256 arm64_big_sur:  "ab0ef8e7a5ff71ef7e87bca8fd580a85e52a838ffad4147367f939c27d45a5bc"
+    sha256 monterey:       "ae34c6df5b50f50a01dd2d481a6cfc27342c0b219868f3b68d058124966eb2c6"
+    sha256 big_sur:        "e520acd79eb8418e3afb8c01d221dc05504f886e2218c15c88c0ad958ec75f8d"
+    sha256 catalina:       "9370225de37eb1de4394144427c375a0704ff0d8bddc5b3dd91e597bf09ccf24"
+    sha256 x86_64_linux:   "a9004234d56112ab01144ba447f188d1d64122f372e843b6f4f1754a5eca61d5"
   end
 
   head do
