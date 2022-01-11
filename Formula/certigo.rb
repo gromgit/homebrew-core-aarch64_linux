@@ -12,12 +12,12 @@ class Certigo < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8d58d141ec797642a5328639290a50e8af1aab185a38c36be13d4a5e8c7aa0a6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cbb97e3b924fe9c0074b14c885682c3eec696ded881a65db17af607bfeb85c97"
-    sha256 cellar: :any_skip_relocation, monterey:       "b11198a9086c6959be63a5fa0eefa0bc563f013868645a70e7d2a65296949acc"
-    sha256 cellar: :any_skip_relocation, big_sur:        "00a50c8b17d3484987e4aa679b625be5717eda1acead9f4f1e316dc334b04686"
-    sha256 cellar: :any_skip_relocation, catalina:       "d2e94552ffeb15738fa23d6e03a86908fe2ff2487cb9dc787706ecaf1558b01f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f7ea2e7180a7de46d7fcf6cba8027fb8a86b89abf088102ecdd9182224155619"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1ccb58f1dac1161219e2310d72e8a7a404ffab99d2a8a7ae8be2c315f7033ceb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4622407b65e5f8c0298291455a40eae661eeac4f684f2299ea8e9fefd2444706"
+    sha256 cellar: :any_skip_relocation, monterey:       "cb9fb5641222de7cd94b67149ec8e69e0651d391881401cc4c5f5efed5b3cfab"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d42f36d0e0736aed44c5550cbdbf0927bfea21e5bb001461be1fc5f172c0ddf3"
+    sha256 cellar: :any_skip_relocation, catalina:       "2f254dfc8abbe62963c2932d9ede812196e1151991830919af29900fdaf41313"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "013d339004641eb9b7bbf488ab06fe4c3482eaed0612c46fd55a8fd8f2bfa1fc"
   end
 
   depends_on "go" => :build
