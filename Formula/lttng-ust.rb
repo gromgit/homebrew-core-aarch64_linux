@@ -12,7 +12,7 @@ class LttngUst < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "2a1aaa6c23382092d5f4e8422dd1db1330b46a80631c63bb4f3441d04dc30244"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "3913c063d8ff6cbd7ee20669968398bf187182d211bd2936b11bd07a3e03e2a3"
   end
 
   depends_on :linux
