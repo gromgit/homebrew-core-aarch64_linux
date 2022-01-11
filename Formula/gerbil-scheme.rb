@@ -11,13 +11,11 @@ class GerbilScheme < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "e77cbea05b9d1991e02abd6d1ee6a59e623e3a27dd777cde903ef61ad16d195e"
-    sha256 arm64_big_sur:  "2961aec56f4dc30a10a944ffb2f7c34d2c725c4e53b3eb5486eaf5d1a2bd92dc"
-    sha256 monterey:       "a3078cf9a1a31024c3b62b116893dee942d4c535794c53c40566f01c6c0b303f"
-    sha256 big_sur:        "c116f383adefb6954e99e3fc318244f02c30ec0f53e3a7bac135c87e02a90dbc"
-    sha256 catalina:       "2e58cb74f57dd09a84bfed13aa1d44a1f1f8f5c057c59d2a27a338950c53ce82"
-    sha256 mojave:         "119570c624e9fb56e17df10263434eb0ba94ba3cdbcf5942c10cac9b26161318"
-    sha256 high_sierra:    "adb9592baedab1841b1a6603ff8cdc30694b01ecd5444d7c637a987f98356a44"
+    sha256 arm64_monterey: "95f3dddf6cf1fc48589aa31fea8b1932337a6d16f3b920fff372f8741c2be89e"
+    sha256 arm64_big_sur:  "d5156015ff7c5806db8b89dc05886fcffb19f6ab2b61d9173895ac185bde13a3"
+    sha256 monterey:       "83792d7b1a1339a73e36493f4201ab2b1657d2d1f061fb1f0cf50587722448da"
+    sha256 big_sur:        "e49f094f25ebc88a787be33c109308decee3aebaf58298f43d429a31cbaa53d5"
+    sha256 catalina:       "c136d9ffbf63bb1ac05c9b5c4936d61d97e855fc90964163ea645e32e9adeffb"
   end
 
   depends_on "gambit-scheme"
