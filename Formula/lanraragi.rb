@@ -9,10 +9,9 @@ class Lanraragi < Formula
   head "https://github.com/Difegue/LANraragi.git", branch: "dev"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "9ee88f05aaa4fe5775a41068b26450ac766ebc8520ab596107a64f1cf7a61dc8"
-    sha256 cellar: :any, big_sur:       "b6f9247a0587e23fac302d70ca69f1d07cd73f3194ea1da37e0a5f3b4bb2fb86"
-    sha256 cellar: :any, catalina:      "a3608bc9c711fc8f8cc5c051b14ef89b882bfc3a4420e2cfbf63eb6ebaee617e"
-    sha256 cellar: :any, mojave:        "fb8c7b0db15297e6174933b439a816ff4bd9eacee21779d322973a619a249d22"
+    sha256 cellar: :any, arm64_big_sur: "7474aa535beace739f725a4e9d66d73301710a4048060661f1f9632e806e35f7"
+    sha256 cellar: :any, big_sur:       "6146ead7d4a4657c429573cfe7efebfac85af5c1662f9b4a848f91034eb45ac9"
+    sha256 cellar: :any, catalina:      "44b49568d0ee0e1f2da3329f111313bf34920c2e6b27b0038e5df91bd3c20127"
   end
 
   depends_on "nettle" => :build
