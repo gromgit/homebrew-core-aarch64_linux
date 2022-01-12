@@ -13,12 +13,12 @@ class Openimageio < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "cee90ef3c19d55e5355b86d2d78c045395535f1c46c4e7cd9c2a69786bf33240"
-    sha256 cellar: :any,                 arm64_big_sur:  "dc8ff4328d144b75fa24a2abbf54a02e5c2b49d0417b7e4d55fe87af8adc4305"
-    sha256 cellar: :any,                 monterey:       "e90cf29f22141308f8ea1aa6c7ee815c570eaf2f01dc7c229ac77914b1ebb14f"
-    sha256 cellar: :any,                 big_sur:        "df3c6c4b75d55a6992068f6d5b2d7a5bb9631c2a11ef19e109b508a9f017054f"
-    sha256 cellar: :any,                 catalina:       "88391194abad057c031bfc2721f72937841fe684bea8be5c70d5ef945a9814b9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "213b3acd0b88d2c3ac57aca50a83fe907d8f2094fdf224a373a36e21e32e743a"
+    sha256 cellar: :any,                 arm64_monterey: "602a199d70279cdc22dde726d924feb0bf8141fd37797ef9ef46046feb28ac7b"
+    sha256 cellar: :any,                 arm64_big_sur:  "c4f6228a23b6781d9e3e27a6bbd60019753946b86dbd2de21e1e52fe4ad6d3a6"
+    sha256 cellar: :any,                 monterey:       "ad6d51133a89fb6b3daee979e077fa12ae80ea673cf183690e8c0abab3ca878d"
+    sha256 cellar: :any,                 big_sur:        "7937fe7ce4538936dffeb12073095a84c3e0fffa24016a6a2c381591662c575f"
+    sha256 cellar: :any,                 catalina:       "dd1369f089cf01b796100a1fd8819d233931d32992b2c64b3ced46e2926c6149"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "86077222521d2606b61742104f20ecf6b433890b4e65a7e902324c644cd16300"
   end
 
   depends_on "cmake" => :build
