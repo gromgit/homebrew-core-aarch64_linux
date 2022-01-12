@@ -6,13 +6,12 @@ class Bbtools < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "201e7cbcb0681e02eb6165f14182a45426a61ed52d3797432aaff0d01e42560b"
-    sha256 cellar: :any,                 arm64_big_sur:  "a5f09dc1b4fbab274212e09dbcf37eb86ad96353f1451da8cd6d0cee13c24ea8"
-    sha256 cellar: :any,                 monterey:       "e658f17a6feaf0076623197a0f3cc3cdd0cc6a2a9cd40fd5d0a082fa544d1275"
-    sha256 cellar: :any,                 big_sur:        "63c494be4d54b01b8fdbbae8d1c9a3479cc00a47d082bf8c43a721d86fda48ff"
-    sha256 cellar: :any,                 catalina:       "34ac2edaa8cd697f60e9858d483f2cd0dca2d17bfe2ecd986d8391b50a161348"
-    sha256 cellar: :any,                 mojave:         "3548c29585c5b320bc7855f3a33c49639e8035d5fad9757fb24784c46aa17486"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1e8caeefe2ac57585f7cda44463836caeab85f3f92f066e755d74234116b6a37"
+    sha256 cellar: :any,                 arm64_monterey: "683e587bedffcbcdd78977b635fd00fda5d9596c35cdbf3d54a4ded2985356f9"
+    sha256 cellar: :any,                 arm64_big_sur:  "8b78c6aea85776310295d31001a4281ecaca975a6c04aaab8494880a4e4b496f"
+    sha256 cellar: :any,                 monterey:       "7fd3f58fff2a6234a6e6d1c8ced09b062879a83551b377f5202c82b662e4c28d"
+    sha256 cellar: :any,                 big_sur:        "0bb75cdc4bc43683311c717bfc7ab03caaaed45575fe1321df383ef7fbd582cb"
+    sha256 cellar: :any,                 catalina:       "e4aba87066fc72a1a091cb64c004f672f4ef552e8c2670457403f758f049b8d2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "239f57b37ec781b1a246aafd47ed4ca170d210b26d673643b906b200bd1105ce"
   end
 
   depends_on "openjdk"
