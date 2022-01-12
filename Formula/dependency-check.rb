@@ -11,7 +11,7 @@ class DependencyCheck < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "18e257c7e03a8e43b9f07dd9659ca71b904c9edd97f0f0ef3790f5ba94f63106"
+    sha256 cellar: :any_skip_relocation, all: "119e03bf337ee1c513319f379acfba999a91c3a2ff2c65813db9d44e05fbe46e"
   end
 
   depends_on "openjdk"
