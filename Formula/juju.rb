@@ -14,12 +14,12 @@ class Juju < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d89aad9814dd7c55e75a00fdbc839a40cb3a52ec869e043f463846c2fa8817ae"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "69d1149fc2172a658bee8a3d16d10820fb29fba40f0d2ce2a01c6328b78a53de"
-    sha256 cellar: :any_skip_relocation, monterey:       "bfeba667aec3164ef310c53d6b9b200f9e69529e7a0ff8ce8357b9f557c593cd"
-    sha256 cellar: :any_skip_relocation, big_sur:        "388fc8bb53572305b3bc46995d8b93e2a19b1f32c0c2ede08203d9a1fb9ccd5d"
-    sha256 cellar: :any_skip_relocation, catalina:       "705e5449dbecc16fe21d0a01f85e0330be879e13277d9b16ffee3b659efecdc6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2da99d9783d2e27a16c49e68c646bff0183c8fee9c0054a9776354407fc89afc"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d52d579c4e18abb6bae5fa7d46c9ff0630e4aba6e1abc2d9424c4d7ae8671b22"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bd269367c2bfd06ad006d698dce0595940d6590b2ba34def15182f108f3dbf2f"
+    sha256 cellar: :any_skip_relocation, monterey:       "dadb14964b5790f0611f1007f136d2afd0439eeceef816551dd949d7425bd392"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3d6557b983ad9dddd055ea439e5681409705effa21b714a053f3478d00ba25f7"
+    sha256 cellar: :any_skip_relocation, catalina:       "fdf1606468b9713f46cfc22c217c406026e5fc9802020be5c8a09382706c9b41"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7814e0a08048357785f70e698322f42bf4522b9cde251f841ae31806d8139f8d"
   end
 
   depends_on "go" => :build
