@@ -7,13 +7,12 @@ class Cue < Formula
   head "https://github.com/cue-lang/cue.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c3467bcd7b9bb8d45b579b7a805ebd95c434671e52e69693ec7ffadae39e0362"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b70f60ad4a8d7fcf3d58f5008a0d15534cb51100640cbc41617c4c185ff167a3"
-    sha256 cellar: :any_skip_relocation, monterey:       "914ced45658ed04822d2a25aa1b5f0bb9491f57c4e2ef28d03374ef7769b11cd"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a3845893ea23997712d12d7b5b4d2f3dcefbf0ced2aa94ccc35d251e4ee2b3e4"
-    sha256 cellar: :any_skip_relocation, catalina:       "c78ec07346c1e5a82d548bbcf86caf660c111884077bf8a556c9637227920440"
-    sha256 cellar: :any_skip_relocation, mojave:         "4d07f627d60bc08ea6866b5533ca1652fb70d994b630c9793d572c49edecfeed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b487c474bcc5a3e2edfb1cbff973239e9915a49f045d2f34106b12c8155ad769"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f7937d3e217302811c2d14f4da98ac95e8a9bac9df999e24501e400b9fd40b04"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1a4487bae1dfee10402b4399c0526e4af68775d5830a727557d187db20a02152"
+    sha256 cellar: :any_skip_relocation, monterey:       "1ab1deac2e63d2f9da4b08c9044c059692fd4485094092803585ae587a44f116"
+    sha256 cellar: :any_skip_relocation, big_sur:        "84040311154aedad8b6ed3d77594bd6191c55632ed3293a71c2825ac777047f6"
+    sha256 cellar: :any_skip_relocation, catalina:       "d6f99596f16c1fde5c658b0ad50075d8945a97ebb771cfb5eaf1ada572389484"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "033a16bb5887ed44d884c5578aaa4cd8e57e528a856ac6ffe7e7137ca890e444"
   end
 
   depends_on "go" => :build
