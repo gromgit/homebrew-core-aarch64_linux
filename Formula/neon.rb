@@ -12,11 +12,12 @@ class Neon < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "86e0ca2c11f4882900d48f5c6c87f29ed437c0fd4c311d06174c9bd10ef3542c"
-    sha256 cellar: :any,                 big_sur:       "86819110b5eacedd6be7e53d202b532c4b956062217685ae98bb96e547ad58cd"
-    sha256 cellar: :any,                 catalina:      "f5385868f91943383ca9674f2589280e30b55f4156086db05efa160411738467"
-    sha256 cellar: :any,                 mojave:        "de9f23227aac7ec30b4a412d783e5dfdb788a51c51e66689f01705207270805e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "07b5a9528950d32639c71726cd22bf01e6dc9df7dea38d4dccc17ab7844798a7"
+    sha256 cellar: :any,                 arm64_monterey: "5b10f6c1be6a6897763339f92831344a2ca97a27e26bc8c27399358f6214961f"
+    sha256 cellar: :any,                 arm64_big_sur:  "c3e6c0140a0761348ec6ebb26ff464bc3baf250b3674df7a9692a0af7a6d4068"
+    sha256 cellar: :any,                 monterey:       "2a3ce9b7329c7abcbbe9167e8d5fef45a242d1ae2d876a989b41cabbec19171a"
+    sha256 cellar: :any,                 big_sur:        "ddf63fc6da79aa76871cf66c88237c2a0cb83a35fd01263c608c9c8dbf122ff7"
+    sha256 cellar: :any,                 catalina:       "25216dfe96706b6e1cab7cc6b15300571fe38a00973e0c31209886a1005cf290"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9929c188b7c2bac00ea1bbb3b169481e02feb41d04157b80ba19b47e78b9add7"
   end
 
   depends_on "pkg-config" => :build
