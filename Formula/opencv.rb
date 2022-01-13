@@ -12,11 +12,12 @@ class Opencv < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "04b79e1e08b0ee00a01fcd71adea34af9a9e7d7c97aeff5a7c8450a75e43de6b"
-    sha256 arm64_big_sur:  "61fa2aed041fb451c47b57a412385689b625551f6df2a75ca240fadc920ac65e"
-    sha256 big_sur:        "f5e25d935286f3abdcdea1b6403630014c6a03c5869c588734b55c813fcc1be1"
-    sha256 catalina:       "32d0564214e91ed203d0f9788cbbf66f001e11dd2eb60f5c1a1a9cedecd4c95b"
-    sha256 x86_64_linux:   "562ebecc68e240c22cc53e08bd2402df101498aa42abd101d87a258b41cf09d6"
+    sha256 arm64_monterey: "44199cf7982c6990e206d002b22da98481e42d4db371f25371d60dadad9f2106"
+    sha256 arm64_big_sur:  "70ae341c8129b66476214670c5cc35e7042bb274cffb8febf400f2fd8a7369c1"
+    sha256 monterey:       "e22779842a84948276f01d9fadb1c3e817b32b30fce65a459a17d0d8798003b7"
+    sha256 big_sur:        "9bce33f073613ded8b9dfc6bb6fc72286db7a876d7e382735a2343ccc6be3b76"
+    sha256 catalina:       "a7e1e90c460f850c8b45d27d2e9cd87eb047fbd563d03372cf4be7895edabe25"
+    sha256 x86_64_linux:   "b948e0b3a22205e5ca5a48a241daec908edc22a34df259653cfcf7667d961342"
   end
 
   depends_on "cmake" => :build
