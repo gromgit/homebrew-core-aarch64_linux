@@ -11,10 +11,10 @@ class Micronaut < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f03c11bde30dccc06bdf912906e0a94314e25181654100f3572e0cda2a9c990f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "34e74fb04cca3f20379dd4b87bd8ff1cabecb8b3d5d9ee6eca1404248df64b84"
-    sha256 cellar: :any_skip_relocation, catalina:      "eae9f7cdbff5d63d32c94f1fd194024b8c882f833d32019fec98ea0866c45cc5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9e34c2c5c566240f3dc36e844632e2c71f21bc4e5ddd735bfe4cf99dec8ba4fa"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4cc09e646af355e7755e05841f5b9dba8d092345efd36b46843cc388d7b95aae"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4ad34e6bd98251cef0c7c3f8192171423cbff58a475e2382dd6f66e517d5bbc8"
+    sha256 cellar: :any_skip_relocation, catalina:      "22c52cf574ffeb4ea826a3a0103bf3246b9619f84a291888ed9e4413205e663f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "506a2d6e254901a653bddcb140b7ac5b6defbb7e2d9957b1da02a73e9c800737"
   end
 
   # Uses a hardcoded list of supported JDKs. Try switching to `openjdk` on update.
