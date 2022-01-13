@@ -8,12 +8,12 @@ class MathComp < Formula
   head "https://github.com/math-comp/math-comp.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d7930a0752ce3deaa24a028cb07452e7ddcfc1ed59542a930c23a2d369f529e1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3b3a697a5787b530a35561599cdb22aa2c9f4df22e68c40c593b82286bd8e462"
-    sha256 cellar: :any_skip_relocation, monterey:       "517e2cd5b7cc67f1812a3212975e2a168c3c670a1ef7f5590cf053d778bbf4b6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "19f4688730d7ff48f03ab7486dbf8ec64f24b8b92a011b7cc20aa374dfb6a30d"
-    sha256 cellar: :any_skip_relocation, catalina:       "e4ab7930f3a6f24acdaec85b79f0ff9a659ee76219853585177ed5a2e3065c53"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e23441758f91573ec76ff8e61cc78a957a95f78be8b564635ecf4dcc98cb1642"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "faf8e4e316527e1589ddece4c263b64ba60f12f92e27726b1d9658bd95f9971b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6b188eb697049614a810781431ded0f7d35327c5cc20f5a92a5bd785c710244d"
+    sha256 cellar: :any_skip_relocation, monterey:       "22601f9f8726dc6ceee9e84bb34b54667e81f89a39f81f9a3164595c2ba8bab8"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e68042b7cf46e9d1714117212ddb647a02e8aee9d576e7576d996274fdc4e3e8"
+    sha256 cellar: :any_skip_relocation, catalina:       "858e8b26f67f0cf77d28336b35f083dcfb5320cdd8b81b04a2e3ab084d5fb7f7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ec82091ef0ff25dfe07e6d4b5774798d8f511b210d3eeb4f6f2b07fbe5b17dd4"
   end
 
   depends_on "ocaml" => :build
