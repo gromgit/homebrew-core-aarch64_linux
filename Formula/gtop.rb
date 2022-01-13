@@ -8,12 +8,12 @@ class Gtop < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "62e1cfda9baa709426b950da12369483bdd63afa7bc31b00ab382660157305db"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "62e1cfda9baa709426b950da12369483bdd63afa7bc31b00ab382660157305db"
-    sha256 cellar: :any_skip_relocation, monterey:       "a633415a5e0edc11eb726d0c525be5f6645f4b3d2f73cad4f0e44f378db9d70a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a633415a5e0edc11eb726d0c525be5f6645f4b3d2f73cad4f0e44f378db9d70a"
-    sha256 cellar: :any_skip_relocation, catalina:       "a633415a5e0edc11eb726d0c525be5f6645f4b3d2f73cad4f0e44f378db9d70a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "62e1cfda9baa709426b950da12369483bdd63afa7bc31b00ab382660157305db"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f7bfefab47efb569bebb4e3c5ee45159c8f26aaf6fda49b74015bdc665be8dcf"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f7bfefab47efb569bebb4e3c5ee45159c8f26aaf6fda49b74015bdc665be8dcf"
+    sha256 cellar: :any_skip_relocation, monterey:       "bd9f489110a6841a2306afef5b77e160e34e650a1fc63978698d54a982358a8b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bd9f489110a6841a2306afef5b77e160e34e650a1fc63978698d54a982358a8b"
+    sha256 cellar: :any_skip_relocation, catalina:       "bd9f489110a6841a2306afef5b77e160e34e650a1fc63978698d54a982358a8b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b8a49fe170889400a5976142f6131b06f4f3d0f366a9c821beac1997f29be6f7"
   end
 
   depends_on "node"
