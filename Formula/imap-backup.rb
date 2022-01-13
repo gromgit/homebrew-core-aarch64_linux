@@ -1,9 +1,8 @@
 class ImapBackup < Formula
   desc "Backup GMail (or other IMAP) accounts to disk"
   homepage "https://github.com/joeyates/imap-backup"
-  url "https://github.com/joeyates/imap-backup/archive/refs/tags/v4.0.7.tar.gz"
-  sha256 "785dd28a6d2a33b2774ce09db30c41add5925d737f7840562a2e9b4fb7f9836d"
-
+  url "https://github.com/joeyates/imap-backup/archive/refs/tags/v4.2.0.tar.gz"
+  sha256 "3fce5cbee17617d0284e3f4ad1261b3ba703374b2e14ffff0e29216abd90304d"
   license "MIT"
 
   bottle do
@@ -27,20 +26,6 @@ class ImapBackup < Formula
   end
 
   test do
-    # workaround from homebrew-core/Formula/pianobar.rb
-    on_linux do
-      # Errno::EIO: Input/output error @ io_fread - /dev/pts/0
-      return if ENV["HOMEBREW_GITHUB_ACTIONS"]
-    end
-
-    require "pty"
-    PTY.spawn bin/"imap-backup setup" do |r, w, pid|
-      r.winsize = [80, 43]
-      sleep 1
-      w.write "exit without saving changes\n"
-      assert_match(/Choose an action:/, r.read)
-    ensure
-      Process.kill("TERM", pid)
-    end
+    assert_match "Choose an action:", pipe_output(bin/"imap-backup setup", "3\n")
   end
 end
