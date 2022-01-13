@@ -11,12 +11,12 @@ class Sdl2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "5b4b6a1a7970fbfded9389f92e468f119046c4f4e01af22c31e554caaa752e3c"
-    sha256 cellar: :any,                 arm64_big_sur:  "e36fd1e12b902f813218cf9814b6630b81e5313aeae29cbdd549238cb160aa0e"
-    sha256 cellar: :any,                 monterey:       "fab140fbf55d75ddfb01d709cd8205d338ed7aad49fd8294d89e9e274f39eeb1"
-    sha256 cellar: :any,                 big_sur:        "4993f3b619580b2f42c794b2174f5577acf8aa83f26b1b0c60c9ae7a427888c6"
-    sha256 cellar: :any,                 catalina:       "c208bc07789bc18e15b5efc73a406bf0fc5186db304fcf4e472b95955de5a298"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "03812e46b705635bee5b9252f0a95ee138c8239d3756c0cea8728c0f8e8701bb"
+    sha256 cellar: :any,                 arm64_monterey: "3cbd5b0ac7c9f4aedfa57dcfa02cff1e88013e8713cd5ec76d185897ee052b4f"
+    sha256 cellar: :any,                 arm64_big_sur:  "7aca35ed5898e9dbcce4fa5372520f13626224d1600f391e70124012eeb1d0af"
+    sha256 cellar: :any,                 monterey:       "2f9879903f7c18cef28684ee6718510baed17d1dcafc01416da6a35a29f0a1af"
+    sha256 cellar: :any,                 big_sur:        "0a28562932bdf7d4f5b7528297d8a0d3a8e5ce04f67386110bc785800018f3bf"
+    sha256 cellar: :any,                 catalina:       "9469eff3f8d7ddc9064eb8223cd220d8b1934fd6b5205199a8eb7bf50d84df04"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c1c80d0712cd623beb51bdfcfd9494b6b62639dcd70f8ae10f947731b7254236"
   end
 
   head do
