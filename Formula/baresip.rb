@@ -1,8 +1,9 @@
 class Baresip < Formula
   desc "Modular SIP useragent"
   homepage "https://github.com/baresip/baresip"
-  url "https://github.com/baresip/baresip/releases/download/v0.6.5/baresip-0.6.5.tar.gz"
-  sha256 "2b035bd8b2121c72bec674768579a3bdcc5d1d567ecb0a84125864d69807b18d"
+  url "https://github.com/baresip/baresip/archive/v1.1.0.tar.gz"
+  sha256 "f9230b27c4a62f31223847bc485c51f3d960f8a09f36998dedb73358e1784b4e"
+  license "BSD-3-Clause"
 
   bottle do
     sha256 monterey:    "b0d792db1c9ef6772cfccf172288fdc306b404bded7659f8d8caaee5d31a4e9c"
@@ -23,10 +24,14 @@ class Baresip < Formula
     end
 
     libre = Formula["libre"]
+    librem = Formula["librem"]
+    # NOTE: `LIBRE_SO` is a directory but `LIBREM_SO` is a shared library.
     system "make", "install", "PREFIX=#{prefix}",
                               "LIBRE_MK=#{libre.opt_share}/re/re.mk",
                               "LIBRE_INC=#{libre.opt_include}/re",
                               "LIBRE_SO=#{libre.opt_lib}",
+                              "LIBREM_PATH=#{librem.opt_prefix}",
+                              "LIBREM_SO=#{librem.opt_lib/shared_library("librem")}",
                               "MOD_AUTODETECT=",
                               "USE_AVCAPTURE=1",
                               "USE_COREAUDIO=1",
@@ -34,10 +39,11 @@ class Baresip < Formula
                               "USE_OPENGL=1",
                               "USE_STDIO=1",
                               "USE_UUID=1",
-                              "HAVE_GETOPT=1"
+                              "HAVE_GETOPT=1",
+                              "V=1"
   end
 
   test do
-    system "#{bin}/baresip", "-f", "#{ENV["HOME"]}/.baresip", "-t"
+    system bin/"baresip", "-f", testpath/".baresip", "-t", "5"
   end
 end
