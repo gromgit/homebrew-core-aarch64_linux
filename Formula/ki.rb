@@ -1,8 +1,8 @@
 class Ki < Formula
   desc "Kotlin Language Interactive Shell"
   homepage "https://github.com/Kotlin/kotlin-interactive-shell"
-  url "https://github.com/Kotlin/kotlin-interactive-shell/archive/refs/tags/v0.4.0.tar.gz"
-  sha256 "d7100140e57f1c3a3c44bab2435dcd80fe04db756c9a8e72c726c0b36ad5767d"
+  url "https://github.com/Kotlin/kotlin-interactive-shell/archive/refs/tags/v0.4.1.tar.gz"
+  sha256 "b6e3ccb5ceb5a3e07d79b9f0684cec46ba0c5d4ded2346909048c72c9904d1c1"
   license "Apache-2.0"
   head "https://github.com/Kotlin/kotlin-interactive-shell.git", branch: "main"
 
