@@ -6,10 +6,11 @@ class Gobo < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:     "1f302b672e67e600556c1d5e30751bb0ca1a47f19f8167bf7661b1fd9dc9e7d4"
-    sha256 cellar: :any_skip_relocation, catalina:    "a7cd43939f9300895b1b9261ae14dfab076c9daca40f553d1b6b7b263e6b5b98"
-    sha256 cellar: :any_skip_relocation, mojave:      "a4177e9921a0ccb52b426aea6bd000b3492545f763549fa979d082693041b41c"
-    sha256 cellar: :any_skip_relocation, high_sierra: "72337bad76bfb21be107f01d587c6f4f968e5f4e1b94343e936e7086e59d6308"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e533b348ea2064b407e0c4da4375334a284ff9a4327f86b18a400202ab3632b5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "30ef413627040ba2d8a1f5f1b4248aff968dca12c171278e7a615df5c843240f"
+    sha256 cellar: :any_skip_relocation, monterey:       "930a459b40e131dc3076dc1f4aafaa3e58dcc7173134e7f162145040ee4bfd68"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a26f0cf33aebe2dca17fc9ad9b1741530e789d9ab4e289245fe8886fcddf65ef"
+    sha256 cellar: :any_skip_relocation, catalina:       "c8eea87acca4311c744bcd7aa7444d41728e157d778b12a6c24923173ebab77e"
   end
 
   depends_on "eiffelstudio" => :test
