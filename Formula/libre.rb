@@ -6,14 +6,12 @@ class Libre < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f4bc1ae32fab88d187eaa9e4ae4d7dd2fdc0323c39e3d4465f841b1270f1f808"
-    sha256 cellar: :any,                 arm64_big_sur:  "48714fc735db00829b900935b7a0640a74f9f39174fc57775fa145428acd7759"
-    sha256 cellar: :any,                 monterey:       "e9bea2c2d27fb9c93e2b8608e17cf5217b3e980e6fb479918074ab5a8bbd6e32"
-    sha256 cellar: :any,                 big_sur:        "73bb1c1c6ebe022f294cc73e672154579e4d8e634f109883bcbb68818e1f3374"
-    sha256 cellar: :any,                 catalina:       "0ca7e76631b5f30d72b4bc4248e894d00f05cfb785c98856d82cd5cc13e591f9"
-    sha256 cellar: :any,                 mojave:         "5d43d79ef2406e40c858463189ca8a40f0b13ede8a7090b56ba0fd1ef942dabc"
-    sha256 cellar: :any,                 high_sierra:    "32787ca36540a0c7c330560076e25726bcca0f08a7b77014d3837bd9c7ca1840"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "75db7f192f53fd5e420b9eaa3c5fea8e0875f4b951751b07698682e9196d3ac2"
+    sha256 cellar: :any,                 arm64_monterey: "5c8f8e75000fec0d58233ba1d9bc087402b188f8fdd4ba2afb1ae4efee4f2261"
+    sha256 cellar: :any,                 arm64_big_sur:  "c845144b9e4dd8d6fb4684b8cd17541d78c6f0c5ae3638b3199c6a464bc44072"
+    sha256 cellar: :any,                 monterey:       "f80484fcce155903f92e880b3545811afcc289e5e623985086969786bea4a124"
+    sha256 cellar: :any,                 big_sur:        "dda08049001eca8219271309f25f7f04603381e77d9bd72554e5b65f42b1cca9"
+    sha256 cellar: :any,                 catalina:       "c4f9d66eed7c6ccf88d4a6e92131996ba5204c0458af2745f967d2d65963c8c1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "095bd2f7a18a7c75cc321aaac90ef2a2ecac46fc066d7b092fdc76e91c7d978b"
   end
 
   depends_on "openssl@1.1"
