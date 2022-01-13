@@ -9,10 +9,10 @@ class Fceux < Formula
   head "https://github.com/TASEmulators/fceux.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "93e3ce6c5666a52b18e0bb4a700c9d1dbd4e1872f41538e3c11eb6a0eecc2fa7"
-    sha256 cellar: :any, arm64_big_sur:  "82e755fc3934123d84e569b1db7141f73a64c008360d928289c51ef5659ac9b7"
-    sha256 cellar: :any, big_sur:        "7b7f127696259777b51e9cc73899c64ad6ebd5011cd3fc1034a426b14857ab38"
-    sha256 cellar: :any, catalina:       "433b61b512f6605d3aae9f9972cd1d4438bcff95c14177ef5caf2587c21746f9"
+    sha256 cellar: :any, arm64_monterey: "90f731fec114036b892738bfb92dca2e732d504f799cca51c44f73dc1da245cb"
+    sha256 cellar: :any, arm64_big_sur:  "1ea1e8b6dd10cf7919c5e196270b122e207917e7e4a373d80b4a6afd58062e62"
+    sha256 cellar: :any, big_sur:        "9f321786d859c2553882e05313a774e4f8b97efb6976ec3c6310c1b6f7a22145"
+    sha256 cellar: :any, catalina:       "d805ab7115b26a6c95c37711ad34043116f54abe2e276b07e77fe1d4bef73fa4"
   end
 
   depends_on "cmake" => :build
