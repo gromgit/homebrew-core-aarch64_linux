@@ -7,14 +7,12 @@ class Libsbol < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "98d0945d4d7e7fd37d5e71cde652b92f7b4a3b80164ae46fe50cd2cfabad160a"
-    sha256 cellar: :any,                 arm64_big_sur:  "5148eefde20cfafb8945cb75b362f6c88e5a856093da176db7b1feb45afe4354"
-    sha256 cellar: :any,                 monterey:       "d5be309a865acfe2c770539c27c669808be6f914165d0c525aa1d9e0e4b8fd29"
-    sha256 cellar: :any,                 big_sur:        "106cf40dc3cc5f552ad256cead869e6bf80654d8cb8764189691399a88168b7a"
-    sha256 cellar: :any,                 catalina:       "69d13417a5f365bda9b5da5097f0b253fc76a9c237ac733ef7b684db1a3e01d6"
-    sha256 cellar: :any,                 mojave:         "2d81b55c1e379756aaf37667757273a6581ee98083ac6b87c0d2392020249b19"
-    sha256 cellar: :any,                 high_sierra:    "cc6aca556487165bf44a40d159428652cae3b60e04f685281a5662b5ced42d2c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1f787e31668d8d609cdf74155c6ce665711cd6fa0dab5374b9583086ca2e0001"
+    sha256 cellar: :any,                 arm64_monterey: "424c45f889a942cdf2a91db6a0e27fcefed1b6300dfe2715c77971a0bb63ae6f"
+    sha256 cellar: :any,                 arm64_big_sur:  "abe3ed20d3307039f2518d0ada34a5410f808cef2cb7d7f48c0b8547b37bce92"
+    sha256 cellar: :any,                 monterey:       "1b3317cfc73dc8930c89754110b46f33f32c13950bf4e0606bb7d17618808ec1"
+    sha256 cellar: :any,                 big_sur:        "fd852551cf8ecc596eeb82fa82922307d1ea710b96bbe25fd769acb57d6c5db8"
+    sha256 cellar: :any,                 catalina:       "fa4fabe7e100011c6a0d48e6286c509bc66680a631e52ae5dd7a2163d732486b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0b6876a8bc254eb892a4def5c2d6c1c4d4875407dbf235b607c675aa9b3aefb4"
   end
 
   depends_on "cmake" => :build
