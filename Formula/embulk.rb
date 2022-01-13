@@ -15,8 +15,7 @@ class Embulk < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "c1b31ac422dff1e3232caf302ebb9f5673c08abd9fd723820e83fc903db5254a"
+    sha256 cellar: :any_skip_relocation, all: "cf6500c8b780a8b842484e34d7d451e433b9c1ebbcb39c60531423649d01bb4f"
   end
 
   depends_on "openjdk@8"
