@@ -9,12 +9,12 @@ class TranslateToolkit < Formula
   head "https://github.com/translate/translate.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9ed3b586db8c116447014087e1e72563221f58967e9a69d4d98e71255751cd33"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2f38a15334a68d3ec39e6bfd4890d5fff1b51f6425c2b6064bcef0fd1b23d94b"
-    sha256 cellar: :any_skip_relocation, monterey:       "91433ead60b231393b25a6f3bb0144619b0f2da9168a3ba8fbac7be848b8a675"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ab99b07055dd135a5299e8df13453d506c646ee51b290ee6b3f5e82aa5d24110"
-    sha256 cellar: :any_skip_relocation, catalina:       "c5171ef29ca5816575addd2f7c138e191abd42c5d219f2001432a7c65a3709d7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d9e1840db176c6c816aaf91250d49581fceab5149cc24550844f7f0f8e55dc6b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "53ed98e315bfcaf5e22e6d0e4764ebb0684bee3418fa3ac40724d0a85ff35924"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "271c7d9e4164f785177c7745d4604f7cdbe7624d7e57d09729fdcb87c80ba079"
+    sha256 cellar: :any_skip_relocation, monterey:       "0d27584d4f308f514437913276cd66554de4caa4080a378bba574c890dc9624e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9198ea874fb246a454d0750289d8a44ccb4d8667cf95671e235ba8c98effe4b6"
+    sha256 cellar: :any_skip_relocation, catalina:       "e71bb387af6d6684deba4ec45dd6e346a7b7524debf53c821e26ad9ee0fd4f6c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0900cfda447fcff6de7ac14426b0618cf535ccde71031ead8488350153ca3d65"
   end
 
   depends_on "python@3.10"
