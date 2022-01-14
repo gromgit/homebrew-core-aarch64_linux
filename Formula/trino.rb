@@ -11,7 +11,7 @@ class Trino < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "ff1fb454c807be9a4ef72851b63844e1fedd14df92edac4b39baf895fce897e0"
+    sha256 cellar: :any_skip_relocation, all: "d7dd44d6043f605da64b0eb8cff7f592eeabc8833de5561ef4c20dcc06219d92"
   end
 
   depends_on "gnu-tar" => :build
