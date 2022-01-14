@@ -8,12 +8,12 @@ class Principalmapper < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "57a540d7c14d58a06b4801aac59ee591571d4d9183134ee8c31cd5f9a7416ba7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "70c568a9c38cac05d9322b896eee1242e595ee249ced25bfbf7f59a04da4d88b"
-    sha256 cellar: :any_skip_relocation, monterey:       "fb97ef56f0680a894e98b0602dbb5080fc73503e01a41322f48d400770072981"
-    sha256 cellar: :any_skip_relocation, big_sur:        "10f7fa907a504870d8111c9c6ea3deab55eb8bce87ec7689b22b9a0a18910d17"
-    sha256 cellar: :any_skip_relocation, catalina:       "7dd91fb6b983f5f4c5a4b56143b22c0def678278ec00b422f15c783a967da5c6"
-    sha256 cellar: :any_skip_relocation, mojave:         "4d10def939d3034a6c6aece9ba80ba596ac9ed73afb7417ed157ee3df5b9bced"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3d5961e265f5d3046a75c8555f213ddefdaf199018cd8cd60d6e89c47cb4ff27"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bba6e778cb1cf67ad8a2a5c0bc370edfa21f264b580bbefdee8090ce946142f7"
+    sha256 cellar: :any_skip_relocation, monterey:       "6dee3cfd886bef29a87a8e83a7deb08f7a9ef57e6fa75da43312512c39109ae5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3f9f8e03974f0ec091aae08fabd51c1b8a4b0b414249bd66b3d612e9afdddedb"
+    sha256 cellar: :any_skip_relocation, catalina:       "ec6002823c26b790e14bd6aad3083571c4a7dbf11d1c0354a5f68eda4e9c90b2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "52676f3ed08c2968a06e1c7c66142f7b961e503a80aab8e5ef346b2a6a1150ac"
   end
 
   depends_on "python@3.9"
