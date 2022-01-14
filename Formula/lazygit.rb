@@ -6,12 +6,12 @@ class Lazygit < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "260ce5ca676cf93678ed52c4ec24048a94ca34ae87a681df568630e9db1957d9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "29445f834b5d8b32868c5f848bb0b6c5f65bea7e8c734ab908c0e92326fb1c77"
-    sha256 cellar: :any_skip_relocation, monterey:       "2eb9ff851384e34167ccef13fcc8b71351e282e37a83d100933c8f897cc035b2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c05bdf57173c9cb41b6362e7d537db6f53867d34f7fbc254f9fc6140702d941c"
-    sha256 cellar: :any_skip_relocation, catalina:       "2ccbfc02b6e40f6e38b55341933c288f60eb92c77ceee4d8423af222fca5b4fa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "044e81ab10f7a5446c05ea71623f4ee3be1bf00429935d6222c54cd3fc0d00b2"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4006257173d30a300898799861ec020375da2f2947d00e8e8e32f185fd6e9aef"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8b0a9660cbafacc06fe1d3cd0f73a1fbffadd49dfa070f7ee333c0d161e3ebe7"
+    sha256 cellar: :any_skip_relocation, monterey:       "054253d8370c9a0e0e909899f8fb86b9b4ba85aef671023da24706200437b032"
+    sha256 cellar: :any_skip_relocation, big_sur:        "61c5d1bde908f9a64adce6547afd462d8f080b1d9eb1da46be82cbcefea58360"
+    sha256 cellar: :any_skip_relocation, catalina:       "1feea6f078587b4ac43023249bcec95ef7e6b0f7bd9162f2e24dec0a6d475d15"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "833c50eebb4ab92c8999037b0b79d8039eb0090ca4cbf658be5af2e5413979c6"
   end
 
   depends_on "go" => :build
