@@ -12,12 +12,12 @@ class Gmic < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e8f6c441ac6b3e796b59aad218fcea2f56a3cfd7c09c15c4ae26f298dc9ec410"
-    sha256 cellar: :any,                 arm64_big_sur:  "593910f6919dc9c3d44bbdaf33753bd43599b145fc642bc231c5fce86641a751"
-    sha256 cellar: :any,                 monterey:       "d258b18ba0ccc52c99d20b072a42ff4d1a7384d4e0cc4999316f5821d677ccb2"
-    sha256 cellar: :any,                 big_sur:        "83abc77386f2109c94d6e4ca116024d2202b71df81353a6b544930d6916a417c"
-    sha256 cellar: :any,                 catalina:       "21f90efe4a38f46ebbbaa448320abe5f77cc70c40587e51bed4afe843b9757d1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b4af560b960d2dc3e7480f82edde6eebc21577ef1eba30825f201f020bfc07c4"
+    sha256 cellar: :any,                 arm64_monterey: "c4695a687fe50770a04247de2b403f5baecb1ab1ce71646bdcf90483046377d8"
+    sha256 cellar: :any,                 arm64_big_sur:  "eae7c4b071fd61a508978708ded5ab272d43634122b7480566b369bee918e84b"
+    sha256 cellar: :any,                 monterey:       "e0360d49276b222dca348523b08f72406d57ae92085c8ad7240a905230bc60fd"
+    sha256 cellar: :any,                 big_sur:        "efe20f281b18e825d282c0672f9b4bd525cac7d6e2dd971213ab95c1db555ee5"
+    sha256 cellar: :any,                 catalina:       "864e83816816e75e1f39a7f448d5e1cc204073956806cdfcbc289a78f52ba220"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4e61637e97caf2fdd854f10c685ef304731a607a8a4e0161d49b0dcfeeac08ef"
   end
 
   depends_on "cmake" => :build
