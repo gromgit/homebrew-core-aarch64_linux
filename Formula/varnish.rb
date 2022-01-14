@@ -17,6 +17,7 @@ class Varnish < Formula
     sha256 monterey:      "7cb4ae49e8618bd05741eeddf5de9f563b1c1c9a541216ad7444cbdd04383810"
     sha256 big_sur:       "30eabfc78b2a616339e8d931c7ca2d70356b3c9b2bb223ea045195e9d59445bf"
     sha256 catalina:      "ef8a23c4bd73ffd8431808cad95c0c738fc3a2b5a98a70aa30f9a99dc25918e4"
+    sha256 x86_64_linux:  "f89db7678bc4d3fc29c59c907346b6094a0c4604f144eadb44bd3624b0a1c1f0"
   end
 
   depends_on "docutils" => :build
