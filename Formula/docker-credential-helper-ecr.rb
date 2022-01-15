@@ -12,13 +12,12 @@ class DockerCredentialHelperEcr < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "19a3532dcc14111ee60f610c8bda076d4bd3662f519ef04673db3e0042b20f8f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0f76feceea1f591784fb2bb273950336675228c1d9e04d91af48d9bc6b700ddb"
-    sha256 cellar: :any_skip_relocation, monterey:       "3960a6b658b4ebd52ea4af9fc7704043029a673a0a6d97859def967b4dca536e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "822e7f36e21c109c0228fd53858781f872a4176a712b591a775c38769edc5189"
-    sha256 cellar: :any_skip_relocation, catalina:       "8506b1954205b0ccc6622738219606deb595da298797455442f5e7590886a1d8"
-    sha256 cellar: :any_skip_relocation, mojave:         "ade7af932bef1787cd560cb2befcd2ce9dcaa4ee694cac37dbf4a86265186667"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "643485656fa1b61484de16eb6ff48f0193a6eec6bd7e85b6c5d210e984a70085"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "04e5ea0120e3f7fc82748a7a76e0fa7b74b266c1dc3906de1eb15b2d3be9e95b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4ba8838fba8008c13eab1584b0c793dde3056d8e6aaabb25b622461eba910942"
+    sha256 cellar: :any_skip_relocation, monterey:       "5b8acfc95b569fa6514079f6988dbd8299c63428b1f77d2dce6566ae992da76a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "304a36764da647e5e058b853114949e797f8f57a2c529f2b869d6d6ae2da2305"
+    sha256 cellar: :any_skip_relocation, catalina:       "c3075232b5bebdd119e6cee8734d1c5ea56bdbbbc756d166610e1eaf11696fb7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dd1a454497ce215850e2d524d74630a114095da43135b6ddf2bcef8db2e1aee4"
   end
 
   depends_on "go" => :build
