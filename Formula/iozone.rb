@@ -14,12 +14,12 @@ class Iozone < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e1cbd65256b4194b9433684790fa8de0cbda60969381c091ed4b0d1c5ca80f85"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "70162e3f4b8b8c9729b677e44f99d75c29c3bed2eff7a3048a4a9742ead8f2af"
-    sha256 cellar: :any_skip_relocation, monterey:       "0bed94ffcb0544a55c470ac0ff8c01434bdc2a9c18ccc55a7daf058a3b242661"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fe98259ce6b004cb083aca24b7667b67b561b5ca88721c270f4fa233356ad9af"
-    sha256 cellar: :any_skip_relocation, catalina:       "7dc593ccc4ac2845d72b664ae50edb58b1bfb3552fae8a26af0bcb0b46926cbc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "52188213e65cf7e644bdc743d74049bb8797c05eaed8ffa30e94b21207ddd5c5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b7eaa434d74f43691c718d76c09f1b756fcee32ad96ba5042f69de9efa00f8e7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d89148f54880ee8829237f33d129c5844d13ccda2621f1afd04ff715aaaa9521"
+    sha256 cellar: :any_skip_relocation, monterey:       "53a4da234813b26c9647f81b3c2c3aa6cfe2288a8902c257d6b790418444e685"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1d17f34feb80fd9906bfab67542f082232389be9ea7d6fc8e7c893cd858428a7"
+    sha256 cellar: :any_skip_relocation, catalina:       "ef7631b9c8639f7e84b81e3dfcd99b6b0707fc27e4185e21f0126d9e625ca8c3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a9aa1ad6e384d02895adf1b3afe200c886856982a7f42855602822fb3288bf76"
   end
 
   def install
