@@ -11,12 +11,12 @@ class Byacc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "dbba9bb6cde3ced15e205d88eb78c95691914e860286aa10eae6f205c634b7e1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bde6b5e07a4c4740ceb3f274e70ed18e1804cae7e00a4bd6b9fde3c7bfc42c49"
-    sha256 cellar: :any_skip_relocation, monterey:       "bcb7fae2ff4fc911b7438c09eef58b40c439c370443a75875719358c09b8a66e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5cc12dbb394fd134736fd8f1ead653ef23b280912f6305a26f67a63b274bbc7c"
-    sha256 cellar: :any_skip_relocation, catalina:       "ff2b4f0e1e054c04556f06af0792b0b6c1d0ce6d40171216a3714b4c692efffe"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c06f1fba34b4e2bfef4aa65fa2fc9842c07e433e3475a411bd94065a062c3080"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "90da7a202b63169cd56356de9da590562bedd5a97fad44953c0c15d7daaf3b6a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "66c634b569502332b51e7703d03e9800a55db28e36bc458a791719339663ac4d"
+    sha256 cellar: :any_skip_relocation, monterey:       "76e44fa9288ecf0206986ad85441d64e65a080c07b045e83d15bc9a364c397f5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ea6f7dbf17c79bc18f92c6d409a52732e0b149acc8cda578206a87d27751f234"
+    sha256 cellar: :any_skip_relocation, catalina:       "b5adba9840b4bf16453fed0c51ac4e932c3aa2a87d0e5c8134b27dbf74bfa628"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0ca2a4cdbc4f8c477d1fd35d5bbcdf0c7d502aed0d2b2fbe8eb3bd13753cfd4d"
   end
 
   def install
