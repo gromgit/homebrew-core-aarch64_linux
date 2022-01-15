@@ -7,12 +7,12 @@ class Arkade < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "46c9669f13a30d7ac0dc1c634e70884c396b34fb9ebdeae18578d250957d5e8b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "578bcb88db0bf121146a3e642eb9996559ad59dd61136e077d43f6bf0cb1ca56"
-    sha256 cellar: :any_skip_relocation, monterey:       "0030215064e7fab3faa5692b938977daa1e0aa21dc8acadff16dfc102d47ae54"
-    sha256 cellar: :any_skip_relocation, big_sur:        "35490f18b2574191a00088c4c771ece3335690c9b87a707c2996db926ecf5dbd"
-    sha256 cellar: :any_skip_relocation, catalina:       "b93b287c2bbfe3601842b3cc7c460373211b61706f12776e6b9785687b969b51"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e034422b6c7cfee895bd018791877c770429c0ec31fe92543cd928344253e438"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "78ffbb8bdc72b0ab92f5100e841a693c71fdaf7ff18b726c18aa37c12addfc82"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "903dfb939042af9121395267dd58f539a6f3d4293a7c62f25eaf7d70da977eac"
+    sha256 cellar: :any_skip_relocation, monterey:       "40762da65ad2ecb2a7c25ab63b0aff8c506d6b29f3fb88ddd63823334369bf0e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "18b4b98751c6ce41d0073d4dcdd9fc6875cb44a942174d25083df099cae69acb"
+    sha256 cellar: :any_skip_relocation, catalina:       "373d87d266a29b3afd83c8679209a9ef688956a2a7738876e70aa99e989dd7bc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3c94fc6ec5d049d0399e2274b898b0e26e6447178d692743f00806c0f7a67645"
   end
 
   depends_on "go" => :build
