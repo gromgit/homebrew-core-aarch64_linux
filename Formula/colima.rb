@@ -13,11 +13,11 @@ class Colima < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "37e9eeef734397b5460f46f9897c4dfb42db5534104ebde7f5bc2ccaa7fdfbfc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c4e98720829f6790871bef25ff349ce08d5e3c3b9c5faa7e2f4b71b5a98e349d"
-    sha256 cellar: :any_skip_relocation, monterey:       "f5d0b85e2b0bd568d09c13cc11a10f758cf8a6cbc3c9c45b0caaa17c9b4b68ad"
-    sha256 cellar: :any_skip_relocation, big_sur:        "23c50d13164d385b6c7f877911c814d6580942c26fbee8001a805103a2798682"
-    sha256 cellar: :any_skip_relocation, catalina:       "201472ba5ae47dfcb8ee38deb08d915453b40bfac97a78e40ce1623acb6182cf"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f8504c11f50dcfb6faf86b6620a8edbaa7cd3f0ede4e37620446ce358fbca170"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dba1b14bff095ee5e58d748983ce06bf33bec0bc172c1d5e04afa9d1bc23c554"
+    sha256 cellar: :any_skip_relocation, monterey:       "e8057808c82af4968745194e40edbf045faf7427b74f728af97ae5f5773608b0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "36985a1ab428e54e4f8b23ce3ff33e5a03121e0aa131cf21256c2e27f4809892"
+    sha256 cellar: :any_skip_relocation, catalina:       "ea8f6b7b4a9d4ac03e49775b4fcfbba20763990057426818641529a911da93bd"
   end
 
   depends_on "go" => :build
