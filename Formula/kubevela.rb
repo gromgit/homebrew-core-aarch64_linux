@@ -2,8 +2,8 @@ class Kubevela < Formula
   desc "Application Platform based on Kubernetes and Open Application Model"
   homepage "https://kubevela.io"
   url "https://github.com/oam-dev/kubevela.git",
-      tag:      "v1.1.13",
-      revision: "8de36ff2950b3c757f912e81d2fc4be3ea4b60af"
+      tag:      "v1.2.0",
+      revision: "6cee4687437958cbaa34e41112c8a1734503ec3c"
   license "Apache-2.0"
 
   bottle do
@@ -31,7 +31,7 @@ class Kubevela < Formula
   test do
     # Should error out as vela up need kubeconfig
     status_output = shell_output("#{bin}/vela up 2>&1", 1)
-    assert_match "get kubeConfig err invalid configuration: no configuration has been provided", status_output
+    assert_match "Error: invalid configuration: no configuration", status_output
 
     (testpath/"kube-config").write <<~EOS
       apiVersion: v1
