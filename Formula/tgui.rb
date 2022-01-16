@@ -6,12 +6,12 @@ class Tgui < Formula
   license "Zlib"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "a2dc6b2beeb76f9a4113c4c30e2c4bc7d1dfe3b98be347b8a53c29c230fc4aef"
-    sha256 cellar: :any,                 arm64_big_sur:  "e65da29f16e52a57c59fda7ccb42406476a7d18e9307d50f900aa97b583b5cd6"
-    sha256 cellar: :any,                 monterey:       "dfacffada3a7a402771586f74122028d6cf61046d80f235606e26d4b1114f97f"
-    sha256 cellar: :any,                 big_sur:        "0ae12484aca4b34565c55412f7eb601b172bacc21d5cbbedc78f62125b11ce11"
-    sha256 cellar: :any,                 catalina:       "2c8c3c3fa053c604ac358b46723b4b70dfd6fdfa58788f8b1e262de62c869411"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0024c287753382190541a4184da147a56990ce911eb82e91e7a7f84c15ce8de5"
+    sha256 cellar: :any,                 arm64_monterey: "e694ef23f7c331e9ade5da5ba872d66eb38b662b88643ffa10586d5816cd159a"
+    sha256 cellar: :any,                 arm64_big_sur:  "5b7c153f39dc10454b182874e8d4ffd93e52d0c14de03912dce1643e17c3ad7a"
+    sha256 cellar: :any,                 monterey:       "e07465d3dd63c15487ef251ff22e322e72d7c2f4f0eacf42514bfef7a5f7d708"
+    sha256 cellar: :any,                 big_sur:        "0fda08ecd69619a0ea7ac101e9915698a3c439a677f5c1148834d585c51e5d12"
+    sha256 cellar: :any,                 catalina:       "ba3b33488a47cfe5dedd377e0f3517feb0b052f1ee5a2d03ef92f469da6ba35a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1426f8179e7f14ef646875d610c511458bbf931c4f6f812d6c4f5ce4b3ab1e72"
   end
 
   depends_on "cmake" => :build
