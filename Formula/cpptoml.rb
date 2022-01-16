@@ -6,6 +6,10 @@ class Cpptoml < Formula
   license "MIT"
   head "https://github.com/skystrife/cpptoml.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "7a282ff39f40484331c51d49f65289f729587d2c7c5d575c97e9cc75c6d153aa"
+  end
+
   depends_on "cmake" => :build
 
   def install
