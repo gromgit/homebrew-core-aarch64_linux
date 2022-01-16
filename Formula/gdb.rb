@@ -8,10 +8,10 @@ class Gdb < Formula
   head "https://sourceware.org/git/binutils-gdb.git", branch: "master"
 
   bottle do
-    sha256 monterey:     "eeca01c6f1aa84f53433bb3708b6b3b6dd87dee6aae34fde17ef032df30b9ea5"
-    sha256 big_sur:      "e4a089c37a6666d0c7888965b1fa3c3fc00a4bab7b2562ededeb2e75a16b0a1a"
-    sha256 catalina:     "bf220e52b7bb0054cdfff14d8454b2b3d319cd0da241f00cd619b1308094676a"
-    sha256 x86_64_linux: "1cca500a1415dbf29917773f35aaee5a97c43fb24947e431c1145db28c33a6ff"
+    sha256 monterey:     "4c57b1959063153df73c7df07418e3ad59b730567ada8e2320f940a4026df479"
+    sha256 big_sur:      "6d7c793bde6483c24cd905b4ed8bb0e295bc6c5f0f441cc2637a78782cd423b6"
+    sha256 catalina:     "e56c861c6ea4d560c61efb1a360343514162142c07604751a8107e625cb01d6e"
+    sha256 x86_64_linux: "271013a91e3dbc94654df18414018c4a66af56ef3976ae37263fada80e76a070"
   end
 
   depends_on "gmp"
