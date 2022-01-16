@@ -4,7 +4,7 @@ class Gcal < Formula
   url "https://ftp.gnu.org/gnu/gcal/gcal-4.1.tar.xz"
   mirror "https://ftpmirror.gnu.org/gcal/gcal-4.1.tar.xz"
   sha256 "91b56c40b93eee9bda27ec63e95a6316d848e3ee047b5880ed71e5e8e60f61ab"
-  license "GPL-3.0"
+  license "GPL-3.0-or-later"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "6bed6280c29bc0e46bfbc4c1a3c48e2199713bfd4e51ca2f831d4a9c353d0f6c"
@@ -19,7 +19,16 @@ class Gcal < Formula
     sha256 cellar: :any_skip_relocation, yosemite:       "b50b10e57eea6d6fa84c35769401b0da3bde02bade28e137bc1263d492c60c3f"
   end
 
+  uses_from_macos "texinfo" => :build
+
+  on_linux do
+    depends_on "ncurses"
+  end
+
   def install
+    # @setshortcontentsaftertitlepage was removed in Texinfo 6.3
+    inreplace "doc/en/gcal.texi", "@setshortcontentsaftertitlepage\n", "" if OS.linux?
+
     system "./configure", "--prefix=#{prefix}", "--disable-dependency-tracking"
     system "make", "install"
     system "make", "-C", "doc/en", "html"
