@@ -7,12 +7,12 @@ class Ponyc < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "70be28d7b28eb267ca45958fccbafe36595e4b7729fb6aa336dd2a8f940e0e59"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b37b0c1253f6ef790cf33950cb427eda1ce5130cc03806d70b0175247cd6cd5a"
-    sha256 cellar: :any_skip_relocation, monterey:       "e8ed4f83881c6a48b3a0d2f77a5917b02d24f5636cf763312f831c0dcb4854b1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c5d9cc3d2da712ea7a0947406d452fc7e85a31bb9c55643d4790d9f8e3f6f0bc"
-    sha256 cellar: :any_skip_relocation, catalina:       "219cdfaf35fb814262f4c7296079a65db36acbc51ebc53a1feebb121e58a637c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "32714bbd1c4aa2377226c5782fd9365e2f8d2237c765581af803074174a2703f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "81f4db3aa80402a035d2d5cc7882f19c1e089ba3e332f0201a5ae58b266fda0c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8361582373a7913c2e9cd9166a120855c38a38b761845e4111aa8ec3bf9f9dd9"
+    sha256 cellar: :any_skip_relocation, monterey:       "bff15e5ebafa2e38afad93e4c3b6a78c0e522a2c7a9b3f8dfec7ae2292bf15d9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5c681676424c01d9438063ff23ae1ca1b54959d014489a018619254e9662319c"
+    sha256 cellar: :any_skip_relocation, catalina:       "11364110802c38b0c5cc9de76001e4c8fb59f455b7e52ca688a6cb081e31df0c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d89a2bf2570fbaaf92a81fe51be4326893dde79b6f707fef734c096f97a49836"
   end
 
   depends_on "cmake" => :build
