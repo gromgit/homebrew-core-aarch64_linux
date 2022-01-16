@@ -27,8 +27,17 @@ class OrTools < Formula
   depends_on "cgl"
   depends_on "clp"
   depends_on "coinutils"
+  depends_on "openblas"
   depends_on "osi"
   depends_on "protobuf"
+
+  uses_from_macos "zlib"
+
+  on_linux do
+    depends_on "gcc"
+  end
+
+  fails_with gcc: "5"
 
   def install
     system "cmake", "-S.", "-Bbuild", *std_cmake_args,
