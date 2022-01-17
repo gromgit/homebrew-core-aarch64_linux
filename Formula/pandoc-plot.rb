@@ -6,12 +6,12 @@ class PandocPlot < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a0d1edcddf70d0803741a42ad112299fe901bf0f73f4e746ebd831af0eb9a8cb"
-    sha256 cellar: :any_skip_relocation, monterey:      "fac048eb062ddfe6900786d4149133acb3750f33fc700b77a9cb1d09fedfcad6"
-    sha256 cellar: :any_skip_relocation, big_sur:       "120bd15c035dbf94e35c5c2fdbc27e551f72bfecf6d92b77ece3c525a7f4f863"
-    sha256 cellar: :any_skip_relocation, catalina:      "7761b38c9970d18e837f898dd3cd24ca1030438a8a4ba6d2c9c08c91287978bf"
-    sha256 cellar: :any_skip_relocation, mojave:        "7eb7ee123b453b2d33be167b838914ae12fcb9c13f4382d1cdf1f3350ecd9722"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3a9763df9be2d2d16bc6c5d7acd26de8528fe8eb1cc42c8f950d7c274fa866e8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "681f47321d38a8f30db77d90dc3e5731d38caaa23e4770ca21ffcfa12970f37a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a5b3c938ec9f2c7e72a55dc6e6bad24260caaaf3930c6b7c9572213c7a93c163"
+    sha256 cellar: :any_skip_relocation, monterey:       "f4b1ac55714413d48f6b0f88bb277365ce27de1277212845ea588bb8ae4fe6ae"
+    sha256 cellar: :any_skip_relocation, big_sur:        "51b0c54ad26b1986f889fdee966d6c123be1425836c8fcc6a1649dba38d62f5b"
+    sha256 cellar: :any_skip_relocation, catalina:       "52c5ee80e51085eff721fc4ba243450208900d5615fc280891987f9a44ec88c5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "78c2c41cf4ee2ea6f9684c9c1d9c3c6d84623c4cc52791209fd1db39aba37128"
   end
 
   depends_on "cabal-install" => :build
