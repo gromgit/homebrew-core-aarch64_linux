@@ -12,10 +12,11 @@ class Qjackctl < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "1b46db8481b0aec95ed530f94dda8f984aaf81ff99d5b968a4e030bcc711a51e"
-    sha256 arm64_big_sur:  "1b46db8481b0aec95ed530f94dda8f984aaf81ff99d5b968a4e030bcc711a51e"
-    sha256 big_sur:        "d8f854c69cbedb599a259ce77293e8bbb287ac2e3885c1ce4962be12aa49c6d9"
-    sha256 catalina:       "f6ed6c17172898b5b6899835a1fabf88e2f667602efa9741c3ad9558ce179aba"
+    sha256 cellar: :any, arm64_monterey: "1b144f9e426d110c45baf9947c91d772a6b009ce7782caafc0b534e22873cd05"
+    sha256 cellar: :any, arm64_big_sur:  "2ab81b4a160c701801c3fb1fb825f25604b6033be11b47e5e1780f4301d7d7a0"
+    sha256 cellar: :any, monterey:       "563f4b996a365640d37b858a47d7db2b958f5caae9fab93aedfdaaa980140153"
+    sha256 cellar: :any, big_sur:        "a66f26c99a0f9ee7a7b8c7c935a54aa6280e35363b9f7ba0b3a935743366c7fa"
+    sha256 cellar: :any, catalina:       "2a245cbda6afc11f608f59149efa21219b40f3e77711e39032ba94c92ff3e439"
   end
 
   depends_on "cmake" => :build
