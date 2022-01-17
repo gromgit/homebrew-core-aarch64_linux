@@ -8,10 +8,10 @@ class NewrelicInfraAgent < Formula
   head "https://github.com/newrelic/infrastructure-agent.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, monterey:     "ffdb274016361a220fbc8fb21cfae1b90347c03ff7c86e128d20a6c3a0a6053b"
-    sha256 cellar: :any_skip_relocation, big_sur:      "bf1f38cc2c2f73370f92c7645eb9c228dbaf5f760b700477f1c40e7de34690b7"
-    sha256 cellar: :any_skip_relocation, catalina:     "966da6a25822e35c9e96e518336b3d1bb3ceb9e06c88d9456c19e2305ab45570"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "93328d150756320c4ea4a9aba6c66dd773cdc1b7c63db1165918f64ca8409194"
+    sha256 cellar: :any_skip_relocation, monterey:     "d694798f5d92e625ab89509b8c2bffe3581125f32aa04fe101a1adcca6764361"
+    sha256 cellar: :any_skip_relocation, big_sur:      "3a1658f799e72b8c0f4dcebb86ca685b84a7c1a9f7eaf3be5ee2c21e5ecc4247"
+    sha256 cellar: :any_skip_relocation, catalina:     "db2e86522f79d557121a0d96c69777b654f59cd0db25420f94fef33c03d24fa5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "f11853c5afafa40942a20958b657bcb9c0dcc36c2dc5cee26fd3d35c046cb7ee"
   end
 
   # https://github.com/newrelic/infrastructure-agent/issues/723
