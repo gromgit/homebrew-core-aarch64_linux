@@ -3,7 +3,7 @@ class Fprobe < Formula
   homepage "https://sourceforge.net/projects/fprobe/"
   url "https://downloads.sourceforge.net/project/fprobe/fprobe/1.1/fprobe-1.1.tar.bz2"
   sha256 "3a1cedf5e7b0d36c648aa90914fa71a158c6743ecf74a38f4850afbac57d22a0"
-  license "GPL-2.0"
+  license "GPL-2.0-only"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "166c831373d123030545fa69b5fabbb0124fa9501ac1258e43c81a1b00222a1a"
@@ -17,6 +17,8 @@ class Fprobe < Formula
     sha256 cellar: :any_skip_relocation, el_capitan:     "9b06507a358024842b59c9f4d637b94b3681e720dbd3a1a8bc93d4d34f9a4442"
     sha256 cellar: :any_skip_relocation, yosemite:       "18043cf3fcc930ee1690ee4bc74d92eed3c56a2424f85d58720c56a4b5bcad1d"
   end
+
+  uses_from_macos "libpcap"
 
   def install
     system "./configure", "--disable-debug",
