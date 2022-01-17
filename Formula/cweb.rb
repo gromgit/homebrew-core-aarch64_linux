@@ -12,12 +12,12 @@ class Cweb < Formula
   end
 
   bottle do
-    sha256                               arm64_monterey: "96d6c49635c84a71ab541ec86f129efa0c4d2c3105690c5befec7ec7b451db81"
-    sha256                               arm64_big_sur:  "0cfcf2f1eec235df8140f7969a1c1dc56041b05eb68a5cb793d867a8f9ef92ca"
-    sha256                               monterey:       "6f965774f5ca11a1abcb53c4cb358cb3f0135fa6f75b1c1aaa42ede800fb86a1"
-    sha256                               big_sur:        "6ebaf4e8d111cca2abd1242c511956ab0997ecc197ec06dca97c5466ccbd37af"
-    sha256                               catalina:       "64b79680965bda045e7802626956435eab5408724a447d4db99319c2c9102b25"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fe725559ca9b58e7c14295c9833b65393277e39bfbd71ce3b1578b4914d6a773"
+    sha256                               arm64_monterey: "9704f875a0e8d7ef46b8527d8139fc8c138b22f8aac7ee641600f72525d10156"
+    sha256                               arm64_big_sur:  "c246e418f40801578da11748f59a03f925689558a7047b3cd94e1d03b8a06f8f"
+    sha256                               monterey:       "47824b2c718282406b70099e5718148a796b5b232c8fc9118a5c5c3a1f4b4351"
+    sha256                               big_sur:        "a47f44ba2529d3dee094b8e70fd86e8454d6c18b48f0b3907318172e54d6c79e"
+    sha256                               catalina:       "daaaa77893d5034a2edf44fdefe905b5714fd31435be5f6bf937fca412a4b878"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "42d15c7cbde3e6f2372aebbb46d8438fa32dfeb680a65f01c83148e939ce735a"
   end
 
   conflicts_with "texlive", because: "both install `cweb` binaries"
