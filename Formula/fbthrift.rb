@@ -6,6 +6,15 @@ class Fbthrift < Formula
   license "Apache-2.0"
   head "https://github.com/facebook/fbthrift.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "caaccb64c151209ec5485bb8bbddada1285f9e131f721813bdb545adfdf71f85"
+    sha256 cellar: :any,                 arm64_big_sur:  "b00668a4eb4a02b2815f6c50db712915707bdd7100a64018266bff921385821e"
+    sha256 cellar: :any,                 monterey:       "6bb4993e058108a0bc556034055c04c743e8be6e8f90dd30e5b7320e99a16b9e"
+    sha256 cellar: :any,                 big_sur:        "97e5aace60d4bf26209e0d7fb8f9bc400cc70a57dd11e3582b2b1e49136ce1f7"
+    sha256 cellar: :any,                 catalina:       "bd149abd6fed4e6c42bce1f42ebe63ba53b1c7316766f4e86596e39d8ff6de02"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "081833b756b1822f9e867c54b8bd9a5afc20f63a038b13d9bc1a61ec5129840f"
+  end
+
   depends_on "bison" => :build # Needs Bison 3.1+
   depends_on "cmake" => :build
   depends_on "boost"
