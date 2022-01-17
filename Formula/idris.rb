@@ -17,6 +17,9 @@ class Idris < Formula
   depends_on "ghc@8.8"
   depends_on "libffi"
 
+  uses_from_macos "ncurses"
+  uses_from_macos "zlib"
+
   def install
     system "cabal", "v2-update"
     system "cabal", "--storedir=#{libexec}", "v2-install", *std_cabal_v2_args
