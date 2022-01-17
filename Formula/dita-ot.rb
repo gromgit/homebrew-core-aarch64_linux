@@ -1,8 +1,8 @@
 class DitaOt < Formula
   desc "DITA Open Toolkit is an implementation of the OASIS DITA specification"
   homepage "https://www.dita-ot.org/"
-  url "https://github.com/dita-ot/dita-ot/releases/download/3.6.1/dita-ot-3.6.1.zip"
-  sha256 "ebddd6152d44467a794bcfc5d28cf5effd005330677d6a8aafa5de00f250688b"
+  url "https://github.com/dita-ot/dita-ot/releases/download/3.7/dita-ot-3.7.zip"
+  sha256 "dbbc9f8dfea51300e707307b5d65e7945b9357d5fa2d484fbb9264268771abc7"
   license "Apache-2.0"
 
   livecheck do
