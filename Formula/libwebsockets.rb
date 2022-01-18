@@ -1,14 +1,13 @@
 class Libwebsockets < Formula
   desc "C websockets server library"
   homepage "https://libwebsockets.org"
-  url "https://github.com/warmcat/libwebsockets.git",
-      tag:      "v4.3.0",
-      revision: "a5aae049b2a386712e1be3b417915c0d44c7e675"
+  url "https://github.com/warmcat/libwebsockets/archive/v4.3.1.tar.gz"
+  sha256 "8fdb1454a1b34cd9a6351beaab237a485e6853806101de7e62bd2bc250bb50af"
   license "MIT"
   head "https://github.com/warmcat/libwebsockets.git", branch: "main"
 
   livecheck do
-    url "https://github.com/warmcat/libwebsockets"
+    url :stable
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
@@ -30,16 +29,17 @@ class Libwebsockets < Formula
   uses_from_macos "zlib"
 
   def install
-    system "cmake", ".", *std_cmake_args,
+    system "cmake", "-S", ".", "-B", "build",
                     "-DLWS_IPV6=ON",
                     "-DLWS_WITH_HTTP2=ON",
                     "-DLWS_WITH_LIBEVENT=ON",
                     "-DLWS_WITH_LIBUV=ON",
                     "-DLWS_WITH_PLUGINS=ON",
                     "-DLWS_WITHOUT_TESTAPPS=ON",
-                    "-DLWS_UNIX_SOCK=ON"
-    system "make"
-    system "make", "install"
+                    "-DLWS_UNIX_SOCK=ON",
+                    *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
