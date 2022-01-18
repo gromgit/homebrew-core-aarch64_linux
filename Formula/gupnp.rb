@@ -8,11 +8,12 @@ class Gupnp < Formula
   license "LGPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "811b1ec251e75dcec1a4f0b885edb3ec50f3b26e27ef0220f2da02bdc19017ff"
-    sha256 cellar: :any, monterey:      "56d15f95db673670a3cb899a223bba0b683daa6ddc3c65aadb0a6a85b0a51cef"
-    sha256 cellar: :any, big_sur:       "82379629f5708acfbfb767f53e6a0bdfd69ae3a8aeb4b3b747b0c906d7fcda44"
-    sha256 cellar: :any, catalina:      "7e2f769606feeb7276facb34f936b547cbabe451dcd76e3428ccf11c03c32f86"
-    sha256               x86_64_linux:  "5c70c2506558b48c9457ab89025929328f31333a14afe65d8d96010c7d8ed7f4"
+    sha256 cellar: :any, arm64_monterey: "1937e917519b9784475606a21cc66d5b2ed5914c2008105c992b91a04bee834f"
+    sha256 cellar: :any, arm64_big_sur:  "811b1ec251e75dcec1a4f0b885edb3ec50f3b26e27ef0220f2da02bdc19017ff"
+    sha256 cellar: :any, monterey:       "56d15f95db673670a3cb899a223bba0b683daa6ddc3c65aadb0a6a85b0a51cef"
+    sha256 cellar: :any, big_sur:        "82379629f5708acfbfb767f53e6a0bdfd69ae3a8aeb4b3b747b0c906d7fcda44"
+    sha256 cellar: :any, catalina:       "7e2f769606feeb7276facb34f936b547cbabe451dcd76e3428ccf11c03c32f86"
+    sha256               x86_64_linux:   "5c70c2506558b48c9457ab89025929328f31333a14afe65d8d96010c7d8ed7f4"
   end
 
   depends_on "docbook-xsl" => :build
