@@ -1,9 +1,8 @@
 class Ptex < Formula
   desc "Texture mapping system"
   homepage "https://ptex.us/"
-  url "https://github.com/wdas/ptex.git",
-      tag:      "v2.4.1",
-      revision: "93c8bad39a6122c42c9d9d8e29d715bd73a6c575"
+  url "https://github.com/wdas/ptex/archive/refs/tags/v2.4.1.tar.gz"
+  sha256 "664253b84121251fee2961977fe7cf336b71cd846dc235cd0f4e54a0c566084e"
   license "BSD-3-Clause"
 
   livecheck do
@@ -37,8 +36,8 @@ class Ptex < Formula
 
   test do
     resource("wtest").stage testpath
-    system ENV.cxx, "wtest.cpp", "-o", "wtest", "-L#{opt_lib}", "-lptex"
+    system ENV.cxx, "wtest.cpp", "-o", "wtest", "-I#{opt_include}", "-L#{opt_lib}", "-lPtex"
     system "./wtest"
-    system "#{bin}/ptxinfo", "-c", "test.ptx"
+    system bin/"ptxinfo", "-c", "test.ptx"
   end
 end
