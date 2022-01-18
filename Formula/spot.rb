@@ -11,12 +11,12 @@ class Spot < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "5466087357a3cd15f862ee0548383657dcda00439bc74d7b2401779c2307e271"
-    sha256 cellar: :any,                 arm64_big_sur:  "7ac2ac95c502e721cfface5e2514875cb0029b28d7e253bc8832de3f1dabe126"
-    sha256 cellar: :any,                 monterey:       "74a0288b1ce8613d57bad11f5787bb67c10ac4710714e5965e9004cda2b5b685"
-    sha256 cellar: :any,                 big_sur:        "cec705086835f3d0de204d7ad3c6a42195197a936bc58b451128b73dee94316e"
-    sha256 cellar: :any,                 catalina:       "379351b53d1d4309e6f3af4e97355f570c7a7f6655540ecbad0e623ccd349091"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e04b51c8e9bea74d0371749f7ea50d1d16ac806536f548b0ce1b26eb44e7cea4"
+    sha256 cellar: :any,                 arm64_monterey: "31f33501ec68a60e443c48a01e24d27957c8eede7483cf6ae582a0052ea2fcf7"
+    sha256 cellar: :any,                 arm64_big_sur:  "3bfe65a7a78ea709b5f36420332c4d0857ab87fc0b52cd599cfe74197a336b02"
+    sha256 cellar: :any,                 monterey:       "45c706b5a3b800059aa66c677b5664e12af3044c27c5e68316aada66565e0fa5"
+    sha256 cellar: :any,                 big_sur:        "3028e50d36584f7e40f6e57c6df5eaf971b6b5524730301648e13bad1d6329ad"
+    sha256 cellar: :any,                 catalina:       "7331f205366f3221821cdebd625722ebe7f73d0778da36783aec74cac1d79262"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1d8b6ccbaf08883bfb91405b541b525f96673395ff6724e4f4d2aea628e98763"
   end
 
   depends_on "python@3.10" => :build
