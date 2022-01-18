@@ -1,9 +1,13 @@
+require "language/perl"
+
 class Sub2srt < Formula
+  include Language::Perl::Shebang
+
   desc "Convert subtitles from .sub to subviewer .srt format"
   homepage "https://github.com/robelix/sub2srt"
   url "https://github.com/robelix/sub2srt/archive/0.5.5.tar.gz"
   sha256 "169d94d1d0e946a5d57573b7b7b5883875996f802362341fe1a1a0220229b905"
-  license "GPL-2.0"
+  license "GPL-2.0-or-later"
   head "https://github.com/robelix/sub2srt.git", branch: "master"
 
   bottle do
@@ -15,7 +19,10 @@ class Sub2srt < Formula
     sha256 cellar: :any_skip_relocation, mojave:         "8f16a9340a7b75f7b52857699fc0345b22a2e6c1f01f5eacdef6920cd7146505"
   end
 
+  uses_from_macos "perl"
+
   def install
+    rewrite_shebang detected_perl_shebang, "sub2srt"
     bin.install "sub2srt"
   end
 
