@@ -6,11 +6,12 @@ class ValaLanguageServer < Formula
   license "LGPL-2.1-only"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "d0c7d068b5bec716e17c39591384d60a08bdd82b655bca866840878c67f9358c"
-    sha256 cellar: :any, monterey:      "fa3273c84ac17406a6bc1601613565036766021e734ce3e04b0a4b1be15070e6"
-    sha256 cellar: :any, big_sur:       "d296ad4b78e5929b7d40b4396935c1f73421306065a3d41d223c2206f5adafe2"
-    sha256 cellar: :any, catalina:      "080acb613db0332326799ef24609f56e443e087f192709ea6cd32827d35dc855"
-    sha256               x86_64_linux:  "078aeddd7a515c66e5bc58dc569e77ec0f578647c3f4aa154f34f8193e5b7f6f"
+    sha256 cellar: :any, arm64_monterey: "aafa52097b542644b26934efca5da76c93acf015870c0f1cddb6977d76884afd"
+    sha256 cellar: :any, arm64_big_sur:  "d0c7d068b5bec716e17c39591384d60a08bdd82b655bca866840878c67f9358c"
+    sha256 cellar: :any, monterey:       "fa3273c84ac17406a6bc1601613565036766021e734ce3e04b0a4b1be15070e6"
+    sha256 cellar: :any, big_sur:        "d296ad4b78e5929b7d40b4396935c1f73421306065a3d41d223c2206f5adafe2"
+    sha256 cellar: :any, catalina:       "080acb613db0332326799ef24609f56e443e087f192709ea6cd32827d35dc855"
+    sha256               x86_64_linux:   "078aeddd7a515c66e5bc58dc569e77ec0f578647c3f4aa154f34f8193e5b7f6f"
   end
 
   depends_on "meson" => :build
