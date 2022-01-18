@@ -7,11 +7,12 @@ class Gspell < Formula
   revision 5
 
   bottle do
-    sha256 arm64_big_sur: "2ee4a35046b74bc0683baeea277ace95fbf929f64a80d33a3f18b430f86cd895"
-    sha256 monterey:      "d6a84e05eabbb7c37823dc3c7622920c5476d4b18d7349133fdf39c64f3ea551"
-    sha256 big_sur:       "3b5a01439377cb87b9eb6e515bc5019fe3be40907f6dcc7ba072649fb169f259"
-    sha256 catalina:      "297f8d03c748f1f0d8d9ae59826d65c6d408b6c29eb7ca2188ceccaced83eed7"
-    sha256 x86_64_linux:  "a9796edf66803b8301545cd811df36d0d5b7f621d979b527c94dc3eecb7984a1"
+    sha256 arm64_monterey: "7ec89b831d4f6aa1300b2fbe4aab3f219cf2dff52d2d3e06a697d5820de6e368"
+    sha256 arm64_big_sur:  "2ee4a35046b74bc0683baeea277ace95fbf929f64a80d33a3f18b430f86cd895"
+    sha256 monterey:       "d6a84e05eabbb7c37823dc3c7622920c5476d4b18d7349133fdf39c64f3ea551"
+    sha256 big_sur:        "3b5a01439377cb87b9eb6e515bc5019fe3be40907f6dcc7ba072649fb169f259"
+    sha256 catalina:       "297f8d03c748f1f0d8d9ae59826d65c6d408b6c29eb7ca2188ceccaced83eed7"
+    sha256 x86_64_linux:   "a9796edf66803b8301545cd811df36d0d5b7f621d979b527c94dc3eecb7984a1"
   end
 
   depends_on "autoconf" => :build
