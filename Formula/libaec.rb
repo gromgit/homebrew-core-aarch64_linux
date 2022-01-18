@@ -29,10 +29,11 @@ class Libaec < Formula
   end
 
   test do
-    system "#{bin}/aec", "-v"
+    system bin/"aec", "-v"
     (testpath/"test.cpp").write <<~EOS
       #include <cassert>
       #include <cstddef>
+      #include <cstdlib>
       #include <libaec.h>
       int main() {
         unsigned char * data = (unsigned char *) calloc(1024, sizeof(unsigned char));
@@ -56,7 +57,7 @@ class Libaec < Formula
         return 0;
       }
     EOS
-    system ENV.cc, "test.cpp", "-L#{lib}", "-laec", "-o", "test"
+    system ENV.cc, "test.cpp", "-I#{include}", "-L#{lib}", "-laec", "-o", "test"
     system "./test"
   end
 end
