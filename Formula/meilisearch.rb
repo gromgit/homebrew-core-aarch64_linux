@@ -1,8 +1,8 @@
 class Meilisearch < Formula
   desc "Ultra relevant, instant and typo-tolerant full-text search API"
   homepage "https://docs.meilisearch.com/"
-  url "https://github.com/meilisearch/MeiliSearch/archive/v0.25.1.tar.gz"
-  sha256 "e33d6b8568a14b7cc81060b8f42d784c077cde2059f0d2492784f71775612e96"
+  url "https://github.com/meilisearch/MeiliSearch/archive/v0.25.2.tar.gz"
+  sha256 "5097f0c6de042125561e669a1d9d09c4ee6425e9715fd0ad59dabeeef1b99ef8"
   license "MIT"
 
   livecheck do
@@ -23,9 +23,6 @@ class Meilisearch < Formula
 
   def install
     cd "meilisearch-http" do
-      # remove when version > 0.25.1 is released, see https://github.com/meilisearch/MeiliSearch/issues/2078
-      inreplace "Cargo.toml", "0.25.0", "0.25.1"
-
       system "cargo", "install", *std_cargo_args
     end
   end
