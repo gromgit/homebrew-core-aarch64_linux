@@ -22,6 +22,7 @@ class Sub2srt < Formula
   uses_from_macos "perl"
 
   def install
+    inreplace "README", "/usr/local", HOMEBREW_PREFIX
     rewrite_shebang detected_perl_shebang, "sub2srt"
     bin.install "sub2srt"
   end
