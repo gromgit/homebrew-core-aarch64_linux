@@ -6,11 +6,12 @@ class Vala < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "ecc2603c29b855b1a2a096e2fadfe932992773f580ff68a47ca8707ac32cb7fe"
-    sha256 monterey:      "dd53beb4c72134ae0965c292e762d64e793f391655e6f547a805ae2d8fdf4c43"
-    sha256 big_sur:       "0a126eaa756b14302ad96dd2f65c74eab2a9fc31bca8107a0b3e3b0c05c1e0dd"
-    sha256 catalina:      "552cf9bd5758904e49bb68fd2843bf09b054ad4e40b652104ac20ef85ffbb2f9"
-    sha256 x86_64_linux:  "4ae96d3686511de7b69b52376c8a9ea8749a628349f236b1a0998fa657e24911"
+    sha256 arm64_monterey: "38ba166e43db02c9d974b08d3206d6122b8979497cf6a6f250ea5d1fd71e68b1"
+    sha256 arm64_big_sur:  "ecc2603c29b855b1a2a096e2fadfe932992773f580ff68a47ca8707ac32cb7fe"
+    sha256 monterey:       "dd53beb4c72134ae0965c292e762d64e793f391655e6f547a805ae2d8fdf4c43"
+    sha256 big_sur:        "0a126eaa756b14302ad96dd2f65c74eab2a9fc31bca8107a0b3e3b0c05c1e0dd"
+    sha256 catalina:       "552cf9bd5758904e49bb68fd2843bf09b054ad4e40b652104ac20ef85ffbb2f9"
+    sha256 x86_64_linux:   "4ae96d3686511de7b69b52376c8a9ea8749a628349f236b1a0998fa657e24911"
   end
 
   depends_on "gettext"
