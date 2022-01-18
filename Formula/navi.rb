@@ -6,12 +6,12 @@ class Navi < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a98cd907cb703e14415184756c95a52cf42db15988739eede87684e3b8101c53"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e3b36aa7c488a07b220fd3fd67486abfe809dfdd1a9fb875c7e4fbb2743d0f9b"
-    sha256 cellar: :any_skip_relocation, monterey:       "8bce2c66836b2334361bdf7b170b151ead985e43c8a217108be7b05afb342a9a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "dbd0b97113f8078e6f6c3b80149434acb546412ed91b4dcd4cb8d6bde8b8e0c6"
-    sha256 cellar: :any_skip_relocation, catalina:       "85af823e9734ab9e1ab8800fb92eefae41e37a7b7ba48ef1278b39d48cd223f1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6ee5fe8a6abbb07f0d784f798e33693d2ef6c51392c4b384d6c54e6d1d085e70"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1e1f305a736151e7b8f0ce663473ae0ad157ee323ecde375d8e785f3715031ee"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "45bf6450777e0d4511705d307b0fb43f2e5d903b72b068f8fb607ea704d5a5d8"
+    sha256 cellar: :any_skip_relocation, monterey:       "fc51318b00bfc22da74663a62bfaed9df05763f699089f44db76e4dbeee1d6f1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "386fb5bb8ebd3ef54aaaa9e0553ad626db475f5bcef83057dddab300d505021f"
+    sha256 cellar: :any_skip_relocation, catalina:       "cb7747c8b690e7038969c7ed3897fdcb5fe85c52e6af69ff791746e3c90f66d0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "734ae47b3664ff96d387cffac0247a19217c85544c401d269d10699da47e2ffc"
   end
 
   depends_on "rust" => :build
