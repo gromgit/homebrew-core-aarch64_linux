@@ -9,6 +9,7 @@ class JoplinCli < Formula
 
   bottle do
     sha256 arm64_big_sur: "52c311d9e488d96e2e8aa4d1367311b5e27122cbf628f9394899d94cb9bd87f1"
+    sha256 monterey:      "7f0d4ff24d65d47f5a3c8dafc4e82c2111f5681133655c5542ba4baf99db2fed"
     sha256 big_sur:       "bc1aa68c4c2df173022cf36de72838ba3fb4605d031f81b91d3f5b16d4ca9968"
     sha256 catalina:      "248fab15de1b4c16463ec33bf6b2dd9b3f7ecdc64a8e463d38530c3143e64934"
   end
