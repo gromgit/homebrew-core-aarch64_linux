@@ -11,10 +11,11 @@ class Lablgtk < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "33da190e1a69924c98e6a745380228562182abe3e13406301da4dd76dd42b694"
-    sha256 cellar: :any, monterey:      "2d7d514c6d7c31faa53b5e0292a7d4962f1c60e4bc524f4344b7895b15756e5d"
-    sha256 cellar: :any, big_sur:       "acd2ebe952607c8ad6d2fdb430fc5ad7f2f06742c3b3c571e943afc315293116"
-    sha256 cellar: :any, catalina:      "6d376c548d8cc2580b3756daedbcd24b8f33900509977a6192b34f009dc6964b"
+    sha256 cellar: :any, arm64_monterey: "f46ccbac4b613f1542bdbe5bf0747c4875c2e89b2978589468d97aa6168a3ffc"
+    sha256 cellar: :any, arm64_big_sur:  "33da190e1a69924c98e6a745380228562182abe3e13406301da4dd76dd42b694"
+    sha256 cellar: :any, monterey:       "2d7d514c6d7c31faa53b5e0292a7d4962f1c60e4bc524f4344b7895b15756e5d"
+    sha256 cellar: :any, big_sur:        "acd2ebe952607c8ad6d2fdb430fc5ad7f2f06742c3b3c571e943afc315293116"
+    sha256 cellar: :any, catalina:       "6d376c548d8cc2580b3756daedbcd24b8f33900509977a6192b34f009dc6964b"
   end
 
   depends_on "pkg-config" => :build
