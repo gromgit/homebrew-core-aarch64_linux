@@ -7,10 +7,10 @@ class Ki < Formula
   head "https://github.com/Kotlin/kotlin-interactive-shell.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "4a1ee5e5bb0bf0b056a5866d0929205dc18d527eda8440a62472ac754bb37224"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5aabd7a1c7d6950f3f83a2a4b27f93cdc1c280e00934270b58a72a2efc337eae"
-    sha256 cellar: :any_skip_relocation, catalina:      "e02c9d31581795565ef161220c8882a2cf154393ad0ed235f89ed9582fb123cf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a7c09fe8b6fdf4bf061d72b307b391ee0306f53af63a232a2048cb51a70257e4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "44a0b176b99d690c3612d10dd7e74e89681ed49ebe21a59d02b0f2385d9fb099"
+    sha256 cellar: :any_skip_relocation, big_sur:       "e274b42061c74931ef8da5e556a7d7ef7ffeed29a73667f3ace4859a6a6329f2"
+    sha256 cellar: :any_skip_relocation, catalina:      "9f8b79b2f38b559e36a8a5f44e658a7ae85d5e2d3bb8c9cd4691185f41446299"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "accc98d52e3ec26c07b35ac64e381b0d27c8639d5c32a76ccea4a8093635a28a"
   end
 
   depends_on "maven" => :build
