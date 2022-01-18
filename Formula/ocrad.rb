@@ -1,10 +1,10 @@
 class Ocrad < Formula
   desc "Optical character recognition (OCR) program"
   homepage "https://www.gnu.org/software/ocrad/"
-  url "https://ftp.gnu.org/gnu/ocrad/ocrad-0.27.tar.lz"
-  mirror "https://ftpmirror.gnu.org/ocrad/ocrad-0.27.tar.lz"
-  sha256 "a9bfe67e9a040907aff5640dca56392476b6a89e48e37dc94ba846c5b6733b36"
-  license "GPL-2.0"
+  url "https://ftp.gnu.org/gnu/ocrad/ocrad-0.28.tar.lz"
+  mirror "https://ftpmirror.gnu.org/ocrad/ocrad-0.28.tar.lz"
+  sha256 "34ccea576dbdadaa5979e6202344c3ff68737d829ca7b66f71c8497d36bbbf2e"
+  license "GPL-2.0-or-later"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "899b2acf05936624225cb01993f3f993bf9e3cc73c7052051bed917defbd83e9"
@@ -17,6 +17,8 @@ class Ocrad < Formula
     sha256 cellar: :any_skip_relocation, sierra:         "903ce6530395c0973418020561ddd60da739f3a36e865500776922e18975460b"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "834afd1cc5f7c095ded49166800e56137105f2777a89d877b1c9ca1bd6ad1779"
   end
+
+  depends_on "libpng"
 
   def install
     system "./configure", "--prefix=#{prefix}"
