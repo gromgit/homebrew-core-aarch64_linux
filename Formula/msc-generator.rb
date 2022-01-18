@@ -6,10 +6,11 @@ class MscGenerator < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "93a94d78c635a6eb3cb5f001b0edde020cff8161a9dbc7a0b1e49abcc355e0cf"
-    sha256 cellar: :any, monterey:      "d2a801331d157692f0e9e8799aa23508f1212a9c5bd72b2fbb2d1e0131c9d763"
-    sha256 cellar: :any, big_sur:       "45731f37d92771b0065740a1bafe2cead12863e10be89d921961bcbd9db0a1a6"
-    sha256 cellar: :any, catalina:      "98eb2f5b8a2c8f247dced6ee8c23a794575cd2d389a4cb4c254241ad4e8c052c"
+    sha256 cellar: :any, arm64_monterey: "0a7c679b4ada83af473a093c60db6a80ee7a15179e09d27eabc76245cd24ba27"
+    sha256 cellar: :any, arm64_big_sur:  "93a94d78c635a6eb3cb5f001b0edde020cff8161a9dbc7a0b1e49abcc355e0cf"
+    sha256 cellar: :any, monterey:       "d2a801331d157692f0e9e8799aa23508f1212a9c5bd72b2fbb2d1e0131c9d763"
+    sha256 cellar: :any, big_sur:        "45731f37d92771b0065740a1bafe2cead12863e10be89d921961bcbd9db0a1a6"
+    sha256 cellar: :any, catalina:       "98eb2f5b8a2c8f247dced6ee8c23a794575cd2d389a4cb4c254241ad4e8c052c"
   end
 
   depends_on "autoconf" => :build
