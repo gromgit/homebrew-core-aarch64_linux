@@ -14,11 +14,12 @@ class Libgusb < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "f6134de07f56b644a6eaad1a89b242c5a894ce7dd3e208bb6aca0e018c8bf915"
-    sha256 monterey:      "e73694daf4e1af0b676471e2e608b180761d93004c79574a94097d1624e73fa5"
-    sha256 big_sur:       "eb972073fabe0280e785d734d4f456bb703b4b602deff16d9d3211da5604e8cb"
-    sha256 catalina:      "d2822cd3978da5ffb0ff27f2e792bae66e2c4cc6b1f8d814afbef6ae283291c0"
-    sha256 x86_64_linux:  "47eb5f3aab7e66f6145891370c5061571c33106c57aab378143f258e76516032"
+    sha256 arm64_monterey: "849f1b3ce8992e6c1d2526bfb1f49e708a00ef11096b3523040bc4d78cf1d81e"
+    sha256 arm64_big_sur:  "f6134de07f56b644a6eaad1a89b242c5a894ce7dd3e208bb6aca0e018c8bf915"
+    sha256 monterey:       "e73694daf4e1af0b676471e2e608b180761d93004c79574a94097d1624e73fa5"
+    sha256 big_sur:        "eb972073fabe0280e785d734d4f456bb703b4b602deff16d9d3211da5604e8cb"
+    sha256 catalina:       "d2822cd3978da5ffb0ff27f2e792bae66e2c4cc6b1f8d814afbef6ae283291c0"
+    sha256 x86_64_linux:   "47eb5f3aab7e66f6145891370c5061571c33106c57aab378143f258e76516032"
   end
 
   depends_on "gobject-introspection" => :build
