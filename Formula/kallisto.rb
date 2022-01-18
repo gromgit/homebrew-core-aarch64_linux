@@ -6,14 +6,12 @@ class Kallisto < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d7b9aff623b0268cfdf089a7869dd01eec0d7f54ca1e2bb065567e26296093f8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "51a7725f81265fe4530962417b874176e534f916cad432db1cb2d5c5840da3a6"
-    sha256 cellar: :any_skip_relocation, monterey:       "f400337f4259327b35a0c1e0d779e3488aa9b26ae4a6c4a3a4275b3946279ca3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2c004978635382869062996fed516c2edd83597d3e2221984759fc32955854e5"
-    sha256 cellar: :any_skip_relocation, catalina:       "7ef1f941663072b0a57597992acf8203ba3664129f305cb8626c0c346e51bf0c"
-    sha256 cellar: :any_skip_relocation, mojave:         "b2e59c1cc0fc1b07d02bab1cbc1533bcca1edf4bc0b81791d5ac597a7b84cce0"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "8491424ec8d4f8e170315e13c5f3bb92895b608c9c7108f260459e06bbbf73f9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ca9d61869fb10b292f1ecc95329cb3905834e42a8d46cfc6b6bec177406b9b66"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "744b380617797b2d8e7de96fde867fde93d4a99e3be50e0ee55b4bfd63a6ead1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "189fba3400b85552f7caa05058b92a8efe8115e89a488f92e5466982f6a03ca4"
+    sha256 cellar: :any_skip_relocation, monterey:       "a3e87554317235569004690fb34c87590800f5e6159042dc587b454a39e43db9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ffc3507403994dfd317a6f63118879427239ee9a94c37bb4823f8a48ec9f8da2"
+    sha256 cellar: :any_skip_relocation, catalina:       "267cdea1b28358181c8701dd4bf0d2ed297df3be0298c80499199f89aa6bd6de"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "20207d99e10ff85645eb4b3ceec5359e74af6772bc51496a48c00807d4a9eabe"
   end
 
   depends_on "autoconf@2.69" => :build
