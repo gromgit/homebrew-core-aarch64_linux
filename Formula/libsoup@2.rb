@@ -6,11 +6,12 @@ class LibsoupAT2 < Formula
   license "LGPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_big_sur: "65d616e5576bba08deb1eff22b926d7d35fb7209e92266078f28bf21caa150c7"
-    sha256 monterey:      "f34c69d8b128305d2e4956bac273011c093987c7168cb73ab1e6bb825e3f7451"
-    sha256 big_sur:       "19a9b6667489787eccde03fee2cc88ed85d65164da35d22c23774a518ffb8459"
-    sha256 catalina:      "0debe8befca52517e4eaa1c9d14cdf70f534d2dc06ab67738263b6e0e3593df5"
-    sha256 x86_64_linux:  "bd41af9c5e451ccda79c5f24bde318f2e370b53b86bebe6a59dd62abfac2e07c"
+    sha256 arm64_monterey: "b2c190abf51f79ced1d8d8eda2a5db31a5aefd9314c617db794d186cf52f16bf"
+    sha256 arm64_big_sur:  "65d616e5576bba08deb1eff22b926d7d35fb7209e92266078f28bf21caa150c7"
+    sha256 monterey:       "f34c69d8b128305d2e4956bac273011c093987c7168cb73ab1e6bb825e3f7451"
+    sha256 big_sur:        "19a9b6667489787eccde03fee2cc88ed85d65164da35d22c23774a518ffb8459"
+    sha256 catalina:       "0debe8befca52517e4eaa1c9d14cdf70f534d2dc06ab67738263b6e0e3593df5"
+    sha256 x86_64_linux:   "bd41af9c5e451ccda79c5f24bde318f2e370b53b86bebe6a59dd62abfac2e07c"
   end
 
   keg_only :versioned_formula
