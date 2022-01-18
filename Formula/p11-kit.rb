@@ -6,12 +6,12 @@ class P11Kit < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 arm64_monterey: "14b8985e80f704dac002c47b4638eeebbd09124a7deeff335206fbf93b7982f5"
-    sha256 arm64_big_sur:  "c426b43681464e1f56bf01d13283acda2f042fab95165262f4dc9b6fd02f5eec"
-    sha256 monterey:       "6c775d6e28eba867407642b88bca09c562da5ddf7d757cb2fadc5b73a05de90e"
-    sha256 big_sur:        "f9178b397c4296bd94f0dfbbe066a57ade3a9b8a6b2ca68e245b9f710314d3e0"
-    sha256 catalina:       "3421dfebd2339d981819def1fc61fe01f9e792009f88d60aa572d39cbb2ee5d2"
-    sha256 x86_64_linux:   "286a62b3d7192b36c1302d78a3c0aa6f424282db626bf73779233b659328aa0b"
+    sha256 arm64_monterey: "a1c85ddc587d4b0e6ad38f7b58420ed0fc4a1ccdb038bee1451d9d81fc3fb434"
+    sha256 arm64_big_sur:  "c8610976401ff3745b737973335cd2ec7a3113737aadc9e2a1243adf404f41a3"
+    sha256 monterey:       "46805ec48a06585f71e5acaa4e099c32696a2dd7700817882211abab75fa3f1d"
+    sha256 big_sur:        "6db6726e6ba1314792648413bc991bd717380eb3ae325895750eab515ce5fa75"
+    sha256 catalina:       "dc5592e236946f8a3e57998214d13f1c0db7dab5bdd9602bb0c4a84dacf2d17a"
+    sha256 x86_64_linux:   "41dd8094535e5cb03c1c4e94290cee3047e79c07183cdccbb0f4f3cbe89d29db"
   end
 
   head do
