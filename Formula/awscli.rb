@@ -3,8 +3,8 @@ class Awscli < Formula
 
   desc "Official Amazon AWS command-line interface"
   homepage "https://aws.amazon.com/cli/"
-  url "https://github.com/aws/aws-cli/archive/2.4.11.tar.gz"
-  sha256 "2f6d17068f7c0263af1bee4333aa95164b99a733ba6adc42658b8555f1cd2fdd"
+  url "https://github.com/aws/aws-cli/archive/2.4.12.tar.gz"
+  sha256 "a5f7f9f7ed114bc5d8e4423d4b9d41d91c60d0b8f35129e32f57da6217be86d6"
   license "Apache-2.0"
   head "https://github.com/aws/aws-cli.git", branch: "v2"
 
@@ -104,7 +104,12 @@ class Awscli < Formula
       ENV.prepend "LDFLAGS", "-L./build/deps/install/lib"
     end
 
-    virtualenv_install_with_resources
+    # setuptools>=60 prefers its own bundled distutils, which is incompatabile with docutils~=0.15
+    # Force the previous behavior of using distutils from the stdlib
+    # Remove when fixed upstream: https://github.com/aws/aws-cli/pull/6011
+    with_env(SETUPTOOLS_USE_DISTUTILS: "stdlib") do
+      virtualenv_install_with_resources
+    end
     pkgshare.install "awscli/examples"
 
     rm Dir[bin/"{aws.cmd,aws_bash_completer,aws_zsh_completer.sh}"]
