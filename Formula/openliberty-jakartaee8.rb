@@ -11,7 +11,7 @@ class OpenlibertyJakartaee8 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "4c896b53067214b01cb048aa2c7544c81dac03c54a779cd967db865d452a9083"
+    sha256 cellar: :any_skip_relocation, all: "407adebbe512ab1fc835714668fc16b122d80534aefd6ff3c0cf56e4c9f5dd05"
   end
 
   depends_on "openjdk"
