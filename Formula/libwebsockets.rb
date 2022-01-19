@@ -12,13 +12,12 @@ class Libwebsockets < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "f3caf45db7a61695308ccaf2c9fcf7a386c13d954047d3a081de00479ff9f263"
-    sha256 arm64_big_sur:  "af413d5545311ce74f82ccf9a7c2051a38886ff3bee18cf2175365fb6dd67707"
-    sha256 monterey:       "58b0eb117a33e2d28d423cff6576a63f2c21fdafdfc7b5b50eacb300fd537c31"
-    sha256 big_sur:        "12a436faa6ab3e6b74477b00827d5b3e9c7d2cbe485ce17990f68ba84ff96e83"
-    sha256 catalina:       "44b76ef2c664dfaff1a54d112ae641d5104887eca5097cdb7c0c25f3144b0826"
-    sha256 mojave:         "551b2d0a5e2f601e0605d6e7a4b16a01ef34d868a9af9e2b21065d6e91ca4a92"
-    sha256 x86_64_linux:   "494db4928a4e15f8d96c66198bc0ff5dbcfc4a15b54a8a63d13eb4ea58d1cd7d"
+    sha256 arm64_monterey: "03158a8bffe0742fbd6a0fa3c01eecec1cd6727ee8109bfbfcbf4d1961ec7499"
+    sha256 arm64_big_sur:  "9c977864a12c8da1156673306cb6bf2467eb834f2770f8081b33ab2245f8cd3c"
+    sha256 monterey:       "d410b9cc69a4d485c28e65aeb3834449004cee9f1c586d7553b7902aca16fd1f"
+    sha256 big_sur:        "ea9da6f7d019e78108372ac16c5ba0415ab3b75a1fda62ce491982ed93b6f0b3"
+    sha256 catalina:       "384de640a58ac70329a9d3e54e6dbd6beaccec7fcecab003a44da80020b416e8"
+    sha256 x86_64_linux:   "3e3a03480fcc61249e07c7b89602adb87d4a7f5e96bd7199d11df8e2cceea952"
   end
 
   depends_on "cmake" => :build
