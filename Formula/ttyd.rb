@@ -8,13 +8,12 @@ class Ttyd < Formula
   head "https://github.com/tsl0922/ttyd.git", branch: "main"
 
   bottle do
-    sha256 arm64_monterey: "97d637edb8f541ca79760c6f95ac1f64ec418e7204fd6a4cce50fde4c14be8b1"
-    sha256 arm64_big_sur:  "c447da2fb5319fb4f14156e6df03aced1a4eff128538c05674a3872a3843a5e0"
-    sha256 monterey:       "28a8e002ddb777a9abe3eebe67795b9d9dc5008c31d1451aa6387fdd43705ced"
-    sha256 big_sur:        "1d05dbb4c06fdf46c47195d4cbd32939e484fbff6b973ce111166a6fead65b5c"
-    sha256 catalina:       "201f490f7ccbb978085190d01585deda06430aada52271cc4ea8f434d16492c6"
-    sha256 mojave:         "555135cdd2ff20f6e0c7d95e756e1be4561c458b2f2411c6478b574e726b8b5d"
-    sha256 x86_64_linux:   "00890703377dc26256a8209f0ba0f33cbab1f43e563b4cb3b28b096cdf25ee00"
+    sha256 arm64_monterey: "08876367ba2814425bc40a4bccb387594eaaa7a55355e1d5277878e19b5bc26b"
+    sha256 arm64_big_sur:  "e71a28ca4d574a23fce354ceb56cf99eccf8e3ad98bc2a2aedea68bf8e03b69b"
+    sha256 monterey:       "f6033cbb074d60e0465d19e401f55a88b6cdd8b9e0b1b61246fab604ca8ccdd8"
+    sha256 big_sur:        "b974d4b90a3ebd86a37759e4e77ec0f75b8efc49fd6c03e47fdf0670f4ec9546"
+    sha256 catalina:       "da907b437b4d66a8fdd2d81defa06dd7222adfdfa879444e42649ba6c030d6fd"
+    sha256 x86_64_linux:   "5be7cb4675897d31db44f4c24d02d35384cbdd82d8c6e3de6538247a500d0cc6"
   end
 
   depends_on "cmake" => :build
