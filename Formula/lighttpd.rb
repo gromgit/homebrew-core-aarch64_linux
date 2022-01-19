@@ -11,12 +11,12 @@ class Lighttpd < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "febd63ab82f4b96ee6b1b6b7e4e658202aa1f87af58b8a2f635d27da50c82137"
-    sha256 arm64_big_sur:  "1f2b0fa8fc1fa2e6bf4717da8a2b770ceaf3e028f60a54d4556991ef4170e887"
-    sha256 monterey:       "6f2557e86538603fc34fefc4e33e35abd50962bc021e548877dad2877413fcbc"
-    sha256 big_sur:        "67edde9ec018c162d4188619e4840a6fdbea2f5418bb8c1d30d48a1438fba1b1"
-    sha256 catalina:       "30b655e43f0f325eab7157986e7832e85c37bc22686b259d6626a103af608794"
-    sha256 x86_64_linux:   "62a9f6a041bc72126cddf1fad869b4c33470ce9f4f1852b7c351f73163728610"
+    sha256 arm64_monterey: "bcf37fd9c04f41481779f01bcc6a99b70ad92c3ce1a0b1e7420498d425fc4811"
+    sha256 arm64_big_sur:  "75560ba16722115eb40465408ad2c6e98e4045c30f57e45d0f8814652c402fc6"
+    sha256 monterey:       "e512bab9a55d348cdc6ed051c065c02cc7ba75f09c164b6d62069ae1db39ea3c"
+    sha256 big_sur:        "1f8d5019d3a0106da00e13c4ae817bf52536d7a2722b195cd79c6f2d91b36c56"
+    sha256 catalina:       "d1b54887a11604f8c36440248b50ff961f35c166b075d86c84b90e1708f9fd3d"
+    sha256 x86_64_linux:   "aa4bf269c6d1e357f4c07236e9a9c4053bd67803029aba23bf2ddfbcb0e81b65"
   end
 
   depends_on "autoconf" => :build
