@@ -6,13 +6,12 @@ class Lego < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "06c5282f510d060d9b9c209d7e34aaba3d7003d36b0ad9876c5968aa5065aa39"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1b390230208cb901698f134fa8d17209863b665b8b06155de9b858e5f68ea8ca"
-    sha256 cellar: :any_skip_relocation, monterey:       "a3cf1942ac769fb3d5884cf0318ef28edd583712251ec281699248a4a52c424a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d1a51477380a955c9e0c7e7f8302a6d224d8ba099ccadfcd502a998e7a2cdc65"
-    sha256 cellar: :any_skip_relocation, catalina:       "8ea6c8c495023bd3eeda17208afa4f16bfbc869e142975942e6c59afaf37e6c9"
-    sha256 cellar: :any_skip_relocation, mojave:         "d2396922556bc444386b8deffa50097a26ac7e83a4eeed5cb0e505b25ec0069f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6e6ed7dfc213ad51d356008f1e2f3e7caa048bbb78d5bd09690a31d8543876f0"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "dd1ec81c6d2428c082d5804d9eb506f7105948db3d12a1a82169961c80484a66"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "03fb5f8f2ac1790094807c3891e882e725e576c9529e45474f2e03b57e4d1ce5"
+    sha256 cellar: :any_skip_relocation, monterey:       "d0f4b0c26427c607dd8606fb43f84069ae57c9779378a69be6dacf536428c616"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d9d7b1af751e4bd3b65bdcec0b681d255b9329b82679850a4418c186557d87fc"
+    sha256 cellar: :any_skip_relocation, catalina:       "f39f671a7ef8f95ed3ee2b30f493ad93c9b53490f9228063ee0008a1a13d7f1b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "67056e62ed928cbdf90ead32e075ed3adf27dc908791bcbdd1db78c649e6f76d"
   end
 
   depends_on "go" => :build
