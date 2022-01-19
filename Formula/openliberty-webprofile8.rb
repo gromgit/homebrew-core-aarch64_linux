@@ -11,7 +11,7 @@ class OpenlibertyWebprofile8 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "05c1fc5a1253930c67a0fcc8ee92cac9de240aeb4098826efe2472f5c2769980"
+    sha256 cellar: :any_skip_relocation, all: "a0f28b761e22222683799b48f18317e5f288eb8ad0bd876aa24eb8ddec6fca7f"
   end
 
   depends_on "openjdk"
