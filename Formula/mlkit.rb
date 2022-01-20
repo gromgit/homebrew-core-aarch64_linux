@@ -12,9 +12,9 @@ class Mlkit < Formula
   end
 
   bottle do
-    sha256 monterey: "26f58c1e892efb5d6964e5291e042e3f294978870b23bf27cf9ffc7d03ab75cc"
-    sha256 big_sur:  "6548ea915051d1aa5cb35f7020f52bd5b366bcca4bde016083a5884c77dd43df"
-    sha256 catalina: "d5c2bc82d056987193d3ae367f2af290b409385cee0e4e2de7929dcb3d97f55f"
+    sha256 monterey: "36067c952b766856650dde4ec7063715116b3b35187bccf3d993159dcb1acff4"
+    sha256 big_sur:  "d10a1831efd17c9a803d2d7d89bac114e8ef4c1941e370aba738a3fb7d961b8e"
+    sha256 catalina: "c97338472a17c0a140b823973c74d68879374e5a967c0e2e586c63ad135411ee"
   end
 
   depends_on "autoconf" => :build
