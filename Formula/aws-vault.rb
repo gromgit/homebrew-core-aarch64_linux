@@ -6,13 +6,12 @@ class AwsVault < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f01366f5cb889419780522547e546e19239a85928379975f45ecdd6c73a65b89"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cb316e4c97e1d1e3bd29fd4b3c7b1f8fa9f3c5c53716e125a32b908bf7776623"
-    sha256 cellar: :any_skip_relocation, monterey:       "5d4991bcdd3735e51c1c510263abbd880339f25b6af41cb6a4d2546835f9c28b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "96bea08ce45ad2b3e5ab857f81ba0373c57a82887d50ee3f501901726b8987c8"
-    sha256 cellar: :any_skip_relocation, catalina:       "84af267993e86cd67cb6dbe9d7768c6407837d8473d6a17e715fafa5c7bdf7ca"
-    sha256 cellar: :any_skip_relocation, mojave:         "f36473dafd176d15448ce1dcaf80de6bbb460a97d8ce4ae706816b864d911baa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e22ea3ed44f313e480116618673e82a043216a362da3bc9ae457687eb1c26994"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "db07c902c6c060a2dbd6b33ed11a5c4e82de67b4cb2f5ccc84cef4def62a627e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "50f27cf3d7ab124dff20ae510efebb53043c89c6ea5d09b15b7c824c4c16d525"
+    sha256 cellar: :any_skip_relocation, monterey:       "d2e6c63f8fd6fb86f6ba89bff97a4a678c00f6b0792258c00779d9d6f1f0d317"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a00b17a0b34dd3ea5819e50321c8eeef2b5af55f9bdd247bb059d4a10da41a8b"
+    sha256 cellar: :any_skip_relocation, catalina:       "86bc94f503d57879f40b3e101101d6133fb41cd3a748a052b8de65ba3ea7ca20"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d54d093549f57e717f6853fbf676f3b3fbb7909384eafb689ee285821e9315ef"
   end
 
   depends_on "go" => :build
