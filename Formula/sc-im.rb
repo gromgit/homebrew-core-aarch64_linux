@@ -8,12 +8,13 @@ class ScIm < Formula
   head "https://github.com/andmarti1424/sc-im.git", branch: "main"
 
   bottle do
-    sha256 arm64_monterey: "5bebafdb76dd401671b0b1888f3db8b2e6c8e4c79af6d5beb26796f62848f5e1"
-    sha256 arm64_big_sur:  "b055d6cf9eef6bf5c975a1eb6919875580f2014bcfb73cb333f650e940f9d6a4"
-    sha256 monterey:       "6e9c2d8b686b95f3f5814a6892a5552f40ce2008977741937a4b8d2845c34868"
-    sha256 big_sur:        "7e830a488a3d2645044fdab8494e1497c37dd4b72933dc6a638948b7f5c2c6c7"
-    sha256 catalina:       "1c62ae56ea50617ef67e0363d7b99ffc83eb7ec1688d74ccf44142ec5bba6811"
-    sha256 x86_64_linux:   "1be8f9b8c792d4203ebdd6021915ff23dc1c9e39749cff724f435df9c7bfb44a"
+    rebuild 1
+    sha256 arm64_monterey: "1f124ca1348d233d34dfbd66d267ea410d0f278738cfe41d3d09c568869c8e6c"
+    sha256 arm64_big_sur:  "a28c373e91d91fbaf19826326d1cdd7170f40db8783de0a11bdb8a2f5f821236"
+    sha256 monterey:       "6ced05dfc86a7785bf2b7d8e46c3a05df41bb7f344602d38fd0ae4eca88f1470"
+    sha256 big_sur:        "0dccff5f3ba32682f1998a16b8c84413cc1934cbebe378959473f3eafa12a519"
+    sha256 catalina:       "2d721b8f11810b2024c50e963f3c4ec4da4fe9d6480c41798af9c6d3c9312c5b"
+    sha256 x86_64_linux:   "07756076e093423844a261a77f537844e122e1648db2acc0ae5ddba75ab42293"
   end
 
   depends_on "pkg-config" => :build
