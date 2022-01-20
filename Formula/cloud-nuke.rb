@@ -7,12 +7,12 @@ class CloudNuke < Formula
   head "https://github.com/gruntwork-io/cloud-nuke.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d766fc959998328a1099d172d9f5a2976d3a4ff5fbaa914552be115fc8bf9982"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ca4f7cc3c6604094ce4e16087c3946550844fff66110306bd7bb967e71b39451"
-    sha256 cellar: :any_skip_relocation, monterey:       "1ff244bf269bcdc99c3b95c0ff72beb24284b36ccc2e6c39af674111a2fe4c20"
-    sha256 cellar: :any_skip_relocation, big_sur:        "849bc4697581a65f939120989e160121daf75dbdc807a4c753cad4b2088b9c5e"
-    sha256 cellar: :any_skip_relocation, catalina:       "e716690ff7052471c575ba52684de959d7bd70cad797f4027a7c9a333717992c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5495e79321db944ecaf94602be86f54186068a73ab67815c6fc5766b995555fc"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "55347ee20c2afd264e760b56c06c141c646fab4d71147350813fefd9c312e10c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0798829f26ba7e08e6b2eb54e39f356bb5b186c2e7ff4edfa15df5e031b9d9fe"
+    sha256 cellar: :any_skip_relocation, monterey:       "261597bf6f9555b5866399a3f47e6285f6cd37db01c9c93d602068150d85b89b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "46744ef41635a11fb3df8ec54259906a4fe448f6f4dd07362b1b8324047d8c44"
+    sha256 cellar: :any_skip_relocation, catalina:       "32d1f357e118c1b82aead283998b2d134a76bbb00f74f0cf2681ea927b236901"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "63f7d55e081bf8109ffc0fbdfda40f57f6cf75b28fc23e144df81771f0fc2e36"
   end
 
   depends_on "go" => :build
