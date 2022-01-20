@@ -10,10 +10,12 @@ class Envoy < Formula
   head "https://github.com/envoyproxy/envoy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, monterey:     "ea4ba641eacee0a0772b1defb5d405470acb21835957007962d6ee170b63e33e"
-    sha256 cellar: :any_skip_relocation, big_sur:      "092ddc72b6b2c2bf7ec681b15fe5667ab19a0a24c52c5f49be736c11e66822fd"
-    sha256 cellar: :any_skip_relocation, catalina:     "c4775dde9f78b2196cad23e09194658cdb7481567a17b2788c9becef8a7d7ce2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "70f79f2525f22050cbd7fb97f23fcd8521df0dc0d16148b78379f5993cba92a8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bf22e01df08c56e453469d1b9057bc4735bbbcb15edb6e81a557a10e103897a0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "82a538bffdfe021e54774e9713351c8555bbb7b2766c6f9b96998918fdcaaa11"
+    sha256 cellar: :any_skip_relocation, monterey:       "da08bf14e846b5f09e0f2e17866e55ccaf5412b726b62f2c17d0836fc660126d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "327d71692facbe6dcaf66e07ddb718653d4f8d0dcc2bf0121cd6af4f0a874e19"
+    sha256 cellar: :any_skip_relocation, catalina:       "89cd16d7a6a786bbaaf9acb65617c4783dc71a2f222d0a73141e1a9c8bc65985"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9d0b57f5e87b1e480267adbb5e49a1d96d967323ea97f283c9255c4d3e1f490d"
   end
 
   depends_on "automake" => :build
