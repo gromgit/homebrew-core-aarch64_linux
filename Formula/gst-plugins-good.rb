@@ -12,11 +12,12 @@ class GstPluginsGood < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "23c5545d7dbb05726bef1fc711bffe95c5a337eacb6053dc141fa08523faed53"
-    sha256 monterey:      "28e2bd546fecb0a2e90f632e71d55c67108c88d3324f1db67a99002ea593f6a0"
-    sha256 big_sur:       "34ac73b746d4fc3c962e253fe71ec3a35a3dbed2f20342bd22955aa492a53562"
-    sha256 catalina:      "72ba1c6c4e161443ef3b7913fe5ad6f733d818aef27de007645eb2b6195864df"
-    sha256 x86_64_linux:  "def92a5fff0a77ba3c384bc78cec86756342005a27242fb07e689f6b92440602"
+    sha256 arm64_monterey: "b9a4c700974a3dc9fa4e537594fabd6c9295420bf2bde8749084c397bcce51b0"
+    sha256 arm64_big_sur:  "23c5545d7dbb05726bef1fc711bffe95c5a337eacb6053dc141fa08523faed53"
+    sha256 monterey:       "28e2bd546fecb0a2e90f632e71d55c67108c88d3324f1db67a99002ea593f6a0"
+    sha256 big_sur:        "34ac73b746d4fc3c962e253fe71ec3a35a3dbed2f20342bd22955aa492a53562"
+    sha256 catalina:       "72ba1c6c4e161443ef3b7913fe5ad6f733d818aef27de007645eb2b6195864df"
+    sha256 x86_64_linux:   "def92a5fff0a77ba3c384bc78cec86756342005a27242fb07e689f6b92440602"
   end
 
   depends_on "meson" => :build
