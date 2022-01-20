@@ -7,7 +7,7 @@ class Fop < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "bba733bb7b7516a722bcd1b5f272e9d87fcbdd740db0fcbf8c7ac5d8fd5821d7"
+    sha256 cellar: :any_skip_relocation, all: "d3f2d2fe7a36d3ac928acf12958259f0c5947cbbacc7da1b7d0941cecbcec104"
   end
 
   depends_on "openjdk"
