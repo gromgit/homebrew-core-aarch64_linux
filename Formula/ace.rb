@@ -14,8 +14,9 @@ class Ace < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:  "a8b07fff8fefb939f8eac8844f818403c865ea25d0d21ed5acdd830491ad07dc"
-    sha256 cellar: :any, catalina: "29e541be09f367e3fbfb9b4828a02664a9aff2b3c2105f09b110c7b278b7673d"
+    sha256 cellar: :any, monterey: "bd09d99803ce5e5671cfd4e369f6bf6b04294e7c72676c23df912ab2f7fce19f"
+    sha256 cellar: :any, big_sur:  "dc143404b04e701aad213768a9b58187e5f1b17feb3941aa2467aa0aa0cad672"
+    sha256 cellar: :any, catalina: "737f43fe9b5a430161f71b80ad1955c6ca9ef39ec93b7542e373e469f124c3e4"
   end
 
   def install
