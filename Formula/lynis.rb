@@ -6,13 +6,12 @@ class Lynis < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fc0a9524b52fc385fe438af0ec82772adffd8eb80fe8e54207130cb2945b1102"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fc0a9524b52fc385fe438af0ec82772adffd8eb80fe8e54207130cb2945b1102"
-    sha256 cellar: :any_skip_relocation, monterey:       "f22d1062214334e29b63165f7246ee32c64e9981ddc2ef15c9610f40da7e457c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f22d1062214334e29b63165f7246ee32c64e9981ddc2ef15c9610f40da7e457c"
-    sha256 cellar: :any_skip_relocation, catalina:       "f22d1062214334e29b63165f7246ee32c64e9981ddc2ef15c9610f40da7e457c"
-    sha256 cellar: :any_skip_relocation, mojave:         "f22d1062214334e29b63165f7246ee32c64e9981ddc2ef15c9610f40da7e457c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fc0a9524b52fc385fe438af0ec82772adffd8eb80fe8e54207130cb2945b1102"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3c78dbc7b8b2eae1662939c4be89c5d491e94cb351775f720055fc0033f55465"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3c78dbc7b8b2eae1662939c4be89c5d491e94cb351775f720055fc0033f55465"
+    sha256 cellar: :any_skip_relocation, monterey:       "37a7777dfd2d2a662fcbc04ecf7c5a756d52bb862355d7f7ef0908ee43e52478"
+    sha256 cellar: :any_skip_relocation, big_sur:        "37a7777dfd2d2a662fcbc04ecf7c5a756d52bb862355d7f7ef0908ee43e52478"
+    sha256 cellar: :any_skip_relocation, catalina:       "37a7777dfd2d2a662fcbc04ecf7c5a756d52bb862355d7f7ef0908ee43e52478"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3c78dbc7b8b2eae1662939c4be89c5d491e94cb351775f720055fc0033f55465"
   end
 
   def install
