@@ -1,8 +1,8 @@
 class Arrayfire < Formula
   desc "General purpose GPU library"
   homepage "https://arrayfire.com"
-  url "https://github.com/arrayfire/arrayfire/releases/download/v3.8.0/arrayfire-full-3.8.0.tar.bz2"
-  sha256 "dfc1ba61c87258f9ac92a86784b3444445fc4ef6cd51484acc58181c6487ed9e"
+  url "https://github.com/arrayfire/arrayfire/releases/download/v3.8.1/arrayfire-full-3.8.1.tar.bz2"
+  sha256 "13edaeb329826e7ca51b5db2d39b8dbdb9edffb6f5b88aef375e115443155668"
   license "BSD-3-Clause"
 
   bottle do
@@ -19,11 +19,20 @@ class Arrayfire < Formula
   depends_on "openblas"
 
   def install
-    mkdir "build" do
-      system "cmake", "..", *std_cmake_args, "-DAF_BUILD_CUDA=OFF"
-      system "make"
-      system "make", "install"
+    # Fix for: `ArrayFire couldn't locate any backends.`
+    if OS.mac?
+      ENV.append "LDFLAGS", "-Wl,-rpath,@loader_path/#{Formula["fftw"].opt_lib.relative_path_from(lib)}"
+      ENV.append "LDFLAGS", "-Wl,-rpath,@loader_path/#{Formula["openblas"].opt_lib.relative_path_from(lib)}"
+      ENV.append "LDFLAGS", "-Wl,-rpath,@loader_path/#{(HOMEBREW_PREFIX/"lib").relative_path_from(lib)}"
     end
+
+    system "cmake", "-S", ".", "-B", "build",
+                    "-DAF_BUILD_CUDA=OFF",
+                    "-DAF_COMPUTE_LIBRARY=FFTW/LAPACK/BLAS",
+                    *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
+
     pkgshare.install "examples"
   end
 
