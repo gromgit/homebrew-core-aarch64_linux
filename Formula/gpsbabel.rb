@@ -11,12 +11,12 @@ class Gpsbabel < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "5357d3b45f387798979f3cedc684fbcc67cff808472d08c5c0af62923e96d5ef"
-    sha256 cellar: :any,                 arm64_big_sur:  "c7ee4482d5aec2eb9c2a13012fc9ca66f9ffdd8d81350a2a89594ed99d27175c"
-    sha256                               big_sur:        "6d5c179704f46781438a06f02a6e83c0d9e5bfa3af0f15b738af0029a4cc56af"
-    sha256                               catalina:       "c71c3f2662684e9c03cac17d2f211b58ee07b3dc64ce74121922cca41d6b303c"
-    sha256                               mojave:         "0a8e9cb2650be7396304d7486975e4ef82dce6e1890f8f54cbbaa0e05ab99991"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b9b4de5bfef2c0548e1de3c4b5d82e881b511d7ea2bd496fe645a5373c5ef354"
+    sha256 cellar: :any,                 arm64_monterey: "7b5c28ab75dade273785b1e7f7080a2067e10262462bb4e4a19da5daa0e7e64d"
+    sha256 cellar: :any,                 arm64_big_sur:  "ac807500298ffee8afc0ad6d884db0307d73fb639733ae4c074c91f04ef1ba72"
+    sha256                               monterey:       "8c12af303436297edaf88e0e78583d76c31032ff3477659caaeae64c134428b9"
+    sha256                               big_sur:        "3e47fe71c6074f53f9ca9c25e357e6f8fb3b146bbc829dea38fae76a767e068b"
+    sha256                               catalina:       "3d4f1679c62ccd105a106cd2aba55e091d1312d3b636230721f3c7c4e33f78f2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7e500ef423595a42e5fe19e50221d210201a7a2cd6bd556654f1a8ba66122154"
   end
 
   depends_on "pkg-config" => :build
