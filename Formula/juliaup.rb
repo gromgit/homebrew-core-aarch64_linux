@@ -7,12 +7,13 @@ class Juliaup < Formula
   head "https://github.com/JuliaLang/juliaup.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f2c901408444287d125393f3c6e7b6f0206b4d10b74e7209cb6146f6d9561fa9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2d71d1c6926e7f2e34193148ecabc7043e6ba94978940b4ed8f3168e69bc2e95"
-    sha256 cellar: :any_skip_relocation, monterey:       "9f6c2f49b51ab632aea436d383a6124f15b97299787e4796a0482622572629ba"
-    sha256 cellar: :any_skip_relocation, big_sur:        "83db09aba56d9bbe372f7958d01c00c0fdb3320971e49e439895d3202744ddaf"
-    sha256 cellar: :any_skip_relocation, catalina:       "6935b23f280b733e62780ce79fe42ffadfcdfad2573be1565c79cbd4890123be"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fc57b32dc2fc5ab55e2227ee1233ca5717b9977e23efabea5d4998899eca3627"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1ca0f2e8e6e98e45f0dd9647d7581c6f0b5cabca77576b39e895f4e62a4705db"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b4f9c40b4fc2fc599e3fcef9b584080a80fdf0b71614c0b1281a02b61fb3c9eb"
+    sha256 cellar: :any_skip_relocation, monterey:       "b68cf73a6963151c99cc5510fe0ce54a3a68aa40d2b6ded789f0b3a1e27b545f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "794caa4602c36b66823fb2026ffb235b78ddd7dadda9ed170686de31b896ee00"
+    sha256 cellar: :any_skip_relocation, catalina:       "df949186d6c8448d6296230f4dff2f7ba1cd80e8638b9dafc4b4cb3f6b563420"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3557bbacc945d70f86b497de9054f2bc6fc2fb0db121d00b40cabbceb6431efd"
   end
 
   depends_on "rust" => :build
