@@ -11,7 +11,7 @@ class Phpunit < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "d258aeecfcf0d9fcdca412978787bfd7a7781db052e9f28d75a92b1a13940718"
+    sha256 cellar: :any_skip_relocation, all: "380bf2e6fb921297d36874648454e9f5efacc922541768fe6a29d858891f938a"
   end
 
   depends_on "php" => :test
