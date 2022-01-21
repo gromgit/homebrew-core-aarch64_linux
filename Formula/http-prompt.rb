@@ -8,6 +8,15 @@ class HttpPrompt < Formula
   license "MIT"
   head "https://github.com/httpie/http-prompt.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "dc68a8fd8aa654264b53ed93edd7e5c35aa8e4de737c2112b1bf1827ba40bb9b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cd34e8d0cf8be8321316efd43ae5b13a321846b417a5e8e940dfefd0f318aebf"
+    sha256 cellar: :any_skip_relocation, monterey:       "96e30cece59a1061a06d13b18bd003c64cf8a939e15727f6c34bd5fe1f66dfe7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "34b77fb581ad5f06229eb1cdd2ba85caddc2be3e8d15af3a2a3fc6569b321246"
+    sha256 cellar: :any_skip_relocation, catalina:       "6002d8f03f68024082caad25df6d7bab4756553aeb06139a7a17d9ce40bb3a93"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a0f964a48a0089b3c3dea441024a80644e13211303d7c9ce29410ca507a5c31c"
+  end
+
   depends_on "python@3.10"
   depends_on "six"
 
