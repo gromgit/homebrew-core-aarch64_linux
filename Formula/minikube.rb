@@ -8,12 +8,12 @@ class Minikube < Formula
   head "https://github.com/kubernetes/minikube.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d721b4143e7154195201a8b44c3a288fc01c6e8ccf4951af00d74f2166ace091"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f18fe3963d189c56f06cf5492aff733414a548498dd4cfb0f207a2b12c6cdbe8"
-    sha256 cellar: :any_skip_relocation, monterey:       "06c14428fd96dea8da38801a00e0b9185f40627f7b5ca345c65be524268620ca"
-    sha256 cellar: :any_skip_relocation, big_sur:        "962e2d10d4ff85f6aa440235f36bc11568aee01191e3cb6f4c0f4d548beaf2bf"
-    sha256 cellar: :any_skip_relocation, catalina:       "7987a7384f32df89b5d2a378cd466cdfed3f997e553db7f44bfa68e5bf27ef27"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a79ac36118d1504ecb9f502094a8e9d174aafbf996c8e6f5d71c70435ea43ae6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4c20abe357ff2726082b8eacbc3a4e286a7e030bd1460f5a7ded5e559ce2e330"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9758947d5f4424b19865dd3260ffd041175d8318eaace49fef67f15b745bd0c9"
+    sha256 cellar: :any_skip_relocation, monterey:       "55bb120a3c56de1237e827772e22b63332b846694affdaca249306643a9da7f1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a617029b4a94477847087fa368e8725a74dd3a6a188e607307f3ab8c533db339"
+    sha256 cellar: :any_skip_relocation, catalina:       "5d119f190435d45fc83b264e6377e92318ccad9303996ee8e82baad083a04dce"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8d33f239e285820de9e51773078b1a9cfc100214382af36dfbe7437e005c80df"
   end
 
   depends_on "go" => :build
