@@ -8,12 +8,12 @@ class Tilt < Formula
   head "https://github.com/tilt-dev/tilt.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fb606c853b3f5e98c3a7566a0bb280bcf153f6352c4f647222623ffee2f52527"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f41839d74c23a25c193bc3c279ad36e38d63cf3b811a877b6edb8a21b8592b6c"
-    sha256 cellar: :any_skip_relocation, monterey:       "fe3774e9660a51a60e263bb9169cfeaf47b19b3d6694be39606d60913857af58"
-    sha256 cellar: :any_skip_relocation, big_sur:        "585456328fa6ab41f37ad777ca29cc82de7e082401f5a2b31cada492ce2c363b"
-    sha256 cellar: :any_skip_relocation, catalina:       "ca6dda99022d771e659fbdeefcf283ccaa1b213bf1f4317a37ba35c082f6e1ad"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "47c2539509257ec08e216a9049ea423259adc72d74406a00fb86f18b6fd07cee"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "990d9ea89ae14ac257a6d10e45667ae7b576a215a05f77ff7c9f86541c27799e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "727af67b4b1cd90c23f2eb842a8226c9adbf40da619733c7feb64ba71b31ea1b"
+    sha256 cellar: :any_skip_relocation, monterey:       "75d5b119d1b3752739e88c80499290e87f1b1ca02e9e5ea3ebcc1db43974c0ce"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0c87c0f02a7471cdb181af89e17acfcfbbc2648eae93c085f4f58d91d32795e1"
+    sha256 cellar: :any_skip_relocation, catalina:       "43d2849edfb8fbf388e97c95f56dc324f6bc253a824e6c4da1e9c8a6064e9493"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bc1787da6c1bc2dba2ec6f2de7a52a1b93c7608377681233df25c3c81524213c"
   end
 
   depends_on "go" => :build
