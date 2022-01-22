@@ -6,10 +6,12 @@ class Gnumeric < Formula
   license any_of: ["GPL-3.0-only", "GPL-2.0-only"]
 
   bottle do
-    sha256 arm64_big_sur: "bc9ad2a9bff41478d87c19db3b4914e9b4726fb9c2673ef5aedb6d18b285f150"
-    sha256 big_sur:       "7d844f97799311e86ba0925d15284f25226daa7fe13df2492ee54cd5cfda6030"
-    sha256 catalina:      "9b996c26bd8539c594d0bb2ce9df92d47f44200dec0e4a6ce8b922f3c59b19f9"
-    sha256 x86_64_linux:  "ae8b64be5c288adcad39186a2795728637f5c703ff886805f441add41902c7dc"
+    sha256 arm64_monterey: "a7aa880fff06e3155e9c98d5e1f86af47ce0943d7473b55f6b5d3cfae913322e"
+    sha256 arm64_big_sur:  "bc9ad2a9bff41478d87c19db3b4914e9b4726fb9c2673ef5aedb6d18b285f150"
+    sha256 monterey:       "3b43538df7a0fa49452115d616b137dfe1a6632c5966e7884300214c4640d19d"
+    sha256 big_sur:        "7d844f97799311e86ba0925d15284f25226daa7fe13df2492ee54cd5cfda6030"
+    sha256 catalina:       "9b996c26bd8539c594d0bb2ce9df92d47f44200dec0e4a6ce8b922f3c59b19f9"
+    sha256 x86_64_linux:   "ae8b64be5c288adcad39186a2795728637f5c703ff886805f441add41902c7dc"
   end
 
   depends_on "intltool" => :build
