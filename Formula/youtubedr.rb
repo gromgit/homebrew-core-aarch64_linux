@@ -6,12 +6,12 @@ class Youtubedr < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d0d5b44be8f64e6dcedf54068a3c1a4d41f1a9aa91787b7f0c50c7c3b7c186ad"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d0d5b44be8f64e6dcedf54068a3c1a4d41f1a9aa91787b7f0c50c7c3b7c186ad"
-    sha256 cellar: :any_skip_relocation, monterey:       "d9b8aeede28612b3968d93504ab9bbe23489fd57d9a03e9fb913a8a44bad5e7e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d9b8aeede28612b3968d93504ab9bbe23489fd57d9a03e9fb913a8a44bad5e7e"
-    sha256 cellar: :any_skip_relocation, catalina:       "d9b8aeede28612b3968d93504ab9bbe23489fd57d9a03e9fb913a8a44bad5e7e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c8dd5d0d3c0d31fe8745fb429b495e3e6dce89ab0383555d8ef2061d4db87f2f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0aaa7c33fc0fc9afe8f00611ac7c73f886498d392c20978604d19e3b8aa13f38"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0aaa7c33fc0fc9afe8f00611ac7c73f886498d392c20978604d19e3b8aa13f38"
+    sha256 cellar: :any_skip_relocation, monterey:       "34b9f7f6aef9b2da4d7913ce554eae80f9c5a46e0ba07d9ce8f9a6109ab76493"
+    sha256 cellar: :any_skip_relocation, big_sur:        "34b9f7f6aef9b2da4d7913ce554eae80f9c5a46e0ba07d9ce8f9a6109ab76493"
+    sha256 cellar: :any_skip_relocation, catalina:       "34b9f7f6aef9b2da4d7913ce554eae80f9c5a46e0ba07d9ce8f9a6109ab76493"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c6e2773effd74326fca3af75b8ee06fe7df6ca10ee8b5ad2fcb48fc63bf7adb7"
   end
 
   depends_on "go" => :build
