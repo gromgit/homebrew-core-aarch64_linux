@@ -11,11 +11,11 @@ class Onscripter < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "6d7d5770f444cc82ee6adb2512b1feb9fb03d0725e9b11c8b856dcd8ff8857d0"
-    sha256 cellar: :any, arm64_big_sur:  "3ba1921cfefbf0c643551c5c8c0fd5f552dd1b90c96af281d276520e1ad1a9df"
-    sha256 cellar: :any, monterey:       "e3ffba8f1de102a41700dc1aa6ebf158bf946a2a6b27d38eea7340100d37333f"
-    sha256 cellar: :any, big_sur:        "c4bfb394196a2edb031d5c51f0014a92cc8da12a124d2fa7afdb7f9fcbc92b7b"
-    sha256 cellar: :any, catalina:       "77574e6be100b2f0e2dcd48dc8852c58d471851d47c49bd335e2c9497078666e"
+    sha256 cellar: :any, arm64_monterey: "4e6df0e04fedd47b9da0b916fada9a996076515e67071ea5e9297cd2c1051618"
+    sha256 cellar: :any, arm64_big_sur:  "3d26597e48359f0381f36970443d1496c2d474ed878c3bc5dd9c1ac4b79e562b"
+    sha256 cellar: :any, monterey:       "0856c4483613081501e121b6c0838a4aed3b7d259dad67a19f36386f970ca247"
+    sha256 cellar: :any, big_sur:        "a6695d3775716fe84a9fbb5e352aca3cef17bec8a990667b45cc84062e33fe25"
+    sha256 cellar: :any, catalina:       "a8c7432b1b37ad99a3f3cb231098de002bf86b413b4ffebad837ee0f354d7b3b"
   end
 
   depends_on "pkg-config" => :build
