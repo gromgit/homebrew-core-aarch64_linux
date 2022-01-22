@@ -43,6 +43,13 @@ class Languagetool < Formula
     EOS
   end
 
+  service do
+    run [bin/"languagetool-server", "--port", "8081", "--allow-origin"]
+    keep_alive true
+    log_path var/"log/languagetool/languagetool-server.log"
+    error_log_path var/"log/languagetool/languagetool-server.log"
+  end
+
   test do
     (testpath/"test.txt").write <<~EOS
       Homebrew, this is an test
