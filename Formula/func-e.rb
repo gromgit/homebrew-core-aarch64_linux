@@ -6,10 +6,12 @@ class FuncE < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, monterey:     "6e698206bb39d8c8abb131ec73961ed41a461e5477cdfed7c871583a24ee94b9"
-    sha256 cellar: :any_skip_relocation, big_sur:      "63999b444ad0ade614290b57b8962db7f111e1c26ba943092efff5b1eb738841"
-    sha256 cellar: :any_skip_relocation, catalina:     "2f8655a3e650159fef5868347ae1248a6e7f115504fe4dcdfbb14c9a06f59dc4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "58a765e6c1de9df1f95b73c8e604d4f1bb611a42d5f6575c10ee3326d82c69aa"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4dff9cb95961a6101ca105bb8ad58c2ee265dc4a007e89d504e51df551e62494"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c8dd906a8596a1f047d6a562811485051c2efbba187620c75cff290d48a5d4e4"
+    sha256 cellar: :any_skip_relocation, monterey:       "28c867e0bf13ff93a353c8141d60b9d92b0a8f4ab6938a68d33541a700bc39c4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c0163769b7efffb5bcd490e31d804f8bc4ed08ccde48168af2d5f056f106aade"
+    sha256 cellar: :any_skip_relocation, catalina:       "5a3988abb91fcc9c4a10e6ac5c44fbe2e26a0ef48bcbf708c6588133cb51421f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "38c29a3290149b75f19d6ecdd31e9421e086af3e5fd0bb990580023551aef5e8"
   end
 
   depends_on "go" => :build
