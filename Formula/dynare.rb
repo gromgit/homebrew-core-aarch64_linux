@@ -11,8 +11,8 @@ class Dynare < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:  "ccfeee1a456201d0cd60616f8f4b7e4ccb169206b83444ec7d727d60832f4a79"
-    sha256 cellar: :any, catalina: "d68b211968f201691d94ce012def75c2b1a7c0dd1b67bed8bfb5df134ceb3f9f"
+    sha256 cellar: :any, big_sur:  "8d7cebe079c84516503d4604060575a8e9f2d7b76844dd3f8c6d0a098b1eb8e5"
+    sha256 cellar: :any, catalina: "fe4ccfdc33f33c24595d1ef472761ad4b168da3797813dad7ece1021e97cad6f"
   end
 
   head do
