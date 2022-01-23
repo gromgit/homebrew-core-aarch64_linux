@@ -7,10 +7,10 @@ class Wallpaper < Formula
   head "https://github.com/sindresorhus/macos-wallpaper.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "59b1a600e7f99f62d72bfcac7082cd1047c365d712c618a8ec8059ff7197e360"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c6042aa6f2ebf59f79bb6e598fe00b0d8237803a2a39185ea51c1f7fe0be0041"
-    sha256 cellar: :any_skip_relocation, monterey:       "29bd8a9f785c73f329e74a36046dad21a4ed89a1a2a6e53098c5eba0334f7d0a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8dcb44f399a5873fc92c16e8e1d30797e9501c68ccd2ff61b0651b8975e0c73e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f020cda2a5cafba2c001ae6d32cae25d0f63283c221fd3ce75dde1414e97a19a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c730b0f63bdf5395221ab3c45018e23e31b782a31e379691947f1b0199381ba4"
+    sha256 cellar: :any_skip_relocation, monterey:       "a4ca40d5df4a1983cc719122135a56d19f6861a216c347c984a2b7f89c4e4d4e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2f8fcb711d2e7a94dcef1894d6f23c754e950b1773f7a3da008cb5dd59696dfa"
   end
 
   depends_on xcode: ["13.0", :build]
