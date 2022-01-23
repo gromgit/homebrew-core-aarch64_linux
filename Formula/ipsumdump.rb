@@ -31,6 +31,8 @@ class Ipsumdump < Formula
   end
 
   test do
-    system "#{bin}/ipsumdump", "-c", "-r", test_fixtures("test.pcap").to_s
+    output = shell_output("#{bin}/ipsumdump -c -r #{test_fixtures("test.pcap")}")
+    assert_match "!host #{Socket.gethostname}", output
+    assert_match "!data count\n" + ("1\n" * 12), output
   end
 end
