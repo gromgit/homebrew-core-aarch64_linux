@@ -7,12 +7,12 @@ class Broot < Formula
   head "https://github.com/Canop/broot.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "273e3890e72b080f0f6239d3256fc9d03026cef67fa357438906543bc073e381"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "51d41a355994c5e003f2d417d7d82860a3bd0d2cdd8f21db8bc4798c8edbad07"
-    sha256 cellar: :any_skip_relocation, monterey:       "80c991da60efa07afb4f47cbb6462871677129c039f0399af47af905754aa31b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "574301344c56545db948fb1fd3a6259409d83207533683aa57ef7987f4661222"
-    sha256 cellar: :any_skip_relocation, catalina:       "9074ef4dc95b6d4c8e4394c4686ca28fa861da93f4bb7621c7df9569be30ccaf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ad82c3208f894e6d280c6498870f5c0007ef207d287988bc384e06a8f932805a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bc6be6446bbc40041fa7c3f1f6b0794d4e155f58072dfb6236903b3600423688"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a3ca8013e5a5d7ce983b4a358ad7dcd21978507fc84e42c20fe040fb51208c16"
+    sha256 cellar: :any_skip_relocation, monterey:       "2044f0faa585b806009772ff26639e85e98cf44940b84b5a292569b52b482501"
+    sha256 cellar: :any_skip_relocation, big_sur:        "79a0bbdccc6fadea4798440871851d6052b5e8f827c045f1024d744ea870635c"
+    sha256 cellar: :any_skip_relocation, catalina:       "7a25272b2fdcb344bf80e0b991686a893e615a1ba56b227f00980008dbd47ad1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "344c278a5dd7e29adba54a60559bce20cdd07af20e8200005ca34d1b1fe555ca"
   end
 
   depends_on "rust" => :build
