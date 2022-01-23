@@ -6,12 +6,12 @@ class Webp < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ffa72449868fe57e0f0569029599a16560655ced5608647c89ca6d387452d353"
-    sha256 cellar: :any,                 arm64_big_sur:  "5ce68fe9924fd7797ec5abcfd702e19cc1cccebd98e7f1d80e03858908c741d4"
-    sha256 cellar: :any,                 monterey:       "6c0016464b96910b886a0f1d8f179d352f2a2dddae3554a0a6e1e52f2edac78e"
-    sha256 cellar: :any,                 big_sur:        "f899dc2f56658f6c0481800f20e260084e3ec38c7a8b3ee8de59553b4d7e146d"
-    sha256 cellar: :any,                 catalina:       "9782ff133700cc676327f9f1046c9d3b01e5179345d315734593df79dcb70e2e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "00e8b65d83b94cd68e3d1340ef654381c6dfa7122a9b3fd239d7055414081f54"
+    sha256 cellar: :any,                 arm64_monterey: "44dfabbbc585237b1f52d517186ec33ea0f65398667559a5164d0013881ded77"
+    sha256 cellar: :any,                 arm64_big_sur:  "9b8ae542d86b3faa7cf531d1cb2d1a410a55ece8d635302b783d122702ba3246"
+    sha256 cellar: :any,                 monterey:       "58169ef7b31ed2980685c05a7fc1d874a67802f7be0def4c295135ee73796d11"
+    sha256 cellar: :any,                 big_sur:        "3f1bdbf8361bdcb55d722c0007e4056e7a535234b8e7fe0cff6016dc48e1c8a9"
+    sha256 cellar: :any,                 catalina:       "5cf57e838f218193d7543de1b50093185e72fa368b7334a3ee58ea4b2268e994"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "10c1f70224b629c8eb550469e51379c29f0996bd87690304f3c226a1fb930677"
   end
 
   head do
