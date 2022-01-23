@@ -7,14 +7,12 @@ class Muparser < Formula
   head "https://github.com/beltoforion/muparser.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "247811d2beb59f456963c712936a90cc3a9364cfea31ce4f66f23d6f45faded0"
-    sha256 cellar: :any,                 arm64_big_sur:  "aaeffc1af6b24928270c796679326095b390f3d998f91962b58aa3f7b3581f87"
-    sha256 cellar: :any,                 monterey:       "c309a018ca89e6650685397f9218d0871ee6adefc6a3a8efff94a455f855a02f"
-    sha256 cellar: :any,                 big_sur:        "b7c21016c81037618b2e0148b52567c13f2d6f955d39913770e840a07dabecbd"
-    sha256 cellar: :any,                 catalina:       "0a1a8ee3560af0487a46b7c524cdf938b1d6e159e6c4d9689968225cd6311713"
-    sha256 cellar: :any,                 mojave:         "3094837032e20cbbd5e74531a20450af6986bfd5ac83ea4df4884a538a552c85"
-    sha256 cellar: :any,                 high_sierra:    "ca242a645a77e528c16cced97cf06bc796071c549a8d81f22bd4d9bd547828fb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0d327476ca7ff9b992284dc6ce9d31ec387a8bc2f0c7ad14078393a1e463ae86"
+    sha256 cellar: :any,                 arm64_monterey: "4dff9553e0c011b1ec56a9d32a3bd54ac58ff544a5b309b79eb2db9c7c0b260c"
+    sha256 cellar: :any,                 arm64_big_sur:  "601cc1cb821fa272d4624708e6eb52d585389e6dcfbaa8eebaaa46faf090e7d4"
+    sha256 cellar: :any,                 monterey:       "6d619d5abe92012c7141511fd84fe786dfca2e3af132a1a0dd8b5645561547da"
+    sha256 cellar: :any,                 big_sur:        "72c1c442bc1eab9203074b8238a38b6a1f7fd7ced4ba76308c30af789db3867a"
+    sha256 cellar: :any,                 catalina:       "344e11fdc3dcc9a64ca520dc707c9623ad0f20df2ea89d9596a2da953d868879"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "819cbd314313417a1057a6f71f6b603d7875d7a3f925914a88d51dd99a67ede3"
   end
 
   depends_on "cmake" => :build
