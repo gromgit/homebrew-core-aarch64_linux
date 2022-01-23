@@ -6,6 +6,15 @@ class Elvis < Formula
   license "Apache-2.0"
   head "https://github.com/inaka/elvis.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "484b57c447562c600cfa29ac602785be86aa4e8b761d0876fb9c329907101a97"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d3368f9a7586dbb61126f781336e0cc9ccc30791c0f7b4ea2d99e7ba6ef6d1df"
+    sha256 cellar: :any_skip_relocation, monterey:       "b08e0a5e40f231fb03d6507c9cca0fdd5f4e246b6e48f979d03e9c453837db19"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0249893c657ebda3b0d781d485bb969da79957cad9aaca612de41ed13aba09f3"
+    sha256 cellar: :any_skip_relocation, catalina:       "9c14bf947e1c2bf32b8a72385d8773262c3c344c55be92f6bd221144d3655806"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9a3250151dc4ab48cfe4ddcf67bb48d48b57870171e1ba9331470505bd48e42e"
+  end
+
   depends_on "rebar3" => :build
   depends_on "erlang"
 
