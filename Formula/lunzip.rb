@@ -11,13 +11,12 @@ class Lunzip < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b92566d6e454e92eb6733b6028126945b9b5103da571e5baacafa96ce9033b70"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7e4a5428378440f10ff995f1ee3b1a77ccaff3b1094676c0b71ea5da6fd14e70"
-    sha256 cellar: :any_skip_relocation, monterey:       "2b23b4b4faf28c23373cd9e1d825172a51672b7581e8b15132c5883f9be5ff10"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bc114966f582d1ad76ebc12d90a41aac605c59c7588eb5e08c172018dc11d214"
-    sha256 cellar: :any_skip_relocation, catalina:       "fa648ae46f4217291d717564a124283340e2cdb51da563ca8f0bd0736282bace"
-    sha256 cellar: :any_skip_relocation, mojave:         "a4e1358d0a41008f763ca03ef69b33b68f1fda5f324f234e8cfddf091a12923f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0754449246874a2cecc5d63962cda9db3c87c1ece9152ef6931d06874eb17a02"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ec4ca457cb4a253c5d55639b78d161eb3d7bc5049b255d2bce7f05944b84553a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "02f528b366f19bdff196bc9a6b56bb04391269eed41b5bee551b47bd7697f88e"
+    sha256 cellar: :any_skip_relocation, monterey:       "4fe478003ec28e042575db9a551c673a97f73a4aeda30cb58e6a3f7158100a03"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b147bdc3ce46250190565ac18843bfc7013e01e1556187653ef40fee5a072e5d"
+    sha256 cellar: :any_skip_relocation, catalina:       "bf47470a86fb1b9e345dd77d4dfea86a636bc13f18b2e12baf95590d38fa125d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f713d18ae891d3b1b3dbb1731a5b0b42ad5b72b0d16e6a3b4936c098b619bab4"
   end
 
   depends_on "lzip" => :test
