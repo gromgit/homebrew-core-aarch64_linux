@@ -18,15 +18,12 @@ class Remake < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "d18b85f939c05f0d73b7b854a908804f1747b0e8c21f0ac4fdd672efd8a99cab"
-    sha256 arm64_big_sur:  "391321a2121b244a77d91ffb3ec32d039aa38445441bff436f6128164b51db16"
-    sha256 monterey:       "114032168dffef067d1f68d3ea7a05c265f00892c596b60fdf2ed0ccabf824d3"
-    sha256 big_sur:        "933b00f621a8cfc69a197d73bfe7f9d319d3571aae991eb3b039a8471ea9a0f1"
-    sha256 catalina:       "310b2ef02888a953487fb4e3f7fd7101c209a9abd12286d6a8509669c3ed2909"
-    sha256 mojave:         "05998e7ad1f8442b57e0826b5152894186f359b59d75e68634c1da1a96b0345f"
-    sha256 high_sierra:    "b3c14a7963aeda5e8367e0e4375354fdd58b24a99c07d6cb3fd881dc8d1b1941"
-    sha256 x86_64_linux:   "1f2cd2a87eb12abde96e7a815352db577e6600ec495b261ef75cd61b8a744dc0"
+    sha256 arm64_monterey: "5c2479d3270cb34d5515d80136186d003e9eb96c7750b137d6f526a46b4003f7"
+    sha256 arm64_big_sur:  "b4370edfc5a075b5feb54686ba20b01dd2b2da18666b708ea5154af3b7df2c9b"
+    sha256 monterey:       "609d23982a7c58ec3dc547e06dfc2f461b36ca622de3314490975a282117b9d4"
+    sha256 big_sur:        "bc482278bbce34be601363a34689176e611eacc0461984892bdee53cc5965936"
+    sha256 catalina:       "dc5e00c02c1def048f5d678e91349d8f8da951e8ada948d9f7538cc962d8feea"
+    sha256 x86_64_linux:   "450f4449921dacd7b78dd3194ead086ea99e224a4ecac433118e47b84979d485"
   end
 
   depends_on "readline"
