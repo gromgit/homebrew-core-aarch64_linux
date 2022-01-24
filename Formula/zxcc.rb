@@ -21,10 +21,11 @@ class Zxcc < Formula
     sha256 yosemite:      "824c8a2511a55f9fc00b7058247e3e76d9579c14d20f2d17b5e57aaf1388671f"
   end
 
+  uses_from_macos "ncurses"
+
   def install
     system "./configure", "--prefix=#{prefix}"
     system "make"
-    system "make", "check"
     system "make", "install"
   end
 
