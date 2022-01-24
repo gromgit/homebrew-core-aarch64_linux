@@ -12,12 +12,11 @@ class Opencbm < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "ff7d15e4aec81fd2261c87b29b532f093b390c07e2c1d3138493463a80e3206d"
-    sha256 arm64_big_sur:  "14d82a0d9ca1fb0a90a012526fe7ca814291baabded7c794fdfedb050fe8dd1d"
-    sha256 monterey:       "e96f7761cf0bc7fe55cdea16ad8d86311d144d6adfc69197fb29463d6e9f8d60"
-    sha256 big_sur:        "aaf54902db867f5d5116e5a5701320c52fd8bdaf587fe3824ccf57051671a5e6"
-    sha256 catalina:       "6d85698fdf68fcd53e794ff94495bb95de4f9f1bed54d8c2b31ede5e0e9dfb56"
-    sha256 mojave:         "78c7219df463cc71eb494724a5dee0444a218dadeb2a14308c529d8e0ea29126"
+    sha256 arm64_monterey: "7a9045bbeb039a0780d82105d34db267b90bc25149a3a5ef6f09fbe9d5668c3f"
+    sha256 arm64_big_sur:  "5ccc1506a1b20e7b17fcea1eac1a6af5cc4cc55f7be4c91e99d36f2daf6c4ea8"
+    sha256 monterey:       "d650f6b29d9bb6e28834ae32065a1589ec06ca738ebf615ea3a62109442abde6"
+    sha256 big_sur:        "f1843a75ae047aa93f9e6614462fabc2f87691fb977487c2e5db92f3b78a0aa5"
+    sha256 catalina:       "455a3ac134295766c1752bd861ab6109262e3dd780751d5227219c9970226640"
   end
 
   # cc65 is only used to build binary blobs included with the programs; it's
