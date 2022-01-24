@@ -3,8 +3,8 @@ class Httpie < Formula
 
   desc "User-friendly cURL replacement (command-line HTTP client)"
   homepage "https://httpie.io/"
-  url "https://files.pythonhosted.org/packages/7b/f9/13070f19226b7db3641fb787df36bb715063abe1b8ca03fbaeca0f465d27/httpie-3.0.1.tar.gz"
-  sha256 "0e9bc93ebdcdd2d32ec24b8fa46cf7e4fde9eec7a6bd0c5d0ef224f25d7466b2"
+  url "https://files.pythonhosted.org/packages/97/42/fff91fbf037e5a0cfbc0d5c3fae7e99afcb4867a2a8c896d4a1c90b2b7fe/httpie-3.0.2.tar.gz"
+  sha256 "27f17454b2a1fdde79d1ed0ee679941894596829c07fadb9cfe3872d7a455e99"
   license "BSD-3-Clause"
   head "https://github.com/httpie/httpie.git", branch: "master"
 
@@ -40,8 +40,8 @@ class Httpie < Formula
   end
 
   resource "multidict" do
-    url "https://files.pythonhosted.org/packages/8e/7c/e12a69795b7b7d5071614af2c691c97fbf16a2a513c66ec52dd7d0a115bb/multidict-5.2.0.tar.gz"
-    sha256 "0dd1c93edb444b33ba2274b66f63def8a327d607c6c790772f448a53b6ea59ce"
+    url "https://files.pythonhosted.org/packages/fa/a7/71c253cdb8a1528802bac7503bf82fe674367e4055b09c28846fdfa4ab90/multidict-6.0.2.tar.gz"
+    sha256 "5ff3bd75f38e4c43f1f470f2df7a4d430b821c4ce22be384e1459cb57d6bb013"
   end
 
   resource "Pygments" do
