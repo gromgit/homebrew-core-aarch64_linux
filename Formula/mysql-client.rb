@@ -1,8 +1,8 @@
 class MysqlClient < Formula
   desc "Open source relational database management system"
   homepage "https://dev.mysql.com/doc/refman/8.0/en/"
-  url "https://cdn.mysql.com/Downloads/MySQL-8.0/mysql-boost-8.0.27.tar.gz"
-  sha256 "74b5bc6ff88fe225560174a24b7d5ff139f4c17271c43000dbcf3dcc9507b3f9"
+  url "https://cdn.mysql.com/Downloads/MySQL-8.0/mysql-boost-8.0.28.tar.gz"
+  sha256 "6dd0303998e70066d36905bd8fef1c01228ea182dbfbabc6c22ebacdbf8b5941"
   license "GPL-2.0-only" => { with: "Universal-FOSS-exception-1.0" }
 
   livecheck do
@@ -22,7 +22,9 @@ class MysqlClient < Formula
   keg_only "it conflicts with mysql (which contains client libraries)"
 
   depends_on "cmake" => :build
+  depends_on "pkg-config" => :build
   depends_on "libevent"
+  depends_on "libfido2"
   # GCC is not supported either, so exclude for El Capitan.
   depends_on macos: :sierra if DevelopmentTools.clang_build_version < 900
   depends_on "openssl@1.1"
@@ -36,13 +38,6 @@ class MysqlClient < Formula
   end
 
   fails_with gcc: "5"
-
-  # Fix build on Monterey.
-  # Remove with the next version.
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/fcbea58e245ea562fbb749bfe6e1ab178fd10025/mysql/monterey.diff"
-    sha256 "6709edb2393000bd89acf2d86ad0876bde3b84f46884d3cba7463cd346234f6f"
-  end
 
   def install
     # -DINSTALL_* are relative to `CMAKE_INSTALL_PREFIX` (`prefix`)
@@ -58,6 +53,7 @@ class MysqlClient < Formula
       -DINSTALL_MYSQLSHAREDIR=share/mysql
       -DWITH_BOOST=boost
       -DWITH_EDITLINE=system
+      -DWITH_FIDO=system
       -DWITH_LIBEVENT=system
       -DWITH_ZLIB=system
       -DWITH_ZSTD=system
@@ -65,6 +61,22 @@ class MysqlClient < Formula
       -DWITH_UNIT_TESTS=OFF
       -DWITHOUT_SERVER=ON
     ]
+
+    # Their CMake macros check for `pkg-config` only on Linux and FreeBSD,
+    # so let's set `MY_PKG_CONFIG_EXECUTABLE` and `PKG_CONFIG_*` to make
+    # sure `pkg-config` is found and used.
+    if OS.mac?
+      args += %W[
+        -DMY_PKG_CONFIG_EXECUTABLE=pkg-config
+        -DPKG_CONFIG_FOUND=TRUE
+        -DPKG_CONFIG_VERSION_STRING=#{Formula["pkg-config"].version}
+        -DPKG_CONFIG_EXECUTABLE=#{Formula["pkg-config"].opt_bin}/pkg-config
+      ]
+
+      if ENV["HOMEBREW_SDKROOT"].present?
+        args << "-DPKG_CONFIG_ARGN=--define-variable=homebrew_sdkroot=#{ENV["HOMEBREW_SDKROOT"]}"
+      end
+    end
 
     system "cmake", ".", *std_cmake_args, *args
     system "make", "install"
