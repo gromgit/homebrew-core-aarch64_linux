@@ -11,14 +11,12 @@ class Netdata < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "67ca927390f0945cbb176b79137fd3970dfbf68caf65cd87660c073957735175"
-    sha256 arm64_big_sur:  "96e5940c2b39c8d0cf4c3d6400f388d17c4d8a2f6a7feeca6937ed2270cdcf8b"
-    sha256 monterey:       "ed869060ff8e92144956f9bda4bdf88f69df032c7c9ac6d9d9b008fe32aecba8"
-    sha256 big_sur:        "d3bad874d783b3b59407768d7ef796c4a596e89aca6aaa7ea66194c7b809a193"
-    sha256 catalina:       "f4c04a549cdacdfce6549bae882621cf91c08c3aeb974947ed61724fc9feb057"
-    sha256 mojave:         "52acdf9ac5b1986cdc7f02d079a74486db527e32e09036ce2505c38c85c8d125"
-    sha256 x86_64_linux:   "bd46e05291b7d286be7bc9e50ddb4a04dd162135f71708e5e4a8513996af5266"
+    sha256 arm64_monterey: "ff035089a4f39f9fa9367a754006f785e6eeb376162055444afe1b71c50a2f10"
+    sha256 arm64_big_sur:  "f3c434d5312da96ba06ee62d8f5081dfb676135fa837c84b6a8794ac901ae034"
+    sha256 monterey:       "2313d3b2740ee0c19de61b0f981c992488db43e75aaeb9de54b42904c1a41c1d"
+    sha256 big_sur:        "557a1122f5bdfbafcfa4b37be9052fc8fd547f3aa2b08e36242383a0896bd94c"
+    sha256 catalina:       "f07c8a2881b45b3d2f366ecc597e7ba1c6b59d4fb8d19a8d0aba9799e53e4c24"
+    sha256 x86_64_linux:   "9bb60150be2cce0782bc2e0b8a9db42fc3b8aba71c58b97f06a777f2dad6f920"
   end
 
   depends_on "autoconf" => :build
