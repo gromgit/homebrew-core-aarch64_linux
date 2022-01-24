@@ -2,9 +2,9 @@ class RustAnalyzer < Formula
   desc "Experimental Rust compiler front-end for IDEs"
   homepage "https://rust-analyzer.github.io/"
   url "https://github.com/rust-analyzer/rust-analyzer.git",
-       tag:      "2022-01-17",
-       revision: "e6e72809e3b55da3a57af95e6445a12729331ad6"
-  version "2022-01-17"
+       tag:      "2022-01-24",
+       revision: "17afa2e7780f399df99bec802c4ab7d2f920f158"
+  version "2022-01-24"
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
@@ -17,12 +17,6 @@ class RustAnalyzer < Formula
   end
 
   depends_on "rust" => :build
-
-  # Fix build using rust 1.57. Remove with next release.
-  patch do
-    url "https://github.com/rust-analyzer/rust-analyzer/commit/df5340386365b2b16c4e9bbae546504b97564c41.patch?full_index=1"
-    sha256 "296078507fd4a3b86d8bc2ea2acc8ae87ac908430eedd773730924d53cd3dd45"
-  end
 
   def install
     cd "crates/rust-analyzer" do
