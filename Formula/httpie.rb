@@ -9,12 +9,12 @@ class Httpie < Formula
   head "https://github.com/httpie/httpie.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ee2c52e0f5bba686b442f72409d3284d336eea3e6b40162a8303e195e5961e6f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "73f626c3e59762cf9ab0ab9a1a5abfb2aac5b4496263a00b3def420cacd1e34d"
-    sha256 cellar: :any_skip_relocation, monterey:       "d503ee832a62770a4510a3a634893ef927ca3d11872121fccb63cf43d1999dcf"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9a0b166b33505f1ca815cf493b1b0b96c0cd47969ba37e20797b52b340e51a21"
-    sha256 cellar: :any_skip_relocation, catalina:       "c1b2bc47171554f1c5900d4e68fe20ed08841afb9b28b572d7432c51ba4531e4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4e4ca93f47078820404fc085a4cfb55d699cf37f0496e80c96a46c188e49a78b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "243c274a2e7eea172574d7d0c72afbe6d2462eec8b2aff9644064f8df050f316"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e6facb1b5c6bdc8b517e77b8e1cecb8f999eb38515f1a55f0904fa5738297834"
+    sha256 cellar: :any_skip_relocation, monterey:       "eb47b5a40c04a75328a89a0fb16042a79fd4743fae68a0563cc8a2069e140fb7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a8dc00da8f6870f72ff1be7253f977aceaadb289c413ac34ded5fc96ec07f986"
+    sha256 cellar: :any_skip_relocation, catalina:       "2ff7e0b9e81f3ac12ad63989a7889d126d11d5a6ce8a74e36b78fa2969a39b41"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1588702fb3759f36b58a06d9b1e1f2ffc215951f181341716ae40de711fe4b46"
   end
 
   depends_on "python@3.10"
