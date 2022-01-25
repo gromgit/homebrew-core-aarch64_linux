@@ -14,12 +14,12 @@ class UtilLinux < Formula
   ]
 
   bottle do
-    sha256 arm64_monterey: "d70957ab44697dfc2e2c734b9c3f33ae71d656a04c0489d4c56e8f4f34b3f675"
-    sha256 arm64_big_sur:  "e190bf958aa8232a6a344f75c726457eaf7885144dd650e071b80d480dcdb2d2"
-    sha256 monterey:       "053af101a65713dcd7f7419ac06283bd605e4a2464048f8cc60844d5169a92d7"
-    sha256 big_sur:        "78816a7ee9d0a448fb83803f95a9e495f2c99d29a697a3419043666fa6d27bce"
-    sha256 catalina:       "82f2fb926262ca95243325d61e53bcd06d6751f9606f5737cb6d7c45d6db77a5"
-    sha256 x86_64_linux:   "6428a98784f5d7b36144907dd4e4a5b767be347fa43533f2af196846e3c08cd3"
+    sha256 arm64_monterey: "c65f7e07d7c52e36fef9ce4fc4d4ab3700b6ee3cfba773d24dac026d7e5956db"
+    sha256 arm64_big_sur:  "b380f7d6b40d837e9fe52fd17bd9ed608d08a8958bdac65a8cbc222d2fc0d6b9"
+    sha256 monterey:       "ce6bf2ce709546ef405c821b1d7752909cf84c98b1d5ac53a9c90d3a60c57c26"
+    sha256 big_sur:        "4352c7ee3db16ce496d352ced16a2b72c3373b5a6e635d2152e21d407802d339"
+    sha256 catalina:       "a7f946fe834ce9bebac83d2c2f16d47e4a324c1dfa487721c49da502be6a4e4a"
+    sha256 x86_64_linux:   "1a1102953f16c2a148a3a73bfa28f922c647cf855b1e3e00d273171a5920cd84"
   end
 
   keg_only :shadowed_by_macos, "macOS provides the uuid.h header"
