@@ -13,10 +13,13 @@ class Rpm < Formula
   end
 
   bottle do
-    sha256 big_sur:      "6f857111ed59bf5efb8f97ad26c7ed52fb8e70a92d2978dc7d2f6173d14675cd"
-    sha256 catalina:     "29846a4e13dd2683318362442fe7a84c2b7cd71813291be24cc356bc657f8a8d"
-    sha256 mojave:       "aeab2644677216b3d631a4a1abb3d75aada85152f7f85a550ab43943b934f994"
-    sha256 x86_64_linux: "1147c07948c53779fdf751623b349d6da6d6b4753103ce2c898da2cc68a0a041"
+    sha256 arm64_monterey: "dec1600907c7c9f4f60e133cc9f75ba72f57da692a5f3ca47c5d6429c52cfc5e"
+    sha256 arm64_big_sur:  "c4b10772346b10fce44ecb909a27701d8bd209b834755fd38abc325bcad4c75e"
+    sha256 monterey:       "0b379a488c105af62efe9e14e8508754d47bdc73334b0def3999278eee0321c9"
+    sha256 big_sur:        "6f857111ed59bf5efb8f97ad26c7ed52fb8e70a92d2978dc7d2f6173d14675cd"
+    sha256 catalina:       "29846a4e13dd2683318362442fe7a84c2b7cd71813291be24cc356bc657f8a8d"
+    sha256 mojave:         "aeab2644677216b3d631a4a1abb3d75aada85152f7f85a550ab43943b934f994"
+    sha256 x86_64_linux:   "1147c07948c53779fdf751623b349d6da6d6b4753103ce2c898da2cc68a0a041"
   end
 
   # We need autotools for the Lua patch below. Remove when the patch is no longer needed.
