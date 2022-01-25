@@ -6,10 +6,10 @@ class KotlinLanguageServer < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "95b7470967f113e4dcbeb374993828f401dcaca737ca3805b4dee6e231e619ed"
-    sha256 cellar: :any_skip_relocation, big_sur:       "8e2d8177c31a122d90111125fb7c97b5f4a4de8caad6176b4eaaf5eb244ee57a"
-    sha256 cellar: :any_skip_relocation, catalina:      "dca2f2d46dfce5ffea6ed3b4bb33e182833035deaeebb7856b98aec0cbe86aaa"
-    sha256 cellar: :any_skip_relocation, mojave:        "9551dce5fc05f035a58f2159d5ac3ad0553497de141b105e7233641f2a133fb8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "48f56132fceac7ac1513c336ea0a107deac456517b1c64c326d72a6334058b29"
+    sha256 cellar: :any_skip_relocation, big_sur:       "baf223002af8e84ff3b4b95e021282bcaf819a11bca14c80adc208a905b0054a"
+    sha256 cellar: :any_skip_relocation, catalina:      "abe6ab5b194f23f2f4bc79b9f010e60e207bc603c11b18556b19b14a5a429fb3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f1ba039a5dd1d1cbee827e439dcdd102ecd3a665937faac51df192715282de48"
   end
 
   depends_on "gradle" => :build
