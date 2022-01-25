@@ -11,7 +11,7 @@ class WildflyAs < Formula
   end
 
   bottle do
-    sha256 cellar: :any, all: "ec3636a690b0e62f4d12875a33efd6b2215b1cfa05365cf8fef4f854ca8de391"
+    sha256 cellar: :any, all: "b04e4e4beb6c592f3aeb1a0478a14b829a6f7d7bbc9a00c4c9fa70b6fb8e6cba"
   end
 
   # Installs a pre-built x86_64-only `libwfssl`
