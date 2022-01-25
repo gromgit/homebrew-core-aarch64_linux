@@ -12,12 +12,12 @@ class Git < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "c38f49b57fb3dd4f50c193dc0a483aab96fb9a8fdaa2d4e378e647403846b217"
-    sha256 arm64_big_sur:  "1df0c4ca1bc10f7af124ce7fc9dcd27c7f5635bc72fea74f7a53aa4907a1c4a8"
-    sha256 monterey:       "1f7578af2644763726a248a0fab2845beab697c7b5b7a8d65716a1bccc450cd6"
-    sha256 big_sur:        "e3671284f82922871a0452d7d9f829a01757b96fc8ceda30dd9a1fd4d20aa858"
-    sha256 catalina:       "c2fea8e1761e7e35f62bcdb35c945b2569dffc959b60e7cede05720bfbaf23dd"
-    sha256 x86_64_linux:   "9ac8705219af33c164fc625109fb1ee135d9936c7f469ca057a43ff05866b675"
+    sha256 arm64_monterey: "3afc82660c22e7499a301933383d7e0a02fbfce16317768d53b7751b58bf783a"
+    sha256 arm64_big_sur:  "6f6af573858a85d65dcf8b3a3123b31ba55a8c0c85e1265e753099bb84bc6a59"
+    sha256 monterey:       "b3dc14bac794148ce0336be8d547da2326919548887f0a8e5fdb87bb326317c9"
+    sha256 big_sur:        "b9fefa515648f294778763ee44465a9fd0a7867d5cc8a749fff4030a0ec3f220"
+    sha256 catalina:       "50fc3361a2f45daaf51b6a57d7d76785d3ed4a40ef28f49e52456f0ba221421d"
+    sha256 x86_64_linux:   "93ebe0b961120a5560e4520492825ea6ac633ffc9aa5833e6fef1ab2dc1b7e8a"
   end
 
   depends_on "gettext"
