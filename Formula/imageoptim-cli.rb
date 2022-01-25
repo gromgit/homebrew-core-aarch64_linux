@@ -3,8 +3,8 @@ require "language/node"
 class ImageoptimCli < Formula
   desc "CLI for ImageOptim, ImageAlpha and JPEGmini"
   homepage "https://jamiemason.github.io/ImageOptim-CLI/"
-  url "https://github.com/JamieMason/ImageOptim-CLI/archive/3.0.2.tar.gz"
-  sha256 "957261d38fa85e0ec377efb2eceae695e3d87b621bae64853f9f5163efd3594b"
+  url "https://github.com/JamieMason/ImageOptim-CLI/archive/3.0.7.tar.gz"
+  sha256 "ed1a36ccb0e960152eda6b3d4c422ee355c8cf8271f1f8e71141a286c4d647e5"
   license "MIT"
 
   livecheck do
@@ -20,10 +20,13 @@ class ImageoptimCli < Formula
     sha256 cellar: :any_skip_relocation, high_sierra: "6f1aa4b2e4de3e7a1502f1f8747283589697e5f0f0506f4d24acd53381311706"
   end
 
-  depends_on "node@10" => :build
+  depends_on "node" => :build
   depends_on "yarn" => :build
+  depends_on arch: :x86_64 # Installs pre-built x86-64 binaries
+  depends_on :macos
 
   def install
+    Language::Node.setup_npm_environment
     system "yarn"
     system "npm", "run", "build"
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
