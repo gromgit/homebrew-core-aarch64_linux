@@ -6,11 +6,11 @@ class Baresip < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 monterey:    "b0d792db1c9ef6772cfccf172288fdc306b404bded7659f8d8caaee5d31a4e9c"
-    sha256 big_sur:     "26b195eb72f39e12b796100935469105d0a07968cf38d9dc1febec3322e40939"
-    sha256 catalina:    "dd71d2ba58f82dd58b4da6c350b2d52ff4e04fe64679a446778615550dfb95b8"
-    sha256 mojave:      "ec2fb4cba298c281b40a0929c227b563508ecaf5564e9381872c14469fb73ef9"
-    sha256 high_sierra: "b99e262d153eb3414c2a6fe813be98e78f71da205d66ede0ec799d1e07f0341a"
+    sha256 arm64_monterey: "a1623929ecb9f411bd1ab4fa607aaa74ec48db088ca9075ce5150319af22faad"
+    sha256 arm64_big_sur:  "77f4fe8630f9f20ee699f35c7b382aeed1f9d0aca15d022c8c44953ad1139559"
+    sha256 monterey:       "44b6ef568ced4088484499a8f627a283af2bc6ce32aaa1e0e9e4a43c4f0c69fe"
+    sha256 big_sur:        "01fb027d2ef4ebb5ded6487930879b83f30140439b705813fefc5b8799b3ab5d"
+    sha256 catalina:       "968f11a8d0fd310d3c3998e51c1d20588faa49354d9d5bb4193bc7ac91c0ea98"
   end
 
   depends_on "libre"
