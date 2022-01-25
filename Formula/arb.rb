@@ -7,12 +7,12 @@ class Arb < Formula
   head "https://github.com/fredrik-johansson/arb.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "84c04a9ef6babf020a9b206952a190a3615ec6f4308511ca6e3666d918daea6c"
-    sha256 cellar: :any,                 arm64_big_sur:  "114fc3d09584a41b1a9b575614336cf967256538af25a8d8f606bdc667e76dee"
-    sha256 cellar: :any,                 monterey:       "30f935efac95853a4811364722ea7c937061d41262d5e926c6138ac26157265f"
-    sha256 cellar: :any,                 big_sur:        "1214b6c2a51060fefc333407e5cfe3cbd1389bbed5a5e858836b9fa62b508346"
-    sha256 cellar: :any,                 catalina:       "02d6f6518b610cf5edd8331efb75287e51c89a09a59b8e3d22e1554960d8cd34"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d91ac6193c1afb9b98325a4501572c3a493a2a168fd9461105c84e859ee051b4"
+    sha256 cellar: :any,                 arm64_monterey: "24821ce170b1c2429c7ace6af99b37d30c5302d0035f2692bf287d623b0333a0"
+    sha256 cellar: :any,                 arm64_big_sur:  "8592a5675e4b51be126cfa3c9611547b5636cc8307fdeceb6094b980be2f3d75"
+    sha256 cellar: :any,                 monterey:       "7187b623b29413ff46c89b8175c74fab6e3ab374a2006104bf12b409b1d7888a"
+    sha256 cellar: :any,                 big_sur:        "ec5f27ae0166f744754a5fe05dfb8f8fe563cbfcba74de5cb4b8e7e67aa23967"
+    sha256 cellar: :any,                 catalina:       "50674ecfe729634dd02adba2d45a3063879a9557c1de7fc64ea84014d2244a6d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cbbb2e2aa4bf7a44732eb8d903b7c976275a341fa542621536bc60e2c4fe5cef"
   end
 
   depends_on "cmake" => :build
