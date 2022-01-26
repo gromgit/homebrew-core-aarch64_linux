@@ -1,8 +1,8 @@
 class Biber < Formula
   desc "Backend processor for BibLaTeX"
   homepage "https://sourceforge.net/projects/biblatex-biber/"
-  url "https://github.com/plk/biber/archive/refs/tags/v2.16.tar.gz"
-  sha256 "57111ebc6d0d1933e55d3fe1a92f8ef57c602388ae83598a8073c8a77fd811e2"
+  url "https://github.com/plk/biber/archive/refs/tags/v2.17.tar.gz"
+  sha256 "1ee7efdd8343e982046f2301c1b0dcf09e1f9a997ac86ed1018dcb41d04c9e88"
   license "Artistic-2.0"
 
   bottle do
@@ -509,9 +509,9 @@ class Biber < Formula
     url "https://cpan.metacpan.org/authors/id/V/VP/VPIT/autovivification-0.18.tar.gz"
     sha256 "2d99975685242980d0a9904f639144c059d6ece15899efde4acb742d3253f105"
   end
-  resource "test.bcf" do
-    url "https://downloads.sourceforge.net/project/biblatex-biber/biblatex-biber/testfiles/test.bcf"
-    sha256 "245abe25c586d2ad87782bc113fdf16510e42199bb21f2b143eb64cbe3e54093"
+  resource "test-dev.bcf" do
+    url "https://downloads.sourceforge.net/project/biblatex-biber/biblatex-biber/testfiles/test-dev.bcf"
+    sha256 "7239ac502a8fc6d90fcaf9e9630d939a21e28456312ee7e041f6627ebb8fed24"
   end
   resource "test.bib" do
     url "https://downloads.sourceforge.net/project/biblatex-biber/biblatex-biber/testfiles/test.bib"
@@ -524,7 +524,7 @@ class Biber < Formula
     ENV["PERL_MM_USE_DEFAULT"] = "1"
     ENV["OPENSSL_PREFIX"] = Formula["openssl@1.1"].opt_prefix
 
-    testresources = %w[test.bcf test.bib]
+    testresources = %w[test-dev.bcf test.bib]
 
     resources.each do |r|
       next if testresources.include?(r.name)
@@ -561,7 +561,7 @@ class Biber < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/biber --version")
 
-    resource("test.bcf").stage testpath
+    resource("test-dev.bcf").stage { testpath.install Dir["*.bcf"].first => "test.bcf" }
     resource("test.bib").stage testpath
     assert_match "Output to test.bbl", shell_output("#{bin}/biber --validate-control --convert-control test")
     assert_predicate testpath/"test.bcf.html", :exist?
