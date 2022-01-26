@@ -6,12 +6,12 @@ class Snapraid < Formula
   license "GPL-3.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b7d20ff8503539841556e21e7d0057cdb1809afe6e567cacd06ae3836dd926d0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b41c49eda71535ffc7564251e70a820f4b0513a74a23c55b9d8aa1523e98068f"
-    sha256 cellar: :any_skip_relocation, monterey:       "5efccbd9f6296b4d1837b3dac308377c05231d7006584dde4e2463429c6bbb59"
-    sha256 cellar: :any_skip_relocation, big_sur:        "edb9c4dda5b01601fb93e40135f0b1edb664312724296dbc8352a804d4cd3fbf"
-    sha256 cellar: :any_skip_relocation, catalina:       "f81957dda823e5dc23653d0a2e97a482bd29b1f7adf216a8f519666891c0af5e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "11d0d850842991e846c4bc0db7de38f664040ad5eef4bf76c3b7fdeac9709c79"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "78708e3a4c2f93c56e0af8441aa35282d20b258f7dfc2fd5ba6a3f78ff12cf24"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "16d757885ce58f495b0ab7c210c32385a998d5731e42ed32267df2365c564a88"
+    sha256 cellar: :any_skip_relocation, monterey:       "912787b43bdf380ca5689fe5df0e751cd22721c8e09bbad5bf036037fdd896e8"
+    sha256 cellar: :any_skip_relocation, big_sur:        "fa18547de5904d3f9a109e340b98ce6290e3ebbb9324178697838205e7f340e4"
+    sha256 cellar: :any_skip_relocation, catalina:       "282d78894d7e897e7d9a1d1c348ff3e6113db1a75e4cba21f05d9764d379cc34"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ad355309464e57e016e38ac9d93eeff4d18582c32ab90f6e097ec93dab8f162c"
   end
 
   head do
