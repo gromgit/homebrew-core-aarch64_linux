@@ -12,9 +12,10 @@ class Qsoas < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:  "9126a690ef49c7c0a39373798497ee459a425aa934db742149bd6795bb66e462"
-    sha256 cellar: :any, catalina: "a31e3325767d38980ddac83ad1110b6ddcd6055c27c22f09b388eb32427cff78"
-    sha256 cellar: :any, mojave:   "fc0e4157d6dd55ba6563e56c11af2da9106c88daadd2e94e809f4300fec5ad66"
+    sha256 cellar: :any, arm64_monterey: "0f8a908cfc1030e84a596c75df9503b304d339333ab54e36f89b3f5e5df22c32"
+    sha256 cellar: :any, arm64_big_sur:  "8adad5cbf6874094d409190376d71b62773e3226e916ac97e334abe6f6befb48"
+    sha256 cellar: :any, big_sur:        "232ac1a2271eb177609d27d0336656bceb6c6263ba42cfd09edb8412037f977e"
+    sha256 cellar: :any, catalina:       "1a4be65d2e75452ef988155b672fcfebf68c60fba3bc766a6c1ddc7ca51c68d5"
   end
 
   depends_on "bison" => :build
