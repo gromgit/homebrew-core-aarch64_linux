@@ -7,12 +7,12 @@ class SqliteUtils < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ab3059e8f1184537593882a3d9e1aeb19c90c5b2d4d61c369744d4530df4354f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8c63c60c5a2f4ff53e54ebaff7aef49fb7c47f96593785388d938bf77e11b6ae"
-    sha256 cellar: :any_skip_relocation, monterey:       "83b5ba1a18ab1e8f8242f5a88a979470c10755c9c808318c707f234c9472e582"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4466642f6a788055b32b5be046cf912cc406205df6628cf57197c87e6f3f89bd"
-    sha256 cellar: :any_skip_relocation, catalina:       "2e86f1ee6abc0b89e3ebbfc2024d159172f94a0d166df4c9b21ec94edf3c437e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7a3a0ab59707c654a5d604ba90d0b835fd5342fe533deef8f9c70899ecf862e0"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9987eb8de61d4e5686fd2ce0d4e632079d35ee455cef3bc3b808e413f7658734"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fe53c25173b95dbd355b574b11ae5cebca976fbfddabf83aba32cde0c928fa77"
+    sha256 cellar: :any_skip_relocation, monterey:       "8633a0f9df6d4be308296389784e110e1b14469c45cd231bc6ff4e8512eda336"
+    sha256 cellar: :any_skip_relocation, big_sur:        "19ec840f5a729ea0e66b1ce039893d38257cbafc6d92ef50b2ab349413b132de"
+    sha256 cellar: :any_skip_relocation, catalina:       "ac335399c681fb7bba3c2b00bcf4f33f9b3898b1a1090c2ef34f5ceedd2373cb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "518b901f89586ce3662a2278ebd51c867b94a076367a5d93e347f4d870d3541b"
   end
 
   depends_on "python-tabulate"
