@@ -2,8 +2,8 @@ class CartridgeCli < Formula
   desc "Tarantool Cartridge command-line utility"
   homepage "https://tarantool.org/"
   url "https://github.com/tarantool/cartridge-cli.git",
-      tag:      "2.10.0",
-      revision: "2b87a1b1d6159d8fe8ed52bca58a00365e29cbde"
+      tag:      "2.11.0",
+      revision: "676008e78f3511422f784694407a498601f56248"
   license "BSD-2-Clause"
 
   bottle do
@@ -19,13 +19,6 @@ class CartridgeCli < Formula
 
   depends_on "go" => :build
   depends_on "mage" => :build
-
-  # Support go 1.17, remove when upstream patch is merged/released
-  # https://github.com/tarantool/cartridge-cli/pull/618
-  patch do
-    url "https://github.com/tarantool/cartridge-cli/commit/84193babc1395208a205a0c06a4a8a9a73ab6512.patch?full_index=1"
-    sha256 "5b50feeeb764018cd226595d733d6467b922a9974fc520c52c1ca692495f99c3"
-  end
 
   def install
     system "mage", "build"
