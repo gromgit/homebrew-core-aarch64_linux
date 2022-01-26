@@ -12,12 +12,12 @@ class Rubberband < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "c58fc2b2d0bae9614691265796e2ab6c3948d89b07a33fc655447c93a2f237ed"
-    sha256 cellar: :any, arm64_big_sur:  "0bc3ea2fa1380e28d60bc3f594a0b247e35e811cc2db989b6a2d1b31f7792b3d"
-    sha256 cellar: :any, monterey:       "ba0cb5450322e0ddb291105fd41362e3566c8428afccd480ab0f15b63b5bb0c0"
-    sha256 cellar: :any, big_sur:        "79e5052df8efd17288a9f026930a304f9ffe32de60e28af443311deea5c05e54"
-    sha256 cellar: :any, catalina:       "51f10e60f0ef221952e30667428236d811b51aacd663c373fb0af4dece854c89"
-    sha256               x86_64_linux:   "3a3b64b35a231daf0faa45d0cfe37a9b1ef092013441191bb77eb9f59c05fac6"
+    sha256 cellar: :any, arm64_monterey: "a70400b4694acfba6d59576c6854b083b1e1f7c80f9e849eb0266245ad1ff4cf"
+    sha256 cellar: :any, arm64_big_sur:  "91d25871f4588a70dc145fbbf92fa8fdb874e43d350001a66f235d537660ec4a"
+    sha256 cellar: :any, monterey:       "7b8eaf28f8ce6179e77651b04eba3e578d763e1ba1740381d5032f9f112ebee6"
+    sha256 cellar: :any, big_sur:        "ed69e5ffec5c5f5ebbe1557f020b57f188bb320d0c0ca1595f4eaead0f7cbf43"
+    sha256 cellar: :any, catalina:       "4f1fd0c9f7fd9870c502b8389f660819197a8b036570d70b16b06db0affd4443"
+    sha256               x86_64_linux:   "ab4a2484f146fb67825f2b37ce90c27829d754f854886dc7cf210425c5db9a5e"
   end
 
   depends_on "meson" => :build
