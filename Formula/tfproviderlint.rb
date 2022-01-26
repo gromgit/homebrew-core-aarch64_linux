@@ -7,12 +7,12 @@ class Tfproviderlint < Formula
   head "https://github.com/bflad/tfproviderlint.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4f3313965207d5d734a6bae3cf26ddfa13eacc242de91ba71d59c2df690f580f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4f3313965207d5d734a6bae3cf26ddfa13eacc242de91ba71d59c2df690f580f"
-    sha256 cellar: :any_skip_relocation, monterey:       "dcfad98559f94d55cb3f7113336cbdd2891b96f66ebedab2ba75704116e6737f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "dcfad98559f94d55cb3f7113336cbdd2891b96f66ebedab2ba75704116e6737f"
-    sha256 cellar: :any_skip_relocation, catalina:       "dcfad98559f94d55cb3f7113336cbdd2891b96f66ebedab2ba75704116e6737f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0e5f0cb5c419b1af23d92730e866b56a7693a7871d2e591bad7826df914d87a8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3d3e1b7665e210136042b575fffc123312dc8070d56e3deff855a443c692289a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3d3e1b7665e210136042b575fffc123312dc8070d56e3deff855a443c692289a"
+    sha256 cellar: :any_skip_relocation, monterey:       "bd2b8f1df1e855f45d14516c9bdd1076ca85dc2c668472f50c16a9ef982ac59f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bd2b8f1df1e855f45d14516c9bdd1076ca85dc2c668472f50c16a9ef982ac59f"
+    sha256 cellar: :any_skip_relocation, catalina:       "bd2b8f1df1e855f45d14516c9bdd1076ca85dc2c668472f50c16a9ef982ac59f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b49aaecdd8dd36f4283fb2389cc5fb3b27764c3643d99b59fa955e7d233f6486"
   end
 
   depends_on "go" => [:build, :test]
