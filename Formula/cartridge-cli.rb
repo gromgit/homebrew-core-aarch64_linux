@@ -7,14 +7,12 @@ class CartridgeCli < Formula
   license "BSD-2-Clause"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "56bd1168aa1ee62c674d32226f15b0b92f7e90bc131420f70f8f5dd405f45466"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4377b98d0ad6eb4505851335a1f0f28efaee3c08038e4e6b01e2b45a30746236"
-    sha256 cellar: :any_skip_relocation, monterey:       "0df91da76c60a8e3b170411516c4d3fe051684dcf685454aa7054ea8814f079d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3a7029c4c492dcb0dc25880ab262e8990494ac59839906459974d39f3c18a684"
-    sha256 cellar: :any_skip_relocation, catalina:       "f6a520934a4deb9ced42ce061c5d5c3b8742afb25835fb01a6db0be84a3ce315"
-    sha256 cellar: :any_skip_relocation, mojave:         "08fdfac9a58c68546ffc0c6333997bb5de778d9ac19406ec679173e197dbb4ca"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "50793e3b6cc34d7e8e1e9f3f815db7e26a8caa7b709f2fb939b6c683b9077506"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "adea02d0bb82c6edc65e55691de32065999ecf44869d9cd4cd22d6bb814ae9c0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9566c82761596c0efea8b04685247671f48f4e0fad52730731dbdc5877f39e73"
+    sha256 cellar: :any_skip_relocation, monterey:       "5261e98e5b065378a6a913efe99449ebba2949bf439c810cd20a99efc27ef706"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7ac5137cb5498f7bc492b2fdf9aedf77b83ab1099aef9e848771f9fd7979db5d"
+    sha256 cellar: :any_skip_relocation, catalina:       "ca6198294842f852154f96578c3b4895b7158aaf65b3280c5442a51709346660"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aac526e592b74c95030cb027997769a4c1760d416e0deb1691fd1f4e7e62a584"
   end
 
   depends_on "go" => :build
