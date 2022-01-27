@@ -13,12 +13,12 @@ class Cwb3 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "58a4e7511ce2b101990a19f53e9c23056ad6bbd1548ea58b35b0d44c18a263a5"
-    sha256 cellar: :any,                 arm64_big_sur:  "6bf55b83b4a38bb31b6725401ee566b483e2d4f9f9e599d7f93fa002b98193a4"
-    sha256 cellar: :any,                 monterey:       "bcbb0414f2a9a9a4289aee4ab440c8d583de77b69453706943f05d60ac4ba152"
-    sha256 cellar: :any,                 big_sur:        "52d7e82f3d7729b12f4eddd19805bdb9444a6613105ef861610b19240b5cd068"
-    sha256 cellar: :any,                 catalina:       "27f369e784f165896c5004724b1ca9a5bc1be64b3d76fb9a0b007e25eb6557a7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "805ab2c59d1fa16ec0de990e9b6283c04ebb4d5e8a2ba54648eb719fc0d39204"
+    sha256 cellar: :any,                 arm64_monterey: "05abc6dbd04ab6b4160af6b7226c6211abb801c7b305865406729382006fbc3a"
+    sha256 cellar: :any,                 arm64_big_sur:  "5127a22dc8f0b0ae8d9562fbbcf12e03b2852a42135962c6871a92cb682b275d"
+    sha256 cellar: :any,                 monterey:       "a23a94b796e5de72d8056b8d2f06e9ee91629f4f5dbc939869af48dadbc68529"
+    sha256 cellar: :any,                 big_sur:        "c72922b99c96327e9bc9aa88ce951f0b05533c4b6d198e30327ed5835c54dad5"
+    sha256 cellar: :any,                 catalina:       "27d021d93e4ca654b0ba222f9cc890e423408ca33156fc3399dd64bcab821cde"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "52194e2ec9a1b38aa81056db1ca0be95da6f9652c4d3de77f87c8b019cbee626"
   end
 
   depends_on "pkg-config" => :build
