@@ -7,12 +7,12 @@ class Giza < Formula
   head "https://github.com/danieljprice/giza.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "6e6c5ef3d58c6fdc7b19d900a6c94ae9f7e961f2e92af33c6b1a082d0f9d18ff"
-    sha256 cellar: :any, arm64_big_sur:  "f90bb6e21ea8fc3919706b4584995623f763b11f1961ea474e10f31b0c3fba72"
-    sha256 cellar: :any, monterey:       "215259692a128badd9e2f5ccecc743bd8f0ae1c727196f35a891cac1837023e1"
-    sha256 cellar: :any, big_sur:        "8ef54fe8593cb6dbae489f634dbe6fddb7fbfa495af95c3cea6f8bc52ac4ae5c"
-    sha256 cellar: :any, catalina:       "81bd1caa8dbc15f4f9865cd9de5956d2371c500febf10289b2fad40a60d333de"
-    sha256 cellar: :any, mojave:         "05008343af562f24851230c306ce451041465726e3d45f20da94fcbd61424e8b"
+    sha256 cellar: :any,                 arm64_monterey: "7edc9b2eab4a57f5c0dce35bd4959c160652cd5bd644ac343017f6140933f0e3"
+    sha256 cellar: :any,                 arm64_big_sur:  "b11820712e2b6a7bf7e78a382c5f3f1384b94d0938b09d871261d385d2c95667"
+    sha256 cellar: :any,                 monterey:       "10f658a41ed0ea24c45c9aeaa8886b43a7350da6a27d02a686e9c8bc62564f66"
+    sha256 cellar: :any,                 big_sur:        "b4c5f4ca03b8521052bfd7a3b9551aec635341e5a1d72e2f02baaeefa5218eed"
+    sha256 cellar: :any,                 catalina:       "46b4572baadcc66dee8dd99ebc8d1159f9898132dc9b8ce71879dc7ca3d62a6e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9c3d05870b9d06ea5f8ea1bbdeb0434ac6daf6b3742b7422bbb440ce364c1c30"
   end
 
   depends_on "pkg-config" => :build
