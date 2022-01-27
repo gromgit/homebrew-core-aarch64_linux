@@ -6,13 +6,12 @@ class Re2c < Formula
   license :public_domain
 
   bottle do
-    sha256 arm64_monterey: "4a95c3cdce967731404c853fe7c56f2e37c9602710af795987780acf5e30c383"
-    sha256 arm64_big_sur:  "9f32566ee362b6ebf98674a7bc9d642c03a120c105b32b28efd16ec1fdfe1dbc"
-    sha256 monterey:       "5ae23f0895217f59237686bdbfc4c2e4c40d4d0ac1e6e45f5032e874c9f9f3ba"
-    sha256 big_sur:        "622c04bf38ad6f7ff7f9ca272cf9dcbde186f0b16e3e51eed1ffc108db56adb7"
-    sha256 catalina:       "8dd19c7d8532026141d42d6893faf18e86b97053fd113f9f30a1271662108e25"
-    sha256 mojave:         "7092db76fdd568e0c162ffe2066e8318ec4102aab85b361098908ca49f535a0e"
-    sha256 x86_64_linux:   "f8ae38af6e0ef9a4131174fc66750498c1a3cca66e896ef2392632ef16a0e9a4"
+    sha256 arm64_monterey: "ca5d1ca897627eecd7b5b6870eef54f2d86081131d25b14e05e3425f521df860"
+    sha256 arm64_big_sur:  "f776b0b800fa7915f5fe4868cb33d4eab2adcbd42c2840d4c0ba3f6e1a006e86"
+    sha256 monterey:       "51916b41839d4154a21b1f3895c21c87486eb119316c7f302f1384251dbc7d77"
+    sha256 big_sur:        "d64db8c358174100db90153d2e9a2554d3aaabd5a9107e84bf7a9538932900b1"
+    sha256 catalina:       "6b25dc91a91de111fe0b033770d8ddc095cf5fc6c81a4c67ad4e43cf57fe8758"
+    sha256 x86_64_linux:   "096ce665489902beba1c057fb899494c21915e28b5309069123cdd7ee426caa5"
   end
 
   def install
