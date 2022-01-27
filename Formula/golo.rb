@@ -12,7 +12,7 @@ class Golo < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "56c7edecb768b85203fceed00211d56196d49f18d2af60f7f5cb44d138eba3f2"
+    sha256 cellar: :any_skip_relocation, all: "069c041fccb8a95fd9ea3c7a9c2105b384433a0e724d5b48812aa37d0d5c9f2d"
   end
 
   depends_on "openjdk@11"
