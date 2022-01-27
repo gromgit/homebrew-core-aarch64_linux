@@ -15,13 +15,12 @@ class Copilot < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "70e5e3bf4cf0a7442203d9bfe4e2bfc20d6c3a1c531b0a918ca297d438a8d153"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4560e82379e7974a9adef2b4d5f099832173fdb1f3723fdfef503f8a5b3066ac"
-    sha256 cellar: :any_skip_relocation, monterey:       "cc2fe400f8753cb686e3ce44e36d295d5c71188f8c43a9fa9ea92fdb1737e824"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7cd6349a40f556d22160773d80e1a521b8be70a72f728fcbaaff9d09bd4e25b7"
-    sha256 cellar: :any_skip_relocation, catalina:       "c8dbb1307021b03b9f72cdc75109a162633d5e58b4e6fc8491968b5348ad5fe0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9167fb1843d6331555af256f28d10413f393b153bf9c671f4ed9bbde265e451b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a2014556ef5173179df9f4cce8636c932d678889c1a2b44a6585ee7a0f7a1b1f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "160d17fcafc7ecbdb7797389082650b42a0c2ee5d5b14e31441c43ba69ad4d70"
+    sha256 cellar: :any_skip_relocation, monterey:       "270f40126c0b617ee8bfb50972d0f6156985c67e7cebb63fbcd8efb1f55cfc68"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5a3c33c25b70c7692ce9337e79eac0367743b6bf93a9754fc8ce32fa842a6124"
+    sha256 cellar: :any_skip_relocation, catalina:       "64e0932dc3c98cf02c8e6307cc8247349f954fbde4694e7525b9943a8a799674"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "60b9fe772f52059e4496fc2ee65b906674fd3e82d4d318be3bf70765318cecc5"
   end
 
   depends_on "go" => :build
