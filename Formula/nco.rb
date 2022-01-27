@@ -7,11 +7,11 @@ class Nco < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "bc221c7f66d7f1ae0605669e58bcf8b6bf7dc7b47c99ccb647d69de8fbb5eb98"
-    sha256 cellar: :any, arm64_big_sur:  "571721d0a06093a7d17710d18a782f35ddf5acd3f4a084f0db0b8d14e4751d3f"
-    sha256 cellar: :any, monterey:       "e6f67086398149c73c4d8a07d50b0a4cb822aabb82c6156391c96abd49a9841f"
-    sha256 cellar: :any, big_sur:        "45ac766fd0da5b4300b9205a3eed98d85540640785a4475477fab0dd3d23736d"
-    sha256 cellar: :any, catalina:       "6dcdc818e476d97108cc26bdf8181b9f43c1953d6067e7d6fc3d6243a4921e42"
+    sha256 cellar: :any, arm64_monterey: "1fbc9a0b68655d2fc332e71066ca282ca31a256b7cd3be834efcf8868596c26e"
+    sha256 cellar: :any, arm64_big_sur:  "14e2e2b9e439a2113464807f2834c9483fce6bf114f399a8e154686ffd3f5f00"
+    sha256 cellar: :any, monterey:       "3e38e7b44395e70b0f8460cdc1a1f45c7a471b1d1e2f2318abc1d0c5827ad56e"
+    sha256 cellar: :any, big_sur:        "9d4cc4efdf377e413d72f22fbf4d251062c9fb6201acdea9079e72c3e277a75d"
+    sha256 cellar: :any, catalina:       "6fb6d272f8eb39c58dba4cecf8816a3a9c30faff1d135cf202902748a3a9608a"
   end
 
   head do
