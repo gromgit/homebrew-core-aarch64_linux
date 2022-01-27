@@ -14,18 +14,12 @@ class Pmccabe < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c6c88c18e4ab09022443c5c453c16e4651544bd54b8ce834a56c4ba6ce6acd6b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4005a28868925656ae168641a19420ae289c20fc1abc18c0fcc2a1e8c1da852a"
-    sha256 cellar: :any_skip_relocation, monterey:       "8dac04a30e041c7f1fc5d34a0e438611867cadfa5fdfd7d343703fe1e212dd52"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ad983fc804edcd046eb600ecaf10901ce1450490c4da869989aa973dae0415d5"
-    sha256 cellar: :any_skip_relocation, catalina:       "c9509bbb9d642f0245364a542f5b89dded2101968358d352e892564371f1ffd4"
-    sha256 cellar: :any_skip_relocation, mojave:         "660ae3ce966863082ba287ba9e52c0772c41e1d58571e02c3d898b71ac4682a5"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "054dd89d0934715b169875d8d0bcce39db919550752eab9cadc083eab0e148cf"
-    sha256 cellar: :any_skip_relocation, sierra:         "220285c0f0ae07835785574504d1d7730fb2abc06ddacfb76e1fe73f999d2cc1"
-    sha256 cellar: :any_skip_relocation, el_capitan:     "d6189f6ae7341da933653c687adec0bb8952b14ed8a2883b19aec4db90b65eea"
-    sha256 cellar: :any_skip_relocation, yosemite:       "cb369d2f04ce0fccdb22b2640f1f6e37fc056b6edda79767474040cb52f76936"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9030ba3aa954a0a0ed5a93b2b660d49651a50fce1091009aa497dafd5324486b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8c6016e6ab56ccce1d1582831e05a5f4d66650b7668a83fe8a73047badfc8dd3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e0510e85fcc8a8420a603b7d49ceb3e13e564f232092bd9c585e1917fb5433a9"
+    sha256 cellar: :any_skip_relocation, monterey:       "c2c173eb072bf9df7e1a17ab8293ca29739df8fc4432aa6d3441b600d693159e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "dde2bd06ac574cfa68f4f4f095fa09b3e9ed6a2656748d333aaa19fb09d81820"
+    sha256 cellar: :any_skip_relocation, catalina:       "61595681c5b5a9a8b22b83728e2ee89d5280b5e970c3f6e93aee438fe763f93f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "90f8e8df8eab3561f9a8a91438cb4903395dda9d18d3f61daece3cd5f58445da"
   end
 
   def install
