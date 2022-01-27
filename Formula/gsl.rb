@@ -7,13 +7,12 @@ class Gsl < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "34297f3a8791c10ba50a04636df69349483c39fe408a8b7526c61788b725fd83"
-    sha256 cellar: :any,                 arm64_big_sur:  "440a395f89375c90f383f84681dd5472463bee84319996c58fe58af0d75f5909"
-    sha256 cellar: :any,                 monterey:       "c433623d33a5772f653e848f1bddf69f7d1fb29ed620d8b14139d9e2d58b9043"
-    sha256 cellar: :any,                 big_sur:        "ea2a8b743f1a4825c5f8991a0f7bc16e805b846c0c5c8f35995ca3a730d7ad3a"
-    sha256 cellar: :any,                 catalina:       "ed733561136f1dd07e3ce164a3c0e0d7857c98158349ca6481bee4bd71f422b7"
-    sha256 cellar: :any,                 mojave:         "6bc76e54e0a4db8d8993605bf7662f1076e46ade1ee6c59424a44248b0c72a87"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0b83d664557598a1bbf7bfdde1fd93ea17a5d199af45fef4a1cfeb0e3102a594"
+    sha256 cellar: :any,                 arm64_monterey: "207ba177628696ce2179fe94125ecd637794396a442a7550c92f9a8a202c03bf"
+    sha256 cellar: :any,                 arm64_big_sur:  "1184a75460c96dc80a9fa5299f3f0931bbff729b556607e2b7492608dd7e44d7"
+    sha256 cellar: :any,                 monterey:       "3125ff756739ec6eea0ddac3c3b01e879f525eb3b7de88586d6438cd954e28a8"
+    sha256 cellar: :any,                 big_sur:        "3cfd6c05d383ad930471e6d92942de62982d5e4149d5508bbbf5ed513561c288"
+    sha256 cellar: :any,                 catalina:       "03a4c21c0384602ec0d5c802f61fdc0737730a703396b3fe37274c884019a6b8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "daf456a559c5f031b5584db251ffe07aa02fbb04c3d7dc06e1202cfd9109a0c7"
   end
 
   # Fix -flat_namespace being used on Big Sur and later.
