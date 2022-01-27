@@ -8,11 +8,10 @@ class Siril < Formula
   head "https://gitlab.com/free-astro/siril.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "1aa70e940f0cecb627a4358e1f37541203c4c954f07cab16e3be16315271104d"
-    sha256 arm64_big_sur:  "8917ab63cdff809d77899b5c4ee9db471826f2b9569800d2e4f30695ae7dca2b"
-    sha256 big_sur:        "3731dcf2047e89cf8e0ef788ef0356a6039a386fceb3248e32dbca060e88f615"
-    sha256 catalina:       "a51082e5d3bbcae83fb3f7d2a7fd175cf030655ce4e5e9c6ec03e0929287e99c"
-    sha256 mojave:         "fcb5c6b1232af882056b4cc908f291e94e3f16987cdf8870bca93d74e13cc8b0"
+    sha256 arm64_monterey: "8d84d7c672e760216a05caafe20271b09ad1cece7d1507c2bb5c8e2ae1482e89"
+    sha256 arm64_big_sur:  "d985fb3e1f27f84dfad04f852e2da82bd7facaa8feffb7d12ecef8577d5c1bdd"
+    sha256 big_sur:        "c48c58ac6b19df48df35cdd2b7629c2027b5e85ef33244975abe14a6bcf2aa85"
+    sha256 catalina:       "5366c67c6bdfb3b1ac6866d1ddfab61bcfb0baaaa0bb77f79c0b7fbb776b5fb3"
   end
 
   depends_on "autoconf" => :build
