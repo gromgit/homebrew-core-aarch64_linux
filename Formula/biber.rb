@@ -6,12 +6,12 @@ class Biber < Formula
   license "Artistic-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "a5a161e318753ebf4b21ecd228d82338e2fd6a21609da501be32c6dad6cf09e6"
-    sha256 cellar: :any,                 arm64_big_sur:  "7ed7fc1262568e0fd3184610538d8b8fa5670e779f9fe195b7e03274a047ab63"
-    sha256 cellar: :any,                 monterey:       "f1b4fc11d16d5045fbe2f35d7542d221a9e4116003ce02b526be8beae0a038f3"
-    sha256 cellar: :any,                 big_sur:        "3a33c580866d69c6650f76717818948cb4def0df4a6ab6e594b2dd49573ca93e"
-    sha256 cellar: :any,                 catalina:       "2e9fc7a7946103c51e151590d5350710e90f9fd88773a51c0c85bfdac9c15120"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d3952c6340ea72115a694eb5677a749fbf24c41cb9ff43fcfcae96234b927075"
+    sha256 cellar: :any,                 arm64_monterey: "6fc144d7d8a045356ef3fd0fccf5de17f6e3ac63d6b269a0a85f4809a9f00c43"
+    sha256 cellar: :any,                 arm64_big_sur:  "204d7cb929fa459938ec758687ca0525d0fa3061f8586de14fbeed12416a7c21"
+    sha256 cellar: :any,                 monterey:       "362e43be7f9798a76ba0be58e0e5e655d47f394a9cc62110e671f6c4f6059bf0"
+    sha256 cellar: :any,                 big_sur:        "8e83851811d503f7c587a95030a25d3ca1fc80f00ed2bb4306de248d6c68fc73"
+    sha256 cellar: :any,                 catalina:       "82981029f2e3f61ff004ee96715aeecc34073b9854f1368579dffcc0abb0c7cc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bd69f40c992696f6cf3887cf3e7dd71081c10abbaa557a4910f2b7521edd78ab"
   end
 
   depends_on "pkg-config" => :build
