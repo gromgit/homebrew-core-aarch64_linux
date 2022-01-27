@@ -7,11 +7,11 @@ class Nest < Formula
   revision 1
 
   bottle do
-    sha256 arm64_monterey: "139e28c76e3b724158a3802836dcd8688941347788cab6400773e74bae677ea2"
-    sha256 arm64_big_sur:  "044b541904f20ce27ff83db39bcba2578cf12b705003b6670a6e0049b84b2aec"
-    sha256 monterey:       "ffa1e53cbb08940f1ea6e5e33866f1ca5adf2137cc2cbcc0ecf96c8a02e6f2a4"
-    sha256 big_sur:        "34c639ade9ae898a8d7f05d04a907a70e797a3eb8211b94fc1971365b9683dbd"
-    sha256 catalina:       "358c0c767fda81a036d23e73e9802f69bc82b73ec5e4a0162712a96ea6c2ab47"
+    sha256 arm64_monterey: "79980487fd0ed24002a4ff53f6bcc07b0d5238069e101e419c6322414d710add"
+    sha256 arm64_big_sur:  "37c157798ba38e922c6a6d24abeb7244f99170b21972b38d9dad45470894f32a"
+    sha256 monterey:       "40c3f23231b04a2dc90c0c075e0180dce0f1809903a298c33f7c8795040724c4"
+    sha256 big_sur:        "088cd5b26ef3658e34a22143c8858a927d26f0954f692cc8787f7426cca64c6d"
+    sha256 catalina:       "007670f4a858fc98ac500bd49e4df64787bd7c5d7049bd69dae5f4d459d332ae"
   end
 
   depends_on "cmake" => :build
