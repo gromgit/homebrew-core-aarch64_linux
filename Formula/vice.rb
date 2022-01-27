@@ -12,11 +12,11 @@ class Vice < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "92408ef24365a7646783119eb2ecfdd98126fc868d52ca3cf31fc8c1fb5996ec"
-    sha256 arm64_big_sur:  "b3190a3e8af7cb52ab23bbf21e6334cf4860d4ae9e4d9e7791ad8d8d70e352a7"
-    sha256 monterey:       "42529cf031920441b336400a3ecfec27aa5d4033a32b8e504f68c00285f8505a"
-    sha256 big_sur:        "9c2f5fbcab4a5a0eb3f0a8d25451b806473efdaf3acf4b7ca005d646f5690574"
-    sha256 catalina:       "9fd0dd3efa4d7e8848c48d4c554d7854d52746e3d45c5473b0e8ce98002dd3dc"
+    sha256 arm64_monterey: "33fb1aad075c3b196121b6fc2cc204e28fc926b72481858e47e104e812f3ee50"
+    sha256 arm64_big_sur:  "44378ed1786c48a0ce150e9c246829a59166ff8c2548a924f27d5ff2f4957500"
+    sha256 monterey:       "642e255aa5c7e4cb48e8773196dd94925e81d11bc5b538f02946af1c70397298"
+    sha256 big_sur:        "270cba1e6c87ed97b7cafc142f4610661610a874b2ddb7ba1b805472b004242a"
+    sha256 catalina:       "05c3fbd9b2972453bf7d2688ef666efbbd7b9bd5b4fb37b294d3b6c0e45432cb"
   end
 
   depends_on "autoconf" => :build
