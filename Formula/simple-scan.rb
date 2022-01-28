@@ -47,6 +47,9 @@ class SimpleScan < Formula
   end
 
   test do
+    # Errors with `Cannot open display`
+    return if OS.linux? && ENV["HOMEBREW_GITHUB_ACTIONS"].present?
+
     system "#{bin}/simple-scan", "-v"
   end
 end
