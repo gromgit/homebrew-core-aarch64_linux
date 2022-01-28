@@ -1,10 +1,9 @@
 class Gambit < Formula
   desc "Software tools for game theory"
   homepage "http://www.gambit-project.org"
-  url "https://github.com/gambitproject/gambit/archive/v16.0.1.tar.gz"
-  sha256 "56bb86fd17575827919194e275320a5dd498708fd8bb3b20845243d492c10fef"
+  url "https://github.com/gambitproject/gambit/archive/v16.0.2.tar.gz"
+  sha256 "49837f2ccb9bb65dad2f3bba9c436c7a7df8711887e25f6bf54b074508a682d4"
   license "Apache-2.0"
-  revision 3
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "b92ff6853ffbf21cb1999cce85620f289cbaeecb51b06c219eff10afe839794e"
@@ -19,17 +18,16 @@ class Gambit < Formula
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
-  depends_on "wxwidgets@3.0"
+  depends_on "wxwidgets"
 
   def install
-    wxwidgets = Formula["wxwidgets@3.0"]
-    ENV["WX_CONFIG"] = wxwidgets.opt_bin/"wx-config-#{wxwidgets.version.major_minor}"
-
-    system "autoreconf", "-fvi"
+    system "autoreconf", "--force", "--install", "--verbose"
     system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",
-                          "--prefix=#{prefix}"
+                          "--prefix=#{prefix}",
+                          "--with-wx-prefix=#{Formula["wxwidgets"].opt_prefix}"
     system "make", "install"
+
     # Sanitise references to Homebrew shims
     rm Dir["contrib/**/Makefile*"]
     pkgshare.install "contrib"
