@@ -18,12 +18,12 @@ class Curaengine < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "70ae70cd08537fa72252acb5dff6adcf53590fd0f6b53d8a9086467268fa0a0e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "785b4583e5c9dbbd9f96aaa4ffd9d1fd220ec0249ce7078258af6e24ba1f5c21"
-    sha256 cellar: :any_skip_relocation, monterey:       "f1ff180d451a0920cc216c27f0925224b335539dea2661f19c868e5ef555bdce"
-    sha256 cellar: :any_skip_relocation, big_sur:        "daec837ab750b488dda7f16682577d599afddc946c8f4bddadf416166b71c9f9"
-    sha256 cellar: :any_skip_relocation, catalina:       "4520ab1977dc1de4c1881b3ffa5d432502d8d4c290df9a51efe4eea6bc24a0d0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fd5b8cda799f82c437e9828ee4065b25b9050c7fece76d2c2bcaaa923e6b9956"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e50192db5753c99795d012a80cc7514f905bee8df9f6e499952b8b89533b1a6f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "76a809ff1507945ecd8a4268ddcf7ae56159a03ea2008c5c7a7dd071e8cb80da"
+    sha256 cellar: :any_skip_relocation, monterey:       "296bb03ca611297ae83eb5e385b6eb94072b9554907729a1aad6fe4e121858c0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "198cb804ea034871e4f07b8919265aaf692713e2c59c8fa65af49291f7c657fa"
+    sha256 cellar: :any_skip_relocation, catalina:       "83fe93c09ea47ea993f0ec4415c1143d2661035da24c0ff9bfa5eb09c113dc9f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "adbd8fdb2072c77ffec996467346ab2e98af89c9105967e890e98825c471642d"
   end
 
   depends_on "cmake" => :build
