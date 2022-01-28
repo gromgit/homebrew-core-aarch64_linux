@@ -8,12 +8,12 @@ class Regula < Formula
   head "https://github.com/fugue/regula.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "65f04262944f787bc14be90dcd7560e4fdcbf4b42e3207347cbc99b8d67b7aa0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a6b217b611569d62cc29a4aff974c934a10787a62cd8961cc3c2e2ab8f8031e2"
-    sha256 cellar: :any_skip_relocation, monterey:       "acb3380926a53b5c73120a1f4e1c60525598ca172604d2d9399d2e4b671ae1e3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2a45bd25b9b8501983aa081ff17f5bc57858cef3f42341648d93940bad4fe8ec"
-    sha256 cellar: :any_skip_relocation, catalina:       "f114564d4b14183bdb016db5c2668ca5a1b70c897c2d6fefe02139548973d548"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "079598c7d5f792f76dc7c6da1e12e17202951ecc2687453d2e97f6114c68ab14"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ff52d01b868231fc73c918433637d27b541a82ab4edb637c897efd01f2496c37"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c9d51c686388c28636d47fb0325cb4f848b435dba0ecd4e594be8a44c1f6e994"
+    sha256 cellar: :any_skip_relocation, monterey:       "fe56caa576ac6037fde345cb0ad267cf5787145b698369664fa4f1091e95c28c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3f7dcad209e547ae1561a6403803465b95ce8f57e88aab567cc332224b38c0de"
+    sha256 cellar: :any_skip_relocation, catalina:       "443f537b1240f86a8ed718fee5c1d10aca0c62b2246cb6609067055bf0c9081b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "48815019477feabb29f159c6b62cea1f287a92c920550693cccef3ebfe5908d8"
   end
 
   depends_on "go" => :build
