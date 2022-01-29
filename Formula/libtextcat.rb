@@ -24,9 +24,13 @@ class Libtextcat < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "2104f4e2ec57f7f63de0e6f68d7b2dae82c6912146c17908f4fc1625a17bc7c5"
   end
 
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "libtool" => :build
+
   def install
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
+    system "autoreconf", "-ivf"
+    system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}"
     system "make", "install"
@@ -35,6 +39,15 @@ class Libtextcat < Formula
   end
 
   test do
-    system "#{bin}/createfp < #{prefix}/README"
+    output = pipe_output(bin/"createfp", "abcdefghijklmnopqrstuvwxyz").lines
+    expected = %w[
+      _ rstuv opqr mno nopqr g y b c d e f u h i j k l m n o p q r s t xyz v w x a z lmnop efg jklmn hijkl defg fghij
+      defgh hijk vwx bcdef lmno nop pqrs fgh tuvw xyz_ wxy opq ghi cdef _ab ghij nopq klmn pqr _a _abcd ab _abc bc
+      pqrst cd hij de ef fg gh hi ij jk stuv kl lm mn wxyz_ no op pq qr uvwxy yz_ rs wxyz st tu uv stuvw vw wx xy yz
+      z_ qrstu qrs opqrs mnopq ijk klmno bcde ijklm abc ghijk fghi efghi cdefg jklm abcde rst uvw jkl rstu bcd vwxy
+      stu klm abcd cde efgh ijkl tuv mnop lmn qrst def uvwx vwxyz tuvwx
+    ].map! { |line| "#{line}\n" }
+
+    assert_equal expected, output
   end
 end
