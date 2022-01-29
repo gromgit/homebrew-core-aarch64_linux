@@ -3,7 +3,7 @@ class Zlog < Formula
   homepage "https://github.com/HardySimpson/zlog"
   url "https://github.com/HardySimpson/zlog/archive/1.2.15.tar.gz"
   sha256 "00037ab8d52772a95d645f1dcfd2c292b7cea326b54e63e219a5b7fdcb7e6508"
-  license "LGPL-2.1"
+  license "LGPL-2.1-only"
 
   bottle do
     sha256 cellar: :any,                 big_sur:      "07b323ff8ba13c92bf8c720b6fd0a760a776b5e9d6f46356700066ef2b3643a6"
@@ -14,7 +14,7 @@ class Zlog < Formula
   end
 
   def install
-    system "make"
+    system "make", "PREFIX=#{prefix}"
     system "make", "PREFIX=#{prefix}", "install"
   end
 
@@ -51,7 +51,7 @@ class Zlog < Formula
         return 0;
       }
     EOS
-    system ENV.cc, "test.c", "-L#{lib}", "-lzlog", "-lpthread", "-o", "test"
-    system "./test"
+    system ENV.cc, "test.c", "-L#{lib}", "-lzlog", "-pthread", "-o", "test"
+    assert_equal "hello, zlog!\n", shell_output("./test")
   end
 end
