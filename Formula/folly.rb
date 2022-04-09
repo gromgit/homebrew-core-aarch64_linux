@@ -4,6 +4,7 @@ class Folly < Formula
   url "https://github.com/facebook/folly/archive/v2022.03.21.00.tar.gz"
   sha256 "d7286d63db9ce10d41bdc65bcf6f44b953dbb69fcb0387e9d5752ef93fc507a0"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/facebook/folly.git", branch: "main"
 
   bottle do
@@ -47,6 +48,11 @@ class Folly < Formula
   end
 
   fails_with gcc: "5"
+
+  patch do
+    url "https://github.com/facebook/folly/commit/53637452d07ff8c24a77d3f5f73bbe79af501ba3.patch?full_index=1"
+    sha256 "e8111e2a4dd8fe3dcf7c84c0db0b962c0df1caeb4ad4c425df546dde24c0af50"
+  end
 
   def install
     ENV.llvm_clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1100)
