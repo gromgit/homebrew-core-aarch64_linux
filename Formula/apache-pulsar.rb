@@ -1,9 +1,9 @@
 class ApachePulsar < Formula
   desc "Cloud-native distributed messaging and streaming platform"
   homepage "https://pulsar.apache.org/"
-  url "https://www.apache.org/dyn/mirrors/mirrors.cgi?action=download&filename=pulsar/pulsar-2.9.2/apache-pulsar-2.9.2-src.tar.gz"
-  mirror "https://archive.apache.org/dist/pulsar/pulsar-2.9.2/apache-pulsar-2.9.2-src.tar.gz"
-  sha256 "66cf22136488aabe443d92284fbb3edb15e1b9d8a64cf498b36236f75af29bbc"
+  url "https://www.apache.org/dyn/mirrors/mirrors.cgi?action=download&filename=pulsar/pulsar-2.10.0/apache-pulsar-2.10.0-src.tar.gz"
+  mirror "https://archive.apache.org/dist/pulsar/pulsar-2.10.0/apache-pulsar-2.10.0-src.tar.gz"
+  sha256 "fadf27077c5a15852791bea45f34191de1edc25799ecd6e2730a9ff656789c0b"
   license "Apache-2.0"
   head "https://github.com/apache/pulsar.git", branch: "master"
 
@@ -63,6 +63,8 @@ class ApachePulsar < Formula
   end
 
   test do
+    ENV["PULSAR_GC_LOG"] = "-Xlog:gc*:#{testpath}/pulsar_gc_%p.log:time,uptime:filecount=10,filesize=20M"
+    ENV["PULSAR_LOG_DIR"] = testpath
     fork do
       exec bin/"pulsar", "standalone", "--zookeeper-dir", "#{testpath}/zk", " --bookkeeper-dir", "#{testpath}/bk"
     end
