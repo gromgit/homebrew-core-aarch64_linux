@@ -1,8 +1,8 @@
 class Gedit < Formula
   desc "GNOME text editor"
   homepage "https://wiki.gnome.org/Apps/Gedit"
-  url "https://download.gnome.org/sources/gedit/41/gedit-41.0.tar.xz"
-  sha256 "7a9b18b158808d1892989165f3706c4f1a282979079ab7458a79d3c24ad4deb5"
+  url "https://download.gnome.org/sources/gedit/42/gedit-42.0.tar.xz"
+  sha256 "a87991f42961eb4f6abcdbaabb784760c23aeaeefae6363d3e21a61e9c458437"
   license "GPL-2.0-or-later"
 
   bottle do
@@ -34,23 +34,6 @@ class Gedit < Formula
   depends_on "libsoup"
   depends_on "libxml2"
   depends_on "pango"
-
-  # Fix build error due to missing function 'gedit_dirs_get_user_cache_dir'
-  # ../gedit/gedit-app.c:675:14: error: implicit declaration of function 'gedit_dirs_get_user_cache_dir'
-  # TODO: Remove in the next release
-  patch do
-    url "https://gitlab.gnome.org/GNOME/gedit/-/commit/741be1b11b977abd529aa2f633e50c2e80864afc.diff"
-    sha256 "e5ffa72b430abe60b357286c7079e8da9da1a05c31c023cb0f6885ed9c69e4cf"
-  end
-
-  # Fix build error due to missing file 'gedit-recent-osx.c'
-  # ../gedit/meson.build:182:0: ERROR: File gedit-recent-osx.c does not exist.
-  # PR ref: https://gitlab.gnome.org/GNOME/gedit/-/merge_requests/128
-  # TODO: Remove when PR is merged and available in release
-  patch do
-    url "https://gitlab.gnome.org/GNOME/gedit/-/commit/b075623f0d21f9d960999aa6dfc2a1072b7f12aa.diff"
-    sha256 "e82c3b38c17887313b9d6d88254427cba3fbbca259571bfa318fcaf917b13143"
-  end
 
   def install
     ENV["DESTDIR"] = "/"
