@@ -11,11 +11,11 @@ class Geeqie < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "a5255f0fd09c964cbe3c22782cd40e4144ec14ec1ac8c85e390674788981c235"
-    sha256 cellar: :any, arm64_big_sur:  "1cf09fc46064b757adb7c290419dd8a08afcb11c18f9686c4c7aec66416529bc"
-    sha256 cellar: :any, monterey:       "4ef1d3cafe52e385eeb1a750b5eada40955db638105e3c7a50769799897fe6d0"
-    sha256 cellar: :any, big_sur:        "d4c12350ca443f6d9dc769c5f3659940a6ad3a51051bed033356db35414626de"
-    sha256 cellar: :any, catalina:       "32ccfb7d8809d755c11856d0cbd064088bd91c6928d0eae032c0d52677b111a2"
+    sha256 cellar: :any, arm64_monterey: "60cfcddc21cb1b57a573f7833485c87d9650bd5f820bce0a7b61aaa577e68300"
+    sha256 cellar: :any, arm64_big_sur:  "8f25f4a5efcdd565d2e50cf5eb5719c35659f41f46ca3eac8bda1f483cc40955"
+    sha256 cellar: :any, monterey:       "c09db7a534786d7c1af6b45fa1ba98ac116421ee89910796f7ba9469611c38bc"
+    sha256 cellar: :any, big_sur:        "fcf8116b7271002a44ce9ee5c5f6084ecf45d98593f4d6b11bc31dd13fd66976"
+    sha256 cellar: :any, catalina:       "63b48ec4c18d21a0b0298a6dffdd9bd7821b2708efc33d2ce2b39c60285b9f44"
   end
 
   depends_on "autoconf" => :build
