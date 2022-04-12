@@ -6,11 +6,11 @@ class RpkiClient < Formula
   license "ISC"
 
   bottle do
-    sha256 arm64_monterey: "d2c1e200ed3fed78bcdec733dc0e644c595b95b427281a994dc6e3ecc36e46bf"
-    sha256 arm64_big_sur:  "56eaa8f7fbb7c9d673862d788c2c3af153d4491ab839398af8e40325e70eee0f"
-    sha256 monterey:       "a18fb56a1c25775c161c23164fee57020d6e2067e9598e3bb2dac2bd6efd021e"
-    sha256 big_sur:        "eab8f4c81d172ccad44b10402a45d03e4edbb87b49e49d4725afab4450f2dec6"
-    sha256 catalina:       "3f3bb03603511673944161dc8bd105f43ecf22c7dbc87bc0ac5848dbdb9fce85"
+    sha256 arm64_monterey: "a163c6fb57235560fc3e117b0a0ae65cfb5a88f0a4c919243f7b7367b36bc5d7"
+    sha256 arm64_big_sur:  "f541f00593f51cb535132b0cfaf429a0cd86955d508d71ce5dd61391947e61eb"
+    sha256 monterey:       "c96bbcfa6a3b610548bef1691e55a7f5d1d9015e071cadb079f0728ac9ff24eb"
+    sha256 big_sur:        "d09526b985cd5eb82d5fd28f2b45cae6b3e586e691f712760ad228377ccb9a46"
+    sha256 catalina:       "e68a160486ad4a292ed1087722c9612b785f3a307213851814f06abe571cb348"
   end
 
   depends_on "pkg-config" => :build
