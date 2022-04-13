@@ -6,7 +6,7 @@ class EasyGit < Formula
   license "GPL-2.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "d32fde25bfa6487f1ed7b4ca157b3d38cf64100b77d20c3ec35a0bf9b88894b9"
+    sha256 cellar: :any_skip_relocation, all: "4f1bd257689c7102a91799fdb7ca4a1e64638aa08ec1dad92070c875e6021a04"
   end
 
   deprecate! date: "2022-04-12", because: :unmaintained
