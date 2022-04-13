@@ -8,6 +8,7 @@ class IcalBuddy < Formula
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "fde583324695c0393cad4e545697c010d2e14dca39281ceff644dee8ed9230ab"
+    sha256 cellar: :any_skip_relocation, monterey:      "90fb3dbedeb785ebca38818ee6ef240680bc3b125382ea33063536b5e5ab2b39"
     sha256 cellar: :any_skip_relocation, big_sur:       "41f2928f8a9b5862e9864f5663e6f9cf179e8cfcd95305a41c7c610f7713446d"
     sha256 cellar: :any_skip_relocation, catalina:      "4f621e8b12e2c2e5e7c9fdd97ee973b7d4b14ce58eb5a5f7a9db32243f0f99f1"
     sha256 cellar: :any_skip_relocation, mojave:        "4f621e8b12e2c2e5e7c9fdd97ee973b7d4b14ce58eb5a5f7a9db32243f0f99f1"
