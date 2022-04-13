@@ -12,12 +12,12 @@ class Libspectre < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "feb7cfda3ee56fa06a53f733f68d69c7ae69cbde08469e9a2c074cb9191db12d"
-    sha256 cellar: :any,                 arm64_big_sur:  "d534a89facbba541742df755c49b8fd1e3ccedda8aeb5b9428e7b818fa8dfb73"
-    sha256 cellar: :any,                 monterey:       "9a070c179f2fea6f85c4638c0a5cff5543fdccb7fa9157d8c49ca3c8170da540"
-    sha256 cellar: :any,                 big_sur:        "72fb8d9117c3922ac7bad067b974b45fe91ccabfe9396613d463be36d60033c5"
-    sha256 cellar: :any,                 catalina:       "252cdeeb91d17de587e7b93cf9bdec8a1c5ae95f1ac4af6e0ad540f20a1b354d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d9ec982a240d4a7b5ced514c3842046e4beaf428595d3ec1b9575519dcf2b002"
+    sha256 cellar: :any,                 arm64_monterey: "de303c8dc164622e39d9091dbe666b508616d85701a1f41382e80cb0f7ee3092"
+    sha256 cellar: :any,                 arm64_big_sur:  "e94302c8cda17fbcdc68e912d5ed673572f6c08812b582db9bebdbc3fc837945"
+    sha256 cellar: :any,                 monterey:       "cc40497e1a32f03ef88145402e4b1c8c4ffb0c6686ca1c6777819be09e4065e8"
+    sha256 cellar: :any,                 big_sur:        "27e180a019179942a0131eac3f8a52422194af080313ea730390624a8ab83e28"
+    sha256 cellar: :any,                 catalina:       "125aaff11e8e92efdd6159d21133689ba8af9d3f13208994850ce4f8a7e7a9dd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5ec70453fc82893b76d4e4c57585d582b99fde8b8f3340df02c580a04f494192"
   end
 
   depends_on "ghostscript"
