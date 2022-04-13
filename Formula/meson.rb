@@ -22,6 +22,8 @@ class Meson < Formula
 
   def install
     virtualenv_install_with_resources
+    bash_completion.install "data/shell-completions/bash/meson"
+    zsh_completion.install "data/shell-completions/zsh/_meson"
   end
 
   test do
