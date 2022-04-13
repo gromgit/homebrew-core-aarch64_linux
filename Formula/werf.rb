@@ -6,6 +6,14 @@ class Werf < Formula
   license "Apache-2.0"
   head "https://github.com/werf/werf.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9ab6811116c84a1cefdd00e5c0e50846fc004bcdaa82dcf6000518a267b65c18"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "efb4ab98e100e75f40ac4e072cfe6e747c86466f0e72ed74ace04b8c98f78735"
+    sha256 cellar: :any_skip_relocation, monterey:       "599baaf5561fd2e35ed7fb60d9ae5f039db1fd811d2bf810d063e99d94a9a2a4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "49b29020d927cb081561d1ad0771447b69036d44cff1b1510cb9b03772ac4252"
+    sha256 cellar: :any_skip_relocation, catalina:       "e620c2ca1358adb275a64c0d5221f4a55e5d5e0fdcef7f0667b3434e2c2251d9"
+  end
+
   depends_on "go" => :build
   # due to missing libbtrfs headers, only supports macos at the moment
   depends_on :macos
