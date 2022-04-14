@@ -11,10 +11,12 @@ class Dar < Formula
   end
 
   bottle do
-    sha256 cellar: :any, monterey:     "c1b73c7aa6c75e3e09b9f3417dab0058f95783d874a822a4d0da08b4da1ef1b6"
-    sha256 cellar: :any, big_sur:      "5f44e68f9645585879ab93b80f63ebec7c2dfa0b9da23121cdfe5b9e6d0364ec"
-    sha256 cellar: :any, catalina:     "85164777e8d6fc5eca25bf2ea6ec30db3f139f7b4aa8e5c040ff2c63f4cb0502"
-    sha256               x86_64_linux: "51757e65e184a21baa924cf987bc201f4d97345dbcd8da90260e488dfe6bc8db"
+    sha256               arm64_monterey: "7f20df64aafb36d36fe5358671181d8ccfd823309021d9fda73ecc42b136172a"
+    sha256               arm64_big_sur:  "4d0647ae195d1187db88681f97661f0a49055e073129e2fcc5af397ec4cf0f10"
+    sha256 cellar: :any, monterey:       "333a1449a01e838cd6f397289469138fcdf40cfe682cd8be9a1c64bf4cf3adc3"
+    sha256 cellar: :any, big_sur:        "e3e74755ae632c5b1a9b24d06fde5f0bfa5ba1b3932747f0309ac61951b0c857"
+    sha256 cellar: :any, catalina:       "20da0e2daab9957af7f8464204cd60cd3bbbf4afd5e1eaa0b333384b47d8b248"
+    sha256               x86_64_linux:   "2d20b095aa0458c5091d0de869dde7505e3f7685533edc1b1204a121f7bdb46f"
   end
 
   depends_on "upx" => :build unless Hardware::CPU.arm?
