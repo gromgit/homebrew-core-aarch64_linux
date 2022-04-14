@@ -5,6 +5,7 @@ class ErlangAT23 < Formula
   url "https://github.com/erlang/otp/releases/download/OTP-23.3.4.13/otp_src_23.3.4.13.tar.gz"
   sha256 "f9085856fa5c1d6b8c5385cab2fd750068206213de8cb5642ba5b3023c752fc8"
   license "Apache-2.0"
+  revision 1
 
   livecheck do
     url :stable
@@ -26,9 +27,8 @@ class ErlangAT23 < Formula
   depends_on "wxwidgets" # for GUI apps like observer
 
   resource "html" do
-    url "https://www.erlang.org/download/otp_doc_html_23.3.tar.gz"
-    mirror "https://fossies.org/linux/misc/otp_doc_html_23.3.tar.gz"
-    sha256 "03d86ac3e71bb58e27d01743a9668c7a1265b573541d4111590f0f3ec334383e"
+    url "https://github.com/erlang/otp/releases/download/OTP-23.3.4.13/otp_doc_html_23.3.4.13.tar.gz"
+    sha256 "37e2aeee06def0921aa35f4b306a42984328928caaf881171e076e95b6c8a57c"
   end
 
   def install
