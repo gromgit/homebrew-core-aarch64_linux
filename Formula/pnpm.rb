@@ -13,12 +13,12 @@ class Pnpm < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0e8b16969809a6386efe7759961ea17d5aab66d8d1e3b47caad18641558e9604"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0e8b16969809a6386efe7759961ea17d5aab66d8d1e3b47caad18641558e9604"
-    sha256 cellar: :any_skip_relocation, monterey:       "2d0fc0e08d16f7be9d455aa3b3e3548d78dd70fc96b4306571e5f342bedd3ae9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2328f08310d12c90199e0b3957b0b6b45a17c4b6e291edb7e1ea6f8da4b73901"
-    sha256 cellar: :any_skip_relocation, catalina:       "2328f08310d12c90199e0b3957b0b6b45a17c4b6e291edb7e1ea6f8da4b73901"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0e8b16969809a6386efe7759961ea17d5aab66d8d1e3b47caad18641558e9604"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "eb84077f7091cdb4998f7d9cbcdef0663f5005e8c99b1e32e55ca0a9241845ad"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "eb84077f7091cdb4998f7d9cbcdef0663f5005e8c99b1e32e55ca0a9241845ad"
+    sha256 cellar: :any_skip_relocation, monterey:       "f3d85676f31743eaec772086bb95c74ea21d9f671d381b2f0fcd421223bc43b9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "662eb836285ff0d80be83e5449713c76253e51858ed9f95b83ec9d24c12dddff"
+    sha256 cellar: :any_skip_relocation, catalina:       "662eb836285ff0d80be83e5449713c76253e51858ed9f95b83ec9d24c12dddff"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eb84077f7091cdb4998f7d9cbcdef0663f5005e8c99b1e32e55ca0a9241845ad"
   end
 
   depends_on "node"
