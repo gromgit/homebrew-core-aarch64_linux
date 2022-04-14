@@ -7,12 +7,12 @@ class Nuclei < Formula
   head "https://github.com/projectdiscovery/nuclei.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b812c4839b379b6cc7036661e134036cdde6726e019dee3d3f8a66e3648333f0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5b818569c5f3dd85cf247f76a06af2add86ba22a7ce705106ca73a76bdd33c64"
-    sha256 cellar: :any_skip_relocation, monterey:       "460e4f408812bd8ab777d46651be58ba3d1f5d05e81b4051fa35fc49679be10a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "31db58d21fcfbd495cb7e93f4e0a41f49b1effe6763b3f355f123e0b97fd4852"
-    sha256 cellar: :any_skip_relocation, catalina:       "9e07a2d5622578ce03b2da082a90f56423251c8ef8c7a3026db7efd60a6b9284"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b69b4e02080d6fe3fcba4023dec39b5b1a170af296ddd37478ef8ab724cfbcf1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0d3f8a0236c561b7638d89bcc5000ef522095f4b1148882b636b9048828473e3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9b1633cc382fc2d585383e3504e7565bc695004e29942c2b9a1053acb6cfafb1"
+    sha256 cellar: :any_skip_relocation, monterey:       "0376f12311f6fdca9ab14716806c8d2bb0c95fa308aabbae594d24b69888ac98"
+    sha256 cellar: :any_skip_relocation, big_sur:        "16cc74ec692c4771b557824e0bc56da92284cdcd279f820651989609b2b82561"
+    sha256 cellar: :any_skip_relocation, catalina:       "d2d41f2aa5a502f62dbb2a0afd9b6eb1c4fae2d7536f5331f55735651353aaf6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0c6388f585d5967575a51fa1202192e620b4aa08b4ce6d749019ec685ecf744b"
   end
 
   depends_on "go" => :build
