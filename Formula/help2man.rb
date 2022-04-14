@@ -7,12 +7,12 @@ class Help2man < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2a5d861e17cce90ad93cd77ac048a8fb4710cb7690bae264653fda06780282aa"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2a5d861e17cce90ad93cd77ac048a8fb4710cb7690bae264653fda06780282aa"
-    sha256 cellar: :any,                 monterey:       "d8865b2976749558b98909feeb26b63435a430dbbe5ccd190d490f0ccad0ff3d"
-    sha256 cellar: :any,                 big_sur:        "005f3e09437c5372a0b7e4e094618d1056998fde46320d676e14d3ef8187b155"
-    sha256 cellar: :any,                 catalina:       "55b35783121c456e3681fa9eab2f2129c40cfffb3e354ee36f2d0e6a120182f4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "524924459d3f94ea7d9feb39972df90c53988362b5982bf2cd855caa68057469"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "383b411c2f38bcc248ef62253135047fcdf62d9dc53f8204d8789648705750e2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "383b411c2f38bcc248ef62253135047fcdf62d9dc53f8204d8789648705750e2"
+    sha256 cellar: :any,                 monterey:       "2fa2384e5b009445b1c22c3524c290f99097e28f513d05fc72bd34b5a2359c4c"
+    sha256 cellar: :any,                 big_sur:        "6d00cbba2327558de78a1e01fc1906ddce81a03067b3d8636f15df835290018a"
+    sha256 cellar: :any,                 catalina:       "96ff3329951b52db5e2e70f64e93a5fa291b79d70bc39a4d10d6c2cc3340a1b9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "457df4779894e46898cb3ae03f9b7d2650a0bd42e75ab7cdf4aacbe0e6bb90d6"
   end
 
   depends_on "gettext" if Hardware::CPU.intel?
