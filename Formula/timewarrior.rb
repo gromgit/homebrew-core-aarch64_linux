@@ -14,6 +14,7 @@ class Timewarrior < Formula
     sha256 cellar: :any_skip_relocation, big_sur:        "408828a1e987d46c028e984d205a05e08e9f1f1c22f2e06f63d83f1c4103abed"
     sha256 cellar: :any_skip_relocation, catalina:       "bfd843a753ea65204f5c2d125a6bfcb97034e5b0ca997c5c224338755e4a1b36"
     sha256 cellar: :any_skip_relocation, mojave:         "adcac7b2fe1e61a589a674b581ad77b2d0f6e6646454d12da192ceb8ff4d8dd1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a2639fbb7dc4ec4c629539f10ac0d0766bad0b01100c9a25a00f5d2bf9185267"
   end
 
   depends_on "asciidoctor" => :build
