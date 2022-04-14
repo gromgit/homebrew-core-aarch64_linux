@@ -12,6 +12,7 @@ class Pyqt < Formula
     sha256 cellar: :any, big_sur:        "22d736f182cd8c634cc7a54df46d85ddfd6c539105b79feec69fd1804ed78e63"
     sha256 cellar: :any, catalina:       "b5d8b96aead59e1f9c7905d6a5841a6da1fd5d4b6b923c8598a9f65f72136715"
     sha256 cellar: :any, mojave:         "679c7ed82d6a766d5adf794dedf19b499234431629003f45ff265d5f4ac41a6f"
+    sha256               x86_64_linux:   "85d03083beca8fcb1850c787460f618ff59bea7c8c3f320e8ae0225352142c4c"
   end
 
   depends_on "pyqt-builder" => :build
