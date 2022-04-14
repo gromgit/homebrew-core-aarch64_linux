@@ -8,9 +8,10 @@ class Hashlink < Formula
   head "https://github.com/HaxeFoundation/hashlink.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, monterey: "dd59e2432f05225f3eb9601fce04278d694c6d164a6a713be968ef04b4c81e4a"
-    sha256 cellar: :any, big_sur:  "1116d33cba9669325b72a9d2567a79469887886d2da656b37a94a0094b1965d1"
-    sha256 cellar: :any, catalina: "f64cd8e07074671d1e4322246e87b586c1dab39d97c92e70238a3c89d8a5a3c4"
+    sha256 cellar: :any,                 monterey:     "dd59e2432f05225f3eb9601fce04278d694c6d164a6a713be968ef04b4c81e4a"
+    sha256 cellar: :any,                 big_sur:      "1116d33cba9669325b72a9d2567a79469887886d2da656b37a94a0094b1965d1"
+    sha256 cellar: :any,                 catalina:     "f64cd8e07074671d1e4322246e87b586c1dab39d97c92e70238a3c89d8a5a3c4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "6e014cc31747cbe3825c7748e293501c7622d3e9dab87095d918e768446dabb2"
   end
 
   depends_on "haxe" => :test
