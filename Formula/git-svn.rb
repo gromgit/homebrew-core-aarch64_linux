@@ -1,8 +1,8 @@
 class GitSvn < Formula
   desc "Bidirectional operation between a Subversion repository and Git"
   homepage "https://git-scm.com"
-  url "https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.35.2.tar.xz"
-  sha256 "c73d0c4fa5dcebdb2ccc293900952351cc5fb89224bb133c116305f45ae600f3"
+  url "https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.35.3.tar.xz"
+  sha256 "15e9db4f9bf2ed9fff30cb62a00c5c7c0901015f5ab048cdb4e8b04ddee00fa2"
   license "GPL-2.0-only"
   head "https://github.com/git/git.git", branch: "master"
 
