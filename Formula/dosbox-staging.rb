@@ -20,6 +20,7 @@ class DosboxStaging < Formula
     sha256 cellar: :any, monterey:       "7ca82e1f018eebd2650823754122b999dba06cd3c923edb7fec0cf07d356e54e"
     sha256 cellar: :any, big_sur:        "48c5d2212056baf6bf7cf5ac1db657148322f8e90a70fd065f11df3dc0262e98"
     sha256 cellar: :any, catalina:       "12ee01a5d78a0d1b24c51deccc311b2ab8bddec499265c088d5174a16a49837f"
+    sha256               x86_64_linux:   "357fb2f803a354e6662bc8bb5468bd8b02d66190f0b29c7270bd9dd1e08799bd"
   end
 
   depends_on "meson" => :build
