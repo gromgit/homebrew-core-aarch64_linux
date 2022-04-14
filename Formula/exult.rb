@@ -1,8 +1,8 @@
 class Exult < Formula
   desc "Recreation of Ultima 7"
   homepage "https://exult.sourceforge.io/"
-  url "https://github.com/exult/exult/archive/v1.6.tar.gz"
-  sha256 "6176d9feba28bdf08fbf60f9ebb28a530a589121f3664f86711ff8365c86c17a"
+  url "https://github.com/exult/exult/archive/v1.8.tar.gz"
+  sha256 "dae6b7b08925d3db1dda3aca612bdc08d934ca04de817a008f305320e667faf9"
   license "GPL-2.0-or-later"
   head "https://github.com/exult/exult.git", branch: "master"
 
@@ -29,19 +29,7 @@ class Exult < Formula
   depends_on "libvorbis"
   depends_on "sdl2"
 
-  # Xcode 12 compile fix for 1.6.x branch - https://github.com/exult/exult/pull/61
-  patch do
-    url "https://github.com/exult/exult/commit/b98a9eb195bf8b3f55df56499d2a7c2c5d8809d0.patch?full_index=1"
-    sha256 "c1c5b1e9e4994ecdfaba6285b86222123ee6b5590bcd8e7400871a4e65836fe0"
-  end
-
   def install
-    # Use ~/Library/... instead of /Library for the games
-    inreplace "files/utils.cc" do |s|
-      s.gsub!(/(gamehome_dir)\("\."\)/, '\1(home_dir)')
-      s.gsub!(/(gamehome_dir) =/, '\1 +=')
-    end
-
     system "./autogen.sh"
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
                           "--prefix=#{prefix}"
