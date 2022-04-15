@@ -7,12 +7,13 @@ class Libmarpa < Formula
   head "https://github.com/jeffreykegler/libmarpa.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "140c12d4c31564e6be52416703b42d2625873d9c2cc9c25abeb87c77d2dc38b5"
-    sha256 cellar: :any,                 arm64_big_sur:  "73e473c2f18ba649fdd2e830ea23fce50cb090af3d9347cee98c696ba6a56dc3"
-    sha256 cellar: :any,                 monterey:       "47debd91bf8dc1396c5d6b56ae4bef892ee5bd95b3c8196846b8ae42ad4a03dd"
-    sha256 cellar: :any,                 big_sur:        "42576c639034eb246286ff198912e441cdf45fbed556bf953ca4b658aa90f69d"
-    sha256 cellar: :any,                 catalina:       "52940241416f5a6434a8fa155903945c9d592623f84663287d78d7a4221a8441"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e0b869d0ef1c1b0c3d0152c45fb33e31c3c820c0b45e4d94a106487ac6840d76"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "a2a018c3e68558b814af011edfd63e2e436b004ec922f421238069000df676fa"
+    sha256 cellar: :any,                 arm64_big_sur:  "a76c00de9a82a60bdd16866d768707b067a234bb02ba3fc697b96bcf4565c186"
+    sha256 cellar: :any,                 monterey:       "7689fe94c88bfbad0797889ab2294d3537768135812bbf4babe9292edbd01a6e"
+    sha256 cellar: :any,                 big_sur:        "850e548bbacd37de6bc739fc25feab2c2794715bf6d786cb0e8e54c107c5aa4f"
+    sha256 cellar: :any,                 catalina:       "78eb4ac45c29dfc3237290d802f2f2cc29c0e17df238877ed2bcdb27f8b9d43e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fcfb728a555cedfcf5f88178a45e82be6679a0d52e5afd90fee2641bcef3cd15"
   end
 
   depends_on "autoconf" => :build
