@@ -1,8 +1,8 @@
 class Mold < Formula
   desc "Modern Linker"
   homepage "https://github.com/rui314/mold"
-  url "https://github.com/rui314/mold/archive/v1.1.1.tar.gz"
-  sha256 "47c5ddfe60beffc01da954191c819d78924e4d1eb96aeebfa24e1862cb3a33f9"
+  url "https://github.com/rui314/mold/archive/v1.2.0.tar.gz"
+  sha256 "f3fd3d0fbb143695ef33126f496eb9f0449aae1c26c764fee394d71ba1cd4310"
   license "AGPL-3.0-only"
   head "https://github.com/rui314/mold.git", branch: "main"
 
@@ -20,6 +20,7 @@ class Mold < Formula
 
   on_macos do
     depends_on "llvm" => [:build, :test] if DevelopmentTools.clang_build_version <= 1200
+    depends_on macos: :monterey
   end
 
   on_linux do
@@ -75,8 +76,6 @@ class Mold < Formula
 
     system ENV.cc, linker_flag, "test.c"
     system "./a.out"
-    # Lots of tests fail on ARM Big Sur for some reason.
-    return if MacOS.version == :big_sur && Hardware::CPU.arm?
 
     if OS.mac?
       cp_r pkgshare/"test", testpath
