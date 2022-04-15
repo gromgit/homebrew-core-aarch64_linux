@@ -11,7 +11,7 @@ class Grails < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "608654123012045309788e97acd2c8d096fa183caafc527df63b0548587a62ff"
+    sha256 cellar: :any_skip_relocation, all: "96732300dc26d6ec7c7e94a46dd6ac7b382f8a89721d85ecf3fa6e6ed3c07414"
   end
 
   depends_on "openjdk@11"
