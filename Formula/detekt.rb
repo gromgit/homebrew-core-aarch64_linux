@@ -1,8 +1,8 @@
 class Detekt < Formula
   desc "Static code analysis for Kotlin"
   homepage "https://github.com/detekt/detekt"
-  url "https://github.com/detekt/detekt/releases/download/v1.19.0/detekt-cli-1.19.0-all.jar"
-  sha256 "4bc545c95c3711daeedd7766a9884ac50f2a49a0b472cef2b14dae332c58294d"
+  url "https://github.com/detekt/detekt/releases/download/v1.20.0/detekt-cli-1.20.0-all.jar"
+  sha256 "2e4f299cc50b010fa99f44893e0fca68ef1efb57f9e6c3758c7b021804d36c59"
   license "Apache-2.0"
 
   livecheck do
