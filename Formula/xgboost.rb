@@ -2,8 +2,8 @@ class Xgboost < Formula
   desc "Scalable, Portable and Distributed Gradient Boosting Library"
   homepage "https://xgboost.ai/"
   url "https://github.com/dmlc/xgboost.git",
-      tag:      "v1.5.2",
-      revision: "742c19f3ecf2135b4e008a4f4a10b59add8b1045"
+      tag:      "v1.6.0",
+      revision: "f75c007f27ae2a3b0f8b4db7930a2179431ea55f"
   license "Apache-2.0"
 
   bottle do
@@ -16,12 +16,16 @@ class Xgboost < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "libomp"
   depends_on "numpy"
   depends_on "scipy"
 
   on_macos do
+    depends_on "libomp"
     depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1100
+  end
+
+  on_linux do
+    depends_on "gcc"
   end
 
   fails_with :clang do
@@ -32,6 +36,12 @@ class Xgboost < Formula
       make[2]: *** [src/CMakeFiles/objxgboost.dir/tree/updater_quantile_hist.cc.o] Error 254
     EOS
   end
+
+  # Starting in XGBoost 1.6.0, compiling with GCC 5.4.0 results in:
+  # src/linear/coordinate_common.h:414:35: internal compiler error: in tsubst_copy, at cp/pt.c:13039
+  # This compiler bug is fixed in more recent versions of GCC: https://gcc.gnu.org/bugzilla/show_bug.cgi?id=80543
+  # Upstream issue filed at https://github.com/dmlc/xgboost/issues/7820
+  fails_with gcc: "5"
 
   def install
     ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib
