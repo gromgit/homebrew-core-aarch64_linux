@@ -1,8 +1,8 @@
 class SignalCli < Formula
   desc "CLI and dbus interface for WhisperSystems/libsignal-service-java"
   homepage "https://github.com/AsamK/signal-cli"
-  url "https://github.com/AsamK/signal-cli/archive/refs/tags/v0.10.4.2.tar.gz"
-  sha256 "6e08761881352576e6683fcc9f6060b55aa90e5d6306695b7378ed9b9d96a197"
+  url "https://github.com/AsamK/signal-cli/archive/refs/tags/v0.10.5.tar.gz"
+  sha256 "36db3cf393c4f36e38560f33002a59a5efab4f8fe23a309c85be3da377826d6f"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -27,10 +27,10 @@ class SignalCli < Formula
   uses_from_macos "zip" => :build
 
   # per https://github.com/AsamK/signal-cli/wiki/Provide-native-lib-for-libsignal#libsignal-client
-  # we want the specific libsignal-client version from 'signal-cli-#{version}/lib/signal-client-java-X.X.X.jar'
+  # we want the specific libsignal-client version from 'signal-cli-#{version}/lib/libsignal-client-X.X.X.jar'
   resource "libsignal-client" do
-    url "https://github.com/signalapp/libsignal/archive/refs/tags/v0.12.3.tar.gz"
-    sha256 "788a8f3263656844d7a140e0201cbf6c21f0da52a153deb0fe689ba3bfe67c43"
+    url "https://github.com/signalapp/libsignal/archive/refs/tags/v0.15.0.tar.gz"
+    sha256 "48e0b8d92c4482a2a79045bc72cf538421ea461f0cbfa1cdc2351678b188350a"
   end
 
   def install
@@ -47,15 +47,15 @@ class SignalCli < Formula
     resource("libsignal-client").stage do |r|
       # https://github.com/AsamK/signal-cli/wiki/Provide-native-lib-for-libsignal#building-libsignal-client-yourself
 
-      libsignal_client_jar = libexec/"lib/signal-client-java-#{r.version}.jar"
+      libsignal_client_jar = libexec/"lib/libsignal-client-#{r.version}.jar"
       # rm originally-embedded libsignal_jni lib
-      system "zip", "-d", libsignal_client_jar, "libsignal_jni.so"
+      system "zip", "-d", libsignal_client_jar, "libsignal_jni.so", "libsignal_jni.dylib", "signal_jni.dll"
 
       # build & embed library for current platform
       cd "java" do
-        inreplace "settings.gradle", ", ':android'", ""
+        inreplace "settings.gradle", "include ':android'", ""
         system "./build_jni.sh", "desktop"
-        cd "java/src/main/resources" do
+        cd "shared/resources" do
           system "zip", "-u", libsignal_client_jar, shared_library("libsignal_jni")
         end
       end
