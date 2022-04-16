@@ -11,12 +11,12 @@ class Antlr4CppRuntime < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "7a636ac028a5bfaa9448a32b7bac3804c15454e3e98d104dd0ab9b3f597e4f5f"
-    sha256 cellar: :any,                 arm64_big_sur:  "416344a57f99b82ee473b2586f2987e7d9b33d84904d10e3385f6e376a48f424"
-    sha256 cellar: :any,                 monterey:       "a5d02f022d3969f58b6e951d2342a319b03bc88f417029ed5427996ebb5da9fb"
-    sha256 cellar: :any,                 big_sur:        "a43fd050ed2bd66bb9fcf163ea7e9f1974b60a71fefda42666b6940d50ecaeb1"
-    sha256 cellar: :any,                 catalina:       "ab2235f34b79e240f159d1263f2d900a91994091af6c69b3147df094435264a7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f8068ef89deda3faee3d3a26dfc6bed5a1260330f662d82a370fa6a59edd0d90"
+    sha256 cellar: :any,                 arm64_monterey: "12da241d8e8920330781f9a19adc9c4b4ec5fa9a66563ed9452ee5a57dde548f"
+    sha256 cellar: :any,                 arm64_big_sur:  "2b0b14e5bd3598c628f307f22a48667f11e96a5b38dac86ac03b7b4f27b21b85"
+    sha256 cellar: :any,                 monterey:       "c7e00adc82d2f850f2aaf2ca0cd483eee0302ea4372d1d9bdf233ba26787ce6e"
+    sha256 cellar: :any,                 big_sur:        "a948bd5d0bc16022f9923ad4c906e2c2ee87562de55598cd17cbc620d3e909d6"
+    sha256 cellar: :any,                 catalina:       "ae1bc67f019cd414895b69636633e013bc6acc2ccbba1eb1a5fd73ec36e2a5c9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "699382d0976f8fd084012b4e5ab1dc6ff928653f644e98850cbeffe8a99561e6"
   end
 
   depends_on "cmake" => :build
