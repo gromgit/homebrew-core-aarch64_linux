@@ -18,6 +18,7 @@ class DosboxX < Formula
     sha256 cellar: :any, monterey:       "2cf9eef6365101303f9d418f8691b86f7c489cd3f80f4e5856e8313a5efe5d24"
     sha256 cellar: :any, big_sur:        "5802416d35406c5e15ca284f50ca445495940643d27a996bd401606065444278"
     sha256 cellar: :any, catalina:       "62d1c125c7f461f7889b07445ce03d0c7de9993b463854e28ebda7ec822ec013"
+    sha256               x86_64_linux:   "382defe5464ee78c02c00718030417dc92cc42e2346aeda4127022cf90c78238"
   end
 
   depends_on "autoconf" => :build
