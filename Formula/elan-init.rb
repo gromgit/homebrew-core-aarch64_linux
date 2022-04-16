@@ -7,10 +7,10 @@ class ElanInit < Formula
   head "https://github.com/leanprover/elan.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, monterey:     "09fa246a3941ff47b27478dfbe810c3afafc02776ece3780bc9e26de97d858fc"
-    sha256 cellar: :any_skip_relocation, big_sur:      "9759232ba34b57e6bde113c7c43a0c8c98ff664597c215c90a45ed33628d7030"
-    sha256 cellar: :any_skip_relocation, catalina:     "f00b09869eb6861dd5b0a9e365d07046e33b80fad7fd921c2ac35ea8234b209f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "103c4f1704e64e0b9be464e7055a511422f15bf92332ee7ae03135eb91fdd885"
+    sha256 cellar: :any_skip_relocation, monterey:     "f07f593c8c3668c57cc595792c9ad1178a0949269342902c7d61d3ad85fe3046"
+    sha256 cellar: :any_skip_relocation, big_sur:      "7fd0d6b273632b3aeea56e8eab6514ce2d1517d02a5ed5d1b3063b5c26f5282e"
+    sha256 cellar: :any_skip_relocation, catalina:     "ec0943072965c84e5d190c6f725d562e28c998241e0226339dd0042115bc3240"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "97bd3b31c81ad7501e3c791399ba678b9014eada9f939ac42ccfcda7135f71d4"
   end
 
   depends_on "rust" => :build
