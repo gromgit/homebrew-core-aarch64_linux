@@ -10,13 +10,12 @@ class AnimeDownloader < Formula
   head "https://github.com/anime-dl/anime-downloader.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c56a2f2880ad0f27d82283fa496ed29920a55e06c24e9e294edafea385e7c872"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "51528ac11b71b803cec6866244164cc4b5e837fbc189c38cdb054bf189ef59f7"
-    sha256 cellar: :any_skip_relocation, monterey:       "fde42013e865de24caed2210d8b72a48e78b77f39d9058ae93872dd453479af2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4b7f8ef5058b22b72b3f5bda4ad9110c9d4ab4e7bc9aa5cf9691ca5f0c5ea558"
-    sha256 cellar: :any_skip_relocation, catalina:       "ca0111a1386a2269340b3ce8b7d7a24766975cc680ab60e4c045cadae989e106"
-    sha256 cellar: :any_skip_relocation, mojave:         "b561d3e6d9c25da1d6088154ce894985d5e6d0b08d317566e31ee9a970dc1754"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a0f571445d312cada1fb7ce349655e378ef21cfd7e227780a8dad74a58671f7d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e82810dc9a27679b5a31f627464c6ef9a7eddbc3501e81c9c3f528d3360adaa3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "494d36e4a623b1479cb9ee392256dd8482a5b8562469564c2d25b6f268edd726"
+    sha256 cellar: :any_skip_relocation, monterey:       "9ebdb91f8dcd1581cc47bc408bbb62b291b722e4e3759dc0bc4d9f00823a4cb1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "63656c7f0a386ce4a6c98c7c64ddebee7df37dbe8dc5972c58b70d92ec558ee8"
+    sha256 cellar: :any_skip_relocation, catalina:       "4b020f1d32f6dd05163eb04c6836c18e88347800f3f57b917cd97447fa57184d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cb0930218119dc19689ed1fb6f1b58b825ad46a3c09ce062b4b167a216d42f7b"
   end
 
   depends_on "aria2"
