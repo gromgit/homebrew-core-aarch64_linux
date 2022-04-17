@@ -6,7 +6,7 @@ class Jdtls < Formula
   license "EPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "cca45acde6eb4d63b7f91b70c010b9804809bcdb4efbe22f7c190e1e5c5fc11b"
+    sha256 cellar: :any_skip_relocation, all: "dac2e7423bcbb8be2c94bf49ef632ed89b0de0c2d4aa79fc51c38b3cece309c2"
   end
 
   depends_on "openjdk@11"
