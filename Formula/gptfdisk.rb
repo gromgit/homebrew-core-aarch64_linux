@@ -6,13 +6,12 @@ class Gptfdisk < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3d9febc1bf30f45aad2e707d98a4f8485e4b8807787e39b92acacf0ba810c623"
-    sha256 cellar: :any,                 arm64_big_sur:  "9ddfc62f39c786868b5bcafb0cc949a89977ece0bf27eac038a70dbcd7772b8f"
-    sha256 cellar: :any,                 monterey:       "de52e1458baca0f7ece2e92f94031dc01197c4c109dc9b701367fd55aa163f0d"
-    sha256 cellar: :any,                 big_sur:        "a16cd2748dcf4ce4a18caf1d09e04e077a456fe323553685ab07dc7b628567a7"
-    sha256 cellar: :any,                 catalina:       "e5c8a8a789a75e2ff5cd3120922c0fa205ef3e9aec23fd77558a04b349283aea"
-    sha256 cellar: :any,                 mojave:         "8ea2978e8d5612e21cef00d747ac24e0c5f44eeb5c9c2edcf926752bd389523a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e93c2383a78abc4ea044c1d750630342118f7257358421c04471efd94c32cbce"
+    sha256 cellar: :any,                 arm64_monterey: "a324c027ce6d6f41d464ba001961e0481180ce5d43eddfebcec2c108358479cd"
+    sha256 cellar: :any,                 arm64_big_sur:  "6ba98737562bd6ca00091e4259fa8195592e0d6f25b9650f8451f3cae553d6f9"
+    sha256 cellar: :any,                 monterey:       "1d114b23a2a5cd0bbeb5b52bf9eb049a38f1ddd41b53abdfaf245b2ff333ae51"
+    sha256 cellar: :any,                 big_sur:        "0e9d348490a0610c6342d624dafc745a838e33d3cf64287985470c79ac95e5a4"
+    sha256 cellar: :any,                 catalina:       "ac261cf0e7e1b9848f4c2d9ce7cb85854eb10392d332018333330df0ebd6ba49"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d42a4448e83c5f84f9f947f9aef03bd1a67dffd95cea7edeb28bc1eae07c7be0"
   end
 
   depends_on "popt"
