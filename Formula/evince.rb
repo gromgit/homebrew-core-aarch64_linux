@@ -11,6 +11,7 @@ class Evince < Formula
     sha256 monterey:       "b3c8f7fdde11e14d57e09d4d82e39c78de7b8f2548395c642898b9f94c70c4c3"
     sha256 big_sur:        "6df0eb2d7dcce978a49bf186629ea345285cb2c5bff4d87682557ebaa5b211e5"
     sha256 catalina:       "340bd9932eaf6b9e3c476103b49d1d26816e889041201c9c8228a8d8e1b26b7a"
+    sha256 x86_64_linux:   "350b2ccdbe84bbfe935e8785512a80323627ee2326b42861314f1e3df3c85739"
   end
 
   depends_on "gobject-introspection" => :build
