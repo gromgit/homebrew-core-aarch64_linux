@@ -13,12 +13,12 @@ class OpenAdventure < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "86fcdbe8ebab9390044fde83cafe0888ae77ec312b995c0d65c779e505872a8d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "da6bb68cfa20c6129afd03a61a85c8f0cbe8d545b76caece7664b16b80cbe66b"
-    sha256 cellar: :any_skip_relocation, monterey:       "8ae49f7da1bb7ccb87a8e90a137d61ff957bc96f0f4b198aee45d16844886942"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1a9b5d1bc79e3f0d3f810ccee733e4f6615c5e583bac488620930b15e1ddc375"
-    sha256 cellar: :any_skip_relocation, catalina:       "d636e8325ae54822e9c3c398c8779e4f94d01429fb4fd2bfd6dea81272eeb76e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "146dfc0a5bb5751569d81f71e613b886c6dfed2e42cbff1e9151263bbeb7bbaa"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8e931395590510f74d6bf59fa5c23c3dc1ec8c8fff3a7d155ff28b4e613e2f71"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c0d181283936bbf39d920d378514d7d458ef93a2467b6bd6a8f31670540fe98f"
+    sha256 cellar: :any_skip_relocation, monterey:       "2babb876201536cbcbd9a40a25f5ec0af425ff4fe6e5726f90252d56baded949"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4574d326ac02f5ecc8623577de5c6d563aab95c6c38daff5e3ce3044a7730f63"
+    sha256 cellar: :any_skip_relocation, catalina:       "9879361d26e9dbde8294dead6e8b98f795c0a09950a5a6e92a9a7b057a5dc38d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "32d275c1e16d3d76e8e57875dfae24e28618001f72c88f6f2b067b221badb5ed"
   end
 
   depends_on "asciidoc" => :build
