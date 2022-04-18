@@ -7,9 +7,13 @@ class Mold < Formula
   head "https://github.com/rui314/mold.git", branch: "main"
 
   bottle do
-    sha256 arm64_monterey: "b32dc557ed97e7c8b50ec429ee05c7dd9994077ecab1563118a41ece31ced8e3"
-    sha256 monterey:       "a9e6d9a8c32c65ac04cd9664e28f0d466332085e7bb3654c10e57d43d1fba08a"
-    sha256 x86_64_linux:   "e49643664e18d34efc3af508e0cd3f1c4f6c4a08d69f0c05bd7c23dadef06635"
+    rebuild 1
+    sha256 arm64_monterey: "d004bc9405e400c43ee67fe741e037bb2887fe86e950c2866e9cb601d3367a85"
+    sha256 arm64_big_sur:  "aac991f985178cca9645b7296de3a9a3bff45d53626641a920ac491f75314769"
+    sha256 monterey:       "b405e4fd77f61dd4cb9c6575cba9c9d0b80f72a4398b68e8d26a5108c39b1bb8"
+    sha256 big_sur:        "f53f2f2faf8fb14737df9eaa97daacaaa0d81465a59e6f848712889a879ed0c9"
+    sha256 catalina:       "023d89ae608267e726a280836744fe301f95e5704d07d66bd2bce7daae55e9a2"
+    sha256 x86_64_linux:   "5f9a7df69c7de3609ed7804124af7e282ab6ed6573b82e2e69c0633e2c8b9002"
   end
 
   depends_on "tbb"
