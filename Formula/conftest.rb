@@ -7,12 +7,12 @@ class Conftest < Formula
   head "https://github.com/open-policy-agent/conftest.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a9f838c5791a60278c126b660ede641552a3680a622b3b3baa18601ffdc42c23"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "49ee0971a08e59619786608f34ed9215ab0581553b4aa2632065165c0a16e7ba"
-    sha256 cellar: :any_skip_relocation, monterey:       "bf7186a58436241823d7c2ee19cd6d9c4e79b78f6a8c4a45af7b2deb93604bfd"
-    sha256 cellar: :any_skip_relocation, big_sur:        "acf45e31258792cd982d98daaab80a02834a2f3b2d88f002865ce0a8ea7bed3d"
-    sha256 cellar: :any_skip_relocation, catalina:       "c4e23863f2ad42c6e0e1ce001d674ea492441bfc608770b684fd35a7e040f48c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "db388322026eb2337c41d85612884a83a6dd77b15f366ee39365832c08b81954"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "dcc2f29f951bbaf33e6c9a72c1437383915426797e596582c2ac39e4d85ddb99"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6b2640fb88d891bc990aa92b1156d105003cf802b933caa71e757744679f2616"
+    sha256 cellar: :any_skip_relocation, monterey:       "7cae48323d965399f2ac1f6ce59617ac145ece2547701635e837aebc877c4062"
+    sha256 cellar: :any_skip_relocation, big_sur:        "09d6a02765663f1119aeb6961fb7210894411937726a915a3ce97025c283f269"
+    sha256 cellar: :any_skip_relocation, catalina:       "2a5b08157abde7f74693329abbe954b9e1a60a8f45bbcb804177180fac4ff597"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b82856de101c11a1f4aac2ec724775ae8c81d14ebabf4775563e2d0209aac729"
   end
 
   depends_on "go" => :build
