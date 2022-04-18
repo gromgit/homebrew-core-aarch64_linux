@@ -1,8 +1,8 @@
 class Cava < Formula
   desc "Console-based Audio Visualizer for ALSA"
   homepage "https://github.com/karlstav/cava"
-  url "https://github.com/karlstav/cava/archive/0.7.5.tar.gz"
-  sha256 "863578e7d091735fd9c673239058515300faa79ff76304849a93c37ae3bd93cf"
+  url "https://github.com/karlstav/cava/archive/0.8.1.tar.gz"
+  sha256 "b93f9dc1285142c8488dce93f77a5a31b52a7a6ac7a052d9bbe3c78e3507a4e8"
   license "MIT"
   head "https://github.com/karlstav/cava.git", branch: "master"
 
@@ -22,6 +22,7 @@ class Cava < Formula
   depends_on "iniparser"
   depends_on "portaudio"
 
+  uses_from_macos "vim" => :build # needed for xxd
   uses_from_macos "ncurses"
 
   def install
