@@ -1,8 +1,8 @@
 class Mdcat < Formula
   desc "Show markdown documents on text terminals"
   homepage "https://codeberg.org/flausch/mdcat"
-  url "https://codeberg.org/flausch/mdcat/archive/mdcat-0.27.0.tar.gz"
-  sha256 "5c9c2a19ed1e1c0e766094f2ecebda5df37942b96df7a0a87a6681a66a684af2"
+  url "https://codeberg.org/flausch/mdcat/archive/mdcat-0.27.1.tar.gz"
+  sha256 "79961e0a842ee0f68aee3d54b39458352664c67388e56175a9d18d80f357bf14"
   license "MPL-2.0"
   head "https://codeberg.org/flausch/mdcat.git", branch: "main"
 
