@@ -7,6 +7,10 @@ class AnsibleLanguageServer < Formula
   sha256 "388e1610726a8715955caa10afb4a926b9cf748779916ae1ea1d368c2ca1eb2f"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "e6473dbc77fa34c8b6add5cd0441add20ff0698920dd271962595e088eaa0db9"
+  end
+
   depends_on "node"
 
   def install
