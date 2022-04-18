@@ -7,6 +7,10 @@ class Localtunnel < Formula
   sha256 "6fb76f0ac6b92989669a5b7bb519361e07301965ea1f5a04d813ed59ab2e0c34"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "c430fe4d9468d9eaeeabe3c32ffd51c2c93913c3e01bc6a41b947e1acba0bb19"
+  end
+
   depends_on "node"
 
   def install
