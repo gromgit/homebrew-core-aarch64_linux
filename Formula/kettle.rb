@@ -11,8 +11,12 @@ class Kettle < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, all: "0ccda9f659deb86487578d026cf3e82dfd26bd2c3850d6ef486c6fa2d44de07f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ba4505bc117fbad7cec2d0e9421062f018b2f749256c478e8aad75e79bba065c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ba4505bc117fbad7cec2d0e9421062f018b2f749256c478e8aad75e79bba065c"
+    sha256 cellar: :any_skip_relocation, monterey:       "c4ad0f19a4e41e7d86694e6835fbd6072879419e34c4bfab1ab55ee664ffeced"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c4ad0f19a4e41e7d86694e6835fbd6072879419e34c4bfab1ab55ee664ffeced"
+    sha256 cellar: :any_skip_relocation, catalina:       "c4ad0f19a4e41e7d86694e6835fbd6072879419e34c4bfab1ab55ee664ffeced"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ba4505bc117fbad7cec2d0e9421062f018b2f749256c478e8aad75e79bba065c"
   end
 
   depends_on "openjdk"
