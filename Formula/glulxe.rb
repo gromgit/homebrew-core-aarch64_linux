@@ -22,6 +22,8 @@ class Glulxe < Formula
 
   depends_on "glktermw" => :build
 
+  uses_from_macos "ncurses"
+
   def install
     glk = Formula["glktermw"]
     inreplace "Makefile", "GLKINCLUDEDIR = ../cheapglk", "GLKINCLUDEDIR = #{glk.include}"
