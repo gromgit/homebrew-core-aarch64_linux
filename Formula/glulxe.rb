@@ -18,6 +18,7 @@ class Glulxe < Formula
     sha256 cellar: :any_skip_relocation, sierra:         "3a36753838342aef55319fdf1aab32666caffcb714fefd328a93521ed33d6adf"
     sha256 cellar: :any_skip_relocation, el_capitan:     "b5bc0c06241f2c7de3da21b27f2126903550fe959378992fe5260eeedb0f612f"
     sha256 cellar: :any_skip_relocation, yosemite:       "b50be16e36671d7818d123403937496f258882c98bbc6f4d8242c2e6eb97b310"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "337a82286c9b26e303837de8a5d3ff8b108c48ec53b79070bc5ac39c54e16db3"
   end
 
   depends_on "glktermw" => :build
