@@ -8,12 +8,12 @@ class Criterion < Formula
   head "https://github.com/Snaipe/Criterion.git", branch: "bleeding"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "0023dd52165f159b3714626e60a968b2fae23aa4252136a9719a1f008038fafd"
-    sha256 cellar: :any, arm64_big_sur:  "ad565bdd7ddeace8056dbb89fbc278c9af1864a6a8c4573ac56bcd5a466cada0"
-    sha256 cellar: :any, monterey:       "4540263d2c6013dd60143e7f0f5b0c090b20ddf760bdf027c07b8478dd90c69f"
-    sha256 cellar: :any, big_sur:        "5e2cd7bcf2ae4cab91c4b2c9669d48d295e3bfa3f32ef101eb0fc4a4c5f9efe3"
-    sha256 cellar: :any, catalina:       "2bd7d304278a9593d08bba3849ab157b248a7e901efa86e56bd1169773f4ccd5"
-    sha256               x86_64_linux:   "e39a40f48b213e37f0270174ca0836e22459df5c95567de9f498eafa79869534"
+    sha256 cellar: :any, arm64_monterey: "d9bb837fee2955cbf2e152c06a6ee25f9cbf0b5133c8743a211f4219b7f6356e"
+    sha256 cellar: :any, arm64_big_sur:  "27bfdbe463b612044fdb4b1afe10c34cf64ad0c0ba3383c41195b92737c8bf94"
+    sha256 cellar: :any, monterey:       "544ff0341824edbf20ce6af85aca2997227e4e5939dfb76ebd86271b84a99b39"
+    sha256 cellar: :any, big_sur:        "bd9f064b13047f6565af43070e6a8f863c7cd345811c56c189987fb37bc0ab28"
+    sha256 cellar: :any, catalina:       "b02c8f59bbf65e188810d78932638186db3496b6ab558b89c8d45c83dbb0d2be"
+    sha256               x86_64_linux:   "264d2cd7d715301f1fc68567186aa08c3370603c0affeddfd79454f2eb62d228"
   end
 
   depends_on "cmake" => :build
