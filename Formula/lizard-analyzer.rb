@@ -8,13 +8,12 @@ class LizardAnalyzer < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8519ce83f386caab0ffda28fa138646b490c914eca8a03ffd32af55f461f5acc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8519ce83f386caab0ffda28fa138646b490c914eca8a03ffd32af55f461f5acc"
-    sha256 cellar: :any_skip_relocation, monterey:       "46dbc9104c475ec2fc78e92e18c7198b30b76b10a670c586b060d02de5a334f5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "46dbc9104c475ec2fc78e92e18c7198b30b76b10a670c586b060d02de5a334f5"
-    sha256 cellar: :any_skip_relocation, catalina:       "46dbc9104c475ec2fc78e92e18c7198b30b76b10a670c586b060d02de5a334f5"
-    sha256 cellar: :any_skip_relocation, mojave:         "46dbc9104c475ec2fc78e92e18c7198b30b76b10a670c586b060d02de5a334f5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9f04c3501b9bf82469b4581a9ad11b9d6f1995e72e0034486fe6918251977299"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c83c2c3fdb726b91840d2855bb1610d0a6ae28a13dcafdb5de8c919989550361"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c83c2c3fdb726b91840d2855bb1610d0a6ae28a13dcafdb5de8c919989550361"
+    sha256 cellar: :any_skip_relocation, monterey:       "84f2bb45b64ad581b192bece7e059973e44b6b18ea850558091a1c4b44e75181"
+    sha256 cellar: :any_skip_relocation, big_sur:        "84f2bb45b64ad581b192bece7e059973e44b6b18ea850558091a1c4b44e75181"
+    sha256 cellar: :any_skip_relocation, catalina:       "84f2bb45b64ad581b192bece7e059973e44b6b18ea850558091a1c4b44e75181"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9f41ad1d419b165bb654888c8048deacb609b1db3eadf0470e89fb9728ddcf99"
   end
 
   depends_on "python@3.10"
