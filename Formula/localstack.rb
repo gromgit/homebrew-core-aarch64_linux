@@ -3,8 +3,8 @@ class Localstack < Formula
 
   desc "Fully functional local AWS cloud stack"
   homepage "https://github.com/localstack/localstack"
-  url "https://files.pythonhosted.org/packages/bd/4b/17e585c39e9052d1a991e9122e5e33d9844461d6afc6fed9c762a66c3708/localstack-0.14.2.1.tar.gz"
-  sha256 "2893ede1db93db7871ca922ab4e78caa7e6f0cb23b61a8a0625e1b5566a97faa"
+  url "https://files.pythonhosted.org/packages/fa/5d/db1e8d2096df09d223e2d0e8574c73b5180847057338b6ab10bd233932bd/localstack-0.14.2.2.tar.gz"
+  sha256 "615401263c71fd4ff1ce046d86fe1dc42c399ab1ea4916f9ca77931a2b1fd5ac"
   license "Apache-2.0"
 
   bottle do
@@ -26,13 +26,13 @@ class Localstack < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/28/ce/23133724b50af6332c460f9c5745296b172c121b5ceef4c8c1c67598d1a1/boto3-1.21.37.tar.gz"
-    sha256 "013ba57295f05da141e364191dd46f4086e8fe3eb83a3cd09730eeb684ffbab3"
+    url "https://files.pythonhosted.org/packages/20/03/20c773218d08992f63d852a9091cc76d4caa29b7d7d15caf156cb48d0c18/boto3-1.21.43.tar.gz"
+    sha256 "d9428ac1c0d75ad50289cae8cc9a77f56ac04d0f7eee6e7d31167d577df3f6cb"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/63/81/15d714937a265aea46c1b07a51e60113e683f43ba65ed0f41f79d51ce924/botocore-1.24.37.tar.gz"
-    sha256 "70c48c4ae3c2b9ec0ca025385979d01f4c7dae4d9a61c82758d4cf7caa7082cd"
+    url "https://files.pythonhosted.org/packages/08/11/6d90db785fa3dba48bd8d21fa1b7f9d30651be6931dc24b59591d85339ca/botocore-1.24.43.tar.gz"
+    sha256 "76173ec95dce29217ffbd367e689a8bfe056ed2db14b622fb5bfc3903f05b6db"
   end
 
   resource "cachetools" do
@@ -96,8 +96,8 @@ class Localstack < Formula
   end
 
   resource "localstack-ext" do
-    url "https://files.pythonhosted.org/packages/c0/00/c6d0c655417b0c392e05dad24ebb4acb044a506c12716e3fca99da886bb9/localstack-ext-0.14.2.tar.gz"
-    sha256 "99a348a9792bd8460c071f7af83733a58ab89dbba138f48499b8dc5f447272bf"
+    url "https://files.pythonhosted.org/packages/95/c9/6d935f2f51267ebdb0e4bfe4d7ee77c73d2ab1692b00c42d0247f37221e9/localstack-ext-0.14.2.4.tar.gz"
+    sha256 "27260fb61cf65d8c61ffeab0d6ac724a6a9e1bb005ba80e1b8e1a3c530add8af"
   end
 
   resource "ordered-set" do
