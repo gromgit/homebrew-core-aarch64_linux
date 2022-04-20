@@ -12,12 +12,12 @@ class Poco < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "c5803cfda14c21ccc0308d63aee47309308fa8b3a4538769536eb7af15212fdb"
-    sha256 cellar: :any,                 arm64_big_sur:  "48c3e8a3c7bb4839ba4476294912c4c638f7e158c0d665eea66aa854002045f9"
-    sha256 cellar: :any,                 monterey:       "cee35bb37b7d15eff1b7c76c82e423115c53c417528aa54ada947f4de9d05157"
-    sha256 cellar: :any,                 big_sur:        "379a4a4055a10827facf52791873c6040dc349836588cfa18a4d14a938b6e5ae"
-    sha256 cellar: :any,                 catalina:       "9d6965f8ae6b9249dd2d4d9c14b02f8e684d60dde9b1a5e48080f3f34ae29c21"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "15f5fb5a0c2d491148ab5cb029d987fc555a07b47d9799e6aa62bdf5eb0adf3c"
+    sha256 cellar: :any,                 arm64_monterey: "52e25f9e15662296215cccf18fbcd8bec5c636cfac6d5988609bc9e7f2f555c8"
+    sha256 cellar: :any,                 arm64_big_sur:  "9a17c272cca529e104843c46d05f7c880a493f2497e6068e9321b45caeb54780"
+    sha256 cellar: :any,                 monterey:       "c3b565a11da4599d956ff2693058e40b06ae2141ada58b183c141716879e829d"
+    sha256 cellar: :any,                 big_sur:        "77b18141d0efafe8fef4b043782caedea789349824fc4e4d7b4774f6f6220c44"
+    sha256 cellar: :any,                 catalina:       "4614f6dcbfd03e219ee91f723febcb406bff1426d151059707c0ad225984b0a2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b45c9ffaf075e175c6fa585711016a8f3e39e33172f87b36e62bcf993a688996"
   end
 
   depends_on "cmake" => :build
