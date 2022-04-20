@@ -11,12 +11,12 @@ class OpenjdkAT17 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "ccbe0273c5a7203658f49dfa5fc8da51f97e3875738ff7eb163d6134bb84845e"
-    sha256 cellar: :any, arm64_big_sur:  "3cd8c61d7cba2e386e4c7e1a4bd4a93232d9402ca270be1f9ade0c5e5e7fd92e"
-    sha256 cellar: :any, monterey:       "19d0114996e61c6c0b050a8d7fa42db33e472b4be0223db689f0fe3ef8d6d7f8"
-    sha256 cellar: :any, big_sur:        "a1831512f1f2622c86ec3089a3a50e042a2d0bc1b94fde3427c5a68de138216c"
-    sha256 cellar: :any, catalina:       "31da83147fa02eed10c5f803149313b47f7db9e53048beb0ee51d01760bffdce"
-    sha256               x86_64_linux:   "83e812194fe962c54efa7daa50c5094431413c583cddbc9e17dfaa3d470333d4"
+    sha256 cellar: :any, arm64_monterey: "a0f5189a1719c2d6530ee79eb018470e9e86321c745ed73c5e15c8465df0c24d"
+    sha256 cellar: :any, arm64_big_sur:  "caf9fc1ab57cbe96155d11cc4c5076fa05204058c41dab9bee6e79d79aa27192"
+    sha256 cellar: :any, monterey:       "b7cf051662b5d6a7839e6d65010adff4a0c980fa03b56447090996d6052aa569"
+    sha256 cellar: :any, big_sur:        "c47a05de36d684b0b893fb096bc1adfee80b47b47eda4e08204fab0151abe746"
+    sha256 cellar: :any, catalina:       "49bd4a42120737354c356f2ce35c5b65937fdf8970815693b0268c367f5e5de8"
+    sha256               x86_64_linux:   "1c4ff0b196cbe8daa32e0e73d47b5424572a2f641708ae91a9f6fcc8dbb05568"
   end
 
   keg_only :versioned_formula
