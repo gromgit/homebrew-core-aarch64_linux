@@ -25,6 +25,9 @@ class Itex2mml < Formula
     sha256 cellar: :any_skip_relocation, mojave:         "ca96d27550adc14145a18df3a31ed79dfd12d082f7e4dbccce73e8eabe4ae69e"
   end
 
+  uses_from_macos "bison" => :build
+  uses_from_macos "flex" => :build
+
   def install
     bin.mkpath
     cd "itex-src" do
@@ -34,6 +37,10 @@ class Itex2mml < Formula
   end
 
   test do
-    system "#{bin}/itex2MML", "--version"
+    input = "$f(x)$"
+    output = "<math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'><semantics><mrow>" \
+             "<mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></mrow>" \
+             "<annotation encoding='application/x-tex'>f(x)</annotation></semantics></math>"
+    assert_equal output, pipe_output("#{bin}/itex2MML", input)
   end
 end
