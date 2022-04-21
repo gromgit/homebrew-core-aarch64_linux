@@ -11,13 +11,12 @@ class X8664ElfGcc < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "daa3c262b5f625970ea90224a3ce51d5f31cb4768d6a743c880668cfb90717b7"
-    sha256 arm64_big_sur:  "8e89022ae000f049ac34f4e2f886faf94204e37b70da7e1b15f38c7b3d4a8f24"
-    sha256 monterey:       "4240152e303babaf8e156be70d0b9cfd775ac14b001367f563b055e0aeb6dc2e"
-    sha256 big_sur:        "549b28626170548e9def8448a09f4bb1854900652ef802672a30f691a9b44a3e"
-    sha256 catalina:       "6435d295ad77d012c577005b1758b3be3ae11b51f0f5d257c0f59f79e227575e"
-    sha256 mojave:         "74ed5acd47ee9fa82ba79c276eb996adf6f49dbb17e917dc02bec3e348cf7cd8"
-    sha256 x86_64_linux:   "27f94a03a1c3fda8820f6ce864ea4b3278600073eb0e9e258efc8ced07d5c088"
+    sha256 arm64_monterey: "cd6b3ce3415c289b200a1b9d7925443a47e04b7b2328422d7346f28b2a7f8fdd"
+    sha256 arm64_big_sur:  "980077ad354eda2a70e3b8e0e85bd1687457e4e64d6374615c610a59627eadc4"
+    sha256 monterey:       "4f142e84145726f91744be5b04b02e5fe985385d025da82c631358a334842ed0"
+    sha256 big_sur:        "55a7c6a05daec994869cf808276f9189d0269fa1a313ec98e3237712d5a4f70b"
+    sha256 catalina:       "466f377c7c9b0c6e95ad2a9caa203f001cbceb971a57af3e23cd41e068d964d4"
+    sha256 x86_64_linux:   "ab3e3732c5b714cc7c17b2a18e3613c9a33ed69dc07b6a3e34b0dd14d6d64bd9"
   end
 
   depends_on "gmp"
