@@ -7,11 +7,11 @@ class Werf < Formula
   head "https://github.com/werf/werf.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "773f4ed73e7b35a811e00d515cc1134269c619c40afb0fbe8003ca1919731241"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8fe0955e5bf60ebe4e1893e76938462bbd0839a08ebfdba99507d18dab198036"
-    sha256 cellar: :any_skip_relocation, monterey:       "68832b822089fb94220239f5994fb4658045b2d0951a6769f04adb8b903babf4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ada06998bba1e861ef68bb18352272607fd650f4d1914d416aced31921382243"
-    sha256 cellar: :any_skip_relocation, catalina:       "c12cbff11a1ceb11fc2936e059ff7111add4b18016851e12ed60c83d4aab7f5d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "819a4adefcd0f48e70d94b99e9f3bdc2638106105f328c124525975fc8aac595"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "acbf3f8ca41d61731b14a07eeaa1c08d3962432d7a7dd96d7bb3574fad099a21"
+    sha256 cellar: :any_skip_relocation, monterey:       "de7bb39d9c19e282ed8b6d57077f704cce9bddcc375322af6188fb16dd8715ea"
+    sha256 cellar: :any_skip_relocation, big_sur:        "666dd328f65b2232ada7b7353a472e95d95caaa2e33165161836d973a62f0af5"
+    sha256 cellar: :any_skip_relocation, catalina:       "2d68be03687f66ced3dd0225b1eed897c4363eee5afc5f1dde0e00f603ee1a4e"
   end
 
   depends_on "go" => :build
