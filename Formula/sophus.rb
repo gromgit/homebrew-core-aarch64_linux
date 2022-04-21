@@ -6,6 +6,10 @@ class Sophus < Formula
   license "MIT"
   head "https://github.com/strasdat/Sophus.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "dfe43682c321e12b9fa343d74f4e9c4649f6fe362365ed1552a3c4f79c2c1a9c"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "ceres-solver"
   depends_on "eigen"
