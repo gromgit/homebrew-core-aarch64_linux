@@ -17,6 +17,7 @@ class Qjackctl < Formula
     sha256 monterey:       "04e9744e207ad9fe2606ade63c5a29ac409272c16a94f2da27485d213bcfbda3"
     sha256 big_sur:        "32d70991bbeddfe94caf896714e472465c4ace052e83853351dceb8256a92641"
     sha256 catalina:       "342d2cff1bad3ab3424bb7bbc8b6e4844313d3c9f2de6112a0dcdcde226ea8f1"
+    sha256 x86_64_linux:   "0850fa38920a8dbec901ef6552966f1f5d166c5089b202cafa0c11e4ecafd9ac"
   end
 
   depends_on "cmake" => :build
