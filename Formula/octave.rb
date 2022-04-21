@@ -7,12 +7,12 @@ class Octave < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_monterey: "a46ec79c5db02b1909b78383078cc21e1e928563276f33aba2a69118a29d9788"
-    sha256 arm64_big_sur:  "482b7d3b39f0a9e21e3c18b21e789236bdcbeb58ec6725506700affaae9d5e7b"
-    sha256 monterey:       "4014fa6f73e785fb482b5f489ec32c35e7311f5ba88114827fd4731c0840e0de"
-    sha256 big_sur:        "3dc33829e9eacd3ac7cd72ad09f42878a79eb9ebf2013c05d705677ca0b45521"
-    sha256 catalina:       "fed7602f64279222a8971ce707e8e8d2667368f3e87acc9b9be12785fb93be0a"
-    sha256 x86_64_linux:   "ac9b9f876d7e931b0498ccc0fb4fda288e7e8e155e75fc5b938233aa4d5fc990"
+    sha256 arm64_monterey: "b0c56ca1b2b913f55813b443768907206091094665bf9001b32a2250fdaa7d8c"
+    sha256 arm64_big_sur:  "2d6e45924191d9b3eeb7d3b842f09938bc991e2418a8bbf4e82bb16320479e78"
+    sha256 monterey:       "b96992c5b7aa8291fb55d6fdb274ed5f6cb90bd6ae09590ab013dbf1877e7d17"
+    sha256 big_sur:        "61fe719c04e2ba4090c931fc8a971e1a47ea2e02e6db8d478c2eec075d1b4db3"
+    sha256 catalina:       "9d76fb6dfffc1ef1da5dc477960f1fb3070ac002933f317c04430dd76647e9d6"
+    sha256 x86_64_linux:   "5cb16aa6e965c6e327909d9681876cd1c385febb093821aa201f75d80a02aea9"
   end
 
   head do
