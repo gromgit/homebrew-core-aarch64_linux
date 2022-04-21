@@ -11,12 +11,12 @@ class Aarch64ElfGcc < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "92474692b6ef287cb63ec41a10514aeaad71affbf192407ee29855c170eda306"
-    sha256 arm64_big_sur:  "2a4d21fcaea6782bd26d412d678708360233295cd7571ac322c6d9e214eaf7e4"
-    sha256 monterey:       "a98058438dfd98f239883fdc781ecf7cd2be11a52664e4ce2a6c21680e9f693b"
-    sha256 big_sur:        "d7c2e86dddb3b3f8eeee5eb1c779d799f81f96876aa8fcb02bbfdc19087eeb5b"
-    sha256 catalina:       "0303660a6f129a103c50aa5e6b3953ea9ede1b30730b6c2d908665bce6aa68b8"
-    sha256 x86_64_linux:   "189149b0bf9d4070e762a1ffc6270a15e10183b0496ffcb0253b50126f8bc99d"
+    sha256 arm64_monterey: "811f87424a1b04d4b048ef2780e7dbcb60e489f7aa403325db24c7c5a9163487"
+    sha256 arm64_big_sur:  "ad8728093b6361ad6b87e6d90623679182ddac206a396c296790ec3095085255"
+    sha256 monterey:       "b2e2f6d975f9e6af6f6816581576a707eb76e17060550707d714fbe86d74d193"
+    sha256 big_sur:        "de1486aa1d4945629d7362af05cd48157417d67c9a9e3a217121c4f3abb455bf"
+    sha256 catalina:       "f5c916b98ae3f86bf6f0e37c28a60e64cefa8471b2bd68c336562249852d3feb"
+    sha256 x86_64_linux:   "406b6786d103997db7e309863b2ee832d757140192c067976352ac7821ae5cd8"
   end
 
   depends_on "aarch64-elf-binutils"
