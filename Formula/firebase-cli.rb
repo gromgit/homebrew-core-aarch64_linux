@@ -9,12 +9,12 @@ class FirebaseCli < Formula
   head "https://github.com/firebase/firebase-tools.git", branch: "master"
 
   bottle do
-    sha256                               arm64_monterey: "fc97923311b14a6f3e1bb518184dfc9b14a73801880581cad1c3f4f7ed7ef2fc"
-    sha256                               arm64_big_sur:  "cce070f4b142b22b93604a6558863d5c7fd84b99aace05cff86b12c8d8dfa724"
-    sha256 cellar: :any_skip_relocation, monterey:       "b0879596b9b464054e3f2d01df161ae7b8bb33eb4afbeb3f0a3ccbec85c0363d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b0879596b9b464054e3f2d01df161ae7b8bb33eb4afbeb3f0a3ccbec85c0363d"
-    sha256 cellar: :any_skip_relocation, catalina:       "b0879596b9b464054e3f2d01df161ae7b8bb33eb4afbeb3f0a3ccbec85c0363d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "febef05116cb934bf904b2955070722aa98e5f7d3203f15374f4c7575f1d506f"
+    sha256                               arm64_monterey: "9fbb096b2871b79c4bc284811a1b98e238348c7912cf701d24c6971a0caaf055"
+    sha256                               arm64_big_sur:  "af38804a2c4250b653735d7500a4aa2de5a58f2554664b1cd73a04a53897213c"
+    sha256 cellar: :any_skip_relocation, monterey:       "841203d6cc9aaf318295c504fed1465ead075afd9b47e2bdadbb27258408aaad"
+    sha256 cellar: :any_skip_relocation, big_sur:        "841203d6cc9aaf318295c504fed1465ead075afd9b47e2bdadbb27258408aaad"
+    sha256 cellar: :any_skip_relocation, catalina:       "841203d6cc9aaf318295c504fed1465ead075afd9b47e2bdadbb27258408aaad"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8fae6cc5be93ed0f7531bf423daffccd66fc2977e48ada04424829434f1a5a94"
   end
 
   depends_on "node"
