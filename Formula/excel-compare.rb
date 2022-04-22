@@ -6,7 +6,7 @@ class ExcelCompare < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "9fb9c234a52f1039d1f3ce60f339feb29020cd7a82b7b6c6fd45fcf6c694478a"
+    sha256 cellar: :any_skip_relocation, all: "c10f730b3efa50a374ad314b4f3f18de7f43a3375861f36a13799a599aa91026"
   end
 
   depends_on "openjdk"
