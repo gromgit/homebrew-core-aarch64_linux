@@ -7,7 +7,7 @@ class TomeePlume < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "d417c94d915ac9ebf233e64b59f815319b2f8d8e114b321747762b1112c4bd7f"
+    sha256 cellar: :any_skip_relocation, all: "dad8ba85ad7e1ba9c55b482ffcf1f8a9b8642979f5abf2816be9dfcb97c7015e"
   end
 
   depends_on "openjdk"
