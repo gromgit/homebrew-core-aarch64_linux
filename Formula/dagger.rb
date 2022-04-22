@@ -2,8 +2,8 @@ class Dagger < Formula
   desc "Portable devkit for CI/CD pipelines"
   homepage "https://dagger.io"
   url "https://github.com/dagger/dagger.git",
-      tag:      "v0.2.6",
-      revision: "e2c2213a38f9b6d63dc6d0aa07e192ce8613a503"
+      tag:      "v0.2.7",
+      revision: "18c19174a2a892ff3157a4a3a8bb06ab6dcb50fe"
   license "Apache-2.0"
   head "https://github.com/dagger/dagger.git", branch: "main"
 
@@ -41,10 +41,11 @@ class Dagger < Formula
   test do
     assert_match "v#{version}", shell_output("#{bin}/dagger version")
 
-    system bin/"dagger", "project", "init"
+    system bin/"dagger", "project", "init", "--template=hello"
+    system bin/"dagger", "project", "update"
     assert_predicate testpath/"cue.mod/module.cue", :exist?
 
-    output = shell_output("#{bin}/dagger do test 2>&1", 1)
+    output = shell_output("#{bin}/dagger do hello 2>&1", 1)
     assert_match(/(denied while trying to|Cannot) connect to the Docker daemon/, output)
   end
 end
