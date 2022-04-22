@@ -12,12 +12,10 @@ class Mongrel2 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 monterey:     "659082758f176f43b20faecebb11df5a5f1b92237638e1aa083d84f37af0d468"
-    sha256 cellar: :any,                 big_sur:      "8f991bcd7c13374bb5cdea84d551da20b5c15885c54c1d9cee8dfc960776cb1d"
-    sha256 cellar: :any,                 catalina:     "b410e2526d00b6ba46854e3924889cd96d23c871f9351fb7f050234bbe332904"
-    sha256 cellar: :any,                 mojave:       "c0e9720ac266d01411da10390981f34f63308e42b7a5738bebc5378d9c18f134"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "1b3aff8dd29b275f0a1a3a57e014adab779fbacc74a8deee8829a27171dbb32e"
+    sha256 cellar: :any,                 monterey:     "5bbd0bb3f0ff9147810b45a7a9c55e1c1b7cab73e3f5ba7f03a77b9c385bc4bd"
+    sha256 cellar: :any,                 big_sur:      "560c6b6dc8cd05ee5feefe62e3f87c740be212a8a7e4ddda290549448650f395"
+    sha256 cellar: :any,                 catalina:     "b7e0d3b8495e1eccf5acfe73981aa84fe0245b1c7d9f7a2db6cee6b64dcd4b76"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "d117a88b346fc34a3a279f08abd2707876d73aa6cd2e6a46eb085c67f440ea32"
   end
 
   depends_on "zeromq"
