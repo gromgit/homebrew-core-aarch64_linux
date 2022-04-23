@@ -26,6 +26,7 @@ class Libmarpa < Formula
 
   def install
     ENV.deparallelize
+    inreplace "work/etc/libmarpa.pc.in", "prefix=\".\"", "prefix=\"#{prefix}\"" if build.head?
     system "make", "dists"
     system "cmake", "-S", "cm_dist", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
