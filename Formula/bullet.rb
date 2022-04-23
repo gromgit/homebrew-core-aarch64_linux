@@ -1,10 +1,21 @@
 class Bullet < Formula
   desc "Physics SDK"
   homepage "https://bulletphysics.org/"
-  url "https://github.com/bulletphysics/bullet3/archive/3.21.tar.gz"
-  sha256 "49d1ee47aa8cbb0bc6bb459f0a4cfb9579b40e28f5c7d9a36c313e3031fb3965"
   license "Zlib"
   head "https://github.com/bulletphysics/bullet3.git", branch: "master"
+
+  stable do
+    url "https://github.com/bulletphysics/bullet3/archive/3.22b.tar.gz"
+    version "3.22b"
+    sha256 "c6cd89ecbc4bd73fee64723c831c1578daab056d88774755a6f56afc6f417b2b"
+
+    # Fix btSoftBodyHelpers.h invalid dependency on example header that is not installed.
+    # Remove in the next release.
+    patch do
+      url "https://github.com/bulletphysics/bullet3/commit/4f0673810cab0eee67ea314a3243952afd150cb4.patch?full_index=1"
+      sha256 "577ec365785924f29533bf5bdaef168c851e414aeebd3fe8b4a2d5286d773553"
+    end
+  end
 
   bottle do
     rebuild 1
@@ -21,6 +32,10 @@ class Bullet < Formula
   depends_on "python@3.10" => :build
 
   def install
+    # C++11 for nullptr usage in examples. Can remove when fixed upstream.
+    # Issue ref: https://github.com/bulletphysics/bullet3/pull/4243
+    ENV.cxx11 if OS.linux?
+
     common_args = %w[
       -DBT_USE_EGL=ON
       -DBUILD_UNIT_TESTS=OFF
