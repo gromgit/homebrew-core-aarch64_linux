@@ -11,12 +11,12 @@ class PerconaServer < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "eed459b84efe156880bd064e4c699008cece4e561c9f259d01e40643a777f725"
-    sha256 arm64_big_sur:  "cdac7712f7fe0bae261ba51d0e125f644240ea3090e0a3568f054ca73df68e37"
-    sha256 monterey:       "f3bbc3dd7af5f40092796bf42c2af92bfa394935ce9db976e55f589d4266771e"
-    sha256 big_sur:        "7c620f3b358462dffedf11cf4307d114c982b5067e5ad9cdd8017306ab8d2cf9"
-    sha256 catalina:       "111ad91b3285d47ca9c7d48ab39cc70e3a1881e72d725cce568521cae6db3887"
-    sha256 x86_64_linux:   "1646a7bc159a5f7ef6c523fbceda581602fe2027f6e9b5301fa02a5b075ce7d9"
+    sha256 arm64_monterey: "b0e80bcf721b873ac57c0cc24b3747cba29ebabb87536ad9d8e5e6359aa1dbc1"
+    sha256 arm64_big_sur:  "a85083339696b0326137952676edd2a1e6cce7ae6a1f6741aebe1dc0943d01b7"
+    sha256 monterey:       "f37dd629634fb61a9f11b4ce744015aea18440d4e94dc0a7255e54105a5c7715"
+    sha256 big_sur:        "d2a42e17afcfe577c011acae65d74fd9f7a30980fdd3d90962d303bc0f72aeac"
+    sha256 catalina:       "7de452f8b76a3676ccdbd270c0200e3a92afc63c6a45c1b92ec9b86a461d81bf"
+    sha256 x86_64_linux:   "92eb0368c60792661cdb40027a6b3fd875f8a492720ed7f24486e7962c5a4a99"
   end
 
   depends_on "cmake" => :build
