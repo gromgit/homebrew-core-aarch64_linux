@@ -11,12 +11,13 @@ class Rtmidi < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "119f3146edf9cc4cea730af3f7cc5ed437116e5b9883eee93d1b1c3b5ec272fa"
-    sha256 cellar: :any,                 arm64_big_sur:  "d435e2c62031b6875cb20f74afd51dfa6a139d939fa8b086178c0ae8951c8b29"
-    sha256 cellar: :any,                 monterey:       "bcfcec8795e6500eba8b58b940d52df7bcf23238807167e314ff88433493aa04"
-    sha256 cellar: :any,                 big_sur:        "1fda9d73d29790438c32a1cb18b9ef58d1634e6e66342e5fce0b1a12f2e85556"
-    sha256 cellar: :any,                 catalina:       "f6cec4256b87acc86cde5f876fac9181972ffa36c60278abbd2e0c4b0f05d10d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "04b6086029ec9145007d5f7d4ea3fef4fba38d5389bab5d1d1a7c5860d864271"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "86041822edcaa7afac16ff5dee154e9a084f52875ed079e7be28855ab975a709"
+    sha256 cellar: :any,                 arm64_big_sur:  "bb77151087977965b9ccea0b258d329a92680480e7f4d14d1c18653f124c489e"
+    sha256 cellar: :any,                 monterey:       "2830c3a78906afda1df6044c480ad2c1812c63ec8350050f67df4d58934d6808"
+    sha256 cellar: :any,                 big_sur:        "5b7111fe395363ab657108c3aa974a8fa8aa532f422b0f53b88eb8d8fddf6eb1"
+    sha256 cellar: :any,                 catalina:       "43371383eb4e84c1eaac5ac32e71c67ff2d42ec65086a8908929f894a8b18278"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d490d8cf367b9f46321551f833fcfa65fcd6d5e9f27ea0b75dd29fdf0b3e4091"
   end
 
   head do
