@@ -12,12 +12,12 @@ class Node < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "5984d1220465b1229aeedb9db44b8e7bb6874586c94a0693659743e72229798b"
-    sha256 cellar: :any,                 arm64_big_sur:  "aa95add370633f339ed6d82a3333d8dc34135eb33d91c5df7782464c10e1107f"
-    sha256 cellar: :any,                 monterey:       "04f730e4eda20a5b55092efdc63edd50eea184cdf330182370759de39dc7f748"
-    sha256 cellar: :any,                 big_sur:        "699193e0537ec8db98aaf07dedd07556c28107a8504bad9e13b5229456161eda"
-    sha256 cellar: :any,                 catalina:       "2177180ccee888e9033dc15e18a9e165933f930918fc3da7342fdba00494d274"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "649f4c08e4341398c50a4351bd9f10f99566374e6ea544565a5a01bf2ef43e96"
+    sha256 cellar: :any,                 arm64_monterey: "c712a5bbc21c5d22250079e77a1cde2eb57a6d67967b3562eb9eda4c5f0cf239"
+    sha256 cellar: :any,                 arm64_big_sur:  "091d088c725eac508edcd842e5b01ce559d09468470c7fda27935862d872e61d"
+    sha256 cellar: :any,                 monterey:       "087f60d39f316c8762569df84c600b77ac9374c181f9763c5e8262a7e23f6191"
+    sha256 cellar: :any,                 big_sur:        "4200d108254940459db827ef55c71480d105fa7b34cc23e88045d34ad76c5755"
+    sha256 cellar: :any,                 catalina:       "094c89eae014a4b4e98db477488bfd37a83f03bca6f707fab35b3db555292e71"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1885b4c2a37cf2a49afcae53a800c3503fd83727227e23fbb53bba1161624053"
   end
 
   depends_on "pkg-config" => :build
