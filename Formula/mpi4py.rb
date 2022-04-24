@@ -7,13 +7,12 @@ class Mpi4py < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_monterey: "2450810fe0211f381bb0ef21509b36b9e5f2f39a11d66f40bfe8682d3f2a173a"
-    sha256 cellar: :any, arm64_big_sur:  "6f18b4c0ee6f7442309cf2080d726e9f5304099a369b73bd0c707bf3052fd4c2"
-    sha256 cellar: :any, monterey:       "ad2feec973870a61669dbdff6e12339221fea235d0c9b86d42ce8c208871a8c2"
-    sha256 cellar: :any, big_sur:        "3b5d7c9bcf52b1f8372c73647cbbc08a6bedda23608aa90e64de509ba04d030a"
-    sha256 cellar: :any, catalina:       "2b264bab7b5d9d1b1510ce4c1b32d5e121d3ada6a16ff876c95eb103250aa1d8"
-    sha256               x86_64_linux:   "0e82afb7d7b13191157454c8913f09349609b52e2cf62be72537855af59da183"
+    sha256 cellar: :any, arm64_monterey: "946f6f8a44728bc6d722b99f2d00b1c48ca193e1dfd41141e90fb275c8b75728"
+    sha256 cellar: :any, arm64_big_sur:  "a3416cd9880da75b4d5db012357f15aa96ae7d2bfebb5d4c9ec9ae8c793d4ae7"
+    sha256 cellar: :any, monterey:       "3a988e161949d411bb04d739dbe6df7656b186ba01bd57e316ab6f1973d2547a"
+    sha256 cellar: :any, big_sur:        "34e04f91e516fd44ba1db2d55de5ca8dd75da0c2a789236cb1a569ea8692dac0"
+    sha256 cellar: :any, catalina:       "447946e2022c7d0923e50ff8c7408f82a6b063a393b5d55a8f0f499d4846a8a0"
+    sha256               x86_64_linux:   "5105e6dde4d9578e270ee47a80b44ccd7127e3dbb8a5d8776a674673d4695d60"
   end
 
   depends_on "libcython" => :build
