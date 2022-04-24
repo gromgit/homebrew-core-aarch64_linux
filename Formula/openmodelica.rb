@@ -6,7 +6,7 @@ class Openmodelica < Formula
       tag:      "v1.18.0",
       revision: "49be4faa5a625a18efbbd74cc2f5be86aeea37bb"
   license "GPL-3.0-only"
-  revision 1
+  revision 2
   head "https://github.com/OpenModelica/OpenModelica.git", branch: "master"
 
   bottle do
@@ -40,6 +40,10 @@ class Openmodelica < Formula
   uses_from_macos "expat"
   uses_from_macos "libffi", since: :catalina
   uses_from_macos "ncurses"
+
+  # Fix -flat_namespace being used on Big Sur and later.
+  # We patch `libtool.m4` and not `configure` because we call `autoreconf`
+  patch :DATA
 
   def install
     if MacOS.version >= :catalina
@@ -81,3 +85,28 @@ class Openmodelica < Formula
     assert_match "class test", shell_output("#{bin}/omc #{testpath/"test.mo"}")
   end
 end
+
+__END__
+--- a/OMCompiler/3rdParty/lis-1.4.12/m4/libtool.m4
++++ b/OMCompiler/3rdParty/lis-1.4.12/m4/libtool.m4
+@@ -1067,16 +1067,11 @@ _LT_EOF
+       _lt_dar_allow_undefined='$wl-undefined ${wl}suppress' ;;
+     darwin1.*)
+       _lt_dar_allow_undefined='$wl-flat_namespace $wl-undefined ${wl}suppress' ;;
+-    darwin*) # darwin 5.x on
+-      # if running on 10.5 or later, the deployment target defaults
+-      # to the OS version, if on x86, and 10.4, the deployment
+-      # target defaults to 10.4. Don't you love it?
+-      case ${MACOSX_DEPLOYMENT_TARGET-10.0},$host in
+-	10.0,*86*-darwin8*|10.0,*-darwin[[91]]*)
+-	  _lt_dar_allow_undefined='$wl-undefined ${wl}dynamic_lookup' ;;
+-	10.[[012]][[,.]]*)
++    darwin*)
++      case ${MACOSX_DEPLOYMENT_TARGET},$host in
++	10.[[012]],*|,*powerpc*)
+ 	  _lt_dar_allow_undefined='$wl-flat_namespace $wl-undefined ${wl}suppress' ;;
+-	10.*)
++	*)
+ 	  _lt_dar_allow_undefined='$wl-undefined ${wl}dynamic_lookup' ;;
+       esac
+     ;;
