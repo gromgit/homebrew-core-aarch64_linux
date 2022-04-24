@@ -18,13 +18,12 @@ class Proftpd < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "6661c5df232e3e2f8e0609fad62bcaaee63d626d831752bdcdfb8d84a9d124b2"
-    sha256 arm64_big_sur:  "0429e46d82d193acdb80410a84c9d00d26e8a0510b0b5ec29ab7aa543d41f46a"
-    sha256 monterey:       "add62615c7234194288b6d780955ed00e7bbeb5b854765acc5a380ac1d203fd2"
-    sha256 big_sur:        "1a4d0410392d18250ea4f29fe056e3e647345bb940f3b918fae448fe16bb4562"
-    sha256 catalina:       "e40fb1eb3c76ff530fbf95275200defdcc38bb16ed3de8dfe90f5bcdf0965ae4"
-    sha256 mojave:         "c6143e56532ccfe54ce0ef2889a356656d7c9800c93e18cdafd8d5430be3a43c"
-    sha256 x86_64_linux:   "9539952d41b01326e358bc32ae8aa96297154b992e5359b5ee29e3a4b1f20036"
+    sha256 arm64_monterey: "8d97c057ebfbd1ab98b71246881ba2d1222bd1bc84af7eb81ce2bb02e36cf4c5"
+    sha256 arm64_big_sur:  "5f881c036c3fc61f8a61e9e8a0b681a9484cda34d6346e8c612ebbd30b687e95"
+    sha256 monterey:       "4e204f7b1696bc8271e570bb44bce932cc24a7b09a3ba527bad687222afb8aa0"
+    sha256 big_sur:        "2ae3fa57bcdebd8472888b2f49179ec1c43e5ca516021eb3b715e3c2ea75c06b"
+    sha256 catalina:       "95239aa03a189cff108522fee0ef1c281547aa662d3f69af74d1dd7416012284"
+    sha256 x86_64_linux:   "b4c6e6de0169554fad7d91e497a3c6f4764ad01ebaa31c7ce2771edf0205db2b"
   end
 
   def install
