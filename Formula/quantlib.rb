@@ -6,12 +6,12 @@ class Quantlib < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "bbead0dc54dcc9e65fcb9b07df7b99de5a283b724b49af3a10f1915a54837cc7"
-    sha256 cellar: :any,                 arm64_big_sur:  "4153ec68ee7db16e603d92c870983f6733e6c90353d2ab9f4d473417e1351406"
-    sha256 cellar: :any,                 monterey:       "e6120451ec188afc0fd50a71de125ae2e6b0858fd66bca2b39f3a6ef91090fee"
-    sha256 cellar: :any,                 big_sur:        "179ac883ba7f01c695bb5e77efbf3eca13a63bc7e40a827d81747382d00d092b"
-    sha256 cellar: :any,                 catalina:       "d8d24f3b576291bf5ceba3553897e5e5e71be85609c98cab5d5b31fa0827f622"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aadf3b7fbd1be69b3a92fc67095e8570a596fc8f381fa2e611dbaeea82fb3583"
+    sha256 cellar: :any,                 arm64_monterey: "2ddeb386e7eb27aab8f00620125603599dd3371039ad911a6e0196c1ffaba809"
+    sha256 cellar: :any,                 arm64_big_sur:  "cfce6241b00cc27687f707239e799d8d3d1cc8867cabfcd19170dea66c82020c"
+    sha256 cellar: :any,                 monterey:       "ed88f2b4b58d73bc14a509d387a9c5f78949f29dc82438a240d35b2fee800bd5"
+    sha256 cellar: :any,                 big_sur:        "abbf1c1ae1dd97370d5368bc59e18ec2ef85217c7d75a073326558111d665f29"
+    sha256 cellar: :any,                 catalina:       "a2d53f05e70f1ee733ae7d7f6617c00bd8fd032a725c8ab02dc87581864352fb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a08314adef6c54e10a7fb4eee7c38f811791a055a4cf90241208a802db7fbba6"
   end
 
   head do
