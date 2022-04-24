@@ -1,8 +1,8 @@
 class Atuin < Formula
   desc "Improved shell history for zsh and bash"
   homepage "https://github.com/ellie/atuin"
-  url "https://github.com/ellie/atuin/archive/refs/tags/v0.8.1.tar.gz"
-  sha256 "225e2bd85370772094434841019ea628c7f0d4cf61e7f4ba986b7eeea15942a0"
+  url "https://github.com/ellie/atuin/archive/refs/tags/v0.9.1.tar.gz"
+  sha256 "25bba040c828ed6b36fd2c8903cc157ea8259e578d5a0bd71e8b69935d9bede4"
   license "MIT"
 
   bottle do
@@ -21,6 +21,8 @@ class Atuin < Formula
   end
 
   test do
+    # or `atuin init zsh` to setup the `ATUIN_SESSION`
+    ENV["ATUIN_SESSION"] = "random"
     assert_match "autoload -U add-zsh-hook", shell_output("atuin init zsh")
     assert shell_output("atuin history list").blank?
   end
