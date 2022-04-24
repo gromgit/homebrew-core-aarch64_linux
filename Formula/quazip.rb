@@ -1,8 +1,8 @@
 class Quazip < Formula
   desc "C++ wrapper over Gilles Vollant's ZIP/UNZIP package"
   homepage "https://github.com/stachenov/quazip/"
-  url "https://github.com/stachenov/quazip/archive/v1.2.tar.gz"
-  sha256 "2dfb911d6b27545de0b98798d967c40430312377e6ade57096d6ec80c720cb61"
+  url "https://github.com/stachenov/quazip/archive/v1.3.tar.gz"
+  sha256 "c1239559cd6860cab80a0fd81f4204e606f9324f702dab6166b0960676ee1754"
   license "LGPL-2.1-only"
 
   bottle do
@@ -16,15 +16,21 @@ class Quazip < Formula
 
   depends_on "cmake" => :build
   depends_on xcode: :build
-  depends_on "qt@5"
+  depends_on "qt"
+
+  on_linux do
+    depends_on "gcc"
+  end
+
+  fails_with gcc: "5" # C++17
 
   def install
-    system "cmake", ".", "-DCMAKE_PREFIX_PATH=#{Formula["qt@5"].opt_lib}", *std_cmake_args
+    system "cmake", ".", "-DCMAKE_PREFIX_PATH=#{Formula["qt"].opt_lib}", *std_cmake_args
     system "make"
     system "make", "install"
 
     cd include do
-      include.install_symlink "QuaZip-Qt#{Formula["qt@5"].version.major}-#{version}/quazip" => "quazip"
+      include.install_symlink "QuaZip-Qt#{Formula["qt"].version.major}-#{version}/quazip" => "quazip"
     end
   end
 
@@ -38,7 +44,7 @@ class Quazip < Formula
       SOURCES     += test.cpp
       INCLUDEPATH += #{include}
       LIBPATH     += #{lib}
-      LIBS        += -lquazip#{version.major}-qt#{Formula["qt@5"].version.major}
+      LIBS        += -lquazip#{version.major}-qt#{Formula["qt"].version.major}
     EOS
 
     (testpath/"test.cpp").write <<~EOS
@@ -49,7 +55,7 @@ class Quazip < Formula
       }
     EOS
 
-    system "#{Formula["qt@5"].bin}/qmake", "test.pro"
+    system "#{Formula["qt"].bin}/qmake", "test.pro"
     system "make"
     assert_predicate testpath/"test", :exist?, "test output file does not exist!"
     system "./test"
