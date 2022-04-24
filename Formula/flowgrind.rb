@@ -11,10 +11,12 @@ class Flowgrind < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "f1a52d1f915547526cc01ea5be8907ff9580919ea3d838c8bfb16bf9cd0a4675"
-    sha256 cellar: :any,                 big_sur:       "7deade98f4d2b56a16b700d708e014cc9d66224f429629c646e0c45dbc659759"
-    sha256 cellar: :any,                 catalina:      "b6351fe504faa1294e6f280d30bdaeeda2fe93e222146503c8f06e53ab7b57cd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a103a74d717b0944d8e3849414c122d9e0cd9b071c7305bf2a8f5ea6b7003086"
+    sha256 cellar: :any,                 arm64_monterey: "936a077b8e11db4f99e5058f066587c21422f031b9fce0b744497056eb2824ef"
+    sha256 cellar: :any,                 arm64_big_sur:  "5197881bee816a11514b94fe4081de199060a9f97a21bab350cbfa299f438a4b"
+    sha256 cellar: :any,                 monterey:       "0a3ef485aae774dca957e4546cbbbae4c3cf218049429bf8f3b1fd030467be6b"
+    sha256 cellar: :any,                 big_sur:        "d9e948718dbc34b0d94b63bd7dac9f139558011c3a46e17caa8fc009b344afa4"
+    sha256 cellar: :any,                 catalina:       "458cdff62eb81824a84f0303649766b48f42a2a04dd71f9708947134d887b721"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3adf0b567ee925141f552e7c8bfc8efb552853f314bf0039e64c5e6ee01c87aa"
   end
 
   depends_on "gsl"
