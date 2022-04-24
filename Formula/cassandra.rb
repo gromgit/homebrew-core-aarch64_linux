@@ -11,13 +11,12 @@ class Cassandra < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6ee407c7117f0c53129799791ef86c1c939ce18740543595128c513c5a288d51"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d14bfe37cdc55f04a246c5f1cea08a5d889b7fa9790bfd3782e3983c0cf01074"
-    sha256 cellar: :any_skip_relocation, monterey:       "dd2a61661c31f8ba3601c81fd3bfdaa2e8ff6b551f3971a887840ca80c6f95f9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4f847e7c9ec34c5852428918f0475e6bbaf6965b083681e7540b99b89cfece4a"
-    sha256 cellar: :any_skip_relocation, catalina:       "0fc62063f5bd84844337d15e1307f2aa8ebbed73deb67ed16145865bba3311b6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8bab5f32c1ea87ffab3b719143c9e6e47496f49bfe21de4ca7959659fd96fa65"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c1256c83e013b66dbe982e81d9ff8e06fa95a2520272bfa52d4e10a2c7a428d0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "aebc02c7ede741acac3cc057c88e607e995287de6402248d9be6cb9fc6f1ca2b"
+    sha256 cellar: :any_skip_relocation, monterey:       "70b355659ef990348582dec2b621b3bda5ec7ea9d35e2a51fca2fa9544f5d874"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3485e796ab2b0340e0437a674a77a32d0281952ce82b3169398bf09c118a169e"
+    sha256 cellar: :any_skip_relocation, catalina:       "e210fd11ea15a7a807f8e4cb721aabb34444c58f9313dbd4531a7eea9e94edab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "65cf02dc13bc99b1563d7c9276616c4933b23d6a46e0908b51febc1611c34f2d"
   end
 
   depends_on "libcython" => :build
