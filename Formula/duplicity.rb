@@ -8,12 +8,12 @@ class Duplicity < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "20572797361795b7ae2c2f232b60d1777ca51b902c2864f430f4cab2b1c6860d"
-    sha256 cellar: :any,                 arm64_big_sur:  "33866b720a31c7ac7a44c8aef76034c33146a412d83cbb4d496eb662e79b3660"
-    sha256 cellar: :any,                 monterey:       "a7c91a763b10586a139e43e5e351fa1b1b33674b727a5ec0c8dc9c46fa6f8bf7"
-    sha256 cellar: :any,                 big_sur:        "973160806f10d9b93e1248597fbc1abfac4b27a8426dae7391e68b331c13a05b"
-    sha256 cellar: :any,                 catalina:       "61cb97cfa74823c305703d76c4eb255bfca836e14a37c74481674bfa952809c4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "14e1ee48850738f48bacfac59b3262b89bab1d8c13edd7088af851a36f7ea5dc"
+    sha256 cellar: :any,                 arm64_monterey: "f79980d88eeddba3094a71704e55cd52fc82aa128d079de81f13f95412f0e435"
+    sha256 cellar: :any,                 arm64_big_sur:  "06d9db13d4ce89ba1f4b66ed4ed1617329d885b4e4831a53828be31711303210"
+    sha256 cellar: :any,                 monterey:       "15e75a8a2114f288230b8be638d5ae7b6f9460fd4f88673aa825022398023da2"
+    sha256 cellar: :any,                 big_sur:        "85c8a10cce46c0c0c2e7251e0e3a9bf85d091299902940b30fefd2fbd0eba693"
+    sha256 cellar: :any,                 catalina:       "0f6c6bf0d99347b762c759e2c27e7fa43137b0ebdc2d216ec16e54f595fc61db"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "359ada60420cfab227db089e70acbc6ccd59a9bfa1ce418b1122b00c9ff25f3b"
   end
 
   depends_on "rust" => :build # for cryptography
