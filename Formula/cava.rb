@@ -7,12 +7,12 @@ class Cava < Formula
   head "https://github.com/karlstav/cava.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "1c8ec9731e4e56550cf312b6041179cb16316b4818a52b3dd558597133b0bb53"
-    sha256 cellar: :any, arm64_big_sur:  "226b93ad253eed2465a398bd6381c71999320e105676e7961be3a10f34069f72"
-    sha256 cellar: :any, monterey:       "4e1690de73dbea81bc6697e6a1d050fdebf91274d7a7fd996333f8e82aa90dcf"
-    sha256 cellar: :any, big_sur:        "971a0e52a5361c4bcb8f7f2f97defa235bb7e5340630250068c4696dd9788184"
-    sha256 cellar: :any, catalina:       "3fd9eca9470a8a0ef1f91f93b7a5233fbb2c21c2936ec509334e6718c6836ebb"
-    sha256               x86_64_linux:   "67e728fbfd88559d18e5e43293d5864bbcf0b65872c2d1b62d73b9f5cbb861d2"
+    sha256 cellar: :any, arm64_monterey: "89c862723b2716b7679e5efc78e716b09d1f45fd2c2a1edbd51a9c65b80d4343"
+    sha256 cellar: :any, arm64_big_sur:  "ac197a673c179b5cc6b908238b390d0895c0c6687310ce242ff906bb833085b7"
+    sha256 cellar: :any, monterey:       "fc8442ab578524fae2beb5b1ee7a27b685201d9cef2156193bd92734300a4948"
+    sha256 cellar: :any, big_sur:        "abc65c805ead74fb13a651f664a692afa4cc208670570123d6fdeb359d8a64f8"
+    sha256 cellar: :any, catalina:       "d96daa890f9abd0fe8d8cd56feb7d9462cc57fe8fbbf59967c88074ffd062fa8"
+    sha256               x86_64_linux:   "2f8f05f61182fd20761e06eb7255f03f34466b7ecd992e72a12bf555e0f5c280"
   end
 
   depends_on "autoconf" => :build
