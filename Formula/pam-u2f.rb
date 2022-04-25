@@ -13,11 +13,12 @@ class PamU2f < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "476791759bc89c2d77b81e3f0f17721a4a5ca895a34355620e14f8e33812cc97"
-    sha256 cellar: :any, arm64_big_sur:  "4677220bea1fa2a9f34eb65c21dfca4baa44545170dad22f19f1fe100becaaa7"
-    sha256 cellar: :any, monterey:       "cbbc6d33d08ecfd7f14b9630643fce1434eeb7b83278e2b7c6fba8cca1ebe346"
-    sha256 cellar: :any, big_sur:        "12aad373888f146f549662f95254fa01fdcc29e625b766e1f24d8c371f0dfa96"
-    sha256 cellar: :any, catalina:       "5b4bbecdd81cc0754107b618b06bc28f8e72875228aa1fb399b10ce7a125fc99"
+    sha256 cellar: :any,                 arm64_monterey: "476791759bc89c2d77b81e3f0f17721a4a5ca895a34355620e14f8e33812cc97"
+    sha256 cellar: :any,                 arm64_big_sur:  "4677220bea1fa2a9f34eb65c21dfca4baa44545170dad22f19f1fe100becaaa7"
+    sha256 cellar: :any,                 monterey:       "cbbc6d33d08ecfd7f14b9630643fce1434eeb7b83278e2b7c6fba8cca1ebe346"
+    sha256 cellar: :any,                 big_sur:        "12aad373888f146f549662f95254fa01fdcc29e625b766e1f24d8c371f0dfa96"
+    sha256 cellar: :any,                 catalina:       "5b4bbecdd81cc0754107b618b06bc28f8e72875228aa1fb399b10ce7a125fc99"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d628932292483684948a099679fcef0f33b31cadbeeeb907c47fd217bb8d46a6"
   end
 
   depends_on "asciidoc" => :build
