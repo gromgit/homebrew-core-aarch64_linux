@@ -18,12 +18,12 @@ class YleDl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "96ffd398b7d2dc5e1cac3b40e83932def14b356a59d4965712bec1c5a5b16ce1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4f952070056d2050821219c99c4a96f0439ba2f88e1eff81b0fc180b08952f56"
-    sha256 cellar: :any_skip_relocation, monterey:       "8a2d7e8d79d63b319798f765e5d62a891e525968418a7ea9a3444879bd0f63f0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b0e9d7ce0cbde4ecd637b2923c10a1a199cc9eb2308a41905ca778c1fca4a120"
-    sha256 cellar: :any_skip_relocation, catalina:       "2032f3feb7a918454c41851d3f97dae809bbfec9292a2f4c5ab5f8d051a21408"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e819148faa9caa3640e9ff924103c4e57e243ec3b6f052e776ab6ccc90d21506"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2de28d0147f0360da1ed0535d4d7fd2c742f0760b90030f2ed681ebf03ea4d15"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e390983dc10bb7dc05dc0cc6ddb0a22df9aa31ba4fddd0fbc05108bd97fa4b9e"
+    sha256 cellar: :any_skip_relocation, monterey:       "5e1d56fc71042554622a3f97a5da88ad741f3b077ebff06bb08468dbae9e3c3a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0d4ddecc1bf4f6edfbb4f0593f64da5be3baca3f8c18bccc17fe75583c6ca245"
+    sha256 cellar: :any_skip_relocation, catalina:       "4a73ff0786213d8b13923eb301794c9ba1868b48485c20ccd0c6423263eb4b80"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2975f4ded74ffc919dfd35fcd091491ec8dd0e53428839c555d825628a4ab5de"
   end
 
   depends_on "ffmpeg"
