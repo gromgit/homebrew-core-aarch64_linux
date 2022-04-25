@@ -15,6 +15,7 @@ class Offlineimap < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "99a7aabd972badba906e4430609217c5f03f5267cc76d4eb349ca327487ba549"
     sha256 cellar: :any_skip_relocation, big_sur:        "e53430590b20390cae4f5c291ed585fca5ecb23d06a6d47e27213bc66af76098"
     sha256 cellar: :any_skip_relocation, catalina:       "c204ddc3b02a6f1bfd747610baa696d70ed02710e336f902f7d53a4610325632"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ad8cd71fc09acdcf59cdcc3ddb58e500e032c33975e61b3c5296122a08b4f4d8"
   end
 
   depends_on "python@3.10"
