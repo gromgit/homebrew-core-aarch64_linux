@@ -36,6 +36,7 @@ env:
     apache-spark
     apidoc
     apktool
+    apt
     arb
     argo
     argocd
@@ -45,6 +46,7 @@ env:
     armadillo
     arrayfire
     artifactory
+    arturo
     asciidoctorj
     ask-cli
     assh
@@ -58,6 +60,7 @@ env:
     aws-cdk
     aws-elasticbeanstalk
     aws-es-proxy
+    aws-rotate-key
     azcopy
     b3sum
     bagit
@@ -78,6 +81,7 @@ env:
     bnd
     bosh-cli
     bottom
+    brev
     brew-php-switcher
     brook
     broot
@@ -111,6 +115,7 @@ env:
     cassandra-reaper
     catch2
     cdk8s
+    certigo
     cfr-decompiler
     cfssl
     cgl
@@ -158,10 +163,12 @@ env:
     crowdin
     crun
     css-crush
+    csvq
     csvtk
     cubejs-cli
     cweb
     cypher-shell
+    cyrus-sasl
     dafny
     darkstat
     datree
@@ -179,6 +186,7 @@ env:
     diamond
     diesel
     diffoscope
+    difftastic
     digdag
     django-completion
     djl-serving
@@ -210,6 +218,7 @@ env:
     dune
     dust
     dvc
+    dynare
     easyengine
     efm-langserver
     ehco
@@ -238,8 +247,10 @@ env:
     fennel
     feroxbuster
     ffsend
+    findomain
     firebase-cli
     firefoxpwa
+    flac
     flank
     flarectl
     fleet-cli
@@ -250,6 +261,7 @@ env:
     flyway
     fmt
     fn
+    fontforge
     fop
     ford
     fortio
@@ -318,6 +330,7 @@ env:
     gromacs
     groovy
     groovysdk
+    gsmartcontrol
     gsoap
     gupnp-tools
     hadoop
@@ -333,6 +346,8 @@ env:
     himalaya
     hive
     hivemind
+    hledger
+    hpack
     htmldoc
     htmlq
     htmltest
@@ -344,6 +359,7 @@ env:
     imagemagick
     imagemagick@6
     imap-backup
+    imapsync
     imgproxy
     influxdb
     influxdb-cli
@@ -368,6 +384,7 @@ env:
     jmeter
     jnethack
     jql
+    jrnl
     jruby
     jsonnet
     jsonschema
@@ -384,6 +401,7 @@ env:
     kalker
     kamel
     kapacitor
+    kcat
     kcptun
     keptn
     kepubify
@@ -420,31 +438,39 @@ env:
     kumactl
     kustomize
     kyma-cli
+    kyverno
     languagetool
     latex2html
     latexml
     lazydocker
+    ld-find-code-refs
     lean-cli
     lefthook
     lego
     leiningen
     lexbor
+    lf
     libdap
+    libepoxy
     libgetdata
     libgr
+    liblinear
     libnfs
     liboqs
     libpano
     libpipeline
     librdkafka
     librespot
+    libsndfile
     lima
     linkerd
+    linode-cli
     liquibase
     lmod
     localstack
     log4cxx
     lout
+    luau
     lychee
     macchina
     mage
@@ -460,6 +486,7 @@ env:
     mdcat
     mdzk
     meilisearch
+    melody
     memcached
     mesa
     meson
@@ -467,6 +494,7 @@ env:
     micro
     micronaut
     mill
+    minetest
     minikube
     miniserve
     mitmproxy
@@ -474,27 +502,39 @@ env:
     mmctl
     moar
     mockery
+    mockserver
     moco
     molecule
     mongocli
+    mongodb-atlas-cli
     monolith
     moto
     mpv
     muffet
     murex
+    mutt
+    mydumper
     mypy
     naabu
+    nagios
     nanoflann
     nativefier
     nats-server
     nats-streaming-server
+    naturaldocs
     navi
     ncspot
+    needle
     neo4j
     neofetch
+    neomutt
+    nerdctl
     nest
+    netdata
+    nethogs
     netlify-cli
     newrelic-cli
+    newrelic-infra-agent
     nexus
     nfpm
     nng
@@ -524,18 +564,26 @@ env:
     openrtsp
     opensearch
     operator-sdk
+    or-tools
     oras
     orc-tools
     orientdb
+    orocos-kdl
     ortp
     osm
+    ott
     oxipng
     pacapt
     packer
     packr
+    passenger
+    patchelf
     payara
     pdftk-java
     pdm
+    pdnsrec
+    pgbadger
+    pgbouncer
     pgloader
     pgweb
     phoronix-test-suite
@@ -555,6 +603,8 @@ env:
     pnpm
     pocsuite3
     podman
+    postgis
+    powerman
     pre-commit
     prestd
     presto
@@ -562,6 +612,7 @@ env:
     procs
     protoc-gen-go-grpc
     psalm
+    pstoedit
     pueue
     pushpin
     pwntools
@@ -576,9 +627,11 @@ env:
     rbspy
     rbw
     rclone
+    rcs
     rebar3
     recode
     regina-rexx
+    regula
     reminiscence
     reposurgeon
     revive
@@ -587,6 +640,7 @@ env:
     rke
     rollup
     rosa-cli
+    rover
     rpg-cli
     rqlite
     rubberband
@@ -614,11 +668,13 @@ env:
     shellharden
     shellz
     shfmt
+    signal-cli
     silicon
     singularity
     sjk
     skaffold
     skopeo
+    skylighting
     slackcat
     sleuthkit
     slides
@@ -627,6 +683,7 @@ env:
     sniffer
     sniffglue
     solana
+    sollya
     solr
     solr@7.7
     sonarqube
@@ -638,18 +695,24 @@ env:
     sqlc
     sqlmap
     sqlx-cli
+    sshs
     sslyze
     stanford-corenlp
     starship
+    staticcheck
     statix
     stdman
+    stellar-core
     step
     storm
     streamlink
     stress-ng
     structurizr-cli
     stunnel
+    stylish-haskell
+    subfinder
     subversion
+    suite-sparse
     sundials
     suricata
     svgbob
@@ -657,7 +720,9 @@ env:
     svtplay-dl
     swagger-codegen
     swagger-codegen@2
+    swagger2markup-cli
     syncthing
+    sysdig
     talisman
     tanka
     tcsh
@@ -665,6 +730,7 @@ env:
     tealdeer
     tectonic
     tektoncd-cli
+    teku
     teleport
     tendermint
     tengo
@@ -682,6 +748,7 @@ env:
     thrift
     tika
     tile38
+    timg
     tm
     toast
     tomcat
@@ -695,14 +762,19 @@ env:
     traefik@1
     trafficserver
     tree-sitter
+    triangle
     trino
+    trivy
     trojan-go
     typedb
     tz
     uni
     universal-ctags
     v2ray
+    vala
+    valabind
     vale
+    vapoursynth
     vault
     vault-cli
     veclibfort
@@ -723,11 +795,14 @@ env:
     wabt
     wakatime-cli
     wallpaper
+    wapm
+    wartremover
     wasm-pack
     wasmer
     wasmtime
     watchexec
     waypoint
+    webdis
     webp
     webpack
     websocat
@@ -736,11 +811,14 @@ env:
     whistle
     whois
     wildfly-as
+    wireguard-go
     wiremock-standalone
     wolfssl
+    wxwidgets
     xalan-c
     xcbeautify
     xclogparser
+    xdpyinfo
     xerces-c
     xgboost
     xh
@@ -752,12 +830,16 @@ env:
     youtubedr
     yq
     z3
+    zabbix
     zbctl
     zellij
+    zenith
+    znapzend
     zola
     zookeeper
     zoxide
     zstd
+    zydis
 
 jobs:
   autobump:
