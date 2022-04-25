@@ -3,8 +3,8 @@ class Moto < Formula
 
   desc "Mock AWS services"
   homepage "http://getmoto.org/"
-  url "https://files.pythonhosted.org/packages/69/a6/feaa94f36041c5e87241c51b0a28261dc378d6e2b0e52ad5aaf22be67782/moto-3.1.5.tar.gz"
-  sha256 "4f87045a97326b38c8cee9420752b38c0c5281828442febf4c3e409f98dadb7d"
+  url "https://files.pythonhosted.org/packages/9a/73/ef0d0983ffb3118944258402d68c7c76433e7bab5339b6eb3f2c5f6d16cb/moto-3.1.6.tar.gz"
+  sha256 "51552b2dfa99a539bca8737a66601b7404be01d2c53a41556a2197b18c1cf172"
   license "Apache-2.0"
 
   bottle do
@@ -36,13 +36,13 @@ class Moto < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/14/7a/14c7a6a0c203c758ee264a0c4005beb44b6b2cd6c108c1b2b4ce7b0e1d34/boto3-1.21.42.tar.gz"
-    sha256 "bcb541175a7d190dd919a0af0e807ee6e9d26f135551e741b10d94343f2d7588"
+    url "https://files.pythonhosted.org/packages/7a/f4/75375d73f3b51272e8291f7e5f13ef4d48a11bb138239b4ce80c9cab4dfe/boto3-1.21.46.tar.gz"
+    sha256 "9ac902076eac82112f4536cc2606a1f597a387dbc56b250575ac2d2c64c75e20"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/bf/c1/ccb78e982e38452c8db74c05aa2ac560a6267c52f702d6acb1611b447349/botocore-1.24.42.tar.gz"
-    sha256 "a2baa9484bbaee96ef312c049b8e360badcab58329e487b57567644a571b5f4a"
+    url "https://files.pythonhosted.org/packages/5a/8a/f7230958ed29e2a65804f6eeee84bfff0dd4e964c272a96ac40b3871b173/botocore-1.24.46.tar.gz"
+    sha256 "89a203bba3c8f2299287e48a9e112e2dbe478cf67eaac26716f0e7f176446146"
   end
 
   resource "certifi" do
