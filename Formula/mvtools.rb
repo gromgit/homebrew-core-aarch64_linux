@@ -24,6 +24,10 @@ class Mvtools < Formula
   depends_on "fftw"
   depends_on "vapoursynth"
 
+  # Fixes build issues on arm
+  # https://github.com/dubhater/vapoursynth-mvtools/pull/55
+  patch :DATA
+
   def install
     system "./autogen.sh"
     system "./configure", "--prefix=#{prefix}"
@@ -48,3 +52,51 @@ class Mvtools < Formula
     system Formula["python@3.9"].opt_bin/"python3", "-c", script
   end
 end
+
+__END__
+--- a/configure.ac
++++ b/configure.ac
+@@ -54,7 +54,7 @@ AS_CASE(
+   [i?86],         [BITS="32" NASMFLAGS="$NASMFLAGS -DARCH_X86_64=0" X86="true"],
+   [x86_64|amd64], [BITS="64" NASMFLAGS="$NASMFLAGS -DARCH_X86_64=1 -DPIC" X86="true"],
+   [powerpc*],     [PPC="true"],
+-  [arm*],         [ARM="true"],
++  [arm*|aarch*],  [ARM="true"],
+   [AC_MSG_ERROR([Unknown host CPU: $host_cpu.])]
+ )
+ 
+--- a/src/SADFunctions.cpp
++++ b/src/SADFunctions.cpp
+@@ -646,7 +646,7 @@ static unsigned int Satd_C(const uint8_t *pSrc, intptr_t nSrcPitch, const uint8_
+     }
+ }
+ 
+-
++#if defined(MVTOOLS_X86)
+ template <unsigned nBlkWidth, unsigned nBlkHeight, InstructionSets opt>
+ static unsigned int Satd_SIMD(const uint8_t *pSrc, intptr_t nSrcPitch, const uint8_t *pRef, intptr_t nRefPitch) {
+     const unsigned partition_width = 16;
+@@ -676,7 +676,7 @@ static unsigned int Satd_SIMD(const uint8_t *pSrc, intptr_t nSrcPitch, const uin
+ 
+     return sum;
+ }
+-
++#endif
+ 
+ #if defined(MVTOOLS_X86)
+ #define SATD_X264_U8_MMX(width, height) \
+@@ -753,12 +753,14 @@ static const std::unordered_map<uint32_t, SADFunction> satd_functions = {
+     SATD_X264_U8_AVX2(8, 8)
+     SATD_X264_U8_AVX2(16, 8)
+     SATD_X264_U8_AVX2(16, 16)
++    #if defined(MVTOOLS_X86)
+     SATD_U8_SIMD(32, 16)
+     SATD_U8_SIMD(32, 32)
+     SATD_U8_SIMD(64, 32)
+     SATD_U8_SIMD(64, 64)
+     SATD_U8_SIMD(128, 64)
+     SATD_U8_SIMD(128, 128)
++    #endif
+ };
+ 
+ SADFunction selectSATDFunction(unsigned width, unsigned height, unsigned bits, int opt, unsigned cpu) {
