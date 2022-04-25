@@ -14,11 +14,12 @@ class Cataclysm < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "e150bf1941d1cd877cf4916b077e26fa92f6e455537239819fb47507ce9bc5ea"
-    sha256 cellar: :any, arm64_big_sur:  "022d3fea15cfc0a322ae88e5b2f1b5cfc43cf1800e47edb0c67a7497ea02a8e6"
-    sha256 cellar: :any, monterey:       "4eded1f647775447ce5e3ee1db263adf3af99f744de14c1d51c6181c5f94e1ef"
-    sha256 cellar: :any, big_sur:        "e0b9a3933fd920e5955cd0464845f7a9e7dfe808b67b5bb2858239843755e47f"
-    sha256 cellar: :any, catalina:       "74397a9575dc94327a5c2eaf9b1a8a306699c991847e6ecf642f37e439f42d2c"
+    sha256 cellar: :any,                 arm64_monterey: "e150bf1941d1cd877cf4916b077e26fa92f6e455537239819fb47507ce9bc5ea"
+    sha256 cellar: :any,                 arm64_big_sur:  "022d3fea15cfc0a322ae88e5b2f1b5cfc43cf1800e47edb0c67a7497ea02a8e6"
+    sha256 cellar: :any,                 monterey:       "4eded1f647775447ce5e3ee1db263adf3af99f744de14c1d51c6181c5f94e1ef"
+    sha256 cellar: :any,                 big_sur:        "e0b9a3933fd920e5955cd0464845f7a9e7dfe808b67b5bb2858239843755e47f"
+    sha256 cellar: :any,                 catalina:       "74397a9575dc94327a5c2eaf9b1a8a306699c991847e6ecf642f37e439f42d2c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "95b275bc970b8053631ac25536970188208c7b08fcdb86c75e55425b45bdf16e"
   end
 
   depends_on "pkg-config" => :build
