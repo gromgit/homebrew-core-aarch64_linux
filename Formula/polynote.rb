@@ -8,13 +8,12 @@ class Polynote < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "62a4274043626becfc4a03053c1e587c0d544b558e5fea3e456c34f5a7c9ca83"
-    sha256 cellar: :any, arm64_big_sur:  "e72f0581a9839ae6cbb0cba192c32e5a9969c18c76447e338181f9f50a083638"
-    sha256 cellar: :any, monterey:       "433036a8d84e96224815fdeac331aedeaf17e064a2eb0611e2960535fc2f609d"
-    sha256 cellar: :any, big_sur:        "50e6449ee44ad049baaa2015a620e91c759a5d3329cdbd48347233fe3545fc30"
-    sha256 cellar: :any, catalina:       "2a9c17df458e4225a381530b01ca8903fa317424604d8156e22877914d00a2de"
-    sha256 cellar: :any, mojave:         "1e9021f5c8c3d0071f1775f1c82abf0240060aa2febae948db2ba6993e42f84d"
-    sha256               x86_64_linux:   "22377e6c2c3b592c9410c08da93700b5c5afe6458c793769175873f10aecccce"
+    sha256 cellar: :any, arm64_monterey: "ae1360c0e00a9a4b3da148053ea6faa578b41b6c4ef524771d110d7e67d44498"
+    sha256 cellar: :any, arm64_big_sur:  "7e964925acabf6c3a6ce355cd6481d96daf4861e73cda963da5dc70326389548"
+    sha256 cellar: :any, monterey:       "58b34b1b44f326c8aa1fc357ef4124e1064da05566f5c3a37e98fa325e43eae5"
+    sha256 cellar: :any, big_sur:        "5990e8cf346855098c4b6af3761ba77b74b7edaa422f58f35bd5b676984ea36e"
+    sha256 cellar: :any, catalina:       "7a3d9d4084596c2de11b6ed19369789bde963fdcfacc8b9ec87b2aeedff95d55"
+    sha256               x86_64_linux:   "c9b2307cbf6a17302c4c19c96d7f8ed51934cc1a0df49c115b757837d6ee4714"
   end
 
   depends_on "numpy" # used by `jep` for Java primitive arrays
