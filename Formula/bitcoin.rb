@@ -12,12 +12,12 @@ class Bitcoin < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d24ab4ebd9a10d882f5c577722c60d6c8994a6aa657824bdd26cb134a02a270b"
-    sha256 cellar: :any,                 arm64_big_sur:  "787feb3307c59a0f0257ed5fde8aaa90166519b4066b50e0daa7daf1ff96c36a"
-    sha256 cellar: :any,                 monterey:       "e167b6994e535259158014eec77560c12a91bf149ac99d8034d231c612a75122"
-    sha256 cellar: :any,                 big_sur:        "af5526ac7b1062bcd06a98c810e099340fe533e38f4336482b932fd152b7cd68"
-    sha256 cellar: :any,                 catalina:       "5f8e7e6ddb67beba6b614873080138891d6361ed7c5b72802ce92b1b58e40fa2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9d3f681d2417908d32aabbbe2167558a96692c7ba02437b0cb60454a9312914b"
+    sha256 cellar: :any,                 arm64_monterey: "b0704a6dc3a96f5bbb71d93a468b1a4881e747e90ddfa14d6ff0d97d5a23c6eb"
+    sha256 cellar: :any,                 arm64_big_sur:  "6c8caf0509daf986cd3af45eeea78789ccd4b0a8eb5aa1dfddaa624425e5b959"
+    sha256 cellar: :any,                 monterey:       "2859a13d7a48dad1a6701476d66ddb0b6940dcfe4b809b1c54512d78de247e26"
+    sha256 cellar: :any,                 big_sur:        "e8a1f3389faae4245c5f6a6ec8f179cb46e19af31f4e4637c6d3f24d55804b45"
+    sha256 cellar: :any,                 catalina:       "3279bd808f42d6ea608d04860ac276afda7c6ac2cf5d708469d4dc66672f210a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cb60fb85781435dfb545cea0c7e08339a7b3e01d60df604ccf9cba830f148e36"
   end
 
   depends_on "autoconf" => :build
