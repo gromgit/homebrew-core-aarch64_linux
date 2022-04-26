@@ -11,7 +11,12 @@ class Xorgproto < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "97763c1171ba9dc0772b5fa107c8dad9b19c3e73963d84887fb2d8c02a1ab59e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "59bc0ef6734f03b980c00fed98dd2d607dda9abdfb9a0c0fb3b00ba8b5db26ac"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "59bc0ef6734f03b980c00fed98dd2d607dda9abdfb9a0c0fb3b00ba8b5db26ac"
+    sha256 cellar: :any_skip_relocation, monterey:       "59bc0ef6734f03b980c00fed98dd2d607dda9abdfb9a0c0fb3b00ba8b5db26ac"
+    sha256 cellar: :any_skip_relocation, big_sur:        "59bc0ef6734f03b980c00fed98dd2d607dda9abdfb9a0c0fb3b00ba8b5db26ac"
+    sha256 cellar: :any_skip_relocation, catalina:       "59bc0ef6734f03b980c00fed98dd2d607dda9abdfb9a0c0fb3b00ba8b5db26ac"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "519566a93bb878a20693502c7feefcad203bc33289c929a478ada9f651d7350f"
   end
 
   depends_on "pkg-config" => [:build, :test]
