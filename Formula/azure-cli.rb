@@ -15,12 +15,12 @@ class AzureCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "1fed88b24aa9defd962f446cbd5a00547406dfab50bd375939b8c034f0e9995d"
-    sha256 cellar: :any,                 arm64_big_sur:  "394387339398fbaf5fe1dee88b8571c6d9d675b54f283673e2a2c3434f6218a8"
-    sha256 cellar: :any,                 monterey:       "26427fc9fbe221b8e9b64adc13da5a61d4abd55fd6fa72ecb9ded3cf5a7af38c"
-    sha256 cellar: :any,                 big_sur:        "841cad480610e27a60ff6e06b40dced9196d6d80c2cd387e1770cfd33e120c31"
-    sha256 cellar: :any,                 catalina:       "e4f90d7da9a9b75322e59ec2a1a318a50211bddcd08c5bb51ca87e70ff171996"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7b13a2353d6bdaf981f20f702f007680beba22dd565dd9cb923a9e8ce8a2953a"
+    sha256 cellar: :any,                 arm64_monterey: "093d034df551a8b4b4daae697ccc4fb65827ccc789205354203b11b271eb84ac"
+    sha256 cellar: :any,                 arm64_big_sur:  "23851815b8c58e89ccf529362629dfd4d447f1f99f4c85de7ddf31d46c7754bc"
+    sha256 cellar: :any,                 monterey:       "a6f8d94cf3758405eb539c13f0ff1240fff62977319aa33d2404d5ebf3c55f00"
+    sha256 cellar: :any,                 big_sur:        "c0c1a91a017d44586720eccf8bab093b15ad33f3429b04896368afea14efa3fd"
+    sha256 cellar: :any,                 catalina:       "2edf873fcac19a687f7d3c5986ff2b14b09dfe63cae5a0cf1d24574c40804878"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5ce4fcc21c21d859ac40a879f81f919f6b1186e748cf06799477ee0dd157d2dc"
   end
 
   depends_on "rust" => :build # for cryptography
