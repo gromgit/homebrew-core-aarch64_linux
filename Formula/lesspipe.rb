@@ -6,7 +6,7 @@ class Lesspipe < Formula
   license "GPL-2.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "320498e365aba7d2afcf9f61107bff812c299588134f3274e86bf4107b0b17ad"
+    sha256 cellar: :any_skip_relocation, all: "89c5065b6535158e2d9951266ec936cad15025ddcaa712e4f4ea597b9ea37763"
   end
 
   def install
