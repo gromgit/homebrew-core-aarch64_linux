@@ -2,9 +2,9 @@ class RustAnalyzer < Formula
   desc "Experimental Rust compiler front-end for IDEs"
   homepage "https://rust-analyzer.github.io/"
   url "https://github.com/rust-analyzer/rust-analyzer.git",
-       tag:      "2022-04-11",
-       revision: "24cf957627d5ede1b395f92ff871fd7a281d49a4"
-  version "2022-04-11"
+       tag:      "2022-04-25",
+       revision: "b5d7a712e1c5d1e602feb8320f902ee9cd6ec197"
+  version "2022-04-25"
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
@@ -17,6 +17,9 @@ class RustAnalyzer < Formula
   end
 
   depends_on "rust" => :build
+
+  # Remove this patch after rust 1.60 (https://github.com/rust-lang/rust-analyzer/issues/12080)
+  patch :DATA
 
   def install
     cd "crates/rust-analyzer" do
@@ -73,3 +76,22 @@ class RustAnalyzer < Formula
     assert_match output, pipe_output("#{bin}/rust-analyzer", input, 0)
   end
 end
+
+
+__END__
+diff --git a/Cargo.lock b/Cargo.lock
+index 1937b8936..e6f321394 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -1571,9 +1571,9 @@ checksum = "f2dd574626839106c320a323308629dcb1acfc96e32a8cba364ddc61ac23ee83"
+ 
+ [[package]]
+ name = "smol_str"
+-version = "0.1.22"
++version = "0.1.21"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "167ee181c12079444893cec9c8f21b13d6b314af789c9fdb041a0645f11ed9d2"
++checksum = "61d15c83e300cce35b7c8cd39ff567c1ef42dde6d4a1a38dbdbf9a59902261bd"
+ dependencies = [
+  "serde",
+ ]
