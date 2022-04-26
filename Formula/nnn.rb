@@ -7,12 +7,12 @@ class Nnn < Formula
   head "https://github.com/jarun/nnn.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0f206ccff6782172f2eafd1499cdc463b210cb00148b22abb5bc73a9676434c4"
-    sha256 cellar: :any,                 arm64_big_sur:  "8e0c86615ad8945427658c6886a7b223b8dd68fc7d3a317de19dede97c3a114f"
-    sha256 cellar: :any,                 monterey:       "12ad9fecb2c396e1279a343730dd2bb31ffb294d6e22e11dbf4e0a6e01ea0493"
-    sha256 cellar: :any,                 big_sur:        "2201c369d5254ccdd7425e1ad70363f587e9669ab0f45f16ac5a440fc5bb59db"
-    sha256 cellar: :any,                 catalina:       "e05ba96826682aebd0f64f22399b953ab32319b9ef9325a5bee6340ecdbf5dab"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "74c98fb8821d85c71097acd3de33468c6f0fecdce11b7738b28063213d643058"
+    sha256 cellar: :any,                 arm64_monterey: "050519b7b5d2227fd0fe1774c8769a4c0440fd74b6b32093c46399d639a6d8cd"
+    sha256 cellar: :any,                 arm64_big_sur:  "2cea5e82e5f9269c55eb1bf0e72d8a96241e5807a157fbb48a995c9090b580d8"
+    sha256 cellar: :any,                 monterey:       "789d680be159aa6ea077d4c11a2a5eb255eaf8073e77b3fb609e9647abe313e3"
+    sha256 cellar: :any,                 big_sur:        "2e7e159ae741f0c851a8be6d33c5bd4dba26ec88a1685e7f8b43ced711cfe4dc"
+    sha256 cellar: :any,                 catalina:       "1b19cd02da90939a63955cda3de89dcd6575fede984a3494720ba7bb082be503"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d132f9a3c7fff3470cadbe04b403c4d484d1ea3957274756904b646b7c7f6d7d"
   end
 
   depends_on "gnu-sed"
