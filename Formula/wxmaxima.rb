@@ -8,12 +8,12 @@ class Wxmaxima < Formula
   head "https://github.com/wxMaxima-developers/wxmaxima.git", branch: "main"
 
   bottle do
-    sha256 arm64_monterey: "899c19dff48cb7b2e51dad96b23cbb6050b77fc1720e5f6af8156deadac39ef8"
-    sha256 arm64_big_sur:  "2b7a0559054530909952386b14b27d6f099eacf2c2e9135bfb03b97b55ec1028"
-    sha256 monterey:       "d0d34441e246360d02e3c86d654a3b1e6bc11b2988d4465a465b0677299bd9a4"
-    sha256 big_sur:        "6f99223fac1729a95956c6b418be0b6dfb3a4385a00079f82b5059d5434e8138"
-    sha256 catalina:       "f25383a3f0d54812d03c0299638070ea1f746d298250d14fb29e3514b24b7345"
-    sha256 x86_64_linux:   "7bc367624a42b0062c316737f8cfd7e196d934d0c0cc7160d127735284e0da5c"
+    sha256 arm64_monterey: "624a0e04af2f0cafa896771cde72a9c8c6a0eed2b9a03f997d02838fbb6587a1"
+    sha256 arm64_big_sur:  "812352b0fd5d6f1b5b621f323c6cd51598456f8155ad43e88e590c0a79727c72"
+    sha256 monterey:       "d5d4809972b045e3207a4695ed8eef649a1c18847d37d12a4c047bbc37fd9a1b"
+    sha256 big_sur:        "a37703d377852b8488f04d8fbf4aeb902f9a4ba6de57fa42bbc2a5eb0f851f84"
+    sha256 catalina:       "1d9e48565e6d961d4305514a9364a074c1f1fe21c2a56c72cb7b97ff81b19309"
+    sha256 x86_64_linux:   "5d8b4e941ea398c23d10b93f1f4720820a5d58f909d12f8408fe30a76c1531b4"
   end
 
   depends_on "cmake" => :build
