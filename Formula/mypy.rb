@@ -8,12 +8,12 @@ class Mypy < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6da20c53f768f86a98b3f44663ab57a89f02f57fd72703f157d952b3ee72f563"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2a1106c8dbeeb9f9386e7133ee079a3542b535a057f65938502406aa6d4232eb"
-    sha256 cellar: :any_skip_relocation, monterey:       "be550539b724ebc1df677ea9760c929159fe698d8a313c41bf6f92360d26892b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e928518c1889b1bedc242135c18f3b94460959b5f9a4a23c6423572f114f287c"
-    sha256 cellar: :any_skip_relocation, catalina:       "e24f0562537a5729d21c1dcc42233d12b9c6f9d5c96038c762929a18a54267cd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9966b917abab81ab34166bb86ad6b4897614103f768a7b05a8c4f3b734cc7312"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "82f478c83c0b50fe31ac6dcb8bb7803c27f4e0cde18f5390fc73b2be50b92c55"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "953303d154b2be96fe6de484fb21c406a9a7428deb8349c7777e889757559309"
+    sha256 cellar: :any_skip_relocation, monterey:       "fa73d73a9f3dac9b589d5f20ca2f4aa2b7bc83fb3630513e8d813d2c4de173bd"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d6ccb11a8baadd2f4c14ffac76ca9e7caf939df880ec613f902165d1217c7771"
+    sha256 cellar: :any_skip_relocation, catalina:       "132d0584790faaeb8a553d1aa3fb4f11e97f65c23db4009d9c61c8c146157b5a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6759d1d06bb5b97f24a52820a898abb5db88d8095ad978f69813dfbc1c72988f"
   end
 
   depends_on "python@3.10"
