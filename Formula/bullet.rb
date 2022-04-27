@@ -18,13 +18,12 @@ class Bullet < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "30a87e90fe654bae66c48b1992d4626c6ae46b4eefa2c0ce5032527df006d75c"
-    sha256 cellar: :any,                 arm64_big_sur:  "19b6ccc0cbf6aeb43f9ef9eb89f5f74d0c33e0e7d2a4a81e86f93a402bf092e2"
-    sha256 cellar: :any,                 monterey:       "5b24686d6901127967ba097dfa0200c2b17eba48600d480cb310e8d3f1ea554b"
-    sha256 cellar: :any,                 big_sur:        "c9801c68a5705930efd11f8c5a4d07f95d69a36ecf303e0914c50fe2cc5f1dac"
-    sha256 cellar: :any,                 catalina:       "42924c0b6e8d5641fdee26791f7726d8615b568c5eec64207d14836638251677"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c2edebdf03c1345f393e924a68f24b6a92041b9de14ad99bd126d4c57791e23b"
+    sha256 cellar: :any,                 arm64_monterey: "53c8070433e550cc819f1821088eeb3f17d65ae12ebc72b1d20be3772ff796ca"
+    sha256 cellar: :any,                 arm64_big_sur:  "ce667cbcd3b96f3e9da37937bafa0e7bc053e7a15bde05e5b0f3a11191abbef1"
+    sha256 cellar: :any,                 monterey:       "b4649dd529582a11585e7a8dcd5cc31dc2f505b6afad293f072d84153e8daca6"
+    sha256 cellar: :any,                 big_sur:        "29060161f27a703aaedbeff2a311506345369251eb65cf505ff98afdd02ca9be"
+    sha256 cellar: :any,                 catalina:       "10da86e16ca68c1dd5bec523f49f77593938b8d2a19fb41c8ed6e45a06781c34"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "54c825fba5694d0d1cc538f1f9333e6602457059371b4573cf554ded7e464d34"
   end
 
   depends_on "cmake" => :build
