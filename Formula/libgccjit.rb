@@ -21,12 +21,11 @@ class Libgccjit < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "7b5c768fc2f10513e7f3e2f8586f555a58e4319da9cad99d7c776ccd05952a95"
-    sha256 arm64_big_sur:  "c2d958d5156ebb71a25bdef33701faf393c2a4dce788a46fdcb3f046b86612c3"
-    sha256 monterey:       "7abf6d27997972fc32e1846c8008b5bd9823d34638c5fcd1f67b920fec21b503"
-    sha256 big_sur:        "f7226e1d4230ee0ee059bab2d7b489b4c64aaf8c4bc15903d50f331b03303f38"
-    sha256 catalina:       "ca16e3b69b15df1ced2a9b1d853c4560e16a27695d337621bd15b0032d42b456"
+    sha256 arm64_monterey: "cb67919738ceaf2dc52ad6eda4b981cf3ef09034a506980de526a0a72f78b380"
+    sha256 arm64_big_sur:  "ac5e717fe292f83c5a3c49ed76c0f47d1f968d6b24089b2ee5021682908ad935"
+    sha256 monterey:       "9f0d50538e40657c82c891846d77c3193e4b39bcf4504429b11738fe0155d075"
+    sha256 big_sur:        "4cce8e0cf231b7d52cb17cdd45af65d340bac1a8b6b2d76c15bab4544f1c778f"
+    sha256 catalina:       "da0b032249866a6a74d6f0a7dd44cc2465261fd3becf847fcaafdf4a2750509c"
   end
 
   # The bottles are built on systems with the CLT installed, and do not work
