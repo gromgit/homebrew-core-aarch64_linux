@@ -13,12 +13,12 @@ class Kamel < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a44a42d1828d68e38c603f9150b7ed14a8e5726d5d3d260803e92f1b42ac7363"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d2ef5195a2aa1ed8b0997e5115cbc5549840af60f3073d05f5fc6abdf61fc374"
-    sha256 cellar: :any_skip_relocation, monterey:       "8b726717247ca42b12e8fa9564106fea8dce5ac3eeb4d189709f16c24da5a087"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d7fa06f538c67fdef00d3b75f5c9dd5a8ad2825895e2a5d272c41a434e2ac081"
-    sha256 cellar: :any_skip_relocation, catalina:       "319129766d0e75ca1961b49aaf57be6d029d31dbc29eb134f44b348b30359dae"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c6818471e7e687205a370d4c3ce7a4e3c55be4a86041c9d32fda20f5d2faf489"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d75136e536dd807f1d44c0be1673f7401b64daed8d1c03986bf8420d46988425"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "83e73065020926e90822580f30a4aa40e1e3fab5820541058fcd4c09219406b2"
+    sha256 cellar: :any_skip_relocation, monterey:       "cdf7fbc37861813135d3e53e39aeef08e104036731c23dfb1c76413be39983d0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0d8f9d405afbd1bbdb0678c52b008187310d9014dc86b54e547339f8736c58bc"
+    sha256 cellar: :any_skip_relocation, catalina:       "e1d8fab7d132fdbf6bcf8c05377736fed62cb685b5ba35f16181fa4ed40910fc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f693c7c3b204032e84f00206eb78f769e3e0ae05d40b894c23b726b356d7f914"
   end
 
   depends_on "go" => :build
