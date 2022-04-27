@@ -5,6 +5,15 @@ class Libxcrypt < Formula
   sha256 "9e936811f9fad11dbca33ca19bd97c55c52eb3ca15901f27ade046cc79e69e87"
   license "LGPL-2.1-or-later"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "c9167b6a2004c17ae0e8c2bfa87b836f46117e2feaf11e81bceb4f10f88a1797"
+    sha256 cellar: :any,                 arm64_big_sur:  "379a8c183e939aae7c2cf36e8e4d6f0d4a48663bfd6ba0a07685840a8644ede7"
+    sha256 cellar: :any,                 monterey:       "10efe49691ec1185d451d7525597fb8f74de2cad09901d0b0e0ea02b2efffb7c"
+    sha256 cellar: :any,                 big_sur:        "bd3ae4e71a255aca43f3ec06111094b6f8d245552388f734c6e4ee2f33089333"
+    sha256 cellar: :any,                 catalina:       "bcda7c42bf3a2021aa83bd00a8fcb3158f02e791f792eccceda4257bda67cb6a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "84269a82afe1a9e94ba6828c983a4b8e65d8d672d36d88232daac832017ab327"
+  end
+
   on_macos do
     keg_only "provided by macOS"
   end
