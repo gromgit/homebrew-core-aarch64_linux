@@ -12,12 +12,12 @@ class VespaCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0dcc782bd192069e430941945586a15e7fb7567fe7a264c4cc2fe1f007a2ce41"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "51fa9176768ebb7779feb82e89ba8dac9ec0eeeb94a4fde10dc8b6820cb82cad"
-    sha256 cellar: :any_skip_relocation, monterey:       "814753b496e16930bc80c33845389054e17cc129279ad5184b6bda591f17daa3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ea9d30c154a684aa9484f360b0c7b3f78a0b5a37652dbd3d6dd910db0490963a"
-    sha256 cellar: :any_skip_relocation, catalina:       "e133030f65650dd4781b5d374915add13c9698783831d2bdf55f23ac20b8540f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0e58b38c78ab4397ae353551f4b18a066bef192627df29e0578efb296e1c3a70"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5c4f23e7aef1e9cdb60500d0347d0bdaad611342590c909e29047ff188fd7d0e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ce436a9ad4e0a98d4c8633848933e8940365f0e30bcafcf8c529cac179ce7ec0"
+    sha256 cellar: :any_skip_relocation, monterey:       "56562ea9388a85ec6ee7382f454bc4a15264e70ba17c6e8799ec2a56dcb908d9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "61fb60d9f8ae5e43ba95a48639029922d0293f3dacd0263794dfa6f121ddb8bb"
+    sha256 cellar: :any_skip_relocation, catalina:       "3d4b8503b2911d17219b6066476fe39c0914ca902b9676860924d694e633d0dc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f795346c964e374da619cbe4b91a84c4ffcd19d8f21cb5279cce6d9541811680"
   end
 
   depends_on "go" => :build
