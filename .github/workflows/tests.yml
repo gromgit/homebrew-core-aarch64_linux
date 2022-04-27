@@ -189,6 +189,8 @@ jobs:
     strategy:
       matrix:
         include:
+          - runner: '12-arm64-${{github.run_id}}-${{github.run_attempt}}'
+            ephemeral: true
           - runner: '12-arm64'
           - runner: '12'
           - runner: '11-arm64'
@@ -303,7 +305,7 @@ jobs:
         run: rm -rvf bottles/failed
 
       - name: Upload bottles
-        if: always() && steps.bottles.outputs.count > 0
+        if: always() && steps.bottles.outputs.count > 0 && !matrix.ephemeral
         uses: actions/upload-artifact@main
         with:
           name: bottles
