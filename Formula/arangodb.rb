@@ -13,10 +13,10 @@ class Arangodb < Formula
   end
 
   bottle do
-    sha256 monterey:     "bef5e50944ce80f54858b7940d8196418301df2dd31c13931bcd1d5d1c9da038"
-    sha256 big_sur:      "f3955646005e34c0cfbcf5337a33091a6cb29f7c9cd38901f8977d4e5bf99400"
-    sha256 catalina:     "c43adc42e72f481027b2bd39123d15ac5c411e79863df0619a9a0ea54551a420"
-    sha256 x86_64_linux: "b1bd405e8126572b9f1947d2b86617c12b762af33b01039cb2c4a160b257b9a0"
+    sha256 monterey:     "6b7d80d0d952e3f39e18cfb91e3c76881f89dab5d7a8e141de4c4b6c9c9e5b3b"
+    sha256 big_sur:      "c6d5be3d12057a9e7ee2999f6b1fc20f419d30b8f3fb126ceac80a27e7eb1934"
+    sha256 catalina:     "081eb0952791da03bbdad0990b596b25a4888a25ab717c585549343e366c7d05"
+    sha256 x86_64_linux: "2efb2e317b088344bdc880dc5a34035cd986008e663f4c98a1a55e0f017b5015"
   end
 
   depends_on "ccache" => :build
