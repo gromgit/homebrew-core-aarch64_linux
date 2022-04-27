@@ -1,8 +1,8 @@
 class Ucloud < Formula
   desc "Official tool for managing UCloud services"
   homepage "https://www.ucloud.cn"
-  url "https://github.com/ucloud/ucloud-cli/archive/0.1.37.tar.gz"
-  sha256 "91c8153854b102dcd671c58976e35b056b3ed32258a6daea3755c8cb35aed742"
+  url "https://github.com/ucloud/ucloud-cli/archive/0.1.38.tar.gz"
+  sha256 "466197235a2d9ff5a66237813f040ef6cd0efeb9513b578bfb6b215663640b9f"
   license "Apache-2.0"
 
   bottle do
