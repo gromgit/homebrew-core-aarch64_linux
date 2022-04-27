@@ -7,13 +7,12 @@ class Opencoarrays < Formula
   head "https://github.com/sourceryinstitute/opencoarrays.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "1656b91f52e8c487d9ac27c6509abc23b36f37ecf4e6a188e9b736db4893ac53"
-    sha256 cellar: :any,                 arm64_big_sur:  "043b88d4bf48347702c50ba3438389965196d9970216b9464561fb31628a0b71"
-    sha256 cellar: :any,                 monterey:       "b9fb0046ab439e447ba55678666b20647915ad640754c5a5016cb0b05889ad2d"
-    sha256 cellar: :any,                 big_sur:        "837d197c743e950acdffe9ee52e63d4191c67226242c53ad7e9a26221a5e73f5"
-    sha256 cellar: :any,                 catalina:       "245e140d9b5b8301caab320267ab2ff0c83156f60433181afdfce370651292ab"
-    sha256 cellar: :any,                 mojave:         "cf781f8c51d7b6bf872e1c0879ad22f287ff3c22b49118eb5e1f3a172cfaedad"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "db09effd8c16b9cc640120bfd01ba6fc666d4086faa0f13efe20962c0072dd80"
+    sha256 cellar: :any,                 arm64_monterey: "e30c7beae1f89eeb8fc306825122d8f4c656ff85b4df4a5186da6361cc18b73d"
+    sha256 cellar: :any,                 arm64_big_sur:  "7b3607ea9feca446a7bc3ef45d34faf907d2e7d5d353f28da922fb34301f0235"
+    sha256 cellar: :any,                 monterey:       "77e660ffeb752246d80daec2663a65a719b902cff7ca2224da981346792b7a10"
+    sha256 cellar: :any,                 big_sur:        "a163cace42b16e61ecab6cc2e99e4767a465c7527252657c7643740af8f69502"
+    sha256 cellar: :any,                 catalina:       "8e883a4a6c749eb8ea8700a11581b1027b46d89cbb48c1d07fe90ad88efec6e0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "220cc61205d5c880912a8ef48f653543056e5362a50d983f1cfdcc1df70a28cb"
   end
 
   depends_on "cmake" => :build
