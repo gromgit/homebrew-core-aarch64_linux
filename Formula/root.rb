@@ -16,12 +16,12 @@ class Root < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "665469132f0269b29d3952c3f6c9863b5f5c5064e72f6a309a460db63cc95294"
-    sha256 arm64_big_sur:  "4d09362f20a5511e457dbd4faa4956ccba58bb39ba9b0523c6623b19c3446553"
-    sha256 monterey:       "a7adcf375117df254f208fcff45ba94f0d0888d34aecbbe2ef158ca6e881d03a"
-    sha256 big_sur:        "ccd7f9dafecd925ad93e3c23fd07278fe1db1820f8bf3fb31d4d568b86b4f94f"
-    sha256 catalina:       "13e7a6fc04145b4c7b9ca694c28d90a14ad7432b6649fba917a55c7cd95ad55d"
-    sha256 x86_64_linux:   "0afc3d7c112ee2f006694b09a19474b9307833fba247ca37ecf5c129e2fa1b8d"
+    sha256 arm64_monterey: "4f5223ee441865d869a1b935d31a22c85f8f9aac869d69eba7d9109aaebbee3b"
+    sha256 arm64_big_sur:  "980a8bdec3fd26a6912066935634bb5826dbfeaee72cdfb8f3d921531aeba61e"
+    sha256 monterey:       "aab0d84528e3ecd8441ad4bacd54f60d7183a9153f3273f5fa46877924369a15"
+    sha256 big_sur:        "3d79db03d061064ba67b06dc2b79d8c823d517d656e1c94793c17bcfecc9c97e"
+    sha256 catalina:       "bad4b634d1adb2287765b5bd1c097888277b84415a4efcab20d1e2385ffeb8f5"
+    sha256 x86_64_linux:   "054d674fcbd968b84a21c88c229e666553f319882ea20ea6864a80ceeb431326"
   end
 
   depends_on "cmake" => :build
