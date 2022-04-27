@@ -7,6 +7,15 @@ class Vcluster < Formula
   license "Apache-2.0"
   head "https://github.com/loft-sh/vcluster.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c27bd7a4c291f49c80d1e1aed409d5d0def7661006f3dfeec65f43e82c6ee7a4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "46e19e4c7cb6f7f2d202372e8940b5c5c5634aafde2d7329daea81b4d44c7ec8"
+    sha256                               monterey:       "c240fe5ede657520c3399e857c584ea1dbbce3fab3bd172a487b86a53a33c1e5"
+    sha256                               big_sur:        "ac23160dd80a21a808c25ea429b8267ccbb31b5ff5e1d36cbc8086992a3ef52b"
+    sha256                               catalina:       "014767796058fff1733ddef7c376078f5e9a7bafe498dd30afa263025f5fa40d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c4bf886db30e223f4314abbb4f2192da961fb817cde8d008af3addb66309be39"
+  end
+
   depends_on "go" => :build
   depends_on "helm"
   depends_on "kubernetes-cli"
