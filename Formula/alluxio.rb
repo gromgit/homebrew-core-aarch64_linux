@@ -11,11 +11,11 @@ class Alluxio < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "91e4f7fdc6e3a0bea6219e5dede281af211b2bf4009b84d182f3e86bd899d90e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "91e4f7fdc6e3a0bea6219e5dede281af211b2bf4009b84d182f3e86bd899d90e"
-    sha256 cellar: :any_skip_relocation, monterey:       "3d13c3e73706ea08eb03d47b7fe9f4102c30a5bb9333e075936e541ab25184ca"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3d13c3e73706ea08eb03d47b7fe9f4102c30a5bb9333e075936e541ab25184ca"
-    sha256 cellar: :any_skip_relocation, catalina:       "3d13c3e73706ea08eb03d47b7fe9f4102c30a5bb9333e075936e541ab25184ca"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d845e46e556e33ec02e69b51cad893eb6296fe49d5f699aefe346b161fdbfabe"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d845e46e556e33ec02e69b51cad893eb6296fe49d5f699aefe346b161fdbfabe"
+    sha256 cellar: :any_skip_relocation, monterey:       "8f28c665a49d478eaab64e044bc9a6773cd0f66548277434b53a00b29ac6dec9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8f28c665a49d478eaab64e044bc9a6773cd0f66548277434b53a00b29ac6dec9"
+    sha256 cellar: :any_skip_relocation, catalina:       "8f28c665a49d478eaab64e044bc9a6773cd0f66548277434b53a00b29ac6dec9"
   end
 
   # Alluxio requires Java 8 or Java 11
