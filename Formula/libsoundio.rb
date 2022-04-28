@@ -19,7 +19,7 @@ class Libsoundio < Formula
   depends_on "cmake" => :build
 
   def install
-    system "cmake", ".", *std_cmake_args
+    system "cmake", ".", *std_cmake_args, "-DCMAKE_INSTALL_RPATH=#{rpath}"
     system "make", "install"
   end
 
@@ -39,7 +39,7 @@ class Libsoundio < Formula
         return 0;
       }
     EOS
-    system ENV.cc, "-L#{lib}", "-lsoundio", "test.c", "-o", "test"
+    system ENV.cc, "test.c", "-L#{lib}", "-lsoundio", "-o", "test"
     system "./test"
   end
 end
