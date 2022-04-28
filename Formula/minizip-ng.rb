@@ -7,12 +7,12 @@ class MinizipNg < Formula
   head "https://github.com/zlib-ng/minizip-ng.git", branch: "dev"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2a947a17f83a0cab9fb5e233bb4fee6d886457c190200f61fc03e6a9eebcc19b"
-    sha256 cellar: :any,                 arm64_big_sur:  "093472912723d17ffbea8c19f279f55111e4aa8cd32189b4380e6599305baa44"
-    sha256 cellar: :any,                 monterey:       "83c025858a67665616fe1d3dd2f3180c2300d0c55544a8e085639fb6d3767be4"
-    sha256 cellar: :any,                 big_sur:        "a0559ee971485ef4671eed6d93c153e3a55937ef1e0399f7dc1ee6e849be35d9"
-    sha256 cellar: :any,                 catalina:       "3b1f1ee5d3894ff439a1530b8c65743baa852d3ebf04c203c0fb1aa951f8ea36"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "80df92ff8b1f8f9c0899cfe444d3c7a25860f535e6ecc9a27821618e7149cbd2"
+    sha256 cellar: :any,                 arm64_monterey: "3b1a7fa90dae23cd69a27d16199279ea53d72d92eb96d59a1c4a6e888ccb89d4"
+    sha256 cellar: :any,                 arm64_big_sur:  "a61b06c3cd78bafd1a1f89fd6c59b6ee4fb600f4c69eed324c41a720e1129c8c"
+    sha256 cellar: :any,                 monterey:       "9ad34a5621f4f7da367f3ab215330236c4330e4620950da57530a98832918f2e"
+    sha256 cellar: :any,                 big_sur:        "f3b8970f1b0a42acc3993f3c898a6bc15ed454cbea4b0f13dacc71ce3f64d48d"
+    sha256 cellar: :any,                 catalina:       "a0afd89b7407ebe56deee2492654f24b76d5d9de9a10261a9e4429b82198ecb0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ba63cc8cc80ef8527b37ab6cc5b82471adef4d7cf2dedc33a6d4d74aab9adaba"
   end
 
   depends_on "cmake" => :build
