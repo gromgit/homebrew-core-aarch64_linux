@@ -6,12 +6,12 @@ class Zenity < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_monterey: "0ebacd1447f8fba2bd8c40e962d3966e53d627b08e365fb9420d8aad83ccec47"
-    sha256 arm64_big_sur:  "d356f3fadb082e7d3eae3f5ca6968ec5af1aef95053ce798b45410d9e81f34c4"
-    sha256 monterey:       "29cd27529dbfe9f0fce0d640fa36711368869a10d565d067bdd43107e8a1cfed"
-    sha256 big_sur:        "d82c92a871f056e04c151f2527b91acecea2d90da4758af1767785aef876a715"
-    sha256 catalina:       "44339c221ebcd8115cc581783af487a3ccca81921e228aba029ab6caa08186be"
-    sha256 x86_64_linux:   "b54070df2689dec6df7baf5db505445d6a97e2292e3318d1b9f0c11006dc4400"
+    sha256 arm64_monterey: "a9e84c3b0eefa50aafb0f41cc6e0a9ccdce95ece584680c1d14591fd9fa4250c"
+    sha256 arm64_big_sur:  "0df17f657645d0075244735559ee97fb35ea64356843f5a1be5bbb1f29472293"
+    sha256 monterey:       "c102812429cf49155840fd2aeccae7bda7aec45f26ebea12848b628aa4f44397"
+    sha256 big_sur:        "e3b50cd62e794c4efe5355adb5eafabc4d93b2785a6fc1a8c638eb5bae681aee"
+    sha256 catalina:       "98f1939e7cf78bc7a66329c20e84f0067009d3e7be13d9f3b2f2156ea11f5b26"
+    sha256 x86_64_linux:   "3b64e8ebc5f116dc1d0b85f9c42f2a0adb7e0cdbef3930fc69eb249a8b0d1374"
   end
 
   depends_on "itstool" => :build
