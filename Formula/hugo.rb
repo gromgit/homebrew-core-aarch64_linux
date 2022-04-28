@@ -7,12 +7,12 @@ class Hugo < Formula
   head "https://github.com/gohugoio/hugo.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "83fb57f8ff09e309b6755e6aaa00e6f2f14f86b7e674c9af589f017fd72b184b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b2c6c153ac22bae46689388835943293c7559f4208fc3694e969b477b57a2e19"
-    sha256 cellar: :any_skip_relocation, monterey:       "774f54e514ce83db0727a92ee84241a92600e47badc75375848d9a1b72e7ad0b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "91d425d92780f95cdaf1d5dda18a9cbdad2ebcd121806a91763241fd58ac81e7"
-    sha256 cellar: :any_skip_relocation, catalina:       "5d078e05e45d1bbb0b36ef0857b2a1ba18010a4ba1c9fcc106e5f9a59eb898cd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bb5ba10269e36840952773a192dda9538ff67d285bc36ad873abf2ed20c736f5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8a2888da63249098e970999fea3614c2b1a4ecb48ca9f75e1174b0469239c6a3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5f8f9f78fcf36e5e7c8411460de9c07bd1c2e5f43df880258e26ca9a40a34210"
+    sha256 cellar: :any_skip_relocation, monterey:       "ed877e54d75ff23d90e59cbefcdff8afaf9617fa9c8e1ea457e01226f6d3020c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "94c45270c072a2ebab78910fb4fd2dfeccf7aada4c5627f31133c9f4f0cc0384"
+    sha256 cellar: :any_skip_relocation, catalina:       "08c97da67ea263b5fd28581124ba724def818a56cf8fe1bf97f0c3b1c16315bb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "94d8b5d6eec1938c43c91c6e9450e167b65b9010db82bc740173d0dcdef2c4e9"
   end
 
   depends_on "go" => :build
