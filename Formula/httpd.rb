@@ -5,7 +5,7 @@ class Httpd < Formula
   mirror "https://downloads.apache.org/httpd/httpd-2.4.53.tar.bz2"
   sha256 "d0bbd1121a57b5f2a6ff92d7b96f8050c5a45d3f14db118f64979d525858db63"
   license "Apache-2.0"
-  revision 1
+  revision 2
 
   bottle do
     sha256 arm64_monterey: "e947b28cf796d63fe9c69fb27a890ab4068f915bd501fe1548cad816824fcf22"
@@ -171,6 +171,9 @@ class Httpd < Formula
       sleep 3
 
       assert_match expected_output, shell_output("curl -s 127.0.0.1:#{port}")
+
+      # Check that `apxs` can find `apu-1-config`.
+      system bin/"apxs", "-q", "APU_CONFIG"
     ensure
       Process.kill("TERM", pid)
       Process.wait(pid)
