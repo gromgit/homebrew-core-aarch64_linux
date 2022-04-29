@@ -13,12 +13,12 @@ class Mmctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "aa237cdb088ed8f6ff2f6301b927e76836cc48d8424f9e9332c067883f45f28b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "acdc2a642b91bb6163714ba0e555e9964aaecfc57cd43ff013539c4bc67fe8f2"
-    sha256 cellar: :any_skip_relocation, monterey:       "fc955ccc87eef0533fa13ff41ec6c892553a02376a0892a89a51d37a7cef71ca"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f7ddb05c4c0396cfd85472ce686ba925dce4b5bf4699a34e349821df849490b1"
-    sha256 cellar: :any_skip_relocation, catalina:       "3cb7e991d39d3f30301c0eb00183be2926a1b10d07f7281570278e039e4a0aef"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f63b65233d587c092ec3a745dd82d811d64ab3c2d980e526beaa343ae98a02ba"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "41ac51481c24b3f33b047f00386941bb2d40b5d8ff4c67dd65fdf32bbc7db604"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bbfbb9cd41ea4ebce0f26c695bf21b94d1dc1e2ceb27586beb9efaa82ba07627"
+    sha256 cellar: :any_skip_relocation, monterey:       "1a2cacdf9f8c5209a0f15d3939a0e1c6efe7ba0a679943ea9924de87e0cfce0c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "239bf30a1d98e0fd5122412c8904aeef78adffd105da25283a5d86c235f6d37d"
+    sha256 cellar: :any_skip_relocation, catalina:       "287bd574b6b43a82762fcda0e7587931e32756f5dabb816c24e8d432d92e8daf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f68243961f5997292a997859a3dde35c210ade48d0bbefffb73304a0026c2bb8"
   end
 
   depends_on "go" => :build
