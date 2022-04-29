@@ -8,7 +8,7 @@ class Ansiweather < Formula
   head "https://github.com/fcambus/ansiweather.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "242abc21c45bf8e66ff74e62dcaea4fd62b3ddeddc8d280b35e405341f37689f"
+    sha256 cellar: :any_skip_relocation, all: "80cab6cc26ed03f58ec06f593fda3dd072cbf0a8255b9f6afbcd02f516d9cd7f"
   end
 
   depends_on "jq"
