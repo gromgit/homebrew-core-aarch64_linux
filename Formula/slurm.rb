@@ -1,8 +1,8 @@
 class Slurm < Formula
   desc "Yet another network load monitor"
-  homepage "https://github.com/mattthias/slurm"
-  url "https://github.com/mattthias/slurm/archive/upstream/0.4.3.tar.gz"
-  sha256 "b960c0d215927be1d02c176e1b189321856030226c91f840284886b727d3a3ac"
+  homepage "https://github.com/mattthias/slurm/wiki/"
+  url "https://github.com/mattthias/slurm/archive/upstream/0.4.4.tar.gz"
+  sha256 "2f846c9aa16f86cc0d3832c5cd1122b9d322a189f9e6acf8e9646dee12f9ac02"
   license "GPL-2.0-or-later"
 
   bottle do
@@ -19,16 +19,22 @@ class Slurm < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "3e57437b452f76cdf1244c14702635545a684916e1b0891fc724a47735c5e7bf"
   end
 
-  depends_on "cmake" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
 
   uses_from_macos "ncurses"
 
   def install
-    system "cmake", ".", *std_cmake_args
-    system "make", "install"
+    mkdir "build" do
+      system "meson", *std_meson_args, ".."
+      system "ninja"
+      system "ninja", "install"
+    end
   end
 
   test do
-    system bin/"slurm", "-h"
+    net_if = OS.mac? ? "en0" : "eth0"
+    output = pipe_output("#{bin}/slurm -i #{net_if}", "q")
+    assert_match "slurm", output
   end
 end
