@@ -6,12 +6,12 @@ class Scrcpy < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 arm64_monterey: "a57fe498d64e7ad4a5130cfc31b7553f3be1ff97b9129847feaec4ac2fd7fa7f"
-    sha256 arm64_big_sur:  "7cdbdf9f8925d40982367d4b61ce4bf2284bbcfc8531f1c5c1a7b36e8310a1b2"
-    sha256 monterey:       "0edc7bae4a82088c6cea0b03ce77d4689e19bd76f2d75d70df0880ffc173e752"
-    sha256 big_sur:        "2161c94f66ee47ea365b714ec02c676338062f1cecd905d22c43c39ae5f15149"
-    sha256 catalina:       "10f5b925f7d485474d2dc9155f000ccd7ddb13aee4e8f4e0cb495bda7341ef23"
-    sha256 x86_64_linux:   "0139a07a7c645bc4984fb4c1c2e211f97ce198a71077138bc74c1dbffea322f6"
+    sha256 arm64_monterey: "91df79f4024fa176e181472704132910a6738581fa8332de47e52af4874eec75"
+    sha256 arm64_big_sur:  "bef49af8e3698d505717df5e1b96c1fddba8ce60e6ec5abde1b49ed47a28dfd3"
+    sha256 monterey:       "d78192eddd8e0a55086a8e72ab5e58ed04102edbcd4965cb2689991fa66b80f5"
+    sha256 big_sur:        "79796e78b1caa76cd5b4015ff45809cf034589cdfd6fe82d2c3ba136f42db762"
+    sha256 catalina:       "50ffe9ea62b01ac23ec09b618d1451bcdac8a81b7d7cd4eede2446997527af5b"
+    sha256 x86_64_linux:   "2230b214d82871edad106d8bfeae19ec53b5c9354f164111021162a4242e851b"
   end
 
   depends_on "meson" => :build
