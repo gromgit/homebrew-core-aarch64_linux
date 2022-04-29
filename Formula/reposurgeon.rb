@@ -8,12 +8,11 @@ class Reposurgeon < Formula
   head "https://gitlab.com/esr/reposurgeon.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3b98cc8b69dc7952fc935fe26d7dbbbd2dad705207181a86b3423e108fc317de"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c7f30cf4589429feb7bd480ebe7f57c627e2ac9e16c5946ad3939e739c5e4ae8"
-    sha256 cellar: :any_skip_relocation, monterey:       "bda19f7c15e15ef6766e80a7e9e2dc580dbe822796a183e5376d4bff98720f71"
-    sha256 cellar: :any_skip_relocation, big_sur:        "60748bd31b737f5da19048f67d8db22113a912b937fc013272af329155f86b8e"
-    sha256 cellar: :any_skip_relocation, catalina:       "45bee33e5c8e35fe15257333aef0ac31fbfff7c868b0fcaf97232155ab087822"
-    sha256 cellar: :any_skip_relocation, mojave:         "85988d5f6ffd08dcedeb706a566d8123869840ab61f0eb0d7fe8ce1ae0207b41"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5b8bf9d020558c7d54100aca51eee721cfbe86c503e651a3d1b9b1a4da933b20"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "975f6b3b2d28cb6cae792a116c71e9b22a296022aa21c11cd0a03c77c1ca1ea2"
+    sha256 cellar: :any_skip_relocation, monterey:       "33547672b035880844ee44db3e7d760bf96c65a58b92767917d1a38ab243a0c3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "efc8c882015e8238d3a127e5a6121aa526f2a2e9bb38d9a4ae58854db43e1a14"
+    sha256 cellar: :any_skip_relocation, catalina:       "08735096b9d1c6d211b75b6358ab398d936ea06158116d21aa6623bf84aef384"
   end
 
   depends_on "asciidoctor" => :build
