@@ -11,12 +11,12 @@ class Cpl < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "770ce25aba6f82238706ab78b6617bb507d7cf44c5fffaa10c9d281d3506d2c8"
-    sha256 cellar: :any,                 arm64_big_sur:  "c6a5baeaeff3827d016354015a9efa9b2f2bc07e5ad9430972c100cdc0813f28"
-    sha256 cellar: :any,                 monterey:       "6f0df169b9bf66c8fb4f759c27c5958596ea8ba7a089792bab8a944bb3015255"
-    sha256 cellar: :any,                 big_sur:        "f1851a3f70f96604153373c751985797df4adf8e42c84ae131b7a8d663459f86"
-    sha256 cellar: :any,                 catalina:       "765071ab6932cd4952d2237330a31f829c5ed71884d7468a530e2a0d13a67378"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "93dde958ec8052039fb4ef6ea0f600d2b3ddb9fc69cfbf3b83918296d8f644ad"
+    sha256 cellar: :any,                 arm64_monterey: "59fda22c52d9add0cf27375ccab8061209128acae99ad53e115b7616d37a2a14"
+    sha256 cellar: :any,                 arm64_big_sur:  "f98316577f5d261a64c081fb436f9cd4666c145aee21899b7aa9225921bb5b35"
+    sha256 cellar: :any,                 monterey:       "3a378d521c7f300e3bf554f2a26532b3d46ebe72a50e74c4b32dcf2a8ac30c58"
+    sha256 cellar: :any,                 big_sur:        "5acda25a5ce54b2f761783907678cc1817f4d65183fb710db67d1967a36fe19b"
+    sha256 cellar: :any,                 catalina:       "555f4f3bca9f72dcda5eac44ea5b6a27f83eb04ad592a27f76b185cbc4370f4a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f308c57ae47f8bb9b581ca6c8a8bd47a2b20efb82ca34f869d02f992308ffb08"
   end
 
   depends_on "cfitsio"
