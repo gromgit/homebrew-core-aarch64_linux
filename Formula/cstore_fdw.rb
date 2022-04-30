@@ -7,10 +7,12 @@ class CstoreFdw < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "40f8f90ff00698421df744f2f50b2f7ebbd5fd85c1f8a34b181aa82f18c6af07"
-    sha256 cellar: :any, big_sur:       "f31e1f58858d8c3379caa077e8944b088154ef4e2c24b6ead8fcfe630ec2e7a9"
-    sha256 cellar: :any, catalina:      "59ef913883a6d6cf128621e06c2a0f83b753f6fa57c129634ed90650505d04e4"
-    sha256 cellar: :any, mojave:        "02ff5c1993f5c35f7ac2ec660293c243670a7e467e4e0d7f012e3f7c62e62dae"
+    sha256 cellar: :any,                 arm64_monterey: "78cba62624a4f42f39f50b059cc400802e9bf9f75083a6582ac3a0c9e43e538f"
+    sha256 cellar: :any,                 arm64_big_sur:  "7150e6ca48f68acdc46dcb2db908fa6ffbfa6e9924bd1a6aef9873beb308522e"
+    sha256 cellar: :any,                 monterey:       "8475a654cb0aff0f9c355b4334b862b78ff7cf6222c04847e1346dc70979f636"
+    sha256 cellar: :any,                 big_sur:        "72fadeff938269dc37235e25917196ecb67a2d645c106adc1310d09841e599cb"
+    sha256 cellar: :any,                 catalina:       "dbb68dd9be281e6731f6dc33305a7be86b77c47910cc0534126bba63cd5068ee"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3dce4b860d7534d3701d8f78c0b4ba73ad48cbefa3b996b03e572c6469133ae5"
   end
 
   depends_on "postgresql@13"
