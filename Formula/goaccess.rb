@@ -12,12 +12,12 @@ class Goaccess < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "2a847a15962cb1f592c720ac98e72446ced4eb28a254608badfd28b7ccb91c06"
-    sha256 arm64_big_sur:  "c6494ed9e36c0fb9dbae64c14a4e468962f43df7c0edc5a9a7c210d27623f3e4"
-    sha256 monterey:       "a5abf25db9992321ddc71cae3048ce2b90df0e006f7a79befff5a003451e96b2"
-    sha256 big_sur:        "cc55dc5526e1b9bec86a1c2139a137e1ab6f3d3ed2f0b6f27067993fefed1990"
-    sha256 catalina:       "2f04a50e4f95404ac6096453ade2575ab56ceca71a0cb0bc9e7763b112eb92be"
-    sha256 x86_64_linux:   "a96c5a99446ced302348bcaab79445f344f633226c272ed0f4a1d5df75bd9bae"
+    sha256 arm64_monterey: "8ac00ccf044bf01877ce8e1461e21ba10144529c7c322f0fe2555378c129a8a1"
+    sha256 arm64_big_sur:  "329c70f0acc84c76447a8a2639a994a221483730dca8f0302841003311f0b4d4"
+    sha256 monterey:       "8d659d27dcb96049cd5f3f459b4ffc432ca4063e7d978da4eef145cc925b6c00"
+    sha256 big_sur:        "ef9c0bc52331ec3aef80aa58f8a9cd3ce9001825aca514a5ab6e4cc50274ab96"
+    sha256 catalina:       "e6734fc40187fa84f5aba824e7d9060c92a77270505a2a53413f20cdb27f767a"
+    sha256 x86_64_linux:   "93796acf4a45abe3cb973c661ef364ccb49f32a9466f238d3330d654232a5f35"
   end
 
   depends_on "autoconf" => :build
