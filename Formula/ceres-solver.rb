@@ -13,12 +13,12 @@ class CeresSolver < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d2e9c1240a5b9d5bbcce551f111eae6bc3a7d98198067843fcded1b05100be07"
-    sha256 cellar: :any,                 arm64_big_sur:  "d714e1ec79e261c0f35f9c2979b0a58b39653569255e479bf163f049d79f945c"
-    sha256 cellar: :any,                 monterey:       "507a49279c164dbbe7a7f22a745c767b9e6fbe4badf5215568ee962e712ec92a"
-    sha256 cellar: :any,                 big_sur:        "ae18afa42ca071eee949d429aff357f227958a3c3dea55a6f32e4310e8940b80"
-    sha256 cellar: :any,                 catalina:       "3b223b58b5a5a2473e577070bbc82042859daa3cba6ba6096ac0d4a20e28fd88"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c5e36f4daad9f0cd3545eb5abadeae53c757e2c254c127aa093859f6059ad125"
+    sha256 cellar: :any,                 arm64_monterey: "c727ac20864b6d83a0ca462b57d7aa4f36119eba132565faa9c4a21eec1bf0cb"
+    sha256 cellar: :any,                 arm64_big_sur:  "3319708adf812ed908c95dba4984a51f39d49f57d08e71ad2e5b2c124c433348"
+    sha256 cellar: :any,                 monterey:       "ab39d83b1ae0299e88f3fc9d5b23f19c98903d6452e21b6d363966ef5f4817d0"
+    sha256 cellar: :any,                 big_sur:        "d1918fe281cb00dbb2d773c03252a0d50384688c32cb1ad92510f55c37276dca"
+    sha256 cellar: :any,                 catalina:       "d6a945ae9d978b449228a795cfab9ab0061920f6c73f9cb93bb0a72946f4b206"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5f095246dbff97818863a99864400c25278c6c23ee5bf42546eca75ae04f7de1"
   end
 
   depends_on "cmake" => [:build, :test]
