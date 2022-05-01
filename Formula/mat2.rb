@@ -6,7 +6,7 @@ class Mat2 < Formula
   license "LGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "55dee596f6efa5d2faea17b2f9b17bbb96591f42a1bbc86358ed266835d4e086"
+    sha256 cellar: :any_skip_relocation, all: "e7cffc9cdb99894a54b6b93459194ca9dd69f8c0ee3717882f8531b924d4c3a4"
   end
 
   depends_on "exiftool"
