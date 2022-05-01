@@ -3,8 +3,8 @@ class Pnpm < Formula
 
   desc "📦🚀 Fast, disk space efficient package manager"
   homepage "https://pnpm.io/"
-  url "https://registry.npmjs.org/pnpm/-/pnpm-6.32.11.tgz"
-  sha256 "38f9d94a8151ac80c429000d02ba7a0573e07e45eaeffc59ff0ab70c4b2a7da8"
+  url "https://registry.npmjs.org/pnpm/-/pnpm-7.0.0.tgz"
+  sha256 "4b9266de9037b6ceec204bc55d6454e971738de51e2cfc795a0c064631bf4170"
   license "MIT"
 
   livecheck do
@@ -31,7 +31,7 @@ class Pnpm < Formula
   end
 
   test do
-    system "#{bin}/pnpm", "init", "-y"
+    system "#{bin}/pnpm", "init"
     assert_predicate testpath/"package.json", :exist?, "package.json must exist"
   end
 end
