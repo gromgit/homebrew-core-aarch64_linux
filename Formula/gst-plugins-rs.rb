@@ -6,12 +6,12 @@ class GstPluginsRs < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "eb935b795b91629fcf762ad9f2a40d4e8754a92d2c3b81cba1c0d267fa7644ba"
-    sha256 cellar: :any, arm64_big_sur:  "f213ac86c029dc7d79d3eb58ef564f0f3b643b49f99ccdc77b34012545d38c90"
-    sha256 cellar: :any, monterey:       "9010f3c7ecd587c907274cc40e7f0e9ec2831119d2b2849c465b0bab6eac0106"
-    sha256 cellar: :any, big_sur:        "dbeac573c81819610b88f58b65c5deb32b2bc7f642a80be4fef71651701f449b"
-    sha256 cellar: :any, catalina:       "9a73a5618ef67cf837055d563b73e91c54053d7b148b6b8b685eac91a73c22ea"
-    sha256               x86_64_linux:   "213b289bcadf2b4d5106cc0805f3036a3e651d050093d61b29ca4f04848b3b2e"
+    sha256 cellar: :any,                 arm64_monterey: "330aa9abc8a345f970940379accfc07ae260327378c050ae99b1e00be29a8ea6"
+    sha256 cellar: :any,                 arm64_big_sur:  "83814c0ca2a8eafdcf4125782d8c1aa07f39c9808d9b0b8e25ddc70e56115e3d"
+    sha256 cellar: :any,                 monterey:       "32acf2cc9b7384b82c553985bbbd19e44654af8fae9af2e884a943688b51fb3e"
+    sha256 cellar: :any,                 big_sur:        "901b5456efaa290cf251f4e144a5d94c944a6a4a01af903016460caa52454947"
+    sha256 cellar: :any,                 catalina:       "e772e469c2c1ba2b51db20cc2cb3a2daa16a50ca6b935fc0c745874c39bfc324"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "18e7a94e96e3294e2b67c2c392d9d2a412c85143e790f8aad386e6a9d0329686"
   end
 
   depends_on "cargo-c" => :build
