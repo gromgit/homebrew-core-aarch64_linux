@@ -11,12 +11,12 @@ class Oil < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "a962b09107812fd470005454b80b4af0c5613cd076c30ce00fa4c0ed2d0b46dc"
-    sha256 arm64_big_sur:  "9f36c0aa68dc103527a4013d3aa0f42738944af1bb5359e2902bbbdde401aaab"
-    sha256 monterey:       "bdb43f10a5d2ba236374858cb0015d6ca9cff60afeeca62b7e55909955cfac1d"
-    sha256 big_sur:        "ff7553cfea482c281cc2d9bf5622da03d1331e388577f69c0360add3611c4b62"
-    sha256 catalina:       "74888b5412e87a771e8884c8fb71ca65d3978543a24e27a6e38fd4070fa81b67"
-    sha256 x86_64_linux:   "81aa6313f8a38d3d79baed195673703abd615ef3c18fa8e5e7c704ae314172b5"
+    sha256 arm64_monterey: "3f74e9a96414497c68116d936de9acad7140ffe8484dd36f2908250105b34389"
+    sha256 arm64_big_sur:  "675f621c454aab4a1ffa5edb62fd686fff0f672df1c901865cc7e000dbb2e9d7"
+    sha256 monterey:       "7024f1396846816b9650a9e0cf932a395930543447d8aca1966ab28a10aee2c6"
+    sha256 big_sur:        "d5cc753481a5691b6c4f9ddf0d30a4bd5cb82bcca77f95e97b56b2c2269b827f"
+    sha256 catalina:       "1337b6aa1f9be392874648117ccd2f79c86c529c12465d7bc10e559ec0d4dfcb"
+    sha256 x86_64_linux:   "41ff1d7433893d66399af9a2cf43ffa8a30dc5f6953bb9e51e143c184cbf010c"
   end
 
   depends_on "readline"
