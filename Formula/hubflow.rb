@@ -9,7 +9,7 @@ class Hubflow < Formula
   head "https://github.com/datasift/gitflow.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "5fcc66bfe17f292cb37ee437c016a60c9bc46ff63b8bc5ad5ac13cc649421a94"
+    sha256 cellar: :any_skip_relocation, all: "8fabc7a855f66324b448e41cfcb145e6978305b158d8b5034c153764ee79dc53"
   end
 
   def install
