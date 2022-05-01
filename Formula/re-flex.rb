@@ -6,12 +6,12 @@ class ReFlex < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3d2e724ffc15127696496b1c19ed77297b1a846454b49ef5ade5de3d2a4e5927"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9cc01aaaa3672db0fdd5e106ad91aa762e91846f54f0011605b6db73dd79c420"
-    sha256 cellar: :any_skip_relocation, monterey:       "b9bba0f658b1720ae75a4453ae17fa251ffff71501b2adc5b6ff990d1bb3d676"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fbbb10cc55cc90f77e8607626330dc7116f9e41c803adb9c7af432700c9c0201"
-    sha256 cellar: :any_skip_relocation, catalina:       "3e8387e513e77c4240f4eb848a23fa8ab66f94a557f5ef182d70c1241dc93730"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a18af6e712e7a718ecade84f1c60da9e4cebac298e14260d6b9c2ab4b1992384"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9e38733076c50c9516af7e13a5f4670c5989b4d6c78fdc8c2e168cbc2ed8c1c7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cfccb9c7d6e9202c8d9bc9b835985af85a064856d9d176bb54395b62c544d038"
+    sha256 cellar: :any_skip_relocation, monterey:       "bba77ecb7c0baf9f4b6e992be123d75c61c5a5b45b82df7806ac42f54d052c7d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b4a3ccc71feb3729fa334d89a2a4143fd6684517ca8b7085c5dc919db841d772"
+    sha256 cellar: :any_skip_relocation, catalina:       "1ecadfa539b4fdecb4bcf68b784e5a3e958c9ca568d4ce359f4c5c3caeb45783"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0f1e2bbb667ee7d0579cb224a6c90d3c8b753840373b6846932002106ec6aa85"
   end
 
   depends_on "pcre2"
