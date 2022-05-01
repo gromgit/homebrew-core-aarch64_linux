@@ -7,12 +7,12 @@ class Hcxtools < Formula
   head "https://github.com/ZerBea/hcxtools.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e295981e6f8a11ffd1086bef7e3e73f9bc49fe1229af68b7ad24ea7b21891dcb"
-    sha256 cellar: :any,                 arm64_big_sur:  "0561468149c5674c98702a611a5bb3700eb7bfb247b1309092cf2d4feda47a32"
-    sha256 cellar: :any,                 monterey:       "f9b845ce6110401475ec132b16d6688c90533633de6c91481c4068917f3da906"
-    sha256 cellar: :any,                 big_sur:        "a09ec24c7f5a2465d92199e786f1739686b71ed9639ab2515b974f3b20b2dd13"
-    sha256 cellar: :any,                 catalina:       "222e136accd07aec2c73399df5a7bb555a708576686a61ab517bb974536a67dc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fe51da5eee5f3b62420ae8e2210b1ee40fedc46125faf15ef2da93eb04289306"
+    sha256 cellar: :any,                 arm64_monterey: "24d06b03f444b8d96ababeded338616a4f2dcf9e319156f42eb320dd71ce0f81"
+    sha256 cellar: :any,                 arm64_big_sur:  "6401a756aebf675ade6eb471c579b1841d8658b660d38b7f4bc84b279dcd5275"
+    sha256 cellar: :any,                 monterey:       "f147def903c38e1f5e58e00b997a60c41e9856a0bbd347c6ba3e3630049e96dc"
+    sha256 cellar: :any,                 big_sur:        "d2926410fd310dfdba03ff7f21fb56582ed65cc199a7952c3981f1db6120192d"
+    sha256 cellar: :any,                 catalina:       "724c4e3cdc4026c84c7c9de3d8972917fad385c585bd4da5259ab09bfc7e7646"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b22950fbb1c486d3886f90c45dabefcb9239d9322681fba91f4fe7fe5009a6b3"
   end
 
   depends_on "pkg-config" => :build
