@@ -1,8 +1,8 @@
 class GitInteractiveRebaseTool < Formula
   desc "Native sequence editor for Git interactive rebase"
   homepage "https://gitrebasetool.mitmaro.ca/"
-  url "https://github.com/MitMaro/git-interactive-rebase-tool/archive/2.1.0.tar.gz"
-  sha256 "f5c2d73a191fe37e1144dca19977e99d2f306ce92ce799acdbf2992524dd4aa2"
+  url "https://github.com/MitMaro/git-interactive-rebase-tool/archive/2.2.0.tar.gz"
+  sha256 "4d60912c64a1ea25ff3e8a4beca0ecdb6a1c761f81e06f81ebc2a46119b8780c"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -23,12 +23,6 @@ class GitInteractiveRebaseTool < Formula
   depends_on "rust" => :build
 
   uses_from_macos "zlib"
-
-  # Support rust 1.54, remove with next release after 2.1.0
-  patch do
-    url "https://github.com/MitMaro/git-interactive-rebase-tool/commit/f4d3026f23118d29a263bbca6c83f963e76c34c4.patch?full_index=1"
-    sha256 "74a9ff98f668707f41df910b41eab6006970f2cf703f2a02a65e8c9901ddbd12"
-  end
 
   def install
     system "cargo", "install", *std_cargo_args
