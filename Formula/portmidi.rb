@@ -7,12 +7,13 @@ class Portmidi < Formula
   version_scheme 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "8ec4a3364a27fc26ca308b668cc16a487833110ebc2bc18414c4f21465f15b65"
-    sha256 cellar: :any,                 arm64_big_sur:  "100d2ff0ac315d597f7aa5b33262d18a0323e63a8bd4f370953396946cf7c038"
-    sha256 cellar: :any,                 monterey:       "87e050e43e85e7f7a3da7df96fe5ce56a76ce175e25869318b298d7dc310fdb1"
-    sha256 cellar: :any,                 big_sur:        "e97ac2b923ac89752aa3d4eaa9d9bd68335248575cf1b94387c896c1e9b6f788"
-    sha256 cellar: :any,                 catalina:       "b0bad0f22a7eb7933950aad6d684d5a382921ea43687bd662a054d60f8b12aaa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "179bf2d45bb53a20c90906acac509e723cefe2ffe078a500456ff000fd1609b7"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "9f36b2b3dfcc7e4ef4e8770b4fbf65ef56153c74d9e59f5ad8c4d575ea150aed"
+    sha256 cellar: :any,                 arm64_big_sur:  "9d427fa7b46931a71ab8d0b4c4439860cfe10dc58aeac76716687e8592809df9"
+    sha256 cellar: :any,                 monterey:       "d71bf72668045657cf5bde48294205957ee4a01f5ba2165183b13a8608a1211b"
+    sha256 cellar: :any,                 big_sur:        "5de1c249c9bb53e5a5481c9dcbd7817108b51a7f3803067b49d7a76cb6c0cb0b"
+    sha256 cellar: :any,                 catalina:       "f8e118bd15493c94e49b6c8e8c7e1c8368e42b34d9c442d08dcd6d8361e517d4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "52b02493f0f5566f3c37278c10db9c0bdecd3324193aaeaa2fcff7b04a2f03ef"
   end
 
   depends_on "cmake" => :build
