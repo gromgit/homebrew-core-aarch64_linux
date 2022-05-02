@@ -2,7 +2,7 @@ class OpenSceneGraph < Formula
   desc "3D graphics toolkit"
   homepage "https://github.com/openscenegraph/OpenSceneGraph"
   license "LGPL-2.1-or-later" => { with: "WxWindows-exception-3.1" }
-  revision 1
+  revision 2
   head "https://github.com/openscenegraph/OpenSceneGraph.git", branch: "master"
 
   stable do
@@ -27,14 +27,16 @@ class OpenSceneGraph < Formula
   depends_on "doxygen" => :build
   depends_on "graphviz" => :build
   depends_on "pkg-config" => :build
+  depends_on "fontconfig"
   depends_on "freetype"
-  depends_on "gtkglext"
   depends_on "jpeg-turbo"
   depends_on "sdl2"
 
-  # patch necessary to ensure support for gtkglext-quartz
-  # filed as an issue to the developers https://github.com/openscenegraph/OpenSceneGraph/issues/34
-  patch :DATA
+  on_linux do
+    depends_on "librsvg"
+    depends_on "mesa"
+    depends_on "mesa-glu"
+  end
 
   def install
     # Fix "fatal error: 'os/availability.h' file not found" on 10.11 and
@@ -51,10 +53,15 @@ class OpenSceneGraph < Formula
       -DCMAKE_DISABLE_FIND_PACKAGE_SDL=ON
       -DCMAKE_DISABLE_FIND_PACKAGE_TIFF=ON
       -DCMAKE_CXX_FLAGS=-Wno-error=narrowing
-      -DCMAKE_OSX_ARCHITECTURES=x86_64
-      -DOSG_DEFAULT_IMAGE_PLUGIN_FOR_OSX=imageio
-      -DOSG_WINDOWING_SYSTEM=Cocoa
     ]
+
+    if OS.mac?
+      args += %w[
+        -DCMAKE_OSX_ARCHITECTURES=x86_64
+        -DOSG_DEFAULT_IMAGE_PLUGIN_FOR_OSX=imageio
+        -DOSG_WINDOWING_SYSTEM=Cocoa
+      ]
+    end
 
     mkdir "build" do
       system "cmake", "..", *args
@@ -80,18 +87,3 @@ class OpenSceneGraph < Formula
     assert_equal `./test`.chomp, version.to_s
   end
 end
-
-__END__
-diff --git a/CMakeModules/FindGtkGl.cmake b/CMakeModules/FindGtkGl.cmake
-index 321cede..6497589 100644
---- a/CMakeModules/FindGtkGl.cmake
-+++ b/CMakeModules/FindGtkGl.cmake
-@@ -10,7 +10,7 @@ IF(PKG_CONFIG_FOUND)
-     IF(WIN32)
-         PKG_CHECK_MODULES(GTKGL gtkglext-win32-1.0)
-     ELSE()
--        PKG_CHECK_MODULES(GTKGL gtkglext-x11-1.0)
-+        PKG_CHECK_MODULES(GTKGL gtkglext-quartz-1.0)
-     ENDIF()
-
- ENDIF()
