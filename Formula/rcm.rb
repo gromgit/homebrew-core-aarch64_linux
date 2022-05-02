@@ -13,13 +13,12 @@ class Rcm < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a43a7792728bc4c441e997bc6e0879aecc237d1c95c7a47ff49093e33ad14979"
-    sha256 cellar: :any_skip_relocation, big_sur:       "1ae14043eb53ab02db26a3bf33d15d817a09917788f0165bbcc538f77a9d38fd"
-    sha256 cellar: :any_skip_relocation, catalina:      "86ac10a7254567afb24c9816f6a80dd90a81bc8cd8619c112e59c0950929ef14"
-    sha256 cellar: :any_skip_relocation, mojave:        "44c9524d9d5ce8ea5310fe6681b040d6c685cec693446f617686f82929d83c6b"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "7130060f9a26eda6a704eb06bda4c04a4cc0b0980f1c9d3fc5dce876fa5a3fdf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e25ac856a6b3705687bb8ddff4e53bfaa698aca2b87b0d478b7d613aa8cea748"
-    sha256 cellar: :any_skip_relocation, all:           "e0fe84fa9771045e44879d079ba41a4e4cbab1f163c09898c98db37cbb367779"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6b4023f9e2b482466d619cd2597001e167da9abd8d8a4306f79d7de32494f08a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6b4023f9e2b482466d619cd2597001e167da9abd8d8a4306f79d7de32494f08a"
+    sha256 cellar: :any_skip_relocation, monterey:       "6b4023f9e2b482466d619cd2597001e167da9abd8d8a4306f79d7de32494f08a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "6b4023f9e2b482466d619cd2597001e167da9abd8d8a4306f79d7de32494f08a"
+    sha256 cellar: :any_skip_relocation, catalina:       "6b4023f9e2b482466d619cd2597001e167da9abd8d8a4306f79d7de32494f08a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0ee4e4a747f2ae336116500cecfe49d507ae96ae2aa80bedc1a8574b52556ead"
   end
 
   def install
