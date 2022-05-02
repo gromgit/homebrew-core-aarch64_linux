@@ -13,9 +13,12 @@ class Nwchem < Formula
   end
 
   bottle do
-    sha256 cellar: :any, monterey: "bf4b2dfa17eb48b600343b6488980fd8ef988cd20bab9ad67b7e5abd82c0f076"
-    sha256 cellar: :any, big_sur:  "e652f67d76cad24fc36ca61c54fec440692c493217d857604f180244e647ebab"
-    sha256 cellar: :any, catalina: "c94e9afb94a3c8f8ab43bf4ffad7d1004ddd696dc56f68dfb3624023c44c0190"
+    rebuild 1
+    sha256               arm64_monterey: "63aabcfc390ff5aa3cf872ff0ee6e6cd1fb75cdf0a3da6df7c2515ed1f7de2d6"
+    sha256               arm64_big_sur:  "b30f1132a0fd8ecd3eeabbc1f45637145a0a95b347cf95d1d5cc8ba9a8fce704"
+    sha256 cellar: :any, monterey:       "c35a3ccb7357594a5a0aa8f9410776ea384d34f963add6c42b531a776b6e95c5"
+    sha256 cellar: :any, big_sur:        "e5bef2e09f142f35742c347b444e6e7a45633d2cb3ee5ab196a0ab2f0afa9f6c"
+    sha256 cellar: :any, catalina:       "edf054a05656d2a6a237c223c874b13ee23fc7de474e2490cee6f5e2457f0d0c"
   end
 
   depends_on "gcc" # for gfortran
