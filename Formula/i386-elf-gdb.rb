@@ -13,12 +13,12 @@ class I386ElfGdb < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "6db8c02704d1836ef16f46769f7ca6c49422876b81c144ce781481da0a9ec629"
-    sha256 arm64_big_sur:  "51349a449a0d4e32f06acbf5516fea00444a189a41812303e0317a831d1bee30"
-    sha256 monterey:       "3d121bee077b2fab236f9b73795407fef99238804db1fd1a3bd8fb24dcab3497"
-    sha256 big_sur:        "c2e085712bd764ceea43c583c6bc44351e61a06385bc2cf64a6ea337f583fb05"
-    sha256 catalina:       "8309db4002952af3b1334101ad227e1b0328413dc6b04cf252596c6245690829"
-    sha256 x86_64_linux:   "f84b25344a2e3e0508bb642988da76cbd57521c3a834d814654e637e9b703d84"
+    sha256 arm64_monterey: "28446027067f4c4beba9db4fdb282da2b92b61b52a167b9258b44d3ff822d6a9"
+    sha256 arm64_big_sur:  "6ed21bdc62c33e8774d438928a37dbf6f6543707b39a396bb5dcba64b1f07669"
+    sha256 monterey:       "53afd744fcb91a0ba17d52a4cf3628bc84756663db3d7b9fd81192bf90a5ba3e"
+    sha256 big_sur:        "0848d18425249ff040691b2f247f8ffdece645c13a4402c51ebbf88cadd1f61f"
+    sha256 catalina:       "ed282f08f2c53276c4d105cf3c20e74a688b226aced2d1c01e52e73c80d18e58"
+    sha256 x86_64_linux:   "59f4d6fdc7ec138da1755acd059b3930ac670c29a8ff27ac32d29adc5c66f1be"
   end
 
   depends_on "i686-elf-gcc" => :test
