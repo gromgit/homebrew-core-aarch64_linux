@@ -1,11 +1,10 @@
 class Unixodbc < Formula
   desc "ODBC 3 connectivity for UNIX"
   homepage "http://www.unixodbc.org/"
-  url "http://www.unixodbc.org/unixODBC-2.3.9.tar.gz"
-  mirror "https://fossies.org/linux/privat/unixODBC-2.3.9.tar.gz"
-  sha256 "52833eac3d681c8b0c9a5a65f2ebd745b3a964f208fc748f977e44015a31b207"
+  url "http://www.unixodbc.org/unixODBC-2.3.10.tar.gz"
+  mirror "https://fossies.org/linux/privat/unixODBC-2.3.10.tar.gz"
+  sha256 "b3f4d43a45117d83e80e4ed1edaea2bc237f2c0dfa43bb8f01475c9fa4610bc4"
   license "LGPL-2.1-or-later"
-  revision 1
 
   livecheck do
     url "http://www.unixodbc.org/download.html"
@@ -27,12 +26,6 @@ class Unixodbc < Formula
   conflicts_with "libiodbc", because: "both install `odbcinst.h`"
   conflicts_with "virtuoso", because: "both install `isql` binaries"
 
-  # fix issue with SQLSpecialColumns on ARM64
-  # remove for 2.3.10
-  # https://github.com/lurcher/unixODBC/issues/60
-  # https://github.com/lurcher/unixODBC/pull/69
-  patch :DATA
-
   def install
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
@@ -47,33 +40,3 @@ class Unixodbc < Formula
     system bin/"odbcinst", "-j"
   end
 end
-
-__END__
---- a/DriverManager/drivermanager.h
-+++ b/DriverManager/drivermanager.h
-@@ -1091,11 +1177,23 @@ void return_to_pool( DMHDBC connection );
- #define DM_SQLSPECIALCOLUMNS        72
- #define CHECK_SQLSPECIALCOLUMNS(con)    (con->functions[72].func!=NULL)
- #define SQLSPECIALCOLUMNS(con,stmt,it,cn,nl1,sn,nl2,tn,nl3,s,n)\
--                                    (con->functions[72].func)\
-+                                    ((SQLRETURN (*) (\
-+                                           SQLHSTMT, SQLUSMALLINT,\
-+                                           SQLCHAR*, SQLSMALLINT,\
-+                                           SQLCHAR*, SQLSMALLINT,\
-+                                           SQLCHAR*, SQLSMALLINT,\
-+                                           SQLUSMALLINT, SQLUSMALLINT))\
-+                                    con->functions[72].func)\
-                                         (stmt,it,cn,nl1,sn,nl2,tn,nl3,s,n)
- #define CHECK_SQLSPECIALCOLUMNSW(con)    (con->functions[72].funcW!=NULL)
- #define SQLSPECIALCOLUMNSW(con,stmt,it,cn,nl1,sn,nl2,tn,nl3,s,n)\
--                                    (con->functions[72].funcW)\
-+                                    ((SQLRETURN (*) (\
-+                                        SQLHSTMT, SQLUSMALLINT,\
-+                                        SQLWCHAR*, SQLSMALLINT,\
-+                                        SQLWCHAR*, SQLSMALLINT,\
-+                                        SQLWCHAR*, SQLSMALLINT,\
-+                                        SQLUSMALLINT, SQLUSMALLINT))\
-+                                    con->functions[72].funcW)\
-                                         (stmt,it,cn,nl1,sn,nl2,tn,nl3,s,n)
- 
- #define DM_SQLSTATISTICS            73
