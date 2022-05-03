@@ -8,6 +8,14 @@ class VirtManager < Formula
   license "GPL-2.0-or-later"
   head "https://github.com/virt-manager/virt-manager.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any, arm64_monterey: "76cb1ea36b592fd72e34a8ad9fe3321a274743c9c28f8eec4104367339a9e9f8"
+    sha256 cellar: :any, arm64_big_sur:  "845721080bf5aac2d52e1664ca7029b95dde4ac53cd8da89181dad14b170fe4c"
+    sha256 cellar: :any, monterey:       "0acb75ff2736767a3f6d8624b2be4ef6ca05a9887b7d83ef8065222301029fea"
+    sha256 cellar: :any, big_sur:        "6636accdad0ba50846db76c09bd79dfc33c022aee30c6f9a333f88b81fedc788"
+    sha256 cellar: :any, catalina:       "9a46cafc595ea56468c7b690f78ac12a4426f20ba02b772b88212c48bad19f32"
+  end
+
   depends_on "docutils" => :build
   depends_on "intltool" => :build
   depends_on "pkg-config" => :build
