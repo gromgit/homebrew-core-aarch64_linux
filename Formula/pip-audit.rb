@@ -8,12 +8,12 @@ class PipAudit < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a4062499c15252e57a69b33e939bea04c3bd56c34f1e08ad902e684b0264aca4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "771ff8ee32d6e6afa3e1f6fd4c83b450b444c9c6cbc93c955897fe6f38519d02"
-    sha256 cellar: :any_skip_relocation, monterey:       "51dae062caf0f115c5940e018f0f1329adbaf59b16166e84b3a926f8e5bc9b99"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2af3cd9ca3d2d5895b3afb30d28f91db4a7eaf1357689c97f9f6acbac52c04be"
-    sha256 cellar: :any_skip_relocation, catalina:       "e1e1d016dde4f8042e47f3b9e6cbce6633caa3ab0137fa5516bf1fef9e28092e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b32c1aee4e5f33dbf632af572f93790cf91285d51a8c0be884003314c5942f8d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bbae659a48513274042b573d3c8edae46e6f565f87abac176bec586f526f4444"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3b62cd8a32629a6c210d1de2f28008909b9b194c5963b6e2bb0aaf6af308a28c"
+    sha256 cellar: :any_skip_relocation, monterey:       "19b6430042560690ce60f43db10456c85d9a55f02a399a7af8413602de75806a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3d8f0f94491fe1de3ddec81379f99b43a284d4c48ec580aaa0aabfbe6e6f73e9"
+    sha256 cellar: :any_skip_relocation, catalina:       "46015384ea64d1650249b6c85eb27239406cbd667b0a5e932a2b4d672001f662"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a7b6d0f74a77ee9b56906a3b2fb5014e4922601dece9db0c814d62629efc10f8"
   end
 
   depends_on "python@3.10"
