@@ -5,6 +5,15 @@ class Freebayes < Formula
   sha256 "6016c1e58fdf34a1f6f77b720dd8e12e13a127f7cbac9c747e47954561b437f5"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any, arm64_monterey: "26799da3d54c7416f8c79cbc95ab4c7428cc60a3d5dba0d4f67e08050cd7d40c"
+    sha256 cellar: :any, arm64_big_sur:  "3045a4eb949197230993c9ddfb92406978b410d8beb18b401465867c8481ddff"
+    sha256 cellar: :any, monterey:       "00aeab78a22a3edd81add014b529383ec3deb49c6addb71c8319e5e5abe54a64"
+    sha256 cellar: :any, big_sur:        "63f3fcc4d0811b6077b5cd302e624220b736eaa0b2198e4f09df26d10cddf47d"
+    sha256 cellar: :any, catalina:       "3d38d37c49642117c959ce76ccf4653c77b779650f00c89839dbce0a8d7ea509"
+    sha256               x86_64_linux:   "7196ad033d4f6565b5603fdfc113f9d00f69873b32b7b46a44c6625bb133c9e0"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
