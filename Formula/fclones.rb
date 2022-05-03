@@ -6,12 +6,12 @@ class Fclones < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ad4bafb7c2df590dcb840f25ceb9b2af4007d14b23102bb6b8b97acd7ca06041"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f03493f4f4b69ee2a417a3971bd804d607cb21a738002e9249e304a555624d53"
-    sha256 cellar: :any_skip_relocation, monterey:       "5237ca1a8cf7725691a05001f82317a5b5ee9df9f1b0291e69552e21ec365be7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "30555e6e952ead488a4f6e8274481299e4e10fd407abed510df727fd5f356881"
-    sha256 cellar: :any_skip_relocation, catalina:       "4eb97490c09c32843867ad6f4283240cab6442e925e7ca37b419e233fce5ef16"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2d0e40ffbdc396481a86549da3875f0cdd646f09c340fba09a1dae29a733e429"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3ad62a9a17a5a75fc3bd402e6e829921acb4a3d3e6a09bf35ba7a943ad1b0a78"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6f806c3113c108f4e8e09b4b29d1128f1733f790240354ac614cdf40ebb309f0"
+    sha256 cellar: :any_skip_relocation, monterey:       "730802a0343d1d42a2af21526707212a882c6216aa8542215b0370412f696cc3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2207ee04d71201e57dbd636adc30360711c545929074632d37564332f817a029"
+    sha256 cellar: :any_skip_relocation, catalina:       "df529756c33c4fd363f8305d2cf6d35f95cb699a7b36d4391b5dd1aeeba9f873"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "337c61dedd3eeb8517f62f9cafd9f306ad0bf845c047a4ee57416faced593173"
   end
 
   depends_on "rust" => :build
