@@ -1,8 +1,8 @@
 class Opentsdb < Formula
   desc "Scalable, distributed Time Series Database"
   homepage "http://opentsdb.net/"
-  url "https://github.com/OpenTSDB/opentsdb/releases/download/v2.4.0/opentsdb-2.4.0.tar.gz"
-  sha256 "a2d6a34369612b3f91bf81bfab24ec573ab4118127dc1c0f0ed6fc57318d102c"
+  url "https://github.com/OpenTSDB/opentsdb/archive/refs/tags/v2.4.1.tar.gz"
+  sha256 "70456fa8b33a9f0855105422f944d6ef14d077c4b4c9c26f8e4a86f329b247a0"
   license "LGPL-2.1"
 
   livecheck do
@@ -16,30 +16,36 @@ class Opentsdb < Formula
     sha256 cellar: :any_skip_relocation, high_sierra: "5bcdc828069e124c16e1e6c8b2eb6732d0ef88533c27f60fcbb0bec369aca375"
   end
 
-  disable! date: "2022-09-14", because: :does_not_build
-
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "openjdk@8" => :build
+  depends_on "python@3.10" => :build
   depends_on "gnuplot"
   depends_on "hbase"
   depends_on "lzo"
-  depends_on "openjdk@8"
+  depends_on "openjdk@11"
 
   def install
-    system "./configure",
-           "--disable-silent-rules",
-           "--prefix=#{prefix}",
-           "--mandir=#{man}",
-           "--sysconfdir=#{etc}",
-           "--localstatedir=#{var}/opentsdb"
-    system "make"
-    bin.mkpath
-    (pkgshare/"static/gwt/opentsdb/images/ie6").mkpath
-    system "make", "install"
+    with_env(JAVA_HOME: Language::Java.java_home("1.8")) do
+      ENV.prepend_path "PATH", Formula["python@3.10"].opt_libexec/"bin"
+      system "autoreconf", "--force", "--install", "--verbose"
+      system "./configure", "--disable-silent-rules",
+                            "--prefix=#{prefix}",
+                            "--mandir=#{man}",
+                            "--sysconfdir=#{etc}",
+                            "--localstatedir=#{var}/opentsdb"
+      system "make"
+      bin.mkpath
+      (pkgshare/"static/gwt/opentsdb/images/ie6").mkpath
+      system "make", "install"
+    end
 
-    env = {
-      HBASE_HOME:  Formula["hbase"].opt_libexec,
-      COMPRESSION: "LZO",
-    }
-    env = Language::Java.java_home_env("1.8").merge(env)
+    env = Language::Java.java_home_env("11")
+    env["PATH"] = "$JAVA_HOME/bin:$PATH"
+    env["HBASE_HOME"] = Formula["hbase"].opt_libexec
+    # We weren't able to get HBase native LZO compression working in Monterey
+    env["COMPRESSION"] = (MacOS.version >= :monterey) ? "NONE" : "LZO"
+
     create_table = pkgshare/"tools/create_table_with_env.sh"
     create_table.write_env_script pkgshare/"tools/create_table.sh", env
     create_table.chmod 0755
