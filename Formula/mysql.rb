@@ -11,12 +11,12 @@ class Mysql < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "c51f67f07e7a419c14d3f2e68cab306b5b618c56ab61bef26abbb6d24986d4ed"
-    sha256 arm64_big_sur:  "ad41e97ed611cc0fa1f27fcdc7c1286136e7e65939a9205b6cb414a537de52a8"
-    sha256 monterey:       "e0b6492724015b281b100ee07c04b420b1a57ba260d640bb010161588605497f"
-    sha256 big_sur:        "ce886ee6265bb5d8c6c9495bde166744db089ce8ad1e86ccf56b678308ad16b8"
-    sha256 catalina:       "085e0525cb6380b7f10b07516abb26b31a8af46e8b8ad1f31f801377c0717275"
-    sha256 x86_64_linux:   "13cf051d3fba6129bbd93e7701806db86fdcc4c849be7b3b2debedb77a63c85a"
+    sha256 arm64_monterey: "462d849e91bcaed0ea7faf967e50cb13166c9d1f1e7ee72849cd14fde1b41392"
+    sha256 arm64_big_sur:  "041bae356a31fb942e57827c7bcacd327dafaf9ae30f2654c65758d8053c282b"
+    sha256 monterey:       "b152c47fb301c2200ea6ccc525307910b903879ed8ba2f0912e09934da9a864d"
+    sha256 big_sur:        "39704edeac2cb2fac5494b0f5f313fb40f0336fc425f1a78af29a5ded340525d"
+    sha256 catalina:       "c5ff449dce2bcb26adbf2ec725821df32f4b7e23be1d1d315a5abc94e39bbc01"
+    sha256 x86_64_linux:   "0bef9bedc6ffcec182258d8d2e471821fcecd82058e6a74d96ed5282d00a4001"
   end
 
   depends_on "cmake" => :build
