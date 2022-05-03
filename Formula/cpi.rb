@@ -6,6 +6,15 @@ class Cpi < Formula
   license "MIT"
   head "https://github.com/treefrogframework/cpi.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "18715516745f887dcb1d69011aa8fb5f17b93fcde903d64dd26eeb668517904a"
+    sha256 cellar: :any,                 arm64_big_sur:  "7fe73ba73e1c1218519a80cf06734e6952e499f62dba585ae99926934ada40b1"
+    sha256 cellar: :any,                 monterey:       "e5dcb9488c5a2f0c44481d6841cad4915b7fc111e7541f34cdaac34784a0506f"
+    sha256 cellar: :any,                 big_sur:        "ced5a9ce120b015e98bb2f7d8926b60614ffec9aa658dc3d2523cdd6cda2c98f"
+    sha256 cellar: :any,                 catalina:       "15bd4967f912b104af24e246ede702a49245e85baefff0e8ba404fc67a22f5c9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4711e3edfd0c9c249453df3f12ceb9c239524a1f2edfc478f15a900f7127c1ab"
+  end
+
   depends_on "qt"
 
   uses_from_macos "llvm"
