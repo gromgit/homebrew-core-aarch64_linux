@@ -7,13 +7,12 @@ class Podofo < Formula
   head "svn://svn.code.sf.net/p/podofo/code/podofo/trunk"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "255cf94f4a6c121a443daf166bb604515134fdc49cbe397246363efa7b196310"
-    sha256 cellar: :any,                 arm64_big_sur:  "3e52626a449c28973ad35209a5ce61969742879f1f88fe9cad56b4a93add49a1"
-    sha256 cellar: :any,                 monterey:       "8d4025cd6338c2d6f4b5d0f2801f0c667072ef64cef470a6323f3ca276fdedfb"
-    sha256 cellar: :any,                 big_sur:        "f9078444b3bfc33019cc26e01e07d636522553d51e3b415ebf16516f7802f08f"
-    sha256 cellar: :any,                 catalina:       "845cb7626c32ac0b2202acb6f2c42313b210b1bf281afabeec41292a86bca92c"
-    sha256 cellar: :any,                 mojave:         "f7e69aa8d5061863c85a0f5208781a8f42f31e38add04136cb9987a8c3477da9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0521b30dffbb805f3fcbb42e96e67c78bf114741b5b4d91badd5c10f86d99513"
+    sha256 cellar: :any,                 arm64_monterey: "dd25d9bea4a314122b3e1aee20cc2985f9d4435ae84c0ece7ddd74c7ceec2cdd"
+    sha256 cellar: :any,                 arm64_big_sur:  "1df7e49da361eece0d33e57eda0463b0f1bb60508afaeb75a4e0a60c4992b1bd"
+    sha256 cellar: :any,                 monterey:       "e3d40338c4b76c8f0b25c4fceb5644c75e9ee0a6c8eb59c5e3f9455cc42a592c"
+    sha256 cellar: :any,                 big_sur:        "16d8fbe8da7080e80efc0125002fb1df2f37f2e0a77ef5bb854ed203e7f07bd1"
+    sha256 cellar: :any,                 catalina:       "da10d1382d4a3ffcd26f399081f2c619c6e7ffa44bdba982f531ba3d4fd53ece"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3c82a5d52d9146cd7ab5ad2113fe23247093c4a6ae2abad6c9461cc13b43f4a7"
   end
 
   depends_on "cmake" => :build
