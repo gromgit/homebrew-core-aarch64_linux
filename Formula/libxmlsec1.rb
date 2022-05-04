@@ -11,13 +11,12 @@ class Libxmlsec1 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "fdfdf06c6138918f3c9fd5a533674fe3cb03da83dbdbeb94959d55ab2106e68e"
-    sha256 cellar: :any,                 arm64_big_sur:  "61a99f649dd39f1149c7675badad94c187777f0f76068175510868e741d3f816"
-    sha256 cellar: :any,                 monterey:       "ad7043dcf74c5e87d681c155f5fe24567012e90d8c372319afcb25a8c6f5a163"
-    sha256 cellar: :any,                 big_sur:        "9d66cd5734660715f92580c09503879810cb032a39f868349e669ec88e94f374"
-    sha256 cellar: :any,                 catalina:       "47c413783f332f28f26df294dab2028e0294af1a5201a64a01d79702554b940f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4f6b2cef6da10c25d79ae7b13c4c9475edd0fbe4609c31de4192d2413f6b0beb"
+    sha256 cellar: :any,                 arm64_monterey: "1428382252effcdabf34b7ab4bbaf039c353b11219a59127b3fdb4befc974c19"
+    sha256 cellar: :any,                 arm64_big_sur:  "40219e9a964a7e5ec08664524ed040bd05b58161ffd1c7bb5207d23d9b54206f"
+    sha256 cellar: :any,                 monterey:       "4cd56a217a6e2c596d8a86c239e2d934076a1cc1721dedeb870a7cb73e234388"
+    sha256 cellar: :any,                 big_sur:        "f661be8d4f407df484b50ca2b4882bf6ed5a0d0fc526a18bd1dfff0381aaa4ec"
+    sha256 cellar: :any,                 catalina:       "d8ab97537391a33597061ddd17f829a3c24b681a875b5e4db16f1c9bd87ed0ea"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "75c2f4c33b87c39a0fc77b20fece4eed1679a3cfdfcfba386b07855f92094156"
   end
 
   depends_on "pkg-config" => :build
