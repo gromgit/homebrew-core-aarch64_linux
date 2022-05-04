@@ -12,12 +12,12 @@ class Fluxctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "faf3f4651f8793001138c39c8f30c8d7a13fc4bead081f8a07472e0bdfb07642"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bd04ec8908d87cc59e08e7614b4aebd9f07bf4139eecd79ca1ed1df612a590a2"
-    sha256 cellar: :any_skip_relocation, monterey:       "e4d0f2333d3d3671bc353c28dfdc6885abf873adf2ccfc7b8212cdceca249bd8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bdbb7962ebdbe15d248f4be471331a9e1fc1f7367458d0664f872729658eda02"
-    sha256 cellar: :any_skip_relocation, catalina:       "8a15bc5da2545396178cd581eb0181241aca3769853694799a7941813a6507c9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9affdf7201c630a9ba7ef6a951d3df9e1890d7a120eb00e0faca9e52b220dd2e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4140d2fb4f97be34da2100dd4bd27f9e2cbe1baa6362b3927b6418bfb5391371"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "869a325e24d25c20ed3ba5ddbcac355e87f5c713e088861e3e54236be3fc60e3"
+    sha256 cellar: :any_skip_relocation, monterey:       "52546e57bf5bddebd3e82ac82527f8f3f73e5cde1f3f33387b25408eeabc2218"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9f8686dd1f85549a5fc9c0fe99556bb5fe66f9b8456094a3a429c3db9017cbae"
+    sha256 cellar: :any_skip_relocation, catalina:       "3aa4fe1fa2d80c65dadff9ef0d6b4344bc9ffd1aa918d3cccdd90c87788ee55a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7b4c73c672279b5ca8e13812b48a0ef5d7ab7c0bc0ab92f710264d3b7b521ce1"
   end
 
   depends_on "go" => :build
