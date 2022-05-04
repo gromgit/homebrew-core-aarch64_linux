@@ -8,7 +8,7 @@ class LinuxPam < Formula
   head "https://github.com/linux-pam/linux-pam.git", branch: "master"
 
   bottle do
-    sha256 x86_64_linux: "5beee64dc646a1b870bee7b07259cbf2eb66146d2856233f5a17c69db709be4d"
+    sha256 x86_64_linux: "96727d4bf89b7bc6fdc5e0882e80fbc20a73a595684a749215c5dcd3cf5b0fb4"
   end
 
   depends_on "pkg-config" => :build
