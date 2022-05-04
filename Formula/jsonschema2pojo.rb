@@ -12,8 +12,7 @@ class Jsonschema2pojo < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "b12a9cb0c1611535570d3fbc6dcb5c53788900dbaa03ebbff7239e0f4b5510bd"
+    sha256 cellar: :any_skip_relocation, all: "1752a7fe84c4bee3d4bd48d6587b8927141fab348c159e117e8844b42fda985e"
   end
 
   depends_on "openjdk"
