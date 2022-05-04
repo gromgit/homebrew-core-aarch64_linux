@@ -6,6 +6,10 @@ class Sse2neon < Formula
   license "MIT"
   head "https://github.com/DLTcollab/sse2neon.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "b693ec3aa8d6dc9c6ea07d4abae801b34c5d884585453ae3ddc5a0ee87ed3577"
+  end
+
   depends_on arch: :arm64
 
   def install
