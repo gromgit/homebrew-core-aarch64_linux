@@ -6,12 +6,13 @@ class Gleam < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "10a8ebda16172c1b2ece012b418302e07817b14edbe14c4a53f56059c3b52d78"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2543522532c65301562229691d8bfe2c4118196bca37ccacbc448347b7749a2b"
-    sha256 cellar: :any_skip_relocation, monterey:       "fca924e0badbad3b1781515d59affe3d329f9b7065cc96155138554b1c5e7ff0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "90c8029445bd03a75c95e98359a94fd1135257b6ebc85fe02dff87314274f674"
-    sha256 cellar: :any_skip_relocation, catalina:       "e23fc75f9b6da21cc4e891cbc30220f62bfe45b6adae5298854da04bd9427fd7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5b51e06b8c5f814d1237abeed5230b97c0a5f997c2dc0c0533e2dba840181b10"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f6979f99a5c171cb15e5c6eccfd69da3689259be5042176c753090065951b646"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3aca17ca3e06bc8238f1ab10d8194e05c0902e572ea68d57910d6d5524780e55"
+    sha256 cellar: :any_skip_relocation, monterey:       "6b570c090c466c95c0301b0912d31425a5d585f74057235ce5cd8391ab8a7de9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f57c4bc9ed70cb302ca67d40c483bf958d76dfafc2fb617682f78e9722bf740b"
+    sha256 cellar: :any_skip_relocation, catalina:       "96db3c9de8125372d2c4851fc9332ad821c04c0c9559160181524ef46289865e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "541fde1a9f4f0f64fae17820587a6466343f16efa158df81ab61095f18b32dd5"
   end
 
   depends_on "rust" => :build
