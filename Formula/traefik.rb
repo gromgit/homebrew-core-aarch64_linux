@@ -7,12 +7,12 @@ class Traefik < Formula
   head "https://github.com/traefik/traefik.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "dde6ef76853fb26e794c6ea22efb4ad46b2c46292e4df0a1057c9874b62a7fa2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "718fbbf4006dfb863ae978dd7a80c1d906c090efc5a8115cf50cd3c3fa81ea84"
-    sha256 cellar: :any_skip_relocation, monterey:       "ad0f85f1aac3eaf44a33f5392be5479dbc8437fc3401229fae7561d0a4585293"
-    sha256 cellar: :any_skip_relocation, big_sur:        "df767bcf4719a07eabf8bea23172448cb0d369c4e32cbee2992837960faca511"
-    sha256 cellar: :any_skip_relocation, catalina:       "5e3e0b7af24791e3f5a8831d9577fe836472b11a23ece498081c08738caee62b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b355ddb70fb40c720165e46928362d5d2e14e3a4c99e8d7595b84e4f5ede10d2"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d70f93ae91535e01551267b2fce9c54f3f47dbd5a79f6911fb84b837a9630b2a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "39be2af0f89acbdc30de3b6be374b87b5e50c76735ef6db75ce3b91e2bfe18d4"
+    sha256 cellar: :any_skip_relocation, monterey:       "cac706f204900a74d6656121dcf1971fe82f4e323e9d6995301fa50ebacec143"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e603595bfd6d615017102be892a1766ed3ee5ea6e49dc972b07735cc4a01e923"
+    sha256 cellar: :any_skip_relocation, catalina:       "31aa1ccd9527888486fe56964e457798eb8732580ce1b5a1d017e29826c39699"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "32bf3d7c658dfde6df4221c6d5d2b0680afff8350b6fbd29a536f3fd6689a988"
   end
 
   depends_on "go" => :build
