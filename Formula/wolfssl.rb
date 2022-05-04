@@ -14,12 +14,12 @@ class Wolfssl < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ed3fb91c95c2cc8057fb45e1bce0f6566c5cfbd621e78affa746704aa1eb4bba"
-    sha256 cellar: :any,                 arm64_big_sur:  "db93fc9bc8f5b8869e402c8278a311f358832cafbf228667f06d1a6c7ea8f256"
-    sha256 cellar: :any,                 monterey:       "7bcf2cf2773eee838dc3958332fc63163b159d336a7891d0b2c641f9333360d9"
-    sha256 cellar: :any,                 big_sur:        "acb9373f6d6997c3754692f537731737890800913e41edc7cbcdd65c02504a24"
-    sha256 cellar: :any,                 catalina:       "8565cca5219dae8747eb17b1856291681e2dcdd26640f76c1ca5b543b0e6a64a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b122c6438357cf52a54d8256fb7a2770d93c38499b198257cc36cf0a21f00991"
+    sha256 cellar: :any,                 arm64_monterey: "64c559df0293512a64b70db145245beae76cf6c3de5669670c639149d123361d"
+    sha256 cellar: :any,                 arm64_big_sur:  "d5130d61bcd95632eb1c30490c1d4f12637b94d77df3fc84185aa5ed6421191f"
+    sha256 cellar: :any,                 monterey:       "c6b263997ef7ddcce8e9572899c5da67cf5182192bd098dbbee09f2c7883f98d"
+    sha256 cellar: :any,                 big_sur:        "c81a8b0e81c3e110363656c0be38a1a0bafa0eb7f5da8e0405132ce4ceff12c2"
+    sha256 cellar: :any,                 catalina:       "c56496769a4d3520bc8dc9c2f6afb6ed1a81ac35fba444509156a846579e880a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "546eee011b5efcb7a972f7ac7650dbdb09b9dd04ffa130e059e4128729d8d528"
   end
 
   depends_on "autoconf" => :build
