@@ -1,8 +1,8 @@
 class Binaryen < Formula
   desc "Compiler infrastructure and toolchain library for WebAssembly"
   homepage "https://webassembly.org/"
-  url "https://github.com/WebAssembly/binaryen/archive/version_105.tar.gz"
-  sha256 "c5ec27c157d3b33ce4360607cc6afe565fa490094237895db2162b3a7d667da2"
+  url "https://github.com/WebAssembly/binaryen/archive/version_107.tar.gz"
+  sha256 "c09a7e0eb0fbfdfc807d13e8af9305e9805b8fdc499d9f886f5cf2e3fce5b5cf"
   license "Apache-2.0"
   head "https://github.com/WebAssembly/binaryen.git", branch: "main"
 
@@ -25,7 +25,7 @@ class Binaryen < Formula
   fails_with gcc: "5"
 
   def install
-    system "cmake", ".", *std_cmake_args
+    system "cmake", ".", *std_cmake_args, "-DBUILD_TESTS=false"
     system "make", "install"
 
     pkgshare.install "test/"
