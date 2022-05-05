@@ -13,12 +13,12 @@ class Clamav < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "c43a052726edfa7c985800fc95afd8187969d77cf6fdcf59f965ea31ce110dcd"
-    sha256 arm64_big_sur:  "552fdb32234c8cc46b93167ed02fb78986867323311e2e493b77f1a73e3550a1"
-    sha256 monterey:       "0c5fac6fcad12071daca1361ae441d649bf9f8bee0687de00e30d9eea2488d01"
-    sha256 big_sur:        "60680060e34ccb855108cdcfd53406e61911c71390e7690471d4e6134bf36ed5"
-    sha256 catalina:       "835cb8fc7bfb9dc71d40845cf349ec510e38a036d4c42b6813aa5aecb8b26f57"
-    sha256 x86_64_linux:   "ed1e8f42bfd7b55888fea30f1d0f90f89716b9ecbd39e5917dd7630889a4796a"
+    sha256 arm64_monterey: "79b91acbd865d0bf76674c385015e0af22337e45fd7c5841de1f93a1e842ebad"
+    sha256 arm64_big_sur:  "62a16e224a6f63ef2c3bc5f3b208319501b92dc11aad9a60b7251001980525cd"
+    sha256 monterey:       "77f29444d4ed6456de811a729613f3977cbfb1c714eee6e5def70aeff09ef240"
+    sha256 big_sur:        "e71a1d20ea61d124b010f6467c835b95d5278b83d83ab5cc23214b0834007779"
+    sha256 catalina:       "0fe9bdebb3ba0a4762fe2cf9129b328157390c3f84b7b3d8eb3b5a5d4a821d42"
+    sha256 x86_64_linux:   "6f519799945f5557b0c455b66aaf44ae606ff08adb79559566f9c43cef6d82ae"
   end
 
   depends_on "cmake" => :build
