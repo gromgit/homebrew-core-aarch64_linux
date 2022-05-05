@@ -11,13 +11,12 @@ class Asuka < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0569256aff79179b0e44f42bd4bbcf511aa3933ed1578ed9b7c6b2f140419b43"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2b5bb131f128e4a410d01615c1ea994365d2e31ac96109f4907cae513675526c"
-    sha256 cellar: :any_skip_relocation, monterey:       "0ed9621d904ee83efd90bd1b38d117f262d7b0d7cc150d0bcec48be30ccaae4d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "26d7c7e0216db2d6909b0770e55dc92f717558aaa3ec8e7330743a58293f38b6"
-    sha256 cellar: :any_skip_relocation, catalina:       "4b44603a1aea30e38c0396d0a59f4d6ed3ba5c10919385c09a58f698da340f5e"
-    sha256 cellar: :any_skip_relocation, mojave:         "b75723fc27ad5f002a9757371d3d76a362e3690e1d434bafb033f19d4e14da98"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0cbf79e00e2a48f4d9f3356bede6bb934f2f7a17306bcce5fbb3cf285f6b1cd7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3345610cad8edfbe09efc8c8bc833f5c63a2fdf17379560d16e35b804540cab1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "34f14fd0c765961b025d4bbf08f942f5227e92ff512c0373fd34b0115081663e"
+    sha256 cellar: :any_skip_relocation, monterey:       "9489a13bb3be9f29e279bf1e9e8ffe7aa03027dd6b49e6cd77b813baaf4e4f82"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3dd678d604b4d5d7399241358da21ff09a4de36ce581940091ebf9d3780645ed"
+    sha256 cellar: :any_skip_relocation, catalina:       "599be4ef5fbde219bb6740b4f687ec441b2dd1723135bb2aff60347c0522bd81"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8426e3f5c6cda8c46638bc53d10ae0419cd37227d928bd0a8fe853a0a2ef4984"
   end
 
   depends_on "rust" => :build
