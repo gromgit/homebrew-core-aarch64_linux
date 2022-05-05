@@ -13,10 +13,10 @@ class Creduce < Formula
   end
 
   bottle do
-    sha256 cellar: :any, monterey: "c03eb4819b85732039da8437bf96f22f9c983a0113f3c7f5811e983c907d8acf"
-    sha256 cellar: :any, big_sur:  "885805d75a7b94b42c75993af85ac92b3ac4c3e8a4fdd42e58e4ba14e7b33d48"
-    sha256 cellar: :any, catalina: "e6bc0e8e53ccfedfd4423a5b133621d68779b768242b19bef75bfdb4d43ba151"
-    sha256 cellar: :any, mojave:   "5f509b134d14e497243bfdd950a148bb50259b0bf8bfd788df9ebaf5823ef96f"
+    sha256 cellar: :any,                 monterey:     "069e9750872df6697d94b6bf720f40e90a6c0597d1ee93e92d859a2001efbb1b"
+    sha256 cellar: :any,                 big_sur:      "912f5a829739eb3eea26aea9d13de6473a5bbf534d5ab144839e1e8793b890a1"
+    sha256 cellar: :any,                 catalina:     "ce269469c92326c638d08ea7e5a1902c7643ebcbe277591945b9ded29373d081"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "05609defa2c67b6cc907d1c30f7f4080e03211ce918fa5d6b79c256b608805a8"
   end
 
   depends_on "astyle"
