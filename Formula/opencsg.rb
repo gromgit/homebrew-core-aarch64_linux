@@ -11,13 +11,12 @@ class Opencsg < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d1bd35e73ad29214d8a5de83a4e0b80385705dbeecce9ed1132afc9eb6c71a61"
-    sha256 cellar: :any,                 arm64_big_sur:  "c06e0c8e9ceee5ad621e6f650a289f34f30428bce43f6a9efb95621fc7afdafb"
-    sha256 cellar: :any,                 monterey:       "f02b160d94f4eb0bbc6fe4381368e8c3151b6b3b1cb20f650121f186f8517b25"
-    sha256 cellar: :any,                 big_sur:        "f7e6296d4466eea7c516fdca9e382d30fad4194b73969a1158d3d399b59c9381"
-    sha256 cellar: :any,                 catalina:       "730e0c7b2656e63ac4c55effbb5030fb737bfdc6ecbda700ed37534ae8b0d295"
-    sha256 cellar: :any,                 mojave:         "7d8c19c4b5c1d26d5f15fb01094977fd58f14ccaa92085a13be68fd27943588a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "136c554f3d6e8c3af9f7b1dfd4bada577ed629573622e0ffba09379d88de867d"
+    sha256 cellar: :any,                 arm64_monterey: "7d4d196ed149e1eb1e0fd705629cb9f076297e47aed98f1b9eef05e9b6f85db0"
+    sha256 cellar: :any,                 arm64_big_sur:  "955c5a67864ff4eff48adab2af92c82d75df66c79c8c2341159975f3971c64bf"
+    sha256 cellar: :any,                 monterey:       "304288ec34c1d0033d741d88d34647ffcfdf868f06ca211250b6a838e3e323ea"
+    sha256 cellar: :any,                 big_sur:        "e179bb1855e3b3f65a32165ceb840334a5100e8c066b2e41a2ef9e084a877e8d"
+    sha256 cellar: :any,                 catalina:       "79b0a215f6d86cfcdf071f5c7058bcbf12bb4f18fe1894fb4ecea4a6a81d7fe8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7e7c5cd017e6c1e637bdc9d2fb797fcf0a3f9f348263b8685f25a3e60377fd8e"
   end
 
   depends_on "qt@5" => :build
