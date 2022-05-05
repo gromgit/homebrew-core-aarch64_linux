@@ -14,6 +14,7 @@ class Chronograf < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "f7458350c65b537d1fbac3216f0b10c02b8fc79ca584907c375a8346ad78b955"
     sha256 cellar: :any_skip_relocation, big_sur:        "ce89af5bfe0791d75fbdd44d9bf89f69a812848426c3163fa64e7dee331b6257"
     sha256 cellar: :any_skip_relocation, catalina:       "b2f8e625b097c6e78f52d70ab34f1c9c3c30cbaa5ad2e714d58378a13aa1d438"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f88324849ad91907bca05bb10d59eb708d4dcfa04bd8dce274df5fbe6e63b4cd"
   end
 
   depends_on "go" => :build
