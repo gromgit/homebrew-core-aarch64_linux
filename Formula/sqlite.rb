@@ -15,12 +15,12 @@ class Sqlite < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "8691541c36bbb0d7fed59d98d4eff7908762c079e2aefb9994b6f2e21710b3c2"
-    sha256 cellar: :any,                 arm64_big_sur:  "2a60175e7f2ba40dfa5eb9f015fcf52761ab6b2ecf132a69ad9bfad391f7dd1b"
-    sha256 cellar: :any,                 monterey:       "53c1dc09cb3e34f85ce5b20937ad5429115822c473cfead02fb7a0dbbb8fabbc"
-    sha256 cellar: :any,                 big_sur:        "ef58d1c3319cc089eab67e19fd430526da7b36efa7d9bbc24167f999103490c7"
-    sha256 cellar: :any,                 catalina:       "cf612e46ece07030af144bf0302f6121c1374981dea2233a3d6aaf11695ba5e3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "33fb42e4a4db32edbde659ff5fe8a83ac0fbe75d9b43b50c7693f3e8e71dd99d"
+    sha256 cellar: :any,                 arm64_monterey: "a183a88ceba293d2d05139580e4eaa28834a6cb94845154172d353dbb6f809a1"
+    sha256 cellar: :any,                 arm64_big_sur:  "e3c7de8c3160c18166e7d636011374e7afa1c6e6b164848c7f4c92ee3ce9ada5"
+    sha256 cellar: :any,                 monterey:       "0bf58c32e0ff8c2c6dc2bcd789f6864969024033c1ba151d98c14189e10ab1b0"
+    sha256 cellar: :any,                 big_sur:        "a00f91bc07c86b27fef50ed7d376cb1f623c24d882658ac6e1b75a793a60e8db"
+    sha256 cellar: :any,                 catalina:       "c69ec0f7a26cadf2ffd8a99f1a14ade16c96ea5db2d786d28800d61f3b3ab78e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "232e6263d1d228f320b8bfab88200a2ba085bc450f6fa2003076eb54428fc5e1"
   end
 
   keg_only :provided_by_macos
