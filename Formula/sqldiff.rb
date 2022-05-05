@@ -11,12 +11,12 @@ class Sqldiff < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "00f948cf2da2f31708151afdc569613c3a3b1584bdb174075b193d03a42cbad5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4469736919506584bb1ac002ae9b81ad5cd972f39470faf499a801bbfb916293"
-    sha256 cellar: :any_skip_relocation, monterey:       "6c412c57e0498e3c6465be82d92ad3587c3c4cb1cf9b591025b164df2e046bca"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4e11e61a65853512203cbef8ca0fe0fcec71eb9556f477489959602023faace1"
-    sha256 cellar: :any_skip_relocation, catalina:       "86b54b541d00937681d701efc7c65000267dfc534c708cf8bf4b9253a03ba599"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b43fd60b0dd0eec10960d6fcfba583045a222426b46ca16bbac882c82923f39e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d8a963337442bd73b2c7d34f3f974562b09e39b6f3dce93ac35a9a9de689c4f8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c17285849e64578791d64c8ed1c4b586fa76b7a65d6e7112f9326bac364f53d8"
+    sha256 cellar: :any_skip_relocation, monterey:       "337fc2e69fc90e487b3a172bc84c943bdd7ef95108bc0e6a7033d165fc2927f4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bf5dd740e03bdfc7fe6324d9f990f4d2370946af7c71ac07fba5a22578849939"
+    sha256 cellar: :any_skip_relocation, catalina:       "4f35c4d5a83f937f4cadb4fe264147f988d51bd508408c7790aaa56f1ad4b043"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3a63227321c7bb1350cfe7441b4baec5d6c1f4c1aa3e2754f7f6a5dec7795747"
   end
 
   uses_from_macos "tcl-tk" => :build
