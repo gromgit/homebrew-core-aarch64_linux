@@ -1,8 +1,8 @@
 class Cgl < Formula
   desc "Cut Generation Library"
   homepage "https://github.com/coin-or/Cgl"
-  url "https://github.com/coin-or/Cgl/archive/releases/0.60.5.tar.gz"
-  sha256 "5a2e7ca380425b3d7279d0759c625a367d06ec8293698b59f82fae38ae5df64e"
+  url "https://github.com/coin-or/Cgl/archive/releases/0.60.6.tar.gz"
+  sha256 "9e2c51ffad816ab408763d6b931e2a3060482ee4bf1983148969de96d4b2c9ce"
   license "EPL-2.0"
 
   livecheck do
