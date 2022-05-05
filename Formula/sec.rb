@@ -6,11 +6,12 @@ class Sec < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7ae34d4172afb4ead92b0ea30f0eef8b11262504cc74b35d92cc2de64841d4e6"
-    sha256 cellar: :any_skip_relocation, big_sur:       "0ca90f406c4776e7f7b4b20db45f8d960458b8e5e66789846e58359b4ca2c0fb"
-    sha256 cellar: :any_skip_relocation, catalina:      "0ca90f406c4776e7f7b4b20db45f8d960458b8e5e66789846e58359b4ca2c0fb"
-    sha256 cellar: :any_skip_relocation, mojave:        "0ca90f406c4776e7f7b4b20db45f8d960458b8e5e66789846e58359b4ca2c0fb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7ae34d4172afb4ead92b0ea30f0eef8b11262504cc74b35d92cc2de64841d4e6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6b9e876b09cdbcbf85df22111dfc2e9bc686dc8df21b791f8a532ca8a3794098"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6b9e876b09cdbcbf85df22111dfc2e9bc686dc8df21b791f8a532ca8a3794098"
+    sha256 cellar: :any_skip_relocation, monterey:       "30b242f22b62c67d6b5e862fd9884ec05b327e33ee6d146137b3566e0d2a178b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "30b242f22b62c67d6b5e862fd9884ec05b327e33ee6d146137b3566e0d2a178b"
+    sha256 cellar: :any_skip_relocation, catalina:       "30b242f22b62c67d6b5e862fd9884ec05b327e33ee6d146137b3566e0d2a178b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6b9e876b09cdbcbf85df22111dfc2e9bc686dc8df21b791f8a532ca8a3794098"
   end
 
   def install
