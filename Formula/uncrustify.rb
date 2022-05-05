@@ -7,12 +7,12 @@ class Uncrustify < Formula
   head "https://github.com/uncrustify/uncrustify.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0c6f05dbc5d1c74f955fbad667a8258ad89b9d1657955c17e262f6bbe353a53f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7fdaef8b0935162c29e8279f7f4559d8c5a8382dd2ce3cf95a9d4dfba6f6ebd2"
-    sha256 cellar: :any_skip_relocation, monterey:       "7f5afcca86615e0b5a6ea200faa8f90d07bf0cde70b1e8dd9c7b3c0bb06b255d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9e6d96d4bdb8fa09eb9c02098b02ee8400b8f3c916a5fdfe93bc33b37e9bf103"
-    sha256 cellar: :any_skip_relocation, catalina:       "018ad95d5ce9c1f1fb4e390ce3b36fcf67a124307d21d2876cae7f5524f3a72b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "59c736cd3bd26f6c5b96e234fdcc0be031251e2c6e7212d055112ec7f5218339"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ae836c3cc1e1e0e027d6f0082e1eaf6052259b4895f8e4d86a332fa897a63e0b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b63b8b33cbbfbc0c5df109fd607733de9175ff1e92021592640515caa22d9e83"
+    sha256 cellar: :any_skip_relocation, monterey:       "ef2310bbab7696e2ab990d083b37429a76288d2d6bb0dbe6e834a0277c76bf3e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9bb5ac5befb9da7b6f5d58505aa577ac38d3eeddd1861214ce550cf579b3ad1d"
+    sha256 cellar: :any_skip_relocation, catalina:       "2a77c5e3a4d198c8b3fb80f6d2d6d597fb89d299aa36ca01aee65f260e8ca08a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fae0bf279c7cb27ed982072f1749e49910886ee5cf44121d9667dfb36fce807e"
   end
 
   depends_on "cmake" => :build
