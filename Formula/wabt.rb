@@ -2,8 +2,8 @@ class Wabt < Formula
   desc "Web Assembly Binary Toolkit"
   homepage "https://github.com/WebAssembly/wabt"
   url "https://github.com/WebAssembly/wabt.git",
-      tag:      "1.0.27",
-      revision: "3e8207aabe969098d2b4941142a1973008c63033"
+      tag:      "1.0.29",
+      revision: "c32fa597218dbe2c25b43a9837a8475b493ddb71"
   license "Apache-2.0"
 
   livecheck do
