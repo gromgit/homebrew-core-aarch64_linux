@@ -7,12 +7,12 @@ class Braid < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8dfd4f268a74bf55430a1cd6fc7536aa519909960c36cb270157ec319475f93f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9824fbb5370fea8155db013953b13b570ab1dfe8e5055b7c406da09fc7717870"
-    sha256 cellar: :any_skip_relocation, monterey:       "8dfd4f268a74bf55430a1cd6fc7536aa519909960c36cb270157ec319475f93f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9824fbb5370fea8155db013953b13b570ab1dfe8e5055b7c406da09fc7717870"
-    sha256 cellar: :any_skip_relocation, catalina:       "9824fbb5370fea8155db013953b13b570ab1dfe8e5055b7c406da09fc7717870"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "843298551d372e36db1060f7fbb95be816dec6919302dfae1cc12ba62bb0d785"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a277b20c60e81d0269ab7c84a80a5e0404551cc3906d0696f6731c669ce2954f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c02b66768affbf197d45aebaf3229525464b41c69df91204315a82963153dc84"
+    sha256 cellar: :any_skip_relocation, monterey:       "a277b20c60e81d0269ab7c84a80a5e0404551cc3906d0696f6731c669ce2954f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c02b66768affbf197d45aebaf3229525464b41c69df91204315a82963153dc84"
+    sha256 cellar: :any_skip_relocation, catalina:       "c02b66768affbf197d45aebaf3229525464b41c69df91204315a82963153dc84"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ccbf57441d2db228e3ef8dd6da2df5bb46885f878d3308191f562898b9236cc5"
   end
 
   uses_from_macos "ruby", since: :high_sierra
