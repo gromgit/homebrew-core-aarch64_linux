@@ -7,12 +7,12 @@ class Gops < Formula
   head "https://github.com/google/gops.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5531dfba3e026925dd13fbcece02096a54e2ffb4179db48c0f5deb87d53923be"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "aa0e48e32124e96c5cd3a46d905a5f9009fe5ad7a2177c0ab82cd5c6f8b18927"
-    sha256 cellar: :any_skip_relocation, monterey:       "73a426fd2c973c1032b1da9e3492ccf04846be94af5eb471702e63addcd5b5ed"
-    sha256 cellar: :any_skip_relocation, big_sur:        "259cd5b92827f5b6ef3594a3beee292a5bc8c72bdba2d3c6fe3eb574205898a1"
-    sha256 cellar: :any_skip_relocation, catalina:       "b73deb2fd695acb47f4de3b159a648230f0dc5f6e5816a9c1b76faa4919ce8f8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "82c7a434378ec9aad1f1c80c4cca5f98d9a357a969dadf0604ba85c285ad86e4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "900f69ef21b78825ca5229d77db7af860113ad46bd1a368ce94f87e97f221d4a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f5f21f7d0b67bb0fb22c949eca79b4f3d33055de37df00c8805444cf076bd33c"
+    sha256 cellar: :any_skip_relocation, monterey:       "7c6fbc666eabaa1c0c6658d2d4d0e7082f9407367e331cb3641e4bcb9a616183"
+    sha256 cellar: :any_skip_relocation, big_sur:        "15c92722429ac86e0d9d6ddee24e26cbda5a5468167a1259f5a4ab1eeaebe957"
+    sha256 cellar: :any_skip_relocation, catalina:       "395a31c1ecfac22c97bcdc1169ba97536c73cdb69c23de4d85c88c0450804a8c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "91fac55763a20bbc6260c384fa7be4525b8f11f2871adcfa0187fe992cc3f129"
   end
 
   depends_on "go" => [:build, :test]
