@@ -6,8 +6,7 @@ class Questdb < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "7e21a66db2d33704d6663a423ac96cdf4aa8bb3030f0d09da0561de7cceb9e67"
+    sha256 cellar: :any_skip_relocation, all: "0fbd6482006744cdbd73237c6c3677106f09e2b5389d56fc533e2a7271ae35bb"
   end
 
   depends_on "openjdk@11"
