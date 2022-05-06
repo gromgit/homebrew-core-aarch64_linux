@@ -11,12 +11,12 @@ class Abcmidi < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "93ad05d2d58487a954e5fe1fa281a5b4dbf0da620c9eed72013a7e18020c5a99"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0e74491ed5179e0e8a131347b257efe28b6dfec6f296045cb60ec54301212c23"
-    sha256 cellar: :any_skip_relocation, monterey:       "4c304e1312fa95eb8408d37b5e58b17273d0f9660ad3732893e08473a68ac517"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cea96c7eeed87a6091957d532b9c8891a63e07d9fa4011c623575c416fbe490f"
-    sha256 cellar: :any_skip_relocation, catalina:       "283c16107fe744d90b47ccc69853fde9a9c7120ee9bacd5c0a5c84effed166c4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dde1bfcf2f5cd8019f5334dec86d97e7c4c59199947b7b56ba508f22ddcf95ed"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "911ce112dcb4e6e58aa2dbe59f07b88d787cb88dc50eba7a0d7db5f671ddc7ff"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "07156d0c7ca62c800f39ea5eeda2f9e3af3d4e36b74a1cf73afc2c3c2c6a0455"
+    sha256 cellar: :any_skip_relocation, monterey:       "78b0ef370161fd0877dbde9b89353374eeff459d7e2d9cd399a27b18c88478d8"
+    sha256 cellar: :any_skip_relocation, big_sur:        "21d1ee3db44a41e383c878172c287a0df0ec467ae09d483c06b821ad6efbba34"
+    sha256 cellar: :any_skip_relocation, catalina:       "9f6491602e756a6aed63e53d64bc0e8da5802203b4bb527f9f76ce1991bdafbb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d4a997da14f167168baf99a1d62178d54cb366d97adf750886973178764f9ad8"
   end
 
   def install
