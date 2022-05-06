@@ -13,11 +13,12 @@ class Hatari < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "5f31dc6f5ac2f5a7785841b8a1bf2cd61bf6f61655392ebc1fe326424d490216"
-    sha256 cellar: :any, arm64_big_sur:  "5733267d71db6559a05fb67249929ea882614d8b318e4ae5d68362d8193aceb4"
-    sha256 cellar: :any, monterey:       "3fe0d58f4ff6cc654d25ddf53fbf76a1035960403dfd3e67f4b99da0491dc2c9"
-    sha256 cellar: :any, big_sur:        "b5d322e4d68cd6e8b65432fedfb2f5807b66bb7ebce9a9faba97e846fd9d73fe"
-    sha256 cellar: :any, catalina:       "aa1ad23ac7d636cb1702461d1eb6ecb2ec5df195a10bfbffcaa036db8f3b3c39"
+    sha256 cellar: :any,                 arm64_monterey: "5f31dc6f5ac2f5a7785841b8a1bf2cd61bf6f61655392ebc1fe326424d490216"
+    sha256 cellar: :any,                 arm64_big_sur:  "5733267d71db6559a05fb67249929ea882614d8b318e4ae5d68362d8193aceb4"
+    sha256 cellar: :any,                 monterey:       "3fe0d58f4ff6cc654d25ddf53fbf76a1035960403dfd3e67f4b99da0491dc2c9"
+    sha256 cellar: :any,                 big_sur:        "b5d322e4d68cd6e8b65432fedfb2f5807b66bb7ebce9a9faba97e846fd9d73fe"
+    sha256 cellar: :any,                 catalina:       "aa1ad23ac7d636cb1702461d1eb6ecb2ec5df195a10bfbffcaa036db8f3b3c39"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "21c89b23ed14051eecf598ce07ec906f46910ee00145b3275708421fe94e463a"
   end
 
   depends_on "cmake" => :build
