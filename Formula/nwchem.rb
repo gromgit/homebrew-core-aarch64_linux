@@ -14,11 +14,12 @@ class Nwchem < Formula
 
   bottle do
     rebuild 1
-    sha256               arm64_monterey: "63aabcfc390ff5aa3cf872ff0ee6e6cd1fb75cdf0a3da6df7c2515ed1f7de2d6"
-    sha256               arm64_big_sur:  "b30f1132a0fd8ecd3eeabbc1f45637145a0a95b347cf95d1d5cc8ba9a8fce704"
-    sha256 cellar: :any, monterey:       "c35a3ccb7357594a5a0aa8f9410776ea384d34f963add6c42b531a776b6e95c5"
-    sha256 cellar: :any, big_sur:        "e5bef2e09f142f35742c347b444e6e7a45633d2cb3ee5ab196a0ab2f0afa9f6c"
-    sha256 cellar: :any, catalina:       "edf054a05656d2a6a237c223c874b13ee23fc7de474e2490cee6f5e2457f0d0c"
+    sha256                               arm64_monterey: "63aabcfc390ff5aa3cf872ff0ee6e6cd1fb75cdf0a3da6df7c2515ed1f7de2d6"
+    sha256                               arm64_big_sur:  "b30f1132a0fd8ecd3eeabbc1f45637145a0a95b347cf95d1d5cc8ba9a8fce704"
+    sha256 cellar: :any,                 monterey:       "c35a3ccb7357594a5a0aa8f9410776ea384d34f963add6c42b531a776b6e95c5"
+    sha256 cellar: :any,                 big_sur:        "e5bef2e09f142f35742c347b444e6e7a45633d2cb3ee5ab196a0ab2f0afa9f6c"
+    sha256 cellar: :any,                 catalina:       "edf054a05656d2a6a237c223c874b13ee23fc7de474e2490cee6f5e2457f0d0c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "501330e4f24341e8dbe3108144c52e50909703e8626c7c995b72614f704d0619"
   end
 
   depends_on "gcc" # for gfortran
