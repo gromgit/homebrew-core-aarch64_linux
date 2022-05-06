@@ -6,12 +6,12 @@ class K6 < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "49e760112a8b6f39acccbdde473ea751d0a15aacbcad20b7d69adec16ffda243"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5403669df36bc74c192892c71597d0282794ac47440ca41374c43475a80d3673"
-    sha256 cellar: :any_skip_relocation, monterey:       "77d440712399ab2e6a9be6e206b3edb10a0199dad3e292e7dd3325794f0ed602"
-    sha256 cellar: :any_skip_relocation, big_sur:        "248cc856fd5f7e17f6485666b8ae00ac866622e11f23c781a67ffd6f547b4588"
-    sha256 cellar: :any_skip_relocation, catalina:       "5bc822e865c63be622e13116b081cf57b8fa8d3b934492c74e4828bd747e5c9c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b1ec621c69fadd6a46b3053798e7326a7fdb45835e9d5db060689a78f256908c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "abb97b2ba0877d01aed3810e34cb9b051a9ac360ac5622919061fe03005a018b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1bcd094d1158ee7b6446d7364477ab32d279dd2167161e0b7156779405bd65fb"
+    sha256 cellar: :any_skip_relocation, monterey:       "75b56dc9a2d2a6ff5516f8fc8b7bd574de68f265fa3dfd16192f985239e53ad9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2b71f02e9bb9e77acdbd1ebf035f27ccc5476923ead5d36d2206c1b4301469cd"
+    sha256 cellar: :any_skip_relocation, catalina:       "0ece95aefcbebe5951f92eee9b1e67d3b6a956ba4694169d230a731059920745"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8e7f76dfa07fa1a2054a2f937896220efe05d69bd533a7a972c40fd2a64eef40"
   end
 
   depends_on "go" => :build
