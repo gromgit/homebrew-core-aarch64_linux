@@ -1,8 +1,8 @@
 class Asuka < Formula
   desc "Gemini Project client written in Rust with NCurses"
   homepage "https://sr.ht/~julienxx/Asuka/"
-  url "https://git.sr.ht/~julienxx/asuka/archive/0.8.4.tar.gz"
-  sha256 "ba82fe91aa18d64e062ba63eeab01edb09a668904ed2b9920fcab786fb76d626"
+  url "https://git.sr.ht/~julienxx/asuka/archive/0.8.5.tar.gz"
+  sha256 "f7be2925cfc7ee6dcdfa4c30b9d4f6963f729c1b3f526ac242c7e1794bb190b1"
   license "MIT"
 
   livecheck do
