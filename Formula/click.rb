@@ -12,12 +12,12 @@ class Click < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "723ebb70d9304be20e7eb3d047fd2b9c957dd0781c91fdb489163dab92570067"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "898f8ee1744e4284fbfa96a4b4b7c27133e6118cb847ded65caeaa93879d2564"
-    sha256 cellar: :any_skip_relocation, monterey:       "80166bfa5f6e3521c500ffefcebe28d0e6d69115f4c8789ee74096dc7dbe118c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1a8eca14214903976b6257b73fdf466ebe0f45c8c6a07ba1e63b7a84242641ad"
-    sha256 cellar: :any_skip_relocation, catalina:       "19ef9ab70df5333e0fffeff3aebb36c93f10fb481573a80b23bbacadd3c49bb6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d3a03a6faa6b016e3d5ccd8c17e5d2c730e765ed8a2cf8ee35a86998d02f9c5c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6018a93852c7b6c6ae53f2a3455204097ebec31a91ca05dfffacb2225dedda0b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "73605f74a8092b5f43b7586ac4378dd69171fd893d4b5beae6ccfdbe060774a7"
+    sha256 cellar: :any_skip_relocation, monterey:       "aa42b7e95d2d152980c34fd99b97d4a3dcf6672eaf1637a4fb6bf0328d942317"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ac5c6c86904815ded47f80fe83eec3b45855be124440654bf6f0280f9debaf2e"
+    sha256 cellar: :any_skip_relocation, catalina:       "08087704f1006723aa1be837898c210715ff3399feef94b8138611a097858eb5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bbb77229d9f818ca7ba63e9a266caf69d2c745e8603acf03e52d88d3e0ce2e67"
   end
 
   depends_on "rust" => :build
