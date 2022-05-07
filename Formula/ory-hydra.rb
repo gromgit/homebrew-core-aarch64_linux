@@ -12,12 +12,12 @@ class OryHydra < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d9d72055e14f9e9bd89ce296e61d5d1cb1c46a2c8de8aff7f769aef5fcca77eb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "44efc8d23accc1d9ad34c66c679799de7233bcbfd8ac544fc0e20526da17ffcb"
-    sha256 cellar: :any_skip_relocation, monterey:       "61ea60605d2cca1e2de27a8017cd94fb48a60a27f1996ca10e8fecd05ea6e6f7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1de638cbf92ac4f6a5d5e44595918e0209dcc618cb7da034841bc91f17eaf87c"
-    sha256 cellar: :any_skip_relocation, catalina:       "b060d9b66b7765f8d7370cda96c68f7e5d320a85d8fbcaa728f3fdd9f22802c2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a818bf44fc41a0100daa0457d346e0d00856592cd457848dbf66c2ea982ed626"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "11e8703aa4f4e271bf4b97dcc81d53022fc0cddfb8bfa94f9e5e7bc84a8b50c6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f1e773839019afe761fa2db55ce2dd2e7f08ecfed43e67634b9e94210d0be9d0"
+    sha256 cellar: :any_skip_relocation, monterey:       "96ea51c0603c205ed168b4802d2928a8f39063f8b7cc5652b192d07816ee3c2d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8fda644a271b301e52ce9395bbae97f0c63be0c95c8cf32cfaf5e0977c3a316d"
+    sha256 cellar: :any_skip_relocation, catalina:       "4cf91bdaa79eb91c0663e6b527bb9e621d5e73141a333248c68060d8d9a5fd81"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fe115f2896ef24689fa7389c41b2aeb54f26071ae259f16c8759abe06c7349b9"
   end
 
   depends_on "go" => :build
