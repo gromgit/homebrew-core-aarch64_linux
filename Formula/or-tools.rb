@@ -1,10 +1,9 @@
 class OrTools < Formula
   desc "Google's Operations Research tools"
   homepage "https://developers.google.com/optimization/"
-  url "https://github.com/google/or-tools/archive/v9.2.tar.gz"
-  sha256 "5337935ea1fa010bb62cf0fc8bedd6de07dda77bff3db7a0f6a36c84c7bd58db"
+  url "https://github.com/google/or-tools/archive/v9.3.tar.gz"
+  sha256 "6fe981326563136fbb7a697547dc0fe6495914b5b42df559c2d88b35f6bcc661"
   license "Apache-2.0"
-  revision 2
   head "https://github.com/google/or-tools.git", branch: "stable"
 
   livecheck do
@@ -28,6 +27,7 @@ class OrTools < Formula
   depends_on "cgl"
   depends_on "clp"
   depends_on "coinutils"
+  depends_on "eigen"
   depends_on "openblas"
   depends_on "osi"
   depends_on "protobuf"
@@ -41,8 +41,11 @@ class OrTools < Formula
   fails_with gcc: "5"
 
   def install
-    system "cmake", "-S.", "-Bbuild", *std_cmake_args,
-           "-DUSE_SCIP=OFF", "-DBUILD_SAMPLES=OFF", "-DBUILD_EXAMPLES=OFF"
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args,
+                    "-DUSE_SCIP=OFF",
+                    "-DBUILD_SAMPLES=OFF",
+                    "-DBUILD_EXAMPLES=OFF",
+                    "-DBUILD_re2=ON" # build bundled re2 due to re2-2021-11-01.patch
     system "cmake", "--build", "build", "-v"
     system "cmake", "--build", "build", "--target", "install"
     pkgshare.install "ortools/linear_solver/samples/simple_lp_program.cc"
