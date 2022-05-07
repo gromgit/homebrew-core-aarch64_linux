@@ -1,10 +1,9 @@
 class Jemalloc < Formula
   desc "Implementation of malloc emphasizing fragmentation avoidance"
   homepage "http://jemalloc.net/"
-  url "https://github.com/jemalloc/jemalloc/releases/download/5.2.1/jemalloc-5.2.1.tar.bz2"
-  sha256 "34330e5ce276099e2e8950d9335db5a875689a4c6a56751ef3b1d8c537f887f6"
+  url "https://github.com/jemalloc/jemalloc/releases/download/5.3.0/jemalloc-5.3.0.tar.bz2"
+  sha256 "2db82d1e7119df3e71b7640219b6dfe84789bc0537983c3b7ac4f7189aecfeaa"
   license "BSD-2-Clause"
-  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "ba1a05f055527c490d4ba10aa4215b70d515bf70a8f593eb5bbcbc7a3c0bf48a"
@@ -22,14 +21,6 @@ class Jemalloc < Formula
 
     depends_on "autoconf" => :build
     depends_on "docbook-xsl" => :build
-  end
-
-  # Fixes an issue where jemalloc's types conflict with the system
-  # types, preventing their use. Merged upstream.
-  # https://github.com/jemalloc/jemalloc/commit/3b4a03b92b2e415415a08f0150fdb9eeb659cd52
-  patch do
-    url "https://github.com/Homebrew/formula-patches/raw/d3d5ad2b5683c1a435a185eec9c593749c7ca41a/jemalloc/fix_nothrow_type.patch"
-    sha256 "d79f5c8767695059ff541f291db3fbc57c9b67299dc129848dd365c2f51b214a"
   end
 
   def install
