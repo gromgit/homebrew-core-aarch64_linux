@@ -1,8 +1,8 @@
 class Fheroes2 < Formula
   desc "Free Heroes of Might and Magic II is a recreation of HoMM2 game engine"
   homepage "https://ihhub.github.io/fheroes2/"
-  url "https://github.com/ihhub/fheroes2/archive/0.9.14.tar.gz"
-  sha256 "5532fa8443b8d8f54fcfc56628f1020470ad215e12285d78c8450e49ea9944be"
+  url "https://github.com/ihhub/fheroes2/archive/0.9.15.tar.gz"
+  sha256 "5325cbb6fe96ff80a27584d9fd3ea1d572eb6e21f863fbc72d0d245752b5444e"
   license "GPL-2.0-or-later"
   head "https://github.com/ihhub/fheroes2.git", branch: "master"
 
@@ -30,15 +30,16 @@ class Fheroes2 < Formula
 
   uses_from_macos "zlib"
 
+  on_linux do
+    depends_on "gcc"
+  end
+
+  fails_with gcc: "5"
+
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
-    system "make", "-C", "files/lang"
-
-    (pkgshare/"files/lang").install Dir["files/lang/*.mo"]
-    pkgshare.install "fheroes2.key"
-    bin.install "script/demo/download_demo_version.sh" => "fheroes2-install-demo"
   end
 
   test do
