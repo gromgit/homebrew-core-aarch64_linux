@@ -13,12 +13,12 @@ class UniversalCtags < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "4525ab5ea72539b24483df1ce1c462e46ded785ea15306d59ba61ee29301c924"
-    sha256 cellar: :any,                 arm64_big_sur:  "ac1dcd755192de499ae3ce4d9ce1c9e61c4b9544b334fce56e40847f1bacd517"
-    sha256 cellar: :any,                 monterey:       "1dae0e032cbea642e72f17db57f423b2ecb53f6084642ea3960387fc5d2b3978"
-    sha256 cellar: :any,                 big_sur:        "bd338deb81e3dfbf28dc344f9d987b135be1f7b2fd616e12dccaae484acd632e"
-    sha256 cellar: :any,                 catalina:       "5dd7c98ca4c1f98970e13687666b0e73200f4745175c04703ee2a9a17a97be6f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "357c415aade04d0d3424c085753ce3e20c7909aa53c2858c9ac3d2305804db1b"
+    sha256 cellar: :any,                 arm64_monterey: "a549be2ca2950419ac4e8f14981880021d32d35f8bd7e6cdac94bba5b86a9bed"
+    sha256 cellar: :any,                 arm64_big_sur:  "005fca56d1a64287839ca9373310b6030ec0f51f2d533fd6666ac2327579d351"
+    sha256 cellar: :any,                 monterey:       "e96af38200a8a5ed81fd1191235dd93aae664f82535d10c75cefae1358092036"
+    sha256 cellar: :any,                 big_sur:        "4f676621b0b85b480406ba66a5122ac73558c63befe4a53f9a93b2ab2183dd78"
+    sha256 cellar: :any,                 catalina:       "ef70f3290ec55c9190b32802e1264e7df84f6d2de8bbc0a9f27e13cadd156c04"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1815ae16aaa0cdf72b74313f98579a42c77da69d4559f7be978a4935a2f75c30"
   end
 
   depends_on "autoconf" => :build
