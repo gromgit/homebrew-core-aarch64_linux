@@ -7,13 +7,12 @@ class Blis < Formula
   head "https://github.com/flame/blis.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "08a927f8360cd8cf29762341a080e86bda1a84098fdd99884136f0a25e10cf2e"
-    sha256 cellar: :any,                 arm64_big_sur:  "971251c831592d168e0ccafb67e47de2430433ea395663c788db7223a5ac6f3e"
-    sha256 cellar: :any,                 monterey:       "3d7e6df045340294770f76b78e015cf7c6e1401f9efe11250c3741a68a8f42f0"
-    sha256 cellar: :any,                 big_sur:        "ad2e6862fd4b5a425769c108e7a36e33ac7e7fc77ce699756fe051e68524518d"
-    sha256 cellar: :any,                 catalina:       "b26e5e7deb7b85319fa539a061ff84df842378a902e3695a4f6df63eba9f5cdb"
-    sha256 cellar: :any,                 mojave:         "333cceec593098d68f438ddcfc6415d44cf0af565601c0163496e23bdf4a8aec"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7726592ecf1b90f66c73ca7be6f18a76ff9a208887e677e291a81036b467a3e9"
+    sha256 cellar: :any,                 arm64_monterey: "52c3918675fa0604bf2c9426f0908f5f3e1a25b60f886f86b2ae83ee8b72d7e2"
+    sha256 cellar: :any,                 arm64_big_sur:  "a9a11b09c4570cdcc7e84f992a33cab3f41daa27ef1ccc8483d9c2b5c34d6ac6"
+    sha256 cellar: :any,                 monterey:       "5b33bda9771e26c111a0b584995e3894c7f9fda16f3eb376e63698a0c6583874"
+    sha256 cellar: :any,                 big_sur:        "814f573e8a13d58d4bce3327c97af8dbfa4729dff01d541f2845734640d58a1f"
+    sha256 cellar: :any,                 catalina:       "9863e7c187fb4d14bce8499d86a63935c8e04bd76e001f8888f83101cb02feff"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6319286075b6b686052882db10b2146275d746bd34235acb881e3c41acf82ebd"
   end
 
   uses_from_macos "python" => :build
