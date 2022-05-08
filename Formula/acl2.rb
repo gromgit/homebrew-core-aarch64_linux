@@ -7,10 +7,10 @@ class Acl2 < Formula
   revision 13
 
   bottle do
-    sha256 big_sur:      "5df4406ac7d74ece58c60f8bf83e8fde1139fe1b0da8d9a83e77a8b2aad404af"
-    sha256 catalina:     "bfe8d73561e904ba9fd0e3f44c3b7c77decca4346e9428ebebf4f9b3fd553741"
-    sha256 mojave:       "a7934877c55e93a626e48473adf408606c423e427bbcf6c826a69394e8634195"
-    sha256 x86_64_linux: "74f3c4b7970761a3ab6e5c513b0d3d6df83c24e534de3634fb032c3b4810b2fc"
+    sha256 monterey:     "825d7272eb277b9756f6816cb89d0c6dec9b2719158d3f8ba2d6a50d0b2d7f9d"
+    sha256 big_sur:      "4d5eeb80445ecf76726e5e156eb3acbd57cb176c801883f4ba75b25cecc2d258"
+    sha256 catalina:     "f3d0b44ddb425ca52de5ee98d31b7aedfb9bc0a3ce3d834f8b1a39145e7b19d3"
+    sha256 x86_64_linux: "17008cee54fd6d67e75bf36bf98ce4ca8618f428bb0a7b817ed1d49555fa6ac1"
   end
 
   # Homebrew ARM CI runners hang when trying to build `acl2`.
