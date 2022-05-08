@@ -12,12 +12,12 @@ class PythonAT38 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "688f179ac9e4cad6740f3db6bb7a6c5e60035a8b1a416c8c4d90fb0db66697cf"
-    sha256 arm64_big_sur:  "57413c75763c27d1e411556179567a95e5984abccc691bb130c2d4c8de4e6011"
-    sha256 monterey:       "d974cd40f71d505fc86a1ae71e23413b8278af829cddd0369a237850342e752a"
-    sha256 big_sur:        "4e955d6f1d31a662479b9f3ae055d2819343d393800e879f26f97a8c50dc11b4"
-    sha256 catalina:       "9bbad0e0c565d86d98bf5db564e216c59c8ae011dcb4ddb3645911f60395e6ae"
-    sha256 x86_64_linux:   "af9aa64996a7c25968259af737bd3f99649486ec317956f0d2f5b464e16d7fae"
+    sha256 arm64_monterey: "3045dc34ad02cc055e9a93de411978c70280555c0db7732955a01a3c903ff068"
+    sha256 arm64_big_sur:  "12f56aefd178f9cc59cf6db2756d858bd6e9a6a9a85b04a73dcf8eac8b43fe78"
+    sha256 monterey:       "7644a4ae346bd2acec76dcb1d64e5f6e14cb168385f5cd95006921aa34476203"
+    sha256 big_sur:        "da3bf154f2c086b9024bcdd1a45e3039623ab9835cc383fe9773673da04d4d74"
+    sha256 catalina:       "313b54d749b6c28adcf05f2e5088c634d427a4fbf2c83d6d1ff095e786aadf01"
+    sha256 x86_64_linux:   "c26a5a85a559d74b14c7304bb9772fd2df7751137914f8d3fbc36a6cdd8ddb00"
   end
 
   # setuptools remembers the build flags python is built with and uses them to
