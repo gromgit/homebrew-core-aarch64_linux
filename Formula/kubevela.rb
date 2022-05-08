@@ -1,10 +1,11 @@
 class Kubevela < Formula
   desc "Application Platform based on Kubernetes and Open Application Model"
   homepage "https://kubevela.io"
-  url "https://github.com/oam-dev/kubevela.git",
+  url "https://github.com/kubevela/kubevela.git",
       tag:      "v1.3.3",
       revision: "45e1de19dc736b10b3eb2d908d809210f470b24f"
   license "Apache-2.0"
+  head "https://github.com/kubevela/kubevela.git", branch: "master"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "cad332ae13671750a609b10b5c4b0cad36f6e715019023ebcad010123f721789"
@@ -21,8 +22,8 @@ class Kubevela < Formula
     ENV["CGO_ENABLED"] = "0"
     ldflags = %W[
       -s -w
-      -X github.com/oam-dev/kubevela/version.VelaVersion=#{version}
-      -X github.com/oam-dev/kubevela/version.GitRevision=#{Utils.git_head}
+      -X github.com/kubevela/kubevela/version.VelaVersion=#{version}
+      -X github.com/kubevela/kubevela/version.GitRevision=#{Utils.git_head}
     ]
 
     system "go", "build", *std_go_args(output: bin/"vela", ldflags: ldflags), "./references/cmd/cli"
