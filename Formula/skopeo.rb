@@ -6,12 +6,12 @@ class Skopeo < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 arm64_monterey: "d847acce1d6ff6f04d9b5eed16287b34adea46fa95d9034995dbeeb18c12b955"
-    sha256 arm64_big_sur:  "eb7f06d7543f60d012ab00da61ce8a2e0eec7d45fc7289ef0b86839f5c81cb46"
-    sha256 monterey:       "0ad59c0122397c8c6c5600049e9d8cc6d67455d268e3129a358fe90a7273da6b"
-    sha256 big_sur:        "39057822c76b2106d5efc84f3892d5fa33c28b555bc30b6cc995ff876072351f"
-    sha256 catalina:       "87cc982ab3988c6ceebc390d7bcc91395c90d052bdbf41948a4610cb1d917867"
-    sha256 x86_64_linux:   "c32b50ca63ae96d6a0731809d98b0e7eaccb1f61fd4abcbef35846d27cfc5d5a"
+    sha256 arm64_monterey: "c71c157090f9d45b441920b4c82839eb2db70db546d2e46c29808306d2e5467f"
+    sha256 arm64_big_sur:  "f1b1b22a30874f2f7f733a34cc6daca67a6e70d2f59ca059b3c558078aa545ae"
+    sha256 monterey:       "e64d6e03d2fd39d2238a2565a1e4c645c588fb6f56fc99418a52d13c08e04715"
+    sha256 big_sur:        "3180d507c7587131156a2a358de04ae062e0a4ce13923e35d7f6999ed9638690"
+    sha256 catalina:       "26207c8814a7740eb080a9da484ec316d24b37032003e333dd94cd53913eec37"
+    sha256 x86_64_linux:   "87c925b150e9c974c706b20c4c31fc983a76fc00051537b056d8d4b229d9924e"
   end
 
   depends_on "go" => :build
