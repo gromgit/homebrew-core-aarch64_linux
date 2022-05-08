@@ -6,12 +6,12 @@ class Openfortivpn < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_monterey: "4416e29cdcd1cea5a67b9f43a884379b42d4a1182c343ca00282508736e936dd"
-    sha256 arm64_big_sur:  "841251f14102aac8428f452673c59802c53f15704a76c90378777a70e1eae92e"
-    sha256 monterey:       "0f556551fb7844bb8954e02256c03270442a259a54ddfe006bfa1cb66f724488"
-    sha256 big_sur:        "ccc9bb9f730dfe2042b1122075a489a21a0e2670a6476629ee3378a8dcbe30be"
-    sha256 catalina:       "0b29d6c3803757515db40e0c9316fabed9d3eff7487a02f074ae52fe431f95e6"
-    sha256 x86_64_linux:   "816c71078dd6b6a17409595e226409de00d6c25614460ca708f6340b3b1c7db2"
+    sha256 arm64_monterey: "5ca2db0441565444cfd32a7f425df65e1dbdbf5925173c3c75532e34ce4e7b54"
+    sha256 arm64_big_sur:  "0ceb57978eba45f7dd5d84d7038853ea552b665e3f729396667fa9b0ded1f215"
+    sha256 monterey:       "9e18c8c064ed26675eac8f2c804a6c96e764286ff55048bdd4cc1d80ce2ac59f"
+    sha256 big_sur:        "d1b5968b54c9a081413fff6ccad29f1c2bd127bdb1b54e5b506f05d87471d54c"
+    sha256 catalina:       "d36a4c7bf8b7458cf8841be4d6ad90972bd07671a9508c5b2067bee48fb7c318"
+    sha256 x86_64_linux:   "af79810636c18a3f4bafafb8db4faa7de982ed9c213d17e3bb36ea60fef02e57"
   end
 
   depends_on "autoconf" => :build
