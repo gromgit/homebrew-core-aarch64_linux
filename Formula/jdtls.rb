@@ -13,7 +13,7 @@ class Jdtls < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "853096ecdfd8a71e00b49ae89001c9baf9dfb6c40eb99ad0b9022b58c10fac0a"
+    sha256 cellar: :any_skip_relocation, all: "9beda534a10281a2fa57c7956968d6b9dac773c48bae07883925c7bd7bc935f6"
   end
 
   depends_on "openjdk@11"
