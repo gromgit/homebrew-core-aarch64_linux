@@ -12,12 +12,12 @@ class Expat < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "408bf452fc05b19374181724c6274e5f9b29d518feb42127c1ffeb286bf43c83"
-    sha256 cellar: :any,                 arm64_big_sur:  "d3789c8ce49e9d03851aa8068a2529177f98dd1f876272df3c56c1116d4b33ce"
-    sha256 cellar: :any,                 monterey:       "4d777539c7563e07f75bf99856aec1e582754ae9203cecf455ed63287d50e750"
-    sha256 cellar: :any,                 big_sur:        "55928feabdedea649a97baaccae65b41315b46f0bf0c708d10ba0b61a76bfaa5"
-    sha256 cellar: :any,                 catalina:       "a9c372ecafa68e41d9b676fbfd608f5d1f985fc94efd12bf4d7904e318aaeb36"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6d90f22095cca714b764af2e2aca33b4e96d06fbf237775d64aa50b81525a1c8"
+    sha256 cellar: :any,                 arm64_monterey: "6c87cbc27a23da1b9c22382d830a3553309bb1475201a375af648941330af9f4"
+    sha256 cellar: :any,                 arm64_big_sur:  "9eff463ed55b86e151c5490d671933ebaefeefa0c6fb5233a74ac204b79185a2"
+    sha256 cellar: :any,                 monterey:       "4a4f446d62d57087d1220c8bc145c0025b50086b94a9edaa2776d7246c5a0e6f"
+    sha256 cellar: :any,                 big_sur:        "8148cbc1408b80b38c3811da65daea299a39858ff673cb355f3ac3b85bb93e66"
+    sha256 cellar: :any,                 catalina:       "68dcfe4b36668a6dc84296c50a3f3ac6ec8cada56de37bfe233fd4fb7c500c06"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "db13166d6a5bd0e19f82e9cd19f4a951ffff40cdfc29197e8143780444d0c204"
   end
 
   head do
