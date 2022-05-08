@@ -7,11 +7,9 @@ class Publish < Formula
   head "https://github.com/JohnSundell/Publish.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b46b98682bee859ef400576381066ac4572a256463aaa00b44bcef9141b3a502"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "43e882a02f169464d3b72b91c4221e605658f7f6a8989e069caecfd1d2c4caf6"
-    sha256 cellar: :any_skip_relocation, monterey:       "91a7e223302a9aa8617b3ec0f1d5b25470fae3b307c789b0c8d13f0e2a6370cf"
-    sha256 cellar: :any_skip_relocation, big_sur:        "76ec25c3a77331097114f184bd69185e0b000d1b84f9f7be932021bcc62894cc"
-    sha256                               x86_64_linux:   "c1e393b661b98242b749ae27c2059e840a08926588debad995cbd45a81f872db"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "867ee726868a7549be1a54c8c9219381b20503473d815843234e79172c2d8721"
+    sha256 cellar: :any_skip_relocation, monterey:       "596dded5de263f2e792564d00b7ad6df19100e3679a3a45638f3778e0972a5df"
+    sha256                               x86_64_linux:   "2c34e93726662d9416d7635aa995303cd0bd0cafb56c687b7b0c9ba9c7678a95"
   end
 
   # https://github.com/JohnSundell/Publish#system-requirements
