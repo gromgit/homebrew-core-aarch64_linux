@@ -7,12 +7,12 @@ class Minizinc < Formula
   head "https://github.com/MiniZinc/libminizinc.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "43d87079948f0fafc359731844dc494b9d6727cb20a2d2d9bed8d0ed3d101cab"
-    sha256 cellar: :any,                 arm64_big_sur:  "fe444844c4a9b585f70a82cb93106f956c6e69392ac8a70b8e3aa8f09f214891"
-    sha256 cellar: :any,                 monterey:       "6a2b15c70e6e42f7a6e206971a91e6b9c7193aee0df57d9c0d01363f93e64b36"
-    sha256 cellar: :any,                 big_sur:        "a51b5950cc114e1ebafe1a5ab7a5a8eb401e3023c4f7f8746f0adadf6e95f778"
-    sha256 cellar: :any,                 catalina:       "ca44b073b683adb8dfc65072b158658ec82aca056b4a27ac3afd321e95b696a6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a4d491eb72caaced07731e10f3dea5deebbd68031596fa13755279377b3433b3"
+    sha256 cellar: :any,                 arm64_monterey: "b55a016f4865ac6a319b6f52b3b2a7fa3ae4aa90b6d9931a9a6304dbe5c538f5"
+    sha256 cellar: :any,                 arm64_big_sur:  "bc02b6889bbc11f528678cf89ce6a92e3cecdcf8479988407211d9bc65b2d016"
+    sha256 cellar: :any,                 monterey:       "1995a81599adbd8ef24889b3518d9f5a9d51a6f7cce730195ec36d12d813e460"
+    sha256 cellar: :any,                 big_sur:        "69198098a3ce3e1d63e632eea9710241269ad6aef086c9382815f81235a2e8ec"
+    sha256 cellar: :any,                 catalina:       "56ef2b32d0e0d47b52587a1116285fa773978b57289caa8636c9cf5a6280ed59"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4676ea1ccfc234dc032dda36e071f4fddaaeff6aacd12f07b6e6c69cce990a44"
   end
 
   depends_on "cmake" => :build
