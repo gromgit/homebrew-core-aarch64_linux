@@ -7,12 +7,12 @@ class Eigenpy < Formula
   head "https://github.com/stack-of-tasks/eigenpy.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "383ad912e8cc7db8f1c126cc3b42621e71f54a45631c7ffdc6b315a133b4c340"
-    sha256 cellar: :any,                 arm64_big_sur:  "ad2c9eb7d43512e2b6b6d0ec5166eee015d36d4c8519b43e25486a485da885a1"
-    sha256 cellar: :any,                 monterey:       "0b837f40e2a68c3d572103e090ab36ec0cd8090b23b8350172920cfcd8b15deb"
-    sha256 cellar: :any,                 big_sur:        "74dfd617bf76ea6e05204cc9e40dd4ea7efd9051ea9f9d0f049e13e5e6c5e431"
-    sha256 cellar: :any,                 catalina:       "69cbccece577e7f566887a75323a54a9b12051601d6deada60e4bb317b25fdf4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5a79ea2824d6cd32d1681f7f7d2c3b33491154e42636724bfaed657cbd0ba963"
+    sha256 cellar: :any,                 arm64_monterey: "70ababee9d98857b3e942a0f4d6ff4d62bf4597a93510f738ce8d9494ad49032"
+    sha256 cellar: :any,                 arm64_big_sur:  "e97827139b27ce7126d29f70cc20aa6aa48357d3a241c30be402c910df784c29"
+    sha256 cellar: :any,                 monterey:       "0db37180220dddab9243d7587a65db650b90579ac8937f9398613c8e02759bcf"
+    sha256 cellar: :any,                 big_sur:        "9efcc97d2ef1974c15d26ee62402b2f767b52b859a54907199466ef5cc9227ab"
+    sha256 cellar: :any,                 catalina:       "a4022e9b4c8d19019fb8e2fcd464c59f5b88034b737c24c747a9d426efc89719"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5ae4dcb64e5bce49e63a7aa7cd0f2313c1c8d8768249fbc38d8fdf92eeb2846e"
   end
 
   depends_on "boost" => :build
