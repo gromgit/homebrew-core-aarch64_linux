@@ -6,6 +6,15 @@ class Libxcvt < Formula
   license "MIT"
   head "https://gitlab.freedesktop.org/xorg/lib/libxcvt.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "45a0b481cf82676176c62d06cda0836445b94127e671de6ce0954e684d3fd96d"
+    sha256 cellar: :any,                 arm64_big_sur:  "b4b4cf1ccd39350854501b8c4215bfbaff09d8f5561d82cb0bc008116c67a2a1"
+    sha256 cellar: :any,                 monterey:       "6c7977eb664f6386d8f9eb1089617d860ee3493859287bf58432dc28d450f239"
+    sha256 cellar: :any,                 big_sur:        "3c28844529ddab8dbb24d6111c7fb1f0cfab18f22e1fd8624f86abc17f4fc528"
+    sha256 cellar: :any,                 catalina:       "2f2e2f9aca9311bedc6a3a623637071c0c122927d29207b32e5bb86f6cf356ce"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "43dcce13077d13190e041b20e68ccab4c28501790ed9506e2b3f3a37c1b364ec"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
 
