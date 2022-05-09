@@ -18,6 +18,7 @@ class Mgba < Formula
     sha256 cellar: :any, monterey:       "8486c6db482c218845f22d3dfbc5402066d002c6712b1fc0faefa3ce88d186f0"
     sha256 cellar: :any, big_sur:        "575163b96818d53848c6b4a536fbccea185cce14487394974519b1655c3cb03f"
     sha256 cellar: :any, catalina:       "fe54e4803c93036beb054b6e649f722e21f1ae08fa4efb4c2808d9b5b875fd8f"
+    sha256               x86_64_linux:   "2e521f7ea91d0e5b77583d818c0eed31ece44389d4ac3235dd6ed52bfd6141ae"
   end
 
   depends_on "cmake" => :build
