@@ -23,6 +23,7 @@ class Libcapn < Formula
     sha256 catalina:       "67b634beae31705b6664702473cb42a686c50d84f4d0ec530bbe4e360c292dba"
     sha256 mojave:         "3b4b1f331e7e79c6a99826c5ffd385df3f199a7d72c897e9fd31150be26303cb"
     sha256 high_sierra:    "a3cd6c452f96c9914f41fe22c1c0b5518c282569dffcebe7d6f38783ce2fb4d1"
+    sha256 x86_64_linux:   "dc171d79b0aded9e47c7e838058a6d0a30b38748f15aa499f9452ae343bd6912"
   end
 
   depends_on "cmake" => :build
