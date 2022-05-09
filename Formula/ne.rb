@@ -13,6 +13,7 @@ class Ne < Formula
     sha256 big_sur:        "993bb3e19da613eec505a0ad68fe83bee71ff2623d7110b9e09005af7c819795"
     sha256 catalina:       "ecfd40e9e55ae2fe75fe6c8118742de8268ed794784fdff5807c26073832d2c5"
     sha256 mojave:         "4e3b9c4ad9cf331cd239cfe8b192e9f3c6cd9f6609d3726a0fad32ad1c4c9715"
+    sha256 x86_64_linux:   "8667e95df91bb5c2f696f404c5d6ded28c279ef41596ffba4ddd3705338ba939"
   end
 
   depends_on "texinfo" => :build
