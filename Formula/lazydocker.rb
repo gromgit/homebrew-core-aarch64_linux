@@ -7,12 +7,12 @@ class Lazydocker < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a5206bb97f1b97937bd3a7f55ef60e3cdcf7dcd11a528213669647ed5624dd87"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9d5fc99b6f69ee9397be2f136247ad7d049419144de1fc6cd767ae229c93385c"
-    sha256 cellar: :any_skip_relocation, monterey:       "513c7b6ab8549e9e59a31172167a69b1dd96ed4c3c20147b42174ae32ab725d0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "abadea905b75a2569f452f77a19126057fbfb2a702e982e3bdb01a8308aa3935"
-    sha256 cellar: :any_skip_relocation, catalina:       "67e73e0d74ff5920cdfca6c786b729e18207166d4cfb1b7237f981a57ab494ba"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fb946c3fa3d69068bd29ffa13eb6bbda0d987bf398bb60d34bf9c1dfb01a2007"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "af70f10f71973bb0bbd6665cf602aebfc47634d3a670c40f3d15b622aa15ea72"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "54f1a83221eb432bd7e7f330c00eafe70c71f4759490b37a308755ccfd074cad"
+    sha256 cellar: :any_skip_relocation, monterey:       "69a031056124ed0abf55e64ff94e18cd8270c8e3e11e8d1d5e61a5b12294ca3b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "05a646c55aaa9aac0efbc51a13253036c5acf030dc6184d0bd7af311c68b5752"
+    sha256 cellar: :any_skip_relocation, catalina:       "faf25d87b0e80f10c109ce55d8f1d332786ef2ae98dd9871d99864f488be7118"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a6e2024d69df4df7a28f75aebd7b9e5db1d6002b1d500276fa5e258618422637"
   end
 
   # Bump to 1.18 on the next release, if possible.
