@@ -1,8 +1,8 @@
 class Remctl < Formula
   desc "Client/server application for remote execution of tasks"
   homepage "https://www.eyrie.org/~eagle/software/remctl/"
-  url "https://archives.eyrie.org/software/kerberos/remctl-3.17.tar.xz"
-  sha256 "2ca2f3c7808af1f6fedc89f0e852e0abb388ed29062b3822747c789b841dbd2a"
+  url "https://archives.eyrie.org/software/kerberos/remctl-3.18.tar.xz"
+  sha256 "69980a0058c848f4d1117121cc9153f2daace5561d37bfdb061473f035fc35ef"
   license "MIT"
 
   livecheck do
@@ -24,12 +24,6 @@ class Remctl < Formula
   depends_on "pcre"
 
   uses_from_macos "krb5"
-
-  # Fix -flat_namespace being used on Big Sur and later.
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
-    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
-  end
 
   def install
     system "./configure", "--disable-dependency-tracking",
