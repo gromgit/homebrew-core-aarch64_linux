@@ -7,12 +7,12 @@ class Aerc < Formula
   head "https://git.sr.ht/~rjarry/aerc", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "cdd48ab11d276a08038cb4658a27ce84194bb846afa466e13092d5e07514f7e6"
-    sha256 arm64_big_sur:  "e73ee2bf4aa2d611e589927c84c3dd94c1aabda01a77d07c6cfcecaf5dab0def"
-    sha256 monterey:       "69ec4cdabb778f96cf8de9e6e4b1b960f0cf84b8fa40e5d2febffd53122c135f"
-    sha256 big_sur:        "1adf5c2ec24d14ccf3ac53a16155ebdc0344ccca341ec847d5a0f52c68a8d20a"
-    sha256 catalina:       "fd45807590d9bbc0c17ce120657df9b229b63ff4462b067dc75709bc0a6a8702"
-    sha256 x86_64_linux:   "cb57248c88b8988f1fa9c45a0d39cd35c5c12cabbce1c4699c72f85493787ea4"
+    sha256 arm64_monterey: "07b0f639519dfeebab62d97d34e2be7948d7a7eed34c2296200f2753f4e8cb1f"
+    sha256 arm64_big_sur:  "7e5b591f483879bace3dc00f675e15aa1b07bc4fdd7af0c913b5d9f884325131"
+    sha256 monterey:       "a78fa9e52072723610b91543d8e5a1cf8beccf9ed39247d6564015cdb6e2d929"
+    sha256 big_sur:        "a71ff65f4b44d97327fb92ab2cd4f3adb387fe82b546875deeb6e782abdad7d7"
+    sha256 catalina:       "9ddcc5a17bd657c13e4fc170d8d48c0c6593fabfefde103c0f31d0a8ad45f753"
+    sha256 x86_64_linux:   "57c91eb2697be7bedba392caa3b2594b33ef66167a276ac68aabcd1cc495497d"
   end
 
   depends_on "go" => :build
