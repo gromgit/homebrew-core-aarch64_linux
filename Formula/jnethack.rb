@@ -17,6 +17,7 @@ class Jnethack < Formula
     sha256 monterey:       "262dfe4f07fb46856aab7d687de50e0b06865205ca9441b8e1c2e3fe3d1cd1d3"
     sha256 big_sur:        "992e84d15108722136983844bd6a34cb7f5463e5bd697b32ac7659419f5bc21b"
     sha256 catalina:       "f59a9c1dc29af967186ad412078b7fde04b2ff21701c920f97a21ac63ef14524"
+    sha256 x86_64_linux:   "e8c746c0df2deb305dfcbd6427281d2d0f69cf9a011e05e29ce97403352c74ee"
   end
 
   depends_on "nkf" => :build
