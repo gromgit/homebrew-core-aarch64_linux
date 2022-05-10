@@ -13,8 +13,8 @@ class Go < Formula
   end
 
   bottle do
-    root_url "https://github.com/homebrew/homebrew-core/releases/download/go-1.18.1"
-    sha256 x86_64_aarch64_linux: "1504f0b43a95162dae91b3ea901ac882b4588a8ae1504b4d9ff2def25eb89338"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/go-1.18.1"
+    sha256 x86_64_aarch64_linux: "c56ec10f59bdac98b4266fee04795fea5fd90b7bd490db589505bc5f5d16b2f9"
   end
 
   # Don't update this unless this version cannot bootstrap the new version.
