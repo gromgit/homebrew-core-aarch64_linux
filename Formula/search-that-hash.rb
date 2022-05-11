@@ -17,6 +17,7 @@ class SearchThatHash < Formula
     sha256 cellar: :any_skip_relocation, catalina:       "3e07893fddb549c451fe537ed2dbed00a3acca6eb9aa40238c366bd2713526fe"
   end
 
+  depends_on "poetry" => :build
   depends_on "python@3.10"
 
   resource "appdirs" do
@@ -120,7 +121,15 @@ class SearchThatHash < Formula
   end
 
   def install
-    virtualenv_install_with_resources
+    venv = virtualenv_create(libexec, "python3")
+
+    resources.each do |r|
+      venv.pip_install r
+    end
+
+    # Install search-that-hash using brewed poetry to avoid build dependency on Rust.
+    system Formula["poetry"].opt_bin/"poetry", "build", "--format", "wheel", "--verbose", "--no-interaction"
+    venv.pip_install_and_link Dir["dist/search_that_hash-*.whl"].first
 
     site_packages = Language::Python.site_packages("python3")
     pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
