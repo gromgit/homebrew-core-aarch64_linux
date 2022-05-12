@@ -14,12 +14,12 @@ class OperatorSdk < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cb309ebb6dc58aa4d24d2cce10eab98b455d0f567b4dadfc0cc3e3c15e5fca44"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b58d271cea0166c27e50b8ad0c0adc006ccb13db37e619ca5bffa1e847234132"
-    sha256 cellar: :any_skip_relocation, monterey:       "93f4f5926140c39a6809a6aa1a9d3729c995f41680e9fafe7548c68366560c07"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3be9656a780de59778bce70d1b22a7d4c9c73bfa9a46bb15ad9a1210398cfadb"
-    sha256 cellar: :any_skip_relocation, catalina:       "9c88e8c1d33c6457c8ed22a4abb510f1cbdf14de52565fabf06ab73bedcc345d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6ab8c291e0dad800d4405f56002ba1252c13eb4b91e8d4b563b95da33b3a472f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1e7fc83b305d8fd672b1a68ed04d83afb2509393e07a105ba1922d11ee491986"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "239b1ada548023fa19a593d3f15267f7e370f5e2d30cb2c4be1045aa7b21a2aa"
+    sha256 cellar: :any_skip_relocation, monterey:       "8fd164db5f3d9e183527aa2082d096c60b1f097a05e965d8daa308842f12dab5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c50a93409f48b97037f376aa565a58f3e0cd282b5d1cd730ffdbf3bb58f6fb3e"
+    sha256 cellar: :any_skip_relocation, catalina:       "17820af2c0902e9b7bede2a5747a553838160a2cbe603686aaa667b798345faf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d0e9798f46d1f7f58da65b99dfbb3a242c2e1c8720c4979ea249c1818b1a02ee"
   end
 
   # Resolves upstream issue: https://github.com/operator-framework/operator-sdk/issues/5689
