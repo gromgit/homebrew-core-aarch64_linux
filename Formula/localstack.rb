@@ -3,8 +3,8 @@ class Localstack < Formula
 
   desc "Fully functional local AWS cloud stack"
   homepage "https://github.com/localstack/localstack"
-  url "https://files.pythonhosted.org/packages/37/2c/a9ac7bfa22058c12c0defd16d16fdea788a620fe8a9652b7bb981cd62449/localstack-0.14.2.9.tar.gz"
-  sha256 "c815e992b2dd4468474b93adda710ca2895dece09b7d789dac1aeefc81114a0c"
+  url "https://files.pythonhosted.org/packages/9c/30/89b2c3932041f25ce5db18e2f257af7abc679f2daad3b81ba77742a0a3d4/localstack-0.14.2.10.tar.gz"
+  sha256 "d047ee9e73d076051bcd06d2b35e33cc572d7a0dc73d15549a0f8a61db04fe44"
   license "Apache-2.0"
 
   bottle do
@@ -26,13 +26,13 @@ class Localstack < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/a5/31/030a9fccdddb9854950461071a4fcc4f8510e6617835c609b30be8bf05d8/boto3-1.22.9.tar.gz"
-    sha256 "441b619067cb205bfcd0e66fe085c16989ab65bd348823013e11bef991c00a5c"
+    url "https://files.pythonhosted.org/packages/28/f5/8394cba779b6324465296dbd7872733a3d45ec8b8e7d433d2964b5e22372/boto3-1.22.12.tar.gz"
+    sha256 "4b3a49abf7a5f7cdd82714a3ae356a9a8ce12a668e014c5fc68454aa1e2fc0cb"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/8d/8e/c2b8365baa7406afd2d3d73866b05297073c14a04f3aa2b8975e12632a6b/botocore-1.25.9.tar.gz"
-    sha256 "a1d26b95aaa5b2e126df74b223d774fae7e6597bb55c363782178f5b87f0cad3"
+    url "https://files.pythonhosted.org/packages/e6/d6/2a03437f09eecddf889bbda21d3eb2af0828c57b19e0979e1145be057ed7/botocore-1.25.12.tar.gz"
+    sha256 "e2fc586fdc0b54c08fc509e906e87fb358b9f5607b12f526f995ee74a4a4bcd3"
   end
 
   resource "cachetools" do
@@ -96,8 +96,8 @@ class Localstack < Formula
   end
 
   resource "localstack-ext" do
-    url "https://files.pythonhosted.org/packages/b4/e9/4772ecff6e70cf726064af773f3a7de935cb5a69afb78729ad1f41bc836b/localstack-ext-0.14.2.20.tar.gz"
-    sha256 "61b1f2d665b11ba88cff116b58ce591b12bdd002e0c7ab649e53a258baed8a09"
+    url "https://files.pythonhosted.org/packages/da/1a/8f2bbc14198f4f7155e6367b1e36fb17a99b0906093889438bb10e76b335/localstack-ext-0.14.2.22.tar.gz"
+    sha256 "3e2d0d778b8cbe4a0613103f5474aad8ce30a4eac5fbdb261866305bb198d3d6"
   end
 
   resource "ordered-set" do
@@ -151,8 +151,8 @@ class Localstack < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/dd/c4/5ad64e0a7e5a49b4dbe8d51decf448a118dab2c20dbdb71f6b7a5f10bc2f/rich-12.4.0.tar.gz"
-    sha256 "7aebf67874dc5cc2c89e2cb6ac322c95bd92510df2af0296c8bf494335ef704f"
+    url "https://files.pythonhosted.org/packages/72/4d/1f48abaa1e91474af1be8622ec2a8bd3768b306def47b064aa15aa943f95/rich-12.4.1.tar.gz"
+    sha256 "d239001c0fb7de985e21ec9a4bb542b5150350330bbc1849f835b9cbc8923b91"
   end
 
   resource "s3transfer" do
