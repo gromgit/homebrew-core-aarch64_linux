@@ -1,8 +1,8 @@
 class TidyViewer < Formula
   desc "CLI csv pretty printer"
   homepage "https://github.com/alexhallam/tv"
-  url "https://github.com/alexhallam/tv/archive/refs/tags/1.4.3.tar.gz"
-  sha256 "e308eb088d059d18119dc757c98487d9cabc2f4b97035a8dc9f8253717aa9fe9"
+  url "https://github.com/alexhallam/tv/archive/refs/tags/1.4.5.tar.gz"
+  sha256 "06906324bc510698651e57b1dfe9a28301ccbdd509f079bf09ce7f6d2f2fad2b"
   license "Unlicense"
 
   bottle do
