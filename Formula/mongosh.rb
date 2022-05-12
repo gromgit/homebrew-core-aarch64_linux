@@ -3,8 +3,8 @@ require "language/node"
 class Mongosh < Formula
   desc "MongoDB Shell to connect, configure, query, and work with your MongoDB database"
   homepage "https://github.com/mongodb-js/mongosh#readme"
-  url "https://registry.npmjs.org/@mongosh/cli-repl/-/cli-repl-1.3.1.tgz"
-  sha256 "e40df53ffd920a1abe90df46b11ed63de6874249fe4fc4301a96a309dc0bacd7"
+  url "https://registry.npmjs.org/@mongosh/cli-repl/-/cli-repl-1.4.1.tgz"
+  sha256 "d9f3f9f6b3e0c5e29bf34090de8545d0b75d681f882fdc9a6a466c4c365bd33a"
   license "Apache-2.0"
 
   bottle do
@@ -16,11 +16,11 @@ class Mongosh < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "80caacd9bd2e4c3997314c9d7762cc3eb8f7fe5daf8482e79cfed116dbae0cce"
   end
 
-  depends_on "node@14"
+  depends_on "node@16"
 
   def install
-    system "#{Formula["node@14"].bin}/npm", "install", *Language::Node.std_npm_install_args(libexec)
-    (bin/"mongosh").write_env_script libexec/"bin/mongosh", PATH: "#{Formula["node@14"].opt_bin}:$PATH"
+    system "#{Formula["node@16"].bin}/npm", "install", *Language::Node.std_npm_install_args(libexec)
+    (bin/"mongosh").write_env_script libexec/"bin/mongosh", PATH: "#{Formula["node@16"].opt_bin}:$PATH"
   end
 
   test do
