@@ -6,12 +6,12 @@ class Proteinortho < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2b2ffbe18ad1ddf68f5ac6a287263295c18399cd8dd0d61366db0c02cb62bfd8"
-    sha256 cellar: :any,                 arm64_big_sur:  "353ca6964c05e0c0dad3c3d8522a1d2a7091b36d9b0ec0210b7829352e4a2373"
-    sha256 cellar: :any,                 monterey:       "f9d51e1086df9b04f429b291ee727d404ee4b8dbfbd9198a85f1116ff3a607de"
-    sha256 cellar: :any,                 big_sur:        "7ab64514f98900e9a6878b94b6f9c3242d6e0e6e4acdf2ab12df96756989be8e"
-    sha256 cellar: :any,                 catalina:       "905d8f762147dfc6cc04bd7dfceab6ca858299f8b6dbc70d8567625ebbd1cdb0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0e7fbcebe78f36044cad765973f1f32687c79dd13fe76f529bc6988be16bd004"
+    sha256 cellar: :any,                 arm64_monterey: "469b94aa5b70464dd40543a1a7106898d73b1ed803f07d6d6470cf7b7797e63f"
+    sha256 cellar: :any,                 arm64_big_sur:  "e86e18cdee9b81485c286abaadba5ba5033cb7bd8a98cbbce5f91da425fe83b1"
+    sha256 cellar: :any,                 monterey:       "d2dfc2187c30b3e691186e4af047acf72f17c0f2a5389e5e5804ce68af6f15c2"
+    sha256 cellar: :any,                 big_sur:        "5491084133942279b0786c74395c59cbf5024bd90603b56ede99fb3d90d8f745"
+    sha256 cellar: :any,                 catalina:       "d604bc70207fc987ad4781e82585730db96421e8b115a8412ea08aadc0a1bae1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c86582443280a720052fae0c67e9fda0f3896e32e1e23d8b8134d030fac6becd"
   end
 
   depends_on "diamond"
