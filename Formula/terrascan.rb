@@ -7,12 +7,12 @@ class Terrascan < Formula
   head "https://github.com/accurics/terrascan.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d41840e91df89e57a4ce08e3016ac7d963cddff94bd88f570f5c31e8bd80a40e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d3e49366f64a14e16a27aa718a497ba4f4d17ac5e53c70b15a85c5566e1606f8"
-    sha256 cellar: :any_skip_relocation, monterey:       "0b9a308561e61a7464ff45af3794a23297ac9ddc335e681a7eb490b1a93b5a9c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ee861a266d51304cff5975abdca1348156e7ef67ae0dabca83686b91b3bb450e"
-    sha256 cellar: :any_skip_relocation, catalina:       "1b3ed5aae2ef0cebe7e1c683b0fb97d74ab749a4ecc6c7828b066c969d7b19ef"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "df03b60cbd2bc4a983d90e7180e2238889d607752d4d91837c0da7addd4fc9e7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "70faa89bfd032ee416fbe169defe8bfe5fa6b16c9631818c0faccfe1a3191b8d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c3009304b8200262a603111147172038132840339738c6c5ea925d4a1361c822"
+    sha256 cellar: :any_skip_relocation, monterey:       "7f233c3c85f91b7c1eaae9a091241809136f9dade8d937bdea128890409d3a72"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0e7e0f6cfbd6ac0419fc8c25bc739c16dab3d3150233a848fede5427f6ce19e6"
+    sha256 cellar: :any_skip_relocation, catalina:       "04cfd04912a6a5842e9d336b4884dfe198f136f84d5199485583940688d5883e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "87849071e4f38a979d7b1d40315a45211d65ada80941e98e81bccc973205406d"
   end
 
   depends_on "go" => :build
