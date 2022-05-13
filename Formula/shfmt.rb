@@ -7,12 +7,12 @@ class Shfmt < Formula
   head "https://github.com/mvdan/sh.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1a9fb0705340684312ac9c92fc448743de717587440518267d4adac0ad83655c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "37adbd3e95760b7c729d045882e5b2db2528037ca8980c4216cd8176cd2aac3d"
-    sha256 cellar: :any_skip_relocation, monterey:       "4e1f4404a999dfaad2a7304210dddef98a9871593a7ab69362fe99e457400ba3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3847119018b86770f101e86dfc4ebfd73fd43a77a5dceb003d0d2aa6ade2014f"
-    sha256 cellar: :any_skip_relocation, catalina:       "10d8a6351ec8f7aba3965e153e73bbd099570047de3f134f8b81824f95945a4f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a25494a19bccb9ab403ce35141dd846ef1e0b3fa66ef517a399a738ef21a6830"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7eb293e2f78bdd8de97bb7dd497cf5c7859fc4dc5d16a39449abde7c4a95ba57"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7bb226e3bd76e581a782070803404d06e2d55ca3543b13b2fab7855beb6515e4"
+    sha256 cellar: :any_skip_relocation, monterey:       "4cdfb91026a3008080edf964a8a5e13b4bb019b4819d9d2aed75b0553e770303"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4a867a533ad223d7b5930384f733fe025fb0f28c8ac9204f18d68482495a5038"
+    sha256 cellar: :any_skip_relocation, catalina:       "8944dc0b8a53131fbd2ec13c6280a9296eac52bf5ad47dd8c70b1cbd7cada21b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d71cf85ecae70836358d19eb275f0dfc897f16b6a5e8f6587b1c0642ad99cc17"
   end
 
   depends_on "go" => :build
