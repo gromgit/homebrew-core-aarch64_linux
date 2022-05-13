@@ -9,13 +9,12 @@ class Instalooter < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3d29da3eb63c5d5115e8f39438c978469c047d4e59b1ce82a653e6ea21f21a9a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "20316dff8da3999d6aa335e8e9d6555e1bdb4f9237421692c67944828ca1e60d"
-    sha256 cellar: :any_skip_relocation, monterey:       "157d6e8976b14205641a072423e26ad69d15603b0ba899b6a786a71cf317e5d6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "da5e277f2cd0dbdef07b853b1952de7798195760885dc39185ba20783109a5e3"
-    sha256 cellar: :any_skip_relocation, catalina:       "0f5793e71d06911c8345f2a8e4cb6c47ad92100695862f1e0cf7c0bbc16be5da"
-    sha256 cellar: :any_skip_relocation, mojave:         "76edccfab0fe943afd0754e2bb142fb6eec24462718efc49d915b3f0517058bd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "79d3ab0b25f10c67dbdb77dbd17ffe85fbbdb1a2eeccab0e6ffe6468ee5eeb02"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ffafa94042876f601d223ecdc9f6f03b0f0ef11c343422ffa3fcfa7686446ba6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "180d64c6ca09fcc7bcc3e5587cdb44053608c415bd0e8314a6c0f16cf76feebb"
+    sha256 cellar: :any_skip_relocation, monterey:       "e422ca62cb5f5b0cef99879ead7dd9c4c248503e61cc6d126fad7fb10ca8a3f9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9f9c70162192fde9124c2d5c2070e4837b87af59b648d8c1a844682d2a0f5d83"
+    sha256 cellar: :any_skip_relocation, catalina:       "4e05e0329e126d9d4699c1ba421e1f484d98db60027fbf02f4dc26d93bafdbc1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "da884f00de931ce21ec8a4199754b5cd8afff600751e8919822af264ff9d7de6"
   end
 
   depends_on "python@3.10"
