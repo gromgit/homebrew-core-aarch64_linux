@@ -7,12 +7,12 @@ class Terraformer < Formula
   head "https://github.com/GoogleCloudPlatform/terraformer.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b093b8541f2cfe6aa87822d8403323c7872e2607d09be702ce4f38a277c3168b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ead4a9f3639546a190f6f097dddcb45b8e0bcb7115f343b17e761be8a7329348"
-    sha256 cellar: :any_skip_relocation, monterey:       "92173947f2b3da16f8fdf8c5bbc0830b47c891e83b5ec4c13e62bedf9b0ad381"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fb3f69b1e10b7c52783ec2d00e56f983461cd3b04d6c68f94011a42e0f630844"
-    sha256 cellar: :any_skip_relocation, catalina:       "2f16d882cd6a1401d1d91a60a769f8db0d8d3ddeb72424822f4b2500d650d5de"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5be1bfcde574060c6ea8236ba8bb70012fba7474a011e94e84940112b0ad050f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "40eeb287e3318f7f39a1d728e360c18b8929088d8e9b2ce5edbbfd4b0a224a2a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b8722d3307fd0d952f5f8f095ba35e11d5e60fcc37a85b9ca5acc2760ee52045"
+    sha256 cellar: :any_skip_relocation, monterey:       "83c1367879bd9d4fa2905c733423d6d0ac6741c47b5c4299495043867c4fe41e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d11a9fff83b27e61d288e23ab23e4b118cb9401fe0790cf00156ea3a7ec9a312"
+    sha256 cellar: :any_skip_relocation, catalina:       "e1e807b98e1fd3db9e65646f9ec8a86889aade0c9447d279e1199b435be1f3b8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3af048a2e8b3627f6172c9990c95ea9fa70722ffe449e603afed6f588c997de8"
   end
 
   depends_on "go" => :build
