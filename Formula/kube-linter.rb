@@ -7,12 +7,12 @@ class KubeLinter < Formula
   head "https://github.com/stackrox/kube-linter.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4c859f9440e3f4a695606b23f0d334b65b39f20d52b2422b6bc319d59f1fefe2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4c859f9440e3f4a695606b23f0d334b65b39f20d52b2422b6bc319d59f1fefe2"
-    sha256 cellar: :any_skip_relocation, monterey:       "f474d229424aeb5dafc9070f31c5990b41cca5c139acfc0e305a65d138935079"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f474d229424aeb5dafc9070f31c5990b41cca5c139acfc0e305a65d138935079"
-    sha256 cellar: :any_skip_relocation, catalina:       "f474d229424aeb5dafc9070f31c5990b41cca5c139acfc0e305a65d138935079"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4c13aac991108ce72cf79281ca914e6684bd3f8300cba56c3f1533339a50aed4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "637a72edb48e07347b0962ee9f8dc432b4249df29190b233952158bf0b21490a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "637a72edb48e07347b0962ee9f8dc432b4249df29190b233952158bf0b21490a"
+    sha256 cellar: :any_skip_relocation, monterey:       "b75c29eace4cffa52555e2680e7dce5e4230f1aa8113f9d57ee5e6ccac6f3bc2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b75c29eace4cffa52555e2680e7dce5e4230f1aa8113f9d57ee5e6ccac6f3bc2"
+    sha256 cellar: :any_skip_relocation, catalina:       "b75c29eace4cffa52555e2680e7dce5e4230f1aa8113f9d57ee5e6ccac6f3bc2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "58447f4693e88a0906947146df6001374ad18704f36ffa0d6253048eefe2e3fd"
   end
 
   depends_on "go" => :build
