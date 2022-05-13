@@ -9,13 +9,12 @@ class Livestreamer < Formula
   revision 5
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "76193bcb73c7cfb124eb5d4722ef470b5c0b494ffc8a4434f985e0d30b64d838"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "76193bcb73c7cfb124eb5d4722ef470b5c0b494ffc8a4434f985e0d30b64d838"
-    sha256 cellar: :any_skip_relocation, monterey:       "2532c8413596ff667d0ec23f772f79c5e53804e956a86b48d7506955bc566c54"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2532c8413596ff667d0ec23f772f79c5e53804e956a86b48d7506955bc566c54"
-    sha256 cellar: :any_skip_relocation, catalina:       "2532c8413596ff667d0ec23f772f79c5e53804e956a86b48d7506955bc566c54"
-    sha256 cellar: :any_skip_relocation, mojave:         "2532c8413596ff667d0ec23f772f79c5e53804e956a86b48d7506955bc566c54"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "157200d22da219983522e2cbb204024c0275d5be1e61619017a20f0360a52bfa"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5e2e04a90df81ab82d3fe1d44640c2b4400ddec952797f44e1c005c0ab8d8c4d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5e2e04a90df81ab82d3fe1d44640c2b4400ddec952797f44e1c005c0ab8d8c4d"
+    sha256 cellar: :any_skip_relocation, monterey:       "f479bd547db6c63cb62ad292c9ef75d18299fd7102d72d82a5b61352d3d720fa"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f479bd547db6c63cb62ad292c9ef75d18299fd7102d72d82a5b61352d3d720fa"
+    sha256 cellar: :any_skip_relocation, catalina:       "f479bd547db6c63cb62ad292c9ef75d18299fd7102d72d82a5b61352d3d720fa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "acc79d143599e834180032898376d7ceb4cdb0077da250b8db0aaac55e7434e9"
   end
 
   depends_on "python@3.10"
