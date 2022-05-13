@@ -1,8 +1,8 @@
 class Keydb < Formula
   desc "Multithreaded fork of Redis"
   homepage "https://keydb.dev"
-  url "https://github.com/EQ-Alpha/KeyDB/archive/v6.2.2.tar.gz"
-  sha256 "e65eea13500c30c65f705121b67cffeb3551a1c7cc7d07b60fe6191acd4dec58"
+  url "https://github.com/Snapchat/KeyDB/archive/v6.3.0.tar.gz"
+  sha256 "58793c1ed2f0afc81582a6216844ef9e9b1b4d3ceb8a9bbda5b34ed1b1e17e0c"
   license "BSD-3-Clause"
 
   bottle do
@@ -14,6 +14,7 @@ class Keydb < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "535b7f2c5d08ca981e8a20fdf264c0fa47c9a1410c1811b36d62dac43e29d852"
   end
 
+  depends_on "openssl@3"
   uses_from_macos "curl"
 
   on_linux do
