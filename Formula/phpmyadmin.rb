@@ -10,12 +10,12 @@ class Phpmyadmin < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6be8d4e8e4bcea35c18f9898345c6158e08cdcada6b39cf876a48969cee1cdbc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6be8d4e8e4bcea35c18f9898345c6158e08cdcada6b39cf876a48969cee1cdbc"
-    sha256 cellar: :any_skip_relocation, monterey:       "e7f668722047870a70055b32f1a0ceacf7385d6e81f6835ee521e253dbb44a35"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e7f668722047870a70055b32f1a0ceacf7385d6e81f6835ee521e253dbb44a35"
-    sha256 cellar: :any_skip_relocation, catalina:       "e7f668722047870a70055b32f1a0ceacf7385d6e81f6835ee521e253dbb44a35"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6be8d4e8e4bcea35c18f9898345c6158e08cdcada6b39cf876a48969cee1cdbc"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "287dd994aff3570f5bd32f7fb4fb670e8bb76b68774e60d60a536adc54a5c03c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "287dd994aff3570f5bd32f7fb4fb670e8bb76b68774e60d60a536adc54a5c03c"
+    sha256 cellar: :any_skip_relocation, monterey:       "68045778c9ed100dd22374199cb1c1d9f089fe78253ce976d00fbbdc01ea42cd"
+    sha256 cellar: :any_skip_relocation, big_sur:        "68045778c9ed100dd22374199cb1c1d9f089fe78253ce976d00fbbdc01ea42cd"
+    sha256 cellar: :any_skip_relocation, catalina:       "68045778c9ed100dd22374199cb1c1d9f089fe78253ce976d00fbbdc01ea42cd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "287dd994aff3570f5bd32f7fb4fb670e8bb76b68774e60d60a536adc54a5c03c"
   end
 
   depends_on "php" => :test
