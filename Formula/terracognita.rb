@@ -7,13 +7,12 @@ class Terracognita < Formula
   head "https://github.com/cycloidio/terracognita.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "aea1bff9cc6e54a5a6f2328a0bf8c149110a7ceddc475ef256f70d271083221b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d86a19285ec82eb5c63d5f8a1506d5208495ea1824beb87cea1ed24b300fdb68"
-    sha256 cellar: :any_skip_relocation, monterey:       "fcfa8f7bd74c1d2214e0ee1e90d2d5f89b5421585cec86e35dce6b01d16ef014"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2b54d5285bc814e82ddd4a436fad0f0a136f643777a3954ef2ad2c03a5afce03"
-    sha256 cellar: :any_skip_relocation, catalina:       "cbb46e5d8cda59aa40d57db85f05c6e8b86cceb13ce5999887bad3f541029776"
-    sha256 cellar: :any_skip_relocation, mojave:         "0acf733131cc484c14a9276aa8b7c0611f3e7faec0a2d70ebef8149a53f214f8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6222d3967d26904d5894855669f39662322f6ead05759ada13776c906f7ed21e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "82dbd1e4c57f25572b75908f6a09b5a1b0e84e3c3e516a36973ce81533ff0016"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "86ef36d8df4723124d98d2830f28d5a482fb1b56eb9a46b31baf360067eb59b7"
+    sha256 cellar: :any_skip_relocation, monterey:       "c710168c4ea588941c8a4f5456129757de5cc9153e63b664295dc02c76af9738"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bfde0634cdba8079c0a0747d196c3f480e7e7e9998aafb6f3aa597312a233069"
+    sha256 cellar: :any_skip_relocation, catalina:       "c01846361000324615b5c6059b6c32c2128e14a3007a61b2abfe23e11d8d520a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2dd0bfc5c406ff821e00036abeee18fb22820a2380515ad8b67b3b284bbb0fff"
   end
 
   depends_on "go" => :build
