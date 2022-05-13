@@ -11,12 +11,12 @@ class Dafny < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6903dde12fdaa5349d1a0891fafb00084708ef1e5793ddb2aae3ee472e09a21b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "444f6e7a25204f59ec0056157bd6d90dc72645ef2127515c355e651a11ecfcb8"
-    sha256 cellar: :any_skip_relocation, monterey:       "167514a459027dd4cee61d3b0991b0e52c12a49f00491fbabe9fd1d9b2c22ff1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e7ed030a0d86aedc2f821ffb9c71619966c3e4f026f5fe3581d0a662265864b5"
-    sha256 cellar: :any_skip_relocation, catalina:       "06f01d6e64589b27aa57c32faada283773245388c73741aec2874f2c44c63acc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e3dcf85f9eb5e69e10b98015138c4c252802bef4e61ebd4329db80a334437219"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1ed130949c9b019c5e6d5c1cc1ec9303212745bd2c533edddcb7f015b7b7b810"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1ecfa51f66725940735dd2632823572468744f0d6fe071a08331f9dfdcc64a1b"
+    sha256 cellar: :any_skip_relocation, monterey:       "de0c838ff4f374cfcd497789987a384c91e0db2bfbfb77fb358fc99cfe3447ba"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5dadb7e6555e0cbc33277f2c4757eda910605d9e8a0c300941f589e50fa975a4"
+    sha256 cellar: :any_skip_relocation, catalina:       "939245de03f1a3855c2aa2ce007e866695622e0ffbc1d07b405ed1fbdf2bb42b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0e5ab30578934d8c4790aafa8446736e3a740bba4e874228602396725733d6df"
   end
 
   depends_on "gradle" => :build
