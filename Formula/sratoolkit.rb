@@ -19,10 +19,12 @@ class Sratoolkit < Formula
   end
 
   bottle do
-    sha256 cellar: :any, monterey:     "7288ce0e3eca352589f120ae8a24f60009bd5ee7ad7b5fcd3ef68960ee0cb144"
-    sha256 cellar: :any, big_sur:      "3ed43023475647f878bc0876f69ed16e46dee7eea3d6ebcbd5fa1e5e8849f4ce"
-    sha256 cellar: :any, catalina:     "70d22bb73b4f8745df4434b20adbd0cd02b88cd136223deb5409ed24e944516f"
-    sha256               x86_64_linux: "2f713ec90a39a271b1a809e25c12f6d4749eb2cd3a20072138f9c87f2be6f5d7"
+    sha256 cellar: :any,                 arm64_monterey: "975b3b4963eb43aa4c18bd4c95f9b7620f07938990a85cf305f7dcf48684a085"
+    sha256 cellar: :any,                 arm64_big_sur:  "42d4d3f558d41d974c07d7ec7c7d025f1b227c8f9cafedb94c2d030dfb9a12a5"
+    sha256 cellar: :any,                 monterey:       "a88822cbdf8bf72d39325a1ebd26bf0a30460a1dbc2d597ca67613a35a140116"
+    sha256 cellar: :any,                 big_sur:        "4a01bbc8741c610ec13d056e23797718b46f991b2a30bc329807c90aaabdb153"
+    sha256 cellar: :any,                 catalina:       "ecc6b82054036d2ff55ddab7959ea7a8ee6d6d4ff8624a7ca332cace87293129"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a0bc8bd79688b0ca4a7d2ca33f9b8a9e400198b0f6a863f3572c78032c0e6ce8"
   end
 
   head do
