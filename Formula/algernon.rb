@@ -1,9 +1,9 @@
 class Algernon < Formula
   desc "Pure Go web server with Lua, Markdown, HTTP/2 and template support"
   homepage "https://github.com/xyproto/algernon"
-  url "https://github.com/xyproto/algernon/archive/1.12.14.tar.gz"
-  sha256 "cab5b01923142e0326ea2a01797814bb2e8ea9f7c6c41a3ea0ae7df3b667e86e"
-  license "MIT"
+  url "https://github.com/xyproto/algernon/archive/refs/tags/v1.13.0.tar.gz"
+  sha256 "8327c1687990386eb5a48d15fd46fc69e17d400c29d726b34f6087c9c4887b9c"
+  license "BSD-3-Clause"
   version_scheme 1
   head "https://github.com/xyproto/algernon.git", branch: "main"
 
@@ -22,11 +22,10 @@ class Algernon < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "ccdca9ac607c215c4981e35dc13101c5acc0533edd1a5441bd3c874dea275b2a"
   end
 
-  # Go 1.18 can be used after the next release (1.12.15 or later).
-  depends_on "go@1.17" => :build
+  depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args, "-mod=vendor"
+    system "go", "build", *std_go_args(ldflags: "-s -w"), "-mod=vendor"
 
     bin.install "desktop/mdview"
   end
