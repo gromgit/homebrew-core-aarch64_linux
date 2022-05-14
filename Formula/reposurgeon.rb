@@ -12,6 +12,7 @@ class Reposurgeon < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "33547672b035880844ee44db3e7d760bf96c65a58b92767917d1a38ab243a0c3"
     sha256 cellar: :any_skip_relocation, big_sur:        "efc8c882015e8238d3a127e5a6121aa526f2a2e9bb38d9a4ae58854db43e1a14"
     sha256 cellar: :any_skip_relocation, catalina:       "08735096b9d1c6d211b75b6358ab398d936ea06158116d21aa6623bf84aef384"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a95070ef0b7852e546d65057e6c44d761e4737c5b8e7feff6917294182964e47"
   end
 
   depends_on "asciidoctor" => :build
