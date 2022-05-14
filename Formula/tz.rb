@@ -13,6 +13,7 @@ class Tz < Formula
     sha256 cellar: :any_skip_relocation, big_sur:        "2ce8046b150966b4e05f0f13255f17d6589650331578256f6f6f41ec25823f81"
     sha256 cellar: :any_skip_relocation, catalina:       "2ce8046b150966b4e05f0f13255f17d6589650331578256f6f6f41ec25823f81"
     sha256 cellar: :any_skip_relocation, mojave:         "2ce8046b150966b4e05f0f13255f17d6589650331578256f6f6f41ec25823f81"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ec421c74a0f6646bc9c0607eb43ce4a7b7330aabf3b8e8949740ae6674deac0f"
   end
 
   depends_on "go" => :build
