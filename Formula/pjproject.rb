@@ -12,12 +12,12 @@ class Pjproject < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ae7ac8144de063925b9ddcdfac52ec5cfa8286fc0e21255ef1cc11b36270b726"
-    sha256 cellar: :any,                 arm64_big_sur:  "ebe2c56bf87c397d2e2269acfbfc345b54f3a8b117515fad1827c20da620a227"
-    sha256 cellar: :any,                 monterey:       "dd65ff7722e647f5441aad3eba86a3493274f4850169b3332b7c2527ba38031d"
-    sha256 cellar: :any,                 big_sur:        "31319f83ddc57bc93650d5fc1890869b823ebc04f8584a9c280e23ab8d8e2caf"
-    sha256 cellar: :any,                 catalina:       "90b5e44910157070b4e1d9b494076c30cf16d9b1ef9790cfa080331348dfea89"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "51fbe4542de05e29af4379cc48b8702560032197b829033806c85a0c70e04928"
+    sha256 cellar: :any,                 arm64_monterey: "5c0d63278e407a290c4b2441618c39b62e65266e6734fd4f5e71eef4a70d79ea"
+    sha256 cellar: :any,                 arm64_big_sur:  "7c93064589245599a8f87517cc8801b04f5d539e6c15cf96b1c57646f3ceae82"
+    sha256 cellar: :any,                 monterey:       "606cbd22a69e6a20014b605e637f0649307d31e36a5c772719e4fcdf8d373731"
+    sha256 cellar: :any,                 big_sur:        "85799cc917b83ec7ad75e126cdd7d79d71359d6ea659c90c5126185294d1b7d1"
+    sha256 cellar: :any,                 catalina:       "14bad2b767d8e85b1aee73992f860c1a0fa2429569ec056a53cda1dd5dcd9682"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9cfbdfe912c21c4f901f7f06df6e93ca81f66de13e1e94e31413cb03c1411985"
   end
 
   depends_on macos: :high_sierra # Uses Security framework API enum cases introduced in 10.13.4
