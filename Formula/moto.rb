@@ -3,8 +3,8 @@ class Moto < Formula
 
   desc "Mock AWS services"
   homepage "http://getmoto.org/"
-  url "https://files.pythonhosted.org/packages/ce/2c/1e4bd95a305511e5645c44eca29664b01f537b71ad1f6e050d07479fbccb/moto-3.1.8.tar.gz"
-  sha256 "bde95005ec42a88448a98809397030f9e886387f469dcd2fcbc7f38d75858872"
+  url "https://files.pythonhosted.org/packages/5e/f0/108d7bc53045e51d3225dcba6aa0d8ae378a84c1aa3420ce1e238043121b/moto-3.1.9.tar.gz"
+  sha256 "ba683e70950b6579189bc12d74c1477aa036c090c6ad8b151a22f5896c005113"
   license "Apache-2.0"
 
   bottle do
@@ -36,13 +36,13 @@ class Moto < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/a5/31/030a9fccdddb9854950461071a4fcc4f8510e6617835c609b30be8bf05d8/boto3-1.22.9.tar.gz"
-    sha256 "441b619067cb205bfcd0e66fe085c16989ab65bd348823013e11bef991c00a5c"
+    url "https://files.pythonhosted.org/packages/9a/e0/f677cd783efcf025660cad862228b9d72de2f2f02f7485dfbaa54ac31551/boto3-1.23.0.tar.gz"
+    sha256 "07c4d128cb625f9459af8b6dff65ad9c3475e3b186f81c0e57af3d563d933cbd"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/8d/8e/c2b8365baa7406afd2d3d73866b05297073c14a04f3aa2b8975e12632a6b/botocore-1.25.9.tar.gz"
-    sha256 "a1d26b95aaa5b2e126df74b223d774fae7e6597bb55c363782178f5b87f0cad3"
+    url "https://files.pythonhosted.org/packages/d7/35/7566590ed0272ef057d2e34ddbe8290451842ddacf3c802b14751f60fb8d/botocore-1.26.0.tar.gz"
+    sha256 "4c7ae9198ffbe1a834fd3928d2e6a4c68250c0d9f82e70c32b652d3525bec9c3"
   end
 
   resource "certifi" do
@@ -56,8 +56,8 @@ class Moto < Formula
   end
 
   resource "cfn-lint" do
-    url "https://files.pythonhosted.org/packages/67/14/1dd121522084de8ae2358c590c6453ed384596b1283351d57bf5ec7268f7/cfn-lint-0.59.1.tar.gz"
-    sha256 "3d60a869f55c5e1197a57f324ace6a3f95c5f9ce4d45806957585893fb23a69d"
+    url "https://files.pythonhosted.org/packages/6c/22/3258e9c092c426b28cfa71081439950db51019c711073ef7da7cad4ed7b3/cfn-lint-0.60.0.tar.gz"
+    sha256 "a55f294ebfac082664ce47742061102a2fb74c9519d83cce6c26d72c119f0f89"
   end
 
   resource "charset-normalizer" do
@@ -141,8 +141,8 @@ class Moto < Formula
   end
 
   resource "jsonpickle" do
-    url "https://files.pythonhosted.org/packages/35/0e/fe3ce0869add0213a1b45eef746cafb79ca45255a60ec918630c159e3490/jsonpickle-2.1.0.tar.gz"
-    sha256 "84684cfc5338a534173c8dd69809e40f2865d0be1f8a2b7af8465e5b968dcfa9"
+    url "https://files.pythonhosted.org/packages/65/09/50bc3aabaeba15b319737560b41f3b6acddf6f10011b9869c796683886aa/jsonpickle-2.2.0.tar.gz"
+    sha256 "7b272918b0554182e53dc340ddd62d9b7f902fec7e7b05620c04f3ccef479a0e"
   end
 
   resource "jsonpointer" do
@@ -186,8 +186,8 @@ class Moto < Formula
   end
 
   resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/31/df/789bd0556e65cf931a5b87b603fcf02f79ff04d5379f3063588faaf9c1e4/pyparsing-3.0.8.tar.gz"
-    sha256 "7bf433498c016c4314268d95df76c81b842a4cb2b276fa3312cfb1e1d85f6954"
+    url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
+    sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
   end
 
   resource "pyrsistent" do
@@ -266,8 +266,8 @@ class Moto < Formula
   end
 
   resource "xmltodict" do
-    url "https://files.pythonhosted.org/packages/58/40/0d783e14112e064127063fbf5d1fe1351723e5dfe9d6daad346a305f6c49/xmltodict-0.12.0.tar.gz"
-    sha256 "50d8c638ed7ecb88d90561beedbf720c9b4e851a9fa6c47ebd64e99d166d8a21"
+    url "https://files.pythonhosted.org/packages/39/0d/40df5be1e684bbaecdb9d1e0e40d5d482465de6b00cbb92b84ee5d243c7f/xmltodict-0.13.0.tar.gz"
+    sha256 "341595a488e3e01a85a9d8911d8912fd922ede5fecc4dce437eb4b6c8d037e56"
   end
 
   def install
