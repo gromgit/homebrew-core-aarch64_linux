@@ -8,12 +8,12 @@ class SvtplayDl < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f82771a10a41eca66ed2d1a10822534e2fdcf664aa2118142ee6d2fcfc26f71d"
-    sha256 cellar: :any,                 arm64_big_sur:  "ca9fa9167e5da127cc2f88263cdedb73dc7f5b5bd0113a5b369d9af8eb05dfe5"
-    sha256 cellar: :any,                 monterey:       "5020f06dd6454bd3e59321b85f8f218b3c9880c37eeaad1617b7d84cde816586"
-    sha256 cellar: :any,                 big_sur:        "52814788958bc7381765ef5f886d28ec7c280c3ffa6da0c79c2b0863474127cf"
-    sha256 cellar: :any,                 catalina:       "5734f68b13bc507b33de066ed70e0d6ce117d122aa865d50d8b40424ecea4060"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ddb20aa1040533023e70c56aa371fec74fc4c4a79766bac2e1d5803992419ee1"
+    sha256 cellar: :any,                 arm64_monterey: "d9b3158dc3d709c8fba8b333da70b4810b456738772ae4fb289fea78ef921819"
+    sha256 cellar: :any,                 arm64_big_sur:  "0a71c81dac15abbf434efe0a7c239925e13ff177a519db2ddbeb6aca6eed9ecd"
+    sha256 cellar: :any,                 monterey:       "42431212ea7eb62b8aa863ecd6e7435e1df9ec11f6189ff1aa4d005471cfdd2e"
+    sha256 cellar: :any,                 big_sur:        "ca51c7d01d2de3b50a8eee569694ac0ad674e5179e5c4183e833cfc971e049e3"
+    sha256 cellar: :any,                 catalina:       "12f7cd91c361c92bc4f91d46788a9d032a2fcd707e4e70f3ce9257d0e71de0e5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f3a2ccf5eb45dab06c86eb4970449c7ca13c16931425db6552adf55f500d6dad"
   end
 
   depends_on "rust" => :build
