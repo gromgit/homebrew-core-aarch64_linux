@@ -8,12 +8,12 @@ class BashLanguageServer < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "195d388a08691cd1afc863809b469bf77a086f3bcbc755edaa992e17876fd882"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "195d388a08691cd1afc863809b469bf77a086f3bcbc755edaa992e17876fd882"
-    sha256 cellar: :any_skip_relocation, monterey:       "2cadb290740105a86dabb3f2b0762c0b77aff78a1c747bb4bb511ca8fb8c9c97"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2cadb290740105a86dabb3f2b0762c0b77aff78a1c747bb4bb511ca8fb8c9c97"
-    sha256 cellar: :any_skip_relocation, catalina:       "2cadb290740105a86dabb3f2b0762c0b77aff78a1c747bb4bb511ca8fb8c9c97"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "195d388a08691cd1afc863809b469bf77a086f3bcbc755edaa992e17876fd882"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "dfae8ee6fe44de4d1320b4eace28044287b4b712081786152550564701c0bae8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dfae8ee6fe44de4d1320b4eace28044287b4b712081786152550564701c0bae8"
+    sha256 cellar: :any_skip_relocation, monterey:       "a311e22809e11f956962a5b627023fc25b423f1ae1b6ac77a39418b578e7438a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a311e22809e11f956962a5b627023fc25b423f1ae1b6ac77a39418b578e7438a"
+    sha256 cellar: :any_skip_relocation, catalina:       "a311e22809e11f956962a5b627023fc25b423f1ae1b6ac77a39418b578e7438a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dfae8ee6fe44de4d1320b4eace28044287b4b712081786152550564701c0bae8"
   end
 
   depends_on "node"
