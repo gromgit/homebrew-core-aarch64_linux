@@ -26,6 +26,7 @@ class Libgccjit < Formula
     sha256 monterey:       "9f0d50538e40657c82c891846d77c3193e4b39bcf4504429b11738fe0155d075"
     sha256 big_sur:        "4cce8e0cf231b7d52cb17cdd45af65d340bac1a8b6b2d76c15bab4544f1c778f"
     sha256 catalina:       "da0b032249866a6a74d6f0a7dd44cc2465261fd3becf847fcaafdf4a2750509c"
+    sha256 x86_64_linux:   "ccd88ffd12b336f866a4ea6b85bac542d78d6dd887ccc28847b81a9fef690e0f"
   end
 
   # The bottles are built on systems with the CLT installed, and do not work
