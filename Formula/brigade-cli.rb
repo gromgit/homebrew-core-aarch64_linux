@@ -8,12 +8,12 @@ class BrigadeCli < Formula
   head "https://github.com/brigadecore/brigade.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3d1422953622717b44b91c67895c603fbb441df317529b9092ef4265b495e373"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4fe0721183b16c2a77f22df01ebc08b34e51ed8f9247da453803b3789b7d530b"
-    sha256 cellar: :any_skip_relocation, monterey:       "1f88d6c5369c1309a27a5c767d8a875dfe44c7d5bf066569efb5adbc151779fa"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1bc20d15b1463693dbd245c1a79d6390b3ba941d8f50660a4fba6311fcfdc5aa"
-    sha256 cellar: :any_skip_relocation, catalina:       "594117c8ed56dd5c62837f97d75d09a5ad6604275edaaeebd5cd3028b348420e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7d3d3e936a6acba1ca751714470016f2f0299964aa4ff8266728ea5f06ee265f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e32b00704bef443f6998dd60330c9e13c64443f358b43d8bc7812cc34c892fd3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5aa661ac2ca0c024cc154a8acdc20107d63d171b106a3a9be07f08b8260abe0a"
+    sha256 cellar: :any_skip_relocation, monterey:       "0ef3da90f5c89d4c3a58925ced20e50cdd55c9eef5acd565a04fa1a1045daff6"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f8453e52557c129b920ee067378c8736c5b6bb543d06bd00eaf6aaacfda64a4e"
+    sha256 cellar: :any_skip_relocation, catalina:       "54b0a36772b3469d1bf93e96308ec201877d54be78e44ef2c847c69f7a07c933"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "59385f3b5cb3d2993e5d9209b2289dd8cc841332218ca42f46ef86ae90a5396f"
   end
 
   depends_on "go" => :build
