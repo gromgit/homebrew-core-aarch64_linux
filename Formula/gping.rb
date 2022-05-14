@@ -21,6 +21,7 @@ class Gping < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "b115a4c7dc3153a1b7043a77ecc27394ed22bc3326bac58c50354c22c4de318d"
     sha256 cellar: :any_skip_relocation, big_sur:        "98f9ec00923df1b8594bb1af2208ffa15e6752d65eeb407304a4abe797a525c5"
     sha256 cellar: :any_skip_relocation, catalina:       "fd0a09ed90e7574dc8ae5034fbd9d62e8a2af34566ec22538ca6711a86561d59"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5ec003d4f3a46a7e8764eb798fa593b2d8588b497c87e271fd14c8c1f5892aa8"
   end
 
   depends_on "rust" => :build
