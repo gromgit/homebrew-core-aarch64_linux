@@ -13,6 +13,7 @@ class Ola < Formula
     sha256 monterey:       "97168b89b1b78943d492f98e236d56c250b29fce5e19fce3299508420933d055"
     sha256 big_sur:        "d2733da8c041854c4417ac2f5d7ad28906f597ecfe9276cfad3f7cfe7b8e1a2b"
     sha256 catalina:       "4d8a96f00dbef138b8c679cbaa0a54d84cb5c97c24d108ca46b0639b19202b1e"
+    sha256 x86_64_linux:   "aa15c84284c59702e6dc8d1b2b93ab06a6f4f3af12d94fb3ec3b8fd8185add62"
   end
 
   depends_on "autoconf" => :build
