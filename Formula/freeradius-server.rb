@@ -21,13 +21,12 @@ class FreeradiusServer < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "2c4a942fb9f20633bf947ec0b8551731677fa0bdc54b7054be9c367bec8c1fcd"
-    sha256 arm64_big_sur:  "f4ed69d19363b792ffba75c41b703bd6f068a2d65d76a3046ba6947832b6a6b3"
-    sha256 monterey:       "afe19281cfa3f33f2836cea24c1efd2d98d3e185f9cab5faabd45addc34fdf20"
-    sha256 big_sur:        "a28e06a16084beb496edcb341dcf5aaf7f6da6ef995bd7383545d59aac76f393"
-    sha256 catalina:       "6fe8001066708fc01ba0c71a7a0246aee4af4910a68f155d82fd411a7a826c1b"
-    sha256 mojave:         "660eb25588c2d0c68aae1684bfc9f9174c6c6d4d721d196a6232c981718e9ebf"
-    sha256 x86_64_linux:   "d71cb20afdd11e9793b6299e241474f8f4d07174625809f07f228ec06cfeb950"
+    sha256 arm64_monterey: "2e379d98dca5701d1378fde394f170eb7e8e9ce8b0e03354a2f0f8ebbf85c6a7"
+    sha256 arm64_big_sur:  "995d7ba020eb495a11ff6017580375564425f2b057f676b8be207d3be5e7559e"
+    sha256 monterey:       "9234f76e27239a02cddd360c6952189c78ce9b5af621022da09ec2cd213eaaa0"
+    sha256 big_sur:        "5c2c7208fbedddbc04b2af8eec2ed5e94bcd7faeb6e3bfde3b6816809c7e9993"
+    sha256 catalina:       "be1b8a1d78e7cc9bccb2a6439408297a05a8af2adfef352cc84428c95e3715d6"
+    sha256 x86_64_linux:   "768b37acaefc41960a324a7bf1f1ca41459c44c90a45e4bbd9a05f6bfdf571ca"
   end
 
   depends_on "openssl@1.1"
