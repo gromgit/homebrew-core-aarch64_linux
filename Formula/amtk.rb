@@ -7,14 +7,12 @@ class Amtk < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_monterey: "63effad091e0f6f472dc0aeec62cf1623eff536542ecb91a08ea018b796a538f"
-    sha256 arm64_big_sur:  "d540852fa3ee1d9af33c5c1effe96547a98c7e03d20064b508662b14c6da202f"
-    sha256 monterey:       "09d224f622a97da7897d6c2bd12eeb301b99bd18f53da33ef2b816673d5095ee"
-    sha256 big_sur:        "6ab887f121458fad7c480b897bb296d48daf01e3379b96098ce18ca2ae9da7b7"
-    sha256 catalina:       "89e24e19e0614b13d387b9c0d2ccf89ac15f485edf49c7c39bcaa4f80deba3c1"
-    sha256 mojave:         "004425110c03c91144cfd53df0f6141b05e38d86b64e96303cd6760db9e66a42"
-    sha256 high_sierra:    "67ad617a78c6922647c2af49225a5f4b8fd7eff3635d0e7f8b4320687b896b60"
-    sha256 x86_64_linux:   "816d3b14c924a5024ba23409a3af828a578325c0fe3eaeff9e4f81b553142ca9"
+    sha256 arm64_monterey: "725c9ebf6be9c39257c55b8318b527c0a299dd3479f5a0185907c226193bfbb2"
+    sha256 arm64_big_sur:  "a2b4a925ae3aee8bf47903db2dc12049afea5244dfd8b26e4b73f36a3ba0c1f6"
+    sha256 monterey:       "54e4004683ad940fedfeb3768b8fb36cabe0fa42fbfbda2bf58c329449ac9400"
+    sha256 big_sur:        "5a202298c634cf6b8846774f2ff1f428a8ddf75e68419a1dbb9a58b13c5efc75"
+    sha256 catalina:       "db85bd106fe101311e8e2b1320ba5cdcba1fd96fa9e6f435943ccbabdbcc8dba"
+    sha256 x86_64_linux:   "2d09b5a1928f773a22c116e4aae53a51679d5d1fbde8e5fb831f97f27c61fdd7"
   end
 
   depends_on "gobject-introspection" => :build
