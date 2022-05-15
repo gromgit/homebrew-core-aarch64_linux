@@ -6,11 +6,11 @@ class PysideAT2 < Formula
   license all_of: ["GFDL-1.3-only", "GPL-2.0-only", "GPL-3.0-only", "LGPL-3.0-only"]
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "b4b284bad87b89396d35732b9f509b653c2f63c1dc3d7ca63174d2c2dc377d30"
-    sha256 cellar: :any, arm64_big_sur:  "e432cfa5235290c62d9880bead26e893d1b9a3720a986b5e75146a6f4f06811e"
-    sha256 cellar: :any, monterey:       "0fd3d7a6d1a73189e3c6fd1a4fd1d23f0dc645ab4bf9dbc390a6c8f4b2c96c3b"
-    sha256 cellar: :any, big_sur:        "d8ac145f45d791c6967ed76ce24bbfd9b111eabeb6459824aca396d50d08c858"
-    sha256 cellar: :any, catalina:       "ac9f88f0bf1ed4417551c57342cfdeb328c28b417cb6ec3dc4dd78451bfaaf02"
+    sha256 cellar: :any, arm64_monterey: "728fecfbc508bbfe4c1d43230a635a872afb1a72fdfea95b7d1f6a6540736e8a"
+    sha256 cellar: :any, arm64_big_sur:  "82b52e6502919f7ed205624e1b6dbd899749f7c4901b71b00325fdacbac8b998"
+    sha256 cellar: :any, monterey:       "8bf6dba62130995c9471f84a27d0c67a587fec68d8de41654acd7d5b54a277c7"
+    sha256 cellar: :any, big_sur:        "f84594ec595143fd928c8b262256b97095ef6d0d820d0c45ae689b5c76b8661c"
+    sha256 cellar: :any, catalina:       "c1ccaa9b85e0f969a33ba77ca593009e0ca584da1b796ae87d948b5ca2109fd1"
   end
 
   keg_only :versioned_formula
