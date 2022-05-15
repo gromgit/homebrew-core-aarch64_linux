@@ -8,12 +8,12 @@ class Glslviewer < Formula
   head "https://github.com/patriciogonzalezvivo/glslViewer.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f1f56f94f020e9cbd7687a4050b593c994f88c7171cf9b8844269f274a63b154"
-    sha256 cellar: :any,                 arm64_big_sur:  "1cd53a4a542feeb3339d14b6864385431dafde36b4c0c40168932fe1b6ccaddd"
-    sha256 cellar: :any,                 monterey:       "60e3894913d8fe9ca335bdce56bcf3500c50980524751dbe091c48a7208cc7c9"
-    sha256 cellar: :any,                 big_sur:        "83847db14457a67a4018444b572da153f64faee492cad55bf25fcdd2b7258c30"
-    sha256 cellar: :any,                 catalina:       "4193fa09eca8907ea14c05d04a843396c0610cd85af7f483f21242884cc5c6d0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e9871545c27387e50f6f0ca0a36791b1e8c27e47857ad7c1bf457547c15a2b2c"
+    sha256 cellar: :any,                 arm64_monterey: "a6e97c198e04daf58e857bd4840806edada831fcf5e28e9b42920fd9828ffba5"
+    sha256 cellar: :any,                 arm64_big_sur:  "7f1aebc63995fc137a7fefae32245755b2e9e7dc8ae8772cfa6363c5d21193ea"
+    sha256 cellar: :any,                 monterey:       "6cdfff97d90b8513445775f27348556fe268d73b80139c05611c88fdc1282b0f"
+    sha256 cellar: :any,                 big_sur:        "da23a48d4731aa32d630ecc4331288fadf2824dc38d3f2aab9d004c586d99998"
+    sha256 cellar: :any,                 catalina:       "7ddaaec1cc7d85e3c2eec04397c6e8bdd5f4ba9667ff43b6757ce1a7bd03f783"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bc0bf76939705a12b032e02ae3a262d29addbcde725d65b5ef94e8b076d82296"
   end
 
   depends_on "cmake" => :build
