@@ -9,7 +9,7 @@ class GitWhenMerged < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "67a1db2415c0aa7026ad1958a6966b909575ded3f7c5c63297aff72ca8eb76b0"
+    sha256 cellar: :any_skip_relocation, all: "e17a93477d9712acb9acb0c77f18c646d3a25faa19e7f9875d1a31cb44560003"
   end
 
   depends_on "python@3.10"
