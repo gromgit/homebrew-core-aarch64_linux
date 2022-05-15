@@ -66,6 +66,10 @@ class GlibcAT213 < Formula
   sha256 "bd90d6119bcc2898befd6e1bbb2cb1ed3bb1c2997d5eaa6fdbca4ee16191a906"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
 
+  bottle do
+    sha256 x86_64_linux: "57a6ca64716049ea84a5a85f520b4df984a1c24cdbc5faae22243555dd901f31"
+  end
+
   keg_only :versioned_formula
 
   depends_on GawkRequirement => :build
