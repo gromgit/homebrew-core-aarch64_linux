@@ -8,11 +8,12 @@ class Manticoresearch < Formula
   head "https://github.com/manticoresoftware/manticoresearch.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "e285345ff7b6a8a99c0cbac69232301a6ad97cd09abae93bfffce5d3885f6ac2"
-    sha256 big_sur:       "11dfe819517e1b8c379d761ed9391192bb585564588a0ee23f85880a4b7e2f8c"
-    sha256 catalina:      "77c342a7a0d4a7c786b2c777b92522ab8b9eae7806074b0f81112cd7890c4d91"
-    sha256 mojave:        "f20768ffb1961f40fe39b3bebd20491f31cd2d91f9c43c4b5897458a50354a06"
+    sha256 arm64_monterey: "f55f960076fbee621f9292de41f671db7aab5587eec035e9ee9060268b3f306c"
+    sha256 arm64_big_sur:  "37f16dfb2b31f7dacdc1818a4417f765637c1de051ade808b1123bfba2d125d3"
+    sha256 monterey:       "509bc6f6379aad68ad2df404becf0183653b87400d38e3fb897afb6088209939"
+    sha256 big_sur:        "717f6d93410c969f7d1c717af610cfc8815548b6835208b5c690639c48a384f0"
+    sha256 catalina:       "0595b59292ca6b2e1f947f053720ce4c478111736df58d76048ad43b7bf4cfac"
+    sha256 x86_64_linux:   "704acba2d67a0e365ac8f458969be7ba54fed2390797aa6b93fcff1a74bdad96"
   end
 
   depends_on "boost" => :build
