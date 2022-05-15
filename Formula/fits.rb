@@ -6,7 +6,7 @@ class Fits < Formula
   license "LGPL-2.1-only"
 
   bottle do
-    sha256 cellar: :any, all: "0da280076217b759472c440df96df7c866f0226af4a53f7845c19fc565e09270"
+    sha256 cellar: :any, all: "cd4ac00bed12a2221f0f5b43e13c6605bb53c8cbcb4f518beec8eebb8bef820f"
   end
 
   # Installs pre-built x86_64 binaries
