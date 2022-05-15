@@ -179,6 +179,6 @@ class Emscripten < Formula
     EOS
 
     system bin/"emcc", "test.c", "-o", "test.js", "-s", "NO_EXIT_RUNTIME=0"
-    assert_equal "Hello World!", shell_output("node test.js").chomp
+    assert_equal "Hello World!", shell_output("node --no-experimental-fetch test.js").chomp
   end
 end
