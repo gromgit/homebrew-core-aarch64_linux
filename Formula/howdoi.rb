@@ -9,12 +9,12 @@ class Howdoi < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "078ee2c9f641ec2ef41f9a8b0ef3949a759203fa1d866cb1d6500d0767918b2c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6682ff79a4fa809d967c5b6d3642e7dbc8543f93da392b0fd2d5206852a65139"
-    sha256 cellar: :any_skip_relocation, monterey:       "f403352835cdeb8a26840c916ea7b0a25934e48e9ffb5c656ed9b214f4348515"
-    sha256 cellar: :any_skip_relocation, big_sur:        "635496016269443e7fad4c3dd72546d5e946c8a051629c5b23d0e377bde49d54"
-    sha256 cellar: :any_skip_relocation, catalina:       "7a8e8e5e3127654124c16b3a655dfd15b9bc47ce79a3ae3074b9dc1dd4c5b220"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2d7b6fec938599d63f1fca852ae1698a0a68592ee68decaeca998889155b9f7d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "19a47a51d386b496796fba835eca0fe85c689468c11474ab1162774f9cfb2d0e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0ecab531edd7def3bdc1b459fb7bb9919eae2ea4a8c0751fddbb0ff5c8d1e621"
+    sha256 cellar: :any_skip_relocation, monterey:       "dba9f5308d6ae10e4cac000089b77c16e5bb9e46e414e8e5476b8907bd3b0644"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d3446fdaa4a08589801dc4d09dd21cd0450308c0134414bcf9327fd87d4f2774"
+    sha256 cellar: :any_skip_relocation, catalina:       "6fecb5c11bd160fee12986570cb02629ce632491ea2694024dff5b09363499d2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "172abb69881f699f4f1119d259a10be08231a242c38224a1479d0d62031f7583"
   end
 
   depends_on "python@3.10"
