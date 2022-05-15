@@ -9,13 +9,12 @@ class Pyvim < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a327fd8da8ad04448168ade36f66005a34f764f9ffc29219a6c23e0a48ad0592"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b321a033c9da601baa469130c8bfd363816e9694a2d8caa2d601339e662b7d72"
-    sha256 cellar: :any_skip_relocation, monterey:       "99eaa49dc72e36ca0d310ddee27e7a689c94dc66810550999a3f4d1f52116ecc"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0dab59c0c17cc65d81a0ce2e83102d42e188169f6a2ae91c2c08b8ec2ffb2038"
-    sha256 cellar: :any_skip_relocation, catalina:       "fb348c98666df443ca4290cb74fd0c3d9758389bca62ac72ac8595fc3a0025f9"
-    sha256 cellar: :any_skip_relocation, mojave:         "7f3586932432c8244a8d48adc731f122380035b233eb0c1c84d6c6ffb2751e88"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4dad3b11d399b088624aff2f5c93e58b1644c4f1a0bf91cd98859521bc6fcb62"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1ec5bbc7c8ece8f42e86d372c358c7da0f607def042693ae3b2deabc436d6ee5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1c13868125d243663050ebf717860647775062689d6f195fa597d17ce277e684"
+    sha256 cellar: :any_skip_relocation, monterey:       "1752c6b13d390b18e6de68a6bffa49d82f1d53cae54f0bb612f63005699789be"
+    sha256 cellar: :any_skip_relocation, big_sur:        "abc50923824cc16313f5c40da96691ebb27f05762670b405f97598af348fab39"
+    sha256 cellar: :any_skip_relocation, catalina:       "1849d5477659caa24855dba5875af2906ed277d7e263ee7643a0f781a182671a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dea1414be9f183553451bc2c430be4acb945effccd8c5d858363abe7f3b697a3"
   end
 
   depends_on "python@3.10"
