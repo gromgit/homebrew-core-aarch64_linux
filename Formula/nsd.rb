@@ -14,12 +14,12 @@ class Nsd < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "d1d2eb0daa97ef096a12297bceb52e3823b5fa11f81dcdf1a4dec55d5e839714"
-    sha256 arm64_big_sur:  "a2cf7fe155d08a4856b69f43d737a97cf8b79370f251fd2e309b58d23f905e87"
-    sha256 monterey:       "9eb3c1b6572c0e1d243867047616e3d1572be6b1c907110dba746966205d8fd9"
-    sha256 big_sur:        "39ae92ff6e92d44056fc11abef978d8b50d148c00503c0c455d446b96486c6cf"
-    sha256 catalina:       "db8ece70220899f52d65a2d05537e4ef1a2d1b9d69960ce9d1d9a82c40c3276e"
-    sha256 x86_64_linux:   "182d10079693debcb8702d21a4de0f54a2500e65d66dd8fd4d11d46ee5365e36"
+    sha256 arm64_monterey: "96e97280e0c7c33545246d86f0cbfd4a2973bb9674e99089941bada3a4dec66a"
+    sha256 arm64_big_sur:  "bc2500d60d43987b25c38fa1502b23b7c760d39bda6be3e1a6792307fd9ef032"
+    sha256 monterey:       "9244cd157082344665557cf6f722dae50d45425d7d159ec04a07421fe8af695e"
+    sha256 big_sur:        "52eedf5b94fbd17ddd51d9540c634c5e6466da4f0b270227cadbbeadd4bf3ba5"
+    sha256 catalina:       "f1a47cccfead8ee591b5071db62dab8d3751655194b0ee50cc8fd9918e5e3ab5"
+    sha256 x86_64_linux:   "ab3ab023b66e7055515e473f98706932439068b2516180013f321296fa6c705b"
   end
 
   depends_on "libevent"
