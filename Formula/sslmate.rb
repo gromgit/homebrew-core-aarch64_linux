@@ -21,6 +21,7 @@ class Sslmate < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "0b9be005d0b52d40b4a8459bf899c891b8a221b177d070fbed649ef42b10a018"
     sha256 cellar: :any_skip_relocation, big_sur:        "0b9be005d0b52d40b4a8459bf899c891b8a221b177d070fbed649ef42b10a018"
     sha256 cellar: :any_skip_relocation, catalina:       "0b9be005d0b52d40b4a8459bf899c891b8a221b177d070fbed649ef42b10a018"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f8e10a44ff520b1ca52330a788ab15a99fa2ad40805946369dd18addf299df54"
   end
 
   depends_on "python@3.10"
