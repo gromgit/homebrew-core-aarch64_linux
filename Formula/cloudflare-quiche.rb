@@ -8,12 +8,12 @@ class CloudflareQuiche < Formula
   head "https://github.com/cloudflare/quiche.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f865fd2e208c54287fc482a6899446249904a61e693cf69eef4bc125db9105e0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7698aa5d4946d44d8fa201ff14b6924e75b3bc0d0b700ed78dcf15072beff0b6"
-    sha256 cellar: :any_skip_relocation, monterey:       "f42c269957f2fa61ad5380fb6c9ac21b276ea7e5c2e2c61ddd704f5fa266e7f4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3907c1f8a34993b688770f2fc978e27c74d10ef379d595e803c3ba90c3d5039b"
-    sha256 cellar: :any_skip_relocation, catalina:       "2fd0999f639c5b5b7f4b3381908a78c4a19a4d4be8d07a2f312a3e20eadff180"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "947b757616db2385ccc33f575e1cac39192483ba23fcdab8a6b4aac559811ff2"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "89f43bc6e0295a5f0c764ac365324b58ed4235100bcb47b4da83abdbc35e1216"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "eb168d2c355be50dd64e3128fb5ef4471a204a9b16ea5e978addf5299e9af31e"
+    sha256 cellar: :any_skip_relocation, monterey:       "a3d162b960f3e5c891ca45810bd81cfccb75a860393c15fc0119fe45290599f9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4e63332f10abd8c5f60f66df885756a9d4fbc26ae3c569071b9e281ab3744d2e"
+    sha256 cellar: :any_skip_relocation, catalina:       "3f0dc605987441facd63356c316179ff7df3cefe7838d3e45efcd2c198412972"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d51deaf7c07263f15788cd16bbfa3334704d1cf61657961f392be6ddf2b51605"
   end
 
   depends_on "cmake" => :build
