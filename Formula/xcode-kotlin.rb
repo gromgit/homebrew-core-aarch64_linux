@@ -7,6 +7,13 @@ class XcodeKotlin < Formula
   license "Apache-2.0"
   head "https://github.com/touchlab/xcode-kotlin.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e30d401858e6d92ff0812cd7306ee1f1febc528ca4facec6ef1fa6d71c0ad616"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "154c6668f7672acecf84c615558ef0a5f0ac3f8f7b351dce0dcb54f01fbb848f"
+    sha256 cellar: :any_skip_relocation, monterey:       "59ffda73313c0df249b5eacdd04e3ef5f20c45d058a8bfea0b27ec641d1f071e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "24d77505f997ff6ddbe52c1cb01f4c30b559663e86d9bbc40606be9e2ae63d03"
+  end
+
   depends_on "gradle" => :build
   depends_on xcode: ["12.5", :build]
   depends_on :macos
