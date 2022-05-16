@@ -14,6 +14,7 @@ class Iredis < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "b44f5e27dee871ca46efd273fd9246c46db0bc3d8fc5b7cc6d0ffacf26e09ecb"
     sha256 cellar: :any_skip_relocation, big_sur:        "6141ed321bbe104ace573a9c7fb698020da17bb71aec57ad9bb1687f070f4e1e"
     sha256 cellar: :any_skip_relocation, catalina:       "8581b5e5553e01adde363fe81f0d0021e3c1ffd6c0b8175a1bd96bb4d395a826"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "98997277d9d7f8d8d40c9030bdad1d77660e14900161828c72fa5f11c12ac5a0"
   end
 
   depends_on "poetry" => :build
