@@ -4,10 +4,9 @@ class ArcadeLearningEnvironment < Formula
   desc "Platform for AI research"
   homepage "https://github.com/mgbellemare/Arcade-Learning-Environment"
   url "https://github.com/mgbellemare/Arcade-Learning-Environment.git",
-      tag:      "v0.7.4",
-      revision: "069f8bd860b9da816cea58c5ade791025a51c105"
+      tag:      "v0.7.5",
+      revision: "db3728264f382402120913d76c4fa0dc320ef59f"
   license "GPL-2.0-only"
-  revision 1
   head "https://github.com/mgbellemare/Arcade-Learning-Environment.git", branch: "master"
 
   bottle do
@@ -33,39 +32,37 @@ class ArcadeLearningEnvironment < Formula
 
   fails_with gcc: "5"
 
-  resource "homebrew-test-tetris.bin" do
-    url "https://raw.githubusercontent.com/mgbellemare/Arcade-Learning-Environment/v0.7.0/tests/resources/tetris.bin"
-    sha256 "36d5b5d3222f007ca8e3691cfc17f639801453b98438b1282dfd695ae44752f6"
+  # Issue building with older setuptools currently included with Python 3.10.4.
+  # TODO: remove after next python update
+  resource "setuptools" do
+    url "https://files.pythonhosted.org/packages/4a/25/ec29a23ef38b9456f9965c57a9e1221e6c246d87abbf2a31158799bca201/setuptools-62.3.2.tar.gz"
+    sha256 "a43bdedf853c670e5fed28e5623403bad2f73cf02f9a2774e91def6bda8265a7"
   end
 
   resource "importlib-resources" do
-    url "https://files.pythonhosted.org/packages/b5/d8/51ace1c1ea6609c01c7f46ca2978e11821aa0efaaa7516002ef6df000731/importlib_resources-5.4.0.tar.gz"
-    sha256 "d756e2f85dd4de2ba89be0b21dba2a3bbec2e871a42a3a16719258a11f87506b"
+    url "https://files.pythonhosted.org/packages/07/3c/4e27ef7d4cea5203ed4b52b7fe96ddd08559d9f147a2a4307e7d6d98c035/importlib_resources-5.7.1.tar.gz"
+    sha256 "b6062987dfc51f0fcb809187cffbd60f35df7acb4589091f154214af6d0d49d3"
   end
 
   def install
-    args = %W[
-      -DCMAKE_INSTALL_NAME_DIR=#{opt_lib}
-      -DCMAKE_BUILD_WITH_INSTALL_NAME_DIR=ON
-      -DSDL_SUPPORT=ON
-      -DSDL_DYNLOAD=ON
-    ]
-
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args, *args
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args,
+                    "-DCMAKE_INSTALL_NAME_DIR=#{opt_lib}",
+                    "-DCMAKE_BUILD_WITH_INSTALL_NAME_DIR=ON",
+                    "-DSDL_SUPPORT=ON",
+                    "-DSDL_DYNLOAD=ON"
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
+    pkgshare.install "tests/resources/tetris.bin"
 
     venv = virtualenv_create(libexec, "python3")
-    venv.pip_install resources.reject { |r| r.name == "homebrew-test-tetris.bin" }
+    venv.pip_install resources
 
     # error: no member named 'signbit' in the global namespace
-    python_args = Language::Python.setup_install_args(libexec)
-    python_cmake_options = "--cmake-options=-DCMAKE_OSX_SYSROOT=#{MacOS.sdk_path}"
-    python_args.insert((python_args.index "install"), python_cmake_options) if OS.mac?
+    inreplace "setup.py", "cmake_args = [", "\\0\"-DCMAKE_OSX_SYSROOT=#{MacOS.sdk_path}\"," if OS.mac?
 
-    # `venv.pip_install_and_link buildpath` alternative to allow passing in arguments
+    # `venv.pip_install_and_link buildpath` fails to install scripts, so manually run setup.py instead
     bin_before = Dir[libexec/"bin/*"].to_set
-    system libexec/"bin/python3", *python_args
+    system libexec/"bin/python3", *Language::Python.setup_install_args(libexec)
     bin.install_symlink (Dir[libexec/"bin/*"].to_set - bin_before).to_a
 
     site_packages = Language::Python.site_packages("python3")
@@ -79,7 +76,7 @@ class ArcadeLearningEnvironment < Formula
     output = shell_output("#{bin}/ale-import-roms .").lines.last.chomp
     assert_equal "Imported 0 / 0 ROMs", output
 
-    testpath.install resource("homebrew-test-tetris.bin")
+    cp pkgshare/"tetris.bin", testpath
     output = shell_output("#{bin}/ale-import-roms --dry-run .").lines.first.chomp
     assert_match(/\[SUPPORTED\].*tetris\.bin/, output)
 
