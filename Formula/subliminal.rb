@@ -10,12 +10,12 @@ class Subliminal < Formula
   head "https://github.com/Diaoul/subliminal.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9d87102a64a1865c41b5bffeae63eea3a0a256a2fb33cec0f891752bc5b2425a"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a08b741a403f492e203a65d9bf4dfca26062247db174f0e031466b80d7911415"
-    sha256 cellar: :any_skip_relocation, catalina:      "ae842ceb5c2b8488ceca4cf40efb8bf6a384945827f82359162b22f8c3ff8cc9"
-    sha256 cellar: :any_skip_relocation, mojave:        "a8a0a8866b687758fe4382bf7a999a64918d2b84805ecc51bdd6d2b934e31bdc"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "f311103549dacb446020249bc66b64599faca35421183dc180a9cf73722e1faa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1840458efc8a0b046a0b45ed8a223c02a94bb47848b292e89d9013e28ee093dd"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "896b416ad54ab5640db53f83dc021165a4c1b15f30cd97d778f1e795c0bf3a34"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "408ab52e46c264b167ee376d1a65085a9105acdf6e37d4d9860d32e880588b5c"
+    sha256 cellar: :any_skip_relocation, monterey:       "fea6f947320910b06754e0bf23968aaa3352947121469a8e51ba47635502ef3d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5fd715aca420c248489a132b5b6557ca8abccdcfa142d26ffdcbf49f38406284"
+    sha256 cellar: :any_skip_relocation, catalina:       "4ba247d8897d00e269f1da168be4521f5e9a3710f5674f265676fe136963f831"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "833521658241fa71e6ee3b16c80d511fe8d0dacd079c74d39978426f4e56501a"
   end
 
   # https://github.com/Diaoul/subliminal/issues/1046
