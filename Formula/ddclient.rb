@@ -19,6 +19,7 @@ class Ddclient < Formula
     sha256 cellar: :any_skip_relocation, catalina:       "d4e32d3e5c88ea3d8b77caccd50e1a291e44934542279289f6e8e13203496214"
     sha256 cellar: :any_skip_relocation, mojave:         "05482e7ee83ff87306f35898b16748d0c3823d15c8879a4a4f8e6da341d299a5"
     sha256 cellar: :any_skip_relocation, high_sierra:    "45b2b534058896de6f98ab1da92d8a1f4ab71fc952b97129e94ae074cfa80b91"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5f3f22ad8e138b394ffa78e637637a8b9dc6c9c20a4649b4030fb45705f19171"
   end
 
   uses_from_macos "perl"
