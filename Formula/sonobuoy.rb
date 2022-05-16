@@ -6,12 +6,12 @@ class Sonobuoy < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1f0fc8cff890d243ffe96dafb9c8350ac05a9c80c713cedd891c655702593e85"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5919e308fd5aeb067be7b2fb0a46771ed33fd56ce6db0ac700e60a1c66205e63"
-    sha256 cellar: :any_skip_relocation, monterey:       "56bcfdbb2f28bff911ffb0fb89c276f95dac03a4633b2d2772ffbbafee01ecde"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a75a0ad308962bdcaaaa2251bdd5895ee5874db108e6a0e735610f4460e298d6"
-    sha256 cellar: :any_skip_relocation, catalina:       "d5904c19f74c31c97ec52f7f6c9904c8a3494ff0d02f044ad8f9557e81e7961b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b36326db5124c524d5eb31b7587c17d94e4a854ae1868ccb3f3daa0ffebe2142"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d05c5aaaf1aab1720dff1cfa9c2898bf70b20c267be998fac50b49545016ac9c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1b116b03cffb9b778ef3811a1fcb36e86e95cb93a0b568ac4f86d6105c0fa9f2"
+    sha256 cellar: :any_skip_relocation, monterey:       "ede35cf1fc40860619216efbac2257c27dea9d97c12ae44ecfec81df72043bdd"
+    sha256 cellar: :any_skip_relocation, big_sur:        "dda9134277eac93cd6f9835900257d96bbff8ce5b79d1c93298b2dab51965eb0"
+    sha256 cellar: :any_skip_relocation, catalina:       "f84893fffc0adeaa9c56e510eed70e850fbcc7ab0bb39d8408c4be409d1db010"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d779af929db705821f0a3119d1d38be015526f0d776467277525013fd9e4ea31"
   end
 
   # Segfaults on Go 1.18 - try test it again when updating this formula.
