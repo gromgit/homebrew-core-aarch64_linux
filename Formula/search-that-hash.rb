@@ -15,6 +15,7 @@ class SearchThatHash < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "ff167db1e8612206b5e5e804f9b294995da3c7763082b5f363866c20828dde44"
     sha256 cellar: :any_skip_relocation, big_sur:        "2a9d81d0500a9a18db128b4c1f152ebadd12a93aa9807f10ecdceb81fd802ff8"
     sha256 cellar: :any_skip_relocation, catalina:       "3e07893fddb549c451fe537ed2dbed00a3acca6eb9aa40238c366bd2713526fe"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b253b4965cd886fb8af3adac304ebf651b1c403af27404ece1c6ae78113ce880"
   end
 
   depends_on "poetry" => :build
