@@ -14,6 +14,7 @@ class ExtractUrl < Formula
     sha256 cellar: :any_skip_relocation, sierra:        "57b556a225f6ec03cee7166c1b4cbd2eb1c0eb2bd7819865bd9ed39620b81b68"
     sha256 cellar: :any_skip_relocation, el_capitan:    "96d599a0f724f6f09e261c8b0a1c8bbf69ce1b199d311527636f8a5d42f197c6"
     sha256 cellar: :any_skip_relocation, yosemite:      "d16fcc4c81a2ffb7f384f104396aae674bb8f6f08d336056ab858924d545f205"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ed3da89e39498b9cf758805a920ebbb6bb4f0f14e6587b7a82f1e0ddf3beddc5"
   end
 
   uses_from_macos "ncurses"
