@@ -6,7 +6,7 @@ class Mdds < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "800ca1b6aab72e6e32965fd3e156c05e603c5686473c61611e2ae1c7c99b1d9b"
+    sha256 cellar: :any_skip_relocation, all: "bebc791aaa0345a6005430a3935a2cd23fb97ef7f196d63046cc3c27d1dac748"
   end
 
   head do
