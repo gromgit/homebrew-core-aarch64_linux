@@ -21,10 +21,10 @@ class Sslyze < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 monterey:     "c55c4bea4ee7beb0320c1b12d315ae340409b036fee4e630b80e16634b0b4f27"
-    sha256 cellar: :any,                 big_sur:      "5e946542c424ed0446128a9fd0287482a4088e1f84a3393c4878e2e0151eaa9d"
-    sha256 cellar: :any,                 catalina:     "6ee55f116dd5aae0385167ae2ea634b6e66f984a93983ab2f000d405b8cf15d2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "24c6d236aa6fc9f1b93f1002fc734eeee0292d24658846822a2e10c97c1c6380"
+    sha256 cellar: :any,                 monterey:     "47142985d26152233850328b7561ce8cb3a90051a84d0439103d2a114c1947e0"
+    sha256 cellar: :any,                 big_sur:      "22b743d5fc899df936ffff1142f25d7b46bb1604a8c4b39a6624e38c96f98dd1"
+    sha256 cellar: :any,                 catalina:     "fb821ffd792c410dd8311547b47f2d63cb8c63424bf14988ef61660902e9f9d3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "8289aa91181b402ee3357bebb6a232e7bf301301a16933dbbdde361c428a6f6d"
   end
 
   head do
