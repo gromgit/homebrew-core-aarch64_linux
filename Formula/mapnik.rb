@@ -13,12 +13,12 @@ class Mapnik < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d674480b7e4e3947596fb6aa39ee0646876149a7fb09a6606b0189a3cd4cab5b"
-    sha256 cellar: :any,                 arm64_big_sur:  "95b63730f23c0c25d05026fd1bb899591a36c5bf66b1c399570126e5a7483417"
-    sha256 cellar: :any,                 monterey:       "208dbe0310b4ab92bf229f6ec91bec75968adce03941f52f0d237737f8ef3101"
-    sha256 cellar: :any,                 big_sur:        "35472048579ffd32d6891db4cf3204d83e60f2f991a493c64e804edf67b7a7b1"
-    sha256 cellar: :any,                 catalina:       "85c16f13492ccaccd895027e2c8ff2185fac734f8049d15d1cf557c4fd52fed4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dcb3b0dc4edac0a7ac653171585ed2d987fb5c7cfad75fd5ac42485ebef26bd3"
+    sha256 cellar: :any,                 arm64_monterey: "88c2bfae2fc095df973e6c1a24bd6424cdecb15a8cfe9e276cff215740e4150b"
+    sha256 cellar: :any,                 arm64_big_sur:  "940dd231a42ef131d258dbee54abc10ea97b21ae026e0ac6c852c0d836643eb8"
+    sha256 cellar: :any,                 monterey:       "16dcdc5257b5209a8447d806a0ff7500c6f6557c16b3238a0a2050e3b9e69431"
+    sha256 cellar: :any,                 big_sur:        "4afff60a6a7fc188c713e084a2a5e13ead96be504bd32c4ebb55990567b01052"
+    sha256 cellar: :any,                 catalina:       "9c2c0d3e4473fe2c55fc5d2449e2fd9ce4bad5ebf5e8b96a279bdca9813283ee"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0f327e497ffaa82ca9fa47bc4bbe8d0549e096150eea5bab669d262957a74b61"
   end
 
   depends_on "pkg-config" => :build
