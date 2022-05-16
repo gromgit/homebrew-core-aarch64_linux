@@ -9,12 +9,12 @@ class Gmt < Formula
   head "https://github.com/GenericMappingTools/gmt.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "0a9ed1f612777e91e061e9dd5c15c1e711ac595212acecedd925eebd81b34abb"
-    sha256 arm64_big_sur:  "90bdd3828bb93f303a1b6dbff92625db5c8d009d6f630650db8c0eaab14881ad"
-    sha256 monterey:       "1bde7945665681c8c7bea8c30c4cf711cc324ec491047e993be3c72434f4e10d"
-    sha256 big_sur:        "07dc3765e73688bcf3c4634312ee89bcb2461a4f10bb960d88293b4836638285"
-    sha256 catalina:       "9da59bfb9b59a3e6dcc2bab17354b7353b2b885cfd892b517a1bb29027927c36"
-    sha256 x86_64_linux:   "aa407b0c32eb815c0e28494a7f95b0a0dcf77c2c85f0ab578e22a4c019156d53"
+    sha256 arm64_monterey: "a097583ab82e6e248f3754360168f8b24d8966641eff1646d79285a2c730e2f9"
+    sha256 arm64_big_sur:  "0bd799ddf622f01b61f6ea66c57c21aacd4f34fbe21d52577e661fe23e43ec9e"
+    sha256 monterey:       "c44551319e262df2cf576a6bf58c95594d88767ba4a26f71bc41e19d8a509ceb"
+    sha256 big_sur:        "bfd9fe7f6f3273fe6ec2cc5cceee5d6af885e70c4513475d6060334ed751d73c"
+    sha256 catalina:       "127870924288c66ec0f94e05261687422b5bc281b0d4f95120edca927039d34e"
+    sha256 x86_64_linux:   "b7d98f7301813c840ead5211b3b639f305b14d6b9938d72cbfe259e906da033f"
   end
 
   depends_on "cmake" => :build
