@@ -12,6 +12,7 @@ class Pulledpork < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "f1e692043de24e99030c5e07a4c11269e091af1748f2bf910048f016358581b6"
     sha256 cellar: :any_skip_relocation, mojave:        "8f4884077fee641db519a021f0b47c739165546b8dd8b07a4ea4d1a2f8918aaf"
     sha256 cellar: :any_skip_relocation, high_sierra:   "00f4875c0b5e47644250f39845f90f9a78f10152f489d5c103046f48cd0d5f0a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "972556c0851f3be9aa2e9f51ac073461b01dede7fb05c847ccc8471509ab940f"
   end
 
   depends_on "openssl@1.1"
