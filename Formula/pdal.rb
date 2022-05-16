@@ -19,12 +19,12 @@ class Pdal < Formula
   end
 
   bottle do
-    sha256                               arm64_monterey: "60adcdce893074c077feed906fdc37eff3fd490bac6817691e44003486d9e59c"
-    sha256                               arm64_big_sur:  "7f6b74bbc10baa540756d992dd74af1d4865638b7c402ee8002461bb6ca42baa"
-    sha256                               monterey:       "acfcf85ae15a0be32dcaabf6641303b3d2a66e41c412faa690da649cdbdf73d9"
-    sha256                               big_sur:        "dff0336342ab6f61963635cd86fd264f928fabfdcf320fd7122a0da1d5b097e8"
-    sha256                               catalina:       "c65305bd9e3378019a324d75e38cce6ba60c78dfce8606d815b262c20e092463"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8f739ad0a0756f1a61bbe3a413b0d1efffa4bd020e43a6b6d8cec31dcc0c3a09"
+    sha256                               arm64_monterey: "4c517edad1925969b63af40be4b62abf2fe09db4e23f58c7369c4ec170c60b3c"
+    sha256                               arm64_big_sur:  "3c429f9cef115fb4035a5af4490e95b6ac6a323bcd8dcb66f63c33db0d029ef6"
+    sha256                               monterey:       "0906017a6a0b9ef2fcd0765891ce6d135a0323798b6ebd25fc5e719a3d4e8b93"
+    sha256                               big_sur:        "85d1b7e2657be04f9a1c14f3de1657dec459ed5e41a193da9119fb213bf4aecb"
+    sha256                               catalina:       "83c87ef72f93fcb3a6aa974f1c399c083ad90f36ba52553be6cb8bc4d3dabb91"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1eddcef5404e65c93ac07197c06415fb9fc93176fc58cf135afcd53c063c9239"
   end
 
   depends_on "cmake" => :build
