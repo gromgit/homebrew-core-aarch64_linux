@@ -6,6 +6,15 @@ class Octosql < Formula
   license "MPL-2.0"
   head "https://github.com/cube2222/octosql.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ad91a6236138adcdaa8ccec25c993c5bef6cd4839d73dd38efa502cce8ec3f2d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e6e11fb386d808cfa06324f509109ba1700d095193d29ee087dbae1338657b29"
+    sha256 cellar: :any_skip_relocation, monterey:       "f1d7d4beface0b1b4f367c8dbeaefb33634010dd55857744c91d26b8ef32980b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5ff1c3606abb2ff75bc94b509e867dd8f11a57e142630897d83cc0ba306140ac"
+    sha256 cellar: :any_skip_relocation, catalina:       "b6bdca4e6dc87885bad926912c3e5c30bcb8c84fbbf59a7411f67df93ae4be6a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "363b7dae98f8dd731a74c57759ba26e504b92c73824e9ac48a94ba3edd4d7b29"
+  end
+
   depends_on "go" => :build
 
   def install
