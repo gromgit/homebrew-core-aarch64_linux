@@ -11,12 +11,12 @@ class GstEditingServices < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "b448555dee94ed82d381add836f9189db00301c1e4c7a315f7e3a606fe4fc839"
-    sha256 cellar: :any, arm64_big_sur:  "398e7585a34c6741e333ad26b16c922bd887fda14dfb30138f1ab572ee36e746"
-    sha256 cellar: :any, monterey:       "83f505bf5dba5e182d41fddc567c8d8b77d19c261a848d648835b964ea80f787"
-    sha256 cellar: :any, big_sur:        "3091b92c556da6b5757ff7aea4cee2facc01ea42700b6fb53d3a81d525c86b0b"
-    sha256 cellar: :any, catalina:       "6216cae04e11a6d04b796db2a78447fa1613e66f9a04615b027177627b99575d"
-    sha256               x86_64_linux:   "58b0cb8eb13a043ecb7b1b90360129a54b9424c2910fc515d563298d0bb8145c"
+    sha256 cellar: :any, arm64_monterey: "f835dfd475d4f014c927e06f232eac88fb82a3aa8790d6f695ccc013aa332f24"
+    sha256 cellar: :any, arm64_big_sur:  "f864af216b70b6b83d51fe0139e42e25f6c78338d85f80e701debc1f7927d8da"
+    sha256 cellar: :any, monterey:       "90cc39a61be23b30e6284497bb9d218aa44e2f211a272a3859b15dc0853d53e9"
+    sha256 cellar: :any, big_sur:        "18d4c81c3980bd1d8cc2bf87a3108c544ecdd7f40a77233cafb44b9c91461bc9"
+    sha256 cellar: :any, catalina:       "94240503d99b2413e169cb0adbbb3a8f8886bc9c1bd394bd84133133ec8b9ea0"
+    sha256               x86_64_linux:   "1309865dfea44b887ec1a1e5937f7811688ba2b63a5aedb1caa1551bff164bd6"
   end
 
   depends_on "gobject-introspection" => :build
