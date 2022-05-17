@@ -11,12 +11,12 @@ class Meilisearch < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "22aa269cab979cde6cfb78f090a2d6f8e66db052f1f6a84c417875ccfe85adcb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c530d626d8dc9a11e5a11cb4500530653836bdbbce5aa593e332d29a50809a38"
-    sha256 cellar: :any_skip_relocation, monterey:       "1684f100270914256d79d67f8c2cfcd6a3bb3251bb14366e6c8d9f8595d8cf26"
-    sha256 cellar: :any_skip_relocation, big_sur:        "010a759a8af1a46671f5e9d61cc5679c1a3169bf70490a4b983e61560d31b940"
-    sha256 cellar: :any_skip_relocation, catalina:       "6abe271f8ab9baf20f663746c5e15a256905e033e8db740b9192c235c841f35d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e3bdafcd27f0b3345ee538929ec199367f06c020f8dc90bc4075d6f7ef352921"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "53226b817103e85d5794502b8eac21660b5811945facfd891652b40603ebff43"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1de9b9487dce35a9b45b236b87c62301896af448c7ffbed5de27959514f9f994"
+    sha256 cellar: :any_skip_relocation, monterey:       "be3de6af73cad38fe4a21415e6980aebc4dc3f87fb045c744d1129261fbf3291"
+    sha256 cellar: :any_skip_relocation, big_sur:        "470c61322b5f1ffb888895ec767b54a40a7a41d283bd698b68d86b68394ca078"
+    sha256 cellar: :any_skip_relocation, catalina:       "e9d86a93d4e442fe9ea22773eac2b5b196705f392ea8d93c001fbc6d57ca11a8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aff8b27a6731f1c06b31b6bda4f07c4c131d624eefb2a20750e604344782120d"
   end
 
   depends_on "rust" => :build
