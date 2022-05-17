@@ -11,12 +11,12 @@ class PcscLite < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "dc38ae023bbf4d38ae4c0193618ccfa3b4be532e5ed048dfcb8913b69a69ecd3"
-    sha256 cellar: :any,                 arm64_big_sur:  "b8cf7ce5a53d56e03f424f8d7b1a4b5668e70fae37c4286ecb6b5b914defd7c5"
-    sha256 cellar: :any,                 monterey:       "ca4f864d53db2117d0cdac550db6156e8582d5c777ac05bfc5d8c61c8f08acee"
-    sha256 cellar: :any,                 big_sur:        "2591776f30bca2389d86e30278f1fe5d6f47cf6327179eb6dfdcf9eba5316741"
-    sha256 cellar: :any,                 catalina:       "fc57826505f41bc14bb778ad5ff3e26ce5681dbe079489da26bb54d3658e007e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6eb5bbe2ec894465c3e5aba160e067b53bd5c9f087b0fcaa35b86f79cd5411b1"
+    sha256 cellar: :any,                 arm64_monterey: "17e6cb349aefe800146d4b4b8cf75abab4ae9bf2b6f2b8511d7ec8ed0cfa9197"
+    sha256 cellar: :any,                 arm64_big_sur:  "437f701af5afd212c9152e6b11de999f9c6100b77d1606eb7237763a26d0645a"
+    sha256 cellar: :any,                 monterey:       "e9f81a760a0363795043b725c93322c5df5dede0de88984d3d956434b9d32cc5"
+    sha256 cellar: :any,                 big_sur:        "915ba0331656b8463dbbda4de60e2054b4f5dc13fc97d1a65aad2ad171530285"
+    sha256 cellar: :any,                 catalina:       "33667140732cfe511d2a89f35691cec9ceb90b81b2a547353c7019741593d159"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "50bc56ac761233682201019b580ce7f6e0124f48736b0e146c62d45391a4c22d"
   end
 
   keg_only :shadowed_by_macos, "macOS provides PCSC.framework"
