@@ -6,10 +6,10 @@ class Acl2 < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 monterey:     "825d7272eb277b9756f6816cb89d0c6dec9b2719158d3f8ba2d6a50d0b2d7f9d"
-    sha256 big_sur:      "4d5eeb80445ecf76726e5e156eb3acbd57cb176c801883f4ba75b25cecc2d258"
-    sha256 catalina:     "f3d0b44ddb425ca52de5ee98d31b7aedfb9bc0a3ce3d834f8b1a39145e7b19d3"
-    sha256 x86_64_linux: "17008cee54fd6d67e75bf36bf98ce4ca8618f428bb0a7b817ed1d49555fa6ac1"
+    sha256 monterey:     "981ffcee53f9b27768d25c675ff7054d6167e472b25464b8b863814757358c05"
+    sha256 big_sur:      "bfdc87ec318de4ad791b7f36a0c8e5c60c49184a2f7da5bcb8a86506f3c40a10"
+    sha256 catalina:     "5047132db95e89392bd15b7b8c0f7ff2374742f5b0a587e2489b2dd37a048f9d"
+    sha256 x86_64_linux: "72514be4dcc48b2cebc9671056a66f7006c584ff62120988cd6febe765f44b3e"
   end
 
   # Homebrew ARM CI runners hang when trying to build `acl2`.
