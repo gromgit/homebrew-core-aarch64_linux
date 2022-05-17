@@ -7,6 +7,15 @@ class Dotdrop < Formula
   sha256 "4e81db35e47c05607e46472e2919f0840e4ec0a1c168214f0bff54b876245340"
   license "GPL-3.0-or-later"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4db600e930a0ef1b25abcae35dd8d2d06939e2b762b03677824da5c3fc00df30"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a7ff5cb5dc21e2744b3050754cfb5be1f8835ab4d681e0d3dc5f3f17dc77aff9"
+    sha256 cellar: :any_skip_relocation, monterey:       "7836f824b5e53f727aa17f25e8ff3703008029a7e5ebf96552eee0f6bac64719"
+    sha256 cellar: :any_skip_relocation, big_sur:        "dcb999f282076039d53709ee4820696c41ea371c7803add52c517072e1542808"
+    sha256 cellar: :any_skip_relocation, catalina:       "7bc05586d7e91bf8ae053fb5748912c4d791307230e99aaf78f8a6792182a0f5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "586a4f78c111380c8302ed0099c2009f90bc17c467a80d923dcf9726cf9d72ff"
+  end
+
   depends_on "python@3.10"
 
   resource "docopt" do
