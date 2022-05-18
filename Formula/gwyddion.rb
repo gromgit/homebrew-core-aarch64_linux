@@ -1,8 +1,8 @@
 class Gwyddion < Formula
   desc "Scanning Probe Microscopy visualization and analysis tool"
   homepage "http://gwyddion.net/"
-  url "http://gwyddion.net/download/2.59/gwyddion-2.59.tar.gz"
-  sha256 "b777eaa9a53a971c55a5ae2f7cd6695d1dbde78ffb84b9cf8885361400f051c7"
+  url "http://gwyddion.net/download/2.61/gwyddion-2.61.tar.gz"
+  sha256 "ae9d647b1c8c44d91d4ebec3d22d7536299fdb16bfa0bacccdf64e4704cd355e"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -26,10 +26,17 @@ class Gwyddion < Formula
   depends_on "minizip"
 
   on_macos do
+    # Regenerate autoconf files to avoid flat namespace in library
+    # (autoreconf runs gtkdocize, provided by gtk-doc)
+    depends_on "autoconf" => :build
+    depends_on "automake" => :build
+    depends_on "gtk-doc" => :build
+    depends_on "libtool" => :build
     depends_on "gtk-mac-integration"
   end
 
   def install
+    system "autoreconf", "--force", "--install", "--verbose" if OS.mac?
     system "./configure", "--disable-dependency-tracking",
                           "--disable-desktop-file-update",
                           "--prefix=#{prefix}",
