@@ -11,12 +11,12 @@ class DitaOt < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b09ccd7cb0ff165ea05a36e781043b166f4a30388a1fdcd34bd3f105489db7ad"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b09ccd7cb0ff165ea05a36e781043b166f4a30388a1fdcd34bd3f105489db7ad"
-    sha256 cellar: :any_skip_relocation, monterey:       "7dcffe2eadd0dbf60e6672a217e699bdee1f26b8a184ad960d8a6f32dbaa2e45"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7dcffe2eadd0dbf60e6672a217e699bdee1f26b8a184ad960d8a6f32dbaa2e45"
-    sha256 cellar: :any_skip_relocation, catalina:       "7dcffe2eadd0dbf60e6672a217e699bdee1f26b8a184ad960d8a6f32dbaa2e45"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ec590a6d1fca973322efbb02b615e7428a7bc10345cf9907f1188459253d42fd"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d03822da60bdbd56137a25ae5786786d3108cff223160c3bc5df3fcdb37572b3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d03822da60bdbd56137a25ae5786786d3108cff223160c3bc5df3fcdb37572b3"
+    sha256 cellar: :any_skip_relocation, monterey:       "18ff943e1c93d3bd4aa8b5885306edeff45d0874923f2e16d2a32574aa28e775"
+    sha256 cellar: :any_skip_relocation, big_sur:        "18ff943e1c93d3bd4aa8b5885306edeff45d0874923f2e16d2a32574aa28e775"
+    sha256 cellar: :any_skip_relocation, catalina:       "18ff943e1c93d3bd4aa8b5885306edeff45d0874923f2e16d2a32574aa28e775"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e9b9376dc798b7301a2547f39ede85ba33a6daff626b83838d3ddcd5702f823d"
   end
 
   depends_on "openjdk"
