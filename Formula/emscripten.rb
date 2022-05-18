@@ -5,8 +5,8 @@ class Emscripten < Formula
   homepage "https://emscripten.org/"
   # TODO: Remove from versioned dependency conflict allowlist when `python`
   #       symlink is migrated to `python@3.10`.
-  url "https://github.com/emscripten-core/emscripten/archive/3.1.8.tar.gz"
-  sha256 "9ffe1fb3a816b1de3050f990a10519b72349451200947f019aaf26728f40604c"
+  url "https://github.com/emscripten-core/emscripten/archive/3.1.10.tar.gz"
+  sha256 "b14a19965ef7cd0324e07001ad8699276e42c1a2d2ee42c3a08b09df70f1683e"
   license all_of: [
     "Apache-2.0", # binaryen
     "Apache-2.0" => { with: "LLVM-exception" }, # llvm
@@ -51,7 +51,7 @@ class Emscripten < Formula
   # See llvm resource below for instructions on how to update this.
   resource "binaryen" do
     url "https://github.com/WebAssembly/binaryen.git",
-        revision: "22d24fda983d471ebf73ebadbc37ef1741a5594d"
+        revision: "f124a11ca3a40c87ab6aa4498037449584689be9"
   end
 
   # emscripten needs argument '-fignore-exceptions', which is only available in llvm >= 12
@@ -62,7 +62,7 @@ class Emscripten < Formula
   # Then use the listed llvm_project_revision for the resource below.
   resource "llvm" do
     url "https://github.com/llvm/llvm-project.git",
-        revision: "80ec0ebfdc5692a58e0832125f2c6a991df9d63f"
+        revision: "8bc29d14273b05b05d5a56e34c07948dc2c770d3"
   end
 
   def install
@@ -170,6 +170,8 @@ class Emscripten < Formula
     # Fixes "Unsupported architecture" Xcode prepocessor error
     ENV.delete "CPATH"
 
+    ENV["NODE_OPTIONS"] = "--no-experimental-fetch"
+
     (testpath/"test.c").write <<~EOS
       #include <stdio.h>
       int main()
@@ -180,6 +182,6 @@ class Emscripten < Formula
     EOS
 
     system bin/"emcc", "test.c", "-o", "test.js", "-s", "NO_EXIT_RUNTIME=0"
-    assert_equal "Hello World!", shell_output("node --no-experimental-fetch test.js").chomp
+    assert_equal "Hello World!", shell_output("node test.js").chomp
   end
 end
