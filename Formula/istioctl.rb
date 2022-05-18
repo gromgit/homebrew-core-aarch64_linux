@@ -2,8 +2,8 @@ class Istioctl < Formula
   desc "Istio configuration command-line utility"
   homepage "https://istio.io/"
   url "https://github.com/istio/istio.git",
-      tag:      "1.13.3",
-      revision: "b28579cb30c12c428ea58279b7c06f3302abe924"
+      tag:      "1.13.4",
+      revision: "202e88863858342eeb0206944e9d277a545eb194"
   license "Apache-2.0"
   head "https://github.com/istio/istio.git", branch: "master"
 
