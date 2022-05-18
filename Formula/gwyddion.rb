@@ -11,10 +11,9 @@ class Gwyddion < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "84daa1965a976e10f7fc3c86181060ab41de374e60e40f4c583d1708c62f4e2d"
-    sha256 big_sur:       "0843f910f945f7ccfa32b172e499733f03f5bd1ffb5651cd09dd9e4908bfa098"
-    sha256 catalina:      "ff6670705c707245cc11ae74a4b7c3ae973e6a5fdda03a4edf2cd1a114da0c13"
-    sha256 mojave:        "78eb5e116ce465537772408846a45680195b1184f616fc3663fe60fa3db6a02b"
+    sha256 arm64_big_sur: "9a5ba5a71bd35ec492de7fe9840419ec8922daf04a31c9ebb58ba8bee59c9723"
+    sha256 big_sur:       "acfbd4430428e964b062cd8f5e43cf96fad56127801b57e07493f3550efe3eac"
+    sha256 catalina:      "ea3562016bd81e226579e0f92aa161d4551a870e46edb25dfae5bf38c0d0874b"
   end
 
   depends_on "pkg-config" => :build
