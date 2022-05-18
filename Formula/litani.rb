@@ -9,12 +9,12 @@ class Litani < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cbdf30cfa38a3df1c9421161e744d6c8b35fb8faaaed8fdcbec4c6d0e4634fe0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "04b1a0a8a8a6762d913dc8daaff9f0ce52f5cbeb30c49e86ca4b78b0aafbadc7"
-    sha256 cellar: :any_skip_relocation, monterey:       "ebdf855bdda3a90b644d26dcfaf10cd08c92c042a581082b39c85dddc918cba6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bc77d1c33f995432e4c76f73cb76c05ee49063a411aa546f9845bbdb48304448"
-    sha256 cellar: :any_skip_relocation, catalina:       "32a97a63fd82f7ceb49f21ddf6012bb3183c194d722848bf287d31939471f24f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "631c439580bfdc411038d43a031d5f7008232dc1703463294f7a557c761a2c07"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5ab7507e57638a76cc6f695d01aa03285bb798cb36bd38c027c42c48a7aeb8c3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f16977b4e6d4e746be531e37fcc52750c4cff8c0b931bf203103cc69150f6eed"
+    sha256 cellar: :any_skip_relocation, monterey:       "9f68d37afd5b82bcca531b785d14dc3d27261c09d3a39eca787f4eb509232ea6"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ef8a96d7e923812072d598e7ec314a30a68bd926de7e12ca64a8b3d78bd12400"
+    sha256 cellar: :any_skip_relocation, catalina:       "6e7f6c4385b7fe0ce6f3afd1fb1b33267602a2d63cd6bca5b95d519dea1f4364"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "11b10ce7d97b0a5d9d682e389d834460bae6c292f2b12f014b46e32336aec211"
   end
 
   depends_on "coreutils" => :build
