@@ -8,6 +8,15 @@ class Sdl2Sound < Formula
   license "Zlib"
   head "https://github.com/icculus/SDL_sound.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "864f5e487ac6b2e0f52f6c52ff49079f01ac90f57fb64469a09f2ba752f77653"
+    sha256 cellar: :any,                 arm64_big_sur:  "fd95136bc274c7167a8c0267f38c98f498793c55c13b6506e73e45a1bc8ff173"
+    sha256 cellar: :any,                 monterey:       "4cba85df40d35f257be849a1c87b85e43c737af0dc359839a7fcbcfb87183622"
+    sha256 cellar: :any,                 big_sur:        "b2ceb3889c9ecb7ca5bf1fdbe008bc65c99081770d226ac6074973b87df107a5"
+    sha256 cellar: :any,                 catalina:       "b1f1063b6fbf9f4d9a4acf52a95e5f5f446ec28f19d542139ae9cb4965edca13"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ddb206fa532665701041f2d99486e9ebc0c7827fc6aab447e14a44e8137faa0a"
+  end
+
   depends_on "cmake" => :build
   depends_on "libmodplug"
   depends_on "sdl2"
