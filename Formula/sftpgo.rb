@@ -5,6 +5,15 @@ class Sftpgo < Formula
   sha256 "6c8676725e86ee3f6ad46a340a84f0da37cab8b6ea7b6aee86b2b96ba5e6671a"
   license "AGPL-3.0-only"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6878f05cd56dd09aa7fdcf2d624291ff812905538688fd63ccebc692fe42289b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "601e0bad5d9bbe2286660f01e3194e3f6bc4d28e143e46e8315ae052e7dccde9"
+    sha256 cellar: :any_skip_relocation, monterey:       "84277342de48e7f330a4c259cc36f77fab97d1709fae3d30168e4e769c7ac599"
+    sha256 cellar: :any_skip_relocation, big_sur:        "664d7602fb45d8aed5946864851ec822fb0a78b2e204cf7e921c79ea9985caac"
+    sha256 cellar: :any_skip_relocation, catalina:       "a78ee9ebc9e3f6780198057bf5b691014ecadcf7ac621b3bcdd3fd5c0ece02f2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3f4bfe51b971dd79dc4807f3266e5971f33c119d85b93dc7d5ce3b284b951374"
+  end
+
   depends_on "go" => :build
 
   def install
