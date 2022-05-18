@@ -3,8 +3,8 @@ class OciCli < Formula
 
   desc "Oracle Cloud Infrastructure CLI"
   homepage "https://docs.cloud.oracle.com/iaas/Content/API/Concepts/cliconcepts.htm"
-  url "https://files.pythonhosted.org/packages/28/26/9545f447fdb6b4a5f9a826926f2e62e7e1ab1ce79158df9f197679f1b25d/oci-cli-3.9.0.tar.gz"
-  sha256 "47eb411512162d7e369681486910d6e1618c6d708a0635b5b82096b46dead7eb"
+  url "https://files.pythonhosted.org/packages/c1/02/2a386b82d70ada3a13133f3015b40f55f9b5b6d7b77baf7dc6f9d32e39ef/oci-cli-3.9.1.tar.gz"
+  sha256 "72d774dea65c07c8c3cf0ff6ee68369a37bda0d01b2fc24a246289286b6639bb"
   license any_of: ["UPL-1.0", "Apache-2.0"]
   head "https://github.com/oracle/oci-cli.git", branch: "master"
 
@@ -57,8 +57,13 @@ class OciCli < Formula
   end
 
   resource "oci" do
-    url "https://files.pythonhosted.org/packages/ef/cb/3c9432bf34005a6b58f63c4fb7c759b4aaf61f1a174a7bb4886f3b513c66/oci-2.67.0.tar.gz"
-    sha256 "a488c488d050c81427a5a777e1974dd98600a52b7ebf1e807ba7345dc5e1a61d"
+    url "https://files.pythonhosted.org/packages/d0/8d/ad2b25aa71c508306d39ac09b09dcdc83c8fe0afa01350461c02ab8c27f8/oci-2.68.0.tar.gz"
+    sha256 "0836b7ea0656d58ca68279a8e442d5a11db671008be094c5108777b2fca87e60"
+  end
+
+  resource "prompt-toolkit" do
+    url "https://files.pythonhosted.org/packages/b1/32/2a6b734dc25b249467bfc1d844b077a252ea393d1b90733f4e899aa56506/prompt_toolkit-3.0.16.tar.gz"
+    sha256 "0fa02fa80363844a4ab4b8d6891f62dd0645ba672723130423ca4037b80c1974"
   end
 
   resource "pycparser" do
@@ -89,6 +94,11 @@ class OciCli < Formula
   resource "terminaltables" do
     url "https://files.pythonhosted.org/packages/9b/c4/4a21174f32f8a7e1104798c445dacdc1d4df86f2f26722767034e4de4bff/terminaltables-3.1.0.tar.gz"
     sha256 "f3eb0eb92e3833972ac36796293ca0906e998dc3be91fbe1f8615b331b853b81"
+  end
+
+  resource "wcwidth" do
+    url "https://files.pythonhosted.org/packages/89/38/459b727c381504f361832b9e5ace19966de1a235d73cdbdea91c771a1155/wcwidth-0.2.5.tar.gz"
+    sha256 "c4d647b99872929fdb7bdcaa4fbe7f01413ed3d98077df798530e5b04f116c83"
   end
 
   def install
