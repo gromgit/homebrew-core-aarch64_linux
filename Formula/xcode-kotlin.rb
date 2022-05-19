@@ -8,10 +8,10 @@ class XcodeKotlin < Formula
   head "https://github.com/touchlab/xcode-kotlin.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e30d401858e6d92ff0812cd7306ee1f1febc528ca4facec6ef1fa6d71c0ad616"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "154c6668f7672acecf84c615558ef0a5f0ac3f8f7b351dce0dcb54f01fbb848f"
-    sha256 cellar: :any_skip_relocation, monterey:       "59ffda73313c0df249b5eacdd04e3ef5f20c45d058a8bfea0b27ec641d1f071e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "24d77505f997ff6ddbe52c1cb01f4c30b559663e86d9bbc40606be9e2ae63d03"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f285f107b7d74b83cee5b57f309270176e40fb26a7b19a9090d467e5dc35074e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "70b8e27a5a2a615a3a2ee1bbf0d929f8acdd6e9b95f26e4147bd11ce1f48e2d9"
+    sha256 cellar: :any_skip_relocation, monterey:       "f23e73486a28a283674648c3bea20e8237fa6c740548dc45a90d1063b5173034"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f3f93d8e5ee666bd54ed69f40d5557059a1dd1d58b8a2f6ecb4f63870d28004a"
   end
 
   depends_on "gradle" => :build
