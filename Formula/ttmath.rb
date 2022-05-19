@@ -5,6 +5,10 @@ class Ttmath < Formula
   sha256 "4a9a7d1d377fc3907fb75facd4817ba6ac9d60bb4837584256467a54705c6fde"
   license "BSD-3-Clause"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "d93547355619dbddde6f9a419ded3d513325d1fb59cb4d244916e328243ce0dc"
+  end
+
   def install
     include.install "ttmath"
     pkgshare.install "samples"
