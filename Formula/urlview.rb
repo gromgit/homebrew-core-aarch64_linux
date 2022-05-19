@@ -21,6 +21,7 @@ class Urlview < Formula
     sha256 cellar: :any_skip_relocation, big_sur:        "590b88c35280f2e37daacd2c510afeda9ff90c38361fa9b113a5925136dbdaa7"
     sha256 cellar: :any_skip_relocation, catalina:       "102860ddd181af6242b7aaae841e39dc05298856e43f4c7d9f8747e6d17ad8d1"
     sha256 cellar: :any_skip_relocation, mojave:         "2c93e736ee4b39f7567afe60fcb06ec2144ca054a819a3406caaa5c330ab4911"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e0a5093183e760ac371ca256f25880a33c0b1cc8d6e9da755745979b35303969"
   end
 
   uses_from_macos "ncurses"
