@@ -4,7 +4,7 @@ class Torchvision < Formula
   url "https://github.com/pytorch/vision/archive/refs/tags/v0.12.0.tar.gz"
   sha256 "99e6d3d304184895ff4f6152e2d2ec1cbec89b3e057d9c940ae0125546b04e91"
   license "BSD-3-Clause"
-  revision 1
+  revision 2
 
   livecheck do
     url :stable
@@ -47,12 +47,13 @@ class Torchvision < Formula
     EOS
     libtorch = Formula["libtorch"]
     libomp = Formula["libomp"]
-    system ENV.cxx, "-std=c++14", "test.cpp", "-o", "test",
+    system ENV.cxx, "-std=c++14", "-Xpreprocessor", "-fopenmp", "test.cpp", "-o", "test",
+                    "-I#{libomp.opt_include}",
+                    "-L#{libomp.opt_lib}", "-lomp",
                     "-I#{libtorch.opt_include}",
                     "-I#{libtorch.opt_include}/torch/csrc/api/include",
                     "-L#{libtorch.opt_lib}", "-ltorch", "-ltorch_cpu", "-lc10",
-                    "-L#{lib}", "-ltorchvision",
-                    "-L#{libomp.opt_lib}", "-lomp"
+                    "-L#{lib}", "-ltorchvision"
 
     system "./test"
   end
