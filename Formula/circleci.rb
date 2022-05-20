@@ -3,8 +3,8 @@ class Circleci < Formula
   homepage "https://circleci.com/docs/2.0/local-cli/"
   # Updates should be pushed no more frequently than once per week.
   url "https://github.com/CircleCI-Public/circleci-cli.git",
-      tag:      "v0.1.18532",
-      revision: "5e6ca987d44c4901fece26415a933d17ce950ead"
+      tag:      "v0.1.18556",
+      revision: "7c05b674b92fcb8c8b03cb4c43e9fa0fabdb6da8"
   license "MIT"
   head "https://github.com/CircleCI-Public/circleci-cli.git", branch: "master"
 
