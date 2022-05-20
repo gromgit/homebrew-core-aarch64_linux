@@ -1,8 +1,8 @@
 class Quill < Formula
-  desc "C++14 Asynchronous Low Latency Logging Library"
+  desc "C++17 Asynchronous Low Latency Logging Library"
   homepage "https://github.com/odygrd/quill"
-  url "https://github.com/odygrd/quill/archive/v1.7.3.tar.gz"
-  sha256 "3fff0c5ffb19bbde5429369079741f84a6acce3a781b504cec5e677b05461208"
+  url "https://github.com/odygrd/quill/archive/v2.0.0.tar.gz"
+  sha256 "7e91812549479c3be6d4f6c5aac7700c5be065804b615143a8d6153ecc44f456"
   license "MIT"
   head "https://github.com/odygrd/quill.git", branch: "master"
 
@@ -17,9 +17,13 @@ class Quill < Formula
 
   depends_on "cmake" => :build
 
-  def install
-    ENV.cxx11
+  on_linux do
+    depends_on "gcc"
+  end
 
+  fails_with gcc: "5"
+
+  def install
     mkdir "quill-build" do
       args = std_cmake_args
       args << ".."
@@ -40,7 +44,7 @@ class Quill < Formula
       }
     EOS
 
-    system ENV.cxx, "-std=c++14", "test.cpp", "-I#{include}", "-L#{lib}", "-lquill", "-o", "test", "-pthread"
+    system ENV.cxx, "-std=c++17", "test.cpp", "-I#{include}", "-L#{lib}", "-lquill", "-o", "test", "-pthread"
     system "./test"
     assert_predicate testpath/"basic-log.txt", :exist?
     assert_match "Test", (testpath/"basic-log.txt").read
