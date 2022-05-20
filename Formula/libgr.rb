@@ -6,11 +6,11 @@ class Libgr < Formula
   license "MIT"
 
   bottle do
-    sha256 arm64_monterey: "0c966211b4cf1fab8eeb10f74c69fa3dec7fec33bb41158463bf4f637b12749f"
-    sha256 arm64_big_sur:  "e8ca0dc9274ab39f353f5150f07798bdd891d6df04058da8e85c9672f72e2665"
-    sha256 monterey:       "5d1bf9bbb7fab577ba8e96d96d0ef867cb3e2f3f780c248862b1cc9d52bb46c3"
-    sha256 big_sur:        "a0bdcc690f6db4e90a94dbe7186191fc930180801d534252b7d9a562dc1a9d5d"
-    sha256 catalina:       "16086d6caf4c1aa6fe0fe882e129273627a8720f0211183c30514edce85f0710"
+    sha256 arm64_monterey: "288ed3006520942e964fa8cf9b5f2ffe3b4524016d0ddc257138acacb1a8dbc1"
+    sha256 arm64_big_sur:  "bec4daa0463755a98fd820eb9c0bcde3a67f78353e0e9ceb16d4e1b81977d687"
+    sha256 monterey:       "18ea54c4500635ff1a0cfe1c4a61b93f5c5dd245f30ecb5de5a4d7679ab2fc6a"
+    sha256 big_sur:        "79b5ca609c897623d6248379f1c1ad6a681b98e77afde0113729993a70a202c5"
+    sha256 catalina:       "69fa14ef8d35fef54d9416e68fccc51d389f8ba8d21849528192a417816629be"
   end
 
   depends_on "cmake" => :build
