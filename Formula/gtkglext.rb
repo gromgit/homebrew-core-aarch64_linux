@@ -7,11 +7,14 @@ class Gtkglext < Formula
 
   bottle do
     rebuild 2
-    sha256 cellar: :any, arm64_big_sur: "0e7132d3e408cb5d9bbff6e8f6e93bc6460ebbb4f3e6f365d8cb331edee9435a"
-    sha256 cellar: :any, big_sur:       "b367a1ac2118e2bf146d4efd53f5c7b3870b1f0e123ebfc072edf3e1c7eee8d6"
-    sha256 cellar: :any, catalina:      "34d57545ff116ecf21f8e6f8695a6a20ac8f1fe90439be0f166420d4623b0050"
-    sha256 cellar: :any, mojave:        "aa701707e57b30e6bba5e9f4b28993e7393d43f471994a46572daaee6d678a55"
-    sha256 cellar: :any, high_sierra:   "6862527d7b86b6940a38f9fb189085d80b6ea67ee80adc2794e550999e8cc86c"
+    sha256 cellar: :any, arm64_monterey: "a42443e10af16bb89c45e2ebed7735f8a5693219e00964a6a8599cf105e4f289"
+    sha256 cellar: :any, arm64_big_sur:  "0e7132d3e408cb5d9bbff6e8f6e93bc6460ebbb4f3e6f365d8cb331edee9435a"
+    sha256 cellar: :any, monterey:       "9f4a28bef624c621d498d6f0c8dc1c0193735ab5f63b60373a9969dba9736c34"
+    sha256 cellar: :any, big_sur:        "b367a1ac2118e2bf146d4efd53f5c7b3870b1f0e123ebfc072edf3e1c7eee8d6"
+    sha256 cellar: :any, catalina:       "34d57545ff116ecf21f8e6f8695a6a20ac8f1fe90439be0f166420d4623b0050"
+    sha256 cellar: :any, mojave:         "aa701707e57b30e6bba5e9f4b28993e7393d43f471994a46572daaee6d678a55"
+    sha256 cellar: :any, high_sierra:    "6862527d7b86b6940a38f9fb189085d80b6ea67ee80adc2794e550999e8cc86c"
+    sha256               x86_64_linux:   "6e82f4383e3a88e158ad287109440ad81b8298efb14045efbc33b892a10482dc"
   end
 
   depends_on "pkg-config" => :build
