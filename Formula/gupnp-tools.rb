@@ -1,8 +1,8 @@
 class GupnpTools < Formula
   desc "Free replacements of Intel's UPnP tools"
   homepage "https://wiki.gnome.org/GUPnP/"
-  url "https://download.gnome.org/sources/gupnp-tools/0.10/gupnp-tools-0.10.2.tar.xz"
-  sha256 "6de49ef4b375b8a164f74b766168b1184e0d28196b6b07a4f5341f08dfd85d6c"
+  url "https://download.gnome.org/sources/gupnp-tools/0.10/gupnp-tools-0.10.3.tar.xz"
+  sha256 "457f4d923935b078415cd2ba88d78db60079b725926b7ee106e4565efe3204de"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.0-or-later"]
 
   bottle do
