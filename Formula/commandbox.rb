@@ -11,7 +11,7 @@ class Commandbox < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "dac1ff6b032ed8e230bd706ee6d260914a5f66925264e60e5706e298154a7952"
+    sha256 cellar: :any_skip_relocation, all: "16a80454d87d885fd04543ccf315ac60526d694909a9bc235017f510bcd74008"
   end
 
   # not yet compatible with Java 17 on ARM
