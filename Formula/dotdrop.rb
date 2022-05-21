@@ -16,6 +16,7 @@ class Dotdrop < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "586a4f78c111380c8302ed0099c2009f90bc17c467a80d923dcf9726cf9d72ff"
   end
 
+  depends_on "libmagic"
   depends_on "python@3.10"
 
   resource "docopt" do
