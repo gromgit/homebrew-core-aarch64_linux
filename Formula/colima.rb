@@ -18,6 +18,7 @@ class Colima < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "eb0f075e0a2a10d623f616a1dda562b3f9fdbbeddada7440bc0fbdbdc21042c3"
     sha256 cellar: :any_skip_relocation, big_sur:        "d11f233ee38a3d7fbd08244425adbf00385b8fda4ef9f21a56bc27cf3854fe88"
     sha256 cellar: :any_skip_relocation, catalina:       "7a2c9b9bc3bf2c18e28650b16dd7f6b68ebb52186513d07a67de7b01ef16a255"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7625665511379d4b7f8c1bf06f9bb1cdefb5a75eadf9c9fc496bc3250bf79665"
   end
 
   depends_on "go" => :build
