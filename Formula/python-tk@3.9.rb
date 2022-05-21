@@ -10,12 +10,12 @@ class PythonTkAT39 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "f2a521b5ec62ef1e7e1c511b273fb1dc986c806c09195a01aea886c230ea3319"
-    sha256 cellar: :any, arm64_big_sur:  "efa108beb40cb7c780e43fe187a07122eb861d585311e211f873db4b7a006638"
-    sha256 cellar: :any, monterey:       "2437b01a2b1e4e70bffd7464bf7a5f4bb234114251fd873c804e3bdcd951f182"
-    sha256 cellar: :any, big_sur:        "4c615a7866b9b48d9b44e7758dae8139fa15795bbad1488f75a5bfffd013d10b"
-    sha256 cellar: :any, catalina:       "c3b5a2085a4cfe74bef1cd9facf0a6c5611eba927be9ba3161f7e10648a00420"
-    sha256               x86_64_linux:   "f905431bf679bce1ead237d759461c2350b2cb01231e374d3d0d0d025741e10b"
+    sha256 cellar: :any, arm64_monterey: "c8db074cc234c9e741340bed4f4778acc53d95ec29e41fa44628b05fbbbada1c"
+    sha256 cellar: :any, arm64_big_sur:  "f3092fdad2f1b38cbe9bcb2e6e7006a97a87dae28093170d7118a97bddb62ec1"
+    sha256 cellar: :any, monterey:       "44e117a901b6ac21405548aaee24b0cc5b9ded59ca73ffa33a631525348c6611"
+    sha256 cellar: :any, big_sur:        "09b0363a026fe863ca904dbee095505aa55ba302ff8764c5c49938ff6c15467c"
+    sha256 cellar: :any, catalina:       "4f3561d8c98d1536b6854273db9b666d0101dc889c18a021460fc20c536b3568"
+    sha256               x86_64_linux:   "3901b096d0d66fcd4655544b38bdb446bd1b285ff839a118204af51454f7799b"
   end
 
   depends_on "python@3.9"
