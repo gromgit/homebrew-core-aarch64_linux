@@ -9,7 +9,7 @@ class AmmoniteRepl < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "4eb3cb5cafc3fbb6bb7bcea33ffcaa5fc92e8a702531106f98718a2bdf87c51a"
+    sha256 cellar: :any_skip_relocation, all: "ab1a9252e52a095340ca483c9987d6f7bb121c918eefaa974b1d47429e6f0072"
   end
 
   depends_on "openjdk"
