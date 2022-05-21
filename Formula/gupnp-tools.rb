@@ -6,12 +6,12 @@ class GupnpTools < Formula
   license all_of: ["GPL-2.0-or-later", "LGPL-2.0-or-later"]
 
   bottle do
-    sha256 arm64_monterey: "60c27e301bcaba5c95b491b9865db6b453a92e8a403f0d4897b6fe16a10689aa"
-    sha256 arm64_big_sur:  "8418c2570591b15a49305251ef6e56a78def7ed72f848f1bd02a303e8416e6e3"
-    sha256 monterey:       "743c63f60784485413f15bf30cbd0a6164ce4f463dab22a2cbb3d5abb8241771"
-    sha256 big_sur:        "512b29e2e56968496991b3ba51952e21bf47353caa4625aceae382969f78047b"
-    sha256 catalina:       "2da164d05b713d158b8e537ee77cbd32546bef71223c23f067205b8e9c750fc0"
-    sha256 x86_64_linux:   "a131f92a504507638f37272d73bfc5d0e546dab25aa2664507e7b1a09bbe7517"
+    sha256 arm64_monterey: "4a8eeaa71391a753f942f64f84a8f025b513e0252c773f7e819516323dfa7be9"
+    sha256 arm64_big_sur:  "4a89ac625c324da31a85f5c00a109dd40074da7546219596ed57ec640950f6f2"
+    sha256 monterey:       "01c141f24a86702b11699b6e4bd0544b0e0ecbc3a4bc5e8936603bcf383df8b0"
+    sha256 big_sur:        "1c0669b9521ee028984176288ebe98da99f05092da4e887d286317e39a9b1df4"
+    sha256 catalina:       "745c99c44c7aab8b7c609ee679d4867cda900468759ce3abbb2624222649af2e"
+    sha256 x86_64_linux:   "002c5f55aa4ac266d215a73ae4336dcab858f3aea5da1977b5c77e532d3699b7"
   end
 
   depends_on "meson" => :build
