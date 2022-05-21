@@ -13,13 +13,12 @@ class Gabedit < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_big_sur: "0ee75766dad966a60b38b8a7f5abf71a134e808192c60bc41d55f847cafd4579"
-    sha256 cellar: :any, big_sur:       "ec85ca37b2fce63ac9064364a740fef98389adb8729a6cdb1d2b969c8faff151"
-    sha256 cellar: :any, catalina:      "af6b9870f2b34921313f3f38329a507e450462bf74055880f8c572e153c78932"
-    sha256 cellar: :any, mojave:        "c8bd86798356203a2e554310149b51299c2221827a030fd74763c9237996fc9f"
-    sha256 cellar: :any, high_sierra:   "83b205bd7a01eb782a9346f048c3c2e217ba4dc425f620853a4da066563e6b5c"
-    sha256 cellar: :any, sierra:        "72d3d9bda815ffda49197241c46139686fbc0a4b2c9aeab2dce258573e5ea17b"
+    sha256 cellar: :any,                 arm64_monterey: "c2f02dce516ef80da80875e3e1326a9e9c989e8c1f029317e8d0c9375cbd548b"
+    sha256 cellar: :any,                 arm64_big_sur:  "5185932b990ba144b26dcae3696d27f8d2b4ecf240c9cac54e53aff6dfe4b127"
+    sha256 cellar: :any,                 monterey:       "b89b7e33d371e36ed8ec359a56c5fdb86613f2b5239b3c08d3e098bea38f8de2"
+    sha256 cellar: :any,                 big_sur:        "5a911e86df1a48febaaf8840303bfeb185e458024fefeb38e09fa22176413fec"
+    sha256 cellar: :any,                 catalina:       "da7c3e7a62b1f57f16ffed4423849f03603b3183eea979e2ac5ffd42341ba55d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "66a31097edc926ea0029acfb0221368e3d25382cb69cb542123073c65e46aaa0"
   end
 
   depends_on "pkg-config" => :build
