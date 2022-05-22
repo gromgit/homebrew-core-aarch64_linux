@@ -9,13 +9,12 @@ class CfnFlip < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "62ce1d4aaafd2b6c0baf9e899baf1354ae375e8810fb119e0f33e59d98dd42dd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c30e20ba1e20a93f6c4e0cb15b76f2c7cbd9cf65d0bc4865d933d3a6c8d16aa4"
-    sha256 cellar: :any_skip_relocation, monterey:       "dde77b69e0bce0d7e720dbeb50ecca04adbba5c7b20dec92f07dbb27b07c379a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2fc754ceec0d6bd7964c67c025dd6194396b3c5a8b7e857cffceb80d1d540869"
-    sha256 cellar: :any_skip_relocation, catalina:       "173f26ac0f8cdd2e87e3555dbbab76c30b674b949a07bf27b5b8fe6ffbb406d7"
-    sha256 cellar: :any_skip_relocation, mojave:         "49d83ff2732db641922de273119a56b99d286ef95b489a96a06cd509b004c65d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1956e8bde147547f9b1812bf32964d1f22dd7c512fca7b0ba23c4cadaad31cb4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "75a83673127fec043584cb8f92c7526eef72475d7f3502568ba48f190e73f82f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c35c36d9db398cb2685e977f6367fd45f9cef1b86284a6b42d56ee81a7a24acd"
+    sha256 cellar: :any_skip_relocation, monterey:       "ecb3dba5049db0bd732cdb472aa2afda1ec8293f0bbcbdee4a549d1b578895b6"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2f728b55aa81f3607d306f7d971fc3ef3869705a951eecdf7fa9835947d776a5"
+    sha256 cellar: :any_skip_relocation, catalina:       "6d22b33221912b856ce5e91c2735a9d49c87135a9dee43e41382689880ea6124"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0cbebefb06eb1cf524a75a605d36d98d1b7435f2bf116ba9d40e78d743918f3b"
   end
 
   depends_on "python@3.10"
