@@ -10,12 +10,12 @@ class Lldpd < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "95fd094817acf4cf94f42e5e80c30d3dd397a6e7529ea4ac286c6434ec7e16be"
-    sha256 arm64_big_sur:  "d9d390a4404acff3d2d13a9dbdbd412833534f33447f6e0ec0283917abc6b261"
-    sha256 monterey:       "3817d0b551c350cec5db423aaa6cf05901ea5dd9a417d71692c9bc25c183c337"
-    sha256 big_sur:        "4c2dba23fc7245e3b5988feedfe59032f7eed33dc248cbfdc70d0bb300afd035"
-    sha256 catalina:       "20caa1840ab87f99001b351c9d7aea2bb876880970c437eca9850c7a6e9bcf5d"
-    sha256 x86_64_linux:   "380bb78d5ab7308637e07d68ea60018f75af59c172f5fdf8b21e6f0f82c958fa"
+    sha256 arm64_monterey: "e38dc7af689d6ba5d788b72dd80a3951e677f6dae8e19d1f19474e94a00b1874"
+    sha256 arm64_big_sur:  "2f7517a24567bedb8e41d679a598036813ac65ef9e564cc6aadcd413d124eafd"
+    sha256 monterey:       "0cd69aa60c108adec0bb314151ffc795dbad90d221e2400e7a1f51f62dc1cbe0"
+    sha256 big_sur:        "b9c878c316335861fa15cbd88b0e441a38f4c63fcca72fb447e173080c1c064b"
+    sha256 catalina:       "b58ef47b12ee5c6c4f5d920052e0bbedf6d39f9b31d62f2cbf2feae7a4eefd52"
+    sha256 x86_64_linux:   "ccaf742b1dc9107109c3dcaf0c600383f4fa6035840e06bb118a313b8b669337"
   end
 
   depends_on "pkg-config" => :build
