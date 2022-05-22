@@ -1,8 +1,8 @@
 class Hexyl < Formula
   desc "Command-line hex viewer"
   homepage "https://github.com/sharkdp/hexyl"
-  url "https://github.com/sharkdp/hexyl/archive/v0.9.0.tar.gz"
-  sha256 "73f0dc1be1eaa1a34e3280bc1eeb4f86f34b024205fc7bf3c87d5a0bc4021a6a"
+  url "https://github.com/sharkdp/hexyl/archive/v0.10.0.tar.gz"
+  sha256 "5821c0aa5fdda9e84399a5f92dbab53be2dbbcd9a7d4c81166c0b224a38624f8"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/sharkdp/hexyl.git", branch: "master"
 
