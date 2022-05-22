@@ -15,13 +15,12 @@ class Kpcli < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "aea59c0eddc9fa427b8626612f82ea57cafd8c9b5a9ab3a0d0545b60f9097f09"
-    sha256 cellar: :any,                 arm64_big_sur:  "793a7e8ce3bf2a0beae2b0a51b14e3915df7f8ba05f20b4bf26c5ed3dba11e98"
-    sha256 cellar: :any,                 monterey:       "c79ae0ade5822f60da1daf6bee7efb2b97e42cb6dedab8c99d2a9fc12781cb1f"
-    sha256 cellar: :any,                 big_sur:        "8431834a984e31a2bb567913b8bd82ec97e616879f058c10e1b0af77fc9528e8"
-    sha256 cellar: :any,                 catalina:       "ef0dcac2509419af4f99407cd40d7072a44d53472cb692afa49bae06bb91fb71"
-    sha256 cellar: :any,                 mojave:         "7635208158e7c7a7dd1e7a4e28d51d2c836d6e2bd9f6c329c265cebdf4b69939"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8a340307dd0234be2d5db82bfb5a949a5547fd2a83b239766c535aef2237e195"
+    sha256 cellar: :any,                 arm64_monterey: "fb2334f285e2e66f31bf4cd5d7087fa09fd7d98bb163854bf376a8e51f509926"
+    sha256 cellar: :any,                 arm64_big_sur:  "9b87bc1033d73c01bf5f72d05c9647d51b4f814f1f0ab6c685b570d795be50df"
+    sha256 cellar: :any,                 monterey:       "d23ea3b4ac917951959fde61c4d923e79f47ee031ae86cba5c3e624cc667cc84"
+    sha256 cellar: :any,                 big_sur:        "f6b94c8937a6827ed804d66412fb4e2c1cf4d791c902a8a4ba3c73714b92fcc9"
+    sha256 cellar: :any,                 catalina:       "286c50adf94e56ef0e71fe440c0bc24f9f4b0e7f7f41b4a61c445e723e3b297a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ae9172060c3823a69b5dca9fe83eef8ae7a0c0f978d26821f3961ed418095b4a"
   end
 
   depends_on "readline"
