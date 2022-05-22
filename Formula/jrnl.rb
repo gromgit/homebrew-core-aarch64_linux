@@ -9,12 +9,12 @@ class Jrnl < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "9ac928401a032104bad0d03251a4c97f423ccc6861b3bb1dbf49d1b66f806d52"
-    sha256 cellar: :any,                 arm64_big_sur:  "bc8385484aa6a276e777b58612dcfd26e9c6c041594d1d17050d780c27c65aa7"
-    sha256 cellar: :any,                 monterey:       "e834157be730a45495e69777caa048dedcb4c13e4a3170d1f4db2f23dc6dad6f"
-    sha256 cellar: :any,                 big_sur:        "36760d4350bb83f5206b01f80efa8203acea80da72e50810bcbe6bbabc0d6bad"
-    sha256 cellar: :any,                 catalina:       "5e846140f6d4e4e1295b9be8c1aeb18b32c6adc9c8aff53bcc253175ef4514b3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1841438d634c5e77d9c3e36af2789fdcf7e7486818f36016b8c7daa494930ed5"
+    sha256 cellar: :any,                 arm64_monterey: "7c7063931813b3a94a85df1189505e594fad84f033fb768bc8bac8d740b76d2e"
+    sha256 cellar: :any,                 arm64_big_sur:  "bcfeab32405f751366ea962c7cd6c46026ffc31b51b9a5c9128b5cb3b0684baa"
+    sha256 cellar: :any,                 monterey:       "9f9b041f7d96c020ae5d98c20be4be318979a8c756df84db62ccde7c02ce4676"
+    sha256 cellar: :any,                 big_sur:        "c570c69f9d96c426f13e38b4e8f7f2ee0e053335caab594aaec5301328c44f25"
+    sha256 cellar: :any,                 catalina:       "946299a70b6b0a134f8540a0e41ddb8d7b629cc10260c331857d6643c38dab6b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d2f8faecf4e7a4c5977bacee858b6348a2e5183c1b8d3a51df1665d27425f518"
   end
 
   depends_on "rust" => :build
