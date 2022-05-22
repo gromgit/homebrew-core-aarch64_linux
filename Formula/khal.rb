@@ -10,13 +10,12 @@ class Khal < Formula
   head "https://github.com/pimutils/khal.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "898dc596dee4d352dfd3ab4bfd2cd5302dcaad46cc5328e8a966972c71d23be8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e4df079afe450b880f743afbd5d3916308bde8acbc4f6ad7c8c3363714d59e61"
-    sha256 cellar: :any_skip_relocation, monterey:       "e1ba60bddb5155b09728eba602543c7802caf9d9b783a05241e2328ff47c949c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "70fc698ac572f68d7b472a3fb1c8f89670bc8ea2da0c05ef9201a3ea529fef93"
-    sha256 cellar: :any_skip_relocation, catalina:       "b00aa7ffdd6719cdf7cb7e1e51c6d680c15b2a5f75b6f5dc186d8a67e820fd90"
-    sha256 cellar: :any_skip_relocation, mojave:         "f2727ec5fe1d9c5c67a5502ddfcf090c44cc3f3e1af17c3c6fa2d118a4fee8c7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ea3acb687db562fe301f40968b1325408f37de599339d634bf3c7b5620e17392"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1ba6c898010dc380bc7e46af247f97a1d36d24ef424a59c11a6cb0989d4778e9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dca58b32e4a94ed3fe138291b4d4c7bd331afb98efa32502fe017f863f639133"
+    sha256 cellar: :any_skip_relocation, monterey:       "a3240e224f90f402c25e5618118e7b81ed697651a3d45b6d50b4d50a84121379"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f89fa72f9d9f05905808539f0f3942e714898f3286ddee7fbacfcd0a0d0ad410"
+    sha256 cellar: :any_skip_relocation, catalina:       "fc7b2c5f1acc16f1d12902d7323a61f2c0a2969a6aec985bc1495ae0cb946e47"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bb0de9dfbdbbf80435b3a32da5467cba1d438d44f27a6d737c0bd7897a439c46"
   end
 
   depends_on "python@3.10"
