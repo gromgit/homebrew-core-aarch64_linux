@@ -14,12 +14,12 @@ class Asciidoc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c481476e831d0af1a2cb5f7bd6fc0d1be7528e7e434684db292ec5393159cdc7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c481476e831d0af1a2cb5f7bd6fc0d1be7528e7e434684db292ec5393159cdc7"
-    sha256 cellar: :any_skip_relocation, monterey:       "3c0862fcbfa7be68166ca49e5308a0bd90ea7571d1b730bdac4e3268631b6076"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3c0862fcbfa7be68166ca49e5308a0bd90ea7571d1b730bdac4e3268631b6076"
-    sha256 cellar: :any_skip_relocation, catalina:       "3c0862fcbfa7be68166ca49e5308a0bd90ea7571d1b730bdac4e3268631b6076"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5356dad49d65b08d80f6c643bcb4a89bbca0f79908b791de035f93b6a0b8732b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fe3204e432010e16e1d4d6d3d79f132478eea0ef8c7404532bb8a639f7280cf6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fe3204e432010e16e1d4d6d3d79f132478eea0ef8c7404532bb8a639f7280cf6"
+    sha256 cellar: :any_skip_relocation, monterey:       "b132c3cc85f2fa12e693fc93fe640c0a3676a85747687a5917a11af7821c8667"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b132c3cc85f2fa12e693fc93fe640c0a3676a85747687a5917a11af7821c8667"
+    sha256 cellar: :any_skip_relocation, catalina:       "b132c3cc85f2fa12e693fc93fe640c0a3676a85747687a5917a11af7821c8667"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a4d01353c3c3b4861f06cecea12eb77bfe261e32e19a784c6df6e209170b1293"
   end
 
   depends_on "docbook"
