@@ -6,12 +6,12 @@ class Odpi < Formula
   license any_of: ["Apache-2.0", "UPL-1.0"]
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "7244b4b1b2491a0bca077aa4d2bb530df059206e56d1a5d6103983f9e88edaba"
-    sha256 cellar: :any,                 arm64_big_sur:  "8315751a4d068e761b9710daa4251edd61c01752c021fc93045f02083e5dec14"
-    sha256 cellar: :any,                 monterey:       "a6efa2963f2a11b1316f7f883cdab0ba8a99b0a1e1b5324c9c960094de152e85"
-    sha256 cellar: :any,                 big_sur:        "7dc8341678ef3c3b5e8e3ec798b50aab4fe5f9330b57931c55a25e8f6c457ca5"
-    sha256 cellar: :any,                 catalina:       "05db0489fa10e27600c35f22669e3090b3bf17ca00cd7c97966f62e1d314c7d0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1b415bbfb0f8b13d559f2b5f2119a96e24d58d1a35d8f2ecde4ca76169d74028"
+    sha256 cellar: :any,                 arm64_monterey: "5a5678b3ab51f94facb76d255e272f983efae0808e144557773660ade2603e0b"
+    sha256 cellar: :any,                 arm64_big_sur:  "651650025a1cae11f3bc5df463c3998029379104d52e2b878f95203550a90aed"
+    sha256 cellar: :any,                 monterey:       "b10b31dcebb72aa5952d874521cc7c214ccf82c964c8019e9ffb116840410f94"
+    sha256 cellar: :any,                 big_sur:        "4987a9087ff2901dd4a21a08bce99a1c7908e1bdb03ef3dd45e0df8779e12eb1"
+    sha256 cellar: :any,                 catalina:       "3a4f46b15d2171344684e6d2781d860544e5d8e802f81799cbf057617eb1f556"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "87dbcb17530adaebade1a394035613ec9e3239f2f314483b5e1660a5f5c9d914"
   end
 
   def install
