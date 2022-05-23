@@ -6,6 +6,15 @@ class Gokart < Formula
   license "Apache-2.0"
   head "https://github.com/praetorian-inc/gokart.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ca65ab68b72d0bbd7c054bdf86fe30338c1cd479f8eb4c11c2c118d3dac2483f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "146157bf16be2215dc0596459fd413a8d52a6179f4c5424f30af8362042cf999"
+    sha256 cellar: :any_skip_relocation, monterey:       "af854ceaf46f62cf2097f4b4f1959e434b8975848bb6d034242f4fa21ec7727d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8b3ae2bf1fb83d1bc71952fc6da682c05b8da59134907f6e7386327f076d74e9"
+    sha256 cellar: :any_skip_relocation, catalina:       "c17b7de4bd2a3c6741d99cb395ee7ab9536977d14ba6881c7128a796255d87a9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b48d4fc955daaa16a88e57f71a561f7f35458739aac7c54186558e355bb8ab4d"
+  end
+
   depends_on "go" => [:build, :test]
 
   def install
