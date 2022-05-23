@@ -7,6 +7,15 @@ class Cxgo < Formula
   license "MIT"
   head "https://github.com/gotranspile/cxgo.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4e14d977150e9df2e2e8be57c78c6be177e50ad9e20eaa45c0c689eb73a3f716"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5a1b8011d4e7108aa888e098a1306852822451c61805ec702df4e3f23d639c75"
+    sha256 cellar: :any_skip_relocation, monterey:       "f44b29dacd917ac629d7ce1076b40d89db4674314a1202226e0b23a3a2922255"
+    sha256 cellar: :any_skip_relocation, big_sur:        "33f9953758f537e1d3aea608faa49e78eac54b831eff806a0e16abdbf2c751e0"
+    sha256 cellar: :any_skip_relocation, catalina:       "748ba73ec9d21111f3ce5ecb63f1afa86e06e904de76f30b66c6bd00a9505365"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b15fcae03d2d89b5b536a0fe9ea9d5d6d9a2ed56379998354263747389206282"
+  end
+
   depends_on "go" => :build
 
   def install
