@@ -5,8 +5,8 @@ class Emscripten < Formula
   homepage "https://emscripten.org/"
   # TODO: Remove from versioned dependency conflict allowlist when `python`
   #       symlink is migrated to `python@3.10`.
-  url "https://github.com/emscripten-core/emscripten/archive/3.1.10.tar.gz"
-  sha256 "b14a19965ef7cd0324e07001ad8699276e42c1a2d2ee42c3a08b09df70f1683e"
+  url "https://github.com/emscripten-core/emscripten/archive/3.1.11.tar.gz"
+  sha256 "b8179154bb64b5e563c0e2f927ab4e104d154666bd42f4bcb280d1096892ea52"
   license all_of: [
     "Apache-2.0", # binaryen
     "Apache-2.0" => { with: "LLVM-exception" }, # llvm
@@ -50,7 +50,7 @@ class Emscripten < Formula
   # See llvm resource below for instructions on how to update this.
   resource "binaryen" do
     url "https://github.com/WebAssembly/binaryen.git",
-        revision: "f124a11ca3a40c87ab6aa4498037449584689be9"
+        revision: "fa3ffd0c2697fde7705495b52b139f7939f97925"
   end
 
   # emscripten needs argument '-fignore-exceptions', which is only available in llvm >= 12
@@ -61,7 +61,7 @@ class Emscripten < Formula
   # Then use the listed llvm_project_revision for the resource below.
   resource "llvm" do
     url "https://github.com/llvm/llvm-project.git",
-        revision: "8bc29d14273b05b05d5a56e34c07948dc2c770d3"
+        revision: "295d032762ad284068c72cc1904680a4db5e80d3"
   end
 
   def install
