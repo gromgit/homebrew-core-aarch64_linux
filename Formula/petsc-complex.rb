@@ -10,12 +10,12 @@ class PetscComplex < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "66f2d3c4fcb4b0c288a9e1a0a4994617e6a860e7e9d839b594c9354d776f0686"
-    sha256 arm64_big_sur:  "68232f6457bad61079e3e39660d904a1985c2f594397a2157074e202f47cb236"
-    sha256 monterey:       "a4f4e29bb5cfed249eafb734178723b46bdb844badb46a4e46745c6a33b3ace6"
-    sha256 big_sur:        "3726de3542182e8aade2497a67194afcc605a19d945ada3aaf37cce08b18a9ea"
-    sha256 catalina:       "6d60454d85def8764899a23d0a30399afce5c650d2bc082c0b5c8aabd2f74f39"
-    sha256 x86_64_linux:   "c7ac9e6f30556c348d67cebda53a69e3365eab9d457e7379484c6de8e55cc96c"
+    sha256 arm64_monterey: "a338dfa451742bbf78886ef38079e6b9057af4e3f2ec17731d71e2a473e09008"
+    sha256 arm64_big_sur:  "8a8b53cb279da895c00fdeb4d7d65ca0ba51008554cdc4424114772a58b668a6"
+    sha256 monterey:       "0eade73e085d7f80f337896459a57a38d8b2f6a58a9baa5b327a5641800fc266"
+    sha256 big_sur:        "fb10650c1bfd7fdcb632ba43911ad8184ed6ca036381bcb123d45f5b05ef050a"
+    sha256 catalina:       "a6bed7dea7a517378ab1e71a1ede781279fd84b3a83d4a4148eb79a82322f801"
+    sha256 x86_64_linux:   "402ce9ac7abd721fb916d47d72d0f619f09ec99f1a7915ab9dd9e77158f213f4"
   end
 
   depends_on "hdf5"
