@@ -15,11 +15,13 @@ class Ski < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "80da0faf28f34d0440e89fa1761ad91e46be161925f42d6f3cfe6e2f74e718a3"
-    sha256 cellar: :any_skip_relocation, big_sur:       "6032ccdfd57a414c4c7336aee66c03416b549ffba4aa9de2e5f456e7666b27ae"
-    sha256 cellar: :any_skip_relocation, catalina:      "b647b2162475b1dccee3afe7d6d878108fc3ac97826756c355b0c8b748143253"
-    sha256 cellar: :any_skip_relocation, mojave:        "b647b2162475b1dccee3afe7d6d878108fc3ac97826756c355b0c8b748143253"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "b647b2162475b1dccee3afe7d6d878108fc3ac97826756c355b0c8b748143253"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "10b4ce4e1bb2f44a779c2f98af93b2ecaec175838aa93191c99b91836d2df8b3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "10b4ce4e1bb2f44a779c2f98af93b2ecaec175838aa93191c99b91836d2df8b3"
+    sha256 cellar: :any_skip_relocation, monterey:       "10b4ce4e1bb2f44a779c2f98af93b2ecaec175838aa93191c99b91836d2df8b3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "10b4ce4e1bb2f44a779c2f98af93b2ecaec175838aa93191c99b91836d2df8b3"
+    sha256 cellar: :any_skip_relocation, catalina:       "10b4ce4e1bb2f44a779c2f98af93b2ecaec175838aa93191c99b91836d2df8b3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a8260309ea5735112878b25d2376f53f3ee5e7a5b36d0eb0f420ded6842406ee"
   end
 
   head do
