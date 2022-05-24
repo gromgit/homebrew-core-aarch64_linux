@@ -7,7 +7,12 @@ class ImessageRuby < Formula
   head "https://github.com/linjunpop/imessage.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "7c538ac24ec3ce437d868267582bd68aaa500eeb5a9bdbd3d0d80398b4bab19d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a05553e529ee3f7d2a212033b5353e1bae2534a7651e0b4ac4ac66c2301c6f96"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "97031cd42ff2a4338b973493629d314f1ad1e7a79ca7e912503f68585f5bfc61"
+    sha256 cellar: :any_skip_relocation, monterey:       "a05553e529ee3f7d2a212033b5353e1bae2534a7651e0b4ac4ac66c2301c6f96"
+    sha256 cellar: :any_skip_relocation, big_sur:        "97031cd42ff2a4338b973493629d314f1ad1e7a79ca7e912503f68585f5bfc61"
+    sha256 cellar: :any_skip_relocation, catalina:       "97031cd42ff2a4338b973493629d314f1ad1e7a79ca7e912503f68585f5bfc61"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "584a4e42785d258568915c287d02ea037c685bd577812c66844350425fea5df3"
   end
 
   uses_from_macos "ruby"
