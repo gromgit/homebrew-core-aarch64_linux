@@ -9,12 +9,12 @@ class Rure < Formula
   ]
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "78ce91dfd749f3f6f333155546289662b891b128146cbf8825b4a2f8df52b92d"
-    sha256 cellar: :any,                 arm64_big_sur:  "6ba4ed3e1ed9f7861419485860652042cce35b2d86735fc0f683e3e0bc069f12"
-    sha256 cellar: :any,                 monterey:       "8c25b6e5b82ff41468d769fbc4df112166590982c9570bddf5a48a146be313a1"
-    sha256 cellar: :any,                 big_sur:        "99794c5a4bd2d1d88ffdc8d3895c529c55d7375ece0b32b17686e00e15d7703b"
-    sha256 cellar: :any,                 catalina:       "f04aad7ad7d4749aa4cba973a62fc39eafd70cee664b17b67aa89848ce6ce0c8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "986af4f9ae078011f903075e6aaebdbd5fadf09bb178f50009fc8c3d38b1b827"
+    sha256 cellar: :any,                 arm64_monterey: "828f757a36e1c845ff33754ecd24adba8686d8dd17ba7aff0709eed3a45cb46f"
+    sha256 cellar: :any,                 arm64_big_sur:  "bc40d2d4525298789f79723e78088a691dd639ac08f0d4b89bb4681402d30407"
+    sha256 cellar: :any,                 monterey:       "fdcbab55c770d63925b3b2502d3e42d927e508b2d0a0d47f1b857f31b940cc6b"
+    sha256 cellar: :any,                 big_sur:        "ee6d27b55537ab654b2ea4aaea1ead734403fc2f533ea19abfac5e213f03fcad"
+    sha256 cellar: :any,                 catalina:       "8a1efd1d59ad55e5669473281ef34f6ffed2860d293dc0e57823893723dc360a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "db4c23351fdfe8369d0bd695358bc2f003ac858bde07700b07ccabeef7cb69ae"
   end
 
   depends_on "rust" => :build
