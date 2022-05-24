@@ -19,6 +19,7 @@ class Csound < Formula
     sha256 monterey:       "78443a71a60eebea86219a5bfd612dc2b9fb6d4c70621b4ae83fc192e42b462a"
     sha256 big_sur:        "8b5d329857d11f3cd4fb193c212d112d16dd328433ae6dd4c7a0218822b06ec3"
     sha256 catalina:       "0b953aee205007ead4e9e69a2bbcb572b5f2d3fbf1b22e8539ca007c8628dab1"
+    sha256 x86_64_linux:   "d4bd60ac72dd39fbe4c20833d2455aeda2ef701d7fe82c4acda7dec079ee1aa5"
   end
 
   depends_on "asio" => :build
