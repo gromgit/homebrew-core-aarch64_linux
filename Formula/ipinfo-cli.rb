@@ -11,12 +11,12 @@ class IpinfoCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8c5c055181e59a39b61d5a8c76533348f0efc92ead6a7b3e48df79e0412f2c72"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ac0514f75e0c1b66fc9ad7d63d073931a3cea775b0a45a11bb42a065c1263a40"
-    sha256 cellar: :any_skip_relocation, monterey:       "28fb7b3985c6438047f1c5a79152b0d8260703d936b0e104fdde19c1d529e14c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "40150706085bb0b225a4ce44cb1f58dada65afbb0c097680f95d33e562dc0546"
-    sha256 cellar: :any_skip_relocation, catalina:       "f1890bd27433d2f80d7ac79302de26ed6d84d94615a756c23d3da75a19f6a5e0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8c049f7304553fdddb1eb23cd98dfbf463b66db75c497ab308f5a3d1489515b9"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "90d8433c756a9647b82934de232d0206c84fae2e349e6ee9833b4b94a0ca2158"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7e42125fe8b521947f7db9bcd075653d0e3b1467f758db9ef224e41e504f9cc1"
+    sha256 cellar: :any_skip_relocation, monterey:       "5c9952a5ca493a208ee397014ab3fedf69b8c4c7f8a007646b1bcefc2d8d9d78"
+    sha256 cellar: :any_skip_relocation, big_sur:        "99bc7ff9277cf348b434ef3ce1986eed3198c072f05b0d4cffc64f7eb9ea6bf7"
+    sha256 cellar: :any_skip_relocation, catalina:       "18ec21b78070125dea73790faa93a514cf7d1bae5af264462479142a9a83e0cb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "88574a542fa8697f06e1e33459876c95faed96885d63fc5f5c8107024c5c6164"
   end
 
   depends_on "go" => :build
