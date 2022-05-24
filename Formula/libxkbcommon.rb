@@ -12,12 +12,12 @@ class Libxkbcommon < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "a75c6677a5c45eabcd73867086dff4c704900ac9cf6ce8e26dd1be5a6ff1157a"
-    sha256 arm64_big_sur:  "4de98d422442bc15aaf7b0e78f2c4312c1ae73a12eb48e87c051b0cffc5db57c"
-    sha256 monterey:       "c6b33b38933fc09c5b8759976f24ce1c556cd56a62e8e1504173016e1ff665f5"
-    sha256 big_sur:        "8c90166b1335ba095d76506b61a9cdfb97e67b9a603da2654fcca8328a2429a6"
-    sha256 catalina:       "ac9c4b144d43a06ea024febda54a957490b0d985156adeee86fc4358288ade84"
-    sha256 x86_64_linux:   "a691f0e653cae432d021079871bbe82589b9614248973b81191e1c5ab93845ba"
+    sha256 arm64_monterey: "8f11c9d436064406b0c4cc5e8bc273561993433ebb64761bd9dea036b0ffd159"
+    sha256 arm64_big_sur:  "e6a0c1aee452be0f17cd42f440daa9a5fa81cca5e1f07136de35480202755770"
+    sha256 monterey:       "d3f1e8583b9a4519c4e0a166f7da02f768362059e1baa6ea4921028d40b1a2b0"
+    sha256 big_sur:        "d085ec9717e7916089651d269602858839f15a7a284d59f880a3b116db2aa491"
+    sha256 catalina:       "bfb9c00bd0398afa355e9c5b22799e9bf19f08f51b4f739b008067c660c9212c"
+    sha256 x86_64_linux:   "11a40e4268f7366aaf314e3a1aead9860331a4ebd50667f40b442ea159071849"
   end
 
   depends_on "bison" => :build
