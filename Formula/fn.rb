@@ -1,8 +1,8 @@
 class Fn < Formula
   desc "Command-line tool for the fn project"
   homepage "https://fnproject.io"
-  url "https://github.com/fnproject/cli/archive/0.6.17.tar.gz"
-  sha256 "7fbad5f089aa083aa3d2ab891cc1754457d3a0ccad2ed1e91af40f1ac5d6a110"
+  url "https://github.com/fnproject/cli/archive/0.6.19.tar.gz"
+  sha256 "3e723259ed038cedfcefb9110ea970ceda3bab9e493afd1ba48fa24291f2779e"
   license "Apache-2.0"
   head "https://github.com/fnproject/cli.git", branch: "master"
 
@@ -39,6 +39,7 @@ class Fn < Formula
         }.to_json
 
         socket = server.accept
+        socket.gets
         socket.print "HTTP/1.1 200 OK\r\n" \
                      "Content-Length: #{response.bytesize}\r\n" \
                      "Connection: close\r\n"
