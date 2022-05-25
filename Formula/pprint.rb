@@ -6,8 +6,8 @@ class Pprint < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "c299956c83c6f1af4511db5e69cad0e678779646c40cebdd03176368510d2c58"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, all: "2bd9ae7e3fd65f467b6416bf779f79aa7bb30ab6a064a3971b4cd5fed16fd234"
   end
 
   deprecate! date: "2022-05-24", because: :repo_archived
