@@ -20,13 +20,12 @@ class Libdvdread < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "052f0ed3e5b717a51f0fad220b4db2e11790a6e2b4cd76c641d116f82d9705a2"
-    sha256 cellar: :any,                 arm64_big_sur:  "d3e2a48d9d4f4e1e39a68645094be1536cae40fa0c2c6cff7907ec408d3c4439"
-    sha256 cellar: :any,                 monterey:       "7dca89986d2f00293af0500ff31e277caf173b12c7cb102ac5c498fbe594bf3a"
-    sha256 cellar: :any,                 big_sur:        "7d0a516f36d885df836072671f8885218a1684fbab69dad9761629ed87483640"
-    sha256 cellar: :any,                 catalina:       "08b72c46e9022170d991a626a84a073bd988f99db12bc145494306fc28f33d73"
-    sha256 cellar: :any,                 mojave:         "ddd7ecdfc66b0b12b4804550aaab8939f2bbd30bcd753ac9006f3db079589515"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "40dc2e4bc0128e1468141d4b3805a4c135576101ffdcf8872c5787291b15bdd5"
+    sha256 cellar: :any,                 arm64_monterey: "7c258b5c5be30d3ee53dacd0b137d7faadb5e21e06e5cf98859e7728e91cf303"
+    sha256 cellar: :any,                 arm64_big_sur:  "e8642520b4bc06ac122e5c7e3affa0c80ed79678b09d220c1973e042aa11d30f"
+    sha256 cellar: :any,                 monterey:       "6ba400a8d928d2cd478969406000895023049c5a2257f11b6fab2791ff8b7105"
+    sha256 cellar: :any,                 big_sur:        "cd57db884506fccb0b37b4cde83db05ba9cb15cddf1092f401918ae0972ac495"
+    sha256 cellar: :any,                 catalina:       "5cd4a9df11e095e001d9d8a2a587f4701696de974b5527aea260afc9c5cc4f49"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5805295785ab4ce6aeb1bdfeb7fe1aab4946ea9df2555f2016bbc540322f9c81"
   end
 
   head do
