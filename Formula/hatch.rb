@@ -7,6 +7,15 @@ class Hatch < Formula
   sha256 "2ecdd8e3ff5fd5e9d2a49f926e7d3490a43f619fd5ed6811e36789d2ec71f0a1"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e24d12cc8f7de7182aa8695dcdb3434c00de45b23f3e4e61e391b69fc9168031"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "901c851752315685116afed83c61455300942f9e6898f723394f92a831ce576e"
+    sha256 cellar: :any_skip_relocation, monterey:       "2b9f7a535a9729c1bb15149315ab7eb9e37ef6b2a937d0b5c14dbdfe9301a8aa"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9749cfbae4f8c819089afbeacb925fba1c88f200a4c14b4286641e1bcac40c46"
+    sha256 cellar: :any_skip_relocation, catalina:       "82d333b7777a664fc9ffb3932c016c5dee6394d318cde34d3250c6565afdd745"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b649a504efd559dad3c4d9df0a16e648dda48d4aa7fb66e97b5497e719429b94"
+  end
+
   depends_on "python@3.10"
   depends_on "six"
 
