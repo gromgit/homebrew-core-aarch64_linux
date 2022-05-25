@@ -7,10 +7,12 @@ class ApacheArchiva < Formula
   license all_of: ["Apache-2.0", "GPL-2.0-only"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9f2c9b928b00301fbeb33b6d46da7b2cc99a8f23148fb90375c0b49e3d6a29db"
-    sha256 cellar: :any_skip_relocation, big_sur:       "9f2c9b928b00301fbeb33b6d46da7b2cc99a8f23148fb90375c0b49e3d6a29db"
-    sha256 cellar: :any_skip_relocation, catalina:      "9f2c9b928b00301fbeb33b6d46da7b2cc99a8f23148fb90375c0b49e3d6a29db"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c1a332b831184b3109efccc2daf714e71cad14b82cd799c15ad6a2772584167d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "26714e5d6850b4e9636407601d0c3abd7c66e010c8c7ce47ad1f3930309eedb9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "26714e5d6850b4e9636407601d0c3abd7c66e010c8c7ce47ad1f3930309eedb9"
+    sha256 cellar: :any_skip_relocation, monterey:       "26714e5d6850b4e9636407601d0c3abd7c66e010c8c7ce47ad1f3930309eedb9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "26714e5d6850b4e9636407601d0c3abd7c66e010c8c7ce47ad1f3930309eedb9"
+    sha256 cellar: :any_skip_relocation, catalina:       "26714e5d6850b4e9636407601d0c3abd7c66e010c8c7ce47ad1f3930309eedb9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0df59cf09aa5511494063569457fcc82c256b53e87005be3101455fc737b5b6c"
   end
 
   depends_on "ant" => :build
