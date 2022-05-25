@@ -6,12 +6,12 @@ class Logrotate < Formula
   license "GPL-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "01b5f400fbc9bc6c8e694b205bd625bd046d12c86f39cf1042cee15873309d27"
-    sha256 cellar: :any,                 arm64_big_sur:  "1cfa4ceedd3e7bf227a7950d865c5439666ad16e0c051f88b3771daa93bc7a47"
-    sha256 cellar: :any,                 monterey:       "8266898c6d82f2ca10fa95c40811712e6059a790674f6bcd8cc3b94825a9bab5"
-    sha256 cellar: :any,                 big_sur:        "134e05229e94e1b550472237d11983763684d23797e999442958ca481e88820e"
-    sha256 cellar: :any,                 catalina:       "ae3079d10750c31c48027a8dbf3b1b132379cf0ce8c9e7c2358421e63b9ddc70"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "36257395bf87b366af182e783176cc7cf72087113c9d5e6de63751436eeec327"
+    sha256 cellar: :any,                 arm64_monterey: "911af87337001ec3d38954d3e0d7b5bd725b1e4c9e6520f752d3867037b943d1"
+    sha256 cellar: :any,                 arm64_big_sur:  "c0abbacfd91edcfae10d2e811db6f32945a16d27f06a19fec2e9b51991099a82"
+    sha256 cellar: :any,                 monterey:       "3f2dd0191cdd96fc9ac793a978e8fcd36c390ec7f6ea5025e6bd12aeaa7d0285"
+    sha256 cellar: :any,                 big_sur:        "cac5137054b18b313f392e4b6e6c4c63f0ae76dbc9a9fa054b0bbb51bb4ddea5"
+    sha256 cellar: :any,                 catalina:       "386d465500e1750d4fcf8be93248e3229a1a70590ec3385ef82f549b9ca76354"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eadb898b459ca71b6dfb3f25bda4b2c21df73ce6b56da4f8cef3738206d00568"
   end
 
   depends_on "popt"
