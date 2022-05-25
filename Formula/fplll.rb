@@ -6,13 +6,12 @@ class Fplll < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_monterey: "c1b9a32a5c3bb69d36bcaabc02be954994327c5af0c730754d9fccb8d036990c"
-    sha256 arm64_big_sur:  "377b5606bb5c319ad73824afcc907f946a1c7c60ddb5a0e181d257fcafc5c5ce"
-    sha256 monterey:       "f76e9a6cce440bc8651b8e699067078c7673c371dd85a758909e8333ab1241bd"
-    sha256 big_sur:        "6290a0d579e8ffba1dab159d70f9e10f58d6600cad8564469fe066b24aa8f170"
-    sha256 catalina:       "bf39fa78c92642f571b4514a61ebe43c5aef39ff25d0e4de969cbf6bf323cc11"
-    sha256 mojave:         "2219fe4523fced68e1f9a8038848cf54d0588cc652229bcbf2bf03e696f7b971"
-    sha256 x86_64_linux:   "fca671625e1f741805cc846d31b03a23506180343dcbe3393cb73a61282703df"
+    sha256 arm64_monterey: "414ee65d613528dd9a06be25332d02380947f6c59dcd9748c2f37ccbc488abf8"
+    sha256 arm64_big_sur:  "0905f8ae083002a515a21e432e2791c9bedcec86d484a5a2aa6f346c97dab676"
+    sha256 monterey:       "c938c1e07f6a68c06c7067769c09fe74c1cb871b9469cb10e6f65de319629427"
+    sha256 big_sur:        "79194ecb9a976d2a2e9a706243c6228315c3b359502047126fddf9954e37ed5c"
+    sha256 catalina:       "18d1d69b5cdf78dd4df55b830c072c785c4d70e1e198c3797c5cc90438d5e17f"
+    sha256 x86_64_linux:   "ad4a0f31e4cacd074b206095aa2d6b51db3a3b344f454d7b837ecae2a1d8bcff"
   end
 
   depends_on "automake" => :build
