@@ -9,12 +9,12 @@ class OciCli < Formula
   head "https://github.com/oracle/oci-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "49b8e2f6e7f3c928f9e10543fb129fb9e095a08a9aa266c660ca0942a8d97bb4"
-    sha256 cellar: :any,                 arm64_big_sur:  "894d51afb1977f73dee3c53b885f963c2b5699516cea4b1b38aacf4b84278af3"
-    sha256 cellar: :any,                 monterey:       "69a8f0aa8eebf89f1fb14beb32b41b44e45b097c770abb69002361ea7e6e7727"
-    sha256 cellar: :any,                 big_sur:        "d756ebb1b27b4399b2d1dba61322562b0f72ed31f26a772d752d44ce0c0628be"
-    sha256 cellar: :any,                 catalina:       "20ecf59abb423e413adceabb409dfb3114f54ca9f4cf07c1449a3f9bd7f0849f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7e662a86fdcb8a9d14399f7aedb78c954ea69ffecd19f61b06764a22a0feb432"
+    sha256 cellar: :any,                 arm64_monterey: "7ad250c7fb47961827eef776af35f050106df8fb34c20e2d329117f7be24b08e"
+    sha256 cellar: :any,                 arm64_big_sur:  "99d644116f96dd6729ea8d4836ed3d293576654b9e5571c5ff5fe74d2f60de2e"
+    sha256 cellar: :any,                 monterey:       "00d3bb7fefc906fac2e188c4fc78f38d989c410c6c517e6d2aa3d81535d1608f"
+    sha256 cellar: :any,                 big_sur:        "6f0691d1b71d415031922be523eff5e01ae4b4684743c8bcf20eab5d6977363f"
+    sha256 cellar: :any,                 catalina:       "36c19491217ac5195d73f80a6aadba095bef8410f629d63a11654e1c47e17cb1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "55a6ffbdea6282e81fca842ffe375db2daa8d7abfc7acdb68cb3821f8c058058"
   end
 
   depends_on "rust" => :build
