@@ -12,12 +12,12 @@ class Arkade < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f3be0e3250eb2e73b67eff35b0709614a24e5ae3acfd20f5f3d15dea8bd0c91f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "203684c5dab4de741a6f931c69eab01b0e95c5a135c8e657cd0902b4838468af"
-    sha256 cellar: :any_skip_relocation, monterey:       "a1206ee92e76f89c26949e29418b40fa13932ff7428e4554720b347e62b6bae0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ef92e022bc52b161d8c55dec803d52a2e5f6700f894cc28d9c1a83b85a3448bc"
-    sha256 cellar: :any_skip_relocation, catalina:       "ae40d5fcbd9ae73469242a6543a94d990c28d081f25843a79f64a97d057689a4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c664580afdc5564bf0fa615052798332ebab420e7217b813bbac09ddbb652b7d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3aa495083d2ef6db19ff66adf6cd3b5721127570557779bbb61c117e9df4441f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "41d67dde296c41e5c8ae9c1204c0c8a85aa186f788c12662ca55f7a9b43e4e5c"
+    sha256 cellar: :any_skip_relocation, monterey:       "aa6a5d6b3a10b1362598d81a7c6597c93f0d4252b4ce3bc34d495415276cfa3d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b33d431a9f2fad9f6b3710a9bf6f859a01c65a6f661b4d29aa0675f9f0cc7831"
+    sha256 cellar: :any_skip_relocation, catalina:       "4d37cc53a2667908440d976dc4721608bcc6a01bb67376b53c09ab254a7b1829"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f4409c671f4ceff2ca6a015bd5d97e13d8de035f4b654aaff8051dd475899980"
   end
 
   depends_on "go" => :build
