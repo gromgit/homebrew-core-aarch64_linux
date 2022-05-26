@@ -6,10 +6,12 @@ class Akamai < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, monterey:     "356f7d8cbd9c999795ebb918fa004368596e1e9992741e3a46d7c0243cf0f16a"
-    sha256 cellar: :any_skip_relocation, big_sur:      "67beb33a60760f11cdad4e30c2a45ff85ad63de081677b5d31011692e87dd2ac"
-    sha256 cellar: :any_skip_relocation, catalina:     "2a0d8a62bf53a295697b9c9e5e6ef137507b55ffad07a6f25100a2e6134dd4a9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "d68de8020c21317cae498f11a875cb3b19ea9b1e20355940071627caeb43239f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "33741cd5535e5df83837809763c34247100839c73f967dd43a71f548284332e2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6252bf6c1f0745036c4ee99196b3023a2c80339cb7214468561a224b598c2f1f"
+    sha256 cellar: :any_skip_relocation, monterey:       "d1d3dadc00214be3d6a5abd4992fc889f181d9c60b543c424d276267cca61433"
+    sha256 cellar: :any_skip_relocation, big_sur:        "49a6874f40bc0bda258a81ff83071f0bdfe53bc9b9a6c86cf790809ac1c3dd8b"
+    sha256 cellar: :any_skip_relocation, catalina:       "91b519e5eb2342565de2543631e19e7673d27391cc775ca3277cbc77d01dadb7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fa2d43e9e604dde1814874b9db407f0a498b75e01968ad290d45529a34b71ec0"
   end
 
   depends_on "go" => [:build, :test]
