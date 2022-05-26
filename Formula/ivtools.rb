@@ -7,10 +7,12 @@ class Ivtools < Formula
   revision 2
 
   bottle do
-    sha256 monterey:     "7fbbcc675ed967dd4039ea4c6627ab5fcbd28dcd9285d4cbe02378342fc19325"
-    sha256 big_sur:      "796ce0db5e8e6b284b6d9f5c88fe5f0b526d4d99dd2b8bacdad982a289fc2fc8"
-    sha256 catalina:     "a09924498ce0017c4994551cb2f552b4be48db7820ff9794fce4e360f05d1d71"
-    sha256 x86_64_linux: "e2138a39b4536b7ea80b147df055e4d42bd4d98f9e574042d262357f07c30677"
+    sha256 arm64_monterey: "b6803a28f1c090223f625febff95451ea47e8bf952f7462745392867785f1fb0"
+    sha256 arm64_big_sur:  "98b40011c921db4d105e265aefb92496abc0488f9bd4a3fec5eac11a2cdfd6c8"
+    sha256 monterey:       "57aef06ca71bead6520f0fd99a85ffe8aa50027a499dc3d6d18465b6e40cffbc"
+    sha256 big_sur:        "f5f371971fd7656e6c512df1aade186c75d49c25474ff3a84c6996c865cd5370"
+    sha256 catalina:       "8168243a6a131eb9d68120062c4ea335b956fe9cf571be4bb7ecc12cc9c9f64b"
+    sha256 x86_64_linux:   "f8a6393094c46dbcbf962ab7f3fd577b348eb437885cb6b8c200a80f3dd765f4"
   end
 
   depends_on "ace"
