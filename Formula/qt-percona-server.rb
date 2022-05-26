@@ -10,11 +10,12 @@ class QtPerconaServer < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "34cac8a9cc3c92b8bb6f944c8776f1a424a2f0095ec5928eec8c62a5a0406f4d"
-    sha256 cellar: :any, arm64_big_sur:  "008c58e0a3dd4bef623f1a3f38b08d29324bd967ad153161365f419d69f79c7a"
-    sha256 cellar: :any, monterey:       "4e929c850c2c9bb54a6d950bb9587de0c56cacfeecca085859b4e73521d2f073"
-    sha256 cellar: :any, big_sur:        "2b8092a7ad5324045358cc0ecb62c342d9edba17008a0995ecc1b7c28f683688"
-    sha256 cellar: :any, catalina:       "e7fd8e3cd0d9e66260bd3ae91c04614d57a6c8f9462ba0915cc12c2707075ca3"
+    sha256 cellar: :any,                 arm64_monterey: "e3483655cda12d84fbfa75ea968a60a52b0b53604bf7745fecd99924169524a9"
+    sha256 cellar: :any,                 arm64_big_sur:  "685a75c9a530522c95ec68730a7d08c950c3e6ee32f51294e6988dd4ce21ca53"
+    sha256 cellar: :any,                 monterey:       "9682f42c09c963fef2a6e5ffdc7c6d51fca12366f6b9bd891d4c706ca04d2c0f"
+    sha256 cellar: :any,                 big_sur:        "43a4b77883ed88cb4a23845cdac7ec04e92146dcc1582e672de881f1e631046a"
+    sha256 cellar: :any,                 catalina:       "80dbfbd93673f6ff01e1ff6136093e2060b1bf6311a4f07b94e4fa42bf25118f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3b7e656e1679c386b3f7c604c738d2c290c854d1d9f64179c042267627be7f43"
   end
 
   depends_on "cmake" => [:build, :test]
