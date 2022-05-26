@@ -6,12 +6,12 @@ class LibreadlineJava < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any,                 monterey:     "d3c2093a2b4e600f92bf0f717d3db850c3e47fd78c00d7bac2fabf400daa7c80"
-    sha256 cellar: :any,                 big_sur:      "73b6dbaa9a738c05b8195665829637d9c4e5c1be74f7059ee17e97e2ab879e01"
-    sha256 cellar: :any,                 catalina:     "cc49470dde32faf6c0621944621af9684366e6897a4994b5b021e63a8422f78e"
-    sha256 cellar: :any,                 mojave:       "65444e90dded6862954e3105db11a2918554c866a1a3a344e0414d0db810f55d"
-    sha256 cellar: :any,                 high_sierra:  "3dc9c829727655f811d50c6ae215b2ae3130e8c4f13c0be8e48fd5b2d62349f3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "d9f6b20007e15205e93081e1e21d2656915c84213b64af7c4f6c0f394018138d"
+    sha256 cellar: :any,                 arm64_monterey: "584fd1a58765d929a2671476e64994b1de6e85da1e031d47169992afc33384a5"
+    sha256 cellar: :any,                 arm64_big_sur:  "9b8326c92d05e2598c4ee4984eb1de90362e453a8a474aa3211ddb33ceb530ce"
+    sha256 cellar: :any,                 monterey:       "907febf2b1e8fd3455b7a01c04793fe3e65c07b7c35b4fe6031ad1a41535eaa3"
+    sha256 cellar: :any,                 big_sur:        "3c0dcc11857d99e993ca70ec7cad6f35560988e14bb94012dedae51cfb4e936a"
+    sha256 cellar: :any,                 catalina:       "7c7f86b3f0d9ba98b7e6162adb26777dd903a88ccf331428114428d3454f56d3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c5263653854ee8fe953985f740cf1f357ced552dac8fdd109906ba78d3190972"
   end
 
   depends_on "openjdk"
