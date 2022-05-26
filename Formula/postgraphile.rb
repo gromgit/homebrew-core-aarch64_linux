@@ -9,12 +9,12 @@ class Postgraphile < Formula
   head "https://github.com/graphile/postgraphile.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e4077e72a27adf3f1119ca5327cfd2050a5f42d5637bb2863fca73eb3fa9350a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e4077e72a27adf3f1119ca5327cfd2050a5f42d5637bb2863fca73eb3fa9350a"
-    sha256 cellar: :any_skip_relocation, monterey:       "6951deaa5bdac3191c2e57314dac3a71c94ba71823ef040298e56ecb2d2122cf"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6951deaa5bdac3191c2e57314dac3a71c94ba71823ef040298e56ecb2d2122cf"
-    sha256 cellar: :any_skip_relocation, catalina:       "6951deaa5bdac3191c2e57314dac3a71c94ba71823ef040298e56ecb2d2122cf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e4077e72a27adf3f1119ca5327cfd2050a5f42d5637bb2863fca73eb3fa9350a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "079f749387e1b4e48a548f89be058aeb148633e8dfa4b52033a2240c63109920"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "079f749387e1b4e48a548f89be058aeb148633e8dfa4b52033a2240c63109920"
+    sha256 cellar: :any_skip_relocation, monterey:       "097a752102d1126b9c5a4efbe290770414fea245463fef2b7d5e56988456d8d4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "097a752102d1126b9c5a4efbe290770414fea245463fef2b7d5e56988456d8d4"
+    sha256 cellar: :any_skip_relocation, catalina:       "097a752102d1126b9c5a4efbe290770414fea245463fef2b7d5e56988456d8d4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "079f749387e1b4e48a548f89be058aeb148633e8dfa4b52033a2240c63109920"
   end
 
   depends_on "node"
