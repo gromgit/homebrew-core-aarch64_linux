@@ -1,8 +1,8 @@
 class Hidapi < Formula
   desc "Library for communicating with USB and Bluetooth HID devices"
   homepage "https://github.com/libusb/hidapi"
-  url "https://github.com/libusb/hidapi/archive/hidapi-0.11.2.tar.gz"
-  sha256 "bc4ac0f32a6b21ef96258a7554c116152e2272dacdec1e4620fc44abeea50c27"
+  url "https://github.com/libusb/hidapi/archive/hidapi-0.12.0.tar.gz"
+  sha256 "28ec1451f0527ad40c1a4c92547966ffef96813528c8b184a665f03ecbb508bc"
   license :cannot_represent
   head "https://github.com/libusb/hidapi.git", branch: "master"
 
