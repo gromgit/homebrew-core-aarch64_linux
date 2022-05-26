@@ -1,8 +1,8 @@
 class Akamai < Formula
   desc "CLI toolkit for working with Akamai's APIs"
   homepage "https://github.com/akamai/cli"
-  url "https://github.com/akamai/cli/archive/refs/tags/v1.4.2.tar.gz"
-  sha256 "ffd4954782a3e524b91d743a6f65f7b8514872a2c059009af638571ec7a89fe7"
+  url "https://github.com/akamai/cli/archive/refs/tags/v1.5.0.tar.gz"
+  sha256 "41687c6d4945094a9837dd2966bdd374d8265062d8547235d1c5a136dd08f79e"
   license "Apache-2.0"
 
   bottle do
@@ -12,13 +12,14 @@ class Akamai < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "d68de8020c21317cae498f11a875cb3b19ea9b1e20355940071627caeb43239f"
   end
 
-  depends_on "go" => :build
+  depends_on "go" => [:build, :test]
 
   def install
     system "go", "build", "-tags", "noautoupgrade nofirstrun", *std_go_args, "cli/main.go"
   end
 
   test do
-    assert_match "Purge", pipe_output("#{bin}/akamai install --force purge", "n")
+    assert_match "diagnostics", shell_output("#{bin}/akamai install diagnostics")
+    system bin/"akamai", "uninstall", "diagnostics"
   end
 end
