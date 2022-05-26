@@ -7,12 +7,12 @@ class Duckscript < Formula
   head "https://github.com/sagiegurari/duckscript.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f01a85bb047d967ed007cde3daac4e75ee6b8d04be498e11cad6016140c547e3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "69850a4e593a7775bec19527c7f5a963edf73b8555f331e23fa08621ebeafb99"
-    sha256 cellar: :any_skip_relocation, monterey:       "3c4035b7bd8bb37f3488e235d917658cc63c76d00a0c78345aa9c886971dbe45"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9edd09f0997c8985fda2d10d5bae5c6166f0d6c2a0d79b2bd078f195f70cb44a"
-    sha256 cellar: :any_skip_relocation, catalina:       "cefce92ed7ace51a984b1c4fe90c0269fad4a39abf9f381e1164e6d4a1535ea2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f0a2e5250516ea13bb74c9379447ffe1871999e7f4ad318fbcd01d8bdca4fb4c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1e332bd094b4f3266119393508087848394d9f6fb90865de64add356b040c5fc"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f465081caaca632be159a65350168e12b086183f03b6dbf2fe689d57689d2164"
+    sha256 cellar: :any_skip_relocation, monterey:       "47feceed180087fdb7f4f327bf0215791e95de3f750bb2040ebfe6080c34ea2a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7216b1892a214a334f5d74edbe3ab4de2b36cdcfccbd32df00e756408c57f828"
+    sha256 cellar: :any_skip_relocation, catalina:       "bae56a695e2777043df94ece65ce6c376da95f0cf5971d55b6e64a6c5a2de008"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "044b8eec2b5d4cfe94c0e5de3b35579d9c3e37013ccced5cba357391245068de"
   end
 
   depends_on "rust" => :build
