@@ -1,8 +1,8 @@
 class CssCrush < Formula
   desc "Extensible PHP based CSS preprocessor"
   homepage "https://the-echoplex.net/csscrush"
-  url "https://github.com/peteboere/css-crush/archive/v4.1.0.tar.gz"
-  sha256 "08f80c38faed90dff38829841d532b36c548739cb90dec1b50b6b1009913f806"
+  url "https://github.com/peteboere/css-crush/archive/v4.1.2.tar.gz"
+  sha256 "ebc6176c87299e14f7e19b4111db9bdfe4bbec8c4547927ab6d370011b839437"
   license "MIT"
   head "https://github.com/peteboere/css-crush.git", branch: "master"
 
