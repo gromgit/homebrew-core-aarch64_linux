@@ -15,10 +15,10 @@ class NewrelicInfraAgent < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, monterey:     "97d5c8afb9faf794cdfdefca790807f4e6a150582919b8f825cf402ed2b958c0"
-    sha256 cellar: :any_skip_relocation, big_sur:      "ff361afb632a8d235362ede1fe83cad7a608f8ad69402e718001fe770385c208"
-    sha256 cellar: :any_skip_relocation, catalina:     "8fcd5ce43dc61d0c35b5680d0797cdd68ec3a94afe87a53a66be50ebff82a35d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "c29df2d2e634b6948a68bd024c7e339d4c67452f5b5d33e13489d4cb278b4761"
+    sha256 cellar: :any_skip_relocation, monterey:     "f4954176d424ad4082e75c246884d27843ca8f697c6fe8bb6347c11e20e2d6d8"
+    sha256 cellar: :any_skip_relocation, big_sur:      "f9d7df53ccc52155e6f4e67cac052e3cb71f5e2f71a62a74d0362c9dd2c5a262"
+    sha256 cellar: :any_skip_relocation, catalina:     "52904739ea7b8367968c9a34a7d06a0569e344e98a209387285237001426e877"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "fb8c343c20a6f7129219d924f4202556d386b40957dad66a3dd8b5afce48e1a0"
   end
 
   depends_on "go" => :build
