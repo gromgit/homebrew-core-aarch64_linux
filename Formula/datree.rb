@@ -12,12 +12,12 @@ class Datree < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f878837d513ba201ee43880e1d80b352036a9a4d663ef199c904412e5cddebe7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6481d03510422b49a549ca6f8ad095c940b7cd098862ab35cff85f2b5dd9e7de"
-    sha256 cellar: :any_skip_relocation, monterey:       "1c11c0448ac463ae1e2b330858490dde0b8dbd5b51c82124f62f288f2c376461"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5105d526aac643e79f0dc5e3bda195809631903870d95381ac1727a643b114b7"
-    sha256 cellar: :any_skip_relocation, catalina:       "dea010303bc499afc73852221986674452e08c97470fff8857889d8a36cac8df"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "98ce3b61414ca07fedf6fa25832250c342e37f1095c2d106ea7ccb51d25f879e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4042b496a7663009096e938a086050fbe9db4c000f2126cfa4683daca6c5f919"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f4009416edaeaaaecb17888a586fff2941734e3a46702501b37ffda02c83917e"
+    sha256 cellar: :any_skip_relocation, monterey:       "c8ac442feb4eef42ad5b40f2266e1f511eaf544efe03d072524ef4e37773c471"
+    sha256 cellar: :any_skip_relocation, big_sur:        "eafe9ba1358cfd6bc5617d84f94d66f28f3edb9af58116b5d98b1c27f0a42a6c"
+    sha256 cellar: :any_skip_relocation, catalina:       "4d3390372cce50a4d7febf308b03f8b33637692c8d976ec83122914684716df6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "35539e41438620603de674b812409ceed8104074aa3cbe33051126892c8a5a4d"
   end
 
   depends_on "go" => :build
