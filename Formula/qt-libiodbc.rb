@@ -10,11 +10,12 @@ class QtLibiodbc < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "0f9c3f583d7aad10f3545c5f0f0c7608e5cc1eb94b3e8fa088a69f6bbcd78d48"
-    sha256 cellar: :any, arm64_big_sur:  "22ee701059bdd192cb5fd6a96fa953c1f4b798582c0ecb9cd5c58ba0acdbe891"
-    sha256 cellar: :any, monterey:       "003e141a0486d6d5aba729f038cd04e5cf5239f8a5ffdcdebe5ac07f3d391ec8"
-    sha256 cellar: :any, big_sur:        "2b1d5a845a2926dfbc8dd1061177af087c4f911445b2d4442c53ecfb84771040"
-    sha256 cellar: :any, catalina:       "0905c9c654666912f74eeb276f9289c84ffb9ab3753223452d887d7186256eb0"
+    sha256 cellar: :any,                 arm64_monterey: "4c488766b16bddab6f93b790b837b5eafd12d1c5151c98036dce2924be0fc07f"
+    sha256 cellar: :any,                 arm64_big_sur:  "ee95bf088d678ec1780c334831b7a7da456fb1d73f4bdcaf778d28bf128b926f"
+    sha256 cellar: :any,                 monterey:       "883dcf0a2e5f104d3dac8f38355af4d3fd56a577398dabe340ec29c1a10b658e"
+    sha256 cellar: :any,                 big_sur:        "b2345d467a4a432ab96ba116c27eae0b54ec9b5719ae9e5ed5265fb2e4128ae6"
+    sha256 cellar: :any,                 catalina:       "4ef24757ac7025b867db0dbbb4e4744e2c65dca5f3d9f041b51b6e277de16800"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c33f77939eaa39b5d279e7f169f71eec8cd9cc5ef661c3343d57d1906f4d8988"
   end
 
   depends_on "cmake" => [:build, :test]
