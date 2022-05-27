@@ -7,12 +7,12 @@ class Tendermint < Formula
   head "https://github.com/tendermint/tendermint.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "87d3c83ddc40da5a3ef8956393d9762faf4c2716e9af91b289494f245e9d78dc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "87d3c83ddc40da5a3ef8956393d9762faf4c2716e9af91b289494f245e9d78dc"
-    sha256 cellar: :any_skip_relocation, monterey:       "edaa20184cfda69506f120dbd0b2b663103e484c18af26e3f8792de3755ed10f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "edaa20184cfda69506f120dbd0b2b663103e484c18af26e3f8792de3755ed10f"
-    sha256 cellar: :any_skip_relocation, catalina:       "edaa20184cfda69506f120dbd0b2b663103e484c18af26e3f8792de3755ed10f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c1d7019c6d13c09e9fe1698cc305a4882e2bcde0d0802b86966907e6154447f8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "32b05014a7dea5af89e1d62ca69bdc287becdfbddda926116e876c6bb69efc38"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "32b05014a7dea5af89e1d62ca69bdc287becdfbddda926116e876c6bb69efc38"
+    sha256 cellar: :any_skip_relocation, monterey:       "cf3127d054df61471ac7ef34bf3a6a202d115a880f10c178612f4d8a7c022986"
+    sha256 cellar: :any_skip_relocation, big_sur:        "cf3127d054df61471ac7ef34bf3a6a202d115a880f10c178612f4d8a7c022986"
+    sha256 cellar: :any_skip_relocation, catalina:       "cf3127d054df61471ac7ef34bf3a6a202d115a880f10c178612f4d8a7c022986"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5d8938f4ac3a626c4a24ad6ed9ab7f533945f58ec8d35bae85fba17c4d1ebfc1"
   end
 
   depends_on "go" => :build
