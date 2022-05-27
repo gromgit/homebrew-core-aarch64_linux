@@ -7,7 +7,7 @@ class Liquidprompt < Formula
   head "https://github.com/nojhan/liquidprompt.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "e6f9e90371b25e9c21e0926626338c671f7382d6a0c62c7393cba431b0ca21af"
+    sha256 cellar: :any_skip_relocation, all: "aa8a84326856e6f4b7a93ffac77df2f297a778dc65833f0cd2a06f7c384cc178"
   end
 
   def install
