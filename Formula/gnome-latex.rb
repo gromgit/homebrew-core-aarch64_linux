@@ -12,6 +12,7 @@ class GnomeLatex < Formula
     sha256 monterey:       "afd5544db8861e12439e36e3e340446e258c69283d37af14179db69ee6c7b220"
     sha256 big_sur:        "724e5f45e9f393d3a190eee881a444860e4598ee73e2c7657a341b669f903904"
     sha256 catalina:       "16543e61eeee2a269f9cb5b62c7bd5ff9f67f29714ad77e3cef8828883c8de23"
+    sha256 x86_64_linux:   "0aa5909fa09856c623a6af0d823185c979627ea19421496690fe6309f0bfc898"
   end
 
   depends_on "appstream-glib" => :build
