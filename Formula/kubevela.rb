@@ -8,12 +8,12 @@ class Kubevela < Formula
   head "https://github.com/kubevela/kubevela.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ff321dd00b5111be9e4fb9fdc70803c8e1684077c33ee7a59b78c6133e18ed4e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ff321dd00b5111be9e4fb9fdc70803c8e1684077c33ee7a59b78c6133e18ed4e"
-    sha256 cellar: :any_skip_relocation, monterey:       "f815f5849b232dfe0538793172499274667b0cc23dfb5f063759dfc99bd35c27"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f815f5849b232dfe0538793172499274667b0cc23dfb5f063759dfc99bd35c27"
-    sha256 cellar: :any_skip_relocation, catalina:       "f815f5849b232dfe0538793172499274667b0cc23dfb5f063759dfc99bd35c27"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "17e68b0f3ffd4635906bda8cb6ffa57a6773357c1ddde254813f224e9c381771"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9a58b8c247fbddd80a3eb628e65041b77edc4eb1a1af488d6a492c501e06c95f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9a58b8c247fbddd80a3eb628e65041b77edc4eb1a1af488d6a492c501e06c95f"
+    sha256 cellar: :any_skip_relocation, monterey:       "23b607cd2d78c4573be5d3492a48fd328e10dad782790e8be6d865b394804339"
+    sha256 cellar: :any_skip_relocation, big_sur:        "23b607cd2d78c4573be5d3492a48fd328e10dad782790e8be6d865b394804339"
+    sha256 cellar: :any_skip_relocation, catalina:       "23b607cd2d78c4573be5d3492a48fd328e10dad782790e8be6d865b394804339"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "de90ff1cf98ba3853724c49ae7788a4c3cb50270ca825b295420413b786096f2"
   end
 
   depends_on "go" => :build
