@@ -1,8 +1,8 @@
 class Muffet < Formula
   desc "Fast website link checker in Go"
   homepage "https://github.com/raviqqe/muffet"
-  url "https://github.com/raviqqe/muffet/archive/v2.4.9.tar.gz"
-  sha256 "b8efbcf3b04db809a28625603612924f8b587fce5993b85de0cc9d3cf8b68e40"
+  url "https://github.com/raviqqe/muffet/archive/v2.5.0.tar.gz"
+  sha256 "53a0f673181be525ad0c937c0c93d57343dc303886a9b60332730ea17258b52f"
   license "MIT"
   head "https://github.com/raviqqe/muffet.git", branch: "master"
 
