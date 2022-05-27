@@ -8,12 +8,12 @@ class Easeprobe < Formula
   head "https://github.com/megaease/easeprobe.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "65614a9f926fb9eeb6cdc07bcd5c152cd622c53c93b78904fc486bb88d8127c6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dcb076860023b6c2088c922f42029224a08520a707174179bf56a13df0c326b8"
-    sha256 cellar: :any_skip_relocation, monterey:       "9f166bb0967b571b011c38ee69868a0db507452bf8cda1910e175a816d164fad"
-    sha256 cellar: :any_skip_relocation, big_sur:        "286cb976a3e53b39e8a80118bd14938178162d53f2e31922444b3252933fad64"
-    sha256 cellar: :any_skip_relocation, catalina:       "c0a635acd17029c4fec06987a2dbd7a197527fd6eafe5803fdd95c09c7a3242f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0ae99766e9af864ac1a2886917a00c9343502afc1fa3cf87a57a8e7f87a20400"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "be6390f918832b7579cf84d847590ce67c8e6b69526e4f8f29cd64228f97e011"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "71dad2751a54a45cb5368e23af0a50928543fbfa930c1f8f6596ee4ab23369c1"
+    sha256 cellar: :any_skip_relocation, monterey:       "c075618f0b40bb73d19a8b67faa449b6ca65e9e5176e24fec9910d2324ecdb98"
+    sha256 cellar: :any_skip_relocation, big_sur:        "16c6664e884eec818c795693956eb5abf5bd43e4f437ecc7204e3db94dc5fddf"
+    sha256 cellar: :any_skip_relocation, catalina:       "e3621278a747079d414ad62a96e5334c1fc36b22acdf19f30b4b29f2f2e8ceba"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a45a320e3b25797ca6d24612ccbb55bcc703fd9847aa5d5bbfbf1dd3b0e70880"
   end
 
   depends_on "go" => :build
