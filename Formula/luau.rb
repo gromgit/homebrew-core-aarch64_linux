@@ -7,12 +7,12 @@ class Luau < Formula
   head "https://github.com/Roblox/luau.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9fde118b8c0eb54d3f39701d7b9d9ef68152284e2b520084485c103841d68454"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "12a6c7a4818a77dad3b04f52a3abcda6441722bd42ffafb359bc2200758f313d"
-    sha256 cellar: :any_skip_relocation, monterey:       "1855819c1461408507ff2ce432ddc382ff25d5c8aa0220a42a3b8d1128da6dea"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8c0ce051c735ca2ba4b00395c0e4f274e0b7d94fb730116020baa692530cdd18"
-    sha256 cellar: :any_skip_relocation, catalina:       "ae55703f07bbab031372d482cee6cf9209e6a54ca8d964ae5267a04574ba03b1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2a02b1da0e220e69a26f958af590315d1a29202e671af200937ecaca1812ea41"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2eea01023190fef7e90fb1072f8dcdd2f90d109122ce21e63fca30cb1a2dd0c9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "79c0ba154c087b9df32ef7e29e905c3c6c7b656a8187fb16f7de008e16b27d0d"
+    sha256 cellar: :any_skip_relocation, monterey:       "c8e0bf93ec7e712c84e82ea73c62af69ad971bd1884a746c5c7e877861054887"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b67ff7eb168c46e3f99947fe0e4e0b1d7462ff2de4e750e9a9e2bd23f1e49f28"
+    sha256 cellar: :any_skip_relocation, catalina:       "ad0a04c510b1bdc5704f2785768e24a7bab04db6659e0e3c3ed16e033669a683"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "72f035abdbf2d09b3000916174adc2c3b4788137e5849f0cbebee1fb2ef1fec9"
   end
 
   depends_on "cmake" => :build
