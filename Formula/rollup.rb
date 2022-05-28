@@ -8,12 +8,12 @@ class Rollup < Formula
   license all_of: ["ISC", "MIT"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "412c08e595da50165ba84a14237ba7b9b2223fb38e025acd23ace292b717c7f0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "412c08e595da50165ba84a14237ba7b9b2223fb38e025acd23ace292b717c7f0"
-    sha256 cellar: :any_skip_relocation, monterey:       "e0d419ec8d915e09deafee4f5687ec8a8ede66093c2a5340ca46460f535c2ff7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e0d419ec8d915e09deafee4f5687ec8a8ede66093c2a5340ca46460f535c2ff7"
-    sha256 cellar: :any_skip_relocation, catalina:       "e0d419ec8d915e09deafee4f5687ec8a8ede66093c2a5340ca46460f535c2ff7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9bf24ebe4b492485a8399d97fecb75535eb0175e41b48de1ab1878553e40013a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "72fc0c53e8a0bea67dbcc0c0d37363b9027d052c25ae7d6bf6fbd56c7554394c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "72fc0c53e8a0bea67dbcc0c0d37363b9027d052c25ae7d6bf6fbd56c7554394c"
+    sha256 cellar: :any_skip_relocation, monterey:       "2783572844b132a3ad6e8614265d7b7489d3013c9bba5b71f176bf8b859be8c0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2783572844b132a3ad6e8614265d7b7489d3013c9bba5b71f176bf8b859be8c0"
+    sha256 cellar: :any_skip_relocation, catalina:       "2783572844b132a3ad6e8614265d7b7489d3013c9bba5b71f176bf8b859be8c0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bb22d050b0161f3f5bcade472469381c47cfe6b059d993552377d645a63be166"
   end
 
   depends_on "node"
