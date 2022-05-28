@@ -16,12 +16,12 @@ class Teleport < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "00ed5ea0ecf859869bcf0dd29385d76b293f8a8591d167bf9fab92099579d561"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c004a01b5a5bdb138de913a496f68ce216f76ec2d6821b868a9fe216358fc9e1"
-    sha256 cellar: :any_skip_relocation, monterey:       "7a5eab255fa64470bfc9cb1ba3401261c70c19290b105d7d9edc42e187657917"
-    sha256 cellar: :any_skip_relocation, big_sur:        "83a4e624c0f2352c3a59c7a16dab0a7e59c4329152237aa7609b554cd110019e"
-    sha256 cellar: :any_skip_relocation, catalina:       "50642109313380c0bd6a36e4f93a8f68a91e52c954d4072d7b880e5d19430d47"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "196413563e8dd2af8bc1824ca94b680b2badc89fb2b746034fb406f39d124bbc"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ab66ea5c3f96c33184d30a2f8cee064b5e9392f480caa0475cd6b86f941eedc9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f0066e5bcbc505ffa0e566a74ca04a30bdaeed1cf601b4e96fb92c19fb679bd9"
+    sha256 cellar: :any_skip_relocation, monterey:       "f5eb5f08b4449be163e74855ade1f0558ace859f549b1ab99620f3e9c21b353a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2c8f030de14127e603e39f3a4ac8bd8c677fe84992c3c61fed3d3c91cf450c03"
+    sha256 cellar: :any_skip_relocation, catalina:       "8a5972841e017b470cb54a163ba55baa29b1a4257e409faa9407e5a1e06576b6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2b28593d14df2c90de3336b2be47b20ea850b6e79468f6c8f72fe9d658f530cd"
   end
 
   depends_on "go" => :build
