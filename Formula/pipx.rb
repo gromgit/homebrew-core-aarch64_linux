@@ -9,12 +9,12 @@ class Pipx < Formula
   head "https://github.com/pypa/pipx.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e140cb960d366318e2eca2afbab20cbe8bb57365090033e7e8d2678b11383890"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5bcb73c85da6959c7530a809a17a60d239d9764b890cd389acfeefe71462b78e"
-    sha256 cellar: :any_skip_relocation, monterey:       "00b7e1ab842c1ae0ce37fffde172b127f98a52774865caedfea88f425dbf6aba"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5fb22284e65575a43b3d64353398c117a5257a3931c1f281a15633defffb7e84"
-    sha256 cellar: :any_skip_relocation, catalina:       "3adc526f451df55ab5aebb23e48293345fb64ebeabe5fdbe4721232e2c467620"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "973586416833bf99a9cb0b386ffab057aeff7d1e1221661858c80a1b09eb2021"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a2c0c04c39e04cae843d2a69f3a8d626a32d10301bbfb4ebd61d0b67febe088c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "89bd301b9f7c1cc0559da700b80267e9a50a172738e127b765fbb5b251e3cbaa"
+    sha256 cellar: :any_skip_relocation, monterey:       "5bc3dbcd8d973a6f0da3ce6b4ca47d6fd04bd9fa3d3373f57c83dba01d441375"
+    sha256 cellar: :any_skip_relocation, big_sur:        "93ac23379caff5b9fbf39ec95bd8975b7e5bf541586b026c6330820fd4e98b48"
+    sha256 cellar: :any_skip_relocation, catalina:       "f21fef78a11ba1a22d228420dc816262960a60aae890354830401baa853ec906"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3b34814c228a304938156fcb7638e5fd69a14dea4c190c4bd9bfb8c3404c728c"
   end
 
   depends_on "python@3.10"
