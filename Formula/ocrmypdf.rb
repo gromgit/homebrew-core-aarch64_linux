@@ -8,12 +8,12 @@ class Ocrmypdf < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "61378525ea9a271369ca3c43bff43e78208fc7ef7e08d7f4a4368aa680fe07e4"
-    sha256 cellar: :any,                 arm64_big_sur:  "1d38c66dab9eecf554770ed1afa39c0ce46a05938af629b35e49f1bee35db506"
-    sha256 cellar: :any,                 monterey:       "67a708729cfbd9f570d6e5e7d18885156a99ada4f60515831f6848674f1d2145"
-    sha256 cellar: :any,                 big_sur:        "a655cfb2626dd5be5e9fab4c9eb5939e11b3fc9ae863bb98e82c0e6d2c64f807"
-    sha256 cellar: :any,                 catalina:       "b5e69d148046118dc1f8d7ddb9dce24dab9ea9e78878656a1c1439ad4d01dcae"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ae380629701aa7ab29035d0f89b5b48e4205ff5daa225c78871501305cad1ac3"
+    sha256 cellar: :any,                 arm64_monterey: "016ac13bddf25a76eddc091326fc7bcef20ead5194c6517f2b09637a0e947f95"
+    sha256 cellar: :any,                 arm64_big_sur:  "4fbe32a62d408152a6da6dace24f01d7464b0c8a41e29bdb0b9c1f7d54b46d86"
+    sha256 cellar: :any,                 monterey:       "361fc15fafa92d13cb14d9de09dffd33be0019dc247cede1e9479b22929f2e91"
+    sha256 cellar: :any,                 big_sur:        "1976120edc2efb27ab8864232f28f3d96e150b0a8d4ef63750ed676858e9de15"
+    sha256 cellar: :any,                 catalina:       "e56371b69aab4bf159633b42edf699683f5ff2bda747f11dd97ad11915476ef4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "983398c5cde6f4fc75379c7fdd3926f2a5b76f544571e5ae255af7e3aa15983b"
   end
 
   depends_on "pkg-config" => :build
