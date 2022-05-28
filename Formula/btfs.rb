@@ -7,9 +7,7 @@ class Btfs < Formula
   head "https://github.com/johang/btfs.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, catalina:    "d5b103b5b9004549a555352be373c2160bcd5b9f6a8e7e8b030cbf113ae76fcd"
-    sha256 cellar: :any, mojave:      "bb550107105c612e2c9b81478b352d053f5b8ac8658377e0d40e4ee1109519fc"
-    sha256 cellar: :any, high_sierra: "934b8849eaecd08113b01e222c9583f9293100889f3f40f8452a476a6491e0d0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "ffdfc0e854a9f980b9df510458c5baa0910e5d6fd74862f106ff97f2fc0fe2cc"
   end
 
   depends_on "autoconf" => :build
