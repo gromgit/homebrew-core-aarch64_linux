@@ -13,6 +13,7 @@ class Corsixth < Formula
     sha256 monterey:       "45fcd5591710383a1b437f6d74266b6a9d1f587f3b820b8a0499199bf581e4c2"
     sha256 big_sur:        "400cdf58edc5407ba28bdc2437fef922a1ab4748c6c74dc047a6a6273291f583"
     sha256 catalina:       "d4b4c1abbd7c4329792a2a96304d95b8289d5f5f4be841872e5a9079e2349cf0"
+    sha256 x86_64_linux:   "23e347e4c34e7b5ffdb7738adf242fd742ce36de7f4eb6b19510f07bac61f688"
   end
 
   depends_on "cmake" => :build
