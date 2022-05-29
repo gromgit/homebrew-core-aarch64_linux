@@ -7,11 +7,11 @@ class RpkiClient < Formula
   revision 1
 
   bottle do
-    sha256 arm64_monterey: "a163c6fb57235560fc3e117b0a0ae65cfb5a88f0a4c919243f7b7367b36bc5d7"
-    sha256 arm64_big_sur:  "f541f00593f51cb535132b0cfaf429a0cd86955d508d71ce5dd61391947e61eb"
-    sha256 monterey:       "c96bbcfa6a3b610548bef1691e55a7f5d1d9015e071cadb079f0728ac9ff24eb"
-    sha256 big_sur:        "d09526b985cd5eb82d5fd28f2b45cae6b3e586e691f712760ad228377ccb9a46"
-    sha256 catalina:       "e68a160486ad4a292ed1087722c9612b785f3a307213851814f06abe571cb348"
+    sha256 arm64_monterey: "3e61ce6a33ccc4852aa3dba1bbfeeb256eeb84886db3b627e4c7ed2cfa3a0538"
+    sha256 arm64_big_sur:  "0f982491437041f53160c0248e653c2e1e0d40ba4dd7c767168fcd8bab76ae5f"
+    sha256 monterey:       "00450aa3f5296beb2859a654b12fdf4c2f841755d5d07e91a8cefbc82f2ff35e"
+    sha256 big_sur:        "e2a3f21af703e38864d15c7fcde0e5acf0802bd4ddb292fd35761d414c5b5cba"
+    sha256 catalina:       "cf6086ae67b81b0dd49b1befafc83fb942377d5a5ab1f400a80db11de4a6e1d7"
   end
 
   depends_on "pkg-config" => :build
