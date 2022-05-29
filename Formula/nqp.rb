@@ -6,12 +6,12 @@ class Nqp < Formula
   license "Artistic-2.0"
 
   bottle do
-    sha256 arm64_monterey: "2fcf5411f84049b5ed9c33ea59b0670dab4a15e7f1fa9306b495d0e75eaffd7b"
-    sha256 arm64_big_sur:  "85ca3d2703380e861c38b11cdb06491fcb9d6d6ff8f164df7bba50a57193509b"
-    sha256 monterey:       "b41ab0d9aa8af807119c68f5410e7948c3805922163439bf2f41da7217521a7c"
-    sha256 big_sur:        "bb3b483b2f847317a8eb56c841c50a3ab9d8378c037667d9937225029d5442d2"
-    sha256 catalina:       "02f937da745f1560f4f8de56ef930e17af51cf11c31f9a2a36c68c94f804c97c"
-    sha256 x86_64_linux:   "708d729ea4d0d0f85072ede576b26b70ae2575080466dfca001ba9173600e638"
+    sha256 arm64_monterey: "96bf32b98852990200a2c1af4bd599089bffaa4b3eee61f9dd00644343f844ee"
+    sha256 arm64_big_sur:  "0785544010d6d154145f2f01c88e7016ecdcb2e79298ff6f0f2ed8f796d02429"
+    sha256 monterey:       "ac4a36b97a26107ba0170048e8a689a68db643a185d84b455f88fe91464e0204"
+    sha256 big_sur:        "39b6baf2607cdb1843f1419786dcb8a2940498e351a5990330dfea2d96cfce62"
+    sha256 catalina:       "59f28fef93a815c2fa15be4b3c448886a2bd9cc59fcae8c58fcdb554fc8e3d07"
+    sha256 x86_64_linux:   "36ff4fcc84b071b261501dea0500acf9539cf631d4b6ffa2e5bb7dbdebf400e5"
   end
 
   depends_on "libtommath"
