@@ -7,12 +7,12 @@ class Tflint < Formula
   head "https://github.com/terraform-linters/tflint.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b071d358d67c1d5d5e639b1f553aa1f762511dd878b822a0f8d42f5b0a6e2d6e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bab30b420d44eb384c33e3f3f8079ac72a243e3bea300a85619d02fe7290665d"
-    sha256 cellar: :any_skip_relocation, monterey:       "437acb8953f98a09edb8222c6496bf1013f1fc75e9b852488be964cb4af206f9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "07dfcf7bd0435bb0cea9bc1593ae69c366dbc096e79cd314a58dec099174e590"
-    sha256 cellar: :any_skip_relocation, catalina:       "96ccf781b15bfeae54e456e07f083e9ba2ad2ff97d6b56ecfa1ea685f6e383ec"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "489b86cc9ef0f588902e3cb91d18bb25523fb587adf527991cda82e69b2499b1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7884bcf751778ee7eab599ebf80090f0d5aeac639531e67ae90653c624f29a50"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "89daa072539cdfc2bb7c0c8b423230c767f333f97a5d844308af7a117a53cbfd"
+    sha256 cellar: :any_skip_relocation, monterey:       "94902641bde5c01a946e3b0d1f8ef4a6a5ed9c156aaa4ca13b40e0d188df7769"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7b1e1d8b62d84bad8c00371f4c89fe0e55da972bdcbed715f7c4f6bd0ceb47fc"
+    sha256 cellar: :any_skip_relocation, catalina:       "a86b8cbc63e935917ec5cb97a44af0b3bffa14ba6f3806e3df0884550cb00366"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5e0f00f0747f73d7f502960ddbb160bfeabf49b7c65d465fcdb4814dbc2bf96a"
   end
 
   depends_on "go" => :build
