@@ -13,12 +13,12 @@ class Pyenv < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "a50a18697094fd4e951c553aa53b305d130e7df4c7d9efef25abbf4346607f0b"
-    sha256 cellar: :any,                 arm64_big_sur:  "e08b5b70ddb57daf8f8ed0a32e92f216c23dedfda84229e7d6bf4c123e69e560"
-    sha256 cellar: :any,                 monterey:       "9b063fbc8cb03651f9f2aa2ff450db9ab3af3badb26e12efb15a55e1b180d318"
-    sha256 cellar: :any,                 big_sur:        "c8c62021a871d0e6da93acad9337f19cdcecf4aa3d8bfea28d73516e39e4b930"
-    sha256 cellar: :any,                 catalina:       "1073576480889c3fd2351fd501c73c7be6beeeb11d4ee3942abcb227211296c6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b0e8107ce3b67077aa8080311daa173a9a7c6ea766fa44bc5df562947c607b0a"
+    sha256 cellar: :any,                 arm64_monterey: "89707dc2d5d540ff8d5a292623a8c513d59e982499d3f8095155f7f2e1ccc455"
+    sha256 cellar: :any,                 arm64_big_sur:  "c81571b8106c64227785f40854096bb8c64528def66addb254f3061ac8f0e516"
+    sha256 cellar: :any,                 monterey:       "78fe667fd17d8fb9b076dc942a3cd6448ece2d1d46b07a5b50f8937efb91a898"
+    sha256 cellar: :any,                 big_sur:        "d12eb7d8e4aa23e0866d0f7cc3a0d4b54cd79a33fb17121283131288181fe0de"
+    sha256 cellar: :any,                 catalina:       "4e5827d41160f7d408de0180902babb4586b46d9dbab4f087bc00cd801fa9197"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f97c6b1306648aca505b5525c98a794f99767ff0a054ce542a48778f286f5004"
   end
 
   depends_on "autoconf"
