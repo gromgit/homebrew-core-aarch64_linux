@@ -12,17 +12,12 @@ class Ballerburg < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e0d4b0b00f1b5086547a78dafc9df47493908ebad32dee347200958745990606"
-    sha256 cellar: :any,                 arm64_big_sur:  "a82163254a4f1ff916e0d7ba0387914f529ffa67955495e146be69b5c2b2f31e"
-    sha256 cellar: :any,                 monterey:       "86a27de26ac3557733cec8e78d1c65ee34dca91374649947052cd51032132764"
-    sha256 cellar: :any,                 big_sur:        "94691e7d7c914ce603ffdcf611159d2fd8fa63616f9f35f6bed3c58d72571bea"
-    sha256 cellar: :any,                 catalina:       "5459d5bc2baba43a0ad3a32dde1c3e6adbd02dfdce1f43bcb4c1d9ebf8f73b01"
-    sha256 cellar: :any,                 mojave:         "e31d8c383d0abfbd5ff700683d225b3d34345cd9c89c8fdaec34813cfbee47d2"
-    sha256 cellar: :any,                 high_sierra:    "23ecdb1ee06b96cff2e51117b3ff0bf8f0b6f29195e3d2d6323ca8dd72c79074"
-    sha256 cellar: :any,                 sierra:         "fa38cec8799ff4dcd33735146d4d93c986eb42c72bf6a9f1b3bd997acb5613c1"
-    sha256 cellar: :any,                 el_capitan:     "314236d328ffdbaa4ddbcfbe38566ab0669df3935a9a051d3366a8d0e87d3de9"
-    sha256 cellar: :any,                 yosemite:       "46502878f24bf976bc5798ff74c145059f642ca2e9cb9d8467e296ad5b582f00"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ce02fc59db3ed286e5a811707e57db838aa756981ef7b6614d876573dc4513a8"
+    sha256 cellar: :any,                 arm64_monterey: "ae944e9578696b3db8837f70d14a1552ba0ba9266d5fbe187a34a25859132411"
+    sha256 cellar: :any,                 arm64_big_sur:  "c6e8f97813801312ab4c54442dc85dd8e2cf772c362e7aa9d6b3daa672cc8713"
+    sha256 cellar: :any,                 monterey:       "74404aea5fb599ca60eeefb923c7cbb3c83be71feacc36cba240214be3cd8664"
+    sha256 cellar: :any,                 big_sur:        "0dc9fbcf422de9697fdddfcccdf4b032eb8319c18be6ba21f538f2f3cfc68676"
+    sha256 cellar: :any,                 catalina:       "cfdafcf254b4dd8521fc55db1e3a6d746fd3af97a3157df582c19900b66eb945"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "74e7fbcafb82c5e59cfc89681819751e914898cd1db706341db6fde64207386b"
   end
 
   depends_on "cmake" => :build
