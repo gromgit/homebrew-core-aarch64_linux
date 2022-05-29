@@ -11,12 +11,12 @@ class Moarvm < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "9166013b6ab100c8fc2e40ce1e5758dfb841e02349602e1b64a16aafb6ab0b14"
-    sha256 arm64_big_sur:  "24e491e822abc0ab158521eac5beb9c2a82dcff7971a060769e4ddd5ce79dbdb"
-    sha256 monterey:       "a1d5c7d4e58d88422d167f46e056f7c10847aac78a993467ce03160779acbf8d"
-    sha256 big_sur:        "3e08d7afe42ccc5606375d69bba68e2772e87736d2a38c4b019964afc4b69d81"
-    sha256 catalina:       "10df00e4d29eabd6c97db11a5401203938e13d74bceadcbff00bd03b8fc373a0"
-    sha256 x86_64_linux:   "1898ddea7dad0c2a1ebd80c486bdd41daa417bb0dd12561c743988a9832159b3"
+    sha256 arm64_monterey: "b039b7f3e5479b8c7edeacc49862aa3082fde0d7a85096fbe268fcdd1c129523"
+    sha256 arm64_big_sur:  "17f35bc7a45dc7379d4cfeb147a7313b3fe9d449135b91d66e0fce468e4ea7a4"
+    sha256 monterey:       "c504b1d2432155dbd1b255d8d4dc2f4658611f90b06397ad836444effbedb80d"
+    sha256 big_sur:        "53431ea6fc2bc6a331eda5c7cf190e3b61d3eaf3f538889d41aed51f481db8cf"
+    sha256 catalina:       "957ef92208468bd4d35c9929867114c7c33db690d6b2ff0b60b7e7ef9e0c436e"
+    sha256 x86_64_linux:   "31176bc8f79104414cf58f283923a98016a1c045f69ba2ab79c8cea3ba7cc77c"
   end
 
   depends_on "pkg-config" => :build
