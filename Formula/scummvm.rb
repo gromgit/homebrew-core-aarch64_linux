@@ -30,11 +30,12 @@ class Scummvm < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "af380525ea154276ad0d373bf6118f3a6838113cbeb9968902ae338cd25cf3c4"
-    sha256 monterey:      "d05447bbd2eee2531f7adf1b37f52a70a839b306df931e2abddffb833918b534"
-    sha256 big_sur:       "64322552466bf84d7c908349c1d3b2a9033c0f296d654732fd23dc09e37ce556"
-    sha256 catalina:      "f4955d7d9be4be813bd81ae4e1895307f97f52cc8af5df8c99c61356cc42cb5a"
-    sha256 x86_64_linux:  "a84d8f59c66e8a3f8556909a6086e00a1afae1c1054b6b1bb7ede2e3b26189ce"
+    sha256 arm64_monterey: "b6b391ced65420fd092e0145c8a8db889e8476502bf76b89aa1c1d68e02a0249"
+    sha256 arm64_big_sur:  "af380525ea154276ad0d373bf6118f3a6838113cbeb9968902ae338cd25cf3c4"
+    sha256 monterey:       "d05447bbd2eee2531f7adf1b37f52a70a839b306df931e2abddffb833918b534"
+    sha256 big_sur:        "64322552466bf84d7c908349c1d3b2a9033c0f296d654732fd23dc09e37ce556"
+    sha256 catalina:       "f4955d7d9be4be813bd81ae4e1895307f97f52cc8af5df8c99c61356cc42cb5a"
+    sha256 x86_64_linux:   "a84d8f59c66e8a3f8556909a6086e00a1afae1c1054b6b1bb7ede2e3b26189ce"
   end
 
   depends_on "a52dec"
