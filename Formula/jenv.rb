@@ -8,7 +8,7 @@ class Jenv < Formula
   head "https://github.com/jenv/jenv.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "521a1ad6e28b90f1e37893d279950e35957a0580464d639ec74c398f8da6d466"
+    sha256 cellar: :any_skip_relocation, all: "7e42339ed467f521dfd3dd17d78b23fd3504994915fee2b200b8d184ec5d93ea"
   end
 
   # Upstream ships an unnecessary export shim for fish shell, which breaks scripts
