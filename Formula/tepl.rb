@@ -2,8 +2,8 @@ class Tepl < Formula
   desc "GNOME Text Editor Product Line"
   homepage "https://gitlab.gnome.org/swilmet/tepl"
   url "https://gitlab.gnome.org/swilmet/tepl.git",
-      tag:      "6.0.1",
-      revision: "2db87c240f86ec05b6707c069dd132f835be653a"
+      tag:      "6.0.2",
+      revision: "52b2715293a8cb8c2be853686be0bc711cef6759"
   license "LGPL-2.1-or-later"
 
   bottle do
@@ -23,12 +23,6 @@ class Tepl < Formula
   depends_on "gtksourceview4"
   depends_on "icu4c"
   depends_on "uchardet"
-
-  # Fix "ld: unknown option: --version-script", remove in next release
-  patch do
-    url "https://gitlab.gnome.org/swilmet/tepl/-/commit/9f2dbb0f2e835b4a7e4bdb04085799575237dff7.diff"
-    sha256 "c3c3dfcd6c7e665d2f524678d9d3e3343afb9b575ab76cc71ef214abb5dbc727"
-  end
 
   def install
     mkdir "build" do
