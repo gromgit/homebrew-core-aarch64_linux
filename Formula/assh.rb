@@ -7,12 +7,12 @@ class Assh < Formula
   head "https://github.com/moul/assh.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "30be296faa0a138b81486bdd3a6cd885fdf7807c944aae1d7b7ed53fa0f7fdb9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f5d104eea6feedbbb5f94c88cb134ff42ac0d7d2bc51cdc3319e941807fa0155"
-    sha256 cellar: :any_skip_relocation, monterey:       "6db39cf5878d81d48e1075d07e64e26615f454db33a60ac39b3ebbda80e99f13"
-    sha256 cellar: :any_skip_relocation, big_sur:        "161366bff34f651097fbbe6bd182067cfcb24b37572237f91ef5c0748cf5e33f"
-    sha256 cellar: :any_skip_relocation, catalina:       "5346fbc61136dc4ad80fcda051669a45cc0334aa9005dfca2fa547e730ea54ce"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6615d9f78af09e09968affc05689a8f00c4a8454d9c008ea1126f461d43186fb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ae72f2394286ebd7acc99f03390e267e567c4eecd73be163cc57447f924a7ada"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "93ed1ec7a8d4ddc38ecba180ffbb77d7349fc37e2bc90659264ea181d947cbc5"
+    sha256 cellar: :any_skip_relocation, monterey:       "96a80cc240745d2aad6f087bf5f55a5381c1a48a98711d88595208b93d034109"
+    sha256 cellar: :any_skip_relocation, big_sur:        "fd0fce00ffd889ca5f2c1c0b4fc2ad30b2229a16cb54de02ce78dcad72362369"
+    sha256 cellar: :any_skip_relocation, catalina:       "a0c9b3be0647214d7fef1575ce4d0fde793c1bf93abf207f76d95bcad3c6c732"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fa2dc97d26ecb39ccb98b6be12a46c0d61dd27b9e7ad9b68be3eb5abf9dbc581"
   end
 
   depends_on "go" => :build
