@@ -20,12 +20,12 @@ class Mariadb < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "5d7ed761206507fb173a3ba88d4895a3b148d5dabc492ffa1c06511b845b9259"
-    sha256 arm64_big_sur:  "2a58adf34772884da1dcd8810ae75f364fe32cd5583232ef883fb0fc9cd18ee1"
-    sha256 monterey:       "439378c9adf87ed440d543882a0a6aafdbe089e2bcc1af7225069a08ffc34782"
-    sha256 big_sur:        "adc6ce57b9eebf48518a7fd24d7bb73a5772aae7b2d4f613267750b9f275d693"
-    sha256 catalina:       "79f8fa2726c17537e74b7bcfdeb8362ee26ab1a80977410903ba79b8ce635dfc"
-    sha256 x86_64_linux:   "08514bc3921cc57b7fdabb4482150d5ddf7298767ff097fb56d3a1822db05e1e"
+    sha256 arm64_monterey: "2621d9db9d8faaf2a16bae9a36f7fdd831141217f9d5ada2ab80787c176bc77b"
+    sha256 arm64_big_sur:  "c92c07d8c9e674e6c08eb1980f2971020f259871a97e5d76c0e4c6d8d76baa0c"
+    sha256 monterey:       "0d2850407deaf8131f38a9424903bc543e9a49faf9e9eb0ab11e1ee8c7d9e808"
+    sha256 big_sur:        "6fd132f3d783ad5d9e88c87d6282cea7b30efd974bec2aedd6adb8b60712144a"
+    sha256 catalina:       "d9b4f603d31fa769760e5d58f95e8e054561dc82c74159c18bf29b7d198c09c5"
+    sha256 x86_64_linux:   "ef3fbac838351291fdc90dd2887de2a3851c3b895bdeb269bcba2543739ae0e3"
   end
 
   depends_on "bison" => :build
