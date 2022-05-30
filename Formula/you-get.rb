@@ -9,12 +9,12 @@ class YouGet < Formula
   head "https://github.com/soimort/you-get.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4d0e6952e12ecfccc70ddf701ca4514bdc63f7691cd4bfccded7368b4d87295e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4d0e6952e12ecfccc70ddf701ca4514bdc63f7691cd4bfccded7368b4d87295e"
-    sha256 cellar: :any_skip_relocation, monterey:       "5eab149f5f6790038d34c8549ffaac5a165b745895c37c46f759e05390196566"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5eab149f5f6790038d34c8549ffaac5a165b745895c37c46f759e05390196566"
-    sha256 cellar: :any_skip_relocation, catalina:       "5eab149f5f6790038d34c8549ffaac5a165b745895c37c46f759e05390196566"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ae49966f9bb2a9504c724e27206bce06925e950db0f60f18b2c67a8f4a96e4fc"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "47bb623904f604ad1728a54e7f6a1729c728cb0b21aeb414d472012824f88adc"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "47bb623904f604ad1728a54e7f6a1729c728cb0b21aeb414d472012824f88adc"
+    sha256 cellar: :any_skip_relocation, monterey:       "69bd3721351cfd339187988f5c3a8166669036d157e3f8da86667d022fc0b231"
+    sha256 cellar: :any_skip_relocation, big_sur:        "69bd3721351cfd339187988f5c3a8166669036d157e3f8da86667d022fc0b231"
+    sha256 cellar: :any_skip_relocation, catalina:       "69bd3721351cfd339187988f5c3a8166669036d157e3f8da86667d022fc0b231"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fbae6a331481acb19ae10d89b9d2423f94747fe41f822d0e556027247d038422"
   end
 
   depends_on "python@3.10"
