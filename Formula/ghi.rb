@@ -7,15 +7,12 @@ class Ghi < Formula
   head "https://github.com/drazisil/ghi.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "320e13830aac81ab0bcbef032e548f6a5f9bf71ce713d7dab24fc813087f4d4c"
-    sha256 cellar: :any_skip_relocation, big_sur:       "78e10bdfae403bb4ca2a2d6208d7df3cd84f321711ca310ded6b00850a69e6bf"
-    sha256 cellar: :any_skip_relocation, catalina:      "36449d0c0fc0a544808178745ce7a846dfd905cf5fc2489feaa2a70d26346041"
-    sha256 cellar: :any_skip_relocation, mojave:        "b6dcd03ae7705b3a3648c6df15b9e451397cd81e41acc5c5f8444796c747c580"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "9289e061f8a249130950ec212042e3d9adfaa96e3591f0eb2d6038c28ff0e6d6"
-    sha256 cellar: :any_skip_relocation, sierra:        "d2b59c4b0326bd4d4b2de6da0310e1d5228cc63d57adb9eb37c5f5c5a9471131"
-    sha256 cellar: :any_skip_relocation, el_capitan:    "d2b59c4b0326bd4d4b2de6da0310e1d5228cc63d57adb9eb37c5f5c5a9471131"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "31384887e9ccf6bca66b79aa8e0df82a6a67ba9e8849dbf0b0c0e0db75c944d7"
-    sha256 cellar: :any_skip_relocation, all:           "3bf94079d3d55b9bf8e901bf7791937119d4636661f876e411139e7ab09e7658"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "43ccd9845bf6f7e2a99d4ced9f23ee0f9e859d15af547ce115d61c149ef12f4c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c96d29c0f571a6444c7472f9b607ceb76d21ca1d05eb5152d97d4d4b7549a8f3"
+    sha256 cellar: :any_skip_relocation, monterey:       "43ccd9845bf6f7e2a99d4ced9f23ee0f9e859d15af547ce115d61c149ef12f4c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c96d29c0f571a6444c7472f9b607ceb76d21ca1d05eb5152d97d4d4b7549a8f3"
+    sha256 cellar: :any_skip_relocation, catalina:       "c96d29c0f571a6444c7472f9b607ceb76d21ca1d05eb5152d97d4d4b7549a8f3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2ed8ec4aa3e0a7ce79f81e4581d07700c1cc1cc2b6bfbfd59086de317f020340"
   end
 
   uses_from_macos "ruby"
