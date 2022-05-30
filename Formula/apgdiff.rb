@@ -11,8 +11,7 @@ class Apgdiff < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "79ad8fdae60b989fb5e986ce237ed17d35dbddce6793a611ee5f05fbf9767ec6"
+    sha256 cellar: :any_skip_relocation, all: "f52732f8db636f2d122c471ea2e36b02e10b73ba23048040aafa44f79ff0dd69"
   end
 
   head do
