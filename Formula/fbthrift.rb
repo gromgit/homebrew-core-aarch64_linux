@@ -1,8 +1,8 @@
 class Fbthrift < Formula
   desc "Facebook's branch of Apache Thrift, including a new C++ server"
   homepage "https://github.com/facebook/fbthrift"
-  url "https://github.com/facebook/fbthrift/archive/v2022.05.23.00.tar.gz"
-  sha256 "a8dc404333e8b34e623c9e823306eaabbcd5ef571b4ca3835b755c07d29c6061"
+  url "https://github.com/facebook/fbthrift/archive/v2022.05.30.00.tar.gz"
+  sha256 "b9e384a72f9ac55dc47adc7d875420fb3f2fb571ed3597515a398a0100b75942"
   license "Apache-2.0"
   head "https://github.com/facebook/fbthrift.git", branch: "main"
 
@@ -47,13 +47,6 @@ class Fbthrift < Formula
 
   fails_with gcc: "5" # C++ 17
   fails_with gcc: "11" # https://github.com/facebook/folly#ubuntu-lts-centos-stream-fedora
-
-  # Fix build failure on Catalina.
-  # https://github.com/facebook/fbthrift/pull/500
-  patch do
-    url "https://github.com/facebook/fbthrift/commit/eb566ef3fd748c04ecd6058351644edee0d02dbf.patch?full_index=1"
-    sha256 "12286a10e3802e15ea03ea4853edd8640f9e5aedcac662b324a708625348a809"
-  end
 
   def install
     ENV.llvm_clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1100)
