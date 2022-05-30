@@ -12,14 +12,12 @@ class Atari800 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ec108e68eea3d1c64c07bcc15ceab3eaa89a73140942c313f60d9f93dfb2cbbd"
-    sha256 cellar: :any,                 arm64_big_sur:  "48470ef79c6f3917d2af5cd4fbf76a6dd2b3ff8f88304765c10d81fa2ef5d647"
-    sha256 cellar: :any,                 monterey:       "43d09a8a70e5aeffbc83e57756f2cb0cbe2fec794912150d35ecb5f94d34452a"
-    sha256 cellar: :any,                 big_sur:        "b2ea1619d6fba699f3936cfb82c28b6d73aafc9d41ad39ee51e9bd49a5840ab2"
-    sha256 cellar: :any,                 catalina:       "5bc2d96418e21a76809abfa2513f630cb207848b0894f27cda34b2f55bace81c"
-    sha256 cellar: :any,                 mojave:         "f5508c8a0021a0fcbd1e35d7a4313d8c9ba52ab937d0fde59ccc5f81e3c49ac0"
-    sha256 cellar: :any,                 high_sierra:    "497ce17afc99e76180b94b76b08c1aca973eab554ee3ccecfd14818c71e97035"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "86b93a07278133bc50a98dc5ca69f96a9f50951b9663905697d26adbcac8e879"
+    sha256 cellar: :any,                 arm64_monterey: "83245b94b9fc95252009f5d281e486cb47e136f8e025dc962f6e6dcb2032ce5f"
+    sha256 cellar: :any,                 arm64_big_sur:  "25416c8f1ee08b394cd45d2a1d0df54bf63d4efb2b5130bfcdd708fe49beb118"
+    sha256 cellar: :any,                 monterey:       "2c91aa0ebc884126de90b5c0ee30531be759cb62b459eae926f48496bebf7057"
+    sha256 cellar: :any,                 big_sur:        "0eb0c4e94debd54def88467d20e73b8834ba93abbe632d096bf5ccd1842dd845"
+    sha256 cellar: :any,                 catalina:       "ad31bf587c7ebdd1d86a05dcb62a9c8c10c24c82fb152e235ad0f103e1243451"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f7f59c0b6841f5a25efa197bdc9d654010474867c8ea40cfd78515bc54919e6a"
   end
 
   depends_on "libpng"
