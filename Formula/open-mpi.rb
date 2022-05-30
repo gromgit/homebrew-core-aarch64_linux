@@ -11,12 +11,12 @@ class OpenMpi < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "0e3b9d9a3a4c6cb77914b416b2e5cb2eff469275d68dc13dc2eb2b98e2a3931d"
-    sha256 arm64_big_sur:  "087464557aad4d1f6622e396baa5e23f47cca73f03185398e4592122824cdfef"
-    sha256 monterey:       "2825f51a7bb6b5957fd211863ef635017eba0e6d4d6ca91a749b05226066d24d"
-    sha256 big_sur:        "15718d988a5b33b93939101fb996d5484b67267939f009f85fe1f8b6b14c7a90"
-    sha256 catalina:       "e3b902a4f205c3bd7c30961c66f7979d20d93bc2ceb39c705f4f2ef47dd81a62"
-    sha256 x86_64_linux:   "7cdb577b27a350b5390051388b3fa09be927efdce8ca13d2c89f3dde3235f5c2"
+    sha256 arm64_monterey: "c6c7bbcc4c1cb911ad45332765571daf6d7dbbd3ecad24d8143ee3648fb98299"
+    sha256 arm64_big_sur:  "106128677431abf6253682f754e24bd4b9b20047acded6f16027c530720c11d3"
+    sha256 monterey:       "dea48c72da25568d64895b92d338dca17bf98945beca0a7ee38d4c1a20ffac75"
+    sha256 big_sur:        "009c7c3922114e87c9579cf5481da1020ac5ab7c4e2c1534067acd8bdf3e3fd7"
+    sha256 catalina:       "d83d61116fa13f540aba9da95985b9f61a76e9b835c3838cdee3f6d9b79a1106"
+    sha256 x86_64_linux:   "8f98a0c30dcfb168233634311fefb8f9cf16b5a8b84b7d264ef0e24192852ffa"
   end
 
   head do
