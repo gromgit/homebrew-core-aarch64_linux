@@ -6,14 +6,12 @@ class Vrpn < Formula
   head "https://github.com/vrpn/vrpn.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "0166e398738d642dbe0c93a058a4e436060c6b57175ad2f6cff9ed53fd2bd857"
-    sha256 cellar: :any,                 big_sur:       "679f3b5776a13311701ec2e75481dd263a47444084bd06948da80b7787184b60"
-    sha256 cellar: :any,                 catalina:      "cecacf7a6918983b48197ab850b20e00a775a607f28b53e51ba49e89f550b2a6"
-    sha256 cellar: :any,                 mojave:        "5a3e1485fdbc883c3996fef9993ef1f3a0aa0e991c9610e82091663db412e471"
-    sha256 cellar: :any,                 high_sierra:   "9b9f4a31161dbc0a4a9ea0759122f0a3725a361dde0b5f1def9bab4e59de12e7"
-    sha256 cellar: :any,                 sierra:        "4e03c131adba54f74742151ee269d2d0c1716e307294679ed2366c0e6cb5fd41"
-    sha256 cellar: :any,                 el_capitan:    "36e5273f8006b1fe5f1655e258f8937e06e9abc4ad849e2c9b1e7a1462fe790d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "789d64889877212b96531df4039aee677863793cf29aeb55ad425ff3dd7d3a59"
+    sha256 cellar: :any,                 arm64_monterey: "e16ae039e897123feecad339bba4ebdb34773a30924ac0046e5785c86c37e243"
+    sha256 cellar: :any,                 arm64_big_sur:  "7937578e438051b79f3270c6fbcd9025d1f4cf42785aa04d72d2c4d245733fa3"
+    sha256 cellar: :any,                 monterey:       "2b172896f3d3c3103643f4d7ded96c1302730677741ee3db5b2cd1d94a65d4b0"
+    sha256 cellar: :any,                 big_sur:        "994b39680e7cb653839053a76ad471e29b1fefbce14a9bbf5434d9de8625732d"
+    sha256 cellar: :any,                 catalina:       "c3fb15bbfbde5f246e3776cde0489227836a695bef07a7a25cc928f2e28a935b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c9f1717e1d29898fb06c95d84c99c1beee02403f6e64f9617569e08e358abbbb"
   end
 
   depends_on "cmake" => :build
