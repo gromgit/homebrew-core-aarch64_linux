@@ -14,12 +14,12 @@ class Yaz < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "923f0919d3e65c3b61ad8f90641db2dbb199b53cd6ecf651add576633e35b67c"
-    sha256 cellar: :any,                 arm64_big_sur:  "c50a90da020887b4a7f6ca986061225ae1493cc1ea5bc0da7c4f5e8cdca54e4b"
-    sha256 cellar: :any,                 monterey:       "d4573e9eba835bde601ad2f3e202844e9267f5514b5f83662d800c552cee1be8"
-    sha256 cellar: :any,                 big_sur:        "ae3de529018e63dda8090880bcd454e3725ca2729b94df67140b8b6ffed0143b"
-    sha256 cellar: :any,                 catalina:       "f867dbc67ba829e5e905ab6d9dec27c3b342873903b6dcbf71404a4e6ebbfeed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "febd7d4ad3b81e84619eaa27dc033e5756d917e0b2f784f6d260f6ffe08178b0"
+    sha256 cellar: :any,                 arm64_monterey: "6d3c5403306490a23b01c02d2377c4957e49014ec8e0a10e31f89f42448de0ef"
+    sha256 cellar: :any,                 arm64_big_sur:  "d9a460f4be9ba66a37108fcedb1653fc5bee04fa7c08dccb64e43057ba6b17ae"
+    sha256 cellar: :any,                 monterey:       "774618052594c9229e1e8247bedda4e5785d30aebb01be617d8f2656136851ed"
+    sha256 cellar: :any,                 big_sur:        "f4698af5b2c57c0e536715efc1e7a6e95eeeac66b37eb82ceb427ad6a9f1f76f"
+    sha256 cellar: :any,                 catalina:       "658c5d298e7e684ba3218e840b2ec1c10e01c5ea83d1759d1dca70b034924597"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "171c6fe1e5807613146a8e73d30e1e02ddff5e2ecfab1e0195b81e6a171390ca"
   end
 
   head do
