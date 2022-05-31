@@ -6,7 +6,7 @@ class Gocryptfs < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "43d8cf09fcd4cb76ac51246225cd30c68ea4abe9c944843a9788534e09ea9e18"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "547ae8e3dc0e26664d9fa02462f49956c8da5fa38bbaf3aa61f1da2fe5014194"
   end
 
   depends_on "go" => :build
