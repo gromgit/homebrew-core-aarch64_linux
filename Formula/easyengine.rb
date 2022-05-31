@@ -6,12 +6,12 @@ class Easyengine < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e6f973203c022b6f280f0c78a37f79e6d770dfa5f26dc576ff33fa999969bb41"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e6f973203c022b6f280f0c78a37f79e6d770dfa5f26dc576ff33fa999969bb41"
-    sha256 cellar: :any_skip_relocation, monterey:       "2261ec2571f602b39c61f521b2b5cf5929626887abfa184723e66bcf15ef9585"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2261ec2571f602b39c61f521b2b5cf5929626887abfa184723e66bcf15ef9585"
-    sha256 cellar: :any_skip_relocation, catalina:       "2261ec2571f602b39c61f521b2b5cf5929626887abfa184723e66bcf15ef9585"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e6f973203c022b6f280f0c78a37f79e6d770dfa5f26dc576ff33fa999969bb41"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7ed1d137bec2b1235657652906ebc37fff79f7f478d690a024be18e869f80620"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7ed1d137bec2b1235657652906ebc37fff79f7f478d690a024be18e869f80620"
+    sha256 cellar: :any_skip_relocation, monterey:       "7b28790b20f6b331b50017703497ebf185a2e19e2c0d25492dd374cc1646187b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7b28790b20f6b331b50017703497ebf185a2e19e2c0d25492dd374cc1646187b"
+    sha256 cellar: :any_skip_relocation, catalina:       "7b28790b20f6b331b50017703497ebf185a2e19e2c0d25492dd374cc1646187b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7ed1d137bec2b1235657652906ebc37fff79f7f478d690a024be18e869f80620"
   end
 
   depends_on "dnsmasq"
