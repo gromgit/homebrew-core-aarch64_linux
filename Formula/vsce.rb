@@ -14,12 +14,12 @@ class Vsce < Formula
   end
 
   bottle do
-    sha256                               arm64_monterey: "1dabb76db108654d63617e2cef4860bc08f83382e166b3c35a96133679b34826"
-    sha256                               arm64_big_sur:  "05ebbf7c52dbd529b59e93e76ca89bf3dff43fec88ed3299ae4897fd1d63a30f"
-    sha256                               monterey:       "147f0e7a8d4ccc2bab0b72944da116174e68776c41431f1391c3535993e843a8"
-    sha256                               big_sur:        "3df6acc73a85fdd4a984769db7078d89f7e84ca88ad9457f66a1eb822f271f05"
-    sha256                               catalina:       "d4ab3afb6917421a15cf4d1930f6b52e5bc998afa0a8cc6db6247cd9a7255a44"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4af072b9b41dc84f661ac2a66935ff551d3b90dc4637bd15e0fa5de057a73a2d"
+    sha256                               arm64_monterey: "c034a8a45abaa676c39bed8fa88bc2468c3e4e8d01232f4e388c6d5513bee483"
+    sha256                               arm64_big_sur:  "5043d37a198d65ace5971ec4d2bba613ec904e75095dbf4027c5272e08c6c6dd"
+    sha256                               monterey:       "eb99c67445ba2202179293d1cc49a1f9336873b9657c984af64379358250641c"
+    sha256                               big_sur:        "449529edebed2d0b174a1b7b853db530ec5a95d158ab4d4f2822d85803f80764"
+    sha256                               catalina:       "bf29e7920a4d7dca4deba6c5ab98c438e2e05d80b1c9a9eeab77e6dd3dbdd5da"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c916c60020edc78237ea08caf65d6bb59e8eaf12474fcf79d134a437952d4db4"
   end
 
   depends_on "node"
