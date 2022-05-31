@@ -6,12 +6,12 @@ class PayloadDumperGo < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "76129dde37ad7f94276379f5b210f36a2beda1326520009307bd4dabe5c219f0"
-    sha256 cellar: :any,                 arm64_big_sur:  "e954da6f5eab2bb5a136e9395f135fdc64633491af80c3517e6d18b95626967d"
-    sha256 cellar: :any,                 monterey:       "18bf18a025b2f1baae4983ed5616ac3668f8c05306c182094b2d32510383b2de"
-    sha256 cellar: :any,                 big_sur:        "53e4337ce4a1481cf2cbc16263baf1492ab4acb7dae0595ebbbec99f72414c8c"
-    sha256 cellar: :any,                 catalina:       "7947b0387e3dce94a9a3db898c32d03bf427ffb49c1cc01fd511fc2f1132cabb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "752b8449042346f4814ae0458f3e9c21b65eb168557c5c5b618dfb046d841787"
+    sha256 cellar: :any,                 arm64_monterey: "8f6b5106876e00cf046896bd48778bf29ad23f2455ff22bc005a5f4fa65c5353"
+    sha256 cellar: :any,                 arm64_big_sur:  "e984276e0f8c673ff3a588abdb8d1827c5363e7b6f466f9c3bf9988faf14ac98"
+    sha256 cellar: :any,                 monterey:       "63bce864ece6c9de7ca76aaf563f75be05ac778d660567aa4fd2e98ceb5bc66b"
+    sha256 cellar: :any,                 big_sur:        "a6c501425739d78e279399cdbe86589ebb8ba0ff564d07aa7849b65ef93cba9e"
+    sha256 cellar: :any,                 catalina:       "3bf1b40363c257f4d2c761940ade539aac4e0936a2f977d4cd34bd0ac2d8da59"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "914db99626b3362a7ff898f96b91b038ea02382b44aeff589ce3e265045dd4f4"
   end
 
   # Bump to 1.18 on the next release, if possible.
