@@ -8,12 +8,11 @@ class Networkit < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_monterey: "dba17aec211b9a8def53232466c251ac398e38a3d1ad3c5d76b0bf11ca144c55"
-    sha256 cellar: :any, arm64_big_sur:  "d158fcf26c6611109a72ff60fc73a8c3546efb824f2ccc6cde0058c111d91952"
-    sha256 cellar: :any, monterey:       "f443a8636f1579826d9793613578d06adef3165773ee1353f32774081f253021"
-    sha256 cellar: :any, big_sur:        "ea766a3afd870e69d1860c4e093ac5cb431a495d9b304d3ba21c032717635213"
-    sha256 cellar: :any, catalina:       "456b7dbc97239bb9f3a9aa4588def29fb16a0c1f021017ad55b61ebcb60a9d72"
+    sha256 cellar: :any, arm64_monterey: "b3709535d7981e04a3cd541ed56c2cdf44f7c2dfad82089add38847b1ec86f13"
+    sha256 cellar: :any, arm64_big_sur:  "f77a61aafe5956ec50958d41bc7460f8454752dc628dfbbb56ec13ce90146409"
+    sha256 cellar: :any, monterey:       "e7f751d0092c78fb44356e0bdd37ea004f34a1a4c7c699ffe789bf0f6b71a403"
+    sha256 cellar: :any, big_sur:        "6477dc3b577c6018f366d50ffc5414cd01bbf5d7c7de7a90e49b0e65b30b0cc8"
+    sha256 cellar: :any, catalina:       "1bf51a6b071e90a81a5cb8e19d83c4afcf0cb9e59b61185af411161888f7309b"
   end
 
   depends_on "cmake" => :build
