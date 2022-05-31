@@ -10,12 +10,12 @@ class Libnetworkit < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d70f28d4cd0e0f131bf702bc28145ac29c6bed7735c56ed32a7d172f22a287be"
-    sha256 cellar: :any,                 arm64_big_sur:  "e980cfd47eea34350c5fefd5f293413b29396b1320b2661182db608596edabe1"
-    sha256 cellar: :any,                 monterey:       "b795b14c903c6280b050abaa2b36f7a692ec3b4422b46f45e67fe9d8a3424edb"
-    sha256 cellar: :any,                 big_sur:        "b3d03f22419474b830163e6f67a113c96393095311ae3014f7b09c7e52ba22ca"
-    sha256 cellar: :any,                 catalina:       "43e0aecc9ced86dd1e9cfcbef96965bbbe767beb9114f095952c8b8cf8ab6317"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "76ebf53f601b9e20661d5c3bdcf2d8335eb9f8d1d9f4073367cd6e2ad25d0184"
+    sha256 cellar: :any,                 arm64_monterey: "e2919d44cec2eafbbe58c3fee2681daf09958abbb9ba528eefe96f7df6256c00"
+    sha256 cellar: :any,                 arm64_big_sur:  "8e05afb0ae9e15fec6bf8399b53a552adf98925b9589d78793b21aadb27a46ec"
+    sha256 cellar: :any,                 monterey:       "9085962ca2f6b0039a9792ea6f0ae961afef99a5db473d89d9032ece3cf3a580"
+    sha256 cellar: :any,                 big_sur:        "b163a4d4dddf4bd99b93c4721d78641055076e35a0d479c0cfd13d32d21cb133"
+    sha256 cellar: :any,                 catalina:       "f90b31a3102703560a6e12a5d538cd0a58022bc009930c94719c61ef155da9bc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "630f9f76898951016ab2e198933cb737ba19f1a98af8025af791b0a83a08fe36"
   end
 
   depends_on "cmake" => :build
