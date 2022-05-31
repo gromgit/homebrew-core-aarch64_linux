@@ -12,11 +12,12 @@ class Tracker < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "91f76976c6f234c9a9349b7fd3049a5004a5c557577e6e9c24aeba0e5818c3a3"
-    sha256 arm64_big_sur:  "121d8f5ee8518474aa90f5fc7e02e88b2cb0b17ca5b94b181b3204eb761727fa"
-    sha256 monterey:       "e1e4da63da95c45ce6b717d20e544f84104a7d42e3fb207dae41cab4eedf2cfa"
-    sha256 big_sur:        "0d3e0b8be3a4422e04bd665ad59d566889d9cecd7237ef0ef7168b7c6c32a6f2"
-    sha256 catalina:       "980958cbbf2d74eadde9cf0043934ed1a56698520d764bee24cf83691b41b4ca"
+    sha256 arm64_monterey: "2833c82369acab097a1dea8a210fd0b4954884e2621d04746d6b2f0647e0dc9d"
+    sha256 arm64_big_sur:  "dc6a9c8418887b60efa7155eb35e679caf4150ae0318cf3f396186ed9872d420"
+    sha256 monterey:       "0bde1314517725d5cca31b1e59f0996c85aba8841eba5642802d0bb2b283456d"
+    sha256 big_sur:        "e9b560ea16c39cb4b647859888994a328dd01bba40844d538562a930874097a5"
+    sha256 catalina:       "edf898777df78313be89ae31c0b549533e2290069d21a7c559f6f53c140cf286"
+    sha256 x86_64_linux:   "dddb0188234e4232f993e4e67e58ecccdb38e4c95a9a91c873d61f45d1e3cd8e"
   end
 
   depends_on "gobject-introspection" => :build
