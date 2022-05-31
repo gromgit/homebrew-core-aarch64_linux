@@ -15,12 +15,12 @@ class Gperftools < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f34a3226e8eb39953b26b2bbed7303a0121644b78e45acd6dfba08d7ffb99585"
-    sha256 cellar: :any,                 arm64_big_sur:  "1d97fc10af93886ac88a519c4807f9e73d84f71d6d11204c3b088302b8f6c8ed"
-    sha256 cellar: :any,                 monterey:       "15e8c3c91094d9aa65556b42f75126a8884262cb0438ffa7efd227f521270484"
-    sha256 cellar: :any,                 big_sur:        "c5402ce2e426620556c4dfbe0f57f68b7d42c96c84f0bbc667a02e6ee529eb7b"
-    sha256 cellar: :any,                 catalina:       "48f3c365c6915e4cd815103d418bb98a49c3f7387266fc808d23de1aa2d5fb8d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5e00b341d2cbcf5b1bfa351308d3fdb34c74cd357149fcb8babbb2571ada9f44"
+    sha256 cellar: :any,                 arm64_monterey: "b6083efd21e2ba10f38b8d8884bec70a5ad96b60e4f159d700b88a4f32626dcf"
+    sha256 cellar: :any,                 arm64_big_sur:  "53e182d8321912b58fa8a9e7989ac13d337323cea79c9a6865ca9aef8235fdad"
+    sha256 cellar: :any,                 monterey:       "119236efb407004d2d1c794d3fa97ac2d903f6271f03ba49ee905e23b8230320"
+    sha256 cellar: :any,                 big_sur:        "1e55694d046edcecc802b5ebb93529ba9515abc833c10f0612ac281174611643"
+    sha256 cellar: :any,                 catalina:       "425c644c9b7956e9e5d25153c3020d98b1ac2eaada5dcc497a87c4f142a1c1c4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bab264991e8d70ad7bde43cc3ce05077fd5560a808e8ac1c939dd1764deba29f"
   end
 
   head do
