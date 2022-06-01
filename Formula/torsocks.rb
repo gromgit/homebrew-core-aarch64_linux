@@ -6,14 +6,12 @@ class Torsocks < Formula
   head "https://gitlab.torproject.org/tpo/core/torsocks.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "9d03fd12643e5ee1f023e316b5e8fca4837d4021c47f3ccbc3e12000c00f663f"
-    sha256 arm64_big_sur:  "3882e64c21d610b6e0fdb6e3bceb41a4ae9494849ced24901f0b50946b34a296"
-    sha256 monterey:       "88ddbac1ee6a4197bece3921800234395129d11733d3a1713519b57f449f9335"
-    sha256 big_sur:        "2e7d1f1ed60e53086456447d408f577a8ee8d10c73ea8e01b94f7fdbaf6cd141"
-    sha256 catalina:       "0fe4e287d086c2249645781e187dd12e45526ab6ed45b32051aac2ddb840dc92"
-    sha256 mojave:         "8f07df71ce2b8eee8ade8ac9c4de7c5e59acebb880b369dd3bd2d5caf5a93e8e"
-    sha256 x86_64_linux:   "439ed3da7de466d90191d08110cf96e5f435331e2d2e439accfdf8c89357799b"
+    sha256 arm64_monterey: "2cabbbb8642a786a45cb99e1633447ceab14b5df439679f8588814ecb3117aab"
+    sha256 arm64_big_sur:  "8c1b04d704074ee39b0ad3ff78ffa87ce8bd58ddac3eb6fbb20f559f0bbac55f"
+    sha256 monterey:       "65b106a97660e2d27779dca77bf2998df798f4376bc00fd7ba21cbe9ae3f3b26"
+    sha256 big_sur:        "3ccf568b46201f651f12d017b6a507f51150cc5f714ad70e3a456e41fe737b7c"
+    sha256 catalina:       "2e4214a024055b73d0c6f7f7a05c24d872940b4a49735ed2856711c58e37f2b4"
+    sha256 x86_64_linux:   "b2dd5e3cb19d877cb6bb46d58c8c71a03fdc02d1d7bdc7772bc75431df861283"
   end
 
   depends_on "autoconf" => :build
