@@ -11,7 +11,7 @@ class AlsaLib < Formula
   end
 
   bottle do
-    sha256 x86_64_linux: "c673efe91d915b952414f5bc37381c9f75979f0ecd196236a2997413beca1bab"
+    sha256 x86_64_linux: "5513719e5e90d5a82e0fece73eecba14e3cf256625eb977f5116cdc6807646f6"
   end
 
   depends_on :linux
