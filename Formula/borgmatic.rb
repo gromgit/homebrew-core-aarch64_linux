@@ -3,8 +3,8 @@ class Borgmatic < Formula
 
   desc "Simple wrapper script for the Borg backup software"
   homepage "https://torsion.org/borgmatic/"
-  url "https://files.pythonhosted.org/packages/44/57/9785c3f0a3782a1ab103c1969f8cbd1ed3520b4dee35825492a5463beeb8/borgmatic-1.6.1.tar.gz"
-  sha256 "c2261125b2d9de7a2ad2b5889f547266722fb7f04e26b2857cda1d0a3add71e9"
+  url "https://files.pythonhosted.org/packages/ff/99/7a3b3223dd8814ed0878a28932f592186cd12c5d24cefaafe7688989fe20/borgmatic-1.6.2.tar.gz"
+  sha256 "74329aa66380d4d85b99ed0b5d5a8d70d0e640c0eb7aee83a1e955648a447be6"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -79,24 +79,64 @@ class Borgmatic < Formula
 
   test do
     borg = (testpath/"borg")
+    borg_info_json = (testpath/"borg_info_json")
     config_path = testpath/"config.yml"
     repo_path = testpath/"repo"
     log_path = testpath/"borg.log"
+    sentinel_path = testpath/"init_done"
+
+    # Create a fake borg info json
+    borg_info_json.write <<~EOS
+      {
+          "cache": {
+              "path": "",
+              "stats": {
+                  "total_chunks": 0,
+                  "total_csize": 0,
+                  "total_size": 0,
+                  "total_unique_chunks": 0,
+                  "unique_csize": 0,
+                  "unique_size": 0
+              }
+          },
+          "encryption": {
+              "mode": "repokey-blake2"
+          },
+          "repository": {
+              "id": "0000000000000000000000000000000000000000000000000000000000000000",
+              "last_modified": "2022-01-01T00:00:00.000000",
+              "location": "#{repo_path}"
+          },
+          "security_dir": ""
+      }
+    EOS
 
     # Create a fake borg executable to log requested commands
     borg.write <<~EOS
       #!/bin/sh
       echo $@ >> #{log_path}
 
-      # Return valid borg version
+      # return valid borg version
       if [ "$1" = "--version" ]; then
         echo "borg 1.2.0"
         exit 0
       fi
 
-      # Return error on info so we force an init to occur
+      # for first invocation only, return an error so init is called
       if [ "$1" = "info" ]; then
-        exit 2
+        if [ -f #{sentinel_path} ]; then
+          # return fake repository info
+          cat #{borg_info_json}
+          exit 0
+        else
+          touch #{sentinel_path}
+          exit 2
+        fi
+      fi
+
+      # skip actual backup creation
+      if [ "$1" = "create" ]; then
+        exit 0
       fi
     EOS
     borg.chmod 0755
@@ -128,12 +168,13 @@ class Borgmatic < Formula
     # Assert that the proper borg commands were executed
     assert_equal <<~EOS, log_content
       --version --debug --show-rc
-      info --debug #{repo_path}
+      info --json #{repo_path}
       init --encryption repokey --debug #{repo_path}
       --version
       prune --keep-daily 7 --prefix {hostname}- #{repo_path}
       compact #{repo_path}
       create #{repo_path}::{hostname}-{now:%Y-%m-%dT%H:%M:%S.%f} /etc /home
+      info --json #{repo_path}
       check --prefix {hostname}- #{repo_path}
       --version
       list --json #{repo_path}
