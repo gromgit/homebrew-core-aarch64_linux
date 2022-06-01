@@ -9,12 +9,12 @@ class TwinePypi < Formula
   head "https://github.com/pypa/twine.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c8e8fb8398e007c9ad2152841eac189b25f04b36baebe2431fed37e2bd39efae"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "470c426c49d0f041275087f1b9d98e7e1ec643ad6cc32b1d2c3d548645edf99a"
-    sha256 cellar: :any_skip_relocation, monterey:       "5f2006be0fbaf7884ef5c0e286525897ba973d96e1824d74385320b4b47a02e7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e60585a9a7c9553a24ab6fcbfceef131fecde8fc32d31045a65fda62e93b1a88"
-    sha256 cellar: :any_skip_relocation, catalina:       "51681585d78d4c68fed2ea2217d301c2f6e66940827e09bcaf3ed3dd38f2bb63"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d1ca315fbb8ff0ddd580979e6a8c74680d70b3c1cf54d3fd68908bd78866d240"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7aa8792b5c951c9bbe9b8855e8d49309d65dfaa203e9a218a76bbb378460de2f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "414082cf40592e47b0948b69685f4a2b6cfd50f190f84873cf82836ca93f9742"
+    sha256 cellar: :any_skip_relocation, monterey:       "5033b5e6b9be216a310838c0619136145fef755821f2e9460f04c70fdddc2442"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2b9158bbb44663187287a697f90e936feff442f525ef593c2c2cc1559340a9af"
+    sha256 cellar: :any_skip_relocation, catalina:       "1c7b8ae284c7f1cf8df8bf8cf36f56d26ecca3f1a7aebc78f3016453946f3a3f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "25c565cf6b9bdee9aa498856368b4fa4e9d1275eef0e89fde645cbbd3ed566db"
   end
 
   depends_on "python@3.10"
