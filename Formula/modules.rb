@@ -11,12 +11,12 @@ class Modules < Formula
   end
 
   bottle do
-    sha256                               arm64_monterey: "334f813c5fcbf50c3f35f26a3fe6ad57e28d0277ea7d164570ccb3c719ec1680"
-    sha256                               arm64_big_sur:  "31b0d3ffc6aa3d331c3af1b7f9a5b44156f8756e21d6cc4beb966090d7e4bbd7"
-    sha256                               monterey:       "3586ebf3ff07fccf4b7663790ef0065ed8b714c95206b46d5ee5f3cf89b1fc7e"
-    sha256                               big_sur:        "5922381d6e9fcd567c4af9d599683601107984e1c538bd348b83e375a448cb2d"
-    sha256 cellar: :any,                 catalina:       "e5371939e1b942bcd7d968e2349faf9ba892aa8666975f1ab0875543b8b4c5cd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "527235069a340ba96eaddff6e456038157174b5de68192438b0f1489526d1201"
+    sha256                               arm64_monterey: "2005834a21f066f38329001986c72f6d573fbdd76aefe8260ab479929a32dc61"
+    sha256                               arm64_big_sur:  "b4b13c216d76fcc9cbfa735d2745ce08241779efeded492f47e564242b7ffa01"
+    sha256                               monterey:       "aea8ee2737cefa69cdb09f39cd4fa16b30f913a817671828d748b356f260ab74"
+    sha256                               big_sur:        "6cbec1b70253d7a38fa308dd3a1eea3ceadb884f3f959c8fd56d9ee4320adbe7"
+    sha256 cellar: :any,                 catalina:       "6ded93be3b9acdabd905c95b21a784c0ae497b03901738fad026bd30edeef7e4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "60fec8d3cd399e851436459e79b62f4ee627dc0e5a59fb6ed62bc25a4cee8b22"
   end
 
   depends_on "tcl-tk"
