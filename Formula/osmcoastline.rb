@@ -7,12 +7,12 @@ class Osmcoastline < Formula
   revision 5
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3c3de6f11098241c9c5308da232e63cb4719d93023edd7d7cb5b6f3729e70a3b"
-    sha256 cellar: :any,                 arm64_big_sur:  "961220957e7f1f1e5e390c76de13afa67aebdacf3f6939b8eb410356e3237663"
-    sha256 cellar: :any,                 monterey:       "8154c5d50db171a216b7e8329a674f2059a8eb0923fe3e085f33b575d32c8df9"
-    sha256 cellar: :any,                 big_sur:        "0061dda8ad6ed87cf2e73953ed2d658ec00c953157aae00a30ee27b5a14dc065"
-    sha256 cellar: :any,                 catalina:       "6e29bd319d5dbf9d3fa7fa1f4af8bdc16bdedb2617ba5129737000374718cccc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d5fe46fd3c5ceaf2c6af41cf7bb36d265c443ca564dca914ce6a724c38282b84"
+    sha256 cellar: :any,                 arm64_monterey: "383b7271348c37202ec542d3022e197c69da8608420300bd6a42450f67b76612"
+    sha256 cellar: :any,                 arm64_big_sur:  "6b0f73d2184f267b9f5a7e50145739da0990e065b825ee226f059b5592452c99"
+    sha256 cellar: :any,                 monterey:       "18db1e798ba515417c85b01e0b95d00a9ba1e296ee263a4082a821537e341bd3"
+    sha256 cellar: :any,                 big_sur:        "ec8e27c3feb251618d6aa028669b01c44114674b5829ec8a2d63445719438b21"
+    sha256 cellar: :any,                 catalina:       "f40b1f1fa46d354e8555e7f89b3a479acf3de70b5ea2425bf610b8ed577c2580"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e795926739cc6a42fda90adf4bee1fc50a9b65c804078002fd5083e3e255fee7"
   end
 
   depends_on "cmake" => :build
