@@ -14,12 +14,12 @@ class Zeek < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "5005d30962982766efe8af9b13499089adae2d7c8ba0b2dc3acaee46f1fcf9d3"
-    sha256 arm64_big_sur:  "d0c7d6589300b591bc6c9fcb90056e01d505ec91bca6b2473f8d8771adee32ad"
-    sha256 monterey:       "991b9a377ef8192946de126d612ce8aa3cbf48e19ed652ca3a2c582d704d5d98"
-    sha256 big_sur:        "040b280ab1df2c7696e9ebb3f90354a2a7f3ffd5a1eec561d2668effb0334ae1"
-    sha256 catalina:       "58fc46d06e986c504a1dfc4486f54fa8f63ce811e7c98cdb2fb191c2a69e0028"
-    sha256 x86_64_linux:   "538b2c9d090421142e65c71f6656b10e5e3b6106d687ea546ad80ae12c30e626"
+    sha256 arm64_monterey: "fbd937cfa11d2dca393b778da7e99cfaba86cb84ef3e4d8fb2436bbef0a78af1"
+    sha256 arm64_big_sur:  "0c6a41eea0a22834978e2a6621c74009f33095ea3916d144ce4cbe9b303d8ef7"
+    sha256 monterey:       "2711c827e76e9eae9e5c0f1fbdf05a19e7d42dae4f9cf4b6f6d14e03237a6a3a"
+    sha256 big_sur:        "eb4176e1e4c479b08c4366bf4dbed88f95fd8504de584a230fcb6ba0ad6aba2a"
+    sha256 catalina:       "b191c5915200f6e6abe83e4dd5d6d552a92e1f5ae85c9018ab55dc12ebd8684a"
+    sha256 x86_64_linux:   "7c4b98ce61cc2c407c21059ae2918fdf21475c3dd4bc57caceeb87d44fbecdea"
   end
 
   depends_on "bison" => :build
