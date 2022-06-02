@@ -7,13 +7,12 @@ class CollectorSidecar < Formula
   license "GPL-3.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "71aa58d8b75b684ecb4f4aaa44ba2e671ae1cf55c2bf5d0085154332f4a81ff1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "24494acc03245693ab94d61f3aa8903b1006243713fa3fac91e499c7de885b44"
-    sha256 cellar: :any_skip_relocation, monterey:       "3f943a1a0a1a6035c6e4c234f128ed24bc9d4cc7bb565769963a961e91b28bd4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "689ede327bbf176b9c4f3d544f90f5940b1d026151b91c50a0100edd268c48ec"
-    sha256 cellar: :any_skip_relocation, catalina:       "30f35fc66f276071c2126fbe77f7bb7b3a7852a1c45adc2d5532a8340b421902"
-    sha256 cellar: :any_skip_relocation, mojave:         "193227a80963772b7a480713f3d104fe9e3a1dc7e1c7122a26292fd5bf5c0708"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "21646bc7c252e5052a04341e4305fdd3821501206a7052f9ce1a83e8f8816de6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8013d5b34e9f52b7d951883398eec860fe67731f3997f88109a9950d0bc9813b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6e7f81a1b6652d4174fe522b23862d39c8a6afaa55916462df45dafc5d96326d"
+    sha256 cellar: :any_skip_relocation, monterey:       "a7516dcac003058d57f8264775ee352f4ef860584107f92221ab0a35b0149130"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a39e57f9749ee91a6ef524b6ab087616b8fcf22a35564da5b8318b6788fe787a"
+    sha256 cellar: :any_skip_relocation, catalina:       "6d66fcf6c6a71ffeda378600d44ee8934674b1ba9df2c5ec0d7c90dd4dee09a9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6c7da214e88be65203ffab9c4cc0b4106b2dbe97dec451a9b5d1137907daf74e"
   end
 
   depends_on "go" => :build
