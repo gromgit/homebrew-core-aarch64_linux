@@ -12,12 +12,12 @@ class Mapserver < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "477c3b98cef266210bfa9595d324ed0da0cef4be754888ec5d1da11cc5d3d77a"
-    sha256 cellar: :any,                 arm64_big_sur:  "15d25c55cb6a0d8db29a293c523fa7c56b2b274d24413682993b1915fe508e06"
-    sha256 cellar: :any,                 monterey:       "807575f997e470030d0f05eee9fded42afc59fde2edbea28e30a41405cbfe713"
-    sha256 cellar: :any,                 big_sur:        "dff219470b797278023f5d68231db74d08b1a3c04d0dab0c77d47a51b7bab382"
-    sha256 cellar: :any,                 catalina:       "e08713491a56f62f3b5ec16103c55b41b860a84fc13a87f9af70539e7cd58cda"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f6211abb6f2950be9ac4e5cae4910e65612773968bd0abb3a042eac9d2827de4"
+    sha256 cellar: :any,                 arm64_monterey: "329b8b0d9171e1ddd78caccfa2181387a4a96fd6fa0d793d8e2df08e4d483e28"
+    sha256 cellar: :any,                 arm64_big_sur:  "9e9f70c6e73ebf54c17e724c9258ebfe551154a6d136110db7a84dd8d9179b5d"
+    sha256 cellar: :any,                 monterey:       "c54dfcf1ee80c006d2577a62b8d611b5deb1296e76eec74d9267ec26ccd13299"
+    sha256 cellar: :any,                 big_sur:        "27208daf7f0f2d4c54a7acb06ac64534a073e7211e687ecc8764042f996cfa65"
+    sha256 cellar: :any,                 catalina:       "47697fff3cfd46f892a42ec9ff649a72521aadf6dc8a2519966b5d24f3e19e0a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "80ad31e2bb0aaf61cb589cfe32b302179a5184aaa699bf51c4816575fff7a524"
   end
 
   depends_on "cmake" => :build
