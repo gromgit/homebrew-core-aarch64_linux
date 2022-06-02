@@ -24,12 +24,12 @@ class MariadbAT106 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "7e1226f604e740445bada460c2ebd544de658095e2c871f3dcf27bb8e3def8dd"
-    sha256 arm64_big_sur:  "71873883da81fd9e8421ca1bdaa850a90a86eff9faee38262ab8013f03e2e5e5"
-    sha256 monterey:       "e0ae55797b3bf3f5a6475c9b68cc290d2c072b3d1ab2e7479074629ba8076d3a"
-    sha256 big_sur:        "801d0b2061b971d86826a907fc016ef18b810ff779bd7bb180b0a527fd731d70"
-    sha256 catalina:       "0b18feeeff990ce0594c33a237d70feecc3acfd83b7768b0365bd47c96955336"
-    sha256 x86_64_linux:   "85f7f93922c0c78e31fa7ae8cf2b71b0a53106cc21f603353aded3c84bb3702b"
+    sha256 arm64_monterey: "db4254dac66fa9af048f1341637c9b040b98b2ac79d55cc030b8e7b0d80a94af"
+    sha256 arm64_big_sur:  "ec9de012fdf23bb06fca94f212cf5279e49d37a41543f34f21ebc21782047bb9"
+    sha256 monterey:       "d1fa2a75c91ee3d032d70dc28257f91857e90a6397af4be4e267a4a50e110ed7"
+    sha256 big_sur:        "cd03dede5f990dcd4d6a741f2d35fceecd32094e6674649dc4e247e2a36f9265"
+    sha256 catalina:       "782f3d5a7adaf28da494609e71e476a861a18c8e5d7da9854995522ca286af22"
+    sha256 x86_64_linux:   "1f21050ec82b25b1ae706c8daa99b52fd92ededef26466d69e6aefca3c209d26"
   end
 
   keg_only :versioned_formula
