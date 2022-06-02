@@ -7,12 +7,12 @@ class Mbt < Formula
   head "https://github.com/SAP/cloud-mta-build-tool.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "30058fffbd4bd4d9c44450ccbf72504e6e7902798fba4c21f060bec8562e44d0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f49fa010c066a1dc535b91944fc985a6ffcf9ca7c25c282ed419dc8ff3ada5f3"
-    sha256 cellar: :any_skip_relocation, monterey:       "46c1491236965a0e320b724e2532fc79a189431349372c74535f5fbbe9a62e89"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cb26140f67e1d1da5636697d87bcef08cb3ae7975413f0ddd14379c194274fbf"
-    sha256 cellar: :any_skip_relocation, catalina:       "d1947d48029eec0351e15d0fa618a0f14a6d12989976f6409ec94d294b807721"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9a8f7fc59f282398758bb137f0ee8631b2c1f4f4694d2d1a47919f1d66a72239"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7ea7407383cef6e284f67f76737b9189b036bdefb62f732cf0f2e950f009b5b5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "060099b9d37e893606b8a30712dcdf01d7a3695c763530d2e838fafeba11d163"
+    sha256 cellar: :any_skip_relocation, monterey:       "4f2db796894aa6826002c25e25b4d2cb208975462ae048d709aa5c5f1361d52b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d72f2c355899234f2c79d470059d933a1dd4d2af32f22b7dec4c3bb64fa469cc"
+    sha256 cellar: :any_skip_relocation, catalina:       "b278b24187c17c35b67d9f07697e29eb1aabac7d2d71374c7dda4ba57957518e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5263d50a1711fe2df7966c7489dcbbbef5f89837032e2dc57e5a800f5d7e10e6"
   end
 
   depends_on "go" => :build
