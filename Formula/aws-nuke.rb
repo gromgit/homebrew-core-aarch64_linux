@@ -7,6 +7,15 @@ class AwsNuke < Formula
   license "MIT"
   head "https://github.com/rebuy-de/aws-nuke.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6ef274877b43d3529e5aea1aba2f67f425f51998be0fad5f9ad0426817d72041"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6ef274877b43d3529e5aea1aba2f67f425f51998be0fad5f9ad0426817d72041"
+    sha256 cellar: :any_skip_relocation, monterey:       "afd65213fcc12219e471cf497d1dc985b91b31009b6e1166598e5e22386e649c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "afd65213fcc12219e471cf497d1dc985b91b31009b6e1166598e5e22386e649c"
+    sha256 cellar: :any_skip_relocation, catalina:       "afd65213fcc12219e471cf497d1dc985b91b31009b6e1166598e5e22386e649c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f087c387e43dc35205c3e5c04e85ecb5aaf499c6106002bf94af6b057e45bbc3"
+  end
+
   depends_on "go" => :build
 
   def install
