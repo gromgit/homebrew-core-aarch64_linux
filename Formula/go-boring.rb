@@ -12,12 +12,12 @@ class GoBoring < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "561d62051e0500e291f68b4d6eca5da30b15c11b69bf00b2b4adabf29be366ac"
-    sha256 arm64_big_sur:  "4a197f9643c8bd09f288b95f6d16f425f68983fd640a3d55298b6e305ef6482d"
-    sha256 monterey:       "f9fce63981a3328a0866d612b8d10045ef6e93352aa52653896fa25d916cb46a"
-    sha256 big_sur:        "3073f675a239794f5d2f86088df5974329907d639f89bde80393e64a50fb6834"
-    sha256 catalina:       "be4557357b38a0db88515c7ee7fb399d928890a4257ba94896adbba95700078b"
-    sha256 x86_64_linux:   "6d7edd4385a57dc925944f00a3d30e447bfd174f0d6c6ca8ff55758d7974b3b8"
+    sha256 arm64_monterey: "8a0155c97e3a1f1c7d258244f817d69fca9dd328b0a60c84898aa4fc0892bbd3"
+    sha256 arm64_big_sur:  "336c4878faa3063c3d0d612e80269e0d03b437fcd75eaf5ad710f0cf0fe71907"
+    sha256 monterey:       "648b1380431dd8f55087394e904d4f150f8239a668c79aca34e9fd9a7909eaf6"
+    sha256 big_sur:        "79c91e19a59cb115518b0bd6869692ccdda56d505834c6d72af1a610af0d13e4"
+    sha256 catalina:       "f9644504dae0d7d89cbfef6775a77274b1a0c1a893b8bec3244e8bb8b5a71da6"
+    sha256 x86_64_linux:   "e4e2b529091cca4b83e388bf931409435b660cbbd34d6cbcba35d57298ef8b5b"
   end
 
   keg_only "it conflicts with the Go formula"
