@@ -12,12 +12,12 @@ class Libvirt < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "426c4dbe77cb04f0c36db7c3d8c30195a8e17c319787930732587ceba283017f"
-    sha256 arm64_big_sur:  "4ba6aaa6d5d24b93eaca19c00e2313831d1285d19ea71c8242212a9bc1e968d7"
-    sha256 monterey:       "4583eb76feaa0bdfd56b71e7fe6bd8dd50a190e9e67797c354bc46f04938d6e0"
-    sha256 big_sur:        "cb9da500b18a2c100aa61f2e3cbb8c6a1b88a71a817fd8454d409d2a9b7ec6b2"
-    sha256 catalina:       "ddde93a9b3fb8140411ca0dde4a651e6edc6cd6040504f1a81733fc4eeaa4c0c"
-    sha256 x86_64_linux:   "18062dd27a891c0c46277170580270746a851a921d7dd305b32962fa84007cb2"
+    sha256 arm64_monterey: "a75eaa89a40a4c197a5a2860fa1db285595826a60349b34c8ce4c0508b4a43b5"
+    sha256 arm64_big_sur:  "57b5b9288a66422d46f39eb07a67719c82fba387542113d70422a3087eaa9e00"
+    sha256 monterey:       "12d72abec429bc149c7ebf9dfdfb5f877e2c3cebd9de72e25f0b739396d8df5b"
+    sha256 big_sur:        "7644a045ba234c080286b3236f3d796c1b244c5385dcdbe64c100ea9766b0da0"
+    sha256 catalina:       "8aa749edc9a1a76989c3d5eba5500c58bf514804c9ffe794c9bc9b11ae06a9ad"
+    sha256 x86_64_linux:   "189a157b80c3fa5e52ba42b7d5b12de1c83ebf3501dbe4fe2b027d2531e9d946"
   end
 
   depends_on "docutils" => :build
