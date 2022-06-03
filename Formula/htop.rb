@@ -12,12 +12,12 @@ class Htop < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "160f154f147eb9895626ac2a6aa9aaf16d561828067c1faa7e990e7e50a0efde"
-    sha256 cellar: :any,                 arm64_big_sur:  "0b5b52d11c885e8661a69e342d0778c5c71ecd57bc5c366fa28911967b2d1191"
-    sha256 cellar: :any,                 monterey:       "eac8d539403c7b3c1dee9e16454399e9963191c79a7b5cda343bb4b13cdf7f61"
-    sha256 cellar: :any,                 big_sur:        "e4b21db63251f1c3472e5c76372451017ed008a21afce273d0633bd8acb3de7d"
-    sha256 cellar: :any,                 catalina:       "998bbe3612d1d5da046351e28037c68fc894d2847fd08648b3fcce26141cf098"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7ed8c32a717de42eec088976dbe561b5904fc11753f6b1c376f36a34af057802"
+    sha256 cellar: :any,                 arm64_monterey: "50735eb9e09ec8087f04640430d4bdac4941a0ce584dd1e52ec8ec8a58d743ed"
+    sha256 cellar: :any,                 arm64_big_sur:  "02e592c85dbfe7ee6bb0a2bf5275cc6434710aaa30d7756d11a363946a5cb76e"
+    sha256 cellar: :any,                 monterey:       "13ede571c82f9ed6f55d8ef081bd7db0f11ca8945dc306594465384f38f693f4"
+    sha256 cellar: :any,                 big_sur:        "3004679265a03a1d4d5162895e79de630535a7d6ebe0c59592cb307ed9aeb5d5"
+    sha256 cellar: :any,                 catalina:       "6a0040374a95b5adf832d15b69ee80fbe3fc24190f523f46e199e0cb60fd9057"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "864f057daa4b3361cf076523e9a532763153a512cbd7da90bfb6b10ecfca0c05"
   end
 
   depends_on "autoconf" => :build
