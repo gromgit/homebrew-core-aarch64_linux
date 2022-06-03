@@ -12,13 +12,12 @@ class MongodbAtlasCli < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d6ee579f202d33b6b5c168d5f398f9c770c14af71022a8304fb8886c8b6b0a45"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "27e6387a690a793c2d10e5a1748d7f03391e08c9d98460c7530bd78d97460bb1"
-    sha256 cellar: :any_skip_relocation, monterey:       "17a462b112d93329eef45d9a261f53190412f600daa12f421ceb0f0e628dbf8b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "90d5852f8ca3629a6cab02e79a41da1f7be433aad4209dd9e286e29d8160b281"
-    sha256 cellar: :any_skip_relocation, catalina:       "b213af559da69bd79a2376c47469c65eba1faa06b167b999f4c3f3f5282a404c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5a69614067a52661db61443a928292377dd941cc48ea7fe12cfb21ccadbdcaf6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0af3606951fe106dd16186d1f8b74d9f75f9f4f06abf371651994c914d34d826"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "14169fce8278aa036a28f0946a7c354e5e72185618959874fde8e5c8373cac8d"
+    sha256 cellar: :any_skip_relocation, monterey:       "438d91ac88c8056ddb5599992d95afa75029edb302098d0e9c85bd310e5db595"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c0762d461712d7150a6f882bb2b24e570b6dd2ebb1a1ae541c2c2c11ce4d05a2"
+    sha256 cellar: :any_skip_relocation, catalina:       "c08696c435c14bee3dd2f422d282e6c1ab864bfb53b60b31020ec71880f38881"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dfaa59bbc049250cb6754aa2e9fb073176c8a29098b1e834b80c7eb18ac4dd38"
   end
 
   depends_on "go" => :build
