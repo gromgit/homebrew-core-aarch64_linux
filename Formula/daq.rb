@@ -8,12 +8,12 @@ class Daq < Formula
   head "https://github.com/snort3/libdaq.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "6134622f0d881a752dd52c54481f188026868d1d5df83ccb881b1ecc06226ed3"
-    sha256 cellar: :any,                 arm64_big_sur:  "13f029804a664d28ba6443ab2d2b9c6dd59ed6b870946d3ccc1734ffe022caeb"
-    sha256 cellar: :any,                 monterey:       "1203103b74dfd43731f233e70b856b33bce8f7a5df514e05a405101d8c8b8c13"
-    sha256 cellar: :any,                 big_sur:        "5b1ae8880f97bc8020d03e4057ddaeb345755414c534e0fb5a43ea99689c4eac"
-    sha256 cellar: :any,                 catalina:       "b16673133466e6fd4394a7e81a6c1effbb33ab6cef5b897ee6dfd1292c302bd9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a4bcbd83b743a5f422372e213fd9c5f2289c76801cf018926ceb030761542ed2"
+    sha256 cellar: :any,                 arm64_monterey: "52f0c3a1ec708b77312bd28d9cb36bb7a1c83707b178c49e9ef80bb1670662fe"
+    sha256 cellar: :any,                 arm64_big_sur:  "3dad1903959fe048a7b131c7c4bdc0c730b0cf6e73f211b98736949ba624a664"
+    sha256 cellar: :any,                 monterey:       "e445da3b4e68058a9f0f9c96548542790bf9af3bbdd2ff223f8db65d1b6417c3"
+    sha256 cellar: :any,                 big_sur:        "9e12aa54ccca7ca08e2538d94497db4fbeec60716c7d62fcf5f592f82e04084f"
+    sha256 cellar: :any,                 catalina:       "2b9c7080aaf0fbfd55057a01207c3cd4f7d905c895c539675962bc5985c80edf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5ce0a3cc2bf25659e1d97b4524a4b03e3b33cf99fd5f21318ca8f0044c519360"
   end
 
   depends_on "autoconf" => :build
