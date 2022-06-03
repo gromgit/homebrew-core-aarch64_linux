@@ -12,12 +12,12 @@ class Pidgin < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "01a98620a3ec20a08e94493606514e2880f5e70398b8360f8e74b43f78da8deb"
-    sha256 arm64_big_sur:  "db3e891bc35acd42bba41703c8cfebee9a624c9ed2092a1ad02d31d5a56688ec"
-    sha256 monterey:       "1cebf59ad06dc543545168bdc3f977e9b15d1a3be7409626b636b09232a0d279"
-    sha256 big_sur:        "e8cbef36831f6f5c298b014c6bfdb135a0f50f210ad5b08c5feb0b249db92752"
-    sha256 catalina:       "7dcd7822ee195f4daffb436ea655f6c092e887200688368d6fa5c7403a07b059"
-    sha256 x86_64_linux:   "8956f645394856fd074a93cd7814e4d5d19e60d842ffd409394add8656ea1434"
+    sha256 arm64_monterey: "c0c7b49b0fed66c67d876dcf97572248901053bab76f8fe97edf427939b6ce0b"
+    sha256 arm64_big_sur:  "120296125be6258002a38fcfdeb025d8760b05b9ad452e563a74376b213fa429"
+    sha256 monterey:       "55544b3e9be6b23a10131c4d9ca8a4c24c1e641e34ba915296904ffd6344bb99"
+    sha256 big_sur:        "c9169b8b07e4e99df1dbb87804735cc7c75db6312ce6939c529c2489f38194a2"
+    sha256 catalina:       "e3b55fc1d2d26808276dbef83c51daf2c93c455464644b565b4eb7d14dd69651"
+    sha256 x86_64_linux:   "0e9a72f62dd1ef2077e86c1ee50c2a9d6556d70803f1563316b3f5ca65356b35"
   end
 
   depends_on "intltool" => :build
