@@ -1,8 +1,8 @@
 class Fpart < Formula
   desc "Sorts file trees and packs them into bags"
   homepage "https://github.com/martymac/fpart/"
-  url "https://github.com/martymac/fpart/archive/fpart-1.4.0.tar.gz"
-  sha256 "da4cd97365a2ebb3d0ee7e634c022eb21321ee5b6ab213d796fcbb01f28d9759"
+  url "https://github.com/martymac/fpart/archive/fpart-1.5.0.tar.gz"
+  sha256 "64aa6dcb519a9ce60e174ece9e390839d90ea3ad4d7b43d30e1b6de681918b6c"
   license "BSD-2-Clause"
 
   bottle do
@@ -31,8 +31,9 @@ class Fpart < Formula
     (testpath/"myfile1").write("")
     (testpath/"myfile2").write("")
     system bin/"fpart", "-n", "2", "-o", (testpath/"mypart"), (testpath/"myfile1"), (testpath/"myfile2")
-    (testpath/"mypart.0").exist?
-    (testpath/"mypart.1").exist?
-    !(testpath/"mypart.2").exist?
+    assert_predicate testpath/"mypart.1", :exist?
+    assert_predicate testpath/"mypart.2", :exist?
+    refute_predicate testpath/"mypart.0", :exist?
+    refute_predicate testpath/"mypart.3", :exist?
   end
 end
