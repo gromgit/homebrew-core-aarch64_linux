@@ -11,12 +11,12 @@ class Geos < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "428a34a85cedb1ae8e3f36db4d926fb1c5d4897549d11aec14541eeed417d048"
-    sha256 cellar: :any,                 arm64_big_sur:  "99d4cefa2243a67dba6ee118fc2255edcf524e039179df567e09de4181031032"
-    sha256 cellar: :any,                 monterey:       "1a31f70c0017373e0f8676cfd69ddc3d7bcc3879010e60b0912a6103a4eeebbf"
-    sha256 cellar: :any,                 big_sur:        "d5c404e8bed308173d7a6bbc86ea14610b8ac8dd417af97e420964e4649119ce"
-    sha256 cellar: :any,                 catalina:       "3e5f0c6bd82f9083f4c91745275b34bf440bef7c90f67cfd1de36cbfda53a487"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8c24de077aa44a6387c42d9bfedf00082f7244c308ddb9be138e2af54c404bf6"
+    sha256 cellar: :any,                 arm64_monterey: "579b5bf2419a61aa7329bc86c99d7a4549340cde9fb26afe37adca66e12b015f"
+    sha256 cellar: :any,                 arm64_big_sur:  "cc504d3448cc8f236abfe114d89e3d1e0d4d5ad6a4f7a708b6c4e5fd06995f94"
+    sha256 cellar: :any,                 monterey:       "a8be8c07e11de3903f85d96d2bafd752f0c6bb58da323bc7221b396249b1ce8c"
+    sha256 cellar: :any,                 big_sur:        "03030f530ca30099fc3a3fbfd919fe6427894e59775bcd95b57aa0bedbc1475a"
+    sha256 cellar: :any,                 catalina:       "a47acdbad83bcde65cba959a9b2959ae8f1de235450d3dcff2a345bedad9ed84"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d85ea74c667999eee7534b949f96608155d801161325b10f50b74297c4fd1136"
   end
 
   depends_on "cmake" => :build
