@@ -8,12 +8,12 @@ class Vcluster < Formula
   head "https://github.com/loft-sh/vcluster.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e3566b4e97b887c6a47878a1e05fc09de3628f352abb1fceb7dcec3b34aaab48"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "47c0f3f47d9c4f403b9037b13c15224c6a74f80ed810c9f79d8668ad1be0ad58"
-    sha256                               monterey:       "09abb354f722f3e66abae6e2fbdc6c024801ad01657fff3ea8345382237ff139"
-    sha256                               big_sur:        "0802e835fa36ea3d792c58922e5611557ac1f9b598b68935ca84827e0c56f625"
-    sha256                               catalina:       "8ed4cb4779cfdd332f2c69a09f6d76111933fbca9926b28b96be9025645fdd22"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b76b5c26ec4eae342a3b123738532c540d4fe06b97d7aa98890470ac5cc5cd29"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a348977b92f6970d97535c260169295c701ee352054625a9a91255c441519835"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5af083239e01556d553b6b2cc216bfd69949d5c2e0bb596bbe57c1b2c70a773d"
+    sha256                               monterey:       "3145d1e80ace077a1a78a6b317d1c6158000df2b5aa163770f3bf73dcb4c9fab"
+    sha256                               big_sur:        "d852913addf19a0b7bcf2a9f07c7284b5df7cf25a64165a7fe1736b8e39648c2"
+    sha256                               catalina:       "ad4be01538bac0b937c7df1fa32d4cc17d98ce3ecfb5fc5983034ab1a5549670"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5cf0c0f7607b876f90647280bcfbf9b630ce4124230fb4e9725e65fd690b81b9"
   end
 
   depends_on "go" => :build
