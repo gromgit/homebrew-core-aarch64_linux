@@ -7,12 +7,12 @@ class CmarkGfm < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "215ca612a34a62533cffd87ca075b07e4b7000462ce0597863806941a35e7dba"
-    sha256 cellar: :any,                 arm64_big_sur:  "65fb4a92ad77038e9ed86c326bf70cd3da114c6b81263f5cd3d540cdb584f717"
-    sha256 cellar: :any,                 monterey:       "d50121029ed09bf22c80fdcac22cfb7ea71191785bb0f90cc570d93411b92053"
-    sha256 cellar: :any,                 big_sur:        "5a957847eff309fb0119460a301f851a282774c9d8601a2f7ddb484fbb9e340a"
-    sha256 cellar: :any,                 catalina:       "632243f006c84b2ef42110844f6ba7344b76172f9bfdc35d031c025376c93db9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6f7008a12bc36b961dc37bf3d574592c82930ff843a7701f81cca40628a20c1c"
+    sha256 cellar: :any,                 arm64_monterey: "3fce983843324792b1a4df8be5b242fc0cee23200e7015141bf12ef36ca5f2a9"
+    sha256 cellar: :any,                 arm64_big_sur:  "ddf818d97cc545f1c13b7613109f45786a3c2b653b2b148b36ecb40fb48af04e"
+    sha256 cellar: :any,                 monterey:       "dc4f61c2d6e50fc750f3b82404bda9bc4ce9f47f6415722b78dc75cf8216b77d"
+    sha256 cellar: :any,                 big_sur:        "6f342b5088afeeeee23b0ea4fed9bc0ef4f46ad5532985fe93a2c131c37c9d2c"
+    sha256 cellar: :any,                 catalina:       "8c99f03ce18b3c4fdc9e836e8c3fc1054883c9fd7fd4f98be1e87d2b09a86c42"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f9c19ca94d92227351f56497a01faa27f20a30cdbe04a8c8636f6d55da0a044e"
   end
 
   depends_on "cmake" => :build
