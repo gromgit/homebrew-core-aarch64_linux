@@ -1,13 +1,13 @@
 class Liquidprompt < Formula
   desc "Adaptive prompt for bash and zsh shells"
   homepage "https://github.com/nojhan/liquidprompt"
-  url "https://github.com/nojhan/liquidprompt/archive/v2.1.1.tar.gz"
-  sha256 "d6a5e49027ad8f19415460956e6a96b801c379bf3e1b5e3b0941936c6d4153f2"
+  url "https://github.com/nojhan/liquidprompt/archive/v2.0.5.tar.gz"
+  sha256 "aec7a1a2d2b5aee5db30895ebe8fddde2f59db0e23fbf55e627acc0551b16465"
   license "AGPL-3.0-or-later"
   head "https://github.com/nojhan/liquidprompt.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "aa8a84326856e6f4b7a93ffac77df2f297a778dc65833f0cd2a06f7c384cc178"
+    sha256 cellar: :any_skip_relocation, all: "1c04a2b629a7a9f72f1e0823a6ffa707fc89d2c640dc6f28d1cf1a65ecee4767"
   end
 
   def install
