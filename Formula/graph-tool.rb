@@ -3,9 +3,10 @@ class GraphTool < Formula
 
   desc "Efficient network analysis for Python 3"
   homepage "https://graph-tool.skewed.de/"
-  url "https://downloads.skewed.de/graph-tool/graph-tool-2.45.tar.bz2"
-  sha256 "f92da7accfda02b29791efe4f0b3ed93329f27232af4d3afc07c92421ec68668"
+  url "https://downloads.skewed.de/graph-tool/graph-tool-2.44.tar.bz2"
+  sha256 "2dd8c31b65eb9404b78af1413d2c8896e247fa5bf81dfcbe56fcaa27af82df26"
   license "LGPL-3.0-or-later"
+  revision 1
 
   livecheck do
     url "https://downloads.skewed.de/graph-tool/"
@@ -13,12 +14,11 @@ class GraphTool < Formula
   end
 
   bottle do
-    sha256                               arm64_monterey: "62a2545e6296c558c337f6207d11c3f156bdce0d4c0e8bbea6379f67fc24948f"
-    sha256                               arm64_big_sur:  "34395ee0ea68f11b588e87eb521664e42c883dffd06f7e48594b48c868675a6b"
-    sha256                               monterey:       "f4db1813477f61b95735bb738ccef6a2a686f9ea2d837b80e406ba8311904959"
-    sha256                               big_sur:        "1ec7e4f24cd3215a8ed5a87f8fc6cc98c2a8e673cd00250162c5f053bfa48391"
-    sha256                               catalina:       "20a90c4bf61f3ce2e346ae4279b717efaa891872ebb7815c004916dcee15d399"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "283b51758494ed6dc084410d97ced1b46022f74f378ffbac7872ab34a3d28e82"
+    sha256 arm64_monterey: "9a4db825a44c6ae1614d5815103a57ad589c2230b963445d0947548439f43b7d"
+    sha256 arm64_big_sur:  "0b8df36a4822cbc9b336ce1614a69f52ca992be513d27b0d135d5730728af9a7"
+    sha256 monterey:       "a59af6591bd1d93f88163cc4edb3539687b84aee9b4818acfd1e896912a78c95"
+    sha256 big_sur:        "06f780584252159fcec05eb35a7ba6c975e55188f63703ace8fda545c9b5a8d1"
+    sha256 catalina:       "4075f605762c097fcb11d30e8228150079c1cded528eff0dc0b240020dba8300"
   end
 
   depends_on "autoconf" => :build
@@ -39,14 +39,6 @@ class GraphTool < Formula
   depends_on "python@3.9"
   depends_on "scipy"
   depends_on "six"
-
-  uses_from_macos "expat" => :build
-
-  on_linux do
-    depends_on "gcc"
-  end
-
-  fails_with gcc: "5"
 
   resource "Cycler" do
     url "https://files.pythonhosted.org/packages/c2/4b/137dea450d6e1e3d474e1d873cd1d4f7d3beed7e0dc973b06e8e10d32488/cycler-0.10.0.tar.gz"
@@ -84,9 +76,6 @@ class GraphTool < Formula
   end
 
   def install
-    # Linux build is not thread-safe.
-    ENV.deparallelize unless OS.mac?
-
     system "autoreconf", "-fiv"
     xy = Language::Python.major_minor_version Formula["python@3.9"].opt_bin/"python3"
     venv = virtualenv_create(libexec, Formula["python@3.9"].opt_bin/"python3")
@@ -100,13 +89,13 @@ class GraphTool < Formula
       "--disable-dependency-tracking",
       "--prefix=#{prefix}",
       "PYTHON=python3",
+      "PYTHON_LIBS=-undefined dynamic_lookup",
       "--with-python-module-path=#{lib}/python#{xy}/site-packages",
       "--with-boost-python=boost_python#{xy.to_s.delete(".")}-mt",
       "--with-boost-libdir=#{HOMEBREW_PREFIX}/opt/boost/lib",
       "--with-boost-coroutine=boost_coroutine-mt",
     ]
     args << "--with-expat=#{MacOS.sdk_path}/usr" if MacOS.sdk_path_if_needed
-    args << "PYTHON_LIBS=-undefined dynamic_lookup" if OS.mac?
 
     system "./configure", *args
     system "make", "install"
