@@ -6,12 +6,12 @@ class Sftpgo < Formula
   license "AGPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6878f05cd56dd09aa7fdcf2d624291ff812905538688fd63ccebc692fe42289b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "601e0bad5d9bbe2286660f01e3194e3f6bc4d28e143e46e8315ae052e7dccde9"
-    sha256 cellar: :any_skip_relocation, monterey:       "84277342de48e7f330a4c259cc36f77fab97d1709fae3d30168e4e769c7ac599"
-    sha256 cellar: :any_skip_relocation, big_sur:        "664d7602fb45d8aed5946864851ec822fb0a78b2e204cf7e921c79ea9985caac"
-    sha256 cellar: :any_skip_relocation, catalina:       "a78ee9ebc9e3f6780198057bf5b691014ecadcf7ac621b3bcdd3fd5c0ece02f2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3f4bfe51b971dd79dc4807f3266e5971f33c119d85b93dc7d5ce3b284b951374"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4177c93da29157f3326598a85e3a1c7129c880a80092d7bf90f4a98755134f52"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cb7138ee760de736f3920c7660bad35c87a3b504f1a491c88ab7fcc173698168"
+    sha256 cellar: :any_skip_relocation, monterey:       "4779a81233db43db1a3b6296d365709c35f5d9eb0f6938a1670090669e9cb486"
+    sha256 cellar: :any_skip_relocation, big_sur:        "afb296aefe068d09e4619b12d728bb84599b8e07cd45b9f5b4c2a03078ec4f11"
+    sha256 cellar: :any_skip_relocation, catalina:       "bb0e5ce46d2ffb4f33975946ac61b72b9130d5719d76576ba387053efbd7ff63"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d009a58901d01a7b9599f9bc81f012ba9426f9ffc10a41ce186b440dc5bc0456"
   end
 
   depends_on "go" => :build
