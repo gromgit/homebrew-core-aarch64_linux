@@ -28,10 +28,12 @@ class Lilypond < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "1bf9fc2843e2909c2de3e326d20bbf7e7ca4a6e26b55218d804517c7f1aecfad"
-    sha256 big_sur:       "06a0837a35cb89309a5e725e178db7de41711ae3a914a3136feb56576fa22c97"
-    sha256 catalina:      "dc9a0bb669aca02fe3d4b5ba2375120c4056b2202b43e6988eb555fffc1a86bd"
-    sha256 x86_64_linux:  "119d632c47f32b8f7ea9d7edfd6532d18c29302ae5a7f1d74f972bad9d8371ba"
+    sha256 arm64_monterey: "49d124945bab950bde9c85f3db48bcef6424030329322194bf0b2e0698ba72c8"
+    sha256 arm64_big_sur:  "1bf9fc2843e2909c2de3e326d20bbf7e7ca4a6e26b55218d804517c7f1aecfad"
+    sha256 monterey:       "0c6266fba99f4b41aa524664d499bcc5729afdb745604176c742b6feea45a949"
+    sha256 big_sur:        "06a0837a35cb89309a5e725e178db7de41711ae3a914a3136feb56576fa22c97"
+    sha256 catalina:       "dc9a0bb669aca02fe3d4b5ba2375120c4056b2202b43e6988eb555fffc1a86bd"
+    sha256 x86_64_linux:   "119d632c47f32b8f7ea9d7edfd6532d18c29302ae5a7f1d74f972bad9d8371ba"
   end
 
   head do
