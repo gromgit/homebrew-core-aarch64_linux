@@ -13,13 +13,12 @@ class Kapacitor < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "637f8bfe6712471e08eab2a2ae7936380e60be053d845494903079dd1db611e9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1818dbfa03b46c14fd6319ddc58181d6bf8219b1e6984af4b1776966b3b5344b"
-    sha256 cellar: :any_skip_relocation, monterey:       "b5f6e6ffbd485b54336caf6b33a4ed8e70f805391347e9ac4a71f579aa44fad1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "03e6ed1a8fb1b808067cf600c40a6c417287769710a3b1052cd155a4bf2aa91f"
-    sha256 cellar: :any_skip_relocation, catalina:       "b19d21c40470c2244484cd7bb1e59b0fa67046d2e8af2bdf02e97880896cdea7"
-    sha256 cellar: :any_skip_relocation, mojave:         "26af1dc72d59fda49a071aa3c61fb8376bb7a13a56ac6a674709ac210dba90ec"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "507116948e5c775cc1459f15c599419e6d9c65ab5fdecf00d5b4c9f80a0edf6c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f32e511a348e8c377099aa9fdfc56d628d35bb5252c586416e0d2d6ccab0be24"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c17b8196f8b873bf5c92e71f10fca6d24858e2c8d9100f6acca6191e87f4cb41"
+    sha256 cellar: :any_skip_relocation, monterey:       "d64fcd22b98c4747c4aeaf025fe4dd644368153229bbe97176248caa436ecc7c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "6306917a076b5caaf5234d7d5063b3aa6d4f670f35c635581611222a0b09863f"
+    sha256 cellar: :any_skip_relocation, catalina:       "40a1d991e84eb1c7dfcdc6e59c9c30f66bde65f6bb2dab263bfd598777d82cc6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7ba7eb7269f6445c7d20bdcd5710011d121b253d527fa96c09f3e16c1fec03bc"
   end
 
   depends_on "go" => :build
