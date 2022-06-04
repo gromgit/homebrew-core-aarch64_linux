@@ -3,13 +3,13 @@ require "language/node"
 class Pyright < Formula
   desc "Static type checker for Python"
   homepage "https://github.com/microsoft/pyright"
-  url "https://registry.npmjs.org/pyright/-/pyright-1.1.251.tgz"
-  sha256 "adc9b9e05b0095765f8f055a05b4c9faebaa3760468bfaf077343e67b612207b"
+  url "https://registry.npmjs.org/pyright/-/pyright-1.1.245.tgz"
+  sha256 "a47ab650225c3f74c4dd95ee953255775e6a36eaba51dce5b692521a0a01a9ee"
   license "MIT"
   head "https://github.com/microsoft/pyright.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "6f7117aedfaa8f51d45062d6abc55dd9bc9e5f774c3bf98983ffea52f6e1b018"
+    sha256 cellar: :any_skip_relocation, all: "514546bd6676ef2ce7e6d59a145596a879162a0e87baae7a2a79fd41f3eaacd9"
   end
 
   depends_on "node"
