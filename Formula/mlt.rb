@@ -7,10 +7,12 @@ class Mlt < Formula
   head "https://github.com/mltframework/mlt.git", branch: "master"
 
   bottle do
-    sha256 arm64_big_sur: "75ebe6e53d6d94f41b774d6657a6b9e634af506a3f81222e90bf586f3d89cabf"
-    sha256 big_sur:       "cdf94bf5644bad214e7002f8c58bee10076ae981b5128a8e99802a4350ee3756"
-    sha256 catalina:      "9846d56f31fa1b65f4343c3ad607e19ee77e399cc018b32b337ec8167ea39f04"
-    sha256 x86_64_linux:  "82a103b511b1b1b1a43f2d2d9d0df154a30d79ec60bc2317553d9bcc7999dd8a"
+    sha256 arm64_monterey: "a37d2c507b418fc001679d7457a49b162b1cd394d8c0dbad3267c7a8eed26998"
+    sha256 arm64_big_sur:  "75ebe6e53d6d94f41b774d6657a6b9e634af506a3f81222e90bf586f3d89cabf"
+    sha256 monterey:       "f750250534dc91e43276649e492fdcb29e3a7cdce6b89e3a4bdaf63119c1e922"
+    sha256 big_sur:        "cdf94bf5644bad214e7002f8c58bee10076ae981b5128a8e99802a4350ee3756"
+    sha256 catalina:       "9846d56f31fa1b65f4343c3ad607e19ee77e399cc018b32b337ec8167ea39f04"
+    sha256 x86_64_linux:   "82a103b511b1b1b1a43f2d2d9d0df154a30d79ec60bc2317553d9bcc7999dd8a"
   end
 
   depends_on "cmake" => :build
