@@ -6,13 +6,12 @@ class Fpart < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9953748a9eb170c83a20c8c0706306f27ff4a89ba4302da1115dab7e6ca14082"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d6a63f24931f43d9d9c887f807df5a811c0c5ab0242c7187ca37040358fda1d7"
-    sha256 cellar: :any_skip_relocation, monterey:       "1e01ae4aac80a3a913b1e7e9c97e16567ab320d82cb7856b610db91d597be815"
-    sha256 cellar: :any_skip_relocation, big_sur:        "741db79f38bc38921cd62b0fca57195acb793a50e64586ec68a2a6c8cb596aa0"
-    sha256 cellar: :any_skip_relocation, catalina:       "0b987e9b4eb542e14cd1d894a318f94d0e9d08affa2c694713d909d7d6bd3dc7"
-    sha256 cellar: :any_skip_relocation, mojave:         "b0e2dfd4356d31684bd79f8307217af16cb779448a30c9ad24114673c500e997"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "13304c2e16a01c67c6455cc115e8a486c945deccaf430724e87a47c15bee3bd1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2274c88d661ee015868ec449a32322bd195c1ce2b4afe1aafebdc02c5bd5399d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "41e62a21932f2b1e376d4b1b639130e7448ce1706aa50822c5987b36e2a30754"
+    sha256 cellar: :any_skip_relocation, monterey:       "6b5ce070c9290fb6bfd86dbef79e2d541a052d601ab0c69577830eb94fb83c80"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ab79762617a69826fde9d40188b62fd9243c61c45234ae7ad8c879d34bf3c58c"
+    sha256 cellar: :any_skip_relocation, catalina:       "66ce10f074e12713d97d95e73c49c16f1f99597e7ab21728c4dbed791c276f1c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c98d9ad2199a9257d6c6cbc8dea2a7105df0c2b5e7e306d94e9f1be787a274f3"
   end
 
   depends_on "autoconf" => :build
