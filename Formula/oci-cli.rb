@@ -3,18 +3,18 @@ class OciCli < Formula
 
   desc "Oracle Cloud Infrastructure CLI"
   homepage "https://docs.cloud.oracle.com/iaas/Content/API/Concepts/cliconcepts.htm"
-  url "https://files.pythonhosted.org/packages/3b/c5/f377024beecfcc233cd561084de1227402b6cb93101bb98c6926245d49f9/oci-cli-3.10.1.tar.gz"
-  sha256 "7a22206880dc81d07319ffc1c02c097c19402d088e06135dd265ad6ffa4508f8"
+  url "https://files.pythonhosted.org/packages/8c/a9/c9694bf26c75c7d87160dd2e0af6fd857243fbe310bfe6d6a44156f61885/oci-cli-3.8.1.tar.gz"
+  sha256 "761d8920521618b53e9c67480c5558fe0a6f8c0a2073d8ca2472f20b32e5332a"
   license any_of: ["UPL-1.0", "Apache-2.0"]
   head "https://github.com/oracle/oci-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "692b3514837f749fcf64a7caa9447538bb082e4e0fdab9e40246ccbdca10165b"
-    sha256 cellar: :any,                 arm64_big_sur:  "c660c6fff5c7d67efeb7845d7dfebbe294cd0a8cb75060e7e3efca890df2d0bf"
-    sha256 cellar: :any,                 monterey:       "85d6c7f37dd252361b93ed6362d31a1318034f68b4dc736583a3c0f6c80b3fb5"
-    sha256 cellar: :any,                 big_sur:        "842e55f9b237026553cd64dac165047a4bcaef144b7ef7943de7c1366126f52e"
-    sha256 cellar: :any,                 catalina:       "15bd704b922ac8df3bec7dea71193f1fa7a597dd091992242e4179ceab548c15"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5699efad5abbea1bd77c44e7b140eab19e930e22f1b7e45b58d285ba4cddd252"
+    sha256 cellar: :any,                 arm64_monterey: "5d6ee1757094700559f5b11704ce170cb9f45fb7ca8c9fddce15d257316308e8"
+    sha256 cellar: :any,                 arm64_big_sur:  "527e6d5b11426d52fa34d15c70d380aaf0b814f6946ff0419c75afce3624a487"
+    sha256 cellar: :any,                 monterey:       "eda89ec11b111293d38cafe472fb8360d2219360df120f62d0b4e58dc1d7ab75"
+    sha256 cellar: :any,                 big_sur:        "7bfce246268206e30157dc40f11635a1c6e0cfcc65b97cd245bbb0bdb0aa44e0"
+    sha256 cellar: :any,                 catalina:       "572629d9e9f959e20568eaff94de30acf016711ae4ebc73322ce0f579b5b77f6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7022a1d8fd2b21d493e8d0c4d8216c274e50f9cfbc9040d0707336cda0eb4a53"
   end
 
   depends_on "rust" => :build
@@ -27,8 +27,8 @@ class OciCli < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/07/10/75277f313d13a2b74fc56e29239d5c840c2bf09f17bf25c02b35558812c6/certifi-2022.5.18.1.tar.gz"
-    sha256 "9c5705e395cd70084351dd8ad5c41e65655e08ce46f2ec9cf6c2c08390f71eb7"
+    url "https://files.pythonhosted.org/packages/6c/ae/d26450834f0acc9e3d1f74508da6df1551ceab6c2ce0766a593362d6d57f/certifi-2021.10.8.tar.gz"
+    sha256 "78884e7c1d4b00ce3cea67b44566851c4343c120abd683433ce934a68ea58872"
   end
 
   resource "cffi" do
@@ -57,13 +57,8 @@ class OciCli < Formula
   end
 
   resource "oci" do
-    url "https://files.pythonhosted.org/packages/78/82/b19c618d38d50b392ada6176d2ec7f1e4f366f2a8b119f9f97bf5b9e8dfb/oci-2.70.0.tar.gz"
-    sha256 "974ff16585613a6007138250bc5b10cccf4d3814f9d327401a0d70816f65493f"
-  end
-
-  resource "prompt-toolkit" do
-    url "https://files.pythonhosted.org/packages/b1/32/2a6b734dc25b249467bfc1d844b077a252ea393d1b90733f4e899aa56506/prompt_toolkit-3.0.16.tar.gz"
-    sha256 "0fa02fa80363844a4ab4b8d6891f62dd0645ba672723130423ca4037b80c1974"
+    url "https://files.pythonhosted.org/packages/64/3e/a07372bd2bdf6e1e946cdc321f2c51575c6a43c767b82b9eb52047c7f61e/oci-2.66.0.tar.gz"
+    sha256 "8f25765bc5fbc8920ccf6fbb5e1d27b0fdb512e9b64449b71163dd52ea820f0c"
   end
 
   resource "pycparser" do
@@ -94,11 +89,6 @@ class OciCli < Formula
   resource "terminaltables" do
     url "https://files.pythonhosted.org/packages/9b/c4/4a21174f32f8a7e1104798c445dacdc1d4df86f2f26722767034e4de4bff/terminaltables-3.1.0.tar.gz"
     sha256 "f3eb0eb92e3833972ac36796293ca0906e998dc3be91fbe1f8615b331b853b81"
-  end
-
-  resource "wcwidth" do
-    url "https://files.pythonhosted.org/packages/89/38/459b727c381504f361832b9e5ace19966de1a235d73cdbdea91c771a1155/wcwidth-0.2.5.tar.gz"
-    sha256 "c4d647b99872929fdb7bdcaa4fbe7f01413ed3d98077df798530e5b04f116c83"
   end
 
   def install

@@ -207,6 +207,12 @@ class Buku < Formula
     ENV["LC_ALL"] = "en_US.UTF-8"
     ENV["XDG_DATA_HOME"] = "#{testpath}/.local/share"
 
+    expect = if OS.mac?
+      "/usr/bin/expect"
+    else
+      Formula["expect"].opt_bin/"expect"
+    end
+
     # Firefox exported bookmarks file
     (testpath/"bookmarks.html").write <<~EOS
       <!DOCTYPE NETSCAPE-Bookmark-file-1>
@@ -223,15 +229,26 @@ class Buku < Formula
       </DL>
     EOS
 
-    system bin/"buku", "--nostdin", "--nc", "--tacit", "--import", "bookmarks.html"
-    assert_equal <<~EOS, shell_output("#{bin}/buku --nostdin --nc --print").chomp
-      1. Title unknown
-         > https://github.com/Homebrew/brew
-         # bookmarks toolbar
+    (testpath/"import").write <<~EOS
+      spawn #{bin}/buku --nc --import bookmarks.html
+      expect -re "DB file is being created at .*"
+      expect "You should encrypt it."
+      expect "Generate auto-tag (YYYYMonDD)? (y/n): "
+      send "y\r"
+      expect "Append tags when bookmark exist? (y/n): "
+      send "y\r"
+      expect "Add parent folder names as tags? (y/n): "
+      send "y\r"
+      expect {
+          -re ".*ERROR.*" { exit 1 }
+          "1. Title unknown"
+      }
+      spawn sleep 10
     EOS
+    system expect, "-f", "import"
 
     # Test online components -- fetch titles
-    assert_match "Index 1: updated", shell_output("#{bin}/buku --nostdin --nc --update")
+    system bin/"buku", "--update"
 
     # Test crypto functionality
     (testpath/"crypto-test").write <<~EOS
@@ -255,7 +272,7 @@ class Buku < Formula
           "File decrypted"
       }
     EOS
-    system "expect", "-f", "crypto-test"
+    system expect, "-f", "crypto-test"
 
     # Test database content and search
     result = shell_output("#{bin}/buku --np --sany Homebrew")
@@ -267,20 +284,15 @@ class Buku < Formula
     assert_match version.to_s, result
 
     port = free_port
-    pid = fork do
+    fork do
       $stdout.reopen("/dev/null")
       $stderr.reopen("/dev/null")
-      exec "#{bin}/bukuserver", "run", "--host", "127.0.0.1", "--port", port.to_s
+      exec "#{bin}/bukuserver run --host 127.0.0.1 --port #{port}"
     end
+    sleep 10
 
-    begin
-      sleep 10
-      result = shell_output("curl -s 127.0.0.1:#{port}/api/bookmarks")
-      assert_match "https://github.com/Homebrew/brew", result
-      assert_match "The missing package manager for macOS", result
-    ensure
-      Process.kill "SIGINT", pid
-      Process.wait pid
-    end
+    result = shell_output("curl -s 127.0.0.1:#{port}/api/bookmarks")
+    assert_match "https://github.com/Homebrew/brew", result
+    assert_match "The missing package manager for macOS", result
   end
 end

@@ -4,41 +4,25 @@ class Texlive < Formula
 
   desc "Free software distribution for the TeX typesetting system"
   homepage "https://www.tug.org/texlive/"
-  url "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/texlive-20220321-source.tar.xz"
-  mirror "https://ftp.tu-chemnitz.de/pub/tug/historic/systems/texlive/2022/texlive-20220321-source.tar.xz"
-  sha256 "5ffa3485e51eb2c4490496450fc69b9d7bd7cb9e53357d92db4bcd4fd6179b56"
+  url "https://github.com/TeX-Live/texlive-source/archive/refs/tags/svn58837.tar.gz"
+  sha256 "0afa6919e44675b7afe0fa45344747afef07b6ee98eeb14ff6a2ef78f458fc12"
   license :public_domain
+  revision 1
   head "https://github.com/TeX-Live/texlive-source.git", branch: "trunk"
 
   livecheck do
-    url "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/"
-    regex(/href=.*?texlive[._-]v?(\d+(?:\.\d+)*)[._-]source\.t/i)
-    strategy :page_match do |page, regex|
-      # Match years from directories
-      years = page.scan(%r{href=["']?v?(\d+(?:\.\d+)*)/?["' >]}i)
-                  .flatten
-                  .uniq
-                  .map { |v| Version.new(v) }
-                  .sort
-      next if years.blank?
-
-      # Fetch the page for the newest year directory
-      newest_year = years.last.to_s
-      year_page = Homebrew::Livecheck::Strategy.page_content(URI.join(@url, newest_year))
-      next if year_page[:content].blank?
-
-      # Match version from source tarball filenames
-      year_page[:content].scan(regex).flatten
-    end
+    url :stable
+    regex(%r{href=["']?[^"' >]*?/tag/\D+(\d+(?:\.\d+)*)["' >]}i)
+    strategy :github_latest
   end
 
   bottle do
-    sha256 arm64_monterey: "7b5516dc4a93e9049b043b433939babe9fc49d601b79c28d5e89ae65c4239ea3"
-    sha256 arm64_big_sur:  "53e6c100505c281b4aaeb1d9f2e59f85f1bd326347555a8a1892705d95a9a0e1"
-    sha256 monterey:       "1cb83a23e1232b4a01c84e430af0b3b7b448ccd663c420009df8b700fb92c76a"
-    sha256 big_sur:        "8a9bcdd4d7195bdaeb641fd17338e1164109aad64d55aaff2ced36aec50e6975"
-    sha256 catalina:       "dce2568d9351a7c67e118f708cd51e160d96bb419f2cbdb74f148990a45d8028"
-    sha256 x86_64_linux:   "79a742ddce49de12bbfa53f0f33a184650edbbafb7d246acc8a63887c15670c1"
+    sha256 arm64_monterey: "dadc23bdbb5e8a28e231260a051b412b94aa495aaf276fda2c6412714c1fba99"
+    sha256 arm64_big_sur:  "1bba9c18fcf44f87ad9245d209805192615a439b907a68964bd2a092b661d050"
+    sha256 monterey:       "7972330fb8840fb2ef35e506c202ea47345f47a5b1c75c3eba2b032a6545eb3c"
+    sha256 big_sur:        "0b9c9752210fdaa7146296e98199ac3ce34b3912772a4a7235d9b725bf760af3"
+    sha256 catalina:       "5efff1fce1fd763fe81e56fe34954e5072a372c137cc62c83c7e00c0d9e8f4ac"
+    sha256 x86_64_linux:   "b7ea4c16d38ffa6c4e2fa87d9756a32d1b7748456c48d38f2949044b90ce0669"
   end
 
   depends_on "cairo"
@@ -89,21 +73,18 @@ class Texlive < Formula
   fails_with gcc: "5"
 
   resource "texlive-extra" do
-    url "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/texlive-20220321-extra.tar.xz"
-    mirror "https://ftp.tu-chemnitz.de/pub/tug/historic/systems/texlive/2022/texlive-20220321-extra.tar.xz"
-    sha256 "0284cf368947be8cc7becd61c816432a7d301db3c1e682ddc0a180bd3b6d9296"
+    url "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/texlive-20210325-extra.tar.xz"
+    sha256 "46a3f385d0b30893eec6b39352135d2929ee19a0a81df2441bfcaa9f6c78339c"
   end
 
   resource "install-tl" do
-    url "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/install-tl-unx.tar.gz"
-    mirror "https://ftp.tu-chemnitz.de/pub/tug/historic/systems/texlive/2022/install-tl-unx.tar.gz"
-    sha256 "e67edec49df6b7c4a987a7d5a9b31bcf41258220f9ac841c7a836080cd334fb5"
+    url "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/install-tl-unx.tar.gz"
+    sha256 "74eac0855e1e40c8db4f28b24ef354bd7263c1f76031bdc02b52156b572b7a1d"
   end
 
   resource "texlive-texmf" do
-    url "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/texlive-20220321-texmf.tar.xz"
-    mirror "https://ftp.tu-chemnitz.de/pub/tug/historic/systems/texlive/2022/texlive-20220321-texmf.tar.xz"
-    sha256 "372b2b07b1f7d1dd12766cfc7f6656e22c34a5a20d03c1fe80510129361a3f16"
+    url "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/texlive-20210325-texmf.tar.xz"
+    sha256 "ff12d436c23e99fb30aad55924266104356847eb0238c193e839c150d9670f1c"
   end
 
   resource "Module::Build" do
@@ -353,7 +334,7 @@ class Texlive < Formula
 
         if File.exist? "Makefile.PL"
           system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}",
-                 "CCFLAGS=-I#{Formula["freetype"].opt_include}/freetype2"
+            "CCFLAGS=-I#{Formula["freetype"].opt_include}/freetype2"
           system "make"
           system "make", "install"
         else
@@ -391,14 +372,29 @@ class Texlive < Formula
 
     # Set up config files to use the correct path for the TeXLive root
     inreplace buildpath/"texk/kpathsea/texmf.cnf",
-              "TEXMFROOT = $SELFAUTOPARENT", "TEXMFROOT = $SELFAUTODIR/share"
+      "TEXMFROOT = $SELFAUTOPARENT", "TEXMFROOT = $SELFAUTODIR/share"
     inreplace share/"texmf-dist/web2c/texmfcnf.lua",
-              "selfautoparent:texmf", "selfautodir:share/texmf"
+      "selfautoparent:texmf", "selfautodir:share/texmf"
 
-    # Fix build failure due to conflicting config.h files.  Reported upstream here:
-    # https://www.tug.org/pipermail/tex-live/2022-May/048183.html
-    inreplace buildpath/"texk/web2c/Makefile.in", "$(DEFAULT_INCLUDES) $(INCLUDES) $(libmfluapotrace_a_CPPFLAGS)",
-              "$(libmfluapotrace_a_CPPFLAGS) $(DEFAULT_INCLUDES) $(INCLUDES)"
+    # Fix path resolution in some scripts.  The fix for tlmgr.pl, TLUTils.pm, and
+    # tlshell is being upstreamed here: https://www.tug.org/pipermail/tex-live/2021-September/047394.html.
+    # The fix for cjk-gs-integrate.pl is being upstreamed here: https://github.com/texjporg/cjk-gs-support/pull/50.
+    # The author of crossrefware and pedigree-perl has been contacted by email.
+    pathfix_files = %W[
+      #{buildpath}/texk/texlive/linked_scripts/cjk-gs-integrate/cjk-gs-integrate.pl
+      #{buildpath}/texk/texlive/linked_scripts/crossrefware/bbl2bib.pl
+      #{buildpath}/texk/texlive/linked_scripts/crossrefware/bibdoiadd.pl
+      #{buildpath}/texk/texlive/linked_scripts/crossrefware/bibmradd.pl
+      #{buildpath}/texk/texlive/linked_scripts/crossrefware/biburl2doi.pl
+      #{buildpath}/texk/texlive/linked_scripts/crossrefware/bibzbladd.pl
+      #{buildpath}/texk/texlive/linked_scripts/crossrefware/ltx2crossrefxml.pl
+      #{buildpath}/texk/texlive/linked_scripts/texlive/tlmgr.pl
+      #{buildpath}/texk/texlive/linked_scripts/pedigree-perl/pedigree.pl
+      #{buildpath}/texk/texlive/linked_scripts/tlshell/tlshell.tcl
+      #{share}/tlpkg/TeXLive/TLUtils.pm
+    ]
+
+    inreplace pathfix_files, "SELFAUTOPARENT", "TEXMFROOT"
 
     args = std_configure_args + [
       "--disable-dvisvgm", # needs its own formula
@@ -487,9 +483,9 @@ class Texlive < Formula
     rm bin/"pythontex"
     rm bin/"depythontex"
     (bin/"pygmentex").write_env_script(share/"texmf-dist/scripts/pygmentex/pygmentex.py",
-                                       PYTHONPATH: ENV["PYTHONPATH"])
+      PYTHONPATH: ENV["PYTHONPATH"])
     (bin/"pythontex").write_env_script(share/"texmf-dist/scripts/pythontex/pythontex3.py",
-                                       PYTHONPATH: ENV["PYTHONPATH"])
+      PYTHONPATH: ENV["PYTHONPATH"])
     ln_sf share/"texmf-dist/scripts/pythontex/depythontex3.py", bin/"depythontex"
 
     # Rewrite shebangs in some Python scripts so they use brewed Python.

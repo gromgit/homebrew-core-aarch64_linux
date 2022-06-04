@@ -2,8 +2,8 @@ class Grpc < Formula
   desc "Next generation open source RPC library and framework"
   homepage "https://grpc.io/"
   url "https://github.com/grpc/grpc.git",
-      tag:      "v1.46.3",
-      revision: "53d69cc581c5b7305708587f4f1939278477c28a"
+      tag:      "v1.46.0",
+      revision: "0da56bcc0e42a9e288d7511ed8426b9831ffbfb5"
   license "Apache-2.0"
   head "https://github.com/grpc/grpc.git", branch: "master"
 
@@ -13,12 +13,12 @@ class Grpc < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "44c86ae3d0ac898182e529003600d21f758c2b64331f5bb687fbf7d0da82fd31"
-    sha256 cellar: :any,                 arm64_big_sur:  "b8d381e04ba85368fcfc5d0cd1ce9e80ec231cf015ac83e1a513bdc5e5a72116"
-    sha256 cellar: :any,                 monterey:       "634b00d5e0d915a3de01a4c8da55443353f245c57546185c8ab2eaf4220aa5f6"
-    sha256 cellar: :any,                 big_sur:        "98b386a1fb989df033512ddbd00e2f2b675beec8e01f090f13d5e7cebcaf8163"
-    sha256 cellar: :any,                 catalina:       "eeafca2bf7fdf6a6c22dd387d10ea63cec6da1eb16e47d595f8c75901071e7d1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8b08fc8b6877f2e5dad2c8d9765df37d4adc5fec8c5f9c510bcfbf6a06fdf5ab"
+    sha256 cellar: :any,                 arm64_monterey: "793db28c3754c650a34994d04e7d076c15a350a1c913766b12582b4290e31d20"
+    sha256 cellar: :any,                 arm64_big_sur:  "e65fb0ab67fedc9e786d86fa756d6168e554cf7e7cc6d0f14ff23a6d10effa58"
+    sha256 cellar: :any,                 monterey:       "7324e681b5c911aba2a5494150ab3b8c0bca5b68ca6fc40922f63089d97a251e"
+    sha256 cellar: :any,                 big_sur:        "441915049b27fac9d8d41731ef7058341b534832ce7d6ac3ebf6a620854b226e"
+    sha256 cellar: :any,                 catalina:       "3e635a24855026d5505d663942d26e26d6f41ce447addaf8d25c7abdc0feece3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c3953a0f93aec43874638feb42e0c5e3005d379e8a2def0e050b9c65f39b5073"
   end
 
   depends_on "autoconf" => :build

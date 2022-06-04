@@ -1,17 +1,17 @@
 class PayloadDumperGo < Formula
   desc "Android OTA payload dumper written in Go"
   homepage "https://github.com/ssut/payload-dumper-go"
-  url "https://github.com/ssut/payload-dumper-go/archive/refs/tags/1.2.2.tar.gz"
-  sha256 "7f80f6c29ad8b835d71f361ba073988a27a33043acec37eea9d9430c1fb04b57"
+  url "https://github.com/ssut/payload-dumper-go/archive/refs/tags/1.2.0.tar.gz"
+  sha256 "f0d654cba5d660c3ff8000cb510d73bc0a1eea4e725f2d79a1f16d973aae90c4"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "8f6b5106876e00cf046896bd48778bf29ad23f2455ff22bc005a5f4fa65c5353"
-    sha256 cellar: :any,                 arm64_big_sur:  "e984276e0f8c673ff3a588abdb8d1827c5363e7b6f466f9c3bf9988faf14ac98"
-    sha256 cellar: :any,                 monterey:       "63bce864ece6c9de7ca76aaf563f75be05ac778d660567aa4fd2e98ceb5bc66b"
-    sha256 cellar: :any,                 big_sur:        "a6c501425739d78e279399cdbe86589ebb8ba0ff564d07aa7849b65ef93cba9e"
-    sha256 cellar: :any,                 catalina:       "3bf1b40363c257f4d2c761940ade539aac4e0936a2f977d4cd34bd0ac2d8da59"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "914db99626b3362a7ff898f96b91b038ea02382b44aeff589ce3e265045dd4f4"
+    sha256 cellar: :any,                 arm64_monterey: "b204e0552a8a62dec35d2a93ca1a0405516ccc4578a4b0e27997494191513048"
+    sha256 cellar: :any,                 arm64_big_sur:  "29b2d7d3d7f33111c404d6f2358cdea9c070530c66cabac0850a20b21f06834c"
+    sha256 cellar: :any,                 monterey:       "3b535cde92e3f36f3bc59cbc8840f68851b5b21347a812a3a3b1361c451b464e"
+    sha256 cellar: :any,                 big_sur:        "ed3417df5a394470c881b93e52a2a9328ac887167d003c425ede1e7a3c18049b"
+    sha256 cellar: :any,                 catalina:       "89a123adef997329cde0e42089abe15da48928a31609365f004bfd8b569e9645"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "54e09c038d1a92177a57da5d94f3ad17abc630998d94547dbcbf46df02cf8c93"
   end
 
   # Bump to 1.18 on the next release, if possible.

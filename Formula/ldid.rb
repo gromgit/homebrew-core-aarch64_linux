@@ -17,7 +17,6 @@ class Ldid < Formula
   end
 
   depends_on "libplist"
-  depends_on :macos
   depends_on "openssl@1.1"
 
   def install

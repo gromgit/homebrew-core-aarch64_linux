@@ -1,18 +1,19 @@
 class Numpy < Formula
   desc "Package for scientific computing with Python"
   homepage "https://www.numpy.org/"
-  url "https://files.pythonhosted.org/packages/f6/d8/ab692a75f584d13c6542c3994f75def5bce52ded9399f52e230fe402819d/numpy-1.22.4.zip"
-  sha256 "425b390e4619f58d8526b3dcf656dde069133ae5c240229821f01b5f44ea07af"
+  url "https://files.pythonhosted.org/packages/64/4a/b008d1f8a7b9f5206ecf70a53f84e654707e7616a771d84c05151a4713e9/numpy-1.22.3.zip"
+  sha256 "dbc7601a3b7472d559dc7b933b18b4b66f9aa7452c120e87dfb33d02008c8a18"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/numpy/numpy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "1d79af6c8ad548afd40acbfb84b6aa5539d346f36785ab634e5720b7ec1648ac"
-    sha256 cellar: :any, arm64_big_sur:  "b81fc1b691906a6be063853f445f303a212bef7818650d5f6e6d3b3c25eaa104"
-    sha256 cellar: :any, monterey:       "cfd6757ff155ac67c7866b018a031a0849f86ac115892ed2dd0860489c462b4b"
-    sha256 cellar: :any, big_sur:        "6006e3e63e1132ca157df9e1921e8a888580cc715a94d6586ca1ba98a2a4c919"
-    sha256 cellar: :any, catalina:       "c1bf9ef0b8c95223b3fb60bc60b28fc857729aafc15d61926ea9f5fb0294f0cd"
-    sha256               x86_64_linux:   "34db1f2d5ef4cb7cc419b1715a0398db30821e90b4779e694c7e5fa7f9f50924"
+    sha256 cellar: :any, arm64_monterey: "a1c754b946a507ea528ad0962cfc1fbf0d57c22903ae5695b12e17c94136aeda"
+    sha256 cellar: :any, arm64_big_sur:  "8750797b418d638eb4fb446f5a903cf96a36dfb580036556a1001edf27ace95f"
+    sha256 cellar: :any, monterey:       "78446dd95fdf20270dae3979bf92f25c182a9d3e2d1bf820dc2ca63caa9d1738"
+    sha256 cellar: :any, big_sur:        "74ba91b3faa4b5b4aa5cf801c62c1338f8f8ce736af04259626e008af7783a2f"
+    sha256 cellar: :any, catalina:       "f81c38efd05d1d93dfdb9ffaedea3c820bb922dea9e00ac77f85e67192fe7226"
+    sha256               x86_64_linux:   "f81bff8b8ceaf84423734a780c65a9fc69235c905206c8aece6b6a8b0761bb8a"
   end
 
   depends_on "gcc" => :build # for gfortran

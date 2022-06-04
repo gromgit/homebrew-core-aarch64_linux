@@ -1,10 +1,9 @@
 class Mariadb < Formula
   desc "Drop-in replacement for MySQL"
   homepage "https://mariadb.org/"
-  url "https://downloads.mariadb.com/MariaDB/mariadb-10.8.3/source/mariadb-10.8.3.tar.gz"
-  sha256 "887eadc55176ac1ead1fccfc89ade4b5990ef192745ad4dcd879acb41c050892"
+  url "https://downloads.mariadb.com/MariaDB/mariadb-10.7.3/source/mariadb-10.7.3.tar.gz"
+  sha256 "da286919ffc9c913282202349709b6ba4ebcd342815e8dae0aa6b6bd8f515cd4"
   license "GPL-2.0-only"
-  revision 1
 
   # This uses a placeholder regex to satisfy the `PageMatch` strategy
   # requirement. In the future, this will be updated to use a `Json` strategy
@@ -21,12 +20,12 @@ class Mariadb < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "44ff9ff617ada03c556166db35991f5f0a8ae98ad1db14fd215cc66255964a48"
-    sha256 arm64_big_sur:  "f94078ba09153536cd665e50596d2b731bf8f766691c85f7cb01c13c2c6380ea"
-    sha256 monterey:       "9708487080ced59452ff0f4b89124ee97f4c30428496d30150cd2e6f43514b52"
-    sha256 big_sur:        "2bde55ad31b742ad68f5a23b4b645014d6b4232d0d198ae30a6389153aa61870"
-    sha256 catalina:       "3b202fe1609080b8778832475766a869b488bd5c423b8354902690f56261d047"
-    sha256 x86_64_linux:   "d7fef80655269d2066859aa87d779fa7460ffff4d18a1d5a30800305de2dc999"
+    sha256 arm64_monterey: "5d7ed761206507fb173a3ba88d4895a3b148d5dabc492ffa1c06511b845b9259"
+    sha256 arm64_big_sur:  "2a58adf34772884da1dcd8810ae75f364fe32cd5583232ef883fb0fc9cd18ee1"
+    sha256 monterey:       "439378c9adf87ed440d543882a0a6aafdbe089e2bcc1af7225069a08ffc34782"
+    sha256 big_sur:        "adc6ce57b9eebf48518a7fd24d7bb73a5772aae7b2d4f613267750b9f275d693"
+    sha256 catalina:       "79f8fa2726c17537e74b7bcfdeb8362ee26ab1a80977410903ba79b8ce635dfc"
+    sha256 x86_64_linux:   "08514bc3921cc57b7fdabb4482150d5ddf7298767ff097fb56d3a1822db05e1e"
   end
 
   depends_on "bison" => :build
@@ -39,7 +38,6 @@ class Mariadb < Formula
   depends_on "zstd"
 
   uses_from_macos "bzip2"
-  uses_from_macos "libxcrypt"
   uses_from_macos "ncurses"
   uses_from_macos "zlib"
 

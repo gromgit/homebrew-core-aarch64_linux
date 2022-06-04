@@ -1,22 +1,22 @@
 class Hwloc < Formula
   desc "Portable abstraction of the hierarchical topology of modern architectures"
   homepage "https://www.open-mpi.org/projects/hwloc/"
-  url "https://download.open-mpi.org/release/hwloc/v2.7/hwloc-2.7.1.tar.bz2"
-  sha256 "0d4e1d36c3a72c5d61901bfd477337f5a4c7e0a975da57165237d00e35ef528d"
+  url "https://download.open-mpi.org/release/hwloc/v2.7/hwloc-2.7.0.tar.bz2"
+  sha256 "028cee53ebcfe048283a2b3e87f2fa742c83645fc3ae329134bf5bb8b90384e0"
   license "BSD-3-Clause"
 
   livecheck do
-    url "https://www.mail-archive.com/hwloc-announce@lists.open-mpi.org/"
-    regex(/[\s,>]v?(\d+(?:\.\d+)+)(?:\s*?,|\s*?released)/i)
+    url :homepage
+    regex(%r{href=.*?/software/hwloc/v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "79d74dd3f15558150715098a5a639d9b08cbdf297e867bc863207bcd95ce8d0d"
-    sha256 cellar: :any,                 arm64_big_sur:  "ab3450c99e27c6282dfb38a6cc62c4298555768877eb7fd0756a8a70f5269b00"
-    sha256 cellar: :any,                 monterey:       "418855a04fc56557912cef120f882a23983fd7afd31a04078db3976b11b42788"
-    sha256 cellar: :any,                 big_sur:        "3f0ebbc902aece206e2025bbf6970a3136d291bd9d8857907049e30ab8ffdf30"
-    sha256 cellar: :any,                 catalina:       "c2706f7a282d00f815777df735d985c8ca50960c64c267d40308c85421eff331"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2b5628c3a9c15eb78961338d90e76892643995535c96a0cc7b18eb4a5aabda42"
+    sha256 cellar: :any,                 arm64_monterey: "c033ad4dd4c6b866fe22f2deceef505973eea7fb76092ccfa400018cd36c5bd2"
+    sha256 cellar: :any,                 arm64_big_sur:  "16d40e7dfa7ab9ea53ee88321e50fb16877b1df0ac02ee9e386a0bda45825f4d"
+    sha256 cellar: :any,                 monterey:       "c0374b2d6e812a9bf14685ec78753fb23f06a5de365fff8bc5690784a0409a21"
+    sha256 cellar: :any,                 big_sur:        "b7f4d9ef56ce804956d4e2536376b905adfc983fc3458f6afcb57d979e80718e"
+    sha256 cellar: :any,                 catalina:       "da4a859b1e40b723d8e978e6218b121ababc4eb69d71385d202d915c6fa82afb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a7cb17122eac687a24b0faa2fda22ccc0b97142ad4ed05c5213e8d77a66df7e6"
   end
 
   head do

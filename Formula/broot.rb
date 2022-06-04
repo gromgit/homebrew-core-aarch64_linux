@@ -1,18 +1,18 @@
 class Broot < Formula
   desc "New way to see and navigate directory trees"
   homepage "https://dystroy.org/broot/"
-  url "https://github.com/Canop/broot/archive/v1.13.1.tar.gz"
-  sha256 "95b4b01c43f23b8d4f06030b57c9b2e47a4fbbc4f6099acaf6e42d1f1697385e"
+  url "https://github.com/Canop/broot/archive/v1.12.0.tar.gz"
+  sha256 "94b5bc7fa79f379c2c23c23402e7a076495b4d23ca7d89e4631702dbff15fb82"
   license "MIT"
   head "https://github.com/Canop/broot.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "089f401e6464a3e61dc2d09492b718628c115102e2fe66baaf4d4936acd8fe54"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "54fe36df295d4518d77ab1d1b9e5fc5a86cb7d2f505f92c6bc67c23dae624f76"
-    sha256 cellar: :any_skip_relocation, monterey:       "3a4a98c852d5ebf2be5dda8a1a982d4d59f3bff447eca38b4796b599d016c6d1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4479526a4e39cdbe9a3f1d7703c8c8a657d7bbc6cb249a7c0157a2d7f4f0a023"
-    sha256 cellar: :any_skip_relocation, catalina:       "2d6782ad1d0791b27cf471af9cd8ccfd3dc945ae481add2732f1c5d811dc9656"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "998bf7371bcfecdba277ad955b5b0da3d1a807d747b79a5a4fb8d8a32609f429"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "be000a80dd9a49027a9df949ec28e32b575e0f91acb05d47a218b8247711d080"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6298ef9b08b39ea02651c171f275cc536ca5f3dfb025b3fa78951ce656e926d7"
+    sha256 cellar: :any_skip_relocation, monterey:       "a749ae15032114ce760cc8c4096b79cf2ce6b1607edf1e1313ce0895dba8c81d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e6c38089743b62ed642bd5ace7d5bada75b7dc079351b2f1926209a09aa0aaab"
+    sha256 cellar: :any_skip_relocation, catalina:       "c32447fb020fce14b72bfaa426da2b8a444b7965f5b7179b1179590649e8be8c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ce030b1ccbccfb0df379edc78938927f49917dce6c5d1516b601eb5196540bfd"
   end
 
   depends_on "rust" => :build

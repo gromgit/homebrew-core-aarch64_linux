@@ -1,23 +1,23 @@
 class Uni < Formula
   desc "Unicode database query tool for the command-line"
   homepage "https://github.com/arp242/uni"
-  url "https://github.com/arp242/uni/archive/v2.5.1.tar.gz"
-  sha256 "806fbba66efaa45cd5691efcd8457ba8fe88d3b2f6fd0b027f1e6ef62253d6fb"
+  url "https://github.com/arp242/uni/archive/v2.5.0.tar.gz"
+  sha256 "27833125a4097e15ec6dbce33e2798a1689a4674c0d0509c0dc1039204aa1d80"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b9bad02bbe068358c07b85f7b4069cc518bd193dc31bf8bd2853ef9b3b612185"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b9bad02bbe068358c07b85f7b4069cc518bd193dc31bf8bd2853ef9b3b612185"
-    sha256 cellar: :any_skip_relocation, monterey:       "86d641d3f5fadd4b9bfb08b8791bedcc7e5545a697c2b5bedd2ddb8039e12963"
-    sha256 cellar: :any_skip_relocation, big_sur:        "86d641d3f5fadd4b9bfb08b8791bedcc7e5545a697c2b5bedd2ddb8039e12963"
-    sha256 cellar: :any_skip_relocation, catalina:       "86d641d3f5fadd4b9bfb08b8791bedcc7e5545a697c2b5bedd2ddb8039e12963"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b9beb85eb77f2bd8b05bd7f49f049e9633b264da82c0ae09b041dbe56c3a8026"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "84c7d34fcb7282ee83755530db6e2a95cfbcfe9e532471a40662626c2306357d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "eec5604de6223abf296f5816ef9ce9c301e5afb807ff9311ee4ce6ae1b14f7b3"
+    sha256 cellar: :any_skip_relocation, monterey:       "3353fdff0ae506db6db053cd822a41d42c925a2b4095c25e30fa1ec0654e87b5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2d7850c4eea36c669444b2e97c3a7de6fcb3ddf15be0fc2a71b27639c89799db"
+    sha256 cellar: :any_skip_relocation, catalina:       "d53c6fdadf9b1b19b705db1462343bf298c3870718427baecffbfff7453a3776"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1f375e073263ce56706c096ebe8ad3c13aee597f4a7ee752538d7e047a9eaac9"
   end
 
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w")
+    system "go", "build", "-o", bin/"uni"
   end
 
   test do

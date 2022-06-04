@@ -1,9 +1,9 @@
 class GoAT117 < Formula
   desc "Go programming environment (1.17)"
   homepage "https://golang.org"
-  url "https://go.dev/dl/go1.17.11.src.tar.gz"
-  mirror "https://fossies.org/linux/misc/go1.17.11.src.tar.gz"
-  sha256 "ac2649a65944c6a5abe55054000eee3d77196880da36a3555f62e06540e8eb54"
+  url "https://go.dev/dl/go1.17.9.src.tar.gz"
+  mirror "https://fossies.org/linux/misc/go1.17.9.src.tar.gz"
+  sha256 "763ad4bafb80a9204458c5fa2b8e7327fa971aee454252c0e362c11236156813"
   license "BSD-3-Clause"
 
   livecheck do
@@ -12,12 +12,12 @@ class GoAT117 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e45e896314e1a1a867b6f8ce5224cd7d97444f75b9444855fa3d1ce5edf4f62d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "672040c35ae9b624cdf4bf3a5df0c37e23b7ae954a85f471aa90703c04510f80"
-    sha256 cellar: :any_skip_relocation, monterey:       "7246c764e1be7b59fa8c8cc32ab931e3cca3fb431be090974ebc6a954bbd095e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f8aa78fdffb16a5073b72e019c8d68652d7a28c02d88a992e5922757e3e486b5"
-    sha256 cellar: :any_skip_relocation, catalina:       "0add34b40fde58be04c143a0f45167f31d298459ecad909762e7b0e846619d6b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4393af12ffa90f0b6807422640669c94272b7a8df3dec5084c89603bae01d3ea"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9f689c1f529a0db7205a95588ae4baa0a1f7ed498594faa77834e88023cc5e6d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dbc2fd720b8b34a984d36949b903e38590eafcc15e477f0a1106d5ac8863613e"
+    sha256 cellar: :any_skip_relocation, monterey:       "9c64162ceb17602f54a6b54c9b362e3f2481d120f15275a6b614ebe96dec62c7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7c3e7d1933b9a2ddb17fc2202b04ea6e10bc900867e20fed25924dee4e742282"
+    sha256 cellar: :any_skip_relocation, catalina:       "eb5d26f43c03e0878384fe73cf3cdcc353afeb809993a49ec20f7c50e9217614"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dae10835cd12930353160fcf587641370365edf681c54dd2be692ac321b13bac"
   end
 
   keg_only :versioned_formula

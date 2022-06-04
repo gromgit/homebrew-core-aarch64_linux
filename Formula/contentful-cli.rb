@@ -3,18 +3,18 @@ require "language/node"
 class ContentfulCli < Formula
   desc "Contentful command-line tools"
   homepage "https://github.com/contentful/contentful-cli"
-  url "https://registry.npmjs.org/contentful-cli/-/contentful-cli-1.14.0.tgz"
-  sha256 "ee35d4a1ed61f3fedf381b49a5689dff1b4ce015b9201cbd74a54154ee7489cd"
+  url "https://registry.npmjs.org/contentful-cli/-/contentful-cli-1.12.25.tgz"
+  sha256 "824e900b543128b8cc8f59794b1856ad0e896e6850c3ae8778c1cc06e02a8d09"
   license "MIT"
   head "https://github.com/contentful/contentful-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7d94aa180469868e4982e7cb35cec174960781b23ab7168c816997d68d5d8544"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7d94aa180469868e4982e7cb35cec174960781b23ab7168c816997d68d5d8544"
-    sha256 cellar: :any_skip_relocation, monterey:       "fb7c88b65e720346b50a2808034b647f94de916f397a11465e45d260786a2f32"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fb7c88b65e720346b50a2808034b647f94de916f397a11465e45d260786a2f32"
-    sha256 cellar: :any_skip_relocation, catalina:       "fb7c88b65e720346b50a2808034b647f94de916f397a11465e45d260786a2f32"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7d94aa180469868e4982e7cb35cec174960781b23ab7168c816997d68d5d8544"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ac68ba5dee553cd65dbd10672816e0404d0907e86d99addcd1ce96ece9d5d843"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ac68ba5dee553cd65dbd10672816e0404d0907e86d99addcd1ce96ece9d5d843"
+    sha256 cellar: :any_skip_relocation, monterey:       "e57b4c01abd0c9e8449754893f975f541f34cf2a7923ebe9987cd3240c2af5e2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e57b4c01abd0c9e8449754893f975f541f34cf2a7923ebe9987cd3240c2af5e2"
+    sha256 cellar: :any_skip_relocation, catalina:       "e57b4c01abd0c9e8449754893f975f541f34cf2a7923ebe9987cd3240c2af5e2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ac68ba5dee553cd65dbd10672816e0404d0907e86d99addcd1ce96ece9d5d843"
   end
 
   depends_on "node"

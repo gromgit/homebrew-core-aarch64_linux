@@ -3,17 +3,17 @@ class Borgmatic < Formula
 
   desc "Simple wrapper script for the Borg backup software"
   homepage "https://torsion.org/borgmatic/"
-  url "https://files.pythonhosted.org/packages/ff/99/7a3b3223dd8814ed0878a28932f592186cd12c5d24cefaafe7688989fe20/borgmatic-1.6.2.tar.gz"
-  sha256 "74329aa66380d4d85b99ed0b5d5a8d70d0e640c0eb7aee83a1e955648a447be6"
+  url "https://files.pythonhosted.org/packages/f4/15/8e9726e3fb7309e6fb9eb7f1834fd4353bcef1fab242649e8c597f023623/borgmatic-1.5.22.tar.gz"
+  sha256 "593865eb8c008647a0d66c9d2673a3497cdc958605e2aef48901dd7d82a4785f"
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "44cd843f54b8071a3141f0ed34bce55b4dc9c70778aacd450a9e26a09d6c3762"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "947612516075e1195748d3ae14d3a64858ecd248f60738330ce1ec60ab6327b6"
-    sha256 cellar: :any_skip_relocation, monterey:       "dd05045abd7994481e6149a5d29fd5f964e86461557b00efd191c2ab607979e0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9f2c9af661936c27acf80241eb50267c3b19320603e2d73d1a5ceff5fae70490"
-    sha256 cellar: :any_skip_relocation, catalina:       "107e0a6053c28f630f68c904a0ace98ee76b7c41e7d743de9f64519e5419474c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e0960d0bced548412a51dd27ba1233808358f100c4e5daed2e58ac09968b93d4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5a037624c47dd2065aff887a025efe39e284c32d6ee5472b2f774600413ceaaa"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e5c777c3079d4967c4228ef3f0ddaf3d37127ccab0b594ac1f068862fd36f895"
+    sha256 cellar: :any_skip_relocation, monterey:       "787c46c2b8552de64a8f3a6cfbacc026dbbef310e897ae595d5affafbbbc2d5b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2dbfd08265a15de509535315b8ba6add3d952f39bec322eb7f04d5127c7929ab"
+    sha256 cellar: :any_skip_relocation, catalina:       "47771a5497ec36ab19debd1769243f45c3b467247031636aab94477780190dd3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8481567f67866f0fdd5f0dd24ee55ae89bfa122d7890e34d2b5f68a6e2e3c2fc"
   end
 
   depends_on "python@3.10"
@@ -24,13 +24,13 @@ class Borgmatic < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/07/10/75277f313d13a2b74fc56e29239d5c840c2bf09f17bf25c02b35558812c6/certifi-2022.5.18.1.tar.gz"
-    sha256 "9c5705e395cd70084351dd8ad5c41e65655e08ce46f2ec9cf6c2c08390f71eb7"
+    url "https://files.pythonhosted.org/packages/6c/ae/d26450834f0acc9e3d1f74508da6df1551ceab6c2ce0766a593362d6d57f/certifi-2021.10.8.tar.gz"
+    sha256 "78884e7c1d4b00ce3cea67b44566851c4343c120abd683433ce934a68ea58872"
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/56/31/7bcaf657fafb3c6db8c787a865434290b726653c912085fbd371e9b92e1c/charset-normalizer-2.0.12.tar.gz"
-    sha256 "2857e29ff0d34db842cd7ca3230549d1a697f96ee6d3fb071cfa6c7393832597"
+    url "https://files.pythonhosted.org/packages/48/44/76b179e0d1afe6e6a91fd5661c284f60238987f3b42b676d141d01cd5b97/charset-normalizer-2.0.10.tar.gz"
+    sha256 "876d180e9d7432c5d1dfd4c5d26b72f099d503e8fcc0feb7532c9289be60fcbd"
   end
 
   resource "colorama" do
@@ -44,23 +44,23 @@ class Borgmatic < Formula
   end
 
   resource "jsonschema" do
-    url "https://files.pythonhosted.org/packages/9e/62/93a54db0e44c4de57868a7d638d7a8abce113c8bc43a20b10b1109b2a517/jsonschema-4.5.1.tar.gz"
-    sha256 "7c6d882619340c3347a1bf7315e147e6d3dae439033ae6383d6acb908c101dfc"
+    url "https://files.pythonhosted.org/packages/23/ba/625e677a029a87200e5c7892760c6d4660bab4fe7720d0b94bb034a24fc7/jsonschema-4.3.3.tar.gz"
+    sha256 "f210d4ce095ed1e8af635d15c8ee79b586f656ab54399ba87b8ab87e5bff0ade"
   end
 
   resource "pyrsistent" do
-    url "https://files.pythonhosted.org/packages/42/ac/455fdc7294acc4d4154b904e80d964cc9aae75b087bbf486be04df9f2abd/pyrsistent-0.18.1.tar.gz"
-    sha256 "d4d61f8b993a7255ba714df3aca52700f8125289f84f704cf80916517c46eb96"
+    url "https://files.pythonhosted.org/packages/f4/d7/0fa558c4fb00f15aabc6d42d365fcca7a15fcc1091cd0f5784a14f390b7f/pyrsistent-0.18.0.tar.gz"
+    sha256 "773c781216f8c2900b42a7b638d5b517bb134ae1acbebe4d1e8f1f41ea60eb4b"
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/60/f3/26ff3767f099b73e0efa138a9998da67890793bfa475d8278f84a30fec77/requests-2.27.1.tar.gz"
-    sha256 "68d7c56fd5a8999887728ef304a6d12edc7be74f1cfa47714fc8b414525c9a61"
+    url "https://files.pythonhosted.org/packages/c0/e3/826e27b942352a74b656e8f58b4dc7ed9495ce2d4eeb498181167c615303/requests-2.27.0.tar.gz"
+    sha256 "8e5643905bf20a308e25e4c1dd379117c09000bf8a82ebccc462cfb1b34a16b5"
   end
 
   resource "ruamel.yaml" do
-    url "https://files.pythonhosted.org/packages/46/a9/6ed24832095b692a8cecc323230ce2ec3480015fbfa4b79941bd41b23a3c/ruamel.yaml-0.17.21.tar.gz"
-    sha256 "8b7ce697a2f212752a35c1ac414471dc16c424c9573be4926b56ff3f5d23b7af"
+    url "https://files.pythonhosted.org/packages/2d/b1/b672cbe8be9ea09d85d2be8c3693811362295aa8483849e85b41caaadb85/ruamel.yaml-0.17.20.tar.gz"
+    sha256 "4b8a33c1efb2b443a93fcaafcfa4d2e445f8e8c29c528d9f5cdafb7cc9e4004c"
   end
 
   resource "ruamel.yaml.clib" do
@@ -69,8 +69,8 @@ class Borgmatic < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/1b/a5/4eab74853625505725cefdf168f48661b2cd04e7843ab836f3f63abf81da/urllib3-1.26.9.tar.gz"
-    sha256 "aabaf16477806a5e1dd19aa41f8c2b7950dd3c746362d7e3223dbe6de6ac448e"
+    url "https://files.pythonhosted.org/packages/80/be/3ee43b6c5757cabea19e75b8f46eaf05a2f5144107d7db48c7cf3a864f73/urllib3-1.26.7.tar.gz"
+    sha256 "4987c65554f7a2dbf30c18fd48778ef124af6fab771a377103da0585e2336ece"
   end
 
   def install
@@ -79,64 +79,18 @@ class Borgmatic < Formula
 
   test do
     borg = (testpath/"borg")
-    borg_info_json = (testpath/"borg_info_json")
     config_path = testpath/"config.yml"
     repo_path = testpath/"repo"
     log_path = testpath/"borg.log"
-    sentinel_path = testpath/"init_done"
-
-    # Create a fake borg info json
-    borg_info_json.write <<~EOS
-      {
-          "cache": {
-              "path": "",
-              "stats": {
-                  "total_chunks": 0,
-                  "total_csize": 0,
-                  "total_size": 0,
-                  "total_unique_chunks": 0,
-                  "unique_csize": 0,
-                  "unique_size": 0
-              }
-          },
-          "encryption": {
-              "mode": "repokey-blake2"
-          },
-          "repository": {
-              "id": "0000000000000000000000000000000000000000000000000000000000000000",
-              "last_modified": "2022-01-01T00:00:00.000000",
-              "location": "#{repo_path}"
-          },
-          "security_dir": ""
-      }
-    EOS
 
     # Create a fake borg executable to log requested commands
     borg.write <<~EOS
       #!/bin/sh
       echo $@ >> #{log_path}
 
-      # return valid borg version
-      if [ "$1" = "--version" ]; then
-        echo "borg 1.2.0"
-        exit 0
-      fi
-
-      # for first invocation only, return an error so init is called
+      # Return error on info so we force an init to occur
       if [ "$1" = "info" ]; then
-        if [ -f #{sentinel_path} ]; then
-          # return fake repository info
-          cat #{borg_info_json}
-          exit 0
-        else
-          touch #{sentinel_path}
-          exit 2
-        fi
-      fi
-
-      # skip actual backup creation
-      if [ "$1" = "create" ]; then
-        exit 0
+        exit 2
       fi
     EOS
     borg.chmod 0755
@@ -167,16 +121,11 @@ class Borgmatic < Formula
 
     # Assert that the proper borg commands were executed
     assert_equal <<~EOS, log_content
-      --version --debug --show-rc
-      info --json #{repo_path}
+      info --debug #{repo_path}
       init --encryption repokey --debug #{repo_path}
-      --version
       prune --keep-daily 7 --prefix {hostname}- #{repo_path}
-      compact #{repo_path}
       create #{repo_path}::{hostname}-{now:%Y-%m-%dT%H:%M:%S.%f} /etc /home
-      info --json #{repo_path}
       check --prefix {hostname}- #{repo_path}
-      --version
       list --json #{repo_path}
     EOS
   end

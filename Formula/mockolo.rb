@@ -13,7 +13,6 @@ class Mockolo < Formula
   end
 
   depends_on xcode: ["12.5", :build]
-  depends_on :macos # depends on os.signpost, which is macOS-only.
 
   def install
     system "swift", "build", "-c", "release", "--disable-sandbox"

@@ -26,7 +26,6 @@ class Libgccjit < Formula
     sha256 monterey:       "9f0d50538e40657c82c891846d77c3193e4b39bcf4504429b11738fe0155d075"
     sha256 big_sur:        "4cce8e0cf231b7d52cb17cdd45af65d340bac1a8b6b2d76c15bab4544f1c778f"
     sha256 catalina:       "da0b032249866a6a74d6f0a7dd44cc2465261fd3becf847fcaafdf4a2750509c"
-    sha256 x86_64_linux:   "ccd88ffd12b336f866a4ea6b85bac542d78d6dd887ccc28847b81a9fef690e0f"
   end
 
   # The bottles are built on systems with the CLT installed, and do not work
@@ -62,6 +61,7 @@ class Libgccjit < Formula
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
 
     args = %W[
+      --build=#{cpu}-apple-darwin#{OS.kernel_version.major}
       --prefix=#{prefix}
       --libdir=#{lib}/gcc/#{version.major}
       --disable-nls
@@ -76,34 +76,20 @@ class Libgccjit < Formula
       --with-bugurl=#{tap.issues_url}
     ]
 
-    if OS.mac?
-      args << "--build=#{cpu}-apple-darwin#{OS.kernel_version.major}"
+    # Xcode 10 dropped 32-bit support
+    args << "--disable-multilib" if DevelopmentTools.clang_build_version >= 1000
 
-      # Xcode 10 dropped 32-bit support
-      args << "--disable-multilib" if DevelopmentTools.clang_build_version >= 1000
-
-      # System headers may not be in /usr/include
-      sdk = MacOS.sdk_path_if_needed
-      if sdk
-        args << "--with-native-system-header-dir=/usr/include"
-        args << "--with-sysroot=#{sdk}"
-      end
-
-      # Use -headerpad_max_install_names in the build,
-      # otherwise updated load commands won't fit in the Mach-O header.
-      # This is needed because `gcc` avoids the superenv shim.
-      make_args = ["BOOT_LDFLAGS=-Wl,-headerpad_max_install_names"]
-    else
-      # Fix cc1: error while loading shared libraries: libisl.so.15
-      args << "--with-boot-ldflags=-static-libstdc++ -static-libgcc #{ENV["LDFLAGS"]}"
-
-      # Fix Linux error: gnu/stubs-32.h: No such file or directory.
-      args << "--disable-multilib"
-
-      # Change the default directory name for 64-bit libraries to `lib`
-      # https://stackoverflow.com/a/54038769
-      inreplace "gcc/config/i386/t-linux64", "m64=../lib64", "m64="
+    # System headers may not be in /usr/include
+    sdk = MacOS.sdk_path_if_needed
+    if sdk
+      args << "--with-native-system-header-dir=/usr/include"
+      args << "--with-sysroot=#{sdk}"
     end
+
+    # Use -headerpad_max_install_names in the build,
+    # otherwise updated load commands won't fit in the Mach-O header.
+    # This is needed because `gcc` avoids the superenv shim.
+    make_args = ["BOOT_LDFLAGS=-Wl,-headerpad_max_install_names"]
 
     # Building jit needs --enable-host-shared, which slows down the compiler.
     mkdir "build-jit" do

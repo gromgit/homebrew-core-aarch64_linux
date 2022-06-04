@@ -4,17 +4,18 @@ class Litani < Formula
   desc "Metabuild system"
   homepage "https://awslabs.github.io/aws-build-accumulator/"
   url "https://github.com/awslabs/aws-build-accumulator.git",
-      tag:      "1.25.0",
-      revision: "ee931df881f3a7a935691c910d60864513d3f0fb"
+      tag:      "1.24.0",
+      revision: "93cb710327388b69f82cc3bd897d1ad7cddb6eb4"
   license "Apache-2.0"
+  revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5ab7507e57638a76cc6f695d01aa03285bb798cb36bd38c027c42c48a7aeb8c3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f16977b4e6d4e746be531e37fcc52750c4cff8c0b931bf203103cc69150f6eed"
-    sha256 cellar: :any_skip_relocation, monterey:       "9f68d37afd5b82bcca531b785d14dc3d27261c09d3a39eca787f4eb509232ea6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ef8a96d7e923812072d598e7ec314a30a68bd926de7e12ca64a8b3d78bd12400"
-    sha256 cellar: :any_skip_relocation, catalina:       "6e7f6c4385b7fe0ce6f3afd1fb1b33267602a2d63cd6bca5b95d519dea1f4364"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "11b10ce7d97b0a5d9d682e389d834460bae6c292f2b12f014b46e32336aec211"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cbdf30cfa38a3df1c9421161e744d6c8b35fb8faaaed8fdcbec4c6d0e4634fe0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "04b1a0a8a8a6762d913dc8daaff9f0ce52f5cbeb30c49e86ca4b78b0aafbadc7"
+    sha256 cellar: :any_skip_relocation, monterey:       "ebdf855bdda3a90b644d26dcfaf10cd08c92c042a581082b39c85dddc918cba6"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bc77d1c33f995432e4c76f73cb76c05ee49063a411aa546f9845bbdb48304448"
+    sha256 cellar: :any_skip_relocation, catalina:       "32a97a63fd82f7ceb49f21ddf6012bb3183c194d722848bf287d31939471f24f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "631c439580bfdc411038d43a031d5f7008232dc1703463294f7a557c761a2c07"
   end
 
   depends_on "coreutils" => :build
@@ -26,13 +27,13 @@ class Litani < Formula
   depends_on "python@3.9"
 
   resource "Jinja2" do
-    url "https://files.pythonhosted.org/packages/7a/ff/75c28576a1d900e87eb6335b063fab47a8ef3c8b4d88524c4bf78f670cce/Jinja2-3.1.2.tar.gz"
-    sha256 "31351a702a408a9e7595a8fc6150fc3f43bb6bf7e319770cbc0db9df9437e852"
+    url "https://files.pythonhosted.org/packages/39/11/8076571afd97303dfeb6e466f27187ca4970918d4b36d5326725514d3ed3/Jinja2-3.0.1.tar.gz"
+    sha256 "703f484b47a6af502e743c9122595cc812b0271f661722403114f71a79d0f5a4"
   end
 
   resource "MarkupSafe" do
-    url "https://files.pythonhosted.org/packages/1d/97/2288fe498044284f39ab8950703e88abbac2abbdf65524d576157af70556/MarkupSafe-2.1.1.tar.gz"
-    sha256 "7f91197cc9e48f989d12e4e6fbc46495c446636dfc81b9ccf50bb0ec74b91d4b"
+    url "https://files.pythonhosted.org/packages/bf/10/ff66fea6d1788c458663a84d88787bae15d45daa16f6b3ef33322a51fc7e/MarkupSafe-2.0.1.tar.gz"
+    sha256 "594c67807fb16238b30c44bdf74f36c02cdf22d1c8cda91ef8a0ed8dabf5620a"
   end
 
   resource "PyYAML" do

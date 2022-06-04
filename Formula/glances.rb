@@ -3,17 +3,17 @@ class Glances < Formula
 
   desc "Alternative to top/htop"
   homepage "https://nicolargo.github.io/glances/"
-  url "https://files.pythonhosted.org/packages/62/ae/e78752833a1a198bd62bc5ad633b2f5762ba1240e55c45605a9920c5d6e4/Glances-3.2.6.4.tar.gz"
-  sha256 "43f4abd140e3e83bbcd514e8b88af99c3b11803141197f4e5de486dd7174186b"
+  url "https://files.pythonhosted.org/packages/08/79/f8551823fbd9ddcb4d62e9adc0265a35a399cea3afe020e9316f51ac4fc3/Glances-3.2.4.2.tar.gz"
+  sha256 "5593f5ba8eca69beb91086bc4cc45473c2d4713839e80a26e2acc96264f23926"
   license "LGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "42205b8f86e07152b04e3b7fe3306fd74d5f8da9174a7295678a0b494d36acec"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b53e981929fd2585113a55bfb229d47eceb7e9a8201dc0a328ac20bca0e452d8"
-    sha256 cellar: :any_skip_relocation, monterey:       "5a90eeb85dfe91a1279e9be81a6e5e973b758f224206d8904145b0a11a2a03c9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a782823dec42d7e427ec7f98aedb5fa24b11e2ae4a3a9af46f56fc4fcb47ed57"
-    sha256 cellar: :any_skip_relocation, catalina:       "9358ab788b1381e6162a4e590eb5539f06ff86806c7b8e3038e0e54dafcc15ae"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6d3d70c53e8856b67281133e5677c5854dee698c4306f9129bfeb866c0275324"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1c02b3d49b3ebba291c0b6e4ce0095e562abdead9354052fdbfc6ec14b16e73f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "50de8dfa5f239d7c3c555e1bc7f8c60547a736c587dc77ad9f9b43a103281f6a"
+    sha256 cellar: :any_skip_relocation, monterey:       "9bac9fa72cdb071f96672c0fd16dae1ffd47b6b5ed5e2fc425cf4247aa9b6ceb"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2e9ed107289d05d34665b96e7b962d80114e595b3b6723a9cb6094e45cd704e1"
+    sha256 cellar: :any_skip_relocation, catalina:       "4854dfd3bb32a34fd968ce4a81a8dd92b30323a60309177703e2ad856c94f4c0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a4c919f5b8495ec14de3144af4090f0c261eff035539b1af41aa29403eb80754"
   end
 
   depends_on "python@3.10"
@@ -34,13 +34,13 @@ class Glances < Formula
   end
 
   resource "psutil" do
-    url "https://files.pythonhosted.org/packages/d6/de/0999ea2562b96d7165812606b18f7169307b60cd378bc29cf3673322c7e9/psutil-5.9.1.tar.gz"
-    sha256 "57f1819b5d9e95cdfb0c881a8a5b7d542ed0b7c522d575706a80bedc848c8954"
+    url "https://files.pythonhosted.org/packages/e1/b0/7276de53321c12981717490516b7e612364f2cb372ee8901bd4a66a000d7/psutil-5.8.0.tar.gz"
+    sha256 "0c9ccb99ab76025f2f0bbecf341d4656e9c1351db8cc8a03ccd62e318ab4b5c6"
   end
 
   resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
-    sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
+    url "https://files.pythonhosted.org/packages/ab/61/1a1613e3dcca483a7aa9d446cb4614e6425eb853b90db131c305bd9674cb/pyparsing-3.0.6.tar.gz"
+    sha256 "d9bdec0013ef1eb5a84ab39a3b3868911598afa494f5faa038647101504e2b81"
   end
 
   def install

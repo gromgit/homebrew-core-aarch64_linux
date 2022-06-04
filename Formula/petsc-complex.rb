@@ -1,8 +1,8 @@
 class PetscComplex < Formula
   desc "Portable, Extensible Toolkit for Scientific Computation (complex)"
   homepage "https://www.mcs.anl.gov/petsc/"
-  url "https://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-lite-3.17.2.tar.gz"
-  sha256 "2313dd1ca41bf0ace68671ea6f8d4abf90011ed899f5e1e08658d3f18478359d"
+  url "https://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-lite-3.17.0.tar.gz"
+  sha256 "96d5aca684e1ce1425891a620d278773c25611cb144165a93b17531238eaaf8a"
   license "BSD-2-Clause"
 
   livecheck do
@@ -10,12 +10,12 @@ class PetscComplex < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "32a19faad2e79691dd2965e6e73641c7539c0a53580c59ce8a546ca4421ecbd5"
-    sha256 arm64_big_sur:  "3d6c9c88cd259b6e56d4209bb9da39c9c5bb0882e3d77fc249c344151c5a134d"
-    sha256 monterey:       "94225dae39db0a1a373a5b414314a74318b52649203d0917c2e20ad76cb4ecdb"
-    sha256 big_sur:        "2886b474b543fa22648aebd30dd62b547fe3aff8116938a915896a0ee88fb7f6"
-    sha256 catalina:       "03e8ebce2ec3afa112eba76d7bcbc8055c18a0a725eb73d762f9d20900353228"
-    sha256 x86_64_linux:   "f7e3e2b2b8537d4c21d8a7a317c69e908fbe6c512036059f256209c5d72d98ca"
+    sha256 arm64_monterey: "66f2d3c4fcb4b0c288a9e1a0a4994617e6a860e7e9d839b594c9354d776f0686"
+    sha256 arm64_big_sur:  "68232f6457bad61079e3e39660d904a1985c2f594397a2157074e202f47cb236"
+    sha256 monterey:       "a4f4e29bb5cfed249eafb734178723b46bdb844badb46a4e46745c6a33b3ace6"
+    sha256 big_sur:        "3726de3542182e8aade2497a67194afcc605a19d945ada3aaf37cce08b18a9ea"
+    sha256 catalina:       "6d60454d85def8764899a23d0a30399afce5c650d2bc082c0b5c8aabd2f74f39"
+    sha256 x86_64_linux:   "c7ac9e6f30556c348d67cebda53a69e3365eab9d457e7379484c6de8e55cc96c"
   end
 
   depends_on "hdf5"
@@ -27,8 +27,6 @@ class PetscComplex < Formula
   depends_on "python@3.10"
   depends_on "scalapack"
   depends_on "suite-sparse"
-
-  uses_from_macos "python" => :build
 
   conflicts_with "petsc", because: "petsc must be installed with either real or complex support, not both"
 

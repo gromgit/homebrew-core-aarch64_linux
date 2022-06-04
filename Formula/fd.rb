@@ -1,18 +1,18 @@
 class Fd < Formula
   desc "Simple, fast and user-friendly alternative to find"
   homepage "https://github.com/sharkdp/fd"
-  url "https://github.com/sharkdp/fd/archive/v8.4.0.tar.gz"
-  sha256 "d0c2fc7ddbe74e3fd88bf5bb02e0f69078ee6d2aeea3d8df42f508543c9db05d"
+  url "https://github.com/sharkdp/fd/archive/v8.3.2.tar.gz"
+  sha256 "9cc2354c652ee38369a4ce865404f284e94fa9daf043bb31d36297e7a2d7cd45"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/sharkdp/fd.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "36b39bc7e13e611becfb81cc6ce843abd36fc678be07bcb4823664f1af4fa3e3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "63a7d40d5a608f9e48eddfc96db5ded5064b3545aa69763d40d940cd8339a2c3"
-    sha256 cellar: :any_skip_relocation, monterey:       "7b041441406fa3756c85a1d071f1393637de64b4f368611f195cbb86346c96a6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bfa44b52a5cc4ba4a7df0d2f90b3bd3ab47239c226af859b2af0b5cba2bb2900"
-    sha256 cellar: :any_skip_relocation, catalina:       "cf873adca8ee04602b8daba2ae7889ff4753b8d04b6d733faec2c4e14fb0bbe4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "82c72a51adf671dec67e8906be0198303a5babb6a101949362ac3935e428f3a2"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0a9b6670e3898d06da79c8da5405d4409141c4df1b9db3fbf2ffa56ecacdee2b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dd2878985b2f4100c897283744826acdca627a57692ba11d3472e203015df3d8"
+    sha256 cellar: :any_skip_relocation, monterey:       "544bd266bd9d4689aeea459d5edd822db269647074bd28c682c58ab097dcd13d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "fda49ccd4fb859c6b040695f69e25dd2571e631c7fb203465702c85f924ff755"
+    sha256 cellar: :any_skip_relocation, catalina:       "492097b85cf2fe8b79700048510c90e4da55fee307552e143e84fcefd3bf552a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "22528c35f36907d807a44daf4dcd5c8d4c3598a55e3d73df68059ebe228e0b10"
   end
 
   depends_on "rust" => :build

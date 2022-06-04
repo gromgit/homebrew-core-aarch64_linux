@@ -1,17 +1,17 @@
 class Easyengine < Formula
   desc "Command-line control panel to manage WordPress sites"
   homepage "https://easyengine.io/"
-  url "https://github.com/EasyEngine/easyengine/releases/download/v4.5.6/easyengine.phar"
-  sha256 "28cd198a6c66d646756e6bda7f0981d5677d935667e3c1afb9456348f5c128d5"
+  url "https://github.com/EasyEngine/easyengine/releases/download/v4.5.4/easyengine.phar"
+  sha256 "c5ea2539a0ce40d8927c36878ec7c1ebf7184397f10586c2a030ec498cafb429"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7ed1d137bec2b1235657652906ebc37fff79f7f478d690a024be18e869f80620"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7ed1d137bec2b1235657652906ebc37fff79f7f478d690a024be18e869f80620"
-    sha256 cellar: :any_skip_relocation, monterey:       "7b28790b20f6b331b50017703497ebf185a2e19e2c0d25492dd374cc1646187b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7b28790b20f6b331b50017703497ebf185a2e19e2c0d25492dd374cc1646187b"
-    sha256 cellar: :any_skip_relocation, catalina:       "7b28790b20f6b331b50017703497ebf185a2e19e2c0d25492dd374cc1646187b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7ed1d137bec2b1235657652906ebc37fff79f7f478d690a024be18e869f80620"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cd789e482ec01d3a81c35cf667e2e5f347ab5e4b9d25b23fc6e301dfb04ffa22"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cd789e482ec01d3a81c35cf667e2e5f347ab5e4b9d25b23fc6e301dfb04ffa22"
+    sha256 cellar: :any_skip_relocation, monterey:       "718cad356c16de1833ceb664d530b8a4b9463306e2f5285bf5fa76851d6ea872"
+    sha256 cellar: :any_skip_relocation, big_sur:        "718cad356c16de1833ceb664d530b8a4b9463306e2f5285bf5fa76851d6ea872"
+    sha256 cellar: :any_skip_relocation, catalina:       "718cad356c16de1833ceb664d530b8a4b9463306e2f5285bf5fa76851d6ea872"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cd789e482ec01d3a81c35cf667e2e5f347ab5e4b9d25b23fc6e301dfb04ffa22"
   end
 
   depends_on "dnsmasq"

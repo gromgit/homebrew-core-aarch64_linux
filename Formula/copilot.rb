@@ -4,8 +4,8 @@ class Copilot < Formula
   desc "CLI tool for Amazon ECS and AWS Fargate"
   homepage "https://aws.github.io/copilot-cli/"
   url "https://github.com/aws/copilot-cli.git",
-      tag:      "v1.18.1",
-      revision: "61a05a60ee990865a1160f5c2e0dcc3575adb596"
+      tag:      "v1.17.0",
+      revision: "1fdcfc0e187e34ea8135f6d6b48e3cd9508a2afa"
   license "Apache-2.0"
   head "https://github.com/aws/copilot-cli.git", branch: "mainline"
 
@@ -15,12 +15,12 @@ class Copilot < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6b7f15bf255606a4dc9634a959b69ce60dc6a56874562cf1ab57af61c41322e3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6ab233d03720eed76ebf9c5316dfed158276646743562155a888ba4f4708ebef"
-    sha256 cellar: :any_skip_relocation, monterey:       "e5929358e8c411658645b32c4dcbece7290af857506c37fda9ffd10d2da058e8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4ca17274486d808ebf728c9735133e368fc382649c16f60c508d85a14c6763bf"
-    sha256 cellar: :any_skip_relocation, catalina:       "19d501fff65b1ec5b7984574e60148545e8db6ac2cf5c94f2f5744b6d7efa25c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7eec1aa92f0b1412572eca73c5d3bb48ce652e9a49a41928bf5f586b68a37764"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c3f369c5bcdd2d1ff087d015b7f73788dc2627c2cd81d27ff9bddb703e66056e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0783ae060b8769e25cae69e88766a1f7024e1e613026e60871fbcd4c91d7712d"
+    sha256 cellar: :any_skip_relocation, monterey:       "bed82c4288667474b988c67344b75f47237e6246fcd4c789ad7f543336717800"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7d19bbe51eb6377befc401149853a25e2ad4440a906b8f14b4f54776e332cc9b"
+    sha256 cellar: :any_skip_relocation, catalina:       "630ce334911241089ad92a9f478350422242a617739e6ac2348e6fe0a434827f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6095ac78955d7249b6f733852cc9fd442e2e13cf97d78e0f3d3b9787e943bb4b"
   end
 
   depends_on "go" => :build

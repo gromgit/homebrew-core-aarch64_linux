@@ -3,24 +3,24 @@ require "language/node"
 class Mongosh < Formula
   desc "MongoDB Shell to connect, configure, query, and work with your MongoDB database"
   homepage "https://github.com/mongodb-js/mongosh#readme"
-  url "https://registry.npmjs.org/@mongosh/cli-repl/-/cli-repl-1.5.0.tgz"
-  sha256 "bcabff0b1dc6a400ebe2114783b44fd91d000e31d48c81d760e2b8d0f157d2a2"
+  url "https://registry.npmjs.org/@mongosh/cli-repl/-/cli-repl-1.3.1.tgz"
+  sha256 "e40df53ffd920a1abe90df46b11ed63de6874249fe4fc4301a96a309dc0bacd7"
   license "Apache-2.0"
 
   bottle do
-    sha256                               arm64_monterey: "7145461e0eda3946d97fd32d74ebf1959279cea96d7904fd92c5f7481fbf6f89"
-    sha256                               arm64_big_sur:  "7e9e5b53e21b9b8d647a987902531144555d09d7213af4b280c50232c9cdd050"
-    sha256                               monterey:       "9548999dc2e8372dff26b2d14d154edc5df1307ce88bd2a93a3788f214f20e24"
-    sha256                               big_sur:        "4ca1e8a30900988e81726d208560dac5766f2bb7fb95909e56d3478f7a53e6fb"
-    sha256                               catalina:       "a1c371dc8f40a9d300f1ada4656c22a9dee4327e6f849e0cfbe9e13c90ec7b28"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "687161b527c2fb1d03860fa8d4b1fed17bf27083157f559664f6ce5d998178c9"
+    sha256                               arm64_monterey: "e01f4520a7f2327b14f1fdc79b31af4b6129aaee8769371bde111111015ccda7"
+    sha256                               arm64_big_sur:  "a45f60bf0e8c3ca5a478c61c923aa9e538897203523dd1a1b22fcd0328973bc6"
+    sha256                               monterey:       "d9a2e7da32ef816d0fbbe8fada95495ee6214ed635ad93776bf654a978ab58b3"
+    sha256                               big_sur:        "667f64f548db9d4efaf17b7a7387a41eff9e5ca0eefe941fe448fa356a551357"
+    sha256                               catalina:       "740c9a1b2ba4bfb96afe49bcccbf8a6cde49e6b6934bdc3dc20cf82567ae7d73"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "80caacd9bd2e4c3997314c9d7762cc3eb8f7fe5daf8482e79cfed116dbae0cce"
   end
 
-  depends_on "node@16"
+  depends_on "node@14"
 
   def install
-    system "#{Formula["node@16"].bin}/npm", "install", *Language::Node.std_npm_install_args(libexec)
-    (bin/"mongosh").write_env_script libexec/"bin/mongosh", PATH: "#{Formula["node@16"].opt_bin}:$PATH"
+    system "#{Formula["node@14"].bin}/npm", "install", *Language::Node.std_npm_install_args(libexec)
+    (bin/"mongosh").write_env_script libexec/"bin/mongosh", PATH: "#{Formula["node@14"].opt_bin}:$PATH"
   end
 
   test do

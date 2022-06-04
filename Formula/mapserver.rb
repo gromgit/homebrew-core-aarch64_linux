@@ -4,7 +4,7 @@ class Mapserver < Formula
   url "https://download.osgeo.org/mapserver/mapserver-7.6.4.tar.gz"
   sha256 "b46c884bc42bd49873806a05325872e4418fc34e97824d4e13d398e86ea474ac"
   license "MIT"
-  revision 6
+  revision 4
 
   livecheck do
     url "https://mapserver.org/download.html"
@@ -12,12 +12,12 @@ class Mapserver < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "329b8b0d9171e1ddd78caccfa2181387a4a96fd6fa0d793d8e2df08e4d483e28"
-    sha256 cellar: :any,                 arm64_big_sur:  "9e9f70c6e73ebf54c17e724c9258ebfe551154a6d136110db7a84dd8d9179b5d"
-    sha256 cellar: :any,                 monterey:       "c54dfcf1ee80c006d2577a62b8d611b5deb1296e76eec74d9267ec26ccd13299"
-    sha256 cellar: :any,                 big_sur:        "27208daf7f0f2d4c54a7acb06ac64534a073e7211e687ecc8764042f996cfa65"
-    sha256 cellar: :any,                 catalina:       "47697fff3cfd46f892a42ec9ff649a72521aadf6dc8a2519966b5d24f3e19e0a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "80ad31e2bb0aaf61cb589cfe32b302179a5184aaa699bf51c4816575fff7a524"
+    sha256 cellar: :any,                 arm64_monterey: "eb063e619b10833ecf47eb794e3f2d9e96f9105f9030270d79f03e7bfb302aff"
+    sha256 cellar: :any,                 arm64_big_sur:  "4ff7d584fc0c64391f45e8a264e01fb77c742ca77b737c4af8f7a673eaf37d06"
+    sha256 cellar: :any,                 monterey:       "c254261912cb57007202ad57480c44212ae8839583be745cda024b2966b644ce"
+    sha256 cellar: :any,                 big_sur:        "ed04e8fe8f1da5d91258b8449b60e95f7be592b6d817ad662cb01b629daa5e88"
+    sha256 cellar: :any,                 catalina:       "017de885523933e74cffc69391374be105af07e64099681aaef4ea4986922008"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7aa822d4049082c9aecb7100b75d985b62929e0e5a7d4ded45460ca3612dd8c3"
   end
 
   depends_on "cmake" => :build

@@ -6,15 +6,14 @@ class Mathlibtools < Formula
   url "https://files.pythonhosted.org/packages/84/1e/5194dbbb2316c5f155e204a0011db633e4b21732d26131d39eb9473fec3e/mathlibtools-1.1.1.tar.gz"
   sha256 "d225bb4962316fe124e13dba86bbb91200605dfa9187acce47bdc60202c53721"
   license "Apache-2.0"
-  revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ce89db1db8835dc71031c7849729a4a03bb7193c63af2ff041e52b9c0f0c23d2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1e63e4dec79263fd7841094c03c4db32c9a9f097437e72d1d8358b568926d07f"
-    sha256 cellar: :any_skip_relocation, monterey:       "38ee1e0718c0b46d2719caf7cbd5eada16823ffc58f6cebf3e2d4c24894e0324"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d8e7d69a6c5a606eed9f7fdb01b461dae7f38d71944a50f589302212b557a13b"
-    sha256 cellar: :any_skip_relocation, catalina:       "d3f2ce00e57fd14058f27aa5f42571d8292b04a246db2c45727de814bcb4a5a7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7dd5e87c54105efd4f7e0698e67ff8ce804a9d1b7212367dcfeaecef9ea4e6cf"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "597a4a84e66bce15f502f4d07fc399b6fb51001d76d2ec058438eb2a93f9e868"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f430a8f04a955b9ec8532c848206bde1ba375726e00a3f599dbfad013ef137d6"
+    sha256 cellar: :any_skip_relocation, monterey:       "632494aa2e7d3773a36fa40e545ca800ce781ab9b1b70a8f33b36ef501089e02"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5c740e0c3d154595a8da54bf73cad3ae32e70f887131b5167c0391120ecb76c1"
+    sha256 cellar: :any_skip_relocation, catalina:       "88763db9c239f3cec7f7e8be59c73a757223664e35194d0c7e55c2b193b73b59"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4f142f8b1610cd39cc2eb333068575fdf7e8ecb3b2ea42290a1e62486f719146"
   end
 
   depends_on "lean" => :test
@@ -27,8 +26,8 @@ class Mathlibtools < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/07/10/75277f313d13a2b74fc56e29239d5c840c2bf09f17bf25c02b35558812c6/certifi-2022.5.18.1.tar.gz"
-    sha256 "9c5705e395cd70084351dd8ad5c41e65655e08ce46f2ec9cf6c2c08390f71eb7"
+    url "https://files.pythonhosted.org/packages/6c/ae/d26450834f0acc9e3d1f74508da6df1551ceab6c2ce0766a593362d6d57f/certifi-2021.10.8.tar.gz"
+    sha256 "78884e7c1d4b00ce3cea67b44566851c4343c120abd683433ce934a68ea58872"
   end
 
   resource "cffi" do
@@ -42,8 +41,8 @@ class Mathlibtools < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/59/87/84326af34517fca8c58418d148f2403df25303e02736832403587318e9e8/click-8.1.3.tar.gz"
-    sha256 "7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e"
+    url "https://files.pythonhosted.org/packages/dd/cf/706c1ad49ab26abed0b77a2f867984c1341ed7387b8030a6aa914e2942a0/click-8.0.4.tar.gz"
+    sha256 "8458d7b1287c5fb128c90e23381cf99dcde74beaf6c7ff6384ce84d6fe090adb"
   end
 
   resource "Deprecated" do
@@ -67,8 +66,8 @@ class Mathlibtools < Formula
   end
 
   resource "networkx" do
-    url "https://files.pythonhosted.org/packages/4a/e2/1f9d6cf8562cf2bde58c102db70fe48d2d9652ec256f86bab6b279601b0d/networkx-2.8.2.tar.gz"
-    sha256 "ae99c9b0d35e5b4a62cf1cfea01e5b3633d8d02f4a0ead69685b6e7de5b85eab"
+    url "https://files.pythonhosted.org/packages/97/ae/7497bc5e1c84af95e585e3f98585c9f06c627fac6340984c4243053e8f44/networkx-2.6.3.tar.gz"
+    sha256 "c0946ed31d71f1b732b5aaa6da5a0388a345019af232ce2f49c766e2d6795c51"
   end
 
   resource "pycparser" do
@@ -87,8 +86,8 @@ class Mathlibtools < Formula
   end
 
   resource "PyJWT" do
-    url "https://files.pythonhosted.org/packages/d8/6b/6287745054dbcccf75903630346be77d4715c594402cec7c2518032416c2/PyJWT-2.4.0.tar.gz"
-    sha256 "d42908208c699b3b973cbeb01a969ba6a96c821eefb1c5bfe4c390c01d67abba"
+    url "https://files.pythonhosted.org/packages/1d/8e/01bdcfdbb352daaba8ea406d9df149c5bba7dbf70f908d4fa4c269fe6a08/PyJWT-2.3.0.tar.gz"
+    sha256 "b888b4d56f06f6dcd777210c334e69c737be74755d3e5e9ee3fe67dc18a0ee41"
   end
 
   resource "PyNaCl" do
@@ -97,8 +96,8 @@ class Mathlibtools < Formula
   end
 
   resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
-    sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
+    url "https://files.pythonhosted.org/packages/d6/60/9bed18f43275b34198eb9720d4c1238c68b3755620d20df0afd89424d32b/pyparsing-3.0.7.tar.gz"
+    sha256 "18ee9022775d270c55187733956460083db60b37d0d0fb357445f3094eed3eea"
   end
 
   resource "PyYAML" do
@@ -122,18 +121,18 @@ class Mathlibtools < Formula
   end
 
   resource "tqdm" do
-    url "https://files.pythonhosted.org/packages/98/2a/838de32e09bd511cf69fe4ae13ffc748ac143449bfc24bb3fd172d53a84f/tqdm-4.64.0.tar.gz"
-    sha256 "40be55d30e200777a307a7585aee69e4eabb46b4ec6a4b4a5f2d9f11e7d5408d"
+    url "https://files.pythonhosted.org/packages/e3/c1/b3e42d5b659ca598508e2a9ef315d5eef0a970f874ef9d3b38d4578765bd/tqdm-4.62.3.tar.gz"
+    sha256 "d359de7217506c9851b7869f3708d8ee53ed70a1b8edbba4dbcb47442592920d"
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/1b/a5/4eab74853625505725cefdf168f48661b2cd04e7843ab836f3f63abf81da/urllib3-1.26.9.tar.gz"
-    sha256 "aabaf16477806a5e1dd19aa41f8c2b7950dd3c746362d7e3223dbe6de6ac448e"
+    url "https://files.pythonhosted.org/packages/b0/b1/7bbf5181f8e3258efae31702f5eab87d8a74a72a0aa78bc8c08c1466e243/urllib3-1.26.8.tar.gz"
+    sha256 "0e7c33d9a63e7ddfcb86780aac87befc2fbddf46c58dbb487e0855f7ceec283c"
   end
 
   resource "wrapt" do
-    url "https://files.pythonhosted.org/packages/11/eb/e06e77394d6cf09977d92bff310cb0392930c08a338f99af6066a5a98f92/wrapt-1.14.1.tar.gz"
-    sha256 "380a85cf89e0e69b7cfbe2ea9f765f004ff419f34194018a6827ac0e3edfed4d"
+    url "https://files.pythonhosted.org/packages/eb/f6/d81ccf43ac2a3c80ddb6647653ac8b53ce2d65796029369923be06b815b8/wrapt-1.13.3.tar.gz"
+    sha256 "1fea9cd438686e6682271d36f3481a9f3636195578bab9ca3382e2f5f01fc185"
   end
 
   def install

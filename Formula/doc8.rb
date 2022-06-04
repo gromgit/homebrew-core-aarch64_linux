@@ -3,18 +3,18 @@ class Doc8 < Formula
 
   desc "Style checker for Sphinx documentation"
   homepage "https://github.com/PyCQA/doc8"
-  url "https://files.pythonhosted.org/packages/e0/38/af1889fbcfae4b66eb936f0f43ceaa315b19b8d4ae1123e1bcab0d9d0738/doc8-0.11.2.tar.gz"
-  sha256 "c35a231f88f15c204659154ed3d499fa4d402d7e63d41cba7b54cf5e646123ab"
+  url "https://files.pythonhosted.org/packages/31/86/c681a7f2f685c05ed7a8f2f6e0df340309322ee527b6d0a664cd816f2fa0/doc8-0.11.1.tar.gz"
+  sha256 "6dbcb5472efd332763ffb2862b4fdeec40c8a6fdc6bb67e68713ad749ca5808c"
   license "Apache-2.0"
   head "https://github.com/PyCQA/doc8.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "aac650bb05fb736a569228fdb1c1f75f45aeea6c60f2324253f0e3ec69601609"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "21bee28d0330f49a70b3ae4572d6d41aba3bc622d252a1264b0d13be4bfd7692"
-    sha256 cellar: :any_skip_relocation, monterey:       "ae21f8ecfcd761044aeb5b442bfc2714b0ecb36b3271b3627670c14d2310e9c3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "978fb08a7e2a9fbd5b7a85dee5e7b92567abf52d76c04ed30c46f6c5aa84765b"
-    sha256 cellar: :any_skip_relocation, catalina:       "b013492fdace28d5b4ee51aa8453e6a578a42dad076fbd27b1fff74566b22d67"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b4cfd64de939bb1961e65f9d18629244bcd8d63c3befc1025d26a3c70823011d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "699d6b976b06f3b2705d6d1a1c8166331e89e376be75ec07f17bd5df33da84b9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1fbabc390c8119c79afc4b72a2a9abb6b5f275e6c61787fea1f69c73e92cacf9"
+    sha256 cellar: :any_skip_relocation, monterey:       "271c5ff297e13e37006bb37bfb95b4428f0013df22a9c485d72fd1dd8e327aba"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7763e1672103814df4bcd042fe950c553d0c0f244654beab9dc6ed777d5bb338"
+    sha256 cellar: :any_skip_relocation, catalina:       "1d038842c16dd3765748a65155d12c44ba544a9914afe3d138e1fc1bc208eb2f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "606cedee41d916cb4f3c2dc6a6bfc4325cb9812c57e472059a669fea83e15bef"
   end
 
   depends_on "python@3.10"
@@ -25,13 +25,13 @@ class Doc8 < Formula
   end
 
   resource "pbr" do
-    url "https://files.pythonhosted.org/packages/96/9f/f4bc832eeb4ae723b86372277da56a5643b0ad472a95314e8f516a571bb0/pbr-5.9.0.tar.gz"
-    sha256 "e8dca2f4b43560edef58813969f52a56cef023146cbb8931626db80e6c1c4308"
+    url "https://files.pythonhosted.org/packages/51/da/eb358ed53257a864bf9deafba25bc3d6b8d41b0db46da4e7317500b1c9a5/pbr-5.8.1.tar.gz"
+    sha256 "66bc5a34912f408bb3925bf21231cb6f59206267b7f63f3503ef865c1a292e25"
   end
 
   resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/59/0f/eb10576eb73b5857bc22610cdfc59e424ced4004fe7132c8f2af2cc168d3/Pygments-2.12.0.tar.gz"
-    sha256 "5eb116118f9612ff1ee89ac96437bb6b49e8f04d8a13b514ba26f620208e26eb"
+    url "https://files.pythonhosted.org/packages/94/9c/cb656d06950268155f46d4f6ce25d7ffc51a0da47eadf1b164bbf23b718b/Pygments-2.11.2.tar.gz"
+    sha256 "4e426f72023d88d03b2fa258de560726ce890ff3b630f88c21cbb8b2503b8c6a"
   end
 
   resource "restructuredtext-lint" do

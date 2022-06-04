@@ -1,8 +1,8 @@
 class Serd < Formula
   desc "C library for RDF syntax"
   homepage "https://drobilla.net/software/serd.html"
-  url "https://download.drobilla.net/serd-0.30.12.tar.bz2"
-  sha256 "9f9dab4125d88256c1f694b6638cbdbf84c15ce31003cd83cb32fb2192d3e866"
+  url "https://download.drobilla.net/serd-0.30.10.tar.bz2"
+  sha256 "affa80deec78921f86335e6fc3f18b80aefecf424f6a5755e9f2fa0eb0710edf"
   license "ISC"
 
   livecheck do
@@ -11,12 +11,13 @@ class Serd < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "be91ffb01eaed7dab3bede32474483b0d26a780ad6565cbcc95cc7ba2a80ed18"
-    sha256 cellar: :any,                 arm64_big_sur:  "b4c08728be51e411bcf7cbff886aae172924b90113a1fcc59258b40a136c61c1"
-    sha256 cellar: :any,                 monterey:       "a4af1b773a7587ecca6af264818338371a85679c847c8e218e7d033adef89b8d"
-    sha256 cellar: :any,                 big_sur:        "45c665a31d0d956d94422ea25913d78e675165b43d738dfc3dc61e2863817b7f"
-    sha256 cellar: :any,                 catalina:       "78bf88ae66292c26c07192afb911cad5055d054ce4e8f306bed86a63e9eb1e1a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "feb299d5b99d16463f8104eb2b8df075982afd42ea57f4f3d13fdc23b37d0a71"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "d1bcd61616acf402f9c9d5ba7e45430d7c680907b1ae40e1619abeb6d032ecf5"
+    sha256 cellar: :any,                 arm64_big_sur:  "820e665f024fc4cadc9bdc1dbbed043ff8532b78820bd562111ad58fe7b7c773"
+    sha256 cellar: :any,                 monterey:       "a4c365f5e3f5684668223f58ff83f51b59931fca800eea1883debbad006454e4"
+    sha256 cellar: :any,                 big_sur:        "88b931157faf0b6aee0574b3643a0050cb4bfe457ca8afbd7349d7d44bf69927"
+    sha256 cellar: :any,                 catalina:       "bf3e88a5e10d6f553c16961289a1ab8eae961f9f025ad62b09c2469b9a87529b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "44b4777b706dce7681061463bfc96c3040ef6b874fcac9511173c50c03818a59"
   end
 
   depends_on "pkg-config" => :build

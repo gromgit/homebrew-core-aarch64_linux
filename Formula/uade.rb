@@ -4,8 +4,8 @@ class Uade < Formula
   license "GPL-2.0-only"
 
   stable do
-    url "https://zakalwe.fi/uade/uade3/uade-3.02.tar.bz2"
-    sha256 "2aa317525402e479ae8863222e3c341d135670fcb23a2853ac93075ac428f35b"
+    url "https://zakalwe.fi/uade/uade3/uade-3.01.tar.bz2"
+    sha256 "a669c215970db2595027c16ee01149613fcfa4b81be67216ce6d7add871ef62a"
 
     resource "bencode-tools" do
       url "https://gitlab.com/heikkiorsila/bencodetools.git", revision: "5a1ccf65393ee50af3a029d0632f29567467873c"
@@ -18,12 +18,13 @@ class Uade < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "1fa83a9d0afe0133189cc075e9eb0e8822e21baa01d0e568e768f65949cfd567"
-    sha256 arm64_big_sur:  "9e2786bddc15f0864674e26e53032af89c07490f7aca0aff307186cdd0eef283"
-    sha256 monterey:       "d58fbf04c9fcb13f046a76110aeebf25cb93c3d812ed2a5ec04f3d93cc82424e"
-    sha256 big_sur:        "42cef81cd6f1792dc53c8e14a8fc416dadac072bf08a8bbf568838c9ae758ea1"
-    sha256 catalina:       "923523028dcc4fd1e98df962874d7385bfbc658c894216ff64dac85ab13616fd"
-    sha256 x86_64_linux:   "b570d5bee780acb48d04b1915026fbbbea8bf38ec3f217e24129bd4904470174"
+    rebuild 1
+    sha256 arm64_monterey: "fa9a21970736350b0dbc4c4d0f5369cfae10228e085ba47f319825bd63d90b79"
+    sha256 arm64_big_sur:  "1b683bf82cf23de3c10ec86efbe4703f71d5b169bd5584ed2247ac01985956fa"
+    sha256 monterey:       "32051055d28f58edf35569342c247d64f14a9bae6b9d8eade309ccd6ba935ec8"
+    sha256 big_sur:        "b1be2325472e12eccaac8edf503db68c5e4f9c8425e4b26c4bf184e4a0ee7ee8"
+    sha256 catalina:       "238f1f6d010744cf7b4a431535a773fe08d1f8677c1b76d2af3ed186a2a65d7c"
+    sha256 x86_64_linux:   "d491f6af721e44247fcb95c8977cdbbb38ae0222ea06d3e2d7df83edea687632"
   end
 
   head do

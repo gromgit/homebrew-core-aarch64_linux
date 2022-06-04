@@ -1,18 +1,18 @@
 class CriTools < Formula
   desc "CLI and validation tools for Kubelet Container Runtime Interface (CRI)"
   homepage "https://github.com/kubernetes-sigs/cri-tools"
-  url "https://github.com/kubernetes-sigs/cri-tools/archive/v1.24.2.tar.gz"
-  sha256 "cd70395a2a856a77785d231d41d3640fb6da4ba7b144f4242a938312b64855a0"
+  url "https://github.com/kubernetes-sigs/cri-tools/archive/v1.23.0.tar.gz"
+  sha256 "c6a2e7fdd76d16f1bb5bbdb3c71a335a383e54bc6114058f16bf2789faf808de"
   license "Apache-2.0"
   head "https://github.com/kubernetes-sigs/cri-tools.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fd320fc241012fbe9df7f22c82357a5f9bf70b9613e1e18c6e40e0018fa65c1b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fd320fc241012fbe9df7f22c82357a5f9bf70b9613e1e18c6e40e0018fa65c1b"
-    sha256 cellar: :any_skip_relocation, monterey:       "065c4ea941a93e5cd0daf3f3bae1fa332af41b71b34d3ecb5d0d2c63e537145d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "065c4ea941a93e5cd0daf3f3bae1fa332af41b71b34d3ecb5d0d2c63e537145d"
-    sha256 cellar: :any_skip_relocation, catalina:       "065c4ea941a93e5cd0daf3f3bae1fa332af41b71b34d3ecb5d0d2c63e537145d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6734a23f6cb20b736d5df7d1dc1b67a1a61ffff99171a92a08507eee77be6bdb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d962159b8e8280d96805ae736d4bebf816319fb26ed04b2240c2a1e58767be70"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d962159b8e8280d96805ae736d4bebf816319fb26ed04b2240c2a1e58767be70"
+    sha256 cellar: :any_skip_relocation, monterey:       "9f348ee2e484cd03e8569cfef8be86d783966d443d6910695020b7183f72bc2a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9f348ee2e484cd03e8569cfef8be86d783966d443d6910695020b7183f72bc2a"
+    sha256 cellar: :any_skip_relocation, catalina:       "9f348ee2e484cd03e8569cfef8be86d783966d443d6910695020b7183f72bc2a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "51b02c8fd89aaf71142ea32f33f93a6335b2784391c7df5999bc17dccb3105db"
   end
 
   depends_on "go" => :build
@@ -40,7 +40,7 @@ class CriTools < Formula
     crictl_output = shell_output(
       "#{bin}/crictl --runtime-endpoint unix:///var/run/nonexistent.sock --timeout 10ms info 2>&1", 1
     )
-    assert_match "unable to determine runtime API version", crictl_output
+    assert_match "context deadline exceeded", crictl_output
 
     critest_output = shell_output("#{bin}/critest --ginkgo.dryRun 2>&1")
     assert_match "PASS", critest_output

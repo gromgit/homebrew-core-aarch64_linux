@@ -16,7 +16,6 @@ class LunchyGo < Formula
   end
 
   depends_on "go" => :build
-  depends_on :macos
 
   conflicts_with "lunchy", because: "both install a `lunchy` binary"
 

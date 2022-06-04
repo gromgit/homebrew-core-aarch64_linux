@@ -1,17 +1,17 @@
 class SignalCli < Formula
   desc "CLI and dbus interface for WhisperSystems/libsignal-service-java"
   homepage "https://github.com/AsamK/signal-cli"
-  url "https://github.com/AsamK/signal-cli/archive/refs/tags/v0.10.7.tar.gz"
-  sha256 "c577673b40c82ca3242d2ec5ed3305b380cd400856cf3f8504afea56845c7538"
+  url "https://github.com/AsamK/signal-cli/archive/refs/tags/v0.10.5.tar.gz"
+  sha256 "36db3cf393c4f36e38560f33002a59a5efab4f8fe23a309c85be3da377826d6f"
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7b86b1d7df87deeb644f5c05259a0b652729ec55962575a5299371e568218597"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8073a963756f5941714309ae2b8a9e96b21abc50fab59fbed8087cd7593eab8f"
-    sha256 cellar: :any_skip_relocation, monterey:       "03351fc76ddb40e4b3d6681c3a361bc85c01d16030702a43e9d7e8ff53768ab5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f54a9ab39ffb9a5a8e97174fed7ceeca1853b25760abb207d86f7eb65b60ea4e"
-    sha256 cellar: :any_skip_relocation, catalina:       "2b92d438aaddbfefcc618affd038dbe7941e99d131c3987309bd589b64c0981a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "773b9bc0521d6266d598b63c91cba1b138c9b7b1b21cf0e6c2dabb9ae970f06c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "30c03a15648cb752351194dd1e5b709f183d94b26678b25391a61167d432e98c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "780f8b540269323ed593f84b17e9dbe502f6d36ba016b7bc853d5d4d3f68fe9f"
+    sha256 cellar: :any_skip_relocation, monterey:       "57dcf6f1e8d756a766ccbd316363728859abbf9ae50b95d00b5324c1ad9a7bb1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d86c38f0b807dc5b15139ee8e1ab8a0c5765485a467ede319bf47f2252b6d9f4"
+    sha256 cellar: :any_skip_relocation, catalina:       "099a291ab30e1438a1bab66849e53dec3bd44b48c2a51c503100534582fa2ba7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c91d27feea555d4ff60c1a598d6e517bcf577ba81b7fab2ab2fa41185fe1a061"
   end
 
   depends_on "gradle" => :build
@@ -29,8 +29,8 @@ class SignalCli < Formula
   # per https://github.com/AsamK/signal-cli/wiki/Provide-native-lib-for-libsignal#libsignal-client
   # we want the specific libsignal-client version from 'signal-cli-#{version}/lib/libsignal-client-X.X.X.jar'
   resource "libsignal-client" do
-    url "https://github.com/signalapp/libsignal/archive/refs/tags/v0.17.0.tar.gz"
-    sha256 "7866ae9679c482a16dc4ef3fd3891e558ce0615234e7e775f887190782a88b63"
+    url "https://github.com/signalapp/libsignal/archive/refs/tags/v0.15.0.tar.gz"
+    sha256 "48e0b8d92c4482a2a79045bc72cf538421ea461f0cbfa1cdc2351678b188350a"
   end
 
   def install

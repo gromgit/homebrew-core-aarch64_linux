@@ -2,18 +2,18 @@ class Vcluster < Formula
   desc "Creates fully functional virtual k8s cluster inside host k8s cluster's namespace"
   homepage "https://www.vcluster.com"
   url "https://github.com/loft-sh/vcluster.git",
-      tag:      "v0.8.1",
-      revision: "a95fb14799145efa165b8acdd9ca436dfd6da15d"
+      tag:      "v0.7.1",
+      revision: "dc0ff6f96e9c96fe2caa77e79c2dffc921b4fd49"
   license "Apache-2.0"
   head "https://github.com/loft-sh/vcluster.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e3566b4e97b887c6a47878a1e05fc09de3628f352abb1fceb7dcec3b34aaab48"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "47c0f3f47d9c4f403b9037b13c15224c6a74f80ed810c9f79d8668ad1be0ad58"
-    sha256                               monterey:       "09abb354f722f3e66abae6e2fbdc6c024801ad01657fff3ea8345382237ff139"
-    sha256                               big_sur:        "0802e835fa36ea3d792c58922e5611557ac1f9b598b68935ca84827e0c56f625"
-    sha256                               catalina:       "8ed4cb4779cfdd332f2c69a09f6d76111933fbca9926b28b96be9025645fdd22"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b76b5c26ec4eae342a3b123738532c540d4fe06b97d7aa98890470ac5cc5cd29"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c27bd7a4c291f49c80d1e1aed409d5d0def7661006f3dfeec65f43e82c6ee7a4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "46e19e4c7cb6f7f2d202372e8940b5c5c5634aafde2d7329daea81b4d44c7ec8"
+    sha256                               monterey:       "c240fe5ede657520c3399e857c584ea1dbbce3fab3bd172a487b86a53a33c1e5"
+    sha256                               big_sur:        "ac23160dd80a21a808c25ea429b8267ccbb31b5ff5e1d36cbc8086992a3ef52b"
+    sha256                               catalina:       "014767796058fff1733ddef7c376078f5e9a7bafe498dd30afa263025f5fa40d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c4bf886db30e223f4314abbb4f2192da961fb817cde8d008af3addb66309be39"
   end
 
   depends_on "go" => :build

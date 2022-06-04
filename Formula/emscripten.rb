@@ -5,8 +5,8 @@ class Emscripten < Formula
   homepage "https://emscripten.org/"
   # TODO: Remove from versioned dependency conflict allowlist when `python`
   #       symlink is migrated to `python@3.10`.
-  url "https://github.com/emscripten-core/emscripten/archive/3.1.12.tar.gz"
-  sha256 "69c1df115a5a399e3e02752039249c240c74b63a9b74b67c6d5013197093bded"
+  url "https://github.com/emscripten-core/emscripten/archive/3.1.8.tar.gz"
+  sha256 "9ffe1fb3a816b1de3050f990a10519b72349451200947f019aaf26728f40604c"
   license all_of: [
     "Apache-2.0", # binaryen
     "Apache-2.0" => { with: "LLVM-exception" }, # llvm
@@ -20,12 +20,12 @@ class Emscripten < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "dd499ba6b76c28c33394d8d774dca70fa8110550a6a338ce974c83c506240418"
-    sha256 cellar: :any,                 arm64_big_sur:  "5fc27b6ced6b31bb40d24e62eeb543edacf65b9fa89b0c4b79e7d118bd60360b"
-    sha256 cellar: :any,                 monterey:       "937a9399ef97e60f2693f18900d47c8c676e1bf39cddcbcaca1ebd412428a38b"
-    sha256 cellar: :any,                 big_sur:        "38fa339a9238817b654058bdcb80fd1a616879e57e93c802a04149a26a0cb2d5"
-    sha256 cellar: :any,                 catalina:       "bac84213a8508a37ff19d9fda153e29888be5d527d720bfcc4d736452ad7c001"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "754783067a9acc10e4e82d084301b8cd1a37d9c483287befa97f767c39ab505e"
+    sha256 cellar: :any,                 arm64_monterey: "dad971f86530054c149ae3e22a159e4c1de307f099627f80f80668856a6556d9"
+    sha256 cellar: :any,                 arm64_big_sur:  "8294650440f7446cdbb692bc198213c09320b30548a38ee4c52d92971b5c147a"
+    sha256 cellar: :any,                 monterey:       "33da31e5ef429b5f570d2ce3a35e0c23c21081362e23aa0d13fa8e22d3003675"
+    sha256 cellar: :any,                 big_sur:        "9f4791cf5a114219a0ed6b76cceacec0bdb3b41df80d7923f4b64f92446bb01a"
+    sha256 cellar: :any,                 catalina:       "33629dd48fdea310c0e2aca6050c3fa0caeb276131a93a681cd7d1e809e86ffd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c59c35f99d020f50f77d58a2d85948f4babba24e26ceb7b15f38853262ac71fe"
   end
 
   depends_on "cmake" => :build
@@ -50,7 +50,7 @@ class Emscripten < Formula
   # See llvm resource below for instructions on how to update this.
   resource "binaryen" do
     url "https://github.com/WebAssembly/binaryen.git",
-        revision: "7476d64271354d42d864e1ed21f87f514949bc64"
+        revision: "22d24fda983d471ebf73ebadbc37ef1741a5594d"
   end
 
   # emscripten needs argument '-fignore-exceptions', which is only available in llvm >= 12
@@ -61,7 +61,7 @@ class Emscripten < Formula
   # Then use the listed llvm_project_revision for the resource below.
   resource "llvm" do
     url "https://github.com/llvm/llvm-project.git",
-        revision: "d58cc0839ee5935e649dbbc18c898a8e4bcd6724"
+        revision: "80ec0ebfdc5692a58e0832125f2c6a991df9d63f"
   end
 
   def install
@@ -168,8 +168,6 @@ class Emscripten < Formula
   test do
     # Fixes "Unsupported architecture" Xcode prepocessor error
     ENV.delete "CPATH"
-
-    ENV["NODE_OPTIONS"] = "--no-experimental-fetch"
 
     (testpath/"test.c").write <<~EOS
       #include <stdio.h>

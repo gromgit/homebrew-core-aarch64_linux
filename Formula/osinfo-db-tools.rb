@@ -27,6 +27,7 @@ class OsinfoDbTools < Formula
   depends_on "json-glib"
   depends_on "libarchive"
   depends_on "libsoup"
+  depends_on "python@3.9"
 
   uses_from_macos "pod2man" => :build
   uses_from_macos "libxml2"

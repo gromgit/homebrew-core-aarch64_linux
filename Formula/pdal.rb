@@ -1,10 +1,10 @@
 class Pdal < Formula
   desc "Point data abstraction library"
   homepage "https://www.pdal.io/"
-  url "https://github.com/PDAL/PDAL/releases/download/2.4.1/PDAL-2.4.1-src.tar.gz"
-  sha256 "4df8463f68087e3742691048f5ab9db04269fc54bc418e4dc53e2c761bd825f2"
+  url "https://github.com/PDAL/PDAL/releases/download/2.4.0/PDAL-2.4.0-src.tar.gz"
+  sha256 "c08e56c0d3931ab9e612172d5836673dfa2d5e6b2bf4f8d22c912b126b590b15"
   license "BSD-3-Clause"
-  revision 1
+  revision 3
   head "https://github.com/PDAL/PDAL.git", branch: "master"
 
   # The upstream GitHub repository sometimes tags a commit with only a
@@ -19,12 +19,12 @@ class Pdal < Formula
   end
 
   bottle do
-    sha256                               arm64_monterey: "5bbac712512fe9720c36f7589d04a8183537e372781964fce6d05b370ddc661e"
-    sha256                               arm64_big_sur:  "aa03c24450cc9f5cd7c67a08873e7c2ef61872307b8f3b8d501500295795e739"
-    sha256                               monterey:       "b76a0c6665c4a3d1a535755f6f6df8c3c9dc7b14d50d128605765a23ba7c3424"
-    sha256                               big_sur:        "4005f577331532b9c2d909af46540e0d24dc664d3c7cc33e2663093f106a5b3d"
-    sha256                               catalina:       "e2357208c86665de7300dc9d2587edad80d8c332d7baf084a24f3c514ba5fe05"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5435c0ec7fa4800c6c9600ca02e7a7946cd2e7f23a3be6e90db05135693cb29a"
+    sha256                               arm64_monterey: "60adcdce893074c077feed906fdc37eff3fd490bac6817691e44003486d9e59c"
+    sha256                               arm64_big_sur:  "7f6b74bbc10baa540756d992dd74af1d4865638b7c402ee8002461bb6ca42baa"
+    sha256                               monterey:       "acfcf85ae15a0be32dcaabf6641303b3d2a66e41c412faa690da649cdbdf73d9"
+    sha256                               big_sur:        "dff0336342ab6f61963635cd86fd264f928fabfdcf320fd7122a0da1d5b097e8"
+    sha256                               catalina:       "c65305bd9e3378019a324d75e38cce6ba60c78dfce8606d815b262c20e092463"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8f739ad0a0756f1a61bbe3a413b0d1efffa4bd020e43a6b6d8cec31dcc0c3a09"
   end
 
   depends_on "cmake" => :build

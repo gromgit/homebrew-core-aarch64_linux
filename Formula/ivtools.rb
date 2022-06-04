@@ -4,15 +4,11 @@ class Ivtools < Formula
   url "https://github.com/vectaport/ivtools/archive/refs/tags/ivtools-2.0.11d.tar.gz"
   sha256 "8c6fe536dff923f7819b4210a706f0abe721e13db8a844395048ded484fb2437"
   license "MIT"
-  revision 2
+  revision 1
 
   bottle do
-    sha256 arm64_monterey: "b6803a28f1c090223f625febff95451ea47e8bf952f7462745392867785f1fb0"
-    sha256 arm64_big_sur:  "98b40011c921db4d105e265aefb92496abc0488f9bd4a3fec5eac11a2cdfd6c8"
-    sha256 monterey:       "57aef06ca71bead6520f0fd99a85ffe8aa50027a499dc3d6d18465b6e40cffbc"
-    sha256 big_sur:        "f5f371971fd7656e6c512df1aade186c75d49c25474ff3a84c6996c865cd5370"
-    sha256 catalina:       "8168243a6a131eb9d68120062c4ea335b956fe9cf571be4bb7ecc12cc9c9f64b"
-    sha256 x86_64_linux:   "f8a6393094c46dbcbf962ab7f3fd577b348eb437885cb6b8c200a80f3dd765f4"
+    sha256 big_sur:  "796ce0db5e8e6b284b6d9f5c88fe5f0b526d4d99dd2b8bacdad982a289fc2fc8"
+    sha256 catalina: "a09924498ce0017c4994551cb2f552b4be48db7820ff9794fce4e360f05d1d71"
   end
 
   depends_on "ace"
@@ -29,9 +25,6 @@ class Ivtools < Formula
 
     # Conflicts with dialog
     mv man3/"Dialog.3", man3/"Dialog_ivtools.3"
-
-    # Delete unneeded symlink to libACE on Linux which conflicts with ace.
-    rm lib/"libACE.so" unless OS.mac?
   end
 
   test do

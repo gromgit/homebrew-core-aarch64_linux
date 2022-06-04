@@ -3,17 +3,17 @@ class Sqlfluff < Formula
 
   desc "SQL linter and auto-formatter for Humans"
   homepage "https://docs.sqlfluff.com/"
-  url "https://files.pythonhosted.org/packages/de/0e/01cefdbac00936ec813d45efd9b1f1fc9042a4893c5edd6a3180d93db16b/sqlfluff-0.13.2.tar.gz"
-  sha256 "c386fbbdfb8ea6a7815ebe66d11f264777e3112d24bb3233b356ef174218b77d"
+  url "https://files.pythonhosted.org/packages/25/81/e36ec7ba75c6c28163fb8690434bfaa22e0e7baea20036b0b4dea7d27adf/sqlfluff-0.13.1.tar.gz"
+  sha256 "4ddd1deee666c1f5caec9418b887f91b9933727e92dc14f6c590a81bc043db2a"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6b4c81c56d996a37a6ad6b6bd27d4d76e4e64946be4ffa124bdebabcb85fe241"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7a3e2fc4dcb3151b2d03d5d90f415c3f4999616801089eec519fc03da9acc080"
-    sha256 cellar: :any_skip_relocation, monterey:       "f2d43379ce2808bb8dfcd6f6f1a3ee74a5804845e0a312fb9989748708a1514b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3f1e6b8f50671d5cd5bf6abffb938d49ee97ff473eceb7280c31df115c01435d"
-    sha256 cellar: :any_skip_relocation, catalina:       "bce36beec271018986fb2acab162f6d2a7d3dfa17e77c6d9f7de3a5efafabb2e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "abbc8384931ca51541a8283d54c95219ac02aabea03c66fdcc5aa46ea705c1d6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4b1b6ea20cde01e92df0ad5947a5c1c295e31d9f51d1465ee1af908d2ccee9cb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "86730e51e1af80b7ceb918b84bee205aff5e2d81fed3568f4c11e0deaa66a246"
+    sha256 cellar: :any_skip_relocation, monterey:       "998e78548324bafd62948b93aaf97088f5a36136a980d6ce5dd67da6cfe3b761"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8e9731199249dfc99a8cb3cca68ffe911b9942afaf3800d74ad72046f6ac791a"
+    sha256 cellar: :any_skip_relocation, catalina:       "168e32bacf308e7d1ccb31cfd630218c8029aeeb6c85c6ef0ff5c4aada5f0374"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d5207d306ef416f1d2384c7a0810382a84a57a281d7565d3a7cc08e90be25d00"
   end
 
   depends_on "python@3.10"
@@ -89,8 +89,8 @@ class Sqlfluff < Formula
   end
 
   resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
-    sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
+    url "https://files.pythonhosted.org/packages/31/df/789bd0556e65cf931a5b87b603fcf02f79ff04d5379f3063588faaf9c1e4/pyparsing-3.0.8.tar.gz"
+    sha256 "7bf433498c016c4314268d95df76c81b842a4cb2b276fa3312cfb1e1d85f6954"
   end
 
   resource "pytest" do

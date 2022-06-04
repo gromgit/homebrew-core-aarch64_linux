@@ -1,8 +1,8 @@
 class MongodbAtlasCli < Formula
   desc "Atlas CLI enables you to manage your MongoDB Atlas"
   homepage "https://www.mongodb.com/docs/atlas/cli/stable/"
-  url "https://github.com/mongodb/mongodb-atlas-cli/archive/refs/tags/atlascli/v1.1.1.tar.gz"
-  sha256 "bbc61706bdcbeb4c38f1b5030a9ad4a1149290168c59215e52094035c4519d11"
+  url "https://github.com/mongodb/mongodb-atlas-cli/archive/refs/tags/atlascli/v1.0.3.tar.gz"
+  sha256 "68e14e188096d5303d87bc673782e9143ae925c635787076790b1607447e3645"
   license "Apache-2.0"
   head "https://github.com/mongodb/mongodb-atlas-cli.git", branch: "master"
 
@@ -12,16 +12,15 @@ class MongodbAtlasCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0af3606951fe106dd16186d1f8b74d9f75f9f4f06abf371651994c914d34d826"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "14169fce8278aa036a28f0946a7c354e5e72185618959874fde8e5c8373cac8d"
-    sha256 cellar: :any_skip_relocation, monterey:       "438d91ac88c8056ddb5599992d95afa75029edb302098d0e9c85bd310e5db595"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c0762d461712d7150a6f882bb2b24e570b6dd2ebb1a1ae541c2c2c11ce4d05a2"
-    sha256 cellar: :any_skip_relocation, catalina:       "c08696c435c14bee3dd2f422d282e6c1ab864bfb53b60b31020ec71880f38881"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dfaa59bbc049250cb6754aa2e9fb073176c8a29098b1e834b80c7eb18ac4dd38"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1d8bd8d53558eb15c33f351e0fc17a194a2a4eba3450fbf117640615c574f8b8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c09a27b0be83355ed47bdd9a2ae1f3a0001a0d956d5b885c2a2f8e3a57a09ad0"
+    sha256 cellar: :any_skip_relocation, monterey:       "0d23a205eb8dbe181f30cdb22deb0ba667e3101a3af00b8463f8278cc7f55684"
+    sha256 cellar: :any_skip_relocation, big_sur:        "96f6b27fb0ad29dc7f0c7a8ac104ff24186ecaf40033153615c75d0eb5c7dfc1"
+    sha256 cellar: :any_skip_relocation, catalina:       "2f228db821e617f05c66a52bc2499ec56bce708da0163e0ef80e1d11c9600b73"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6476f418353e5ff1e7aa83c6cf9c6fd447cb7d04ec9c2522e9698feed14c4afa"
   end
 
   depends_on "go" => :build
-  depends_on "mongosh"
 
   def install
     with_env(

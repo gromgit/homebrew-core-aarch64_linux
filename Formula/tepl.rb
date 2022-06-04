@@ -1,19 +1,22 @@
 class Tepl < Formula
   desc "GNOME Text Editor Product Line"
-  homepage "https://gitlab.gnome.org/swilmet/tepl"
-  url "https://gitlab.gnome.org/swilmet/tepl.git",
-      tag:      "6.0.2",
-      revision: "52b2715293a8cb8c2be853686be0bc711cef6759"
+  homepage "https://wiki.gnome.org/Projects/Tepl"
+  url "https://download.gnome.org/sources/tepl/6.00/tepl-6.00.0.tar.xz"
+  sha256 "a86397a895dca9c0de7a5ccb063bda8f7ef691cccb950ce2cfdee367903e7a63"
   license "LGPL-2.1-or-later"
+  revision 1
 
   bottle do
-    sha256 arm64_monterey: "1a686c153aa269c680566bd57de74b18e6ae78f6b8c61fad86d9d57dd761ea98"
-    sha256 arm64_big_sur:  "a6a93b147dd7a4026775656f4b39a972c9a012192082a2edbc381ccd42504b04"
-    sha256 monterey:       "d271515be1223f6604dfd21fabff45ef380b1e669387b7dbc6c94fc54dfb3da9"
-    sha256 big_sur:        "2484663d844aa0685e1b336827093273debfac52f633222e3d7e16c342e0d7c8"
-    sha256 catalina:       "91f261fbdb8f52024bc9c3c556d4fe5542e523f165e756dcdedf5b81198f1de1"
-    sha256 x86_64_linux:   "ba49f6bfaee807bfa9862661e9eecbf5f522e7e5a5b9fb31c53c9c638052c3d2"
+    sha256 arm64_monterey: "778a7adeb2248b9f542c80adcd699256d5806294ac483646b9b1ea5dde73df55"
+    sha256 arm64_big_sur:  "c259a640eb035f7792a4d29f83a812527b3ab131c63c83f87f3225e2e9617819"
+    sha256 monterey:       "05031f88d0d4d4452cfa1333d64ab85e738bcde14e06380fba3706e775f2cd60"
+    sha256 big_sur:        "ef1dd471afe0896ad6e290d66a21a3158318b3cdcbf51fa78a17898fc7e8beac"
+    sha256 catalina:       "b68f14c1ee9bdf418154ea431897a61ca4827669ac7fbd6fa120430972c16cf2"
+    sha256 x86_64_linux:   "935c8e224e39e236bd3f84eaac5baca6bf2a19ba60554434b0a4ffcab21f5ce5"
   end
+
+  # See: https://gitlab.gnome.org/Archive/tepl
+  deprecate! date: "2021-05-25", because: :repo_archived
 
   depends_on "gobject-introspection" => :build
   depends_on "meson" => :build
@@ -24,9 +27,15 @@ class Tepl < Formula
   depends_on "icu4c"
   depends_on "uchardet"
 
+  # Submitted upstream at https://gitlab.gnome.org/GNOME/tepl/-/merge_requests/8
+  patch do
+    url "https://gitlab.gnome.org/GNOME/tepl/-/commit/a8075b0685764d1243762e569fc636fa4673d244.diff"
+    sha256 "b5d646c194955b0c14bbb7604c96e237a82632dc548f66f2d0163595ef18ee88"
+  end
+
   def install
     mkdir "build" do
-      system "meson", *std_meson_args, "-Dgtk_doc=false", ".."
+      system "meson", *std_meson_args, ".."
       system "ninja", "-v"
       system "ninja", "install", "-v"
     end

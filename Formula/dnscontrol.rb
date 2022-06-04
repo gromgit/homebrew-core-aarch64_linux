@@ -1,8 +1,8 @@
 class Dnscontrol < Formula
   desc "It is system for maintaining DNS zones"
   homepage "https://github.com/StackExchange/dnscontrol"
-  url "https://github.com/StackExchange/dnscontrol/archive/v3.16.2.tar.gz"
-  sha256 "c2c923bde3d6bad1790664dcd72fff6ca9f135656b5e19f862d3ad706a4b54ff"
+  url "https://github.com/StackExchange/dnscontrol/archive/v3.15.0.tar.gz"
+  sha256 "6766667e85ffd128f6f486f44ceb01e8c18442252a181d54b9c754637162d685"
   license "MIT"
   version_scheme 1
 
@@ -12,12 +12,12 @@ class Dnscontrol < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9335a9131cb422d7bc04f879c23b7b77d998eab8134320f0dbc23d1aff46a46b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "14acc3ba0c3e0467d9bfb8fa00732d474ab6a4544260f049110fe19fbb80bb3d"
-    sha256 cellar: :any_skip_relocation, monterey:       "c1d46818af3913f31c842c9bb4f94ec2f7c094a236c65b98a016ee27e54e1011"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b29772a0bf905900d88026254e9c7191aeabd2da9e00e7474de64db24a38f2c1"
-    sha256 cellar: :any_skip_relocation, catalina:       "6573a0968c0ba5d9f48c116194bbfd51ce20cc472dd6a7e68fe3fb96d1325482"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f2869a76912481893adb214e0d5dfb578ab62e717d1b6c944e89a699475d99b5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0f7c8e704605cb6eb5460dc57a0ac6a10cc43a4d3930fd21f1faa7898d3a618a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "28621a7e3ae0d50c76c21849e620b20019f1dfd26b1fba08697badcddd249e7c"
+    sha256 cellar: :any_skip_relocation, monterey:       "d118147d5bcc4c82b974d54f20a2bd2cd6d0598552b75031a5b9f4102caf7609"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2c68ffa859b486e9c1b26f1add16ca85f03f2b3330a0a1c1b69caa2b112cd4c2"
+    sha256 cellar: :any_skip_relocation, catalina:       "13965869abdf3d006fbb7f9da105c8f47935d96c5ee5ed3e05fd7cab7a2ef299"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b45397693e8f912a9ad35732b5cf6f7fc2dfde92cb8e9b9592fdb6377e347388"
   end
 
   depends_on "go" => :build

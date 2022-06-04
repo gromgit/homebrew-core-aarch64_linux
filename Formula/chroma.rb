@@ -1,17 +1,17 @@
 class Chroma < Formula
   desc "General purpose syntax highlighter in pure Go"
   homepage "https://github.com/alecthomas/chroma"
-  url "https://github.com/alecthomas/chroma/archive/refs/tags/v2.0.1.tar.gz"
-  sha256 "5d6b9986a175ed8ca789e55e42bb4d0f6089b408824b0654b57c7fcb91c06c07"
+  url "https://github.com/alecthomas/chroma/archive/refs/tags/v0.10.0.tar.gz"
+  sha256 "98a517ae99f48e3b54d5c8cd7473d5c544f51bee7a4be17f5175736fce37da56"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e3ba2c4c3b74a9ee98bd158361d0e752d16bd011ba19f2a25abf1cc56653dcdf"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f97e7225b02766b8bc0b9f3c66ac977604e639c2338b117714e4ecaa50bcaf07"
-    sha256 cellar: :any_skip_relocation, monterey:       "7c2c71323df309b9482c9d428ef068d2d9d697d867033c19e0d54b034f0fb91a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2e821c0ffddc1055ce01b66bd336973ac02dc365c046cbacee1d66e9bd6a9b5b"
-    sha256 cellar: :any_skip_relocation, catalina:       "c7a42922bb80fbd947d6daf10fc5c7bc3f6d15be486f444afccc84d3c9d2f005"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1bd43f02c227901f95bc31b3cb5e22574da2785bb55988267c60d0aff3c50c62"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3d760ced5f31db4e69703ba2fddff9cd69273ec31981531691704701fb6bbe55"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5c1f528c2f1e7f6f9f677578cd0922d2a891d2545be5450db684212ca4ba18f7"
+    sha256 cellar: :any_skip_relocation, monterey:       "2cc922fe4835d6b493ac83257a40abe3ce8ebfb8b0b849ddb8a16189e659be32"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5fb90ee11ea3f5fd3c19c8bca3aba69cc988c5e8a3cb606223e25444fa66b984"
+    sha256 cellar: :any_skip_relocation, catalina:       "35f46598926c60c2b90ce54ff2e91b1a6ef52548fa6402f58ea46dba11731152"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4514c41955707aefd692278cef659e252324170bcf0c61a4e9e324aca20d1a31"
   end
 
   depends_on "go" => :build

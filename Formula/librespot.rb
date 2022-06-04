@@ -1,18 +1,18 @@
 class Librespot < Formula
   desc "Open Source Spotify client library"
   homepage "https://github.com/librespot-org/librespot"
-  url "https://github.com/librespot-org/librespot/archive/refs/tags/v0.4.1.tar.gz"
-  sha256 "ae3ce1f3bd0031cac687eb60e08abb2d327ba51623c583765eda70376d69a71f"
+  url "https://github.com/librespot-org/librespot/archive/refs/tags/v0.3.1.tar.gz"
+  sha256 "d360eaf61ad4216ee2c4a4d583d61c8ec7367b5efbe512011d049f73e4f24952"
   license "MIT"
   head "https://github.com/librespot-org/librespot.git", branch: "dev"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1aea917c417867850ab16db7f7675fbf50a940dbe8453960cbc8136f36fa29ea"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bca119a263b2707c4f32cb7668df0e012cb2c7fec3c87dc5fbc1477057f02404"
-    sha256 cellar: :any_skip_relocation, monterey:       "fa4f1a01eaec9a1e2607dc247f815dfed25297b0c805c88560abc4d56794b706"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4515f7262b393274dc4c7705e237ee31e3987100ab524724e559176f8a2222a6"
-    sha256 cellar: :any_skip_relocation, catalina:       "11fbd6651d565f89bacc828813189ba18a74903be4e20b52841cc4614957c4be"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d23317fd582b31581629249b51bdf66d285e9754ce8f263419f733fb6ac4247c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "881400cd44d2aeb0af3e0fed1dcce1855bed0e60b60a78720c2b020fd8b073bf"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6127d387d29a582a1fbb6944c9b5fd18c4febbc483a3711e4248213fa4f01111"
+    sha256 cellar: :any_skip_relocation, monterey:       "ac7a661b51abbc6324d597e35163862cc03b37583544152caaadc06a9cb69f4b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8823b6d1718e2f8d6898c9306501a29ca36204159fd325725e02a187be77e325"
+    sha256 cellar: :any_skip_relocation, catalina:       "bc83caa0485d4dd036f5bdc0643e9b10659799a3f0961442b2dcad349a9f3910"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8a65c6190910c07e93e5151813c1c868b7b7f9d97b0dcb582b9bda88226c87a7"
   end
 
   depends_on "rust" => :build

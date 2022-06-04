@@ -3,17 +3,17 @@ class Mypy < Formula
 
   desc "Experimental optional static type checker for Python"
   homepage "http://www.mypy-lang.org/"
-  url "https://files.pythonhosted.org/packages/22/22/49792504e249a774554cd473e69af411a62c7d0591651104538fbcdaec10/mypy-0.960.tar.gz"
-  sha256 "d4fccf04c1acf750babd74252e0f2db6bd2ac3aa8fe960797d9f3ef41cf2bfd4"
+  url "https://files.pythonhosted.org/packages/73/ef/a3b56028305971a7130992702097e6cde5dcfa2ee01fd5f0d66880cce012/mypy-0.950.tar.gz"
+  sha256 "1b333cfbca1762ff15808a0ef4f71b5d3eed8528b23ea1c3fb50543c867d68de"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6ecd86843ab85b0ba19443d99bdc52d5aba5868bdac6bb63179cfecf3a4db7ea"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d4983ef5671a629912e09c902b1f197b2188cc06d196db71fed03f2b49371e26"
-    sha256 cellar: :any_skip_relocation, monterey:       "d6bc488b635dc2de5240e7f6dd1780eec240469acf11005cd495b1729c766c99"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0329aa393ee537015bf9c596b449ed351d53830b7d48db4babe3826e3a3474b6"
-    sha256 cellar: :any_skip_relocation, catalina:       "22645773981672929c2aba26cd10b3cbda3e4e50ece950559022eefd879325c1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "65d4ddc2193fee907d723dbc3a165723c5606fd40e3a6abafeeb5ebcc66ea4ab"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "82f478c83c0b50fe31ac6dcb8bb7803c27f4e0cde18f5390fc73b2be50b92c55"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "953303d154b2be96fe6de484fb21c406a9a7428deb8349c7777e889757559309"
+    sha256 cellar: :any_skip_relocation, monterey:       "fa73d73a9f3dac9b589d5f20ca2f4aa2b7bc83fb3630513e8d813d2c4de173bd"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d6ccb11a8baadd2f4c14ffac76ca9e7caf939df880ec613f902165d1217c7771"
+    sha256 cellar: :any_skip_relocation, catalina:       "132d0584790faaeb8a553d1aa3fb4f11e97f65c23db4009d9c61c8c146157b5a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6759d1d06bb5b97f24a52820a898abb5db88d8095ad978f69813dfbc1c72988f"
   end
 
   depends_on "python@3.10"

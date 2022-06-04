@@ -5,16 +5,16 @@ class Gmt < Formula
   mirror "https://mirrors.ustc.edu.cn/gmt/gmt-6.3.0-src.tar.xz"
   sha256 "69e29b62ee802a3a64260d6a1e023f1350e3bf4070221aa1307bf8a9e56c1ee5"
   license "LGPL-3.0-or-later"
-  revision 7
+  revision 4
   head "https://github.com/GenericMappingTools/gmt.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "42dda1aa61b0a81c31b36ba4fb4b04d0b080d4242e1b6f7864986763fdf48102"
-    sha256 arm64_big_sur:  "1ae2d6a2a84a462816e08317c6ab993eedc24d4600ed36f0f1e70af7604c8a78"
-    sha256 monterey:       "b993184815aa2496946c85ed691e1e00625d6359dce939ce43076b6c18aeebaa"
-    sha256 big_sur:        "3e90aeddbf5d647710be752c19be72aa737cea94ed6247b0e54b2b66f658dee8"
-    sha256 catalina:       "966c94153a85040832df19fa30ce3ac7d0db59e8acc59d3c76c7c1c143364399"
-    sha256 x86_64_linux:   "946d61f49c96b49a4b021972f547beb66cdd4d9cc769ab6293ec85a873f5a650"
+    sha256 arm64_monterey: "0a9ed1f612777e91e061e9dd5c15c1e711ac595212acecedd925eebd81b34abb"
+    sha256 arm64_big_sur:  "90bdd3828bb93f303a1b6dbff92625db5c8d009d6f630650db8c0eaab14881ad"
+    sha256 monterey:       "1bde7945665681c8c7bea8c30c4cf711cc324ec491047e993be3c72434f4e10d"
+    sha256 big_sur:        "07dc3765e73688bcf3c4634312ee89bcb2461a4f10bb960d88293b4836638285"
+    sha256 catalina:       "9da59bfb9b59a3e6dcc2bab17354b7353b2b885cfd892b517a1bb29027927c36"
+    sha256 x86_64_linux:   "aa407b0c32eb815c0e28494a7f95b0a0dcf77c2c85f0ab578e22a4c019156d53"
   end
 
   depends_on "cmake" => :build
@@ -30,9 +30,9 @@ class Gmt < Formula
   end
 
   resource "dcw" do
-    url "https://github.com/GenericMappingTools/dcw-gmt/releases/download/2.1.1/dcw-gmt-2.1.1.tar.gz"
-    mirror "https://mirrors.ustc.edu.cn/gmt/dcw-gmt-2.1.1.tar.gz"
-    sha256 "d4e208dca88fbf42cba1bb440fbd96ea2f932185c86001f327ed0c7b65d27af1"
+    url "https://github.com/GenericMappingTools/dcw-gmt/releases/download/2.1.0/dcw-gmt-2.1.0.tar.gz"
+    mirror "https://mirrors.ustc.edu.cn/gmt/dcw-gmt-2.1.0.tar.gz"
+    sha256 "e810567cd474d5af9d84751938acb447a8612391ed66190d60d789974a1f9e29"
   end
 
   def install
