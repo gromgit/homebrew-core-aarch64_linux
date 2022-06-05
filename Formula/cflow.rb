@@ -7,12 +7,8 @@ class Cflow < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "775aa08b6d73ae6aa6eaeef7e1b187acc8b78daf87c7be6771914213d3907b4d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c243b38883f723c09ea4ebadc5cca19ede2f3210fd75379f4636fa7320fb0e0e"
-    sha256 cellar: :any_skip_relocation, monterey:       "3631370161b2fe088572eb63e1653c9d591184870cbf5e6ec31187f919082cd8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ca4cbcfa33c53ff166dced09c73683076a112b6053ae4667abf3f97fd0aaf1be"
-    sha256 cellar: :any_skip_relocation, catalina:       "aa461817268ac09391a88903ab13a8a13852c943a4d38dfe5342c202f1daf5d6"
-    sha256                               x86_64_linux:   "62e41fe118da0de3ee5bbf3a85273d53aec1ada3b389f2e4b7876f4aa9f9ee0a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cflow"
+    sha256 aarch64_linux: "1b5bcbf6eef16588f9cf91f4556a4f9c66f46714b4d534d7719a220da40a79d2"
   end
 
   def install
