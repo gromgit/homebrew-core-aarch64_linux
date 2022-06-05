@@ -17,12 +17,12 @@ class Mu < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "aa8f0261f5d5feca647e4fef6918423f75b0dac0e266688efcf12fda8ff0b014"
-    sha256 cellar: :any,                 arm64_big_sur:  "073b588a7ebfe1c9139994ac3e1f775b8c3106a41625b9c5c7f0019b9d3a6524"
-    sha256 cellar: :any,                 monterey:       "317f48616821ba58b5d63161dfb73b83fdd1088147baa67af5f017608f63b166"
-    sha256 cellar: :any,                 big_sur:        "984ff5adf341446c8d7741d1413d6943e3ddf6cff86165a9af402f5c1f639bb6"
-    sha256 cellar: :any,                 catalina:       "0299242cd384e4cc8fe2ae4397c8778572fd01e726bf0fe46a756e098ee98343"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ec71ae61fccf1d797994a23bb4db6fa2c28ba11fd1000bcbcc5777f1dd7ca5f2"
+    sha256 cellar: :any,                 arm64_monterey: "7edb61edd1af87451d7941bb235700aad715a0dbbf061ce18d9e9e4844e92542"
+    sha256 cellar: :any,                 arm64_big_sur:  "45da6c4f3bce329a2641bb3c6b3b6a9cbef601e5b9e4503accc782eaa0b1508b"
+    sha256 cellar: :any,                 monterey:       "096301ead4a8c21e59c2c269ddb8be215c49063b3516a6f7ba2e4358265becdd"
+    sha256 cellar: :any,                 big_sur:        "2c020b682a99846007952aebeecfac7823f594dd43c792391d75ac76dfb81bc5"
+    sha256 cellar: :any,                 catalina:       "dd1c95032c2d9096bf367e1f3662fd79c9fe843e6e142159089f895f4c19a362"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1e07e0304efd1a083886e0489696d2d408ea7854155a6f07b044494f630a06fa"
   end
 
   head do
