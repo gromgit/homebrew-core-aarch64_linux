@@ -6,10 +6,8 @@ class Akamai < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, monterey:     "cc8ef6a5777d028e6b478a5c27a92fa203f6a3f1de0912d2770f8de7671df239"
-    sha256 cellar: :any_skip_relocation, big_sur:      "2a7fac5947fec9ed49ee8b2cbc3d70b6f80adc106c6d66d2a5921ea18f155c15"
-    sha256 cellar: :any_skip_relocation, catalina:     "909dde4413ebf4f4232cf1b384cfc2135b9829cc384048eda44bd4afb0a38129"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "d119c09c03c9c041ee91aff4b7ede4ce651935dcdaab7d49ed8394fc7c74f75b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/akamai"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4908ed06bf2de01fe05abbd9c43ad56bab0ee220c8854249fbdfa7926b91cd53"
   end
 
   depends_on "go" => :build
