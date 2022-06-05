@@ -8,12 +8,8 @@ class Helm < Formula
   head "https://github.com/helm/helm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "78901162559cfde0d695e74c82e78a8f37f7d0cf9a2a0a613a6a694196e57f50"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0516554247a183ea3a7c404a217b3c320f78fdbebc59ae58ad3088fb7d8448ff"
-    sha256 cellar: :any_skip_relocation, monterey:       "300526edf608faec380e94684fc5561e6640d574ee76f7975340ca6ef7c3dca4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4a5af378b7905afe6a6edf7beac1deb6ad05b9f38a85c274e2debb6a10c3d5be"
-    sha256 cellar: :any_skip_relocation, catalina:       "85af7192de62274fd60598b0d1486f5efe9c25afaa725e8311c8c46c44e7158b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "db18f47ce16dddaecc48be564eb6b4782b9f85ad3ff7a42274bf535fb719aa3b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/helm"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "913f1b4b8fb0dc135ee2c37e11a43d8fc9f5cac5bf6c0d8637e7912a64682137"
   end
 
   depends_on "go" => :build
