@@ -6,12 +6,8 @@ class GoBindata < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a4cf3f5bb1a186979e53d3345bb710a7a74b441526c28da759b3843e3b4ee065"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "078a9ef13ee9d74f0f6221511b3f5f63996da3edff5c2c6ffd5a89caaf1d754b"
-    sha256 cellar: :any_skip_relocation, monterey:       "9b65f61ecee8fcd3877254a2eedba85c2fcda6253649e4bc7d3455ce9f8777c5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "698399da0e0a31071c2abc1978f515cee3bde036e5e4f69a74acad8d3436d4a5"
-    sha256 cellar: :any_skip_relocation, catalina:       "63b7e640caa27a4500fddcc1c0c05cc1138cb9fd8b13005346a513dc75e56c77"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2f99582470b38a5c5348569aedcc67dd617a801f711166d181ebb92f02291a99"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/go-bindata"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9bc541d3178a8912f199044800312ba07f99a916d4f9e919c670c0ec58b9315a"
   end
 
   depends_on "go"
