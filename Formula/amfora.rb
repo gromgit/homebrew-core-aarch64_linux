@@ -11,12 +11,8 @@ class Amfora < Formula
   head "https://github.com/makeworld-the-better-one/amfora.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "01501f81b2ededf595e98e5a36ab17f87dc8a21fa7cb29c76a17497ca33ae8f4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "082d3f24c6c13351effa01f68e819b18f7bbf5767c5a106e18ea430c5f880bce"
-    sha256 cellar: :any_skip_relocation, monterey:       "a7edc527c8c5e5d8d177a557d83b5016b67a09f95e2263c20afb2bfacaea6697"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ec71320ee1101a0226f18fb2c6796c96ee5bcd25928e0443c645a8eb1d3065db"
-    sha256 cellar: :any_skip_relocation, catalina:       "47bc30b0e91888d9a0b0581ff4006654b9f59f860226a70cef809fa15145877f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3030cd52c16fd0917db9f0283bf51853b12569ee0bf0ab88ed0625e3b43d4c1d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/amfora"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "bfd700cca1d3b671508a955bfa293a704718c7b7713e941e66e1134a7558e786"
   end
 
   depends_on "go" => :build
