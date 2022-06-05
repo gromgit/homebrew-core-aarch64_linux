@@ -6,12 +6,8 @@ class Brook < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "250ef1e71e1ad92daf620eb3db2db76b20488612eb1fcf20924848ca0d29e80d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "68f7a3ca9c1bb5410572325e5fcfe63b4512eba1436f6c5dad280d3887073cf5"
-    sha256 cellar: :any_skip_relocation, monterey:       "406f6a75ef631958da89f59c8def5359792210fb7dce1f18a64d16ffd6fe8eda"
-    sha256 cellar: :any_skip_relocation, big_sur:        "81a0773a91102467aabd4f3d4546150f98481a22e333aea44d91f49b7347ce30"
-    sha256 cellar: :any_skip_relocation, catalina:       "83048afb43d2820605ce1202c817078cedc51ecb4769b95d9822e5d29421138f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b1e0ee782d1a17445855b2d432cdb4e844c1fb7a4fc3a92d5e2fa3d908659c95"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/brook"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e9559935a042eb5f6fc685d193fae665703ad9ae4a3796ca8e84239ef0a06709"
   end
 
   depends_on "go" => :build
