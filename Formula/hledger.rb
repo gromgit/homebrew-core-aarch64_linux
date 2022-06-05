@@ -14,12 +14,12 @@ class Hledger < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8f41427d749dcd466909f2c2e4a662c4c89da200648dc7732b17e65b8795bb12"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "05173d9e8034d2cb83d25f125ec98933e1db8c671efb0def3f62069627c1d6fc"
-    sha256 cellar: :any_skip_relocation, monterey:       "3c8558a9d45321d46f2253ddc593b56465aeb345a1268f294d316ba55d683389"
-    sha256 cellar: :any_skip_relocation, big_sur:        "519d90342e465edb936d0a9d58c3b651af4e61b3a84b46168670c7d24caa1ca9"
-    sha256 cellar: :any_skip_relocation, catalina:       "6b0daa38719dc5e5ec287426e812e915ac5ee0f50ede5943767d701e85217b78"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ae297f309959b1f40ce06a6940933f9e2cd7f3a1314b4c37bcade6e402524943"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f8291e3580c331453c08d4a21991afe0d83e8dbcf5a4e0b6c28af645e8fef421"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a1b4f9a973f1dd74d2c6a7fc550a3d4a59ac5f0258da769f6734cc62b1234815"
+    sha256 cellar: :any_skip_relocation, monterey:       "108c6a80a7a2608d603233f73bd2ad5bcf33605311040b92915dfbaf4af1ef5c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2387eef78dbf24b76391fe5331e315528f871ab1cba61d42a05b5b9b4dc41161"
+    sha256 cellar: :any_skip_relocation, catalina:       "9faaaf5104fcb7336b63d3fe5a7cf6105902c53f90c92b4baabca22f7ac4a7ce"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2dea04a65f339ac501af1fe4fcce4d8e1c5e3bd7d25b39258ce9202f0308cc30"
   end
 
   depends_on "ghc" => :build
