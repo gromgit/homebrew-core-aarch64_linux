@@ -9,12 +9,8 @@ class Ncurses < Formula
   license "MIT"
 
   bottle do
-    sha256 arm64_monterey: "a1aabfa5d0fd9b2735b3d83d5378a447049190a34d85c3df9f2983beecbf83d5"
-    sha256 arm64_big_sur:  "dec526d7259a034bb8622cfd2d3bfad738ecc42d03e2d1f79019cfbadbd45b16"
-    sha256 monterey:       "b23144507b0e799235e12b2f6dfb1a595c18384ef773c680a05eb785724d9dc5"
-    sha256 big_sur:        "15ee5cba182428fe2bcd80da6605214104b77e808a484c97ab281741f1a66a06"
-    sha256 catalina:       "59d9544f77cdbd9066f6265872c0c32e38ac26db0ba88389f5911797e157b20f"
-    sha256 x86_64_linux:   "09c1d079d3b5cf1c855afa9da1fc7251234b73971d4cbe0bf7b9fca1cbea353c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ncurses"
+    sha256 aarch64_linux: "92f2e280a9e11e28a705410ff13ae4176b12a0b925e47517d59831a38d35b32d"
   end
 
   keg_only :provided_by_macos
