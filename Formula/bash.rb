@@ -77,12 +77,8 @@ class Bash < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "1b8834e7c9d1cd89f0cb4514e53ce905f6385c9455fd507298f73b3aa3e55087"
-    sha256 arm64_big_sur:  "6954457b4e588e24fb339b407839a9b6c651738175a84adc75bbc525db032ece"
-    sha256 monterey:       "2823a6b24dc60b14b692cfc0544753e7d01a5c1f94eb1bdd590f9cb490eb1729"
-    sha256 big_sur:        "4f387cc0993f868f31cd76483051a58420f80f57cf4626afc4b881d2a98959bb"
-    sha256 catalina:       "85ac02733b659f4a7884395ed2cfd7dbdf59999a0d8a434a0c1a75085009ce2a"
-    sha256 x86_64_linux:   "41849dc2ac9388255aaed32879cb32f977b9730220981eeca32bffca0b3bfb5f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bash"
+    sha256 aarch64_linux: "52653eb0ab22b3064e1837bbdaefe5d62507f1935d8620477a462f1298134217"
   end
 
   def install
