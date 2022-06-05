@@ -7,12 +7,8 @@ class ArgocdAutopilot < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1a95be1ce70e932acb3bf902bcb2ad28487fef140db469b3441b97c22a1a6dc6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e40488c3d3a7e9cb7628d187f4f82f33ae413a986eb53851c54774f4b8a4cffa"
-    sha256 cellar: :any_skip_relocation, monterey:       "556af6dbcba85597e672c10c403d6e5591cfdafca9df9550e940b2dabcb25e8e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "14fba429a06ccdf9f394b0dcb8239273b9a2dd81cfd498b917c49fd07cf7f27f"
-    sha256 cellar: :any_skip_relocation, catalina:       "4287e8262394c68d673c1fec9f4e9fb9b7f3e1a59b464cfc265bca0a853b4f08"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "59af7cf711ec455d2fe2827bf44fa81ea3d8631ac8d6fad010f0c1288572dc22"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/argocd-autopilot"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7672141d98fcec379fb241a9ca69172f589f717e747ff1a44370644870fd15f6"
   end
 
   depends_on "go" => :build
