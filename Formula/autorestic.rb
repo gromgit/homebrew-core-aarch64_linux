@@ -7,12 +7,8 @@ class Autorestic < Formula
   head "https://github.com/cupcakearmy/autorestic.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3a82d14065048ff87219e943ebf89f0cd44b48638463164b2e18396797301693"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d09ba325c8d35778a2d3da2dac787209e990af3b4d9c9e99699b13867dcd2d6e"
-    sha256 cellar: :any_skip_relocation, monterey:       "4bfe8dbce83595bcab7a29d21b94c23133664691b34ebb08ed265103bad0c135"
-    sha256 cellar: :any_skip_relocation, big_sur:        "72c0f9a981446a371e4d66c77b8c46d07e376c5c063c9b305c21cca20267f4fa"
-    sha256 cellar: :any_skip_relocation, catalina:       "1e9601d092965a616228cc932ed0f0d594bf094d9a46e3b3d632ab96b7269147"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c799dc957a9e3498292442f66c7153d938f2ee0869cd966c350f5d779e5de97c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/autorestic"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0ff1a38c6a07f1fe80251355748f7e60cdf4b6cae306ab637bbdc67b19bdc242"
   end
 
   depends_on "go" => :build
