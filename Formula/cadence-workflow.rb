@@ -8,12 +8,8 @@ class CadenceWorkflow < Formula
   head "https://github.com/uber/cadence.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ef8e7402bb8faf6ea72912ff73c23ae2f1f781617262e47d19e5e01431696904"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "991901030b3749680647ffd9905a56d453ae08367af98ab5301ea5a254c9d32a"
-    sha256 cellar: :any_skip_relocation, monterey:       "8ae85ecc77a31a57b613a738932054dada5a3ad72dfe34a9ac33e23ca740dd95"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ee9783f62aca85ea20088527eaad3388a4ec7a86ad50abdafe7b0d5bfdf60bf5"
-    sha256 cellar: :any_skip_relocation, catalina:       "e339d65a3e64a50c08ca52ea176437269c5997adf4aac57bb73e98750a9caa1f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "44af732c1f0aa4a58ae66844ef5e2926d2376997de028e6167461d84a56130ea"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cadence-workflow"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "decb1a658346cf541f87d15b2ee0881b71264f98be4fcaf0f03d4ea43bd754ac"
   end
 
   depends_on "go" => :build
