@@ -13,12 +13,8 @@ class BoostBuild < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "142474f896f7a560ee534c85c8a8eff41f9a4b42cd973155e4810b838876e3a0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "de245309a18531b9cc7a6e2b08645db3906afcab9e10dfac32794135943a0e03"
-    sha256 cellar: :any_skip_relocation, monterey:       "054792cb57117e2fb2c68ee64e8dbcef7fd7a6f40e927569926b90ebf067ab8d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f9b7815f9ffdce7af7e8c6e960b59107180f8e1c382eec9fe910e99b2484a9e9"
-    sha256 cellar: :any_skip_relocation, catalina:       "37fd5254f99dfb48577ace484d9be2f69dc67655119842fc32d34179cba41c97"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c8ed1bbc9683ecb2b9fd7b29cfaae6bc84cf699c7a487c18a293280865f2d271"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/boost-build"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "baf21d81947d8f19beb6b9be6937b74803af7792c7a7919e2429b3ef53e54fa0"
   end
 
   conflicts_with "b2-tools", because: "both install `b2` binaries"
