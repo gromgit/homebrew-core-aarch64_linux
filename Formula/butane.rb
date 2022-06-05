@@ -12,12 +12,8 @@ class Butane < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6283322b4afd8c56cd6b3fd866205ce6c30f4f40c31a4b1b15f8c0a31701bfc4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "19fc49d96b6c42a5c5c67ac62cd4ef036b96c52325eafc4d86b7fb8f75cc777f"
-    sha256 cellar: :any_skip_relocation, monterey:       "44a61e029ddb03358657be0a32fe7cfc4ee7a61123a1246a994b3517f9e4668a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "64fd09f996c130168cfe5486948de57c175d030579ae3d03c5c138c451e3e17f"
-    sha256 cellar: :any_skip_relocation, catalina:       "4e03586e27350f77d63e9796baf84a13c3084c6a026d3db220092a40a3dd9b02"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a2af339ce31bf69bf36dd6c9bd029badc95e615649d9ac5074a8c5f63b371147"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/butane"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "90abdd0708994d23e9ac1a1524b080b65821d1231421d4b684a6a3e493380163"
   end
 
   depends_on "go" => :build
