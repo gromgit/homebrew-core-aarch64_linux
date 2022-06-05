@@ -7,13 +7,8 @@ class Cc65 < Formula
   head "https://github.com/cc65/cc65.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "9353c4052546b46967c63aabc48e64633164669129e6406f8afc2dcaac17fb89"
-    sha256 arm64_big_sur:  "47405e34cd591b17d9ed65842f25ac7c6d9f61e98f21b9c403596257d7e23dae"
-    sha256 monterey:       "2598003d7c24868193167d8095f1c4c22a4f46627073e480dbf7c67bba340ce3"
-    sha256 big_sur:        "d0010fe7f4b58daea95dd57f4116668bd2bedfbd5392e73412162292034d456d"
-    sha256 catalina:       "a773d68d33b81899ebe7c10d294c0d6e2c2eab9063206f787b1e8c5b8e36f437"
-    sha256 mojave:         "bd750ae3470b736a6b7260723ead51d6e871edc8d8607f53b670f03c84932a00"
-    sha256 x86_64_linux:   "a07773f9ba0bcbe345f8e3c27495b9f149ff0a4df6245748cb8152a75b13880f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cc65"
+    sha256 aarch64_linux: "d0bf44b83b04d4880121c1f30411852bb4663c50963971dba212dbb077fe2780"
   end
 
   conflicts_with "grc", because: "both install `grc` binaries"
