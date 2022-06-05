@@ -7,12 +7,8 @@ class AliyunCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "109c0290d096e52d99201d28a81f54e7291b4dd35e3b1b3b8b172fb9b7965113"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "28244d94e363076968fb8bfff8bc8517850402d3c68103bd8ffbe310bb967ac7"
-    sha256 cellar: :any_skip_relocation, monterey:       "cd7eee9e996815db4160697178a72c43facba0c5fceb362f3c77535d39f2e478"
-    sha256 cellar: :any_skip_relocation, big_sur:        "daabb27e17f343d0197b50c8534290544b829c633bd83863d8afded4e1eddf53"
-    sha256 cellar: :any_skip_relocation, catalina:       "7d58b170218eacaee1e64c21aa37f11666b234c877389a0488d2854bd63418d4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "17bcc4d3f1211cc8303bb55fb92e21c8ecfff0c5455893e95b4d2de7c51a1292"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/aliyun-cli"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4a1ec2825f6ee324482fc882bf6edc3fdc807815c7a4f8f660ff4e3dd7073db9"
   end
 
   depends_on "go" => :build
