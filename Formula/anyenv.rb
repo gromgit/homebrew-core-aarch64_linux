@@ -6,13 +6,8 @@ class Anyenv < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "64a65deada2b73eea41aaf1072d015c193e46cc38d524e3770d8e319b56b54fe"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "64a65deada2b73eea41aaf1072d015c193e46cc38d524e3770d8e319b56b54fe"
-    sha256 cellar: :any_skip_relocation, monterey:       "3cbde52463957a85f70e02c7c4e4ae793a3d5cbd6a44db6ec930f6f370db8b66"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3cbde52463957a85f70e02c7c4e4ae793a3d5cbd6a44db6ec930f6f370db8b66"
-    sha256 cellar: :any_skip_relocation, catalina:       "3cbde52463957a85f70e02c7c4e4ae793a3d5cbd6a44db6ec930f6f370db8b66"
-    sha256 cellar: :any_skip_relocation, mojave:         "3cbde52463957a85f70e02c7c4e4ae793a3d5cbd6a44db6ec930f6f370db8b66"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "64a65deada2b73eea41aaf1072d015c193e46cc38d524e3770d8e319b56b54fe"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/anyenv"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "22b2acb74e6bce587f4ece88142d14c013f911cfb513ed0f3d50023ce1c6f48e"
   end
 
   def install
