@@ -8,12 +8,8 @@ class Chezmoi < Formula
   head "https://github.com/twpayne/chezmoi.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5395446ab76ee2c516b687e274ce43cd96f53864266387ae6fe5c7fc217eb163"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "81d6cd66eb881a18579a1e2d6a08e775170471c3f168be1dc79235b88d42d627"
-    sha256 cellar: :any_skip_relocation, monterey:       "0680723287929e48d2546eabeb62ea8dcc89397556e9fd77ff7513a14db31fbb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "33a90eae50d7811f99185e8675be33e7821975bf4f45ffbc363dc69eb5fae7ea"
-    sha256 cellar: :any_skip_relocation, catalina:       "636a9d77601e8e63bf81ac057f2aa0660b55976141ba80cd6177378ada599971"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a75c298fd8119bfaf7779185806e0111300a5198dcac48f992b3b5268fac0e35"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/chezmoi"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f785fccb000646d68ec1bf46deb0c0b3fde838f63b14cd323063f4d180ae5b9c"
   end
 
   depends_on "go" => :build
