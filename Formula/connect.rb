@@ -12,14 +12,8 @@ class Connect < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e45ad845a768453d0d0dc278dc9fb39f3a7601f33b79d8c1b5d8e404f1dc3377"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "33e6c06bbe902eea4790679f99c9aef340cce1e647238a13c151300afa46ee1a"
-    sha256 cellar: :any_skip_relocation, monterey:       "087274a2b2cd22db73d094b35dbb04389fabe7ce7b3d5d68a18a877bdbf50ac1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "90d0c91146180552a3a023ceba3850804139eb30b146151efe9c6d889ab9c99d"
-    sha256 cellar: :any_skip_relocation, catalina:       "a08dfce847d75746d2b31ed3561e961fdcf950b051c5860e6d137ff5e1bcd1c7"
-    sha256 cellar: :any_skip_relocation, mojave:         "cc0a39f7e2fea7672f6d691d2e1221d0c5963a9f7e0039317930418fc7c7ebfa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "69ef58829a226ee7573f34e1b8a6282a7f26dfb8d730700eeff992f65a8f84ac"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/connect"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "809cd72f55055ff922f77297cff279e2e18224b901493a439bb4996d1178cdbf"
   end
 
   def install
