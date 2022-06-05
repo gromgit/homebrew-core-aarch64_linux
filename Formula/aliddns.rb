@@ -8,13 +8,8 @@ class Aliddns < Formula
   head "https://github.com/OpenIoTHub/aliddns.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "23ab8335a2b758f3557053847a848d61dfb53c614abd8e52eadd62352bc45c5f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "779eac8f4e88b704f068d542d1c4f209a96edc5ded85e5ecfefa961d798d6620"
-    sha256 cellar: :any_skip_relocation, monterey:       "ad0bfb1477ef8ec7145eca1cbeb4147157c928ebd440a757f054de2d961f2578"
-    sha256 cellar: :any_skip_relocation, big_sur:        "107cb79b754c414f6ffc4bf48ad086e502ad1b39aba147177e3490258e840f8b"
-    sha256 cellar: :any_skip_relocation, catalina:       "67937c8e5e9379f4eb36adb24f5b1c5330d488dbe032e0cca376709c03f7b29b"
-    sha256 cellar: :any_skip_relocation, mojave:         "ee4a2ad57559bd87b208aa6a58d949b2271b99c767c1bc6e6d8a1fb4996f6e36"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c2f2e7a4c81fc402a372ea37b80dbf8f6190595122704088744f4ba7c5fc50ce"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/aliddns"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "be0e752f57124640b05e7a54786810d845a78e5e9a0a307f60efd11add2a1e3c"
   end
 
   depends_on "go" => :build
