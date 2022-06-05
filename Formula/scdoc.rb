@@ -6,12 +6,8 @@ class Scdoc < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3756d77d254eb7ebc1a93df5b9cb944f5452592e13345c44c68cb4eda020a6dc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "84778bad52e889adfa4fbc311f93fc44e543d06c7ae42037575c36066c8d8bce"
-    sha256 cellar: :any_skip_relocation, monterey:       "ecc015fe6a7ae48aa28be734351e3c8c19a5877fd58ef5a78bb85c9a37885f16"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e071a34d0ff21793c6f4a788733a91b789ac1a4dc4cefbccd8a44ae221ddd4a0"
-    sha256 cellar: :any_skip_relocation, catalina:       "5f794bf6647ce97a62bff11d62583e2ceb85fe393af33bd5bfb4b54309c98b17"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ebfa3950c4e1e1ead4bc489e135bda185ee35a5841d4c7aae71db642513b7c58"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/scdoc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "6a74fc12375ca7fd957bed45b5ce895275c9e7db2d8ca147bae2d71eb49d718c"
   end
 
   def install
