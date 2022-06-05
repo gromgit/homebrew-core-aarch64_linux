@@ -11,7 +11,8 @@ class Libmd < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "1c8f94c04ca398bca1dd9d27512ae308e110f6dbf0c8a86761720c3e288c8a01"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libmd"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1293ea4d11303e3e2c822fb65ce50f4bf6df6bc2b3bad6e34bcb4b2ae05de3f5"
   end
 
   depends_on :linux
