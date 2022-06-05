@@ -7,12 +7,8 @@ class Gsl < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "207ba177628696ce2179fe94125ecd637794396a442a7550c92f9a8a202c03bf"
-    sha256 cellar: :any,                 arm64_big_sur:  "1184a75460c96dc80a9fa5299f3f0931bbff729b556607e2b7492608dd7e44d7"
-    sha256 cellar: :any,                 monterey:       "3125ff756739ec6eea0ddac3c3b01e879f525eb3b7de88586d6438cd954e28a8"
-    sha256 cellar: :any,                 big_sur:        "3cfd6c05d383ad930471e6d92942de62982d5e4149d5508bbbf5ed513561c288"
-    sha256 cellar: :any,                 catalina:       "03a4c21c0384602ec0d5c802f61fdc0737730a703396b3fe37274c884019a6b8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "daf456a559c5f031b5584db251ffe07aa02fbb04c3d7dc06e1202cfd9109a0c7"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gsl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0da8e24887b40a48e70c18a974421ebd91f462e82132caecfe82f309d89d4edb"
   end
 
   # Fix -flat_namespace being used on Big Sur and later.
