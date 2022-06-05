@@ -14,10 +14,8 @@ class Ace < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 monterey:     "bd09d99803ce5e5671cfd4e369f6bf6b04294e7c72676c23df912ab2f7fce19f"
-    sha256 cellar: :any,                 big_sur:      "dc143404b04e701aad213768a9b58187e5f1b17feb3941aa2467aa0aa0cad672"
-    sha256 cellar: :any,                 catalina:     "737f43fe9b5a430161f71b80ad1955c6ca9ef39ec93b7542e373e469f124c3e4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "9f606ddfb06aa69c55edb6365e75b4db570a966cf8c48382f5466d5734bcea5c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ace"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "73381140eddf98a5c1d05caf23b545d20228f374ab81cec75cd189681a303571"
   end
 
   def install
