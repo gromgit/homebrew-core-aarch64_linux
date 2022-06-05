@@ -12,12 +12,8 @@ class Arkade < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7269cb0d535f6b4bbaf2d57afe38dd4a28df1123d37083dab51c34ec2aa19de5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "42af5e98b6a1da670042f862cd1e1e07db583e0d53726b6f463d75b5ba8c3558"
-    sha256 cellar: :any_skip_relocation, monterey:       "2be3dc20a0028918d2f9a118ca1e15ed6f413e3139b27f7d42f01c8c4c05973b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4e2b2a74be6357d3d586e1187d11bc2767348702107552000fd0c83e9b5ae959"
-    sha256 cellar: :any_skip_relocation, catalina:       "933f97d390d179ded570ced2152fa968a1c28888578a55406eee089e1cee70b9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8a23ebafa6436123b8393a4d2f158179824d489ac3bbd61a1c17f3420a9ca3dc"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/arkade"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a8e29fd2a31ff720e099d7718dc4043e4423248cd885f8dd22d5a5085138696c"
   end
 
   depends_on "go" => :build
