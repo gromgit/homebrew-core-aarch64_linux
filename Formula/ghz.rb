@@ -11,12 +11,8 @@ class Ghz < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c32fcf2d3f8894a1b7473fc7f484cd8d4c4b25df58f772a8fdd8d36e1a14af44"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "01fedc8ef902f81e16a545e3abdf9d882a534b62ce16749825ae790c63d11c82"
-    sha256 cellar: :any_skip_relocation, monterey:       "8d65d5ac5c945561a26687665dfa26dec5f06df44ed017d2190ea9daae6322b5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "29ef311cccce505dd3dc1e4659c5a73d1aa52b1eb719cf0b5ff6487576fc90c8"
-    sha256 cellar: :any_skip_relocation, catalina:       "62bf78f08a8846ff3b7dafe6413be2349d7a0174bbc01e4b9c2c4c5e1f8bae2f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "876a984c24cbe9855af0c0023d0d16fb1854e1a089af91492768474f7352c62f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ghz"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "fb6ad1e1d594d25b3e05e358ddad69dcf16fce2c3c2b1e4b060b91f23592a333"
   end
 
   depends_on "go" => :build
