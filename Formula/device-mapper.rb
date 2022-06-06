@@ -13,7 +13,8 @@ class DeviceMapper < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "97dae8f1149a52afaa5d3caba930b3bc8bf2e0bca1234f83685d06e8bb4bf005"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/device-mapper"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "33ac79592c317335f2559000b7e44c97c007a6778048c3164c5cdd2a429be01c"
   end
 
   depends_on "libaio"
