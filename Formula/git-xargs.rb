@@ -6,12 +6,8 @@ class GitXargs < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "942ea3612d4571866bb5d673ca4dd909b64b68ca74401f3fac2404a5d7fe23cc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c9e3f75f443d8010f58d0cef966358ed01146b324b8c0965204b626bc53a84c5"
-    sha256 cellar: :any_skip_relocation, monterey:       "d042594dfeecd76a9512ea4704f63ea74188ca0469507b854938c5408880fd9e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "eeaccfa7730e0200449c64181de8c4380543721fa89d234c585c8f905b0ad6df"
-    sha256 cellar: :any_skip_relocation, catalina:       "e1e2a865a2d67839e4562e2261cb47e34d72f57ea88bda57551b2af88530d5ad"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ad3734718184e6045a7f06d9db4b1cb86fe800d4192691a331d623441059d74d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/git-xargs"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "234e475ac2759445b7a8098006c806dd2cf389c0f80778208d078e5b6f7df73b"
   end
 
   depends_on "go" => :build
