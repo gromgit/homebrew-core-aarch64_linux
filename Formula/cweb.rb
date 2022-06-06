@@ -12,12 +12,8 @@ class Cweb < Formula
   end
 
   bottle do
-    sha256                               arm64_monterey: "28f524c3bbfec46b2355c1d9b3e36a98328f8cad660701d56dbb5f3cf1821335"
-    sha256                               arm64_big_sur:  "377bc14d53a26a4e616f26a986bd166d7f90d758a0d8d4538531e45ab73f0d0b"
-    sha256                               monterey:       "e6e4cf31d37aa586f3a90385906d22273d9794066ec28173127ca9b92a5bc689"
-    sha256                               big_sur:        "ce59e1f7637a11231d2cd97f8afe94300b7a40c62dc0f0973bcd998b6b7a47ec"
-    sha256                               catalina:       "abcd2cef08f5ef924511e30cefb320142caae28a12f2662b172e9aea523f1cf2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7042cc26a2f486fee7f7a485870b689c06a54840c9194b1630433b7e18b19eca"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cweb"
+    sha256 aarch64_linux: "f8cbf1f289712f5adc0f48d519a70df9cd7131e6ffa75b2db6071b3600e126a2"
   end
 
   conflicts_with "texlive", because: "both install `cweb` binaries"
