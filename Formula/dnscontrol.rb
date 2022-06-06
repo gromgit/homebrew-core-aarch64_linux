@@ -12,12 +12,8 @@ class Dnscontrol < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0f7c8e704605cb6eb5460dc57a0ac6a10cc43a4d3930fd21f1faa7898d3a618a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "28621a7e3ae0d50c76c21849e620b20019f1dfd26b1fba08697badcddd249e7c"
-    sha256 cellar: :any_skip_relocation, monterey:       "d118147d5bcc4c82b974d54f20a2bd2cd6d0598552b75031a5b9f4102caf7609"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2c68ffa859b486e9c1b26f1add16ca85f03f2b3330a0a1c1b69caa2b112cd4c2"
-    sha256 cellar: :any_skip_relocation, catalina:       "13965869abdf3d006fbb7f9da105c8f47935d96c5ee5ed3e05fd7cab7a2ef299"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b45397693e8f912a9ad35732b5cf6f7fc2dfde92cb8e9b9592fdb6377e347388"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dnscontrol"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "465423c9ef33e02c3f773cc65513c5ff7abd9e704d6343ddff6379f09d11d37d"
   end
 
   depends_on "go" => :build
