@@ -7,12 +7,8 @@ class DockerCompose < Formula
   head "https://github.com/docker/compose.git", branch: "v2"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "27be64fc83b866371dcc7a32a2d8d5c77c84089b58093a5fd63df7db895b0763"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "27be64fc83b866371dcc7a32a2d8d5c77c84089b58093a5fd63df7db895b0763"
-    sha256 cellar: :any_skip_relocation, monterey:       "425533b019228473b5e29421ad77c383f504513ad87c3c48beed9bf951f45388"
-    sha256 cellar: :any_skip_relocation, big_sur:        "425533b019228473b5e29421ad77c383f504513ad87c3c48beed9bf951f45388"
-    sha256 cellar: :any_skip_relocation, catalina:       "425533b019228473b5e29421ad77c383f504513ad87c3c48beed9bf951f45388"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8f8ebd761ac998ad553b31167242930a86ac5811fd968d02b1b6faecc1c6def6"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/docker-compose"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d5c7170b73054f7041ee9a441091cf7a1947a659deb22b81d87c86a325080e82"
   end
 
   depends_on "go" => :build
