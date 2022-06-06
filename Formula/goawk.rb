@@ -6,12 +6,8 @@ class Goawk < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "84c221f3d73b4678882cad8e1195e61a6abc39f5585735b762c447a8f8b64d27"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "84c221f3d73b4678882cad8e1195e61a6abc39f5585735b762c447a8f8b64d27"
-    sha256 cellar: :any_skip_relocation, monterey:       "8f9415f2cc65a7f60fe9d0ccb2800d22370b8f01c778cb7505f7684f6fad3971"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8f9415f2cc65a7f60fe9d0ccb2800d22370b8f01c778cb7505f7684f6fad3971"
-    sha256 cellar: :any_skip_relocation, catalina:       "8f9415f2cc65a7f60fe9d0ccb2800d22370b8f01c778cb7505f7684f6fad3971"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a5de8c2d579ae1a41b6b3b1b58ee189739be7b34397fda5dd81043e78f216527"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/goawk"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "85297d56574fa3ec760db56dfac3434aa5fa0e18722a186cda62417361c54a85"
   end
 
   depends_on "go" => :build
