@@ -6,12 +6,8 @@ class Gdu < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c3f4187d556d95071a2a0bd948fe50b299f18687fea51d4be2510cf7841cf1ef"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8d22f3fbbf7a5487facdc7dfa31d0a2b608fd8c598c31547b7cb20399befc78a"
-    sha256 cellar: :any_skip_relocation, monterey:       "727cdaf579987f813180420ccec231b9818eb99f3f76570d873a69cd7d911c9c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0b5a68c973b81e018afea34bee01ff70b30dc87b10981401c91206642d07da58"
-    sha256 cellar: :any_skip_relocation, catalina:       "04ecd763ca8d284823854352fbb7781cea5799c9f2e749cf5bfeaacf20e83806"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1d4d9a2f6b59272249586431b76dde3df9ea8627ab56f2c3d0f20e33d9c47581"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gdu"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9d8507035a0ca9eb15fb22045338d56c05748f4731ca75fad1236af06e5f78cc"
   end
 
   depends_on "go" => :build
