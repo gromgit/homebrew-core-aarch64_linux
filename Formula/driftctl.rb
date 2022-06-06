@@ -6,12 +6,8 @@ class Driftctl < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "52d291e747bdd7cb6e030483f012c6e702ee2a7d3f20bcd3b629208833786bc5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "52d291e747bdd7cb6e030483f012c6e702ee2a7d3f20bcd3b629208833786bc5"
-    sha256 cellar: :any_skip_relocation, monterey:       "7337687ba83656bb26c29d807c2073488df1333bb3232b097643ed0b52230b00"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7337687ba83656bb26c29d807c2073488df1333bb3232b097643ed0b52230b00"
-    sha256 cellar: :any_skip_relocation, catalina:       "7337687ba83656bb26c29d807c2073488df1333bb3232b097643ed0b52230b00"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2e0706ebdebcae65eb9319f3b4c480cb2091334a1228768b2ae0b0a03f031820"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/driftctl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9805d20e737c155b0fdcdcb000effd46463bff568998abfe65c0a4e58c730b30"
   end
 
   depends_on "go" => :build
