@@ -7,12 +7,8 @@ class Dsq < Formula
   head "https://github.com/multiprocessio/dsq.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "eceb54636b218964145e15d878432843b506fc8d4f6ea5d427af6b6f6dfa8c6b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c94dfc5efddd55a5a1ab1933a1e49e76437d1620e5fb3bb3df1c43885e337ec0"
-    sha256 cellar: :any_skip_relocation, monterey:       "ed5ce7e33774fc9c3ea642b48935652691f56f8a98a308615dafc468d0265b21"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fb2cd0c479bb3da6d7e3e9afa7b418d26be148a11a3a6271c25db0dbe1055e49"
-    sha256 cellar: :any_skip_relocation, catalina:       "e317c84ab16572071ffe27a3e3d23b6728f7b4323cf17c9616b2c0246610d5fb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2f21ab9ff7909467f7d269edebb0a392579c6b6103ab2a3f89dfe6691c29bf55"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dsq"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "913cb9d7c0d0e7f621a7f41c02a93e747ecdd6c78e3570e9c752b3e8829d55f7"
   end
 
   depends_on "go" => :build
