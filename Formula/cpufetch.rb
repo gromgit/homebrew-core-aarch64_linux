@@ -7,12 +7,8 @@ class Cpufetch < Formula
   head "https://github.com/Dr-Noob/cpufetch.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c607454509c0e6d3b292e36e3e47bc4b9e825ab68099a70e2ab672ef21b2a181"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0e957f2ce010aaf62e12573c176a666ded448450af54c2b7b6acd4c25561cee2"
-    sha256 cellar: :any_skip_relocation, monterey:       "fc8ccba3b0c22f4eeae582ef6467629390b4123f71cddc5bb2208e86409c37d5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0364a04659759812076a6b70117e26679bbac74cee4943b7575844cb24169d16"
-    sha256 cellar: :any_skip_relocation, catalina:       "fecfd3b7d1c1a4b9811ec886f5733b1ebe944a9ceab4a0526ff18702674c5591"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "22c8f22e55957d44ba4a34167bd8d64d3dd01c54ba61a36c4fba9191dc343064"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cpufetch"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "319c8857d3c5f0bfe8b211bd963a304b4bede7f4171037d32bbe225ce01e4e46"
   end
 
   def install
