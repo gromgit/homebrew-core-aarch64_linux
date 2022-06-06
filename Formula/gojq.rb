@@ -8,12 +8,8 @@ class Gojq < Formula
   head "https://github.com/itchyny/gojq.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "af1d459d464bba79cf965bb29db184411efbf7eab1e2cd715d1709bc7d7bf318"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "af1d459d464bba79cf965bb29db184411efbf7eab1e2cd715d1709bc7d7bf318"
-    sha256 cellar: :any_skip_relocation, monterey:       "f61144c783de64cdea1ec7b4a1a922aa9f5cab54a38fa1499dba091a851475ff"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f61144c783de64cdea1ec7b4a1a922aa9f5cab54a38fa1499dba091a851475ff"
-    sha256 cellar: :any_skip_relocation, catalina:       "f61144c783de64cdea1ec7b4a1a922aa9f5cab54a38fa1499dba091a851475ff"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d39040111299d994ef8af0a5c1fd7fe422def13be042dff3ef63234fc9b9b335"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gojq"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e41e6185cd31aaf18b2eb0dd709172c81bdc60d73f9f7a26c48442aa7a6d8d19"
   end
 
   depends_on "go" => :build
