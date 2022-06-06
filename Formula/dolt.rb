@@ -11,12 +11,8 @@ class Dolt < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5c72dd996a265a6e547f347b6e19ef29641ab857436b7bc1e8ece99da27c90a4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "81d36235979b10bb6b417c539501962c5ed4141f6da3ca3cf31349037c8486fd"
-    sha256 cellar: :any_skip_relocation, monterey:       "a276ee7fd86ad3c3bc3650dcabdb990aaa348b8e8ba2c517de53f17271eab93d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "90a5a69817cf4516f2965039563710504d4c81a359ea70e445fdc956dede55c0"
-    sha256 cellar: :any_skip_relocation, catalina:       "467597eb94fa1d4af7c2f7ad27dcc9ed9fe8c4d8d408b64a1b65cf2ee36092fb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f5b07e5b588721af144c0f6750b96b5a7136f05b0685f53bf14a7ca4c910fd04"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dolt"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "868ab16f75679ae6e6e2444ee69021a2f6e1849350142d4bac6532b216d9495a"
   end
 
   depends_on "go" => :build
