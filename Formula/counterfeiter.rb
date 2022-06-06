@@ -8,12 +8,8 @@ class Counterfeiter < Formula
   head "https://github.com/maxbrunsfeld/counterfeiter.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8e43cf62248f6e7ff02b67cfffa38f5f1ae81b3f79d6e289bebc16a814238ad2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8e43cf62248f6e7ff02b67cfffa38f5f1ae81b3f79d6e289bebc16a814238ad2"
-    sha256 cellar: :any_skip_relocation, monterey:       "d77a7211900355c0e440921a8b06fb8e1d91a650d98d1eea280bded849dc2739"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d77a7211900355c0e440921a8b06fb8e1d91a650d98d1eea280bded849dc2739"
-    sha256 cellar: :any_skip_relocation, catalina:       "d77a7211900355c0e440921a8b06fb8e1d91a650d98d1eea280bded849dc2739"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9ae35345e995a8d7ab54d0c08d10dbfefb2fc28b47da0e93b6bf16c1f6f45955"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/counterfeiter"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2cb4982efe57cf3c70e7431c4d14b0a8b3a7f31726f01fabbdd5b05b50d75f6a"
   end
 
   depends_on "go"
