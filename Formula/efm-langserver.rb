@@ -7,12 +7,8 @@ class EfmLangserver < Formula
   head "https://github.com/mattn/efm-langserver.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c257f67d5df8212d33a8c49793231877dcd7e0a43c234fd02a1b9f84aa1fc30e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c257f67d5df8212d33a8c49793231877dcd7e0a43c234fd02a1b9f84aa1fc30e"
-    sha256 cellar: :any_skip_relocation, monterey:       "82449e9d9af5148a61134aeaf166ecaba6709d3cf797f66a397d1b2e908f7980"
-    sha256 cellar: :any_skip_relocation, big_sur:        "82449e9d9af5148a61134aeaf166ecaba6709d3cf797f66a397d1b2e908f7980"
-    sha256 cellar: :any_skip_relocation, catalina:       "82449e9d9af5148a61134aeaf166ecaba6709d3cf797f66a397d1b2e908f7980"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1fc00f5f8e752a876c4933c4b0a5c5a402b44964c7292dca4764a55bc703979a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/efm-langserver"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "40a7162ca93b9efd76c065c4059bdb08b8b63e0388f122b5400ec79e0143e490"
   end
 
   depends_on "go" => :build
