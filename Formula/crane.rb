@@ -6,12 +6,8 @@ class Crane < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9354917c947b767bb70b23595745ec2d30904fb5b49f75c837639118a0717e97"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8144f5a9bb744b5e2b061cb9b3b1ce38080855586fa380f8887c508106aa3c3d"
-    sha256 cellar: :any_skip_relocation, monterey:       "4c0bd2c38cbc6718683f0e64c596252254de4179a0e01354ba54f6930ac236ee"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e0678db71d81a4a84ade7aed69c89f849133da255ebeac7d53f5592e0eede999"
-    sha256 cellar: :any_skip_relocation, catalina:       "209dfd75f8c9fdfd699477fa4595a44bc8b6d59e74439b70da5903d297c2c6cc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6c44938d3423dd8b967261c890f165f3563c36658a551a6b0c8c21372a8a733e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/crane"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c3d806b1e50e34a7a1b2edbe5127d4f8946c4fa0877bf1dc2443c0e0bc9b9adf"
   end
 
   depends_on "go" => :build
