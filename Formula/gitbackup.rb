@@ -6,12 +6,8 @@ class Gitbackup < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e9f5dd67f2cc158ef3e5735884b2aa5e51545020fdf1e048a685555cd8ef434d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e9f5dd67f2cc158ef3e5735884b2aa5e51545020fdf1e048a685555cd8ef434d"
-    sha256 cellar: :any_skip_relocation, monterey:       "464f30bd128dfb46f01bace2f652a9175c8d5dd03ce8d997ae03acb92bc8662f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "464f30bd128dfb46f01bace2f652a9175c8d5dd03ce8d997ae03acb92bc8662f"
-    sha256 cellar: :any_skip_relocation, catalina:       "464f30bd128dfb46f01bace2f652a9175c8d5dd03ce8d997ae03acb92bc8662f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "190d3d2addb023320b4a9e82550b51a912b2fbefa8ccc4f6fe29b335e80a8a44"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gitbackup"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "97c0e17826f3f409b8439a7bf8e8eb2d2ad4ed80a32dc74bd08cdf13a04db45b"
   end
 
   depends_on "go" => :build
