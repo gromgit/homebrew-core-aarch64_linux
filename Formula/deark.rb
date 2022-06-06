@@ -11,12 +11,8 @@ class Deark < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cd31b0d3ca42a40975c780478844c890e69f0fbd417153facd8d03d73bc5e38d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "029e1eebe7ab5162b076e031e97dbfa6aa7a339250bb66a3e949c721af42f81f"
-    sha256 cellar: :any_skip_relocation, monterey:       "f016b88a7c7381c79858779111ab274babce86f7f93520c40cc17a3e1901d4b8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7557c9e773e8131528189eb0f5e58e80f1664ed98ccbb108c3221f17b4d3dcf6"
-    sha256 cellar: :any_skip_relocation, catalina:       "d5d1145f18ea78995f8004cfcdbf663cc8f56b6120070a6d0378a04928e2b7f6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ea86049ad84d9cb22c0d651962e25bab6c295f1c2216d6d8a36f8bb105811acc"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/deark"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "889bc9df3f199ddac5b14f75a8d72f96cd24504f858df4e3d9ef37b66b4e35db"
   end
 
   def install
