@@ -6,12 +6,8 @@ class Csvtk < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b2d48edb96cf9e1554aea914c9867201729c5ea014d800ca9ba197b793851de2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5b2f09bb13dc00622c012dfecb1705ee11d1bd2e1ab1a818448aef464876961b"
-    sha256 cellar: :any_skip_relocation, monterey:       "d6c3adf4c7016b4a3b21556045d5539ce3cbc34a1540fe90badd9797adb717b8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "38d46efee033ef17d39fd5e93a0a96cfda0c0ca39a69f3bcb2dbbaf154dc91cc"
-    sha256 cellar: :any_skip_relocation, catalina:       "acea84dd2a22b036bc5e7445e7ddedc2e5dfdeaeac3c42da659c8e171362e36f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "087a5bb6bfcae4ee7278be49e2cb0eddc117878c2393ddf6e11a1c525d043914"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/csvtk"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7a42efb809913ea831015bc6307d5e9cd813c291be7151b47182f717668f77f4"
   end
 
   depends_on "go" => :build
