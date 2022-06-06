@@ -11,12 +11,8 @@ class DockerSlim < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6b6a013831cf0f8d3c2bcd560a1294c4a0382e178f8e692e1e8564fcf95f2fd2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6b6a013831cf0f8d3c2bcd560a1294c4a0382e178f8e692e1e8564fcf95f2fd2"
-    sha256 cellar: :any_skip_relocation, monterey:       "88edfbf34c89bf14c1769bc56925689b85f81dab329afb06e014b362289ba606"
-    sha256 cellar: :any_skip_relocation, big_sur:        "88edfbf34c89bf14c1769bc56925689b85f81dab329afb06e014b362289ba606"
-    sha256 cellar: :any_skip_relocation, catalina:       "88edfbf34c89bf14c1769bc56925689b85f81dab329afb06e014b362289ba606"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "63fd4c0005aec6def5ac502c93130e7d6bb248b9fb23f572918adea608ee85b7"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/docker-slim"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "761d64aae151ae744e33916f2a2c5ab3b5846b9aba6d8025d07c7e62a869ff63"
   end
 
   depends_on "go" => :build
