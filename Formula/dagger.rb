@@ -8,12 +8,8 @@ class Dagger < Formula
   head "https://github.com/dagger/dagger.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "45de695885b15a2a7394133260d7e47ae058747986bf3b6477389769895addc8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "45de695885b15a2a7394133260d7e47ae058747986bf3b6477389769895addc8"
-    sha256 cellar: :any_skip_relocation, monterey:       "7d09ca25e6bb6967884dc6cd58ce0579b2375956a79a0cb1afed67f8dd372073"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7d09ca25e6bb6967884dc6cd58ce0579b2375956a79a0cb1afed67f8dd372073"
-    sha256 cellar: :any_skip_relocation, catalina:       "7d09ca25e6bb6967884dc6cd58ce0579b2375956a79a0cb1afed67f8dd372073"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f6198f0d80082a410dbea627a96d9beb00d281ff8d991bea106faec59b0292b2"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dagger"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7351b286c713c432be29fe61deb45f44cd9671592ecf0c83168dca15bec00790"
   end
 
   depends_on "go" => :build
