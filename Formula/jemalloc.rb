@@ -6,12 +6,8 @@ class Jemalloc < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "b7ef9abad498e6eb53fb476fde4396fc9ab99a23092ea14bcf576548e198f9bd"
-    sha256 cellar: :any,                 arm64_big_sur:  "b24e4a9413b347397a10ebc9a7a2d309d88c0f9479c1cdebe6c302acba9a43a9"
-    sha256 cellar: :any,                 monterey:       "27ae29c02d718c38ee5f623c3ef08ad3530a6fd3595d16d2ddadd6552bf32c12"
-    sha256 cellar: :any,                 big_sur:        "72aef17aa140b457400c4f2b74d0473bf1160616c3df7cb8604ac2bf734afea5"
-    sha256 cellar: :any,                 catalina:       "3f5cf334d16ab432bf210c7e171510d0edcd834f939b57bddfd428af5ed248ae"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "240b20cc078b21d90c32bd34447952b9b464958b1858ae109f168558993f9278"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/jemalloc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "934beecfd7396fd84b87bdcd6a5a45a5d10a3083c824e1b74e2ff56e020ade4b"
   end
 
   head do
