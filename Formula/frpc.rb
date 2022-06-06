@@ -7,12 +7,8 @@ class Frpc < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4906c6d01ea4dc417f249425150e635a652630a6018a1d51a394692ebe45c11b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4906c6d01ea4dc417f249425150e635a652630a6018a1d51a394692ebe45c11b"
-    sha256 cellar: :any_skip_relocation, monterey:       "bd76286d9c829da92bf2932a1e1974c0f15014bab0d9b01c70d4b6bd61f33812"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bd76286d9c829da92bf2932a1e1974c0f15014bab0d9b01c70d4b6bd61f33812"
-    sha256 cellar: :any_skip_relocation, catalina:       "bd76286d9c829da92bf2932a1e1974c0f15014bab0d9b01c70d4b6bd61f33812"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4e2d754abaf219684b5de4f223c3245d14c4d9771ece7be78ead65815b2ef825"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/frpc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0a81ebd2f19db598707df6beb40db8fa012a14222add81ba04e19d12635e5eb5"
   end
 
   depends_on "go" => :build
