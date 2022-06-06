@@ -7,12 +7,8 @@ class Frps < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2a81991278a1f027dc90898eeb39cd591cfb17f5af422847b141b2ca43beeb14"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2a81991278a1f027dc90898eeb39cd591cfb17f5af422847b141b2ca43beeb14"
-    sha256 cellar: :any_skip_relocation, monterey:       "248cd6a192017a7f38afb9b1f9dfcc3fa42e2f9587ba05a337d6b7f4805a59c0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "248cd6a192017a7f38afb9b1f9dfcc3fa42e2f9587ba05a337d6b7f4805a59c0"
-    sha256 cellar: :any_skip_relocation, catalina:       "248cd6a192017a7f38afb9b1f9dfcc3fa42e2f9587ba05a337d6b7f4805a59c0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c6e4a0eb7135cbbedaf480b61c687614ace0c13b61de00f9bd1bec2726800398"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/frps"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "dd0a885564f9feca300c323833e5998a21f21a8d346f6bdd7ba1225b1b4e7f20"
   end
 
   depends_on "go" => :build
