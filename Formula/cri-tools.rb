@@ -7,12 +7,8 @@ class CriTools < Formula
   head "https://github.com/kubernetes-sigs/cri-tools.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d962159b8e8280d96805ae736d4bebf816319fb26ed04b2240c2a1e58767be70"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d962159b8e8280d96805ae736d4bebf816319fb26ed04b2240c2a1e58767be70"
-    sha256 cellar: :any_skip_relocation, monterey:       "9f348ee2e484cd03e8569cfef8be86d783966d443d6910695020b7183f72bc2a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9f348ee2e484cd03e8569cfef8be86d783966d443d6910695020b7183f72bc2a"
-    sha256 cellar: :any_skip_relocation, catalina:       "9f348ee2e484cd03e8569cfef8be86d783966d443d6910695020b7183f72bc2a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "51b02c8fd89aaf71142ea32f33f93a6335b2784391c7df5999bc17dccb3105db"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cri-tools"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "833a3517f71fc0401d652d4b233512050c68d904fedadd6b419ab9374c09d605"
   end
 
   depends_on "go" => :build
