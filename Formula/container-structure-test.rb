@@ -7,12 +7,8 @@ class ContainerStructureTest < Formula
   head "https://github.com/GoogleContainerTools/container-structure-test.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6415959aaadf01b87f3d318f03f308aa6d469a006dece2d5d687a37ea64d59e8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c64487a9ad907aded29beec96a2d51eb793c796db50322ef676ef30cf08a0586"
-    sha256 cellar: :any_skip_relocation, monterey:       "4c4aeabd45db69abb15f9961ea0d3c3f8dbeaf7a9d0647de34d6b377b5f2fa4c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0f711053af10c08ebcb76ce929d8ba1226255337b6c180c0ded43c49a62f111d"
-    sha256 cellar: :any_skip_relocation, catalina:       "972b5d5682bb468c2607530b3bb259d9a3cc8ba6b59f33f023c1d55bf0747426"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cc950bdfb9a5e20081952efa0f48e589413e2739576d9711d8581002ffbb5d64"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/container-structure-test"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b87dbac326e4072e2d916e9a098d66fd76e18f0d4e771824ccc89644b125db45"
   end
 
   depends_on "go" => :build
