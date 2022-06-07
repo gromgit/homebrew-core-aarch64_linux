@@ -11,12 +11,8 @@ class Gputils < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "ef9e856e54329ca707dbcda0c51cd85f2351a73de705f614f5936cc71baee4ad"
-    sha256 arm64_big_sur:  "7c7d6f710f0b5d41014b34fc022e88007a508a185b4c12cc0c51ea3d26be58dc"
-    sha256 monterey:       "0033e9463df7f37295cf89c23335763769a2df27bcfd61121121467028922054"
-    sha256 big_sur:        "7c3aefbcf78392080e05773e9e9ef9c289f15bd9e02b9e7f33ecae7cc2ccf3df"
-    sha256 catalina:       "80ca3e7c4b44a63ef25b476ec5fbaf25381d82d48e2ba33eda91b0b70fb4fcd3"
-    sha256 x86_64_linux:   "980a09d45f616f560b368078822553d130d7630b813d92696fd15f894593bf4b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gputils"
+    sha256 aarch64_linux: "fc5c322d38595d068412d089c22a5a7401a5988112cbcaaa7cb4df7d816b75e6"
   end
 
   def install
