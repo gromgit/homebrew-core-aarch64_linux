@@ -11,12 +11,8 @@ class Grepip < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8108736f9a3c6f0dbe0e8008960f0a964d8440e7801684165605c66aa36a29c3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1a55b8ad8fe7f08362c67d4b20ff629dc5f01fc611eae577f585a112fcece154"
-    sha256 cellar: :any_skip_relocation, monterey:       "f3cb1c0121c5f4bbc0df8b3bfcd12cb9b8d453d867f836327054c0dacbb4d17a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b5c317e19a7a369b6efde059c43c24b8979af38c00d6f62459dd9064125b1aae"
-    sha256 cellar: :any_skip_relocation, catalina:       "d3ba7b84e0c9079a9f9ce2d676c33f1b7733c64de6b8e04a37b899ccf621e1cc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c864d80756028d055cbd299b05b99fdd336f6aeec276bcdbc3003a2c1ecb4c1d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/grepip"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0417706f87395d35868974054c4f6e845a1a7e5bdb1932a0adcd52af9ec9568a"
   end
 
   depends_on "go" => :build
