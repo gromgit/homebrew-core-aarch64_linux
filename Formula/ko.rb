@@ -6,12 +6,8 @@ class Ko < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4442b619909d0215c41d711176747e3f139c9eda96e84352c05eef9f6ccdf6d9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "519094e77db389c470a38088ff4b809bb4f4f1ca1e602f8e338e13e0aa4d3e1d"
-    sha256 cellar: :any_skip_relocation, monterey:       "6bb8bac9ce5609325fa60d8dd0bcac795f7ab8b52c5863996c678c41d507a6fb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1a5d2b02e531e66bb52c4de13ba0e2a26bd77e7f92d4c9c9a7df8c85073c2f49"
-    sha256 cellar: :any_skip_relocation, catalina:       "40940714e128a18a8cb159f339cbc68bf419ce2292a9de520dfb6ddbe2543b15"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c36705c4dddb90628354bd7da1ddfa19c25c0f0ed926d98320247619cc5e95b6"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ko"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "aa436a561e83ffbef5cf3cb2052031a453d4254a52492c2b8d48a2b3dcf4ab8b"
   end
 
   depends_on "go" => :build
