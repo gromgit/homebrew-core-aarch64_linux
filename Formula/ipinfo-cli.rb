@@ -11,12 +11,8 @@ class IpinfoCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8c5c055181e59a39b61d5a8c76533348f0efc92ead6a7b3e48df79e0412f2c72"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ac0514f75e0c1b66fc9ad7d63d073931a3cea775b0a45a11bb42a065c1263a40"
-    sha256 cellar: :any_skip_relocation, monterey:       "28fb7b3985c6438047f1c5a79152b0d8260703d936b0e104fdde19c1d529e14c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "40150706085bb0b225a4ce44cb1f58dada65afbb0c097680f95d33e562dc0546"
-    sha256 cellar: :any_skip_relocation, catalina:       "f1890bd27433d2f80d7ac79302de26ed6d84d94615a756c23d3da75a19f6a5e0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8c049f7304553fdddb1eb23cd98dfbf463b66db75c497ab308f5a3d1489515b9"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ipinfo-cli"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b6802b3d810d1d4e1350b3684ba31ad9aea95479e17a44a66aa83a5837dc61a4"
   end
 
   depends_on "go" => :build
