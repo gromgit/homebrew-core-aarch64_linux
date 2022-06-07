@@ -7,12 +7,8 @@ class Ifacemaker < Formula
   head "https://github.com/vburenin/ifacemaker.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "22085cff161ce23c252e0d1780662e4dd5491ae0e5c529a32aa988cfcf92a3a2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "22085cff161ce23c252e0d1780662e4dd5491ae0e5c529a32aa988cfcf92a3a2"
-    sha256 cellar: :any_skip_relocation, monterey:       "2ff04b231be4840bf83ff3afc38f0ad27452ddcd79f4ac43e5a42bad7585dc1c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2ff04b231be4840bf83ff3afc38f0ad27452ddcd79f4ac43e5a42bad7585dc1c"
-    sha256 cellar: :any_skip_relocation, catalina:       "2ff04b231be4840bf83ff3afc38f0ad27452ddcd79f4ac43e5a42bad7585dc1c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "75c226bb22000f3e24951913dfc4d1566e88f2c415bdcadf51262588e1ebd23d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ifacemaker"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "177abbcb99930e5c71fa236ef5b266481d68b79c28aab76b69de1ea3fcb6ee53"
   end
 
   depends_on "go" => :build
