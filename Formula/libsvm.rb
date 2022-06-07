@@ -13,13 +13,8 @@ class Libsvm < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "b1ce2c0bee9fdf4f41b6e913b15dfc6b733fc8baac614c58c23e3084fad5b67b"
-    sha256 cellar: :any,                 arm64_big_sur:  "ae3fff4762882360a23280215cafdc93d3da1d598816d34cfb0e7b6a922180e3"
-    sha256 cellar: :any,                 monterey:       "f42ac81387074c4a304e6ff9fc6b0b6e4ade79fea3ef4d90592fd3b869c20c08"
-    sha256 cellar: :any,                 big_sur:        "27481a34d2af64572b48b268c8e47d7700aab4ec9dc2978216c471d512a4cb81"
-    sha256 cellar: :any,                 catalina:       "ad8d34d17fdca6b25374eff11b5f2b1067d19894358b23c04b3b8ac0f82180b1"
-    sha256 cellar: :any,                 mojave:         "485eec232bd3cc0619494de50cac4ef4a5b65761d5d6a062c62e07d9a0007e31"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a1383dac0311d28b61447e56c92affea59d3404c1a83abc5674276056ebe752c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libsvm"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f2e8cb07313618801d3d9292f2ad75c91a5a970a9acd8f53ee0897baeb9219b4"
   end
 
   def install
