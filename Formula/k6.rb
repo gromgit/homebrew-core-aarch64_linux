@@ -6,12 +6,8 @@ class K6 < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "abb97b2ba0877d01aed3810e34cb9b051a9ac360ac5622919061fe03005a018b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1bcd094d1158ee7b6446d7364477ab32d279dd2167161e0b7156779405bd65fb"
-    sha256 cellar: :any_skip_relocation, monterey:       "75b56dc9a2d2a6ff5516f8fc8b7bd574de68f265fa3dfd16192f985239e53ad9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2b71f02e9bb9e77acdbd1ebf035f27ccc5476923ead5d36d2206c1b4301469cd"
-    sha256 cellar: :any_skip_relocation, catalina:       "0ece95aefcbebe5951f92eee9b1e67d3b6a956ba4694169d230a731059920745"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8e7f76dfa07fa1a2054a2f937896220efe05d69bd533a7a972c40fd2a64eef40"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/k6"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f14de41a958a079da68717735431f8765d9fc2e074d20fc8aa6dc4465233b922"
   end
 
   depends_on "go" => :build
