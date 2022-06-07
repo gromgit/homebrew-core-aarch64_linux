@@ -11,12 +11,8 @@ class Iperf < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1515e76ee5871013496697add5d40ee8b080083cbf021f77be6f205738b095a2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "40befdbb1c830f1968b956c57ea6fa1ad2583cf2ba3b9504663da6ad1a5e43e6"
-    sha256 cellar: :any_skip_relocation, monterey:       "770cfb03124e6b4f9e12c30e593ffed8fa3b0b80e76893455256d863d255e417"
-    sha256 cellar: :any_skip_relocation, big_sur:        "963cd5836ada12db6f996d21a74662de33a978855fa02a017b129740dd222942"
-    sha256 cellar: :any_skip_relocation, catalina:       "3dcfebdc27fd6572518154f7ce55243f7f6b40cb1b4d89785e0606496eb6ad0d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b943de1f9fef01d95fe3ca2458898d0277777f8683f1e5d3ac43f70bf8ce113d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/iperf"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3dc4576d69533824dfc5e78f3771f1e5147f75aed6a867155a9fbc4e11765c8f"
   end
 
   def install
