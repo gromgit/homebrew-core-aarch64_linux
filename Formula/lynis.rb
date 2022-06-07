@@ -6,12 +6,8 @@ class Lynis < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3c78dbc7b8b2eae1662939c4be89c5d491e94cb351775f720055fc0033f55465"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3c78dbc7b8b2eae1662939c4be89c5d491e94cb351775f720055fc0033f55465"
-    sha256 cellar: :any_skip_relocation, monterey:       "37a7777dfd2d2a662fcbc04ecf7c5a756d52bb862355d7f7ef0908ee43e52478"
-    sha256 cellar: :any_skip_relocation, big_sur:        "37a7777dfd2d2a662fcbc04ecf7c5a756d52bb862355d7f7ef0908ee43e52478"
-    sha256 cellar: :any_skip_relocation, catalina:       "37a7777dfd2d2a662fcbc04ecf7c5a756d52bb862355d7f7ef0908ee43e52478"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3c78dbc7b8b2eae1662939c4be89c5d491e94cb351775f720055fc0033f55465"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lynis"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "fe84df2296e602c22d934b5dd806492476cec6bc910809cf8e9a65322a5214f3"
   end
 
   def install
