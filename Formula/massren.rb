@@ -6,12 +6,8 @@ class Massren < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e4f3dfe97777a1e9526c15d1f68c635dd742e6aa3474905eed26de63688eb86d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2911c014673d7dd0eb6333dcca8ed9a56d6ef14467c2f5cbb0b16a433e35991a"
-    sha256 cellar: :any_skip_relocation, monterey:       "afc3920b649de0abbbf4be6f9bccc8bbb3362a7c84dd0c551b38a4abc1f1f2ac"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c3e094ec567c910e7dd4dae785979781a3cc6ebcc5e5b32f14447f1610f068be"
-    sha256 cellar: :any_skip_relocation, catalina:       "edae797c19202bc52e73dd1c4f4e53609ef86693e63d536e26d5557f1c115edf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "903293ccfbd37369dca0458cfe533892a142cdc9418e46069b9d964f42c138c9"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/massren"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "234b69eee8b9a62f132c69ae7968906d7b962faec0a07e979052425f2748ee2c"
   end
 
   depends_on "go" => :build
