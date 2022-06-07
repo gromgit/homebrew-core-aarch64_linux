@@ -7,12 +7,8 @@ class K2tf < Formula
   head "https://github.com/sl1pm4t/k2tf.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5f3774927317f0978448e3d940472350911a0b03d038eb42b00b22403238d693"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dbbd1ad00e9a33863845ce7a7a0cec1ea597802871f0bafb84fa552f8e350c25"
-    sha256 cellar: :any_skip_relocation, monterey:       "320f5b410313270ea831241212485b4f2a3526a781bb228a4eb0a5c24c92b28b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c6bcbc8506727d4d298e4dcd1d6bb268152e993ff6c5d232471ed9b4f5af713e"
-    sha256 cellar: :any_skip_relocation, catalina:       "6bf09d3fae58bf15c1af0c00e94ffbdcf4c6d41a8c0e284be33d861cd4a8829e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "49d9a9995a83b40718294b21377c8a3ca9ebcf2d1c6b6bcef027d9e553d74702"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/k2tf"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "14ff451c8f51ee740b109b0b6ae4df31994750d8b9b7788f632980c73e8e8e19"
   end
 
   depends_on "go" => :build
