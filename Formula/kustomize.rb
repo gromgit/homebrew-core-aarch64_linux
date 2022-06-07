@@ -13,12 +13,8 @@ class Kustomize < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e71b026ffe77f221673bbc6306bff8fbf6d617b67c21b1f29195c17773c6de53"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2f02fef6fb488fd30f9db2529837ca08a656037e34100204ece081dde5a371e1"
-    sha256 cellar: :any_skip_relocation, monterey:       "1535062dcc42e6776f9506e12e572e19a5c18017543ece5be92e7c770b53490a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4c3123f5999d95c8d7f9c2ff3863381c4b9f0f506a1243ad833c7b903281e997"
-    sha256 cellar: :any_skip_relocation, catalina:       "5e68d3577bd2e37f1fb76cb385735553b04e338c36a979dfa01dfaaa91cecb40"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0db74e716a83a2b82b6c4d9477be3f0f600b7b7dac397e4a07b29b11352429b3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/kustomize"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "40d0e6adb909bdd7da5ec8780abd8f7e5c988cbb66fea5c76460cc1d6cbecd82"
   end
 
   depends_on "go" => :build
