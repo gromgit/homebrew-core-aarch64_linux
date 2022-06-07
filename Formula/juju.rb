@@ -14,12 +14,8 @@ class Juju < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "bc41dab8cbf87b7111fed27a73bab0b85f9ee8643c7ec487b53c3ab571c04020"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6b5f2083f20f930ff2aeb4ae2d919c1abec92d87b5704d27c57a2e2ef6618aba"
-    sha256 cellar: :any_skip_relocation, monterey:       "5d64838360697aafd7a1384a2639eb55a2ffc6ee90fd86416fe8d4041ac42f20"
-    sha256 cellar: :any_skip_relocation, big_sur:        "183012f86b1a3ad56a8ae1e4e43c5f68a4786c54b0cd27413d65a39e874b01cd"
-    sha256 cellar: :any_skip_relocation, catalina:       "026d912ffa107a5fad8c843031ba63d6a8880b3aad873a342aadbde4b0c2d235"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3e2cae3384ed52c29e56d21519e357391b3c927d76f2439ecd46729de7ded417"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/juju"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9aaf7848fb8bd88634d2c64d441ea21a1ca701c9b7a4a2475618fad004662a6e"
   end
 
   depends_on "go" => :build
