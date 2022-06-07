@@ -8,12 +8,8 @@ class KubeLinter < Formula
   head "https://github.com/stackrox/kube-linter.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4c859f9440e3f4a695606b23f0d334b65b39f20d52b2422b6bc319d59f1fefe2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4c859f9440e3f4a695606b23f0d334b65b39f20d52b2422b6bc319d59f1fefe2"
-    sha256 cellar: :any_skip_relocation, monterey:       "f474d229424aeb5dafc9070f31c5990b41cca5c139acfc0e305a65d138935079"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f474d229424aeb5dafc9070f31c5990b41cca5c139acfc0e305a65d138935079"
-    sha256 cellar: :any_skip_relocation, catalina:       "f474d229424aeb5dafc9070f31c5990b41cca5c139acfc0e305a65d138935079"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4c13aac991108ce72cf79281ca914e6684bd3f8300cba56c3f1533339a50aed4"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/kube-linter"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d507734187420c025d6f75c983bbd52c108493574a392cf5ce59079166209b71"
   end
 
   depends_on "go" => :build
