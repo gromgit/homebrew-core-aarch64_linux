@@ -18,15 +18,27 @@ class Janet < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
 
+  resource "jpm" do
+    url "https://github.com/janet-lang/jpm/archive/refs/tags/v1.0.0.tar.gz"
+    sha256 "858d4ef2f6ac78222c53154dd91f8fb5994e3c3cbe253c9b0d3b9d52557eeb9b"
+  end
+
   def install
     system "meson", "setup", "build", *std_meson_args
     cd "build" do
       system "ninja"
       system "ninja", "install"
     end
+    ENV["PREFIX"] = prefix
+    resource("jpm").stage do
+      system bin/"janet", "bootstrap.janet"
+    end
   end
 
   test do
     assert_equal "12", shell_output("#{bin}/janet -e '(print (+ 5 7))'").strip
+    assert_predicate HOMEBREW_PREFIX/"bin/jpm", :exist?, "jpm must exist"
+    assert_predicate HOMEBREW_PREFIX/"bin/jpm", :executable?, "jpm must be executable"
+    assert_match prefix.to_s, shell_output("#{bin}/jpm show-paths")
   end
 end
