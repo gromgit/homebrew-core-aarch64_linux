@@ -7,12 +7,8 @@ class Gostatic < Formula
   head "https://github.com/piranha/gostatic.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f44df8fbf9a4a937087fa255aea21c78f086cb2343aae067a73a6383f818495c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "07506614b233d6e61e02326c934d758a9eb456f037edc9f307248e916d2dcd94"
-    sha256 cellar: :any_skip_relocation, monterey:       "e217668f8086ac3185f1c23d594317d680ad7bca9fb97af75531ffbe8d299853"
-    sha256 cellar: :any_skip_relocation, big_sur:        "845e306d8fc02a1cc8c5328789560f57d0d0df313c65a275037e0e84e9491c99"
-    sha256 cellar: :any_skip_relocation, catalina:       "03de028c202e88cc7b5f4661b54403c205fe75259f0f34fe3764f4416dc98a82"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "283240692aa393ce727bbdfb5d9cf7ce7dfea49da0cd70333a802066378e85ce"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gostatic"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e0af358d22499fadc17930009d03387bd27678863eb7a3186811cd2fa2d17f16"
   end
 
   depends_on "go" => :build
