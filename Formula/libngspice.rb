@@ -18,12 +18,8 @@ class Libngspice < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "9d58e20b687ede651ca723c47a35bbc772478ab75768159021b38cb3d2f70a91"
-    sha256 cellar: :any,                 arm64_big_sur:  "06bfd009199b8955829ee232e8af51d8f5d9f18251cdfff08f957ec3cb5d4ee9"
-    sha256 cellar: :any,                 monterey:       "31d9faaad4c639bb2b16330c68bd9345df81cecc91946cf2f579ab2725ff11e0"
-    sha256 cellar: :any,                 big_sur:        "6234e617fda518242b252264e3ffdfab258711469adfdfbdf6586bb50e1776fe"
-    sha256 cellar: :any,                 catalina:       "f3d15531e93ab0c0bd4c19a17e85c1474352d04fbcd8c6592f11b687a8474138"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "179a9d7162f4dbda06ff91e35c6775cff85fcc40ff6cb65929be8bfa15823734"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libngspice"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5b25ad783ed3ab7360d32416f0b0335443592d72482f1cacfcdd093371d04550"
   end
 
   head do
