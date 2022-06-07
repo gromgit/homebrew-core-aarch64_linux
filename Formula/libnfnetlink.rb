@@ -11,7 +11,8 @@ class Libnfnetlink < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "302c0c8f5d1b84aa7482b918d2b70a9c88eb0e794163342317b208feff242993"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libnfnetlink"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "879c2262aab98638af93214db0ae4628f8bff43f58e937b3326cdd3576d6f65e"
   end
 
   depends_on :linux
