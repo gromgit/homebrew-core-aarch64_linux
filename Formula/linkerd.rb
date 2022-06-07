@@ -12,12 +12,8 @@ class Linkerd < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6ff7239e59c2dc7df4c0eec295ea0600b9f50934a62c79c800a761b460cf0ce5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d4471f37f007e692273b7d728b3c5e1ac777df9c84138f8b6462cea9f5261fdd"
-    sha256 cellar: :any_skip_relocation, monterey:       "390524f64fb60db36fae593913f53db00e7d5cefdd17c30a268209b0d3218d2c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fd681ff6e6bde2b7cbda7570d6be502aefad32999d9cbeb9838d985d4ff5d254"
-    sha256 cellar: :any_skip_relocation, catalina:       "b139ca606439df485559376ba834346acd64bc4b8b4ed34bb0e44387183bf054"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6616fd9ede77e1942513ba6e615896a65fa6081b16eaa6ce0ea341b9811064da"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/linkerd"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ebc29e96eb7cbfca62e904260394d3066cb680e1c5dcc5ca8fb9e9e8d46b85a8"
   end
 
   depends_on "go" => :build
