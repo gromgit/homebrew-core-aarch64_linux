@@ -7,12 +7,8 @@ class Kubeconform < Formula
   head "https://github.com/yannh/kubeconform.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "74dd1d995e736daa504ef1368e4f7a4ba541c944cb8e3b476dbda52d36e08595"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "aa049949d32864521c74edd74c9d375d3e2eb4858014bfbb7ea0a9fadb777f78"
-    sha256 cellar: :any_skip_relocation, monterey:       "78a8ab92ad7fda829a09aa68c4fa1414a59c18bfe2f33f22ab2557c17a45b6fc"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8e542f30ed6a67d429ed2747252e7de8bb2b0d4ea7fa1be2221c8559c84acec7"
-    sha256 cellar: :any_skip_relocation, catalina:       "fad2ce7e4674c30adef19bdb85c77010c2eb6d0f6b897c98b2fd6d45448b2d0b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1cdb8becf0620eb5cb8b1dc1e7caaaf06183047c61ba97bb430057af4077ab7b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/kubeconform"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a86d2a5144c18946f65a3d2cb4f529bb4e35222783244e908748c187887270fb"
   end
 
   depends_on "go" => :build
