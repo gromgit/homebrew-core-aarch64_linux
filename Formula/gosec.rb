@@ -7,12 +7,8 @@ class Gosec < Formula
   head "https://github.com/securego/gosec.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6545337d124c50ca122f10f9d44cd546fcea1fb26d1a712bb2884037335548f7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ef7ec18d830fed477413c62fcb2195d77283e77a4e96a96dcd79fec8a321dc11"
-    sha256 cellar: :any_skip_relocation, monterey:       "63faceb6f282172e2f4483356ef22b087c79e554a789dc911ff0d56a5fa81e44"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9c42f2b7a49a7579a664e23b7ec0fd2169ebbe15d3041590154557e1622dc1a9"
-    sha256 cellar: :any_skip_relocation, catalina:       "0815b07b4315bc430e374a91329550cc45dce6c617ad93ee8a8192c1df924bcc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "387b7b7a55d9cf05d8ba291636e1b34a40015d732ba4aa096b3a2e6160d93069"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gosec"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3422d8a1ce8ad3b70427ce3c52db9d46e2d95adbd1f255dfdf24e6212ca8b740"
   end
 
   depends_on "go"
