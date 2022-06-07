@@ -8,12 +8,8 @@ class Kubevela < Formula
   head "https://github.com/kubevela/kubevela.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cad332ae13671750a609b10b5c4b0cad36f6e715019023ebcad010123f721789"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cad332ae13671750a609b10b5c4b0cad36f6e715019023ebcad010123f721789"
-    sha256 cellar: :any_skip_relocation, monterey:       "bbcca5ed1c5aeaec3453b9dd39ef8cf95467b3db64671bdb58062d4489869fd8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bbcca5ed1c5aeaec3453b9dd39ef8cf95467b3db64671bdb58062d4489869fd8"
-    sha256 cellar: :any_skip_relocation, catalina:       "bbcca5ed1c5aeaec3453b9dd39ef8cf95467b3db64671bdb58062d4489869fd8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b0d4ec51b1bb48ce2d247ec1ad81d4f9e6cb9aa564d672d47d59e58a3da125ff"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/kubevela"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f99620366c27ac3d537f01b2f1ba269dcaf48eafa3ce4450d0b8298da506a583"
   end
 
   depends_on "go" => :build
