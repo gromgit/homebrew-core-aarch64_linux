@@ -7,12 +7,8 @@ class Mapcidr < Formula
   head "https://github.com/projectdiscovery/mapcidr.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8ac41e42c44274af1087f7617d6117852d296a709256aca843e5fcce21faeb6e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4fe71eadf1f11dd53d1f3f80d5e4b5452726b7354b7b1ee4730b78bbabff54ce"
-    sha256 cellar: :any_skip_relocation, monterey:       "02177d42c47d6efcf58e723fef68b350de0a690f27bd5567c9cc02f46b7bd9a2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5a3b04d400948239f5ae413b07a3a0eb0b07e7352d2d0c574a63fc7141b8562d"
-    sha256 cellar: :any_skip_relocation, catalina:       "5489ac992a3a2e420be5e4c08c3c4d0cc73f6af269706cc35cd8e4a5fc0b0fc3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "75fed0d65b5882bba6a5c32a84f8c834bcc55e3d68b2c5dcde1337f198cbcd46"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mapcidr"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e5aa50302fa00a148585411905bf91c650d17edabcd0f6e63f2a47484cf3c636"
   end
 
   depends_on "go" => :build
