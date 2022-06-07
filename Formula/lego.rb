@@ -6,12 +6,8 @@ class Lego < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "dd1ec81c6d2428c082d5804d9eb506f7105948db3d12a1a82169961c80484a66"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "03fb5f8f2ac1790094807c3891e882e725e576c9529e45474f2e03b57e4d1ce5"
-    sha256 cellar: :any_skip_relocation, monterey:       "d0f4b0c26427c607dd8606fb43f84069ae57c9779378a69be6dacf536428c616"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d9d7b1af751e4bd3b65bdcec0b681d255b9329b82679850a4418c186557d87fc"
-    sha256 cellar: :any_skip_relocation, catalina:       "f39f671a7ef8f95ed3ee2b30f493ad93c9b53490f9228063ee0008a1a13d7f1b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "67056e62ed928cbdf90ead32e075ed3adf27dc908791bcbdd1db78c649e6f76d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lego"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f6c7df947554f7e481d180ed08ae2decaaed6e6d7f210c270670df52abdd93e8"
   end
 
   depends_on "go" => :build
