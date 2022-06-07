@@ -10,13 +10,8 @@ class Libmodplug < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_monterey: "44f9536bdd1d88445e94cfef5c13a40ee07a965db04804824c438746f3d3db00"
-    sha256 cellar: :any,                 arm64_big_sur:  "8f59c19b920e04fd0b2b71cab151e62358e1c8ff00bea83b3e40081f941c13d3"
-    sha256 cellar: :any,                 monterey:       "f773d6e23b5a2b84304c91c740b050c7364e3102714d4b1ccc3985e64f97d98e"
-    sha256 cellar: :any,                 big_sur:        "2411526634753034b19df000bf941383eac622926cc50c31ff80dc5a484c7abe"
-    sha256 cellar: :any,                 catalina:       "cd9af3b0e9c72274ac8a63934d0af44edb08cfbcfecc30772b862be74f68de9d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d166a7f4a737de154ada685c9af4f82d22238a1b6cb323ce49a4496a3e9b2911"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libmodplug"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d0615937a4e8886e132a0152751db517b24edfa6967a4679c142bd58a233dbc8"
   end
 
   resource "testmod" do
