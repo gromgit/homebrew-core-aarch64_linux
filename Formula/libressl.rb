@@ -13,12 +13,8 @@ class Libressl < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "cc0e0cbbc482e31fda8f93ad15d2da27744b7062ab8740078de094974a3083ed"
-    sha256 arm64_big_sur:  "3747cf4c7d82929842b99062e27912ec4419641642c7884a64c41a1fedfa9b68"
-    sha256 monterey:       "579393de218cd3bea5654a240ebee08a4c12c52a9f7297d805a37102e5a89b7b"
-    sha256 big_sur:        "9cb1b75ae0aef3d3eee297142dc56029ff69989b15c670e8f17c9efe47cfa791"
-    sha256 catalina:       "d3e9663ef42bf794a7dbc27f39559b5f44246bb05dd2c39251b611dc3f8cb017"
-    sha256 x86_64_linux:   "50cdc999b52b6cf6c85866ebbb57d033e44fd848ba2a19b7c88a2753cd551924"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libressl"
+    sha256 aarch64_linux: "d96bbaa64aaff0692f48cb679b91025ad07ed1875aa03d55f725045d0595e34f"
   end
 
   head do
