@@ -12,12 +12,8 @@ class Kubeseal < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "13a18fb4941160e8423acf3d2ffd4ff64d0c0e6e5e7c133bf6c2fbbb4ca2ebf0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "80f2f933af218532e084c4f438690a4588adb465c97fbedbb3e6e9a25aa43f1a"
-    sha256 cellar: :any_skip_relocation, monterey:       "ae3a20fce67d4b24a7cf191d4baa53a0a04fef5987e4fdb79858d8533435ec06"
-    sha256 cellar: :any_skip_relocation, big_sur:        "23087634f91eceb6208e89062aad1d7ba43e05118c559371bb6bba90d191456b"
-    sha256 cellar: :any_skip_relocation, catalina:       "a733b9782e73cec7c1c6909bd410090fa788fbb69ba1348e47784d90c561338c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9cb97441ced01d52a49a36537fdf548fcc83506e992c98998f4542d6c01c40f2"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/kubeseal"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "deb95f7e9726cc364bc508812b96613de0e1557707d4152d497c0101424496ee"
   end
 
   depends_on "go" => :build
