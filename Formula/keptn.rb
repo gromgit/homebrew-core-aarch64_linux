@@ -11,12 +11,8 @@ class Keptn < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5b8f6c505d4cadaea9afdeefad384453ee09a945077939f596dff42ef0d2ddb1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9fe1a058fb784936cb6cb8767eb3189d4a5ed8aa4ff7868bf3e94ec06e100b5e"
-    sha256 cellar: :any_skip_relocation, monterey:       "232a834f43083eb27334c5e8510429116479082688a4a960a81d4e78bab8c0ce"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f2312880cd64e048cd413402882872049e9eb149fc726a761e6c52a72580b129"
-    sha256 cellar: :any_skip_relocation, catalina:       "317c8326c163dbb225fd214f79e25d333f8d91a135b04f1c380555e3bc821206"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0a3dbe8266754a6b44bf27a5fe4129345d6b18de12283e53fededbd79a29c523"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/keptn"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c64216e28baefb3e7158fcff5754c7cf4f6eb321b36d96bb5e6b24660416f1e9"
   end
 
   depends_on "go" => :build
