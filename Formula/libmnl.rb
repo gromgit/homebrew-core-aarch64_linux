@@ -11,7 +11,8 @@ class Libmnl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "9dda4262d4878c4e458feb9b1b696d0fb88367fca602c4ce35182d28f3787c67"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libmnl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c945f1d11071e1b7804851b59ff55a90b2569c95c3a48804788a7c821da012da"
   end
 
   depends_on :linux
