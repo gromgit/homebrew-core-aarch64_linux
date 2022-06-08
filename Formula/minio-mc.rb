@@ -17,12 +17,8 @@ class MinioMc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6a571683436acd759ae20dcd5fd252b1e65fb88d507c34a223efaff5973a5e50"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fb124fad308e417e728f119c5d912475077e8595ab96726821adfd7a52a73f14"
-    sha256 cellar: :any_skip_relocation, monterey:       "d48369759997a3ae5b2705b243aeef482cf8f464b4f6294a5d7aa90c285ef382"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c06b724fc7db7e9ce1928475621aaffab1ee6a70da0493b2f14446c29de830eb"
-    sha256 cellar: :any_skip_relocation, catalina:       "b168a6ab8cf81cb9c4e823b6c51584700ce798e261b499477f87bf8735e9f084"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "00f52e34511a588536b1cf6568cf0800c03aadc4a93550c72340227b96a2629c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/minio-mc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2bd0195625ef8e3745b27cf5e944568320de41d889b8164c4b5711cbf9dd6738"
   end
 
   depends_on "go" => :build
