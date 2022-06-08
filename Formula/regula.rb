@@ -8,12 +8,8 @@ class Regula < Formula
   head "https://github.com/fugue/regula.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "919052268835599f20ea4b1006a81a9e38a50414a0b4fece905ed9aaf827d9a5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "aa7baf097bb2894cf0ac6d2b678b00ff3c45130d4c4024a7a2667a520de35798"
-    sha256 cellar: :any_skip_relocation, monterey:       "3aeee6c0d1003333c98792a133850e1f4405a70716c0543ed74602642c63157d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "eb56580f8b9d12667426daab4e0c8f9bd54fe14abc8e4a66dac1c87a570f13bd"
-    sha256 cellar: :any_skip_relocation, catalina:       "ab3ff7b13f7350fea29d003d2fa8b9ac1a0540dcd90d2cd305b6b0cf35c41b61"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "57c424db92c8e96bd7fcec0213ff370d1cd07c27391bd07656ecf5e235a242a8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/regula"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2a1927a2dad3747c06dcae950fe410e4b525658790a60e1035e75df334b83b30"
   end
 
   depends_on "go" => :build
