@@ -7,12 +7,8 @@ class NatsStreamingServer < Formula
   head "https://github.com/nats-io/nats-streaming-server.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5acb964e918c9c39ac0f6bd7d8ddeb6dff13e492a69a3930532382f331543403"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "57ec652026e19945c61f645d16ea0e381a8a51d090507ba4f1ee749d641b2b3e"
-    sha256 cellar: :any_skip_relocation, monterey:       "851c8e68280ed15b2ecc1b43128a27ddf3ee60260bc4befec4d49fe905d8a352"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2faf7fcca36d51e50500cdd714af091b6275928d86042358747037b694bafbf7"
-    sha256 cellar: :any_skip_relocation, catalina:       "3f13def42236d8b66965b7efce39bba963ff54f30635428e5f90818f47e48ec5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "65350b37f1c99b651e98103ae68e4e978d0589fadef5bd541f71dcccc062b1b3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/nats-streaming-server"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "498ffe00078666d9ff9403a6ae65a2417514ebd5283c1d07cc572b4176f4d2bf"
   end
 
   depends_on "go" => :build
