@@ -7,12 +7,8 @@ class Mbt < Formula
   head "https://github.com/SAP/cloud-mta-build-tool.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c6d60acc5e116ac8a3cc267147179cacb0feeee5f9a36b3ec3706cf63c3c9f3c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "502581d4017ab9b7390499a64548e734aac9bde91cd64576eeb2858babec0b8d"
-    sha256 cellar: :any_skip_relocation, monterey:       "0739815ad15027d18ab113d2af0f753d281042b862040cd6b4a39bd92679618c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "dd01cbe62a21847d06c277dfafb5b1b3ad8cd6b7174fe351eb136d80a273297d"
-    sha256 cellar: :any_skip_relocation, catalina:       "e796e45c3a1ce2795ed7a6d16f2b8584fac1f87042b1efb83fb5b063ed3f1eb6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e1153edbb465f46fdbdf43ccd2d8c7b0aa906ae0972276afc105be9bf95c6933"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mbt"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0f42eaf7de790de9394369f8128e20be31641442d0a66a888a63e8e78d1903bd"
   end
 
   depends_on "go" => :build
