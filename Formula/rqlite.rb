@@ -7,12 +7,8 @@ class Rqlite < Formula
   head "https://github.com/rqlite/rqlite.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d5772bea4340a13619379592867b42adf96678226c6b0ad1a70c673adf37354f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "90ba1c08d23e3c60df2f42e9fc8d76faa88662795d3b8db80522c59c519e4933"
-    sha256 cellar: :any_skip_relocation, monterey:       "72cae819389974d687655a23a5bc00bf2eb367292649b9a8e78676669e709bcb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0f55b7dad7b0dd2fba9e07dd077d4da42f62be8e05b893e4ac117f88f834b8c8"
-    sha256 cellar: :any_skip_relocation, catalina:       "90bb584acd108979ed3821513e7680d22205a14e8e2af4b1f68ff481efe0aa17"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "122058eb89b9c882ccdf1f7a3fa1a5d97f60c82bf8d8a8fb85f879bc4ae2da37"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/rqlite"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "effa6967883e8ff9c24df97b9c057ed4f511c25d7ccf2a9d678e563bd0f7b416"
   end
 
   depends_on "go" => :build
