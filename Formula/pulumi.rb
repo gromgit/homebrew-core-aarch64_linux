@@ -8,12 +8,8 @@ class Pulumi < Formula
   head "https://github.com/pulumi/pulumi.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ce92d35df36106da4c3142e10b21c00fe38a41e9a258b46ce53393c49af5e827"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d10ad2716d756bb939ab9e777edf7cd0e962b6c7297fa2b647be52670303babd"
-    sha256 cellar: :any_skip_relocation, monterey:       "8488fc8d4f4f5cc8b453b7340b93399a279199b3d4211f24dccfb68eca568074"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5cb2e05b38cf924e9b16fcac3e478142ff8ebf10066a2948cc80bcd51a677929"
-    sha256 cellar: :any_skip_relocation, catalina:       "b676ae39274ece491b07a0c0864c85ea320deefcf6a780fef067a748163cdb3a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0b84060bc6fd256c985f0bec0b9dbe0594089858b258ec8d56cf4c4fd657ac57"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pulumi"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "358442fbe9e01220641448dada3e3c9e9b5c0672f2c1b3270b494de16fc8ce7b"
   end
 
   depends_on "go" => :build
