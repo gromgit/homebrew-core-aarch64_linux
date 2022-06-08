@@ -11,12 +11,8 @@ class MupdfTools < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "86ecef46f23f8939c14b955a7e11cb2e96698f178bfc32467e55f4e99e473267"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "118715fa212034b534eec4e145577e81968b49959da8e6b817a41724fc343f96"
-    sha256 cellar: :any_skip_relocation, monterey:       "b934ff3f384b9a4e28e0cde1c87112b6b8908b7c2c19c30dee6cdc289e7bce3d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fbbe6aaecc0e80090c021f92606295dac1f7258f958fbed685eb4c75492b5fb0"
-    sha256 cellar: :any_skip_relocation, catalina:       "21d3b0129446781d43f07b07af39c2bfa566c5301b3d408d647779d2c8300895"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "09b118451dcf86336226085392df196a2545c66e02d508fdbb75a102d56da886"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mupdf-tools"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d3adbe71ce90dde4260d878a2abec3f6c9c4f6e4b7f552f24b0a2a917f730ab3"
   end
 
   conflicts_with "mupdf",
