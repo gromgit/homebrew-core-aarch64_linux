@@ -7,12 +7,8 @@ class Miller < Formula
   head "https://github.com/johnkerl/miller.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1977b6173f9cc825908d298f16b8a26eab46e394bbccdaf23b1cee94ab1b62f5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "58b751816639241f329df20252c4acaf24df5293296ef2149753b2633765116e"
-    sha256 cellar: :any_skip_relocation, monterey:       "431da10bb1143add10132eb5a033f5ac75e554b097294a7717e8b5bba71aaccb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "15fda6eeac690a33c7ed80f841861c7ac6fb16b12244079e8257bf70771e4c67"
-    sha256 cellar: :any_skip_relocation, catalina:       "a1df60ba5a5b9227490ecd0fb1b1bdbd5042fdbf52d97f2ebfcb30d391b5007c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a217a9914c35405facc39fff757eb36d129b60dafed198eaeb7f2a7a29aa45b8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/miller"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0e0f7475e7934f1bfd72f4a0c5fa5bae4d9b710e4cafa24b18ea1961640d3cd2"
   end
 
   depends_on "go" => :build
