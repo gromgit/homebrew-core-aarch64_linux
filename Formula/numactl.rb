@@ -6,7 +6,8 @@ class Numactl < Formula
   license all_of: ["GPL-2.0-only", "LGPL-2.1-only", :public_domain, :cannot_represent]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "5684c37cc45e777cecb121708cbf2a18c879c4fdc31ad60d542d0c6f21fb3af8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/numactl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "cf1bfdc88e86702da61c67cb3a3292ec5eacf884a06a78a5205b6ea815fa84f7"
   end
 
   depends_on :linux
