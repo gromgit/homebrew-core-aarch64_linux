@@ -11,12 +11,8 @@ class S6 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "fc6992abd243bb3382d7543ca0fd2e2f1d7e2a9a897dedeefb9a8f1471c84c35"
-    sha256 arm64_big_sur:  "2c1eab12eb707f3e180ce63acc9ac5dda966924fc6a96938260e4b7ce4967c61"
-    sha256 monterey:       "d661bf4caa7053680dd26c082de3638df7150d8e1a1310e00939e1ce5d3b8638"
-    sha256 big_sur:        "460dc845a4859dc58509537f2f947258539a95b6ca38c5277de65bc9dccf5ace"
-    sha256 catalina:       "1127e18d4aa4fe14e9a14a42a518fbfadece1f308b7a84c6ac8736701799ebd6"
-    sha256 x86_64_linux:   "ff653d66b5f2af2877ac487014b6406bbe8ee56eda69547d6ffbf6b7f5fe3f08"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/s6"
+    sha256 aarch64_linux: "c26a1d61151cb22096220cdb6951e7e5c3bcb0a8d369f6ee443d88add041baa2"
   end
 
   resource "skalibs" do
