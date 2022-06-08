@@ -7,12 +7,8 @@ class Nfpm < Formula
   head "https://github.com/goreleaser/nfpm.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a7c74bce2a5f2c329db648ada214be2ea961c51ec1bbe782a91c2892b272df63"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8141e5e97b0644fc74825afd837184cde79f722b87380901a0cd985e6393f28a"
-    sha256 cellar: :any_skip_relocation, monterey:       "bde98609935af4d9954117e55dfe23186901526b858c84c86e116cab31f3c1dd"
-    sha256 cellar: :any_skip_relocation, big_sur:        "38b40a214be3e5bbbfe942ecdf6b760e8cc125653e8028eea6d3fcc95bee5205"
-    sha256 cellar: :any_skip_relocation, catalina:       "0eb46ec12ea9b1902c6619444c649dbf03d7c7e5116a97ad83a68c33a756abc2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f3c0e88b4acdc4a6f0df2e2eedf9cf578462ab5d85f050679ef3d3dd1254ebb6"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/nfpm"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "795be5edc615dba8ae19b843ceab7b85564b8478aba8c48d83026bcd45b29c99"
   end
 
   depends_on "go" => :build
