@@ -6,12 +6,8 @@ class Mp4v2 < Formula
   license "MPL-1.1"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "8df3b3e7bd1fc6800cb3763528b1d8bc7b073151be7feaafd80f6ee27f516c4b"
-    sha256 cellar: :any,                 arm64_big_sur:  "42bbed27ea0af8368259c8b4a601ff0d4708445e9abf3e6e7d1b267a9951229b"
-    sha256 cellar: :any,                 monterey:       "4d352b9521211a6c20d3f4bbcc15dfa7c7438e46e09325b3af889a58b62107e2"
-    sha256 cellar: :any,                 big_sur:        "15a021638c2230c8cf08b35cb4ec3fa7b6f3a2ba3cbf0350edace7e6fb8d39e8"
-    sha256 cellar: :any,                 catalina:       "d69a185550432da8ffa321afdf176abe98d2a30710e9d1a7154caac707e68033"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e3d4b79d24929179bfb200ddbb0af619c863d5342cde5a3ee113e97fee488437"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mp4v2"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2ca99bcffa220fcc8de585f130a77e0c9194456815bbd5c83b371a99bc85ebe6"
   end
 
   conflicts_with "bento4",
