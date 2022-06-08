@@ -12,12 +12,8 @@ class Radare2 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "6de434a4016694c0c4292f684553d08d2173239ab15f51d0bf1d8482e9aa5c63"
-    sha256 arm64_big_sur:  "0dbb9d38ada13576c6e81e72b3cf9fad922f9b33ff336bf2bfa22aedb951e470"
-    sha256 monterey:       "0320200985ae6f04ae74770f5bccf0c23ed251c296f631e602f762a302119cbc"
-    sha256 big_sur:        "00697d97d579b5f1534d7b2a3e6f945ba575003ae1563685022719f6cef3f567"
-    sha256 catalina:       "b96bdbd9fa36aa08fd021ff41881aabcff6926a9ef7a235ff3d9b5b32c8bb29d"
-    sha256 x86_64_linux:   "a957fc0d36efe629e2f38f7f631d71f20774019748f9cee43d3a5b79d6285cd5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/radare2"
+    sha256 aarch64_linux: "4991aefc02fd0741c909381c8e505074fd13c5affa33ead34f7e465cf240f45b"
   end
 
   def install
