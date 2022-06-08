@@ -12,12 +12,8 @@ class Nomad < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e4a6bd71e877896b8a17432988803d119353f2467562e2f9b4d7ec0c3e59e9a8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a1049e029e65c7692e9ebb449458e26780d61705fdcd1e7a72f307af7a648e8d"
-    sha256 cellar: :any_skip_relocation, monterey:       "87e730c6492037493416379f52556b918fe716ff1851587a0262952fa12f3fd7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a37f398250614286552e4cfe2afe869e5cf2febfe7a658d23a84daad0274cf36"
-    sha256 cellar: :any_skip_relocation, catalina:       "9dea96076cadb242db288d49c9ccc20530ed74a86ae7d6125472f06830f7562d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8fccbd6f43d5bd77182562de513a998fa79d7d76d8d44125cbdb86d759dd1159"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/nomad"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "af73bd871e3d594a246471bd29b962fdad1221957596280d54c09bfb233afb29"
   end
 
   depends_on "go" => :build
