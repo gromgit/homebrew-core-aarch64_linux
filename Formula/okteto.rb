@@ -7,12 +7,8 @@ class Okteto < Formula
   head "https://github.com/okteto/okteto.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "794ed0b7eee39b0eec18f9b044f99918e1c8e6964d247fc4880b95fc5be60481"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "205a758f0b26105c9f3bc1bd0d88d4d9736067245741a93070bd8df1bed00c6f"
-    sha256 cellar: :any_skip_relocation, monterey:       "65eef13b0380fd01caaaaf0e8342f0e34b8983b43185fad0d5048d3988c72b6d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "64cc32e34c11af7b18b36b8459e79473becb42b3abbeba4816bb2ac44cd81210"
-    sha256 cellar: :any_skip_relocation, catalina:       "caa6d249e4cf7cafccc175d9c1814d2548263a114525503206aecc826de2ad0e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cb5ef82facd489cc8dc5a53ba26a900a7fb2b4dd18ec2f62746e913f8437bca5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/okteto"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2c218b32735f37da173b36bd16fcc5ace84c7e665bb40f1a2ce80e9904465556"
   end
 
   depends_on "go" => :build
