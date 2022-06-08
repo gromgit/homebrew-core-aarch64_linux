@@ -7,12 +7,8 @@ class Murex < Formula
   head "https://github.com/lmorg/murex.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7ab31b72ecf11ccec9e867e2b137634deb117f524c14022c57daea1b9381e5d1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f1ea8af7c6205fa3def8a1b7326643c16e463a620464aba4163e70aec54b69e3"
-    sha256 cellar: :any_skip_relocation, monterey:       "970a5db4b2bf31753e0595fa12b5c03aa3abae4707b8c3b86dd737f2747d0d8e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "54a24eda24231bcf1d01c8a5f48ce735970c2bb7a6991228628a201df085ebab"
-    sha256 cellar: :any_skip_relocation, catalina:       "7331c51b4bf57a041bd92184833ce9341e31f824461e5aa4da22c3a4ab6e3ed0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "748258013479a5897e7f86c84729ff81bb9e2d76cf62c32df6d908505d3b173b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/murex"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "aa3726b70fdc649f957a20fa7e48858f97c312726745d795178fa511feaa82df"
   end
 
   depends_on "go" => :build
