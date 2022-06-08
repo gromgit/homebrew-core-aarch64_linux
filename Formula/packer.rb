@@ -12,12 +12,8 @@ class Packer < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5178d82b7487833b7fd5c1321dfe0580c12abaa0d8d9fdfb60c975b7c54a99da"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f52ae41581a05c0f7d83b6cd7cfb84bb2af8dabbf0e2eb2661b47cb392ce578c"
-    sha256 cellar: :any_skip_relocation, monterey:       "4a2b550d17768d1a00e03bccc8699f544dd29249acd657700d9d7112f5026f05"
-    sha256 cellar: :any_skip_relocation, big_sur:        "eb0787c5942f56790806d20d44e55566b4891a4632f1b7632a0cd3c5535aeaef"
-    sha256 cellar: :any_skip_relocation, catalina:       "904c3f2176e98f2e84bd61c136be1f5e4f293abd508f2815101e31f0df7f90e7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "525896c4b4cfdc0c48d643586ac3118ff5414bc7ec88425c4018fc2664bf027f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/packer"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "47103e6de397a4fbe627e7382d447483937d4f5640325e8426d272ab9cfa51e0"
   end
 
   depends_on "go" => :build
