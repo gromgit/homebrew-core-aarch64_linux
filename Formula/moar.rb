@@ -6,12 +6,8 @@ class Moar < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6877a49964fc1e5255cb4900763d2038bf34cde552536c412dff49d677b35751"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6877a49964fc1e5255cb4900763d2038bf34cde552536c412dff49d677b35751"
-    sha256 cellar: :any_skip_relocation, monterey:       "7d4108c488ed2b8e281e843579c0f74f47edc5c767f3335e39bc55e6dccf5fb5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7d4108c488ed2b8e281e843579c0f74f47edc5c767f3335e39bc55e6dccf5fb5"
-    sha256 cellar: :any_skip_relocation, catalina:       "7d4108c488ed2b8e281e843579c0f74f47edc5c767f3335e39bc55e6dccf5fb5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d5383d876bf01755e498fbae2d075dcb58745abbf3b24ba53ed1332dbe393fc5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/moar"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "73873ba955e9e7685750ac7fb6fe65adf380509f6b17c56a460a0f39d83d72e1"
   end
 
   depends_on "go" => :build
