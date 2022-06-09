@@ -8,12 +8,8 @@ class Tilt < Formula
   head "https://github.com/tilt-dev/tilt.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fc3580d7a9b9ccda581808bbd85f5a0b79e1d947aeb8ee632348efc31aa34f9a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7d05819022c4dbb69590bd6181ab8b13db1eccdb29a333ac2238094f05441dd8"
-    sha256 cellar: :any_skip_relocation, monterey:       "f62c3b4155049964c932b1970b829682f42f5f20e275559fb596199d7cb37ef6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ba8e55c76b7b672f499976f8c8662f947ea7fc0459f485316064f9517bcc6278"
-    sha256 cellar: :any_skip_relocation, catalina:       "fe6c9e616974281a6f94f01609c31c24b7411b82a18cfa00b3163d12c26f772d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "02fcd25d9996d9c93abaa3aea9db76c763d08015eb7ba3829937ad21841757e0"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tilt"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a5980a2b91005f566579592606dae1aef93e7958644f135c1215ca89e8932cbd"
   end
 
   depends_on "go" => :build
