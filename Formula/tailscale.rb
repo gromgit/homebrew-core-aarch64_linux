@@ -7,12 +7,8 @@ class Tailscale < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "304a865229281c6aeac6dd5fbb8f738cf8e3ea63e210b3712fb0d3dc8eafa645"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0479d0262bc08daf710dbfaf2cec585ff5145fc56f5678acb7237bf4b2ab34fc"
-    sha256 cellar: :any_skip_relocation, monterey:       "9ef727e23b6d19d62e19bf2fb982e80cd3908c60be75c6f0652ac8a29bfb25b5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6cfc9d3d908a2260ebae6442b911850482816447b0d50765ddd66dc5f4548de3"
-    sha256 cellar: :any_skip_relocation, catalina:       "8a8678b57e7e6951dd31f87724632125fde1928d056c5e5765d4a383787e77c4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "43c783ba944407c1eadd9f19317222b8eabab6b866cd25f86f7a68b0cf275022"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tailscale"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "af65eb1c5064d33630f1d27a655da498c4fe9a4e96b0c1610fb0fea2f44e53ad"
   end
 
   depends_on "go" => :build
