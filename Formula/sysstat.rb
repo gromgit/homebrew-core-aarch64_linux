@@ -7,7 +7,8 @@ class Sysstat < Formula
   head "https://github.com/sysstat/sysstat.git", branch: "master"
 
   bottle do
-    sha256 x86_64_linux: "b61d9b7819d1bcde6e90f1c9045f556d387e2d6511913f528c4c2c46b5b8a865"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/sysstat"
+    sha256 aarch64_linux: "87d8d9809391d1c62b87cff06eae84f7c5deb63c7aa2a0a146d1a79aec374516"
   end
 
   depends_on :linux
