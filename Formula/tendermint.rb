@@ -7,12 +7,8 @@ class Tendermint < Formula
   head "https://github.com/tendermint/tendermint.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "87d3c83ddc40da5a3ef8956393d9762faf4c2716e9af91b289494f245e9d78dc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "87d3c83ddc40da5a3ef8956393d9762faf4c2716e9af91b289494f245e9d78dc"
-    sha256 cellar: :any_skip_relocation, monterey:       "edaa20184cfda69506f120dbd0b2b663103e484c18af26e3f8792de3755ed10f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "edaa20184cfda69506f120dbd0b2b663103e484c18af26e3f8792de3755ed10f"
-    sha256 cellar: :any_skip_relocation, catalina:       "edaa20184cfda69506f120dbd0b2b663103e484c18af26e3f8792de3755ed10f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c1d7019c6d13c09e9fe1698cc305a4882e2bcde0d0802b86966907e6154447f8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tendermint"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "060e04938bd43aabad84ef9c9912043e9a84c09a839bf453b76ed2c5092dcac7"
   end
 
   depends_on "go" => :build
