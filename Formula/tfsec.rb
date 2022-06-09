@@ -12,12 +12,8 @@ class Tfsec < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a0bc285026376c159d7546d8c81265b4cf0db9ef9140bac8128567ea1db9b2e0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ece8e5aade4722f40903010966b1b5784cd7c05ea91f4564fb54b9594584adca"
-    sha256 cellar: :any_skip_relocation, monterey:       "6798d09606e518fa6e475e3c1d2a6ac73764c18bfc06b40a13d631b049f98d6b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "32fa42e45b02ca95281c0378ab64f033e0218fded0a2fe94c4ae7dbf9b3ad5fd"
-    sha256 cellar: :any_skip_relocation, catalina:       "a6e56eba89b403cdd86b264cae4cd8faced10b380c7b12a4703ca8f736237fd6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "948c2071abde5d6158be48638a9feb565d2dde2623bc7518285664f055c2e854"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tfsec"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0bb6b0024bd303bf7e76fd9137ba71102970ddc413b2154a8db33a7d24ef0245"
   end
 
   depends_on "go" => :build
