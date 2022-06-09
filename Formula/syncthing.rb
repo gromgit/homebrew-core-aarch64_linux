@@ -12,12 +12,8 @@ class Syncthing < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "357605f0736fb1d553e420966d4e8df409d5a8291f2e176986588d2279004ad6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e757e8289e62b29fa9ed11d015b9cbd3b663ea502dfca9fce2194bd194233687"
-    sha256 cellar: :any_skip_relocation, monterey:       "20e6eca68be27ceabe2eb4538c310c21b4234d27007e4f3cad9bc54555991a94"
-    sha256 cellar: :any_skip_relocation, big_sur:        "af82eed369f22b4b6809c9ea5ef8852aae72aac9ff5e536231dd1f12c077d46d"
-    sha256 cellar: :any_skip_relocation, catalina:       "bc5d7f82ce2cc5e55c921f0108cb1111a7042f0a6c6d060146b763e91dfdb95e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b5e32ba3811fc59ec547d151fd3a113f879e55e49e24bc4f5ffce9a3b1f4c61e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/syncthing"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0183044818579636124f6cf545d209da6d53a2b1692f3f5de397aaad4d7a6bb8"
   end
 
   depends_on "go" => :build
