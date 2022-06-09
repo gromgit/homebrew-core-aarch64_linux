@@ -6,12 +6,8 @@ class Snapraid < Formula
   license "GPL-3.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "78708e3a4c2f93c56e0af8441aa35282d20b258f7dfc2fd5ba6a3f78ff12cf24"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "16d757885ce58f495b0ab7c210c32385a998d5731e42ed32267df2365c564a88"
-    sha256 cellar: :any_skip_relocation, monterey:       "912787b43bdf380ca5689fe5df0e751cd22721c8e09bbad5bf036037fdd896e8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fa18547de5904d3f9a109e340b98ce6290e3ebbb9324178697838205e7f340e4"
-    sha256 cellar: :any_skip_relocation, catalina:       "282d78894d7e897e7d9a1d1c348ff3e6113db1a75e4cba21f05d9764d379cc34"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ad355309464e57e016e38ac9d93eeff4d18582c32ab90f6e097ec93dab8f162c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/snapraid"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "25c7d66ef3d71cba9b0f2c56f1deca56120f02a85ac26a33c0284f7c58e8ad7d"
   end
 
   head do
