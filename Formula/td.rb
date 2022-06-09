@@ -6,13 +6,8 @@ class Td < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "183862b016182f09f43d0c3092fdcb50894ca9f5814b83af816f1d4329368eab"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c78967ab33419211ed531310b5d40da8b7cfdb4573099d8e1b38b940c75d7a24"
-    sha256 cellar: :any_skip_relocation, monterey:       "4de1e88f3b9f6477a154a6f5e946a7411a5a30a4e054d3fac9ad9b62d5964b4c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "665d2709804555227ee9fdffdf918574902345547bec837c53cd06fff04212c9"
-    sha256 cellar: :any_skip_relocation, catalina:       "b3fb2df4df96602895a40900d682fa42ca9bbbc814463eeccd50ddc2cae8f485"
-    sha256 cellar: :any_skip_relocation, mojave:         "af978b05395618b4e095498b3a9a4aa66086f8bc793804fb59086177535c8565"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "32afc5a28386f21e96fad99d94094b1011519e21bcbfd7ee14e6cef892f36e68"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/td"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4ed8bfb78f24c6d4fe7a2d77338b5d1bc82911b7e3097f40d47bdac41ba906a7"
   end
 
   depends_on "go" => :build
