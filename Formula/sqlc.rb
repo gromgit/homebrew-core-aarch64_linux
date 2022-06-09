@@ -7,12 +7,8 @@ class Sqlc < Formula
   head "https://github.com/kyleconroy/sqlc.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a5b00feecebff3629f7fd4ce81ff4c19ed1a4a4621207082632363986016dc48"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cfee1d2fad18b2303dbec88220fc675d97c6aaaea3561fb3fe28a524dd64fd3b"
-    sha256 cellar: :any_skip_relocation, monterey:       "2d27e2d7ee03d1a96d96a9068ac3008c9a3b5fb69b329a597a42ae649c1cc8e5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f55b56f838abe246e3976e9566ae12e41886350e0ae3e8e84c7a5027ac395925"
-    sha256 cellar: :any_skip_relocation, catalina:       "aac7d728e994cf2fa8f31d051a9e3ee2768f1b7901a5abc5c883e885dfdd5836"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0184c90683dd8d0b30af1635e1d224b68f3e9fe41b34c12e9be6a62e904a34a9"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/sqlc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "32e55c9fa59492eb6e6c12cdc1b59d960fb1320a2c04f55b02d24d9b8254580f"
   end
 
   depends_on "go" => :build
