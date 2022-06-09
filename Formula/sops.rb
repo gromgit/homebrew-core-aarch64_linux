@@ -7,12 +7,8 @@ class Sops < Formula
   head "https://github.com/mozilla/sops.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0b624e63dd53118056a25e59ca1e757e03adbf527d95e1c0eefe4487187c9706"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "45d2aa787e93eb803eb6ff266a92c589ed76870afcf44176e768b573d9e16ee7"
-    sha256 cellar: :any_skip_relocation, monterey:       "6eebc96fa87ee730b79195166bdc06f27896c48541866f3c64105e32aa177c40"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a8e5994725fd84140926d5420fd86f4e5a3d26994a7a646196008b00dbd14944"
-    sha256 cellar: :any_skip_relocation, catalina:       "72e11a7d6e537e2c3cfe73c128c4fb63bfaf170fb25f76d1127ef5d9a3c71fb7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "262fbf530682ad43100ff2e502cb869dfb8b1071e6396fc697ba843db3cff0f3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/sops"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "6f51cdc47b2c526d6e631b25b1e51bfc47b06b59b47dd0ca16d22af059f42647"
   end
 
   depends_on "go" => :build
