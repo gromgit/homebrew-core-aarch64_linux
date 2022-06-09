@@ -6,12 +6,8 @@ class Thanos < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "397f21b7d392c0db424bb9e8f9bbf5333af600b9466ccf2aeaa0a01976d04102"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d66fee5dbe4491cf9fdcde7b3ed62bef7cb633f97dfcfa157f4f431477c8bdb0"
-    sha256 cellar: :any_skip_relocation, monterey:       "b15687722e4ec3e341053df985764de7ea990b05a54f427c55927b69b9e13539"
-    sha256 cellar: :any_skip_relocation, big_sur:        "efd48f1db17e924f10e3f979b3a8f5015d83954964bd4bdb0ce60a7b6562ca23"
-    sha256 cellar: :any_skip_relocation, catalina:       "21090f4fd0866795c8a2daac31a96f4dc9b6f176a59c92a32d77fb5792d57313"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "13644bba23ea523cb162926ff1c4b037f2e44be96997b612d0a4da9775318bfa"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/thanos"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5ba007d70f806789f3fa73b440661a7d9fac2ac63a93737b2ef30898ed1c22ec"
   end
 
   depends_on "go" => :build
