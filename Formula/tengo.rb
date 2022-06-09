@@ -6,12 +6,8 @@ class Tengo < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c6578b886550e696ee09232115c733accf93ef81ca15eec777ebd1f97e1c0ac3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c6578b886550e696ee09232115c733accf93ef81ca15eec777ebd1f97e1c0ac3"
-    sha256 cellar: :any_skip_relocation, monterey:       "43dea81ca8f99cd2d6545655abbe3904990bf30a2dbbd2293d0059bdb7027e4c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "43dea81ca8f99cd2d6545655abbe3904990bf30a2dbbd2293d0059bdb7027e4c"
-    sha256 cellar: :any_skip_relocation, catalina:       "43dea81ca8f99cd2d6545655abbe3904990bf30a2dbbd2293d0059bdb7027e4c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a681c38bd47e971b82bcc4c861163e49379f55d63b71b3ce57aa3ad1c01e4cae"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tengo"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1f0aebf5cd913bd726428a1f4d77f5aba9c537e10660040c99eb50a0c93c5b43"
   end
 
   depends_on "go" => :build
