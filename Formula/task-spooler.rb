@@ -11,12 +11,8 @@ class TaskSpooler < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3e03f81d2de102317e9d6cfb0231672bde2d91580eae2b87fe1b85c506ae9324"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cdf989b9a44ffb8b4b5d525502688c238870c12073121ceee16e6ebd0042d3c4"
-    sha256 cellar: :any_skip_relocation, monterey:       "fbeede406132097d9fed9b4855d16d3953ab25a793b8ec6aa839d1945d874606"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cc9531dbb900f39d9d773c522977efeb43f937287cfca6ef855ba962612ee9cd"
-    sha256 cellar: :any_skip_relocation, catalina:       "2d714f5efbba74aed67ccf9e3b2a36c29b77578949ca33f88acd6c78e23f1f78"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d4b175e91b16a67988948e853a27ef7ecefd89c9523c09d3b2a7e375d0abe297"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/task-spooler"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "19047d285a617b9a17108e957820d74e795884e043524abb699525629f9f1de8"
   end
 
   conflicts_with "moreutils", because: "both install a `ts` executable"
