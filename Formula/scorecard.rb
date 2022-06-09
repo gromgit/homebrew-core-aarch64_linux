@@ -9,12 +9,8 @@ class Scorecard < Formula
   head "https://github.com/ossf/scorecard.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "12b2c553f18537bec1869dde2e2e8570d3c19b32543d23f32f36ebb391999967"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "65f772131c54f876bb41e41caf52b8b67fd392721030b4759298aa9238687a89"
-    sha256 cellar: :any_skip_relocation, monterey:       "4cdbf8218c6a4bb96dc28f2a7acfc0116fa86672f192b9f4b6dc8c93297e1319"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c11465a47d844bbc30dd871d8e203d9a3a8ff6f35be40dad573c2e10314d396a"
-    sha256 cellar: :any_skip_relocation, catalina:       "22214695e0531517ab61cea7234565386e77a24055d5b3edd9b965c203a70ecc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fd98b5c7fc164b8e31701dc27500f2e925f13e32f61287d7c0485bdf1ae91872"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/scorecard"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "22093357206ccc57605b2c428c66a4ae2bb4cce3612ba59fedc2bc92d64c7ebf"
   end
 
   depends_on "go" => :build
