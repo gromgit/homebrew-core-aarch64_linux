@@ -11,13 +11,8 @@ class TitanServer < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d152d5cdf3a9a8f600f9956f9e1687a4cbcccbda4398c69ddde2d44a42d43723"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d152d5cdf3a9a8f600f9956f9e1687a4cbcccbda4398c69ddde2d44a42d43723"
-    sha256 cellar: :any_skip_relocation, monterey:       "6e84706c4de8f9288fe11a9c28d0b6901289ce45ddcd7ff51abc1ecfcc6f3ac3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6e84706c4de8f9288fe11a9c28d0b6901289ce45ddcd7ff51abc1ecfcc6f3ac3"
-    sha256 cellar: :any_skip_relocation, catalina:       "6e84706c4de8f9288fe11a9c28d0b6901289ce45ddcd7ff51abc1ecfcc6f3ac3"
-    sha256 cellar: :any_skip_relocation, mojave:         "6e84706c4de8f9288fe11a9c28d0b6901289ce45ddcd7ff51abc1ecfcc6f3ac3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/titan-server"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "19e267cd2547a537935ce119a0734e36b8bf62c92d21f997834e219a96640f89"
   end
 
   def install
