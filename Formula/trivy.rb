@@ -7,12 +7,8 @@ class Trivy < Formula
   head "https://github.com/aquasecurity/trivy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "88d64a390db9361cdf387f92dba12e720d824af4076c9e21fbdcef843933a673"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b673fe8c9abef9fe54bf6417e951628d87b4c4b6d970e89e847cefb316a201be"
-    sha256 cellar: :any_skip_relocation, monterey:       "518abc5347fd017a35891746270359845ef9d42430fbb98e43df51fd58204166"
-    sha256 cellar: :any_skip_relocation, big_sur:        "67e0bce13bd39bb03d27ff62b047c9700308147801a58c8209c822edb867c163"
-    sha256 cellar: :any_skip_relocation, catalina:       "d0d60fab894c7dc38546c71661b822318e984b6112aa85f46c89b4f7e5f7f97e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "17ca9decef0dad1a5cf113b91c3aec9452a6315dcbfb849e652bd713ae38dde6"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/trivy"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ffd9ffe0b7f10e520ab91db14504438d2557191d63b2f17bd2c55616bcdee38d"
   end
 
   depends_on "go" => :build
