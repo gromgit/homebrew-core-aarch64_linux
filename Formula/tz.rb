@@ -7,12 +7,8 @@ class Tz < Formula
   head "https://github.com/oz/tz.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ffcc6e47c89080907b571031d530046fe710d4c74c45183a8981c6c67ed3515a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ffcc6e47c89080907b571031d530046fe710d4c74c45183a8981c6c67ed3515a"
-    sha256 cellar: :any_skip_relocation, monterey:       "2ce8046b150966b4e05f0f13255f17d6589650331578256f6f6f41ec25823f81"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2ce8046b150966b4e05f0f13255f17d6589650331578256f6f6f41ec25823f81"
-    sha256 cellar: :any_skip_relocation, catalina:       "2ce8046b150966b4e05f0f13255f17d6589650331578256f6f6f41ec25823f81"
-    sha256 cellar: :any_skip_relocation, mojave:         "2ce8046b150966b4e05f0f13255f17d6589650331578256f6f6f41ec25823f81"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tz"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2b6f19a908802e1cf7364931e170cf5fc909c5380dc475c068dc96b9acb75c89"
   end
 
   depends_on "go" => :build
