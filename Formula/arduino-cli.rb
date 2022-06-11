@@ -13,12 +13,8 @@ class ArduinoCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "bae8af4aecd07ca5ac57ece0c17387ad7d310d91375daed4c0b178253d44cad8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "54e5588c3a2cfd7eeee64da76514f82f45d5505ce7cb47bb41596962cd6bf162"
-    sha256 cellar: :any_skip_relocation, monterey:       "2f94dbd7f08288e82b2daa0431c7696219744ca212c52ea962c5d78ca9589390"
-    sha256 cellar: :any_skip_relocation, big_sur:        "db675f8f5c2c36b59378d2774535b1bdad46f7ccde87495c4f3b9a3c850cfbf9"
-    sha256 cellar: :any_skip_relocation, catalina:       "7a98127797bcb1acc737a47ced6262fd45bd9633de2f2192391536feb58635da"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4136941860e46bc8e14f0cdcee1b3133493d81b5796ba819409a32b2d449d530"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/arduino-cli"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5608debc06d787cd10e758274697d0e051a9b8a2a62245c2cd3d7a810cdda136"
   end
 
   depends_on "go" => :build
