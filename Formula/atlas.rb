@@ -7,12 +7,8 @@ class Atlas < Formula
   head "https://github.com/ariga/atlas.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4eed4bc6c5f3feb77e7418b226de83a65de552a357575cb01ab5694cd383fa0b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "586520c4cd1b5fef5dd3b303a28db3fb5b7a18f7d4c11dd2d458dafc7cb0876f"
-    sha256 cellar: :any_skip_relocation, monterey:       "f09196071bec3303a4f70d12c728b05e1419921dbfe5330c6087a47fe8f67b45"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0e3d8f12bffbd62192607bfe8c2c6d72e088029555d246aafede105087e381bc"
-    sha256 cellar: :any_skip_relocation, catalina:       "7e431d5b913036492241df603d3dc89dd03180bfa2d94eeb690a773338e49ea8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d3a318452852655cab9aaa051007485885204ef9d572405beeaa541c371ac37a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/atlas"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d14ec72d004c27fc1ba000298cb80c953c76cc43d438b031ef13e3192ed8f5a1"
   end
 
   depends_on "go" => :build
