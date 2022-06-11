@@ -7,12 +7,8 @@ class CartridgeCli < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "97a5095dbf74396e4339f08b8834e08206e14b4f53e800bcf141f67ab7bae070"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d11608d43883c32ac2f82445ae404fb4e470a12d21252f9e455e61d6d0494d43"
-    sha256 cellar: :any_skip_relocation, monterey:       "ae0d202ae2e87ff301d40837a011c434a288845946ac4c501f386dc84d192fbd"
-    sha256 cellar: :any_skip_relocation, big_sur:        "75404c41ea00d59d5b34e940bd66d9bc5001a681ef1f0f5d4cbc6f7303166812"
-    sha256 cellar: :any_skip_relocation, catalina:       "fc8a1f7bf9d7d2d4a6240890dbe005ddce1c9a82a8de96de712e30de902f51b8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ed9fb0337aaa5754fb1048f87158f45b4579532fda57c3a9379f349cc79f2444"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cartridge-cli"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "cfd716daf5c14c9ffc445ac34ce39adb1184cbe1647bd1f5f5d8778b27539add"
   end
 
   depends_on "go" => :build
