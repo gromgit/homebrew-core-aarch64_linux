@@ -12,12 +12,8 @@ class Tcsh < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "c8b0e8fd0288a59f3bad4c354c3e961f2e67ed7619c9a562e62bd0fc8cf08871"
-    sha256 arm64_big_sur:  "8c6d21af42f2626158fd308f1b7a4be87abc706f646d7a96f7d2af4f40f04772"
-    sha256 monterey:       "6da23cfbc2409cc4ef46f431eb9904f0664228c023bb477ec12d2afa653e17c5"
-    sha256 big_sur:        "94167b5ecd50ab3180589d3103563835c40145dfa941a43e559d82a3a14ef232"
-    sha256 catalina:       "7fc485b775333252b7f1e387e765a3da1ed3c1f50e5b1d4fd7849eed9c1d8dd4"
-    sha256 x86_64_linux:   "712dd61b6a9c9c8290009089f73762c194a612ed3cad55e71e677db63db16556"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tcsh"
+    sha256 aarch64_linux: "2f7a92b451c23161eda424461a72d14f392eaee5de1fb7957f96c8d3da70f080"
   end
 
   uses_from_macos "ncurses"
