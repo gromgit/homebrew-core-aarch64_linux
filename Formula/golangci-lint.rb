@@ -8,12 +8,8 @@ class GolangciLint < Formula
   head "https://github.com/golangci/golangci-lint.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "71a47fb806a5c34a18a52d4471019c0b34d8e1c4a17fe424301360285ab7decd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "46cb8d5eaffa0292d787b7a75af5ae154355a2aeee211d6d681559b939885084"
-    sha256 cellar: :any_skip_relocation, monterey:       "5acfad66b867a071a756f6f0d45b452e6121c8420a884dfd48165de19c5051e9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9871a6b60c92cb69a4cd98cf6f718719336c505f35984b00d545704fe418955b"
-    sha256 cellar: :any_skip_relocation, catalina:       "4c86ee9d62cac7fd4b6c7e1f7a2f5fb4ad7832e0e73d93e8caad088a2d8412d1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "92de2b1e33e96085b7255110ff3a3875c6f40b692d6ed4661be50826dc6202a4"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/golangci-lint"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b9a9f8ad6f265ff741d37d13a3a1883870c8e66cdcce1a6dd233a6c27eba7c99"
   end
 
   depends_on "go"
