@@ -7,12 +7,8 @@ class Fzf < Formula
   head "https://github.com/junegunn/fzf.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cacbafa676ef1fea2fe91bad2e3ae6d2c05be3955a50ae58e5e30f57f131be97"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cacbafa676ef1fea2fe91bad2e3ae6d2c05be3955a50ae58e5e30f57f131be97"
-    sha256 cellar: :any_skip_relocation, monterey:       "08b9ea78a577ffcc3f5d136014f3e15ade8d3e25097252d52edfe0ff61c887cc"
-    sha256 cellar: :any_skip_relocation, big_sur:        "08b9ea78a577ffcc3f5d136014f3e15ade8d3e25097252d52edfe0ff61c887cc"
-    sha256 cellar: :any_skip_relocation, catalina:       "08b9ea78a577ffcc3f5d136014f3e15ade8d3e25097252d52edfe0ff61c887cc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "52f6a4d95f0dcd3707ab2327bf405a8e50be9e974a21e645bead11dc1cb7bd2c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fzf"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3f3a201ea3bd200c60bc3bbaf6483a6d9a0f0f6a8e7c439202906ba88c11e3db"
   end
 
   depends_on "go" => :build
