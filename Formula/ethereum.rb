@@ -12,12 +12,8 @@ class Ethereum < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5f3ee53cb2809f026496cb1dbabb66b27555ce691608166cbdcdcdd15489a6a6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bcb07942fddad27093e4b987a30b5b56dc8c5b9421191afb14ea66254d8617db"
-    sha256 cellar: :any_skip_relocation, monterey:       "1645e38df863b085c94e632b1abb53f7b2267199db1c9e700773593650650604"
-    sha256 cellar: :any_skip_relocation, big_sur:        "13a96148a182e46c24082a1c6642f0d232bc5ea570fbd6bbff8ce5752812beae"
-    sha256 cellar: :any_skip_relocation, catalina:       "64b0aa19ed69711f55f819ee135caae41515e32abc3f36aed5e954654d27f2ab"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eea127fb7cdd35e4d132733832eda9a30ae8e25ad64e5c3e43b41fd5a6f7d743"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ethereum"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "49ffa004a241e98bb5e918e4754fa93b93ede4a82c99745c50f32b8c2e23afb6"
   end
 
   depends_on "go" => :build
