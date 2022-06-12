@@ -11,12 +11,8 @@ class Pigz < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "87eb60dff0d81ca7f81cf246c2da0be06d6f909e209accf8666247d769a9b219"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "51fb51dc19db67ecf6bb7b76454cc83b00171247e9dfc095f46553c6bca8729f"
-    sha256 cellar: :any_skip_relocation, monterey:       "bffb52ab8c1c4936c352e9fbb97fc789ddd86546a274f6b35d0f6524315ad007"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6d089d60ff92c745931331b2c624178c79bb6640c2022b8dd988ec50ab369e15"
-    sha256 cellar: :any_skip_relocation, catalina:       "900864364a7ee537d5f99a765007861b432a435f2613a4c53ae8a570ec12fa7a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0a6ba53a70f69c7db90ab0f69af67ae3abfa95058cdb1ac319b3bfffbdbc6847"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pigz"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d9bd3ba5cd8002ec64c97be76a18ea0e337b71b203519708e94e2be61b5bd089"
   end
 
   uses_from_macos "zlib"
