@@ -7,12 +7,8 @@ class Oauth2Proxy < Formula
   head "https://github.com/oauth2-proxy/oauth2-proxy.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f00f9796332a7a1041eb7b2ea657adfe3a8d641d67d0e9c3b23d3424eafaaa51"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a90c207c6ff2e012401f5f4a398995bcf3bb28bcbca21e4c0ea81cc96795a9f1"
-    sha256 cellar: :any_skip_relocation, monterey:       "6fc77b0e1661a5d180ace6d58f40d6689b8b79a043400accec71201192acdb16"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f62725c2c098efe81d8dc6a7c4f118de6c5de40a40d1f1c7a86b445b7ed9812d"
-    sha256 cellar: :any_skip_relocation, catalina:       "0379680d1777c22ee01d14479384d8936e1a31521b970a6d9fa751f88b8a1dea"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9db5e176df7fbe4f2032e2e2e5bc3a1f546977880ecf5fdf12d9e6e8eda7085d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/oauth2_proxy"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2ee360109d7b9f4c298ce69e252371bd251789801328b325bbceb599b44b3677"
   end
 
   depends_on "go" => :build
