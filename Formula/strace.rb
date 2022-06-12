@@ -6,7 +6,8 @@ class Strace < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "6856561fb318404e9bac14f49ab7f614005799139392760deaefb8d38dd9153c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/strace"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "66f9e72e2ab2463610babf0feb24598a5bc39817d01da306e772ca83d254c803"
   end
 
   head do
