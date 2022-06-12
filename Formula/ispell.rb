@@ -12,12 +12,8 @@ class Ispell < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "cd60564b8dd85c18dcef91d4b5d90aa66fc4ccfbe2008009d33aa190554661bb"
-    sha256 arm64_big_sur:  "e76131c8422ce43a180cf8d13fd74c2ff9073b82f9f749f50ddb27bda01bdaaa"
-    sha256 monterey:       "eb6ac3922256a30c140ceb738cceacb4564ae5f80f23e06b0029743fda181902"
-    sha256 big_sur:        "e5c67fdf342bda317f71d1fee34817164fb2d8ec5d14c0bf4313d0fdc50499d5"
-    sha256 catalina:       "a21626f709579f26673e5bb5a9be7a5d8d58d4bcebb6d5ae214aca1cfc3bd6ab"
-    sha256 x86_64_linux:   "a5a1ed2e6abadcda57b87db07c2e06746460a5ebcc085f5838ded950f4989998"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ispell"
+    sha256 aarch64_linux: "d9763323baa7d649aca164ae98e0e9b66d019e468c8b0c4e34d8d4ac21c9e253"
   end
 
   uses_from_macos "bison" => :build
