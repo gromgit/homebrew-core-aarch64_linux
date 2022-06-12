@@ -7,12 +7,8 @@ class Tbox < Formula
   head "https://github.com/tboox/tbox.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7686e4aca03fead3b10e49568600935d7bca9678bb747d736640f4aa907a68cd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "af68ee72f0afb7f60bdffd342c152db700c54212500a262597625c5ac8f50a33"
-    sha256 cellar: :any_skip_relocation, monterey:       "c21d7e5f3bc3a15338a0c1d6d55d72c396e1308049fe52228ef8451853870b23"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8acbb9ad518a7c4e82de5510af88657dd0c1feab3db55e672f96d06459c1675b"
-    sha256 cellar: :any_skip_relocation, catalina:       "f1e53bfb8397d14871282edc646ef993fa0d5cfae0c1243fcac2cbbcefb61755"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ec1c0828078dc222ae93501f594a07d9d10945adeac23bcbf8eb04a67f403b18"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tbox"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a04ad63adca72f032f49e105dadc87ae220b60e9b2bfd31f33f4d838d22ec3c6"
   end
 
   depends_on "xmake" => :build
