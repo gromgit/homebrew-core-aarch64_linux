@@ -13,12 +13,8 @@ class OperatorSdk < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cb309ebb6dc58aa4d24d2cce10eab98b455d0f567b4dadfc0cc3e3c15e5fca44"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b58d271cea0166c27e50b8ad0c0adc006ccb13db37e619ca5bffa1e847234132"
-    sha256 cellar: :any_skip_relocation, monterey:       "93f4f5926140c39a6809a6aa1a9d3729c995f41680e9fafe7548c68366560c07"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3be9656a780de59778bce70d1b22a7d4c9c73bfa9a46bb15ad9a1210398cfadb"
-    sha256 cellar: :any_skip_relocation, catalina:       "9c88e8c1d33c6457c8ed22a4abb510f1cbdf14de52565fabf06ab73bedcc345d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6ab8c291e0dad800d4405f56002ba1252c13eb4b91e8d4b563b95da33b3a472f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/operator-sdk"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f655b6414ca41a2a67d1892a0b172a70c02ccce9e5ed3a3b3f1048656c390576"
   end
 
   depends_on "go"
