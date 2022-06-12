@@ -12,12 +12,8 @@ class K3d < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "dfa9215a5bfa3f132c8536417b9726c82086609c16d15be69d4daeca15ab7b07"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e94471752c86ea851cf973ebde97c62fb44b3bcf1c275847d8b85bc8829c5a2e"
-    sha256 cellar: :any_skip_relocation, monterey:       "cca152ae34bf2cbd6a903037b7122be12a53971b37e9c64e0981587cabcc4a25"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bf35e385b5152299e8e181ae5f215a64c769ea55cbb48d563cb8cff64d52f45f"
-    sha256 cellar: :any_skip_relocation, catalina:       "82fbba63a88fdeda2ebb334751cc0b2ce00b3069e660147aa4cfa3d01fd9604b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "478b3f2e98726a9af09d9f84b55a0f927f1e9cddbe7d74d02a952716a90edc24"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/k3d"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "920f5a532e740ff8ea95214cf8c99a17c8e9aa5493b9c6a3f3adcfa2d79f6196"
   end
 
   depends_on "go" => :build
