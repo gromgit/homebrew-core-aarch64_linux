@@ -11,7 +11,8 @@ class LttngUst < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "3c97fea89e34fbb3e032b29cf0dbf688212effbbc801e82cafdd527513725ad4"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lttng-ust"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "03e7fc67cc5ed19617596b1e887609e0ba9b644c0bcd78a8e776e6bd8464e0c8"
   end
 
   depends_on "pkg-config" => :build
