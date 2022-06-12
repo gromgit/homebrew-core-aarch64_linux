@@ -6,12 +6,8 @@ class Logrotate < Formula
   license "GPL-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "01b5f400fbc9bc6c8e694b205bd625bd046d12c86f39cf1042cee15873309d27"
-    sha256 cellar: :any,                 arm64_big_sur:  "1cfa4ceedd3e7bf227a7950d865c5439666ad16e0c051f88b3771daa93bc7a47"
-    sha256 cellar: :any,                 monterey:       "8266898c6d82f2ca10fa95c40811712e6059a790674f6bcd8cc3b94825a9bab5"
-    sha256 cellar: :any,                 big_sur:        "134e05229e94e1b550472237d11983763684d23797e999442958ca481e88820e"
-    sha256 cellar: :any,                 catalina:       "ae3079d10750c31c48027a8dbf3b1b132379cf0ce8c9e7c2358421e63b9ddc70"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "36257395bf87b366af182e783176cc7cf72087113c9d5e6de63751436eeec327"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/logrotate"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a556cd09606989141c047267f64acaf3dd23507efb1915da833f110da1141451"
   end
 
   depends_on "popt"
