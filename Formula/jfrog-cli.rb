@@ -6,12 +6,8 @@ class JfrogCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7e6b89a565485a4a5b8fb2b676f0982176996ff32999893807493ee5d55a8242"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "62cdf2f09e8aad04d4aacbf2c375434de3921e3b1a2cf7e252456e5bebf02e1a"
-    sha256 cellar: :any_skip_relocation, monterey:       "79af3d13ce4768deaad1e2ca1733b4ed49f06e45dee3d7a6e878272f9454d9d2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "78851f2552d9749205d11fedb1ed127c4cf36e565113cd13a3b2e484db583b13"
-    sha256 cellar: :any_skip_relocation, catalina:       "79f04add3403a950bcf72f27c71a4614181440345828bd72b8a86205a852cc79"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2ec7650257b4a7e8231124d63bba6780c4a0b3401fb2f331edf2e87286ed06e7"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/jfrog-cli"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "98e2af0b21b9da4f42fbe37ba3be2e8c591d3db62ba3c60ebcca97a8f157d039"
   end
 
   depends_on "go" => :build
