@@ -7,12 +7,8 @@ class Xmake < Formula
   head "https://github.com/xmake-io/xmake.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "85b7c3125fecdc983d44faa26b29f6a03e997fdfcc7dc90a8af5fbf1e60e1c73"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f6afc9d2060838214ca517c1f59271742519baa8c429a952fd3c04952005323d"
-    sha256 cellar: :any_skip_relocation, monterey:       "71b7f08020ce93d0519d0cab7fa0aa081ab2f3880b802dd2ffde04d092f238eb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5dbece780215f07b4769e47dd1fcb044553272a75fb42237d118274547fc9aad"
-    sha256 cellar: :any_skip_relocation, catalina:       "41af3e93e9539e10df6ec63841a6cddbaec0df56ef47b56abffe05f7da4940d9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e89453aafcecf53467b9d1a0125c37cda263314ca61bd4492d4acf61445501f6"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/xmake"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "728a29d91db38539f3848aca60ca7936424b379e90b14baba051bcbffd037bde"
   end
 
   on_linux do
