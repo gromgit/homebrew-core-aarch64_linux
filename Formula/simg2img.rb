@@ -7,14 +7,8 @@ class Simg2img < Formula
   head "https://github.com/anestisb/android-simg2img.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f4c50b28f615335a6d9dcb2730676b4d3d0b5f1cc02d0279959d313ac0eda6fd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cd4891712dae2fd35115f8ee32ba703bc3094ff365e52c8fe6a2b0d4694ee1ae"
-    sha256 cellar: :any_skip_relocation, monterey:       "3236b3d33786220a8a09ab5f43b237bd69b45bc397f1011f4075939399d44489"
-    sha256 cellar: :any_skip_relocation, big_sur:        "04bb96fc69c1e71931d0fe4b13f122f6036573135c9a228e14fbe54d60ef4515"
-    sha256 cellar: :any_skip_relocation, catalina:       "a79238cc3b241a3c9f2635b2ce230107f4372db3df7678dcc0857f8c7ef40581"
-    sha256 cellar: :any_skip_relocation, mojave:         "eb4046906b4bc9b2508ed5a7bbd0c9cfd2bab387c9891dbbf396c64374fdef6d"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "677aa2ecb11b6c0df59eb44cd75b7bc66d7f99607a4a5e0b5f9137d42428efc5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "12b3dc2a827326c0a15c73a1ea4dd3a986f68dfdaae65adcf035239c449f066e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/simg2img"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f1e6d55f3632504018fdca41714f2d96643bba7334a143c41e4b5037b589de24"
   end
 
   uses_from_macos "zlib"
