@@ -8,12 +8,8 @@ class Zbctl < Formula
   head "https://github.com/camunda/zeebe.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9a15342dac131f203c492762097002206caa2f6bdb8ca80b2f277c4221a65648"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9a15342dac131f203c492762097002206caa2f6bdb8ca80b2f277c4221a65648"
-    sha256 cellar: :any_skip_relocation, monterey:       "90c95487cae2a5722151573a288d90ab2657c7282f70bef2c86db0e5a0f7dcbe"
-    sha256 cellar: :any_skip_relocation, big_sur:        "90c95487cae2a5722151573a288d90ab2657c7282f70bef2c86db0e5a0f7dcbe"
-    sha256 cellar: :any_skip_relocation, catalina:       "90c95487cae2a5722151573a288d90ab2657c7282f70bef2c86db0e5a0f7dcbe"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2ec785c4664eb7cfefa488c40bc42fea53d5bce70baf909c7a483e8849b77e40"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/zbctl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "58c6d48655926941271ed521b03bc54c1c9d784f55d53d3081d935bc51931443"
   end
 
   depends_on "go" => :build
