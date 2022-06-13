@@ -1,8 +1,9 @@
 class Vroom < Formula
   desc "Vehicle Routing Open-Source Optimization Machine"
   homepage "http://vroom-project.org/"
-  url "https://github.com/VROOM-Project/vroom/archive/v1.11.0.tar.gz"
-  sha256 "ca8c70a0ad3629640bb6c9b5fc5fc732fad36cb8572d0c58ff7e780be15aa544"
+  url "https://github.com/VROOM-Project/vroom.git",
+      tag:      "v1.12.0",
+      revision: "d3abd6b22fe4afc0daa64d6b905911999b12dcdd"
   license "BSD-2-Clause"
 
   bottle do
@@ -14,7 +15,9 @@ class Vroom < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "2b43cccb5dfda7f01cee6c9ca1fa43a3cb11879cb35e85183ec05df8e26770c0"
   end
 
+  depends_on "cxxopts" => :build
   depends_on "pkg-config" => :build
+  depends_on "rapidjson" => :build
   depends_on "asio"
   depends_on macos: :mojave # std::optional C++17 support
   depends_on "openssl@1.1"
@@ -25,8 +28,23 @@ class Vroom < Formula
 
   fails_with gcc: "5"
 
+  # Fix build on macOS (https://github.com/VROOM-Project/vroom/issues/723)
+  # Patch accepted upstream, remove on next release
+  patch do
+    url "https://github.com/VROOM-Project/vroom/commit/f9e66df218e32eeb0026d2e1611a27ccf004fefd.patch?full_index=1"
+    sha256 "848d5f03910d5cd4ae78b68f655c2db75a0e9f855e5ec34855e8cac58a0601b7"
+  end
+
   def install
-    chdir "src" do
+    # Use brewed dependencies instead of vendored dependencies
+    cd "include" do
+      rm_rf ["cxxopts", "rapidjson"]
+      mkdir_p "cxxopts"
+      ln_s Formula["cxxopts"].opt_include, "cxxopts/include"
+      ln_s Formula["rapidjson"].opt_include, "rapidjson"
+    end
+
+    cd "src" do
       system "make"
     end
     bin.install "bin/vroom"
