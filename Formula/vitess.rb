@@ -6,12 +6,8 @@ class Vitess < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2018e69275a46fb6acb3fbd9014322f4eb18eee96c7c4c3455544e9f3bb1d66b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0025ffff025a0bc614a6708419fbb7f352d38b0c2e501e55b25160385e3fdb31"
-    sha256 cellar: :any_skip_relocation, monterey:       "21860e27b898b30fc78272501636baab3591a57c48f18771eb7630df44571102"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f3142f92f0b868718f8f148f802c0cc2a27f64711bead1d0f9fd736e3f9520ee"
-    sha256 cellar: :any_skip_relocation, catalina:       "ef82f191d88d14d52e38d34f766cf06116b80596d48d372c100be43945d88352"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "983cfa02a334e29f09277d248b59bd35f977e5991bebe74a118ca0725fa7d740"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/vitess"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d3ddb2c795ff4c710285fef81e93f86d2d180bd5e9284b399c4b780a28a94fca"
   end
 
   depends_on "go" => :build
