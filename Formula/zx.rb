@@ -7,6 +7,15 @@ class Zx < Formula
   sha256 "4989d758519b7c5e82692ba5247e98d28b8acee064a2572b8fae9956d4a20997"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "91d34d483bf3a78476f8a8fcbc8740882ee6674da4126ace9dce33595ec89b17"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "91d34d483bf3a78476f8a8fcbc8740882ee6674da4126ace9dce33595ec89b17"
+    sha256 cellar: :any_skip_relocation, monterey:       "fa12954fccf750ecdfd04f6ad36e4d2458215503472233863e1d3bd14cccf293"
+    sha256 cellar: :any_skip_relocation, big_sur:        "fa12954fccf750ecdfd04f6ad36e4d2458215503472233863e1d3bd14cccf293"
+    sha256 cellar: :any_skip_relocation, catalina:       "fa12954fccf750ecdfd04f6ad36e4d2458215503472233863e1d3bd14cccf293"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "91d34d483bf3a78476f8a8fcbc8740882ee6674da4126ace9dce33595ec89b17"
+  end
+
   depends_on "node"
 
   def install
