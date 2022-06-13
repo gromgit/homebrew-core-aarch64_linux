@@ -7,12 +7,8 @@ class Zk < Formula
   head "https://github.com/mickael-menu/zk.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "21cc3b5384e0a7b99084639b2f924c1ff3c0909b3eb251b8747076e2b0547834"
-    sha256 cellar: :any,                 arm64_big_sur:  "18505544f41597f235f691e386bdf37a30c18c347fabcdf621cd120e76751ef8"
-    sha256 cellar: :any,                 monterey:       "3bf9f8757a1e9375cb6e281beae29afef8ce152dfb6aa2df1c4ce6dcba5b4bc0"
-    sha256 cellar: :any,                 big_sur:        "0b4183d720134da5f7ce7319581b58a2f3eb8f86c2f2fc36f5e6c9476a52014e"
-    sha256 cellar: :any,                 catalina:       "c739740ac4f72eecb9c711c91b61b0b3b6ca0d15b9fd1506424247b411e6cfcb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "07982a4d2542edd15e6d64bd49c36f5211de6ef23d7fde732733f815c02bba5f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/zk"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "078d4609a9224000d523a509ac876deed73cb19dcd42e5da2246d5014cd3b443"
   end
 
   depends_on "go" => :build
