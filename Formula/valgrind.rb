@@ -11,7 +11,8 @@ class Valgrind < Formula
   end
 
   bottle do
-    sha256 x86_64_linux: "e8a9a03173c9fb58a583f4ea872a7ed9c3cdb0605d0ff6327fbd8b2ec9fe21de"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/valgrind"
+    sha256 aarch64_linux: "1fb21c5aa58bca41033c32d14b6b3127d6349c49ca3c86795b7390fb4a340c2f"
   end
 
   head do
