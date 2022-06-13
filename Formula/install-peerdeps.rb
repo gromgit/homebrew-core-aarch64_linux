@@ -7,6 +7,10 @@ class InstallPeerdeps < Formula
   sha256 "a1f0e865f9db356aa15ccc9cb56e200c442229bef9e1e1ef8c73bcd587dfc506"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "081330377388f0833a98926f1e1e734d0556bf374eac0df2423a0404d0739a89"
+  end
+
   depends_on "node"
 
   def install
