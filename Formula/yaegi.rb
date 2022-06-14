@@ -7,12 +7,12 @@ class Yaegi < Formula
   head "https://github.com/traefik/yaegi.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "827d118bcd1e205c6fc7e5e31bd6efaec628c16c4e7289b86426922d4d2e9506"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3dca5101dd81e6243629cca9788814c75988b775230d5564fa047a71b2a8ce8d"
-    sha256 cellar: :any_skip_relocation, monterey:       "65d4fd34d037f1412344655397c44980125f043ba0b4e77c0d2df14239baf338"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fdef900d47c60cb90039109a222a0053fb30b979c92abed2a9386508e4015f0c"
-    sha256 cellar: :any_skip_relocation, catalina:       "2749d8b7b7b227d21995907856e2648c3f2ca2e690acf91070392661a3ccd8a3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1c2e7729b8065d1a4f57ced852da9ee8584b3445f1bd7bef3e1a0cb8fbfe2181"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6560eeba9ee315eb07008d150c48e260bf96f057300fe2dcc2ee8dbb58eb47c3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "413085effa5fa0efda92687820eb0703ef27a3c1b6b40d81b77d05b2ee0b3451"
+    sha256 cellar: :any_skip_relocation, monterey:       "7418a92931fca81b88f4a3bb6d6a8b1909ab5688897056bfcdf4b013e9549625"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4a6e476e1d87a1a64dece9da7e33756de7d6c65451cac86959f1850627c5098b"
+    sha256 cellar: :any_skip_relocation, catalina:       "621005a5bffb9e5e3e0b148e319c90011c0049aab4c854441a90b1426682b3c8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c4239e0113c9520d6a1a972cb3201cfa3a863728b62c4b025319fe555be18171"
   end
 
   depends_on "go" => :build
