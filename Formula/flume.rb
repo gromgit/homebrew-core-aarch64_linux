@@ -7,7 +7,7 @@ class Flume < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "734753080fb6c3c2446b483ddf29032c997886c75470e0f43f7a0f489eceb3d8"
+    sha256 cellar: :any_skip_relocation, all: "cb04c708d2c0e6590e7cd6a504df26c480719eb70d5744108b7bf660bb90442a"
   end
 
   depends_on "hadoop"
