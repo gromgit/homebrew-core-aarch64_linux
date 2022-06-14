@@ -12,24 +12,23 @@ class Angband < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "a35fe8d9924485cd51dceb3ba4cd1c915bfc65b6b1bd8eb7f67a9fc5e505fe42"
-    sha256 arm64_big_sur:  "94495ff709647df63efa6c16f22f5be1de4ac52c404047fadcbb08a4aef55a3e"
-    sha256 monterey:       "b68729b3a66c3c3f4777af5e5abf53752a192773f5c2f9a2ef9dea5844e95808"
-    sha256 big_sur:        "925eb3391381b336266c068b43779d7ebfd22aba15a9e61fba4b853cba4dc624"
-    sha256 catalina:       "f34102aa4cd0341970481bbca15a98de6021d68b493c5e9ba4f882a79745e5c3"
-    sha256 x86_64_linux:   "3cfa3f60f7b88f2aa13cbbcae6b90e0aec128f5aef92e49c2860e61075c32af3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/angband"
+    sha256 aarch64_linux: "e460d2a4ce601946fed5a0c2e7a93c0d176d224a2b66f2cc7ce9e314e060142c"
   end
 
   def install
-    ENV["NCURSES_CONFIG"] = "#{MacOS.sdk_path}/usr/bin/ncurses5.4-config"
-    system "./configure", "--prefix=#{prefix}",
-                          "--bindir=#{bin}",
-                          "--libdir=#{libexec}",
-                          "--enable-curses",
-                          "--disable-ncursestest",
-                          "--disable-sdltest",
-                          "--disable-x11",
-                          "--with-ncurses-prefix=#{MacOS.sdk_path}/usr"
+    ENV["NCURSES_CONFIG"] = "#{MacOS.sdk_path}/usr/bin/ncurses5.4-config" if OS.mac?
+    args = %W[
+      --prefix=#{prefix}
+      --bindir=#{bin}
+      --libdir=#{libexec}
+      --enable-curses
+      --disable-ncursestest
+      --disable-sdltest
+      --disable-x11
+    ]
+    args += "--with-ncurses-prefix=#{MacOS.sdk_path}/usr" if OS.mac?
+    system "./configure", *args
     system "make"
     system "make", "install"
   end
