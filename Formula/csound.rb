@@ -6,7 +6,7 @@ class Csound < Formula
       revision: "f5b4258794a82c99f7d85f1807c6638f2e80ccac"
   license "LGPL-2.1-or-later"
   revision 5
-  head "https://github.com/csound/csound.git", branch: "master"
+  head "https://github.com/csound/csound.git", branch: "develop"
 
   livecheck do
     url :stable
@@ -19,7 +19,6 @@ class Csound < Formula
     sha256 monterey:       "78443a71a60eebea86219a5bfd612dc2b9fb6d4c70621b4ae83fc192e42b462a"
     sha256 big_sur:        "8b5d329857d11f3cd4fb193c212d112d16dd328433ae6dd4c7a0218822b06ec3"
     sha256 catalina:       "0b953aee205007ead4e9e69a2bbcb572b5f2d3fbf1b22e8539ca007c8628dab1"
-    sha256 x86_64_linux:   "d4bd60ac72dd39fbe4c20833d2455aeda2ef701d7fe82c4acda7dec079ee1aa5"
   end
 
   depends_on "asio" => :build
@@ -44,24 +43,15 @@ class Csound < Formula
   depends_on "portmidi"
   depends_on "python@3.9"
   depends_on "stk"
+  depends_on "wiiuse"
 
   uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
   uses_from_macos "curl"
   uses_from_macos "zlib"
 
-  on_macos do
-    depends_on "wiiuse"
-  end
-
-  on_linux do
-    depends_on "gcc"
-  end
-
   conflicts_with "libextractor", because: "both install `extract` binaries"
   conflicts_with "pkcrack", because: "both install `extract` binaries"
-
-  fails_with gcc: "5"
 
   resource "ableton-link" do
     url "https://github.com/Ableton/link/archive/Link-3.0.5.tar.gz"
@@ -85,23 +75,19 @@ class Csound < Formula
   end
 
   def install
-    ENV["JAVA_HOME"] = Language::Java.java_home
+    ENV["JAVA_HOME"] = Formula["openjdk"].libexec/"openjdk.jdk/Contents/Home"
 
-    args = [
-      "-DBUILD_JAVA_INTERFACE=ON",
-      "-DBUILD_LUA_INTERFACE=OFF",
-      "-DCS_FRAMEWORK_DEST=#{frameworks}",
-      "-DJAVA_MODULE_INSTALL_DIR=#{libexec}",
-    ]
-    args << "-DCMAKE_INSTALL_RPATH=@loader_path/../Frameworks;#{rpath}" if OS.mac?
-    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build",
+                    "-DBUILD_JAVA_INTERFACE=ON",
+                    "-DBUILD_LUA_INTERFACE=OFF",
+                    "-DCMAKE_INSTALL_RPATH=@loader_path/../Frameworks;#{rpath}",
+                    "-DCS_FRAMEWORK_DEST=#{frameworks}",
+                    "-DJAVA_MODULE_INSTALL_DIR=#{libexec}",
+                    *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
-    # On Linux, csound depends on binutils, but both formulae install `srconv` binaries
-    rm_f bin/"srconv" if OS.linux?
-
-    include.install_symlink frameworks/"CsoundLib64.framework/Headers" => "csound" if OS.mac?
+    include.install_symlink frameworks/"CsoundLib64.framework/Headers" => "csound"
 
     libexec.install buildpath/"interfaces/ctcsound.py"
 
@@ -113,68 +99,43 @@ class Csound < Formula
       resource("ableton-link").stage buildpath/"ableton-link"
       resource("getfem").stage { cp_r "src/gmm", buildpath }
 
-      args = [
-        "-DABLETON_LINK_HOME=#{buildpath}/ableton-link",
-        "-DBUILD_ABLETON_LINK_OPCODES=ON",
-        "-DBUILD_CHUA_OPCODES=ON",
-        "-DBUILD_CUDA_OPCODES=OFF",
-        "-DBUILD_FAUST_OPCODES=ON",
-        "-DBUILD_FLUID_OPCODES=ON",
-        "-DBUILD_HDF5_OPCODES=ON",
-        "-DBUILD_IMAGE_OPCODES=ON",
-        "-DBUILD_JACK_OPCODES=ON",
-        "-DBUILD_LINEAR_ALGEBRA_OPCODES=ON",
-        "-DBUILD_MP3OUT_OPCODE=ON",
-        "-DBUILD_OPENCL_OPCODES=OFF",
-        "-DBUILD_PYTHON_OPCODES=ON",
-        "-DBUILD_STK_OPCODES=ON",
-        "-DBUILD_WEBSOCKET_OPCODE=ON",
-        "-DGMM_INCLUDE_DIR=#{buildpath}",
-        "-DUSE_FLTK=ON",
-      ]
-      if OS.mac?
-        args << "-DBUILD_P5GLOVE_OPCODES=ON"
-        args << "-DBUILD_WIIMOTE_OPCODES=ON"
-        args << "-DCSOUND_FRAMEWORK=#{frameworks}/CsoundLib64.framework"
-        args << "-DCSOUND_INCLUDE_DIR=#{include}/csound"
-        args << "-DPLUGIN_INSTALL_DIR=#{frameworks}/CsoundLib64.framework/Resources/Opcodes64"
-      else
-        args << "-DBUILD_P5GLOVE_OPCODES=OFF"
-        args << "-DBUILD_WIIMOTE_OPCODES=OFF"
-      end
-      system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+      system "cmake", "-S", ".", "-B", "build",
+                      "-DABLETON_LINK_HOME=#{buildpath}/ableton-link",
+                      "-DBUILD_ABLETON_LINK_OPCODES=ON",
+                      "-DBUILD_CHUA_OPCODES=ON",
+                      "-DBUILD_CUDA_OPCODES=OFF",
+                      "-DBUILD_FAUST_OPCODES=ON",
+                      "-DBUILD_FLUID_OPCODES=ON",
+                      "-DBUILD_HDF5_OPCODES=ON",
+                      "-DBUILD_IMAGE_OPCODES=ON",
+                      "-DBUILD_JACK_OPCODES=ON",
+                      "-DBUILD_LINEAR_ALGEBRA_OPCODES=ON",
+                      "-DBUILD_MP3OUT_OPCODE=ON",
+                      "-DBUILD_OPENCL_OPCODES=OFF",
+                      "-DBUILD_P5GLOVE_OPCODES=ON",
+                      "-DBUILD_PYTHON_OPCODES=ON",
+                      "-DBUILD_STK_OPCODES=ON",
+                      "-DBUILD_WEBSOCKET_OPCODE=ON",
+                      "-DBUILD_WIIMOTE_OPCODES=ON",
+                      "-DCSOUND_FRAMEWORK=#{frameworks}/CsoundLib64.framework",
+                      "-DCSOUND_INCLUDE_DIR=#{include}/csound",
+                      "-DGMM_INCLUDE_DIR=#{buildpath}",
+                      "-DPLUGIN_INSTALL_DIR=#{frameworks}/CsoundLib64.framework/Resources/Opcodes64",
+                      "-DUSE_FLTK=ON",
+                      *std_cmake_args
       system "cmake", "--build", "build"
       system "cmake", "--install", "build"
     end
   end
 
   def caveats
-    caveats = <<~EOS
+    <<~EOS
       To use the Java bindings, you may need to add to #{shell_profile}:
         export CLASSPATH="#{opt_libexec}/csnd6.jar:."
       and link the native shared library into your Java Extensions folder:
+        mkdir -p ~/Library/Java/Extensions
+        ln -s "#{opt_libexec}/lib_jcsound6.jnilib" ~/Library/Java/Extensions
     EOS
-
-    on_macos do
-      caveats = <<~EOS
-        #{caveats}\
-          mkdir -p ~/Library/Java/Extensions
-          ln -s "#{opt_libexec}/lib_jcsound6.jnilib" ~/Library/Java/Extensions
-      EOS
-    end
-
-    on_linux do
-      caveats = <<~EOS
-        srconv is not installed because it conflicts with binutils. To run srconv:
-          csound --utility=srconv
-
-        #{caveats}\
-          sudo mkdir -p /usr/java/packages/lib
-          sudo ln -s "#{opt_libexec}/lib_jcsound6.jnilib" /usr/java/packages/lib
-      EOS
-    end
-
-    caveats
   end
 
   test do
@@ -201,38 +162,25 @@ class Csound < Formula
       e
     EOS
 
-    if OS.mac?
-      ENV["OPCODE6DIR64"] = frameworks/"CsoundLib64.framework/Resources/Opcodes64"
-      ENV["SADIR"] = frameworks/"CsoundLib64.framework/Versions/Current/samples"
-    else
-      ENV["OPCODE6DIR64"] = lib/"csound/plugins64-6.0"
-      ENV["SADIR"] = share/"samples"
-    end
+    ENV["OPCODE6DIR64"] = frameworks/"CsoundLib64.framework/Resources/Opcodes64"
     ENV["RAWWAVE_PATH"] = Formula["stk"].pkgshare/"rawwaves"
+    ENV["SADIR"] = frameworks/"CsoundLib64.framework/Versions/Current/samples"
 
     system bin/"csound", "test.orc", "test.sco"
 
-    assert_predicate testpath/"test.#{OS.mac? ? "aif" : "wav"}", :exist?
+    assert_predicate testpath/"test.aif", :exist?
     assert_predicate testpath/"test.h5", :exist?
     assert_predicate testpath/"test.mp3", :exist?
 
     (testpath/"opcode-existence.orc").write <<~EOS
       JackoInfo
       instr 1
-          i_ websocket 8888, 0
+          p5gconnect
+          i_output websocket 8888, 0
+          i_success wiiconnect 1, 1
       endin
     EOS
     system bin/"csound", "--orc", "--syntax-check-only", "opcode-existence.orc"
-
-    if OS.mac?
-      (testpath/"mac-opcode-existence.orc").write <<~EOS
-        instr 1
-            p5gconnect
-            i_ wiiconnect 1, 1
-        endin
-      EOS
-      system bin/"csound", "--orc", "--syntax-check-only", "mac-opcode-existence.orc"
-    end
 
     system Formula["python@3.9"].bin/"python3", "-c", "import ctcsound"
 

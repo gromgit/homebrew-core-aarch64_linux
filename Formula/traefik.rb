@@ -1,22 +1,25 @@
 class Traefik < Formula
   desc "Modern reverse proxy"
   homepage "https://traefik.io/"
-  url "https://github.com/traefik/traefik/releases/download/v2.7.1/traefik-v2.7.1.src.tar.gz"
-  sha256 "23b6e4dc5c21c787ebefaae4a15046d19608fbb000a983ae0a1bfd2e1bbbcdf0"
+  url "https://github.com/traefik/traefik/releases/download/v2.6.6/traefik-v2.6.6.src.tar.gz"
+  sha256 "3ebb59c8286fa1138c2615de404fcc232316409da8a2046e2f7894c3c000766f"
   license "MIT"
   head "https://github.com/traefik/traefik.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7769481de61eabddb265a54fd628ef75a32f0fcddfbc5ab8650ab72ef44a03c9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2ce2f534c0391caf6d804db6f45fbfa622a97e2a6a74ef03f03e20f19d2d4444"
-    sha256 cellar: :any_skip_relocation, monterey:       "ecaa792fb9af0571aa45da6daea3875c0824499f9a74a8e318c71e7afd62ad90"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3cd899914de3eed5ec99376be42bfd0204ed211465e974b212eb773276bf71f0"
-    sha256 cellar: :any_skip_relocation, catalina:       "0e773366c0698599c1a7e121c7011ad9148efa3074d29210eabf2c45b63c4645"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d7e360eb0025f00d1db2fced3b8292499017541d763c381d59f5fb3e0748db44"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/traefik"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e7f88fabecb966f5dc08ac229dc0ef2e2df4a1436183d3bf84f8d5babb400b71"
   end
 
   depends_on "go" => :build
   depends_on "go-bindata" => :build
+
+  # Fix build with Go 1.18.
+  # Remove with v2.7.
+  patch do
+    url "https://github.com/traefik/traefik/commit/9297055ad8f651c751473b5fd4103eb224a8337e.patch?full_index=1"
+    sha256 "b633710c7bde8737fbe0170066a765ee749f014d38afd06ef40085773e152fd0"
+  end
 
   def install
     ldflags = %W[

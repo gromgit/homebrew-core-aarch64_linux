@@ -1,23 +1,24 @@
 class GnomeLatex < Formula
   desc "LaTeX editor for the GNOME desktop"
-  homepage "https://gitlab.gnome.org/swilmet/gnome-latex"
-  url "https://gitlab.gnome.org/swilmet/gnome-latex.git",
-      tag:      "3.41.1",
-      revision: "4be3578e8fd81ca6593c4927760076ea1acd90f0"
+  homepage "https://wiki.gnome.org/Apps/GNOME-LaTeX"
+  url "https://download.gnome.org/sources/gnome-latex/3.38/gnome-latex-3.38.0.tar.xz"
+  sha256 "a82a9fc6f056929ea18d6dffd121e71b2c21768808c86ef1f34da0f86e220d77"
   license "GPL-3.0-or-later"
+  revision 1
 
   bottle do
-    sha256 arm64_monterey: "2512bc0320e672d89d5e8453b3bfc4ccdae8c8da53789e87c1e4f9d71b96132a"
-    sha256 arm64_big_sur:  "29cda278f13333a36822f226ab004ca6c0631f05c422ff82f24719051eae5476"
-    sha256 monterey:       "6846a21dcfca6c5c7ab2c664174e19e777a7e1fd340f3d8d7a3be3a187533dd2"
-    sha256 big_sur:        "7ceff4652331ae25ca2de90ed4e57840a11e5e78e59cbcadcb4dd546b603e312"
-    sha256 catalina:       "fb219b67458501d6d4d9ed2e72da6996e91f86095ebefdf008892f257ac2c8d5"
-    sha256 x86_64_linux:   "4d4578faf140e4ac55a7e267a9bc130a3cb7d2a1ce8482ac83280707740fcf81"
+    sha256 arm64_monterey: "6c25d1dc2043da0fd0618c57316b19e59fa7627c61ea01051a38384c1e6683ac"
+    sha256 arm64_big_sur:  "118ac80bf869460f820e12a63bf8808b7ad9158eeb3ee594e494e344d54cc97c"
+    sha256 monterey:       "ec4d6862103ee03a5198148a0ea22acb97c1da93ef91af2b793bddb339f4e9c5"
+    sha256 big_sur:        "91916490eae6b8b5e9c8717ea9a37a2e8e383c6504a3d59c7d4f209d2f2e5db0"
+    sha256 catalina:       "34723bd50c23bc34d54750606f99247544a222f8d32ee1017422a618e7d8255c"
+    sha256 mojave:         "282a45a8580c354c10f112895d0448cc97e206da12460f75b6dbcc8906401314"
   end
 
-  depends_on "appstream-glib" => :build
+  # See: https://gitlab.gnome.org/Archive/gnome-latex
+  deprecate! date: "2021-05-25", because: :repo_archived
+
   depends_on "autoconf" => :build
-  depends_on "autoconf-archive" => :build
   depends_on "automake" => :build
   depends_on "gobject-introspection" => :build
   depends_on "gtk-doc" => :build
@@ -25,25 +26,25 @@ class GnomeLatex < Formula
   depends_on "itstool" => :build
   depends_on "pkg-config" => :build
   depends_on "vala" => :build
-  depends_on "yelp-tools" => :build
   depends_on "adwaita-icon-theme"
   depends_on "gnome-themes-standard"
   depends_on "gspell"
   depends_on "libgee"
   depends_on "tepl"
 
-  uses_from_macos "perl" => :build
+  # Add commit to port to Tepl 6
+  patch do
+    url "https://gitlab.gnome.org/Archive/gnome-latex/-/commit/e1b01186f8a4e5d3fee4c9ccfbedd6d098517df9.diff"
+    sha256 "0d54059732cb3092f52bfb8bca6ebad24a08b86036baafb31e06aca2415517ca"
+  end
 
   def install
-    # Needed by intltool (xml::parser)
-    ENV.prepend_path "PERL5LIB", "#{Formula["intltool"].libexec}/lib/perl5" unless OS.mac?
-
-    system "./autogen.sh", "--disable-schemas-compile",
-                           "--disable-dependency-tracking",
-                           "--disable-silent-rules",
-                           "--disable-code-coverage",
-                           "--disable-dconf-migration",
-                           "--prefix=#{prefix}"
+    system "autoreconf", "-fvi"
+    system "./configure", "--disable-schemas-compile",
+                          "--disable-dependency-tracking",
+                          "--disable-silent-rules",
+                          "--disable-dconf-migration",
+                          "--prefix=#{prefix}"
     system "make", "install"
   end
 

@@ -1,18 +1,18 @@
 class YleDl < Formula
   desc "Download Yle videos from the command-line"
   homepage "https://aajanki.github.io/yle-dl/index-en.html"
-  url "https://files.pythonhosted.org/packages/e2/bf/9111331d2e13a10614b3f97a5bcce96c5eea03d3791957ccf2fdcba95872/yle-dl-20220610.tar.gz"
-  sha256 "4913f028db6304345aea2e784de8d343e007bd43760cdc0f518a61f324f808cb"
+  url "https://files.pythonhosted.org/packages/4b/61/60092eb1103605003f18f8dbe7482d13d7e5a5b5901dc5d1243a192e900d/yle-dl-20220425.tar.gz"
+  sha256 "fb6a5d22c8234360b8b993dd758f52d09523fcac0edef2cf54c4fe21fd87b406"
   license "GPL-3.0-or-later"
   head "https://github.com/aajanki/yle-dl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7ee9cf956f5e36bf50a009623bcbb6f2140848d346c73a5a1fd224a4fe43459f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e5b3dc7858a60f394cb719f8321f41dff7fe2714176016186855ff70ef6f6771"
-    sha256 cellar: :any_skip_relocation, monterey:       "a96713af7848131e65abb31826991646d305aae5c2c0ed53d5557d80a8de9463"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e78b1e5cdf98b169d36457a7d0129540014c79ebcf8d7b8c6b0472c28cbcb1c0"
-    sha256 cellar: :any_skip_relocation, catalina:       "9b4fcaf5c0d831061dcdccc62e0f170dd0d95cca133d984b0f6bd6011a3ea929"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1ca7774a1a9c7344ae680e2921d983977a5540717d13798343c1ea08063c7780"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "34ecea6e71e7aacd72f61429036a014220d68fa4ba3e9a495fe322e3ad5e3a1a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6d350d2381ea68eb4a5a8918ae4ff8aaca2069974378ae37c38427718fd6b2d9"
+    sha256 cellar: :any_skip_relocation, monterey:       "c1d107aa657bd308399f993616b867d4216815e5079054b9285c9e57692a6600"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1e18e1491ef4a319b70a906b0605f56abcc668b747df7e605f5be49d0f8f41ec"
+    sha256 cellar: :any_skip_relocation, catalina:       "173403cc4a4b80fa8ccd49f3127d7b75c3aaa804bcf74b3b99e031ec31bf3646"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "61fd8949f454ee17ba4f81c4672df12e2a83384200cbeccb8468e676fb8a1c4f"
   end
 
   depends_on "ffmpeg"
@@ -41,8 +41,8 @@ class YleDl < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/07/10/75277f313d13a2b74fc56e29239d5c840c2bf09f17bf25c02b35558812c6/certifi-2022.5.18.1.tar.gz"
-    sha256 "9c5705e395cd70084351dd8ad5c41e65655e08ce46f2ec9cf6c2c08390f71eb7"
+    url "https://files.pythonhosted.org/packages/6c/ae/d26450834f0acc9e3d1f74508da6df1551ceab6c2ce0766a593362d6d57f/certifi-2021.10.8.tar.gz"
+    sha256 "78884e7c1d4b00ce3cea67b44566851c4343c120abd683433ce934a68ea58872"
   end
 
   resource "charset-normalizer" do
@@ -61,13 +61,13 @@ class YleDl < Formula
   end
 
   resource "lxml" do
-    url "https://files.pythonhosted.org/packages/aa/23/bda4e9881090f0f5e33e2efe89aacfa0668eb6e1ab2de28591e2912d78d4/lxml-4.9.0.tar.gz"
-    sha256 "520461c36727268a989790aef08884347cd41f2d8ae855489ccf40b50321d8d7"
+    url "https://files.pythonhosted.org/packages/3b/94/e2b1b3bad91d15526c7e38918795883cee18b93f6785ea8ecf13f8ffa01e/lxml-4.8.0.tar.gz"
+    sha256 "f63f62fc60e6228a4ca9abae28228f35e1bd3ce675013d1dfb828688d50c6e23"
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/e9/23/384d9953bb968731212dc37af87cb75a885dc48e0615bd6a303577c4dc4b/requests-2.28.0.tar.gz"
-    sha256 "d568723a7ebd25875d8d1eaf5dfa068cd2fc8194b2e483d7b1f7c81918dbec6b"
+    url "https://files.pythonhosted.org/packages/60/f3/26ff3767f099b73e0efa138a9998da67890793bfa475d8278f84a30fec77/requests-2.27.1.tar.gz"
+    sha256 "68d7c56fd5a8999887728ef304a6d12edc7be74f1cfa47714fc8b414525c9a61"
   end
 
   resource "urllib3" do

@@ -6,12 +6,8 @@ class Libscrypt < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "df9e62c90fb8530ad765f2128a892ba91904901167bb5dcb7f0e1a199b43f59f"
-    sha256 cellar: :any,                 arm64_big_sur:  "6b39d428937056b1a25080c87d9af446ae1397f824d362ca6a791e683a997ed2"
-    sha256 cellar: :any,                 monterey:       "d8e0b6fe9b5e2f14fc281fa859fb3339eb98610863cb0b39652f5cb6522205ad"
-    sha256 cellar: :any,                 big_sur:        "836c0ae075b9e3b580eea4d3c1b554f861166f74657303103bb0415c34650fb8"
-    sha256 cellar: :any,                 catalina:       "d53d94bee86fdb65f96abdb62f07f5f2867773fd0719562a21ad320465ebd686"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "62ae9fdeea1cbe282839585250e2adacea715d313975bf6eb863a579aa669a21"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libscrypt"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1ff3802e30436d211ac68ddabca31e92e1e36151f24b4146af8a3de11e0ee111"
   end
 
   def install

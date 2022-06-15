@@ -6,12 +6,8 @@ class Roll < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3a8e1ac1b898c674f5a752ca03e7952d011f7b115529d3ab1f92f745392ecfe4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "14b4457a32902e96d331fca1fd85fbbf3d5f515914091da2c61dec741bf3d73b"
-    sha256 cellar: :any_skip_relocation, monterey:       "6f3f061734bc251d233b72aa805dc1cc3d7865e276c3e3c6c75854686ac06fdb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "123c5c66e945afdfac73b0cf5b553df895c8b03ac22c32124ab6ff98e52e3478"
-    sha256 cellar: :any_skip_relocation, catalina:       "c62fd4ce38c97e3f2a41203420feda3601359815a4cf20a6d68e3a9aa37bdcf2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e98554d4358ec561afd285196543baf10606cfcb0a6b842ba4949cf7b477894d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/roll"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "bfe55cc55ac756d610e27cb4c47368f33ea000aff8d6927003d2f3d87ae3c35c"
   end
 
   head do

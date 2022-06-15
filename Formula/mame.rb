@@ -1,11 +1,10 @@
 class Mame < Formula
   desc "Multiple Arcade Machine Emulator"
   homepage "https://mamedev.org/"
-  url "https://github.com/mamedev/mame/archive/mame0244.tar.gz"
-  version "0.244"
-  sha256 "843c917edc46008a27b439a1fc66fc12a27c84e55e08753b963789e5614cebf7"
+  url "https://github.com/mamedev/mame/archive/mame0243.tar.gz"
+  version "0.243"
+  sha256 "8cddb7d6cee5d736d1ce7ef2022e2d09b5c61bea02b5df7e369010a47a5d2133"
   license "GPL-2.0-or-later"
-  revision 1
   head "https://github.com/mamedev/mame.git", branch: "master"
 
   # MAME tags (and filenames) are formatted like `mame0226`, so livecheck will
@@ -19,12 +18,12 @@ class Mame < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "89043592e7849635471fbe5664003f6834a5d6efd4b69a0fbd6a7b87a9b96d59"
-    sha256 cellar: :any,                 arm64_big_sur:  "3d48c4fb49b76f0166a325caecdfcfb9c5bc484e6de351e067f69c4cfa73cca7"
-    sha256 cellar: :any,                 monterey:       "9913a888b0911e33abce98cc55abf68bbf1c5d629cc008e8d0030b4f3ce71732"
-    sha256 cellar: :any,                 big_sur:        "8b9e3fd18d19b9dec412f076f7b282e155f1146751444d790084c0e6dabdee52"
-    sha256 cellar: :any,                 catalina:       "d1ae2236928f32d3e8bcdeb5d5224cf95fd57bd4925652841b31e0b22984c37f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "46a7a329dff35a6a3935cee7883b8d4314d9ce18abfb25ccfccce6c92a14db56"
+    sha256 cellar: :any,                 arm64_monterey: "ad71cde8669dafe76347be6821a28d50618d85de224bb708bf4acb0475a7b05b"
+    sha256 cellar: :any,                 arm64_big_sur:  "7b2efbc5aea7b0fa798ae421c945ae85b1435a8ba7a90fb205b31f9ac9994dc2"
+    sha256 cellar: :any,                 monterey:       "01e3a6771f5a14efbf54471c104688b76985becff030585138ed6750d31f43c2"
+    sha256 cellar: :any,                 big_sur:        "5423e213e893289feb9747975b32a1f38e24e448d9617b28ef3959e3ec9f9cbc"
+    sha256 cellar: :any,                 catalina:       "4ac1f6a34a3934f149afc3553d7fe5390e082eb25235f64839b895efac445910"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6566b01e11b88df077d40aae4227d98ac1d308cf8fc69d7376be43ca11c2f4db"
   end
 
   depends_on "glm" => :build
@@ -33,7 +32,7 @@ class Mame < Formula
   depends_on "rapidjson" => :build
   depends_on "sphinx-doc" => :build
   depends_on "flac"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   # Need C++ compiler and standard library support C++17.
   depends_on macos: :high_sierra
   depends_on "portaudio"
@@ -55,13 +54,6 @@ class Mame < Formula
 
   fails_with gcc: "5"
   fails_with gcc: "6"
-
-  # Apply upstream commit to fix build with newer GCC.
-  # Remove with next release.
-  patch do
-    url "https://github.com/mamedev/mame/commit/034e0d2c87a16e90783f742f39850dc7d85def1f.patch?full_index=1"
-    sha256 "cc7da44c9ca8caca26756175340644e1284a6d3692a1aa7320e85167a31e85c8"
-  end
 
   def install
     # Cut sdl2-config's invalid option.

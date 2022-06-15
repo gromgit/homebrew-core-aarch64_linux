@@ -3,18 +3,18 @@ class LuaLanguageServer < Formula
   homepage "https://github.com/sumneko/lua-language-server"
   # pull from git tag to get submodules
   url "https://github.com/sumneko/lua-language-server.git",
-      tag:      "3.3.0",
-      revision: "fde5288aa33c1deadc0724cb2e9df2b628a310c6"
+      tag:      "3.2.2",
+      revision: "5933902449c992179a0958a7d401a1d970e874a7"
   license "MIT"
   head "https://github.com/sumneko/lua-language-server.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b65f19fcc03a39c2ee7d83af3dc37f919969b8cb12c22d65f27cc2aa43fdbd7b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b68aa3edb81bf68f6e42797e26d176169dbcfb1fad239f71b8c393b05c1f8755"
-    sha256 cellar: :any_skip_relocation, monterey:       "1a45cbcde717e2b31b5e582c335d97975b77658711ce2f38e8b4ca3e8d08b048"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a302d221a9383fd24c1041a72341628e88cb74cb224a71d847452ffbdc7ef916"
-    sha256 cellar: :any_skip_relocation, catalina:       "00ffd29256f145360886ebacda614036c8f1add3d539c6e2185fdc2d03ab88b1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "92fb822edd228db388a238f162a2a8198ad7a675b65a31aeabc29eb800c9ead5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4c642d465b0533acaa4ca3b6741238202c05c6658c13e164593a8b51777cc615"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f89d1014d49308f7b136b2e81d25d56ecfdd27620805ef0abeefd2a41856d871"
+    sha256 cellar: :any_skip_relocation, monterey:       "d31ad020518e65baa92b4e45e2b7ddbe71d6ebbe8dc4381f4bcb29b04fe91bcb"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5c01b82bd3a3944ff4325dedf4bf4c8ff37bc7ef3f106d46b5472d8035fd535d"
+    sha256 cellar: :any_skip_relocation, catalina:       "5ba96e87054902f909b602efdecffa38020076c95bbfd9c76c07fa7b18d76e1a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fe50d31acbf04fdf56f6599f8893da5d259400f377b6fc9de2b2282cc44280f7"
   end
 
   depends_on "ninja" => :build
@@ -30,8 +30,8 @@ class LuaLanguageServer < Formula
 
     # disable all tests by build script (fail in build environment)
     inreplace buildpath.glob("**/3rd/bee.lua/test/test.lua"),
-      "os.exit(lt.run(), true)",
-      "os.exit(true, true)"
+      "local success = lt.run()",
+      "local success = true"
 
     chdir "3rd/luamake" do
       system "compile/install.sh"

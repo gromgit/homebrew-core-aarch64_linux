@@ -11,12 +11,8 @@ class Findent < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "337ccd197a09fea90aa891fd3428d79ff2cae9233febe1beda55eeb21fec61f0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f9a6870dde326fec22ed9e690cbc8ce977df23565ef673e6825b6f1736124935"
-    sha256 cellar: :any_skip_relocation, monterey:       "067e0c7c1dc8459af34cb9708af960abb6ad28db3821832e5325d88362219c8d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7e640f6b1b54b0406218fb491d2b8034ac3815b55eac07d578ab2395f1b43d48"
-    sha256 cellar: :any_skip_relocation, catalina:       "f412962a429c4c9de4cd411e7ffb1eeb3291ef3fa2a6e58367aa672e7ee231b7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0b84a89de673ea29d6fa795476ea4f7e3d30727cfa036b11149798fbd62bf625"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/findent"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "513af891d63d7b2563e94f13581299d093f523880d242b59ea13091338232555"
   end
 
   def install

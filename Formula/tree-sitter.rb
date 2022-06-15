@@ -6,28 +6,20 @@ class TreeSitter < Formula
   url "https://github.com/tree-sitter/tree-sitter/archive/v0.20.6.tar.gz"
   sha256 "4d37eaef8a402a385998ff9aca3e1043b4a3bba899bceeff27a7178e1165b9de"
   license "MIT"
-  revision 1
   head "https://github.com/tree-sitter/tree-sitter.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "05e634e8682ee3cf14c22518255b2d73be8d0a3370d806d5bf4ba1141ce6439a"
-    sha256 cellar: :any,                 arm64_big_sur:  "674d1925f358902b0d8eec68114e11e754227e927cf0b1845cc2c697dffb314b"
-    sha256 cellar: :any,                 monterey:       "80387d9d1eccb9be160e3f8b535476e1626312930cdb706d8f214773caaa7783"
-    sha256 cellar: :any,                 big_sur:        "b1e7629302fc421a676ada74e8b556d136482c2f5459f16429815acd8e8011e3"
-    sha256 cellar: :any,                 catalina:       "1a969186a6841f3d92cd55858dbe652b6a588ccb7a2207a4e6df84d12cd6c930"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a026eeeb802cb31b2de45b6c7bf63112ac16cc84ce7263cf9aafa7b3db6dc969"
+    sha256 cellar: :any,                 arm64_monterey: "6e9a0f78376436a8e96e17db3938ac0ab189731231e69993b8c249c2ceaabca5"
+    sha256 cellar: :any,                 arm64_big_sur:  "ac76838dacc8be8ea895d04e7d7f6ec6eacd7e436cba87b0b497c6fd586eac04"
+    sha256 cellar: :any,                 monterey:       "7b10e3162cd91db34d7a16a67e7e90051a819704ced8743d29f5f4a4f8151c6c"
+    sha256 cellar: :any,                 big_sur:        "cbb948ee3776829b8d8abbb3c939d2623f2b12f12d051bf509dd8a928308d661"
+    sha256 cellar: :any,                 catalina:       "e3f5987d950d4fb0600e41fc032916a40bce1934558b39f4b1886054edc2143b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1255580eeb3b25f14815b669514edd7df503c71632f09d17824fd40f1cf503ed"
   end
 
   depends_on "emscripten" => [:build, :test]
   depends_on "node" => [:build, :test]
   depends_on "rust" => :build
-
-  # fix build with emscripten 3.1.11
-  # remove in next release
-  patch do
-    url "https://github.com/chenrui333/tree-sitter/commit/9e9462538f2fa30fb8c7a3386c1cb2a8ded3d0eb.patch?full_index=1"
-    sha256 "ce6e2305da20848aa20399c36a170f03ec0a0a7624f695b158403babbe15ee30"
-  end
 
   def install
     system "make", "AMALGAMATED=1"

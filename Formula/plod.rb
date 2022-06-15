@@ -6,13 +6,8 @@ class Plod < Formula
   sha256 "1b7b8267c41b11c2f5413a8d6850099e0547b7506031b0c733121ed5e8d182f5"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8361343544ac10cdf1c2c6b37b4a8a4882d199c2d49ac22fc35b776199527fbf"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8361343544ac10cdf1c2c6b37b4a8a4882d199c2d49ac22fc35b776199527fbf"
-    sha256 cellar: :any_skip_relocation, monterey:       "7398f28822ffb0a9b2d84ba2bf98ed4bb49dea0c26ed4d8b6b0c16360173ca4b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7398f28822ffb0a9b2d84ba2bf98ed4bb49dea0c26ed4d8b6b0c16360173ca4b"
-    sha256 cellar: :any_skip_relocation, catalina:       "7398f28822ffb0a9b2d84ba2bf98ed4bb49dea0c26ed4d8b6b0c16360173ca4b"
-    sha256 cellar: :any_skip_relocation, mojave:         "7398f28822ffb0a9b2d84ba2bf98ed4bb49dea0c26ed4d8b6b0c16360173ca4b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8361343544ac10cdf1c2c6b37b4a8a4882d199c2d49ac22fc35b776199527fbf"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/plod"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "fedadf0f014b7247536ffc5e3f43aa34315b959908a1380fd00d7e9fef0da8b1"
   end
 
   def install

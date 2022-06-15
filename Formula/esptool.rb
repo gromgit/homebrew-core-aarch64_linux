@@ -3,17 +3,17 @@ class Esptool < Formula
 
   desc "ESP8266 and ESP32 serial bootloader utility"
   homepage "https://github.com/espressif/esptool"
-  url "https://files.pythonhosted.org/packages/bb/d5/9d000803520b68fd9f6447cd7c15352a79984196f57f0519839b0f80fb8f/esptool-4.1.tar.gz"
-  sha256 "51a41655187780cb802a5827fab68a3db0d6206330560459c55fcf0e222f277f"
+  url "https://files.pythonhosted.org/packages/63/85/1a7f65d3f89c112c721c6ec013ecd948112df17640e453ddeb1921b05aab/esptool-3.3.tar.gz"
+  sha256 "39b92e1848e352183188f149f3e876cde4b8a1c095551e7e545a28e5c11eea13"
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "9c8c4cf36cf77ed0d2035351fe709e0bf2932f227995802e7d1abb310cc50ceb"
-    sha256 cellar: :any,                 arm64_big_sur:  "938fb8c8cf7d99506aa3ed37671881133354ad7a57f68644904b700ccb0874b1"
-    sha256 cellar: :any,                 monterey:       "139db1915c1438f02a93c4b904db9752a0ca4a91ca6a345a89afdf8a5f1a7272"
-    sha256 cellar: :any,                 big_sur:        "b645b2d07a2be03536caefbe34fd7fa0c9a51412df803a7c4a7b92be7cf1a71e"
-    sha256 cellar: :any,                 catalina:       "4ee4453cbb96da0f0474c94693aa31f070250261e6f1e8957f6ab9c7ef11c048"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b975efcac04e9b487b8d2edddb05a8be985fd10633554a86e96405e1f279f3d4"
+    sha256 cellar: :any,                 arm64_monterey: "bd79b8f73d9744f00f55a9a036b157794ba3b39edb460b7a18743d5f23e33263"
+    sha256 cellar: :any,                 arm64_big_sur:  "6bccca9e12078b6ae388cab189d981d25630869a235f6758c43b7fb55302554e"
+    sha256 cellar: :any,                 monterey:       "1962c72efa9db6420c245f8a3ddc6e54cd7200fe405446d7b979e5e45988897a"
+    sha256 cellar: :any,                 big_sur:        "eb0d09ed714b8a3ff734e834a3cf0f7a173cbf208104e992f154b5b4ad551cf6"
+    sha256 cellar: :any,                 catalina:       "5cb538d6feb7c9923581a87619d8b49f35c83a5adc5d3db1c30dda415428de96"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1ddf7428d5d925f72fec03362933ce04fc35972c48cf565bd1a00ff4beace80f"
   end
 
   depends_on "rust" => :build
@@ -31,8 +31,8 @@ class Esptool < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/51/05/bb2b681f6a77276fc423d04187c39dafdb65b799c8d87b62ca82659f9ead/cryptography-37.0.2.tar.gz"
-    sha256 "f224ad253cc9cea7568f49077007d2263efa57396a2f2f78114066fd54b5c68e"
+    url "https://files.pythonhosted.org/packages/10/a7/51953e73828deef2b58ba1604de9167843ee9cd4185d8aaffcb45dd1932d/cryptography-36.0.2.tar.gz"
+    sha256 "70f8f4f7bb2ac9f340655cbac89d68c527af5bb4387522a8413e841e3e6628c9"
   end
 
   resource "ecdsa" do
@@ -70,7 +70,7 @@ class Esptool < Formula
       6QIAICyAEEAAgBBAMAAAAFDDAAAAgP4/zC4AQMwkAEAh/P8SwfAJMQH8/8AAACH5/wH6/8AAAAb//wAABvj/AACA/j8QAAAASGVsbG8gd29ybGQhCgAAAAAAAAAAAAAD
     EOS
 
-    result = shell_output("#{bin}/esptool.py --chip esp8266 image_info #{testpath}/helloworld-esp8266.bin")
+    result = shell_output("#{bin}/esptool.py image_info #{testpath}/helloworld-esp8266.bin")
     assert_match "4010802c", result
   end
 end

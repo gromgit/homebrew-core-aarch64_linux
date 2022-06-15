@@ -11,12 +11,8 @@ class Fping < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "087d83a0737273f2a17e731d6dd3a850a73b09bb8bb1ffa79d557af23acbddbe"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f5fa545f848ec9144a99596c909227193d63858b01cdb0feacf564a2a021846d"
-    sha256 cellar: :any_skip_relocation, monterey:       "11128619d0c6500c6aadc9b81f4953fc78ea965fe158d296072519089708a674"
-    sha256 cellar: :any_skip_relocation, big_sur:        "04bb01d86dd906a4fc5b63ed165a4bc936ab436fd17b567f8f6ddcd051ab4ab5"
-    sha256 cellar: :any_skip_relocation, catalina:       "fc706bf9bcb8a3fa881fe02b1987618745bfb50be7cfa4ace24b02ad40d7f8dc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "10618282a7eb3078c424117e81046f0d58f87fa98bbae3ad415d8aa8d47b26c8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fping"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9d031400d3983d1144998518a21199c64c5dd5de8d6d378f90d827562c653ef4"
   end
 
   head do

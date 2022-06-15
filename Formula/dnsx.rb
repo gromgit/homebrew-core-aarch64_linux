@@ -7,12 +7,8 @@ class Dnsx < Formula
   head "https://github.com/projectdiscovery/dnsx.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8442bb5a58c6aa903e9190b9d8517c7b82dfe4d93cd356018c652da5030ed706"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ea96682c14c48bb5078f285dfa289c58119a97c2132b3544961f39711532c074"
-    sha256 cellar: :any_skip_relocation, monterey:       "2174e1da2836796f0b0122a1bcef9a0a8a41a8c02b56c04f555b0e7509c209bf"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f828ceee9507469f4b6be91652bfe262f4963593e040a931f0cf6362d13c95eb"
-    sha256 cellar: :any_skip_relocation, catalina:       "da6129ba9781e85b1281297f9a83b415d65f331011c1112d8da6a2f713d8f55c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5505a6b622555594c354ded016cc6f1f7e2fcb1cf302edf90de4a4fe9cf60341"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dnsx"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7d02a93d758de0ef82702410ba24ba5aec65abaa5d363d1a4745773c64f3dafe"
   end
 
   depends_on "go" => :build

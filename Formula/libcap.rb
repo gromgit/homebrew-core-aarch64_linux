@@ -11,7 +11,8 @@ class Libcap < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "32e75e7191b49fa6a99bead2a655915a69ffd5e7f8cc3133a43735ad7ecff062"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libcap"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "65a32f2cc0cc2f51bef9c3f5a47825c14b1a8949f439ba44b4033305df5cf8f5"
   end
 
   depends_on :linux

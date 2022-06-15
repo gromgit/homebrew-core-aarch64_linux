@@ -3,8 +3,8 @@ class Clarinet < Formula
   homepage "https://github.com/hirosystems/clarinet"
   # pull from git tag to get submodules
   url "https://github.com/hirosystems/clarinet.git",
-      tag:      "v0.31.1",
-      revision: "f29d05926195d86123c29733790a516b40ff7b5f"
+      tag:      "v0.29.1",
+      revision: "c403059af09f4eb0303d488ff048aa39f082fb03"
   license "GPL-3.0-only"
   head "https://github.com/hirosystems/clarinet.git", branch: "main"
 
@@ -14,12 +14,12 @@ class Clarinet < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "dbf9ee8e585d8e8407810e2e5ebebdc45c1fa0166e8dbf1d4ef58a06028fc74b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7d1565f1b3f4e1a20952cac4c128e880ff84137ad83f714918b13a5688262efb"
-    sha256 cellar: :any_skip_relocation, monterey:       "23aaa31762667e5af1cb8efb376a20cfcf1e26d520565475f974581db16ef5c6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "319384a71d8cb65fa21180f12eaf1980480b021764bf00aefdc1a32a1aaf88a3"
-    sha256 cellar: :any_skip_relocation, catalina:       "3cffa10eab9865a51ae1548158a7a8e302e0d97ff617f414bae96452b3dc7245"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "27db4b124dedc2f0d787711ac1bafc9484c4e75c503fd207a6e0f444f9e54620"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ae57ae1348e118741c397a560086df9b276c1bcd4cd7e71062af4df644f7c148"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c2f3f3ce1d3571419df9e1238ff0bf901aacf18760d096e27c816d715e0e8aef"
+    sha256 cellar: :any_skip_relocation, monterey:       "beefd15208ce27f8bd852a83135d28a18c13f15abaab2f61c2964f71c8a7f877"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e63ed1c1e14271ca054869151fa056c529e0e30f508161cd6fb71626fe3eb327"
+    sha256 cellar: :any_skip_relocation, catalina:       "e36293ab13c000830cca6518e484e5bc2b30c078c8645c4860aaff5b6264fa2d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9ef2c72c44ae20657db8d6e9ca824661790317e6ed2499e976b76ea9198938f6"
   end
 
   depends_on "rust" => :build

@@ -1,22 +1,23 @@
 class Vapor < Formula
   desc "Command-line tool for Vapor (Server-side Swift web framework)"
   homepage "https://vapor.codes"
-  url "https://github.com/vapor/toolbox/archive/18.5.0.tar.gz"
-  sha256 "70be40f3ddd6c8fe238ac340655daf2f7e545cc406a1d6684f474cfaa17fdddb"
+  url "https://github.com/vapor/toolbox/archive/18.3.6.tar.gz"
+  sha256 "67efb2d454564be007e520afb582b9d1d3bf2ac93b49e3ecdec5495df724c2cf"
   license "MIT"
   head "https://github.com/vapor/toolbox.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8cbdbef47b8f1e4097aca79ce4141cff2e0cc3b0aee8d9c0f496796e41089e7c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a01ac44c2f75fb540609934c330ba01936e8b4bcab4bbcda8e2521fb639cb5a8"
-    sha256 cellar: :any_skip_relocation, monterey:       "ea361d8a3901b4c9ea7954c88187efd46857b350182cb6f0b14ff21a54b0a513"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f929de0d210d6cad1a8b948a18ffd547e22458e49c5a8e20a29488c793316573"
-    sha256                               x86_64_linux:   "17f9b61d30e5e748d168838b587783b32ff2a5736790427075afa6645847c79f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8e0192858bca261ff3690cf1097896eaa5a9866a5d2d692410fdb7e8971238c7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "617785d6e88b734dafb4e2bd0c4fbca219d28f8dbce88a14befe8a8405579d1b"
+    sha256 cellar: :any_skip_relocation, monterey:       "7a6b32eb224796649a9e2024e7a430124bdebaf4253c42ca90a755aa3fe4690b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a2488d72900dbcd7147ef0b1c756baea6c69c3a976a63cdfc4f7537764a244ef"
+    sha256 cellar: :any_skip_relocation, catalina:       "0622f5ae31e2f4be566727425b0fce7cc8b5d79b60d80fb54a7abc9c86d51e1b"
+    sha256                               x86_64_linux:   "56ae58ee4fc87aedec745769bc1a1e19bc9efd01f91a2d203d3e2e3f7ad3eb1c"
   end
 
   depends_on xcode: "11.4"
 
-  uses_from_macos "swift", since: :big_sur
+  uses_from_macos "swift"
 
   def install
     system "swift", "build", "--disable-sandbox", "-c", "release", "-Xswiftc", \

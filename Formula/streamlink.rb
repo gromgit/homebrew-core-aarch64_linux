@@ -3,18 +3,18 @@ class Streamlink < Formula
 
   desc "CLI for extracting streams from various websites to a video player"
   homepage "https://streamlink.github.io/"
-  url "https://files.pythonhosted.org/packages/03/11/2b18419ba3d26bbd77e87bc8ad545a287df78939831a2e39567ff7c7019a/streamlink-4.1.0.tar.gz"
-  sha256 "0b492cf48cf1c8f12adc112e42df504857088363f036f400bc9330f80ff00893"
+  url "https://files.pythonhosted.org/packages/26/3a/280bad1cc57743d1a0ed0a157fa58ff3231db326e4ba41195fc912a1deef/streamlink-4.0.1.tar.gz"
+  sha256 "f38a4fd5c45b1628e7ebee43ba7f8522be5045565aa7c64009740baf853f20f5"
   license "BSD-2-Clause"
   head "https://github.com/streamlink/streamlink.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "72827ac98027c96ba00a28c1fbefbf662b93f2403ae515d9c323001f89a147e1"
-    sha256 cellar: :any,                 arm64_big_sur:  "8beeb93bb33eb46fc640fac0631b05559434d5a1919d993dda8c9f811c353215"
-    sha256 cellar: :any,                 monterey:       "c1ad46ac3ea6bc1e63ce0f50d4f4ff977bbadee5df9effa78a5a25a4a2c881e3"
-    sha256 cellar: :any,                 big_sur:        "7d28aae086628333916433af964c2c073771e1a0d0346b4e48045db598f23601"
-    sha256 cellar: :any,                 catalina:       "ceac2b7733c13d24c8753fc0f5f9434f41c568a2b2c3bca279669240dd004e5d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aee766c43b09041dd6f2e109b35f3de740f86b272fa5f3fc4915cc8d6023b890"
+    sha256 cellar: :any,                 arm64_monterey: "ffbd20114fe8511d78810c32b06ea7b4ed36d175be2e77cb2869c972df12811b"
+    sha256 cellar: :any,                 arm64_big_sur:  "3d258db7c57e65dba9867404a7d18b78c34930ef3c51eb06e8529bacbd33a141"
+    sha256 cellar: :any,                 monterey:       "5feca00ed134cae835c6c8319ffc64ec3f5582278216244c56951d9ab3d36e52"
+    sha256 cellar: :any,                 big_sur:        "340af5df6524f3bd02f53bb409c5565915c3e30f827e1dfa5ac30844b6611376"
+    sha256 cellar: :any,                 catalina:       "de16fdf0b163af277c682ecc8e7ee46bb14cde3de6916e61bd7187d0e097f8ea"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3304101f9d7173d15ea991bab30b0f9bb51998d834d6bc4ca8e11cb6f59d63c0"
   end
 
   depends_on "libxml2" # https://github.com/Homebrew/homebrew-core/issues/98468
@@ -29,8 +29,8 @@ class Streamlink < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/07/10/75277f313d13a2b74fc56e29239d5c840c2bf09f17bf25c02b35558812c6/certifi-2022.5.18.1.tar.gz"
-    sha256 "9c5705e395cd70084351dd8ad5c41e65655e08ce46f2ec9cf6c2c08390f71eb7"
+    url "https://files.pythonhosted.org/packages/6c/ae/d26450834f0acc9e3d1f74508da6df1551ceab6c2ce0766a593362d6d57f/certifi-2021.10.8.tar.gz"
+    sha256 "78884e7c1d4b00ce3cea67b44566851c4343c120abd683433ce934a68ea58872"
   end
 
   resource "charset-normalizer" do

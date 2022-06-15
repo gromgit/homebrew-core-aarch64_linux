@@ -12,12 +12,8 @@ class OryHydra < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "11e8703aa4f4e271bf4b97dcc81d53022fc0cddfb8bfa94f9e5e7bc84a8b50c6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f1e773839019afe761fa2db55ce2dd2e7f08ecfed43e67634b9e94210d0be9d0"
-    sha256 cellar: :any_skip_relocation, monterey:       "96ea51c0603c205ed168b4802d2928a8f39063f8b7cc5652b192d07816ee3c2d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8fda644a271b301e52ce9395bbae97f0c63be0c95c8cf32cfaf5e0977c3a316d"
-    sha256 cellar: :any_skip_relocation, catalina:       "4cf91bdaa79eb91c0663e6b527bb9e621d5e73141a333248c68060d8d9a5fd81"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fe115f2896ef24689fa7389c41b2aeb54f26071ae259f16c8759abe06c7349b9"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ory-hydra"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4a975d9453686ef24b87eafdd4362dfb0adad2dd2558de792c35d8f00d1de70d"
   end
 
   depends_on "go" => :build

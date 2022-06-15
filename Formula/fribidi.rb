@@ -6,12 +6,8 @@ class Fribidi < Formula
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e213623dac0255cbc254102a53349fde828d9d2a624ad63eb80c8a25da1bf33b"
-    sha256 cellar: :any,                 arm64_big_sur:  "70fd8d0bf3cae1b973c8f580159fa8079dc93a050d19d8032ad0f0288c3f4ee2"
-    sha256 cellar: :any,                 monterey:       "9bf3206533100a9a3a1628d62c29845698e346fd582a44778cb90f9c784c0ea4"
-    sha256 cellar: :any,                 big_sur:        "4a9e4b177eca57063df291316e257b8cf5a7d93b52fd52e0e24387487a4cbc1b"
-    sha256 cellar: :any,                 catalina:       "65bb28b6d230b5928e6b1a291f53b1c304e28f28b86bcb8c8eb1207e65c30b3f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "89141837e7e5289c0553c17908f7ae7c04140eb5bba8436648f9f8e9b6d842f1"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fribidi"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4aa26f32254189ef3d265a5d44870d26bf408e922fc8ea5cf966f22103207959"
   end
 
   def install

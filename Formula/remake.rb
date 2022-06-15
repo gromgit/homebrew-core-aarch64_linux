@@ -18,12 +18,8 @@ class Remake < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "5c2479d3270cb34d5515d80136186d003e9eb96c7750b137d6f526a46b4003f7"
-    sha256 arm64_big_sur:  "b4370edfc5a075b5feb54686ba20b01dd2b2da18666b708ea5154af3b7df2c9b"
-    sha256 monterey:       "609d23982a7c58ec3dc547e06dfc2f461b36ca622de3314490975a282117b9d4"
-    sha256 big_sur:        "bc482278bbce34be601363a34689176e611eacc0461984892bdee53cc5965936"
-    sha256 catalina:       "dc5e00c02c1def048f5d678e91349d8f8da951e8ada948d9f7538cc962d8feea"
-    sha256 x86_64_linux:   "450f4449921dacd7b78dd3194ead086ea99e224a4ecac433118e47b84979d485"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/remake"
+    sha256 aarch64_linux: "a02de21d92d516bb2960645cf805c83e3f9627f23456526920c5ea2f3631cdb9"
   end
 
   depends_on "readline"

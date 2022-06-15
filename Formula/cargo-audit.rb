@@ -1,8 +1,8 @@
 class CargoAudit < Formula
   desc "Audit Cargo.lock files for crates with security vulnerabilities"
   homepage "https://rustsec.org/"
-  url "https://github.com/RustSec/rustsec/archive/cargo-audit/v0.17.0.tar.gz"
-  sha256 "18fc40de40b95adc55e4c4e767f969d62f60bba23805ea9455dd12c1c19f01c0"
+  url "https://github.com/RustSec/rustsec/archive/cargo-audit/v0.16.0.tar.gz"
+  sha256 "f0370c87c7a7976387303c7b5cc06651979968358b4f4dc867d30d65fab4d323"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/RustSec/rustsec.git", branch: "main"
 
@@ -12,12 +12,12 @@ class CargoAudit < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2907ef46d191e14092fc49fa13f3e12bff7235adbd285c8f58bc10fe9c9c5531"
-    sha256 cellar: :any,                 arm64_big_sur:  "e8f270631adf182683c230432d8a2abb533e0926732acd3e069d5ee9fc8c3131"
-    sha256 cellar: :any,                 monterey:       "2d4d57d4e32bd7ad13a3119292bc0fe65c7ab6d337997af31c827c50c20b6d45"
-    sha256 cellar: :any,                 big_sur:        "70045a4db0750f51b4c5681736a9834da19588038f22baf7a64beca550de1328"
-    sha256 cellar: :any,                 catalina:       "6639e6779eb666b04c7ec11b58b76243c277681fda34cf6522c0106f3433139b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "11e9b3e19cd6ef431d35459456cb85d853880286ae6b8d4c774a68631f095ff7"
+    sha256 cellar: :any,                 arm64_monterey: "03bf27001ce35f5885c14b517d1cb9b496a6092f5a91636483f3c11e1dc3cbee"
+    sha256 cellar: :any,                 arm64_big_sur:  "5825e17552507d413d261f30dfc0c3597e5d9e538ea966ba66d6c6f98e2bfafe"
+    sha256 cellar: :any,                 monterey:       "306826ea9ffc42f17de0ff4a92e5ad51e47fcbf92c7d646942eb5fd78f09dfef"
+    sha256 cellar: :any,                 big_sur:        "0930e9a08ceeaa5fde11066edf2b9212f9177c2750ff018fe3ae993156d6f1d7"
+    sha256 cellar: :any,                 catalina:       "618b98672a077ad25f0d71e2fee12f17721b1ab1fe33d4842e46ce512c950b9f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "92cfa76ab250fd2b2dc8be2839eb36bca2d9f73fdf811451022d6a0c0083fe62"
   end
 
   depends_on "rust" => :build
@@ -40,7 +40,7 @@ class CargoAudit < Formula
   test do
     output = shell_output("#{bin}/cargo-audit audit 2>&1", 2)
     assert_predicate HOMEBREW_CACHE/"cargo_cache/advisory-db", :exist?
-    assert_match "not found: Couldn't load Cargo.lock", output
+    assert_match "couldn't open Cargo.lock: No such file or directory", output
 
     cp_r "#{pkgshare}/support/base64_vuln/.", testpath
     assert_match "error: 1 vulnerability found!", shell_output("#{bin}/cargo-audit audit 2>&1", 1)

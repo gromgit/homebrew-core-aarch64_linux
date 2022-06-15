@@ -1,17 +1,13 @@
 class Driftctl < Formula
   desc "Detect, track and alert on infrastructure drift"
   homepage "https://driftctl.com"
-  url "https://github.com/snyk/driftctl/archive/v0.33.0.tar.gz"
-  sha256 "e06ab2e88bfb434e6372d4156780e1d578cb726f97d29f40b95da911ebda55ee"
+  url "https://github.com/snyk/driftctl/archive/v0.29.0.tar.gz"
+  sha256 "3544e2937f11bdabba65e6e32cdc1d37dd81129002138a00cb72696b10125958"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c23377f154989cb9263d9053ff5410093baceae643fd1d752e51efc4e3c04ed3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c23377f154989cb9263d9053ff5410093baceae643fd1d752e51efc4e3c04ed3"
-    sha256 cellar: :any_skip_relocation, monterey:       "c9f040d11f0500f6f1bb0d171dba803a24a03e48b9230c40d3c2cfdd5c155786"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c9f040d11f0500f6f1bb0d171dba803a24a03e48b9230c40d3c2cfdd5c155786"
-    sha256 cellar: :any_skip_relocation, catalina:       "c9f040d11f0500f6f1bb0d171dba803a24a03e48b9230c40d3c2cfdd5c155786"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b146bc2b41954c22a082a39f8a1428b8ae5fb1ea7437fcdd532ff791b47860f5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/driftctl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9805d20e737c155b0fdcdcb000effd46463bff568998abfe65c0a4e58c730b30"
   end
 
   depends_on "go" => :build
@@ -39,7 +35,7 @@ class Driftctl < Formula
 
   test do
     assert_match "v#{version}", shell_output("#{bin}/driftctl version")
-    assert_match "Could not find a way to authenticate on AWS!",
+    assert_match "Downloading terraform provider: aws",
       shell_output("#{bin}/driftctl --no-version-check scan 2>&1", 2)
   end
 end

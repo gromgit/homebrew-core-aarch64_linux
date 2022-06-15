@@ -9,7 +9,7 @@ class Cvs < Formula
   url "https://ftp.gnu.org/non-gnu/cvs/source/feature/1.12.13/cvs-1.12.13.tar.bz2"
   sha256 "78853613b9a6873a30e1cc2417f738c330e75f887afdaf7b3d0800cb19ca515e"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.0-or-later"]
-  revision 4
+  revision 3
 
   livecheck do
     url "https://ftp.gnu.org/non-gnu/cvs/source/feature/"
@@ -17,19 +17,19 @@ class Cvs < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "facb582f400a539914188f2c526148db296f6a9c626b298b6749a528a6955b6e"
-    sha256 cellar: :any,                 arm64_big_sur:  "69072386044a5fb88c0855933f336ada641c7d4f0b5a26859b83609de094d975"
-    sha256 cellar: :any,                 monterey:       "90e39df5b90cb3ae770fb19ec618350b02e7c16ca1bf5748cddbb2302c7f764f"
-    sha256 cellar: :any,                 big_sur:        "f82f03a64e86b956f63f2a9b420bb6db7f792bcc65e829278def0939fca4b947"
-    sha256 cellar: :any,                 catalina:       "0d792dc4be608c3abdadc97ba8fabca3d72a94e8903c9516ca529d51eb6fe2e9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d9ec7ba1c5450d7df8c3c5f623579a78ba970b29eb1dcbb991cfcfc5ae2630d2"
+    sha256 cellar: :any,                 arm64_monterey: "1f61e10fb5571126823d3d3f199d60a73712a7b6ac3f065c6f3826f62d96bd39"
+    sha256 cellar: :any,                 arm64_big_sur:  "d254eab8b61ddab83920f40ee1981b0f63ea9fd7bc02e570837bc61551dfdd32"
+    sha256 cellar: :any,                 monterey:       "0f00f38b25a4e94364980924ed3edd9bb65ef01ac0dfeddccced1d90df15b09c"
+    sha256 cellar: :any,                 big_sur:        "6d6120ae3bf1d373e769370cd6ef8621cb462fb592cb337ad4057e10c4ee07ec"
+    sha256 cellar: :any,                 catalina:       "4844c8cc28ae86ca8adc34d149f9d78c94195b8ccb88af24a85a3112e53246f0"
+    sha256 cellar: :any,                 mojave:         "735fd1cc0b3e954123e93bb3565622e57a833863aaa95475c719d908a74fa1df"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "edcf39afc3ae15d9c38013edd8981abc023e5088557528c77cb74339802d5ad3"
   end
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "gettext"
 
-  uses_from_macos "libxcrypt"
   uses_from_macos "zlib"
 
   on_linux do

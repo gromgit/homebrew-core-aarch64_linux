@@ -6,11 +6,8 @@ class Nift < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 monterey:     "0594705207068ce496955651d2aca3e9430d76dfddb6ae038568bd1cb7672848"
-    sha256 cellar: :any,                 big_sur:      "643dbd50106a96d8af8e1071c49fb6c41522f7d3384d0e438810d48e5503c7ab"
-    sha256 cellar: :any,                 catalina:     "dbf48067fac536bfe804c35c19c6198bae0c0d29107be3e4512d31a37485fd96"
-    sha256 cellar: :any,                 mojave:       "d51812440b4e4b8df56ee07b377e2d2a4cee7d84233377218e9ed3fc5e9e68e1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "e8fed0b8f27357e6414545556caf0c1bffd34273b5966e17c8ef4f554eb2c4a8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/nift"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "44adb8ba482ea2c47ffc0c33756ba8a42326a8768a3aade6848b19aba1e9bfea"
   end
 
   depends_on "luajit-openresty"

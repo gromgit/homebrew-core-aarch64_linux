@@ -7,13 +7,8 @@ class Progress < Formula
   head "https://github.com/Xfennec/progress.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "95538fd7595dfdb2d046961264df824fd0ad908afaf732b6bbd2e5ddf13af2ea"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "97407ff56c65c8f77371ce073478868eb507742db82c11e107a43413bce646c3"
-    sha256 cellar: :any_skip_relocation, monterey:       "8a8e247b7fd7ba0c6bd3556739b283d4609ee32ce82b986637a6d1d823a9cf31"
-    sha256 cellar: :any_skip_relocation, big_sur:        "21a1663abf8e1a60baf99a3ae46d41883cd5136fabbe77dd07987e0730b08ec0"
-    sha256 cellar: :any_skip_relocation, catalina:       "804256c3be440464694fe8f0e9b94f323860f9fa2304c8984dc0e8cbbce43fab"
-    sha256 cellar: :any_skip_relocation, mojave:         "5c834228aa86062624e1d2f6f3c386607d3151842218eb9c70529e1485ee1e5b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "31559faf7e06989812f6ea8069a8baf8de1b1abcd68c41dba11f5f2004595f65"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/progress"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "babfda98c05c19f6d25d52931cae44f525545bf482f6bc75ed1244f4e3e38c96"
   end
 
   uses_from_macos "ncurses"

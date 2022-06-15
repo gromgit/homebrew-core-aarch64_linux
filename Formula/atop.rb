@@ -7,7 +7,8 @@ class Atop < Formula
   head "https://github.com/Atoptool/atop.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "8d6be49346e7ca6aaa8704f78696bb91e490d13e29cbb1137f464881b5cf40f7"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/atop"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a3c91b73cfed15bd73c1a5c6831895fdc301b03764a2e4e194ec0b9ef5a3c01e"
   end
 
   depends_on :linux

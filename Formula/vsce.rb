@@ -3,8 +3,8 @@ require "language/node"
 class Vsce < Formula
   desc "Tool for packaging, publishing and managing VS Code extensions"
   homepage "https://code.visualstudio.com/api/working-with-extensions/publishing-extension#vsce"
-  url "https://registry.npmjs.org/vsce/-/vsce-2.9.1.tgz"
-  sha256 "c5ba4a68b6b4baedfc415fb26eda07c2114cd6dc3a5e65c1885721af707309fd"
+  url "https://registry.npmjs.org/vsce/-/vsce-2.7.0.tgz"
+  sha256 "68016d50a3208624c525dd8d214ac81fb37772d94f1565740a2e9d061a25327c"
   license "MIT"
   head "https://github.com/microsoft/vscode-vsce.git", branch: "main"
 
@@ -14,12 +14,12 @@ class Vsce < Formula
   end
 
   bottle do
-    sha256                               arm64_monterey: "af14d29ebf430067f1024ec51e1a1e2ad292c7b18b59cc890ca73ab83f05c4e1"
-    sha256                               arm64_big_sur:  "8308762d2062e3adf1967a4605429f81082ed9f1cc6b5d637a737b21377b3d9d"
-    sha256                               monterey:       "0d891495cdda6281edce3ebd72be05fc49792904acdb4f732709f78e50af5e0a"
-    sha256                               big_sur:        "173c8517adac2e1534a807ba852bc49db9bce0f60eacff80f255bb50718fc7f0"
-    sha256                               catalina:       "fb3e60bb4ff15de159152ec11523dcfe7be53ed74b8c1ccf9d3a6e012340f4ba"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9590a306c4ee40176caef689dbe12a088e3772309476efb49053eafe366e0573"
+    sha256                               arm64_monterey: "0027e8e5cb8c412c8d1585b5d3053913c68ca27c060fffafe6b677b4a9ad05d7"
+    sha256                               arm64_big_sur:  "83cabca0ad09235e8acde307b6a3af0438cca088eda6a7c0675c36125fec360c"
+    sha256                               monterey:       "fcead3c7ed4125817ce3e3eac450f7d61fba1380a7402945876c945e044316d3"
+    sha256                               big_sur:        "9e0088850df24f9b4ece0e65f2c151ef2a0942d4ca75a35f4e435e6dfa5b2a4d"
+    sha256                               catalina:       "aeb254b3198f42b4d7b8cbe487480dcb1a7fc1c2e03fdcecdb714a99d359287c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "978a1f4e0a0bc438825e4f598b631b30215979d4d59a151cba112bc33499e72d"
   end
 
   depends_on "node"

@@ -7,12 +7,8 @@ class BoostAT176 < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "1c89c5b9d19f1d1f7cd3e8453c5ef6a3e0123cb3b14be43a02364d2d80f2f796"
-    sha256 cellar: :any,                 arm64_big_sur:  "10a10ba5817a0256d89a2f76abd76963fe8c3c73ec004f2b7067cca6bd3668cd"
-    sha256 cellar: :any,                 monterey:       "b3ca5b530ab16616b5d40078f875fce0670ad990d9282877fb6f14580b8380bf"
-    sha256 cellar: :any,                 big_sur:        "8f62566feafc51c198bea5e8136c0c91fa84fab0420202f5809b08df8f7d55bc"
-    sha256 cellar: :any,                 catalina:       "1b37925c41586e7638575f90e9446eb4c15c35163d7244e80c2a8d54381e4914"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "887c726d1969e6931f04411c6c6ae7ce16dba04bf0b62d6d5168dbccca41f11f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/boost@1.76"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7a8d134609f5c6223c2171b9059300502894a16502c71032d16024cbc500ea87"
   end
 
   keg_only :versioned_formula

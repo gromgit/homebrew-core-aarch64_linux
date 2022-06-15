@@ -11,12 +11,8 @@ class UserspaceRcu < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "4c2e92d6a1b70701ab105521bfb3553b1b29fe8a0af3944c27e882de6ebc333b"
-    sha256 cellar: :any,                 arm64_big_sur:  "d952a93e176b6c2b14a3d44ec93070be05b1e083266b7fbd406725178ac2727d"
-    sha256 cellar: :any,                 monterey:       "fffd32590e244100ac004f06d88453e00351bae217b80e8a6954a3c4d3be6f02"
-    sha256 cellar: :any,                 big_sur:        "345b0ee7a81bd7c4d288c76a710d05a2a579b4167a6dd69c489de531d3b71502"
-    sha256 cellar: :any,                 catalina:       "cdc54b4a7f20eb89dd2674ada6664633c0ac1e760e55eeaff553c16326cb8160"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1423e05dc0e6d8465145ab78d43cd09feb91fdd3a0d69703753750d42e63dcc1"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/userspace-rcu"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5c28e9fc267ea4b79c6dd92e8f2dd5c251153207b07ebf4e3b3356ef5a738902"
   end
 
   # Fix -flat_namespace being used on Big Sur and later.

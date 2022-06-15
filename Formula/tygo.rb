@@ -8,12 +8,8 @@ class Tygo < Formula
   head "https://github.com/gzuidhof/tygo.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "770e1e7afb9bf4e32a837f7ccf64d88ceb94b89b48688317567fceff14bf78db"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1eec1e42aafd271a6c34c226498feab3d69d02425e59cf28b523fe972f2b5882"
-    sha256 cellar: :any_skip_relocation, monterey:       "c926fbdca852c3f5fa450d2696d4c284f1dbcf94cc66ef113ea3ee72d6460f33"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7412c569ffad7dee9e4d535fa4426499955627843c9a69f1581d92b7816612e0"
-    sha256 cellar: :any_skip_relocation, catalina:       "4dea7e36b601be6524f3bcb5911ff1bd0cf14b64cdf41e30b673d4e0a53f6ed1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cb60775c15f452e96f871ea2ea9cc09b0dec58b9d7ebbcab94d97f4d306833dc"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tygo"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "6f1404a879d5fd3700446e0e517aedd25509e8557667f395738a6f3fb49a9f20"
   end
 
   depends_on "go" => [:build, :test]

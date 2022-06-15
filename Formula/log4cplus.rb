@@ -11,13 +11,8 @@ class Log4cplus < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "b344dde7e0bfeb671a7edfc8706a98d1ac2cc8850e7030f9508846876fe42c79"
-    sha256 cellar: :any,                 arm64_big_sur:  "765dbf204776bc9b7b5f69223bd0f6c8d530e78b20e66bfe52a1d3a98f6304df"
-    sha256 cellar: :any,                 monterey:       "095da8330cf32913b779971ed13206f34f312c09924c6e4a35d3121260a29a52"
-    sha256 cellar: :any,                 big_sur:        "020f5bb424ba5b13c36a031d0faffbf0bae4132aca32dc8fbb8020e30ac82260"
-    sha256 cellar: :any,                 catalina:       "0ca8fc813a82137c28138a19d602344756233447b8b0789880f911e7e597b9e7"
-    sha256 cellar: :any,                 mojave:         "b1bd74384498b0fa7617a0fbd70e56af32d2c84d7c3552cae86cbdca52dcf323"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "65982c47478a5a2d7fe345429ddbe7a076734948425a42a988749ab4d627e003"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/log4cplus"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8e64e9f472a2d4df398376c7697c6443c7a7c5035cbcdc6f047ce33c1012d2e6"
   end
 
   def install

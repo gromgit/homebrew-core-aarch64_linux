@@ -6,7 +6,8 @@ class Kmod < Formula
   license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "0880a765bade6c140e9c0f8901e46db2f97d39951abf418ed701e03103f812d5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/kmod"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "947621ce3b66f7306506b0e08e574c4f96cc2aa8a4823bae8a0c10135f921f71"
   end
 
   depends_on :linux

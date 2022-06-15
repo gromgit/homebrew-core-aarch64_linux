@@ -1,18 +1,19 @@
 class Wangle < Formula
   desc "Modular, composable client/server abstractions framework"
   homepage "https://github.com/facebook/wangle"
-  url "https://github.com/facebook/wangle/releases/download/v2022.06.06.00/wangle-v2022.06.06.00.tar.gz"
-  sha256 "76ee18993616690c278187beffd76301934065e21c76a90ff694a86bed6cfbf3"
+  url "https://github.com/facebook/wangle/releases/download/v2022.03.21.00/wangle-v2022.03.21.00.tar.gz"
+  sha256 "3557884c78cd5b4ebf4ee48c89e056b30453f5e9a1f24e89e170b31e94fcdf90"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/facebook/wangle.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3ed2015f9c77be53145013db4ed3c0ba501ab45a7967654f5574b33d5e38f50e"
-    sha256 cellar: :any,                 arm64_big_sur:  "2feb5c560a4d307ddcd3f7c7c596c6ff39a988cf8f5887e7258cfa97601967b6"
-    sha256 cellar: :any,                 monterey:       "c93c94efd5bb8e59fb8be25d052d1f3e774eeac13d510ce2e1ec17991fba53ef"
-    sha256 cellar: :any,                 big_sur:        "1c5b8ca493dc5986733e1309d9124779f91730735caf04e388a856e6111e2b77"
-    sha256 cellar: :any,                 catalina:       "16f2a45a104eb28c7ab7eda4f7cb811447a69f9ef90fff6b2bede00e85d7fbee"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1d65f48772c894c0759454fb81d07cf33bcc3103e4ab8ab8a9dbcf3e2f18082c"
+    sha256 cellar: :any,                 arm64_monterey: "82160bc453eca667ff9b64bdedfac68892d3ba0bd966ff6f24fcd56d87b396ed"
+    sha256 cellar: :any,                 arm64_big_sur:  "d8d403947f01e2f28b86a35719ad19a984f6602c5c44fccb9099b7a36d1c45cb"
+    sha256 cellar: :any,                 monterey:       "1019240a9cd189ab45f4ca5e1de3a6569fa0f298e0a4ea92a25d85ca50cf69b0"
+    sha256 cellar: :any,                 big_sur:        "122420ef08a0c6a41448033fef240b3f46f00764a8ac0fff473df2ac0b046fbb"
+    sha256 cellar: :any,                 catalina:       "213cf5f4aa1ad3b34f74001c7a3cbad4c6b5a04ed57258a37562ca814b461afc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7a1d77898a430a7df48ae7c8e93e47f5fbfeef95c26c8d727d64451de1919ed0"
   end
 
   depends_on "cmake" => :build

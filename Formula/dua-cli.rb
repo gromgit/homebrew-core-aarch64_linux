@@ -1,17 +1,17 @@
 class DuaCli < Formula
   desc "View disk space usage and delete unwanted data, fast"
   homepage "https://lib.rs/crates/dua-cli"
-  url "https://github.com/Byron/dua-cli/archive/refs/tags/v2.17.7.tar.gz"
-  sha256 "6ef774e96d256bc450da201f6f69b355c88a5dc0aa8d5ef21acda9394bf18482"
+  url "https://github.com/Byron/dua-cli/archive/refs/tags/v2.17.2.tar.gz"
+  sha256 "759ff122112d3c1219973c8dbb5a77adf311d082f89ace18a8e6012a644f90e6"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2403a6c3046d965a48ade74e2a0c2c136d93dd5fb9c87bfb96370fa85a905a0a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f17705b1cbee04c028dba09c946d062164ab04abac15bfada13d7cae77d51c99"
-    sha256 cellar: :any_skip_relocation, monterey:       "ec0d41d6859d0ea37ad6271804edca273665c20513e8f055b21d35bc825f443e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b87dae45f5b7ed9a4c19b79f5b6f3ff26fc917307b26e9ff603cd78c95c368da"
-    sha256 cellar: :any_skip_relocation, catalina:       "ba0e956c8948811d27753616b977dc0a36ade4eb8d43de35c30ab626319d34f7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d60a42249ffcb70cb2017215692b43e377e248130102aac8cbc1013e1ba7754d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cb762cf99763fba9e75eab56d18f35a9e0daa5843b937778df185486880d6094"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9a7ed822a1317d69e2c8bf3607a16a05327583191453964c524df431a8a9f0e5"
+    sha256 cellar: :any_skip_relocation, monterey:       "90ee0dd51ab33aff78b1cd58cbadcb6063f49258a2eb26ab86a7df702610e711"
+    sha256 cellar: :any_skip_relocation, big_sur:        "56b93a607ffe9149a156af64ff00a73c3ac24dac86bc560c863a72d290afaabd"
+    sha256 cellar: :any_skip_relocation, catalina:       "04e92a6322ec6c29ab1a689385078dec5790d69845cf94922546f9dae64d5001"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ede82a13f5c82a0d4e79c7f62f24ac953a7e4d0a0750d9ff661dd84859a199ff"
   end
 
   depends_on "rust" => :build

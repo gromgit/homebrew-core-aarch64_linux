@@ -6,13 +6,8 @@ class NoMoreSecrets < Formula
   license "GPL-3.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "66520c02cdeb6c76be9f7e64353b63950e3c017ebfeb475a18c87c3b51a380d7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "64fc527581550370d00962142f47e30d3e529e3462d72ababff155b5a13cd73d"
-    sha256 cellar: :any_skip_relocation, monterey:       "c8816e4e12990323c34330634bed74f02ebd03c05c666bfd175b50b037b1fda2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "40bfaa531207bce7140398180d44632f1f8574f720295061fb97bfdd14533a3a"
-    sha256 cellar: :any_skip_relocation, catalina:       "badc69153ed6a345eff5282d2ce746395d0d04003ba29c096204c39633c7da06"
-    sha256 cellar: :any_skip_relocation, mojave:         "05abb8f3a139e05d602efa4e14b5dc108f4be477330955523f3a3b2673d8ca13"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6957194726eb655233552a996c4bb2dc8bae487ee8d4921de039def07118a94a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/no-more-secrets"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b1027e7868c419c88955ce78c29817b73fdef6daddb2222f17301df5081baca5"
   end
 
   def install

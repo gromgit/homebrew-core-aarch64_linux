@@ -1,8 +1,8 @@
 class Libomp < Formula
   desc "LLVM's OpenMP runtime library"
   homepage "https://openmp.llvm.org/"
-  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-14.0.5/openmp-14.0.5.src.tar.xz"
-  sha256 "1f74ede110ce1e2dc02fc163b04c4ce20dd49351407426e53292adbd4af6fdab"
+  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-14.0.0/openmp-14.0.0.src.tar.xz"
+  sha256 "28a1cbdd3dfdd331e4ed2dda2b4477fc418e455c883bd0d1d6acc331118e4688"
   license "MIT"
 
   livecheck do
@@ -11,12 +11,12 @@ class Libomp < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ea503732fdfff1d7fa55fce465529fc44932ea3f9fe07ebc6baea67781c1e2ee"
-    sha256 cellar: :any,                 arm64_big_sur:  "14c39ae9191b9e9911b4478e842143f033e8e8511253304dd5f2547511dc73ad"
-    sha256 cellar: :any,                 monterey:       "6256bb9844c07150768fce08514da9938b6509fef76a5731efc74f1b005bef10"
-    sha256 cellar: :any,                 big_sur:        "2fdcb0b935b916209ef822c006e5de6983fc64fdd5743aee5a235384afcc5822"
-    sha256 cellar: :any,                 catalina:       "0686f741811778142e6620ab15ec6134950c20d35354ec0516713fe6bdf23763"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "95a85fcf71416df982e111c658871ebb2d9fabed74d891e6b7528f26e494d908"
+    sha256 cellar: :any,                 arm64_monterey: "cf1058b26e1a778e523d51562c99b4145aea1b1cb89f1c60b3315677a86c7a08"
+    sha256 cellar: :any,                 arm64_big_sur:  "bbf77a1a151f00a18e340ab1f655fb87fe787a85834518f1dc44bf0c52ae7d4c"
+    sha256 cellar: :any,                 monterey:       "e66d2009d6d205c19499dcb453dfac4376ab6bdba805987be00ddbbab65a0818"
+    sha256 cellar: :any,                 big_sur:        "ed9dc636a5fc8c2a0cfb1643f7932d742ae4805c3f193a9e56cab7d7cf7342e7"
+    sha256 cellar: :any,                 catalina:       "c72ce9beecde09052e7eac3550b0286ed9bfb2d14f1dd5954705ab5fb25f231b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9fe14d5f4c8b472de1fad74278da6ba38da7322775b8a88ac61de0c373c4ad10"
   end
 
   depends_on "cmake" => :build

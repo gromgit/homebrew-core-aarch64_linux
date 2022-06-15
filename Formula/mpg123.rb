@@ -12,13 +12,8 @@ class Mpg123 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "10dcbf0526607d93ffb9d8a0723a0798d2474617ad3fd395807700019621635f"
-    sha256 arm64_big_sur:  "b6c673ec40d9baff23f7ac20b710d024bd9e4eaa5a72add9a90ba0a24f90998f"
-    sha256 monterey:       "c991eb5999e7e68b403c57d855b3dfc3e4932ccc512804339b1c984297b2bf88"
-    sha256 big_sur:        "70355cefcf35844d7bf4d7b23b16e1765924d08828acc672f0eb58fbea2bb455"
-    sha256 catalina:       "c26284810d5b37211e5a0963095ec22fb07ec3862bb01ba0e87d34cf48a618c8"
-    sha256 x86_64_linux:   "56ff29e1333532bc64fba795a3d0d1384ad51fb5fc88557a4db488aad7238d75"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mpg123"
+    sha256 aarch64_linux: "8277253b8a279698a4ea15c349318a7b75b36af9360131f470945349e11d7167"
   end
 
   def install

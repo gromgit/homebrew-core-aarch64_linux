@@ -7,12 +7,8 @@ class Libmxml < Formula
   head "https://github.com/michaelrsweet/mxml.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "dc96370d86c83265e3effd6049c143dddb4248382d727642ceb65a66532588de"
-    sha256 cellar: :any,                 arm64_big_sur:  "6e2b3cc9d77fe87f0ef87f01d8a18929b651dd139c8a6fba17d3385eabd44070"
-    sha256 cellar: :any,                 monterey:       "3af6abe72cb8368988ded65b825947ddd3b979c04da8f8f38a3200629673f428"
-    sha256 cellar: :any,                 big_sur:        "72ebcbbb662dc0fdcde53048ff12a98a11f6a4a134e91eecc82605bf384e2ce3"
-    sha256 cellar: :any,                 catalina:       "085ea14c9ffe2c4318167bfe70a597ec75ae7efb93f6720ae45db536285d53c7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c82b42cb4d23f082638ce0e4314e378052f361d73a35c85389fe2419ee13aff5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libmxml"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "48bb95bb6ece4b7a6f94c76edc1ee10b0f985d26fdb6384dd37d26afda805233"
   end
 
   depends_on xcode: :build # for docsetutil

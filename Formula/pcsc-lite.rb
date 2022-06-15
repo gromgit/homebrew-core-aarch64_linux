@@ -1,8 +1,8 @@
 class PcscLite < Formula
   desc "Middleware to access a smart card using SCard API"
   homepage "https://pcsclite.apdu.fr/"
-  url "https://pcsclite.apdu.fr/files/pcsc-lite-1.9.8.tar.bz2"
-  sha256 "502d80c557ecbee285eb99fe8703eeb667bcfe067577467b50efe3420d1b2289"
+  url "https://pcsclite.apdu.fr/files/pcsc-lite-1.9.5.tar.bz2"
+  sha256 "9ee3f9b333537562177893559ad4f7b8d5c23ebe828eef53056c02db14049d08"
   license all_of: ["BSD-3-Clause", "GPL-3.0-or-later", "ISC"]
 
   livecheck do
@@ -11,17 +11,15 @@ class PcscLite < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "145b3ebbe42e46c92d8eec4cad02cab82dbaa9b4097fa9d03858c32d12dcc9c8"
-    sha256 cellar: :any,                 arm64_big_sur:  "dbbc8568a8b8050ef9111fe8a609789c0b223aca457529dd681dbb6a539ea7d7"
-    sha256 cellar: :any,                 monterey:       "810bf27931157dab2015e164216d9d4a686805dfe3c47b2c0794a46fbcb792f2"
-    sha256 cellar: :any,                 big_sur:        "61a8d19808ab9ee3c58191843ea8daa8e9eab5603797a30eb9ea5b2d96a89268"
-    sha256 cellar: :any,                 catalina:       "c29b451350f63edfd4931aa52132defcf48914b21442c093f2575dfe28c8f350"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aa7c12525da58a50e43b8318a82e0c7033f67c88132d0c452b8a1c5942c82c3c"
+    sha256 cellar: :any,                 arm64_monterey: "58d2948f8920bcb6c459408452b9086da9e26802c54ad75130f5c968b8d563b7"
+    sha256 cellar: :any,                 arm64_big_sur:  "d8bd2a6a9c6006f168138cef6df3b5903cb899e0bb8a657ecfd70bc05de82073"
+    sha256 cellar: :any,                 monterey:       "76a55f31e459abbe18ed16fd4f103ae7ee11bfeea91b35f28aec91160bbf3c61"
+    sha256 cellar: :any,                 big_sur:        "752070630d5c324beb9366f08d5b18f680a4336ed0e77c4aab39d754ce20849f"
+    sha256 cellar: :any,                 catalina:       "ce0f31bd6c00894f530ef0b9496f309a75e79df3b89ba97fbf78d57c7c43a5fc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0e27431f84b844674ec8442ec3bd751fdd169a4d5a30778382c6d5dbb17287d3"
   end
 
   keg_only :shadowed_by_macos, "macOS provides PCSC.framework"
-
-  uses_from_macos "flex" => :build
 
   on_linux do
     depends_on "pkg-config" => :build

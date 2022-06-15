@@ -1,9 +1,10 @@
 class Postgresql < Formula
   desc "Object-relational database system"
   homepage "https://www.postgresql.org/"
-  url "https://ftp.postgresql.org/pub/source/v14.3/postgresql-14.3.tar.bz2"
-  sha256 "279057368bf59a919c05ada8f95c5e04abb43e74b9a2a69c3d46a20e07a9af38"
+  url "https://ftp.postgresql.org/pub/source/v14.2/postgresql-14.2.tar.bz2"
+  sha256 "2cf78b2e468912f8101d695db5340cf313c2e9f68a612fb71427524e8c9a977a"
   license "PostgreSQL"
+  revision 1
   head "https://github.com/postgres/postgres.git", branch: "master"
 
   livecheck do
@@ -12,13 +13,12 @@ class Postgresql < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "d270d17a2e3b8a1efc2b2cfbeff2a789b1786440d833bba073b148f94af011c4"
-    sha256 arm64_big_sur:  "f7c1f679c1fe7ecd51d114e2e5de345b7e346d7cd719643f1cc84e4798854900"
-    sha256 monterey:       "2da50b88db0bbb7861f3249a0c2b357b73b6ac4e85693ff406572da5657f61b2"
-    sha256 big_sur:        "6b09a56d995f1e267da15f7c85311c5075091c8143bc8e6684a3f1dd2683f2f3"
-    sha256 catalina:       "cd9c37da23e2b5bb3096e2025ec536bb0252c5714bd8bb56b829a18396750388"
-    sha256 x86_64_linux:   "5cf8c86d9313f99a961235af2b2881b7bee24209c51d41f747c2b8547e986412"
+    sha256 arm64_monterey: "2bdd0a5c963159499d9033afbd67872799a1dd73d9aa0656fc1276d6b2db18c5"
+    sha256 arm64_big_sur:  "c9fc350fd229a8ce2ae1b4c2415d43adb8d1212ec70e1e823d07d01128ea53f7"
+    sha256 monterey:       "e646d3d891ba61c6779aeffbc8abf9d7590df75c0a61b142766863b0df7403c3"
+    sha256 big_sur:        "6433ac89dbd65d184f5792d6160d8f5d1c76f435f43c3492a6a4bfa6c00b79cb"
+    sha256 catalina:       "bb6bf761a60c6aec73f31595e167c2c788e80ea0a8ea1d27dd9f1040f854ea12"
+    sha256 x86_64_linux:   "7f8eb593c0bc534a7dde812c42ade5e7261e74ef618e35be553c6a257c850f4a"
   end
 
   depends_on "pkg-config" => :build
@@ -28,7 +28,6 @@ class Postgresql < Formula
   # See https://github.com/Homebrew/homebrew-core/issues/47494.
   depends_on "krb5"
 
-  depends_on "lz4"
   depends_on "openssl@1.1"
   depends_on "readline"
 
@@ -60,7 +59,6 @@ class Postgresql < Formula
       --with-ldap
       --with-libxml
       --with-libxslt
-      --with-lz4
       --with-openssl
       --with-pam
       --with-perl

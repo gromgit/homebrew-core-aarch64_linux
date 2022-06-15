@@ -7,14 +7,8 @@ class Pdsh < Formula
   head "https://github.com/chaos/pdsh.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "4f4123b72684e34e5e78b67269da1aae6e29e0ae60d1f144754d521289230d5a"
-    sha256 arm64_big_sur:  "08092fc19817b2eb4fbbb1ffe7849246f7a8c0cfc1b3493d631f41b77ab68de6"
-    sha256 monterey:       "6f62900a3ebb6760631932fab7cf15c6cc3a12f2c2c8d390a46710f157716baf"
-    sha256 big_sur:        "c9865e6ec25dd5d76c412919c161377a73e0e72f53b97c433488377ea6c69ece"
-    sha256 catalina:       "db103afd01523d00761df3c077b309ffeaa7e816a538ab9b739fac7b58a8171b"
-    sha256 mojave:         "d5ce164360edacbda30b059e8964fc6e4c886adc5f63218a37667756419ef51a"
-    sha256 high_sierra:    "4063ea4d575eef74e2af6993a74658df6c48e42b81df8a77a49aee745c7527a0"
-    sha256 x86_64_linux:   "02ddcbc57a480f8a5f049e6f50de9621b7eb6f84ca6e52ecd91a8747035641b6"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pdsh"
+    sha256 aarch64_linux: "2052c9cfde04126270a74250e4cf308b0cb61c5908d8b94d1a5665ca15a9230c"
   end
 
   depends_on "readline"

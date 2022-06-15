@@ -7,12 +7,8 @@ class Gzip < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "17d882a783a96c603e4960caceab2d5ea2d2e838d9eee516652d388d23be33b2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f20559cd8d35e9db646d3d7ff5c56e3d07352ae1fd2f1463de778b0609cb49ae"
-    sha256 cellar: :any_skip_relocation, monterey:       "9bf75c712f706f499314df85c82a0e386eac45f7770144a6ed3736955a8d21c0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bfcd96abd7479f2071b49d6d381ed08934c27f5b1b2b13d7627adaa85e350ec2"
-    sha256 cellar: :any_skip_relocation, catalina:       "d29972e532493ff47adbb064b0a5c54b893ef2ae8c7d6b2f4edc104a4f203014"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0112fa3e595f2f5e7b95c939aba21ddaeca8e710138e9c7d1258442c8ad758aa"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gzip"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3bfd6d3b6964ec51302191cb41843cdbdd5b52d80879b8585f74b01c5cdadc20"
   end
 
   def install

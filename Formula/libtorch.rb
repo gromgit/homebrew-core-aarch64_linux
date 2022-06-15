@@ -7,7 +7,6 @@ class Libtorch < Formula
       tag:      "v1.11.0",
       revision: "bc2c6edaf163b1a1330e37a6e34caf8c553e4755"
   license "BSD-3-Clause"
-  revision 1
 
   livecheck do
     url :stable
@@ -16,24 +15,21 @@ class Libtorch < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "ade0e2426a912e8d258bb3fe0526e3411ef0476fcfed0fc49adb86f0c0117cd4"
-    sha256 cellar: :any,                 arm64_big_sur:  "382de43ea289eb525774caeeabc6d55aba6c6dcebda187d947fb5704f09322b0"
-    sha256 cellar: :any,                 monterey:       "8a0e504fa8c7203f836a75497dbbd01900dafbf87ed96c431362f08d39ba5e16"
-    sha256 cellar: :any,                 big_sur:        "e00080ee66a776d07a397aca9e5cbe78e5b4b3b7e4ba3f4c593a36c3b8fb21cd"
-    sha256 cellar: :any,                 catalina:       "52f809178bf99c740c9f45905397617df6856b59ce21aaa5ae175442ef46f547"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "70acc2535e0856a43896c394f2014ed58d65c5f7cda15a692bc33d7d2bda4bfb"
+    sha256 cellar: :any,                 arm64_monterey: "dc1fc8f4effb97499be315a119404cf5d0cdd25b0fec510567b42a86181d5ab6"
+    sha256 cellar: :any,                 arm64_big_sur:  "68e63b2242af7c6428e8ab47d390ef28425ac128fddec9508c54874308118b8b"
+    sha256 cellar: :any,                 monterey:       "d709083b53b72079ce3540d4d352d9d965a711eacc72a05ca4a1a0ba82275402"
+    sha256 cellar: :any,                 big_sur:        "dd5610a0aec0f081cf7e6caddd99038c4127dd35958899269ca4827cc647be16"
+    sha256 cellar: :any,                 catalina:       "838b03af23bd68b21b66f1764cd6a8e70ddc14fa81820124db67672460b79a5f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "11aad0417538747f11d22289e50fa6feab91db7d4edfed385f5fcf5700b5f706"
   end
 
   depends_on "cmake" => :build
   depends_on "python@3.10" => :build
   depends_on "eigen"
+  depends_on "libomp"
   depends_on "libyaml"
   depends_on "protobuf"
   depends_on "pybind11"
-
-  on_macos do
-    depends_on "libomp"
-  end
 
   resource "PyYAML" do
     url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
@@ -57,7 +53,7 @@ class Libtorch < Formula
       -DUSE_METAL=OFF
       -DUSE_MKLDNN=OFF
       -DUSE_NNPACK=OFF
-      -DUSE_OPENMP=ON
+      -DUSE_OPENMP=OFF
       -DUSE_SYSTEM_EIGEN_INSTALL=ON
       -DUSE_SYSTEM_PYBIND11=ON
     ]

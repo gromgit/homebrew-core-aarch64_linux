@@ -1,8 +1,8 @@
 class Kubie < Formula
   desc "Much more powerful alternative to kubectx and kubens"
   homepage "https://blog.sbstp.ca/introducing-kubie/"
-  url "https://github.com/sbstp/kubie/archive/v0.17.0.tar.gz"
-  sha256 "775bebfadcb075abb519ff3a79bee4ef1e1d6a55dbff707a7cf3cd0a54c871c1"
+  url "https://github.com/sbstp/kubie/archive/v0.16.0.tar.gz"
+  sha256 "0c43848d201ee36c11ddb082a9d16604435c6190ac72f293e9f8f1ce62d20fa6"
   license "Zlib"
 
   livecheck do
@@ -11,12 +11,12 @@ class Kubie < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fe3385c7cf366063f14acbf5917e93e0eb4fa37db1e7cbb594a61be4c91eac2f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "20ee24b9cf95637bc3726604e16a6f687fc73b334dc77163a8148552704195a0"
-    sha256 cellar: :any_skip_relocation, monterey:       "4bed7baf8ca505c8eb5b4f55bd63c983509ed8dd02d1e3c5c53151606d207224"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4ab1e87c3b16d893762aabc44f29be03b8e563a54dae46d47828886a12eb07a1"
-    sha256 cellar: :any_skip_relocation, catalina:       "862189725c3ddf2642de56b6dee14ee6cd48c243aba2ca86d6ffadcbd7934ce1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7aac4f42befa57d8ac5824a9f5b1d61be594f49d0c3b6589b93db1df5657cc2a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "53d190ca715f75e49c9263e321affe72e8bd6af5519eb63fd9619dd97a230811"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9b259fbad773ba552bd0a89165085bdb63cd3fce450760aebccf9e5aa9636608"
+    sha256 cellar: :any_skip_relocation, monterey:       "d9a4abcc8ac31fbffb012211975ef64ffd8c022afc916899c1ee9788b12bf99f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "03762ab9517cc8ce3b7711608eefa92443dfd7f59f0ead356c78130fa5b6d1a9"
+    sha256 cellar: :any_skip_relocation, catalina:       "5b1745bd373e76bbc6098aadc55c20e5da118e14bcd8f7f33fc8a80cbfbd0bb1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "49ac2a0fee8f007c3c5bdf5ffbec01c22264b6843ac87bc0b840489ea0f2840d"
   end
 
   depends_on "rust" => :build

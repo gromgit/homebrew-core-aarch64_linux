@@ -13,7 +13,6 @@ class Needle < Formula
   end
 
   depends_on xcode: ["12.2", :build]
-  depends_on :macos
 
   def install
     system "make", "install", "BINARY_FOLDER_PREFIX=#{prefix}"

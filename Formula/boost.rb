@@ -16,12 +16,8 @@ class Boost < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "8962db038baeee22886c3fccf32a73dbc117bf0098e1d576e3265e5b6d3b0545"
-    sha256 cellar: :any,                 arm64_big_sur:  "31006195d59197469fef527827c8e0dfe75118c01b1c67d268c51052c060ac6a"
-    sha256 cellar: :any,                 monterey:       "d49eb4eb19d29f26499db581585e9bd3a291dbf5804cf4295f3ef5a5beb33979"
-    sha256 cellar: :any,                 big_sur:        "16e54dc0a542bb5ef74e0b7ec6429b59cba202230e37456a623163d9c188cae3"
-    sha256 cellar: :any,                 catalina:       "6793e4c55780b05aaa766a094d1a5ac1d75cb9f4c790724552d454a44b973260"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d5eb8064aa8d4e70e5a36120c0c8959871ace04e478529ec40260b1e69e0767e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/boost"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "633bcf946edd757a62d3b65d1c0f171da125bec6ea7f368797e709b9b83121b3"
   end
 
   depends_on "icu4c"

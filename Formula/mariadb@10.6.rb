@@ -1,10 +1,9 @@
 class MariadbAT106 < Formula
   desc "Drop-in replacement for MySQL"
   homepage "https://mariadb.org/"
-  url "https://downloads.mariadb.com/MariaDB/mariadb-10.6.8/source/mariadb-10.6.8.tar.gz"
-  sha256 "57a9488559ccbdfb8506b781089a7a08d8e0e1b647cffb8f2706af06f69ed438"
+  url "https://downloads.mariadb.com/MariaDB/mariadb-10.6.7/source/mariadb-10.6.7.tar.gz"
+  sha256 "75ee0f1f865a765fc461ab165419417a719e308faba784b2c97ecbe9e4b4b2c5"
   license "GPL-2.0-only"
-  revision 1
 
   # This uses a placeholder regex to satisfy the `PageMatch` strategy
   # requirement. In the future, this will be updated to use a `Json` strategy
@@ -24,12 +23,12 @@ class MariadbAT106 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "db4254dac66fa9af048f1341637c9b040b98b2ac79d55cc030b8e7b0d80a94af"
-    sha256 arm64_big_sur:  "ec9de012fdf23bb06fca94f212cf5279e49d37a41543f34f21ebc21782047bb9"
-    sha256 monterey:       "d1fa2a75c91ee3d032d70dc28257f91857e90a6397af4be4e267a4a50e110ed7"
-    sha256 big_sur:        "cd03dede5f990dcd4d6a741f2d35fceecd32094e6674649dc4e247e2a36f9265"
-    sha256 catalina:       "782f3d5a7adaf28da494609e71e476a861a18c8e5d7da9854995522ca286af22"
-    sha256 x86_64_linux:   "1f21050ec82b25b1ae706c8daa99b52fd92ededef26466d69e6aefca3c209d26"
+    sha256 arm64_monterey: "0e9790c6751a6c268c0e18b33acf96d9fa838fdca6d1c59b964e227f4deece37"
+    sha256 arm64_big_sur:  "d395eddb17a95d2860fcf8422f4bf613244260b1bcd41f2b4a104827f59dbeff"
+    sha256 monterey:       "f5a2731fa4df9f0fa55c0ed7a82d7f2bfde06a641d7551054cbd15be6a6ad30c"
+    sha256 big_sur:        "b6732f09d7fe96d9b096ae88209b04c50f492740bbc50fb761ada5f0e7ba9cad"
+    sha256 catalina:       "9b5490b29fba4042023526f3f68896eb90adfc15992d8290b92058f473cbd672"
+    sha256 x86_64_linux:   "0538e4a98c6cdb07f55ad5b5f9fe05dd85e2b78fba598fd7ecaa05eff3df986a"
   end
 
   keg_only :versioned_formula
@@ -45,7 +44,6 @@ class MariadbAT106 < Formula
   depends_on "pcre2"
 
   uses_from_macos "bzip2"
-  uses_from_macos "libxcrypt"
   uses_from_macos "ncurses"
   uses_from_macos "zlib"
 

@@ -1,20 +1,21 @@
 class Acl2 < Formula
   desc "Logic and programming language in which you can model computer systems"
   homepage "https://www.cs.utexas.edu/users/moore/acl2/index.html"
-  url "https://github.com/acl2/acl2/archive/8.4.tar.gz"
-  sha256 "b440c0048e2988eeb9f477a37a0443c97037a062c076f86a999433a2c762cd8b"
+  url "https://github.com/acl2/acl2/archive/8.3.tar.gz"
+  sha256 "45eedddb36b2eff889f0dba2b96fc7a9b1cf23992fcfdf909bc179f116f2c5ea"
   license "BSD-3-Clause"
-  revision 1
+  revision 13
 
   bottle do
-    sha256 arm64_monterey: "8ae5843d76f779903854645a53c35b61fe796d8b11caf3fe415a640f815edb6f"
-    sha256 arm64_big_sur:  "743c0e77ade1b6d63bbf77e7aa3836d24da387ed3a193cd643a1d3e78469ad46"
-    sha256 monterey:       "3d67a21cc7284a17535c55c5768bfc3747f5f052682ded921e8746f2cf5b8964"
-    sha256 big_sur:        "d5d341051774fa91ccb5c6c52cefaef85a74f10974c0ab53ef1bf7fc470c3c39"
-    sha256 catalina:       "72d322a7b8d02e48d5c67a45383ae1f4f64c6d7b94437ade47ec9a494be1b27f"
-    sha256 x86_64_linux:   "b76b5d2e82941d0cba322eb758bf7dd7c3fd233ee57b19c38cef0b4cae51e064"
+    sha256 monterey:     "825d7272eb277b9756f6816cb89d0c6dec9b2719158d3f8ba2d6a50d0b2d7f9d"
+    sha256 big_sur:      "4d5eeb80445ecf76726e5e156eb3acbd57cb176c801883f4ba75b25cecc2d258"
+    sha256 catalina:     "f3d0b44ddb425ca52de5ee98d31b7aedfb9bc0a3ce3d834f8b1a39145e7b19d3"
+    sha256 x86_64_linux: "17008cee54fd6d67e75bf36bf98ce4ca8618f428bb0a7b817ed1d49555fa6ac1"
   end
 
+  # Homebrew ARM CI runners hang when trying to build `acl2`.
+  # See https://github.com/Homebrew/homebrew-core/pull/96455
+  depends_on arch: :x86_64
   depends_on "sbcl"
 
   def install

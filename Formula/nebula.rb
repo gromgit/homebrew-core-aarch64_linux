@@ -7,12 +7,8 @@ class Nebula < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "73fca38859544c8961c7c633a61216942d8e28bc317616757418ed6f9d42f5d9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "73fca38859544c8961c7c633a61216942d8e28bc317616757418ed6f9d42f5d9"
-    sha256 cellar: :any_skip_relocation, monterey:       "3062dbc1b1bb998fe479edab971aa765acb115d67722fadef68287700b69ea60"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3062dbc1b1bb998fe479edab971aa765acb115d67722fadef68287700b69ea60"
-    sha256 cellar: :any_skip_relocation, catalina:       "3062dbc1b1bb998fe479edab971aa765acb115d67722fadef68287700b69ea60"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3f77fc3a0eeab07fc1157cfaaa39bc4d95da85c19859ca54f6ccdc320d4b12fe"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/nebula"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3599104942b5cdbbbb8f662e3e6529a6faca79674d29f3eb4ee2c1933e6a44a1"
   end
 
   depends_on "go" => :build

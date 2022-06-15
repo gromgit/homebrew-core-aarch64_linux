@@ -7,13 +7,8 @@ class SpringCompletion < Formula
   head "https://github.com/jacaetevha/spring_bash_completion.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "bd4aeec3cfd7ef58699e3db575729670c459ed5476a65b717c8ffae6ac8850c3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5c188dbaccd58b79b5596c7d0c34cd3a1a997cea7f6131393b11205a77964c2a"
-    sha256 cellar: :any_skip_relocation, monterey:       "c7c179b4ccf46a0ab7fcd3a300f0b3c1d630e6b450ba4b367c65abd4a9b4d25b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1110b2611a3d8dc08fe1731e46692b9d77234e60aba14602f0ad1f9380933eeb"
-    sha256 cellar: :any_skip_relocation, catalina:       "1110b2611a3d8dc08fe1731e46692b9d77234e60aba14602f0ad1f9380933eeb"
-    sha256 cellar: :any_skip_relocation, mojave:         "1110b2611a3d8dc08fe1731e46692b9d77234e60aba14602f0ad1f9380933eeb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cff62b143ba4126ebde03eca3822b4e1b3af6977a3a26b798d94286fd423cf47"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/spring-completion"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0577442ada28666dc3b6edcd50c7a95ca696dc6f218cde548f2d11fdcc597eaa"
   end
 
   def install

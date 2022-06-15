@@ -8,12 +8,8 @@ class Bazelisk < Formula
   head "https://github.com/bazelbuild/bazelisk.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ad91ac18b4378bf5b6a60760ae75637cec5035673226907bf483c6b38438f194"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8e1142cd0bd29516148b235aeee411ba2656d033f28cf8e763d517ddb48a4428"
-    sha256 cellar: :any_skip_relocation, monterey:       "d2ef3476915bf671413d4fee5b482a4f856ce2b1f03f4c3fdc60032281335f83"
-    sha256 cellar: :any_skip_relocation, big_sur:        "28fb6adc960a4bd4575031a0d0b41d14fe9058e74f3970839d75fee4d0b75657"
-    sha256 cellar: :any_skip_relocation, catalina:       "3753f2dbf8dc7d485a993be7909691e0d901bbbafadbb3804c848c0e98815e7e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e7ca78dc9a3492a2c15157c574f3fa1286bc8bfa28320138fb41d86d3163ecef"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bazelisk"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "91dd073cd8ce3862c6e9a88ce80ec35bbc253127fff6c0ae088acb2241ce8df9"
   end
 
   depends_on "go" => :build

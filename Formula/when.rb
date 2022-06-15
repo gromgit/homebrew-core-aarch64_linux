@@ -7,12 +7,8 @@ class When < Formula
   head "https://github.com/bcrowell/when.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f6c3589de949639d5c9c678d0d5c908d6e8a2cc2e582c4c2d748888f10a4a69f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f6c3589de949639d5c9c678d0d5c908d6e8a2cc2e582c4c2d748888f10a4a69f"
-    sha256 cellar: :any_skip_relocation, monterey:       "f6c3589de949639d5c9c678d0d5c908d6e8a2cc2e582c4c2d748888f10a4a69f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f6c3589de949639d5c9c678d0d5c908d6e8a2cc2e582c4c2d748888f10a4a69f"
-    sha256 cellar: :any_skip_relocation, catalina:       "791acd90b191f39a522ad0a9552fd90eec08dead44c2ac83e3430c3984ea333a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2cc448886e9bb194144c4881e6be4e3464601da149e3d5de7805f4af5c8d6559"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/when"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9a067c0ab5cf248ca681ff2e5cf459cbf621220b02883c2eed10bd75e5fb6090"
   end
 
   def install

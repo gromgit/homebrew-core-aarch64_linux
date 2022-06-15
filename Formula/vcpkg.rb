@@ -1,9 +1,9 @@
 class Vcpkg < Formula
   desc "C++ Library Manager"
   homepage "https://github.com/microsoft/vcpkg"
-  url "https://github.com/microsoft/vcpkg-tool/archive/2022-05-05.tar.gz"
-  version "2022.05.05"
-  sha256 "c2d02a979b648d8e640c1704d72766e68ab783f03c6eb89f1ad5a6645fd7f547"
+  url "https://github.com/microsoft/vcpkg-tool/archive/2022-03-09.tar.gz"
+  version "2022.03.09"
+  sha256 "174a9081059efc29f8c617e6d673d342388816872a3c57c7042051d029b77841"
   license "MIT"
   head "https://github.com/microsoft/vcpkg-tool.git", branch: "main"
 
@@ -16,12 +16,12 @@ class Vcpkg < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "bc7dd4a9c8724750e7d90fbeaf5037b563f88064a22f7772ddb6e66f37b22f50"
-    sha256 cellar: :any,                 arm64_big_sur:  "efdfa29ed81867d6feb9612525f40ec07a2e57452731c62ad9b3b77cd7b7ee6b"
-    sha256 cellar: :any,                 monterey:       "02da041fb48efd6faa1494f3a63ba20a7b393ae82ea3579cccdc4962090a0ad2"
-    sha256 cellar: :any,                 big_sur:        "50fa6e45ea67402e04e39774d36227a2a02649e7b617844dcbf4017a874bc60f"
-    sha256 cellar: :any,                 catalina:       "b56f27696e41f557bfc9ec210ae7e21d287e1086e37dc0f43a7cd2009c6dea40"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8c5e4fbc5a2fd2f47cdbbbf29922aadc3fe526bcbc508582737b1f821cc728b6"
+    sha256 cellar: :any,                 arm64_monterey: "9876b58572d7337e07b2528070037258682d2f6ba3ca3c37df221cfd10605d29"
+    sha256 cellar: :any,                 arm64_big_sur:  "39df2d10001621063de926d427f854a7a5bb419f813782c23fca71ab2a4ef09e"
+    sha256 cellar: :any,                 monterey:       "62c62da16ae59fd1b003722aef6b4d0853d68bb5f696ba15f626b3c63d026c03"
+    sha256 cellar: :any,                 big_sur:        "e937ec387b962ec67f15c3e0cb9456f22b6d7be4dfbd0a517598c5ab3a7abf6b"
+    sha256 cellar: :any,                 catalina:       "14440a9255341d0a2d68e78ff54bff9deca91ed1dfa645dfb022ea964321b303"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "85287583bb21bda7eb08c6badc6594cbc97634000559ff8287fa00d75f1a7cb6"
   end
 
   depends_on "cmake" => :build
@@ -52,7 +52,7 @@ class Vcpkg < Formula
   # This is specific to the way we install only the `vcpkg` tool.
   def caveats
     <<~EOS
-      This formula provides only the `vcpkg` executable. To use vcpkg:
+      This formula provieds only the `vcpkg` executable. To use vcpkg:
         git clone https://github.com/microsoft/vcpkg "$HOME/vcpkg"
         export VCPKG_ROOT="$HOME/vcpkg"
     EOS

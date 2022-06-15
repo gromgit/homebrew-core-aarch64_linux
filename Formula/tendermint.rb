@@ -1,18 +1,14 @@
 class Tendermint < Formula
   desc "BFT state machine replication for applications in any programming languages"
   homepage "https://tendermint.com/"
-  url "https://github.com/tendermint/tendermint/archive/v0.35.6.tar.gz"
-  sha256 "95de8d59c7a5eee5dc6fddc76e0eb68a9c649a92e54559ec73851b41e381f58d"
+  url "https://github.com/tendermint/tendermint/archive/v0.35.4.tar.gz"
+  sha256 "9f07b72666f86afed2270789dcdff2cb3054d25038abad21091cf69ba5092768"
   license "Apache-2.0"
   head "https://github.com/tendermint/tendermint.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e3df8edb89f6f5286cdf1f59ce3fa8e9d300005980c69f682547a0ed050fd38f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e3df8edb89f6f5286cdf1f59ce3fa8e9d300005980c69f682547a0ed050fd38f"
-    sha256 cellar: :any_skip_relocation, monterey:       "915530928787b572378bc9542649829c0fba0b5fa7c7e5da4ddbcb2fd38281e6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "915530928787b572378bc9542649829c0fba0b5fa7c7e5da4ddbcb2fd38281e6"
-    sha256 cellar: :any_skip_relocation, catalina:       "915530928787b572378bc9542649829c0fba0b5fa7c7e5da4ddbcb2fd38281e6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c76b2a80d2fd740faab06a75f830e7fd321df9d2802e39099d5f91984b0742c1"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tendermint"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "060e04938bd43aabad84ef9c9912043e9a84c09a839bf453b76ed2c5092dcac7"
   end
 
   depends_on "go" => :build

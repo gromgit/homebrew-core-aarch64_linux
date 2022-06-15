@@ -6,12 +6,8 @@ class PowerlineGo < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4a0caa72d77ae3b738999a420d0cd11eb5446b65c76a2c06f20475bf9eaf5864"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "939711b83cba560b4caad213c1ae55e815326823b1c64d526ed57ed426a8bd9a"
-    sha256 cellar: :any_skip_relocation, monterey:       "cd064aa617acdab43c0dbc8dc8d8b6244525d7636b5d3a34a1493998c35adb62"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4a41907ce3c129b31732c83ce74c814d3cf57757f197cbd98a15fa8a82f952ba"
-    sha256 cellar: :any_skip_relocation, catalina:       "04f4a28ca05e5cea076804fb8910d05dc1c03956f08b2d090d489d9bbd3ce9be"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8dad455057de8483939d867142fb9d9ae19b3e08a31ccd71739f6f8ef32c0bce"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/powerline-go"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a212427915536cb09cbf65e2e5b40c90a45b98f385b2aa9907e203323182f0de"
   end
 
   depends_on "go" => :build

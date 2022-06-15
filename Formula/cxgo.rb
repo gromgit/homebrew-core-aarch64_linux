@@ -8,12 +8,8 @@ class Cxgo < Formula
   head "https://github.com/gotranspile/cxgo.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "18d2bf86e86f57a86707fb779858f2be01ffc4c1e09a1f10bab20022f9292a1c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f648c7807d0b74585349a13f3537b495dc3b2136c9b6088af69ad1b19d6e14d9"
-    sha256 cellar: :any_skip_relocation, monterey:       "48f9783fca70d866592960a52f4003e7a210f1625c28a371632ee1497bac7065"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7addcde45fdf2dfe8c2c694e636c36be1aff37afa33e962cc0732c4f7f903dea"
-    sha256 cellar: :any_skip_relocation, catalina:       "a6e03349d1b041584bf5e42da1de44c10efd5c48d0bee2a8470cc934e32d7885"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f4d2deba42fdd9df3a9bd5c959c4149f79d40d389ff5d2cc047bc0cec4da5338"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cxgo"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "19e14b669af31374d079c4eb4a56237de2d47de352c1b637c57526a77dcc1fdf"
   end
 
   depends_on "go" => :build

@@ -1,18 +1,14 @@
 class Stencil < Formula
   desc "Smart templating engine for service development"
   homepage "https://engineering.outreach.io/stencil/"
-  url "https://github.com/getoutreach/stencil/archive/refs/tags/v1.19.2.tar.gz"
-  sha256 "ccf63fc77784df2b5b2b99f07a9fde56f45427f57c1fd8d0d806719d6099c696"
+  url "https://github.com/getoutreach/stencil/archive/refs/tags/v1.19.0.tar.gz"
+  sha256 "90be48af7ee73dcce02e9c3089374494562246e5dfd1ac21b4fa0b5980e69c98"
   license "Apache-2.0"
   head "https://github.com/getoutreach/stencil.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a575d6f2201e5718baa7bd4c35e2ac41b4b28fe756490f6ccc5c75b50d613d8e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "409f964cc96c734020e2f4c755fb9823c126c9113666097ef6999fddfb567f81"
-    sha256 cellar: :any_skip_relocation, monterey:       "6ae4dad6e677043d4c6a486c2d547ca8d89bce170be32de8381c9f7e1c0a26c6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b5049b9168d8ea683dcec11fd0e54279b8f07a7ffa48ca197619ba2dd504f17a"
-    sha256 cellar: :any_skip_relocation, catalina:       "7884de1ce6eeca6b45783d52a330e6d70d4fda1e8c81f28c7638260c6847bddc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1cd6efe21501549bd60c2b38fd5c10c05afa6ef519dde4f96f878b2a307f6825"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/stencil"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2c1ebc2c4a2aedafd8df9c24f707bc9fa2f6d2b5a5671b994789295f8fe51d2c"
   end
 
   depends_on "go" => :build

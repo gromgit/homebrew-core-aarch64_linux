@@ -11,12 +11,8 @@ class Kumactl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "431e4143042fc3f8282fea7c28d908172a767f6115b236c00d8d19d744d32efe"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e2e93ba62d3ef2edfe16b3e6efa9f7dff9164ecb866c735f2f2ac38c88bfc71a"
-    sha256 cellar: :any_skip_relocation, monterey:       "fd1d4cdc2ab6035a9525aa8d491bcef64373efb2b159ef20ae0cb427f2efebd8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "68517bebe15442c24691e63d2aba4fce2ca5cad73fc168dee01807b70d443804"
-    sha256 cellar: :any_skip_relocation, catalina:       "ee185641e1e05f717ccd18825514f72aca1db198578f920ec29581a7af6d4541"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "948fc00a865eaaa7986cf930fbb8c8fed192926016c761c89a7bf0b2ffe7b9cd"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/kumactl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "25d1c6e00fd79d693518736b799ba1f73748b98af1036a4a1186d820d750426f"
   end
 
   depends_on "go" => :build

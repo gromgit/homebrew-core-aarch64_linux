@@ -11,12 +11,8 @@ class AwsVault < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "80407756d1e871340bc0020530f872ecd4ddd465431413ab224241ab7ffed1f3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6da544cac7966d7df67b58a7666f076d5cbec4e2384776f432217f14cddd8ffd"
-    sha256 cellar: :any_skip_relocation, monterey:       "ab281a33c3c1a92f26b82d161ea9535f874138cd40c730445ba505ba7694de7c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0bca697b04ba521ae34957d316d6117e5f9788bb8d99b1b7f3f651f7e0f3dff0"
-    sha256 cellar: :any_skip_relocation, catalina:       "c94f6379247159e72fbd525587381a173cf21eb43c10044a2f56b6327c2b59f0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "652f252b52cb55b535257f6d5b5ce2f84d75813090bf80237229bb5c71ba1e6d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/aws-vault"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9caf506044d68e892b1eec850311e7a1aea2cad6e0a94bbd7c83495bfb71e792"
   end
 
   depends_on "go" => :build

@@ -2,9 +2,9 @@ class PhpAT80 < Formula
   desc "General-purpose scripting language"
   homepage "https://www.php.net/"
   # Should only be updated if the new version is announced on the homepage, https://www.php.net/
-  url "https://www.php.net/distributions/php-8.0.20.tar.xz"
-  mirror "https://fossies.org/linux/www/php-8.0.20.tar.xz"
-  sha256 "973fec765336ee01f47536a5db1c2eee98df9d34a41522b7b6c760159bf0a77b"
+  url "https://www.php.net/distributions/php-8.0.18.tar.xz"
+  mirror "https://fossies.org/linux/www/php-8.0.18.tar.xz"
+  sha256 "db161652cacae4b31c347fbf2e17b80656473cb365f2bb3460c4552f5647e2e7"
   license "PHP-3.01"
 
   livecheck do
@@ -13,12 +13,12 @@ class PhpAT80 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "8b614e3ba1345a44220b70a18dd148294df9aae4ac9d1d11b30c4f737cf91daa"
-    sha256 arm64_big_sur:  "399f4b3cee87d33840f78b53ed287dd27496ba8c116317ae1d611ebb839243ea"
-    sha256 monterey:       "4986b7b2adb3751d3c9e3248ee182033b90111b395b692994775e8c5806eba74"
-    sha256 big_sur:        "f591a91be82458b7ce13288db2fe100d46b29ae7cbcc7288effbfd28a4a4d664"
-    sha256 catalina:       "da5f38835d9adb4dbccdb12c17e9bc78c50fcaf7750d56a9efd91d4e9bee69cd"
-    sha256 x86_64_linux:   "b6daf1de143401c0ac520f18fccf6fa31a8c00030e2ddbaca6a747ac2096d53c"
+    sha256 arm64_monterey: "187cd06f52b67da5dcc1730976b4d81a9fb6942bba7c6f7336de78da3c418442"
+    sha256 arm64_big_sur:  "efe7d670fe56f1f45aa4d2296fa3af2cb4d4b4cd458786c25465fe911648bd9a"
+    sha256 monterey:       "cd2ee50702dfe721397103ad003d104bcc5ca16756ec3f0cdae5d4e45e3edc19"
+    sha256 big_sur:        "b65c362e14053995d93ae48d40dcafef4f46f4dce3801b1775d1dd36de0a1092"
+    sha256 catalina:       "08aef03f3c6a730daccc1f92ca06c6ca90e873f25e8d3539d52cd05206b56fb1"
+    sha256 x86_64_linux:   "1385ed44a1cf71fd9451d1bc2b0c2a14aadc6f668c6c1a483199ff47a00941d6"
   end
 
   keg_only :versioned_formula
@@ -250,7 +250,6 @@ class PhpAT80 < Formula
 
     # Custom location for extensions installed via pecl
     pecl_path = HOMEBREW_PREFIX/"lib/php/pecl"
-    pecl_path.mkpath
     ln_s pecl_path, prefix/"pecl" unless (prefix/"pecl").exist?
     extension_dir = Utils.safe_popen_read("#{bin}/php-config", "--extension-dir").chomp
     php_basename = File.basename(extension_dir)

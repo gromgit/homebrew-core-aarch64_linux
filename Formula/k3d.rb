@@ -2,8 +2,8 @@ class K3d < Formula
   desc "Little helper to run CNCF's k3s in Docker"
   homepage "https://k3d.io"
   url "https://github.com/k3d-io/k3d.git",
-    tag:      "v5.4.3",
-    revision: "7e4b1124c891e2b4944f26238ed4938c5404e137"
+    tag:      "v5.4.1",
+    revision: "7b8c0f483ff124f217d14852ca4e937701e9003e"
   license "MIT"
 
   livecheck do
@@ -12,12 +12,8 @@ class K3d < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8c2af98a480e0cbc308317d9a690a2e4d7a1ca765e5f587ead80222c1333fc01"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "68a26f812194dfa53322c7a3f2337e67c4d1fa5d138904ffcdfaa3586da0b3cc"
-    sha256 cellar: :any_skip_relocation, monterey:       "5626984ea69bd457991049e606afde54b4d25d20ac2983d02141424f64fe59bc"
-    sha256 cellar: :any_skip_relocation, big_sur:        "798fd84e244051fd514ea6cb39b0d2ebe63a665f915e3fdfcb8e7de7b71244ab"
-    sha256 cellar: :any_skip_relocation, catalina:       "13cec3c20dc35246e7fd52978d61a2c3ad70f1b5440f25482812ee01446db742"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e34f528c2e28374eb3b5a43fec747a8e50b93974bf2a25cc1444c57d985cc77c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/k3d"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "920f5a532e740ff8ea95214cf8c99a17c8e9aa5493b9c6a3f3adcfa2d79f6196"
   end
 
   depends_on "go" => :build
