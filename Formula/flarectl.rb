@@ -1,18 +1,14 @@
 class Flarectl < Formula
   desc "CLI application for interacting with a Cloudflare account"
   homepage "https://github.com/cloudflare/cloudflare-go/tree/master/cmd/flarectl"
-  url "https://github.com/cloudflare/cloudflare-go/archive/v0.41.0.tar.gz"
-  sha256 "e838e89c9e53c382defb78cc5d3dd00cb530b8832c336aefe3094230b646bd93"
+  url "https://github.com/cloudflare/cloudflare-go/archive/v0.38.0.tar.gz"
+  sha256 "d024a5cc1187084ed1c3ac3f46bf029c8e138ed8d20b1ff262e19f895724ad40"
   license "BSD-3-Clause"
   head "https://github.com/cloudflare/cloudflare-go.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d9fef3e64232ade882fce55a355e532e7cc2e178969a49b03f74cfbe04b48455"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c5bdd35d319749197ef90d59ffe281d569c5e3b4c36b64b11b6b8c6788227225"
-    sha256 cellar: :any_skip_relocation, monterey:       "4c1e9d326715ac82162c4b3bed186d5ae1fe9fa23a4a5d00510d4731bda501d5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "08458b9c17d6681b3e32a0e13ec773db019e1c00fb3b0c016ae204290620e376"
-    sha256 cellar: :any_skip_relocation, catalina:       "b87d9a41f92214ac61670bb652d024a7a7355d41c0c5cb79f7398f52d7ae87dc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "44d68e98cf104dbe631050c4f7c75d655c1f042ff0773c6315e1e7169d75a1e7"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/flarectl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b10ce43bbf6784bcfbe4e4cf3d036a733236db7901305943efe40dd0e9aec2c7"
   end
 
   depends_on "go" => :build
