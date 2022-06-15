@@ -1,18 +1,18 @@
 class Luau < Formula
   desc "Fast, safe, gradually typed embeddable scripting language derived from Lua"
   homepage "https://luau-lang.org"
-  url "https://github.com/Roblox/luau/archive/0.531.tar.gz"
-  sha256 "dad818dd2e0d21842139c2c3379e66a0ee5c21a22a865f028495812708885472"
+  url "https://github.com/Roblox/luau/archive/0.526.tar.gz"
+  sha256 "64b39fd654db44f66eed8be235d33ee94d624d5d847bba8fa69a2003a6977712"
   license "MIT"
   head "https://github.com/Roblox/luau.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b290403dbda58e4cd5a9b598f759769e701dadffc9186619ca4a071ca1366bd0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0feb6df22ebc6f59cec0cf7b454ab3f2a19e51678f5feaeb5ead8abad6b0a05e"
-    sha256 cellar: :any_skip_relocation, monterey:       "e5af5b40a4ef0f8c8be8d7480f1a3d16b37bb5c79f296a7c04f8fd5783f805a7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0f7b11b2004e2a1bfd5f90dadacf73f1a1e87bfc6faff06e06409e6155cb187c"
-    sha256 cellar: :any_skip_relocation, catalina:       "811d33a9337a602af4318869f33471825f1792ea6162b41c4c714c3cfd836924"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8bf8a5994c053f4006db3ec6530c9e89b6d9a401d4d21c60eb287d879e86dd14"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a89d0f7d9f410d2cb9b088d54fa3cba2271329398a08b81ffa45b8cf2d265f1f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c18d270097c78cef46acb074db3f16a3ce4c15d0e60ff78be9ad25f9fa2b866d"
+    sha256 cellar: :any_skip_relocation, monterey:       "55c1978d606bc10ff3dacaac56c03fd41e5adf1b57ffc95683a7c48071f47bc3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e64c3c45a11bb6612c849baaa62227503391f0e25ef2821bf6745df52167ba72"
+    sha256 cellar: :any_skip_relocation, catalina:       "5ef8da9c25369191bea2c41d077bf90a24c9f698ec159bdc718488ac94d4eda2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4f13197767670c0ed6d29648bbf88de04ed75d20bb7ff35b8065251c3f3aaaa6"
   end
 
   depends_on "cmake" => :build

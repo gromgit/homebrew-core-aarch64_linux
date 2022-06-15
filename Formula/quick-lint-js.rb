@@ -1,18 +1,18 @@
 class QuickLintJs < Formula
   desc "Find bugs in your JavaScript code"
   homepage "https://quick-lint-js.com/"
-  url "https://c.quick-lint-js.com/releases/2.5.0/source/quick-lint-js-2.5.0.tar.gz"
-  sha256 "298ed4287f187de198e428f7d4c239b0a56f8f65f5738a57330c3db9d98b26cd"
+  url "https://c.quick-lint-js.com/releases/2.4.2/source/quick-lint-js-2.4.2.tar.gz"
+  sha256 "c52f961669439ae13e9676d471118f995baf46279da70ac0a7c98c4aede925fd"
   license "GPL-3.0-or-later"
   head "https://github.com/quick-lint/quick-lint-js.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3f46f8c842da6f289ce4591834e123d8b9f1793f476aa390e7fc2fdbb7fbe2b6"
-    sha256 cellar: :any,                 arm64_big_sur:  "6f2611e37d22e624c776bb6b0ad12bc9df97ca0ba85f4fa52064f3cd696dedaa"
-    sha256 cellar: :any,                 monterey:       "64415bc4ad16f746182e6b2216b7ff1872d3b1db7a098a572abc3b5a2bfaac66"
-    sha256 cellar: :any,                 big_sur:        "fb8865890a15f4bb4b4f7afc056c0bd7baedf0218458c9479643e9e813e318d5"
-    sha256 cellar: :any,                 catalina:       "ae1f9796eed886ea6b46faccdd5b1b3cea630d6b4732f8e42e9b1d90d42107f4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "527e2a20b74919de975ca9e2dc8cf1fbfcc39baf38c979e67ea61ddbf8e56ac5"
+    sha256 cellar: :any,                 arm64_monterey: "89a1773ca9906bdde6449170f7c1f1dd49361f2335a9f310cd42058662e0f860"
+    sha256 cellar: :any,                 arm64_big_sur:  "b06bd33d74a281673276b1713de5e3fdfb89f5574a42b1837d0639f5344cce80"
+    sha256 cellar: :any,                 monterey:       "acefec368522b6d17d21a3fa780e197eeb5d305d6d8db64095ee5418a5a0cbed"
+    sha256 cellar: :any,                 big_sur:        "cba4ae88794eb5dc71568135e85593ab1f1c043f4851a9ed5379f6029da12e37"
+    sha256 cellar: :any,                 catalina:       "22a563cbbc25c78dda6896ad3689de97f7f45986483d699f1c557c785fd65e07"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "50b6994fbc6b784a77899e6b2549af29ba391c5a12c26befd65b50af115efd63"
   end
 
   depends_on "cmake" => :build

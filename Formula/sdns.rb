@@ -7,12 +7,8 @@ class Sdns < Formula
   head "https://github.com/semihalev/sdns.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ffa8678de5adf9428ee4735dac90c07837ba0cc8093611c347d66b61de87a984"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "25c936c5f36e663dc1f9adc90ce62959867ad45bfd846f69c6cc27dce5addc1a"
-    sha256 cellar: :any_skip_relocation, monterey:       "6852a3843ddee009612e7854ddd8c34b903da5847fe2bb51e5fb8ca744e0bc18"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1d4d0fe899038274de869714f4a20584db47cb900b3acc6d1c729adc631ac644"
-    sha256 cellar: :any_skip_relocation, catalina:       "580c801b9094cbd4fe78a677877d7058110c135f61b05c3f65542bd7707aa1ff"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "26e552ef4270e54f767b8550c5ecb943a16cfc7ef43d49cab7bc94980f0541c3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/sdns"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "532adad2a0a3791f0bea62e961a1442e3488ab9597452e3d7f91e682a03b5668"
   end
 
   depends_on "go" => :build

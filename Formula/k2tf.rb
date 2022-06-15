@@ -1,18 +1,14 @@
 class K2tf < Formula
   desc "Kubernetes YAML to Terraform HCL converter"
   homepage "https://github.com/sl1pm4t/k2tf"
-  url "https://github.com/sl1pm4t/k2tf/archive/v0.7.0.tar.gz"
-  sha256 "f1422861041d2a6eb03292ecce21002ad70ee24fb8ef6ded0118358a3204ce17"
+  url "https://github.com/sl1pm4t/k2tf/archive/v0.6.3.tar.gz"
+  sha256 "49de6047017d66dcbf7a28d3763fe927b0d3d4d36805ab942cd6b229c261df32"
   license "MPL-2.0"
   head "https://github.com/sl1pm4t/k2tf.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fae4ecfeba2b2a0a70b8029856a07b91af0cc54534ae0eb526dcd0eb7ef03b38"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a4d8b67c6c889d4e309bc92f387ca32539460de38df6b7d37d46dbc020d24c6d"
-    sha256 cellar: :any_skip_relocation, monterey:       "0be13024e37cde90792989744d82eec44558f34f1a8537874a36031c13bf6656"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7031f0ba068d3425128ed2b23ae8ac6cdd7578a335fd7375abecb3f5537984c4"
-    sha256 cellar: :any_skip_relocation, catalina:       "ccaa5b31b3fa878f8917ff1d6f9c16246894f0c9130f1ed9c4072b94dffa08bf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c70e4d8b7f97a28091a7c07ba2e3411dc040a5ab56bf2d12b13bcbb6bfa53ca8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/k2tf"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "14ff451c8f51ee740b109b0b6ae4df31994750d8b9b7788f632980c73e8e8e19"
   end
 
   depends_on "go" => :build

@@ -4,8 +4,8 @@ class Semgrep < Formula
   desc "Easily detect and prevent bugs and anti-patterns in your codebase"
   homepage "https://semgrep.dev"
   url "https://github.com/returntocorp/semgrep.git",
-      tag:      "v0.97.0",
-      revision: "ea2980cfb052a541b58a7b05b3024582b200413f"
+      tag:      "v0.91.0",
+      revision: "78a2e51eff86699713a5a8f02b832106229be776"
   license "LGPL-2.1-only"
   head "https://github.com/returntocorp/semgrep.git", branch: "develop"
 
@@ -15,12 +15,12 @@ class Semgrep < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "44adb837a97d11160f444de9d643cdbbb37687704bccc29d1899afc8e666bb07"
-    sha256 cellar: :any, arm64_big_sur:  "b928a76c60ff322c1252aa5c155729e5b0ce9ecf50573af8e041e8a5a10a9765"
-    sha256 cellar: :any, monterey:       "3f185849acebe34e38d5c555cd293d294bc50994209048bf5ff9835ab5323931"
-    sha256 cellar: :any, big_sur:        "6a4e2c3b8202439a96240319dd79e8e751eec762e5fe6fa08d6d058b7dfa93e9"
-    sha256 cellar: :any, catalina:       "83cb0eec26c77cecd4fbb4096341863ec36adcb14e8b698ecbd6c08c3062a376"
-    sha256               x86_64_linux:   "ceba2dd67ccef0548d1b75bb72c725f31748704a2ded3b2b4b1a695bf944a031"
+    sha256 cellar: :any, arm64_monterey: "fdce75ce12823b887b73d8521878c643b30ee713b69bb55e28117d57f4ffba7e"
+    sha256 cellar: :any, arm64_big_sur:  "779c0e2bddf09b65ff20478eaad106594515b2eae0b0460b03ef80d231905881"
+    sha256 cellar: :any, monterey:       "617a80311808d39c194bcb851360967fe209d6d2f1baff98e38e098ec4015ad1"
+    sha256 cellar: :any, big_sur:        "19bc542796df6f7181dcd9e9d3c5a4b71b8592739f9f6cce958f8bc575c91552"
+    sha256 cellar: :any, catalina:       "1d5603b6d72e8d29ebdbe4b2dd959ef4b2794fd667d395b3e144ecc6f58b0714"
+    sha256               x86_64_linux:   "dd8b7bb0c85f1fce2da1b9cf7e107e71e5218723ddfa6ebcd9af5986522f0e38"
   end
 
   depends_on "cmake" => :build
@@ -53,13 +53,13 @@ class Semgrep < Formula
   end
 
   resource "bracex" do
-    url "https://files.pythonhosted.org/packages/b3/96/d53e290ddf6215cfb24f93449a1835eff566f79a1f332cf046a978df0c9e/bracex-2.3.post1.tar.gz"
-    sha256 "e7b23fc8b2cd06d3dec0692baabecb249dda94e06a617901ff03a6c56fd71693"
+    url "https://files.pythonhosted.org/packages/bd/ef/6273bba9e5bc615aab4997159eeaddfe03c825eeabe2942c39e91be5afec/bracex-2.2.1.tar.gz"
+    sha256 "1c8d1296e00ad9a91030ccb4c291f9e4dc7c054f12c707ba3c5ff3e9a81bcd21"
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/07/10/75277f313d13a2b74fc56e29239d5c840c2bf09f17bf25c02b35558812c6/certifi-2022.5.18.1.tar.gz"
-    sha256 "9c5705e395cd70084351dd8ad5c41e65655e08ce46f2ec9cf6c2c08390f71eb7"
+    url "https://files.pythonhosted.org/packages/6c/ae/d26450834f0acc9e3d1f74508da6df1551ceab6c2ce0766a593362d6d57f/certifi-2021.10.8.tar.gz"
+    sha256 "78884e7c1d4b00ce3cea67b44566851c4343c120abd683433ce934a68ea58872"
   end
 
   resource "charset-normalizer" do
@@ -118,8 +118,8 @@ class Semgrep < Formula
   end
 
   resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
-    sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
+    url "https://files.pythonhosted.org/packages/31/df/789bd0556e65cf931a5b87b603fcf02f79ff04d5379f3063588faaf9c1e4/pyparsing-3.0.8.tar.gz"
+    sha256 "7bf433498c016c4314268d95df76c81b842a4cb2b276fa3312cfb1e1d85f6954"
   end
 
   resource "pyrsistent" do
@@ -152,19 +152,14 @@ class Semgrep < Formula
     sha256 "40be55d30e200777a307a7585aee69e4eabb46b4ec6a4b4a5f2d9f11e7d5408d"
   end
 
-  resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/fe/71/1df93bd59163c8084d812d166c907639646e8aac72886d563851b966bf18/typing_extensions-4.2.0.tar.gz"
-    sha256 "f1c24655a0da0d1b67f07e17a5e6b2a105894e6824b92096378bb3668ef02376"
-  end
-
   resource "urllib3" do
     url "https://files.pythonhosted.org/packages/1b/a5/4eab74853625505725cefdf168f48661b2cd04e7843ab836f3f63abf81da/urllib3-1.26.9.tar.gz"
     sha256 "aabaf16477806a5e1dd19aa41f8c2b7950dd3c746362d7e3223dbe6de6ac448e"
   end
 
   resource "wcmatch" do
-    url "https://files.pythonhosted.org/packages/95/b3/597b79292584de5b790146871e50cf3cb3bf37cf845232a20123fc784ef2/wcmatch-8.4.tar.gz"
-    sha256 "ba4fc5558f8946bf1ffc7034b05b814d825d694112499c86035e0e4d398b6a67"
+    url "https://files.pythonhosted.org/packages/a7/73/7c739ae235b7e3ee36f2c0084a595b89c62aefeafa52df8d54d26846b32b/wcmatch-8.3.tar.gz"
+    sha256 "371072912398af61d1e4e78609e18801c6faecd3cb36c54c82556a60abc965db"
   end
 
   def install

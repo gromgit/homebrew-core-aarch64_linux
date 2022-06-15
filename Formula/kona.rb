@@ -13,12 +13,8 @@ class Kona < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8b1a6b849baa2c0423981e8a528551d49ce8a18f0772a6381038e0b3f27adb9f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "97493e1f57dc878702ebf3a34af7621a5f655104d684e7c50ef316c8cb30f97d"
-    sha256 cellar: :any_skip_relocation, monterey:       "73330e436e416c19f9a4abdd920173c99725bc5e8ca4b18ef3ebf1df20a561c5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bc727b02b917dc2a6b81d8ad679618ed7128320bbb177cbba4967ff75d35a810"
-    sha256 cellar: :any_skip_relocation, catalina:       "39a59be89532f96362eeeef2d5be14770da588944666ce3a178926f04b0f6e1c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2e0418f26e5be870a8be5747b920ae20db61707f110c3e63c992ab397b8b87dc"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/kona"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f589e4f5656e792f6ff39e041507960938c5c40b450c7863288582ac47d74475"
   end
 
   def install

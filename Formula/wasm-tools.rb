@@ -1,8 +1,8 @@
 class WasmTools < Formula
   desc "Low level tooling for WebAssembly in Rust"
   homepage "https://github.com/bytecodealliance/wasm-tools"
-  url "https://github.com/bytecodealliance/wasm-tools/archive/refs/tags/wasm-tools-1.0.6.tar.gz"
-  sha256 "a11883d8dc168faf9583ed2b49e9418f8e5b11a9cb060de4cdf6ccdaa32c21e5"
+  url "https://github.com/bytecodealliance/wasm-tools/archive/refs/tags/wasm-tools-1.0.4.tar.gz"
+  sha256 "5ca1ebf67de418d7b953dd9d67620fa1b90d1828321953744a1f69abfecac5ec"
   license "Apache-2.0" => { with: "LLVM-exception" }
   head "https://github.com/bytecodealliance/wasm-tools.git", branch: "main"
 
@@ -12,12 +12,12 @@ class WasmTools < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f25cf7217d595a2bba65077462ba8509bcca70b01ba4a9a29e4fb6f360ffab51"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a8ef9592059abdbb571297617b25ddd89931b823fbffea1bb207803907bda3b1"
-    sha256 cellar: :any_skip_relocation, monterey:       "b19c2558f26651e84572445fd5aaf279efadd17f7986504a6488204d1d6990f5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "07632431f0ce2b67f0f77fedc8e3cf21112b1873204fb3e83b5e556a243a0b27"
-    sha256 cellar: :any_skip_relocation, catalina:       "a461ae41fc12be501705ece0dbdd158fed07a131792fb9811a8cd8be80980f4b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a3351dedab712420f926fac59a1be1504e25f308ba1ba8f9195b414b0c04f4fb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d1131377948c9beb1f295fb5dac99fc9269961f374dc78e42d416a9651faf27a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1eaf85788687c6eb9784618f1233522ecebc5c5484d660fd7b73e4ac5898e993"
+    sha256 cellar: :any_skip_relocation, monterey:       "7b33da5227ce888bbdc2a2838ebc1a14276438940ffb715426e492ca1df5259b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a39caa35b40da420932dee2390c9d15836f1d396c237266d154a6ec93cbe12fc"
+    sha256 cellar: :any_skip_relocation, catalina:       "ffd2965050d545c8b29a1380385cb52c482cf2ffc8906dbb0a4f61ab44329190"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ddd04d4ce519fac8e0b423b58d2fe1173af6765b3091f557f866bb724da8071f"
   end
 
   depends_on "rust" => :build

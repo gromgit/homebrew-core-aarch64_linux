@@ -1,17 +1,17 @@
 class EcflowUi < Formula
   desc "User interface for client/server workflow package"
   homepage "https://confluence.ecmwf.int/display/ECFLOW"
-  url "https://confluence.ecmwf.int/download/attachments/8650755/ecFlow-5.8.4-Source.tar.gz"
-  sha256 "bc628556f8458c269a309e4c3b8d5a807fae7dfd415e27416fe9a3f544f88951"
+  url "https://confluence.ecmwf.int/download/attachments/8650755/ecFlow-5.8.3-Source.tar.gz"
+  sha256 "1d890008414017da578dbd5a95cb1b4d599f01d5a3bb3e0297fe94a87fbd81a6"
   license "Apache-2.0"
 
   bottle do
-    sha256                               arm64_monterey: "4efd58a212460acd12d6a63e6bed76c639dc0610e13fc9e51dc96c93795292fc"
-    sha256                               arm64_big_sur:  "956e6e7f868bfb1749649deeb92d2f8a9e2ed51221a2450d7766fc5ca66991da"
-    sha256                               monterey:       "95f6398877a20b073daddb32a49bb19a7d83293339b2251f4db31ea091281877"
-    sha256                               big_sur:        "725dca63579c61e63c7f09a08af579e9069565cadc15a49ecb2318fbb3019483"
-    sha256                               catalina:       "e592ad1ce1f86b8777420ebaccfdfd44d7d7518f2bec209fec629a704a474754"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "94d367ac3a213b88c7331e759b56a053207d06646799a137e69732d443ac9bd6"
+    sha256                               arm64_monterey: "86e6d6883e027f5c3bd6c2bfcae9e7ccab9b65106549f66d8428b9700e4af6bc"
+    sha256                               arm64_big_sur:  "ba72b11ed9b1d3f48e05b55b64038848a71faceb938358fd5373ee86881222b9"
+    sha256                               monterey:       "43514c728d08c672163f83888ac80816decda1c3ab40bd9072e3295ee2e6f833"
+    sha256                               big_sur:        "0743fa962cda76a4f4b2b1ca4d1f7709fd94c548dd934fd0c2c7607fd437b97e"
+    sha256                               catalina:       "f4a15c29f3ef85fafbd3570ea5916faf61cf7df4bab5df40db9088c471ccf949"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "daecd6c25b804a444dc996fb7e6409d429a46df4f971b27d3c6cc25c788ad470"
   end
 
   depends_on "boost" => :build

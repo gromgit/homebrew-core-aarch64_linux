@@ -11,12 +11,8 @@ class Minimap2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "22995a1c375367bea1d8cf7c543c26eded794df72b09915e0d3858e11277dcdb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1894aa9bd2241edc817f29a5672614ab47d263529e549914df2031e14ee80017"
-    sha256 cellar: :any_skip_relocation, monterey:       "66426ade59e9eb89716b9ff7d197ba45cd3dd247da46d2be4e113580ee9cfaf3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f9e3dbdb1a10462e980a03133b46b3be3b032f551666178b43adf204c0bd9956"
-    sha256 cellar: :any_skip_relocation, catalina:       "76478e8d72e98c73004af1d6d4f2a76b6c91715e06a847b9af672edf979b55e4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "96c6a7109e98755e10b86f21ed922c91e34ded9f6727f90e8ffd8fc75984f267"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/minimap2"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "580fa03720ccbfac6b3433e66c3e13cdc516006cd2afd3e74c2032cd29bfe165"
   end
 
   uses_from_macos "zlib"

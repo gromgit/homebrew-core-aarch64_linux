@@ -11,12 +11,8 @@ class Dmagnetic < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "d5e92d330c580d50b50e4a9abeabe07c8d03c34b7119ceeae28bdd4dfbd48d0e"
-    sha256 arm64_big_sur:  "dfdc741291733bee64c506d1c381ee968ba6b53836b4a5d0428ae92b92cdf914"
-    sha256 monterey:       "80776cb548df431c030a17e6880e28ba3d15e1fbc6aa7deed5c9de54f4b559b0"
-    sha256 big_sur:        "536f7efb82b7d9d981b277e2ff2ce23dbcd7c3be3527f336376a50e3b9b3dcd7"
-    sha256 catalina:       "702f73e365edc401d40fb8c9b913531063ba145e839027d6ad7e55356bd10483"
-    sha256 x86_64_linux:   "b672f707385a493c0fd20a51a4fd579411c5eaffbb599b418e5f9e5bf66147ee"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dmagnetic"
+    sha256 aarch64_linux: "96f30dd654f849bab7b23f572c43c4ca4cfe025ba888e6ac616ee11e6ccf5494"
   end
 
   def install

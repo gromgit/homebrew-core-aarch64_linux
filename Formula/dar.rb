@@ -11,12 +11,8 @@ class Dar < Formula
   end
 
   bottle do
-    sha256               arm64_monterey: "7f20df64aafb36d36fe5358671181d8ccfd823309021d9fda73ecc42b136172a"
-    sha256               arm64_big_sur:  "4d0647ae195d1187db88681f97661f0a49055e073129e2fcc5af397ec4cf0f10"
-    sha256 cellar: :any, monterey:       "333a1449a01e838cd6f397289469138fcdf40cfe682cd8be9a1c64bf4cf3adc3"
-    sha256 cellar: :any, big_sur:        "e3e74755ae632c5b1a9b24d06fde5f0bfa5ba1b3932747f0309ac61951b0c857"
-    sha256 cellar: :any, catalina:       "20da0e2daab9957af7f8464204cd60cd3bbbf4afd5e1eaa0b333384b47d8b248"
-    sha256               x86_64_linux:   "2d20b095aa0458c5091d0de869dde7505e3f7685533edc1b1204a121f7bdb46f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dar"
+    sha256 aarch64_linux: "8400bd7f47298a9e4180607b3c6eb70373e51cae836ddabadfb2e5d4c5a25b9d"
   end
 
   depends_on "upx" => :build unless Hardware::CPU.arm?

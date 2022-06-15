@@ -3,24 +3,24 @@ class PipTools < Formula
 
   desc "Locking and sync for Pip requirements files"
   homepage "https://pip-tools.readthedocs.io"
-  url "https://files.pythonhosted.org/packages/dc/21/af0d14ce1cbe9e2e88ccf73061251cc6a84d8d87650a3e75be040a0be4fe/pip-tools-6.6.2.tar.gz"
-  sha256 "f638503a9f77d98d9a7d72584b1508d3f82ed019b8fab24f4e5ad078c1b8c95e"
+  url "https://files.pythonhosted.org/packages/ee/f9/bf3ba5c13c8461eb5bd5deda7db953d8ed3e79100669cfb0bbda4f40d28a/pip-tools-6.6.0.tar.gz"
+  sha256 "98aa24004440a1c0489d71a567a4e8afdf23c7782bff483d1219881e7302de83"
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4f47aa8505c552766421a4982115418c1f073753f9f2749f8ef607bd43b1497d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "65c89074236385344742e702cb7e603129394d0ce7472527c1738c8c3bc7528e"
-    sha256 cellar: :any_skip_relocation, monterey:       "e1529a17ff1bad6cc2328b8b9eb9ad0f532c253e438efe700fcd1f3f656c6ffa"
-    sha256 cellar: :any_skip_relocation, big_sur:        "848883409c5372d5f13ba79866694d76d6bbbdd881c121562d9d76362ab61551"
-    sha256 cellar: :any_skip_relocation, catalina:       "286332a8ba9622af1d192b9e2893fa819c988a9d481ddf23537efaf0ff3a27b2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "682cfbdcc1a7739da436346e564e0272370d486860de70e33669ebff1e24e6b0"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9f65288d9bce0bda4651dfc42b65f4437cf51d73b14e2ac33cb98af41d1fe2ab"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "140c2375592c7a007531defdfd733c310adb143f0a3402862cb4d067beee669b"
+    sha256 cellar: :any_skip_relocation, monterey:       "dd7523d7bbf963cba7367591f37ed33bb7ebe488bb487aea280f94688641e2ae"
+    sha256 cellar: :any_skip_relocation, big_sur:        "46ea4398a8754af99f1d62293e7876895bc305ad49643b0e215f166b49c6abcd"
+    sha256 cellar: :any_skip_relocation, catalina:       "2c8ea2c1f823d9599d7230fdd118fd1564df119b795a655e59263371a444e5ff"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "32d520c1cb8c5329467895de6aa6983eb2f7b1bb67dbeabf54f81bd66075eeb2"
   end
 
   depends_on "python@3.10"
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/59/87/84326af34517fca8c58418d148f2403df25303e02736832403587318e9e8/click-8.1.3.tar.gz"
-    sha256 "7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e"
+    url "https://files.pythonhosted.org/packages/42/e1/4cb2d3a2416bcd871ac93f12b5616f7755a6800bccae05e5a99d3673eb69/click-8.1.2.tar.gz"
+    sha256 "479707fe14d9ec9a0757618b7a100a0ae4c4e236fac5b7f80ca68028141a1a72"
   end
 
   resource "pep517" do

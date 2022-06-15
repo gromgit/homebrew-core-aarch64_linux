@@ -1,10 +1,9 @@
 class Groovy < Formula
   desc "Java-based scripting language"
   homepage "https://www.groovy-lang.org/"
-  url "https://groovy.jfrog.io/artifactory/dist-release-local/groovy-zips/apache-groovy-binary-4.0.3.zip"
-  sha256 "ddfc8e26fdcf3626d1c83f28d198c3e4e616a72337ca6e46fcaca09e7a4bb37f"
+  url "https://groovy.jfrog.io/artifactory/dist-release-local/groovy-zips/apache-groovy-binary-4.0.2.zip"
+  sha256 "37bbfc6f33f6ad76698b9b0bfba023e0046f09b58bdc5499eda9ef6760bd512d"
   license "Apache-2.0"
-  revision 1
 
   livecheck do
     url "https://groovy.jfrog.io/artifactory/dist-release-local/groovy-zips/"
@@ -12,12 +11,12 @@ class Groovy < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d45b62e6a0d261523f26b7c5f8f749aa677e5263e3fb71f0e06b7889fb22d70c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7ad556032e89611844889f5c0160d33d0dfeed5f2cf9a939becf1e700adce9da"
-    sha256 cellar: :any_skip_relocation, monterey:       "e1aecccd6ad6643ca8e3cd87ac853150548415d413fd66576639819be9975d6a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c8046066b0b2bf5858101eb5447e45d41bd3bb13186f62f35b290e2e305635c2"
-    sha256 cellar: :any_skip_relocation, catalina:       "85d1f7d50a1da7a8dcd9b4b72ed5761a4ceecc6719080a61418f078174802fae"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f5b8bdd6810dfd60b960521e0b3d4298736b3349c8816713b7444c8f07211c31"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "38dcb3b50789889147515b1a0d184f911cf2c946fd5dc63df78c4c225004cfb2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "55233529c9ba008b2292a25636cceb606e4810f391231e01b1000163d9c518c4"
+    sha256 cellar: :any_skip_relocation, monterey:       "8304e941f5ce7dec98bc198a542fc23d322c5b431d08a54394050366182f838e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2f07c6a34fd26ab0d479de1fbbd3afccfe7fb4d220fe599a39dd9cd8292393ff"
+    sha256 cellar: :any_skip_relocation, catalina:       "355613a8362c6c4e2fa25cb9df4b45e0aecba7d8772cb0a671a3376c3a84d7c7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "23f17adf2fc7d2a848b5c5169164e08a685685502b2e72669b11875c9d912ec8"
   end
 
   depends_on "openjdk"
@@ -60,7 +59,12 @@ class Groovy < Formula
 
     libexec.install "bin", "conf", "lib"
     bin.install Dir["#{libexec}/bin/*"] - ["#{libexec}/bin/groovy.ico"]
-    bin.env_script_all_files libexec/"bin", Language::Java.overridable_java_home_env
+    env = Language::Java.overridable_java_home_env
+    # Work around for exception starting `groovysh` on OpenJDK 18:
+    # java.lang.UnsupportedOperationException: The Security Manager is deprecated ...
+    # TODO: Remove when groovy no longer uses deprecated Security Manager.
+    env["JAVA_OPTS"] = "$JAVA_OPTS -Djava.security.manager=allow"
+    bin.env_script_all_files libexec/"bin", env
   end
 
   def caveats

@@ -11,12 +11,8 @@ class Tree < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4067f9a8f40d9bbf337272fcee99df3ad4d055ebbaf7166fed039e1bb1a45cb9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "332870d58176b70b06af057186afe0fb3168158c51ff2826222dd43fafe582b7"
-    sha256 cellar: :any_skip_relocation, monterey:       "ea1c2527bde7429aef3bc634a0dc52db53616a5d1c2861f6338c5ae3f5539624"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e4530a4cc9024dafee21609b81b7d10649a1817c7a9c718b697b34d592e45282"
-    sha256 cellar: :any_skip_relocation, catalina:       "e02fc65aff868fb5813fba17fd6e9db2fbe5ea7bbfb181a768a0f1ab9a6b7467"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e1d7569f6930271d694e739e93eb026aac1e8b386ee3af8eb9aed9be32cb1865"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tree"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b4500e45e8461b7f09bbad25e3f784484ab8e08e3daf9a6b874e1428d635e7a0"
   end
 
   def install

@@ -7,12 +7,8 @@ class Ed < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e11a548c78fe21d0e7b4d87e96cd3318df87754e86143d04cc395d62e3d23240"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d0a969e4576aacc3385cc0482fca8752e8e07b54fb2696d9b12dfba2a54da346"
-    sha256 cellar: :any_skip_relocation, monterey:       "c83bebea01405eda32c70d694c3195fa86c3f3f2a32ee3923454844fd5f5ff5d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f3c819b566fc68283182dd9c52c7978716df84d665eb10fc46400ddbfeb42d21"
-    sha256 cellar: :any_skip_relocation, catalina:       "672b391318a2780fa8b5d352d4785eb652f268a8d23acb18742b6f9a29792029"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "001caf95484a8f15b673838cb04fe1023ae43484c723accd5f271f072c7b7fef"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ed"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a23dccca1e61e9a7625afc28b5a30a7da1d3b8293419835aa798e4cb5ed1c3fc"
   end
 
   keg_only :provided_by_macos

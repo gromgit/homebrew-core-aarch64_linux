@@ -1,9 +1,10 @@
 class CucumberRuby < Formula
   desc "Cucumber for Ruby"
   homepage "https://cucumber.io"
-  url "https://github.com/cucumber/cucumber-ruby/archive/v8.0.0.tar.gz"
-  sha256 "5e382fc00fd04842813f58c7c7a1b43c2ddf6a8e5c53ae9916daba95462cdb6a"
+  url "https://github.com/cucumber/cucumber-ruby/archive/v7.1.0.tar.gz"
+  sha256 "8eafa529f1c8793de09b550b68067af1f3d1b05e8eca798f5755d05ee0aacf8c"
   license "MIT"
+  revision 1
 
   livecheck do
     url :stable
@@ -11,10 +12,10 @@ class CucumberRuby < Formula
   end
 
   bottle do
-    sha256                               monterey:     "5b05d36faf72b95190f77acae632bd3a8ac4ba947df23262ea4bc1c6b2402004"
-    sha256                               big_sur:      "30ac06c2908e0ca4ce7ba75e92393259911e454206a81c52f360b9aeda9a7c62"
-    sha256 cellar: :any,                 catalina:     "ee1eabb3641184384650cb0990a2d54c0b9f346cd941274a40d7c427e0c70f5e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "0196d1843ab7614a204f29f4d10588d3397a4d89c9bdc2e297720ef3b6ac9899"
+    sha256                               monterey:     "baa01f4500a6ddda6ce2260f20482e9d0f2bfc9ab55f52bf373f06566c1b94d4"
+    sha256                               big_sur:      "8da8aa2314fef7577cfdbd3b580303d06dd26883f4242de6e5158707eacae4f0"
+    sha256 cellar: :any,                 catalina:     "8e10228d88f7a1bf07335a9c54d83872acd107f29c341cd854bc7631d7271662"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "c651216b9c2ca701d3e32c08facfc3851e3b8f18d5f4779464424e9eff6b4797"
   end
 
   depends_on "pkg-config" => :build

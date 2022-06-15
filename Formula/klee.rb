@@ -8,11 +8,9 @@ class Klee < Formula
   head "https://github.com/klee/klee.git", branch: "master"
 
   bottle do
-    sha256 monterey:     "5db368cec936ef124100955dff93a5d7323550f7df36db16082ed23d442121b1"
-    sha256 big_sur:      "3534cffd757f8fa4c3be4f05c7534dbe705e54657512bb4a1b9d8b13cbe6b337"
-    sha256 catalina:     "508ab6444c02c26e061edf84519c18d888c4d9c1098c89215b5b788224838d37"
-    sha256 mojave:       "b29dd739b4644aafc918f40a1c5abce7c00657c09a8959401c9ac8c77397a560"
-    sha256 x86_64_linux: "687e221b5f04745e4f60aad142974d38d06b4c48e717c35edc14b5b2de7be832"
+    sha256 big_sur:  "3534cffd757f8fa4c3be4f05c7534dbe705e54657512bb4a1b9d8b13cbe6b337"
+    sha256 catalina: "508ab6444c02c26e061edf84519c18d888c4d9c1098c89215b5b788224838d37"
+    sha256 mojave:   "b29dd739b4644aafc918f40a1c5abce7c00657c09a8959401c9ac8c77397a560"
   end
 
   depends_on "cmake" => :build
@@ -26,12 +24,6 @@ class Klee < Formula
   depends_on "z3"
 
   uses_from_macos "zlib"
-
-  on_linux do
-    depends_on "gcc"
-  end
-
-  fails_with gcc: "5"
 
   # klee needs a version of libc++ compiled with wllvm
   resource "libcxx" do
@@ -85,17 +77,10 @@ class Klee < Formula
         -DLIBCXX_ENABLE_SHARED:BOOL=ON
         -DLIBCXXABI_ENABLE_THREADS:BOOL=OFF
       ]
-
-      libcxx_args += if OS.mac?
-        %W[
-          -DCMAKE_INSTALL_RPATH=#{rpath}
-          -DLIBCXX_ENABLE_STATIC_ABI_LIBRARY:BOOL=OFF
-        ]
+      libcxx_args << if OS.mac?
+        "-DLIBCXX_ENABLE_STATIC_ABI_LIBRARY:BOOL=OFF"
       else
-        %w[
-          -DLIBCXX_ENABLE_STATIC_ABI_LIBRARY:BOOL=ON
-          -DCMAKE_CXX_FLAGS=-I/usr/include/x86_64-linux-gnu
-        ]
+        "-DLIBCXX_ENABLE_STATIC_ABI_LIBRARY:BOOL=ON"
       end
 
       mkdir "llvm/build" do
@@ -116,10 +101,6 @@ class Klee < Formula
       end
     end
 
-    # Homebrew-specific workaround to add paths to some glibc headers
-    inreplace "runtime/CMakeLists.txt", "\"-I${CMAKE_SOURCE_DIR}/include\"",
-      "\"-I${CMAKE_SOURCE_DIR}/include\"\n-I/usr/include/x86_64-linux-gnu"
-
     # CMake options are documented at
     # https://github.com/klee/klee/blob/v#{version}/README-CMake.md
     args = std_cmake_args + %W[
@@ -128,7 +109,6 @@ class Klee < Formula
       -DKLEE_LIBCXX_INCLUDE_DIR=#{libcxx_install_dir}/include/c++/v1
       -DKLEE_LIBCXXABI_SRC_DIR=#{libcxx_src_dir}/libcxxabi
       -DLLVM_CONFIG_BINARY=#{llvm.opt_bin}/llvm-config
-      -DM32_SUPPORTED=OFF
       -DENABLE_KLEE_ASSERTS=ON
       -DENABLE_KLEE_LIBCXX=ON
       -DENABLE_SOLVER_STP=ON

@@ -18,12 +18,8 @@ class Proftpd < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "8d97c057ebfbd1ab98b71246881ba2d1222bd1bc84af7eb81ce2bb02e36cf4c5"
-    sha256 arm64_big_sur:  "5f881c036c3fc61f8a61e9e8a0b681a9484cda34d6346e8c612ebbd30b687e95"
-    sha256 monterey:       "4e204f7b1696bc8271e570bb44bce932cc24a7b09a3ba527bad687222afb8aa0"
-    sha256 big_sur:        "2ae3fa57bcdebd8472888b2f49179ec1c43e5ca516021eb3b715e3c2ea75c06b"
-    sha256 catalina:       "95239aa03a189cff108522fee0ef1c281547aa662d3f69af74d1dd7416012284"
-    sha256 x86_64_linux:   "b4c6e6de0169554fad7d91e497a3c6f4764ad01ebaa31c7ce2771edf0205db2b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/proftpd"
+    sha256 aarch64_linux: "6868270669ade5a7d9dc53ce40a645493f1bebaaaeb72f31a63efc3276a0227a"
   end
 
   def install

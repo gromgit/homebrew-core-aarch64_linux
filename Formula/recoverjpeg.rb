@@ -11,15 +11,8 @@ class Recoverjpeg < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "09b65d282127e64583e422741ae3d2980cfbd7dbc8a471fa05e3a39dea3d7efd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "68e1a85a85e46ac4b90b093c36f9e461e6566351518b76891ebd3283b95fa8c2"
-    sha256 cellar: :any_skip_relocation, monterey:       "a9043bcada2749bee2dd525f6aa3919cff2f45f2290234ec6302f7985acf3399"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bd56d3048f05834faf5181f4372fe49a8ef3895c291fe0ca2a434a416e305495"
-    sha256 cellar: :any_skip_relocation, catalina:       "87b3d9adf8b59d91350b7e655a78b68525caaaad0a614c5b7e1b6097d29cf6d9"
-    sha256 cellar: :any_skip_relocation, mojave:         "0f424efc21d5e07c2cdce7a870e28ee1aea42ac8f65f12eb5a845895c49ed958"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "5366edde2383098f7ee4ac866d0d2ff528efbf63af934dd469c3b8e6739678ed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9a89fb65c4850f34a1885cd95da2fbd669f1af300fbbf940b5271c97551c9ce7"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/recoverjpeg"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "771044f032e3f0d8367a85a9be19b1385307cd0c26e37972a5621d9e6ab3fdcd"
   end
 
   def install

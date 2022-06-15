@@ -2,11 +2,11 @@ class Yaz < Formula
   desc "Toolkit for Z39.50/SRW/SRU clients/servers"
   homepage "https://www.indexdata.com/resources/software/yaz/"
   license "BSD-3-Clause"
-  revision 1
+  revision 2
 
   stable do
-    url "https://ftp.indexdata.com/pub/yaz/yaz-5.32.0.tar.gz"
-    sha256 "04d08c799d5ee56a2670e6ac0b42398d2ff956bd9bf144bfe9c4c30e557140e0"
+    url "https://ftp.indexdata.com/pub/yaz/yaz-5.31.1.tar.gz"
+    sha256 "14cc34d19fd1fd27e544619f4c13300f14dc807088a1acc69fcb5c28d29baa15"
   end
 
   livecheck do
@@ -15,12 +15,12 @@ class Yaz < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e14b54d79bae32b9312bd03a5567d24bae06e23f5269d547638e97a87124200f"
-    sha256 cellar: :any,                 arm64_big_sur:  "9664a83b537dda5541d7b6ff5d8d5d2100dbdb79df6bdca60a0f36f2d651e868"
-    sha256 cellar: :any,                 monterey:       "afff3fad4baac1e84f4624671a4d8915233aa832448162a237e588ec67cca69f"
-    sha256 cellar: :any,                 big_sur:        "09e313f24f40718abefba0ccea3e349a42e5c0ddb59f68aca35ce415f840a0c2"
-    sha256 cellar: :any,                 catalina:       "c2fe61b69343000f8a62c31251269fd8219e518fa647f2985508eb684edb90ae"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fae47c2895e659c7fd018d4ad8bab51f909c7ebba5338659194878c53150203a"
+    sha256 cellar: :any,                 arm64_monterey: "923f0919d3e65c3b61ad8f90641db2dbb199b53cd6ecf651add576633e35b67c"
+    sha256 cellar: :any,                 arm64_big_sur:  "c50a90da020887b4a7f6ca986061225ae1493cc1ea5bc0da7c4f5e8cdca54e4b"
+    sha256 cellar: :any,                 monterey:       "d4573e9eba835bde601ad2f3e202844e9267f5514b5f83662d800c552cee1be8"
+    sha256 cellar: :any,                 big_sur:        "ae3de529018e63dda8090880bcd454e3725ca2729b94df67140b8b6ffed0143b"
+    sha256 cellar: :any,                 catalina:       "f867dbc67ba829e5e905ab6d9dec27c3b342873903b6dcbf71404a4e6ebbfeed"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "febd7d4ad3b81e84619eaa27dc033e5756d917e0b2f784f6d260f6ffe08178b0"
   end
 
   head do

@@ -4,17 +4,6 @@ class Freebayes < Formula
   url "https://github.com/freebayes/freebayes/releases/download/v1.3.6/freebayes-1.3.6-src.tar.gz"
   sha256 "6016c1e58fdf34a1f6f77b720dd8e12e13a127f7cbac9c747e47954561b437f5"
   license "MIT"
-  head "https://github.com/freebayes/freebayes.git", branch: "master"
-
-  # The Git repository contains a few older tags that erroneously omit a
-  # leading zero in the version (e.g., `v9.9.2` should have been `v0.9.9.2`)
-  # and these would appear as the newest versions until the current version
-  # exceeds 9.9.2. `stable` uses a tarball from a release (not a tag archive),
-  # so using the `GithubLatest` strategy is appropriate here overall.
-  livecheck do
-    url :stable
-    strategy :github_latest
-  end
 
   bottle do
     sha256 cellar: :any, arm64_monterey: "26799da3d54c7416f8c79cbc95ab4c7428cc60a3d5dba0d4f67e08050cd7d40c"

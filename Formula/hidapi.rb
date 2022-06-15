@@ -1,18 +1,18 @@
 class Hidapi < Formula
   desc "Library for communicating with USB and Bluetooth HID devices"
   homepage "https://github.com/libusb/hidapi"
-  url "https://github.com/libusb/hidapi/archive/hidapi-0.12.0.tar.gz"
-  sha256 "28ec1451f0527ad40c1a4c92547966ffef96813528c8b184a665f03ecbb508bc"
+  url "https://github.com/libusb/hidapi/archive/hidapi-0.11.2.tar.gz"
+  sha256 "bc4ac0f32a6b21ef96258a7554c116152e2272dacdec1e4620fc44abeea50c27"
   license :cannot_represent
   head "https://github.com/libusb/hidapi.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "aa1f68edd1eee2d600109484c6f284374a4dd3275004171eaa819c1c6ff8e67d"
-    sha256 cellar: :any,                 arm64_big_sur:  "8abecf0b9d8a3ce86a4313f3feb33d3a5eae2b8db580c0aa084cae9878400ba4"
-    sha256 cellar: :any,                 monterey:       "becf77159ab020fd2a66cf3e1f0489c95d8020b93b3c48fc095d2b8d0245336a"
-    sha256 cellar: :any,                 big_sur:        "ba016a5a9004eb00fb1c037f9b6db103de6d27f9cae7139fb22f62c668eb9b90"
-    sha256 cellar: :any,                 catalina:       "607766ce3cef88e33a8674b3c7cf69cdbe6124845c7ff223e07cceb2ec74df29"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "828e2c72ca7e6903a9e3b7ddc0e66765eee1df977a6e832b2c66965cb4571f26"
+    sha256 cellar: :any,                 arm64_monterey: "4cd8bf68cf8c54942370bb114b3928e441e30da526463f119bffc987a736511e"
+    sha256 cellar: :any,                 arm64_big_sur:  "636354e15d0e76384481a9b693ea08a6343316a7e1d74900cfa5add652aac2e5"
+    sha256 cellar: :any,                 monterey:       "087066a1847dcf7a1b226db08e38905f130ff497b91db3ea59c10b4eeada56c4"
+    sha256 cellar: :any,                 big_sur:        "9791b3c4132542c1f847b152c4cc3766842db3514df87ee1d30dc03e190e98b5"
+    sha256 cellar: :any,                 catalina:       "7c6ed494c8c276acdea0198a5ae608144d4e12ce25c90af75bd96c31c2abc1fd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b78d9953e9d63014391c67f20a2ef48e7d2d7b054cd660b8bef6bf014c0d80a0"
   end
 
   depends_on "cmake" => :build

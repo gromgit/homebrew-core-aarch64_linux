@@ -7,12 +7,8 @@ class Polyml < Formula
   head "https://github.com/polyml/polyml.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "100f3fb2f2b4afd32f89f55b319742e80513df3b7b46e1824f8cfb5ad458f4c7"
-    sha256 arm64_big_sur:  "74ffeccfd43af75e74239336480a4bd9d93ded28e874738b2417bd7c421cdb7d"
-    sha256 monterey:       "6cf8429f83e6664dd0c38937b7cba90cc7135a19c5fcdb1a87405edb582aeb4c"
-    sha256 big_sur:        "076f53e47fd75365984bcdf860eb21101683f86789651c41266e855a333a0192"
-    sha256 catalina:       "36c5f2c6052f27e89cdaeec09d1e7e38603894e3d3a13aa0bddec6ef287085c3"
-    sha256 x86_64_linux:   "5ad3750111376bc7bb887cd30ecbb8ae368cf1e06176c8b4293e6a976d6f4590"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/polyml"
+    sha256 aarch64_linux: "03f48cd91967a9d0af67cf2fd03885d8c2b0e63171b49aab843ae9f51387cc9e"
   end
 
   # Fix -flat_namespace being used on Big Sur and later.

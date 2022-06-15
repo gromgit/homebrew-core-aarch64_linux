@@ -7,13 +7,8 @@ class Goproxy < Formula
   head "https://github.com/goproxyio/goproxy.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "416e6d61492d983b2bc83aecde39fc718a75bf0a13e443d3224d9f9985e7f23b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "79bbb0c810d5411ed592e149ce76f13dffc99cc08eeb639fe4939e10b1a588b0"
-    sha256 cellar: :any_skip_relocation, monterey:       "855041ffba9435944868115752c8cc020cf9a30f63e81b236bc00baeb95edc8b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bc3750bfaf43401d883d3b0463518007f2fcdf744327b688e3495562106a0808"
-    sha256 cellar: :any_skip_relocation, catalina:       "ff2d41442228fba93e1d08be90f64dd3db210cf47e3543f22b452ed7327866b7"
-    sha256 cellar: :any_skip_relocation, mojave:         "5a35f434f319bd48a948c27172bff1d60be27307cfe9cd18bbdfc36ab4e56007"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aea5ace7890ba7d5035f69fab75985928a2f8e1a8514e2ab2ec58c3470d9c250"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/goproxy"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f9c418fc18d4f902ed8ad850dc3393a09af749a76fb6a0c34b179c575e8c9d25"
   end
 
   depends_on "go" => [:build, :test]

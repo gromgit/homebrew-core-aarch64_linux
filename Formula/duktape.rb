@@ -11,12 +11,8 @@ class Duktape < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "50433844eb30fed82c204f4ad5b0fe58f70f6ab3fdcaf88f58df1080cc65d3cd"
-    sha256 cellar: :any,                 arm64_big_sur:  "37641156c20de01c3fe4a5f2df5a16cf2d5ff3f64376a63969643c463ed35e02"
-    sha256 cellar: :any,                 monterey:       "1da51e2ceb61766abe0074b869c482feb2b61cffbd9419ceb70157191528f703"
-    sha256 cellar: :any,                 big_sur:        "89c9cbfd84d99f2cc97f1cd8a4e57f18c3aa3803be295328a8b67239ae51ed27"
-    sha256 cellar: :any,                 catalina:       "b4dbf4083450e750f2ddfa26d4f4bca18a342703ef950360528e4c390d171636"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "158b015f9c3b091605deed158af5f37c816c48d00b1163402282459298fd921e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/duktape"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "daa1ecd3cc4b5ee4c5820524e07f10223499dd173028e65da1c46fa9c773ee80"
   end
 
   def install

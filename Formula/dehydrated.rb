@@ -6,13 +6,8 @@ class Dehydrated < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e4f179282544d70d072f6ebea22527d7dfbb8a0d810d5965fc7266918fef4f6d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e4f179282544d70d072f6ebea22527d7dfbb8a0d810d5965fc7266918fef4f6d"
-    sha256 cellar: :any_skip_relocation, monterey:       "fb2330cd8c498ee40af3981951e324ef819b632b6c569c30f6ec6b5ae5c4ecd4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fb2330cd8c498ee40af3981951e324ef819b632b6c569c30f6ec6b5ae5c4ecd4"
-    sha256 cellar: :any_skip_relocation, catalina:       "fb2330cd8c498ee40af3981951e324ef819b632b6c569c30f6ec6b5ae5c4ecd4"
-    sha256 cellar: :any_skip_relocation, mojave:         "fb2330cd8c498ee40af3981951e324ef819b632b6c569c30f6ec6b5ae5c4ecd4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e4f179282544d70d072f6ebea22527d7dfbb8a0d810d5965fc7266918fef4f6d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dehydrated"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "72aba0ea1f34de27cb8f34462ab87665609991697ffdd8a7d4322870085d9a45"
   end
 
   def install

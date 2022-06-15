@@ -6,12 +6,8 @@ class Cointop < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d6ee93ff4d71ee6d9418e972e03b2793267e809ddfefad226c4768ad64fcba1b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "62a9c420f36752b3b4acdab93f96f98566822661e9e4c75e404be233c15c6823"
-    sha256 cellar: :any_skip_relocation, monterey:       "09cf270f0ac715952792f39d40dc95929c6fe9d423baf6214f17e48c6ef231d8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "effcf6142cf4adc9b7c21e86c9c74e8b8d0105fef747729d61dafc66e644d1dd"
-    sha256 cellar: :any_skip_relocation, catalina:       "4b2b50933313c695c883709e5d0bdb03508a5fb0e20ca1c600679cb0038ffd53"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e3ba671173b8fc6902baf83ab7d6f921758bf09d07f905d780d19d6753259f38"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cointop"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "82be65ea7352e6a28154839cc876fca8edcd7b702f37642f17a4244106c89335"
   end
 
   depends_on "go" => :build

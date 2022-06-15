@@ -11,12 +11,8 @@ class Htpdate < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "306db0e62c4d80d4a1357b8577252f184fc7cbf76f5614ad68319961af4bbe08"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bd5953f16f4eefd4e6739bd189abee1d4361c11b29cd3721cea016a4ba118eb0"
-    sha256 cellar: :any_skip_relocation, monterey:       "4574591a62987c84be9f567a0f4c398fa144897e0c234038d8fca2d654221783"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4201b9da6ad9cffc5b60b5ab1bfcb2c93863a57340692b080d09269c9d5a9fd9"
-    sha256 cellar: :any_skip_relocation, catalina:       "ae5e0c72c2cbc815739ac14af64020c229387938acf0a5a886726ad8002027b3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0a07d9aede354778983c15ee643b631fd3cf198f6b4466a932d65a528db1344a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/htpdate"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f505cf9e71cbd5920e37debac21612a2a0360ba7958bb80f950d33753ed67d50"
   end
 
   def install

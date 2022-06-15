@@ -12,12 +12,8 @@ class AnycableGo < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "dbb6bea87e378580ae10593bdfbf55b4a488348e75d29ae354461bacd7245ded"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ed7c9befcb24175ed31dced0fb7cbfc24c6afc8b878f236a9a84819ef259eb98"
-    sha256 cellar: :any_skip_relocation, monterey:       "fd109c24e5407068d5352fbd8ac7643a62dcba47a4c1f44b215f880a42c680ea"
-    sha256 cellar: :any_skip_relocation, big_sur:        "73fbdd129544f14df687c4f77d60d8e7ee66c008526f2e184065eeca18215624"
-    sha256 cellar: :any_skip_relocation, catalina:       "67acf8def8551f823001dc792ccf81fa145179cd526699d3783c85a7cbbe9320"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "335920268709ce85f3101047512f67c320415783913d9de8eb3c735bbba83bd9"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/anycable-go"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e32e010b49551f19414bfee28541d69c1004466a9fbc0cdab3a50787248658ae"
   end
 
   depends_on "go" => :build

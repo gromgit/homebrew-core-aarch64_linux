@@ -12,12 +12,8 @@ class Certigo < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c821ed50edeca5b1f5f96859966f2e4cc71ca2106f0ac9e9a22c8504c1eba420"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "af820a9dc6ea3aaafffc292931dcbbb55281efe6976585bb7a41912a3a4761f5"
-    sha256 cellar: :any_skip_relocation, monterey:       "e7b90757c3d6386fbe28a530057cb7e2a211f86f263937622c8107e144585867"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4aa9d2923c6e73524a573d64f5bd5325e86fe8f64907de52ac59cd4ffbad8eea"
-    sha256 cellar: :any_skip_relocation, catalina:       "850ae90eeb9960c1152cd35c6ab2a431123ddbc5380241f8a460a5a4bac1597e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ef25a6de0f2ee9a786355247f7ed7d942f9fb8711ee721e0ac11337b9bd970bc"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/certigo"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a98572b6a885dc41aa2c71d33c0ed9555eaa8944a7844fc0cece5a1fb6d7ecfd"
   end
 
   depends_on "go" => :build

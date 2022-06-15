@@ -11,12 +11,8 @@ class Rtaudio < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ecedd19fd1867f51b7c8bfd6f408d6b33619f544a536d8145bee666c1940e75d"
-    sha256 cellar: :any,                 arm64_big_sur:  "820e94dc0c131b738c77bd0f06658ccecfd284197fbb9051859751cfee6d7090"
-    sha256 cellar: :any,                 monterey:       "f52d926c30030e41676af3009afd40bbac63810cc0ae741e0adfc47df750e8fe"
-    sha256 cellar: :any,                 big_sur:        "6451351bb885f61f5e6b9cc46da7fd4a64a59d67177d6dd033c93279c53726e9"
-    sha256 cellar: :any,                 catalina:       "16a170ac4384a2b83dd5dda834a8bfe0edb7f6d81d123150b287a11bf3b915e3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3452c83b3b53442744ba984f908c42e9d0b4e7b17f10167a1e6b55589890cdd6"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/rtaudio"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "842a63278f01831ca5d67e6ef3e4b48e109fb96a4113ad4dd5bcfca0f40aa7b2"
   end
 
   head do

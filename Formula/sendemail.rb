@@ -7,13 +7,8 @@ class Sendemail < Formula
   license "GPL-2.0+"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "de9826d68c6ca9666b3ec31462cee9d6ad435dfae72273ffd36856aa5dc95339"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "de9826d68c6ca9666b3ec31462cee9d6ad435dfae72273ffd36856aa5dc95339"
-    sha256 cellar: :any_skip_relocation, monterey:       "3d2d838108374473524945ae1cada342aad8e25f77216d15dbf8aae7ff0ded76"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3d2d838108374473524945ae1cada342aad8e25f77216d15dbf8aae7ff0ded76"
-    sha256 cellar: :any_skip_relocation, catalina:       "3d2d838108374473524945ae1cada342aad8e25f77216d15dbf8aae7ff0ded76"
-    sha256 cellar: :any_skip_relocation, mojave:         "3d2d838108374473524945ae1cada342aad8e25f77216d15dbf8aae7ff0ded76"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "60b99fa4f05c5ee4f2b85c4529e8e4a2368d4a16d68246c4d9bb91ba256f828f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/sendemail"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5f91bdf245425860a812cf3ebd632df3708d12797a6ba2c35ba40f97621270f3"
   end
 
   # Reported upstream: https://web.archive.org/web/20191013154932/caspian.dotconf.net/menu/Software/SendEmail/#comment-1119965648
@@ -27,6 +22,6 @@ class Sendemail < Formula
   end
 
   test do
-    assert_match "sendEmail-#{version}", shell_output("#{bin}/sendEmail", 1).strip
+    assert_match "sendemail-#{version}", shell_output("#{bin}/sendemail", 1).strip
   end
 end

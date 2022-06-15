@@ -6,12 +6,8 @@ class Openlibm < Formula
   license all_of: ["MIT", "ISC", "BSD-2-Clause"]
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "9b05e09f90c7be45091bb34aa339fdd8ae36e9de8463ba0844bc13940a9c71f4"
-    sha256 cellar: :any,                 arm64_big_sur:  "724ef933bb44a0bd8f884ccbb4bb2013b2b89af4cd1def67a411ae914ef622fd"
-    sha256 cellar: :any,                 monterey:       "821bb85640df061c0a49c079e06e7f932916c2b47bca228f61b3ed1401f17370"
-    sha256 cellar: :any,                 big_sur:        "fbaaaaee44ecd462b9b9cf94ebcf386bca16591b6a4be7985e479db98f18f280"
-    sha256 cellar: :any,                 catalina:       "7726b400040c12f35eb13cb88dd80444d09f82dce79ef9825b0fc864952f6c39"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9024f7a8469743a4ca9d4b13aa27254367ba4285447a6668f04da94b7d7971f0"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/openlibm"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "553d7dcddfb061a40ef4a0b1731cd5794fc09a189a805f9e803772766c227841"
   end
 
   def install

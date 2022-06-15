@@ -8,13 +8,8 @@ class Orgalorg < Formula
   head "https://github.com/reconquest/orgalorg.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "94c8876f125804235f739721fd76b638142a2d201efa722f80ed9dca67a2bc71"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d351128a7c84c2719ab26b2ff7f4188d8cc511bdd05a9abccaf674ded52baf7f"
-    sha256 cellar: :any_skip_relocation, monterey:       "04019263a064a9c259854951945c31a84ded8847475f607e1452cfaf3d003ed9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a8263d34464253c4bf541e8ad30e1a42fa62c41ec3e1827300fa46192bcb8140"
-    sha256 cellar: :any_skip_relocation, catalina:       "3a76493500a6daa3401c0dba2107f63811794913d621150d391069c44ca9a7a7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4612ae3bbd7a798fe80217712774e26bc96b044de4b8aa147baa2e6b93e0dea2"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/orgalorg"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3e3ab9dc3c12e16123bebfe9acc1b36393b3904d0f4176c7c2cb26299ba9e3c3"
   end
 
   depends_on "go" => :build

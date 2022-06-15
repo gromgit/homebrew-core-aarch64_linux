@@ -7,12 +7,8 @@ class Pgbadger < Formula
   head "https://github.com/darold/pgbadger.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "14c6be30fcb494f156c9e06700f1930a5ec306b9be715e647afaa2319138132c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cc2767affa21e941a91b14ddb5622027af8383b33c739969cae9e2896725215d"
-    sha256 cellar: :any_skip_relocation, monterey:       "94fe00a37abe83df467c20fb60cfadc7140dfdb7ad5de9d06f6d0de70449fe85"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ec7c5490b66889b7dfa965f6b845b7c3ca19a94100d3bb15a6bf6602a20ea3d2"
-    sha256 cellar: :any_skip_relocation, catalina:       "9a0cd6664145e98e6d291f37ac262ae8c6e4820c5b5627e42f09630ec09d1b40"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5192e1ac9ad093144950218397106a35b7dec3aa3e18d887234d391cb4026537"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pgbadger"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f3b77bf9f2749872be32e59ea91974a23944c9ebaf2851b0e72f45542e9dd941"
   end
 
   def install

@@ -7,12 +7,8 @@ class Viddy < Formula
   head "https://github.com/sachaos/viddy.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c40201dfe64007d2bbb080fdcd4ea212c40bb757200ee3c336f9003de5b67461"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5424a7740add9505a202dff137df1692d3254b04ed16c3d8a74ec14d35545525"
-    sha256 cellar: :any_skip_relocation, monterey:       "d91f15be6d4996d1bcb5a9774bbfd119076e6aae544824b44662eae2d255b4fe"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e54f04c85892bee2abefc7911d371e25c0fa4d1fa4f8d4b513b75c334514333c"
-    sha256 cellar: :any_skip_relocation, catalina:       "f585e2d1ff4d12846621b75ec961509fe7fde4d68a38d77db05d6bc789385ad7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0b789c7ee5bc37b63aaf80df52bdc62e774c5ae76ad93f3198de18710274a330"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/viddy"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7449ba7ef7cc973f7c89160a7d9b2438507dbc758ef9e9e413e17eee27d523ba"
   end
 
   depends_on "go" => :build

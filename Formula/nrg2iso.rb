@@ -14,13 +14,8 @@ class Nrg2iso < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2f66686ff7f33af0e071175ff79b600cd843a1e8daeb94af0785844a56528a9f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ca8279b0cbdf542068fad1c72abbd63dab1c756a315e676a0e704d19196feeb9"
-    sha256 cellar: :any_skip_relocation, monterey:       "1de954133ee56482c496ff5fa1d688048a3487a08aee8c4c9a47b733631a135a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fad5cff7cbfe394a08dbe9f52f0f0d7872be02fde704cd610bb2cafba844fae6"
-    sha256 cellar: :any_skip_relocation, catalina:       "4928245286399a545930ec079d6299a844e334e5cbe90eab8d8e55f0fc690f66"
-    sha256 cellar: :any_skip_relocation, mojave:         "3d965e8881897c8c2b42acc476b066398eeb074acce577f011c850c0ee7b5eec"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "740b102a8a4df8a8523a8b7812e3eed07f9ce6e0e1c8557867360fe4c1a18136"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/nrg2iso"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a9d69de79594bbb59a89878b98b393fdd2772ea4fa9573fc1adadc9c18aad6d4"
   end
 
   def install

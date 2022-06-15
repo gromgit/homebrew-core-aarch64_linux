@@ -1,19 +1,10 @@
 class SpeechTools < Formula
   desc "C++ speech software library from the University of Edinburgh"
   homepage "http://festvox.org/docs/speech_tools-2.4.0/"
-  revision 2
+  url "http://festvox.org/packed/festival/2.5/speech_tools-2.5.0-release.tar.gz"
+  sha256 "e4fd97ed78f14464358d09f36dfe91bc1721b7c0fa6503e04364fb5847805dcc"
+  revision 1
   head "https://github.com/festvox/speech_tools.git", branch: "master"
-
-  stable do
-    url "http://festvox.org/packed/festival/2.5/speech_tools-2.5.0-release.tar.gz"
-    sha256 "e4fd97ed78f14464358d09f36dfe91bc1721b7c0fa6503e04364fb5847805dcc"
-
-    # Fix build on Apple Silicon. Remove in the next release.
-    patch do
-      url "https://github.com/festvox/speech_tools/commit/06141f69d21bf507a9becb5405265dc362edb0df.patch?full_index=1"
-      sha256 "a42493982af11a914d2cf8b97edd287a54b5cabffe6c8fe0e4a9076c211e85ef"
-    end
-  end
 
   livecheck do
     url "http://festvox.org/packed/festival/?C=M&O=D"
@@ -21,19 +12,17 @@ class SpeechTools < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "b6fc76b6258dbd5956b9ee1fc3c2b6bdd3bff70c3e5963d0909d063d7d58469e"
-    sha256 cellar: :any,                 arm64_big_sur:  "f87cf4b034c413c123d7a6c443492a836ce28c23407f522cad259a7832fd7e33"
-    sha256 cellar: :any,                 monterey:       "ff2891dc045fd7e6a9044dab515a213eb8cfacbdf94cee6191b4d14c32cdcff5"
-    sha256 cellar: :any,                 big_sur:        "6752fe1558b7d5c824d6b8f534caf8a2ee2547cc8346e6802ba7138992af4ea3"
-    sha256 cellar: :any,                 catalina:       "e88b78b7a2391634494dc70406f42667d8d152e41d8b85958afd38ec16d8b4e0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "05b33f6bd508503c40c67baaa4d8766e3d3b58853b18c9f356d0e650a2ecad13"
+    rebuild 1
+    sha256 cellar: :any,                 monterey:     "134051b43ceb9d7b0c72cd1ae9c6c2381cd0dd74b8360e45a99879519da2bb63"
+    sha256 cellar: :any,                 big_sur:      "cabb028b487d5baa5c9c1bb67a982a285ab2af2194ac429fb80f0675e2bd9f6e"
+    sha256 cellar: :any,                 catalina:     "e25823939149f50f343c2e6bd8521b302067a0eb3106df6b40ff96b2d1a70c21"
+    sha256 cellar: :any,                 mojave:       "3ede4e21772a17e0c0a109151406ad82943ba77b0cad2249c0cac51e063d24ea"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "367d922ef74f4977cd3fca29461b4814af733073cbba6cc066d5b85a729daf26"
   end
+
+  depends_on "libomp"
 
   uses_from_macos "ncurses"
-
-  on_macos do
-    depends_on "libomp"
-  end
 
   conflicts_with "align", because: "both install `align` binaries"
 
@@ -44,7 +33,7 @@ class SpeechTools < Formula
     # as a dependency.  Normally you can force this on autoconf by
     # setting "ac_cv_prog_cxx_openmp" and "LIBS", but this configure
     # script does OpenMP its own way so we need to actually edit the script:
-    inreplace "configure", "-fopenmp", "-Xpreprocessor -fopenmp -lomp" if OS.mac?
+    inreplace "configure", "-fopenmp", "-Xpreprocessor -fopenmp -lomp"
     system "./configure", "--prefix=#{prefix}"
     system "make"
     # install all executable files in "main" directory

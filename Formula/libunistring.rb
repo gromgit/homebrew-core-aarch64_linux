@@ -8,12 +8,8 @@ class Libunistring < Formula
   license any_of: ["GPL-2.0-only", "LGPL-3.0-or-later"]
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "b8b2f6fe30eefd002bf0dbb5fc0e5c6dc0d5f9b9219f4d6fcddc48e3bc229b23"
-    sha256 cellar: :any,                 arm64_big_sur:  "df13d54b58c8c86c0e609f7343677175eae0a58ba0cceabbceb08023d23021c3"
-    sha256 cellar: :any,                 monterey:       "18a1691229db1dbc9c716236df52f447aa9949121c36ae65b4d6fdf284d260c6"
-    sha256 cellar: :any,                 big_sur:        "50c3003f7db296810b0fbebdb86d94edd88f56195c48327f615d6ef52608628e"
-    sha256 cellar: :any,                 catalina:       "3b5bb302d087ae03b3a87b0d722a3db1a66dc83ff45f77e624a62590c3d0c95d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b1d76e62d1bafe89c7535ca21aad48fe99370b5353d0c4efeafe564db367401d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libunistring"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3212fe71edf68435ea74b977d3215507e3d965a01c65078ac316561b4bae1ce0"
   end
 
   def install

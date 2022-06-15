@@ -12,12 +12,8 @@ class Mongocli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a2c4bcd9669f917539527d17707777d70f543149cef622892cc535973cbab543"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7e4eb9294305b73ecff4271244b878328d1274dfcbe336699efd64e93454f230"
-    sha256 cellar: :any_skip_relocation, monterey:       "7412bec19faa0f24a1fc92f11814568202ceef74630fd41fc5075ccf7624ab13"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9dda5f2444ca565dd74fbd11addbfb4432411b2848b487dee9dbbb5580b843b7"
-    sha256 cellar: :any_skip_relocation, catalina:       "031865b3753eb37d2a98efbc20c88ae761d1240fd94ef0bd9d1da0c358857629"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c858bf5941d4542813b9cbbcb4097a2220955fc2e03fe19489055d4fded14442"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mongocli"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "92c815718d10ec0f82ab9e19cb96e5f8ed5f22b842a1ab0d6bd06d03f48454cc"
   end
 
   depends_on "go" => :build

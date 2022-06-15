@@ -3,17 +3,17 @@ class Jc < Formula
 
   desc "Serializes the output of command-line tools to structured JSON output"
   homepage "https://github.com/kellyjonbrazil/jc"
-  url "https://files.pythonhosted.org/packages/cf/b9/2961fd37643c73029d3be84e3e92e14d39d6d224f1405ed866b302ecb5ee/jc-1.20.0.tar.gz"
-  sha256 "2ed37b60ce1ca35253739ac90e67be034a60d2c3f2f845726b040ec465cc90f4"
+  url "https://files.pythonhosted.org/packages/aa/4a/7799d45dd74222d8614861eb122b0aa6f41ef4f5777897264fa74aa6cbfc/jc-1.18.8.tar.gz"
+  sha256 "e3e7ca4223c504e9e434f222157364582eeeb76d6313c8515a67b7637911448a"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1e233150138b446f10088fef9c48321d2a51754bf119e7ac214506c5c2578212"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ddf9358468de137e30022b3d94d8a654a665e81bffbd490a008f9e0bacbda9ba"
-    sha256 cellar: :any_skip_relocation, monterey:       "eeec72e9e995dd9b913dc985f56f514ad21dd273296ba0267ccf38dbfebef782"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ee5cee39339274b5ff92d40b569df09474c83b97e1974cd4494922962fd286f2"
-    sha256 cellar: :any_skip_relocation, catalina:       "cc286b685863dbf2a8ab490b58be17229e1b37a2295457b47374f72d76132640"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f5ca2e71953747ade242106a497ade611ea6eca24f7f1b790fd57fdebbe0bd4f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8a95f525989ad778c89d96268df54241b057b05725fa918c7137812373685596"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "829b7f372db2caf73d16f223f953f3324cb4a81e198bfddf210797c32ff5773c"
+    sha256 cellar: :any_skip_relocation, monterey:       "604995ae8a24f56d6c3dcf42da6e3c72a794dce1c47e035c8e06f35057ce8c73"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f24394a8a13bccac0f4f9d94fbaf370cc46beb4ff0e995db156f4e5f172cde52"
+    sha256 cellar: :any_skip_relocation, catalina:       "7e5d9b7b8988a158db32c8071bb5950192a270bd5d06fb6a199dc4cbe01a2e76"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7564aed3061c94136500bb6ffe583807f3771edf856775cfa2acf6ec8ba1a995"
   end
 
   depends_on "python@3.10"
@@ -34,8 +34,8 @@ class Jc < Formula
   end
 
   resource "xmltodict" do
-    url "https://files.pythonhosted.org/packages/39/0d/40df5be1e684bbaecdb9d1e0e40d5d482465de6b00cbb92b84ee5d243c7f/xmltodict-0.13.0.tar.gz"
-    sha256 "341595a488e3e01a85a9d8911d8912fd922ede5fecc4dce437eb4b6c8d037e56"
+    url "https://files.pythonhosted.org/packages/58/40/0d783e14112e064127063fbf5d1fe1351723e5dfe9d6daad346a305f6c49/xmltodict-0.12.0.tar.gz"
+    sha256 "50d8c638ed7ecb88d90561beedbf720c9b4e851a9fa6c47ebd64e99d166d8a21"
   end
 
   def install

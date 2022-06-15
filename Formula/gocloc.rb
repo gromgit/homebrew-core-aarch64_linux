@@ -7,12 +7,8 @@ class Gocloc < Formula
   head "https://github.com/hhatto/gocloc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "72944d7b61a051c3d7bb54c1fb5e0f11e7c079dde00dfe62a45fc23c819aebfb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "72944d7b61a051c3d7bb54c1fb5e0f11e7c079dde00dfe62a45fc23c819aebfb"
-    sha256 cellar: :any_skip_relocation, monterey:       "7b06f99a3af92cc9fbe73d1ce39868bc3b864e32dbcd4f2f332ef1541de2a1fa"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7b06f99a3af92cc9fbe73d1ce39868bc3b864e32dbcd4f2f332ef1541de2a1fa"
-    sha256 cellar: :any_skip_relocation, catalina:       "7b06f99a3af92cc9fbe73d1ce39868bc3b864e32dbcd4f2f332ef1541de2a1fa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a3fd8cafbe6cf7216c82ba5fc49933094e76b4170932634b463524fd95c36b50"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gocloc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c0b020ea5d80377230c2f6d0ef4a1119e770dfdd40a7aa49fa57139121232bbd"
   end
 
   depends_on "go" => :build

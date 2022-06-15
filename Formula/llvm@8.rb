@@ -19,8 +19,6 @@ class LlvmAT8 < Formula
 
   keg_only :versioned_formula
 
-  deprecate! date: "2022-05-29", because: :versioned_formula
-
   # https://llvm.org/docs/GettingStarted.html#requirement
   depends_on "cmake" => :build
   depends_on xcode: :build if MacOS.version < :mojave

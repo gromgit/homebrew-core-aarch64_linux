@@ -14,11 +14,8 @@ class Hashcat < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "fa6cfd37e7dcc83390159e971d314cde0af53ab58e41c8f669919d8db1acd1f6"
-    sha256 arm64_big_sur:  "9407d08fda25cba3b7500bb0d6b99823b325f6b1302b96203b44d46052b43df5"
-    sha256 monterey:       "2943213fd5cf7d331331d734c059efca5031ea913f434b9d3e420c9b89d32870"
-    sha256 big_sur:        "50bbfbedcbbefcc4d0bda34f828eca5061a993631a4bae85d78abfe0b119556f"
-    sha256 catalina:       "455a0e164a50caf10908da5ef73322bf19de286601a44a9e6e75d1ebcb010ef5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/hashcat"
+    sha256 aarch64_linux: "384df3546258384f34134a6ed2a95aa0e3ee4e63e523a3f1163398266175650b"
   end
 
   depends_on "gnu-sed" => :build

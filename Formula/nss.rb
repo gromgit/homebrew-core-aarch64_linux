@@ -1,10 +1,9 @@
 class Nss < Formula
   desc "Libraries for security-enabled client and server applications"
   homepage "https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS"
-  url "https://ftp.mozilla.org/pub/security/nss/releases/NSS_3_79_RTM/src/nss-3.79.tar.gz"
-  sha256 "ebdf2d6a96613b6fe70ad579e9f983e0e94e0110171cfb2999db633d3394a514"
+  url "https://ftp.mozilla.org/pub/security/nss/releases/NSS_3_78_RTM/src/nss-3.78.tar.gz"
+  sha256 "f455f341e787c1167328e80a84f77b9a557d595066dda6486a1874d72da68800"
   license "MPL-2.0"
-  revision 1
 
   livecheck do
     url "https://ftp.mozilla.org/pub/security/nss/releases/"
@@ -15,12 +14,12 @@ class Nss < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ea8ff2b79cd3b1abe1eb392a3302f123d7a0a9eee1da950107ae3aa54626e849"
-    sha256 cellar: :any,                 arm64_big_sur:  "965de73d76eafe85838436dcb1e7985f4989b439319dc291b228dbe5d783b7a5"
-    sha256 cellar: :any,                 monterey:       "db5e20780dc32ed7a4f74cf39687e47c02cd170a18f6ca1b027d56a28821ff66"
-    sha256 cellar: :any,                 big_sur:        "d11c6f8adb43a4836b6ec91b2cdcd2a6dea38c1d5688c19377283327e436aa79"
-    sha256 cellar: :any,                 catalina:       "1e274e46bf156039ffdb83be2462fd4357749a65f110cceb49c5039591a5dabb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cc2c318389604fc6e777999aad12a4a3fb26c1bbed4d8564ac93ff405dc43875"
+    sha256 cellar: :any,                 arm64_monterey: "3957bd6ff1c7e9bc87bd9f609afc4e1d59967e383b9cef76d0380d45e8d9399f"
+    sha256 cellar: :any,                 arm64_big_sur:  "69aee9c8f3496dfd337731bd64b478edd0563f295cdd22f5abf8566dd6c3fa9e"
+    sha256 cellar: :any,                 monterey:       "58b263c734ebc9503e00eff3a9aad7176d3e0c6de7987c71ed0079a9dd17ea13"
+    sha256 cellar: :any,                 big_sur:        "edd014cd5026204b29a2dae1b3bf72b446cc9c1319c8bb923d60e8b7e3207b66"
+    sha256 cellar: :any,                 catalina:       "4dd85d8443322d2190f33c7e595a49cfa7548969fc1a176d7778b1d50d7b0c75"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6704fa38552bbe9881b15386755aca8b3d71d9597ebe53c6faa879fd2fd9141a"
   end
 
   depends_on "nspr"
@@ -29,6 +28,7 @@ class Nss < Formula
   uses_from_macos "zlib"
 
   conflicts_with "resty", because: "both install `pp` binaries"
+  conflicts_with "googletest", because: "both install `libgtest.a`"
 
   def install
     ENV.deparallelize
@@ -37,7 +37,6 @@ class Nss < Formula
     args = %W[
       BUILD_OPT=1
       NSS_ALLOW_SSLKEYLOGFILE=1
-      NSS_DISABLE_GTESTS=1
       NSS_USE_SYSTEM_SQLITE=1
       NSPR_INCLUDE_DIR=#{Formula["nspr"].opt_include}/nspr
       NSPR_LIB_DIR=#{Formula["nspr"].opt_lib}
@@ -73,7 +72,7 @@ class Nss < Formula
         cp file, lib
       end
     end
-    # resolves conflict with openssl, see legacy-homebrew#28258
+    # resolves conflict with openssl, see #28258
     rm lib/"libssl.a"
 
     (bin/"nss-config").write config_file

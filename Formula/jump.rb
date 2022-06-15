@@ -7,12 +7,8 @@ class Jump < Formula
   head "https://github.com/gsamokovarov/jump.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a1f200b2d8848305139c76e468725599fc4647a80a7b54e1394abbdb4fbb1c16"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a1f200b2d8848305139c76e468725599fc4647a80a7b54e1394abbdb4fbb1c16"
-    sha256 cellar: :any_skip_relocation, monterey:       "09697911ef3c008e4105828b6ee8ca4be2ffeb774fa1676d5de9de9efcaeae52"
-    sha256 cellar: :any_skip_relocation, big_sur:        "09697911ef3c008e4105828b6ee8ca4be2ffeb774fa1676d5de9de9efcaeae52"
-    sha256 cellar: :any_skip_relocation, catalina:       "09697911ef3c008e4105828b6ee8ca4be2ffeb774fa1676d5de9de9efcaeae52"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5a6c2c2b029b816f95f5fb029b9d5857719553542bf485414f5f127c5dc8dede"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/jump"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7e293efa59de36137235c243bd88a5a848de8df2c73c3780b16ec96cf4246243"
   end
 
   depends_on "go" => :build

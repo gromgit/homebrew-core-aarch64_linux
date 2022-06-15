@@ -7,12 +7,9 @@ class EasyTag < Formula
   revision 6
 
   bottle do
-    sha256 arm64_monterey: "39d4f47a2a8310fbef48070f247e2ec45cc0761bf5e1baa8ebda5446e1aee0b4"
-    sha256 arm64_big_sur:  "8a1cef2c91b3216179ce0eb8ace40e845c2956bb08602747d9c4b433b8c138e2"
-    sha256 monterey:       "d0ef9d0bc6d61b5c2c68b1f26d363a1ed2fd95c5dbe671e6492e94db032d9b3d"
-    sha256 big_sur:        "f10db53f7c6852dc2d83920c64b5166612b7ebfcfd8b8789228bcc2917b183c4"
-    sha256 catalina:       "cf12b241113c19be8fb1b91871d0428f29c9d4e39066c5fd0c197bba1f12088a"
-    sha256 x86_64_linux:   "f33415cd657483d9eea16b2d51d12938cb2cc2296662c0761142ad760f5c21c4"
+    sha256 arm64_big_sur: "8a1cef2c91b3216179ce0eb8ace40e845c2956bb08602747d9c4b433b8c138e2"
+    sha256 big_sur:       "f10db53f7c6852dc2d83920c64b5166612b7ebfcfd8b8789228bcc2917b183c4"
+    sha256 catalina:      "cf12b241113c19be8fb1b91871d0428f29c9d4e39066c5fd0c197bba1f12088a"
   end
 
   depends_on "intltool" => :build
@@ -31,16 +28,12 @@ class EasyTag < Formula
   depends_on "taglib"
   depends_on "wavpack"
 
-  uses_from_macos "perl" => :build
-
   # disable gtk-update-icon-cache
   patch :DATA
 
   def install
     xy = Language::Python.major_minor_version Formula["python@3.9"].opt_bin/"python3"
     ENV.append_path "PYTHONPATH", "#{Formula["libxml2"].opt_lib}/python#{xy}/site-packages"
-    ENV.prepend_path "PERL5LIB", Formula["intltool"].libexec/"lib/perl5" unless OS.mac?
-    ENV.append "LDFLAGS", "-lz"
 
     system "./configure", "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
@@ -56,10 +49,6 @@ class EasyTag < Formula
   end
 
   test do
-    # Disable test on Linux because it fails with:
-    # Gtk-WARNING **: 18:38:23.471: cannot open display
-    return if OS.linux? && ENV["HOMEBREW_GITHUB_ACTIONS"]
-
     system "#{bin}/easytag", "--version"
   end
 end

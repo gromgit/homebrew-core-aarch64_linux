@@ -1,8 +1,8 @@
 class Oil < Formula
   desc "Bash-compatible Unix shell with more consistent syntax and semantics"
   homepage "https://www.oilshell.org/"
-  url "https://www.oilshell.org/download/oil-0.10.1.tar.gz"
-  sha256 "c55c34a52f13eb93d4888612d95dcb451a19e474d6acd75197be055fe020593c"
+  url "https://www.oilshell.org/download/oil-0.10.0.tar.gz"
+  sha256 "7a4baeb886f02e9f10770bdabfb92a752b9861e999581d613d0fc3d4e9287911"
   license "Apache-2.0"
 
   livecheck do
@@ -11,12 +11,8 @@ class Oil < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "ee58b907165b2183c9348071508583d59f712c428b630727ce74062b66f2a2f6"
-    sha256 arm64_big_sur:  "603c6aa8b63a5d4bab17499313f62fe0887a22a56be61044ffa96d7e57704b4e"
-    sha256 monterey:       "19467a4aad0650ec6cb8522e2bfffe2580c46a9234c8e33ff202114389f550ef"
-    sha256 big_sur:        "ed6cf7fc84dba5a01a3372ee3ef25307a4255110c64af723f759959413c6b2d9"
-    sha256 catalina:       "10d8baf4fe5ececcc587334898fda8f024ff4fa302c1fd46bdc4de90d70fab42"
-    sha256 x86_64_linux:   "21a5dd219432223f1c968d2fb55f1786d96ebf5c2bfa3f198b9943037c183578"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/oil"
+    sha256 aarch64_linux: "30b594ef278041d35da5dafdec0941c8e59a3f3e99d612314e340bff37023ad5"
   end
 
   depends_on "readline"

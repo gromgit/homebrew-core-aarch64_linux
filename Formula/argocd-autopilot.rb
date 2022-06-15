@@ -2,17 +2,13 @@ class ArgocdAutopilot < Formula
   desc "Opinionated way of installing Argo CD and managing GitOps repositories"
   homepage "https://argoproj.io"
   url "https://github.com/argoproj-labs/argocd-autopilot.git",
-      tag:      "v0.3.7",
-      revision: "9ba4ca5f5b489bd8f30a3f017a745d2863af795b"
+      tag:      "v0.3.6",
+      revision: "52ac98b00e970b30343df8694fd119274a88c773"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2e48fce2893d5d68863f94ec8520bb511db5e8611ac5d7ff5647f2b11305edf6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "553860f88e2c4324f3cffe1d027f5d55eb98528458f51b1271782ce3f0b262a9"
-    sha256 cellar: :any_skip_relocation, monterey:       "960be71469df0163c447be0f00e604d6c3211f7efa15f1650a6b362656db4469"
-    sha256 cellar: :any_skip_relocation, big_sur:        "708601d9b4faf2b64981956e9cf32715a5494683440785ff047875a616bb0e93"
-    sha256 cellar: :any_skip_relocation, catalina:       "fd22d8ca571c4523f6c3988084c20224d4a989b4bf007f6b9b7c919c7536099a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0c03a0f448fd62ba2f18ec0a974d13fcbfe18562e4b165667fa4babda8272d82"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/argocd-autopilot"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7672141d98fcec379fb241a9ca69172f589f717e747ff1a44370644870fd15f6"
   end
 
   depends_on "go" => :build

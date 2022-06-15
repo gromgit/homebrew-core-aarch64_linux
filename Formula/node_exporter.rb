@@ -12,12 +12,8 @@ class NodeExporter < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8e99e508cef6d2a24256e593f93b74e2963ad1cc7e5c2afd00a5b8c2ac8ba58d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bfba63c91460b85b51c1ca10677b201c07660c1b707dc8ab3c43512dbd86ed34"
-    sha256 cellar: :any_skip_relocation, monterey:       "fe501d109da5207288495fff1bdb82c38b5d3d4cdf7f2ecfa9a2752f8af1c8c8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6258be13386a4e8808db92a0a0f7d993abbd28d3cf73ffba6ad34ddaacee867d"
-    sha256 cellar: :any_skip_relocation, catalina:       "5778761dad16f4f576128aaa00c021a127e01cd8a76314d7d1ec277ed083822d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0f6f7e18658d6272d00d15335fc02d9c8a3e521868cb20a7a5aaca68d7e4aa23"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/node_exporter"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "278cf4ab25f62f4ee0cc29e905bfd4172c3aa636b2290be201e0c33943ca46e9"
   end
 
   depends_on "go" => :build

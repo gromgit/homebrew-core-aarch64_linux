@@ -7,12 +7,8 @@ class Octosql < Formula
   head "https://github.com/cube2222/octosql.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9641fc0f86cfa01cd6ce34d0fc137ed432b8bfef5f1bbf7bc90cef34f2a1bf03"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "26c5ee63019e395a53c8420247b6ed55583ea453f2893c5be31fde2af11f6194"
-    sha256 cellar: :any_skip_relocation, monterey:       "96d1ebf67c88226704dc5cc337b539270355def75cd9c179ff177c684a3822fe"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f7df9f7303a5e4542252d18bfcec99078ca2d1403efc1ef61d9b1a8ba589afab"
-    sha256 cellar: :any_skip_relocation, catalina:       "576e365db9a507f1ecdab95eaf91b10d5a3ebb290965080847bfe0dccedb6fa4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "291308631024d6a002188aef28099344d1cc9a97f3158a62c3006b5c0a29997e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/octosql"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c5883e9841a25d1998a2849223375d173f9b6c619c672f2576c750095f9e4fdb"
   end
 
   depends_on "go" => :build

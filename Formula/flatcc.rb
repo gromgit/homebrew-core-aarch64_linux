@@ -1,18 +1,20 @@
 class Flatcc < Formula
   desc "FlatBuffers Compiler and Library in C for C"
   homepage "https://github.com/dvidelabs/flatcc"
-  url "https://github.com/dvidelabs/flatcc/archive/v0.6.1.tar.gz"
-  sha256 "2533c2f1061498499f15acc7e0937dcf35bc68e685d237325124ae0d6c600c2b"
+  url "https://github.com/dvidelabs/flatcc/archive/v0.6.0.tar.gz"
+  sha256 "a92da3566d11e19bb807a83554b1a2c644a5bd91c9d9b088514456bb56e1c666"
   license "Apache-2.0"
   head "https://github.com/dvidelabs/flatcc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "03e63b4e0e204f4cb7d8ff62a5020deca986b97321ad3059f11153ee6c70ac06"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ff1f00cc07f66e878fcb04c06c498eeb6b4f5c49d46ba40ba15461b8ca339974"
-    sha256 cellar: :any_skip_relocation, monterey:       "145f6bf5c92bdd8f374639bb559c7b3ed6a140248ace0b1d4671c4b73b90f70e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8e88a66053e439e9c48f7ef937d14ff27a94a20b58d41c706eed7122ca592aea"
-    sha256 cellar: :any_skip_relocation, catalina:       "09edd043ebbfe5f96f6ec1f972934daa5a85f425f2333c2914eaa45b20978b70"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "800852160e2675ab180b1183d205daf90646f9e92c5cf3a9cd8ceaaf24c1242f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e3136d54add516459ec378f5c7a4f40fb666f6cbd396d96705c0dc55e8da8366"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3a3729b2b5856179197d13c36f684f08e4f4537a2dc6f7e77e49bbd826c86323"
+    sha256 cellar: :any_skip_relocation, monterey:       "1533758578c80af5bf008e5f1c1eb41c1a51a89bf54b1c8974a28b496e1821f7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ccc4f35c551b04bbca5e4b57b1ffb71941b9105a99a1dac2092a56d1e0f2034c"
+    sha256 cellar: :any_skip_relocation, catalina:       "f1f1cd7532305f48b008fb1f3687d9369a88f184902a8992fd77789410841b4e"
+    sha256 cellar: :any_skip_relocation, mojave:         "74651142d2c732bfbe671d78cdcf3357189c9b3d3cb7078bf9e882ad9ca6b053"
+    sha256 cellar: :any_skip_relocation, high_sierra:    "9e37511cd8069fb56ff15e72f0184d1908f9d4948ebd57d2b430c760cac60aa6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "53fd5d3dc766086d11301fcd9fed896b1ee7847e43c173999d8cd7443c402e45"
   end
 
   depends_on "cmake" => :build

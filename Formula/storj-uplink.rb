@@ -11,12 +11,8 @@ class StorjUplink < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "24661138ae188ab1ca55e5a1ed552df4d9c0411f0db7e004f0b04ee4b2b5dbb5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fe5228829a136681027362b9deb96697afe2c43178c2c5c01b9344e8d58fe719"
-    sha256 cellar: :any_skip_relocation, monterey:       "f3da90c0dc7b02c1e78d579825533c040817219945128353e49b7ddb8684687b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "19d11124c53bfeb064259003ca6150d9f38bbc8536a8b7248256a6b113098be0"
-    sha256 cellar: :any_skip_relocation, catalina:       "2b77cf8d19b89d645fa11044e8d495b0a53d2329da12979aff99f36454aeaefe"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eb866788f2ee8a4d177788ddc7a259c321e74e4b3ef565e5757df4cf998b55a6"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/storj-uplink"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "07380acaa998a16a656495c189aec53aa13f7a0f368a0d37f70d98b83a0b5db4"
   end
 
   depends_on "go" => :build

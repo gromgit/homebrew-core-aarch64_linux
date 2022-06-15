@@ -2,17 +2,17 @@ class Argocd < Formula
   desc "GitOps Continuous Delivery for Kubernetes"
   homepage "https://argoproj.github.io/cd"
   url "https://github.com/argoproj/argo-cd.git",
-      tag:      "v2.4.0",
-      revision: "91aefabc5b213a258ddcfe04b8e69bb4a2dd2566"
+      tag:      "v2.3.3",
+      revision: "07ac038a8f97a93b401e824550f0505400a8c84e"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b0dba05f11ad72af04c09c5d9a7829fc5e6bb18a0ad7e54f9c35ee45f221ca04"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "810406be572fcca0134df22dbf3bb15076984e03926318338542b3877c964939"
-    sha256 cellar: :any_skip_relocation, monterey:       "d72412a06ea27cef68feb02d11e39ef7282af2ae2c0d6b088bfcbcb273f56e8e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "821dc05549c031e713ef0e23a71584ad811e12a16d2405188fa8198bb7301216"
-    sha256 cellar: :any_skip_relocation, catalina:       "489a4ed331ad3c7bac94fd2a41cd3965614d3bf1cb3c76eca31cc9607c9610a6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9176b4cc07699fd746aa807c127ad4ac13e6758b674df2b44f064be84493000f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bf9d6d379d4a48f29b8571026cf6dc169b9af1c0e321d606fb087ac4b4bce432"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a2bfb242508ee231f367a030f3756d59fe055c3082806cdbf70072c77f76478e"
+    sha256 cellar: :any_skip_relocation, monterey:       "be39af6af6d7fd332c41d6b62e563669d25d9c433d9c0ce15603a044bb05c27a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7db4276adac72c78c35ec851e5837de398e94bc66600503711c8c0c5a1d37e2e"
+    sha256 cellar: :any_skip_relocation, catalina:       "13519b9564baae77d7df97b96c378af45a23346db1abe53c3d303bd4ebd93f91"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5a3f7a6035058d3fdfdde2f657e5bc5aafeacc0cb821802395a3e342af394e9c"
   end
 
   depends_on "go" => :build
@@ -42,7 +42,6 @@ class Argocd < Formula
 
     # Providing argocd with an empty config file returns the contexts table header
     touch testpath/"argocd-config"
-    (testpath/"argocd-config").chmod 0600
     assert_match "CURRENT  NAME  SERVER\n",
       shell_output("#{bin}/argocd context --config ./argocd-config")
   end

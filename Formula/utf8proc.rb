@@ -6,12 +6,8 @@ class Utf8proc < Formula
   license all_of: ["MIT", "Unicode-DFS-2015"]
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "72863230e3a49a319ccf71db211b7866decc25b424c24b57a6e3417211222c90"
-    sha256 cellar: :any,                 arm64_big_sur:  "d7b7ee1475f28c34e6702a93bf9fb16abaa49fcd84bdb28c3d07a8d13040f4a6"
-    sha256 cellar: :any,                 monterey:       "43f71ce7d7399280dfe784c8c10091d33d4fcd3680366720ea56c8c5d3c8330c"
-    sha256 cellar: :any,                 big_sur:        "459ccaa0dae192d1c8b1f181090ab2a1712c0cb2aebd445e91d3fc92124783e4"
-    sha256 cellar: :any,                 catalina:       "9d2ebee54aeddd64fd8189efe788a388e26482c2ff334ab4e85057861f1e948a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e820113377424418246a2ce4bfba88f9241fd8c456673a313b7f9b85f55cf3a5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/utf8proc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "917f33e92738f90e721d9f1648d49d10ba6d6c507456fbd574fd8911c65c2743"
   end
 
   def install

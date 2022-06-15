@@ -1,22 +1,20 @@
 class Rakudo < Formula
   desc "Perl 6 compiler targeting MoarVM"
   homepage "https://rakudo.org"
-  url "https://github.com/rakudo/rakudo/releases/download/2022.04/rakudo-2022.04.tar.gz"
-  sha256 "7e13a8cc927efbe86b8ff7b19155a60a6f6e2b6e2952bd690dcacef2d02a1c74"
+  url "https://github.com/rakudo/rakudo/releases/download/2022.02/rakudo-2022.02.tar.gz"
+  sha256 "6a6e9dbcc6d9a1610a34c6ec67e2d3f694d7b33e9e0a0f224543089fa7f71332"
   license "Artistic-2.0"
 
   bottle do
-    sha256 arm64_monterey: "bcb4a1aa20bd3fbb3897ee9aaf4492a1a8985e4214060bcc902b29033851ee48"
-    sha256 arm64_big_sur:  "7e4b2e0e000be7675d58ec6e87def4430804a64eb90f3047b0781e5d08f1f720"
-    sha256 monterey:       "2f9a945ab154c1abb995f426307f259f5243fca8537a6c22b50097ac9339a007"
-    sha256 big_sur:        "b3b36ad5f3b3ca9f8c0897bee40171a9eee6c0bb2c6aa1a9cb51397695ce99c2"
-    sha256 catalina:       "2d598a9c1eb95f2a68fe13ad98ce5aa476244d4d096f45a60434222f0d112dc6"
-    sha256 x86_64_linux:   "a31955817038c274cd2cf4677a80d1f5a5018e4b4f727007771f9ee7c9df6ba6"
+    sha256 arm64_monterey: "1dbfaff55ea5463638fb5799c7c924ba6f4e8624eb5ff96475b6a4495e2f1111"
+    sha256 arm64_big_sur:  "5ae84dd92d1bf61d927e7f37147e3f8bf62b0a1e7813c1043feeefef565a98ca"
+    sha256 monterey:       "fefd5708734b27f37ece96736c58c22942ebd9ee0f45531dd938db686edcab64"
+    sha256 big_sur:        "7c17b5ce2de5a8c18dc94ff51b6109927daab34a9ee061571a373e0d7d9c5a9f"
+    sha256 catalina:       "ab0e3765530b95c1481e38cbcb38ad81782c102e7978da0aafec7a5d173732dc"
+    sha256 x86_64_linux:   "696a648ee7cb6756c871f9372ac92b737f145c5594fed05790994d8d45034f02"
   end
 
   depends_on "nqp"
-
-  uses_from_macos "perl" => :build
 
   conflicts_with "rakudo-star"
 

@@ -1,4 +1,5 @@
 [
-  "scummvm",
-  "synergy-core"
+  "cmockery",
+  "vapoursynth-ocr",
+  "vapoursynth-sub"
 ]
