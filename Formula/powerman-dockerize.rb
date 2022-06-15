@@ -6,20 +6,22 @@ class PowermanDockerize < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "566b4a783ec4fb5a716902291fdf5f56131f3245e85bf169c9cafc2af4212594"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "30b67fd89b006c7a9f1f9fb679b2f2473de40399dd16957635c08b7e5ef42186"
-    sha256 cellar: :any_skip_relocation, monterey:       "2a6fb1702f3ace98d1d961d541a2c5f1fd98e4bb617f62de3e5736128b90d219"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9aaff024ef619fb143f00fca215ed26324d6c4dfc3445e5fd5a911f4f2230a08"
-    sha256 cellar: :any_skip_relocation, catalina:       "f767babba807bec04744e61d9241e178d42caaa4d348e0a526785da7952d5a09"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7b9f4b706b741ab5ab9ad9a9c4c7ab987a7502f5d5598ecca8afb7969ad2a59d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/powerman-dockerize"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b9ac88a7fb0de897d0cc8b4c7f815837fee282e63d57de12fb6eda45f5ac7752"
   end
 
   depends_on "go" => :build
   conflicts_with "dockerize", because: "powerman-dockerize and dockerize install conflicting executables"
 
   def install
-    system "go", "build", *std_go_args(output: bin/"dockerize", ldflags: "-s -w -X main.ver=#{version}")
+    ENV["GOPATH"] = buildpath
+    ENV["GO111MODULE"] = "auto"
+    (buildpath/"src/github.com/powerman/dockerize").install buildpath.children
+    ENV.append_path "PATH", buildpath/"bin"
+
+    cd "src/github.com/powerman/dockerize" do
+      system "go", "build", *std_go_args(output: bin/"dockerize", ldflags: "-s -w -X main.ver=#{version}")
+    end
   end
 
   test do
