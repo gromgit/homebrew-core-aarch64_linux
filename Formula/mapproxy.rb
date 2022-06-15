@@ -8,12 +8,12 @@ class Mapproxy < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "7c850b8bdf3952ca8e168227669526b563b5c08c95fdb55f230755a696dc653c"
-    sha256 cellar: :any,                 arm64_big_sur:  "54cb52477abef05e85d57a5cb128666dc33351c73da03cc781bb4a2756efba52"
-    sha256 cellar: :any,                 monterey:       "cb4a870be4c1fe07cc42f60c206070d36ebe74c1ee3666a477bc1cc31169b4de"
-    sha256 cellar: :any,                 big_sur:        "974d5bbfc286e0b64d11af5184d5eee2999c63a08560afdbdb9f545afb3b0b45"
-    sha256 cellar: :any,                 catalina:       "4ff88a2511ddb76dfda9a2ace63ddaceff0e0de0aa480ce5ae5ca53f5e5238d5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2460e238630303105824e634f1e2f16b986025a4b7305be40ad51c5313db6766"
+    sha256 cellar: :any,                 arm64_monterey: "a67990b6cae1a62b8bd22c0034c2d846cc51305f029ce2a0ff935a3fb4b0233b"
+    sha256 cellar: :any,                 arm64_big_sur:  "3941b1ddb52dfde608a8116588b695a37b9003cec1bf8a21f71f642e5161a4f8"
+    sha256 cellar: :any,                 monterey:       "70f01371595e686a9244655e0c5e5682a83720247b07db8c00cc266b5f1a88e3"
+    sha256 cellar: :any,                 big_sur:        "2f93d2df55a61d86b4c246d842dad5d36c43716caef1ff996212fd439a229b14"
+    sha256 cellar: :any,                 catalina:       "c83481e63a7b6eae74f6f5963041bf7f8fa08c19b5df52670f515bdd5fc41107"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "60402f962e783b1863afe3ab984b204d45337822acfdbafcfe255b14198af8ed"
   end
 
   depends_on "pillow"
