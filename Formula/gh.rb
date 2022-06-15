@@ -1,8 +1,8 @@
 class Gh < Formula
   desc "GitHub command-line tool"
   homepage "https://github.com/cli/cli"
-  url "https://github.com/cli/cli/archive/v2.12.1.tar.gz"
-  sha256 "d37a96d3b12c489458e5c35ddbdeacac133c766ee50580aee4657eb9ad185380"
+  url "https://github.com/cli/cli/archive/v2.9.0.tar.gz"
+  sha256 "730b600d33afb67d84af4dca1af80cb1fbff79d302ac4f840fc8e9e4c25fceb7"
   license "MIT"
 
   head "https://github.com/cli/cli.git", branch: "trunk"
@@ -13,12 +13,8 @@ class Gh < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a4b174492f878bdd729c619b0780deb591702d6e450702ceab2f720374d44907"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4e246aad61412bd34babe6db7e8e97b4ce54ca98897d3c3a335272fcf6bd746a"
-    sha256 cellar: :any_skip_relocation, monterey:       "4bf0e7a891a876f51e32cfefacdcf2154c7f8b78368343c1bb0198678b53ac34"
-    sha256 cellar: :any_skip_relocation, big_sur:        "21b11cd4f0e5cd73c980a76d63e0a108b2442ac392c41812863a59dfd52680f4"
-    sha256 cellar: :any_skip_relocation, catalina:       "b91ab6e333820183a3fc500d69c4dff83828d16473a09f64960d4a1d41464e8f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "33cc7568a5c36d2d1a313cb88c8c16ff228ddcdb1bd86f408302140817c48708"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gh"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d5d4d6549e32ab6b386db6d0b481a57aebcb62443678b499c7e1477e731ae6a6"
   end
 
   depends_on "go" => :build
