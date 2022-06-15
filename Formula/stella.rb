@@ -1,8 +1,8 @@
 class Stella < Formula
   desc "Atari 2600 VCS emulator"
   homepage "https://stella-emu.github.io/"
-  url "https://github.com/stella-emu/stella/releases/download/6.6/stella-6.6-src.tar.xz"
-  sha256 "d481efc6d27b5294565dfcc10983de2dbc4db8a59932a678ffdb4d2404b8c207"
+  url "https://github.com/stella-emu/stella/releases/download/6.7/stella-6.7-src.tar.xz"
+  sha256 "babfcbb39abbd1a992cb1e6d3b2f508df7ed19cb9d0b5b5d624828bb98f97267"
   license "GPL-2.0-or-later"
   head "https://github.com/stella-emu/stella.git", branch: "master"
 
@@ -39,7 +39,7 @@ class Stella < Formula
                   "\\1 = (#{sdl2.opt_lib}, #{libpng.opt_lib}, \\2);")
           s.gsub!(/(OTHER_LDFLAGS) = "((-\w+)*)"/, '\1 = "-lSDL2 -lpng \2"')
         end
-        xcodebuild "SYMROOT=build"
+        xcodebuild "-arch", Hardware::CPU.arch, "SYMROOT=build"
         prefix.install "build/Release/Stella.app"
         bin.write_exec_script "#{prefix}/Stella.app/Contents/MacOS/Stella"
       end
