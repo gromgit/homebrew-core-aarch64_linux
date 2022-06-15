@@ -14,7 +14,8 @@ class JbossForge < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "039e353a849ef77ca6c9f75b6ec8de8be60b8afca474b1850d6ced23aee6d44e"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "e60122e8ee18ddd1352a46447c0247f72dfd0aa385744aaf85ecb3ee29d2c298"
   end
 
   depends_on "openjdk"
