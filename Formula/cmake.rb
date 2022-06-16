@@ -16,12 +16,8 @@ class Cmake < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9fe99b75d9e37e3acd653f93d429af93f94c5460a50284e6c56cf99fb4f8aa7b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "40417555a252c5ea054b8e71aeb99af82fafca14d3f93a7f6c1555bab64352a8"
-    sha256 cellar: :any_skip_relocation, monterey:       "67dedaec2350dcd6535d442cfe152589c743141cf72a078fde582f0e15be1b48"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bfbdb089a9742a91c4568ab84d90cb285f43c635e999d67aa8e40abc570eba55"
-    sha256 cellar: :any_skip_relocation, catalina:       "696eaafc168fa04a4f36203e2e76186cd534fd007feaa7d813fb21142680380e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6217894919a4025d748e4cfd64cb94a809cc8db7af731e16520924b16623c49e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cmake"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b30d83e88329e28e42fcf78e22b55f054dc2f0fcd9daa594034dc032917dd16d"
   end
 
   uses_from_macos "ncurses"
