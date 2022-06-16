@@ -7,6 +7,10 @@ class MarkdownToc < Formula
   sha256 "4a5bf3efafb21217889ab240caacd795a1101bfbe07cd8abb228cc44937acd9c"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "1fcb47b953cf9becfdcf24c6de36fbff454877e4c05ac47bc40be8d2df76ba0f"
+  end
+
   depends_on "node"
 
   def install
