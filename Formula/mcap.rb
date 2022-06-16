@@ -6,6 +6,15 @@ class Mcap < Formula
   license "Apache-2.0"
   head "https://github.com/foxglove/mcap.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "dd5e2c2fb4f079bcde2ff7b0411034dd94993db2a45313797bc785d87b04497a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4575d12c6a040f36566d8a20903c119af26badb6d2ac3aa800f4d1b8787bb20f"
+    sha256 cellar: :any_skip_relocation, monterey:       "ec707d080895a6dc9e98929b55a4bf2f7c6039156a76b3c4462e515059d6434b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1b34d8c22a0c45f3641aa880e173a61841e1d03326cfb0176f863b76d143b3ed"
+    sha256 cellar: :any_skip_relocation, catalina:       "62e92f70b8e8c6402a2de75e8c81f31a7be51ad1e9759f1f19a11d91b6eeb609"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6ae5d8d8512badfb023e677d4b76135333f7d4263cb8075dd27d628638b89629"
+  end
+
   depends_on "go" => :build
 
   resource "homebrew-testdata" do
