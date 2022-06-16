@@ -6,8 +6,8 @@ class Hello < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    root_url "https://ghcr.io/v2/gromgit/core-aarch64_linux"
-    sha256 aarch64_linux: "6fe57c2aa080ab1a41d31d830e491ea00802eb98cbaad1319fce6edc49533732"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/hello"
+    sha256 aarch64_linux: "b721ffedcdc1fe4e54dc1d799fe72d6970a0b38c26f8bff10e35e5b9c3f3fe06"
   end
 
   conflicts_with "perkeep", because: "both install `hello` binaries"
