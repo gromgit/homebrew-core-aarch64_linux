@@ -8,12 +8,12 @@ class Kics < Formula
   head "https://github.com/Checkmarx/kics.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "607521e41ef78a315fe6fbd7e74c44528338d6ff130aa7df1b663ec626575d31"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ad584ccfbcfe63cca2c22d48f7a6aa2d071cfe880fed8d119a07dc143bc8e784"
-    sha256 cellar: :any_skip_relocation, monterey:       "b88a3df5b71e6db4d76c5d8322725b67df54965fd1dba0a8e0f958f3b203b30b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a3c22c39e395c1d0b7d23cd8026685f6f8ad2574948d1638a6cb0b98933a3328"
-    sha256 cellar: :any_skip_relocation, catalina:       "704a36d09cea00d88656656c06c9701dbbc1db9649bfddd449a8cfdc7a086016"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1cf7dc78f6543e7cf635fb1c3ea4cb42ca9c59c9a5101a7aead99c7b0b86aef4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0057b36d85630441717fa83e20af4a01ee376711996f1b3cb075c720a8814fca"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d6c5ff574ad691475084d90b2fccf8144ffe14e829d8527e3427f072667bf506"
+    sha256 cellar: :any_skip_relocation, monterey:       "d774c50b674f6f6b2783a8ed0180d205a61f6be9cbb76a8bb2cd535cf7477333"
+    sha256 cellar: :any_skip_relocation, big_sur:        "70ad80442d5da9f38a04081817a3239640860abfade3b7e859e00c03db148d4a"
+    sha256 cellar: :any_skip_relocation, catalina:       "55fbd613e3b19a9f848e77992f09eebfd143ecc2fcae6bfd19d03c4228a84026"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f126d26a76c25c6287462690cca92d6ebc56c7c6c085307f192eb5a1827770f4"
   end
 
   depends_on "go" => :build
