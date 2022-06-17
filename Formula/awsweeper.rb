@@ -7,12 +7,8 @@ class Awsweeper < Formula
   head "https://github.com/jckuester/awsweeper.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "dabe2797d6b3a7f40fa31dff1fc8bc7f7c94918f024f6f866c9fedb43d8ce485"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b4b48419aaa4619449078a64b28ed9bde4b3bb1c05cf096d6852fa92596f2260"
-    sha256 cellar: :any_skip_relocation, monterey:       "54bc928c085313ad7b2cd353bbf4b7e49df992527526348ee0eb01437f9ca87b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1855fe15c7d95a0dddf4487692bf75d6dc234c3ecd25457dffaeab3a2312ece8"
-    sha256 cellar: :any_skip_relocation, catalina:       "76710715dee67793f3715dc1a902b18f259b4ed4b42515fbf13b641339b1f899"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "81776b638e309f839a362f70ba7d0621c2ca9e80f6472f334c5472049cbc3374"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/awsweeper"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5e7883174e67be753efe5057d0029972e6954a8e2b9308d5a14b6c2a3e2feb21"
   end
 
   # Bump to 1.18 on the next release, if possible.
