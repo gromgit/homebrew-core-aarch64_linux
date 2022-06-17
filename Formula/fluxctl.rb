@@ -12,12 +12,8 @@ class Fluxctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4140d2fb4f97be34da2100dd4bd27f9e2cbe1baa6362b3927b6418bfb5391371"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "869a325e24d25c20ed3ba5ddbcac355e87f5c713e088861e3e54236be3fc60e3"
-    sha256 cellar: :any_skip_relocation, monterey:       "52546e57bf5bddebd3e82ac82527f8f3f73e5cde1f3f33387b25408eeabc2218"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9f8686dd1f85549a5fc9c0fe99556bb5fe66f9b8456094a3a429c3db9017cbae"
-    sha256 cellar: :any_skip_relocation, catalina:       "3aa4fe1fa2d80c65dadff9ef0d6b4344bc9ffd1aa918d3cccdd90c87788ee55a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7b4c73c672279b5ca8e13812b48a0ef5d7ab7c0bc0ab92f710264d3b7b521ce1"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fluxctl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "89ad46ad56a2f6b3a82ae37415175ce4b1c815ace5abe56d662dc0652b4091f3"
   end
 
   depends_on "go" => :build
