@@ -6,7 +6,7 @@ class Gimme < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "955a907946bda06e3e0eeef3af936182915ddfae8040eb744a394a47a570e9d0"
+    sha256 cellar: :any_skip_relocation, all: "fd677d17e7c2316bce3c567ce9cc708b2c3e6bf57ed867f64554e202b7b78746"
   end
 
   def install
