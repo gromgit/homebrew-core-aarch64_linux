@@ -13,12 +13,8 @@ class FaasCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9b197e7951b280b0125279c548c341f0a481969404b507e8568bb05dbf4f1873"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1b8f57004967cc1dd861813be1ddf1efb9d23e7df1eb5738bcacfb91f5714c62"
-    sha256 cellar: :any_skip_relocation, monterey:       "737b74b5de03f6f6edd6504a9f8c71ce3459894178a418084016de7933cbe393"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d5725f4499fc6166cc463c769cfcca27bd760e9c6a44ffb6b795acd9fb6ce740"
-    sha256 cellar: :any_skip_relocation, catalina:       "28f0b2b275a2e35a57c06d50e2eb8f1f991e365a9cc28a9b55c5635f265b3790"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8eff9b23ae2028d8b3e5f116d5815c02cacb23ccac61bd96e5dae10d770f871a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/faas-cli"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "451350a1305e1447849c479ccacfd8653d2580683c1369d20f3e0d7f10fad3ee"
   end
 
   # Bump to 1.18 on the next release, if possible.
