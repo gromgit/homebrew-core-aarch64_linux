@@ -7,12 +7,8 @@ class Fn < Formula
   head "https://github.com/fnproject/cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "267799d6b927ebe87b5c4c49e44a5cf45cc5ca85c99a1671503244a17904ecb0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9ea254f393e0fd4ee703a50afd897f3c69ed01f00e5be3525d493d70d4fbd54f"
-    sha256 cellar: :any_skip_relocation, monterey:       "8f9262756f3be90ad340812de24a8a309a5e4d4bc846b5e42b00b1e2860631bb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "41a148bff4a79248318b84787e5a5271678939a3bea271fb468fe0e0f426af05"
-    sha256 cellar: :any_skip_relocation, catalina:       "fa050aaacccba7ed6aa1e15f75aadd9a3d686234cfef03569ee763f1dad667d3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1c0163c108f2ca39f7b0709f4c54cd687d02d8ab9ddbfe82e8739f0e232498e2"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fn"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8b3771b15f448a5a5b75fa3fd8a1037eb993f9adee4ad3cb289f337bcfc1709c"
   end
 
   # Bump to 1.18 on the next release, if possible.
