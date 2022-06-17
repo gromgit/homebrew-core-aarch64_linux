@@ -13,12 +13,8 @@ class Epic5 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "6e1ce5354ed3d4db90bf4fcb967efc260759698bddfc3efff61496482ba66f63"
-    sha256 arm64_big_sur:  "36abf84918060064f79935e49bcaad31e2c9c835eece141c757e0399c66a489a"
-    sha256 monterey:       "7e284146e725708f61b7cf3a11687036ed88e00c03256c247295204ceb50890f"
-    sha256 big_sur:        "a2949e863afccbf53fd8de505c4a4b06651f56b003fc1592cc3d72227aa5f3eb"
-    sha256 catalina:       "7ab5e04e421d2d435680540de8dcd2268adf3de9612fa9dc47b9c1075c6c5c81"
-    sha256 x86_64_linux:   "ff9ff92be5e6e74fb735f370914a54f0bfda26cd2f780f66b00ba862a1e2625e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/epic5"
+    sha256 aarch64_linux: "83b72403e2f2a79108da8faaea790954597ac9f92d7081b2ba453a978f3ec9ab"
   end
 
   depends_on "openssl@1.1"
