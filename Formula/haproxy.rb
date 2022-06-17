@@ -11,12 +11,8 @@ class Haproxy < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0c326a830aacd5f57e8f8ef9fbd1df2a4aa6b3ba5630682ac9d15707918b7ff0"
-    sha256 cellar: :any,                 arm64_big_sur:  "9a047f0d68096c98da8dd39b1195f3949fde22ae77d3bb31a0adf8294a5c6087"
-    sha256 cellar: :any,                 monterey:       "ad4fd02122073ac6f9d7184e89a87fddf5f5f549e4599fe22c4344d6232afa24"
-    sha256 cellar: :any,                 big_sur:        "656aecc60891908f93130f6ee39db64ccfa26acfb03ac64f6cb74251d2534907"
-    sha256 cellar: :any,                 catalina:       "74bea03b45e17d914e655f1b2b4b8a52722af56e0c59f45be52be46bf2ece1e9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cb7477dd16e034f7e3630b5561a942d57b39b94e4d25556731104f8b140fbc36"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/haproxy"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3ba2aacfe6bf688d5aba1383dfb4fc293da7905ced2b099dba81165a20a1c5da"
   end
 
   depends_on "openssl@1.1"
