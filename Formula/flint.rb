@@ -12,12 +12,8 @@ class Flint < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "deda4a59344d38bfcdb8e9758de33bd4e1352cf2baba0d5e461047a7ce297280"
-    sha256 cellar: :any,                 arm64_big_sur:  "d202b642acc7f6ae3d2fb43b06182ca91ebdfa97519d5b528590ebf77b1be830"
-    sha256 cellar: :any,                 monterey:       "18ea50578610f8b09a7de1b6973d0422fc1397eea486b9b95aae71d8ecc8723d"
-    sha256 cellar: :any,                 big_sur:        "78c49e982be4383e2e01974dfc84c2b1ce5625cf0bda27527d9e9a574d787842"
-    sha256 cellar: :any,                 catalina:       "d3248d7d86afed1da3dda8de176c2e8dbc556cdcb5d4b9cf54e5099ce08e709f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3d35d9c6ceefea408c5593d6063e70f6a85d9ac0971f0ebe0d0dd323b3e5cd1f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/flint"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "af1fc7e4c917fe42a4fa4f546452272dca9419eac6bfd5bc49bf01b3c4cc596e"
   end
 
   depends_on "gmp"
