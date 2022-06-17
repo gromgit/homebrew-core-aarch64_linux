@@ -7,12 +7,8 @@ class Gost < Formula
   head "https://github.com/ginuerzh/gost.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f5112d60ba5a6090f3f3b36d0c59b6400cd24ea07bf03c186de395372b3d0862"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3fcdb66e5d378771ffb01b848990ab32cdc5447597f5b075f1373023ead4aa72"
-    sha256 cellar: :any_skip_relocation, monterey:       "a803beb44f47f36f821f1eb0aa15892d9f95e20431150107c531f3d74fb9d464"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b4e97c302058c91679e66f481745d7361045ccf85919eefe3aa8b282d3555dff"
-    sha256 cellar: :any_skip_relocation, catalina:       "d032da856ce53e033dea8c91142e8f218b55fb35f3d6e515038fd1256f2431d2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cf7813ce42f66f176ddc7f37aa5db4d466f38d831389bb3e13fe8b591c73c1bb"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gost"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0fc2b960c81ea76b993d4ef84ab24bde190c0709286990768f8140fd2015a8e0"
   end
 
   # Bump to 1.18 on the next release, if possible.
