@@ -8,12 +8,8 @@ class Eksctl < Formula
   head "https://github.com/weaveworks/eksctl.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "04f129b1c10d836e89399ead438311c3787e3432c2e1c274ce3d0c4c1220b172"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "23685600d599bcc170a0e49c24c89ebfddc96f400053c83847ca139d0a4dc816"
-    sha256 cellar: :any_skip_relocation, monterey:       "694acd9a2bcabde63beb73ebd0e5f360bc359c4bc7d07412f39c6afb268fad45"
-    sha256 cellar: :any_skip_relocation, big_sur:        "427e2f5f6dbe0e631be8057dca422ed0cb4e646e439e3076edec8fc11805b03c"
-    sha256 cellar: :any_skip_relocation, catalina:       "349d64addb049053cde43b84ae8c51b7e4116d55c3b8cadcaae3d463ef22375f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "96a12e6cb6ed3b7fd54ba548f116d4062478a4a7ed8696ee5af4c843d9909a4b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/eksctl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e23d969d6e74147888e47c790bc80e43a98b2d603abaa5293d33b04ff03f2214"
   end
 
   depends_on "counterfeiter" => :build
