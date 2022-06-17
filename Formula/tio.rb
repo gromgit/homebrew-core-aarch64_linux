@@ -6,12 +6,12 @@ class Tio < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0514e8774caadc2ec58e85ea1423258cba117ea2ed40e0c3b2fe1318591346e2"
-    sha256 cellar: :any,                 arm64_big_sur:  "2792cdaae3bf058436da3cf66696773c234f48d6915174cab748912a726dda92"
-    sha256 cellar: :any,                 monterey:       "6f3b2aec1b8dcecce6c56d91ef144d754f7b0d958f39cbd4357a6959ac16f2cb"
-    sha256 cellar: :any,                 big_sur:        "82c250ad2a425bdbe586edad4f3e5ef8962381b3efe8cae41cda794ed2a8e3c7"
-    sha256 cellar: :any,                 catalina:       "c01f10c9e6b886df7d0cd298d226463f76f940ffc51a0dd5806d36fe7c0af1b9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c21b9efec1dc1ea47e535bfa9c31b70aec7da80c1a29edaa02aa6b363ee71d12"
+    sha256 cellar: :any,                 arm64_monterey: "6db8b849e260c8aaf4277fd9c953f7b53d94b14455c84eeb47316e75cc97f6a4"
+    sha256 cellar: :any,                 arm64_big_sur:  "aad6e24a0bcc292168bf02805924d68f3636c072b4f82f1175b8ad424c305b09"
+    sha256 cellar: :any,                 monterey:       "67867c2b1f0460c89804037c3a36e75acb4f1b5de5bc95cbbd390807862f1d2f"
+    sha256 cellar: :any,                 big_sur:        "e6a586eb7df30ac97d13196c2ea1ce6bc0d5df7529b232100ff01c2c47e769e1"
+    sha256 cellar: :any,                 catalina:       "9158c3b4e216aa37637d9216c56f8cccd21aea0dde67c6fcae19061c381d4796"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "612e100468b4fa7235328c4ec199ac84d59f8e433992d0df95ea5e192628f0de"
   end
 
   depends_on "meson" => :build
