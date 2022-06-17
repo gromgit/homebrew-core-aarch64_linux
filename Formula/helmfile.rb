@@ -6,12 +6,8 @@ class Helmfile < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1590692c9f2abaa461d3efa8d48b72fe1fee5e1c652724b4f7ce4a5ab3616f35"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "19103ce6a9762ee2cd1a4543461d519c4037783bcb168466dff8be5391fbb896"
-    sha256 cellar: :any_skip_relocation, monterey:       "1ef56c0a9486b873d14eae8b0b0e66fba2d40b54e958d384afe2eb875b7efc8f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4571b0303c58fe93278a2fae1576146afecbf0dde9b384d598a565bb52d6a9a8"
-    sha256 cellar: :any_skip_relocation, catalina:       "9608ee96d6b2844a3bfa52219c56a73ff8eb4ca8ba13d242bf96f31225c12e07"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2ae4fb50bea0ba92e62741ce5bd59c772ceecf69c5e75cb0be0dc0c2890c4c2a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/helmfile"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "04244d476ef61f1e489ac54609ccc6454078937fae19bf71ba757397ff9e3ca7"
   end
 
   depends_on "go" => :build
