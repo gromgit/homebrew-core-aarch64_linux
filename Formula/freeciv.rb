@@ -11,12 +11,12 @@ class Freeciv < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "7ccba474f3dfd891701742aed03d093220986e9d9b1938de07fb727415341456"
-    sha256 arm64_big_sur:  "b7f30c946aeda2fbc9213557cfd71a7cfa607ffd28cee16e0cfbb9aa91b254aa"
-    sha256 monterey:       "5a371db5e9130efba0c2e022a9380dde25f5afb5bd24abdc4cdd0ed45339db15"
-    sha256 big_sur:        "aa9d23270bf59055bd346e5e9ebc68dd7aef07cf262e7c77d86b444359db2bd5"
-    sha256 catalina:       "c16b732497be52ec3560d31e5c776c82502248f80ff9f5217d39c79dad7d3e4f"
-    sha256 x86_64_linux:   "a7418231b276a01db501b6415105e3e9b64654bbb8d9ee1fafa3526fa8f02ebd"
+    sha256 arm64_monterey: "07a23ce564fdd66cfc586ece9c48e74b9d10632edd2a2a8092fa93b7ce1927da"
+    sha256 arm64_big_sur:  "bd9fbf2db4db09448e7602c7de80a1c1f041bb3c143cbd6bdeefbb48c4109ea9"
+    sha256 monterey:       "d17179050529f4328de7850f4502d64df58eca76186a65890737935efec273b1"
+    sha256 big_sur:        "cd783c18e420cadf929b24f5f490c3ba3b27d6749909b86efd9e52dee39a8456"
+    sha256 catalina:       "9d1d460f941eb72d1ccd84a2eebaf0d0f124e1c6cce3c4c71a79061b06626f97"
+    sha256 x86_64_linux:   "31600bb2ec19192111e6e7917b38f5c63a9a6a5f30a3ba8e1ff03655d670f728"
   end
 
   head do
