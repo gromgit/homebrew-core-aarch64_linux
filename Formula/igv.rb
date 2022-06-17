@@ -11,7 +11,7 @@ class Igv < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "52d14d71cb1549bb186cbd9a4320d13f50b517e9e272089bc62da73958820775"
+    sha256 cellar: :any_skip_relocation, all: "18a5c1f57e417e828053c46000c265b1a14b00e750e62ae1d593930adaee4e58"
   end
 
   depends_on "openjdk"
