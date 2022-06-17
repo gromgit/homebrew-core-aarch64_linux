@@ -12,12 +12,8 @@ class Fossil < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "84d5f38c5c255511f45d83f92021c5cb35d97487615267f4cb5e4adf3273850c"
-    sha256 cellar: :any,                 arm64_big_sur:  "90f5144c381820554b28de7f37d6a74b07dccf0e9244098a4f45d9b5110343b3"
-    sha256 cellar: :any,                 monterey:       "fe99b0cf0e77a8b7801bcf40bb6fdc17720c10d42a96356a05c7fe3db35bf2c9"
-    sha256 cellar: :any,                 big_sur:        "4d809209bcdb6c15a896e27718c4bf0ce0383bb43dd36d46f9e3fc186c9cdd86"
-    sha256 cellar: :any,                 catalina:       "c6275833e4dff742fdf394cc769078aab4dd2a5df9cad261fc655470e55229c1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f021d8c90ad5e56e6dec0e7adf455c69ae481592b946815b41fb193f7b64d014"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fossil"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "31a8cee539b72f2b41d29a68236b87aba46a25e3318d56987551782b3b66e1a1"
   end
 
   depends_on "openssl@1.1"
