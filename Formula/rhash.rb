@@ -1,8 +1,8 @@
 class Rhash < Formula
   desc "Utility for computing and verifying hash sums of files"
   homepage "https://sourceforge.net/projects/rhash/"
-  url "https://downloads.sourceforge.net/project/rhash/rhash/1.4.2/rhash-1.4.2-src.tar.gz"
-  sha256 "600d00f5f91ef04194d50903d3c79412099328c42f28ff43a0bdb777b00bec62"
+  url "https://downloads.sourceforge.net/project/rhash/rhash/1.4.3/rhash-1.4.3-src.tar.gz"
+  sha256 "1e40fa66966306920f043866cbe8612f4b939b033ba5e2708c3f41be257c8a3e"
   license "0BSD"
   head "https://github.com/rhash/RHash.git", branch: "master"
 
@@ -14,13 +14,6 @@ class Rhash < Formula
     sha256 catalina:       "f2cc20409751b415bc077ddd017620e96f6be9e79f71266bf5f1d2c55a4f6c16"
     sha256 mojave:         "715b183831b9c80eaf69153d144e38cd908bd05a0a37ced6bd6e2f25ac45b8ef"
     sha256 x86_64_linux:   "9e3e320d2103007aa387d1710d4db67d7399b3341aa02770dc6d9b2c7dff9805"
-  end
-
-  # configure: fix clang detection on macOS
-  # Patch accepted and merged upstream, remove on next release
-  patch do
-    url "https://github.com/rhash/RHash/commit/4dc506066cf1727b021e6352535a8bb315c3f8dc.patch?full_index=1"
-    sha256 "3fbfe4603d2ec5228fd198fc87ff3ee281e1f68d252c1afceaa15cba76e9b6b4"
   end
 
   def install
