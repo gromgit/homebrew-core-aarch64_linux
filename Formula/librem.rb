@@ -6,12 +6,8 @@ class Librem < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "376306719dba4e9f6e160df2f937349abf250a5d27ad8c7a1204bbd1a6ca4ca9"
-    sha256 cellar: :any,                 arm64_big_sur:  "14b9982526582411bbd4b80575b6b743a51adafffad54096d4f6c5fcea95912b"
-    sha256 cellar: :any,                 monterey:       "cc329cfe3a5133f50b9690bd20c6e4de867199635916672ee87782c7468446a1"
-    sha256 cellar: :any,                 big_sur:        "6eb4c141e49222a95c004dc6ef4fe59ef98012524298f667ef9f672ef8ab4765"
-    sha256 cellar: :any,                 catalina:       "dfc203b37c7969dd2ad7a70f5238d8db06d208acc9a0a9b999f1c39e677ed3c4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a14031a634a9d9959a45396ba6140fcda33b944ac48ea1afb4a61b9b8977206f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/librem"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "77eab5dca9446205b9765e3c08109ec473d638bd433835a3c7ae406cf0011f26"
   end
 
   depends_on "libre"
