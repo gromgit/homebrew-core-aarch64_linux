@@ -12,12 +12,8 @@ class Lua < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "a68739b34434711be8213dd5f0b005675534967195b04b9c6ed2f60e05a362fe"
-    sha256 cellar: :any,                 arm64_big_sur:  "87f8fc36f2f97b92016304ae6d25bd197ed4f5275966c6cf1b28a1181cc20b64"
-    sha256 cellar: :any,                 monterey:       "ef899efde91007b9c02f61a8fd4519893e271edb89c03f0c4a7f201f288dae1b"
-    sha256 cellar: :any,                 big_sur:        "55abe1007284d39071736eff023495e1a483675586414ed8504cd9507ae0d67f"
-    sha256 cellar: :any,                 catalina:       "c8cab606ce17da91d120b87f8efaddf80041e22ec601e10242fb543c805d4fbc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a94fd6e24f1b0ba6bb6a0c849c2fbfa6acedde81ef3e2c12fb80dcda791f01e2"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lua"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7a205ea2822e0889f26217a56995fb85ba98bcdb818cf1225e3456d4c9b65f29"
   end
 
   uses_from_macos "unzip" => :build
