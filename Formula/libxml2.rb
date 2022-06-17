@@ -23,12 +23,12 @@ class Libxml2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "38e7d26442474a75bc8b84583b71c47f80110264bc809c9783e70249dcfaf4ef"
-    sha256 cellar: :any,                 arm64_big_sur:  "1b8a0e515aab6137096d59d57ff0fd5665dc891fe08dfa34e1eb66a509276d66"
-    sha256 cellar: :any,                 monterey:       "acb2bae79c496b1527a5df20e8ff75f01c0ad326b58f983ad443858f83155daf"
-    sha256 cellar: :any,                 big_sur:        "e194aeebe03a0e49939ab2a1e9adfbdbd46b3713be8422da83640a2ba33048a0"
-    sha256 cellar: :any,                 catalina:       "05de2531f42c2cd4ecebebbbaea4d69ba19ebf597f848fa5841e6fa3be708123"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fcf96138d65447fc6874acb7f2acd1d326d86de400211f18f878a008ef8a5a6c"
+    sha256 cellar: :any,                 arm64_monterey: "10f2630faa3eb5d1840210bf461ef2ec00f30bf84e7732bf8f7793177336878d"
+    sha256 cellar: :any,                 arm64_big_sur:  "1121cf5f532c4a7e8e01173d78fb13b9f2afbec433c49a691df47f86508c6e0f"
+    sha256 cellar: :any,                 monterey:       "9ef0a3cefa07728a1b4b08db180de0f1aba8a827e9e58fe4549fbd68dfbbb3e2"
+    sha256 cellar: :any,                 big_sur:        "023456bec0dc12b1ea765a2ed4bd9d67117dad4ba14e0dfd21bc1cc598b8943f"
+    sha256 cellar: :any,                 catalina:       "573f91a92d66c022482b943b258e4d883ff75ec9aa9c32df6a3203aec3003b24"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4e83b54acd9f5967af5f7a7bafbf963c69942a7fd6a615dd45c32e153675b63e"
   end
 
   head do
