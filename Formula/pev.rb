@@ -8,12 +8,8 @@ class Pev < Formula
   head "https://github.com/merces/pev.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "7de65d5c0b950da40c9c315f774b464a1aaf5d1a3402a4da2b8bdce395e54437"
-    sha256 arm64_big_sur:  "934d51d93b71115060a0a61bd458867760bdd429e31bf7b8ec58ab4958ab85f4"
-    sha256 monterey:       "7ca58d8adfb22028531bc5ddb4fe849de267253040e637d3b489602db94429c8"
-    sha256 big_sur:        "3b08293af4c00d399504754c4e6971287c1e16197547e8ae25cc44bae908c71d"
-    sha256 catalina:       "621dfa53cab827d0788c4b0f0df3f0ed46fef15ac6b5a6211fc30aa8e11a5c3e"
-    sha256 x86_64_linux:   "e795e98f80a0ff2683f4405257890e93f43290052ffe5945241375899812f8bc"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pev"
+    sha256 aarch64_linux: "bcf74d2c8d4d9546afed85dfd653e0a97162e93a2e999212aecbf60dfc500b86"
   end
 
   deprecate! date: "2022-02-28", because: :repo_archived
