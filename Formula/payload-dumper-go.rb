@@ -6,12 +6,8 @@ class PayloadDumperGo < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "b204e0552a8a62dec35d2a93ca1a0405516ccc4578a4b0e27997494191513048"
-    sha256 cellar: :any,                 arm64_big_sur:  "29b2d7d3d7f33111c404d6f2358cdea9c070530c66cabac0850a20b21f06834c"
-    sha256 cellar: :any,                 monterey:       "3b535cde92e3f36f3bc59cbc8840f68851b5b21347a812a3a3b1361c451b464e"
-    sha256 cellar: :any,                 big_sur:        "ed3417df5a394470c881b93e52a2a9328ac887167d003c425ede1e7a3c18049b"
-    sha256 cellar: :any,                 catalina:       "89a123adef997329cde0e42089abe15da48928a31609365f004bfd8b569e9645"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "54e09c038d1a92177a57da5d94f3ad17abc630998d94547dbcbf46df02cf8c93"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/payload-dumper-go"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e7fe4fd66c18472e979dc94c24153f7eee6398cd37c1b857d43f243701d4e78a"
   end
 
   # Bump to 1.18 on the next release, if possible.
