@@ -9,7 +9,7 @@ class PyqtBuilder < Formula
   head "https://www.riverbankcomputing.com/hg/PyQt-builder", using: :hg
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "b925cea448d21b43e913a6e06437779e0333f25f479e230a4608b041f994c3d9"
+    sha256 cellar: :any_skip_relocation, all: "297cb9fa3238867ace4e72ccc98945533a0bd164098c537c83dd0ff8490367fc"
   end
 
   depends_on "python@3.9"
