@@ -9,12 +9,12 @@ class Ykman < Formula
   head "https://github.com/Yubico/yubikey-manager.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "dfafd17a3655873c508580b14257bd8678bfe885c53421e82f21c63a53ecfd05"
-    sha256 cellar: :any,                 arm64_big_sur:  "5a4b8dc4ccc9f9f45b83da488c4ca22752be27db8d0151bb40d30fb49258194f"
-    sha256 cellar: :any,                 monterey:       "2d1b4bcf82e6dd07d57c2c08dd4d616d14d803396f56819b3c7ea1c106cdb970"
-    sha256 cellar: :any,                 big_sur:        "db85646b8f751ce09dde17117052c31eb6e873a4a23a660c6292d98b802e5b8c"
-    sha256 cellar: :any,                 catalina:       "9195734e808c6c04241db0266f861ab1e6ac32b4a764e4874bb3adeeaa5bfcb2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a1e7fc758253a96859da9aadfd8b21322c48d0aaa0c722948a49a6932403ab3b"
+    sha256 cellar: :any,                 arm64_monterey: "15df54911e49fb6587f25a118ac7298f12b23d52d353c03b3a025e13f723db0f"
+    sha256 cellar: :any,                 arm64_big_sur:  "a5fe7a9b79cb4aa376e6252e00e581eb7240249724531aa2fc24ae4ec3a12bfc"
+    sha256 cellar: :any,                 monterey:       "047fef4ac134412addc87edd7b7f86ec87c648b4acbb9a96ef8c6e138301a3c7"
+    sha256 cellar: :any,                 big_sur:        "451d0584cd81f4e2dae215d4eeb087b273b81c4187132c1c87eb51f23356bc3b"
+    sha256 cellar: :any,                 catalina:       "f7e5c72a377d524e1cd2428f7c620ed51da549465820e9ab8fe5398886dc59bc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "41e8f8540b98f9fe6d1bf92bce80590f0be5c89c34b1f29a926b23aba4b26adc"
   end
 
   depends_on "rust" => :build
