@@ -11,12 +11,12 @@ class MupdfTools < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "86ecef46f23f8939c14b955a7e11cb2e96698f178bfc32467e55f4e99e473267"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "118715fa212034b534eec4e145577e81968b49959da8e6b817a41724fc343f96"
-    sha256 cellar: :any_skip_relocation, monterey:       "b934ff3f384b9a4e28e0cde1c87112b6b8908b7c2c19c30dee6cdc289e7bce3d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fbbe6aaecc0e80090c021f92606295dac1f7258f958fbed685eb4c75492b5fb0"
-    sha256 cellar: :any_skip_relocation, catalina:       "21d3b0129446781d43f07b07af39c2bfa566c5301b3d408d647779d2c8300895"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "09b118451dcf86336226085392df196a2545c66e02d508fdbb75a102d56da886"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1c493f236e0af774afb966352a023b66059d75a54af20865f1b1d67f33ae8cd4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bc151c307061049300371337f1c41236635882c73597c03b356f6d67072d3d60"
+    sha256 cellar: :any_skip_relocation, monterey:       "27bc185ebee2d76d295216e52a599db3893dd132301edc9ab5accadb5eb7d08d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "14d1754e20b71d62969e76a309be0fc11e592a493b255124176cc2492b2eeef7"
+    sha256 cellar: :any_skip_relocation, catalina:       "f6b8527dd26ce2cecc837b7498a3a6186ae8ed323a9896de2f7bd016066e28e5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d6d9e929ee015f6ac47b28964af03bbbecbcbd842f7cec9deea7f2562acc1a80"
   end
 
   conflicts_with "mupdf",
