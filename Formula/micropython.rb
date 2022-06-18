@@ -7,12 +7,12 @@ class Micropython < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "202d61b8e3b2a07e745f6214c445a53dd6b51613de50e6e6f66879ba32bcbe43"
-    sha256 cellar: :any,                 arm64_big_sur:  "c645b21d1a36addc730fff2f67aa2d93cf0059c00e01ca181f1c2b76c0aaa19b"
-    sha256 cellar: :any,                 monterey:       "5ddc56be59b2181c0e00ec6bd8a07cab20c8f5850ce7cba6f9a4f20cf7db129f"
-    sha256 cellar: :any,                 big_sur:        "b9cd6bdc42c4a68c3d358a402498d2118c91f22899a5d473098ec002319a0ab8"
-    sha256 cellar: :any,                 catalina:       "5711908f6d27270e55c6f910dffa725406f9e2ff62525fb8b4c3868cc87dba2a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e058532cf4fec3310c5b6c81a87e7e00c3feba6701ceb03fd20d82c62bb0c854"
+    sha256 cellar: :any,                 arm64_monterey: "e7fd34409baf3ae9294b4955ac01ef03f8c6e9694d8b8da1df33931b5571e56c"
+    sha256 cellar: :any,                 arm64_big_sur:  "6af82d621b4ada013f9a67e350ffa3d8d9778790fb52e43c9bcc3976537d2ff3"
+    sha256 cellar: :any,                 monterey:       "b7bfacd192d122d6d425eb4c9b99f7ddb094d9d8802a9966b168eee839a0a514"
+    sha256 cellar: :any,                 big_sur:        "07388c9d6c41a2b848b7b8408dbb92a547ab8420c09d25ad353a6698287cc0a8"
+    sha256 cellar: :any,                 catalina:       "1f3b7891caa5737bb035e680c0a13186bb9e97c1717db959145bab347ad97bec"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cf8248af0e360223b5cadd07d567f3d443f9aa917e825ee2c94407b3ba6a6d19"
   end
 
   depends_on "pkg-config" => :build
