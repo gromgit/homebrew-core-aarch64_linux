@@ -7,14 +7,8 @@ class Leaf < Formula
   head "https://github.com/vrongmeal/leaf.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2bb7a962b8708d9d607dcff6ed3dba9e485a0963164608662bfcf70e84ad1d5d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a7880e0f8658071b6040d8e32161e77ef72b6bf7b96489443acfa6b9852af31a"
-    sha256 cellar: :any_skip_relocation, monterey:       "6f6e8b0d0775041da2e114e277d6f4790ae4e2b72b1ed409398bc39507b437f1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "395fbe11a4e482bf227e460f239ee008f2f6b50e9d071699c703c87d452b8ec0"
-    sha256 cellar: :any_skip_relocation, catalina:       "995eb379b3e25e45108bd3c2166baef1fcd6f6ede329572133b8b203261ff9fc"
-    sha256 cellar: :any_skip_relocation, mojave:         "c35970131c185aba296c242bc4366eac4636f3c3ab6f791e020bb1024d7c63ac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a84a9c0400bd35d736290ce97440f83c844e728b0b79ab95c2b9f88446b2b127"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/leaf"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8b8c75ffacb1c77a912019395a80eca502d38489acf7b952d6c0c7bc086a5c62"
   end
 
   # Bump to 1.18 on the next release, if possible.
