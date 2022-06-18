@@ -24,12 +24,8 @@ class Skaffold < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f5f86e0f2c7df648c93973f1d1f5bb3fd36a6e70732755ba8e0275fe6a9827cd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "267f1056fb46f40e4b80385b65aeced63274b4834e84ca180a18c16500026260"
-    sha256 cellar: :any_skip_relocation, monterey:       "8aa5361678edd51d0186a62ce9846c0bd114bfa934dacc897d8cf5e050b232ba"
-    sha256 cellar: :any_skip_relocation, big_sur:        "86b4b0cf661910e5f405c55d5d6272a3a5bc5d5204a071e9580946ef03c089d1"
-    sha256 cellar: :any_skip_relocation, catalina:       "e7f0b3a1532b269a9779de0ed47116cccc2aa62df86b6f6ecd328c3d07a8182a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "30fb90ce26b77c73a6acedf99b399558d1f5a02853862209dfac2e6cb53f1982"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/skaffold"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c5d1ae201243a9e1ab21f7865ce6517b9653b51bcdc440986db9d67b8d0d2308"
   end
 
   # Bump to 1.18 on the next release, if possible.
