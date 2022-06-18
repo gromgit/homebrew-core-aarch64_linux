@@ -11,12 +11,8 @@ class Siege < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "463170796c52f7651386b889298f25e249fa8d4d03dbc9090a01069e2f2124fc"
-    sha256 arm64_big_sur:  "84588fcd2627114af6e79ea402e1195885204d2ab47e1c2d7ba6032a5196ed50"
-    sha256 monterey:       "576231668f70ff5a63041e862727db42553d976748a112e03bd88fccd4849f76"
-    sha256 big_sur:        "c94fa95c94c212539d98615cc2001e074de0be743e6bd31801bbdccabcb0ab81"
-    sha256 catalina:       "db47466f69c5e7c6737099424a4c4e1139ad487c0f2380ee80ce8f530f0711b4"
-    sha256 x86_64_linux:   "908d5fb2d6ec753c8061c35c7a3fa7ea383257ae649bd68e634c99620ac65b16"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/siege"
+    sha256 aarch64_linux: "dc3ed7c9ca588b21211adb63ffd08a1b5d5af15c1c62571352d6d547d33cf63e"
   end
 
   depends_on "openssl@1.1"
