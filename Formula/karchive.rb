@@ -19,12 +19,12 @@ class Karchive < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2ab075e76cd994ee521aa11657d0472959e8e4bbf82d700fa1cac385e338dbee"
-    sha256 cellar: :any,                 arm64_big_sur:  "0e8e70887dbcdb0b7697c98bb3e7a231151bd65a4bb1fab63240b0c08aba11fd"
-    sha256 cellar: :any,                 monterey:       "1785910d0be96699e328f44b08a4520a2ece36cc3668023c54a4e35754f4cdc0"
-    sha256 cellar: :any,                 big_sur:        "bd36f7a3890ff4bd0e9fd22ceeb3fe7a89ac28646e4928cccedb5451277fa3a8"
-    sha256 cellar: :any,                 catalina:       "c475bc20dfc047c0b3b39a19900da77c73d9dd833b494d57897a86c3a23d06e0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2b7df4c8bfe2197d70f45d9ba2a029c5ec7e1bf15e71feee7176f6862db6aacb"
+    sha256 cellar: :any,                 arm64_monterey: "04a1f5df66032f074ce6df7f216018bf7191274a6820d97c19ef4265934b566a"
+    sha256 cellar: :any,                 arm64_big_sur:  "d7bd84267ebb51c5378a48b74cd3ae316bb2ff162612ac7cd3fa9db03e0db526"
+    sha256 cellar: :any,                 monterey:       "cf2b2275e053b65e8cf6ae0f9bf2ed168cf5d2d25ee4f4151de9ddf292da1830"
+    sha256 cellar: :any,                 big_sur:        "dd373586c2c4f43bdb186a8892d52eac79905b1bf958784540df43a6944791f3"
+    sha256 cellar: :any,                 catalina:       "f1c589a2196fb24f12432817f4667293c9a6dbe65f5e613c0f1c9b108642cb6b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2dc4bdf593b50a1568544054fb71ea8286a99df1a2d2edfa27c4db5b59c35044"
   end
 
   depends_on "cmake" => [:build, :test]
