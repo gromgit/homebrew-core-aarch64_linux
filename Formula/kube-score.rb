@@ -8,12 +8,8 @@ class KubeScore < Formula
   head "https://github.com/zegl/kube-score.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "28d65ca4f637272e9c26f9488c34f06ae1f97f09207899f6afe38cb0db4eaf91"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9263d0aeab0f5ee03f541dd149669a3d227e92305735c37f89322d8ccfbcbd82"
-    sha256 cellar: :any_skip_relocation, monterey:       "db28c4baa1d32c6688288f002c735c64f39433a6ab010d5c05ec3036b919417f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9a2c2f4a974e02af3a7bbbf2ec80931860d8581f3fe2c74ea79b9706664785fe"
-    sha256 cellar: :any_skip_relocation, catalina:       "051dd60d5d5e40cdf7cf9a1d26e3ea8d735bff0faa1a300dd373e92c73a26494"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bd66fefdb488875005d4f2e998084569e534b60e0ceba45add602bf5f6d897d9"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/kube-score"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2b4d124b21b880cabe7f4e11d1c8e39c48158245bc0e9dcb7224b25b97c92ae3"
   end
 
   depends_on "go" => :build
