@@ -6,12 +6,8 @@ class Mongoose < Formula
   license "GPL-2.0-only"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3f126fdd9f6594e57279610b75ff8851a8ab6203218170fdea68864b93daa658"
-    sha256 cellar: :any,                 arm64_big_sur:  "874f0ab8d21ff9e57bc02070cff37d1ad8ae42d1aeaedad5fe5107704cbf7ece"
-    sha256 cellar: :any,                 monterey:       "282c1fdd01b11ae3989e8dc9c0e54f55ce56b267b041635eb5d10f280e5c16d8"
-    sha256 cellar: :any,                 big_sur:        "924e80fd8b69d95f3e771e453f5a3b290ea68670c3e0cf83cb1fc2e24b2e8ce6"
-    sha256 cellar: :any,                 catalina:       "4bcddf3f3550af73ea676900fba6f89d56a59a69fe1bc96a929cbd9f3e553ba0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "652ef3c9d9e7d2ee5daeb689ca5a9fd86e290918d6d7363bfc0d25284d33b837"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mongoose"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "245123349c69737ee5de4fe790cf2f951c0d1343742d467e99c1997ddacc97a1"
   end
 
   depends_on "openssl@1.1"
