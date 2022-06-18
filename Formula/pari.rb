@@ -11,12 +11,8 @@ class Pari < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e1c950eecbb7fe0877e054706dd3ea302fd35197aeb1268d15adf7ff7a006a23"
-    sha256 cellar: :any,                 arm64_big_sur:  "ff5c62049416d85cb3981f2913b45901a5738b7bf4c23de678f0e4749d4354a7"
-    sha256 cellar: :any,                 monterey:       "8613b0be1eb6140ae00e70b1da63891302e828a9d7fbb335e02d8c417c0fcaca"
-    sha256 cellar: :any,                 big_sur:        "c039a203f00b495a0d0d0c304383fd26ee4dc0b23d0133c1f6dcc928285aec11"
-    sha256 cellar: :any,                 catalina:       "b6067a936ab86bc50e247b0fdd75704f73f373679b55463d6bc5e8b549a7e407"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5482cc0f5056c067a3b5b85fdf4346416d3f40c2449362b52d4ae848f292888c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pari"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f318488549c04b379e5435b6384c9afb259bc0a4616d9cb8d5cbcd0cb5875f7e"
   end
 
   depends_on "gmp"
