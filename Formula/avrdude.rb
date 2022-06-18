@@ -22,12 +22,12 @@ class Avrdude < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "c3da767422fd00bf5ed0755d335380db9b5047695e85a9632e8c2b2e9ef3c169"
-    sha256 arm64_big_sur:  "41a667efc12b06352b3e125ec9d9e59a7340cab847eac8e9fe344817169b261f"
-    sha256 monterey:       "afa77a7b12cf6b68e1b0ba59c975ffacdccfbeaf91744fe0e2d632f342bc5f04"
-    sha256 big_sur:        "6006b13c0aa4577528b2cd6eb128239dcad76942cdb6e53a08aa40b54ed77535"
-    sha256 catalina:       "9ab9dba9fc5067e09be3b25ee9577d0198da60b72183ebba13a34a53626ba2f3"
-    sha256 x86_64_linux:   "bada48337ed3247a97400d451e3f25e9cad905d2135bec5e27222398251dab06"
+    sha256 arm64_monterey: "14bda58af73b8b6a92edfccab045e6118a0c18feb436e6afff74d51dfc7610ef"
+    sha256 arm64_big_sur:  "a4fb2845fc9fcad852484d388e6a904cfab655c66b1a61a0b5fff8b56062be97"
+    sha256 monterey:       "37913838cd9ceadfafe1759b293ebb24ddc9f2c8b8168e297f8fbbfed612aab6"
+    sha256 big_sur:        "c7ddfb9110e029c2b10fe2ddf5e60d1dfa7aa52143aedfb7538a343dc388d156"
+    sha256 catalina:       "b6eba14a4c1e300a69c76d221c4709d1988af07a9bbb2586f10c4515db1dcae3"
+    sha256 x86_64_linux:   "1c317e35642426bce04e756295230de6cfd0d69689aed14c0520d8d4d190097e"
   end
 
   head do
