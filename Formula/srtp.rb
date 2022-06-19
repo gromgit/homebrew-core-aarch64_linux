@@ -13,12 +13,8 @@ class Srtp < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "4e8db729f069ebd07a19f506d28a3f491328e6d6521d81f3176617fcdfcba2b9"
-    sha256 cellar: :any,                 arm64_big_sur:  "da78f2f142b179a51309a70d2a823960198086609fc6f38dfc45559b2e581e13"
-    sha256 cellar: :any,                 monterey:       "b27445521d7cf59ccecbb3842fab8f6b89c54b98fb22eb8707ec68bc9f2926f8"
-    sha256 cellar: :any,                 big_sur:        "1b530260c922cc08de98cad6dc62e124ed05efd190a79364809268cfe566e7a6"
-    sha256 cellar: :any,                 catalina:       "ec45e12636b266303efe3ca1d4cb3cc595955c62ff197a900e6f0f0519bb51e0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6916cca964b049c777c87efd01272c76a246349cd93306e57fc68a8edaae426b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/srtp"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1c6ee7f50a31f2fedea2ff89159c99d019bae17ed7ff1c6b0ca85a24f75e7e92"
   end
 
   depends_on "pkg-config" => :build
