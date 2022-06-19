@@ -20,11 +20,8 @@ class Strongswan < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "f806dbca2666f47cbbf36260662a61af4ac4c082193ae5c24e85c930f6077ba5"
-    sha256 arm64_big_sur:  "f855baf53af34700b0da2a93f932ee8723b28183e11cf6c50fc3ba4b72d7a294"
-    sha256 monterey:       "6b19436fecbf3133f8b47a9ec72eb2582b13d4bcba2db5f9010e585f509045f1"
-    sha256 big_sur:        "4a7faa7890cd62870c3c2ab71917004fb01b6ab0d77326530b6a1b578f76f962"
-    sha256 catalina:       "d0a222d385192e0e99c45edc3285b72ad0900ef5e7ae636bdc42a24095463e20"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/strongswan"
+    sha256 aarch64_linux: "8f381b043a741029a5fd9ba0625ea0826418d397636e20ccb3821b58da959bac"
   end
 
   head do
