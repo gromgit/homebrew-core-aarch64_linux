@@ -6,12 +6,8 @@ class Snobol4 < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 arm64_monterey: "fe4801587f606425a334e82ab263dc0ecdee0fbf62b1f7143833ad5adb252741"
-    sha256 arm64_big_sur:  "b27844933479e0ed826723773ec52432f91321a47bd50c5c317745daf5929d26"
-    sha256 monterey:       "8fe0d3f23e9016e42e81b0587b7a0e8bbf8702f05593c9bfad5d2c2477ac1fd9"
-    sha256 big_sur:        "f1f8bb7965f2986825c5cb6748eaf968c9bddf4d4abbb611143e149bb5e0fcc8"
-    sha256 catalina:       "b062904758f62326d952e01b9e5c1dadb973104d75a1064b18eaf1fa01b06799"
-    sha256 x86_64_linux:   "331ea256a30ddb70976b0896b4c62eac113fb905550f8420d03f9e065eea5db8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/snobol4"
+    sha256 aarch64_linux: "82eb41672d5fcdd1673df3151695b3dd867f46d3747d4491241eadc01bee1da5"
   end
 
   depends_on "openssl@1.1"
