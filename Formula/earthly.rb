@@ -1,29 +1,26 @@
 class Earthly < Formula
   desc "Build automation tool for the container era"
   homepage "https://earthly.dev/"
-  url "https://github.com/earthly/earthly/archive/v0.6.16.tar.gz"
-  sha256 "be379e19d16275fa67fe553dd39b63d7f0a69ba345e7d1dc6870c673832fd370"
-  license "MPL-2.0"
+  url "https://github.com/earthly/earthly/archive/v0.5.17.tar.gz"
+  sha256 "1dcc56b419413480fa2e116606cab2c8003483e0b8052443aa7b7da0572ce47f"
+  license "BUSL-1.1"
   head "https://github.com/earthly/earthly.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d3cbc7ce9ca3587bed9cf2e3f8b3e05a067ad4d70d450235da48515d3bb83a0c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6b84f870da9bea35c17142aaf7b4b95605f152c024ff8fcbd0d0660534b47898"
-    sha256 cellar: :any_skip_relocation, monterey:       "8a9ea705979dc7d24a5806110ba11a957573ee9fbcf66e314e1ef11e959da043"
-    sha256 cellar: :any_skip_relocation, big_sur:        "af977b0b76245ddee0a1851be9aa2c8167219d0d660d87131cbc11aafea91fd0"
-    sha256 cellar: :any_skip_relocation, catalina:       "3b01cba18dcbb83fc44c0a44eb158b826867b14805cf95addfdfc29c68e1a65a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0c6817a572a2a4f9e9ca88b6ece4699bad34f2a20626e6a625a66e80e1935e94"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "6ced4b644da7733596ddb225d4d07dddcdf3cea9975a1dcdce724e65093142fb"
+    sha256 cellar: :any_skip_relocation, big_sur:       "45b1406d85fbc167590873e727dd63624ed17bceadc289bb4c6c7f8e8a669317"
+    sha256 cellar: :any_skip_relocation, catalina:      "16c593502fd9a7270edab13a2ed8c9ca44486eb90bc97dceef99ec8c092ddadf"
+    sha256 cellar: :any_skip_relocation, mojave:        "a9a09599ccebca0c987ea802cfc861097055ab2662db97c417bfeb83756fdb90"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "78f6b33643db61f1944ceaf27d27ad001f8ba7a865b358a040cf1374fd618a96"
   end
+
+  disable! date: "2021-07-15", because: "has an incompatible license"
 
   depends_on "go" => :build
 
   def install
-    # the earthly_gitsha variable is required by the earthly release script, moving this value it into
-    # the ldflags string will break the upstream release process.
-    earthly_gitsha = "05fc449487ad0c8a1721b4fbfc527eb9870dfcfd"
-
     ldflags = "-X main.DefaultBuildkitdImage=earthly/buildkitd:v#{version} -X main.Version=v#{version} " \
-              "-X main.GitSha=#{earthly_gitsha}"
+              "-X main.GitSha=bdeda2542465cb0bc0c8985a905aa2e3579a3f7b "
     tags = "dfrunmount dfrunsecurity dfsecrets dfssh dfrunnetwork"
     system "go", "build",
         "-tags", tags,
@@ -38,14 +35,13 @@ class Earthly < Formula
   end
 
   test do
-    # earthly requires docker to run; therefore doing a complete end-to-end test here is not
-    # possible; however the "earthly ls" command is able to run without docker.
-    (testpath/"Earthfile").write <<~EOS
-      VERSION 0.6
-      mytesttarget:
+    (testpath/"build.earthly").write <<~EOS
+
+      default:
       \tRUN echo Homebrew
     EOS
-    output = shell_output("#{bin}/earthly ls")
-    assert_match "+mytesttarget", output
+
+    output = shell_output("#{bin}/earthly --buildkit-host 127.0.0.1 +default 2>&1", 6).strip
+    assert_match "buildkitd failed to start", output
   end
 end
