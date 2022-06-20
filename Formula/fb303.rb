@@ -1,18 +1,19 @@
 class Fb303 < Formula
   desc "Thrift functions for querying information from a service"
   homepage "https://github.com/facebook/fb303"
-  url "https://github.com/facebook/fb303/archive/v2022.06.13.00.tar.gz"
-  sha256 "649507569ef2c2044b465a7076bfb11497ee6adf013e79fee67d0dd7765c636b"
+  url "https://github.com/facebook/fb303/archive/v2022.03.21.00.tar.gz"
+  sha256 "23435e0af42bcfe4e244492b627e8cb30cf2d1e9dd8a7f891b947430b50ccd60"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/facebook/fb303.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3d5119434d9009b3299b8d0498a68a7e45d9657faef9c8bb7f127cbc596795db"
-    sha256 cellar: :any,                 arm64_big_sur:  "32f5119cebe4de47d3b387878183ac099db5945d87c79e40501454df81ab114e"
-    sha256 cellar: :any,                 monterey:       "00fe5737aff75e8e017332c9fc7138818241cc2a9d49cd5102ccf0461855ca8e"
-    sha256 cellar: :any,                 big_sur:        "c1844826f4a35f3036b44112bc815db31d95cfae422ed414d28716039617ed80"
-    sha256 cellar: :any,                 catalina:       "331ed74c0fb712cb3fefd74ad89d241e234229b7d4018537b62eaf678ff5dd46"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f61559311dca08a2cab833fb44c84a7d4c26a3347d43b27c63906d9cff6ea0b0"
+    sha256 cellar: :any,                 arm64_monterey: "62bc3052575c69b2638b5175892f8fcad4ef06281e4d8b90c2c9105670f92c6c"
+    sha256 cellar: :any,                 arm64_big_sur:  "d9233f52ef98ed38b38bec978d5b99bfde04e08aca731ca53f3e251f5b89eb1b"
+    sha256 cellar: :any,                 monterey:       "ba1e7523166b6669c74ad66c99ef3146680e8b27b3e5111994c5d962b50467d1"
+    sha256 cellar: :any,                 big_sur:        "72600b5192d830a0c2d62ec009f1f9b42117e4076b1eb893a65beb9a5008f92f"
+    sha256 cellar: :any,                 catalina:       "bce9822b5c35d50788c03cea7f12d730f9933b12cfb3484e63879db85a2c0b45"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "88883cc9064cfffb2c259d2841c2ad3b948a2d71439bb467e9e5b45bfcb399b2"
   end
 
   depends_on "cmake" => :build

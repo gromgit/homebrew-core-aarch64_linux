@@ -2,7 +2,7 @@ class Abcl < Formula
   desc "Armed Bear Common Lisp: a full implementation of Common Lisp"
   homepage "https://abcl.org/"
   url "https://abcl.org/releases/1.9.0/abcl-src-1.9.0.tar.gz"
-  sha256 "a12b5c84f28834bd988e3adae0ad2ad4cc6c451d9e44f3c0853d007158c19869"
+  sha256 "28b2b05216b57eddcf44fb23c18f2a382a3d8c1a7103fc150c2592200840b68a"
   license "GPL-2.0-or-later" => {
     with: "Classpath-exception-2.0",
   }
@@ -14,13 +14,12 @@ class Abcl < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f3be4843794ef45604b332aee04ebd7d9be8170fbfb66c431650f827eb09d603"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a38ec7fe9b6a5ae4dd1f5fe798a6e5d954719fef7748feb70865e1dc900fc8f1"
-    sha256 cellar: :any_skip_relocation, monterey:       "39f244d377cd1ebe59226aa615e77dcfa31b2fff63531646bf1d07bc3c8fb5b7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d984b3ec12a62488c75e6888f1dbd9bac15cf78fe5837774095bc295af419c96"
-    sha256 cellar: :any_skip_relocation, catalina:       "151786fc05d229cb8cb3f4f2e173c6af3f70635c88f52eb2c4ba05ed0fa53cf6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "586493f8b333cba0895683381e4d48943bd861aa57c22b13a31b7841f4feb67b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4d9f50b438f54aab741cdf8d5d5e90e088dc8ba9a934fc9c21ec2f2c09fbbb58"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "63e51bb0f8b346ee6e9791975d1877a9d0baf6e91014bda48cd1ea61a1e326e9"
+    sha256 cellar: :any_skip_relocation, monterey:       "21ad5dbdcbd2c93a7d2264e736751e6cb5f8f8c32fc69c112cf7d754b40af064"
+    sha256 cellar: :any_skip_relocation, big_sur:        "eff1a64297486a136b75a555b3a434d6441979586a8679f3590cfd03b4d0b50c"
+    sha256 cellar: :any_skip_relocation, catalina:       "d474e6f49fe69de692a293bdfb37110674f58bc151b1e3b38b5011b8f0d7d41d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e047042de4a2b4751ad47c95d3f9f8ec412bd2ed713b85e921381bed04f0ff61"
   end
 
   depends_on "ant"

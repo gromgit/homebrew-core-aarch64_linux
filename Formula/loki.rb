@@ -7,12 +7,8 @@ class Loki < Formula
   head "https://github.com/grafana/loki.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9125b93bbb9809b8bf7d88d531257eb6350a94a1576402f0f6c3a26bd5a0683a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8023a2d258b0f3fca8e56fdd3e08a1a9380664b83d3c0e60c239aaefd69dda2e"
-    sha256 cellar: :any_skip_relocation, monterey:       "4fe64c942781fd6b7ab51815163977d4753479ac6f48bf65fa36f375700d7da1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6afce547b2a0ca7913fe79b417d5d4276b78bc88aae24c352bfdfbadef9b9977"
-    sha256 cellar: :any_skip_relocation, catalina:       "d50e5ed91123ba88660a847b582ffb9bb72166fc0869e85d88cdde1142c2e4c8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ea5d4efa0852c44b33278bb6eee967dacf8b7c48a32908452a815da1c91cf8e0"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/loki"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "59ff8a87c8e04f47305658e121756166a5d866a7b01a7f1b4b81806a1bfec403"
   end
 
   # Bump to 1.18 on the next release, if possible.

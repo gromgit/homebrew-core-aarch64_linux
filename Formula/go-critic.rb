@@ -12,12 +12,8 @@ class GoCritic < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "30a90e624d9157b4efce676c8f1536547e1d26abbf3f5db9084cc11762888d6a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d414b716729c9c1a273821abfe5b57c201d6d50b27780ccf8bddf8d77d4ed0fa"
-    sha256 cellar: :any_skip_relocation, monterey:       "294208f2fdae2246b497a7658c075f4c58c6cb4a4b2f4860580da3879c60c1fc"
-    sha256 cellar: :any_skip_relocation, big_sur:        "554e375fbb293c29dcb9fab679566c69edcd0d809d43636f36a695a04538dfdf"
-    sha256 cellar: :any_skip_relocation, catalina:       "88ed836b4e319630703cb510f87b42ab26eb088b9d211d4487f55fd8d7774cce"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "336f19e78a3465a08715ecef05cebf7acee8ed02d5d12c9b1cfacbeacb2b69d7"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/go-critic"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "dd459742078f6c2b8fee5ac437330d6302ca7decb4c7a84342604a21e660af39"
   end
 
   depends_on "go"

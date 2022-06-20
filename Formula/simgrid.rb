@@ -3,8 +3,9 @@ class Simgrid < Formula
 
   desc "Studies behavior of large-scale distributed systems"
   homepage "https://simgrid.org/"
-  url "https://framagit.org/simgrid/simgrid/uploads/caf09286c8e698d977f11e8f8451ba46/simgrid-3.31.tar.gz"
-  sha256 "4b44f77ad40c01cf4e3013957c9cbe39f33dec9304ff0c9c3d9056372ed4c61d"
+  url "https://framagit.org/simgrid/simgrid/uploads/6ca357e80bd4d401bff16367ff1d3dcc/simgrid-3.29.tar.gz"
+  sha256 "83e8afd653555eeb70dc5c0737b88036c7906778ecd3c95806c6bf5535da2ccf"
+  revision 1
 
   livecheck do
     url :homepage
@@ -12,12 +13,12 @@ class Simgrid < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "4bedc5fea3d5dbb520cee22cbcc036cfe584421e440a26331b87f4d386584afa"
-    sha256 arm64_big_sur:  "93fb5658df73c7e7d2d21d35f0e85842a7238b76a877ddf1d8bad857967e4ead"
-    sha256 monterey:       "74f01fd95afbc1fe3fbea4c6a197e0a51be1537208eb8631fa53b4e5bdb0e6bb"
-    sha256 big_sur:        "13d9028619e89e1fe01bd05de0e14099f4ceea53db2c0bd08d6448783214e930"
-    sha256 catalina:       "9102007d57a733f701515d48ec4eeee8f11220006391b2bd980d08087201a14f"
-    sha256 x86_64_linux:   "3cf6c46a933707e71f29be19d5b735b360482fdfdeb6feed76c7c529b9d6f4b5"
+    sha256 arm64_monterey: "f842c89e78c2cc0e3d8a7be9e86375ad003c27e6b58d98c979de1774276539c3"
+    sha256 arm64_big_sur:  "fe40ff68cf7f114399e88f509be1fcf74a83cc5f98876f4152af1c0f0c3f00dd"
+    sha256 monterey:       "e94b0a7096d04a00db2edec83439173f1ac884da520ccdb71821a3e28f41e537"
+    sha256 big_sur:        "8ef7cfe90c699af81d0ccc7d870d88ed6ba1cb3054ea7c9873f2a261346273d6"
+    sha256 catalina:       "619eabbb9f950b247fe0c6b840ec0c47f24965ddf607bd0c5bc08215244a5cd4"
+    sha256 x86_64_linux:   "2c8061e2f328aa583babf64b511da54f219a1cdb1b9a2b87a5e1621c1591a679"
   end
 
   depends_on "cmake" => :build
@@ -32,27 +33,17 @@ class Simgrid < Formula
 
   fails_with gcc: "5"
 
-  # Fix build with graphviz>=3 as headers no longer define NIL macros
-  patch do
-    url "https://framagit.org/simgrid/simgrid/-/commit/33ef49cf9e1ad1aeea86dca9a009d5a6e15e2920.diff"
-    sha256 "3bf50df79fd1f58e1919d0c3fa1cd808d50ed0133712e8d596805f25e27933ea"
-  end
-
   def install
     # Avoid superenv shim references
     inreplace "src/smpi/smpicc.in", "@CMAKE_C_COMPILER@", DevelopmentTools.locate(ENV.cc)
     inreplace "src/smpi/smpicxx.in", "@CMAKE_CXX_COMPILER@", DevelopmentTools.locate(ENV.cxx)
 
-    # Work around build error: ld: library not found for -lcgraph
-    ENV.append "LDFLAGS", "-L#{Formula["graphviz"].opt_lib}"
-
-    system "cmake", "-S", ".", "-B", "build",
+    system "cmake", ".",
                     "-Denable_debug=on",
                     "-Denable_compile_optimizations=off",
                     "-Denable_fortran=off",
                     *std_cmake_args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    system "make", "install"
 
     rewrite_shebang detected_python_shebang, *bin.children
   end

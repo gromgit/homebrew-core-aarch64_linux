@@ -7,12 +7,8 @@ class Gotify < Formula
   head "https://github.com/gotify/cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cdcc9e52ecb4334c2f4f8da73a8aaf9ef1e3d948d3be34687e531d9734cd7eca"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0b5d095346ac0d96c3cf2878dab37dbcf6c6e6193862c60bb6de0f375c46f9aa"
-    sha256 cellar: :any_skip_relocation, monterey:       "5ad6853ff2d82d58c5c0d95d03d5de5a2f3f76efe0283adf9ce7e3a806a2f2ea"
-    sha256 cellar: :any_skip_relocation, big_sur:        "582263f5aeb1a70a319c62324d47a5432cc6d85aafb07e8aad2f981f26f7e781"
-    sha256 cellar: :any_skip_relocation, catalina:       "996726129acb0c6c602363b2864765f8cea3c3b3bf8976a33a33212366a64363"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "899b0f7b64c293f6053be2d747661a5baff2d9783b505dbf5b4d118ead2fb29c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gotify"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e40af180356cab41dcb4de2c9ab693daefa1d6a3d00f8d6dcac72b098d1223a4"
   end
 
   # Bump to 1.18 on the next release, if possible.

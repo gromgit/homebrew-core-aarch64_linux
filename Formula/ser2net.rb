@@ -1,8 +1,8 @@
 class Ser2net < Formula
   desc "Allow network connections to serial ports"
   homepage "https://ser2net.sourceforge.io"
-  url "https://downloads.sourceforge.net/project/ser2net/ser2net/ser2net-4.3.6.tar.gz"
-  sha256 "65515c7e9a5289167ae64c4032450904449a87ce20653241022af4f5db2e9510"
+  url "https://downloads.sourceforge.net/project/ser2net/ser2net/ser2net-4.3.5.tar.gz"
+  sha256 "848c4fe863806e506832f1ee85b8b68258f06eb19dad43dbeee16a2cfe5d9053"
   license "GPL-2.0-only"
 
   livecheck do
@@ -11,12 +11,12 @@ class Ser2net < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "5789705f28519128fce9c9e1af6a24aca48f5dee193e9f631065f8372db3a6e5"
-    sha256 cellar: :any,                 arm64_big_sur:  "b69ebf939c28e950724c7a1ccca8275014d6815d84eacd1f7040acd652afad31"
-    sha256 cellar: :any,                 monterey:       "fdf28ab2fd6407cc937c4dfd656f48fce1f3fd65c58b7cd424e224956ff21f96"
-    sha256 cellar: :any,                 big_sur:        "d0f529585752c51874d9719cb57946480546f4fa9117678ffa62f5552a17b212"
-    sha256 cellar: :any,                 catalina:       "2a98a1fd8562223f138046fc75a723510a76a2dbabdf1d9187f4bb76681ebad8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b8894c15d9a8f4dd044d1c39e8eb6f8ae6e230f0fc915d1d3e7120fcc166ee1a"
+    sha256 cellar: :any,                 arm64_monterey: "0d2648450adb1aca66e67b48cd79906433f2541c8a21021288d7fd1c055f85ef"
+    sha256 cellar: :any,                 arm64_big_sur:  "a78c036dada8ffa6024550bc80d09371beb874f95155b025fccb6b80a5ddff24"
+    sha256 cellar: :any,                 monterey:       "2e5abbc0dc1808cec37576aa344af19550e8dde9dc4b9b0ce23d92172c806c6e"
+    sha256 cellar: :any,                 big_sur:        "a00340cfaef84a27bad6d833a5296a701e0deaf9465e17cdff707234ab73f02b"
+    sha256 cellar: :any,                 catalina:       "8476ff962f95e59718ff4c533c938c104bb77a242f1cc2fea184f9e7e2037692"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ae69e0697c9a26afd4a648b519e79ca9145fbfe2c4842600b18c535c42a2f11a"
   end
 
   depends_on "libyaml"

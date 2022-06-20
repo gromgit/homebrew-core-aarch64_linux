@@ -4,17 +4,17 @@ class GatsbyCli < Formula
   desc "Gatsby command-line interface"
   homepage "https://www.gatsbyjs.org/docs/gatsby-cli/"
   # gatsby-cli should only be updated every 10 releases on multiples of 10
-  url "https://registry.npmjs.org/gatsby-cli/-/gatsby-cli-4.16.0.tgz"
-  sha256 "bc9136aa3433796227d1e4d0b61d37690ff360c386ed4de36ee051e561b2433e"
+  url "https://registry.npmjs.org/gatsby-cli/-/gatsby-cli-4.11.0.tgz"
+  sha256 "cd4d8d680e666af8099eb8dddc99fac4159abfcd0a448a8a1991e30a1378eb52"
   license "MIT"
 
   bottle do
-    sha256                               arm64_monterey: "dae77ab968764511ca40234fcb0a9b0684353fb3913a9cf212315be053ee237b"
-    sha256                               arm64_big_sur:  "125f047e62ae2ee5df1145ea29ed65c87ac66100d906d2245583781abb5bcb98"
-    sha256                               monterey:       "d05d8410fce7adc1dd3b015b8a562e0757e98315a98928f454c1b5ae49dd5905"
-    sha256                               big_sur:        "dad4c8eb0f617e16910a5f6c7168435847f052ce6dc3752a39072980642a43c4"
-    sha256                               catalina:       "e73c849347f2509fcf012109df611b9410bf02e183be224af38cd2b9682591bf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8c8b687b1d1f9d6422a876ca200eba5070314970ac492950cb04fe94d531e05e"
+    sha256                               arm64_monterey: "031cccc1650b42fd06181a34374c10ef73ccf6dd7926c35f7dea32549f1ca4cf"
+    sha256                               arm64_big_sur:  "88505318e33820011f96e07ab330a0d7e0aefa912119b34ac859d04880bcd87c"
+    sha256                               monterey:       "ca47b0628628425f29902553be3c67b952042a76263b46a7e1915f1db2baa162"
+    sha256                               big_sur:        "4cf0ef15d1bf8a3811817a2629f7a2cbea14f472d27747ba5c6c5a0ec72b8f71"
+    sha256                               catalina:       "513bbf80c42857ce679e06f5c6b42f1ca63742fd11e4629406b322021976d13f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "207600cbf013d2c8d93e298e6f023ec4f33713fc12c167b8ec8a79673fce5ea8"
   end
 
   depends_on "node"
@@ -31,14 +31,18 @@ class GatsbyCli < Formula
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
     bin.install_symlink Dir[libexec/"bin/*"]
 
-    # Remove incompatible pre-built binaries
+    # Avoid references to Homebrew shims
     node_modules = libexec/"lib/node_modules/#{name}/node_modules"
+    rm_f node_modules/"websocket/builderror.log"
+
+    # Remove incompatible pre-built binaries
+    os = OS.kernel_name.downcase
     arch = Hardware::CPU.intel? ? "x64" : Hardware::CPU.arch.to_s
-    if OS.linux?
-      %w[lmdb @msgpackr-extract/msgpackr-extract].each do |mod|
-        node_modules.glob("#{mod}-linux-#{arch}/*.musl.node")
-                    .map(&:unlink)
-                    .empty? && raise("Unable to find #{mod} musl library to delete.")
+    node_modules.glob("{lmdb,msgpackr-extract}/prebuilds/*").each do |dir|
+      if dir.basename.to_s != "#{os}-#{arch}"
+        dir.rmtree
+      elsif OS.linux?
+        dir.glob("*.musl.node").map(&:unlink)
       end
     end
 

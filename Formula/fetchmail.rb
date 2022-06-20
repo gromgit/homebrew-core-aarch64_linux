@@ -17,12 +17,8 @@ class Fetchmail < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "44644c6fdd10173c30ddc0bc48d85ea7dfd18e72e7b2ec56e33610c8eac4412e"
-    sha256 cellar: :any, arm64_big_sur:  "5895b3c96bef311e6ac82f52f94877792c037fa86e63a6abce911df64e601639"
-    sha256 cellar: :any, monterey:       "8c1e11397e7c65b440397fc37eb12142a099d8c80a45ad3d85ed12e977f82c58"
-    sha256 cellar: :any, big_sur:        "c8a56c75eb705a49147ea2fc33bd6bac64773942e5395302cce8d3209d63abb5"
-    sha256 cellar: :any, catalina:       "95cd2e811c1fdd8d266f821417084dc3bdcc2e5f072c50bc6337c1a6ce5910f8"
-    sha256               x86_64_linux:   "1adcc903c56512782e6781442dc2b9bb466329b2c6e4657b17e2be80f2f84437"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fetchmail"
+    sha256 aarch64_linux: "69f1658c384affc3297eed5648b15664e6be70b75d6498e36a594588c4a03f0f"
   end
 
   depends_on "openssl@1.1"

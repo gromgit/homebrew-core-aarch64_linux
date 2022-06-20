@@ -1,9 +1,20 @@
 class Tmux < Formula
   desc "Terminal multiplexer"
   homepage "https://tmux.github.io/"
-  url "https://github.com/tmux/tmux/releases/download/3.3a/tmux-3.3a.tar.gz"
-  sha256 "e4fd347843bd0772c4f48d6dde625b0b109b7a380ff15db21e97c11a4dcdf93f"
   license "ISC"
+  revision 1
+
+  stable do
+    url "https://github.com/tmux/tmux/releases/download/3.2a/tmux-3.2a.tar.gz"
+    sha256 "551553a4f82beaa8dadc9256800bcc284d7c000081e47aa6ecbb6ff36eacd05f"
+
+    # Fix occasional crash on exit.
+    # Remove with the next release (3.3).
+    patch do
+      url "https://github.com/tmux/tmux/commit/5fdea440cede1690db9a242a091df72f16e53d24.patch?full_index=1"
+      sha256 "3752098eb9ec21f4711b12d399eaa1a7dcebe9c66afc147790fba217edcf340f"
+    end
+  end
 
   livecheck do
     url :stable
@@ -12,12 +23,12 @@ class Tmux < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "89fb850bf05eff4e9c972402c25836dd722a5ba2560703ae119c64f1f10435d4"
-    sha256 cellar: :any,                 arm64_big_sur:  "0286262e80742ab6e9bdfce7f5a698aec0e97dd92c77a59e6db915c1afb29b89"
-    sha256 cellar: :any,                 monterey:       "e635ff8848c41e2d02a8a6afe577ff77b0352b6b7b127fe4435347292deb3e43"
-    sha256 cellar: :any,                 big_sur:        "81527548c67f4d4ee5a5bb7b552c2de38f2cee19ce9edfe39453b2036317d8bf"
-    sha256 cellar: :any,                 catalina:       "1d47ea7173d492ee287e507813af787f97835c1c5eb1609c692bbe1ef840e4e9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5799476117316bf13aa72354a66b77a7a3aa7c8dd697d6cae7fe39835a8ff04e"
+    sha256 cellar: :any,                 arm64_monterey: "4da34b9c32b6b0dd4e8aef086747ccb8dd7aa1999a2a1d7677f2f91133b1be59"
+    sha256 cellar: :any,                 arm64_big_sur:  "18f4e6035641e97503c879fd95cd5e259fa227ac65b0da4d7c0dacbd2f24c0a5"
+    sha256 cellar: :any,                 monterey:       "7f80505f93b54c479a49a976a483055eb074e886719147b22a75448684abe439"
+    sha256 cellar: :any,                 big_sur:        "61f8428fdc23cc03c5a364e5b3bb9980bd0ce520fcd861f0fabfad87144b766e"
+    sha256 cellar: :any,                 catalina:       "fb7c8499af5ba6e879befd0fc92aac90faf806acc54209f44ec95309d9fdaf65"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "40710fd6865425f2d9fc8333fd08ac7705ad32b0d0686dcf57a3f4a9e53c4ead"
   end
 
   head do

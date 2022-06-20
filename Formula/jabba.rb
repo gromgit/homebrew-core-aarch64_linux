@@ -7,14 +7,8 @@ class Jabba < Formula
   head "https://github.com/shyiko/jabba.git", branch: "master"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "93e599fb7c61971f2d76c7c37254dfe5a407e604c3e64b27ba026e46124a8f96"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "72cd725e75b0d214c6cbc03bc87fcb15d9b824ea24eba43f267cdfc768edf460"
-    sha256 cellar: :any_skip_relocation, monterey:       "8f142b8c305812437a8927250d4164b94015af9ed28282bc008e1d034a227000"
-    sha256 cellar: :any_skip_relocation, big_sur:        "72c397a12fe10181efb7fca300d78d3244160c9a0a4dcbe2cd17c179df678db4"
-    sha256 cellar: :any_skip_relocation, catalina:       "146e37a3138b919c497da279eecd2d282d5f6f5e0f1b9aa94257df2fbf19efba"
-    sha256 cellar: :any_skip_relocation, mojave:         "6f2d27333e0b8d73ba2166c4abb960642d64a3efcd394ee5683e6c71b8d0c305"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "359b80689e628a11217fe33067133d61eb52970610e45d54ace41705ccb06b5d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/jabba"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "dd5b84667aae11e6a551d0c9375c203e320aea16cd394165aa10bf4af3b7c9cf"
   end
 
   depends_on "glide" => :build

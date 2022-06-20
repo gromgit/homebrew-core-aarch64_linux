@@ -1,21 +1,18 @@
 class YleDl < Formula
-  include Language::Python::Virtualenv
-
   desc "Download Yle videos from the command-line"
   homepage "https://aajanki.github.io/yle-dl/index-en.html"
-  url "https://files.pythonhosted.org/packages/e2/bf/9111331d2e13a10614b3f97a5bcce96c5eea03d3791957ccf2fdcba95872/yle-dl-20220610.tar.gz"
-  sha256 "4913f028db6304345aea2e784de8d343e007bd43760cdc0f518a61f324f808cb"
+  url "https://files.pythonhosted.org/packages/4b/61/60092eb1103605003f18f8dbe7482d13d7e5a5b5901dc5d1243a192e900d/yle-dl-20220425.tar.gz"
+  sha256 "fb6a5d22c8234360b8b993dd758f52d09523fcac0edef2cf54c4fe21fd87b406"
   license "GPL-3.0-or-later"
   head "https://github.com/aajanki/yle-dl.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9fb1da9704f75c0374739191c8b26fc1cd1984cfa56a193f7f0b5a636f6ba7c1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "13cd43b97842863fdfc42a9883c4de5213ffbba03cd1c06875266967ce598c12"
-    sha256 cellar: :any_skip_relocation, monterey:       "dd832b7ea53d628608e4fed27b592938d85c5d7ffa358d05c029211565f1828c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e803e59cb8a8bb351ed3a82030a6652b4dc3b141e4c48703e6ca0edbba2416d4"
-    sha256 cellar: :any_skip_relocation, catalina:       "a258b31102282e6501852749464f5318f256dfb8aba54b107995324bd88bcac1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "72d50bda0ac55ea18ce3cc7bbdee09a9bcb5533bacbedf51a2a4316782d5c974"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "34ecea6e71e7aacd72f61429036a014220d68fa4ba3e9a495fe322e3ad5e3a1a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6d350d2381ea68eb4a5a8918ae4ff8aaca2069974378ae37c38427718fd6b2d9"
+    sha256 cellar: :any_skip_relocation, monterey:       "c1d107aa657bd308399f993616b867d4216815e5079054b9285c9e57692a6600"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1e18e1491ef4a319b70a906b0605f56abcc668b747df7e605f5be49d0f8f41ec"
+    sha256 cellar: :any_skip_relocation, catalina:       "173403cc4a4b80fa8ccd49f3127d7b75c3aaa804bcf74b3b99e031ec31bf3646"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "61fd8949f454ee17ba4f81c4672df12e2a83384200cbeccb8468e676fb8a1c4f"
   end
 
   depends_on "ffmpeg"
@@ -24,14 +21,28 @@ class YleDl < Formula
 
   uses_from_macos "libxslt"
 
+  # `Cannot import name "Feature" from "setuptools" in version 46.0.0`, and lock setuptools to v45.0.0
+  # https://github.com/pypa/setuptools/issues/2017#issuecomment-605354361
+  resource "setuptools" do
+    url "https://files.pythonhosted.org/packages/fd/76/3c7f726ed5c582019937f178d7478ce62716b7e8263344f1684cbe11ab3e/setuptools-45.0.0.zip"
+    sha256 "c46d9c8f2289535457d36c676b541ca78f7dcb736b97d02f50d17f7f15b583cc"
+  end
+
+  resource "AdobeHDS.php" do
+    # NOTE: yle-dl always installs the HEAD version of AdobeHDS.php. We use a specific commit.
+    # Check if there are bugfixes at https://github.com/K-S-V/Scripts/commits/master/AdobeHDS.php
+    url "https://raw.githubusercontent.com/K-S-V/Scripts/7fea932cb012cba8c203d5b46b891167b0f609a6/AdobeHDS.php"
+    sha256 "b79e8a4c8544953c39b79a622049c4deced57354adb9697e8c73420c12547229"
+  end
+
   resource "attrs" do
     url "https://files.pythonhosted.org/packages/d7/77/ebb15fc26d0f815839ecd897b919ed6d85c050feeb83e100e020df9153d2/attrs-21.4.0.tar.gz"
     sha256 "626ba8234211db98e869df76230a137c4c40a12d72445c45d5f5b716f076e2fd"
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cc/85/319a8a684e8ac6d87a1193090e06b6bbb302717496380e225ee10487c888/certifi-2022.6.15.tar.gz"
-    sha256 "84c85a9078b11105f04f3036a9482ae10e4621616db313fe045dd24743a0820d"
+    url "https://files.pythonhosted.org/packages/6c/ae/d26450834f0acc9e3d1f74508da6df1551ceab6c2ce0766a593362d6d57f/certifi-2021.10.8.tar.gz"
+    sha256 "78884e7c1d4b00ce3cea67b44566851c4343c120abd683433ce934a68ea58872"
   end
 
   resource "charset-normalizer" do
@@ -50,13 +61,13 @@ class YleDl < Formula
   end
 
   resource "lxml" do
-    url "https://files.pythonhosted.org/packages/aa/23/bda4e9881090f0f5e33e2efe89aacfa0668eb6e1ab2de28591e2912d78d4/lxml-4.9.0.tar.gz"
-    sha256 "520461c36727268a989790aef08884347cd41f2d8ae855489ccf40b50321d8d7"
+    url "https://files.pythonhosted.org/packages/3b/94/e2b1b3bad91d15526c7e38918795883cee18b93f6785ea8ecf13f8ffa01e/lxml-4.8.0.tar.gz"
+    sha256 "f63f62fc60e6228a4ca9abae28228f35e1bd3ce675013d1dfb828688d50c6e23"
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/e9/23/384d9953bb968731212dc37af87cb75a885dc48e0615bd6a303577c4dc4b/requests-2.28.0.tar.gz"
-    sha256 "d568723a7ebd25875d8d1eaf5dfa068cd2fc8194b2e483d7b1f7c81918dbec6b"
+    url "https://files.pythonhosted.org/packages/60/f3/26ff3767f099b73e0efa138a9998da67890793bfa475d8278f84a30fec77/requests-2.27.1.tar.gz"
+    sha256 "68d7c56fd5a8999887728ef304a6d12edc7be74f1cfa47714fc8b414525c9a61"
   end
 
   resource "urllib3" do
@@ -65,7 +76,21 @@ class YleDl < Formula
   end
 
   def install
-    virtualenv_install_with_resources
+    xy = Language::Python.major_minor_version "python3"
+    ENV.prepend_create_path "PYTHONPATH", libexec/"vendor/lib/python#{xy}/site-packages"
+    (resources - [resource("AdobeHDS.php")]).each do |r|
+      r.stage do
+        system "python3", *Language::Python.setup_install_args(libexec/"vendor")
+      end
+    end
+
+    resource("AdobeHDS.php").stage(pkgshare)
+
+    ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python#{xy}/site-packages"
+    system "python3", *Language::Python.setup_install_args(libexec)
+
+    bin.install Dir["#{libexec}/bin/*"]
+    bin.env_script_all_files(libexec/"bin", PYTHONPATH: ENV["PYTHONPATH"])
   end
 
   test do

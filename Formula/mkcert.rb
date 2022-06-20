@@ -6,12 +6,8 @@ class Mkcert < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "caadb67940cb551fc16122dc0486cac6a0dc948ccbdf90a5ee75219d4a437fa0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9529f010878e1b25e9e65ba68cb541e45878e09c65ad07c9e38090b8f9ed4383"
-    sha256 cellar: :any_skip_relocation, monterey:       "dedd5384a47f6e10702990d15787658cb33ae5c8f45a96869adcc4e0c730b810"
-    sha256 cellar: :any_skip_relocation, big_sur:        "26dd205eb0e33469922e8fd3b1828e91b2dfa920c7ffc2cc6f48494fd1c23d07"
-    sha256 cellar: :any_skip_relocation, catalina:       "19ed89b5ee9243e2d6880462ac1b0fcec4db64d4b6f2cefe423b248050b6ae15"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f674faa8be61e225ae604b2ffe215927f6ecbc992aac75e769185862820d2881"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mkcert"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "20b46dd382c63eb5dde542bdd3e15ee9c0637a9d6386c401b7a1b43883c0fcc3"
   end
 
   depends_on "go" => :build

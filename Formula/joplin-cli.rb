@@ -3,17 +3,15 @@ require "language/node"
 class JoplinCli < Formula
   desc "Note taking and to-do application with synchronization capabilities"
   homepage "https://joplinapp.org/"
-  url "https://registry.npmjs.org/joplin/-/joplin-2.8.1.tgz"
-  sha256 "bf5d3e2ce4a82916e984878a6a5aa80de830307643c67c9d6641f873a6903714"
+  url "https://registry.npmjs.org/joplin/-/joplin-2.6.1.tgz"
+  sha256 "5ae8c2cfbb54b55bba18f7cd413ba7bd7ef03412021322b65df53216fd7db4be"
   license "MIT"
 
   bottle do
-    sha256                               arm64_monterey: "d075896c46572bb397fb8bb33eec5397a7bd196af8428737bef136616e42d074"
-    sha256                               arm64_big_sur:  "e8eab26199c344f6a370d1ebf68a925dbf6ad93746ee1ab8ee75b45a428c189c"
-    sha256                               monterey:       "6ae50728292a131ee4cd2679f184d5678843e09335de8c6d24bf627194dbcf21"
-    sha256                               big_sur:        "ea1da65c3f856be2849fabe36e053f15b9adb368b5b3f74779364116f7bebcae"
-    sha256                               catalina:       "ff01bf2bc679496d8de250d25eacadcf59cb315082eccfafb58335fe56230e94"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "712d7846deaf2b1b36ae5b6b6bfafa6929d89342dbb7634dc03bfe117d4ebc5e"
+    sha256 arm64_big_sur: "52c311d9e488d96e2e8aa4d1367311b5e27122cbf628f9394899d94cb9bd87f1"
+    sha256 monterey:      "7f0d4ff24d65d47f5a3c8dafc4e82c2111f5681133655c5542ba4baf99db2fed"
+    sha256 big_sur:       "bc1aa68c4c2df173022cf36de72838ba3fb4605d031f81b91d3f5b16d4ca9968"
+    sha256 catalina:      "248fab15de1b4c16463ec33bf6b2dd9b3f7ecdc64a8e463d38530c3143e64934"
   end
 
   depends_on "pkg-config" => :build
@@ -23,10 +21,6 @@ class JoplinCli < Formula
 
   on_macos do
     depends_on "terminal-notifier"
-  end
-
-  on_linux do
-    depends_on "libsecret"
   end
 
   def install
@@ -44,9 +38,6 @@ class JoplinCli < Formula
       terminal_notifier_app = Formula["terminal-notifier"].opt_prefix/"terminal-notifier.app"
       ln_sf terminal_notifier_app.relative_path_from(terminal_notifier_dir), terminal_notifier_dir
     end
-
-    # Replace universal binaries with their native slices
-    deuniversalize_machos libexec/"lib/node_modules/joplin/node_modules/fsevents/fsevents.node"
   end
 
   # All joplin commands rely on the system keychain and so they cannot run

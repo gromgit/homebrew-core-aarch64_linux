@@ -6,12 +6,8 @@ class GolangMigrate < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "de335a1e58758ce0006b6c4b492699c409274b24a291ecb03612e104781093c2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "41595beeb24c80f73f2a3d1722ad29a03524dcf0d3cf3a40a1905a2d391188ba"
-    sha256 cellar: :any_skip_relocation, monterey:       "7d080cb0d06b0198228f7d0f74c626efefd9a6445155df5dce666745428c4bc1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "10b7e0b3396058331b4efd8ebfb0fdb44cc1cda885ab499c89963ce3ca752188"
-    sha256 cellar: :any_skip_relocation, catalina:       "f63879e90fea7b531081285580b10c5bc57d0585f35c3d6a3e178403a40f56cc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fd8eda55a6ba9adcf3bb093cd0a142cdea1cd0669fdc151ed14a790e8aa5a575"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/golang-migrate"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a141e22b627c4f2ba5253b3cb5d57066a9169c38a9aa788f6913b07c32e0dd20"
   end
 
   depends_on "go" => :build

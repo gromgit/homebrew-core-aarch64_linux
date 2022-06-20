@@ -11,12 +11,8 @@ class Xpipe < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1bb830508ba49bd08eda1641ec55c222ca621ad65dc03a4d303fa72568e2c914"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e5a7857c05557eb2e23d8f44f5c2f071d561bd9d9940b50c14899ce94dad3571"
-    sha256 cellar: :any_skip_relocation, monterey:       "9f57fd6ba84b400fe4d64af2795ea93cda64e4c8a33ca2ce4b13b8a9c06223d3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "694220876bc71c8df56ddb0c87465bffdcdb044a9134269b1185a8f51c50048c"
-    sha256 cellar: :any_skip_relocation, catalina:       "d21cc9001d61926df6d08d74e15fa13bf6374c8b0248c129122de343468dd910"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c1fb6f5f72fbbd4ff9ded0038aaa143230461f90292521cbf63df97c8d050fd2"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/xpipe"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "fc3a26a591b1d97d7f488151ef62fde510d08d3bbe4c4d90d77415e20cda1cbc"
   end
 
   def install

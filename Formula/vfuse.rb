@@ -10,15 +10,9 @@ class Vfuse < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f8184d1fd9ed9a9053df739ad09fa721686131c8a6c2a13b294aec564016cf19"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f8184d1fd9ed9a9053df739ad09fa721686131c8a6c2a13b294aec564016cf19"
-    sha256 cellar: :any_skip_relocation, monterey:       "95be83b370683ec27d9052f897028bd939241568d81939a67d3bb985d89a06df"
-    sha256 cellar: :any_skip_relocation, big_sur:        "95be83b370683ec27d9052f897028bd939241568d81939a67d3bb985d89a06df"
-    sha256 cellar: :any_skip_relocation, catalina:       "95be83b370683ec27d9052f897028bd939241568d81939a67d3bb985d89a06df"
-    sha256 cellar: :any_skip_relocation, mojave:         "95be83b370683ec27d9052f897028bd939241568d81939a67d3bb985d89a06df"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/vfuse"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "aadfe01a9597f592e5a4f849da415ef91f486012cbb45428fa6bd4ad4229174b"
   end
-
-  depends_on :macos
 
   def install
     # Fix upstream artifact packaging issue

@@ -6,12 +6,8 @@ class Fennel < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "45a17c2e474fdd8c601ea77e5bc52d2c2e07b094d99916872952b1646bbcf5fc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "113bcdf641420a750971fd68048300eedc034153840e00ccd898ff5dd6e14569"
-    sha256 cellar: :any_skip_relocation, monterey:       "acc0ef368c737bc11e0f1aaf50d05812113c7203b3da04471d73f53e91045517"
-    sha256 cellar: :any_skip_relocation, big_sur:        "55673aafb83cb341ab0d09b6ac85306718714112b72248c71ee8cd3e999e83bd"
-    sha256 cellar: :any_skip_relocation, catalina:       "cf4789db2ba53d5a6521853646195b3a9ad51c7ca5146cf005abe38e3e496ef9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cf4e121f4b4e5c9e7b1af9942ae1be720ea167edb1d45b95bec89ddcbc00a18a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fennel"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9725b7888390839954e9e47c52326a69d0251932128e9a8d4fef8962af1244a5"
   end
 
   depends_on "lua"

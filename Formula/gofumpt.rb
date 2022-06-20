@@ -6,12 +6,8 @@ class Gofumpt < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5a788943e18f8941a6dee5c0f60b36f9e8cd360ff5b50b3e930acfd433b8de30"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5a788943e18f8941a6dee5c0f60b36f9e8cd360ff5b50b3e930acfd433b8de30"
-    sha256 cellar: :any_skip_relocation, monterey:       "2785ea620e532aba380160adfece8e20c9d09dcd7df2a630e4d2625124675cf2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2785ea620e532aba380160adfece8e20c9d09dcd7df2a630e4d2625124675cf2"
-    sha256 cellar: :any_skip_relocation, catalina:       "2785ea620e532aba380160adfece8e20c9d09dcd7df2a630e4d2625124675cf2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "71f42aa1fb0d0af2d0a050b9f37e9648030663946015e64411eaa8823369fb35"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gofumpt"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "fca3b99449a455a6e6c323652435fe857d38d3a02a343246764081671e1725b5"
   end
 
   depends_on "go"

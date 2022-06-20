@@ -7,25 +7,16 @@ class Lightning < Formula
   license "GPL-3.0"
 
   bottle do
-    sha256 cellar: :any,                 monterey:     "7ccfd994c1adf68fa0ac0d5357bc110d9448005145c19ac10de4221d2970c048"
-    sha256 cellar: :any,                 big_sur:      "c8ad303b50ada5ebc3ba4b054f935a08b4aa7b70b2508ea94fe90733f07771b4"
-    sha256 cellar: :any,                 catalina:     "543bb685d72b8e9b10b14f3dcd615d38f8f499d10e1d27e40604240fc3f65ac3"
-    sha256 cellar: :any,                 mojave:       "c767959e901e6f47f9bbfe243e629508edbdb138376443d7943c4c4a5a52d4f2"
-    sha256 cellar: :any,                 high_sierra:  "da42166b5dd858cad42eeb7fc69a9ef870d23b67da6fa978d4bc58d3a464a0d4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "1a4d453d7d6f24a2686f952da28a08a9a328d03a7f4fd48b26fdbe7df8aac4a5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lightning"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "362cb1a6461674b70fb77d77299110490b78746883bcba7a54cbf562ca5d8157"
   end
 
   depends_on "binutils" => :build
 
-  # Fix -flat_namespace being used on Big Sur and later.
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
-    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
-  end
-
   def install
     system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules", "--prefix=#{prefix}"
+    system "make", "check", "-j1"
     system "make", "install"
   end
 

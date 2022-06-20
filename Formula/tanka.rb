@@ -2,8 +2,8 @@ class Tanka < Formula
   desc "Flexible, reusable and concise configuration for Kubernetes using Jsonnet"
   homepage "https://tanka.dev"
   url "https://github.com/grafana/tanka.git",
-      tag:      "v0.22.1",
-      revision: "ed87b3829074f6b26f62cea7ee190a43b910c4ec"
+      tag:      "v0.21.0",
+      revision: "68d625e128b2678996ff442c385f5361c7987491"
   license "Apache-2.0"
   head "https://github.com/grafana/tanka.git", branch: "main"
 
@@ -13,12 +13,12 @@ class Tanka < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f744a4582aa42a9894676beb884d9447eca55052f0154e8723e894d835f23e0b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d5c2707e608317939161ca5d30838ea7bff710564c598d239379d986cd1b6661"
-    sha256 cellar: :any_skip_relocation, monterey:       "1af841fb48ce0a9378429dace5ad386a71a2497980158ec75712bc852cd7f407"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fb83c2ec32f12459b6b3cf7319e4d4c2c4e2ebb51e20a355fd8f9a9fe00dec7a"
-    sha256 cellar: :any_skip_relocation, catalina:       "811b407ac01b08e403bcd13a9b4a0426056099a1d7f83babff1dcd11c9cfe9fc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "afda0edf8d7324157d32ba15dfdc369a0b3c884dd1d4f73b1293ea78acd8e174"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "511588e4612c004220dc8f2546b006ef73fb9ded63e95e19384cf2e25d609fb0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8235fa81c47354a894bed3a6a42bea0e8b2d40850ed98c9f1ad23726ad20b0b0"
+    sha256 cellar: :any_skip_relocation, monterey:       "a90d4c6e816075567a8ace1ec0c150187853b92a2909a964f7f3383af56f5449"
+    sha256 cellar: :any_skip_relocation, big_sur:        "fd722d5878ffd54481f007134afdf5cbee2fb438b581709618de8c225c94f386"
+    sha256 cellar: :any_skip_relocation, catalina:       "9e9c73cbf0cdf1b8c473ecd96d98fd26f4038ba03d5a22ee6dc92f4bfe7c10ed"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "716f7ff0ebd661b7d04401a8f3507f730d66b0fe97e0962300b9397252d58471"
   end
 
   depends_on "go" => :build

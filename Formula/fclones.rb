@@ -1,17 +1,17 @@
 class Fclones < Formula
   desc "Efficient Duplicate File Finder"
   homepage "https://github.com/pkolaczk/fclones"
-  url "https://github.com/pkolaczk/fclones/archive/refs/tags/v0.26.0.tar.gz"
-  sha256 "a548977699a13f2a584d318edbc46cb42f9f7e5badb645cb886389a9669fb734"
+  url "https://github.com/pkolaczk/fclones/archive/refs/tags/v0.23.0.tar.gz"
+  sha256 "23aabf22cced96ea25a28e1a1817bd62502d28140c3a9cf046d951accef5125c"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "df733c392981eaa0cf8d582cc99d29245e3e010a493a00481c67bae3fe1c5412"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1392a2b4b2790060e4dd1a84e72a4e4c94c345715e29ba0bea4b2832bc707188"
-    sha256 cellar: :any_skip_relocation, monterey:       "43704146c83458b79d04440a81c3cb0975e9ccb2bc58b76bd4abc7494c91c153"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4b2f8b62b36d4c1a2af43364eb44b355b711d294236457ba1d4778c39638cf42"
-    sha256 cellar: :any_skip_relocation, catalina:       "5097b69ff2372281bc74a00694f19e172fc5a9ba1b69c9252dd007ad2e427b40"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fc9a02c96cec3c64a4227167cc9210fbe2969469c53a93774e2f709d4211b7d7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3ad62a9a17a5a75fc3bd402e6e829921acb4a3d3e6a09bf35ba7a943ad1b0a78"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6f806c3113c108f4e8e09b4b29d1128f1733f790240354ac614cdf40ebb309f0"
+    sha256 cellar: :any_skip_relocation, monterey:       "730802a0343d1d42a2af21526707212a882c6216aa8542215b0370412f696cc3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2207ee04d71201e57dbd636adc30360711c545929074632d37564332f817a029"
+    sha256 cellar: :any_skip_relocation, catalina:       "df529756c33c4fd363f8305d2cf6d35f95cb699a7b36d4391b5dd1aeeba9f873"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "337c61dedd3eeb8517f62f9cafd9f306ad0bf845c047a4ee57416faced593173"
   end
 
   depends_on "rust" => :build

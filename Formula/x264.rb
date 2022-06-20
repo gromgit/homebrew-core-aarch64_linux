@@ -7,8 +7,8 @@ class X264 < Formula
   stable do
     # the latest commit on the stable branch
     url "https://code.videolan.org/videolan/x264.git",
-        revision: "baee400fa9ced6f5481a728138fed6e867b0ff7f"
-    version "r3095"
+        revision: "5db6aa6cab1b146e07b60cc1736a01f21da01154"
+    version "r3060"
   end
 
   # Cross-check the abbreviated commit hashes from the release filenames with
@@ -23,31 +23,38 @@ class X264 < Formula
 
       # Fetch the `stable` Git branch Atom feed
       stable_page_data = Homebrew::Livecheck::Strategy.page_content("https://code.videolan.org/videolan/x264/-/commits/stable?format=atom")
-      next if stable_page_data[:content].blank?
+      next [] if stable_page_data[:content].blank?
 
       # Extract commit hashes from the feed content
       commit_hashes = stable_page_data[:content].scan(%r{/commit/([\da-z]+)}i).flatten
-      next if commit_hashes.blank?
+      next [] if commit_hashes.blank?
 
       # Only keep versions with a matching commit hash in the `stable` branch
       matches.map do |match|
+        next nil unless match.length >= 2
+
         release_hash = match[1]
-        commit_in_stable = commit_hashes.any? do |commit_hash|
-          commit_hash.start_with?(release_hash)
+        commit_in_stable = false
+        commit_hashes.each do |commit_hash|
+          next unless commit_hash.start_with?(release_hash)
+
+          commit_in_stable = true
+          break
         end
 
-        match[0] if commit_in_stable
-      end
+        commit_in_stable ? match[0] : nil
+      end.compact
     end
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "723ef739ad0f22c6ae8fc19c0212135d470bbb53e3946c8b2efbb0203026b9a5"
-    sha256 cellar: :any,                 arm64_big_sur:  "259e1196ad11c986c09dbda6bcb46f9eb34f5dbbee7b3f7f143f44c1867b0c1c"
-    sha256 cellar: :any,                 monterey:       "76b53eea1fd91010a1dd1a3e8fdab21af559bfc6240869e81be6bf719b239dd6"
-    sha256 cellar: :any,                 big_sur:        "98e1861b0c647c01a9138d8e4634b8bec00f9b9eb8a97302f14d3d240731715e"
-    sha256 cellar: :any,                 catalina:       "915934596a3584dcae66bd6f439007e351ecce767a337aeaf6ac2d3ea5613446"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ac0f2d23ac3e1e91fec032d9712e6992d0b56c23d1c874caa31cfee067819a3e"
+    sha256 cellar: :any,                 arm64_monterey: "9734de08ad24836dc4c222293d6413b66d0e2f7b5dd93fc190e3404f316f3804"
+    sha256 cellar: :any,                 arm64_big_sur:  "2f5442c86dc08c7c283a4de626e8a7e8ceb17621b2ce63c7674f8c31a47eaf2c"
+    sha256 cellar: :any,                 monterey:       "40eca7e7d71bb3541b5dceb89bd5b40b0bd763e30ab0f36e6d7a405309eda270"
+    sha256 cellar: :any,                 big_sur:        "dae0e0e0715c44a916170879eb71c942b673d9450c7c0db319ce7e56757e567f"
+    sha256 cellar: :any,                 catalina:       "2ffa8448569c0272db62789e0c1475330356956f570fea278a3fa0ca7739ab3b"
+    sha256 cellar: :any,                 mojave:         "6780344c98d8c614d8fb8039365747cc699cb6818f7c3d56b708d9e2c5afe388"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4ed86de1b2e5af0136202b8479dde1935c46bbdd9da4c11afa52f1f18820e9a1"
   end
 
   depends_on "nasm" => :build

@@ -7,12 +7,8 @@ class Html2text < Formula
   head "https://github.com/grobian/html2text.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e78419657ce5e06388abd3a41ec0322383aca2c2c71b2e45139ca78832d452f3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9c148cd0d5d064c8ad263ca7c12c9e4a73ce3ff5d1f9feebca0009e4a41add25"
-    sha256 cellar: :any_skip_relocation, monterey:       "bd43224481e6120f6f304b1861e514fdf4571d1f5b558c86827d55ada0682fbe"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3f8d47270e3e7f0fdbb628cac56a9da064c70de4f1988a6dec2985bb5e5235f9"
-    sha256 cellar: :any_skip_relocation, catalina:       "5a236441829b3eaa51e021fda8e10bac0dc8b8ad80fa95fb268a7f21be18864c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "97fe7d5f5d6188936ffc827e284fd438cacf7d08a4bd0590d3724284b0f40eba"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/html2text"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "214c9092fdddf906a2e0c6da13af3232761f50899ce4510284ba7d33ce266d58"
   end
 
   def install

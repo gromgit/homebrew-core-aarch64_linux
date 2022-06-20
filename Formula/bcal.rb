@@ -11,12 +11,8 @@ class Bcal < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8e02378e4f54c79747e0c4704a10f376bb4647fab48bbab0faf10c9b14f0d294"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8a312da829f663fbc969ce1421c967bf301bb7a2fdab86d30f14266dfdb1731a"
-    sha256 cellar: :any_skip_relocation, monterey:       "b067832e1fcd2ca0d46b4a73546288e402c50b0dbf5c10301fd2930a30669ab2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "58e835299adaf40b94a77390234d9e80a113d57efd18f5249d9aabfc9c7ac386"
-    sha256 cellar: :any_skip_relocation, catalina:       "f71f837270d535a16447b927b4d3c32bb810e61d5da18c9476c7f04543684ac2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3f559a27314fb98edb8c31718cea5f817cd9e891c395d5e49387d4799d414e6a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bcal"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0fb0211652b5180e91e5a3854115f247391b49109c2ab2bb1dd18205958ddb4e"
   end
 
   on_linux do

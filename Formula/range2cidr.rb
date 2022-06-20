@@ -11,12 +11,8 @@ class Range2cidr < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cb9471b5f9b4ea6abefb2a8a3b0ee68125098c66565efb77385e5a5e1a46bbbd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5514b7e035bfdde163594f595f5e776ac8dd998dbdf548d892be91abf06a0ddd"
-    sha256 cellar: :any_skip_relocation, monterey:       "7559ea0525e6feaecdc50a741185765d4991dbc34c4c57d4a7b0121a4c9f9647"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2103581c5d4bdbac9d5c4e046f2f4344afa65ec6320151a2af2606d4a7a3e617"
-    sha256 cellar: :any_skip_relocation, catalina:       "41ed80ac028658ced43c8973c7c29c81fe159347ce885c24384df915157d91e6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "738f9617ee60fef2ec1f30930b45dfc633d4f65ccdb97659d9d311aa52eb9c2a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/range2cidr"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "82911e4c9dbc7e63729a0dfa5d18cebc5cdf657b7f9eac03adbc27e384c37372"
   end
 
   depends_on "go" => :build

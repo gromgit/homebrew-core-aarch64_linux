@@ -12,12 +12,8 @@ class Pumba < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "81590d64aedce57e3f56411b41132f8796924d6c58a1f4afcabf46d48f1b7fb5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a6afb26ce47dc98f69f63b85f43430eb33dcdfca7db4435139aee986a7d9a466"
-    sha256 cellar: :any_skip_relocation, monterey:       "a7cf571588de2b97f014d8b75153c036527ed4be56b3b2d9cdd0052328fbebe2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5d1d6635edc807dee2eafde699ee9239440b6b6d52fec775e2ce6aee88ea466f"
-    sha256 cellar: :any_skip_relocation, catalina:       "aebb62c90ed44f52fed1d90161159d5a8154528a3e3c2ca486140d8a9067a2fa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "686eaf2862de957dfb581462b6cf01bfbfa3c6901624edf324640b4f257e7d9a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pumba"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9fd134023099d50635151f3676b5b04b0c596f38861853a34c9bfe11772460b5"
   end
 
   depends_on "go" => :build

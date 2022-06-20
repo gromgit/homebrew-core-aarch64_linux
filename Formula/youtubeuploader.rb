@@ -7,12 +7,8 @@ class Youtubeuploader < Formula
   head "https://github.com/porjo/youtubeuploader.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7ba8ca719866091a696b942f55e488c4962470f24502f48154f302b4c352a490"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "71f1e8ad1382105e54528d21e7e163c09fa1a4298f86e5980a7ec45b5cc70132"
-    sha256 cellar: :any_skip_relocation, monterey:       "54819745c9d22d5d8619137a29a14ec4e51abc72338daa25ce4906ed45475da6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2103c3cfd9fee6ad17fe82de4badf9e9460cda5741359e61fd59880975d3cc5c"
-    sha256 cellar: :any_skip_relocation, catalina:       "2275c70931257b1cdf56181ea5ba7ac4078ed91ad22b3c8435aaf7160826bc38"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "316e30ac7cbb2004c08aad54869776a000f4891e91d917f04cba0115b85f8431"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/youtubeuploader"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0af97e6b2ebec8dc0353fcae8d9d0af168f5ac2fde6ecc81bb1a8137456cc3de"
   end
 
   depends_on "go" => :build

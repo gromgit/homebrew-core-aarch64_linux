@@ -6,28 +6,32 @@ class CfnFlip < Formula
   url "https://files.pythonhosted.org/packages/ca/75/8eba0bb52a6c58e347bc4c839b249d9f42380de93ed12a14eba4355387b4/cfn_flip-1.3.0.tar.gz"
   sha256 "003e02a089c35e1230ffd0e1bcfbbc4b12cc7d2deb2fcc6c4228ac9819307362"
   license "Apache-2.0"
-  revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "75a83673127fec043584cb8f92c7526eef72475d7f3502568ba48f190e73f82f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c35c36d9db398cb2685e977f6367fd45f9cef1b86284a6b42d56ee81a7a24acd"
-    sha256 cellar: :any_skip_relocation, monterey:       "ecb3dba5049db0bd732cdb472aa2afda1ec8293f0bbcbdee4a549d1b578895b6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2f728b55aa81f3607d306f7d971fc3ef3869705a951eecdf7fa9835947d776a5"
-    sha256 cellar: :any_skip_relocation, catalina:       "6d22b33221912b856ce5e91c2735a9d49c87135a9dee43e41382689880ea6124"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0cbebefb06eb1cf524a75a605d36d98d1b7435f2bf116ba9d40e78d743918f3b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "62ce1d4aaafd2b6c0baf9e899baf1354ae375e8810fb119e0f33e59d98dd42dd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c30e20ba1e20a93f6c4e0cb15b76f2c7cbd9cf65d0bc4865d933d3a6c8d16aa4"
+    sha256 cellar: :any_skip_relocation, monterey:       "dde77b69e0bce0d7e720dbeb50ecca04adbba5c7b20dec92f07dbb27b07c379a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2fc754ceec0d6bd7964c67c025dd6194396b3c5a8b7e857cffceb80d1d540869"
+    sha256 cellar: :any_skip_relocation, catalina:       "173f26ac0f8cdd2e87e3555dbbab76c30b674b949a07bf27b5b8fe6ffbb406d7"
+    sha256 cellar: :any_skip_relocation, mojave:         "49d83ff2732db641922de273119a56b99d286ef95b489a96a06cd509b004c65d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1956e8bde147547f9b1812bf32964d1f22dd7c512fca7b0ba23c4cadaad31cb4"
   end
 
   depends_on "python@3.10"
-  depends_on "six"
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/59/87/84326af34517fca8c58418d148f2403df25303e02736832403587318e9e8/click-8.1.3.tar.gz"
-    sha256 "7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e"
+    url "https://files.pythonhosted.org/packages/21/83/308a74ca1104fe1e3197d31693a7a2db67c2d4e668f20f43a2fca491f9f7/click-8.0.1.tar.gz"
+    sha256 "8c04c11192119b1ef78ea049e0a6f0463e4c48ef00a30160c704337586f3ad7a"
   end
 
   resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
-    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
+    url "https://files.pythonhosted.org/packages/a0/a4/d63f2d7597e1a4b55aa3b4d6c5b029991d3b824b5bd331af8d4ab1ed687d/PyYAML-5.4.1.tar.gz"
+    sha256 "607774cbba28732bfa802b54baa7484215f530991055bb562efbed5b2f20a45e"
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
   def install

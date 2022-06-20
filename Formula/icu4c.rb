@@ -15,12 +15,8 @@ class Icu4c < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "43cf787a35559b90597db8e1aaba95dbeedb84b1ee3d2e942be8938ae618724c"
-    sha256 cellar: :any,                 arm64_big_sur:  "c3c22a25dd864a6494d2371bea6b8b9d5e49f8c401b2f6cda00f4c349f57e975"
-    sha256 cellar: :any,                 monterey:       "321592eb1aebb7c6edc7a5e91393598725ebcc63362f059072b993c27f3bf979"
-    sha256 cellar: :any,                 big_sur:        "f124a30b9ecb4bfe61cd8ab5e46d58877fd5acb319360dae446648730a4b3ad8"
-    sha256 cellar: :any,                 catalina:       "8773ed472307dff9a522558503e0f12aa77433510e856136946a558ae3087c0f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "04f36c9e1047fb1a9e1f1889eae2ade68d6518fb847a90e7947cc87ca94512ef"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/icu4c"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d014af88f3f3e0b304d57e9feb2f3510fc6735321098ce00ff833ac39d38020a"
   end
 
   keg_only :provided_by_macos, "macOS provides libicucore.dylib (but nothing else)"

@@ -6,12 +6,8 @@ class ReginaRexx < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_monterey: "b54fa50c843942c79e745d3ce9468db9310dc70e973fa94e190e3a0fa0e5caf3"
-    sha256 arm64_big_sur:  "ab27f3fe98ea089a93403c418f33f0b1698a47e1161b73118fcb24742e50d2f9"
-    sha256 monterey:       "d4e4746bb04e0dfe7b6c01e83349f1dc896ba22571a95c9dffb6c07095bc0902"
-    sha256 big_sur:        "c6cfcdf1d903dc27e38bb21c0d02fb846f3fc418cc06decdc449f7d512156502"
-    sha256 catalina:       "2b98c5ca16915c08e04828749e7f75644d7b7e1121a64ec78411ef9e9603c294"
-    sha256 x86_64_linux:   "7b44626961634ed07b0c215d78c345dcc1c97d0a36c9ea3a530aa78ca61b9d8b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/regina-rexx"
+    sha256 aarch64_linux: "66813f583736cff607da7700d3b7fcf72b059946a3b9f5f3df0b273741a22da6"
   end
 
   def install

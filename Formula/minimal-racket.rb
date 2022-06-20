@@ -15,11 +15,8 @@ class MinimalRacket < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "acf973e4a02fb8ccf6a9f882d67597c2106a580143cf2ab362fb1771d7df2921"
-    sha256 arm64_big_sur:  "8a8cb26ce71f6ca21a8896439cfd95dcc775167c3600ecbcb7e1b710dc175f0b"
-    sha256 big_sur:        "b107fab5bc5575c25db9e9e0c8193eed7aa111bf46d9ac7ffd8c178a6fbaf806"
-    sha256 catalina:       "7e42dd037afd1e8c8f44dea0c771c6483bf1794ee64470118fdf9193ff566073"
-    sha256 x86_64_linux:   "c39f5edd41c16a55b9df0e9b12b43de2407aa1bd18c40556143e6011a6652d4d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/minimal-racket"
+    sha256 aarch64_linux: "8bc7767e064cb073346848e6bc9bb046cd79c85bd7e27fadb24e6b74e2b5c93e"
   end
 
   depends_on "openssl@1.1"

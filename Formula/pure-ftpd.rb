@@ -1,8 +1,8 @@
 class PureFtpd < Formula
   desc "Secure and efficient FTP server"
   homepage "https://www.pureftpd.org/"
-  url "https://download.pureftpd.org/pub/pure-ftpd/releases/pure-ftpd-1.0.51.tar.gz"
-  sha256 "4160f66b76615eea2397eac4ea3f0a146b7928207b79bc4cc2f99ad7b7bd9513"
+  url "https://download.pureftpd.org/pub/pure-ftpd/releases/pure-ftpd-1.0.50.tar.gz"
+  sha256 "abe2f94eb40b330d4dc22b159991f44e5e515212f8e887049dccdef266d0ea23"
   license all_of: ["BSD-2-Clause", "BSD-3-Clause", "BSD-4-Clause", "ISC"]
 
   livecheck do
@@ -11,18 +11,16 @@ class PureFtpd < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "04a014a07b5724eddde7e97b635763e9ea6fdf59fc1db3702c52d5c531b853c3"
-    sha256 cellar: :any,                 arm64_big_sur:  "c595fedada8a973348008154b83aa191e68f8d00fec03dd4e223e7abd6c2a701"
-    sha256 cellar: :any,                 monterey:       "a99b679ff53adc1e2b7843e43c33bc8d68443cb25fef918bdc5375fdf20e0463"
-    sha256 cellar: :any,                 big_sur:        "9be7e45889d49eb3de97419c6167d6fbb6a49feb774267c704723837b8f7239b"
-    sha256 cellar: :any,                 catalina:       "3ddd85304ce30f15b78eac175630ba6e7420d7f3fddd193eeee468e6d3e02012"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3607e2c5a94310cbcf4da7e357bd69464b7380bd8513073db7c865cff0f4a3e9"
+    sha256 cellar: :any,                 arm64_monterey: "37b7a18770c4050e170e73e9f91b0c4e89796b27b4bc97383f4c01e5d1b845c2"
+    sha256 cellar: :any,                 arm64_big_sur:  "be2354790a43f2530fade9684e49afdf6127e720e8a1a3396b284aa21e230a48"
+    sha256 cellar: :any,                 monterey:       "31ec7d058a66adc3e31d5b550e9dffa8d9d4388d125e25a701ac46e6b4f1480a"
+    sha256 cellar: :any,                 big_sur:        "f8a22572ca75768fa21b1177c77f8f222429726dbc21b8cd9fa061ddb3ecaaaf"
+    sha256 cellar: :any,                 catalina:       "a3cfa341bc66691b8f5962d493799c5f2f2c68114cc7a101493728991f18b423"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "97e9bebb7b6f9e9348e1151637f7d1ad046550426cc0b2e80186cd06205ad93d"
   end
 
   depends_on "libsodium"
   depends_on "openssl@1.1"
-
-  uses_from_macos "libxcrypt"
 
   on_linux do
     depends_on "linux-pam"

@@ -6,12 +6,8 @@ class Pgformatter < Formula
   license "PostgreSQL"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "18b1513504f1939029ec9ebf722e04bae563820168f5f24b142bb1e33d73038f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b2828aed1d21971a93897d6a25d3f3e4ac440348ff733fb638179a963d5a6e5a"
-    sha256 cellar: :any_skip_relocation, monterey:       "522fc9941d5b0f75f606b21a861f223b1936ae23518de214956cba730c80acc4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a10d8651dfec5a4c58304105bd92da391a07d39f7df6e14a772f3b4901d83584"
-    sha256 cellar: :any_skip_relocation, catalina:       "dde68d30f85eed7ae33dabe850464afe90035e5d5fe01e17c7c544d7415927f6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a884b1b995cbf67af35c229c5467ab59319a9e765ff1e64e4568f66bd24a50a4"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pgformatter"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a9655bf26cd4225c20e12846c7f639920210198601b52cb766cf65674fcf03d2"
   end
 
   def install

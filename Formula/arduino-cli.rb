@@ -2,8 +2,8 @@ class ArduinoCli < Formula
   desc "Arduino command-line interface"
   homepage "https://github.com/arduino/arduino-cli"
   url "https://github.com/arduino/arduino-cli.git",
-      tag:      "0.23.0",
-      revision: "899dc91b3e2e12948badaffc25eca2cfaefa2eda"
+      tag:      "0.22.0",
+      revision: "65f662a782780f9e410a3c327b213e55163f4de9"
   license "GPL-3.0-only"
   head "https://github.com/arduino/arduino-cli.git", branch: "master"
 
@@ -13,12 +13,8 @@ class ArduinoCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "14059e9426764c67f82e777b58ad474cb97edbc8cbb3bc47d85c3bf104689bd5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7dfab4653e679f08b935f243cab2941be847d07403dd90deb75055e2674416ae"
-    sha256 cellar: :any_skip_relocation, monterey:       "2f4b83fbe895e74b4e39cb83009ce0de862b5386b37f35780a51040abcb1a5e6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fb56c1951a0d092b7ad159e0d5c59261061a80a080e00aa9f8efb65e1ebb5919"
-    sha256 cellar: :any_skip_relocation, catalina:       "a8e597af1b23aac4d071753482787ae725787dc703df35aa051bd8ebaee57533"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d3c9149b0898e105763ae8375ac025c23944d6e6ea3617fc828cd5aaf58d81a6"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/arduino-cli"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5608debc06d787cd10e758274697d0e051a9b8a2a62245c2cd3d7a810cdda136"
   end
 
   depends_on "go" => :build

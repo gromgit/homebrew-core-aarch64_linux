@@ -1,27 +1,27 @@
 class Root < Formula
   desc "Object oriented framework for large scale data analysis"
   homepage "https://root.cern.ch/"
-  url "https://root.cern.ch/download/root_v6.26.04.source.tar.gz"
-  sha256 "a271cf82782d6ed2c87ea5eef6681803f2e69e17b3036df9d863636e9358421e"
   license "LGPL-2.1-or-later"
   revision 1
   head "https://github.com/root-project/root.git", branch: "master"
 
+  stable do
+    url "https://root.cern.ch/download/root_v6.26.02.source.tar.gz"
+    sha256 "7ba96772271a726079506c5bf629c3ceb21bf0682567ed6145be30606d7cd9bb"
+  end
+
   livecheck do
-    url "https://root.cern/install/all_releases/"
-    regex(%r{Release\s+v?(\d+(?:[./]\d*[02468])+)[ >]}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| match[0].tr("/", ".") }
-    end
+    url "https://root.cern.ch/download/"
+    regex(/href=.*?root[._-]v?(\d+(?:\.\d*[02468])+)\.source\.t/i)
   end
 
   bottle do
-    sha256 arm64_monterey: "40053cf5847fb77b9fa736d251c8e5c6b74941e924fe841f682533af9f3d391a"
-    sha256 arm64_big_sur:  "4a95cafcf0b6d231cee3a2a4c112d5e8d2818aff9a53cebbbdce929dcae57927"
-    sha256 monterey:       "22a22ca374e01af8d7dfc6d93915c031fcab047c831781a5326bff086b49e3ca"
-    sha256 big_sur:        "9f5d469b5c386d02d43b7fb5a1c544c1fd6939b9c022930025cb1c6835002069"
-    sha256 catalina:       "6de35167500657e1a193088a9ace296be68a639e17b046dedc929acf75e556cd"
-    sha256 x86_64_linux:   "ca415127a13260d08df53206780a66758d217aa6e2aafda84ec80d8c0fa8fdbe"
+    sha256 arm64_monterey: "4f5223ee441865d869a1b935d31a22c85f8f9aac869d69eba7d9109aaebbee3b"
+    sha256 arm64_big_sur:  "980a8bdec3fd26a6912066935634bb5826dbfeaee72cdfb8f3d921531aeba61e"
+    sha256 monterey:       "aab0d84528e3ecd8441ad4bacd54f60d7183a9153f3273f5fa46877924369a15"
+    sha256 big_sur:        "3d79db03d061064ba67b06dc2b79d8c823d517d656e1c94793c17bcfecc9c97e"
+    sha256 catalina:       "bad4b634d1adb2287765b5bd1c097888277b84415a4efcab20d1e2385ffeb8f5"
+    sha256 x86_64_linux:   "054d674fcbd968b84a21c88c229e666553f319882ea20ea6864a80ceeb431326"
   end
 
   depends_on "cmake" => :build
@@ -48,7 +48,6 @@ class Root < Formula
   depends_on "xz" # for LZMA
   depends_on "zstd"
 
-  uses_from_macos "libxcrypt"
   uses_from_macos "libxml2"
   uses_from_macos "zlib"
 

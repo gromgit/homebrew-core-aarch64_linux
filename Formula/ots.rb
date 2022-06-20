@@ -6,12 +6,8 @@ class Ots < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9788b2ce207870f97e65976033fd03c054a4cc46c6c7dba6964e8e4e742ba131"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "635be319cc5753d67c4dab692e3212f373fecad88460573792257695e16e35a8"
-    sha256 cellar: :any_skip_relocation, monterey:       "aa1e1386261311f8ff50579dd727dd781941b43f2f0783fffbbc3cd034815a32"
-    sha256 cellar: :any_skip_relocation, big_sur:        "dd0a411552adec7443195beba4185d5a3e391f9288bc504fc522dbaec7648ff7"
-    sha256 cellar: :any_skip_relocation, catalina:       "2998b92d46b5ce403a80c06455436febe2e516fbfa498b7540a477b9518b1d3a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6a52a1261153c3d031518000dbb700c45f588b1efd0c2f53d622cda91ded0ac2"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ots"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "257d6f2c13b5d5d5ab82881c964d246883c9867ca350099ae8b7fd0e95189e72"
   end
 
   depends_on "go" => :build

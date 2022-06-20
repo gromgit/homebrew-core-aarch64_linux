@@ -3,18 +3,18 @@ class Pdm < Formula
 
   desc "Modern Python package manager with PEP 582 support"
   homepage "https://pdm.fming.dev"
-  url "https://files.pythonhosted.org/packages/26/75/13dd2e2c699849f4b0e244ad8d086ee1262c142107a348a8a438db26220e/pdm-1.15.3.tar.gz"
-  sha256 "7ba68767b626db874b7cca89476beecca397f4fddd53bdff8cf5dcd6c56e8bd3"
+  url "https://files.pythonhosted.org/packages/61/22/814213bc9a757f664a30c718ff2b238c3835499a04c229df764eb1aefd69/pdm-1.14.1.tar.gz"
+  sha256 "170b3c1a9541bb53f91fff7b25c54afae796464ccb58caa8a0b9ff37646120dd"
   license "MIT"
   head "https://github.com/pdm-project/pdm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "11422a3afc3c11d3455ef183c07e188fccc79d57fbf79eb71a328b8492b4994c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8541931641cd34b90ee9bb2fa2e10aafb71f96c5af8afdb7d4d46e1a8776c3f1"
-    sha256 cellar: :any_skip_relocation, monterey:       "b2c779ac16e314c17cbd125eca23ea9f849abab3340afefd170fa8daee952853"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0ad7026c3bc865013dda10aa4efe74b9191095b2e1bb0f88da44c052ba1106b8"
-    sha256 cellar: :any_skip_relocation, catalina:       "b4d3199e026d29a74da21ac00b041974ec1ba1c3e659a741c876b73f1d900af0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f7f18ee1d0676a7396db7201dc52c2b8cc57382a97be0cdcf873246022fa00c5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1147d97f1b211e3b30471d2d5196fbd04d904344909f3c674f94e3094a84c4d0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "57f965a4a1f2af3567926e4a74ae7feee8f3a472a7ae2c1e6842fad7e0699e7c"
+    sha256 cellar: :any_skip_relocation, monterey:       "7455a9b541aac2dbdb349d772a5b5a8ad5a5623a53fa6e3ddb805bca7266400e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d3f5bea6ae046acd5f2f3a0ec49ebc606c947183e3608bbcf667627f30fb1b37"
+    sha256 cellar: :any_skip_relocation, catalina:       "bb37578bee9b75279f94e5c712e71df715b85a45eb153f8b445bf9379eeccb1e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2b988d90a168a817671bec3e2076d4fce2f13de55c468a0f7cda40363c0d7775"
   end
 
   depends_on "python@3.10"
@@ -26,8 +26,8 @@ class Pdm < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/59/87/84326af34517fca8c58418d148f2403df25303e02736832403587318e9e8/click-8.1.3.tar.gz"
-    sha256 "7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e"
+    url "https://files.pythonhosted.org/packages/42/e1/4cb2d3a2416bcd871ac93f12b5616f7755a6800bccae05e5a99d3673eb69/click-8.1.2.tar.gz"
+    sha256 "479707fe14d9ec9a0757618b7a100a0ae4c4e236fac5b7f80ca68028141a1a72"
   end
 
   resource "findpython" do
@@ -46,8 +46,8 @@ class Pdm < Formula
   end
 
   resource "pdm-pep517" do
-    url "https://files.pythonhosted.org/packages/af/4b/739fe47ab7e1e3602de4616ac9c85aee48adf5f27d348a248e87c5702ab9/pdm-pep517-0.12.7.tar.gz"
-    sha256 "6a4ed513edbcfd518e3b07e9118575d3fb35cc04551dd8acf3531e2463ef7fe3"
+    url "https://files.pythonhosted.org/packages/cd/29/5ccfe04da3d1c138e464a05244640d83f88881f99f7733391b7944aed994/pdm-pep517-0.12.3.tar.gz"
+    sha256 "117bfb1619b86beb34fe009b8d41acacf790d1fc5240ccc11f6cada151d46887"
   end
 
   resource "pep517" do
@@ -61,8 +61,8 @@ class Pdm < Formula
   end
 
   resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
-    sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
+    url "https://files.pythonhosted.org/packages/31/df/789bd0556e65cf931a5b87b603fcf02f79ff04d5379f3063588faaf9c1e4/pyparsing-3.0.8.tar.gz"
+    sha256 "7bf433498c016c4314268d95df76c81b842a4cb2b276fa3312cfb1e1d85f6954"
   end
 
   resource "python-dotenv" do
@@ -86,8 +86,8 @@ class Pdm < Formula
   end
 
   resource "tomlkit" do
-    url "https://files.pythonhosted.org/packages/24/24/e50be8344fc6e9c9ae55bfcb136b33ad562776d822736da3d1ec0278b18b/tomlkit-0.11.0.tar.gz"
-    sha256 "71ceb10c0eefd8b8f11fe34e8a51ad07812cb1dc3de23247425fbc9ddc47b9dd"
+    url "https://files.pythonhosted.org/packages/60/cd/21a4dd7545350968e544f785e6be4273e6b58cc40a1ab1010d3ce573bc5a/tomlkit-0.10.1.tar.gz"
+    sha256 "3c517894eadef53e9072d343d37e4427b8f0b6200a70b7c9a19b2ebd1f53b951"
   end
 
   resource "wheel" do

@@ -5,12 +5,8 @@ class BaculaFd < Formula
   sha256 "0195a08bcd4f578ae4a9ce0d91f7f86731c634d56b810534722d721b2a9eecb7"
 
   bottle do
-    sha256                               arm64_monterey: "9e4bd50607f95bd6d674e8c735dba12e2ad0764496845c89823461d8116b5c65"
-    sha256                               arm64_big_sur:  "f063999629535e0fd70ebd57b58f6b79e4119741b734d072ce509b1943d2bbe1"
-    sha256                               monterey:       "46b2043db486c8e8821b342e7892305634f3be0c320cd78e0240fd98cd4c5060"
-    sha256                               big_sur:        "513208f4394d97cf93cb235f7cf53528ff326f687ae749cb83836b7a8844a888"
-    sha256                               catalina:       "2c24e7d729ebea46a6a706b20add5274914ef21d43051613c391eec791768ee6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "85685ff002be62bdc15d1a10975086a8abc4b587abe199d0078c605d71501a58"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bacula-fd"
+    sha256 aarch64_linux: "09fbd728bd0b5f08462061c6afa8cd94df206e334e7987497e185e13c68ea43f"
   end
 
   depends_on "openssl@1.1"

@@ -6,8 +6,8 @@ class Gradle < Formula
   license "Apache-2.0"
 
   livecheck do
-    url "https://gradle.org/install/"
-    regex(/href=.*?gradle[._-]v?(\d+(?:\.\d+)+)-all\.(?:zip|t)/i)
+    url "https://services.gradle.org/distributions/"
+    regex(/href=.*?gradle[._-]v?(\d+(?:\.\d+)+)-all\.(?:[tz])/i)
   end
 
   bottle do

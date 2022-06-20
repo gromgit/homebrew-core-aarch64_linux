@@ -2,8 +2,8 @@ class Clusterctl < Formula
   desc "Home for the Cluster Management API work, a subproject of sig-cluster-lifecycle"
   homepage "https://cluster-api.sigs.k8s.io"
   url "https://github.com/kubernetes-sigs/cluster-api.git",
-      tag:      "v1.1.4",
-      revision: "1c3a1526f101d4b07d2eec757fe75e8701cf6212"
+      tag:      "v1.1.3",
+      revision: "31146bd17a220ef6214c4c7a21f1aa57380b6b1f"
   license "Apache-2.0"
   head "https://github.com/kubernetes-sigs/cluster-api.git", branch: "master"
 
@@ -19,12 +19,8 @@ class Clusterctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f85ae7aa405ee3c8ddef8000708357870ce69e30a37667db8ceeb9a934c37657"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5c173d1d7e84238f1ac8feb4c167951c6bec77fa3a5cecdb00f4f0143426c97a"
-    sha256 cellar: :any_skip_relocation, monterey:       "1d8590ccf9b7a00e94687c4fc8a4ab2e21066dd39b3c784488f8e43f75cfacc3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6f368cfc3900bd81412fdceff514fabe62edd84d66c5db043a8c465b817a8d2b"
-    sha256 cellar: :any_skip_relocation, catalina:       "65f9223f220813c9fedc40f9c6157339eafa6c4a3a9a212353fb6bd6fda97a05"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dcde88c8bd3220bfcf56489128f6a6a4231f3f3ae1e0b6ae61d4a9c470f40263"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/clusterctl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b984d475ca7f5be1a51707441672462d035fa36e39feafa76d29f80c0d2aa6c8"
   end
 
   depends_on "go" => :build

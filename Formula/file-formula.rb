@@ -2,8 +2,8 @@
 class FileFormula < Formula
   desc "Utility to determine file types"
   homepage "https://darwinsys.com/file/"
-  url "https://astron.com/pub/file/file-5.42.tar.gz"
-  sha256 "c076fb4d029c74073f15c43361ef572cfb868407d347190ba834af3b1639b0e4"
+  url "https://astron.com/pub/file/file-5.41.tar.gz"
+  sha256 "13e532c7b364f7d57e23dfeea3147103150cb90593a57af86c10e4f6e411603f"
   # file-formula has a BSD-2-Clause-like license
   license :cannot_represent
   head "https://github.com/file/file.git", branch: "master"
@@ -14,12 +14,8 @@ class FileFormula < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "320c0c43bb0354944ffd8f877130e0677673caa6d27b644df302b5181a7586d0"
-    sha256 cellar: :any,                 arm64_big_sur:  "f7511025862041ba5661df24e8dc996558911e77689eabeafb2f5c0028c69c69"
-    sha256 cellar: :any,                 monterey:       "6c0720b2baa60480d2ae9764b372f57fdda6bb6bc0cacca755a79b34a8ef2a0e"
-    sha256 cellar: :any,                 big_sur:        "27f93809e79cd8b4bc860498d7a92e6631c4db8944c922016874a7491ec6dfbc"
-    sha256 cellar: :any,                 catalina:       "3a9e43b348aef84582721d185db2c1d259bb270dd0fdbf1b31376f97fa052c67"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "947e053ef04495b1c718067ff1cb08b0e339c05697d1f8964bcc89339f6c5cda"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/file-formula"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a29f451b11028b8e149f9955ef6f3678759f36468cb7716893b30c940939c035"
   end
 
   keg_only :provided_by_macos

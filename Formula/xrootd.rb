@@ -1,8 +1,8 @@
 class Xrootd < Formula
   desc "High performance, scalable, fault-tolerant access to data"
   homepage "https://xrootd.slac.stanford.edu/"
-  url "https://xrootd.slac.stanford.edu/download/v5.4.3/xrootd-5.4.3.tar.gz"
-  sha256 "2d58210161ef61fabad7c86a038f2ef71c2ba1a0e782fcb6b8c92a1ba5f2a2b3"
+  url "https://xrootd.slac.stanford.edu/download/v5.4.2/xrootd-5.4.2.tar.gz"
+  sha256 "d868ba5d8b71ec38f7a113d2d8f3e25bbcedc1bc23d21bba1686ddfdb2b900c1"
   license "LGPL-3.0-or-later"
   head "https://github.com/xrootd/xrootd.git", branch: "master"
 
@@ -12,24 +12,22 @@ class Xrootd < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "081154adf4c5367d22755db6cf6e3176032a611c277953abde1bd1e4693078bc"
-    sha256 cellar: :any,                 arm64_big_sur:  "55dbcea7a5f8ac03ff3f04358006dc20cd182591569fd5d1617776b2d4a71aed"
-    sha256 cellar: :any,                 monterey:       "823cf1ec31a5703948c43a900a1670523308fbccb0f99c152066971ec2c52ee7"
-    sha256 cellar: :any,                 big_sur:        "5a522c694b8fc5de0b9f60268ddebfd7eb80785c5ef50fa2df714a6f27394ac2"
-    sha256 cellar: :any,                 catalina:       "2a95ac777ed1a5b4ee9fcee3e095024f4b5a3d587ca6961788bf10e5bf2827f2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c278ef074bee0cf1f54aececf039097819722a7494c13b5c2dfbf8d7afb0ec2a"
+    sha256 cellar: :any,                 arm64_monterey: "53c07b0982bb005408782eb035d3e815a8cd0d0bff7f258b1ead626c39ccba66"
+    sha256 cellar: :any,                 arm64_big_sur:  "ed558e22a0a4450671776a041abee0523dc0d388bc84d278704c314cf562e0c3"
+    sha256 cellar: :any,                 monterey:       "4df6a692c33fd59f33f0a213d6ee44480a76acc95af48ba157aabcb1bbc0b4ad"
+    sha256 cellar: :any,                 big_sur:        "c2bfc586c71c003c98148888293d98237d573c43b31d2d827d588c269a12e87b"
+    sha256 cellar: :any,                 catalina:       "89f0aa461ed5d48b54cce126c1a7b4d72a61863f3220d1ad893592ef541e32b8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0cab5ebc73b8bbb6b381a2f2e3b217de962e649df4f17dcb6e8701a205725c90"
   end
 
   depends_on "cmake" => :build
   depends_on "openssl@1.1"
   depends_on "readline"
 
-  uses_from_macos "libxcrypt"
   uses_from_macos "libxml2"
   uses_from_macos "zlib"
 
   on_linux do
-    depends_on "pkg-config" => :build
     depends_on "util-linux"
   end
 

@@ -1,8 +1,8 @@
 class Coredns < Formula
   desc "DNS server that chains plugins"
   homepage "https://coredns.io/"
-  url "https://github.com/coredns/coredns/archive/v1.9.3.tar.gz"
-  sha256 "25e607cb39261050513057534b8d2f33bf55aeb18262218bc9396510fa8958d4"
+  url "https://github.com/coredns/coredns/archive/v1.9.1.tar.gz"
+  sha256 "e2181568a8d14147cc1c690dfc2cf560ff1abd0b4e2d65db94c4b9d792390bd5"
   license "Apache-2.0"
   head "https://github.com/coredns/coredns.git", branch: "master"
 
@@ -12,12 +12,12 @@ class Coredns < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fdb8f76795c7e708879903140825480a2254c3e6d0e886e01742431b29db7583"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "46a1002d4fabd1351aba5630450f71eb527b9cc0b234c0860586b74a2710304a"
-    sha256 cellar: :any_skip_relocation, monterey:       "b4998c03fa6aef0333df12d4e8b8fdbeee3cd9ac7e7e3d275ab89b3887d8e3d2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f94c50730bb67a19c9683ca7035d8b5a9d3c0d77f4d377c49281826c8648bd71"
-    sha256 cellar: :any_skip_relocation, catalina:       "85d988db163d25c5ebd51696bf0b942b594442605acaff5454be8ab32d460166"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e6a70eff3a2aefc0fd2a6f4fc83f81f18e694415ea4099b93782159afc16713a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e19a786b5f674c2fd9e01af26a26330f3ca5095a5425b7ab6889110692a86b20"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "be091d7fc9b35c441b3a5463fba57a3292479ec3c6c8476abed543997a30813c"
+    sha256 cellar: :any_skip_relocation, monterey:       "a4a3bb091f5f57693c0baa467fd50e204333f928ef95b70d717dab8854eb3a4b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9bec19d5cd92c1e03c114da0ba90e780abe959aa420e2d3942b333981980b05e"
+    sha256 cellar: :any_skip_relocation, catalina:       "a60ef79d782d37b6ed7507434bceccb1c7490c43b62278b291ab8bf6428598be"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "df42e7bc2c60e92d8d1d46f2b976c5f6e8d03718f9a62259400a5f5358ab7875"
   end
 
   depends_on "go" => :build

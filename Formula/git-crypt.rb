@@ -11,12 +11,8 @@ class GitCrypt < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d86478df1906cc9337c7ea815005c1bbd7e970462476cb03fa645afb06c5eb68"
-    sha256 cellar: :any,                 arm64_big_sur:  "7adc43408c0cbea8bf9d5f01a70e5559d3282062d40cc99a6bfdd831aacea10c"
-    sha256 cellar: :any,                 monterey:       "2f3fe932411fdcf3e156bef702067812d395b65d95319e62b6e9308d7cf487fc"
-    sha256 cellar: :any,                 big_sur:        "c6080d2eaa5f60f0a7236137d6bc7ae18f707ad2c95f7a5f28d601732eda8fa2"
-    sha256 cellar: :any,                 catalina:       "a12782583f1f22cd862db9b4b6507044066623fff29d59123b4ddc35fb2bcd21"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "62d497660a8206870bb049f002cdac71550c654da92ca447e3ade56895bbd039"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/git-crypt"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4988e561812ddfa3a70185e84a63731d8b4ed8e687de42553fc096e689132318"
   end
 
   depends_on "openssl@1.1"

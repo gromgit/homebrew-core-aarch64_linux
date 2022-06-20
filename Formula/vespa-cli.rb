@@ -12,12 +12,8 @@ class VespaCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e75ab326a12368b7d037b697cb4ba323bde7113ae025f72659165b8938895f92"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "881bfd1568686817387b6a27726a30ae267b2d03463e2f9e5a553d741a98dafd"
-    sha256 cellar: :any_skip_relocation, monterey:       "44e9f6f0d95d634ee5fe383e09c1b8b32e7d2dce82f445a020c97f5132620b02"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cc6348b17655c54c7867df3bd20588bba5773ca477ac1e6cf2942e75a3f9ff47"
-    sha256 cellar: :any_skip_relocation, catalina:       "42e2cafa1e3c4f6ec8a3c628e44056a8cbeec73ebca557a869be5aca7970a6ed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b82ec5b0f8aa408f790defe4cc8da58989c3ad6c0060b782133568b2f155cef3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/vespa-cli"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7094c252c2d45afd4054af11367a1140969077268c165653f7ce2a2f4cb8fd29"
   end
 
   depends_on "go" => :build

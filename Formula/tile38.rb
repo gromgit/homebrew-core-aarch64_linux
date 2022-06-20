@@ -8,12 +8,8 @@ class Tile38 < Formula
   head "https://github.com/tidwall/tile38.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7002e4724df6232a58a20467340185de9168d8a0940c9f9a44b0fb2c3e4e4355"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1c2b987986b1c40ed0b9d183f8397951a60ff5d46b24eb153ab8a59fbd512c44"
-    sha256 cellar: :any_skip_relocation, monterey:       "351b9ab53c7f9fa08bbcf9121c9eef6acefd5b4eec78a25c29fd0c3569c1042e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c1d6db2eb13e29e4b9c0de0596c3486d77096c7575b129199117bffd8e6183cc"
-    sha256 cellar: :any_skip_relocation, catalina:       "28ec4ac40256f754d6fe1ef98420c7e242432eb7ee3cfe3e3925343ff51e947b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eaebcbc22c88670654e38ed19f82a0a66366c18d4812bd1e6e477f35c654c04f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tile38"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "12914e4ae628bed7b3fc271520b1778d6377d0e5ff66791153551eedcb9cf8a3"
   end
 
   depends_on "go" => :build

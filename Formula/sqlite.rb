@@ -15,12 +15,8 @@ class Sqlite < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ec526591d77541ae811e1d91381e5c109e5110ec8643bd3ba394f025be1b32ef"
-    sha256 cellar: :any,                 arm64_big_sur:  "d42e20a3f7b0b69c202173b9f71ba0e4ffdcfddda45b19eb643258420d56b061"
-    sha256 cellar: :any,                 monterey:       "93880cd7f1542905357378678f0737ef8a4148eb0d292e752e80a4e6c67a6ec1"
-    sha256 cellar: :any,                 big_sur:        "2995647a720c4e9a0d2b415982c37898fa841f6c5dd1494242c7edafc2cec2f0"
-    sha256 cellar: :any,                 catalina:       "b3814e42288e78f2a3ae827e6d976e610ca9140b9fdec3ae0d6586ea243224c5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e692c3eecc65466abd39ac527905770dfe5f5f4d04d38521911c5ab666cbf8c5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/sqlite"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "fb13c9e669e8b6e7af1e00e751fde614e1378929493497d8e7695492dc0f7ad8"
   end
 
   keg_only :provided_by_macos

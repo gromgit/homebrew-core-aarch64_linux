@@ -11,12 +11,8 @@ class IscDhcp < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "f8cadbaf43f606d695fe9b54df4d2ce16fc733f277b79184b9dfb425dc36fe22"
-    sha256 arm64_big_sur:  "fa545e13acdf113c1263f81982a7738e715df886792a6cb73780e2dad1478ea5"
-    sha256 monterey:       "8e8f544a2b0b2563b5e73f09ef0e158f4c05bc658ade948d2523a724069dc5f7"
-    sha256 big_sur:        "575a4286d3809339244093635bd660becb24701b3898d981f76f7c031450f54c"
-    sha256 catalina:       "7d503b4a52efa04cb73015ccb8bef335b8732b14a9ecf8590add0e53ed7e87ea"
-    sha256 x86_64_linux:   "b8aaea5afad5dbec95253adbb1b62ab74bbf9c6ca9357d7df14bcfcd97250357"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/isc-dhcp"
+    sha256 aarch64_linux: "35ab35c6aad74e6968b822619db014c5e6bf4286184e61d996590f01242801d8"
   end
 
   def install

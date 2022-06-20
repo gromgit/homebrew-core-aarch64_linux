@@ -15,12 +15,8 @@ class Nginx < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "737ab2f1858bc8f3378f19da55e98d79f4014452e7ac37ab713b13c828ec95cc"
-    sha256 arm64_big_sur:  "3134aaef6f9b646784cc5dc5528958f57accff411e38feb137f2374e8d624ba9"
-    sha256 monterey:       "dba847687a67f4a25202f00c27821d2d39f0eddeb28fa8d3d1126e574706b042"
-    sha256 big_sur:        "4b6822266d64a0aa1baea76f01ead5ec163a90311747fa624cf9f234a7ee41b6"
-    sha256 catalina:       "e3f1eec4488b61a4c6bb56f338b30fbd1472a409db8a3bada92933fb92dc4b95"
-    sha256 x86_64_linux:   "1d64f3a67ccf10bb8e4529c148cc3244d7e2c8864126f3700fe57e775d7d6fd7"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/nginx"
+    sha256 aarch64_linux: "3c92f7a740af5ab6c08d969bed4c722abb3814868d2edb75dd1b001dfecfbfd5"
   end
 
   depends_on "openssl@1.1"

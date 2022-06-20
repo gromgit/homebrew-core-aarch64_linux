@@ -3,18 +3,18 @@ class RobotFramework < Formula
 
   desc "Open source test framework for acceptance testing"
   homepage "https://robotframework.org/"
-  url "https://files.pythonhosted.org/packages/b8/58/739caa540ba895d583309884dab7ee6cf6d357a80dd3ed56a171c2cc143b/robotframework-5.0.1.zip"
-  sha256 "cf5dc59777ed9d8c3e1e91fb4403454890242867735681f22f4f22dbb2a20fc8"
+  url "https://files.pythonhosted.org/packages/cb/f9/04ce4ff8d87649b828c07035acfcc72805b15720ed8565745f697c18601e/robotframework-5.0.zip"
+  sha256 "bffecba8c43d4294936d921f0af4941079039edce88194769133719732c608bc"
   license "Apache-2.0"
   head "https://github.com/robotframework/robotframework.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "843799f7b5613b48738f8271f0ebcd0b046e44ddc42dba388e3764b87a2ef80d"
-    sha256 cellar: :any,                 arm64_big_sur:  "f7a068d847c98c07c29e59bff19f45a0868c42d9d41d8fe4662b84cccfae7cf4"
-    sha256 cellar: :any,                 monterey:       "04b828569daabe872d92d074ebf0a1112ce03969320c2929812ff3be7632d187"
-    sha256 cellar: :any,                 big_sur:        "5dbb11a9327cad3eef90431898e638a6db9d818e591cdedb5aaf98227371aa01"
-    sha256 cellar: :any,                 catalina:       "5f88fec005ad0e8c5c640d82682a91c39e47ede3ab767a00fa55fd77f3e821ff"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "083b8407930d619f6010f4ae179fe355a3a31fe0a62c427bf1916808b63dd98c"
+    sha256 cellar: :any,                 arm64_monterey: "1ef9a27da31ed777e37c5a5b83c46e245eeb783e7304b7437d39c1f5b93c7c0c"
+    sha256 cellar: :any,                 arm64_big_sur:  "a55c50ba3811a54bd4d7d93c7b056c277d400c492ff5610bf9c937ab50957eed"
+    sha256 cellar: :any,                 monterey:       "2e130e7397be64e60008d4b6eb004c1669c87a34439d6035d56b041298176879"
+    sha256 cellar: :any,                 big_sur:        "d9c8848797b2276d75d93c7106b14dc37bd7614b1be0c44fa6b916b51632a36e"
+    sha256 cellar: :any,                 catalina:       "558839ee49e156cf1cbe20bc00e15d89b17b3878a8cf41d5dbc1e9dcaf9193db"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "91b07b69cdaa96c15f9ce8270c53dee27d118c98361b07f16b71d97e6d79c96c"
   end
 
   depends_on "rust" => :build
@@ -23,8 +23,8 @@ class RobotFramework < Formula
   depends_on "six"
 
   resource "bcrypt" do
-    url "https://files.pythonhosted.org/packages/e8/36/edc85ab295ceff724506252b774155eff8a238f13730c8b13badd33ef866/bcrypt-3.2.2.tar.gz"
-    sha256 "433c410c2177057705da2a9f2cd01dd157493b2a7ac14c8593a16b3dab6b6bfb"
+    url "https://files.pythonhosted.org/packages/d8/ba/21c475ead997ee21502d30f76fd93ad8d5858d19a3fad7cd153de698c4dd/bcrypt-3.2.0.tar.gz"
+    sha256 "5b93c1726e50a93a033c36e5ca7fdcd29a5c7395af50a6892f5d9e7c6cfbfb29"
   end
 
   resource "cffi" do
@@ -33,13 +33,13 @@ class RobotFramework < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/51/05/bb2b681f6a77276fc423d04187c39dafdb65b799c8d87b62ca82659f9ead/cryptography-37.0.2.tar.gz"
-    sha256 "f224ad253cc9cea7568f49077007d2263efa57396a2f2f78114066fd54b5c68e"
+    url "https://files.pythonhosted.org/packages/10/a7/51953e73828deef2b58ba1604de9167843ee9cd4185d8aaffcb45dd1932d/cryptography-36.0.2.tar.gz"
+    sha256 "70f8f4f7bb2ac9f340655cbac89d68c527af5bb4387522a8413e841e3e6628c9"
   end
 
   resource "paramiko" do
-    url "https://files.pythonhosted.org/packages/a1/9b/737c2306468a9fce2d630f12c2f29a2674d7bbe406819334c0883e929812/paramiko-2.10.4.tar.gz"
-    sha256 "3d2e650b6812ce6d160abff701d6ef4434ec97934b13e95cf1ad3da70ffb5c58"
+    url "https://files.pythonhosted.org/packages/d4/93/1a1eb7f214e6774099d56153db9e612f93cb8ffcdfd2eca243fcd5bb3a78/paramiko-2.10.3.tar.gz"
+    sha256 "ddb1977853aef82804b35d72a0e597b244fa326c404c350bd00c5b01dbfee71a"
   end
 
   resource "pycparser" do

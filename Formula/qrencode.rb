@@ -20,14 +20,8 @@ class Qrencode < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "6fa3a670e9708cf84470f82fd966e5610d0ad9d8c96c1f5987645b4db3fa65cb"
-    sha256 cellar: :any,                 arm64_big_sur:  "aba117089d1c60fd2fa1d36fbfa06a0929b23d5bb6a7417d6f2dafb5dcc32c5b"
-    sha256 cellar: :any,                 monterey:       "ebc1b405866a1c2736d1fc49d268e35d08faf6a676f3151b160e1414b0edadc2"
-    sha256 cellar: :any,                 big_sur:        "1b3d2022412f9d5486550fb68250aee25bb358a04e2cccc7bb85c7d65b1885b0"
-    sha256 cellar: :any,                 catalina:       "326d2f182c7c8d9188be7adda5bd0ecb5922269f60f72ac265e404fa17fb310f"
-    sha256 cellar: :any,                 mojave:         "a8ec712f32c4d8b09d4c098c37264ea41f0f382525c5b67e657248fdd9f1f53d"
-    sha256 cellar: :any,                 high_sierra:    "a6d123b7f88941fe9959970d8b6ccfbc426c2ec405cfc731bc259f2b0f536171"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "97aa13d3b6314c8a5d03edffa65c43f2f63b894a91a350de52a45367fe8f862f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/qrencode"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9102cdcee3746a9603c6eee5a64c7c989917ab034dd39299a8a6e38e78fbfa7f"
   end
 
   head do

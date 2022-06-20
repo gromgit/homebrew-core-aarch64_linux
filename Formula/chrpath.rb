@@ -6,7 +6,8 @@ class Chrpath < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "00a03fa6ee632a4c0dbba7e0b581501b3e6118fd1cc6cfe1c0e6f53b900dca68"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/chrpath"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "aa157b5bf394a0a12d30f902f97aec28e1efaba491c4f0f29904859dce7fc61b"
   end
 
   depends_on :linux

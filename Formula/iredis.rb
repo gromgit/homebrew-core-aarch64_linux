@@ -14,10 +14,8 @@ class Iredis < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "b44f5e27dee871ca46efd273fd9246c46db0bc3d8fc5b7cc6d0ffacf26e09ecb"
     sha256 cellar: :any_skip_relocation, big_sur:        "6141ed321bbe104ace573a9c7fb698020da17bb71aec57ad9bb1687f070f4e1e"
     sha256 cellar: :any_skip_relocation, catalina:       "8581b5e5553e01adde363fe81f0d0021e3c1ffd6c0b8175a1bd96bb4d395a826"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "98997277d9d7f8d8d40c9030bdad1d77660e14900161828c72fa5f11c12ac5a0"
   end
 
-  depends_on "poetry" => :build
   depends_on "python@3.10"
   depends_on "six"
 
@@ -87,23 +85,7 @@ class Iredis < Formula
   end
 
   def install
-    venv = virtualenv_create(libexec, "python3")
-
-    # Install pytzdata using brewed poetry to avoid build dependency on Rust.
-    resource("pytzdata").stage do
-      system Formula["poetry"].opt_bin/"poetry", "build", "--format", "wheel", "--verbose", "--no-interaction"
-      venv.pip_install_and_link Dir["dist/pytzdata-*.whl"].first
-    end
-
-    resources.each do |r|
-      next if r.name == "pytzdata"
-
-      venv.pip_install r
-    end
-
-    # Install iredis using brewed poetry to avoid build dependency on Rust.
-    system Formula["poetry"].opt_bin/"poetry", "build", "--format", "wheel", "--verbose", "--no-interaction"
-    venv.pip_install_and_link Dir["dist/iredis-*.whl"].first
+    virtualenv_install_with_resources
   end
 
   test do

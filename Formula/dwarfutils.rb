@@ -12,12 +12,8 @@ class Dwarfutils < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "e98898849c8ed8d409553705848720cb67bb594476a2fe19449c816b2ce9b678"
-    sha256 arm64_big_sur:  "38d064fe9cdd6959ad7f014e5f9059b8557c1d8c5f0e43a7c9b33ec0f5d363dd"
-    sha256 monterey:       "5d889c894abdc10461cb501d786e53b3d95b8b18f7fd5ae540a869203a69f702"
-    sha256 big_sur:        "9f9fd6c83fdde2338b9825de80841afbf4048326efcc4070bbe030d9aacd9219"
-    sha256 catalina:       "bcd83b33054908b6275c71cd9c219cea98c37c0d0c283554402222600a680078"
-    sha256 x86_64_linux:   "1f0b6b0b0f4d9ed34013614349a8b55291f369aa6e5c5c09076316c53b6b1254"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dwarfutils"
+    sha256 aarch64_linux: "d5a079331e7f5dc4ad1174a50f28ab5f1f800b944ccbd0d9210d3b9f57389e54"
   end
 
   head do

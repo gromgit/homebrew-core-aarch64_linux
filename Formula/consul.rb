@@ -1,8 +1,8 @@
 class Consul < Formula
   desc "Tool for service discovery, monitoring and configuration"
   homepage "https://www.consul.io"
-  url "https://github.com/hashicorp/consul/archive/refs/tags/v1.12.2.tar.gz"
-  sha256 "74d627b778760d8f0a77f65742c3fd1e07bef18e8ce1710dd7791032072b4029"
+  url "https://github.com/hashicorp/consul/archive/refs/tags/v1.12.0.tar.gz"
+  sha256 "87b3fe01d0a772dc1cbab31cf38ab05d651d93cd1632aa289faf06988a65d617"
   license "MPL-2.0"
   head "https://github.com/hashicorp/consul.git", branch: "main"
 
@@ -12,12 +12,8 @@ class Consul < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "45562efa4b2798ca60760f5d547bd986d62e1b5f34b4259740182210f3064860"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "08ccf48b8a21b174db172bc4812b7e7825788ae60669124cee500e4ffa3c6af2"
-    sha256 cellar: :any_skip_relocation, monterey:       "6de190c59c7f506785f0d4b285bb86a951c710f3000dc57a692e634e0e5d0f14"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ba5f4258837c147a6a59f857417408cc16fa0ebf117c23018bf2e71119049eba"
-    sha256 cellar: :any_skip_relocation, catalina:       "32f0a64e5fdf2cb7e3ec283b7b7df8ddebb55744d03a2906a894040f5dc4ae9b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "30b5973d93d3621840e7cca38709f45749d68863861b7c4d6c175ca9abf0fb89"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/consul"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ee255d215d7f846060856dbd29a5602a76f27a799aeda635300671a4941956e5"
   end
 
   depends_on "go" => :build

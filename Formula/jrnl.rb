@@ -2,24 +2,23 @@ class Jrnl < Formula
   include Language::Python::Virtualenv
 
   desc "Command-line note taker"
-  homepage "http://jrnl.sh/en/stable/"
+  homepage "https://jrnl.sh/"
   url "https://files.pythonhosted.org/packages/11/5c/dfbccbe2d5042b89240c9e3af48aa8c79c462981330e397b656490a9b997/jrnl-2.8.4.tar.gz"
   sha256 "3838f0b55708b9b9b2c2706fb671bd83f444d321635e3ce19cda2304992d4f60"
   license "GPL-3.0-only"
-  revision 2
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "7c7063931813b3a94a85df1189505e594fad84f033fb768bc8bac8d740b76d2e"
-    sha256 cellar: :any,                 arm64_big_sur:  "bcfeab32405f751366ea962c7cd6c46026ffc31b51b9a5c9128b5cb3b0684baa"
-    sha256 cellar: :any,                 monterey:       "9f9b041f7d96c020ae5d98c20be4be318979a8c756df84db62ccde7c02ce4676"
-    sha256 cellar: :any,                 big_sur:        "c570c69f9d96c426f13e38b4e8f7f2ee0e053335caab594aaec5301328c44f25"
-    sha256 cellar: :any,                 catalina:       "946299a70b6b0a134f8540a0e41ddb8d7b629cc10260c331857d6643c38dab6b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d2f8faecf4e7a4c5977bacee858b6348a2e5183c1b8d3a51df1665d27425f518"
+    sha256 cellar: :any,                 arm64_monterey: "9ac928401a032104bad0d03251a4c97f423ccc6861b3bb1dbf49d1b66f806d52"
+    sha256 cellar: :any,                 arm64_big_sur:  "bc8385484aa6a276e777b58612dcfd26e9c6c041594d1d17050d780c27c65aa7"
+    sha256 cellar: :any,                 monterey:       "e834157be730a45495e69777caa048dedcb4c13e4a3170d1f4db2f23dc6dad6f"
+    sha256 cellar: :any,                 big_sur:        "36760d4350bb83f5206b01f80efa8203acea80da72e50810bcbe6bbabc0d6bad"
+    sha256 cellar: :any,                 catalina:       "5e846140f6d4e4e1295b9be8c1aeb18b32c6adc9c8aff53bcc253175ef4514b3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1841438d634c5e77d9c3e36af2789fdcf7e7486818f36016b8c7daa494930ed5"
   end
 
   depends_on "rust" => :build
   depends_on "python@3.10"
-  depends_on "six"
 
   uses_from_macos "expect" => :test
 
@@ -48,13 +47,13 @@ class Jrnl < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/51/05/bb2b681f6a77276fc423d04187c39dafdb65b799c8d87b62ca82659f9ead/cryptography-37.0.2.tar.gz"
-    sha256 "f224ad253cc9cea7568f49077007d2263efa57396a2f2f78114066fd54b5c68e"
+    url "https://files.pythonhosted.org/packages/f9/4b/1cf8e281f7ae4046a59e5e39dd7471d46db9f61bb564fddbff9084c4334f/cryptography-36.0.1.tar.gz"
+    sha256 "53e5c1dc3d7a953de055d77bef2ff607ceef7a2aac0353b5d630ab67f7423638"
   end
 
   resource "importlib-metadata" do
-    url "https://files.pythonhosted.org/packages/35/a8/f2bd0d488c2bf932b4dda0fb91cbb687c0b1132b33130d1cfad4e2b4b963/importlib_metadata-4.11.4.tar.gz"
-    sha256 "5d26852efe48c0a32b0509ffbc583fda1a2266545a78d104a6f4aff3db17d700"
+    url "https://files.pythonhosted.org/packages/28/ac/befd6d793f230c17c366959f518a7fb2f38c0168b850944ec70ba0566271/importlib_metadata-4.11.0.tar.gz"
+    sha256 "9e5e553bbba1843cb4a00823014b907616be46ee503d2b9ba001d214a8da218f"
   end
 
   resource "keyring" do
@@ -78,8 +77,8 @@ class Jrnl < Formula
   end
 
   resource "pytz" do
-    url "https://files.pythonhosted.org/packages/2f/5f/a0f653311adff905bbcaa6d3dfaf97edcf4d26138393c6ccd37a484851fb/pytz-2022.1.tar.gz"
-    sha256 "1e760e2fe6a8163bc0b3d9a19c4f84342afa0a2affebfaa84b01b978a02ecaa7"
+    url "https://files.pythonhosted.org/packages/e3/8e/1cde9d002f48a940b9d9d38820aaf444b229450c0854bdf15305ce4a3d1a/pytz-2021.3.tar.gz"
+    sha256 "acad2d8b20a1af07d4e4c9d2e9285c5ed9104354062f275f3fcd88dcef4f1326"
   end
 
   resource "pyxdg" do
@@ -90,6 +89,11 @@ class Jrnl < Formula
   resource "PyYAML" do
     url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
     sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
   resource "textwrap3" do
@@ -103,8 +107,8 @@ class Jrnl < Formula
   end
 
   resource "zipp" do
-    url "https://files.pythonhosted.org/packages/cc/3c/3e8c69cd493297003da83f26ccf1faea5dd7da7892a0a7c965ac3bcba7bf/zipp-3.8.0.tar.gz"
-    sha256 "56bf8aadb83c24db6c4b577e13de374ccfb67da2078beba1d037c17980bf43ad"
+    url "https://files.pythonhosted.org/packages/94/64/3115548d41cb001378099cb4fc6a6889c64ef43ac1b0e68c9e80b55884fa/zipp-3.7.0.tar.gz"
+    sha256 "9f50f446828eb9d45b267433fd3e9da8d801f614129124863f9c51ebceafb87d"
   end
 
   resource "asn1crypto" do

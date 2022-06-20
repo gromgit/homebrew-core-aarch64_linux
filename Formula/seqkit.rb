@@ -7,12 +7,8 @@ class Seqkit < Formula
   head "https://github.com/shenwei356/seqkit.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5c643716399f6ed26416ce5874b1799b39b5372786f0f9e8ab8c83e603afd433"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e5317234e738eb747463b979490c089c4b076fe573556d08ae7df6141982c6b9"
-    sha256 cellar: :any_skip_relocation, monterey:       "57086e68433c69dacbaa152d5c9487ca7848a5932f1781afd1fad56e531ac342"
-    sha256 cellar: :any_skip_relocation, big_sur:        "16ca0d4eef7fe48661fd2ca9ed30701bac60edcad05643436378e90bee7400c6"
-    sha256 cellar: :any_skip_relocation, catalina:       "5935966181252b37b6bf80d97bd2e43651f51841fd74c76819f643eba08520b0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8cd0f87b8741865657d2bcad503e2b89ab3eba053457f02e5169261db531b233"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/seqkit"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3c76ae0fc3922337c1c9db94347ddc79bd07162bd28272b8dea016a8a4b8fc3f"
   end
 
   depends_on "go" => :build

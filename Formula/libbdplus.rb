@@ -12,12 +12,8 @@ class Libbdplus < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "c5e53b35cf902a1b1bed758850dc351c5fa005f78147a39085e284b02ddded9f"
-    sha256 cellar: :any,                 arm64_big_sur:  "f4b3ecf7789e87ae8ebc97cf9a3c00321c79a3cca58d7a6679ea686da6c415e3"
-    sha256 cellar: :any,                 monterey:       "6e72efd19ac6ebf39f3c22240a1e706cd101540a2c2b55c1c83cf4048642339f"
-    sha256 cellar: :any,                 big_sur:        "d0e37545cdc9aa4e23e56dfead1e17ed894431e06bcdc06dec76a4ffb32b6deb"
-    sha256 cellar: :any,                 catalina:       "f4887dd87e0d8ef822f629b603436db20ce331bf4105c2b3d5d2864ac82c9e3c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a6adab3c63417c05c7b4e68bebd99dd6e0d133d7d60e1dcfe29552150cb484e0"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libbdplus"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0b1b915f3d4636e3c380a98e28954e00c24f3371a845a102b2d05c8e4cb1ee3a"
   end
 
   head do

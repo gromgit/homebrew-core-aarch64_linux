@@ -11,12 +11,8 @@ class Scamper < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ea08ddc851dd29feedbaa0a8f20bb178c268df5c9497e2043b2c916b7434eaa5"
-    sha256 cellar: :any,                 arm64_big_sur:  "1066b95b6fe4fe29362028df661fea8f790465da53f22ac00329be16d3d25e0f"
-    sha256 cellar: :any,                 monterey:       "bb3acac54b6c08565922731332b37642b0c22d9d155e91f788261dc4f4917a92"
-    sha256 cellar: :any,                 big_sur:        "25313db0f5be0e859b56a52fb05ee1ec648ccbc46f15bc17c5bd298a1ba5362d"
-    sha256 cellar: :any,                 catalina:       "581e363f70aa19e814f94e2df445785801be56b30141574bc4a1f625c0cc8cbf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "474e6d68861e2b138f51b8db49ab28c12cfb7e16ec9612e88074e3fcd6ad550b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/scamper"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d31336bb9e1f70e3074792eb653fc9d4260b7b7e44b6ef2ffd385356855a972d"
   end
 
   depends_on "pkg-config" => :build

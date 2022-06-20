@@ -6,12 +6,8 @@ class Sshs < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "25ddb81546acf421a7314d16e113049b92247e6f5d9ef82d21b616c9c9b203dd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2d99b452bc112129f2cd1c0db08c54b89cc6c9d6efa12ad7d9a6eab77d514869"
-    sha256 cellar: :any_skip_relocation, monterey:       "a94fbcb2090a8762122c6ebfed9f2b5fcbfdfbda259293ebeb5dfdd7919262f1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4523020639af5422641feec22d3ff6c5b2027fc65d13c3ac1563e0d5e0a3e407"
-    sha256 cellar: :any_skip_relocation, catalina:       "bcf3b701609f1a4eb851178d6e97ba0f18a8becd5e5537b046ffb79d32052bac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fde91b2d26c5147e1f2a97a2e26f7755419e9c1861ac68e591fc1662e49ba6f4"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/sshs"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8caf4c046888cb0e498ef319f3ee78779ebab4415398e8f8285077e34b2f84c9"
   end
 
   depends_on "go" => :build

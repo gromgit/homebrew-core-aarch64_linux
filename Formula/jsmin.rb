@@ -14,12 +14,8 @@ class Jsmin < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f9caafc345c169887fc5c05efbd7b4a6c67dd05355799c81be9fef87cb6e0add"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "edb266d3a4e8ebe1bce385a232ddd519be07dbd8a26e35d40f0db02d1ce9b198"
-    sha256 cellar: :any_skip_relocation, monterey:       "ae38034bff2af75cf7b0df7184e738cd58499d7c25fa9dcea30ca9174ba973ec"
-    sha256 cellar: :any_skip_relocation, big_sur:        "717998b8cbbcea8f6d16b8629fed8cc19b97a433b7047d1c803fb6b067fda738"
-    sha256 cellar: :any_skip_relocation, catalina:       "8f9c76010cb23d67e4b63c78a9d5dc278fbd22b6f38fc4a38c40066e2c196785"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "61a685d16de3648cae270451c662c8f1ab23bdb71d56f69b9a769273069bdff1"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/jsmin"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "acc3506990fbfb15d2aa62e131986a30c60afe6fcffb005f2a5c4be833733633"
   end
 
   def install

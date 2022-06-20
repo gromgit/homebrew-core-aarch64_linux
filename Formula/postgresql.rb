@@ -1,9 +1,10 @@
 class Postgresql < Formula
   desc "Object-relational database system"
   homepage "https://www.postgresql.org/"
-  url "https://ftp.postgresql.org/pub/source/v14.4/postgresql-14.4.tar.bz2"
-  sha256 "c23b6237c5231c791511bdc79098617d6852e9e3bdf360efd8b5d15a1a3d8f6a"
+  url "https://ftp.postgresql.org/pub/source/v14.2/postgresql-14.2.tar.bz2"
+  sha256 "2cf78b2e468912f8101d695db5340cf313c2e9f68a612fb71427524e8c9a977a"
   license "PostgreSQL"
+  revision 1
   head "https://github.com/postgres/postgres.git", branch: "master"
 
   livecheck do
@@ -12,12 +13,12 @@ class Postgresql < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "148b28ec301378520e83e53869452afdb82cce0b29eae4c7966dce23a110d546"
-    sha256 arm64_big_sur:  "441b6519f16ff4b6d9bdce9c116b804d27d3c0b3537cade961ee28eec2ec89f8"
-    sha256 monterey:       "1e258c37f55737787151ee3a5276e805e0aa4e30cf5d166bdc2208d0d7f812c2"
-    sha256 big_sur:        "04247388a3fcade374189d6777ff6685f4b3450cf14f90bb6859eb5e2eec4b8c"
-    sha256 catalina:       "3fa8b21ec3952be003c0803a4d7e58d478c219e1a75a0948b93e2ffebd250e7f"
-    sha256 x86_64_linux:   "431a89f854eb55b6eeed149515ea1876d0a425bede3c512cff40e49491223062"
+    sha256 arm64_monterey: "2bdd0a5c963159499d9033afbd67872799a1dd73d9aa0656fc1276d6b2db18c5"
+    sha256 arm64_big_sur:  "c9fc350fd229a8ce2ae1b4c2415d43adb8d1212ec70e1e823d07d01128ea53f7"
+    sha256 monterey:       "e646d3d891ba61c6779aeffbc8abf9d7590df75c0a61b142766863b0df7403c3"
+    sha256 big_sur:        "6433ac89dbd65d184f5792d6160d8f5d1c76f435f43c3492a6a4bfa6c00b79cb"
+    sha256 catalina:       "bb6bf761a60c6aec73f31595e167c2c788e80ea0a8ea1d27dd9f1040f854ea12"
+    sha256 x86_64_linux:   "7f8eb593c0bc534a7dde812c42ade5e7261e74ef618e35be553c6a257c850f4a"
   end
 
   depends_on "pkg-config" => :build
@@ -27,7 +28,6 @@ class Postgresql < Formula
   # See https://github.com/Homebrew/homebrew-core/issues/47494.
   depends_on "krb5"
 
-  depends_on "lz4"
   depends_on "openssl@1.1"
   depends_on "readline"
 
@@ -59,7 +59,6 @@ class Postgresql < Formula
       --with-ldap
       --with-libxml
       --with-libxslt
-      --with-lz4
       --with-openssl
       --with-pam
       --with-perl

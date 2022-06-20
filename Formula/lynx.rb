@@ -13,13 +13,8 @@ class Lynx < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "521f6b88727a5d059be6dbdb3b4ab121a75685a069d637a2392aa9495be12ff5"
-    sha256 arm64_big_sur:  "97f8541d87999f6f75c7283b276b72b90d142abe1fbec9d5d475183a755549d9"
-    sha256 monterey:       "f57f89264c25fae795e80a505995f9e6a57d6bb575611abdd41ca0a886f9ebec"
-    sha256 big_sur:        "20ce6341dccfd5e1aa40ec6c29fa8954ecaab80cefad190525adece0f3355860"
-    sha256 catalina:       "7a726cbbb56d51acd300ac36cf338862ffd64f07aaef97cbab9c519c47204230"
-    sha256 x86_64_linux:   "9705dd1b53a269e2ccd2926928f499a4116385d86edbe9bb4ba9e4517dde104f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lynx"
+    sha256 aarch64_linux: "5b29cfe7839809a4c9447bf48ce464602f0d7528cca64528a784f596cd7a14cd"
   end
 
   depends_on "openssl@1.1"

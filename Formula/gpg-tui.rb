@@ -1,17 +1,16 @@
 class GpgTui < Formula
   desc "Manage your GnuPG keys with ease! 🔐"
   homepage "https://github.com/orhun/gpg-tui"
-  url "https://github.com/orhun/gpg-tui/archive/v0.9.0.tar.gz"
-  sha256 "7aab4ecaf08bc020e21405e07cac40baf5d11f91e012fdddb4bf1138092eafe0"
+  url "https://github.com/orhun/gpg-tui/archive/v0.8.3.tar.gz"
+  sha256 "64e0159c997b97fc6896ed6fb5e50d65d50e6c08c14817bea7b9be5a70335442"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ec8d9d8796f55165941493f1bc17a91567b097b8ddd69671dab60642b8caecae"
-    sha256 cellar: :any,                 arm64_big_sur:  "7b7c98635a7fcc508a524325374e45ff5fe031575957052d256b3566a0f95d14"
-    sha256 cellar: :any,                 monterey:       "7fa532d99b87cd4b5af650966dbbb1caaaeee8d9dd56488b431e10eeba793818"
-    sha256 cellar: :any,                 big_sur:        "127e702384df1496119fd982f180175bfc7d0b517dc6b86b727fee7145be2f78"
-    sha256 cellar: :any,                 catalina:       "3995470495945c3b13d0cb3dfd4488240a3bc53a0f079108e6a4e852285eae8f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b655ee425c43cda1c81137d49aee7f7c98d92773a3045ce1ae6ca31004656c02"
+    sha256 cellar: :any, arm64_monterey: "80658ddf190a8bd7f6340228711c720f97df9b4dd12d0e730a96e9b8709c3ad9"
+    sha256 cellar: :any, arm64_big_sur:  "e25048955a1e3cb99503c2d8d1ac6cfac710483ecb3137e814c12e2ab9ef3c28"
+    sha256 cellar: :any, monterey:       "b33057a7e89af4774375ca73fd7243f1e6f4b8bb01e2ed4421dadbf5c4e3040d"
+    sha256 cellar: :any, big_sur:        "80fc70bffb4066c16ebab3274d4913113460498f4cc4a09680fec03bf25c481a"
+    sha256 cellar: :any, catalina:       "2e3e441ddd15e7b67b409e582b96e634ac12831e3f480c3e8fcb6166fc982191"
   end
 
   depends_on "rust" => :build
@@ -38,15 +37,11 @@ class GpgTui < Formula
     require "io/console"
 
     (testpath/"gpg-tui").mkdir
-    begin
-      r, w, pid = PTY.spawn "#{bin}/gpg-tui"
-      r.winsize = [80, 43]
-      sleep 1
-      w.write "q"
-      assert_match(/^.*<.*list.*pub.*>.*$/, r.read)
-    rescue Errno::EIO
-      # GNU/Linux raises EIO when read is done on closed pty
-    end
+    r, w, pid = PTY.spawn "#{bin}/gpg-tui"
+    r.winsize = [80, 43]
+    sleep 1
+    w.write "q"
+    assert_match(/^.*<.*list.*pub.*>.*$/, r.read)
   ensure
     Process.kill("TERM", pid)
   end

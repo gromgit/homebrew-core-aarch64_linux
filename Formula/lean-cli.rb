@@ -7,12 +7,8 @@ class LeanCli < Formula
   head "https://github.com/leancloud/lean-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "15fb26ba22cb952223109e0972df9922fe0eca21ea86e2fc4804515e26201670"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "420a19e7e6b42501fbfaf65a5400e585dc6de4da0b02bba76ec49f9e2a0fde26"
-    sha256 cellar: :any_skip_relocation, monterey:       "f7b7f47312af11dece30e6608a6145f49ee613482874b87308af69e79e81356a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3e4e38188e3d42649e1954de6e6d9a9095e7649d84a09bcad17a29e4f7fcad2e"
-    sha256 cellar: :any_skip_relocation, catalina:       "9067248d2f2995bebafc858563bd72dde361ebf9706ce1ac370186a4989bdddc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "88893d965ff05d9a760a001cb2a47ae6009b8c9c542dfd78820cf94103695e90"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lean-cli"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "36cdc2baa40906d6e84122c3e1a616cb6e9de36966ed0acc6bf150d006d73f2f"
   end
 
   # Bump to 1.18 on the next release, if possible.

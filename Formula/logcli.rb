@@ -11,12 +11,8 @@ class Logcli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "88e5bc3436ea5c2f26c8af399b6b6f6f54eacf8026130cd43f409ecb2779e4c3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0dcb73f437252873bae70c90d45128b77e66c4f24923d40a17d31cbbad316a07"
-    sha256 cellar: :any_skip_relocation, monterey:       "22db2cd34d128a91c89c40b25fcbc6f5161f81559a1d4bdbd91ca668698ac339"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3ce5085f2333685aae241263f81d4ea6ae4f882a219dbaddd3cf68db2b3d85ad"
-    sha256 cellar: :any_skip_relocation, catalina:       "32a2e0e5a268502e3963f40534170b833cc2183a3e1eee547eb1cd333773c5a7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "42067a26764bbb5b3eeb1d03e5979a3f390107fbaeed9cd40df6f03e1c4f5132"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/logcli"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9cb97a724b72e1588d86202c074573113abcbb5a76ddd858f646e8ccfd92b57f"
   end
 
   # Bump to 1.18 on the next release, if possible.

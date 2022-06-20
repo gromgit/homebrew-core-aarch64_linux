@@ -12,12 +12,8 @@ class Libhdhomerun < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3fde9f90d28b9e63e96373c6cde0577e4d6b05abac924c6101b4ad495181a58e"
-    sha256 cellar: :any,                 arm64_big_sur:  "44edebcb2619831a0cd87cfb9738ca8c115491d06a40ba83827973726c6da294"
-    sha256 cellar: :any,                 monterey:       "c354a9ed82da03b4b224f94e6e7660d241797de40ac19dde30d3bb323bbd310b"
-    sha256 cellar: :any,                 big_sur:        "767b1d44bbaa11c6f391a57d739b9eaa46d9eb36e5511ba5f2bfc1147437abb8"
-    sha256 cellar: :any,                 catalina:       "5258e4ece26fb16ecfff072d444ff22203e7a0acd162a0ce5a20074ffe69d02a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f9be792de3e833a8372f0b17cccb6a70787d973fbd6c3b2382daa6b52415fc6a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libhdhomerun"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8fa280741497369e26adfbf40e7edbf1c7c7ed86d4dfd8bfd0d45be09ba81541"
   end
 
   def install

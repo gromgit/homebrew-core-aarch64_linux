@@ -13,12 +13,8 @@ class Cspice < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4a3e9574c472567a3814aed8f11bcc0874d6dc4ce2e1e867351e5668366d60a6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "27847bdbb741a1195069b815bef8bcbdbcbc183ab3b7034a83eb7854348d7f04"
-    sha256 cellar: :any_skip_relocation, monterey:       "b6317d5408e0c56164299671a459ed55c3581a219b4e0b7c699c08fe6abbcb3d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "081d234c0862319ab53275de9eb9f6e006d53afe43c63d53425bd089ea9b493c"
-    sha256 cellar: :any_skip_relocation, catalina:       "900cfe839cf53dc03c1e227332d24849e55209a606dba515412ae74a955144f9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5c49763f72469907d773eef66b54ae8dce74c3df9f2f5dee29468de3ea9f0953"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cspice"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ed4dfb27ec97af1396b0067855df0fc7d7037e30113e4dd9185706f6d44e3da5"
   end
 
   on_linux do

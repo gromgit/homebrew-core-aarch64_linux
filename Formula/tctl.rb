@@ -6,12 +6,8 @@ class Tctl < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "470cb1dfb2cb2530fc3c966d95ff6ff4bf939a2994659c439f1ee998e640de50"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ecb47cc696305a9b63b73cddd67343e9ad81a8f4d471f48d417a3202365b555d"
-    sha256 cellar: :any_skip_relocation, monterey:       "f5254f93d38b1c8416ab402da1349059075f86c7d16e56c63d9fc6436643e88f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "62136434bd416c2edc46d891fb48ac3bf0a60fe57f5a357b23bcff90f4c0a6b2"
-    sha256 cellar: :any_skip_relocation, catalina:       "9f891235816c98e033c44d9836fddcb5dc226df716db3615f03262a523aaa5b7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b98127102b4d6cca64f9a827f41abc18d6be87e3c14e2a62804201162b3dcfe2"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tctl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d758a8672f9910b7abad5d742a05b73b662c7eeefed83ef6d7ef4564d06ee6b9"
   end
 
   depends_on "go" => :build

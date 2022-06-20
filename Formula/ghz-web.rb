@@ -1,8 +1,8 @@
 class GhzWeb < Formula
   desc "Web interface for ghz"
   homepage "https://ghz.sh"
-  url "https://github.com/bojand/ghz/archive/v0.109.0.tar.gz"
-  sha256 "4b0b3c651861923a60ca3370de652eb9f3eb5b0c7510c877ec1af8d82508fd08"
+  url "https://github.com/bojand/ghz/archive/v0.108.0.tar.gz"
+  sha256 "fd3f4f451ead288622ebf122bb52edf18828a34357489edc8446c64b0cc10770"
   license "Apache-2.0"
 
   livecheck do
@@ -10,12 +10,8 @@ class GhzWeb < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f108c055bd3bb0db3a8628545bad677a5356c96556fb1e0b1c6aa857d8b23483"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "74703b438207f02c472284e3009c75095c0ace59742ca5ec46f45cdc4ecc498a"
-    sha256 cellar: :any_skip_relocation, monterey:       "ddf4a57ae528220891651468f31e68e507d303550a0d71a86ab329a45bf50d4d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "90590581331fc2badc0db5cb7716917482967b85bdc50ef7b666213684cfe990"
-    sha256 cellar: :any_skip_relocation, catalina:       "f7c8902ec49069cb97436c3b0714d74336ed6ed4f045864c5e9c826b979c5801"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eeea450874c9329a115985e9d9af778291d9d6e65c85c0f51d37bca5aaae8ccd"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ghz-web"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d0d3a83bedc940728e46213b4438fd8f82ff71777cc4b2854ed18cd97f7e28c1"
   end
 
   depends_on "go" => :build

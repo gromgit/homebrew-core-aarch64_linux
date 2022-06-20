@@ -7,13 +7,8 @@ class GerritTools < Formula
   head "https://github.com/indirect/gerrit-tools.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1d1eb15677d4ed0974a06c21e3ad17fe49b543acbea1ebc0052ef0b2900f65f0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1d1eb15677d4ed0974a06c21e3ad17fe49b543acbea1ebc0052ef0b2900f65f0"
-    sha256 cellar: :any_skip_relocation, monterey:       "e4094d8655a172f89aea151baea9298f35827c09fad7ea4d696e5c542d724c06"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e4094d8655a172f89aea151baea9298f35827c09fad7ea4d696e5c542d724c06"
-    sha256 cellar: :any_skip_relocation, catalina:       "e4094d8655a172f89aea151baea9298f35827c09fad7ea4d696e5c542d724c06"
-    sha256 cellar: :any_skip_relocation, mojave:         "e4094d8655a172f89aea151baea9298f35827c09fad7ea4d696e5c542d724c06"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e944c907ac7f5bb3d468a7adfa14bdd52c22d0f0261b201f006407f2dc425506"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gerrit-tools"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c028a2e57c29e6665759ef6cf2d653be0363f25fd7f4a7a069e8f1908a0f7184"
   end
 
   def install

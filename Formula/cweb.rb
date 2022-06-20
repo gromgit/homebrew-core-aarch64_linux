@@ -1,8 +1,8 @@
 class Cweb < Formula
   desc "Literate documentation system for C, C++, and Java"
   homepage "https://cs.stanford.edu/~knuth/cweb.html"
-  url "https://github.com/ascherer/cweb/archive/cweb-4.8.tar.gz"
-  sha256 "893ae278c486b6780ebc5863a10d45147ee9d41de294f7a2ce7795351ac92a0d"
+  url "https://github.com/ascherer/cweb/archive/cweb-4.7.tar.gz"
+  sha256 "818c1a2966744548935f67e899ffa41605056fb06492d959af9fa276353f0dbf"
   # See disucssions in this thread, https://github.com/ascherer/cweb/issues/29
   license :cannot_represent
 
@@ -12,12 +12,8 @@ class Cweb < Formula
   end
 
   bottle do
-    sha256                               arm64_monterey: "c139670c8b6ade4da2cf8906b6037d1b0393590de4f46ee1c4955bd2cc6fdf4b"
-    sha256                               arm64_big_sur:  "e219b2e41104e310fbb8dc29cdc2cc8fc400afbdd9108f81d4bb4399c7146d6d"
-    sha256                               monterey:       "63496dbd9e5336985eb8aaf376de9755d019ce508e80d4d7cdee36ba5cb673ee"
-    sha256                               big_sur:        "1be64e3c19b5fb593d1fdc5d675f3b7afa4ebbdd3b460a9ea124fd1f12051009"
-    sha256                               catalina:       "eb124cf0bfcc105a8baf7996c90438b652b4d04447c4610d92f574ee8882f294"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "afc1e144ed1fc2e39eba2f0c8b504a891761bd743917754a8340e97497bb856c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cweb"
+    sha256 aarch64_linux: "f8cbf1f289712f5adc0f48d519a70df9cd7131e6ffa75b2db6071b3600e126a2"
   end
 
   conflicts_with "texlive", because: "both install `cweb` binaries"

@@ -13,13 +13,8 @@ class Vtclock < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "89f35de639c75067c0b64b5df9642a6b08652b8574eb403f2d51038362b7c16e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7ba3ce880fdedf82e166ed0f7f7a4124c57510680d5c591fd363ac14887618f5"
-    sha256 cellar: :any_skip_relocation, monterey:       "d8623d74ca8e085cba72cfcfdd04c87327dd5bd9bed6b6f0c5b60181448922fa"
-    sha256 cellar: :any_skip_relocation, big_sur:        "747b98b591c6a732012006db26bc8cdd871509e6407f557a1b616c54d2c2079d"
-    sha256 cellar: :any_skip_relocation, catalina:       "77d6846683ebe827ad322e81cd281e79d28b5e93122aadf32c49a1566b1c9f2e"
-    sha256 cellar: :any_skip_relocation, mojave:         "1f4d80e05dcf1c214a317d54057674f496ff0a063d9acaedc3e845d212c627bd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "70959665bdcaa3a6909a6b3e8f13e2b81c50fd28ba845f69af0cbff34df1d209"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/vtclock"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "cc3b0d5eaf252b321080b01b5bb165295250cf0ae2a1d031e17e115c7918295f"
   end
 
   depends_on "pkg-config" => :build

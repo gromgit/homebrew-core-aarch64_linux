@@ -3,18 +3,18 @@ require "language/node"
 class Hexo < Formula
   desc "Fast, simple & powerful blog framework"
   homepage "https://hexo.io/"
-  url "https://registry.npmjs.org/hexo/-/hexo-6.2.0.tgz"
-  sha256 "d577729d6b0c21cccf7c6e81b395a3bfe2f058f29fca8c569643639f3b571772"
+  url "https://registry.npmjs.org/hexo/-/hexo-6.1.0.tgz"
+  sha256 "c3cbaa3a4d72ccadf1125762895c2714e8474099c9da73c60bd766f17f92fac4"
   license "MIT"
   head "https://github.com/hexojs/hexo.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "247799071e0e7e6b2ad7d99c87fa6346e79f86c01d176565373190cdff3b07d9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "247799071e0e7e6b2ad7d99c87fa6346e79f86c01d176565373190cdff3b07d9"
-    sha256 cellar: :any_skip_relocation, monterey:       "e81819487b36ddb1288988183f7b923aa5c206daf530c64b804b350aec75e08d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e81819487b36ddb1288988183f7b923aa5c206daf530c64b804b350aec75e08d"
-    sha256 cellar: :any_skip_relocation, catalina:       "e81819487b36ddb1288988183f7b923aa5c206daf530c64b804b350aec75e08d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "129c5b4637e726823ce327942b94043e98318ca45eb56d2e3c50814c0edc3806"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "51cfa7221ff46fb99c3251d5404b883624f8bb05208a62c50dd08201c47bf6c9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "51cfa7221ff46fb99c3251d5404b883624f8bb05208a62c50dd08201c47bf6c9"
+    sha256 cellar: :any_skip_relocation, monterey:       "bed14d2c4ad5ef76e1f88ee2442aaedab6637f5eab782ec31d7d40df1938ae97"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bed14d2c4ad5ef76e1f88ee2442aaedab6637f5eab782ec31d7d40df1938ae97"
+    sha256 cellar: :any_skip_relocation, catalina:       "bed14d2c4ad5ef76e1f88ee2442aaedab6637f5eab782ec31d7d40df1938ae97"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f3eeee251eac6927419ca643102c4faccaa1091360cc9dd6f6f190c39ff6913e"
   end
 
   depends_on "node"

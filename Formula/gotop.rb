@@ -6,12 +6,8 @@ class Gotop < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7580ba306a6bf56a4a40da70c0afa157d4ebf6572f64161e67d281a8ebf4357f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "557c44142c91a5fe28a7af8b51e765dd53b578c6e3d9f8574bafc5199fd1a081"
-    sha256 cellar: :any_skip_relocation, monterey:       "ea38313cce0eceb5ad7b6fe59fdee06339e94077a4d52016ad3cd85e11957c38"
-    sha256 cellar: :any_skip_relocation, big_sur:        "58d98a1062f1f11090072f7b51870bfb013034ad8fe40c98cf891f76c39ce1ae"
-    sha256 cellar: :any_skip_relocation, catalina:       "318b906ab5b5239d105a3acc6d5bd9a28bea876d1938de5b43add11395880a55"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4311e6151f0613eae23fd73f9f2b9cf3a26d4968693e1b494ee7231bc464457d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gotop"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "909173cc6e2c14acf65477d065b4d7466ad06320ef9f90a75617e92596123730"
   end
 
   depends_on "go" => :build

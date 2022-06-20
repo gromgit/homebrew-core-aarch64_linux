@@ -6,12 +6,8 @@ class Run < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "61afb39ed4512657d3730411ad1e049f2b207f7c3f991eb63f992130f675a0a1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "61afb39ed4512657d3730411ad1e049f2b207f7c3f991eb63f992130f675a0a1"
-    sha256 cellar: :any_skip_relocation, monterey:       "df7755e6e2254ad7b93a4dd7a8e001c2e7606bce62708ac799c89532ba3c1324"
-    sha256 cellar: :any_skip_relocation, big_sur:        "df7755e6e2254ad7b93a4dd7a8e001c2e7606bce62708ac799c89532ba3c1324"
-    sha256 cellar: :any_skip_relocation, catalina:       "df7755e6e2254ad7b93a4dd7a8e001c2e7606bce62708ac799c89532ba3c1324"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bb930fec55039f0cc35d8e24752eb30734692d476f9721e82841ebfea78e6e88"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/run"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "643cdcabbeb640d974eda4cc6123f98f873f00d995b40187111b90ca65ccf02c"
   end
 
   depends_on "go" => :build

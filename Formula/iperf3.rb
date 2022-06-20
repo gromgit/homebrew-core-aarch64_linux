@@ -6,12 +6,8 @@ class Iperf3 < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "07f43ee08140b9ed415ef4c84d58f0a0242ca4eb11bd5d9691e55066e341dbfd"
-    sha256 cellar: :any,                 arm64_big_sur:  "516f56b84472047a2ba899046ba1e71863ade4f4fb6cc0838ab863b576bc8157"
-    sha256 cellar: :any,                 monterey:       "3d6733f84c93d152e2ea210b3797a789e056b12f0a67ea8a615eb72c9eedac8e"
-    sha256 cellar: :any,                 big_sur:        "b23050ed3f6e8fd6cf43597446fd172b612a2ab539c1b71210ad45182563fb3c"
-    sha256 cellar: :any,                 catalina:       "b3d74087ec104d3b95e491257d647a3e665ed3f5ff63ba176fc4d3d27e253f8c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b3d05c024cb3e1a062734db9bff61758385b9058aefb896330c9136f37754aff"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/iperf3"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e0d4e0a0ac413bf68d84c6d3ac76d9a3dfb5eed18a750ad7d878198f679313ed"
   end
 
   head do

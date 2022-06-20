@@ -8,12 +8,8 @@ class Teller < Formula
   head "https://github.com/SpectralOps/teller.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e03506d29d84ca8f1fb3c5879431565685f97177959d121482c7db7f826014ee"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "911c4a04c20d3a8bec9536f4ad8dc11f030979602d961b418a0d96b12969c738"
-    sha256 cellar: :any_skip_relocation, monterey:       "92590bab2b1e69c0a48846611f3cf1e0a499998e3aeacd9d81c5f184fbdd0ad4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8abb8a4cab114295de4eed3acaa37aa22ee7b89a59808f0c8a8bdaad5a61f4cd"
-    sha256 cellar: :any_skip_relocation, catalina:       "19abfa6a5deba36d232ba4560b3ddd67e4cb1ca289d0f1b3d15d0ff61c539aa0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "76c90f4033c77db399e97c9d4cc18a924ed1d5b62506eb2caa4cc8a0ec1ddaf2"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/teller"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d4be44e2fc25091495eb3dd6eb43b9292067facfc3d28d5b5a834b881d95fd1b"
   end
 
   depends_on "go" => :build

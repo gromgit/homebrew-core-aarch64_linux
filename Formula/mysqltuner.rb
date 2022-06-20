@@ -7,13 +7,8 @@ class Mysqltuner < Formula
   head "https://github.com/major/MySQLTuner-perl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "11245f159d339a4e3df8759f3e71e15ead6a6388b9c4711b3b9c3cdc7480b535"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "11245f159d339a4e3df8759f3e71e15ead6a6388b9c4711b3b9c3cdc7480b535"
-    sha256 cellar: :any_skip_relocation, monterey:       "b120b6a66070df0ef336ba1fbc5ecb419d95a80c688307370681fed4d3534083"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b120b6a66070df0ef336ba1fbc5ecb419d95a80c688307370681fed4d3534083"
-    sha256 cellar: :any_skip_relocation, catalina:       "b120b6a66070df0ef336ba1fbc5ecb419d95a80c688307370681fed4d3534083"
-    sha256 cellar: :any_skip_relocation, mojave:         "b120b6a66070df0ef336ba1fbc5ecb419d95a80c688307370681fed4d3534083"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "11245f159d339a4e3df8759f3e71e15ead6a6388b9c4711b3b9c3cdc7480b535"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mysqltuner"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "15f46f2baf31667d6161e6345075e0fb9a037fede337d1cf4abe6173c27c47bd"
   end
 
   def install

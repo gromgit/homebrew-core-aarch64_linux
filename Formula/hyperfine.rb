@@ -1,18 +1,18 @@
 class Hyperfine < Formula
   desc "Command-line benchmarking tool"
   homepage "https://github.com/sharkdp/hyperfine"
-  url "https://github.com/sharkdp/hyperfine/archive/v1.14.0.tar.gz"
-  sha256 "59018c22242dd2ad2bd5fb4a34c0524948b7921d02aa79419ccec4c1ffd3da14"
+  url "https://github.com/sharkdp/hyperfine/archive/v1.13.0.tar.gz"
+  sha256 "6e57c8e51962dd24a283ab46dde6fe306da772f4ef9bad86f8c89ac3a499c87e"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/sharkdp/hyperfine.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "61e64962c77b0387eb137dd42ed6c38dc0a4a610bb273b9f98c31be53f3ce5f2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "31b4e01149900865afa6f5687beb754a310502206239ff757dc6ce887d85655f"
-    sha256 cellar: :any_skip_relocation, monterey:       "e9f20fa5e53757fdf3030470460bcd436584aa2ad1781b8405dbc8c5f6b93ec9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5c3c41d5640e7a8a059720d9cb47ccf9c876e5c5c6c81151b0cf50dbcf3b8b7f"
-    sha256 cellar: :any_skip_relocation, catalina:       "010f1150a75973eb265055af64412bb2f5a51ffbafc5ca122b8f45cd092b2b0b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f829610b0d1976c1bbd34aabb8c73eab362702b6045d3266bdcf970bb1fe487f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "afb094b1970220105faeb1fc7196e5bfdca61fb061ec494383887c782bbe886b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9d24a5a1eca94b1559dc0703e9691ce73798af668dcfa0242603c73e7ab6f851"
+    sha256 cellar: :any_skip_relocation, monterey:       "16d940f6bfb8d398c131765df6feaa3da2527b4db09a938961f1b71764e8e872"
+    sha256 cellar: :any_skip_relocation, big_sur:        "00afb7b8800cbda436e644d81d6fd507e6fc320d31e36f6fbf4eb00959ee8efa"
+    sha256 cellar: :any_skip_relocation, catalina:       "0c75bcc04f21e239b71a8a37b5f92e23b714253478b7d132458204932d9ab3a7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6718cdf9aa2cec11e42b88ea8175e92bee9fc1977ec84db1880577772d072934"
   end
 
   depends_on "rust" => :build

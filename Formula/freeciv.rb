@@ -1,8 +1,8 @@
 class Freeciv < Formula
   desc "Free and Open Source empire-building strategy game"
   homepage "http://freeciv.org"
-  url "https://downloads.sourceforge.net/project/freeciv/Freeciv%203.0/3.0.2/freeciv-3.0.2.tar.xz"
-  sha256 "7407ea1a08267b1c5ee3439dc2db5c2d7b90ece7fcc3664ca2ad594435a57175"
+  url "https://downloads.sourceforge.net/project/freeciv/Freeciv%202.6/2.6.6/freeciv-2.6.6.tar.bz2"
+  sha256 "7bcfe5dd3c081122e7cde7cdb24f57c3681d6a9667496faed207a91ac3165811"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -11,12 +11,12 @@ class Freeciv < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "07a23ce564fdd66cfc586ece9c48e74b9d10632edd2a2a8092fa93b7ce1927da"
-    sha256 arm64_big_sur:  "bd9fbf2db4db09448e7602c7de80a1c1f041bb3c143cbd6bdeefbb48c4109ea9"
-    sha256 monterey:       "d17179050529f4328de7850f4502d64df58eca76186a65890737935efec273b1"
-    sha256 big_sur:        "cd783c18e420cadf929b24f5f490c3ba3b27d6749909b86efd9e52dee39a8456"
-    sha256 catalina:       "9d1d460f941eb72d1ccd84a2eebaf0d0f124e1c6cce3c4c71a79061b06626f97"
-    sha256 x86_64_linux:   "31600bb2ec19192111e6e7917b38f5c63a9a6a5f30a3ba8e1ff03655d670f728"
+    sha256 arm64_monterey: "d0cd6013001decd5b74d1ac8d7bba8d6e070bb2c27ed8cce5a41622d13aef267"
+    sha256 arm64_big_sur:  "3cb7282942ed5e1c4b4d7e48cbb3ba57554f597cd77e4a55b57b002102e6c90f"
+    sha256 monterey:       "22fe64446282ce7df3f109ea14322c7f33e28dea831fea3a7e1d7df0cabfa986"
+    sha256 big_sur:        "09cb343f164c953f7c6c44e24fa706f35b64e21ff711a930a10e0c4336ad94bd"
+    sha256 catalina:       "c3a9840643191f575c69eff922381cd713a2e2a7249a05f752edd8e3a4ebf673"
+    sha256 x86_64_linux:   "b481371af3c4dcd5c8ab1a4894b4d2a85d2f4953e8c72de4f757fbb3b9887af8"
   end
 
   head do
@@ -79,7 +79,7 @@ class Freeciv < Formula
 
   test do
     system bin/"freeciv-manual"
-    assert_predicate testpath/"civ2civ36.mediawiki", :exist?
+    assert_predicate testpath/"classic6.mediawiki", :exist?
 
     fork do
       system bin/"freeciv-server", "-l", testpath/"test.log"

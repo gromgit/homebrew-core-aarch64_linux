@@ -1,18 +1,14 @@
 class Fn < Formula
   desc "Command-line tool for the fn project"
   homepage "https://fnproject.io"
-  url "https://github.com/fnproject/cli/archive/0.6.19.tar.gz"
-  sha256 "3e723259ed038cedfcefb9110ea970ceda3bab9e493afd1ba48fa24291f2779e"
+  url "https://github.com/fnproject/cli/archive/0.6.17.tar.gz"
+  sha256 "7fbad5f089aa083aa3d2ab891cc1754457d3a0ccad2ed1e91af40f1ac5d6a110"
   license "Apache-2.0"
   head "https://github.com/fnproject/cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8407f799cec4723d7244dec71ba925e87f91a2a316f8a9e83d9a3fd5eabd36d1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5a56d0797435cdcab945f3db2f0c4c4982bff6867b53140f734450b0207e6713"
-    sha256 cellar: :any_skip_relocation, monterey:       "ee1807449afb195bfbbc63e0233916e4a8a1ed30d5e87279ce40501b5e0a868d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "01e654dcec06074346dd45b985b116f494524f3401d8d1c975b514491b2eaca6"
-    sha256 cellar: :any_skip_relocation, catalina:       "a891436e41183f189e808b9095cfe2883cfc107ee0adcc2fad5bce3b17b266e9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "385fda78d9f806ca3d3d175aa6b088d64016deed970a175e0e3282843f2ad72a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fn"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8b3771b15f448a5a5b75fa3fd8a1037eb993f9adee4ad3cb289f337bcfc1709c"
   end
 
   # Bump to 1.18 on the next release, if possible.
@@ -39,7 +35,6 @@ class Fn < Formula
         }.to_json
 
         socket = server.accept
-        socket.gets
         socket.print "HTTP/1.1 200 OK\r\n" \
                      "Content-Length: #{response.bytesize}\r\n" \
                      "Connection: close\r\n"

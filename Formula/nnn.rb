@@ -7,12 +7,8 @@ class Nnn < Formula
   head "https://github.com/jarun/nnn.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "050519b7b5d2227fd0fe1774c8769a4c0440fd74b6b32093c46399d639a6d8cd"
-    sha256 cellar: :any,                 arm64_big_sur:  "2cea5e82e5f9269c55eb1bf0e72d8a96241e5807a157fbb48a995c9090b580d8"
-    sha256 cellar: :any,                 monterey:       "789d680be159aa6ea077d4c11a2a5eb255eaf8073e77b3fb609e9647abe313e3"
-    sha256 cellar: :any,                 big_sur:        "2e7e159ae741f0c851a8be6d33c5bd4dba26ec88a1685e7f8b43ced711cfe4dc"
-    sha256 cellar: :any,                 catalina:       "1b19cd02da90939a63955cda3de89dcd6575fede984a3494720ba7bb082be503"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d132f9a3c7fff3470cadbe04b403c4d484d1ea3957274756904b646b7c7f6d7d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/nnn"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4aeefa714a917da72f0094f9af62788d30ac528d5ce73df188f2eb2de4e4e0f6"
   end
 
   depends_on "gnu-sed"

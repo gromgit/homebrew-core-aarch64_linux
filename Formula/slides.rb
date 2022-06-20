@@ -7,12 +7,8 @@ class Slides < Formula
   head "https://github.com/maaslalani/slides.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a0fdb1f344d152e9aa2a9621f70d9116ecb8512db0f7f1aca373d85f568de256"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1b5ee66a9089e7d7a737ab6e94be233da40fba191e9281fb67d1eef096a7dc4a"
-    sha256 cellar: :any_skip_relocation, monterey:       "5ccfc7cbbac37cf3ed85e21ac571a324fe4b63be0e273eb1755237fcff0324b4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c1755557a55f16eeeaa3e8fb8b82dd793929bb72d8ad00ed245d54ac1433a7de"
-    sha256 cellar: :any_skip_relocation, catalina:       "71cb0d2abac4454af11e6d412452bbe2cbe8351a5d6041b7f16fc9805dfaa1a2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7b3d3223a79ec3585b538a21bb7d7a6f7de7a7cbf17c6709f060ed7f93705a6c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/slides"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ad3de7793dfa21b13789be983a2ef487ea875f8b43e119e41863f9a84684b55e"
   end
 
   depends_on "go" => :build
@@ -40,10 +36,6 @@ class Slides < Formula
     r, _, pid = PTY.spawn "#{bin}/slides test.md"
     sleep 1
     Process.kill("TERM", pid)
-    begin
-      assert_match(/\e\[/, r.read)
-    rescue Errno::EIO
-      # GNU/Linux raises EIO when read is done on closed pty
-    end
+    assert_match(/\e\[/, r.read)
   end
 end

@@ -7,14 +7,8 @@ class Cig < Formula
   head "https://github.com/stevenjack/cig.git", branch: "master"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "48e80e3f418f825caceccd69e9ec911f5c03b8fa7f38883edfd66d353f70a481"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2d4f345393a0553e40003b46523a07e2bb0162bba0309ca9c0d322f606e73b76"
-    sha256 cellar: :any_skip_relocation, monterey:       "fbca3e3336ec9a9848091d2b1845a48dc915ae798da5e1d54fe6aa4ee2261da6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c41c70e517158f1a31bb4b29a6fa01b12570001353b8800d55aadd4ddc99080e"
-    sha256 cellar: :any_skip_relocation, catalina:       "3ccce3238efd259041dbb0f0427d5ac06cc4dfafdfbfd336ddd0023e02e9dd7d"
-    sha256 cellar: :any_skip_relocation, mojave:         "9cf50d9418885990bed7e23b0c2987918d63bef3e7f3e27589c521b6b73160bf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3cda091fe20f715097967b89ee16f611d3f26faac9eb4d3f7861ec5d9cb91201"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cig"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "27ef1325c1bd44451f4630d744283a18ffe3c7024a738992a275eed2a517ae39"
   end
 
   depends_on "go" => :build

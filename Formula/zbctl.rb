@@ -2,18 +2,14 @@ class Zbctl < Formula
   desc "Zeebe CLI client"
   homepage "https://docs.camunda.io/docs/apis-clients/cli-client/index/"
   url "https://github.com/camunda/zeebe.git",
-      tag:      "8.0.3",
-      revision: "58aac394e8994116c15e7ce10774567665ce0912"
+      tag:      "8.0.2",
+      revision: "1050d923bd8e891c630458f4f8e47338d8c239bd"
   license "Apache-2.0"
   head "https://github.com/camunda/zeebe.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c5b664e70d1ffb74e5f05637a0486c7e6df44a1c1a10b3d4f7290b5a0bc02808"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c5b664e70d1ffb74e5f05637a0486c7e6df44a1c1a10b3d4f7290b5a0bc02808"
-    sha256 cellar: :any_skip_relocation, monterey:       "a4ef689142dc849dd089ab7d7a27801315ca99e1bc097a8e6e1042576aedbe55"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a4ef689142dc849dd089ab7d7a27801315ca99e1bc097a8e6e1042576aedbe55"
-    sha256 cellar: :any_skip_relocation, catalina:       "a4ef689142dc849dd089ab7d7a27801315ca99e1bc097a8e6e1042576aedbe55"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bec7c5bb6bd634cab2b507b8e45e6b17a160977424fb800f4906b8279fb2f542"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/zbctl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "58c6d48655926941271ed521b03bc54c1c9d784f55d53d3081d935bc51931443"
   end
 
   depends_on "go" => :build

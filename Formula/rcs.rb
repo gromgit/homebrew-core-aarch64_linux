@@ -7,12 +7,8 @@ class Rcs < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "579a458898062f0b99c455e69e93cbf4c2b5637ae72806d4ee74f4063f2a25ff"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b241d433eecdd7d01df54bafa597df65a42ad75866ece0a16d865a205c0660b1"
-    sha256 cellar: :any_skip_relocation, monterey:       "816051fa12300cd95e60babba5d4613e47f4c0c6fb426d520edf1f04914b91c6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cf4c810451ae3f5d2fe9ee983bce3c3d21573125bf55375a27e0dd7a7ff461f6"
-    sha256 cellar: :any_skip_relocation, catalina:       "46b57c5880786bbebf8e776acf35f6b95adb29cdda2198bf2abf6258a4367c97"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5bd4d79803732fe588d5cacf620d6e9216002d5d93acf6f0798a225174e2db28"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/rcs"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "801cc07ac264b1e519a04a1b6e5ee6f6e9ea648adf6d8e8932c6873e1e36c2a4"
   end
 
   uses_from_macos "ed" => :build

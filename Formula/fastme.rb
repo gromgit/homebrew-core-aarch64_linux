@@ -10,12 +10,8 @@ class Fastme < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ae1a14a4c05375918caea9cfd1ca10dd9da88b03368008678a77f234c907637f"
-    sha256 cellar: :any,                 arm64_big_sur:  "72fb7f3bf96eada63a931e8522a47d8ced80748908c36f4a38ab76004391a8ff"
-    sha256 cellar: :any,                 monterey:       "55e99ea2feaf54910f1db7f060e3a52ae05d178d3e302c8fe89006088e4c7488"
-    sha256 cellar: :any,                 big_sur:        "573b45beb5888133d6e5a2c276db19fec4cc6fbaf90c8ecf646a17d446775e00"
-    sha256 cellar: :any,                 catalina:       "737b04e925c4b5260eb7ea21c4207dd5e4d8be2424edb0694c2bc71c09c86a59"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2b47de3e8767c68a4cbb02e97a27ebd44eba20bca86a5c487a2a6edee29632c0"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fastme"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "214baad1a9cc85a58dfaeafa29fc8b05df6ad6bdc91fd27370c8e3f55a1859ea"
   end
 
   on_macos do

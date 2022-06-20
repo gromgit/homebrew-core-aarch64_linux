@@ -12,12 +12,8 @@ class Redis < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "79e59848cb1afb3107612980c29c85d321e8abec277983f42ab36ffb6cf8d954"
-    sha256 cellar: :any,                 arm64_big_sur:  "3229c802fdc70bf1f0b81678098045971997e13f6002ce724f83d3827a3fbe43"
-    sha256 cellar: :any,                 monterey:       "05a9eddf3ed94176ce4802f18f174f579209f298aa69131da1675833dde2f897"
-    sha256 cellar: :any,                 big_sur:        "767ba47c137bdce3ca32675bc6ae327df5fdaa9c62bd9f2968c779c7582aafb2"
-    sha256 cellar: :any,                 catalina:       "abc124047bc5e83dea48e57b1e178ace5fb33340d59b45ae965c3f9c6af8304f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e3b7252cb63246281ec69255603287c8a69aa139e21cf4d234ae2ddfe4befbe8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/redis"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ebf1f2e0ff6e61966f494e7b7dc481f7f30d4b1593baecdb5720a0ff3ec21043"
   end
 
   depends_on "openssl@1.1"

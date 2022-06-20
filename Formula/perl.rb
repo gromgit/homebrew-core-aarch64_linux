@@ -12,13 +12,8 @@ class Perl < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "4c53f42a2177a516381cf2cddde7cfaffecef66910af74379cbc10901779153f"
-    sha256 arm64_big_sur:  "8b55cc95c9de8bdcf628ae6d6f631057952fa8b0218da8ac61eafe4da65a8761"
-    sha256 monterey:       "dca9e216941d2c39b8222a49d4f3434d9773de6f9b4517b2fc148b221cf5e23c"
-    sha256 big_sur:        "5f86afbccd065524f92080bd7f35ffe6398b7dd40a8fef6f0a2a7982fd276dae"
-    sha256 catalina:       "de0127c56612bbadc3621217b586571cab897c001344b7a1d63302a4f8f74a8e"
-    sha256 mojave:         "2222c3f09bdcd10640720d2f52ba71e09408ead129bc77853b2fdf88fc381061"
-    sha256 x86_64_linux:   "cfd7c32f4076b6d9fbfb894bb6dc30cb14305a13e9b0fee93cd9b1ec2a768c92"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/perl"
+    sha256 aarch64_linux: "4c4241cd33ea8b6fcfa9c07d279a7dc81c096d295059b3b6dc41a4dc194eebc8"
   end
 
   depends_on "berkeley-db"
@@ -57,7 +52,7 @@ class Perl < Formula
 
   def post_install
     if OS.linux?
-      perl_archlib = Utils.safe_popen_read(bin/"perl", "-MConfig", "-e", "print $Config{archlib}")
+      perl_archlib = Utils.safe_popen_read("perl", "-MConfig", "-e", "print $Config{archlib}")
       perl_core = Pathname.new(perl_archlib)/"CORE"
       if File.readlines("#{perl_core}/perl.h").grep(/include <xlocale.h>/).any? &&
          (OS::Linux::Glibc.system_version >= "2.26" ||

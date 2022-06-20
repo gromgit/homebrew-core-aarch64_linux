@@ -25,13 +25,8 @@ class Ocaml < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "adef805a6bc9cee04a0fa19ad4b32df4c593deffc735b68868e19f1132330aed"
-    sha256 cellar: :any,                 arm64_big_sur:  "83124ec43f2fa8164999c65068618311151792f1ab426cb7991ff59c514a7918"
-    sha256 cellar: :any,                 monterey:       "29003a3851245246fe8a53087baa5bf1e5d58cef2d2ef6c7be9c22bb3d735c5e"
-    sha256 cellar: :any,                 big_sur:        "e61a0e13d18b0478e02c368644786f33ec79aa38ad8b737b520ddb991d37efdd"
-    sha256 cellar: :any,                 catalina:       "8c7667334e0d425c4f75366e29217402680afa4aa2f271574e64eb128db96d83"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "83fb8a37f5de730873eba6ecf6190297648fa3d1001370b6f63bf9c3fc29d3a6"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ocaml"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1d8372e6966024d2949989105b5a45ae30240f73d71342a0273a368b1fb943a2"
   end
 
   # The ocaml compilers embed prefix information in weird ways that the default

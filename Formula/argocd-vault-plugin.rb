@@ -7,12 +7,8 @@ class ArgocdVaultPlugin < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e2058ed2abe0a5c050f2944a22aa9049f68a3d3778c43d77329ea24e30e69985"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e2058ed2abe0a5c050f2944a22aa9049f68a3d3778c43d77329ea24e30e69985"
-    sha256 cellar: :any_skip_relocation, monterey:       "8913663ce63800efd24b419b70375ac8b2fd202162b2c5ba75e7c62aeb0192e1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8913663ce63800efd24b419b70375ac8b2fd202162b2c5ba75e7c62aeb0192e1"
-    sha256 cellar: :any_skip_relocation, catalina:       "8913663ce63800efd24b419b70375ac8b2fd202162b2c5ba75e7c62aeb0192e1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d1792a0e85386afe7070634fff7c70fefe1de375bab92fdca033641089581b82"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/argocd-vault-plugin"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b389fee815fb2522b6735a67d1c94804d8f71d6becfaea21af4e35b307d242c2"
   end
 
   depends_on "go" => :build
