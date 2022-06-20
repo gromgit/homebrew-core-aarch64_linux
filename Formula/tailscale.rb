@@ -2,17 +2,13 @@ class Tailscale < Formula
   desc "Easiest, most secure way to use WireGuard and 2FA"
   homepage "https://tailscale.com"
   url "https://github.com/tailscale/tailscale.git",
-      tag:      "v1.26.1",
-      revision: "5b81baa7d367d353707e87e0f9a8062cccc27c1b"
+      tag:      "v1.24.2",
+      revision: "dce2409b15837f30885405b8b1d27e7b7fd6bf7a"
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e7dd7184a0b9cdda568fc5dd5b41b2daf3a1042f08c768dfe000c13bdab5cf3d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6e641d9ccddf9d70a8a4043ac85b142c30b5b335967d23bff20355b56c74a18a"
-    sha256 cellar: :any_skip_relocation, monterey:       "0fc894500f25b5ee4c9b3e60e36eadae2cb3f09e31c47804db3990ccd5843107"
-    sha256 cellar: :any_skip_relocation, big_sur:        "92407e682aaabc36b2a89fccfb32bdec3132a9d0f1dfd507bd924d6f037f375e"
-    sha256 cellar: :any_skip_relocation, catalina:       "44007b40fbb71265d686e19e4ce22feb2870a46c98871167282451ba4bc06353"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fc27e4a665a6885eb4c3cc9216e2fd766ac6b52e049640043a9b5cf7beca93f8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tailscale"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "af65eb1c5064d33630f1d27a655da498c4fe9a4e96b0c1610fb0fea2f44e53ad"
   end
 
   depends_on "go" => :build
