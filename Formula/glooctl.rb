@@ -4,8 +4,8 @@ class Glooctl < Formula
   # NOTE: Please wait until the newest stable release is finished building and
   # no longer marked as "Pre-release" before creating a PR for a new version.
   url "https://github.com/solo-io/gloo.git",
-      tag:      "v1.11.15",
-      revision: "bd20dfcd222fc720cf0a4f9569477fb1bf4a4469"
+      tag:      "v1.11.9",
+      revision: "7c18dfacc60e1b82262721d58a7d23f022d995ac"
   license "Apache-2.0"
   head "https://github.com/solo-io/gloo.git", branch: "master"
 
@@ -15,12 +15,8 @@ class Glooctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1ca43faf7e54b0a149d25d1c803b9a56e2e27eba7136c5f95cfee46cd1e9e97b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7ca70fca7c41fcaedde32abc6b2e87c5fe8c11c2d6f31679227faac13a2d8962"
-    sha256 cellar: :any_skip_relocation, monterey:       "aeddf009588968eacca410454ba3a6dba9bd31efb1d5bc369714f0cdfee29319"
-    sha256 cellar: :any_skip_relocation, big_sur:        "73023be63831171ca191f0a87e5799fdb5123a2ed2a1f68c5f545b2156999bff"
-    sha256 cellar: :any_skip_relocation, catalina:       "1f242555e382cea39a1221a47b90f6d81bb1872dc2fadc78ec1f92f7e57af138"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "20f0d76c39ecb34cf87e6359331944786f8fe3fefb9b29b7c198e1284631b280"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/glooctl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c2351292f94479d3fd8456f13c633464874c7138c1c55665c4773f8d727c1acd"
   end
 
   depends_on "go" => :build
