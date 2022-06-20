@@ -2,8 +2,8 @@ class Flyctl < Formula
   desc "Command-line tools for fly.io services"
   homepage "https://fly.io"
   url "https://github.com/superfly/flyctl.git",
-      tag:      "v0.0.334",
-      revision: "5142958670b403b18757c19767124238a905e0a8"
+      tag:      "v0.0.325",
+      revision: "da2b63810fe3a6f777cf1ac06a2f431ee583fc21"
   license "Apache-2.0"
   head "https://github.com/superfly/flyctl.git", branch: "master"
 
@@ -13,12 +13,8 @@ class Flyctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f41c661b8ad47bc8d63c0165a44a20ced839081c261fe7aebd70a07e6e1d1afc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f41c661b8ad47bc8d63c0165a44a20ced839081c261fe7aebd70a07e6e1d1afc"
-    sha256 cellar: :any_skip_relocation, monterey:       "9bc7d340f22bb5fcdc6e72dbf3d46bd892273500eedec6a34f37bfaaf73f9f19"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9bc7d340f22bb5fcdc6e72dbf3d46bd892273500eedec6a34f37bfaaf73f9f19"
-    sha256 cellar: :any_skip_relocation, catalina:       "9bc7d340f22bb5fcdc6e72dbf3d46bd892273500eedec6a34f37bfaaf73f9f19"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b2987ec2dcea5a21c3a3c89290abfe5e7ea97c61cb8c69826a1983c6832201d5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/flyctl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "62a03ed82cc7e5cd53f2ddcc45ffb6efaeadf2c2b907158efb5d8a0c7525cd0a"
   end
 
   depends_on "go" => :build
