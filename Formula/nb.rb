@@ -6,6 +6,15 @@ class Nb < Formula
   license "AGPL-3.0-or-later"
   head "https://github.com/xwmx/nb.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "da16faa9f1367225d86a4e92705fbfef1ace28c9a897256d7cb13f06deb40b5f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "da16faa9f1367225d86a4e92705fbfef1ace28c9a897256d7cb13f06deb40b5f"
+    sha256 cellar: :any_skip_relocation, monterey:       "1114f1f11aec2e5f7ee89f1949b09008e5d93a4e7cf02e35504ade6366c908d1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1114f1f11aec2e5f7ee89f1949b09008e5d93a4e7cf02e35504ade6366c908d1"
+    sha256 cellar: :any_skip_relocation, catalina:       "1114f1f11aec2e5f7ee89f1949b09008e5d93a4e7cf02e35504ade6366c908d1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "da16faa9f1367225d86a4e92705fbfef1ace28c9a897256d7cb13f06deb40b5f"
+  end
+
   depends_on "bat"
   depends_on "nmap"
   depends_on "pandoc"
