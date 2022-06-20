@@ -34,11 +34,12 @@ class Coin3d < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "6e90d8890b3fb62e64c230cf6d18e8421cdfeb3f32566f53bd2922d695e30f43"
-    sha256 cellar: :any, arm64_big_sur:  "52a07abdd5d902857a565c483dba9873b87e2b62ec76d22f0c7313bddce93b8f"
-    sha256 cellar: :any, monterey:       "405ae02aa2ad54e90eaa4a027a293952dd8a275709a103eeb5660cfbb3660fdf"
-    sha256 cellar: :any, big_sur:        "a549965ef49f10d7869ea3ff334d7872da6ea7c9c2251900212c2153db235cbf"
-    sha256 cellar: :any, catalina:       "993bb8ae8ce7ad3e2622857e73a9a5af18e06b18cd34296f6c028d2a82872edc"
+    sha256 cellar: :any,                 arm64_monterey: "6e90d8890b3fb62e64c230cf6d18e8421cdfeb3f32566f53bd2922d695e30f43"
+    sha256 cellar: :any,                 arm64_big_sur:  "52a07abdd5d902857a565c483dba9873b87e2b62ec76d22f0c7313bddce93b8f"
+    sha256 cellar: :any,                 monterey:       "405ae02aa2ad54e90eaa4a027a293952dd8a275709a103eeb5660cfbb3660fdf"
+    sha256 cellar: :any,                 big_sur:        "a549965ef49f10d7869ea3ff334d7872da6ea7c9c2251900212c2153db235cbf"
+    sha256 cellar: :any,                 catalina:       "993bb8ae8ce7ad3e2622857e73a9a5af18e06b18cd34296f6c028d2a82872edc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "389a8a6add2f83c9ec9a6cbeba3d7f9cc6762c79d7be1ee1b41de4f31c1b0ccb"
   end
 
   head do
