@@ -7,12 +7,12 @@ class Direnv < Formula
   head "https://github.com/direnv/direnv.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e6555b52c58106d8bd62b977a81afcaf27c81d0c2766c64c22b80ca47605f671"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a383e5b7b3e1e72cc82912a0c21e1db583f7dd3a9728275cc0398361d3a66dfd"
-    sha256 cellar: :any_skip_relocation, monterey:       "ac772724974989b255e2bc9697301f964b784f6f4d20a9248aa9b4483d80dd20"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9ad5ccf63f94ed6a549bfec10cfbcc34893491270a237cc2fde8cafffd5aae16"
-    sha256 cellar: :any_skip_relocation, catalina:       "9836be8b0188a40f23030c7746ff559f7cb3e285bc864dbfc3dff46fc5150134"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a461d580cce79e77f5adcf704746ee71e62cf5afe9af7640f4fc708fcd781357"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "567a8c1ca45ffae17d4901b0aa729be8866b6cb93ee8224da98cacf36f73ed69"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b21230f43123e6b1a832f87d30f040d9f4684bb19f62f69f651bb24ae1cfaaab"
+    sha256 cellar: :any_skip_relocation, monterey:       "68f7b9093d44fdef4210ffeaa8f88e8fa27bef356b4c8b2d4fc7749aab1d2614"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f5dc03f040b2638a14e30c9fdeaaed616084539c0360fc916b53c3c8206259c4"
+    sha256 cellar: :any_skip_relocation, catalina:       "2edc8e221d28db3da039490d4728d3c5ac7ce38d5274418b4d5f0ca31dfc0b28"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c0356bf7cc43d0a1eb7777e7ed390f47f9dd8fb51cc480c8fb87fcde5fba1b4a"
   end
 
   depends_on "go" => :build
