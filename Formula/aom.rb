@@ -7,12 +7,12 @@ class Aom < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "621aaeb000c4ad3df7cf62af3a22f53e38d9cf0714b52cc23ee3406949c5ad0d"
-    sha256 cellar: :any,                 arm64_big_sur:  "76b0b72beb6975e6f8ebbefc256f01c2b6466e210c93172c39ef35fde3945aac"
-    sha256 cellar: :any,                 monterey:       "0a522c17ca7a108aa44860a549740f277fc6a1118b36df0bfd846e2d17fb80c8"
-    sha256 cellar: :any,                 big_sur:        "e5f4fba0b45d08db7ffe9e06884cb163dd027b18e8ef5442cc5d4d55b6489f44"
-    sha256 cellar: :any,                 catalina:       "10be5b52fb09dc2126ac5ed93e4caa805f9224833b665aebe79c2c3d40b51e0d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c59073520f70de15996b3af4c0513ff1b4bde89fb33a810a9dd7a8348afa553e"
+    sha256 cellar: :any,                 arm64_monterey: "f16849b3bb161a0695d5bb6677799f4d87e1db60fbaf6719f1ea0a996847d029"
+    sha256 cellar: :any,                 arm64_big_sur:  "d73c1ddd2cfdc4c53f6362b5bbbf70a6f127d5eeae5039e77a36b6fca5bcfd92"
+    sha256 cellar: :any,                 monterey:       "a06dca8e5ce52a095f6aca1dbbc5c1840465b16f7935f671e1eb0139479ccec9"
+    sha256 cellar: :any,                 big_sur:        "ba4000b61ee2966a7064fc98aea0e5f8ae231dd249edc352fb27e01756c6cac6"
+    sha256 cellar: :any,                 catalina:       "9d64c9e660e8b21ee46544e7542eb642590d1f3da72c8d107f3b3b74b362d978"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1824239b9ffaf9235c1bc73c6dddd8c53219bbe5a5bf041a143bf54c7ed58518"
   end
 
   depends_on "cmake" => :build
