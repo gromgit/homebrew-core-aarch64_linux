@@ -1,9 +1,9 @@
 class OpensslAT3 < Formula
   desc "Cryptography and SSL/TLS Toolkit"
   homepage "https://openssl.org/"
-  url "https://www.openssl.org/source/openssl-3.0.3.tar.gz"
-  mirror "https://www.mirrorservice.org/sites/ftp.openssl.org/source/openssl-3.0.3.tar.gz"
-  sha256 "ee0078adcef1de5f003c62c80cc96527721609c6f3bb42b7795df31f8b558c0b"
+  url "https://www.openssl.org/source/openssl-3.0.4.tar.gz"
+  mirror "https://www.mirrorservice.org/sites/ftp.openssl.org/source/openssl-3.0.4.tar.gz"
+  sha256 "2831843e9a668a0ab478e7020ad63d2d65e51f72977472dc73efcefbafc0c00f"
   license "Apache-2.0"
 
   livecheck do
@@ -41,13 +41,6 @@ class OpensslAT3 < Formula
       url "https://cpan.metacpan.org/authors/id/B/BI/BINGOS/ExtUtils-MakeMaker-7.62.tar.gz"
       sha256 "5022ad857fd76bd3f6b16af099fe2324639d9932e08f21e891fb313d9cae1705"
     end
-  end
-
-  # Fix failing test due to an expired certificate.
-  # Remove with the next version (3.0.4).
-  patch do
-    url "https://github.com/openssl/openssl/commit/338123cd95c83bddd2f54eb28ef2c5565e1766cb.patch?full_index=1"
-    sha256 "ef4fc492c841b61572f4d2031a3d707019aeb67d89d539287699c326857187fc"
   end
 
   # SSLv2 died with 1.1.0, so no-ssl2 no longer required.
