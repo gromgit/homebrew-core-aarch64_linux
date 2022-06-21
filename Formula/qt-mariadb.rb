@@ -10,12 +10,12 @@ class QtMariadb < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "1cacdb48e2abaf6113b124e20e5bcb27aaa1563131773bbdc2b4b4b9fdb975fc"
-    sha256 cellar: :any,                 arm64_big_sur:  "991b5dc7b2c45e72ef4954d75eca4e9f5ad04490a3587c3f5c1679afaea5a762"
-    sha256 cellar: :any,                 monterey:       "af7d00c613b7e3d5f2a3fede78b95ef84bbcb1946407ef81576cd84aa13753bc"
-    sha256 cellar: :any,                 big_sur:        "8c941b7941ff85541f32d6803e6f59ebca9bfccdddbeb00743b7e82a764bef26"
-    sha256 cellar: :any,                 catalina:       "8810ea19b26d89585e3ac18b377694820625059d561a024117a2f94f61aa3cd0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "47ed48b5567a90e1ed2f8210652eac95267527ef0529fe82dfe511f09fc60c87"
+    sha256 cellar: :any,                 arm64_monterey: "ddcc56609aac6a7f51321b5146f79cd480f710667d772cae4623b848c6b05ae1"
+    sha256 cellar: :any,                 arm64_big_sur:  "7b981f583ed9ef954693c2ee462fefd88167be357ff9f95d4de1d95fe3139016"
+    sha256 cellar: :any,                 monterey:       "09caa9715076965100e7aea3057b00bce8770a4c7413c29956af295fd7da5beb"
+    sha256 cellar: :any,                 big_sur:        "2ff277bc285c8c20caf5ebc7ff577437d7ee36a161c9464f14d50313d0a4b557"
+    sha256 cellar: :any,                 catalina:       "f595e2df35097e9b38f600f22f6d82a178030e850701208ddc696941c6c50e26"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6bb0fc2214d7ca46464701b222244d09662a5053fba6d78d99825597c4a24ebb"
   end
 
   depends_on "cmake" => [:build, :test]
