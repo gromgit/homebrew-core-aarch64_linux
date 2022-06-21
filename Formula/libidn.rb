@@ -7,13 +7,12 @@ class Libidn < Formula
   license any_of: ["GPL-2.0-or-later", "LGPL-3.0-or-later"]
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "b36c5a702e23a79b713fa8ef1cde2f45f3547507146928d25649e34704b89810"
-    sha256 cellar: :any, arm64_big_sur:  "7b3adb7115f8e786852ce270f633f726525f0017ce2f44b99b1b05c42c672c25"
-    sha256 cellar: :any, monterey:       "97ae6e40039b1abaa15ea01851a407c6330ece0687f436fcac14f2ed1ed7bfee"
-    sha256 cellar: :any, big_sur:        "edf0fcd338457708fb6ee986f85c380b744d7ea7b9e03df1bec892959d2a9e0d"
-    sha256 cellar: :any, catalina:       "ce069c2b604d6dd0194541bc510a43d0e1eecacd816dfa4d2f537dde7de3cd5f"
-    sha256 cellar: :any, mojave:         "1e5c4afc066727df497031e2cefbd012fc7b5b4e4cee793cd4b84f68bf9ff3de"
-    sha256               x86_64_linux:   "cdebd0a0f73d6fe29f8ef539aa1be4a8f576245aa07697de123bf436bfdd24d0"
+    sha256 cellar: :any, arm64_monterey: "225d0f361fda224a4f91744621be1d196501579b4249dc9da3b8a2e1d5520fad"
+    sha256 cellar: :any, arm64_big_sur:  "f87b79418fded585630ed8b772b5f43f4d2cf1a3ceff505411511556af36beba"
+    sha256 cellar: :any, monterey:       "0027fc47b2b097d477126cab21c098a1eb29b587ef0e9cc63907ba3b16c3016a"
+    sha256 cellar: :any, big_sur:        "729a7fa836613b1a98070aa9286021eb9fbbfe6f0483826c6e31c4d3f1e8814a"
+    sha256 cellar: :any, catalina:       "305fdbc5c8aba3bef28137bee2cb8f6b8c10d40d8cb028f1ab7772e02da77d41"
+    sha256               x86_64_linux:   "ca9fe02b42d2d5b5cd5ec1eebb9e575531d715a5b91d95617eea28f4d3d72e0c"
   end
 
   depends_on "pkg-config" => :build
