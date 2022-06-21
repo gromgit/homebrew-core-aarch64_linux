@@ -10,12 +10,12 @@ class QtMysql < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "5828ab0b405aa5e32b93716b16259b28a5da02b5cbb9b781a63c8872bf0eb23a"
-    sha256 cellar: :any,                 arm64_big_sur:  "3b4eff7319426f1ff988a229adabc95e0a1a52eadcf6c2787fa4b6f597d0ff62"
-    sha256 cellar: :any,                 monterey:       "f4073d7ae270b93ea54caf93b7c59b8ce2145bfb3c1b58d867bb6544370b23f5"
-    sha256 cellar: :any,                 big_sur:        "e73c73114bb0d5b0c365d61d30d1876f745d2eaf9a6e9410310bd0ec5e574647"
-    sha256 cellar: :any,                 catalina:       "c6af0ad7d52904689e0ed1fe3a1b6c86bb53724021f9b5fe4602c47dc116f058"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "af9b5565cf77a66a10092c586f14f8f3b12d9f2df955142b82d348e391f511ab"
+    sha256 cellar: :any,                 arm64_monterey: "5bb2cf3bd3faf87da49f399ecfcf80ca56e9d56de57ef4fbd8c52fcf61a3dce8"
+    sha256 cellar: :any,                 arm64_big_sur:  "02a39cd26de15a46abecb62b666d7d5af8c9460e2405316299e8f24801bf2394"
+    sha256 cellar: :any,                 monterey:       "f10db7a54011ab4101a5e7a5a4ae6de3567b4c2dd6121d3b593e3a1cff2c5144"
+    sha256 cellar: :any,                 big_sur:        "9f09d1a4229164d698a06e623259495797fff4e9408a5de7916c4b9d6c16cf58"
+    sha256 cellar: :any,                 catalina:       "7d1874d375a1b0dc77263513283e8f9b753b2496c92d65d1b3816338a146bde8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fa5aa3053025c0761003a50feb9cd7c0ac19bd505b75ddec4d2e36c679829f61"
   end
 
   depends_on "cmake" => [:build, :test]
