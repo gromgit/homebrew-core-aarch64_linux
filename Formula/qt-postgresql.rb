@@ -10,12 +10,12 @@ class QtPostgresql < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "5dc1ed66e02508064d24bbdf432c3cb205ec0055204a84bdda83071a608d589a"
-    sha256 cellar: :any,                 arm64_big_sur:  "fb0cd0629acc4aa3735f1a0a2169e56840d360ae33785c9e04be4fe3c03298ec"
-    sha256 cellar: :any,                 monterey:       "0f916625010d5d0d4b2f086ec41522fa6e767843441c1558372dda1117addc99"
-    sha256 cellar: :any,                 big_sur:        "2e673c2f6568a60145ebb624ea7e4e1cbe9bccd21fe9c321fa96625681caa943"
-    sha256 cellar: :any,                 catalina:       "c8291bbeeba79646969da77c4212ff9c2ff6bec54836862e6d6190804c1555d9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4785e70301dd1c19454b4b886eeadecca7f3993606f42eefe121006ba95b0058"
+    sha256 cellar: :any,                 arm64_monterey: "c37f34707f8229699684f741fce8e555a290f7903f0fb7b3e1514df9fffd2184"
+    sha256 cellar: :any,                 arm64_big_sur:  "df4c92846a5239140c4b150716cc13925a9b4c168198c07d4c9a195aa65583c1"
+    sha256 cellar: :any,                 monterey:       "fc4b2dd092830166b3d382923365b576b1551ad6ea53dc71cb99eceb6006aee5"
+    sha256 cellar: :any,                 big_sur:        "739c9145a5126114e7f975b11d9e0c1dd223a2469e2abfba7fd961c6c9b6c0a1"
+    sha256 cellar: :any,                 catalina:       "4fcdbcd599012582fc4264a2e5c50b27586c399d43a42a52f723be7cfd0b8753"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "db64756aca724b6197652beee557f296b0621a98e225199cbe273473d46d97f8"
   end
 
   depends_on "cmake" => [:build, :test]
