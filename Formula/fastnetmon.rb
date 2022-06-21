@@ -5,6 +5,14 @@ class Fastnetmon < Formula
   sha256 "4de0fe9390673f7e2fc8f3f1e3696a1455ea659049430c4870fcf82600c2ea2d"
   license "GPL-2.0-only"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "f00f021321a57b6c95c748c7dcdd5337faaa4cb07534cd0b24f24003a2232d96"
+    sha256 cellar: :any,                 arm64_big_sur:  "1d15b319f6b2a33909e77f6aa88002c6e07bf6a740960e2d7c8d4bc91c8027f6"
+    sha256 cellar: :any,                 monterey:       "8597711401c13391466445def277434efd50a7cfe4498b2c3c8c26c9ec14b2d8"
+    sha256 cellar: :any,                 big_sur:        "730d198bdc31837b48ee2b37420a59189568a32d3f2a6040f78a64b62bd56ab5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3f6ec2807212f3e97c073d1677a9e04b8ce1bbb9b4d91f3415319decaaf691ae"
+  end
+
   depends_on "cmake" => :build
   depends_on "abseil"
   depends_on "boost"
