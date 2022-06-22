@@ -8,12 +8,12 @@ class Passenger < Formula
   head "https://github.com/phusion/passenger.git", branch: "stable-6.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "9f3146807fce26ed29ae3c576f32e3213b8c1146f2c104c1c9d4713ed7fdb65d"
-    sha256 cellar: :any,                 arm64_big_sur:  "13e63af285a276ce579aa90f03944a042956e76a8c7940b6c99da15c023b7d6b"
-    sha256 cellar: :any,                 monterey:       "9d4c7ebe69ab23942af751df02e77be7c81efe01a38778718980966290275faf"
-    sha256 cellar: :any,                 big_sur:        "b0f446a78f1a9007623e242dd26a236096ca3b7e44ccf28dc187babd5bd784a9"
-    sha256 cellar: :any,                 catalina:       "c4891710dedbf2346eee8aea53a21c0098116419b55049684bd70616ad8850bd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9657809f050e59304bb54dc12efe54369c5665c6d919df7a73f44f5e77badf63"
+    sha256 cellar: :any,                 arm64_monterey: "7b2ffbf48d331f47197e0e50b04779563531d4c88ccc3890905c0e15e7e3aff8"
+    sha256 cellar: :any,                 arm64_big_sur:  "37d10f4908d20d225997012b8cd57c4ed7f2b5b6d8402316f8a5ac6c19cb0c43"
+    sha256 cellar: :any,                 monterey:       "eef2a217f47547c7974a67fb937fd094252c6b110fa76d94d1e0d003cd174f96"
+    sha256 cellar: :any,                 big_sur:        "c8ec77b6b1bba12f6e4ede88eefc35f5bce503a5a0c205ba274283a25c7022b8"
+    sha256 cellar: :any,                 catalina:       "d34e48b3012643043dcf1fde3fc9240f7044effd53bc2e6722e55d0473cecd4c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2c31c8d4260fc39744529853dcb86948f050e1bb2af1db8d57cc42531fb95981"
   end
 
   depends_on "httpd" => :build # to build the apache2 module
