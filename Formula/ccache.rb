@@ -8,12 +8,13 @@ class Ccache < Formula
   head "https://github.com/ccache/ccache.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "fa0768d714d38064cce4358db8c25243fedbbfe100fd3c1f19afcefaaf852ca0"
-    sha256 cellar: :any,                 arm64_big_sur:  "b346a3916e484a4f88af990442196754a4585158b0c02f09aa2dfb887070f8aa"
-    sha256 cellar: :any,                 monterey:       "63f968932e3ae47196ca0be062552fe246993d4c81c341b6771fbde8ca71a207"
-    sha256 cellar: :any,                 big_sur:        "9aa040f06d1cffc9058d40c61025ef2bf8531f73df38ec621ffeac12fe201869"
-    sha256 cellar: :any,                 catalina:       "1c193e1c56556385f75ec9d74d8c3325c8ddc4a9626c9beecd874c742f9237e5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c3df47f19ef81ce35ffd69bec004445f49ca605777b6efcaeac78dc79d72381d"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "6c7df26513e64e81bd1c34bdecd3c0f244584de42861edc1a10eb47080a2f36e"
+    sha256 cellar: :any,                 arm64_big_sur:  "47e5973227a3173eb22e18e12b39bc11fbc3b96c59fc2cf3b8b3c2962703f157"
+    sha256 cellar: :any,                 monterey:       "a850bea227e005e5eeb4a06854c3dd409939f0a05921b493c78b0c3a6a4f3179"
+    sha256 cellar: :any,                 big_sur:        "fc86f696e7533bbb5c5cb10e72d508667cd0013ed42a3082eceb5608005b4906"
+    sha256 cellar: :any,                 catalina:       "0f1e9ffd25cdfc59a40b4ff0d4958aebd4ef6a63ec6adf2e59c2dc741a3a5416"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5339cf0bd2c396f3aa646c0bb853b90276255d14a613c8173e888c7f630bf775"
   end
 
   depends_on "asciidoctor" => :build
