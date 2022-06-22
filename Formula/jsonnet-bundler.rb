@@ -7,14 +7,12 @@ class JsonnetBundler < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "512f138fd1a343061590ce77406ab1c6af48482f01e85338586ba34ddcda8d06"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a9b6b525e1f410fe49f0b2b5589f48662dcde94716371f8cf77b61ba69589d49"
-    sha256 cellar: :any_skip_relocation, monterey:       "399ba72ee0a849f4b386145fd15919a7e41ffc6de7a9496be2a391450541f173"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6f52c9470db16a9f06797f01b5af31e55336ad809bb28ed3eacb985a3aa08067"
-    sha256 cellar: :any_skip_relocation, catalina:       "1d90eef17450bddbe12e3bbc65d55d2b324a34f2cb36a028b32060e416e262c1"
-    sha256 cellar: :any_skip_relocation, mojave:         "a42bfdfd2d149e8667ff0849de992e91160e78aaed6f72f2624f9a191c83fe75"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "e058cee6482accf6cc38bb4c404148464e4e071cecdb7191e1fbc6315e53f851"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ddda19109adae4417b36d4e4fd4782e41a182c8183c14bedef9b53f858ddacff"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7c12a0b7fa5a7ebfd3390975141ef9270041d16cad5e50ac2c037250b063ab3f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fca099b90eb7ee638a511421b92a18d62976a27f26daadc81591c62780009df2"
+    sha256 cellar: :any_skip_relocation, monterey:       "c5e1dfd5b88514d02f92c58561d8fe999920df9484240272986c10c2f61ebd61"
+    sha256 cellar: :any_skip_relocation, big_sur:        "adf174c8284ad175985632eff78208530c367d6522f364b75964380433706a5b"
+    sha256 cellar: :any_skip_relocation, catalina:       "6b1a393f6110771bc8b8e241acd1f6a4c86d9fe66f2148a39ffc2ecb3ea411ec"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2123283a83d290e3106e6adeee62832ae7b9f352f785909bd08b52fb712e6fd2"
   end
 
   depends_on "go" => :build
