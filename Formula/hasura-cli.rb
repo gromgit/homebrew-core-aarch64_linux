@@ -8,12 +8,12 @@ class HasuraCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "42b7bb26e4b34039fbe047c5578316bc1936c3b935b2cad9f28eb57af51bb57a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "30902898a5c78bfd5af0d76c3050efc444c0672ba99e8b05f981c0a00cc23c99"
-    sha256 cellar: :any_skip_relocation, monterey:       "a529d5e7d9b47ad25faa674c82cc3276cdbd1b273462b511296300e19329cca3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a34dba02c11743aa8ed6e486a7e58448e8ba954c60f6885ad5b0ad9397aed17d"
-    sha256 cellar: :any_skip_relocation, catalina:       "7d5569e9d0433596823d751a120552110777223debfcf056a0fc8d0e22df45e0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ea9d113cdec9f5004299d98167e208b38dc7388a26022519c835d69292c3bfd8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "109afd56f6ba532c7f6bb66a25d20a23a54ee84c9619ac2682ab2bce0b8e7466"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "47785b0588eb2d3be60e954e3e97972e55fdb3da4ba8a76f70dbf9d586937f5b"
+    sha256 cellar: :any_skip_relocation, monterey:       "ec23a1e9c5929a7e32c6cdd5ace4a92af0b13a819ec6d95313bf04c85d649f6a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "07c71ffec305b00e75ebd802267ac3201c960ff85e2690f928ce6198d0ca0146"
+    sha256 cellar: :any_skip_relocation, catalina:       "209da245a714b9f157162eba337501f1da539e1e7990fb2de10892e5d12a2462"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "df014beb572ac9497c58ef306db56d073adba9d248a67ded5466c33ab5bba057"
   end
 
   depends_on "go" => :build
