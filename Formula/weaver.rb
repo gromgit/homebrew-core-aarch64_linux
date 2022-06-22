@@ -6,11 +6,11 @@ class Weaver < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "77d3e23799835b6c0fdbaf6308d0d746ed1d8c1de79d43525752bc4d8f184b57"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "eef1a7c97d4cea09678ad51477dab8ebbbd2598a5355b2b53800958a01ca1355"
-    sha256 cellar: :any_skip_relocation, monterey:       "33c0ff9b49be719ba29f0ab27dbec54965e6bb5557e550099d0eaf99076e4077"
-    sha256 cellar: :any_skip_relocation, big_sur:        "72381811d48ec054c28b932251a8053df476c943558db82d32858442a02fc2da"
-    sha256 cellar: :any_skip_relocation, catalina:       "cd2d8252bcfdd81124f9eaa748ec4d01accc96aea345937de02ea351daf555cc"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bae6a89f59feba501a075d7f48a0b32ae385b106df66793baba1838695d732cd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "99b16b5bf2dd181ab6e35f7a96eb1a9ad3775366bca9895ca56c9060561a8926"
+    sha256 cellar: :any_skip_relocation, monterey:       "2fde9ffc9b72493738d043957179600963f9b1603b6e97e5600f5f0f296f7291"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e154014fd74e68b6dcb59b67c74c77a5805418051d958ac1a195b137de13516f"
+    sha256 cellar: :any_skip_relocation, catalina:       "98cc42d88e8e5636b17b2c7fda0752d79cae33ed0df3e010997d8418c4f99add"
   end
 
   depends_on xcode: ["11.2", :build]
