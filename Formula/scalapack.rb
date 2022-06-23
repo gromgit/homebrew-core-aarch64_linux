@@ -11,13 +11,12 @@ class Scalapack < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "06b0a56f9c0fbe86a1345236839d83364bd296127690fdb702b9fe7aca2f3514"
-    sha256                               arm64_big_sur:  "ae872ee54a2f85ef4b8a3e5370751db4d3dd931c10d3222355fa523389592c34"
-    sha256 cellar: :any,                 monterey:       "e387af6b56b3a5a5466521c1e75f425903c35c7ad5c37c830be637997f10a36c"
-    sha256 cellar: :any,                 big_sur:        "5d33d9c7a1f92b2a30487b6218d0fc248905f7114275fe83e661411343400ada"
-    sha256 cellar: :any,                 catalina:       "0919c7e1f584fb690ce4d8e395e4b98c21d85858581eef10f1c73612216f863a"
-    sha256 cellar: :any,                 mojave:         "ff1f14376cb734a26a0d5580d0e58e7107c33def1bcda522ac7af3dfcd129f30"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bf7a2df188247f7bd79e779b2a2fa535943082c352bed86c9b454c99d3236c76"
+    sha256 cellar: :any,                 arm64_monterey: "60ef15828d471afc36f743ade73d829c293ab259fa91fb2cd9dde198666f4cae"
+    sha256 cellar: :any,                 arm64_big_sur:  "d788aed0a0d3d76c45bdfe452f321de1816a1877e890b49806ca302123cda0dc"
+    sha256 cellar: :any,                 monterey:       "15b0056191daddf4ed685532db8a1b99d6ea60e172eae73ba0cfb48239363bcb"
+    sha256 cellar: :any,                 big_sur:        "eb1d6d67bc3f59015f715c8d2626b7717bb76abce0a387a6a32f556b43712430"
+    sha256 cellar: :any,                 catalina:       "ec0d4707f9c18c171e01751d62d105347440d3255c91a3108315a8778eb650f9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "459d61da4e54f9c0080bf88d24e57d3c2c15235b3c7967845c67239380c850bc"
   end
 
   depends_on "cmake" => :build
