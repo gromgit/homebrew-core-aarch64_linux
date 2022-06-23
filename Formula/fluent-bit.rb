@@ -1,8 +1,8 @@
 class FluentBit < Formula
   desc "Fast and Lightweight Logs and Metrics processor"
   homepage "https://github.com/fluent/fluent-bit"
-  url "https://github.com/fluent/fluent-bit/archive/v1.9.4.tar.gz"
-  sha256 "82581ca093f87fad9ed5045ed69973ed45cb4a3aea67f74868543e722a19dd61"
+  url "https://github.com/fluent/fluent-bit/archive/v1.9.5.tar.gz"
+  sha256 "ce2e7e108360ea74c654833bbb10cdd15c1dd312ebc190489a4743167c2ac50e"
   license "Apache-2.0"
   head "https://github.com/fluent/fluent-bit.git", branch: "master"
 
@@ -23,6 +23,9 @@ class FluentBit < Formula
   depends_on "bison" => :build
   depends_on "cmake" => :build
   depends_on "flex" => :build
+  depends_on "pkg-config" => :build
+
+  depends_on "libyaml"
 
   on_linux do
     depends_on "openssl@1.1"
