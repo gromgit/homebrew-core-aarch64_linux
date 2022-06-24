@@ -3,8 +3,8 @@ require "language/node"
 class Hsd < Formula
   desc "Handshake Daemon & Full Node"
   homepage "https://handshake.org"
-  url "https://github.com/handshake-org/hsd/archive/v3.0.1.tar.gz"
-  sha256 "2952dd9fe5c1d5db448e0881cc1656c5efaa61cb6030c4bc629e04f53feec3b4"
+  url "https://github.com/handshake-org/hsd/archive/v4.0.0.tar.gz"
+  sha256 "a5de4a14f99097b97ebaae1b88ac0d222e9455d4e882ab1386f53e36eecb026c"
   license "MIT"
 
   livecheck do
@@ -23,14 +23,12 @@ class Hsd < Formula
   end
 
   depends_on "python@3.10" => :build
-  depends_on "node@14"
+  depends_on "node"
   depends_on "unbound"
 
   def install
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
-    (bin/"hsd").write_env_script libexec/"bin/hsd", PATH: "#{Formula["node@14"].opt_bin}:$PATH"
-    bin.install_symlink libexec/"bin/hsd-cli"
-    bin.install_symlink libexec/"bin/hsw-cli"
+    bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 
   test do
@@ -47,7 +45,7 @@ class Hsd < Formula
         await node.ensure();
       })();
     EOS
-    system "#{Formula["node@14"].opt_bin}/node", testpath/"script.js"
+    system "#{Formula["node"].opt_bin}/node", testpath/"script.js"
     assert File.directory?("#{testpath}/.hsd")
   end
 end
