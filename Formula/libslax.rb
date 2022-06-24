@@ -19,6 +19,7 @@ class Libslax < Formula
     sha256 catalina:       "8b4506f10c72d75425ad849f17918a6574c349ebdf29ab740ad323811d1a4d02"
     sha256 mojave:         "5e024a22f8a47c0a11724d7543cd50141e8246b3669155cd734854ee74ec9d71"
     sha256 high_sierra:    "95e8b6bdc7010103110d8c7a92c33dd8e2e04228e037ca81c3a5cb69ea955ab2"
+    sha256 x86_64_linux:   "d6408934888b53ea175db0ee882e2ad40df936739df4d3fddabbcf1d1795ad68"
   end
 
   depends_on "autoconf" => :build
