@@ -16,6 +16,7 @@ class Idutils < Formula
     sha256 catalina:       "5df54c76ae786e54f6994c1c65821adaa746c8a6b1aecbafbe3cd9f4f77f7c62"
     sha256 mojave:         "b48a4caf24a1eba916f1932c85970294e56a0559603a8289fe732c124fbf0811"
     sha256 high_sierra:    "95f118aa56026de98d148bccc5a807d609a2bfc54749e1d9051a5dce80f603ef"
+    sha256 x86_64_linux:   "287179d81db15f091f9363fd7f1411d5a8d00313ed569d84654a7e14816cf923"
   end
 
   conflicts_with "coreutils", because: "both install `gid` and `gid.1`"
