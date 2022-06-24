@@ -12,12 +12,12 @@ class Cadence < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7cdf07584feb3936f382d55b7a684c363e531e32afa03e5a58feeaf2d4fac500"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "22a7537ca1338ffc9ff237cbfcfff4d4a8bb21cd02b100455dc3f5b4f35c9daf"
-    sha256 cellar: :any_skip_relocation, monterey:       "86a6da9c9e5ae91bfb0632273cf228f626fc0737b92073a580d5e2845dee1be4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "017a295fcdfba822920d02e6941b60bb1d07b7ab986627904e9c2d7625eddbca"
-    sha256 cellar: :any_skip_relocation, catalina:       "4836de258ce15c2dffb6c664c99a038f8fe7b6d375beb72ecf05b1197dbf4473"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2dad9be534b31b6b469bbaa8c79aff9a0e6e701f00896f9fa9a9a98651767c64"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8b52a5d464f0701acc1205e592fdace2efa40d3625572d6f96e1bc3eb72161ed"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9ddce1849f39c38bc4df1ac9b363cf7ec98039b796d4f4529746982745abd236"
+    sha256 cellar: :any_skip_relocation, monterey:       "93f69ca1fa3f2262d89b0b3402463dd89ee04508ddc9fd455d7a8c78794398a4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d1b9f2071a6e0c28b948e10db91f254666d2a11bf4f39304e721c956cf346f34"
+    sha256 cellar: :any_skip_relocation, catalina:       "66bb794f0f439102f569b118a133cc2165d15fae4f9bc0a43dcac7e5a174af21"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e204e78f5ef8e2e976ed80516d92f01686682ae81c97e8955ab756a739ac6a87"
   end
 
   depends_on "go" => :build
