@@ -8,12 +8,12 @@ class Tsduck < Formula
   head "https://github.com/tsduck/tsduck.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "354075df1dd3899aa58484f1960b890aabf6855ca11a7c1e83e80b4bf80334ea"
-    sha256 cellar: :any,                 arm64_big_sur:  "17ad8a709f3900d44778c55812402c2f8259febe2fe58b211627d8236fabf1be"
-    sha256 cellar: :any,                 monterey:       "de9ff76ef9277c330423cc2310e786b4cb88fe7471c561e0fafcb68da2fed02f"
-    sha256 cellar: :any,                 big_sur:        "e24faf98cd388c66aeb2a5fe6c233670e69caec6212e18c58d6b49f4d59ba1e3"
-    sha256 cellar: :any,                 catalina:       "8ad9faded659e822cadf3e53314648820e3b9140ed64cb33658aceb4214a5861"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7f4622cee92614b48eaf870612c374582f52346f5e1c32eded274a5935ff9c2a"
+    sha256 cellar: :any,                 arm64_monterey: "9fd69beedf1bfa47f5a0b20d6d195952d5d6923f16845addb1425da1e06b21ed"
+    sha256 cellar: :any,                 arm64_big_sur:  "f962e717e1e37229879adf75c01b5c8c06515fe00a263c9028b9716bf787b462"
+    sha256 cellar: :any,                 monterey:       "82e38cf2391edc858a6d212b0ca7afd41192fc2eeca55e7bdfed7d15f88acb1a"
+    sha256 cellar: :any,                 big_sur:        "53f2e367f005a2daad65ffc1bd9003ea99fa76f0469ef0d028f17505f865e8a0"
+    sha256 cellar: :any,                 catalina:       "dbbcac32f82480175582f2aa792ddf29d6c26626960becfe980a926fca81b8b9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bd8c52eb5f3d9b54e265596241d77f27b00b1152acdfe4f2b641e337eb5b1d1b"
   end
 
   depends_on "dos2unix" => :build
