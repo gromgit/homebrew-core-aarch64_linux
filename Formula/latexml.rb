@@ -12,13 +12,12 @@ class Latexml < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6f602fd9d3cd02c6a120158cde3a9e997dc67f85092e64ebdaf9b593f568256f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1baf39e551bf724eec7bfa7f63e6f2f80307c3eb21f53ff05fad1bcd620a6ef9"
-    sha256 cellar: :any_skip_relocation, monterey:       "6841adcaa396b0187fde550a4eca7bdcf20563fe78c0197c85b2c265c24cda69"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5311fc896eb2d27a5fa149bea4d30e6be0f6693cde9da9709b32f11212f726e1"
-    sha256 cellar: :any_skip_relocation, catalina:       "3af6c43c91d733210e1e75db13093c72aa91addc1cc8ae94cd716de6ec73ea37"
-    sha256 cellar: :any_skip_relocation, mojave:         "f51f58dc03c62130191b1bf2bb223459da93cdb7a7a1c3052a227a4bdc67dfe9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a8cfc70adb30f6d9427642a94fa48618b2242bcb2d11ec3c6256e6313fb12694"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "810c20fb7bac966b37759b87f82de80b07d750ca21185ffdd5844e88d01e6d39"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fee8ad2f09b1f5473b7973311bf78aba0e72183b6dd4415bbae4b84b73727232"
+    sha256 cellar: :any_skip_relocation, monterey:       "484927731c70a13a3d889289aaa7c240bfc686988a91892803b2779adafeca2a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "89dd1f99cc1574b070149f320b3e6ed89320ae4e4f43cb5b930fd3abae954467"
+    sha256 cellar: :any_skip_relocation, catalina:       "6c5fd9798b62ccbf4bb9a510e2468d605fe9e488cb1c2d19e304d24a738dc598"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b705a600d727333824a287cee780e4f691c5d8f8c205fa5965b654e7479ae590"
   end
 
   depends_on "pkg-config" => :build
