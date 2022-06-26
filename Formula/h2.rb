@@ -7,7 +7,7 @@ class H2 < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "b346d3fc7670e5ab942ff0cf9a7374ab421cade3c28875a893a2890fb70fa79f"
+    sha256 cellar: :any_skip_relocation, all: "fa5d5febd18e101ce73f94cab8a2c41d126dd0acbfd6386de14a85ed0b40671b"
   end
 
   depends_on "openjdk"
