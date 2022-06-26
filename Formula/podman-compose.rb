@@ -7,6 +7,14 @@ class PodmanCompose < Formula
   sha256 "9c9fe8249136e45257662272ade33760613e2d9ca6153269e1e970400ea14675"
   license "GPL-2.0-only"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "36fde080e8321d2b63565019f3d0b55bd2f826aa1350d863a6a95cc0d75134e3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "06415613d41540f1eefcae578699825268375517ea8331cba57964cc4ffcf007"
+    sha256 cellar: :any_skip_relocation, monterey:       "0df0a7c0f9bfdf5668d2887f559c08c94b74ccf108a671e4c13ba90ce1325ec3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3fa095e16a4e8aff1dce63dfa153ee9c0f6f62e26937f894dd317ce7c567f5cd"
+    sha256 cellar: :any_skip_relocation, catalina:       "12ce1adc3740cac41cc009713633711fe5ab2b84efb39fba02e01b7761952072"
+  end
+
   # Depends on the `podman` command, which the podman.rb formula does not
   # currently install on Linux.
   depends_on :macos
