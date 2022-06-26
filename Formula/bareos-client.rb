@@ -11,9 +11,12 @@ class BareosClient < Formula
   end
 
   bottle do
-    sha256 big_sur:  "bff8a75230cdc455bacd679e173d373d7ff11f10c57ed54ede298b7e7cb96816"
-    sha256 catalina: "40e1558c583639b7788c4a5fb30a984abaa00a3a552f00b30466ac0bf8ce4e73"
-    sha256 mojave:   "c1f6aa579b9a1923592818b041a165bc029d66bc88745895f6662ce2a3c83f8e"
+    sha256 cellar: :any, arm64_monterey: "4c198f919032742794f8f141d3417e2e5d0d00c780796a407a521a8f1de667f6"
+    sha256 cellar: :any, arm64_big_sur:  "510815a1a30adf00f990a482ff3b57708f0a57456d0d8a4027f241d145a2bdd1"
+    sha256 cellar: :any, monterey:       "fdf7374d281ab4847660c4aa7b9195fd862ad3d113517781e5f9454d78190c76"
+    sha256 cellar: :any, big_sur:        "108e203dd29a4549b0e3f4ef84f210a74d771bc85ad30f0e078f1f9293b2b3a4"
+    sha256 cellar: :any, catalina:       "b6cb4d213407c2723b5de8b226e7d13c65b2f303154c6b672424e3ff342bc437"
+    sha256               x86_64_linux:   "6f1e70e35203abbe06f7ef4bd2c115213a3d79a06da87077541e1a6b6982ea4a"
   end
 
   depends_on "cmake" => :build
