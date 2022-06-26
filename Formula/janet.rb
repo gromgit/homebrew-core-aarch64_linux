@@ -7,13 +7,12 @@ class Janet < Formula
   head "https://github.com/janet-lang/janet.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "3b33f8539400e99c0dd6d59a880cfa3407413a0a5e1a68484b05ff5d89b17489"
-    sha256 cellar: :any,                 arm64_big_sur:  "745fb723c62b2f69e72855daac695a5c30f5c6b1f5700bd4d8079b8471ab87f0"
-    sha256 cellar: :any,                 monterey:       "50e2b8262dc7a0168ddfe9208e84c072a5601e989ca090499af6a058013df807"
-    sha256 cellar: :any,                 big_sur:        "681641cf43f1b8611cf6ccd1fd44e77b8f0f250ee6d166c18b4b9993315f7d40"
-    sha256 cellar: :any,                 catalina:       "0c81821621a4fb46c723ec22571261eaa855ec7dc9fe4d7a3dc007239842345f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "da24ddcae5dbd7ed69cd1394255e8b00de25177578ebe8f9e66d243781496461"
+    sha256 cellar: :any,                 arm64_monterey: "9d8b3c4f58edeeaf9edb18136bce805f0013a0e334853a51570551847980fdbb"
+    sha256 cellar: :any,                 arm64_big_sur:  "c09ba1d9ebf8d4d0b9711c7c57497284d3a0d0fbab77ca639962d07193bc3142"
+    sha256 cellar: :any,                 monterey:       "0e47873696cdefb25e15fd47082135f2cf97d101cd06aa6237369ffc8c3a4734"
+    sha256 cellar: :any,                 big_sur:        "8249be1f62d79ebc226c5cde147c3ec2f1b264e429bb806283b8588e92f49808"
+    sha256 cellar: :any,                 catalina:       "15e8579d7cba3a789ae7a2388c8c96a2a21e0de6824f7b4190ae7d2cc9f06629"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ee04cae362695afc923c7dd12e2be88d14ba3f76bb8dc5f38c0afe8cbde1e9f1"
   end
 
   depends_on "meson" => :build
