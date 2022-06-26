@@ -9,7 +9,7 @@ class ApacheSpark < Formula
   head "https://github.com/apache/spark.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "3f8f3309dfef579496100aad618c4f46b55795497fe259f2accb0da0c15da7ec"
+    sha256 cellar: :any_skip_relocation, all: "70d5e3f211b3c2ffceacd171066bff9089a67ce11624288c53a9b654fd4decee"
   end
 
   depends_on "openjdk"
