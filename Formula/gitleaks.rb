@@ -6,12 +6,12 @@ class Gitleaks < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "09bba3bbd845b934582a562003357a4af45bfba73238a5ec31c230ae4ea505b8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b991cb2942191f2b5c98ea560d843ecb54c8c62a32e02ce6178dcba412364f14"
-    sha256 cellar: :any_skip_relocation, monterey:       "58d367f70be6c017bde633cb76e34e5508cdaf02fa8255a14442e0d538f3896b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6120d8895aff7f9c08da174bb8366638eaad1b193b2c319b84dcbab38a5ce0d4"
-    sha256 cellar: :any_skip_relocation, catalina:       "5957a47773bc94819b264c00df4ce2abd527480437aafea8c52a0dcc6af7dc0a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "627ff93f0f4ec7bd9baf39c16c18b7272ff239d01b120d9370c4fe5c27da9eac"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6270b1ad8c2b226b632a8b6b23993afc4ec0cb6919610bee0e4221d6c52bc7b9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "56f932e040168fede98f1d03b2e2eb56dea26ac4a5613f29869aeaa2998392f0"
+    sha256 cellar: :any_skip_relocation, monterey:       "46b252b313c0fe4fb93d718709e57864769aa539e2434edba7c44393d32400a6"
+    sha256 cellar: :any_skip_relocation, big_sur:        "474661cf333f4714a6a15a40228fc631b00965961c3ff165e20b9bf255439a63"
+    sha256 cellar: :any_skip_relocation, catalina:       "c083774fc3332ee1312fb606850fbe39d458ef937b9e8403b9739dd707196627"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f91b256e511c6337181acb094f10adcf6dd18687b5de33b6be57aea99ab30d62"
   end
 
   depends_on "go" => :build
