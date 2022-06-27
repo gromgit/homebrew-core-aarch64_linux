@@ -8,12 +8,12 @@ class Jello < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "369fefd4c22c9c012f99788336e08cd270ef1c104b3bf3f9ac606f00bc48b7e8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "369fefd4c22c9c012f99788336e08cd270ef1c104b3bf3f9ac606f00bc48b7e8"
-    sha256 cellar: :any_skip_relocation, monterey:       "08fe6d928c021346c8995b0a2694e18f32ddb1f4304b4e7ee2bcb4c3e95ab3e8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "08fe6d928c021346c8995b0a2694e18f32ddb1f4304b4e7ee2bcb4c3e95ab3e8"
-    sha256 cellar: :any_skip_relocation, catalina:       "08fe6d928c021346c8995b0a2694e18f32ddb1f4304b4e7ee2bcb4c3e95ab3e8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "05c07473b75ec6fb1592da8c3752d16315a8257702cf596ba061571c9b28e56a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f0c3011fe80691e3cd96c3012dbecc089547800fb6d8885ba4a2aa15c16f8737"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f0c3011fe80691e3cd96c3012dbecc089547800fb6d8885ba4a2aa15c16f8737"
+    sha256 cellar: :any_skip_relocation, monterey:       "7bf65f4e2c6382451b85b19492f2a36ef34ecf1f41a9d62d53661fdb2b713247"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7bf65f4e2c6382451b85b19492f2a36ef34ecf1f41a9d62d53661fdb2b713247"
+    sha256 cellar: :any_skip_relocation, catalina:       "7bf65f4e2c6382451b85b19492f2a36ef34ecf1f41a9d62d53661fdb2b713247"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b8d070ea343693f5eb6da936d58960958545987dd3761b51580bb4a4ead4a182"
   end
 
   depends_on "python@3.10"
