@@ -6,12 +6,12 @@ class Hblock < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b408e7de0b8d0d3634deac27adcf630e303dcf03eee853a16af4b8b9d2f75714"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b408e7de0b8d0d3634deac27adcf630e303dcf03eee853a16af4b8b9d2f75714"
-    sha256 cellar: :any_skip_relocation, monterey:       "b408e7de0b8d0d3634deac27adcf630e303dcf03eee853a16af4b8b9d2f75714"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b408e7de0b8d0d3634deac27adcf630e303dcf03eee853a16af4b8b9d2f75714"
-    sha256 cellar: :any_skip_relocation, catalina:       "b408e7de0b8d0d3634deac27adcf630e303dcf03eee853a16af4b8b9d2f75714"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "31d98acdc362571796f04dee5c4fca5ed0949a5cf7347c024de713764f68a3c1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9f1a12561e4c1d6a5c2fc4bc4178b4f9d49382ae2ab33e5e283264ecf3ee7ac8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9f1a12561e4c1d6a5c2fc4bc4178b4f9d49382ae2ab33e5e283264ecf3ee7ac8"
+    sha256 cellar: :any_skip_relocation, monterey:       "9f1a12561e4c1d6a5c2fc4bc4178b4f9d49382ae2ab33e5e283264ecf3ee7ac8"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9f1a12561e4c1d6a5c2fc4bc4178b4f9d49382ae2ab33e5e283264ecf3ee7ac8"
+    sha256 cellar: :any_skip_relocation, catalina:       "9f1a12561e4c1d6a5c2fc4bc4178b4f9d49382ae2ab33e5e283264ecf3ee7ac8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "98e84a25a424c03fb5c17c155925ef0ffe838ee12b6f96965907d4b682668e31"
   end
 
   uses_from_macos "curl"
