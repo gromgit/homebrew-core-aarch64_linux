@@ -6,6 +6,15 @@ class KtConnect < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/alibaba/kt-connect.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5492c3e9ce0c5b6539ab48ce75d4fcceae1da8c2ff3c5997481582580bf34673"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e023697e0f3c07897d0f189d333aff8306b1d1873f1ed4f3c41ebd46954c5129"
+    sha256 cellar: :any_skip_relocation, monterey:       "475aff303eabcfcf387e759c6ec771a7aadefd81a9e1e7bbc813ee7a7d2f737b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "aaaf22ea7dbdf9c691f67739f305add40401b90d703c0b09b1db021a4fe88f3a"
+    sha256 cellar: :any_skip_relocation, catalina:       "3a5caacb691fca4e4f88cc221ad9a99af2bb2af6125b06f9ba8bf28c6d69b551"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bb4ca1617b030781a5a9e50f3dfc2e343f5f7a6254b34f1a6ea0546e10c1e700"
+  end
+
   depends_on "go" => :build
 
   def install
