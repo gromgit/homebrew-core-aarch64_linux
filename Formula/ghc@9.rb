@@ -11,10 +11,12 @@ class GhcAT9 < Formula
   end
 
   bottle do
-    sha256                               monterey:     "aa86fcfbce23f51967c7e92a6743eb88078dc207bd833803fa02a755d1de3dd2"
-    sha256                               big_sur:      "f1964952d6f405cb1723dcc717e9771f7f5d8f13c7b0ab7a5ac6a508510cdd6f"
-    sha256                               catalina:     "ffeb2f809633faa330b6ff84f72bf06f9be5af3029f8f94f2df5a38788c54142"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "9e8d684c4138d0738328bf3e8ec6d89a17f0cdeb5ddd9b44ef60011548522562"
+    sha256 cellar: :any,                 arm64_monterey: "c6adc3e7957ccb7f0716f0fe67a0695b71feb61c1bb92217183612da38a0b66f"
+    sha256 cellar: :any,                 arm64_big_sur:  "4c9d84f35c931c60c9f2951905fd1f39839b0cd168a46ac1ca313ae2ea5c85ce"
+    sha256                               monterey:       "aa86fcfbce23f51967c7e92a6743eb88078dc207bd833803fa02a755d1de3dd2"
+    sha256                               big_sur:        "f1964952d6f405cb1723dcc717e9771f7f5d8f13c7b0ab7a5ac6a508510cdd6f"
+    sha256                               catalina:       "ffeb2f809633faa330b6ff84f72bf06f9be5af3029f8f94f2df5a38788c54142"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9e8d684c4138d0738328bf3e8ec6d89a17f0cdeb5ddd9b44ef60011548522562"
   end
 
   keg_only :versioned_formula
