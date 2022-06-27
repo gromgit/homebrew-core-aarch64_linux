@@ -12,12 +12,12 @@ class X3270 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "d9159e0e87f2b97139014bc2a9de458091bba367e7e3f55553a9231f96c21155"
-    sha256 arm64_big_sur:  "06ebc3e2c167786c9dec69cb576192c2d29183a048ee5a7a3fa17c3c4ede9662"
-    sha256 monterey:       "7f1a5543a0c0914971ca774c876cfdcb5ac507fc53ed18bde8892f5bd49ebf6f"
-    sha256 big_sur:        "c030a3f1f70b3fca2a0fdf025c55dc0b81cd9d97fcc0d78bcb3bff1f1cbfb73f"
-    sha256 catalina:       "c591165dffd8b6ae563b56cceef13eba6cbb6d342f7e521bd19d7aec6bc95cc0"
-    sha256 x86_64_linux:   "229f9ee30e9baa3bf32de8b2839b25d132dc9d3fadb0034e47e9c1dd30414073"
+    sha256 arm64_monterey: "9fe02074120054f04485370f2a816f0e52054e9a4c5bda381502e0e21b8a3ee6"
+    sha256 arm64_big_sur:  "13160d0ed0dc57346e31eb90da29faf9f422fb5244f1814ed154ed38e55fddd1"
+    sha256 monterey:       "7c8819a4a3b755ea498659d2d2018efafe39f7260d2f64f73176713bbca8a798"
+    sha256 big_sur:        "d05fb07ad9a4f8f023ae193d3cd00360b3d58389f577cd56a93f2a2dbae9aacb"
+    sha256 catalina:       "f232bc8bc2bc19197b8264a7fad89bc665ddfbbe17620b0ec18807bb7830b9bb"
+    sha256 x86_64_linux:   "dcfb7ca551686db85085601aafa03f09fbb2ae3a524993491c026a65e5295be4"
   end
 
   depends_on "readline"
