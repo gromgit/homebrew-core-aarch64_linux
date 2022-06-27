@@ -6,6 +6,15 @@ class Levant < Formula
   license "MPL-2.0"
   head "https://github.com/hashicorp/levant.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "74eb2be4120b08e97ce53de373dc0046b42f72aaf4cb15bac6392a1166007080"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1259dae3795fb890f07dcd7d3e57dc51728384d5a64474285153e57579816c2f"
+    sha256 cellar: :any_skip_relocation, monterey:       "78e5ea41d85bbe1e283db7bfed22d8eddd371b9bce562f01e2f9601e33920515"
+    sha256 cellar: :any_skip_relocation, big_sur:        "67bbafd86a8294a11f29367650d2fdd49d5ed95c600c1036c1bc47677b0058fb"
+    sha256 cellar: :any_skip_relocation, catalina:       "b781aa48880e56dfec66535a0684c7dc99eedfbb4c66ce3cfaaf5f68b2fd7bbb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9d2ae7deebc5c0eb7666688d15a79fb129d328abb78747280658a3239e4e6711"
+  end
+
   depends_on "go" => :build
 
   def install
