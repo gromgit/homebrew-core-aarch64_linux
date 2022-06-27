@@ -1,8 +1,8 @@
 class Kcptun < Formula
   desc "Stable & Secure Tunnel based on KCP with N:M multiplexing and FEC"
   homepage "https://github.com/xtaci/kcptun"
-  url "https://github.com/xtaci/kcptun/archive/v20210922.tar.gz"
-  sha256 "f6a08f0fe75fa85d15f9c0c28182c69a5ad909229b4c230a8cbe38f91ba2d038"
+  url "https://github.com/xtaci/kcptun/archive/refs/tags/v20220628.tar.gz"
+  sha256 "6a63facc902594b4ca5f0456e58196cf7b2a2451594fe2f69b55ac712ceb85e8"
   license "MIT"
   head "https://github.com/xtaci/kcptun.git", branch: "master"
 
@@ -16,14 +16,12 @@ class Kcptun < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "d5d892ce0ccf516f9252e9f09eaa56896021a12ea4d14003d69dabc7559a4467"
   end
 
-  # Bump to 1.18 on the next release, if possible.
-  depends_on "go@1.17" => :build
+  depends_on "go" => :build
 
   def install
-    system "go", "build", "-ldflags", "-X main.VERSION=#{version} -s -w",
-      "-o", bin/"kcptun_client", "github.com/xtaci/kcptun/client"
-    system "go", "build", "-ldflags", "-X main.VERSION=#{version} -s -w",
-      "-o", bin/"kcptun_server", "github.com/xtaci/kcptun/server"
+    ldflags = "-s -w -X main.VERSION=#{version}"
+    system "go", "build", *std_go_args(ldflags: ldflags, output: bin/"kcptun_client"), "./client"
+    system "go", "build", *std_go_args(ldflags: ldflags, output: bin/"kcptun_server"), "./server"
 
     etc.install "examples/local.json" => "kcptun_client.json"
   end
