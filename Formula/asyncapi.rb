@@ -8,12 +8,12 @@ class Asyncapi < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0e79cc39688d54b7ccc5a1d98dd7b4a647256723acc69a1f8acb66d408dc33aa"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0e79cc39688d54b7ccc5a1d98dd7b4a647256723acc69a1f8acb66d408dc33aa"
-    sha256 cellar: :any_skip_relocation, monterey:       "4d6294523554dc8111bdb7d94c4ab8694d3f8385dae0421bb74ca447682ff9a9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4d6294523554dc8111bdb7d94c4ab8694d3f8385dae0421bb74ca447682ff9a9"
-    sha256 cellar: :any_skip_relocation, catalina:       "4d6294523554dc8111bdb7d94c4ab8694d3f8385dae0421bb74ca447682ff9a9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "53a29b8c083bbfb9f1b02e9a1595053494039b1b3d548e496f2d77821ba0e6f8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bf9ac14adb9a7f5d94f0b2c80862de3b1e6f590b1e1d82a3160ae4dc3e6fa65d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bf9ac14adb9a7f5d94f0b2c80862de3b1e6f590b1e1d82a3160ae4dc3e6fa65d"
+    sha256 cellar: :any_skip_relocation, monterey:       "5fe998cc599ac55d990fa1515da4f93daa93636c4a656d38badddf1d8c8d7ba0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5fe998cc599ac55d990fa1515da4f93daa93636c4a656d38badddf1d8c8d7ba0"
+    sha256 cellar: :any_skip_relocation, catalina:       "5fe998cc599ac55d990fa1515da4f93daa93636c4a656d38badddf1d8c8d7ba0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0cc3e62205720148e0cd173844960912060b2e63767b6706b5344665416c6d14"
   end
 
   depends_on "node"
