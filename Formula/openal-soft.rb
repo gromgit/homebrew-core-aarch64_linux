@@ -1,8 +1,8 @@
 class OpenalSoft < Formula
   desc "Implementation of the OpenAL 3D audio API"
   homepage "https://openal-soft.org/"
-  url "https://openal-soft.org/openal-releases/openal-soft-1.22.1.tar.bz2"
-  sha256 "f7f98538d882b513812ae315770a5c88f6ee593e1cccd08648dd1bebbc5c98af"
+  url "https://openal-soft.org/openal-releases/openal-soft-1.22.2.tar.bz2"
+  sha256 "ae94cc95cda76b7cc6e92e38c2531af82148e76d3d88ce996e2928a1ea7c3d20"
   license "LGPL-2.0-or-later"
   head "https://github.com/kcat/openal-soft.git", branch: "master"
 
@@ -28,15 +28,17 @@ class OpenalSoft < Formula
   def install
     # Please don't re-enable example building. See:
     # https://github.com/Homebrew/homebrew/issues/38274
-    args = std_cmake_args + %w[
+    args = %w[
       -DALSOFT_BACKEND_PORTAUDIO=OFF
       -DALSOFT_BACKEND_PULSEAUDIO=OFF
       -DALSOFT_EXAMPLES=OFF
       -DALSOFT_MIDI_FLUIDSYNTH=OFF
     ]
+    args << "-DCMAKE_INSTALL_RPATH=#{rpath}"
 
-    system "cmake", ".", *args
-    system "make", "install"
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
