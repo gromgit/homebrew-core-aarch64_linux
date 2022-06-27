@@ -6,9 +6,12 @@ class Fakeroot < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, catalina:    "c72ae187158b6cce73311fee527ba8bf8d2f0e18340bd66eef57b50b3d45c275"
-    sha256 cellar: :any, mojave:      "6c23e4c601af569c2de802cac685de5d18e6ebafcb53e6c53107aa3feb3d1527"
-    sha256 cellar: :any, high_sierra: "df9be392f3579464893be013744b5aa40a7e4e91e01155bd1547e4104d381640"
+    sha256 cellar: :any,                 arm64_monterey: "7e0e4ef8f43b55ea24a0e11b436b96263af4ab80c8a90b39d1e4d479633a31fb"
+    sha256 cellar: :any,                 arm64_big_sur:  "38e3a802475e1ca4a146a7144f84e94925257331761bf841218e557f0556f988"
+    sha256 cellar: :any,                 monterey:       "2522875d0b65d593eebbeecf71e5ed9fe38e3a911abce60db45bbfd1ec5a139c"
+    sha256 cellar: :any,                 big_sur:        "8e0d19fe2fa84595407862beca5457a1b258d48eda689bd1cb0ca84fb966f7f1"
+    sha256 cellar: :any,                 catalina:       "ec8a523ac84e27ebb81e3cbc41b619fb8fb7cf4858c6d2ada62c2b39a3461885"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0fe66fdf8d3f3c8207fde2c98b5af0562101a38ab164b0a85ae803d7c382abc7"
   end
 
   # Needed to apply patches below. Remove when no longer needed.
