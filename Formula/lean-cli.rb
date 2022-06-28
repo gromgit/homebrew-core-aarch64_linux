@@ -7,12 +7,12 @@ class LeanCli < Formula
   head "https://github.com/leancloud/lean-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "15fb26ba22cb952223109e0972df9922fe0eca21ea86e2fc4804515e26201670"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "420a19e7e6b42501fbfaf65a5400e585dc6de4da0b02bba76ec49f9e2a0fde26"
-    sha256 cellar: :any_skip_relocation, monterey:       "f7b7f47312af11dece30e6608a6145f49ee613482874b87308af69e79e81356a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3e4e38188e3d42649e1954de6e6d9a9095e7649d84a09bcad17a29e4f7fcad2e"
-    sha256 cellar: :any_skip_relocation, catalina:       "9067248d2f2995bebafc858563bd72dde361ebf9706ce1ac370186a4989bdddc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "88893d965ff05d9a760a001cb2a47ae6009b8c9c542dfd78820cf94103695e90"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "57f1d0bf072f1a5fbc4f45b97c08c5753d652dd9c5083c4e1b7d9878c0b8ec55"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6483cd942b61c2d5142a979f402ebdeb37287ed10f024aca744001ddd4582a14"
+    sha256 cellar: :any_skip_relocation, monterey:       "4af2cb885986eabd50dab8e2bfac7ad451336b0d220425c21074ad2982284576"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e22531f02ff7ae42d82791a233ea0a172d43f052b6fec06d5aa1a7a6c2caf4b3"
+    sha256 cellar: :any_skip_relocation, catalina:       "20c9d4b37d85edd9ef8f8b2207daa0035e28a13c7b30b6d1cd6ac48b4b0c99c5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3fd405e35b90734570b3fc0c53e6776a9ef0c99f6d7524b07d2718e815b9ae63"
   end
 
   # Bump to 1.18 on the next release, if possible.
