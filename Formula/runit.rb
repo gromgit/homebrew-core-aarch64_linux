@@ -17,6 +17,7 @@ class Runit < Formula
     sha256 cellar: :any_skip_relocation, big_sur:        "a619f4f93c0a243b27e229916a5c7fc0371c7f38db7a608e5232d27eca9e9987"
     sha256 cellar: :any_skip_relocation, catalina:       "d0e17adfaaf02589b498e362596486515b37a0fda917ee8f0e51ac8e2409afd6"
     sha256 cellar: :any_skip_relocation, mojave:         "ec6f4b2f1b323aba830a5f26daed8615395b0f774de82e074ee699627b1c106a"
+    sha256                               x86_64_linux:   "4f36fd98073523f04cebacef60f30fae7501f351c4a885e3a7a4540e41cafb14"
   end
 
   def install
