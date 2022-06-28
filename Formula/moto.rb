@@ -8,12 +8,12 @@ class Moto < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ef11a684ccc73628f36e2f71535c0cc3864614c1d29cd225f9799207baad7016"
-    sha256 cellar: :any,                 arm64_big_sur:  "c0357f320c6bdb1c5c9754deaf88d848075457778bbdc538f2592db34baa1bae"
-    sha256 cellar: :any,                 monterey:       "430690ae57004634340ef5e881fa3bcbd52c8e8222e85cababdd8e4556126e09"
-    sha256 cellar: :any,                 big_sur:        "074b72e6e5fd7e8a91723145e4e816cf0990b5cf22d5d12c070fe09b55c085c2"
-    sha256 cellar: :any,                 catalina:       "cdcd1cfb32c3cd7efb18b6a6d4721b2534cbdb46d265a34b098c2cd27d10aded"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9460402916cd2cd8fb55d61f4c5a19c006c0178801892fa81a0cba8b65393a27"
+    sha256 cellar: :any,                 arm64_monterey: "4270c57990eb2ea00e8632194091146b48667f8a08ee7945331c9b86ea56f4a2"
+    sha256 cellar: :any,                 arm64_big_sur:  "8b8c70e599edd928bf046f159336f763b67c3c2cc6fcb5978d95605845938de1"
+    sha256 cellar: :any,                 monterey:       "6a297c98694fc6016bcf652bfc8e4fdebae2abb69dd0d7f40f8faeef690da443"
+    sha256 cellar: :any,                 big_sur:        "c44926abc1f047b5efaec462d3276f7e0e4dd41160966197eb62c2654fd9b21f"
+    sha256 cellar: :any,                 catalina:       "0f31e331c23445e13c4e15348000381a210dc809eb41cafb2d4d06d1603e4e49"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "99b42bc13a5073ed72eaf493c59ce909d58388875fff623a5385c1d7aa904ad2"
   end
 
   depends_on "rust" => :build # for cryptography
