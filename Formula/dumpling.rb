@@ -12,6 +12,15 @@ class Dumpling < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "374bc44b478103564f06a3fcab84fc724c1bb8afd0a00e72b4652f2bfab6ed57"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c7fae89f51dd36166daeee51c4fe201f315abce3f12b3f4f73c3a5dc8940adb2"
+    sha256 cellar: :any_skip_relocation, monterey:       "bf81854cb648de445f99aa87430d52fd2fdd71d7c115d531239c3876f94b9937"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4e62dff1556715af8839f7fb17ccb5003f27a8630c5feb4f18ded0d279853967"
+    sha256 cellar: :any_skip_relocation, catalina:       "801b781d224e94476fb84125b3a0308399033114a1cb2309cf813f49d73a538d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3fdcd5ea7543cb0a6d2720e74cc6454168d7407bbecf2fe6a49ba6b156b9bd98"
+  end
+
   depends_on "go" => :build
 
   def install
