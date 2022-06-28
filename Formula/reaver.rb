@@ -1,9 +1,9 @@
 class Reaver < Formula
   desc "Implements brute force attack to recover WPA/WPA2 passkeys"
-  homepage "https://code.google.com/archive/p/reaver-wps/"
-  url "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/reaver-wps/reaver-1.4.tar.gz"
-  sha256 "add3050a4a05fe0ab6bfb291ee2de8e9b8a85f1e64ced93ee27a75744954b22d"
-  license "GPL-2.0"
+  homepage "https://github.com/t6x/reaver-wps-fork-t6x"
+  url "https://github.com/t6x/reaver-wps-fork-t6x/releases/download/v1.6.6/reaver-1.6.6.tar.xz"
+  sha256 "e329a0da0b6dd888916046535ff86a6aa144644561937954e560bb1810ab6702"
+  license "GPL-2.0-or-later"
 
   bottle do
     sha256 arm64_monterey: "c5aebd64ad2c3055146fea9e91914d689914d1aab4e945f354264183a190bd97"
@@ -18,18 +18,14 @@ class Reaver < Formula
     sha256 x86_64_linux:   "1a1e6c2edefa97af1a4295d859695c6dbc055a47676f9ec845916362bcc884f6"
   end
 
+  depends_on "pixiewps"
+
   uses_from_macos "libpcap"
   uses_from_macos "sqlite"
 
-  # Adds general support for macOS in reaver:
-  # https://code.google.com/archive/p/reaver-wps/issues/detail?id=245
-  patch do
-    url "https://gist.githubusercontent.com/syndicut/6134996/raw/16f1b4336c104375ff93a88858809eced53c1171/reaver-osx.diff"
-    sha256 "2a8f791df1f59747724e2645f060f49742a625686427877d9f0f21dc62f811a7"
-  end
-
   def install
-    man1.install "docs/reaver.1.gz"
+    # reported upstream in https://github.com/t6x/reaver-wps-fork-t6x/issues/195
+    man1.install "docs/reaver.1"
     prefix.install_metafiles "docs"
     cd "src"
     system "./configure", "--prefix=#{prefix}"
