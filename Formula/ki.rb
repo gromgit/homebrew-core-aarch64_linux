@@ -7,12 +7,12 @@ class Ki < Formula
   head "https://github.com/Kotlin/kotlin-interactive-shell.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d44d3a85a124b8f080aebaf3ba8cd5b0b9c6c922d21ba49b695be3957f878f4b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2c8655431d8e95d4bd70c2962d6ac12435b5e452ba5a11136e9eb54b1d4ca791"
-    sha256 cellar: :any_skip_relocation, monterey:       "79fb1ecbabef9994029dbe66ce64ced53cdf2d07ad687a3f1fcc7d11edbf7730"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9b4357f01b1ead0cb9d6af4d89d53b850b648610121069ff8200aa30f75cea1e"
-    sha256 cellar: :any_skip_relocation, catalina:       "e33c5b94f8f3f1adadf1d0f8e0d189832c19202aef01f792e3104128e067777e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4c64a80278d2845df6f7ea14314fcb93471438d7daaaed16e5ec032de35204d0"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f371b1ec3e25cd932a0e00d3a7516657404fcdb9fc21889c87ed5fb50631864c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "291d7304de8ee426058e81e8bebccbb01be6e425619fe19498b24adffd679043"
+    sha256 cellar: :any_skip_relocation, monterey:       "1a6b75b713f70f8cbadc26189d4ebd3f7343cefe4c2d5291caaa6469398af614"
+    sha256 cellar: :any_skip_relocation, big_sur:        "53be472cdfa52204313a02b8e5f05b25130439bf163cd9b15f0b1548159f6249"
+    sha256 cellar: :any_skip_relocation, catalina:       "bc7f30f306e1bb6a883a6ad2906370102d81ce3eb4abcf5f80f576c2d8fc2d54"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fc9db457c857b9c2cf459ab3982a32e3140f9675fd91d6fdf0a56ea6d48f2bfa"
   end
 
   depends_on "maven" => :build
