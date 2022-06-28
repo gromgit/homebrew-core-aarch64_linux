@@ -7,12 +7,12 @@ class Fb303 < Formula
   head "https://github.com/facebook/fb303.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "cbadadfde8980abda38f8748b2c9a4b0d6961b7a0a779c21c408117077073bff"
-    sha256 cellar: :any,                 arm64_big_sur:  "3a4f3de1ad078fcd9d24a17d123abb5aa716755f8a04f86daf5c8ed9dc7303eb"
-    sha256 cellar: :any,                 monterey:       "3baf6a45186963f27ec1b06350b4d4a6abad10a03bc31024f26919fb00fcd62e"
-    sha256 cellar: :any,                 big_sur:        "7fd5287f039a97fff3e97f64dd94c2a9edc59373ab9abd53ad455ad185ca47bc"
-    sha256 cellar: :any,                 catalina:       "eb143f8933f192531f57702822ea600b50cbfe799790f1d3472c3114ee94b308"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aa6784f01808a4268410bb8018c83c091509c647c961e29e241fd42438f1553a"
+    sha256 cellar: :any,                 arm64_monterey: "83d25761dc3e596a734fb39d77fe58becbce8fb472aaf3bc43bb7f1ed9274d16"
+    sha256 cellar: :any,                 arm64_big_sur:  "4595de91cab9eac33787fa3122b490bf8a90569a7064f1272a98aedd9361e1f6"
+    sha256 cellar: :any,                 monterey:       "b66b756833e67d3e0f64ab945d9047d51dce0b9307d5924698f6bb8bd7dd597d"
+    sha256 cellar: :any,                 big_sur:        "b692e1796f3b81d82f19ceb5caa9409e6d61b30376006f99043417a734ba2061"
+    sha256 cellar: :any,                 catalina:       "41bcdec5cefd5240779cea5c87d1748de73504fe8c12ec9723047b69698d768b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3ededd2bd9233d250d85d4d193e1aa986307df49e48796e17225799ae9c0ef4d"
   end
 
   depends_on "cmake" => :build
