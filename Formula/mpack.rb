@@ -14,6 +14,7 @@ class Mpack < Formula
     sha256 cellar: :any_skip_relocation, big_sur:        "b3ac3a2ad7ba9481bdbd6ce2c2a3e1d0e59128f4cf8cd846be7a75fc6f27d6b5"
     sha256 cellar: :any_skip_relocation, catalina:       "561bc78b36f0b0cb8b67ff4c59407439fcb70d7f0b0ed23313cbe7579ad6a00f"
     sha256 cellar: :any_skip_relocation, mojave:         "3da5fac96c17669d27049ec2b5eebc0b711258ece13dad09c609792b45498bbc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b67930d5c73b96f420f655232564bb6b48ca5b6d3689d0804390e9860a65610b"
   end
 
   # Fix missing return value; clang refuses to compile otherwise
