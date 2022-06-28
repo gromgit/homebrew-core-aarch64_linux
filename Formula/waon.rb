@@ -3,7 +3,7 @@ class Waon < Formula
   homepage "https://kichiki.github.io/WaoN/"
   url "https://github.com/kichiki/WaoN/archive/v0.11.tar.gz"
   sha256 "75d5c1721632afee55a54bcbba1a444e53b03f4224b03da29317e98aa223c30b"
-  license "GPL-2.0"
+  license "GPL-2.0-or-later"
 
   bottle do
     sha256 cellar: :any, arm64_monterey: "42e529969e77de03e3dccc5c7e8ea1883bb860f22cc253b710a2d0125f0648df"
@@ -19,6 +19,7 @@ class Waon < Formula
   end
 
   depends_on "pkg-config" => :build
+  depends_on "sox" => :test
   depends_on "fftw"
   depends_on "libsndfile"
 
@@ -29,8 +30,10 @@ class Waon < Formula
   end
 
   test do
-    system "say", "check one two", "-o", testpath/"test.aiff"
-    system "#{bin}/waon", "-i", testpath/"test.aiff", "-o", testpath/"output.midi"
+    system "sox", "-n", testpath/"test.wav", "synth", "3", "sin", "A4"
+    output = shell_output("#{bin}/waon -i #{testpath}/test.wav -o #{testpath}/output.midi 2>&1")
+    assert_match "# of events = 2", output
+    assert_match "n = 2", output
     assert_predicate testpath/"output.midi", :exist?
   end
 end
