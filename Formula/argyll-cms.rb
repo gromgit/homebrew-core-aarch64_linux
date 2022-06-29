@@ -11,12 +11,12 @@ class ArgyllCms < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f7ef8b6684a81686d1eba6350d6a1dce78e0995264ab2dec383547c32042ab80"
-    sha256 cellar: :any,                 arm64_big_sur:  "f19205f7c0d87399c06af8f2c905811f4cf101cf3f86e5d426e2afaeeef9f49b"
-    sha256 cellar: :any,                 monterey:       "03feaa99b2fd77fdf1858b6596e0274595adcc126bb1070119b1e7830195dd33"
-    sha256 cellar: :any,                 big_sur:        "69be49eb52ff6525015295bdcfb93e79c63dc89e79da072db2126f9e9ed7cec3"
-    sha256 cellar: :any,                 catalina:       "236467588e60d2266690f20b319d892b19addaad6037a2dbc017fd1473baa0aa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "32290105011f95d383046c0a656c9dd4328b3527dd4683f271eb1a341745fe75"
+    sha256 cellar: :any,                 arm64_monterey: "2eb28a59cef2bdcc142008d4d36470e586e8e22285273303802a7e16bb95d08f"
+    sha256 cellar: :any,                 arm64_big_sur:  "253c5434082b4237f8067ad31ee6fae81811048f76d2cad8e2ae3ca360d51be8"
+    sha256 cellar: :any,                 monterey:       "efa97d39822d0ded97541bc095e59a976eb3f893da6bd4cbb2a90a3174cd9830"
+    sha256 cellar: :any,                 big_sur:        "eb7a9fd709675ccd7f1b59ae9d3e17bc301b4f7c15857a4c32f8f71e6801dc05"
+    sha256 cellar: :any,                 catalina:       "36860658ac2513441fcf1968c16d57fa6fbb5b7385d5437df24ffebe84ed7e1b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4f4ed53c2d490076f96e3833f36d35c8629f909eba688142349489138856037c"
   end
 
   depends_on "jam" => :build
