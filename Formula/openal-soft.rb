@@ -12,12 +12,12 @@ class OpenalSoft < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "4771bdf241551a85e68ae7f9e05f79aa6878f38c36417b98e252adf006c79e39"
-    sha256 cellar: :any,                 arm64_big_sur:  "5b883ee0e5bb0eb0863c8e273cbfb35456ba49c382e90a743edb1801129c291f"
-    sha256 cellar: :any,                 monterey:       "6a83559c3e5d89ae9f2f101e19765b380d8f90486a03301110e1cfbfd0da415a"
-    sha256 cellar: :any,                 big_sur:        "55b322d5be2347f2757ed76bb1707e4205fcbced26b310be8ce9f506d5068f1c"
-    sha256 cellar: :any,                 catalina:       "956434e74d538cde83e7fba8a7a4d006d4f821bf4d7a5fd11525f7cb54e314df"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5978c91a941b7fedf2dd5e5f7db30764249fa7d01c02d9025ef9bc5a23f227c3"
+    sha256 cellar: :any,                 arm64_monterey: "133ce78332a497b04b5c8be347e9675679ed67faf99b2b43b74dc9e56c5c2ad4"
+    sha256 cellar: :any,                 arm64_big_sur:  "490c40e73b5a3cec76223b7ca92ffd7988a667457bb91e632bdce84d014237d3"
+    sha256 cellar: :any,                 monterey:       "24d674a6f074ab4d4ee04e65eadab288b659bf364a7626d321cc70d47dc6f8ef"
+    sha256 cellar: :any,                 big_sur:        "065d64b527db40de418fc57e1d8d75b805c8be085d2a72cbacb37df7c7d631f1"
+    sha256 cellar: :any,                 catalina:       "71244d998b867c5d79201af0b7a8f1fb7754ba026686ea7e8d05095b3c6fb16d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e10ba066e87929ee03a95997aaf59b1e29ae6e2ede24f43185f242ab31a631b3"
   end
 
   keg_only :shadowed_by_macos, "macOS provides OpenAL.framework"
