@@ -12,9 +12,11 @@ class Pgloader < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "d7f926192e26b7e8a0e5d269370590d23a1d1c28e2323b6c2001e71088b2b8cd"
-    sha256 cellar: :any_skip_relocation, catalina: "89145353b5e7cd483e99f88f9db350f678ee7281ebf06d2e02263d8ffa5a626c"
-    sha256 cellar: :any_skip_relocation, mojave:   "d380bc8ea035e70afaaa5c913cf0ee4e4aedce19d7b29a6545297b59e512d0a8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "61c2dc4131e24bd3cdaf90e94b9e08fb240ab77991c6fb0e801edb1ebc6f3a25"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5fb071207e38986b0613ab151885aa13d882a9f19622da32ac1a7ef80530154f"
+    sha256 cellar: :any_skip_relocation, monterey:       "568f7ee87f7d2653c07a80caf79ca38f8efdf3b242bde198f4c46990c7234f2c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "6e40f6baeee01f0629ad7708a179c04e316ed539583dfcec12ea00aba8702e80"
+    sha256 cellar: :any_skip_relocation, catalina:       "ddd0386c2a2af5f6abd0a346ef4ca324b80732d13c4f38bc31f81d8d46180353"
   end
 
   depends_on "buildapp" => :build
