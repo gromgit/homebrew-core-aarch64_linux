@@ -18,6 +18,7 @@ class Daemontools < Formula
     sha256 cellar: :any_skip_relocation, big_sur:        "2de015542410e14eb8e17bb9affc37f19fc81e7005e4bec60ecd64c13629b02a"
     sha256 cellar: :any_skip_relocation, catalina:       "0a39db96c9e2926beea8224ca844264d4ddec3b6561d5dfc019f3ecfd7cc86fe"
     sha256 cellar: :any_skip_relocation, mojave:         "6516ee63288eab3eab3ee418ce070d711f483a5f6ebc147cb7039a9404bbaa0a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3d33be57d88799bbac35d167147869dbc93786d165d608a6e3286ff769af6343"
   end
 
   # Fix build failure due to missing #include <errno.h> on Linux.
