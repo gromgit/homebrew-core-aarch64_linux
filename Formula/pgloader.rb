@@ -1,10 +1,9 @@
 class Pgloader < Formula
   desc "Data loading tool for PostgreSQL"
   homepage "https://github.com/dimitri/pgloader"
-  url "https://github.com/dimitri/pgloader/releases/download/v3.6.2/pgloader-bundle-3.6.2.tgz"
-  sha256 "e35b8c2d3f28f3c497f7e0508281772705940b7ae789fa91f77c86c0afe116cb"
+  url "https://github.com/dimitri/pgloader/releases/download/v3.6.6/pgloader-bundle-3.6.6.tgz"
+  sha256 "1837565d8fcedb132c68885a40893ec3c590b7da9ebcef1c0e580b19f353544d"
   license "PostgreSQL"
-  revision 2
   head "https://github.com/dimitri/pgloader.git", branch: "master"
 
   livecheck do
@@ -24,30 +23,8 @@ class Pgloader < Formula
   depends_on "postgresql"
   depends_on "sbcl"
 
-  # From https://github.com/dimitri/pgloader/issues/1218
-  # Fixes: "Compilation failed: Constant NIL conflicts with its asserted type FUNCTION."
-  patch :DATA
-
   def install
     system "make"
     bin.install "bin/pgloader"
   end
 end
-__END__
---- a/local-projects/cl-csv/parser.lisp
-+++ b/local-projects/cl-csv/parser.lisp
-@@ -31,12 +31,12 @@ See: csv-reader "))
-     (ignore-errors (format s "~S" (string (buffer o))))))
-
- (defclass read-dispatch-table-entry ()
--  ((delimiter :type (vector (or boolean character))
-+  ((delimiter :type (or (vector (or boolean character)) null)
-               :accessor delimiter :initarg :delimiter :initform nil)
-    (didx :type fixnum :initform -1 :accessor didx :initarg :didx)
-    (dlen :type fixnum :initform 0 :accessor dlen :initarg :dlen)
-    (dlen-1 :type fixnum :initform -1 :accessor dlen-1 :initarg :dlen-1)
--   (dispatch :type function :initform nil :accessor dispatch  :initarg :dispatch)
-+   (dispatch :type (or function null) :initform nil :accessor dispatch  :initarg :dispatch)
-    )
-   (:documentation "When a certain delimiter is matched it will call a certain function
-     T matches anything
