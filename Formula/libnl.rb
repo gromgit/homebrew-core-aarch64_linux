@@ -5,6 +5,10 @@ class Libnl < Formula
   sha256 "532155fd011e5a805bd67121b87a01c757e2bb24112ac17e69cb86013b970009"
   license "LGPL-2.1-or-later"
 
+  bottle do
+    sha256 x86_64_linux: "2b24a546a772b9abc57a7662eb2f427800e9fbcd744c4709667d0a5b26c88435"
+  end
+
   depends_on "pkg-config" => :test
   depends_on :linux # Netlink sockets are only available in Linux.
 
