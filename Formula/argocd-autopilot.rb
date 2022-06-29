@@ -2,8 +2,8 @@ class ArgocdAutopilot < Formula
   desc "Opinionated way of installing Argo CD and managing GitOps repositories"
   homepage "https://argoproj.io"
   url "https://github.com/argoproj-labs/argocd-autopilot.git",
-      tag:      "v0.3.8",
-      revision: "ae714b11609835f5699fe6d3831cf5e3698ddf46"
+      tag:      "v0.3.9",
+      revision: "3fbf0669bcb21b380fc80899a2e7580c4d31e72e"
   license "Apache-2.0"
 
   bottle do
