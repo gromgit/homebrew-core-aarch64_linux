@@ -6,9 +6,10 @@ class Ext2fuse < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any, catalina:    "41c770edbb267f3d8d1fe591d947148e7c190adec47940f7d0d6dd1516b6592c"
-    sha256 cellar: :any, mojave:      "541b0787069c0bf37607392a9789ed4e3b2f21ebe214b3274ec27023aa03335f"
-    sha256 cellar: :any, high_sierra: "0b8e89292e91a8fbe00430ae16a3ebbfdbba1017f6dee4801bcf8e63d238962f"
+    sha256 cellar: :any,                 catalina:     "41c770edbb267f3d8d1fe591d947148e7c190adec47940f7d0d6dd1516b6592c"
+    sha256 cellar: :any,                 mojave:       "541b0787069c0bf37607392a9789ed4e3b2f21ebe214b3274ec27023aa03335f"
+    sha256 cellar: :any,                 high_sierra:  "0b8e89292e91a8fbe00430ae16a3ebbfdbba1017f6dee4801bcf8e63d238962f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "cf8a8ab7893e4703857cc93f41853567140bb2713e90dffd0db844d916d83ce9"
   end
 
   depends_on "e2fsprogs"
