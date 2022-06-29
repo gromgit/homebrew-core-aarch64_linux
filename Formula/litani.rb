@@ -4,8 +4,8 @@ class Litani < Formula
   desc "Metabuild system"
   homepage "https://awslabs.github.io/aws-build-accumulator/"
   url "https://github.com/awslabs/aws-build-accumulator.git",
-      tag:      "1.25.0",
-      revision: "ee931df881f3a7a935691c910d60864513d3f0fb"
+      tag:      "1.26.0",
+      revision: "1307f033fd2c334150b758b569821a1b51acf930"
   license "Apache-2.0"
 
   bottle do
