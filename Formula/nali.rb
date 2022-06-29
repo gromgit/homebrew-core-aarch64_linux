@@ -7,12 +7,12 @@ class Nali < Formula
   head "https://github.com/zu1k/nali.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "78b806034521ab4dcc378eee83aac773985124c01203da1a7d53784a31b4f09a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5bd0f157755d3a9a4e7b36207acaf72577571d378193f1aaee027a118f762b53"
-    sha256 cellar: :any_skip_relocation, monterey:       "d6ea226cbdf09496a2fde7d5fd6601abbc0ff7def9e759343b52a991334522e5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "094cf2dac59ce6d3701ce109ca96ae21c65a1e5d25a684649e4ce43a1cc7575a"
-    sha256 cellar: :any_skip_relocation, catalina:       "988b3ebbe68d0c9cce3a03979fb7599fe86ebc689e79d25168c5de0fea4609f8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2ed876181909d010ec85c5b4b73d8bfe78f5419492b27fc79d8c380f268fdb76"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "95f0370e7572e33461ea95ccebdf912b6e6f19a35d7abc229298943211a852f6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "997179fdfdbab8eea9ec87ae18ebe12319e9c4c404cbbe0b9ca415c07ed0ab68"
+    sha256 cellar: :any_skip_relocation, monterey:       "323651c9075f7d67f4d05384df6ca2008810e52f89e7f2bde5b8a9dea478d560"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ba0c204520e18c3820b1e8b241c581c4e5cb187eec49ae3b390aae1c012c4042"
+    sha256 cellar: :any_skip_relocation, catalina:       "68d6a9265655b0db2999d5c43268481986db003274a63e84ea3c5f3267edaab3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cf448017cca99cb26779e72e7128168d9ebfee6a18797b3d07b19885ca10122c"
   end
 
   depends_on "go" => :build
