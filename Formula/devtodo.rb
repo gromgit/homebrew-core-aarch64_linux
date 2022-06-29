@@ -14,6 +14,7 @@ class Devtodo < Formula
     sha256 mojave:         "80c04083f48a5791985a5cf02e86ddff3e40b4523177a947f0bd3f7f066f47a1"
     sha256 high_sierra:    "1d5279b22730d8983887f91866a913b4714f8e453e382116bee294bbacee0e97"
     sha256 sierra:         "aa22627fa7722dd0ca564fdd9770a047901d71090bb5312edfa91c8cf0d72ba4"
+    sha256 x86_64_linux:   "3e73efa42394be4e0be78fe83c13b693f42a84d743fbc8e9248cdcaea13da1c2"
   end
 
   depends_on "readline"
