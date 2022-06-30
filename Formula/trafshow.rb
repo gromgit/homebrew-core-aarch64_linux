@@ -16,7 +16,6 @@ class Trafshow < Formula
     sha256 cellar: :any_skip_relocation, high_sierra:     "d7d2f4fc92f234fd9fda9ec65a03b37aaf43d40203682ee3821526bb18f1ad13"
     sha256 cellar: :any_skip_relocation, sierra:          "c6324418840429d76f53035ae9e013190b8190f75f9fc1eaa8100bc9e7df27f8"
     sha256 cellar: :any_skip_relocation, el_capitan:      "c6bd1f502ddbcc756a400958f1f79da193c5784b7cd71361e1e6742412ae442c"
-    sha256 cellar: :any_skip_relocation, x86_64_yosemite: "fd7be4933f9be5a4a3ebaf0e31086e0f5566608305dd88779f0b0790fdc75c05"
     sha256 cellar: :any_skip_relocation, x86_64_linux:    "16a44efd2d96a93d0dfeb3b6328338710599370308f21728f6900c98bb8df781"
   end
 
