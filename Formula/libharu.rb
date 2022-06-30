@@ -16,7 +16,6 @@ class Libharu < Formula
     sha256 cellar: :any,                 high_sierra:    "70363d91450426724b94040b3fc5130d0e024fc13e08e5747cf47017fb94c76e"
     sha256 cellar: :any,                 sierra:         "860cda2675feea36f82f4b8108927c6a0b1cabca5429c119f63557da11394f74"
     sha256 cellar: :any,                 el_capitan:     "68003e06f893b8df9d412960a06c69f6b45cb4ab5abd96e9f10c5936ab8724ac"
-    sha256 cellar: :any,                 yosemite:       "fd4201d2cf6e068aed5e946b09ae1b22a390ca4ed968084bfed18ed705047987"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "5fe78364fa33562f2bdee06c1dfabb867ebbf50810f64fbb5d05f127dc74b106"
   end
 
