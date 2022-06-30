@@ -14,7 +14,6 @@ class Mplayershell < Formula
     sha256 cellar: :any_skip_relocation, high_sierra: "c0b558e0508d80fe05a1d9617b7aa1986066c54bc0a3da585631eb406da5eb93"
     sha256 cellar: :any_skip_relocation, sierra:      "e9377eaebb65903037105bf3ed6ee301a182452791e9daeaadd08ccb732d9d1b"
     sha256 cellar: :any_skip_relocation, el_capitan:  "ae4c1c9d069053afa7e71867256b577e23bd0dec87a90ccab2ebeab089a3634b"
-    sha256 cellar: :any_skip_relocation, yosemite:    "1637360e180d7b48367cb7c4f01d03856b9d13247000e4cc33f0af5f6ed92101"
   end
 
   depends_on xcode: :build
