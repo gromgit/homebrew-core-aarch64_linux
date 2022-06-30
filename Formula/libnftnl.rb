@@ -5,6 +5,10 @@ class Libnftnl < Formula
   sha256 "9efc004f9d15918d68f9e98e194d55e030168f33bb67c3e7a545b740c9ed6d0a"
   license "GPL-2.0-or-later"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "62f67f45a10e6025403d475470701dda793778ad178e1e627e8b7ffc195b3bd7"
+  end
+
   depends_on "pkg-config" => [:build, :test]
   depends_on "libmnl"
   depends_on :linux
