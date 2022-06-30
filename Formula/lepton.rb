@@ -14,7 +14,6 @@ class Lepton < Formula
     sha256 cellar: :any_skip_relocation, high_sierra:  "496840db331a445a5ba66475a58782a26d5a910b9d7ed8fb1aa2e0f9b98c68b9"
     sha256 cellar: :any_skip_relocation, sierra:       "6713be0e881459057b561cbfd6902d167dc9601be856b8715e9abd6ffc02b605"
     sha256 cellar: :any_skip_relocation, el_capitan:   "a6a1a47dd2f80fe66d5dfbde97b91ba93d054f6934ba2a950ede603e405e6eed"
-    sha256 cellar: :any_skip_relocation, yosemite:     "700264c93fab4bba78cf62ac3a77ea60099cd38399f00d6972f8093b89dd8404"
     sha256 cellar: :any_skip_relocation, x86_64_linux: "0fdd05b0bfb892d9f768134cc9c929ae9544137b8ac75a875f06d6f83d15607d"
   end
 
