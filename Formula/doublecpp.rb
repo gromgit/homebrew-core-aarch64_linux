@@ -15,7 +15,6 @@ class Doublecpp < Formula
     sha256 cellar: :any_skip_relocation, high_sierra:     "ca161369434cba6763add99e4e470a495662c866a328b374c5d6184e687361cc"
     sha256 cellar: :any_skip_relocation, sierra:          "748af7fb63392453cc4b648cea20786173202f5c891b45765dbf374e4ac2c2d5"
     sha256 cellar: :any_skip_relocation, el_capitan:      "208aa405fce2959b47f705ab8ba9104e8eadec3e8e709bddd3117ef7b074bedf"
-    sha256 cellar: :any_skip_relocation, x86_64_yosemite: "54f99b448e61043c5152441c309ea849b1d04fbde12ab67e023aee074dc206ee"
     sha256 cellar: :any_skip_relocation, x86_64_linux:    "989076ce2ebaba5ca834b159332a0e4b4bf15dd51d5dc2617594d367bffee9f2"
   end
 
