@@ -13,7 +13,6 @@ class Scriptcs < Formula
     sha256 cellar: :any_skip_relocation, high_sierra: "263fda7addb857a9ed3c0c15856c422d3684ad069c2efc644858bb1779a92e91"
     sha256 cellar: :any_skip_relocation, sierra:      "9ccece2f779060ab23e699b07d6cc6ce0b2c2e0058cc995b1541e1170f69a6eb"
     sha256 cellar: :any_skip_relocation, el_capitan:  "e3b6cb117d23ccf9a745e0ac5e61fcb531d7e8a08476699d2ece6c31e564450e"
-    sha256 cellar: :any_skip_relocation, yosemite:    "21891cea519df48979320ba74660002d270fb414181e3f7087505169af15a471"
   end
 
   depends_on "mono"
