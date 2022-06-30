@@ -6,13 +6,12 @@ class Oras < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c6d96bff8a617c66e247fdeff34859df2969d6d4ea17f9ce8bde54e32f688d76"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0b3b53df6013d9b3ad1ab832a8d0daad2ae4fbb017adf387b7f6d13e5e2d76bd"
-    sha256 cellar: :any_skip_relocation, monterey:       "47623aa4370fafac72ed1f25b27466d352096943a867b13d55ee85dfbe94ffd4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "18d86fcc6965357bb00cc945ef6ee888f874eb487bb341a1389cf8f9cac626d1"
-    sha256 cellar: :any_skip_relocation, catalina:       "d08f9849ddb604f0fd61574afd8f2dad30fc38022b14b547c2abd50bb6ef97d9"
-    sha256 cellar: :any_skip_relocation, mojave:         "ef76f4634fe95c6c000f90c3ddb323b8edf694f60e5e6eed4e416bef3b874f15"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "64c8e274d78dad6bf79c17b8cdc2d5e31738ff761704bef3e7be4f550305ad9c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "35e4d9a1e7bc563c53cbf39f19b01216e3193af24d51826880c86eb5a609d983"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bb725ade6f49037d6128da204852e148ff3ddbe414fdbf80bbfbab81495874d1"
+    sha256 cellar: :any_skip_relocation, monterey:       "04fcd6472e8eae44f0c170edc1d4524392e5ad2506222de7691a70042292ddc9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "177924324da426db82d12771b0fbafaf0e6676ce64d72a384c9aa07e8c1246a3"
+    sha256 cellar: :any_skip_relocation, catalina:       "cfcfaf4d91d6a4952828e37ef1434f2e12803fe5143d9a82e574f44a4200bab6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7d79cf6a080103509458689f16dc03656e5ca85d30a9996afa044dbe37f010a1"
   end
 
   depends_on "go" => :build
