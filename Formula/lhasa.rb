@@ -16,7 +16,6 @@ class Lhasa < Formula
     sha256 cellar: :any,                 high_sierra:    "36f6530ca2f2908bed047741ce52e41f4ec0d0d726bdd8ecb664958da821b527"
     sha256 cellar: :any,                 sierra:         "d0abfc9315cfeff37781861e8c7ba2d3eb34003684560ee22a5dfb2acc4dfd5a"
     sha256 cellar: :any,                 el_capitan:     "0d407f1058853c656a4aef717c1e72ff57472e0622fb344a5ef57c4c9ad8c3ee"
-    sha256 cellar: :any,                 yosemite:       "afd0b2c24f4e4103c6ab8e918a972fda1b614890fc527bf314cc253e199013ee"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "6ea5cc36df44bf7e1b604f93003609cc3386172cad0875f3516435505c574839"
   end
 
