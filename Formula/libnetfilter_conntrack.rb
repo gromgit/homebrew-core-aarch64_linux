@@ -5,6 +5,10 @@ class LibnetfilterConntrack < Formula
   sha256 "67bd9df49fe34e8b82144f6dfb93b320f384a8ea59727e92ff8d18b5f4b579a8"
   license "GPL-2.0-or-later"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "c8a9efde4edf4bbd45308e4f1492b5efaff4dede7b4c9bf0f54f14f50699ba66"
+  end
+
   depends_on "pkg-config" => [:build, :test]
   depends_on "libmnl"
   depends_on "libnfnetlink"
