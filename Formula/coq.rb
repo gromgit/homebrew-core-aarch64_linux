@@ -1,8 +1,8 @@
 class Coq < Formula
   desc "Proof assistant for higher-order logic"
   homepage "https://coq.inria.fr/"
-  url "https://github.com/coq/coq/archive/V8.15.0.tar.gz"
-  sha256 "73466e61f229b23b4daffdd964be72bd7a110963b9d84bd4a86bb05c5dc19ef3"
+  url "https://github.com/coq/coq/archive/V8.15.2.tar.gz"
+  sha256 "13a67c0a4559ae22e9765c8fdb88957b16c2b335a2d5f47e4d6d9b4b8b299926"
   license "LGPL-2.1-only"
   head "https://github.com/coq/coq.git", branch: "master"
 
@@ -22,6 +22,7 @@ class Coq < Formula
 
   depends_on "dune" => :build
   depends_on "ocaml-findlib" => :build
+  depends_on "gmp"
   depends_on "ocaml"
   depends_on "ocaml-zarith"
 
@@ -29,9 +30,10 @@ class Coq < Formula
   uses_from_macos "unzip" => :build
 
   def install
+    ENV.prepend_path "OCAMLPATH", Formula["ocaml-zarith"].opt_lib/"ocaml"
     system "./configure", "-prefix", prefix,
                           "-mandir", man,
-                          "-docdir", "#{pkgshare}/latex",
+                          "-docdir", pkgshare/"latex",
                           "-coqide", "no",
                           "-with-doc", "no"
     system "make", "world"
@@ -64,6 +66,6 @@ class Coq < Formula
       intros; lia.
       Qed.
     EOS
-    system("#{bin}/coqc", "#{testpath}/testing.v")
+    system bin/"coqc", testpath/"testing.v"
   end
 end
