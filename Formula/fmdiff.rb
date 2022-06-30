@@ -17,7 +17,6 @@ class Fmdiff < Formula
     sha256 cellar: :any_skip_relocation, high_sierra:    "03bf7b7acda053f3b96de99591fb97cef678297941eab37f52802a3c2734afdd"
     sha256 cellar: :any_skip_relocation, sierra:         "59d9c9d8a8759531a2f715619cfb2bce404fc7378235cf416ea5a426eb8d967f"
     sha256 cellar: :any_skip_relocation, el_capitan:     "59d9c9d8a8759531a2f715619cfb2bce404fc7378235cf416ea5a426eb8d967f"
-    sha256 cellar: :any_skip_relocation, yosemite:       "59d9c9d8a8759531a2f715619cfb2bce404fc7378235cf416ea5a426eb8d967f"
   end
 
   # Needs FileMerge.app, which is part of Xcode.
