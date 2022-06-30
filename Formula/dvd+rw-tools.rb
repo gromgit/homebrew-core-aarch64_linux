@@ -20,7 +20,6 @@ class DvdxrwTools < Formula
     sha256 cellar: :any_skip_relocation, high_sierra:     "acf8d9a92ff74fdbfc409dc42980be607c4dd263aca89444713972a055d5967a"
     sha256 cellar: :any_skip_relocation, sierra:          "932e3879247dd1587f35d99c7132c302ddeaf3b5efad9effb05f5b086a55541a"
     sha256 cellar: :any_skip_relocation, el_capitan:      "01bae78a5187a47ea770a9cb9c0cabdbafb60485e333a563240a6ea74d6718b0"
-    sha256 cellar: :any_skip_relocation, x86_64_yosemite: "13fa5b14889c82bd2ff44d4da2ba8049603bdfc6026196440fe33102939faa06"
     sha256 cellar: :any_skip_relocation, x86_64_linux:    "d491eb26d5db91ea03ea2403ae8866675d268a4d9962a4dc9cb4bdb0aedecb47"
   end
 
