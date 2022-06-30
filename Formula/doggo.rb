@@ -6,6 +6,15 @@ class Doggo < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/mr-karan/doggo.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "046a13968d24a5a43fee494ab987c7568a3111905f807f2448aef4d1a0fc2b90"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "55a818010580cc97f183bd42a6279553733f6672de2dceb27ec56643ec0fd5a4"
+    sha256 cellar: :any_skip_relocation, monterey:       "07183902cc7b73f0a09a7d2ab6f11369d261d39805bc11577c026fcba44c64ce"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3f9d8e9ff1e45734211f8ebe02eebeb1c9daafaaa96f380f9fd9513d02e6445b"
+    sha256 cellar: :any_skip_relocation, catalina:       "764f07add2600a4c6df47f41aee089b444e03e18e2a4777a6a5969d0b9878572"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "08a993241db6f80d4ac98d617c4987962a6595c6dedcc0981798e85c14aab9a1"
+  end
+
   depends_on "go" => :build
 
   def install
