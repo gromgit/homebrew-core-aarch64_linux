@@ -16,7 +16,6 @@ class Guetzli < Formula
     sha256 cellar: :any,                 high_sierra:    "1b3a1b5544b7a8c30553b2e8ac669d8e924d0164feb5355b0a7c2ef5807aca46"
     sha256 cellar: :any,                 sierra:         "c059346fa601885f550b50752d6d1a23eced66388b18e1c1db5169a0951dcad6"
     sha256 cellar: :any,                 el_capitan:     "a77327b3964a88a84879943171e0d10d6661cc72c5ceaa12ee2091f02930da1a"
-    sha256 cellar: :any,                 yosemite:       "04864f5c52c77f2d382247a57bf082052599a2bc9bd8fa28592ab17657342b08"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "f75d76355fa17bf7709842f7e1dab879c5cae613908bfd7196f6cc553238644f"
   end
 
