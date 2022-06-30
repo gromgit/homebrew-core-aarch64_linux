@@ -21,7 +21,6 @@ class Libforensic1394 < Formula
     sha256 cellar: :any,                 high_sierra:    "5e919cf8bce0747630324f0c203bbd1aef4d7e17d278f42bcbece48da2229c8f"
     sha256 cellar: :any,                 sierra:         "e747c5c6797d48070c4a4199fe38021cd0164a052e14b21005b9caf4a47a6e3c"
     sha256 cellar: :any,                 el_capitan:     "d850e7c3a04b206c6219c75ba0a00723e9a25d0c97831de289320ef0cc076aae"
-    sha256 cellar: :any,                 yosemite:       "b64837090b557e25444999bfc41e2023f8fc2ced465ef7ccc067938fe0ec2f2c"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "c997e0a787bfd5280159d056a014bbf9eda79db06cc1873d9126712a5f6ece2f"
   end
 
