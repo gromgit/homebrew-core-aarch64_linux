@@ -26,7 +26,6 @@ class Hping < Formula
     sha256 cellar: :any_skip_relocation, high_sierra:     "088413e9a62fe7b67627f41b91d762c2b639ca6b5598175002616ceb234fe93a"
     sha256 cellar: :any_skip_relocation, sierra:          "e6b7a8ef4527b282da33e75fc9484dee752f365b34498849fd251146948f0e80"
     sha256 cellar: :any_skip_relocation, el_capitan:      "9644e041cb830ebd121c224cef3727e20c5bf4dcca918fd91135d74e10eb2123"
-    sha256 cellar: :any_skip_relocation, x86_64_yosemite: "95f5fabc90cdd2e8ca9b10189f69a2057019b35ac1f6cb2e7e4afa7bea1221d5"
     sha256 cellar: :any_skip_relocation, x86_64_linux:    "bc0ad4627c731e75ac2b5358822f39a75d64cbb0a84e963a58c22dc7d9bfd3a4"
   end
 
