@@ -1,8 +1,8 @@
 class AnycableGo < Formula
   desc "WebSocket server with action cable protocol"
   homepage "https://github.com/anycable/anycable-go"
-  url "https://github.com/anycable/anycable-go/archive/v1.2.0.tar.gz"
-  sha256 "d8d411e078f0e3de754623fe4d68025d60c8a9fcd31a29972d8c2f72d2a8d541"
+  url "https://github.com/anycable/anycable-go/archive/v1.2.1.tar.gz"
+  sha256 "b14a2e0a453c121c4d7bb60189e360751c6e6e2d5f3f7ccb8e17dfa1b51b35f7"
   license "MIT"
   head "https://github.com/anycable/anycable-go.git", branch: "master"
 
@@ -32,8 +32,7 @@ class AnycableGo < Formula
       "-X github.com/anycable/anycable-go/utils.version=#{version}"
     end
 
-    system "go", "build", "-mod=vendor", *std_go_args(ldflags: ldflags),
-                          "-v", "github.com/anycable/anycable-go/cmd/anycable-go"
+    system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/anycable-go"
   end
 
   test do
