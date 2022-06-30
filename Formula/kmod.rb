@@ -6,7 +6,7 @@ class Kmod < Formula
   license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "0880a765bade6c140e9c0f8901e46db2f97d39951abf418ed701e03103f812d5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "fd2381a295cd23ad7ed2c8ea088d4a23b48071cc71c8c385418fb80ee822cb1a"
   end
 
   depends_on :linux
