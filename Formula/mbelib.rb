@@ -16,7 +16,6 @@ class Mbelib < Formula
     sha256 cellar: :any,                 high_sierra:    "710bc1a0458b96c12c0a3b675a3410b1d86257ceb36370fd94952891e1a9b744"
     sha256 cellar: :any,                 sierra:         "45f0f9fafbe773fab43f621c62ce0c117c1d9a01fe32528b8b18fa6e94671a22"
     sha256 cellar: :any,                 el_capitan:     "8cd7158aaccceca6fe78a8031f1d58189b269b0dee86a10c349d3d514c4e33e2"
-    sha256 cellar: :any,                 yosemite:       "30b0fc540b32e244a1cf26719d97a4c57432dbd1537b22a3651fa3d43e1d285b"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "2aa416bb9571e03c0bb7b877a44f08e874f069367367ca6c3bd6cefb87ecd70d"
   end
 
