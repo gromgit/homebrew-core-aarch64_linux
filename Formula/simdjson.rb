@@ -7,12 +7,12 @@ class Simdjson < Formula
   head "https://github.com/simdjson/simdjson.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "1cb96843a02c5e9719d0e97489299c9be9f171e06ba97d4f0a8d70e635b3f8ad"
-    sha256 cellar: :any,                 arm64_big_sur:  "30280c9ae975e560d4f5807918d0f8908968b1d58c9fc97e1da5b3b7a24c99d1"
-    sha256 cellar: :any,                 monterey:       "2c0abb6a73fe140ed68387893ff0fc24322eec52b7c843eb5df1eec8464842cc"
-    sha256 cellar: :any,                 big_sur:        "64a4f8bcea7606c62768ddeb11a0787b48f7ff54b634543524f9ca6de78347fd"
-    sha256 cellar: :any,                 catalina:       "6a71cf68a95cb6c9374041c82fe6ec0d4846f34587f796782cc15dfe94f31b58"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9f73368d388cd613a3f9db6bdb04ddbde49de10ffe635fcbe68a7c54b2d756fe"
+    sha256 cellar: :any,                 arm64_monterey: "6bbe7617e124c86fb5b00e4723be2529150b9d93ffd0b148c219e3bb365e628f"
+    sha256 cellar: :any,                 arm64_big_sur:  "4b09cfe5e74f0827188f53dc20aa5b60e9bed4f196a13b876a4a5a0a8b5a096d"
+    sha256 cellar: :any,                 monterey:       "a9eea06b13a70bbde11aa31215fad801249a3b5c8a477c9e050825d23996cf00"
+    sha256 cellar: :any,                 big_sur:        "12b72404efa91a3a733051c4105eafa9eb6ee36a526f9d07f1494c9c92cd6602"
+    sha256 cellar: :any,                 catalina:       "5f1da7b7786d1345b1bc9b90ac3316c23e0362f3e3420a1adce033c6414d66bb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "497aa3818dda6f088d37f57ceba4acb1f486c859e08326d5663e85ff9c9dc190"
   end
 
   depends_on "cmake" => :build
