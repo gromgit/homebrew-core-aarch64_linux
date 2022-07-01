@@ -6,15 +6,12 @@ class Certstrap < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "44595ed41984a89259ce447959ea154a4506e5109038c649b46ebdf5d8556ec3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "95290ccc53030ee471239996d914839d094f19078edcf7dbeef742730d46b64c"
-    sha256 cellar: :any_skip_relocation, monterey:       "3c4dbf08de58f473efe0062ccdc5d0cbd51bf048656f14d5f042a9bdaae937e8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "44b1d5f60f4dccbe495c53006a828784dcacca1f63dd008ec93d8a502ed8fb46"
-    sha256 cellar: :any_skip_relocation, catalina:       "52e68d4bcd2256bb1026aafefc9aef39c0e7945e1f26c06b3e09f3b7e7d9ab14"
-    sha256 cellar: :any_skip_relocation, mojave:         "8f7fb0f6d8b559ee4d30972a68d5d76117a86c07233abc49237c516f45f07277"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "12fdf1f518c3f2944d30f4289813a82aa56580b844fc2cc1ad3383d8675c9882"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "13724be9c67b61927d775d2e0eadd328a7b9c10922cd0660d5a0d002c4c8ead8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cd72ace92ab23822ee98e6e0a374132f17b24ed473029266918891a4c6eea074"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "10cf4c0c8f42e97dac415a9ec0e34f8948a2c94602498e0125efc71ae038a553"
+    sha256 cellar: :any_skip_relocation, monterey:       "f5a6dd11e17cddf336dcbf0a89da75c5e0d96eeae71bd96377ecdc353bbd6d65"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d97b07034dafd41e77947288ec901c169c2afbe12e302e30a188f55a5f6050b0"
+    sha256 cellar: :any_skip_relocation, catalina:       "bc00650c04cae6f16bf49b6fe7f22db094fe8c948b39a1cf3ae1bebeaf4ba8a2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "87ccd6d8769ae051ec3c65a3072f704be545747acdd3c0f31a6326c1467ed50a"
   end
 
   depends_on "go" => :build
