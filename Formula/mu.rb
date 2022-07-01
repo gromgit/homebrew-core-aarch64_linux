@@ -4,9 +4,10 @@
 class Mu < Formula
   desc "Tool for searching e-mail messages stored in the maildir-format"
   homepage "https://www.djcbsoftware.nl/code/mu/"
-  url "https://github.com/djcb/mu/releases/download/1.6.11/mu-1.6.11.tar.xz"
-  sha256 "60eab240dc108f2a419f47d6a75c16841078dcd193f2c0bb02dcdb9ff484ec8d"
+  url "https://github.com/djcb/mu/releases/download/v1.8.2/mu-1.8.2.tar.xz"
+  sha256 "ffac259cd594a10e948f36937fa32e1307aa35259eae9b858c0b92329166533f"
   license "GPL-3.0-or-later"
+  head "https://github.com/djcb/mu.git", branch: "master"
 
   # We restrict matching to versions with an even-numbered minor version number,
   # as an odd-numbered minor version number indicates a development version:
@@ -25,17 +26,11 @@ class Mu < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "1e07e0304efd1a083886e0489696d2d408ea7854155a6f07b044494f630a06fa"
   end
 
-  head do
-    url "https://github.com/djcb/mu.git"
-
-    depends_on "autoconf" => :build
-    depends_on "autoconf-archive" => :build
-    depends_on "automake" => :build
-  end
-
   depends_on "emacs" => :build
   depends_on "libgpg-error" => :build
   depends_on "libtool" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "gettext"
   depends_on "glib"
@@ -53,13 +48,14 @@ class Mu < Formula
   fails_with gcc: "5"
 
   def install
-    system "autoreconf", "-ivf" if build.head?
-    system "./configure", "--disable-dependency-tracking",
-                          "--disable-guile",
-                          "--prefix=#{prefix}",
-                          "--with-lispdir=#{elisp}"
-    system "make"
-    system "make", "install"
+    mkdir "build" do
+      system "meson", *std_meson_args, ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
+
+    # fix lisp file install location
+    elisp.install share/"emacs/site-lisp/mu4e"
   end
 
   # Regression test for:
