@@ -10,6 +10,13 @@ class Unisonlang < Formula
   license "MIT"
   head "https://github.com/unisonweb/unison.git", branch: "trunk"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, monterey:     "e95f66e764c2c11f2df422ae879d467ff41dae657fe5447a1aeef4fcfe9b781a"
+    sha256 cellar: :any_skip_relocation, big_sur:      "e0b5f2f8f31a9ed0bcc293159c2a0be5aa85fc1b1ac1124edfbbfa7c7364f673"
+    sha256 cellar: :any_skip_relocation, catalina:     "d0a5e819464c8260e6bd809fb86165b384212141af8c25427f23a9bc3d68f5c6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "8e01b2d90970cb66721cf5f5e5135a7867112fe6239250ea2b0cc5eeebb4f33e"
+  end
+
   depends_on "ghc" => :build
   depends_on "haskell-stack" => :build
   depends_on "node" => :build
