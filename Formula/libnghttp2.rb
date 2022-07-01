@@ -12,12 +12,12 @@ class Libnghttp2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "75e16ae0404213dbb7f034e51af8fbbbc4090aaf93ad15d9d6be1b78d15cc5df"
-    sha256 cellar: :any,                 arm64_big_sur:  "b526bb06eb62c9b6366814b4feb6044a1c4df86ff39512de4ab01fc0f903bfc0"
-    sha256 cellar: :any,                 monterey:       "71cc16ddaac1f8eab66b1ca3b910e7c1369f38daf269aba7e8a65ff7f3451a8f"
-    sha256 cellar: :any,                 big_sur:        "bfffdfc64adc8be4e663239d8705d68b5ce6ff7a7091a778397b5305fab1d3d5"
-    sha256 cellar: :any,                 catalina:       "1678ce30b34cdeff9d62d0786c81496027a04e894e002dd26953eb3e47a3d2cb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "85fcb5b98c7d3d607c02742146146c92363f5bfaf95b0cb8924b207cb1fc9082"
+    sha256 cellar: :any,                 arm64_monterey: "4378f718973183dfc187684d4f7839f57c59f8a0029f166789db22440b2ff2fe"
+    sha256 cellar: :any,                 arm64_big_sur:  "e8b426668e3b1eb67c43a203d21c14747cb137c05da9200a7a980563639a9f74"
+    sha256 cellar: :any,                 monterey:       "f0e1cb4b6a617a70e603bb8a1cf0adfeb3f7226e44e1225de300b4480f3427fc"
+    sha256 cellar: :any,                 big_sur:        "2a175bc1d34a2356271003292aca7a6e3954366366c0c3cc59e1a09f55cbb1f8"
+    sha256 cellar: :any,                 catalina:       "c7ac23b7989135a9e0bcdc88fb167f9fba34d4ea8c9df23bc15ac1856e8f59ff"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c7643d558309bd4b509ef00016f69a428f13dd34d85eae1ad1751d3c44d66011"
   end
 
   head do
