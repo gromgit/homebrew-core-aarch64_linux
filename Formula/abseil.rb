@@ -7,12 +7,12 @@ class Abseil < Formula
   head "https://github.com/abseil/abseil-cpp.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0c19e80720547d2ef348842242568e27bbc662f4be6b4dc4b40a7477645b9dbf"
-    sha256 cellar: :any,                 arm64_big_sur:  "23ad9b293aad20112786ec85f80a54781edb42081277e18bbda61752965b1301"
-    sha256 cellar: :any,                 monterey:       "a890728e03ba9359d371d55430ca1b86e4b7c28420179b6d05ae4fed2134b966"
-    sha256 cellar: :any,                 big_sur:        "c707d13cb25a75e52333bcbd57e17f522e09e5f073302ce904d61ec026ccd708"
-    sha256 cellar: :any,                 catalina:       "9a2c8277e6d4b348914220580486bf707b2e09d70f6457a60496cc4254426875"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "513087011325dd2d8a006ba7d12c07e6077dc9048fed2d5e36d20c0905681c81"
+    sha256 cellar: :any,                 arm64_monterey: "0055d33f047cc5b840cecc5a914fbeaa2b9ab88bd17d8d37bc4fd6e0ff2ccf27"
+    sha256 cellar: :any,                 arm64_big_sur:  "131fc67a76243ecd760cf20457de8952649677e4eedf44f20fe5ae613120c18e"
+    sha256 cellar: :any,                 monterey:       "24bfd83bbae83e0562e3798e8b86a98f274acfbd456b8836bfb9d2e4b75dfdec"
+    sha256 cellar: :any,                 big_sur:        "d694723ee65f04c8727035f49c36ecf1f7fcbe36e5833fd27f5d7d88594a445b"
+    sha256 cellar: :any,                 catalina:       "9b5cf436cb57b35260fc2a0d7182259fa9351893be591ee570731d1600d4678b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "84a1f15dd86c0ac02ceb06eca0a01fceeaab04c731a31c925b2d40d5d7b2031f"
   end
 
   depends_on "cmake" => :build
