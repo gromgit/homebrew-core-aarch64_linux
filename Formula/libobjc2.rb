@@ -5,6 +5,10 @@ class Libobjc2 < Formula
   sha256 "78fc3711db14bf863040ae98f7bdca08f41623ebeaf7efaea7dd49a38b5f054c"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "ba344263f90c949f7be3cf48ac100e83eb0fe062f5b770cd688b2b84b6f3ece4"
+  end
+
   depends_on "cmake" => :build
   depends_on "pkg-config" => :test
   # Clang explicitly forbids building Mach-O binaries of libobjc2.
