@@ -12,12 +12,12 @@ class Watchexec < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3088b949f8c235736188d3c44bb9016417eeba4c0026f599ba1ffc70d0e2f742"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3b06f7bdb41303017811ea1c4cf4e2e6e1d9fa68480caa325745bc065e8c2e4b"
-    sha256 cellar: :any_skip_relocation, monterey:       "7c2a6fe90509420804fb2bb7af1a7bfb06427ecfd6d43d7aa13f2a97e9d487f2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d392740b6ac5b37bffe53e4c75072accf7328b95c65dc7955057eea5d23a29b5"
-    sha256 cellar: :any_skip_relocation, catalina:       "38b8e287f32ffe71e1ed4692efddbfb2be0f16067d44651b4df69e9ad7292e4f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "77d2cdaf3094317fe3b4a6f5c63d77520adcc92af5727c193a172a9c9560481e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "90d1caa558c7400947053b27c2b701ad61b9011315a7117b4ed57097b279c100"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9fa9b3558e762ffb8051096309cb312fe6d67f9c6cf8d5aaf4a895ee5a16a6c9"
+    sha256 cellar: :any_skip_relocation, monterey:       "4d48b42ccd2bd032a9ad36773bd6479620bbc897972188245e86bb2491bc945e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c1d266bfb5b61d679a642e75bc170e9b02a5a33b7fceab6223cf307a3e4be4fb"
+    sha256 cellar: :any_skip_relocation, catalina:       "ee3999abbfaa53ec422a29d84eed5207c18e5d816fabad1f097412d336cd6811"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b6a1935deeb267e540e3d45d7adfac9b4de0a576ad81e1b65f132339ce85a170"
   end
 
   depends_on "rust" => :build
