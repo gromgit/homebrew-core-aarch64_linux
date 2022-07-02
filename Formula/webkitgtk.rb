@@ -5,6 +5,10 @@ class Webkitgtk < Formula
   sha256 "732fcf8c4ec644b8ed28b46ebbd7c1ebab9d9e0afea9bdf5e5d12786afc478d1"
   license "GPL-3.0-or-later"
 
+  bottle do
+    sha256 x86_64_linux: "580a996b665685bf6469f3bc865e90fe3ffe08977900de3c6012c95a80823bab"
+  end
+
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "python@3.10" => :build
