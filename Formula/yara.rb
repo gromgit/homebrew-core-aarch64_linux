@@ -7,12 +7,12 @@ class Yara < Formula
   head "https://github.com/VirusTotal/yara.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "7e84b22d34265f106d7e19f6d0388272a6b5150448702a28482bab62cee9c16b"
-    sha256 cellar: :any,                 arm64_big_sur:  "f7290fa7bc44e35efddf8382b853b0168bc43b9f6e1028ff0f22db9c8c3978c6"
-    sha256 cellar: :any,                 monterey:       "00b6fa5f3f8797e6cc5f54b44a5e940a1ecf0750c88e2c5e34a6dca2e1693f19"
-    sha256 cellar: :any,                 big_sur:        "0e776dbbe21eb4dc5259d81d6cc49eaeceecc813ee5e8116db7e0bdba65b2802"
-    sha256 cellar: :any,                 catalina:       "ba0fd18328d0de380d179e17457d59801cee6c8cd3e55287673e594f55014e42"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7672129b692ec107624c356670382dd7f6ffdbce5a752667ca2ffdd434e9375a"
+    sha256 cellar: :any,                 arm64_monterey: "35ec01dc4e5556036793494dbae83847be7ce02e578b04c20433197a63304819"
+    sha256 cellar: :any,                 arm64_big_sur:  "59ac9a06b2a421e29f6ff2ac5fe5059fd953f8e8762b3f823464cd57db725a88"
+    sha256 cellar: :any,                 monterey:       "773531a3d7ad2c360ec1d57f052b63c6b8547a0f4830591829ba05f6d4119a17"
+    sha256 cellar: :any,                 big_sur:        "878154681e559545dae2eccfdfcd43616c109724e3e90ecb9bdedf938ee32ad1"
+    sha256 cellar: :any,                 catalina:       "9dbf5097af9c14a455cc54634e9819da19b0e91dcf89f36c31b470e164c0556e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9cf5ecd9956d77e340486a6a5e5fbbfbe2095502344c830372ecbbeeb20e0643"
   end
 
   depends_on "autoconf" => :build
