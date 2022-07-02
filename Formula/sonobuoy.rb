@@ -1,8 +1,8 @@
 class Sonobuoy < Formula
   desc "Kubernetes component that generates reports on cluster conformance"
   homepage "https://github.com/vmware-tanzu/sonobuoy"
-  url "https://github.com/vmware-tanzu/sonobuoy/archive/v0.56.7.tar.gz"
-  sha256 "664746d50fec283e16185c3463acdec04a987d65ccee75d4a0a5d3c08c50e708"
+  url "https://github.com/vmware-tanzu/sonobuoy/archive/v0.56.8.tar.gz"
+  sha256 "8e2631c57c2fd7ffc811c1481ab9df15043770b47cec3fafa15d1c64b8f13326"
   license "Apache-2.0"
 
   bottle do
@@ -14,8 +14,7 @@ class Sonobuoy < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "bbfdb71eb9af9c4146decd6ad8e8dd822d8d4cd1142f517de9909f411be15f94"
   end
 
-  # Segfaults on Go 1.18 - try test it again when updating this formula.
-  depends_on "go@1.17" => :build
+  depends_on "go" => :build
 
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w -X github.com/vmware-tanzu/sonobuoy/pkg/buildinfo.Version=v#{version}")
