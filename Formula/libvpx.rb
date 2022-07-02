@@ -7,13 +7,12 @@ class Libvpx < Formula
   head "https://chromium.googlesource.com/webm/libvpx.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0f00a294d49ccafb88029fb76958fb2762805ca7669f64d521a0cd261df1a8ad"
-    sha256 cellar: :any,                 arm64_big_sur:  "2edfb6a133be8947da27719975dbd19dd6233e12f21d221bea7f6008cfbc51a2"
-    sha256 cellar: :any,                 monterey:       "fb3c6bc5d4acdfbe258e1c9c5e24767e170e65a434ef983fbc1525e708cc7f6c"
-    sha256 cellar: :any,                 big_sur:        "73d6365843bd6b8c868b3bf020152225d06304117c23c2a1e579ce347d3ab4e1"
-    sha256 cellar: :any,                 catalina:       "28194ea0a917dcfecbfdcd51cb37da4ae1697238e3c2dedc769c502b435124c7"
-    sha256 cellar: :any,                 mojave:         "378b9f6680ea8a99c064d8acd0cfbfbf2a1c142d8c4f27cf935dcfed3342cc61"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e79ec2f50112da2b5adfc83b46604af182af8364410c9ec686c6c519c133229d"
+    sha256 cellar: :any,                 arm64_monterey: "c4582d6d18d184b3d7087dc63d0868861830ba3501828dc51686037dd8b52491"
+    sha256 cellar: :any,                 arm64_big_sur:  "ad0ed26552883987edf5a30af668a00212105044d290db0d1177bc526e4ce429"
+    sha256 cellar: :any,                 monterey:       "6b091bdf2175b31d57ae699efdf288589c989439dcd7a3abf0311ebdf5029a6d"
+    sha256 cellar: :any,                 big_sur:        "1946876cf2681f292207a096d854816b4c874a3895993acab783342d129509b4"
+    sha256 cellar: :any,                 catalina:       "925e31b0ac36757562c95eeb2c9c0172f6813ab8670a5a245d966c000dfcb79f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "51d009028436923653479737066c8735385e404bf6813e68af9f074fcbbfe4c2"
   end
 
   depends_on "yasm" => :build
