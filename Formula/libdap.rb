@@ -19,12 +19,12 @@ class Libdap < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "b2e68f254825703c580a7ec38276b1591cf74899e4f2fe598f2f76133ac29343"
-    sha256 arm64_big_sur:  "9c645675eb8c23e98ab5521bdbedabe07fb031a6b968e1d8d56df491f89fc960"
-    sha256 monterey:       "761ab9914f8199a6eb67e2f8a4f8cab5a2ec4973da6ad84990cf13ec6feb72d7"
-    sha256 big_sur:        "2bcff3fc4250d9d0c877216dce34528b558a93f82b007ce75a42498b04dc6174"
-    sha256 catalina:       "90f3be6adc9ca1ca7385043f7a3e7099aed471f855dbdd38718e32e529ccfc22"
-    sha256 x86_64_linux:   "9fb1bec5ecba77807cb843178b2dba742bbf58d61714040ca1da9fbdb45d09f6"
+    sha256 arm64_monterey: "92a56dd467c976e0e7fdbd965ce2d290064ea7fafafbf878f039b1afffbbbdee"
+    sha256 arm64_big_sur:  "df808c09fe783470f805aa06e12c2a3dcc5c28f5da166734bbdd016d3b86c005"
+    sha256 monterey:       "9d154311b1a4faa2daec6194ec2cbd342a33fe57c895e3dffefd33f28f3ca900"
+    sha256 big_sur:        "5606181c41261d895ecd7822bac4696a8eda8087b3421841b880929a97d914fc"
+    sha256 catalina:       "a548bf56cc425c7180ee6dd851d789f3ac0f51542cb93ecbd9e795a7131d9a39"
+    sha256 x86_64_linux:   "4d2f8c5e6fd9a76213d8e051ab4a8b38981ebe212b56411fdfd006fceb9d4de5"
   end
 
   head do
