@@ -4,8 +4,8 @@ class Libdap < Formula
   license "LGPL-2.1-or-later"
 
   stable do
-    url "https://www.opendap.org/pub/source/libdap-3.20.9.tar.gz"
-    sha256 "77fc93159d2c71d6ace5709babd9dec598285186aecfba358cb623be29a8e5b9"
+    url "https://www.opendap.org/pub/source/libdap-3.20.10.tar.gz"
+    sha256 "d68c8a95916fa6057a5218c79a0f06e4bb2b24c2adff01ccd7e23e1678cabd90"
 
     patch do
       url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
