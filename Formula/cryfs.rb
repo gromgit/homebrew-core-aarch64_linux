@@ -9,7 +9,7 @@ class Cryfs < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "09cc7d9ab0b5b8cf54ae558e79e76723974a7f2a026ceaa680810a9e33dd7e12"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "935f41c05b34ed2edb6bcc8597445bd368412e8b9a2bb660c3720f52c74a0362"
   end
 
   head do
