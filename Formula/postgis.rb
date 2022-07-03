@@ -12,12 +12,12 @@ class Postgis < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "68e30a69033eed503c20586c7350257f3a3e49e29f0e259c6d20ad1b2094d9f0"
-    sha256 cellar: :any,                 arm64_big_sur:  "4ac4c7df17fba4c4a76ff73fbca5ce08f3daaa75a65cbbe1fe48217861cf5d50"
-    sha256 cellar: :any,                 monterey:       "6ff885044b51f19ce2d2f04b749d195ed3bd22aa65b0e37fbe91834e47a44efb"
-    sha256 cellar: :any,                 big_sur:        "531b37febc9b86113fd5f1e105759d07e8370ff0e4a3b07656e2f9fd4e750ea0"
-    sha256 cellar: :any,                 catalina:       "ba7ea5fb4695dae44b743819f670cb2ddd1b4a55c33adadc68c1dbeee3238971"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f751106ea4e6db15afa67d2de430b5602ecfc28035526bfd8fc801a7578eb462"
+    sha256 cellar: :any,                 arm64_monterey: "b4d02adb46f275667aee3742ccccb6fdac81015e0a67a4292fb4ed6e49b8cba5"
+    sha256 cellar: :any,                 arm64_big_sur:  "fe819e3bcfb07dd724b822024e19fafa34f20674d1f65485cef502d7c8483033"
+    sha256 cellar: :any,                 monterey:       "afb961e1a4a97069b152c114de82f9c64170a993e63e5118b25849ef2bb4284f"
+    sha256 cellar: :any,                 big_sur:        "156dc79e006a2746627a69b9c005fa97301b8a35c27e22d20ce92b0873e8d1e7"
+    sha256 cellar: :any,                 catalina:       "557444ec064e2471cc4508ea6f5c3550a321e12fbbc508bc654456557e19bebe"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "32378b22ed5304f279eba0d8f5f4aadf3d4b1ef6883690117bea5a7ac5d4b1ba"
   end
 
   head do
