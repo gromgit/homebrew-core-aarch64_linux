@@ -15,12 +15,12 @@ class Uhd < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "1a10f56135f1aa9cad9cd8deb3d739dd71a7ec6104e2ed3c484fa604a7b51758"
-    sha256 arm64_big_sur:  "a77fbf7cfcb51c33a7a3fffbeac1511633e1d8df42a71255aec055afefe874bb"
-    sha256 monterey:       "1e006c2ede0dbbd0652e385981c7ffdf7fc3bab2a9f76113c33af46fc7f97c8f"
-    sha256 big_sur:        "e28eb54ea3d5254ebb6559e1a0f354c9413def8eed2f0431797b0a9adf21ed05"
-    sha256 catalina:       "8491bbbb396b96574c78d6412d429c98be07ffc68920cd1353558bb82280dcf3"
-    sha256 x86_64_linux:   "48454addb60b428ee63e144a8de36cb6ec44902a47fe4372b82017058740e50e"
+    sha256 arm64_monterey: "efb94d7371798a8c8061d488a7ae8ccac97837cb894a411b5e0b2cafc88def9e"
+    sha256 arm64_big_sur:  "41e8924b64b0ebb6ab16f5f2ab22a68cccee25cea271bea31d52f19c039d023b"
+    sha256 monterey:       "52ea09e8fb25cefe281b0bf29062f728c5d45865dbe078dde350938d0998d376"
+    sha256 big_sur:        "3fe0a796de18574d2ed3e6cee89233aa44f8a52b4214561f31ec854ed8ec48ba"
+    sha256 catalina:       "459c43efefa0474c6bcbc22c987d8bfd540cdf7f71c14885af878f2600d18a4f"
+    sha256 x86_64_linux:   "e5adf6aa63e105f546276dd47f1437f90d2c71da9cec1f9381909f8d403613c7"
   end
 
   depends_on "cmake" => :build
