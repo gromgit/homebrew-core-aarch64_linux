@@ -1,8 +1,8 @@
 class NeovimQt < Formula
   desc "Neovim GUI, in Qt5"
   homepage "https://github.com/equalsraf/neovim-qt"
-  url "https://github.com/equalsraf/neovim-qt/archive/v0.2.16.1.tar.gz"
-  sha256 "971d4597b40df2756b313afe1996f07915643e8bf10efe416b64cc337e4faf2a"
+  url "https://github.com/equalsraf/neovim-qt/archive/v0.2.17.tar.gz"
+  sha256 "ac538c2e5d63572dd0543c13fafb4d428e67128ea676467fcda68965b2aacda1"
   license "ISC"
   head "https://github.com/equalsraf/neovim-qt.git", branch: "master"
 
@@ -17,7 +17,6 @@ class NeovimQt < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "neovim-remote" => :test
   depends_on "neovim"
   depends_on "qt@5"
 
@@ -41,28 +40,28 @@ class NeovimQt < Formula
   test do
     # Disable tests in CI environment:
     #   qt.qpa.xcb: could not connect to display
-    return if OS.linux? && ENV["HOMEBREW_GITHUB_ACTIONS"]
+    return if OS.linux? && ENV["HOMEBREW_GITHUB_ACTIONS"].present?
 
     # Same test as Formula/neovim.rb
 
     testfile = testpath/"test.txt"
     testserver = testpath/"nvim.sock"
 
-    testcommand = "s/Vim/Neovim/g"
+    testcommand = ":s/Vim/Neovim/g<CR>"
     testinput = "Hello World from Vim!!"
     testexpected = "Hello World from Neovim!!"
     testfile.write(testinput)
 
-    nvr_opts = ["--nostart", "--servername", testserver]
+    nvim_opts = ["--server", testserver]
 
     ohai "#{bin}/nvim-qt --nofork -- --listen #{testserver}"
     nvimqt_pid = spawn bin/"nvim-qt", "--nofork", "--", "--listen", testserver
     sleep 10
-    system "nvr", *nvr_opts, "--remote", testfile
-    system "nvr", *nvr_opts, "-c", testcommand
-    system "nvr", *nvr_opts, "-c", "w"
+    system "nvim", *nvim_opts, "--remote", testfile
+    system "nvim", *nvim_opts, "--remote-send", testcommand
+    system "nvim", *nvim_opts, "--remote-send", ":w<CR>"
     assert_equal testexpected, testfile.read.chomp
-    system "nvr", *nvr_opts, "-c", "call GuiClose()"
+    system "nvim", "--server", testserver, "--remote-send", ":q<CR>"
     Process.wait nvimqt_pid
   end
 end
