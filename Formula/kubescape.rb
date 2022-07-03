@@ -7,12 +7,12 @@ class Kubescape < Formula
   head "https://github.com/armosec/kubescape.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a8e8b3e8c79f7babe902fa1453f94cf4d8cc66f55227ad3c11f99e139b2bf348"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a2dca68dd995fa83cc4befa5104e5425b1217d9de00d6beb74b02b01f42fada8"
-    sha256 cellar: :any_skip_relocation, monterey:       "e3a8787b3bdcda79fd5b6a1a41dcf31e499c0a8824563ea7ae4cfc52c4898f6a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8a0a263e14e43e00d869ae59d5d7f95c1dcc5a133da4d6a27a7e842bec496b02"
-    sha256 cellar: :any_skip_relocation, catalina:       "e4ce34ce335e76a51e43cbac421dc8b7408ccb8c9d2869409855138d1e5656e0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "57f8bc6811fb2834a906834a77ef833a5de0a4a71ce06a4a63651022cb6e1367"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "452de451438bf45c9fcf24f82799fbfd34d459cdaf32a917ba377ef2e6675c72"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "341b4910a7d9e9c1603a52b196694a75f0b7bf4f1977c5f37114c18a46729a0d"
+    sha256 cellar: :any_skip_relocation, monterey:       "df9e7368b568fbc86ffb4ee154f7ebcb0f9d6b06a0bec085f9d3f2f891a1648c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "eb9edc20fd7ada822da3fb0782b8416e370001769040f73bced2d11b7d7b6c62"
+    sha256 cellar: :any_skip_relocation, catalina:       "652d134d280d3b7dd2d61f16ee24058924220d128ef634dd152948d89574b7e7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f0cdcfb1aa07cb1e655af20070b6b0afed3a0c5a89a916967d79ab5352662de1"
   end
 
   depends_on "go" => :build
