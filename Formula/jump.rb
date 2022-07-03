@@ -7,12 +7,12 @@ class Jump < Formula
   head "https://github.com/gsamokovarov/jump.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a1f200b2d8848305139c76e468725599fc4647a80a7b54e1394abbdb4fbb1c16"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a1f200b2d8848305139c76e468725599fc4647a80a7b54e1394abbdb4fbb1c16"
-    sha256 cellar: :any_skip_relocation, monterey:       "09697911ef3c008e4105828b6ee8ca4be2ffeb774fa1676d5de9de9efcaeae52"
-    sha256 cellar: :any_skip_relocation, big_sur:        "09697911ef3c008e4105828b6ee8ca4be2ffeb774fa1676d5de9de9efcaeae52"
-    sha256 cellar: :any_skip_relocation, catalina:       "09697911ef3c008e4105828b6ee8ca4be2ffeb774fa1676d5de9de9efcaeae52"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5a6c2c2b029b816f95f5fb029b9d5857719553542bf485414f5f127c5dc8dede"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "987dfba1cccc632159347ae8150db80a7cd6456bea696cb3c15c3d8064ebc0bc"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "987dfba1cccc632159347ae8150db80a7cd6456bea696cb3c15c3d8064ebc0bc"
+    sha256 cellar: :any_skip_relocation, monterey:       "3c2fe9f884aa4752c8256358a0c444da6b22c3143eb1d5d361ab79271c90c650"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3c2fe9f884aa4752c8256358a0c444da6b22c3143eb1d5d361ab79271c90c650"
+    sha256 cellar: :any_skip_relocation, catalina:       "3c2fe9f884aa4752c8256358a0c444da6b22c3143eb1d5d361ab79271c90c650"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ad5a151b8c861fd49cdbfca4f0f9f9e844daab3f77515839df277039dfbc1e94"
   end
 
   depends_on "go" => :build
