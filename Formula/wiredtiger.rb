@@ -1,8 +1,8 @@
 class Wiredtiger < Formula
   desc "High performance NoSQL extensible platform for data management"
   homepage "https://source.wiredtiger.com/"
-  url "https://github.com/wiredtiger/wiredtiger/releases/download/10.0.0/wiredtiger-10.0.0.tar.bz2"
-  sha256 "4830107ac744c0459ef99697652aa3e655c2122005a469a49d221e692fb834a5"
+  url "https://github.com/wiredtiger/wiredtiger/archive/refs/tags/11.0.0.tar.gz"
+  sha256 "1dad4afb604fa0dbebfa8024739226d6faec1ffd9f36b1ea00de86a7ac832168"
   license any_of: ["GPL-2.0-only", "GPL-3.0-only"]
 
   livecheck do
@@ -20,24 +20,20 @@ class Wiredtiger < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "2e89496c6a6af975b83b16006c84ef7c69d7df3b0e127e2f58a3b2ff6cfc860f"
   end
 
+  depends_on "ccache" => :build
+  depends_on "cmake" => :build
   depends_on "snappy"
 
   uses_from_macos "zlib"
 
-  # Workaround to build on ARM with system type 'arm-apple-darwin*'
-  # Remove in next release as build system is changing to CMake
-  patch :DATA
-
-  # Fix -flat_namespace being used on Big Sur and later.
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
-    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
-  end
-
   def install
-    system "./configure", "--with-builtins=snappy,zlib",
-                          "--prefix=#{prefix}"
-    system "make", "install"
+    system "cmake", "-S", ".", "-B", "build",
+      "-DHAVE_BUILTIN_EXTENSION_SNAPPY=1",
+      "-DHAVE_BUILTIN_EXTENSION_ZLIB=1",
+      "-DCMAKE_INSTALL_RPATH=#{rpath}",
+      *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
@@ -45,16 +41,3 @@ class Wiredtiger < Formula
     system "#{bin}/wt", "drop", "table:test"
   end
 end
-
-__END__
---- a/configure
-+++ b/configure
-@@ -16317,7 +16317,7 @@ else
- fi
-
- case $host_cpu in #(
--  aarch64*) :
-+  aarch64*|arm*) :
-     wt_cv_arm64="yes" ;; #(
-   *) :
-     wt_cv_arm64="no" ;;
