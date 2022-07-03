@@ -7,12 +7,12 @@ class Mlpack < Formula
   revision 6
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "7f5ea76e533cf82a23314eaa3b795bd3ccf1f35dcbc61b873507e7eb0fce153f"
-    sha256 cellar: :any,                 arm64_big_sur:  "60e0c2e971f6fbb94c8384a07dba0fb418ae8a1683ebe79701ae6cf68b155037"
-    sha256 cellar: :any,                 monterey:       "98a0a185ce11203c15307d18249b01ddf6a2ace4dadf0972de44e416d70ce655"
-    sha256 cellar: :any,                 big_sur:        "3b31fed267940257aab567c907c4635b6aab1ca7f8ef5e52e1d3c16ff1b30dc2"
-    sha256 cellar: :any,                 catalina:       "c3c45aaa730efdaf777cce8bdc4f12831e488383c4e8ad174f53810c3075a9f9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "76ec703752026e506bbe5f7759ad53242c7c7c758962009a86cc5e0d3a87afe9"
+    sha256 cellar: :any,                 arm64_monterey: "f819a5f6a724607ea5bc22e057174099315224c3210f05418717ec02b3df3808"
+    sha256 cellar: :any,                 arm64_big_sur:  "1c6f8957881baf10be4fd9f49136cabdb9e6c11abb7f6ebd8f2e9edd7d4e6b2f"
+    sha256 cellar: :any,                 monterey:       "97fafd8126eaddf030ef0a133769811b28fa45b35893328549b958bc93b527b5"
+    sha256 cellar: :any,                 big_sur:        "36240afc0fa036df0c62b85eb20c8702acea453d34ddf0650de8ce29e0ef046b"
+    sha256 cellar: :any,                 catalina:       "3830ec71257a2e29c7dfc308751516ac74cf5f2cbd29d9acba6c1c7249d054d9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "557eec90ea9f626616de32918a7ef41cb8fcf55a86b97edee422c7a2a73a10ca"
   end
 
   head do
