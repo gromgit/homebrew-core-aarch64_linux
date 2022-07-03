@@ -7,12 +7,12 @@ class Dartsim < Formula
   revision 4
 
   bottle do
-    sha256                               arm64_monterey: "78c5bd771e55e9a9f695c9d84cbde3d29cf98695dc4838d3dc8f4b7d3389cae2"
-    sha256                               arm64_big_sur:  "2e3f397fd9b6966f30d8df1102e0018fb0045dbb4c769092cbe8ac29303ac75f"
-    sha256                               monterey:       "79b267ca710dbb94391f2b9c1a148b3158dbec4a2b4f7a4ff304c360cee2d6b2"
-    sha256                               big_sur:        "32448a13ed1f2c60bbec9189a120c54b21e8e32610b1a0b27cb501d7f0a2e9d9"
-    sha256                               catalina:       "7cb7b52b029d78e7a15fb6e34af0a6ef31acda6e0f84b0d1b8e6956b7c610b16"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "97c33344ecc0a935febd41cd29dac43af7790d9ebe0165d0e5952a4559a72705"
+    sha256                               arm64_monterey: "4245d78eb8ab8d1cb9076aea319b2abbaf5ec281beeb29dcce97c7b275ace9a4"
+    sha256                               arm64_big_sur:  "b49272a8d5e6ff5d4c0fcf1bb093bb7f0f54d30e4d25ee318ef1197b24c4ff76"
+    sha256                               monterey:       "0f9e46a30937b313b1417838c55d6bb316851184cc3522ffd24fa11d423f703f"
+    sha256                               big_sur:        "7f09cd46fec546f218154533070b9ea3028dff5d19d830a1518fa9a93286360d"
+    sha256                               catalina:       "f67f712e843a6cfb7a3c4b77d91c8c16f9988e1a155e3d6493635934ed76f195"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aa25072ff1e7da1807a4861360fde7a69ebd08843b2862fd17dcd238fbf99f80"
   end
 
   depends_on "cmake" => :build
