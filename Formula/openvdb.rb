@@ -8,12 +8,12 @@ class Openvdb < Formula
   head "https://github.com/AcademySoftwareFoundation/openvdb.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "61a904eba18253e42fa51b5e393babc7a4e976e9d860e0f3f771c5e86815253c"
-    sha256 cellar: :any,                 arm64_big_sur:  "05b7045e388b78aaec42c94e2e0862c1dc7a9d3b63b71f01e675ffc995e585ff"
-    sha256 cellar: :any,                 monterey:       "1aa3c07aef9e25ce0cd8c3f0ff76bd2d12edaf98e7e980e879e59639b7cd4083"
-    sha256 cellar: :any,                 big_sur:        "bf608f904cc2b410f505be89fbab92df36947a56fe6f17565366b43a309f6a73"
-    sha256 cellar: :any,                 catalina:       "3cb43e10bdcd36d4fe3a6e8de7175d9e3cb3665c62ae941bc28f83b63a496ac5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4b968e45f86b4063d52aeee9d3d05ef9ec7bb6091495305d9fd13c258cd4f80b"
+    sha256 cellar: :any,                 arm64_monterey: "335cfb69a9e3b591eed64131c41822f00058a021b097359ab8f02100b5a79317"
+    sha256 cellar: :any,                 arm64_big_sur:  "2a8919f3442922f0249c66006d0008416499bb3beba78e75100a507db3809c0d"
+    sha256 cellar: :any,                 monterey:       "cec4679ecf428581b69615253c728de62678e3339b5d8e7fa8083ee508c40d57"
+    sha256 cellar: :any,                 big_sur:        "6cc379c5eee390df9758d01d1ef4f9ceeed21427d76a5b1424b0446f797df437"
+    sha256 cellar: :any,                 catalina:       "c1e459e1d5d7c510420030dbaee505d0db0444494cbd95a6eef9c207515a7a06"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b4b843e1c02948cefdbcfee809cdd4a5a67b896a98e7f73f93e672dde920b00c"
   end
 
   depends_on "cmake" => :build
