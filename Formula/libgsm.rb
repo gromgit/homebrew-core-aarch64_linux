@@ -1,8 +1,9 @@
 class Libgsm < Formula
   desc "Lossy speech compression library"
   homepage "http://www.quut.com/gsm/"
-  url "http://www.quut.com/gsm/gsm-1.0.19.tar.gz"
-  sha256 "4903652f68a8c04d0041f0d19b1eb713ddcd2aa011c5e595b3b8bca2755270f6"
+  url "http://www.quut.com/gsm/gsm-1.0.20.tar.gz"
+  sha256 "b0e6cf4d5ac81387cf74cbe431f77302db3b2f62fc7cb5e21a5670ac30963979"
+  license "TU-Berlin-2.0"
 
   livecheck do
     url :homepage
@@ -19,15 +20,9 @@ class Libgsm < Formula
     sha256 cellar: :any, high_sierra:    "5a2b52e7ed65f005f32bb56519dd425b26e537f888b49402322fe1424f0901e4"
   end
 
-  # Builds a dynamic library for gsm, this package is no longer developed
-  # upstream. Patch taken from Debian and modified to build a dylib.
-  patch do
-    url "https://gist.githubusercontent.com/dholm/5840964/raw/1e2bea34876b3f7583888b2284b0e51d6f0e21f4/gistfile1.txt"
-    sha256 "3b47c28991df93b5c23659011e9d99feecade8f2623762041a5dcc0f5686ffd9"
-  end
-
   def install
-    ENV.append_to_cflags "-c -O2 -DNeedFunctionPrototypes=1"
+    # Use symlinks instead of hardlinks.
+    inreplace "Makefile", "ln $? $@", "$(LN) $? $@"
 
     # Only the targets for which a directory exists will be installed
     bin.mkpath
@@ -36,17 +31,43 @@ class Libgsm < Formula
     man1.mkpath
     man3.mkpath
 
-    # Dynamic library must be built first
-    system "make", "lib/libgsm.1.0.13.dylib",
-           "CC=#{ENV.cc}", "CCFLAGS=#{ENV.cflags}",
-           "LDFLAGS=#{ENV.ldflags}"
-    system "make", "all",
-           "CC=#{ENV.cc}", "CCFLAGS=#{ENV.cflags}",
-           "LDFLAGS=#{ENV.ldflags}"
-    system "make", "install",
-           "INSTALL_ROOT=#{prefix}",
-           "GSM_INSTALL_INC=#{include}"
-    lib.install Dir["lib/#{shared_library("*")}"]
+    arflags = if OS.mac?
+      %W[
+        -dynamiclib
+        -compatibility_version #{version.major}
+        -current_version #{version}
+        -install_name #{lib/shared_library("libgsm", version.major.to_s)}
+      ]
+    else
+      ["-shared"]
+    end
+    arflags << "-o"
+
+    args = [
+      "INSTALL_ROOT=#{prefix}",
+      "GSM_INSTALL_INC=#{include}",
+      "GSM_INSTALL_MAN=#{man3}",
+      "TOAST_INSTALL_MAN=#{man1}",
+      "LN=ln -s",
+      "AR=#{ENV.cc}",
+      "ARFLAGS=#{arflags.join(" ")}",
+      "RANLIB=true",
+      "LIBGSM=$(LIB)/#{shared_library("libgsm", version.to_s)}",
+    ]
+    args << "CC=#{ENV.cc} -fPIC" if OS.linux?
+
+    system "make", "install", *args
+
+    # Our shared library is erroneously installed as `libgsm.a`
+    lib.install lib/"libgsm.a" => shared_library("libgsm", version.to_s)
+    lib.install_symlink shared_library("libgsm", version.to_s) => shared_library("libgsm")
+    lib.install_symlink shared_library("libgsm", version.to_s) => shared_library("libgsm", version.major.to_s)
+    lib.install_symlink shared_library("libgsm", version.to_s) => shared_library("libgsm", version.major_minor.to_s)
+
+    # Build static library
+    system "make", "clean"
+    system "make", "./lib/libgsm.a"
+    lib.install "lib/libgsm.a"
   end
 
   test do
@@ -63,7 +84,7 @@ class Libgsm < Formula
         return 0;
       }
     EOS
-    system ENV.cc, "-L#{lib}", "-lgsm", "test.c", "-o", "test"
+    system ENV.cc, "test.c", "-L#{lib}", "-lgsm", "-o", "test"
     system "./test"
   end
 end
