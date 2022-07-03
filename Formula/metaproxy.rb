@@ -14,9 +14,10 @@ class Metaproxy < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "520ee4ee1c8f96cdd91ca31a6b77b49c3ee447273ad72c297bd687d3fe5c2aa9"
-    sha256 cellar: :any, big_sur:       "805b299b14498830c931071bb23e15125f8386046593947d92481b30c9dbb5e7"
-    sha256 cellar: :any, catalina:      "bb29f5fb3c0e23ea29ab2d4a8104207711749d3e325116d758ecd0ebfc3bb3d2"
+    sha256 cellar: :any,                 arm64_big_sur: "520ee4ee1c8f96cdd91ca31a6b77b49c3ee447273ad72c297bd687d3fe5c2aa9"
+    sha256 cellar: :any,                 big_sur:       "805b299b14498830c931071bb23e15125f8386046593947d92481b30c9dbb5e7"
+    sha256 cellar: :any,                 catalina:      "bb29f5fb3c0e23ea29ab2d4a8104207711749d3e325116d758ecd0ebfc3bb3d2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2b0ccce6addc16649b74d4843e35f12372365eb34c9d83ac0c450c3e85ca2f10"
   end
 
   depends_on "pkg-config" => :build
