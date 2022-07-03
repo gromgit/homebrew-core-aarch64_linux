@@ -16,12 +16,12 @@ class Vcpkg < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "bc7dd4a9c8724750e7d90fbeaf5037b563f88064a22f7772ddb6e66f37b22f50"
-    sha256 cellar: :any,                 arm64_big_sur:  "efdfa29ed81867d6feb9612525f40ec07a2e57452731c62ad9b3b77cd7b7ee6b"
-    sha256 cellar: :any,                 monterey:       "02da041fb48efd6faa1494f3a63ba20a7b393ae82ea3579cccdc4962090a0ad2"
-    sha256 cellar: :any,                 big_sur:        "50fa6e45ea67402e04e39774d36227a2a02649e7b617844dcbf4017a874bc60f"
-    sha256 cellar: :any,                 catalina:       "b56f27696e41f557bfc9ec210ae7e21d287e1086e37dc0f43a7cd2009c6dea40"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8c5e4fbc5a2fd2f47cdbbbf29922aadc3fe526bcbc508582737b1f821cc728b6"
+    sha256 cellar: :any,                 arm64_monterey: "80820e827202de1533d2cfcdd221f588e12027986a24f33985542466a53b9a47"
+    sha256 cellar: :any,                 arm64_big_sur:  "0a26d57af1488987e62cad10dbca55bf9034c95e6bf7fd4843e3a4999a8fd3f5"
+    sha256 cellar: :any,                 monterey:       "92a8476fb93392bf818dc56e36c6e8d469e2b2b7d0d1d85f1999254102a6cd74"
+    sha256 cellar: :any,                 big_sur:        "f6a94c99e1e5e22f6a24c7999e97e295216ea70d5561deb367b81e48fd70a98f"
+    sha256 cellar: :any,                 catalina:       "ae2128c1cc8280ce1ec55fdbecdd94e3ffd20169475fe9a216f33e866aa03e1c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2a8170967cb129e69c6e219a9e785582a6e49b160852c8a069b56773c80fc570"
   end
 
   depends_on "cmake" => :build
