@@ -11,12 +11,13 @@ class GitCrypt < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d86478df1906cc9337c7ea815005c1bbd7e970462476cb03fa645afb06c5eb68"
-    sha256 cellar: :any,                 arm64_big_sur:  "7adc43408c0cbea8bf9d5f01a70e5559d3282062d40cc99a6bfdd831aacea10c"
-    sha256 cellar: :any,                 monterey:       "2f3fe932411fdcf3e156bef702067812d395b65d95319e62b6e9308d7cf487fc"
-    sha256 cellar: :any,                 big_sur:        "c6080d2eaa5f60f0a7236137d6bc7ae18f707ad2c95f7a5f28d601732eda8fa2"
-    sha256 cellar: :any,                 catalina:       "a12782583f1f22cd862db9b4b6507044066623fff29d59123b4ddc35fb2bcd21"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "62d497660a8206870bb049f002cdac71550c654da92ca447e3ade56895bbd039"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "c3cbd37781dd58b4aad1cf13691732efe32d34f04e0e8eac3e2895821bba31b5"
+    sha256 cellar: :any,                 arm64_big_sur:  "7dd2f73df766f03acd350528daf8f91b742f7fafa0990feed4fc32db5a27b831"
+    sha256 cellar: :any,                 monterey:       "c1c9d3d31a6543b0001985753e5d9e8b59bee25e5b7546987f88ef0f8db97135"
+    sha256 cellar: :any,                 big_sur:        "f07ef5d8ce3559f23e140fdb21f31ca3ddfa29d75f35627996739e31560fec83"
+    sha256 cellar: :any,                 catalina:       "eee30c6825d5a0f0b5746ea15d393d5004f78c9594cf6eae916b4ded49874958"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "954789caa6a1822c2f2fc02248c6607c0557184c803d6b0e545907457858f3bc"
   end
 
   depends_on "openssl@1.1"
