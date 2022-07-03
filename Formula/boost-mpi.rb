@@ -11,12 +11,12 @@ class BoostMpi < Formula
   end
 
   bottle do
-    sha256                               arm64_monterey: "b0de85ec447e59dfb2916736f591b1d36de0047d925a483681234a7116e4d5c6"
-    sha256                               arm64_big_sur:  "fb52afb9037e1740fabc4a1d75de4ce5db82f0651e7052668adafb75de1a73aa"
-    sha256                               monterey:       "50cbe0dfbca9e77cfb7936af7f62e02528bcfa5e13580e8edf453b7f0eaff362"
-    sha256                               big_sur:        "d9ee7034172764690b5af59878614dcaa65089ad24523dbfe8046ebc9a505acf"
-    sha256                               catalina:       "3e74dda3dc390f98e5636e5092f66a4719f6159680fc53b895867498aab59ccb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "19180c1f9be0556eda38d175b21818191f3698b0454811f5a0ef6e7e3d78524e"
+    sha256                               arm64_monterey: "ed3d8d5cea4a54672520a1dc9beacc074119a73475c969ef70258c216bb6ceb3"
+    sha256                               arm64_big_sur:  "2d427265f242cccd7ecc9c9b360c51f176759b378e0a26bd51b6e483062096cc"
+    sha256                               monterey:       "786e0870dfb10b3dfad8a9c2b943861c926c94571382f88409c3a62397bf0f1f"
+    sha256                               big_sur:        "7d0d29c8d9029fde12bf7a990738fb098923b20a56fff772382009c630fa16e3"
+    sha256                               catalina:       "504d653c471eb7f6ca848aa3d7659f9c52789fca3cdd21955858fb429e24005e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ec093b68364ee498acd5f80d7e23b6b516a36d823f188fe554a3aeb36c704c0c"
   end
 
   # Test with cmake to avoid issues like:
