@@ -12,12 +12,12 @@ class PhoronixTestSuite < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a3ef1554e954d39cbcbed7d749e4250bb94d0c71b0c3f8777ee43e0e9e05e4b1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a3ef1554e954d39cbcbed7d749e4250bb94d0c71b0c3f8777ee43e0e9e05e4b1"
-    sha256 cellar: :any_skip_relocation, monterey:       "69aa498eda75a3f1706ab0ed9cc33ba18060b19bbb56824b8dfc981d0fda5641"
-    sha256 cellar: :any_skip_relocation, big_sur:        "69aa498eda75a3f1706ab0ed9cc33ba18060b19bbb56824b8dfc981d0fda5641"
-    sha256 cellar: :any_skip_relocation, catalina:       "69aa498eda75a3f1706ab0ed9cc33ba18060b19bbb56824b8dfc981d0fda5641"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a3ef1554e954d39cbcbed7d749e4250bb94d0c71b0c3f8777ee43e0e9e05e4b1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "00a63636538deab383e64d5be455628abb1b6e43a2ed540e5446c5803cf36b3d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "00a63636538deab383e64d5be455628abb1b6e43a2ed540e5446c5803cf36b3d"
+    sha256 cellar: :any_skip_relocation, monterey:       "53cf0bc9ab6cc8244c0968a467b33aa86310c2677ed9829b9788d7eb971ac090"
+    sha256 cellar: :any_skip_relocation, big_sur:        "53cf0bc9ab6cc8244c0968a467b33aa86310c2677ed9829b9788d7eb971ac090"
+    sha256 cellar: :any_skip_relocation, catalina:       "53cf0bc9ab6cc8244c0968a467b33aa86310c2677ed9829b9788d7eb971ac090"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "00a63636538deab383e64d5be455628abb1b6e43a2ed540e5446c5803cf36b3d"
   end
 
   depends_on "php"
