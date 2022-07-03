@@ -16,13 +16,12 @@ class Nauty < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "02f114ec422e8b5b40f4e3dc02ccfd27a3b5042b949e3ab6918d31399fc41fcc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "24e3993305e39ad51b60aee0b774455f00fb2401c4adc5dd7b9e2a7f29511caf"
-    sha256 cellar: :any_skip_relocation, monterey:       "c49ba41ce884bb12efbd5c6fe32d0e5eae7f7f2184a111810aa86f1505c4a87b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "05d688bbef85343ba6e0364b8efd4fff55f530507977e6adc8ffc35199e99567"
-    sha256 cellar: :any_skip_relocation, catalina:       "5b9b43de5bba3ab376010c30abe82223a251f6667a41e450e5c63cb8efb40155"
-    sha256 cellar: :any_skip_relocation, mojave:         "6041dd0f71e6b352fd896b3d0015aba126e8313f21a898d9545e4c90c84ccbc8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0cccafcd026447f505d5b928f33b8509940674690467610f8db7800a6b2a9757"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "acb78882c72f75a110350392020355667a491a719a2c99a5a22de883d4b3c229"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4a090567fde94a7ee21dcaefad77260fae1bca3908784fd5b774c50da104373e"
+    sha256 cellar: :any_skip_relocation, monterey:       "943940daf353131c9c44f058600bfeebb53c5977524aaf8990ebbbc512494ad2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "415553d529e04d204d4e48f094118d13d49d960b8c5bb09bd5e85e09536bd6fd"
+    sha256 cellar: :any_skip_relocation, catalina:       "1fce01b26a7202adf02c78857f8f1385ffdd32ba40683a9329606b366bab5eda"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2ed0b14878f7b2adee1dcdc4d8f5c9e797f972050bf163bad29d388c30cdbb46"
   end
 
   def install
