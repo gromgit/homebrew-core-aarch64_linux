@@ -8,12 +8,12 @@ class Stanc3 < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "bd4b41210dbcf5a6ffef5c4290ee15323dbe03b9fc79d80d9511e6900f699a6b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4ab7b4f9ebd51d78882c0864ef03386060152690b8712b1b6153d5995e785430"
-    sha256 cellar: :any_skip_relocation, monterey:       "3bf2f015ff3055d27aac8cd834f946c6ab357bc7bbd4a7f6c910a90473b6ae88"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d951f0550f2f650e96b642e9fccb9722116098e07c7561075adeeb674698e3d0"
-    sha256 cellar: :any_skip_relocation, catalina:       "5010820eb8e638d588eccfe8a7de119326ed999ea63e4fc748a178ffa9bf8895"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "315bc18c788eae0d1c8498446c75949c56c95c8b9570b702606356efa9237c71"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a1ed2ff03c3b0ed17278d021de8ca686a43482b129b0d3ad1edcb339bd99736b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6542782f0ac8ded789a92236f30667a4d18f7c9974d896dd7ae17db3781c7a65"
+    sha256 cellar: :any_skip_relocation, monterey:       "72465ad612cd3204952f78bb6389800240d3cd0d154d1d586988ddf85c338bdd"
+    sha256 cellar: :any_skip_relocation, big_sur:        "243c793b61bc7c3d61c357a56f97bf29744167d458d05cb861db87aaffd2ec8a"
+    sha256 cellar: :any_skip_relocation, catalina:       "397b2a6b50e444771200b1cdfde6ae47621d93b5a17e14553d0f6776bf1ed6c1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "48541149d82db48157cdc22d769c6b2a240b5b4501ddce374c3773253add7b6e"
   end
 
   depends_on "ocaml" => :build
