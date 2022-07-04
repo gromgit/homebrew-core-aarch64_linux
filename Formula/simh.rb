@@ -1,9 +1,9 @@
 class Simh < Formula
   desc "Portable, multi-system simulator"
   homepage "http://simh.trailing-edge.com/"
-  url "https://github.com/simh/simh/archive/v3.11-1.tar.gz"
-  version "3.11.1"
-  sha256 "c8a2fc62bfa9369f75935950512a4cac204fd813ce6a9a222b2c6a76503befdb"
+  url "https://github.com/simh/simh/archive/v3.12-2.tar.gz"
+  version "3.12.2"
+  sha256 "bd8b01c24e62d9ba930f41a7ae7c87bf0c1e5794e27ff689c1b058ed75ebc3e8"
   license "MIT"
   head "https://github.com/simh/simh.git", branch: "master"
 
@@ -25,11 +25,16 @@ class Simh < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "15786096ec6cd0995825d33e772e3af76b78d7277ab94b57e4ad30ca88df0b40"
   end
 
+  depends_on "libpng"
+  depends_on "sdl2"
+
+  uses_from_macos "zlib"
+
   def install
     ENV.deparallelize unless build.head?
     inreplace "makefile", "GCC = gcc", "GCC = #{ENV.cc}"
     inreplace "makefile", "CFLAGS_O = -O2", "CFLAGS_O = #{ENV.cflags}"
-    system "make", "USE_NETWORK=1", "all"
+    system "make", "all"
     bin.install Dir["BIN/*"]
     Dir["**/*.txt"].each do |f|
       (doc/File.dirname(f)).install f
