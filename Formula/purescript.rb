@@ -7,12 +7,12 @@ class Purescript < Formula
   head "https://github.com/purescript/purescript.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5055caa85ea3a46015846050200dbf04907ab27351337ff5c615410c9bee2da1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "452105a11118032f9427dadcd2edd94be51a8d758a4f86da26559b2a551cbcc1"
-    sha256 cellar: :any_skip_relocation, monterey:       "00ea8f3aff0cef01080805632c9725cb5b1b32c5b81eb4f15146052596d36210"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d18e19fdc8165edbb3bb69e0c0b50099364c37653f2de7804615483e8a5c84d7"
-    sha256 cellar: :any_skip_relocation, catalina:       "3dd1a8b30aa1f48abe6cddd4be692984fb7566f7efdea872f5572b7914e1d5fe"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "498682974e6ae80326a87d34d62c42012558bcd2ebd13b9a788c00f51f055814"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fbb56b419ea3b2cda52e0fc16e1d0b97db046152e9a8408e28d537c17cb33e03"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "af79f109e8ef0828b2d80c877e8a7975c191c292b37ee53b0b35422219d18210"
+    sha256 cellar: :any_skip_relocation, monterey:       "d08310c0f880acd361311f080d16b4f8514c512a01846291fb299bb4d7d93094"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bff0a0549513ff689902ae7f730b200df972e7d3735a5e1a7b66b2dd583acb2e"
+    sha256 cellar: :any_skip_relocation, catalina:       "839bfa5da0655f4fdf30d14c504be2889bda8171582015aaa2d4a1eb561853ed"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fc2465cf615ab118100e27dbc6d71d8bca73b518c047d62bae5f7b7792a8fdfd"
   end
 
   depends_on "ghc@9" => :build
