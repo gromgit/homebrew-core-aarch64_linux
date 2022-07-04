@@ -18,12 +18,12 @@ class Mu < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "ff44965059c871cd238357ff17daa229eb7253ae3df2591e0036677b3b618d8b"
-    sha256 arm64_big_sur:  "082b21bd43bc8105dd020029767b7d5787d05755c50d4de6a2683ef974548660"
-    sha256 monterey:       "379e419f89621e65a0b980d5366a477dab0511bd97cbf8dd3cfd928a917ec702"
-    sha256 big_sur:        "389c22480f1484c9cdb36ee55405a8d33a4b31729f0fff5afb4e130a1e6c3c5c"
-    sha256 catalina:       "4491f46e21a8ee331f1dc15211289b0e8b8458faee24cdc682bc6868ae265cac"
-    sha256 x86_64_linux:   "07f399a8c9a11be43a013c6f5f165eb6493ef17f76c67c54d194aa69f3f946a4"
+    sha256 arm64_monterey: "3712f1b80f4574ea995ed58b3f734827aa9992ae937cd28ae5bf69bfc9d6725b"
+    sha256 arm64_big_sur:  "9ea9878a9f7b20184191f815f828ed3b39b2ab589e6042ff5c5c729e5a7a8bd9"
+    sha256 monterey:       "f5527f3fc8326dd17609a8011efd5c0afa464384970cf76f284ddaf4161b91ca"
+    sha256 big_sur:        "4e46fa41fa74249226f86ddd915a2fbd21f8696b93e2556f6abda9aa4e5ec645"
+    sha256 catalina:       "6f9a28837a6be1303d231c11f201387eae05654d97fce6f2c188a21c828bebce"
+    sha256 x86_64_linux:   "051870f8b275168c342020c19af48bfcb6609e015291644bfef2403af42482a3"
   end
 
   depends_on "emacs" => :build
