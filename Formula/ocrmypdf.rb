@@ -3,8 +3,8 @@ class Ocrmypdf < Formula
 
   desc "Adds an OCR text layer to scanned PDF files"
   homepage "https://ocrmypdf.readthedocs.io/en/latest/"
-  url "https://files.pythonhosted.org/packages/57/16/fbf31eafa39774325eb439a831f1ff804eebe8b2cebfb9dce9f51f3d7cc3/ocrmypdf-13.5.0.tar.gz"
-  sha256 "434dacc4e43a7db9af15daf96a16a1a5926a9d2f2a28da2862ae918dce5b3cc7"
+  url "https://files.pythonhosted.org/packages/64/f5/987f184d28bfa9cc4c91797b0d15e06dcaebe8db9efadf622f53e721dc39/ocrmypdf-13.6.0.tar.gz"
+  sha256 "ed2ad72ef796770c38edf5eb43392c6d166eb8959ad14a19ea0350c510b9c121"
   license "MPL-2.0"
 
   bottle do
@@ -41,13 +41,13 @@ class Ocrmypdf < Formula
   fails_with gcc: "5"
 
   resource "cffi" do
-    url "https://files.pythonhosted.org/packages/00/9e/92de7e1217ccc3d5f352ba21e52398372525765b2e0c4530e6eb2ba9282a/cffi-1.15.0.tar.gz"
-    sha256 "920f0d66a896c2d99f0adbb391f990a84091179542c205fa53ce5787aff87954"
+    url "https://files.pythonhosted.org/packages/2b/a8/050ab4f0c3d4c1b8aaa805f70e26e84d0e27004907c5b8ecc1d31815f92a/cffi-1.15.1.tar.gz"
+    sha256 "d400bfb9a37b1351253cb402671cea7e89bdecc294e8016a707f6d1d8ac934f9"
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/56/31/7bcaf657fafb3c6db8c787a865434290b726653c912085fbd371e9b92e1c/charset-normalizer-2.0.12.tar.gz"
-    sha256 "2857e29ff0d34db842cd7ca3230549d1a697f96ee6d3fb071cfa6c7393832597"
+    url "https://files.pythonhosted.org/packages/93/1d/d9392056df6670ae2a29fcb04cfa5cee9f6fbde7311a1bb511d4115e9b7a/charset-normalizer-2.1.0.tar.gz"
+    sha256 "575e708016ff3a5e3681541cb9d79312c416835686d054a23accb873b254f413"
   end
 
   resource "coloredlogs" do
@@ -56,8 +56,13 @@ class Ocrmypdf < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/51/05/bb2b681f6a77276fc423d04187c39dafdb65b799c8d87b62ca82659f9ead/cryptography-37.0.2.tar.gz"
-    sha256 "f224ad253cc9cea7568f49077007d2263efa57396a2f2f78114066fd54b5c68e"
+    url "https://files.pythonhosted.org/packages/67/82/9dd8ef695c7f928b25927e8956f73bdba09a752a51871678f320c498c535/cryptography-37.0.3.tar.gz"
+    sha256 "ae430d51c67ac638dfbb42edf56c669ca9c74744f4d225ad11c6f3d355858187"
+  end
+
+  resource "deprecation" do
+    url "https://files.pythonhosted.org/packages/5a/d3/8ae2869247df154b64c1884d7346d412fed0c49df84db635aab2d1c40e62/deprecation-2.1.0.tar.gz"
+    sha256 "72b3bde64e5d778694b0cf68178aed03d15e15477116add3fb773e581f9518ff"
   end
 
   resource "humanfriendly" do
@@ -71,8 +76,8 @@ class Ocrmypdf < Formula
   end
 
   resource "lxml" do
-    url "https://files.pythonhosted.org/packages/aa/23/bda4e9881090f0f5e33e2efe89aacfa0668eb6e1ab2de28591e2912d78d4/lxml-4.9.0.tar.gz"
-    sha256 "520461c36727268a989790aef08884347cd41f2d8ae855489ccf40b50321d8d7"
+    url "https://files.pythonhosted.org/packages/70/bb/7a2c7b4f8f434aa1ee801704bf08f1e53d7b5feba3d5313ab17003477808/lxml-4.9.1.tar.gz"
+    sha256 "fe749b052bb7233fe5d072fcb549221a8cb1a16725c47c37e42b0b9cb3ff2c3f"
   end
 
   resource "packaging" do
@@ -86,8 +91,8 @@ class Ocrmypdf < Formula
   end
 
   resource "pikepdf" do
-    url "https://files.pythonhosted.org/packages/6a/4b/5f456ff997f66e4ec6eb53b32c3db2b9fd03889e9768619cc3d6e5ed767f/pikepdf-5.1.5.tar.gz"
-    sha256 "0af747f989d0de8302e6e58e3da4c38d230bad6138b1cbb8dc6838e16285e63f"
+    url "https://files.pythonhosted.org/packages/74/11/1551df95a3303f67c496b2596170a9524fa9036eab7365aa4928bec701ab/pikepdf-5.2.0.tar.gz"
+    sha256 "092846e2b01b04e2bd0d208fd59ccc010941e70fc4aca2968b5cb3fbcc2e686d"
   end
 
   resource "pluggy" do
