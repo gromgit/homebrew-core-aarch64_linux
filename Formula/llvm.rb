@@ -5,6 +5,7 @@ class Llvm < Formula
   sha256 "8b3cfd7bc695bd6cea0f37f53f0981f34f87496e79e2529874fd03a2f9dd3a8a"
   # The LLVM Project is under the Apache License v2.0 with LLVM Exceptions
   license "Apache-2.0" => { with: "LLVM-exception" }
+  revision 1
   head "https://github.com/llvm/llvm-project.git", branch: "main"
 
   livecheck do
@@ -169,6 +170,7 @@ class Llvm < Formula
 
         -DLIBUNWIND_USE_COMPILER_RT=ON
         -DCOMPILER_RT_USE_BUILTINS_LIBRARY=ON
+        -DCOMPILER_RT_USE_LLVM_UNWINDER=ON
 
         -DSANITIZER_CXX_ABI=libc++
         -DSANITIZER_TEST_CXX=libc++
@@ -229,6 +231,8 @@ class Llvm < Formula
         system "cmake", "-G", "Unix Makefiles", "..",
                         *extra_args, *std_cmake_args
         system "cmake", "--build", ".", "--target", "clang", "llvm-profdata", "profile"
+        # Build lld in stage1 on Linux so we can use it as the linker instead of the ld shim.
+        system "cmake", "--build", ".", "--target", "lld" unless OS.mac?
       end
 
       # Barring the stage where we generate the profile data, there is no benefit to
@@ -249,31 +253,48 @@ class Llvm < Formula
         cxxflags << "-isystem#{toolchain_path}/usr/include/c++/v1"
         cxxflags << "-isystem#{toolchain_path}/usr/include"
         cxxflags << "-isystem#{macos_sdk}/usr/include"
+      elsif !OS.mac?
+        gcc = Formula["gcc"]
+        # Link to libstdc++ for brewed GCC rather than the host GCC which is too old.
+        # Also make sure brewed glibc will be used if it is installed.
+        linux_library_paths = [
+          gcc.opt_lib/"gcc"/gcc.version.major, # libstdc++
+          Formula["glibc"].opt_lib,
+        ]
+        linux_linker_flags = linux_library_paths.map { |path| "-L#{path} -Wl,-rpath,#{path}" }
+        # Add opt_libs for dependencies to RPATH.
+        linux_linker_flags += deps.map(&:to_formula).map { |dep| "-Wl,-rpath,#{dep.opt_lib}" }
+        # Use stage1 lld instead of ld shim so that we can control RPATH.
+        linux_linker_flags << "--ld-path=#{llvmpath}/stage1/bin/ld.lld"
 
-        extra_args.reject! { |s| s["CMAKE_CXX_FLAGS"] }
-        extra_args << "-DCMAKE_CXX_FLAGS=#{cxxflags.join(" ")}"
-      end
+        # Add the linker paths to the arguments passed to the temporary compilers.
+        extra_args << "-DCMAKE_EXE_LINKER_FLAGS=#{linux_linker_flags.join(" ")}"
+        extra_args << "-DCMAKE_MODULE_LINKER_FLAGS=#{linux_linker_flags.join(" ")}"
+        extra_args << "-DCMAKE_SHARED_LINKER_FLAGS=#{linux_linker_flags.join(" ")}"
 
-      # On Linux, our just-built Clang needs a little help finding C++ headers,
-      # since we did not build libc++, and we are using the libstdc++ headers instead.
-      # We also need to make sure it links to libstdc++ for brewed GCC rather than
-      # the host GCC which is too old.
-      unless OS.mac?
-        gcc_version = Formula["gcc"].version.major
+        # We need these flags for the installed toolchain too.
+        args << "-DCMAKE_EXE_LINKER_FLAGS=#{linux_linker_flags.join(" ")}"
+        args << "-DCMAKE_MODULE_LINKER_FLAGS=#{linux_linker_flags.join(" ")}"
+        args << "-DCMAKE_SHARED_LINKER_FLAGS=#{linux_linker_flags.join(" ")}"
 
-        cxxflags << "-isystem#{Formula["gcc"].opt_include}/c++/#{gcc_version}"
-        cxxflags << "-isystem#{Formula["gcc"].opt_include}/c++/#{gcc_version}/x86_64-pc-linux-gnu"
+        # Use libstdc++ headers for brewed GCC rather than host GCC which is too old.
+        # We also need to make sure we can find headers for other formulae on Linux.
+        linux_include_paths = [
+          gcc.opt_include/"c++"/gcc.version.major,
+          gcc.opt_include/"c++"/gcc.version.major/"x86_64-pc-linux-gnu",
+          HOMEBREW_PREFIX/"include",
+        ]
+        linux_include_paths.each { |path| cxxflags << "-isystem#{path}" }
+
+        # Make sure Clang does not try to include any headers from host GCC.
         cxxflags << "-nostdinc++"
 
-        extra_args.reject! { |s| s["CMAKE_CXX_FLAGS"] }
-        extra_args.reject! { |s| s["CMAKE_C_COMPILER"] }
-        extra_args.reject! { |s| s["CMAKE_CXX_COMPILER"] }
-        extra_args << "-DCMAKE_CXX_FLAGS=#{cxxflags.join(" ")}"
-
-        libstdcxx_dir = Formula["gcc"].opt_lib/"gcc"/gcc_version
-        extra_args << "-DCMAKE_EXE_LINKER_FLAGS=-L#{libstdcxx_dir} -Wl,-rpath,#{libstdcxx_dir}"
-        extra_args << "-DCMAKE_SHARED_LINKER_FLAGS=-L#{libstdcxx_dir} -Wl,-rpath,#{libstdcxx_dir}"
+        # Unset CMAKE_C_COMPILER and CMAKE_CXX_COMPILER so we can set them below.
+        extra_args.reject! { |s| s[/CMAKE_C(XX)?_COMPILER/] }
       end
+
+      extra_args.reject! { |s| s["CMAKE_CXX_FLAGS"] }
+      extra_args << "-DCMAKE_CXX_FLAGS=#{cxxflags.join(" ")}"
 
       # Next, build an instrumented stage2 compiler
       mkdir llvmpath/"stage2" do
@@ -335,24 +356,9 @@ class Llvm < Formula
       # Silence some warnings
       cflags << "-Wno-backend-plugin"
       cxxflags << "-Wno-backend-plugin"
-      # Make sure stage1 clang can find headers for other formulae on Linux.
-      cxxflags << "-isystem#{HOMEBREW_PREFIX}/include" unless OS.mac?
 
       args << "-DCMAKE_C_FLAGS=#{cflags.join(" ")}"
       args << "-DCMAKE_CXX_FLAGS=#{cxxflags.join(" ")}"
-
-      # Add linker flags on Linux so that stage1 clang can find libstdc++ from brewed GCC and all of the other
-      # brewed libraries that need to be linked.
-      unless OS.mac?
-        ldflags = %W[
-          -L#{libstdcxx_dir}
-          -Wl,-rpath,#{libstdcxx_dir}
-          -L#{HOMEBREW_PREFIX}/lib
-          -Wl,-rpath,#{HOMEBREW_PREFIX}/lib
-        ]
-        args << "-DCMAKE_EXE_LINKER_FLAGS=#{ldflags.join(" ")}"
-        args << "-DCMAKE_SHARED_LINKER_FLAGS=#{ldflags.join(" ")}"
-      end
     end
 
     # Now, we can build.
