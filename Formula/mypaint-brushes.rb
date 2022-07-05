@@ -5,6 +5,10 @@ class MypaintBrushes < Formula
   sha256 "704bb6420e65085acfd7a61d6050e96b0395c5eab078433f11406c355f16b214"
   license "CC0-1.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "2b8fbd8c3ccf9886c94c523593f14496f9fb2bb2b548c5147f053e63527938e8"
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
 
