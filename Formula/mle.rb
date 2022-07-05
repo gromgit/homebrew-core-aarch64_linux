@@ -5,6 +5,15 @@ class Mle < Formula
   sha256 "569316485fa3775d0bb7559ac176a63adb29467c7098b14c0072c821feb6226b"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "01678f6f819e2caaa4739e9c0d00b52a3c9c5229ba834c0e498b7b0e790e63d5"
+    sha256 cellar: :any,                 arm64_big_sur:  "fd31fe9d1e34cbed3c01748bf0e874f9094159ad68c13be97605171f52311d97"
+    sha256 cellar: :any,                 monterey:       "313e12d493c3ae1a1093d7cfe59c96c644555a85032a999553c31250e4a7be61"
+    sha256 cellar: :any,                 big_sur:        "b66e997509ab41cbf2031e6deab8a1df2fb5a9c31c3276480966300e63535b9e"
+    sha256 cellar: :any,                 catalina:       "87f1b28bd92f3deb1ae274486faf19dca29593b1168efbed9522628c6d186c43"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4d60127a0f3de29ddcaed1c0da64c1ca6747013db10fdb59c5041cb778cee596"
+  end
+
   depends_on "uthash" => :build
   depends_on "lua"
   depends_on "pcre"
