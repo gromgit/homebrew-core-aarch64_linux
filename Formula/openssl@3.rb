@@ -1,11 +1,10 @@
 class OpensslAT3 < Formula
   desc "Cryptography and SSL/TLS Toolkit"
   homepage "https://openssl.org/"
-  url "https://www.openssl.org/source/openssl-3.0.4.tar.gz"
-  mirror "https://www.mirrorservice.org/sites/ftp.openssl.org/source/openssl-3.0.4.tar.gz"
-  sha256 "2831843e9a668a0ab478e7020ad63d2d65e51f72977472dc73efcefbafc0c00f"
+  url "https://www.openssl.org/source/openssl-3.0.5.tar.gz"
+  mirror "https://www.mirrorservice.org/sites/ftp.openssl.org/source/openssl-3.0.5.tar.gz"
+  sha256 "aa7d8d9bef71ad6525c55ba11e5f4397889ce49c2c9349dcea6d3e4f0b024a7a"
   license "Apache-2.0"
-  revision 1
 
   livecheck do
     url "https://www.openssl.org/source/"
@@ -63,15 +62,6 @@ class OpensslAT3 < Formula
       args += (ENV.ldflags || "").split
     end
     args
-  end
-
-  # Fix AVX512-specific heap buffer overflow
-  # See https://github.com/openssl/openssl/pull/18626
-  #
-  # Remove in the next release
-  patch do
-    url "https://github.com/openssl/openssl/commit/71ad6a8da3e39bd4caf5c6c767287ddd9bce8bae.patch?full_index=1"
-    sha256 "ab26fe6240a1d3b9d7214fa3937fe36f22d69acf6a6819903e8ebf2884711f26"
   end
 
   def install
