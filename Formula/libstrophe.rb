@@ -7,12 +7,12 @@ class Libstrophe < Formula
   head "https://github.com/strophe/libstrophe.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "37d082b37338686b1ebae289da1cd4b3e989dc029899a1683a51e581ef5c5193"
-    sha256 cellar: :any,                 arm64_big_sur:  "1566e3b3fdb49be1fffc526fe93a7e5a7bf77b75b71c6588ebd4400f7b250a29"
-    sha256 cellar: :any,                 monterey:       "c33fd8b6bba0f9dc4bde68cfb05eb844123e9cc0f27688b3943af5ee7f9ab71c"
-    sha256 cellar: :any,                 big_sur:        "4eaa47a2b6f35d8867ee63c1575cb8ce093e6a0266e2b08688b2c9447d3240aa"
-    sha256 cellar: :any,                 catalina:       "6e0877ea21878ce6eceb361fd7e00391300ef1881d6ef98497e3c46fd8dc4ea7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a7d50a1d3246972a879066ae41af5204a2c57d40bb1ad93f4321d18bd4b1db2d"
+    sha256 cellar: :any,                 arm64_monterey: "7702d22629c361046b0d84a19e147af2e151363094005b12be107e4e965f0af4"
+    sha256 cellar: :any,                 arm64_big_sur:  "25ffc119bb9d032914b985500f4519d53caa4787277641ca61c43f981ac43787"
+    sha256 cellar: :any,                 monterey:       "653b83b209534a2d182625a1760107d17c935c72a36bcf22241a62389672403e"
+    sha256 cellar: :any,                 big_sur:        "4654a334efb488f4697937a8be71ea095f850e5b4c8bb0ba9321059328cd365f"
+    sha256 cellar: :any,                 catalina:       "bae7c561aa6a40a934b08811e472b7ba41e001a086df01f2db86f75319d53062"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "11b5a557fe453c15714aca89678954a7937092f35de3cad4e74fca6ddd884b22"
   end
 
   depends_on "autoconf" => :build
