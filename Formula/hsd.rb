@@ -13,12 +13,12 @@ class Hsd < Formula
   end
 
   bottle do
-    sha256                               arm64_monterey: "14cd2a1cbfef894da9c6dc09a90d4223b0a0da77c6f2b6f93fe3f89a11f550a3"
-    sha256                               arm64_big_sur:  "840be4bd77ad3f70ba6e0d6ebb3522f7379868735c86d05aae6d4be9bc764f9e"
-    sha256                               monterey:       "921e97b08e25de8bc1f253a2f72b96be2e7ba36a0cd0fb23b2f4e1307c6627b7"
-    sha256                               big_sur:        "5a376648781176d3e4f59baae1428345e27839cae03464d391e14c67a662919f"
-    sha256                               catalina:       "3c6a69ba29c654ba062afb73105ea97106c16ca7206883f9a04b4e95b0a3774f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "af72ad309229f1a167eb2ec09fe17d73613f9f93b9c105a0610fad0ebff264c6"
+    sha256                               arm64_monterey: "4eb83141deaf67b7671bf63bf04c29d45ffaf7a1b109fcb24c4aa3f06e88a710"
+    sha256                               arm64_big_sur:  "5e6b6ebc5536f78e46706c0452450c142564b4878de8f82d51a525d1a4448362"
+    sha256                               monterey:       "141f151e55e83daeba366eed66c6b8c9f36a6d32197b6c39e3d8880f891c93c3"
+    sha256                               big_sur:        "0fc8ac12bc30f796c3cdd1720edea91fd142f3e48304adf146884e1d6fd78694"
+    sha256                               catalina:       "68327ad96c5990bf38f9f3633ada1f0df63292d9ece40e29175f173de96c292b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "71d79ecdc8e6d7991692b4d9d6de9e5aa0a3632f4508e124cc879d07ce7b6b10"
   end
 
   depends_on "python@3.10" => :build
