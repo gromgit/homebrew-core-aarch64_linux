@@ -68,7 +68,7 @@ class GlibcAT213 < Formula
   revision 1
 
   bottle do
-    sha256 x86_64_linux: "57a6ca64716049ea84a5a85f520b4df984a1c24cdbc5faae22243555dd901f31"
+    sha256 x86_64_linux: "fcfd8511ae57b126f377789db1294e74bd48c2be941badd8e33a378dbdef9e16"
   end
 
   keg_only :versioned_formula
