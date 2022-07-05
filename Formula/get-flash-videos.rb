@@ -13,6 +13,7 @@ class GetFlashVideos < Formula
     sha256 cellar: :any_skip_relocation, big_sur:        "2778b4877b9a5f717f247e73ce571db7f3215ca6a31e77dfaaebc4d7b0664bd7"
     sha256 cellar: :any_skip_relocation, catalina:       "aac5558ccf7b7198eb48b71d7cdb9d07b93f4174926182a6e540678b0c4f9648"
     sha256 cellar: :any_skip_relocation, mojave:         "f67cf7971842dbfaa8f8ecb24ba6692bd506688c4ff6b0e51cc05dd3d13f6d11"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f30f8fc39ae0520abc73aaa87fcc61417656a36a802b7355aa75db08f2efae47"
   end
 
   depends_on "rtmpdump"
