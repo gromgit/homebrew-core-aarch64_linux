@@ -6,6 +6,15 @@ class CargoBundle < Formula
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/burtonageo/cargo-bundle.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b61ae9882df00d6d0046316234c806cf51c43487454615c3e1b123ca58253d11"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2b6767869cb3b938442837576a1f1fd3b22d4599ea402ed5fb660fc8ce632a79"
+    sha256 cellar: :any_skip_relocation, monterey:       "ef868e466a16006894d7ca523b67e08f9df892df6dd17430975bf4fe019a10c0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a3744884442d4629838d985a2b09c2958aee6213740b3d5120d1fad58c860ced"
+    sha256 cellar: :any_skip_relocation, catalina:       "459cb6ecd3db66bdb64acb17f6fa0c70bd3e03ae30b6de4ac64a13b8e849af2e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "35cf4f78ce4b64e81e8946079b09ea0959e1c938c892b70652e241e1c9380ec9"
+  end
+
   depends_on "rust" => [:build, :test]
 
   def install
