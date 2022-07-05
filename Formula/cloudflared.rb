@@ -7,12 +7,12 @@ class Cloudflared < Formula
   head "https://github.com/cloudflare/cloudflared.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7ba7bbe95f51fd4361740ba83676e897c5f4594fad17843b9e6c713f62bc6223"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2f1ec98f5e3256f88bfa3a1c10ae63f2e64486a9b54930c66ceaa8013bbf0c01"
-    sha256 cellar: :any_skip_relocation, monterey:       "a918fcf45d9a85eff6792883dcadd101f2e4b54ebc5e40f2c34bf698392ea2f3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b553f6d6fa13e983ed24537ec1d987dc57a26e654f78c669e1d8834bb9a7280c"
-    sha256 cellar: :any_skip_relocation, catalina:       "cf43da5945a1d48a80b82b3f52d77a887b6b64f4ef99f9858d3dc3faaa99c115"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4d9d62ab4f7acf3b4ea6932805a3fca842ad1ff9e3ce852d1e1b8f2c33b9d9bf"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9503744e54cb1c90d48742f5833bc20de1d0a752ef8e636be04fb93897632bb8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6f720d50eafd78e8d44d3c7b9fe228f3f82d81c0abea5608bc92315544eaac25"
+    sha256 cellar: :any_skip_relocation, monterey:       "187d5957d397ab6ceda6b59ec99eb399bf6b432b4952a29448af0fd07e9b57b7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bbb6819a43b421571089b5e8f7b0d8fb1119fae0816d35f4fa470776f5fa047b"
+    sha256 cellar: :any_skip_relocation, catalina:       "f8ef5b19757ffe957e84ec309c1872b85a7ff0694e851b8f0e0b3abf72284b51"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8d994aedb6959af1399276da0c2ed5cd6218c289b1d23296e31b1296f070a85d"
   end
 
   depends_on "go" => :build
