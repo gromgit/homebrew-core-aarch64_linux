@@ -5,6 +5,15 @@ class DartSdk < Formula
   sha256 "10fdcb6980aee7d5d04b278f337f3519af7fa6bfa6290d737ea9327954b515a1"
   license "BSD-3-Clause"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4e36d6f7950b4d49aa4a9cde7864802db46ae9619200767ff634523abf9fa8d2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "73488f140cd830003b66408e8c278df0b3fa9deb11f1425098deca932b9eae59"
+    sha256 cellar: :any_skip_relocation, monterey:       "70ee3dc8141822beb8499ef210197450a9151326917ab1860bb2ff057c0bcfae"
+    sha256 cellar: :any_skip_relocation, big_sur:        "95b7fa95916a64568fb4f9b77ad9932226692a21ea04ef1daf88b0cf76b0fcdd"
+    sha256 cellar: :any_skip_relocation, catalina:       "492ea121f58ee2c244ea6a25d894c5a7f431a011821c690239ffc2da3f6f0f43"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fc910f4ee20e9aa0dd9c266369495b32151e14f8f1878226e9a3b0188bc2ded4"
+  end
+
   depends_on "ninja" => :build
   depends_on "rust" => :build
 
