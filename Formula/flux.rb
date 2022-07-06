@@ -13,12 +13,12 @@ class Flux < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "bc607ac1ed53f5b355a91abea78e50e7880b404c908c703a80cf62e7e4411f5d"
-    sha256 cellar: :any,                 arm64_big_sur:  "eba70cd04694e1c6ec9f7b48a349751cb4a877e9cf4642add604447e23e1cdc7"
-    sha256 cellar: :any,                 monterey:       "e84202a2673c0db4f0f2ecec7913aa38934ad9aa05194d4a6ae0dfc408cb8950"
-    sha256 cellar: :any,                 big_sur:        "474eaac6d13041364c7917edbd0862df483c1a1ce15a1db3f3dd7b30902875bd"
-    sha256 cellar: :any,                 catalina:       "be3d8609d5943d4d2e74c59a3df0c9f6d3fdc643211b065219615e94b1905f82"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f9c18941f7e97f1cef2ff21b14186a10f77428b3a89ff6c0769b85a5db00215a"
+    sha256 cellar: :any,                 arm64_monterey: "0090f763d2dd62dadf5a7f7aedd11e983e2757f1c1ffeb797b649428a6597c80"
+    sha256 cellar: :any,                 arm64_big_sur:  "94a99199564eec7b9b46bec6e3635d6468713880819b95e7876eef23aea38bf8"
+    sha256 cellar: :any,                 monterey:       "462e243c8d60a5a040f42784043466278ca891a954bdc2991f960b6d1f9cf421"
+    sha256 cellar: :any,                 big_sur:        "5369b6bedabe5b8f531c6d7e4703a2fcd6952ce3bd8f42765d6c832adc7460d8"
+    sha256 cellar: :any,                 catalina:       "c4e95c4b6a726f41a32d1efab612c89738839e782a2d59f670a468aa609b7083"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3ba99f1a0d3743f34b4179c1eab2ba866269dc8c7a865b44671d3d3ff1b02ee0"
   end
 
   depends_on "go" => :build
