@@ -12,12 +12,12 @@ class Butane < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6283322b4afd8c56cd6b3fd866205ce6c30f4f40c31a4b1b15f8c0a31701bfc4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "19fc49d96b6c42a5c5c67ac62cd4ef036b96c52325eafc4d86b7fb8f75cc777f"
-    sha256 cellar: :any_skip_relocation, monterey:       "44a61e029ddb03358657be0a32fe7cfc4ee7a61123a1246a994b3517f9e4668a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "64fd09f996c130168cfe5486948de57c175d030579ae3d03c5c138c451e3e17f"
-    sha256 cellar: :any_skip_relocation, catalina:       "4e03586e27350f77d63e9796baf84a13c3084c6a026d3db220092a40a3dd9b02"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a2af339ce31bf69bf36dd6c9bd029badc95e615649d9ac5074a8c5f63b371147"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d7d1367de5b37f73ab7b496ddf91849d1b77e657a3ecdc15288c2c41a528f204"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4af25898c5516c9082066d32d9f3997740ab47c6569f4745bd862d0ca4acb218"
+    sha256 cellar: :any_skip_relocation, monterey:       "22554a73479c6a92d9e56be5e37a52c8bb12964c3d073715807764445e3c1e48"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0259236e76312514a0531cc80e496826a95ae48c0fa4225e8f987e272bf42f4f"
+    sha256 cellar: :any_skip_relocation, catalina:       "e8104d8c91febf277c0305809cbaa251ad37e8053d6117968a6873f3f4ed609c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3c57ac4021187229738f0168b964acad5bc163e527cc51bc296280e2d0b3ac44"
   end
 
   depends_on "go" => :build
