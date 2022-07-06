@@ -8,12 +8,12 @@ class Yorkie < Formula
   head "https://github.com/yorkie-team/yorkie.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "143bbd0f756c322edc5213ee50e58bbb3dd1f9adc33baac4316d63333e851511"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8db0f06cefe686bebb2ea4cb5efb14cbab1a99c1c8706f94dea27c74bc8d04c2"
-    sha256 cellar: :any_skip_relocation, monterey:       "32162b97f5c246258cb808155f52d96ab811e5d80a1ff2aa7d8528fad2822848"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7f6335bb611763aab623401954b677f573541d7d70f23f83ec2e2cb6d5b6d71a"
-    sha256 cellar: :any_skip_relocation, catalina:       "2f9dc77f15bab59ab6014d1fcfbe2542a38f6669101b9429e4dce606a7676736"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c091a104ecb1b2aa7296b998147f5475c69a37113b641cb6236447e6ec11a1b8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1c94b46f903b8483f8590557c7dc975a5df554bab687699aa7ab77526b9f62ca"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4a0a905aac8416d9b793939098369484246c7dc4669a57852c486113aefa3772"
+    sha256 cellar: :any_skip_relocation, monterey:       "3f013d3b05a7036b895f42b40d2b785be4f225bb9d844e54924252c59a21587e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c7265a143edb727b4688ac8ad666b6f6a6735a3f2806d6d434d347dcd1f82f75"
+    sha256 cellar: :any_skip_relocation, catalina:       "6a2a13b177a049e352c2edb0b1d3bd7c45c16600275650a87ee6f4b8e933b1c3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8d16b4c275cca08ff7592852f1a60455269bfba5c3f4da9de1ad2edcf5c53d01"
   end
 
   depends_on "go" => :build
