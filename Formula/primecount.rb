@@ -7,12 +7,12 @@ class Primecount < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "4a024848fe7f2c15cf034e77dfbdf56c2000dd7efbfd174ae1063da07f0cb8f7"
-    sha256 cellar: :any,                 arm64_big_sur:  "f4f5d8a38083b7f6fc2565632c00670992a2e29e9b882283c3ea000103e17df6"
-    sha256 cellar: :any,                 monterey:       "74e6bb9e8c6897c7fda9f5429dfb78b169e854d58aeb5f4c19430ba791af2eaf"
-    sha256 cellar: :any,                 big_sur:        "388d12fc1ac0c848ba1f51f7c496d2120de503c71657cdd5359e6e4f56571b41"
-    sha256 cellar: :any,                 catalina:       "ac6c82919085aecfb77dd0a62ab84d735f9e234736abced98874a79c0fe7098d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "037ad4deed3e4421300c9388818c61bbbe0dba3b13fe11e39508d03e48e5dc00"
+    sha256 cellar: :any,                 arm64_monterey: "3733e8f71bb9bdf179e2c096916a3c7c26957e8fc256c00c44e259012e13f531"
+    sha256 cellar: :any,                 arm64_big_sur:  "42989ec2a9e585d4003a5615de4d54d7c32bced2bba37b014a7ef4114d087cc2"
+    sha256 cellar: :any,                 monterey:       "b9d81004574acb85ae6c2f1a5a7168fa72d2f7f74e1f8481e9b2e2ba663a1a37"
+    sha256 cellar: :any,                 big_sur:        "b4d19f7dc4c545c8b7f9e65d133dc53786d9b3bb04e2e8bbf143a3a2dc282c34"
+    sha256 cellar: :any,                 catalina:       "66a6c2e705d82147644cbdf1d775919746bcca93ed1cd234a56008f6bc56a8f6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7c94275ff548287dc458e0fb4040c05b28527ce370c650c12052243c1f30373c"
   end
 
   depends_on "cmake" => :build
