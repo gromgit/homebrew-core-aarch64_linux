@@ -11,12 +11,12 @@ class Groonga < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "f44bab46c9c9bb6c23a6b77a55c40db81d74f4c18932d41993b86b8ce9dc2a34"
-    sha256 arm64_big_sur:  "273c477980471f9d762888d64476c902e3d08b112b6958aaaf2874beb77583ff"
-    sha256 monterey:       "1796d238b7a6e0de55031fc33dbeb85772ccef3f640171c60a266e8a3f427398"
-    sha256 big_sur:        "7d53c6b21b363d63e3234282eb172fdc2e02bc6668a8317e085166eb09725640"
-    sha256 catalina:       "3d30dc9e868bf19d95a6728a8ffb43e138bef47cb76b016324cf8742bf754c9a"
-    sha256 x86_64_linux:   "1f64f9e93c10a26b4c34b26b9b4a1c058440a648ed0ebbf8c2ceed9179f18171"
+    sha256 arm64_monterey: "69c3156dd8ac65530a24209b1a6c5075da5966f0224dbf0fad60a26f927ff53a"
+    sha256 arm64_big_sur:  "3d6068d6652395fc0c704682cdb937ebe4c40a04e5fcd5d80846049a8ef0ebd6"
+    sha256 monterey:       "9495982a54ac203d8af6e8aa980f91410dce31706afd8dcb6b403602c342cfab"
+    sha256 big_sur:        "9375c0d5dbaa0bda0c2d0319313a0a13d5ebb044e10c4b98677af5c8f1cfc12e"
+    sha256 catalina:       "38a8a3d502d8163f50632346ea1ef13cdc8ca73646ef3544f4c19167b26fd559"
+    sha256 x86_64_linux:   "eb6001817f7ce66568faa473b58de6fcd91c5684e52dac2d7674d44a1f86b234"
   end
 
   head do
