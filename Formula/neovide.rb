@@ -6,6 +6,15 @@ class Neovide < Formula
   license "MIT"
   head "https://github.com/neovide/neovide.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "57b422b9f77432bc1b86525154544118eaadaa979e0f75f31902dbd391e4a13c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4368fe7d62d5cb3badaeb6df4c4b0c57bbc99eeb704254f60b68f1f4547dde73"
+    sha256 cellar: :any_skip_relocation, monterey:       "322b08968b36531c6e2aacefb28614c8061a49478b1041383ab47cf00b2d9e59"
+    sha256 cellar: :any_skip_relocation, big_sur:        "84b78067f83ad6e54330012bf16339bfecdb347287abc10ab78dfe6729a183d4"
+    sha256 cellar: :any_skip_relocation, catalina:       "cca988f7a7d89732a8c7a35c4e0d8236555b77437842353dc3510c274715aa3b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fc3a8ca19e8f8eef623b85acfb501bcb834af528091c9c768b9b4a8a451bd483"
+  end
+
   depends_on "rust" => :build
   depends_on "neovim"
 
