@@ -8,12 +8,12 @@ class Pixie < Formula
   head "https://github.com/pixie-io/pixie.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f8cd15e050c5d14d5540b2ea3035b97ef54b7c5bc4567a231ec402576bc46a2f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "99207541af3fd0a6020c9ea20daa41feb57efcb766314c80a542c360a0b1c9ec"
-    sha256 cellar: :any_skip_relocation, monterey:       "1a822aa405373b2c71f575b5e91a8b09ab82258c4b73689c9b77e5691dd48ae6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e073ca167f260aaba8d8ec073813e6ab501a522599454de8f045bce63aa963d5"
-    sha256 cellar: :any_skip_relocation, catalina:       "9aecee5da4da2c541bc29595ef9eae7616d29dd37b199fc23c4129d96100a8dd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1ceabc505f13445528341c9e75b2fc6da8c8f399710a55f12f4da9b5d922bc28"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "80f58755f02ed012985c1db5726b2b6e1be5f677a5f627ff5b84c2b066cf673e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "84adb750cc62172404c0e36437e31c05398dd5d78b068a450469302212daba9b"
+    sha256 cellar: :any_skip_relocation, monterey:       "64b5b14ca3034d6725b2f8a7421bf786acd0f48e8b44ebb6d60af5774ca61b9b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9c170934ceaffd7e561614545df95d25d33f59bed9225e35877b237445242932"
+    sha256 cellar: :any_skip_relocation, catalina:       "af6b19bfb02ae67305ce4ee4950f09d1237b5961d88aef57a3733ee00d6206d0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7e9a1152b89dc8a47005e908d1d67c4c22457448e939385ccab1e56f532cd478"
   end
 
   depends_on "go" => :build
