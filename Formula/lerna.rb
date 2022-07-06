@@ -8,12 +8,12 @@ class Lerna < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fb0ec1d043d2458ddb07d9f2ac495cc3f86a323c68396a83857ab2a7e05d8fe1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fb0ec1d043d2458ddb07d9f2ac495cc3f86a323c68396a83857ab2a7e05d8fe1"
-    sha256 cellar: :any_skip_relocation, monterey:       "861373c1c7bf3d8647402c8e4357bbbbc4f9b1142a1416943363d8d13a904657"
-    sha256 cellar: :any_skip_relocation, big_sur:        "861373c1c7bf3d8647402c8e4357bbbbc4f9b1142a1416943363d8d13a904657"
-    sha256 cellar: :any_skip_relocation, catalina:       "861373c1c7bf3d8647402c8e4357bbbbc4f9b1142a1416943363d8d13a904657"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fb0ec1d043d2458ddb07d9f2ac495cc3f86a323c68396a83857ab2a7e05d8fe1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "180266cccebf39a68e4cf07e4ef1a8d02bba01d185e3e6bca92d75336a41d60e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "180266cccebf39a68e4cf07e4ef1a8d02bba01d185e3e6bca92d75336a41d60e"
+    sha256 cellar: :any_skip_relocation, monterey:       "e8d40bb73dca0486c476c06db61f0e600de52c2e4866bad0c151b3da6871dfec"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e8d40bb73dca0486c476c06db61f0e600de52c2e4866bad0c151b3da6871dfec"
+    sha256 cellar: :any_skip_relocation, catalina:       "e8d40bb73dca0486c476c06db61f0e600de52c2e4866bad0c151b3da6871dfec"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "180266cccebf39a68e4cf07e4ef1a8d02bba01d185e3e6bca92d75336a41d60e"
   end
 
   depends_on "node"
