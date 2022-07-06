@@ -6,12 +6,12 @@ class Cheat < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "323ea8909029c5871a8de7ce998d27d5264182b2a5e9c117263825ed973225b9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "aef9cf4c3a854269193bc6be898d719525008f336f03e456fc1f9ac5e96a0a39"
-    sha256 cellar: :any_skip_relocation, monterey:       "69d6defe80f399eaad96eac7d091b24d9576340e954c0d68db05076ca01d4432"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e9f5a1f3b1d0d0e1bdbf9b26cf252159cf2736a0deea80f56fb29c44a3161c46"
-    sha256 cellar: :any_skip_relocation, catalina:       "2d587b6cec73671b5b88d2f4b48b27c52f7267337e88811c28aac919a4d5255d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2a527193164ccc9ad7f4775633ee21eae645144217a6b8b6f499c43432c79cd4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fb5b688f664d1a90636f0793caff1e8fb1547050ca83d1490ed815580b7b1a41"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e0c6f4461f88d303b7a49ac0d780a5889d6e9ef11504ffcc1ee91b24b1cda11a"
+    sha256 cellar: :any_skip_relocation, monterey:       "0508db513b9066cb899e4315497c2546146a1b5a27a3e09913a7e3560cba3277"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0741741fe225b99ed5920ef1038d5de247d217f89a32b1be92c7f38e8d20a674"
+    sha256 cellar: :any_skip_relocation, catalina:       "f3b4476b73616177a4694ad45e54a4abb3b972a69d613ab65749e4f13d9de704"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cad759f0cd1a173289659e881a712388ed4989b9b5f0dcec94a45f473d8c400c"
   end
 
   depends_on "go" => :build
