@@ -12,12 +12,12 @@ class Gopls < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7f0527083d31cbaf2a8e8c6efe85064f572595e074dc54d7f1421bd867336ed7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4c0ce67b991ebc991758a2d688f428f3824fb89423d73b8c4d0b125ecf497ac4"
-    sha256 cellar: :any_skip_relocation, monterey:       "1cb4dfb00f2ea950068d9a433b3ebe5e5c5bb8ecc7209d9c293f2ec3d82f5896"
-    sha256 cellar: :any_skip_relocation, big_sur:        "24bd7bb3984e3f752c85fd860cbcea64d9caa5eb7c2b4ff3c9d00e05768d3165"
-    sha256 cellar: :any_skip_relocation, catalina:       "54ce5315e6e7325e82f25b11737d7a5cadf4a3afe32b1a3c5e45c182551c6fe3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "15e897f3a75d55c2ae26a6abb34ecac448a72218e496d2dd6cad693b30b35213"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8c6cfc5b3a224682c16bf49ce7bac41f98a88a92cec4d795ff455f469a7cd82f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fefc79af5df87d507cf1dfa1df84078fc5aca89b448f8d27d0634173c311c987"
+    sha256 cellar: :any_skip_relocation, monterey:       "a8686e61aade3c294a3c9e018edc5ce942d3bd51902bef2326cc3357848cc810"
+    sha256 cellar: :any_skip_relocation, big_sur:        "fc7068addedd25bb89f4db8448e028537401f5b03f302b8cd8d93573d2daa967"
+    sha256 cellar: :any_skip_relocation, catalina:       "37fe6d7612fad14b506ea9d4150f1820dcd7148fb5426dc625a993d6a5e048a8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e8d6864784ae01fe54207d697cf6145fd71f5a9c89c197cae79bd1b0d4d23899"
   end
 
   depends_on "go" => :build
