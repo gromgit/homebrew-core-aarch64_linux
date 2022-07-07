@@ -8,6 +8,15 @@ class Dooit < Formula
   license "MIT"
   head "https://github.com/kraanzu/dooit.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "63397658b3d1e5b2536067e2e97d535b679d07912a2cf47abe6973e2190282b1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "53dc57099c19a32a8e2f6a42800fb273db69ae041d8c91f135814f645febfd4c"
+    sha256 cellar: :any_skip_relocation, monterey:       "eb5b6f0592c02e351b4584bd8ae62b3dc759db85eff8986a516cf368a9f6122d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "415deffd9e7e5f630a57119210b92da7433b87c30272993dc080674ba2c7dd34"
+    sha256 cellar: :any_skip_relocation, catalina:       "913764e7579fdc561b712152e6f90fa7378c795839cbe651aafed8e137df844d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e1dce46db34bc4184e294664ae24450623162fe710a4fabb5f6e8d21444f4581"
+  end
+
   depends_on "poetry" => :build
   depends_on "python@3.10"
   depends_on "six"
