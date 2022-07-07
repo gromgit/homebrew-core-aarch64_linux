@@ -1,8 +1,8 @@
 class Rubberband < Formula
   desc "Audio time stretcher tool and library"
   homepage "https://breakfastquay.com/rubberband/"
-  url "https://breakfastquay.com/files/releases/rubberband-2.0.2.tar.bz2"
-  sha256 "b9eac027e797789ae99611c9eaeaf1c3a44cc804f9c8a0441a0d1d26f3d6bdf9"
+  url "https://breakfastquay.com/files/releases/rubberband-3.0.0.tar.bz2"
+  sha256 "df6530b403c8300a23973df22f36f3c263f010d53792063e411f633cebb9ed85"
   license "GPL-2.0-or-later"
   head "https://hg.sr.ht/~breakfastquay/rubberband", using: :hg
 
@@ -30,15 +30,16 @@ class Rubberband < Formula
     depends_on "fftw"
     depends_on "gcc"
     depends_on "ladspa-sdk"
-    depends_on "openjdk"
     depends_on "vamp-plugin-sdk"
   end
 
   fails_with gcc: "5"
 
   def install
+    args = ["-Dresampler=libsamplerate"]
+    args << "-Dfft=fftw" if OS.linux?
     mkdir "build" do
-      system "meson", *std_meson_args
+      system "meson", *std_meson_args, *args
       system "ninja", "-v"
       system "ninja", "install", "-v"
     end
