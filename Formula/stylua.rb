@@ -6,12 +6,12 @@ class Stylua < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "475139fb165fe25f54b107369e44b83d473ebe89ed97cb2d773b94d04424eab3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "71bdf484fff3fa98fd3b0dddb0fa6b11b856d15e09f99698420b8a96032dab99"
-    sha256 cellar: :any_skip_relocation, monterey:       "17b5665f5be9deb5d31f01485a04680729761372eab0ca728ed0dfc17641da5b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d375ad07b594fe95ea9df1364b56f5108e46830aecb7c36bfc6e208fd6c500cb"
-    sha256 cellar: :any_skip_relocation, catalina:       "4011aee383785fc6302605fd659af37def2c326bce6645c1996a582bf22e4ac1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6254f56b0076ff5fc5b3ce21f15e4041ee0d21e2aebfafd143b8ef5d5fafdd10"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9218cad628d9a96408d374f6401b63bbbd6f8463e4eb48b8014f68bb9f35aab0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1c7e188d31a3a487db74ef1e17b458601b09d3e48a71752b17bcec9674b5d054"
+    sha256 cellar: :any_skip_relocation, monterey:       "547b3297fac2db92bed0ad90e77e1778deef49456772080d4f47ef2c9e0c9472"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8044b02db3575f59ffaeb2b4817caf4a84430518552943e925af56fb275bd648"
+    sha256 cellar: :any_skip_relocation, catalina:       "d1a29d77ade8b65f284e0830d40ee5d5eb739667ebfc8a8a0c9a709900aca008"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eeea0827c868532030ca04bdaa22b551944997b37d26f8d64b050fbf91382fd7"
   end
 
   depends_on "rust" => :build
