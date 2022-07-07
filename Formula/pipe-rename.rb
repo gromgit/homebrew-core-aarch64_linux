@@ -5,6 +5,15 @@ class PipeRename < Formula
   sha256 "9ab27232bc216e23c567ecdcd6f8a590f76a24aa5d9a563e73a21415af82c1df"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "94e8bfd54d28b68614593a22b25f831ee6b197ad9d352ce548b06ae83e9b5846"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "692ba4461db653075f94bde6502977344b53d8d2652850fdcf5ff274379ab281"
+    sha256 cellar: :any_skip_relocation, monterey:       "427941fd653d8d87276e86355e3c55ccfca08954030ac4cd1577a4fef8ae72a8"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9504fbb1d806c83fe023d101747075c3e8cbbb3d973674a88165fc4090b30849"
+    sha256 cellar: :any_skip_relocation, catalina:       "d27bdc6f9db62e42c2294da6c177559010489d64b2fb20445021abecf881b128"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b3ba3c00db004a2f90c73fca85cec173f25e974f6fb885fdd87616dbc6d9bd47"
+  end
+
   depends_on "rust" => :build
 
   def install
