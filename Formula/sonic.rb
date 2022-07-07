@@ -6,12 +6,12 @@ class Sonic < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "54a83b70518118c60edcffeab87cfb3cba1b9aef41aabd3f5e669617891cae25"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "69a14bebca8661994dc69b839f3dfce7102521ac8ddbea53d8787f0e7529cfdc"
-    sha256 cellar: :any_skip_relocation, monterey:       "6f7b0d809dfe6ba57810405827a63daabe4c342c9fc49b4be82a21b20880c226"
-    sha256 cellar: :any_skip_relocation, big_sur:        "792785661a775679892c9bafa85c35672e8d2ef2d165ea288cdcff840e156ccc"
-    sha256 cellar: :any_skip_relocation, catalina:       "bf838a42756d6b49113bc80343bfc97c86ad18d3f6535ab556dbab3fbded1974"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f3f700885fd76cf4dc2df760b710e6fd20b7dd1a4d5519895f43b820224c04dd"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0516f6d0b48cdb1341503d7624a4331ba7a295fe1d6212a10da9fc126ed97274"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "185d38158dec8ed312e1918034c686e7b38f60e19e018211bad81195ada48890"
+    sha256 cellar: :any_skip_relocation, monterey:       "d748bdcdfc8006e53155bac2381e6f67a96b0058c9c6c37a69febe2b63caafe7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ff012f2dc4eb12de080031e39605d8a5a1432b42e1f25a8ba4500235e30b61cb"
+    sha256 cellar: :any_skip_relocation, catalina:       "dff9ddad869f6ddd7847906a29ff8e340deca793ddbd4bb20f2d75da97abde90"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "21b10085bc3ead567627b4a7b2f312754df2c42370ca4b9f2b2f0c16e9e48188"
   end
 
   depends_on "rust" => :build
