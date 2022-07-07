@@ -7,12 +7,12 @@ class Singular < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_monterey: "80ce289ac5c79971b65fdf18c5a6c6b78c0c44b3636363949edf8cc58566e515"
-    sha256 arm64_big_sur:  "4bceb33eeb74adaf30b05c1d610aa72e64fb2b8f681f9f24f434c8e8c06c6e6e"
-    sha256 monterey:       "3af817e502d089fbaa2d83a327def367b22c6b27b2456cc5888c8b3539ece1be"
-    sha256 big_sur:        "ce8293f8d6be94c237d9d07d84ef8e79c48c1cc77b3f4d309e79090632108736"
-    sha256 catalina:       "37f0b59b850a0fedb28369a1e406062205fa827aa137d4b5c1f86f02849ec7d7"
-    sha256 x86_64_linux:   "d1a5dc4656506176c8794108e42717b7f8774fd6924c32296c67d727b54bcf4d"
+    sha256 arm64_monterey: "318d66e582a30a56b3174e2d951440ab97fa9258b3f45eb8a4ca2a15a6ae7a1e"
+    sha256 arm64_big_sur:  "f23f081cc23770bf1e6552201c34d77962e59129fa8ac16ae1eea150fe5a8439"
+    sha256 monterey:       "e2fe2989761b0d791ebedd0907db6dd53ce44056a1cda170bc83661410ef3563"
+    sha256 big_sur:        "00997a197b4579071d8d9e6e11e70a28668ae760b7de5629ef671b7ad4a8e6bf"
+    sha256 catalina:       "fc24449c1479823c71e7bbcf8debb4fbd69d32e8e9fef220fb6676ae0643f4b6"
+    sha256 x86_64_linux:   "49b4654b7bb7aa4a26d5c7e81a5e9ec919664566de4d7c777e0a6f89128e5d35"
   end
 
   head do
