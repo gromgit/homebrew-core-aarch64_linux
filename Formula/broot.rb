@@ -1,8 +1,8 @@
 class Broot < Formula
   desc "New way to see and navigate directory trees"
   homepage "https://dystroy.org/broot/"
-  url "https://github.com/Canop/broot/archive/v1.13.3.tar.gz"
-  sha256 "a7f9e98ff1371eff065a8dabbe9e31ef42d264b7d93c18f920d6a5399016da33"
+  url "https://github.com/Canop/broot/archive/v1.14.1.tar.gz"
+  sha256 "acbcf7adb950c05e6fe2ed3de8f4fed4537bef0150aad0d9917934fbd98bc0a1"
   license "MIT"
   head "https://github.com/Canop/broot.git", branch: "master"
 
@@ -53,7 +53,7 @@ class Broot < Formula
                 err: :out) do |r, w, pid|
       r.winsize = [20, 80] # broot dependency terminal requires width > 2
       w.write "n\r"
-      assert_match "New Configuration file written in", r.read
+      assert_match "New Configuration files written in", r.read
       Process.wait(pid)
     end
     assert_equal 0, $CHILD_STATUS.exitstatus
