@@ -6,7 +6,7 @@ class LibpythonTabulate < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "56a4f840de5a3c5fa0bab7669abe3aeabe537bc9a5481d9cf93d43b187887faa"
+    sha256 cellar: :any_skip_relocation, all: "761c33fc48f6ed2af1a83df2cddbdcd4f8090569a50cb8b0f25fcce1bfe0b091"
   end
 
   depends_on "python@3.10" => [:build, :test]
