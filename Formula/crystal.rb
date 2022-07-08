@@ -19,12 +19,12 @@ class Crystal < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "3e6120f5f7a3da7d41aed6d3945d111cbf3e5871c5d4b8744e044ad94f49ec2e"
-    sha256 arm64_big_sur:  "50314c7f799c880d27280831bd83c1af4622b9d5e898a96c363d04e719013de1"
-    sha256 monterey:       "e7b3135c115fe7aa89a8a8785a915e4f1d9f19500512bc393368b190fdecf349"
-    sha256 big_sur:        "6e4df7ecd39a6eb72b4cb78ca7bc1f92a67b7ebe8b71c63571f05ca33506b8fa"
-    sha256 catalina:       "5c66db4aa5106173b05997799ca8460384ca5bfd3482f04651fe70a8781212e1"
-    sha256 x86_64_linux:   "6241a16177243023dec99e9b7e3da77da9a861314ada2a647f138be70d0868c8"
+    sha256 cellar: :any,                 arm64_monterey: "8eb79a2ed74a699867f6e02c535336b4e74a73df37d505d43a5c5f8545bb9742"
+    sha256 cellar: :any,                 arm64_big_sur:  "3e5edc79a910e578f7635f51bfd059d44f6d2f76042ccd7d992325fb339a72c2"
+    sha256 cellar: :any,                 monterey:       "0ff4880e6694032808e5d0fe637064e76bd0d06c5b021fbc8130594fa84fa5c9"
+    sha256 cellar: :any,                 big_sur:        "ef9197bb2c6f4f7d354950785543e0e65dd1108b276590ea8f3dd2b4138933c3"
+    sha256 cellar: :any,                 catalina:       "cae00fc84159c79da987bb7ca52b55fd29f0e06d41c518c69a60a6f3817f301f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "af264fe6ce0ad4d553007510cc0bbca2b7a8fe2a49f0308b78c988d8a10ec2b4"
   end
 
   head do
