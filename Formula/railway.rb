@@ -7,6 +7,15 @@ class Railway < Formula
   sha256 "e664effcb4d089d07bdc42d511b7639a5e95877cb6ac68fc7f8396be381467eb"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "43c4b5d59c590411305e3f4b337c258a84d79da42f50977d03f28de553298bde"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "43c4b5d59c590411305e3f4b337c258a84d79da42f50977d03f28de553298bde"
+    sha256 cellar: :any_skip_relocation, monterey:       "e59249e679562083c725649e857aabeacb88d882777c97c9fe296a4a8f7837e6"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e59249e679562083c725649e857aabeacb88d882777c97c9fe296a4a8f7837e6"
+    sha256 cellar: :any_skip_relocation, catalina:       "e59249e679562083c725649e857aabeacb88d882777c97c9fe296a4a8f7837e6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "97932383592f5f244e75c84e9cdda9ce5e3171358b45518895c62afd6dd03b89"
+  end
+
   depends_on "node"
 
   def install
