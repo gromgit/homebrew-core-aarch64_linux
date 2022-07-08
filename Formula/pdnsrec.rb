@@ -11,12 +11,12 @@ class Pdnsrec < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "1b493ba9a3f1f7cc1bb9a2fedb646671ca5dc00e2155b27b62a41194fa2c1e7e"
-    sha256 arm64_big_sur:  "ac8d88349dfc62904189992221cb06c37c72ceb34ff63d4c6e781ba663f41688"
-    sha256 monterey:       "f9c1420a1409ddaee0ae062b3ce46cb970ae600246309cc960ec556d741faf77"
-    sha256 big_sur:        "10e1715d27edbf71a392eb5b6d0e1580c2839f9a429091e623f94f5c10ece361"
-    sha256 catalina:       "744a16dca515784cc29d9360a3f89791ebe90c22c8a73bd7492459f63abfef16"
-    sha256 x86_64_linux:   "987a053c68d769afa639d3feb64b853e0de8fa7337e18200d4add9a90a0be97b"
+    sha256 arm64_monterey: "8efb58d8c7628b7809f291d845ed51a40000d4745311170055e534e92da7fd7e"
+    sha256 arm64_big_sur:  "f1f7f552470d269544bf110dffa130caa10865fff6446fa266e1d94da8909045"
+    sha256 monterey:       "96923e8aee1975168cb39d06bf347560abaf805f83d8aa23680a79a4263b0fe3"
+    sha256 big_sur:        "85b0213089276ed9ea234a94ad5b535563288dee6ea3aba67d62b198b0223d47"
+    sha256 catalina:       "61c5e0449aa3dc557a0ff7613bbb524a4590c1bd959fc5b4a9c9180e45e9f50d"
+    sha256 x86_64_linux:   "6513aed54812ba8fb1da94e42aae3febc1271e7135223b10dd0a7d9bc7bf92b3"
   end
 
   depends_on "pkg-config" => :build
