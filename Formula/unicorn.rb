@@ -1,8 +1,9 @@
 class Unicorn < Formula
   desc "Lightweight multi-architecture CPU emulation framework"
   homepage "https://www.unicorn-engine.org/"
-  url "https://github.com/unicorn-engine/unicorn/archive/1.0.3.tar.gz"
-  sha256 "64fba177dec64baf3f11c046fbb70e91483e029793ec6a3e43b028ef14dc0d65"
+  url "https://github.com/unicorn-engine/unicorn/archive/2.0.0.tar.gz"
+  sha256 "67b445c760e2bbac663e8c8bc410e43311c7fc92df4dfa8d90e06a021d07f634"
+  license "GPL-2.0"
   head "https://github.com/unicorn-engine/unicorn.git", branch: "master"
 
   bottle do
@@ -13,20 +14,13 @@ class Unicorn < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "3559c25bdd368abb656250e8bb38441ec23bd9099cc336355acda780a5f3e8fe"
   end
 
+  depends_on "cmake" => :build
   depends_on "pkg-config" => :build
-  depends_on "python@3.10" => [:build, :test]
 
   def install
-    ENV["PREFIX"] = prefix
-    ENV["UNICORN_ARCHS"] = "x86 x86_64 arm mips aarch64 m64k ppc sparc"
-    ENV["UNICORN_SHARED"] = "yes"
-    ENV["UNICORN_DEBUG"] = "no"
-    system "make"
-    system "make", "install"
-
-    cd "bindings/python" do
-      system Formula["python@3.10"].opt_bin/"python3", *Language::Python.setup_install_args(prefix)
-    end
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args, "-DUNICORN_SHARE=yes"
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
@@ -76,7 +70,5 @@ class Unicorn < Formula
     system ENV.cc, "-o", testpath/"test1", testpath/"test1.c",
                    "-pthread", "-lpthread", "-lm", "-L#{lib}", "-lunicorn"
     system testpath/"test1"
-
-    system Formula["python@3.10"].opt_bin/"python3", "-c", "import unicorn; print(unicorn.__version__)"
   end
 end
