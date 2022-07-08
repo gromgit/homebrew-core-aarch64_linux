@@ -1,10 +1,9 @@
 class Mpd < Formula
   desc "Music Player Daemon"
   homepage "https://www.musicpd.org/"
-  url "https://www.musicpd.org/download/mpd/0.23/mpd-0.23.7.tar.xz"
-  sha256 "960dcbac717c388f5dcc4fd945e3af19a476f2b15f367e9653d4c7a948768211"
+  url "https://www.musicpd.org/download/mpd/0.23/mpd-0.23.8.tar.xz"
+  sha256 "86bb569bf3b519821f36f6bb5564e484e85d2564411b34b200fe2cd3a04e78cf"
   license "GPL-2.0-or-later"
-  revision 1
   head "https://github.com/MusicPlayerDaemon/MPD.git", branch: "master"
 
   livecheck do
@@ -55,20 +54,24 @@ class Mpd < Formula
 
   fails_with gcc: "5"
 
-  # Fix missing header file (see https://github.com/MusicPlayerDaemon/MPD/issues/1530)
-  # Patch accepted upstream, remove on next release
-  patch do
-    url "https://github.com/MusicPlayerDaemon/MPD/commit/c6f7f5777694c448aa42d17f88ab9cf2e3112dd0.patch?full_index=1"
-    sha256 "17c03ecee2a8b91c1b114b2ab340878f6cec5fc28093ec6386f4d7ba47d8b909"
-  end
-
   def install
     # mpd specifies -std=gnu++0x, but clang appears to try to build
     # that against libstdc++ anyway, which won't work.
     # The build is fine with G++.
     ENV.libcxx
 
-    args = std_meson_args + %W[
+    # Replace symbols available only on macOS 12+ with their older versions.
+    # https://github.com/MusicPlayerDaemon/MPD/issues/1580
+    if MacOS.version <= :big_sur
+      new_syms = ["kAudioObjectPropertyElementMain", "kAudioHardwareServiceDeviceProperty_VirtualMainVolume"]
+      # Doing `ENV.append_to_cflags` twice results in line length errors.
+      new_syms.each do |new_sym|
+        old_sym = new_sym.sub("Main", "Master")
+        ENV.append_to_cflags "-D#{new_sym}=#{old_sym}"
+      end
+    end
+
+    args = %W[
       --sysconfdir=#{etc}
       -Dmad=disabled
       -Dmpcdec=disabled
@@ -84,12 +87,12 @@ class Mpd < Formula
       -Dvorbisenc=enabled
     ]
 
-    system "meson", *args, "output/release", "."
-    system "ninja", "-C", "output/release"
+    system "meson", "setup", "output/release", *args, *std_meson_args
+    system "meson", "compile", "-C", "output/release"
     ENV.deparallelize # Directories are created in parallel, so let's not do that
-    system "ninja", "-C", "output/release", "install"
+    system "meson", "install", "-C", "output/release"
 
-    (etc/"mpd").install "doc/mpdconf.example" => "mpd.conf"
+    pkgetc.install "doc/mpdconf.example" => "mpd.conf"
   end
 
   def caveats
