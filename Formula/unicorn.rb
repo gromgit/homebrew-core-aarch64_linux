@@ -7,11 +7,12 @@ class Unicorn < Formula
   head "https://github.com/unicorn-engine/unicorn.git", branch: "master"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 monterey:     "8a4345c49a4c8332c4a35eb97446c47aeed1a727cec98ce881ad9b8439047dc5"
-    sha256 cellar: :any,                 big_sur:      "6768c979e8d8a6e01eae16bcbcb86e5108f3aa24f60e400ffff61fe6f3282218"
-    sha256 cellar: :any,                 catalina:     "77d22ad4c7dc3901b741ea34c777d90e6cee40beac3dca3e5cfab66deadc7886"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "3559c25bdd368abb656250e8bb38441ec23bd9099cc336355acda780a5f3e8fe"
+    sha256 cellar: :any,                 arm64_monterey: "7aab257cfb71ae35a05ad57f9403f318eb00d72bcef0ba8cd7bb1c589a1b3853"
+    sha256 cellar: :any,                 arm64_big_sur:  "830145199dbb7748b9e5a5f98914e92a010e393864156462fcea1bb351be8fd4"
+    sha256 cellar: :any,                 monterey:       "ad5055198c408a6a7a2a1a31dc197be3a0fe17d0ffe9429f7c3d7f46b896ef1b"
+    sha256 cellar: :any,                 big_sur:        "bea80a84bc5b02e7a3f6c4823bbd1df374a6a19be367271c18932d0d6ee5fc6b"
+    sha256 cellar: :any,                 catalina:       "dcae27581f0a38a4a788d316f2a21028594b828a4d104e51f19df86b7e2aabcd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "61d94aa6ca35118429ff913104b9e7d409bc12bc48b480f0e4fc81b509f2847a"
   end
 
   depends_on "cmake" => :build
