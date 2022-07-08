@@ -6,7 +6,7 @@ class PythonTabulate < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "5cc7ddf671e6767d31b3fa40a8ebdd387c91251ce79751933d20479867d694a4"
+    sha256 cellar: :any_skip_relocation, all: "96aade7fd67304139f7c2ba7e3585393348fff2b7c9cc2067269cecccfdd9aec"
   end
 
   depends_on "libpython-tabulate"
