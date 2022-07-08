@@ -7,12 +7,12 @@ class Kubeaudit < Formula
   head "https://github.com/Shopify/kubeaudit.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0a76a637fa82f30b5d7d8ca89be8d04a859ea6320fdc3ecb866f21b55e8c9594"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5a53a07d37d8aefefb0c96d661ba42f9c715e33a126971baef4841e6b382e771"
-    sha256 cellar: :any_skip_relocation, monterey:       "25f0b3829979a784e2a9fd4ce42a0067fabbe982493c82f8bb7b0d7dc8cae0a0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "541582d9c1aa954e7583bd395f690c0013a05908254a646b32601c5ecdb5c6e2"
-    sha256 cellar: :any_skip_relocation, catalina:       "a08e36f85ca3e87e5e275ee824441217593db75c5e4c1fd754012c782b303122"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "622aa47244813f8db4a2b434780c1e67ef9e7b8df0dc6364f97c5471417a293b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8ee9449d8dfab23f6bdb033a5e4dfc855a1d0c8c14bee6d49e55817ca248a29f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9e170b3cd7b35d5529607504cbe57226d5170dde87921fe9e4adb74c7d18ce9c"
+    sha256 cellar: :any_skip_relocation, monterey:       "75b1d3c9f507dd53a36ce47426b67afcf53c8117c9f92d16c776d3c0900b05ab"
+    sha256 cellar: :any_skip_relocation, big_sur:        "51e05aa5b1b16f61e5d1be576fc2e13cfc38b0f40de503c1b62ff08e6415e23e"
+    sha256 cellar: :any_skip_relocation, catalina:       "adab6a88fdb4f67f816babf9e89ce57937215c0f04d7d11bc8a3cbce924d6ebc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b1b1ba0f5b756d29fc5d7559d0418afdbbb1080214429f19ae73a4883f1e62b3"
   end
 
   depends_on "go" => :build
