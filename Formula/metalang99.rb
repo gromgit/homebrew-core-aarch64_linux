@@ -6,6 +6,10 @@ class Metalang99 < Formula
   license "MIT"
   head "https://github.com/Hirrolot/metalang99.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "18db07784d10e03e77e14d5f2d611ce5c899c0b4cc485233736c8d6e93c579fc"
+  end
+
   def install
     prefix.install "include"
   end
