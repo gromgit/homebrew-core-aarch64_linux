@@ -8,12 +8,12 @@ class Dagger < Formula
   head "https://github.com/dagger/dagger.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "74bf7f2ed67f32ae14b31e79d02da25baf6a77c36db42899a8f8af65ee52d0ad"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "74bf7f2ed67f32ae14b31e79d02da25baf6a77c36db42899a8f8af65ee52d0ad"
-    sha256 cellar: :any_skip_relocation, monterey:       "d9a5dfc137b1705737bd3b772b56f4c08514131b21057dd6d800bb704d4982f5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d9a5dfc137b1705737bd3b772b56f4c08514131b21057dd6d800bb704d4982f5"
-    sha256 cellar: :any_skip_relocation, catalina:       "d9a5dfc137b1705737bd3b772b56f4c08514131b21057dd6d800bb704d4982f5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8c3032da25a13f990ca48499b3fdc5141a396e1a4d1cf262af64245833c69808"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b3e6d2c3aaa975e88aece0949482342967314f3defd2ae1b730dbfaefc293298"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b3e6d2c3aaa975e88aece0949482342967314f3defd2ae1b730dbfaefc293298"
+    sha256 cellar: :any_skip_relocation, monterey:       "f13534f77ddf830506a50b1df35bd40630d93e718e4658d8574a0d1225060d11"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f13534f77ddf830506a50b1df35bd40630d93e718e4658d8574a0d1225060d11"
+    sha256 cellar: :any_skip_relocation, catalina:       "f13534f77ddf830506a50b1df35bd40630d93e718e4658d8574a0d1225060d11"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "53d975ea1886168363a38786810426918ed6aad1720609eb418f642061f0d936"
   end
 
   depends_on "go" => :build
