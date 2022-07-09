@@ -18,12 +18,12 @@ class Ki18n < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "4be66a749974287833b1d1c6f964193f5d4b8e70137605705d01ad88206ba76e"
-    sha256 arm64_big_sur:  "61fdb931a0ed683fab5709541e6b32a186d87513d22f3017eddcfe9ae9be8748"
-    sha256 monterey:       "3ecd85e9cdb94af28d6e8a38465e34e0b4e833e00b20e7f2834ba7d13e5ad11a"
-    sha256 big_sur:        "3c9f71c218c46b4e9e534744d0ff04bb8995adaa8fac884901cfca09326dfc3d"
-    sha256 catalina:       "be3e8496472612ab613a7c896850c8bad2fb15d24141a4b47753e40ccf74e9c7"
-    sha256 x86_64_linux:   "3999af2775023f63ad3fb49924319ea4c23e769f8477896d5ccadc41391d8512"
+    sha256 arm64_monterey: "14011f6e9edc0378183ff6be8421eac40487a3c703ef75bb956f119ea65f9c6a"
+    sha256 arm64_big_sur:  "dc090991a9ed24983e2eb572dc9f93b0f8640bc05aa5b3a0b5383757c64e54ef"
+    sha256 monterey:       "9aa0de408bbb45a63c44f3247c50768b4dc97117b4e18e8c0943e305ef91e0d2"
+    sha256 big_sur:        "dc25bce2baad3c0f30a631a522ae64af237ab0c5a02a23ad6c01fcfa76c75352"
+    sha256 catalina:       "5657a8bbf63cbb975faef191a27405d5cfaca1daa27cc57125ed72090520bc16"
+    sha256 x86_64_linux:   "18d26250bf2d47a79c8a1e0b38eca72013098cfe877fa6a7156918b8ff272fa4"
   end
 
   depends_on "cmake" => [:build, :test]
