@@ -6,6 +6,10 @@ class Datatype99 < Formula
   license "MIT"
   head "https://github.com/Hirrolot/datatype99.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "dd6236c1485eaa837959e394ba78b8083ad7f87b7f1393b130bec4634ab1228b"
+  end
+
   depends_on "metalang99"
 
   def install
