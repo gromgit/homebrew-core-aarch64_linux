@@ -6,6 +6,10 @@ class XdgNinja < Formula
   license "MIT"
   head "https://github.com/b3nj5m1n/xdg-ninja.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "143b6fed536da8327d4cb7068108e6cd787eee32d9e297f8c435f781044fb755"
+  end
+
   depends_on "glow"
   depends_on "jq"
 
