@@ -8,12 +8,8 @@ class Stdman < Formula
   head "https://github.com/jeaye/stdman.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d0284a38dc221bb0b312253f1c40e01adf9809e8c6de55a24f754156c7ccd9bc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "16050a224d943282baca2789d32503919d0ebf6051b780e4f3ff85a2d7b0cf32"
-    sha256 cellar: :any_skip_relocation, monterey:       "44f5fd941d1fd0e2e50174c070c2b4ddd288f2c2c83e9688817d3d29e7bc36ac"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4ede76c9b03126b5fe3d03821547fd1ea2c24f625531dc090943fb2fdaccb20b"
-    sha256 cellar: :any_skip_relocation, catalina:       "e672c1074a4c594acd0af1816c115a53d56209244c9a33251bf9bacbf4710af6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bcdb9672c7ef857b46ff0e722390aedd74132b7e7b8dc6b12ad7c051ea124e95"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "3a74e020e777587f893a2c62e7fda36ca37ba021206dbe0a57f29b9970ad6642"
   end
 
   on_linux do
