@@ -6,6 +6,10 @@ class Interface99 < Formula
   license "MIT"
   head "https://github.com/Hirrolot/interface99.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "31d2ebaaa2097cd9b833bf008bbeecd194ae8cbeb0395315e4f1ad8d4be29c75"
+  end
+
   depends_on "metalang99"
 
   def install
