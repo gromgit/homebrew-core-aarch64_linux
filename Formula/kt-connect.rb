@@ -7,12 +7,12 @@ class KtConnect < Formula
   head "https://github.com/alibaba/kt-connect.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5492c3e9ce0c5b6539ab48ce75d4fcceae1da8c2ff3c5997481582580bf34673"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e023697e0f3c07897d0f189d333aff8306b1d1873f1ed4f3c41ebd46954c5129"
-    sha256 cellar: :any_skip_relocation, monterey:       "475aff303eabcfcf387e759c6ec771a7aadefd81a9e1e7bbc813ee7a7d2f737b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "aaaf22ea7dbdf9c691f67739f305add40401b90d703c0b09b1db021a4fe88f3a"
-    sha256 cellar: :any_skip_relocation, catalina:       "3a5caacb691fca4e4f88cc221ad9a99af2bb2af6125b06f9ba8bf28c6d69b551"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bb4ca1617b030781a5a9e50f3dfc2e343f5f7a6254b34f1a6ea0546e10c1e700"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "201a9bc8a61ee90706957c3fccf6ae1623639bda3820fb50ff1a80648935bedf"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c8c5c2566756210068ffbd9de28df50a18509e9139089626d739a31a16ea01b9"
+    sha256 cellar: :any_skip_relocation, monterey:       "5121833c6caae40c1feab413ca5ee4df9d8148ec4bc4135eb94d2beeadf3dff2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f34314cfc0ea7d23bb903b074d55b1694c8ec001b037051c5622cbc2e8262654"
+    sha256 cellar: :any_skip_relocation, catalina:       "0de5ef15714fffa9cbddf23e60afd497e2fbf3a39f29b0f8f062f92aa26fb031"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "42feffd67e8c7bad19c91931a73802e3f65321ddbde2b405fa225221d00cdc31"
   end
 
   depends_on "go" => :build
