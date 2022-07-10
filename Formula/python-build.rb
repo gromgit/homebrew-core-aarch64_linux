@@ -8,6 +8,15 @@ class PythonBuild < Formula
   license "MIT"
   head "https://github.com/pypa/build.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "610649cc03c756ee41fcb9f4cf554b81e650faabb2e6faa3bc71d75598b82d10"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "79ece43d227ab21d3fdb1b16a8c69f1c1b479fca33733cfa995b2a6120271199"
+    sha256 cellar: :any_skip_relocation, monterey:       "ad1c8d2b82c17d4efaa10819a55386ceb263db6e6c8fdcb96e709e379d2294f0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1878b5d3f65a160896710c5fc3b50e9f756086fa1a422e93bcdf3d94f074b6ca"
+    sha256 cellar: :any_skip_relocation, catalina:       "04eb2448e4b6f7ccd8f581b1cd425c2eaca92e21627e230091c630b3400db3e8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a51b5cfcf3acbbefc13ce3803c63b2fa1bd0fddb946e72659fb412fcad814713"
+  end
+
   depends_on "python@3.10"
 
   resource "packaging" do
