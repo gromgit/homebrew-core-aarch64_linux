@@ -7,6 +7,15 @@ class Dunamai < Formula
   sha256 "fac4f09e2b8a105bd01f8c50450fea5aa489a6c439c949950a65f0dd388b0d20"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e65789cf29042f5c43195bf35033f4bce6b384b32db47c290610948295ba7383"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0aa812c4b3d05032aa00926af661247d93ac67871b0cdf562e1c3248d3305c22"
+    sha256 cellar: :any_skip_relocation, monterey:       "f3c32577df9cba08fb81fd3d29f8cb7b80cc938201d3bb2ee0d48974697332e2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0de7ed6bb9096a76467cff5861804e62a801978c27c741e509af5540b9bb81fe"
+    sha256 cellar: :any_skip_relocation, catalina:       "f3548a580fa4a2f6a5762ae72c480c171c887494f75b8b4609082d8cbc3a0d04"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "79d3d2137e12f312e5d0159a3061ec16a56bd4398b4cbb10e7fb44c3946713ff"
+  end
+
   depends_on "python@3.10"
 
   resource "packaging" do
