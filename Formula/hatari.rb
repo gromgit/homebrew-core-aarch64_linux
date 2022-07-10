@@ -1,10 +1,9 @@
 class Hatari < Formula
   desc "Atari ST/STE/TT/Falcon emulator"
   homepage "https://hatari.tuxfamily.org"
-  url "https://download.tuxfamily.org/hatari/2.3.1/hatari-2.3.1.tar.bz2"
-  sha256 "44a2f62ca995e38d9e0874806956f0b9c3cc84ea89e0169a63849b63cd3b64bd"
+  url "https://download.tuxfamily.org/hatari/2.4.0/hatari-2.4.0.tar.bz2"
+  sha256 "3e481b08c45cb65d3423157c4e912b458cb72941ff52478362f9abd791cb1ed7"
   license "GPL-2.0-or-later"
-  revision 1
   head "https://git.tuxfamily.org/hatari/hatari.git", branch: "master"
 
   livecheck do
@@ -23,14 +22,13 @@ class Hatari < Formula
 
   depends_on "cmake" => :build
   depends_on "libpng"
-  depends_on "portaudio"
   depends_on "python@3.10"
   depends_on "sdl2"
 
   # Download EmuTOS ROM image
   resource "emutos" do
-    url "https://downloads.sourceforge.net/project/emutos/emutos/1.0.1/emutos-512k-1.0.1.zip"
-    sha256 "96c698aa0fc0f51ecdb0f8b53484df9de273215467b5de3f44d245821dff795e"
+    url "https://downloads.sourceforge.net/project/emutos/emutos/1.2/emutos-1024k-1.2.zip"
+    sha256 "65933ffcda6cba87ab013b5e799c3a0896b9a7cb2b477032f88f091ab8578b2a"
   end
 
   def install
@@ -47,9 +45,9 @@ class Hatari < Formula
     end
     resource("emutos").stage do
       if OS.mac?
-        (prefix/"Hatari.app/Contents/Resources").install "etos512k.img" => "tos.img"
+        (prefix/"Hatari.app/Contents/Resources").install "etos1024k.img" => "tos.img"
       else
-        pkgshare.install "etos512k.img" => "tos.img"
+        pkgshare.install "etos1024k.img" => "tos.img"
       end
     end
   end
