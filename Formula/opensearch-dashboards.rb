@@ -10,10 +10,10 @@ class OpensearchDashboards < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, monterey:     "8f19369bcf13b55595025952c39494d57fca2c05f589fff95473b335731037e1"
-    sha256 cellar: :any_skip_relocation, big_sur:      "8f19369bcf13b55595025952c39494d57fca2c05f589fff95473b335731037e1"
-    sha256 cellar: :any_skip_relocation, catalina:     "8f19369bcf13b55595025952c39494d57fca2c05f589fff95473b335731037e1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "18d62846c5d75b92553f9bd715b87990d1b50fa0bcd179d91e46105d3a95dc28"
+    sha256 cellar: :any_skip_relocation, monterey:     "c1d112b3d53139e21aa4980aeea93c46376815740a2597c7b34fef75cb29d3f6"
+    sha256 cellar: :any_skip_relocation, big_sur:      "c1d112b3d53139e21aa4980aeea93c46376815740a2597c7b34fef75cb29d3f6"
+    sha256 cellar: :any_skip_relocation, catalina:     "c1d112b3d53139e21aa4980aeea93c46376815740a2597c7b34fef75cb29d3f6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "84acada30475d12becd5f0e737f4cd547b5add5ef115f7ff8905f3a3e28b3ceb"
   end
 
   depends_on "yarn" => :build
