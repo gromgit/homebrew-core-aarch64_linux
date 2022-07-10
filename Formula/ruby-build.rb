@@ -7,7 +7,7 @@ class RubyBuild < Formula
   head "https://github.com/rbenv/ruby-build.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "2c19678178ad44772ed992374bbc535b5e81def87bdae56051b6e8fdfcb96527"
+    sha256 cellar: :any_skip_relocation, all: "737a391b3d1c8c1860da293b750091092c34ce9fe80cb1a904d6dd5ee0f809bf"
   end
 
   depends_on "autoconf"
