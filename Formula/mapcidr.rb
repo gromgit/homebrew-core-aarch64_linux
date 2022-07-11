@@ -7,12 +7,12 @@ class Mapcidr < Formula
   head "https://github.com/projectdiscovery/mapcidr.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "bb180ee96d7fdcf7c5e4d1d58e8a7d2b8720cebb3227abc724d5327b5c5e3b3f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5175d170c9d57cf71c116b094fb7536dd16cfffb3874da6a6a356ce8891f4df2"
-    sha256 cellar: :any_skip_relocation, monterey:       "463b942ef6f582a60ac8697646243d9ab29a7fbd445eb7395b36581496de8b61"
-    sha256 cellar: :any_skip_relocation, big_sur:        "acc508e1770d68ddac19f52e0f05adebd0af3852b31cbb28defc2e560c71d549"
-    sha256 cellar: :any_skip_relocation, catalina:       "8911ce7ddd2e79376040bba13ed3591bf5248b2f5d0659647e6716235cdc28b4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "626b6dafd42df64af6d022800eb22ed1c770c3740cd1c61cee2ddd6de61b9e30"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1e66c9864c26f4b9b96fe649ffdf0f76998641ac5e83119aed9770852e306f74"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "064b51df363d485f1ed6411488beec2366040cce8703da981dd8dc12cf72f302"
+    sha256 cellar: :any_skip_relocation, monterey:       "95afb257909d16239b59c4615427647b2df094026f96a48c6fbac89504aed48f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "21f9de858d7f1347eebb92d2ef5b135788144535cdf13a1ecad20583c330b326"
+    sha256 cellar: :any_skip_relocation, catalina:       "4bbb48da30d0ca0c241ebe382c031b4fa8170ac738a925db5e0c7e866296fc2c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a62bfbfdeb6d79df4a949784ed359fb9e87820a61a1346092b2ac7a8745a33c5"
   end
 
   depends_on "go" => :build
