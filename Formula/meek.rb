@@ -6,6 +6,15 @@ class Meek < Formula
   license "CC0-1.0"
   head "https://git.torproject.org/pluggable-transports/meek.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d19c3c39e282288d574f72c2e645d586514d5bdf9fa3adbd5dee9abce2c57c6a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "381c30917d44d9950043b015da64076b114280c08cbfea1535c4b89544c2d3a4"
+    sha256 cellar: :any_skip_relocation, monterey:       "67abc74d5ce920c2d4c0f6802c5995323075b12c7bac5c1bd46748961677b590"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c4a8da9ed8871a4dc06b5e7a772f1fb230a12353296af9b4ceeef8d08d6cbd49"
+    sha256 cellar: :any_skip_relocation, catalina:       "84d861c8c71758f0ad3bcdac328252548a049abe9303a09f16892cc6971a4d76"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "53df0b92961c12d36c251b736401699ce3cd9d0527c5ff0e5f4e01369998c18b"
+  end
+
   depends_on "go" => :build
 
   def install
