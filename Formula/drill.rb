@@ -7,13 +7,12 @@ class Drill < Formula
   head "https://github.com/fcsonline/drill.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "904576a345557bad10f8d58dd20e009b055893d55a43049db32808ddd82a3c64"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "efc0e6a7ec33157683ee61e732ae5ddf6d8fa790192ed3c68403771cdc47803a"
-    sha256 cellar: :any_skip_relocation, monterey:       "6113d7ea668ecf53bd2e8a60eef51dc48eaf1e0ae5ef8b6e4b17625ade71803a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9a08286617629a63ebefc288604007facab0d3cd5a3a5b6c9caacf02db5f3452"
-    sha256 cellar: :any_skip_relocation, catalina:       "3db1f9e4e0d25d84e5aa26e2801ea399f9328b50e32c85fa198894d5e5b54c3e"
-    sha256 cellar: :any_skip_relocation, mojave:         "57509a9c9172333d4aebcc18d21476f835bb7fe240ca117c0df75b3901dda663"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3e2f5a4899c09e528fa4a45bead1d9a36f344a8c012f27dd6e5aea26a13c8fa7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f52cd08c09b0d24b2ec87387e4ed6a1dc66460dc4d3c10dcd400718ffbce81a4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f7b4433825dbb0805b99581c92f797170bbe96ea973859feaf3cf2bf5e6a00a8"
+    sha256 cellar: :any_skip_relocation, monterey:       "0c7bdb0d36a979d56495d07233af47b3bfe373833591e620c8333c10158bc487"
+    sha256 cellar: :any_skip_relocation, big_sur:        "35f3f0ee64c57c2eb4cc27c757eada8b5ba2f17c790baa86bb2f1048888df66f"
+    sha256 cellar: :any_skip_relocation, catalina:       "d2a18dd4b009cde8029a99a0b8a8dad9582e23484938eca039afe4ddd9fa5912"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "017593add7b77348f32eaa071c2ed94571bc377c8286b5c05f7fb2683cfa92ec"
   end
 
   depends_on "rust" => :build
