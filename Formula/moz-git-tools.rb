@@ -1,10 +1,9 @@
 class MozGitTools < Formula
   desc "Tools for working with Git at Mozilla"
   homepage "https://github.com/mozilla/moz-git-tools"
-  url "https://github.com/mozilla/moz-git-tools.git",
-      tag:      "v0.1",
-      revision: "cfe890e6f81745c8b093b20a3dc22d28f9fc0032"
-  license "GPL-2.0"
+  url "https://github.com/mozilla/moz-git-tools/archive/refs/tags/v0.1.tar.gz"
+  sha256 "defb5c369ff94f72d272692282404044fa21aa616487bcb4d26e51635c3bc188"
+  license all_of: ["GPL-2.0-only", "CC0-1.0"]
   head "https://github.com/mozilla/moz-git-tools.git", branch: "master"
 
   bottle do
