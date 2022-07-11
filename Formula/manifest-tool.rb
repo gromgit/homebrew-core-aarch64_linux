@@ -5,6 +5,15 @@ class ManifestTool < Formula
   sha256 "53bba7cc7465c8347c70e36467848bd385eba2fb51d7aceb269c316382a065a7"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "086807fbc9f62582bbc2a176b2e93fd00aee8afda6388104388ce18a15398b37"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "de7390c1fce5430431bfa74dd1a9f258ab825a41d3ded6b00ea502f5fd5b563a"
+    sha256 cellar: :any_skip_relocation, monterey:       "62678dc2db8cd0d117f139d69235df7667d5b018498f0c871d6dfd170d62430b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "603dbc2e0957c169ecc8362ffdfb4de9fad87b95adc787f095d06d736b10182f"
+    sha256 cellar: :any_skip_relocation, catalina:       "4f1bf326c4627260fc1e3096ac41987ef7c4367a09da40b053b1809ba4e1a53f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a13299381c3ecc2375fa19a318ac019039f72acf016be5b9c2aae33d9220534c"
+  end
+
   depends_on "go" => :build
 
   def install
