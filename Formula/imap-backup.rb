@@ -1,8 +1,8 @@
 class ImapBackup < Formula
   desc "Backup GMail (or other IMAP) accounts to disk"
   homepage "https://github.com/joeyates/imap-backup"
-  url "https://github.com/joeyates/imap-backup/archive/refs/tags/v6.0.1.tar.gz"
-  sha256 "6af5abb733117adc93b820681e236b4947e29f411065810661fa2f1fee54f179"
+  url "https://github.com/joeyates/imap-backup/archive/refs/tags/v6.1.0.tar.gz"
+  sha256 "3397f5126f668ef8ae549afa8e0a4d35370985f693871c69c6f5df932c797d6f"
   license "MIT"
 
   bottle do
