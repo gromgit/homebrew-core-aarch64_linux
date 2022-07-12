@@ -7,12 +7,12 @@ class Circumflex < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f87e23f7e960ab3286fbea050e7ae77417595f573f09e2f6d087b56ba7cdd9ae"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "16d6755e65e975dbbbf4f378189a2b40ba55febf9745ebbea1db99e18ed56d84"
-    sha256 cellar: :any_skip_relocation, monterey:       "ec541ca5f50dc8978ee40d95da005062b09926b593e827c8beee899d102aa555"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1a71437d81f1e276b79a847521528ea4b4af711111e442170aaceacb9af5b6ac"
-    sha256 cellar: :any_skip_relocation, catalina:       "325e90871bdbddf40d3d6a0d9a1191ae2dcb179e4757edc37f5be7a95e2d7358"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dceec61ad5863347b2b7e18aa069a55ce0aff0822fed7ba3e6e177b09d3e5e83"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "16ca677cc0336d37cec75b9436f82315bb1cb48b8af0524bd68d157c6828b48d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "035994e6fd161bd14934ae37ee28dc34d6f04a0eec2169d097a599a4169549d9"
+    sha256 cellar: :any_skip_relocation, monterey:       "d8eb020f8b63d4f58e1dbf9cb1bc8291f8674fcfbcef8f8368f44a5598afb728"
+    sha256 cellar: :any_skip_relocation, big_sur:        "17cbffe48e6937ae19330d2274b1ff084415cad1e9464ad993acbe1cd324cd74"
+    sha256 cellar: :any_skip_relocation, catalina:       "f57a7a6866f2bf7a715cfeb033fd6ab549b61b85a00eb02d1dd0cd24dbe3ae07"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f4300b5f392b98a629b9648ec2d61a11e7aabd9f74e69c059dcd4fb41a922641"
   end
 
   depends_on "go" => :build
