@@ -6,12 +6,12 @@ class MscGenerator < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_monterey: "901294bc54e8da0986e3e0b4e1ffc0707d2f503639914187d54cd0379218b064"
-    sha256 arm64_big_sur:  "f65ba879ff561f20c4604522c07e09ab00a83862480038d45cb2cf8b79692757"
-    sha256 monterey:       "eecd90f08041a878eb775d1baebdf20efbf47f159d36b180d46de1cc9f1058c1"
-    sha256 big_sur:        "3fb9534c7e43ec8e80f852840356749feefd1f370a259bd58b9ba32b57c652a6"
-    sha256 catalina:       "e1d2f7b436ce2038ab041e244f0b7de89584741db47b4325aeff246f797d4bba"
-    sha256 x86_64_linux:   "9ddfb8e582742435e1a56d6751ec8b817264041f99812a0302748385d80f0647"
+    sha256 arm64_monterey: "f2b4bcf403d15c2eb9a633c5610970e1ee0f157f72d46c6eb94e9ad6549b24ee"
+    sha256 arm64_big_sur:  "cc7d3b74d954713b9006eeef7d401652ac5d0cdb7a2d36e048807e77895c82b7"
+    sha256 monterey:       "11d6fdad7248973073f327052c79cb78b4639d11c764fab11a7013c78268a213"
+    sha256 big_sur:        "990d508e3af660908e26e1eaec698386f3a2bc052eb98161ca52987df56b3d52"
+    sha256 catalina:       "42d335c820707b2b9028059ac53faf9e9d8b5612a75f2aa7292eaa3387d21535"
+    sha256 x86_64_linux:   "51d70c9580701ee75913e05e9c75a44d47ec1012f55734598b443e198754f6b3"
   end
 
   depends_on "autoconf" => :build
