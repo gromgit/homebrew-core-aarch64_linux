@@ -12,7 +12,7 @@ class Sbt < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "ff41602624395f9ee9c3f85c33709475b2d96eba390c108814e6a0a212317291"
+    sha256 cellar: :any_skip_relocation, all: "f0ae85a514c49e1e3c1412b42e34ae29603ada77cf3361226e4dcbf66fcdfede"
   end
 
   depends_on "openjdk"
