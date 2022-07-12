@@ -13,12 +13,12 @@ class Openconnect < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "914669c733fc8e8c16d7bbf18dca0449660a81101b4e9c4c221ad95bfdf792d4"
-    sha256 arm64_big_sur:  "2313cbe133b89a1634ad3d1759af956010e87afe21e35d9e01b0aa998583980d"
-    sha256 monterey:       "5bbe2cd51c2bf848b0cdf81e4c3a0d386fe151517ed1badbd2dcd1bce7e67787"
-    sha256 big_sur:        "1d6ff662f32e30eed582496d36784ba2ad31192653c6c326bf66c4e5136c3c37"
-    sha256 catalina:       "e4ba32628105be93256386fd9592cf5c0c922536d17464d86c4a27c4c011f60d"
-    sha256 x86_64_linux:   "184a0a3f7a6a14b73d7fcab1e26ee92dba2fe56927e43c26f25816c73041c19b"
+    sha256 arm64_monterey: "4eca32d89d7f32f2f6b7a355f5bf9eaaa37d8b4c090d79d3c105011309ebcad0"
+    sha256 arm64_big_sur:  "8b3d608d65ca76bac5b7f2a77d5327eb21dd022eb9b592147f84edf79f3f1c0f"
+    sha256 monterey:       "0428b740b599f2fcc5e9f3f7da66ce10eea03db6bad413bec2b23ef402c0b4ac"
+    sha256 big_sur:        "2a92fd636734df393dc46b357c63f97b5bd4ffada3fefc17f6ecfc539a15eb50"
+    sha256 catalina:       "874b4f10324c797ba3e5a4fb66e101eafc60a46df03db1283a58fed0ba345842"
+    sha256 x86_64_linux:   "943353c0961b5b1cc428c72ef44936ac1e6b13c28d4f8f7b4b5a0775e90ead6a"
   end
 
   head do
