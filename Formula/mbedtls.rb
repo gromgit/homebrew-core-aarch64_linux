@@ -13,12 +13,12 @@ class Mbedtls < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "61f953e197aae82f30b1126b09282e05603cac9e3510ee16c8ee5c0a5bcd6d3d"
-    sha256 cellar: :any,                 arm64_big_sur:  "e1e3ce34caf7ef745cfe8323c3d21b700c741a7c57580155b57801e5355457a1"
-    sha256 cellar: :any,                 monterey:       "c3cdf015e35cdc96efd81c2753e7c8221450f6d9a8e9c734428d0ef68560aa22"
-    sha256 cellar: :any,                 big_sur:        "5f1bac917553013e1bf45a31cc8f64fe056ddab8aa8de6e2511d5151207bff9c"
-    sha256 cellar: :any,                 catalina:       "e6c515156e725ebf371f8d756a87d7504cb2064c65b8aaa10c7ba389b54d8a06"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d105883b858a0eb7b822c2c47b7ef2be7011836743075f3e8777e8f97cfbfe06"
+    sha256 cellar: :any,                 arm64_monterey: "21009291bc1c17051363355c2815cd4826603f3a3f4d0d071f78a78be2b22ae9"
+    sha256 cellar: :any,                 arm64_big_sur:  "772fc2c15da4aa90218b3afdcb1c2cd076dd8333f89c951a4946fca5cbfcd227"
+    sha256 cellar: :any,                 monterey:       "b473d94ce270b5b795b842708329334a04eec7cb43fa15f4e06d9e66f8d48e3d"
+    sha256 cellar: :any,                 big_sur:        "c6788160e03dfe51b88224991adecef63c269c1033349aa66e5b2b69c9247e88"
+    sha256 cellar: :any,                 catalina:       "a3cba57dd337562c7793f7afc32e6ce0406c5ad31211a3250ebe7cd0b3ce9229"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eb233f2a360971476b190253ab1e778800309ced62c44f3409cd0d1af7a73d25"
   end
 
   depends_on "cmake" => :build
