@@ -6,12 +6,12 @@ class WebpPixbufLoader < Formula
   license "LGPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "f0a471da48be86632463787060c123f24366a2a4e0658e766862307000f6335c"
-    sha256 cellar: :any, arm64_big_sur:  "4622ed4e38edde0c1b4db389d8c57466a3dfbd497d0bedff13aa2bdff6da2de1"
-    sha256 cellar: :any, monterey:       "93aee49bf4eba2ca041e201502f2ccab2491e6fb85ade2fcd2689af9b63b1528"
-    sha256 cellar: :any, big_sur:        "577057df88bc8f9c772c3fbe90c62ac3d8d4ab46f916ca38b31ea24eb7187ae4"
-    sha256 cellar: :any, catalina:       "130dda51c257e5d607ae8a4721097acc6ec5273ed10b4f063ab8dc29150f250c"
-    sha256               x86_64_linux:   "3c82a8537a0d0285567318f6a4fe836f9150d7e7aa1c32685cf2daf7f82e35d9"
+    sha256 cellar: :any, arm64_monterey: "603ebbb5dd68650a0deb2c41fc9682de704bfeb5831a93441fb07e69911355d5"
+    sha256 cellar: :any, arm64_big_sur:  "1d4c1ce0cfe5f675cc8c59a939e5b8a735237648e1c6691e94e0771c9bbf50b8"
+    sha256 cellar: :any, monterey:       "b5c40535c457150fc1654a5072f4162230b17bf661aac05a65512f13f32e94e1"
+    sha256 cellar: :any, big_sur:        "dc06cb83d1f768769e089d1227db8198ba4af1808bcd5dad50b12b3cb63fa6d7"
+    sha256 cellar: :any, catalina:       "7cd01445a1d5214530530f7338c486e6dad5b05e3d06735511c7400eb1444075"
+    sha256               x86_64_linux:   "5f23b6308a09e77a85261b187e6746aef290fdf6be1043bfac198cd6ca4a99c4"
   end
 
   depends_on "meson" => :build
