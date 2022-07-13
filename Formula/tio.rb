@@ -1,9 +1,10 @@
 class Tio < Formula
   desc "Simple TTY terminal I/O application"
   homepage "https://tio.github.io"
-  url "https://github.com/tio/tio/releases/download/v1.43/tio-1.43.tar.xz"
-  sha256 "fe687042dc787bb28a00a5abbafd99714921704fae7d51eff30aaf5a6dc74ab7"
+  url "https://github.com/tio/tio/releases/download/v1.44/tio-1.44.tar.xz"
+  sha256 "3d3e20ecc44ed674816d2d0421cce42c1a7af96753d3b3bc1d7b7f6b03192cd0"
   license "GPL-2.0-or-later"
+  head "https://github.com/tio/tio.git", branch: "master"
 
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "3177501ffa921361367a050dbcacdf7c2beb6597d75431c7dbee66c385b7e4bc"
@@ -18,6 +19,13 @@ class Tio < Formula
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "inih"
+
+  # PR, https://github.com/tio/tio/pull/159
+  # remove in next release
+  patch do
+    url "https://github.com/tio/tio/commit/223f0c5d1304dd6295c77313fb6bd0c156755b62.patch?full_index=1"
+    sha256 "09459cd348fd3d451a82e9712599f82de5dc7457270147228bba1beed7b1545f"
+  end
 
   def install
     mkdir "build" do
