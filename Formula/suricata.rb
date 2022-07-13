@@ -1,8 +1,8 @@
 class Suricata < Formula
   desc "Network IDS, IPS, and security monitoring engine"
   homepage "https://suricata.io"
-  url "https://www.openinfosecfoundation.org/download/suricata-6.0.5.tar.gz"
-  sha256 "0d4197047c84ba070dfc6b1d9f9ee92f52a71403bfac0e29b2554bb21fe00754"
+  url "https://www.openinfosecfoundation.org/download/suricata-6.0.6.tar.gz"
+  sha256 "00173634fa76aee636e38a90b1c02616c903e42173107d47b4114960b5fbe839"
   license "GPL-2.0-only"
 
   livecheck do
