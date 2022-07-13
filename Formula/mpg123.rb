@@ -12,12 +12,12 @@ class Mpg123 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "b5ffa7483943374e541196f49f916c27c0072a2d61916f23d2f9640a0f4d0ca2"
-    sha256 arm64_big_sur:  "2476480ffab1cabc11b4e1b57cc5c8eca00e230ba7c2bfc08fb7626ffd4a778c"
-    sha256 monterey:       "c0b1ebce94cce21c2d749816887057e2de8412b2171659f05773d04cb397f7fa"
-    sha256 big_sur:        "d3e3dde4066df85a2c74f404862c603700cda285acf93910f8fd9c292937a264"
-    sha256 catalina:       "e281b083675b32497ac391908827f34fc8ee49451ae5ad38afcf54e150c8a733"
-    sha256 x86_64_linux:   "6cefea56e6e36615c36c715c210a7fa970635a040e4bf534f292d6f0868a53eb"
+    sha256 arm64_monterey: "4b591ea40988ad60cec49f545d8d16ca5d293bde798eaeeda05293c7538a9a2f"
+    sha256 arm64_big_sur:  "807d6194b9a03cf521a000e934d4ad7755b1ff0762a441761c01714d38aeb70d"
+    sha256 monterey:       "359d0ef12c2877f61dca8be72cb8abe681fcd0c03ba45091ae065ddef48dc9c7"
+    sha256 big_sur:        "cde0f7e476f0b96b343e929ea62c4b45b4290990ad3bae4b25006b67edbd9e07"
+    sha256 catalina:       "19bd71f268ede8d39635f9fe7f0a1636965a214c509370b4034a52210aa86f71"
+    sha256 x86_64_linux:   "c94544bc4a74b0feac3dc8e087cb43cfaf6573b32581972ecc7877e39694a5aa"
   end
 
   def install
