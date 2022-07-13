@@ -7,12 +7,12 @@ class Tldr < Formula
   head "https://github.com/tldr-pages/tldr-c-client.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "344e2ca81daebdcba97e90441c79de2c0e6a24b83ff26eefc01eb0a11d6e6e09"
-    sha256 cellar: :any,                 arm64_big_sur:  "2651f9115abb83c9f8738e0cb6d0bd72e78cc322261313e00cb6fc564be983dc"
-    sha256 cellar: :any,                 monterey:       "aeb51aa37519baa0c187b8da06b394dcb9e60fd243004d24a011785a26fb6d04"
-    sha256 cellar: :any,                 big_sur:        "d6f79989e34283228b474d8fae394d6be6e46906b51a4b98b0c2f427ddd8dc69"
-    sha256 cellar: :any,                 catalina:       "03dd86a23d77135aa39dcdd7b4bc234fb584209a036343c8f06f442ebd0cab85"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0c003099b08ebbf65487571bb0fe2617bf238a6ef3d60f521d21c31a6a809cd5"
+    sha256 cellar: :any,                 arm64_monterey: "3f969a50b717145b7711c699aeff9290e98c43833a9e9d01119fa5c22c87b861"
+    sha256 cellar: :any,                 arm64_big_sur:  "c0fa874b41e4f1a9e6e597bd8cb462f4f0180aae9844f0e9154e778c1e030ee9"
+    sha256 cellar: :any,                 monterey:       "79b6fb23aadf46144c104d3c53ea8cae750f8475bd4ff09be6f498fda0f83016"
+    sha256 cellar: :any,                 big_sur:        "bbb0d3d550e2e55c1a0b3bbe48aca47995b988940ae5a05633fd515793a31cf2"
+    sha256 cellar: :any,                 catalina:       "639a83243ed67d2d6294882b56ad0706526e6d50d837e85379fcb4f65e63abca"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "948fa2f4233dc829670e11d5eed35ac8180383d3629bd3090761bf6ca3e9a767"
   end
 
   depends_on "pkg-config" => :build
