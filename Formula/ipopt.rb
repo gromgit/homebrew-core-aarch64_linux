@@ -7,12 +7,12 @@ class Ipopt < Formula
   head "https://github.com/coin-or/Ipopt.git", branch: "stable/3.14"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "6aa1625f87ba5ba0093dbbc014a6b8226ab10d37ad1cab768714213514708cdd"
-    sha256 cellar: :any,                 arm64_big_sur:  "322d8b7874fec4bdaceb3cdf9b380f9edd28cfc773d7ab2d92fdd598c904cf89"
-    sha256 cellar: :any,                 monterey:       "5b9675279ed652b63ee58eaae0248328784a0a6af7ded77f56b68addfe1f249a"
-    sha256 cellar: :any,                 big_sur:        "a1a1ea609d0778487f8d249fcecf7284af202583d80cb279424790cb1df0c77e"
-    sha256 cellar: :any,                 catalina:       "9c799198a0fb3c79b59fdf5202854d96947db81c9fc9fb0d4e9bb5ffdab87e3e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7ea9e9c208aa2f3446da632636c184e588e4ccf3467cfd28108b744a91326d11"
+    sha256 cellar: :any,                 arm64_monterey: "e8a99e08d434cb4512335526976c416e5ac224355c0e1e6a67e276ac5d735c4f"
+    sha256 cellar: :any,                 arm64_big_sur:  "d4b5254fbe0af8cccbf124db1429e086ffcf9cab6da2294ba09af93423f585f4"
+    sha256 cellar: :any,                 monterey:       "cdc60dda12d23dad13d96f587c07112b71962e1898f1a213d05987d7d9d4ccf3"
+    sha256 cellar: :any,                 big_sur:        "4f6273552064714366c850b87493d1e03810a1d6d4e411c77b0c3fa4c2f63daf"
+    sha256 cellar: :any,                 catalina:       "7c48697b78441749e6ca4659f13c9f131aa817d478ab29e2a0d26c45857bbc99"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "10f26207d724966964d665dc049e01920c78ef86cc78dd17d1e0802f07a3ab0a"
   end
 
   depends_on "openjdk" => :build
