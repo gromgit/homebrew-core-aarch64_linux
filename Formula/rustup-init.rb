@@ -6,12 +6,12 @@ class RustupInit < Formula
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "df8c09a2f4d8abe14b495724fc79340eec85ef7972c201d5a4d4e69f4311a244"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1a623378ea3ea060046cdca23d25be6822e7a804fae4a8ba26bbfda8077c2cbb"
-    sha256 cellar: :any_skip_relocation, monterey:       "78a4230d82ca6d0bf3bb0c9d6881cef8b34a65880b13417c3ec11ea2dd36c95d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ec03b64d38cc403694a3e90ae1e9e41adc20dd97f6539e26ef3c7171bc73f941"
-    sha256 cellar: :any_skip_relocation, catalina:       "60ee77a62421bc5e32adfb73445e25243c85b6a9ab6a23af090a2a1089ec5444"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "370bc099ded79ff45b2b790a42138d88a85dd15a35e73611146df68947460c6d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b9ee3f915e1049efd38f7c4600a6c8843f8f7382f2f9683b4decbc635b71c524"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "75d1be12dc64d53f7baf0e3743a0e4cc39c5955c5b484892ca35629ab3659b7c"
+    sha256 cellar: :any_skip_relocation, monterey:       "85fc35fbacf815142d73a35d7eb55c5d3b00a86f289c5e9ced526df590fd1460"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f90bf0b4bada9efb8a8734056cf298767b81179842fc02a8d70d01b3f8c67586"
+    sha256 cellar: :any_skip_relocation, catalina:       "d72e4ef00102429c15afd4ff0a67b31f35d6cd920711ca9fae65c772b31be940"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "17e0563f79d997f47685faeafe39cea1a49e1f932ed7799921ce6895392684ba"
   end
 
   depends_on "rust" => :build
