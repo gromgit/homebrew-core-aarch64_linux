@@ -6,14 +6,12 @@ class FontUtil < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c542bbf9e2f5c1a791410c07f88136a1b642689294caf984f7ea3f71870134d5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8cf0aaa2a8712798806bf33f3c08a50a4fd0a71f131e405f0559f133d2bec281"
-    sha256 cellar: :any_skip_relocation, monterey:       "a81bd61997b6bd8769d6c2e441dc8da68278b8663008db7d0ead5d89a0d86113"
-    sha256 cellar: :any_skip_relocation, big_sur:        "880e773166f076fee6ed2b66aa46ccd786adcdffcb62867d0453f5fb0306fc8d"
-    sha256 cellar: :any_skip_relocation, catalina:       "3b1ccaebd2a3efc9cd2daac2e9e740362349a1847e4c169ebe3d475ff3b31a8d"
-    sha256 cellar: :any_skip_relocation, mojave:         "c606e6261604b92184fad13ea3fa0cdf377fe09bd3280389ae3c2b32b15b4785"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "e5a86e6341ec516e06c3c22cc347ef5329add351e8aeb1f3aac3cf981dd81d51"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0bdf7a30d254fd3e0d6c6df366dc79b0c32ce1fe1aa07350d58548822f21b55e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1e2205892be19c7afd594a119f156c34be0bbb2ff558e27f607a1abfd4aa39e4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0493ee9b21dd723d64b310c0e1155b78d580c3f51b9aedfc03f064fdfa8b4231"
+    sha256 cellar: :any_skip_relocation, monterey:       "4abf110cc5d3f23041b1b13f743f86984dd764a53f1b769d98c2330cdbe01e41"
+    sha256 cellar: :any_skip_relocation, big_sur:        "735dff962371dc31717a0401bebbf06fd3b243f7387525ceb18be858e87fc3b7"
+    sha256 cellar: :any_skip_relocation, catalina:       "37dc2a615d64130304086369728deece1b35ed5ad28a7053d0ff6ebfd01256d5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "af731bff16e8e79be7bef74b083bf19c1310d194801feca4fd92dc9d0925be0b"
   end
 
   depends_on "pkg-config" => [:build, :test]
