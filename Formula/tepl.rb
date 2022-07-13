@@ -7,12 +7,12 @@ class Tepl < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_monterey: "b7d0c579d0edc4c75dc7af9e858046a4fb8adf883848ec73ea25807cf39bcd29"
-    sha256 arm64_big_sur:  "369a9ddfff9b925e3a0ac8a35d3a6b4b2029920338e276f0e27a6ee6ee6f5636"
-    sha256 monterey:       "b2fbda07e78db6f17c33c7f032a6098b1718be700ad0ffc4e738fb0045232b9e"
-    sha256 big_sur:        "fe377fa92b4797a892cdc1f5d19c01f44ace1b40c4bba5367b5da2f6d964f3b2"
-    sha256 catalina:       "94c51c2737f734b9ec19cda81d70fb4d79a6c352488b1e70d023abfd609d4061"
-    sha256 x86_64_linux:   "e4e9628ba8d89a340e2f7cfa00d18d7c30d40cb223554836edca1f0c913c85a5"
+    sha256 arm64_monterey: "7d56f260b4611183b3fc7b01fa1f28bacb42a82f0b719ca9c2a1ca64b5ce9d85"
+    sha256 arm64_big_sur:  "2c8df9d1f47f82511b50b3dd0bcfe9c88f50f3320ddbd6a035b4a6f7b0892f87"
+    sha256 monterey:       "b5648b6a9896189fe4c9d03121b793b34e1f3e6b2b778904d935607791799348"
+    sha256 big_sur:        "1cb57e720dc1dac92b54d56baad192550c2d397572d1ef7eda63fa85bda90168"
+    sha256 catalina:       "148d63d57bfdb37c4f7862581960c6df83ef6b5c87f95adfc10fa6847ed3ff73"
+    sha256 x86_64_linux:   "869fd24987a560c0ccb3bf06535cbdadcd921fc4905eaa3fd1b9d8586c7b65a9"
   end
 
   depends_on "gobject-introspection" => :build
