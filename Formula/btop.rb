@@ -20,12 +20,12 @@ class Btop < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2047180f8bce7ebd6cf3c3ce644c41cdcff0a9962546757cb0e0fbae09324389"
-    sha256 cellar: :any,                 arm64_big_sur:  "e91f7e48d191e82e71d106497dcf2c0f939024fa192064f2a4c68cbd2daae7ba"
-    sha256 cellar: :any,                 monterey:       "42d4b325c305cf4aa9ab2279cf1859f0ddfe183c2ad9b82e74a71af1c25db777"
-    sha256 cellar: :any,                 big_sur:        "6514030dc05358a2520e2423e07237cf21d288106db82f83623e6c92b6aaa7e9"
-    sha256 cellar: :any,                 catalina:       "b98a1fb59a807907521d894d4551ce316fd2d4068963b2ce9c16eb5a4f72310d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1ed4c1b25f015d0d7d9a9b8696c88d51c5407adb999cfb8cf2d81713bf6120fa"
+    sha256 cellar: :any,                 arm64_monterey: "590514c049d0ab867fc6b3edbbe7ab4f4ea43a45c42457264c374ccabcaee50e"
+    sha256 cellar: :any,                 arm64_big_sur:  "afb8207aaff39a0f31fc9588eb8899a12f7fede8cc4efdc773950d7c31b0e8b4"
+    sha256 cellar: :any,                 monterey:       "1362e399ab44e9bc45c293df0a4ade56f3d85304fd5513d39b4fd1237486bda1"
+    sha256 cellar: :any,                 big_sur:        "8bd4e6311266d3e0d7e305cfdd5fee3883f80103e38fd11483113246097de648"
+    sha256 cellar: :any,                 catalina:       "44c0cc9d02bb4462225357cfb6e7c487ccc0882780660e7dc14648fa8673341b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "82b31d1cfe04dc8ff6dada258e97ca4adef9a47acfb0f1239759ed6a1bd7bd8d"
   end
 
   depends_on "coreutils" => :build
