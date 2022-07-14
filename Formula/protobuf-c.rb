@@ -6,12 +6,12 @@ class ProtobufC < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "4a3986d128583d41b29e369bfddeff1e369267441797b71776b8567b4eac5702"
-    sha256 cellar: :any,                 arm64_big_sur:  "8e855e301d3e6f20acb9b79f8e86ed46cba43790d03a2a82b2de7024abb721ec"
-    sha256 cellar: :any,                 monterey:       "1d380b543cfaed179de2a482212975c9bc7219da96aa939148f9c6a6a30e170c"
-    sha256 cellar: :any,                 big_sur:        "c89d06a0c0b555379f137f448cd8d25dd0a476d417ab277c572fd07c6faf0275"
-    sha256 cellar: :any,                 catalina:       "55732600c0f049e6b40bee2751dfacaadd79d62a72f6f843897e25d129cbd47f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a52bfbd47abd15484c307ae0e9d11d93bf9c98606dabaa893b75952e9db80a28"
+    sha256 cellar: :any,                 arm64_monterey: "537aa180b45b68c137ab083b1ff95d02e2080a83e3233c699d405811ee1f1fdf"
+    sha256 cellar: :any,                 arm64_big_sur:  "489ad850a2ca931946aed658164352355ed1288361ad625cb675c337d3af1208"
+    sha256 cellar: :any,                 monterey:       "d610c97326bfe698e787b759419ffdff30a3062901de34b04b94b880b4be7bd5"
+    sha256 cellar: :any,                 big_sur:        "0ca76ad36b07e04fc5bd398305bff9220c894d263afe2ac4f0405b65c98c8e31"
+    sha256 cellar: :any,                 catalina:       "225a8e1721d2b38183513c0dc945426e0b314369da9b59cc1572bdf09591b7bb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "703559f4e51db1101be80e9845c74ce83e40bad910d993d1a590f24eccd50a78"
   end
 
   depends_on "pkg-config" => :build
