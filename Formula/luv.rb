@@ -8,12 +8,12 @@ class Luv < Formula
   head "https://github.com/luvit/luv.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "385f3c3f6d508c1624e98621b6fd03a717dcfd97fdc74a3a0fea2fd23587286a"
-    sha256 cellar: :any,                 arm64_big_sur:  "7242559d60b04067a7585740803d13c08e537ddd18d1f36b4310ed802541cfba"
-    sha256 cellar: :any,                 monterey:       "eeae4eb239fa90e64852b43760c1a87a34ac5fdeeb10e165101118c17a60963c"
-    sha256 cellar: :any,                 big_sur:        "6806df1f22b4cf8ac87918fc791c11e986df57149238b1a51a46a55f4b1796ef"
-    sha256 cellar: :any,                 catalina:       "21f7c62b5d0e94d443de4362d0aa22424e937cb43ebfe26820d9e3190a11b890"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6d9d0111b1d86b1bf4908c24555d859ab11587e65999a3ecea6f9d2c9424c01e"
+    sha256 cellar: :any,                 arm64_monterey: "6649f9cf388d3247f1a1fad0b36a27712b1a6f957c7de650452bc08f067bb43c"
+    sha256 cellar: :any,                 arm64_big_sur:  "cab0b66ac788ce3e35d2e1206962cf6697b91252e104d736b628408b20a2ffcd"
+    sha256 cellar: :any,                 monterey:       "b7b651df09aef8b9c92defa233facb7c2c7ca717e6b0df5d43055d3d0bf1b999"
+    sha256 cellar: :any,                 big_sur:        "02bb94d8c10f2b76d60f38c1568be31263d1a2572f0efef9199c27d5a6fdcc8d"
+    sha256 cellar: :any,                 catalina:       "5b7d1d428cdbe4fd9a285cae45b2bce3d70a2f292557f6dd9101355241a7ab87"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "63b17d98ac5b4194fdb9aa6851c90a311e8b14b0412b679d231e6b172d45426e"
   end
 
   depends_on "cmake" => :build
