@@ -20,12 +20,12 @@ class Neovim < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "79fe53bbb01379802a2bf2dd15f04d79df027eb80f36d3d74fe3b303991f8757"
-    sha256 arm64_big_sur:  "72e6341775e5f432080544d936069a714f524f732ac2e0b7b991ec4435e8ab99"
-    sha256 monterey:       "a0139b38424c3c66bd02efc8f9d1991e8cf673e50431a162ce371ebd49c6f7c0"
-    sha256 big_sur:        "746d5aff8a6c5dec3c9b3c371b521cca0ec074786bf23198c757593c078c8106"
-    sha256 catalina:       "e83723c66c2120a15f27617fb2a430395a23163a37e78b4d37e721076120f517"
-    sha256 x86_64_linux:   "d452f8a4bbb7af290826bc2eae010d7b99190e4f1be6215fe8e3161708e2c365"
+    sha256 arm64_monterey: "dfa6e9cd76254d80db19a326efae6ea17e0285b003916495238422b0b8490cc1"
+    sha256 arm64_big_sur:  "113cc688142c0498e7eb6c85291d5ecbf61787def7054c522338a24be6fc8c24"
+    sha256 monterey:       "14416b842e0647842fef57ee8a021cc991a4d400e4f691a1b140dbba62ad6adc"
+    sha256 big_sur:        "092d5ebab04ea0c1c2f24d27ecdeada51d84702e572dae9c1b0dd56042514e73"
+    sha256 catalina:       "aab60ed55c32ec01e4d96e5967bc034d2ac80021cad4cfd1833281678c9b120c"
+    sha256 x86_64_linux:   "c35e33e2f7e8f9d97b2eada22bb9fa00d1ba75414150db03547d3d2337f3a4bb"
   end
 
   depends_on "cmake" => :build
