@@ -8,9 +8,12 @@ class Luvit < Formula
   head "https://github.com/luvit/luvit.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, monterey: "a2aaf725d698267ef575d5a5da6067de5b67bd96f4eef68bcf17897970decb36"
-    sha256 cellar: :any, big_sur:  "ca454af75b9d587eb17e722d978021ab480a7a14241dd6d4b127ce462cb1ada3"
-    sha256 cellar: :any, catalina: "2b555b4d3c8ccd6c44f919013620e6230f56de5edba9105c9fb20f46354aa944"
+    sha256 cellar: :any,                 arm64_monterey: "870e32250c1e502f4af201dd534178853870ac4e744f6cdbe95786df342ef7a5"
+    sha256 cellar: :any,                 arm64_big_sur:  "9cab1d21104df8d528f3676ecc7532bd7fa80ccc3c4f22f8bfd4163a7af631af"
+    sha256 cellar: :any,                 monterey:       "0ae11cba548d16601d56fffb8c5842f4d3a483175fc834724f725fdebf7503e8"
+    sha256 cellar: :any,                 big_sur:        "f524e2547b180fa05f30a04b95814038bf8f8542e07df0b4f7e4270dad35772a"
+    sha256 cellar: :any,                 catalina:       "1dc7d1b8eccc46e0de469047016b3cb2af260e7539b8d07197392c39053a8261"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dff9e71b090fd408a40becca1548c4295a4560c405081c296de7eb781c79a99a"
   end
 
   depends_on "cmake" => :build
