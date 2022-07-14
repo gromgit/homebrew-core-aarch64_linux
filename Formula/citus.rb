@@ -7,12 +7,12 @@ class Citus < Formula
   head "https://github.com/citusdata/citus.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0952be6e5524bb6e15ca4bb0e9ed58bdfad72786dbcc8bdea2ad502222f0aacb"
-    sha256 cellar: :any,                 arm64_big_sur:  "f0b1521e3f27b075eb141fbd9e61ffb1eafbb7a3259945070f79bc82805346c6"
-    sha256 cellar: :any,                 monterey:       "02896a9000428fe5e6b3087e52e6642e9a3ccefb0c52495b9bbc843e7c78fa77"
-    sha256 cellar: :any,                 big_sur:        "1da680511086cd1bb95ca946dca4af72a5e52b8b62179ccaf937d437fcb49a2e"
-    sha256 cellar: :any,                 catalina:       "d1ea6387ec8dccae8ff61b2d1ffca23c6a26aae713f6702f1b97c4b6b4906d45"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "02a1719b291247bdbb80843c87582bf7b667c73c2e0165d19c67e7514ae9136a"
+    sha256 cellar: :any,                 arm64_monterey: "647e93c2156750c695bdcf51a637f36f385c275e788d387ef7129a5e13499b04"
+    sha256 cellar: :any,                 arm64_big_sur:  "239c863c690b48bf5da802c8967de0840620174a79cd70c9f361704fb1a65d11"
+    sha256 cellar: :any,                 monterey:       "42248b9e583cbb1cb72420f428def284024c230ab031ce15884e97ca1c7a4e69"
+    sha256 cellar: :any,                 big_sur:        "d05534970019991ec81210a74e4d14310ed6313eb2e6ce0825e738852f9311b7"
+    sha256 cellar: :any,                 catalina:       "32b0d8f6c076d5264255e6c61c389da9b0ffde18377e01f87e13a88f428fdb7b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ed3e09f7ea4656b77e04a55f391a818390e2059e55fbe8997f8b169f35017c76"
   end
 
   depends_on "lz4"
