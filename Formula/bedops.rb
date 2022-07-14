@@ -6,13 +6,12 @@ class Bedops < Formula
   license "GPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "aa4c75c5fca52ffe959dad0858ad684b2be0ed1abe64ac28b35e659f006f3d57"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e8c1fc9c975ab8165b5640518d251349d30375a6f08d24319b9fc05cf1b5f370"
-    sha256 cellar: :any_skip_relocation, monterey:       "508648c23b736ec0cef911a4094c6a9ee932eb9020661329b80016f7eaa2e353"
-    sha256 cellar: :any_skip_relocation, big_sur:        "482e258a5cf522bb43a81e52aa6ddc4056e8b4d6eb78ba4f2d1ac69d40ac90e8"
-    sha256 cellar: :any_skip_relocation, catalina:       "d323de7c11c4e6819791549973179ce17beff5006808b12de853d883b8b53a90"
-    sha256 cellar: :any_skip_relocation, mojave:         "b7b27454dfe6f064522553830932b00d51b26fda6ab1eab61d067e7bab10bd6a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2ecf447d33b766ceeecab97f1f5591bd8742881da9537359ac4c573593867801"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fa0e42d870cb2e5fd71ecfe637ec760352eb571074aa19156564f8fd1fc0cb2f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4716026be4f889b0c6ea10e8288be373cac72224aa63376b08192ab07f440d5c"
+    sha256 cellar: :any_skip_relocation, monterey:       "044fcad68d63ce2863dc43d69cbcff7b0b8d519086565ab8a2fa654b07f78bf0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "12419efcde367c515fd963910d949141e3b95ff57c288730ba6e176499e519a2"
+    sha256 cellar: :any_skip_relocation, catalina:       "394609dcde4bcafc5ce17c92e2fa0a0a98761aa7127c697c55af8bf66ae5838c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a70293dadd6ad59de7bdb253081cb4b954b0b50008cd9f996ec81e30e043b83a"
   end
 
   def install
