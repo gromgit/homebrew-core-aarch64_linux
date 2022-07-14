@@ -6,12 +6,12 @@ class GitlabGem < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "551bcab9593a120bef2cd52443e90047dfba10de9d087dad66a0fa723f178021"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "def9a9ac03f51469e8d51be097377444079b8c7d0b1c1c49f4ded06c8b2d6bd4"
-    sha256 cellar: :any_skip_relocation, monterey:       "551bcab9593a120bef2cd52443e90047dfba10de9d087dad66a0fa723f178021"
-    sha256 cellar: :any_skip_relocation, big_sur:        "def9a9ac03f51469e8d51be097377444079b8c7d0b1c1c49f4ded06c8b2d6bd4"
-    sha256 cellar: :any_skip_relocation, catalina:       "def9a9ac03f51469e8d51be097377444079b8c7d0b1c1c49f4ded06c8b2d6bd4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "629debe754bd144df8ea7078fd310a5622517442a6910e01ee0745a24685f3b6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "86b43558c3f09fc837044a34807dcf485098351a237f81394b52dfa4467416b9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b163e735208a52ae23a48b72b21e838062e834e112aa0e215e0aca85ca8d52c4"
+    sha256 cellar: :any_skip_relocation, monterey:       "86b43558c3f09fc837044a34807dcf485098351a237f81394b52dfa4467416b9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b163e735208a52ae23a48b72b21e838062e834e112aa0e215e0aca85ca8d52c4"
+    sha256 cellar: :any_skip_relocation, catalina:       "b163e735208a52ae23a48b72b21e838062e834e112aa0e215e0aca85ca8d52c4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "95066291140c4f67a5b74667427a3ead59f5d7e5b6dbd7611a5f5fbe2cdae83f"
   end
 
   uses_from_macos "ruby", since: :catalina
