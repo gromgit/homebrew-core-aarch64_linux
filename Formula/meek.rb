@@ -8,12 +8,12 @@ class Meek < Formula
   head "https://git.torproject.org/pluggable-transports/meek.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "51a8717f9137b0e53d2c676e47251319527e54831f5ddecbbb55fcb132c944eb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4c51e81cb6a59c05692034deb9d0b19f4d76e60159315db30a488a2ba662fbc5"
-    sha256 cellar: :any_skip_relocation, monterey:       "145073de4fd482eda6d3f9962a7886f3df9378c263b0465003f2283e18b781ed"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c93983a106e1ee1c9b7560c667b170a43d3f477d753d29e7cb12719ebf810b87"
-    sha256 cellar: :any_skip_relocation, catalina:       "a5725aff678156d34575f9cc280ca62a67f8e8dbdd7d46178d1285bc37f928ee"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9ce93bdfd7201b1757ddbe38e08631dd293cfbf8be1cac25e76e27c8155ced3d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "450bac780a75f6f2ed4f15c2a35d771e745ff2fa14437f67c2d98b6ac81ff71d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4150fa754142277de7e577a37cc4f39ad2aae4bf6e2a2e4535d51435fda6c23a"
+    sha256 cellar: :any_skip_relocation, monterey:       "469a97cad0ade9b8ebd16184580088da156dd0ed0233c6f320201a728c02b3f2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2dc0edb859bae8e2fdf441fedde9c8d5ce4c5f75da7fca62bdac4bda46a19ccc"
+    sha256 cellar: :any_skip_relocation, catalina:       "0cee6a902cf7602b4726a5552d97d9eeaadc4772f8e164e0f83315b64c3b0b10"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2efd74e926c7b12e1face590d3d00331e31a4b6b1c1de96dc010879cd6c2f57c"
   end
 
   depends_on "go" => :build
