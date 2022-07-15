@@ -13,12 +13,12 @@ class Openldap < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "254a9a1b07970313b39d0ba54c56605a5bf41b82a3fb3c2321493ed48bfd15d3"
-    sha256 arm64_big_sur:  "6d4d0e83e5b7000e561efd941010e20268882af50499f3ff6f0a4f58fe3d30c3"
-    sha256 monterey:       "f3513ae677858f5acd5b6013d6738597c56144df457c31e99b3214e4b1a469bc"
-    sha256 big_sur:        "fe5e72040e02b6a74cadd77afba7f3941bc998dfc1b6920b28b4d1775fd98cbc"
-    sha256 catalina:       "1576d37223da54d2eadac1248e2a78f9fe395b746b66e60d7986d6ae8751017b"
-    sha256 x86_64_linux:   "e6c5c02a4486d6092a469e80001b31f57aa3b170609fe5bd9e63d7973eda0224"
+    sha256 arm64_monterey: "d3f0bdb0fdab90601339ec57ad4291aa08907733d40162a7450f3bafd3768e8a"
+    sha256 arm64_big_sur:  "9f347097480480f7df1519279a588cd68bf98e7befa11971c803a858843ebc6a"
+    sha256 monterey:       "107f7937af3e60ecf4262b4f60b7da74c38ef55c07c735c3f906f2bdb0067934"
+    sha256 big_sur:        "5881d9b771d9296d464a8d2f8e00908e76b31076df50d2c86225a9151ec64a85"
+    sha256 catalina:       "542b132bd0ae22ad6ffe2bb2f25f17c1933943ead28791bcf7e53888b48f5de1"
+    sha256 x86_64_linux:   "236b263f5d84e1c580380289599cad1719cc8c8b2bb1c78b48578aa139dc1095"
   end
 
   keg_only :provided_by_macos
