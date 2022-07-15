@@ -8,12 +8,12 @@ class Libpulsar < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "900dd29116523ff79477f4230d8c89089c1e1f531e788a3b07565ba751fabaa8"
-    sha256 cellar: :any,                 arm64_big_sur:  "d578f86ad155a95d565f4b90442331cc8ab04f21a685bb21209c0753fc0ebe49"
-    sha256 cellar: :any,                 monterey:       "1b29c8b4b53c49af09d43879ce54c8c3fdf5ff7fea377162f08661adb66a8286"
-    sha256 cellar: :any,                 big_sur:        "c04815305cfdd16b4aadd5b818adea359600e3ea6823e45dd6ce5346f8232e4f"
-    sha256 cellar: :any,                 catalina:       "858c0b60335737d8e21b3e07ca1c2a79f3b9311978d003d79c0bfe199b453194"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8108575e9a18d414b8e1679b61e05e95c7cb803a2abc83e8960ada391ada76e5"
+    sha256 cellar: :any,                 arm64_monterey: "77b533e0db094e541b6be9744f2eba73b8ff164468f00459e566697e7b67786f"
+    sha256 cellar: :any,                 arm64_big_sur:  "f619572c0f3888c4d0e8dff5e4d9070d2a77eb2e59d14a8a8a2cd414176adb0a"
+    sha256 cellar: :any,                 monterey:       "eb74800a3c5ee750ee67f2211d7fea157f9ce8aee078bf35727dc2d40c5b7e9a"
+    sha256 cellar: :any,                 big_sur:        "15ce481e56ce2345e8fda33f5e341732bd3a0e52e2890575b228d5c692384762"
+    sha256 cellar: :any,                 catalina:       "dd8405e735229fc1c1504643dcaa604aa62162ad57a64b65368df5ec10e90510"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "222bcc7bafae875a2bc6d2be86dfe5c3c3776d1d908d6436e36ceebb8dde37b5"
   end
 
   depends_on "cmake" => :build
