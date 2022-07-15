@@ -7,12 +7,12 @@ class PysideAT2 < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "9981b3c216053460da40f7e9e05410159ddde34eb1f98a8387cae76e89020d8a"
-    sha256 cellar: :any,                 arm64_big_sur:  "ee5a173573f466856605fa20407f90d1865a09941d791f9562acc630792dcbf9"
-    sha256 cellar: :any,                 monterey:       "b635a0bd7b231c92eb1523e05945c6eb9fa03433a6245d81626bd12ccf89c78f"
-    sha256 cellar: :any,                 big_sur:        "945f792656265d19ed410ea57be8484190794f0b44cae51efd82261dd2bbf9c1"
-    sha256 cellar: :any,                 catalina:       "0dffb5bc45842350e82847d56e06c95d8d9b5b85b5e00bd2dae626589207cade"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "de4b9c0b559acfe32afb5fe7f51cdd7ba50a5811dba69d235c12a21dd2d05ccf"
+    sha256 cellar: :any,                 arm64_monterey: "ccd1901a866f8125d977d0f73513dec49b76fad77a4d91f0d22cbab8abefddf4"
+    sha256 cellar: :any,                 arm64_big_sur:  "39f714aa8636607bac587c8cf768f0922c27a42881585892dd6b5af84ca3b749"
+    sha256 cellar: :any,                 monterey:       "0aa9567489b0a540bfc750c6cb9fb0dc4a57769466291ed690d8b9a3af40b2c8"
+    sha256 cellar: :any,                 big_sur:        "c5955be508ce42b9d637b0875c30bb26e324582318434f86647bc355b4306b88"
+    sha256 cellar: :any,                 catalina:       "0a5fa4c6ac76e9b99cd59a2b99d41d64ff1fc5ca264498828c7f80e73d97e3ad"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b4b7fa31aa6b94fc83035a0f27d3581a8e107ffc6ce2ad4eb665012ad2d3eb9b"
   end
 
   keg_only :versioned_formula
