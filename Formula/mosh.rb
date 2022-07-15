@@ -41,12 +41,12 @@ class Mosh < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e3a5496b74f6d67bc7076816a84ff0c9930eb8ceab3896f87aafeddda2f6929a"
-    sha256 cellar: :any,                 arm64_big_sur:  "8e44cdac777141ab536453dd0ad8447e04667f5f430ef3aa488b265467e9e3da"
-    sha256 cellar: :any,                 monterey:       "e2eee04b536a255c89b52eab59c02f86aa1e0681a423b18c5d4346d4cef2b1e3"
-    sha256 cellar: :any,                 big_sur:        "5bee0e9377ff2080ba8fd98403253bd108f1978e2151c1145a4fc2eea6171dbd"
-    sha256 cellar: :any,                 catalina:       "cfa559a5216d7a863d33952dda1e7058bcb2015aeb38bed5d1b9f48cd7a31d74"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "55a704a28b09a60c5f7aaf2676555c171d6e162a3bc53a962391ad228173559c"
+    sha256 cellar: :any,                 arm64_monterey: "526c339943747304ba76e84e8ecff1643cb8ebaa233a1bed18d8d3d737a276f3"
+    sha256 cellar: :any,                 arm64_big_sur:  "566f4d02646d9190fb5bc3161ca3f2511cc53512aa37c994d91175acdba7493f"
+    sha256 cellar: :any,                 monterey:       "5c8da1d73e2339ab2b7ce373aa572f4ebeb4a362a0b0816d99871597b4c847a2"
+    sha256 cellar: :any,                 big_sur:        "06150ef84b2515247bd25021d896164a17ba8c855be6e68f3d8df107a46fd6ec"
+    sha256 cellar: :any,                 catalina:       "589555a65e408e9a8889ca51454c397b0772343f2b8a79e34becc45edddd4a74"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7ee94d82d4abc1cd22291511f45f8a88b872943c51d59eae62349f188ad3b245"
   end
 
   head do
