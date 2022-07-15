@@ -6,6 +6,15 @@ class Bfgminer < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/luke-jr/bfgminer.git", branch: "bfgminer"
 
+  bottle do
+    sha256 arm64_monterey: "2179e3de8ffd1c871a9b3a7fa539e569d62ba42b67d0c12ed609098cb9214e6d"
+    sha256 arm64_big_sur:  "f397c2b4428a3c96239d86edf75efb444ba7b1cc79f6d2550ba04960e40308e2"
+    sha256 monterey:       "5548f25bdbecdca56951bcc0d0d44b5fc509bb86c525c02c64599fd826928eab"
+    sha256 big_sur:        "0ae6dafd587a2dd9d20d57b34d96ddcea07d570c251db4d0b9e4397ebd6ca0ec"
+    sha256 catalina:       "c0a7446badb4b9c392d616a73e48035632a28f4f34adb45052ab022b6856d9ec"
+    sha256 x86_64_linux:   "9f81c9ed9c2d32a0296fb74aa46b592b02e60fc08224d103c9c6ba73bedff86b"
+  end
+
   depends_on "hidapi" => :build
   depends_on "libgcrypt" => :build
   depends_on "libscrypt" => :build
