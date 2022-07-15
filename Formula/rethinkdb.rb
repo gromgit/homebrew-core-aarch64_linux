@@ -13,12 +13,12 @@ class Rethinkdb < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "987be35527e8b38d14adac7f8ce76de983ace1a0d75ae45689ebaab20d17560d"
-    sha256 cellar: :any,                 arm64_big_sur:  "dd7cc0284f0fe97d3e90314ba5f9cf999a2d46bf0ae885c1c5400ddba5e31bf3"
-    sha256 cellar: :any,                 monterey:       "31fb40137594acac9e198d73fcab40abcaac5c743e9ea9679d64a6fbaa7ddad2"
-    sha256 cellar: :any,                 big_sur:        "de667915331e34d36a60a23809b290e96a0ce3636748cde367d3a3f5aca6131d"
-    sha256 cellar: :any,                 catalina:       "d6bc3dd9beaa5bfddca42ed872853813815b0ba558608612a3c676cd29947be1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1681a0198b8f118040914abb46dd214783b0eec4c1d2c7230ed1bbea14b5d443"
+    sha256 cellar: :any,                 arm64_monterey: "fccc030ebc0f477f4c1a282c289959f31f8f30e2b5322954d223f68e73130a30"
+    sha256 cellar: :any,                 arm64_big_sur:  "d616d46ab6d345527d3b6365bcbd26957eda633004761f2713c1856caa3f6ea4"
+    sha256 cellar: :any,                 monterey:       "c232317587e1abbc9079b79cca56328d85a48bd16d4c11ea9b891c8483d84f3e"
+    sha256 cellar: :any,                 big_sur:        "9a37dc48d0b88f63c4500144049f5e6bba34708bd6f095557195446d217e4f76"
+    sha256 cellar: :any,                 catalina:       "69b7ab9e02b8f3290733f4cd02b8bf8b3a1cb3934c1d8680b931132346780d18"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a0ebee5ea998c49cde2dcd9499c031fc5eb9bb1534de430906a1faad722b4559"
   end
 
   depends_on "boost" => :build
