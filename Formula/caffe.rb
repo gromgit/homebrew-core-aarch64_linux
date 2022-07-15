@@ -12,12 +12,12 @@ class Caffe < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "8139a5fd924a3b76da3a87e675b5cb34020e85c6b5e625700ec6f0cf19ee9503"
-    sha256 cellar: :any,                 arm64_big_sur:  "6143d83f7d517ac781c59441b27944013d5b03f456d37060838d05a8538863e6"
-    sha256 cellar: :any,                 monterey:       "b35372e7fde2f1cd7e5a4297b933fd5dec1afdd5a8c0188057c138cd9dad9e27"
-    sha256 cellar: :any,                 big_sur:        "a85de2f5f261d7db27b41c9f66e00404fdccdc4d5b995ad634a6946db0ea6e46"
-    sha256 cellar: :any,                 catalina:       "e1cd700f068d625f2ef28743f12cc6ba985f30d9dcf7655d90e90187ff68ff35"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d8466a46fc4a82a78e30ba5a364f94cdc292746b90c4444e755d8b02d8f9c0d2"
+    sha256 cellar: :any,                 arm64_monterey: "7f5a96c8328e6138829acf81276427238d869cf19f1c71e24022dc2d5b5d420a"
+    sha256 cellar: :any,                 arm64_big_sur:  "b8f034785b485867f7886103c4bd3fd4bd4f540b7bb0a5b7cde01714c4b9e945"
+    sha256 cellar: :any,                 monterey:       "cd851e5cba512ad56c70ddf31adcb0961e2598a540d56196bfaf3b39d4c0c904"
+    sha256 cellar: :any,                 big_sur:        "a94881877f3695dbf486e63e149e0a94cfead9ae0e9bb8f7e56dacad6aa29ee9"
+    sha256 cellar: :any,                 catalina:       "e080ed2516787bd3a43e627488e2ada20d60aa166b3919dc87e83cefe9fd35e1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b1717e247dc12a01921efc4dacc4507bd9e7ed645ad2f154359fdf90b2c1f106"
   end
 
   depends_on "cmake" => :build
