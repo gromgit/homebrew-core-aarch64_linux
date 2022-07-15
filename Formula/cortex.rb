@@ -11,12 +11,12 @@ class Cortex < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "16a5cfa0b7e9ee7ecb3ff74712ddf1ef064622eda638fe7cd39c4f1f345e6607"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b50a50da4d491cdd184b432a31f17194f5c529fa04a236f2035a4844fc6024d5"
-    sha256 cellar: :any_skip_relocation, monterey:       "f17c643b312242f03a84b4dd39d270213407bf3d0cda771ec15763ad88ff9842"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fc017ba00df3b41e00cfb2e4aac7efc312fb5f83aefc6b7486ae791894dc5060"
-    sha256 cellar: :any_skip_relocation, catalina:       "1f4a8d739fbfecbffe21fe4cfd6225436d85013658a282d557ead7f09ac83750"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e0c836828b0067478d9d663b94bba17966f421237fc2113cf06cdef6b0feeca1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4dfca8da82187967a67b216a66e3dec108a49d960b1b196f84573e020ec891c2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3cc421fa507124025e0021b09bfa1dfa88ceb0c422616bba3f999b006ccd8bbf"
+    sha256 cellar: :any_skip_relocation, monterey:       "284161f629fd7630cb356600a924783129802f2e19c944f13bbc48628d626334"
+    sha256 cellar: :any_skip_relocation, big_sur:        "71243b44ec33c215147ea74df1069e45fd85904228b1536c751f7767211e7625"
+    sha256 cellar: :any_skip_relocation, catalina:       "3c497ef2de9d0854ec36b3e44171dee72c8d51eeb8008ce1f905480370ff7495"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a3dfc6e434747b285dfdc903c1e8ac9d6dce94ab1055b28510997ce84caecb23"
   end
 
   depends_on "go" => :build
