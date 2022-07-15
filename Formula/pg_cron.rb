@@ -6,12 +6,12 @@ class PgCron < Formula
   license "PostgreSQL"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "452717efa283a376af04242f171f70e95db5e979361bec2333731ead63270915"
-    sha256 cellar: :any,                 arm64_big_sur:  "a553ff5599e3ab016756afcb2d491e290b965827b91bf5b41faf8b6f078b2a89"
-    sha256 cellar: :any,                 monterey:       "059a8d12d77a7f507375fad1187f5250a1d00272f1717e7efb77a8f275870c15"
-    sha256 cellar: :any,                 big_sur:        "0e5d2f3a3dd63b1acd63ce8b45e0ea74d93de2301484f95a2ccbaaccb2031667"
-    sha256 cellar: :any,                 catalina:       "2e3c48832f5ac05cbc92da3b88a1efe63e0c96566ec376dfbf7210d2a71722e6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bc25bcb760e06c8a241ee36b83513b200b96be03b8550d2d1fb325541bc37dd9"
+    sha256 cellar: :any,                 arm64_monterey: "f6fcd81a5ec19b8b509025cb119aad529c3cb2a903c03a9ba7f3eb8048f4ddfb"
+    sha256 cellar: :any,                 arm64_big_sur:  "3cf313a14897e319e5a059b86def33f5995427121cbaabd2d51b5fde6363ad81"
+    sha256 cellar: :any,                 monterey:       "c1288b4f7d7c4e3c9fd175abee7675aba64ed0095da9df3cb96ca7fe933fab74"
+    sha256 cellar: :any,                 big_sur:        "2fa0fc696c015353252c0c7aaa31e4d49cee6a1ebd66c8835b7a4dbd388c200d"
+    sha256 cellar: :any,                 catalina:       "085f2ddb7328743fa4d37508a8ad86031f59b07450218a32d44e2fba8e733a4b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a3d6023e5fa0efd86869d27265a919c6d69dda937890e95c5d052f7a871dd4c8"
   end
 
   depends_on "postgresql"
