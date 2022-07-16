@@ -8,13 +8,12 @@ class GitIf < Formula
   head "https://github.com/DavidKinder/Git.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e19725f9c771b3ec81d2a0e7f0d1740caf80bf7306007bd921e42e53ce56c506"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1cbdac43ba193647b00e4dca570d079cfdf975e520c445e98d9352d51100b91c"
-    sha256 cellar: :any_skip_relocation, monterey:       "52335ad39b70a74c122c3a603b8bafa90744f1b733fbd2ba2a016c2c62b63842"
-    sha256 cellar: :any_skip_relocation, big_sur:        "56d9c7c7ba0b996340fddcfe108ff45a3e813330f9af771f6b9d398be0b7129e"
-    sha256 cellar: :any_skip_relocation, catalina:       "f866a6a21977f9fd16230087f0e5239d8c8b37f7a158fcbb8d257a225e222774"
-    sha256 cellar: :any_skip_relocation, mojave:         "f4785e352c5810e9642f490e5c27d02db1ea35c2167cb6c58d88d55002501e7c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f4f161d016e220b462129394b39b8ea7bad324349a73741489d3c6ea8d65f2db"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e276ffffb24bbdb9fe565c7c55f79aec5df8d3a4c7b64541bbe73c757e2e45b2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bb7f09ba2cb7c865b0ee80dd312e28250635a79173c0c2d3781acca03d519ee3"
+    sha256 cellar: :any_skip_relocation, monterey:       "a69998ddf6e70dacfbc12c9c17912fb7ece0e0dad9437201209554a50154f802"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5d2791d14db4f96ff76532d537d12d9eda5298e1a7190bd538801cdc3813739f"
+    sha256 cellar: :any_skip_relocation, catalina:       "0188ac542b752d94d6b8b544ab5a95ac8608ec0261a40be55ca6fa87140d2e9f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f858e0ad782b54d8e630159b9be4dfc3e05a3a5e6f23e1a7378653bf1b54f1ec"
   end
 
   depends_on "glktermw" => :build
