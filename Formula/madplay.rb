@@ -11,12 +11,12 @@ class Madplay < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "efd92379a16634b179ceee79023f31d6a9d2b3612acd6415fa5f40977e0fcfab"
-    sha256 arm64_big_sur:  "7187cc8b51fccb528e91be3f1ccc4087c841525597cf33eb27cc8a637b3d7afc"
-    sha256 monterey:       "16538130b56386dd276306aea0638ccfd4634af4dc94ff7e74fae0634d537625"
-    sha256 big_sur:        "e15578875f945efd935087a951877519703c59d958217413cd52a719f9bad553"
-    sha256 catalina:       "f0d2c402a824701d7ad6861ca2706701e0ba367501dcba2cb52fc27af34d6cb4"
-    sha256 x86_64_linux:   "a5011a732caaaf4406c09ed7522890c84dead6c1b8257a17c63306357a5bd226"
+    sha256 arm64_monterey: "6b0d3f661abe526d4cc4437bea68abe667f6faa9cff54d0e3a0670c0e54d4b4d"
+    sha256 arm64_big_sur:  "2407e2250bbd71166947df1e754d5fd39b8bfbb30deeec6d191349495c9ee2a2"
+    sha256 monterey:       "caacb11e058d2a15d13268f7e1b9b6ecbf76e92e64410a23eb32cda5bf94eda8"
+    sha256 big_sur:        "cc587c330d6005c039fdd974da44ffa3da8e649337912c41300fe095ebc52b6d"
+    sha256 catalina:       "b2a019e680f79bcd45a0c194439256d3211256449ad37378da25fb9376f1463e"
+    sha256 x86_64_linux:   "c03953ba98444a1e710f25411e169b7a4f586c131d820ec63b19fceb36efc937"
   end
 
   depends_on "libid3tag"
