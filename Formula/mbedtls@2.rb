@@ -12,12 +12,12 @@ class MbedtlsAT2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "480c3df5089fb6a963a13b8ccb14d4d81ed3ecced160a69072f93ed65114c814"
-    sha256 cellar: :any,                 arm64_big_sur:  "71d898a6da3baec04462fc74d637d43a3b4515fe82f6c7822ee46a8cba0175c6"
-    sha256 cellar: :any,                 monterey:       "fa7d7034bb61d649726a9d9ae3451ab8ac703f47f16d765b821ea77c67cce54d"
-    sha256 cellar: :any,                 big_sur:        "cf925beaf286bae475950b3aab234a7f4f192ae2ab7b5c998002153a3b24aa87"
-    sha256 cellar: :any,                 catalina:       "d19f714bfccd87cc8dc6c1536bad7d581ed74e4c1009db9a80f645f01ed65256"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "283c9006292ec1fef627a3366aa818b67ebeb7d1086f575f4d50f539e5f19c1c"
+    sha256 cellar: :any,                 arm64_monterey: "9334ea247c229ad29ed6b0e0c388b1c589c70e7187e3d8ed6bcd051ebceb1291"
+    sha256 cellar: :any,                 arm64_big_sur:  "bada695460468813a313ddae30a66888cb830d90e0f542f18508504bd4bedaf2"
+    sha256 cellar: :any,                 monterey:       "a135ca31c4f80a80fcc42eb127e9538860b561ff8c62abbe4f70211be2ff8d48"
+    sha256 cellar: :any,                 big_sur:        "b335ec7c23a52d9aac74d184df4cb981ea930d955c4b57ce500591775dbf05b2"
+    sha256 cellar: :any,                 catalina:       "b93d06f753ca54aa84d22357c5cb682ad927769a859781cfbab239f68631ab7c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "27e1b4369e86f86e399aee3b6bc24de82cdf6db688618d2e8da9189c9f2c2822"
   end
 
   keg_only :versioned_formula
