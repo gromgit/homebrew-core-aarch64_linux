@@ -7,12 +7,12 @@ class Mpg321 < Formula
   revision 2
 
   bottle do
-    sha256 arm64_monterey: "029006ddf0517aed22eeb084267dd6b2e74fc43f8a9a73488aea74fc4bc2321e"
-    sha256 arm64_big_sur:  "ce333737749b9af60223dec4a4492daa66b2c12bdb144ea390648bc88df4b38c"
-    sha256 monterey:       "e8745354e38c8e362bb289dab13ee28e8d9886fc0f7af9a1d4051a9aeb0ebf21"
-    sha256 big_sur:        "8ee396f49f3bde62edb1e6376b292c0724a9b6c808d0b2e83c26bf351097f41a"
-    sha256 catalina:       "4f93d83854a0072fca2ce326e46e7e068422464253f4981d3cf55b5e3ed9a4f0"
-    sha256 x86_64_linux:   "287044834b3a9e9e0b5b5e060a3a2492fd47c686d97ac74ffe6a1dcc479c5e2f"
+    sha256 arm64_monterey: "aae6a0f70e06529f68c1f32ae77ab30d733993989aebd4680e49f84b3c26afe2"
+    sha256 arm64_big_sur:  "f3ba496b39e008dfe0e2b92c4d5fcc55f3040eef0cf45bfb29eec86f618929de"
+    sha256 monterey:       "5c160696795a2cf4262e4183ca91e934c70828b6af8de77479972b3e640247e9"
+    sha256 big_sur:        "8e0c58eb4f9a91375d28cf616563733a91baa1d06dd66317826d096c48a277a6"
+    sha256 catalina:       "5ed70395deaaf283b53c951e3805df5300b19f0921e3844eb28f6176012bcd5c"
+    sha256 x86_64_linux:   "a9e308f8bda99a7df745630013f69edf11302c6cea66428b3fb71cc99d12844c"
   end
 
   depends_on "libao"
