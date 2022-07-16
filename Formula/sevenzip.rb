@@ -12,12 +12,12 @@ class Sevenzip < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1c459f2e46b13f9a81bd33f2aec6ce1311472fbc5bdff9302fe634492e396e6d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "217c26cf8afb06a70f5cab383584134c31ee2e3259331afec73bf4093e1ab884"
-    sha256 cellar: :any_skip_relocation, monterey:       "93738887c1da58ff03a5d6d1c8d5337fffbe34bb62f28fc14bfc72474257a950"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e5cbbb53cee2f02e6d2b26a8eff83f6df8d741985fc33d20ca556e8b69d4db6b"
-    sha256 cellar: :any_skip_relocation, catalina:       "15bfdb374d8914b5bda93dc2171dbeaeee57968525f27c894e0daf1594ede0a8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b3153249950402cc1f344a9ee8e546b33595230dc2870f8dd47985f51154cbdc"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0b9131e0986339f9986c7248c3101776279ddb390d287098ea5be1c84d6408d9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "15f4157398fdb03a9fc9ffa66eaf08abc72987d471b23ea22f5ab6700d7ba1a7"
+    sha256 cellar: :any_skip_relocation, monterey:       "64f2ea16a7c0f8591701914621b8ada21ecd6caa3ecf2568c8d4bc470edfae00"
+    sha256 cellar: :any_skip_relocation, big_sur:        "22a8c3aa0647a1f8829c7e180cb2d6ac78b071925e8c06be361716626487fd6a"
+    sha256 cellar: :any_skip_relocation, catalina:       "3ac4e9978c71f2452ded1a8ee0983b0710cc66d127ff2a95dc603b6211ed9df4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4dc467f705977b3a7d390a1248c691b9f4cee3c98d21647d55ef7c57afe28b3c"
   end
 
   def install
