@@ -7,15 +7,12 @@ class Mp3splt < Formula
   revision 2
 
   bottle do
-    sha256 arm64_monterey: "546627259a47cde5bbf05b51258a0f3feab02400f6f0d41632d5a4fc0a67a990"
-    sha256 arm64_big_sur:  "ffb07bf57273a24cb35a8e2805f34b817f3c90847c05978bc1cb7d9d7a08252d"
-    sha256 monterey:       "efa604ac01664e2a60e1deb11a2ba7a38ed7f46212d34f7fe63e693f9bd94172"
-    sha256 big_sur:        "0a597bd74402f6d597569b670cf6c0208d24de58c00e27a7b4a91a1fffeaa689"
-    sha256 catalina:       "d2a1ca7bd32f12b0cb152031cf812ab5af2fcef906f4a5d4fc1939f5d6b37e12"
-    sha256 mojave:         "fb9ec207370028ac673f0f4e067dbae93d19e567ca80ab46e9e49d895262ac81"
-    sha256 high_sierra:    "5dac4b6a6632c234ad5137084275924e1fcc32833a333924cc55fc50da51afe3"
-    sha256 sierra:         "86a18b472c2b9a7b603da79caa1e406c3ca73d717a508cf6999ae2c73a6b7870"
-    sha256 x86_64_linux:   "4166776da9e1e9dfab57b40acd74340e67d814db2815e15213a6ecf8f312bc82"
+    sha256 arm64_monterey: "49093f6c535038ac74f901f3ec328da4611621c554c9fd016170e7609b2bacac"
+    sha256 arm64_big_sur:  "991b32e34ed74df29e4fc4a5507079aade0cb8edd0dd32569ece51bda3a56be1"
+    sha256 monterey:       "6095cb447c23f8b7c736f858e3420c50b2b21134afea5c319873738c895debc6"
+    sha256 big_sur:        "2bf269ede24f7a0b067a510f355d503a1424b1fa5599a019093cc75efb10c7da"
+    sha256 catalina:       "8d020baec2beb1f7f24223ade4f40b758b2dee3329c71aa69929b7dde620bfac"
+    sha256 x86_64_linux:   "5827fe65a9230261acc5309197b66205d2c72492d58ac2ed2b6a4d38632fea66"
   end
 
   depends_on "pkg-config" => :build
