@@ -14,12 +14,12 @@ class Libnotify < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "ea60a07fc234bbb4d539155e23eb4da86ef7c81daade5d5406bea970d30b6d29"
-    sha256 cellar: :any, arm64_big_sur:  "bcf4130e904359d024eb488e5c6d81514581598443696ca7b1c28813f1f31e1e"
-    sha256 cellar: :any, monterey:       "637d7e3ac38bca6844bf62f7ce0ef751ad1307278ee20743d70a79361ba7cb64"
-    sha256 cellar: :any, big_sur:        "c7b404583a5ef078e81d033e6f16a6dbabf18557317fc4de18438ebda4ebe4cd"
-    sha256 cellar: :any, catalina:       "d9b5374f6235992cdebe1d6cda5cb4a8fb3cfaee1470650d293d15b70978e171"
-    sha256               x86_64_linux:   "ce619aca93b1bf507b2d3bfa58877f69140e5208a985f20191738bc330b69a66"
+    sha256 cellar: :any, arm64_monterey: "207a1e2643da8fa77241eefe767af2dff4567a63f21290948f9c06e227cb96d0"
+    sha256 cellar: :any, arm64_big_sur:  "0e4de0591aa4c944aa0dd2178b641b29289a045852e27064622247d27b734d1a"
+    sha256 cellar: :any, monterey:       "f7b0607b025c358990f4b62e9bfbd8bed99a04ecc13ff81842b1e7bf2abc7813"
+    sha256 cellar: :any, big_sur:        "2e158667c58c9ec87a1585abd5cbb60e54b67774ed3e675fed4913912efb2565"
+    sha256 cellar: :any, catalina:       "f5152979e2d47a30b333d0e1ca433461abb03c43247dbbbbfff9d190f3c03e18"
+    sha256               x86_64_linux:   "4aff67e97e2af789f1e1316ad0c75481888a506d8a01aad2f4c5a1c2fc90fe84"
   end
 
   depends_on "docbook-xsl" => :build
