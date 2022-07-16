@@ -7,12 +7,12 @@ class Minidlna < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "cbe84dc9d2a120e54adfac02535fa45f8ef563f652c5045f4f70ad149d6c038f"
-    sha256 cellar: :any,                 arm64_big_sur:  "17fbf29b2147f239fb8735d045982503aa02ad5754ae8d594db0dd8c04ea072a"
-    sha256 cellar: :any,                 monterey:       "932bd20744ba7651d52fe94c30d22ba3e516262ba3a30fabeaf7df4bd8aa38b7"
-    sha256 cellar: :any,                 big_sur:        "74997619d4be6c977bc2897df4ac94ee73a27bbe691993a44920f919e7812556"
-    sha256 cellar: :any,                 catalina:       "227628b6e6547aad4698fe39234868a2ad3ef9b72a4bffbb60b8a482de7fe219"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "684149c230fa8e599513de4ede63d9eed17dd9d0726a04ac421e8e76a166d22d"
+    sha256 cellar: :any,                 arm64_monterey: "7ee773a739aebde5be347cf63491224cbaeee916f7bceabeaadba57ed6d4d9b4"
+    sha256 cellar: :any,                 arm64_big_sur:  "74d90b8e2714475e7dde307fb815e2bc39a48a8eabaff5ce1e2e27760c851a94"
+    sha256 cellar: :any,                 monterey:       "fe267dcce7cf6891b4e9d73419be63804b68b9eb4e19fbb95ad5e9c15adda154"
+    sha256 cellar: :any,                 big_sur:        "103fb515a66d6ad3a723659b112abea09ba90019361b969d64a05790fece99f1"
+    sha256 cellar: :any,                 catalina:       "b676081e78ddaeb0a7cb8304f364421729f01a83dd56b30ee68cde46d0ca4f67"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "22488c11093201c8353d88467bc1211a04c88365d4c14542f336945d3ec0590e"
   end
 
   head do
