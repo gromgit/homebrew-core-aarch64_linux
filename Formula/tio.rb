@@ -7,12 +7,12 @@ class Tio < Formula
   head "https://github.com/tio/tio.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2fe0dbaef03a546dea0f861cb6dcfd044c1bb5dd59f0fa3f701e504a9bf30c11"
-    sha256 cellar: :any,                 arm64_big_sur:  "f1935feeffdb9b019ebd099d0fe3d855f6e30c675fab1e8dccec256ad58702e5"
-    sha256 cellar: :any,                 monterey:       "427ced11723fbf28ab3ee668d0b7c7b6b96d7aaf7fb5c32eb157b83a70768704"
-    sha256 cellar: :any,                 big_sur:        "83c288a9e5300a745d6e5ebdda16fad647de824916c1afc2f4f178de4d888eac"
-    sha256 cellar: :any,                 catalina:       "d75991647af2167e10d3dd6273c823c363ae1ed4bec6936e7e8b3dcacd531474"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1c7cc52463ea91c23c6dd4b25dcdd30fc4c8afff59af9f01eb3e594374cc1593"
+    sha256 cellar: :any,                 arm64_monterey: "f1382007f8d4dfd359dfc7246aef0648cd8b9e8ab19f634b48e0443950d9695f"
+    sha256 cellar: :any,                 arm64_big_sur:  "4b52020b7c9dd70e54f1ef9a6532b4af936bfaa5fb41de1c7db6ebf62e9d3431"
+    sha256 cellar: :any,                 monterey:       "bf43a60de78a72a5a008ad8030c56706afdd06944a743293e264e727bfc22ef8"
+    sha256 cellar: :any,                 big_sur:        "b27271e6fb04f692f89734ea905f604fc34076a7b97b06c5971499000c3f9059"
+    sha256 cellar: :any,                 catalina:       "e51e62b4fcf93ec2ef1cb6671edff2a859b370e9a01d4e70e0cfceccfeb75575"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ee6834d1fd538be7faff3959173f830088422e0dbce3c49aaf55491dc1dcf8d7"
   end
 
   depends_on "meson" => :build
