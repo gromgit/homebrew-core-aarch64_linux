@@ -5,6 +5,15 @@ class CargoNextest < Formula
   sha256 "2d06259263e01cbde94efbe1aa489889143539de5e5f84141dac833a4ad0e89a"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "16d0f27d6246e6e152a7cede43e37469f44ba22fbcd549e79c741d9688c7df65"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ba88aaa125a8d707bb931245785baf710bc106fbcd1c034482b420fffd1ecfab"
+    sha256 cellar: :any_skip_relocation, monterey:       "922cb2821f7f93fbc7f65323c7c6ed2f9656c9bb018a2f22c04d4d1efd2357b4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "34fd449fd713de2c4586c300bb089bb7d499f71320b8be3215fd3da1eef1250c"
+    sha256 cellar: :any_skip_relocation, catalina:       "da2167c7f9a2a6d514e89d8fcc117b094834df598d04ed23d98bf4dd89751e9e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bbc0609f0afb838090f3518ad5a44fa9474b8cc5150619522183afc7bce39fab"
+  end
+
   depends_on "rust" # uses `cargo` at runtime
 
   def install
