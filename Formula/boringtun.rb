@@ -7,12 +7,12 @@ class Boringtun < Formula
   head "https://github.com/cloudflare/boringtun.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f85424ef755e4d35c7ad267c704475b1d6579a3c83efdad6c0dcc37f294f328f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e11b90142e4659eaa89a21fed8af3f674812bbbc8ec648bda18341468b11bdd3"
-    sha256 cellar: :any_skip_relocation, monterey:       "f9698cd5d69eb139caf2e8c7001c31529c787ce8f1d618f9dc1a9c18359acdd8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "118cb4e7bce35959d9afcfacd02a3c1204bd5ddeb8d73ac007cec8b0ef187ce0"
-    sha256 cellar: :any_skip_relocation, catalina:       "692655e8e0b63fd7d0b832c6dffda08fede456e60d81e6db1159d2d11a1bcaaf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f9c3c8a3f3472c02bd03a35e83cdb114573a294d4e0608c36075836dbd292099"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "63c04b158add7733fb8edfe4bfb56a0098ded750282720639dbe0d62e4f9b98a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b79542bd106b76ca6954733164e7ffee30506d4c43b343edfe1b368d681dc4a8"
+    sha256 cellar: :any_skip_relocation, monterey:       "b21b6bdc08718e301d7a412c522f4fe0ed580b0b233e541c669639705fef45fc"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7c3c6a06623640f07e36039db7c7e87d39b413d034cbf6541ba80b25caece6c7"
+    sha256 cellar: :any_skip_relocation, catalina:       "fa05784c502a336f8bbbe232ba7c4b480f27861edc5878085a1e259403b5e513"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b1e64e3b6ae780ce082c0a1727553de7c18fc16446bf4397b911b302d1aa8d17"
   end
 
   depends_on "rust" => :build
