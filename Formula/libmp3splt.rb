@@ -14,12 +14,12 @@ class Libmp3splt < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "213b94e57817c97d30aacc1c7d952b0da63d2d6405fd10668d566e609446558a"
-    sha256 arm64_big_sur:  "e0d52aaeb5d9708482c4f5677e17bac67ffada7b3222aea93751ccb0f56e8b5d"
-    sha256 monterey:       "fe867e20a444aee1d3a8435aa8acfb6e720e18a90131c00c63a2b9bfb9617d14"
-    sha256 big_sur:        "7ac2ea2f110f98de99d3c36702fe4a4113e6d0feaacecad442f67adcf5c0f827"
-    sha256 catalina:       "d3f9e3a5e41a1e6f22c514dee13693926f3b5d35394376dd87b0753f1dea6a03"
-    sha256 x86_64_linux:   "ea6dbb01f6511003d4e5c54616c19397c6500a9230070f73255493951f6d3416"
+    sha256 arm64_monterey: "cf6966b902ead20693e68ae083a2fcd675f141dd7da487c1a805ba0d59026c52"
+    sha256 arm64_big_sur:  "6b97705dad28c30302e2e4231f36270a1c5f6f437dfa5b8f2b124ced8f278182"
+    sha256 monterey:       "7805abfa8d07d0766c5857bec3e65804d33a61438e3be9df6fd17c222db142eb"
+    sha256 big_sur:        "3b31e69c0b977f266caed544f809ab1982f9c5217d45ce6d09090bebf69dcd00"
+    sha256 catalina:       "8b83d0965c9ea339da16b4f857dbe6c69f8c4368d714679c31396494939e9a74"
+    sha256 x86_64_linux:   "8bc4f1ed2445eb596bb087cda396abccb95f42d3c28e528e88a48a993e6cdc99"
   end
 
   depends_on "pkg-config" => :build
