@@ -11,12 +11,12 @@ class Pybind11 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "be81aafb4cb0d9393362d7d566f176d6a824760f3927b50b9344bcff2dc1edb6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "be81aafb4cb0d9393362d7d566f176d6a824760f3927b50b9344bcff2dc1edb6"
-    sha256 cellar: :any_skip_relocation, monterey:       "0f1c96bc5d6e856c4483de12dc92541eca0326b8c6f56716f955e9db199893eb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0f1c96bc5d6e856c4483de12dc92541eca0326b8c6f56716f955e9db199893eb"
-    sha256 cellar: :any_skip_relocation, catalina:       "0f1c96bc5d6e856c4483de12dc92541eca0326b8c6f56716f955e9db199893eb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "be81aafb4cb0d9393362d7d566f176d6a824760f3927b50b9344bcff2dc1edb6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "74ea39d086d17760a4c6917b70c8150fc434d5cdeaaeefaf4d9d6d88b59a8097"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "74ea39d086d17760a4c6917b70c8150fc434d5cdeaaeefaf4d9d6d88b59a8097"
+    sha256 cellar: :any_skip_relocation, monterey:       "1e749aa524598146c9854cec785ee91d28b5bdd9ffeb01502005738c6391e6d2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1e749aa524598146c9854cec785ee91d28b5bdd9ffeb01502005738c6391e6d2"
+    sha256 cellar: :any_skip_relocation, catalina:       "1e749aa524598146c9854cec785ee91d28b5bdd9ffeb01502005738c6391e6d2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "74ea39d086d17760a4c6917b70c8150fc434d5cdeaaeefaf4d9d6d88b59a8097"
   end
 
   depends_on "cmake" => :build
