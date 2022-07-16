@@ -7,7 +7,7 @@ class Mp3fs < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "553dad1d8a1fe03cc3362b859d9fafbc47a34e024144cdfe56be1d1d5be71131"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "b47a2250f894f7a92d828e26cdc0cb9f67e8ee9720c6af30e47cd03e8512f062"
   end
 
   depends_on "pkg-config" => :build
