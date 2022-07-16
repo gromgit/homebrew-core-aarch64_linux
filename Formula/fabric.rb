@@ -9,12 +9,12 @@ class Fabric < Formula
   head "https://github.com/fabric/fabric.git"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "5231d4e38a65bd651aa694917f4fe7e9f44c8b2354c32eb067071d3f67e53016"
-    sha256 cellar: :any,                 arm64_big_sur:  "fc73e80710ba066771de6148f04b39faf8a0e712693036bb831a8b99d6a7f864"
-    sha256 cellar: :any,                 monterey:       "5aa89cca5588a12c061165db094667586b9f68b7bfdf878c0d6fe61aa6b16365"
-    sha256 cellar: :any,                 big_sur:        "b440b03f146c93e3f532b715eec151fe213465eb6b9a7adbe1f61f531c1b7b8e"
-    sha256 cellar: :any,                 catalina:       "706ea2ad3533ea1ec4eb61e6a3cfb86c0f908afbb47404adbf86e983077be9d5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "83701718ddd05c257ef3dbec2a33cd99ea6494c1f4f57350bdd1aac421b4859c"
+    sha256 cellar: :any,                 arm64_monterey: "ceb5d0436663d80fd692da94e9fa2a9d2798a574f832fdeaf20ca718cf0be7c4"
+    sha256 cellar: :any,                 arm64_big_sur:  "3e7e5ea721d3d528e6ad783125048b9f57a0de8ed07ff133ea2f80af639dd472"
+    sha256 cellar: :any,                 monterey:       "6b595acc35ecb5440680b7a9767f423dd4c689a1b558fe8f415d42369fc68848"
+    sha256 cellar: :any,                 big_sur:        "f74d4fda9e5eb76b64c780c0fecb2eb086e06fbec6f5af2acd6eb49fecb78d0f"
+    sha256 cellar: :any,                 catalina:       "b6d872f16e221e56da5531a935b5f75c451a545150bf962c5fedfd728d9344a9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cd1b759a963838262490397e58bc2a73f7a1d81dc73b4c59989e934e02216d95"
   end
 
   depends_on "rust" => :build
