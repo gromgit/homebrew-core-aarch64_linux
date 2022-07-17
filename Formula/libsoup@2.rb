@@ -7,12 +7,12 @@ class LibsoupAT2 < Formula
   revision 1
 
   bottle do
-    sha256 arm64_monterey: "f237e2e3e6d4ed0ee7a3945803a0353afa7d140f9da9c86adbdf3e6e6462f942"
-    sha256 arm64_big_sur:  "5b1b9dade41e9ac5bace93b5a5b240215ccddd066eab199d99e63268a9b78134"
-    sha256 monterey:       "147797ede82518930df4c67e9d6b7d1657df9a86e22f7e9fbf0913fc7d7160bd"
-    sha256 big_sur:        "ae93e296368952c101e3f1c73f8e4ffecd7fe33a1a147eb4fe0c3133153e4656"
-    sha256 catalina:       "a6dd84f233c015ef8015188b22ff20d55eb23e334c6a2387b6adfc309f508020"
-    sha256 x86_64_linux:   "e8c68f3306949fc841a97897aa79840a2cd72ab06217aaf8cfe787129cae623f"
+    sha256 arm64_monterey: "c83d1b06c461f1052dca33dbb4611de3255629a01f6841cea10c879b33de062a"
+    sha256 arm64_big_sur:  "1beb7bcd38a32eb0392edf2c4512282dd70545a00522abceb18f27e8c4ad0ca1"
+    sha256 monterey:       "c45af2b51eefcef87380bd327d068113d862d8ea3468798143229e4a6ffaf066"
+    sha256 big_sur:        "c5b6becbd8d56922f462b27d995abdfb3c0e0bf40a5f90ad2dbaf8fbcf342f60"
+    sha256 catalina:       "a197f1b5e2b63ac86c26398cd4a01c60e5ff6c467fcfd4e64462c5c7d37186e2"
+    sha256 x86_64_linux:   "de39b19dac0d2b9ef080286d5402ab4d8d950d21765b19ebc4888276843c9009"
   end
 
   keg_only :versioned_formula
