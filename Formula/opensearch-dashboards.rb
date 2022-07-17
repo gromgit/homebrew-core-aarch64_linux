@@ -9,10 +9,10 @@ class OpensearchDashboards < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, monterey:     "c1d112b3d53139e21aa4980aeea93c46376815740a2597c7b34fef75cb29d3f6"
-    sha256 cellar: :any_skip_relocation, big_sur:      "c1d112b3d53139e21aa4980aeea93c46376815740a2597c7b34fef75cb29d3f6"
-    sha256 cellar: :any_skip_relocation, catalina:     "c1d112b3d53139e21aa4980aeea93c46376815740a2597c7b34fef75cb29d3f6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "84acada30475d12becd5f0e737f4cd547b5add5ef115f7ff8905f3a3e28b3ceb"
+    sha256 cellar: :any_skip_relocation, monterey:     "6c7d18f1c5ea483fbe4c5f8b92b55be0192e426ab428f4f9cc7feac1c8525829"
+    sha256 cellar: :any_skip_relocation, big_sur:      "6c7d18f1c5ea483fbe4c5f8b92b55be0192e426ab428f4f9cc7feac1c8525829"
+    sha256 cellar: :any_skip_relocation, catalina:     "6c7d18f1c5ea483fbe4c5f8b92b55be0192e426ab428f4f9cc7feac1c8525829"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "7f67af896c55c9cc388cb4ea16fe2593f959233e94d29591ba7beff166a83202"
   end
 
   depends_on "yarn" => :build
