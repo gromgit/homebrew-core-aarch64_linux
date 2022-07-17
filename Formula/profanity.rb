@@ -7,12 +7,12 @@ class Profanity < Formula
   revision 1
 
   bottle do
-    sha256 arm64_monterey: "de57a1808ee6ef8e5c37753ab3084c8bcf1aeb09019a0dc7481621b383f7ed2a"
-    sha256 arm64_big_sur:  "d82a74a90bbd5bce3f7f63b55b63642e09b16f2fc734cca897d451492a4dec66"
-    sha256 monterey:       "3a9ffd5cf97aadb416f734b2cac41db1008807e4de2aecfc1b3f100f3bc32cdb"
-    sha256 big_sur:        "9969ff03174f4892225068a9d192d9912cfc7aaad4375414897079753e6a68e3"
-    sha256 catalina:       "78e78180248d85a46c0f174cf539d4651c7c1870ad660e083509a0a7ce6dff99"
-    sha256 x86_64_linux:   "f461e16ad0f01cd68b1c020408d381c0f6893f8ff60c8f7ae09c7377447d513e"
+    sha256 arm64_monterey: "4491270163d04d1d5874bf2b5e53867e68ba8dc1f9a3748b8a7b3e05c53d0446"
+    sha256 arm64_big_sur:  "5cec786d1d6f83c9f8891d9f43757c102b4d772b5f17f307b34b025bfdfcfdd4"
+    sha256 monterey:       "1f89863e738b50d2427fa6c5b26d2863415f61b9d1931513b91d26070986935c"
+    sha256 big_sur:        "1c0f9f141b56574353271d0f2cdbdd4651f15f7a118814cad0e385e6cb2acfe4"
+    sha256 catalina:       "7ffd16eed0fbded7d26779049fbfa5a509e1b7a265f6bb5ba93dad3e7c79dc3c"
+    sha256 x86_64_linux:   "7b3f6fd3f611ab122e580e497cd008278bf849706ba8191f28ccb296d6ca43e2"
   end
 
   head do
