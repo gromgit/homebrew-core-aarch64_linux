@@ -1,8 +1,8 @@
 class Juliaup < Formula
   desc "Julia installer and version multiplexer"
   homepage "https://github.com/JuliaLang/juliaup"
-  url "https://github.com/JuliaLang/juliaup/archive/v1.6.4.tar.gz"
-  sha256 "9dd289e9a5d932adb6d18fdf9f3758d88eea96d2faaaf0bc86e8583bde0e9eb6"
+  url "https://github.com/JuliaLang/juliaup/archive/v1.6.8.tar.gz"
+  sha256 "c9bca6a87062db701dfc0a470f132c75c2d6fe9d74ad6c425f85f5996e33e0fc"
   license "MIT"
   head "https://github.com/JuliaLang/juliaup.git", branch: "master"
 
