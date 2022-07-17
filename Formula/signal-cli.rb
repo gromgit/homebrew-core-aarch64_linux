@@ -6,12 +6,12 @@ class SignalCli < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6988c2865baff5251ff723bfd4a232171c4f0009ba184e7ce19edc84621d5a94"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "281d34600e8cb98a9d1c5255ff9d74e390fa8ea83d93032b26815d05be4a2d96"
-    sha256 cellar: :any_skip_relocation, monterey:       "464b11826987bf442bb5c72a6ad2be20aa9e8c860cdaadf1e27e24ef1de668d5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "572f5893e455afa412777dabc40a31142fa634ce477358ccc76ba4345b7b504d"
-    sha256 cellar: :any_skip_relocation, catalina:       "72248f3265345c850d383772206827c7ef29fbcb00029e187084816fecf7f874"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ce8de29322a3701346f443301230a2f30e70fd57565cd85c97956c19355d8e1a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6326326ff300650c5abd3ab3e7319f6f40971ae3a81045f68ed18866be9b2702"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "246910c7fdc2523ad51c52640be835c035ba0bd6ca4c1d3c9f3b841621e95bea"
+    sha256 cellar: :any_skip_relocation, monterey:       "6a05fcda560e5d685084f5b101ea8f82041810cefa2323f96b0454815c4a92ac"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5bf6b91caba2139604395e2200da2a7ff0d028915976495c257433bbcaf7106b"
+    sha256 cellar: :any_skip_relocation, catalina:       "2d29ed255b33f74211587c7982b93a72997658c496c1522cb45d80d7be8fa19d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d64cff1e3c52cd2bb4125d21500f37cf1b6ab695c4e9cc388db90a45e5078ffc"
   end
 
   depends_on "gradle" => :build
