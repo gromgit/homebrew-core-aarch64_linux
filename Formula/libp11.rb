@@ -11,14 +11,12 @@ class Libp11 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "af7746ed36af308756e2da0de41e9e1f3f49bd9e2166d5d414c2b457d902cc76"
-    sha256 cellar: :any,                 arm64_big_sur:  "8286261723f0d43eb331dfceffaa13057a23cb9acd6e12b21ccca834e3bbdad5"
-    sha256 cellar: :any,                 monterey:       "dd15244317b7a9c12f6b2716d17fcb0a9204366448ff263437e5d85adbe28c98"
-    sha256 cellar: :any,                 big_sur:        "b3887a8796d78e8cfe9a298490eebe9adc6459ed71963144dd057d2a1fd56f1b"
-    sha256 cellar: :any,                 catalina:       "9da63ed34ade8ca89b600207b22d9fcc9a707aee31e3325f73c5da473e1df481"
-    sha256 cellar: :any,                 mojave:         "14a94b35751b0b820206edecd55dd713079ea20a1e72b049d290b10283a80895"
-    sha256 cellar: :any,                 high_sierra:    "95fac2824261ddc121f443a372174131eb9f31fe784a724bee7667af1302bba8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a4d5c50beb2cec5ba748f25da094871a2c6547ab44a3752c388645e9f3e00f31"
+    sha256 cellar: :any,                 arm64_monterey: "7ff9bf5bc261f57e6396cf4db40d78fe76d8abef845b67bc6000b38b1308f34c"
+    sha256 cellar: :any,                 arm64_big_sur:  "fb06eacdf6bdb6f8af71706a81aa5e70fdaaf6f4b8ca0fe285c0687ef9d4cb6f"
+    sha256 cellar: :any,                 monterey:       "58f4862ac40d50e7083ad99703f0302d9ba1269744c82263ea2e6aced957d6a4"
+    sha256 cellar: :any,                 big_sur:        "cc2abf1c58255ebcd610a694e4c45496c6471d31a5fc917c98b15bc6e10fd4d8"
+    sha256 cellar: :any,                 catalina:       "62236e2ad57894cc392306c0e4c1becff52b8054bb88baa65e01431babc8884e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "409cb2e2ff0a554ca1ae763da1065fe9fc499668d305457cd4dc24be09032fbf"
   end
 
   head do
