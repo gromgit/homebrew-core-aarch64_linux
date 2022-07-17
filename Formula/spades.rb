@@ -14,10 +14,10 @@ class Spades < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, monterey:     "b9da94286c55d210de91d60327d8853b6d6f5a3f5696d826bff7796db5221584"
-    sha256 cellar: :any_skip_relocation, big_sur:      "c14663b2aa9502bece0210c2563ce6c9cc00586625f090accc59278611ba3e24"
-    sha256 cellar: :any_skip_relocation, catalina:     "fcf3d8860c032d7402115b9c16be93056a7ecd9d1b3f328fa8be825b7e1b62fd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "c1fa79f789782f57ea36e5afa4b020a94aa0ec746d181e20083665166bd05682"
+    sha256 cellar: :any_skip_relocation, monterey:     "45b237f7a9c3ee0e0f0db024dba8f9077d93502e3a451d9c203e28357efe6a1a"
+    sha256 cellar: :any_skip_relocation, big_sur:      "a06c2ba0482096b9dc88db4cb010026d4d4653052513cfc848bf42a4ea392a0c"
+    sha256 cellar: :any_skip_relocation, catalina:     "68f170145b2359a752ac08f50a2b374baf87a724f581060c1798b3bcbd6f01f0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "3b0f86d7df758b572e3560d59da2acebd70874ba0a30139b2b826ce567a2b490"
   end
 
   depends_on "cmake" => :build
