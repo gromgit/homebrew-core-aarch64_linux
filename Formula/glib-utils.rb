@@ -7,6 +7,15 @@ class GlibUtils < Formula
   sha256 "78d599a133dba7fe2036dfa8db8fb6131ab9642783fc9578b07a20995252d2de"
   license "LGPL-2.1-or-later"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "786c4fc510905fef2048aff6d74656e214a703a4ea7605a61d12045d25435309"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "786c4fc510905fef2048aff6d74656e214a703a4ea7605a61d12045d25435309"
+    sha256 cellar: :any_skip_relocation, monterey:       "8102ba6f4371afcb9c682a1807b7786993f0d9f98d72da5d778e48dd76b26240"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8102ba6f4371afcb9c682a1807b7786993f0d9f98d72da5d778e48dd76b26240"
+    sha256 cellar: :any_skip_relocation, catalina:       "8102ba6f4371afcb9c682a1807b7786993f0d9f98d72da5d778e48dd76b26240"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2f57f6e41d235d9f709fecb6a3aeee9a014cb0fe9bce3d86bd6377baf4853282"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
