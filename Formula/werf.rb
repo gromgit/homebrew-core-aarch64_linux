@@ -15,11 +15,11 @@ class Werf < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a5dd52f2684fad055ff8b5812c2c600fb515e8abb7069ffea5d8fd0fe8ac795c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "61d21e2cd7f8f70347b715519c5831404df06cfde3960c7b40360dbec7a49d94"
-    sha256 cellar: :any_skip_relocation, monterey:       "429de8cc0491b14958581f79fb05281b75d2f595bb99c6fbf38cd60cab4cd7c8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d833f202305ac8cb8a4901ef5533bd047635f576ffbbe7ffc5885f6736821033"
-    sha256 cellar: :any_skip_relocation, catalina:       "506ee3f64a4cf3a16a791b8c6a2c779ab943b8a47a53f5f69b140ed9c471b55d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0a0115eee200b6f067845b0f2c7622b8476ff95f0e5e3acd7eb7060e2f7b90bf"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "75476ced48b93687a37c7f56bc2bdaf553b7ef93e040718f06e5ac5cc8c48aa0"
+    sha256 cellar: :any_skip_relocation, monterey:       "755372121ec4a1b41f1bb7ba1a546fe01ce6f13618abc7398e4329c43b91e4c6"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a4e2bfed6e66d881c13ffd602674ebfc9c0dad39e36ac95a8de5877941d1d364"
+    sha256 cellar: :any_skip_relocation, catalina:       "5307dac4387da0fc3ac8f35f0029fd5431ab15069812e7fef42f63a3293bf1f2"
   end
 
   depends_on "go" => :build
