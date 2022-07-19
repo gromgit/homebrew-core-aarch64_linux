@@ -7,12 +7,12 @@ class ArgocdAutopilot < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c69798c742f7a865d8d2e7f99c8474ca25a7b734d9cdbcfcf6f53b32724b78d7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "016f4775b6d7e2af2b083530dea1f2d8c2837d22aeb83155ab9335c08fe59339"
-    sha256 cellar: :any_skip_relocation, monterey:       "b516a657f9741453af0cd5ec7499e5a59cea6e2c3233320c3f5d22a2cf12e612"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0ff24d79be0f8e181d93e35c7c20dead48d42bb77e9d091a80b79db32f8b8d34"
-    sha256 cellar: :any_skip_relocation, catalina:       "61a45a60c5fe2f249c490d8420fc92a0ae0895a86542a8dd03b876842cf3bc05"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "27fe99e3d341ccad86d8c65a3597b0d9809ae3c14f45b315dbfe30fd64ed54cb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1af6ae4d0e7b77c9c78ea09960d73c3df20d6c7c13928b092c8991f2963c9e1a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "732151964cc3eca0f1c84ce1d2a2419aecb78ef068477e4107488ca65a4bcc32"
+    sha256 cellar: :any_skip_relocation, monterey:       "61dc13392319a228b9eeaa7c13376e96f1337dc33287a09858f0a3966f98fd5b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "85311f4c74d86c323a7673094aebc904e166d55c420df99a5033935b52c8aaab"
+    sha256 cellar: :any_skip_relocation, catalina:       "1ff152c5a1514f318fc65b13e5fc25692b675070601a5051c6624445599d6a07"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d6dcdff8e784ab89ca8b61e413f0b1301f700b127fef9ab6b111810454c4b12e"
   end
 
   depends_on "go" => :build
