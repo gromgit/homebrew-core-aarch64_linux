@@ -12,12 +12,12 @@ class Juliaup < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "30972942502a865a5bd7a01cb2f450f2ece8285fe5dae2598133c60ee766ba4b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e896363539a3536cc5e89dfad85952be7dca25293b7737aab33687f3802a5508"
-    sha256 cellar: :any_skip_relocation, monterey:       "d2496aa1c50db5b31be1174c96c0a7ba1a181dc2e6093f6193d731cfc08b96c3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "659df2eb300af53adc103b02d2271fe3832d82bf3e830e4c57d7241f5b9eee44"
-    sha256 cellar: :any_skip_relocation, catalina:       "7d7bf2b4fcca3b968540d7d4a83948c72083f263995aedb230ec236e394da22f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "338df698f9166d34543a65df63d3f3987e19b29515e1f890cadc8d3185aa6212"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3431d17dcf908e8fded59b117bf42ef4569b87a483c2d0f1511789ceb0cdba3d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5250b53f6bc926a5f4bb99cfa25f195b4c6fd222fff0f6bf1d1b69f0c634b148"
+    sha256 cellar: :any_skip_relocation, monterey:       "2bc782c9f09e5b8989ed127fecfcfb3da04cf8cf062879308e01c6058b3334d1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b69864a8197c98ab19ebc2c009403be126d4c45a975190e507ceaf0b6c7fcef3"
+    sha256 cellar: :any_skip_relocation, catalina:       "c842ae971df2bd1ab95f869b8e0606da2d6c5ed2a6e9c00ea40162e8c3c2874f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1adb787eeb477bf53943570e06d70dad610e5da167b25c33d2126b24d17857a6"
   end
 
   depends_on "rust" => :build
