@@ -4,8 +4,8 @@ class Copilot < Formula
   desc "CLI tool for Amazon ECS and AWS Fargate"
   homepage "https://aws.github.io/copilot-cli/"
   url "https://github.com/aws/copilot-cli.git",
-      tag:      "v1.19.0",
-      revision: "33ee39e861e148867b7ecb62f6dc46d50ac5c5e4"
+      tag:      "v1.20.0",
+      revision: "39a6f80499215df85be7cca149abbec02a40950f"
   license "Apache-2.0"
   head "https://github.com/aws/copilot-cli.git", branch: "mainline"
 
@@ -46,9 +46,11 @@ class Copilot < Formula
   end
 
   test do
+    ENV["AWS_ACCESS_KEY_ID"] = "test"
+    ENV["AWS_SECRET_ACCESS_KEY"] = "test"
     begin
       _, stdout, wait_thr = Open3.popen2("AWS_REGION=eu-west-1 #{bin}/copilot init 2>&1")
-      assert_match "Note: It's best to run this command in the root of your Git repository.", stdout.gets("\n")
+      assert_match "Note: It's best to run this command in the root of your Git repository", stdout.gets("\n")
     ensure
       Process.kill 9, wait_thr.pid
     end
