@@ -6,6 +6,15 @@ class VulkanLoader < Formula
   license "Apache-2.0"
   head "https://github.com/KhronosGroup/Vulkan-Loader.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "ab0bccbca8a0bc1dbe9f49f4b54fdce5726b76c41e19ed4e4e867459fd96d070"
+    sha256 cellar: :any,                 arm64_big_sur:  "a489c1ff5781c18ae2a90e0ebd922151d01338ed247dba4b6236b7574c26eec9"
+    sha256 cellar: :any,                 monterey:       "e4d6e3a2cce6ff2a33f89ec6d9621fa0d6614f4d80e64d9efece1cbeb81b1d46"
+    sha256 cellar: :any,                 big_sur:        "4dd387063eafe4ac4065d029e58f3df930a322afe91364615fe114ce94690d21"
+    sha256 cellar: :any,                 catalina:       "3dc34d81d643d0268a73513eb43d58f70ff2e6d99fe429123df9832fa686faa2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d621cd906f1224d4940e6a7d2c4b14d0789514b89e820d71651e1a7ff5d6933f"
+  end
+
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "python@3.10" => :build
