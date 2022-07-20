@@ -7,6 +7,15 @@ class Aws2Wrap < Formula
   sha256 "3e39be94c10e700a388fdc35da59a9232e766d65f05e57cd00651082a9887346"
   license "GPL-3.0-only"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0178b4f7739118632776439b7fdc3f0ce3607bbe3889a19a7a3d8d4c46441dca"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9b15d61c8f2c14c925bd165c3a6934e5be7ff3ed0e05dda1883a2ad98ee1c313"
+    sha256 cellar: :any_skip_relocation, monterey:       "92e602827c4450fb6be70ce0d0879f5e1130805a5d2bc9d227b3de0840a3d5e7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ad904e5b1c7c2084d0eb98b35d157cf0223e86c09bee23b0e488ae2e7f142fcb"
+    sha256 cellar: :any_skip_relocation, catalina:       "db1cdb2e47c366eec759f992a7066be610fcfed66abc4017ab4b000a23185d34"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "12e437c57a58447a6af2899ec122bc453078944ffb63ed066ea4d2c2e51fc283"
+  end
+
   depends_on "python@3.10"
 
   resource "psutil" do
