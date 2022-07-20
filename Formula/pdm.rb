@@ -9,12 +9,12 @@ class Pdm < Formula
   head "https://github.com/pdm-project/pdm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f61db8ad72f3fbe30ffdae11744cefa0a25c38e17fe036b8f2170e70803e1a09"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "84a386af7a15310690cbcc9d4ee11e3f898375fe80e229fa5f0339b1b23b54cb"
-    sha256 cellar: :any_skip_relocation, monterey:       "c42b0a6d868e8c84a7d186d25c88142ca0d5756cb3941ea492bd5f435f067fca"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9dc2e34a6dc56f2b720e3f435b8b80f3617fd28bc33b2a22ad40aa195bf3710d"
-    sha256 cellar: :any_skip_relocation, catalina:       "fdcbdfa437bbe5f7daa09f48e324d56ac4a5426e230d1c28218ff50fe00681ee"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "72378d35e9482cda43971a00b226bbb0d2f291af7af51f650087c13a3f610b49"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c467f620b3f11f81b05c9ea338e541396fa9d6c1b621ce5b92fbb3b6ddae7722"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c319cf180fac31d6ef08ab03a94b5fe0460555de22133fe8703d682d85f4f4a1"
+    sha256 cellar: :any_skip_relocation, monterey:       "b775c13a99a9dd269366752714c981e7bf9d31ee407ba3f2795bc86be56b09f6"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5b3682315f9294906ce3d01ee314131860c3b070aefc4e6cf0123efc122c80f5"
+    sha256 cellar: :any_skip_relocation, catalina:       "5f6003c1bdeec5c0e0c4b3bb1b8bf258273f658a45b94559ba00be9b0caf099d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6973b1b5dd1f0369f8498c35104491d76bc7dd3b3f74b09ce84110bef09b8702"
   end
 
   depends_on "python@3.10"
