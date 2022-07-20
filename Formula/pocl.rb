@@ -6,6 +6,15 @@ class Pocl < Formula
   license "MIT"
   head "https://github.com/pocl/pocl.git", branch: "master"
 
+  bottle do
+    sha256 arm64_monterey: "395e9e22eb5bd6cad1249365e9bdca3cf3624bdaf5d38d68b65170689c2b3812"
+    sha256 arm64_big_sur:  "a90b4daf3ceddb1303a2edaf9c591664cdca5ae3675bab990819bac31634c7cb"
+    sha256 monterey:       "1ed373e8a3a339b256f7342a8aa9b0553ea10d5a554c64f378d0fe5b8d7bd6b7"
+    sha256 big_sur:        "845865a2883222703e17ab3e4a8df75da21c835e42251eae8800f1dd37e7ee5d"
+    sha256 catalina:       "7f3f21085539e521ec9630a006bcd21c32dae5c119d1e910e6326856c1b23bc2"
+    sha256 x86_64_linux:   "79b71049a56f46d3d00b3d3cb66c51ea1ade450c465ea8d0cfccf38a23a80e2d"
+  end
+
   depends_on "cmake" => :build
   depends_on "opencl-headers" => :build
   depends_on "pkg-config" => :build
