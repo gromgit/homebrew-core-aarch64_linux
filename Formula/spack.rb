@@ -12,12 +12,12 @@ class Spack < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6519c4ca27c2aaaa4b09affe1b0ff2a56be9a44240a790ca1d236992331ef537"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6519c4ca27c2aaaa4b09affe1b0ff2a56be9a44240a790ca1d236992331ef537"
-    sha256 cellar: :any_skip_relocation, monterey:       "95a2cbb2613984184312837655cc4a1a85e53084f5e7aafcab88ad4a380a532b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "95a2cbb2613984184312837655cc4a1a85e53084f5e7aafcab88ad4a380a532b"
-    sha256 cellar: :any_skip_relocation, catalina:       "95a2cbb2613984184312837655cc4a1a85e53084f5e7aafcab88ad4a380a532b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eb58c98f0a1d9e696c4a20aed8e05962e7b184adf5042fd960ed84bedadb2a72"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d6795d73f3871790496ded8e3e7f7bcb2048bbf9adaeedbe9127e2041ad2ce51"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d6795d73f3871790496ded8e3e7f7bcb2048bbf9adaeedbe9127e2041ad2ce51"
+    sha256 cellar: :any_skip_relocation, monterey:       "3e61196fe5ea3e29d8c0e16f4f771c503a16b9d8dc62c88cfa336dde511974b6"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3e61196fe5ea3e29d8c0e16f4f771c503a16b9d8dc62c88cfa336dde511974b6"
+    sha256 cellar: :any_skip_relocation, catalina:       "3e61196fe5ea3e29d8c0e16f4f771c503a16b9d8dc62c88cfa336dde511974b6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c064bb613b3784ab0fdac463a919a3a16195e1b829296b5a47fe8f29748c2aa6"
   end
 
   uses_from_macos "python"
