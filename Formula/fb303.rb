@@ -1,8 +1,8 @@
 class Fb303 < Formula
   desc "Thrift functions for querying information from a service"
   homepage "https://github.com/facebook/fb303"
-  url "https://github.com/facebook/fb303/archive/v2022.07.04.00.tar.gz"
-  sha256 "7024be76f181559da406f8751784f8fef46b3583089d48b3bf996b4342b0f50c"
+  url "https://github.com/facebook/fb303/archive/v2022.08.08.00.tar.gz"
+  sha256 "5235b7c96a72c40b081a2a8cb6f4fd61b03e0f3d868ea34a417456bb210e562a"
   license "Apache-2.0"
   head "https://github.com/facebook/fb303.git", branch: "main"
 
@@ -51,10 +51,21 @@ class Fb303 < Formula
         return 0;
       }
     EOS
-    system ENV.cxx, "-std=c++17", "-I#{include}", "-I#{Formula["openssl@1.1"].opt_include}", "test.cpp",
-                    "-L#{Formula["folly"].opt_lib}", "-lfolly", "-L#{Formula["glog"].opt_lib}", "-lglog",
-                    "-L#{lib}", "-lfb303_thrift_cpp", "-L#{Formula["boost"].opt_lib}", "-lboost_context-mt",
-                    "-ldl", "-L#{Formula["fbthrift"].opt_lib}", "-lthriftprotocol", "-o", "test"
+
+    if Tab.for_formula(Formula["folly"]).built_as_bottle
+      ENV.remove_from_cflags "-march=native"
+      ENV.append_to_cflags "-march=#{Hardware.oldest_cpu}" if Hardware::CPU.intel?
+    end
+
+    ENV.append "CXXFLAGS", "-std=c++17"
+    system ENV.cxx, *ENV.cxxflags.split, "test.cpp", "-o", "test",
+                    "-I#{include}", "-I#{Formula["openssl@1.1"].opt_include}",
+                    "-L#{lib}", "-lfb303_thrift_cpp",
+                    "-L#{Formula["folly"].opt_lib}", "-lfolly",
+                    "-L#{Formula["glog"].opt_lib}", "-lglog",
+                    "-L#{Formula["fbthrift"].opt_lib}", "-lthriftprotocol", "-lthriftcpp2",
+                    "-L#{Formula["boost"].opt_lib}", "-lboost_context-mt",
+                    "-ldl"
     assert_equal "BaseService", shell_output("./test").strip
   end
 end
