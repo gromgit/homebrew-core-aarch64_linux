@@ -1,8 +1,8 @@
 class Nali < Formula
   desc "Tool for querying IP geographic information and CDN provider"
   homepage "https://github.com/zu1k/nali"
-  url "https://github.com/zu1k/nali/archive/v0.4.8.tar.gz"
-  sha256 "ce6a0be171839640634047f90fb40eafda17dd4439329df0caf110ce186bfc91"
+  url "https://github.com/zu1k/nali/archive/v0.5.0.tar.gz"
+  sha256 "fd3dabda33a381d0072f9c657098c3c01c793195bc6326015b36c8a168943f1c"
   license "MIT"
   head "https://github.com/zu1k/nali.git", branch: "master"
 
@@ -28,7 +28,7 @@ class Nali < Formula
     ip = "1.1.1.1"
     # Default database used by program is in Chinese, while downloading an English one
     # requires an third-party account.
-    # This example reads "US APNIC&CloudFlare Public DNS Server".
-    assert_match "#{ip} [美国 APNIC&CloudFlare公共DNS服务器]", shell_output("#{bin}/nali #{ip}")
+    # This example reads "Australia APNIC/CloudFlare Public DNS Server".
+    assert_match "#{ip} [澳大利亚 APNIC/CloudFlare公共DNS服务器]", shell_output("#{bin}/nali #{ip}")
   end
 end
