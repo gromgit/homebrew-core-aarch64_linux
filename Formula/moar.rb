@@ -1,8 +1,8 @@
 class Moar < Formula
   desc "Nice to use pager for humans"
   homepage "https://github.com/walles/moar"
-  url "https://github.com/walles/moar/archive/refs/tags/v1.9.5.tar.gz"
-  sha256 "e412a768c6f5774713486c1d663a4ec60b72a3ba09b03d47525cbc563267bf3a"
+  url "https://github.com/walles/moar/archive/refs/tags/v1.9.6.tar.gz"
+  sha256 "6345b1afd6c32adb296956c10553b93f23aab0571bd149345d415dbaaa53ea28"
   license "BSD-2-Clause"
 
   bottle do
@@ -19,6 +19,7 @@ class Moar < Formula
   def install
     ldflags = "-s -w -X main.versionString=v#{version}"
     system "go", "build", *std_go_args(ldflags: ldflags)
+    man1.install "moar.1"
   end
 
   test do
