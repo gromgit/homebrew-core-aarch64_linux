@@ -5,6 +5,10 @@ class Libbpf < Formula
   sha256 "7bda8187efc619d1eb20a1ba5ab949dd68d40dd44945310c91ac0f915fa4a42b"
   license "BSD-2-Clause"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "ec4c77b184073770c4d8486c2b86bc59ef7a7398e7c0b99164b725b802c813e3"
+  end
+
   depends_on "linux-headers@5.16" => :test
   depends_on "elfutils"
   depends_on :linux
