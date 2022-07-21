@@ -14,12 +14,12 @@ class Nss < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "7e8595d7cf9712d24ef97a803722799fd5d06222e2c6db27a9179e32d319727e"
-    sha256 cellar: :any,                 arm64_big_sur:  "1a0dd59acb96c18d81b66f1b9a9baebfa36655c74c57f0a46413f590fc1daeb0"
-    sha256 cellar: :any,                 monterey:       "61c5bb832d2f154ac4b12146009177f1bf038d891c7f38a7c665d12cfe5b90c4"
-    sha256 cellar: :any,                 big_sur:        "58b6bd9709d781f5cc3851765c86888d3f03c30d05b5ce96d760df3f0473d872"
-    sha256 cellar: :any,                 catalina:       "69c95fd0c4ca8ead17476040c5ffcf2d53a00341ae2761d21bb209d47d209f34"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d414a42ee08aaa28ea240786f2191849f592200c85cede6274adf490e691efb0"
+    sha256 cellar: :any,                 arm64_monterey: "d38c467b6066510be497a43de18a8909184646447b20023da424612df242221b"
+    sha256 cellar: :any,                 arm64_big_sur:  "c1018723bcaa32991eb2741e3288b4e6c222e073fd0fa37986a20dab11b06534"
+    sha256 cellar: :any,                 monterey:       "3299626273ea5be81b42a7b758dd605e21a95a1fcc28198b4ccd88c4a180fb5b"
+    sha256 cellar: :any,                 big_sur:        "0908c255c657f82b5c5d78cd584df7a74fc0c2e733373fbc8a92e2135f97b0ec"
+    sha256 cellar: :any,                 catalina:       "f2dc9232aece2c16e095841ed01250d7bb73c067088dcd979bb0c6bf4590dcba"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "691198c5568fb13853ba1ef329c42dfac73309afcfb06f2545a51b52b24d83af"
   end
 
   depends_on "nspr"
