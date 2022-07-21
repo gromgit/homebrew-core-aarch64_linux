@@ -8,12 +8,12 @@ class VulkanLoader < Formula
   head "https://github.com/KhronosGroup/Vulkan-Loader.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ab0bccbca8a0bc1dbe9f49f4b54fdce5726b76c41e19ed4e4e867459fd96d070"
-    sha256 cellar: :any,                 arm64_big_sur:  "a489c1ff5781c18ae2a90e0ebd922151d01338ed247dba4b6236b7574c26eec9"
-    sha256 cellar: :any,                 monterey:       "e4d6e3a2cce6ff2a33f89ec6d9621fa0d6614f4d80e64d9efece1cbeb81b1d46"
-    sha256 cellar: :any,                 big_sur:        "4dd387063eafe4ac4065d029e58f3df930a322afe91364615fe114ce94690d21"
-    sha256 cellar: :any,                 catalina:       "3dc34d81d643d0268a73513eb43d58f70ff2e6d99fe429123df9832fa686faa2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d621cd906f1224d4940e6a7d2c4b14d0789514b89e820d71651e1a7ff5d6933f"
+    sha256 arm64_monterey: "56ae560d1d9d222cc2956a208ccb4cb9c01bf73374be0f7b72030fe9a9794592"
+    sha256 arm64_big_sur:  "eb65e2b3f72fc88552def2a96b152a6eb510830e1a5f41101f87ad77436b50d5"
+    sha256 monterey:       "7fbfedff89b541da123e72fbbf03c1814c5799daf5c343c24128e5a0f40dee1c"
+    sha256 big_sur:        "9d1b0738e40c6bf45cfc7748a945ab36801fff7d50a5e66e736638bc7ea529dd"
+    sha256 catalina:       "4d7d7e998410c01d073fd920817bc36a0f1099291c53a2b961fc8fe5c822739a"
+    sha256 x86_64_linux:   "9f3486631c252f8f23c18d8eec22277edb5570dbae4021ca9383790fb7d23d2e"
   end
 
   depends_on "cmake" => :build
