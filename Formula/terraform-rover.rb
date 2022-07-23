@@ -7,12 +7,12 @@ class TerraformRover < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cf0a8043de95076bb307200c101db95f8d4e42c8f0e5787fd8aa3ac7192dc3e0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "952e3e398a48f0a4697af849f275f8f83c5cc10eef151793897d336074ecd8ba"
-    sha256 cellar: :any_skip_relocation, monterey:       "56e5cd0a650757b2b408648b4be60ca14012bccdc811fc82c7de6d984307bded"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7feb2087d5615755e8f06745c2df7a74b8e51f200ee3aaa4da9393ef7bdd466d"
-    sha256 cellar: :any_skip_relocation, catalina:       "31f7684561978d42340fe062750f8d8fbd30fd12fe6a6ffdba222e42d565ed7e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2ea128eb5d636d264f865e67b1a0f6618571df1636865e0eca01c9a1b764ef32"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a91f264c414c45431d9f49775405e736d8c98fdad348d2890189491eeaf14509"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2585975e144bff4b942e06fea9b4a537845506d8753c83cdd0604242f25565cd"
+    sha256 cellar: :any_skip_relocation, monterey:       "2fb8acc2af0c3029d217e0143115e34fd9ceca18cb6372053f35fa19a5d1fe15"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bbb836ca74b099587811edbe6806cd87767c543417f4bbc7043ee55fb00a9d3e"
+    sha256 cellar: :any_skip_relocation, catalina:       "cb3ea8a62a309585e40a3ebca0f8633de15d80acfaed963046591d4ad1d610bf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7352915d9f3322d4795ee475095c00c2cc6c3f206501f00194b9a9f251add4c9"
   end
 
   depends_on "go" => :build
