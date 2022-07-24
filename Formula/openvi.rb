@@ -6,12 +6,12 @@ class Openvi < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f611f0b540acbf421d2974ee16160abae040d936ac4967a35ea43927b4420cb5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "63752e1d0c23b9a02a2a9587bc5a9c0a22f2883b95ea2b5039119b9de33b04d1"
-    sha256 cellar: :any_skip_relocation, monterey:       "b79c000683e5bc7e3279b185f018299e5568d2e79c31000d3607f68e2bc52777"
-    sha256 cellar: :any_skip_relocation, big_sur:        "93be6c7314fccb3ff9e9a77b7b06af9adcef66a4ec33d440953b74288511ff25"
-    sha256 cellar: :any_skip_relocation, catalina:       "d6073577026b5c8421ccda24d9a6b87dc176795cf7a9631151c2b5114d70e36d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8132b1ccd79a17fd5d539c78cca430af927f5f0a3b60f3d89ca91f0b215e018f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "68a83e1767c703456c42fe3d38bf5a5cf08e622537256003ec8c9c7f44611955"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "76464fed80b2e93c767b08ed47b4991f16c857545f093d681ec025cd0bd25c49"
+    sha256 cellar: :any_skip_relocation, monterey:       "bd6559fef495dbd7446aa9cb76bb221d1cd72993847b322829374fdba5147469"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9c63fcf5ff9f608c3d4d340b2ab95406fdbc8992ce48ef28e0d3f6b6406c129a"
+    sha256 cellar: :any_skip_relocation, catalina:       "1ca47aec6c65d18713fe17e5ac604fa7aa0a70e904d24b3e69e5fb5581003bd7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8fc37583e49ea8d1bf3c546902daf6a416918b29295912e6a5bfb8c6f2e56f31"
   end
 
   uses_from_macos "ncurses"
