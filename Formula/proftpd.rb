@@ -1,11 +1,11 @@
 class Proftpd < Formula
   desc "Highly configurable GPL-licensed FTP server software"
   homepage "http://www.proftpd.org/"
-  url "https://github.com/proftpd/proftpd/archive/v1.3.7d.tar.gz"
-  mirror "https://fossies.org/linux/misc/proftpd-1.3.7d.tar.gz"
-  mirror "https://ftp.osuosl.org/pub/blfs/conglomeration/proftpd/proftpd-1.3.7d.tar.gz"
-  version "1.3.7d"
-  sha256 "b231536e2978116801d06278e805b18e5240568d2bc921693ac7147652e267e4"
+  url "https://github.com/proftpd/proftpd/archive/v1.3.7e.tar.gz"
+  mirror "https://fossies.org/linux/misc/proftpd-1.3.7e.tar.gz"
+  mirror "https://ftp.osuosl.org/pub/blfs/conglomeration/proftpd/proftpd-1.3.7e.tar.gz"
+  version "1.3.7e"
+  sha256 "6e716a3b53ee069290399fce6dccf4c229fafe6ec2cb14db3778b7aa3f9a8c92"
   license "GPL-2.0-or-later"
 
   # Proftpd uses an incrementing letter after the numeric version for
@@ -26,6 +26,8 @@ class Proftpd < Formula
     sha256 x86_64_linux:   "b4c6e6de0169554fad7d91e497a3c6f4764ad01ebaa31c7ce2771edf0205db2b"
   end
 
+  uses_from_macos "libxcrypt"
+
   def install
     # fixes unknown group 'nogroup'
     # http://www.proftpd.org/docs/faq/linked/faq-ch4.html#AEN434
@@ -36,7 +38,7 @@ class Proftpd < Formula
                           "--localstatedir=#{var}"
     ENV.deparallelize
     install_user = ENV["USER"]
-    install_group = `groups`.split[0]
+    install_group = Utils.safe_popen_read("groups").split.first
     system "make", "INSTALL_USER=#{install_user}", "INSTALL_GROUP=#{install_group}", "install"
   end
 
