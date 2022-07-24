@@ -12,13 +12,12 @@ class Icon < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "39d1df54b9d3a87b0630483f3538f4558690ee1f30b6e0aa33dab177cdc51891"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e088bb6a1e7cdb42829ae36a9ac57f35cc8fda51d07708a4995cc2f0d3686330"
-    sha256 cellar: :any_skip_relocation, monterey:       "4605a372db6da6286243fc923e301f771c2da810715318a9e49b6e363c5b4f79"
-    sha256 cellar: :any_skip_relocation, big_sur:        "653244770e5f013dcfa49781ad646d7b2f5bd07469542d79fd30f9ffa0ecbc2e"
-    sha256 cellar: :any_skip_relocation, catalina:       "c926ffd95dde7ec76760cc4dc07863042e03d5a45dff65983b13b1bce1e069c0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a52b2122ba82e6432520c86e7c31074962fd4e4712b78478cb1677b417ac7605"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "57b881bd78c52d53cc0fa461db50bebfaa3c938a4aca48e1dc3707f8d8708533"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fbd4950d7c8beb19264d472245baba21ba73d01677122e619beb0e7c33e77f89"
+    sha256 cellar: :any_skip_relocation, monterey:       "84ad1fd67613956eef4f81baa575376d13871b9eb281b88fad482d7d467051ec"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4ca9796155abe1bdeb8375b564cb0438c599f88de7f34acd52365edf644c2664"
+    sha256 cellar: :any_skip_relocation, catalina:       "6d45d0a928ff6d7f5bf37797cfe85a7f7e0319b2f57783a2401b19892f0f0831"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3894f311892055d393661a75fc398e710b218da79c13b96954cfbe26659b7143"
   end
 
   def install
