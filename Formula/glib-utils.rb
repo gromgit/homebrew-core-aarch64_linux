@@ -8,12 +8,12 @@ class GlibUtils < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "786c4fc510905fef2048aff6d74656e214a703a4ea7605a61d12045d25435309"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "786c4fc510905fef2048aff6d74656e214a703a4ea7605a61d12045d25435309"
-    sha256 cellar: :any_skip_relocation, monterey:       "8102ba6f4371afcb9c682a1807b7786993f0d9f98d72da5d778e48dd76b26240"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8102ba6f4371afcb9c682a1807b7786993f0d9f98d72da5d778e48dd76b26240"
-    sha256 cellar: :any_skip_relocation, catalina:       "8102ba6f4371afcb9c682a1807b7786993f0d9f98d72da5d778e48dd76b26240"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2f57f6e41d235d9f709fecb6a3aeee9a014cb0fe9bce3d86bd6377baf4853282"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ceda984462487b0c9bb77dc0fdbc8d7642eaf7e55e319cac2eb3327dc3da2977"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ceda984462487b0c9bb77dc0fdbc8d7642eaf7e55e319cac2eb3327dc3da2977"
+    sha256 cellar: :any_skip_relocation, monterey:       "b944e164376801f4f695457b9638fb6da2d330422d8d48b59cb26faaa771cb5b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b944e164376801f4f695457b9638fb6da2d330422d8d48b59cb26faaa771cb5b"
+    sha256 cellar: :any_skip_relocation, catalina:       "b944e164376801f4f695457b9638fb6da2d330422d8d48b59cb26faaa771cb5b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bb8428940a0b3059df1edc89ed5ad6cf13c85f4b9548fa53cdb8980da3e27cde"
   end
 
   depends_on "meson" => :build
