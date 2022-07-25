@@ -4,7 +4,7 @@ class Mpv < Formula
   url "https://github.com/mpv-player/mpv/archive/v0.34.1.tar.gz"
   sha256 "32ded8c13b6398310fa27767378193dc1db6d78b006b70dbcbd3123a1445e746"
   license :cannot_represent
-  revision 1
+  revision 2
   head "https://github.com/mpv-player/mpv.git", branch: "master"
 
   bottle do
@@ -18,15 +18,14 @@ class Mpv < Formula
 
   depends_on "docutils" => :build
   depends_on "pkg-config" => :build
-  depends_on "python@3.9" => :build
+  depends_on "python@3.10" => :build
   depends_on xcode: :build
-
-  depends_on "ffmpeg@4"
-  depends_on "jpeg"
+  depends_on "ffmpeg"
+  depends_on "jpeg-turbo"
   depends_on "libarchive"
   depends_on "libass"
   depends_on "little-cms2"
-  depends_on "luajit-openresty"
+  depends_on "luajit"
   depends_on "mujs"
   depends_on "uchardet"
   depends_on "vapoursynth"
@@ -44,10 +43,16 @@ class Mpv < Formula
     # that's good enough for building the manpage.
     ENV["LC_ALL"] = "C"
 
+    # Avoid unreliable macOS SDK version detection
+    # See https://github.com/mpv-player/mpv/pull/8939
+    if OS.mac?
+      sdk = (MacOS.version == :big_sur) ? MacOS::Xcode.sdk : MacOS.sdk
+      ENV["MACOS_SDK"] = sdk.path
+      ENV["MACOS_SDK_VERSION"] = "#{sdk.version}.0"
+    end
+
     # libarchive is keg-only
     ENV.prepend_path "PKG_CONFIG_PATH", Formula["libarchive"].opt_lib/"pkgconfig"
-    # luajit-openresty is keg-only
-    ENV.prepend_path "PKG_CONFIG_PATH", Formula["luajit-openresty"].opt_lib/"pkgconfig"
 
     args = %W[
       --prefix=#{prefix}
@@ -65,9 +70,10 @@ class Mpv < Formula
       --lua=luajit
     ]
 
-    system Formula["python@3.9"].opt_bin/"python3", "bootstrap.py"
-    system Formula["python@3.9"].opt_bin/"python3", "waf", "configure", *args
-    system Formula["python@3.9"].opt_bin/"python3", "waf", "install"
+    python3 = "python3.10"
+    system python3, "bootstrap.py"
+    system python3, "waf", "configure", *args
+    system python3, "waf", "install"
   end
 
   test do
