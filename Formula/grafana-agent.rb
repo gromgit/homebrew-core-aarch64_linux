@@ -1,8 +1,8 @@
 class GrafanaAgent < Formula
   desc "Exporter for Prometheus Metrics, Loki Logs, and Tempo Traces"
   homepage "https://grafana.com/docs/agent/"
-  url "https://github.com/grafana/agent/archive/refs/tags/v0.25.1.tar.gz"
-  sha256 "a8bf90eed088fc40bdafbc741080a995f5ded73c2dc83d45a654fd40c65874bf"
+  url "https://github.com/grafana/agent/archive/refs/tags/v0.26.1.tar.gz"
+  sha256 "a9c67f3a0d964e0b70d12f436d81d217857495386541d8a769614a2007301f0c"
   license "Apache-2.0"
 
   bottle do
@@ -14,8 +14,7 @@ class GrafanaAgent < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "fd0ecd7e2503b86ae3a27c254ddd5495a607e4b7e50548d20eebbe65e94cac9c"
   end
 
-  # Bump to 1.18 on the next release, if possible.
-  depends_on "go@1.17" => :build
+  depends_on "go" => :build
 
   on_linux do
     depends_on "systemd" => :build
@@ -23,13 +22,16 @@ class GrafanaAgent < Formula
 
   def install
     ldflags = %W[
+      -s -w
       -X github.com/grafana/agent/pkg/build.Branch=HEAD
       -X github.com/grafana/agent/pkg/build.Version=v#{version}
       -X github.com/grafana/agent/pkg/build.BuildUser=#{tap.user}
       -X github.com/grafana/agent/pkg/build.BuildDate=#{time.rfc3339}
     ]
-    system "go", "build", *std_go_args(ldflags: ldflags.join(" ")), "./cmd/agent"
-    system "go", "build", *std_go_args(ldflags: ldflags.join(" ")), "-o", bin/"grafana-agentctl", "./cmd/agentctl"
+    args = std_go_args(ldflags: ldflags.join(" ")) + %w[-tags=noebpf]
+
+    system "go", "build", *args, "./cmd/agent"
+    system "go", "build", *args, "-o", bin/"grafana-agentctl", "./cmd/agentctl"
   end
 
   def post_install
