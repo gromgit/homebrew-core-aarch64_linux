@@ -7,12 +7,12 @@ class Harfbuzz < Formula
   head "https://github.com/harfbuzz/harfbuzz.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "43eb9dffca6648a3b4718b7ba7a7a51dde9a9b5342c52ce3c586dfbf23f97c5f"
-    sha256 cellar: :any, arm64_big_sur:  "c420a6936767080423fed5c12063be25d9e12c71372d07a3dee6dd3d5a17a970"
-    sha256 cellar: :any, monterey:       "073d043d408cc4defd7d3b337d30b8fcdfac18c07e6928002038687102b90c90"
-    sha256 cellar: :any, big_sur:        "2ee365068d158bb4e885b4ca73297e7c8def54b6adbc1b6bb34b56258a4b7a00"
-    sha256 cellar: :any, catalina:       "60d36dcca15c1102e6b29ec41937ca87d56fd0467ea1ebb59efee1462c9da92d"
-    sha256               x86_64_linux:   "130224a18f8f53fc96386bc6cb47b0868ff5434d725e83a352c035d06f195f32"
+    sha256 cellar: :any, arm64_monterey: "a0dca1f19cf2006cd24181af5d97959d41aca06c4bdf165c754cc5d27c64eb53"
+    sha256 cellar: :any, arm64_big_sur:  "2d381283d0087da41b05e5b048a1884474115f89cb5facebd3040de0e9668551"
+    sha256 cellar: :any, monterey:       "a4563d79c97ce8a84f4ac45a2c5ca8b0e2e7b08619ab2e73fb8bc231bb27af38"
+    sha256 cellar: :any, big_sur:        "158f5239dcaafcff4620750a932ac1f92179d3acbb6403a1d6d81953d27b867e"
+    sha256 cellar: :any, catalina:       "b362d361288f291b170a91568c6bd53b631dec2b228883cf7cfcc6b772017b09"
+    sha256               x86_64_linux:   "723cc7f0bfd836e5d484c30406457c27f0a498d11a71c6ccb1457dd0434c73f6"
   end
 
   depends_on "glib-utils" => :build
