@@ -8,12 +8,12 @@ class OrganizeTool < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0de7be059bb7dfe89aa68b4446789a92261c1890a4476a03305a61123c968c65"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "591e0f8e053c3abe61feb0391ed78755979d388cb0f33b999945f2965b17850b"
-    sha256 cellar: :any_skip_relocation, monterey:       "3a00038967a4cbc757410bf363c2b557b24c152dcc6ba463d22c73fc84b4987f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8e41d6317a2970795a5b2e11aa80092f31c8b0b47f57c6438b0438af605798a4"
-    sha256 cellar: :any_skip_relocation, catalina:       "8a040aacd711c87946829db89eff5c783e77940d12dfd219dc80d511e86104e3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ff9995c81e726a8262683446f851152d209f361cea0ee0987dd258953b9ad73c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "239f5a51cbf16e3c88973d8d20304546029ec7c4296a3ca709ce8975961f32cb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6baa889280d5adaff303251ab7fc5399779d0d01a0c091d0514e2fdd05304ced"
+    sha256 cellar: :any_skip_relocation, monterey:       "aaab7ac9d278e1e382d5548fe6c7ba25a48557d5d7beb5b1eb8539dd35638b55"
+    sha256 cellar: :any_skip_relocation, big_sur:        "72c8ead87dd60d1bba7ab9f02f29d4e26acb80d00e698a2b3e4fa4941bc16ada"
+    sha256 cellar: :any_skip_relocation, catalina:       "1acb8f9d90d699d906a57bf2ed639dacc888f5d1e7cfc94ccf95f7993f6a1c99"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f42d51e88f937432de9bbe2b15f1e2ee38cc485f9a2ac4ea96bccef8cccecf3b"
   end
 
   depends_on "freetype"
