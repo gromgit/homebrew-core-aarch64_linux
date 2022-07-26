@@ -7,12 +7,12 @@ class QuickLintJs < Formula
   head "https://github.com/quick-lint/quick-lint-js.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3cd299798bc6f1759c04610dbe3add6d9e9bba60e59de5cf77d937fa12f2e525"
-    sha256 cellar: :any,                 arm64_big_sur:  "61863de8aa85e3425f4c124cc7e83acd2ba929996ab5342b08600c2805126e0f"
-    sha256 cellar: :any,                 monterey:       "787d0e809422673e66b3c4b164b005bd6062a1bdecd3fd3395d26b90c1e679de"
-    sha256 cellar: :any,                 big_sur:        "32e7df25a0468dde53f332980eddfb1d9eaeb15f3495dfd6c60284e2caa18e22"
-    sha256 cellar: :any,                 catalina:       "51d6766400e325d23bb553d71839bd0304c32465e4c7aed81755701aed87f0ec"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e55c7cf77c11536d9899e7ad5b523749ebee9e623bd51913cf339bd65b920b1c"
+    sha256 cellar: :any,                 arm64_monterey: "0d06a3c1d2959cf9cf41373e257736de49510ccbe86e753c1608556f53e499ba"
+    sha256 cellar: :any,                 arm64_big_sur:  "779ed9441b636e0d19a889f91f72e2345504546246f15f0681beba7c8613c576"
+    sha256 cellar: :any,                 monterey:       "91a25e747d1e6cdf8a5e5692673cf544422857e52e14007b1f1d2cbd3783cb04"
+    sha256 cellar: :any,                 big_sur:        "3a2ae7bc93ce26e587bc6472be32ecbf4a17895f9079da8bf3a9803b9956ed5a"
+    sha256 cellar: :any,                 catalina:       "674ed5b441c3d93cb046e7ee2c8f198ad9358b2b98acc1901d9010993f5318aa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b3531fea949f7b4d111f281e3c13e2516264c95d5ad90618eb851b76f0011b60"
   end
 
   depends_on "cmake" => :build
