@@ -6,12 +6,12 @@ class Bitrise < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ebf4724e904a9323fc57571f3d79b929bc4265f29170f0f6e3e22355895f7fad"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "43039620ea239b67378ef9f54392eda3403a291a6e4597a0b0761db0e3f92a42"
-    sha256 cellar: :any_skip_relocation, monterey:       "689747538a065f967576577fe3875d2f9008229d88a6f1ab48fe8c530c1ab330"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ca820ac55c547f5364c0628294643be8d441d0ddfba79ff48952a2f8693509de"
-    sha256 cellar: :any_skip_relocation, catalina:       "436af0c8446863fc5e35da1edcb6e1a7f4cde95352bc23fdd98aec2498b33e0b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6086fed89ed83fab53ddc6b3b6ce58c3fa6e8c117fab9955a9232b04a2d2e547"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e92ec553ca72b8b6c61ba329205c925512f5ae3c61398c264f04d45a31e687a5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9c76d809c77c0a290f818f1295ae5d9aef15956a0e68037c4f3686283660ccb6"
+    sha256 cellar: :any_skip_relocation, monterey:       "67c47ca1ef9e987ea670838b9dbbd58f4a51ccc9e91fa0445e3d65b63105a105"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9af591c69ae0023355920dd3ce5258e41636b680277cd00377f2e0a6ecdd1bce"
+    sha256 cellar: :any_skip_relocation, catalina:       "13a6548e9ff121ce8e22dc73249a5091f3b00b4db4fea3759ba42933d6edc1f9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "10d303e1b4b0776b2a9fa4ff81bb50428626c1f5289d572c79b1d8078843554a"
   end
 
   depends_on "go" => :build
