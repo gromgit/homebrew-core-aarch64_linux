@@ -12,12 +12,12 @@ class Zabbix < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "07329826a13b7bc4624a3124f7cf79f9c993f68bafd94b4e3ab08e56ca702f4a"
-    sha256 arm64_big_sur:  "8938f8713ab74361153134623b3d0862acfeb3ada4a4cf9602ad81fa4b9f4459"
-    sha256 monterey:       "7d7022a283c49a1014be73d93c436c9ec8f11d217154e25d9c86bcd70b91a8c5"
-    sha256 big_sur:        "fedd929e227423c95433a5aab124272b2bdca74aadd52287650909e08eb1741c"
-    sha256 catalina:       "cf189371c9c7b827f428102baea7ef56df13db80c70e9566c749b1b6d0caf135"
-    sha256 x86_64_linux:   "2a45161f61f70e8b6e7c3f8ef88032a619bade9ec8d1a69a779629efcaff2947"
+    sha256 arm64_monterey: "87798ebc37ae6822d250c85949cfc6948d4eacdae9dd3c75af4db3a0663aae20"
+    sha256 arm64_big_sur:  "bb495bde7366ab820b0ff7680008b84ed778c56f1236803805aa7b5876a42e76"
+    sha256 monterey:       "e49e77fe8ab47b809b632b00966304f84775005405f25ad0dcfaa153f96a456c"
+    sha256 big_sur:        "9c37b48445729832250f1320cce0c319e21b77a5d41da1830846c33336728899"
+    sha256 catalina:       "36dc75884707ac2a4012fddae3122dce68cea6b3b5e04fd8c6ab9cfbd33e3d0e"
+    sha256 x86_64_linux:   "87ff7a128248f218236b97b0ad1d611a1da7b54427570409f010022328682a64"
   end
 
   depends_on "pkg-config" => :build
