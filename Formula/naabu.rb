@@ -7,12 +7,12 @@ class Naabu < Formula
   head "https://github.com/projectdiscovery/naabu.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "66ea56697b7ef444f3dce2ead35eb30b8c2866d21a0f96bef6d9752cb542d26f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "261700cc346a79b467599b09d736d31ac13b1a8609105711d3245991bf3a3b44"
-    sha256 cellar: :any_skip_relocation, monterey:       "7b6aeca4a8eb6c4e02aa9c9a78cc468e2fb0aabf5a3a51ccf1cac2bb4b546dbb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "798df64023eaa7c53385f59369327b326ee1a75cc622ccafaa7ddc2f682f9f47"
-    sha256 cellar: :any_skip_relocation, catalina:       "a2270c49741656f39a2688639fe24be109174678751f92ec98a087804c3455e0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "69ba011532beeaa4d73e51e95830d9fcf5e997bf1430437aca86596fa1ece333"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3b0fbdc53dcdaf902fc0c9fdb3cdf6e7e53dc033425804235fa516b31746fd60"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "04b3af2a0b8257f38f4fe83d0feaa26def8dc810d0a1d9d12fae2f4b8f179897"
+    sha256 cellar: :any_skip_relocation, monterey:       "be5d49a5cbe9c9172bf06c55f236be6d6e4b9be2be9f251bc91b9900738ca57b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c27e308d04d45f935f8d9d432af08fb0083339596f706eba88e0ce60449ea88b"
+    sha256 cellar: :any_skip_relocation, catalina:       "3e40b5a72a9d0c3905770a7ce120fc1681f6509a835a4f925352a61974673258"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "92863f7627d2f1dabd96f5e20cd7014e952291758688c86029274b3f4705ec62"
   end
 
   depends_on "go" => :build
