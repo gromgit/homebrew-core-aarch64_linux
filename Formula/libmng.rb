@@ -10,13 +10,12 @@ class Libmng < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "c446fd993909b3334b8df2eaacf0af44be6da33c03899c85bc966b8659858648"
-    sha256 cellar: :any,                 arm64_big_sur:  "10950a560440734b94a43fffd1988e483c2ff6530b3cf76825c80e9453069831"
-    sha256 cellar: :any,                 monterey:       "f4918c5d36c45d1052351dba94990fd7eb1a3d47123705685add8bec7720c683"
-    sha256 cellar: :any,                 big_sur:        "ae1a19ad2cb9cad4f252aafd63c43d8c44b68175ddace7b0b6369d8541514bce"
-    sha256 cellar: :any,                 catalina:       "0102c3da599178979dba5b225b6fd15cf7896cd64cb41bd548c2cc2487425db2"
-    sha256 cellar: :any,                 mojave:         "e1468ebcdd4fdbb47edf1e0c053206bbaa8792f0ef73fb297cc96f21533965f6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "76a41e2666007dabb0bce0da17d0a55ca7694168e74f31ec6136cb9632642eea"
+    sha256 cellar: :any,                 arm64_monterey: "661f94a4d7c4f68ff415bb5c184c8310d7af1eaf139159ba4163e19a20a5d6f0"
+    sha256 cellar: :any,                 arm64_big_sur:  "bae9b452e72bafc0a8385457cc0d5f914b34905415f26b24b2e4da510658e7ce"
+    sha256 cellar: :any,                 monterey:       "d6900fc7456b8bdb003af4da81629691f4a0c566140ec3f8a5215dbc686a6e6d"
+    sha256 cellar: :any,                 big_sur:        "89eaf6e78bd174288fab321b22481950f650be157d487fd7127c7e24a2c533c1"
+    sha256 cellar: :any,                 catalina:       "47e0d9e9d758d67a26716d436884fb7273298c202b7172610e1ceb0d394a6146"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "735633ed1aa16ea88666586c80c7578bc9a6b052b83d4ce7fa81086156bd5d47"
   end
 
   depends_on "jpeg-turbo"
