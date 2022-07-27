@@ -1,8 +1,8 @@
 class Bitrise < Formula
   desc "Command-line automation tool"
   homepage "https://github.com/bitrise-io/bitrise"
-  url "https://github.com/bitrise-io/bitrise/archive/1.49.2.tar.gz"
-  sha256 "398c2f89027ee02117d7a1477698e030343a03f5f831c19b2f59b9c96c4d9ca0"
+  url "https://github.com/bitrise-io/bitrise/archive/1.49.3.tar.gz"
+  sha256 "6af2f55c08a99412af6fc2dfe439515ef7dc666a91eebe10632b496e8c4f9d63"
   license "MIT"
 
   bottle do
@@ -19,7 +19,12 @@ class Bitrise < Formula
   uses_from_macos "rsync"
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w")
+    ldflags = %W[
+      -s -w
+      -X github.com/bitrise-io/bitrise/version.VERSION=#{version}
+    ]
+
+    system "go", "build", *std_go_args(ldflags: ldflags.join(" "))
   end
 
   test do
