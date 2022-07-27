@@ -1,8 +1,8 @@
 class Nushell < Formula
   desc "Modern shell for the GitHub era"
   homepage "https://www.nushell.sh"
-  url "https://github.com/nushell/nushell/archive/0.65.0.tar.gz"
-  sha256 "72a608c82f765ec3906b343752907ff68fffbd859ee0a5c82e17ad4237cb0109"
+  url "https://github.com/nushell/nushell/archive/0.66.0.tar.gz"
+  sha256 "f275479b41b8fe94e49907955f38a6c448d5d3bb11628930b3141340efea02a5"
   license "MIT"
   head "https://github.com/nushell/nushell.git", branch: "main"
 
