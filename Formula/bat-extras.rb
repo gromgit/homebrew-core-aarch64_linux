@@ -11,8 +11,7 @@ class BatExtras < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "c28c0829cd60e9550c340addade7ea8ce4aef1eff9b224225fb5695ead09567c"
+    sha256 cellar: :any_skip_relocation, all: "717ad828da58e7d7aa1ce4a091c9bd6fbb26fefcf4ce4f67eea52a7001df5f92"
   end
 
   depends_on "bat" => [:build, :test]
