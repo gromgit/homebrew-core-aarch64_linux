@@ -12,13 +12,12 @@ class Leptonica < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f42b450f0dcc303c65e30de8ca6639bf5559c416072fe3f95b36bf5bfe0049d1"
-    sha256 cellar: :any,                 arm64_big_sur:  "f0d0cdb312ad51dc498f25765c7f4566e246eb7d74bd7ddc87b9a23f539f0bba"
-    sha256 cellar: :any,                 monterey:       "4eedc66fac0ac4e4f922c318b7de264d3b1af043a23e882867291c8808652468"
-    sha256 cellar: :any,                 big_sur:        "850aac10ef99d81dacea54d7b0f04df1a2058aac792b2649c4ecd91adcf1bbeb"
-    sha256 cellar: :any,                 catalina:       "a758e0b2eb14c548dd87946193185784cdb8d868e0aa17b2426660fad6ecdab2"
-    sha256 cellar: :any,                 mojave:         "8cef538c6bda97b6f8d71010259bced7ae5400f8a02e79e32cec1eee939b1463"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "118d4902ab8357da71a85d4461d460f1db63baed0d50bd717b145c3fd387f47d"
+    sha256 cellar: :any,                 arm64_monterey: "f12078d1dd4aaeaad14a7f83e3fc80531b44c5468db5e4de2ac7e7e15c05b2ae"
+    sha256 cellar: :any,                 arm64_big_sur:  "7149a71af47d2c56ee6d42b3bfbbd3e1acd028b5d88c06fd12ba9f53b8bce25d"
+    sha256 cellar: :any,                 monterey:       "d38cfdaa7ef6c06742a68619a4a6ff1832693fc5a3fc17326e5ada7562a64232"
+    sha256 cellar: :any,                 big_sur:        "7f3cf712964bbdfdda8f2bb6ce5c6b72c2e60155fc0ed3e61f1b67b2a168dfd6"
+    sha256 cellar: :any,                 catalina:       "fc3413c1bdc6e0fa60fa3b1a0c1cc5106f5c963f3f9322171f9ae5fd87a15a9e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fe46f8ffbba3c0447d13174be795b0052510b7000a1aeee5b237f585334365c1"
   end
 
   depends_on "pkg-config" => :build
