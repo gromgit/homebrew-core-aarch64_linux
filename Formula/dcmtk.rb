@@ -28,6 +28,7 @@ class Dcmtk < Formula
     sha256 monterey:       "4f09e9db0bc9b614c7e02f813d34cde52714ba02eebfbe483167b6a19f81b3d8"
     sha256 big_sur:        "21cab34f724d1178460d76fdcecc4e9887252900a29a6398b87a1dea48eecef8"
     sha256 catalina:       "b38229590ce4674748023c33e4a84d3b96f52ee97351722ccbd49228f15330bb"
+    sha256 x86_64_linux:   "1fe19565fb6d8722f357ecc7e9ffc1534be0778787fc7066ad7fd9cc8f890651"
   end
 
   depends_on "cmake" => :build
