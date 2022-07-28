@@ -31,10 +31,12 @@ class Dynare < Formula
   end
 
   bottle do
-    sha256 cellar: :any, monterey:     "74b0c0829590cd6f298b2112445986075845a1d795973896a7de1a3b3b943ba8"
-    sha256 cellar: :any, big_sur:      "dc535e5c5fe69ccd611b59cf9030bed241491a7f024c60feb4a4eacb9268c1bc"
-    sha256 cellar: :any, catalina:     "a130cdc442e3b1889850d4711bc728ed5a93d4903ec0475c5f698840ac8012c6"
-    sha256               x86_64_linux: "5f1f77d8c26a48e8b2f9e2a78ea79cfe6e2262d4e47779722ed53a2a9616016e"
+    sha256 cellar: :any, arm64_monterey: "f92eccd38bb8dc2d92926546ca3539caca433f9d19d139b0729b45b5313bf9ac"
+    sha256 cellar: :any, arm64_big_sur:  "bea758ae18c53d53bf2da9741863bed79b40fe6bb154272e63e03251c55728e7"
+    sha256 cellar: :any, monterey:       "df203652c63ef1746795342e296e14c3dcbd1ec3ef6b62ced2e180c71d0bfcfd"
+    sha256 cellar: :any, big_sur:        "0bc71e7957e71fcdffa5c95a3e2f7ede3f77e68d2d2b49173bb38373767f84c6"
+    sha256 cellar: :any, catalina:       "58d37e0b773ea7dfa25e6eba288738a9ba462debb3f56dc9ce29dded99820671"
+    sha256               x86_64_linux:   "46058b79d7c8312426b96d6a98c2c43c859be7cc73476bc1ad0fc09268e6c7fd"
   end
 
   head do
