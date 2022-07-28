@@ -12,13 +12,12 @@ class PopplerQt5 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "ac01bce213332806abe12e9d9fc26324768f125e167812d91b59b939c1009512"
-    sha256 arm64_big_sur:  "4b842a53a14f26d5f9c7835550ea24f71bf8458b647845c25e495b7d96b8be16"
-    sha256 monterey:       "357987ba60262b09627cf728526c5553c30f5ecb950e090bcf7b65465fba7857"
-    sha256 big_sur:        "bc8c7adf8d600e05a4492a9bbc60ab773ca025dd4c25fe36937eebcc0558e6f8"
-    sha256 catalina:       "1f9f0868958dd2917a165163d38dd8bb50b2d2fa445d853d337b172e3173f286"
-    sha256 x86_64_linux:   "2af7fd06e1491078b561563e17e07e7d3860d3b960703f34499d08747afc372c"
+    sha256 arm64_monterey: "c5bf4355f8e6cb9da531ab99673816af11adaaea65fa7c1f82bfbf53701f0b3b"
+    sha256 arm64_big_sur:  "176b1b328c693a64285efae9ea83cdca306c3c89276eecd4b1281ae770e01020"
+    sha256 monterey:       "6558a2abf246e0fa0e1612ea4cc7745576f1d2cae7056fe53c919119b49f5a74"
+    sha256 big_sur:        "cec181204e5840813d59b7ae70a6827c098212bb3f72e14c7753377848b7ada4"
+    sha256 catalina:       "430a7f2fb4aaca61a916e46cef47dc4dfd8be222e981f4de462f8bcae1050924"
+    sha256 x86_64_linux:   "4c690b0f499a1de36c92af342d8d2f8b0441e4de82d9a1a1dc91a2f30a972eb8"
   end
 
   keg_only "it conflicts with poppler"
