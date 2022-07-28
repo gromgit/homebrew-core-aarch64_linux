@@ -10,6 +10,15 @@ class CargoDepgraph < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7f2d8c9fb244c7f8b1b83ec485c9e67e5ecb23aa79cd17d06c338c746106c5b0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ab3f2fae4e4e5cbb9864f4ff250fce0e8d18a6c87e0a74e9afee328c39ed7b30"
+    sha256 cellar: :any_skip_relocation, monterey:       "7aba3c49400cc7b7285601deded9016e0c7f02a9994828525c92369dcf040d0a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3cf0a6ca9a2285476b22537b1cd999530c3b1836e9c24675c561baa198840944"
+    sha256 cellar: :any_skip_relocation, catalina:       "2be66238e2a2b7e371fcdb2c9ecfa618d3bead843fee26c430692d6061a0e1b4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d163821cff1fd8f7a09b4be44ae65064ca221bfe1ee6faae6b3ca7f93f6ece83"
+  end
+
   depends_on "rust" => [:build, :test]
 
   def install
