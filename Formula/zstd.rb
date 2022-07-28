@@ -9,13 +9,13 @@ class Zstd < Formula
   head "https://github.com/facebook/zstd.git", branch: "dev"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_monterey: "c7084442d57331eb75dc51926bdbaab33c31059587a1626c714be87c1c43df49"
-    sha256 cellar: :any,                 arm64_big_sur:  "f4be0a469b31cebf7a44d4602d1f31303a211405ce566b6ce1a8743093603b3d"
-    sha256 cellar: :any,                 monterey:       "3cd1dc42736c2873b0684f0da4ffe3e9fdac30ec9ed5b4c0f9f657bc0d5c3f50"
-    sha256 cellar: :any,                 big_sur:        "c79db7b0ca3d67b1094221c062a74e504aeddf2e8df782c01bc551a16794f73f"
-    sha256 cellar: :any,                 catalina:       "bb4069e2e9d4eb1bfe3c8b4e4c7d4fdedb689b48f46a7ab008591aa7230b765f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b612ded8e47a6049f2645d2de06aa74a3a6d47b3c6d8cb166a008cbe808e9bc6"
+    rebuild 3
+    sha256 cellar: :any,                 arm64_monterey: "844b957a277cd93f70f8de91bd4caa21579f9b9e2f55bd5daf0334eee8ef1196"
+    sha256 cellar: :any,                 arm64_big_sur:  "091743749cec2f0ae34482ae370aa5a563d6c7841c42fbc25e0d061863f5faa5"
+    sha256 cellar: :any,                 monterey:       "b0eabfa556c5aed039a5b22cd7e2e3dd52c7d2416c1141e4a8e9e825b9238fc3"
+    sha256 cellar: :any,                 big_sur:        "585bced60a658bfbda88d6a500fa26671871aa354f65cef767f17ea46209b4f2"
+    sha256 cellar: :any,                 catalina:       "bdd2d3349fbcaa7e299cb6184f43e7f2bf29bd5936396d4c7c3d132bd687cd15"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "006b5ab6a4616a8b6f59953cb9efb546d312e3ba231c303bb56749e7f66f56df"
   end
 
   depends_on "cmake" => :build
