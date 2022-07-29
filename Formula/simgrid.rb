@@ -13,12 +13,12 @@ class Simgrid < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "ab8ee6aa628b82f2cc628cb4a8f0299cbab390b79d0e1dfa8a09b475c7503bad"
-    sha256 arm64_big_sur:  "6b1e082b4ba8e6585877d3b6def0ca57e1fc24abb7c5aa84389be5329105b741"
-    sha256 monterey:       "82263db7ab647377a8bf118d3b593c0d29d54fb6a779f8fcda51f574a327b32d"
-    sha256 big_sur:        "86cacdcbf82d4b9ac7e924f616056e6896d16cd7296f07ca9e35711c4927700e"
-    sha256 catalina:       "0dbce7e370ad6966cdd07969af51228614d592ec0abacb02921abde25a833d1c"
-    sha256 x86_64_linux:   "0e9b0fc791be94df18265aa74e59e469451866f48cbf323318302b151b75766f"
+    sha256 arm64_monterey: "7d401bd8da31281321f48a805f556ec8778433a4a44a510e2d1904601f535b06"
+    sha256 arm64_big_sur:  "3c4d9143dc7c913da3742a53230240e23444b97ad6792152dd4c642500d05e8f"
+    sha256 monterey:       "acf61dd03560d053bff2695ef37a44a45b351b383fa491d93c4190d181df9114"
+    sha256 big_sur:        "c1ce395fdbe152df01e411e1e45f964afbe9f295ecd77153e60309f8285c202f"
+    sha256 catalina:       "715af6c891c7c666c5a8b5782ac236af14225a26c9f7fbd8ed1715ebf8528a3b"
+    sha256 x86_64_linux:   "3e773f8d6297a17a270351489406aa94b0ca0a5ead23159d6bd09239e6c4f6fd"
   end
 
   depends_on "cmake" => :build
