@@ -7,7 +7,7 @@ class PythonTabulate < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "96aade7fd67304139f7c2ba7e3585393348fff2b7c9cc2067269cecccfdd9aec"
+    sha256 cellar: :any_skip_relocation, all: "e521ca072a0ffb9f7e0cd463b7b9988a8285584172dabb197663c1b60ab3c1c8"
   end
 
   depends_on "libpython-tabulate"
