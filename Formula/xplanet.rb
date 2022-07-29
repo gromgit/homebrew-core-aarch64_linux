@@ -7,12 +7,12 @@ class Xplanet < Formula
   revision 5
 
   bottle do
-    sha256 monterey:     "82befd651c2e7a35aff92bf1f72cc78bbc024f6e320d03259a2e08545f13d13c"
-    sha256 big_sur:      "48c24de21612e3a5cb19747db269ec15dc1a85a4e49c6e0c0c87b0bdf5b15d90"
-    sha256 catalina:     "c8e659713aaa70e8fc00d48e15cf997648759afa7b6ff8e0979212348fd6cc8f"
-    sha256 mojave:       "9912c643de81e812f69e639e1fe1ee3ee45900d85ce23409adb0a394305b970b"
-    sha256 high_sierra:  "aec227666c4e6216b061e979c5aabd1343c9c6433e8f85868f0f12eff3c01b62"
-    sha256 x86_64_linux: "1c2c1983311884d2e1f44f12abc016b17cfff7409b0c562f507d738972d0e85a"
+    sha256 arm64_monterey: "c51846493f9bf53180929d9804e7e8f0a594e67334785a2f3ea3bbc3bec23a22"
+    sha256 arm64_big_sur:  "7591ff1eca02603587c82b10f0713aab3aab0a4815416751f0ac4fa6ae8298ad"
+    sha256 monterey:       "6266d230063d3ca5436c8865b1908053f96b940020c6290e8d9ff567760568e9"
+    sha256 big_sur:        "d4a167f0b64440612f50fee22412c899fd33790722e21e4045ce283836c0183d"
+    sha256 catalina:       "ccc97cd8a1b948e97d9eecb3c614eeb13bef1c80e4c643b83002878a7adef964"
+    sha256 x86_64_linux:   "b8a2a5c72a02e65bb41b07cd4848d050fc6b5b8acf0d44db291891fe9306e1ff"
   end
 
   depends_on "pkg-config" => :build
