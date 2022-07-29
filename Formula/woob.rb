@@ -14,12 +14,12 @@ class Woob < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "6069d2385856b2f2e5a6283571cb55d8e9703b639eb5da76acb854c09fa5ea16"
-    sha256 cellar: :any,                 arm64_big_sur:  "14559b0aec08bb6a416940a9f33eb41883e0edf2431b07cef1015b231113458c"
-    sha256 cellar: :any,                 monterey:       "d0086aa95d91106dfced563e220fd8f9fbae0412fd4653ffa400c19197d22e37"
-    sha256 cellar: :any,                 big_sur:        "95bd474fbedf37a94eaf12d42061c181349ea482ff5b1b8ab7e5be874871862f"
-    sha256 cellar: :any,                 catalina:       "763cc7fda3d860557dfba7e496a38424eae742a9e6b7c9d8ee15366a3b395819"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "45a59b6cc7ff12e329a85579f0fe6042cdcaa7544dd307b48e2996e327dbd619"
+    sha256 cellar: :any,                 arm64_monterey: "575d54e8b20bcb5c9fcff00faffb6559d39f8c124115369a01a6361852410474"
+    sha256 cellar: :any,                 arm64_big_sur:  "789fda4be94a43ebb530ca87d195f44c0cd975ccae5ccbc2df8ed2d4c22ae50b"
+    sha256 cellar: :any,                 monterey:       "bfebf3f7fbec67f962469e679017978b146e61548ecd98ec5d4fe09a29e41567"
+    sha256 cellar: :any,                 big_sur:        "2384841b14fb8a40a3f1748d04ca3acf1b8f4e6eba7f40e75c99e2d66427d60b"
+    sha256 cellar: :any,                 catalina:       "960d736fbc28b33b5e35f6cffa6fc0d2fa348ab7051794241003ec24a25a6d45"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8d6a068ebf2fa4ee88b12cd638a594a116997e8a018153b71028f6a31ad720d9"
   end
 
   depends_on "gnupg"
