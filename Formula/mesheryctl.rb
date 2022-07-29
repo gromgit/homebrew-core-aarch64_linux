@@ -8,6 +8,15 @@ class Mesheryctl < Formula
   license "Apache-2.0"
   head "https://github.com/meshery/meshery.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fa43790c32942b8d33afa7304cfaf1d0cfd8898275045aa69300456a55c2d5ca"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fa43790c32942b8d33afa7304cfaf1d0cfd8898275045aa69300456a55c2d5ca"
+    sha256 cellar: :any_skip_relocation, monterey:       "ba13382626450a5c9e5510f733fc7834fcb8101dd236002c93dc96acb8e247fc"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ba13382626450a5c9e5510f733fc7834fcb8101dd236002c93dc96acb8e247fc"
+    sha256 cellar: :any_skip_relocation, catalina:       "ba13382626450a5c9e5510f733fc7834fcb8101dd236002c93dc96acb8e247fc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "314f60370334d33d7ba31b2df19673c1b84cb7be100bb66ed6e4f93870d9f659"
+  end
+
   depends_on "go" => :build
 
   def install
