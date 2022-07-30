@@ -16,13 +16,7 @@ class Ski < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "10b4ce4e1bb2f44a779c2f98af93b2ecaec175838aa93191c99b91836d2df8b3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "10b4ce4e1bb2f44a779c2f98af93b2ecaec175838aa93191c99b91836d2df8b3"
-    sha256 cellar: :any_skip_relocation, monterey:       "10b4ce4e1bb2f44a779c2f98af93b2ecaec175838aa93191c99b91836d2df8b3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "10b4ce4e1bb2f44a779c2f98af93b2ecaec175838aa93191c99b91836d2df8b3"
-    sha256 cellar: :any_skip_relocation, catalina:       "10b4ce4e1bb2f44a779c2f98af93b2ecaec175838aa93191c99b91836d2df8b3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a8260309ea5735112878b25d2376f53f3ee5e7a5b36d0eb0f420ded6842406ee"
+    sha256 cellar: :any_skip_relocation, all: "cbda47eb2a97213dee88f63680f6301826874ffc66c6ad2b666125e1505f8585"
   end
 
   head do
