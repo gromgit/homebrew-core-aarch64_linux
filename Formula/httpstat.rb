@@ -9,12 +9,7 @@ class Httpstat < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8d9ac6f7d7da555221bffc4f49b59f60bcc9405439e5d418a49f15a547026dd5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8d9ac6f7d7da555221bffc4f49b59f60bcc9405439e5d418a49f15a547026dd5"
-    sha256 cellar: :any_skip_relocation, monterey:       "8d9ac6f7d7da555221bffc4f49b59f60bcc9405439e5d418a49f15a547026dd5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8d9ac6f7d7da555221bffc4f49b59f60bcc9405439e5d418a49f15a547026dd5"
-    sha256 cellar: :any_skip_relocation, catalina:       "8d9ac6f7d7da555221bffc4f49b59f60bcc9405439e5d418a49f15a547026dd5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4f239a4cae556fd6c19412f141b409b8a347bc83a1cc1f4fd337c04da9c79fd4"
+    sha256 cellar: :any_skip_relocation, all: "219cfdfb663f1f260322ba637902065e5cad3559eeb2e338c198875f3cfd4b15"
   end
 
   uses_from_macos "curl"
