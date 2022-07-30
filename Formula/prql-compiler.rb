@@ -6,12 +6,12 @@ class PrqlCompiler < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9f706dadb02172d7cfae1308d8c096d3691d9fe508078d27621f058313486caa"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "43560eed110356fcbf8a81e30937b7c18fc45bdb24e3f8ca762c4ff5269d780a"
-    sha256 cellar: :any_skip_relocation, monterey:       "6a37f01320f8e2b6d0072b0e39ce908a28096a89f3143e8a1dca65596536fa50"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9ff8956f8d83c28b93254c63def30f7a251b2ac85aa1a02230a6b27a4c1291d5"
-    sha256 cellar: :any_skip_relocation, catalina:       "b5ef5f12dc7f6ecf5768ae5f23610beb223d24673b81cfb5dd649b0e979ccc14"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "83fdedfabc5165d0ec4e420ef6ee78e68241e6a63f18781f126f076c49e0207d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f6c18de881fa5a79d71a39d3ddb2ba213a319250efa202776714e3a71115136c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1bf112635d3a6376522fee4301765b86b8e523178579f7829426db59ad998098"
+    sha256 cellar: :any_skip_relocation, monterey:       "8290a090f7cc180d8f67072d31783407693836406b759c22914baf02757869e8"
+    sha256 cellar: :any_skip_relocation, big_sur:        "cb16a09401ed22e58b0217019d41a52d1936e50da669bf3385c908c79141a3d7"
+    sha256 cellar: :any_skip_relocation, catalina:       "76dd3c32e8a9afe0e20cdecebbad0aa779986ef485f5777c3b0d82181bee65bf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "94136b5e2eb88017984c1e52b4a6a97158d4719d0fa5ea27075db09c7ceb9277"
   end
 
   depends_on "rust" => :build
