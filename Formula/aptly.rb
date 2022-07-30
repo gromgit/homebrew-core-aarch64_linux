@@ -7,12 +7,13 @@ class Aptly < Formula
   head "https://github.com/aptly-dev/aptly.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "692eb1a5b0cfdc72267072c38ec91ac0e09c3afda313318819f3e06f6de16840"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f8e56fb7954c129c0879918c382b762a998d25eee9fab0b7c7fcb2f20d5a2807"
-    sha256 cellar: :any_skip_relocation, monterey:       "b0abc4e127dd981e976f725e56a06111fe7b120fa300d53cadd3230ace8f2ea4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bfa5263df4cf003ef7a928b5ac73da07337ba666929dceecd7c279b784d4bad4"
-    sha256 cellar: :any_skip_relocation, catalina:       "413b36d3c1512a089dff010cb3e39a71ebad07570fe7c87c8413709fb093e677"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "44c2015a999ea878b0b5714f1a261100974f3c8b4834cfe1406447f50821e3ec"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cfed7144faee9ecf6c6f1d17c62f8f421655d32f19375a76847f54a8c8eadbcb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4e87f870317644e20437b88d8c41c2af49a6f8094b5a8a791a22a21d1110aeb1"
+    sha256 cellar: :any_skip_relocation, monterey:       "a22d51e4d224df6aee376957eccc2794c8c958f00c984777e48f28419a6b78bd"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9215c97346fa95bfc6766a3c9f1e52d93db83d6a621676abe4f64c7796a894b1"
+    sha256 cellar: :any_skip_relocation, catalina:       "2a9bbbfb27151d55e385a5731bf6a166f31d647238d3aa6c28ee5783874e4c27"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "16e4a617927df43a88a0eeb394433f1d72776e3e24fa08e126c86050707d7878"
   end
 
   depends_on "go" => :build
