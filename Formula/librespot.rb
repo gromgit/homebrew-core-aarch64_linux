@@ -1,8 +1,8 @@
 class Librespot < Formula
   desc "Open Source Spotify client library"
   homepage "https://github.com/librespot-org/librespot"
-  url "https://github.com/librespot-org/librespot/archive/refs/tags/v0.4.1.tar.gz"
-  sha256 "ae3ce1f3bd0031cac687eb60e08abb2d327ba51623c583765eda70376d69a71f"
+  url "https://github.com/librespot-org/librespot/archive/refs/tags/v0.4.2.tar.gz"
+  sha256 "cc8cb81bdbaa5abf366170dec5e6b8c0ecf570a7cb68f04483e9f7eed338ca61"
   license "MIT"
   head "https://github.com/librespot-org/librespot.git", branch: "dev"
 
