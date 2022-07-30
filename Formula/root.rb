@@ -1,10 +1,9 @@
 class Root < Formula
   desc "Object oriented framework for large scale data analysis"
   homepage "https://root.cern.ch/"
-  url "https://root.cern.ch/download/root_v6.26.04.source.tar.gz"
-  sha256 "a271cf82782d6ed2c87ea5eef6681803f2e69e17b3036df9d863636e9358421e"
+  url "https://root.cern.ch/download/root_v6.26.06.source.tar.gz"
+  sha256 "b1f73c976a580a5c56c8c8a0152582a1dfc560b4dd80e1b7545237b65e6c89cb"
   license "LGPL-2.1-or-later"
-  revision 2
   head "https://github.com/root-project/root.git", branch: "master"
 
   livecheck do
@@ -29,6 +28,7 @@ class Root < Formula
   depends_on "cfitsio"
   depends_on "davix"
   depends_on "fftw"
+  depends_on "freetype"
   depends_on "gcc" # for gfortran
   depends_on "gl2ps"
   depends_on "glew"
@@ -78,7 +78,7 @@ class Root < Formula
       -DPYTHON_EXECUTABLE=#{Formula["python@3.9"].opt_bin}/python3
       -DCMAKE_CXX_STANDARD=17
       -Dbuiltin_cfitsio=OFF
-      -Dbuiltin_freetype=ON
+      -Dbuiltin_freetype=OFF
       -Dbuiltin_glew=OFF
       -Ddavix=ON
       -Dfftw3=ON
