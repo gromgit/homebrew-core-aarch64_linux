@@ -12,12 +12,12 @@ class Gnutls < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "23bf1632f4690a1674f87802590e397b64b72c6b0dfea1cbe4515f6f7f19d026"
-    sha256 arm64_big_sur:  "6c5428d026ae41c3b35dc709aeec17778b29ddccf379fb2858a16e4fa96ced38"
-    sha256 monterey:       "2b8debcdd406402ce7894b418b40ff5daea69ac3075a1dc0e8e47508be2e8b93"
-    sha256 big_sur:        "3439b2b048d1242e14ba8eb10e9e55ed4f0a69c8d58f334279cc4cbfeb0d26c2"
-    sha256 catalina:       "8072b6902e177bd75f6d00989adf07b5a482057ce8193025700ce44198bf4d56"
-    sha256 x86_64_linux:   "daafcb2b610958021e9997b314d1cd437fd5bd562026c6dd7844b6721e10dc82"
+    sha256 arm64_monterey: "9f30799c00efb30c52d864bc865c3d4f7bb3ab5bb707101b67572c962cc6f224"
+    sha256 arm64_big_sur:  "96e743b74e73bf743db62000c3631b0b58c081e1399a7521239572f0f48da9ce"
+    sha256 monterey:       "c7ae049c2b46d81d7e8f861137d3a21e0268b1dd23932cba62ed25b72860668b"
+    sha256 big_sur:        "143c717cc4cf0d4c9c8ad05c93610023b9092b035de982aa3003530a2204a44c"
+    sha256 catalina:       "93d54df117440e3467d57198340e15a3ef7cf7807a7cb3386a84e34f0624dbfe"
+    sha256 x86_64_linux:   "7c8d8948ac53ee9c67931e011b312fd30c9414c70a7065ff1de7e5e30e105366"
   end
 
   depends_on "pkg-config" => :build
