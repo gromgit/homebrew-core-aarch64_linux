@@ -9,12 +9,7 @@ class Nodeenv < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b62820fdf34eb99d433736cc707c41a506f404ff2043418b62a4ab47a46fe99d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b62820fdf34eb99d433736cc707c41a506f404ff2043418b62a4ab47a46fe99d"
-    sha256 cellar: :any_skip_relocation, monterey:       "b62820fdf34eb99d433736cc707c41a506f404ff2043418b62a4ab47a46fe99d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b62820fdf34eb99d433736cc707c41a506f404ff2043418b62a4ab47a46fe99d"
-    sha256 cellar: :any_skip_relocation, catalina:       "b62820fdf34eb99d433736cc707c41a506f404ff2043418b62a4ab47a46fe99d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "37ae15c8646dc8c5b6e535eba8040dc303527e07fa1761fa8fd7834f5ec1d8a2"
+    sha256 cellar: :any_skip_relocation, all: "dfbd40ce1e67ad9d87f4f4fbcee25019bf49957456d5fa6b41e2e9493a6c43a0"
   end
 
   uses_from_macos "python"
