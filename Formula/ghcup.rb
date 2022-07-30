@@ -2,8 +2,8 @@ class Ghcup < Formula
   desc "Installer for the general purpose language Haskell"
   homepage "https://www.haskell.org/ghcup/"
   # There is a tarball at Hackage, but that doesn't include the shell completions.
-  url "https://gitlab.haskell.org/haskell/ghcup-hs/-/archive/v0.1.17.8/ghcup-hs-v0.1.17.8.tar.bz2"
-  sha256 "789cd286b6a7f2bf43f84079888dd3771a9944cca72ca4bfc971689936d0ae36"
+  url "https://gitlab.haskell.org/haskell/ghcup-hs/-/archive/v0.1.18.0/ghcup-hs-v0.1.18.0.tar.bz2"
+  sha256 "fac7e5fd0ec6d95c3d2daa56b4d77ec8daa37b179b43e62c528d90053b01aeb9"
   license "LGPL-3.0-only"
   head "https://gitlab.haskell.org/haskell/ghcup-hs.git", branch: "master"
 
@@ -25,6 +25,12 @@ class Ghcup < Formula
   depends_on "ghc" => :build
   uses_from_macos "ncurses"
   uses_from_macos "zlib"
+
+  # upstream mr: https://gitlab.haskell.org/haskell/ghcup-hs/-/merge_requests/277
+  patch do
+    url "https://gitlab.haskell.org/fishtreesugar/ghcup-hs/-/commit/22f0081303b14ea1da10e6ec5020a41dab591668.diff"
+    sha256 "ae513910d39f5d6b3d00de5d5f4da1420263c581168dabd221f2fe4f941c7c65"
+  end
 
   def install
     system "cabal", "v2-update"
