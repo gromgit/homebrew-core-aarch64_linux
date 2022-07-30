@@ -7,6 +7,15 @@ class GitDeleteMergedBranches < Formula
   sha256 "0ac1a543e4c5b585339c77d3abb14236516637a143e5e1ecc24f9b2ee2123433"
   license "GPL-3.0-only"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0165b8baf45dd618c90835c49dc520c82046b229da30bcf406e41c0e6a7d7911"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dc9e624d56ac24b11c8872c55de72613e927f45c7c1c1015017ea32e7ac59647"
+    sha256 cellar: :any_skip_relocation, monterey:       "6db55bdc66844d2366c4d87028d3f11016f3553bc0103593e4821baef4a868af"
+    sha256 cellar: :any_skip_relocation, big_sur:        "72c138e2071af49e1076d4b5935f9b4941df7c7c0f757c1749799c0dffed1d80"
+    sha256 cellar: :any_skip_relocation, catalina:       "4e643a6ac1e2f6e932f74cc083eaed60f1544fb7fdd2310643db72320e2a9f88"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a8e941c486cdd05ec92c3b672020f0e4b6f4f114c02b6e97dc66730a3828c734"
+  end
+
   depends_on "python@3.10"
 
   resource "colorama" do
