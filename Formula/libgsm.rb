@@ -1,8 +1,8 @@
 class Libgsm < Formula
   desc "Lossy speech compression library"
   homepage "http://www.quut.com/gsm/"
-  url "http://www.quut.com/gsm/gsm-1.0.20.tar.gz"
-  sha256 "b0e6cf4d5ac81387cf74cbe431f77302db3b2f62fc7cb5e21a5670ac30963979"
+  url "http://www.quut.com/gsm/gsm-1.0.21.tar.gz"
+  sha256 "7d8439fc6ed8bfba1a85011f26800b2afee78b96555c9ed9ce9d3024d4da7754"
   license "TU-Berlin-2.0"
 
   livecheck do
@@ -20,9 +20,6 @@ class Libgsm < Formula
   end
 
   def install
-    # Use symlinks instead of hardlinks.
-    inreplace "Makefile", "ln $? $@", "$(LN) $? $@"
-
     # Only the targets for which a directory exists will be installed
     bin.mkpath
     lib.mkpath
@@ -55,6 +52,8 @@ class Libgsm < Formula
     ]
     args << "CC=#{ENV.cc} -fPIC" if OS.linux?
 
+    # We need to `make all` to avoid a parallelisation error.
+    system "make", "all", *args
     system "make", "install", *args
 
     # Our shared library is erroneously installed as `libgsm.a`
