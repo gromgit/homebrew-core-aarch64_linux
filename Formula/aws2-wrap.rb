@@ -8,12 +8,12 @@ class Aws2Wrap < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0178b4f7739118632776439b7fdc3f0ce3607bbe3889a19a7a3d8d4c46441dca"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9b15d61c8f2c14c925bd165c3a6934e5be7ff3ed0e05dda1883a2ad98ee1c313"
-    sha256 cellar: :any_skip_relocation, monterey:       "92e602827c4450fb6be70ce0d0879f5e1130805a5d2bc9d227b3de0840a3d5e7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ad904e5b1c7c2084d0eb98b35d157cf0223e86c09bee23b0e488ae2e7f142fcb"
-    sha256 cellar: :any_skip_relocation, catalina:       "db1cdb2e47c366eec759f992a7066be610fcfed66abc4017ab4b000a23185d34"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "12e437c57a58447a6af2899ec122bc453078944ffb63ed066ea4d2c2e51fc283"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "447b4a780d2e6fce4f6fe67bfb2e3a43809a9fc843d5b218b7de5997332c40e1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "18b885f4d7cf184d10a47a1bc6fad35da831b235bf7c06d1c23315693ff63635"
+    sha256 cellar: :any_skip_relocation, monterey:       "5438ecbfe84a4bfc3082bc863703dcc4bab9e8bd235d34c43f3320d66c4490f9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5369b9fe765f2f118698a544733d0bd1432f3f4f8df6a5bd2963e4f6fd1268da"
+    sha256 cellar: :any_skip_relocation, catalina:       "4981f763b47de75876d6aac602d6896d67bcd04c8d2f405b07957cf9ba235c40"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c4266cd968d613d83489517cc5cc38d87ad5da586ea5eb10671d288b1637d134"
   end
 
   depends_on "python@3.10"
