@@ -8,7 +8,7 @@ class Cdk8s < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "27d89b748ccc221e6a6ca58e2eedb47c1c204896d01e599c6981f0cacd79e434"
+    sha256 cellar: :any_skip_relocation, all: "c62c4f07417ce230992c27dc41a5ada55eeb89e744bc4b49a885807bae5fa2d9"
   end
 
   depends_on "node"
