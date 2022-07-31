@@ -7,16 +7,12 @@ class Flactag < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "1a5bde31200979e346adc3a7e9d498ca38479818c53d87a1a8f4a077b0af3b92"
-    sha256 cellar: :any,                 arm64_big_sur:  "959006d7aa293066610af7cff0ae1be3a9d21ceb3badfe6012d52d3e2830416a"
-    sha256 cellar: :any,                 monterey:       "3dc5913b1b5ad973d03232d55d15235f96e57b39599208e0c388aad9f50403f4"
-    sha256 cellar: :any,                 big_sur:        "fd81ade08727163108bf6eb86fa4c971a7e7f902b720b7eec59e21cbe10fd945"
-    sha256 cellar: :any,                 catalina:       "3bd18beb32b957d6adb4a4221fc5b833f4c9099798857911f8552294a104659b"
-    sha256 cellar: :any,                 mojave:         "89733c2da8653a9e86b2a4fc3e5693c3c7c434305d9aade353e52fd76f457dda"
-    sha256 cellar: :any,                 high_sierra:    "d066a517308ad0f3cbc6603fd7eeb53dba73dc796298163b6c1ec8c0379f72f6"
-    sha256 cellar: :any,                 sierra:         "c23293dce964c701fbaa822bda3a5f87602b28216b3862afced4da53c12728f3"
-    sha256 cellar: :any,                 el_capitan:     "d3e7a517f69ba267c5ff36c065837a4c2925a31d2b0cfe6f5cb32d8d0582fd8a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f1c0e0338dfba95d544567150993403813011ed31406ebeae071777cff0573e2"
+    sha256 cellar: :any,                 arm64_monterey: "172a74591af446c3f610df5b16f2cb22185e386aafa66782755af02b80b2626c"
+    sha256 cellar: :any,                 arm64_big_sur:  "7bcdf781895e83c286433dfc0c7806c1f97690aa229e27ebdfc7e1989418e18f"
+    sha256 cellar: :any,                 monterey:       "6ae8484da21f3b55d40b3036b33974319af845e88ee1163a4134f1a7f63d43b1"
+    sha256 cellar: :any,                 big_sur:        "ca60ff48388d4d2ce6dee37f306849700832c81f13c56f65e9c7327e55e0f36e"
+    sha256 cellar: :any,                 catalina:       "91f3ba33647b5b188c3ce9790004c67a8339c2d165c3cb9b5cccf57a37105181"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "da220ed1b38e1a36e1fe40f01b6627bab8e78e94f46e84dc8f654ea36016cede"
   end
 
   depends_on "asciidoc" => :build
