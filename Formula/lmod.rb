@@ -1,8 +1,8 @@
 class Lmod < Formula
   desc "Lua-based environment modules system to modify PATH variable"
   homepage "https://lmod.readthedocs.io"
-  url "https://github.com/TACC/Lmod/archive/8.7.8.tar.gz"
-  sha256 "12d0dd6f48f4edfb980286f7763c0ece55efe6de46b4fe055d93f4ef1ff6ba43"
+  url "https://github.com/TACC/Lmod/archive/8.7.10.tar.gz"
+  sha256 "efa8b995a532f8f2c67b9a032e89ac7ee51fb302b98f9d0b0554506ddcd482ce"
   license "MIT"
 
   bottle do
@@ -18,6 +18,7 @@ class Lmod < Formula
   depends_on "pkg-config" => :build
   depends_on "lua"
 
+  uses_from_macos "bc" => :build
   uses_from_macos "libxcrypt"
   uses_from_macos "tcl-tk"
 
