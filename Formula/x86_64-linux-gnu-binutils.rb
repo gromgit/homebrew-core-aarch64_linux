@@ -10,6 +10,15 @@ class X8664LinuxGnuBinutils < Formula
     formula "binutils"
   end
 
+  bottle do
+    sha256 arm64_monterey: "223d29d6086c752bfc0554b274128f3d297823b46e1dde252eea3f6e53e56509"
+    sha256 arm64_big_sur:  "56f0035c31cef9e4615a2ff826dc9d558129e9afcd200fcd3e4fd5a391d71964"
+    sha256 monterey:       "4e08215e432fcd44f3bbb74327862db039385b566e31e45c4273cb56ecb7e5d0"
+    sha256 big_sur:        "ae3121942835a7ae4c30164b45b2ef2dbfece6d04bace39fafb6303d07ad5c6d"
+    sha256 catalina:       "8f95026e6fcef4786b57d1dac24d3186ff02eb1aa7cacca7c660c02568c5d936"
+    sha256 x86_64_linux:   "1103fb3fe9abe92e3e3089115249ce61ec311d3a159997b9c6f2039e641e9036"
+  end
+
   uses_from_macos "texinfo"
 
   def install
