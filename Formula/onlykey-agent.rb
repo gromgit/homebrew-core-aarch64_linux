@@ -7,6 +7,15 @@ class OnlykeyAgent < Formula
   sha256 "096f20580ae112f57c1b9b279ed17728dc8e6f0fca301be586b9d976177f1523"
   license "LGPL-3.0-only"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "cac2b6aca95d09e4b09aecab27482f648328e89cd97f6b0dc1c18b81eb7572bd"
+    sha256 cellar: :any,                 arm64_big_sur:  "0f64c7c13ce784b37f403966621ff470829afe7b909f80b83e6e99f6b0a3b0d4"
+    sha256 cellar: :any,                 monterey:       "38a315974a1d2bbf94028c247ec8f50a10365c48813711613c44a5363e942a9f"
+    sha256 cellar: :any,                 big_sur:        "efbaf1b26d3e5545e942f4e1e4cb29d17a91ed1c0c28f5043324e225c7d2a7c2"
+    sha256 cellar: :any,                 catalina:       "2673544be431b425bc04597a05dbc2907ff4a8c718064e7b0fe67dc73c3ceddb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "da4e8a12192106f904bda4e0b62dfcd7b35bb788f67db286c89638e31259f1e2"
+  end
+
   # https://docs.crp.to/onlykey-agent.html#installation
   depends_on "rust" => :build # for cryptography
   depends_on "gnupg"
