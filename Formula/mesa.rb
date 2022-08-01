@@ -18,11 +18,12 @@ class Mesa < Formula
 
   # Linux bottle removed for GCC 12 migration
   bottle do
-    sha256 arm64_monterey: "b25ea498bb2762d8ddd64e647c47039c5a83ce2d3d6347cc5c91d370d86fbf83"
-    sha256 arm64_big_sur:  "1576db8e33b89a7e647c9f5edbdc14207a647f985242924b4853d69d83ff27a8"
-    sha256 monterey:       "f45bca55e3394c71ad1a7bd5fa538f6c1552b1a0475d6ac334d40be00ba1abcd"
-    sha256 big_sur:        "9a312c0b271faae42c2c9781fdf88ebd0fed6f2d8b5261ad406df6e367ba2f0e"
-    sha256 catalina:       "33f50bb6bceaaaa211e3dd8704223b4ca077ed7c8591cc2eea929e799f011c6a"
+    sha256 arm64_monterey: "df0b44f3ab436ebee487b9ef7fd5fb8c7f55b39cf404fd7e412691caedb46971"
+    sha256 arm64_big_sur:  "10fb7ce402bbdb407905023b73adf88bcd535cb52d76b0ffa1acc5af9158fb6d"
+    sha256 monterey:       "8935c48e5a08fd6edea4baa586f13ec6e241608f383e04a4c169221d805d3c18"
+    sha256 big_sur:        "788fa30f51a03af78553905f900989554edb699021e44ee46aa6c7594190c3f3"
+    sha256 catalina:       "6799552f24d2e1068f630432d7dbbf127f4b4baca8e41046d783e59f5d2e1178"
+    sha256 x86_64_linux:   "c2d4b64047befa1b2af07905a2df8bf64fc7cdc3cf29fecc3294e873a221c535"
   end
 
   depends_on "bison" => :build # can't use form macOS, needs '> 2.3'
