@@ -10,11 +10,12 @@ class AwsSdkCpp < Formula
 
   # Linux bottle removed for GCC 12 migration
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "75b03e2f17881722d876516e8e03e793c2c55795203e26a13390e3a22af50b21"
-    sha256 cellar: :any,                 arm64_big_sur:  "6cbccb18c7300c98c9f72084e3a483064f1c1e4bacf43d92ca4e80159df759f9"
-    sha256 cellar: :any,                 monterey:       "f37683ae377a0f1b20845af721e98b1d38cdf5e5e6bd84cdd2d2ac978526e704"
-    sha256 cellar: :any,                 big_sur:        "a1d6cce4d44db4cf086342f5597c0dae1099186a08ec019cf36070ac34461dad"
-    sha256 cellar: :any,                 catalina:       "206681242bd90b14998335f0e5fe6a501bb9dbdca5690f07073e469b889d2013"
+    sha256 cellar: :any,                 arm64_monterey: "81b56d05e77548564afa0e93603379ce26cd64acb5e9e8d615d5ab9744288086"
+    sha256 cellar: :any,                 arm64_big_sur:  "045caa0074c04b231ef27e27e42ed8206f9510311dbf977e36bdf09b45a49e7b"
+    sha256 cellar: :any,                 monterey:       "fcdbef5a994ef4994749b508aab463dfe807ca713f64bf96dee61feb4a4bf5a8"
+    sha256 cellar: :any,                 big_sur:        "7047d80b6b8dbb0e84839b0544ef223cf005ac515a617583b8b6b4974d8b2aee"
+    sha256 cellar: :any,                 catalina:       "f61d38da9be020a7d6f535017060dcffba7e94b62d936972acbfe79adbfd7432"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "daf8d8b696bd723ee55dca5829fe8278eed86ed1ed059826cc30c0ba492276df"
   end
 
   depends_on "cmake" => :build
