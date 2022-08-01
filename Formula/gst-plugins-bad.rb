@@ -13,12 +13,12 @@ class GstPluginsBad < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "46da6999173d22ef0fd829526a64b3f3f89f616303b0ac1afe893fadfaec3232"
-    sha256 arm64_big_sur:  "de6fdaac3c569c9a78a499faf6966272a183a1d9f61694e78122a2dcd977c133"
-    sha256 monterey:       "976262867aad49f38d0a731c1c9df014a47cff8ae8db884640fd87062d2f99a5"
-    sha256 big_sur:        "1a847ff34650437ed1b5c1f05e49f815f52286b2ec8b7740c6dd44269cd6c285"
-    sha256 catalina:       "3d57ee5dcf5458c0478435c8f8b327b37a20d80f2483e7c06216752c26831d41"
-    sha256 x86_64_linux:   "3b2c2623d83f2a701b4ec8c09dd7770c6694414d4dc9b290f3ea0c8d5e638792"
+    sha256 arm64_monterey: "883e428e0916301e1ee4b21e041372a2b523f5e66ec649f6e1a7d073639878f9"
+    sha256 arm64_big_sur:  "bdd8b41d13f8c98b863f0ca559881c7e4532e9845ac4aaf8a4951d9259f5117b"
+    sha256 monterey:       "19fb8cc5efdccea94dd4574eac1e35da2a46b2ca6f48278b3a06d01385c0b8aa"
+    sha256 big_sur:        "92107bb45bd7256d49cd09f2bcd56906f2942c8ff29728ced7ff50963030e84b"
+    sha256 catalina:       "c2f67922be2cb4bea0c6606b9a4a144d2deba28277fdc47a1a1aabe2cc80dacd"
+    sha256 x86_64_linux:   "669d27f5ea32b0cb17da5ca723e537ef0c68110bc5300140e158d3d386eb158e"
   end
 
   depends_on "glib-utils" => :build
