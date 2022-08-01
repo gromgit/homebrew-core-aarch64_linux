@@ -19,11 +19,11 @@ class Mame < Formula
 
   # Linux bottle removed for GCC 12 migration
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "77512c5761af552bc9da39ab41eb49a5c1894da35bca6d6707d73cf637371980"
-    sha256 cellar: :any,                 arm64_big_sur:  "cddd037e1340d22589bcceba76bd342eb681a95f862f0c297a0b0376ba346e66"
-    sha256 cellar: :any,                 monterey:       "960e907734ebfdb58ff5422c6c69a85418799069ce6c9be74b21dc1beb63b8f7"
-    sha256 cellar: :any,                 big_sur:        "e54bf8622b4a91bc8b88eaff51874ba8f2921f77fe3a21a5e7d4c67e7c0ed578"
-    sha256 cellar: :any,                 catalina:       "c8ed1db7af0bb1c31a0137916b79f270941e9c87a1865974075b3e060992b177"
+    sha256 cellar: :any, arm64_monterey: "1f535fd38e2b1aaa0851d5a5172dfd05f0d28f2666c09f8ff8c110222967d69d"
+    sha256 cellar: :any, arm64_big_sur:  "69b5929e7463eb31a3b73010e922587caa1f090f6858e59511b68107a303e7c6"
+    sha256 cellar: :any, monterey:       "ebe43a2bf73503f23165a62521156338844a6a76bdfadc0d658137af84fca8fb"
+    sha256 cellar: :any, big_sur:        "508f2ddcdd9b0d9c36fb9ea5878f9bff7875eebb75896d55c9be3a3945eddf66"
+    sha256 cellar: :any, catalina:       "aab841f0f270b52654bef8143c7bac11dbafde9e64d3b8e5b93d09f3f9ccd223"
   end
 
   depends_on "glm" => :build
