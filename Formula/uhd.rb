@@ -15,11 +15,12 @@ class Uhd < Formula
 
   # Linux bottle removed for GCC 12 migration
   bottle do
-    sha256 arm64_monterey: "efb94d7371798a8c8061d488a7ae8ccac97837cb894a411b5e0b2cafc88def9e"
-    sha256 arm64_big_sur:  "41e8924b64b0ebb6ab16f5f2ab22a68cccee25cea271bea31d52f19c039d023b"
-    sha256 monterey:       "52ea09e8fb25cefe281b0bf29062f728c5d45865dbe078dde350938d0998d376"
-    sha256 big_sur:        "3fe0a796de18574d2ed3e6cee89233aa44f8a52b4214561f31ec854ed8ec48ba"
-    sha256 catalina:       "459c43efefa0474c6bcbc22c987d8bfd540cdf7f71c14885af878f2600d18a4f"
+    sha256 arm64_monterey: "bc85f64768e494482a19797e4fc2ed1c116a374ba6dd7f30b4a33fc7db13555b"
+    sha256 arm64_big_sur:  "9d0863dd30ca3234df2cd754e7eeef970c9cc0d78ee87a03458e1cd88eb85357"
+    sha256 monterey:       "f721cdd00592267dad989844228c2d36df824829b80512f503456ae04913fa15"
+    sha256 big_sur:        "5c2c8947a6cbc27093e2d97539ecd42a860588c4fb5595d0481a471d99916acb"
+    sha256 catalina:       "9349f14593757fe6c896f6a20378471e8ba456aba766921858c2a8fb512cb028"
+    sha256 x86_64_linux:   "5a3a2f4af23c41d2dca63ad6e16814adb2a4132da71bcd1f7402f25a29e2c259"
   end
 
   depends_on "cmake" => :build
