@@ -21,12 +21,12 @@ class SaneBackends < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "5ce5536fb913f7a9da86681e0dfe280024f06243ffc34e6290c74bec3ca0beb4"
-    sha256 arm64_big_sur:  "5e975ebd14b5abc14a27045bfdeba6a35b67fdefb3b3bfb41e31147329ac5ddf"
-    sha256 monterey:       "3d8d4820d67a24d31aeef2252a52fdfe295ac9fa6ac62b9646b9c48af0867a79"
-    sha256 big_sur:        "bc17ea2f5083c867e376d47b21b5e9ca03f44cd4e3c9954a17ec0532c9ae0c9a"
-    sha256 catalina:       "0524e31c3e201f125b48c7d64e6c4426bfed3f625719eafcb18c593e18904320"
-    sha256 x86_64_linux:   "587c72a27734165d08444ac71255802943a67a59f40f7b922792aa1cbea4e7a8"
+    sha256 arm64_monterey: "1d403d6940c131a753c2305a830bb56599b733158edb3810e349a2c9a6fbcf54"
+    sha256 arm64_big_sur:  "597dbfeb7517f0b6d3a8c320fb3acbeb152cf74be7f91538ecb847a49e9ea53c"
+    sha256 monterey:       "5c2ba0815984ffc9597884db2b1fc13f1677a5dea344c73e0c090bf99cd8974b"
+    sha256 big_sur:        "381d3502dc3cd2c22e95e8a870578891b0da3580b800e70ab061029c47b52873"
+    sha256 catalina:       "b0d4a34cc8c506c4fc024edfdf13e5a1be13a551aaef21dfae8d8ffec3c2f93f"
+    sha256 x86_64_linux:   "be8cdd2d42cc791ba9773007c905ed73abeb3873e5d53cc1cc628ac4084f61d4"
   end
 
   head do
