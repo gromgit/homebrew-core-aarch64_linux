@@ -5,7 +5,7 @@ class Ctl < Formula
   url "https://github.com/ampas/CTL/archive/ctl-1.5.2.tar.gz"
   sha256 "d7fac1439332c4d84abc3c285b365630acf20ea041033b154aa302befd25e0bd"
   license "AMPAS"
-  revision 6
+  revision 7
 
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "eadc16c6d81b7d6ac0b4c15954575c3da812903b4af0273eacc5d9b0b7e1d6c9"
