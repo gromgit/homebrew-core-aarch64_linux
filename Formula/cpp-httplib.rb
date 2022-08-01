@@ -5,6 +5,10 @@ class CppHttplib < Formula
   sha256 "95ac0740ef760829a079c01a44164fd74af3fdc0748a40fc6beefd0276fd2345"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "0c494dc302e9e23d87ad25a599fc5c31b525e765162da8d25c7bcce9a851b2de"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
 
