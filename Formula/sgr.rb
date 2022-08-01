@@ -7,6 +7,15 @@ class Sgr < Formula
   sha256 "e5153944383a0160efe4d56a2c4a6d11f74bb1a04d097df95806ddcbc1ab5618"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "9ed51698283079824a7d599d00710ae5d742128721d6f782ce2311813ebc828b"
+    sha256 cellar: :any,                 arm64_big_sur:  "ca7de3c262b37b0eacdd714b52a53176e9e19047290076df1dd46448c83527d3"
+    sha256 cellar: :any,                 monterey:       "1e7346eaf87e3a016a2320f44c3c06748eb9bcd6a69cc4c26ba4cbe55de5072b"
+    sha256 cellar: :any,                 big_sur:        "c8a928fc8caec9e1d8d2a7085785648659174ce2b1aa63c8f5d4b8ccded0b42c"
+    sha256 cellar: :any,                 catalina:       "411f1924e918a81a8230cbafbcec86a9e78c5982bd79e3fda9cdf6777e7fb8c0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5c459933ee16f232f9bd09512dca9d30c6962f1bc15d7b821b38ad54faa40652"
+  end
+
   depends_on "libpython-tabulate" => :build
   depends_on "poetry" => :build
   depends_on "rust" => :build # for cryptography
