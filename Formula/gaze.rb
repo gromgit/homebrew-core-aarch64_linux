@@ -5,6 +5,15 @@ class Gaze < Formula
   sha256 "02bac4bfeded4e8e951af2d255a26ea3554dbbf4fd124cc9cfad5e29265e0a4d"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bcc5376767d8967574e34cab01548c2bd18334425bab843cb9d5c1bdca2c3534"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1bf19f01c4c3be1eda780a9f4318453fadde3a719634c93049ac9a2eaba2b658"
+    sha256 cellar: :any_skip_relocation, monterey:       "f661e00d7b3ce2981d25b9b678a5a9a737b6a392bd281d40c67fb247e4df21d7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4e40eac0fccc67d48ef0bae1f7477dd1fe13db949afb17fe6d08791fcb7029be"
+    sha256 cellar: :any_skip_relocation, catalina:       "bfb9d2695e93863c6cfb44f657a97d36d93b6b577e0f326132179b3043999e66"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fb0ee917847513e3e05f1973b195d9b4c4d5a409babc621e5679b705bccece20"
+  end
+
   depends_on "go" => :build
 
   def install
