@@ -5,6 +5,15 @@ class BerkeleyDbAT5 < Formula
   sha256 "e0a992d740709892e81f9d93f06daf305cf73fb81b545afe72478043172c3628"
   license "Sleepycat"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "3552b61376eea832cbc2a763c725c77c56f0ce3c94b72cb80acdb5b6b26d7e45"
+    sha256 cellar: :any,                 arm64_big_sur:  "55d4b9058c542dd9a9e90915c45fa0e4aaf4a2d9d5564df08acc4b6b2b0febb7"
+    sha256 cellar: :any,                 monterey:       "ac63e0443e2c939ca35be34dda37e8fe978c2ce97ca7f387972ffcb7a58437a4"
+    sha256 cellar: :any,                 big_sur:        "7e3d143445f45d8a2b0483d0d67e6d850d31304e39b5186999359788aada498b"
+    sha256 cellar: :any,                 catalina:       "5d16240f2a7ff2d057db048058d9b0644e152e50989f78ce66121e6350afa8a4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0b494da812a74d56cb31bcca41dcff11e82cf84dfbaeca52a6923ef7f2882578"
+  end
+
   keg_only :versioned_formula
 
   # Fix build with recent clang
