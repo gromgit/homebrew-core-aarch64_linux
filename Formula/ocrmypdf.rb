@@ -9,11 +9,11 @@ class Ocrmypdf < Formula
 
   # Linux bottle removed for GCC 12 migration
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "66e50541111f954b7d2a6cee31ca2caa8ac511107f02e5b95cc0873bd3d7ad05"
-    sha256 cellar: :any,                 arm64_big_sur:  "169508ca01bd84ce5babcb206027c19d0f75aaa20908e60038c4b1f83fb4623d"
-    sha256 cellar: :any,                 monterey:       "8d0cead07a1213cf2ae14adfd4de600c50ae37740b5f8b821ff48fa2cfd6cab2"
-    sha256 cellar: :any,                 big_sur:        "f91d15101da26cd53fa7cf37a89d8c97b4ac5b5ef4d1c693aa2f5e82331eae77"
-    sha256 cellar: :any,                 catalina:       "ab99a98994914f6e7e75de8a020d1dbf3983742b62398c306a1b4fb886c2b358"
+    sha256 cellar: :any, arm64_monterey: "fc0cdf1382e63980be844ab60dfa6c1a8fe56cb6bd2218249c5f76ccf5269066"
+    sha256 cellar: :any, arm64_big_sur:  "d1f4a41cafafce247ce2961f75e79627568bde9defb0879647ab409569795211"
+    sha256 cellar: :any, monterey:       "2121f1eff069fab3a99ac230b863df6c7bcf61539c7d68e8f4077828ca9bbb87"
+    sha256 cellar: :any, big_sur:        "dd11ac432cd5df72412b4685bbeef5662859b68f862615898bedc1c96a3ce66b"
+    sha256 cellar: :any, catalina:       "15c210caa9b0b4a765125fc5c77bc881022863e13e86fc119a28eea620506ed9"
   end
 
   depends_on "pkg-config" => :build
