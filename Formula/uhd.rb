@@ -13,7 +13,6 @@ class Uhd < Formula
     strategy :github_latest
   end
 
-  # Linux bottle removed for GCC 12 migration
   bottle do
     sha256 arm64_monterey: "bc85f64768e494482a19797e4fc2ed1c116a374ba6dd7f30b4a33fc7db13555b"
     sha256 arm64_big_sur:  "9d0863dd30ca3234df2cd754e7eeef970c9cc0d78ee87a03458e1cd88eb85357"
@@ -29,6 +28,10 @@ class Uhd < Formula
   depends_on "boost"
   depends_on "libusb"
   depends_on "python@3.9"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 
