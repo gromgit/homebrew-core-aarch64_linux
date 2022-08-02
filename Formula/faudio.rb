@@ -7,12 +7,12 @@ class Faudio < Formula
   head "https://github.com/FNA-XNA/FAudio.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0a9e88769b4a8ce4e117942e7b4f9802a13514e9cb79dc4490a0402576482ae7"
-    sha256 cellar: :any,                 arm64_big_sur:  "bebbe0a403b56b3412e346feab8681f1b369cd532243f9f7442869b5102c6d62"
-    sha256 cellar: :any,                 monterey:       "8a74cf44487624760a6e87adf68d5798117ea6c310a0be99a67ebf5ce7d6dfd0"
-    sha256 cellar: :any,                 big_sur:        "1a3ec49ddd79a52a30bd2af27aabae37ec04ad273640bf3e95ad73a9de877d6f"
-    sha256 cellar: :any,                 catalina:       "9a127f114dcf6a3ad22381df2e937fa6081e5473a91b90f80cb4820c63e0b175"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0eadac57e7a7c50b67af5a2a2fbbdf2b3769c406939c6fd1261905135fc5c413"
+    sha256 cellar: :any,                 arm64_monterey: "bc2485eb6817714643f190d77ba28e6802a7cbf8ad67ee075a539b66ea40e10d"
+    sha256 cellar: :any,                 arm64_big_sur:  "2302caff4ae43f356ae8faf95b30035e9e251cbff58b612cbf48ae29b942c910"
+    sha256 cellar: :any,                 monterey:       "729994576918cd9fed78c4945c931b39f5d9241bb4297d5a2c5d5d2242dec50b"
+    sha256 cellar: :any,                 big_sur:        "9d399223ecbbed1eb75f8d51b9b2efcbb792101d8424d4c700897cbfdd3f31a2"
+    sha256 cellar: :any,                 catalina:       "ade36ad5c0a21e79e4d890e2ff623aa87cb006cc70554effcc4194a921b3bc71"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1e03dc7c8e8094e84cb19af58dcb479d008261e7464fcce48003198877a3541c"
   end
 
   depends_on "cmake" => :build
