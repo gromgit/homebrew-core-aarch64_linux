@@ -1,8 +1,8 @@
 class Teleport < Formula
   desc "Modern SSH server for teams managing distributed infrastructure"
   homepage "https://gravitational.com/teleport"
-  url "https://github.com/gravitational/teleport/archive/v10.0.2.tar.gz"
-  sha256 "c843ea347c79ff8707b65d578e38f0faae6e27c0c88cb66b3266f7272070c0a5"
+  url "https://github.com/gravitational/teleport/archive/v10.1.2.tar.gz"
+  sha256 "3d3ba65073f5524144e7145705e8e2ac46ff4ec3bc318f94c8849d30984ecc2d"
   license "Apache-2.0"
   head "https://github.com/gravitational/teleport.git", branch: "master"
 
@@ -26,6 +26,7 @@ class Teleport < Formula
   end
 
   depends_on "go" => :build
+  depends_on "pkg-config" => :build
   depends_on "libfido2"
 
   uses_from_macos "curl" => :test
@@ -36,8 +37,8 @@ class Teleport < Formula
 
   # Keep this in sync with https://github.com/gravitational/teleport/tree/v#{version}
   resource "webassets" do
-    url "https://github.com/gravitational/webassets/archive/dae01015ca8e1310734e92faadd13e77844b7547.tar.gz"
-    sha256 "9e15a80a055c0496bab93ca079abcd9ddff47eb43b4ebbb949d2797fcbbe3711"
+    url "https://github.com/gravitational/webassets/archive/7370f56cbd7e8c706503047ba5ff1fe874a3bdae.tar.gz"
+    sha256 "7a84111fd076ec98f4e396dcea8d991467524457d2dbdd0865ee659dde7742a2"
   end
 
   def install
