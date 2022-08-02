@@ -6,7 +6,6 @@ class Ccls < Formula
   license "Apache-2.0"
   head "https://github.com/MaskRay/ccls.git", branch: "master"
 
-  # Linux bottle removed for GCC 12 migration
   bottle do
     sha256                               arm64_monterey: "b8c13816cd75809e6ea41113e55f37c547aeba195c648c47af3863921ac85115"
     sha256                               arm64_big_sur:  "11204e506ee765088067057072547cb7b190fb466ff719d8a1de0fd0b4116a7f"
@@ -20,6 +19,10 @@ class Ccls < Formula
   depends_on "rapidjson" => :build
   depends_on "llvm"
   depends_on macos: :high_sierra # C++ 17 is required
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 
