@@ -7,14 +7,12 @@ class Openmotif < Formula
   revision 2
 
   bottle do
-    sha256 arm64_monterey: "04764ff04cd2dd89cca22efe8e477f35ea48b5e1e82899a1cc741929c3269051"
-    sha256 arm64_big_sur:  "ae3f4bf92f1cbc78a985e8c27979a52c1a4c16696a74bb142a317f88f5c46082"
-    sha256 monterey:       "c648e27365e8df4bb9fc6bc1a518e02954a40108f9c08e7daf98c7c168bb9d0e"
-    sha256 big_sur:        "ca698d287f8b964a34fa23cf2a8b6039fd5913d6169bbdf90bf90f6b580c8475"
-    sha256 catalina:       "07edf35230c5dca07fd5b4aa3a198d9ec706319e9b57ae62259f63d9726262f7"
-    sha256 mojave:         "b921f9634055bd7aaab722d156feca35da0742106036f23837241d53d1380648"
-    sha256 high_sierra:    "0ebe3e7a88d400291a3e0a3f46d40b500c1e0487f5f689535c8c468993e786da"
-    sha256 x86_64_linux:   "e833d9a0fd3a50c46a804214b71e8566cf89c3a9fcef026de1d82c1b7bf9f3ca"
+    sha256 arm64_monterey: "3942656be5f95807753f8549c98d5263cc9bd510a9b73e4bb6256dfa8928bd76"
+    sha256 arm64_big_sur:  "004bb6002de4b145d78adfb0dfd3dc69de01012daa7632770329bf658cb52420"
+    sha256 monterey:       "3d8e123bd66804492e9c029dd8cf4f5c6eee742f55558e8aeda6cc80f41021cc"
+    sha256 big_sur:        "186bd2c9a8f7d69e31e4d00e206036f8128483627e1af8310b847d2e327bb413"
+    sha256 catalina:       "3cc1aea00676992dc09e499f10737729e964cab6fb8750d0d54c51a3716d1166"
+    sha256 x86_64_linux:   "a7ec8d4e5739b6c130dadce451e3d2ee44658e87958a93e67548afe2b36e6b62"
   end
 
   depends_on "pkg-config" => :build
