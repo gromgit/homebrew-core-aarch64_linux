@@ -8,7 +8,6 @@ class NetlifyCli < Formula
   license "MIT"
   head "https://github.com/netlify/cli.git", branch: "main"
 
-  # Linux bottle removed for GCC 12 migration
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "d50b2a69f20fa817985ec0ea32d634ae3a03f4d8cb2fec9f2083488924f970af"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d50b2a69f20fa817985ec0ea32d634ae3a03f4d8cb2fec9f2083488924f970af"
