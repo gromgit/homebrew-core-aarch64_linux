@@ -18,6 +18,7 @@ class GstPluginsGood < Formula
     sha256 monterey:       "97a73d2e1517c8b4a14cfcacd99cfc37bc0b51ac73e6d3d45e268aa26f6b500f"
     sha256 big_sur:        "548d976418b0674c3bfae090dfdf95caf81265ed28d8f805581969c87bdf5969"
     sha256 catalina:       "8af212934a8a49b17608ab23867c199ae8dc8b20ec34c16fadb18fbd484688bf"
+    sha256 x86_64_linux:   "17eaf185e0943aa1c8b4fc1a270ba0ca76dac7a65f8edf27ca8ad6e744e94b53"
   end
 
   depends_on "glib-utils" => :build
