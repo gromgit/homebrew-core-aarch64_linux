@@ -1,8 +1,8 @@
 class Murex < Formula
   desc "Bash-like shell designed for greater command-line productivity and safer scripts"
   homepage "https://murex.rocks"
-  url "https://github.com/lmorg/murex/archive/v2.9.5000.tar.gz"
-  sha256 "5607923416219951ba6b848b57138b5d10f4ce95090d167f9330231de4862e2d"
+  url "https://github.com/lmorg/murex/archive/v2.10.2300.tar.gz"
+  sha256 "0ea18936bf9b77e0198124bb6cfb0cc1f6487c483e84aafb9063b4434e2e777d"
   license "GPL-2.0-only"
   head "https://github.com/lmorg/murex.git", branch: "master"
 
