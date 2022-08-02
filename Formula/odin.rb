@@ -8,7 +8,6 @@ class Odin < Formula
   license "BSD-3-Clause"
   head "https://github.com/odin-lang/Odin.git", branch: "master"
 
-  # Linux bottle removed for GCC 12 migration
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "05ecd553e5ee0bd46862767c710c1e3a1d86ea2f779d017a6b313df44065326c"
     sha256 cellar: :any,                 arm64_big_sur:  "e04e6af571209fc7ad4ce0742d566cd05429ece4854bdd948f9e6501238ef3aa"
