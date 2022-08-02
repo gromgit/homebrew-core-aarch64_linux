@@ -7,12 +7,12 @@ class Fzf < Formula
   head "https://github.com/junegunn/fzf.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "325e796e003bf8eb0f42ab443b7851c41a2cb8d97aaeae6fce9e7fdd8348fae6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "325e796e003bf8eb0f42ab443b7851c41a2cb8d97aaeae6fce9e7fdd8348fae6"
-    sha256 cellar: :any_skip_relocation, monterey:       "243e95d4e15d0c9dbfd2dfb8d183cafcbd9f4eaf4fd197660f86b79f7e817ef8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "243e95d4e15d0c9dbfd2dfb8d183cafcbd9f4eaf4fd197660f86b79f7e817ef8"
-    sha256 cellar: :any_skip_relocation, catalina:       "243e95d4e15d0c9dbfd2dfb8d183cafcbd9f4eaf4fd197660f86b79f7e817ef8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ab5ada0c11372a8cc6c3ac4be814b9764275cbda578df96c0bff3f1ea69e3768"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8382d9b295388607f5683f58c68bb9601935fb1cd639161b5fe980423c127b3f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8382d9b295388607f5683f58c68bb9601935fb1cd639161b5fe980423c127b3f"
+    sha256 cellar: :any_skip_relocation, monterey:       "c294f52838622afbaf2ec8b7cfe0b882cebf202d63a48aecd9a22c288aa25f41"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c294f52838622afbaf2ec8b7cfe0b882cebf202d63a48aecd9a22c288aa25f41"
+    sha256 cellar: :any_skip_relocation, catalina:       "c294f52838622afbaf2ec8b7cfe0b882cebf202d63a48aecd9a22c288aa25f41"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2ee47c63dbbc25d4499df6eeeac871e9f345b8d19ce03e97506e8d50dd6e156d"
   end
 
   depends_on "go" => :build
