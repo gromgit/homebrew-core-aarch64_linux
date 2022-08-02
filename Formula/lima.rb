@@ -12,6 +12,7 @@ class Lima < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "2ed0d377f31ed7e1448098dcaf07b33303c2afc9615a140261efed037bde773f"
     sha256 cellar: :any_skip_relocation, big_sur:        "ddf61fd17410b83e9b6540c61d601f71660f8360dc0b1555b47edb982b177dab"
     sha256 cellar: :any_skip_relocation, catalina:       "827fb3183a3407b53a500a5b5904755c16b2bac7fddcb93e73493523a202b0e7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "262c98e0e6eb48ac230eb1818fc5fc916bf27598bf622bd8eba3036a40c41eac"
   end
 
   depends_on "go" => :build
