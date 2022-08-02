@@ -10,11 +10,11 @@ class NetlifyCli < Formula
 
   # Linux bottle removed for GCC 12 migration
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3719df5ff383da51eea5a2cf244ac08f596c26b3ec96af9ce5cdbdb5678675d7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3719df5ff383da51eea5a2cf244ac08f596c26b3ec96af9ce5cdbdb5678675d7"
-    sha256 cellar: :any_skip_relocation, monterey:       "c7aa8ea285efbda5358d9c1558ffad086a39f88eab831bb5b7e296a676ab58c6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c7aa8ea285efbda5358d9c1558ffad086a39f88eab831bb5b7e296a676ab58c6"
-    sha256 cellar: :any_skip_relocation, catalina:       "c7aa8ea285efbda5358d9c1558ffad086a39f88eab831bb5b7e296a676ab58c6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d50b2a69f20fa817985ec0ea32d634ae3a03f4d8cb2fec9f2083488924f970af"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d50b2a69f20fa817985ec0ea32d634ae3a03f4d8cb2fec9f2083488924f970af"
+    sha256 cellar: :any_skip_relocation, monterey:       "96ab0be2e937f3b225b765e86df8acb52507c12e2bff8232010dc1398115af8d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "96ab0be2e937f3b225b765e86df8acb52507c12e2bff8232010dc1398115af8d"
+    sha256 cellar: :any_skip_relocation, catalina:       "96ab0be2e937f3b225b765e86df8acb52507c12e2bff8232010dc1398115af8d"
   end
 
   depends_on "node"
