@@ -17,6 +17,7 @@ class Gtk4 < Formula
     sha256 monterey:       "b28bdb861fc9a37d2dde9b8c2b2ee5ad8c98e332eec18e0e76a3354e38edcc2f"
     sha256 big_sur:        "eb51d27b05cef73b482a8633ccaad8e8e323136cb2daee38e33f71e06bd98b4e"
     sha256 catalina:       "7fee4eaedab79a916c07273d91f397774c43c57a5d04e5a3b3e0931d84ede86c"
+    sha256 x86_64_linux:   "2e65a21847b2b0048cb823224156862bb37975d4797500649d35dce462f53241"
   end
 
   depends_on "docbook" => :build
