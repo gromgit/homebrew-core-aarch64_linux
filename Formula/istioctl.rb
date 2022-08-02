@@ -2,8 +2,8 @@ class Istioctl < Formula
   desc "Istio configuration command-line utility"
   homepage "https://istio.io/"
   url "https://github.com/istio/istio.git",
-      tag:      "1.14.1",
-      revision: "f59ce19ec6b63bbb70a65c43ac423845f1129464"
+      tag:      "1.14.3",
+      revision: "a95e01fe300e14a11e7e9503d4b2c196ab755fcf"
   license "Apache-2.0"
   head "https://github.com/istio/istio.git", branch: "master"
 
@@ -16,8 +16,10 @@ class Istioctl < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "f1c40fb94cdb8b8076d8f1c54a4db0be6c3d0a7f5a6d30601e699178d2bc79a5"
   end
 
-  depends_on "go" => :build
   depends_on "go-bindata" => :build
+  # Required lucas-clemente/quic-go >= 0.28
+  # Try to switch to the latest go on the next release
+  depends_on "go@1.18" => :build
 
   uses_from_macos "curl" => :build
 
@@ -30,6 +32,8 @@ class Istioctl < Formula
 
     os = OS.kernel_name.downcase
     arch = Hardware::CPU.intel? ? "amd64" : Hardware::CPU.arch.to_s
+
+    ENV.prepend_path "PATH", Formula["curl"].opt_bin if OS.linux?
 
     system "make", "istioctl"
     bin.install "out/#{os}_#{arch}/istioctl"
