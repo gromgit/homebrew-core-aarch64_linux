@@ -8,7 +8,6 @@ class AwsSdkCpp < Formula
   license "Apache-2.0"
   head "https://github.com/aws/aws-sdk-cpp.git", branch: "main"
 
-  # Linux bottle removed for GCC 12 migration
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "81b56d05e77548564afa0e93603379ce26cd64acb5e9e8d615d5ab9744288086"
     sha256 cellar: :any,                 arm64_big_sur:  "045caa0074c04b231ef27e27e42ed8206f9510311dbf977e36bdf09b45a49e7b"
@@ -21,6 +20,10 @@ class AwsSdkCpp < Formula
   depends_on "cmake" => :build
 
   uses_from_macos "curl"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 
