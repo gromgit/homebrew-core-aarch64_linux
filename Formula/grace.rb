@@ -12,12 +12,12 @@ class Grace < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "0513e12bd1ae9b631d576effdf09b697c94b627ed2c0aeb899b041a7c7d4ca89"
-    sha256 arm64_big_sur:  "c0bf43c187029b99326babf6bab2a352a6fc0d4092a49dfedadeff8dfed01d6d"
-    sha256 monterey:       "f0916c68e9915b20fd408f7cd3e9dad4c7d7dad85bf4c41dff95d270cf98a79f"
-    sha256 big_sur:        "9f9d80717bbc12f00c6ea79416a95fde41491125e325561b1e1442613e3c260f"
-    sha256 catalina:       "db3a1a8adad3df09d3e9a96e85c85d2f5e6cb09e4729560ca6b87e3d3ba636fc"
-    sha256 x86_64_linux:   "c879b07803e10fea09ed93fc3a9d169848841502e17c16fc4de019355463526a"
+    sha256 arm64_monterey: "26ff1421ae2de1ce2319b4584d4e09b9262b1ed126d8c767d44a87009b8ee219"
+    sha256 arm64_big_sur:  "1ba31e5d4e056187e182e8c46a71e6bc4dbb8b6e35d6f314fb64aa3136a93f43"
+    sha256 monterey:       "4f30899270663be69c5a6ee832c0ef7b19baf3a422f7fc6d06ef6fd5d69e0892"
+    sha256 big_sur:        "8c5c9770e21706084537da65b5a4c0ab95f0dee9036b716ed3987496aabd1b4f"
+    sha256 catalina:       "f7e7b6cd2ec94d293b711dfb8c20cba1e000d89a791c7e3596b4806c73250432"
+    sha256 x86_64_linux:   "1d60f284e17b5b7b40e51c41070ca4eeacf9bda3c9e75065e53c40921de9472d"
   end
 
   depends_on "fftw"
