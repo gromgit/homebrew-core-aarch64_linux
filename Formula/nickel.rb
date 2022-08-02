@@ -7,12 +7,12 @@ class Nickel < Formula
   head "https://github.com/tweag/nickel.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "253153935a0851deb6b71ab13af3aebe111135036bf9d0678f1d33aa2f6e3274"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "46c530c40043a0c23148c855b81d173e6d35ac214ba8e9c053144243128dc840"
-    sha256 cellar: :any_skip_relocation, monterey:       "51ebfce96fc385913a762cace6ba8c40547a1aabcfea5d7e34c01e2fe218dd12"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3477ce1b7d66726fda834b900ae1ccdb4b89a6dd0883cf1edd830c73217d93dd"
-    sha256 cellar: :any_skip_relocation, catalina:       "392ba12ce5fbd2438bab43e06b680f253cb1c1bfd0d0df765f93442c410ace5e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e8f54a5740f84e3be7c449a8a5e3465f859b784820764ce387214cac24c1ce1a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "68e82ed03d2901fbe6a1c3bbcbec3dd3887968e4eb6351244ab4c1c8d28f751d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2a06d5b2ef8debd6add5999e7fe4989432860adc4f5b92ae9fd142a8e705be77"
+    sha256 cellar: :any_skip_relocation, monterey:       "7a435f21597156e951fb9c00b06f02c21188d2488b86f24988b6d6eeec4d3dde"
+    sha256 cellar: :any_skip_relocation, big_sur:        "429dffbb7db20a15b3b51300f592368925807165ba5070045bb93fe39e309c72"
+    sha256 cellar: :any_skip_relocation, catalina:       "0d822b32d13309c17c2287fd1a22ecb1185defae37b1bf49551e0c0127b0abdc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c0005624061442a6df78d2d977ec4de3cb0e193b916df91ba42c383dbf9eec7b"
   end
 
   depends_on "rust" => :build
