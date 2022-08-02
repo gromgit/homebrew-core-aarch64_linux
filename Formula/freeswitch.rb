@@ -14,12 +14,11 @@ class Freeswitch < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "c6ea3203ace7bb14a093379a005634c2a1168c3ffc8e6180628b6d1d9ea144c7"
-    sha256 arm64_big_sur:  "d50a18774f5ebce104dd53843c20998c7af189d97a6f56c60a6db54876b36c64"
-    sha256 monterey:       "d2b30cb6927c79f42bcb500af86490ba9f16c6f3dbe67a237077b91e9f31cfc3"
-    sha256 big_sur:        "b63a67915cba8a3d1e6f1580a4c9c5595c3d61d1900580a6403e394eb525fec3"
-    sha256 catalina:       "33498f0826b57b350702e6de4966bae76975b4f31b6ef10fe70a3a29107e99a6"
-    sha256 x86_64_linux:   "413dbb409c33a4b2a5215934a26b5c308d0dbb11d3ae559f2eed61ce32561813"
+    sha256 arm64_monterey: "edac1bff31549b74960e9da1636804482e8bd1a76557c8faa3e28798637736a3"
+    sha256 arm64_big_sur:  "ca15182a13b99bd317cf36d17b225544fab0a232e3be97fb803e5ebc8d958de0"
+    sha256 monterey:       "1d8a0979b95a6ba08f8f8340a8d66a5a6092de9035cf6ee529482de85a6cadc2"
+    sha256 big_sur:        "45f4fc04c78bde00b32b082a50141b30977e8a045fec5211bb55bf1c09fdfa8c"
+    sha256 catalina:       "66e56979495bc6be8079d0947e00c55582fca32b2e3328ff7307aa0ed1dd1d08"
   end
 
   depends_on "autoconf" => :build
