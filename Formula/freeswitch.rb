@@ -19,6 +19,7 @@ class Freeswitch < Formula
     sha256 monterey:       "1d8a0979b95a6ba08f8f8340a8d66a5a6092de9035cf6ee529482de85a6cadc2"
     sha256 big_sur:        "45f4fc04c78bde00b32b082a50141b30977e8a045fec5211bb55bf1c09fdfa8c"
     sha256 catalina:       "66e56979495bc6be8079d0947e00c55582fca32b2e3328ff7307aa0ed1dd1d08"
+    sha256 x86_64_linux:   "bec284aee7032e016470f3b8ee5e13742f37604eefd0a1c92877c8955da0d4c5"
   end
 
   depends_on "autoconf" => :build
