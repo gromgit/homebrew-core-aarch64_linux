@@ -7,7 +7,6 @@ class Ffmpegthumbnailer < Formula
   revision 8
   head "https://github.com/dirkvdb/ffmpegthumbnailer.git", branch: "master"
 
-  # Linux bottle removed for GCC 12 migration
   bottle do
     sha256 cellar: :any, arm64_monterey: "ad656e321013d04bc23f49160bb4476411005e989921c8d2f941644ca735ed7a"
     sha256 cellar: :any, arm64_big_sur:  "469d3f0045c47ab3018a13edc8b7d2c2491e813cd91cdd471679dbf6432dd03b"
@@ -21,6 +20,10 @@ class Ffmpegthumbnailer < Formula
   depends_on "ffmpeg@4"
   depends_on "jpeg-turbo"
   depends_on "libpng"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5" # rubberband is built with GCC
 
