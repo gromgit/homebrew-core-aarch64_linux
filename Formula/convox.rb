@@ -12,12 +12,12 @@ class Convox < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "95015f186e6d07ffaeffffc87b9ac502b3aedfe2ef36dcdc0f45da4c96f57291"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1eb3b0a49433d877344a49c7aaae74a6c638775c7dc6ff6263430fa5fa157e5b"
-    sha256 cellar: :any_skip_relocation, monterey:       "f732017e950e83dd542dbda6f112b30d493eb7d8a7d8f11c615f5a1f47670d79"
-    sha256 cellar: :any_skip_relocation, big_sur:        "36038aac690e8f1ecf2723ff5d6d0fd2a4ee7222d2a91d3ae065e436d8bded1c"
-    sha256 cellar: :any_skip_relocation, catalina:       "4d5b2b1f1f6548d2e12fe7b302c700d878050401f3dced10c5a25525ddc0b93f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "87f3c6fe33201db850bb59275cfd15a5508f5e38b490dd703c0e7131d1106f34"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7942aae59a794073db02a03d087c60cb25909bc097290d52425759d31e67d3d8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e6b1e2477c950605a2d5e5e28fdc732326524ddd99c966e24c68389c79094b10"
+    sha256 cellar: :any_skip_relocation, monterey:       "740b02982e512bcb26763bfe95a2ed3e905f6787990655462d7435c10fe3d863"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4d03692a811ca5cc23a341c35356478aa53d883a9f581d7b955744c3670b941d"
+    sha256 cellar: :any_skip_relocation, catalina:       "20f6cb28a0da76431c137b409c2797934a751e2ebe0a0e5b27f2bafafd686205"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1a956c0dc7b0cb701ae30d90f5f55dbb0fa50e8751900b9d39da9648249e710c"
   end
 
   depends_on "go" => :build
