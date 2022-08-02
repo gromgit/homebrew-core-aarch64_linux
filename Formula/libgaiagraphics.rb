@@ -6,13 +6,12 @@ class Libgaiagraphics < Formula
   revision 9
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "bed66e6333951fdaa247237dda24a2aeba7dd4da38bff9f2a5cee773ccad6179"
-    sha256 cellar: :any,                 arm64_big_sur:  "91a013bc4758557a34fca5662d16d09f2b76e2b4c6e3177289e4c2159a2bcf7d"
-    sha256 cellar: :any,                 monterey:       "6b722c74991746345bf03c04ca65446688d2731e06a4a14053f2fa253860d915"
-    sha256 cellar: :any,                 big_sur:        "28b19c8fffd8c7dc4e2b24ca6e15d510f1743e54bba8fb438c99889defea6c7f"
-    sha256 cellar: :any,                 catalina:       "ea27d6a1177791c4c0acf15e2c8a59c993262836bfe7a21721b67846eec69d55"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bfb275f995ab7b5f3fa57f74399527e00839184943eb08773cad8d6cba5e396b"
+    sha256 cellar: :any,                 arm64_monterey: "42eff6244781ddd1d413987ca9f129c9f741e108d98a42dc23e3fe05cfe895a8"
+    sha256 cellar: :any,                 arm64_big_sur:  "f83975606bf2054bef66c6f8c131d395e2b6dd1dc8f6b7e19063393cf176bf95"
+    sha256 cellar: :any,                 monterey:       "b24aeea6a6fe6843982d28ac44ecc6219ff7432d6f88e74c0e28eac09b353055"
+    sha256 cellar: :any,                 big_sur:        "ee41f28f60ac786ed7fadd63a40cdd44c4b798b9376e3202967f3109dfe76626"
+    sha256 cellar: :any,                 catalina:       "52f249e8450b7d9c54db47c1002e0c72858b075e0ab393e8aa5f53ec90a2338e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9b71c3137ca5d17cf2e9196d8d5d08dd3ff0b991efcde56426e81eef48cb954a"
   end
 
   deprecate! date: "2022-03-05", because: :deprecated_upstream
