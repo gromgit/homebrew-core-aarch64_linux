@@ -18,13 +18,12 @@ class Qemu < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "f392a90d2ffce27b0dc370bf2d487b68bf15c174c5c22124f3ffef1bf77c3e6c"
-    sha256 arm64_big_sur:  "961dd7152f2aa4cd3f87429a6928c77307748fdda00ad55c359b2b77c383d99c"
-    sha256 monterey:       "083ca77ed158f6df966acbeeefd086fcb922ea5fe14cea4ff390475403c98686"
-    sha256 big_sur:        "334d48d38b97e7724a64dacd2548594e5264e9995d117f8c4e81351574325090"
-    sha256 catalina:       "806796c78fbb4c453361e94a502e1c0bdef1711959a6307334e4a97380475986"
-    sha256 x86_64_linux:   "200b3d9d2b454dac6e6a0de585ca3267a1b3aab8de327548650de59b895498bd"
+    sha256 arm64_monterey: "bf9391d255ad137ddef0d1c27a1e8617736ce92a67564f2e1bb005737a5665ef"
+    sha256 arm64_big_sur:  "9c50ffc363dac4b232051be9fa264e89b9c0a1914a508b125c4d73dda4a72aef"
+    sha256 monterey:       "278eed235e3bfc5e52c505ac8da6956c32c5c2e98bb8ad3ad5e14b2b64b63610"
+    sha256 big_sur:        "07dac521ceb5f83ae24d0c3d94928ab0433b2bedec31b0272f31e67c496c034b"
+    sha256 catalina:       "c13348847d51bdfd9a2704c1f4485aa3c076b6cf828ad5c7761b76035495e340"
+    sha256 x86_64_linux:   "83034c38dff93a45b8dd004556a2d6b9479b88d952d4bcea4dff217d0794b7e9"
   end
 
   depends_on "libtool" => :build
