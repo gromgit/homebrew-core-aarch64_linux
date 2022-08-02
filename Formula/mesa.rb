@@ -16,7 +16,6 @@ class Mesa < Formula
     end
   end
 
-  # Linux bottle removed for GCC 12 migration
   bottle do
     sha256 arm64_monterey: "df0b44f3ab436ebee487b9ef7fd5fb8c7f55b39cf404fd7e412691caedb46971"
     sha256 arm64_big_sur:  "10fb7ce402bbdb407905023b73adf88bcd535cb52d76b0ffa1acc5af9158fb6d"
@@ -47,6 +46,7 @@ class Mesa < Formula
 
   on_linux do
     depends_on "elfutils"
+    depends_on "gcc"
     depends_on "gzip"
     depends_on "libdrm"
     depends_on "libva"
