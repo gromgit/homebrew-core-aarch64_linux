@@ -7,12 +7,12 @@ class Pianobar < Formula
   head "https://github.com/PromyLOPh/pianobar.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ba9ac1b0f24fb28d3e6e3a03f715504054759559cae549df46c5a804bdaece8a"
-    sha256 cellar: :any,                 arm64_big_sur:  "00b8027107c1afba4dd0c91edc602bb885ea4ae970c007eb92fd811403976ab5"
-    sha256 cellar: :any,                 monterey:       "b8f5b1ad1c8457131c871ae68dd363ea8e8b0791fbfa3d070de77cab8d09d495"
-    sha256 cellar: :any,                 big_sur:        "5dbc24f0e6718770b02c87bdf1ed8ad4010960a659e85a63714df0ed317d3d73"
-    sha256 cellar: :any,                 catalina:       "f7627970b36ad2570186a6cde16f349de3e80c57fd4f6a30d59be2479da63df9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d0fb3f1818c95bfe5ab201277b97f441a3673a65127bd335bec780542dc09e04"
+    sha256 cellar: :any,                 arm64_monterey: "f4aac768566d7d4f836ce686199b08585d4eec473e9d5f200901c2f7cfa1e434"
+    sha256 cellar: :any,                 arm64_big_sur:  "0e70e3e20027f3ff0e0d1861b748652e8ab246f94b1fda4d9fd3c94cc5cad767"
+    sha256 cellar: :any,                 monterey:       "64635847e06da3d6e266f1b40c96dee5426c105ed9b729bc89f6c140b8a1dd3f"
+    sha256 cellar: :any,                 big_sur:        "35bc90ee98a331be04276847b798f182735edac577e08fe52eec3cc7b797290f"
+    sha256 cellar: :any,                 catalina:       "bfd957e751c983b93c60bbd35f4bb559a4404984abb7868072d7e5a7053d9ac0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0ee38d829cc76f5e0af0d6622d5b3039d9223b2ed22ab33ee06589a4571f4fa5"
   end
 
   depends_on "pkg-config" => :build
