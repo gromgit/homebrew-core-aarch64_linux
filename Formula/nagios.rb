@@ -12,12 +12,12 @@ class Nagios < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "0cf6b15c9ae411bb833a5e3a02f00cf79dfe848f96f263a76b13ff6aa95b8c08"
-    sha256 arm64_big_sur:  "27ef33f3fdeb9434d286ab412dde3a6b5b8c25cefba533320681f1daf136a7dc"
-    sha256 monterey:       "28aee4339d0c5a399ed695f66bedef3fa16dcd3779d500ed4a9ca919b8f19297"
-    sha256 big_sur:        "c6e08e7b0dccc9b77167145ec7dba514bb907eaadd7d2c7b4e15a73818d29649"
-    sha256 catalina:       "382d4b6be1a3a45eac3f573cb2c6454f83ee6cf6befb4a4473ff43dbaef69551"
-    sha256 x86_64_linux:   "ee38e8425334de22a988b6c8dd67baff99df1c131296b62a27333e9154714e17"
+    sha256 arm64_monterey: "f129414f6baa43479019c88b0efcc9000fe774ee28d6516c6ebd0f5cedec5b8c"
+    sha256 arm64_big_sur:  "46b24f0161ce9b73425fd8e96704b162d60e8cc128805ed85069dbd2c397ba96"
+    sha256 monterey:       "09326aea33e587a7d5f46f78b7f773ae76e5cd02071ba6a4ab309d2b76d91b4a"
+    sha256 big_sur:        "5f0d5c561f17014252b5d1cfd3df48e409045618d05443eef83cde1a3cf2eade"
+    sha256 catalina:       "49cb65b966dbc3988b0509596818bd22fa066e9f931a7b09579e6246eb26d23f"
+    sha256 x86_64_linux:   "3ef3a37c3d7421022f1edfa6f36d447354c1008034b7ef5b71ff84a0c3a1b418"
   end
 
   depends_on "gd"
