@@ -1,8 +1,8 @@
 class Yaegi < Formula
   desc "Yet another elegant Go interpreter"
   homepage "https://github.com/traefik/yaegi"
-  url "https://github.com/traefik/yaegi/archive/v0.13.0.tar.gz"
-  sha256 "73af6b8c765bf05abd6e9c209772db686b881a1c6d534542cd35de80743a1b34"
+  url "https://github.com/traefik/yaegi/archive/v0.14.0.tar.gz"
+  sha256 "cd705e81229a0b316d3863d45d4c9263c393863632cdb3897365c4ec05e1a833"
   license "Apache-2.0"
   head "https://github.com/traefik/yaegi.git", branch: "master"
 
