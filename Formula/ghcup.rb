@@ -13,12 +13,12 @@ class Ghcup < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c56a4c8ad7ce769ab9ea73cafa0a467f756b8cba1d092c87650976b3d913e2a4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4385416171b1c06317ff3fcfb948668f0eadb65fef36231c6bacf3e3d3cffa0f"
-    sha256 cellar: :any_skip_relocation, monterey:       "aa6a55b4e8ecc1d467513a935de43073a4ac52531825e6dfc6239483e9226eab"
-    sha256 cellar: :any_skip_relocation, big_sur:        "154d6fb19190c3be91c0354375cfddcae094b5730838a96dc0ef6d99c4ce2bd3"
-    sha256 cellar: :any_skip_relocation, catalina:       "daeaa2f93032f60bcf321545982f9c3ddfbc87df5584782ada8b6d76be75c988"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "180d240de86e7a58be172432643de93e9508a9843f58ee544e6ee15e18d8745e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c8fd25d92e26b13e31a78cd0185258321cfa381375ed0e29bb16c023d7d1763d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a6c374ee90254045c3df618268852ed7182d38a404a36656d8c91a3176007331"
+    sha256 cellar: :any_skip_relocation, monterey:       "e5739de269fbe1ff0b03ae564fef3714b030caca20fcd5f500132e308fdca885"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ace684548a140c8db60e51e40e750dccc711e73ca2976b919b46eabeeb83097e"
+    sha256 cellar: :any_skip_relocation, catalina:       "39d01f386acc5221527cbbc3509030a161049b252bf8b62507b00fb87e93805a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "970569f896725c826a38193e32fe89cb4521eedcf4a8f1e4f704d98f3809811b"
   end
 
   depends_on "cabal-install" => :build
