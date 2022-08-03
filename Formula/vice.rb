@@ -13,12 +13,12 @@ class Vice < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "33fb1aad075c3b196121b6fc2cc204e28fc926b72481858e47e104e812f3ee50"
-    sha256 arm64_big_sur:  "44378ed1786c48a0ce150e9c246829a59166ff8c2548a924f27d5ff2f4957500"
-    sha256 monterey:       "642e255aa5c7e4cb48e8773196dd94925e81d11bc5b538f02946af1c70397298"
-    sha256 big_sur:        "270cba1e6c87ed97b7cafc142f4610661610a874b2ddb7ba1b805472b004242a"
-    sha256 catalina:       "05c3fbd9b2972453bf7d2688ef666efbbd7b9bd5b4fb37b294d3b6c0e45432cb"
-    sha256 x86_64_linux:   "29768ca0c24d34dbe29995cca12aec6b2e91f9b2f44252828a62ad1b53e2fa8c"
+    sha256 arm64_monterey: "ec197d9fc5fd92223d1ce67cbbfa6b7d48e197676196f3735bb676e9b5a1dadb"
+    sha256 arm64_big_sur:  "e7eaefdc8b8c7928be08a75911d80f81e829f77bbf0976ed2f7ffa4eac8bf42a"
+    sha256 monterey:       "5b4c1956224144e96e6528395b1f13859dd4913e97aa3c65cd119b47771c6c7f"
+    sha256 big_sur:        "f52aae79c46313cd316b16255e0fa2e482292eca2cac1e1b2361eccd3aae9705"
+    sha256 catalina:       "f633c31bf15b63f837fdbbd168e43375866add38c03e6dc7235da095c339f9c7"
+    sha256 x86_64_linux:   "53cb0864d4bde5529b7a4e521a63018be0fed4aa8adf912c577f2703cdd41b3f"
   end
 
   depends_on "autoconf" => :build
