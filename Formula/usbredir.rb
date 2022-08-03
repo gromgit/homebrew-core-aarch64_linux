@@ -11,12 +11,12 @@ class Usbredir < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "a56fe37fbb55500168e5603be76b3a8dba035c18b045f651e314b815bfe0c953"
-    sha256 cellar: :any, arm64_big_sur:  "a89e97d94c354d11169c45cad63fb724d3af150e55897c6e5faf45633445ae51"
-    sha256 cellar: :any, monterey:       "16f4f0fc4e6ba97c15c7fe6442ab1f30ecce8d2748a7ed2acdfec258a0a6d3d3"
-    sha256 cellar: :any, big_sur:        "a0022d1a55c4a1c9d66c95f0611afac389bc83d74d506f576cd884951781077b"
-    sha256 cellar: :any, catalina:       "211eed5c2d4b71dd2b5c6b1f2b2782e1e788b774db086bb2b11b971114f7f4d3"
-    sha256               x86_64_linux:   "79cf30502a92984c9e7f0edaed63ceab42aaeab123698071ab0f1702ffa5dd0a"
+    sha256 cellar: :any, arm64_monterey: "766114e04f8dc5d0c3914d481ce916996421fd1bf346ef2e0a72505c5ed318a3"
+    sha256 cellar: :any, arm64_big_sur:  "ecba2c1e3a49f6e4deafb9cfaf53fe147cf93fc758ae160167488bf387d00341"
+    sha256 cellar: :any, monterey:       "13ec692e76a7fe69488761de6fc3c3beea20dc14a8afe5175be44098e6e49712"
+    sha256 cellar: :any, big_sur:        "1a5750dad9ec230adf8c51f5bffa902923e18622efc900712453977d12fcbd08"
+    sha256 cellar: :any, catalina:       "ffe0226c57d557ff516255a2df0e73adde8f533acabf57094219dfe5a763513c"
+    sha256               x86_64_linux:   "03790301c51f8239b4dc6d43e2c060ad2e6a85133daa915415aba4cd098d0a4a"
   end
 
   depends_on "meson" => :build
