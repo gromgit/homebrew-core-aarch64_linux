@@ -18,6 +18,7 @@ class Libgxps < Formula
     sha256 cellar: :any, monterey:       "7956a71251563f6589ffd7a061a0e53cdfadcf90893220c94b004231640e3860"
     sha256 cellar: :any, big_sur:        "19265edef8bb260d7a1adca6f6044f5ba94558b06d54d751c5f1144deb5b820e"
     sha256 cellar: :any, catalina:       "1b25899eda944421ff3e97ecd872afc97b15f31cd7e651e1eb1ef05959327fa0"
+    sha256               x86_64_linux:   "49e69a37f4fd97632211101d926390e1eae26c8a215b73ed22b86b7caebae3c5"
   end
 
   keg_only "it conflicts with `ghostscript`"
