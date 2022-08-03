@@ -14,12 +14,12 @@ class SpiceGtk < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "4a098429afb405c76f4513e84e002145657d4438f194e91e8d46f2944da9bbe0"
-    sha256 arm64_big_sur:  "53544810c91c90091c172a0207012390c4a006eb1f4b58d96c7af7503c41198c"
-    sha256 monterey:       "e88b7445db383d3bebafd43f508a4d550899a58d289996daf09e47fbc75b4ec9"
-    sha256 big_sur:        "8b199ea4c7842b38ce451e744ef138fd05065b63a53b202c1b1ea654e35807d6"
-    sha256 catalina:       "a7b71c8f7cf80f7e69cb5d8eeda061306215f2b7eda16a29f72f2bcb14a5e4ef"
-    sha256 x86_64_linux:   "1fb150028d89b19a2c8024bcb4169f54f05d61c0d812a48465fd907d4b1dec3e"
+    sha256 arm64_monterey: "ff19af79165ab0f40164ebdda3bfe7f43a10a79031d120fcde0341afc7f384e7"
+    sha256 arm64_big_sur:  "d0bb47512168bb6b8d5a0d7f868e4eab2451a93adb3d37b3f0f39d2b82f088e4"
+    sha256 monterey:       "7d447cc1e928a6952f646f2b05baea519ecbaad6004c151394b491515829d894"
+    sha256 big_sur:        "006888d49e0de92da7fd8a72e1060b2a1893fd00ed74c797ca79d3f936ea6220"
+    sha256 catalina:       "09fecc7a853611827e3ead2512f7db7e7217f8d5040b7761f8be9c33c72879fe"
+    sha256 x86_64_linux:   "b7fa19f888be06a726f69c2bc0a12c28b2663f0fc7b72a82073559442e5cc77d"
   end
 
   depends_on "glib-utils" => :build
