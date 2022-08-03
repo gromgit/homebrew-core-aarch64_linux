@@ -20,8 +20,9 @@ class Lean < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "9caf0f417f32915d8434f6e863549c0472b395797daa93c54b214fea0aff4d47"
-    sha256 cellar: :any, arm64_big_sur:  "299dcc46b2a7f4c87cc1c321a15af9a95a5eee099ddc69860ccb255600ad61f1"
+    sha256 cellar: :any,                 arm64_monterey: "9caf0f417f32915d8434f6e863549c0472b395797daa93c54b214fea0aff4d47"
+    sha256 cellar: :any,                 arm64_big_sur:  "299dcc46b2a7f4c87cc1c321a15af9a95a5eee099ddc69860ccb255600ad61f1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "563b5e018c7c5e36bc47a404b249b0eb985f7bbaa54bf40b9b156c702a82be89"
   end
 
   depends_on "cmake" => :build
