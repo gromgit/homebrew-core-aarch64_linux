@@ -21,6 +21,9 @@ class TraefikAT1 < Formula
 
   keg_only :versioned_formula
 
+  # support ended 2021-12-31: https://doc.traefik.io/traefik/deprecation/releases/
+  disable! date: "2022-12-31", because: :unsupported
+
   depends_on "go" => :build
   depends_on "go-bindata" => :build
   depends_on "node@14" => :build
