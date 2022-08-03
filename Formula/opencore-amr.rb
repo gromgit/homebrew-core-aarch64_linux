@@ -11,16 +11,12 @@ class OpencoreAmr < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "40cf41052489b327ddbce82d3883138cbd13e121acefcd0a86d2326405987322"
-    sha256 cellar: :any,                 arm64_big_sur:  "0bba66cb88f85fa1bd81905d59e807d0329af2e1c0e2c9ccca6177116c7c1d58"
-    sha256 cellar: :any,                 monterey:       "3bc66a9ce05f3eb3666b0e649af799980e44aaae3ed420b686dae15da553757a"
-    sha256 cellar: :any,                 big_sur:        "cdde538ce64ce7ed1aa7fc0d5c023978307738a831d6fb8eb717d073b6b085ce"
-    sha256 cellar: :any,                 catalina:       "424d294d95aa7539842f1c2402a0be6ba558fa22680a0f5681998b12cf45a152"
-    sha256 cellar: :any,                 mojave:         "816d5463797b6412fd8944b98ab79d766dcf886b9eb37d83778fb7648d995603"
-    sha256 cellar: :any,                 high_sierra:    "5f5f7853d97b957abb8671af372bd3a4a13191ccd135799cbad44aa3c66034ec"
-    sha256 cellar: :any,                 sierra:         "2b6378d4427dc88bac7e01d2614dd100535f1d78b1e6b81560e3a074e1d5a770"
-    sha256 cellar: :any,                 el_capitan:     "4b628ad01f725342698a8556c4176f5d57e3647cc0f52669092a0523b76cc5d0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4d6f7282d11c48774b6d25e1f25c6c768e3254e4f651eee42f04cec9977d199f"
+    sha256 cellar: :any,                 arm64_monterey: "9641b13b82cf4d325e2fc5a0b2576a9ffb6d8d3bead8c6637e4b22a35ed24776"
+    sha256 cellar: :any,                 arm64_big_sur:  "6dea7b138a3e3399d4295b70cd1dd9311ecec98bf6eedb24617b91d2020404f4"
+    sha256 cellar: :any,                 monterey:       "cc0a074376ddcb0b30ab94027b603f8228fa951e35fda58b7bd274ae2efb4206"
+    sha256 cellar: :any,                 big_sur:        "f235307e30e1ff626c14009955d924826d86cf92518ea36707c5e63469d29a8c"
+    sha256 cellar: :any,                 catalina:       "afe967f68360acc0d6c3aa40853170f228499bf6917d13257ab3b90a341d1968"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "63626c6d52b176f1289a792a8dea8845104f85e86538054e88efadbf920a9835"
   end
 
   def install
