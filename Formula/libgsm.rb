@@ -11,12 +11,12 @@ class Libgsm < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "dcfb808cefed20861e0b01599e8ecd4e481ca027f01f95375374282bd79dc2db"
-    sha256 cellar: :any,                 arm64_big_sur:  "61809769fd4dfa2861d124adff592cb0ddf6cafe5c811e234a301e9308904b22"
-    sha256 cellar: :any,                 monterey:       "875886ea26fffce6b0bf2fc8714fbd1957057b935bebfbdf377e13a72cc01f00"
-    sha256 cellar: :any,                 big_sur:        "6e06bdf7008ab6528ea64717987f7776feeecd2ae5096d0beff91d2489ea2e48"
-    sha256 cellar: :any,                 catalina:       "8311bfbdfa498a544f1af991a6b944d9fdce02080526415acd31ffb897ee1857"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d71debd75bd7890a991a2d03965f0e26ca6cd390cb48a1b8cda496674ead9a26"
+    sha256 cellar: :any,                 arm64_monterey: "77c0cd8a520b95f07c9569c411b3d1d56f54242619657172bc0fd67231ad7ba3"
+    sha256 cellar: :any,                 arm64_big_sur:  "ab86d2ef82d44db7db8ae8ee356425abfdd749f16d2f8eda69de9503af065122"
+    sha256 cellar: :any,                 monterey:       "c28d8db2325c001dcf016f843f6d344ff55a85784e10f922274b1b2c50d30d8b"
+    sha256 cellar: :any,                 big_sur:        "9848bdbacb43b3ef731e96732d4ca965c2c2e5d148e6be3ac0502d0e42bef1e2"
+    sha256 cellar: :any,                 catalina:       "d97ffd1fe5480e96bd0c62ee283ecd819fb372c2443c2631ff354e23a1c4d738"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fbe8111c44538b8da2f36510e5e7976287fc1d7717386dfca673de2648db40a0"
   end
 
   def install
