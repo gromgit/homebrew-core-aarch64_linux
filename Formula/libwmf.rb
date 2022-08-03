@@ -12,13 +12,12 @@ class Libwmf < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "5138927a0d8d528ab1a4f4929c1131c7c6e15995c22410ba722a8581b933de11"
-    sha256 arm64_big_sur:  "2f03f6ad89f67e27361b64a23ab0e231e09c3ef0e6be5c6456bbaa4cadc38f91"
-    sha256 monterey:       "c654530d1c940888ac542442827063f85850e18386008a4dedf1ca3711b80ca1"
-    sha256 big_sur:        "aece69a239468a68f86c84ed6eff00120c821aec6b8f69674776f3e6a46b7c6e"
-    sha256 catalina:       "9adf1c5052c7c0036c13a501f4f720fc7e8e511fcc8012ad8c8bfa3dcc457c94"
-    sha256 x86_64_linux:   "06c5049479f0c63291c8f7c8ed6f73a5f3cc4acf6e9a495aeb8635eeecc72642"
+    sha256 arm64_monterey: "3e48bed98b30b6740c80267498806123a035d100711c6ed8afcb5399dabd2d06"
+    sha256 arm64_big_sur:  "544befd86f2efc9ba73b08b2724c0e1951d88c8fe753aa568e442df449d55192"
+    sha256 monterey:       "f83417389f14343ca059d9c13c91b01cef4b5fa8ecccee254bbbcf830a6c0c2f"
+    sha256 big_sur:        "5886a1a89f5a13f4b1d6e3b9bf5d6d9bbc237833e9ff0347679cf17a6b5d40f8"
+    sha256 catalina:       "5a79438b49930e82ab4761644daa03d4843041ed4e245b47a208301a4a88d35e"
+    sha256 x86_64_linux:   "a18467741b4b8a3b995017473f8481d46023e36f5af44b28be538aa306007962"
   end
 
   depends_on "pkg-config" => :build
