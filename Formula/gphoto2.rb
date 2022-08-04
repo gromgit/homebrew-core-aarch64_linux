@@ -12,12 +12,12 @@ class Gphoto2 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "dfa88233cd6f19fa4317407ee9fd9bec7ba29524f66cb326541f7c685b02cb93"
-    sha256 arm64_big_sur:  "c047e8979df7d2de5fa711166560211822e4b9a52a40de6c8ba8a45aacbe9411"
-    sha256 monterey:       "fc8138f5c4bda70622bac1ecc35ec7871559cec84e3a301f3013b9c251367375"
-    sha256 big_sur:        "64019eb4a79953685898a72cdd9fd14c2b0f601cb8afdb34be027db10eca3ef2"
-    sha256 catalina:       "876e98081384c688eaab6338ff473370915a5c972703c4f72724e4c86d480ca6"
-    sha256 x86_64_linux:   "0a95b46e7d23af104359817145b5e660483440048ea7aa94e251d92e6dc3fc86"
+    sha256 arm64_monterey: "f539f391b11d94317e0c1b693b0f8ed0abfa1a702111c2a8807ae17be5890e38"
+    sha256 arm64_big_sur:  "2c28a56b1840d21ca1044b9aa3a39b66ecda08dbb1ca3f6b762eb31450bce5cc"
+    sha256 monterey:       "5ed1d4e739a9714fd521dab770b3f0158aa0f0e7ddeee83df73cbf29d7e00ff2"
+    sha256 big_sur:        "ea0442d95d2eb20d04a01a70193130523501a977f8b6c90a151f4d79f27da454"
+    sha256 catalina:       "50f8ac20116d922be552822446f438296df99e104509ccc3f9785576d7c01016"
+    sha256 x86_64_linux:   "52adb4dfc3a7c3b062ff23a25adf8ddcaaead4cef2df8e1e355067fb124f4873"
   end
 
   depends_on "pkg-config" => :build
