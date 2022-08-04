@@ -7,6 +7,15 @@ class Enex2notion < Formula
   sha256 "8cddc157cd4f5999127584430cf173921b6846e91eb05585380158d64f63aed7"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2247a58d98518be0cfacdb4dbd00d2d1955e8fa44c55ed461af63f6bcc681108"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b06d2bb987beff5055e40faca421887e6ff870b28f2dd3598f70ce6d7027c775"
+    sha256 cellar: :any_skip_relocation, monterey:       "9aa8e4f77aefc964b002a837b3ee82436c11cb9dbb042329a420e40830ab0f42"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b15c8968facf430f06b1538e509d182f31ae2feb9c14500befb4fc4f76506640"
+    sha256 cellar: :any_skip_relocation, catalina:       "0950d7644fa75db02bbf00c07b38b4f9b478f070f329436c59d0c3537dab8c71"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b19dab1b6ceba00e2acb6d2f3d81c216211148cabbcdf1951f43b243981ebe63"
+  end
+
   depends_on "pymupdf"
   depends_on "python@3.10"
   depends_on "six"
