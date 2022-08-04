@@ -5,6 +5,15 @@ class Pymupdf < Formula
   sha256 "305c1a64b8fb2fd465e27cc8bdcbf0f64224f0ec6d7763e3f5f2ca6783136649"
   license "AGPL-3.0-only"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "9f0283ec89b9a9e8980c9096ac0721d1fc99bede52ac94cc4857e25c4be3fc1e"
+    sha256 cellar: :any,                 arm64_big_sur:  "690c275465aa2a185ef108981a554728b2b9fd80714b198c7655c9beba926aab"
+    sha256 cellar: :any,                 monterey:       "726bdce11c396dd0cc746373af0c88512b16afa40017d82181b3002aac3c5381"
+    sha256 cellar: :any,                 big_sur:        "8de5db3b5be1f1b453d6e083b95cd965774c7c31407cca6c1f6d8e5fc21e63bc"
+    sha256 cellar: :any,                 catalina:       "4bea5e516efea685c1b4b026d0157ef254838a7e4583d1affc546c1b352b15c1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "07c10633ddf7ce68d692b249278c19d11774609374463ed7b8056cc45630d5fd"
+  end
+
   depends_on "freetype" => :build
   depends_on "swig" => :build
 
