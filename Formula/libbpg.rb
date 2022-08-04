@@ -11,15 +11,11 @@ class Libbpg < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "0163b78ee46db665ced158c94332742fde7d319cd2ad643ddf7df5512f90bb86"
-    sha256 cellar: :any, arm64_big_sur:  "dda2b20e38fdfddf1ece62f781bdcaecdf4858c148d749f534ab9e91b0561171"
-    sha256 cellar: :any, monterey:       "e2730a66bf763d4cbe720c4d44189556ba8c97bfcf275fe48480ec91b21fe171"
-    sha256 cellar: :any, big_sur:        "b277508b891e51ee15ceae803ac45f946f6d4523ccf22c3d9d6e042c30292386"
-    sha256 cellar: :any, catalina:       "559ad6131fbd040428bd8423047f78942aa772726af7d8e9707cad38ab167504"
-    sha256 cellar: :any, mojave:         "53691575bb5076233228a76e6657a76af4fcc0ab90f3f54799489e54dbe1a49a"
-    sha256 cellar: :any, high_sierra:    "b040d31f8abd45f50f8ba634c97eb81a0ec89ecada773223b2ac362ddd20baff"
-    sha256 cellar: :any, sierra:         "77ae8a79d99cae86c42e4eaad0cc240efe98425f58143c940a3525d29d7cb25c"
-    sha256 cellar: :any, el_capitan:     "49027f81f126e8bdc24587d43b127815e3a53fafa92b6326c857526678932bef"
+    sha256 cellar: :any, arm64_monterey: "6a4d3e8d365795072c819aaca5b6e662e047b80ebe05b555a8f0fb1e6d898ad7"
+    sha256 cellar: :any, arm64_big_sur:  "d83f7a8c9da692ea920d82e7a3f67708525e719133b69175343087aa71ceadc0"
+    sha256 cellar: :any, monterey:       "54e0eb081753ff784595e6df85d47e691481cdf05101c3e7f8032aca9ae61024"
+    sha256 cellar: :any, big_sur:        "193409ef7e3a3ad3a2913a075b9d53a6aa1aa8d45ddb7ce299dd660fa6d67c66"
+    sha256 cellar: :any, catalina:       "f7d21d83158c5122b604bbe9641014628257dbc754fdc66ebf2ffc237bdd9893"
   end
 
   depends_on "cmake" => :build
