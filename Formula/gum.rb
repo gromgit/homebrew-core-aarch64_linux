@@ -7,12 +7,12 @@ class Gum < Formula
   head "https://github.com/charmbracelet/gum.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9e684d88b0922ecda1c592cd018555024c3a0da1b51be9ae1157ebad8949ee6e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "16fafe515cddf522b55d9a5b627352c8d6c85217391560824c1429b487210eac"
-    sha256 cellar: :any_skip_relocation, monterey:       "4abb0c69f58ed2aa01acd6355b03242437a5234ced3f4c362024a328096bbdb0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0a92fd93dd1caf1aef9a49fd2a6c2e9cdb3b4c092c2919385b2112a1bbd4c762"
-    sha256 cellar: :any_skip_relocation, catalina:       "552dd1540e03376d84137d8ee286f8e60dd0722e39ddf903d9a4145e1c587542"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cd72841343dc78b8f034fbb8366a96c5bb947caa1f2b87990788610e5ca93706"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b401b8b550333faf80cdb4dae67bb7be6d32ecd8dd38e2202a3ab9c9b26bb596"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8c290e9f2be2d9815dc2211da6b1f472c7eaf52028bb9536d310b5d3a9e72e4a"
+    sha256 cellar: :any_skip_relocation, monterey:       "782dce22d8058637675fb90c4be1107cf58a1ff2ddb6668d2caba65c74c60867"
+    sha256 cellar: :any_skip_relocation, big_sur:        "25cabd307a5ab1f5073ff6fd0843a7a012d00fa149639a8af1170a8b3275e9b5"
+    sha256 cellar: :any_skip_relocation, catalina:       "92d532916b69c9289aeffa7ea420035fc3a43f2e02e71d271ce03f7c66ac07b1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "554b990812e09bb1c21384b3d9dd033f81eadab76f22ceae505179f1a32d39ca"
   end
 
   depends_on "go" => :build
