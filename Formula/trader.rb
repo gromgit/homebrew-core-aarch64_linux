@@ -11,13 +11,12 @@ class Trader < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "a6ebbff6d3374261771a21d7b38c00ceae702ac9add82ccbe3e762f088c0ff8a"
-    sha256 arm64_big_sur:  "04f065f3b4f8cc435bc4cd005efac64d3c106538b5f3261a70dba73ffb34d57b"
-    sha256 monterey:       "56aa1859fe1fbab558781d787d1b8268df13f3e227f6518cf10423d4c9e9a1a4"
-    sha256 big_sur:        "cacf85ddfc82657267a51c2a6159b0b5f4f5f26029bc32a5cdf895e433578158"
-    sha256 catalina:       "f88445380e3d80b13e99a9c8c657609941a3f696be2e5039521b1d0a847f03c6"
-    sha256 mojave:         "55412b011ce76032c044f0a5839ee05f8b26ecd45471f79b1862a91c2fdc0011"
-    sha256 x86_64_linux:   "db54d25adc746898b547ef478bb1579f1f311e1be35748d3b84a2cc9bce8887e"
+    sha256 arm64_monterey: "05137ae01aad4d3949ccc903bc282242ef680133326b93705c9eed49c3c31f3c"
+    sha256 arm64_big_sur:  "c7a264790db14499a985beecad69fb0bdc60ebfdcd7bc37ae89a1e93e7a66991"
+    sha256 monterey:       "3d7d661e7693997d2dc3bbd201052336877a711f1e1591353e9460ab9e33f689"
+    sha256 big_sur:        "e33e7a915a9feb528b009426a38b23b7248af58638bc34c19401b637987d561c"
+    sha256 catalina:       "bf1590052d948213cb0c7e5fd9ba2b7a328ce09058709cc164dbc3643be6e1e2"
+    sha256 x86_64_linux:   "0d82d195c0da5d6db7eb3a095b6a5b061bdb2aa1a2a6a1b8ddfa785e67bf3bd8"
   end
 
   depends_on "pkg-config" => :build
