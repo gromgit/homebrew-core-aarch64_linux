@@ -391,6 +391,9 @@
   "sceptre": {
     "exclude_packages": ["six"]
   },
+  "schemathesis": {
+    "exclude_packages": ["six"]
+  },
   "scipy": {
     "exclude_packages": ["numpy"]
   },
