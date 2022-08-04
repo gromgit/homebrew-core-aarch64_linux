@@ -12,10 +12,12 @@ class Picat < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, monterey:     "1f33bf6c7ae83490260df3703be639f24c02d2a86fb28b689de981e8c53eecad"
-    sha256 cellar: :any_skip_relocation, big_sur:      "ba375b86a0e972b1d0b23eea30507c4103456c6a3d37dc838ac96d3f6d52c515"
-    sha256 cellar: :any_skip_relocation, catalina:     "aa7d37c3007a693e4a48926cda378833add85084698f57dadf193c9e04494145"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "56f52e028eed98e9d09609ea7536d33a2e8cb7dfdd712454ca097a86ee967762"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bd5e12223d3c6cb7e3d08224b02c6d34fda53a698386ff0b5404193b72173f55"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ab31529f1fc58ab02cd7a25e61400c68807a23d17151b47b500a0abcadf92481"
+    sha256 cellar: :any_skip_relocation, monterey:       "02561124341a9e03ea889b6b7d10480135a49f10326ac823dd5261813eaaa37c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d2d8781bd921e7ce98b0d6514486d2d5496fb346ad3c86858af5ee65d5da7071"
+    sha256 cellar: :any_skip_relocation, catalina:       "0daa5399a992d85619eeccd6ec5704155654c12148a91ec7c44b4a2502fedd99"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d0752a640b02cee7ada01369ccb3f95868e946a286fbfc6edb01f049660a2295"
   end
 
   def install
