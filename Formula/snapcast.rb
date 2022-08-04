@@ -5,6 +5,14 @@ class Snapcast < Formula
   sha256 "166353267a5c461a3a0e7cbd05d78c4bfdaebeda078801df3b76820b54f27683"
   license "GPL-3.0-only"
 
+  bottle do
+    sha256 cellar: :any, arm64_monterey: "1d823dd68d442d23045e039425160c775a8c6657de72d80b2d1bbe6bce5ff785"
+    sha256 cellar: :any, arm64_big_sur:  "e452f9e3d9699b193f2b408a7785c906ce1f5d4be4eda0515591bb83522210ee"
+    sha256 cellar: :any, monterey:       "41cda7276d96a8d9dd684f3d768d2a30d0b8012f7d1308d1285946c98023eab4"
+    sha256 cellar: :any, big_sur:        "25eef0d2541b08199edab11561bbe89539bb496dc9bb8ebd51eb67423fdf8374"
+    sha256 cellar: :any, catalina:       "23fc1c6e73ce837277caabb003da8d3a2bc11a42e3d91ad181ddc9e4a2de434d"
+  end
+
   depends_on "boost" => :build
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
