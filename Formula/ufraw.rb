@@ -6,12 +6,12 @@ class Ufraw < Formula
   revision 5
 
   bottle do
-    sha256 arm64_monterey: "65712db00e593e27aba98df72a8cf42cfc4e9f2ea1b9735aa53ac6cc8e0be630"
-    sha256 arm64_big_sur:  "1292ad07292c989d5bf6a0240064c1c1ad1922777dcf4684bd773c10c49feb04"
-    sha256 monterey:       "dc51dbfae0c036a580f29cc553fa311f83628819030d6d7aaf9a440ae947587d"
-    sha256 big_sur:        "198e06b232e2eed95af3c242d4845bb5387d8b27eddffe3d6bf812e1a2e94f79"
-    sha256 catalina:       "34967822e68cd4d35655c42372d3520a4f3e449ea675026881dc8a5b3f732e55"
-    sha256 x86_64_linux:   "f7c413f5a8fbc677842fba4c5c8c87c60bc3fbab4ca7fd36d52b6a8c8e7eb011"
+    sha256 arm64_monterey: "b83f6e4a6e1c65437da3f79385b87c4e34282bf116f69860be96866cc1f08652"
+    sha256 arm64_big_sur:  "738c930141c10646e2838eae83f5436346cb617aad1272e024cde80b1e288b03"
+    sha256 monterey:       "57daa4e9573a66030817ba412cf5989555cf569a6e156e4128598e6eabc2c419"
+    sha256 big_sur:        "8daab4a6aff60fba25cb522f217f4aee722b018825506de0b8a3b1127372109c"
+    sha256 catalina:       "c908174e4789deed5e024420d7b65dcaf53fd82293d52015a32d10ee1b3a0660"
+    sha256 x86_64_linux:   "fedbe59fcadb6931850380ffe98103295ca6a70d567f715c0f6333b953e89867"
   end
 
   depends_on "pkg-config" => :build
