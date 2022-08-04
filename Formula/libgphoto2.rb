@@ -12,12 +12,12 @@ class Libgphoto2 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "5bbacbc68e2cb4480a005fe67908e559b2c25b41778a6aad2415d30fc4623786"
-    sha256 arm64_big_sur:  "8b455e2a210347a034e440644aa64c2c4e60f14d0a5ca3302a3e22ce22fb31da"
-    sha256 monterey:       "828419c3be2abe84e736f28093c66877447cce003113f5c9695424ff14989d31"
-    sha256 big_sur:        "0895331bf36a90c79cd3daa7c4da7d57ab65848d4e6f63c22023265dd9d58075"
-    sha256 catalina:       "89dc25fb01c66d3cddc5b760377cf4d6584632da607e4d81265df594128cabe0"
-    sha256 x86_64_linux:   "aac387487ec7acc0d9f1e7f13874bdb40ace2df1b1b576839ab4ab821d6d6252"
+    sha256 arm64_monterey: "68c8f29614d57710c8d00f5ad526b848eaaf38c4d70ec77f8531283255ed2c1b"
+    sha256 arm64_big_sur:  "e3744a3675a5f6b5727181755d126730bcc79a39545e6a0a1133a1e4d5a97e74"
+    sha256 monterey:       "d72b3a28421b921f1189717b8aa9cefb819e7d90fcd0029b8b2c4e354836023a"
+    sha256 big_sur:        "54eb7a59f8fe1f56eafb31441f29c577e7685e39590cd8d3cfa59ee54c8c24b0"
+    sha256 catalina:       "31adfaaaee016330cf07e8e9a71ccc4517a987038504d8a6992cb6bf2deea596"
+    sha256 x86_64_linux:   "96e0c553d9c3d7d25ba2a73b35660403ada42e5bc2dc7f7b7be98e3acad846e2"
   end
 
   head do
