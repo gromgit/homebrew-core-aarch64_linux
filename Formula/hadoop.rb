@@ -7,12 +7,12 @@ class Hadoop < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "94c5dc702bb5334513b38358a46cf1eb439feabac4f59f5e38056bd5353f841e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "94c5dc702bb5334513b38358a46cf1eb439feabac4f59f5e38056bd5353f841e"
-    sha256 cellar: :any_skip_relocation, monterey:       "ce602f144779cd6e81bb97fd8b07a835f925dff80d6ad49a123cae1c251a1782"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ce602f144779cd6e81bb97fd8b07a835f925dff80d6ad49a123cae1c251a1782"
-    sha256 cellar: :any_skip_relocation, catalina:       "ce602f144779cd6e81bb97fd8b07a835f925dff80d6ad49a123cae1c251a1782"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4c572401d48a3985d201af646cb670c7fb6806e95d9d0664cf3de9472bd2eb8d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "447be30cbb654379f96c9126a2763e5dab8edd85396caf82bd7516e01c540ffa"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "447be30cbb654379f96c9126a2763e5dab8edd85396caf82bd7516e01c540ffa"
+    sha256 cellar: :any_skip_relocation, monterey:       "74357baa438fe8680aa00f0704e95bcfc558c0a8b0fff48f6b3716c846868525"
+    sha256 cellar: :any_skip_relocation, big_sur:        "74357baa438fe8680aa00f0704e95bcfc558c0a8b0fff48f6b3716c846868525"
+    sha256 cellar: :any_skip_relocation, catalina:       "74357baa438fe8680aa00f0704e95bcfc558c0a8b0fff48f6b3716c846868525"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "92cb92589ac48035f2482eca9321cebe31dfd3873272da601e24f30cc758cb5e"
   end
 
   depends_on "openjdk"
