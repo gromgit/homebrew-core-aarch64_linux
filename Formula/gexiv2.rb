@@ -7,13 +7,12 @@ class Gexiv2 < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "990b477bf1f0d51b110bb91a59d8a50f0953c5d2029b06383e6c203d544ead21"
-    sha256 cellar: :any, arm64_big_sur:  "031ba5ff86ee4d9c3eff73caa1810b198919d6202671c565e3542c4825d50c55"
-    sha256 cellar: :any, monterey:       "c6c54be9582a1f39bf560baf839c3949fd6e12c15336763ca6ae8455e754b2cd"
-    sha256 cellar: :any, big_sur:        "998ef3640d04fa7e5480d8a5ddb476c5a8bde6120b234854c315ebdceccc5d78"
-    sha256 cellar: :any, catalina:       "9f00ba7ae2da026d10e53c5ee3439a35ae8b2d9e6ec94c13efd16d756844b4f5"
-    sha256 cellar: :any, mojave:         "a5dbf41078b0b748aa002e07b11d4063e6d2079a1740534322102689d84344d5"
-    sha256               x86_64_linux:   "3d95b43c323ebc976f94527574ee81bbe061e632cd37789e0c9a64009d3fd3df"
+    sha256 cellar: :any, arm64_monterey: "12296a8bf2d516e6d586c3a06a5ea85310441bf110311834b4654db0b2b18460"
+    sha256 cellar: :any, arm64_big_sur:  "f974a143db8c40d1917ab50cc52e35329d50c73594205d2c0e1cc393bb573cc4"
+    sha256 cellar: :any, monterey:       "5baf8a5d48b15b71bd803a236189448441dda41addb39ec80380f3a5eba8ab4d"
+    sha256 cellar: :any, big_sur:        "35775760fc0e8bc389c960183d9202ae870e0987141020545d20d4b98205fd4f"
+    sha256 cellar: :any, catalina:       "87bc94b311f753a585dcd4703fe2c900c590daba7993298f2c9c9dd0c3ecfdbf"
+    sha256               x86_64_linux:   "480cdfc4363ba55560479ce216bd289326cc40833770757b80fbc42529633608"
   end
 
   depends_on "glib-utils" => :build
