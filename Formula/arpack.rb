@@ -8,13 +8,12 @@ class Arpack < Formula
   head "https://github.com/opencollab/arpack-ng.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "22a5cd4369c7b53e2695f9474fca8d7c6b91971819fc3139f165f423a8de42af"
-    sha256                               arm64_big_sur:  "ce6c690e2da971fd3c2b1b481e2a1a63c74e45ab308abc8212d4e8622ab57fb3"
-    sha256 cellar: :any,                 monterey:       "40d92334e7068c36e33bafb51333157b75fc14322e44f271ab66a54627169a43"
-    sha256 cellar: :any,                 big_sur:        "d7e7dcfe9877c71a43edc35191855abab902424d99eb30835092e01d9bbb042d"
-    sha256 cellar: :any,                 catalina:       "42b2c8c8c61ff92e7c3c96d3735decfd5bb00b5741bc66ee7b77a4c10f338ad4"
-    sha256 cellar: :any,                 mojave:         "c77c3b77ef86bea4c18757c674af5775bc33463f1f59cf49ed7ad9fbb9b6d3b9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a5266781353da90fd500b49f0d583dc7f5c345b4c43522698f5f456d8a8c4298"
+    sha256 cellar: :any,                 arm64_monterey: "6cd9a126eda79774f22cc9ccc51c826e1af7c8cdcb746daba2b5d03d4b20c7ed"
+    sha256 cellar: :any,                 arm64_big_sur:  "410a94d3be3f092156ce3d4355a75599b5f1da784d0a658374e7a1836f21dce1"
+    sha256 cellar: :any,                 monterey:       "4010a411f2217ce34c8759e13e6ed27f5e7bca8bc5668cbd14d0bf8449422826"
+    sha256 cellar: :any,                 big_sur:        "d6f5d7ffb0f828ca3436481d406d382d8feae87b71b9d0654622df025efec7a0"
+    sha256 cellar: :any,                 catalina:       "9d8358a298e561cab99c9724d012b17d983a054895b0661e9e17bcd7b8b4bb4a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a78173eceb8f3f1c5998063fbbaef58169f6a9656e5816a4f4cf32a7b5385844"
   end
 
   depends_on "autoconf" => :build
