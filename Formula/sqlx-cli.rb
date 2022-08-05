@@ -6,12 +6,12 @@ class SqlxCli < Formula
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d8ad28ec7dfad8dbedf9d1fbd5df9ae24a71a35a3e97b9c78ec196e061725101"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "be858c81c7820fa6df90bd45f11b68f4ec190a2615178704a7f15ffae7028fc8"
-    sha256 cellar: :any_skip_relocation, monterey:       "2de74d80fee9b908c5a6711b3832103e62b8b5ae8242e7c39a638f6e89bec053"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4069aa94340b7fa3c524c8033bdd63779637f26a57e7a471c604fbae9edabaa7"
-    sha256 cellar: :any_skip_relocation, catalina:       "6124ddd0f52e8a9c90ed9430928212b8a44b46843c40dadc62d4a6336bfd8c83"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "118d5c3821d8abfda535a3e44b6925bc304065e62cd8e34bf2da592b9899305c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5944f40403fe859dd3fb9c73fa62575c10a7b0af0d6e83cb2c0c8a4467b88ab7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "07477a8f59df5b0d493dda7f73f7963ad383929614284ed1e9c765aab55cdfed"
+    sha256 cellar: :any_skip_relocation, monterey:       "b565e2727613c0bf49f1e17b94dbaf0cb3ff5cfe27462442d6700c1f76a72e53"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4549e191d8c2a43562c7652d3d2e13c3f729740395c86e2a4df8f0aa4420ab67"
+    sha256 cellar: :any_skip_relocation, catalina:       "312cba48f43acf093b74233da22de93dc23bdecc9a5a58ea4e7d099236acb143"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e738d40b5010aa2b68361d4d4d2263067d123a591c36f2ff38b7724a3185220f"
   end
 
   depends_on "rust" => :build
