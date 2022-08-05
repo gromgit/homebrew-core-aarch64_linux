@@ -1,8 +1,8 @@
 class Libadwaita < Formula
   desc "Building blocks for modern adaptive GNOME applications"
   homepage "https://gnome.pages.gitlab.gnome.org/libadwaita/"
-  url "https://download.gnome.org/sources/libadwaita/1.1/libadwaita-1.1.3.tar.xz"
-  sha256 "9b92be6007da1bf75131a2d5e697f0ff985bccf82380d298d46f013675aa4197"
+  url "https://download.gnome.org/sources/libadwaita/1.1/libadwaita-1.1.4.tar.xz"
+  sha256 "fcc6d56669d33ac3d030098d7571d8045a02e18dc083b49a5a5a6325068e6b58"
   license "LGPL-2.1-or-later"
 
   # libadwaita doesn't use GNOME's "even-numbered minor is stable" version
@@ -22,6 +22,7 @@ class Libadwaita < Formula
     sha256 x86_64_linux:   "f7e787217cdde92973ef1a6f2d2036adebcbb406f43750d0ea4186547873ded1"
   end
 
+  depends_on "glib-utils" => :build
   depends_on "gobject-introspection" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
@@ -31,18 +32,15 @@ class Libadwaita < Formula
   depends_on "gtk4"
 
   def install
-    args = std_meson_args + %w[
-      -Dtests=false
-    ]
-
-    mkdir "build" do
-      system "meson", *args, ".."
-      system "ninja", "-v"
-      system "ninja", "install", "-v"
-    end
+    system "meson", "setup", "build", *std_meson_args, "-Dtests=false"
+    system "meson", "compile", "-C", "build"
+    system "meson", "install", "-C", "build"
   end
 
   test do
+    # Remove when `jpeg-turbo` is no longer keg-only.
+    ENV.prepend_path "PKG_CONFIG_PATH", Formula["jpeg-turbo"].opt_lib/"pkgconfig"
+
     (testpath/"test.c").write <<~EOS
       #include <adwaita.h>
 
