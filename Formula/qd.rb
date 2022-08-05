@@ -11,13 +11,12 @@ class Qd < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "fca4c8c3ef8cc71187fd82a5115c7996e21064ab594eedfe43a561c43265e27f"
-    sha256 cellar: :any,                 arm64_big_sur:  "643d12788d9d0aae84284d8323dd768897ba709fc576f0d3344741f425082a32"
-    sha256 cellar: :any,                 monterey:       "0ce1d5e84f9e28f1d372bf459aa68e21fccfe95cfa69518a216c5286541bdc13"
-    sha256 cellar: :any,                 big_sur:        "9d11d1a792bcd856fffed2a3266093113e5099e4b4f36ee8581bce5b7a36c78f"
-    sha256 cellar: :any,                 catalina:       "b7193beb4f8d9737d8f83b4d41c8703bfbf1ede0269630a783138fb3dec8b6a0"
-    sha256 cellar: :any,                 mojave:         "8a70f3bc3a2fc99bef85acf2c567cd3dc1013f7046c19c7ffa0ddc266df231df"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "684f25257cfa7d3110c34652442759542ea8623333e30aab8e1426d9ef7c6bd5"
+    sha256 cellar: :any,                 arm64_monterey: "c1cef2704e1fcd44953f70cdde726d584a09b4dab2ad4622783deabc6f64caf5"
+    sha256 cellar: :any,                 arm64_big_sur:  "98047f6136ad8b68370755021b1e127e60b5050a6a5b903c68943527b28ecfae"
+    sha256 cellar: :any,                 monterey:       "2f324b4dd203182d4f6b4944ce69d62bcf0720365e19a77903d4829570a6b6a9"
+    sha256 cellar: :any,                 big_sur:        "e9b1241f3d1d0f3b78d129ee8bd863eaaa42db2b6bfa74c5d53b419d47cfd331"
+    sha256 cellar: :any,                 catalina:       "d9900fff146db8cf036730fa0ac5c6cbed48c9ea362e91875dcd3393f30093cc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "551b9eac56f835c4b4a210be82d30dd2692018967c236b50bc0697820c1a7515"
   end
 
   depends_on "gcc" # for gfortran
