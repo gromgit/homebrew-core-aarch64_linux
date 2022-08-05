@@ -13,12 +13,12 @@ class Cgns < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "220b0b66c2cdbeac7c2d2d3b8ff2e23d46a1fa826446986f64fadd31fa3bebfb"
-    sha256 cellar: :any,                 arm64_big_sur:  "4ece3d88556925498dc79351825510989c410aeb8e9ea6a074de6d71cd7da984"
-    sha256 cellar: :any,                 monterey:       "05be0fed7e6fdc77a4b7c08df4242d8b8a3c581169f3dfb75ff94dce34e86340"
-    sha256 cellar: :any,                 big_sur:        "82045a913f0430bba0c2dc4f02a5cf1232a104de428541a86b55d3627e957960"
-    sha256 cellar: :any,                 catalina:       "f0ff9cb4346d5cae443c9d8e59348e42e8e3c07d6c0a0bb6deceab98288df004"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dc1c421bb922efb94b929a4fb24329de0a059392cfcc2066d5008c16dc765c53"
+    sha256 cellar: :any,                 arm64_monterey: "31c4c8fb55e1b0445f2a0bffd5891e88f76d103c91ce718ba7b13a5506ebc7ee"
+    sha256 cellar: :any,                 arm64_big_sur:  "b40fb01503689516098100b3c493dee84cf3a182c6751d35778fd7e7f6067705"
+    sha256 cellar: :any,                 monterey:       "ef0306b868e4bdbe5884234dcadf93da65d0178d1b2cf9ecf5b85a3087efeb1d"
+    sha256 cellar: :any,                 big_sur:        "c59cacfb19bd04311ea1296643e53badb53a6e8c4b355703743dd0cecfca9dc0"
+    sha256 cellar: :any,                 catalina:       "32711a2b525fac2a509440ec5837ff0b4c68ca9d5e37400afd8bc628fe53f08b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fb248e590f24966f13030464c284d71884c519ebb5da5cdd6f85a3658547e959"
   end
 
   depends_on "cmake" => :build
