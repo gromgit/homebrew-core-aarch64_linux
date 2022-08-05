@@ -7,11 +7,12 @@ class Openfast < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 monterey:     "157d1ec772acdfebd91e2f8dd7fd385d6baabb60d04288ff8936d84d551120d4"
-    sha256 cellar: :any,                 big_sur:      "b577b71497f13a85ffe284abcf2b7177a1af238e76d11b111bdd0b597f97feda"
-    sha256 cellar: :any,                 catalina:     "58f36f20e6f92384c04a7c670d35f7021af09fcf62cbc59dde7854f28c8fddbd"
-    sha256 cellar: :any,                 mojave:       "ccf3899fac01fc1ad9fae9d697297bea3bd4f29e30334e181615c8194f28d585"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "ead63206558470611c8998927868967021e555a67d64f2b06f5594e9454afba1"
+    sha256 cellar: :any,                 arm64_monterey: "c74e06ac2370d39465580e4866f2b1dc72bf529caa58535735383b0a13114b42"
+    sha256 cellar: :any,                 arm64_big_sur:  "f39430e3363b79372b74cb369f0ab7bc0e1a4670f5deec93becca5518bc09453"
+    sha256 cellar: :any,                 monterey:       "d95245af1aacb08378265759653ce73714f46a8a342dfe46fbc65394cc0166fd"
+    sha256 cellar: :any,                 big_sur:        "5812bf4d983a25f952387c77dc0daaddec25e1b9d64680de79c3b24692b1853d"
+    sha256 cellar: :any,                 catalina:       "b1f5158a97b02f3131d2b955118790a085378322828f425ab98f835ea7bd5e47"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dbcb5c9cabd737f03681ec84ab65b635755bb7e3ae3b522ef66069d957538fe8"
   end
 
   depends_on "cmake" => :build
