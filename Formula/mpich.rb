@@ -13,12 +13,11 @@ class Mpich < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "407945b2f63e8bb8aa71c435ec43a23927d4c46404808ccc13d857b2919ad3da"
-    sha256 cellar: :any,                 arm64_big_sur:  "86597150d3f922c6752b8ac985f091bdd99cf918fc1d15734a1afcacd343012b"
-    sha256 cellar: :any,                 monterey:       "17efc3ead6fa899bf9abc11f5f670bdcf672b1a2e9b370188037ae0b41abe928"
-    sha256 cellar: :any,                 big_sur:        "7e7b189db2a693edab05d39c1ddaf60702c52285316da30dd6c4879bedee99e7"
-    sha256 cellar: :any,                 catalina:       "daa5d28140ac17df92ee6468be59c3f25570120670c239e8867c7ed559370b42"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dd1075a93bb075ccde26a130249d3786275d96d72088d93452b57f2524e94a82"
+    sha256 cellar: :any, arm64_monterey: "16b6417abfc7cd51686b7d7ec9e6ba773ce54a1e1f702c2d0607846487f9502d"
+    sha256 cellar: :any, arm64_big_sur:  "13bffad846a66b4825a264bfd53a9c4ed37f3da1d66c64fba1fda3a9ce8d03c8"
+    sha256 cellar: :any, monterey:       "16077d39d0bed41ac581e7f7bbfbff72c71e5e75a20fb43ae8f57fbac77a762c"
+    sha256 cellar: :any, big_sur:        "0849fb187b0ad18ab4c2ba658ef657a70fb98b1c6c8fb47096b6237b75b5e0f8"
+    sha256 cellar: :any, catalina:       "2f7af13ae0b7a6f8353d3c90ce61b9e518a538e2cffc1353fb2dc14fd53f8a69"
   end
 
   head do
