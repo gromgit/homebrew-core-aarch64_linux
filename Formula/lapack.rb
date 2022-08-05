@@ -8,12 +8,12 @@ class Lapack < Formula
   head "https://github.com/Reference-LAPACK/lapack.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2ac159c2ea5c7e054bdae3840a705547a0ea237aa2c76bc9f94a12e0ebabb976"
-    sha256 cellar: :any,                 arm64_big_sur:  "fcba5f25c5029a0420e2e1c0f8add039ebf3459f654a0e5589daa2fa7d8450ba"
-    sha256 cellar: :any,                 monterey:       "d075eb80d251d68555565163751f5d316750ad6934f680e694b928484ddbfc46"
-    sha256 cellar: :any,                 big_sur:        "7113a5d7faf1138adfc5a7335d0ed8fa32c693fd5ce98c2475997370b65757d9"
-    sha256 cellar: :any,                 catalina:       "6c16828729218498d4d547e3c7123b11770e15bf8c2bff1eefc7ffef5895ec29"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ee6d1e0c63ebe081342634dbc7d540ef6ddc3b2f2713680f564eae357750458c"
+    sha256 cellar: :any,                 arm64_monterey: "09130dbc2603baca002e6ea6b2a5c004c365c20c6fe877189d7c3471a9a92ba3"
+    sha256 cellar: :any,                 arm64_big_sur:  "e59a53da36ae4bb29bf38cac3c9bf09ce60360d4ad7d0db39e7d58e89edb3adb"
+    sha256 cellar: :any,                 monterey:       "19cf7e41a098fce0b0869fab10d0aba45fe84e091d082e76ac1446d3cffb53bf"
+    sha256 cellar: :any,                 big_sur:        "cd447f7ca31dfb2fd2e8fbef983593c9d8ad8040b9629e5867103f5c28713604"
+    sha256 cellar: :any,                 catalina:       "ebd9ec42cc08e6aec7ee743ef1f78b4b116d2291d4f35acce2d013d37e5c14c6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e910a286f96f78bb20483d7d07c73307f71d093cbe1455e025de7eec653fccc6"
   end
 
   keg_only :shadowed_by_macos, "macOS provides LAPACK in Accelerate.framework"
