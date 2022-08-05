@@ -12,12 +12,12 @@ class Imake < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "cac05a33d22a4ff366800773add7510ff1978350e715740b88333df4e3fc2010"
-    sha256 arm64_big_sur:  "12bf7ce30f94dd7be1349a6c975eb01d5e999febbe0b0004bfd2387797b9d547"
-    sha256 monterey:       "b3ec19fa38cedb060936d2f0a25293ed928c663070a840b710e39c9aae1981a8"
-    sha256 big_sur:        "4fa7efb9da19d368dbbcbe6290c6314ce0d95026f96cdc41d089e43b2573b81a"
-    sha256 catalina:       "a28b2a436f43b61cd3862b909797b1482263be6b7e2d51a3dbf67da3c529b209"
-    sha256 x86_64_linux:   "c9f6b1a2d6aaa005ec3268c49e22fd71bce9469a2c05853cb4d1fdf9b4c31fc3"
+    sha256 arm64_monterey: "16a1925ce2b28d8d3aefc1fd554cfa74fff7c05a5b81847f7c3340717e5c5149"
+    sha256 arm64_big_sur:  "981cf5a9966c199d0955266f7d7f8ca8d22742c3a952ee4d30547437caaf6d3c"
+    sha256 monterey:       "f5be1c74dc23cb33de8eac020f9dc293bca0a7ed36308a46676a60a4c438428b"
+    sha256 big_sur:        "0c0f73e6dc9edb4792e789e6235fe20e9f5a21a32a5d66a8e59e7c2f953b77ed"
+    sha256 catalina:       "cd6a5f473087960077709005c51b86ef377ea3d4a5d32e9f1d17b37d65629181"
+    sha256 x86_64_linux:   "44e14e698e25dabfa8e7ee4d1ba913fa332cffed12b986951dddf680f9afe029"
   end
 
   depends_on "pkg-config" => :build
