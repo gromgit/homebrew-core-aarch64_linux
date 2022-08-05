@@ -7,12 +7,12 @@ class Libxc < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ab53f54b78b5af31ed1ec2e0f366153e72a6d52b556afda8b4f4e83590ac986b"
-    sha256 cellar: :any,                 arm64_big_sur:  "e6e36a5e5b432010f6fe490cda08777e9f73cc724ba695e20fe0eebd7f0e4c11"
-    sha256 cellar: :any,                 monterey:       "89b024d837b6bc171be052458332dc08ca642998b3ad853ca27992178855b352"
-    sha256 cellar: :any,                 big_sur:        "4d4e5db654f348da273358f4a7268793945b12a100f6ac7aa69e4b6b2f129d6b"
-    sha256 cellar: :any,                 catalina:       "c74354016c997bc59947f5b6882fd8b0df5e65237bcd7879a2a44b6aaf4c0e28"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2d8b90733fdaed749ef20fce3360c1eff0c0e247c8716eb4754aa7ca8869ca86"
+    sha256 cellar: :any,                 arm64_monterey: "76984fead2d7c7162093695d21d7c5b5966087b60a84e9995480851cc742d002"
+    sha256 cellar: :any,                 arm64_big_sur:  "6667ca67895897ca00340ecc4164449483f46e226affae45a70ca62f1f7d8a7c"
+    sha256 cellar: :any,                 monterey:       "baabce501ca109c134573955355b005279a151e01d3dc93ad60f0d0ac8ffe104"
+    sha256 cellar: :any,                 big_sur:        "e2a9c845aef36fe679b3694cd8aa3b446b37ceec17bfaee76d5412881e61dd39"
+    sha256 cellar: :any,                 catalina:       "d0ce63f9d4f79cd42bb34b5cf53b535d96adbf527d2865c3b8b0ad52278e3249"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e08ca5a0e6a6976022c59789c27052b16b5d44cc4eab0fe3f0fa295fcee57e20"
   end
 
   depends_on "autoconf" => :build
