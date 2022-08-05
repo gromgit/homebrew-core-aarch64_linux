@@ -8,13 +8,13 @@ class Glew < Formula
   head "https://github.com/nigels-com/glew.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "17420ea2fddc60d424c2113aa9f452603763cacabcf4447457781c9dc974bf78"
-    sha256 cellar: :any,                 arm64_big_sur:  "ff3928527b5eca567f758adaec4674495baf760b974e624d06a6e4f9f0540db1"
-    sha256 cellar: :any,                 monterey:       "17e8c8fcc77d132b1d47c47ba5bb3a22a84088aa6c06ec890bf8a8463f363ffc"
-    sha256 cellar: :any,                 big_sur:        "c96cbd58749e9e19359058823ef06c2b4b3b621e4751e4970dbc649d6e0f6bae"
-    sha256 cellar: :any,                 catalina:       "4afe7a78fbe20c553a42d30e6b14f7696c3636bab810d2907b8843d583c115f2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1bad4a1bacddec065a38c9ccb6c87dd5423c554aed6ac1b187fe8164b071267e"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_monterey: "a116faecf407ee2a00cb775a3b668fe0f5753ceecd73678d20b3656e6c56d163"
+    sha256 cellar: :any,                 arm64_big_sur:  "088dedfcd45fe37b0d027b52bb1c730e01aeacda4d7b00ce14f67a19d1961bce"
+    sha256 cellar: :any,                 monterey:       "9d8d8c93eec4287a9231cd0378b45ee3b9735afca387fc1f5def7e2c68533097"
+    sha256 cellar: :any,                 big_sur:        "728e40242af0b9a53ae837de3d2658f205e121a04285de29f3964c2dd7512a9d"
+    sha256 cellar: :any,                 catalina:       "ee50985ccbbcd0ec1980960b7fb31fce80e99450f14ae02a751a731056182d34"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7bc36f86706af951931a2c4c905b8b680cf67606406d238fbfd8923f6109e626"
   end
 
   depends_on "cmake" => [:build, :test]
