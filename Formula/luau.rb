@@ -1,8 +1,8 @@
 class Luau < Formula
   desc "Fast, safe, gradually typed embeddable scripting language derived from Lua"
   homepage "https://luau-lang.org"
-  url "https://github.com/Roblox/luau/archive/0.538.tar.gz"
-  sha256 "8a1240e02a7daacf1e5cff249040a3298c013157fc496c66adce6dcb21cc30be"
+  url "https://github.com/Roblox/luau/archive/0.539.tar.gz"
+  sha256 "d0a33bbafc88d6d89f23e43229e523b117cd761f1fdbd86977800b5725cc647f"
   license "MIT"
   head "https://github.com/Roblox/luau.git", branch: "master"
 
