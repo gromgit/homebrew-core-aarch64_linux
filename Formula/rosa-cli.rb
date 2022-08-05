@@ -13,12 +13,12 @@ class RosaCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "555c510128c72712af1890adeb96e8a83d4af90dffd35d6057621918b976fdd6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "116d41eb02b32f792b69be96bc88c18716805ee3e5d94cdaecee5e962fc4a9e1"
-    sha256 cellar: :any_skip_relocation, monterey:       "059ddf7bc46161b8f8d70ac569e60ed31ed1e82ebdb6c320c9722da482439a44"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5adea5ef45e4dc410d9791965d19946cd9a9808e4dc99bba55956c84166f42b2"
-    sha256 cellar: :any_skip_relocation, catalina:       "e92fda643f1b3cdd3d2cdbefca5221b65fa7807c54915ff84b5e17c5be9ad284"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b080457ba029e3fe9346806bf240fe04499309026e14fe8b6c015243563f93c5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4be0500a84772c4c22365e1abf4042e94afc42fcf0d8959ab93a2d12fe16864d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c4ad22aaf98a424114888e173974094e3346de03c182cd7671d98b71ef8fcd79"
+    sha256 cellar: :any_skip_relocation, monterey:       "8ee37c40faecb10db1c54269e32850f970835768ddfccc46a883710fb71c532e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e46900b76efa9f5327e2483e16d3ab1fe2d114824c5bf7c858cc02e71a9e2357"
+    sha256 cellar: :any_skip_relocation, catalina:       "0be6bcf8add578e4def595ffbf459841e518ccf1590d7de51a65c5faf0bb0944"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5f0f3a3514134814ef193f44a3ce2986000ce7e489c8c5e48e8db0032cbc2838"
   end
 
   depends_on "go" => :build
