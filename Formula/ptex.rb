@@ -11,13 +11,12 @@ class Ptex < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "007e9ec13d5fd24241631661d98ddadc06ed74023b24aa8f92d548890125c856"
-    sha256 cellar: :any,                 arm64_big_sur:  "f724e08c9adfdc18a09822e58f59c9cada0397237623b204257c2e9a08526af9"
-    sha256 cellar: :any,                 monterey:       "2edfb942d88372c8186527d8e57e3c031b031bab1b68cc72045b586dbc5ba745"
-    sha256 cellar: :any,                 big_sur:        "876e14276688993618d4bcf794dfffea9362b514aa4a980ac8f570b1eab75d13"
-    sha256 cellar: :any,                 catalina:       "86db27292915d7ecbfe5a2867e54be5b098f2a721ab9372cb3ae8435855df498"
-    sha256 cellar: :any,                 mojave:         "26aa1f062d495a937a2e95e206f5b62fd16845d4eb09c1f49a073a6731cb4458"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "10ab715f2512320577d58f5eb2d85ecc1d2fe19bc63046827ccc01983b7c0bf7"
+    sha256 cellar: :any,                 arm64_monterey: "c8166dbf7e60e50c6a602d9cd086c95d3ff6ffd174532195e06cc7b8ee4b5e5f"
+    sha256 cellar: :any,                 arm64_big_sur:  "cd30bbf7d22f7cda90f8c3af76b4d9ff36a606384ba1f4c04859053a230c2b11"
+    sha256 cellar: :any,                 monterey:       "22a62f337bcab936818db4534f04b38615592278d8baba30cc14312c7646453b"
+    sha256 cellar: :any,                 big_sur:        "21815b74081a6e0129e400f656a33ad927247ee228c1dec5e47a3affed08c8e6"
+    sha256 cellar: :any,                 catalina:       "2793ce52bb20a2274fa5b3e4b69133150ee5b52a212edfc403985784f62601e1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d8e30dcd4ce82159021804cc0df50f24c4790e3ae72562968547abd6091ed440"
   end
 
   depends_on "cmake" => :build
