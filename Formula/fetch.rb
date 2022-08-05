@@ -7,12 +7,12 @@ class Fetch < Formula
   head "https://github.com/gruntwork-io/fetch.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "837779f78d0700888b4f42cd0c3ae77bfb4365dcc1ffc4480082375b3de4750f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5f1a5814ad2577387d356b1a10bf897b3ec2185b5b9de9a44fdbcd11f9116258"
-    sha256 cellar: :any_skip_relocation, monterey:       "0d5dba201cabff02a8da2779a805ef4552ef54098b4eab86b110085c7d81c8b5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "da985a806b15f92791d6df43b5e541df94e2fb9f6a0238a8fe3b4ae6064a52ac"
-    sha256 cellar: :any_skip_relocation, catalina:       "85ce4f6c485a19995f8e4ed2f80a7bd898b31bc28a734175268d3087fc4457d9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c415e6fb8720c825034807d77167f4ddcd382ab9c1374d912ba46398b4f41643"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "24c8ec351ec9dbc8f71b679e94e1d8930c761b21b3bf4168be0b8d9aab32be0e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5f10cdef839a155b13ae6ade9db0033303a0651e94958ff950d7585ef76d70b3"
+    sha256 cellar: :any_skip_relocation, monterey:       "52f270c33fb1323e965aef897c8067ad993723ce1ab2269df630fc29badef701"
+    sha256 cellar: :any_skip_relocation, big_sur:        "121acdd239dfbde5c29565b6719974acfd6bf0793f163773374740a64f243f3a"
+    sha256 cellar: :any_skip_relocation, catalina:       "2e13409b0cfbfae80a0aba1f012163529e978090b8eb39dae2feb349e5063201"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "35d3950442bc4c81b649a7563b2047b991aa13121b42dc47140d915f85ce4420"
   end
 
   depends_on "go" => :build
