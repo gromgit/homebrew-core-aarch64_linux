@@ -4,8 +4,8 @@ class BalenaCli < Formula
   desc "Command-line tool for interacting with the balenaCloud and balena API"
   homepage "https://www.balena.io/docs/reference/cli/"
   # balena-cli should only be updated every 10 releases on multiples of 10
-  url "https://registry.npmjs.org/balena-cli/-/balena-cli-13.3.0.tgz"
-  sha256 "4dd72d585071869354d9fd69753d2ee94f8620d75930da1b1664e7986e93ae04"
+  url "https://registry.npmjs.org/balena-cli/-/balena-cli-14.1.0.tgz"
+  sha256 "09e75043d8f93a44b42cfa669d864bceb304fefa66eb19ad5f122824472225bb"
   license "Apache-2.0"
 
   livecheck do
@@ -22,6 +22,8 @@ class BalenaCli < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "407a6b0b8083c6c68929fd4f82cc01c5dbd45bd2d85a36f9b802b527829ea9f1"
   end
 
+  # Node looks for an unversioned `python` at build-time.
+  depends_on "python@3.10" => :build
   depends_on "node@14"
 
   on_macos do
@@ -30,6 +32,7 @@ class BalenaCli < Formula
 
   def install
     ENV.deparallelize
+    ENV.prepend_path "PATH", Formula["python@3.10"].opt_libexec/"bin"
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
     (bin/"balena").write_env_script libexec/"bin/balena", PATH: "#{Formula["node@14"].opt_bin}:$PATH"
 
