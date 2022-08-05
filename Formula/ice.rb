@@ -11,12 +11,12 @@ class Ice < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "84a1443177a249485c5145eb66c5340b695c10f0fa4adc4e1774f8ef93cee8d0"
-    sha256 cellar: :any,                 arm64_big_sur:  "9c35f817128b493f9440a792c64eb0deb4cd1a98041957023dd738101f12a60a"
-    sha256 cellar: :any,                 monterey:       "2ba70590d88f2ef43bc58f74e53b6ec3962824ea44722add7e103da9b44fd07c"
-    sha256 cellar: :any,                 big_sur:        "bb488143d325598a93be666428349ea4198825d34750ec072b321e16ee1804fb"
-    sha256 cellar: :any,                 catalina:       "6b500bcedbd8382f7aeadd47a98238a753da9ebf0109bb150c2d0eea6387bd8e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ea59f20451a871f4a35d13bf0b104075dede25e36b306083018c5faa7599b1fd"
+    sha256 cellar: :any,                 arm64_monterey: "c3e683a62dedb15887614a90cc3bfb2623389dc3fe8122214425e09274060110"
+    sha256 cellar: :any,                 arm64_big_sur:  "53b055a4cce48ba8d476c42ab493501b0f1a602df1e3bf96fafabc391afbedd0"
+    sha256 cellar: :any,                 monterey:       "a17908bec123dff4b571cd764b3f8ca4c257102604948ad08d84ef434f34c4d4"
+    sha256 cellar: :any,                 big_sur:        "891bafb72353ea0a31cc5d5d027427f20bcc24fa3b52cb2ac9160c3af83c48f6"
+    sha256 cellar: :any,                 catalina:       "d6e9d9188462a16603ecf56f26cae67c951c07ca27f770d984a28ea7a3b79180"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "13df7bf74da5268255e4c51465da3d69dd6e8b47b85f21889f3cc28cb36ac289"
   end
 
   depends_on "lmdb"
