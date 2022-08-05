@@ -16,13 +16,12 @@ class GtkDoc < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "31f6f5bc5918792ddece0aca021f8726d1fc88b76ef4e6b6ef40dd865624916f"
-    sha256 cellar: :any,                 arm64_big_sur:  "6be94177308c7cb81573af6612f3bfcbf050a1539d2b2de8d8ebbde017fa00f4"
-    sha256 cellar: :any,                 monterey:       "9304600335bd228e2825e875fb8d62e72e2b7d7d9bc2bcd33fe3d41d904f30d9"
-    sha256 cellar: :any,                 big_sur:        "b3d2370a6a3fff63341d86c5313e238af04af84dac34a6a19d6f7a1a77acb885"
-    sha256 cellar: :any,                 catalina:       "cfaf657a0e2b8ac879deaefbd2361a2fe7a8e9b3234f73d0ad32eaa5be4a6beb"
-    sha256 cellar: :any,                 mojave:         "abd68d022b9e19677a00c397fc316370b2106133f3a37c9f9c8b13e2d6b099a0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "415526676543d0f3899bd76944217912d9e37387b0039ee830c887fec03b6ad4"
+    sha256 cellar: :any,                 arm64_monterey: "0b3951853e56b258fe93abc736c0abfec944df20a94776a822ed87fd93465c79"
+    sha256 cellar: :any,                 arm64_big_sur:  "cb797d7ebc987004400d9b1b8d3d8e4cfbf2515f1055d429690c4e5fc6c16316"
+    sha256 cellar: :any,                 monterey:       "374f73b607a5a32880a33cc0e16835b2e10fbdd01ad65e36c161e08ffa474055"
+    sha256 cellar: :any,                 big_sur:        "2c4e4cfd3d011f378cc81a834ad6f99bfff064816174ab79832755e4cda377c4"
+    sha256 cellar: :any,                 catalina:       "7fb74f0c48a48ea46e995e0ee3ec03a25b39797d142007b53af39cf926176d67"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "570caa1bc418c9384b16fe4f239fa2266951e6869aad93dc55cde00f01fb1862"
   end
 
   depends_on "meson" => :build
