@@ -7,12 +7,12 @@ class Highs < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "26d2d8fbeae81df91fe3348636e97d641c1dc0989ec892aaa235ae4c296b7093"
-    sha256 cellar: :any,                 arm64_big_sur:  "61e7c4d8b1e6d4aa7f1b104e1f6709603a438d2845893c7fdd84c59d5e525a4b"
-    sha256 cellar: :any,                 monterey:       "82b3ca6fd49a1d5df8d813c6c399c4c4448c78282f3cadd8c92c2aec4ff22bd6"
-    sha256 cellar: :any,                 big_sur:        "b9a13ed6b3a4808b9844311025b268c2b2183ed95e0de7317086b9268e7639ba"
-    sha256 cellar: :any,                 catalina:       "abb55d89a64ae65f39c3bbf1e803d8d8c50e9aef392956f3ae4afb18abfa0f40"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a2ec1937168d4834292359728815f13643fe832d878b59ee56976d2ffc01636b"
+    sha256 cellar: :any,                 arm64_monterey: "c64a5f1c99486d75c63b0a217e3fcb1755712ee95d92d49415f0a742fdd275d0"
+    sha256 cellar: :any,                 arm64_big_sur:  "00f9c3745e6fab6aa9d3a2ccafebcf91e51bafd7333ebf188afa6af9f33dd17e"
+    sha256 cellar: :any,                 monterey:       "9b93504258c67a38e16019538f0ec363c94c8973d66c648607dee5f26e404c60"
+    sha256 cellar: :any,                 big_sur:        "52551f4364ac1e916d15bfe14535849a0d21fe35dd10b2f6a26da73558033d30"
+    sha256 cellar: :any,                 catalina:       "242f8e91cc9131f9b6bcf095299f6b948305ccd10b321b6e0e6115b9371e4f52"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c3de39c3b6b601c5b2497a84a66eb9075978171da2932f615e303c31f2382bf1"
   end
 
   depends_on "cmake" => :build
