@@ -12,12 +12,12 @@ class Abyss < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "1e541d242060ab3e5ff9544a4a9fe61327824692e3ad8ee37db2a52709683b74"
-    sha256 cellar: :any,                 arm64_big_sur:  "0ce0917d17014e1a82c1928695fb87b3a5dcaaec638feb9e97a9e0f536e3c813"
-    sha256 cellar: :any,                 monterey:       "74d2f18f1d5bce6c64fd8c0cdb3107d754c6e4e047d8a51c5374bdd197534149"
-    sha256 cellar: :any,                 big_sur:        "530b0b23c9af599146f4acf2ca548a4881b02e96e16adc11606cbafb41dfe802"
-    sha256 cellar: :any,                 catalina:       "9a6e75c4710d0e7d9ca55119250defb2f82ac1295882f809e5bc669e8e446386"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1023cb4e3ee62d6feec535b310d4d9957e8517cedc032d16e2245fb43e750070"
+    sha256 cellar: :any,                 arm64_monterey: "4109a98fd3b68157787105d2d3da974641e5dc2fd6e63351c54e50a08305e199"
+    sha256 cellar: :any,                 arm64_big_sur:  "e294340bf5c2c91945d555a21215031cbefcba168645c80fb97ad83f334ac07d"
+    sha256 cellar: :any,                 monterey:       "ffca3c29f740aaa7ec67e51fc0f128d9feed8f016543b89cf1cb8c9f0aa60325"
+    sha256 cellar: :any,                 big_sur:        "8ae5a988cf8c7a5a9834d2a3db1613ae152bf6990ee6eae14a17bbe559baf129"
+    sha256 cellar: :any,                 catalina:       "7b591b8908cd7fa7dd97e26333457b20c0c60dcd32535cc07d39723014af3f90"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "79df263bc4e91030e73f64d0348bbb7753d3ad190d5e30a562cbcc414b17d495"
   end
 
   head do
