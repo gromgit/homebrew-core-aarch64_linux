@@ -7,12 +7,12 @@ class OpencvAT3 < Formula
   revision 4
 
   bottle do
-    sha256                               arm64_monterey: "37dca7d346b0857889147bd647a5b42e5f4dfd74c51e7a9bb586f34819de48fb"
-    sha256                               arm64_big_sur:  "1c93b28fa05c5eaac9159d2db755cb58d1a648f67fb9ff64d94fe66917523f0f"
-    sha256                               monterey:       "5934a2bfe67dba2aea7ea4037a8ec678f4e3001498750f49c4773ad78ebb5140"
-    sha256                               big_sur:        "74a9731fee72fce9adc97d6ed4acbc188ed72101c2646a744d0d01de7782e61a"
-    sha256                               catalina:       "feac697cd5cb449c2eabfe6068ea25a8f0e42b59158a3702dd0da60fbca5680a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9f87da752eb513d227ba4bea92f39d61db9a7296bbe369dd4ddccaa6ca6a05d5"
+    sha256                               arm64_monterey: "f75bb2d7f18c01bca91163c1b4e92dd58a28f9bd3e8ab56847a0d0d6634c2c79"
+    sha256                               arm64_big_sur:  "4e621e0ff3d86735c4512518c85c53a836ca9e302dbf24868b3a7e738ce3d4c9"
+    sha256                               monterey:       "36fa66447534208b967e820a302647cb4b3ff47a6c589250094bceb6b56bb70a"
+    sha256                               big_sur:        "4429807d11651fa53a5f37bd6f0a7b2ec3e46cb021450e3b4aac0feaca2433ac"
+    sha256                               catalina:       "1868345fbc6ccc3e573ab768509ca65086f20c5aa4d59969fa46229a4fdb7876"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "db558366ad194d1d8b17a73fc76a4abb58214902e39ed03bec1d2ec1c8e0964f"
   end
 
   keg_only :versioned_formula
