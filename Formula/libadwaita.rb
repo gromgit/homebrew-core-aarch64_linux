@@ -14,12 +14,12 @@ class Libadwaita < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "d60e5af15a33483b3c9969d87cb43d12931a42bf1339158e9991081096182ebb"
-    sha256 arm64_big_sur:  "e567ef3ebdfaa6c865bd253faa5695834b1884588d1cc539cddc5469084a9355"
-    sha256 monterey:       "0c8bc07e01e763adb002e02502600afc3c5ffd926b3a67e63c949432cc5ac068"
-    sha256 big_sur:        "de89385d439f30a714295b9c687c11c47327fd89f5bf48dfe9878f724f9ded53"
-    sha256 catalina:       "2bc7151c70c8061696433a4855e20da2d9f77e69ff52acfafa0586b74af84e39"
-    sha256 x86_64_linux:   "f7e787217cdde92973ef1a6f2d2036adebcbb406f43750d0ea4186547873ded1"
+    sha256 arm64_monterey: "3df6736322f10482e99268f6284ef12b0ae007bfd329514e5bfe17a113def780"
+    sha256 arm64_big_sur:  "a022c90a70e1f37a9912fa9ae58f7e85d7bf480495911cdb37321ee734b57f78"
+    sha256 monterey:       "b7cac6a13577c57de7421e503dcf766c8f99f5ab547e84e51e71a1a9480bcaa8"
+    sha256 big_sur:        "0004cd5f3e5f10810e15892d36f142e313fff869ea2c08b2591d950bc150d478"
+    sha256 catalina:       "720412f82a8a058257500ee6dcf4d94e3ae93cc23e60b651621e631ff6ab9b63"
+    sha256 x86_64_linux:   "ca1113d74cc03b9aeb626d860074d1ffd69859b401eefca56e7ca1cd0e3323f1"
   end
 
   depends_on "glib-utils" => :build
