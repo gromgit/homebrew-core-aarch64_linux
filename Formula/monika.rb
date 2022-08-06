@@ -8,12 +8,12 @@ class Monika < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7ea49ed3a6e291e1253a800e63527254717b68f3ab1f8237468e976529013a14"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "87ac0d429541ad0645203b57858e970aee169148297dbe66aa0599cdf49af51f"
-    sha256 cellar: :any_skip_relocation, monterey:       "ffafad74fa6b66e440179ad8a85f6470b40be61ee78b0d290d05a9b2f92ad5b3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f41b2826a2ec61d682bd25b6a3cd875879777c98e381554420c0b7bb2ce682dc"
-    sha256 cellar: :any_skip_relocation, catalina:       "4fc0ce0171e815f85d145764e523808ab34205a09d41bb7c11796a097b3b2011"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "01fab64a2d960164ad124b6ac0167f060b655f6aced6ce0c36eb1128303aa3b6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "aa5c21c238bace78d7f665bcf5754461f4583fc8e6268412f45b09f31ac61b4f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "680d0fb4f40e7c47614f4cfc2e0245662e20a09cff592c85b491874451fe3216"
+    sha256 cellar: :any_skip_relocation, monterey:       "70ec69448990d413b2116d17c57d94f30d20f9c6c56ab84bdb0cd9b8c1e922d9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "98318750b359f8dc6b5f64b3c869acb0358ab99f542b8654cc942395d208bb1f"
+    sha256 cellar: :any_skip_relocation, catalina:       "e9ce43a708f271f42e0ec0c36cc6f9fac4fc90cfebd4b7b263951ec5c0e84ca9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e428eb84abe4d9abba4e9d20e1cd38e6d8114aaad0e02640a2babc52005f4b0d"
   end
 
   depends_on "node"
