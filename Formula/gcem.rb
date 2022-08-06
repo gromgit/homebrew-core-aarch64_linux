@@ -5,6 +5,10 @@ class Gcem < Formula
   sha256 "ec570f4c4e4dab9a9e929b61fd9cc06303f4bd7943e5489e62fdd577016323b1"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "ad2736bb2676c04cc1064c2fd75ce8c4f67d87d4beadcf3a18690e636af7b9b8"
+  end
+
   depends_on "cmake" => :build
 
   def install
