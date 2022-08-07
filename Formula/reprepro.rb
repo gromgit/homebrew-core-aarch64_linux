@@ -7,12 +7,12 @@ class Reprepro < Formula
   revision 5
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f14b3e3317912d4419c020aa99921c4bbd646c111f5913d2b1f89cd4e0e3d6f5"
-    sha256 cellar: :any,                 arm64_big_sur:  "9c34c0ab99f6bb2c689e25b10e6f17d41b37f417d5eeff739d192694aa932810"
-    sha256 cellar: :any,                 monterey:       "b5f8b1eac94f1f282d21473bc59e6df5a768af8e3a46bd27dd2083f6f97086aa"
-    sha256 cellar: :any,                 big_sur:        "c30c645de4d6279401c622e7b26523c7d2aa322f8315043947c19a5e40ea9ff2"
-    sha256 cellar: :any,                 catalina:       "e686c334946418c6cf450c412ac0e40107a644f2e33d896842a30a74ee21d9b8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ed3aa207822242a14ce2996495fe313a6902672ad4543290aae97e617a5dc104"
+    sha256 cellar: :any,                 arm64_monterey: "e915fdd76e80343ba05cad6f9a914f9b60f4542f3e7960c670356b7fd0d98b5d"
+    sha256 cellar: :any,                 arm64_big_sur:  "23db5bfd409b0976b8ef34417dcf9c1978180d691a7cd2700022dcd5dfed5967"
+    sha256 cellar: :any,                 monterey:       "58dd7d17fb51befa9c6631a2da3db17ba8b78036d6e465bc41b9823359a8e9f4"
+    sha256 cellar: :any,                 big_sur:        "3dbf660c420d129cdf9dcbc4ec8b53ede30beabb269c4dcc320ee3dbee77158b"
+    sha256 cellar: :any,                 catalina:       "f52c6ba27a0f1f0d979ba890cd8a11b916afeed5b581cad08fa788d2d5d10a43"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "083ddcc7baec64baff8ebe0ebabdfe14debf27f38f8ee86b588d52d9b3bbed39"
   end
 
   depends_on "berkeley-db@5"
