@@ -7,12 +7,12 @@ class Healpix < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "dfeb28524f12bedc1dc9175497320abdcd8acff8f3c993d4bfb66ccc93cebd84"
-    sha256 cellar: :any,                 arm64_big_sur:  "ba652ecb444db9af1ac44a9c63b45d97471f7f74a668dc1f4c5021da9501bbbf"
-    sha256 cellar: :any,                 monterey:       "35518051713cd4a78e21496aa1118c35b5ff0c1806238bde84694b99d463fe58"
-    sha256 cellar: :any,                 big_sur:        "59b6fc418e6e12988fb3e8a76ebaeaf009c03475da7a1f1d00835adea06e5087"
-    sha256 cellar: :any,                 catalina:       "3572c5ccdc1ee37e02990a6f3b666b4c9a0653e746284d95119efb37ecaa3f66"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ebc0c6a9b81fdda8de5d1ef805042126fc6d2da0720e0a7df1caeb8fe56d6557"
+    sha256 cellar: :any,                 arm64_monterey: "cadea8f03edf6b0be477bad212d7d9430acfdd1dda5f323bb2b31ce5ad846455"
+    sha256 cellar: :any,                 arm64_big_sur:  "03d1980b6da3acaa9b2dafad82a978b0d30a747ad6856bc9225551ab21c6fac7"
+    sha256 cellar: :any,                 monterey:       "5d38090ecd6924a73ba6c384198f14605335eeb752abbedf5783bd06e6fc8a27"
+    sha256 cellar: :any,                 big_sur:        "153d21ddb88d85138eb6c2d5e839ca892e40af84fdf8c9871bbf7937c34191b2"
+    sha256 cellar: :any,                 catalina:       "bab37de0e96ff73ec0866c512fb91d67603770249f51897a4e2535b5f37ae7b1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5abc18ed2b8160be9e93ec394bdd672fa39b9abbbe618ceab1479965d15ee232"
   end
 
   depends_on "autoconf" => :build
