@@ -15,12 +15,12 @@ class Restund < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "85bc704bc8c9dbcb8d639da5e88396a2b33a7c05498da8c0fd7a41d9abe87148"
-    sha256 arm64_big_sur:  "18839968d135c3ec784b9afe2c7de51519aace1c7a4afb5ea814a1c3f68f02a9"
-    sha256 monterey:       "7f3a3b35e8949a23b3013354b54a9943c02d04ace99398707222813095e91b8b"
-    sha256 big_sur:        "7d80a6fbc29a971b6f4b0e7407f316aa4ba07d6ac3451f67734d42b1fc632925"
-    sha256 catalina:       "5983efae04ea29414da9695d9fe28f9e98697e47c200db55f180bcd56afc0726"
-    sha256 x86_64_linux:   "983eb96c587eb079ea0ca3f43c46c57af85f409b8c11abc84e7405ed4e51c15a"
+    sha256 arm64_monterey: "845534753ce16669495a7aaef8df7c1d458aa402f4abd3bd74e9d826850e7901"
+    sha256 arm64_big_sur:  "ffbdb424ef3db691cd4007941e76c04458be1018d30b6ae67a95e8ecaa5d03f4"
+    sha256 monterey:       "755063e9fbb486a49193e46323a8ca469e5db473dbb4504f483376cb964bb7e5"
+    sha256 big_sur:        "026403c40296087af6ce89436f24ddb7276c4b6ecea3d94798976d3164f3be2f"
+    sha256 catalina:       "09b09869c6d0556abe26cecc12158e3c96b3e0b9bf1835e5e2a4c703ae1720fa"
+    sha256 x86_64_linux:   "5df3cba8c1579a4437adf8d4f4b717717d2c28707ca0f291447ea717560eff51"
   end
 
   depends_on "libre"
