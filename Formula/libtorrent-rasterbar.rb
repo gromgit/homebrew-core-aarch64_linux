@@ -13,12 +13,12 @@ class LibtorrentRasterbar < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "71f49d2a6b339da7f99879697340c8c11b4ee5d006008ef427ad44357ac6babd"
-    sha256 cellar: :any,                 arm64_big_sur:  "80bb116e01e4c70adbf4290280d647442cb659bdb66b84bf589d67f4a8def5ad"
-    sha256 cellar: :any,                 monterey:       "b8927cbc31325e6d03aada3fff69c256a1a572bccaa852de6e76c11a4f5d768b"
-    sha256 cellar: :any,                 big_sur:        "1f7cd2a3c57ba4254e9243ca79704a22ff5fae699b8cde5abee0f390da8b5cfd"
-    sha256 cellar: :any,                 catalina:       "df1666bc529a90e5d2883ffaa581cc767f1b7a661922f46c6dd8012b01cee73f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "41daca9c42f9b5faae184ac94afe14048f2194782776f8b3454b5345d096ce62"
+    sha256 cellar: :any,                 arm64_monterey: "ba47a519f0e597a0509816dda47a9ee705d8c6aeb2c10b5d4b9a3babf516ea54"
+    sha256 cellar: :any,                 arm64_big_sur:  "6ef64cb09622bdebf448916803ae822ec96eda79219f70fa000864f6d1c82087"
+    sha256 cellar: :any,                 monterey:       "394d16660f62e75f2b7c3484e7b1f0d93d5e8472a01c5b24ee0883a8c8741374"
+    sha256 cellar: :any,                 big_sur:        "f13afb140dd550e0c32edb9572eea363138db23204eea75482360d057041fe83"
+    sha256 cellar: :any,                 catalina:       "f1db94dcb3d64c3be8dfa9fad63aaca91e034e74a3042a36d7022ee89501e505"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9c31bf118a60d52127cb93855a1977cd637f87e184754e3471b4ef3dbe230692"
   end
 
   depends_on "cmake" => :build
