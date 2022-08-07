@@ -5,6 +5,15 @@ class GitSync < Formula
   sha256 "0b65c3f414c98b13d66e99c86680c67348be50d578f88a0888720888b3fcd700"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0fb05fc3525baf5fb04707d22f5d5a9a1c55b6fedcf1b3028a47ed8d53fcf500"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0fb05fc3525baf5fb04707d22f5d5a9a1c55b6fedcf1b3028a47ed8d53fcf500"
+    sha256 cellar: :any_skip_relocation, monterey:       "aab78cf307f005c1ae828bcedf8eea5865c0841b5be1e007dd17416057fc1e27"
+    sha256 cellar: :any_skip_relocation, big_sur:        "aab78cf307f005c1ae828bcedf8eea5865c0841b5be1e007dd17416057fc1e27"
+    sha256 cellar: :any_skip_relocation, catalina:       "aab78cf307f005c1ae828bcedf8eea5865c0841b5be1e007dd17416057fc1e27"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "35078cce86078db4dff5cbe59b5b5cda7cba80fbabf4b9f0854c7b148b0ca5e4"
+  end
+
   head do
     url "https://github.com/kubernetes/git-sync.git", branch: "master"
     depends_on "pandoc" => :build
