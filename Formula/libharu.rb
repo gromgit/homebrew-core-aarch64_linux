@@ -1,8 +1,8 @@
 class Libharu < Formula
   desc "Library for generating PDF files"
   homepage "https://github.com/libharu/libharu"
-  url "https://github.com/libharu/libharu/archive/RELEASE_2_3_0.tar.gz"
-  sha256 "8f9e68cc5d5f7d53d1bc61a1ed876add1faf4f91070dbc360d8b259f46d9a4d2"
+  url "https://github.com/libharu/libharu/archive/refs/tags/v2.4.0.tar.gz"
+  sha256 "d1c38c0492257c61fb60c85238d500c05184fd8e9e68fecba9cf304ff2d8726d"
   license "Zlib"
   head "https://github.com/libharu/libharu.git", branch: "master"
 
@@ -19,25 +19,20 @@ class Libharu < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "5fe78364fa33562f2bdee06c1dfabb867ebbf50810f64fbb5d05f127dc74b106"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "libtool" => :build
+  depends_on "cmake" => :build
   depends_on "libpng"
+  uses_from_macos "zlib"
 
   def install
-    system "./buildconf.sh", "--force"
+    # Build shared library
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args, "-DBUILD_SHARED_LIBS=ON"
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
 
-    args = %W[
-      --disable-debug
-      --disable-dependency-tracking
-      --prefix=#{prefix}
-      --with-png=#{Formula["libpng"].opt_prefix}
-    ]
-
-    args << "--with-zlib=#{MacOS.sdk_path}/usr" if MacOS.sdk_path_if_needed
-
-    system "./configure", *args
-    system "make", "install"
+    # Build static library
+    system "cmake", "-S", ".", "-B", "build-static", *std_cmake_args, "-DBUILD_SHARED_LIBS=OFF"
+    system "cmake", "--build", "build-static"
+    lib.install "build-static/src/libharu.a"
   end
 
   test do
@@ -61,7 +56,7 @@ class Libharu < Formula
         return result;
       }
     EOS
-    system ENV.cc, "test.c", "-L#{lib}", "-lhpdf", "-lz", "-o", "test"
+    system ENV.cc, "test.c", "-L#{lib}", "-lharu", "-lz", "-lm", "-o", "test"
     system "./test"
   end
 end
