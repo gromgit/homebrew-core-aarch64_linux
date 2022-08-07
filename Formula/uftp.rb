@@ -11,14 +11,12 @@ class Uftp < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_monterey: "f8c933067b1bf178dd93aaa2a900097481d5be013230d740062eaa46cf975af8"
-    sha256 cellar: :any,                 arm64_big_sur:  "114882e78afa5b2cce141e3e19b01022a4eeb3c4e1cbae7934d36ce99df7f1ff"
-    sha256 cellar: :any,                 monterey:       "a5e3cb283187e9cca940beaff105e2cacbc9a9b210c8673fe703ae9543658a98"
-    sha256 cellar: :any,                 big_sur:        "6ea6e3b9e53d1040ebc6f1a25b58247ebe5972e1479002100e6b5d167b2c5e54"
-    sha256 cellar: :any,                 catalina:       "ef74aa1112e9f5b325bb1403de71fa604532806dadfd97368e778be187ddee13"
-    sha256 cellar: :any,                 mojave:         "17253bb38570db26a53eab4cc75d809b32bff3db8ecdf48d9dfb03b453866ac0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2d550e280c49503b83b5bc2f30092dedc67e8b0ff0937dcbc487e475c0f1ee02"
+    sha256 cellar: :any,                 arm64_monterey: "d8d9b1b7a1c7e9a359242de153b087f05dee5a65d0261b042040464edd9613af"
+    sha256 cellar: :any,                 arm64_big_sur:  "ef47b9d11a228c6daa4e8a8311ed4e2e0f983aa1036efcc7029895d0b56631b7"
+    sha256 cellar: :any,                 monterey:       "ca0f38ccddec9d9e655874dfd129609fa72fb0d428769b34e97f8b21ae11cab1"
+    sha256 cellar: :any,                 big_sur:        "d15a9b0f78488e86e802bc67e949b0ec9ceaf38e1096be34e007440e0c519a4e"
+    sha256 cellar: :any,                 catalina:       "8cdfc5565a6010c1149e72c910751a65e8792e4ef4c02a76f170da4a46b3e376"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ab28f1ccdf3f8f1aff8c2123122fb41f32bd6e5f235945e37322241696f32191"
   end
 
   depends_on "openssl@1.1"
