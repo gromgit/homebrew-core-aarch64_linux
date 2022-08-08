@@ -1,10 +1,9 @@
 class Nvc < Formula
   desc "VHDL compiler and simulator"
   homepage "https://github.com/nickg/nvc"
-  url "https://github.com/nickg/nvc/releases/download/r1.6.2/nvc-1.6.2.tar.gz"
-  sha256 "e6e2db8e086ef0e54e0745b0346e83fbc5664f9c4bda11645843656736382d3c"
+  url "https://github.com/nickg/nvc/releases/download/r1.7.0/nvc-1.7.0.tar.gz"
+  sha256 "bc10ec3777b457582a66bb94f97c614d8d83956547aee4c658402da6e2474b32"
   license "GPL-3.0-or-later"
-  revision 1
 
   bottle do
     sha256 arm64_monterey: "a2b12eab1789c86431f2c2243e07f012f8bc23eb8bdc753cc460e2c548f80e63"
@@ -35,28 +34,36 @@ class Nvc < Formula
         revision: "fcb93c287c8e4af7cc30dc3e5758b12ee4f7ed9b"
   end
 
+  patch do
+    # Fix build with glibc < 2.36
+    # Remove in the next release
+    on_linux do
+      url "https://github.com/nickg/nvc/commit/3f1a495360d4c97bf6537e62eb77c1269297dcb2.patch?full_index=1"
+      sha256 "d5bda0f89c346f618b9bc5ce96095be5bb9eb8e0fec3caea4ebddfe1ae2dee23"
+    end
+  end
+
   def install
     system "./autogen.sh" if build.head?
 
     # Avoid hardcoding path to the `ld` shim.
-    if build.head? && OS.linux?
-      inreplace "configure", "#define LINKER_PATH \\\"$linker_path\\\"", "#define LINKER_PATH \\\"ld\\\""
-    elsif OS.linux?
-      inreplace "configure", "#define LINKER_PATH \"$linker_path\"", "#define LINKER_PATH \"ld\""
-    end
+    inreplace "configure", "#define LINKER_PATH \\\"$linker_path\\\"", "#define LINKER_PATH \\\"ld\\\"" if OS.linux?
 
-    system "./configure", "--with-llvm=#{Formula["llvm"].opt_bin}/llvm-config",
-                          "--prefix=#{prefix}",
-                          "--with-system-cc=#{ENV.cc}",
-                          "--enable-vhpi",
-                          "--disable-silent-rules"
-    ENV.deparallelize
-    system "make", "V=1"
-    system "make", "V=1", "install"
+    # In-tree builds are not supported.
+    mkdir "build" do
+      system "../configure", "--with-llvm=#{Formula["llvm"].opt_bin}/llvm-config",
+                             "--prefix=#{prefix}",
+                             "--with-system-cc=#{ENV.cc}",
+                             "--disable-silent-rules"
+      inreplace ["Makefile", "config.h"], Superenv.shims_path/ENV.cc, ENV.cc
+      ENV.deparallelize
+      system "make", "V=1"
+      system "make", "V=1", "install"
+    end
   end
 
   test do
     resource("homebrew-test").stage testpath
-    system "#{bin}/nvc", "-a", "#{testpath}/basic_library/very_common_pkg.vhd"
+    system bin/"nvc", "-a", testpath/"basic_library/very_common_pkg.vhd"
   end
 end
