@@ -7,12 +7,12 @@ class Ksh93 < Formula
   head "https://github.com/ksh93/ksh.git", branch: "dev"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fa0cb874ce9c2fd32eb1e4f252c2da29bdd3f77cb4c24cbfbeb909fb7d5ab4a7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4f978599539ae75d7e9a5dd7ce9d7b7281faf40b7153dcf6f1939c3ef69283e2"
-    sha256 cellar: :any_skip_relocation, monterey:       "97900fff311bd4f45909c3b4053e6256994ab2bc4cc8e4b511b37708e510b7f6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "54067840605f77f64136ea8a335754fbc1cda28fd7bdbb4056ba776375bbfdc2"
-    sha256 cellar: :any_skip_relocation, catalina:       "4ae7789f2ff61330dcca2e90dd7ec59e54b30d08c28705d5cb6957b721a67922"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f0b32cb0d301fa08d2b97c1f413893e537fa53dd6a21f3fc508c3ea87fd52d0c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "327136e79b926b47b57db0187fb4ab29a7ebf25530830c16cb6d5a4ad3dab16a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d5ed074d053386decffbb819de89ceae91b51e1abc18b5bf2fd330a1183ea4fb"
+    sha256 cellar: :any_skip_relocation, monterey:       "f964e045dfc7d1e037d313d61fefa154b4b3eafa0a6b7d9c339ca21080b4c8ec"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d30e23da09505e4bf2a02edcd7cc63d00c9662467e32c153afecec25fae1e688"
+    sha256 cellar: :any_skip_relocation, catalina:       "d50a7df0e90a3662f01951ebdec512a3a452d1c3e927a594f920b293a7bc3368"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f56ab0571fe27f19aa9c8cd9359ac75c5ded35d2333ba60c91780ed5395f854f"
   end
 
   def install
