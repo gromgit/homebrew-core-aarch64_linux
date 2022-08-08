@@ -6,12 +6,12 @@ class Hcloud < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8d51161dba64cc0ff60cc34f056b2cc2675c5cdf46adb199bc393905a380bd7b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1e796eeed039ec006537227762fb7c60e661eff1daac5f37c1605b5a27e19e6e"
-    sha256 cellar: :any_skip_relocation, monterey:       "9aa4a0aef5eccd6a9d6fae7ef5fdad299bf72f6cecae27d4846357769760ba00"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4737d878685d919257eeebc5a8c2c450707b5ee3abf1249b62b44f5350f1b1ed"
-    sha256 cellar: :any_skip_relocation, catalina:       "a235c5b8de8975ffabc38e264d9c912cd058e2923b2cac497ab018490413db6c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e6bfac2ec5e18c335fd107461fd34156c74bf94a3cca7fda9d9f8ac92f8079eb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "13b65ab16fb45fb1543959e4b061088ec059fd0695086330da61794c530f8c97"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ae6117be641edd496446ee678576e6771a0746c0941767a43dbbf01dd3c939c4"
+    sha256 cellar: :any_skip_relocation, monterey:       "1a229b558069a4c9f2e11613a10e2a50fccd50d217a60d3005262ace8043809c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8201d4a62d1613d98baee9fa1921a6b8add723c303f498c31e6f2d7406e699a3"
+    sha256 cellar: :any_skip_relocation, catalina:       "004e2794ce1435d641e6ae4e1fe3a80a8a39f25ecc87b31ca0db5ebbcff938ab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6c358356ae3d4d8cf98dfe9d52834274e1091278a3194c1a99801817cb11aa6b"
   end
 
   depends_on "go" => :build
