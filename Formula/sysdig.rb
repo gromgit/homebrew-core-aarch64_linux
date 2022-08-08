@@ -22,12 +22,12 @@ class Sysdig < Formula
   end
 
   bottle do
-    sha256                               arm64_monterey: "2d6f3f56bc296c1a61ebb845d21c306f0c221649ec4e9eef1dc960e1436eb7cd"
-    sha256                               arm64_big_sur:  "2b94a4f8b946be161a4049e197d03f7d3c9b4d6515e84777c90de54fe8e6847d"
-    sha256                               monterey:       "a036c52834863c81b36d9bc61f2e4beae91071e5a78dcdffcf7cff0c42ee50cb"
-    sha256                               big_sur:        "d7f3d67ee95aab34dd69b2be6df866ac50968d83b3ba30d2ba32f6afeb1dfc49"
-    sha256                               catalina:       "f2a6d211b2ae24f9223a90a5ca0a278a93ee8cee8f0dfe132f6cab0227bfde9b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b8b585f6db774e56c095f30b22807c509b41d5f9ecf8638eb2c7b352b7a5ee5f"
+    sha256 arm64_monterey: "d23b9a35120a40444e93c64d98f708362cf02f68d915218533849012d2633197"
+    sha256 arm64_big_sur:  "4d49cc9e1910227710b298d0f28cb907e3cb71f606818c06c31125cc293b8c37"
+    sha256 monterey:       "bd8c3741c23dd9bdef1fa13d0fa299b4368b5072f3c58956e09c549d5a5ff676"
+    sha256 big_sur:        "1306aa6f105ff51b13305c1084a807894d103b0ad3f7a71621780b87124f0621"
+    sha256 catalina:       "78f6f81a3fb4d61fb2ca2d41ec1c5b10284c9edc77b0e49fc1eb088b3b5d8a83"
+    sha256 x86_64_linux:   "e41e14f0ac825d44419b2af77d183230af82feb377df1dd2d0bc45d8a873b9d7"
   end
 
   head do
