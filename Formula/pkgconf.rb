@@ -11,13 +11,12 @@ class Pkgconf < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "de081f7770540f6df757f909825baee091fb2a2a5c938798a9e65824a258a747"
-    sha256 arm64_big_sur:  "4eb94e8870b9a8e817dc114e310fbb708d5d05226104087ffa18eac66a59bc65"
-    sha256 monterey:       "b1bac03399b7e53e23cc1ecdcc6b47a6faf7e74681f08ddca2b2a679bebc8735"
-    sha256 big_sur:        "c5a4e284bb365062326df5947cb459cee868538599b3cbb612d79df2e7c40efa"
-    sha256 catalina:       "e14c3c64737060d5514792608c0047e336554762a5e9928ab1dddfd8ee565553"
-    sha256 mojave:         "c161289fe2bfc1367be2d4e53465d9ebd80a824eb20630fba1d19d35041b5649"
-    sha256 x86_64_linux:   "e0f0f360a8d39ff1e210dc73008952d7374bd86672dc2280396b319227f6dea8"
+    sha256 arm64_monterey: "744b2cf263630f25f7c766889d78bdae607fdd6dff05bc7bafabad1adf4c67d1"
+    sha256 arm64_big_sur:  "88ea84bb2ff11dce178307779a0c2d5826be1eff758738c9e8a11f97c0ebc4cc"
+    sha256 monterey:       "00edcb714309e5dffee74937f3cca5ff180e5ffee5383eb7e14ec20a8c20a23b"
+    sha256 big_sur:        "faa9cea408e67a152e261434b9d494c06af4da873f04dcee6a085748836e7814"
+    sha256 catalina:       "eab0c5af51a34315b1819f6f94008e7692a7cac293ed54014524888e5f97ef45"
+    sha256 x86_64_linux:   "b4454f82308e3e08cb82fa75c521e0f9d78759a839f01b607b86ce3f7ea1b412"
   end
 
   def install
