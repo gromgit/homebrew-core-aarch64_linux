@@ -9,12 +9,11 @@ class Wxpython < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "2b7a373364e93be90a1ef2304a2abe3507f7cbc632dd3a0a141eba7b82788675"
-    sha256 cellar: :any, arm64_big_sur:  "d8fb50086a3047b2ff39d2747903ae591a87947f0dd84174e3da2ae1eb0f0171"
-    sha256 cellar: :any, monterey:       "4b352f54a4570b5fb89a29566ba638889b18be31794243285f84aceb14b7ecbb"
-    sha256 cellar: :any, big_sur:        "40e9e6c3cfe094b254d55e69e89ed38e8b48437efb49a641dc17ac2bbddf0df9"
-    sha256 cellar: :any, catalina:       "67183e7560f2add598527db7eb0d30d4f4fe6e82b07db59bedd1cadeaedd1693"
-    sha256 cellar: :any, mojave:         "8e06cb7727b4dd39b3ebd93f6691aa8147a1ee0fef47cdbfbece77d203f411f4"
+    sha256 cellar: :any, arm64_monterey: "7b558516617be5aa563cf1250276eea3eda660e19bdf8bf66417aa55215992ea"
+    sha256 cellar: :any, arm64_big_sur:  "89af5734fee0d433fff77e1cb39f4beaea35fc17518ca0dc99881c892518f0b4"
+    sha256 cellar: :any, monterey:       "25ed4d082bf30adc0cdd9652f1866702345ae422d69329e0e3a683522d5a5d9d"
+    sha256 cellar: :any, big_sur:        "cf40f9fb59df2b8ea5712b1bf4e1891694c144a010a7b119a6df24f39b46c8a3"
+    sha256 cellar: :any, catalina:       "363cff6b220e1d12e1075e3dfbb580eab83c0fea65f3c4f398d2d6eba80c5145"
   end
 
   depends_on "freetype"
