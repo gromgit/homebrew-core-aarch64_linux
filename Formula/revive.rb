@@ -8,12 +8,12 @@ class Revive < Formula
   head "https://github.com/mgechev/revive.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "215ae4622ec59ea8a9386bdb60bef437b2601b242c54abc8e83479165130eb87"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "215ae4622ec59ea8a9386bdb60bef437b2601b242c54abc8e83479165130eb87"
-    sha256 cellar: :any_skip_relocation, monterey:       "bf4b2cc72ea1355a1eedd95d252a7ea15812735a4b20745e70a32f322eaf0806"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bf4b2cc72ea1355a1eedd95d252a7ea15812735a4b20745e70a32f322eaf0806"
-    sha256 cellar: :any_skip_relocation, catalina:       "bf4b2cc72ea1355a1eedd95d252a7ea15812735a4b20745e70a32f322eaf0806"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fe726019996c9d660d1cd2afd6661f81eb7a08a7d12e07c44cd8230a4642596d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "caacf9e69acea46d988fd29f773641bc2e3847876fd8a4666721e617e483c4b3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "caacf9e69acea46d988fd29f773641bc2e3847876fd8a4666721e617e483c4b3"
+    sha256 cellar: :any_skip_relocation, monterey:       "ec4ef29a5177ac62a9352db0694c901cf46795f3aa90ca1eed2080ba717a3c90"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ec4ef29a5177ac62a9352db0694c901cf46795f3aa90ca1eed2080ba717a3c90"
+    sha256 cellar: :any_skip_relocation, catalina:       "ec4ef29a5177ac62a9352db0694c901cf46795f3aa90ca1eed2080ba717a3c90"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "913db30ec17b1f25668d3577978f998b320a6be9541931b72b16eb9b2d2f5b14"
   end
 
   depends_on "go" => :build
