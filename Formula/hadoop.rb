@@ -7,12 +7,13 @@ class Hadoop < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "447be30cbb654379f96c9126a2763e5dab8edd85396caf82bd7516e01c540ffa"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "447be30cbb654379f96c9126a2763e5dab8edd85396caf82bd7516e01c540ffa"
-    sha256 cellar: :any_skip_relocation, monterey:       "74357baa438fe8680aa00f0704e95bcfc558c0a8b0fff48f6b3716c846868525"
-    sha256 cellar: :any_skip_relocation, big_sur:        "74357baa438fe8680aa00f0704e95bcfc558c0a8b0fff48f6b3716c846868525"
-    sha256 cellar: :any_skip_relocation, catalina:       "74357baa438fe8680aa00f0704e95bcfc558c0a8b0fff48f6b3716c846868525"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "92cb92589ac48035f2482eca9321cebe31dfd3873272da601e24f30cc758cb5e"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "caad5e1aa87bf016bdb4bd6e828e21640136ad33d18de09410d2bf4f2e985f00"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "caad5e1aa87bf016bdb4bd6e828e21640136ad33d18de09410d2bf4f2e985f00"
+    sha256 cellar: :any_skip_relocation, monterey:       "a7285cf8aeaae3e175340d73f5458aad739dcf377e5e3c622867f3889a5921da"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a7285cf8aeaae3e175340d73f5458aad739dcf377e5e3c622867f3889a5921da"
+    sha256 cellar: :any_skip_relocation, catalina:       "a7285cf8aeaae3e175340d73f5458aad739dcf377e5e3c622867f3889a5921da"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d96e6b62f7237f82f55f5c17708ab79f9bec11e15e0f16d9986b21566eaf73cb"
   end
 
   # WARNING: Check https://cwiki.apache.org/confluence/display/HADOOP/Hadoop+Java+Versions before updating JDK version
