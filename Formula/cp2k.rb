@@ -6,11 +6,12 @@ class Cp2k < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "2f1fa6d5a62af7f9714d31837435f398be4261f89c3b029e0db964faf4ce38d7"
-    sha256 cellar: :any, arm64_big_sur:  "8bf7e70d9f2405197895a92b45a1921e0ea7f1f5df87a1c0b9c6a4dc3f5db3be"
-    sha256 cellar: :any, monterey:       "ccce3f31bd5a7b7afcdb744598d35b379675e1638364490d2bc664124cad6065"
-    sha256 cellar: :any, big_sur:        "376b2a21f32719844f1bbaec45989a4d188f90958808347f0f5b925fc2a2143c"
-    sha256 cellar: :any, catalina:       "a23b005ee4bf3475c27af5c6a344b32c769465b949da0e2874ca0292220907ed"
+    sha256 cellar: :any, arm64_monterey: "cbaae31d66f9a00cad5e779b5626a3f36c6b3eee68d70e6f8538d4aadd2e4bac"
+    sha256 cellar: :any, arm64_big_sur:  "2db2338f594f4189f47be7d71c9ba565293bc50b2e49316f9a1bbf4d27dabc05"
+    sha256 cellar: :any, monterey:       "1b017ee636c197baa03be6cab743caddf1f8ac1ea44718a2473e7d963a306f8c"
+    sha256 cellar: :any, big_sur:        "9663b89ff6c4d6f50574896387223d723953a3f38ca037dc6bd1e703444b414c"
+    sha256 cellar: :any, catalina:       "c0194a21b6e589e27f510ad523c33390f2f7612e463f59a606726dee90fa666c"
+    sha256               x86_64_linux:   "09374682881963e91b8afae795e85229dca3928cc07d7be989c95d7e922a9d71"
   end
 
   depends_on "python@3.10" => :build
