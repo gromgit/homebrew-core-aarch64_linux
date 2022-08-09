@@ -11,11 +11,11 @@ class Txr < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "6cf31060d8419e59dec20d5a8248abc93c80c2590ba202f6da786782ace599d3"
-    sha256 cellar: :any, arm64_big_sur:  "cb172dd29555b5c5b54b82dd455dcba6032248e2a927c2f46746710c5262e1f9"
-    sha256 cellar: :any, monterey:       "a299e59b993c1dc325a6bf67a2c4e6d9741a79d45c8d60d3f007978d4339071e"
-    sha256 cellar: :any, big_sur:        "950f52091914640ab31afbe1c51e88fc2bf23aebc6c99ba82db4511293240bbd"
-    sha256 cellar: :any, catalina:       "63f7d7c193c2e8e48d7a117dbbcc76a5814b93bbf308097bb72ae4d1aa0b7158"
+    sha256 cellar: :any, arm64_monterey: "73ab51f5c313dc2b99489b27af595682ad111a2eb29795b69b913ca758bfbabd"
+    sha256 cellar: :any, arm64_big_sur:  "ea247a2c476dd0965508cd68218781a7e19fee5b4361b96117d712bba9f367e3"
+    sha256 cellar: :any, monterey:       "003e8f9861ab941b231f4c266f1f6918882b6fc4c0c58c39d46a70b7e03a46b6"
+    sha256 cellar: :any, big_sur:        "4ab450096900832fee3c1fcb18a8f2f9d7507f2a53a3be9860de808a31103aeb"
+    sha256 cellar: :any, catalina:       "7860f2acb8b2cf24fa454d657cb77b8e245da61dd7b86c64ca50379e975af770"
   end
 
   depends_on "libffi"
