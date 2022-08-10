@@ -17,12 +17,12 @@ class Netpbm < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "4d6847069d5fe7cfa083af5504968be345c51b89654554c0c69af4f851199ba0"
-    sha256 arm64_big_sur:  "13b35ba56a0f7d881b5a3d252736b4916b8e003ae97d49b23e8a97f1d1096558"
-    sha256 monterey:       "2aaa219cee191125fb32b144ef99263f94848fdf1a29f59969d1b051b84183e6"
-    sha256 big_sur:        "18d6a720f0dcdf843f8d636203cea658a73dc4a22ff324169d529c49e94b4d8e"
-    sha256 catalina:       "7c47fda00829312d18b25d50fe5067e4444bdf2a42b7825bbe5f62762912de6d"
-    sha256 x86_64_linux:   "9ab2fffdc4eebc47be06d97c5eb5849d55df9ce27a22d7de445d48a0061ef77c"
+    sha256 arm64_monterey: "322690741b647d65ace46e4e8ccd1b4ff892f8139f7449226aaebdb6778415d8"
+    sha256 arm64_big_sur:  "ffdf2f1d9465afaacd50b52deaafb5144c08ea4b3bfa1b617a38404cadee1123"
+    sha256 monterey:       "9b591e95bdf445bd50db320c24f5c5bc5678884df17651628deaea8653b2e025"
+    sha256 big_sur:        "0b22fef685f5dbab0639306d9c7fac73d032ee9ceaa86452479e21f8725f9780"
+    sha256 catalina:       "e43e79cf042b93acfd74cec0787f5a104abe7cbcca4fac04d27a79aba5dc6dbd"
+    sha256 x86_64_linux:   "04595e5d015ce77c41d0c19d786d3c528b1aa67e553bef74b2b278e0e631de8b"
   end
 
   depends_on "jasper"
