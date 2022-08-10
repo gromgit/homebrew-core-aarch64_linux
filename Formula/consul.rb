@@ -12,12 +12,12 @@ class Consul < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a82670a1547e88e086841403e9f930856578f708f9975160d19043b44be429e3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "aef6ccd8ce980d040af1caf7fa6cc68a3060403f5131431416b7390b25ca4735"
-    sha256 cellar: :any_skip_relocation, monterey:       "d508825362eb59a5c8a10f5eced631af81391e30668c2d5e9da1d8353c8cd2a7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "711d2ab076800b46c604070f206edd5c0f2386132da4134d0b8a6a4d837d3709"
-    sha256 cellar: :any_skip_relocation, catalina:       "101f471299bfa5d7bfd0ed6718aec2ecb0a330b06d93a93d35c0c6b6ef3ab51d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a9e74b2679d21e20b61e1b864c31d6cc966da0ebe2325e9efcac80e32295d611"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ecd0624182648a622feffd8994e462e2277e5000bc0c18d7cd77ac72e8d27b1f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "341a0610ebdd3eeed8016662d34d0e9b5e2e2da46ca0787bf0f3c17fe3ec518e"
+    sha256 cellar: :any_skip_relocation, monterey:       "650215b19c327c40f4aea405a82943265a980dd90ae67cef3e5d893ac0ddc62d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c08183438346ce170fd053502898f6121b58ce363c6a9823bd7ae3b0428e15fa"
+    sha256 cellar: :any_skip_relocation, catalina:       "9a73e0c97eab2196e7ebf1a7485aea18ec720535d4a02c6ed9f64c57357e5582"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "43a7129e2e32e68e3ae05c656afb2f9938dd56bea42300f64620654161214b25"
   end
 
   depends_on "go" => :build
