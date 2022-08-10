@@ -12,12 +12,12 @@ class Xfig < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "24bc4288088c7cc01da77deda5ee0432b0b8b07f55b84a4523badf70252ba748"
-    sha256 arm64_big_sur:  "60817bdb8aa8d86d4ab03c741c397e57b8ab6cd8ce0d1b194ac98f0531f252e5"
-    sha256 monterey:       "cc8881a5256556cbcec044ac586eaf1cc1f20cb2f45260b9ecbce55e9e4dcce2"
-    sha256 big_sur:        "642d8bea823991fc36954c5e9c9a19725b2e6b5d39009ce219d02968b307ed33"
-    sha256 catalina:       "ffa7221ba94ccfe78f5004d633abf8b0196314ddf5d0288e606063082852ad6b"
-    sha256 x86_64_linux:   "89bc3c77db2045536328aed602942558e497ad9baa91890066223bc282dd8f85"
+    sha256 arm64_monterey: "04bf5b22a3b69384005293bbd96ccc0a2de3235892e68b765adf40108566937b"
+    sha256 arm64_big_sur:  "df4e69418fc7bd9ac6931818add8977fcabd39d4d5d651a4754dc952236bd16d"
+    sha256 monterey:       "9fec3557806dbbd3083174c197d9a7b2f81c643673c97818418546cabe233d09"
+    sha256 big_sur:        "b56788b3eda210cdc78c96839e16755b67384cd625e10afc7d701759a7415ee1"
+    sha256 catalina:       "89a4cabe41d5c498c9cd21d52f28dbad24f1c7c4dd239a07919244ec25375b47"
+    sha256 x86_64_linux:   "101f918a51d6bdde9cfa5c4ca4de84c219c0e35baa971542d8860869797174b8"
   end
 
   depends_on "fig2dev"
