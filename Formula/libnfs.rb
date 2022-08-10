@@ -6,12 +6,12 @@ class Libnfs < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "bdab2c6de645fcf6e0ece45ed381adebfa405cc701761f5adeba226ee6182cdf"
-    sha256 cellar: :any,                 arm64_big_sur:  "5a900ac4f000b73468fd88c42cf22b88667e35c7779882ed28e7b5a1a58a0470"
-    sha256 cellar: :any,                 monterey:       "24ff50f0aefaa107331ad6b39efeb116e593a64ee0d356e44dbc15396f65f423"
-    sha256 cellar: :any,                 big_sur:        "5d81d54212057e9c3a54cf64e8184c9d822e034b3e166db675f4ce1c7c13ef49"
-    sha256 cellar: :any,                 catalina:       "0bc064e523d4f3d95cce9a4345b3de6a30df452f7b7a084bf6fcbd75a9dce5a3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "01d4c269f24baba63e66645fe0fe99ddf60487c258d7623357b5242ed76b897f"
+    sha256 cellar: :any,                 arm64_monterey: "b8df8747861411e30845ca1a6ab42877c74d8ca3e65c838b5ad498faa6609481"
+    sha256 cellar: :any,                 arm64_big_sur:  "df45a5d53a8ddd243d7702fbbd834607db180679dd694eb9ef91bf14f1a399f2"
+    sha256 cellar: :any,                 monterey:       "af2b41b3437f4e5e5ead13ff3f3c4fb8cea0aa69813a56199e4d7b0547b6a7bd"
+    sha256 cellar: :any,                 big_sur:        "c4fd271ca3189c9fe0509bd7637f6d8c4b9974f47db586de2deb0893bbb4cf68"
+    sha256 cellar: :any,                 catalina:       "e188d926e1a762f20c892a5b9202de9c42e2221bc35899a22f5c6a064dac1dd1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e778214a1e42d82af233ca4ff61fb2cfec684bd9e610c26fc6152e600efd6830"
   end
 
   depends_on "autoconf" => :build
