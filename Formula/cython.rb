@@ -7,12 +7,12 @@ class Cython < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "84388303d0cd534c4e590d43b4132c74940ad2a6028b1466ee314c2e6092525b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "90a105b02c7ed397bc5d4bc7401c7f36461ffc57b8a17e54d1a23329bd59b91d"
-    sha256 cellar: :any_skip_relocation, monterey:       "42ba4f89d67ffce14a9d3c03a78b476e736f9e35353fd7edf9a478dc8529334d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "27b42b7a895a16502507a7d59c73f0db6c297f00afb60b364b965e44feaf51ef"
-    sha256 cellar: :any_skip_relocation, catalina:       "9e73b22f2f15811d094d8fb589900998b9a30e8fd4096d6e1b1fac24ac4f5bad"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c053536274e62c840cd3076f821512190f50ede667d1bf19c06e2d4842bdf565"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bf2d6933b68b87cfa36a047f49774f59e8f0193a2f53fd4284d2e81b8c6e13f6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fb954cb6e538d5619560ff5598f58dfff45071599be7593bc9477ea96e606dac"
+    sha256 cellar: :any_skip_relocation, monterey:       "37c7b39c9ea3300d07dbf86e96d6365f2fd305ebd953ed87e6231606960a4c65"
+    sha256 cellar: :any_skip_relocation, big_sur:        "48374cefbe3fed92a24b60688956302ea807ae2d7b0346d280198920e5381dcf"
+    sha256 cellar: :any_skip_relocation, catalina:       "b02e83dbf1ccd76667e5e16626473646cdfeee9bbd37676093284d3035ed366b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c0277874feeaa8f509bb7ee2d6c6ff0e6183983c6186095581ad19e6f25d03a1"
   end
 
   keg_only <<~EOS
