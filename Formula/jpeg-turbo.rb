@@ -8,12 +8,12 @@ class JpegTurbo < Formula
   head "https://github.com/libjpeg-turbo/libjpeg-turbo.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0fe5fd23465784fe56f97c29589a72eacc21f8fb75f8c84e69da724637aee262"
-    sha256 cellar: :any,                 arm64_big_sur:  "e47a04f605090bfa71f2bbc71c84ea4f2a0c3986ccc8f61859b31247ed0e9e08"
-    sha256 cellar: :any,                 monterey:       "1ee0a0cfd7ceeae5b1bcccc105d47ba9adbf74e53eccde118b4849b654a9cdb9"
-    sha256 cellar: :any,                 big_sur:        "14c6fdc80b47eef6b88114cad94f0b311d8d2766dae25ba2660797ccaaa1f4da"
-    sha256 cellar: :any,                 catalina:       "54b3b74ffd0af4ee85a3984af36f8cce5be166a2dd74488e64f266716fcfb5d5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cfc674d48947c45d2018420a3e0eb4ae4d0778984ad5a478e165498cafe9b118"
+    sha256 cellar: :any,                 arm64_monterey: "6a614ed2a59f896d9ddf7a291b55a36a13bee559ce05d407636cea8ec592ddfd"
+    sha256 cellar: :any,                 arm64_big_sur:  "f3b0032dac493b4ac3ad56e33bdc9e8948131419433ab28c0e5d954a71e791e5"
+    sha256 cellar: :any,                 monterey:       "a66e3544895b4aeb671a113dad6754f3470fd5247b21e4bd22bd202398837f59"
+    sha256 cellar: :any,                 big_sur:        "4a8ced6c2bba4c506a36c895b393ab7df6446d491fff2d4817daff1f5dbb0558"
+    sha256 cellar: :any,                 catalina:       "0d0336c43da8db6d4cff0988fd881cc8960c95bd27a614e5e07e03b82779b9db"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d4715fd09fa55e2dedb1f68e1199119927177005157b2b2a7911a832c726cef2"
   end
 
   depends_on "cmake" => :build
