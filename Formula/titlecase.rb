@@ -7,7 +7,7 @@ class Titlecase < Formula
   head "https://github.com/ap/titlecase.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "27a6bbb0ade7749f3ac3f72871f7f9f611a61e8af02046511d33f723881fba0d"
+    sha256 cellar: :any_skip_relocation, all: "016d29b351920229fead9d3b8ac962522ff95f52dbfa711ba0867cc10d0d762c"
   end
 
   def install
