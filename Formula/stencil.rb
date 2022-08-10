@@ -7,12 +7,12 @@ class Stencil < Formula
   head "https://github.com/getoutreach/stencil.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a9a82bdc04c27a5397604251cf65b0064ee5bfd3bd58812bc8f78b5ebe7bb822"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "026a53d7310addbcd872a7a7dc94618f6756bed06fb8a74d8df174294387e38b"
-    sha256 cellar: :any_skip_relocation, monterey:       "6d644ac50912e97de187e3543f40a75a1e6539856f55fd4e65e49ad54218a88e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4607db9e030cf41e185eef5c75571dd260985709286bedec1a4e92bd7b7faaac"
-    sha256 cellar: :any_skip_relocation, catalina:       "5cbef5c4f4a20e1d02ef0796bc110261ade9a803570b4a4e8956ea5032eb87bd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d38d20c55733742cc412522a9787fb0b137c7a1b09fc01e81af30f4ce7223ad0"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "53c44b943e9c2c8c71c1dfcb24276d6cf197bb6e9bdd60c568a3b9430c56e199"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "54c52cb287e9e15dbb66306c0652d2949dc2818e7c315390d9b5f120551ee96e"
+    sha256 cellar: :any_skip_relocation, monterey:       "1756ad8a9d3c1eb76bb6d671714674409b6cca0cc0fb7f59420d35d9715a95fc"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ab0d3aeb46b8ce2e4f2239688d326844155bc756d68c5fe10159d2812351145c"
+    sha256 cellar: :any_skip_relocation, catalina:       "67703dd419b6af20ab4c76dcdb613c678e8d2e4cc8c4df1d9cbd61eee8375738"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6af37202aa257b33b168b7ec4d9f0c8afce5abcb71b5a9a398c2bb0f91f0d849"
   end
 
   depends_on "go" => :build
