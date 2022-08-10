@@ -8,7 +8,7 @@ class GitWhenMerged < Formula
   license "GPL-2.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "e17a93477d9712acb9acb0c77f18c646d3a25faa19e7f9875d1a31cb44560003"
+    sha256 cellar: :any_skip_relocation, all: "cef2e377082bfa5b6457f6b6d19066fd7a74312860533b85fb62d6e16c0986b7"
   end
 
   depends_on "python@3.10"
