@@ -7,6 +7,15 @@ class Censys < Formula
   sha256 "cea64c98de8ba75a52028f0dcb3d2f23e874ac1e412c31f41d610ff23db189bb"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "be774a8dc5f114256e4bfe044530cb787fd8adbbcefb8f205fb109fd7654b2b6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7029f56b243e8fb4e287d4f065449d2ac273af34cc9ca701ba5a2e43eab8160d"
+    sha256 cellar: :any_skip_relocation, monterey:       "d6588492eca9dbe415db01569461b8a7c9ec9dd37fbac08d7ad5dcd96a3eeef2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "22a26aafb2dfd2a77f36e13299c59ca821d20e846be70accfe298d8bf321b42c"
+    sha256 cellar: :any_skip_relocation, catalina:       "e0585392517f742d060c680fb74d7a930c1b21667491ee4126380d35880bbc81"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1545033860eeec359c1b953aac159576f11b49c0447fc8b227c32255535cda3f"
+  end
+
   depends_on "python@3.10"
 
   resource "backoff" do
