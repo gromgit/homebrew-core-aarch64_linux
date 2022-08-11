@@ -7,16 +7,12 @@ class Libharu < Formula
   head "https://github.com/libharu/libharu.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "32b1536e7d401ca8a1bf7e141b341f3dc4870a3448ecf07fadc9020bc0af7232"
-    sha256 cellar: :any,                 arm64_big_sur:  "3b3ecb6741fc471fdcabdf35215911fe21ae1eea3c7fe331198c3d614e28fe32"
-    sha256 cellar: :any,                 monterey:       "7331df46dd1a66ce9f7ee7733764c070dedded9c766c42ab2b9648eb4144dcd2"
-    sha256 cellar: :any,                 big_sur:        "fd5a1906e1b050f159f94f44d037cd50b0eb242a6f56a48f42e2085331e6dace"
-    sha256 cellar: :any,                 catalina:       "41becd02e09ddf3c566e69d7c8b2a0c52d571fb754ccff155d5e5d630d8eb64b"
-    sha256 cellar: :any,                 mojave:         "3ae8ecb2883c97e36e027d3ee6d81cf2aeaeccbf5e11616a4b06f2c229c74e35"
-    sha256 cellar: :any,                 high_sierra:    "70363d91450426724b94040b3fc5130d0e024fc13e08e5747cf47017fb94c76e"
-    sha256 cellar: :any,                 sierra:         "860cda2675feea36f82f4b8108927c6a0b1cabca5429c119f63557da11394f74"
-    sha256 cellar: :any,                 el_capitan:     "68003e06f893b8df9d412960a06c69f6b45cb4ab5abd96e9f10c5936ab8724ac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5fe78364fa33562f2bdee06c1dfabb867ebbf50810f64fbb5d05f127dc74b106"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7920390e4d600caeb98186b701f46b79988a780d79cb6884c799cfd7f2a77152"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b1c428d9f3440b10ffdd2da58c8e12388b0bf2b5848574a96d118db9a7507417"
+    sha256 cellar: :any_skip_relocation, monterey:       "8c74e19763e520f70c9a896bf97a10fba52ae94c7407c68937bdd4f5dc13e3b3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "44a1d030f0a176aae7d546787d5d36be80c027eedf12d410864e32e8a8258e4d"
+    sha256 cellar: :any_skip_relocation, catalina:       "84ab7bb3db472c529a02ce4746b907aa9ba80c13379420b2e50cea1a892c8d11"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ad3a1c7359b0807323ff595bd84e5c316a4e32bc1ff921833630caa837d629f7"
   end
 
   depends_on "cmake" => :build
