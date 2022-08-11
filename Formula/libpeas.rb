@@ -7,12 +7,12 @@ class Libpeas < Formula
   revision 1
 
   bottle do
-    sha256 arm64_monterey: "95e58fd14df242b90173b9ba0d5d40b8234e84f87cc6ebc30b3824928cbf205e"
-    sha256 arm64_big_sur:  "bc72e8a73ee764c86763198b676002e6a1edd724572920e30a4757048a8c0388"
-    sha256 monterey:       "ec9eeb3cdf1f4272b23e0a34c32eb26b4438ae07f4800c7981fdf9fc35e124a7"
-    sha256 big_sur:        "23f1cf3fdadc9f3586e442a7bafbe3ddc781063578bc1728ddcb818646f304d3"
-    sha256 catalina:       "57cba039daf7d11664e656f8fd3d02fe1083fd3ab11c7e45ba025b621fa325a5"
-    sha256 x86_64_linux:   "f994ca714e319d0cdff07e30f37fc0794887fee5389fff0dfb818e104e65621d"
+    sha256 arm64_monterey: "3f00cc64bd20322cdcb213ef36a01bbfeee946e6529e562b47cdb6907cc4f83c"
+    sha256 arm64_big_sur:  "fd5a0bc995f0f819d7e191cc57880664d3b7352d75ea92b2f76ffdc1b0069209"
+    sha256 monterey:       "7b8a356081a65abb5c23fda43f2e4353cacb0182229cdcacbfbe4d4de59d80d6"
+    sha256 big_sur:        "38ae27203ce4ed3ea930414be2f1a10bc3488d3be721e34ac96f2477f0096c64"
+    sha256 catalina:       "9027603f11c76d48af9285bd6e9f46c6d898569bdd29c99c52a66c2f3c34879d"
+    sha256 x86_64_linux:   "06dca0f0281702151b8809b797f6b1931ff69b05f73ed266f0e0af725b563e4f"
   end
 
   depends_on "glib-utils" => :build
