@@ -4,11 +4,12 @@ class Podman < Formula
   license "Apache-2.0"
 
   stable do
-    url "https://github.com/containers/podman/archive/v4.1.1.tar.gz"
-    sha256 "27bf32e9b1afee94cb08ebd59389104788d687f402a541f3631f94c7916b10a5"
+    url "https://github.com/containers/podman/archive/v4.2.0.tar.gz"
+    sha256 "15f8bc59025ccd97dc9212a552e7274dfb79e1633b02d6a2a7f63d747eadb2f4"
+
     resource "gvproxy" do
-      url "https://github.com/containers/gvisor-tap-vsock/archive/v0.3.0.tar.gz"
-      sha256 "6ca454ae73fce3574fa2b615e6c923ee526064d0dc2bcf8dab3cca57e9678035"
+      url "https://github.com/containers/gvisor-tap-vsock/archive/v0.4.0.tar.gz"
+      sha256 "896cf02fbabce9583a1bba21e2b384015c0104d634a73a16d2f44552cf84d972"
     end
   end
 
@@ -35,13 +36,6 @@ class Podman < Formula
   depends_on "go@1.18" => :build
   depends_on "qemu"
 
-  # Fixes compatability with qemu 7.0.0. Can be removed next release.
-  # See: https://github.com/containers/podman/issues/14303
-  patch do
-    url "https://github.com/containers/podman/commit/9fac1b335f681400a029e9d8014f45fa5634ec40.patch?full_index=1"
-    sha256 "161a0ce3d1012ae030790a16857278e4417b3b410dce68927a6b02a43cf090ba"
-  end
-
   def install
     ENV["CGO_ENABLED"] = "1"
     os = OS.kernel_name.downcase
@@ -50,10 +44,11 @@ class Podman < Formula
               "/usr/local/libexec/podman",
               libexec
 
-    system "make", "podman-remote-#{os}"
+    system "make", "podman-remote"
     if OS.mac?
       bin.install "bin/#{os}/podman" => "podman-remote"
       bin.install_symlink bin/"podman-remote" => "podman"
+      system "make", "podman-mac-helper"
       bin.install "bin/#{os}/podman-mac-helper" => "podman-mac-helper"
     else
       bin.install "bin/podman-remote"
