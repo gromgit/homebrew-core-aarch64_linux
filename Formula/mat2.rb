@@ -7,7 +7,7 @@ class Mat2 < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "cec2f81c1aa38406cda44a3e3abe40fc353f096d4b83938fe368e398ea980699"
+    sha256 cellar: :any_skip_relocation, all: "3e3081b97a1b9374ddaf5efccf1ab643202d6ebcdf08dd179ae329cc4736c72a"
   end
 
   depends_on "exiftool"
