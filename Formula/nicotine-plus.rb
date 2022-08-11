@@ -10,12 +10,12 @@ class NicotinePlus < Formula
   head "https://github.com/Nicotine-Plus/nicotine-plus.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e62f71395e288ad89101ef29d6353af641507c973b034ea3121582007a447ce5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e62f71395e288ad89101ef29d6353af641507c973b034ea3121582007a447ce5"
-    sha256 cellar: :any_skip_relocation, monterey:       "59b8e8eacccf8cc4a89c576844b45d674390541b83f4eb78e928fbe9563e21f7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "59b8e8eacccf8cc4a89c576844b45d674390541b83f4eb78e928fbe9563e21f7"
-    sha256 cellar: :any_skip_relocation, catalina:       "59b8e8eacccf8cc4a89c576844b45d674390541b83f4eb78e928fbe9563e21f7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6abd8d5ae97c5e288d35aed88e4992670de6493ff513a3749dd0bfcbbfd74237"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "95ee8e5d6ffa6a1876d7381ceddab0eb15fea742044c12405c68f1baafc6864d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "95ee8e5d6ffa6a1876d7381ceddab0eb15fea742044c12405c68f1baafc6864d"
+    sha256 cellar: :any_skip_relocation, monterey:       "370c1acc977e187619acd0742d63b32491f706b8ad798cc20b9c107496146206"
+    sha256 cellar: :any_skip_relocation, big_sur:        "370c1acc977e187619acd0742d63b32491f706b8ad798cc20b9c107496146206"
+    sha256 cellar: :any_skip_relocation, catalina:       "370c1acc977e187619acd0742d63b32491f706b8ad798cc20b9c107496146206"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bb1e37d9423459e3166f77096615769ed3cd37c2b1cb53da637cf9f5b47fcc18"
   end
 
   depends_on "adwaita-icon-theme"
