@@ -8,7 +8,7 @@ class Zim < Formula
   head "https://github.com/zim-desktop-wiki/zim-desktop-wiki.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "df1dd11baa2693ecf8686ea4fab05cc30b1475dbc16d8c758a6473b751c345fb"
+    sha256 cellar: :any_skip_relocation, all: "41b43dd50f09c794b6bf6e6ca0a02bbb88bf935e35941d6846762e1aa1912d16"
   end
 
   depends_on "pkg-config" => :build
