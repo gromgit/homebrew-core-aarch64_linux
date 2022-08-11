@@ -2,8 +2,8 @@ class Sourcekitten < Formula
   desc "Framework and command-line tool for interacting with SourceKit"
   homepage "https://github.com/jpsim/SourceKitten"
   url "https://github.com/jpsim/SourceKitten.git",
-      tag:      "0.32.0",
-      revision: "817dfa6f2e09b0476f3a6c9dbc035991f02f0241"
+      tag:      "0.33.0",
+      revision: "b5f9bb749057dd396e93f97956bef64672bc2a04"
   license "MIT"
   head "https://github.com/jpsim/SourceKitten.git", branch: "master"
 
@@ -15,7 +15,7 @@ class Sourcekitten < Formula
     sha256 cellar: :any_skip_relocation, catalina:       "77e05bd04bb3701b01740f1e74725776a9df6f0d2be370db7d5bd450665dd2a1"
   end
 
-  depends_on xcode: ["12.0", :build]
+  depends_on xcode: ["13.0", :build]
   depends_on :macos
   depends_on xcode: "6.0"
 
