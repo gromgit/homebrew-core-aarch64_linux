@@ -8,7 +8,7 @@ class Nftables < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 x86_64_linux: "e5e1457ca815910674479a1fdb4374b434daaae752bfd3ed576a489ceadb2f02"
+    sha256 x86_64_linux: "1fd3fc86a65b99479d91f7c27dc13207feecae2810d7cee3ba607ab6a091dcb2"
   end
 
   depends_on "pkg-config" => :build
