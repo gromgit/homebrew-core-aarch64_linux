@@ -6,6 +6,14 @@ class Ouch < Formula
   license "MIT"
   head "https://github.com/ouch-org/ouch.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a50b6a78f0c51e0c7980e8512f59656857427e7e3dc2a0eeae78e8d1493d72b5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "814910019e9fbd5c6b2546ac4b053040900b261d263aee06af152a8da4f82585"
+    sha256 cellar: :any_skip_relocation, monterey:       "a56fbc35f35b3cb277a67815ed627f5c70339b53c7b9c9806935844f3fd3eac3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "492fc5a573d4769b38779937283bcb6f95cd2be9e64b162d379c3fec74532424"
+    sha256 cellar: :any_skip_relocation, catalina:       "fccc2c5f957ab41a45e0b0e8e18476c1e34f4554db994d070838626b316fe5a3"
+  end
+
   depends_on "rust" => :build
   depends_on :macos # Doesn't build on Linux
 
