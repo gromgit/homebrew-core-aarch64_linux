@@ -17,12 +17,12 @@ class Mesa < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "0910350885f3ff48e0bd9653fc0055bc578da7cd11bcbf22b9e16cd5282147f6"
-    sha256 arm64_big_sur:  "53c470461ee95a87fb8b4cbed10a95bcd711db8c52b7b5393559031736302b89"
-    sha256 monterey:       "2102a929dec449d54bd39a7260dfe7696c777d5b62ab3b14f3559bc6ec90ca83"
-    sha256 big_sur:        "3fdb42c5300d9d4a0bf7db48a1c4b16a896339c2375e8c4e7be1069f259d0cb8"
-    sha256 catalina:       "42618ce746bad3b646ce1e8fcf920b23c4045b5aaffdb8ecf01f1cca9f4e24f8"
-    sha256 x86_64_linux:   "9c035d9375eaf1069435153ef1738dbed3bb66e5b15cf63224d4068a73e85728"
+    sha256 arm64_monterey: "87da04057de203edfc208456e85e0dabd8b66c233275c9b775cd1f5e90d99e4e"
+    sha256 arm64_big_sur:  "2c3512be97664e86678d9c1e6cc130ff32e946510a19b73958b5b41ad0241329"
+    sha256 monterey:       "866578843f07b41fb329311969361b342104668fb714ed708c65339944b4ffc3"
+    sha256 big_sur:        "b81343ed36a45a5cbc383a107111cb23ed748782cb3f4d7f05810f422d35453c"
+    sha256 catalina:       "ebd91beda4b0bb526e9103704eecb6a0e33937f8611d7b9e34cb84e39c184274"
+    sha256 x86_64_linux:   "9027fc39ef7b852f696582f286e2b5c88c20ae75851216da00bf8da198400df3"
   end
 
   depends_on "bison" => :build # can't use form macOS, needs '> 2.3'
