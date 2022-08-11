@@ -7,13 +7,12 @@ class Pytouhou < Formula
   head "https://hg.linkmauve.fr/touhou", using: :hg
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "5520302c2a524409c076e4ceefc246f4163480805c664981a02a803f81c21780"
-    sha256 cellar: :any,                 arm64_big_sur:  "3a8cd72d8c0a67a8846d8c27a33bd7e3474827f44100b404dfbd71476a053a4c"
-    sha256 cellar: :any,                 monterey:       "6f5bcc94ce7ea2d13f6fbc8ca723916197f0c7cd3bdb1a23b0d7650ace9eef5e"
-    sha256 cellar: :any,                 big_sur:        "f6cc4df128378963b11dad010097ffc897e195f578afd1cedf83869280748272"
-    sha256 cellar: :any,                 catalina:       "68aa26a6209130a0bf44da6716964fcd97cd667daae9c3a600b6a19c33d91951"
-    sha256 cellar: :any,                 mojave:         "7ef160097cf7d38842b5ad88403f6c410a9e90e93f4942df3b3019d8d4b9d514"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "940fe7e5223b33539234119166691f17cf0f7514e1a80a030daa1a452921bc42"
+    sha256 cellar: :any,                 arm64_monterey: "5b7880e24a56f914a2eba61055a67aeb2e3f4ad0ecd311c1b6e27295b748c926"
+    sha256 cellar: :any,                 arm64_big_sur:  "0911d15863c316fc09f7bf623932220fcce67ad4e16dbdb614a72f11d73df227"
+    sha256 cellar: :any,                 monterey:       "b973c7a742e8838a3f5bfd0ba94193c39bd81543d7a8d19f98f07713d30e4b4f"
+    sha256 cellar: :any,                 big_sur:        "d3e12e01e5b18f44435ae49ad65726fd71d72c0f9bdb0b54169dc2f1d894b2e0"
+    sha256 cellar: :any,                 catalina:       "d1b56e807242ae33bb7a577c2359daa5e233ad73e1e81dc4b642546eb93545a1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "72cd0dc9eba59afb98766c0554cf603688064ceed66bbec1ac199bd42ff8d469"
   end
 
   depends_on "pkg-config" => :build
