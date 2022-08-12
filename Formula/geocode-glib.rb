@@ -1,10 +1,9 @@
 class GeocodeGlib < Formula
   desc "GNOME library for gecoding and reverse geocoding"
-  homepage "https://developer.gnome.org/geocode-glib"
-  url "https://download.gnome.org/sources/geocode-glib/3.26/geocode-glib-3.26.2.tar.xz"
-  sha256 "01fe84cfa0be50c6e401147a2bc5e2f1574326e2293b55c69879be3e82030fd1"
+  homepage "https://gitlab.gnome.org/GNOME/geocode-glib"
+  url "https://download.gnome.org/sources/geocode-glib/3.26/geocode-glib-3.26.4.tar.xz"
+  sha256 "2d9a6826d158470449a173871221596da0f83ebdcff98b90c7049089056a37aa"
   license "GPL-2.0-or-later"
-  revision 2
 
   bottle do
     rebuild 1
@@ -15,10 +14,12 @@ class GeocodeGlib < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "5087451ab0d29991b1760b263802a81a2497f5a157f40ac931570c2146de42a8"
   end
 
+  depends_on "glib-utils" => :build
   depends_on "gobject-introspection" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
+  depends_on "glib"
   depends_on "gtk+3"
   depends_on "json-glib"
   depends_on "libsoup@2"
@@ -36,7 +37,7 @@ class GeocodeGlib < Formula
   end
 
   def post_install
-    system Formula["gtk+3"].opt_bin/"gtk3-update-icon-cache", "-f", "-t", "#{HOMEBREW_PREFIX}/share/icons/gnome"
+    system Formula["gtk+3"].opt_bin/"gtk3-update-icon-cache", "-f", "-t", "#{HOMEBREW_PREFIX}/share/icons/hicolor"
   end
 
   test do
