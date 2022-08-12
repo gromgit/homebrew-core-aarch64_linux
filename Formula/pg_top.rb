@@ -14,14 +14,12 @@ class PgTop < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "508be024321986bb022736c593bdc5d6cef586aaf3af76fc9a517ec9f7b1a491"
-    sha256 cellar: :any,                 arm64_big_sur:  "70a878b8d6ae8f3fff2303ca0e50cf294ce7918dec0eca0050c983fa237f8e61"
-    sha256 cellar: :any,                 monterey:       "b6a0020d75408990a336980207ef7ee71104f79b53322482a89cd80612842672"
-    sha256 cellar: :any,                 big_sur:        "770ec08d04f5f88d91f99855fb5ac13466734b7b396a0bf499387a02490cc8b8"
-    sha256 cellar: :any,                 catalina:       "00231ec96d368d18286b69104979b2d35307f02e2f5acf54293f97b7619803ff"
-    sha256 cellar: :any,                 mojave:         "1110da076403c8f3030421ce4fbb5acb51d61c71102564aa00db9611d08b50c8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ed92710360b1ef0e9c531dad918f72d69986cb128467c5124fe39908b44f5aa4"
+    sha256 cellar: :any,                 arm64_monterey: "a157f605a85907c0d04410199dfcc4d7de515844f0ad41bcbcde1b8b771431c8"
+    sha256 cellar: :any,                 arm64_big_sur:  "506d2459e302e37bac0f38f99cd2cc2d3c3f5fd39631ee540a6f54d59af07f4a"
+    sha256 cellar: :any,                 monterey:       "6252dc42f3d6e6570b0371f2f10cd146a06bd52b492636bbb35f62ff07239b7a"
+    sha256 cellar: :any,                 big_sur:        "7980c5af9dec1de3a76a74fbd4b359ec1a90bdd7223fa7ffc8f4294642042fc8"
+    sha256 cellar: :any,                 catalina:       "edf54d452403cf5be9b63a0a744560a00bb9e83ace3885ae33d36d96b0a8c2a4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "65fe3861c5e90a4c9403f4b551892cd8ac85fbbea1cc23f551ee0eda3c9de01d"
   end
 
   depends_on "autoconf" => :build
