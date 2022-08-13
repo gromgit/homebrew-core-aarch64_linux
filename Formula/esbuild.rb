@@ -3,8 +3,8 @@ require "language/node"
 class Esbuild < Formula
   desc "Extremely fast JavaScript bundler and minifier"
   homepage "https://esbuild.github.io/"
-  url "https://registry.npmjs.org/esbuild/-/esbuild-0.15.1.tgz"
-  sha256 "6109ae6fa0ff1917b90ae77f96bfa3b85e5502c7024b3d64c68b7d79270cf479"
+  url "https://registry.npmjs.org/esbuild/-/esbuild-0.15.2.tgz"
+  sha256 "472ba741d19de678de3b5e51ff7325d49f8ac4fa5d994e31d2ec565bc8319388"
   license "MIT"
 
   bottle do
