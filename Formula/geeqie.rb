@@ -1,10 +1,9 @@
 class Geeqie < Formula
   desc "Lightweight Gtk+ based image viewer"
   homepage "https://www.geeqie.org/"
-  url "https://github.com/BestImageViewer/geeqie/releases/download/v1.7.3/geeqie-1.7.3.tar.xz"
-  sha256 "25b1f71cf91bd9a96f399d2a9e70507e54bb377a56e64d89521c0f7a9ce5dd38"
+  url "https://github.com/BestImageViewer/geeqie/releases/download/v2.0.1/geeqie-2.0.1.tar.xz"
+  sha256 "89c1a7574cfe3888972d10723f4cf3a277249bea494fd9c630aa8d0df944555d"
   license "GPL-2.0-or-later"
-  revision 1
 
   livecheck do
     url :stable
@@ -20,9 +19,8 @@ class Geeqie < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "5d4a1a0535b8015c07d3a490e454216480af9d68d67e00e16af779d3aeaa9a57"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "intltool" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "adwaita-icon-theme"
   depends_on "atk"
@@ -39,18 +37,18 @@ class Geeqie < Formula
   depends_on "little-cms2"
   depends_on "pango"
 
-  uses_from_macos "perl" => :build
+  uses_from_macos "vim" => :build # for xxd
+
+  # Fix detection of strverscmp. Remove in the next release
+  patch do
+    url "https://github.com/BestImageViewer/geeqie/commit/87042fa51da7c14a7600bbf8420105dd91675757.patch?full_index=1"
+    sha256 "c80bd1606fae1c772e7890a3f87725b424c4063a9e0b87bcc17fb9b19c0ee80d"
+  end
 
   def install
-    ENV.prepend_path "PERL5LIB", Formula["intltool"].libexec/"lib/perl5" unless OS.mac?
-
-    ENV["NOCONFIGURE"] = "yes"
-    system "./autogen.sh" # Seems to struggle to find GTK headers without this
-    system "./configure", *std_configure_args,
-                          "--disable-glibtest",
-                          "--disable-gtktest",
-                          "--enable-gtk3"
-    system "make", "install"
+    system "meson", *std_meson_args, "build"
+    system "meson", "compile", "-C", "build", "--verbose"
+    system "meson", "install", "-C", "build"
   end
 
   test do
