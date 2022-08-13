@@ -1,8 +1,8 @@
 class Teleport < Formula
   desc "Modern SSH server for teams managing distributed infrastructure"
   homepage "https://gravitational.com/teleport"
-  url "https://github.com/gravitational/teleport/archive/v10.1.2.tar.gz"
-  sha256 "3d3ba65073f5524144e7145705e8e2ac46ff4ec3bc318f94c8849d30984ecc2d"
+  url "https://github.com/gravitational/teleport/archive/v10.1.3.tar.gz"
+  sha256 "a1b707172699f98859506db10f81aa6f1022f22712a0bd69bd7367bfd42649aa"
   license "Apache-2.0"
   head "https://github.com/gravitational/teleport.git", branch: "master"
 
@@ -36,8 +36,8 @@ class Teleport < Formula
 
   # Keep this in sync with https://github.com/gravitational/teleport/tree/v#{version}
   resource "webassets" do
-    url "https://github.com/gravitational/webassets/archive/7370f56cbd7e8c706503047ba5ff1fe874a3bdae.tar.gz"
-    sha256 "7a84111fd076ec98f4e396dcea8d991467524457d2dbdd0865ee659dde7742a2"
+    url "https://github.com/gravitational/webassets/archive/260ccff59f7e43ae2487433a40d4796868fc1b74.tar.gz"
+    sha256 "41a1d0420eed16208bf5ba40a0960746ec6ce9629d49092b5f79dd867d4fbad5"
   end
 
   def install
