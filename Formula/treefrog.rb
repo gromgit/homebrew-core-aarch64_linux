@@ -12,12 +12,12 @@ class Treefrog < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "80a7272e904c060938ddaa19c090822240446e1cf66c2dad5d6ee68b1f451048"
-    sha256 arm64_big_sur:  "c9afe4515ec107bf744805b7525faaee6a166f7c12b31d36dc8cd9f13d0b11cc"
-    sha256 monterey:       "0f4080bde815c4a090e93e7945991f7e2edb36818243626cc65d45418402a826"
-    sha256 big_sur:        "370e03b7c0de69daea6f7d3204d0d3bd07fdc4381134ea46e2991b678cdcedde"
-    sha256 catalina:       "b558f6d8c06e8c592ee2a57a8bfa1fdb918b5bc3dc344276b81fb132ac4eec20"
-    sha256 x86_64_linux:   "02f14ab3da6f135ed0a214c8b8ddb0bb1ca49b7a8dd55c86f4abdcca9c2be6d3"
+    sha256 arm64_monterey: "8712234dd9f9658c56354abfc1938ad472b6f8380876e0eec3aadbdfeddd9367"
+    sha256 arm64_big_sur:  "6a5556cf97c1d63684db9ea24c9aaa1dc22d7de4cb29e49252aee3d2bff81649"
+    sha256 monterey:       "c0be4dc67572d563f76a1887a3e3cd44ae07da1c3231538cbe0606283c908fee"
+    sha256 big_sur:        "5013810aa9eee1fc1bdbb0db23192ebfaa503d0ac8a13368e7d287827b35ab50"
+    sha256 catalina:       "3c7bd7108e070f1abc86404197d4e40e7c8280e50c711d2efd300d7b855e554f"
+    sha256 x86_64_linux:   "ae87c48444739c06ca1063e70bbc9f2863ed786e57493a0cbb89dff44a98853c"
   end
 
   depends_on xcode: :build
