@@ -1,8 +1,8 @@
 class Lilv < Formula
   desc "C library to use LV2 plugins"
   homepage "https://drobilla.net/software/lilv.html"
-  url "https://download.drobilla.net/lilv-0.24.14.tar.bz2"
-  sha256 "6399dfcbead61a143acef3a38ad078047ab225b00470ad5d33745637341d6406"
+  url "https://download.drobilla.net/lilv-0.24.16.tar.xz"
+  sha256 "ffe8b4eb87da110bed92b9dc74f4730f8ce92b51b14c328dedd17b9ce98c24dd"
   license "ISC"
 
   livecheck do
@@ -19,17 +19,32 @@ class Lilv < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "3fa51df59b201664494b9ecd8f0bcce145cc448bd1fabb1a21d95497e9e9a1a4"
   end
 
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "python@3.10" => [:build, :test]
+  depends_on "libsndfile"
   depends_on "lv2"
   depends_on "serd"
   depends_on "sord"
   depends_on "sratom"
 
+  def python3
+    "python3.10"
+  end
+
   def install
-    system "python3", "./waf", "configure", "--prefix=#{prefix}"
-    system "python3", "./waf"
-    system "python3", "./waf", "install"
+    # FIXME: Meson tries to install into `prefix/HOMEBREW_PREFIX/lib/pythonX.Y/site-packages`
+    #        without setting `python.*libdir`.
+    prefix_site_packages = prefix/Language::Python.site_packages(python3)
+    system "meson", "setup", "build", "-Dtests=disabled",
+                                      "-Dbindings_py=enabled",
+                                      "-Dtools=enabled",
+                                      "-Dpython.platlibdir=#{prefix_site_packages}",
+                                      "-Dpython.purelibdir=#{prefix_site_packages}",
+                                      *std_meson_args
+    system "meson", "compile", "-C", "build", "--verbose"
+    system "meson", "install", "-C", "build"
   end
 
   test do
@@ -44,6 +59,6 @@ class Lilv < Formula
     system ENV.cc, "test.c", "-I#{include}/lilv-0", "-L#{lib}", "-llilv-0", "-o", "test"
     system "./test"
 
-    system Formula["python@3.10"].opt_bin/"python3", "-c", "import lilv"
+    system python3, "-c", "import lilv"
   end
 end
