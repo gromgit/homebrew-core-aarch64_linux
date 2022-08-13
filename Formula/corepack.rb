@@ -13,7 +13,7 @@ class Corepack < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "25068596c83ec9677a21a3c01719cf405f059ceea04738c061a379a40af89342"
+    sha256 cellar: :any_skip_relocation, all: "788cc8fb3f732a789d09e91392b6ecd003ea69b63a7bc2f04e69a4e28ead7835"
   end
 
   depends_on "node"
