@@ -11,12 +11,12 @@ class Xorgproto < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "59bc0ef6734f03b980c00fed98dd2d607dda9abdfb9a0c0fb3b00ba8b5db26ac"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "59bc0ef6734f03b980c00fed98dd2d607dda9abdfb9a0c0fb3b00ba8b5db26ac"
-    sha256 cellar: :any_skip_relocation, monterey:       "59bc0ef6734f03b980c00fed98dd2d607dda9abdfb9a0c0fb3b00ba8b5db26ac"
-    sha256 cellar: :any_skip_relocation, big_sur:        "59bc0ef6734f03b980c00fed98dd2d607dda9abdfb9a0c0fb3b00ba8b5db26ac"
-    sha256 cellar: :any_skip_relocation, catalina:       "59bc0ef6734f03b980c00fed98dd2d607dda9abdfb9a0c0fb3b00ba8b5db26ac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "519566a93bb878a20693502c7feefcad203bc33289c929a478ada9f651d7350f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d6deb2e4712bdd55eadfdcd7156814a6c42c9d94eb5cda72b89c9e4221a8a99d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d6deb2e4712bdd55eadfdcd7156814a6c42c9d94eb5cda72b89c9e4221a8a99d"
+    sha256 cellar: :any_skip_relocation, monterey:       "d6deb2e4712bdd55eadfdcd7156814a6c42c9d94eb5cda72b89c9e4221a8a99d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d6deb2e4712bdd55eadfdcd7156814a6c42c9d94eb5cda72b89c9e4221a8a99d"
+    sha256 cellar: :any_skip_relocation, catalina:       "d6deb2e4712bdd55eadfdcd7156814a6c42c9d94eb5cda72b89c9e4221a8a99d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7517927867f2f59362eb06cb2b5dda1241a8f2765603197aae24d85b086dc645"
   end
 
   depends_on "pkg-config" => [:build, :test]
