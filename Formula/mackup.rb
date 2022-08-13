@@ -9,12 +9,12 @@ class Mackup < Formula
   head "https://github.com/lra/mackup.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2eb529806486a3980086ee3ddd4cd0c2b4238c71762e23befb41132f8bf70913"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2eb529806486a3980086ee3ddd4cd0c2b4238c71762e23befb41132f8bf70913"
-    sha256 cellar: :any_skip_relocation, monterey:       "080eb406349a8ef4c22adb53e6dd0cee4020278599349a467de1b0c686844bf9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "080eb406349a8ef4c22adb53e6dd0cee4020278599349a467de1b0c686844bf9"
-    sha256 cellar: :any_skip_relocation, catalina:       "080eb406349a8ef4c22adb53e6dd0cee4020278599349a467de1b0c686844bf9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "43691496fed4a9b67c9ea19bea31cb66a9f2a95c1aa599c8c6a3116131265eb8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "238d45c8bf17b952c8dd3293a6ca60767cc3f51b6a52a219a85317b398dd4cf2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "238d45c8bf17b952c8dd3293a6ca60767cc3f51b6a52a219a85317b398dd4cf2"
+    sha256 cellar: :any_skip_relocation, monterey:       "a1e102e917fa6c9fff2a76fa68333cb151f9ee822f00c105a0565222f486a3e7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a1e102e917fa6c9fff2a76fa68333cb151f9ee822f00c105a0565222f486a3e7"
+    sha256 cellar: :any_skip_relocation, catalina:       "a1e102e917fa6c9fff2a76fa68333cb151f9ee822f00c105a0565222f486a3e7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e1a92c39f5ac40a8c02a26a6b877f720a0802d910f87eaf8995d8ef817dfb4b3"
   end
 
   depends_on "python@3.10"
