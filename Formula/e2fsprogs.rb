@@ -18,13 +18,12 @@ class E2fsprogs < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "0704bc2eb7f67d1ae9359ce0a88df93c5fea7983bc244aeb056b76ff862bbd90"
-    sha256 arm64_big_sur:  "b089beb986fdbc2f9a699c98ea0d7453b434a819b18e09183c8a2e54368b4652"
-    sha256 monterey:       "b5f7734b3d5f8fc599814c035f5a81e2b5c519dfa0269d8c777babc794cc9f80"
-    sha256 big_sur:        "93c43050723e83dc54e9acda04b49bb9651d561a8f179b0a2837dc0b4dbc488d"
-    sha256 catalina:       "e629177b97c03f0c073ab805dd1d452b210f4b206e63da826793420c64d151eb"
-    sha256 mojave:         "d494d4d21d05c76acdeb381b38d2bd343cd4d1b5e536a1d2f99ebceb8fb5d917"
-    sha256 x86_64_linux:   "cf06e4cdcc4588246eb66b3fd10d9a8424494578e7821e6e273a030fcea09d28"
+    sha256 arm64_monterey: "2ad96d61f67d605303283427f560618f9da9ff24ed04288c46532d7fd6a3e3ef"
+    sha256 arm64_big_sur:  "2db0f307e7fcaa535c2d16c4f19ee1b8ca526687f6a4cbd2ed15ffc8d692bf9d"
+    sha256 monterey:       "23673ed0acf61a9db84ce3ef1b41212eec1c708d94dce4acca680e4699ac2587"
+    sha256 big_sur:        "20be71487f24bfa2d8361d6aa20a02113d3b666ac16559a3dfb5c6f9fb32ac81"
+    sha256 catalina:       "1a684e75988052d1000fdc2e720e5d0b05e3242946f07327fb77f383299e9c59"
+    sha256 x86_64_linux:   "152a6240f5905b7b8a885f85e00343d2f6015f77a9832093c48065769b5daa07"
   end
 
   keg_only "this installs several executables which shadow macOS system commands"
