@@ -8,6 +8,15 @@ class CryticCompile < Formula
   license "AGPL-3.0-only"
   head "https://github.com/crytic/crytic-compile.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f3286e1e5fc19e0d5409b4cec48482acf9ad02c66d22589c47b3b8fc2b77aac7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3d73909104333de34e100bfae62541db0862e5c52ead3c7b61e2d206e3a5ef40"
+    sha256 cellar: :any_skip_relocation, monterey:       "85dc542ae59d25f6325c20f777b02b6b6f641066ca1c1df858e8cf4701093a89"
+    sha256 cellar: :any_skip_relocation, big_sur:        "198cb28968c7c0acbf8f22a96638dd3e58aa7e520590e793a09cce3099c97313"
+    sha256 cellar: :any_skip_relocation, catalina:       "e8bc53bbfe70499d8457d5ec04143665f172954e2ddf37bec3ac79d0ed830f23"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "04a694fd55a787de5e26306ace11bc007a9c012bfe20a9b51c0cfd5c883277d0"
+  end
+
   depends_on "python@3.10"
   depends_on "solc-select"
 
