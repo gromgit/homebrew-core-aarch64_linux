@@ -6,12 +6,12 @@ class Circumflex < Formula
   license "AGPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "18b4dcd42ef0bc7989c1af5911222c6d4fa384cf13ee61fe921fe20194f2bb5d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1185e18a6366501b6b119f83c6fc2b9bcbd1f4ecddbfee6b2ade8d726ed1e94a"
-    sha256 cellar: :any_skip_relocation, monterey:       "285f4609c57b43a55a865c58406c64344fda956294ed5cdb931bc0e2152678e9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b6f062665c9fc48804f0ffc81c1dba42b6b730449cf9970eab148a3df6d196ad"
-    sha256 cellar: :any_skip_relocation, catalina:       "6a09ec495c10bfe74472265497c6b6495d4ea06c099c66f674d124fffdf43ec9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9338f3cfeaa02b6886b04d769f9436af7a2d1f30b0c70ff6f5d295de4fe472fb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b1ac00b284c272e8bee9a5ce9df02a1376ee27ebe2bf1b9cbdbb3fd8adf837dd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f42df2bbcafa3958ded1d4a28fa34b5f5eb8a087637510228dff42744eda9ab9"
+    sha256 cellar: :any_skip_relocation, monterey:       "6eebcb33d48b2b87b50d2470f22cedc4fbc0f6129763328369655252903795bb"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f0c7deb6eb0dfa77ea5cf29af222adaadd197678ed1d90a827a144161eda1c94"
+    sha256 cellar: :any_skip_relocation, catalina:       "be676c2fa0e21111154ed2c2df5731923bb2934d249a315853639e1bf3562054"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2163d8979f2896efb2ebd22dd094d3ab362a392bed572bcf87b2cb99c1fffa73"
   end
 
   depends_on "go" => :build
