@@ -11,12 +11,12 @@ class Lilv < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "bd62a762264f26186af0f369e12e3360a7262094dd3af8f1adce2604b882b19a"
-    sha256 cellar: :any,                 arm64_big_sur:  "612ae87c45a4ef670deddf610e6e54f7e0eb80d5c8b227d58cb97716118206c7"
-    sha256 cellar: :any,                 monterey:       "fab5a0d28b32609527e4145b16edbd4bc9bc37d8a87eab0d456566024aced21b"
-    sha256 cellar: :any,                 big_sur:        "58ee0b0d50d9b3eb24f00beaa1466e6858cfef89226027b0f03ba1f82f5cfa20"
-    sha256 cellar: :any,                 catalina:       "3ebca1b8b6e8fa09155a1cbbe2fe451cd061db202d2c574259cc7e042c1c0e9b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3fa51df59b201664494b9ecd8f0bcce145cc448bd1fabb1a21d95497e9e9a1a4"
+    sha256 cellar: :any, arm64_monterey: "35493821e5b6a936cffa6c60e3ff699d5cc0e7595e70efbc3758348e90a79566"
+    sha256 cellar: :any, arm64_big_sur:  "2c6d68f67038aca35ff62010fde5607bad51cf2911ba73aedec52bda648099ac"
+    sha256 cellar: :any, monterey:       "630b9d5c643eb44ee2861e570e505e21ae87f78af8a0298b45fcdbbd2068d5d1"
+    sha256 cellar: :any, big_sur:        "c0ddb2bdec0549af2f9b6b9d7b44c311923ab3b30190716df82946096f1396b1"
+    sha256 cellar: :any, catalina:       "a5ea5735f1a830429af196b658a3eacd97de49ec937ad7f2fc1f116248e41a6e"
+    sha256               x86_64_linux:   "e72a37206417ea6582aae51658694336caf014d06b9503bb6beb752abbb1ecde"
   end
 
   depends_on "meson" => :build
