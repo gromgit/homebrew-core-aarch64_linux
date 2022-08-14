@@ -7,7 +7,7 @@ class Gold < Formula
   license all_of: ["GPL-2.0-or-later", "GPL-3.0-or-later", "LGPL-2.0-or-later", "LGPL-3.0-only"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "f603d71e281e77548939b9742b9a309718b5c436a907b6aea687a63c8e855a9e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "4403d82e91e8c3bfa8811845863ce5b7167175073928e4192c70b5aefdaf1eea"
   end
 
   depends_on :linux
