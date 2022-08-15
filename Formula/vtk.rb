@@ -19,12 +19,12 @@ class Vtk < Formula
   end
 
   bottle do
-    sha256                               arm64_monterey: "0eba3f3335584a0074ff5b706d433d64441651f8d8052a9c6845b987dcdf8ba3"
-    sha256                               arm64_big_sur:  "a1a28d835398af1c8eddbf19eb4fd006194d7ec7636d577fce786293991adba7"
-    sha256                               monterey:       "c71a7c7f8d718d1181679285cfcfb1e7d4049b673c4b3baf9eb93e5719091f36"
-    sha256                               big_sur:        "e3ca973fa395bc2ef419fcfe78b7bf1e9d231d96bf6a82452f2efd94bed171a2"
-    sha256                               catalina:       "2bbb0a91140f79cc3c74a5930554ae1f77391daa36a3ba8416660804c0c27b4f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ef1778a653d8b624dd649add1661bb424d1c79ff74f32c842ac8d4fded65e283"
+    sha256                               arm64_monterey: "33456b64eecdf614f7db9d5b4a11145e660d9d6dc3f5c48b7c9e19958b722b78"
+    sha256                               arm64_big_sur:  "f03fb2e0b2c54b0eef6fc5f1f7665c5e9fade0025c3fe62a4e57eb0622c160cd"
+    sha256                               monterey:       "d651127e36f34dc5218d9bf36b700bf6786261e3237092569382d31e94fbfbe6"
+    sha256                               big_sur:        "aa60276bc28b6a8d94d95f098caaa2ed3652c4ae7a536842f49c049b5dcc151e"
+    sha256                               catalina:       "8290e82320543d08c058312d803d3cbd78ba58d7bce9e44e6853b010129b08ff"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f15c9f69ea940f69a2938f8cfdfa742fa5eac35e7d4788d5785856db7f06245b"
   end
 
   depends_on "cmake" => [:build, :test]
