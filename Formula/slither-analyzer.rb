@@ -8,6 +8,15 @@ class SlitherAnalyzer < Formula
   license "AGPL-3.0-only"
   head "https://github.com/crytic/slither.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1f7786ba9a0a80f0d4d6541fce3d9eee174756a72eab504ddfa1c17137b06415"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5bbf8b05da271291c6785f8d940b6f35d0fd51b9c8938daaa495e8514dd42112"
+    sha256 cellar: :any_skip_relocation, monterey:       "37c694e91389775a47ebe7fdf8e53f90ad0be3ef687a15783c7665ee7f9a1c53"
+    sha256 cellar: :any_skip_relocation, big_sur:        "580056baf7f0ed4e86c4617ccae5459c076b4547f5274fcbcd5372fa666612e2"
+    sha256 cellar: :any_skip_relocation, catalina:       "a4d8d2d54a87bd8062e9c2b84d427390d20f08c66530755e8cbf329e9db6b865"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bf080a1cc7c16bac9754358fb2c05c5f057a3e8a67c9b144ef71f81f0e844822"
+  end
+
   depends_on "crytic-compile"
   depends_on "python@3.10"
   depends_on "solc-select"
