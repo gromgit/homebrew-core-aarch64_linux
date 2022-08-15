@@ -11,13 +11,12 @@ class Mozjpeg < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e935bdbaa65dfc0ef532eccf727970442f0edf14568db31b0cff790202cb7235"
-    sha256                               arm64_big_sur:  "43d05f184bc2c2f0451913c9d6a437dd597c9da0fc675fd6a96859face7d8819"
-    sha256 cellar: :any,                 monterey:       "fb30a224962e26cf8c97b5212ecf24db27749db4f2b314253338a58d84f4bc2c"
-    sha256                               big_sur:        "62b7cba57dec06208ee2af6a726b918c0131c0d4f4b735d32eab16df348e1852"
-    sha256                               catalina:       "0664824dab3ebe497562d4b9fcb1fdafd011d7f0bcd6d50dc60bd73db57168cc"
-    sha256                               mojave:         "0188f192ba8d6471e034d8144b321a84871d46cf110fb27bdebb67f2d9116baa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bfd4e10acdc52b050974be904ccb9c8cbcbaa563f7c2e29e64935534ba6d53e1"
+    sha256 cellar: :any,                 arm64_monterey: "2598e442d31d6010e5e33f8738998face395bbdc94395e822b223413216472b9"
+    sha256 cellar: :any,                 arm64_big_sur:  "cb97308fb31faf292fd3b3fd45e5dbcd22cc042f60c72137693ad13ee0e94196"
+    sha256 cellar: :any,                 monterey:       "a10111cdb7857b21f956602ab4ede36e4ed34da3823bdf1fdd88d4e3c3a777cf"
+    sha256 cellar: :any,                 big_sur:        "f59fa9d539034c511dcc3571cd8f42fbee5c20a0b54947b5be3e3471237b5f15"
+    sha256 cellar: :any,                 catalina:       "486e8d49fd85a744ae85acdd29c4d321045aba766c3cf59f5b34e34bb30caa4b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "42dbdf5129e01632d525b67b70c6d98c4885d6a969dcf3cdaf1a9a56c5834fee"
   end
 
   keg_only "mozjpeg is not linked to prevent conflicts with the standard libjpeg"
