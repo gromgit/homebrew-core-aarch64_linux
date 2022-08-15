@@ -20,12 +20,12 @@ class Audacious < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "c35e7535ae9705ac9d9a7e28b760081d86c1abdae99c5e722e0cdb7ed5707987"
-    sha256 arm64_big_sur:  "aff5aaeab24180aff1ae91da6421edf7d58d81af57c1f5c6a049db247316fbd2"
-    sha256 monterey:       "7893f401cc6bc9e7a4f8d22cf18b551ef3ea152711887f3c6037b55f446e351b"
-    sha256 big_sur:        "22a2be0cacb4ae5d259e494bd08cb59cb5b38e28e2de8b492ae7d27bd676b12c"
-    sha256 catalina:       "853a11fdf1db841cb70cd9af5ef80109356ef398cea6b44a39119bae18f31815"
-    sha256 x86_64_linux:   "2fc678cf70ed5f060c0dc24be179a95f314b3a859491f5403b74fe3462744d7f"
+    sha256 arm64_monterey: "4676c483e85f47cc80ac94550a38b7d6396f8be11fb6926c0a1d91d04b644bb7"
+    sha256 arm64_big_sur:  "d342eb99eacde6f98e72f02be860833e40c3f73abf83e07bc7a67f1dd6c7ca5a"
+    sha256 monterey:       "a47955e6dfaa371506e0fa8c2d630864325253f1fcdc0e24811efc9a9bc5866c"
+    sha256 big_sur:        "896bd9223537e4b00cc4a887cc8204c6193973517020d01aabf0f260f4d89f49"
+    sha256 catalina:       "04b4249d93ad6ea99475a306f53e7148e5358207ba204886f47ce216ca0a6cf1"
+    sha256 x86_64_linux:   "bf92a6849ede5d4e16400d72f001ef1acbf70db63dadaf5b504538f0f1535402"
   end
 
   head do
