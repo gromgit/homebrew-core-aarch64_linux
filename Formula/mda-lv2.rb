@@ -1,10 +1,9 @@
 class MdaLv2 < Formula
   desc "LV2 port of the MDA plugins"
   homepage "https://drobilla.net/software/mda-lv2.html"
-  url "https://download.drobilla.net/mda-lv2-1.2.6.tar.bz2"
-  sha256 "cd66117024ae049cf3aca83f9e904a70277224e23a969f72a9c5d010a49857db"
+  url "https://download.drobilla.net/mda-lv2-1.2.10.tar.xz"
+  sha256 "aeea5986a596dd953e2997421a25e45923928c6286c4c8c36e5ef63ca1c2a75a"
   license "GPL-3.0-or-later"
-  revision 1
 
   livecheck do
     url "https://download.drobilla.net"
@@ -20,16 +19,17 @@ class MdaLv2 < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "fa6b5b92eb36d3dc33c0fa271c2fd61ba0986737a8dc4097682c88d9862ae8ce"
   end
 
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "python@3.10" => :build
   depends_on "sord" => :test
   depends_on "lv2"
 
   def install
-    ENV.cxx11
-    system "python3", "./waf", "configure", "--prefix=#{prefix}", "--lv2dir=#{lib}/lv2"
-    system "python3", "./waf"
-    system "python3", "./waf", "install"
+    system "meson", "setup", "build", *std_meson_args
+    system "meson", "compile", "-C", "build"
+    system "meson", "install", "-C", "build"
   end
 
   test do
