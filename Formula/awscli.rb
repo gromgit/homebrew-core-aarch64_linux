@@ -3,8 +3,8 @@ class Awscli < Formula
 
   desc "Official Amazon AWS command-line interface"
   homepage "https://aws.amazon.com/cli/"
-  url "https://github.com/aws/aws-cli/archive/2.7.22.tar.gz"
-  sha256 "85c5a926daa0ab0ad73a7b97b670e092a0bcdf2749d383291076fd04e1eca502"
+  url "https://github.com/aws/aws-cli/archive/2.7.23.tar.gz"
+  sha256 "107facea4478fcde4a53763874a2fe2ca7a4ed48a5aa76d826f3d3a8b30293f7"
   license "Apache-2.0"
   head "https://github.com/aws/aws-cli.git", branch: "v2"
 
@@ -29,8 +29,8 @@ class Awscli < Formula
   # 2. Ignore `six`. Update all other PyPI packages
 
   resource "awscrt" do
-    url "https://files.pythonhosted.org/packages/69/f6/f09b1035951a9dff428d9606aa361a78437fbb2572d22059c7adfff576f1/awscrt-0.13.11.tar.gz"
-    sha256 "631dc8dd10f9ecdc7a0af9b89a8739ce631b76c1de6223208437db414a2bdfc1"
+    url "https://files.pythonhosted.org/packages/51/1f/4d9193f7b16d102c3c11d8edcb11ea741ac6562d8fcf4d1ae1aa223f197c/awscrt-0.14.0.tar.gz"
+    sha256 "3062d315cb16542fe04dd8239f2e8bc3238ee9045cd5070b915cf2ebbecbaaac"
   end
 
   resource "cffi" do
