@@ -1,8 +1,8 @@
 class Sonarqube < Formula
   desc "Manage code quality"
   homepage "https://www.sonarqube.org/"
-  url "https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.5.0.56709.zip"
-  sha256 "6278da57011c64cef2a140619b77423d29d85992858dafce618f8918ea339a9d"
+  url "https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.6.0.59041.zip"
+  sha256 "e3c21ba1f6a53f766e4ab56a484ddedbba9ebd31e82a1999e618ee5ffb73e5f2"
   license "LGPL-3.0-or-later"
 
   livecheck do
@@ -19,44 +19,17 @@ class Sonarqube < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "0460aad08ae421d32fa9eeeda1b6abfa395a605aa2e274d7054e17f872d93be6"
   end
 
-  depends_on "java-service-wrapper"
   depends_on "openjdk@11"
 
   conflicts_with "sonarqube-lts", because: "both install the same binaries"
 
   def install
-    # Delete older packaged java-service-wrapper
-    wrapper_version = "3.2.3"
-    buildpath.glob("bin/*-64").map(&:rmtree)
-    (buildpath/"lib/jsw/wrapper-#{wrapper_version}.jar").unlink
-
     platform = OS.mac? ? "macosx-universal-64" : "linux-x86-64"
-    platform_bin = buildpath/"bin"/platform
-    (platform_bin/"lib").mkpath
 
-    # Link newer java-service-wrapper formula which is Apple Silicon compatible
-    jsw_libexec = Formula["java-service-wrapper"].opt_libexec
-    ln_s jsw_libexec/"lib/wrapper.jar", buildpath/"lib/jsw/wrapper.jar"
-    ln_s jsw_libexec/"lib"/shared_library("libwrapper"), platform_bin/"lib/"
-    ln_s jsw_libexec/"bin/wrapper", platform_bin/"wrapper"
+    inreplace buildpath/"bin"/platform/"sonar.sh",
+      %r{^PIDFILE="\./\$APP_NAME\.pid"$},
+      "PIDFILE=#{var}/run/\$APP_NAME.pid"
 
-    # Create new sonar.sh script and update conf files
-    cp jsw_libexec/"scripts/App.sh.in", platform_bin/"sonar.sh"
-    chmod 0755, platform_bin/"sonar.sh"
-    inreplace platform_bin/"sonar.sh" do |s|
-      s.gsub! "@app.name@", "SonarQube"
-      s.gsub! "@app.long.name@", "SonarQube"
-      s.gsub! "../conf/wrapper.conf", "../../conf/wrapper.conf"
-      # Write PID file outside of installation directory
-      s.sub!(/^PIDDIR="\."$/, "PIDDIR=#{var}/run")
-    end
-    inreplace "conf/wrapper.conf" do |s|
-      s.gsub! "wrapper-#{wrapper_version}.jar", "wrapper.jar"
-      # Set wrapper.working.dir to allow using symlinked wrapper
-      s.sub!(/^wrapper\.java\.command=.*/, "\\0\nwrapper.working.dir=#{libexec}/bin/#{platform}")
-      # Write log files outside of installation directory
-      s.sub! %r{^wrapper\.logfile=.*/([^/\s]+\.log)$}, "wrapper.logfile=#{var}/sonarqube/logs/\\1"
-    end
     inreplace "conf/sonar.properties" do |s|
       # Write log/data/temp files outside of installation directory
       s.sub!(/^#sonar\.path\.data=.*/, "sonar.path.data=#{var}/sonarqube/data")
@@ -103,7 +76,7 @@ class Sonarqube < Formula
     begin
       sleep 15
       output = shell_output("#{bin}/sonar status")
-      assert_match(/SonarQube.* is running:.* Wrapper:STARTED, Java:STARTED/, output)
+      assert_match(/SonarQube is running \([0-9]*?\)/, output)
     ensure
       Process.kill 9, pid
       Process.wait pid
