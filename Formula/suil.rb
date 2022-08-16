@@ -21,12 +21,12 @@ class Suil < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "ec23ca1cf049b1bb558df5ae4921582583789f715cfa2d00e7544c21d578959f"
-    sha256 arm64_big_sur:  "324f6f636659de1d671ef38a153fa5fab53ef9d65f44005f89c86f980e480c3e"
-    sha256 monterey:       "bfde25d0fb2f1b244bf05ec2076dccb916d28c20518152306508905e0898ff09"
-    sha256 big_sur:        "34960235e7e2ea7cc3d2676c356058bb63a5f48605582a367c45df3fca1af7ba"
-    sha256 catalina:       "7b876e50f677d553cd2736b397d6393f43319b7a695fe2fc9460cc9c73f63afe"
-    sha256 x86_64_linux:   "44cdafe1344964b295ed7bc86dc9a96cc73ccb86aab8bc44adb4dd93cfa187ee"
+    sha256 arm64_monterey: "e5a25182fc6bc52b88a470248e4263e4744b9d2df31c36d8e903523c19832b7d"
+    sha256 arm64_big_sur:  "dfcc9301dca83593d4556d36b29411fa658ced02c59bd5a23b38cd0fbae5805f"
+    sha256 monterey:       "28cde799db29ed771bf7d525551c1cb65b514b66d5ff4a9e5358f31fd3009466"
+    sha256 big_sur:        "054500679837fed2d069828244191e3da85421aa5c4773b5f28ce44993f1f669"
+    sha256 catalina:       "3c2d95382b91fb20e3cf03d64c5695a92121f93f7bd3b8928f1928d092c211e8"
+    sha256 x86_64_linux:   "2b5f51754e05f0444115cdc6e5da108f59871d1abf013b2619d897c1f88c83fb"
   end
 
   depends_on "meson" => :build
