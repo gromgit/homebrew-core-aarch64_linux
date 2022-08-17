@@ -8,12 +8,12 @@ class Fanyi < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9d188a42a8dc37ac2dfb24907f4e22981812057cfe075e16bb2492fa335ca0c9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9d188a42a8dc37ac2dfb24907f4e22981812057cfe075e16bb2492fa335ca0c9"
-    sha256 cellar: :any_skip_relocation, monterey:       "cbb484f9b97e1493a1812a7174f4fd6314aa658f5e5e8512fe079e615b0ab7da"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cbb484f9b97e1493a1812a7174f4fd6314aa658f5e5e8512fe079e615b0ab7da"
-    sha256 cellar: :any_skip_relocation, catalina:       "cbb484f9b97e1493a1812a7174f4fd6314aa658f5e5e8512fe079e615b0ab7da"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "99e52f1d36fcd008e52de4a7564dfbc7de75ca0f92ccf37156d50bad475c9e50"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cb55cc60b3dbdb87a7b2a15c85720aa24dc4224e23abf31f274afbfa1bb2c6d6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cb55cc60b3dbdb87a7b2a15c85720aa24dc4224e23abf31f274afbfa1bb2c6d6"
+    sha256 cellar: :any_skip_relocation, monterey:       "9132b37bc566652a53ca40dbc25435a328d9d649ba9efcad1d5e8650752e23bc"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9132b37bc566652a53ca40dbc25435a328d9d649ba9efcad1d5e8650752e23bc"
+    sha256 cellar: :any_skip_relocation, catalina:       "9132b37bc566652a53ca40dbc25435a328d9d649ba9efcad1d5e8650752e23bc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "106b35e5c02b9feab24cd37901b0b6d1ea21136b6888209a88900c0e21f90386"
   end
 
   depends_on "node"
