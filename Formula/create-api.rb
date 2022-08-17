@@ -7,11 +7,11 @@ class CreateApi < Formula
   head "https://github.com/CreateAPI/CreateAPI.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "99d263515ea2c93919179d5b468a29b4da7c9b7c6322448506e41b36f925b93b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a7c7138c05f97400c2df305aafd3897275d2f38e6052ae2571cb3501dd029d44"
-    sha256 cellar: :any_skip_relocation, monterey:       "3a3139fafa9aae06fe3493f8e6c0a37cf226c517d4c8411f537a6a10de679b25"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ed75f9fefcaf8788a29096b708d1a6073dbff5c3317f659bffa9505d12399901"
-    sha256                               x86_64_linux:   "e601264f7e09695da3eeddec27c7555c089627ed0b98a8eea93ff410caf5db6a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "663256fe1d561dfa58ef70014d2c9cc37bdd716a40dc2c4d693e4fdeddc6e800"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "18af8d07ebfbe51615112e91ca15307c3a0f896222dbe486f6a2a4693ab093fb"
+    sha256 cellar: :any_skip_relocation, monterey:       "4d1c0939f7c82d1658bdd743dc5cff94a5d96e9af39b0c1b06585aa67333327f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "324849f6e0d1d33179feebd75e67ba132e231434dd135b500ee27834680671f9"
+    sha256                               x86_64_linux:   "6f1c9f9e99281849add956b3fe40c08127abb00b15bd47de3b384b3785d15f38"
   end
 
   depends_on xcode: "13.0"
