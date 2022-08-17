@@ -9,12 +9,12 @@ class Eleventy < Formula
   head "https://github.com/11ty/eleventy.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cdccb438e87e4565ebf98a769758f3c1d7785784d660e4465e13f22fe8050975"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cdccb438e87e4565ebf98a769758f3c1d7785784d660e4465e13f22fe8050975"
-    sha256 cellar: :any_skip_relocation, monterey:       "d72ac0ce1e37f6c539fee425836dab867e603aba64d9bf2cd13e78823bc7c51f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d72ac0ce1e37f6c539fee425836dab867e603aba64d9bf2cd13e78823bc7c51f"
-    sha256 cellar: :any_skip_relocation, catalina:       "d72ac0ce1e37f6c539fee425836dab867e603aba64d9bf2cd13e78823bc7c51f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "159306f1e673b7be583d47f886d308d3ce48d7fd045d90b50f5401919e033456"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3964b8a92c0fe9b3c731c4588c6d553775d1c83cb67a943b0aa2819d61ea2509"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3964b8a92c0fe9b3c731c4588c6d553775d1c83cb67a943b0aa2819d61ea2509"
+    sha256 cellar: :any_skip_relocation, monterey:       "37efa77486af2fd8c2f60998b446545b35d5e4f7f60e13e657fccc9a195e5b5c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "37efa77486af2fd8c2f60998b446545b35d5e4f7f60e13e657fccc9a195e5b5c"
+    sha256 cellar: :any_skip_relocation, catalina:       "37efa77486af2fd8c2f60998b446545b35d5e4f7f60e13e657fccc9a195e5b5c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f5a251c2696134b0376e1f3e3d15c061184b8f801b19c196171a2c4afdfe7a21"
   end
 
   depends_on "node"
