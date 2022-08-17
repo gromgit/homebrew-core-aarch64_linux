@@ -7,12 +7,12 @@ class Trivy < Formula
   head "https://github.com/aquasecurity/trivy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ec701697ed69761787e7995f1a46c60a5bab24e080cb967d71a62284a21f5402"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e31533e9c1209c54b84b246c27b27b4f0e6f8f2679815146f054dff25924d47c"
-    sha256 cellar: :any_skip_relocation, monterey:       "13669353ab123ededdd04c6a71bef2643b454ec8d192d3fca741937dfe369acb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "50b14e7e6aa93847d0ee3e25306127269cd92653f8d4900f494e4528a7b6af57"
-    sha256 cellar: :any_skip_relocation, catalina:       "a15ee13f0455c15e1d2a35fe00f57e8a1e093afdf09adabbe747d55d27311f02"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "85f29e444edc1267978c7432e9120eec796e3a72c9cb16d65a1522c8bf39c168"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9f75742e8fc5d90311a460b1a983692f78ff9fa267210330d469cd0d63e885eb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ac565e102c3cfd79510228333a3268d5de21834ec5b20ec00ca507cc24760198"
+    sha256 cellar: :any_skip_relocation, monterey:       "a3a652987e9bfeccf712761b0083c42f9a25b6d6fa185c40bca9153981046996"
+    sha256 cellar: :any_skip_relocation, big_sur:        "434119d4fa650ce2294269ee8883fa982255730672bb31028e16840a3c35c323"
+    sha256 cellar: :any_skip_relocation, catalina:       "a1eeeb0c48f5e75f3b5180cfc5a6b0bece0615fd3d28002871108c2d5710c49f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b7f8b4231f7adace27ba2a897389452b56260a3677f101496bd474e67c71b207"
   end
 
   depends_on "go" => :build
