@@ -54,9 +54,10 @@ class Julia < Formula
   end
 
   bottle do
-    sha256 cellar: :any, monterey: "d2d3dc68a8a6d8f741143086635b0f450c0f927568b7416b0c225d7573f129e1"
-    sha256 cellar: :any, big_sur:  "540ff0df2e550fc8b7fedbf0a762c28437b759fa50355218a6459740c2a9ec17"
-    sha256 cellar: :any, catalina: "7d822cd4f8bdbb72feddde470fda0e48738453bf7992833a6d24d0a835166bea"
+    sha256 cellar: :any,                 monterey:     "d2d3dc68a8a6d8f741143086635b0f450c0f927568b7416b0c225d7573f129e1"
+    sha256 cellar: :any,                 big_sur:      "540ff0df2e550fc8b7fedbf0a762c28437b759fa50355218a6459740c2a9ec17"
+    sha256 cellar: :any,                 catalina:     "7d822cd4f8bdbb72feddde470fda0e48738453bf7992833a6d24d0a835166bea"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "ad37d0a03e01a5ff8166ee68ceb0e474c4803066216f8084b50ef0b42b45ed5e"
   end
 
   # Requires the M1 fork of GCC to build
