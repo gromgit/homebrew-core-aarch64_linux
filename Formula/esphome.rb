@@ -3,8 +3,8 @@ class Esphome < Formula
 
   desc "Make creating custom firmwares for ESP32/ESP8266 super easy"
   homepage "https://github.com/esphome/esphome"
-  url "https://files.pythonhosted.org/packages/83/84/16cb291e41c116bff336f810cb318616d4164b1ed26eb13da890c159d74d/esphome-2022.6.3.tar.gz"
-  sha256 "40b310419836d26d0ff21843d43c715fccdff25378de93b8a886bd6af073b879"
+  url "https://files.pythonhosted.org/packages/3d/df/147892d13ca9ac39a2a38f451caf2dc33c959d765ee3405685f1a1373044/esphome-2022.8.0.tar.gz"
+  sha256 "3c78b88d75924898f2630df4b34deb5d7c1873bd63ff1d296237fd173a8ac8c1"
   license "MIT"
 
   bottle do
@@ -23,8 +23,8 @@ class Esphome < Formula
   depends_on "six"
 
   resource "aioesphomeapi" do
-    url "https://files.pythonhosted.org/packages/55/fd/bcedfcbaba26f5baad223246c8e1a65d1242232ce353e89e324e8155b789/aioesphomeapi-10.8.2.tar.gz"
-    sha256 "0b4e31b2aac0808694c09a2b06a3ea417fdfc6ff76435375bd922b077d6a2f74"
+    url "https://files.pythonhosted.org/packages/cc/84/e3308c936ba2d4ff8048aa589eb5eaeb68322077f79fffb0aac90d2cbf48/aioesphomeapi-10.11.0.tar.gz"
+    sha256 "2a2479cc2f086a22a048cd9657de1af30b19c3f0d0716ef565281b8f4645abf0"
   end
 
   resource "aiofiles" do
@@ -45,6 +45,11 @@ class Esphome < Formula
   resource "asgiref" do
     url "https://files.pythonhosted.org/packages/1f/35/e7d59b92ceffb1dc62c65156278de378670b46ab2364a3ea7216fe194ba3/asgiref-3.5.2.tar.gz"
     sha256 "4a29362a6acebe09bf1d6640db38c1dc3d9217c68e6f9f6204d72667fc19a424"
+  end
+
+  resource "async-timeout" do
+    url "https://files.pythonhosted.org/packages/54/6e/9678f7b2993537452710ffb1750c62d2c26df438aa621ad5fa9d1507a43a/async-timeout-4.0.2.tar.gz"
+    sha256 "2163e1640ddb52b7a8c80d0a67a08587e5d245cc9c553a74a847056bc2976b15"
   end
 
   resource "bitstring" do
@@ -78,8 +83,8 @@ class Esphome < Formula
   end
 
   resource "colorama" do
-    url "https://files.pythonhosted.org/packages/1f/bb/5d3246097ab77fa083a61bd8d3d527b7ae063c7d8e8671b1cf8c4ec10cbe/colorama-0.4.4.tar.gz"
-    sha256 "5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"
+    url "https://files.pythonhosted.org/packages/2b/65/24d033a9325ce42ccbfa3ca2d0866c7e89cc68e5b9d92ecaba9feef631df/colorama-0.4.5.tar.gz"
+    sha256 "e6c6b4334fc50988a639d9b98aa429a0b57da6e17b9a44f0451f930b6967b7a4"
   end
 
   resource "cryptography" do
@@ -143,8 +148,8 @@ class Esphome < Formula
   end
 
   resource "platformio" do
-    url "https://files.pythonhosted.org/packages/9d/e6/d369eada663ba901e5a9d6783b160ca546515b112b06bbb42851792f3353/platformio-5.2.5.tar.gz"
-    sha256 "aa0d1ff8a17ac1952eb45d37a84d4aa6e5d1aa65098bd1525db34be83c42c4ae"
+    url "https://files.pythonhosted.org/packages/d2/9c/dc9d6373311ca5ab8c4fda3fc4c160473e730b4015dccf558acbf7e06c45/platformio-6.0.2.tar.gz"
+    sha256 "e4cb9d45327d93b5888ba0c5d4c9ca22a30411952056e55b79d714c7f84f9b83"
   end
 
   resource "pycparser" do
@@ -153,8 +158,8 @@ class Esphome < Formula
   end
 
   resource "pyelftools" do
-    url "https://files.pythonhosted.org/packages/e9/80/00247e07e32e85b964ef81c9fd556b332f85e743e3eaf332325f579c82eb/pyelftools-0.28.tar.gz"
-    sha256 "53e5609cac016471d40bd88dc410cd90755942c25e58a61021cfdf7abdfeacff"
+    url "https://files.pythonhosted.org/packages/0e/35/e76da824595452a5ad07f289ea1737ca0971fc6cc7b6ee9464279be06b5e/pyelftools-0.29.tar.gz"
+    sha256 "ec761596aafa16e282a31de188737e5485552469ac63b60cfcccf22263fd24ff"
   end
 
   resource "pyparsing" do
@@ -188,8 +193,8 @@ class Esphome < Formula
   end
 
   resource "semantic-version" do
-    url "https://files.pythonhosted.org/packages/cb/56/4aa487b46d09646eb1863faa7026551d8309ece2281794bf13b20f28ab94/semantic_version-2.9.0.tar.gz"
-    sha256 "abf54873553e5e07a6fd4d5f653b781f5ae41297a493666b59dcf214006a12b2"
+    url "https://files.pythonhosted.org/packages/7d/31/f2289ce78b9b473d582568c234e104d2a342fd658cc288a7553d83bb8595/semantic_version-2.10.0.tar.gz"
+    sha256 "bdabb6d336998cbb378d4b9db3a4b56a1e3235701dc05ea2690d9a997ed5041c"
   end
 
   resource "sniffio" do
@@ -198,8 +203,8 @@ class Esphome < Formula
   end
 
   resource "starlette" do
-    url "https://files.pythonhosted.org/packages/79/5b/ed3c47284b7056ceedc149f41f93640f030e7f5d945f52dc9bc5973f66dc/starlette-0.18.0.tar.gz"
-    sha256 "b45c6e9a617ecb5caf7e6446bd8d767b0084d6217e8e1b08187ca5191e10f097"
+    url "https://files.pythonhosted.org/packages/b7/9b/dc9fa4c05a8aceb7abbf057b1279f0007ce8ab42c9b8f31a9c71981955bc/starlette-0.20.4.tar.gz"
+    sha256 "42fcf3122f998fefce3e2c5ad7e5edbf0f02cf685d646a83a08d404726af5084"
   end
 
   resource "tornado" do
@@ -208,8 +213,8 @@ class Esphome < Formula
   end
 
   resource "tzdata" do
-    url "https://files.pythonhosted.org/packages/df/c7/2d8ea31840794fb341bc2c2ea72bf1bd16bd778bd8c0d7c9e1e5f9df1de3/tzdata-2022.1.tar.gz"
-    sha256 "8b536a8ec63dc0751342b3984193a3118f8fca2afe25752bb9b7fffd398552d3"
+    url "https://files.pythonhosted.org/packages/3e/eb/a00286433c739bb1a0d83a069b2dc379a5d14b0b9c927e3cb00cb434d740/tzdata-2022.2.tar.gz"
+    sha256 "21f4f0d7241572efa7f7a4fdabb052e61b55dc48274e6842697ccdf5253e5451"
   end
 
   resource "tzlocal" do
@@ -233,13 +238,13 @@ class Esphome < Formula
   end
 
   resource "wsproto" do
-    url "https://files.pythonhosted.org/packages/2b/a4/aded0882f8f1cddd68dcd531309a15bf976f301e6a3554055cc06213c227/wsproto-1.0.0.tar.gz"
-    sha256 "868776f8456997ad0d9720f7322b746bbe9193751b5b290b7f924659377c8c38"
+    url "https://files.pythonhosted.org/packages/f5/58/575e416cd024d23c52de9e17d02f4c5ef4a9c8a7258c6fc8f2b3f96f73cf/wsproto-1.1.0.tar.gz"
+    sha256 "a2e56bfd5c7cd83c1369d83b5feccd6d37798b74872866e62616e0ecf111bda8"
   end
 
   resource "zeroconf" do
-    url "https://files.pythonhosted.org/packages/a9/af/d5a16dc6081dc41507b65ed0d499e3c71728a3fbec4c14df6b2ec8eae1a7/zeroconf-0.38.4.tar.gz"
-    sha256 "080c540ea4b8b9defa9f3ac05823c1725ea2c8aacda917bfc0193f6758b95aeb"
+    url "https://files.pythonhosted.org/packages/2b/a5/0ad52f3dd265fd2538b882eb6682eaeee12d2ba4dd55a20ac65374bbf67d/zeroconf-0.39.0.tar.gz"
+    sha256 "7c0d8257b940ee43e637fb560c2f9bd79da0638f37af162eb4f506f7274ef8e4"
   end
 
   def install
