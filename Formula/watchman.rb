@@ -19,6 +19,7 @@ class Watchman < Formula
     sha256 cellar: :any, monterey:       "dc7cce33bd70bcbe0ed266cec31c1467fd5fba6d72dcfb79589c6e06aeb78be1"
     sha256 cellar: :any, big_sur:        "ac18d89c1d0cb110543eba6334784b19032fd0fddb90f6f08b24b34b576b2dbd"
     sha256 cellar: :any, catalina:       "8b19c60ecd5bf5b795b6a400283c4f17a76f8168065461682b08c28587056974"
+    sha256               x86_64_linux:   "9b510ac66a5176ba413bdac26778472cc2cc052b845e9decb282d00e1b4170e1"
   end
 
   # https://github.com/facebook/watchman/issues/963
