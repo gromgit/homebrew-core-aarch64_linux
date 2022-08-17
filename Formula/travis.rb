@@ -7,12 +7,12 @@ class Travis < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "c4da048c5f77ee63fe387538a273e9080552c117ef07ac4d45534fd9163ffc30"
-    sha256 cellar: :any,                 arm64_big_sur:  "bbd3308337d7b015f746d50feb7e51429e18060d23baed028257859b6739ef46"
-    sha256 cellar: :any,                 monterey:       "583cfc1b00f42226cd07475eb0617c57e3c884ced1129d2172a68109fbba0eb7"
-    sha256 cellar: :any,                 big_sur:        "f0a55e82526eaa40fba78be5b4b419e7c525fc75ba84f597c373d0b3fb831a74"
-    sha256 cellar: :any,                 catalina:       "ee1ce8cef3410604d180120a31fa9e444eefb03eee6e7e29ffa25a12d5e7a70c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e355b0b9b52ab1e349aa1c982487f2143200955df3fb2f67c3cb829e2a245adb"
+    sha256 cellar: :any,                 arm64_monterey: "9f970f517ee07fd631f8413dc5258a2673004774adc123afb25ca1898083fdd3"
+    sha256 cellar: :any,                 arm64_big_sur:  "cc488bfe2d8e576d6ae11665e3140019f25e8fe1239c65f3122b311217ea2c75"
+    sha256 cellar: :any,                 monterey:       "6de804e665cc162474f236240206a8440d732cabf28eeab31a11b10ce8fcedf2"
+    sha256 cellar: :any,                 big_sur:        "c6738baf45ae5a6853dfa23893c0291a085ae0047166c0af188e654e7f1d149d"
+    sha256 cellar: :any,                 catalina:       "a5d9904fb3347ee3960ecccd760d324a47cb010f869cf93e286574635b588b1a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "106dded68216c4cc89fb36f1398caef520ccd8c2b47666e5fc5ff10b9f125b51"
   end
 
   depends_on "pkg-config" => :build
