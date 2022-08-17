@@ -7,12 +7,12 @@ class Flarectl < Formula
   head "https://github.com/cloudflare/cloudflare-go.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "85c668b9295aa644521917908d4f377b0b92197881d620c274efa981400810d0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "976537c2f633a4b493b390989c387f2ae725f8468efa11cf942d1146541304ac"
-    sha256 cellar: :any_skip_relocation, monterey:       "c9464a4ae9b7bf1eb32d237d581fd38640f04a2cdafa529f3a040177423d2e3e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "82afde1fec1fc7c4fd8de9ff239a99948c43450f87aa221607897f28b824bc71"
-    sha256 cellar: :any_skip_relocation, catalina:       "b2cdc387c4decf80d82c70115fe724176ba571147cc1cdd87e6ae1fda2aad9a0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a243b9656ac4b81a137f1611d9897fa3a6c2c8fda97dec43a22f45459ce2078e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "57e11f21f057051f54cf66f550be58853166aac1f111673e9d7d43b012fb77d9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ee697b04608a6f2f96d7a400f5f5479d4f6b86d4db83c93cf37e40fdcc2fce34"
+    sha256 cellar: :any_skip_relocation, monterey:       "76befa8dfe546da17d35dd01e71400fda61af18aeb2e57745cba32ef310eec44"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5ffdd93d4a5eb1a0559aca238b911095be5d71259f85b2b0d97ef497073fb552"
+    sha256 cellar: :any_skip_relocation, catalina:       "b56bc4ce3bd07d92aeb1e9346490f894d8b32cecc0f276d05148fe70585e8c28"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8a589bafe1bd2ce4d6b2fa53098317378974b9a1278975b252beba1381e36a24"
   end
 
   depends_on "go" => :build
