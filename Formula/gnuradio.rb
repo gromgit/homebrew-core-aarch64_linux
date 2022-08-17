@@ -15,12 +15,12 @@ class Gnuradio < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "677c167b0c72083462b7d243a2863c290c003f987eb244bb4f3a5122b575defa"
-    sha256 cellar: :any,                 arm64_big_sur:  "6874ed1343a9919b8221bc156a2f70f1c8b3e288ee4c967717ba8c8cbbdbeb1b"
-    sha256 cellar: :any,                 monterey:       "74d02c011fb2e52410445658d346c57fb1f29c80c61ad7e2019d48c30ba6c209"
-    sha256 cellar: :any,                 big_sur:        "ea346dea13413be03ddb4b646102decc31e8e572501e160432fe6005e48061e9"
-    sha256 cellar: :any,                 catalina:       "f72621739965a151a4d95e5c3ec6eb59e83da9333ccf4e2d4d1fb0b5a2146e87"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b54a723fdb6dea28b8c321a4dfbc4cb28cbf1e6a3768c258c3cf3955210fc2a4"
+    sha256 cellar: :any,                 arm64_monterey: "32943ad6fa874c85731cab9ef9230cf069b89a0cd2a01934c828b501f5abe03a"
+    sha256 cellar: :any,                 arm64_big_sur:  "2a1cb5fdd205f243ec6b1554b1cceb3750f5ef8ff8a0468988b097db8c16bc61"
+    sha256 cellar: :any,                 monterey:       "6cfb00f426887f5b3750bc67df695cd5dd40c122901b6e42e0c00ae8eb9499c5"
+    sha256 cellar: :any,                 big_sur:        "f685bc9aa518d85628ac7c2ffe8a00cd3afd0c0d0f8fab84f7995f00bba6366b"
+    sha256 cellar: :any,                 catalina:       "927c895e82b494c3c00c22aa8b637d0d2dc691b0d27e4b919a0a7949e8e9926e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "010ae1f8e95a5fa9dc81e60ef9930fec27c8c2f07c73ae88fbdd2bcce9c3e2c1"
   end
 
   depends_on "cmake" => :build
