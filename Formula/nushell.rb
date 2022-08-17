@@ -13,12 +13,12 @@ class Nushell < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f796dc5e814500c4f725934a26f677f12fe3c61b0a0158ef09c0e32431151fc1"
-    sha256 cellar: :any,                 arm64_big_sur:  "d6a46c91d726ac3d6cba5a2a89e203fb59dbfac83dab86fe73a4ac7084e0c45a"
-    sha256 cellar: :any,                 monterey:       "b6ad3c6f6b837679818c8b4d1c36b4f603265e91a39ca24036db09f681d41a27"
-    sha256 cellar: :any,                 big_sur:        "9cc4641f91a9c1b83bd0050b5f77b7654519c78dd78690b8736c7941c483e878"
-    sha256 cellar: :any,                 catalina:       "dd05535d9f34d9b0fb559bb13f10973b13edc8243f99006969c45a6c514b3a99"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "61b8ad55599985cd3e68012006e54bbe64ae6759fda74a7cbc1076550fa1d641"
+    sha256 cellar: :any,                 arm64_monterey: "e0e9d4046cbf3bd7574389fdc734416dc727d834d7f40cf0daa7d402c80a09d0"
+    sha256 cellar: :any,                 arm64_big_sur:  "270932aa7eed448345f44689e2c464eed6f7805aea53c67763e3cea573b754fc"
+    sha256 cellar: :any,                 monterey:       "b30e10a0c1c36844ef36fde88aaec5f9b1d05095c5c59d2cdbc5b647df1152a4"
+    sha256 cellar: :any,                 big_sur:        "56373cdfbd2de9cb665fae639cf7825afb6c58d9da21969d3cbdce0da3a28ff8"
+    sha256 cellar: :any,                 catalina:       "273d230832915bbb59e8cd822d8897f9fe1a25624db319010a570145da77f488"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "513d5580745fa611317d7ef074870355ae7844c9d7717e09f12ee0063163931f"
   end
 
   depends_on "rust" => :build
