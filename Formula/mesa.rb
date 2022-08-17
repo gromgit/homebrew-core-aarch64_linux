@@ -7,8 +7,8 @@ class Mesa < Formula
   head "https://gitlab.freedesktop.org/mesa/mesa.git", branch: "main"
 
   stable do
-    url "https://mesa.freedesktop.org/archive/mesa-22.1.6.tar.xz"
-    sha256 "22ced061eb9adab8ea35368246c1995c09723f3f71653cd5050c5cec376e671a"
+    url "https://mesa.freedesktop.org/archive/mesa-22.1.7.tar.xz"
+    sha256 "da838eb2cf11d0e08d0e9944f6bd4d96987fdc59ea2856f8c70a31a82b355d89"
 
     patch do
       url "https://raw.githubusercontent.com/Homebrew/formula-patches/f0a40cf7d70ee5a25639b91d9a8088749a2dd04e/mesa/fix-build-on-macOS.patch"
@@ -70,8 +70,8 @@ class Mesa < Formula
   end
 
   resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/59/0f/eb10576eb73b5857bc22610cdfc59e424ced4004fe7132c8f2af2cc168d3/Pygments-2.12.0.tar.gz"
-    sha256 "5eb116118f9612ff1ee89ac96437bb6b49e8f04d8a13b514ba26f620208e26eb"
+    url "https://files.pythonhosted.org/packages/e0/ef/5905cd3642f2337d44143529c941cc3a02e5af16f0f65f81cbef7af452bb/Pygments-2.13.0.tar.gz"
+    sha256 "56a8508ae95f98e2b9bdf93a6be5ae3f7d8af858b43e02c5a2ff083726be40c1"
   end
 
   resource "MarkupSafe" do
