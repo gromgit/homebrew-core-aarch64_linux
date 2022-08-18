@@ -1,8 +1,8 @@
 class SignalCli < Formula
   desc "CLI and dbus interface for WhisperSystems/libsignal-service-java"
   homepage "https://github.com/AsamK/signal-cli"
-  url "https://github.com/AsamK/signal-cli/archive/refs/tags/v0.10.10.tar.gz"
-  sha256 "69f333421e7c681410093694fb953053967d01aaf6e806a4d3a6b7818726940a"
+  url "https://github.com/AsamK/signal-cli/archive/refs/tags/v0.10.11.tar.gz"
+  sha256 "db659c1bb5da0194ffe6cbe5a06dbf5a6f55cf95c747b26a3bf9c96a6902cab8"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -14,6 +14,7 @@ class SignalCli < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "d4ccbf8835f16a1c8ee8d4f60d9cfb7a22383c6507b824f0e3dbb7768d568255"
   end
 
+  depends_on "cmake" => :build # For `boring-sys` crate in `libsignal-client`
   depends_on "gradle" => :build
   depends_on "protobuf" => :build
   # the libsignal-client build targets a specific rustc listed in the file
@@ -24,19 +25,20 @@ class SignalCli < Formula
 
   depends_on "openjdk"
 
+  uses_from_macos "llvm" => :build # For `libclang`, used by `boring-sys` crate
   uses_from_macos "zip" => :build
 
   # per https://github.com/AsamK/signal-cli/wiki/Provide-native-lib-for-libsignal#libsignal-client
   # we want the specific libsignal-client version from 'signal-cli-#{version}/lib/libsignal-client-X.X.X.jar'
   resource "libsignal-client" do
-    url "https://github.com/signalapp/libsignal/archive/refs/tags/v0.18.1.tar.gz"
-    sha256 "de54535a5e9dbc0cea2eaf72d8e2f257e5c66f17b746be8d1ec3daa9d2d68f24"
+    url "https://github.com/signalapp/libsignal/archive/refs/tags/v0.19.3.tar.gz"
+    sha256 "845c14547e185954a18ac6ce5c0b3b2dd78afdc244f2b952779cc3597a7b2e0d"
   end
 
   def install
     system "gradle", "build"
     system "gradle", "installDist"
-    libexec.install Dir["build/install/signal-cli/*"]
+    libexec.install (buildpath/"build/install/signal-cli").children
     (libexec/"bin/signal-cli.bat").unlink
     (bin/"signal-cli").write_env_script libexec/"bin/signal-cli", Language::Java.overridable_java_home_env
 
@@ -47,7 +49,10 @@ class SignalCli < Formula
     resource("libsignal-client").stage do |r|
       # https://github.com/AsamK/signal-cli/wiki/Provide-native-lib-for-libsignal#building-libsignal-client-yourself
 
-      libsignal_client_jar = libexec/"lib/libsignal-client-#{r.version}.jar"
+      libsignal_client_jar = libexec.glob("lib/libsignal-client-*.jar").first
+      embedded_jar_version = Version.new(libsignal_client_jar.to_s[/libsignal-client-(.*)\.jar$/, 1])
+      odie "#{r.name} needs to be updated to #{embedded_jar_version}!" unless embedded_jar_version == r.version
+
       # rm originally-embedded libsignal_jni lib
       system "zip", "-d", libsignal_client_jar, "libsignal_jni.so", "libsignal_jni.dylib", "signal_jni.dll"
 
