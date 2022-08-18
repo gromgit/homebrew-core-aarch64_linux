@@ -6,12 +6,12 @@ class Hebcal < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6858b58451056d5b885ff20511769f4157a1c90a9de07f5d0f6c7724e9084844"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5aa1e58ab697e42039660251d6512940c45aa058d040e53b7042758841fcb369"
-    sha256 cellar: :any_skip_relocation, monterey:       "92fb89a3ebeb16ca08dc6beacc2e54ed566e4069ccbdbf26bebc3a920bb774de"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d13168e7d833058699c3090d9b92bf6a52bf33eb19ec44a7c8821b288aea71d5"
-    sha256 cellar: :any_skip_relocation, catalina:       "aa2c7f4e49fa685a6280e0426027176f737d43a94ceb4cc4fdf18dbaf6b3f274"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4cae6a21f371bf895ab49451d470033dba72f5d1ffbe4f116ee87b493370c9ce"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3ffe7d52bdd0161226a866115f12a3774c568c301d5d46e68d487aafc8905768"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1cd1be1ad0a671ea3386b3bcba7e9912aed8bddf095ef4d8c6ed3188769d172f"
+    sha256 cellar: :any_skip_relocation, monterey:       "329159ca71468d9e3f0762cf27739e07233d5b070558b4fb9c794a66ec8521a5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "59dda7b22660551875060c42f6f9006578ea87b9bb0c0eedef6ad13e57e45091"
+    sha256 cellar: :any_skip_relocation, catalina:       "8524a1e59878f8e49d32b8fa89049e5d3073f475f70a3271cb44161e16f6317b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0a6810c26023bc92628a7ebe1c024949f1f7f60969c6def544c48ef65442699b"
   end
 
   depends_on "autoconf" => :build
