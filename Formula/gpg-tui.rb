@@ -6,12 +6,12 @@ class GpgTui < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ec8d9d8796f55165941493f1bc17a91567b097b8ddd69671dab60642b8caecae"
-    sha256 cellar: :any,                 arm64_big_sur:  "7b7c98635a7fcc508a524325374e45ff5fe031575957052d256b3566a0f95d14"
-    sha256 cellar: :any,                 monterey:       "7fa532d99b87cd4b5af650966dbbb1caaaeee8d9dd56488b431e10eeba793818"
-    sha256 cellar: :any,                 big_sur:        "127e702384df1496119fd982f180175bfc7d0b517dc6b86b727fee7145be2f78"
-    sha256 cellar: :any,                 catalina:       "3995470495945c3b13d0cb3dfd4488240a3bc53a0f079108e6a4e852285eae8f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b655ee425c43cda1c81137d49aee7f7c98d92773a3045ce1ae6ca31004656c02"
+    sha256 cellar: :any,                 arm64_monterey: "ef7e0576b4914ac1512731c22387a9b7b4aea3320d55f697bbda1245ea4448e7"
+    sha256 cellar: :any,                 arm64_big_sur:  "b0c6f1cfb61dd6be121d5f2653b517bb5c2f0ecceaa3d111f4cba2a243d9a8fc"
+    sha256 cellar: :any,                 monterey:       "b257a8c7f576d59f4a1d18b353b940f146b16683b30ae7d35644f94d0449e6b7"
+    sha256 cellar: :any,                 big_sur:        "41d5a21cb96a55b92528d6999d4a7c52a5a055e0982fcd61e1929b972f3939eb"
+    sha256 cellar: :any,                 catalina:       "70be11f66733d29e745854a0d7b174b9ede6f728a3145c690e18cf3666857409"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c79970c8a9798c1a69d6f44b46f56ffef2420ad1b54686af9fd9cdd111adb4a9"
   end
 
   depends_on "rust" => :build
