@@ -1,8 +1,8 @@
 class Mold < Formula
   desc "Modern Linker"
   homepage "https://github.com/rui314/mold"
-  url "https://github.com/rui314/mold/archive/v1.4.0.tar.gz"
-  sha256 "c255af236e629a3afb0cd89185a3a944741aa55bfbe966eb175af1c7b6097c0b"
+  url "https://github.com/rui314/mold/archive/v1.4.1.tar.gz"
+  sha256 "394036d299c50f936ff77ce9c6cf44a5b24bfcabf65ae7db9679f89c11a70b3f"
   license "AGPL-3.0-only"
   head "https://github.com/rui314/mold.git", branch: "main"
 
@@ -16,6 +16,9 @@ class Mold < Formula
   end
 
   depends_on "tbb"
+  # FIXME: Check if `python` is still needed at the next release.
+  # https://github.com/rui314/mold/issues/636
+  uses_from_macos "python" => :build, since: :catalina # needed to run update-git-hash.py
   uses_from_macos "zlib"
 
   on_macos do
@@ -37,6 +40,13 @@ class Mold < Formula
   fails_with gcc: "5"
   fails_with gcc: "6"
   fails_with gcc: "7"
+
+  # Use a portable shebang in `update-git-hash.py`.
+  # https://github.com/rui314/mold/pull/637
+  patch do
+    url "https://github.com/rui314/mold/commit/dea48143db46e759682dbd12ae5dd51591056a45.patch?full_index=1"
+    sha256 "831a5170544b02a01d9b31728a4c92af833993e35fa83fe675495f46affb3119"
+  end
 
   def install
     ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib
@@ -88,7 +98,7 @@ class Mold < Formula
       homebrew_clang = Utils.safe_popen_read("clang", "--version").include?("Homebrew")
       untested << "syslibroot" if homebrew_clang
       testpath.glob("test/macho/{#{untested.join(",")}}.sh").map(&:unlink)
-      (testpath/"test/macho").children.each { |t| system t }
+      testpath.glob("test/macho/*.sh").each { |t| system t }
     else
       system bin/"mold", "-run", ENV.cc, "test.c", "-o", "test"
       system "./test"
