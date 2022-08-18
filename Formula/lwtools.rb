@@ -11,12 +11,12 @@ class Lwtools < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "18723cd8abac261f39994d5875b869c19ee4232cf86e2fd03ed83a71e9034baa"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d732709205cfd87a92cb2486afdd6e4d5ac19fa01733a4d93d4c9615fa86c8a2"
-    sha256 cellar: :any_skip_relocation, monterey:       "03a0ce78b03d83babeee81cfc256ff678c8ac8c40f2fcc1def0b5b52beb1542b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "978e2e47cdf8173352515110388b121e99ce8c5cba481a1b6233c3a2be5eb999"
-    sha256 cellar: :any_skip_relocation, catalina:       "f83fea22c6690e876c3a3c36dbec9f8547551a591fadfde7a8741ff6dc23629f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "79eb5e50e29e07a4654be549c3eb70aa2930ad8244bd65256d29f2d0c9b39982"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "17c44cb127a40b306eb838bfff0dd8ebaa052ff712e63f20d1677f0b69e26e3c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "11825578987a2aaaa08ddf2ebf67921c5e46c7ff712cded183e71d95b465d267"
+    sha256 cellar: :any_skip_relocation, monterey:       "7037098728211b7aac84cfcbadcf7260b62fdb417b04b80fa755597b571c34e7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e5ba969783c40c2a6772c0d4afd7e3df58fdacdb0e83fb6865c9d74d7f737c24"
+    sha256 cellar: :any_skip_relocation, catalina:       "676551e684a6b379be7605d61cd87274a718b9955af77618ce5eacd6b75eb03c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4178ef6d2a56b0f6bcd0b4dca4d296df4301dc12883328105d526f1fc3014ece"
   end
 
   def install
