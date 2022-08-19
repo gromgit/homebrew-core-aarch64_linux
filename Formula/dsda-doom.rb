@@ -28,12 +28,12 @@ class DsdaDoom < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "7d678f7e71e2eb80e55b131402765c634beac3385ab94b414f7ebe45074e2e61"
-    sha256 cellar: :any,                 arm64_big_sur:  "478f1e2ee08721d7127b844b84a87f0c96b57fa5666ecba88ebdbc7d03d5304b"
-    sha256 cellar: :any,                 monterey:       "916e5d6e9a5dab87d7178f71fcb5fabe79be0f3e7af6814fffbda758d4adb7f7"
-    sha256 cellar: :any,                 big_sur:        "934493f52a5d3a6e6e75e1ec6b71c488102bbb56dfe1aa0d650ef7a00020021b"
-    sha256 cellar: :any,                 catalina:       "51709e14d5e1e71f408947076713d69afdd7f076ac470035566342c34cf16fce"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4706bb36f51c9f3ac71b1cec66d3246c8c6d7d65560664ddcc4df80e76d3214a"
+    sha256 arm64_monterey: "8d5d4bc7d38e1a1f5eb9a7bfd452bc7554579af004024268e5dae60ed7351316"
+    sha256 arm64_big_sur:  "6990524cfec0e271877e469ca890be0fda1d1d9ecc8e902651654a8fa5f4f934"
+    sha256 monterey:       "4465fe819a918ae2e4db6b28c0abd3ce4de4c80464f3287627536ae6ab7a2459"
+    sha256 big_sur:        "5d94ace0be85ba85fcfe1bbb8c40ef401165f43c98c08aa199204a5cd0a7da2b"
+    sha256 catalina:       "4c25430d4653d99c1dd136a795a2c3bf9033047b1ce8660ba9514abdaa4643a8"
+    sha256 x86_64_linux:   "fd221840a8e56a5dee645291ab99dfbe7c3e82085fb84ae32e75b8aa64656056"
   end
 
   depends_on "cmake" => :build
