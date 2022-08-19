@@ -8,12 +8,12 @@ class Scorecard < Formula
   head "https://github.com/ossf/scorecard.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5b3fb2b027e8d33795dcf809528e5fbeab53ae755dd81cf34ddad793f37b7b61"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "05371bfaa632d2db02014dc850d2fe6365edb885cbbb305cd228175c4c9934e9"
-    sha256 cellar: :any_skip_relocation, monterey:       "c754205e12826d6088dcc148e6c6436f676c7d15266ac9266e776fa66d7a3d37"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d4360615a430e58b19e16621be13d7494f241c8b3dbbf3d3daffaa555d84a429"
-    sha256 cellar: :any_skip_relocation, catalina:       "fdd8efe3e7a9bc361c458517de65efe9ef7a356877ffbae6f4ab84ebe8b61733"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d140bda24bc13a5b003be0033e6a42c3b92019dbb602ecea29ab65498f6ce6c8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d0f7a013705ff666b30598b636a4ad10eba106f07e434e2b23d45d3d8fed2edd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f9a3fcd814d143e400e8cc474330be5ecf9cde7975ea35b594c796441483091b"
+    sha256 cellar: :any_skip_relocation, monterey:       "0385255fb6e67034e95a7a6a058a5eb5b0b048d9736c7c8a00f6c3b5544a905c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0c9d6dcc263e019510b649027e44d2f761e2bf59a015f63ec7360891663716ee"
+    sha256 cellar: :any_skip_relocation, catalina:       "bf522d0b929ef5d235a7c221f6bb5229d15f734621a0fdf4b41c81bd978e614e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "81169cc67e05e77580db46221b01081cb8d8c8a4a56b1b6cdb86c616375b57af"
   end
 
   depends_on "go" => :build
