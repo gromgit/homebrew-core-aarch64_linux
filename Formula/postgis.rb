@@ -1,8 +1,8 @@
 class Postgis < Formula
   desc "Adds support for geographic objects to PostgreSQL"
   homepage "https://postgis.net/"
-  url "https://download.osgeo.org/postgis/source/postgis-3.2.2.tar.gz"
-  sha256 "18cf3d013f45b1aa8ed59d78bc707e9e125e250d8f0615396ae9bfe3dd7c3d7c"
+  url "https://download.osgeo.org/postgis/source/postgis-3.2.3.tar.gz"
+  sha256 "1b4d8b5c756e5aba59efbc1833b22efe4d6562778eeca56fa497feb2eb13668c"
   license "GPL-2.0-or-later"
 
   livecheck do
