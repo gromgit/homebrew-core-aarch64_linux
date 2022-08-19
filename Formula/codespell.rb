@@ -8,12 +8,12 @@ class Codespell < Formula
   license "GPL-2.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f5ed3ef1ac934163c536913b4fb6fbb951dc5f38f93a4cb4749ba3d3e6aab8f0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f5ed3ef1ac934163c536913b4fb6fbb951dc5f38f93a4cb4749ba3d3e6aab8f0"
-    sha256 cellar: :any_skip_relocation, monterey:       "62206663f00a9d7ae69a73ae0d9a676a90489d7cb042e5625bec4ed6615f74ac"
-    sha256 cellar: :any_skip_relocation, big_sur:        "62206663f00a9d7ae69a73ae0d9a676a90489d7cb042e5625bec4ed6615f74ac"
-    sha256 cellar: :any_skip_relocation, catalina:       "62206663f00a9d7ae69a73ae0d9a676a90489d7cb042e5625bec4ed6615f74ac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d19d76f66af0966c91355d0abbbe750e6db25fbd778cbdb138b6eafb9ca6c732"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "059cc7dd356d2dbf188227a91bc16698daa98dc0949ed40c98e791602a6938d2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "059cc7dd356d2dbf188227a91bc16698daa98dc0949ed40c98e791602a6938d2"
+    sha256 cellar: :any_skip_relocation, monterey:       "11aee07f3b9bb98467b85a60c47aec8cf0892e5f78c9efbebe61b27d4d0aefd4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "11aee07f3b9bb98467b85a60c47aec8cf0892e5f78c9efbebe61b27d4d0aefd4"
+    sha256 cellar: :any_skip_relocation, catalina:       "11aee07f3b9bb98467b85a60c47aec8cf0892e5f78c9efbebe61b27d4d0aefd4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7fde00f2068ab44164a0010e9dfcb8cd344541dd04fb321ae915954ae1c30efa"
   end
 
   depends_on "python@3.10"
