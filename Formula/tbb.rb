@@ -7,12 +7,13 @@ class Tbb < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "81dea309acb3a9f5fb2ac30c4e9a915d91108f314cea56028f5fed96be58fcd6"
-    sha256 cellar: :any,                 arm64_big_sur:  "48465c108c4ad1d794dac93decf5f53838eec82f1b097084a80c910b9735d96c"
-    sha256 cellar: :any,                 monterey:       "db3cbe833ec513f70b679c56ba624bf567c2fe93de6fc5145ebd6ca4cbeef3a8"
-    sha256 cellar: :any,                 big_sur:        "be99ceff29b46c05ef7037ca4a9158fb753604af2ccb9bb3a5bb6eb67608e636"
-    sha256 cellar: :any,                 catalina:       "a3b5165a52a69d50a1cedc5e9f636ffb9cd66162cd74554ee5c6f077b34da75e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ed987863be8c658d41a3d8793d20dc78b86ef5dc694b281d3056fc3a71a7388c"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "21c39944a3efe3edd84db35f4b7eb930d5e728742e96b4944489b09c85f485e0"
+    sha256 cellar: :any,                 arm64_big_sur:  "57a1754dd59fbbe2179a5747ad4dc27bc7f1a6b51fdc47d3d2dbd65c1fcf0719"
+    sha256 cellar: :any,                 monterey:       "241a6095398bad1f24343da0eedb746abce5818bebcccc7bb2d82cedde7eb454"
+    sha256 cellar: :any,                 big_sur:        "6af7f19d5dac6d86e98e29db077a76b26c18d5a187e45cdfe6f5a4b4be1006ae"
+    sha256 cellar: :any,                 catalina:       "4ddc6c91e43721325d44fd8aca57e30763cf546fba204420e797f9a6a091e225"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a3f6717ebecbcaf078ebf4166f02a09e8908e89a1425370ebd4f60ea101d26af"
   end
 
   depends_on "cmake" => :build
