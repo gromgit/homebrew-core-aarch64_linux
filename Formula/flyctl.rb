@@ -13,12 +13,12 @@ class Flyctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "dfbe3bce8233af43d999f797abdf16f3bc64b6b3d47c6525f78d8d9c00b6af74"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dfbe3bce8233af43d999f797abdf16f3bc64b6b3d47c6525f78d8d9c00b6af74"
-    sha256 cellar: :any_skip_relocation, monterey:       "69a436f1de6849b7b716ab805fd5b54d0eb51422e93028f5364402553090506b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "69a436f1de6849b7b716ab805fd5b54d0eb51422e93028f5364402553090506b"
-    sha256 cellar: :any_skip_relocation, catalina:       "69a436f1de6849b7b716ab805fd5b54d0eb51422e93028f5364402553090506b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8801d74ada4b80f813a218b88be2cca46a9bc3ab449fda44fde7ad1945ede6b3"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7569a6d6f2469f915f563f618367a17718140d535a7e7e3dd4c5d34fbcb0a2ff"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7569a6d6f2469f915f563f618367a17718140d535a7e7e3dd4c5d34fbcb0a2ff"
+    sha256 cellar: :any_skip_relocation, monterey:       "88497065676767cd729b8f957b8adf013938d0beb2e410733db92ee56cd42a5c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "88497065676767cd729b8f957b8adf013938d0beb2e410733db92ee56cd42a5c"
+    sha256 cellar: :any_skip_relocation, catalina:       "88497065676767cd729b8f957b8adf013938d0beb2e410733db92ee56cd42a5c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4037ecde23f510e2a331a66e1453e49eeec26e6b1aad1531705aea63a1fd2217"
   end
 
   # Required latest gvisor.dev/gvisor/pkg/gohacks
