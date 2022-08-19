@@ -11,12 +11,12 @@ class UserspaceRcu < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "4c2e92d6a1b70701ab105521bfb3553b1b29fe8a0af3944c27e882de6ebc333b"
-    sha256 cellar: :any,                 arm64_big_sur:  "d952a93e176b6c2b14a3d44ec93070be05b1e083266b7fbd406725178ac2727d"
-    sha256 cellar: :any,                 monterey:       "fffd32590e244100ac004f06d88453e00351bae217b80e8a6954a3c4d3be6f02"
-    sha256 cellar: :any,                 big_sur:        "345b0ee7a81bd7c4d288c76a710d05a2a579b4167a6dd69c489de531d3b71502"
-    sha256 cellar: :any,                 catalina:       "cdc54b4a7f20eb89dd2674ada6664633c0ac1e760e55eeaff553c16326cb8160"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1423e05dc0e6d8465145ab78d43cd09feb91fdd3a0d69703753750d42e63dcc1"
+    sha256 cellar: :any,                 arm64_monterey: "d2cb9246e240a6db9c40d9e3a19288d064ef95345f3e884a5892fa2b341fcb9c"
+    sha256 cellar: :any,                 arm64_big_sur:  "c661f7dadf4ef5fdedc1ea707da817fba3e491b0b263b070fc234f35614a8afe"
+    sha256 cellar: :any,                 monterey:       "c9cf73dd281dddd9fca16844e005392d0f0fb1132f4540ef95e552d7799113c6"
+    sha256 cellar: :any,                 big_sur:        "5e1b5b33fc0f5ad814ddc1d738f5ca8c2811422b9d37ecc1d517328287fc7d4e"
+    sha256 cellar: :any,                 catalina:       "3056888d7a39aa8ff2859eaac9d14ed0d15b921d857378160f6f49f7365ab07c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "35bfb4f4d8c549bcc9a75aaa5e194c410ad3134768b8355ff428a82ec905a0dd"
   end
 
   # Fix -flat_namespace being used on Big Sur and later.
