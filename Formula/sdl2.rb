@@ -1,14 +1,9 @@
 class Sdl2 < Formula
   desc "Low-level access to audio, keyboard, mouse, joystick, and graphics"
   homepage "https://www.libsdl.org/"
-  url "https://libsdl.org/release/SDL2-2.0.22.tar.gz"
-  sha256 "fe7cbf3127882e3fc7259a75a0cb585620272c51745d3852ab9dd87960697f2e"
+  url "https://github.com/libsdl-org/SDL/releases/download/release-2.24.0/SDL2-2.24.0.tar.gz"
+  sha256 "91e4c34b1768f92d399b078e171448c6af18cafda743987ed2064a28954d6d97"
   license "Zlib"
-
-  livecheck do
-    url "https://www.libsdl.org/download-2.0.php"
-    regex(/href=.*?SDL2[._-]v?(\d+(?:\.\d+)+)\.t/i)
-  end
 
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "d299f67194020898fa457130d11ecc89beab6020d2d8ed6cb6c546ca91858f03"
@@ -41,7 +36,7 @@ class Sdl2 < Formula
     # We have to do this because most build scripts assume that all SDL modules
     # are installed to the same prefix. Consequently SDL stuff cannot be
     # keg-only but I doubt that will be needed.
-    inreplace %w[sdl2.pc.in sdl2-config.in], "@prefix@", HOMEBREW_PREFIX
+    inreplace "sdl2.pc.in", "@prefix@", HOMEBREW_PREFIX
 
     system "./autogen.sh" if build.head?
 
