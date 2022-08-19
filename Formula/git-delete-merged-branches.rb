@@ -8,12 +8,12 @@ class GitDeleteMergedBranches < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0165b8baf45dd618c90835c49dc520c82046b229da30bcf406e41c0e6a7d7911"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dc9e624d56ac24b11c8872c55de72613e927f45c7c1c1015017ea32e7ac59647"
-    sha256 cellar: :any_skip_relocation, monterey:       "6db55bdc66844d2366c4d87028d3f11016f3553bc0103593e4821baef4a868af"
-    sha256 cellar: :any_skip_relocation, big_sur:        "72c138e2071af49e1076d4b5935f9b4941df7c7c0f757c1749799c0dffed1d80"
-    sha256 cellar: :any_skip_relocation, catalina:       "4e643a6ac1e2f6e932f74cc083eaed60f1544fb7fdd2310643db72320e2a9f88"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a8e941c486cdd05ec92c3b672020f0e4b6f4f114c02b6e97dc66730a3828c734"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b2a8eaabdb729c8ffdc14497839c28274938aad942a21d346ed1a3e29862191e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "94803cd84f138892f268a07874ec2bf6d0bc1c7e555bb6b6284b060a4a9b55d3"
+    sha256 cellar: :any_skip_relocation, monterey:       "2f0487dfe63caec0de7e243dd138a1b44bd90819df5d21c415cb295b0e3a0f97"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d9bc9080ae37b1e9e621e226710e3ff267c7918a68ef8874c2037fcf8f3d7d75"
+    sha256 cellar: :any_skip_relocation, catalina:       "b978c645c515f74200d42372ce06b4b202b8aa1922dc38ab4ce86a3c783adb72"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0779059170dc859504e3ba382a97bd3f3c998c16bdfa9b0f06be78fafccfb061"
   end
 
   depends_on "python@3.10"
