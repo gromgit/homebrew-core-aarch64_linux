@@ -6,6 +6,10 @@ class Burst < Formula
   license "BSL-1.0"
   head "https://github.com/izvolov/burst.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "2eff842d73b54a3df54ba7c6d5547c507736c15fe155905d49dde29090ad5c0a"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "boost"
 
