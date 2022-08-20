@@ -3,8 +3,8 @@ class Vermin < Formula
 
   desc "Concurrently detect the minimum Python versions needed to run code"
   homepage "https://github.com/netromdk/vermin"
-  url "https://github.com/netromdk/vermin/archive/v1.4.1.tar.gz"
-  sha256 "ee69d5e84f0d446e0d6574ec60c428798de6e6c8d055589f65ac02f074a7da25"
+  url "https://github.com/netromdk/vermin/archive/v1.4.2.tar.gz"
+  sha256 "c9a69420b610bfb25d5a2abd7da6edf0ae4329481a857ef6c5d71f602ed5c63d"
   license "MIT"
   head "https://github.com/netromdk/vermin.git", branch: "master"
 
@@ -24,7 +24,7 @@ class Vermin < Formula
   end
 
   test do
-    path = libexec/"lib/python3.10/site-packages/vermin"
+    path = libexec/Language::Python.site_packages("python3.10")/"vermin"
     assert_match "Minimum required versions: 2.7, 3.0", shell_output("#{bin}/vermin #{path}")
   end
 end
