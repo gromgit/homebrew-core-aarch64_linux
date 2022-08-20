@@ -6,8 +6,7 @@ class Pandocomatic < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "1b44f290cd904b2100f258a322e255c9699bcd63e61c275a4203f93ab07f198b"
+    sha256 cellar: :any_skip_relocation, all: "8b34b6ee72883fc87162ceab902d17da2f375ba06a1bdd75aa271bf46c17bba0"
   end
 
   depends_on "pandoc"
