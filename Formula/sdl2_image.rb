@@ -14,12 +14,12 @@ class Sdl2Image < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e59dc27bcf434af711b10014c47cf901bb8662707c13aaa126f29c1682890dd0"
-    sha256 cellar: :any,                 arm64_big_sur:  "1ae1702b4cc318f66d59d9d44f17564dcdd458150dfff1a2638474f1387d33f9"
-    sha256 cellar: :any,                 monterey:       "54d135e09c9d3a4d1c2079c68ed64873a30adcf7a6fe11bfe34b9680073f927f"
-    sha256 cellar: :any,                 big_sur:        "87b24afb1954cc273aa0c444e0af783aaaaa7dac950c3814780f8fa8eb3de2a8"
-    sha256 cellar: :any,                 catalina:       "889798afc621891fded420fa508c0fc0dac3ae01e117db6fd5d2aaf737197956"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e7a7512ccc84c875887060836485d38b37e83f7b8b2beb8c30342989a21c467a"
+    sha256 cellar: :any,                 arm64_monterey: "9957623300b351f7a5a8a9d5a53e23ab253f619e76f0ceda787ce9aa6e65bda7"
+    sha256 cellar: :any,                 arm64_big_sur:  "62d71fe497de2509c66c439a42d9388d22838d17dd7e5c5b100ae056073cdb2a"
+    sha256 cellar: :any,                 monterey:       "85536b30fa7448b4144f04c17b5505f36ff2b41d68ff2c040131a21dbdc51b2e"
+    sha256 cellar: :any,                 big_sur:        "660628e65267b3624a9337fb0828c2a6f56037b21d1da2910848be9ad58e2cbc"
+    sha256 cellar: :any,                 catalina:       "40ed17b687354fabb22a87da5d995446088512a0293f3f867c48a74cea0d376d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e68e4f635af13f76c20dcfad45cc0037b5bd65bb55a9d83c613a4e6a5742ed34"
   end
 
   head do
