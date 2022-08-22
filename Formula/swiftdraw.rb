@@ -6,6 +6,14 @@ class Swiftdraw < Formula
   license "Zlib"
   head "https://github.com/swhitty/SwiftDraw.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "588f526b2a36b9898a14f08fbe216cd2b8bf9735c5b17590891759f3d633a391"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "76bfaf3c223b0af3bfa23198dfe0f05add4bca3cc26d3099484a080fdbd4a24b"
+    sha256 cellar: :any_skip_relocation, monterey:       "d57f3fd0d05222ad0a47d9f883a8bb9fdafb1930e3086b768350024deaf4e9b1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b44c12f1c81d7683679ccab50a2fae04c0bd1fa3452ddec59ae4cd02dfd8c2ff"
+    sha256                               x86_64_linux:   "4525f4ea0b710777e87508961025e882e49a4356e49fe12d2f1f4e4d4a3e98c4"
+  end
+
   depends_on xcode: ["12.5", :build]
   uses_from_macos "swift"
 
