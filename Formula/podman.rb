@@ -14,12 +14,13 @@ class Podman < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "90ed05f03840e3c98397fb9833d65deef5c14640ded372fddf58beda91980bb3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bdf752ce452ab9af35be05228806e99c9655b840cac5b9081424338ee21d0025"
-    sha256 cellar: :any_skip_relocation, monterey:       "189613a7061ed62fca23c0bb92553536fafb503f19072d3552485268ac1d4fe6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d9ad0036f5b4a2c83c1d3ac4cf8e7d6931e46ce62febd69a50c9fcf803a10461"
-    sha256 cellar: :any_skip_relocation, catalina:       "db46307c9571b23459e979336906f56376a21920f5b6a0447c79c65d5cd48a80"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "291babc343bc2976a95d55ab2c81735f3cd48b3932a098d156d3dc9395679cf9"
+    rebuild 1
+    sha256 arm64_monterey: "6466fc5a3b84b64a3a58e87521b0997ab5bfe9be43c8fc11a18ed0013376c34a"
+    sha256 arm64_big_sur:  "33f9e47f8fda7d3ca59a196a631ddded0fcaebb39fde9852de552a52bb14b488"
+    sha256 monterey:       "1376281fdd170f4b541bee26fad113c640b2490a4b6a0e9120bd03f53884f0a5"
+    sha256 big_sur:        "835e0c5e55d9e9b38047c6a1e3701925ff99e8de049dcef25412c1f07a9836a7"
+    sha256 catalina:       "a62e385fda0f97e4214a2ea50d253837a730db14566d202c24b1fead662188fa"
+    sha256 x86_64_linux:   "9f62f0cb05daf1085eb9c78dbf1f01c0a28c0b15d1b7f4cdebd49313bcef46b5"
   end
 
   # The path to libexec where `gvproxy` can be found is hardcoded into the Go binary.
