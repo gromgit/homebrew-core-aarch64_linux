@@ -12,12 +12,12 @@ class Monetdb < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "2d3bd76078287f35bbdb5dc42f5a57f9e28d9e31f74d389ffce239e2a01b0886"
-    sha256 arm64_big_sur:  "aac092c1ad676920c0e151bf47cdebd262304c7deb792393917adb72b126e089"
-    sha256 monterey:       "e385257a57518d2564a40e026b7e820e846b60a21beb94a440a2de805feec564"
-    sha256 big_sur:        "aba39e6d1446cfc0f40181777c0b17db781ea8ba888364c3c00fed96e3c58d3c"
-    sha256 catalina:       "11eb359ac8ef94e9253c827e8ac9374ca7300fb01eba03fcfa815342b70bf65d"
-    sha256 x86_64_linux:   "bde6b3bb04c35c2a23bedc5efb68dd057e3366b1f93dfbb5d7db4a270716ec7f"
+    sha256 arm64_monterey: "56c8aeb7a8ee4c7e1b99d67a0e96c53f56fe3d5c48831fa992d9421652eeb73a"
+    sha256 arm64_big_sur:  "177fc4fc6b39869dbaaa945cd103ca2a2fb7243b0c80e2d5028cc8317ef129dd"
+    sha256 monterey:       "85514474d20b9d8a4cc3dd1f368065dbce587eafe76f9fa6d9c2e97743a55400"
+    sha256 big_sur:        "fe49d4cfdb90ffd4cc623d8ee6e8f0cf5cee145d1d42d05432fc3232ad9298b9"
+    sha256 catalina:       "82a32f55f20c4c15156699d0cef3bf8856d3ee3405e5fd985188f53ca0660245"
+    sha256 x86_64_linux:   "2945dda661cfb58943d47467317d3b04cfeaf2438e2173bf3efe442fea5594a2"
   end
 
   depends_on "bison" => :build # macOS bison is too old
