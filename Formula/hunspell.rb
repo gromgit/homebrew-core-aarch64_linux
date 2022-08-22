@@ -1,10 +1,9 @@
 class Hunspell < Formula
   desc "Spell checker and morphological analyzer"
   homepage "https://hunspell.github.io"
-  url "https://github.com/hunspell/hunspell/archive/v1.7.0.tar.gz"
-  sha256 "bb27b86eb910a8285407cf3ca33b62643a02798cf2eef468c0a74f6c3ee6bc8a"
-  license "GPL-2.0"
-  revision 2
+  url "https://github.com/hunspell/hunspell/releases/download/v1.7.1/hunspell-1.7.1.tar.gz"
+  sha256 "b2d9c5369c2cc7f321cb5983fda2dbf007dce3d9e17519746840a6f0c4bf7444"
+  license any_of: ["MPL-1.1", "GPL-2.0-or-later", "LGPL-2.1-or-later"]
 
   bottle do
     rebuild 1
@@ -17,16 +16,12 @@ class Hunspell < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "6b57b04052406ed148c7c44e045586787293ecc9c27701e2e9c6308cdd63f3b9"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "libtool" => :build
   depends_on "gettext"
   depends_on "readline"
 
   conflicts_with "freeling", because: "both install 'analyze' binary"
 
   def install
-    system "autoreconf", "-fiv"
     system "./configure", "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
                           "--with-ui",
