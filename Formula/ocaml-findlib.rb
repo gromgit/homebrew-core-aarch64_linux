@@ -11,13 +11,12 @@ class OcamlFindlib < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "b05f66339e91c8aa5d0dc67242a82dc8c39a254532d8017c5d35bfd31139039e"
-    sha256 arm64_big_sur:  "747fcd3b425c998c45b5f83aaa72bab0a06a584ee409284447824472058a737e"
-    sha256 monterey:       "f5e661018713080fa77ad4d33f1890f51682971eb9593d821340e51655797be8"
-    sha256 big_sur:        "908202a20c99ce1e3021a2f415d876f59d8d65912df486d4085ca01b93b17e7a"
-    sha256 catalina:       "64e0d27b20e1b6ea55beda463d21701bb96688bd9dbda5b5e66095eddd25ef49"
-    sha256 mojave:         "e236f3f0d85b74fc8ced41f56cf5caae52d6ef5f542b26dc27563a1db1ecbccf"
-    sha256 x86_64_linux:   "fc83a61ef983085665a7a144d0d1d44d014da88cbb7a18b072a486555e460a40"
+    sha256 arm64_monterey: "d6eda73dbf7b59eea17cb638182c8145b523989c983ea22e369335029410409e"
+    sha256 arm64_big_sur:  "0adb0140d0c7ab695aa19901a7cf2ea4ee5829517e25baf199b4b6dbf24d6236"
+    sha256 monterey:       "73b045d1491ae15b66da7f7716aed4deb6885f27f6f858ef11b00e642793a3c4"
+    sha256 big_sur:        "f0ce310996e8e71a8480e75f869b9b4f4071f99eb5d773b7c331c8ca71bd19d3"
+    sha256 catalina:       "d4ee36411ddca117e7fd047e094611d500f9bfeb5684864f5b04ad68c9c7e3ca"
+    sha256 x86_64_linux:   "0a8fcd1e7d971717acb469a477cef1622650ca382052cce3609ac24e6d846668"
   end
 
   depends_on "ocaml"
