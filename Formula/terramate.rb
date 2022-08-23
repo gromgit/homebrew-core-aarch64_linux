@@ -7,12 +7,12 @@ class Terramate < Formula
   head "https://github.com/mineiros-io/terramate.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4a9f0057709bab32233fbec56360b8f9e140d560a5ff1c1a2ee711a439b7c103"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3daa86e920c1165d681ab7ca722008ffb338c4338bd22c017a3e49fedfa496e6"
-    sha256 cellar: :any_skip_relocation, monterey:       "77fb24a6f2213125680f96c99dbf7c8bac9f355194b0aae76592b9a243579847"
-    sha256 cellar: :any_skip_relocation, big_sur:        "864d60a523ce48588a4110f62a399c09d683136e1cb2f53f064f9516aaffbee4"
-    sha256 cellar: :any_skip_relocation, catalina:       "a54b44b955a1708bb2d093236a466e7b6c3e04a2159d726e9c10088ed68d8af9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "475a81c46ee4425f44e66ba9cb642f7e26b6a8e41905b6dce4c381f98b8bc9d6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4e1b51e08d2d44ae5b162fa9426888d2ccfafe1236c4d1dff051ab88774531c6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6371505ddaccf178dd7407ad390ec99bb0db853ab2a92545d9b27b2a497109d4"
+    sha256 cellar: :any_skip_relocation, monterey:       "b8c09bcfe54a96dd0a1e19f7bf392368674752df1e250921cfe656d1b63ba44c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5a11f48c6e53819ed8ad9e91f9c333dbf76ea0fd871c5edf2d31639f2fc62f43"
+    sha256 cellar: :any_skip_relocation, catalina:       "7b340dc289f2d150b944b42a7452ef00d218d315ab62ca1444bf836f3f1bc231"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0d342977a55684ffed31e0b2ee02c5224d9e121995489c67c9b66c43887ebf88"
   end
 
   depends_on "go" => :build
