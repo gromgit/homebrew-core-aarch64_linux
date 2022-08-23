@@ -6,7 +6,7 @@ class Libbpf < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "ec4c77b184073770c4d8486c2b86bc59ef7a7398e7c0b99164b725b802c813e3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "c746fb954a10b136e5bb2f88fd5d58cb9c60cd3948539381f12d4bc0c1c06ecb"
   end
 
   depends_on "pkg-config" => :build
