@@ -12,12 +12,12 @@ class Testkube < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6b3733887a585045321dbf58c20d44009112d391e0d535a4eab5a7a004ad1ee4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6b3733887a585045321dbf58c20d44009112d391e0d535a4eab5a7a004ad1ee4"
-    sha256 cellar: :any_skip_relocation, monterey:       "c43b008b2cfdb328ace8734e3cc325eb8400f59eb57af7951ce4ec451b3b236e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c43b008b2cfdb328ace8734e3cc325eb8400f59eb57af7951ce4ec451b3b236e"
-    sha256 cellar: :any_skip_relocation, catalina:       "c43b008b2cfdb328ace8734e3cc325eb8400f59eb57af7951ce4ec451b3b236e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4a268e1d943d237c8f448fd7ae08a9c424303e9da92e3b9a00960793d1944783"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "665655202fde193f717df32b5e8d24a7129bcc952df4dbcf0132294841cb3714"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "665655202fde193f717df32b5e8d24a7129bcc952df4dbcf0132294841cb3714"
+    sha256 cellar: :any_skip_relocation, monterey:       "fe05699ea96686ba9fd27f04c7541cfbf7fe0c90347a4d945ca11012d5a20318"
+    sha256 cellar: :any_skip_relocation, big_sur:        "fe05699ea96686ba9fd27f04c7541cfbf7fe0c90347a4d945ca11012d5a20318"
+    sha256 cellar: :any_skip_relocation, catalina:       "fe05699ea96686ba9fd27f04c7541cfbf7fe0c90347a4d945ca11012d5a20318"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eaa09e02ebb33dae5b542c787ce1e73c9c449fdfb02ec056511c31fbf8e8a5e7"
   end
 
   depends_on "go" => :build
