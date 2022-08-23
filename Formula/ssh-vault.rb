@@ -7,13 +7,12 @@ class SshVault < Formula
   head "https://github.com/ssh-vault/ssh-vault.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2334b9e74cfa0f96d243b941564662863ee2f19f8a2e61d1dc024d52360310d9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3d31b872e937be5b52e321628ff7f05471c25f42e72dc3e4566580d919613c30"
-    sha256 cellar: :any_skip_relocation, monterey:       "6cbb0e108b1c9aba5aa319323926f552db41f90dba885155821d460004c74e66"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fcb7faca3f1ac56161e9ea91a7e543cf705222d1432d866a7127746f869b79ba"
-    sha256 cellar: :any_skip_relocation, catalina:       "8f4fc6e1e12a6eb2cff23b48c34568f2643d6c4570160c459e3ce79b66c5d7a5"
-    sha256 cellar: :any_skip_relocation, mojave:         "b3d07f9f64964782d4bc5d1b20218e016f8d4ee07bbb99a35fc5b1b0a0baa903"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8ccdc30d8485aca427e4d4603c22604d53fde4e5dcce3f6b0dd84770e82c272a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "08dd5698465eb87cca25411576ebb893060b7c802a067bb237e721f000b4d2b1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ad9804724c8a6c38844ac931a218b20b35dfefe32986f2b9ef4de169635cfea0"
+    sha256 cellar: :any_skip_relocation, monterey:       "b4d1af86b0556074ed6b50b9db7506b5e7754e06137b50a4706f6ce0fcb65b94"
+    sha256 cellar: :any_skip_relocation, big_sur:        "da32f19d8dee8306904a5c647048898e7e854f0b0eec9bae84a277740d4c2e95"
+    sha256 cellar: :any_skip_relocation, catalina:       "fe8f5f23ff032e8ed53a852258a51dddf79172ba879a1adbbfd5d58c9f3d7080"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ae020819f9490dcfc6d4656322d6ad6017f89bf4fb96dae78668629f967bf2e6"
   end
 
   depends_on "go" => :build
