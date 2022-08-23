@@ -52,7 +52,7 @@ class Glibc < Formula
   end
 
   bottle do
-    sha256 x86_64_linux: "8f5509c5a5fe85b923c196da5bb969d759a70a6a0e228110c5440a8719dc4c8e"
+    sha256 x86_64_linux: "cd51b67e67b9a5d27880efc06a2b01b71e0b7b8b2cc207e6e961e46c423018e3"
   end
 
   depends_on BrewedGlibcNotOlderRequirement
