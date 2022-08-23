@@ -13,12 +13,12 @@ class Dumpling < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "374bc44b478103564f06a3fcab84fc724c1bb8afd0a00e72b4652f2bfab6ed57"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c7fae89f51dd36166daeee51c4fe201f315abce3f12b3f4f73c3a5dc8940adb2"
-    sha256 cellar: :any_skip_relocation, monterey:       "bf81854cb648de445f99aa87430d52fd2fdd71d7c115d531239c3876f94b9937"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4e62dff1556715af8839f7fb17ccb5003f27a8630c5feb4f18ded0d279853967"
-    sha256 cellar: :any_skip_relocation, catalina:       "801b781d224e94476fb84125b3a0308399033114a1cb2309cf813f49d73a538d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3fdcd5ea7543cb0a6d2720e74cc6454168d7407bbecf2fe6a49ba6b156b9bd98"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "89785d4db17432195bd49b946a7a2e50d256cc48321bdf7f23720f11ef9b0c0b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6fe907de32dfd23eca7a07ca3a8636c19688e7423527e7dc4362a6e745984d59"
+    sha256 cellar: :any_skip_relocation, monterey:       "e63f8042accd4e543d1b830f7f4dad74b7fe007c7eabf14c5020a56bc1c78297"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b6c305e7415f33e90328c60a19239ee1d95bef982a2a122e52cb31bb6c2af154"
+    sha256 cellar: :any_skip_relocation, catalina:       "b52f7ce5a049069f6534bd3a7a6ad89592e28504e13b7d52c91920a0652d8efe"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7fefc699fe136040b68cb18c8c8ec5cb13c9b970cb469d3af5c49b2a022b054f"
   end
 
   depends_on "go" => :build
