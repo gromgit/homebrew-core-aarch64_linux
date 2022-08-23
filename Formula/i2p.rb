@@ -11,12 +11,12 @@ class I2p < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ca8a42d260af0c83e8dc59c92ff2bba8d3ba6de58ba05c44f9a5de92b0561cff"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7ff82fc86a81c2e07dc2f1a8bdf6ece7b1f16ea6cae23fce320b621a8770a326"
-    sha256 cellar: :any_skip_relocation, monterey:       "64278b24d3bd9abe714aba743d5add3ab1d59d74c7bb70a37131c6def245cc4d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f638be6bcb74ea75770a5eda798b751499f607eccce48859b9b838253f4a8124"
-    sha256 cellar: :any_skip_relocation, catalina:       "f1e54a09e9f1beefc32886d42b4731c2ad450911f0e3f7efd3411e017c0a9673"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1618c80f6619d613190807708f244d73639754a2287058006c68b7e2c6810e30"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ebb408953a0e87c23a9cb838bf833a96c3afdc2313036e2520dbbf2bbbd287dc"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "24830afa2fe1094e634033d61bb38082cd70807498b096a03a9d5fb5b71447c2"
+    sha256 cellar: :any_skip_relocation, monterey:       "75ad64bb78affab0ec5b4fe2290be379c5f5eec646fc4131415dfacc1e9b2797"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e4605f09824480a90857b4ae2a024454a77d693143914a70df7605ed072e8029"
+    sha256 cellar: :any_skip_relocation, catalina:       "0f1ecc018b386c097e962716ce5c9a7142b5f5d10a99c4ddde2de4b91d2235ab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5b174754721de5e5cbd0d8070764cc2b7e8f59ebe19911288c99398668f0c5b7"
   end
 
   depends_on "ant" => :build
