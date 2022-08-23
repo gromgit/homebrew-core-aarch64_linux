@@ -14,7 +14,12 @@ class Parallel < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "f975128d36fcc257e985a374eca0677fa812283ba7f3203ccb157b549373eba7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5bf2e34ec842abea40e7366e58a7f9bf3b6ab0a37fd7546ed50e36ab812ae35f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5bf2e34ec842abea40e7366e58a7f9bf3b6ab0a37fd7546ed50e36ab812ae35f"
+    sha256 cellar: :any_skip_relocation, monterey:       "08d4b2cb728aa314f047ce81e3f0442e792a39661ed89f47632cd6f1d20501ce"
+    sha256 cellar: :any_skip_relocation, big_sur:        "08d4b2cb728aa314f047ce81e3f0442e792a39661ed89f47632cd6f1d20501ce"
+    sha256 cellar: :any_skip_relocation, catalina:       "08d4b2cb728aa314f047ce81e3f0442e792a39661ed89f47632cd6f1d20501ce"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5bf2e34ec842abea40e7366e58a7f9bf3b6ab0a37fd7546ed50e36ab812ae35f"
   end
 
   conflicts_with "moreutils", because: "both install a `parallel` executable"
