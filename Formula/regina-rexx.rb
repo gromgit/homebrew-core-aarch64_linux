@@ -6,12 +6,12 @@ class ReginaRexx < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_monterey: "b54fa50c843942c79e745d3ce9468db9310dc70e973fa94e190e3a0fa0e5caf3"
-    sha256 arm64_big_sur:  "ab27f3fe98ea089a93403c418f33f0b1698a47e1161b73118fcb24742e50d2f9"
-    sha256 monterey:       "d4e4746bb04e0dfe7b6c01e83349f1dc896ba22571a95c9dffb6c07095bc0902"
-    sha256 big_sur:        "c6cfcdf1d903dc27e38bb21c0d02fb846f3fc418cc06decdc449f7d512156502"
-    sha256 catalina:       "2b98c5ca16915c08e04828749e7f75644d7b7e1121a64ec78411ef9e9603c294"
-    sha256 x86_64_linux:   "7b44626961634ed07b0c215d78c345dcc1c97d0a36c9ea3a530aa78ca61b9d8b"
+    sha256 arm64_monterey: "c97635f3169b3c26ebe86c3efb2cc591c936052f4b06a71144488e5917b911fd"
+    sha256 arm64_big_sur:  "959d6f80f93d13720130111f1f898b97b521affcbbc2b67b8540d5e518512a86"
+    sha256 monterey:       "4bc6b21a904b70ae6775da17b948d54b0e1e78849d330c7777c1896b540cb0a9"
+    sha256 big_sur:        "1c37cd2d7e0860ebabb477de8a89fb9debedcfabb5ccffcabfba1eef17b18a62"
+    sha256 catalina:       "d132bc2537c7b8a07cd31fb9dc11c77e460243fd0bac5b6f69d3ab32e06f53cc"
+    sha256 x86_64_linux:   "4f461dda1b7fc8a862c87509ad52cf525f6b4c02c15d33e07f5f7274a20e808c"
   end
 
   uses_from_macos "libxcrypt"
