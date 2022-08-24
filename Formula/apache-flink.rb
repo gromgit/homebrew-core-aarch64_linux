@@ -9,7 +9,7 @@ class ApacheFlink < Formula
   head "https://github.com/apache/flink.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "9a062793325af350899b8c96ed6302bb911019100a080c96e63074e73970769c"
+    sha256 cellar: :any_skip_relocation, all: "05d7ed169e730ead5c004616b2c7e1f8299db86bc5c25072a97c9bda395dbf5d"
   end
 
   depends_on "openjdk@11"
