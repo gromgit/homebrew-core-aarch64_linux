@@ -7,12 +7,11 @@ class Pygobject3 < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "8421dca7ad4ca708e794833f7d52900d242c69f7dedb68293d092ec8ad2825f7"
-    sha256 cellar: :any, arm64_big_sur:  "b23869dc59112723ab755d023f95afd23e43b7e3425a4d085f98d45d3801e4c8"
-    sha256 cellar: :any, monterey:       "28e41e2bf7690f4597591c86ba4d1e46b8642641a277e60816e626aa93ba1d31"
-    sha256 cellar: :any, big_sur:        "52cef1bf5868f1453e5a1ec6e9c992decb6f0ec0ecf08aeac71cca101572cd62"
-    sha256 cellar: :any, catalina:       "9c177f39360eb011c208fec4ec24d8e109a2f06fd03b67ec9c61e96e5c2c201c"
-    sha256               x86_64_linux:   "864f5bf405ab0834ce79c09c977718d9b16286b55219014f48d47118243c3633"
+    sha256 cellar: :any, arm64_monterey: "b23d2ff0d41aa60565d2d39d686fdb303b460736fbb3d90a6a0216f69e3c8340"
+    sha256 cellar: :any, arm64_big_sur:  "11066e4adfe52f9af0091504ad7207d6587503dbe96d07ef5ab880ec36e49442"
+    sha256 cellar: :any, monterey:       "d57091970521b9d1aefc9a904aa2ddf7e3c80c40f28ccdbe48d2381dfc1bc2b6"
+    sha256 cellar: :any, big_sur:        "a0f3a0816f12e72f11a09cfb480e93362051e07c952ec0a330526eb3984b64ff"
+    sha256 cellar: :any, catalina:       "7b0142d6eeb8c1876284207430fd917db6a9bec691ab8629262b96ef1627073b"
   end
 
   depends_on "meson" => :build
