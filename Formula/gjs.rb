@@ -8,12 +8,12 @@ class Gjs < Formula
   head "https://gitlab.gnome.org/GNOME/gjs.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "b39d6b4d433635754d4ff6788db44a46dee4b68c618c01b34495799fed2a57a4"
-    sha256 arm64_big_sur:  "1e0fc8102b5c9dee82491b4a08a12b0bc289f758eb5ede150cd1f322b915ba96"
-    sha256 monterey:       "75a81c1f81a8a7cd68b4a00de221bce017dbae1b5853ef8ba5e52bfccb6a7c5f"
-    sha256 big_sur:        "53d7e2a36eee56da9548a730450be047fb5e62c7d960bc4a5a7d367000753199"
-    sha256 catalina:       "43b1f44d78bea7bc563d70e0702cc18743edbdea9674a31f49a5e30a72bfff2c"
-    sha256 x86_64_linux:   "4db14cedaffd84d55ff7da4a64984c5f7b46746d045d1320fbfe0abbf28f1c82"
+    sha256 arm64_monterey: "f0a295e8c84751bee9a8fcd98a5d8c62e43880c9eec5b886038e93e1fe19ff33"
+    sha256 arm64_big_sur:  "249d7537519060fb0672a4a8fa17c713a6278e54b6a7ff5049bd292bef3628aa"
+    sha256 monterey:       "bb6d7a227aed9945f0a48bf7fd93e2bd0101a2a225891b649d96ec3df7c5f6de"
+    sha256 big_sur:        "3139f9a2a71b856f9dd87cee9ed20776f5fa3e66ef5e8b44f54b0d0160f84c17"
+    sha256 catalina:       "6b30a5d8916662ac2540f39027b3d94adb61f923cec7613fc02ff05b1149e51a"
+    sha256 x86_64_linux:   "66ef504c92dfbb8122b6abfed2c80306d53b5fd22e9560a45d20ae734b2e744a"
   end
 
   depends_on "meson" => :build
