@@ -12,13 +12,12 @@ class Pinentry < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e4d3915028ad03c6b36c388ec9241daa297832023e7dae519971a737455b6872"
-    sha256 cellar: :any,                 arm64_big_sur:  "f1aac9f10ce7c1cef39dd12298c1cf30f0534268084f19d63d3a9cf0e97f8205"
-    sha256 cellar: :any,                 monterey:       "01fe87dba48bc028e2f461d1bd8e59c67b6fdc82775bb6aa000d080fc017732e"
-    sha256 cellar: :any,                 big_sur:        "be92fdf84939d67ce31943821756e5d64b20b0b9056e31067a5fd0e96b20c2a1"
-    sha256 cellar: :any,                 catalina:       "f77593c55d085e67e32b2a164830aec2ed4023a4114cbf642772b766fe530860"
-    sha256 cellar: :any,                 mojave:         "6ca3c6242384a4e3a42cb88a2c88a932f4dbcf8b10ecdeb15afbaee0dd865f4b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e257b1ff3aada1bdb7f78fba93d6ab8f445d880395cbc330f2d2277c91ad822c"
+    sha256 cellar: :any,                 arm64_monterey: "5a929b4926da533a676b19d3cb1225b796a4046e08fd922a9784422b67dff29d"
+    sha256 cellar: :any,                 arm64_big_sur:  "6648d2c2231940d6d1543f934045c6d172a68cbec3653ff70ca63c4281f047ae"
+    sha256 cellar: :any,                 monterey:       "14dd6cb2c084a534214607f68d0876035f8e8aaeb452c374aa41adbe0231511a"
+    sha256 cellar: :any,                 big_sur:        "51144f3f5a2eacd6c13e34d44975d025981c38c1815dc4d7cbd062ddbe23e12a"
+    sha256 cellar: :any,                 catalina:       "df23306e11505b962ab871fd30f1cd6e1694440ede2a9692a68e4ae2da1569c0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d75a7ffda7ba40c207144f82620c9bbfef7b52bad50d9b3bf4addc3235783978"
   end
 
   depends_on "pkg-config" => :build
