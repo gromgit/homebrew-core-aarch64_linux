@@ -6,12 +6,12 @@ class Pint < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "102da9bfead7a7415a339dd7fa70a2ccc9796edb4ab2022c63e1d10aaab1c7b3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b9200f1dae9dc7faf6d975ef072a5fccaa98324ac40eec0a793e32a03237f25a"
-    sha256 cellar: :any_skip_relocation, monterey:       "c1dc6992e7cf2981ddd1012ec1f8322aba1fe3a9dfd4df301ecea10542e0007c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bfd33af988b132775285821c54af5212aa96e4c4a9cba05e39a0060ba2842e24"
-    sha256 cellar: :any_skip_relocation, catalina:       "a3eb479aafd52af37335030a9bbb6fe20874f1137106f53e666f197d2b97f36c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bc5630b569d23e72f241bea841aceb36093bdd15c2dc165c08b40304f1aab565"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1f4a17ce4600d14cc8d662733f18d9ef0d97003714395a0b4e6ecc53ec60e66b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d8acd6457a4fca9d4bfcfba633413058b3cba0a47fb6cf3f0ae382c69fb37a75"
+    sha256 cellar: :any_skip_relocation, monterey:       "a35c9dcc3d956c323653234cf40a01eabb454d9995da0266c7ee241e52d2f151"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c37159ee8b00601617ddb65e873090ba1acf45718fbf6976e4dfb3dcd2f23ed7"
+    sha256 cellar: :any_skip_relocation, catalina:       "05d92069019ae96728a03529b017d111ae9de3995c624384d96cc2083e26a929"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2621c172c71fa3a684ede900691038f7637b688b4111e36294dd5bbf3429cb19"
   end
 
   depends_on "go" => :build
