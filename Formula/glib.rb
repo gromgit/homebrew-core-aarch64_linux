@@ -9,12 +9,12 @@ class Glib < Formula
   revision 1
 
   bottle do
-    sha256 arm64_monterey: "36038c2b4fb7dbede91facedd3dd3062e0ae697149e5ce758bbd17ce0e2448ab"
-    sha256 arm64_big_sur:  "a3265f48c2c88487e5f1db1230ec8f9382a2fb68d5eafe90a9ad75fd7c71de85"
-    sha256 monterey:       "29d582d267be192c3262bbc318af8ac451f067d8e647c671b8685c4ef349d6a8"
-    sha256 big_sur:        "5711f5a9d216f5ace87ec33851ad868623835ca0f940df46e87a62621662f7ac"
-    sha256 catalina:       "605292cae9fba2b545a9a7bfe6a97623dd6aa055a0c05747d3143297a137b0a2"
-    sha256 x86_64_linux:   "6bf1b47d083b90834e59c72f3ba6d6a8edc7637bcecba7d3ff769eff8d66a946"
+    sha256 arm64_monterey: "8c8e1967a433dfa7f97de6adfde709a2f7c0d92578306b687fb724fd40d7a3a1"
+    sha256 arm64_big_sur:  "687095abc028a3ab7f347c48ddf6ba37edacf17059ba1e07a087fb87dac21adc"
+    sha256 monterey:       "925ec9227fa871a84c732deebf53b1e8091f92ed80a17a07d935ba4dddf2e53b"
+    sha256 big_sur:        "629a83d9b016a50734db389d47e1c153eb445238de819c8ab5d5feb778ed53ec"
+    sha256 catalina:       "c1ed98ced5b80282159a41cb4e0ef44a5b8ecd7fa0ca9710dbe27b07564ba867"
+    sha256 x86_64_linux:   "0c89e2d8b3fe5587f8f67ec3775fef38583648771605d4aafd8222c786c74e9d"
   end
 
   depends_on "meson" => :build
