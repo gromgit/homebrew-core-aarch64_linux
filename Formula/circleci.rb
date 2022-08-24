@@ -9,12 +9,12 @@ class Circleci < Formula
   head "https://github.com/CircleCI-Public/circleci-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a386cf77eb3766dd6edd9481e1afca710fbc9d3b28a73f2aff4332961694d722"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8b3e00e9465fb309cd84df74f581a551932f7f86a8176fc72d7f3db8732b27a8"
-    sha256 cellar: :any_skip_relocation, monterey:       "5d58f515c6f528c1a89f08e0dc6b3454f637614d784bd3b4f7cec735a2525aa7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3ebeeb3472976e16ddb9fad6e16f2fc7a45b564dc58bb7ede45181aeb6b5bb19"
-    sha256 cellar: :any_skip_relocation, catalina:       "855edb6f54341b7b961abc05dc7ee9b6a9282aaa5e4170a05fce2b2b57024759"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4a27b7c756cc7af8c6030631dafd74821d6f8437f31f68798e7f99daa112a744"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cb3de5fb1749228723affea2a453060eb23efd26e298d66e4121410255b819cf"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b39e43ce97a9f5820a0c372ee0cf1f2687f273e60e4002dd7f92094d13cdc4bb"
+    sha256 cellar: :any_skip_relocation, monterey:       "c779f2b65dc71bffd8dcffaa31e21b45d4d15f9fb855c728777961a03e3334da"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8b5b3b8b85fdc74b90bfcb3facc4e30d620e380ee788da966033a7e90656990f"
+    sha256 cellar: :any_skip_relocation, catalina:       "19759a1fe2852001eb9b4cc7a1bd783375c818d39dc20a1fa84a111afb001c17"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7bae91833dc30507f5d71967428a5c8d1a82aba3711b202347d9bc8a91a0dcef"
   end
 
   # Bump to 1.18 when the x/sys dependency is updated upstream.
