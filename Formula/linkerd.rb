@@ -12,12 +12,12 @@ class Linkerd < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0911e9e4bf37ea6f617a0b1c126e96ed4e2eccc66f50e14eba9d556373df3237"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0da2791766cbadfc8d8a43361cc11f21265a5493fac2e9133e5f08f696651885"
-    sha256 cellar: :any_skip_relocation, monterey:       "29e71f22697d1584acb9e5520c9df6488681ac3603980f3e8c416d3cd742206d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "66d9e4158b827ed7065cd8229ba1aafb87d898d441eb27882a6178dbcf4c456e"
-    sha256 cellar: :any_skip_relocation, catalina:       "f353a7f4b04a28af8a8b28bac03b979f866d5470bca0d90255b6117563c73892"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "292db5d02c6787d77e81029ce860d06760f9b2822b47fd97e98c19c733bea615"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b8e5dfe2e143f21fc5215f2e0f13f256ac7650bf91cd93ebc50a2d4f7e3d380e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3559d9295ee5a3ed1511e0844cf4ab3f8083b5e3b8acb4912c3ce578404305bc"
+    sha256 cellar: :any_skip_relocation, monterey:       "10122413c6c4630f84cf2172714efc7bea20fd4e95cddab3393495a99da3e935"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b565d1a74392e36bee0d87b9a3b294146ae81d24d7e3cecb7ee9f74be3a82076"
+    sha256 cellar: :any_skip_relocation, catalina:       "44bc8d80ea6026f05547cd16c695fe3febc66204eaa9821125a0bed8f6457dfa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "01a60324e1189844470383f1ffb9417e2241696c7d52af10f6473286d04134d5"
   end
 
   depends_on "go" => :build
