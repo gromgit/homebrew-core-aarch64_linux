@@ -8,7 +8,7 @@ class AnsibleLanguageServer < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "96837f60599b7af1c45e12e8463e754825625b36dc250ab383eabef5fd36624d"
+    sha256 cellar: :any_skip_relocation, all: "79d6765977973ddccb447a6815ca4db67efa5314929facdac93dc9a694f62761"
   end
 
   depends_on "node"
