@@ -9,12 +9,12 @@ class GobjectIntrospection < Formula
   revision 2
 
   bottle do
-    sha256 arm64_monterey: "0043e3c72a3ddc9b6a055b0d79637016a8532139b5229bfd197d43642f0fee30"
-    sha256 arm64_big_sur:  "ddcee5e4d9847792e17bbf8923d560c70a905d0e369344d9b8da3468ea3dc145"
-    sha256 monterey:       "1d45b0f2f77aa6ae4be032b407b49960b2e1bba8d4a76e01dbb8803bc14b6cd2"
-    sha256 big_sur:        "485256ac6a604a5059235dc2aa7aff6e571a5ddcb523f35b80e82c81728dacba"
-    sha256 catalina:       "e933e2f8e839ec0d3a7024ebfa28f09d3c211d1bd86caec79153271868768355"
-    sha256 x86_64_linux:   "002e7a8ced205f24b6801b2ca9de449a4bb614dd454cd9d0f4d21e917dd4e1e8"
+    sha256 arm64_monterey: "976be484265bde8641d3f9f06561d22b17bc4dd060642fe8b871919a026cfb46"
+    sha256 arm64_big_sur:  "9a7893449cedf64c11871e59966b9914f54f9d55d57720df70b8d1c9d62c4e6a"
+    sha256 monterey:       "9a8e926c80de7098e14449c7f7b54c3a34945ce99c509cbf112302dab569508e"
+    sha256 big_sur:        "0d3cf02bd57ca2cd8754dd1326dcec7c559bc9bad831906b8fc510e951223763"
+    sha256 catalina:       "d416a917d6cb8aa2dfd00c5eafec6263397f51f85382f70a59b5ae13f203ef48"
+    sha256 x86_64_linux:   "027aad7e8d9c0aadfd9bfc0a2b6446a3f797df3e66077388025a34cea0ae2515"
   end
 
   depends_on "bison" => :build
