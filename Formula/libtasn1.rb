@@ -7,12 +7,12 @@ class Libtasn1 < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f85aa10d1320087405fd8b5c17593c6238bac842c6714edd09194f28e8e9f25d"
-    sha256 cellar: :any,                 arm64_big_sur:  "1d79a03efd060b5bca10609a841f44f1444e2bb7bab149e3bb624b6bf5806418"
-    sha256 cellar: :any,                 monterey:       "ddaf57bdd4f54323ae30093fbfe3aef9758423b03caf2c4757d592c7c7418e08"
-    sha256 cellar: :any,                 big_sur:        "dc2e936192de2c028feb09681b615d0858d8f29a740ed0cdd0fc50a7265fd363"
-    sha256 cellar: :any,                 catalina:       "2c8cc66c96bdbb7e02304cd00fe80d3e5decef3a03cace1827e9de6e1dd0397c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9964622a7285ce7dbcdc713804d18fc9de0ce1db5037198de69b91fdb3a7f062"
+    sha256 cellar: :any,                 arm64_monterey: "cf95a18e2fabf1675d77ec8a1abb41fdb091cef689dec3318a420ad2f25beb76"
+    sha256 cellar: :any,                 arm64_big_sur:  "19c6df6badb6b13631670b917595f63a49a06cadd73e2484e5546129cadcf04c"
+    sha256 cellar: :any,                 monterey:       "2aa4f8396ba40b05b237d503eb4de02c37175903d3e0f26d7a48a031707a71b5"
+    sha256 cellar: :any,                 big_sur:        "45a9352536560b5a69bef3e85ca615bad19d44eab23c6ad797c4305a27bd15d8"
+    sha256 cellar: :any,                 catalina:       "7bf11a4603037c490e83caaddc03fba59dfae11385e2f6bd4555b8ee9aaf1507"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e994c7b8c16afb59368d8d09a3f193451c9deab1e4a83f8a94650e27674d9278"
   end
 
   def install
